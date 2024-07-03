@@ -155,29 +155,29 @@ function j(e) {
     });
 }
 function Z(e) {
-    var t, n;
+    var t, n, s;
     let {
-            category: s,
-            className: a,
-            hideLimitedTimeBadge: l = !1,
-            index: d = 0
-        } = e, {backgroundColors: u} = (0, m.Z)(s.styles), p = !!(null === (t = E.Ve[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {condensedBannersEnabled: f} = (0, I.O)({ location: 'Collectibles Shop Banner' });
-    if (f) {
-        let e = N[s.skuId];
+            category: a,
+            className: l,
+            hideLimitedTimeBadge: d = !1,
+            index: u = 0
+        } = e, {backgroundColors: p} = (0, m.Z)(a.styles), f = !!(null === (t = E.Ve[a.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {condensedBannersEnabled: L} = (0, I.O)({ location: 'Collectibles Shop Banner' });
+    if (L) {
+        let e = N[a.skuId];
         if (null != e)
             return (0, r.jsx)(j, {
                 config: e,
-                category: s,
-                index: d,
-                hideLimitedTimeBadge: l
+                category: a,
+                index: u,
+                hideLimitedTimeBadge: d
             });
     }
-    return s.skuId === i.T.TIDE ? (0, r.jsx)(b.G, { category: s }) : (0, r.jsxs)(h.Z, {
-        asset: s.banner,
-        className: o()(v.shopBanner, a),
-        style: null != u ? {
-            background: ''.concat((0, x.nH)(u), ' border-box border-box'),
-            outlineColor: u.border.toHslString()
+    return a.skuId === i.T.TIDE ? (0, r.jsx)(b.G, { category: a }) : (0, r.jsxs)(h.Z, {
+        asset: a.banner,
+        className: o()(v.shopBanner, l),
+        style: null != p ? {
+            background: ''.concat((0, x.nH)(p), ' border-box border-box'),
+            outlineColor: p.border.toHslString()
         } : void 0,
         children: [
             (0, r.jsxs)('div', {
@@ -193,19 +193,19 @@ function Z(e) {
                     (0, r.jsx)(g.Z, { className: v.discordWordmark })
                 ]
             }),
-            (0, r.jsx)('img', {
+            (null === (n = E.Ve[a.skuId]) || void 0 === n ? void 0 : n.hideLogoOnBanner) === !0 ? (0, r.jsx)('div', { style: { height: 96 } }) : (0, r.jsx)('img', {
                 className: v.categoryLogo,
-                src: (0, C.uV)(s.logo, { size: T }),
-                alt: s.name,
-                style: { maxWidth: null === (n = E.Ve[s.skuId]) || void 0 === n ? void 0 : n.logoMaxWidth }
+                src: (0, C.uV)(a.logo, { size: T }),
+                alt: a.name,
+                style: { maxWidth: null === (s = E.Ve[a.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth }
             }),
             (0, r.jsx)(c.Text, {
-                className: o()(v.summary, { [v.blackSummary]: p }),
+                className: o()(v.summary, { [v.blackSummary]: f }),
                 variant: 'text-md/normal',
-                children: s.skuId === i.T.DISXCORE ? (0, r.jsx)(O, { category: s }) : s.summary
+                children: a.skuId === i.T.DISXCORE ? (0, r.jsx)(O, { category: a }) : a.summary
             }),
-            !l && (0, r.jsx)(_.Z, {
-                category: s,
+            !d && (0, r.jsx)(_.Z, {
+                category: a,
                 className: v.limitedTimeBadge,
                 display: 'banner'
             })

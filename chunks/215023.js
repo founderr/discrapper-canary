@@ -30,6 +30,10 @@ let c = {
         [u.T.ARCADE]: {
             logoMaxWidth: '35%',
             addGradient: !1
+        },
+        [u.T.DARK_FANTASY]: {
+            addGradient: !1,
+            hideLogoOnBanner: !0
         }
     }, d = '1225876188074082374', _ = [
         '1245481938202918912',

@@ -24,6 +24,7 @@ t.Z = e => {
                     backgroundImage: o ? 'url('.concat(e, '), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)') : 'url('.concat(e, ')'),
                     backgroundBlendMode: 'multiply',
                     backgroundSize: 'cover',
+                    backgroundPosition: 'center',
                     ...r
                 };
             let a = (0, d.aD)(s.ZP.unsafe_rawColors.BLACK_500, 1 - b);
@@ -32,6 +33,7 @@ t.Z = e => {
                 backgroundImage: 'linear-gradient('.concat(a, ', ').concat(a, '), url(').concat(e, ')'),
                 backgroundBlendMode: 'saturation',
                 backgroundSize: 'cover',
+                backgroundPosition: 'center',
                 ...r
             };
         }, [
