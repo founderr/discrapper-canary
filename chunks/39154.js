@@ -16,6 +16,8 @@ function i(e, t) {
         codedLinks: t.message.codedLinks,
         reactions: [],
         messageSnapshots: [],
+        stickers: t.message.stickers,
+        stickerItems: t.message.stickerItems,
         customRenderedContent: null
     });
 }
