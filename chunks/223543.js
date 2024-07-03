@@ -39,7 +39,7 @@ t.Z = e => {
             }),
             (0, s.jsx)(o.DK, {
                 className: h.marginBottom40,
-                children: d.Z.Messages.PAYMENT_AUTH_SUCCEEDED_SUGGESTION
+                children: d.Z.Messages.PAYMENT_AUTHORIZED_SUCCEEDED_SUGGESTION
             })
         ]
     }) : (0, s.jsxs)(o.ZP, {
