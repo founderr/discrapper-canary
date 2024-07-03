@@ -28,7 +28,7 @@ function E(e) {
                     shouldShow: t && r && c && null != a,
                     children: e => null != h ? (0, i.jsx)(h, {
                         ...e,
-                        color: 'curentColor',
+                        color: 'currentColor',
                         size: 'custom',
                         width: 20,
                         height: 20,
