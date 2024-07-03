@@ -40,8 +40,8 @@ function f(e) {
             mute: N,
             deaf: A,
             serverMute: Z,
-            serverDeaf: v
-        } = e, L = (0, l.e7)([I.Z], () => I.Z.isLocalMute(h.id)), O = (0, d.Z)({
+            serverDeaf: L
+        } = e, v = (0, l.e7)([I.Z], () => I.Z.isLocalMute(h.id)), O = (0, d.Z)({
             userId: h.id,
             checkSoundSharing: !0
         }), R = null !== (t = a.getGuildId()) && void 0 !== t ? t : void 0, x = h.getAvatarURL(a.guild_id, 24), P = null != f ? f : m.ZP.getName(h), {
@@ -67,11 +67,11 @@ function f(e) {
             else if (s)
                 return C.mute;
         }({
-            serverDeaf: v,
+            serverDeaf: L,
             deaf: A,
             serverMute: Z,
             mute: N,
-            localMute: L
+            localMute: v
         })) && void 0 !== s ? s : {}, y = null != D ? p.Z.Messages.VOICE_PANEL_USER_TOOLTIP.format({
             userName: P,
             status: D()

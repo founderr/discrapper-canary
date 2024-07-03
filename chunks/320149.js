@@ -8,13 +8,13 @@ function N(e) {
     let {
             channel: t,
             baseChannelId: n
-        } = e, N = (0, p.ZP)(t), A = (0, u.K)(), Z = (0, u.V)(), v = (0, a.e7)([c.Z], () => c.Z.isMessageRequest(t.id)), L = (0, a.e7)([d.Z], () => d.Z.isSpam(t.id)), O = (0, E.V)(t.id, t.getRecipientId()), R = s.useCallback(() => {
-            I.Z.closeChannelSidebar(m.uZ), v && A && (0, h.Kh)(t.id), L && Z && (0, h.Kh)(t.id);
+        } = e, N = (0, p.ZP)(t), A = (0, u.K)(), Z = (0, u.V)(), L = (0, a.e7)([c.Z], () => c.Z.isMessageRequest(t.id)), v = (0, a.e7)([d.Z], () => d.Z.isSpam(t.id)), O = (0, E.V)(t.id, t.getRecipientId()), R = s.useCallback(() => {
+            I.Z.closeChannelSidebar(m.uZ), L && A && (0, h.Kh)(t.id), v && Z && (0, h.Kh)(t.id);
         }, [
             t.id,
-            L,
-            Z,
             v,
+            Z,
+            L,
             A
         ]), x = s.useCallback(() => {
             (0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
@@ -40,7 +40,7 @@ function N(e) {
                     inSidebar: !0
                 })
             }),
-            L && (0, i.jsxs)('div', {
+            v && (0, i.jsxs)('div', {
                 className: f.hamBanner,
                 children: [
                     (0, i.jsx)(r.Text, {

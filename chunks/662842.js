@@ -3,7 +3,7 @@ n.d(t, {
         return w;
     }
 }), n(47120);
-var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(692547), u = n(481060), _ = n(232567), E = n(100527), h = n(471445), I = n(15274), m = n(924301), g = n(504160), p = n(151864), T = n(725436), S = n(497656), C = n(554747), f = n(230900), N = n(854698), A = n(703656), Z = n(922482), v = n(565799), L = n(501655), O = n(427679), R = n(448206), x = n(484459), P = n(103575), b = n(496675), M = n(594174), D = n(662868), y = n(981631), j = n(765305), U = n(689938), G = n(366846);
+var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(692547), u = n(481060), _ = n(232567), E = n(100527), h = n(471445), I = n(15274), m = n(924301), g = n(504160), p = n(151864), T = n(725436), S = n(497656), C = n(554747), f = n(230900), N = n(854698), A = n(703656), Z = n(922482), L = n(565799), v = n(501655), O = n(427679), R = n(448206), x = n(484459), P = n(103575), b = n(496675), M = n(594174), D = n(662868), y = n(981631), j = n(765305), U = n(689938), G = n(366846);
 (s = i || (i = {}))[s.STAGE = 0] = 'STAGE', s[s.EVENT_EXTERNAL = 1] = 'EVENT_EXTERNAL', s[s.EVENT_VOICE = 2] = 'EVENT_VOICE', s[s.STUDY_ROOM = 3] = 'STUDY_ROOM';
 function w(e) {
     let {
@@ -18,7 +18,7 @@ function w(e) {
         }), [
             l,
             s
-        ]), B = null == i ? void 0 : i.id, H = (0, c.Wu)([v.Z], () => [...new Set(v.Z.getMutableParticipants(B, L.pV.SPEAKER).map(e => e.user))], [B]), V = (0, c.e7)([v.Z], () => null != B ? v.Z.getParticipantCount(B, L.pV.AUDIENCE) : 0, [B]), F = (0, c.e7)([b.Z], () => b.Z.can(y.Plq.CONNECT, i)), Y = (0, R.Z)(null == i ? void 0 : i.id), W = null == s ? void 0 : s.creator_id, z = (0, c.e7)([M.default], () => M.default.getUser(W), [W]);
+        ]), B = null == i ? void 0 : i.id, H = (0, c.Wu)([L.Z], () => [...new Set(L.Z.getMutableParticipants(B, v.pV.SPEAKER).map(e => e.user))], [B]), V = (0, c.e7)([L.Z], () => null != B ? L.Z.getParticipantCount(B, v.pV.AUDIENCE) : 0, [B]), F = (0, c.e7)([b.Z], () => b.Z.can(y.Plq.CONNECT, i)), Y = (0, R.Z)(null == i ? void 0 : i.id), W = null == s ? void 0 : s.creator_id, z = (0, c.e7)([M.default], () => M.default.getUser(W), [W]);
     r.useEffect(() => {
         null != W && (0, _.PR)(W);
     }, [W]);

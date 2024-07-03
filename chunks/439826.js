@@ -11,16 +11,16 @@ function S(e) {
             onCtxMenuClose: a,
             onCtxMenuOpen: S,
             onCtxMenuSelect: C
-        } = e, f = (0, h.ph)(t), N = (0, d.ZP)(), A = (0, o.wj)(N) ? g.BRd.DARK : g.BRd.LIGHT, Z = A === g.BRd.DARK, v = s.useMemo(() => (0, h.nP)(t.config.assets.questBarHero), [t]), L = s.useContext(l.S).reducedMotion.enabled, O = (0, h.Mi)(t, E.jn.GIFT_INVENTORY_FOR_YOU), R = (0, _.tP)(t), x = s.useRef(n), P = s.useRef(null);
+        } = e, f = (0, h.ph)(t), N = (0, d.ZP)(), A = (0, o.wj)(N) ? g.BRd.DARK : g.BRd.LIGHT, Z = A === g.BRd.DARK, L = s.useMemo(() => (0, h.nP)(t.config.assets.questBarHero), [t]), v = s.useContext(l.S).reducedMotion.enabled, O = (0, h.Mi)(t, E.jn.GIFT_INVENTORY_FOR_YOU), R = (0, _.tP)(t), x = s.useRef(n), P = s.useRef(null);
     return s.useEffect(() => {
-        if (v && null != P.current)
+        if (L && null != P.current)
             return x.current !== n && (n ? P.current.play() : (P.current.pause(), P.current.currentTime = 0)), x.current = n, () => {
                 var e;
                 null === (e = P.current) || void 0 === e || e.pause();
             };
     }, [
         n,
-        v
+        L
     ]), (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
@@ -28,11 +28,11 @@ function S(e) {
                 children: [
                     (0, i.jsx)('div', {
                         className: T.heroAssetWrapper,
-                        children: v ? (0, i.jsx)(I.Fl, {
+                        children: L ? (0, i.jsx)(I.Fl, {
                             id: 'QuestBarV2ContentExpanded_heroAnimated',
                             children: e => (null != e.current && (P.current = e.current), (0, i.jsx)(u.Z, {
                                 ref: e,
-                                autoPlay: !L && n,
+                                autoPlay: !v && n,
                                 loop: !0,
                                 playsInline: !0,
                                 className: T.heroAsset,

@@ -5,8 +5,8 @@ t.Z = e => {
     let n, A;
     let {
             guildId: Z,
-            inviteCode: v
-        } = e, [L, O] = s.useState(C.hO.INITIAL), R = (0, a.e7)([h.Z], () => h.Z.get(Z)), x = (0, a.e7)([m.Z], () => m.Z.getRequest(Z)), P = (0, a.e7)([c.Z], () => c.Z.getGuild(Z)), {
+            inviteCode: L
+        } = e, [v, O] = s.useState(C.hO.INITIAL), R = (0, a.e7)([h.Z], () => h.Z.get(Z)), x = (0, a.e7)([m.Z], () => m.Z.getRequest(Z)), P = (0, a.e7)([c.Z], () => c.Z.getGuild(Z)), {
             hasFetchedRequestToJoinGuilds: b,
             guildPreviewDisabled: M
         } = (0, a.cj)([m.Z], () => ({
@@ -29,7 +29,7 @@ t.Z = e => {
             _.Z.resetGuildJoinRequest(Z);
         };
     let U = (n = f.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({ name: null == M ? void 0 : M.toString() }), A = () => {
-            O(Math.max(L, C.hO.FILLING)), _.Z.removeGuildJoinRequest(Z), (0, o.uL)(S.Z5c.ME);
+            O(Math.max(v, C.hO.FILLING)), _.Z.removeGuildJoinRequest(Z), (0, o.uL)(S.Z5c.ME);
         }, () => {
             (0, r.openModal)(e => (0, i.jsx)(r.ConfirmModal, {
                 header: f.Z.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
@@ -53,7 +53,7 @@ t.Z = e => {
         children: (0, i.jsxs)(l.Z, {
             embedded: !0,
             splash: G,
-            waveState: L,
+            waveState: v,
             showLogo: !1,
             updateWaveState: D,
             children: [
@@ -79,7 +79,7 @@ t.Z = e => {
                         default:
                             return (0, i.jsx)(T.Z, {
                                 guildId: Z,
-                                inviteCode: v,
+                                inviteCode: L,
                                 onComplete: y
                             });
                         }

@@ -21,7 +21,7 @@ let C = _.ZP.requireModule('discord_rpc').RPCWebSocket, f = window.GLOBAL_ENV.MA
 function Z(e) {
     return 'function' == typeof e ? e() : e;
 }
-function v() {
+function L() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0, t = e > 0 ? void 0 : () => {
             if (!Z(s.listening))
                 return;
@@ -33,7 +33,7 @@ function v() {
         };
     s.listen(p.V6Z + e % p.frH, '127.0.0.1', t);
 }
-function L(e, t, n) {
+function v(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200, s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, a = null != Z(e.headers).origin ? {
             'Access-Control-Allow-Origin': Z(e.headers).origin,
             'Access-Control-Allow-Credentials': 'true',
@@ -47,7 +47,7 @@ function L(e, t, n) {
 }
 function O(e, t, n, i) {
     let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-    L(e, t, {
+    v(e, t, {
         code: s,
         message: i
     }, n);
@@ -87,7 +87,7 @@ class P extends a.EventEmitter {
     handleRequest(e, t) {
         let [n, i] = Z(e.url).split('?'), s = Z(e.method);
         if ('/rpc' === n && 'OPTIONS' === s) {
-            L(e, t, { body: '' });
+            v(e, t, { body: '' });
             return;
         }
         let a = 'POST' === s;
@@ -99,7 +99,7 @@ class P extends a.EventEmitter {
                         host: s
                     } = o.parse(null !== (e = n.get('callback')) && void 0 !== e ? e : '');
                     i === location.protocol && s === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', f), t.writeHead(301), t.end();
-                }, c = new x(a ? L.bind(null, e, t) : l, a ? O.bind(null, e, t, 400) : l, Number(n.get('v')), s);
+                }, c = new x(a ? v.bind(null, e, t) : l, a ? O.bind(null, e, t, 400) : l, Number(n.get('v')), s);
             if (a)
                 (0, m.em)(c, Z(e.headers).origin, n.get('client_id')).then(() => {
                     let n = '';
@@ -161,8 +161,8 @@ class P extends a.EventEmitter {
         super();
         let t = 0;
         (s = C.http.createServer()).on('error', e => {
-            N.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => v(++t), 1000);
-        }), s.on('request', this.handleRequest.bind(this)), v(t);
+            N.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => L(++t), 1000);
+        }), s.on('request', this.handleRequest.bind(this)), L(t);
         let n = {
             instanceId: null !== (e = s.instanceId) && void 0 !== e ? e : 0,
             server: s

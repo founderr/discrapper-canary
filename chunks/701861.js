@@ -56,7 +56,7 @@ function Z(e) {
         ]
     });
 }
-class v extends s.PureComponent {
+class L extends s.PureComponent {
     componentWillLeave(e) {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e);
     }
@@ -136,4 +136,4 @@ class v extends s.PureComponent {
         });
     }
 }
-t.Z = v;
+t.Z = L;

@@ -9,8 +9,8 @@ function Z(e) {
             channel: t,
             iconClassName: a,
             className: Z,
-            innerClassName: v,
-            ...L
+            innerClassName: L,
+            ...v
         } = e, {
             mute: O,
             suppress: R
@@ -57,7 +57,7 @@ function Z(e) {
                         [A.disabled]: P
                     }),
                     wrapperClassName: Z,
-                    innerClassName: v,
+                    innerClassName: L,
                     disabled: P,
                     onClick: () => {
                         var t, n;
@@ -65,16 +65,16 @@ function Z(e) {
                     },
                     onMouseEnter: t => {
                         var n, i;
-                        null === (n = L.onMouseEnter) || void 0 === n || n.call(L, t), null == e || null === (i = e.onMouseEnter) || void 0 === i || i.call(e), H();
+                        null === (n = v.onMouseEnter) || void 0 === n || n.call(v, t), null == e || null === (i = e.onMouseEnter) || void 0 === i || i.call(e), H();
                     },
                     onMouseLeave: t => {
                         var n, i;
-                        null === (n = L.onMouseLeave) || void 0 === n || n.call(L, t), null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e), V();
+                        null === (n = v.onMouseLeave) || void 0 === n || n.call(v, t), null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e), V();
                     },
                     onContextMenu: w,
                     fullWidth: !0,
                     size: d.Button.Sizes.SMALL,
-                    ...L,
+                    ...v,
                     children: (0, i.jsx)(k, {
                         className: a,
                         size: 'sm',

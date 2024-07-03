@@ -4,7 +4,7 @@ let N = s.memo(function (e) {
             loaded: n,
             error: a,
             message: N
-        } = (0, g.a)(t), A = (0, c.p)(), Z = (0, l.e7)([h.Z], () => null != N && h.Z.isBlockedForMessage(N), [N]), v = (0, l.e7)([E.Z], () => E.Z.can(p.Plq.MANAGE_MESSAGES, t)), L = _.cC.useSetting(), {content: O} = s.useMemo(() => (null == N ? void 0 : N.content) != null && '' !== N.content ? (0, u.ZP)(N, {
+        } = (0, g.a)(t), A = (0, c.p)(), Z = (0, l.e7)([h.Z], () => null != N && h.Z.isBlockedForMessage(N), [N]), L = (0, l.e7)([E.Z], () => E.Z.can(p.Plq.MANAGE_MESSAGES, t)), v = _.cC.useSetting(), {content: O} = s.useMemo(() => (null == N ? void 0 : N.content) != null && '' !== N.content ? (0, u.ZP)(N, {
             formatInline: !0,
             noStyleAndInteraction: !0,
             shouldFilterKeywords: A
@@ -58,7 +58,7 @@ let N = s.memo(function (e) {
     } else
         R = null;
     return (0, i.jsx)(I.a.Provider, {
-        value: (0, d.Z)(L, v),
+        value: (0, d.Z)(v, L),
         children: (0, i.jsx)(o.FocusBlock, {
             className: C.messageFocusBlock,
             children: R

@@ -28,14 +28,14 @@ t.Z = s.memo(function (e) {
         ]), Z = s.useMemo(() => null != S && (0, I.Pw)(S) ? T : [], [
             T,
             S
-        ]), v = s.useCallback(e => {
+        ]), L = s.useCallback(e => {
             e && Z.length > 0 && (0, c.Oe)(Z.map(e => e.id), 'top_picks', C);
         }, [
             Z,
             C
         ]);
     return 0 !== T.length && p ? (0, i.jsx)(o.$, {
-        onChange: v,
+        onChange: L,
         threshold: 0.25,
         children: (0, i.jsxs)('div', {
             className: r()(g.previewListContainer, a),

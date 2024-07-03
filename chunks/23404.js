@@ -1,18 +1,18 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(663002), c = n(481060), d = n(230711), u = n(210887), _ = n(617136), E = n(272008), h = n(113434), I = n(569984), m = n(497505), g = n(918701), p = n(566078), T = n(602667), S = n(611855), C = n(670638), f = n(667105), N = n(860151), A = n(981631), Z = n(689938), v = n(921430);
-function L(e) {
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(663002), c = n(481060), d = n(230711), u = n(210887), _ = n(617136), E = n(272008), h = n(113434), I = n(569984), m = n(497505), g = n(918701), p = n(566078), T = n(602667), S = n(611855), C = n(670638), f = n(667105), N = n(860151), A = n(981631), Z = n(689938), L = n(921430);
+function v(e) {
     var t;
     let {quest: n} = e, s = (0, h.B6)(n.config.expiresAt), a = (0, h.B6)(p.r.build(n.config).rewardsExpireAt), r = (0, l.e7)([u.Z], () => u.Z.getState().theme), d = (0, o.w)(r) ? A.BRd.DARK : A.BRd.LIGHT, _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return (0, i.jsxs)('div', {
-        className: v.heading,
+        className: L.heading,
         children: [
             (0, i.jsx)('img', {
-                className: v.headingGameTile,
+                className: L.headingGameTile,
                 alt: '',
                 src: (0, g.uo)(n, d)
             }),
             (0, i.jsxs)('div', {
-                className: v.headingCopy,
+                className: L.headingCopy,
                 children: [
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
@@ -63,7 +63,7 @@ t.Z = function (e) {
                 ref: t => {
                     e.current = t;
                 },
-                className: r()(v.wrapper, { [v.wrapperQuestAccepted]: U }),
+                className: r()(L.wrapper, { [L.wrapperQuestAccepted]: U }),
                 onClick: P,
                 onKeyPress: P,
                 onFocus: R,
@@ -72,9 +72,9 @@ t.Z = function (e) {
                 onMouseLeave: x,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: v.utils,
+                        className: L.utils,
                         children: [
-                            U ? (0, i.jsx)(L, { quest: o }) : (0, i.jsx)(S.Z, { textOpacity: 0.5 }),
+                            U ? (0, i.jsx)(v, { quest: o }) : (0, i.jsx)(S.Z, { textOpacity: 0.5 }),
                             (0, i.jsx)(C.r, {
                                 quest: o,
                                 questContent: m.jn.ACTIVITY_PANEL,
@@ -86,7 +86,7 @@ t.Z = function (e) {
                                     children: (0, i.jsx)(c.MoreHorizontalIcon, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: v.submenuIcon
+                                        className: L.submenuIcon
                                     })
                                 })
                             })
@@ -94,9 +94,9 @@ t.Z = function (e) {
                     }),
                     !U && (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(L, { quest: o }),
+                            (0, i.jsx)(v, { quest: o }),
                             (0, i.jsx)(c.Text, {
-                                className: v.instructions,
+                                className: L.instructions,
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
                                 children: (0, g.pG)({ quest: o })
@@ -105,17 +105,17 @@ t.Z = function (e) {
                     }),
                     U && !G && (0, i.jsx)(N.Z, {
                         autoplay: p,
-                        className: v.rewardTileWithInstructions,
+                        className: L.rewardTileWithInstructions,
                         quest: o,
                         questContent: m.jn.ACTIVITY_PANEL
                     }),
                     (0, i.jsxs)('div', {
-                        className: v.ctas,
+                        className: L.ctas,
                         children: [
                             !U && (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)(c.Button, {
-                                        className: v.cta,
+                                        className: L.cta,
                                         color: c.Button.Colors.PRIMARY,
                                         fullWidth: !0,
                                         size: c.Button.Sizes.SMALL,
@@ -123,7 +123,7 @@ t.Z = function (e) {
                                         children: Z.Z.Messages.QUESTS_LEARN_MORE_V2
                                     }),
                                     (0, i.jsx)(c.Button, {
-                                        className: v.cta,
+                                        className: L.cta,
                                         color: c.Button.Colors.BRAND,
                                         fullWidth: !0,
                                         onClick: b,
@@ -134,7 +134,7 @@ t.Z = function (e) {
                                 ]
                             }),
                             U && !G && (0, i.jsx)(c.Button, {
-                                className: v.cta,
+                                className: L.cta,
                                 color: c.Button.Colors.BRAND,
                                 fullWidth: !0,
                                 onClick: M,
@@ -142,7 +142,7 @@ t.Z = function (e) {
                                 children: Z.Z.Messages.QUESTS_CHECK_PROGRESS
                             }),
                             G && (0, i.jsx)(c.Button, {
-                                className: v.cta,
+                                className: L.cta,
                                 color: c.Button.Colors.BRAND,
                                 fullWidth: !0,
                                 onClick: y,

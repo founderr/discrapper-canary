@@ -3,7 +3,7 @@ n.d(t, {
         return eS;
     }
 }), n(47120), n(653041);
-var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(920906), o = n(442837), c = n(704215), d = n(846519), u = n(481060), _ = n(570140), E = n(239091), h = n(269128), I = n(711237), m = n(110924), g = n(100527), p = n(906732), T = n(211242), S = n(536687), C = n(745837), f = n(13228), N = n(1259), A = n(211644), Z = n(605236), v = n(243778), L = n(492162), O = n(818634), R = n(596557), x = n(817520), P = n(999309), b = n(408987), M = n(130734), D = n(499137), y = n(258871), j = n(972264), U = n(11352), G = n(304445), w = n(344185), k = n(557494), B = n(10401), H = n(970731), V = n(210887), F = n(592125), Y = n(796974), W = n(486472), z = n(984933), K = n(650774), q = n(430824), Q = n(819640), X = n(496675), J = n(878884), $ = n(19780), ee = n(594174), et = n(74538), en = n(374023), ei = n(373274), es = n(547042), ea = n(315174), er = n(577718), el = n(156978), eo = n(591190), ec = n(981631), ed = n(652785), eu = n(921944), e_ = n(647086), eE = n(689938), eh = n(517770);
+var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(920906), o = n(442837), c = n(704215), d = n(846519), u = n(481060), _ = n(570140), E = n(239091), h = n(269128), I = n(711237), m = n(110924), g = n(100527), p = n(906732), T = n(211242), S = n(536687), C = n(745837), f = n(13228), N = n(1259), A = n(211644), Z = n(605236), L = n(243778), v = n(492162), O = n(818634), R = n(596557), x = n(817520), P = n(999309), b = n(408987), M = n(130734), D = n(499137), y = n(258871), j = n(972264), U = n(11352), G = n(304445), w = n(344185), k = n(557494), B = n(10401), H = n(970731), V = n(210887), F = n(592125), Y = n(796974), W = n(486472), z = n(984933), K = n(650774), q = n(430824), Q = n(819640), X = n(496675), J = n(878884), $ = n(19780), ee = n(594174), et = n(74538), en = n(374023), ei = n(373274), es = n(547042), ea = n(315174), er = n(577718), el = n(156978), eo = n(591190), ec = n(981631), ed = n(652785), eu = n(921944), e_ = n(647086), eE = n(689938), eh = n(517770);
 function eI(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -213,7 +213,7 @@ class eT extends s.PureComponent {
             selectedChannelId: e,
             shouldRenderClipsEducation: t
         } = this.props;
-        return (0, i.jsx)(v.Z, {
+        return (0, i.jsx)(L.Z, {
             contentTypes: [],
             children: n => {
                 let {
@@ -378,7 +378,7 @@ function eS(e) {
             selectedChannelId: l
         } = e, d = (0, o.e7)([q.Z], () => q.Z.getGuild(n));
     (0, I.J_)(n);
-    let _ = (0, L.Z)(n), E = (0, o.e7)([Y.Z], () => Y.Z.getGuildDimensions(n).scrollTo), h = (0, o.e7)([$.Z], () => $.Z.getChannelId()), [C, v, b] = (0, o.Wu)([X.Z], () => [
+    let _ = (0, v.Z)(n), E = (0, o.e7)([Y.Z], () => Y.Z.getGuildDimensions(n).scrollTo), h = (0, o.e7)([$.Z], () => $.Z.getChannelId()), [C, L, b] = (0, o.Wu)([X.Z], () => [
             X.Z.can(ec.Plq.MANAGE_GUILD, d),
             X.Z.can(ec.Plq.MANAGE_ROLES, d),
             X.Z.can(ec.Plq.MANAGE_THREADS, d)
@@ -393,7 +393,7 @@ function eS(e) {
     let [eo, e_] = (0, A.ZP)(e => [
             ed.XN.some(t => e.currentlyShown.has(t.dismissibleContentType)),
             e.currentlyShownGroup.has(eu.R.GUILD_HEADER_TOOLTIPS)
-        ]), eE = (0, S.Z)(d), eh = (0, u.useModalsStore)(u.hasAnyModalOpenSelector), eI = (0, o.e7)([Q.Z], () => Q.Z.hasLayers()), em = (0, o.e7)([B.Z], () => B.Z.shouldShow(eg)), ep = C && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(), eS = (0, o.e7)([K.Z], () => K.Z.getMemberCount(n)), eC = C && null != eS && eS >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(), ef = v && null != d && (d.hasFeature(ec.oNc.COMMUNITY) || null != eS && eS > 50), eN = (0, P.Z)(n), eA = (0, N._)(n), eZ = (null == d ? void 0 : d.hasFeature(ec.oNc.HUB)) === !0, ev = C && (null == d ? void 0 : d.hasFeature(ec.oNc.DISCOVERABLE)) === !0, eL = (0, T.Q)(), eO = (C || (null == d ? void 0 : d.premiumTier) === ec.Eu4.NONE) && !en.s.isDisallowPopupsSet() && !eL, eR = (0, o.e7)([
+        ]), eE = (0, S.Z)(d), eh = (0, u.useModalsStore)(u.hasAnyModalOpenSelector), eI = (0, o.e7)([Q.Z], () => Q.Z.hasLayers()), em = (0, o.e7)([B.Z], () => B.Z.shouldShow(eg)), ep = C && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(), eS = (0, o.e7)([K.Z], () => K.Z.getMemberCount(n)), eC = C && null != eS && eS >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(), ef = L && null != d && (d.hasFeature(ec.oNc.COMMUNITY) || null != eS && eS > 50), eN = (0, P.Z)(n), eA = (0, N._)(n), eZ = (null == d ? void 0 : d.hasFeature(ec.oNc.HUB)) === !0, eL = C && (null == d ? void 0 : d.hasFeature(ec.oNc.DISCOVERABLE)) === !0, ev = (0, T.Q)(), eO = (C || (null == d ? void 0 : d.premiumTier) === ec.Eu4.NONE) && !en.s.isDisallowPopupsSet() && !ev, eR = (0, o.e7)([
             M.Z,
             Q.Z
         ], () => null != d && null != G && C && !Q.Z.hasLayers() && M.Z.shouldShowGuildTemplateDirtyTooltip(n)), ex = (0, o.e7)([F.Z], () => F.Z.getChannel(l)), {isPopoutOpen: eP} = (0, O.y)(), eb = null !== (t = null == d ? void 0 : d.hasFeature(ec.oNc.COMMUNITY)) && void 0 !== t && t, eM = (0, o.e7)([w.Z], () => !r().isEmpty(w.Z.getThreadsForGuild(n))), eD = et.ZP.isNewUser(G), ey = ei && !eD, ej = (0, f.Z)(G);
@@ -418,7 +418,7 @@ function eS(e) {
         showGuildBoostingProgressBarUpsell: ep,
         showGuildBoostingProgressBarSizeUpsell: eC,
         showInviteSplashUpsell: eO,
-        showDiscoveryLandingPageSettingsUpsell: ev,
+        showDiscoveryLandingPageSettingsUpsell: eL,
         showGuildHeaderTutorial: em,
         showGuildTemplateDirtyTooltip: eR,
         showRoleSubscriptionUpsell: eN,

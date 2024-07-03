@@ -1,8 +1,8 @@
 let i, s, a;
 n(653041), n(47120);
 var r, l, o, c, d = n(392711), u = n.n(d), _ = n(442837), E = n(570140), h = n(308063), I = n(388610), m = n(430824), g = n(496675), p = n(855674), T = n(981631);
-let S = [], C = null, f = !1, N = T.QZA.CLOSED, A = {}, Z = !1, v = null;
-function L() {
+let S = [], C = null, f = !1, N = T.QZA.CLOSED, A = {}, Z = !1, L = null;
+function v() {
     if (i = null != (s = I.Z.getChannel()) ? m.Z.getGuild(s.guild_id) : null, S = null != s && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, s) ? p.Z.getWebhooksForChannel(i.id, s.id) : [], null != C) {
         let e = R(C.id);
         null != e && (C = e);
@@ -46,7 +46,7 @@ class x extends (r = _.ZP.Store) {
             webhooks: S,
             editedWebhook: C,
             section: a,
-            sectionId: v,
+            sectionId: L,
             hasChanges: this.hasChanges(),
             isFetching: f,
             errors: A
@@ -60,15 +60,15 @@ c = 'ChannelSettingsIntegrationsStore', (o = 'displayName') in (l = x) ? Object.
     writable: !0
 }) : l[o] = c;
 let P = new x(E.Z, __OVERLAY__ ? {} : {
-    INTEGRATION_SETTINGS_INIT: L,
-    INTEGRATION_SETTINGS_SAVE_SUCCESS: L,
+    INTEGRATION_SETTINGS_INIT: v,
+    INTEGRATION_SETTINGS_SAVE_SUCCESS: v,
     CHANNEL_SETTINGS_SET_SECTION: function (e) {
         let {section: t} = e;
         if (t !== T.CoT.INTEGRATIONS)
             return !1;
         if (a = T.b4C.OVERVIEW, null == i) {
             let e = I.Z.getChannel(), t = null == e ? void 0 : e.getGuildId();
-            null != e && null != t && (h.Z.fetchForChannel(t, e.id), f = !0), L();
+            null != e && null != t && (h.Z.fetchForChannel(t, e.id), f = !0), v();
         }
     },
     INTEGRATION_SETTINGS_SET_SECTION: function (e) {
@@ -76,7 +76,7 @@ let P = new x(E.Z, __OVERLAY__ ? {} : {
             section: t,
             sectionId: n
         } = e;
-        a = t, v = n;
+        a = t, L = n;
     },
     INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function (e) {
         let {webhookId: t} = e, n = R(t);

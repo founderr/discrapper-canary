@@ -3,7 +3,7 @@ n.d(t, {
         return M;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(954955), o = n.n(l), c = n(442837), d = n(481060), u = n(570140), _ = n(569984), E = n(918701), h = n(93127), I = n(814443), m = n(594174), g = n(801077), p = n(626135), T = n(70956), S = n(225559), C = n(910436), f = n(203028), N = n(358924), A = n(292140), Z = n(525296), v = n(981631), L = n(674563), O = n(689938), R = n(584201);
+var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(954955), o = n.n(l), c = n(442837), d = n(481060), u = n(570140), _ = n(569984), E = n(918701), h = n(93127), I = n(814443), m = n(594174), g = n(801077), p = n(626135), T = n(70956), S = n(225559), C = n(910436), f = n(203028), N = n(358924), A = n(292140), Z = n(525296), L = n(981631), v = n(674563), O = n(689938), R = n(584201);
 let x = 15 * T.Z.Millis.MINUTE, P = (0, Z.Z)(function (e) {
         let {
                 party: t,
@@ -25,9 +25,9 @@ let x = 15 * T.Z.Millis.MINUTE, P = (0, Z.Z)(function (e) {
             } = t, I = u.length, m = _.length, g = E.length, T = h.length > 0, S = s.useCallback(() => {
                 let e = E.filter(e => {
                     var t, n;
-                    return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.wW.GAME;
+                    return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === v.wW.GAME;
                 }).map(e => e.game.name);
-                p.default.track(v.rMx.NOW_PLAYING_CARD_HOVERED, {
+                p.default.track(L.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: I,
                     num_streams: m,
                     num_activities: g,

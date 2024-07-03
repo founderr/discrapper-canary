@@ -59,8 +59,8 @@ function N(e) {
             modalDismissibleContent: N,
             modalTopExtra: A,
             header: Z,
-            headerClassName: v,
-            subHeader: L,
+            headerClassName: L,
+            subHeader: v,
             subHeaderExtra: O,
             featureCards: R,
             changeLogId: x,
@@ -126,7 +126,7 @@ function N(e) {
                 children: [
                     (0, i.jsx)(o.Heading, {
                         variant: 'display-md',
-                        className: r()(S.headerText, v),
+                        className: r()(S.headerText, L),
                         children: Z
                     }),
                     'video' === a.type ? (0, i.jsx)(I.Z, {
@@ -175,7 +175,7 @@ function N(e) {
                     (0, i.jsx)(o.Heading, {
                         variant: 'heading-lg/extrabold',
                         className: S.bodyText,
-                        children: L
+                        children: v
                     }),
                     null == O ? void 0 : O(),
                     (0, i.jsx)('div', {

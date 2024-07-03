@@ -49,7 +49,7 @@ let A = (0, I.Un)({
         ]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: 'ChannelSettings'
-    }), v = (0, I.Un)({
+    }), L = (0, I.Un)({
         createPromise: () => Promise.all([
             n.e('96427'),
             n.e('77298'),
@@ -66,7 +66,7 @@ let A = (0, I.Un)({
         ]).then(n.bind(n, 838819)),
         webpackId: 838819,
         name: 'CollectiblesShop'
-    }), L = (0, I.Un)({
+    }), v = (0, I.Un)({
         createPromise: () => Promise.all([
             n.e('96427'),
             n.e('33053'),
@@ -83,8 +83,8 @@ let A = (0, I.Un)({
     }), O = {
         [C.S9g.USER_SETTINGS]: () => (0, s.jsx)(A, {}),
         [C.S9g.CHANNEL_SETTINGS]: () => (0, s.jsx)(Z, {}),
-        [C.S9g.GUILD_SETTINGS]: () => (0, s.jsx)(L, {}),
-        [C.S9g.COLLECTIBLES_SHOP]: () => (0, s.jsx)(v, {})
+        [C.S9g.GUILD_SETTINGS]: () => (0, s.jsx)(v, {}),
+        [C.S9g.COLLECTIBLES_SHOP]: () => (0, s.jsx)(L, {})
     }, R = 'SHOWN', x = 'HIDDEN', P = {
         friction: 10,
         tension: 100

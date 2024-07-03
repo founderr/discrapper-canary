@@ -3,7 +3,7 @@ e.d(t, {
         return A;
     }
 }), e(47120);
-var r, i = e(392711), u = e.n(i), o = e(661869), E = e(876215), l = e(423875), a = e(442837), T = e(570140), c = e(158776), _ = e(146282), s = e(26033), d = e(561308), f = e(981631), S = e(616922);
+var r, i = e(392711), u = e.n(i), o = e(661869), E = e(876215), l = e(423875), a = e(442837), c = e(570140), T = e(158776), _ = e(146282), s = e(26033), d = e(561308), f = e(981631), S = e(616922);
 function N(n, t, e) {
     return t in n ? Object.defineProperty(n, t, {
         value: e,
@@ -20,7 +20,7 @@ function O(n) {
     let t = new Set(), e = new Set();
     for (let r of n) {
         let n = function (n) {
-            return (0, d.n2)(n) ? null : (0, d.kr)(n) && n.author_type === o.i.USER ? c.Z.getActivities(n.author_id).find(t => {
+            return (0, d.n2)(n) ? null : (0, d.kr)(n) && n.author_type === o.i.USER ? T.Z.getActivities(n.author_id).find(t => {
                 if (t.type === f.IIU.PLAYING && (0, s.d)(n))
                     return function (n, t) {
                         let e = n.extra;
@@ -60,9 +60,9 @@ function R() {
         I.delete(e), n = !0;
     return n;
 }
-class D extends (r = a.ZP.Store) {
+class v extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, c.Z), this.syncWith([c.Z], R);
+        this.waitFor(_.Z, T.Z), this.syncWith([T.Z], R);
     }
     getMatchingActivity(n) {
         return (0, d.n2)(n) ? null : I.get(A(n));
@@ -71,7 +71,7 @@ class D extends (r = a.ZP.Store) {
         super(...n), N(this, 'canRenderContent', n => !(0, d.n2)(n) && (!M.has(n.content_type) || null != this.getMatchingActivity(n)));
     }
 }
-N(D, 'displayName', 'ContentInventoryActivityStore'), t.Z = new D(T.Z, {
+N(v, 'displayName', 'ContentInventoryActivityStore'), t.Z = new v(c.Z, {
     CONNECTION_OPEN: function () {
         I.clear();
     },

@@ -15,7 +15,7 @@ function T() {
             setSearchQuery: N,
             handleSearchClear: A,
             handleSearchSubmit: Z
-        } = (0, h.C)(S), v = s.useCallback(e => {
+        } = (0, h.C)(S), L = s.useCallback(e => {
             let {
                 tabId: t,
                 categoryId: n,
@@ -85,7 +85,7 @@ function T() {
             }),
             (0, i.jsx)(o.J, {
                 scrollManager: T,
-                children: v({
+                children: L({
                     tabId: t.id,
                     searchQuery: f,
                     searching: C,

@@ -8,7 +8,7 @@ function Z(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-class v extends s.PureComponent {
+class L extends s.PureComponent {
     renderMemberInfo() {
         let {
             approximateMemberCount: e,
@@ -131,4 +131,4 @@ t.Z = (0, _.Z)(o.ZP.connectStores([
         isInGuild: null != g.Z.getGuild(t.id) && !n,
         isLurking: n
     };
-})(v));
+})(L));

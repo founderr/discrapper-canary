@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     }
 }), n(47120);
 var i = n(735250), s = n(470079), a = n(593473), r = n(266067), l = n(442837), o = n(930118), c = n(355467), d = n(410575), u = n(666743), _ = n(112724), E = n(447269), h = n(612226), I = n(714338), m = n(663993), g = n(628123), p = n(703656), T = n(108427), S = n(911314), C = n(429899), f = n(843445), N = n(981631), A = n(689938), Z = n(256964);
-function v(e, t, n) {
+function L(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -12,7 +12,7 @@ function v(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let L = (0, m.Un)({
+let v = (0, m.Un)({
     createPromise: () => Promise.all([
         n.e('68148'),
         n.e('99838')
@@ -47,7 +47,7 @@ class R extends s.PureComponent {
             } = this.props, n = e ? (0, i.jsx)('div', {
                 className: Z.applicationStore,
                 children: this.renderContent()
-            }) : (0, i.jsx)(L, {
+            }) : (0, i.jsx)(v, {
                 className: Z.applicationStore,
                 location: t,
                 render: this.renderContent
@@ -58,7 +58,7 @@ class R extends s.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), v(this, 'stopListeningToHistory', void 0), v(this, 'renderStoreListing', e => {
+        super(...e), L(this, 'stopListeningToHistory', void 0), L(this, 'renderStoreListing', e => {
             let {
                     match: {
                         params: {
@@ -81,7 +81,7 @@ class R extends s.PureComponent {
                     pageSize: O(l)
                 })
             });
-        }), v(this, 'renderContent', () => (0, i.jsxs)(r.rs, {
+        }), L(this, 'renderContent', () => (0, i.jsxs)(r.rs, {
             children: [
                 (0, i.jsx)(r.AW, {
                     path: N.Z5c.APPLICATION_STORE,

@@ -15,7 +15,7 @@ t.Z = function (e) {
             C(!0), m && !g && !f && (null == p || p());
         }, Z = () => {
             C(!1);
-        }, v = (e, t) => {
+        }, L = (e, t) => {
             if (null != t)
                 N(!0), (0, d.jW)(e, async () => {
                     let {default: e} = await Promise.all([
@@ -45,7 +45,7 @@ t.Z = function (e) {
                     [_.active]: g || f,
                     [_.firstItem]: 0 === t
                 }),
-                onContextMenu: e => v(e, E),
+                onContextMenu: e => L(e, E),
                 onMouseEnter: A,
                 onMouseLeave: Z,
                 onClick: null != I ? I : void 0,

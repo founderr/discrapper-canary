@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return L;
     }
 }), n(653041), n(47120);
 var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(278323), o = n(287734), c = n(230711), d = n(726542), u = n(620662), _ = n(841784), E = n(802856), h = n(594190), I = n(592745), m = n(553795), g = n(757266), p = n(283595), T = n(417363), S = n(626135), C = n(804739), f = n(346329), N = n(981631), A = n(689938);
 let Z = d.Z.get(N.ABu.XBOX).name;
-function v(e) {
-    let {currentActivities: t} = e, n = t.length > 1, v = function (e) {
+function L(e) {
+    let {currentActivities: t} = e, n = t.length > 1, L = function (e) {
             let {currentActivities: t} = e, n = (0, a.e7)([m.Z], () => m.Z.getAccounts().some(e => e.type === d.Z.get(N.ABu.XBOX).type)), s = t.some(e => {
                     let {activity: t} = e;
                     return (0, E.Z)(t);
@@ -16,7 +16,7 @@ function v(e) {
                 action: () => c.Z.open(N.oAB.CONNECTIONS),
                 label: A.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: Z })
             });
-        }(e), L = function (e) {
+        }(e), v = function (e) {
             let {currentActivities: t} = e, n = s.useContext(S.AnalyticsContext);
             return (0, a.Wu)([
                 h.ZP,
@@ -50,7 +50,7 @@ function v(e) {
                 t
             ]);
         }(e), O = [];
-    for (let e of L) {
+    for (let e of v) {
         let {activity: t} = e;
         null != t && null != t.type && O.push(function (e, t) {
             let {
@@ -107,7 +107,7 @@ function v(e) {
         }(e, n));
     }
     return [
-        v,
+        L,
         ...O
     ];
 }

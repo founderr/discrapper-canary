@@ -15,7 +15,7 @@ function A(e, t, n) {
 let Z = c().throttle(m.c6, 1000, {
         leading: !1,
         trailing: !0
-    }), v = e => {
+    }), L = e => {
         let {
             isSelected: t,
             onCategoryChange: n,
@@ -33,7 +33,7 @@ let Z = c().throttle(m.c6, 1000, {
             })
         });
     };
-class L extends (i = a.PureComponent) {
+class v extends (i = a.PureComponent) {
     componentDidMount() {
         let {
                 loadId: e,
@@ -116,7 +116,7 @@ class L extends (i = a.PureComponent) {
             className: N.categories,
             children: null == t ? void 0 : t.map(t => {
                 let [n, i] = t;
-                return (0, s.jsx)(v, {
+                return (0, s.jsx)(L, {
                     categoryId: n,
                     name: n === S.Hk ? f.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
                     onCategoryChange: this.handleCategoryChange,
@@ -240,10 +240,10 @@ class L extends (i = a.PureComponent) {
 }
 function O(e) {
     let t = (0, d.e7)([T.Z], () => T.Z.getDiscoveryCategories(), [], T.j), n = (0, d.e7)([E.ZP], () => E.ZP.getTopCategoryCounts(e.mostRecentQuery));
-    return (0, s.jsx)(L, {
+    return (0, s.jsx)(v, {
         ...e,
         categories: t,
         countsByCategory: n
     });
 }
-A(L, 'contextType', void 0), L.contextType = h.AnalyticsContext;
+A(v, 'contextType', void 0), v.contextType = h.AnalyticsContext;

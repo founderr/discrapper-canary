@@ -119,7 +119,7 @@ n.d(t, {
 });
 var r, i, a, o, s, l, u, c, d, _, E, f, h, p, m, I, T, g, S, A, N, v, O, R, C, y, D, L, b, M, P, U, w, x, G, k, B = n(268146);
 (r = S || (S = {})).DEFAULT = 'default', r.STREAM = 'stream', (i = A || (A = {})).AUDIO_INPUT = 'audioinput', i.AUDIO_OUTPUT = 'audiooutput', i.VIDEO_INPUT = 'videoinput', (a = N || (N = {})).PUSH_TO_TALK = 'PUSH_TO_TALK', a.VOICE_ACTIVITY = 'VOICE_ACTIVITY', (o = v || (v = {})).DISCONNECTED = 'DISCONNECTED', o.CONNECTING = 'CONNECTING', o.CONNECTED = 'CONNECTED', o.NO_ROUTE = 'NO_ROUTE', o.ICE_CHECKING = 'ICE_CHECKING', o.DTLS_CONNECTING = 'DTLS_CONNECTING', (s = O || (O = {}))[s.TRANSPORT = 1] = 'TRANSPORT', s[s.OUTBOUND = 2] = 'OUTBOUND', s[s.INBOUND = 4] = 'INBOUND', s[s.ALL = 7] = 'ALL', (l = R || (R = {})).MANUAL_DISABLE = 'video_manual_disable', l.MANUAL_ENABLE = 'video_manual_enable', l.MANUAL_REENABLE = 'video_manual_reenable', l.AUTO_DISABLE = 'video_auto_disable', l.AUTO_ENABLE = 'video_auto_enable', l.AUTO_DOWNGRADE = 'video_auto_downgrade', l.AUTO_UPGRADE = 'video_auto_upgrade,', (u = C || (C = {})).NO_OVERRIDE = 'no_override', u.HIGH = 'high', u.LOW = 'low';
-let F = 100, V = 18, H = 64000, Z = 128000, Y = 'default', j = 'disabled', W = 0.1, K = 600000, z = 150000, q = 10000000, Q = 5000, X = 15000, $ = 30, J = 20, ee = 12, et = 4000000, en = 8000000, er = 500000, ei = [
+let F = 100, V = 18, H = 64000, Z = 128000, Y = 'default', j = 'disabled', W = 0.1, K = 600000, z = 150000, q = 10000000, Q = 5000, X = 15000, $ = 30, J = 20, ee = 12, et = 3500000, en = 9000000, er = 500000, ei = [
         'remoteSinkWantsPixelCount',
         'remoteSinkWantsMaxFramerate',
         'encodingVideoMinBitRate',
@@ -143,7 +143,7 @@ let F = 100, V = 18, H = 64000, Z = 128000, Y = 'default', j = 'disabled', W = 0
         },
         desktopBitrate: {
             min: 500000,
-            max: 4000000,
+            max: 3500000,
             target: 600000
         },
         videoBitrateFloor: 150000

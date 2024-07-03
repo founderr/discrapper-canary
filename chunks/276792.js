@@ -14,7 +14,7 @@ function g(e) {
             analyticsLocations: T,
             analyticsLocation: S,
             isLightTheme: C
-        } = e, f = 'AnnouncementModalVariant1_'.concat(s.z[Number(g.dismissKey)]), {onClose: N} = p, A = null != g.button && '' !== g.button.copy ? g.button.copy : h.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN, Z = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button', v = (null === (n = g.button) || void 0 === n ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? () => {
+        } = e, f = 'AnnouncementModalVariant1_'.concat(s.z[Number(g.dismissKey)]), {onClose: N} = p, A = null != g.button && '' !== g.button.copy ? g.button.copy : h.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN, Z = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button', L = (null === (n = g.button) || void 0 === n ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? () => {
             (0, o.uL)(E.Z5c.APPLICATION_STORE), N();
         } : () => (0, l.Z)({
             subscriptionTier: _.Si.TIER_2,
@@ -27,7 +27,7 @@ function g(e) {
             onClose: e => {
                 e && N();
             }
-        }), L = '' !== g.helpArticleId ? () => (0, i.jsx)(r.Anchor, {
+        }), v = '' !== g.helpArticleId ? () => (0, i.jsx)(r.Anchor, {
             className: I.termsApplyAnchor,
             href: d.Z.getArticleURL(g.helpArticleId),
             children: (0, i.jsx)(r.Heading, {
@@ -53,7 +53,7 @@ function g(e) {
         header: g.header,
         modalTopExtra: x,
         subHeader: g.subheader,
-        subHeaderExtra: L,
+        subHeaderExtra: v,
         heroArt: O,
         featureCards: g.featureCards.map(e => ({
             header: e.header,
@@ -75,7 +75,7 @@ function g(e) {
                         cta_type: Z,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: f
-                    }), v();
+                    }), L();
                 },
                 children: [
                     (0, i.jsx)('img', {

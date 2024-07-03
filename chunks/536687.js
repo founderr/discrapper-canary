@@ -18,7 +18,7 @@ function A(e) {
         } = (0, r.cj)([p.Z], () => ({
             lastDismissedGracePeriod: p.Z.getLastDismissedGracePeriodForGuild(n),
             isGracePeriodVisible: p.Z.isVisible(n)
-        })), Z = (0, r.e7)([h.Z], () => h.Z.isVisible(e)), v = (0, r.e7)([S.Z], () => S.Z.isVisible(e)), L = (0, r.e7)([g.Z], () => g.Z.can(N.Plq.ADMINISTRATOR, e)), O = null != s && Date.now() - s <= N.Dge, R = null != e ? e.premiumSubscriberCount : 0, x = (0, f.rF)(R, n) !== N.Eu4.NONE, P = null != i && Date.now() - i <= 43200000, b = !P && !O && L && x, M = (0, c.m)(n), D = (0, r.e7)([T.Z], () => T.Z.isVisible(e)), y = _.Z.useShouldShowChannelNotice(n), j = (0, E.h6)(e), {enableStudyGroup: U} = (0, u.s)(e), G = j.length > 0, w = U && !(null == e ? void 0 : e.hasFeature(N.oNc.HUB)), k = (0, d.Vm)(n), B = (0, r.e7)([I.Z], () => null != I.Z.getActiveGuildSignUp(n));
+        })), Z = (0, r.e7)([h.Z], () => h.Z.isVisible(e)), L = (0, r.e7)([S.Z], () => S.Z.isVisible(e)), v = (0, r.e7)([g.Z], () => g.Z.can(N.Plq.ADMINISTRATOR, e)), O = null != s && Date.now() - s <= N.Dge, R = null != e ? e.premiumSubscriberCount : 0, x = (0, f.rF)(R, n) !== N.Eu4.NONE, P = null != i && Date.now() - i <= 43200000, b = !P && !O && v && x, M = (0, c.m)(n), D = (0, r.e7)([T.Z], () => T.Z.isVisible(e)), y = _.Z.useShouldShowChannelNotice(n), j = (0, E.h6)(e), {enableStudyGroup: U} = (0, u.s)(e), G = j.length > 0, w = U && !(null == e ? void 0 : e.hasFeature(N.oNc.HUB)), k = (0, d.Vm)(n), B = (0, r.e7)([I.Z], () => null != I.Z.getActiveGuildSignUp(n));
     if (a.useEffect(() => {
             o.Z.getGuildEventsForCurrentUser(n);
         }, [n]), a.useEffect(() => {
@@ -35,7 +35,7 @@ function A(e) {
         return 0;
     if (A)
         return 1;
-    if (v)
+    if (L)
         return 2;
     else if (M || null != k)
         return 3;

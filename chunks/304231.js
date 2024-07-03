@@ -42,8 +42,8 @@ t.Z = s.memo(function (e) {
     let {
             selectedGame: t,
             setScreen: n
-        } = e, c = s.useRef(null), d = s.useRef(null), E = s.useRef(null), I = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), [N, A] = s.useState(0), [Z, v] = s.useState(0), L = (0, h.GN)(e => e.selectedPlaystyle, r.Z), O = (0, h.GN)(e => e.previousMode, r.Z), R = s.useCallback(e => {
-            A(e), Z < e && v(e);
+        } = e, c = s.useRef(null), d = s.useRef(null), E = s.useRef(null), I = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), [N, A] = s.useState(0), [Z, L] = s.useState(0), v = (0, h.GN)(e => e.selectedPlaystyle, r.Z), O = (0, h.GN)(e => e.previousMode, r.Z), R = s.useCallback(e => {
+            A(e), Z < e && L(e);
         }, [Z]), x = s.useCallback(() => {
             0 === N ? (n(h.o2.USER_UPSELL), (0, h.fH)(O)) : R(N - 1);
         }, [
@@ -56,8 +56,8 @@ t.Z = s.memo(function (e) {
         }, [
             N,
             R
-        ]), b = s.useMemo(() => 1 === N && null == L, [
-            L,
+        ]), b = s.useMemo(() => 1 === N && null == v, [
+            v,
             N
         ]), M = s.useMemo(() => [
             {

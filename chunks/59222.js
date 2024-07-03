@@ -49,8 +49,8 @@ t.Z = e => {
             defaultLanguage: l,
             availableLanguages: u,
             isFetchingSearch: Z,
-            scroller: v,
-            loadingGuildId: L,
+            scroller: L,
+            loadingGuildId: v,
             theme: O,
             currentCategoryId: R,
             currentCategoryName: x,
@@ -71,7 +71,7 @@ t.Z = e => {
                 filters: { approximate_member_count: h.sq }
             }), k(!1);
         }, W = () => {
-            null == v || v.scrollTo({ to: 0 });
+            null == L || L.scrollTo({ to: 0 });
         };
     s.useEffect(() => {
         let {
@@ -146,7 +146,7 @@ t.Z = e => {
                                     loading: U,
                                     loadingPlaceholderCount: C,
                                     onViewGuild: P,
-                                    loadingGuildId: L,
+                                    loadingGuildId: v,
                                     theme: O,
                                     analyticsContext: h.P1.SEARCH,
                                     onGuildCardSeen: b,

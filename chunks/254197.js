@@ -16,7 +16,7 @@ let I = o.forwardRef(function (e, t) {
                 questContent: g.jn.QUEST_BAR_V2,
                 questContentCTA: u.jZ.ACCEPT_QUEST
             });
-        }, [k]), {primaryVariant: V} = f.u.useExperiment({ location: R.dr.QUESTS_BAR }, { autoTrackExposure: !1 }), z = (null === (n = k.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, G = (0, x.Rf)(k), F = G.percentComplete > 0, K = I && M, Y = o.useMemo(() => (0, C.$J)(k), [k]), X = (0, C.ph)(k), $ = (0, C.pG)({
+        }, [k]), {primaryVariant: V} = f.u.useExperiment({ location: R.dr.QUESTS_BAR }, { autoTrackExposure: !1 }), z = (null === (n = k.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, G = (0, x.Rf)(k), F = G.percentComplete > 0, K = I && M, Y = o.useMemo(() => (0, C.$J)(k), [k]), X = (0, C.ph)(k), J = (0, C.pG)({
             quest: k,
             useV2Variants: V === f.P.V2 || (0, b.a)(k),
             taskDetails: G
@@ -105,7 +105,7 @@ let I = o.forwardRef(function (e, t) {
                                 (0, s.jsx)(c.Text, {
                                     className: y.description,
                                     variant: 'text-xs/normal',
-                                    children: $
+                                    children: J
                                 })
                             ]
                         }),

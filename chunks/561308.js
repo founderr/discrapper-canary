@@ -15,7 +15,7 @@ e.d(t, {
         return P;
     },
     Nq: function () {
-        return v;
+        return D;
     },
     Ol: function () {
         return O;
@@ -54,7 +54,7 @@ e.d(t, {
         return U;
     },
     yA: function () {
-        return D;
+        return v;
     },
     yh: function () {
         return M;
@@ -63,20 +63,20 @@ e.d(t, {
         return g;
     }
 }), e(47120);
-var r = e(164369), i = e(913527), u = e.n(i), o = e(884439), E = e(442837), l = e(876215), a = e(835473), T = e(70956), c = e(709054), _ = e(719247), s = e(689938);
+var r = e(164369), i = e(913527), u = e.n(i), o = e(884439), E = e(442837), l = e(876215), a = e(835473), c = e(70956), T = e(709054), _ = e(719247), s = e(689938);
 let d = n => {
         let {
                 start: t,
                 now: e
-            } = n, r = Math.abs((e - t) / T.Z.Millis.SECOND), i = Math.floor(r) % T.Z.Seconds.MINUTE, u = Math.floor(r / T.Z.Seconds.MINUTE) % T.Z.Seconds.MINUTE, o = Math.floor(r / T.Z.Seconds.HOUR);
+            } = n, r = Math.abs((e - t) / c.Z.Millis.SECOND), i = Math.floor(r) % c.Z.Seconds.MINUTE, u = Math.floor(r / c.Z.Seconds.MINUTE) % c.Z.Seconds.MINUTE, o = Math.floor(r / c.Z.Seconds.HOUR);
         return {
             seconds: i,
             minutes: u,
             hours: o,
-            days: Math.floor(r / T.Z.Seconds.DAY)
+            days: Math.floor(r / c.Z.Seconds.DAY)
         };
     }, f = (n, t) => {
-        let e = 'id' in n ? c.default.extractTimestamp(n.id) : n.start;
+        let e = 'id' in n ? T.default.extractTimestamp(n.id) : n.start;
         return d({
             start: e,
             now: 'end' in n && null != n.end ? Math.min(n.end, t) : t
@@ -96,24 +96,24 @@ let d = n => {
             seconds: u(e)
         });
     }, N = (n, t, e) => {
-        let r = u()(e), i = u()(c.default.extractTimestamp(n.id)), o = i.isSame(r, 'day'), E = r.diff(i, 's');
-        if (E < T.Z.Seconds.MINUTE)
+        let r = u()(e), i = u()(T.default.extractTimestamp(n.id)), o = i.isSame(r, 'day'), E = r.diff(i, 's');
+        if (E < c.Z.Seconds.MINUTE)
             return s.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO.format({ count: E });
-        if (E < T.Z.Seconds.HOUR) {
-            let n = Math.round(E / T.Z.Seconds.MINUTE);
+        if (E < c.Z.Seconds.HOUR) {
+            let n = Math.round(E / c.Z.Seconds.MINUTE);
             return s.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO.format({ count: n });
         }
-        if (E < 6 * T.Z.Seconds.HOUR) {
-            let n = Math.round(E / T.Z.Seconds.HOUR);
+        if (E < 6 * c.Z.Seconds.HOUR) {
+            let n = Math.round(E / c.Z.Seconds.HOUR);
             return s.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO.format({ count: n });
-        } else if (E < T.Z.Seconds.WEEK && o)
+        } else if (E < c.Z.Seconds.WEEK && o)
             return i.toDate().toLocaleTimeString(t, { hour: 'numeric' });
-        else if (E < T.Z.Seconds.WEEK && !o)
+        else if (E < c.Z.Seconds.WEEK && !o)
             return i.toDate().toLocaleTimeString(t, {
                 weekday: 'short',
                 hour: 'numeric'
             });
-        let l = Math.round(E / (7 * T.Z.Seconds.DAY));
+        let l = Math.round(E / (7 * c.Z.Seconds.DAY));
         return s.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO.format({ count: l });
     }, M = function (n, t) {
         let e = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
@@ -133,11 +133,11 @@ function O(n) {
 function R(n) {
     return null != n.expires_at && new Date(n.expires_at) < new Date();
 }
-function D(n) {
+function v(n) {
     var t;
     return null === (t = I(n, o.N.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds;
 }
-function v(n) {
+function D(n) {
     var t;
     return null === (t = I(n, o.N.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range;
 }
@@ -175,20 +175,20 @@ function m(n) {
     let t = U(n);
     if (null == t || t < 3)
         return !1;
-    let e = c.default.extractTimestamp(n.id);
-    return !(Date.now() - e > 48 * T.Z.Millis.HOUR) && !0;
+    let e = T.default.extractTimestamp(n.id);
+    return !(Date.now() - e > 48 * c.Z.Millis.HOUR) && !0;
 }
 function h(n) {
-    let t = D(n);
+    let t = v(n);
     if (null == t)
         return null;
-    let e = Math.round(t / T.Z.Seconds.HOUR);
+    let e = Math.round(t / c.Z.Seconds.HOUR);
     return s.Z.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_FOR_HOURS.format({ hours: e });
 }
 function g(n) {
     var t;
-    let e = null !== (t = D(n)) && void 0 !== t ? t : 0;
-    return e > 10 * T.Z.Seconds.HOUR ? s.Z.Messages.MEMBER_LIST_CONTENT_FEED_EPIC_MARATHON : e > 5 * T.Z.Seconds.HOUR ? s.Z.Messages.MEMBER_LIST_CONTENT_FEED_ULTRA_MARATHON : s.Z.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON;
+    let e = null !== (t = v(n)) && void 0 !== t ? t : 0;
+    return e > 10 * c.Z.Seconds.HOUR ? s.Z.Messages.MEMBER_LIST_CONTENT_FEED_EPIC_MARATHON : e > 5 * c.Z.Seconds.HOUR ? s.Z.Messages.MEMBER_LIST_CONTENT_FEED_ULTRA_MARATHON : s.Z.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON;
 }
 function G(n) {
     let t = h(n), e = g(n);

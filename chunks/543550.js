@@ -1,6 +1,6 @@
 n.d(t, {
     $: function () {
-        return v;
+        return L;
     },
     J: function () {
         return Z;
@@ -27,7 +27,7 @@ function Z() {
             S
         ]), Z = s.useCallback(e => {
             h(e.currentTarget.scrollTop);
-        }, [h]), v = s.useMemo(() => {
+        }, [h]), L = s.useMemo(() => {
             switch (e) {
             case m.hz.GENSHIN:
                 return S === C.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
@@ -37,7 +37,7 @@ function Z() {
         }, [
             e,
             S
-        ]), L = (0, d.useToken)(d.tokens.colors.BG_MOD_STRONG);
+        ]), v = (0, d.useToken)(d.tokens.colors.BG_MOD_STRONG);
     switch (t) {
     case m.o2.USER_UPSELL:
         return (0, i.jsxs)('div', {
@@ -65,7 +65,7 @@ function Z() {
                                 ], [
                                     0,
                                     1
-                                ]).to(e => '1px solid '.concat(L.hex({ opacity: e })))
+                                ]).to(e => '1px solid '.concat(v.hex({ opacity: e })))
                             }
                         }),
                         (0, i.jsx)(I.Z, {})
@@ -107,7 +107,7 @@ function Z() {
         return (0, i.jsx)('div', {
             className: N.container,
             children: (0, i.jsxs)('div', {
-                className: r()(v, N.userOnboarding),
+                className: r()(L, N.userOnboarding),
                 children: [
                     (0, i.jsx)('div', { className: N.backgroundImageBlur }),
                     (0, i.jsx)('div', {
@@ -122,7 +122,7 @@ function Z() {
         });
     }
 }
-function v() {
+function L() {
     let e = (0, m.GN)(e => e.started, o.Z), t = (0, m.GN)(e => e.game, o.Z), {enableApplication: n} = (0, E.Fg)('ClanDiscoveryAdminContainer'), {guilds: a} = (0, E.C3)({
             location: 'ClanDiscoveryAdminContainer',
             includeConverted: !0

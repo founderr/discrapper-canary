@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return L;
     }
 });
 var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(286379), c = n(481060), d = n(183126), u = n(209613), _ = n(797614), E = n(151827), h = n(626135), I = n(26373), m = n(486622), g = n(922409), p = n(727813), T = n(355350), S = n(307947), C = n(125855), f = n(687683), N = n(981631), A = n(689938), Z = n(553437);
-function v() {
-    let e = s.useRef(null), t = (0, p.Z)(), n = (0, T.w)(), a = (0, I.V)(), v = (0, d.N)(), L = (0, u.Z)('message-requests-spam-list'), {channelId: O} = (0, g._)(), R = s.useCallback(() => {
+function L() {
+    let e = s.useRef(null), t = (0, p.Z)(), n = (0, T.w)(), a = (0, I.V)(), L = (0, d.N)(), v = (0, u.Z)('message-requests-spam-list'), {channelId: O} = (0, g._)(), R = s.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(A.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE));
         }, []), {rejectAll: x} = (0, m.m)({ onError: R }), P = s.useCallback(() => {
             x(t.map(e => e.channel.id));
@@ -37,7 +37,7 @@ function v() {
             className: Z.sectionTitle,
             children: [
                 A.Z.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({ count: n }),
-                v && n > 0 ? (0, i.jsxs)(i.Fragment, {
+                L && n > 0 ? (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(c.Text, {
                             className: Z.titleDivider,
@@ -61,10 +61,10 @@ function v() {
         }, 'message-requests-spam-title'), [
             n,
             P,
-            v
+            L
         ]);
     return 0 === t.length ? (0, i.jsx)(S.Z, { section: f.pS.SPAM }) : (0, i.jsx)(l.bG, {
-        navigator: L,
+        navigator: v,
         children: (0, i.jsx)(l.SJ, {
             children: n => {
                 let {

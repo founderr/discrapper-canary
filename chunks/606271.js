@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(392711), s = n.n(i), a = n(442837), r = n(570140), l = n(573979), o = n(814443), c = n(592125), d = n(271383), u = n(430824), _ = n(131951), E = n(158776), h = n(19780), I = n(699516), m = n(944486), g = n(594174), p = n(979651), T = n(626135), S = n(823379), C = n(358085), f = n(914946), N = n(238679), A = n(863141), Z = n(981631), v = n(701488), L = n(65154);
+var i = n(392711), s = n.n(i), a = n(442837), r = n(570140), l = n(573979), o = n(814443), c = n(592125), d = n(271383), u = n(430824), _ = n(131951), E = n(158776), h = n(19780), I = n(699516), m = n(944486), g = n(594174), p = n(979651), T = n(626135), S = n(823379), C = n(358085), f = n(914946), N = n(238679), A = n(863141), Z = n(981631), L = n(701488), v = n(65154);
 function O(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -79,7 +79,7 @@ class R {
         if (0 === this.rpcServer.subscriptions.length)
             return;
         let t = 0 !== e.speakingFlags ? Z.zMe.SPEAKING_START : Z.zMe.SPEAKING_STOP;
-        if (e.context === L.Yn.DEFAULT) {
+        if (e.context === v.Yn.DEFAULT) {
             let n = m.Z.getVoiceChannelId();
             if (null != n) {
                 let i = c.Z.getChannel(n);
@@ -142,7 +142,7 @@ class R {
         } = e;
         if (0 === this.rpcServer.subscriptions.length)
             return;
-        let i = n !== v.cE.FOCUSED;
+        let i = n !== L.cE.FOCUSED;
         this.rpcServer.dispatchToSubscriptions(Z.zMe.ACTIVITY_PIP_MODE_UPDATE, e => e.socket.application.id === t, { is_pip_mode: i });
         this.rpcServer.dispatchToSubscriptions(Z.zMe.ACTIVITY_LAYOUT_MODE_UPDATE, e => e.socket.application.id === t, { layout_mode: n });
     }

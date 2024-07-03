@@ -1,7 +1,7 @@
 n(47120);
 var i = n(392711), s = n.n(i), a = n(243814), r = n(902704), l = n(812206), o = n(594190), c = n(199902), d = n(592125), u = n(271383), _ = n(430824), E = n(131951), h = n(19780), I = n(594174), m = n(979651), g = n(996106), p = n(914946), T = n(238679), S = n(452426), C = n(295424), f = n(222263), N = n(863141), A = n(186901), Z = n(981631);
-let v = e => (0, S.Z)(e).required().keys({ channel_id: e.string().required() });
-function L(e) {
+let L = e => (0, S.Z)(e).required().keys({ channel_id: e.string().required() });
+function v(e) {
     var t;
     let {
             args: {channel_id: n},
@@ -157,18 +157,18 @@ let x = {
     },
     [Z.zMe.MESSAGE_CREATE]: {
         scope: a.x.RPC,
-        validation: v,
-        handler: L
+        validation: L,
+        handler: v
     },
     [Z.zMe.MESSAGE_UPDATE]: {
         scope: a.x.RPC,
-        validation: v,
-        handler: L
+        validation: L,
+        handler: v
     },
     [Z.zMe.MESSAGE_DELETE]: {
         scope: a.x.RPC,
-        validation: v,
-        handler: L
+        validation: L,
+        handler: v
     },
     [Z.zMe.SPEAKING_START]: {
         scope: {

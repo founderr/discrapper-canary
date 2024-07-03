@@ -13,10 +13,10 @@ async function g(e) {
             friendToken: N,
             analyticsLocation: A,
             ...Z
-        } = e, v = u.default.getUser(p);
-    if (null == v)
+        } = e, L = u.default.getUser(p);
+    if (null == L)
         return;
-    let L = E.Z.getUserProfile(p), O = c.Z.getPrimaryActivity(p), R = c.Z.getStatus(p), x = c.Z.isMobileOnline(p), {
+    let v = E.Z.getUserProfile(p), O = c.Z.getPrimaryActivity(p), R = c.Z.getStatus(p), x = c.Z.isMobileOnline(p), {
             party: P,
             assets: b,
             application_id: M
@@ -25,7 +25,7 @@ async function g(e) {
         let {default: e} = await n.e('824').then(n.bind(n, 304113));
         return t => (0, i.jsx)(e, {
             location: 'handleOpenUserProfileModal',
-            user: v,
+            user: L,
             guildId: C,
             friendToken: N,
             initialSection: T,
@@ -49,8 +49,8 @@ async function g(e) {
         party_platform: (0, I.Ps)(null == P ? void 0 : P.id) ? h.ABu.SPOTIFY : null,
         game_platform: (0, l.Z)(O),
         profile_user_status: j,
-        profile_has_nitro_customization: (null == L ? void 0 : L.banner) != null,
-        profile_has_profile_effect: (null == L ? void 0 : L.profileEffectId) != null,
+        profile_has_nitro_customization: (null == v ? void 0 : v.banner) != null,
+        profile_has_profile_effect: (null == v ? void 0 : v.profileEffectId) != null,
         ...null == A ? null : (0, _.expandLocation)(A)
     });
 }

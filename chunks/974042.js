@@ -119,23 +119,23 @@ class N {
         p(this, '_rows', void 0), this._rows = e;
     }
 }
-let A = !0, Z = !1, v = g.pJs.ONLINE, L = new N(), O = !0, R = !1;
+let A = !0, Z = !1, L = g.pJs.ONLINE, v = new N(), O = !0, R = !1;
 function x() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    A && (e || v !== g.pJs.ONLINE && v !== g.pJs.ADD_FRIEND) && !Z && (A = !1, Z = !0, o.Z.fetchRelationships());
+    A && (e || L !== g.pJs.ONLINE && L !== g.pJs.ADD_FRIEND) && !Z && (A = !1, Z = !0, o.Z.fetchRelationships());
 }
 function P() {
-    if (A = !0, O ? Z = !1 : x(), L = L.reset(), R)
+    if (A = !0, O ? Z = !1 : x(), v = v.reset(), R)
         return;
-    let e = L.getRelationshipCounts();
-    v = 0 === e[g.OGo.FRIEND] ? 0 !== e[g.OGo.PENDING_INCOMING] ? g.pJs.PENDING : g.pJs.ADD_FRIEND : g.pJs.ONLINE;
+    let e = v.getRelationshipCounts();
+    L = 0 === e[g.OGo.FRIEND] ? 0 !== e[g.OGo.PENDING_INCOMING] ? g.pJs.PENDING : g.pJs.ADD_FRIEND : g.pJs.ONLINE;
 }
 function b() {
-    L = O ? new N() : L.reset();
+    v = O ? new N() : v.reset();
 }
 function M(e) {
     return function () {
-        return !O && !!L.update(e) && (L = L.clone(), !0);
+        return !O && !!v.update(e) && (v = v.clone(), !0);
     };
 }
 class D extends (i = r.ZP.Store) {
@@ -148,9 +148,9 @@ class D extends (i = r.ZP.Store) {
     getState() {
         return {
             fetching: Z,
-            section: v,
+            section: L,
             pendingCount: I.Z.getPendingCount(),
-            rows: L
+            rows: v
         };
     }
 }
@@ -159,7 +159,7 @@ p(D, 'displayName', 'FriendsStore'), t.ZP = new D(l.Z, {
         P();
     },
     FRIENDS_SET_SECTION: function (e) {
-        v = e.section, x();
+        L = e.section, x();
     },
     CHANNEL_SELECT: function (e) {
         let {channelId: t} = e;
@@ -176,6 +176,6 @@ p(D, 'displayName', 'FriendsStore'), t.ZP = new D(l.Z, {
         return O = t !== g.cII.FRIENDS, b(), !O;
     },
     FRIENDS_SET_INITIAL_SECTION: function (e) {
-        v = e.section, R = !0;
+        L = e.section, R = !0;
     }
 });

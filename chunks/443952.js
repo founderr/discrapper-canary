@@ -1,10 +1,10 @@
 n(47120), n(411104), n(789020);
 var i = n(735250);
 n(470079);
-var s = n(243814), a = n(45792), r = n(481060), l = n(278323), o = n(988298), c = n(224706), d = n(45114), u = n(479531), _ = n(40851), E = n(566620), h = n(596223), I = n(838195), m = n(928518), g = n(592125), p = n(293273), T = n(885110), S = n(451478), C = n(630388), f = n(823379), N = n(591759), A = n(228488), Z = n(996106), v = n(914946), L = n(452426), O = n(561205), R = n(600027), x = n(852926), P = n(186901), b = n(981631);
+var s = n(243814), a = n(45792), r = n(481060), l = n(278323), o = n(988298), c = n(224706), d = n(45114), u = n(479531), _ = n(40851), E = n(566620), h = n(596223), I = n(838195), m = n(928518), g = n(592125), p = n(293273), T = n(885110), S = n(451478), C = n(630388), f = n(823379), N = n(591759), A = n(228488), Z = n(996106), L = n(914946), v = n(452426), O = n(561205), R = n(600027), x = n(852926), P = n(186901), b = n(981631);
 async function M(e, t, n, i) {
     let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '', a = p.Z.getApplicationActivity(t);
-    if (null == a || null == a.secrets || !(0, v.t9)(i, a.party, a.secrets))
+    if (null == a || null == a.secrets || !(0, L.t9)(i, a.party, a.secrets))
         throw new Z.Z({ errorCode: b.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
     let r = (0, h.Z)(a, T.Z);
     if (r) {
@@ -63,7 +63,7 @@ t.Z = {
                 P.lH
             ]
         },
-        validation: e => (0, L.Z)(e).required().keys({
+        validation: e => (0, v.Z)(e).required().keys({
             user_id: e.string().required(),
             type: e.number().required().valid([b.mFx.JOIN]),
             content: e.string().min(0).max(1024),
@@ -91,7 +91,7 @@ t.Z = {
                 P.lH
             ]
         },
-        validation: e => (0, L.Z)(e).required().keys({
+        validation: e => (0, v.Z)(e).required().keys({
             type: e.number().required().valid([b.mFx.JOIN]),
             user_id: e.string().required(),
             session_id: e.string().required(),
@@ -209,7 +209,7 @@ t.Z = {
                 socket: n,
                 args: {mediaUrl: i}
             } = e;
-            (0, v.bu)(n.transport);
+            (0, L.bu)(n.transport);
             let s = n.application.id;
             if (null == s)
                 throw new Z.Z({ errorCode: b.lTL.INVALID_COMMAND }, 'No application.');

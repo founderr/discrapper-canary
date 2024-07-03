@@ -37,7 +37,7 @@ function A(e) {
             channel: n,
             otherUser: o,
             active: _
-        } = e, m = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), p = (0, s.e7)([E.Z], () => null == o ? null : E.Z.getNickname(o.id)), A = !m && _, Z = (0, g.c)(n), {avatarDecorationSrc: v} = (0, d.Z)({
+        } = e, m = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), p = (0, s.e7)([E.Z], () => null == o ? null : E.Z.getNickname(o.id)), A = !m && _, Z = (0, g.c)(n), {avatarDecorationSrc: L} = (0, d.Z)({
             user: o,
             size: (0, c.y9)(a.AvatarSizes.SIZE_40),
             onlyAnimateOnHover: !0
@@ -47,7 +47,7 @@ function A(e) {
             (0, i.jsx)(N, {
                 className: C.avatar,
                 src: (0, u.x)(n, 40, A),
-                avatarDecoration: v,
+                avatarDecoration: L,
                 size: a.AvatarSizes.SIZE_40,
                 'aria-label': null !== (t = null == o ? void 0 : o.username) && void 0 !== t ? t : S.Z.Messages.UNKNOWN_USER
             }),

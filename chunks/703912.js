@@ -14,8 +14,8 @@ async function N(e, t, n) {
             redirect_uri: N,
             code_challenge: A,
             code_challenge_method: Z,
-            state: v,
-            nonce: L,
+            state: L,
+            nonce: v,
             scope: O,
             permissions: R,
             guild_id: x,
@@ -41,7 +41,7 @@ async function N(e, t, n) {
             redirectUri: N,
             codeChallenge: A,
             codeChallengeMethod: Z,
-            state: v,
+            state: L,
             integrationType: l
         });
     } catch (t) {
@@ -67,8 +67,8 @@ async function N(e, t, n) {
                 redirectUri: N,
                 codeChallenge: A,
                 codeChallengeMethod: Z,
-                state: v,
-                nonce: L,
+                state: L,
+                nonce: v,
                 integrationType: l
             })).location;
         } catch (t) {
@@ -90,7 +90,7 @@ async function N(e, t, n) {
         redirectUri: N,
         codeChallenge: A,
         codeChallengeMethod: Z,
-        state: v,
+        state: L,
         guildId: x,
         channelId: P,
         prompt: b,

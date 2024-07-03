@@ -25,7 +25,7 @@ t.Z = function () {
         })), n = (0, E.Z)(o.Z.QUEST_HOME_PAGE), A = (0, r.e7)([g.Z], () => g.Z.getClanDiscoveryCategories(), [], g.j), Z = null == A ? void 0 : A.map(e => ({
             ...e,
             icon: N(e.categoryId)
-        })), v = e => {
+        })), L = e => {
             (0, l.uY)(e, !0), u.Z.closeSidebar(), t && (0, l.AQ)();
         };
     return s.useEffect(() => {
@@ -43,7 +43,7 @@ t.Z = function () {
                         bottom: 1
                     }
                 },
-                onClick: () => v(S.Gj.Clans),
+                onClick: () => L(S.Gj.Clans),
                 wrapContent: !0,
                 selected: e === S.Gj.Clans,
                 className: f.categoryItem,
@@ -52,17 +52,17 @@ t.Z = function () {
             }, 'clan-discovery-home'),
             (0, i.jsx)(p.Z, {
                 categories: Z,
-                handleCategorySelect: v,
+                handleCategorySelect: L,
                 currentCategoryId: e,
                 shouldDisplaySelectedCategory: !t
             }),
             (0, i.jsx)(d.Z, {
-                handleCategorySelect: v,
+                handleCategorySelect: L,
                 currentCategoryId: e,
                 shouldDisplaySelectedCategory: !t
             }),
             n && (0, i.jsx)(_.Z, {
-                onClick: () => v(S.Gj.Quests),
+                onClick: () => L(S.Gj.Quests),
                 isSelected: e === S.Gj.Quests
             })
         ]

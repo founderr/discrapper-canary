@@ -6,12 +6,12 @@ n.d(t, {
         return Z;
     },
     ZP: function () {
-        return v;
+        return L;
     }
 }), n(47120);
 var i = n(735250), s = n(470079), a = n(990547), r = n(442837), l = n(544891), o = n(481060), c = n(893776), d = n(37234), u = n(809206), _ = n(110924), E = n(714338), h = n(213609), I = n(144114), m = n(210887), g = n(23434), p = n(610001), T = n(78415), S = n(1964), C = n(981631), f = n(815660), N = n(689938);
 let A = 'Email Verification', Z = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
-function v() {
+function L() {
     let {
             action: e,
             theme: t
@@ -21,15 +21,15 @@ function v() {
         ], () => ({
             action: g.Z.getAction(),
             theme: m.Z.theme
-        })), v = S.Z.getVerificationTypes(e), [L, O] = s.useState(0), R = (0, _.Z)(v);
+        })), L = S.Z.getVerificationTypes(e), [v, O] = s.useState(0), R = (0, _.Z)(L);
     (0, h.Z)({
         type: a.ImpressionTypes.MODAL,
         name: a.ImpressionNames.USER_ACTION_REQUIRED,
         properties: {
-            verification_type: v[0],
-            verification_types: v
+            verification_type: L[0],
+            verification_types: L
         }
-    }, {}, [v.toString()]);
+    }, {}, [L.toString()]);
     let x = () => {
             (0, u.FD)(), (0, o.openModalLazy)(async () => {
                 let {default: e} = await n.e('35401').then(n.bind(n, 284549));
@@ -56,7 +56,7 @@ function v() {
     return s.useEffect(() => (E.Z.disable(), () => {
         E.Z.enable();
     }), []), s.useEffect(() => {
-        (null == R ? void 0 : R[0]) === C.PUi.PHONE && (null == v ? void 0 : v[0]) === C.PUi.EMAIL && (0, o.openModalLazy)(async () => {
+        (null == R ? void 0 : R[0]) === C.PUi.PHONE && (null == L ? void 0 : L[0]) === C.PUi.EMAIL && (0, o.openModalLazy)(async () => {
             let {default: e} = await Promise.resolve().then(n.bind(n, 468026));
             return t => (0, i.jsx)(e, {
                 ...t,
@@ -70,11 +70,11 @@ function v() {
             onCloseCallback: x
         });
     }, [
-        v,
+        L,
         R
     ]), (0, i.jsx)(p.Z, {
-        types: v,
-        captchaKey: L,
+        types: L,
+        captchaKey: v,
         onCaptchaVerify: e => {
             l.tn.post({
                 url: C.ANM.CAPTCHA,

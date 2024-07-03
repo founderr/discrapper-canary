@@ -3,14 +3,14 @@ n.d(t, {
         return R;
     }
 });
-var i = n(735250), s = n(470079), a = n(873546), r = n(442837), l = n(481060), o = n(355467), c = n(270237), d = n(252618), u = n(423000), _ = n(200876), E = n(674180), h = n(38618), I = n(984370), m = n(430824), g = n(351402), p = n(730647), T = n(772021), S = n(396828), C = n(475413), f = n(20967), N = n(504762), A = n(807152), Z = n(176505), v = n(689938), L = n(83939);
+var i = n(735250), s = n(470079), a = n(873546), r = n(442837), l = n(481060), o = n(355467), c = n(270237), d = n(252618), u = n(423000), _ = n(200876), E = n(674180), h = n(38618), I = n(984370), m = n(430824), g = n(351402), p = n(730647), T = n(772021), S = n(396828), C = n(475413), f = n(20967), N = n(504762), A = n(807152), Z = n(176505), L = n(689938), v = n(83939);
 function O(e) {
     let {guildId: t} = e, n = (0, r.e7)([m.Z], () => m.Z.getGuild(t), [t]), O = (0, r.e7)([h.Z], () => h.Z.isConnected()), R = (0, _.Z)(t), x = (0, T.Z)(t), P = (0, r.e7)([g.Z], () => g.Z.isSubscriptionFetching), b = (0, p.f)(), {
             shouldHideGuildPurchaseEntryPoints: M,
             restrictionsLoading: D
         } = (0, E.uP)(t), y = null == n || !b || P || D;
     (0, d.Tt)({
-        subsection: v.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
+        subsection: L.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
         location: null == n ? void 0 : n.name
     }), (0, c.Z)(a.tq ? 'role-subscriptions-overview' : void 0);
     let j = O && (null == n || !(R || x) || M && !D);
@@ -26,26 +26,26 @@ function O(e) {
         return (0, i.jsx)(f.z, { errorType: e });
     }
     return (0, i.jsxs)('div', {
-        className: L.container,
+        className: v.container,
         children: [
             (0, i.jsxs)(I.Z, {
                 toolbar: (0, i.jsx)(s.Fragment, {}),
-                className: L.headerBar,
+                className: v.headerBar,
                 children: [
                     (0, i.jsx)(I.Z.Icon, {
                         icon: (0, l.makeIconCompat)(S.Z),
                         'aria-hidden': !0
                     }),
-                    (0, i.jsx)(I.Z.Title, { children: v.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE })
+                    (0, i.jsx)(I.Z.Title, { children: L.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE })
                 ]
             }),
             (0, i.jsx)('div', { id: A.v }),
             (0, i.jsx)('div', {
-                className: L.content,
+                className: v.content,
                 children: R ? (0, i.jsx)(l.ScrollerNone, {
-                    className: L.scroller,
+                    className: v.scroller,
                     children: (0, i.jsx)('div', {
-                        className: L.scrollerContent,
+                        className: v.scrollerContent,
                         children: y ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(C.Z, { guild: n })
                     })
                 }) : (0, i.jsx)(N.Z, {})

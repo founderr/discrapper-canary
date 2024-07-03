@@ -3,11 +3,11 @@ n.d(t, {
         return O;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(442837), r = n(692547), l = n(481060), o = n(287734), c = n(872810), d = n(367907), u = n(835473), _ = n(871118), E = n(543882), h = n(314897), I = n(944486), m = n(594174), g = n(366695), p = n(602623), T = n(51144), S = n(498058), C = n(158631), f = n(143614), N = n(981631), A = n(70722), Z = n(689938), v = n(106963);
-function L(e) {
+var i = n(735250), s = n(470079), a = n(442837), r = n(692547), l = n(481060), o = n(287734), c = n(872810), d = n(367907), u = n(835473), _ = n(871118), E = n(543882), h = n(314897), I = n(944486), m = n(594174), g = n(366695), p = n(602623), T = n(51144), S = n(498058), C = n(158631), f = n(143614), N = n(981631), A = n(70722), Z = n(689938), L = n(106963);
+function v(e) {
     let {users: t} = e;
     return (0, i.jsxs)('div', {
-        className: v.viewers,
+        className: L.viewers,
         children: [
             (0, i.jsx)(l.VoiceNormalIcon, {
                 size: 'custom',
@@ -54,7 +54,7 @@ function O(e) {
         };
     }(r, w);
     return (0, i.jsxs)('div', {
-        className: v.container,
+        className: L.container,
         children: [
             (0, i.jsx)(l.Avatar, {
                 size: l.AvatarSizes.SIZE_32,
@@ -62,7 +62,7 @@ function O(e) {
                 'aria-label': D
             }),
             (0, i.jsxs)('div', {
-                className: v.details,
+                className: L.details,
                 children: [
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/semibold',
@@ -74,9 +74,9 @@ function O(e) {
                         children: null != M ? Z.Z.Messages.STREAMING.format({ name: M.name }) : Z.Z.Messages.STREAMING_A_GAME
                     }),
                     (0, i.jsxs)('div', {
-                        className: v.activity,
+                        className: L.activity,
                         children: [
-                            w.length > 0 && (0, i.jsx)(L, { users: w }),
+                            w.length > 0 && (0, i.jsx)(v, { users: w }),
                             (0, i.jsxs)(l.Button, {
                                 onClick: () => {
                                     if (U === O) {
@@ -92,9 +92,9 @@ function O(e) {
                                 },
                                 color: k,
                                 size: l.ButtonSizes.SMALL,
-                                className: v.button,
+                                className: L.button,
                                 disabled: H,
-                                innerClassName: v.innerButton,
+                                innerClassName: L.innerButton,
                                 children: [
                                     (0, i.jsx)(l.MicrophoneArrowRightIcon, {
                                         size: 'custom',
@@ -110,7 +110,7 @@ function O(e) {
                 ]
             }),
             null != j ? (0, i.jsx)(_.Z, {
-                className: v.stream,
+                className: L.stream,
                 stream: {
                     streamType: A.lo.CALL,
                     ownerId: r,
@@ -119,7 +119,7 @@ function O(e) {
             }) : (0, i.jsx)(g.Z, {
                 game: M,
                 size: g.Z.Sizes.LARGE,
-                className: v.gameIcon
+                className: L.gameIcon
             })
         ]
     });

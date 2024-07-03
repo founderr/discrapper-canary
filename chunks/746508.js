@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(512722), o = n.n(l), c = n(613828), d = n(442837), u = n(592471), _ = n(864094), E = n(75735), h = n(382600), I = n(481060), m = n(846027), g = n(239091), p = n(925549), T = n(284056), S = n(730749), C = n(2052), f = n(40851), N = n(317381), A = n(596040), Z = n(588580), v = n(374065), L = n(451576), O = n(938655), R = n(403404), x = n(100527), P = n(906732), b = n(158631), M = n(793865), D = n(933557), y = n(258609), j = n(446226), U = n(935261), G = n(74299), w = n(803647), k = n(142497), B = n(810788), H = n(160404), V = n(703656), F = n(917405), Y = n(641015), W = n(848543), z = n(565799), K = n(501655), q = n(71275), Q = n(600518), X = n(485287), J = n(754277), $ = n(590415), ee = n(695346), et = n(923973), en = n(829750), ei = n(189771), es = n(544384), ea = n(560688), er = n(127608), el = n(76021), eo = n(173507), ec = n(25827), ed = n(199902), eu = n(314897), e_ = n(592125), eE = n(430824), eh = n(819640), eI = n(131951), em = n(496675), eg = n(19780), ep = n(699516), eT = n(594174), eS = n(979651), eC = n(938475), ef = n(285952), eN = n(976401), eA = n(333454), eZ = n(626135), ev = n(63063), eL = n(51144), eO = n(594117), eR = n(226323), ex = n(981631), eP = n(190378), eb = n(689938), eM = n(902569), eD = n(549856);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(512722), o = n.n(l), c = n(613828), d = n(442837), u = n(592471), _ = n(864094), E = n(75735), h = n(382600), I = n(481060), m = n(846027), g = n(239091), p = n(925549), T = n(284056), S = n(730749), C = n(2052), f = n(40851), N = n(317381), A = n(596040), Z = n(588580), L = n(374065), v = n(451576), O = n(938655), R = n(403404), x = n(100527), P = n(906732), b = n(158631), M = n(793865), D = n(933557), y = n(258609), j = n(446226), U = n(935261), G = n(74299), w = n(803647), k = n(142497), B = n(810788), H = n(160404), V = n(703656), F = n(917405), Y = n(641015), W = n(848543), z = n(565799), K = n(501655), q = n(71275), Q = n(600518), X = n(485287), J = n(754277), $ = n(590415), ee = n(695346), et = n(923973), en = n(829750), ei = n(189771), es = n(544384), ea = n(560688), er = n(127608), el = n(76021), eo = n(173507), ec = n(25827), ed = n(199902), eu = n(314897), e_ = n(592125), eE = n(430824), eh = n(819640), eI = n(131951), em = n(496675), eg = n(19780), ep = n(699516), eT = n(594174), eS = n(979651), eC = n(938475), ef = n(285952), eN = n(976401), eA = n(333454), eZ = n(626135), eL = n(63063), ev = n(51144), eO = n(594117), eR = n(226323), ex = n(981631), eP = n(190378), eb = n(689938), eM = n(902569), eD = n(549856);
 function ey(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -58,7 +58,7 @@ function eU() {
                         children: (0, i.jsx)('div', { className: eM.krispLogo })
                     }),
                     (0, i.jsx)(I.Anchor, {
-                        href: ev.Z.getArticleURL(ex.BhN.NOISE_SUPPRESSION),
+                        href: eL.Z.getArticleURL(ex.BhN.NOISE_SUPPRESSION),
                         className: eM.krispLink,
                         onClick: e => ej(e),
                         children: eb.Z.Messages.LEARN_MORE
@@ -190,7 +190,7 @@ function ek(e) {
     let {
             channel: t,
             enableActivities: n
-        } = e, s = (0, f.bp)(), {analyticsLocations: a} = (0, P.ZP)(), l = s === ex.IlC.POPOUT, o = (0, v.KF)(t.id), c = (0, v.g5)(o), [_] = (0, d.e7)([N.ZP], () => null != t.id && '' !== t.id ? N.ZP.getEmbeddedActivitiesForChannel(t.id) : N.i6), {userInActivity: E} = (0, d.cj)([N.ZP], () => ({ userInActivity: null != N.ZP.getSelfEmbeddedActivityForChannel(t.id) })), h = (0, C.O)(), m = (0, Z.a)(), g = o !== v.jy.CAN_LAUNCH, {
+        } = e, s = (0, f.bp)(), {analyticsLocations: a} = (0, P.ZP)(), l = s === ex.IlC.POPOUT, o = (0, L.KF)(t.id), c = (0, L.g5)(o), [_] = (0, d.e7)([N.ZP], () => null != t.id && '' !== t.id ? N.ZP.getEmbeddedActivitiesForChannel(t.id) : N.i6), {userInActivity: E} = (0, d.cj)([N.ZP], () => ({ userInActivity: null != N.ZP.getSelfEmbeddedActivityForChannel(t.id) })), h = (0, C.O)(), m = (0, Z.a)(), g = o !== L.jy.CAN_LAUNCH, {
             Component: p,
             events: T
         } = (0, u.s)();
@@ -255,15 +255,15 @@ function eB(e) {
         ]), T = u.find(e => e.ownerId === (null == c ? void 0 : c.id)), S = (0, es.E)(n, c, u);
     t = null == T ? a ? p : er.Z : () => (0, w.Z)(T);
     let C = null != T || S.length > 0, f = E ? eb.Z.Messages.SHARE_YOUR_SCREEN : eb.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE, A = m || l || g, Z = null != T, {
-            Component: v,
-            events: L,
+            Component: L,
+            events: v,
             play: O
         } = (0, _.P)(Z ? 'disable' : 'enable');
     s.useEffect(() => () => O(), [
         O,
         Z
     ]);
-    let R = (0, i.jsx)(v, {
+    let R = (0, i.jsx)(L, {
         color: 'currentColor',
         className: r()(eM.buttonIcon, { [eM.withText]: !A })
     });
@@ -304,11 +304,11 @@ function eB(e) {
                     ...C ? a : null,
                     onMouseEnter: () => {
                         var t;
-                        null == s || s(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), L.onMouseEnter();
+                        null == s || s(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), v.onMouseEnter();
                     },
                     onMouseLeave: () => {
                         var t;
-                        null === (t = e.onMouseLeave) || void 0 === t || t.call(e), L.onMouseLeave();
+                        null === (t = e.onMouseLeave) || void 0 === t || t.call(e), v.onMouseLeave();
                     },
                     innerClassName: eM.buttonContents,
                     wrapperClassName: eM.button,
@@ -604,7 +604,7 @@ t.Z = (0, S.Z)(function (e) {
         })), E = (0, d.e7)([
             eI.Z,
             B.Z
-        ], () => B.Z.hasHotspot(eP.v.VOICE_PANEL_INTRODUCTION) && (0, eL.EO)(a) && !eI.Z.isInteractionRequired() && !(null == o ? void 0 : o.isGuildStageVoice())), h = (0, d.e7)([eS.Z], () => null != r && eS.Z.hasVideo(r), [r]), m = (0, d.e7)([ed.Z], () => ed.Z.getCurrentUserActiveStream()), g = (0, d.e7)([eh.Z], () => eh.Z.hasLayers()), p = (0, d.e7)([H.Z], () => H.Z.isViewingRoles(c)), T = (0, d.e7)([em.Z], () => p && !em.Z.can(ex.Plq.VIEW_CHANNEL, o), [
+        ], () => B.Z.hasHotspot(eP.v.VOICE_PANEL_INTRODUCTION) && (0, ev.EO)(a) && !eI.Z.isInteractionRequired() && !(null == o ? void 0 : o.isGuildStageVoice())), h = (0, d.e7)([eS.Z], () => null != r && eS.Z.hasVideo(r), [r]), m = (0, d.e7)([ed.Z], () => ed.Z.getCurrentUserActiveStream()), g = (0, d.e7)([eh.Z], () => eh.Z.hasLayers()), p = (0, d.e7)([H.Z], () => H.Z.isViewingRoles(c)), T = (0, d.e7)([em.Z], () => p && !em.Z.can(ex.Plq.VIEW_CHANNEL, o), [
             p,
             o
         ]), S = ee.Fg.useSetting(), [C, f, N] = (0, d.Wu)([
@@ -636,7 +636,7 @@ t.Z = (0, S.Z)(function (e) {
             C,
             f,
             N
-        ]), [v, O] = s.useState(!1);
+        ]), [L, O] = s.useState(!1);
     s.useEffect(() => {
         (p || T) && O(!1);
     }, [
@@ -644,7 +644,7 @@ t.Z = (0, S.Z)(function (e) {
         T,
         O
     ]);
-    let {analyticsLocations: R} = (0, P.ZP)(x.Z.RTC_PANEL), M = (0, A.Z)(null != c ? c : ex.lds, null == o ? void 0 : o.id), D = (0, L.Z)(null == o ? void 0 : o.id), w = (0, b.ZP)();
+    let {analyticsLocations: R} = (0, P.ZP)(x.Z.RTC_PANEL), M = (0, A.Z)(null != c ? c : ex.lds, null == o ? void 0 : o.id), D = (0, v.Z)(null == o ? void 0 : o.id), w = (0, b.ZP)();
     return (0, i.jsx)(P.Gt, {
         value: R,
         children: (0, i.jsxs)('div', {
@@ -671,7 +671,7 @@ t.Z = (0, S.Z)(function (e) {
                     isPrivateChannelWithEnabledActivities: D,
                     isBroadcasting: w
                 }),
-                !v && p && null != c ? (0, i.jsxs)('div', {
+                !L && p && null != c ? (0, i.jsxs)('div', {
                     className: eM.viewAsRolesWarning,
                     children: [
                         (0, i.jsx)(I.Text, {

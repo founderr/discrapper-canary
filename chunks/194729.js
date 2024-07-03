@@ -1,5 +1,5 @@
 n(390547), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n.n(l), c = n(664751), d = n(748780), u = n(873546), _ = n(442837), E = n(481060), h = n(570140), I = n(212093), m = n(827837), g = n(785570), p = n(100527), T = n(963202), S = n(252618), C = n(440190), f = n(5955), N = n(121711), A = n(709158), Z = n(703656), v = n(108427), L = n(706454), O = n(210887), R = n(480294), x = n(683301), P = n(430824), b = n(230307), M = n(502568), D = n(900849), y = n(879484), j = n(117496), U = n(296386), G = n(150192), w = n(769727), k = n(584885), B = n(59222), H = n(749436), V = n(26580), F = n(731455), Y = n(981631), W = n(689938), z = n(468918), K = n(368179), q = n(52518);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n.n(l), c = n(664751), d = n(748780), u = n(873546), _ = n(442837), E = n(481060), h = n(570140), I = n(212093), m = n(827837), g = n(785570), p = n(100527), T = n(963202), S = n(252618), C = n(440190), f = n(5955), N = n(121711), A = n(709158), Z = n(703656), L = n(108427), v = n(706454), O = n(210887), R = n(480294), x = n(683301), P = n(430824), b = n(230307), M = n(502568), D = n(900849), y = n(879484), j = n(117496), U = n(296386), G = n(150192), w = n(769727), k = n(584885), B = n(59222), H = n(749436), V = n(26580), F = n(731455), Y = n(981631), W = n(689938), z = n(468918), K = n(368179), q = n(52518);
 function Q(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -46,7 +46,7 @@ class X extends s.PureComponent {
         } else
             null != l && l !== F.Hk && h.Z.wait(() => (0, I.uY)(l));
         let d = null !== (t = null === (e = (0, Z.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
-        d > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: d })), (0, v.e)('guild_discovery');
+        d > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: d })), (0, L.e)('guild_discovery');
     }
     componentDidUpdate(e) {
         let {
@@ -349,7 +349,7 @@ class X extends s.PureComponent {
 }
 let J = _.ZP.connectStores([
     O.Z,
-    L.default,
+    v.default,
     b.Z,
     R.Z,
     x.ZP,
@@ -357,7 +357,7 @@ let J = _.ZP.connectStores([
     P.Z
 ], () => {
     var e;
-    let t = F.dU, n = L.default.locale, i = null !== (e = o().find(t, { code: n })) && void 0 !== e ? e : t[0], s = Object.keys(b.Z.applicationStatistics), a = R.Z.hasConsented(Y.pjP.PERSONALIZATION) && s.length > 0, r = x.ZP.getCurrentCategoryId(), l = x.ZP.getCurrentHomepageCategoryId();
+    let t = F.dU, n = v.default.locale, i = null !== (e = o().find(t, { code: n })) && void 0 !== e ? e : t[0], s = Object.keys(b.Z.applicationStatistics), a = R.Z.hasConsented(Y.pjP.PERSONALIZATION) && s.length > 0, r = x.ZP.getCurrentCategoryId(), l = x.ZP.getCurrentHomepageCategoryId();
     return {
         isFetching: x.ZP.isFetching(),
         isFetchingSearch: x.ZP.isFetchingSearch(),
