@@ -12,7 +12,7 @@ n.d(t, {
         return z;
     },
     Ex: function () {
-        return eD;
+        return ey;
     },
     Fg: function () {
         return V;
@@ -60,7 +60,7 @@ n.d(t, {
         return e_;
     },
     R_: function () {
-        return eL;
+        return eD;
     },
     SE: function () {
         return ev;
@@ -69,7 +69,7 @@ n.d(t, {
         return eI;
     },
     Sh: function () {
-        return eb;
+        return eL;
     },
     T4: function () {
         return N;
@@ -138,7 +138,7 @@ n.d(t, {
         return T;
     },
     gw: function () {
-        return eM;
+        return eb;
     },
     h2: function () {
         return B;
@@ -159,7 +159,7 @@ n.d(t, {
         return Y;
     },
     l4: function () {
-        return eP;
+        return eM;
     },
     mX: function () {
         return x;
@@ -190,9 +190,6 @@ n.d(t, {
     },
     xM: function () {
         return q;
-    },
-    xU: function () {
-        return ey;
     },
     xd: function () {
         return eu;
@@ -386,13 +383,10 @@ let eI = (0, s.KM)((0, s.Zc)('appearance', 'developerMode', e => null != e && e,
     }, () => (0, r.e7)([l.Z], () => {
         var e;
         return null === (e = l.Z.getOverride('animateStickers')) || void 0 === e ? void 0 : e.value;
-    })), eN = [], ev = (0, s.Zc)('privacy', 'activityRestrictedGuildIds', e => null != e ? e : eN, e => e), eO = [], eR = (0, s.Zc)('privacy', 'activityJoiningRestrictedGuildIds', e => null != e ? e : eO, e => e), eC = (0, s.Zc)('privacy', 'defaultGuildsActivityRestricted', e => e === i.E5.ON_FOR_LARGE_GUILDS, e => !0 === e ? i.E5.ON_FOR_LARGE_GUILDS : i.E5.OFF), ey = (0, s.Zc)('communities', 'disableHomeAutoNav', e => {
+    })), eN = [], ev = (0, s.Zc)('privacy', 'activityRestrictedGuildIds', e => null != e ? e : eN, e => e), eO = [], eR = (0, s.Zc)('privacy', 'activityJoiningRestrictedGuildIds', e => null != e ? e : eO, e => e), eC = (0, s.Zc)('privacy', 'defaultGuildsActivityRestricted', e => e === i.E5.ON_FOR_LARGE_GUILDS, e => !0 === e ? i.E5.ON_FOR_LARGE_GUILDS : i.E5.OFF), ey = (0, s.Zc)('privacy', 'familyCenterEnabledV2', e => null == e ? void 0 : e.value, e => a.D5.create({ value: e })), eD = (0, s.Zc)('privacy', 'hideLegacyUsername', e => {
         var t;
         return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
-    }, e => a.D5.create({ value: e })), eD = (0, s.Zc)('privacy', 'familyCenterEnabledV2', e => null == e ? void 0 : e.value, e => a.D5.create({ value: e })), eL = (0, s.Zc)('privacy', 'hideLegacyUsername', e => {
-        var t;
-        return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
-    }, e => a.D5.create({ value: e })), eb = (0, s.Zc)('textAndImages', 'explicitContentSettings', e => {
+    }, e => a.D5.create({ value: e })), eL = (0, s.Zc)('textAndImages', 'explicitContentSettings', e => {
         let {
             explicitContentGuilds: t,
             explicitContentFriendDm: n,
@@ -414,7 +408,7 @@ let eI = (0, s.KM)((0, s.Zc)('appearance', 'developerMode', e => null != e && e,
             explicitContentFriendDm: null != n ? n : void 0,
             explicitContentNonFriendDm: null != r ? r : void 0
         };
-    }), eM = (0, s.Zc)('textAndImages', 'keywordFilterSettings', e => {
+    }), eb = (0, s.Zc)('textAndImages', 'keywordFilterSettings', e => {
         let {
             profanity: t,
             sexualContent: n,
@@ -441,4 +435,4 @@ let eI = (0, s.KM)((0, s.Zc)('appearance', 'developerMode', e => null != e && e,
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
 }, e => a.D5.create({ value: e }));
-let eP = (0, s.Zc)('userContent', 'lastReceivedChangelogId', e => null != e ? e : '0', e => e);
+let eM = (0, s.Zc)('userContent', 'lastReceivedChangelogId', e => null != e ? e : '0', e => e);

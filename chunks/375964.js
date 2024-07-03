@@ -3378,8 +3378,6 @@ e.exports = Object.freeze({
     HARDWARE_ACCELERATION_HELP_TEXT: 'Turns on Hardware Acceleration, which uses your GPU to make Discord smoother. Turn this off if you are experiencing frame drops.',
     SWITCH_HARDWARE_ACCELERATION: 'Change Hardware Acceleration',
     SWITCH_HARDWARE_ACCELERATION_BODY: '\n  Changing the hardware acceleration setting will quit and re-launch Discord.\n  Are you sure you want to do this?\n  ',
-    USER_SETTINGS_HOME_AUTO_NAV: 'Auto-navigate to Home',
-    USER_SETTINGS_HOME_AUTO_NAV_HELP_TEXT: 'For community servers with Home enabled, automatically navigate to a server\'s Home if you\'ve been away for a while. [Learn more about the Home beta.]({helpCenterLink})',
     ADD_KEYBIND: 'Add a Keybind',
     ADD_KEYBIND_WARNING: 'Keybinds are disabled while this panel is visible.',
     REMOVE_KEYBIND: 'Remove Keybind',
