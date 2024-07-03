@@ -1,59 +1,72 @@
 n.d(t, {
     o: function () {
-        return h;
+        return _;
     }
 });
 var i = n(735250);
 n(470079);
-var s = n(120356), a = n.n(s), r = n(481060), l = n(788307), o = n(2052), c = n(785717), d = n(695346), u = n(689938), _ = n(57883);
-function h(e, t) {
-    let s = (0, o.O)(), {trackUserProfileAction: h} = (0, c.KZ)();
-    function E(e) {
-        e.stopPropagation(), d.Ok.updateSetting(void 0);
-    }
-    function I() {
-        h({ action: 'PRESS_SET_CUSTOM_STATUS' }), (0, r.openModalLazy)(async () => {
-            let {default: e} = await n.e('51714').then(n.bind(n, 211065));
-            return t => (0, i.jsx)(e, {
-                sourceAnalyticsContext: s,
-                ...t
+var s = n(120356), a = n.n(s), r = n(481060), l = n(788307), o = n(2052), c = n(695346), d = n(689938), u = n(57883);
+function _(e) {
+    let {
+            customStatus: t,
+            focusedClassName: s,
+            analyticsLocations: _,
+            trackUserProfileAction: h
+        } = e, E = (0, o.O)(), I = () => {
+            (0, r.openModalLazy)(async () => {
+                let {default: e} = await n.e('51714').then(n.bind(n, 211065));
+                return t => (0, i.jsx)(e, {
+                    sourceAnalyticsContext: E,
+                    sourceAnalyticsLocations: _,
+                    ...t
+                });
             });
-        });
-    }
-    if (null != e) {
-        let n = null != e.emoji ? t => {
-            let {className: n} = t;
+        };
+    return null != t ? (0, i.jsx)(r.MenuItem, {
+        id: 'edit-custom-status',
+        label: d.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
+        focusedClassName: s,
+        icon: null != t.emoji ? e => {
+            let {className: n} = e;
             return (0, i.jsx)(l.I, {
                 className: n,
-                emoji: e.emoji,
+                emoji: t.emoji,
                 animate: !0,
                 hideTooltip: !0
             });
-        } : void 0;
-        return (0, i.jsx)(r.MenuItem, {
-            id: 'edit-custom-status',
-            label: u.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
-            icon: n,
-            focusedClassName: t,
-            showIconFirst: !0,
-            hint: e => (0, i.jsx)(r.Clickable, {
-                ...e,
-                onClick: E,
-                tabIndex: -1,
-                children: (0, i.jsx)(r.CircleXIcon, {
-                    size: 'sm',
-                    color: 'currentColor'
-                })
-            }),
-            action: I
-        });
-    }
-    return (0, i.jsx)(r.MenuItem, {
-        id: 'set-custom-status',
-        focusedClassName: t,
-        label: u.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
-        icon: e => (0, i.jsx)('div', { className: a()(_.customEmojiPlaceholder, e) }),
-        action: I,
-        showIconFirst: !0
+        } : void 0,
+        showIconFirst: !0,
+        hint: e => (0, i.jsx)(r.Clickable, {
+            ...e,
+            onClick: e => {
+                e.stopPropagation(), h({
+                    action: 'PRESS_CLEAR_CUSTOM_STATUS',
+                    analyticsLocations: _
+                }), c.Ok.updateSetting(void 0);
+            },
+            tabIndex: -1,
+            children: (0, i.jsx)(r.CircleXIcon, {
+                size: 'sm',
+                color: 'currentColor'
+            })
+        }),
+        action: () => {
+            h({
+                action: 'PRESS_EDIT_CUSTOM_STATUS',
+                analyticsLocations: _
+            }), I();
+        }
+    }) : (0, i.jsx)(r.MenuItem, {
+        id: 'add-custom-status',
+        focusedClassName: s,
+        label: d.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
+        icon: e => (0, i.jsx)('div', { className: a()(u.customEmojiPlaceholder, e) }),
+        showIconFirst: !0,
+        action: () => {
+            h({
+                action: 'PRESS_ADD_CUSTOM_STATUS',
+                analyticsLocations: _
+            }), I();
+        }
     });
 }

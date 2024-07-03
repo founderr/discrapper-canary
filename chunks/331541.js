@@ -3,7 +3,7 @@ n.d(t, {
         return ee;
     }
 });
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(722770), o = n(873546), c = n(442837), d = n(481060), u = n(2052), _ = n(393238), h = n(727637), E = n(100527), I = n(906732), m = n(521868), g = n(299206), p = n(440051), T = n(734934), S = n(158238), f = n(300284), C = n(680295), N = n(751009), A = n(785717), Z = n(318661), L = n(741308), v = n(549546), O = n(681837), R = n(502762), x = n(530), b = n(544989), P = n(969205), M = n(171368), D = n(580512), y = n(67152), j = n(23293), U = n(695346), G = n(293273), k = n(158776), w = n(246946), B = n(70956), H = n(5192), V = n(51144), F = n(246133), Y = n(474376), W = n(383832), z = n(981631), K = n(228168), q = n(689938), Q = n(483978);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(722770), o = n(873546), c = n(442837), d = n(481060), u = n(2052), _ = n(393238), h = n(727637), E = n(100527), I = n(906732), m = n(676035), g = n(521868), p = n(299206), T = n(440051), S = n(734934), C = n(158238), f = n(300284), N = n(680295), A = n(751009), Z = n(785717), L = n(318661), v = n(741308), O = n(549546), R = n(681837), x = n(502762), b = n(530), P = n(544989), M = n(969205), D = n(171368), y = n(580512), j = n(67152), U = n(23293), G = n(695346), k = n(158776), w = n(246946), B = n(70956), H = n(5192), V = n(51144), F = n(246133), Y = n(474376), W = n(383832), z = n(981631), K = n(228168), q = n(689938), Q = n(483978);
 let X = [
     {
         duration: 30 * B.Z.Millis.MINUTE,
@@ -112,11 +112,11 @@ function ee(e) {
             currentUser: t,
             onClose: n,
             setPopoutRef: a
-        } = e, B = __OVERLAY__, F = (0, Z.ZP)(t.id), ee = (0, u.O)(), {analyticsLocations: et} = (0, I.ZP)(E.Z.ACCOUNT_PROFILE_POPOUT), en = (0, A.Q1)({
+        } = e, B = __OVERLAY__, F = (0, L.ZP)(t.id), ee = (0, u.O)(), {analyticsLocations: et} = (0, I.ZP)(E.Z.ACCOUNT_PROFILE_POPOUT), en = (0, Z.Q1)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: t.id
-        }), ei = (0, c.e7)([G.Z], () => G.Z.getCustomStatusActivity()), es = (0, c.e7)([k.Z], () => k.Z.getStatus(t.id)), ea = function (e, t) {
-            let n = p.Y.useExperiment({ location: 'account popout' }).expiringStatus, s = U.Cr.useSetting(), a = (0, T.p)(), r = S.e.useExperiment({ location: 'account popout' }).allowQuietMode || a, o = U.fv.useSetting(), c = e === z.Skl.DND, u = t => {
+        }), ei = (0, m.a)(), es = (0, c.e7)([k.Z], () => k.Z.getStatus(t.id)), ea = function (e, t) {
+            let n = T.Y.useExperiment({ location: 'account popout' }).expiringStatus, s = G.Cr.useSetting(), a = (0, S.p)(), r = C.e.useExperiment({ location: 'account popout' }).allowQuietMode || a, o = G.fv.useSetting(), c = e === z.Skl.DND, u = t => {
                     let n = null != s && '0' !== s ? q.Z.Messages.STATUS_UNTIL.format({
                         endTime: new Date(Number(s)).toLocaleString(q.Z.getLocale(), {
                             month: 'numeric',
@@ -145,7 +145,7 @@ function ee(e) {
                             id: ''.concat(e, '-').concat(n),
                             label: s(),
                             action: () => {
-                                (0, T.oW)(!0, n);
+                                (0, S.oW)(!0, n);
                             },
                             dontCloseOnAction: !0
                         }, n);
@@ -197,7 +197,7 @@ function ee(e) {
                             ]
                         }),
                         action: () => {
-                            (0, T.oW)(!a);
+                            (0, S.oW)(!a);
                         },
                         dontCloseOnAction: !0,
                         children: _
@@ -212,12 +212,17 @@ function ee(e) {
         a
     ]);
     let eo = e => {
-            null == n || n(), (0, M.openUserProfileModal)({
+            null == n || n(), (0, D.openUserProfileModal)({
                 sourceAnalyticsLocations: et,
                 userId: t.id,
                 ...e
             });
-        }, {accountPopoutStatusEditEnabled: ec} = (0, N.K)({ location: 'AccountProfilePopout' }), ed = (0, f.Z)({ analyticsLocations: et }), eu = (0, T.p)(), e_ = es === z.Skl.DND, eh = (0, Y.g)(), eE = (0, m.o)(null != ei ? ei : void 0, Q.menuItemFocused), eI = (0, g.Z)({
+        }, {accountPopoutStatusEditEnabled: ec} = (0, A.K)({ location: 'AccountProfilePopout' }), ed = (0, f.Z)({ analyticsLocations: et }), eu = (0, S.p)(), e_ = es === z.Skl.DND, eh = (0, Y.g)(), eE = (0, g.o)({
+            focusedClassName: Q.menuItemFocused,
+            customStatus: ei,
+            analyticsLocations: et,
+            trackUserProfileAction: en
+        }), eI = (0, p.Z)({
             id: t.id,
             label: q.Z.Messages.COPY_ID_USER,
             showIconFirst: !0,
@@ -225,23 +230,23 @@ function ee(e) {
         }), em = (0, c.e7)([w.Z], () => w.Z.hidePersonalInformation);
     return (0, i.jsx)(I.Gt, {
         value: et,
-        children: (0, i.jsx)(A.Mt, {
+        children: (0, i.jsx)(Z.Mt, {
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: t.id,
             children: (0, i.jsx)(d.Dialog, {
                 ref: er,
                 'aria-label': t.username,
-                children: (0, i.jsxs)(R.Z, {
+                children: (0, i.jsxs)(x.Z, {
                     className: Q.themeContainer,
                     user: t,
                     displayProfile: F,
                     profileType: K.y0.BITE_SIZE,
                     children: [
-                        !ec && (0, i.jsx)(b.Z, {
+                        !ec && (0, i.jsx)(P.Z, {
                             profileType: K.y0.BITE_SIZE,
-                            children: (0, i.jsx)(P.Z, { onClose: n })
+                            children: (0, i.jsx)(M.Z, { onClose: n })
                         }),
-                        (0, i.jsx)(j.Z, {
+                        (0, i.jsx)(U.Z, {
                             user: t,
                             displayProfile: F,
                             statusEditEnabled: ec,
@@ -252,42 +257,42 @@ function ee(e) {
                             fade: !0,
                             className: Q.body,
                             children: [
-                                (0, i.jsx)(x.Z, {
+                                (0, i.jsx)(b.Z, {
                                     user: t,
                                     className: Q.username,
                                     profileType: K.y0.BITE_SIZE,
                                     nickname: H.ZP.getName(null, null, t),
                                     onOpenProfile: eo,
                                     pronouns: null == F ? void 0 : F.pronouns,
-                                    tags: (0, i.jsx)(L.Z, {
+                                    tags: (0, i.jsx)(v.Z, {
                                         displayProfile: F,
                                         profileType: K.y0.BITE_SIZE,
                                         onClose: n
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(O.Z, { userId: t.id }),
-                                            (0, i.jsx)(v.Z, {
+                                            (0, i.jsx)(R.Z, { userId: t.id }),
+                                            (0, i.jsx)(O.Z, {
                                                 user: t,
                                                 isHovering: el
                                             })
                                         ]
                                     })
                                 }),
-                                (0, i.jsx)(y.Z, {
+                                (0, i.jsx)(j.Z, {
                                     user: t,
                                     bio: null == F ? void 0 : F.bio,
                                     hidePersonalInformation: em,
                                     onClose: n
                                 }),
-                                (0, i.jsx)(D.Z, {
+                                (0, i.jsx)(y.Z, {
                                     user: t,
                                     onClose: n
                                 }),
                                 (0, i.jsxs)('div', {
                                     className: Q.menus,
                                     children: [
-                                        (0, i.jsx)(R.Z.Overlay, {
+                                        (0, i.jsx)(x.Z.Overlay, {
                                             className: Q.menuOverlay,
                                             children: (0, i.jsxs)(d.Menu, {
                                                 navId: 'status',
@@ -372,7 +377,7 @@ function ee(e) {
                                                 ]
                                             })
                                         }),
-                                        (0, i.jsx)(R.Z.Overlay, {
+                                        (0, i.jsx)(x.Z.Overlay, {
                                             className: Q.menuOverlay,
                                             children: (0, i.jsxs)(d.Menu, {
                                                 navId: 'account',
@@ -407,7 +412,7 @@ function ee(e) {
                                 })
                             ]
                         }),
-                        (null == F ? void 0 : F.profileEffectId) != null && (0, i.jsx)(C.Z, {
+                        (null == F ? void 0 : F.profileEffectId) != null && (0, i.jsx)(N.Z, {
                             profileEffectId: null == F ? void 0 : F.profileEffectId,
                             isHovering: el
                         })
