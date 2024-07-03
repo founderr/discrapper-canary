@@ -48,10 +48,10 @@ function x(e) {
         } = e, x = (0, l.e7)([c.default], () => c.default.getUser(t), [t]), T = (0, l.e7)([o.ZP], () => o.ZP.getMember(n, t), [
             n,
             t
-        ]), N = (0, u.f)(t, n);
+        ]), v = (0, u.f)(t, n);
     return null == x || null == T ? null : (0, i.jsxs)(r.Scroller, {
         className: s()(g.container, d),
-        style: { backgroundColor: N },
+        style: { backgroundColor: v },
         children: [
             (0, i.jsx)(I, {
                 userId: t,

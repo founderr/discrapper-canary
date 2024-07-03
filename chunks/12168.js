@@ -6,8 +6,8 @@ n.d(t, {
         return Z;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n(920906), c = n(481060), d = n(596454), u = n(727637), h = n(543241), p = n(907040), m = n(633302), _ = n(806966), f = n(401227), E = n(153124), C = n(176354), g = n(823379), I = n(354459), x = n(185923), T = n(420212), N = n(419477);
-let v = x.Hz.CHAT, S = [
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n(338545), c = n(481060), d = n(596454), u = n(727637), h = n(543241), p = n(907040), m = n(633302), _ = n(806966), f = n(401227), E = n(153124), C = n(176354), g = n(823379), I = n(354459), x = n(185923), T = n(420212), v = n(419477);
+let N = x.Hz.CHAT, S = [
         m.ZP.getByName('thumbsup'),
         m.ZP.getByName('eyes'),
         m.ZP.getByName('laughing'),
@@ -46,7 +46,7 @@ function Z(e) {
                             ]).to(e => 'scale('.concat(e, ')'))
                         },
                         children: (0, i.jsx)(d.Z, {
-                            className: l()(N.emoji, r, { [N.emojiItemDisabled]: n }),
+                            className: l()(v.emoji, r, { [v.emojiItemDisabled]: n }),
                             emojiId: t.id,
                             emojiName: null == t ? void 0 : t.surrogates,
                             animated: t.animated
@@ -68,14 +68,14 @@ function A(e) {
         children: [
             t,
             (0, i.jsx)(c.Clickable, {
-                className: N.dropDownContainer,
+                className: v.dropDownContainer,
                 onClick: () => {
                     a(!n), s();
                 },
                 children: (0, i.jsx)(c.ChevronSmallDownIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: l()(N.dropDown, { [N.dropDownOpen]: n })
+                    className: l()(v.dropDown, { [v.dropDownOpen]: n })
                 })
             })
         ]
@@ -99,7 +99,7 @@ function M(e) {
         ], 'name').filter(e => !C.ZP.isEmojiFilteredOrLocked({
             emoji: e,
             channel: t,
-            intention: v
+            intention: N
         })).slice(0, I.e5);
     null != g && g.length > 0 && P.splice(P.length - 1, 1, g[0]);
     let O = e => {
@@ -125,19 +125,19 @@ function M(e) {
                 })
             }),
             (0, i.jsxs)('div', {
-                className: N.container,
+                className: v.container,
                 children: [
                     (0, i.jsx)(p.Z, {
                         analyticsOverride: M,
                         channel: t,
-                        className: l()(N.animatedPicker, { [N.animatedPickerTall]: R }),
-                        headerClassName: l()(N.emojiPickerHeader, { [N.emojiPickerHeaderExpanded]: R }),
+                        className: l()(v.animatedPicker, { [v.animatedPickerTall]: R }),
+                        headerClassName: l()(v.emojiPickerHeader, { [v.emojiPickerHeaderExpanded]: R }),
                         closePopout: s,
                         onSelectEmoji: R ? y : () => {
                         },
                         shouldHidePickerActions: !R,
                         wrapper: 'div',
-                        pickerIntention: v,
+                        pickerIntention: N,
                         searchProps: {
                             ...f,
                             accessory: (0, i.jsx)(A, {
@@ -152,9 +152,9 @@ function M(e) {
                         }
                     }),
                     (0, i.jsx)('div', {
-                        className: N.slotsContainer,
+                        className: v.slotsContainer,
                         children: (0, i.jsx)('div', {
-                            className: l()(N.slots, N.slotsWide),
+                            className: l()(v.slots, v.slotsWide),
                             children: P.map(e => {
                                 let n = C.ZP.isEmojiDisabled({
                                     emoji: e,
@@ -162,12 +162,12 @@ function M(e) {
                                     intention: x.Hz.CHAT
                                 });
                                 return (0, i.jsx)('div', {
-                                    className: N.slot,
+                                    className: v.slot,
                                     children: (0, i.jsx)(c.TooltipContainer, {
                                         text: e.name,
                                         position: 'top',
                                         'aria-label': e.name,
-                                        tooltipClassName: N.tooltipContainer,
+                                        tooltipClassName: v.tooltipContainer,
                                         color: c.Tooltip.Colors.BRAND,
                                         children: (0, i.jsx)(Z, {
                                             emoji: e,

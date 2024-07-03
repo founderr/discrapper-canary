@@ -21,9 +21,9 @@ function _(e) {
         ]), T = _.isMediaChannel();
     if (!f || C || T && x)
         return null;
-    let N = (t = E, n = T, t ? n ? m.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : m.Z.Messages.FORUM_CHANNEL_ONBOARDING_SHOW : n ? m.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : m.Z.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
+    let v = (t = E, n = T, t ? n ? m.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : m.Z.Messages.FORUM_CHANNEL_ONBOARDING_SHOW : n ? m.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : m.Z.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
     return (0, i.jsx)(p.JO, {
-        tooltip: N,
+        tooltip: v,
         icon: s.CircleInformationIcon,
         onClick: () => r.Z.hideAdminOnboarding(_.id, !E),
         selected: !E

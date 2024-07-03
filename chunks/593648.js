@@ -3,7 +3,7 @@ s.d(t, {
         return ee;
     }
 }), s(653041), s(47120);
-var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(392711), l = s.n(o), c = s(442837), d = s(481060), _ = s(668781), E = s(292556), u = s(92114), T = s(419363), I = s(818083), S = s(688465), N = s(487419), C = s(378364), m = s(197344), A = s(734934), h = s(223683), g = s(312400), O = s(115345), p = s(392888), R = s(921801), x = s(657254), M = s(470647), D = s(292959), f = s(9156), P = s(626135), L = s(912101), Z = s(358085), b = s(709054), v = s(557177), j = s(695346), B = s(675478), U = s(33656), G = s(726985), F = s(981631), y = s(468788), V = s(689938), Y = s(847508), w = s(549856);
+var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(392711), l = s.n(o), c = s(442837), d = s(481060), _ = s(668781), E = s(292556), u = s(92114), T = s(419363), I = s(818083), S = s(688465), N = s(487419), C = s(378364), m = s(197344), A = s(734934), h = s(223683), g = s(312400), O = s(115345), p = s(392888), R = s(921801), x = s(657254), M = s(470647), f = s(292959), D = s(9156), P = s(626135), L = s(912101), Z = s(358085), b = s(709054), v = s(557177), j = s(695346), B = s(675478), U = s(33656), G = s(726985), F = s(981631), y = s(468788), V = s(689938), Y = s(847508), w = s(549856);
 function k(e, t, s) {
     return t in e ? Object.defineProperty(e, t, {
         value: s,
@@ -454,7 +454,7 @@ let Q = (0, I.B)({
         }]
 });
 function X() {
-    let e = Q.useExperiment({ location: 'settings' }, { autoTrackExposure: !1 }).enabled, t = (0, c.e7)([f.ZP], () => f.ZP.mentionOnAllMessages);
+    let e = Q.useExperiment({ location: 'settings' }, { autoTrackExposure: !1 }).enabled, t = (0, c.e7)([D.ZP], () => D.ZP.mentionOnAllMessages);
     return e ? (0, n.jsx)(R.F, {
         setting: G.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
         children: (0, n.jsx)(d.FormSwitch, {
@@ -469,7 +469,7 @@ function X() {
     }) : null;
 }
 function q() {
-    let e = g.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled, {manuallyOpen: t} = g.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }), s = (0, c.e7)([f.ZP], () => f.ZP.useNewNotifications), [i, o] = a.useState(!1);
+    let e = g.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled, {manuallyOpen: t} = g.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }), s = (0, c.e7)([D.ZP], () => D.ZP.useNewNotifications), [i, o] = a.useState(!1);
     return e && (s || t) ? (0, n.jsxs)(n.Fragment, {
         children: [
             s ? (0, n.jsx)(R.F, {
@@ -560,14 +560,14 @@ function $(e) {
     });
 }
 function ee() {
-    let e = (0, c.cj)([D.Z], () => ({
-        disableUnreadBadge: D.Z.getDisableUnreadBadge(),
-        taskbarFlash: D.Z.taskbarFlash,
-        disabledSounds: D.Z.getDisabledSounds(),
-        disableAllSounds: D.Z.getDisableAllSounds(),
-        desktopType: D.Z.getDesktopType(),
-        ttsType: D.Z.getTTSType(),
-        notifyMessagesInSelectedChannel: D.Z.getNotifyMessagesInSelectedChannel()
+    let e = (0, c.cj)([f.Z], () => ({
+        disableUnreadBadge: f.Z.getDisableUnreadBadge(),
+        taskbarFlash: f.Z.taskbarFlash,
+        disabledSounds: f.Z.getDisabledSounds(),
+        disableAllSounds: f.Z.getDisableAllSounds(),
+        desktopType: f.Z.getDesktopType(),
+        ttsType: f.Z.getTTSType(),
+        notifyMessagesInSelectedChannel: f.Z.getNotifyMessagesInSelectedChannel()
     }));
     return (0, n.jsx)($, {
         ...e,

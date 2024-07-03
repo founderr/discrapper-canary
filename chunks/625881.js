@@ -7,7 +7,7 @@ t.Z = function (e) {
             onClose: i,
             onConfirm: g,
             userDiscountOffer: O
-        } = e, [p, R] = a.useState(!1), [x, M] = a.useState(!1), D = async e => {
+        } = e, [p, R] = a.useState(!1), [x, M] = a.useState(!1), f = async e => {
             try {
                 M(!0), R(!1), await o.tn.post({
                     url: N.ANM.USER_OFFER_REDEEM,
@@ -17,7 +17,7 @@ t.Z = function (e) {
                 R(!0);
             }
             M(!1);
-        }, f = (0, d.ZP)(), P = (0, l.wj)(f) ? A : h, L = (0, T._)(t, S.Xh.PREMIUM_MONTH_TIER_2, O), Z = (0, E.aS)(S.Xh.PREMIUM_MONTH_TIER_2), b = (0, u.T4)(Z.amount, Z.currency);
+        }, D = (0, d.ZP)(), P = (0, l.wj)(D) ? A : h, L = (0, T._)(t, S.Xh.PREMIUM_MONTH_TIER_2, O), Z = (0, E.aS)(S.Xh.PREMIUM_MONTH_TIER_2), b = (0, u.T4)(Z.amount, Z.currency);
     return null == O ? null : (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(I.Z, {
@@ -87,7 +87,7 @@ t.Z = function (e) {
                                 (0, n.jsx)(c.Button, {
                                     size: c.ButtonSizes.SMALL,
                                     submitting: x,
-                                    onClick: () => D(O.id),
+                                    onClick: () => f(O.id),
                                     children: C.Z.Messages.CHURN_DISCOUNT_CONFIRM_DISCOUNT
                                 })
                             ]

@@ -3,7 +3,7 @@ s.d(t, {
         return q;
     }
 }), s(47120);
-var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(442837), l = s(704215), c = s(780384), d = s(481060), _ = s(153867), E = s(230711), u = s(714338), T = s(857595), I = s(607070), S = s(627845), N = s(514361), C = s(605236), m = s(786761), A = s(3148), h = s(739566), g = s(753206), O = s(837741), p = s(804545), R = s(921801), x = s(594174), M = s(285952), D = s(153124), f = s(358085), P = s(210887), L = s(740492), Z = s(695346), b = s(329013), v = s(333859), j = s(726985), B = s(981631), U = s(921944), G = s(959517), F = s(689938), y = s(704803), V = s(549856);
+var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(442837), l = s(704215), c = s(780384), d = s(481060), _ = s(153867), E = s(230711), u = s(714338), T = s(857595), I = s(607070), S = s(627845), N = s(514361), C = s(605236), m = s(786761), A = s(3148), h = s(739566), g = s(753206), O = s(837741), p = s(804545), R = s(921801), x = s(594174), M = s(285952), f = s(153124), D = s(358085), P = s(210887), L = s(740492), Z = s(695346), b = s(329013), v = s(333859), j = s(726985), B = s(981631), U = s(921944), G = s(959517), F = s(689938), y = s(704803), V = s(549856);
 function Y(e, t, s) {
     return t in e ? Object.defineProperty(e, t, {
         value: s,
@@ -15,7 +15,7 @@ function Y(e, t, s) {
 let w = {
         COZY: 'cozy',
         COMPACT: 'compact'
-    }, k = (0, D.hQ)(), H = (0, D.hQ)(), W = (0, D.hQ)(), K = '1337', z = e => {
+    }, k = (0, f.hQ)(), H = (0, f.hQ)(), W = (0, f.hQ)(), K = '1337', z = e => {
         let t = 0;
         return [
             (0, m.e5)({
@@ -62,7 +62,7 @@ let w = {
     };
 class Q extends a.Component {
     renderZoomSlider() {
-        return f.isPlatformEmbedded ? (0, n.jsxs)(d.FormItem, {
+        return D.isPlatformEmbedded ? (0, n.jsxs)(d.FormItem, {
             className: V.marginTop20,
             children: [
                 (0, n.jsx)(d.FormTitle, {

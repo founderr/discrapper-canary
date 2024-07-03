@@ -1,5 +1,5 @@
 s(47120), s(653041), s(773603);
-var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(442837), l = s(704215), c = s(692547), d = s(780384), _ = s(481060), E = s(570140), u = s(457330), T = s(497321), I = s(23551), S = s(468026), N = s(410030), C = s(726542), m = s(122021), A = s(275759), h = s(231757), g = s(323588), O = s(605236), p = s(553795), R = s(430824), x = s(771845), M = s(246946), D = s(797717), f = s(346656), P = s(626135), L = s(63063), Z = s(706454), b = s(349728), v = s(494620), j = s(205266), B = s(216153), U = s(981631), G = s(856651), F = s(921944), y = s(689938), V = s(374265), Y = s(549856);
+var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(442837), l = s(704215), c = s(692547), d = s(780384), _ = s(481060), E = s(570140), u = s(457330), T = s(497321), I = s(23551), S = s(468026), N = s(410030), C = s(726542), m = s(122021), A = s(275759), h = s(231757), g = s(323588), O = s(605236), p = s(553795), R = s(430824), x = s(771845), M = s(246946), f = s(797717), D = s(346656), P = s(626135), L = s(63063), Z = s(706454), b = s(349728), v = s(494620), j = s(205266), B = s(216153), U = s(981631), G = s(856651), F = s(921944), y = s(689938), V = s(374265), Y = s(549856);
 let w = e => {
     var t, s;
     let a, {integration: i} = e, {
@@ -25,8 +25,8 @@ let w = e => {
             (0, n.jsxs)('div', {
                 className: V.integration,
                 children: [
-                    (0, n.jsx)(f.Z, {
-                        size: f.Z.Sizes.SMALL,
+                    (0, n.jsx)(D.Z, {
+                        size: D.Z.Sizes.SMALL,
                         guild: i.guild,
                         className: V.guildIcon
                     }),
@@ -67,12 +67,12 @@ function k(e) {
             account: T,
             theme: I,
             locale: N
-        } = e, [O, p] = a.useState(T.friendSync), [R, x] = a.useState(T.visibility), [M, f] = a.useState(T.metadataVisibility), [P, Z] = a.useState(T.showActivity), [F, Y] = a.useState(null), [k, H] = a.useState(null), [W, K] = a.useState(!1), [z, Q] = a.useState([]), X = (0, m.rR)(T.type), q = C.Z.get(X);
+        } = e, [O, p] = a.useState(T.friendSync), [R, x] = a.useState(T.visibility), [M, D] = a.useState(T.metadataVisibility), [P, Z] = a.useState(T.showActivity), [F, Y] = a.useState(null), [k, H] = a.useState(null), [W, K] = a.useState(!1), [z, Q] = a.useState([]), X = (0, m.rR)(T.type), q = C.Z.get(X);
     a.useEffect(() => {
-        p(T.friendSync), x(T.visibility), f(T.metadataVisibility), Z(T.showActivity);
+        p(T.friendSync), x(T.visibility), D(T.metadataVisibility), Z(T.showActivity);
     }, [T]), a.useEffect(() => {
         if (!1 !== T.verified)
-            null != F && (x(F), u.Z.setVisibility(T.type, T.id, F), Y(null)), null != k && (f(k), u.Z.setMetadataVisibility(T.type, T.id, k), H(null));
+            null != F && (x(F), u.Z.setVisibility(T.type, T.id, F), Y(null)), null != k && (D(k), u.Z.setMetadataVisibility(T.type, T.id, k), H(null));
     }, [T]);
     function J() {
         (0, h.Z)({
@@ -119,7 +119,7 @@ function k(e) {
             });
             return;
         }
-        f(s), u.Z.setMetadataVisibility(T.type, T.id, s);
+        D(s), u.Z.setMetadataVisibility(T.type, T.id, s);
     }
     function es(e) {
         p(e), u.Z.setFriendSync(T.type, T.id, e);
@@ -135,7 +135,7 @@ function k(e) {
                 let s = C.Z.get(e.type), a = C.Z.get(X), i = '1' === (null !== (t = e.metadata) && void 0 !== t ? t : {})[G.PC.TWITTER_VERIFIED], r = null;
                 return s.type === U.ABu.TWITTER && i && (r = (0, n.jsx)(_.Tooltip, {
                     text: y.Z.Messages.CONNECTION_VERIFIED_ON_TWITTER,
-                    children: e => (0, n.jsx)(D.Z, {
+                    children: e => (0, n.jsx)(f.Z, {
                         ...e,
                         className: V.connectionAccountLabelVerified,
                         color: c.Z.unsafe_rawColors.TWITTER.css,

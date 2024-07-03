@@ -28,8 +28,8 @@ function m() {
         className: C.marginTop8,
         children: S.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, T.y)('Help Text Output Devices') })
     }));
-    let R = i()(O).values().first(), x = null != R ? R.disabled : null != e, M = i()(p).values().first(), D = null != M ? M.disabled : null != t;
-    function f(e) {
+    let R = i()(O).values().first(), x = null != R ? R.disabled : null != e, M = i()(p).values().first(), f = null != M ? M.disabled : null != t;
+    function D(e) {
         let t, {
                 label: i,
                 value: r
@@ -54,7 +54,7 @@ function m() {
         }, r);
     }
     function P(e) {
-        return f(e[0]);
+        return D(e[0]);
     }
     return (0, n.jsxs)(E.Z, {
         className: C.marginBottom20,
@@ -82,7 +82,7 @@ function m() {
                         }),
                         isDisabled: x,
                         renderOptionValue: P,
-                        renderOptionLabel: f
+                        renderOptionLabel: D
                     }),
                     e
                 ]
@@ -108,9 +108,9 @@ function m() {
                                 label: s
                             };
                         }),
-                        isDisabled: D,
+                        isDisabled: f,
                         renderOptionValue: P,
-                        renderOptionLabel: f
+                        renderOptionLabel: D
                     }),
                     t
                 ]

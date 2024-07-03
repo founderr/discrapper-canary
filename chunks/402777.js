@@ -3,7 +3,7 @@ n.d(t, {
         return Z;
     }
 });
-var i = n(735250), a = n(470079), s = n(597312), l = n(727637), r = n(410030), o = n(100527), c = n(906732), d = n(680295), u = n(785717), h = n(318661), p = n(502762), m = n(437758), _ = n(544989), f = n(481932), E = n(272510), C = n(171368), g = n(926150), I = n(308829), x = n(354810), T = n(940885), N = n(625015), v = n(228168), S = n(642402);
+var i = n(735250), a = n(470079), s = n(597312), l = n(727637), r = n(410030), o = n(100527), c = n(906732), d = n(680295), u = n(785717), h = n(318661), p = n(502762), m = n(437758), _ = n(544989), f = n(481932), E = n(272510), C = n(171368), g = n(926150), I = n(308829), x = n(354810), T = n(940885), v = n(625015), N = n(228168), S = n(642402);
 function Z(e) {
     let {
             user: t,
@@ -26,18 +26,18 @@ function Z(e) {
                 ref: b,
                 user: t,
                 displayProfile: A,
-                profileType: v.y0.PANEL,
+                profileType: N.y0.PANEL,
                 themeOverride: M,
                 className: S.container,
                 children: [
                     (0, i.jsxs)(s.u2, {
                         children: [
                             (0, i.jsxs)(_.Z, {
-                                profileType: v.y0.PANEL,
+                                profileType: N.y0.PANEL,
                                 children: [
                                     (0, i.jsx)(f.Z, {
                                         user: t,
-                                        profileType: v.y0.PANEL
+                                        profileType: N.y0.PANEL
                                     }),
                                     t.bot ? (0, i.jsx)(m.Z, { user: t }) : (0, i.jsx)(E.Z, { user: t })
                                 ]
@@ -60,7 +60,7 @@ function Z(e) {
                                 user: t,
                                 channelId: n.id
                             }),
-                            (0, i.jsx)(N.Z, {
+                            (0, i.jsx)(v.Z, {
                                 user: t,
                                 displayProfile: A
                             })

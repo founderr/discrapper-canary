@@ -3,11 +3,11 @@ n.d(t, {
         return eS;
     },
     r: function () {
-        return ev;
+        return eN;
     }
 }), n(47120);
-var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(512722), d = n.n(c), u = n(920906), h = n(848246), p = n(442837), m = n(481060), _ = n(846027), f = n(287734), E = n(872810), C = n(410575), g = n(40851), I = n(317381), x = n(596040), T = n(100527), N = n(906732), v = n(67212), S = n(757454), Z = n(158631), A = n(709369), M = n(552740), b = n(358221), R = n(887012), j = n(659580), L = n(793865), P = n(575175), O = n(258609), y = n(446226), D = n(594190), k = n(569545), U = n(74299), w = n(989941), B = n(803647), H = n(554747), G = n(95764), V = n(459502), F = n(386542), W = n(485731), z = n(455961), Y = n(611845), K = n(618158), q = n(390322), X = n(791592), Q = n(136995), J = n(402113), $ = n(197016), ee = n(386000), et = n(698877), en = n(25827), ei = n(199902), ea = n(523746), es = n(131951), el = n(944486), er = n(594174), eo = n(449224), ec = n(700785), ed = n(923973), eu = n(829750), eh = n(189771), ep = n(294629), em = n(304745), e_ = n(985370), ef = n(544384), eE = n(560688), eC = n(127608), eg = n(76021), eI = n(173507), ex = n(981631), eT = n(354459), eN = n(269794);
-function ev(e, t) {
+var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(512722), d = n.n(c), u = n(338545), h = n(848246), p = n(442837), m = n(481060), _ = n(846027), f = n(287734), E = n(872810), C = n(410575), g = n(40851), I = n(317381), x = n(596040), T = n(100527), v = n(906732), N = n(67212), S = n(757454), Z = n(158631), A = n(709369), M = n(552740), b = n(358221), R = n(887012), j = n(659580), L = n(793865), P = n(575175), O = n(258609), y = n(446226), D = n(594190), k = n(569545), U = n(74299), w = n(989941), B = n(803647), H = n(554747), G = n(95764), V = n(459502), F = n(386542), W = n(485731), z = n(455961), Y = n(611845), K = n(618158), q = n(390322), X = n(791592), Q = n(136995), J = n(402113), $ = n(197016), ee = n(386000), et = n(698877), en = n(25827), ei = n(199902), ea = n(523746), es = n(131951), el = n(944486), er = n(594174), eo = n(449224), ec = n(700785), ed = n(923973), eu = n(829750), eh = n(189771), ep = n(294629), em = n(304745), e_ = n(985370), ef = n(544384), eE = n(560688), eC = n(127608), eg = n(76021), eI = n(173507), ex = n(981631), eT = n(354459), ev = n(269794);
+function eN(e, t) {
     if (es.Z.isVideoEnabled() === e)
         return;
     let n = () => _.Z.setVideoEnabled(e);
@@ -34,14 +34,14 @@ function eS(e) {
             t.id,
             a,
             i
-        ]), N = (0, p.e7)([
+        ]), v = (0, p.e7)([
             D.ZP,
             eo.Z
-        ], () => (0, w.Z)(D.ZP, eo.Z)), A = (0, Z.ZP)(), b = (0, S.Z)() && null != N, R = () => {
+        ], () => (0, w.Z)(D.ZP, eo.Z)), A = (0, Z.ZP)(), b = (0, S.Z)() && null != v, R = () => {
             b && (null == d ? (0, E.tE)({
                 channelId: t.id,
-                pid: null == N ? void 0 : N.pid
-            }) : (0, v.v$)((0, k.V9)(d), null == N ? void 0 : N.pid));
+                pid: null == v ? void 0 : v.pid
+            }) : (0, N.v$)((0, k.V9)(d), null == v ? void 0 : v.pid));
         }, j = () => {
             if (b) {
                 (0, M.D)(R);
@@ -67,7 +67,7 @@ function eS(e) {
                 ...i,
                 centerButton: !0,
                 disabled: o || !r,
-                className: eN.controlButton,
+                className: ev.controlButton,
                 hasPermission: r,
                 streamActive: null != d,
                 isSelfStream: !0,
@@ -127,7 +127,7 @@ function eS(e) {
 function eZ(e) {
     let {channel: t} = e, n = t.getGuildId();
     return (0, x.Z)(n, t.id) ? (0, s.jsx)('div', {
-        className: eN.buttonContainer,
+        className: ev.buttonContainer,
         children: (0, s.jsx)(em.M, { channel: t })
     }) : null;
 }
@@ -154,7 +154,7 @@ let eA = l.memo(function (e) {
             t,
             C,
             I
-        ]), [N, v] = l.useState(T()), S = (0, u.useSpring)({
+        ]), [v, N] = l.useState(T()), S = (0, u.useSpring)({
             opacity: c ? 0.2 : 1,
             transform: c && !o.enabled ? 'scale(0.7)' : 'scale(1)',
             config: {
@@ -165,13 +165,13 @@ let eA = l.memo(function (e) {
                 clamp: c
             },
             onRest: () => {
-                v(T()), d(!1);
+                N(T()), d(!1);
             }
         });
     l.useEffect(() => {
-        T() !== N && d(!0);
+        T() !== v && d(!0);
     }, [
-        N,
+        v,
         T
     ]);
     let M = l.useCallback(() => {
@@ -186,10 +186,10 @@ let eA = l.memo(function (e) {
         ]), R = (e, t) => {
             let l = {
                 centerButton: !0,
-                className: eN.controlButton,
+                className: ev.controlButton,
                 popoutOpen: e
             };
-            switch (N) {
+            switch (v) {
             case 'ACTIVITY':
                 if (null == r || null == n)
                     return;
@@ -287,20 +287,20 @@ function eM(e) {
                 cameraUnavailable: n,
                 hasPermission: i,
                 onCameraUnavailable: h,
-                className: eN.controlButton,
-                iconClassName: eN.__invalid_joinIcon,
+                className: ev.controlButton,
+                iconClassName: ev.__invalid_joinIcon,
                 onChange: u
             }),
             (0, s.jsx)(Q.Z, {
                 centerButton: !0,
                 color: 'green',
                 channel: t,
-                className: o()(eN.controlButton, eN.__invalid_lastButton)
+                className: o()(ev.controlButton, ev.__invalid_lastButton)
             }),
             m ? (0, s.jsx)(X.Z, {
                 color: 'red',
                 channel: t,
-                className: eN.controlButton
+                className: ev.controlButton
             }) : null
         ]
     });
@@ -321,7 +321,7 @@ t.ZP = function (e) {
             suppress: h,
             selfMute: _,
             mute: f
-        } = (0, ep.Z)(t), {canGoLive: E} = (0, p.cj)([es.Z], () => ({ canGoLive: (0, U.Z)(es.Z) })), g = (0, y.Z)(), x = (0, p.e7)([O.Z], () => null != O.Z.getAwaitingRemoteSessionInfo()), v = null != g, S = (0, p.e7)([el.Z], () => {
+        } = (0, ep.Z)(t), {canGoLive: E} = (0, p.cj)([es.Z], () => ({ canGoLive: (0, U.Z)(es.Z) })), g = (0, y.Z)(), x = (0, p.e7)([O.Z], () => null != O.Z.getAwaitingRemoteSessionInfo()), N = null != g, S = (0, p.e7)([el.Z], () => {
             var e;
             return (null !== (e = null == g ? void 0 : g.channelId) && void 0 !== e ? e : el.Z.getVoiceChannelId()) === t.id;
         }), Z = (0, R.Z)(t, !0), A = (0, p.e7)([I.ZP], () => {
@@ -330,9 +330,9 @@ t.ZP = function (e) {
         }), {
             reachedLimit: M,
             limit: b
-        } = (0, eu.Z)(t), {analyticsLocations: D} = (0, N.ZP)(T.Z.VOICE_CONTROL_TRAY);
+        } = (0, eu.Z)(t), {analyticsLocations: D} = (0, v.ZP)(T.Z.VOICE_CONTROL_TRAY);
     if (!S)
-        return (0, s.jsx)(N.Gt, {
+        return (0, s.jsx)(v.Gt, {
             value: D,
             children: (0, s.jsx)(eM, {
                 channel: t,
@@ -346,19 +346,19 @@ t.ZP = function (e) {
         user: l,
         context: t
     }) && !t.isPrivate() && !Z;
-    return (0, s.jsx)(N.Gt, {
+    return (0, s.jsx)(v.Gt, {
         value: D,
         children: (0, s.jsxs)(C.Z, {
             section: ex.jXE.VOICE_CONTROL_TRAY,
             children: [
                 (0, s.jsx)('div', {
-                    className: eN.eventPromptsContainer,
+                    className: ev.eventPromptsContainer,
                     children: (0, s.jsx)(V.Z, { channelId: t.id })
                 }),
                 (0, s.jsxs)('div', {
-                    className: o()(eN.wrapper, n),
+                    className: o()(ev.wrapper, n),
                     children: [
-                        !v && (0, s.jsx)(m.Popout, {
+                        !N && (0, s.jsx)(m.Popout, {
                             renderPopout: e => {
                                 let {closePopout: t} = e;
                                 return (0, s.jsx)(q.Z, { children: (0, s.jsx)(L.Z, { onClose: t }) });
@@ -371,10 +371,10 @@ t.ZP = function (e) {
                                 return (0, s.jsx)(en.C, {
                                     centerButton: !0,
                                     hasPermission: u,
-                                    className: eN.controlButton,
+                                    className: ev.controlButton,
                                     enabled: c,
                                     cameraUnavailable: r,
-                                    onChange: ev,
+                                    onChange: eN,
                                     onCameraUnavailable: eE.Z,
                                     channelLimitReached: M,
                                     channelLimit: b,
@@ -383,8 +383,8 @@ t.ZP = function (e) {
                                 });
                             }
                         }),
-                        !v && (0, s.jsx)(eZ, { channel: t }),
-                        !v && (0, s.jsx)(eS, {
+                        !N && (0, s.jsx)(eZ, { channel: t }),
+                        !N && (0, s.jsx)(eS, {
                             channel: t,
                             currentUser: l,
                             exitFullScreen: a,
@@ -410,8 +410,8 @@ t.ZP = function (e) {
                                 let {onClick: n} = e, {isShown: i} = t;
                                 return (0, s.jsx)(ee.Z, {
                                     centerButton: !0,
-                                    onPopoutClick: v ? null : n,
-                                    className: eN.controlButton,
+                                    onPopoutClick: N ? null : n,
+                                    className: ev.controlButton,
                                     selfMute: _,
                                     serverMute: f,
                                     suppress: h,
@@ -421,8 +421,8 @@ t.ZP = function (e) {
                                 });
                             }
                         }),
-                        k && !v ? (0, s.jsx)('div', {
-                            className: eN.buttonContainer,
+                        k && !N ? (0, s.jsx)('div', {
+                            className: ev.buttonContainer,
                             children: (0, s.jsx)(e_.Z, { channel: t })
                         }) : null,
                         (0, s.jsx)(eA, {

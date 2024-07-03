@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     }
 }), n(47120);
-var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(512722), d = n.n(c), u = n(442837), h = n(481060), p = n(239091), m = n(99690), _ = n(58540), f = n(484459), E = n(103575), C = n(271383), g = n(496675), I = n(158776), x = n(502568), T = n(471253), N = n(431328), v = n(145834), S = n(590415), Z = n(614173), A = n(618896), M = n(231338), b = n(689938), R = n(500644);
+var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(512722), d = n.n(c), u = n(442837), h = n(481060), p = n(239091), m = n(99690), _ = n(58540), f = n(484459), E = n(103575), C = n(271383), g = n(496675), I = n(158776), x = n(502568), T = n(471253), v = n(431328), N = n(145834), S = n(590415), Z = n(614173), A = n(618896), M = n(231338), b = n(689938), R = n(500644);
 let j = l.memo(function (e) {
         let {
                 toggleRequestToSpeakSidebar: t,
@@ -41,7 +41,7 @@ let j = l.memo(function (e) {
         d()(null != g, 'Channel cannot be guildless');
         let {
                 isMobile: x,
-                status: N
+                status: v
             } = (0, u.cj)([I.Z], () => ({
                 isMobile: I.Z.isMobileOnline(i.user.id),
                 status: I.Z.getStatus(i.user.id, g)
@@ -103,7 +103,7 @@ let j = l.memo(function (e) {
                                     className: R.participantAvatar,
                                     user: i.user,
                                     isMobile: x,
-                                    status: N
+                                    status: v
                                 }),
                                 (0, s.jsxs)('div', {
                                     className: R.participantTextContainer,
@@ -116,7 +116,7 @@ let j = l.memo(function (e) {
                                         (0, s.jsx)(h.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-secondary',
-                                            children: (0, v.$)(i)
+                                            children: (0, N.$)(i)
                                         })
                                     ]
                                 })
@@ -188,7 +188,7 @@ function y(e) {
             channel: t,
             toggleRequestToSpeakSidebar: n,
             chatOpen: i
-        } = e, a = (0, N.Fd)(t.id), l = [
+        } = e, a = (0, v.Fd)(t.id), l = [
             (0, u.e7)([g.Z], () => g.Z.can(M.Pl.MANAGE_CHANNELS, t) || g.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0,
             Math.max(1, a.length)
         ];

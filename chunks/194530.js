@@ -12,11 +12,11 @@ function T(e) {
             onClose: C,
             requirementsUpdated: m,
             noSkip: A = !1
-        } = e, [h, g] = a.useState(''), [O, p] = a.useState(''), [R, x] = a.useState(''), [M, D] = a.useState(null), [f, P] = a.useState(null), L = (0, i.e7)([l.Z], () => l.Z.getErrors()), Z = (0, i.e7)([l.Z], () => l.Z.getFormState()), b = a.useRef(null);
+        } = e, [h, g] = a.useState(''), [O, p] = a.useState(''), [R, x] = a.useState(''), [M, f] = a.useState(null), [D, P] = a.useState(null), L = (0, i.e7)([l.Z], () => l.Z.getErrors()), Z = (0, i.e7)([l.Z], () => l.Z.getFormState()), b = a.useRef(null);
     async function v(e) {
         e.preventDefault(), (0, o.b9)();
         let t = !1;
-        if ('' === O ? (D(E.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), t = !0) : D(null), O !== R ? (P(E.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), t = !0) : P(null), t)
+        if ('' === O ? (f(E.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), t = !0) : f(null), O !== R ? (P(E.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), t = !0) : P(null), t)
             return;
         let s = await (0, o.Mn)({
             password: h,
@@ -88,7 +88,7 @@ function T(e) {
                             (0, n.jsx)(r.FormItem, {
                                 className: u.newPassword,
                                 title: E.Z.Messages.FORM_LABEL_CONFIRM_NEW_PASSWORD,
-                                error: null != f ? f : void 0,
+                                error: null != D ? D : void 0,
                                 children: (0, n.jsx)(r.TextInput, {
                                     type: 'password',
                                     value: R,

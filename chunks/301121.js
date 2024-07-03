@@ -3,7 +3,7 @@ s.d(t, {
         return eA;
     }
 }), s(47120), s(733860), s(773603);
-var n, a, i = s(735250), r = s(470079), o = s(120356), l = s.n(o), c = s(512722), d = s.n(c), _ = s(913527), E = s.n(_), u = s(442837), T = s(524437), I = s(481060), S = s(570140), N = s(668781), C = s(409700), m = s(809206), A = s(230711), h = s(241420), g = s(651530), O = s(163268), p = s(294602), R = s(778825), x = s(856768), M = s(592204), D = s(712950), f = s(880257), P = s(16703), L = s(977059), Z = s(236289), b = s(518560), v = s(237292), j = s(604849), B = s(278828), U = s(921801), G = s(480294), F = s(430824), y = s(663389), V = s(594174), Y = s(285952), w = s(626135), k = s(63063), H = s(78451), W = s(709054), K = s(88658), z = s(263399), Q = s(695346), X = s(3957), q = s(279743), J = s(526156), $ = s(76793), ee = s(839469), et = s(973005), es = s(703115), en = s(526761), ea = s(726985), ei = s(981631), er = s(800530), eo = s(689938), el = s(339582), ec = s(549856);
+var n, a, i = s(735250), r = s(470079), o = s(120356), l = s.n(o), c = s(512722), d = s.n(c), _ = s(913527), E = s.n(_), u = s(442837), T = s(524437), I = s(481060), S = s(570140), N = s(668781), C = s(409700), m = s(809206), A = s(230711), h = s(241420), g = s(651530), O = s(163268), p = s(294602), R = s(778825), x = s(856768), M = s(592204), f = s(712950), D = s(880257), P = s(16703), L = s(977059), Z = s(236289), b = s(518560), v = s(237292), j = s(604849), B = s(278828), U = s(921801), G = s(480294), F = s(430824), y = s(663389), V = s(594174), Y = s(285952), w = s(626135), k = s(63063), H = s(78451), W = s(709054), K = s(88658), z = s(263399), Q = s(695346), X = s(3957), q = s(279743), J = s(526156), $ = s(76793), ee = s(839469), et = s(973005), es = s(703115), en = s(526761), ea = s(726985), ei = s(981631), er = s(800530), eo = s(689938), el = s(339582), ec = s(549856);
 function ed(e, t, s) {
     return t in e ? Object.defineProperty(e, t, {
         value: s,
@@ -44,7 +44,7 @@ function e_() {
 }
 function eE() {
     var e;
-    let t = null === (e = (0, f.Z)()) || void 0 === e || e, s = (0, v.y0)({ location: 'user_settings_web' }), n = (0, j.c)(), a = (0, X.a)(en.to.DM_SAFETY_ALERTS);
+    let t = null === (e = (0, D.Z)()) || void 0 === e || e, s = (0, v.y0)({ location: 'user_settings_web' }), n = (0, j.c)(), a = (0, X.a)(en.to.DM_SAFETY_ALERTS);
     return t || !s ? null : (0, i.jsxs)(U.F, {
         setting: ea.s6.PRIVACY_SAFETY_ALERTS,
         children: [
@@ -128,7 +128,7 @@ function eT() {
 }
 function eI() {
     var e;
-    let t = null === (e = (0, f.Z)()) || void 0 === e || e, {
+    let t = null === (e = (0, D.Z)()) || void 0 === e || e, {
             explicitContentGuilds: s,
             explicitContentFriendDm: n,
             explicitContentNonFriendDm: a
@@ -840,7 +840,7 @@ function eA() {
         })), s = (0, u.e7)([Z.Z], () => Z.Z.getFetchError()), n = (0, u.e7)([y.Z], () => y.Z.getSubsection()), a = (0, g.yh)(), r = (0, M.Xo)({ location: 'web_user_privacy_and_safety_settings' }), {
             hasSearchResults: o,
             searchResults: l
-        } = (0, ee.E)(), c = (0, D.p)(), _ = (0, f.Z)(), E = (0, z.H)({ location: 'user_settings_privacy_safety' }), {enabled: T} = L.c.useExperiment({ location: 'PrivacySafetySettings' });
+        } = (0, ee.E)(), c = (0, f.p)(), _ = (0, D.Z)(), E = (0, z.H)({ location: 'user_settings_privacy_safety' }), {enabled: T} = L.c.useExperiment({ location: 'PrivacySafetySettings' });
     return (0, i.jsx)(em, {
         currentUser: e,
         defaultGuildsRestricted: Q.iG.useSetting(),

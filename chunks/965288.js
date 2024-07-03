@@ -1,6 +1,6 @@
 n.d(t, {
     y: function () {
-        return N;
+        return v;
     }
 });
 var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r), c = n(442837), d = n(692547), u = n(481060), h = n(239091), p = n(40851), m = n(484459), _ = n(103575), f = n(271383), E = n(709586), C = n(5192), g = n(590415), I = n(822986);
@@ -71,7 +71,7 @@ let x = a.memo(function (e) {
                 })
             ]
         });
-    }), N = () => (0, i.jsx)('div', { className: I.tileBaseContainer });
+    }), v = () => (0, i.jsx)('div', { className: I.tileBaseContainer });
 t.Z = a.memo(function (e) {
     let {
             participant: t,
@@ -110,7 +110,7 @@ t.Z = a.memo(function (e) {
             E,
             s,
             C
-        ]), N = a.useCallback(e => (0, i.jsx)(_.Z, {
+        ]), v = a.useCallback(e => (0, i.jsx)(_.Z, {
             ...e,
             location: 'AudienceTile',
             guildId: E,
@@ -126,7 +126,7 @@ t.Z = a.memo(function (e) {
             guildId: s.guild_id,
             channelId: s.id
         }),
-        renderPopout: N,
+        renderPopout: v,
         position: 'right',
         spacing: 8,
         children: e => (0, i.jsx)(u.Clickable, {

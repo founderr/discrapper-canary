@@ -3,7 +3,7 @@ n.d(t, {
         return F;
     }
 }), n(653041);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n.n(r), c = n(848246), d = n(442837), u = n(481060), h = n(320007), p = n(236091), m = n(569545), _ = n(517525), f = n(6242), E = n(757692), C = n(141321), g = n(44136), I = n(651183), x = n(618158), T = n(390322), N = n(616286), v = n(961048), S = n(179424), Z = n(786915), A = n(975146), M = n(991617), b = n(606304), R = n(594174), j = n(502568), L = n(805009), P = n(368666), O = n(74538), y = n(358221), D = n(887012), k = n(444253), U = n(355827), w = n(354459), B = n(981631), H = n(689938), G = n(867358);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n.n(r), c = n(848246), d = n(442837), u = n(481060), h = n(320007), p = n(236091), m = n(569545), _ = n(517525), f = n(6242), E = n(757692), C = n(141321), g = n(44136), I = n(651183), x = n(618158), T = n(390322), v = n(616286), N = n(961048), S = n(179424), Z = n(786915), A = n(975146), M = n(991617), b = n(606304), R = n(594174), j = n(502568), L = n(805009), P = n(368666), O = n(74538), y = n(358221), D = n(887012), k = n(444253), U = n(355827), w = n(354459), B = n(981631), H = n(689938), G = n(867358);
 function V(e) {
     let {
             channelId: t,
@@ -113,14 +113,14 @@ function F(e) {
         },
         children: (e, t) => {
             let {isShown: n} = t;
-            return (0, a.createElement)(v.Z, {
+            return (0, a.createElement)(N.Z, {
                 ...e,
                 key: 'more-options',
                 isActive: n,
                 className: G.lastButton
             });
         }
-    }, 'more-options-popout')), !r && (Q.push((0, i.jsx)(j.ZP.Divider, { className: G.divider }, 'divider')), Q.push((0, i.jsx)(N.T, {
+    }, 'more-options-popout')), !r && (Q.push((0, i.jsx)(j.ZP.Divider, { className: G.divider }, 'divider')), Q.push((0, i.jsx)(v.T, {
         channelId: n.id,
         className: G.chatButtonSpacer,
         disabled: !0

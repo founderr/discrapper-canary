@@ -3,7 +3,7 @@ n.d(t, {
         return w;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(993365), c = n(481060), d = n(153867), u = n(110924), h = n(607070), p = n(900211), m = n(740492), _ = n(871499), f = n(402113), E = n(592125), C = n(271383), g = n(944486), I = n(594174), x = n(602623), T = n(585483), N = n(792125), v = n(51144), S = n(566620), Z = n(317381), A = n(619915), M = n(988980), b = n(952561), R = n(563218), j = n(719296), L = n(651612), P = n(918559), O = n(981631), y = n(689938), D = n(202134);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(993365), c = n(481060), d = n(153867), u = n(110924), h = n(607070), p = n(900211), m = n(740492), _ = n(871499), f = n(402113), E = n(592125), C = n(271383), g = n(944486), I = n(594174), x = n(602623), T = n(585483), v = n(792125), N = n(51144), S = n(566620), Z = n(317381), A = n(619915), M = n(988980), b = n(952561), R = n(563218), j = n(719296), L = n(651612), P = n(918559), O = n(981631), y = n(689938), D = n(202134);
 let k = x.u.SIZE_32, U = {
         [P.MI.NO_CHAT]: D.noChat,
         [P.MI.RESIZABLE]: D.resizable
@@ -85,7 +85,7 @@ function w(e) {
         var n;
         if (null == e || void 0 === e || void 0 === t)
             return null;
-        let a = ec.get(e.id), s = null !== (n = null == a ? void 0 : a.nick) && void 0 !== n ? n : v.ZP.getName(e);
+        let a = ec.get(e.id), s = null !== (n = null == a ? void 0 : a.nick) && void 0 !== n ? n : N.ZP.getName(e);
         return (0, i.jsx)(c.TooltipContainer, {
             text: s,
             position: 'bottom',
@@ -97,7 +97,7 @@ function w(e) {
         }, e.id);
     };
     return (0, i.jsxs)('div', {
-        className: l()(D.wrapper, U[K], (0, N.Q)(O.BRd.DARK)),
+        className: l()(D.wrapper, U[K], (0, v.Q)(O.BRd.DARK)),
         ref: Y,
         style: ed,
         children: [

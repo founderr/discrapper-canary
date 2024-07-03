@@ -10,7 +10,7 @@ function g(e) {
             onClose: r,
             ticket: l,
             challenge: _
-        } = e, E = (0, d.Dt)(), [N, g] = a.useState(''), [O, p] = a.useState(!0), [R, x] = a.useState(C.x.INIT), [M, D] = a.useState(''), [f, P] = a.useState(null), L = async () => {
+        } = e, E = (0, d.Dt)(), [N, g] = a.useState(''), [O, p] = a.useState(!0), [R, x] = a.useState(C.x.INIT), [M, f] = a.useState(''), [D, P] = a.useState(null), L = async () => {
             let e;
             x(C.x.REGISTER);
             let t = u.isPlatformEmbedded && I.ZP.supportsFeature(m.eRX.WEBAUTHN) ? I.ZP.webAuthnRegister(_) : i.Ue(JSON.parse(_)).then(e => JSON.stringify(e));
@@ -20,7 +20,7 @@ function g(e) {
                 T.Z.captureException(e), P(A.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(C.x.INIT);
                 return;
             }
-            D(e), x(C.x.NAME);
+            f(e), x(C.x.NAME);
         };
     return (0, n.jsxs)(o.ModalRoot, {
         transitionState: t,
@@ -63,10 +63,10 @@ function g(e) {
                                         })
                                     }),
                                     (0, n.jsx)('div', {
-                                        children: null != f && (0, n.jsx)(o.Text, {
+                                        children: null != D && (0, n.jsx)(o.Text, {
                                             variant: 'text-md/normal',
                                             color: 'status-danger',
-                                            children: f
+                                            children: D
                                         })
                                     }),
                                     (0, n.jsx)('div', {

@@ -1,5 +1,5 @@
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(653603), o = n.n(r), c = n(442837), d = n(481060), u = n(904245), h = n(232961), p = n(223606), m = n(63063), _ = n(530472), f = n(453687), E = n(930282), C = n(318713), g = n(981631), I = n(689938), x = n(543151), T = n(475525), N = n(153521);
-let v = a.memo(function (e) {
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(653603), o = n.n(r), c = n(442837), d = n(481060), u = n(904245), h = n(232961), p = n(223606), m = n(63063), _ = n(530472), f = n(453687), E = n(930282), C = n(318713), g = n(981631), I = n(689938), x = n(543151), T = n(475525), v = n(153521);
+let N = a.memo(function (e) {
     let {
         message: t,
         notice: n,
@@ -71,7 +71,7 @@ t.Z = a.memo(function (e) {
         m
     ]), (0, i.jsxs)('div', {
         id: (0, f.ut)(d),
-        className: l()(s, N.markup, {
+        className: l()(s, v.markup, {
             [T.messageContent]: !0,
             [T.markupRtl]: 'rtl' === o()(d.content),
             [x.blockedEdit]: null == A ? void 0 : A.isBlockedEdit,
@@ -97,7 +97,7 @@ t.Z = a.memo(function (e) {
                     })
                 ]
             }),
-            (0, i.jsx)(v, {
+            (0, i.jsx)(N, {
                 notice: null !== (n = null == A ? void 0 : A.errorMessage) && void 0 !== n ? n : I.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
                 message: d,
                 compact: r,

@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return v;
+        return N;
     }
 }), n(47120), n(653041);
 var i = n(470079), a = n(392711), s = n.n(a), l = n(374470), r = n(925549), o = n(904245), c = n(45114), d = n(40851), u = n(607070), h = n(703656), p = n(479313), m = n(796974), _ = n(709054), f = n(534469), E = n(173033), C = n(959517), g = n(981631);
@@ -40,7 +40,7 @@ let T = {
     scrollHeight: 0,
     offsetHeight: 0
 };
-class N {
+class v {
     isReady() {
         return this.props.messages.ready;
     }
@@ -528,7 +528,7 @@ class N {
         null != e.messages.jumpTargetId ? this.pinned = !1 : (this.initialScrollTop = null !== (t = null == a ? void 0 : a.scrollTop) && void 0 !== t ? t : null, this.pinned = null == a);
     }
 }
-function v(e) {
+function N(e) {
     let {
             messages: t,
             channel: n,
@@ -539,7 +539,7 @@ function v(e) {
             canLoadMore: o = !0,
             handleScrollToBottom: c,
             handleScrollFromBottom: u
-        } = e, {windowId: h} = i.useContext(d.ZP), [p] = i.useState(() => new N({
+        } = e, {windowId: h} = i.useContext(d.ZP), [p] = i.useState(() => new v({
             messages: t,
             channel: n,
             compact: a,

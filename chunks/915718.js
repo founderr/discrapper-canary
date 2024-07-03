@@ -3,7 +3,7 @@ n.d(t, {
         return k;
     }
 }), n(47120), n(653041);
-var i = n(735250), a = n(470079), s = n(442837), l = n(704215), r = n(481060), o = n(26151), c = n(287734), d = n(40851), u = n(607070), h = n(451576), p = n(358221), m = n(605236), _ = n(243778), f = n(590293), E = n(970731), C = n(560688), g = n(173507), I = n(523746), x = n(819640), T = n(131951), N = n(699516), v = n(594174), S = n(979651), Z = n(502568), A = n(810090), M = n(585483), b = n(63063), R = n(981631), j = n(921944), L = n(65154), P = n(689938), O = n(112912);
+var i = n(735250), a = n(470079), s = n(442837), l = n(704215), r = n(481060), o = n(26151), c = n(287734), d = n(40851), u = n(607070), h = n(451576), p = n(358221), m = n(605236), _ = n(243778), f = n(590293), E = n(970731), C = n(560688), g = n(173507), I = n(523746), x = n(819640), T = n(131951), v = n(699516), N = n(594174), S = n(979651), Z = n(502568), A = n(810090), M = n(585483), b = n(63063), R = n(981631), j = n(921944), L = n(65154), P = n(689938), O = n(112912);
 function y(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -173,10 +173,10 @@ function k(e) {
         })), E = t.getRecipientId(), {
             notFriend: C,
             isBlocked: g
-        } = (0, s.cj)([N.Z], () => ({
-            notFriend: t.type === R.d4z.DM && null != E && !N.Z.isFriend(E),
-            isBlocked: t.type === R.d4z.DM && null != E && N.Z.isBlocked(E)
-        })), T = (0, s.e7)([v.default], () => v.default.getUser(E)), Z = (0, d.bp)(), A = [], M = (0, h.Z)(t.id), b = (0, s.e7)([x.Z], () => x.Z.hasLayers());
+        } = (0, s.cj)([v.Z], () => ({
+            notFriend: t.type === R.d4z.DM && null != E && !v.Z.isFriend(E),
+            isBlocked: t.type === R.d4z.DM && null != E && v.Z.isBlocked(E)
+        })), T = (0, s.e7)([N.default], () => N.default.getUser(E)), Z = (0, d.bp)(), A = [], M = (0, h.Z)(t.id), b = (0, s.e7)([x.Z], () => x.Z.hasLayers());
     M && !b && A.push(l.z.ACTIVITY_GDM_CALL_TOOLTIP);
     let [j, L] = a.useState(!1);
     return (a.useEffect(() => {

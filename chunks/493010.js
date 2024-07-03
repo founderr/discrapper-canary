@@ -10,7 +10,7 @@ t.Z = function (e) {
     }, []);
     let T = a.useCallback(() => {
             r.Z.updateChatOpen(t.id, !1), _.S.safeDispatch(E.CkL.FOCUS_CHAT_BUTTON);
-        }, [t.id]), N = (0, i.jsx)(m.ZP.Icon, {
+        }, [t.id]), v = (0, i.jsx)(m.ZP.Icon, {
             icon: l.CloseSmallIcon,
             tooltip: g.Z.Messages.CLOSE,
             onClick: T
@@ -25,7 +25,7 @@ t.Z = function (e) {
                 draftType: p.d.ChannelMessage
             }),
             (0, i.jsxs)(m.ZP, {
-                toolbar: N,
+                toolbar: v,
                 'aria-label': g.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
                 children: [
                     (0, i.jsx)(m.ZP.Icon, {

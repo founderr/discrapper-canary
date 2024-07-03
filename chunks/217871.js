@@ -1,6 +1,6 @@
 n(47120), n(177593);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(920906), o = n(442837), c = n(481060), d = n(393238), u = n(607070), h = n(44315), p = n(314897), m = n(111583), _ = n(889901), f = n(64078), E = n(351780), C = n(843693), g = n(641033), I = n(989830), x = n(689938), T = n(934376);
-let N = a.memo(function (e) {
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(338545), o = n(442837), c = n(481060), d = n(393238), u = n(607070), h = n(44315), p = n(314897), m = n(111583), _ = n(889901), f = n(64078), E = n(351780), C = n(843693), g = n(641033), I = n(989830), x = n(689938), T = n(934376);
+let v = a.memo(function (e) {
         let {
                 channelId: t,
                 width: n
@@ -34,7 +34,7 @@ let N = a.memo(function (e) {
                 })
             })
         });
-    }), v = a.memo(function (e) {
+    }), N = a.memo(function (e) {
         let {
                 value: t,
                 multiplier: n
@@ -142,7 +142,7 @@ t.Z = a.memo(function (e) {
     ]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(N, {
+            (0, i.jsx)(v, {
                 channelId: t,
                 width: _
             }),
@@ -150,7 +150,7 @@ t.Z = a.memo(function (e) {
                 ref: h,
                 className: T.combo,
                 style: A,
-                children: (0, i.jsx)(v, {
+                children: (0, i.jsx)(N, {
                     value: j,
                     multiplier: R
                 })

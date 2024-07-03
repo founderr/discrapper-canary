@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(920906), o = n(442837), c = n(596454), d = n(607070), u = n(70956), h = n(456631), p = n(219040);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(338545), o = n(442837), c = n(596454), d = n(607070), u = n(70956), h = n(456631), p = n(219040);
 let m = 6 * u.Z.Millis.SECOND, _ = 2 * u.Z.Millis.SECOND, f = 2 * u.Z.Millis.SECOND, E = e => 'scale('.concat(1 - -(e / 120), ') rotate(').concat(e, 'deg)');
 function C(e) {
     let {
@@ -13,7 +13,7 @@ function C(e) {
         } = e, {
             emoji: u,
             sentAt: C
-        } = n, g = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), [I, x] = a.useState(!0), T = !g, N = (0, r.useTransition)(I, {
+        } = n, g = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), [I, x] = a.useState(!0), T = !g, v = (0, r.useTransition)(I, {
             from: { rotate: -120 },
             enter: { rotate: 0 },
             leave: { rotate: -120 },
@@ -35,7 +35,7 @@ function C(e) {
         C,
         t,
         T
-    ]), T) ? null : N((e, t) => {
+    ]), T) ? null : v((e, t) => {
         var n;
         let {rotate: a} = e;
         return t && (0, i.jsx)(r.animated.div, {

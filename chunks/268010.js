@@ -22,8 +22,8 @@ t.Z = e => {
             mediaImageSrc: x,
             episodeDescription: T
         } = (0, p.Bj)(n), {
-            primaryColor: N,
-            secondaryColor: v
+            primaryColor: v,
+            secondaryColor: N
         } = (0, h.Z)(x), S = (0, s.e7)([o.default], () => o.default.locale), Z = a.useCallback(e => {
             if (null != I && null != x)
                 return (0, u.B)({
@@ -34,8 +34,8 @@ t.Z = e => {
                     timestamp: (0, d.yh)(n, S),
                     episodeDescription: T,
                     colors: [
-                        N,
-                        v
+                        v,
+                        N
                     ],
                     channelId: e
                 });
@@ -45,8 +45,8 @@ t.Z = e => {
             T,
             S,
             x,
-            N,
             v,
+            N,
             I
         ]);
     return null == I ? null : (0, i.jsxs)(_.yR, {

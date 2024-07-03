@@ -3,7 +3,7 @@ n.d(t, {
         return $;
     }
 }), n(653041), n(47120), n(733860);
-var i = n(735250), a = n(470079), s = n(442837), l = n(904245), r = n(966390), o = n(902840), c = n(607070), d = n(367907), u = n(600084), h = n(62764), p = n(79712), m = n(736052), _ = n(359110), f = n(359119), E = n(13279), C = n(248789), g = n(88101), I = n(576954), x = n(765104), T = n(122707), N = n(779836), v = n(23750), S = n(496675), Z = n(306680), A = n(944486), M = n(594174), b = n(130208), R = n(55935), j = n(70956), L = n(709054), P = n(534091), O = n(900164), y = n(554838), D = n(481369), k = n(186877), U = n(294218), w = n(534469), B = n(993397), H = n(511010), G = n(524444), V = n(977391), F = n(921235), W = n(97352), z = n(226027), Y = n(959517), K = n(981631), q = n(134612), X = n(689938);
+var i = n(735250), a = n(470079), s = n(442837), l = n(904245), r = n(966390), o = n(902840), c = n(607070), d = n(367907), u = n(600084), h = n(62764), p = n(79712), m = n(736052), _ = n(359110), f = n(359119), E = n(13279), C = n(248789), g = n(88101), I = n(576954), x = n(765104), T = n(122707), v = n(779836), N = n(23750), S = n(496675), Z = n(306680), A = n(944486), M = n(594174), b = n(130208), R = n(55935), j = n(70956), L = n(709054), P = n(534091), O = n(900164), y = n(554838), D = n(481369), k = n(186877), U = n(294218), w = n(534469), B = n(993397), H = n(511010), G = n(524444), V = n(977391), F = n(921235), W = n(97352), z = n(226027), Y = n(959517), K = n(981631), q = n(134612), X = n(689938);
 function Q(e) {
     return null != e && e.type === K.ys_.MESSAGE && e.content.id === e.groupId;
 }
@@ -17,7 +17,7 @@ let J = a.memo(function (e) {
     return (0, i.jsx)(U.Z, {
         isGroupStart: s,
         channel: n,
-        message: new v.ZP({
+        message: new N.ZP({
             id: t.id,
             key: 'pending-upload-'.concat(t.id),
             type: K.uaV.DEFAULT,
@@ -64,11 +64,11 @@ function $(e) {
     }));
     let eg = b.isForumPost() && !eh ? (0, i.jsx)(h.Z, { postId: b.id }) : null, eI = (0, m.Z)(b.id);
     (0, W.Z)();
-    let ex = null, eT = [], eN = en.map((e, t) => {
+    let ex = null, eT = [], ev = en.map((e, t) => {
             if (e.type === K.ys_.DIVIDER) {
                 var n, a;
                 let s = null != e.unreadId;
-                return null != el ? null : e.isSummaryDivider ? (0, i.jsx)(N.Z, {
+                return null != el ? null : e.isSummaryDivider ? (0, i.jsx)(v.Z, {
                     index: t,
                     item: e,
                     channel: b,
@@ -115,10 +115,10 @@ function $(e) {
                 renderContentOnly: eI
             }, e.content.id);
         });
-    eT.push(...eN);
-    let ev = en[en.length - 1];
+    eT.push(...ev);
+    let eN = en[en.length - 1];
     if (null != ec && ei.forEach((e, t) => {
-            let n = 0 === t && (0, y.J)(b, ev, new v.ZP({
+            let n = 0 === t && (0, y.J)(b, eN, new N.ZP({
                 type: K.uaV.DEFAULT,
                 author: ec
             }));

@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     }
 });
-var i = n(735250), a = n(470079), s = n(920906), l = n(442837), r = n(780384), o = n(435064), c = n(39604), d = n(175470), u = n(569545), h = n(153850), p = n(420576);
+var i = n(735250), a = n(470079), s = n(338545), l = n(442837), r = n(780384), o = n(435064), c = n(39604), d = n(175470), u = n(569545), h = n(153850), p = n(420576);
 let m = { visibility: 'hidden' }, _ = {
         precision: 0.0001,
         duration: 300
@@ -17,7 +17,7 @@ function C(e) {
     let {
             stream: t,
             inPopout: n
-        } = e, {reducedMotion: C} = a.useContext(r.Sf), g = (0, a.useRef)(null), I = d.n.getState().clipsButtonRef, x = (0, u.V9)(t), T = (0, l.e7)([o.Z], () => o.Z.getActiveAnimation()), N = (0, l.Wu)([o.Z], () => o.Z.getStreamClipAnimations(x)), v = (0, a.useRef)();
+        } = e, {reducedMotion: C} = a.useContext(r.Sf), g = (0, a.useRef)(null), I = d.n.getState().clipsButtonRef, x = (0, u.V9)(t), T = (0, l.e7)([o.Z], () => o.Z.getActiveAnimation()), v = (0, l.Wu)([o.Z], () => o.Z.getStreamClipAnimations(x)), N = (0, a.useRef)();
     a.useEffect(() => () => {
         (0, c.Gh)(x);
     }, [x]);
@@ -32,7 +32,7 @@ function C(e) {
             };
         }, Z = e => {
             let t = null == I ? void 0 : I.getBoundingClientRect();
-            if (v.current = t, e.timestamp !== T || null == t || n)
+            if (N.current = t, e.timestamp !== T || null == t || n)
                 return m;
             let {
                 top: i,
@@ -44,13 +44,13 @@ function C(e) {
                 height: 151,
                 width: 268
             };
-        }, A = (0, a.useRef)(null), M = (0, s.useTransition)(N, {
+        }, A = (0, a.useRef)(null), M = (0, s.useTransition)(v, {
             keys: e => e.timestamp,
             ref: A,
             from: { opacity: 0.2 },
             enter: { opacity: 0 },
             config: _
-        }), b = (0, a.useRef)(null), R = (0, s.useTransition)(N, {
+        }), b = (0, a.useRef)(null), R = (0, s.useTransition)(v, {
             ref: b,
             keys: e => e.timestamp,
             from: e => ({
@@ -70,17 +70,17 @@ function C(e) {
                     height: 0,
                     width: 0,
                     ...(() => {
-                        if (null != v.current)
+                        if (null != N.current)
                             return {
-                                top: v.current.top + 12,
-                                left: v.current.left + 12
+                                top: N.current.top + 12,
+                                left: N.current.left + 12
                             };
                     })()
                 }
             },
             config: C.enabled ? E : f,
             onRest: (e, t) => {
-                null != t.item && null != N.find(e => e.timestamp === t.item.timestamp) && (0, c.Gh)(x, t.item.timestamp);
+                null != t.item && null != v.find(e => e.timestamp === t.item.timestamp) && (0, c.Gh)(x, t.item.timestamp);
             }
         });
     return (0, s.useChain)([

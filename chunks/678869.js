@@ -3,7 +3,7 @@ n.d(t, {
         return j;
     }
 }), n(627494), n(757143), n(653041);
-var i = n(735250), a = n(470079), s = n(423875), l = n(442837), r = n(902704), o = n(481060), c = n(952164), d = n(768419), u = n(456190), h = n(239470), p = n(894344), m = n(314897), _ = n(936195), f = n(5192), E = n(561308), C = n(256726), g = n(206295), I = n(551228), x = n(591853), T = n(371991), N = n(410441), v = n(981631), S = n(616922), Z = n(689938), A = n(153602), M = n(331679);
+var i = n(735250), a = n(470079), s = n(423875), l = n(442837), r = n(902704), o = n(481060), c = n(952164), d = n(768419), u = n(456190), h = n(239470), p = n(894344), m = n(314897), _ = n(936195), f = n(5192), E = n(561308), C = n(256726), g = n(206295), I = n(551228), x = n(591853), T = n(371991), v = n(410441), N = n(981631), S = n(616922), Z = n(689938), A = n(153602), M = n(331679);
 let b = (e, t, n) => {
     let {
             artist: i,
@@ -76,7 +76,7 @@ function j(e) {
         } = (0, g.Z)(H), z = (0, l.e7)([
             d.Z,
             m.default
-        ], () => (null == U ? void 0 : U.type) === v.IIU.LISTENING && null != V ? (0, h.Z)(d.Z, m.default, V, U) : void 0, [
+        ], () => (null == U ? void 0 : U.type) === N.IIU.LISTENING && null != V ? (0, h.Z)(d.Z, m.default, V, U) : void 0, [
             U,
             V
         ], r.Z), Y = a.useCallback(() => {
@@ -139,7 +139,7 @@ function j(e) {
         onClickThumbnail: L,
         channel: O,
         entry: y,
-        headerIcons: (0, i.jsx)(N.Z, {
+        headerIcons: (0, i.jsx)(v.Z, {
             onClick: A,
             'aria-label': P,
             provider: w.media.provider

@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(699516), l = n(246946), r = n(5192), o = n(332390), c = n(824572), d = n(741308), u = n(588822), h = n(681837), p = n(91433), m = n(900927), _ = n(724593), f = n(678738), E = n(502762), C = n(530), g = n(580512), I = n(765365), x = n(228168), T = n(981631), N = n(689938), v = n(790884);
+var a = n(442837), s = n(699516), l = n(246946), r = n(5192), o = n(332390), c = n(824572), d = n(741308), u = n(588822), h = n(681837), p = n(91433), m = n(900927), _ = n(724593), f = n(678738), E = n(502762), C = n(530), g = n(580512), I = n(765365), x = n(228168), T = n(981631), v = n(689938), N = n(790884);
 function S(e) {
     let {
             user: t,
@@ -15,7 +15,7 @@ function S(e) {
             onOpenProfile: A
         } = e, {improvedPanelFriendingEnabled: M} = (0, c.O)({ location: 'SimplifiedProfilePanelBody' }), {activeInviteToCallCtaEnabled: b} = (0, o.l)({ location: 'BiteSizeProfileDirectMessageSection' }), R = (0, I.Z)({ user: t }), j = (0, a.e7)([s.Z], () => s.Z.getRelationshipType(t.id)), L = (0, a.e7)([l.Z], () => l.Z.hidePersonalInformation);
     return (0, i.jsxs)('div', {
-        className: v.body,
+        className: N.body,
         children: [
             (0, i.jsx)(C.Z, {
                 user: t,
@@ -50,10 +50,10 @@ function S(e) {
                 channelId: S
             }),
             (0, i.jsxs)(E.Z.Overlay, {
-                className: v.overlay,
+                className: N.overlay,
                 children: [
                     !L && (null == n ? void 0 : n.bio) != null && (null == n ? void 0 : n.bio) !== '' && (0, i.jsx)(f.Z, {
-                        title: N.Z.Messages.USER_POPOUT_ABOUT_ME,
+                        title: v.Z.Messages.USER_POPOUT_ABOUT_ME,
                         headingColor: 'header-primary',
                         children: (0, i.jsx)(u.Z, {
                             userBio: n.bio,
@@ -63,7 +63,7 @@ function S(e) {
                         })
                     }),
                     (0, i.jsx)(f.Z, {
-                        title: N.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+                        title: v.Z.Messages.USER_PROFILE_MEMBER_SINCE,
                         headingColor: 'header-primary',
                         children: (0, i.jsx)(m.Z, { userId: t.id })
                     })

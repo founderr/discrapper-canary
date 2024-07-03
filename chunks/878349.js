@@ -15,8 +15,8 @@ function E(e) {
             tooltipColor: I,
             className: x,
             id: T = 'fancybutton-toggle',
-            collapseWhenChecked: N = !0,
-            onClick: v,
+            collapseWhenChecked: v = !0,
+            onClick: N,
             disabled: S
         } = e, Z = (0, r.e7)([h.Z], () => h.Z.useReducedMotion), [A, M] = a.useState(!1), b = (0, u.ZP)(), R = (0, o.wj)(b) || t ? f : _, {
             width: j = 0,
@@ -44,7 +44,7 @@ function E(e) {
                         let e = !t;
                         M(!0), null == g || g(e);
                     }
-                    'function' == typeof v && v();
+                    'function' == typeof N && N();
                 },
                 id: T,
                 type: 'checkbox',
@@ -57,7 +57,7 @@ function E(e) {
                     [m.labelChecked]: t,
                     [m.labelUnchecked]: !t && !E
                 }),
-                style: N ? { width: t ? j : j + P } : void 0,
+                style: v ? { width: t ? j : j + P } : void 0,
                 children: [
                     t ? (0, i.jsx)(c.Shine, {
                         className: m.shine,
@@ -72,7 +72,7 @@ function E(e) {
                         ref: O,
                         children: (0, i.jsx)(c.Text, {
                             className: l()(m.burstText, {
-                                [m.visuallyHidden]: t && N,
+                                [m.visuallyHidden]: t && v,
                                 [m.burstTextChecked]: t
                             }),
                             variant: 'text-sm/semibold',

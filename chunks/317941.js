@@ -1,6 +1,6 @@
 s(47120), s(411104);
 var n = s(735250), a = s(470079), i = s(913527), r = s.n(i), o = s(442837), l = s(846519), c = s(481060), d = s(533307), _ = s(812206), E = s(981632), u = s(314897), T = s(82142), I = s(246946), S = s(509545), N = s(55563), C = s(15887), m = s(285952), A = s(366695), h = s(259580), g = s(572004), O = s(669079), p = s(296848), R = s(474936), x = s(689938), M = s(105953);
-function D(e, t, s) {
+function f(e, t, s) {
     return t in e ? Object.defineProperty(e, t, {
         value: s,
         enumerable: !0,
@@ -8,7 +8,7 @@ function D(e, t, s) {
         writable: !0
     }) : e[t] = s, e;
 }
-class f extends a.PureComponent {
+class D extends a.PureComponent {
     componentWillUnmount() {
         this._copyModeTimeout.stop();
     }
@@ -66,7 +66,7 @@ class f extends a.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), D(this, '_copyModeTimeout', new l.V7()), D(this, 'state', { copyMode: c.CopyInputModes.DEFAULT }), D(this, 'handleCopy', e => {
+        super(...e), f(this, '_copyModeTimeout', new l.V7()), f(this, 'state', { copyMode: c.CopyInputModes.DEFAULT }), f(this, 'handleCopy', e => {
             let {
                 giftCode: t,
                 sku: s
@@ -188,7 +188,7 @@ class P extends a.PureComponent {
                     children: o ? (0, n.jsx)(c.Spinner, { className: M.spinner }) : (0, n.jsxs)(a.Fragment, {
                         children: [
                             s.length < e.length ? this.renderGenerateGiftCodeRow() : null,
-                            s.map(e => (0, n.jsx)(f, {
+                            s.map(e => (0, n.jsx)(D, {
                                 giftCode: e,
                                 sku: r,
                                 hideCode: l
@@ -200,11 +200,11 @@ class P extends a.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), D(this, '_loadedAt', null), D(this, 'state', {
+        super(...e), f(this, '_loadedAt', null), f(this, 'state', {
             isOpen: !1,
             isCreating: !1,
             isHovered: !1
-        }), D(this, 'handleGenerateGiftCode', async e => {
+        }), f(this, 'handleGenerateGiftCode', async e => {
             e.stopPropagation();
             let {
                 skuId: t,
@@ -215,7 +215,7 @@ class P extends a.PureComponent {
                 isCreating: !1,
                 isOpen: !0
             });
-        }), D(this, 'handleToggleOpen', () => {
+        }), f(this, 'handleToggleOpen', () => {
             let {
                     skuId: e,
                     subscriptionPlanId: t,

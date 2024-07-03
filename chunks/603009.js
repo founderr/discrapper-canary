@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(920906), o = n(704215), c = n(481060), d = n(442837), u = n(410030), h = n(607070), p = n(645041), m = n(430824), _ = n(914010), f = n(594174), E = n(626135), C = n(645896), g = n(905362), I = n(603368), x = n(353093), T = n(940725), N = n(114487), v = n(979264), S = n(981631), Z = n(921944), A = n(689938), M = n(817550);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(338545), o = n(704215), c = n(481060), d = n(442837), u = n(410030), h = n(607070), p = n(645041), m = n(430824), _ = n(914010), f = n(594174), E = n(626135), C = n(645896), g = n(905362), I = n(603368), x = n(353093), T = n(940725), v = n(114487), N = n(979264), S = n(981631), Z = n(921944), A = n(689938), M = n(817550);
 function b(e) {
     var t;
     let {
@@ -78,14 +78,14 @@ function b(e) {
                         (0, i.jsxs)('div', {
                             className: M.guildIconContainer,
                             children: [
-                                (0, i.jsx)(N.Z, {
+                                (0, i.jsx)(v.Z, {
                                     guild: n,
                                     iconSize: 64,
                                     className: M.icon
                                 }),
                                 (0, i.jsx)('div', {
                                     className: M.guildTagContainer,
-                                    children: (0, i.jsx)(v.aG, {
+                                    children: (0, i.jsx)(N.aG, {
                                         guildId: n.id,
                                         clanTag: null === (a = n.clan) || void 0 === a ? void 0 : a.tag,
                                         clanBadge: null === (s = n.clan) || void 0 === s ? void 0 : s.badge,

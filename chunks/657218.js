@@ -3,7 +3,7 @@ n.d(t, {
         return W;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(430742), d = n(144144), u = n(738619), h = n(561472), p = n(607070), m = n(100527), _ = n(906732), f = n(541716), E = n(752305), C = n(893718), g = n(303628), I = n(967128), x = n(294218), T = n(913663), N = n(268350), v = n(695346), S = n(592125), Z = n(703558), A = n(375954), M = n(496675), b = n(117530), R = n(153124), j = n(502568), L = n(459273), P = n(838440), O = n(127654), y = n(241309), D = n(928477), k = n(456077), U = n(488131), w = n(602034), B = n(981631), H = n(689938), G = n(20305), V = n(602679);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(430742), d = n(144144), u = n(738619), h = n(561472), p = n(607070), m = n(100527), _ = n(906732), f = n(541716), E = n(752305), C = n(893718), g = n(303628), I = n(967128), x = n(294218), T = n(913663), v = n(268350), N = n(695346), S = n(592125), Z = n(703558), A = n(375954), M = n(496675), b = n(117530), R = n(153124), j = n(502568), L = n(459273), P = n(838440), O = n(127654), y = n(241309), D = n(928477), k = n(456077), U = n(488131), w = n(602034), B = n(981631), H = n(689938), G = n(20305), V = n(602679);
 let F = f.I.THREAD_CREATION;
 function W(e) {
     let {
@@ -101,7 +101,7 @@ function z(e) {
                 setTextAreaState: i
             };
         }(t, _), x = (0, D.vH)(t), {
-            nameError: v,
+            nameError: N,
             messageError: S,
             submit: A
         } = function (e) {
@@ -155,7 +155,7 @@ function z(e) {
                             shouldRefocus: !0
                         };
                     }
-                    return (0, N.qB)(t.id, F.drafts.type), {
+                    return (0, v.qB)(t.id, F.drafts.type), {
                         shouldClear: !0,
                         shouldRefocus: !1
                     };
@@ -205,7 +205,7 @@ function z(e) {
                                             parentMessageId: n,
                                             threadSettings: m,
                                             updateThreadSettings: f,
-                                            error: v
+                                            error: N
                                         }),
                                         t.type === B.d4z.GUILD_TEXT ? (0, i.jsx)(Y, {
                                             startedFromMessage: null != n,
@@ -375,7 +375,7 @@ function X(e) {
     let {
             parentChannel: t,
             parentMessageId: n
-        } = e, a = (0, r.e7)([A.Z], () => null == n ? null : A.Z.getMessage(t.id, n)), s = v.jU.useSetting();
+        } = e, a = (0, r.e7)([A.Z], () => null == n ? null : A.Z.getMessage(t.id, n)), s = N.jU.useSetting();
     return null != a ? (0, i.jsx)(x.Z, {
         className: G.messagePreview,
         message: a,

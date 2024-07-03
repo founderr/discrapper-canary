@@ -4,7 +4,7 @@ n.d(t, {
     }
 });
 var i = n(735250), a = n(470079), s = n(442837), l = n(974674), r = n(481060), o = n(420660), c = n(100527), d = n(906732), u = n(233440), h = n(199902), p = n(158776), m = n(998502), _ = n(785717), f = n(204197), E = n(78675), C = n(438163), g = n(652853), I = n(228168), x = n(981631), T = n(739116);
-let N = m.ZP.getEnableHardwareAcceleration() ? l.Xo : l.qE, v = r.AvatarSizes.SIZE_80;
+let v = m.ZP.getEnableHardwareAcceleration() ? l.Xo : l.qE, N = r.AvatarSizes.SIZE_80;
 function S(e) {
     let {
             user: t,
@@ -18,7 +18,7 @@ function S(e) {
             avatarDecorationSrc: L
         } = (0, f.Z)({
             user: t,
-            size: v,
+            size: N,
             animateOnHover: !m
         }), P = a.useMemo(() => (0, u.W)(t, l.id), [
             t,
@@ -57,10 +57,10 @@ function S(e) {
                         analyticsLocations: A
                     }), null == S || S();
                 },
-                children: (0, i.jsx)(N, {
+                children: (0, i.jsx)(v, {
                     src: R,
                     avatarDecoration: L,
-                    size: v,
+                    size: N,
                     imageClassName: T.overlay,
                     status: P || t.isNonUserBot() ? r.StatusTypes.UNKNOWN : O,
                     statusBackdropColor: b && !P ? (0, r.getStatusBackdropColor)(Z) : void 0,

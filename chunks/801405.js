@@ -15,8 +15,8 @@ function I(e) {
             popoutWindow: d,
             currentWindow: I
         } = e, x = n === E.IlC.POPOUT, T = a.useRef(null), {
-            currentLayout: N,
-            mode: v
+            currentLayout: v,
+            mode: N
         } = (0, s.cj)([c.Z], () => {
             let e = c.Z.getMode(t.id), i = n === E.IlC.POPOUT;
             i && (e = E.WtW.VIDEO);
@@ -30,9 +30,9 @@ function I(e) {
             n
         ]), S = (0, s.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
     a.useEffect(() => {
-        T.current = v;
+        T.current = N;
     });
-    let Z = a.useRef(N), {
+    let Z = a.useRef(v), {
             currentDocument: A,
             rootNode: M
         } = a.useMemo(() => {
@@ -46,7 +46,7 @@ function I(e) {
             d,
             x,
             I
-        ]), b = l && !x, R = v === E.WtW.VIDEO && S && !b, j = a.useCallback((e, i) => {
+        ]), b = l && !x, R = N === E.WtW.VIDEO && S && !b, j = a.useCallback((e, i) => {
             i !== e && (r.Z.updateLayout(t.id, i, n), i === E.AEg.FULL_SCREEN && t.isPrivate() && m.S.dispatch(E.CkL.TEXTAREA_BLUR));
         }, [
             n,
@@ -69,29 +69,29 @@ function I(e) {
         ]);
     return (a.useEffect(() => {
         let e = () => {
-            null != M && !(0, f.rB)(M, A) && N === E.AEg.FULL_SCREEN && P(N)();
+            null != M && !(0, f.rB)(M, A) && v === E.AEg.FULL_SCREEN && P(v)();
         };
         return A.addEventListener(f.NO, e), () => {
             A.removeEventListener(f.NO, e);
         };
     }, [
         A,
-        N,
+        v,
         P,
         M
     ]), a.useEffect(() => (p.default.track(E.rMx.VIDEO_LAYOUT_TOGGLED, {
-        video_layout: x ? 'popout' : N,
+        video_layout: x ? 'popout' : v,
         ...(0, o.AB)(t.id)
     }), () => {
-        !(x && (0, _.isMac)()) && L(N);
+        !(x && (0, _.isMac)()) && L(v);
     }), [
-        N,
+        v,
         x
     ]), a.useEffect(() => {
-        null != M && T.current === E.WtW.VIDEO && v === E.WtW.VOICE && (0, f.Pr)(M, A);
+        null != M && T.current === E.WtW.VIDEO && N === E.WtW.VOICE && (0, f.Pr)(M, A);
     }, [
         A,
-        v,
+        N,
         T,
         M
     ]), a.useEffect(() => {
@@ -104,6 +104,6 @@ function I(e) {
         node: M,
         guestWindow: d,
         className: C.rightTrayIcon,
-        onClick: P(N)
+        onClick: P(v)
     }) : null;
 }

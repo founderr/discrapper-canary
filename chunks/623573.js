@@ -6,7 +6,7 @@ s.r(t), s.d(t, {
         return Q;
     }
 }), s(411104), s(47120);
-var n, a, i = s(735250), r = s(470079), o = s(160612), l = s(120356), c = s.n(l), d = s(512722), _ = s.n(d), E = s(442837), u = s(481060), T = s(570140), I = s(355467), S = s(873115), N = s(976255), C = s(598), m = s(409813), A = s(3409), h = s(351402), g = s(975060), O = s(505649), p = s(285952), R = s(358085), x = s(622999), M = s(462566), D = s(801937), f = s(282164), P = s(738342), L = s(228666), Z = s(581813), b = s(981631), v = s(689938), j = s(605280), B = s(483085);
+var n, a, i = s(735250), r = s(470079), o = s(160612), l = s(120356), c = s.n(l), d = s(512722), _ = s.n(d), E = s(442837), u = s(481060), T = s(570140), I = s(355467), S = s(873115), N = s(976255), C = s(598), m = s(409813), A = s(3409), h = s(351402), g = s(975060), O = s(505649), p = s(285952), R = s(358085), x = s(622999), M = s(462566), f = s(801937), D = s(282164), P = s(738342), L = s(228666), Z = s(581813), b = s(981631), v = s(689938), j = s(605280), B = s(483085);
 function U(e, t, s) {
     return t in e ? Object.defineProperty(e, t, {
         value: s,
@@ -269,7 +269,7 @@ class W extends r.PureComponent {
                 }
             },
             payment_type: {
-                renderBody: () => (0, i.jsx)(D.Z, {
+                renderBody: () => (0, i.jsx)(f.Z, {
                     allowStripeRequestPayments: !R.isPlatformEmbedded,
                     onChooseType: this.handleChooseType,
                     onStripePaymentMethodReceived: this.handleStripePaymentMethod
@@ -358,7 +358,7 @@ class W extends r.PureComponent {
                 }
             },
             paypal: {
-                renderBody: () => (0, i.jsx)(f.Z, {}),
+                renderBody: () => (0, i.jsx)(D.Z, {}),
                 renderNextButton: () => {
                     let {
                             submitting: e,

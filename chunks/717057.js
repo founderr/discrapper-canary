@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(913527), o = n.n(r), c = n(442837), d = n(481060), u = n(410030), h = n(271383), p = n(430824), m = n(594174), _ = n(153124), f = n(709054), E = n(931240), C = n(645896), g = n(603368), I = n(532490), x = n(380365), T = n(979264), N = n(620929), v = n(284019), S = n(308083), Z = n(981631), A = n(689938), M = n(560666);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(913527), o = n.n(r), c = n(442837), d = n(481060), u = n(410030), h = n(271383), p = n(430824), m = n(594174), _ = n(153124), f = n(709054), E = n(931240), C = n(645896), g = n(603368), I = n(532490), x = n(380365), T = n(979264), v = n(620929), N = n(284019), S = n(308083), Z = n(981631), A = n(689938), M = n(560666);
 function b(e) {
     var t;
     let {
@@ -52,7 +52,7 @@ function b(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(N.p, {
+                (0, i.jsx)(v.p, {
                     applicationIds: u,
                     playstyle: s.playstyle,
                     className: l()(M.charterBodyText, M.gameSection)
@@ -74,7 +74,7 @@ function R(e) {
             onClose: s,
             onAccept: r,
             ...o
-        } = e, f = (0, _.Dt)(), I = (0, C.Cc)(n), T = (0, C.E8)(), [N, S] = a.useState(!0), [R, j] = a.useState(!1), L = a.useCallback(() => {
+        } = e, f = (0, _.Dt)(), I = (0, C.Cc)(n), T = (0, C.E8)(), [v, S] = a.useState(!0), [R, j] = a.useState(!1), L = a.useCallback(() => {
             r(), s();
         }, [
             r,
@@ -88,11 +88,11 @@ function R(e) {
         T
     ]);
     let P = a.useCallback(() => {
-            N && (0, E.nE)(n, N, Z.Sbl.CREATE_JOIN_GUILD_MODAL), L();
+            v && (0, E.nE)(n, v, Z.Sbl.CREATE_JOIN_GUILD_MODAL), L();
         }, [
             n,
             L,
-            N
+            v
         ]), O = a.useCallback(() => {
             j(!0);
         }, []), y = (0, c.e7)([p.Z], () => p.Z.getGuild(n)), D = (0, c.e7)([m.default], () => m.default.getCurrentUser()), k = (0, c.e7)([h.ZP], () => null != D ? h.ZP.getMember(n, D.id) : null), U = (0, u.ZP)(), w = (0, g.nP)(null == I ? void 0 : null === (t = I.branding) || void 0 === t ? void 0 : t.primaryColor, [
@@ -134,7 +134,7 @@ function R(e) {
                         }),
                         (0, i.jsx)(x.Z, {
                             guildId: n,
-                            isTagAdopted: N,
+                            isTagAdopted: v,
                             onChangeUseTag: S
                         })
                     ]
@@ -147,7 +147,7 @@ function R(e) {
                         onSignCharter: O
                     })
                 }),
-                (0, i.jsx)(v.Z, {
+                (0, i.jsx)(N.Z, {
                     onClick: P,
                     color: d.Button.Colors.BRAND,
                     themeColor: w,

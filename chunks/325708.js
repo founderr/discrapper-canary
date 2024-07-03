@@ -49,7 +49,7 @@ function E(e) {
             }
         }(t), [C, g] = l.useState(p.ZP[E]), I = l.useCallback(e => {
             u.ZP.updatedUnsyncedSettings({ [E]: e });
-        }, [E]), x = (0, m.W)({ maxWidth: n }), T = (0, c.clamp)(C, m.C, n), N = x ? T : T + d.Z.modules.chat.RESIZE_HANDLE_WIDTH;
+        }, [E]), x = (0, m.W)({ maxWidth: n }), T = (0, c.clamp)(C, m.C, n), v = x ? T : T + d.Z.modules.chat.RESIZE_HANDLE_WIDTH;
     l.useEffect(() => {
         null == i || i(T, x);
     }, [
@@ -57,14 +57,14 @@ function E(e) {
         i,
         x
     ]);
-    let v = (0, s.jsxs)(s.Fragment, {
+    let N = (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)('div', {
                 className: o()(_.chatTarget, {
                     [_.floating]: x,
                     [_.notFloating]: !x
                 }),
-                style: { width: N }
+                style: { width: v }
             }),
             !x && (0, s.jsx)(f, {
                 maxWidth: n,
@@ -85,9 +85,9 @@ function E(e) {
         return (0, s.jsx)(e, {
             children: (0, s.jsx)('div', {
                 className: _.chatLayerWrapper,
-                children: v
+                children: N
             })
         });
     }
-    return (0, s.jsx)(s.Fragment, { children: v });
+    return (0, s.jsx)(s.Fragment, { children: N });
 }

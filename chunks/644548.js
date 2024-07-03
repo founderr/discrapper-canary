@@ -26,8 +26,8 @@ t.Z = e => {
             details: x,
             gameTitle: T
         } = (0, m.F)(n), {
-            primaryColor: N,
-            secondaryColor: v
+            primaryColor: v,
+            secondaryColor: N
         } = (0, d.Z)(C), S = (0, o.yA)(n), Z = (0, o.Nq)(n), A = a.useCallback(e => {
             if (null != I && null != S && null != Z && !!(0, u.qy)(Z))
                 return (0, c.SO)({
@@ -37,8 +37,8 @@ t.Z = e => {
                     description: f(n, t, I, Z),
                     timestamp: _.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(S / l.Z.Seconds.HOUR) }),
                     colors: [
-                        N,
-                        v
+                        v,
+                        N
                     ],
                     channelId: e
                 });
@@ -47,9 +47,9 @@ t.Z = e => {
             t,
             S,
             n,
-            N,
-            Z,
             v,
+            Z,
+            N,
             I
         ]);
     return null != I && null != S && null != Z && (0, u.qy)(Z) ? (0, i.jsxs)(p.yR, {

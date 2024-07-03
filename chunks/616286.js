@@ -47,7 +47,7 @@ function T(e) {
             showRequestToSpeakSidebar: p,
             toggleRequestToSpeakSidebar: f,
             ...T
-        } = e, {disabled: N} = T, v = a.useRef(null), S = (0, o.e7)([d.Z], () => d.Z.getChatOpen(n), [n]), {
+        } = e, {disabled: v} = T, N = a.useRef(null), S = (0, o.e7)([d.Z], () => d.Z.getChatOpen(n), [n]), {
             isShowing: Z,
             unreadCount: A,
             mentionCount: M
@@ -86,11 +86,11 @@ function T(e) {
             });
         }, [n]), j = a.useCallback(() => {
             var e;
-            null === (e = v.current) || void 0 === e || e.focus();
+            null === (e = N.current) || void 0 === e || e.focus();
         }, []);
     (0, m.yp)({
         event: C.CkL.FOCUS_CHAT_BUTTON,
-        handler: N ? null : j
+        handler: v ? null : j
     });
     let [L, P] = a.useState(!1), O = a.useCallback(() => {
             h && P(!0);
@@ -106,9 +106,9 @@ function T(e) {
             clearTimeout(e);
         };
     }, [L]);
-    let y = [t = h && N ? g.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : S ? g.Z.Messages.VIDEO_CALL_HIDE_CHAT : g.Z.Messages.VIDEO_CALL_SHOW_CHAT];
+    let y = [t = h && v ? g.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : S ? g.Z.Messages.VIDEO_CALL_HIDE_CHAT : g.Z.Messages.VIDEO_CALL_SHOW_CHAT];
     return M > 0 && y.push(g.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: M })), A > 0 && y.push(g.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, i.jsx)(E.Z, {
-        buttonRef: v,
+        buttonRef: N,
         onClick: b,
         label: t,
         'aria-label': y.join(', '),

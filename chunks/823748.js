@@ -1,5 +1,5 @@
 n(47120), n(653041);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r), c = n(392711), d = n.n(c), u = n(266067), h = n(848246), p = n(442837), m = n(704215), _ = n(952265), f = n(481060), E = n(239091), C = n(377993), g = n(457868), I = n(561472), x = n(36311), T = n(112724), N = n(902840), v = n(110924), S = n(317381), Z = n(82888), A = n(917107), M = n(358221), b = n(677601), R = n(541716), j = n(236091), L = n(663993), P = n(252618), O = n(201493), y = n(605236), D = n(174130), k = n(588322), U = n(517525), w = n(445384), B = n(613464), H = n(705563), G = n(730647), V = n(66999), F = n(826763), W = n(180216), z = n(51486), Y = n(168843), K = n(442336), q = n(57304), X = n(605953), Q = n(374306), J = n(984370), $ = n(910611), ee = n(915718), et = n(518311), en = n(180539), ei = n(882378), ea = n(207868), es = n(246919), el = n(754688), er = n(41776), eo = n(6242), ec = n(757692), ed = n(134483), eu = n(703656), eh = n(359110), ep = n(854709), em = n(14091), e_ = n(6025), ef = n(897473), eE = n(922482), eC = n(504185), eg = n(657218), eI = n(66556), ex = n(739830), eT = n(377929), eN = n(900157), ev = n(108427), eS = n(171368), eZ = n(346967), eA = n(524329), eM = n(995532), eb = n(738643), eR = n(433355), ej = n(592125), eL = n(703558), eP = n(486472), eO = n(731290), ey = n(430824), eD = n(158776), ek = n(768119), eU = n(944486), ew = n(914010), eB = n(594174), eH = n(979651), eG = n(368666), eV = n(74538), eF = n(792125), eW = n(933557), ez = n(287746), eY = n(325708), eK = n(335615), eq = n(992744), eX = n(923029), eQ = n(176505), eJ = n(981631), e$ = n(918559), e0 = n(354459), e1 = n(921944), e2 = n(440493), e7 = n(157925), e4 = n(689938), e3 = n(489919);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r), c = n(392711), d = n.n(c), u = n(266067), h = n(848246), p = n(442837), m = n(704215), _ = n(952265), f = n(481060), E = n(239091), C = n(377993), g = n(457868), I = n(561472), x = n(36311), T = n(112724), v = n(902840), N = n(110924), S = n(317381), Z = n(82888), A = n(917107), M = n(358221), b = n(677601), R = n(541716), j = n(236091), L = n(663993), P = n(252618), O = n(201493), y = n(605236), D = n(174130), k = n(588322), U = n(517525), w = n(445384), B = n(613464), H = n(705563), G = n(730647), V = n(66999), F = n(826763), W = n(180216), z = n(51486), Y = n(168843), K = n(442336), q = n(57304), X = n(605953), Q = n(374306), J = n(984370), $ = n(910611), ee = n(915718), et = n(518311), en = n(180539), ei = n(882378), ea = n(207868), es = n(246919), el = n(754688), er = n(41776), eo = n(6242), ec = n(757692), ed = n(134483), eu = n(703656), eh = n(359110), ep = n(854709), em = n(14091), e_ = n(6025), ef = n(897473), eE = n(922482), eC = n(504185), eg = n(657218), eI = n(66556), ex = n(739830), eT = n(377929), ev = n(900157), eN = n(108427), eS = n(171368), eZ = n(346967), eA = n(524329), eM = n(995532), eb = n(738643), eR = n(433355), ej = n(592125), eL = n(703558), eP = n(486472), eO = n(731290), ey = n(430824), eD = n(158776), ek = n(768119), eU = n(944486), ew = n(914010), eB = n(594174), eH = n(979651), eG = n(368666), eV = n(74538), eF = n(792125), eW = n(933557), ez = n(287746), eY = n(325708), eK = n(335615), eq = n(992744), eX = n(923029), eQ = n(176505), eJ = n(981631), e$ = n(918559), e0 = n(354459), e1 = n(921944), e2 = n(440493), e7 = n(157925), e4 = n(689938), e3 = n(489919);
 function e5(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -17,9 +17,9 @@ let e6 = (0, L.Un)({
     }),
     name: 'ForumChannel'
 });
-class e9 extends a.PureComponent {
+class e8 extends a.PureComponent {
     componentDidMount() {
-        (0, ev.e)('guild_channel');
+        (0, eN.e)('guild_channel');
     }
     componentDidUpdate(e) {
         null != this.props.channel && null != e.channel && this.props.channel.id !== e.channel.id && this.state.topicExpanded && this.setState({ topicExpanded: !1 }), this.openChannelModal();
@@ -249,7 +249,7 @@ class e9 extends a.PureComponent {
                 });
                 break;
             case ef.tI.VIEW_THREAD:
-                let n = (null == t ? void 0 : t.isForumLikeChannel()) ? k.Z : eN.Z;
+                let n = (null == t ? void 0 : t.isForumLikeChannel()) ? k.Z : ev.Z;
                 e = (0, i.jsx)(n, { channelId: a.channelId });
                 break;
             case ef.tI.VIEW_CHANNEL:
@@ -445,11 +445,11 @@ class e9 extends a.PureComponent {
             case eJ.d4z.ANNOUNCEMENT_THREAD:
             case eJ.d4z.PRIVATE_THREAD:
             case eJ.d4z.PUBLIC_THREAD:
-                null != t && !t.isForumLikeChannel() && l.push((0, i.jsx)(eI.Z, { channel: t }, 'browser')), e.isVocalThread() && l.push((0, i.jsx)(ea.Z, { channel: e }, 'thread-call')), l.push((0, i.jsx)(ex.Z, { channel: e }, 'notifications')), l.push((0, i.jsx)(q.Z, { channel: e }, 'pins')), !e.isArchivedThread() && l.push((0, i.jsx)(Y.Z, { channelId: e.id }, 'members')), null != t && (0, N.Lp)(e) && l.push((0, i.jsx)(X.Z, { channel: e }, 'summaries')), l.push((0, i.jsx)(eT.Z, { channel: e }, 'threads-overflow'));
+                null != t && !t.isForumLikeChannel() && l.push((0, i.jsx)(eI.Z, { channel: t }, 'browser')), e.isVocalThread() && l.push((0, i.jsx)(ea.Z, { channel: e }, 'thread-call')), l.push((0, i.jsx)(ex.Z, { channel: e }, 'notifications')), l.push((0, i.jsx)(q.Z, { channel: e }, 'pins')), !e.isArchivedThread() && l.push((0, i.jsx)(Y.Z, { channelId: e.id }, 'members')), null != t && (0, v.Lp)(e) && l.push((0, i.jsx)(X.Z, { channel: e }, 'summaries')), l.push((0, i.jsx)(eT.Z, { channel: e }, 'threads-overflow'));
                 break;
             case eJ.d4z.GUILD_ANNOUNCEMENT:
             case eJ.d4z.GUILD_TEXT:
-                l.push((0, i.jsx)(D.Z, { channel: e }, 'favorites')), l.push((0, i.jsx)(eI.Z, { channel: e }, 'browser')), !n && l.push((0, i.jsx)(K.Z, { channel: e }, 'notifications')), l.push((0, i.jsx)(q.Z, { channel: e }, 'pins')), l.push((0, i.jsx)(Y.Z, { channelId: e.id }, 'members')), (0, N.Lp)(e) && l.push((0, i.jsx)(X.Z, { channel: e }, 'summaries'));
+                l.push((0, i.jsx)(D.Z, { channel: e }, 'favorites')), l.push((0, i.jsx)(eI.Z, { channel: e }, 'browser')), !n && l.push((0, i.jsx)(K.Z, { channel: e }, 'notifications')), l.push((0, i.jsx)(q.Z, { channel: e }, 'pins')), l.push((0, i.jsx)(Y.Z, { channelId: e.id }, 'members')), (0, v.Lp)(e) && l.push((0, i.jsx)(X.Z, { channel: e }, 'summaries'));
                 break;
             case eJ.d4z.GUILD_FORUM:
             case eJ.d4z.GUILD_MEDIA:
@@ -565,7 +565,7 @@ class e9 extends a.PureComponent {
         });
     }
 }
-let e8 = (0, T.Z)(e9);
+let e9 = (0, T.Z)(e8);
 t.Z = a.memo(function (e) {
     var t;
     let {providedChannel: n} = e, [s, l] = a.useState(null), r = (0, p.e7)([eU.Z], () => eU.Z.getChannelId()), o = (0, p.e7)([eU.Z], () => eU.Z.getVoiceChannelId()), c = (0, p.e7)([ej.Z], () => null != n ? n : ej.Z.getChannel(r), [
@@ -606,7 +606,7 @@ t.Z = a.memo(function (e) {
         s,
         ee
     ]);
-    let et = (0, N.ts)(c), en = null != c && c.isPrivate(), ei = (0, v.Z)(en), ea = (0, v.Z)(null == c ? void 0 : c.id);
+    let et = (0, v.ts)(c), en = null != c && c.isPrivate(), ei = (0, N.Z)(en), ea = (0, N.Z)(null == c ? void 0 : c.id);
     a.useEffect(() => {
         let e = ei && !en, t = ei && en && (null == c ? void 0 : c.id) !== ea;
         (e || t) && (0, y.EW)(m.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e1.L.AUTO });
@@ -617,7 +617,7 @@ t.Z = a.memo(function (e) {
         ei
     ]);
     let ed = (0, _.f9)();
-    return (0, i.jsx)(e8, {
+    return (0, i.jsx)(e9, {
         guildId: null == c ? void 0 : c.guild_id,
         channelId: r,
         channel: c,

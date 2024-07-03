@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(410030), d = n(100527), u = n(906732), h = n(574176), p = n(769654), m = n(199902), _ = n(314897), f = n(592125), E = n(496675), C = n(158776), g = n(246946), I = n(979651), x = n(5192), T = n(51144), N = n(342656), v = n(785717), S = n(221292), Z = n(318661), A = n(57048), M = n(726059), b = n(162267), R = n(502762), j = n(171368), L = n(944546), P = n(470900), O = n(421486), y = n(240328), D = n(436478), k = n(138394), U = n(248345), w = n(19836), B = n(538564), H = n(319300), G = n(591600), V = n(584045), F = n(664202), W = n(772056), z = n(747711), Y = n(228168), K = n(981631), q = n(689938), X = n(251884);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(410030), d = n(100527), u = n(906732), h = n(574176), p = n(769654), m = n(199902), _ = n(314897), f = n(592125), E = n(496675), C = n(158776), g = n(246946), I = n(979651), x = n(5192), T = n(51144), v = n(342656), N = n(785717), S = n(221292), Z = n(318661), A = n(57048), M = n(726059), b = n(162267), R = n(502762), j = n(171368), L = n(944546), P = n(470900), O = n(421486), y = n(240328), D = n(436478), k = n(138394), U = n(248345), w = n(19836), B = n(538564), H = n(319300), G = n(591600), V = n(584045), F = n(664202), W = n(772056), z = n(747711), Y = n(228168), K = n(981631), q = n(689938), X = n(251884);
 t.Z = e => {
     var t;
     let {
@@ -84,7 +84,7 @@ t.Z = e => {
                 theme: ex,
                 onSelect: () => (0, p.X)(t.id)
             }, t.id);
-        }), eN = null == em ? void 0 : em.map(e => {
+        }), ev = null == em ? void 0 : em.map(e => {
             let {
                 key: t,
                 user: n,
@@ -102,20 +102,20 @@ t.Z = e => {
                     });
                 }
             }, t);
-        }), ev = a.useCallback(() => J(!0), []), eS = a.useCallback(() => J(!1), []), eZ = (0, r.e7)([_.default], () => _.default.getId()), eA = n.id === eZ, eM = n.bot || eA, {enabled: eb} = (0, N.qI)({
+        }), eN = a.useCallback(() => J(!0), []), eS = a.useCallback(() => J(!1), []), eZ = (0, r.e7)([_.default], () => _.default.getId()), eA = n.id === eZ, eM = n.bot || eA, {enabled: eb} = (0, v.qI)({
             autoTrackExposure: !0,
             location: d.Z.PROFILE,
             disable: eM
         });
     return (0, i.jsx)(u.Gt, {
         value: ee,
-        children: (0, i.jsx)(v.Mt, {
+        children: (0, i.jsx)(N.Mt, {
             layout: 'DM_PANEL',
             userId: n.id,
             channelId: s.id,
             children: (0, i.jsx)('aside', {
                 className: X.profilePanel,
-                onMouseEnter: ev,
+                onMouseEnter: eN,
                 onMouseLeave: eS,
                 children: (0, i.jsxs)(R.Z, {
                     user: n,
@@ -226,7 +226,7 @@ t.Z = e => {
                                                     analyticsLocations: ee
                                                 });
                                             },
-                                            children: eN
+                                            children: ev
                                         }) : null
                                     ]
                                 })

@@ -3,7 +3,7 @@ n.d(t, {
         return w;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(613828), o = n(772848), c = n(442837), d = n(481060), u = n(2052), h = n(40851), p = n(607070), m = n(100527), _ = n(906732), f = n(703656), E = n(210887), C = n(390322), g = n(626135), I = n(348600), x = n(566620), T = n(520599), N = n(611370), v = n(138138), S = n(127255), Z = n(5200), A = n(558317), M = n(403404), b = n(701488), R = n(981631), j = n(689938), L = n(791499), P = n(587952), O = n(736733), y = n(932463), D = n(988967), k = n(463738);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(613828), o = n(772848), c = n(442837), d = n(481060), u = n(2052), h = n(40851), p = n(607070), m = n(100527), _ = n(906732), f = n(703656), E = n(210887), C = n(390322), g = n(626135), I = n(348600), x = n(566620), T = n(520599), v = n(611370), N = n(138138), S = n(127255), Z = n(5200), A = n(558317), M = n(403404), b = n(701488), R = n(981631), j = n(689938), L = n(791499), P = n(587952), O = n(736733), y = n(932463), D = n(988967), k = n(463738);
 let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
         let {
                 channel: n,
@@ -13,7 +13,7 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
                 onMouseLeave: B,
                 onClick: H,
                 className: G
-            } = e, {enabled: V} = I.Z.useExperiment({ location: '8009ca_3' }), {enableRythmMiniShelfBanner: F} = v.u.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }), {enableAmazonMusicShelfPoster: W} = T.p.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }), {enableFarmMergeValleyMiniShelfBanner: z} = N.T.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }), Y = (0, c.e7)([E.Z], () => E.Z.getState().theme), K = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), {
+            } = e, {enabled: V} = I.Z.useExperiment({ location: '8009ca_3' }), {enableRythmMiniShelfBanner: F} = N.u.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }), {enableAmazonMusicShelfPoster: W} = T.p.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }), {enableFarmMergeValleyMiniShelfBanner: z} = v.T.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }), Y = (0, c.e7)([E.Z], () => E.Z.getState().theme), K = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), {
                 id: q,
                 guild_id: X
             } = n;

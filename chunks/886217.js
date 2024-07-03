@@ -23,18 +23,18 @@ t.Z = e => {
             parent_title: I,
             provider: x,
             image_url: T
-        } = n.extra.media, N = n.extra.artist.name, v = (0, l.e7)([r.default], () => r.default.getUser(n.author_id)), {
+        } = n.extra.media, v = n.extra.artist.name, N = (0, l.e7)([r.default], () => r.default.getUser(n.author_id)), {
             primaryColor: S,
             secondaryColor: Z
         } = (0, h.Z)(T), A = (0, d.Nq)(n), M = a.useCallback(() => {
-            if (null == v || !(0, o.Hi)(A, p.y9))
+            if (null == N || !(0, o.Hi)(A, p.y9))
                 return;
-            let e = C(n, t, v, A);
+            let e = C(n, t, N, A);
             return (0, u.CR)({
-                user: v,
+                user: N,
                 channel: t,
                 mediaImageSrc: T,
-                artist: N,
+                artist: v,
                 description: e,
                 colors: [
                     S,
@@ -44,15 +44,15 @@ t.Z = e => {
             });
         }, [
             T,
-            N,
+            v,
             t,
             n,
             S,
             A,
             Z,
-            v
+            N
         ]);
-    return null != v && (0, o.Hi)(A, p.y9) ? (0, i.jsxs)(_.yR, {
+    return null != N && (0, o.Hi)(A, p.y9) ? (0, i.jsxs)(_.yR, {
         children: [
             (0, i.jsx)(_.wG, {
                 thumbnailSrc: T,
@@ -61,7 +61,7 @@ t.Z = e => {
                 headerIcons: (0, i.jsx)(f.Z, { provider: x }),
                 userDescription: E.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
                 title: I,
-                subtitle: N,
+                subtitle: v,
                 badges: (0, i.jsx)(m.Gk, {
                     location: m.Gt.POPOUT,
                     children: p.Ho.map((e, t) => (0, i.jsx)(e, { entry: n }, t))
@@ -70,10 +70,10 @@ t.Z = e => {
             (0, i.jsx)(_.St, {
                 children: (0, i.jsx)(_.WT, {
                     closePopout: c,
-                    user: v,
+                    user: N,
                     channel: t,
                     generateReactionImage: M,
-                    reactionImageAltText: g(n, v),
+                    reactionImageAltText: g(n, N),
                     entry: n,
                     requestId: s
                 })

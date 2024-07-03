@@ -1,4 +1,4 @@
-var i = n(735250), a = n(470079), s = n(758713), l = n(442837), r = n(481060), o = n(620662), c = n(841784), d = n(420660), u = n(429589), h = n(757182), p = n(706454), m = n(374129), _ = n(639351), f = n(823379), E = n(192918), C = n(22211), g = n(561308), I = n(919394), x = n(438226), T = n(206295), N = n(91140), v = n(297781), S = n(591853), Z = n(265048), A = n(981631), M = n(689938);
+var i = n(735250), a = n(470079), s = n(758713), l = n(442837), r = n(481060), o = n(620662), c = n(841784), d = n(420660), u = n(429589), h = n(757182), p = n(706454), m = n(374129), _ = n(639351), f = n(823379), E = n(192918), C = n(22211), g = n(561308), I = n(919394), x = n(438226), T = n(206295), v = n(91140), N = n(297781), S = n(591853), Z = n(265048), A = n(981631), M = n(689938);
 let b = {
     [s.z.DESKTOP]: null,
     [s.z.LINUX]: null,
@@ -72,9 +72,9 @@ t.Z = e => {
         ]);
     if (null == j)
         return null;
-    let z = null != n.extra.platform ? b[n.extra.platform] : null, Y = (0, i.jsx)(v.Gk, {
-            location: v.Gt.POPOUT,
-            children: N.W.map((e, t) => (0, i.jsx)(e, { entry: n }, t))
+    let z = null != n.extra.platform ? b[n.extra.platform] : null, Y = (0, i.jsx)(N.Gk, {
+            location: N.Gt.POPOUT,
+            children: v.W.map((e, t) => (0, i.jsx)(e, { entry: n }, t))
         }), K = null == U ? (0, i.jsx)(S.wG, {
             thumbnailSrc: _,
             thumbnailTitle: R,

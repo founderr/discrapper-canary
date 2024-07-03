@@ -3,7 +3,7 @@ n.d(t, {
         return w;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(392711), l = n(442837), r = n(704215), o = n(481060), c = n(570140), d = n(230711), u = n(607070), h = n(367907), p = n(243778), m = n(543241), _ = n(633302), f = n(970731), E = n(594174), C = n(176354), g = n(823379), I = n(74538), x = n(401062), T = n(696900), N = n(456631), v = n(963838), S = n(535879), Z = n(310892), A = n(12168), M = n(353368), b = n(981631), R = n(354459), j = n(185923), L = n(474936), P = n(526761), O = n(689938), y = n(242343);
+var i = n(735250), a = n(470079), s = n(392711), l = n(442837), r = n(704215), o = n(481060), c = n(570140), d = n(230711), u = n(607070), h = n(367907), p = n(243778), m = n(543241), _ = n(633302), f = n(970731), E = n(594174), C = n(176354), g = n(823379), I = n(74538), x = n(401062), T = n(696900), v = n(456631), N = n(963838), S = n(535879), Z = n(310892), A = n(12168), M = n(353368), b = n(981631), R = n(354459), j = n(185923), L = n(474936), P = n(526761), O = n(689938), y = n(242343);
 let D = j.Hz.CHAT, k = {
         section: b.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'voice_channel_effect_emoji_picker'
@@ -28,9 +28,9 @@ function w(e) {
             emoji: e,
             channel: n,
             intention: D
-        })).slice(0, R.e5), W = (null !== (t = N.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter(e => !F.slice(0, R.e5 - 1).some(t => t.name === e.name));
+        })).slice(0, R.e5), W = (null !== (t = v.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter(e => !F.slice(0, R.e5 - 1).some(t => t.name === e.name));
     W.length > 0 && F.splice(F.length - 1, 1, W[0]);
-    let z = (0, v.Iu)(H), Y = e => {
+    let z = (0, N.Iu)(H), Y = e => {
             c.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
                 emoji: e

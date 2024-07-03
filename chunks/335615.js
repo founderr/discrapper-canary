@@ -3,7 +3,7 @@ n.d(t, {
         return ei;
     }
 }), n(47120), n(724458);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n.n(r), c = n(91192), d = n(924826), u = n(873546), h = n(442837), p = n(902704), m = n(481060), _ = n(239091), f = n(941028), E = n(144144), C = n(276264), g = n(607070), I = n(100527), x = n(367907), T = n(906732), N = n(493324), v = n(611064), S = n(677432), Z = n(178762), A = n(868671), M = n(623624), b = n(518738), R = n(557494), j = n(484459), L = n(103575), P = n(439170), O = n(430824), y = n(111583), D = n(594174), k = n(153124), U = n(151827), w = n(176278), B = n(585483), H = n(823379), G = n(51144), V = n(998502), F = n(981631), W = n(689938), z = n(849787);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n.n(r), c = n(91192), d = n(924826), u = n(873546), h = n(442837), p = n(902704), m = n(481060), _ = n(239091), f = n(941028), E = n(144144), C = n(276264), g = n(607070), I = n(100527), x = n(367907), T = n(906732), v = n(493324), N = n(611064), S = n(677432), Z = n(178762), A = n(868671), M = n(623624), b = n(518738), R = n(557494), j = n(484459), L = n(103575), P = n(439170), O = n(430824), y = n(111583), D = n(594174), k = n(153124), U = n(151827), w = n(176278), B = n(585483), H = n(823379), G = n(51144), V = n(998502), F = n(981631), W = n(689938), z = n(849787);
 function Y(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -204,7 +204,7 @@ class et extends a.Component {
         return e.channel.id !== this.props.channel.id || e.version !== this.props.version || e.groups.length !== this.props.groups.length;
     }
     componentDidMount() {
-        this.updateSubscription(), this.trackMemberListViewed(), this._areActivitiesExperimentallyHidden = (0, N.$)('ChannelMembers');
+        this.updateSubscription(), this.trackMemberListViewed(), this._areActivitiesExperimentallyHidden = (0, v.$)('ChannelMembers');
     }
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.updateSubscription(), this.trackMemberListViewed(), this.updateMaxContentFeedRowSeen();
@@ -301,7 +301,7 @@ class et extends a.Component {
                     groups: n,
                     channel: s
                 } = this.props, l = n[t];
-            return (0, v.R)(l) ? (0, a.createElement)(v.Z, {
+            return (0, N.R)(l) ? (0, a.createElement)(N.Z, {
                 ...l,
                 key: 'section-'.concat(t)
             }) : 0 === t ? (0, i.jsx)(R.Z, {
@@ -387,7 +387,7 @@ class et extends a.Component {
             this.props.updateMaxContentFeedRowSeen(n + t - 40);
         }, 50)), Y(this, 'getContentFeedGroup', () => {
             let e = this.props.groups[A.T];
-            if ((0, v.R)(e))
+            if ((0, N.R)(e))
                 return e;
         }), Y(this, 'hasContentFeed', () => null != this.getContentFeedGroup()), Y(this, 'getRowHeightComputer', () => {
             let e = this.getContentFeedGroup();
@@ -485,7 +485,7 @@ function en(e) {
                     requestAnimationFrame(() => setTimeout(e, 100));
                 }
             });
-        }), []), N = (0, d.ZP)({
+        }), []), v = (0, d.ZP)({
             id: 'members-'.concat(t.id),
             setFocus: E,
             isEnabled: r,
@@ -497,7 +497,7 @@ function en(e) {
         children: (0, i.jsx)('div', {
             className: l()(z.container, n),
             children: (0, i.jsx)(c.bG, {
-                navigator: N,
+                navigator: v,
                 children: (0, i.jsx)(et, {
                     ...e,
                     ...o,

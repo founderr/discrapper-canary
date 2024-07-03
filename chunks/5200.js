@@ -3,7 +3,7 @@ n.d(t, {
         return x;
     }
 }), n(47120);
-var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(920906), d = n(481060), u = n(792125), h = n(542094), p = n(182906), m = n(556505), _ = n(513202), f = n(981631), E = n(689938), C = n(478880);
+var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(338545), d = n(481060), u = n(792125), h = n(542094), p = n(182906), m = n(556505), _ = n(513202), f = n(981631), E = n(689938), C = n(478880);
 let g = ['embedded_cover'], I = {
         tension: 800,
         friction: 24
@@ -18,8 +18,8 @@ function x(e) {
             animatedDivClass: x
         } = e, {
             onActivityItemSelected: T,
-            imageBackground: N,
-            activityAction: v,
+            imageBackground: v,
+            activityAction: N,
             labelType: S
         } = (0, h.ZP)({
             channel: n,
@@ -46,7 +46,7 @@ function x(e) {
             i.application.name,
             S
         ]), j = l.useMemo(() => {
-            switch (v) {
+            switch (N) {
             case h.JS.JOIN:
                 return (0, s.jsx)('div', {
                     className: C.activityAction,
@@ -75,7 +75,7 @@ function x(e) {
             default:
                 return (0, s.jsx)(s.Fragment, {});
             }
-        }, [v]);
+        }, [N]);
     return (0, s.jsx)(d.Button, {
         onClick: T,
         color: 'transparent',
@@ -109,7 +109,7 @@ function x(e) {
                     children: (0, s.jsxs)(s.Fragment, {
                         children: [
                             (0, s.jsx)(p.Z, {
-                                imageBackground: N,
+                                imageBackground: v,
                                 applicationName: i.application.name,
                                 imageClassName: C.activitySuggestionImage,
                                 imageNotFoundClassName: C.brokenImageIconWrapper

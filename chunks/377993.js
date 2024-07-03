@@ -3,7 +3,7 @@ n.d(t, {
         return U;
     }
 }), n(47120), n(653041);
-var i = n(735250), a = n(470079), s = n(873546), l = n(442837), r = n(481060), o = n(239091), c = n(144144), d = n(100527), u = n(906732), h = n(556084), p = n(484459), m = n(103575), _ = n(158776), f = n(699516), E = n(111583), C = n(594174), g = n(467679), I = n(360048), x = n(151827), T = n(626135), N = n(768581), v = n(585483), S = n(233870), Z = n(51144), A = n(998502), M = n(276264), b = n(981631), R = n(689938), j = n(952384), L = n(849787);
+var i = n(735250), a = n(470079), s = n(873546), l = n(442837), r = n(481060), o = n(239091), c = n(144144), d = n(100527), u = n(906732), h = n(556084), p = n(484459), m = n(103575), _ = n(158776), f = n(699516), E = n(111583), C = n(594174), g = n(467679), I = n(360048), x = n(151827), T = n(626135), v = n(768581), N = n(585483), S = n(233870), Z = n(51144), A = n(998502), M = n(276264), b = n(981631), R = n(689938), j = n(952384), L = n(849787);
 let P = [], O = A.ZP.getEnableHardwareAcceleration();
 function y(e) {
     let {
@@ -38,7 +38,7 @@ function y(e) {
         spacing: 16,
         onShiftClick: () => {
             let e = '@'.concat(Z.ZP.getUserTag(t, { decoration: 'never' })), n = '<@'.concat(t.id, '>');
-            v.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
+            N.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
                 plainText: e,
                 rawText: n
             }), c.Z.startTyping(a.id);
@@ -77,7 +77,7 @@ function D(e) {
         }, [
             l,
             c
-        ]), u = l.application.bot, h = N.ZP.getApplicationIconURL({
+        ]), u = l.application.bot, h = v.ZP.getApplicationIconURL({
             id: l.application.id,
             icon: l.application.icon,
             bot: null === (t = l.application) || void 0 === t ? void 0 : t.bot,
@@ -163,8 +163,8 @@ function U(e) {
             }
             return { listItems: l };
         }, [t], k)), {
-            installedIntegrations: N,
-            applicationsShelf: v,
+            installedIntegrations: v,
+            applicationsShelf: N,
             fetched: Z,
             appsInGDMEnabled: A,
             availableApplications: M
@@ -216,13 +216,13 @@ function U(e) {
                         activities: e.activities,
                         channel: s
                     }, e.user.id)),
-                    A && (N.length > 0 || Z && v.length > 0) && (0, i.jsxs)(i.Fragment, {
+                    A && (v.length > 0 || Z && N.length > 0) && (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(x.Z, {
                                 className: L.membersGroup,
-                                children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(N.length)
+                                children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(v.length)
                             }),
-                            N.map(e => (0, i.jsx)(D, {
+                            v.map(e => (0, i.jsx)(D, {
                                 integration: e,
                                 channel: s
                             }, e.application.id)),

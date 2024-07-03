@@ -65,7 +65,7 @@ function T(e) {
     let {
             channel: t,
             onContinueClick: n
-        } = e, s = (0, a.e7)([h.Z], () => h.Z.can(m.yP, t), [t]), r = t.guild_id, {canCreateGuildEvent: p} = (0, u.XJ)(t), T = (0, f.Z)(t.id), {usersInSummary: N} = (0, _.Z)(t.id);
+        } = e, s = (0, a.e7)([h.Z], () => h.Z.can(m.yP, t), [t]), r = t.guild_id, {canCreateGuildEvent: p} = (0, u.XJ)(t), T = (0, f.Z)(t.id), {usersInSummary: v} = (0, _.Z)(t.id);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(E.Z, {
@@ -104,7 +104,7 @@ function T(e) {
                 className: g.eventPrompt,
                 guildId: r
             }) : null,
-            (s || N.length > 0) && (0, i.jsx)('hr', { className: g.separator }),
+            (s || v.length > 0) && (0, i.jsx)('hr', { className: g.separator }),
             s ? (0, i.jsx)(I, { onClick: n }) : null,
             (0, i.jsx)(x, { channel: t })
         ]

@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     }
 }), n(47120);
-var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(920906), d = n(442837), u = n(481060), h = n(393238), p = n(434650), m = n(607070), _ = n(594174), f = n(5192), E = n(603368), C = n(856682), g = n(284019), I = n(689938), x = n(333626);
+var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(338545), d = n(442837), u = n(481060), h = n(393238), p = n(434650), m = n(607070), _ = n(594174), f = n(5192), E = n(603368), C = n(856682), g = n(284019), I = n(689938), x = n(333626);
 (a = i || (i = {})).LEFT = 'left', a.RIGHT = 'right';
 t.Z = l.memo(function (e) {
     let {
@@ -13,8 +13,8 @@ t.Z = l.memo(function (e) {
             canSignCharter: a = !0,
             onSignCharter: r,
             animationDelayMs: T = 1000,
-            signHintButtonText: N,
-            signHintHelperText: v,
+            signHintButtonText: v,
+            signHintHelperText: N,
             signHintPosition: S = 'left',
             className: Z,
             fullHeight: A
@@ -130,7 +130,7 @@ t.Z = l.memo(function (e) {
                                                                 className: o()(x.signCarot, { [x.signCarotCustomColors]: null != q }),
                                                                 style: null != q ? q : { borderColor: K }
                                                             }),
-                                                            null != N ? N : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
+                                                            null != v ? v : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
                                                         ]
                                                     })
                                                 }),
@@ -138,7 +138,7 @@ t.Z = l.memo(function (e) {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
                                                     className: x.signHintHelperText,
-                                                    children: null != v ? N : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
+                                                    children: null != N ? v : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
                                                 })
                                             ]
                                         })

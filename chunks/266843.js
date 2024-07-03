@@ -6,7 +6,7 @@ n.d(t, {
         return c;
     }
 }), n(47120);
-var i = n(470079), a = n(920906), s = n(442837), l = n(393238), r = n(607070), o = n(87894);
+var i = n(470079), a = n(338545), s = n(442837), l = n(393238), r = n(607070), o = n(87894);
 function c(e) {
     let t = i.useRef(null), [n, a] = i.useState('lg'), [s, r] = i.useState(void 0);
     return (0, l.P)(t, e => {

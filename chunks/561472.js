@@ -6,7 +6,7 @@ t.Z = function (e) {
             style: n,
             channel: x,
             draftType: T
-        } = e, [N, v] = a.useState(!0), S = (0, s.e7)([u.Z], () => u.Z.hasLayers()), Z = (0, s.e7)([h.Z], () => null != x && h.Z.can(g.Plq.ATTACH_FILES, x), [x]), A = null != (0, s.e7)([l.Z], () => l.Z.getActiveCommand(x.id)), M = x.getGuildId(), b = T === o.d.FirstThreadMessage, R = (0, s.e7)([m.default], () => {
+        } = e, [v, N] = a.useState(!0), S = (0, s.e7)([u.Z], () => u.Z.hasLayers()), Z = (0, s.e7)([h.Z], () => null != x && h.Z.can(g.Plq.ATTACH_FILES, x), [x]), A = null != (0, s.e7)([l.Z], () => l.Z.getActiveCommand(x.id)), M = x.getGuildId(), b = T === o.d.FirstThreadMessage, R = (0, s.e7)([m.default], () => {
             var e;
             return !0 == !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
         }), j = (0, s.e7)([c.Z], () => c.Z.didAgree(M)) && !R, L = a.useMemo(() => !S && (x.isPrivate() && !x.isManaged() || null != M && (!x.isNSFW() || j) && Z && d.Z.canChatInGuild(M)), [
@@ -15,7 +15,7 @@ t.Z = function (e) {
             x,
             M,
             S
-        ]), P = b ? g.TPd.GUILD_THREADS_ONLY.has(x.type) ? I.Z.Messages.UPLOAD_TO_NEW_POST : I.Z.Messages.UPLOAD_TO_NEW_THREAD : N ? I.Z.Messages.UPLOAD_TO.format({ destination: (0, r.F6)(x, m.default, p.Z, !0) }) : I.Z.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
+        ]), P = b ? g.TPd.GUILD_THREADS_ONLY.has(x.type) ? I.Z.Messages.UPLOAD_TO_NEW_POST : I.Z.Messages.UPLOAD_TO_NEW_THREAD : v ? I.Z.Messages.UPLOAD_TO.format({ destination: (0, r.F6)(x, m.default, p.Z, !0) }) : I.Z.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
     return A || !L ? null : (0, i.jsx)(E.Z, {
         className: t,
         style: n,
@@ -26,15 +26,15 @@ t.Z = function (e) {
             if (A)
                 return !1;
             L && null != x && ((0, f.d)(e, x, T, {
-                requireConfirm: N,
+                requireConfirm: v,
                 showLargeMessageDialog: !1
             }), _.S.dispatchToLastSubscribed(g.CkL.TEXTAREA_FOCUS));
         },
-        onDragClear: () => v(!0),
+        onDragClear: () => N(!0),
         onDragOver: e => {
             if (A)
                 return !1;
-            !b && e.shiftKey === N && v(!e.shiftKey);
+            !b && e.shiftKey === v && N(!e.shiftKey);
         }
     });
 };

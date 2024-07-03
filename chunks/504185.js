@@ -3,7 +3,7 @@ n.d(t, {
         return er;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n(442837), c = n(433517), d = n(481060), u = n(570140), h = n(393238), p = n(40851), m = n(100527), _ = n(906732), f = n(358221), E = n(414910), C = n(909820), g = n(493010), I = n(788983), x = n(928518), T = n(703656), N = n(493754), v = n(880831), S = n(73563), Z = n(800965), A = n(107169), M = n(891551), b = n(314897), R = n(979696), j = n(430824), L = n(496675), P = n(944486), O = n(358085), y = n(792125), D = n(998502), k = n(922482), U = n(431328), w = n(501655), B = n(427679), H = n(513449), G = n(153349), V = n(901434), F = n(302270), W = n(308177), z = n(700483), Y = n(686468), K = n(801405), q = n(903108), X = n(981631), Q = n(354459), J = n(689938), $ = n(495585);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n(442837), c = n(433517), d = n(481060), u = n(570140), h = n(393238), p = n(40851), m = n(100527), _ = n(906732), f = n(358221), E = n(414910), C = n(909820), g = n(493010), I = n(788983), x = n(928518), T = n(703656), v = n(493754), N = n(880831), S = n(73563), Z = n(800965), A = n(107169), M = n(891551), b = n(314897), R = n(979696), j = n(430824), L = n(496675), P = n(944486), O = n(358085), y = n(792125), D = n(998502), k = n(922482), U = n(431328), w = n(501655), B = n(427679), H = n(513449), G = n(153349), V = n(901434), F = n(302270), W = n(308177), z = n(700483), Y = n(686468), K = n(801405), q = n(903108), X = n(981631), Q = n(354459), J = n(689938), $ = n(495585);
 let ee = 'HasBeenInStageChannel', et = (e, t) => () => {
         let n = e.getGuildId();
         null != n && null != t && (0, T.XU)(n, t), I.hP(e);
@@ -55,7 +55,7 @@ function ea(e) {
 }
 function es(e) {
     let {channel: t} = e, n = (0, p.bp)(), a = (0, o.e7)([L.Z], () => L.Z.can(X.Plq.CREATE_INSTANT_INVITE, t)), s = (0, o.e7)([j.Z], () => j.Z.getGuild(t.guild_id)), l = (0, o.e7)([B.Z], () => B.Z.getStageInstanceByChannel(t.id)), r = a || (null == l ? void 0 : l.invite_code) != null;
-    return null != s && r ? (0, i.jsx)(N.Z, {
+    return null != s && r ? (0, i.jsx)(v.Z, {
         channel: t,
         appContext: n,
         className: $.__invalid_leftTrayIcon,
@@ -71,7 +71,7 @@ function el(e) {
             popoutWindowAlwaysOnTop: u,
             popoutOpen: h,
             chatOpen: m
-        } = e, _ = (0, p.bp)(), E = (0, o.e7)([P.Z], () => P.Z.getVoiceChannelId() === n.id, [n.id]), g = (0, o.e7)([L.Z], () => L.Z.can(X.Plq.CONNECT, n)), I = (0, U.w8)(n.id, w.pV.SPEAKER), x = (0, o.e7)([f.Z], () => f.Z.getSelectedParticipant(n.id)), T = h && _ !== X.IlC.POPOUT, [N, Z] = a.useState(0), {isOnStartStageScreen: A} = (0, H.ZP)();
+        } = e, _ = (0, p.bp)(), E = (0, o.e7)([P.Z], () => P.Z.getVoiceChannelId() === n.id, [n.id]), g = (0, o.e7)([L.Z], () => L.Z.can(X.Plq.CONNECT, n)), I = (0, U.w8)(n.id, w.pV.SPEAKER), x = (0, o.e7)([f.Z], () => f.Z.getSelectedParticipant(n.id)), T = h && _ !== X.IlC.POPOUT, [v, Z] = a.useState(0), {isOnStartStageScreen: A} = (0, H.ZP)();
     (0, H.MV)(n);
     let M = (0, o.e7)([R.Z], () => R.Z.getToastsEnabled(n.id)), b = (0, q.Z)(n) ? null != x ? '84px' : '124px' : null != x ? '0px' : '48px';
     return t = A ? (0, i.jsx)(Y.Z, {
@@ -94,7 +94,7 @@ function el(e) {
             height: 'calc(100% - '.concat(b, ')'),
             paddingTop: b
         },
-        disableGradients: 0 === N && S.e.TOP,
+        disableGradients: 0 === v && S.e.TOP,
         renderBottomLeft: () => (0, i.jsx)(es, { channel: n }),
         renderBottomCenter: () => E ? (0, i.jsx)(z.Z, {
             channel: n,
@@ -115,7 +115,7 @@ function el(e) {
             channel: n
         }),
         renderChatToasts: () => !M || m || T ? null : (0, i.jsx)(C.ZP, {
-            children: (0, i.jsx)(v.Z, {
+            children: (0, i.jsx)(N.Z, {
                 className: l()($.chatToasts, { [$.rtsSidebarOpen]: c }),
                 channelId: n.id
             })
@@ -145,7 +145,7 @@ function er(e) {
         } = (0, o.cj)([x.Z], () => ({
             popoutWindow: x.Z.getWindow(X.KJ3.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: x.Z.getIsAlwaysOnTop(X.KJ3.CHANNEL_CALL_POPOUT)
-        })), T = null != E && !E.closed, {analyticsLocations: N} = (0, _.ZP)(m.Z.STAGE_CHANNEL_CALL), v = (0, p.bp)(), S = (0, o.e7)([f.Z], () => f.Z.getChatOpen(t.id), [t.id]), Z = (0, o.e7)([j.Z], () => j.Z.getGuild(t.guild_id), [t.guild_id]);
+        })), T = null != E && !E.closed, {analyticsLocations: v} = (0, _.ZP)(m.Z.STAGE_CHANNEL_CALL), N = (0, p.bp)(), S = (0, o.e7)([f.Z], () => f.Z.getChatOpen(t.id), [t.id]), Z = (0, o.e7)([j.Z], () => j.Z.getGuild(t.guild_id), [t.guild_id]);
     a.useEffect(() => {
         null == c.K.get(ee) && ((0, d.openModalLazy)(async () => {
             let {default: e} = await n.e('37194').then(n.bind(n, 947422));
@@ -157,7 +157,7 @@ function er(e) {
         ref: M
     } = (0, h.Z)();
     return (0, i.jsx)(_.Gt, {
-        value: N,
+        value: v,
         children: (0, i.jsxs)(C.B2, {
             children: [
                 (0, i.jsxs)('div', {
@@ -186,7 +186,7 @@ function er(e) {
                         }) : null,
                         (0, i.jsx)('div', {
                             className: $.channelChatWrapper,
-                            children: S && (!T || T && v === X.IlC.POPOUT) && (0, i.jsx)(g.Z, {
+                            children: S && (!T || T && N === X.IlC.POPOUT) && (0, i.jsx)(g.Z, {
                                 channel: t,
                                 guild: Z,
                                 maxWidth: A - 550

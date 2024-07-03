@@ -6,7 +6,7 @@ n.d(t, {
         return w;
     }
 }), n(47120);
-var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(442837), d = n(481060), u = n(2052), h = n(317381), p = n(638880), m = n(613611), _ = n(527805), f = n(716600), E = n(952561), C = n(778569), g = n(563218), I = n(513202), x = n(318891), T = n(719296), N = n(958185), v = n(100527), S = n(906732), Z = n(835473), A = n(522474), M = n(314897), b = n(819640), R = n(594174), j = n(602623), L = n(823379), P = n(5192), O = n(689938), y = n(709139);
+var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(442837), d = n(481060), u = n(2052), h = n(317381), p = n(638880), m = n(613611), _ = n(527805), f = n(716600), E = n(952561), C = n(778569), g = n(563218), I = n(513202), x = n(318891), T = n(719296), v = n(958185), N = n(100527), S = n(906732), Z = n(835473), A = n(522474), M = n(314897), b = n(819640), R = n(594174), j = n(602623), L = n(823379), P = n(5192), O = n(689938), y = n(709139);
 (a = i || (i = {}))[a.SMALL = 0] = 'SMALL', a[a.MEDIUM = 1] = 'MEDIUM', a[a.LARGE = 2] = 'LARGE';
 let D = ['embedded_background'];
 function k(e) {
@@ -59,7 +59,7 @@ function U(e) {
         ], T = (0, c.Wu)([
             R.default,
             M.default
-        ], () => Array.from(l).map(e => (0, m.J)(e, M.default) ? null : R.default.getUser(e.userId)).filter(L.lm)), N = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === r.id)), {analyticsLocations: v} = (0, S.ZP)(), Z = (0, u.O)(), A = P.ZP.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), b = (0, _.s5)({
+        ], () => Array.from(l).map(e => (0, m.J)(e, M.default) ? null : R.default.getUser(e.userId)).filter(L.lm)), v = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === r.id)), {analyticsLocations: N} = (0, S.ZP)(), Z = (0, u.O)(), A = P.ZP.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), b = (0, _.s5)({
             userId: null === (t = R.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
             channelId: E.id,
             application: r
@@ -96,14 +96,14 @@ function U(e) {
                 className: y.buttons,
                 children: b ? (0, s.jsx)(d.Button, {
                     onClick: function (e) {
-                        if (e.stopPropagation(), null != N)
+                        if (e.stopPropagation(), null != v)
                             (0, p.Z)({
-                                applicationId: N.applicationId,
+                                applicationId: v.applicationId,
                                 currentEmbeddedApplication: f,
                                 activityChannelId: E.id,
                                 locationObject: Z.location,
                                 embeddedActivitiesManager: I.Z,
-                                analyticsLocations: v
+                                analyticsLocations: N
                             });
                     },
                     size: function (e) {
@@ -131,14 +131,14 @@ function w(e) {
             selected: i,
             interactible: a,
             channel: r
-        } = e, {analyticsLocations: o} = (0, S.ZP)(v.Z.ACTIVITY_TILE), {id: d} = t, u = (0, f.Z)(), h = (null == u ? void 0 : u.channelId) === r.id && u.applicationId === d, p = (0, E.Z)(), [m] = (0, Z.Z)([d]), {url: _} = (0, C.Z)({
+        } = e, {analyticsLocations: o} = (0, S.ZP)(N.Z.ACTIVITY_TILE), {id: d} = t, u = (0, f.Z)(), h = (null == u ? void 0 : u.channelId) === r.id && u.applicationId === d, p = (0, E.Z)(), [m] = (0, Z.Z)([d]), {url: _} = (0, C.Z)({
             applicationId: d,
             names: D,
             size: 1024
         }), I = !i && h, M = !h, R = !h && !i, j = (0, c.e7)([
             b.Z,
             A.Z
-        ], () => (0, N.Z)({
+        ], () => (0, v.Z)({
             LayerStore: b.Z,
             PopoutWindowStore: A.Z
         }));
