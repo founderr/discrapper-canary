@@ -33249,7 +33249,7 @@ h3.improved_f017d0:after {
     gap: 2px;
     padding: 2px;
     top: -16px;
-    right: min(8px, 50% - 27px);
+    right: min(8px, 50% - 29px);
     opacity: 0;
     pointer-events: none
 }
@@ -33291,11 +33291,13 @@ h3.improved_f017d0:after {
 }
 
 .button_bba79b.left_bba79b {
+    padding-left: 6px;
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px
 }
 
 .button_bba79b.right_bba79b {
+    padding-right: 6px;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px
 }
