@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(325432), o = n(391690), c = n(714759), d = n(285952), u = n(546591), _ = n(424218), E = n(358085), h = n(998502), I = n(689938), m = n(489927), g = n(549856);
+var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(325432), o = n(391690), c = n(714759), d = n(285952), u = n(546591), _ = n(424218), h = n(358085), E = n(998502), I = n(689938), m = n(489927), g = n(549856);
 function p(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -235,7 +235,7 @@ class S extends s.PureComponent {
                 (0, i.jsx)('div', {
                     className: m.buttonRowWrapper,
                     children: (0, i.jsx)(r.Button, {
-                        disabled: !E.isPlatformEmbedded,
+                        disabled: !h.isPlatformEmbedded,
                         onClick: this.handleAddInstallationLocation,
                         size: r.Button.Sizes.SMALL,
                         children: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD
@@ -246,7 +246,7 @@ class S extends s.PureComponent {
     }
     constructor(...e) {
         super(...e), p(this, 'state', { editingPath: null }), p(this, 'handleAddInstallationLocation', () => {
-            h.ZP.showOpenDialog(['openDirectory']).then(e => {
+            E.ZP.showOpenDialog(['openDirectory']).then(e => {
                 if (null != e && 0 !== e.length && null != e[0] && 'undefined' !== e[0])
                     (0, l.RY)(e[0]);
             });

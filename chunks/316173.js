@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(433517), c = n(481060), d = n(304761), u = n(865427), _ = n(820254), E = n(689938), h = n(906515);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(433517), c = n(481060), d = n(304761), u = n(865427), _ = n(820254), h = n(689938), E = n(906515);
 let I = 'isHideDevBanner';
 t.Z = () => {
     var e;
@@ -13,26 +13,26 @@ t.Z = () => {
             o.K.set(I, !0), n(!0);
         }, g = () => (0, i.jsx)(c.Clickable, {
             onClick: m,
-            className: h.closeButton,
-            'aria-label': E.Z.Messages.DISMISS,
+            className: E.closeButton,
+            'aria-label': h.Z.Messages.DISMISS,
             children: (0, i.jsx)(c.CloseSmallIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: h.closeIcon
+                className: E.closeIcon
             })
         });
     return null != a ? (0, i.jsxs)('div', {
-        className: r()(h.devBanner, h.buildOverride),
+        className: r()(E.devBanner, E.buildOverride),
         children: [
-            (0, i.jsx)(_.Z, { className: h.icon }),
-            E.Z.Messages.BUILD_OVERRIDE,
+            (0, i.jsx)(_.Z, { className: E.icon }),
+            h.Z.Messages.BUILD_OVERRIDE,
             (0, i.jsx)(g, {})
         ]
     }) : 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, i.jsxs)('div', {
-        className: r()(h.devBanner, h.staging),
+        className: r()(E.devBanner, E.staging),
         children: [
-            (0, i.jsx)(_.Z, { className: h.icon }),
-            E.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '307399' }),
+            (0, i.jsx)(_.Z, { className: E.icon }),
+            h.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '307432' }),
             (0, i.jsx)(g, {})
         ]
     }) : null;

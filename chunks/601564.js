@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
         return O;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(593473), r = n(266067), l = n(442837), o = n(930118), c = n(355467), d = n(410575), u = n(666743), _ = n(112724), E = n(447269), h = n(612226), I = n(714338), m = n(663993), g = n(628123), p = n(703656), T = n(108427), S = n(911314), C = n(429899), f = n(843445), N = n(981631), A = n(689938), Z = n(256964);
+var i = n(735250), s = n(470079), a = n(593473), r = n(266067), l = n(442837), o = n(930118), c = n(355467), d = n(410575), u = n(666743), _ = n(112724), h = n(447269), E = n(612226), I = n(714338), m = n(663993), g = n(628123), p = n(703656), T = n(108427), S = n(911314), f = n(429899), C = n(843445), N = n(981631), A = n(689938), Z = n(256964);
 function L(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -20,17 +20,17 @@ let v = (0, m.Un)({
     webpackId: 496691
 });
 function O(e) {
-    return e < f.x ? f.b.SMALL : f.b.LARGE;
+    return e < C.x ? C.b.SMALL : C.b.LARGE;
 }
 l.ZP.initialize();
 class R extends s.PureComponent {
     componentDidMount() {
         (0, o.Y)(this.props.location), this.stopListeningToHistory = (0, p.s1)().listen(e => {
             e.pathname.startsWith(N.Z5c.APPLICATION_STORE) && (0, o.Y)(e);
-        }), this.props.isAuthenticated && (0, c.tZ)(), I.Z.disable(), I.Z.setLayout(E.r), I.Z.enable(), (0, T.e)('application_store');
+        }), this.props.isAuthenticated && (0, c.tZ)(), I.Z.disable(), I.Z.setLayout(h.r), I.Z.enable(), (0, T.e)('application_store');
     }
     componentWillUnmount() {
-        null != this.stopListeningToHistory && this.stopListeningToHistory(), I.Z.disable(), I.Z.setLayout(h.oT), I.Z.enable();
+        null != this.stopListeningToHistory && this.stopListeningToHistory(), I.Z.disable(), I.Z.setLayout(E.oT), I.Z.enable();
     }
     renderCustomErrorMessage() {
         return (0, i.jsxs)('div', {
@@ -72,7 +72,7 @@ class R extends s.PureComponent {
             return (0, i.jsx)(d.Z, {
                 page: N.ZY5.STORE_LISTING,
                 root: !0,
-                children: (0, i.jsx)(C.Z, {
+                children: (0, i.jsx)(f.Z, {
                     skuId: t,
                     applicationId: n,
                     slug: s,

@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(481060), o = n(239091), c = n(906732), d = n(134432), u = n(451603), _ = n(885714), E = n(940627), h = n(806519), I = n(768581), m = n(900849), g = n(556017), p = n(879484), T = n(26580), S = n(206887), C = n(981631), f = n(689938), N = n(465423), A = n(129512), Z = n(330065);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(481060), o = n(239091), c = n(906732), d = n(134432), u = n(451603), _ = n(885714), h = n(940627), E = n(806519), I = n(768581), m = n(900849), g = n(556017), p = n(879484), T = n(26580), S = n(206887), f = n(981631), C = n(689938), N = n(465423), A = n(129512), Z = n(330065);
 let L = () => (0, i.jsx)('div', { className: N.placeholder });
 t.Z = e => {
     var t;
@@ -15,46 +15,46 @@ t.Z = e => {
         } = e, {
             id: R,
             discoverySplash: x,
-            icon: P,
-            name: b,
+            icon: b,
+            name: P,
             description: M,
             presenceCount: D,
             memberCount: y,
             keywords: j
-        } = a, [U, G] = s.useState(!1), [w, k] = s.useState(!1), {analyticsLocations: B} = (0, c.ZP)(), H = I.ZP.getGuildDiscoverySplashURL({
+        } = a, [U, G] = s.useState(!1), [k, w] = s.useState(!1), {analyticsLocations: B} = (0, c.ZP)(), H = I.ZP.getGuildDiscoverySplashURL({
             id: R,
             splash: x,
             size: 240 * (0, d.x_)()
         }), V = null != H ? H : function (e) {
             switch (e) {
-            case C.BRd.DARK:
+            case f.BRd.DARK:
                 return A;
-            case C.BRd.LIGHT:
+            case f.BRd.LIGHT:
                 return Z;
             }
         }(L), F = null !== (t = I.ZP.getGuildIconURL({
             id: R,
-            icon: P,
+            icon: b,
             size: 32
         })) && void 0 !== t ? t : void 0, Y = async e => {
             let {className: t} = e.target;
             if (!t.includes('Menu')) {
                 if ((0, u.yU)()) {
                     (0, _.Z)({
-                        analyticsSource: { page: C.ZY5.GUILD_DISCOVERY },
+                        analyticsSource: { page: f.ZY5.GUILD_DISCOVERY },
                         analyticsLocation: {
-                            page: C.ZY5.GUILD_DISCOVERY,
-                            section: C.jXE.GUILD_CAP_UPSELL_MODAL
+                            page: f.ZY5.GUILD_DISCOVERY,
+                            section: f.jXE.GUILD_CAP_UPSELL_MODAL
                         },
                         analyticsLocations: B
                     });
                     return;
                 }
-                k(!0);
+                w(!0);
                 try {
                     null != v && await v(a.id);
                 } finally {
-                    k(!1);
+                    w(!1);
                 }
             }
         };
@@ -65,14 +65,14 @@ t.Z = e => {
             (0, i.jsxs)('div', {
                 className: N.card,
                 children: [
-                    w ? (0, i.jsx)(l.Spinner, {
+                    k ? (0, i.jsx)(l.Spinner, {
                         type: l.Spinner.Type.PULSING_ELLIPSIS,
                         className: N.spinner
                     }) : null,
                     (0, i.jsxs)(l.Clickable, {
                         className: r()(N.container, {
                             [N.hover]: U,
-                            [N.submitting]: w
+                            [N.submitting]: k
                         }),
                         onClick: Y,
                         onContextMenu: e => {
@@ -102,8 +102,8 @@ t.Z = e => {
                                     (0, i.jsxs)('div', {
                                         className: N.header,
                                         children: [
-                                            (0, i.jsx)(h.ZP, {
-                                                mask: h.ZP.Masks.SQUIRCLE,
+                                            (0, i.jsx)(E.ZP, {
+                                                mask: E.ZP.Masks.SQUIRCLE,
                                                 width: 32,
                                                 height: 32,
                                                 children: (0, i.jsx)('img', {
@@ -116,7 +116,7 @@ t.Z = e => {
                                                 className: N.headerName,
                                                 children: [
                                                     (0, i.jsx)('div', {
-                                                        children: (0, i.jsx)(E.Z, {
+                                                        children: (0, i.jsx)(h.Z, {
                                                             guild: a,
                                                             className: N.guildBadge,
                                                             size: 16
@@ -125,7 +125,7 @@ t.Z = e => {
                                                     (0, i.jsx)(l.Heading, {
                                                         variant: 'heading-md/semibold',
                                                         className: N.headerTitle,
-                                                        children: b
+                                                        children: P
                                                     })
                                                 ]
                                             })
@@ -151,7 +151,7 @@ t.Z = e => {
                                                 children: (0, i.jsx)(l.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'header-secondary',
-                                                    children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: D })
+                                                    children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: D })
                                                 })
                                             }),
                                             null != y && (0, i.jsxs)(i.Fragment, {
@@ -162,7 +162,7 @@ t.Z = e => {
                                                         children: (0, i.jsx)(l.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'header-secondary',
-                                                            children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: y })
+                                                            children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: y })
                                                         })
                                                     })
                                                 ]

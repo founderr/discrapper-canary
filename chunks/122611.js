@@ -1,6 +1,6 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(442837), r = n(704215), l = n(433517), o = n(963202), c = n(824991), d = n(705348), u = n(243778), _ = n(360453), E = n(377743), h = n(834743), I = n(862099), m = n(704631), g = n(819792), p = n(919285), T = n(118470), S = n(413307), C = n(849688), f = n(374023), N = n(661599), A = n(923608), Z = n(617899), L = n(8521), v = n(760326), O = n(536687), R = n(652785), x = n(981631), P = n(921944);
-function b(e) {
+var i = n(735250), s = n(470079), a = n(442837), r = n(704215), l = n(433517), o = n(963202), c = n(824991), d = n(705348), u = n(243778), _ = n(360453), h = n(377743), E = n(834743), I = n(862099), m = n(704631), g = n(819792), p = n(919285), T = n(118470), S = n(413307), f = n(849688), C = n(374023), N = n(661599), A = n(923608), Z = n(617899), L = n(8521), v = n(760326), O = n(536687), R = n(652785), x = n(981631), b = n(921944);
+function P(e) {
     e.stopPropagation();
 }
 function M(e) {
@@ -25,13 +25,13 @@ function M(e) {
         }).map(e => e.dismissibleContentType));
     return (0, i.jsx)(u.Z, {
         contentTypes: S,
-        groupName: P.R.CHANNEL_NOTICES,
+        groupName: b.R.CHANNEL_NOTICES,
         children: e => {
             let {
                     visibleContent: t,
                     markAsDismissed: s
                 } = e, a = () => {
-                    g(Date.now()), s(P.L.UNKNOWN);
+                    g(Date.now()), s(b.L.UNKNOWN);
                 }, l = (() => {
                     switch (t) {
                     case r.z.CHANNEL_NOTICE_HUBLINK:
@@ -45,7 +45,7 @@ function M(e) {
                             markAsDismissed: a
                         });
                     case r.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
-                        return (0, i.jsx)(h.Z, {
+                        return (0, i.jsx)(E.Z, {
                             guild: n,
                             markAsDismissed: a
                         });
@@ -55,7 +55,7 @@ function M(e) {
                             markAsDismissed: a
                         });
                     case r.z.CHANNEL_NOTICE_GUILD_BANNER:
-                        return (0, i.jsx)(E.Z, {
+                        return (0, i.jsx)(h.Z, {
                             guild: n,
                             markAsDismissed: a
                         });
@@ -67,7 +67,7 @@ function M(e) {
                     case r.z.LINKED_ROLE_ADMIN_GUILD:
                         return (0, i.jsx)(d.Z, {
                             guild: n,
-                            markAsDismissed: () => s(P.L.UNKNOWN)
+                            markAsDismissed: () => s(b.L.UNKNOWN)
                         });
                     case r.z.CHANNEL_LIST_CLAN_ADMIN_UPSELL:
                         return (0, i.jsx)(c.ZP, {
@@ -80,7 +80,7 @@ function M(e) {
                     }
                 })();
             return null == l ? null : (0, i.jsx)('div', {
-                onContextMenu: b,
+                onContextMenu: P,
                 children: l
             });
         }
@@ -106,7 +106,7 @@ t.Z = e => {
     case O.R.HUB_STUDY_ROOM:
         return (0, i.jsx)(g.Z, { guild: t });
     case O.R.SIGNUP:
-        return (0, i.jsx)(C.Z, { guild: t });
+        return (0, i.jsx)(f.Z, { guild: t });
     }
-    return f.s.isDisallowPopupsSet() ? null : (0, i.jsx)(M, { guild: e.guild });
+    return C.s.isDisallowPopupsSet() ? null : (0, i.jsx)(M, { guild: e.guild });
 };

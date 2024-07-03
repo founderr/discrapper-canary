@@ -5,7 +5,7 @@ n.d(t, {
 }), n(47120);
 var i = n(735250);
 n(470079);
-var s = n(512722), a = n.n(s), r = n(841784), l = n(503438), o = n(802856), c = n(366966), d = n(51144), u = n(761282), _ = n(358924), E = n(817915), h = n(981631), I = n(689938);
+var s = n(512722), a = n.n(s), r = n(841784), l = n(503438), o = n(802856), c = n(366966), d = n(51144), u = n(761282), _ = n(358924), h = n(817915), E = n(981631), I = n(689938);
 function m(e) {
     let {
             party: t,
@@ -38,7 +38,7 @@ function m(e) {
             }
         }(t), {
             subtitle: S,
-            icon: C
+            icon: f
         } = function (e) {
             var t;
             let {
@@ -46,11 +46,11 @@ function m(e) {
                     partiedMembers: d,
                     voiceChannels: m,
                     currentActivities: g
-                } = e, p = s.length, T = d.length - p, S = g[0], C = null == S ? void 0 : S.activity, f = null == S ? void 0 : S.startedPlayingTime, N = { name: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : '' };
-            if ((0, r.Z)(C) && null != C)
+                } = e, p = s.length, T = d.length - p, S = g[0], f = null == S ? void 0 : S.activity, C = null == S ? void 0 : S.startedPlayingTime, N = { name: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : '' };
+            if ((0, r.Z)(f) && null != f)
                 return {
                     subtitle: (0, i.jsx)(c.ZP, {
-                        start: f,
+                        start: C,
                         location: c.ZP.Locations.ACTIVITY_FEED_NEW,
                         messageProps: N
                     }),
@@ -58,44 +58,44 @@ function m(e) {
                 };
             if (p + T === 1 && null != S) {
                 let {game: e} = S;
-                if (null == C)
+                if (null == f)
                     return {
                         subtitle: null,
                         icon: null
                     };
-                let t = u.dc(C);
+                let t = u.dc(f);
                 if (null != t)
                     return t;
-                switch (C.type) {
-                case h.IIU.PLAYING:
-                    if ((0, o.Z)(C))
+                switch (f.type) {
+                case E.IIU.PLAYING:
+                    if ((0, o.Z)(f))
                         return {
                             subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
                             icon: (0, i.jsx)(_.Z.Header.Icon, { src: _.Z.Header.Icon.Src.XBOX })
                         };
                     return {
                         subtitle: (0, i.jsx)(c.ZP, {
-                            start: f,
+                            start: C,
                             location: c.ZP.Locations.ACTIVITY_FEED_NEW,
                             messageProps: N
                         }),
-                        icon: null != e ? (0, i.jsx)(_.Z.Header.Icon, { src: null != e.getIconURL(E.Z) ? e.getIconURL(E.Z) : n(211827) }) : null
+                        icon: null != e ? (0, i.jsx)(_.Z.Header.Icon, { src: null != e.getIconURL(h.Z) ? e.getIconURL(h.Z) : n(211827) }) : null
                     };
-                case h.IIU.STREAMING:
+                case E.IIU.STREAMING:
                     return {
                         subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_STREAMING_TWITCH,
-                        icon: null != e && null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(E.Z) }) : null
+                        icon: null != e && null != e.getIconURL(h.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(h.Z) }) : null
                     };
-                case h.IIU.LISTENING:
+                case E.IIU.LISTENING:
                     let s;
-                    return s = (0, l.Z)(C) ? (0, i.jsx)(_.Z.Header.Icon, { src: _.Z.Header.Icon.Src.SPOTIFY }) : null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(E.Z) }) : (0, i.jsx)(_.Z.Header.Icon, { src: n(211827) }), {
-                        subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({ name: C.name }),
+                    return s = (0, l.Z)(f) ? (0, i.jsx)(_.Z.Header.Icon, { src: _.Z.Header.Icon.Src.SPOTIFY }) : null != e.getIconURL(h.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(h.Z) }) : (0, i.jsx)(_.Z.Header.Icon, { src: n(211827) }), {
+                        subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({ name: f.name }),
                         icon: s
                     };
-                case h.IIU.WATCHING:
+                case E.IIU.WATCHING:
                     return {
                         subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_WATCHING,
-                        icon: null != e && null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(E.Z) }) : null
+                        icon: null != e && null != e.getIconURL(h.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(h.Z) }) : null
                     };
                 default:
                     return {
@@ -118,7 +118,7 @@ function m(e) {
                         if (null != e)
                             return e;
                     }
-                    if (null != t && t.type === h.IIU.LISTENING)
+                    if (null != t && t.type === E.IIU.LISTENING)
                         return {
                             subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_SPOTIFY,
                             icon: (0, i.jsx)(_.Z.Header.Icon, { src: _.Z.Header.Icon.Src.SPOTIFY })
@@ -142,7 +142,7 @@ function m(e) {
                         location: c.ZP.Locations.ACTIVITY_FEED_NEW,
                         messageProps: N
                     }),
-                    icon: null != n && null != n.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: n.getIconURL(E.Z) }) : null
+                    icon: null != n && null != n.getIconURL(h.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: n.getIconURL(h.Z) }) : null
                 };
             }
             return {
@@ -155,7 +155,7 @@ function m(e) {
         guildId: null == g ? void 0 : g.id,
         title: T,
         subtitle: S,
-        icon: C,
+        icon: f,
         onContextMenu: e => s(e, p.user)
     });
 }

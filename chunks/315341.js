@@ -1,5 +1,5 @@
 n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
-var i = n(442837), s = n(704215), a = n(524437), r = n(381499), l = n(433517), o = n(581364), c = n(536442), d = n(592125), u = n(915486), _ = n(48481), E = n(981631), h = n(71509);
+var i = n(442837), s = n(704215), a = n(524437), r = n(381499), l = n(433517), o = n(581364), c = n(536442), d = n(592125), u = n(915486), _ = n(48481), h = n(981631), E = n(71509);
 function I(e, t) {
     let n = !1;
     return null == e.userContent && (e.userContent = {
@@ -85,7 +85,7 @@ let g = [
     },
     {
         version: 9,
-        run: e => (c.qc.hasHiddenHotspot(c.v6.MULTI_ACCOUNT_TOOLTIP) && l.K.set(h.Ip, 'true'), m(e, c.v6.MULTI_ACCOUNT_TOOLTIP, s.z.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
+        run: e => (c.qc.hasHiddenHotspot(c.v6.MULTI_ACCOUNT_TOOLTIP) && l.K.set(E.Ip, 'true'), m(e, c.v6.MULTI_ACCOUNT_TOOLTIP, s.z.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
         cleanup() {
         }
     },
@@ -94,7 +94,7 @@ let g = [
         run(e) {
             var t;
             let n = m(e, c.v6.HUB_LINK_CHANNEL_NOTICE, s.z.CHANNEL_NOTICE_HUBLINK), i = null !== (t = l.K.get('channelNotices')) && void 0 !== t ? t : {};
-            return !1 === i[E.vID.INVITE] && I(e, s.z.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === i[E.vID.QUICKSWITCHER] && I(e, s.z.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === i[E.vID.GUILD_BOOSTING] && I(e, s.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n;
+            return !1 === i[h.vID.INVITE] && I(e, s.z.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === i[h.vID.QUICKSWITCHER] && I(e, s.z.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === i[h.vID.GUILD_BOOSTING] && I(e, s.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n;
         },
         cleanup() {
             l.K.remove('channelNotices');

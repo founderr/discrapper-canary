@@ -1,10 +1,10 @@
 var i = n(735250), s = n(470079), a = n(481060), r = n(984370), l = n(703656), o = n(626135), c = n(804739), d = n(981631), u = n(689938), _ = n(903375);
-let E = (0, c.Q)() || !1;
+let h = (0, c.Q)() || !1;
 t.Z = s.memo(function (e) {
     let {
             currentRoute: t,
             renderToolbar: n
-        } = e, c = s.useContext(o.AnalyticsContext), h = E || t === d.Z5c.APPLICATION_LIBRARY_SETTINGS;
+        } = e, c = s.useContext(o.AnalyticsContext), E = h || t === d.Z5c.APPLICATION_LIBRARY_SETTINGS;
     return (0, i.jsxs)(r.Z, {
         className: _.libraryHeader,
         toolbar: null == n ? void 0 : n(),
@@ -34,7 +34,7 @@ t.Z = s.memo(function (e) {
                         id: d.Z5c.APPLICATION_LIBRARY,
                         children: u.Z.Messages.APPLICATION_LIBRARY_MY_GAMES
                     }),
-                    h ? (0, i.jsx)(a.TabBar.Item, {
+                    E ? (0, i.jsx)(a.TabBar.Item, {
                         id: d.Z5c.APPLICATION_LIBRARY_SETTINGS,
                         children: u.Z.Messages.SETTINGS
                     }) : null

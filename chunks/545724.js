@@ -4,17 +4,17 @@ t.Z = function (e) {
     let {
             index: t,
             children: a,
-            user: E,
-            channel: h,
+            user: h,
+            channel: E,
             onClick: I,
             isFocused: m,
             isActive: g,
             onOtherHover: p,
             className: T
-        } = e, [S, C] = s.useState(!1), [f, N] = s.useState(!1), A = () => {
-            C(!0), m && !g && !f && (null == p || p());
+        } = e, [S, f] = s.useState(!1), [C, N] = s.useState(!1), A = () => {
+            f(!0), m && !g && !C && (null == p || p());
         }, Z = () => {
-            C(!1);
+            f(!1);
         }, L = (e, t) => {
             if (null != t)
                 N(!0), (0, d.jW)(e, async () => {
@@ -34,7 +34,7 @@ t.Z = function (e) {
                 });
         };
     return (0, i.jsx)(o.mh, {
-        id: h.id,
+        id: E.id,
         children: e => (0, i.jsx)(c.FocusRing, {
             offset: {
                 left: -8,
@@ -42,10 +42,10 @@ t.Z = function (e) {
             },
             children: (0, i.jsx)(l.Z.div, {
                 className: r()(_.messageRequestItem, T, {
-                    [_.active]: g || f,
+                    [_.active]: g || C,
                     [_.firstItem]: 0 === t
                 }),
-                onContextMenu: e => L(e, E),
+                onContextMenu: e => L(e, h),
                 onMouseEnter: A,
                 onMouseLeave: Z,
                 onClick: null != I ? I : void 0,
@@ -54,7 +54,7 @@ t.Z = function (e) {
                     opacity: 1
                 },
                 ...e,
-                children: a(S || g || f)
+                children: a(S || g || C)
             })
         })
     });

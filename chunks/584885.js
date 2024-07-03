@@ -1,6 +1,6 @@
 n(653041);
-var i = n(735250), s = n(470079), a = n(481060), r = n(570140), l = n(906732), o = n(451603), c = n(885714), d = n(514611), u = n(127541), _ = n(981631), E = n(378042);
-let h = [
+var i = n(735250), s = n(470079), a = n(481060), r = n(570140), l = n(906732), o = n(451603), c = n(885714), d = n(514611), u = n(127541), _ = n(981631), h = n(378042);
+let E = [
         [
             1696,
             20
@@ -43,26 +43,26 @@ t.Z = e => {
             analyticsContext: p,
             theme: T,
             onViewGuild: S,
-            fetchGuilds: C,
-            onGuildCardSeen: f,
+            fetchGuilds: f,
+            onGuildCardSeen: C,
             currentCategoryId: N,
             loadId: A,
             onTagClick: Z,
             showMoreCards: L = !1
         } = e;
     s.useEffect(() => {
-        r.Z.wait(() => C());
+        r.Z.wait(() => f());
     }, [N]);
-    let v = (0, u.Z)(L ? I : h), {analyticsLocations: O} = (0, l.ZP)();
+    let v = (0, u.Z)(L ? I : E), {analyticsLocations: O} = (0, l.ZP)();
     if (null == g)
         return null;
     let {
             guilds: R,
             loading: x
-        } = g, P = null == R || 0 === R.length;
-    if (!x && P)
+        } = g, b = null == R || 0 === R.length;
+    if (!x && b)
         return null;
-    let b = async e => {
+    let P = async e => {
         if ((0, o.yU)())
             (0, c.Z)({
                 analyticsSource: { page: _.ZY5.GUILD_DISCOVERY },
@@ -84,30 +84,30 @@ t.Z = e => {
         t = e;
     } else
         t = R.slice(0, v).map(e => (0, i.jsx)(d.Z, {
-            className: E.__invalid_guildCard,
+            className: h.__invalid_guildCard,
             guild: e,
-            onView: b,
+            onView: P,
             theme: T,
-            onGuildCardSeen: f,
+            onGuildCardSeen: C,
             onTagClick: Z
         }, e.id));
     return (0, i.jsx)('section', {
-        className: E.guildListSection,
+        className: h.guildListSection,
         children: (0, i.jsxs)(a.HeadingLevel, {
             component: (0, i.jsx)(a.Heading, {
-                className: E.__invalid_title,
+                className: h.__invalid_title,
                 variant: 'heading-lg/semibold',
                 children: n
             }),
             children: [
                 null != m && (0, i.jsx)(a.Text, {
-                    className: E.subtitle,
+                    className: h.subtitle,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     children: m
                 }),
                 (0, i.jsx)('div', {
-                    className: E.guildList,
+                    className: h.guildList,
                     children: t
                 })
             ]

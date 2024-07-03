@@ -3,13 +3,13 @@ I.d(_, {
         return m;
     }
 }), I(47120), I(773603);
-var A = I(735250), O = I(470079), T = I(392711), S = I(442837), C = I(481060), N = I(640108), D = I(406432), R = I(169525), e = I(786761), V = I(3148), i = I(492593), n = I(219797), P = I(524444), t = I(884182), a = I(546432), L = I(25015), l = I(963550), s = I(845080), o = I(594174), M = I(956664), r = I(709054), U = I(788080), c = I(800530), Y = I(981631), d = I(217702), G = I(512864);
+var A = I(735250), O = I(470079), T = I(392711), S = I(442837), C = I(481060), N = I(640108), D = I(406432), R = I(169525), e = I(786761), V = I(3148), i = I(492593), n = I(219797), P = I(524444), t = I(884182), a = I(546432), L = I(25015), l = I(963550), s = I(845080), o = I(594174), M = I(956664), r = I(709054), c = I(788080), Y = I(800530), U = I(981631), d = I(217702), G = I(512864);
 let F = (E, _) => {
         let I = E.attachments.map(E => {
             var I, A, O, T;
             let S = {
                 ...E,
-                filename: (0, U.eS)(E),
+                filename: (0, c.eS)(E),
                 size: 0,
                 proxy_url: E.url
             };
@@ -17,35 +17,35 @@ let F = (E, _) => {
                 return S;
             return {
                 ...S,
-                width: null !== (O = null === (I = _[E.id]) || void 0 === I ? void 0 : I.width) && void 0 !== O ? O : c.Sv,
-                height: null !== (T = null === (A = _[E.id]) || void 0 === A ? void 0 : A.height) && void 0 !== T ? T : c.EY
+                width: null !== (O = null === (I = _[E.id]) || void 0 === I ? void 0 : I.width) && void 0 !== O ? O : Y.Sv,
+                height: null !== (T = null === (A = _[E.id]) || void 0 === A ? void 0 : A.height) && void 0 !== T ? T : Y.EY
             };
         });
         return (0, e.e5)({
             ...(0, V.ZP)({
                 nonce: E.id,
                 content: E.content,
-                type: Y.uaV.DEFAULT,
-                channelId: Y.lds
+                type: U.uaV.DEFAULT,
+                channelId: U.lds
             }),
             timestamp: new Date(r.default.extractTimestamp(E.id)).toISOString(),
             attachments: I,
-            state: Y.yb.SENT
+            state: U.yb.SENT
         });
     }, u = E => {
         let {message: _} = E, {attachments: I} = _;
         if (0 === I.length)
             return null;
         let O = (E, _, I) => {
-                let O = c.Sv, S = c.EY;
+                let O = Y.Sv, S = Y.EY;
                 if (null != _.width && null != _.height) {
                     let E = (0, M.Dc)({
                         width: _.width,
                         height: _.height,
-                        maxWidth: c.Sv,
-                        maxHeight: c.EY
+                        maxWidth: Y.Sv,
+                        maxHeight: Y.EY
                     });
-                    O = (0, T.clamp)(Math.round(_.width * E), 0, c.Sv), S = (0, T.clamp)(Math.round(_.height * E), 0, c.EY);
+                    O = (0, T.clamp)(Math.round(_.width * E), 0, Y.Sv), S = (0, T.clamp)(Math.round(_.height * E), 0, Y.EY);
                 }
                 return (0, A.jsx)('div', {
                     style: {

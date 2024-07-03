@@ -3,14 +3,14 @@ n.d(t, {
         return g;
     }
 });
-var i = n(735250), s = n(470079), a = n(481060), r = n(194359), l = n(906732), o = n(388380), c = n(171368), d = n(626135), u = n(321488), _ = n(417183), E = n(170245), h = n(981631), I = n(689938), m = n(12505);
+var i = n(735250), s = n(470079), a = n(481060), r = n(194359), l = n(906732), o = n(388380), c = n(171368), d = n(626135), u = n(321488), _ = n(417183), h = n(170245), E = n(981631), I = n(689938), m = n(12505);
 function g(e) {
     let {
             user: t,
             nickname: n,
             status: g,
             isFocused: p
-        } = e, T = s.useContext(d.AnalyticsContext), {analyticsLocations: S} = (0, l.ZP)(), C = e => {
+        } = e, T = s.useContext(d.AnalyticsContext), {analyticsLocations: S} = (0, l.ZP)(), f = e => {
             null == e || e.stopPropagation(), r.Z.addRelationship({
                 userId: t.id,
                 context: { location: 'Friends' },
@@ -18,9 +18,9 @@ function g(e) {
                 friendToken: void 0,
                 fromFriendSuggestion: !0
             });
-        }, f = e => {
+        }, C = e => {
             null == e || e.stopPropagation(), o.Z.ignore(t.id);
-        }, N = g === h.Skl.OFFLINE ? h.Skl.UNKNOWN : g;
+        }, N = g === E.Skl.OFFLINE ? E.Skl.UNKNOWN : g;
     return (0, i.jsx)(_.Z, {
         isFocused: p,
         user: t,
@@ -36,14 +36,14 @@ function g(e) {
                         icon: a.CheckmarkLargeIcon,
                         actionType: u.Z.ActionTypes.ACCEPT,
                         tooltip: I.Z.Messages.FRIEND_REQUEST_ACCEPT,
-                        onClick: C,
+                        onClick: f,
                         shouldHighlight: e
                     }),
                     (0, i.jsx)(u.Z, {
                         icon: a.CloseSmallIcon,
                         actionType: u.Z.ActionTypes.DENY,
                         tooltip: I.Z.Messages.FRIEND_REQUEST_IGNORE,
-                        onClick: f,
+                        onClick: C,
                         shouldHighlight: e
                     })
                 ]
@@ -51,7 +51,7 @@ function g(e) {
             return (0, i.jsxs)('div', {
                 className: m.listItemContents,
                 children: [
-                    (0, i.jsx)(E.Z, {
+                    (0, i.jsx)(h.Z, {
                         user: t,
                         hovered: e,
                         status: N,

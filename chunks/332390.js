@@ -5,7 +5,7 @@ n.d(t, {
 });
 let r = (0, n(818083).B)({
         kind: 'user',
-        id: '2024-06_profile_engagement_Ctas',
+        id: '2024-06_profile_engagement_ctas',
         label: 'Simplified Profile Primary Engagement Ctas',
         defaultConfig: {
             messageCtaEnabled: !1,

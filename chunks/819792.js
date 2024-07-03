@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
 var s = n(920906), a = n(442837), r = n(536442), l = n(984933), o = n(496675), c = n(51382), d = n(91326), u = n(503856), _ = n(981631);
-function E(e) {
+function h(e) {
     let {
             channel: t,
             guild: n
@@ -23,7 +23,7 @@ function E(e) {
 }
 t.Z = function (e) {
     let {guild: t} = e, n = (0, a.e7)([l.ZP], () => l.ZP.getChannels(t.id)[l.Zb][0]), s = (0, a.e7)([o.Z], () => null != n && o.Z.can(_.Plq.CONNECT, n.channel));
-    return t.hasFeature(_.oNc.HUB) && null != n && s ? (0, i.jsx)(E, {
+    return t.hasFeature(_.oNc.HUB) && null != n && s ? (0, i.jsx)(h, {
         channel: n.channel,
         guild: t
     }) : null;

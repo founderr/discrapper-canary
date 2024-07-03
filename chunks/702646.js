@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(143927), o = n(481060), c = n(963202), d = n(105671), u = n(92373), _ = n(207796), E = n(308083), h = n(689938), I = n(543802);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(143927), o = n(481060), c = n(963202), d = n(105671), u = n(92373), _ = n(207796), h = n(308083), E = n(689938), I = n(543802);
 function m(e) {
     let {
             icon: t,
@@ -9,18 +9,18 @@ function m(e) {
             onClick: c,
             isActive: d,
             autoWidth: u = !1
-        } = e, [E, h] = s.useState(!1), [m, g] = s.useState(!1), p = _.GN.getState().mode, T = p === _.v0.GAMES || p === _.v0.PLAYSTYLE || p === _.v0.TRAITS;
+        } = e, [h, E] = s.useState(!1), [m, g] = s.useState(!1), p = _.GN.getState().mode, T = p === _.v0.GAMES || p === _.v0.PLAYSTYLE || p === _.v0.TRAITS;
     s.useEffect(() => {
-        T && (h(!1), g(!1));
+        T && (E(!1), g(!1));
     }, [T]);
-    let S = d && (m || E), C = s.useMemo(() => (0, i.jsxs)(o.Clickable, {
+    let S = d && (m || h), f = s.useMemo(() => (0, i.jsxs)(o.Clickable, {
             className: I.tooltipContentWrapper,
             onClick: c,
             onMouseEnter: () => {
-                !T && h(!0);
+                !T && E(!0);
             },
             onMouseLeave: () => {
-                h(!1);
+                E(!1);
             },
             children: [
                 (0, i.jsx)('div', { className: I.tooltipHoverBridge }),
@@ -32,7 +32,7 @@ function m(e) {
             T
         ]);
     return (0, i.jsx)(o.Tooltip, {
-        text: C,
+        text: f,
         position: 'bottom',
         'aria-label': a,
         shouldShow: S,
@@ -78,7 +78,7 @@ function g() {
     var e;
     let t = (0, _.GN)(e => e.selectedGames, l.Z), n = s.useCallback(() => {
             (0, _.fH)(_.v0.GAMES, !0);
-        }, []), a = null !== (e = (0, d.i)(t)) && void 0 !== e ? e : '', r = t.slice(0, 3), c = t.length - 3, E = (0, i.jsx)('div', {
+        }, []), a = null !== (e = (0, d.i)(t)) && void 0 !== e ? e : '', r = t.slice(0, 3), c = t.length - 3, h = (0, i.jsx)('div', {
             className: I.gamesTooltip,
             children: r.map((e, t) => (0, i.jsx)(u.Z, {
                 applicationId: e,
@@ -90,8 +90,8 @@ function g() {
         });
     return (0, i.jsx)(m, {
         icon: g,
-        text: h.Z.Messages.CLAN_DISCOVERY_GAME_FILTER.format({ count: t.length }),
-        tooltip: E,
+        text: E.Z.Messages.CLAN_DISCOVERY_GAME_FILTER.format({ count: t.length }),
+        tooltip: h,
         onClick: n,
         isActive: t.length > 0,
         ariaLabel: a,
@@ -99,7 +99,7 @@ function g() {
     });
 }
 function p() {
-    let e = s.useMemo(E.f4, []), t = (0, _.GN)(e => e.selectedPlaystyle, l.Z), n = null != t ? e[t] : null, a = null == n ? void 0 : n.title, r = s.useCallback(() => {
+    let e = s.useMemo(h.f4, []), t = (0, _.GN)(e => e.selectedPlaystyle, l.Z), n = null != t ? e[t] : null, a = null == n ? void 0 : n.title, r = s.useCallback(() => {
             (0, _.fH)(_.v0.PLAYSTYLE, !0);
         }, []), c = null != n ? (0, i.jsxs)(i.Fragment, {
             children: [
@@ -126,11 +126,11 @@ function p() {
         });
     return (0, i.jsx)(m, {
         icon: d,
-        text: null != a ? a : h.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE,
+        text: null != a ? a : E.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE,
         tooltip: c,
         onClick: r,
         isActive: null != n,
-        ariaLabel: null != a ? a : h.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE
+        ariaLabel: null != a ? a : E.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE
     });
 }
 function T() {
@@ -155,7 +155,7 @@ function T() {
         });
     return (0, i.jsx)(m, {
         icon: a,
-        text: h.Z.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
+        text: E.Z.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
         tooltip: n,
         onClick: t,
         isActive: e.length > 0,
@@ -181,7 +181,7 @@ function S() {
                 children: (0, i.jsx)(o.Text, {
                     variant: 'text-xs/medium',
                     color: 'none',
-                    children: h.Z.Messages.CLAN_DISCOVERY_ADD_CLAN
+                    children: E.Z.Messages.CLAN_DISCOVERY_ADD_CLAN
                 })
             })
         ]

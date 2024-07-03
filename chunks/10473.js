@@ -7,11 +7,11 @@ function c(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let d = [], u = !1, _ = !1, E = { status: 'unloaded' }, h = {};
+let d = [], u = !1, _ = !1, h = { status: 'unloaded' }, E = {};
 class I extends (i = r.ZP.Store) {
     getSearchResult(e) {
-        let t = h[a().v3(JSON.stringify(e))];
-        return null == t || t.loadedAt < Date.now() - o.Z.Millis.HOUR ? E : t;
+        let t = E[a().v3(JSON.stringify(e))];
+        return null == t || t.loadedAt < Date.now() - o.Z.Millis.HOUR ? h : t;
     }
     hasLoadedStaticClanDiscovery() {
         return u;
@@ -34,6 +34,6 @@ c(I, 'displayName', 'ClanDiscoveryStore'), c(I, 'persistKey', 'ClanDiscoveryStor
         _ = !1;
     },
     FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS: function (e) {
-        h[e.criteriaHash] = e.searchResult;
+        E[e.criteriaHash] = e.searchResult;
     }
 });

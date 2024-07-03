@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250);
 n(470079);
-var s = n(481060), a = n(570140), r = n(317770), l = n(594174), o = n(295226), c = n(74538), d = n(374023), u = n(913976), _ = n(104494), E = n(29920), h = n(786397), I = n(248042), m = n(318199), g = n(474936);
+var s = n(481060), a = n(570140), r = n(317770), l = n(594174), o = n(295226), c = n(74538), d = n(374023), u = n(913976), _ = n(104494), h = n(29920), E = n(786397), I = n(248042), m = n(318199), g = n(474936);
 function p(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -55,12 +55,12 @@ class S extends r.Z {
                 g.ET,
                 g.C2,
                 g.Hk
-            ].map(e => o.Z.getUserTrialOffer(e)).filter(e => null != e && !(0, h.B)(e)).shift();
+            ].map(e => o.Z.getUserTrialOffer(e)).filter(e => null != e && !(0, E.B)(e)).shift();
             return null != n ? { userTrialOffer: n } : {};
         }), p(this, 'mayShowAnnouncementModal', async () => {
             if (await (0, I.l2)(), !d.s.isDisallowPopupsSet()) {
                 if (!(0, s.hasAnyModalOpen)() && u.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled) {
-                    for (let e of await (0, E.H)(this.getOfferFromStore()))
+                    for (let e of await (0, h.H)(this.getOfferFromStore()))
                         if (this.maybeOpenServerDriveAnnouncementModal(e, !1))
                             break;
                 }

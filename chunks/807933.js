@@ -1,16 +1,16 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(920906), r = n(143927), l = n(442837), o = n(481060), c = n(607070), d = n(950279), u = n(741595), _ = n(359380), E = n(480222), h = n(207796), I = n(316553), m = n(689938);
+var i = n(735250), s = n(470079), a = n(920906), r = n(143927), l = n(442837), o = n(481060), c = n(607070), d = n(950279), u = n(741595), _ = n(359380), h = n(480222), E = n(207796), I = n(316553), m = n(689938);
 let g = {
         mass: 1,
         tension: 280,
         friction: 20,
         clamp: !0
     }, p = {
-        [h.v0.PLAYSTYLE]: function () {
-            let [e, t] = s.useState(h.GN.getState().selectedPlaystyle), n = s.useCallback(() => {
-                    null != e && h.GN.getState().setSelectedPlaystyle(e);
+        [E.v0.PLAYSTYLE]: function () {
+            let [e, t] = s.useState(E.GN.getState().selectedPlaystyle), n = s.useCallback(() => {
+                    null != e && E.GN.getState().setSelectedPlaystyle(e);
                 }, [e]);
-            return (0, i.jsx)(E.Z, {
+            return (0, i.jsx)(h.Z, {
                 onClose: n,
                 children: (0, i.jsx)(u.Z, {
                     title: m.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
@@ -20,11 +20,11 @@ let g = {
                 })
             });
         },
-        [h.v0.TRAITS]: function () {
-            let e = (0, h.GN)(e => e.game, r.Z), t = (0, I.J)({ selectedGame: e }), [n, a] = s.useState(new Set(h.GN.getState().selectedTraits)), l = s.useCallback(() => {
-                    h.GN.getState().setSelectedTraits(Array.from(n));
+        [E.v0.TRAITS]: function () {
+            let e = (0, E.GN)(e => e.game, r.Z), t = (0, I.J)({ selectedGame: e }), [n, a] = s.useState(new Set(E.GN.getState().selectedTraits)), l = s.useCallback(() => {
+                    E.GN.getState().setSelectedTraits(Array.from(n));
                 }, [n]);
-            return (0, i.jsx)(E.Z, {
+            return (0, i.jsx)(h.Z, {
                 onClose: l,
                 children: (0, i.jsx)(_.Z, {
                     title: m.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
@@ -36,11 +36,11 @@ let g = {
                 })
             });
         },
-        [h.v0.GAMES]: function () {
-            let e = (0, h.GN)(e => e.game, r.Z), t = (0, I.J)({ selectedGame: e }), [n, a] = s.useState(new Set(h.GN.getState().selectedGames)), l = s.useCallback(() => {
-                    h.GN.getState().setSelectedGames(Array.from(n));
+        [E.v0.GAMES]: function () {
+            let e = (0, E.GN)(e => e.game, r.Z), t = (0, I.J)({ selectedGame: e }), [n, a] = s.useState(new Set(E.GN.getState().selectedGames)), l = s.useCallback(() => {
+                    E.GN.getState().setSelectedGames(Array.from(n));
                 }, [n]);
-            return (0, i.jsx)(E.Z, {
+            return (0, i.jsx)(h.Z, {
                 onClose: l,
                 children: (0, i.jsx)(d.Z, {
                     title: m.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
@@ -77,7 +77,7 @@ function T(e) {
 function S(e) {
     return e;
 }
-function C(e, t, n, s) {
+function f(e, t, n, s) {
     return (0, i.jsx)(T, {
         item: t,
         state: n,
@@ -88,7 +88,7 @@ t.Z = s.memo(function (e) {
     let {mode: t} = e, n = s.useMemo(() => null != p[t] ? [t] : [], [t]);
     return (0, i.jsx)(o.TransitionGroup, {
         items: n,
-        renderItem: C,
+        renderItem: f,
         getItemKey: S
     });
 });

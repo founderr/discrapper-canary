@@ -83,7 +83,7 @@ let N = (e, t, n) => (0, r.wj)(e) ? t : n, f = 'getWhatsNewRow', S = e => {
                 t.length < l && t.push(n);
             }, c = () => {
                 r !== i.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
-            }, {enabled: u} = E._.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }), {enabled: T} = _.r.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }), {enabled: I} = d.C.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }), R = O();
+            }, {enabled: u} = E._.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }), {enabled: T} = _.r.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }), {enabled: I} = d.C.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }), R = b();
         return null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), s && R ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !R && (!u || T || I ? c() : o({ card: n.referralProgram }), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     }, h = e => {
         let {
@@ -210,7 +210,7 @@ let N = (e, t, n) => (0, r.wj)(e) ? t : n, f = 'getWhatsNewRow', S = e => {
     }, x = () => {
         let e = (0, a.e7)([l.default], () => l.default.getCurrentUser());
         return (0, c.I5)(e);
-    }, O = () => {
+    }, b = () => {
         let e = l.default.getCurrentUser();
         return (0, c.M5)(e, I.p9.TIER_2);
     };

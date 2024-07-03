@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(392711), s = n.n(i), a = n(442837), r = n(570140), l = n(573979), o = n(814443), c = n(592125), d = n(271383), u = n(430824), _ = n(131951), E = n(158776), h = n(19780), I = n(699516), m = n(944486), g = n(594174), p = n(979651), T = n(626135), S = n(823379), C = n(358085), f = n(914946), N = n(238679), A = n(863141), Z = n(981631), L = n(701488), v = n(65154);
+var i = n(392711), s = n.n(i), a = n(442837), r = n(570140), l = n(573979), o = n(814443), c = n(592125), d = n(271383), u = n(430824), _ = n(131951), h = n(158776), E = n(19780), I = n(699516), m = n(944486), g = n(594174), p = n(979651), T = n(626135), S = n(823379), f = n(358085), C = n(914946), N = n(238679), A = n(863141), Z = n(981631), L = n(701488), v = n(65154);
 function O(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -14,7 +14,7 @@ function O(e, t, n) {
 }
 class R {
     loadServer() {
-        for (let e of (C.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports))
+        for (let e of (f.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports))
             this.rpcServer.registerTransport(e);
         for (let [e, t] of Object.entries(this.rpcCommandHandlers))
             this.rpcServer.setCommandHandler(e, t);
@@ -42,10 +42,10 @@ class R {
         let e = [
             c.Z,
             d.ZP,
-            E.Z,
+            h.Z,
             p.Z,
             _.Z,
-            h.Z
+            E.Z
         ];
         new a.Fh(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach('RPCServerManager'), r.Z.subscribe('MESSAGE_CREATE', e => this.handleMessage(e)), r.Z.subscribe('MESSAGE_UPDATE', e => this.handleMessage(e)), r.Z.subscribe('MESSAGE_DELETE', e => this.handleMessage(e)), r.Z.subscribe('SPEAKING', e => this.handleSpeaking(e)), r.Z.subscribe('OAUTH2_TOKEN_REVOKE', e => this.handleOAuth2TokenRevoke(e)), r.Z.subscribe('GUILD_CREATE', e => this.handleGuildCreate(e)), r.Z.subscribe('CHANNEL_CREATE', e => this.handleChannelCreate(e)), r.Z.subscribe('LOGOUT', () => this.handleLogout()), r.Z.subscribe('VOICE_CHANNEL_SELECT', e => this.handleVoiceChannelSelect(e)), r.Z.subscribe('RPC_NOTIFICATION_CREATE', e => this.handleNotificationCreate(e)), r.Z.subscribe('ACTIVITY_JOIN', e => this.handleActivityJoin(e)), r.Z.subscribe('ACTIVITY_LAYOUT_MODE_UPDATE', e => this.handleActivityLayoutModeUpdate(e)), r.Z.subscribe('THERMAL_STATE_CHANGE', e => this.handleThermalStateChange(e)), r.Z.subscribe('ACTIVITY_SCREEN_ORIENTATION_UPDATE', e => this.handleScreenOrientationUpdate(e)), (0, N.HU)(e => this.rpcServer.dispatchToSubscriptions(Z.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), r.Z.subscribe('RELATIONSHIP_ADD', e => this.handleRelationshipAdd(e)), r.Z.subscribe('RELATIONSHIP_REMOVE', e => this.handleRelationshipRemove(e)), r.Z.subscribe('PRESENCE_UPDATES', e => this.handlePresenceUpdate(e)), r.Z.subscribe('PRESENCES_REPLACE', () => this.handlePresencesReplace()), r.Z.subscribe('ENTITLEMENT_CREATE', e => this.handleEntitlementCreate(e)), r.Z.subscribe('ENTITLEMENT_DELETE', e => this.handleEntitlementDelete(e)), r.Z.subscribe('USER_ACHIEVEMENT_UPDATE', e => this.handleUserAchievementUpdate(e));
     }
@@ -72,7 +72,7 @@ class R {
         }
         null != n && this.rpcServer.dispatchToSubscriptions(t, { channel_id: n }, {
             channel_id: n,
-            message: (0, f.Xb)(i)
+            message: (0, C.Xb)(i)
         }, s);
     }
     handleSpeaking(e) {
@@ -117,8 +117,8 @@ class R {
         if (0 !== this.rpcServer.subscriptions.length)
             this.rpcServer.dispatchToSubscriptions(Z.zMe.NOTIFICATION_CREATE, {}, {
                 channel_id: t,
-                message: (0, f.Xb)(n),
-                icon_url: null != i ? (0, f.RE)(i) : null,
+                message: (0, C.Xb)(n),
+                icon_url: null != i ? (0, C.RE)(i) : null,
                 title: s,
                 body: a
             });
@@ -181,7 +181,7 @@ class R {
         let l = g.default.getCurrentUser();
         if (null == l || r.id === l.id)
             return;
-        let o = a.type === Z.mFx.JOIN_REQUEST ? E.Z.getApplicationActivity(l.id, s.id) : E.Z.getApplicationActivity(r.id, s.id);
+        let o = a.type === Z.mFx.JOIN_REQUEST ? h.Z.getApplicationActivity(l.id, s.id) : h.Z.getApplicationActivity(r.id, s.id);
         if (null == o || null == o.party || o.party.id !== a.party_id)
             return;
         let c = o.application_id;
@@ -242,14 +242,14 @@ class R {
             }
         } = e;
         if (0 !== this.rpcServer.subscriptions.length)
-            this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(n, t));
+            this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(n, t));
     }
     handleRelationshipRemove(e) {
         let {
             relationship: {id: t}
         } = e;
         if (0 !== this.rpcServer.subscriptions.length)
-            this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(Z.OGo.NONE, t));
+            this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(Z.OGo.NONE, t));
     }
     handlePresenceUpdate(e) {
         let {updates: t} = e;
@@ -262,13 +262,13 @@ class R {
                 if (null != t)
                     return;
                 let i = I.Z.getRelationshipType(n);
-                i === Z.OGo.NONE && o.Z.getUserAffinitiesUserIds().has(n) && (i = Z.OGo.IMPLICIT), i !== Z.OGo.NONE && this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(i, n));
+                i === Z.OGo.NONE && o.Z.getUserAffinitiesUserIds().has(n) && (i = Z.OGo.IMPLICIT), i !== Z.OGo.NONE && this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(i, n));
             });
     }
     handlePresencesReplace() {
         if (0 !== this.rpcServer.subscriptions.length)
             s().forEach(I.Z.getRelationships(), (e, t) => {
-                this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(e, t));
+                this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(e, t));
             });
     }
     handleEntitlementCreate(e) {

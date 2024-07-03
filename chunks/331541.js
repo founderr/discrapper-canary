@@ -3,7 +3,7 @@ n.d(t, {
         return ee;
     }
 });
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(722770), o = n(873546), c = n(442837), d = n(481060), u = n(2052), _ = n(393238), E = n(727637), h = n(100527), I = n(906732), m = n(521868), g = n(299206), p = n(440051), T = n(734934), S = n(158238), C = n(300284), f = n(680295), N = n(751009), A = n(785717), Z = n(318661), L = n(741308), v = n(549546), O = n(681837), R = n(502762), x = n(530), P = n(544989), b = n(969205), M = n(171368), D = n(580512), y = n(67152), j = n(23293), U = n(695346), G = n(293273), w = n(158776), k = n(246946), B = n(70956), H = n(5192), V = n(51144), F = n(246133), Y = n(474376), W = n(383832), z = n(981631), K = n(228168), q = n(689938), Q = n(483978);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(722770), o = n(873546), c = n(442837), d = n(481060), u = n(2052), _ = n(393238), h = n(727637), E = n(100527), I = n(906732), m = n(521868), g = n(299206), p = n(440051), T = n(734934), S = n(158238), f = n(300284), C = n(680295), N = n(751009), A = n(785717), Z = n(318661), L = n(741308), v = n(549546), O = n(681837), R = n(502762), x = n(530), b = n(544989), P = n(969205), M = n(171368), D = n(580512), y = n(67152), j = n(23293), U = n(695346), G = n(293273), k = n(158776), w = n(246946), B = n(70956), H = n(5192), V = n(51144), F = n(246133), Y = n(474376), W = n(383832), z = n(981631), K = n(228168), q = n(689938), Q = n(483978);
 let X = [
     {
         duration: 30 * B.Z.Millis.MINUTE,
@@ -112,10 +112,10 @@ function ee(e) {
             currentUser: t,
             onClose: n,
             setPopoutRef: a
-        } = e, B = __OVERLAY__, F = (0, Z.ZP)(t.id), ee = (0, u.O)(), {analyticsLocations: et} = (0, I.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT), en = (0, A.Q1)({
+        } = e, B = __OVERLAY__, F = (0, Z.ZP)(t.id), ee = (0, u.O)(), {analyticsLocations: et} = (0, I.ZP)(E.Z.ACCOUNT_PROFILE_POPOUT), en = (0, A.Q1)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: t.id
-        }), ei = (0, c.e7)([G.Z], () => G.Z.getCustomStatusActivity()), es = (0, c.e7)([w.Z], () => w.Z.getStatus(t.id)), ea = function (e, t) {
+        }), ei = (0, c.e7)([G.Z], () => G.Z.getCustomStatusActivity()), es = (0, c.e7)([k.Z], () => k.Z.getStatus(t.id)), ea = function (e, t) {
             let n = p.Y.useExperiment({ location: 'account popout' }).expiringStatus, s = U.Cr.useSetting(), a = (0, T.p)(), r = S.e.useExperiment({ location: 'account popout' }).allowQuietMode || a, o = U.fv.useSetting(), c = e === z.Skl.DND, u = t => {
                     let n = null != s && '0' !== s ? q.Z.Messages.STATUS_UNTIL.format({
                         endTime: new Date(Number(s)).toLocaleString(q.Z.getLocale(), {
@@ -204,7 +204,7 @@ function ee(e) {
                     }, 'quiet-mode') : null
                 ]
             });
-        }(es, ee), {ref: er} = (0, _.Z)(), el = (0, E.Z)(er);
+        }(es, ee), {ref: er} = (0, _.Z)(), el = (0, h.Z)(er);
     s.useEffect(() => {
         null == a || a(er.current);
     }, [
@@ -217,12 +217,12 @@ function ee(e) {
                 userId: t.id,
                 ...e
             });
-        }, {accountPopoutStatusEditEnabled: ec} = (0, N.K)({ location: 'AccountProfilePopout' }), ed = (0, C.Z)({ analyticsLocations: et }), eu = (0, T.p)(), e_ = es === z.Skl.DND, eE = (0, Y.g)(), eh = (0, m.o)(null != ei ? ei : void 0, Q.menuItemFocused), eI = (0, g.Z)({
+        }, {accountPopoutStatusEditEnabled: ec} = (0, N.K)({ location: 'AccountProfilePopout' }), ed = (0, f.Z)({ analyticsLocations: et }), eu = (0, T.p)(), e_ = es === z.Skl.DND, eh = (0, Y.g)(), eE = (0, m.o)(null != ei ? ei : void 0, Q.menuItemFocused), eI = (0, g.Z)({
             id: t.id,
             label: q.Z.Messages.COPY_ID_USER,
             showIconFirst: !0,
             focusedClassName: Q.menuItemFocused
-        }), em = (0, c.e7)([k.Z], () => k.Z.hidePersonalInformation);
+        }), em = (0, c.e7)([w.Z], () => w.Z.hidePersonalInformation);
     return (0, i.jsx)(I.Gt, {
         value: et,
         children: (0, i.jsx)(A.Mt, {
@@ -237,9 +237,9 @@ function ee(e) {
                     displayProfile: F,
                     profileType: K.y0.BITE_SIZE,
                     children: [
-                        !ec && (0, i.jsx)(P.Z, {
+                        !ec && (0, i.jsx)(b.Z, {
                             profileType: K.y0.BITE_SIZE,
-                            children: (0, i.jsx)(b.Z, { onClose: n })
+                            children: (0, i.jsx)(P.Z, { onClose: n })
                         }),
                         (0, i.jsx)(j.Z, {
                             user: t,
@@ -367,7 +367,7 @@ function ee(e) {
                                                             children: o.tq ? void 0 : ea
                                                         }, 'status-picker')
                                                     }),
-                                                    !ec && (0, i.jsx)(d.MenuGroup, { children: eh })
+                                                    !ec && (0, i.jsx)(d.MenuGroup, { children: eE })
                                                 ]
                                             })
                                         }),
@@ -395,7 +395,7 @@ function ee(e) {
                                                                     analyticsLocations: et
                                                                 }), (0, W.Z)();
                                                             },
-                                                            children: eE
+                                                            children: eh
                                                         })
                                                     }),
                                                     (0, i.jsx)(d.MenuGroup, { children: eI })
@@ -406,7 +406,7 @@ function ee(e) {
                                 })
                             ]
                         }),
-                        (null == F ? void 0 : F.profileEffectId) != null && (0, i.jsx)(f.Z, {
+                        (null == F ? void 0 : F.profileEffectId) != null && (0, i.jsx)(C.Z, {
                             profileEffectId: null == F ? void 0 : F.profileEffectId,
                             isHovering: el
                         })

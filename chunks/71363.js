@@ -6,7 +6,7 @@ t.Z = e => {
             setIsAllPerksVisible: h,
             previousComponent: M,
             isFullScreen: x
-        } = e, O = a.useRef(null), b = Object.entries((0, p.Z)()).reduce((e, t) => {
+        } = e, b = a.useRef(null), O = Object.entries((0, p.Z)()).reduce((e, t) => {
             let [n, s] = t;
             return !1 !== s.canReveal && 'upcomingDropUntimed' !== s.name && (e[n] = s), e;
         }, {}), P = (0, I.HI)({ location: g.MQ.SEE_ALL }), {analyticsLocations: L} = (0, u.ZP)(_.Z.PREMIUM_SUBSCRIBER_NITRO_HOME), [v, Z] = a.useState(!1), D = (0, E.ZP)('perks-discoverability'), B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), j = (0, A.mN)();
@@ -15,7 +15,7 @@ t.Z = e => {
             [f.open]: r,
             [f.openCloseReduceMotion]: B
         }),
-        ref: O,
+        ref: b,
         children: (0, s.jsx)('div', {
             className: f.container,
             children: (0, s.jsxs)(u.Gt, {
@@ -43,7 +43,7 @@ t.Z = e => {
                             (0, s.jsx)(C.Z, {
                                 className: f.cardCarousel,
                                 cards: (0, A.sP)({
-                                    perksCards: b,
+                                    perksCards: O,
                                     variant: g.R0.CARD_CAROUSEL_FIRST_ROW,
                                     shopMarketingVariation: D,
                                     tileOrderVariant: P,
@@ -61,7 +61,7 @@ t.Z = e => {
                             (0, s.jsx)(C.Z, {
                                 className: f.cardCarousel,
                                 cards: (0, A.sP)({
-                                    perksCards: b,
+                                    perksCards: O,
                                     variant: g.R0.CARD_CAROUSEL_SECOND_ROW,
                                     shopMarketingVariation: D,
                                     tileOrderVariant: P,
@@ -79,7 +79,7 @@ t.Z = e => {
                             (0, s.jsx)(C.Z, {
                                 className: f.cardCarousel,
                                 cards: (0, A.sP)({
-                                    perksCards: b,
+                                    perksCards: O,
                                     variant: g.R0.CARD_CAROUSEL_THIRD_ROW,
                                     shopMarketingVariation: D,
                                     tileOrderVariant: P,

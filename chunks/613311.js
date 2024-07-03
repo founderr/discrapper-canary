@@ -1,5 +1,5 @@
 n(411104), n(724458), n(653041), n(733860), n(47120), n(789020);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(846519), c = n(780384), d = n(481060), u = n(570140), _ = n(659429), E = n(496929), h = n(558381), I = n(410575), m = n(224336), g = n(730749), p = n(666743), T = n(115130), S = n(812206), C = n(252618), f = n(100159), N = n(646288), A = n(984370), Z = n(706454), L = n(210887), v = n(430824), O = n(496675), R = n(525395), x = n(558314), P = n(580130), b = n(55563), M = n(551428), D = n(695103), y = n(451478), j = n(378720), U = n(285952), G = n(760397), w = n(626135), k = n(572004), B = n(630388), H = n(937615), V = n(73346), F = n(3570), Y = n(689796), W = n(15470), z = n(506648), K = n(449275), q = n(445986), Q = n(119520), X = n(450233), J = n(726581), $ = n(74153), ee = n(125930), et = n(178071), en = n(176055), ei = n(843445), es = n(981631), ea = n(186901), er = n(689938), el = n(261343);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(846519), c = n(780384), d = n(481060), u = n(570140), _ = n(659429), h = n(496929), E = n(558381), I = n(410575), m = n(224336), g = n(730749), p = n(666743), T = n(115130), S = n(812206), f = n(252618), C = n(100159), N = n(646288), A = n(984370), Z = n(706454), L = n(210887), v = n(430824), O = n(496675), R = n(525395), x = n(558314), b = n(580130), P = n(55563), M = n(551428), D = n(695103), y = n(451478), j = n(378720), U = n(285952), G = n(760397), k = n(626135), w = n(572004), B = n(630388), H = n(937615), V = n(73346), F = n(3570), Y = n(689796), W = n(15470), z = n(506648), K = n(449275), q = n(445986), Q = n(119520), X = n(450233), J = n(726581), $ = n(74153), ee = n(125930), et = n(178071), en = n(176055), ei = n(843445), es = n(981631), ea = n(186901), er = n(689938), el = n(261343);
 function eo(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -30,7 +30,7 @@ class ec extends s.PureComponent {
             this._analyticsSource = e, this._extraAnalyticsProperties = t;
         } else
             this._analyticsSource = es.SaU;
-        (null == t || t.isSlimDirectoryVersion()) && r(), null != e && (!n && !s && (0, E.yD)(e.applicationId), i && u.Z.wait(() => (0, _.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug();
+        (null == t || t.isSlimDirectoryVersion()) && r(), null != e && (!n && !s && (0, h.yD)(e.applicationId), i && u.Z.wait(() => (0, _.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug();
     }
     componentDidUpdate(e) {
         let {
@@ -61,7 +61,7 @@ class ec extends s.PureComponent {
                 loadDate: t
             }
         } = this.props;
-        null != t && w.default.track(es.rMx.STORE_LISTING_EXITED, {
+        null != t && k.default.track(es.rMx.STORE_LISTING_EXITED, {
             load_id: e,
             duration_ms: Date.now() - t
         });
@@ -81,7 +81,7 @@ class ec extends s.PureComponent {
             images: 0,
             videos: 0
         });
-        w.default.track(es.rMx.STORE_LISTING_VIEWED, {
+        k.default.track(es.rMx.STORE_LISTING_VIEWED, {
             ...this._extraAnalyticsProperties,
             load_id: i.loadId,
             has_description: null != t.description && t.description.length > 0,
@@ -90,7 +90,7 @@ class ec extends s.PureComponent {
             carousel_video_count: s.videos,
             location: i.location.page,
             source: this._analyticsSource,
-            ...(0, f.Z)(e, !0)
+            ...(0, C.Z)(e, !0)
         }), this._trackedViewed = !0;
     }
     renderHeader(e, t) {
@@ -350,7 +350,7 @@ class ec extends s.PureComponent {
             });
             return (0, i.jsxs)(s.Fragment, {
                 children: [
-                    (0, i.jsx)(C.yY, { location: e.name }),
+                    (0, i.jsx)(f.yY, { location: e.name }),
                     this.renderJsonLD(),
                     this.renderHeader(e, t),
                     (0, i.jsx)(Q.Z, { game: e }),
@@ -361,7 +361,7 @@ class ec extends s.PureComponent {
         return r ? (0, i.jsxs)('div', {
             className: el.listingWrapper,
             children: [
-                (0, i.jsx)(C.yY, { location: e.name }),
+                (0, i.jsx)(f.yY, { location: e.name }),
                 this.renderJsonLD(),
                 (0, i.jsx)(I.Z, {
                     section: es.jXE.NAVIGATION,
@@ -374,7 +374,7 @@ class ec extends s.PureComponent {
             ]
         }) : (0, i.jsxs)('div', {
             children: [
-                (0, i.jsx)(C.yY, { location: e.name }),
+                (0, i.jsx)(f.yY, { location: e.name }),
                 this.renderJsonLD(),
                 this.renderHeader(e, t),
                 this.renderListing()
@@ -387,15 +387,15 @@ class ec extends s.PureComponent {
             showLinkCopied: !1
         }), eo(this, 'trackCarouselScroll', (e, t, n) => {
             let {sku: i} = this.props;
-            null != i && w.default.track(es.rMx.STORE_LISTING_MEDIA_SCROLLED, {
-                ...(0, f.Z)(i),
+            null != i && k.default.track(es.rMx.STORE_LISTING_MEDIA_SCROLLED, {
+                ...(0, C.Z)(i),
                 card_index: n,
                 card_type: e.type === es.s9s.IMG ? 'image' : 'video'
             });
         }), eo(this, 'copyCurrentUrl', () => {
             var e;
             let {location: t} = this.props;
-            (0, k.JG)((e = t.pathname, ''.concat(location.protocol, '//').concat(location.host).concat(e))), this.setState({ showLinkCopied: !0 }, () => {
+            (0, w.JG)((e = t.pathname, ''.concat(location.protocol, '//').concat(location.host).concat(e))), this.setState({ showLinkCopied: !0 }, () => {
                 this.showCopyLinkTextTimeout.start(1500, () => {
                     this.setState({ showLinkCopied: !1 });
                 });
@@ -482,7 +482,7 @@ class ec extends s.PureComponent {
                             className: el.testModeSelectButton,
                             currentStoreListingId: null != a ? a.id : null,
                             onStoreListingSelect: e => {
-                                null != t && (0, h.yt)(t.id, {
+                                null != t && (0, E.yt)(t.id, {
                                     slug: s,
                                     analyticsSource: {
                                         page: l.page,
@@ -549,13 +549,13 @@ t.Z = (0, g.Z)((0, p.Z)(l.ZP.connectStores([
     Z.default,
     y.Z,
     M.Z,
-    b.Z,
+    P.Z,
     D.Z,
     T.Z,
     S.Z,
     R.Z,
     v.Z,
-    P.Z
+    b.Z
 ], e => {
     let t, n, i, {
             inputSkuId: s,
@@ -567,19 +567,19 @@ t.Z = (0, g.Z)((0, p.Z)(l.ZP.connectStores([
     if (null == a) {
         if (null == s)
             throw Error('Needs applicationId or skuId');
-        t = s, null != (a = null != (n = b.Z.get(s)) ? n.applicationId : null) && (i = S.Z.getApplication(a));
+        t = s, null != (a = null != (n = P.Z.get(s)) ? n.applicationId : null) && (i = S.Z.getApplication(a));
     } else if (null == s) {
         if (null == a)
             throw Error('Needs applicationId or skuId');
-        null != (i = S.Z.getApplication(a)) && (t = i.destinationSkuId), n = null != t ? b.Z.get(t) : null;
+        null != (i = S.Z.getApplication(a)) && (t = i.destinationSkuId), n = null != t ? P.Z.get(t) : null;
     }
     (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, es.l4R.STICKER_PACK) && (n = null);
     let c = null != a && (D.Z.inTestModeForApplication(a) || T.Z.inDevModeForApplication(a));
     return {
         skuId: t,
         application: null != a ? S.Z.getApplication(a) : null,
-        isFetchingEntitlements: null != a && P.Z.applicationIdsFetching.has(a),
-        didFetchEntitlements: null != a && P.Z.applicationIdsFetched.has(a),
+        isFetchingEntitlements: null != a && b.Z.applicationIdsFetching.has(a),
+        didFetchEntitlements: null != a && b.Z.applicationIdsFetched.has(a),
         shouldFetchStatistics: l && null != a && R.Z.shouldFetchStatisticsForApplication(a),
         sku: n,
         isFocused: y.Z.isFocused(),

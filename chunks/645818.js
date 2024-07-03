@@ -1,16 +1,16 @@
 n(47120);
 var i = n(735250), s = n(470079), a = n(442837), r = n(846519), l = n(481060), o = n(293245), c = n(863969), d = n(563593), u = n(981631), _ = n(689938);
-let E = (0, l.makeIconCompat)(c.Z), h = (0, l.makeIconCompat)(d.Z), I = new Set([
+let h = (0, l.makeIconCompat)(c.Z), E = (0, l.makeIconCompat)(d.Z), I = new Set([
         u.TzF.PUSHING,
         u.TzF.PULLING
     ]), m = Object.freeze({
-        [u.TzF.DONE]: E,
-        [u.TzF.PLANNING]: E,
-        [u.TzF.PREPARING]: E,
+        [u.TzF.DONE]: h,
+        [u.TzF.PLANNING]: h,
+        [u.TzF.PREPARING]: h,
         [u.TzF.PUSHING]: l.UploadIcon,
         [u.TzF.PULLING]: l.DownloadIcon,
-        [u.TzF.CONFLICT]: E,
-        [u.TzF.ERROR]: E
+        [u.TzF.CONFLICT]: h,
+        [u.TzF.ERROR]: h
     });
 class g extends s.PureComponent {
     componentDidMount() {
@@ -78,7 +78,7 @@ class g extends s.PureComponent {
             stopColor: 'rgba(114, 137, 218, 1)',
             stop: this.getStop(s, a)
         });
-        let o = a ? h : m[s.type];
+        let o = a ? E : m[s.type];
         return (0, i.jsx)(l.Tooltip, {
             text: this.getTooltip(s, a),
             children: e => (0, i.jsx)(o, {

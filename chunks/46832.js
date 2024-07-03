@@ -12,7 +12,7 @@ function u(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let _ = 10 * l.Z.Millis.SECOND, E = new Map(), h = new Set(), I = (e, t, n) => {
+let _ = 10 * l.Z.Millis.SECOND, h = new Map(), E = new Set(), I = (e, t, n) => {
         n([
             c.Z.CLOSE,
             t
@@ -48,17 +48,17 @@ class m extends i.EventEmitter {
             var n, i;
             let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             c.emit('disconnect', e, s ? void 0 : t), e.close(t.code, null !== (n = t.message) && void 0 !== n ? n : 'Unknown');
-            let [a] = null !== (i = Array.from(E.entries()).find(t => {
+            let [a] = null !== (i = Array.from(h.entries()).find(t => {
                 let [n, i] = t;
                 return i === e;
             })) && void 0 !== i ? i : [
                 null,
                 null
             ];
-            null != a && E.delete(a);
+            null != a && h.delete(a);
         }), u(this, 'handleIFrameMount', e => {
             let {id: t} = e;
-            h.add(t), this.handshakeFailureTimeoutId = setTimeout(() => {
+            E.add(t), this.handshakeFailureTimeoutId = setTimeout(() => {
                 Array.from(s.ZP.getSelfEmbeddedActivities().entries()).forEach(e => {
                     let [t, n] = e;
                     a.default.track(d.rMx.ACTIVITY_HANDSHAKE_TIMED_OUT, {
@@ -72,8 +72,8 @@ class m extends i.EventEmitter {
         }), u(this, 'handleIFrameUnmount', e => {
             var t;
             let {id: n} = e;
-            h.delete(n);
-            let [i, s] = null !== (t = Array.from(E.entries()).find(e => {
+            E.delete(n);
+            let [i, s] = null !== (t = Array.from(h.entries()).find(e => {
                 let [t, i] = e;
                 return i.frameId === n;
             })) && void 0 !== t ? t : [
@@ -83,9 +83,9 @@ class m extends i.EventEmitter {
             null != s && null != i && (this.disconnectSocket(s, {
                 code: d.$VG.CLOSE_NORMAL,
                 message: 'iFrame gone'
-            }, !0), E.delete(i));
+            }, !0), h.delete(i));
         }), u(this, 'handleMessage', (e, t, n) => {
-            let i = E.get(t);
+            let i = h.get(t);
             try {
                 this.routeEvent(i, t, e, n);
             } catch (e) {
@@ -125,7 +125,7 @@ class m extends i.EventEmitter {
                 throw new o.Z({ closeCode: d.$VG.CLOSE_UNSUPPORTED }, e.message);
             }
             let r = t.frame_id;
-            if (!h.has(r))
+            if (!E.has(r))
                 throw this.logger.error('Unrecognized frame ID '.concat(r)), new o.Z({ closeCode: d.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(r));
             try {
                 var l;
@@ -143,9 +143,9 @@ class m extends i.EventEmitter {
             }
             this.logger.info('Socket Opened: '.concat(s.id));
             try {
-                if (await this.validateSocketClient(s, e, t.client_id), !h.has(r))
+                if (await this.validateSocketClient(s, e, t.client_id), !E.has(r))
                     throw this.logger.error('Frame ID '.concat(r, ' no longer exists')), new o.Z({ closeCode: d.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(r));
-                E.set(e, s), h.delete(r), this.emit('connect', s), this.logger.info('Socket Validated: '.concat(s.id));
+                h.set(e, s), E.delete(r), this.emit('connect', s), this.logger.info('Socket Validated: '.concat(s.id));
             } catch (e) {
                 throw this.logger.info('Socket Closed: '.concat(s.id, ', ').concat(e.message)), e;
             }

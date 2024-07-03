@@ -15,7 +15,7 @@ n.d(t, {
         return D;
     },
     Vp: function () {
-        return b;
+        return O;
     },
     nY: function () {
         return x;
@@ -34,7 +34,7 @@ function M() {
             let t = (0, i.cj)([m.Z], () => m.Z.getState());
             if (null != t)
                 return null !== (e = t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== e ? e : t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_3_MONTHS];
-        }(), t = b(), n = (0, i.e7)([T.Z], () => T.Z.boostSlots), a = s.useMemo(() => Object.values(n).some(e => null == e.premiumGuildSubscription), [n]), l = null != t, o = l && !1 === a;
+        }(), t = O(), n = (0, i.e7)([T.Z], () => T.Z.boostSlots), a = s.useMemo(() => Object.values(n).some(e => null == e.premiumGuildSubscription), [n]), l = null != t, o = l && !1 === a;
     return s.useMemo(() => {
         let n = {
             redeemableAt: null == e ? void 0 : e.redeemable_at,
@@ -94,11 +94,11 @@ function x(e) {
         percentage: d
     };
 }
-let O = new Set();
-function b() {
+let b = new Set();
+function O() {
     let e = (0, i.e7)([I.Z], () => {
             var e;
-            return null !== (e = I.Z.getForApplication(f.RQ)) && void 0 !== e ? e : O;
+            return null !== (e = I.Z.getForApplication(f.RQ)) && void 0 !== e ? e : b;
         }, [], C.OL), t = (0, i.e7)([E.default], () => {
             let e = E.default.getCurrentUser();
             return null != e && (0, p.M5)(e, f.p9.TIER_2);

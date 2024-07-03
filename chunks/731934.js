@@ -114,7 +114,7 @@ function x() {
         ]
     });
 }
-function O(e) {
+function b(e) {
     let {
             sectionType: t,
             sectionTitle: n,
@@ -174,13 +174,13 @@ function O(e) {
         })
     });
 }
-let b = () => {
+let O = () => {
         let e = (0, E.Z)(), t = (0, T.mq)(A.ne.ACTIVE), n = e ? A.AG : A.i0, a = {
                 count: t.length,
                 max: n
             }, r = (0, _.o)(m.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(a), m.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(a));
         return (0, s.jsx)(s.Fragment, {
-            children: t.length > 0 ? (0, s.jsx)(O, {
+            children: t.length > 0 ? (0, s.jsx)(b, {
                 sectionType: A.ne.ACTIVE,
                 sectionTitle: r,
                 requests: t
@@ -226,7 +226,7 @@ let b = () => {
         ]
     }) : null, v = () => {
         let e = (0, T.mq)(A.ne.PENDING), t = (0, _.o)(m.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({ count: e.length }), m.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({ count: e.length }));
-        return 0 === e.length ? null : (0, s.jsx)(O, {
+        return 0 === e.length ? null : (0, s.jsx)(b, {
             sectionType: A.ne.PENDING,
             sectionTitle: t,
             requests: e
@@ -238,7 +238,7 @@ t.Z = () => {
         className: N.container,
         children: [
             e ? (0, s.jsx)(M, {}) : (0, s.jsx)(x, {}),
-            (0, s.jsx)(b, {}),
+            (0, s.jsx)(O, {}),
             (0, s.jsx)(v, {}),
             (0, s.jsx)(P, {}),
             (0, s.jsx)(L, {})

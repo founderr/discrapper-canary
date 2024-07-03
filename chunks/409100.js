@@ -34,13 +34,13 @@ t.Z = e => {
         } = e, m = (0, i.ZP)(), N = (0, a.wj)(m) || t, f = (0, d.N)(), S = null == f ? void 0 : f.subscription_trial, h = (0, l.a5)({
             intervalType: null == S ? void 0 : S.interval,
             intervalCount: null == S ? void 0 : S.interval_count
-        }), M = (0, c.Ng)(), x = null != S && n === S.sku_id, {enabled: O} = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }), b = O && (null == f ? void 0 : f.trial_id) === u.a7, P = C ? E.Z.Messages.BOGO_CLAIM_OFFER : null != M ? R(n, g, p, M.discount.amount) : I({
+        }), M = (0, c.Ng)(), x = null != S && n === S.sku_id, {enabled: b} = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }), O = b && (null == f ? void 0 : f.trial_id) === u.a7, P = C ? E.Z.Messages.BOGO_CLAIM_OFFER : null != M ? R(n, g, p, M.discount.amount) : I({
             showTrialCTA: x,
             subscriptionTier: n,
             shouldShowUpsells: !1,
             trialDurationCopy: h,
             isPersistentCTA: p,
-            shouldShowReferralTrialCopy: b,
+            shouldShowReferralTrialCopy: O,
             subscriptionTrial: S
         });
     return (0, s.jsx)(_.Z, {

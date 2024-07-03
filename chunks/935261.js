@@ -5,10 +5,10 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(120356), a = n.n(s), r = n(442837), l = n(481060), o = n(797258), c = n(374129), d = n(639351), u = n(565473), _ = n(927923), E = n(689938), h = n(127563);
+var s = n(120356), a = n.n(s), r = n(442837), l = n(481060), o = n(797258), c = n(374129), d = n(639351), u = n(565473), _ = n(927923), h = n(689938), E = n(127563);
 function I(e) {
     let {platform: t} = e;
-    return t === _.YE.XBOX ? (0, i.jsx)(d.Z, { className: h.icon }) : t === _.YE.PLAYSTATION ? (0, i.jsx)(c.Z, { className: h.icon }) : null;
+    return t === _.YE.XBOX ? (0, i.jsx)(d.Z, { className: E.icon }) : t === _.YE.PLAYSTATION ? (0, i.jsx)(c.Z, { className: E.icon }) : null;
 }
 function m(e) {
     let {
@@ -20,9 +20,9 @@ function m(e) {
         }), d = null != s ? s : c;
     if (null == d || !_.al.has(d))
         return null;
-    let m = null != n, g = m ? d === _.YE.XBOX ? E.Z.Messages.XBOX_TRANSFERRING_ELLIPSIS : E.Z.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === _.YE.XBOX ? E.Z.Messages.XBOX_REMOTE_CONNECTED.format() : E.Z.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
+    let m = null != n, g = m ? d === _.YE.XBOX ? h.Z.Messages.XBOX_TRANSFERRING_ELLIPSIS : h.Z.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === _.YE.XBOX ? h.Z.Messages.XBOX_REMOTE_CONNECTED.format() : h.Z.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
     return (0, i.jsxs)('div', {
-        className: a()(h.root, m ? h.connecting : h.connected),
+        className: a()(E.root, m ? E.connecting : E.connected),
         children: [
             (0, i.jsx)(I, { platform: d }),
             (0, i.jsx)(l.Text, {

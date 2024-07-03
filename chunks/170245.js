@@ -8,18 +8,18 @@ t.Z = function (e) {
             subText: s,
             showAccountIdentifier: u,
             status: _,
-            isMobile: E,
-            className: h
+            isMobile: h,
+            className: E
         } = e, I = (0, r.e7)([c.Z], () => c.Z.getNickname(t.id));
     return (0, i.jsxs)('div', {
-        className: a()(d.userInfo, h, { [d.hovered]: n }),
+        className: a()(d.userInfo, E, { [d.hovered]: n }),
         children: [
             (0, i.jsx)(o.Z, {
                 user: t,
                 className: d.avatar,
                 animate: n,
                 status: _,
-                isMobile: E
+                isMobile: h
             }),
             (0, i.jsxs)('div', {
                 className: d.text,

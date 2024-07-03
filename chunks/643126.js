@@ -1,6 +1,6 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(512722), o = n.n(l), c = n(481060), d = n(100527), u = n(484459), _ = n(103575), E = n(285952), h = n(409216), I = n(63063), m = n(976401), g = n(333454), p = n(864441), T = n(981631), S = n(689938), C = n(235940);
-function f(e, t, n) {
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(512722), o = n.n(l), c = n(481060), d = n(100527), u = n(484459), _ = n(103575), h = n(285952), E = n(409216), I = n(63063), m = n(976401), g = n(333454), p = n(864441), T = n(981631), S = n(689938), f = n(235940);
+function C(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -47,13 +47,13 @@ class A extends s.PureComponent {
     }
     render() {
         return (0, i.jsxs)('div', {
-            className: C.listeningAlong,
+            className: f.listeningAlong,
             children: [
                 this.renderTitle(),
-                (0, i.jsx)(E.Z, {
-                    justify: E.Z.Justify.END,
-                    className: C.party,
-                    children: (0, i.jsx)(h.Z, {
+                (0, i.jsx)(h.Z, {
+                    justify: h.Z.Justify.END,
+                    className: f.party,
+                    children: (0, i.jsx)(E.Z, {
                         users: this.props.party,
                         max: this.isHost() ? N.HOST : N.LISTENER,
                         renderUser: this.renderPartyMember,
@@ -61,7 +61,7 @@ class A extends s.PureComponent {
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: C.icons,
+                    className: f.icons,
                     children: [
                         this.renderHelpIcon(),
                         this.renderStopListeningButton()
@@ -71,7 +71,7 @@ class A extends s.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), f(this, 'renderPartyMember', (e, t) => {
+        super(...e), C(this, 'renderPartyMember', (e, t) => {
             let n;
             if (null == e)
                 return null;
@@ -101,7 +101,7 @@ class A extends s.PureComponent {
                             key: e.id,
                             src: e.getAvatarURL(void 0, 24),
                             size: c.AvatarSizes.SIZE_24,
-                            className: r()(C.avatar, t),
+                            className: r()(f.avatar, t),
                             'aria-label': e.username,
                             onMouseEnter: i,
                             onMouseLeave: o,
@@ -110,14 +110,14 @@ class A extends s.PureComponent {
                     }
                 })
             }, e.id);
-        }), f(this, 'renderPartyMemberOverflow', (e, t, n) => {
+        }), C(this, 'renderPartyMemberOverflow', (e, t, n) => {
             let {renderOverflowPopout: s} = this.props;
             return (0, i.jsx)(c.Popout, {
                 renderPopout: s,
                 children: n => (0, i.jsx)(c.Tooltip, {
                     text: S.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
                     children: s => (0, i.jsx)('div', {
-                        className: r()(C.overflow, t),
+                        className: r()(f.overflow, t),
                         ...s,
                         ...n,
                         children: e

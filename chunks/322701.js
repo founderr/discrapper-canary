@@ -6,8 +6,8 @@ t.Z = function (e) {
             statusSections: t,
             renderRow: n,
             searchQuery: _,
-            sectionFilter: E,
-            useReducedMotion: h
+            sectionFilter: h,
+            useReducedMotion: E
         } = e, I = (0, r.e7)([c.Z], () => c.Z.keyboardModeEnabled), m = (0, s.ZP)({
             id: 'people',
             isEnabled: I,
@@ -15,7 +15,7 @@ t.Z = function (e) {
             },
             async scrollToEnd() {
             }
-        }), g = E !== d.pJs.ONLINE && E !== d.pJs.ALL, p = h || '' !== _ || g, T = t.map((e, t) => p ? (0, i.jsx)('div', { children: e.map(n) }, t) : (0, i.jsx)(l.W, {
+        }), g = h !== d.pJs.ONLINE && h !== d.pJs.ALL, p = E || '' !== _ || g, T = t.map((e, t) => p ? (0, i.jsx)('div', { children: e.map(n) }, t) : (0, i.jsx)(l.W, {
             transitionAppear: !1,
             component: 'div',
             children: e.map(n)

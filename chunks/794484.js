@@ -41,36 +41,36 @@ t.Z = e => {
             isFullScreen: f = !0
         } = e, S = a.useRef(null), h = (0, _.yQ)(), M = (0, u.Ag)(h), x = (0, c.ZP)('perks-discoverability');
     (0, u.I2)();
-    let O = (0, d.HI)({ location: T.R0.PERKS_DISCOVERABILITY }), b = r === T.R0.WHATS_NEW, P = (0, _.IY)();
+    let b = (0, d.HI)({ location: T.R0.PERKS_DISCOVERABILITY }), O = r === T.R0.WHATS_NEW, P = (0, _.IY)();
     a.useEffect(() => {
-        b && !M && P();
+        O && !M && P();
     }, [
         P,
-        b,
+        O,
         M
     ]), a.useEffect(() => {
         let e = S.current;
-        if (null == e || !M || !b)
+        if (null == e || !M || !O)
             return;
         let t = requestAnimationFrame(() => {
-            e.scrollIntoView({ behavior: 'smooth' }), b && P();
+            e.scrollIntoView({ behavior: 'smooth' }), O && P();
         });
         return () => {
-            cancelAnimationFrame(t), b && P();
+            cancelAnimationFrame(t), O && P();
         };
     }, [
         S,
         M,
-        b,
+        O,
         P
     ]);
-    let L = (0, I.Op)(b), v = (0, E.Z)(), Z = (0, I.mN)(), D = (0, I.sP)({
+    let L = (0, I.Op)(O), v = (0, E.Z)(), Z = (0, I.mN)(), D = (0, I.sP)({
             perksCards: v,
             variant: r,
             shopMarketingVariation: x,
             isFullScreen: f,
             showTenureCard: null == h ? void 0 : h.showCard,
-            tileOrderVariant: O,
+            tileOrderVariant: b,
             isPremiumSubscriber: Z
         }), B = D.some(e => null != e.pillText), [j, U] = a.useState(null), G = a.useRef(new l.qA());
     return (0, s.jsxs)(s.Fragment, {
@@ -99,7 +99,7 @@ t.Z = e => {
                         className: i()(C.subtitle, {
                             [C.subtitle]: null == m || A,
                             [C.subtitleWithButton]: null != m && !A,
-                            [C.fullWidth]: b || A,
+                            [C.fullWidth]: O || A,
                             [C.moreSubtitleMargin]: B,
                             [C.leftAlignSubtitle]: A,
                             [C.centerAlignSubtitle]: !A

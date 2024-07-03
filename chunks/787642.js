@@ -3,7 +3,7 @@ n.d(t, {
         return g;
     }
 });
-var i = n(735250), s = n(470079), a = n(481060), r = n(212093), l = n(703656), o = n(769654), c = n(430824), d = n(626135), u = n(768581), _ = n(125631), E = n(981631), h = n(689938), I = n(961517);
+var i = n(735250), s = n(470079), a = n(481060), r = n(212093), l = n(703656), o = n(769654), c = n(430824), d = n(626135), u = n(768581), _ = n(125631), h = n(981631), E = n(689938), I = n(961517);
 function m(e, t, n) {
     return (0, i.jsxs)('button', {
         className: I.container,
@@ -30,8 +30,8 @@ function m(e, t, n) {
     }, t);
 }
 function g() {
-    let e = Object.values(c.Z.getGuilds()).filter(e => e.hasFeature(E.oNc.HUB)), t = e => {
-            d.default.track(E.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, o.X)(e);
+    let e = Object.values(c.Z.getGuilds()).filter(e => e.hasFeature(h.oNc.HUB)), t = e => {
+            d.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, o.X)(e);
         };
     return (0, i.jsxs)(s.Fragment, {
         children: [
@@ -40,7 +40,7 @@ function g() {
                 children: (0, i.jsx)(a.FormTitle, {
                     tag: 'h2',
                     className: I.title,
-                    children: h.Z.Messages.ADD_FRIEND_MAKE_FRIENDS
+                    children: E.Z.Messages.ADD_FRIEND_MAKE_FRIENDS
                 })
             }),
             (0, i.jsxs)('div', {
@@ -53,8 +53,8 @@ function g() {
                     }), e.name, () => {
                         t(e.id);
                     })),
-                    m(a.CompassIcon, h.Z.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
-                        (0, r.AQ)(), d.default.track(E.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, l.uL)(E.Z5c.GUILD_DISCOVERY);
+                    m(a.CompassIcon, E.Z.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
+                        (0, r.AQ)(), d.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, l.uL)(h.Z5c.GUILD_DISCOVERY);
                     })
                 ]
             })

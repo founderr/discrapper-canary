@@ -3,7 +3,7 @@ n.d(t, {
         return l;
     }
 });
-var i, s, a, r, l, o, c = n(735250), d = n(470079), u = n(442837), _ = n(570140), E = n(16084), h = n(855775), I = n(689938);
+var i, s, a, r, l, o, c = n(735250), d = n(470079), u = n(442837), _ = n(570140), h = n(16084), E = n(855775), I = n(689938);
 (i = l || (l = {})).SHORT = 'SHORT', i.LONG = 'LONG';
 class m extends (o = d.PureComponent) {
     getText(e, t) {
@@ -22,7 +22,7 @@ class m extends (o = d.PureComponent) {
         }
     }
     componentWillUnmount() {
-        null != this.props.purchaseError && _.Z.wait(() => E.pB());
+        null != this.props.purchaseError && _.Z.wait(() => h.pB());
     }
     render() {
         let {
@@ -41,4 +41,4 @@ r = { messageStyle: 'LONG' }, (a = 'defaultProps') in (s = m) ? Object.definePro
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : s[a] = r, t.Z = u.ZP.connectStores([h.Z], () => ({ purchaseError: h.Z.error }))(m);
+}) : s[a] = r, t.Z = u.ZP.connectStores([E.Z], () => ({ purchaseError: E.Z.error }))(m);

@@ -1,9 +1,9 @@
 e.exports = {
     emojiListRow: 'emojiListRow_fbfedd',
+    newlyAddedHighlightContainer: 'newlyAddedHighlightContainer_fbfedd',
     topEmojiSectionContainer: 'topEmojiSectionContainer_fbfedd',
     topEmojiContainer: 'topEmojiContainer_fbfedd',
     noEmojis: 'noEmojis_fbfedd',
-    newlyAddedHighlightContainer: 'newlyAddedHighlightContainer_fbfedd',
     newlyAddedBadge: 'newlyAddedBadge_fbfedd',
     alignRight: 'alignRight_fbfedd',
     newlyAddedBadgeMedium: 'newlyAddedBadgeMedium_fbfedd',

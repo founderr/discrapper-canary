@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(266067), r = n(442837), l = n(493683), o = n(112724), c = n(108427), d = n(184107), u = n(410575), _ = n(613311), E = n(601564), h = n(981631), I = n(256964);
+var i = n(735250), s = n(470079), a = n(266067), r = n(442837), l = n(493683), o = n(112724), c = n(108427), d = n(184107), u = n(410575), _ = n(613311), h = n(601564), E = n(981631), I = n(256964);
 function m(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -14,7 +14,7 @@ class g extends s.Component {
     }
     render() {
         return null != this.props.skuId ? (0, i.jsx)(u.Z, {
-            page: h.ZY5.CHANNEL_STORE_LISTING,
+            page: E.ZY5.CHANNEL_STORE_LISTING,
             root: !0,
             children: (0, i.jsx)('div', {
                 className: I.applicationStore,
@@ -43,7 +43,7 @@ class g extends s.Component {
                 inputSkuId: s,
                 fetchStoreListing: this.fetchStoreListing,
                 location: t,
-                pageSize: (0, E.getPageSize)(a)
+                pageSize: (0, h.getPageSize)(a)
             });
         });
     }

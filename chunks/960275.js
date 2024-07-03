@@ -9,7 +9,7 @@ function u(e, t, n) {
     }) : e[t] = n, e;
 }
 let _ = new Set();
-class E extends s.Z {
+class h extends s.Z {
     _initialize() {
         i.Z.subscribe('MESSAGE_CREATE', this.handleMessageCreate), i.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.handleSettingsUpdate);
     }
@@ -32,10 +32,10 @@ class E extends s.Z {
             } = e;
             if (!c.Z.isEnabled())
                 return !1;
-            let E = a.default.getId();
-            if ((null == u ? void 0 : u.find(e => e.id === E)) != null ? (0, r.T)(o.hn.PING_ME) : (null !== (t = null == u ? void 0 : u.length) && void 0 !== t ? t : 0) > 0 && (null == i ? void 0 : i.id) === E && (0, r.T)(o.hn.PING_SOMEONE), !(0, d.wU)(null == i ? void 0 : i.id, E, s, _))
+            let h = a.default.getId();
+            if ((null == u ? void 0 : u.find(e => e.id === h)) != null ? (0, r.T)(o.hn.PING_ME) : (null !== (t = null == u ? void 0 : u.length) && void 0 !== t ? t : 0) > 0 && (null == i ? void 0 : i.id) === h && (0, r.T)(o.hn.PING_SOMEONE), !(0, d.wU)(null == i ? void 0 : i.id, h, s, _))
                 return !1;
-            let h = d.ZP.getMostRecentMessageCombo(n), {combo: I} = null != h ? h : {};
+            let E = d.ZP.getMostRecentMessageCombo(n), {combo: I} = null != E ? E : {};
             if (null == I)
                 return !1;
             Object.values(o.hn).forEach(e => {
@@ -48,4 +48,4 @@ class E extends s.Z {
         });
     }
 }
-t.Z = new E();
+t.Z = new h();

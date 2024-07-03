@@ -1,22 +1,22 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(286379), c = n(442837), d = n(704215), u = n(481060), _ = n(150063), E = n(45114), h = n(230711), I = n(112724), m = n(183126), g = n(607070), p = n(209613), T = n(325708), S = n(320149), C = n(252618), f = n(605236), N = n(243778), A = n(984370), Z = n(797614), L = n(359110), v = n(6025), O = n(897473), R = n(108427), x = n(970731), P = n(210887), b = n(433355), M = n(592125), D = n(819640), y = n(151827), j = n(626135), U = n(792125), G = n(879041), w = n(647090), k = n(385956), B = n(610697), H = n(26373), V = n(486622), F = n(922409), Y = n(899740), W = n(177033), z = n(355350), K = n(307947), q = n(96479), Q = n(480874), X = n(687683), J = n(981631), $ = n(921944), ee = n(526761), et = n(689938), en = n(757833), ei = n(489919);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(286379), c = n(442837), d = n(704215), u = n(481060), _ = n(150063), h = n(45114), E = n(230711), I = n(112724), m = n(183126), g = n(607070), p = n(209613), T = n(325708), S = n(320149), f = n(252618), C = n(605236), N = n(243778), A = n(984370), Z = n(797614), L = n(359110), v = n(6025), O = n(897473), R = n(108427), x = n(970731), b = n(210887), P = n(433355), M = n(592125), D = n(819640), y = n(151827), j = n(626135), U = n(792125), G = n(879041), k = n(647090), w = n(385956), B = n(610697), H = n(26373), V = n(486622), F = n(922409), Y = n(899740), W = n(177033), z = n(355350), K = n(307947), q = n(96479), Q = n(480874), X = n(687683), J = n(981631), $ = n(921944), ee = n(526761), et = n(689938), en = n(757833), ei = n(489919);
 function es() {
     let e = s.useRef(null), t = (0, Y.q)(), n = (0, W.Z)(), a = (0, H.K)(), c = (0, m.N)(), d = n.length > 0 ? null == n ? void 0 : n[0].channel.id : null, _ = (0, G.e)({ location: 'message-request-page-web' });
     s.useEffect(() => {
         if (!!_ && null != d)
-            (0, E.ES)(d);
+            (0, h.ES)(d);
     }, [
         d,
         _
     ]);
-    let h = s.useCallback(() => {
+    let E = s.useCallback(() => {
             (0, u.showToast)((0, u.createToast)(et.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE));
-        }, []), {rejectAll: I} = (0, V.m)({ onError: h }), g = (0, p.Z)('message-requests-list'), {channelId: T} = (0, F._)(), S = s.useCallback(() => {
+        }, []), {rejectAll: I} = (0, V.m)({ onError: E }), g = (0, p.Z)('message-requests-list'), {channelId: T} = (0, F._)(), S = s.useCallback(() => {
             I(n.map(e => e.channel.id));
         }, [
             n,
             I
-        ]), C = s.useCallback(e => {
+        ]), f = s.useCallback(e => {
             var t, s;
             let {row: l} = e, o = n[l], c = null === (s = n[l + 1]) || void 0 === s ? void 0 : null === (t = s.channel) || void 0 === t ? void 0 : t.id, d = o.channel.id;
             return (0, i.jsx)(q.Z, {
@@ -33,7 +33,7 @@ function es() {
             a,
             n,
             T
-        ]), f = s.useCallback(() => (0, i.jsxs)(y.Z, {
+        ]), C = s.useCallback(() => (0, i.jsxs)(y.Z, {
             className: en.sectionTitle,
             children: [
                 t > 0 ? et.Z.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({ count: t }) : et.Z.Messages.MESSAGE_REQUESTS_PAGE_TITLE,
@@ -84,8 +84,8 @@ function es() {
                     paddingBottom: 24,
                     sectionHeight: X.oi,
                     rowHeight: X.WN,
-                    renderSection: f,
-                    renderRow: C,
+                    renderSection: C,
+                    renderRow: f,
                     sections: [n.length],
                     chunkSize: 30,
                     fade: !0,
@@ -99,7 +99,7 @@ function ea(e) {
     let {
             pageWidth: t,
             onSidebarResize: n
-        } = e, s = (0, c.e7)([b.ZP], () => b.ZP.getSidebarState(b.uZ)), a = (0, c.e7)([M.Z], () => M.Z.getChannel(null == s ? void 0 : s.channelId));
+        } = e, s = (0, c.e7)([P.ZP], () => P.ZP.getSidebarState(P.uZ)), a = (0, c.e7)([M.Z], () => M.Z.getChannel(null == s ? void 0 : s.channelId));
     if (null == s || s.type !== O.tI.VIEW_MESSAGE_REQUEST || null == a || !a.isPrivate())
         return null;
     let r = t - J.R7I;
@@ -109,7 +109,7 @@ function ea(e) {
         onWidthChange: n,
         children: (0, i.jsx)(S.Z, {
             channel: a,
-            baseChannelId: b.uZ
+            baseChannelId: P.uZ
         })
     });
 }
@@ -128,7 +128,7 @@ let er = function (e) {
     }, el = e => {
         let t = (0, B.Z)(), n = () => D.Z.hasLayers() || (0, u.hasAnyModalOpen)(), a = (0, c.e7)([g.Z], () => g.Z.useReducedMotion);
         return s.useEffect(() => {
-            (0, f.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+            (0, C.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
         }, []), (0, i.jsx)(N.Z, {
             contentTypes: [d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
             children: s => {
@@ -145,7 +145,7 @@ let er = function (e) {
                             secondaryButtonCTA: et.Z.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
                             className: en.messageRequestCoachmark,
                             onClick: e => {
-                                e.stopPropagation(), h.Z.open(J.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: ee.to.MESSAGE_REQUESTS });
+                                e.stopPropagation(), E.Z.open(J.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: ee.to.MESSAGE_REQUESTS });
                             },
                             markAsDismissed: l,
                             caretPosition: x.DF.TOP_CENTER,
@@ -171,12 +171,12 @@ let ec = (0, I.Z)(function (e) {
     s.useEffect(() => {
         _.Y(J.Z5c.MESSAGE_REQUESTS), (0, R.e)('message-requests'), j.default.track(J.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), Z.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     }, []);
-    let a = (0, c.e7)([P.Z], () => P.Z.theme), l = (0, z.w)(), [d, E] = s.useState(!1), h = (0, c.e7)([b.ZP], () => {
-            let e = b.ZP.getSidebarState(b.uZ);
+    let a = (0, c.e7)([b.Z], () => b.Z.theme), l = (0, z.w)(), [d, h] = s.useState(!1), E = (0, c.e7)([P.ZP], () => {
+            let e = P.ZP.getSidebarState(P.uZ);
             return null != e && e.type === O.tI.VIEW_MESSAGE_REQUEST ? e : null;
-        }), I = null == h ? void 0 : h.channelId, m = null != h, g = (0, k.T)(I), p = (0, w.J)(I);
+        }), I = null == E ? void 0 : E.channelId, m = null != E, g = (0, w.T)(I), p = (0, k.J)(I);
     s.useEffect(() => {
-        null != I && !g && p && m && ((0, L.Kh)(I), v.Z.closeChannelSidebar(b.uZ));
+        null != I && !g && p && m && ((0, L.Kh)(I), v.Z.closeChannelSidebar(P.uZ));
     }, [
         I,
         p,
@@ -184,7 +184,7 @@ let ec = (0, I.Z)(function (e) {
         g
     ]);
     let [T, S] = s.useState(X.pS.REQUESTS);
-    return (0, C.Tt)({ location: et.Z.Messages.MESSAGE_REQUESTS }), (0, i.jsxs)(i.Fragment, {
+    return (0, f.Tt)({ location: et.Z.Messages.MESSAGE_REQUESTS }), (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
                 className: r()(ei.chat, en.container, {
@@ -234,7 +234,7 @@ let ec = (0, I.Z)(function (e) {
             m && (0, i.jsx)(ea, {
                 pageWidth: t,
                 onSidebarResize: (e, t) => {
-                    E(t);
+                    h(t);
                 }
             })
         ]

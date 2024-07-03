@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(481060), o = n(100527), c = n(484459), d = n(103575), u = n(366966), _ = n(409216), E = n(51144), h = n(981631), I = n(689938), m = n(287644);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(481060), o = n(100527), c = n(484459), d = n(103575), u = n(366966), _ = n(409216), h = n(51144), E = n(981631), I = n(689938), m = n(287644);
 function g(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -9,7 +9,7 @@ function g(e, t, n) {
     }) : e[t] = n, e;
 }
 let p = {
-    [h.AzA.NOW_PLAYING]: {
+    [E.AzA.NOW_PLAYING]: {
         single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
             user1: e.username,
             user1Hook: () => t(e)
@@ -22,7 +22,7 @@ let p = {
         }),
         other: e => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_OTHER.format({ count: e })
     },
-    [h.AzA.RECENTLY_PLAYED]: {
+    [E.AzA.RECENTLY_PLAYED]: {
         single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_SINGLE.format({
             user1: e.username,
             user1Hook: () => t(e)
@@ -35,7 +35,7 @@ let p = {
         }),
         other: e => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_OTHER.format({ count: e })
     },
-    [h.AzA.EVER_PLAYED]: {
+    [E.AzA.EVER_PLAYED]: {
         single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_SINGLE.format({
             user1: e.username,
             user1Hook: () => t(e)
@@ -103,7 +103,7 @@ class T extends s.PureComponent {
         super(...e), g(this, 'renderUserTooltip', (e, t, n) => (0, i.jsxs)('div', {
             className: m.tooltip,
             children: [
-                (0, i.jsx)('div', { children: E.ZP.getUserTag(e) }),
+                (0, i.jsx)('div', { children: h.ZP.getUserTag(e) }),
                 (0, i.jsx)(u.ZP, {
                     className: m.tooltipTimestamp,
                     start: t,
@@ -126,7 +126,7 @@ class T extends s.PureComponent {
                 position: 'right',
                 children: t => (0, i.jsx)(l.Tooltip, {
                     text: this.renderUserTooltip(e, a.startTime, a.endTime),
-                    'aria-label': (0, E.W5)(e, { decoration: 'never' }),
+                    'aria-label': (0, h.W5)(e, { decoration: 'never' }),
                     children: n => (0, i.jsx)(l.Avatar, {
                         className: r()(m.playerAvatar, { [m.avatarMasked]: !s }),
                         src: e.getAvatarURL(void 0, 32),

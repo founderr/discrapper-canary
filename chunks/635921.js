@@ -67,10 +67,10 @@ t.Z = e => {
             subscriptionTier: d,
             hideSparkles: p,
             hideSubscribeAndGiftButton: m,
-            entrypoint: O
-        } = e, {analyticsLocations: b} = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA), P = (0, E._O)(), L = (0, u.Nx)(), v = (0, R.Vi)(), Z = (0, i.e7)([_.Z], () => _.Z.affinities), D = (0, I.Z)(), {enabled: B} = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }), j = O === N.EZ.ApplicationStoreHome && null != D && B, U = Z.length > 0;
+            entrypoint: b
+        } = e, {analyticsLocations: O} = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA), P = (0, E._O)(), L = (0, u.Nx)(), v = (0, R.Vi)(), Z = (0, i.e7)([_.Z], () => _.Z.affinities), D = (0, I.Z)(), {enabled: B} = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }), j = b === N.EZ.ApplicationStoreHome && null != D && B, U = Z.length > 0;
     return (0, s.jsx)(c.Gt, {
-        value: b,
+        value: O,
         children: (0, s.jsxs)('div', {
             className: r()(S.container, n, {
                 [S.settingsContainer]: !t,

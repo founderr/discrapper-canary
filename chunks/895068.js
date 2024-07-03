@@ -6,7 +6,7 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i, s, a, r, l = n(735250), o = n(470079), c = n(920906), d = n(143927), u = n(481060), _ = n(110924), E = n(393903), h = n(638730), I = n(970606), m = n(624383), g = n(945124), p = n(231467), T = n(931515), S = n(702646), C = n(207796), f = n(526282), N = n(777734), A = n(976757), Z = n(981631), L = n(689938), v = n(477975);
+var i, s, a, r, l = n(735250), o = n(470079), c = n(920906), d = n(143927), u = n(481060), _ = n(110924), h = n(393903), E = n(638730), I = n(970606), m = n(624383), g = n(945124), p = n(231467), T = n(931515), S = n(702646), f = n(207796), C = n(526282), N = n(777734), A = n(976757), Z = n(981631), L = n(689938), v = n(477975);
 let O = 40;
 function R(e) {
     let {
@@ -19,35 +19,35 @@ function R(e) {
             clans: r,
             searchResult: R,
             searchCriteria: x
-        } = (0, T.Qc)(), P = (0, C.GN)(e => e.selectedTraits, d.Z), b = (0, _.Z)(R), [M, D] = o.useState(0), y = o.useMemo(() => ({ height: M }), [M]), j = (0, c.useSpring)({
+        } = (0, T.Qc)(), b = (0, f.GN)(e => e.selectedTraits, d.Z), P = (0, _.Z)(R), [M, D] = o.useState(0), y = o.useMemo(() => ({ height: M }), [M]), j = (0, c.useSpring)({
             opacity: M > 0 ? 1 : 0,
             config: c.config.stiff
-        }), U = 'default' !== i, G = Math.min(null != t ? t : 1024, 2000), w = o.useMemo(() => {
+        }), U = 'default' !== i, G = Math.min(null != t ? t : 1024, 2000), k = o.useMemo(() => {
             let e = G / 256, t = G / 376, n = G / e, i = G / t;
             return i > 360 ? Math.floor(t - (t - e) / 2) : n < 240 ? Math.max(e, t) : e;
-        }, [G]), k = o.useCallback(e => {
+        }, [G]), w = o.useCallback(e => {
             if (null == e) {
                 D(0);
                 return;
             }
             D(e.getBoundingClientRect().y + 8 + 400 + 64);
-        }, []), B = (0, E.y)(k), H = o.useCallback(e => {
-            k(B.current), null != e && (null == s || s(e));
+        }, []), B = (0, h.y)(w), H = o.useCallback(e => {
+            w(B.current), null != e && (null == s || s(e));
         }, [
-            k,
+            w,
             B,
             s
-        ]), V = (0, h.h)(H, 10, [H], {
+        ]), V = (0, E.h)(H, 10, [H], {
             leading: !0,
             trailing: !0
         });
     o.useEffect(() => {
         if (null != R && !!(0, A.Pw)(R))
-            (!(null != b && (0, A.Pw)(b)) || !(b.loadedAt >= R.loadedAt)) && (0, I.Oe)(R.items.map(e => e.id), 'top_picks', x);
+            (!(null != P && (0, A.Pw)(P)) || !(P.loadedAt >= R.loadedAt)) && (0, I.Oe)(R.items.map(e => e.id), 'top_picks', x);
     }, [
         x,
         R,
-        b,
+        P,
         H,
         n
     ]), o.useEffect(() => {
@@ -133,9 +133,9 @@ function R(e) {
             default:
                 return [];
             }
-        }(r, w, i), [
+        }(r, k, i), [
             r,
-            w,
+            k,
             i
         ]), Y = o.useMemo(() => new Set(x.games), [x.games]), W = o.useCallback((e, t, n, i) => {
             var s;
@@ -149,7 +149,7 @@ function R(e) {
             return (0, l.jsx)(p.ZP, {
                 clan: o,
                 affinity: null !== (s = o.affininty) && void 0 !== s ? s : (0, g.y)(o, x),
-                traitsToHighlight: P,
+                traitsToHighlight: b,
                 className: v.card,
                 style: n,
                 source: Z.jXE.DISCOVER_SEARCH,
@@ -159,7 +159,7 @@ function R(e) {
         }, [
             x,
             F,
-            P,
+            b,
             Y
         ]), z = o.useCallback((e, t) => {
             let {
@@ -169,7 +169,7 @@ function R(e) {
             } = F[e];
             switch (a) {
             case 'upsell':
-                return (0, l.jsx)(f.Z, {});
+                return (0, l.jsx)(C.Z, {});
             case 'hero':
                 return (0, l.jsx)(m.c, {
                     title: L.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,
@@ -234,7 +234,7 @@ function R(e) {
                         let {items: t} = e;
                         return t.length;
                     }),
-                    columns: w,
+                    columns: k,
                     itemGutter: 16,
                     paddingHorizontal: 16,
                     paddingVertical: 'upsell' === i ? 64 : 0,

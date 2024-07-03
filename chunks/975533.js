@@ -1,4 +1,4 @@
-var i = n(570140), s = n(846027), a = n(13245), r = n(287734), l = n(872810), o = n(223245), c = n(317770), d = n(924557), u = n(39604), _ = n(569545), E = n(722835), h = n(703656), I = n(641015), m = n(183584), g = n(199902), p = n(131951), T = n(246946), S = n(808506), C = n(237997), f = n(626135), N = n(554174), A = n(981631), Z = n(65154);
+var i = n(570140), s = n(846027), a = n(13245), r = n(287734), l = n(872810), o = n(223245), c = n(317770), d = n(924557), u = n(39604), _ = n(569545), h = n(722835), E = n(703656), I = n(641015), m = n(183584), g = n(199902), p = n(131951), T = n(246946), S = n(808506), f = n(237997), C = n(626135), N = n(554174), A = n(981631), Z = n(65154);
 let L = {
     [A.kg4.TOGGLE_PRIORITY_SPEAKER]: {
         onTrigger() {
@@ -81,7 +81,7 @@ let L = {
         onTrigger(e) {
             let t = (0, N.Z)();
             if (null != t)
-                e ? a.Z.setUILocked(!C.Z.isUILocked(t), t) : a.Z.setInputLocked(!S.Z.isInputLocked(t), t);
+                e ? a.Z.setUILocked(!f.Z.isUILocked(t), t) : a.Z.setInputLocked(!S.Z.isInputLocked(t), t);
         },
         keyEvents: {
             keyup: !0,
@@ -91,7 +91,7 @@ let L = {
     [A.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
         onTrigger() {
             let e = S.Z.getFocusedPID(), t = null != e;
-            null != e && t && C.Z.isPinned(A.Odu.TEXT) && S.Z.isReady(e) && S.Z.isInputLocked(e) && a.Z.activateRegion(A.O0n.TEXT_WIDGET);
+            null != e && t && f.Z.isPinned(A.Odu.TEXT) && S.Z.isReady(e) && S.Z.isInputLocked(e) && a.Z.activateRegion(A.O0n.TEXT_WIDGET);
         },
         keyEvents: {
             keyup: !0,
@@ -103,7 +103,7 @@ let L = {
             let e = g.Z.getCurrentUserActiveStream();
             if (null != e)
                 return (0, l.g)((0, _.V9)(e));
-            (0, E.Z)();
+            (0, h.Z)();
         },
         keyEvents: {
             keyup: !0,
@@ -120,7 +120,7 @@ let L = {
         }
     },
     [A.kg4.NAVIGATE_BACK]: {
-        onTrigger: () => (0, h.op)(),
+        onTrigger: () => (0, E.op)(),
         keyEvents: {
             keyup: !0,
             keydown: !1,
@@ -129,7 +129,7 @@ let L = {
         }
     },
     [A.kg4.NAVIGATE_FORWARD]: {
-        onTrigger: () => (0, h.eH)(),
+        onTrigger: () => (0, E.eH)(),
         keyEvents: {
             keyup: !0,
             keydown: !1,
@@ -142,7 +142,7 @@ let L = {
             if (!(0, I.D)())
                 return;
             let e = (0, N.Z)();
-            null != e && (C.Z.isUILocked(e) ? (0, m.IN)(!0, e) : (0, m.oZ)(e));
+            null != e && (f.Z.isUILocked(e) ? (0, m.IN)(!0, e) : (0, m.oZ)(e));
         },
         keyEvents: {
             keyup: !0,
@@ -166,7 +166,7 @@ let L = {
     },
     [A.kg4.SAVE_CLIP]: {
         onTrigger: () => {
-            (0, d.ln)() && (f.default.track(A.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, u.C1)());
+            (0, d.ln)() && (C.default.track(A.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, u.C1)());
         },
         keyEvents: {
             keyup: !1,

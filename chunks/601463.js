@@ -10,17 +10,17 @@ function u(e) {
             signed: n,
             setSigned: u,
             sidebarWidth: _,
-            windowWidth: E,
-            transition: h,
+            windowWidth: h,
+            transition: E,
             brandPrimaryColor: I
-        } = e, m = s.useMemo(() => (E - _) / 2, [
+        } = e, m = s.useMemo(() => (h - _) / 2, [
             _,
-            E
+            h
         ]);
     return (0, i.jsxs)('div', {
         className: d.sidebarContent,
         children: [
-            h((e, t) => t && (0, i.jsx)(a.animated.div, {
+            E((e, t) => t && (0, i.jsx)(a.animated.div, {
                 className: d.sidebarLeftDecorationContainer,
                 style: {
                     opacity: e.opacity,

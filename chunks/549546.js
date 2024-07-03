@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 });
 var i = n(735250);
 n(470079);
 var s = n(120356), a = n.n(s), r = n(481060), l = n(969832), o = n(572004), c = n(51144), d = n(785717), u = n(689938), _ = n(774091);
-function E(e) {
+function h(e) {
     let {
             user: t,
             isHovering: n

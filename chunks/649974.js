@@ -1,5 +1,5 @@
-var i, s, a, r, l = n(442837), o = n(570140), c = n(656063), d = n(814443), u = n(158776), _ = n(594174), E = n(981631);
-let h = !1, I = {}, m = {};
+var i, s, a, r, l = n(442837), o = n(570140), c = n(656063), d = n(814443), u = n(158776), _ = n(594174), h = n(981631);
+let E = !1, I = {}, m = {};
 function g(e) {
     let t = !1;
     return e.forEach(e => {
@@ -20,7 +20,7 @@ function T(e) {
     } = e;
     if (null == t)
         return !1;
-    let i = n.filter(e => e.type !== E.IIU.CUSTOM_STATUS);
+    let i = n.filter(e => e.type !== h.IIU.CUSTOM_STATUS);
     if (0 === i.length)
         return p(t.id);
     let s = !1;
@@ -55,7 +55,7 @@ function T(e) {
 }
 function S() {
     let e = !1;
-    if (!d.Z.needsRefresh() && !h) {
+    if (!d.Z.needsRefresh() && !E) {
         let t;
         I = {}, m = {}, t = !1, u.Z.getUserIds().forEach(e => {
             let n = _.default.getUser(e);
@@ -65,9 +65,9 @@ function S() {
             }) || t);
         }), e = t;
     }
-    return h = !d.Z.needsRefresh(), e;
+    return E = !d.Z.needsRefresh(), e;
 }
-class C extends (r = l.ZP.Store) {
+class f extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(d.Z), this.syncWith([d.Z], S);
     }
@@ -87,12 +87,12 @@ class C extends (r = l.ZP.Store) {
         return m[e];
     }
 }
-a = 'NowPlayingStore', (s = 'displayName') in (i = C) ? Object.defineProperty(i, s, {
+a = 'NowPlayingStore', (s = 'displayName') in (i = f) ? Object.defineProperty(i, s, {
     value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : i[s] = a, t.Z = new C(o.Z, {
+}) : i[s] = a, t.Z = new f(o.Z, {
     CONNECTION_OPEN: function () {
         I = {}, m = {};
     },

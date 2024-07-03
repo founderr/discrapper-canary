@@ -1,5 +1,5 @@
 n(653041);
-var i, s = n(392711), a = n.n(s), r = n(442837), l = n(570140), o = n(194359), c = n(81825), d = n(5254), u = n(199902), _ = n(271383), E = n(430824), h = n(158776), I = n(699516), m = n(594174), g = n(981631);
+var i, s = n(392711), a = n.n(s), r = n(442837), l = n(570140), o = n(194359), c = n(81825), d = n(5254), u = n(199902), _ = n(271383), h = n(430824), E = n(158776), I = n(699516), m = n(594174), g = n(981631);
 function p(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -17,22 +17,22 @@ function T(e) {
 }
 function S(e) {
     return {
-        status: h.Z.getStatus(e),
-        isMobile: h.Z.isMobileOnline(e),
-        activities: h.Z.getActivities(e),
+        status: E.Z.getStatus(e),
+        isMobile: E.Z.isMobileOnline(e),
+        activities: E.Z.getActivities(e),
         applicationStream: u.Z.getAnyStreamForUser(e)
     };
 }
-function C(e) {
+function f(e) {
     let t = [];
-    return a()(_.ZP.memberOf(e)).map(E.Z.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
+    return a()(_.ZP.memberOf(e)).map(h.Z.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
         null != e && t.push(e);
     }), {
         mutualGuildsLength: t.length,
         mutualGuilds: t.slice(0, 5)
     };
 }
-class f extends c.Z {
+class C extends c.Z {
     get comparator() {
         var e, t, n, i, s;
         return [
@@ -46,20 +46,20 @@ class f extends c.Z {
 }
 class N {
     reset() {
-        let e = a().map(I.Z.getRelationships(), (e, t) => new f({
+        let e = a().map(I.Z.getRelationships(), (e, t) => new C({
                 key: t,
                 type: e,
                 nickname: I.Z.getNickname(t),
                 ...T(t),
                 ...S(t),
-                ...C(t)
-            })), t = a().map(d.Z.getSuggestions(), e => new f({
+                ...f(t)
+            })), t = a().map(d.Z.getSuggestions(), e => new C({
                 key: e.key,
                 type: 99,
                 nickname: e.name,
                 ...T(e.key),
                 ...S(e.key),
-                ...C(e.key)
+                ...f(e.key)
             }));
         return new N(a().concat(e, t));
     }
@@ -124,13 +124,13 @@ function x() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     A && (e || L !== g.pJs.ONLINE && L !== g.pJs.ADD_FRIEND) && !Z && (A = !1, Z = !0, o.Z.fetchRelationships());
 }
-function P() {
+function b() {
     if (A = !0, O ? Z = !1 : x(), v = v.reset(), R)
         return;
     let e = v.getRelationshipCounts();
     L = 0 === e[g.OGo.FRIEND] ? 0 !== e[g.OGo.PENDING_INCOMING] ? g.pJs.PENDING : g.pJs.ADD_FRIEND : g.pJs.ONLINE;
 }
-function b() {
+function P() {
     v = O ? new N() : v.reset();
 }
 function M(e) {
@@ -140,10 +140,10 @@ function M(e) {
 }
 class D extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, h.Z, m.default, E.Z, _.ZP, u.Z, d.Z), this.syncWith([I.Z], b), this.syncWith([d.Z], b), this.syncWith([m.default], M(T)), this.syncWith([
-            h.Z,
+        this.waitFor(I.Z, E.Z, m.default, h.Z, _.ZP, u.Z, d.Z), this.syncWith([I.Z], P), this.syncWith([d.Z], P), this.syncWith([m.default], M(T)), this.syncWith([
+            E.Z,
             u.Z
-        ], M(S)), P();
+        ], M(S)), b();
     }
     getState() {
         return {
@@ -156,14 +156,14 @@ class D extends (i = r.ZP.Store) {
 }
 p(D, 'displayName', 'FriendsStore'), t.ZP = new D(l.Z, {
     CONNECTION_OPEN: function () {
-        P();
+        b();
     },
     FRIENDS_SET_SECTION: function (e) {
         L = e.section, x();
     },
     CHANNEL_SELECT: function (e) {
         let {channelId: t} = e;
-        return O = null != t, b(), !O;
+        return O = null != t, P(), !O;
     },
     LOAD_RELATIONSHIPS_SUCCESS: function () {
         Z = !1;
@@ -173,7 +173,7 @@ p(D, 'displayName', 'FriendsStore'), t.ZP = new D(l.Z, {
     },
     DRAWER_SELECT_TAB: function (e) {
         let {tab: t} = e;
-        return O = t !== g.cII.FRIENDS, b(), !O;
+        return O = t !== g.cII.FRIENDS, P(), !O;
     },
     FRIENDS_SET_INITIAL_SECTION: function (e) {
         L = e.section, R = !0;

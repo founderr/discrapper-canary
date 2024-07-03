@@ -6,33 +6,33 @@ n.d(t, {
         return Z;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(920906), o = n(143927), c = n(597312), d = n(481060), u = n(393238), _ = n(410030), E = n(963202), h = n(353093), I = n(702646), m = n(207796), g = n(497189), p = n(304231), T = n(895068), S = n(490610), C = n(981631), f = n(689938), N = n(813580);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(920906), o = n(143927), c = n(597312), d = n(481060), u = n(393238), _ = n(410030), h = n(963202), E = n(353093), I = n(702646), m = n(207796), g = n(497189), p = n(304231), T = n(895068), S = n(490610), f = n(981631), C = n(689938), N = n(813580);
 let A = (e, t) => {
     switch (e) {
     case m.hz.GENSHIN:
-        return t === C.BRd.DARK ? N.genshinUpsellBackgroundImageDark : N.genshinUpsellBackgroundImageLight;
+        return t === f.BRd.DARK ? N.genshinUpsellBackgroundImageDark : N.genshinUpsellBackgroundImageLight;
     case m.hz.VALORANT:
-        return t === C.BRd.DARK ? N.valorantUpsellBackgroundImageDark : N.valorantUpsellBackgroundImageLight;
+        return t === f.BRd.DARK ? N.valorantUpsellBackgroundImageDark : N.valorantUpsellBackgroundImageLight;
     }
 };
 function Z() {
     let e = (0, m.GN)(e => e.game, o.Z), t = (0, m.GN)(e => e.userUpsellScreen, o.Z), n = (0, m.GN)(e => e.setUserUpsellScreen, o.Z), {
             ref: a,
             width: c
-        } = (0, u.Z)(), [E, h] = s.useState(0), g = (0, l.useSpring)({
+        } = (0, u.Z)(), [h, E] = s.useState(0), g = (0, l.useSpring)({
             from: { scrollHeight: 0 },
-            to: { scrollHeight: E }
-        }), S = (0, _.ZP)(), f = s.useMemo(() => A(e, S), [
+            to: { scrollHeight: h }
+        }), S = (0, _.ZP)(), C = s.useMemo(() => A(e, S), [
             e,
             S
         ]), Z = s.useCallback(e => {
-            h(e.currentTarget.scrollTop);
-        }, [h]), L = s.useMemo(() => {
+            E(e.currentTarget.scrollTop);
+        }, [E]), L = s.useMemo(() => {
             switch (e) {
             case m.hz.GENSHIN:
-                return S === C.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
+                return S === f.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
             case m.hz.VALORANT:
-                return S === C.BRd.DARK ? N.valorantOnboardingBackgroundImageDark : N.valorantOnboardingBackgroundImageLight;
+                return S === f.BRd.DARK ? N.valorantOnboardingBackgroundImageDark : N.valorantOnboardingBackgroundImageLight;
             }
         }, [
             e,
@@ -86,7 +86,7 @@ function Z() {
                                 ])
                             },
                             children: [
-                                (0, i.jsx)('div', { className: f }),
+                                (0, i.jsx)('div', { className: C }),
                                 (0, i.jsx)('div', { className: N.backgroundImageBlur })
                             ]
                         }),
@@ -123,10 +123,10 @@ function Z() {
     }
 }
 function L() {
-    let e = (0, m.GN)(e => e.started, o.Z), t = (0, m.GN)(e => e.game, o.Z), {enableApplication: n} = (0, E.Fg)('ClanDiscoveryAdminContainer'), {guilds: a} = (0, E.C3)({
+    let e = (0, m.GN)(e => e.started, o.Z), t = (0, m.GN)(e => e.game, o.Z), {enableApplication: n} = (0, h.Fg)('ClanDiscoveryAdminContainer'), {guilds: a} = (0, h.C3)({
             location: 'ClanDiscoveryAdminContainer',
             includeConverted: !0
-        }), l = s.useMemo(() => a.filter(e => !(0, h.EJ)(e)), [a]), d = (0, _.ZP)(), u = s.useMemo(() => A(t, d), [
+        }), l = s.useMemo(() => a.filter(e => !(0, E.EJ)(e)), [a]), d = (0, _.ZP)(), u = s.useMemo(() => A(t, d), [
             t,
             d
         ]), I = !e && n;
@@ -152,8 +152,8 @@ function L() {
                     ]
                 }),
                 (0, i.jsx)(S.Z, {
-                    title: f.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
-                    subtitle: I ? f.Z.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
+                    title: C.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
+                    subtitle: I ? C.Z.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
                 })
             ]
         })

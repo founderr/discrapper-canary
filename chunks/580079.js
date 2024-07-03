@@ -1,8 +1,8 @@
 n(653041), n(47120), n(724458);
 var i, s, a, r, l = n(392711), o = n.n(l), c = n(442837), d = n(570140), u = n(592125);
 n(914010);
-var _ = n(709054), E = n(176505);
-let h = {}, I = {}, m = {}, g = {};
+var _ = n(709054), h = n(176505);
+let E = {}, I = {}, m = {}, g = {};
 function p(e) {
     let t = I[e];
     if (null == t)
@@ -17,7 +17,7 @@ function p(e) {
     m[e] = Date.now();
 }
 function T(e, t, n, i) {
-    h[e].add(t);
+    E[e].add(t);
     let s = m[t];
     (null == s || s + 300000 > Date.now()) && p(t), null == I[t] && (I[t] = []), I[t].push({
         id: n,
@@ -28,35 +28,35 @@ function S(e) {
     let {channel: t} = e;
     delete I[t.id], delete m[t.id];
 }
-class C extends (i = c.ZP.Store) {
+class f extends (i = c.ZP.Store) {
     getActiveChannelsFetchStatus(e) {
         return g[e];
     }
     getActiveChannelIds(e) {
-        return h[e];
+        return E[e];
     }
     getChannelMessageData(e) {
         return I[e];
     }
     shouldFetch(e) {
         var t;
-        return null == h[e] && !(null === (t = g[e]) || void 0 === t ? void 0 : t.loading);
+        return null == E[e] && !(null === (t = g[e]) || void 0 === t ? void 0 : t.loading);
     }
 }
-r = 'ActiveChannelsStore', (a = 'displayName') in (s = C) ? Object.defineProperty(s, a, {
+r = 'ActiveChannelsStore', (a = 'displayName') in (s = f) ? Object.defineProperty(s, a, {
     value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : s[a] = r, new C(d.Z, {
+}) : s[a] = r, new f(d.Z, {
     CHANNEL_SELECT: function (e) {
         let {
             channelId: t,
             guildId: n
         } = e;
-        if (!(0, E.ME)(t) || null == n)
+        if (!(0, h.ME)(t) || null == n)
             return !1;
-        let i = h[n];
+        let i = E[n];
         if (null == i)
             return !1;
         i.forEach(e => {
@@ -67,7 +67,7 @@ r = 'ActiveChannelsStore', (a = 'displayName') in (s = C) ? Object.definePropert
             var t, n;
             return -(null !== (n = null === (t = I[e]) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0);
         }).value();
-        h[n] = new Set(s);
+        E[n] = new Set(s);
     },
     MESSAGE_CREATE: function (e) {
         var t;
@@ -83,13 +83,13 @@ r = 'ActiveChannelsStore', (a = 'displayName') in (s = C) ? Object.definePropert
         if (null == r)
             return !1;
         let l = r.guild_id;
-        if (null == l || null == h[l])
+        if (null == l || null == E[l])
             return !1;
         T(l, n, i.id, null === (t = i.author) || void 0 === t ? void 0 : t.id);
     },
     GUILD_DELETE: function (e) {
         let {guild: t} = e;
-        delete h[t.id];
+        delete E[t.id];
     },
     CHANNEL_DELETE: S,
     THREAD_DELETE: S,
@@ -110,7 +110,7 @@ r = 'ActiveChannelsStore', (a = 'displayName') in (s = C) ? Object.definePropert
             loading: !1,
             error: null,
             fetchedAt: Date.now()
-        }, h[t] = new Set(), n.forEach(e => {
+        }, E[t] = new Set(), n.forEach(e => {
             let {
                 channel_id: n,
                 messages: i

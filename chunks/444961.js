@@ -1,5 +1,5 @@
 n(47120);
-var i = n(846519), s = n(570140), a = n(287734), r = n(317770), l = n(199902), o = n(592125), c = n(430824), d = n(517100), u = n(19780), _ = n(70956), E = n(358085), h = n(981631);
+var i = n(846519), s = n(570140), a = n(287734), r = n(317770), l = n(199902), o = n(592125), c = n(430824), d = n(517100), u = n(19780), _ = n(70956), h = n(358085), E = n(981631);
 let I = new i.V7(), m = new i.V7();
 class g extends r.Z {
     _initialize() {
@@ -10,10 +10,10 @@ class g extends r.Z {
     }
     handleIdleUpdate() {
         let e = d.Z.getIdleSince();
-        if (!E.isPlatformEmbedded)
+        if (!h.isPlatformEmbedded)
             return;
         for (let e of (I.stop(), m.stop(), l.Z.getAllActiveStreams()))
-            if (e.state !== h.jm8.ENDED)
+            if (e.state !== E.jm8.ENDED)
                 return;
         if (null == e)
             return;

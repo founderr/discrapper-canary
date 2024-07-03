@@ -4,7 +4,7 @@ n.d(t, {
     }
 }), n(411104), n(47120);
 var i, s = n(735250), a = n(470079), r = n(748780), l = n(442837), o = n(481060), c = n(210887), d = n(981631), u = n(689938), _ = n(942399);
-function E(e, t, n) {
+function h(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -13,7 +13,7 @@ function E(e, t, n) {
     }) : e[t] = n, e;
 }
 (i || (i = {})).SECTION_NO_RESULTS = 'SECTION_NO_RESULTS';
-let h = Object.freeze({
+let E = Object.freeze({
         SECTION_ALL: {
             lightSrc: n(900933),
             darkSrc: n(67764),
@@ -66,7 +66,7 @@ let h = Object.freeze({
             renderContent: () => (0, s.jsx)(o.EmptyStateText, { note: u.Z.Messages.FRIEND_REQUEST_NO_RESULTS_FOUND })
         }
     }), I = e => {
-        let {theme: t} = e, n = u.Z.Messages.FRIENDS_EMPTY_STATE_ALL, i = h.SECTION_ALL;
+        let {theme: t} = e, n = u.Z.Messages.FRIENDS_EMPTY_STATE_ALL, i = E.SECTION_ALL;
         return (0, s.jsx)(a.Fragment, {
             children: (0, s.jsxs)(o.EmptyState, {
                 theme: t,
@@ -92,17 +92,17 @@ class m extends a.PureComponent {
                 switch (e) {
                 case d.pJs.ADD_FRIEND:
                 case d.pJs.ALL:
-                    return h.SECTION_ALL;
+                    return E.SECTION_ALL;
                 case d.pJs.ONLINE:
-                    return h.SECTION_ONLINE;
+                    return E.SECTION_ONLINE;
                 case d.pJs.PENDING:
-                    return h.SECTION_PENDING;
+                    return E.SECTION_PENDING;
                 case d.pJs.SUGGESTIONS:
-                    return h.SECTION_SUGGESTIONS;
+                    return E.SECTION_SUGGESTIONS;
                 case d.pJs.BLOCKED:
-                    return h.SECTION_BLOCKED;
+                    return E.SECTION_BLOCKED;
                 case 'SECTION_NO_RESULTS':
-                    return h.SECTION_NO_RESULTS;
+                    return E.SECTION_NO_RESULTS;
                 default:
                     throw Error('FriendsEmptyState: Invalid empty state');
                 }
@@ -129,12 +129,12 @@ class m extends a.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), E(this, 'state', { opacity: new r.Z.Value(1) }), E(this, 'componentWillEnter', e => {
+        super(...e), h(this, 'state', { opacity: new r.Z.Value(1) }), h(this, 'componentWillEnter', e => {
             this.state.opacity.setValue(0), r.Z.timing(this.state.opacity, {
                 toValue: 1,
                 duration: 250
             }).start(e);
-        }), E(this, 'componentWillLeave', e => {
+        }), h(this, 'componentWillLeave', e => {
             r.Z.timing(this.state.opacity, {
                 toValue: 0,
                 duration: 250

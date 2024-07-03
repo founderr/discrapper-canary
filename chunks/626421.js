@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return E;
     }
 }), n(47120);
 var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(399606), o = n(243778), c = n(914010), d = n(566840), u = n(921944), _ = n(805953);
-let E = s.memo(function (e) {
+let h = s.memo(function (e) {
     var t, n, a;
     let {
             state: l,
@@ -13,14 +13,14 @@ let E = s.memo(function (e) {
             name: c,
             guildId: d,
             boundingRect: u
-        } = l, E = s.useMemo(() => function (e, t, n) {
+        } = l, h = s.useMemo(() => function (e, t, n) {
             return null;
         }(c, 0, 0), [
             c,
             d,
             o
         ]);
-    if (null == E)
+    if (null == h)
         return null;
     return (0, i.jsx)('div', {
         className: r()(_.upsell, !(null != (t = u) && !(t.y < 0)) && _.hidden),
@@ -28,10 +28,10 @@ let E = s.memo(function (e) {
             top: a.top,
             left: a.right - a.x
         }),
-        children: E
+        children: h
     });
 });
-function h() {
+function E() {
     let e = (0, l.e7)([c.Z], () => c.Z.getGuildId()), t = (0, d.Eg)(e), [n, s] = (0, o.U)(Object.values(t).filter(e => {
             let {disabled: t} = e;
             return !t;
@@ -44,7 +44,7 @@ function h() {
     let a = t[n];
     return null == a ? null : (0, i.jsx)('div', {
         className: _.container,
-        children: (0, i.jsx)(E, {
+        children: (0, i.jsx)(h, {
             state: a,
             markAsDismissed: s
         })

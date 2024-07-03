@@ -3,15 +3,15 @@ var i = n(735250);
 n(470079);
 var s = n(392711), a = n.n(s), r = n(481060), l = n(463395), o = n(820486), c = n(131951), d = n(65154);
 let u = new Set(['DisplayPort']), _ = !1;
-function E() {
+function h() {
     let e;
     if (_)
         return;
     let t = c.Z.getInputDeviceId(), s = c.Z.getOutputDeviceId();
     if (o.Z.getState().neverShowModal || a().isEmpty(o.Z.lastDeviceConnected))
         return;
-    let E = (0, o.X)(c.Z.getInputDevices()[t]), h = (0, o.X)(c.Z.getOutputDevices()[s]);
-    if (a().some(o.Z.lastDeviceConnected, e => u.has(e.displayName) || e.displayName === E || e.displayName === h))
+    let h = (0, o.X)(c.Z.getInputDevices()[t]), E = (0, o.X)(c.Z.getOutputDevices()[s]);
+    if (a().some(o.Z.lastDeviceConnected, e => u.has(e.displayName) || e.displayName === h || e.displayName === E))
         return;
     let I = a().some(o.Z.lastDeviceConnected, e => l.Z.isCertified(o.Z.inputDevices[e.displayName]) || l.Z.isCertified(o.Z.outputDevices[e.displayName]));
     if ((t === d.w5 && o.Z.lastInputSystemDevice.justChanged || s === d.w5 && o.Z.lastOutputSystemDevice.justChanged) && !I)
@@ -35,6 +35,6 @@ function E() {
 }
 t.Z = {
     init() {
-        o.Z.addChangeListener(E);
+        o.Z.addChangeListener(h);
     }
 };

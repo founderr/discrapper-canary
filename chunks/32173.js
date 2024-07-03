@@ -5,21 +5,21 @@ n.d(t, {
 });
 var s, a, r = n(735250);
 n(470079);
-var i = n(399606), l = n(704215), o = n(230711), c = n(410030), d = n(100527), _ = n(906732), u = n(779618), E = n(300284), T = n(703656), I = n(547972), R = n(131951), C = n(78839), p = n(63063), g = n(74538), A = n(494127), m = n(314684), N = n(687362), f = n(119269), S = n(391110), h = n(75077), M = n(474936), x = n(981631), O = n(526761), b = n(332325), P = n(689938), L = n(660372), v = n(926433), Z = n(302036), D = n(994554), B = n(704565), j = n(393305), U = n(338879), G = n(203302), y = n(766491), H = n(193943), k = n(707046), w = n(488459), F = n(334347), V = n(132015), W = n(142416), K = n(607762), Y = n(474106), z = n(567452), Q = n(572501), J = n(755590), q = n(909910), X = n(637810), $ = n(570423), ee = n(912429), et = n(91394), en = n(209672), es = n(698173), ea = n(926262);
+var i = n(399606), l = n(704215), o = n(230711), c = n(410030), d = n(100527), _ = n(906732), u = n(779618), E = n(300284), T = n(703656), I = n(547972), R = n(131951), C = n(78839), p = n(63063), g = n(74538), A = n(494127), m = n(314684), N = n(687362), f = n(119269), S = n(391110), h = n(75077), M = n(474936), x = n(981631), b = n(526761), O = n(332325), P = n(689938), L = n(660372), v = n(926433), Z = n(302036), D = n(994554), B = n(704565), j = n(393305), U = n(338879), G = n(203302), y = n(766491), H = n(193943), k = n(707046), w = n(488459), F = n(334347), V = n(132015), W = n(142416), K = n(607762), Y = n(474106), z = n(567452), Q = n(572501), J = n(755590), q = n(909910), X = n(637810), $ = n(570423), ee = n(912429), et = n(91394), en = n(209672), es = n(698173), ea = n(926262);
 (s = a || (a = {})).AVATAR_DECORATIONS = 'avatarDecorations', s.CLIENT_THEMES = 'clientThemes', s.CLIPS = 'clips', s.EARLY_ACCESS = 'earlyAccess', s.ENTRANCE_SOUNDS = 'entranceSounds', s.PROFILE_EFFECTS = 'profileEffects', s.PROFILES = 'profiles', s.REMIXING = 'remixing', s.SERVER_BOOSTS = 'serverBoosts', s.SPECIAL_MEMBER_PRICING = 'specialMemberPricing', s.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = 'specialMemberPricingSeeAllVariant', s.SPECIAL_SHOP_PERKS = 'specialShopPerks', s.UNLIMITED_SUPER_REACTIONS = 'unlimitedSuperReactions', s.SUPER_REACTIONS = 'superReactions', s.UPCOMING_DROP_UNTIMED = 'upcomingDropUntimed', s.CUSTOM_APP_ICONS = 'customAppIcons', s.MORE_EMOJI_POWER = 'moreEmojiPower', s.CUSTOM_SOUNDS_EVERYWHERE = 'customSoundsEverywhere', s.SPECIAL_STICKER_ACCESS = 'specialStickerAccess', s.LARGE_UPLOADS = 'largeUploads', s.HD_VIDEO = 'hdVideo', s.BADGE = 'badge', s.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = 'entranceSoundsSeeAllVariation', s.EARLY_ACCESS_SEE_ALL_VARIATION = 'earlyAccessSeeAllVariant', s.FREE_BOOST = 'freeBoost', s.REFERRAL_PROGRAM = 'referralProgram', s.NEW_APP_STYLES_UPDATE_JUNE_2024 = 'newAppStylesUpdateJune2024', s.SERVER_PROFILES = 'serverProfiles';
 t.Z = () => {
     let {analyticsLocations: e} = (0, _.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD), t = (0, c.ZP)(), n = P.Z.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, s = (0, i.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), a = null != s ? g.ZP.getPremiumPlanItem(s) : null, er = null != a ? g.ZP.getSkuIdForPlan(a.planId) : null, ei = er === M.Si.TIER_2, el = er === M.Si.TIER_0, {flipped: eo} = (0, A.JP)(), {flipped: ec} = (0, A.as)(), ed = (0, m.nY)({ showAnimations: !0 }), e_ = null != ed ? ed.initialPercentage : void 0, eu = null != ed ? ed.percentage : void 0, eE = (0, u.Z)(R.Z), eT = (0, N.Z)(), eI = (0, E.Z)({
-            scrollPosition: O.Y_.TRY_IT_OUT,
+            scrollPosition: b.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }), eR = () => {
-            o.Z.open(x.oAB.VOICE, O.GA, {
+            o.Z.open(x.oAB.VOICE, b.GA, {
                 openWithoutBackstack: !0,
                 analyticsLocations: e
             });
         }, eC = () => {
             (0, T.uL)(x.Z5c.COLLECTIBLES_SHOP);
         }, ep = () => {
-            o.Z.open(x.oAB.APPEARANCE, null, { scrollPosition: O.h1.CUSTOM_APP_ICONS });
+            o.Z.open(x.oAB.APPEARANCE, null, { scrollPosition: b.h1.CUSTOM_APP_ICONS });
         }, eg = {
             avatarDecorations: ei ? {
                 name: 'avatarDecorations',
@@ -64,7 +64,7 @@ t.Z = () => {
                 descriptionCta: eE ? P.Z.Messages.TAKE_ME_THERE : P.Z.Messages.LEARN_MORE,
                 pillText: P.Z.Messages.EARLY_ACCESS,
                 onCtaClick: eE ? () => {
-                    (0, I.Z)(b.Z.CLIPS, {
+                    (0, I.Z)(O.Z.CLIPS, {
                         openWithoutBackstack: !0,
                         analyticsLocations: e
                     });

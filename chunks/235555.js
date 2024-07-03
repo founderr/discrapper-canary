@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(442837), o = n(239091), c = n(476669), d = n(524331), u = n(768419), _ = n(831506), E = n(699516), h = n(594174), I = n(643126), m = n(823379), g = n(689938);
+var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(442837), o = n(239091), c = n(476669), d = n(524331), u = n(768419), _ = n(831506), h = n(699516), E = n(594174), I = n(643126), m = n(823379), g = n(689938);
 function p(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -54,17 +54,17 @@ class T extends s.PureComponent {
 }
 t.Z = l.ZP.connectStores([
     u.Z,
-    h.default,
-    E.Z,
+    E.default,
+    h.Z,
     _.Z
 ], () => {
     let e, t;
-    let n = u.Z.getSyncingWith(), i = u.Z.getActivity(), s = h.default.getCurrentUser(), a = [];
-    if (null != n ? (e = h.default.getUser(n.userId), t = n.partyId) : null != i && null != i.party && null != i.party.id && (e = s, t = i.party.id), null != t) {
+    let n = u.Z.getSyncingWith(), i = u.Z.getActivity(), s = E.default.getCurrentUser(), a = [];
+    if (null != n ? (e = E.default.getUser(n.userId), t = n.partyId) : null != i && null != i.party && null != i.party.id && (e = s, t = i.party.id), null != t) {
         var l;
-        a = r()(Array.from(null !== (l = _.Z.getParty(t)) && void 0 !== l ? l : [])).map(e => h.default.getUser(e)).filter(m.lm).orderBy([
+        a = r()(Array.from(null !== (l = _.Z.getParty(t)) && void 0 !== l ? l : [])).map(e => E.default.getUser(e)).filter(m.lm).orderBy([
             t => null == e || e.id === t.id,
-            e => E.Z.isFriend(e.id)
+            e => h.Z.isFriend(e.id)
         ], [
             'desc',
             'desc'

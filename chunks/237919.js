@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return f;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(570140), d = n(287259), u = n(819640), _ = n(490983), E = n(799777), h = n(5967), I = n(346329), m = n(981631), g = n(689938), p = n(493506);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(570140), d = n(287259), u = n(819640), _ = n(490983), h = n(799777), E = n(5967), I = n(346329), m = n(981631), g = n(689938), p = n(493506);
 function T(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -70,8 +70,8 @@ class S extends s.Component {
                 } = this.props, {searchBarRef: a} = this;
             if (i || e.ctrlKey || e.altKey || e.metaKey || null == a)
                 return;
-            let r = null === (t = (0, h.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-            if (!(r !== a.inputRef.current && (0, h.VG)(r)))
+            let r = null === (t = (0, E.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+            if (!(r !== a.inputRef.current && (0, E.VG)(r)))
                 switch (e.which) {
                 case m.yXg.ESCAPE:
                     e.target !== a.inputRef.current ? this.reset() : null != a.inputRef.current && a.blur();
@@ -105,10 +105,10 @@ class S extends s.Component {
         });
     }
 }
-function C() {
+function f() {
     let e = (0, l.e7)([u.Z], () => u.Z.hasLayers()), t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
     return (0, i.jsx)(S, {
-        activeRowKey: (0, l.e7)([E.Z], () => E.Z.activeRowKey),
+        activeRowKey: (0, l.e7)([h.Z], () => h.Z.activeRowKey),
         hasModalOpen: t || e,
         filterQuery: (0, l.e7)([_.Z], () => _.Z.applicationFilterQuery),
         applicationViewItems: (0, l.e7)([_.Z], () => _.Z.sortedFilteredLibraryApplicationViewItems)

@@ -2,7 +2,7 @@ let i;
 n(47120);
 var s = n(735250);
 n(470079);
-var a = n(481060), r = n(570140), l = n(317770), o = n(622822), c = n(391650), d = n(305325), u = n(341298), _ = n(390885), E = n(524329), h = n(995532), I = n(486472), m = n(430824), g = n(914010), p = n(594174), T = n(823379), S = n(358085), C = n(929809), f = n(179645), N = n(701476), A = n(785997), Z = n(981631), L = n(188785), v = n(630724);
+var a = n(481060), r = n(570140), l = n(317770), o = n(622822), c = n(391650), d = n(305325), u = n(341298), _ = n(390885), h = n(524329), E = n(995532), I = n(486472), m = n(430824), g = n(914010), p = n(594174), T = n(823379), S = n(358085), f = n(929809), C = n(179645), N = n(701476), A = n(785997), Z = n(981631), L = n(188785), v = n(630724);
 function O() {
     null != i && (0, a.closeModal)(i);
 }
@@ -15,7 +15,7 @@ class R extends l.Z {
     }
     handleConnectionOpen() {
         var e;
-        let t, r = f.Z.getType();
+        let t, r = C.Z.getType();
         if (null == r)
             return;
         switch (r) {
@@ -31,7 +31,7 @@ class R extends l.Z {
         let l = !1, O = g.Z.getGuildId();
         if (r === N.M5.INVITE_UNCLAIMED) {
             let e = m.Z.getGuild(O);
-            (null == e ? void 0 : e.hasVerificationGate()) && (l = !0, (0, E.RM)(e.id));
+            (null == e ? void 0 : e.hasVerificationGate()) && (l = !0, (0, h.RM)(e.id));
         }
         let R = () => 0 === I.Z.totalGuilds && !S.isPlatformEmbedded, x = o.b();
         e = [
@@ -115,10 +115,10 @@ class R extends l.Z {
                         guildId: O
                     });
                 }, { onCloseCallback: e }),
-                predicate: () => null != O && null != h.Z.get(O) && h.Z.get(O) !== h.a
+                predicate: () => null != O && null != E.Z.get(O) && E.Z.get(O) !== E.a
             }
         ], t = () => {
-            C.H(), _.Z.flowStep(v.MK.ANY, v.EW.NUF_COMPLETE, !0);
+            f.H(), _.Z.flowStep(v.MK.ANY, v.EW.NUF_COMPLETE, !0);
         }, [...e].reverse().forEach(e => {
             let n = t;
             t = () => {

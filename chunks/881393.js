@@ -1,6 +1,6 @@
 n(47120), n(653041);
 var i = n(496929), s = n(16084), a = n(558381), r = n(115130), l = n(106976), o = n(695103), c = n(996106), d = n(334288), u = n(186901), _ = n(981631);
-async function E(e, t) {
+async function h(e, t) {
     let n = t.filter(e => e.type === _.epS.SUBSCRIPTION_GROUP), i = await Promise.all(n.map(async t => await (0, l.rx)(e, t.id))), s = [];
     return i.forEach(e => {
         if (null == e)
@@ -32,14 +32,14 @@ async function E(e, t) {
         }), i.filter(e => (null == e ? void 0 : e.price) != null).forEach(e => s.push(e));
     }), s;
 }
-async function h(e) {
+async function E(e) {
     let {socket: t} = e;
     (0, d.f)(t.transport);
     let n = t.application.id;
     if (null == n)
         throw new c.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
     if (o.Z.inTestModeForApplication(n) || r.Z.inDevModeForApplication(n)) {
-        let e = await s.uE(n, !1), t = await E(n, e);
+        let e = await s.uE(n, !1), t = await h(n, e);
         return [
             ...e.filter(e => null != e.price),
             ...t
@@ -48,7 +48,7 @@ async function h(e) {
     let i = await a.oJ(n), l = i.filter(e => e.sku.type !== _.epS.SUBSCRIPTION_GROUP).map(e => e.sku).filter(e => null != e.price);
     return [
         ...l,
-        ...await E(n, i.map(e => e.sku))
+        ...await h(n, i.map(e => e.sku))
     ];
 }
 function I(e) {
@@ -65,7 +65,7 @@ t.Z = {
             u.wE,
             u.lH
         ],
-        handler: h
+        handler: E
     },
     [_.Etm.GET_ENTITLEMENTS]: {
         [u.Gp.ANY]: [
@@ -79,7 +79,7 @@ t.Z = {
             u.wE,
             u.lH
         ],
-        handler: async e => ({ skus: await h(e) })
+        handler: async e => ({ skus: await E(e) })
     },
     [_.Etm.GET_ENTITLEMENTS_EMBEDDED]: {
         [u.Gp.ANY]: [

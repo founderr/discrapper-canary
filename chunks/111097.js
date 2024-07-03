@@ -1,6 +1,6 @@
 n(411104), n(47120);
-var i = n(72924), s = n(100527), a = n(367207), r = n(996106), l = n(452426), o = n(561205), c = n(334288), d = n(852926), u = n(186901), _ = n(981631), E = n(474936);
-let h = [s.Z.RPC];
+var i = n(72924), s = n(100527), a = n(367207), r = n(996106), l = n(452426), o = n(561205), c = n(334288), d = n(852926), u = n(186901), _ = n(981631), h = n(474936);
+let E = [s.Z.RPC];
 function I(e) {
     if (null == e)
         return {
@@ -15,8 +15,8 @@ function I(e) {
 }
 function m(e, t) {
     let n = {
-        subscriptionTier: E.Si.TIER_2,
-        analyticsLocations: h,
+        subscriptionTier: h.Si.TIER_2,
+        analyticsLocations: E,
         analyticsObject: t
     };
     switch (e) {
@@ -56,15 +56,15 @@ t.Z = {
             } = I(t.transport !== u.He.POST_MESSAGE ? s : null);
             if (null == (0, o.Z)())
                 throw new r.Z({ errorCode: _.lTL.INVALID_CHANNEL }, 'Invalid channel');
-            let E = { page: _.ZY5.IN_APP };
+            let h = { page: _.ZY5.IN_APP };
             return (async () => {
                 try {
                     let e = await (0, i.S)({
                         applicationId: a,
                         skuId: n,
-                        openPremiumPaymentModal: () => m(d, E),
-                        analyticsLocations: h,
-                        analyticsLocationObject: E,
+                        openPremiumPaymentModal: () => m(d, h),
+                        analyticsLocations: E,
+                        analyticsLocationObject: h,
                         context: d
                     });
                     return l(), e;

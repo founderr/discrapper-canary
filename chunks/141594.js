@@ -16,11 +16,11 @@ t.Z = () => {
         }, [
             e,
             t
-        ]), [_, E] = (0, r.U)(n, void 0, !0), h = null != _ ? d.QQ[_] : null;
+        ]), [_, h] = (0, r.U)(n, void 0, !0), E = null != _ ? d.QQ[_] : null;
     return {
-        collectiblesShopTabNewBadgeDisplayOptions: h,
+        collectiblesShopTabNewBadgeDisplayOptions: E,
         dismissCollectiblesShopTabNewBadge: () => {
-            null != h && E(u.L.AUTO);
+            null != E && h(u.L.AUTO);
         }
     };
 };

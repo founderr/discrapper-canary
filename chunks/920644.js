@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return E;
     }
 });
 var i = n(735250);
 n(470079);
 var s = n(990547), a = n(481060), r = n(703656), l = n(153124), o = n(63063), c = n(758119), d = n(981631), u = n(689938), _ = n(100102);
-function E() {
+function h() {
     (0, c.qV)(), (0, r.uL)(d.Z5c.LOGIN);
 }
-function h(e) {
+function E(e) {
     let {
             underageMessage: t,
             transitionState: r
@@ -60,7 +60,7 @@ function h(e) {
                 children: (0, i.jsx)(a.Button, {
                     size: a.ButtonSizes.SMALL,
                     fullWidth: !0,
-                    onClick: E,
+                    onClick: h,
                     children: u.Z.Messages.AGE_GATE_UNDERAGE_BACK_TO_LOGIN
                 })
             })

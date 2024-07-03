@@ -1,7 +1,7 @@
 let i;
 var s, a, r, l, o = n(442837), c = n(570140), d = n(900849);
-let u = null, _ = !1, E = !1;
-class h extends (l = o.ZP.Store) {
+let u = null, _ = !1, h = !1;
+class E extends (l = o.ZP.Store) {
     getRecommendedGuilds() {
         return u;
     }
@@ -12,15 +12,15 @@ class h extends (l = o.ZP.Store) {
         return _;
     }
     failed() {
-        return E;
+        return h;
     }
 }
-r = 'GuildRecommendationsStore', (a = 'displayName') in (s = h) ? Object.defineProperty(s, a, {
+r = 'GuildRecommendationsStore', (a = 'displayName') in (s = E) ? Object.defineProperty(s, a, {
     value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : s[a] = r, t.Z = new h(c.Z, {
+}) : s[a] = r, t.Z = new E(c.Z, {
     GUILD_RECOMMENDATION_FETCH: function () {
         _ = !0;
     },
@@ -28,6 +28,6 @@ r = 'GuildRecommendationsStore', (a = 'displayName') in (s = h) ? Object.defineP
         u = e.recommendedGuilds.map(d.PP), i = e.loadId, _ = !1;
     },
     GUILD_RECOMMENDATION_FETCH_FAILURE: function () {
-        E = !0, _ = !1;
+        h = !0, _ = !1;
     }
 });

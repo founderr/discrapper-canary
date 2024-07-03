@@ -8,16 +8,16 @@ t.Z = (0, u.Z)(e => {
             authorizations: o,
             scopes: c,
             parsedPermissions: u,
-            responseType: E,
-            redirectUri: h,
+            responseType: h,
+            redirectUri: E,
             codeChallenge: I,
             codeChallengeMethod: m,
             state: g,
             guildId: p,
             channelId: T,
             prompt: S,
-            disableGuildSelect: C,
-            disclosures: f,
+            disableGuildSelect: f,
+            disclosures: C,
             integrationType: N
         } = e, A = 'OAuth2Authorize_'.concat(n, '_').concat(p, '_').concat(T), Z = null != N ? null == o ? void 0 : o.get(N) : void 0, L = null !== (t = null == Z ? void 0 : Z.application) && void 0 !== t ? t : r.Z.getApplication(n);
     return new Promise((e, t) => {
@@ -30,10 +30,10 @@ t.Z = (0, u.Z)(e => {
             authorizations: o,
             clientId: n,
             scopes: null != c ? c : [],
-            disclosures: null != f ? f : [],
+            disclosures: null != C ? C : [],
             callback: r,
-            responseType: E,
-            redirectUri: h,
+            responseType: h,
+            redirectUri: E,
             codeChallenge: I,
             codeChallengeMethod: m,
             state: g,
@@ -41,7 +41,7 @@ t.Z = (0, u.Z)(e => {
             guildId: p,
             channelId: T,
             prompt: S,
-            disableGuildSelect: 'boolean' == typeof C ? C : 'true' === C,
+            disableGuildSelect: 'boolean' == typeof f ? f : 'true' === f,
             integrationType: N
         }), {
             modalKey: A,

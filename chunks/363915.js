@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 });
 var i = n(735250), s = n(470079), a = n(920906), r = n(442837), l = n(481060), o = n(607070), c = n(981562);
@@ -18,12 +18,12 @@ let d = {
 function _(e) {
     var t, n, s, _;
     let {
-            state: E,
-            direction: h,
+            state: h,
+            direction: E,
             cleanUp: I,
             children: m
         } = e, g = (0, r.e7)([o.Z], () => o.Z.useReducedMotion);
-    let p = (0, a.useSpring)((t = E, n = h, s = I, _ = g, t === l.TransitionStates.MOUNTED ? {
+    let p = (0, a.useSpring)((t = h, n = E, s = I, _ = g, t === l.TransitionStates.MOUNTED ? {
         from: {
             opacity: 0,
             transform: 'translateY(40px) translateX(0px)'
@@ -71,7 +71,7 @@ function _(e) {
         })
     });
 }
-function E(e) {
+function h(e) {
     let {
             currentStep: t,
             renderItem: n,

@@ -1,9 +1,9 @@
 var i = n(735250);
 n(470079);
-var s = n(442837), a = n(481060), r = n(949389), l = n(82950), o = n(434404), c = n(899667), d = n(267642), u = n(981631), _ = n(689938), E = n(571472);
+var s = n(442837), a = n(481060), r = n(949389), l = n(82950), o = n(434404), c = n(899667), d = n(267642), u = n(981631), _ = n(689938), h = n(571472);
 t.Z = e => {
-    let {guild: t} = e, n = t.id, h = (0, s.e7)([c.Z], () => c.Z.getAppliedGuildBoostsForGuild(t.id));
-    return null == h || 0 >= (0, d._k)(h, n) ? null : (0, i.jsx)(l.Z, {
+    let {guild: t} = e, n = t.id, E = (0, s.e7)([c.Z], () => c.Z.getAppliedGuildBoostsForGuild(t.id));
+    return null == E || 0 >= (0, d._k)(E, n) ? null : (0, i.jsx)(l.Z, {
         guild: t,
         onDismissed: () => {
             (0, r.GO)(n);
@@ -14,7 +14,7 @@ t.Z = e => {
         message: _.Z.Messages.PREMIUM_GUILD_GRACE_PERIOD_NOTICE,
         trackingSource: u.PsQ.GRACE_PERIOD_NOTICE,
         type: u.vID.GUILD_BOOSTING_GRACE_PERIOD,
-        image: E,
+        image: h,
         cta: _.Z.Messages.PREMIUM_GUILD_GRACE_PERIOD_NOTICE_BUTTON,
         ctaColor: a.ButtonColors.PRIMARY
     });

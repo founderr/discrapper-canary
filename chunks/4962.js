@@ -1,16 +1,16 @@
 n(411104);
 var i, s, a = n(735250);
 n(470079);
-var r = n(120356), l = n.n(r), o = n(442837), c = n(481060), d = n(700582), u = n(451478), _ = n(689938), E = n(390826);
+var r = n(120356), l = n.n(r), o = n(442837), c = n(481060), d = n(700582), u = n(451478), _ = n(689938), h = n(390826);
 (s = i || (i = {}))[s.STAFF_NOTES = 1] = 'STAFF_NOTES';
-let h = o.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))(e => {
+let E = o.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))(e => {
         let {
             user: t,
             className: n,
             animate: i
         } = e;
         return (0, a.jsxs)('div', {
-            className: l()(E.staffReviewHeader, n),
+            className: l()(h.staffReviewHeader, n),
             children: [
                 (0, a.jsx)(d.Z, {
                     size: c.AvatarSizes.SIZE_32,
@@ -18,14 +18,14 @@ let h = o.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))(e => {
                     animate: i
                 }),
                 (0, a.jsxs)('div', {
-                    className: E.headerText,
+                    className: h.headerText,
                     children: [
                         (0, a.jsx)('div', {
-                            className: E.label,
+                            className: h.label,
                             children: _.Z.Messages.APPLICATION_STORE_STAFF_PICK
                         }),
                         (0, a.jsx)('div', {
-                            className: E.username,
+                            className: h.username,
                             children: t.username
                         })
                     ]
@@ -47,12 +47,12 @@ let h = o.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))(e => {
             return null == e ? null : (0, a.jsxs)('div', {
                 className: n,
                 children: [
-                    (0, a.jsx)(h, {
+                    (0, a.jsx)(E, {
                         user: e,
-                        className: E.header
+                        className: h.header
                     }),
                     (0, a.jsx)('div', {
-                        className: E.notes,
+                        className: h.notes,
                         children: i
                     })
                 ]

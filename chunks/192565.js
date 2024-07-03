@@ -3,7 +3,7 @@ n.d(t, {
         return A;
     }
 });
-var i = n(735250), s = n(470079), a = n(442837), r = n(224706), l = n(931240), o = n(650461), c = n(94963), d = n(745628), u = n(950279), _ = n(796918), E = n(513532), h = n(741595), I = n(974842), m = n(363915), g = n(359380), p = n(308083), T = n(689938);
+var i = n(735250), s = n(470079), a = n(442837), r = n(224706), l = n(931240), o = n(650461), c = n(94963), d = n(745628), u = n(950279), _ = n(796918), h = n(513532), E = n(741595), I = n(974842), m = n(363915), g = n(359380), p = n(308083), T = n(689938);
 function S(e) {
     let t = (0, o.Wg)(), {
             progress: n,
@@ -22,7 +22,7 @@ function S(e) {
         handleClanUpdate: s.useCallback(t => l._9(e, t), [e])
     };
 }
-let C = {
+let f = {
     [p.Wy.GAMES]: function (e) {
         let {guildId: t} = e;
         s.useEffect(() => {
@@ -48,7 +48,7 @@ let C = {
                 errors: s,
                 handleClanUpdate: a
             } = S(t);
-        return (0, i.jsx)(h.Z, {
+        return (0, i.jsx)(E.Z, {
             title: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
             description: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
             handleUpdate: e => a({ playstyle: e }),
@@ -125,17 +125,17 @@ let C = {
     },
     [p.Wy.MEMBER_APPLICATION]: function (e) {
         let {guildId: t} = e, {errors: n} = S(t);
-        return (0, i.jsx)(E.Z, {
+        return (0, i.jsx)(h.Z, {
             guildId: t,
             error: null == n ? void 0 : n.verificationForm
         });
     }
 };
-function f(e) {
+function C(e) {
     return e.currentStep.toString();
 }
 function N(e) {
-    let t = C[e.currentStep];
+    let t = f[e.currentStep];
     return (0, i.jsx)(t, { guildId: e.guildId });
 }
 function A(e) {
@@ -153,6 +153,6 @@ function A(e) {
         currentStep: r,
         items: l,
         renderItem: N,
-        getItemKey: f
+        getItemKey: C
     });
 }

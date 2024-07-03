@@ -14,14 +14,14 @@ t.Z = e => {
             isPremiumGetCta: N,
             onCtaClick: f,
             cardVariant: S
-        } = e, h = (0, d.N)(), M = null == h ? void 0 : h.subscription_trial, x = (0, c.Ng)(), O = (0, l.Rt)({
+        } = e, h = (0, d.N)(), M = null == h ? void 0 : h.subscription_trial, x = (0, c.Ng)(), b = (0, l.Rt)({
             intervalType: null == M ? void 0 : M.interval,
             intervalCount: null == M ? void 0 : M.interval_count
-        }), b = (0, o._)({
+        }), O = (0, o._)({
             defaultResponse: I.Z.Messages.PREMIUM_SETTINGS_GET,
             onNonTier2Subscriber: I.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE,
-            onTier2TrialOffer: O,
-            onTier0TrialOffer: O,
+            onTier2TrialOffer: b,
+            onTier0TrialOffer: b,
             onDiscountOffer: I.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == x ? void 0 : x.discount.amount })
         }), P = (0, _._)(S);
     return (0, s.jsxs)('div', {
@@ -37,7 +37,7 @@ t.Z = e => {
             N && (0, s.jsx)(E.Z, {
                 className: p,
                 subscriptionTier: T.Si.TIER_2,
-                buttonText: b,
+                buttonText: O,
                 color: i.Button.Colors.GREEN,
                 look: i.Button.Looks.FILLED
             }),

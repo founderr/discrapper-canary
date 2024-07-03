@@ -75,7 +75,7 @@ let h = e => {
                 })
             ]
         });
-    }, O = (e, t, n, s) => e ? N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_ALL_SHARED_NO_REFRESH.format({ helpdeskArticle: s }) : t ? N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_AT_LEAST_ONE_SHARED.format({
+    }, b = (e, t, n, s) => e ? N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_ALL_SHARED_NO_REFRESH.format({ helpdeskArticle: s }) : t ? N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_AT_LEAST_ONE_SHARED.format({
         numFriends: 3 - n,
         helpdeskArticle: s
     }) : N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER.format({
@@ -85,7 +85,7 @@ let h = e => {
 t.Z = e => {
     let {
             isInSettings: t = !1
-        } = e, r = (0, l.Wu)([C.Z], () => C.Z.getSentUserIds()), u = (0, l.Wu)([T.default], () => r.map(e => T.default.getUser(e)).filter(e => null != e)), h = a.useMemo(() => u.map(e => new E.Z(e)), [u]), {subscriberHomeVariant: M} = p.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }), b = M === p.p.VARIANT_2;
+        } = e, r = (0, l.Wu)([C.Z], () => C.Z.getSentUserIds()), u = (0, l.Wu)([T.default], () => r.map(e => T.default.getUser(e)).filter(e => null != e)), h = a.useMemo(() => u.map(e => new E.Z(e)), [u]), {subscriberHomeVariant: M} = p.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }), O = M === p.p.VARIANT_2;
     a.useEffect(() => {
         r.forEach(e => {
             (0, c.PR)(e);
@@ -121,7 +121,7 @@ t.Z = e => {
                     (0, s.jsx)(x, { userRecords: h }),
                     (0, s.jsx)(o.Text, {
                         variant: t ? 'text-sm/normal' : 'text-lg/medium',
-                        children: O(L, P > 0, r.length, v)
+                        children: b(L, P > 0, r.length, v)
                     }),
                     (0, s.jsxs)('div', {
                         className: i()(f.expandedProgressBarButtonContainer, {
@@ -129,7 +129,7 @@ t.Z = e => {
                             [f.expandedProgressBarButtonContainerLayout]: !j && !t
                         }),
                         children: [
-                            !t && !b && (0, s.jsx)(g.Z, {
+                            !t && !O && (0, s.jsx)(g.Z, {
                                 color: o.ButtonColors.CUSTOM,
                                 buttonText: N.Z.Messages.GIFT_NITRO,
                                 className: i()(f.expandedProgressBarGiftingCTA, {
@@ -177,8 +177,8 @@ t.Z = e => {
             className: i()({
                 [f.expandedProgressBarContainer]: !t,
                 [f.expandedProgressBarContainerSettingsPage]: t,
-                [f.expandedProgressBarContainerVariant1]: !b && !t,
-                [f.expandedProgressBarContainerVariant2]: b && !t,
+                [f.expandedProgressBarContainerVariant1]: !O && !t,
+                [f.expandedProgressBarContainerVariant2]: O && !t,
                 [f.allReferralsSentBorder]: 3 === r.length
             }),
             children: y

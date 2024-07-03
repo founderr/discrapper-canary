@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     h: function () {
-        return E;
+        return h;
     }
 }), n(47120);
 var i = n(512722), s = n.n(i), a = n(46973), r = n(304809), l = n(131951), o = n(747071);
@@ -36,7 +36,7 @@ function _(e) {
         });
     });
 }
-function E(e, t) {
+function h(e, t) {
     let {
             soundKey: n,
             soundURL: i,

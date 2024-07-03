@@ -3,7 +3,7 @@ n.d(t, {
         return G;
     }
 }), n(411104), n(47120);
-var i, s = n(735250), a = n(470079), r = n(120356), l = n.n(r), o = n(266067), c = n(442837), d = n(846519), u = n(477690), _ = n(481060), E = n(570140), h = n(239091), I = n(287259), m = n(785547), g = n(490983), p = n(799777), T = n(285952), S = n(366695), C = n(366966), f = n(151011), N = n(626135), A = n(780570), Z = n(624138), L = n(645818), v = n(981631), O = n(689938), R = n(895220);
+var i, s = n(735250), a = n(470079), r = n(120356), l = n.n(r), o = n(266067), c = n(442837), d = n(846519), u = n(477690), _ = n(481060), h = n(570140), E = n(239091), I = n(287259), m = n(785547), g = n(490983), p = n(799777), T = n(285952), S = n(366695), f = n(366966), C = n(151011), N = n(626135), A = n(780570), Z = n(624138), L = n(645818), v = n(981631), O = n(689938), R = n(895220);
 function x(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -12,7 +12,7 @@ function x(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let P = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT), b = (0, Z.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION), M = Object.freeze({
+let b = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT), P = (0, Z.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION), M = Object.freeze({
         [v.iEv.PLATFORM]: 'Platform',
         [v.iEv.LAST_PLAYED]: 'Last Played',
         [v.iEv.NAME]: 'Name'
@@ -88,9 +88,9 @@ let P = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT), b = (0, Z.Mg)(u.Z.GAME_LIST_LIN
             bodyCellClassName: R.textCell,
             render(e) {
                 let t;
-                return t = e.isRunning ? O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? O.Z.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(C.ZP, {
+                return t = e.isRunning ? O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? O.Z.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(f.ZP, {
                     end: e.lastPlayed,
-                    location: C.ZP.Locations.GAME_LIBRARY_LAST_PLAYED
+                    location: f.ZP.Locations.GAME_LIBRARY_LAST_PLAYED
                 }) : O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(T.Z, {
                     align: T.Z.Align.CENTER,
                     className: l()({ [R.lastPlayedCellNew]: e.isNew }),
@@ -184,12 +184,12 @@ class U extends (i = a.PureComponent) {
         let t = this.props.activeRowKey;
         if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
             let e = this._rowRefs[t];
-            null != e && (E.Z.wait(h.Zy), this.props.scrollToRow(e, P));
+            null != e && (h.Z.wait(E.Zy), this.props.scrollToRow(e, b));
         }
     }
     handleHighlightedApplicationKey() {
         let {highlightedApplicationKey: e} = this.state;
-        null != e && null != this._rowRefs[e] && (this.props.scrollToRow(this._rowRefs[e], P), new d.V7().start(b, () => {
+        null != e && null != this._rowRefs[e] && (this.props.scrollToRow(this._rowRefs[e], b), new d.V7().start(P, () => {
             !this._didUnmount && this.setState({ highlightedApplicationKey: null });
         }));
     }
@@ -288,7 +288,7 @@ class U extends (i = a.PureComponent) {
             } = this.state;
         return (0, s.jsxs)(a.Fragment, {
             children: [
-                n.length > 0 ? (0, s.jsx)(f.Z, {
+                n.length > 0 ? (0, s.jsx)(C.Z, {
                     columns: y,
                     data: n,
                     sortData: !1,
@@ -341,7 +341,7 @@ class U extends (i = a.PureComponent) {
         }), x(this, 'handleApplicationContextMenu', (e, t) => {
             this.setActiveRowKey(t);
             let {analyticsContext: i} = this.props;
-            (0, h.jW)(e, async () => {
+            (0, E.jW)(e, async () => {
                 let {default: e} = await n.e('98335').then(n.bind(n, 485292));
                 return n => (0, s.jsx)(e, {
                     ...n,
@@ -366,7 +366,7 @@ function G(e) {
             sortKey: d,
             sortDirection: u,
             activeRowKey: _,
-            isNavigatingByKeyboard: E
+            isNavigatingByKeyboard: h
         } = (0, c.cj)([p.Z], () => ({
             sortKey: p.Z.sortKey,
             sortDirection: p.Z.sortDirection,
@@ -383,7 +383,7 @@ function G(e) {
         sortKey: d,
         sortDirection: u,
         activeRowKey: _,
-        isNavigatingByKeyboard: E
+        isNavigatingByKeyboard: h
     });
 }
 x(U, 'defaultProps', { stickyHeader: !1 });

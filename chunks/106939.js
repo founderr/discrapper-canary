@@ -6,7 +6,7 @@ n.d(t, {
         return Y;
     }
 });
-var s = n(735250), a = n(470079), r = n(120356), i = n.n(r), l = n(873546), o = n(286379), c = n(399606), d = n(704215), _ = n(481060), u = n(150063), E = n(758119), T = n(100527), I = n(906732), R = n(252618), C = n(605236), p = n(984370), g = n(797614), A = n(108427), m = n(210887), N = n(695346), f = n(594174), S = n(153124), h = n(626135), M = n(792125), x = n(280570), O = n(914788), b = n(841409), P = n(652262), L = n(880257), v = n(631885), Z = n(830746), D = n(731934), B = n(521450), j = n(292352), U = n(981631), G = n(723359), y = n(921944), H = n(689938), k = n(67742);
+var s = n(735250), a = n(470079), r = n(120356), i = n.n(r), l = n(873546), o = n(286379), c = n(399606), d = n(704215), _ = n(481060), u = n(150063), E = n(758119), T = n(100527), I = n(906732), R = n(252618), C = n(605236), p = n(984370), g = n(797614), A = n(108427), m = n(210887), N = n(695346), f = n(594174), S = n(153124), h = n(626135), M = n(792125), x = n(280570), b = n(914788), O = n(841409), P = n(652262), L = n(880257), v = n(631885), Z = n(830746), D = n(731934), B = n(521450), j = n(292352), U = n(981631), G = n(723359), y = n(921944), H = n(689938), k = n(67742);
 let w = {
         [j.dG.REQUESTS]: () => (0, s.jsx)(D.Z, {}),
         [j.dG.ACTIVITY]: () => (0, s.jsx)(Z.Z, {}),
@@ -105,10 +105,10 @@ function W(e) {
     });
 }
 function K() {
-    let e = (0, L.Z)(), t = (0, v.M8)(), n = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), r = (0, c.e7)([O.Z], () => O.Z.getIsInitialized()), l = (0, P.M)(), {
+    let e = (0, L.Z)(), t = (0, v.M8)(), n = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), r = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), l = (0, P.M)(), {
             selectedTab: u,
             handleTabChange: T
-        } = (0, b.Z)(), I = (0, S.Dt)(), p = f.default.getCurrentUser(), m = null != e, N = r && null != p && !m;
+        } = (0, O.Z)(), I = (0, S.Dt)(), p = f.default.getCurrentUser(), m = null != e, N = r && null != p && !m;
     return (a.useEffect(() => {
         (0, A.e)('family-center'), x.ZP.initialPageLoad(), !n && (0, C.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
             dismissAction: y.L.AUTO,
@@ -146,12 +146,12 @@ function K() {
     });
 }
 function Y() {
-    let {analyticsLocations: e} = (0, I.ZP)(T.Z.FAMILY_CENTER), t = (0, L.Z)(), n = (0, v.M8)(), r = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), l = (0, c.e7)([O.Z], () => O.Z.getIsInitialized()), p = (0, P.M)(), M = (0, c.e7)([m.Z], () => m.Z.theme), {
+    let {analyticsLocations: e} = (0, I.ZP)(T.Z.FAMILY_CENTER), t = (0, L.Z)(), n = (0, v.M8)(), r = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), l = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), p = (0, P.M)(), M = (0, c.e7)([m.Z], () => m.Z.theme), {
             selectedTab: Z,
             handleTabChange: D
-        } = (0, b.Z)(), B = (0, S.Dt)(), w = f.default.getCurrentUser(), V = null != t, K = l && null != w && !V;
+        } = (0, O.Z)(), B = (0, S.Dt)(), w = f.default.getCurrentUser(), V = null != t, K = l && null != w && !V;
     if (a.useEffect(() => {
-            u.Y(U.Z5c.FAMILY_CENTER), (0, A.e)('family-center'), !O.Z.isLoading() && O.Z.canRefetch() && x.ZP.initialPageLoad(), !r && (0, C.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+            u.Y(U.Z5c.FAMILY_CENTER), (0, A.e)('family-center'), !b.Z.isLoading() && b.Z.canRefetch() && x.ZP.initialPageLoad(), !r && (0, C.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                 dismissAction: y.L.AUTO,
                 forceTrack: !0
             });

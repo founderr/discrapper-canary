@@ -96,7 +96,7 @@ t.Z = {
                     qos: d,
                     silence_warning: u,
                     deaf: _,
-                    mute: E
+                    mute: h
                 }
             } = e;
             if (t && (null != t.device_id && s.Z.setInputDevice(t.device_id), null != t.volume && s.Z.setInputVolume(t.volume)), n && (null != n.device_id && s.Z.setOutputDevice(n.device_id), null != n.volume && s.Z.setOutputVolume(n.volume)), i) {
@@ -110,9 +110,9 @@ t.Z = {
                 let e = a.Z.isSelfDeaf();
                 (e && !_ || !e && _) && s.Z.toggleSelfDeaf();
             }
-            if (null != E) {
+            if (null != h) {
                 let e = a.Z.isSelfMute();
-                (e && !E || !e && E) && s.Z.toggleSelfMute();
+                (e && !h || !e && h) && s.Z.toggleSelfMute();
             }
             return (0, c._X)();
         }

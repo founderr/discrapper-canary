@@ -9,7 +9,7 @@ function M(e) {
     let {quest: T} = e, M = (0, p.T)({
             quest: T,
             location: f.dr.QUESTS_BAR
-        }), x = (0, C.Zy)({ location: f.dr.QUESTS_BAR }), O = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), b = (0, o.e7)([_.Z], () => _.Z.hasLayers()), P = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, L = (0, c.Z)(P), v = (null === (n = T.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, Z = (0, c.Z)(v), D = (null === (r = T.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null, B = null != T.userStatus && (0, R.zE)(T.userStatus, I.jn.QUEST_BAR), j = (0, E.tP)(T), {
+        }), x = (0, C.Zy)({ location: f.dr.QUESTS_BAR }), b = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), O = (0, o.e7)([_.Z], () => _.Z.hasLayers()), P = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, L = (0, c.Z)(P), v = (null === (n = T.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, Z = (0, c.Z)(v), D = (null === (r = T.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null, B = null != T.userStatus && (0, R.zE)(T.userStatus, I.jn.QUEST_BAR), j = (0, E.tP)(T), {
             hasError: U,
             isLoading: G
         } = (0, A.d7)(), y = x && !B && !D && !j && !G, H = a.useRef(y), k = (0, N.B)(T, y && !U), w = a.useRef(-1), F = a.useRef(!1), [V, W] = a.useState(!1), [K, Y] = a.useState(!1), [z, Q] = a.useState(!0), [J, q] = a.useState(!0), [X, $] = a.useState(k.preEnrollmentExpandedHeight), ee = a.useRef(null), et = a.useCallback(() => {
@@ -79,7 +79,7 @@ function M(e) {
     let eu = P ? f.XZ : f.R4, [{expansionSpring: eE}, eT] = (0, l.useSpring)(() => ({
             from: { expansionSpring: 0 },
             config: eu,
-            immediate: O,
+            immediate: b,
             onRest: () => {
                 Q(!0);
             },
@@ -89,7 +89,7 @@ function M(e) {
         })), [{height: eI}, eR] = (0, l.useSpring)(() => ({
             from: { height: k.collapsedHeight },
             config: eu,
-            immediate: O
+            immediate: b
         }));
     a.useLayoutEffect(() => {
         eT({ expansionSpring: K ? 1 : 0 }), eR({ height: K ? X : k.collapsedHeight });
@@ -108,7 +108,7 @@ function M(e) {
             friction: 10,
             clamp: !0
         },
-        immediate: O,
+        immediate: b,
         onRest: () => {
             q(!0);
         },
@@ -127,7 +127,7 @@ function M(e) {
     ]), x && (y || !J || G) && !U) ? (0, s.jsx)(g.A, {
         questOrQuests: T,
         questContent: k.trackingCtx.content,
-        overrideVisibility: !b && y,
+        overrideVisibility: !O && y,
         children: () => {
             let e = k.component;
             return (0, s.jsx)(l.animated.div, {
@@ -186,7 +186,7 @@ function M(e) {
                             onCtxMenuOpened: es,
                             onCtxMenuSelection: er,
                             quest: T,
-                            useReducedMotion: O
+                            useReducedMotion: b
                         })
                     })
                 })

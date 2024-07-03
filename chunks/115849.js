@@ -3,14 +3,14 @@ n.d(t, {
         return N;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(512722), o = n.n(l), c = n(481060), d = n(194359), u = n(153124), _ = n(657682), E = n(981631), h = n(420212), I = n(689938), m = n(527915), g = n(549856);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(512722), o = n.n(l), c = n(481060), d = n(194359), u = n(153124), _ = n(657682), h = n(981631), E = n(420212), I = n(689938), m = n(527915), g = n(549856);
 let p = {
         canSend: !1,
         hint: null,
         success: null,
         error: null
-    }, T = (0, u.hQ)(), S = ''.concat(T, '-decription'), C = ''.concat(T, '-error');
-function f(e, t) {
+    }, T = (0, u.hQ)(), S = ''.concat(T, '-decription'), f = ''.concat(T, '-error');
+function C(e, t) {
     switch (t.type) {
     case 'RESET':
         return p;
@@ -34,7 +34,7 @@ function f(e, t) {
     }
 }
 function N() {
-    let e = s.createRef(), t = s.createRef(), [n, a] = s.useReducer(f, p), {
+    let e = s.createRef(), t = s.createRef(), [n, a] = s.useReducer(C, p), {
             canSend: l,
             hint: u,
             success: N,
@@ -97,10 +97,10 @@ function N() {
                             inputClassName: m.input,
                             onKeyPress: t => {
                                 let n = t.currentTarget.value;
-                                if (t.key !== h.mR.Enter) {
+                                if (t.key !== E.mR.Enter) {
                                     if (n.includes('#')) {
                                         o()(null != e.current, 'Input is handling keypress when not mounted');
-                                        let i = n.indexOf('#'), s = e.current.selectionStart, a = t.key === h.mR.Backspace || t.key === h.mR.ArrowRight || t.key === h.mR.ArrowLeft, r = t.which >= 48 && t.which <= 57;
+                                        let i = n.indexOf('#'), s = e.current.selectionStart, a = t.key === E.mR.Backspace || t.key === E.mR.ArrowRight || t.key === E.mR.ArrowLeft, r = t.which >= 48 && t.which <= 57;
                                         null != s && s > i && /^(.+?#\d{4})$/.test(n) && !a ? t.preventDefault() : null != s && s > i && !r && !a && t.preventDefault();
                                     }
                                 }
@@ -111,7 +111,7 @@ function N() {
                                     return;
                                 }
                                 let t = '', [, n] = e.split('#');
-                                null != n && (t = e + E.LYt.slice(null != n ? n.length + 1 : 0)), a({
+                                null != n && (t = e + h.LYt.slice(null != n ? n.length + 1 : 0)), a({
                                     type: 'HINT',
                                     text: t
                                 });
@@ -124,7 +124,7 @@ function N() {
                             placeholder: I.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
                             'aria-label': I.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
                             'aria-invalid': null != A || void 0,
-                            'aria-describedby': null != A ? C : S
+                            'aria-describedby': null != A ? f : S
                         }),
                         null != u && (0, i.jsx)('div', {
                             className: m.addFriendHint,
@@ -142,7 +142,7 @@ function N() {
             }),
             null != A && (0, i.jsx)(c.FormText, {
                 role: 'alert',
-                id: C,
+                id: f,
                 type: c.FormText.Types.ERROR,
                 className: g.marginTop8,
                 children: A

@@ -6,9 +6,9 @@ n.d(t, {
         return s;
     }
 });
-var i, s, a = n(735250), r = n(470079), l = n(442837), o = n(481060), c = n(40851), d = n(566620), u = n(403404), _ = n(100527), E = n(906732), h = n(592125), I = n(810090), m = n(626135), g = n(981631), p = n(921944), T = n(689938), S = n(660979);
+var i, s, a = n(735250), r = n(470079), l = n(442837), o = n(481060), c = n(40851), d = n(566620), u = n(403404), _ = n(100527), h = n(906732), E = n(592125), I = n(810090), m = n(626135), g = n(981631), p = n(921944), T = n(689938), S = n(660979);
 (i = s || (s = {})).BOOSTING = 'BOOSTING', i.NITRO = 'NITRO', i.BASH_OUT = 'BASH_OUT', i.GAME_NIGHT = 'GAME_NIGHT';
-let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4', f = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png', N = e => {
+let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4', C = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png', N = e => {
         let {
                 channelId: t,
                 markAsDismissed: n,
@@ -23,7 +23,7 @@ let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 title: O,
                 videoPosterUrl: R,
                 videoUrl: x,
-                ctaOnClick: P
+                ctaOnClick: b
             } = function (e) {
                 switch (e) {
                 case 'BOOSTING':
@@ -33,8 +33,8 @@ let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                         description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION,
                         learnMore: !0,
                         title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE,
-                        videoPosterUrl: f,
-                        videoUrl: C,
+                        videoPosterUrl: C,
+                        videoUrl: f,
                         ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT,
                         dismissText: T.Z.Messages.DISMISS
                     };
@@ -45,8 +45,8 @@ let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                         description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION,
                         learnMore: !0,
                         title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE,
-                        videoPosterUrl: f,
-                        videoUrl: C,
+                        videoPosterUrl: C,
+                        videoUrl: f,
                         ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT,
                         dismissText: T.Z.Messages.DISMISS
                     };
@@ -87,13 +87,13 @@ let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                         dismissText: ''
                     };
                 }
-            }(i), {analyticsLocations: b} = (0, E.ZP)(s);
+            }(i), {analyticsLocations: P} = (0, h.ZP)(s);
         r.useEffect(() => {
             m.default.track(g.rMx.TOOLTIP_VIEWED, { type: N });
         }, [N]);
-        let M = (0, c.bp)() === g.IlC.POPOUT, D = (0, l.e7)([h.Z], () => h.Z.getChannel(t), [t]);
-        return (0, a.jsx)(E.Gt, {
-            value: b,
+        let M = (0, c.bp)() === g.IlC.POPOUT, D = (0, l.e7)([E.Z], () => E.Z.getChannel(t), [t]);
+        return (0, a.jsx)(h.Gt, {
+            value: P,
             children: (0, a.jsx)('div', {
                 className: S.wrapper,
                 children: (0, a.jsx)('div', {
@@ -150,7 +150,7 @@ let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                     }),
                                     (0, a.jsx)(o.Button, {
                                         color: o.Button.Colors.BRAND_INVERTED,
-                                        onClick: null != P ? P : () => {
+                                        onClick: null != b ? b : () => {
                                             if (n(p.L.UNKNOWN), null != D)
                                                 (0, u.Z)({
                                                     channel: D.isGuildVoice() ? D : void 0,
@@ -162,7 +162,7 @@ let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                                         objectType: g.Qqv.ACTIVITY
                                                     },
                                                     openInPopout: M,
-                                                    analyticsLocations: b,
+                                                    analyticsLocations: P,
                                                     opensAppLauncherModal: !0
                                                 }), (0, d.w1)({ guildId: D.guild_id });
                                         },

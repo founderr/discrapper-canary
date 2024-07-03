@@ -12,16 +12,16 @@ function c(e) {
             selectedTab: d,
             tabs: u,
             onTabSelect: _,
-            searchQuery: E,
-            onSearch: h,
+            searchQuery: h,
+            onSearch: E,
             onSearchClear: I,
             onSearchSubmit: m,
             scrollManager: g
         } = e, p = l.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: c }), T = s.useCallback(e => {
-            'Enter' === e.key && m(E);
+            'Enter' === e.key && m(h);
         }, [
             m,
-            E
+            h
         ]);
     return (0, i.jsx)('div', {
         className: o.container,
@@ -59,8 +59,8 @@ function c(e) {
                     className: o.search,
                     children: (0, i.jsx)(r.SearchBar, {
                         placeholder: p,
-                        query: E,
-                        onChange: h,
+                        query: h,
+                        onChange: E,
                         onClear: I,
                         onKeyDown: T
                     })

@@ -9,10 +9,10 @@ function d(e, t, n) {
     }) : e[t] = n, e;
 }
 let u = [], _ = !1;
-function E() {
+function h() {
     return u.length >= 4 && u.some(e => e < Date.now() - 3 * o.Z.Millis.DAY);
 }
-class h extends (i = s.ZP.PersistedStore) {
+class E extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         null != e && Array.isArray(e.sessionStartsWithDND) && (u = e.sessionStartsWithDND);
     }
@@ -26,13 +26,13 @@ class h extends (i = s.ZP.PersistedStore) {
         return { x: r.Cr.getSetting() };
     }
 }
-d(h, 'displayName', 'HabitualDNDStore'), d(h, 'persistKey', 'habitualDND'), new h(a.Z, {
+d(E, 'displayName', 'HabitualDNDStore'), d(E, 'persistKey', 'habitualDND'), new E(a.Z, {
     POST_CONNECTION_OPEN: function () {
-        l.Z.getStatus() === c.Skl.DND && '0' === r.Cr.getSetting() ? (u.push(Date.now()), u = u.filter(e => e > Date.now() - 5 * o.Z.Millis.DAY), E() && setTimeout(() => {
+        l.Z.getStatus() === c.Skl.DND && '0' === r.Cr.getSetting() ? (u.push(Date.now()), u = u.filter(e => e > Date.now() - 5 * o.Z.Millis.DAY), h() && setTimeout(() => {
             a.Z.dispatch({ type: 'HABITUAL_DND_CLEAR' });
         }, 15 * o.Z.Millis.SECOND)) : u = [];
     },
     HABITUAL_DND_CLEAR: function () {
-        _ = !!E() || !1, u = [];
+        _ = !!h() || !1, u = [];
     }
 });

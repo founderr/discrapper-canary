@@ -1,18 +1,18 @@
 n.d(t, {
     o: function () {
-        return E;
+        return h;
     }
 });
 var i = n(735250);
 n(470079);
 var s = n(120356), a = n.n(s), r = n(481060), l = n(788307), o = n(2052), c = n(785717), d = n(695346), u = n(689938), _ = n(57883);
-function E(e, t) {
-    let s = (0, o.O)(), {trackUserProfileAction: E} = (0, c.KZ)();
-    function h(e) {
+function h(e, t) {
+    let s = (0, o.O)(), {trackUserProfileAction: h} = (0, c.KZ)();
+    function E(e) {
         e.stopPropagation(), d.Ok.updateSetting(void 0);
     }
     function I() {
-        E({ action: 'PRESS_SET_CUSTOM_STATUS' }), (0, r.openModalLazy)(async () => {
+        h({ action: 'PRESS_SET_CUSTOM_STATUS' }), (0, r.openModalLazy)(async () => {
             let {default: e} = await n.e('51714').then(n.bind(n, 211065));
             return t => (0, i.jsx)(e, {
                 sourceAnalyticsContext: s,
@@ -38,7 +38,7 @@ function E(e, t) {
             showIconFirst: !0,
             hint: e => (0, i.jsx)(r.Clickable, {
                 ...e,
-                onClick: h,
+                onClick: E,
                 tabIndex: -1,
                 children: (0, i.jsx)(r.CircleXIcon, {
                     size: 'sm',

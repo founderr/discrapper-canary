@@ -9,7 +9,7 @@ n.d(t, {
         return L;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(990547), r = n(442837), l = n(544891), o = n(481060), c = n(893776), d = n(37234), u = n(809206), _ = n(110924), E = n(714338), h = n(213609), I = n(144114), m = n(210887), g = n(23434), p = n(610001), T = n(78415), S = n(1964), C = n(981631), f = n(815660), N = n(689938);
+var i = n(735250), s = n(470079), a = n(990547), r = n(442837), l = n(544891), o = n(481060), c = n(893776), d = n(37234), u = n(809206), _ = n(110924), h = n(714338), E = n(213609), I = n(144114), m = n(210887), g = n(23434), p = n(610001), T = n(78415), S = n(1964), f = n(981631), C = n(815660), N = n(689938);
 let A = 'Email Verification', Z = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
 function L() {
     let {
@@ -22,7 +22,7 @@ function L() {
             action: g.Z.getAction(),
             theme: m.Z.theme
         })), L = S.Z.getVerificationTypes(e), [v, O] = s.useState(0), R = (0, _.Z)(L);
-    (0, h.Z)({
+    (0, E.Z)({
         type: a.ImpressionTypes.MODAL,
         name: a.ImpressionNames.USER_ACTION_REQUIRED,
         properties: {
@@ -38,7 +38,7 @@ function L() {
                 modalKey: A,
                 Layer: T.ZP
             });
-        }, P = () => {
+        }, b = () => {
             (0, o.openModalLazy)(async () => {
                 let {default: e} = await Promise.all([
                     n.e('76540'),
@@ -49,14 +49,14 @@ function L() {
                     ...t
                 });
             }, {
-                modalKey: f.M,
+                modalKey: C.M,
                 Layer: T.ZP
             });
         };
-    return s.useEffect(() => (E.Z.disable(), () => {
-        E.Z.enable();
+    return s.useEffect(() => (h.Z.disable(), () => {
+        h.Z.enable();
     }), []), s.useEffect(() => {
-        (null == R ? void 0 : R[0]) === C.PUi.PHONE && (null == L ? void 0 : L[0]) === C.PUi.EMAIL && (0, o.openModalLazy)(async () => {
+        (null == R ? void 0 : R[0]) === f.PUi.PHONE && (null == L ? void 0 : L[0]) === f.PUi.EMAIL && (0, o.openModalLazy)(async () => {
             let {default: e} = await Promise.resolve().then(n.bind(n, 468026));
             return t => (0, i.jsx)(e, {
                 ...t,
@@ -77,7 +77,7 @@ function L() {
         captchaKey: v,
         onCaptchaVerify: e => {
             l.tn.post({
-                url: C.ANM.CAPTCHA,
+                url: f.ANM.CAPTCHA,
                 body: { captcha_key: e },
                 oldFormErrors: !0
             }).then(d.xf, () => {
@@ -86,7 +86,7 @@ function L() {
         },
         theme: t,
         onClick: e => {
-            e === C.PUi.EMAIL_OR_PHONE || e === C.PUi.EMAIL || e === C.PUi.REVERIFY_EMAIL ? x() : P();
+            e === f.PUi.EMAIL_OR_PHONE || e === f.PUi.EMAIL || e === f.PUi.REVERIFY_EMAIL ? x() : b();
         },
         onLogout: () => {
             (0, o.openModalLazy)(async () => {

@@ -3,19 +3,19 @@ n.d(t, {
         return m;
     }
 });
-var i = n(735250), s = n(470079), a = n(481060), r = n(626135), l = n(144145), o = n(555927), c = n(738762), d = n(244080), u = n(247530), _ = n(260889), E = n(981631), h = n(674563), I = n(689938);
+var i = n(735250), s = n(470079), a = n(481060), r = n(626135), l = n(144145), o = n(555927), c = n(738762), d = n(244080), u = n(247530), _ = n(260889), h = n(981631), E = n(674563), I = n(689938);
 function m(e) {
     let {
             party: t,
             close: n,
             onSelect: m
-        } = e, g = (0, c.Z)(t), p = (0, _.Z)(t), T = (0, u.Z)(t), S = (0, d.Z)(t), C = (0, l.Z)(t), f = (0, o.Z)(t);
+        } = e, g = (0, c.Z)(t), p = (0, _.Z)(t), T = (0, u.Z)(t), S = (0, d.Z)(t), f = (0, l.Z)(t), C = (0, o.Z)(t);
     return s.useEffect(() => {
         let e = t.currentActivities.filter(e => {
             var t, n;
-            return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === h.wW.GAME;
+            return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === E.wW.GAME;
         }).map(e => e.game.name);
-        r.default.track(E.rMx.OPEN_POPOUT, {
+        r.default.track(h.rMx.OPEN_POPOUT, {
             type: 'Now Playing Card Popout',
             games_detected: e
         });
@@ -33,8 +33,8 @@ function m(e) {
                 ]
             }),
             (0, i.jsx)(a.MenuGroup, { children: S }),
-            (0, i.jsx)(a.MenuGroup, { children: C }),
-            f
+            (0, i.jsx)(a.MenuGroup, { children: f }),
+            C
         ]
     });
 }

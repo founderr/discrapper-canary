@@ -12,7 +12,7 @@ n.d(t, {
         return G;
     },
     Xb: function () {
-        return w;
+        return k;
     },
     YK: function () {
         return q;
@@ -21,7 +21,7 @@ n.d(t, {
         return $;
     },
     aE: function () {
-        return k;
+        return w;
     },
     bu: function () {
         return J;
@@ -51,14 +51,14 @@ n.d(t, {
         return F;
     }
 }), n(47120), n(653041), n(411104), n(757143), n(392711);
-var i, s = n(729594), a = n(243814), r = n(544891), l = n(63023), o = n(433517), c = n(904245), d = n(155268), u = n(454585), _ = n(739566), E = n(695346), h = n(131704), I = n(598077), m = n(592125), g = n(430824), p = n(131951), T = n(375954), S = n(158776), C = n(594174), f = n(979651), N = n(70956), A = n(5192), Z = n(226951), L = n(996106), v = n(863141), O = n(186901), R = n(981631);
-let x = null !== (i = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost', P = function () {
+var i, s = n(729594), a = n(243814), r = n(544891), l = n(63023), o = n(433517), c = n(904245), d = n(155268), u = n(454585), _ = n(739566), h = n(695346), E = n(131704), I = n(598077), m = n(592125), g = n(430824), p = n(131951), T = n(375954), S = n(158776), f = n(594174), C = n(979651), N = n(70956), A = n(5192), Z = n(226951), L = n(996106), v = n(863141), O = n(186901), R = n(981631);
+let x = null !== (i = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost', b = function () {
         let e = x.split(':')[0];
         if (!e.includes('.'))
             return e;
         let t = e.split('.'), n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
-    }(), b = new RegExp('^'.concat(Z.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(Z.Z.escape(P), '|discordapp.com|discord.com)$')), M = 1 * N.Z.Millis.MINUTE, D = {};
+    }(), P = new RegExp('^'.concat(Z.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(Z.Z.escape(b), '|discordapp.com|discord.com)$')), M = 1 * N.Z.Millis.MINUTE, D = {};
 function y(e) {
     return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = j(e.src)), Array.isArray(e.content) && (e.content = e.content.map(y)), e;
 }
@@ -73,7 +73,7 @@ function G(e, t) {
     let n = [], i = e.getGuildId();
     return ![
         R.d4z.GUILD_CATEGORY,
-        ...h.tx
+        ...E.tx
     ].includes(e.type) && n.push(new Promise(t => {
         T.Z.whenReady(e.id, () => t()), c.Z.fetchMessages({
             channelId: e.id,
@@ -81,7 +81,7 @@ function G(e, t) {
         });
     })), Promise.all(n).then(() => {
         var n;
-        let s = (!e.isNSFW() || (null === (n = C.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(w) : [], a = Object.values(f.Z.getVoiceStatesForChannel(e.id)).map(t => k(i, e.id, t));
+        let s = (!e.isNSFW() || (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(k) : [], a = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map(t => w(i, e.id, t));
         return {
             id: e.id,
             name: e.name,
@@ -96,7 +96,7 @@ function G(e, t) {
         };
     });
 }
-function w(e) {
+function k(e) {
     let t = u.Z.parseToAST(e.content, !0, { channelId: e.channel_id }).map(y), n = m.Z.getChannel(e.channel_id), i = null != e.author ? (0, _.ij)(new I.Z(e.author), n) : void 0;
     return {
         id: e.id,
@@ -119,7 +119,7 @@ function w(e) {
         type: e.type
     };
 }
-function k(e, t, n) {
+function w(e, t, n) {
     let {
             mute: i,
             deaf: s,
@@ -127,7 +127,7 @@ function k(e, t, n) {
             selfDeaf: r,
             suppress: l,
             userId: o
-        } = n, c = C.default.getUser(o);
+        } = n, c = f.default.getUser(o);
     if (null == c)
         throw Error('Invalid user id: '.concat(o));
     return {
@@ -146,7 +146,7 @@ function k(e, t, n) {
     };
 }
 function B(e, t, n) {
-    let i = C.default.getUser(t);
+    let i = f.default.getUser(t);
     return {
         type: e,
         user: null != i ? (0, v.Z)(i) : null,
@@ -168,7 +168,7 @@ function H(e) {
     } catch (e) {
         return !1;
     }
-    return window.location.hostname === t && 'localhost' === t || null == e.match('staging') && (!!(b.test(e) && b.test(n)) || !1);
+    return window.location.hostname === t && 'localhost' === t || null == e.match('staging') && (!!(P.test(e) && P.test(n)) || !1);
 }
 function V(e, t, n) {
     let i = g.Z.getGuild(e.getGuildId());
@@ -190,7 +190,7 @@ function Y(e) {
             secrets: i,
             party: s
         } = e, a = 0;
-    return (n && (a |= R.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (a |= R.xjy.JOIN), t) ? (a |= R.xjy.EMBEDDED, a |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === R.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (E.cP.getSetting() && (a |= R.xjy.PARTY_PRIVACY_FRIENDS), E.Ou.getSetting() && (a |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), a);
+    return (n && (a |= R.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (a |= R.xjy.JOIN), t) ? (a |= R.xjy.EMBEDDED, a |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === R.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (h.cP.getSetting() && (a |= R.xjy.PARTY_PRIVACY_FRIENDS), h.Ou.getSetting() && (a |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), a);
 }
 function W(e, t, n) {
     if (e === R.mFx.JOIN)

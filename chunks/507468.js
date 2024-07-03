@@ -6,7 +6,7 @@ function _() {
         null != i.editInfo.offlineEditDataVersion && null != i.editInfo.protoToSave && t.scheduleSaveFromOfflineEdit();
     });
 }
-function E(e) {
+function h(e) {
     let {
         settings: {
             proto: t,
@@ -20,7 +20,7 @@ function E(e) {
         jitter: s
     });
 }
-function h(e) {
+function E(e) {
     let {settingsType: t} = e;
     c.aj[t].loadIfNecessary();
 }
@@ -32,6 +32,6 @@ function I(e) {
 }
 t.Z = {
     init() {
-        o.Z[u.yP.PRELOADED_USER_SETTINGS] = l.Z, o.Z[u.yP.FRECENCY_AND_FAVORITES_SETTINGS] = r.Z, a.Z.subscribe('CONNECTION_OPEN', _), a.Z.subscribe('USER_SETTINGS_PROTO_ENQUEUE_UPDATE', E), a.Z.subscribe('USER_SETTINGS_PROTO_LOAD_IF_NECESSARY', h), a.Z.subscribe('APP_STATE_UPDATE', I);
+        o.Z[u.yP.PRELOADED_USER_SETTINGS] = l.Z, o.Z[u.yP.FRECENCY_AND_FAVORITES_SETTINGS] = r.Z, a.Z.subscribe('CONNECTION_OPEN', _), a.Z.subscribe('USER_SETTINGS_PROTO_ENQUEUE_UPDATE', h), a.Z.subscribe('USER_SETTINGS_PROTO_LOAD_IF_NECESSARY', E), a.Z.subscribe('APP_STATE_UPDATE', I);
     }
 };

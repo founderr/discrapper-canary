@@ -3,27 +3,27 @@ n.d(t, {
         return M;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(954955), o = n.n(l), c = n(442837), d = n(481060), u = n(570140), _ = n(569984), E = n(918701), h = n(93127), I = n(814443), m = n(594174), g = n(801077), p = n(626135), T = n(70956), S = n(225559), C = n(910436), f = n(203028), N = n(358924), A = n(292140), Z = n(525296), L = n(981631), v = n(674563), O = n(689938), R = n(584201);
-let x = 15 * T.Z.Millis.MINUTE, P = (0, Z.Z)(function (e) {
+var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(954955), o = n.n(l), c = n(442837), d = n(481060), u = n(570140), _ = n(569984), h = n(918701), E = n(93127), I = n(814443), m = n(594174), g = n(801077), p = n(626135), T = n(70956), S = n(225559), f = n(910436), C = n(203028), N = n(358924), A = n(292140), Z = n(525296), L = n(981631), v = n(674563), O = n(689938), R = n(584201);
+let x = 15 * T.Z.Millis.MINUTE, b = (0, Z.Z)(function (e) {
         let {
                 party: t,
                 onUserContextMenu: n,
                 onChannelContextMenu: a,
                 quest: r
-            } = e, l = (0, i.jsx)(f.Z, {
+            } = e, l = (0, i.jsx)(C.Z, {
                 party: t,
                 onUserContextMenu: n
-            }), c = (0, i.jsx)(C.Z, {
+            }), c = (0, i.jsx)(f.Z, {
                 party: t,
                 onChannelContextMenu: a,
                 quest: r
             }), {
                 partiedMembers: u,
                 applicationStreams: _,
-                currentActivities: E,
-                voiceChannels: h
-            } = t, I = u.length, m = _.length, g = E.length, T = h.length > 0, S = s.useCallback(() => {
-                let e = E.filter(e => {
+                currentActivities: h,
+                voiceChannels: E
+            } = t, I = u.length, m = _.length, g = h.length, T = E.length > 0, S = s.useCallback(() => {
+                let e = h.filter(e => {
                     var t, n;
                     return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === v.wW.GAME;
                 }).map(e => e.game.name);
@@ -39,7 +39,7 @@ let x = 15 * T.Z.Millis.MINUTE, P = (0, Z.Z)(function (e) {
                 m,
                 g,
                 T,
-                E
+                h
             ]), Z = o()(S, x);
         return null != l || null != c ? (0, i.jsx)(d.Popout, {
             position: 'left',
@@ -68,7 +68,7 @@ let x = 15 * T.Z.Millis.MINUTE, P = (0, Z.Z)(function (e) {
                 });
             }
         }) : null;
-    }), b = r().throttle(() => h.W(!1), 300000);
+    }), P = r().throttle(() => E.W(!1), 300000);
 function M() {
     let {
             nowPlayingCards: e,
@@ -88,7 +88,7 @@ function M() {
             currentUser: m.default.getCurrentUser()
         })), l = (0, c.e7)([_.Z], () => _.Z.quests);
     s.useEffect(() => (u.Z.wait(() => S.L()), () => u.Z.wait(() => S.v())), [null == r ? void 0 : r.id]), s.useEffect(() => {
-        n && !a && b();
+        n && !a && P();
     }, [
         n,
         a
@@ -99,7 +99,7 @@ function M() {
                 i.party.currentActivities.forEach(e => {
                     let {game: s} = e;
                     if (null != s) {
-                        let e = (0, E.lQ)(l, s.id);
+                        let e = (0, h.lQ)(l, s.id);
                         null != e && !n.has(e.id) && (t.set(i.party.id, e), n.add(e.id));
                     }
                 });
@@ -107,10 +107,10 @@ function M() {
         }, [
             e,
             l
-        ]), h = null;
-    return t ? (h = e.length > 0 ? e.map(e => {
+        ]), E = null;
+    return t ? (E = e.length > 0 ? e.map(e => {
         let {party: t} = e;
-        return (0, i.jsx)(P, {
+        return (0, i.jsx)(b, {
             party: t,
             quest: o.get(t.id)
         }, t.id);
@@ -129,7 +129,7 @@ function M() {
                 children: O.Z.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
             })
         ]
-    }), (0, i.jsx)(i.Fragment, { children: h })) : (0, i.jsx)('div', {
+    }), (0, i.jsx)(i.Fragment, { children: E })) : (0, i.jsx)('div', {
         className: R.emptyCard,
         children: (0, i.jsx)(d.Spinner, {})
     });

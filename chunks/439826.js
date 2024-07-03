@@ -3,20 +3,20 @@ n.d(t, {
         return S;
     }
 });
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(186325), o = n(780384), c = n(481060), d = n(410030), u = n(810090), _ = n(113434), E = n(497505), h = n(918701), I = n(78826), m = n(670638), g = n(981631), p = n(689938), T = n(985164);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(186325), o = n(780384), c = n(481060), d = n(410030), u = n(810090), _ = n(113434), h = n(497505), E = n(918701), I = n(78826), m = n(670638), g = n(981631), p = n(689938), T = n(985164);
 function S(e) {
     let {
             quest: t,
             isHovering: n,
             onCtxMenuClose: a,
             onCtxMenuOpen: S,
-            onCtxMenuSelect: C
-        } = e, f = (0, h.ph)(t), N = (0, d.ZP)(), A = (0, o.wj)(N) ? g.BRd.DARK : g.BRd.LIGHT, Z = A === g.BRd.DARK, L = s.useMemo(() => (0, h.nP)(t.config.assets.questBarHero), [t]), v = s.useContext(l.S).reducedMotion.enabled, O = (0, h.Mi)(t, E.jn.GIFT_INVENTORY_FOR_YOU), R = (0, _.tP)(t), x = s.useRef(n), P = s.useRef(null);
+            onCtxMenuSelect: f
+        } = e, C = (0, E.ph)(t), N = (0, d.ZP)(), A = (0, o.wj)(N) ? g.BRd.DARK : g.BRd.LIGHT, Z = A === g.BRd.DARK, L = s.useMemo(() => (0, E.nP)(t.config.assets.questBarHero), [t]), v = s.useContext(l.S).reducedMotion.enabled, O = (0, E.Mi)(t, h.jn.GIFT_INVENTORY_FOR_YOU), R = (0, _.tP)(t), x = s.useRef(n), b = s.useRef(null);
     return s.useEffect(() => {
-        if (L && null != P.current)
-            return x.current !== n && (n ? P.current.play() : (P.current.pause(), P.current.currentTime = 0)), x.current = n, () => {
+        if (L && null != b.current)
+            return x.current !== n && (n ? b.current.play() : (b.current.pause(), b.current.currentTime = 0)), x.current = n, () => {
                 var e;
-                null === (e = P.current) || void 0 === e || e.pause();
+                null === (e = b.current) || void 0 === e || e.pause();
             };
     }, [
         n,
@@ -30,7 +30,7 @@ function S(e) {
                         className: T.heroAssetWrapper,
                         children: L ? (0, i.jsx)(I.Fl, {
                             id: 'QuestBarV2ContentExpanded_heroAnimated',
-                            children: e => (null != e.current && (P.current = e.current), (0, i.jsx)(u.Z, {
+                            children: e => (null != e.current && (b.current = e.current), (0, i.jsx)(u.Z, {
                                 ref: e,
                                 autoPlay: !v && n,
                                 loop: !0,
@@ -38,8 +38,8 @@ function S(e) {
                                 className: T.heroAsset,
                                 controls: !1,
                                 children: (0, i.jsx)('source', {
-                                    src: f,
-                                    type: (0, h.mN)(f)
+                                    src: C,
+                                    type: (0, E.mN)(C)
                                 })
                             }))
                         }) : (0, i.jsx)(I.Fl, {
@@ -48,7 +48,7 @@ function S(e) {
                                 ref: e,
                                 alt: '',
                                 className: T.heroAsset,
-                                src: f
+                                src: C
                             })
                         })
                     }),
@@ -78,8 +78,8 @@ function S(e) {
                                         (0, i.jsx)(m.r, {
                                             onOpen: S,
                                             onClose: a,
-                                            onSelect: C,
-                                            questContent: E.jn.QUEST_HOME_DESKTOP,
+                                            onSelect: f,
+                                            questContent: h.jn.QUEST_HOME_DESKTOP,
                                             quest: t,
                                             hideLearnMore: !0,
                                             shouldShowDisclosure: !0,
@@ -103,7 +103,7 @@ function S(e) {
                                         ref: e,
                                         className: T.partnerBranding,
                                         alt: t.config.messages.gameTitle,
-                                        src: (0, h.Gs)(t, A)
+                                        src: (0, E.Gs)(t, A)
                                     })
                                 }),
                                 (0, i.jsx)('div', {

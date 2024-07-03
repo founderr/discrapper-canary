@@ -1,6 +1,6 @@
 n(47120), n(315314), n(610138), n(216116), n(78328), n(815648);
 var i = n(443684), s = n(12647), a = n(49012), r = n(358085), l = n(996106), o = n(914946), c = n(452426), d = n(186901), u = n(981631), _ = n(701488);
-let E = new Set([
+let h = new Set([
     _.Fu,
     _.JT
 ]);
@@ -29,7 +29,7 @@ t.Z = {
             let {socket: t} = e;
             (0, o.bu)(t.transport);
             let n = (0, o._f)(t.application);
-            if (!E.has(n))
+            if (!h.has(n))
                 throw new l.Z({ errorCode: u.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
             (0, i.Z)(u.oAB.CONNECTIONS);
         }

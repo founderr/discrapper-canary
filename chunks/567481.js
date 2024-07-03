@@ -1,11 +1,11 @@
 n(47120);
 var i = n(735250);
 n(470079);
-var s = n(481060), a = n(570140), r = n(988298), l = n(447543), o = n(13245), c = n(596223), d = n(293273), u = n(885110), _ = n(996106), E = n(914946), h = n(452426), I = n(852926), m = n(186901), g = n(981631);
+var s = n(481060), a = n(570140), r = n(988298), l = n(447543), o = n(13245), c = n(596223), d = n(293273), u = n(885110), _ = n(996106), h = n(914946), E = n(452426), I = n(852926), m = n(186901), g = n(981631);
 t.Z = {
     [g.Etm.SET_OVERLAY_LOCKED]: {
         scope: m.lH,
-        validation: e => (0, h.Z)(e).required().keys({
+        validation: e => (0, E.Z)(e).required().keys({
             locked: e.boolean().required(),
             pid: e.number().min(0).required()
         }),
@@ -24,7 +24,7 @@ t.Z = {
     },
     [g.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
         scope: m.lH,
-        validation: e => (0, h.Z)(e).required().keys({
+        validation: e => (0, E.Z)(e).required().keys({
             type: e.number().required().valid([g.mFx.JOIN]),
             pid: e.number().min(0).required()
         }),
@@ -39,7 +39,7 @@ t.Z = {
             if (null == s)
                 throw new _.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'No application.');
             let a = d.Z.getApplicationActivity(s);
-            if (null == a || null == a.secrets || !(0, E.t9)(n, a.party, a.secrets))
+            if (null == a || null == a.secrets || !(0, h.t9)(n, a.party, a.secrets))
                 throw new _.Z({ errorCode: g.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
             let {lock: l} = (0, I.s0)(i), o = (0, c.Z)(a, u.Z);
             return (0, r.h7)(a, o).then(() => {
@@ -50,7 +50,7 @@ t.Z = {
     },
     [g.Etm.OPEN_OVERLAY_GUILD_INVITE]: {
         scope: m.lH,
-        validation: e => (0, h.Z)(e).required().keys({
+        validation: e => (0, E.Z)(e).required().keys({
             code: e.string().required(),
             pid: e.number().min(0).required()
         }),
@@ -89,7 +89,7 @@ t.Z = {
     },
     [g.Etm.OPEN_OVERLAY_VOICE_SETTINGS]: {
         scope: m.lH,
-        validation: e => (0, h.Z)(e).required().keys({ pid: e.number().min(0).required() }),
+        validation: e => (0, E.Z)(e).required().keys({ pid: e.number().min(0).required() }),
         handler(e) {
             let {
                     args: {pid: t},

@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n(920906), c = n(442837), d = n(481060), u = n(607070), _ = n(207796), E = n(889711), h = n(931240), I = n(970606), m = n(963202), g = n(650461), p = n(432632), T = n(35313), S = n(284019), C = n(672775), f = n(601463), N = n(192565), A = n(641037), Z = n(689938), L = n(433369);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n(920906), c = n(442837), d = n(481060), u = n(607070), _ = n(207796), h = n(889711), E = n(931240), I = n(970606), m = n(963202), g = n(650461), p = n(432632), T = n(35313), S = n(284019), f = n(672775), C = n(601463), N = n(192565), A = n(641037), Z = n(689938), L = n(433369);
 let v = {
     mass: 1,
     tension: 600,
@@ -17,7 +17,7 @@ function O(e) {
         } = e, a = (0, c.e7)([u.Z], () => u.Z.useReducedMotion), O = (0, g.Wg)(), {
             progress: R,
             errors: x,
-            submitting: P
+            submitting: b
         } = (0, c.cj)([g.ZP], () => {
             var e, n, i, s;
             return {
@@ -25,7 +25,7 @@ function O(e) {
                 errors: null === (n = g.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
                 submitting: null === (i = g.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
-        }), b = (0, p.N)(t, 'ClanSetupModal'), M = s.useMemo(() => (0, A.G)(x), [x]), [D, y] = s.useState(!1), [j, U] = s.useState(window.innerWidth), [G, w] = s.useState(1), [k, B] = s.useState(!0), H = (0, T.f)(), V = (0, o.useSpring)({
+        }), P = (0, p.N)(t, 'ClanSetupModal'), M = s.useMemo(() => (0, A.G)(x), [x]), [D, y] = s.useState(!1), [j, U] = s.useState(window.innerWidth), [G, k] = s.useState(1), [w, B] = s.useState(!0), H = (0, T.f)(), V = (0, o.useSpring)({
             opacity: G,
             config: v,
             onStart: () => B(!0),
@@ -51,12 +51,12 @@ function O(e) {
             immediate: a
         }), z = s.useCallback(e => {
             if (e === M.length)
-                w(0), (0, I.Lp)(t, 'signature');
+                k(0), (0, I.Lp)(t, 'signature');
             else if (0 === G)
-                w(1);
+                k(1);
             else {
                 var n;
-                h._9(t, {
+                E._9(t, {
                     currentStep: e,
                     furthestStep: Math.max(null !== (n = R.furthestStep) && void 0 !== n ? n : 0, e)
                 });
@@ -73,19 +73,19 @@ function O(e) {
         t,
         R.currentStep
     ]), s.useEffect(() => {
-        let e = (0, E.pP)((0, l.debounce)(() => U(window.innerWidth), 250));
-        return (0, E.YP)(e, document.body), () => (0, E.UC)(e, document.body);
+        let e = (0, h.pP)((0, l.debounce)(() => U(window.innerWidth), 250));
+        return (0, h.YP)(e, document.body), () => (0, h.UC)(e, document.body);
     }, [
         G,
-        k
+        w
     ]), s.useEffect(() => {
-        null != b && (0, h._9)(t, { requiredGameId: b });
+        null != P && (0, E._9)(t, { requiredGameId: P });
     }, [
-        b,
+        P,
         t
     ]);
     let K = s.useMemo(() => null != x && Object.values(x).some(e => null != e), [x]), q = s.useMemo(() => null != x && Object.values(x).length > 0 ? (0, A.G)(x).find(e => e.hasError) : null, [x]), Q = s.useCallback(() => {
-            w(1), h._9(t, { currentStep: null == q ? void 0 : q.index });
+            k(1), E._9(t, { currentStep: null == q ? void 0 : q.index });
         }, [
             null == q ? void 0 : q.index,
             t
@@ -164,17 +164,17 @@ function O(e) {
                             children: [
                                 (0, i.jsx)(o.animated.div, {
                                     style: V,
-                                    className: r()(L.stepsContainer, { [L.hidden]: !k }),
+                                    className: r()(L.stepsContainer, { [L.hidden]: !w }),
                                     children: (0, i.jsx)(N.Z, { guildId: t })
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: r()(L.navigationContainer, { [L.elevatedNavigationContainer]: !k }),
-                                    children: (0, i.jsx)(C.Z, {
+                                    className: r()(L.navigationContainer, { [L.elevatedNavigationContainer]: !w }),
+                                    children: (0, i.jsx)(f.Z, {
                                         steps: M,
                                         progress: R,
                                         updateCurrentStep: z,
                                         animationStyle: V,
-                                        animationClassName: r()({ [L.hidden]: !k })
+                                        animationClassName: r()({ [L.hidden]: !w })
                                     })
                                 })
                             ]
@@ -182,17 +182,17 @@ function O(e) {
                         (0, i.jsx)(o.animated.div, {
                             style: V,
                             className: r()(L.divider, {
-                                [L.hidden]: !k,
-                                [L.dividerResponsive]: k
+                                [L.hidden]: !w,
+                                [L.dividerResponsive]: w
                             })
                         }),
                         (0, i.jsx)(o.animated.div, {
                             style: F,
-                            className: r()(L.sidebar, { [L.sidebarResponsive]: k }),
-                            children: (0, i.jsx)(f.Z, {
+                            className: r()(L.sidebar, { [L.sidebarResponsive]: w }),
+                            children: (0, i.jsx)(C.Z, {
                                 guildId: t,
                                 signed: D,
-                                setSigned: k ? void 0 : y,
+                                setSigned: w ? void 0 : y,
                                 sidebarWidth: 380,
                                 windowWidth: j,
                                 transition: Y,
@@ -215,7 +215,7 @@ function O(e) {
                             ...e,
                             themeColor: R.brandPrimaryColor,
                             disabled: !D || K,
-                            submitting: P,
+                            submitting: b,
                             look: d.Button.Looks.FILLED,
                             size: d.Button.Sizes.MEDIUM,
                             color: d.Button.Colors.BRAND,

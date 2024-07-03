@@ -8,16 +8,16 @@ function d(e) {
     let {
             guild: t,
             selectedGame: n
-        } = e, d = (0, r.J)({ selectedGame: n }), u = i.useMemo(() => null == d ? [] : [d], [d]), _ = (0, l.n)(d), E = (0, a.Cc)(null == t ? void 0 : t.id), [h, I] = (0, a.L_)(null == t ? void 0 : t.id);
+        } = e, d = (0, r.J)({ selectedGame: n }), u = i.useMemo(() => null == d ? [] : [d], [d]), _ = (0, l.n)(d), h = (0, a.Cc)(null == t ? void 0 : t.id), [E, I] = (0, a.L_)(null == t ? void 0 : t.id);
     return i.useEffect(() => {
-        !h && null != t && I();
+        !E && null != t && I();
     }, [
         t,
-        h,
+        E,
         I
     ]), i.useMemo(() => {
         var e;
-        return null != E ? E : null == t ? null : {
+        return null != h ? h : null == t ? null : {
             ..._[_.length - 1],
             id: t.id,
             name: t.name,
@@ -34,6 +34,6 @@ function d(e) {
         u,
         t,
         _,
-        E
+        h
     ]);
 }

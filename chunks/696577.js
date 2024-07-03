@@ -3,14 +3,14 @@ n.d(t, {
         return p;
     }
 });
-var i = n(735250), s = n(470079), a = n(692547), r = n(481060), l = n(194359), o = n(906732), c = n(171368), d = n(594174), u = n(626135), _ = n(321488), E = n(417183), h = n(170245), I = n(981631), m = n(689938), g = n(326059);
+var i = n(735250), s = n(470079), a = n(692547), r = n(481060), l = n(194359), o = n(906732), c = n(171368), d = n(594174), u = n(626135), _ = n(321488), h = n(417183), E = n(170245), I = n(981631), m = n(689938), g = n(326059);
 function p(e) {
     let {
             user: t,
             type: n,
             status: p,
             isFocused: T
-        } = e, S = s.useContext(u.AnalyticsContext), {analyticsLocations: C} = (0, o.ZP)(), f = e => {
+        } = e, S = s.useContext(u.AnalyticsContext), {analyticsLocations: f} = (0, o.ZP)(), C = e => {
             e.stopPropagation(), l.Z.cancelFriendRequest(t.id, { location: 'Friends' });
         }, N = e => {
             e.stopPropagation(), l.Z.addRelationship({
@@ -18,12 +18,12 @@ function p(e) {
                 context: { location: 'Friends' }
             });
         }, A = p === I.Skl.OFFLINE ? I.Skl.UNKNOWN : p, Z = n === I.OGo.PENDING_INCOMING ? m.Z.Messages.INCOMING_FRIEND_REQUEST : m.Z.Messages.OUTGOING_FRIEND_REQUEST;
-    return (0, i.jsx)(E.Z, {
+    return (0, i.jsx)(h.Z, {
         isFocused: T,
         user: t,
         onClick: () => (0, c.openUserProfileModal)({
             userId: t.id,
-            sourceAnalyticsLocations: C,
+            sourceAnalyticsLocations: f,
             analyticsLocation: S.location
         }),
         children: e => {
@@ -48,7 +48,7 @@ function p(e) {
                         icon: r.CloseSmallIcon,
                         actionType: _.Z.ActionTypes.DENY,
                         tooltip: m.Z.Messages.FRIEND_REQUEST_IGNORE,
-                        onClick: f,
+                        onClick: C,
                         shouldHighlight: e
                     })
                 ]
@@ -56,13 +56,13 @@ function p(e) {
                 icon: r.CloseSmallIcon,
                 actionType: _.Z.ActionTypes.DENY,
                 tooltip: m.Z.Messages.FRIEND_REQUEST_CANCEL,
-                onClick: f,
+                onClick: C,
                 shouldHighlight: e
             });
             return (0, i.jsxs)('div', {
                 className: g.listItemContents,
                 children: [
-                    (0, i.jsx)(h.Z, {
+                    (0, i.jsx)(E.Z, {
                         user: t,
                         hovered: e,
                         showAccountIdentifier: !0,

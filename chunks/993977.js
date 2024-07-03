@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return f;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(58642), o = n(695346), c = n(490983), d = n(285952), u = n(626135), _ = n(630388), E = n(804739), h = n(957657), I = n(34305), m = n(981631), g = n(689938), p = n(351634);
+var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(58642), o = n(695346), c = n(490983), d = n(285952), u = n(626135), _ = n(630388), h = n(804739), E = n(957657), I = n(34305), m = n(981631), g = n(689938), p = n(351634);
 function T(e) {
     let {
         applicationViewItems: t,
@@ -75,7 +75,7 @@ class S extends s.PureComponent {
         return (0, i.jsxs)('div', {
             className: p.body,
             children: [
-                (0, E.Q)() ? (0, i.jsxs)(s.Fragment, {
+                (0, h.Q)() ? (0, i.jsxs)(s.Fragment, {
                     children: [
                         (0, i.jsx)(r.FormSwitch, {
                             value: t,
@@ -102,7 +102,7 @@ class S extends s.PureComponent {
     render() {
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(h.Z, { currentRoute: m.Z5c.APPLICATION_LIBRARY_SETTINGS }),
+                (0, i.jsx)(E.Z, { currentRoute: m.Z5c.APPLICATION_LIBRARY_SETTINGS }),
                 (0, i.jsx)(r.ScrollerAuto, {
                     className: p.scroller,
                     children: this.renderBody()
@@ -123,7 +123,7 @@ class S extends s.PureComponent {
         }) : t[n] = i;
     }
 }
-function C() {
+function f() {
     let e = {
         installShortcutDesktop: o.Xc.useSetting(),
         installShortcutStartMenu: o.Pe.useSetting(),

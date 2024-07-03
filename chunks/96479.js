@@ -11,31 +11,31 @@ function _(e) {
             index: t,
             className: n,
             channel: _,
-            user: E,
-            hasSingleMessageRequest: h
+            user: h,
+            hasSingleMessageRequest: E
         } = e, {channelId: I} = (0, o._)();
     return (0, i.jsx)(c.Z, {
         index: t,
         className: n,
         isFocused: I === _.id,
         channel: _,
-        user: E,
+        user: h,
         onClick: e => {
             e.stopPropagation(), s.Z.openPrivateChannelAsSidebar({
                 channelId: _.id,
                 baseChannelId: a.uZ,
-                hasSingleMessageRequest: h
+                hasSingleMessageRequest: E
             }), r.default.track(u.rMx.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                 is_spam: !1,
                 channel_id: _.id,
-                other_user_id: E.id
+                other_user_id: h.id
             }), setTimeout(() => {
                 l.S.dispatch(u.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: _.id });
             }, 0);
         },
         children: e => (0, i.jsx)(d.C, {
             active: e,
-            user: E,
+            user: h,
             channel: _
         })
     });

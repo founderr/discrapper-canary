@@ -1,9 +1,9 @@
 n.d(t, {
     i: function () {
-        return b;
+        return P;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(442837), c = n(780384), d = n(481060), u = n(596454), _ = n(515753), E = n(410030), h = n(607070), I = n(100527), m = n(906732), g = n(821982), p = n(377171), T = n(633302), S = n(153066), C = n(335131), f = n(141594), N = n(302800), A = n(981631), Z = n(689938), L = n(383980);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(442837), c = n(780384), d = n(481060), u = n(596454), _ = n(515753), h = n(410030), E = n(607070), I = n(100527), m = n(906732), g = n(821982), p = n(377171), T = n(633302), S = n(153066), f = n(335131), C = n(141594), N = n(302800), A = n(981631), Z = n(689938), L = n(383980);
 let v = e => {
         let {color: t} = e;
         return (0, i.jsx)(d.TextBadge, {
@@ -19,13 +19,13 @@ let v = e => {
                 onMouseLeave: r,
                 children: o,
                 ...c
-            } = e, u = (0, l.JA)('shop'), E = I.Z.HOME_PAGE_SHOP_TAB, {analyticsLocations: h} = (0, m.ZP)(E), g = s.useCallback(() => (0, C.mK)({
+            } = e, u = (0, l.JA)('shop'), h = I.Z.HOME_PAGE_SHOP_TAB, {analyticsLocations: E} = (0, m.ZP)(h), g = s.useCallback(() => (0, f.mK)({
                 openInLayer: !1,
-                analyticsSource: E,
-                analyticsLocations: h
+                analyticsSource: h,
+                analyticsLocations: E
             }), [
-                E,
-                h
+                h,
+                E
             ]);
         return (0, i.jsx)(_.Qj, {
             selected: t,
@@ -44,7 +44,7 @@ let v = e => {
         let {
                 displayOptions: t,
                 assetId: n
-            } = e, s = (0, o.e7)([h.Z], () => h.Z.useReducedMotion), a = null != n ? (0, g.Z)(n, d.AvatarSizes.SIZE_80, !s) : void 0;
+            } = e, s = (0, o.e7)([E.Z], () => E.Z.useReducedMotion), a = null != n ? (0, g.Z)(n, d.AvatarSizes.SIZE_80, !s) : void 0;
         return (0, i.jsxs)('div', {
             className: L.shopMarketingTooltipContent,
             children: [
@@ -79,7 +79,7 @@ let v = e => {
                 selected: t,
                 locationState: n,
                 displayOptions: a
-            } = e, [l, o] = s.useState(0), [u, _] = s.useState(!1), h = (0, E.ZP)(), I = a.entrypointDecorationAssets, m = s.useCallback(e => {
+            } = e, [l, o] = s.useState(0), [u, _] = s.useState(!1), E = (0, h.ZP)(), I = a.entrypointDecorationAssets, m = s.useCallback(e => {
                 o(e => (e + 1) % a.assetIds.length), _(!0), null == e || e();
             }, [a.assetIds]), g = s.useCallback(e => {
                 _(!1), null == e || e();
@@ -104,7 +104,7 @@ let v = e => {
                 onMouseLeave: () => g(e.onMouseLeave),
                 children: [
                     null != I && (0, i.jsx)('img', {
-                        src: (0, c.wj)(h) ? I.srcDark : I.srcLight,
+                        src: (0, c.wj)(E) ? I.srcDark : I.srcLight,
                         className: r()(L.marketingButtonImage, { [L.marketingButtonImageHovered]: u }),
                         alt: '',
                         'aria-hidden': !0
@@ -113,7 +113,7 @@ let v = e => {
                 ]
             })
         });
-    }, P = e => {
+    }, b = e => {
         let {
                 selected: t,
                 locationState: n,
@@ -144,15 +144,15 @@ let v = e => {
                 children: (0, i.jsx)(v, { color: a.badgeColor })
             })
         });
-    }, b = e => {
+    }, P = e => {
         let {
                 selected: t,
                 locationState: n
-            } = e, {collectiblesShopTabNewBadgeDisplayOptions: s} = (0, f.Z)();
+            } = e, {collectiblesShopTabNewBadgeDisplayOptions: s} = (0, C.Z)();
         if (null != s)
             switch (s.type) {
             case N.k2.TOOLTIP:
-                return (0, i.jsx)(P, {
+                return (0, i.jsx)(b, {
                     selected: t,
                     locationState: n,
                     displayOptions: s

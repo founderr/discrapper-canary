@@ -1,5 +1,5 @@
 var i = n(735250), s = n(470079), a = n(920906), r = n(442837), l = n(481060), o = n(607070), c = n(207796), d = n(420212), u = n(689938), _ = n(576513);
-let E = {
+let h = {
     mass: 1,
     tension: 600,
     friction: 60,
@@ -9,19 +9,19 @@ t.Z = function (e) {
     let {
             children: t,
             onClose: n
-        } = e, h = s.useCallback(() => {
+        } = e, E = s.useCallback(() => {
             (0, c.fH)(c.v0.DISCOVERY), null == n || n();
         }, [n]);
     s.useEffect(() => {
         let e = e => {
-            e.key === d.vn.ESCAPE && h();
+            e.key === d.vn.ESCAPE && E();
         };
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
-    }, [h]);
+    }, [E]);
     let I = (0, r.e7)([o.Z], () => o.Z.useReducedMotion), m = (0, a.useSpring)({
             from: { opacity: 0 },
             to: { opacity: 1 },
-            config: E,
+            config: h,
             delay: 500,
             immediate: I
         });
@@ -31,7 +31,7 @@ t.Z = function (e) {
             (0, i.jsx)('div', {
                 className: _.saveContainer,
                 children: (0, i.jsx)(l.Button, {
-                    onClick: h,
+                    onClick: E,
                     look: l.ButtonLooks.OUTLINED,
                     color: l.ButtonColors.PRIMARY,
                     children: u.Z.Messages.SAVE

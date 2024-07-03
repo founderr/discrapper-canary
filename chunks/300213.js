@@ -8,7 +8,7 @@ function c(e) {
     var t;
     let n = (0, a.ZP)(e), c = r.Z.getChannel(null === (t = n[0]) || void 0 === t ? void 0 : t.id), d = (0, i.e7)([s.Z], () => s.Z.getStageInstanceByChannel(null == c ? void 0 : c.id), [c]), u = (0, o.k5)(e), {
             isStageNoticeHidden: _,
-            isEventNoticeHidden: E
+            isEventNoticeHidden: h
         } = (0, i.cj)([l.Z], () => ({
             isStageNoticeHidden: l.Z.isLiveChannelNoticeHidden({ stageId: null == d ? void 0 : d.id }),
             isEventNoticeHidden: l.Z.isLiveChannelNoticeHidden({ eventId: null == u ? void 0 : u.id })
@@ -17,6 +17,6 @@ function c(e) {
             u
         ]);
     if (null != u)
-        return null != d ? !_ : !E;
+        return null != d ? !_ : !h;
     return null != d && !_;
 }

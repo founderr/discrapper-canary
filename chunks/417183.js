@@ -1,6 +1,6 @@
 n(47120);
 var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(748780), o = n(91192), c = n(481060), d = n(239091), u = n(617015), _ = n(234187);
-function E(e, t, n) {
+function h(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -8,7 +8,7 @@ function E(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-class h extends s.PureComponent {
+class E extends s.PureComponent {
     componentWillLeave(e) {
         l.Z.parallel([
             l.Z.timing(this.state.opacity, {
@@ -43,7 +43,7 @@ class h extends s.PureComponent {
                 children: a,
                 user: d,
                 onClick: u,
-                isActive: E
+                isActive: h
             } = this.props;
         return (0, i.jsx)(o.mh, {
             id: d.id,
@@ -53,7 +53,7 @@ class h extends s.PureComponent {
                     right: -8
                 },
                 children: (0, i.jsx)(l.Z.div, {
-                    className: r()(_.peopleListItem, { [_.active]: E || s }),
+                    className: r()(_.peopleListItem, { [_.active]: h || s }),
                     onContextMenu: e => this.handleContextMenu(e, d),
                     onMouseEnter: this.handleMouseEnter,
                     onMouseLeave: this.handleMouseLeave,
@@ -63,27 +63,27 @@ class h extends s.PureComponent {
                         opacity: t
                     },
                     ...o,
-                    children: a(n || E || s)
+                    children: a(n || h || s)
                 })
             })
         });
     }
     constructor(...e) {
-        super(...e), E(this, 'state', {
+        super(...e), h(this, 'state', {
             height: new l.Z.Value(u.NV),
             opacity: new l.Z.Value(1),
             hovered: !1,
             isContextMenuActive: !1
-        }), E(this, 'handleMouseEnter', () => {
+        }), h(this, 'handleMouseEnter', () => {
             let {
                     isFocused: e,
                     isActive: t,
                     onOtherHover: n
                 } = this.props, {isContextMenuActive: i} = this.state;
             this.setState({ hovered: e }), e && !t && !i && (null == n || n());
-        }), E(this, 'handleMouseLeave', () => {
+        }), h(this, 'handleMouseLeave', () => {
             this.setState({ hovered: !1 });
-        }), E(this, 'handleContextMenu', (e, t) => {
+        }), h(this, 'handleContextMenu', (e, t) => {
             this.setState({ isContextMenuActive: !0 }), (0, d.jW)(e, async () => {
                 let {default: e} = await Promise.all([
                     n.e('79695'),
@@ -102,4 +102,4 @@ class h extends s.PureComponent {
         });
     }
 }
-t.Z = h;
+t.Z = E;

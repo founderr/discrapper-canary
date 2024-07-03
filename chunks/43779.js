@@ -3,7 +3,7 @@ n.d(t, {
         return I;
     }
 });
-var i = n(735250), s = n(470079), a = n(481060), r = n(113434), l = n(497505), o = n(918701), c = n(566078), d = n(472144), u = n(644646), _ = n(69439), E = n(689938), h = n(855892);
+var i = n(735250), s = n(470079), a = n(481060), r = n(113434), l = n(497505), o = n(918701), c = n(566078), d = n(472144), u = n(644646), _ = n(69439), h = n(689938), E = n(855892);
 function I(e) {
     let {
             quest: t,
@@ -16,51 +16,51 @@ function I(e) {
             variant: 'text-md/semibold',
             color: 'text-brand',
             tag: 'span',
-            className: h.header,
+            className: E.header,
             children: I
         }), [I]);
     return (0, i.jsxs)('div', {
-        className: h.container,
+        className: E.container,
         children: [
             (0, i.jsxs)('div', {
-                className: h.rewardDescriptionContainer,
+                className: E.rewardDescriptionContainer,
                 children: [
                     g ? (0, i.jsx)('div', {
-                        className: h.progressWrapper,
+                        className: E.progressWrapper,
                         children: (0, i.jsx)(d.Z, {
                             quest: t,
                             size: 76,
                             percentComplete: m.percentComplete,
                             children: (0, i.jsx)('div', {
-                                className: h.circularRewardTileWrapper,
+                                className: E.circularRewardTileWrapper,
                                 children: (0, i.jsx)(u.Z, {
                                     quest: t,
                                     questContent: n,
-                                    className: h.circularQuestRewardTileAsset
+                                    className: E.circularQuestRewardTileAsset
                                 })
                             })
                         })
                     }) : (0, i.jsx)(u.Z, {
                         quest: t,
                         questContent: l.jn.QUEST_HOME_DESKTOP,
-                        className: h.questRewardTileAsset
+                        className: E.questRewardTileAsset
                     }),
                     (0, i.jsxs)('div', {
-                        className: h.textContainer,
+                        className: E.textContainer,
                         children: [
                             (0, i.jsx)('span', {
-                                className: h.headerSpan,
+                                className: E.headerSpan,
                                 children: (0, i.jsx)(a.Text, {
                                     variant: 'text-md/semibold',
                                     color: 'header-primary',
-                                    className: h.header,
-                                    children: E.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({ rewardHook: S })
+                                    className: E.header,
+                                    children: h.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({ rewardHook: S })
                                 })
                             }),
                             null != p ? (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-muted',
-                                className: h.description,
+                                className: E.description,
                                 children: p
                             }) : null
                         ]

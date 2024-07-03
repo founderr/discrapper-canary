@@ -1,7 +1,7 @@
 n(47120), n(653041);
 var i = n(392711), s = n.n(i), a = n(442837), r = n(377108), l = n(433517), o = n(709054), c = n(48481), d = n(526761), u = n(981631);
 let _ = 'selectedChannelGuildFrecency';
-function E(e) {
+function h(e) {
     var t;
     let n;
     (t = n || (n = {})).IMAGE = 'IMAGE', t.VIDEO = 'VIDEO';
@@ -26,11 +26,11 @@ function E(e) {
         };
     });
 }
-let h = [
+let E = [
     {
         version: 2,
         run(e) {
-            let t = E(1);
+            let t = h(1);
             if (0 === t.length)
                 return !1;
             for (let {
@@ -82,7 +82,7 @@ let h = [
         version: 6,
         run(e) {
             null == e.favoriteGifs && (e.favoriteGifs = r.wK.create()), null == e.favoriteGifs.gifs && (e.favoriteGifs.gifs = {});
-            let t = E(1);
+            let t = h(1);
             if (0 === t.length)
                 return !1;
             s()(e.favoriteGifs.gifs).values().sortBy('order').forEach((e, n) => e.order = t.length + 1 + n);
@@ -156,4 +156,4 @@ let h = [
         }
     }
 ];
-t.Z = h;
+t.Z = E;

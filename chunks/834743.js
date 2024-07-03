@@ -1,6 +1,6 @@
 n(47120);
 var i = n(735250), s = n(470079), a = n(442837), r = n(82950), l = n(623624), o = n(650774), c = n(981631), d = n(921944), u = n(689938), _ = n(241626);
-class E extends s.PureComponent {
+class h extends s.PureComponent {
     render() {
         let {
             guild: e,
@@ -41,4 +41,4 @@ class E extends s.PureComponent {
 t.Z = a.ZP.connectStores([o.Z], e => {
     let {guild: t} = e;
     return { memberCount: o.Z.getMemberCount(t.id) };
-})(E);
+})(h);

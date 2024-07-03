@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(990547), a = n(399606), r = n(213609), l = n(434404), o = n(970731), c = n(430824), d = n(594174), u = n(981631), _ = n(689938), E = n(583134), h = n(217110);
+var s = n(990547), a = n(399606), r = n(213609), l = n(434404), o = n(970731), c = n(430824), d = n(594174), u = n(981631), _ = n(689938), h = n(583134), E = n(217110);
 function I(e) {
     let {
             guildId: t,
@@ -25,16 +25,16 @@ function I(e) {
             is_owner: I
         }
     }), (0, i.jsx)('div', {
-        className: E.container,
+        className: h.container,
         children: (0, i.jsx)(o.ZP, {
             header: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_HEADER,
             content: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_BODY,
             asset: (0, i.jsx)('div', {
-                className: E.image,
+                className: h.image,
                 children: (0, i.jsx)('img', {
                     alt: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_IMG_ALT,
-                    src: h,
-                    className: E.image
+                    src: E,
+                    className: h.image
                 })
             }),
             buttonCTA: _.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_UPSELL_CTA,

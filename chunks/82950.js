@@ -1,4 +1,4 @@
-var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(481060), o = n(367907), c = n(626135), d = n(986332), u = n(428695), _ = n(981631), E = n(689938), h = n(247397);
+var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(481060), o = n(367907), c = n(626135), d = n(986332), u = n(428695), _ = n(981631), h = n(689938), E = n(247397);
 let I = r().debounce(o.ZP.trackWithMetadata, 500), m = e => {
         let {
             guild: t,
@@ -12,8 +12,8 @@ let I = r().debounce(o.ZP.trackWithMetadata, 500), m = e => {
             undismissable: p,
             onDismissed: T,
             onClick: S,
-            cta: C,
-            ctaColor: f
+            cta: f,
+            ctaColor: C
         } = e;
         s.useEffect(() => {
             I(_.rMx.CHANNEL_NOTICE_VIEWED, {
@@ -25,8 +25,8 @@ let I = r().debounce(o.ZP.trackWithMetadata, 500), m = e => {
             d
         ]);
         let N = null;
-        'function' == typeof C ? N = C() : null != C && (N = (0, i.jsx)(l.Button, {
-            className: h.btn,
+        'function' == typeof f ? N = f() : null != f && (N = (0, i.jsx)(l.Button, {
+            className: E.btn,
             size: l.Button.Sizes.SMALL,
             onClick: () => {
                 null != d && c.default.track(_.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
@@ -36,44 +36,44 @@ let I = r().debounce(o.ZP.trackWithMetadata, 500), m = e => {
                 }), null == S || S();
             },
             fullWidth: !0,
-            color: f,
-            children: C
+            color: C,
+            children: f
         }));
         let A = null != u ? ''.concat(u, 'px') : '16px';
         return (0, i.jsxs)('div', {
-            className: h.channelNotice,
+            className: E.channelNotice,
             children: [
                 !0 === p ? null : (0, i.jsx)(l.Clickable, {
                     onClick: () => {
                         o.ZP.trackWithMetadata(_.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == T || T();
                     },
-                    className: h.close,
-                    'aria-label': E.Z.Messages.DISMISS,
+                    className: E.close,
+                    'aria-label': h.Z.Messages.DISMISS,
                     children: (0, i.jsx)(l.CloseSmallIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: h.closeIcon
+                        className: E.closeIcon
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: h.imageContainer,
+                    className: E.imageContainer,
                     style: {
                         marginTop: ''.concat(m, 'px'),
                         marginLeft: A,
                         marginRight: A
                     },
                     children: (0, i.jsx)('img', {
-                        className: h.image,
+                        className: E.image,
                         src: r,
                         alt: ''
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: h.message,
+                    className: E.message,
                     children: [
                         null != n ? (0, i.jsx)(l.Heading, {
                             variant: 'heading-md/semibold',
-                            className: h.title,
+                            className: E.title,
                             children: n
                         }) : null,
                         (0, i.jsx)(l.Text, {

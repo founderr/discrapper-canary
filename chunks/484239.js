@@ -15,7 +15,7 @@ t.Z = e => {
             descriptionCta: f = '',
             cardVariant: S,
             subtitleClassName: h
-        } = e, M = (0, o._)(S), x = (0, l.yQ)(), O = (null == x ? void 0 : x.nitroTenureStatus) === d.EB.REDEEMABLE;
+        } = e, M = (0, o._)(S), x = (0, l.yQ)(), b = (null == x ? void 0 : x.nitroTenureStatus) === d.EB.REDEEMABLE;
     switch (null == x ? void 0 : x.nitroTenureStatus) {
     case d.EB.REDEEMABLE:
         n = T, a = 'unlocked icon';
@@ -58,7 +58,7 @@ t.Z = e => {
                         }),
                         0 !== f.length && null != A && (0, s.jsx)(i.Button, {
                             className: C,
-                            disabled: !O,
+                            disabled: !b,
                             fullWidth: !0,
                             onClick: A,
                             children: (0, s.jsxs)('div', {

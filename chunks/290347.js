@@ -3,8 +3,8 @@ n.d(t, {
         return N;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(607070), d = n(605236), u = n(524444), _ = n(529815), E = n(250496), h = n(153124), I = n(810090), m = n(626135), g = n(565216), p = n(981631), T = n(921944), S = n(757601);
-let C = e => {
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(607070), d = n(605236), u = n(524444), _ = n(529815), h = n(250496), E = n(153124), I = n(810090), m = n(626135), g = n(565216), p = n(981631), T = n(921944), S = n(757601);
+let f = e => {
         let {
             tagText: t,
             className: n
@@ -13,7 +13,7 @@ let C = e => {
             className: r()(S.tag, n),
             text: t
         });
-    }, f = e => {
+    }, C = e => {
         let {
             header: t,
             subHeader: n,
@@ -24,7 +24,7 @@ let C = e => {
         return (0, i.jsxs)('div', {
             className: r()(S.featureCard, { [S.wideStyle]: l }),
             children: [
-                null != a ? (0, i.jsx)(C, {
+                null != a ? (0, i.jsx)(f, {
                     tagText: a,
                     className: S.featureCardTag
                 }) : null,
@@ -55,7 +55,7 @@ function N(e) {
             className: t,
             renderModalProps: n,
             heroArt: a,
-            heroArtClassName: C,
+            heroArtClassName: f,
             modalDismissibleContent: N,
             modalTopExtra: A,
             header: Z,
@@ -64,23 +64,23 @@ function N(e) {
             subHeaderExtra: O,
             featureCards: R,
             changeLogId: x,
-            button: P
+            button: b
         } = e, {
-            onClose: b,
+            onClose: P,
             transitionState: M
-        } = n, D = (0, h.Dt)(), y = R.length % 2 == 0, j = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), [U, G] = s.useState(Date.now()), [w, k] = s.useState(0), [B, H] = s.useState(0), [V, F] = s.useState(!1), [Y, W] = s.useState(!0), z = s.useRef(U), K = s.useRef(w), q = s.useRef(B), Q = s.useRef(V), X = s.useRef(Y);
+        } = n, D = (0, E.Dt)(), y = R.length % 2 == 0, j = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), [U, G] = s.useState(Date.now()), [k, w] = s.useState(0), [B, H] = s.useState(0), [V, F] = s.useState(!1), [Y, W] = s.useState(!0), z = s.useRef(U), K = s.useRef(k), q = s.useRef(B), Q = s.useRef(V), X = s.useRef(Y);
     function J() {
         let e = Date.now(), t = e - z.current, n = K.current, i = q.current;
-        return Q.current && (k(n += t), !X.current && H(i += t)), G(e), [
+        return Q.current && (w(n += t), !X.current && H(i += t)), G(e), [
             n,
             i
         ];
     }
     return s.useEffect(() => {
-        z.current = U, K.current = w, q.current = B, Q.current = V, X.current = Y;
+        z.current = U, K.current = k, q.current = B, Q.current = V, X.current = Y;
     }, [
         U,
-        w,
+        k,
         B,
         V,
         Y
@@ -117,7 +117,7 @@ function N(e) {
         children: [
             (0, i.jsx)(o.ModalCloseButton, {
                 className: S.closeButton,
-                onClick: b
+                onClick: P
             }),
             (0, i.jsx)(g.Z, { className: S.splash }),
             null == A ? void 0 : A(),
@@ -130,7 +130,7 @@ function N(e) {
                         children: Z
                     }),
                     'video' === a.type ? (0, i.jsx)(I.Z, {
-                        className: r()(S.video, C),
+                        className: r()(S.video, f),
                         autoPlay: !j,
                         loop: !0,
                         muted: !0,
@@ -152,12 +152,12 @@ function N(e) {
                         },
                         disablePictureInPicture: !0
                     }) : 'embed' === a.type ? (0, i.jsx)(_.BC, {
-                        className: r()(S.video, C),
+                        className: r()(S.video, f),
                         allowFullScreen: !1,
                         href: a.href,
                         thumbnail: a.thumbnail,
                         video: a.embed,
-                        provider: E.pn.YOUTUBE,
+                        provider: h.pn.YOUTUBE,
                         maxWidth: a.embed.width,
                         maxHeight: a.embed.height,
                         renderVideoComponent: u.lV,
@@ -169,7 +169,7 @@ function N(e) {
                         }
                     }) : 'image' === a.type ? (0, i.jsx)('img', {
                         alt: '',
-                        className: r()(S.video, C),
+                        className: r()(S.video, f),
                         src: a.src
                     }) : null,
                     (0, i.jsx)(o.Heading, {
@@ -180,12 +180,12 @@ function N(e) {
                     null == O ? void 0 : O(),
                     (0, i.jsx)('div', {
                         className: r()(S.featureCardGroup, { [S.wideStyle]: y }),
-                        children: R.map((e, t) => (0, i.jsx)(f, {
+                        children: R.map((e, t) => (0, i.jsx)(C, {
                             ...e,
                             wideStyle: y
                         }, ''.concat(e.header, '_').concat(t)))
                     }),
-                    P()
+                    b()
                 ]
             })
         ]

@@ -6,7 +6,7 @@ n.d(t, {
         return g;
     }
 });
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(920906), o = n(442837), c = n(481060), d = n(607070), u = n(603368), _ = n(284019), E = n(689938), h = n(206240);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(920906), o = n(442837), c = n(481060), d = n(607070), u = n(603368), _ = n(284019), h = n(689938), E = n(206240);
 function I(e) {
     let {
             index: t,
@@ -19,7 +19,7 @@ function I(e) {
         } = e, p = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), T = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY), S = s.useMemo(() => (0, u.j1)(m, T.hex()), [
             m,
             T
-        ]), C = null != S, f = (0, l.useSpring)({
+        ]), f = null != S, C = (0, l.useSpring)({
             transform: _ ? 'translateX(0%)' : 'translateX(-100%)',
             config: {
                 ...l.config.stiff,
@@ -31,42 +31,42 @@ function I(e) {
                 (0, i.jsx)(c.Text, {
                     variant: 'text-sm/medium',
                     color: 'header-primary',
-                    children: E.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
+                    children: h.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-xs/normal',
                     color: 'text-muted',
-                    children: E.Z.Messages.CLAN_SUBMIT_ERROR_SUBTITLE
+                    children: h.Z.Messages.CLAN_SUBMIT_ERROR_SUBTITLE
                 })
             ]
         });
     return (0, i.jsx)(c.Tooltip, {
         color: g ? c.Tooltip.Colors.GREY : c.Tooltip.Colors.BRAND,
         text: g ? N : a,
-        'aria-label': g ? E.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : a,
+        'aria-label': g ? h.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : a,
         shouldShow: null != n,
         tooltipStyle: S,
-        tooltipClassName: r()(h.progressStepTooltip, { [h.progressStepTooltipCustomColors]: !g && null != S }),
+        tooltipClassName: r()(E.progressStepTooltip, { [E.progressStepTooltipCustomColors]: !g && null != S }),
         children: e => (0, i.jsxs)(c.Clickable, {
             ...e,
-            'aria-label': E.Z.Messages.STEP_NUMBER.format({ number: t }),
+            'aria-label': h.Z.Messages.STEP_NUMBER.format({ number: t }),
             tabIndex: null == n ? -1 : void 0,
             onClick: n,
-            className: h.progressStepWrapper,
+            className: E.progressStepWrapper,
             children: [
                 g && (0, i.jsx)(c.WarningIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: h.errorIcon
+                    className: E.errorIcon
                 }),
                 (0, i.jsx)('div', {
-                    className: h.progressStep,
+                    className: E.progressStep,
                     children: (0, i.jsx)(l.animated.div, {
                         style: {
-                            ...f,
+                            ...C,
                             ...S
                         },
-                        className: r()(h.progressStepFill, { [h.customProgressStepFill]: C })
+                        className: r()(E.progressStepFill, { [E.customProgressStepFill]: f })
                     })
                 })
             ]
@@ -85,7 +85,7 @@ function m(e) {
     } = e;
     return (0, i.jsx)(l.animated.div, {
         style: c,
-        className: r()(h.progressContainer, d),
+        className: r()(E.progressContainer, d),
         children: t.map(e => {
             let {
                 index: t,
@@ -116,7 +116,7 @@ function g(e) {
         nextButtonAnimationStyle: I
     } = e;
     return (0, i.jsxs)('div', {
-        className: r()(h.buttonsContainer, t),
+        className: r()(E.buttonsContainer, t),
         children: [
             (0, i.jsx)(c.Button, {
                 look: c.Button.Looks.OUTLINED,
@@ -124,7 +124,7 @@ function g(e) {
                 color: c.Button.Colors.PRIMARY,
                 onClick: o,
                 disabled: n,
-                children: E.Z.Messages.BACK
+                children: h.Z.Messages.BACK
             }),
             (0, i.jsx)(l.animated.div, {
                 style: I,
@@ -136,7 +136,7 @@ function g(e) {
                     size: c.Button.Sizes.MEDIUM,
                     onClick: a,
                     disabled: s,
-                    children: E.Z.Messages.NEXT
+                    children: h.Z.Messages.NEXT
                 })
             })
         ]

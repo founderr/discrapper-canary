@@ -1,12 +1,12 @@
 n.d(t, {
     A: function () {
-        return h;
+        return E;
     }
 });
 var i = n(735250);
 n(470079);
-var s = n(252618), a = n(121711), r = n(823379), l = n(976076), o = n(626426), c = n(91630), d = n(754420), u = n(49898), _ = n(689938), E = n(143731);
-function h() {
+var s = n(252618), a = n(121711), r = n(823379), l = n(976076), o = n(626426), c = n(91630), d = n(754420), u = n(49898), _ = n(689938), h = n(143731);
+function E() {
     let e = (0, l.Z)(), t = function (e) {
             switch (e) {
             case u.SM.SERVERS:
@@ -22,7 +22,7 @@ function h() {
             }
         }(e);
     return (0, i.jsxs)('section', {
-        className: E.container,
+        className: h.container,
         children: [
             (0, i.jsx)(s.yY, {
                 location: function (e) {
@@ -40,7 +40,7 @@ function h() {
                     }
                 }(e)
             }),
-            (0, i.jsx)('div', { className: E.dragRegion }),
+            (0, i.jsx)('div', { className: h.dragRegion }),
             t
         ]
     });

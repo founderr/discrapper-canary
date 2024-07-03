@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(685072), a = n(287734), r = n(67212), l = n(158631), o = n(15274), c = n(389303), d = n(881824), u = n(719100), _ = n(976401), E = n(689938);
-function h(e) {
+var s = n(685072), a = n(287734), r = n(67212), l = n(158631), o = n(15274), c = n(389303), d = n(881824), u = n(719100), _ = n(976401), h = n(689938);
+function E(e) {
     let {
             tooltipText: t,
             onClick: n
@@ -19,8 +19,8 @@ function h(e) {
     });
 }
 function I() {
-    return (0, i.jsx)(h, {
-        tooltipText: E.Z.Messages.DISCONNECT_SELF,
+    return (0, i.jsx)(E, {
+        tooltipText: h.Z.Messages.DISCONNECT_SELF,
         onClick: () => {
             (0, r.b_)(), a.default.disconnect();
         }
@@ -28,8 +28,8 @@ function I() {
 }
 function m(e) {
     let {channel: t} = e;
-    return (0, i.jsx)(h, {
-        tooltipText: E.Z.Messages.AUDIENCE_DISCONNECT,
+    return (0, i.jsx)(E, {
+        tooltipText: h.Z.Messages.AUDIENCE_DISCONNECT,
         onClick: () => {
             if ((0, u.Z)(t)) {
                 (0, d.Us)(t);
@@ -41,8 +41,8 @@ function m(e) {
 }
 function g(e) {
     let {channel: t} = e;
-    return (0, i.jsx)(h, {
-        tooltipText: E.Z.Messages.DISCONNECT_SELF,
+    return (0, i.jsx)(E, {
+        tooltipText: h.Z.Messages.DISCONNECT_SELF,
         onClick: () => {
             if ((0, c.Z)(t)) {
                 (0, o.lC)(t);
