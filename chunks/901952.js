@@ -43,7 +43,8 @@ function L(e) {
             persistentCallCtaEnabled: L
         } = (0, g.l)({ location: 'BiteSizeProfileDirectMessageSection' }), b = (0, N.Z)({
             user: t,
-            onClose: u
+            onClose: u,
+            className: C.biteSizeButton
         }), [M, P] = i.useState(''), [U, w] = i.useState((0, _.JM)(M)), x = i.useRef(!1), G = () => {
             m({ action: 'SEND_MESSAGE' }), l.Z.openPrivateChannel(t.id, !1, !1, p), null == u || u();
         }, k = (0, r.jsxs)('div', {
@@ -99,21 +100,15 @@ function L(e) {
                         onClick: t,
                         ...n
                     } = e;
-                    return (0, r.jsx)(s.Button, {
-                        size: s.Button.Sizes.NONE,
+                    return (0, r.jsx)(A.Z, {
+                        icon: s.PhoneCallIcon,
+                        text: O.Z.Messages.CALL,
+                        variant: 'icon',
+                        color: o()(C.engagementExpButton, C.biteSizeIconButton),
+                        ...n,
                         onClick: e => {
                             m({ action: 'PRESS_CALL' }), t(e);
-                        },
-                        look: s.Button.Looks.BLANK,
-                        className: o()(C.iconButton, C.engagementExpButton),
-                        ...n,
-                        children: (0, r.jsx)('div', {
-                            className: C.engagementExpButtonInner,
-                            children: (0, r.jsx)(s.PhoneCallIcon, {
-                                size: 'xs',
-                                color: 'currentColor'
-                            })
-                        })
+                        }
                     });
                 }
             })
@@ -126,6 +121,7 @@ function L(e) {
                     fullWidth: !0,
                     variant: 'text',
                     color: C.engagementExpButton,
+                    className: C.biteSizeButton,
                     tooltipContainerClassName: C.ctaTooltipContainer,
                     onClick: G,
                     icon: s.ChatIcon,
@@ -141,6 +137,7 @@ function L(e) {
                     variant: 'text',
                     color: o()(s.Button.Colors.BRAND, R.color),
                     onClick: G,
+                    className: C.biteSizeButton,
                     icon: s.ChatIcon,
                     text: O.Z.Messages.USER_PROFILE_MESSAGE,
                     tooltipContainerClassName: C.ctaTooltipContainer
@@ -150,6 +147,7 @@ function L(e) {
         }) : (0, r.jsx)(A.Z, {
             fullWidth: !0,
             variant: 'text',
+            className: C.biteSizeButton,
             color: o()(s.Button.Colors.BRAND, R.color),
             onClick: G,
             icon: s.ChatIcon,

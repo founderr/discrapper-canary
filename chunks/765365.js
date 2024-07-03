@@ -7,18 +7,19 @@ var r = n(735250), i = n(120356), a = n.n(i), o = n(442837), s = n(481060), l = 
 function S(e) {
     let {
             user: t,
-            onClose: n
-        } = e, {trackUserProfileAction: i} = (0, h.KZ)(), S = (0, o.e7)([d.default], () => d.default.getId()), A = (0, o.e7)([
+            onClose: n,
+            className: i
+        } = e, {trackUserProfileAction: S} = (0, h.KZ)(), A = (0, o.e7)([d.default], () => d.default.getId()), N = (0, o.e7)([
             _.Z,
             f.Z
         ], () => {
             var e;
-            return _.Z.getChannel(null === (e = f.Z.getVoiceStateForUser(S)) || void 0 === e ? void 0 : e.channelId);
-        }), N = null == A ? void 0 : A.isPrivate(), v = (0, o.e7)([E.Z], () => E.Z.can(m.Plq.CREATE_INSTANT_INVITE, A));
-    if (null == A || N || !v)
+            return _.Z.getChannel(null === (e = f.Z.getVoiceStateForUser(A)) || void 0 === e ? void 0 : e.channelId);
+        }), v = null == N ? void 0 : N.isPrivate(), O = (0, o.e7)([E.Z], () => E.Z.can(m.Plq.CREATE_INSTANT_INVITE, N));
+    if (null == N || v || !O)
         return null;
-    let O = async () => {
-        i({ action: 'PRESS_INVITE_TO_CALL' }), await u.Z.createInvite(null == A ? void 0 : A.id, {
+    let R = async () => {
+        S({ action: 'PRESS_INVITE_TO_CALL' }), await u.Z.createInvite(null == N ? void 0 : N.id, {
             max_uses: 1,
             unique: !0
         }, 'useActiveInviteToCallButton').then(e => function (e, t) {
@@ -31,7 +32,8 @@ function S(e) {
         fullWidth: !0,
         variant: 'text',
         color: a()(s.Button.Colors.BRAND, T.color),
-        onClick: O,
+        className: i,
+        onClick: R,
         icon: s.GroupPlusIcon,
         text: I.Z.Messages.USER_PROFILE_INVITE_TO_CALL,
         tooltipContainerClassName: g.ctaTooltipContainer
