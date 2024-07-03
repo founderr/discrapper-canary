@@ -172,6 +172,9 @@ class u extends r.Z {
     getSupportedBandwidthEstimationExperiments(e) {
         e([]);
     }
+    getMLSSigningKey(e, t) {
+        return Promise.reject(Error('NOT_IMPLEMENTED'));
+    }
     constructor(...e) {
         super(...e), o(this, 'Video', s), o(this, 'Camera', l);
     }

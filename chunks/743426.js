@@ -445,6 +445,11 @@ class I extends o.Z {
     getSupportedBandwidthEstimationExperiments(e) {
         null != (0, _.zS)().getSupportedBandwidthEstimationExperiments && (0, _.zS)().getSupportedBandwidthEstimationExperiments(e);
     }
+    getMLSSigningKey(e, t) {
+        return new Promise((n, r) => {
+            null != (0, _.zS)().getMLSSigningKey ? (0, _.zS)().getMLSSigningKey(e, t, e => n(e)) : r(Error('NOT_IMPLEMENTED'));
+        });
+    }
     watchdogTick() {
         let e = !1;
         (0, _.zS)().pingVoiceThread(() => {
