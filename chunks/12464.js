@@ -1,17 +1,6 @@
 t(47120);
-var n, r, s, l, o = t(735250), i = t(470079), c = t(160612), u = t(120356), d = t.n(u), E = t(481060), _ = t(818083), p = t(912454), m = t(689938), A = t(858594), N = t(216315);
+var n, r, s, l, o = t(735250), i = t(470079), c = t(160612), u = t(120356), d = t.n(u), E = t(481060), _ = t(912454), p = t(689938), m = t(858594), A = t(216315);
 (s = n || (n = {})).CardNumber = 'cardNumber', s.CardExpiry = 'cardExpiry', s.CardCvc = 'cardCvc', (l = r || (r = {})).Change = 'change', l.Focus = 'focus', l.Blur = 'blur';
-let h = (0, _.B)({
-    kind: 'user',
-    id: '2024-05_enable_stripe_link_on_split_cardelement',
-    label: 'Enable Stripe Link Experiment on Split CardElement',
-    defaultConfig: { disableLink: !0 },
-    treatments: [{
-            id: 1,
-            label: 'Enable Stripe Link',
-            config: { disableLink: !1 }
-        }]
-});
 a.Z = function (e) {
     let a = i.useRef(null), {
             stripeType: t,
@@ -19,99 +8,99 @@ a.Z = function (e) {
             updateCompleted: r,
             onFocus: s,
             onBlur: l
-        } = e, [u, _] = i.useState(p.Qy.UNKNOWN), [T, I] = i.useState(!1), [S, C] = i.useState(!1), [b, P] = i.useState(null), [R, f] = i.useState({}), y = (0, c.useElements)(), {disableLink: M} = h.useExperiment({ location: 'adding_new_card_modal' }, { autoTrackExposure: !0 }), g = i.useCallback(() => {
-            if (null != y)
+        } = e, [u, N] = i.useState(_.Qy.UNKNOWN), [h, T] = i.useState(!1), [I, S] = i.useState(!1), [C, b] = i.useState(null), [P, R] = i.useState({}), f = (0, c.useElements)(), y = i.useCallback(() => {
+            if (null != f)
                 switch (t) {
                 case 'cardNumber': {
-                        let e = y.getElement(c.CardNumberElement);
+                        let e = f.getElement(c.CardNumberElement);
                         if (null == e)
                             return;
                         e.off('change'), e.off('focus'), e.off('blur');
                         break;
                     }
                 case 'cardExpiry': {
-                        let e = y.getElement(c.CardExpiryElement);
+                        let e = f.getElement(c.CardExpiryElement);
                         if (null == e)
                             return;
                         e.off('change'), e.off('focus'), e.off('blur');
                         break;
                     }
                 case 'cardCvc': {
-                        let e = y.getElement(c.CardCvcElement);
+                        let e = f.getElement(c.CardCvcElement);
                         if (null == e)
                             return;
                         e.off('change'), e.off('focus'), e.off('blur');
                     }
                 }
         }, [
-            y,
+            f,
             t
-        ]), O = i.useCallback(e => {
-            !S && !e.empty && C(!0), null != r && r(e.complete), null != e.error && I(!1);
+        ]), M = i.useCallback(e => {
+            !I && !e.empty && S(!0), null != r && r(e.complete), null != e.error && T(!1);
         }, [
-            S,
+            I,
             r
-        ]), L = i.useCallback(() => {
-            I(!0), null == s || s();
-        }, [s]), v = i.useCallback(() => {
-            I(!1), null == l || l();
-        }, [l]), D = i.useCallback(() => {
-            if (null != y)
+        ]), g = i.useCallback(() => {
+            T(!0), null == s || s();
+        }, [s]), O = i.useCallback(() => {
+            T(!1), null == l || l();
+        }, [l]), L = i.useCallback(() => {
+            if (null != f)
                 switch (t) {
                 case 'cardNumber': {
-                        let e = y.getElement(c.CardNumberElement);
+                        let e = f.getElement(c.CardNumberElement);
                         if (null == e)
                             return;
                         e.on('change', e => {
-                            u !== e.brand && _(e.brand), e.empty && S ? P(m.Z.Messages.CREDIT_CARD_ERROR_REQUIRED) : null != e.error ? P(m.Z.Messages.CREDIT_CARD_ERROR_NUMBER) : P(null), O(e);
-                        }), e.on('focus', L), e.on('blur', v);
+                            u !== e.brand && N(e.brand), e.empty && I ? b(p.Z.Messages.CREDIT_CARD_ERROR_REQUIRED) : null != e.error ? b(p.Z.Messages.CREDIT_CARD_ERROR_NUMBER) : b(null), M(e);
+                        }), e.on('focus', g), e.on('blur', O);
                         break;
                     }
                 case 'cardExpiry': {
-                        let e = y.getElement(c.CardExpiryElement);
+                        let e = f.getElement(c.CardExpiryElement);
                         if (null == e)
                             return;
                         e.on('change', e => {
-                            null != e.error || e.empty && S ? P(m.Z.Messages.CREDIT_CARD_ERROR_EXPIRATION) : P(null), O(e);
-                        }), e.on('focus', L), e.on('blur', v);
+                            null != e.error || e.empty && I ? b(p.Z.Messages.CREDIT_CARD_ERROR_EXPIRATION) : b(null), M(e);
+                        }), e.on('focus', g), e.on('blur', O);
                         break;
                     }
                 case 'cardCvc': {
-                        let e = y.getElement(c.CardCvcElement);
+                        let e = f.getElement(c.CardCvcElement);
                         if (null == e)
                             return;
                         e.on('change', e => {
-                            null != e.error || e.empty && S ? P(m.Z.Messages.CREDIT_CARD_ERROR_SECURITY_CODE) : P(null), O(e);
-                        }), e.on('focus', L), e.on('blur', v);
+                            null != e.error || e.empty && I ? b(p.Z.Messages.CREDIT_CARD_ERROR_SECURITY_CODE) : b(null), M(e);
+                        }), e.on('focus', g), e.on('blur', O);
                     }
                 }
         }, [
-            v,
             O,
-            L,
+            M,
+            g,
             u,
-            y,
-            S,
+            f,
+            I,
             t
         ]);
-    function x() {
-        return d()(A.cardInput, {
-            [A.cardInputError]: null !== b,
-            [A.cardInputFocused]: T,
-            [A.cardNumberInput]: 'cardNumber' === t
+    function v() {
+        return d()(m.cardInput, {
+            [m.cardInputError]: null !== C,
+            [m.cardInputFocused]: h,
+            [m.cardNumberInput]: 'cardNumber' === t
         });
     }
-    return i.useEffect(() => (D(), () => {
-        g();
+    return i.useEffect(() => (L(), () => {
+        y();
     }), [
-        D,
-        g
+        L,
+        y
     ]), i.useLayoutEffect(() => {
         let {current: e} = a;
         if (null == e)
             return;
         let t = window.getComputedStyle(e), n = window.getComputedStyle(e, '::placeholder'), r = t.getPropertyValue('font-family'), s = t.getPropertyValue('font-weight'), l = t.getPropertyValue('color');
-        f({
+        R({
             base: {
                 fontFamily: r,
                 fontWeight: s,
@@ -121,53 +110,52 @@ a.Z = function (e) {
             }
         });
     }, [a]), (0, o.jsxs)('div', {
-        className: d()(A.cardNumberWrapper),
+        className: d()(m.cardNumberWrapper),
         'data-stripe-type': t,
         children: [
             (0, o.jsx)('div', {
                 ref: a,
-                className: d()(A.hiddenDiv, N.input)
+                className: d()(m.hiddenDiv, A.input)
             }),
             function () {
-                let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
                 switch (t) {
                 case 'cardNumber':
                     return (0, o.jsxs)('div', {
                         children: [
-                            (0, o.jsx)(p.ZP, {
-                                className: A.cardIcon,
+                            (0, o.jsx)(_.ZP, {
+                                className: m.cardIcon,
                                 type: u,
                                 flipped: n
                             }),
                             (0, o.jsx)(c.CardNumberElement, {
                                 options: {
-                                    style: R,
-                                    placeholder: m.Z.Messages.PAYMENT_SOURCE_CARD_NUMBER,
-                                    disableLink: e
+                                    style: P,
+                                    placeholder: p.Z.Messages.PAYMENT_SOURCE_CARD_NUMBER,
+                                    disableLink: !1
                                 },
-                                className: x()
+                                className: v()
                             })
                         ]
                     });
                 case 'cardExpiry':
                     return (0, o.jsx)(c.CardExpiryElement, {
                         options: {
-                            style: R,
-                            placeholder: m.Z.Messages.PAYMENT_SOURCE_EXPIRATION_DATE_PLACEHOLDER
+                            style: P,
+                            placeholder: p.Z.Messages.PAYMENT_SOURCE_EXPIRATION_DATE_PLACEHOLDER
                         },
-                        className: x()
+                        className: v()
                     });
                 case 'cardCvc':
                     return (0, o.jsx)(c.CardCvcElement, {
                         options: {
-                            style: R,
-                            placeholder: m.Z.Messages.CREDIT_CARD_SECURITY_CODE
+                            style: P,
+                            placeholder: p.Z.Messages.CREDIT_CARD_SECURITY_CODE
                         },
-                        className: x()
+                        className: v()
                     });
                 }
-            }(M),
-            (0, o.jsx)(E.InputError, { error: b })
+            }(),
+            (0, o.jsx)(E.InputError, { error: C })
         ]
     });
 };
