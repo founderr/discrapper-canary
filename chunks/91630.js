@@ -3,13 +3,13 @@ n.d(t, {
         return T;
     }
 });
-var i = n(735250), s = n(470079), a = n(657707), r = n(823379), l = n(51448), o = n(164427), c = n(624383), d = n(742916), u = n(860403), _ = n(536763), E = n(160460), h = n(968669), I = n(982345), m = n(49898), g = n(689938), p = n(65050);
+var i = n(735250), s = n(470079), a = n(657707), r = n(823379), l = n(51448), o = n(164427), c = n(742916), d = n(860403), u = n(388571), _ = n(536763), E = n(160460), h = n(968669), I = n(982345), m = n(49898), g = n(689938), p = n(65050);
 function T() {
     let {
             tabs: e,
             selectedTab: t,
             onSelectTab: n
-        } = (0, I.Y)(), T = s.useRef(new d.m()), S = (0, m.$G)(t.id), {
+        } = (0, I.Y)(), T = s.useRef(new c.m()), S = (0, m.$G)(t.id), {
             searching: C,
             searchQuery: f,
             setSearchQuery: N,
@@ -25,49 +25,46 @@ function T() {
             if (a)
                 return (0, i.jsx)(E.x, {
                     searchQuery: s,
-                    categoryId: (0, m.$G)(t),
+                    categoryId: n,
                     onSearchClear: A
                 });
             switch (t) {
-            case m.vf.GUILDS:
-                return (0, i.jsx)(i.Fragment, {
-                    children: (0, i.jsx)(c.c, {
-                        title: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,
-                        description: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
-                        backgroundImageUrl: 'https://cdn.discordapp.com/assets/clans/DiscoveryUpsell_Valorant_Background.png'
-                    })
-                });
             case m.vf.GAMING:
-                return (0, i.jsx)(u.j, {
+                return (0, i.jsx)(d.j, {
                     categoryId: n,
                     categoryName: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_CATEGORY
                 });
             case m.vf.MUSIC:
-                return (0, i.jsx)(u.j, {
+                return (0, i.jsx)(d.j, {
                     categoryId: n,
                     categoryName: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_CATEGORY
                 });
             case m.vf.ENTERTAINMENT:
-                return (0, i.jsx)(u.j, {
+                return (0, i.jsx)(d.j, {
                     categoryId: n,
                     categoryName: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_CATEGORY
                 });
             case m.vf.TECH:
-                return (0, i.jsx)(u.j, {
+                return (0, i.jsx)(d.j, {
                     categoryId: n,
                     categoryName: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_CATEGORY
                 });
             case m.vf.EDUCATION:
-                return (0, i.jsx)(u.j, {
+                return (0, i.jsx)(d.j, {
                     categoryId: n,
                     categoryName: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_CATEGORY
                 });
             case m.vf.HUBS:
                 return (0, i.jsx)(_.X, {});
+            case m.vf.GUILDS:
+                return null;
             default:
                 (0, r.vE)(t);
             }
-        }, [A]);
+        }, [A]), v = s.useCallback(e => e.tabId !== m.vf.GUILDS || e.searching ? (0, i.jsx)(o.J, {
+            scrollManager: T,
+            children: L(e)
+        }) : (0, i.jsx)(u.U, { scrollManager: T }), [L]);
     return (0, i.jsxs)('div', {
         className: p.container,
         children: [
@@ -83,14 +80,12 @@ function T() {
                 onSearchSubmit: Z,
                 scrollManager: T
             }),
-            (0, i.jsx)(o.J, {
-                scrollManager: T,
-                children: L({
-                    tabId: t.id,
-                    searchQuery: f,
-                    searching: C,
-                    categoryId: S
-                })
+            v({
+                tabId: t.id,
+                searchQuery: f,
+                searching: C,
+                categoryId: S,
+                scrollManager: T
             })
         ]
     });
