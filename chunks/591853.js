@@ -79,9 +79,9 @@ function er(e) {
             requestId: f,
             buttons: E = [],
             header: x
-        } = e, [T, N] = a.useState(!1), [v, S] = a.useState(null), Z = (0, c.e7)([P.Z], () => P.Z.can(ee.Plq.SEND_MESSAGES, t)), A = (0, Y.a)({ location: 'PopoutReactor' }), [b, R] = a.useState(!1), [D, B] = a.useState(!1), {
-            voiceBar: G,
-            joinVoiceButton: F
+        } = e, [T, N] = a.useState(!1), [v, S] = a.useState(null), Z = (0, c.e7)([P.Z], () => P.Z.can(ee.Plq.SEND_MESSAGES, t)), A = (0, Y.a)({ location: 'PopoutReactor' }), [b, R] = a.useState(!1), [B, G] = a.useState(!1), {
+            voiceBar: F,
+            joinVoiceButton: W
         } = function (e) {
             let {
                     channel: t,
@@ -90,7 +90,7 @@ function er(e) {
                 } = e, {
                     streamPreviewUrl: l,
                     channel: r
-                } = (0, z.Z)(n), o = (0, c.e7)([L.Z], () => null != r ? L.Z.getGuild(r.guild_id) : void 0), d = (0, c.Wu)([k.ZP], () => null != r ? k.ZP.getVoiceStatesForChannel(r) : [], [r]), p = a.useMemo(() => {
+                } = (0, z.Z)(n), o = (0, c.e7)([L.Z], () => null != r ? L.Z.getGuild(r.guild_id) : void 0), d = (0, c.Wu)([k.ZP], () => null != r ? k.ZP.getVoiceStatesForChannel(r) : [], [r]), p = (0, c.e7)([D.Z], () => D.Z.isInChannel(null == r ? void 0 : r.id)), _ = a.useMemo(() => {
                     for (let e of d) {
                         let t = j.Z.getDMFromUserId(e.user.id), n = null != t && y.ZP.isChannelMuted(null, t), i = O.Z.isBlocked(e.user.id);
                         if (n || i)
@@ -103,7 +103,7 @@ function er(e) {
                     voiceBar: void 0,
                     joinVoiceButton: void 0
                 };
-            let _ = null != l, f = () => {
+            let f = null != l, E = () => {
                     m.Z.updateChatOpen(r.id, !0), (0, M.Kh)(r.id), (0, K.L)($.xP.VOICE_CHANNEL_PREVIEWED, {
                         entry: n,
                         channelId: t.id,
@@ -112,34 +112,34 @@ function er(e) {
                         destinationChannelId: r.id,
                         destinationGuildId: r.guild_id
                     });
-                }, E = p ? et.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_BLOCKED_USER_WARNING : et.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_PREVIEW_VOICE_CHANNEL, C = e => {
+                }, C = _ ? et.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_BLOCKED_USER_WARNING : et.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_PREVIEW_VOICE_CHANNEL, g = e => {
                     let {children: t} = e;
                     return (0, i.jsx)(h.Tooltip, {
-                        'aria-label': E,
+                        'aria-label': C,
                         text: (0, i.jsxs)(i.Fragment, {
                             children: [
-                                p && (0, i.jsx)(h.WarningIcon, {
+                                _ && (0, i.jsx)(h.WarningIcon, {
                                     size: 'custom',
                                     width: 13,
                                     height: 13,
                                     className: en.popoutBlockedWarningIcon
                                 }),
-                                E
+                                C
                             ]
                         }),
                         shouldShow: !0,
                         children: t
                     }, 'voice-preview');
-                }, g = (0, i.jsxs)(i.Fragment, {
+                }, I = (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsxs)('div', {
                             className: en.voiceChannelPopoutReactorHeader,
                             children: [
-                                (0, i.jsx)(C, {
+                                (0, i.jsx)(g, {
                                     children: e => (0, i.jsxs)(h.Clickable, {
                                         ...e,
                                         'aria-label': et.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_PREVIEW_VOICE_CHANNEL,
-                                        onClick: f,
+                                        onClick: E,
                                         className: en.voiceChannelPopoutReactorChannel,
                                         children: [
                                             (0, i.jsx)(U.Z, {
@@ -190,13 +190,13 @@ function er(e) {
                     ]
                 });
             return {
-                voiceBar: g,
-                joinVoiceButton: (0, i.jsx)(C, {
+                voiceBar: I,
+                joinVoiceButton: p ? null : (0, i.jsx)(g, {
                     children: e => (0, i.jsx)(ep, {
                         ...e,
                         color: h.Button.Colors.GREEN,
-                        onClick: f,
-                        IconComponent: _ ? h.ScreenIcon : h.VoiceNormalIcon,
+                        onClick: E,
+                        IconComponent: f ? h.ScreenIcon : h.VoiceNormalIcon,
                         children: et.Z.Messages.PREVIEW
                     })
                 })
@@ -205,7 +205,7 @@ function er(e) {
             channel: t,
             entry: _,
             requestId: f
-        }), W = null != F && 0 === E.length ? [F] : E, q = W.length > 0, Q = W.length >= 2, [ei, ea] = a.useState(!q), es = '#'.concat(t.name), el = V.ZP.getName(t.guild_id, t.id, n), er = T ? et.Z.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : et.Z.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, ec = async e => {
+        }), q = null != W && 0 === E.length ? [W] : E, Q = q.length > 0, ei = q.length >= 2, [ea, es] = a.useState(!Q), el = '#'.concat(t.name), er = V.ZP.getName(t.guild_id, t.id, n), ec = T ? et.Z.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : et.Z.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, ed = async e => {
             if (null != e) {
                 if (H.default.track(ee.rMx.CONTENT_POPOUT_EMOJI_CLICKED, {
                         surface_type: $.Kd.GUILD_MEMBER_LIST,
@@ -213,27 +213,27 @@ function er(e) {
                         guild_id: t.guild_id
                     }), A) {
                     let a;
-                    if ((0, I.EW)(d.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), R(!0), B(!1), T)
+                    if ((0, I.EW)(d.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), R(!0), G(!1), T)
                         a = t;
                     else {
                         var i;
                         let e = await p.Z.getOrEnsurePrivateChannel(n.id);
                         a = null !== (i = j.Z.getChannel(e)) && void 0 !== i ? i : null;
                     }
-                    return o()(null != a, 'Send channel must be defined'), eu({
+                    return o()(null != a, 'Send channel must be defined'), eh({
                         reply: ':'.concat(e.name, ':'),
                         sendToChannel: a,
                         onComplete: () => {
-                            B(!0), setTimeout(() => {
+                            G(!0), setTimeout(() => {
                                 R(!1), r();
                             }, 600);
                         },
                         interactionType: $.xP.REACTION_EMOJI_REACT_SENT
                     });
                 }
-                ea(!0), null != v && (v.insertEmoji(e, !1, !1), v.focus());
+                es(!0), null != v && (v.insertEmoji(e, !1, !1), v.focus());
             }
-        }, ed = async e => {
+        }, eu = async e => {
             let i;
             if (A && (0, I.EW)(d.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), T)
                 i = t;
@@ -242,13 +242,13 @@ function er(e) {
                 o()(null != t, 'DM channel must be defined'), i = t;
             }
             let a = i.type === ee.d4z.DM ? $.xP.DM_REACTION_MESSAGE_SENT : $.xP.CHANNEL_REACTION_MESSAGE_SENT;
-            return eu({
+            return eh({
                 reply: e,
                 sendToChannel: i,
                 onComplete: r,
                 interactionType: a
             });
-        }, eu = async e => {
+        }, eh = async e => {
             var n;
             let {
                 reply: i,
@@ -278,38 +278,38 @@ function er(e) {
                 destinationChannelId: a.id,
                 destinationGuildId: a.guild_id
             }), null == r || r();
-        }, eh = null != x ? x : null != G ? G : void 0;
+        }, em = null != x ? x : null != F ? F : void 0;
     return (0, i.jsxs)('div', {
         style: { pointerEvents: b ? 'none' : 'all' },
         children: [
             (0, i.jsx)(J.Z, {
-                sent: D,
+                sent: B,
                 shown: b,
                 className: en.toastContainer
             }),
-            null != eh ? eh : A ? (0, i.jsx)(X.Z, {
+            null != em ? em : A ? (0, i.jsx)(X.Z, {
                 children: (0, i.jsxs)('div', {
                     className: en.emojiHotrailShareToChannel,
                     children: [
                         (0, i.jsx)(eo, {
                             channel: t,
-                            onClickSuggestion: ec
+                            onClickSuggestion: ed
                         }),
-                        (0, i.jsx)(C.dE, { onSelectEmoji: ec })
+                        (0, i.jsx)(C.dE, { onSelectEmoji: ed })
                     ]
                 })
             }) : (0, i.jsx)('div', {
                 className: en.emojiHotrailShareToChannel,
                 children: (0, i.jsx)(eo, {
                     channel: t,
-                    onClickSuggestion: ec
+                    onClickSuggestion: ed
                 })
             }),
             (0, i.jsxs)('div', {
-                className: ei ? en.inputContainerShareToChannel : en.hiddenButRenderedInputField,
+                className: ea ? en.inputContainerShareToChannel : en.hiddenButRenderedInputField,
                 children: [
-                    q && (0, i.jsx)(h.Clickable, {
-                        onClick: () => ea(!1),
+                    Q && (0, i.jsx)(h.Clickable, {
+                        onClick: () => es(!1),
                         className: en.primaryActionPopoutMessageCloseIcon,
                         children: (0, i.jsx)(h.CloseSmallIcon, {
                             size: 'custom',
@@ -319,13 +319,13 @@ function er(e) {
                         })
                     }),
                     (0, i.jsx)(C.A7, {
-                        placeholder: et.Z.Messages.TEXTAREA_PLACEHOLDER.format({ channel: T ? es : '@'.concat(el) }),
-                        onEnter: ed,
+                        placeholder: et.Z.Messages.TEXTAREA_PLACEHOLDER.format({ channel: T ? el : '@'.concat(er) }),
+                        onEnter: eu,
                         setEditorRef: e => S(e),
                         channel: T ? t : void 0,
-                        showEmojiButton: null != eh,
+                        showEmojiButton: null != em,
                         renderAttachButton: Z ? () => (0, i.jsx)(h.Tooltip, {
-                            text: er,
+                            text: ec,
                             children: e => (0, i.jsx)(h.Clickable, {
                                 ...e,
                                 className: en.shareToChannelButton,
@@ -344,15 +344,15 @@ function er(e) {
                     })
                 ]
             }),
-            !1 === ei && (0, i.jsxs)('div', {
+            !1 === ea && (0, i.jsxs)('div', {
                 className: en.primaryActionPopoutActionButtons,
                 children: [
                     (0, i.jsxs)(h.Button, {
                         className: en.secondaryButton,
                         color: h.Button.Colors.CUSTOM,
-                        onClick: () => ea(!0),
+                        onClick: () => es(!0),
                         innerClassName: en.iconButton,
-                        size: Q ? h.Button.Sizes.MIN : h.Button.Sizes.LARGE,
+                        size: ei ? h.Button.Sizes.MIN : h.Button.Sizes.LARGE,
                         children: [
                             (0, i.jsx)(h.ChatIcon, {
                                 size: 'custom',
@@ -360,14 +360,14 @@ function er(e) {
                                 height: 20,
                                 colorClass: en.secondaryText
                             }),
-                            !Q && (0, i.jsx)(h.Text, {
+                            !ei && (0, i.jsx)(h.Text, {
                                 variant: 'text-md/semibold',
                                 className: en.secondaryText,
                                 children: et.Z.Messages.USER_POPOUT_MESSAGE
                             })
                         ]
                     }, 'toggleMessageMode'),
-                    W
+                    q
                 ]
             })
         ]
