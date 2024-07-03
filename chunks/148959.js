@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     },
     y: function () {
         return r;
@@ -15,17 +15,18 @@ function d(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
+let _ = 10 * u.Z.Millis.SECOND, E = 30 * u.Z.Millis.SECOND;
 (i = r || (r = {})).RequestedSSRCsUpdate = 'requested-ssrcs-update', i.RequestedStreamsUpdate = 'requested-streams-update';
-class _ extends s.Z {
+class f extends s.Z {
     setUserID(e) {
         this.userId = e;
     }
     updateAudioAndVideoStreamInfo(e, t) {
-        this.audioSSRC = e, this.videoStreams = t, this.update();
+        this.audioSSRC = e, this.videoStreams = t, this.lastDowngradeChangeTime = void 0, this.update();
     }
     setGoLiveStreamDowngraded(e) {
-        if (!!this.senderSupportsSimulcast())
-            e !== this.downgraded && (this.throttleDowngradeChanges ? this.throttledSetStreamDowngraded(e) : this.setStreamDowngradedInternal(e));
+        if (!!this.senderSupportsSimulcast() && e !== this.downgraded)
+            this.isDowngradeChangeAllowed(e) && (this.downgraded = e, this.lastDowngradeChangeTime = Date.now(), this.update());
     }
     isDowngraded() {
         return this.downgraded;
@@ -59,8 +60,8 @@ class _ extends s.Z {
             e[this.videoStreams[0].ssrc] = l.Z.isIncomingVideoEnabled() ? 100 : 0, t.push(this.videoStreams[0].ssrc);
         this.emit('requested-ssrcs-update', this.userId, this.audioSSRC, t), this.emit('requested-streams-update', e);
     }
-    setStreamDowngradedInternal(e) {
-        this.downgraded = e, this.update();
+    isDowngradeChangeAllowed(e) {
+        return !this.throttleDowngradeChanges || void 0 === this.lastDowngradeChangeTime || (e ? Date.now() - this.lastDowngradeChangeTime >= E : Date.now() - this.lastDowngradeChangeTime >= _);
     }
     getQualityConfig() {
         let e = o().minBy(this.videoStreams, e => e.quality), t = o().maxBy(this.videoStreams, e => e.quality);
@@ -103,10 +104,7 @@ class _ extends s.Z {
             ];
     }
     constructor(e) {
-        super(), d(this, 'supportsSeamless', void 0), d(this, 'userId', void 0), d(this, 'videoStreams', void 0), d(this, 'audioSSRC', void 0), d(this, 'downgraded', void 0), d(this, 'debugQualityOverride', void 0), d(this, 'pendingSSRC', void 0), d(this, 'everReceivedFrame', void 0), d(this, 'pendingSSRCReceived', void 0), d(this, 'throttleDowngradeChanges', void 0), d(this, 'STREAM_DOWNGRADE_CHANGE_INTERVAL_MS', void 0), d(this, 'throttledSetStreamDowngraded', void 0), this.supportsSeamless = e, this.videoStreams = [], this.audioSSRC = 0, this.downgraded = !1, this.debugQualityOverride = c.Z.NO_OVERRIDE, this.pendingSSRC = -1, this.everReceivedFrame = !1, this.pendingSSRCReceived = !1, this.throttleDowngradeChanges = !0, this.STREAM_DOWNGRADE_CHANGE_INTERVAL_MS = 30 * u.Z.Millis.SECOND, this.throttledSetStreamDowngraded = o().throttle(this.setStreamDowngradedInternal, this.STREAM_DOWNGRADE_CHANGE_INTERVAL_MS, {
-            leading: !0,
-            trailing: !1
-        }), l.Z.subscribe(() => {
+        super(), d(this, 'supportsSeamless', void 0), d(this, 'userId', void 0), d(this, 'videoStreams', void 0), d(this, 'audioSSRC', void 0), d(this, 'downgraded', void 0), d(this, 'debugQualityOverride', void 0), d(this, 'pendingSSRC', void 0), d(this, 'everReceivedFrame', void 0), d(this, 'pendingSSRCReceived', void 0), d(this, 'throttleDowngradeChanges', void 0), d(this, 'lastDowngradeChangeTime', void 0), this.supportsSeamless = e, this.videoStreams = [], this.audioSSRC = 0, this.downgraded = !1, this.debugQualityOverride = c.Z.NO_OVERRIDE, this.pendingSSRC = -1, this.everReceivedFrame = !1, this.pendingSSRCReceived = !1, this.throttleDowngradeChanges = !0, this.lastDowngradeChangeTime = void 0, l.Z.subscribe(() => {
             this.update();
         });
     }
