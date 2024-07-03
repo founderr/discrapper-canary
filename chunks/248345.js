@@ -27,7 +27,7 @@ function E(e) {
             guildId: null == E ? void 0 : E.id,
             channelId: f,
             source: d.Sbl.PROFILE_POPOUT,
-            onOpenGameProfile: h,
+            onGameProfileOpened: h,
             onAction: () => {
                 I({ action: 'JOIN_ACTIVITY' }), (0, u.Ac)({
                     activityType: g ? d.IIU.STREAMING : null == t ? void 0 : t.type,

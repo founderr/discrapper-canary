@@ -42,7 +42,7 @@ function v(e) {
                 actionColor: m.actionColor,
                 analyticsParams: j,
                 showActions: s,
-                onOpenGameProfile: v,
+                onGameProfileOpened: v,
                 onAction: () => {
                     T({ action: 'JOIN_ACTIVITY' }), (0, f.Ac)({
                         activityType: Z.IIU.STREAMING,
@@ -66,7 +66,7 @@ function v(e) {
                 actionColor: m.actionColor,
                 analyticsParams: j,
                 showActions: s,
-                onOpenGameProfile: v,
+                onGameProfileOpened: v,
                 onAction: () => {
                     T({ action: 'JOIN_ACTIVITY' }), (0, f.Ac)({
                         activityType: e.type,

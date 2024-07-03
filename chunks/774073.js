@@ -35,5 +35,8 @@ t.ZP = e => {
         l
     ]);
     let _ = (0, u.e7)([d.Z], () => d.Z.getGame(n)), f = a.useMemo(() => null != _ && m(_), [_]);
-    return l && o && !1 === d.Z.isFetching(n) && (s()(null != i, 'Cannot track a Game Profile Entry Point Impressions without a source.'), h(f, n, p(_), i)), l && f;
+    return l && o && !1 === d.Z.isFetching(n) && (s()(null != i, 'Cannot track a Game Profile Entry Point Impressions without a source.'), h(f, n, p(_), i)), {
+        shouldOpenGameProfile: l && f,
+        applicationId: n
+    };
 };

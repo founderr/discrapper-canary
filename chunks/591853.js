@@ -20,7 +20,7 @@ n.d(t, {
 }), n(47120);
 var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r);
 n(699581);
-var c = n(442837), d = n(704215), u = n(692547), h = n(481060), p = n(493683), m = n(475179), _ = n(287734), f = n(872810), E = n(607070), C = n(220779), g = n(201133), I = n(605236), x = n(543241), T = n(318374), N = n(258609), v = n(810568), S = n(774073), Z = n(382182), A = n(871118), M = n(359110), b = n(171368), R = n(12168), j = n(592125), L = n(430824), P = n(496675), O = n(699516), y = n(9156), D = n(979651), k = n(938475), U = n(346656), w = n(409216), B = n(368666), H = n(626135), G = n(768581), V = n(5192), F = n(26033), W = n(192918), z = n(22211), Y = n(571243), K = n(69259), q = n(206295), X = n(111386), Q = n(43205), J = n(469153), $ = n(206583), ee = n(981631), et = n(689938), en = n(331679);
+var c = n(442837), d = n(704215), u = n(692547), h = n(481060), p = n(493683), m = n(475179), _ = n(287734), f = n(872810), E = n(607070), C = n(220779), g = n(201133), I = n(605236), x = n(543241), T = n(318374), N = n(258609), v = n(810568), S = n(168524), Z = n(382182), A = n(871118), M = n(359110), b = n(171368), R = n(12168), j = n(592125), L = n(430824), P = n(496675), O = n(699516), y = n(9156), D = n(979651), k = n(938475), U = n(346656), w = n(409216), B = n(368666), H = n(626135), G = n(768581), V = n(5192), F = n(26033), W = n(192918), z = n(22211), Y = n(571243), K = n(69259), q = n(206295), X = n(111386), Q = n(43205), J = n(469153), $ = n(206583), ee = n(981631), et = n(689938), en = n(331679);
 function ei(e) {
     let {children: t} = e, n = a.useRef(null);
     return (0, h.useFocusLock)(n), (0, i.jsx)('div', {
@@ -491,52 +491,40 @@ function ed(e) {
 function eu(e) {
     var t;
     let {
-            thumbnailSrc: a,
-            thumbnailFallbackSrc: s,
-            thumbnailTitle: l,
-            title: r,
-            subtitle: o,
-            badges: c,
-            children: d,
-            onClickThumbnail: u,
-            onClickTitle: p,
-            onClickSubtitle: m,
-            ..._
-        } = e, {entry: f} = _, E = (0, F.d)(f), C = (0, S.ZP)({
+            thumbnailSrc: n,
+            thumbnailFallbackSrc: a,
+            thumbnailTitle: s,
+            title: l,
+            subtitle: r,
+            badges: o,
+            children: c,
+            onClickThumbnail: d,
+            onClickTitle: u,
+            onClickSubtitle: p,
+            ...m
+        } = e, {entry: _} = m, f = (0, F.d)(_), E = (0, S.Z)({
             location: 'ContentPopout',
-            applicationId: E ? null === (t = f.extra) || void 0 === t ? void 0 : t.application_id : void 0,
+            applicationId: f ? null === (t = _.extra) || void 0 === t ? void 0 : t.application_id : void 0,
             source: v.m1.ActivityCard,
-            trackEntryPointImpression: !0
-        }) && E ? () => {
-            (0, h.openModalLazy)(async () => {
-                let {default: e} = await Promise.all([
-                    n.e('7613'),
-                    n.e('97650')
-                ]).then(n.bind(n, 644941));
-                return t => (0, i.jsx)(e, {
-                    applicationId: f.extra.application_id,
-                    source: v.m1.ActivityCard,
-                    sourceUserId: f.author_id,
-                    ...t
-                });
-            });
-        } : void 0;
+            trackEntryPointImpression: !0,
+            sourceUserId: _.author_id
+        }), C = f ? E : void 0;
     return (0, i.jsxs)(ea, {
-        backgroundImgSrc: a,
+        backgroundImgSrc: n,
         children: [
-            (0, i.jsx)(ec, { ..._ }),
+            (0, i.jsx)(ec, { ...m }),
             (0, i.jsxs)('div', {
                 className: en.popoutContentBody,
                 children: [
                     (0, i.jsx)('div', {
                         className: en.popoutThumbnailContainer,
                         children: (0, i.jsx)(ed, {
-                            onClick: null != u ? u : C,
+                            onClick: null != d ? d : C,
                             children: (0, i.jsx)(Q.f, {
                                 size: 72,
-                                alt: l,
-                                src: a,
-                                fallbackSrc: s,
+                                alt: s,
+                                src: n,
+                                fallbackSrc: a,
                                 className: en.contentImage
                             })
                         })
@@ -548,29 +536,29 @@ function eu(e) {
                     (0, i.jsxs)('div', {
                         children: [
                             (0, i.jsx)(ed, {
-                                onClick: null != p ? p : C,
+                                onClick: null != u ? u : C,
                                 children: (0, i.jsx)(h.Heading, {
                                     variant: 'heading-md/medium',
                                     className: en.popoutTextPrimary,
                                     lineClamp: 3,
-                                    children: r
+                                    children: l
                                 })
                             }),
-                            null != o ? (0, i.jsx)(ed, {
-                                onClick: null != m ? m : C,
+                            null != r ? (0, i.jsx)(ed, {
+                                onClick: null != p ? p : C,
                                 children: (0, i.jsx)(h.Text, {
                                     variant: 'text-md/normal',
                                     className: en.popoutTextSecondary,
-                                    children: o
+                                    children: r
                                 })
                             }) : null,
                             (0, i.jsx)(h.Spacer, { size: 8 }),
-                            c
+                            o
                         ]
                     })
                 ]
             }),
-            d
+            c
         ]
     });
 }

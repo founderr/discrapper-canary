@@ -3,7 +3,7 @@ n.d(t, {
         return r;
     }
 }), n(789020), n(47120);
-var r, i, a, o = n(735250), s = n(470079), l = n(120356), u = n.n(l), c = n(512722), d = n.n(c), _ = n(780384), E = n(481060), f = n(438139), h = n(410030), p = n(726542), m = n(740265), I = n(122810), T = n(833664), g = n(503438), S = n(802856), A = n(420660), N = n(810568), v = n(774073), O = n(833858), R = n(223135), C = n(769654), y = n(750154), D = n(768581), L = n(630388), b = n(153066), M = n(672938), P = n(285952), U = n(366695), w = n(346656), x = n(514342), G = n(366966), k = n(936195), B = n(806519), F = n(981631), V = n(701488), H = n(689938), Z = n(700269);
+var r, i, a, o = n(735250), s = n(470079), l = n(120356), u = n.n(l), c = n(512722), d = n.n(c), _ = n(780384), E = n(481060), f = n(438139), h = n(410030), p = n(726542), m = n(740265), I = n(122810), T = n(833664), g = n(503438), S = n(802856), A = n(420660), N = n(810568), v = n(168524), O = n(833858), R = n(223135), C = n(769654), y = n(750154), D = n(768581), L = n(630388), b = n(153066), M = n(672938), P = n(285952), U = n(366695), w = n(346656), x = n(514342), G = n(366966), k = n(936195), B = n(806519), F = n(981631), V = n(701488), H = n(689938), Z = n(700269);
 function Y(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -460,83 +460,66 @@ class Q extends (i = s.PureComponent) {
         let e;
         let {
                 type: t,
-                renderActions: r,
-                className: i,
-                application: a,
-                user: s,
-                showReactions: l,
-                onOpenGameProfile: c,
-                shouldOpenGameProfile: d
-            } = this.props, _ = this.activity;
-        if (null == _ || _.type === F.IIU.CUSTOM_STATUS)
+                renderActions: n,
+                className: r,
+                application: i,
+                showReactions: a,
+                onGameProfileOpened: s,
+                onOpenGameProfileModal: l
+            } = this.props, c = this.activity;
+        if (null == c || c.type === F.IIU.CUSTOM_STATUS)
             return null;
-        let f = 'UserPopout' === t || 'UserPopoutV2' === t || 'BiteSizePopout' === t, h = 'Profile' === t || 'ProfileV2' === t || 'SimplifiedProfile' === t, p = 'ActivityFeed' === t, m = 'StreamPreview' === t, I = !1;
-        (0, S.Z)(_) ? (e = this.renderXboxImage(), I = !0) : null == (e = this.renderImage(_)) && (I = null != (e = this.renderGameImage(_)));
-        let T = this.renderName(_), g = this.renderDetails(_), A = this.renderState(_, a), v = this.renderTimePlayed(_), O = this.renderChannelDetails(_), R = null != r ? r() : null, C = this.renderTimeBar(_), y = ![
+        let d = 'UserPopout' === t || 'UserPopoutV2' === t || 'BiteSizePopout' === t, _ = 'Profile' === t || 'ProfileV2' === t || 'SimplifiedProfile' === t, f = 'ActivityFeed' === t, h = 'StreamPreview' === t, p = !1;
+        (0, S.Z)(c) ? (e = this.renderXboxImage(), p = !0) : null == (e = this.renderImage(c)) && (p = null != (e = this.renderGameImage(c)));
+        let m = this.renderName(c), I = this.renderDetails(c), T = this.renderState(c, i), g = this.renderTimePlayed(c), A = this.renderChannelDetails(c), N = null != n ? n() : null, v = this.renderTimeBar(c), O = ![
                 e,
+                m,
+                I,
                 T,
                 g,
-                A,
                 v,
-                C,
-                R
+                N
             ].some(e => null != e);
         return (0, o.jsxs)('div', {
-            className: u()(this.getTypeClass('activity'), i),
+            className: u()(this.getTypeClass('activity'), r),
             children: [
-                this.renderHeader(y),
+                this.renderHeader(O),
                 (0, o.jsx)('div', {
-                    className: u()(I ? Z.bodyAlignCenter : Z.bodyNormal, l && !f && !m && Z.wrap),
+                    className: u()(p ? Z.bodyAlignCenter : Z.bodyNormal, a && !d && !h && Z.wrap),
                     children: (0, o.jsxs)('div', {
                         className: Z.activityDetails,
                         children: [
                             e,
                             this.isStreamerOnTypeActivityFeed() ? null : (0, o.jsxs)(P.Z.Child, {
-                                className: u()((0, b.l)(Z, 'content', I ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
+                                className: u()((0, b.l)(Z, 'content', p ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
                                 children: [
                                     (0, o.jsxs)(E.Clickable, {
-                                        className: u()(d && Z.openGameProfile),
-                                        onClick: d ? () => {
-                                            (0, E.openModalLazy)(async () => {
-                                                let {default: e} = await Promise.all([
-                                                    n.e('30676'),
-                                                    n.e('91026'),
-                                                    n.e('7613'),
-                                                    n.e('87707')
-                                                ]).then(n.bind(n, 644941));
-                                                return t => {
-                                                    var n;
-                                                    return (0, o.jsx)(e, {
-                                                        applicationId: null !== (n = null == _ ? void 0 : _.application_id) && void 0 !== n ? n : '',
-                                                        source: N.m1.UserProfile,
-                                                        sourceUserId: s.id,
-                                                        ...t
-                                                    });
-                                                };
-                                            }), null == c || c();
+                                        className: u()(null != l && Z.openGameProfile),
+                                        onClick: null != l ? () => {
+                                            l(), null == s || s();
                                         } : void 0,
                                         children: [
+                                            m,
+                                            I,
                                             T,
-                                            g,
-                                            A,
-                                            v
+                                            g
                                         ]
                                     }),
-                                    O,
-                                    f || m ? null : C,
-                                    p ? R : null
+                                    A,
+                                    d || h ? null : v,
+                                    f ? N : null
                                 ]
                             }),
-                            h ? (0, o.jsx)('div', {
+                            _ ? (0, o.jsx)('div', {
                                 className: Z.actions,
-                                children: R
+                                children: N
                             }) : null
                         ]
                     })
                 }),
-                f ? C : null,
-                f || m ? R : null,
-                (0, o.jsx)(q, { activity: _ })
+                d ? v : null,
+                d || h ? N : null,
+                (0, o.jsx)(q, { activity: c })
             ]
         });
     }
@@ -566,16 +549,17 @@ class Q extends (i = s.PureComponent) {
 }
 Y(Q, 'Types', r);
 let X = e => {
-    var t;
-    let n = (0, v.ZP)({
+    var t, n, r;
+    let i = (0, v.Z)({
         location: 'UserActivity',
-        applicationId: null === (t = e.application) || void 0 === t ? void 0 : t.id,
+        applicationId: null !== (r = null === (t = e.application) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null === (n = e.activity) || void 0 === n ? void 0 : n.application_id,
         source: N.m1.UserProfile,
+        sourceUserId: e.user.id,
         trackEntryPointImpression: !0
     });
     return (0, o.jsx)(Q, {
         ...e,
-        shouldOpenGameProfile: n
+        onOpenGameProfileModal: i
     });
 };
 X.Types = r, t.Z = X;

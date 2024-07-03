@@ -45,7 +45,7 @@ function m(e) {
         user: t,
         guildId: null == n ? void 0 : n.id,
         channelId: i,
-        onOpenGameProfile: m,
+        onGameProfileOpened: m,
         onAction: () => {
             g({ action: 'JOIN_ACTIVITY' }), (0, f.Ac)({
                 activityType: v ? h.IIU.STREAMING : null == O ? void 0 : O.type,
