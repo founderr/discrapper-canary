@@ -39,6 +39,7 @@ class g extends l.PureComponent {
                 onClick: t,
                 children: (0, i.jsx)(d.Z, {
                     text: l,
+                    hasVideo: this.props.hasVideo,
                     className: f[n]
                 })
             });
