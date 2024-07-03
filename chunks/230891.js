@@ -1,5 +1,6 @@
 e.exports = {
-    statusBubble: 'statusBubble_d0a252',
+    background: 'background_d0a252',
+    editable: 'editable_d0a252',
     statusBubbleOuter: 'statusBubbleOuter_d0a252',
     invisibleContainer: 'invisibleContainer_d0a252',
     biteSize: 'biteSize_d0a252',
@@ -7,6 +8,7 @@ e.exports = {
     panel: 'panel_d0a252',
     visibleContainer: 'visibleContainer_d0a252',
     reactReplyBar: 'reactReplyBar_d0a252',
+    statusBubble: 'statusBubble_d0a252',
     statusBubbleCopyStatusCursor: 'statusBubbleCopyStatusCursor_d0a252',
     statusBubbleOuterAddStatusCursor: 'statusBubbleOuterAddStatusCursor_d0a252',
     statusBubbleShape: 'statusBubbleShape_d0a252',
