@@ -3,7 +3,7 @@ n.d(t, {
         return P;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(442837), c = n(780384), d = n(481060), u = n(596454), _ = n(515753), h = n(410030), E = n(607070), I = n(100527), m = n(906732), g = n(821982), p = n(377171), T = n(633302), S = n(153066), f = n(335131), C = n(141594), N = n(302800), A = n(981631), Z = n(689938), L = n(383980);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(442837), c = n(780384), d = n(481060), u = n(596454), _ = n(515753), h = n(410030), E = n(607070), I = n(100527), m = n(906732), g = n(821982), p = n(377171), T = n(633302), S = n(153066), C = n(335131), f = n(141594), N = n(302800), A = n(981631), Z = n(689938), L = n(383980);
 let v = e => {
         let {color: t} = e;
         return (0, i.jsx)(d.TextBadge, {
@@ -19,7 +19,7 @@ let v = e => {
                 onMouseLeave: r,
                 children: o,
                 ...c
-            } = e, u = (0, l.JA)('shop'), h = I.Z.HOME_PAGE_SHOP_TAB, {analyticsLocations: E} = (0, m.ZP)(h), g = s.useCallback(() => (0, f.mK)({
+            } = e, u = (0, l.JA)('shop'), h = I.Z.HOME_PAGE_SHOP_TAB, {analyticsLocations: E} = (0, m.ZP)(h), g = s.useCallback(() => (0, C.mK)({
                 openInLayer: !1,
                 analyticsSource: h,
                 analyticsLocations: E
@@ -148,7 +148,7 @@ let v = e => {
         let {
                 selected: t,
                 locationState: n
-            } = e, {collectiblesShopTabNewBadgeDisplayOptions: s} = (0, C.Z)();
+            } = e, {collectiblesShopTabNewBadgeDisplayOptions: s} = (0, f.Z)();
         if (null != s)
             switch (s.type) {
             case N.k2.TOOLTIP:

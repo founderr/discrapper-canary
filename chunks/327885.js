@@ -1,6 +1,6 @@
 s.d(t, {
     Z: function () {
-        return f;
+        return D;
     }
 });
 var n = s(735250);
@@ -34,7 +34,7 @@ function M(e) {
         children: t
     });
 }
-function f(e) {
+function D(e) {
     let {
             className: t,
             showHeader: s = !0
@@ -46,8 +46,8 @@ function f(e) {
             legacyEnabled: N.Z.legacyEnabled
         })), {
             avatarSizeMode: h,
-            displayNameMode: f,
-            displayUserMode: D,
+            displayNameMode: D,
+            displayUserMode: f,
             notificationPositionMode: P,
             textChatNotificationMode: L,
             shouldShowKeybindIndicators: Z
@@ -176,7 +176,7 @@ function f(e) {
                                 let {value: t} = e;
                                 return _.Z.setDisplayNameMode(t);
                             },
-                            value: f
+                            value: D
                         })
                     }),
                     (0, n.jsx)(M, {
@@ -196,7 +196,7 @@ function f(e) {
                                 let {value: t} = e;
                                 return _.Z.setDisplayUserMode(t);
                             },
-                            value: D
+                            value: f
                         })
                     }),
                     v && (0, n.jsx)(M, {

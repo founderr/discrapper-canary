@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(442837), r = n(692547), l = n(481060), o = n(287734), c = n(872810), d = n(367907), u = n(835473), _ = n(871118), h = n(543882), E = n(314897), I = n(944486), m = n(594174), g = n(366695), p = n(602623), T = n(51144), S = n(498058), f = n(158631), C = n(143614), N = n(981631), A = n(70722), Z = n(689938), L = n(106963);
+var i = n(735250), s = n(470079), a = n(442837), r = n(692547), l = n(481060), o = n(287734), c = n(872810), d = n(367907), u = n(835473), _ = n(871118), h = n(543882), E = n(314897), I = n(944486), m = n(594174), g = n(366695), p = n(602623), T = n(51144), S = n(498058), C = n(158631), f = n(143614), N = n(981631), A = n(70722), Z = n(689938), L = n(106963);
 function v(e) {
     let {users: t} = e;
     return (0, i.jsxs)('div', {
@@ -32,7 +32,7 @@ function O(e) {
             applicationId: p,
             channelId: O,
             streamKey: R
-        } = n, [x, b] = s.useState(!1), P = (0, a.e7)([m.default], () => m.default.getUser(r)), [M] = (0, u.Z)([p]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, C.Z)(), j = (0, a.e7)([h.Z], () => h.Z.getPreviewURL(null, O, r)), U = (0, a.e7)([I.Z], () => I.Z.getVoiceChannelId()), G = (0, f.ZP)(), k = (0, S.Z)(O);
+        } = n, [x, b] = s.useState(!1), P = (0, a.e7)([m.default], () => m.default.getUser(r)), [M] = (0, u.Z)([p]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, f.Z)(), j = (0, a.e7)([h.Z], () => h.Z.getPreviewURL(null, O, r)), U = (0, a.e7)([I.Z], () => I.Z.getVoiceChannelId()), G = (0, C.ZP)(), k = (0, S.Z)(O);
     if (s.useEffect(() => {
             x && U === O && b(!1);
         }, [

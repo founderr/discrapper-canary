@@ -1,10 +1,10 @@
 s.d(t, {
     Z: function () {
-        return D;
+        return f;
     }
 });
 var n = s(735250), a = s(470079), i = s(512722), r = s.n(i), o = s(442837), l = s(481060), c = s(570140), d = s(497321), _ = s(100527), E = s(367907), u = s(906732), T = s(296810), I = s(921813), S = s(621853), N = s(246946), C = s(594174), m = s(63063), A = s(74538), h = s(18438), g = s(778825), O = s(856607), p = s(594496), R = s(856768), x = s(981631), M = s(689938);
-function f(e) {
+function D(e) {
     (0, l.openModalLazy)(async () => {
         let {default: t} = await s.e('84509').then(s.bind(s, 933696));
         return s => (0, n.jsx)(t, {
@@ -16,11 +16,11 @@ function f(e) {
         });
     });
 }
-function D(e) {
+function f(e) {
     let {selectedGuild: t} = e, {analyticsLocations: s} = (0, u.ZP)(_.Z.GUILD_PROFILE), i = (0, o.e7)([C.default], () => {
             let e = C.default.getCurrentUser();
             return r()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
-        }), D = (0, o.e7)([S.Z], () => !S.Z.isFetchingProfile(i.id)), P = (0, o.e7)([N.Z], () => N.Z.hidePersonalInformation), {
+        }), f = (0, o.e7)([S.Z], () => !S.Z.isFetchingProfile(i.id)), P = (0, o.e7)([N.Z], () => N.Z.hidePersonalInformation), {
             source: L,
             ...Z
         } = (0, o.cj)([g.Z], () => ({
@@ -33,7 +33,7 @@ function D(e) {
             destination_pane: x.jXE.SETTINGS_CUSTOMIZE_PROFILE,
             source: L
         });
-    }, [L]), P) ? (0, n.jsx)(d.Z, {}) : D ? (0, n.jsxs)(u.Gt, {
+    }, [L]), P) ? (0, n.jsx)(d.Z, {}) : f ? (0, n.jsxs)(u.Gt, {
         value: s,
         children: [
             (0, n.jsx)(l.Text, {
@@ -54,7 +54,7 @@ function D(e) {
                             user: i,
                             guild: t,
                             canUsePremiumCustomization: A.ZP.canUsePremiumProfileCustomization(i),
-                            onUpsellClick: f,
+                            onUpsellClick: D,
                             ...Z
                         }),
                         children: (0, n.jsx)(p.Z, {})

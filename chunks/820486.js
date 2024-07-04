@@ -12,10 +12,10 @@ function E(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let I = {}, m = I, g = !1, p = {}, T = {}, S = {}, f = {
+let I = {}, m = I, g = !1, p = {}, T = {}, S = {}, C = {
         id: null,
         justChanged: !1
-    }, C = {
+    }, f = {
         id: null,
         justChanged: !1
     }, N = /\(([^)]+)\)/;
@@ -53,13 +53,13 @@ class L extends (i = r.ZP.DeviceSettingsStore) {
         return p;
     }
     get lastInputSystemDevice() {
-        return f;
+        return C;
     }
     get outputDevices() {
         return T;
     }
     get lastOutputSystemDevice() {
-        return C;
+        return f;
     }
 }
 E(L, 'displayName', 'ConnectedDeviceStore'), E(L, 'persistKey', 'ConnectedDeviceStore'), t.Z = new L(l.Z, {
@@ -68,19 +68,19 @@ E(L, 'displayName', 'ConnectedDeviceStore'), E(L, 'persistKey', 'ConnectedDevice
                 inputDevices: t,
                 outputDevices: n
             } = e, i = {};
-        f.justChanged = !1, t.forEach(e => {
+        C.justChanged = !1, t.forEach(e => {
             if (i[A(e)] = e.id, e.id === h.w5) {
                 var t;
                 let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                n !== f.id && (f.justChanged = !0), f.id = n;
+                n !== C.id && (C.justChanged = !0), C.id = n;
             }
         });
         let s = {};
-        if (C.justChanged = !1, n.forEach(e => {
+        if (f.justChanged = !1, n.forEach(e => {
                 if (s[A(e)] = e.id, e.id === h.w5) {
                     var t;
                     let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                    n !== C.id && (C.justChanged = !0), C.id = n;
+                    n !== f.id && (f.justChanged = !0), f.id = n;
                 }
             }), !g) {
             p = i, T = s, g = !0;

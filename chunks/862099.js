@@ -9,7 +9,7 @@ n.d(t, {
         return H;
     }
 }), n(47120);
-var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(481060), u = n(471445), _ = n(986332), h = n(662842), E = n(703656), I = n(922482), m = n(565799), g = n(501655), p = n(192079), T = n(427679), S = n(448206), f = n(496675), C = n(938475), N = n(602623), A = n(626135), Z = n(823379), L = n(15274), v = n(924301), O = n(504160), R = n(151864), x = n(835184), b = n(725436), P = n(497656), M = n(79874), D = n(554747), y = n(230900), j = n(854698), U = n(139712), G = n(765305), k = n(981631), w = n(689938), B = n(538704);
+var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(481060), u = n(471445), _ = n(986332), h = n(662842), E = n(703656), I = n(922482), m = n(565799), g = n(501655), p = n(192079), T = n(427679), S = n(448206), C = n(496675), f = n(938475), N = n(602623), A = n(626135), Z = n(823379), L = n(15274), v = n(924301), O = n(504160), R = n(151864), x = n(835184), b = n(725436), P = n(497656), M = n(79874), D = n(554747), y = n(230900), j = n(854698), U = n(139712), G = n(765305), k = n(981631), w = n(689938), B = n(538704);
 let H = r.memo(function (e) {
     let {
             heading: t,
@@ -94,7 +94,7 @@ function V(e) {
     let {
             guildEvent: t,
             channel: n
-        } = e, i = (0, c.Wu)([C.ZP], () => C.ZP.getVoiceStatesForChannel(n).map(e => {
+        } = e, i = (0, c.Wu)([f.ZP], () => f.ZP.getVoiceStatesForChannel(n).map(e => {
             let {user: t} = e;
             return t;
         }), [n]), s = (0, u.KS)(n);
@@ -337,7 +337,7 @@ function Q(e) {
             channel: t,
             speakers: n,
             voiceType: i
-        } = e, s = t.getGuildId(), l = r.useMemo(() => n.slice(0, 3), [n]), u = (0, c.e7)([f.Z], () => f.Z.can(k.Plq.CONNECT, t)), _ = (0, S.Z)(t.id), h = w.Z.Messages.JOIN;
+        } = e, s = t.getGuildId(), l = r.useMemo(() => n.slice(0, 3), [n]), u = (0, c.e7)([C.Z], () => C.Z.can(k.Plq.CONNECT, t)), _ = (0, S.Z)(t.id), h = w.Z.Messages.JOIN;
     switch (i) {
     case 1:
         h = w.Z.Messages.JOIN;

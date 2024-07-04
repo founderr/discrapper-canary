@@ -1,10 +1,10 @@
 n.d(t, {
     D: function () {
-        return f;
+        return C;
     }
 }), n(47120);
 var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(664751), o = n(442837), c = n(481060), d = n(212093), u = n(703656), _ = n(683301), h = n(671533), E = n(900849), I = n(119317), m = n(749436), g = n(650394), p = n(731455), T = n(689938), S = n(178698);
-let f = 12, C = () => {
+let C = 12, f = () => {
         let e = (0, u.s1)().location.search;
         return null != e && e.length > 0 && e.startsWith('?') ? l.parse(e) : {};
     }, N = e => {
@@ -62,7 +62,7 @@ t.Z = e => {
             guilds: j,
             loading: U,
             total: G
-        } = n, [k, w] = s.useState(!1), {tag: B} = C(), [H, V] = s.useState(B), F = (0, o.e7)([_.ZP], () => _.ZP.hasSearchError()), Y = (e, t, n) => {
+        } = n, [k, w] = s.useState(!1), {tag: B} = f(), [H, V] = s.useState(B), F = (0, o.e7)([_.ZP], () => _.ZP.hasSearchError()), Y = (e, t, n) => {
             d.bR(a, {
                 categoryId: n ? p.Hk : R,
                 preferredLocale: l.code,
@@ -77,7 +77,7 @@ t.Z = e => {
         let {
                 offset: e,
                 tag: t
-            } = C(), n = null != e ? Math.floor(parseInt(e, 10) / f) + 1 : 1;
+            } = f(), n = null != e ? Math.floor(parseInt(e, 10) / C) + 1 : 1;
         V(!!t), 1 === n && w(!0);
     }, [a]);
     let z = R === p.Hk ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
@@ -125,16 +125,16 @@ t.Z = e => {
                 categoryId: R,
                 categoryName: x,
                 onClick: () => {
-                    d.uY(p.Hk), Y(0, f, !0);
+                    d.uY(p.Hk), Y(0, C, !0);
                 }
             }) : (0, i.jsx)('div', {
                 className: S.results,
                 children: (0, i.jsx)(I.Z, {
-                    pageSize: f,
+                    pageSize: C,
                     totalCount: G,
                     resetCurrentPage: k,
                     onPageChange: e => {
-                        Y((e - 1) * f, f), W();
+                        Y((e - 1) * C, C), W();
                     },
                     children: e => {
                         let {controller: t} = e;
@@ -144,7 +144,7 @@ t.Z = e => {
                                 (0, i.jsx)(g.Z, {
                                     guilds: j,
                                     loading: U,
-                                    loadingPlaceholderCount: f,
+                                    loadingPlaceholderCount: C,
                                     onViewGuild: b,
                                     loadingGuildId: v,
                                     theme: O,

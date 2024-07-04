@@ -10,7 +10,7 @@ function p(e) {
             type: n,
             status: p,
             isFocused: T
-        } = e, S = s.useContext(u.AnalyticsContext), {analyticsLocations: f} = (0, o.ZP)(), C = e => {
+        } = e, S = s.useContext(u.AnalyticsContext), {analyticsLocations: C} = (0, o.ZP)(), f = e => {
             e.stopPropagation(), l.Z.cancelFriendRequest(t.id, { location: 'Friends' });
         }, N = e => {
             e.stopPropagation(), l.Z.addRelationship({
@@ -23,7 +23,7 @@ function p(e) {
         user: t,
         onClick: () => (0, c.openUserProfileModal)({
             userId: t.id,
-            sourceAnalyticsLocations: f,
+            sourceAnalyticsLocations: C,
             analyticsLocation: S.location
         }),
         children: e => {
@@ -48,7 +48,7 @@ function p(e) {
                         icon: r.CloseSmallIcon,
                         actionType: _.Z.ActionTypes.DENY,
                         tooltip: m.Z.Messages.FRIEND_REQUEST_IGNORE,
-                        onClick: C,
+                        onClick: f,
                         shouldHighlight: e
                     })
                 ]
@@ -56,7 +56,7 @@ function p(e) {
                 icon: r.CloseSmallIcon,
                 actionType: _.Z.ActionTypes.DENY,
                 tooltip: m.Z.Messages.FRIEND_REQUEST_CANCEL,
-                onClick: C,
+                onClick: f,
                 shouldHighlight: e
             });
             return (0, i.jsxs)('div', {

@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     }
 });
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(286379), c = n(481060), d = n(183126), u = n(209613), _ = n(797614), h = n(151827), E = n(626135), I = n(26373), m = n(486622), g = n(922409), p = n(727813), T = n(355350), S = n(307947), f = n(125855), C = n(687683), N = n(981631), A = n(689938), Z = n(553437);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(286379), c = n(481060), d = n(183126), u = n(209613), _ = n(797614), h = n(151827), E = n(626135), I = n(26373), m = n(486622), g = n(922409), p = n(727813), T = n(355350), S = n(307947), C = n(125855), f = n(687683), N = n(981631), A = n(689938), Z = n(553437);
 function L() {
     let e = s.useRef(null), t = (0, p.Z)(), n = (0, T.w)(), a = (0, I.V)(), L = (0, d.N)(), v = (0, u.Z)('message-requests-spam-list'), {channelId: O} = (0, g._)(), R = s.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(A.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE));
@@ -19,7 +19,7 @@ function L() {
     let P = s.useCallback(e => {
             var n, s;
             let {row: l} = e, o = t[l], c = null === (s = t[l + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
-            return (0, i.jsx)(f.Z, {
+            return (0, i.jsx)(C.Z, {
                 index: l,
                 className: r()({
                     [Z.selected]: null != O && O === d,
@@ -63,7 +63,7 @@ function L() {
             b,
             L
         ]);
-    return 0 === t.length ? (0, i.jsx)(S.Z, { section: C.pS.SPAM }) : (0, i.jsx)(l.bG, {
+    return 0 === t.length ? (0, i.jsx)(S.Z, { section: f.pS.SPAM }) : (0, i.jsx)(l.bG, {
         navigator: v,
         children: (0, i.jsx)(l.SJ, {
             children: n => {
@@ -82,8 +82,8 @@ function L() {
                     },
                     paddingTop: 24,
                     paddingBottom: 24,
-                    sectionHeight: C.oi,
-                    rowHeight: C.WN,
+                    sectionHeight: f.oi,
+                    rowHeight: f.WN,
                     renderSection: M,
                     renderRow: P,
                     sections: [t.length],

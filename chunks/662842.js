@@ -3,13 +3,13 @@ n.d(t, {
         return k;
     }
 }), n(47120);
-var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(692547), u = n(481060), _ = n(232567), h = n(100527), E = n(471445), I = n(15274), m = n(924301), g = n(504160), p = n(151864), T = n(725436), S = n(497656), f = n(554747), C = n(230900), N = n(854698), A = n(703656), Z = n(922482), L = n(565799), v = n(501655), O = n(427679), R = n(448206), x = n(484459), b = n(103575), P = n(496675), M = n(594174), D = n(662868), y = n(981631), j = n(765305), U = n(689938), G = n(366846);
+var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(692547), u = n(481060), _ = n(232567), h = n(100527), E = n(471445), I = n(15274), m = n(924301), g = n(504160), p = n(151864), T = n(725436), S = n(497656), C = n(554747), f = n(230900), N = n(854698), A = n(703656), Z = n(922482), L = n(565799), v = n(501655), O = n(427679), R = n(448206), x = n(484459), b = n(103575), P = n(496675), M = n(594174), D = n(662868), y = n(981631), j = n(765305), U = n(689938), G = n(366846);
 (s = i || (i = {}))[s.STAGE = 0] = 'STAGE', s[s.EVENT_EXTERNAL = 1] = 'EVENT_EXTERNAL', s[s.EVENT_VOICE = 2] = 'EVENT_VOICE', s[s.STUDY_ROOM = 3] = 'STUDY_ROOM';
 function k(e) {
     let {
             guild: t,
             isStudyRoomNotice: n = !1
-        } = e, i = (0, S.y)(t.id), s = (0, f.k5)(t.id), l = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
+        } = e, i = (0, S.y)(t.id), s = (0, C.k5)(t.id), l = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
             isStageNoticeHidden: k,
             isEventNoticeHidden: w
         } = (0, c.cj)([p.Z], () => ({
@@ -140,7 +140,7 @@ function k(e) {
                 };
             }
             if (t.entity_type === j.WX.EXTERNAL) {
-                let e = (0, C.cS)(t);
+                let e = (0, f.cS)(t);
                 if (null == e)
                     return { noticeType: null };
                 let n = m.ZP.getUserCount(t.id, p);

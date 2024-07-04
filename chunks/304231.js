@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(338545), r = n(143927), l = n(442837), o = n(607070), c = n(950279), d = n(741595), u = n(754961), _ = n(363915), h = n(359380), E = n(207796), I = n(316553), m = n(689938), g = n(270590);
+var i = n(735250), s = n(470079), a = n(920906), r = n(143927), l = n(442837), o = n(607070), c = n(950279), d = n(741595), u = n(754961), _ = n(363915), h = n(359380), E = n(207796), I = n(316553), m = n(689938), g = n(270590);
 let p = {
     mass: 1,
     tension: 600,
@@ -24,7 +24,7 @@ function S() {
         playstyle: e
     });
 }
-function f(e) {
+function C(e) {
     let {selectedGame: t} = e, n = (0, I.J)({ selectedGame: t }), a = (0, E.GN)(e => e.selectedTraits, r.Z), l = s.useMemo(() => new Set(a), [a]), o = s.useCallback(e => E.GN.getState().setSelectedTraits([...e]), []);
     return (0, i.jsx)(h.Z, {
         title: m.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
@@ -35,7 +35,7 @@ function f(e) {
         hidePreview: !0
     });
 }
-function C(e) {
+function f(e) {
     return e.toString();
 }
 t.Z = s.memo(function (e) {
@@ -116,7 +116,7 @@ t.Z = s.memo(function (e) {
             case 1:
                 return (0, i.jsx)(S, {});
             case 2:
-                return (0, i.jsx)(f, { selectedGame: t });
+                return (0, i.jsx)(C, { selectedGame: t });
             }
         }, [t]);
     return (0, i.jsxs)(a.animated.div, {
@@ -130,7 +130,7 @@ t.Z = s.memo(function (e) {
                     currentStep: N,
                     items: U,
                     renderItem: G,
-                    getItemKey: C
+                    getItemKey: f
                 })
             }),
             (0, i.jsxs)(a.animated.div, {

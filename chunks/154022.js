@@ -3,7 +3,7 @@ s.d(t, {
         return H;
     }
 }), s(47120);
-var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(392711), l = s.n(o), c = s(442837), d = s(481060), _ = s(230711), E = s(419363), u = s(857595), T = s(607070), I = s(627845), S = s(786761), N = s(3148), C = s(739566), m = s(753206), A = s(440849), h = s(921801), g = s(196051), O = s(441729), p = s(285952), R = s(153124), x = s(626135), M = s(63063), f = s(695346), D = s(263937), P = s(996073), L = s(526761), Z = s(726985), b = s(981631), v = s(611480), j = s(653477), B = s(689938), U = s(412809), G = s(549856), F = s(328756);
+var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(392711), l = s.n(o), c = s(442837), d = s(481060), _ = s(230711), E = s(419363), u = s(857595), T = s(607070), I = s(627845), S = s(786761), N = s(3148), C = s(739566), m = s(753206), A = s(440849), h = s(921801), g = s(196051), O = s(441729), p = s(285952), R = s(153124), x = s(626135), M = s(63063), D = s(695346), f = s(263937), P = s(996073), L = s(526761), Z = s(726985), b = s(981631), v = s(611480), j = s(653477), B = s(689938), U = s(412809), G = s(549856), F = s(328756);
 let y = (0, R.hQ)(), V = (0, R.hQ)(), Y = (0, R.hQ)(), w = l().debounce(e => {
         (0, u.o2)(e);
     }, 250), k = l().debounce(e => {
@@ -80,7 +80,7 @@ function H(e) {
     });
 }
 function W() {
-    let e = f.jU.useSetting(), [t] = a.useState(() => {
+    let e = D.jU.useSetting(), [t] = a.useState(() => {
             let e = (0, S.e5)({
                 ...(0, N.ZP)({
                     channelId: '1337',
@@ -291,7 +291,7 @@ function J() {
     });
 }
 function $() {
-    let e = f.QK.useSetting(), t = f.Yk.useSetting(), {
+    let e = D.QK.useSetting(), t = D.Yk.useSetting(), {
             useReducedMotion: s,
             rawPrefersReducedMotion: i,
             systemPrefersReducedMotion: o,
@@ -299,13 +299,13 @@ function $() {
             animateEmojiOverrideReason: _
         } = (0, c.cj)([
             T.Z,
-            D.Z
+            f.Z
         ], () => ({
             systemPrefersReducedMotion: T.Z.systemPrefersReducedMotion,
             rawPrefersReducedMotion: T.Z.rawPrefersReducedMotion,
             useReducedMotion: T.Z.useReducedMotion,
-            gifAutoPlayOverrideReason: D.Z.getAppliedOverrideReasonKey('gifAutoPlay'),
-            animateEmojiOverrideReason: D.Z.getAppliedOverrideReasonKey('animateEmoji')
+            gifAutoPlayOverrideReason: f.Z.getAppliedOverrideReasonKey('gifAutoPlay'),
+            animateEmojiOverrideReason: f.Z.getAppliedOverrideReasonKey('animateEmoji')
         })), E = a.useRef(null);
     (0, P.Z)(E, L.rP.REDUCED_MOTION);
     let I = a.useCallback((e, t) => {
@@ -344,22 +344,22 @@ function $() {
                 className: G.marginBottom40,
                 value: e,
                 note: null != l ? (0, A.Z)(l) : void 0,
-                onChange: f.QK.updateSetting,
+                onChange: D.QK.updateSetting,
                 children: B.Z.Messages.GIF_AUTO_PLAY_LABEL
             }),
             (0, n.jsx)(d.FormSwitch, {
                 className: r()(G.marginTop8, G.marginBottom20),
                 value: t,
                 note: null != _ ? (0, A.Z)(_) : void 0,
-                onChange: f.Yk.updateSetting,
+                onChange: D.Yk.updateSetting,
                 children: B.Z.Messages.ANIMATE_EMOJI
             })
         ]
     });
 }
 function ee() {
-    let e = f.Wp.useSetting(), t = (0, c.e7)([D.Z], () => D.Z.getAppliedOverrideReasonKey('animateStickers')), s = a.useCallback(e => {
-            f.Wp.updateSetting(e.value);
+    let e = D.Wp.useSetting(), t = (0, c.e7)([f.Z], () => f.Z.getAppliedOverrideReasonKey('animateStickers')), s = a.useCallback(e => {
+            D.Wp.updateSetting(e.value);
         }, []);
     return (0, n.jsxs)(d.FormItem, {
         className: G.marginBottom40,
@@ -393,7 +393,7 @@ function ee() {
     });
 }
 function et() {
-    let e = (0, c.e7)([T.Z], () => T.Z.isSubmitButtonEnabled), t = f.dN.useSetting(), s = a.useRef(null);
+    let e = (0, c.e7)([T.Z], () => T.Z.isSubmitButtonEnabled), t = D.dN.useSetting(), s = a.useRef(null);
     return (0, P.Z)(s, L.rP.LEGACY_CHAT_INPUT), (0, n.jsxs)(d.FormItem, {
         ref: s,
         children: [
@@ -415,7 +415,7 @@ function et() {
                     x.default.track(b.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                         enabled: e,
                         location: { section: b.jXE.SETTINGS_ACCESSIBILITY }
-                    }), f.dN.updateSetting(e);
+                    }), D.dN.updateSetting(e);
                 },
                 children: B.Z.Messages.LEGACY_CHAT_INPUT
             })
@@ -423,7 +423,7 @@ function et() {
     });
 }
 function es() {
-    let e = f.OW.useSetting(), t = (0, c.e7)([O.Z], () => O.Z.speechRate), [s, i] = a.useState(!1);
+    let e = D.OW.useSetting(), t = (0, c.e7)([O.Z], () => O.Z.speechRate), [s, i] = a.useState(!1);
     return E.Zh ? (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(d.FormItem, {
@@ -435,7 +435,7 @@ function es() {
                     (0, n.jsx)(d.FormSwitch, {
                         className: G.marginTop20,
                         value: e,
-                        onChange: f.OW.updateSetting,
+                        onChange: D.OW.updateSetting,
                         children: B.Z.Messages.ALLOW_TTS_COMMAND
                     })
                 ]

@@ -1,5 +1,5 @@
 n(47120);
-var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(692547), u = n(481060), _ = n(438139), h = n(2052), E = n(726542), I = n(638880), m = n(655922), g = n(122810), p = n(833664), T = n(503438), S = n(420660), f = n(74433), C = n(952561), N = n(513202), A = n(906732), Z = n(812206), L = n(933557), v = n(382182), O = n(871118), R = n(849171), x = n(314897), b = n(592125), P = n(594174), M = n(368874), D = n(366695), y = n(366966), j = n(446753), U = n(395361), G = n(639351), k = n(368666), w = n(81063), B = n(823379), H = n(51144), V = n(599706), F = n(981631), Y = n(689938), W = n(39653);
+var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(692547), u = n(481060), _ = n(438139), h = n(2052), E = n(726542), I = n(638880), m = n(655922), g = n(122810), p = n(833664), T = n(503438), S = n(420660), C = n(74433), f = n(952561), N = n(513202), A = n(906732), Z = n(812206), L = n(933557), v = n(382182), O = n(871118), R = n(849171), x = n(314897), b = n(592125), P = n(594174), M = n(368874), D = n(366695), y = n(366966), j = n(446753), U = n(395361), G = n(639351), k = n(368666), w = n(81063), B = n(823379), H = n(51144), V = n(599706), F = n(981631), Y = n(689938), W = n(39653);
 let z = {
         SMALL: 64,
         LARGE: 160
@@ -472,7 +472,7 @@ en.Header = et, en.Body = e => {
                     })
                 })
             ]
-        }), I = null !== (n = null === (t = (0, f.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : Y.Z.Messages.SHARING_SCREEN;
+        }), I = null !== (n = null === (t = (0, C.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : Y.Z.Messages.SHARING_SCREEN;
     return (0, a.jsxs)(J, {
         children: [
             (0, a.jsxs)('div', {
@@ -502,7 +502,7 @@ en.Header = et, en.Body = e => {
             channel: n,
             guildId: i,
             participants: s
-        } = e, l = (0, C.Z)(), [o, d] = r.useState(null), _ = t.application_id;
+        } = e, l = (0, f.Z)(), [o, d] = r.useState(null), _ = t.application_id;
     r.useEffect(() => {
         if (null != _)
             (0, w.fetchAssetIds)(_, ['embedded_background']).then(e => {

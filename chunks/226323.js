@@ -4,7 +4,7 @@ n.d(t, {
     }
 }), n(653041), n(47120);
 var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(239091), d = n(586902), u = n(512384), _ = n(484459), h = n(103575), E = n(314897), I = n(131951), m = n(51144), g = n(524484), p = n(689938), T = n(372844);
-let S = { offset: 2 }, f = {
+let S = { offset: 2 }, C = {
         serverDeaf: {
             icon: o.HeadphonesDenyIcon,
             colorize: !0,
@@ -31,12 +31,12 @@ let S = { offset: 2 }, f = {
             getStatus: () => p.Z.Messages.VOICE_CHANNEL_LOCAL_MUTED
         }
     };
-function C(e) {
+function f(e) {
     var t, s;
     let {
             channel: a,
             user: E,
-            nick: C,
+            nick: f,
             mute: N,
             deaf: A,
             serverMute: Z,
@@ -44,7 +44,7 @@ function C(e) {
         } = e, v = (0, l.e7)([I.Z], () => I.Z.isLocalMute(E.id)), O = (0, d.Z)({
             userId: E.id,
             checkSoundSharing: !0
-        }), R = null !== (t = a.getGuildId()) && void 0 !== t ? t : void 0, x = E.getAvatarURL(a.guild_id, 24), b = null != C ? C : m.ZP.getName(E), {
+        }), R = null !== (t = a.getGuildId()) && void 0 !== t ? t : void 0, x = E.getAvatarURL(a.guild_id, 24), b = null != f ? f : m.ZP.getName(E), {
             icon: P,
             colorize: M,
             getStatus: D
@@ -57,15 +57,15 @@ function C(e) {
                 localMute: a
             } = e;
             if (t)
-                return f.serverDeaf;
+                return C.serverDeaf;
             if (n)
-                return f.deaf;
+                return C.deaf;
             if (i)
-                return f.serverMute;
+                return C.serverMute;
             else if (a)
-                return f.localMute;
+                return C.localMute;
             else if (s)
-                return f.mute;
+                return C.mute;
         }({
             serverDeaf: L,
             deaf: A,
@@ -189,7 +189,7 @@ function N(e) {
                         nick: s,
                         voiceState: a
                     } = e;
-                    return t.id !== h ? (0, i.jsx)(C, {
+                    return t.id !== h ? (0, i.jsx)(f, {
                         channel: n,
                         user: t,
                         nick: s,

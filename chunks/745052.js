@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(286379), c = n(442837), d = n(704215), u = n(481060), _ = n(150063), h = n(45114), E = n(230711), I = n(112724), m = n(183126), g = n(607070), p = n(209613), T = n(325708), S = n(320149), f = n(252618), C = n(605236), N = n(243778), A = n(984370), Z = n(797614), L = n(359110), v = n(6025), O = n(897473), R = n(108427), x = n(970731), b = n(210887), P = n(433355), M = n(592125), D = n(819640), y = n(151827), j = n(626135), U = n(792125), G = n(879041), k = n(647090), w = n(385956), B = n(610697), H = n(26373), V = n(486622), F = n(922409), Y = n(899740), W = n(177033), z = n(355350), K = n(307947), q = n(96479), Q = n(480874), X = n(687683), J = n(981631), $ = n(921944), ee = n(526761), et = n(689938), en = n(757833), ei = n(489919);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(286379), c = n(442837), d = n(704215), u = n(481060), _ = n(150063), h = n(45114), E = n(230711), I = n(112724), m = n(183126), g = n(607070), p = n(209613), T = n(325708), S = n(320149), C = n(252618), f = n(605236), N = n(243778), A = n(984370), Z = n(797614), L = n(359110), v = n(6025), O = n(897473), R = n(108427), x = n(970731), b = n(210887), P = n(433355), M = n(592125), D = n(819640), y = n(151827), j = n(626135), U = n(792125), G = n(879041), k = n(647090), w = n(385956), B = n(610697), H = n(26373), V = n(486622), F = n(922409), Y = n(899740), W = n(177033), z = n(355350), K = n(307947), q = n(96479), Q = n(480874), X = n(687683), J = n(981631), $ = n(921944), ee = n(526761), et = n(689938), en = n(757833), ei = n(489919);
 function es() {
     let e = s.useRef(null), t = (0, Y.q)(), n = (0, W.Z)(), a = (0, H.K)(), c = (0, m.N)(), d = n.length > 0 ? null == n ? void 0 : n[0].channel.id : null, _ = (0, G.e)({ location: 'message-request-page-web' });
     s.useEffect(() => {
@@ -16,7 +16,7 @@ function es() {
         }, [
             n,
             I
-        ]), f = s.useCallback(e => {
+        ]), C = s.useCallback(e => {
             var t, s;
             let {row: l} = e, o = n[l], c = null === (s = n[l + 1]) || void 0 === s ? void 0 : null === (t = s.channel) || void 0 === t ? void 0 : t.id, d = o.channel.id;
             return (0, i.jsx)(q.Z, {
@@ -33,7 +33,7 @@ function es() {
             a,
             n,
             T
-        ]), C = s.useCallback(() => (0, i.jsxs)(y.Z, {
+        ]), f = s.useCallback(() => (0, i.jsxs)(y.Z, {
             className: en.sectionTitle,
             children: [
                 t > 0 ? et.Z.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({ count: t }) : et.Z.Messages.MESSAGE_REQUESTS_PAGE_TITLE,
@@ -84,8 +84,8 @@ function es() {
                     paddingBottom: 24,
                     sectionHeight: X.oi,
                     rowHeight: X.WN,
-                    renderSection: C,
-                    renderRow: f,
+                    renderSection: f,
+                    renderRow: C,
                     sections: [n.length],
                     chunkSize: 30,
                     fade: !0,
@@ -128,7 +128,7 @@ let er = function (e) {
     }, el = e => {
         let t = (0, B.Z)(), n = () => D.Z.hasLayers() || (0, u.hasAnyModalOpen)(), a = (0, c.e7)([g.Z], () => g.Z.useReducedMotion);
         return s.useEffect(() => {
-            (0, C.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+            (0, f.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
         }, []), (0, i.jsx)(N.Z, {
             contentTypes: [d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
             children: s => {
@@ -184,7 +184,7 @@ let ec = (0, I.Z)(function (e) {
         g
     ]);
     let [T, S] = s.useState(X.pS.REQUESTS);
-    return (0, f.Tt)({ location: et.Z.Messages.MESSAGE_REQUESTS }), (0, i.jsxs)(i.Fragment, {
+    return (0, C.Tt)({ location: et.Z.Messages.MESSAGE_REQUESTS }), (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
                 className: r()(ei.chat, en.container, {

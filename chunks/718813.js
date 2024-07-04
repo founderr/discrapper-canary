@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     }
 }), n(653041);
-var i, s = n(735250), a = n(470079), r = n(120356), l = n.n(r), o = n(748780), c = n(442837), d = n(215569), u = n(481060), _ = n(37234), h = n(134616), E = n(714338), I = n(663993), m = n(210887), g = n(819640), p = n(725568), T = n(585483), S = n(792125), f = n(981631), C = n(821636);
+var i, s = n(735250), a = n(470079), r = n(120356), l = n.n(r), o = n(748780), c = n(442837), d = n(215569), u = n(481060), _ = n(37234), h = n(134616), E = n(714338), I = n(663993), m = n(210887), g = n(819640), p = n(725568), T = n(585483), S = n(792125), C = n(981631), f = n(821636);
 function N(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -81,10 +81,10 @@ let A = (0, I.Un)({
         webpackId: 994763,
         name: 'GuildSettings'
     }), O = {
-        [f.S9g.USER_SETTINGS]: () => (0, s.jsx)(A, {}),
-        [f.S9g.CHANNEL_SETTINGS]: () => (0, s.jsx)(Z, {}),
-        [f.S9g.GUILD_SETTINGS]: () => (0, s.jsx)(v, {}),
-        [f.S9g.COLLECTIBLES_SHOP]: () => (0, s.jsx)(L, {})
+        [C.S9g.USER_SETTINGS]: () => (0, s.jsx)(A, {}),
+        [C.S9g.CHANNEL_SETTINGS]: () => (0, s.jsx)(Z, {}),
+        [C.S9g.GUILD_SETTINGS]: () => (0, s.jsx)(v, {}),
+        [C.S9g.COLLECTIBLES_SHOP]: () => (0, s.jsx)(L, {})
     }, R = 'SHOWN', x = 'HIDDEN', b = {
         friction: 10,
         tension: 100
@@ -136,7 +136,7 @@ class M extends (i = a.PureComponent) {
             opacity: t,
             scale: n
         } = this.state;
-        T.S.dispatch(f.CkL.LAYER_POP_START), o.Z.parallel([
+        T.S.dispatch(C.CkL.LAYER_POP_START), o.Z.parallel([
             o.Z.spring(t, {
                 toValue: 0,
                 ...b
@@ -146,7 +146,7 @@ class M extends (i = a.PureComponent) {
                 ...b
             })
         ]).start(() => {
-            e(), T.S.dispatch(f.CkL.LAYER_POP_COMPLETE);
+            e(), T.S.dispatch(C.CkL.LAYER_POP_COMPLETE);
         });
     }
     animateUnder() {
@@ -178,9 +178,9 @@ class M extends (i = a.PureComponent) {
             } = this.props, r = e || t === x ? this.getAnimatedStyle() : null, c = (0, s.jsx)(o.Z.div, {
                 ref: e => this.containerRef.current = null != e ? e.refs.node : void 0,
                 'aria-hidden': t === x,
-                className: l()(C.layer, {
-                    [C.baseLayer]: i,
-                    [C.animating]: e,
+                className: l()(f.layer, {
+                    [f.baseLayer]: i,
+                    [f.animating]: e,
                     'stop-animations': t === x
                 }),
                 style: r,
@@ -219,10 +219,10 @@ class M extends (i = a.PureComponent) {
 N(M, 'defaultProps', { baseLayer: !1 }), N(M, 'contextType', u.AccessibilityPreferencesContext);
 class D extends a.PureComponent {
     componentDidMount() {
-        T.S.subscribe(f.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
+        T.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
     }
     componentWillUnmount() {
-        T.S.unsubscribe(f.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
+        T.S.unsubscribe(C.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
     }
     renderLayers() {
         let {
@@ -247,7 +247,7 @@ class D extends a.PureComponent {
         }, 'layer-'.concat(t));
     }
     renderArtisanalHack() {
-        return (0, s.jsx)('div', { className: l()(C.bg, (0, S.Q)(this.props.sidebarTheme)) });
+        return (0, s.jsx)('div', { className: l()(f.bg, (0, S.Q)(this.props.sidebarTheme)) });
     }
     render() {
         return (0, s.jsxs)(s.Fragment, {
@@ -255,7 +255,7 @@ class D extends a.PureComponent {
                 this.renderArtisanalHack(),
                 (0, s.jsx)(d.W, {
                     component: 'div',
-                    className: l()(C.layers, this.props.className),
+                    className: l()(f.layers, this.props.className),
                     children: this.renderLayers()
                 })
             ]
@@ -263,7 +263,7 @@ class D extends a.PureComponent {
     }
 }
 function y(e) {
-    let t = (0, c.e7)([m.Z], () => m.Z.darkSidebar) ? f.BRd.DARK : void 0, n = (0, c.e7)([g.Z], () => g.Z.getLayers()), i = (0, p.QP)(e => e.fullScreenLayers.length > 0);
+    let t = (0, c.e7)([m.Z], () => m.Z.darkSidebar) ? C.BRd.DARK : void 0, n = (0, c.e7)([g.Z], () => g.Z.getLayers()), i = (0, p.QP)(e => e.fullScreenLayers.length > 0);
     return (0, s.jsx)(D, {
         ...e,
         sidebarTheme: t,

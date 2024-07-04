@@ -8,8 +8,8 @@ async function g(e) {
             userId: p,
             section: T,
             subsection: S,
-            guildId: f = E.ME,
-            channelId: C,
+            guildId: C = E.ME,
+            channelId: f,
             friendToken: N,
             analyticsLocation: A,
             ...Z
@@ -26,18 +26,18 @@ async function g(e) {
         return t => (0, i.jsx)(e, {
             location: 'handleOpenUserProfileModal',
             user: L,
-            guildId: f,
+            guildId: C,
             friendToken: N,
             initialSection: T,
             initialSubsection: S,
-            channelId: C,
+            channelId: f,
             ...t,
             ...Z
         });
     }), _.default.track(E.rMx.OPEN_MODAL, {
         type: 'Profile Modal',
-        guild_id: f !== E.ME ? f : null,
-        channel_id: C,
+        guild_id: C !== E.ME ? C : null,
+        channel_id: f,
         other_user_id: p,
         application_id: null !== (a = null == O ? void 0 : O.application_id) && void 0 !== a ? a : null,
         application_name: null == O ? void 0 : O.name,

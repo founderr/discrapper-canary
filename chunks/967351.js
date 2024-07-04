@@ -84,7 +84,7 @@ function S(e) {
     }
     S(e);
 }
-class f extends d.Z {
+class C extends d.Z {
     send(e) {
         E.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(T(I.FRAME, e));
     }
@@ -104,7 +104,7 @@ class f extends d.Z {
         }) : i[s] = a, this.socket = e;
     }
 }
-class C extends s.EventEmitter {
+class f extends s.EventEmitter {
     handleConnection(e) {
         m(e, !1), e.pause(), e.on('readable', () => {
             try {
@@ -119,7 +119,7 @@ class C extends s.EventEmitter {
             let n;
             let i = t.client_id, s = +t.v;
             try {
-                n = new f(e, s, 'json');
+                n = new C(e, s, 'json');
             } catch (t) {
                 e.end(T(I.CLOSE, {
                     code: t.code,
@@ -152,4 +152,4 @@ class C extends s.EventEmitter {
         });
     }
 }
-t.Z = new C();
+t.Z = new f();

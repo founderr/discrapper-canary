@@ -1,6 +1,6 @@
 s.d(t, {
     Z: function () {
-        return f;
+        return D;
     }
 }), s(47120);
 var n = s(735250), a = s(470079), i = s(442837), r = s(481060), o = s(596454), l = s(906732), c = s(856768), d = s(993413), _ = s(921801), E = s(208049), u = s(763296), T = s(242291), I = s(893663), S = s(331642), N = s(474333), C = s(63063), m = s(581883), A = s(918257), h = s(726985), g = s(981631), O = s(710111), p = s(689938), R = s(278720), x = s(549856);
@@ -15,8 +15,8 @@ function M(e) {
         return u.Z.getSound(t === O.hY ? O.X8 : t, s);
     });
 }
-function f() {
-    let {analyticsLocations: e} = (0, l.ZP)(), [t, s] = a.useState(O.hY), o = (0, I.tT)(t), m = M(o), f = (0, i.e7)([u.Z], () => u.Z.hasFetchedAllSounds()), P = (null == o ? void 0 : o.type) === I.zx.GLOBAL, L = f && null != o && null == m;
+function D() {
+    let {analyticsLocations: e} = (0, l.ZP)(), [t, s] = a.useState(O.hY), o = (0, I.tT)(t), m = M(o), D = (0, i.e7)([u.Z], () => u.Z.hasFetchedAllSounds()), P = (null == o ? void 0 : o.type) === I.zx.GLOBAL, L = D && null != o && null == m;
     a.useEffect(() => {
         L && (0, T.tt)({ location: e });
     }, [
@@ -27,7 +27,7 @@ function f() {
     }, []);
     let Z = a.useCallback((e, t) => {
         let {inDropdown: s} = t;
-        return null == e ? null : s ? (0, n.jsx)(D, { guildId: e.value }) : null;
+        return null == e ? null : s ? (0, n.jsx)(f, { guildId: e.value }) : null;
     }, []);
     return (0, n.jsxs)(r.FormSection, {
         className: R.container,
@@ -95,7 +95,7 @@ function f() {
         ]
     });
 }
-function D(e) {
+function f(e) {
     let {guildId: t} = e, s = (0, i.e7)([m.Z], () => {
             var e, s, n;
             return null === (n = m.Z.settings.guilds) || void 0 === n ? void 0 : null === (s = n.guilds) || void 0 === s ? void 0 : null === (e = s[t]) || void 0 === e ? void 0 : e.joinSound;

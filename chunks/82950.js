@@ -12,8 +12,8 @@ let I = r().debounce(o.ZP.trackWithMetadata, 500), m = e => {
             undismissable: p,
             onDismissed: T,
             onClick: S,
-            cta: f,
-            ctaColor: C
+            cta: C,
+            ctaColor: f
         } = e;
         s.useEffect(() => {
             I(_.rMx.CHANNEL_NOTICE_VIEWED, {
@@ -25,7 +25,7 @@ let I = r().debounce(o.ZP.trackWithMetadata, 500), m = e => {
             d
         ]);
         let N = null;
-        'function' == typeof f ? N = f() : null != f && (N = (0, i.jsx)(l.Button, {
+        'function' == typeof C ? N = C() : null != C && (N = (0, i.jsx)(l.Button, {
             className: E.btn,
             size: l.Button.Sizes.SMALL,
             onClick: () => {
@@ -36,8 +36,8 @@ let I = r().debounce(o.ZP.trackWithMetadata, 500), m = e => {
                 }), null == S || S();
             },
             fullWidth: !0,
-            color: C,
-            children: f
+            color: f,
+            children: C
         }));
         let A = null != u ? ''.concat(u, 'px') : '16px';
         return (0, i.jsxs)('div', {

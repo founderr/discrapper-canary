@@ -51,7 +51,7 @@ n.d(t, {
         return F;
     }
 }), n(47120), n(653041), n(411104), n(757143), n(392711);
-var i, s = n(729594), a = n(243814), r = n(544891), l = n(63023), o = n(433517), c = n(904245), d = n(155268), u = n(454585), _ = n(739566), h = n(695346), E = n(131704), I = n(598077), m = n(592125), g = n(430824), p = n(131951), T = n(375954), S = n(158776), f = n(594174), C = n(979651), N = n(70956), A = n(5192), Z = n(226951), L = n(996106), v = n(863141), O = n(186901), R = n(981631);
+var i, s = n(729594), a = n(243814), r = n(544891), l = n(63023), o = n(433517), c = n(904245), d = n(155268), u = n(454585), _ = n(739566), h = n(695346), E = n(131704), I = n(598077), m = n(592125), g = n(430824), p = n(131951), T = n(375954), S = n(158776), C = n(594174), f = n(979651), N = n(70956), A = n(5192), Z = n(226951), L = n(996106), v = n(863141), O = n(186901), R = n(981631);
 let x = null !== (i = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost', b = function () {
         let e = x.split(':')[0];
         if (!e.includes('.'))
@@ -81,7 +81,7 @@ function G(e, t) {
         });
     })), Promise.all(n).then(() => {
         var n;
-        let s = (!e.isNSFW() || (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(k) : [], a = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map(t => w(i, e.id, t));
+        let s = (!e.isNSFW() || (null === (n = C.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(k) : [], a = Object.values(f.Z.getVoiceStatesForChannel(e.id)).map(t => w(i, e.id, t));
         return {
             id: e.id,
             name: e.name,
@@ -127,7 +127,7 @@ function w(e, t, n) {
             selfDeaf: r,
             suppress: l,
             userId: o
-        } = n, c = f.default.getUser(o);
+        } = n, c = C.default.getUser(o);
     if (null == c)
         throw Error('Invalid user id: '.concat(o));
     return {
@@ -146,7 +146,7 @@ function w(e, t, n) {
     };
 }
 function B(e, t, n) {
-    let i = f.default.getUser(t);
+    let i = C.default.getUser(t);
     return {
         type: e,
         user: null != i ? (0, v.Z)(i) : null,

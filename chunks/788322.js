@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(481060), o = n(239091), c = n(906732), d = n(134432), u = n(451603), _ = n(885714), h = n(940627), E = n(806519), I = n(768581), m = n(900849), g = n(556017), p = n(879484), T = n(26580), S = n(206887), f = n(981631), C = n(689938), N = n(465423), A = n(129512), Z = n(330065);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(481060), o = n(239091), c = n(906732), d = n(134432), u = n(451603), _ = n(885714), h = n(940627), E = n(806519), I = n(768581), m = n(900849), g = n(556017), p = n(879484), T = n(26580), S = n(206887), C = n(981631), f = n(689938), N = n(465423), A = n(129512), Z = n(330065);
 let L = () => (0, i.jsx)('div', { className: N.placeholder });
 t.Z = e => {
     var t;
@@ -27,9 +27,9 @@ t.Z = e => {
             size: 240 * (0, d.x_)()
         }), V = null != H ? H : function (e) {
             switch (e) {
-            case f.BRd.DARK:
+            case C.BRd.DARK:
                 return A;
-            case f.BRd.LIGHT:
+            case C.BRd.LIGHT:
                 return Z;
             }
         }(L), F = null !== (t = I.ZP.getGuildIconURL({
@@ -41,10 +41,10 @@ t.Z = e => {
             if (!t.includes('Menu')) {
                 if ((0, u.yU)()) {
                     (0, _.Z)({
-                        analyticsSource: { page: f.ZY5.GUILD_DISCOVERY },
+                        analyticsSource: { page: C.ZY5.GUILD_DISCOVERY },
                         analyticsLocation: {
-                            page: f.ZY5.GUILD_DISCOVERY,
-                            section: f.jXE.GUILD_CAP_UPSELL_MODAL
+                            page: C.ZY5.GUILD_DISCOVERY,
+                            section: C.jXE.GUILD_CAP_UPSELL_MODAL
                         },
                         analyticsLocations: B
                     });
@@ -151,7 +151,7 @@ t.Z = e => {
                                                 children: (0, i.jsx)(l.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'header-secondary',
-                                                    children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: D })
+                                                    children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: D })
                                                 })
                                             }),
                                             null != y && (0, i.jsxs)(i.Fragment, {
@@ -162,7 +162,7 @@ t.Z = e => {
                                                         children: (0, i.jsx)(l.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'header-secondary',
-                                                            children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: y })
+                                                            children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: y })
                                                         })
                                                     })
                                                 ]

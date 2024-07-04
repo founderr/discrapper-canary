@@ -1,13 +1,13 @@
 s.d(t, {
     Z: function () {
-        return D;
+        return f;
     }
 });
 var n = s(735250);
 s(470079);
-var a = s(512722), i = s.n(a), r = s(442837), o = s(481060), l = s(295474), c = s(150039), d = s(126631), _ = s(433411), E = s(532432), u = s(134795), T = s(513901), I = s(451392), S = s(906364), N = s(621853), C = s(271383), m = s(594174), A = s(74538), h = s(51144), g = s(18438), O = s(778825), p = s(52597), R = s(430131), x = s(133484), M = s(689938), f = s(109254);
-function D(e) {
-    var t, s, a, D;
+var a = s(512722), i = s.n(a), r = s(442837), o = s(481060), l = s(295474), c = s(150039), d = s(126631), _ = s(433411), E = s(532432), u = s(134795), T = s(513901), I = s(451392), S = s(906364), N = s(621853), C = s(271383), m = s(594174), A = s(74538), h = s(51144), g = s(18438), O = s(778825), p = s(52597), R = s(430131), x = s(133484), M = s(689938), D = s(109254);
+function f(e) {
+    var t, s, a, f;
     let {guild: P} = e, L = (0, r.e7)([m.default], () => {
             let e = m.default.getCurrentUser();
             return i()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
@@ -45,7 +45,7 @@ function D(e) {
             s(null != e ? e : null != t ? null : void 0);
         };
     return (0, n.jsxs)('div', {
-        className: f.sectionsContainer,
+        className: D.sectionsContainer,
         children: [
             (0, n.jsx)(R.Z, {
                 errors: null !== (a = null == G ? void 0 : G.nick) && void 0 !== a ? a : null == V ? void 0 : V.nick,
@@ -77,7 +77,7 @@ function D(e) {
                                         size: 'md',
                                         color: 'currentColor',
                                         ...e,
-                                        className: f.nitroWheel
+                                        className: D.nitroWheel
                                     })
                                 })
                             ]
@@ -98,7 +98,7 @@ function D(e) {
                                         size: 'md',
                                         color: 'currentColor',
                                         ...e,
-                                        className: f.nitroWheel
+                                        className: D.nitroWheel
                                     })
                                 })
                             ]
@@ -116,7 +116,7 @@ function D(e) {
                                         size: 'md',
                                         color: 'currentColor',
                                         ...e,
-                                        className: f.nitroWheel
+                                        className: D.nitroWheel
                                     })
                                 })
                             ]
@@ -152,13 +152,13 @@ function D(e) {
                                         size: 'md',
                                         color: 'currentColor',
                                         ...e,
-                                        className: f.nitroWheel
+                                        className: D.nitroWheel
                                     })
                                 })
                             ]
                         }),
                         onBioChange: e => (0, p.qN)(e, z),
-                        errors: null !== (D = null == G ? void 0 : G.bio) && void 0 !== D ? D : null == V ? void 0 : V.bio,
+                        errors: null !== (f = null == G ? void 0 : G.bio) && void 0 !== f ? f : null == V ? void 0 : V.bio,
                         pendingBio: j,
                         currentBio: z,
                         disabled: !k

@@ -43,15 +43,15 @@ t.Z = e => {
             analyticsContext: p,
             theme: T,
             onViewGuild: S,
-            fetchGuilds: f,
-            onGuildCardSeen: C,
+            fetchGuilds: C,
+            onGuildCardSeen: f,
             currentCategoryId: N,
             loadId: A,
             onTagClick: Z,
             showMoreCards: L = !1
         } = e;
     s.useEffect(() => {
-        r.Z.wait(() => f());
+        r.Z.wait(() => C());
     }, [N]);
     let v = (0, u.Z)(L ? I : E), {analyticsLocations: O} = (0, l.ZP)();
     if (null == g)
@@ -88,7 +88,7 @@ t.Z = e => {
             guild: e,
             onView: P,
             theme: T,
-            onGuildCardSeen: C,
+            onGuildCardSeen: f,
             onTagClick: Z
         }, e.id));
     return (0, i.jsx)('section', {

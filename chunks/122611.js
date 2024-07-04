@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(442837), r = n(704215), l = n(433517), o = n(963202), c = n(824991), d = n(705348), u = n(243778), _ = n(360453), h = n(377743), E = n(834743), I = n(862099), m = n(704631), g = n(819792), p = n(919285), T = n(118470), S = n(413307), f = n(849688), C = n(374023), N = n(661599), A = n(923608), Z = n(617899), L = n(8521), v = n(760326), O = n(536687), R = n(652785), x = n(981631), b = n(921944);
+var i = n(735250), s = n(470079), a = n(442837), r = n(704215), l = n(433517), o = n(963202), c = n(824991), d = n(705348), u = n(243778), _ = n(360453), h = n(377743), E = n(834743), I = n(862099), m = n(704631), g = n(819792), p = n(919285), T = n(118470), S = n(413307), C = n(849688), f = n(374023), N = n(661599), A = n(923608), Z = n(617899), L = n(8521), v = n(760326), O = n(536687), R = n(652785), x = n(981631), b = n(921944);
 function P(e) {
     e.stopPropagation();
 }
@@ -106,7 +106,7 @@ t.Z = e => {
     case O.R.HUB_STUDY_ROOM:
         return (0, i.jsx)(g.Z, { guild: t });
     case O.R.SIGNUP:
-        return (0, i.jsx)(f.Z, { guild: t });
+        return (0, i.jsx)(C.Z, { guild: t });
     }
-    return C.s.isDisallowPopupsSet() ? null : (0, i.jsx)(M, { guild: e.guild });
+    return f.s.isDisallowPopupsSet() ? null : (0, i.jsx)(M, { guild: e.guild });
 };

@@ -1,5 +1,5 @@
 n(653041);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n.n(l), c = n(442837), d = n(433517), u = n(481060), _ = n(205355), h = n(607070), E = n(38618), I = n(197344), m = n(474873), g = n(706454), p = n(215427), T = n(820254), S = n(838949), f = n(358085), C = n(557177), N = n(998502), A = n(981631), Z = n(689938), L = n(969051);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n.n(l), c = n(442837), d = n(433517), u = n(481060), _ = n(205355), h = n(607070), E = n(38618), I = n(197344), m = n(474873), g = n(706454), p = n(215427), T = n(820254), S = n(838949), C = n(358085), f = n(557177), N = n(998502), A = n(981631), Z = n(689938), L = n(969051);
 function v(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -10,7 +10,7 @@ function v(e, t, n) {
 }
 class O extends s.PureComponent {
     createSound() {
-        let {soundpack: e} = this.props, t = (0, C.uk)('discodo', e);
+        let {soundpack: e} = this.props, t = (0, f.uk)('discodo', e);
         return t.volume = 1, t;
     }
     componentDidMount() {
@@ -245,7 +245,7 @@ class O extends s.PureComponent {
             if (null != e && e.length > 0)
                 return e[o().random(e.length - 1)];
         }()), v(this, 'handleReady', () => {
-            this.setState({ ready: !0 }), (0, f.isDesktop)() && (N.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), N.ZP.send('UPDATE_OPEN_ON_STARTUP'));
+            this.setState({ ready: !0 }), (0, C.isDesktop)() && (N.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), N.ZP.send('UPDATE_OPEN_ON_STARTUP'));
         }), v(this, 'setVideoRef', e => {
             this.videoRef = e;
         }), v(this, 'setProblemsTimeout', () => {

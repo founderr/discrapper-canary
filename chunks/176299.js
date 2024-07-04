@@ -3,16 +3,16 @@ n.d(t, {
         return eF;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(266067), o = n(990547), c = n(608787), d = n(873546), u = n(442837), _ = n(481060), h = n(711237), E = n(532835), I = n(290297), m = n(918854), g = n(279240), p = n(765717), T = n(358221), S = n(823748), f = n(626421), C = n(118379), N = n(652515), A = n(544978), Z = n(194729), L = n(668940), v = n(831565), O = n(724383), R = n(705334), x = n(372900), b = n(6039), P = n(637853), M = n(326145), D = n(269675), y = n(242601), j = n(416568), U = n(613609), G = n(160404), k = n(225675), w = n(745052), B = n(285865), H = n(659971), V = n(720734), F = n(840780), Y = n(235555), W = n(746508), z = n(179742), K = n(270759), q = n(918701), Q = n(210724), X = n(905423), J = n(304445), $ = n(210887), ee = n(592125), et = n(271383), en = n(430824), ei = n(944486), es = n(933429), ea = n(823379), er = n(709054), el = n(792125), eo = n(409292), ec = n(316173), ed = n(256638), eu = n(663701), e_ = n(410575), eh = n(425369), eE = n(715702), eI = n(981631), em = n(176505), eg = n(290511), ep = n(689938), eT = n(171200);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(266067), o = n(990547), c = n(608787), d = n(873546), u = n(442837), _ = n(481060), h = n(711237), E = n(532835), I = n(290297), m = n(918854), g = n(279240), p = n(765717), T = n(358221), S = n(823748), C = n(626421), f = n(118379), N = n(652515), A = n(544978), Z = n(194729), L = n(668940), v = n(831565), O = n(724383), R = n(705334), x = n(372900), b = n(6039), P = n(637853), M = n(326145), D = n(269675), y = n(242601), j = n(416568), U = n(613609), G = n(160404), k = n(225675), w = n(745052), B = n(285865), H = n(659971), V = n(720734), F = n(840780), Y = n(235555), W = n(746508), z = n(179742), K = n(270759), q = n(918701), Q = n(210724), X = n(905423), J = n(304445), $ = n(210887), ee = n(592125), et = n(271383), en = n(430824), ei = n(944486), es = n(933429), ea = n(823379), er = n(709054), el = n(792125), eo = n(409292), ec = n(316173), ed = n(256638), eu = n(663701), e_ = n(410575), eh = n(425369), eE = n(715702), eI = n(981631), em = n(176505), eg = n(290511), ep = n(689938), eT = n(171200);
 let eS = () => (0, i.jsx)('div', {
         className: eT.loader,
         children: (0, i.jsx)(_.Spinner, {})
-    }), ef = (0, c.Un)({
+    }), eC = (0, c.Un)({
         createPromise: () => n.e('68614').then(n.bind(n, 650788)),
         webpackId: 650788,
         name: 'GuildShopPage',
         renderLoader: eS
-    }), eC = (0, c.Un)({
+    }), ef = (0, c.Un)({
         createPromise: () => n.e('44798').then(n.bind(n, 998420)),
         webpackId: 998420,
         name: 'GuildMemberApplicationReview',
@@ -80,18 +80,18 @@ let eS = () => (0, i.jsx)('div', {
         if (null != s && null != a && (0, em.AB)(a))
             switch (a) {
             case em.oC.ROLE_SUBSCRIPTIONS:
-                return d ? (0, i.jsx)(ef, {
+                return d ? (0, i.jsx)(eC, {
                     guildId: s,
                     initialTab: A.y.GUILD_ROLE_SUBSCRIPTIONS
                 }) : (0, i.jsx)(D.Z, { guildId: s });
             case em.oC.GUILD_SHOP:
-                return (0, i.jsx)(ef, {
+                return (0, i.jsx)(eC, {
                     guildId: s,
                     productId: r,
                     initialTab: c
                 });
             case em.oC.MEMBER_APPLICATIONS:
-                return (0, i.jsx)(eC, { guildId: s });
+                return (0, i.jsx)(ef, { guildId: s });
             case em.oC.GUILD_HOME:
                 return (0, i.jsx)(eN, { guildId: s });
             case em.oC.CHANNEL_BROWSER:
@@ -168,7 +168,7 @@ let ex = e => (0, i.jsx)(ev, { ...e }), eb = e => {
     }, eD = () => (0, i.jsx)(eh.Z, {}), ey = () => (0, i.jsx)(eE.Z, {}), ej = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
-            return (0, i.jsx)(C.Z, {
+            return (0, i.jsx)(f.Z, {
                 isFullScreen: e,
                 ...t
             });
@@ -282,7 +282,7 @@ function eF() {
                             (0, i.jsxs)('div', {
                                 className: eT.content,
                                 children: [
-                                    (0, i.jsx)(f.Z, {}),
+                                    (0, i.jsx)(C.Z, {}),
                                     (0, i.jsx)(eV, {
                                         hasNotice: t,
                                         sidebarTheme: n,

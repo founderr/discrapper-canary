@@ -3,7 +3,7 @@ n.d(t, {
         return z;
     }
 }), n(789020), n(47120);
-var i = n(735250), s = n(470079), a = n(442837), r = n(224706), l = n(593472), o = n(603113), c = n(367907), d = n(731429), u = n(188471), _ = n(176881), h = n(318885), E = n(358221), I = n(710845), m = n(581567), g = n(594190), p = n(38618), T = n(501640), S = n(924301), f = n(734307), C = n(355298), N = n(427679), A = n(695346), Z = n(592125), L = n(77498), v = n(271383), O = n(430824), R = n(131951), x = n(375954), b = n(19780), P = n(944486), M = n(914010), D = n(885110), y = n(9156), j = n(594174), U = n(774343), G = n(974042), k = n(808506), w = n(626135), B = n(630388), H = n(823379), V = n(998502), F = n(981631), Y = n(987650);
+var i = n(735250), s = n(470079), a = n(442837), r = n(224706), l = n(593472), o = n(603113), c = n(367907), d = n(731429), u = n(188471), _ = n(176881), h = n(318885), E = n(358221), I = n(710845), m = n(581567), g = n(594190), p = n(38618), T = n(501640), S = n(924301), C = n(734307), f = n(355298), N = n(427679), A = n(695346), Z = n(592125), L = n(77498), v = n(271383), O = n(430824), R = n(131951), x = n(375954), b = n(19780), P = n(944486), M = n(914010), D = n(885110), y = n(9156), j = n(594174), U = n(774343), G = n(974042), k = n(808506), w = n(626135), B = n(630388), H = n(823379), V = n(998502), F = n(981631), Y = n(987650);
 class W extends s.PureComponent {
     componentDidMount() {
         let {
@@ -22,7 +22,7 @@ class W extends s.PureComponent {
             voiceChannelType: o,
             voiceChannelBitrate: p,
             videoEnabled: T,
-            isScreenSharing: C,
+            isScreenSharing: f,
             runningGame: v,
             runningGamePid: R,
             selectedChannelId: P,
@@ -110,12 +110,12 @@ class W extends s.PureComponent {
                 r.Z.identifyGame(R, e).then(e => r.Z.reportUnverifiedGame(e)).catch(e => new I.Z('AutoAnalytics').error('Cannot identify game', e));
             }
         }
-        if ((e.videoEnabled !== T || e.isScreenSharing !== C) && null != s) {
+        if ((e.videoEnabled !== T || e.isScreenSharing !== f) && null != s) {
             let e = 'none', t = [
-                    C ? 'screen' : null,
+                    f ? 'screen' : null,
                     T ? 'camera' : null
                 ].filter(H.lm), n = null;
-            C ? (e = 'screen', n = (0, h.t)()) : T && (e = 'camera'), w.default.track(F.rMx.VIDEO_INPUT_TOGGLED, {
+            f ? (e = 'screen', n = (0, h.t)()) : T && (e = 'camera'), w.default.track(F.rMx.VIDEO_INPUT_TOGGLED, {
                 video_input_type: e,
                 video_toggle_source: __OVERLAY__ ? 'overlay' : 'app',
                 enabled_inputs: t,
@@ -134,7 +134,7 @@ class W extends s.PureComponent {
                 postable_channels: Q,
                 premium_progress_bar_enabled: null !== (n = null === (t = O.Z.getGuild(M.Z.getGuildId())) || void 0 === t ? void 0 : t.premiumProgressBarEnabled) && void 0 !== n && n,
                 viewing_all_channels: !y.ZP.isOptInEnabled(j),
-                num_recent_channels: f.Z.recentsChannelCount(j)
+                num_recent_channels: C.Z.recentsChannelCount(j)
             };
             (0, c.yw)(F.rMx.GUILD_VIEWED, e), (0, u.a)(F.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: j });
         } else
@@ -192,10 +192,10 @@ function z() {
         }, [
             u,
             c
-        ]), h = (0, a.e7)([G.ZP], () => G.ZP.getState().section, []), I = (0, a.e7)([U.Z], () => U.Z.getHomeLink(), []), m = (0, a.e7)([p.Z], () => p.Z.isConnected(), []), [S, f] = (0, a.Wu)([R.Z], () => [
+        ]), h = (0, a.e7)([G.ZP], () => G.ZP.getState().section, []), I = (0, a.e7)([U.Z], () => U.Z.getHomeLink(), []), m = (0, a.e7)([p.Z], () => p.Z.isConnected(), []), [S, C] = (0, a.Wu)([R.Z], () => [
             R.Z.isVideoEnabled(),
             R.Z.isScreenSharing()
-        ], []), N = (0, a.e7)([D.Z], () => D.Z.getPrimaryActivity(), []), A = (0, a.e7)([g.ZP], () => g.ZP.getCurrentGameForAnalytics(), []), L = (0, T.Z)(c), x = (0, a.e7)([C.Z], () => C.Z.getMessageRequestsCount(), []), b = {
+        ], []), N = (0, a.e7)([D.Z], () => D.Z.getPrimaryActivity(), []), A = (0, a.e7)([g.ZP], () => g.ZP.getCurrentGameForAnalytics(), []), L = (0, T.Z)(c), x = (0, a.e7)([f.Z], () => f.Z.getMessageRequestsCount(), []), b = {
             selectedChannelId: t,
             isNSFWChannel: r,
             selectedGuildId: c,
@@ -203,7 +203,7 @@ function z() {
             homeLink: I,
             connected: m,
             videoEnabled: S,
-            isScreenSharing: f,
+            isScreenSharing: C,
             voiceChannelId: null == l ? void 0 : l.id,
             voiceChannelGuildId: null == l ? void 0 : l.getGuildId(),
             voiceChannelType: null == l ? void 0 : l.type,

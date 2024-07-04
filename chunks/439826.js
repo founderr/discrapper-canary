@@ -10,8 +10,8 @@ function S(e) {
             isHovering: n,
             onCtxMenuClose: a,
             onCtxMenuOpen: S,
-            onCtxMenuSelect: f
-        } = e, C = (0, E.ph)(t), N = (0, d.ZP)(), A = (0, o.wj)(N) ? g.BRd.DARK : g.BRd.LIGHT, Z = A === g.BRd.DARK, L = s.useMemo(() => (0, E.nP)(t.config.assets.questBarHero), [t]), v = s.useContext(l.S).reducedMotion.enabled, O = (0, E.Mi)(t, h.jn.GIFT_INVENTORY_FOR_YOU), R = (0, _.tP)(t), x = s.useRef(n), b = s.useRef(null);
+            onCtxMenuSelect: C
+        } = e, f = (0, E.ph)(t), N = (0, d.ZP)(), A = (0, o.wj)(N) ? g.BRd.DARK : g.BRd.LIGHT, Z = A === g.BRd.DARK, L = s.useMemo(() => (0, E.nP)(t.config.assets.questBarHero), [t]), v = s.useContext(l.S).reducedMotion.enabled, O = (0, E.Mi)(t, h.jn.GIFT_INVENTORY_FOR_YOU), R = (0, _.tP)(t), x = s.useRef(n), b = s.useRef(null);
     return s.useEffect(() => {
         if (L && null != b.current)
             return x.current !== n && (n ? b.current.play() : (b.current.pause(), b.current.currentTime = 0)), x.current = n, () => {
@@ -38,8 +38,8 @@ function S(e) {
                                 className: T.heroAsset,
                                 controls: !1,
                                 children: (0, i.jsx)('source', {
-                                    src: C,
-                                    type: (0, E.mN)(C)
+                                    src: f,
+                                    type: (0, E.mN)(f)
                                 })
                             }))
                         }) : (0, i.jsx)(I.Fl, {
@@ -48,7 +48,7 @@ function S(e) {
                                 ref: e,
                                 alt: '',
                                 className: T.heroAsset,
-                                src: C
+                                src: f
                             })
                         })
                     }),
@@ -78,7 +78,7 @@ function S(e) {
                                         (0, i.jsx)(m.r, {
                                             onOpen: S,
                                             onClose: a,
-                                            onSelect: f,
+                                            onSelect: C,
                                             questContent: h.jn.QUEST_HOME_DESKTOP,
                                             quest: t,
                                             hideLearnMore: !0,

@@ -8,7 +8,7 @@ n.d(t, {
 });
 var i, s, a = n(735250), r = n(470079), l = n(442837), o = n(481060), c = n(40851), d = n(566620), u = n(403404), _ = n(100527), h = n(906732), E = n(592125), I = n(810090), m = n(626135), g = n(981631), p = n(921944), T = n(689938), S = n(660979);
 (i = s || (s = {})).BOOSTING = 'BOOSTING', i.NITRO = 'NITRO', i.BASH_OUT = 'BASH_OUT', i.GAME_NIGHT = 'GAME_NIGHT';
-let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4', C = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png', N = e => {
+let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4', f = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png', N = e => {
         let {
                 channelId: t,
                 markAsDismissed: n,
@@ -33,8 +33,8 @@ let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                         description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION,
                         learnMore: !0,
                         title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE,
-                        videoPosterUrl: C,
-                        videoUrl: f,
+                        videoPosterUrl: f,
+                        videoUrl: C,
                         ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT,
                         dismissText: T.Z.Messages.DISMISS
                     };
@@ -45,8 +45,8 @@ let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                         description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION,
                         learnMore: !0,
                         title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE,
-                        videoPosterUrl: C,
-                        videoUrl: f,
+                        videoPosterUrl: f,
+                        videoUrl: C,
                         ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT,
                         dismissText: T.Z.Messages.DISMISS
                     };

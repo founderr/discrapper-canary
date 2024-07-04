@@ -21,7 +21,7 @@ function E(e) {
             label: h.Z.Messages.COPY_ID_GUILD,
             shiftId: n,
             onSuccess: I
-        }), p = (0, s.e7)([c.Z], () => c.Z.getGuild(t.id), [t.id]), T = (0, s.e7)([d.Z], () => d.Z.can(_.Plq.ADMINISTRATOR, p)), {canSeeInAppReportingButtons: S} = u.N.useExperiment({ location: '0e35b9_1' }, { autoTrackExposure: !1 }), f = () => {
+        }), p = (0, s.e7)([c.Z], () => c.Z.getGuild(t.id), [t.id]), T = (0, s.e7)([d.Z], () => d.Z.can(_.Plq.ADMINISTRATOR, p)), {canSeeInAppReportingButtons: S} = u.N.useExperiment({ location: '0e35b9_1' }, { autoTrackExposure: !1 }), C = () => {
             (0, r.Zy)(), null == I || I();
         };
     return (0, i.jsxs)(a.Menu, {
@@ -35,7 +35,7 @@ function E(e) {
                     id: 'report-guild-discovery-listing',
                     label: h.Z.Messages.REPORT_SERVER_NO_NAME,
                     action: () => {
-                        (0, o.lt)(t), f();
+                        (0, o.lt)(t), C();
                     },
                     icon: a.FlagIcon,
                     color: 'danger'

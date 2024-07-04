@@ -3,7 +3,7 @@ n.d(t, {
         return ea;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(143927), o = n(91192), c = n(873546), d = n(442837), u = n(704215), _ = n(952265), h = n(481060), E = n(493683), I = n(348600), m = n(257968), g = n(367907), p = n(770471), T = n(158631), S = n(143614), f = n(463119), C = n(377171), N = n(243778), A = n(922409), Z = n(899740), L = n(28476), v = n(880257), O = n(631885), R = n(457396), x = n(51596), b = n(905423), P = n(557494), M = n(210887), D = n(695346), y = n(283595), j = n(699516), U = n(923834), G = n(55563), k = n(774343), w = n(517802), B = n(436088), H = n(814225), V = n(515753), F = n(831218), Y = n(339149), W = n(981631), z = n(689938), K = n(406955);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(143927), o = n(91192), c = n(873546), d = n(442837), u = n(704215), _ = n(952265), h = n(481060), E = n(493683), I = n(348600), m = n(257968), g = n(367907), p = n(770471), T = n(158631), S = n(143614), C = n(463119), f = n(377171), N = n(243778), A = n(922409), Z = n(899740), L = n(28476), v = n(880257), O = n(631885), R = n(457396), x = n(51596), b = n(905423), P = n(557494), M = n(210887), D = n(695346), y = n(283595), j = n(699516), U = n(923834), G = n(55563), k = n(774343), w = n(517802), B = n(436088), H = n(814225), V = n(515753), F = n(831218), Y = n(339149), W = n(981631), z = n(689938), K = n(406955);
 let q = e => {
         let {
                 selected: t,
@@ -25,7 +25,7 @@ let q = e => {
             ...s,
             children: [
                 r.length > 0 && l && (0, i.jsx)(h.TextBadge, {
-                    color: C.Z.BG_BRAND,
+                    color: f.Z.BG_BRAND,
                     text: (0, i.jsxs)('div', {
                         className: K.broadcastingBadge,
                         children: [
@@ -78,7 +78,7 @@ let q = e => {
         let e = (0, Z.q)(), t = (0, Z.T)();
         return e > 0 ? (0, i.jsx)(h.NumberBadge, {
             count: e,
-            color: 0 === t ? C.Z.ICON_MUTED : void 0
+            color: 0 === t ? f.Z.ICON_MUTED : void 0
         }) : null;
     }, $ = e => {
         let {selected: t} = e, n = (0, o.JA)('messageRequests'), {channelId: s} = (0, A._)();
@@ -130,7 +130,7 @@ let q = e => {
                 let {visibleContent: t} = e;
                 return t === u.z.FAMILY_CENTER_NEW_BADGE ? (0, i.jsx)(h.TextBadge, {
                     text: z.Z.Messages.NEW,
-                    color: C.Z.BG_BRAND
+                    color: f.Z.BG_BRAND
                 }) : null;
             }
         });
@@ -217,7 +217,7 @@ let es = e => {
                         }
                     }, 'activities') : null,
                     (0, i.jsx)($, { selected: null == u ? null != s && s.startsWith(W.Z5c.MESSAGE_REQUESTS) : u === W.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
-                    (0, i.jsx)(f.i, {
+                    (0, i.jsx)(C.i, {
                         selected: u === W.Z5c.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(W.Z5c.COLLECTIBLES_SHOP)),
                         locationState: {
                             analyticsSource: {

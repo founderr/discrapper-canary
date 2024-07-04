@@ -12,18 +12,18 @@ function A(e) {
             confettiCanvas: h,
             userWasChurned: g = !1,
             userDiscountOffer: O
-        } = e, p = (0, l.ZP)(), R = (0, r.wj)(p) ? C : m, x = a.useRef(null), [M, f] = a.useState(!1), D = (0, u._)(t, I.Xh.PREMIUM_MONTH_TIER_2, O), P = (0, _.aS)(I.Xh.PREMIUM_MONTH_TIER_2), L = (0, E.T4)(P.amount, P.currency), Z = (0, i.e7)([c.Z], () => c.Z.useReducedMotion);
+        } = e, p = (0, l.ZP)(), R = (0, r.wj)(p) ? C : m, x = a.useRef(null), [M, D] = a.useState(!1), f = (0, u._)(t, I.Xh.PREMIUM_MONTH_TIER_2, O), P = (0, _.aS)(I.Xh.PREMIUM_MONTH_TIER_2), L = (0, E.T4)(P.amount, P.currency), Z = (0, i.e7)([c.Z], () => c.Z.useReducedMotion);
     if (a.useEffect(() => {
-            null != x.current && null != D && f(!0);
+            null != x.current && null != f && D(!0);
         }, [
             x,
             M,
-            D
-        ]), null == O || null == D)
+            f
+        ]), null == O || null == f)
         return null;
     let b = S.Z.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB.format({
             numMonths: O.discount.user_usage_limit,
-            discountedPrice: D,
+            discountedPrice: f,
             regularPrice: L
         }), v = (0, n.jsx)('div', {
             className: N.whatYouLoseButtonContainer,
@@ -44,7 +44,7 @@ function A(e) {
                 ref: x,
                 children: (0, n.jsx)(o.ModalContent, {
                     className: N.body,
-                    children: null != D ? (0, n.jsxs)(n.Fragment, {
+                    children: null != f ? (0, n.jsxs)(n.Fragment, {
                         children: [
                             (0, n.jsxs)('div', {
                                 className: N.discountAppliedBody,

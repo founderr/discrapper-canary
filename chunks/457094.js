@@ -1,5 +1,5 @@
 n.r(t), n(47120);
-var i = n(735250), s = n(470079), a = n(593473), r = n(266067), l = n(442837), o = n(481060), c = n(893776), d = n(943094), u = n(749210), _ = n(287734), h = n(401430), E = n(230711), I = n(607070), m = n(627845), g = n(185666), p = n(503737), T = n(513202), S = n(318891), f = n(687751), C = n(912471), N = n(100527), A = n(838134), Z = n(77987), L = n(679891), v = n(491575), O = n(314533), R = n(935347), x = n(560067), b = n(823169), P = n(620360), M = n(96051), D = n(750995), y = n(696287), j = n(408026), U = n(763916), G = n(306721), k = n(531551), w = n(38618), B = n(972830), H = n(981283), V = n(584233), F = n(15274), Y = n(434404), W = n(543842), z = n(879064), K = n(315964), q = n(495784), Q = n(975533), X = n(377400), J = n(285865), $ = n(659971), ee = n(929809), et = n(122333), en = n(960275), ei = n(818765), es = n(678492), ea = n(269089), er = n(380570), el = n(837689), eo = n(367207), ec = n(489977), ed = n(329557), eu = n(304445), e_ = n(893607), eh = n(703656), eE = n(298969), eI = n(719256), em = n(6025), eg = n(897473), ep = n(377368), eT = n(262702), eS = n(639033), ef = n(479313), eC = n(911560), eN = n(703016), eA = n(171368), eZ = n(429974), eL = n(332754), ev = n(507468), eO = n(357269), eR = n(282506), ex = n(444961), eb = n(314897), eP = n(433355), eM = n(592125), eD = n(896797), ey = n(430824), ej = n(819640), eU = n(283595), eG = n(944486), ek = n(914010), ew = n(695103), eB = n(241890), eH = n(897607), eV = n(417363), eF = n(900974), eY = n(358085), eW = n(998502), ez = n(346329), eK = n(981631), eq = n(176505), eQ = n(701476);
+var i = n(735250), s = n(470079), a = n(593473), r = n(266067), l = n(442837), o = n(481060), c = n(893776), d = n(943094), u = n(749210), _ = n(287734), h = n(401430), E = n(230711), I = n(607070), m = n(627845), g = n(185666), p = n(503737), T = n(513202), S = n(318891), C = n(687751), f = n(912471), N = n(100527), A = n(838134), Z = n(77987), L = n(679891), v = n(491575), O = n(314533), R = n(935347), x = n(560067), b = n(823169), P = n(620360), M = n(96051), D = n(750995), y = n(696287), j = n(408026), U = n(763916), G = n(306721), k = n(531551), w = n(38618), B = n(972830), H = n(981283), V = n(584233), F = n(15274), Y = n(434404), W = n(543842), z = n(879064), K = n(315964), q = n(495784), Q = n(975533), X = n(377400), J = n(285865), $ = n(659971), ee = n(929809), et = n(122333), en = n(960275), ei = n(818765), es = n(678492), ea = n(269089), er = n(380570), el = n(837689), eo = n(367207), ec = n(489977), ed = n(329557), eu = n(304445), e_ = n(893607), eh = n(703656), eE = n(298969), eI = n(719256), em = n(6025), eg = n(897473), ep = n(377368), eT = n(262702), eS = n(639033), eC = n(479313), ef = n(911560), eN = n(703016), eA = n(171368), eZ = n(429974), eL = n(332754), ev = n(507468), eO = n(357269), eR = n(282506), ex = n(444961), eb = n(314897), eP = n(433355), eM = n(592125), eD = n(896797), ey = n(430824), ej = n(819640), eU = n(283595), eG = n(944486), ek = n(914010), ew = n(695103), eB = n(241890), eH = n(897607), eV = n(417363), eF = n(900974), eY = n(358085), eW = n(998502), ez = n(346329), eK = n(981631), eq = n(176505), eQ = n(701476);
 function eX(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -10,7 +10,7 @@ function eX(e, t, n) {
 }
 n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(55563), n(455173), n(882029), n(959457), n(653255), n(663389), n(25990), n(778825), n(999382), n(388610), n(533947), n(277053), n(371398), n(141233), n(471073), n(628566);
 let eJ = !1;
-(0, C.DL)(), l.ZP.initialize(), eE.Z.loadServer(), eY.isPlatformEmbedded && (eW.ZP.on('USER_SETTINGS_OPEN', () => {
+(0, f.DL)(), l.ZP.initialize(), eE.Z.loadServer(), eY.isPlatformEmbedded && (eW.ZP.on('USER_SETTINGS_OPEN', () => {
     !ej.Z.getLayers().includes(eK.S9g.USER_SETTINGS) && E.Z.open(eK.oAB.ACCOUNT);
 }), eW.ZP.on('LAUNCH_APPLICATION', (e, t) => {
     let n = eU.Z.getActiveLibraryApplication(t);
@@ -296,7 +296,7 @@ function e3(e) {
 }
 class e6 extends s.PureComponent {
     componentDidMount() {
-        eW.ZP.setZoomFactor(I.Z.zoom), eE.Z.init(), L.Z.initialize(), er.Z.initialize(), j.Z.initialize(), ex.Z.initialize(), U.Z.initialize(), eo.Z.initialize(), Q.Z.initialize(), m.Z.init(), k.Z.init(), G.Z.init(), et.Z.initialize(), f.Z.initialize(), D.Z.initialize(), ec.Z.initialize(), S.ZP.initialize(), eR.Z.initialize(), ea.Z.initialize(), T.Z.initialize(), H.Z.init(), K.Z.init(), eH.Z.init(), eF.Z.init(), p.Z.initialize(), eN.Z.init(), eB.Z.init(), eL.Z.init(), eT.Z.initialize(), eS.Z.initialize(), eZ.Z.initialize(), ev.Z.init(), M.Z.initialize(), g.Z.initialize(), eI.Z.initialize(), ep.Z.initialize(), ei.Z.initialize(), en.Z.initialize(), es.Z.initialize(), O.Z.initialize(), q.Z.init({
+        eW.ZP.setZoomFactor(I.Z.zoom), eE.Z.init(), L.Z.initialize(), er.Z.initialize(), j.Z.initialize(), ex.Z.initialize(), U.Z.initialize(), eo.Z.initialize(), Q.Z.initialize(), m.Z.init(), k.Z.init(), G.Z.init(), et.Z.initialize(), C.Z.initialize(), D.Z.initialize(), ec.Z.initialize(), S.ZP.initialize(), eR.Z.initialize(), ea.Z.initialize(), T.Z.initialize(), H.Z.init(), K.Z.init(), eH.Z.init(), eF.Z.init(), p.Z.initialize(), eN.Z.init(), eB.Z.init(), eL.Z.init(), eT.Z.initialize(), eS.Z.initialize(), eZ.Z.initialize(), ev.Z.init(), M.Z.initialize(), g.Z.initialize(), eI.Z.initialize(), ep.Z.initialize(), ei.Z.initialize(), en.Z.initialize(), es.Z.initialize(), O.Z.initialize(), q.Z.init({
             hasModalOpen: o.hasAnyModalOpen,
             openModal: () => (0, o.openModalLazy)(async () => {
                 let {default: e} = await Promise.resolve().then(n.bind(n, 650233));
@@ -349,7 +349,7 @@ class e6 extends s.PureComponent {
                         messageId: l
                     });
                     let {summaryId: e} = (0, a.parse)(t);
-                    null != e && ef.ZP.setSelectedSummary(s, e);
+                    null != e && eC.ZP.setSelectedSummary(s, e);
                 }
                 if (null != o && h) {
                     let e = eP.ZP.getCurrentSidebarChannelId(n) !== o, t = null != eP.ZP.getGuildSidebarState(i);
@@ -400,7 +400,7 @@ class e6 extends s.PureComponent {
         if (null != s && (0, e_.c)(s) && !(0, eq.AB)(s) && r) {
             let n = eM.Z.getChannel(s);
             if (null == n)
-                eC.Z.loadThread(s).then(() => e3({
+                ef.Z.loadThread(s).then(() => e3({
                     channelId: s,
                     guildId: i,
                     pathname: t
@@ -415,7 +415,7 @@ class e6 extends s.PureComponent {
                     return null;
                 let n = eM.Z.getChannel(a);
                 if (null == n)
-                    eC.Z.loadThread(a).then(() => e3({
+                    ef.Z.loadThread(a).then(() => e3({
                         channelId: a,
                         guildId: i,
                         pathname: t

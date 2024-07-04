@@ -3,7 +3,7 @@ s.d(t, {
         return eE;
     }
 }), s(47120), s(653041), s(789020);
-var n, a, i, r = s(735250), o = s(470079), l = s(120356), c = s.n(l), d = s(512722), _ = s.n(d), E = s(913527), u = s.n(E), T = s(91192), I = s(314877), S = s(442837), N = s(481060), C = s(37234), m = s(782568), A = s(812206), h = s(593061), g = s(267101), O = s(240864), p = s(942833), R = s(400916), x = s(916001), M = s(539290), f = s(336197), D = s(307643), P = s(378233), L = s(419922), Z = s(46141), b = s(430824), v = s(853872), j = s(509545), B = s(230307), U = s(285952), G = s(366695), F = s(499150), y = s(912454), V = s(259580), Y = s(572004), w = s(55935), k = s(630388), H = s(74538), W = s(937615), K = s(244526), z = s(712358), Q = s(362786), X = s(981631), q = s(474936), J = s(231338), $ = s(689938), ee = s(450770);
+var n, a, i, r = s(735250), o = s(470079), l = s(120356), c = s.n(l), d = s(512722), _ = s.n(d), E = s(913527), u = s.n(E), T = s(91192), I = s(314877), S = s(442837), N = s(481060), C = s(37234), m = s(782568), A = s(812206), h = s(593061), g = s(267101), O = s(240864), p = s(942833), R = s(400916), x = s(916001), M = s(539290), D = s(336197), f = s(307643), P = s(378233), L = s(419922), Z = s(46141), b = s(430824), v = s(853872), j = s(509545), B = s(230307), U = s(285952), G = s(366695), F = s(499150), y = s(912454), V = s(259580), Y = s(572004), w = s(55935), k = s(630388), H = s(74538), W = s(937615), K = s(244526), z = s(712358), Q = s(362786), X = s(981631), q = s(474936), J = s(231338), $ = s(689938), ee = s(450770);
 function et(e, t, s) {
     return t in e ? Object.defineProperty(e, t, {
         value: s,
@@ -93,7 +93,7 @@ function ec(e) {
             guildId: t,
             guildProductListingId: s
         } = e, n = (0, g.hO)(t, s, { requireCurrentGuild: !1 }), a = (0, p.C)(n), i = (0, S.e7)([b.Z], () => b.Z.getGuild(t)), l = (null == n ? void 0 : n.role_id) != null && (null == n ? void 0 : n.attachments_count) === 0 ? $.Z.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : a, c = o.useCallback(async () => {
-            (null == i ? void 0 : i.hasFeature(X.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, f.Z)(X.Z5c.GUILD_PRODUCT(t, s)) : await (0, f.Z)(X.Z5c.CHANNEL(t)), (0, C.xf)();
+            (null == i ? void 0 : i.hasFeature(X.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, D.Z)(X.Z5c.GUILD_PRODUCT(t, s)) : await (0, D.Z)(X.Z5c.CHANNEL(t)), (0, C.xf)();
         }, [
             i,
             t,
@@ -716,7 +716,7 @@ function eE(e) {
             };
         }), N = (0, S.e7)([A.Z], () => null != _ ? A.Z.getApplication(_) : null);
     o.useEffect(() => {
-        E && null != _ && (0, D.UM)(_);
+        E && null != _ && (0, f.UM)(_);
     }, [
         _,
         E

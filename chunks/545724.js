@@ -11,10 +11,10 @@ t.Z = function (e) {
             isActive: g,
             onOtherHover: p,
             className: T
-        } = e, [S, f] = s.useState(!1), [C, N] = s.useState(!1), A = () => {
-            f(!0), m && !g && !C && (null == p || p());
+        } = e, [S, C] = s.useState(!1), [f, N] = s.useState(!1), A = () => {
+            C(!0), m && !g && !f && (null == p || p());
         }, Z = () => {
-            f(!1);
+            C(!1);
         }, L = (e, t) => {
             if (null != t)
                 N(!0), (0, d.jW)(e, async () => {
@@ -42,7 +42,7 @@ t.Z = function (e) {
             },
             children: (0, i.jsx)(l.Z.div, {
                 className: r()(_.messageRequestItem, T, {
-                    [_.active]: g || C,
+                    [_.active]: g || f,
                     [_.firstItem]: 0 === t
                 }),
                 onContextMenu: e => L(e, h),
@@ -54,7 +54,7 @@ t.Z = function (e) {
                     opacity: 1
                 },
                 ...e,
-                children: a(S || g || C)
+                children: a(S || g || f)
             })
         })
     });

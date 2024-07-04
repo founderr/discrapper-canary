@@ -1,5 +1,5 @@
 n(411104), n(724458), n(653041), n(733860), n(47120), n(789020);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(846519), c = n(780384), d = n(481060), u = n(570140), _ = n(659429), h = n(496929), E = n(558381), I = n(410575), m = n(224336), g = n(730749), p = n(666743), T = n(115130), S = n(812206), f = n(252618), C = n(100159), N = n(646288), A = n(984370), Z = n(706454), L = n(210887), v = n(430824), O = n(496675), R = n(525395), x = n(558314), b = n(580130), P = n(55563), M = n(551428), D = n(695103), y = n(451478), j = n(378720), U = n(285952), G = n(760397), k = n(626135), w = n(572004), B = n(630388), H = n(937615), V = n(73346), F = n(3570), Y = n(689796), W = n(15470), z = n(506648), K = n(449275), q = n(445986), Q = n(119520), X = n(450233), J = n(726581), $ = n(74153), ee = n(125930), et = n(178071), en = n(176055), ei = n(843445), es = n(981631), ea = n(186901), er = n(689938), el = n(261343);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(846519), c = n(780384), d = n(481060), u = n(570140), _ = n(659429), h = n(496929), E = n(558381), I = n(410575), m = n(224336), g = n(730749), p = n(666743), T = n(115130), S = n(812206), C = n(252618), f = n(100159), N = n(646288), A = n(984370), Z = n(706454), L = n(210887), v = n(430824), O = n(496675), R = n(525395), x = n(558314), b = n(580130), P = n(55563), M = n(551428), D = n(695103), y = n(451478), j = n(378720), U = n(285952), G = n(760397), k = n(626135), w = n(572004), B = n(630388), H = n(937615), V = n(73346), F = n(3570), Y = n(689796), W = n(15470), z = n(506648), K = n(449275), q = n(445986), Q = n(119520), X = n(450233), J = n(726581), $ = n(74153), ee = n(125930), et = n(178071), en = n(176055), ei = n(843445), es = n(981631), ea = n(186901), er = n(689938), el = n(261343);
 function eo(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -90,7 +90,7 @@ class ec extends s.PureComponent {
             carousel_video_count: s.videos,
             location: i.location.page,
             source: this._analyticsSource,
-            ...(0, C.Z)(e, !0)
+            ...(0, f.Z)(e, !0)
         }), this._trackedViewed = !0;
     }
     renderHeader(e, t) {
@@ -350,7 +350,7 @@ class ec extends s.PureComponent {
             });
             return (0, i.jsxs)(s.Fragment, {
                 children: [
-                    (0, i.jsx)(f.yY, { location: e.name }),
+                    (0, i.jsx)(C.yY, { location: e.name }),
                     this.renderJsonLD(),
                     this.renderHeader(e, t),
                     (0, i.jsx)(Q.Z, { game: e }),
@@ -361,7 +361,7 @@ class ec extends s.PureComponent {
         return r ? (0, i.jsxs)('div', {
             className: el.listingWrapper,
             children: [
-                (0, i.jsx)(f.yY, { location: e.name }),
+                (0, i.jsx)(C.yY, { location: e.name }),
                 this.renderJsonLD(),
                 (0, i.jsx)(I.Z, {
                     section: es.jXE.NAVIGATION,
@@ -374,7 +374,7 @@ class ec extends s.PureComponent {
             ]
         }) : (0, i.jsxs)('div', {
             children: [
-                (0, i.jsx)(f.yY, { location: e.name }),
+                (0, i.jsx)(C.yY, { location: e.name }),
                 this.renderJsonLD(),
                 this.renderHeader(e, t),
                 this.renderListing()
@@ -388,7 +388,7 @@ class ec extends s.PureComponent {
         }), eo(this, 'trackCarouselScroll', (e, t, n) => {
             let {sku: i} = this.props;
             null != i && k.default.track(es.rMx.STORE_LISTING_MEDIA_SCROLLED, {
-                ...(0, C.Z)(i),
+                ...(0, f.Z)(i),
                 card_index: n,
                 card_type: e.type === es.s9s.IMG ? 'image' : 'video'
             });

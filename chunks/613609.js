@@ -8,14 +8,14 @@ t.Z = e => {
     s.useEffect(() => {
         null != n && r.Z.resolveInvite(n, 'Hub').finally(() => T(!1));
     }, [n]);
-    let S = (0, a.e7)([d.Z], () => null != n ? d.Z.getInvite(n) : null), f = (0, a.e7)([c.Z], () => c.Z.getGuild(t));
+    let S = (0, a.e7)([d.Z], () => null != n ? d.Z.getInvite(n) : null), C = (0, a.e7)([c.Z], () => c.Z.getGuild(t));
     s.useEffect(() => {
-        null != f && (0, o.uL)(h.Z5c.CHANNEL(t));
+        null != C && (0, o.uL)(h.Z5c.CHANNEL(t));
     }, [
-        f,
+        C,
         t
     ]);
-    let C = s.useCallback(e => {
+    let f = s.useCallback(e => {
             g(t => Math.max(t, e));
         }, []), N = (0, u.gK)();
     return (0, i.jsx)('div', {
@@ -25,7 +25,7 @@ t.Z = e => {
             splash: N,
             waveState: m,
             showLogo: !1,
-            updateWaveState: C,
+            updateWaveState: f,
             children: [
                 (0, i.jsx)('div', { className: I.dragRegion }),
                 (0, i.jsx)('div', {

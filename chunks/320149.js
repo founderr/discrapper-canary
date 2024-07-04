@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     }
 });
-var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(541716), o = n(910611), c = n(355298), d = n(333984), u = n(26373), _ = n(486622), h = n(718538), E = n(359110), I = n(6025), m = n(433355), g = n(502568), p = n(933557), T = n(287746), S = n(689938), f = n(240196), C = n(712759);
+var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(541716), o = n(910611), c = n(355298), d = n(333984), u = n(26373), _ = n(486622), h = n(718538), E = n(359110), I = n(6025), m = n(433355), g = n(502568), p = n(933557), T = n(287746), S = n(689938), C = n(240196), f = n(712759);
 function N(e) {
     let {
             channel: t,
@@ -41,15 +41,15 @@ function N(e) {
                 })
             }),
             v && (0, i.jsxs)('div', {
-                className: C.hamBanner,
+                className: f.hamBanner,
                 children: [
                     (0, i.jsx)(r.Text, {
-                        className: C.__invalid_hamBannerText,
+                        className: f.__invalid_hamBannerText,
                         variant: 'text-sm/normal',
                         children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
                     }),
                     (0, i.jsx)(r.Button, {
-                        className: C.hamBannerButton,
+                        className: f.hamBannerButton,
                         size: r.ButtonSizes.SMALL,
                         onClick: () => b(t, O),
                         children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
@@ -57,7 +57,7 @@ function N(e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: f.chat,
+                className: C.chat,
                 children: (0, i.jsx)(T.Z, {
                     channel: t,
                     guild: null,

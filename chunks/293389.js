@@ -1,6 +1,6 @@
 s(47120);
-var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(442837), l = s(692547), c = s(481060), d = s(224706), _ = s(225433), E = s(594190), u = s(320724), T = s(77498), I = s(283595), S = s(797717), N = s(546591), C = s(626135), m = s(251625), A = s(358085), h = s(210887), g = s(981631), O = s(689938), p = s(49384), R = s(759823), x = s(483085), M = s(735194), f = s(549856);
-let D = o.ZP.connectStores([h.Z], () => ({ theme: h.Z.theme }))(c.EmptyState), P = (0, A.isWindows)();
+var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(442837), l = s(692547), c = s(481060), d = s(224706), _ = s(225433), E = s(594190), u = s(320724), T = s(77498), I = s(283595), S = s(797717), N = s(546591), C = s(626135), m = s(251625), A = s(358085), h = s(210887), g = s(981631), O = s(689938), p = s(49384), R = s(759823), x = s(483085), M = s(735194), D = s(549856);
+let f = o.ZP.connectStores([h.Z], () => ({ theme: h.Z.theme }))(c.EmptyState), P = (0, A.isWindows)();
 function L(e) {
     let {onClose: t} = e, s = (0, o.e7)([E.ZP], () => E.ZP.getCandidateGames()), [i, l] = a.useState(null), _ = s.map(e => ({
             key: e.pid,
@@ -19,7 +19,7 @@ function L(e) {
                     l(e);
                 }
             }),
-            (0, n.jsx)(c.FormDivider, { className: r()(f.marginTop8, f.marginBottom8) }),
+            (0, n.jsx)(c.FormDivider, { className: r()(D.marginTop8, D.marginBottom8) }),
             (0, n.jsxs)('div', {
                 className: r()(p.actions, x.horizontal),
                 children: [
@@ -53,7 +53,7 @@ function Z(e) {
             T.Z,
             E.ZP,
             I.Z
-        ], () => (0, E.FZ)(s)), [A, h] = a.useState(!1), [R, f] = a.useState(null !== (t = m.name) && void 0 !== t ? t : '???'), D = r()(x.flexCenter, {
+        ], () => (0, E.FZ)(s)), [A, h] = a.useState(!1), [R, D] = a.useState(null !== (t = m.name) && void 0 !== t ? t : '???'), f = r()(x.flexCenter, {
             [p.game]: !i,
             [p.activeGame]: i,
             [M.card]: !i,
@@ -81,7 +81,7 @@ function Z(e) {
         }), (0, c.showToast)((0, c.createToast)(O.Z.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({ gameName: m.name }), c.ToastType.SUCCESS)), h(!0);
     }
     return (0, n.jsxs)('div', {
-        className: D,
+        className: f,
         children: [
             (0, n.jsxs)('div', {
                 className: r()(p.gameNameLastPlayed, x.vertical),
@@ -116,7 +116,7 @@ function Z(e) {
                         value: R,
                         onBlur: Z,
                         onKeyDown: b,
-                        onChange: e => f(e.target.value)
+                        onChange: e => D(e.target.value)
                     }),
                     function () {
                         let e;
@@ -269,8 +269,8 @@ function b() {
 }
 function v(e) {
     let {children: t} = e;
-    return (0, n.jsxs)(D, {
-        className: f.marginTop40,
+    return (0, n.jsxs)(f, {
+        className: D.marginTop40,
         children: [
             (0, n.jsx)(c.EmptyStateImage, {
                 darkSrc: s(879601),
@@ -309,7 +309,7 @@ t.Z = function (e) {
                 nowPlaying: !0
             }, (0, E.rH)(l)) : (0, n.jsx)(b, {}),
             (0, n.jsxs)('div', {
-                className: r()(p.nowPlayingAdd, f.marginReset, f.marginTop8, f.marginBottom20),
+                className: r()(p.nowPlayingAdd, D.marginReset, D.marginTop8, D.marginBottom20),
                 children: [
                     (0, n.jsx)('span', { children: O.Z.Messages.SETTINGS_GAMES_NOT_SEEING_GAME }),
                     (0, n.jsx)(c.Popout, {
@@ -330,10 +330,10 @@ t.Z = function (e) {
                 ]
             }),
             0 === i.length ? (0, n.jsx)(v, { children: (0, n.jsx)(c.EmptyStateText, { children: O.Z.Messages.SETTINGS_GAMES_NO_GAMES_HEADER }) }) : (0, n.jsxs)(c.FormSection, {
-                className: f.marginTop40,
+                className: D.marginTop40,
                 children: [
                     (0, n.jsx)(c.FormTitle, {
-                        className: f.marginBottom4,
+                        className: D.marginBottom4,
                         children: O.Z.Messages.SETTINGS_GAMES_ADDED_GAMES_LABEL
                     }),
                     (0, n.jsx)(c.FormText, {

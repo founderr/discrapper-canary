@@ -3,7 +3,7 @@ n.d(t, {
         return eG;
     }
 }), n(47120), n(653041);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(704215), c = n(846519), d = n(400354), u = n(652844), _ = n(789639), h = n(481060), E = n(355467), I = n(239091), m = n(230711), g = n(410575), p = n(941129), T = n(83200), S = n(634894), f = n(586902), C = n(515550), N = n(1585), A = n(304761), Z = n(865427), L = n(571250), v = n(628581), O = n(55311), R = n(575175), x = n(64220), b = n(377171), P = n(676035), M = n(427217), D = n(605236), y = n(243778), j = n(730417), U = n(524347), G = n(853197), k = n(810280), w = n(60762), B = n(258609), H = n(278464), V = n(331541), F = n(332473), Y = n(240504), W = n(804545), z = n(637906), K = n(39370), q = n(19199), Q = n(111653), X = n(866483), J = n(14357), $ = n(393333), ee = n(763296), et = n(640806), en = n(484459), ei = n(584427), es = n(52538), ea = n(331187), er = n(879815), el = n(294629), eo = n(314897), ec = n(592125), ed = n(819640), eu = n(131951), e_ = n(19780), eh = n(885110), eE = n(246946), eI = n(594174), em = n(78839), eg = n(285952), ep = n(546591), eT = n(976401), eS = n(333454), ef = n(864441), eC = n(626135), eN = n(768581), eA = n(572004), eZ = n(70956), eL = n(374023), ev = n(51144), eO = n(998502), eR = n(981631), ex = n(215023), eb = n(702512), eP = n(689938), eM = n(614493);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(704215), c = n(846519), d = n(400354), u = n(652844), _ = n(789639), h = n(481060), E = n(355467), I = n(239091), m = n(230711), g = n(410575), p = n(941129), T = n(83200), S = n(634894), C = n(586902), f = n(515550), N = n(1585), A = n(304761), Z = n(865427), L = n(571250), v = n(628581), O = n(55311), R = n(575175), x = n(64220), b = n(377171), P = n(676035), M = n(427217), D = n(605236), y = n(243778), j = n(730417), U = n(524347), G = n(853197), k = n(810280), w = n(60762), B = n(258609), H = n(278464), V = n(331541), F = n(332473), Y = n(240504), W = n(804545), z = n(637906), K = n(39370), q = n(19199), Q = n(111653), X = n(866483), J = n(14357), $ = n(393333), ee = n(763296), et = n(640806), en = n(484459), ei = n(584427), es = n(52538), ea = n(331187), er = n(879815), el = n(294629), eo = n(314897), ec = n(592125), ed = n(819640), eu = n(131951), e_ = n(19780), eh = n(885110), eE = n(246946), eI = n(594174), em = n(78839), eg = n(285952), ep = n(546591), eT = n(976401), eS = n(333454), eC = n(864441), ef = n(626135), eN = n(768581), eA = n(572004), eZ = n(70956), eL = n(374023), ev = n(51144), eO = n(998502), eR = n(981631), ex = n(215023), eb = n(702512), eP = n(689938), eM = n(614493);
 function eD(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -73,7 +73,7 @@ class eU extends s.PureComponent {
             children: [
                 (0, i.jsx)('div', {
                     className: eM.panelTitleContainer,
-                    children: (0, i.jsx)(ef.Z, { children: l })
+                    children: (0, i.jsx)(eC.Z, { children: l })
                 }),
                 (0, i.jsx)('div', {
                     className: eM.panelSubtextContainer,
@@ -297,7 +297,7 @@ class eU extends s.PureComponent {
                                         position: 'top',
                                         align: 'center',
                                         shouldShow: !0,
-                                        renderPopout: () => (0, i.jsx)(C.Z, { markAsDismissed: n }),
+                                        renderPopout: () => (0, i.jsx)(f.Z, { markAsDismissed: n }),
                                         children: this.renderSettingsGear
                                     });
                                 default:
@@ -407,7 +407,7 @@ class eU extends s.PureComponent {
             (0, eA.JG)(ev.ZP.getUserTag(e, {
                 decoration: 'never',
                 identifiable: 'always'
-            })), eC.default.track(eR.rMx.TEXT_COPIED, { type: 'User Tag' });
+            })), ef.default.track(eR.rMx.TEXT_COPIED, { type: 'User Tag' });
             let i = {
                 shouldShowCopiedFeedback: !0,
                 shouldShowNametagTooltip: !0
@@ -448,14 +448,14 @@ function eG() {
         } = (0, l.cj)([eh.Z], () => ({
             streaming: null != eh.Z.findActivity(e => e.type === eR.IIU.STREAMING),
             status: eh.Z.getStatus()
-        })), _ = (0, f.Z)({ userId: r }), I = ev.ZP.useUserTag(n, { decoration: 'never' }), m = (0, l.e7)([eE.Z], () => eE.Z.hidePersonalInformation), g = (0, l.e7)([
+        })), _ = (0, C.Z)({ userId: r }), I = ev.ZP.useUserTag(n, { decoration: 'never' }), m = (0, l.e7)([eE.Z], () => eE.Z.hidePersonalInformation), g = (0, l.e7)([
             e_.Z,
             ec.Z
         ], () => {
             let e = e_.Z.getChannelId();
             return null != e ? ec.Z.getChannel(e) : null;
         }), {
-            mute: C,
+            mute: f,
             selfMute: N,
             suppress: L
         } = (0, el.Z)(g), {
@@ -502,14 +502,14 @@ function eG() {
                 t,
                 c
             ]), !e && !!r && !c && null != n && n;
-        }(), {enabled: eS} = (0, W._)({ location: 'AccountConnected' }), ef = {
+        }(), {enabled: eS} = (0, W._)({ location: 'AccountConnected' }), eC = {
             avatar: [],
             settings: []
         };
-    return !y && (eT && ef.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), a && (ef.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), V && K === (null === (t = (0, G.BS)(eb.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && ef.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), X && J && ef.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), $ && (1 === et ? ef.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : ef.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), ep && ef.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), en && ef.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), es && ef.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eS && ef.settings.push(o.z.PRIDE_ICONS_COACHMARK), ea && ef.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, i.jsx)(eU, {
+    return !y && (eT && eC.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), a && (eC.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), V && K === (null === (t = (0, G.BS)(eb.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && eC.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), X && J && eC.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), $ && (1 === et ? eC.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eC.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), ep && eC.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), en && eC.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), es && eC.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eS && eC.settings.push(o.z.PRIDE_ICONS_COACHMARK), ea && eC.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, i.jsx)(eU, {
         currentUser: n,
         customStatusActivity: c,
-        dismissibleContents: ef,
+        dismissibleContents: eC,
         userTag: I,
         hidePrivateData: m,
         occluded: y,
@@ -517,7 +517,7 @@ function eG() {
         selfDeaf: v,
         selfMute: N,
         serverDeaf: O,
-        serverMute: C,
+        serverMute: f,
         speaking: _,
         speakingWhileMuted: b,
         status: u,

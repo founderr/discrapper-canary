@@ -6,7 +6,7 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i, s, a, r, l = n(735250), o = n(470079), c = n(338545), d = n(143927), u = n(481060), _ = n(110924), h = n(393903), E = n(638730), I = n(970606), m = n(624383), g = n(945124), p = n(231467), T = n(931515), S = n(702646), f = n(207796), C = n(526282), N = n(777734), A = n(976757), Z = n(981631), L = n(689938), v = n(477975);
+var i, s, a, r, l = n(735250), o = n(470079), c = n(920906), d = n(143927), u = n(481060), _ = n(110924), h = n(393903), E = n(638730), I = n(970606), m = n(624383), g = n(945124), p = n(231467), T = n(931515), S = n(702646), C = n(207796), f = n(526282), N = n(777734), A = n(976757), Z = n(981631), L = n(689938), v = n(477975);
 let O = 40;
 function R(e) {
     let {
@@ -19,7 +19,7 @@ function R(e) {
             clans: r,
             searchResult: R,
             searchCriteria: x
-        } = (0, T.Qc)(), b = (0, f.GN)(e => e.selectedTraits, d.Z), P = (0, _.Z)(R), [M, D] = o.useState(0), y = o.useMemo(() => ({ height: M }), [M]), j = (0, c.useSpring)({
+        } = (0, T.Qc)(), b = (0, C.GN)(e => e.selectedTraits, d.Z), P = (0, _.Z)(R), [M, D] = o.useState(0), y = o.useMemo(() => ({ height: M }), [M]), j = (0, c.useSpring)({
             opacity: M > 0 ? 1 : 0,
             config: c.config.stiff
         }), U = 'default' !== i, G = Math.min(null != t ? t : 1024, 2000), k = o.useMemo(() => {
@@ -169,7 +169,7 @@ function R(e) {
             } = F[e];
             switch (a) {
             case 'upsell':
-                return (0, l.jsx)(C.Z, {});
+                return (0, l.jsx)(f.Z, {});
             case 'hero':
                 return (0, l.jsx)(m.c, {
                     title: L.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,

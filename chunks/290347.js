@@ -3,14 +3,14 @@ n.d(t, {
         return A;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(330711), o = n(442837), c = n(481060), d = n(607070), u = n(605236), _ = n(524444), h = n(529815), E = n(250496), I = n(153124), m = n(810090), g = n(626135), p = n(565216), T = n(981631), S = n(921944), f = n(757601);
-let C = e => {
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(330711), o = n(442837), c = n(481060), d = n(607070), u = n(605236), _ = n(524444), h = n(529815), E = n(250496), I = n(153124), m = n(810090), g = n(626135), p = n(565216), T = n(981631), S = n(921944), C = n(757601);
+let f = e => {
         let {
             tagText: t,
             className: n
         } = e;
         return (0, i.jsx)(c.TextBadge, {
-            className: r()(f.tag, n),
+            className: r()(C.tag, n),
             text: t
         });
     }, N = e => {
@@ -22,23 +22,23 @@ let C = e => {
             wideStyle: l
         } = e;
         return (0, i.jsxs)('div', {
-            className: r()(f.featureCard, { [f.wideStyle]: l }),
+            className: r()(C.featureCard, { [C.wideStyle]: l }),
             children: [
-                null != a ? (0, i.jsx)(C, {
+                null != a ? (0, i.jsx)(f, {
                     tagText: a,
-                    className: f.featureCardTag
+                    className: C.featureCardTag
                 }) : null,
                 (0, i.jsx)('img', {
                     alt: '',
-                    className: r()(f.featureCardImg, { [f.wideStyle]: l }),
+                    className: r()(C.featureCardImg, { [C.wideStyle]: l }),
                     src: s
                 }),
                 (0, i.jsxs)('div', {
-                    className: f.featureCardTextGroup,
+                    className: C.featureCardTextGroup,
                     children: [
                         (0, i.jsx)(c.Heading, {
                             variant: 'heading-md/extrabold',
-                            className: f.featureCardTextHeader,
+                            className: C.featureCardTextHeader,
                             children: t
                         }),
                         (0, i.jsx)(c.Text, {
@@ -55,7 +55,7 @@ function A(e) {
             className: t,
             renderModalProps: n,
             heroArt: a,
-            heroArtClassName: C,
+            heroArtClassName: f,
             modalDismissibleContent: A,
             modalTopExtra: Z,
             header: L,
@@ -112,29 +112,29 @@ function A(e) {
         A,
         b
     ]), (0, i.jsxs)(c.ModalRoot, {
-        className: r()(f.root, t),
+        className: r()(C.root, t),
         transitionState: y,
         'aria-labelledby': j,
         children: [
             (0, i.jsx)(c.ModalCloseButton, {
-                className: f.closeButton,
+                className: C.closeButton,
                 onClick: D
             }),
-            (0, i.jsx)(p.Z, { className: f.splash }),
+            (0, i.jsx)(p.Z, { className: C.splash }),
             null == Z ? void 0 : Z(),
             (0, i.jsxs)(c.ModalContent, {
-                className: f.content,
+                className: C.content,
                 children: [
                     (0, i.jsx)(c.Heading, {
                         variant: 'display-md',
-                        className: r()(f.headerText, v),
+                        className: r()(C.headerText, v),
                         children: L
                     }),
                     (() => {
                         if ('video' === a.type) {
                             var e;
                             return (0, i.jsx)(m.Z, {
-                                className: r()(f.video, C),
+                                className: r()(C.video, f),
                                 autoPlay: !G,
                                 loop: !0,
                                 muted: !0,
@@ -168,7 +168,7 @@ function A(e) {
                             });
                         }
                         return 'embed' === a.type ? (0, i.jsx)(h.BC, {
-                            className: r()(f.video, C),
+                            className: r()(C.video, f),
                             allowFullScreen: !1,
                             href: a.href,
                             thumbnail: a.thumbnail,
@@ -185,13 +185,13 @@ function A(e) {
                             }
                         }) : 'image' === a.type ? (0, i.jsx)('img', {
                             alt: '',
-                            className: r()(f.video, C),
+                            className: r()(C.video, f),
                             src: a.src
                         }) : null;
                     })(),
                     (0, i.jsxs)(c.Heading, {
                         variant: 'heading-lg/semibold',
-                        className: f.subHeader,
+                        className: C.subHeader,
                         children: [
                             O,
                             null == R ? void 0 : R()
@@ -199,11 +199,11 @@ function A(e) {
                     }),
                     null != M && (0, i.jsx)(c.Heading, {
                         variant: 'heading-md/medium',
-                        className: f.bodyText,
+                        className: C.bodyText,
                         children: M
                     }),
                     (0, i.jsx)('div', {
-                        className: r()(f.featureCardGroup, { [f.wideStyle]: U }),
+                        className: r()(C.featureCardGroup, { [C.wideStyle]: U }),
                         children: x.map((e, t) => (0, i.jsx)(N, {
                             ...e,
                             wideStyle: U

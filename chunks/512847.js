@@ -3,7 +3,7 @@ n.d(t, {
         return G;
     }
 });
-var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(442837), o = n(317381), c = n(258609), d = n(569545), u = n(106301), _ = n(590415), h = n(131704), E = n(199902), I = n(314897), m = n(592125), g = n(430824), p = n(131951), T = n(292959), S = n(19780), f = n(944486), C = n(606304), N = n(979651), A = n(938475), Z = n(823379), L = n(557177), v = n(981631);
+var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(442837), o = n(317381), c = n(258609), d = n(569545), u = n(106301), _ = n(590415), h = n(131704), E = n(199902), I = n(314897), m = n(592125), g = n(430824), p = n(131951), T = n(292959), S = n(19780), C = n(944486), f = n(606304), N = n(979651), A = n(938475), Z = n(823379), L = n(557177), v = n(981631);
 function O(e, t, n, i) {
     s.useEffect(() => {
         let s = t(), a = new l.Fh(e, () => {
@@ -16,9 +16,9 @@ function O(e, t, n, i) {
 function R() {
     return O([
         p.Z,
-        f.Z
+        C.Z
     ], () => ({
-        inVoiceChannel: null != f.Z.getVoiceChannelId(),
+        inVoiceChannel: null != C.Z.getVoiceChannelId(),
         selfMute: p.Z.isSelfMute(),
         selfDeaf: p.Z.isSelfDeaf(),
         audioPermissionReady: p.Z.isNativeAudioPermissionReady(),
@@ -48,10 +48,10 @@ function x() {
     return O([
         m.Z,
         S.Z,
-        f.Z,
+        C.Z,
         c.Z
     ], () => {
-        let e = m.Z.getChannel(f.Z.getVoiceChannelId()), t = null == e ? void 0 : e.type, n = null == e ? void 0 : e.getGuildId(), i = S.Z.getWasEverRtcConnected(), s = S.Z.getState();
+        let e = m.Z.getChannel(C.Z.getVoiceChannelId()), t = null == e ? void 0 : e.type, n = null == e ? void 0 : e.getGuildId(), i = S.Z.getWasEverRtcConnected(), s = S.Z.getState();
         return {
             channelType: t,
             guildId: n,
@@ -81,7 +81,7 @@ function x() {
     }), null;
 }
 function b() {
-    return O([C.Z], () => C.Z.isCurrentUserSpeaking(), (e, t) => {
+    return O([f.Z], () => f.Z.isCurrentUserSpeaking(), (e, t) => {
         if (e !== t) {
             let e = p.Z.isSelfMute();
             if (p.Z.getMode() === v.pM4.PUSH_TO_TALK && !e)
@@ -106,10 +106,10 @@ function M() {
 }
 function D() {
     return O([
-        f.Z,
+        C.Z,
         N.Z
     ], () => {
-        let e = f.Z.getVoiceChannelId();
+        let e = C.Z.getVoiceChannelId();
         if (null == e)
             return _.xO.NONE;
         let t = N.Z.getVoiceStateForChannel(e);
@@ -121,14 +121,14 @@ function D() {
 }
 function y() {
     return O([
-        f.Z,
+        C.Z,
         E.Z,
         I.default,
         N.Z,
         m.Z
     ], () => {
         let e, t;
-        let n = f.Z.getVoiceChannelId(), i = I.default.getId();
+        let n = C.Z.getVoiceChannelId(), i = I.default.getId();
         let s = [], a = null, r = 0, l = E.Z.getAllActiveStreams();
         if (null != n) {
             let i = m.Z.getChannel(n);
@@ -183,11 +183,11 @@ function y() {
 }
 function j() {
     return O([
-        f.Z,
+        C.Z,
         o.ZP,
         I.default
     ], () => {
-        let e = f.Z.getVoiceChannelId(), t = f.Z.getChannelId(), n = o.ZP.getConnectedActivityChannelId(), i = I.default.getId(), s = (0, Z.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6, a = (0, Z.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6, r = (0, Z.lm)(n) ? o.ZP.getEmbeddedActivitiesForChannel(n) : o.i6;
+        let e = C.Z.getVoiceChannelId(), t = C.Z.getChannelId(), n = o.ZP.getConnectedActivityChannelId(), i = I.default.getId(), s = (0, Z.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6, a = (0, Z.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6, r = (0, Z.lm)(n) ? o.ZP.getEmbeddedActivitiesForChannel(n) : o.i6;
         return {
             voiceChannelId: e,
             currentUserId: i,
@@ -221,11 +221,11 @@ function j() {
 function U() {
     return O([
         u.Z,
-        f.Z
+        C.Z
     ], () => ({
         hangStatus: u.Z.getCurrentHangStatus(),
         customHangStatus: u.Z.getCustomHangStatus(),
-        inVoice: null != f.Z.getVoiceChannelId()
+        inVoice: null != C.Z.getVoiceChannelId()
     }), (e, t) => {
         var n, i;
         let {

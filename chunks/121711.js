@@ -2,9 +2,9 @@ var i = n(735250), s = n(470079), a = n(948789), r = n(481060), l = n(100527), o
 t.Z = function (e) {
     let {} = e, t = (0, I.Z)(l.Z.QUEST_HOME_PAGE), {
             tabs: n,
-            selectedTab: f,
-            onSelectTab: C
-        } = (0, g.z)(), N = s.useRef(new _.m()), {quests: A} = (0, E.bA)(f.id);
+            selectedTab: C,
+            onSelectTab: f
+        } = (0, g.z)(), N = s.useRef(new _.m()), {quests: A} = (0, E.bA)(C.id);
     s.useEffect(() => {
         !t && (0, a.uL)(p.Z5c.FRIENDS);
     }, [t]), s.useEffect(() => {
@@ -19,8 +19,8 @@ t.Z = function (e) {
                 icon: (0, i.jsx)(r.QuestsIcon, {}),
                 title: T.Z.Messages.QUESTS,
                 tabs: n,
-                selectedTab: f,
-                onTabSelect: C,
+                selectedTab: C,
+                onTabSelect: f,
                 showSearch: !1,
                 scrollManager: N
             }),

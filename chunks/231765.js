@@ -4,12 +4,12 @@ s.d(t, {
     }
 }), s(47120);
 var n, a, i, r, o = s(735250), l = s(470079), c = s(392711), d = s(442837), _ = s(692547), E = s(481060), u = s(37234), T = s(607070), I = s(206895), S = s(585483), N = s(557177), C = s(57562), m = s(955204), A = s(64078), h = s(351780), g = s(954794), O = s(112843), p = s(524484), R = s(981631), x = s(689938), M = s(370599);
-let f = {
+let D = {
         enabled: !0,
         combosEnabled: !0,
         screenshakeEnabled: !1,
         confettiEnabled: !1
-    }, D = (0, c.range)(0, 11), P = (0, c.range)(0, 2.25, 0.25), L = (0, c.range)(1, 11), Z = (0, c.range)(1, 26);
+    }, f = (0, c.range)(0, 11), P = (0, c.range)(0, 2.25, 0.25), L = (0, c.range)(1, 11), Z = (0, c.range)(1, 26);
 (i = n || (n = {}))[i.CONFETTI = 0] = 'CONFETTI', i[i.SHAKE = 1] = 'SHAKE', (r = a || (a = {}))[r.USER_SETTINGS = 0] = 'USER_SETTINGS', r[r.ACHIEVEMENT_LIST = 1] = 'ACHIEVEMENT_LIST';
 let b = () => [
         {
@@ -97,7 +97,7 @@ function U(e) {
                 header: a ? x.Z.Messages.POGGERMODE_WARNING_TITLE_REDUCED_MOTION : x.Z.Messages.POGGERMODE_WARNING_TITLE,
                 confirmText: x.Z.Messages.ENABLE,
                 cancelText: x.Z.Messages.CANCEL,
-                onConfirm: () => n(a ? f : {
+                onConfirm: () => n(a ? D : {
                     enabled: !0,
                     warningSeen: !0
                 }),
@@ -214,10 +214,10 @@ function F(e) {
                     (0, o.jsx)(B, { children: x.Z.Messages.POGGERMODE_COMBOS_REQUIRED_DESCRIPTION }),
                     (0, o.jsx)(E.Slider, {
                         disabled: r,
-                        markers: D,
+                        markers: f,
                         stickToMarkers: !0,
-                        minValue: D[0],
-                        maxValue: D[D.length - 1],
+                        minValue: f[0],
+                        maxValue: f[f.length - 1],
                         initialValue: a,
                         onValueChange: e => i({ combosRequiredCount: e }),
                         onValueRender: e => ''.concat(e)

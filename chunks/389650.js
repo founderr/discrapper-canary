@@ -3,7 +3,7 @@ s.d(t, {
         return Y;
     }
 }), s(47120), s(653041);
-var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(392711), l = s.n(o), c = s(442837), d = s(692547), _ = s(481060), E = s(660216), u = s(225433), T = s(825209), I = s(721383), S = s(612226), N = s(714338), C = s(924557), m = s(74299), A = s(131951), h = s(556296), g = s(808506), O = s(285952), p = s(474333), R = s(63063), x = s(358085), M = s(13140), f = s(210887), D = s(659947), P = s(981631), L = s(420212), Z = s(689938), b = s(104995), v = s(735194), j = s(549856);
+var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(392711), l = s.n(o), c = s(442837), d = s(692547), _ = s(481060), E = s(660216), u = s(225433), T = s(825209), I = s(721383), S = s(612226), N = s(714338), C = s(924557), m = s(74299), A = s(131951), h = s(556296), g = s(808506), O = s(285952), p = s(474333), R = s(63063), x = s(358085), M = s(13140), D = s(210887), f = s(659947), P = s(981631), L = s(420212), Z = s(689938), b = s(104995), v = s(735194), j = s(549856);
 function B(e, t, s) {
     return t in e ? Object.defineProperty(e, t, {
         value: s,
@@ -23,7 +23,7 @@ function U(e) {
         S.Q2.MISCELLANEOUS
     ]);
 }
-let G = l()((0, S.Rv)()).filter(e => e.description !== Z.Z.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(), F = c.ZP.connectStores([f.Z], () => ({ theme: f.Z.theme }))(_.EmptyState);
+let G = l()((0, S.Rv)()).filter(e => e.description !== Z.Z.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(), F = c.ZP.connectStores([D.Z], () => ({ theme: D.Z.theme }))(_.EmptyState);
 class y extends a.PureComponent {
     renderMessage() {
         let {keybind: e} = this.props, t = M.BB(e.shortcut);
@@ -112,7 +112,7 @@ class y extends a.PureComponent {
     renderExtraSettings() {
         let {action: e} = this.props.keybind;
         if (e === P.kg4.SWITCH_TO_VOICE_CHANNEL)
-            return (0, n.jsx)(D.Z, { keybind: this.props.keybind });
+            return (0, n.jsx)(f.Z, { keybind: this.props.keybind });
     }
     constructor(...e) {
         super(...e), B(this, 'handleActionChanged', e => {

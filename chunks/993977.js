@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return C;
     }
 }), n(47120);
 var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(58642), o = n(695346), c = n(490983), d = n(285952), u = n(626135), _ = n(630388), h = n(804739), E = n(957657), I = n(34305), m = n(981631), g = n(689938), p = n(351634);
@@ -123,7 +123,7 @@ class S extends s.PureComponent {
         }) : t[n] = i;
     }
 }
-function f() {
+function C() {
     let e = {
         installShortcutDesktop: o.Xc.useSetting(),
         installShortcutStartMenu: o.Pe.useSetting(),

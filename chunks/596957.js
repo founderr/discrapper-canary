@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(758059), d = n(194359), u = n(410575), _ = n(607070), h = n(100527), E = n(906732), I = n(205976), m = n(699516), g = n(974042), p = n(451478), T = n(390697), S = n(434184), f = n(701861), C = n(437314), N = n(696577), A = n(163417), Z = n(492347), L = n(42575), v = n(617015), O = n(981631), R = n(689938), x = n(493367);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(758059), d = n(194359), u = n(410575), _ = n(607070), h = n(100527), E = n(906732), I = n(205976), m = n(699516), g = n(974042), p = n(451478), T = n(390697), S = n(434184), C = n(701861), f = n(437314), N = n(696577), A = n(163417), Z = n(492347), L = n(42575), v = n(617015), O = n(981631), R = n(689938), x = n(493367);
 t.Z = function (e) {
     let {
             sectionFilter: t,
@@ -34,7 +34,7 @@ t.Z = function (e) {
             className: x.emptyStateContainer,
             children: [
                 t === O.pJs.ONLINE && (0, i.jsx)(I.Z, {}),
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(f.Z, {
                     type: t,
                     onClick: () => {
                         c.Z.setSection(O.pJs.ADD_FRIEND);
@@ -91,7 +91,7 @@ t.Z = function (e) {
                 }),
                 H ? (0, i.jsx)('div', {
                     className: x.emptyStateContainer,
-                    children: (0, i.jsx)(C.Z, { type: C.j.SECTION_NO_RESULTS }, P)
+                    children: (0, i.jsx)(f.Z, { type: f.j.SECTION_NO_RESULTS }, P)
                 }) : (0, i.jsx)(A.Z, {
                     relationshipCount: D,
                     statusSections: B,
@@ -115,7 +115,7 @@ t.Z = function (e) {
                         case O.pJs.ONLINE:
                         case O.pJs.ALL:
                         default:
-                            return (0, i.jsx)(f.Z, {
+                            return (0, i.jsx)(C.Z, {
                                 ...e,
                                 isFocused: M
                             });

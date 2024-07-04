@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
         return O;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(593473), r = n(266067), l = n(442837), o = n(930118), c = n(355467), d = n(410575), u = n(666743), _ = n(112724), h = n(447269), E = n(612226), I = n(714338), m = n(663993), g = n(628123), p = n(703656), T = n(108427), S = n(911314), f = n(429899), C = n(843445), N = n(981631), A = n(689938), Z = n(256964);
+var i = n(735250), s = n(470079), a = n(593473), r = n(266067), l = n(442837), o = n(930118), c = n(355467), d = n(410575), u = n(666743), _ = n(112724), h = n(447269), E = n(612226), I = n(714338), m = n(663993), g = n(628123), p = n(703656), T = n(108427), S = n(911314), C = n(429899), f = n(843445), N = n(981631), A = n(689938), Z = n(256964);
 function L(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -20,7 +20,7 @@ let v = (0, m.Un)({
     webpackId: 496691
 });
 function O(e) {
-    return e < C.x ? C.b.SMALL : C.b.LARGE;
+    return e < f.x ? f.b.SMALL : f.b.LARGE;
 }
 l.ZP.initialize();
 class R extends s.PureComponent {
@@ -72,7 +72,7 @@ class R extends s.PureComponent {
             return (0, i.jsx)(d.Z, {
                 page: N.ZY5.STORE_LISTING,
                 root: !0,
-                children: (0, i.jsx)(f.Z, {
+                children: (0, i.jsx)(C.Z, {
                     skuId: t,
                     applicationId: n,
                     slug: s,

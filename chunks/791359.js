@@ -3,17 +3,17 @@ n.d(t, {
         return M;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(954955), o = n.n(l), c = n(442837), d = n(481060), u = n(570140), _ = n(569984), h = n(918701), E = n(93127), I = n(814443), m = n(594174), g = n(801077), p = n(626135), T = n(70956), S = n(225559), f = n(910436), C = n(203028), N = n(358924), A = n(292140), Z = n(525296), L = n(981631), v = n(674563), O = n(689938), R = n(584201);
+var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(954955), o = n.n(l), c = n(442837), d = n(481060), u = n(570140), _ = n(569984), h = n(918701), E = n(93127), I = n(814443), m = n(594174), g = n(801077), p = n(626135), T = n(70956), S = n(225559), C = n(910436), f = n(203028), N = n(358924), A = n(292140), Z = n(525296), L = n(981631), v = n(674563), O = n(689938), R = n(584201);
 let x = 15 * T.Z.Millis.MINUTE, b = (0, Z.Z)(function (e) {
         let {
                 party: t,
                 onUserContextMenu: n,
                 onChannelContextMenu: a,
                 quest: r
-            } = e, l = (0, i.jsx)(C.Z, {
+            } = e, l = (0, i.jsx)(f.Z, {
                 party: t,
                 onUserContextMenu: n
-            }), c = (0, i.jsx)(f.Z, {
+            }), c = (0, i.jsx)(C.Z, {
                 party: t,
                 onChannelContextMenu: a,
                 quest: r

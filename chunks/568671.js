@@ -13,7 +13,7 @@ function _() {
         onClick: () => {
             (0, a.openModalLazy)(async () => {
                 let {default: e} = await Promise.all([
-                    n.e('32873'),
+                    n.e('49368'),
                     n.e('90688')
                 ]).then(n.bind(n, 978305));
                 return t => (0, s.jsx)(e, { ...t });

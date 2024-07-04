@@ -13,24 +13,24 @@ async function S() {
     if (!T)
         return;
     let t = Date.now(), n = 15 * d.Z.Millis.MINUTE + e - t;
-    n > d.Z.Millis.HOUR && _.Z.addBreadcrumb({ message: 'Received invalid Date.now() when generating a heartbeat. Date.now() = '.concat(t, ', timeUntilNextHeartbeat = ').concat(n, ', latestHeartbeatEventTimestamp = ').concat(e) }), e > t && (n = 0), _.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(n / 1000, ' seconds. Scheduling Heartbeat') }), f(!1), g = setTimeout(() => {
-        C(), m = setInterval(() => {
-            C();
+    n > d.Z.Millis.HOUR && _.Z.addBreadcrumb({ message: 'Received invalid Date.now() when generating a heartbeat. Date.now() = '.concat(t, ', timeUntilNextHeartbeat = ').concat(n, ', latestHeartbeatEventTimestamp = ').concat(e) }), e > t && (n = 0), _.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(n / 1000, ' seconds. Scheduling Heartbeat') }), C(!1), g = setTimeout(() => {
+        f(), m = setInterval(() => {
+            f();
         }, 15 * d.Z.Millis.MINUTE);
     }, Math.max(n, 0));
 }
-function f() {
+function C() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     null != g && (clearTimeout(g), g = null), null != m && (clearInterval(m), m = null), null != p && e && (_.Z.addBreadcrumb({ message: 'Heartbeat correctly scheduled. Clearing 10s check timeout' }), clearTimeout(p), p = null);
 }
-async function C() {
+async function f() {
     let e = Date.now(), t = await (0, h.Gg)(), n = Date.now();
     if (null == t) {
         _.Z.captureException(Error('Null session when tracking session heartbeat. Waited '.concat(n - e, 'ms')));
         return;
     }
     if (!T) {
-        _.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), f();
+        _.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), C();
         return;
     }
     _.Z.addBreadcrumb({
@@ -61,14 +61,14 @@ function Z() {
     else
         !function () {
             if (!!T)
-                T = !1, _.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, h.fr)(!1), f(), (0, a.Z)();
+                T = !1, _.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, h.fr)(!1), C(), (0, a.Z)();
         }();
 }
 function L() {
     _.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(O), s.Z.subscribe('WINDOW_FOCUS', R), s.Z.subscribe('APP_STATE_UPDATE', x), s.Z.subscribe('LOGIN_SUCCESS', v), Z();
 }
 function v() {
-    C();
+    f();
 }
 function O() {
     let e = o.Z.getState();

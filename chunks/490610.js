@@ -9,30 +9,30 @@ t.Z = s.memo(function (e) {
             loaded: p,
             clans: T,
             searchResult: S,
-            searchCriteria: f
-        } = (0, _.Qc)(20), C = (0, h.GN)(e => e.selectedTraits, l.Z), N = s.useMemo(() => new Set(f.games), [f.games]), A = s.useCallback(e => {
+            searchCriteria: C
+        } = (0, _.Qc)(20), f = (0, h.GN)(e => e.selectedTraits, l.Z), N = s.useMemo(() => new Set(C.games), [C.games]), A = s.useCallback(e => {
             var t;
             return (0, i.jsx)(u.ZP, {
                 clan: e,
                 className: g.card,
-                affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, d.y)(e, f),
-                traitsToHighlight: C,
+                affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, d.y)(e, C),
+                traitsToHighlight: f,
                 source: m.jXE.DISCOVER_SEARCH,
                 prioritizedGameIds: N,
                 onlyAnimateIconOnHover: !0
             }, e.id);
         }, [
-            f,
             C,
+            f,
             N
         ]), Z = s.useMemo(() => null != S && (0, I.Pw)(S) ? T : [], [
             T,
             S
         ]), L = s.useCallback(e => {
-            e && Z.length > 0 && (0, c.Oe)(Z.map(e => e.id), 'top_picks', f);
+            e && Z.length > 0 && (0, c.Oe)(Z.map(e => e.id), 'top_picks', C);
         }, [
             Z,
-            f
+            C
         ]);
     return 0 !== T.length && p ? (0, i.jsx)(o.$, {
         onChange: L,

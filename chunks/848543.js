@@ -3,7 +3,7 @@ n.d(t, {
         return Z;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(399606), o = n(704215), c = n(923462), d = n(481060), u = n(239091), _ = n(100527), h = n(906732), E = n(706140), I = n(294629), m = n(131951), g = n(459273), p = n(242291), T = n(792165), S = n(603074), f = n(981631), C = n(921944), N = n(689938), A = n(902569);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(399606), o = n(704215), c = n(923462), d = n(481060), u = n(239091), _ = n(100527), h = n(906732), E = n(706140), I = n(294629), m = n(131951), g = n(459273), p = n(242291), T = n(792165), S = n(603074), C = n(981631), f = n(921944), N = n(689938), A = n(902569);
 function Z(e) {
     let {
             channel: t,
@@ -61,7 +61,7 @@ function Z(e) {
                     disabled: b,
                     onClick: () => {
                         var t, n;
-                        null != j && j !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(C.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), M(!P), B();
+                        null != j && j !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(f.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), M(!P), B();
                     },
                     onMouseEnter: t => {
                         var n, i;
@@ -89,7 +89,7 @@ function Z(e) {
             P
         ]);
     return (0, g.yp)({
-        event: f.CkL.TOGGLE_SOUNDBOARD,
+        event: C.CkL.TOGGLE_SOUNDBOARD,
         handler: Y
     }), (0, i.jsx)(h.Gt, {
         value: G,

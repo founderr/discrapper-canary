@@ -5,16 +5,16 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(442837), a = n(481060), r = n(129861), l = n(607070), o = n(388905), c = n(1585), d = n(125988), u = n(43267), _ = n(522289), h = n(699516), E = n(546591), I = n(51144), m = n(998502), g = n(620924), p = n(332712), T = n(81471), S = n(689938), f = n(603174);
-let C = e => {
+var s = n(442837), a = n(481060), r = n(129861), l = n(607070), o = n(388905), c = n(1585), d = n(125988), u = n(43267), _ = n(522289), h = n(699516), E = n(546591), I = n(51144), m = n(998502), g = n(620924), p = n(332712), T = n(81471), S = n(689938), C = n(603174);
+let f = e => {
         let {userId: t} = e, n = (0, p._)(t);
         return null == n || 0 === n.length ? (0, i.jsx)(a.Text, {
-            className: f.mutualGuilds,
+            className: C.mutualGuilds,
             variant: 'text-sm/normal',
             color: 'text-muted',
             children: S.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS
         }) : (0, i.jsxs)('div', {
-            className: f.mutualGuildsContainer,
+            className: C.mutualGuildsContainer,
             children: [
                 (0, i.jsx)(_.Z, {
                     guilds: n,
@@ -23,7 +23,7 @@ let C = e => {
                     hideOverflowCount: !0
                 }),
                 (0, i.jsx)(a.Text, {
-                    className: f.mutualGuilds,
+                    className: C.mutualGuilds,
                     variant: 'text-sm/normal',
                     color: 'text-muted',
                     children: S.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({ count: n.length })
@@ -45,28 +45,28 @@ function A(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(N, {
-                className: f.avatar,
+                className: C.avatar,
                 src: (0, u.x)(n, 40, A),
                 avatarDecoration: L,
                 size: a.AvatarSizes.SIZE_40,
                 'aria-label': null !== (t = null == o ? void 0 : o.username) && void 0 !== t ? t : S.Z.Messages.UNKNOWN_USER
             }),
             (0, i.jsxs)('div', {
-                className: f.userPreview,
+                className: C.userPreview,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: f.userContainerWithPreview,
+                        className: C.userContainerWithPreview,
                         children: [
                             (0, i.jsx)(r.Z, {
                                 nick: p,
                                 user: o,
                                 showAccountIdentifier: !0,
-                                className: f.tagContainer,
-                                usernameClass: f.username,
-                                discriminatorClass: null != I.ZP.getGlobalName(o) ? f.globalName : f.discriminator
+                                className: C.tagContainer,
+                                usernameClass: C.username,
+                                discriminatorClass: null != I.ZP.getGlobalName(o) ? C.globalName : C.discriminator
                             }),
                             (0, i.jsx)(a.Text, {
-                                className: f.timestampWithPreview,
+                                className: C.timestampWithPreview,
                                 color: 'text-muted',
                                 variant: 'text-xs/normal',
                                 children: Z
@@ -76,7 +76,7 @@ function A(e) {
                     (0, i.jsx)(E.Z, {
                         hoverText: (0, i.jsx)(T.Z, { channel: n }),
                         forceHover: _,
-                        children: (0, i.jsx)(C, { userId: o.id })
+                        children: (0, i.jsx)(f, { userId: o.id })
                     })
                 ]
             })

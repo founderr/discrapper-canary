@@ -13,7 +13,7 @@ function m(e) {
     s.useEffect(() => {
         T && (E(!1), g(!1));
     }, [T]);
-    let S = d && (m || h), f = s.useMemo(() => (0, i.jsxs)(o.Clickable, {
+    let S = d && (m || h), C = s.useMemo(() => (0, i.jsxs)(o.Clickable, {
             className: I.tooltipContentWrapper,
             onClick: c,
             onMouseEnter: () => {
@@ -32,7 +32,7 @@ function m(e) {
             T
         ]);
     return (0, i.jsx)(o.Tooltip, {
-        text: f,
+        text: C,
         position: 'bottom',
         'aria-label': a,
         shouldShow: S,

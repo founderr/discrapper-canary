@@ -6,7 +6,7 @@ n.d(t, {
         return g;
     }
 });
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(338545), o = n(442837), c = n(481060), d = n(607070), u = n(603368), _ = n(284019), h = n(689938), E = n(206240);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(920906), o = n(442837), c = n(481060), d = n(607070), u = n(603368), _ = n(284019), h = n(689938), E = n(206240);
 function I(e) {
     let {
             index: t,
@@ -19,7 +19,7 @@ function I(e) {
         } = e, p = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), T = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY), S = s.useMemo(() => (0, u.j1)(m, T.hex()), [
             m,
             T
-        ]), f = null != S, C = (0, l.useSpring)({
+        ]), C = null != S, f = (0, l.useSpring)({
             transform: _ ? 'translateX(0%)' : 'translateX(-100%)',
             config: {
                 ...l.config.stiff,
@@ -63,10 +63,10 @@ function I(e) {
                     className: E.progressStep,
                     children: (0, i.jsx)(l.animated.div, {
                         style: {
-                            ...C,
+                            ...f,
                             ...S
                         },
-                        className: r()(E.progressStepFill, { [E.customProgressStepFill]: f })
+                        className: r()(E.progressStepFill, { [E.customProgressStepFill]: C })
                     })
                 })
             ]

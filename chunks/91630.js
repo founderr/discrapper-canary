@@ -10,8 +10,8 @@ function T() {
             selectedTab: t,
             onSelectTab: n
         } = (0, I.Y)(), T = s.useRef(new c.m()), S = (0, m.$G)(t.id), {
-            searching: f,
-            searchQuery: C,
+            searching: C,
+            searchQuery: f,
             setSearchQuery: N,
             handleSearchClear: A,
             handleSearchSubmit: Z
@@ -74,7 +74,7 @@ function T() {
                 tabs: e,
                 selectedTab: t,
                 onTabSelect: n,
-                searchQuery: C,
+                searchQuery: f,
                 onSearch: N,
                 onSearchClear: A,
                 onSearchSubmit: Z,
@@ -82,8 +82,8 @@ function T() {
             }),
             v({
                 tabId: t.id,
-                searchQuery: C,
-                searching: f,
+                searchQuery: f,
+                searching: C,
                 categoryId: S,
                 scrollManager: T
             })

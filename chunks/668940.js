@@ -1,6 +1,6 @@
 var i = n(735250);
 n(470079);
-var s = n(948789), a = n(442837), r = n(481060), l = n(212093), o = n(100527), c = n(963202), d = n(677277), u = n(285865), _ = n(918701), h = n(702428), E = n(709158), I = n(683301), m = n(150192), g = n(889010), p = n(488905), T = n(347137), S = n(731455), f = n(981631), C = n(689938), N = n(468918);
+var s = n(948789), a = n(442837), r = n(481060), l = n(212093), o = n(100527), c = n(963202), d = n(677277), u = n(285865), _ = n(918701), h = n(702428), E = n(709158), I = n(683301), m = n(150192), g = n(889010), p = n(488905), T = n(347137), S = n(731455), C = n(981631), f = n(689938), N = n(468918);
 let A = e => {
         switch (e) {
         case S.Gj.Activity:
@@ -27,12 +27,12 @@ let A = e => {
                 ...e,
                 icon: A(e.categoryId)
             })), Z = e => {
-                (0, l.uY)(e, !0), u.Z.closeSidebar(), t && (0, l.AQ)(), (0, _.OG)() && e !== S.Gj.Quests && (0, s.uL)(f.Z5c.GUILD_DISCOVERY), !(0, _.OG)() && e === S.Gj.Quests && (0, s.uL)(f.Z5c.QUEST_HOME);
+                (0, l.uY)(e, !0), u.Z.closeSidebar(), t && (0, l.AQ)(), (0, _.OG)() && e !== S.Gj.Quests && (0, s.uL)(C.Z5c.GUILD_DISCOVERY), !(0, _.OG)() && e === S.Gj.Quests && (0, s.uL)(C.Z5c.QUEST_HOME);
             };
         return (0, i.jsxs)(r.Scroller, {
             className: N.sidebarContainer,
             children: [
-                (0, i.jsx)(p.V, { text: C.Z.Messages.DISCOVER }),
+                (0, i.jsx)(p.V, { text: f.Z.Messages.DISCOVER }),
                 (0, i.jsx)(g.Z, {
                     categories: T,
                     handleCategorySelect: Z,

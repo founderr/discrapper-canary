@@ -98,9 +98,9 @@ let M = {
     userStatus: null,
     targetedContent: []
 };
-function f() {
+function D() {
     var e, t, s;
-    let [g, f] = a.useState(M), [D, P] = a.useState(A.a.UNENROLLED), [L, Z] = a.useState([]), [b, v] = a.useState(!1), [j, B] = a.useState(null);
+    let [g, D] = a.useState(M), [f, P] = a.useState(A.a.UNENROLLED), [L, Z] = a.useState([]), [b, v] = a.useState(!1), [j, B] = a.useState(null);
     let U = (s = g.config, (0, i.EQ)(s).with({ configVersion: 1 }, e => ({
         name: e.messages.rewardName,
         nameWithArticle: e.messages.rewardNameWithArticle,
@@ -120,7 +120,7 @@ function f() {
     function G(e, t) {
         var s, n;
         if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e)
-            f({
+            D({
                 ...g,
                 config: (s = g.config, n = { [e]: t }, (0, i.EQ)(s).with({ configVersion: 1 }, e => ({
                     ...e,
@@ -140,7 +140,7 @@ function f() {
     function F(e, t) {
         var s, n;
         if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
-            f({
+            D({
                 ...g,
                 config: (s = g.config, n = { [e]: t }, (0, i.EQ)(s).with({ configVersion: 1 }, e => ({
                     ...e,
@@ -160,7 +160,7 @@ function f() {
     function y(e, t) {
         var s, n;
         if ('rewardName' === e || 'rewardNameWithArticle' === e)
-            f({
+            D({
                 ...g,
                 config: (s = g.config, n = { [e]: t }, (0, i.EQ)(s).with({ configVersion: 1 }, e => ({
                     ...e,
@@ -184,7 +184,7 @@ function f() {
             });
     }
     function V(e, t) {
-        f({
+        D({
             ...g,
             config: {
                 ...g.config,
@@ -207,7 +207,7 @@ function f() {
                 children: (0, n.jsx)(C.Z, {
                     onSelect: function (e) {
                         if (B(e), null != e)
-                            f(e);
+                            D(e);
                     },
                     quest: j
                 })
@@ -281,7 +281,7 @@ function f() {
                         onFileChange: function (e, t) {
                             var s, n;
                             if ('rewardTile' === e)
-                                f({
+                                D({
                                     ...g,
                                     config: (s = g.config, n = { [e]: t }, (0, i.EQ)(s).with({ configVersion: 1 }, e => ({
                                         ...e,
@@ -324,7 +324,7 @@ function f() {
                     children: (0, n.jsx)(m.Z, {
                         onChange: function (e) {
                             var t, s;
-                            f({
+                            D({
                                 ...g,
                                 config: (t = g.config, s = e, (0, i.EQ)(t).with({ configVersion: 1 }, e => ({
                                     ...e,
@@ -369,19 +369,19 @@ function f() {
                         onChange: function (e) {
                             switch (P(e), e) {
                             case A.a.UNENROLLED:
-                                f({
+                                D({
                                     ...g,
                                     userStatus: null
                                 });
                                 break;
                             case A.a.ENROLLED:
-                                f({
+                                D({
                                     ...g,
                                     userStatus: x({ enrolledAt: new Date().toISOString() })
                                 });
                                 break;
                             case A.a.COMPLETED_25:
-                                f({
+                                D({
                                     ...g,
                                     userStatus: x({
                                         enrolledAt: new Date().toISOString(),
@@ -390,7 +390,7 @@ function f() {
                                 });
                                 break;
                             case A.a.COMPLETED_50:
-                                f({
+                                D({
                                     ...g,
                                     userStatus: x({
                                         enrolledAt: new Date().toISOString(),
@@ -399,7 +399,7 @@ function f() {
                                 });
                                 break;
                             case A.a.COMPLETED_75:
-                                f({
+                                D({
                                     ...g,
                                     userStatus: x({
                                         enrolledAt: new Date().toISOString(),
@@ -408,7 +408,7 @@ function f() {
                                 });
                                 break;
                             case A.a.COMPLETED_100:
-                                f({
+                                D({
                                     ...g,
                                     userStatus: x({
                                         completedAt: new Date().toISOString(),
@@ -418,7 +418,7 @@ function f() {
                                 });
                                 break;
                             case A.a.CLAIMED:
-                                f({
+                                D({
                                     ...g,
                                     userStatus: x({
                                         claimedAt: new Date().toISOString(),
@@ -429,7 +429,7 @@ function f() {
                                 });
                             }
                         },
-                        value: D
+                        value: f
                     })
                 ]
             }),
@@ -519,7 +519,7 @@ function f() {
         ]
     });
 }
-class D extends a.Component {
+class f extends a.Component {
     componentDidCatch(e) {
         this.setState({ error: e });
     }
@@ -549,7 +549,7 @@ class D extends a.Component {
                     })
                 })
             ]
-        }) : (0, n.jsx)(f, {}, t);
+        }) : (0, n.jsx)(D, {}, t);
     }
     constructor(...e) {
         super(...e), g(this, 'state', {
@@ -563,4 +563,4 @@ class D extends a.Component {
         });
     }
 }
-t.Z = D;
+t.Z = f;

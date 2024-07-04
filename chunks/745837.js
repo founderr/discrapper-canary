@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return f;
     }
 });
 var i = n(735250);
@@ -24,7 +24,7 @@ function S() {
         })
     });
 }
-let f = {
+let C = {
     [E.D5.Error]: {
         textColor: 'text-primary',
         buttonLook: l.Button.Looks.FILLED,
@@ -64,7 +64,7 @@ let f = {
         containerClass: a()(p.container, p.containerEnabled)
     }
 };
-function C() {
+function f() {
     var e;
     let {
         decoupledClipsEnabled: t,
@@ -81,7 +81,7 @@ function C() {
             buttonColor: u,
             buttonLook: I,
             containerClass: m
-        } = f[s];
+        } = C[s];
     return (0, i.jsxs)('div', {
         className: m,
         children: [

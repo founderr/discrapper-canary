@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(392711), s = n.n(i), a = n(442837), r = n(570140), l = n(573979), o = n(814443), c = n(592125), d = n(271383), u = n(430824), _ = n(131951), h = n(158776), E = n(19780), I = n(699516), m = n(944486), g = n(594174), p = n(979651), T = n(626135), S = n(823379), f = n(358085), C = n(914946), N = n(238679), A = n(863141), Z = n(981631), L = n(701488), v = n(65154);
+var i = n(392711), s = n.n(i), a = n(442837), r = n(570140), l = n(573979), o = n(814443), c = n(592125), d = n(271383), u = n(430824), _ = n(131951), h = n(158776), E = n(19780), I = n(699516), m = n(944486), g = n(594174), p = n(979651), T = n(626135), S = n(823379), C = n(358085), f = n(914946), N = n(238679), A = n(863141), Z = n(981631), L = n(701488), v = n(65154);
 function O(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -14,7 +14,7 @@ function O(e, t, n) {
 }
 class R {
     loadServer() {
-        for (let e of (f.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports))
+        for (let e of (C.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports))
             this.rpcServer.registerTransport(e);
         for (let [e, t] of Object.entries(this.rpcCommandHandlers))
             this.rpcServer.setCommandHandler(e, t);
@@ -72,7 +72,7 @@ class R {
         }
         null != n && this.rpcServer.dispatchToSubscriptions(t, { channel_id: n }, {
             channel_id: n,
-            message: (0, C.Xb)(i)
+            message: (0, f.Xb)(i)
         }, s);
     }
     handleSpeaking(e) {
@@ -117,8 +117,8 @@ class R {
         if (0 !== this.rpcServer.subscriptions.length)
             this.rpcServer.dispatchToSubscriptions(Z.zMe.NOTIFICATION_CREATE, {}, {
                 channel_id: t,
-                message: (0, C.Xb)(n),
-                icon_url: null != i ? (0, C.RE)(i) : null,
+                message: (0, f.Xb)(n),
+                icon_url: null != i ? (0, f.RE)(i) : null,
                 title: s,
                 body: a
             });
@@ -242,14 +242,14 @@ class R {
             }
         } = e;
         if (0 !== this.rpcServer.subscriptions.length)
-            this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(n, t));
+            this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(n, t));
     }
     handleRelationshipRemove(e) {
         let {
             relationship: {id: t}
         } = e;
         if (0 !== this.rpcServer.subscriptions.length)
-            this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(Z.OGo.NONE, t));
+            this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(Z.OGo.NONE, t));
     }
     handlePresenceUpdate(e) {
         let {updates: t} = e;
@@ -262,13 +262,13 @@ class R {
                 if (null != t)
                     return;
                 let i = I.Z.getRelationshipType(n);
-                i === Z.OGo.NONE && o.Z.getUserAffinitiesUserIds().has(n) && (i = Z.OGo.IMPLICIT), i !== Z.OGo.NONE && this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(i, n));
+                i === Z.OGo.NONE && o.Z.getUserAffinitiesUserIds().has(n) && (i = Z.OGo.IMPLICIT), i !== Z.OGo.NONE && this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(i, n));
             });
     }
     handlePresencesReplace() {
         if (0 !== this.rpcServer.subscriptions.length)
             s().forEach(I.Z.getRelationships(), (e, t) => {
-                this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(e, t));
+                this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(e, t));
             });
     }
     handleEntitlementCreate(e) {

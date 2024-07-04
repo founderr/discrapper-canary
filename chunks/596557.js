@@ -9,9 +9,9 @@ function I(e) {
     let I = (0, l.SE)(e), m = E.$X.some(t => (null == e ? void 0 : e.id) !== h._ && c.oz(t, e)), g = (null == e ? void 0 : e.defaultMessageNotifications) === u.bL.ALL_MESSAGES, p = (0, d.FT)(a.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds), T = I && (m || g) && !p, S = s.useCallback(() => {
             var t;
             (0, d.Qd)(a.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds, !0, _.L.DISMISS);
-        }, [e]), f = s.useRef(!1);
+        }, [e]), C = s.useRef(!1);
     s.useEffect(() => {
-        if (T && !f.current) {
+        if (T && !C.current) {
             var t;
             (0, r.openModalLazy)(async () => {
                 let {default: t} = await n.e('54597').then(n.bind(n, 29022));
@@ -24,7 +24,7 @@ function I(e) {
             }, { onCloseCallback: S }), o.default.track(u.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                 type: a.C[a.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
                 guild_id: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds
-            }), f.current = !0;
+            }), C.current = !0;
         }
     }, [
         m,

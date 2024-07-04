@@ -1,5 +1,5 @@
 n(47120);
-var i = n(392711), s = n.n(i), a = n(243814), r = n(902704), l = n(812206), o = n(594190), c = n(199902), d = n(592125), u = n(271383), _ = n(430824), h = n(131951), E = n(19780), I = n(594174), m = n(979651), g = n(996106), p = n(914946), T = n(238679), S = n(452426), f = n(295424), C = n(222263), N = n(863141), A = n(186901), Z = n(981631);
+var i = n(392711), s = n.n(i), a = n(243814), r = n(902704), l = n(812206), o = n(594190), c = n(199902), d = n(592125), u = n(271383), _ = n(430824), h = n(131951), E = n(19780), I = n(594174), m = n(979651), g = n(996106), p = n(914946), T = n(238679), S = n(452426), C = n(295424), f = n(222263), N = n(863141), A = n(186901), Z = n(981631);
 let L = e => (0, S.Z)(e).required().keys({ channel_id: e.string().required() });
 function v(e) {
     var t;
@@ -348,7 +348,7 @@ let x = {
                         prevState: n,
                         dispatch: i
                     } = e, s = { currentGuildMember: u.ZP.getSelfMember(t) };
-                return null != s.currentGuildMember && (null == n || !(0, r.Z)(s, n)) && i((0, C.Z)(s.currentGuildMember)), s;
+                return null != s.currentGuildMember && (null == n || !(0, r.Z)(s, n)) && i((0, f.Z)(s.currentGuildMember)), s;
             };
         }
     },
@@ -389,7 +389,7 @@ let x = {
             let {
                     prevState: i,
                     dispatch: a
-                } = e, r = c.Z.getStreamerActiveStreamMetadata(), d = (null == r ? void 0 : r.pid) != null ? o.ZP.getGameForPID(r.pid) : null, u = (null == d ? void 0 : d.id) != null ? l.Z.getApplication(d.id) : null, _ = null != u ? (0, f.Z)(u) : null, h = null == r ? void 0 : r.sourceName, E = {
+                } = e, r = c.Z.getStreamerActiveStreamMetadata(), d = (null == r ? void 0 : r.pid) != null ? o.ZP.getGameForPID(r.pid) : null, u = (null == d ? void 0 : d.id) != null ? l.Z.getApplication(d.id) : null, _ = null != u ? (0, C.Z)(u) : null, h = null == r ? void 0 : r.sourceName, E = {
                     active: null != r,
                     pid: null !== (t = null == r ? void 0 : r.pid) && void 0 !== t ? t : null,
                     application: (n = null != _, n) ? { name: h } : null

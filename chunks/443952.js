@@ -1,7 +1,7 @@
 n(47120), n(411104), n(789020);
 var i = n(735250);
 n(470079);
-var s = n(243814), a = n(45792), r = n(481060), l = n(278323), o = n(988298), c = n(224706), d = n(45114), u = n(479531), _ = n(40851), h = n(566620), E = n(596223), I = n(838195), m = n(928518), g = n(592125), p = n(293273), T = n(885110), S = n(451478), f = n(630388), C = n(823379), N = n(591759), A = n(228488), Z = n(996106), L = n(914946), v = n(452426), O = n(561205), R = n(600027), x = n(852926), b = n(186901), P = n(981631);
+var s = n(243814), a = n(45792), r = n(481060), l = n(278323), o = n(988298), c = n(224706), d = n(45114), u = n(479531), _ = n(40851), h = n(566620), E = n(596223), I = n(838195), m = n(928518), g = n(592125), p = n(293273), T = n(885110), S = n(451478), C = n(630388), f = n(823379), N = n(591759), A = n(228488), Z = n(996106), L = n(914946), v = n(452426), O = n(561205), R = n(600027), x = n(852926), b = n(186901), P = n(981631);
 async function M(e, t, n, i) {
     let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '', a = p.Z.getApplicationActivity(t);
     if (null == a || null == a.secrets || !(0, L.t9)(i, a.party, a.secrets))
@@ -187,13 +187,13 @@ t.Z = {
                         }, 1000);
                     };
                     a.addEventListener('change', () => {
-                        (0, C.lm)(a.files) && e(a.files[0]), r();
+                        (0, f.lm)(a.files) && e(a.files[0]), r();
                     }), a.addEventListener('cancel', () => {
                         r();
                     }), s.document.body.addEventListener('focus', r, !0), s.document.body.appendChild(a), a.click();
                 }(async n => {
                     let a = await (0, h.kv)(i, s, n);
-                    (0, C.lm)(a) && (0, C.lm)(a.url) && !(a instanceof u.Z) ? e({ image_url: a.url }) : t(a);
+                    (0, f.lm)(a) && (0, f.lm)(a.url) && !(a instanceof u.Z) ? e({ image_url: a.url }) : t(a);
                 }, () => t(Error('Upload canceled')));
             }).catch(e => {
                 var t;
@@ -213,7 +213,7 @@ t.Z = {
             let s = n.application.id;
             if (null == s)
                 throw new Z.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'No application.');
-            if (!(0, f.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.udG.EMBEDDED))
+            if (!(0, C.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.udG.EMBEDDED))
                 throw new Z.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'This application cannot access this API');
             let a = (0, O.Z)();
             if (null == a)

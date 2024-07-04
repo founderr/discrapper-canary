@@ -10,12 +10,12 @@ t.Z = e => {
         location: E.Sbl.ROLE_SUBSCRIPTIONS_TAB,
         relevantSubscriptionListingIds: null == p ? void 0 : p.subscription_listings_ids
     });
-    let {activeSubscription: T} = (0, l.Z)(null == p ? void 0 : p.id), S = (0, a.YB)(g.id), f = null == S ? void 0 : S.description, {editStateIds: C} = r.B7(null !== (t = null == p ? void 0 : p.id) && void 0 !== t ? t : null, g.id);
+    let {activeSubscription: T} = (0, l.Z)(null == p ? void 0 : p.id), S = (0, a.YB)(g.id), C = null == S ? void 0 : S.description, {editStateIds: f} = r.B7(null !== (t = null == p ? void 0 : p.id) && void 0 !== t ? t : null, g.id);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(h.Z, {
                 title: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({ serverName: g.toString() }),
-                description: null != f ? f : null,
+                description: null != C ? C : null,
                 coverImageAsset: null !== (n = null == S ? void 0 : S.cover_image_asset) && void 0 !== n ? n : null,
                 guild: g,
                 children: [
@@ -30,7 +30,7 @@ t.Z = e => {
             (0, i.jsx)(s.HeadingLevel, {
                 children: (0, i.jsx)(u.Z, {
                     guildId: g.id,
-                    children: C.map(e => {
+                    children: f.map(e => {
                         var t;
                         return (0, i.jsx)(_.Z, {
                             guildId: g.id,

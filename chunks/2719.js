@@ -3,7 +3,7 @@ s.d(t, {
         return Q;
     }
 }), s(47120);
-var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(512722), l = s.n(o), c = s(442837), d = s(692547), _ = s(481060), E = s(230711), u = s(129861), T = s(279837), I = s(952306), S = s(299206), N = s(295474), C = s(144114), m = s(918505), A = s(332473), h = s(921801), g = s(290421), O = s(318661), p = s(80132), R = s(735336), x = s(204197), M = s(25990), f = s(594174), D = s(572004), P = s(51144), L = s(998502), Z = s(695346), b = s(461877), v = s(726985), j = s(981631), B = s(815660), U = s(801461), G = s(228168), F = s(689938), y = s(900168);
+var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(512722), l = s.n(o), c = s(442837), d = s(692547), _ = s(481060), E = s(230711), u = s(129861), T = s(279837), I = s(952306), S = s(299206), N = s(295474), C = s(144114), m = s(918505), A = s(332473), h = s(921801), g = s(290421), O = s(318661), p = s(80132), R = s(735336), x = s(204197), M = s(25990), D = s(594174), f = s(572004), P = s(51144), L = s(998502), Z = s(695346), b = s(461877), v = s(726985), j = s(981631), B = s(815660), U = s(801461), G = s(228168), F = s(689938), y = s(900168);
 let V = L.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
 function Y(e) {
     var t, i;
@@ -358,7 +358,7 @@ function K(e) {
             id: t.id,
             label: F.Z.Messages.COPY_ID_USER
         });
-    return Z.Sb.useSetting() && D.wS ? (0, n.jsx)(_.Popout, {
+    return Z.Sb.useSetting() && f.wS ? (0, n.jsx)(_.Popout, {
         renderPopout: e => {
             let {closePopout: t} = e;
             return (0, n.jsx)(_.Menu, {
@@ -386,8 +386,8 @@ function z() {
 }
 function Q() {
     var e;
-    let t = (0, c.e7)([f.default], () => {
-            let e = f.default.getCurrentUser();
+    let t = (0, c.e7)([D.default], () => {
+            let e = D.default.getCurrentUser();
             return l()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e;
         }), s = (0, O.ZP)(t.id), a = (0, g.Z)(s), i = Z.co.useSetting(), r = (0, c.e7)([M.Z], () => M.Z.getErrors()), o = null == r ? void 0 : null === (e = r.avatar) || void 0 === e ? void 0 : e[0], {
             avatarSrc: d,

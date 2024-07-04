@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n(338545), c = n(442837), d = n(481060), u = n(607070), _ = n(207796), h = n(889711), E = n(931240), I = n(970606), m = n(963202), g = n(650461), p = n(432632), T = n(35313), S = n(284019), f = n(672775), C = n(601463), N = n(192565), A = n(641037), Z = n(689938), L = n(433369);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n(920906), c = n(442837), d = n(481060), u = n(607070), _ = n(207796), h = n(889711), E = n(931240), I = n(970606), m = n(963202), g = n(650461), p = n(432632), T = n(35313), S = n(284019), C = n(672775), f = n(601463), N = n(192565), A = n(641037), Z = n(689938), L = n(433369);
 let v = {
     mass: 1,
     tension: 600,
@@ -169,7 +169,7 @@ function O(e) {
                                 }),
                                 (0, i.jsx)('div', {
                                     className: r()(L.navigationContainer, { [L.elevatedNavigationContainer]: !w }),
-                                    children: (0, i.jsx)(f.Z, {
+                                    children: (0, i.jsx)(C.Z, {
                                         steps: M,
                                         progress: R,
                                         updateCurrentStep: z,
@@ -189,7 +189,7 @@ function O(e) {
                         (0, i.jsx)(o.animated.div, {
                             style: F,
                             className: r()(L.sidebar, { [L.sidebarResponsive]: w }),
-                            children: (0, i.jsx)(C.Z, {
+                            children: (0, i.jsx)(f.Z, {
                                 guildId: t,
                                 signed: D,
                                 setSigned: w ? void 0 : y,

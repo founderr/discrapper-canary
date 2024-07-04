@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(593473), o = n(442837), c = n(481060), d = n(749210), u = n(558381), _ = n(666743), h = n(41776), E = n(703656), I = n(769654), m = n(601964), g = n(430824), p = n(378720), T = n(285952), S = n(346656), f = n(843445), C = n(981631), N = n(689938), A = n(81772);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(593473), o = n(442837), c = n(481060), d = n(749210), u = n(558381), _ = n(666743), h = n(41776), E = n(703656), I = n(769654), m = n(601964), g = n(430824), p = n(378720), T = n(285952), S = n(346656), C = n(843445), f = n(981631), N = n(689938), A = n(81772);
 function Z(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -55,7 +55,7 @@ class L extends s.PureComponent {
                 })
             ]
         })) : s && t && (u = N.Z.Messages.JOIN_GUILD) : (u = N.Z.Messages._LOGIN, _ = this.handleLogin), (0, i.jsxs)('div', {
-            className: r()(l, o === f.b.SMALL ? A.inviteSmall : A.inviteLarge),
+            className: r()(l, o === C.b.SMALL ? A.inviteSmall : A.inviteLarge),
             children: [
                 (0, i.jsx)(p.Z, { children: N.Z.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD }),
                 (0, i.jsxs)('div', {
@@ -112,13 +112,13 @@ class L extends s.PureComponent {
                 try {
                     await d.Z.joinGuild(e.id, {
                         lurker: !0,
-                        source: C.vtS.APPLICATION_STORE
+                        source: f.vtS.APPLICATION_STORE
                     }), s();
                 } catch {
                 }
         }), Z(this, 'handleLogin', () => {
-            let e = { redirect_to: C.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
-            (0, E.uL)(C.Z5c.LOGIN, { search: (0, l.stringify)(e) });
+            let e = { redirect_to: f.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
+            (0, E.uL)(f.Z5c.LOGIN, { search: (0, l.stringify)(e) });
         });
     }
 }

@@ -11,8 +11,8 @@ function E(e) {
             searchQuery: E,
             categoryId: I,
             onSearchClear: m
-        } = e, g = (0, s.e7)([o.ZP], () => o.ZP.isFetchingSearch()), p = (0, s.e7)([o.ZP], () => o.ZP.getDiscoverableGuilds().search), T = (0, s.e7)([o.ZP], () => o.ZP.getLoadId()), S = null !== (n = null === (t = p[E]) || void 0 === t ? void 0 : t[I]) && void 0 !== n ? n : h, f = (0, r.ZP)(), {
-            handleViewGuild: C,
+        } = e, g = (0, s.e7)([o.ZP], () => o.ZP.isFetchingSearch()), p = (0, s.e7)([o.ZP], () => o.ZP.getDiscoverableGuilds().search), T = (0, s.e7)([o.ZP], () => o.ZP.getLoadId()), S = null !== (n = null === (t = p[E]) || void 0 === t ? void 0 : t[I]) && void 0 !== n ? n : h, C = (0, r.ZP)(), {
+            handleViewGuild: f,
             onGuildCardSeen: N
         } = (0, d.g)(I, T);
     return (0, i.jsxs)('section', {
@@ -44,9 +44,9 @@ function E(e) {
                 guilds: S.guilds,
                 loading: g,
                 loadingPlaceholderCount: 12,
-                onViewGuild: C,
+                onViewGuild: f,
                 loadingGuildId: null,
-                theme: f,
+                theme: C,
                 analyticsContext: c.P1.SEARCH,
                 onGuildCardSeen: N
             })
