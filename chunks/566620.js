@@ -39,7 +39,7 @@ n.d(t, {
         return G;
     }
 }), n(47120);
-var r = n(990547), i = n(544891), a = n(570140), o = n(493683), s = n(475179), l = n(447543), u = n(904245), c = n(479531), d = n(812236), _ = n(812206), E = n(358221), f = n(188597), h = n(973616), p = n(314897), m = n(592125), I = n(944486), T = n(594174), g = n(823379), S = n(573261), A = n(867176), N = n(317381), v = n(844797), O = n(672181), R = n(917107), C = n(981631), y = n(674563), D = n(245335);
+var r = n(990547), i = n(544891), a = n(570140), o = n(493683), s = n(475179), l = n(447543), u = n(904245), c = n(479531), d = n(812236), _ = n(812206), E = n(358221), f = n(188597), h = n(973616), p = n(314897), m = n(592125), I = n(944486), T = n(594174), g = n(823379), S = n(573261), A = n(595519), N = n(317381), v = n(844797), O = n(672181), R = n(917107), C = n(981631), y = n(674563), D = n(245335);
 function L(e, t, n) {
     let r = p.default.getId(), i = N.ZP.getSelfEmbeddedActivityForChannel(e), o = N.ZP.getEmbeddedActivitiesForChannel(e).find(e => e.applicationId === t && e.userIds.has(r));
     null != i ? M({
@@ -67,7 +67,7 @@ async function b(e) {
             type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
             embeddedActivity: s
         });
-        let t = N.ZP.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === s.applicationId), n = y.Yq.includes(s.applicationId), u = (null == i ? void 0 : i.isPrivate()) && (0, A.WS)(i, !t, 'EmbeddedActivitiesActionCreators#launchEmbeddedActivity');
+        let t = N.ZP.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === s.applicationId), n = y.Yq.includes(s.applicationId), u = (null == i ? void 0 : i.isPrivate()) && (0, A.WS)(i, !t);
         if (!t && ((0, v.TX)(e, s.applicationId, I.Z, m.Z) || n || u)) {
             let t;
             try {

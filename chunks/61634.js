@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(470079), l = n(392711), r = n.n(l), a = n(106351), s = n(442837), o = n(846519), c = n(941028), u = n(867176), d = n(317381), h = n(554747), p = n(146085), _ = n(427679), f = n(131704), m = n(199902), g = n(314897), C = n(592125), I = n(650774), E = n(430824), N = n(496675), x = n(944486), S = n(9156), v = n(979651), Z = n(709054), T = n(510601), L = n(901621), A = n(981631);
+var i = n(470079), l = n(392711), r = n.n(l), a = n(106351), s = n(442837), o = n(846519), c = n(941028), u = n(595519), d = n(317381), h = n(554747), p = n(146085), _ = n(427679), f = n(131704), m = n(199902), g = n(314897), C = n(592125), I = n(650774), E = n(430824), N = n(496675), x = n(944486), S = n(9156), v = n(979651), Z = n(709054), T = n(510601), L = n(901621), A = n(981631);
 let b = [];
 function M(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : N.Z;
@@ -44,7 +44,7 @@ function R(e) {
             l.current.stop(), (0, c.w5)(e, Array.from(n.current));
         }, [e]);
     }(e, n);
-    let a = (0, L.Z)(e), A = (0, s.e7)([d.ZP], () => d.ZP.getEmbeddedActivitiesForGuild(e)), R = (0, u.NX)(null === (t = A[0]) || void 0 === t ? void 0 : t.channelId, !1, 'GuildMediaState'), {
+    let a = (0, L.Z)(e), A = (0, s.e7)([d.ZP], () => d.ZP.getEmbeddedActivitiesForGuild(e)), R = (0, u.NX)(null === (t = A[0]) || void 0 === t ? void 0 : t.channelId, !1), {
             guildHasVoice: O,
             guildHasVideo: y,
             selectedVoiceChannelHasVideo: P

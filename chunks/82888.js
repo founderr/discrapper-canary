@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     }
 });
-var i = n(735250), a = n(470079), s = n(399606), l = n(110924), r = n(867176), o = n(566620), c = n(317381), d = n(917107), u = n(9145), h = n(918559);
+var i = n(735250), a = n(470079), s = n(399606), l = n(110924), r = n(595519), o = n(566620), c = n(317381), d = n(917107), u = n(9145), h = n(918559);
 function p(e) {
     let {
             maxHeight: t,
@@ -20,7 +20,7 @@ function p(e) {
                 connectedActivity: null != t && null !== (e = c.ZP.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0,
                 activityPanelMode: c.ZP.getActivityPanelMode()
             };
-        }), f = (0, r.NX)(p, !1, 'ActivityPanelUI'), E = (0, l.Z)(p);
+        }), f = (0, r.NX)(p, !1), E = (0, l.Z)(p);
     if (a.useEffect(() => {
             null != p && null == E && (0, o.gC)(h.MI.RESIZABLE);
         }, [

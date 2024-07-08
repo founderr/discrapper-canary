@@ -1,5 +1,5 @@
 n(47120), n(411104);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(704215), c = n(481060), d = n(53281), u = n(110924), h = n(40851), p = n(867176), m = n(620662), _ = n(924557), f = n(435064), E = n(712114), C = n(605236), g = n(536442), I = n(79390), x = n(665906), T = n(695346), v = n(433355), N = n(819640), S = n(375954), Z = n(496675), A = n(885110), M = n(627553), b = n(38761), R = n(585483), j = n(358085), L = n(127654), P = n(316595), O = n(193910), y = n(951211), D = n(981631), k = n(356659), U = n(921944), w = n(689938), B = n(72704);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(704215), c = n(481060), d = n(53281), u = n(110924), h = n(40851), p = n(595519), m = n(620662), _ = n(924557), f = n(435064), E = n(712114), C = n(605236), g = n(536442), I = n(79390), x = n(665906), T = n(695346), v = n(433355), N = n(819640), S = n(375954), Z = n(496675), A = n(885110), M = n(627553), b = n(38761), R = n(585483), j = n(358085), L = n(127654), P = n(316595), O = n(193910), y = n(951211), D = n(981631), k = n(356659), U = n(921944), w = n(689938), B = n(72704);
 t.Z = a.memo(function (e) {
     var t, s;
     let H, {
@@ -38,7 +38,7 @@ t.Z = a.memo(function (e) {
             R.S.unsubscribe(D.CkL.UPLOAD_FILE, e);
         };
     });
-    let e_ = (0, x.NE)(V), ef = (0, x.Xu)(V), eE = !T.dN.useSetting() && !(0, j.isAndroidWeb)() && null != window.ResizeObserver, eC = (0, I.UI)(null != V ? V : void 0), eg = (0, c.useRedesignIconContext)().enabled, eI = (0, p.qB)(V.id, 'ChannelAttachButton'), ex = null !== (s = null == $ ? void 0 : $.length) && void 0 !== s ? s : 0, eT = (0, y.Z)({
+    let e_ = (0, x.NE)(V), ef = (0, x.Xu)(V), eE = !T.dN.useSetting() && !(0, j.isAndroidWeb)() && null != window.ResizeObserver, eC = (0, I.UI)(null != V ? V : void 0), eg = (0, c.useRedesignIconContext)().enabled, eI = (0, p.qB)(V.id), ex = null !== (s = null == $ ? void 0 : $.length) && void 0 !== s ? s : 0, eT = (0, y.Z)({
             canAttachFiles: ed,
             canStartThreads: e_ || ef,
             useSlate: eE,

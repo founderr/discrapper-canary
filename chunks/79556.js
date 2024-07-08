@@ -5,7 +5,7 @@ n.d(t, {
 }), n(47120);
 var i = n(735250);
 n(470079);
-var l = n(120356), r = n.n(l), a = n(442837), s = n(481060), o = n(493683), c = n(239091), u = n(146773), d = n(867176), h = n(619915), p = n(201895), _ = n(873696), f = n(66999), m = n(22082), g = n(665906), C = n(592125), I = n(430824), E = n(496675), N = n(306680), x = n(9156), S = n(594174), v = n(109446), Z = n(98597), T = n(648501), L = n(473403), A = n(304471), b = n(981631), M = n(647086), R = n(704672);
+var l = n(120356), r = n.n(l), a = n(442837), s = n(481060), o = n(493683), c = n(239091), u = n(146773), d = n(595519), h = n(619915), p = n(201895), _ = n(873696), f = n(66999), m = n(22082), g = n(665906), C = n(592125), I = n(430824), E = n(496675), N = n(306680), x = n(9156), S = n(594174), v = n(109446), Z = n(98597), T = n(648501), L = n(473403), A = n(304471), b = n(981631), M = n(647086), R = n(704672);
 function O(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -217,7 +217,7 @@ function j(e) {
         } = (0, f.Z)(t.id), A = (0, a.e7)([x.ZP], () => x.ZP.isFavorite(n.id, t.id)), R = (0, a.e7)([S.default], () => {
             let e = S.default.getCurrentUser();
             return null != e && (!t.isNSFW() || e.nsfwAllowed);
-        }, [t]), O = (0, d.NX)(t.id, !1, 'webGuildTextChannel'), y = (0, T.Z)({
+        }, [t]), O = (0, d.NX)(t.id, !1), y = (0, T.Z)({
             channel: t,
             isChannelCollapsed: !1,
             isChannelSelected: o,

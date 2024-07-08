@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     }
 });
-var r = n(812206), i = n(592125), a = n(944486), o = n(594174), s = n(867176), l = n(566620), u = n(882347), c = n(917107), d = n(89425), _ = n(275920), E = n(197386), f = n(701488), h = n(981631);
+var r = n(812206), i = n(592125), a = n(944486), o = n(594174), s = n(595519), l = n(566620), u = n(882347), c = n(917107), d = n(89425), _ = n(275920), E = n(197386), f = n(701488), h = n(981631);
 async function p(e) {
     let {
             applicationId: t,
@@ -33,7 +33,7 @@ async function p(e) {
                 bypassChangeModal: null != n
             }))
             return !1;
-    } else if (!(0, s.WS)(g, !1, 'joinEmbeddedActivity') || !O)
+    } else if (!(0, s.WS)(g, !1) || !O)
         return !1;
     return (0, E.Z)(S, p), (0, l.J$)(p, t, T), (0, _.Z)({
         type: h.q5t.JOIN,

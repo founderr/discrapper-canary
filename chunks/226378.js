@@ -3,7 +3,7 @@ n.d(t, {
         return c;
     }
 });
-var i, a, s = n(470079), l = n(867176), r = n(527805), o = n(689938);
+var i, a, s = n(470079), l = n(595519), r = n(527805), o = n(689938);
 function c(e) {
     let {
         embeddedActivity: t,
@@ -22,7 +22,7 @@ function c(e) {
                 isJoinAction: !s,
                 text: s ? o.Z.Messages.START : o.Z.Messages.EMBEDDED_ACTIVITIES_JOIN,
                 tooltip: void 0
-            }, d = (0, l.WS)(a, s, 'EmbeddedApplicationInstanceUtils');
+            }, d = (0, l.WS)(a, s);
         if (null != t && null != i && t.launchId === i.launchId)
             return {
                 ...c,

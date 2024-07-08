@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     }
 });
-var r = n(668781), i = n(812206), a = n(835873), o = n(592125), s = n(430824), l = n(496675), u = n(594174), c = n(979651), d = n(585483), _ = n(867176), E = n(337682), f = n(566620), h = n(882347), p = n(307091), m = n(374065), I = n(917107), T = n(89425), g = n(275920), S = n(197386), A = n(701488), N = n(981631), v = n(689938);
+var r = n(668781), i = n(812206), a = n(835873), o = n(592125), s = n(430824), l = n(496675), u = n(594174), c = n(979651), d = n(585483), _ = n(595519), E = n(337682), f = n(566620), h = n(882347), p = n(307091), m = n(374065), I = n(917107), T = n(89425), g = n(275920), S = n(197386), A = n(701488), N = n(981631), v = n(689938);
 async function O(e) {
     var t;
     let {
@@ -52,7 +52,7 @@ async function O(e) {
                 bypassChangeModal: null != O
             }))
             return !1;
-    } else if (!(0, _.WS)(U, !0, 'handleStartEmbeddedActivity') || !G)
+    } else if (!(0, _.WS)(U, !0) || !G)
         return !1;
     return f.J$(C, P.id, L), (0, S.Z)(y, C), (0, g.Z)({
         type: N.q5t.LAUNCH,
