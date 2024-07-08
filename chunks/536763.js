@@ -11,8 +11,8 @@ function c() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(r.c, {
-                title: l.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GENERIC_HERO_TITLE.format({ category: l.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUBS_CATEGORY }),
-                description: l.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GENERIC_HERO_DESCRIPTION
+                title: l.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
+                description: l.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION
             }),
             (0, i.jsx)('section', {
                 className: o.hubs,

@@ -32,27 +32,32 @@ function T() {
             case m.vf.GAMING:
                 return (0, i.jsx)(d.j, {
                     categoryId: n,
-                    categoryName: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_CATEGORY
+                    title: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_TITLE,
+                    description: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_DESCRIPTION
                 });
             case m.vf.MUSIC:
                 return (0, i.jsx)(d.j, {
                     categoryId: n,
-                    categoryName: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_CATEGORY
+                    title: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_TITLE,
+                    description: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_DESCRIPTION
                 });
             case m.vf.ENTERTAINMENT:
                 return (0, i.jsx)(d.j, {
                     categoryId: n,
-                    categoryName: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_CATEGORY
+                    title: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_TITLE,
+                    description: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_DESCRIPTION
                 });
             case m.vf.TECH:
                 return (0, i.jsx)(d.j, {
                     categoryId: n,
-                    categoryName: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_CATEGORY
+                    title: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_TITLE,
+                    description: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_DESCRIPTION
                 });
             case m.vf.EDUCATION:
                 return (0, i.jsx)(d.j, {
                     categoryId: n,
-                    categoryName: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_CATEGORY
+                    title: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_TITLE,
+                    description: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_DESCRIPTION
                 });
             case m.vf.HUBS:
                 return (0, i.jsx)(_.X, {});
