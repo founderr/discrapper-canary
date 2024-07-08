@@ -1,56 +1,64 @@
 t.d(n, {
     Z: function () {
-        return u;
+        return d;
     }
 });
-var i = t(735250), l = t(470079), a = t(481060), r = t(783097), s = t(753972), o = t(875164), c = t(413097);
-function u(e) {
+var i = t(735250), l = t(470079), a = t(481060), r = t(783097), s = t(753972), o = t(532309), c = t(875164), u = t(413097);
+function d(e) {
     var n;
     let {
             command: t,
-            application: u,
-            onClick: d
+            application: d,
+            onClick: m,
+            query: p,
+            searchResultsPosition: _
         } = e, {
-            iconURL: m,
-            name: _,
-            description: p
-        } = l.useMemo(() => (0, r.sl)(u, {
+            iconURL: E,
+            name: A,
+            description: N
+        } = l.useMemo(() => (0, r.sl)(d, {
             botIconFirst: !0,
-            fakeAppIconURL: c
-        }), [u]);
+            fakeAppIconURL: u
+        }), [d]), {trackSearchResultsItemImpressionRef: h} = (0, o.Z)({
+            applicationId: d.id,
+            commandId: null == t ? void 0 : t.id,
+            query: p,
+            searchResultsPosition: _
+        });
     return (0, i.jsxs)(a.Clickable, {
-        className: o.container,
-        onClick: d,
+        innerRef: e => h.current = e,
+        className: c.container,
+        onClick: m,
         children: [
-            null != m && (0, i.jsx)(s.Z, {
-                src: m,
-                className: o.icon,
+            null != E && (0, i.jsx)(s.Z, {
+                src: E,
+                className: c.icon,
                 'aria-hidden': !0
             }),
             (0, i.jsxs)('div', {
-                className: o.cmdDetails,
+                className: c.cmdDetails,
                 children: [
                     (0, i.jsx)(a.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
                         lineClamp: 1,
-                        children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : _
+                        children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : A
                     }),
                     (0, i.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
                         lineClamp: 1,
-                        children: p
+                        children: N
                     })
                 ]
             }),
             null != t ? (0, i.jsx)(a.Text, {
-                className: o.cmdAppName,
+                className: c.cmdAppName,
                 variant: 'text-sm/normal',
                 color: 'text-secondary',
-                children: _
+                children: A
             }) : null,
-            (0, i.jsx)('div', { className: o.underline })
+            (0, i.jsx)('div', { className: c.underline })
         ]
     });
 }

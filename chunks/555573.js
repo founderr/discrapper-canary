@@ -31,7 +31,8 @@ function E(e) {
         sectionName: c,
         query: _,
         searchResultsPosition: E,
-        source: f
+        source: f,
+        commandOrigin: h
     } = e;
     null != n && i()(n.inputType !== d.iw.PLACEHOLDER, 'command should not be placeholder'), o.Z.dispatch({
         type: 'APPLICATION_COMMAND_SET_ACTIVE_COMMAND',
@@ -45,7 +46,8 @@ function E(e) {
         sectionName: c,
         query: _,
         searchResultsPosition: E,
-        source: f
+        source: f,
+        commandOrigin: h
     });
 }
 function f(e, t) {

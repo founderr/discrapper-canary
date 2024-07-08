@@ -1,10 +1,10 @@
 t.d(n, {
     Z: function () {
-        return L;
+        return M;
     }
 }), t(47120);
-var i = t(735250), l = t(470079), a = t(140835), r = t(246521), s = t(481060), o = t(911969), c = t(555573), u = t(10718), d = t(895924), m = t(585483), _ = t(499254), p = t(541099), E = t(827498), A = t(496158), N = t(676161), h = t(660090), C = t(783097), f = t(870205), I = t(981631), v = t(689079), x = t(689938), P = t(763963);
-function g(e) {
+var i = t(735250), l = t(470079), a = t(140835), r = t(246521), s = t(481060), o = t(911969), c = t(555573), u = t(10718), d = t(895924), m = t(585483), p = t(499254), _ = t(541099), E = t(827498), A = t(496158), N = t(676161), h = t(660090), f = t(783097), C = t(870205), I = t(981631), v = t(689079), P = t(689938), x = t(763963);
+function T(e) {
     var n, t;
     let {
             channel: r,
@@ -12,22 +12,23 @@ function g(e) {
             section: u,
             sectionName: A
         } = e, N = l.useCallback(() => {
-            let e = p.Z.entrypoint();
-            _.y(E.ti.COMMAND), c.Po({
+            let e = _.Z.entrypoint();
+            p.y(E.ti.COMMAND), c.Po({
                 channelId: r.id,
                 command: o,
                 section: u,
                 location: d.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                 sectionName: A,
-                source: e
+                source: e,
+                commandOrigin: d.bB.APPLICATION_LAUNCHER
             }), m.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: r.id });
         }, [
             r.id,
             o,
             u,
             A
-        ]), h = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0, C = l.useMemo(() => (0, i.jsxs)('div', {
-            className: P.commandTextContainer,
+        ]), h = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0, f = l.useMemo(() => (0, i.jsxs)('div', {
+            className: x.commandTextContainer,
             children: [
                 (0, i.jsx)(s.Text, {
                     variant: 'text-sm/semibold',
@@ -46,20 +47,20 @@ function g(e) {
             o.displayName
         ]);
     return h ? (0, i.jsxs)(s.Clickable, {
-        className: P.command,
+        className: x.command,
         onClick: N,
         children: [
-            C,
+            f,
             (0, i.jsx)(a.F, {})
         ]
     }) : (0, i.jsxs)('div', {
-        className: P.command,
+        className: x.command,
         children: [
             (0, i.jsx)(s.Clickable, {
                 onClick: N,
-                children: C
+                children: f
             }),
-            (0, i.jsx)(T, {
+            (0, i.jsx)(g, {
                 channel: r,
                 command: o,
                 sectionName: A
@@ -67,7 +68,7 @@ function g(e) {
         ]
     });
 }
-function T(e) {
+function g(e) {
     let {
             channel: n,
             command: t,
@@ -75,12 +76,12 @@ function T(e) {
         } = e, o = (0, A.D)(n), [c, u] = l.useState(!1), d = l.useCallback(async e => {
             e.stopPropagation();
             try {
-                await (0, C.Y$)({
+                await (0, f.Y$)({
                     command: t,
                     optionValues: {},
                     context: o,
                     sectionName: a
-                }), _.y(E.ti.COMMAND);
+                }), p.y(E.ti.COMMAND);
             } finally {
                 u(!1);
             }
@@ -95,14 +96,14 @@ function T(e) {
         disabled: c,
         size: s.ButtonSizes.ICON,
         color: s.Button.Colors.PRIMARY,
-        className: P.commandSentCTAButton,
-        innerClassName: P.commandSentCTAButtonInner,
-        'aria-label': x.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({ commandName: t.name }),
+        className: x.commandSentCTAButton,
+        innerClassName: x.commandSentCTAButtonInner,
+        'aria-label': P.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({ commandName: t.name }),
         children: [
             (0, i.jsx)(s.Text, {
                 variant: 'text-sm/medium',
                 color: 'redesign-button-primary-text',
-                children: x.Z.Messages.SEND
+                children: P.Z.Messages.SEND
             }),
             (0, i.jsx)(r.U, {
                 size: 'xs',
@@ -111,7 +112,7 @@ function T(e) {
         ]
     });
 }
-function M(e) {
+function R(e) {
     let {
         channel: n,
         commands: t,
@@ -123,7 +124,7 @@ function M(e) {
     return 0 === t.length ? null : (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: P.commandListHeader,
+                className: x.commandListHeader,
                 children: [
                     (0, i.jsx)(s.Heading, {
                         variant: 'heading-sm/semibold',
@@ -133,9 +134,9 @@ function M(e) {
                 ]
             }),
             (0, i.jsx)('ul', {
-                className: P.commandContainer,
+                className: x.commandContainer,
                 'aria-label': a,
-                children: t.map(e => (0, i.jsx)(g, {
+                children: t.map(e => (0, i.jsx)(T, {
                     channel: n,
                     command: e,
                     section: l,
@@ -145,7 +146,7 @@ function M(e) {
         ]
     });
 }
-function L(e) {
+function M(e) {
     var n;
     let {
             channel: t,
@@ -160,8 +161,8 @@ function L(e) {
             limit: v.tn,
             includeFrecency: !0
         }), m = null !== (n = d.find(e => e.id === a.id)) && void 0 !== n ? n : null, {
-            sortOrder: _,
-            setSortOrder: p,
+            sortOrder: p,
+            setSortOrder: _,
             commands: E,
             canSort: A
         } = (0, h.Z)({
@@ -174,30 +175,30 @@ function L(e) {
         a.id,
         s
     ]);
-    let C = (0, N.Z)({
+    let f = (0, N.Z)({
         channel: t,
         commands: E,
         limit: 5
     });
     return (0, i.jsxs)('ul', {
-        className: P.contentContainer,
+        className: x.contentContainer,
         children: [
-            (0, i.jsx)(M, {
+            (0, i.jsx)(R, {
                 channel: t,
                 section: m,
-                commands: C,
-                headerName: x.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
+                commands: f,
+                headerName: P.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
                 sectionName: r
             }),
-            (0, i.jsx)(M, {
+            (0, i.jsx)(R, {
                 channel: t,
                 section: m,
                 commands: E,
-                headerName: x.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
+                headerName: P.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
                 sectionName: r,
-                children: A && (0, i.jsx)(f.Z, {
-                    sortOrder: _,
-                    onSortOptionClick: p
+                children: A && (0, i.jsx)(C.Z, {
+                    sortOrder: p,
+                    onSortOptionClick: _
                 })
             })
         ]

@@ -11,7 +11,8 @@ function f(e) {
         activeOptionName: null,
         preferredCommandId: null,
         optionStates: {},
-        initialValues: {}
+        initialValues: {},
+        commandOrigin: null
     }), _[e];
 }
 function h(e) {
@@ -27,20 +28,21 @@ function h(e) {
             sectionName: u,
             query: c,
             searchResultsPosition: _,
-            source: E
-        } = e, h = f(n);
-    if ((null == r ? void 0 : r.id) === (null === (t = h.activeCommand) || void 0 === t ? void 0 : t.id))
+            source: E,
+            commandOrigin: h
+        } = e, p = f(n);
+    if ((null == r ? void 0 : r.id) === (null === (t = p.activeCommand) || void 0 === t ? void 0 : t.id))
         return !1;
-    h.activeCommand = r, h.activeCommandSection = i, h.activeOptionName = null, h.preferredCommandId = null, h.initialValues = null != a ? a : {};
-    let p = {};
+    p.activeCommand = r, p.activeCommandSection = i, p.activeOptionName = null, p.preferredCommandId = null, p.initialValues = null != a ? a : {}, p.commandOrigin = null != h ? h : null;
+    let m = {};
     return (null == r ? void 0 : r.options) != null && r.options.forEach(e => {
-        p[e.name] = {
+        m[e.name] = {
             isActive: !1,
             hasValue: !1,
             lastValidationResult: null,
             optionValue: null
         };
-    }), h.optionStates = p, null != r && (0, d.qJ)({
+    }), p.optionStates = m, null != r && (0, d.qJ)({
         command: r,
         location: o,
         triggerSection: s,
@@ -125,6 +127,9 @@ class I extends (r = s.ZP.Store) {
     }
     getOptionState(e, t) {
         return f(e).optionStates[t];
+    }
+    getCommandOrigin(e) {
+        return f(e).commandOrigin;
     }
     getOption(e, t) {
         var n, r;

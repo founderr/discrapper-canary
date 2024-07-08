@@ -1,10 +1,10 @@
 t(47120);
-var i = t(735250), l = t(470079), a = t(367907), r = t(541099), s = t(695676), o = t(173790), c = t(361917), u = t(684256), d = t(981631), m = t(933320);
+var i = t(735250), l = t(470079), a = t(100527), r = t(367907), s = t(906732), o = t(541099), c = t(695676), u = t(173790), d = t(361917), m = t(684256), p = t(981631), _ = t(933320);
 n.Z = l.memo(l.forwardRef(function (e, n) {
     let t, {
-            channel: _,
-            entrypoint: p
-        } = e, [E, A] = l.useState(''), N = function (e) {
+            channel: E,
+            entrypoint: A
+        } = e, [N, h] = l.useState(''), f = function (e) {
             let [n, t] = l.useState(null), i = l.useRef(0);
             return l.useEffect(() => {
                 null == n || n.scrollTo(0, 0);
@@ -21,21 +21,21 @@ n.Z = l.memo(l.forwardRef(function (e, n) {
                         i.current = n.scrollTop;
                 }
             }, [n]), t;
-        }(E);
+        }(N), {analyticsLocations: C} = (0, s.ZP)(a.Z.APP_LAUNCHER);
     l.useEffect(() => {
-        (0, a.yw)(d.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
-            source: p,
+        (0, r.yw)(p.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
+            source: A,
             location: 'app_launcher'
         });
-    }, [p]);
+    }, [A]);
     let {
-        history: h,
-        setHistory: C,
-        currentView: f,
-        pushHistory: I,
-        goBack: v
+        history: I,
+        setHistory: v,
+        currentView: P,
+        pushHistory: x,
+        goBack: T
     } = function () {
-        let [e, n] = l.useState([{ type: s.gc.HOME }]), t = e[e.length - 1];
+        let [e, n] = l.useState([{ type: c.gc.HOME }]), t = e[e.length - 1];
         return {
             history: e,
             setHistory: n,
@@ -57,56 +57,59 @@ n.Z = l.memo(l.forwardRef(function (e, n) {
     switch (l.useEffect(() => {
             let e = Date.now();
             return () => {
-                (0, a.yw)(d.rMx.APP_LAUNCHER_CLOSED, {
-                    reason: r.Z.closeReason(),
+                (0, r.yw)(p.rMx.APP_LAUNCHER_CLOSED, {
+                    reason: o.Z.closeReason(),
                     time_spent: Date.now() - e,
-                    source: p
+                    source: A
                 });
             };
-        }, [p]), null == f ? void 0 : f.type) {
-    case s.gc.HOME:
-        t = (0, i.jsx)(c.Z, {
-            setScroller: N,
-            channel: _,
-            entrypoint: p,
-            searchQuery: E,
-            setSearchQuery: A
+        }, [A]), null == P ? void 0 : P.type) {
+    case c.gc.HOME:
+        t = (0, i.jsx)(d.Z, {
+            setScroller: f,
+            channel: E,
+            entrypoint: A,
+            searchQuery: N,
+            setSearchQuery: h
         });
         break;
-    case s.gc.LIST:
+    case c.gc.LIST:
+        t = (0, i.jsx)(m.Z, {
+            channel: E,
+            entrypoint: A,
+            title: P.title,
+            look: P.look,
+            items: P.items,
+            sectionName: P.sectionName
+        });
+        break;
+    case c.gc.APPLICATION:
         t = (0, i.jsx)(u.Z, {
-            channel: _,
-            entrypoint: p,
-            title: f.title,
-            look: f.look,
-            items: f.items,
-            sectionName: f.sectionName
-        });
-        break;
-    case s.gc.APPLICATION:
-        t = (0, i.jsx)(o.Z, {
-            channel: _,
-            application: f.application,
-            sectionName: f.sectionName
+            channel: E,
+            application: P.application,
+            sectionName: P.sectionName
         });
         break;
     default:
         t = null;
     }
     return (0, i.jsx)('div', {
-        className: m.drawerSizingWrapper,
+        className: _.drawerSizingWrapper,
         ref: n,
         children: (0, i.jsx)('div', {
-            className: m.contentWrapper,
-            children: (0, i.jsx)(s.uX.Provider, {
+            className: _.contentWrapper,
+            children: (0, i.jsx)(c.uX.Provider, {
                 value: {
-                    history: h,
-                    setHistory: C,
-                    currentView: f,
-                    pushHistory: I,
-                    goBack: v
+                    history: I,
+                    setHistory: v,
+                    currentView: P,
+                    pushHistory: x,
+                    goBack: T
                 },
-                children: t
+                children: (0, i.jsx)(s.Gt, {
+                    value: C,
+                    children: t
+                })
             })
         })
     });
