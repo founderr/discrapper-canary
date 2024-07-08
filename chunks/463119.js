@@ -1,6 +1,6 @@
 n.d(t, {
     i: function () {
-        return P;
+        return M;
     }
 }), n(47120);
 var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(442837), c = n(780384), d = n(481060), u = n(596454), _ = n(515753), h = n(410030), E = n(607070), I = n(100527), m = n(906732), g = n(821982), p = n(377171), T = n(633302), S = n(153066), C = n(335131), f = n(141594), N = n(302800), A = n(981631), Z = n(689938), L = n(383980);
@@ -40,11 +40,21 @@ let v = e => {
             onClick: g,
             children: o
         });
-    }, R = s.memo(function (e) {
+    }, R = e => {
+        let {
+            selected: t,
+            locationState: n
+        } = e;
+        return (0, i.jsx)(O, {
+            selected: t,
+            locationState: n,
+            children: (0, i.jsx)(v, {})
+        });
+    }, x = s.memo(function (e) {
         let {
                 displayOptions: t,
                 assetId: n
-            } = e, s = (0, o.e7)([E.Z], () => E.Z.useReducedMotion), a = null != n ? (0, g.Z)(n, d.AvatarSizes.SIZE_80, !s) : void 0;
+            } = e, s = (0, o.e7)([E.Z], () => E.Z.useReducedMotion), a = null != n ? (0, g.Z)(n, d.AvatarSizes.SIZE_80, !s) : void 0, r = t.title(), l = t.type === N.k2.COACHTIP_HEADLINE_ONLY;
         return (0, i.jsxs)('div', {
             className: L.shopMarketingTooltipContent,
             children: [
@@ -62,8 +72,8 @@ let v = e => {
                     className: L.shopMarketingTooltipText,
                     children: [
                         (0, i.jsx)(d.Heading, {
-                            variant: 'heading-sm/bold',
-                            children: t.title()
+                            variant: l ? 'heading-sm/medium' : 'heading-sm/bold',
+                            children: 'string' == typeof r ? r : r.format()
                         }),
                         null != t.body && (0, i.jsx)(d.Text, {
                             variant: 'text-xs/normal',
@@ -74,7 +84,7 @@ let v = e => {
                 })
             ]
         });
-    }), x = e => {
+    }), b = e => {
         let {
                 selected: t,
                 locationState: n,
@@ -83,9 +93,9 @@ let v = e => {
                 o(e => (e + 1) % a.assetIds.length), _(!0), null == e || e();
             }, [a.assetIds]), g = s.useCallback(e => {
                 _(!1), null == e || e();
-            }, []);
+            }, []), p = a.title();
         return (0, i.jsx)(d.Tooltip, {
-            text: (0, i.jsx)(R, {
+            text: (0, i.jsx)(x, {
                 displayOptions: a,
                 assetId: a.assetIds[l]
             }),
@@ -94,7 +104,7 @@ let v = e => {
             delay: 100,
             allowOverflow: !0,
             hideOnClick: !1,
-            'aria-label': a.title(),
+            'aria-label': 'string' == typeof p ? p : Z.Z.Messages.COLLECTIBLES_SEE_WHATS_NEW,
             children: e => (0, i.jsxs)(O, {
                 className: null != a.entryPointClassName ? (0, S.l)(L, a.entryPointClassName) : void 0,
                 selected: t,
@@ -113,7 +123,7 @@ let v = e => {
                 ]
             })
         });
-    }, b = e => {
+    }, P = e => {
         let {
                 selected: t,
                 locationState: n,
@@ -144,7 +154,7 @@ let v = e => {
                 children: (0, i.jsx)(v, { color: a.badgeColor })
             })
         });
-    }, P = e => {
+    }, M = e => {
         let {
                 selected: t,
                 locationState: n
@@ -152,16 +162,22 @@ let v = e => {
         if (null != s)
             switch (s.type) {
             case N.k2.TOOLTIP:
+                return (0, i.jsx)(P, {
+                    selected: t,
+                    locationState: n,
+                    displayOptions: s
+                });
+            case N.k2.COACHTIP_HEADLINE_ONLY:
+            case N.k2.COACHTIP:
                 return (0, i.jsx)(b, {
                     selected: t,
                     locationState: n,
                     displayOptions: s
                 });
-            case N.k2.COACHTIP:
-                return (0, i.jsx)(x, {
+            case N.k2.BADGE:
+                return (0, i.jsx)(R, {
                     selected: t,
-                    locationState: n,
-                    displayOptions: s
+                    locationState: n
                 });
             }
         return (0, i.jsx)(O, {

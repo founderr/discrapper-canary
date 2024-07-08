@@ -39,6 +39,11 @@ let a = (0, i.B)({
                 id: 6,
                 label: 'Tide',
                 config: { coachtipEdition: s.LM.TIDE }
+            },
+            {
+                id: 7,
+                label: 'Dark Fantasy',
+                config: { coachtipEdition: s.LM.DARK_FANTASY }
             }
         ]
     }), r = e => a.useExperiment({ location: e }).coachtipEdition;
