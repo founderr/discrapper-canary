@@ -7,8 +7,8 @@ t.Z = function (e) {
             color: n = r.Z.colors.WHITE,
             quest: a,
             isInventory: I
-        } = e, T = (0, l.e7)([c.default], () => c.default.locale), {percentComplete: h} = (0, u.Rf)(a), N = (0, u.Jf)(a), p = null != N ? N.completedRatio : h, f = 100 * p, C = (0, _.r)(a);
-    return C && !I ? (0, i.jsx)(E.Z, {}) : (0, i.jsxs)('div', {
+        } = e, T = (0, l.e7)([c.default], () => c.default.locale), {percentComplete: h} = (0, u.Rf)(a), N = (0, u.Jf)(a), p = null != N ? N.completedRatio : h, f = null != N ? ''.concat(null == N ? void 0 : N.progress, '/').concat(null == N ? void 0 : N.target) : (0, d.T3)(T, p, { roundingMode: 'floor' }), C = 100 * p, g = (0, _.r)(a);
+    return g && !I ? (0, i.jsx)(E.Z, {}) : (0, i.jsxs)('div', {
         className: s()(m.wrapper, t),
         style: { color: n.css },
         children: [
@@ -19,24 +19,24 @@ t.Z = function (e) {
                         variant: 'text-xs/semibold',
                         className: m.percentCompleteLabel,
                         color: 'none',
-                        children: (0, d.T3)(T, p, { roundingMode: 'floor' })
+                        children: f
                     }),
                     (0, i.jsx)('div', {
                         className: m.percentCompleteLabelOffset,
-                        style: { width: ''.concat(100 - f, '%') }
+                        style: { width: ''.concat(100 - C, '%') }
                     })
                 ]
             }),
             (0, i.jsx)('div', {
                 className: m.progressBar,
                 role: 'progressbar',
-                'aria-valuenow': f,
+                'aria-valuenow': C,
                 children: (0, i.jsx)('div', {
                     className: m.progressBarFill,
-                    style: { width: ''.concat(f, '%') }
+                    style: { width: ''.concat(C, '%') }
                 })
             }),
-            C && (0, i.jsx)(E.Z, { isInventory: I })
+            g && (0, i.jsx)(E.Z, { isInventory: I })
         ]
     });
 };

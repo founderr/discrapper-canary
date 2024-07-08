@@ -21,7 +21,8 @@ function o(e) {
     (0, i.openModalLazy)(async () => {
         let {default: e} = await Promise.all([
             n.e('54535'),
-            n.e('12506')
+            n.e('54340'),
+            n.e('87353')
         ]).then(n.bind(n, 985866));
         return n => (0, r.jsx)(e, {
             ...n,
@@ -35,7 +36,8 @@ function s(e, t) {
     (0, i.openModalLazy)(async () => {
         let {default: i} = await Promise.all([
             n.e('54535'),
-            n.e('16658')
+            n.e('54340'),
+            n.e('12360')
         ]).then(n.bind(n, 117571));
         return n => (0, r.jsx)(i, {
             ...n,
