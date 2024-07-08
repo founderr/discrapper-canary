@@ -412,7 +412,7 @@ let {Themes: n} = r(15202).V, _ = {
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_23_ALPHA',
-                opacity: 1
+                opacity: 0.1
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',
@@ -3294,19 +3294,19 @@ let {Themes: n} = r(15202).V, _ = {
             category: 'generic',
             [n.DARK]: {
                 raw: 'TRANSPARENT',
-                opacity: 0.01
+                opacity: 0
             },
             [n.LIGHT]: {
                 raw: 'TRANSPARENT',
-                opacity: 0.01
+                opacity: 0
             },
             [n.MIDNIGHT]: {
                 raw: 'TRANSPARENT',
-                opacity: 0.01
+                opacity: 0
             },
             [n.DARKER]: {
                 raw: 'TRANSPARENT',
-                opacity: 0.01
+                opacity: 0
             }
         },
         INFO_BOX_BACKGROUND: {
@@ -3568,7 +3568,7 @@ let {Themes: n} = r(15202).V, _ = {
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_23_ALPHA',
-                opacity: 1
+                opacity: 0.1
             },
             [n.DARKER]: {
                 raw: 'PLUM_24',
@@ -5273,7 +5273,7 @@ let {Themes: n} = r(15202).V, _ = {
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_23_ALPHA',
-                opacity: 1
+                opacity: 0.1
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',
@@ -5445,7 +5445,7 @@ let {Themes: n} = r(15202).V, _ = {
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_23_ALPHA',
-                opacity: 1
+                opacity: 0.1
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',
@@ -6754,7 +6754,7 @@ let {Themes: n} = r(15202).V, _ = {
             PARTNER: '#4087ed',
             PAYPAL: '#13216b',
             PLAYSTATION: '#032f87',
-            PLUM_23_ALPHA: '#A5B0E9',
+            PLUM_23_ALPHA: '#BCBCF0',
             PLUM_0: '#f9f9fa',
             PLUM_1: '#f3f3f4',
             PLUM_10: '#818491',

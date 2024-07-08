@@ -228,7 +228,7 @@ let r = Object.freeze({
     PARTNER: 'hsl(215, calc(var(--saturation-factor, 1) * 82.8%), 59%)',
     PAYPAL: 'hsl(230, calc(var(--saturation-factor, 1) * 69.8%), 24.7%)',
     PLAYSTATION: 'hsl(220, calc(var(--saturation-factor, 1) * 95.7%), 27.1%)',
-    PLUM_23_ALPHA: 'hsl(230, calc(var(--saturation-factor, 1) * 60.7%), 78%)',
+    PLUM_23_ALPHA: 'hsl(240, calc(var(--saturation-factor, 1) * 63.4%), 83.9%)',
     PLUM_0: 'hsl(240, calc(var(--saturation-factor, 1) * 9.1%), 97.8%)',
     PLUM_1: 'hsl(240, calc(var(--saturation-factor, 1) * 4.3%), 95.5%)',
     PLUM_10: 'hsl(229, calc(var(--saturation-factor, 1) * 6.8%), 53.7%)',
