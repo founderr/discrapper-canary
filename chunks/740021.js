@@ -1,94 +1,93 @@
 i.d(n, {
     Z: function () {
-        return M;
+        return j;
     }
 }), i(47120);
-var o = i(735250);
+var l = i(735250);
 i(470079);
-var s = i(442837), t = i(974674), l = i(696826), a = i(420660), r = i(233440), c = i(314897), d = i(158776), u = i(699516), I = i(998502), E = i(751009), _ = i(332390), f = i(877485), Z = i(505737), m = i(204197), v = i(78675), S = i(438163), x = i(652853), N = i(900687), h = i(228168), g = i(182294), p = i(602091), C = i(231338), T = i(505451);
-let R = I.ZP.getEnableHardwareAcceleration() ? t.Xo : t.qE;
-function M(e) {
+var s = i(442837), o = i(974674), t = i(696826), a = i(420660), r = i(233440), d = i(314897), c = i(158776), u = i(699516), I = i(998502), f = i(751009), _ = i(332390), E = i(877485), m = i(204197), Z = i(78675), v = i(438163), S = i(652853), x = i(900687), h = i(228168), g = i(182294), N = i(602091), p = i(231338), T = i(505451);
+let C = I.ZP.getEnableHardwareAcceleration() ? o.Xo : o.qE;
+function j(e) {
     let {
             user: n,
             displayProfile: i,
-            activity: t,
+            activity: o,
             guildId: I,
-            channelId: M,
-            transitionState: j,
+            channelId: j,
+            transitionState: R,
             viewProfileItem: A,
-            onClose: P
-        } = e, {theme: U} = (0, x.z)(), O = (0, Z.Z)(n.id, I), {
-            avatarSrc: L,
-            eventHandlers: b,
-            avatarDecorationSrc: y
+            onClose: M
+        } = e, {theme: P} = (0, S.z)(), {
+            avatarSrc: U,
+            eventHandlers: O,
+            avatarDecorationSrc: L
         } = (0, m.Z)({
             user: n,
             guildId: null == i ? void 0 : i.guildId,
             size: g.EF.SIZE_120
-        }), {profileStatusEditEnabled: D} = (0, E.K)({ location: 'SimplifiedUserProfileModalHeader' }), {
-            originalFriendingEnabled: B,
-            improvedFriendingEnabled: F
-        } = (0, f.V)({ location: 'SimplifiedUserProfileModalHeader' }), {
-            persistentCallCtaEnabled: G,
-            activeInviteToCallCtaEnabled: k
-        } = (0, _.l)({ location: 'SimplifiedUserProfileModalHeader' }), w = (0, s.e7)([u.Z], () => u.Z.getRelationshipType(n.id)), Y = (0, s.e7)([c.default], () => c.default.getId() === n.id), [V, H] = (0, s.Wu)([d.Z], () => {
-            let e = d.Z.isMobileOnline(n.id);
-            return (0, r.W)(n, M) ? [
-                C.Sk.UNKNOWN,
+        }), {profileStatusEditEnabled: b} = (0, f.K)({ location: 'SimplifiedUserProfileModalHeader' }), {
+            originalFriendingEnabled: y,
+            improvedFriendingEnabled: B
+        } = (0, E.V)({ location: 'SimplifiedUserProfileModalHeader' }), {
+            persistentCallCtaEnabled: D,
+            activeInviteToCallCtaEnabled: F
+        } = (0, _.l)({ location: 'SimplifiedUserProfileModalHeader' }), G = (0, s.e7)([u.Z], () => u.Z.getRelationshipType(n.id)), w = (0, s.e7)([d.default], () => d.default.getId() === n.id), [k, Y] = (0, s.Wu)([c.Z], () => {
+            let e = c.Z.isMobileOnline(n.id);
+            return (0, r.W)(n, j) ? [
+                p.Sk.UNKNOWN,
                 e
-            ] : (0, a.Z)(t) ? [
-                C.Sk.STREAMING,
+            ] : (0, a.Z)(o) ? [
+                p.Sk.STREAMING,
                 e
             ] : [
-                d.Z.getStatus(n.id),
+                c.Z.getStatus(n.id),
                 e
             ];
         });
-    return (0, o.jsxs)('header', {
+    return (0, l.jsxs)('header', {
         children: [
-            (0, o.jsx)(v.Z, {
+            (0, l.jsx)(Z.Z, {
                 user: n,
                 displayProfile: i,
                 profileType: h.y0.FULL_SIZE,
                 hasProfileEffect: (null == i ? void 0 : i.profileEffectId) != null
             }),
-            (0, o.jsxs)('div', {
+            (0, l.jsxs)('div', {
                 className: T.headerInner,
                 children: [
-                    (0, o.jsx)('div', {
-                        ...b,
-                        children: (0, o.jsx)(R, {
-                            src: L,
-                            avatarDecoration: y,
+                    (0, l.jsx)('div', {
+                        ...O,
+                        children: (0, l.jsx)(C, {
+                            src: U,
+                            avatarDecoration: L,
                             size: g.EF.SIZE_120,
                             className: T.avatar,
-                            status: V,
-                            statusBackdropColor: (0, l.QF)(U),
+                            status: k,
+                            statusBackdropColor: (0, t.QF)(P),
                             'aria-label': n.username,
-                            isMobile: H,
+                            isMobile: Y,
                             statusTooltip: !0,
                             statusTooltipDelay: h.vB
                         })
                     }),
-                    (0, o.jsx)(N.Z, {
+                    (0, l.jsx)(x.Z, {
                         user: n,
-                        isCurrentUser: Y,
+                        isCurrentUser: w,
                         guildId: I,
-                        canDM: O,
-                        relationshipType: w,
-                        originalFriendingEnabled: B,
-                        improvedFriendingEnabled: F,
-                        persistentCallCtaEnabled: G,
-                        activeInviteToCallCtaEnabled: k,
+                        relationshipType: G,
+                        originalFriendingEnabled: y,
+                        improvedFriendingEnabled: B,
+                        persistentCallCtaEnabled: D,
+                        activeInviteToCallCtaEnabled: F,
                         viewProfileItem: A,
-                        onClose: P
+                        onClose: M
                     }),
-                    (0, o.jsx)(S.Z, {
+                    (0, l.jsx)(v.Z, {
                         user: n,
                         profileType: h.y0.FULL_SIZE,
-                        editEnabled: D,
-                        hasEntered: j === p.Dv.ENTERED,
-                        onClose: P
+                        editEnabled: b,
+                        hasEntered: R === N.Dv.ENTERED,
+                        onClose: M
                     })
                 ]
             })
