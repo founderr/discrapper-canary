@@ -9,7 +9,7 @@ function a(e, t, n) {
 }
 n.d(t, {
     Hx: function () {
-        return l;
+        return u;
     },
     f$: function () {
         return o;
@@ -18,15 +18,15 @@ n.d(t, {
         return r;
     }
 }), n(47120);
-let o = 50035;
-function s(e) {
+let o = 50035, s = '__root_errors';
+function l(e) {
     return e.map(e => ({
         code: 'UNKNOWN',
         message: e
     }));
 }
 (i = r || (r = {})).HCAPTCHA = 'hcaptcha', i.RECAPTCHA = 'recaptcha';
-class l {
+class u {
     hasFieldErrors() {
         return null != this.errors && Object.keys(this.errors).length > 0;
     }
@@ -36,6 +36,20 @@ class l {
         for (; e.length > 0 && null != t;)
             t = t[e[0]], e = e.splice(1);
         return null == t ? void 0 : t._errors;
+    }
+    getAllFieldErrors() {
+        return this.getAllFieldErrorsUnder(this.errors);
+    }
+    getAllFieldErrorsUnder(e) {
+        let t = {}, n = null == e ? void 0 : e._errors;
+        return null != n && n.length > 0 && (t[s] = n), void 0 !== e && Object.entries(e).forEach(e => {
+            let [n, r] = e;
+            if ('_errors' !== n)
+                Object.entries(this.getAllFieldErrorsUnder(r)).forEach(e => {
+                    let [r, i] = e;
+                    r === s ? t[n] = i : t[''.concat(n, '.').concat(r)] = i;
+                });
+        }), t;
     }
     getFirstFieldErrorMessage(e) {
         let t = this.getFieldErrors(e);
@@ -62,7 +76,7 @@ class l {
         let {
             message: r,
             code: i,
-            retryAfter: l,
+            retryAfter: s,
             errors: u,
             status: c,
             captchaFields: d
@@ -87,11 +101,11 @@ class l {
                     let t = {};
                     for (let [n, r] of Object.entries(e)) {
                         if ('_misc' === n) {
-                            t._errors = s(r);
+                            t._errors = l(r);
                             continue;
                         }
                         let e = {};
-                        e._errors = s(r), t[n] = e;
+                        e._errors = l(r), t[n] = e;
                     }
                     return t;
                 }(n)
@@ -103,6 +117,6 @@ class l {
                 status: e.status
             };
         }(e, t);
-        this.message = null != r ? r : n, this.code = null != i ? i : -1, this.retryAfter = l, this.errors = u, this.status = c, this.captchaFields = null != d ? d : {};
+        this.message = null != r ? r : n, this.code = null != i ? i : -1, this.retryAfter = s, this.errors = u, this.status = c, this.captchaFields = null != d ? d : {};
     }
 }

@@ -38,7 +38,7 @@ t.Z = a.memo(function (e) {
             R.S.unsubscribe(D.CkL.UPLOAD_FILE, e);
         };
     });
-    let e_ = (0, x.NE)(V), ef = (0, x.Xu)(V), eE = !T.dN.useSetting() && !(0, j.isAndroidWeb)() && null != window.ResizeObserver, eC = (0, I.UI)(null != V ? V : void 0), eg = (0, c.useRedesignIconContext)().enabled, eI = (0, p.qB)(V.id), ex = null !== (s = null == $ ? void 0 : $.length) && void 0 !== s ? s : 0, eT = (0, y.Z)({
+    let e_ = (0, x.NE)(V), ef = (0, x.Xu)(V), eE = !T.dN.useSetting() && !(0, j.isAndroidWeb)() && null != window.ResizeObserver, eC = (0, I.UI)(null != V ? V : void 0), eg = (0, c.useRedesignIconContext)().enabled, eI = (0, p.qB)(V.id, 'ChannelAttachButton'), ex = null !== (s = null == $ ? void 0 : $.length) && void 0 !== s ? s : 0, eT = (0, y.Z)({
             canAttachFiles: ed,
             canStartThreads: e_ || ef,
             useSlate: eE,
