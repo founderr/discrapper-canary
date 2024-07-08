@@ -19,7 +19,7 @@ function m(e) {
             authorizationError: E.Z.error,
             authorizing: E.Z.isFetchingAuthorization
         })), [A, h] = r.useState(null != n ? n : ''), [g, O] = r.useState('8080'), [p, R] = r.useState('localhost'), x = (0, T.Dt)(), M = C.test(A);
-    async function D() {
+    async function f() {
         d.q$();
         let e = function (e, t, s) {
             if (null == e)
@@ -34,9 +34,9 @@ function m(e) {
         null != await d.Wt(A, e) && t();
     }
     r.useEffect(() => () => c.Z.wait(() => d.q$()), []);
-    let f = null != n && n === A, P = f ? function () {
+    let D = null != n && n === A, P = D ? function () {
             d.mc(), h(''), R(null);
-        } : D;
+        } : f;
     return (0, i.jsxs)(l.ModalRoot, {
         'aria-labelledby': x,
         transitionState: s,
@@ -127,8 +127,8 @@ function m(e) {
                                     submitting: m,
                                     type: 'submit',
                                     disabled: !M || 0 === A.length || 'localhost' === p && 0 === g.length,
-                                    color: f ? l.Button.Colors.RED : l.Button.Colors.GREEN,
-                                    children: f ? I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
+                                    color: D ? l.Button.Colors.RED : l.Button.Colors.GREEN,
+                                    children: D ? I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
                                 })
                             ]
                         })

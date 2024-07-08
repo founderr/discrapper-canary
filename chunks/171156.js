@@ -76,7 +76,7 @@ function M() {
         Z(m.N7.PINGING), null === (e = p.connection) || void 0 === e || e.setPingInterval(500), P();
     }
 }
-function D(e, t) {
+function f(e, t) {
     if (null != p.currentTest) {
         if (!0 !== p.failed)
             p.currentTest = p.currentTest + 1, p.results.push({
@@ -85,7 +85,7 @@ function D(e, t) {
             }), p.currentTest === O ? (Z(m.N7.UPLOADING), j()) : b();
     }
 }
-function f(e) {
+function D(e) {
     if (void 0 !== e)
         p.pings.length < 10 && (p.pings.push(e), p.pings.length < 10 && Z(m.N7.PINGING), P());
 }
@@ -235,6 +235,6 @@ r = 'RTCSpeedTestStore', (i = 'displayName') in (a = B) ? Object.defineProperty(
             rtcServerId: p.rtcServerId,
             endpoint: e.endpoint,
             token: e.token
-        }), p.connection.on('state', R), p.connection.on('resuming', x), p.connection.on('ready', M), p.connection.on('speed-test-completed', D), p.connection.on('ping', f), p.connection.on('ping-timeout', f), p.connection.connect(), Z(m.N7.CONNECTING);
+        }), p.connection.on('state', R), p.connection.on('resuming', x), p.connection.on('ready', M), p.connection.on('speed-test-completed', f), p.connection.on('ping', D), p.connection.on('ping-timeout', D), p.connection.connect(), Z(m.N7.CONNECTING);
     }
 });

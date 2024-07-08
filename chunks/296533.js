@@ -1,6 +1,6 @@
 s.d(t, {
     Z: function () {
-        return D;
+        return f;
     },
     r: function () {
         return M;
@@ -216,7 +216,7 @@ function M(e) {
         ]
     });
 }
-function D(e) {
+function f(e) {
     let {
             guildBoostSlots: t,
             premiumSubscription: s

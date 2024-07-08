@@ -1,5 +1,5 @@
 s(653041), s(47120);
-var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(658722), l = s.n(o), c = s(243814), d = s(442837), _ = s(921072), E = s(1561), u = s(481060), T = s(384275), I = s(230711), S = s(497321), N = s(468026), C = s(566620), m = s(317381), A = s(979200), h = s(713938), g = s(881998), O = s(246946), p = s(285952), R = s(768581), x = s(49012), M = s(210887), D = s(436267), f = s(494620), P = s(981631), L = s(689938), Z = s(756576), b = s(549856);
+var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(658722), l = s.n(o), c = s(243814), d = s(442837), _ = s(921072), E = s(1561), u = s(481060), T = s(384275), I = s(230711), S = s(497321), N = s(468026), C = s(566620), m = s(317381), A = s(979200), h = s(713938), g = s(881998), O = s(246946), p = s(285952), R = s(768581), x = s(49012), M = s(210887), f = s(436267), D = s(494620), P = s(981631), L = s(689938), Z = s(756576), b = s(549856);
 let v = d.ZP.connectStores([M.Z], () => ({ theme: M.Z.theme }))(u.EmptyState);
 function j(e) {
     let {application: t} = e;
@@ -46,10 +46,10 @@ let B = e => {
                 disclosures: i
             } = e, o = () => {
                 let e = L.Z.Messages.DELETE_APP_CONFIRM_MSG;
-                return (0, D.Z)(s.id) && (e = (0, n.jsxs)(n.Fragment, {
+                return (0, f.Z)(s.id) && (e = (0, n.jsxs)(n.Fragment, {
                     children: [
                         e,
-                        (0, n.jsx)(f.Z, {
+                        (0, n.jsx)(D.Z, {
                             className: Z.infoBox,
                             children: L.Z.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT_DISCONNECT_WARNING.format({ applicationName: s.name })
                         })
@@ -72,7 +72,7 @@ let B = e => {
                     href: s.privacy_policy_url,
                     shouldConfirm: !0
                 });
-            }, _ = (0, D.O)(s.id);
+            }, _ = (0, f.O)(s.id);
         return (0, n.jsx)(u.Card, {
             className: r()(Z.authedApp, b.marginBottom8),
             outline: !0,

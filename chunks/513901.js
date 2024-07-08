@@ -16,8 +16,8 @@ function m(e) {
             isTryItOutFlow: O = !1,
             initialSelectedEffectId: p
         } = e, R = (0, E.Kg)(t, s), x = _.ZP.canUsePremiumProfileCustomization(t), {analyticsLocations: M} = (0, l.ZP)(), {
-            pendingProfileEffectId: D,
-            errors: f
+            pendingProfileEffectId: f,
+            errors: D
         } = (0, E.bd)(s), P = a.useCallback(() => (0, c.H)({
             analyticsLocations: M,
             initialSelectedEffectId: p,
@@ -36,14 +36,14 @@ function m(e) {
         x,
         M
     ]);
-    let L = null != s, Z = O || void 0 !== D ? null != D : null != R, b = h ? o.ShinyButton : o.Button;
+    let L = null != s, Z = O || void 0 !== f ? null != f : null != R, b = h ? o.ShinyButton : o.Button;
     return (0, n.jsx)(u.Z, {
         forcedDivider: A,
         borderType: T.Y.PREMIUM,
         hasBackground: !0,
         title: m,
         showBorder: g,
-        errors: f,
+        errors: D,
         className: i,
         children: (0, n.jsxs)('div', {
             className: C.buttonsContainer,

@@ -15,7 +15,7 @@ function M() {
     let t = (0, o.e7)([A.Z], () => A.Z.hidePersonalInformation), {
             pendingBio: s,
             ...i
-        } = (0, o.cj)([h.Z], () => h.Z.getAllPending()), M = p.dN.useSetting() && null != s ? S.ZP.parse(void 0, s).content : s, D = O.ZP.canUsePremiumProfileCustomization(e), {analyticsLocations: f} = (0, T.ZP)(u.Z.PROFILE);
+        } = (0, o.cj)([h.Z], () => h.Z.getAllPending()), M = p.dN.useSetting() && null != s ? S.ZP.parse(void 0, s).content : s, f = O.ZP.canUsePremiumProfileCustomization(e), {analyticsLocations: D} = (0, T.ZP)(u.Z.PROFILE);
     a.useEffect(() => () => l.Z.wait(d.W3), []);
     let P = 'UserSettingsProfileCustomization';
     return ((0, E.j)({
@@ -25,20 +25,20 @@ function M() {
         location: P + ' auto off',
         autoTrackExposure: !1
     }), t) ? (0, n.jsx)(_.Z, {}) : (0, n.jsxs)(T.Gt, {
-        value: f,
+        value: D,
         children: [
             (0, n.jsx)(I.Z, {}),
             (0, n.jsx)(N.Z, {
                 profilePreview: (0, n.jsx)(C.Z, {
                     user: e,
-                    canUsePremiumCustomization: D,
+                    canUsePremiumCustomization: f,
                     onUpsellClick: R.Z,
                     pendingBio: M,
                     ...i
                 }),
                 children: (0, n.jsx)(x.Z, {})
             }),
-            !D && (0, n.jsx)(m.Z, { user: e })
+            !f && (0, n.jsx)(m.Z, { user: e })
         ]
     });
 }

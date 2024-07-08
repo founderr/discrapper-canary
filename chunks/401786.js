@@ -3,7 +3,7 @@ s.r(t), s.d(t, {
         return U;
     }
 }), s(411104), s(47120);
-var n, a, i = s(735250), r = s(470079), o = s(392711), l = s.n(o), c = s(442837), d = s(481060), _ = s(355467), E = s(179360), u = s(100527), T = s(906732), I = s(374649), S = s(431369), N = s(55610), C = s(653798), m = s(311821), A = s(42818), h = s(314884), g = s(509545), O = s(78839), p = s(285952), R = s(267642), x = s(74538), M = s(937615), D = s(518062), f = s(474936), P = s(231338), L = s(689938), Z = s(326785);
+var n, a, i = s(735250), r = s(470079), o = s(392711), l = s.n(o), c = s(442837), d = s(481060), _ = s(355467), E = s(179360), u = s(100527), T = s(906732), I = s(374649), S = s(431369), N = s(55610), C = s(653798), m = s(311821), A = s(42818), h = s(314884), g = s(509545), O = s(78839), p = s(285952), R = s(267642), x = s(74538), M = s(937615), f = s(518062), D = s(474936), P = s(231338), L = s(689938), Z = s(326785);
 function b(e) {
     let {
         premiumSubscription: t,
@@ -97,7 +97,7 @@ function j(e) {
             let e = g.Z.get(a.planId);
             return {
                 premiumSubscriptionPlan: e,
-                premiumGuildPlan: null != e ? g.Z.getForSkuAndInterval((0, x.Wz)(f.Si.GUILD), e.interval, e.intervalCount) : null
+                premiumGuildPlan: null != e ? g.Z.getForSkuAndInterval((0, x.Wz)(D.Si.GUILD), e.interval, e.intervalCount) : null
             };
         }), {analyticsLocations: j} = (0, T.ZP)(), [B] = (0, I.ED)({
             subscriptionId: a.id,
@@ -117,20 +117,20 @@ function j(e) {
         return (0, i.jsx)(d.Spinner, {});
     let F = a.items.some(e => {
             let {planId: t} = e;
-            return !f.Z1.has(t);
+            return !D.Z1.has(t);
         }) && null == a.renewalMutations || (null === (s = a.renewalMutations) || void 0 === s ? void 0 : s.items.find(e => {
             let {planId: t} = e;
-            return !f.Z1.has(t);
+            return !D.Z1.has(t);
         })) != null, y = O.some(e => {
             let {planId: t} = e;
-            return f.Z1.has(t);
+            return D.Z1.has(t);
         }), V = F || y ? G.total - B.total : -B.total, {
             interval: Y,
             intervalCount: w
         } = P;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(D.Z, { onClose: E }),
+            (0, i.jsx)(f.Z, { onClose: E }),
             (0, i.jsxs)(d.ModalContent, {
                 className: Z.body,
                 children: [

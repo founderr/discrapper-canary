@@ -593,7 +593,7 @@ let eL = new eD(E.Z, __OVERLAY__ ? {
         let {port: t} = e;
         K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
         let n = new URLSearchParams();
-        n.append('build_id', '9398c641e4b3358ca532e1646eef4d4db86bedcb'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString());
+        n.append('build_id', '9eda78f941663298e52793584a8fd4f11772226f'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString());
     },
     OVERLAY_CALL_PRIVATE_CHANNEL: function (e) {
         let {

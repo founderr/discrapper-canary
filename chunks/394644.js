@@ -15,7 +15,7 @@ s.d(t, {
         return G;
     }
 }), s(639576), s(536091), s(47120), s(653041);
-var n = s(470079), a = s(442837), i = s(704215), r = s(493544), o = s(634894), l = s(211242), c = s(770471), d = s(924557), _ = s(706140), E = s(592204), u = s(610697), T = s(631885), I = s(223639), S = s(160913), N = s(725727), C = s(977156), m = s(237292), A = s(314897), h = s(283595), g = s(663389), O = s(594174), p = s(202527), R = s(695346), x = s(620163), M = s(295545), D = s(168308), f = s(839469), P = s(726985), L = s(46140), Z = s(689938);
+var n = s(470079), a = s(442837), i = s(704215), r = s(493544), o = s(634894), l = s(211242), c = s(770471), d = s(924557), _ = s(706140), E = s(592204), u = s(610697), T = s(631885), I = s(223639), S = s(160913), N = s(725727), C = s(977156), m = s(237292), A = s(314897), h = s(283595), g = s(663389), O = s(594174), p = s(202527), R = s(695346), x = s(620163), M = s(295545), f = s(168308), D = s(839469), P = s(726985), L = s(46140), Z = s(689938);
 function b(e) {
     let t = [
             {
@@ -105,7 +105,7 @@ function b(e) {
 }
 function v() {
     var e, t;
-    let s = (0, N.YO)().length, n = (0, S.U)(), r = (0, a.e7)([g.Z], () => g.Z.getProps().impressionSource), f = (0, T.gU)(), P = (0, D.bC)(), Z = (0, d.Go)(), [b] = (0, _.c)(Z ? [i.z.CLIPS_SETTINGS_BETA_TAG] : []), v = 'useGenerateUserSettingsSections';
+    let s = (0, N.YO)().length, n = (0, S.U)(), r = (0, a.e7)([g.Z], () => g.Z.getProps().impressionSource), D = (0, T.gU)(), P = (0, f.bC)(), Z = (0, d.Go)(), [b] = (0, _.c)(Z ? [i.z.CLIPS_SETTINGS_BETA_TAG] : []), v = 'useGenerateUserSettingsSections';
     (0, o.j)({
         location: v + ' auto on',
         autoTrackExposure: !0
@@ -118,7 +118,7 @@ function v() {
         unseenGiftCount: s,
         showPrepaidPaymentPastDueWarning: n,
         impressionSource: r,
-        numOfPendingFamilyRequests: f,
+        numOfPendingFamilyRequests: D,
         isOverlaySupported: P,
         isClipsBetaTagShowing: b === i.z.CLIPS_SETTINGS_BETA_TAG,
         shouldMergeGameSettings: j,
@@ -137,7 +137,7 @@ function v() {
     });
 }
 function j(e) {
-    let {searchResults: t} = (0, f.E)(), s = v();
+    let {searchResults: t} = (0, D.E)(), s = v();
     if (!(0, M.eA)({ location: 'settings' }))
         return new Set();
     let n = s[e], a = Object.fromEntries(Object.entries(s).filter(e => {

@@ -1,16 +1,16 @@
 s.d(t, {
     Z: function () {
-        return f;
+        return D;
     }
 }), s(47120), s(411104);
-var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(512722), l = s.n(o), c = s(442837), d = s(481060), _ = s(976255), E = s(366939), u = s(623573), T = s(190947), I = s(275850), S = s(906732), N = s(15640), C = s(246946), m = s(853872), A = s(509545), h = s(74538), g = s(212895), O = s(296848), p = s(374649), R = s(981631), x = s(689938), M = s(332580), D = s(483085);
-function f(e) {
+var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(512722), l = s.n(o), c = s(442837), d = s(481060), _ = s(976255), E = s(366939), u = s(623573), T = s(190947), I = s(275850), S = s(906732), N = s(15640), C = s(246946), m = s(853872), A = s(509545), h = s(74538), g = s(212895), O = s(296848), p = s(374649), R = s(981631), x = s(689938), M = s(332580), f = s(483085);
+function D(e) {
     let {
             subscription: t,
             onPaymentSourceAdded: s,
             highlightAddPaymentMethodButton: i,
             dropdownClassName: o,
-            analyticsLocation: f,
+            analyticsLocation: D,
             currentInvoicePreview: L,
             disabled: Z = !1
         } = e, b = (0, c.e7)([C.Z], () => C.Z.hidePersonalInformation), [v, j] = (0, c.Wu)([m.Z], () => [
@@ -19,7 +19,7 @@ function f(e) {
         ]), B = (0, N.V)((0, O.yb)(t)), {analyticsLocations: U} = (0, S.ZP)(), G = a.useMemo(() => Object.values(v).filter(e => !e.invalid), [v]), [F, y] = a.useState(!1), [V, Y] = a.useState(t.currency), w = async (e, s) => {
             if (null == t)
                 throw Error('missing subscription and paymentSource');
-            null == e ? await E.fG(t, s, U, f) : await E.tq(t, e, s, U, f), y(!1), Y(s);
+            null == e ? await E.fG(t, s, U, D) : await E.tq(t, e, s, U, D), y(!1), Y(s);
         }, k = async (e, s, n) => {
             y(!0);
             let a = await (0, p.hz)({
@@ -28,7 +28,7 @@ function f(e) {
                 renewal: !0,
                 currency: s,
                 analyticsLocations: U,
-                analyticsLocation: f
+                analyticsLocation: D
             });
             L.currency !== a.currency || L.currency === a.currency && L.total !== a.total ? await P(a, () => {
                 n(e, s);
@@ -50,7 +50,7 @@ function f(e) {
             (0, d.openModalLazy)(async () => e => (0, n.jsx)(u.default, {
                 ...e,
                 onAddPaymentSource: K,
-                analyticsLocation: f
+                analyticsLocation: D
             }), {
                 onCloseCallback: () => {
                     (0, _.fw)();
@@ -110,7 +110,7 @@ function f(e) {
                 null != t.paymentSourceId ? (0, n.jsx)(T.b, {
                     currencies: s,
                     children: (0, n.jsxs)('div', {
-                        className: r()(M.currency, D.flex, D.alignCenter),
+                        className: r()(M.currency, f.flex, f.alignCenter),
                         children: [
                             (0, n.jsx)('div', { children: x.Z.Messages.PAYMENT_CURRENCY_PAYING_IN }),
                             (0, n.jsx)(T.Z, {

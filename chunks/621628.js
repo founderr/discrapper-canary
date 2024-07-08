@@ -70,7 +70,7 @@ function O() {
                 let n = Array.from(s).slice(0, 4);
                 return n.unshift(e), n;
             });
-        }, x = t.map(e => l.z[e]), M = O.filter(e => e.toLowerCase().includes(T.toLowerCase())).filter(e => !x.includes(e)), D = Object.keys(l.z).filter(e => !x.includes(e)).filter(e => !O.includes(e)).filter(e => e.toLowerCase().includes(T.toLowerCase())).sort((e, t) => e.localeCompare(t));
+        }, x = t.map(e => l.z[e]), M = O.filter(e => e.toLowerCase().includes(T.toLowerCase())).filter(e => !x.includes(e)), f = Object.keys(l.z).filter(e => !x.includes(e)).filter(e => !O.includes(e)).filter(e => e.toLowerCase().includes(T.toLowerCase())).sort((e, t) => e.localeCompare(t));
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(d.FormSection, {
@@ -162,7 +162,7 @@ function O() {
                         children: (0, n.jsx)(d.FormTitle, { children: 'Available Dismissible Contents' })
                     }),
                     (0, n.jsx)(g, {
-                        items: D,
+                        items: f,
                         dismissedContents: h,
                         handleChange: R
                     })
