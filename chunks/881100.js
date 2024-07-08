@@ -3,7 +3,7 @@ n.d(t, {
         return G;
     }
 });
-var s = n(399606), a = n(780384), r = n(230711), i = n(410030), l = n(594174), o = n(74538), c = n(981631), d = n(526761), _ = n(689938), u = n(323780), E = n(101732), T = n(450598), I = n(633030), R = n(97942), C = n(269987), p = n(548629), g = n(507084), A = n(680313), m = n(926433), N = n(302036), f = n(994554), S = n(1549), h = n(13327), M = n(59137), x = n(405991), b = n(24615), O = n(193943), P = n(334347), L = n(943734), v = n(603076), Z = n(472656), D = n(912429), B = n(772969), j = n(926262);
+var s = n(399606), a = n(780384), r = n(230711), i = n(410030), l = n(594174), o = n(74538), c = n(981631), d = n(526761), _ = n(689938), u = n(323780), E = n(101732), T = n(450598), I = n(633030), R = n(97942), C = n(269987), p = n(548629), g = n(507084), A = n(680313), m = n(926433), N = n(302036), f = n(994554), S = n(1549), h = n(13327), M = n(59137), x = n(405991), b = n(24615), O = n(193943), L = n(334347), P = n(943734), v = n(603076), Z = n(472656), D = n(912429), B = n(772969), j = n(926262);
 let U = (e, t, n) => (0, a.wj)(e) ? t : n, G = e => {
         let {styles: t} = e, n = (0, i.ZP)(), a = (0, s.e7)([l.default], () => {
                 let e = l.default.getCurrentUser();
@@ -38,7 +38,7 @@ let U = (e, t, n) => (0, a.wj)(e) ? t : n, G = e => {
             emoji: {
                 title: _.Z.Messages.PREMIUM_MARKETING_FEATURE_EMOJI_TITLE,
                 description: _.Z.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
-                imageSource: P,
+                imageSource: L,
                 imageClassName: t.emojiImage
             },
             guildProfile: {
@@ -58,7 +58,7 @@ let U = (e, t, n) => (0, a.wj)(e) ? t : n, G = e => {
             longerMessages: {
                 title: _.Z.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_TITLE,
                 description: _.Z.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_DESCRIPTION,
-                imageSource: U(n, L, v),
+                imageSource: U(n, P, v),
                 imageClassName: t.longerMessagesImage
             },
             moreGuilds: {

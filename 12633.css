@@ -33186,6 +33186,11 @@ h3.improved_f017d0:after {
     border-radius: var(--radius-round)
 }
 
+.menuItemLabel_d27a56 {
+    display: flex;
+    gap: 6px
+}
+
 .inner_dc0b43 {
     background: var(--input-background);
     border-radius: 3px

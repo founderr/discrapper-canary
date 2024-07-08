@@ -1,5 +1,5 @@
 n(653041);
-var s = n(735250), a = n(470079), r = n(120356), i = n.n(r), l = n(442837), o = n(780384), c = n(481060), d = n(634894), _ = n(410030), u = n(100527), E = n(906732), T = n(15640), I = n(594174), R = n(78839), C = n(74538), p = n(775412), g = n(104494), A = n(639119), m = n(230916), N = n(248042), f = n(823188), S = n(21023), h = n(318747), M = n(409100), x = n(474936), b = n(689938), O = n(471587), P = n(102655), L = n(768236), v = n(314907), Z = n(826701);
+var s = n(735250), a = n(470079), r = n(120356), i = n.n(r), l = n(442837), o = n(780384), c = n(481060), d = n(634894), _ = n(410030), u = n(100527), E = n(906732), T = n(15640), I = n(594174), R = n(78839), C = n(74538), p = n(775412), g = n(104494), A = n(639119), m = n(230916), N = n(248042), f = n(823188), S = n(21023), h = n(318747), M = n(409100), x = n(474936), b = n(689938), O = n(471587), L = n(102655), P = n(768236), v = n(314907), Z = n(826701);
 let D = e => {
         let {isLightTheme: t} = e, n = (0, N.W1)();
         return (0, s.jsx)(f.Cy, {
@@ -16,7 +16,7 @@ let D = e => {
         })
     }), j = e => {
         let t, {premiumType: n} = e, a = (0, _.ZP)();
-        t = n === x.p9.TIER_0 ? (0, o.wj)(a) ? P : L : (0, o.wj)(a) ? v : Z;
+        t = n === x.p9.TIER_0 ? (0, o.wj)(a) ? L : P : (0, o.wj)(a) ? v : Z;
         let r = (0, C.Px)(n);
         return (0, s.jsx)('img', {
             src: t,
@@ -93,8 +93,8 @@ t.Z = e => {
     var t;
     let n, {
             className: r,
-            hideCTAs: P = !1,
-            headingOverride: L,
+            hideCTAs: L = !1,
+            headingOverride: P,
             hidePill: v = !1,
             selectedPlanColumnClassName: Z,
             selectedPlanTier: y = x.p9.TIER_2
@@ -118,7 +118,7 @@ t.Z = e => {
         column1: (0, s.jsx)(j, { premiumType: x.p9.TIER_0 }),
         column2: (0, s.jsx)(j, { premiumType: x.p9.TIER_2 })
     };
-    P ? es.push({
+    L ? es.push({
         label: null,
         column1: null,
         column2: null,
@@ -187,7 +187,7 @@ t.Z = e => {
                 (0, s.jsx)(c.Heading, {
                     className: i()(O.titleText, O.__invalid_textColor),
                     variant: 'heading-xxl/extrabold',
-                    children: null != L ? L : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
+                    children: null != P ? P : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
                 }),
                 (0, s.jsxs)('div', {
                     className: O.tableWrapper,

@@ -173,7 +173,7 @@ let ei = a.memo(e => {
             focused: e_
         });
     }
-    let e6 = a.useRef(null), e9 = I.type === J.fO.STREAM ? d.ScreenIcon : d.VideoIcon;
+    let e6 = a.useRef(null), e8 = I.type === J.fO.STREAM ? d.ScreenIcon : d.VideoIcon;
     return (0, i.jsx)(h.Z, {
         section: Q.jXE.VOICE_CHANNEL_TILE,
         children: (0, i.jsx)('div', {
@@ -231,7 +231,7 @@ let ei = a.memo(e => {
                                 }),
                                 eh ? (0, i.jsx)('div', {
                                     className: en.selectedScreen,
-                                    children: (0, i.jsx)(e9, {
+                                    children: (0, i.jsx)(e8, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: en.selectedIcon

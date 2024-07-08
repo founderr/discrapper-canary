@@ -35,7 +35,7 @@ function h() {
             u.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, x), e.stop();
         };
     }, []);
-    let f = (0, n.jsx)('section', {
+    let D = (0, n.jsx)('section', {
         className: r()(N.inputSensitivityToggle, N.manual),
         children: (0, n.jsx)(_.Slider, {
             initialValue: h + 100,
@@ -56,7 +56,7 @@ function h() {
             })
         })
     });
-    return g && (f = (0, n.jsxs)('section', {
+    return g && (D = (0, n.jsxs)('section', {
         className: N.inputSensitivityToggle,
         children: [
             (0, n.jsx)('div', {
@@ -100,7 +100,7 @@ function h() {
                             ]
                         })
                     }),
-                    f
+                    D
                 ]
             }),
             !R && (0, n.jsx)(_.FormText, {

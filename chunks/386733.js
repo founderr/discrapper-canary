@@ -91,7 +91,7 @@ t.Z = e => {
             (0, c.PR)(e);
         });
     }, [r]);
-    let P = r.length, L = 3 === P, v = R.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM), Z = L ? N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : N.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS, {analyticsLocations: D} = (0, _.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR), B = a.useRef(null), [j, U] = a.useState(!1), G = () => {
+    let L = r.length, P = 3 === L, v = R.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM), Z = P ? N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : N.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS, {analyticsLocations: D} = (0, _.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR), B = a.useRef(null), [j, U] = a.useState(!1), G = () => {
             if (null != B.current) {
                 let {clientWidth: e} = B.current;
                 U(e <= 568);
@@ -103,7 +103,7 @@ t.Z = e => {
     let y = (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(A.Z, {
-                percentage: P / 3 * 100,
+                percentage: L / 3 * 100,
                 progressCircleVariation: A.Q.NITRO_LOGO,
                 iconClassName: i()({
                     [f.referralProgressBarIcon]: !t,
@@ -121,7 +121,7 @@ t.Z = e => {
                     (0, s.jsx)(x, { userRecords: h }),
                     (0, s.jsx)(o.Text, {
                         variant: t ? 'text-sm/normal' : 'text-lg/medium',
-                        children: b(L, P > 0, r.length, v)
+                        children: b(P, L > 0, r.length, v)
                     }),
                     (0, s.jsxs)('div', {
                         className: i()(f.expandedProgressBarButtonContainer, {
@@ -160,7 +160,7 @@ t.Z = e => {
                                             alt: '',
                                             className: f.expandedProgressBarSelectFriendsIcon
                                         }),
-                                        L ? N.Z.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : N.Z.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
+                                        P ? N.Z.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : N.Z.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
                                     ]
                                 })
                             })

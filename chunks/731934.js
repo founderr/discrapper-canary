@@ -200,7 +200,7 @@ let O = () => {
                 ]
             })
         });
-    }, P = () => {
+    }, L = () => {
         let e = (0, T.VM)(), t = (0, E.Z)() ? A.AG : A.i0, n = (0, _.o)(m.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({ maxConnections: t }), m.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({ maxConnections: t }));
         return e ? (0, s.jsx)('div', {
             className: N.maxConnectionInfo,
@@ -210,7 +210,7 @@ let O = () => {
                 children: n
             })
         }) : null;
-    }, L = () => (0, u.o)() ? (0, s.jsxs)('div', {
+    }, P = () => (0, u.o)() ? (0, s.jsxs)('div', {
         className: i()(N.__invalid_helpLineInfo, f.marginTop20),
         children: [
             (0, s.jsx)(o.Heading, {
@@ -240,8 +240,8 @@ t.Z = () => {
             e ? (0, s.jsx)(M, {}) : (0, s.jsx)(x, {}),
             (0, s.jsx)(O, {}),
             (0, s.jsx)(v, {}),
-            (0, s.jsx)(P, {}),
-            (0, s.jsx)(L, {})
+            (0, s.jsx)(L, {}),
+            (0, s.jsx)(P, {})
         ]
     });
 };

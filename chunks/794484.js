@@ -41,11 +41,11 @@ t.Z = e => {
             isFullScreen: f = !0
         } = e, S = a.useRef(null), h = (0, _.yQ)(), M = (0, u.Ag)(h), x = (0, c.ZP)('perks-discoverability');
     (0, u.I2)();
-    let b = (0, d.HI)({ location: T.R0.PERKS_DISCOVERABILITY }), O = r === T.R0.WHATS_NEW, P = (0, _.IY)();
+    let b = (0, d.HI)({ location: T.R0.PERKS_DISCOVERABILITY }), O = r === T.R0.WHATS_NEW, L = (0, _.IY)();
     a.useEffect(() => {
-        O && !M && P();
+        O && !M && L();
     }, [
-        P,
+        L,
         O,
         M
     ]), a.useEffect(() => {
@@ -53,18 +53,18 @@ t.Z = e => {
         if (null == e || !M || !O)
             return;
         let t = requestAnimationFrame(() => {
-            e.scrollIntoView({ behavior: 'smooth' }), O && P();
+            e.scrollIntoView({ behavior: 'smooth' }), O && L();
         });
         return () => {
-            cancelAnimationFrame(t), O && P();
+            cancelAnimationFrame(t), O && L();
         };
     }, [
         S,
         M,
         O,
-        P
+        L
     ]);
-    let L = (0, I.Op)(O), v = (0, E.Z)(), Z = (0, I.mN)(), D = (0, I.sP)({
+    let P = (0, I.Op)(O), v = (0, E.Z)(), Z = (0, I.mN)(), D = (0, I.sP)({
             perksCards: v,
             variant: r,
             shopMarketingVariation: x,
@@ -90,7 +90,7 @@ t.Z = e => {
                     (0, s.jsx)(p, {
                         showAllPerksButton: m,
                         leftAlignHeaders: A,
-                        title: L.title,
+                        title: P.title,
                         headerClassname: N
                     }),
                     (0, s.jsx)(o.Text, {
@@ -104,7 +104,7 @@ t.Z = e => {
                             [C.leftAlignSubtitle]: A,
                             [C.centerAlignSubtitle]: !A
                         }),
-                        children: L.subtitle
+                        children: P.subtitle
                     }),
                     !A && null != m && (0, s.jsx)('div', {
                         className: i()(C.showAllPerksButtonCenter),

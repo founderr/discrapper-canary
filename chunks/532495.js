@@ -5,11 +5,11 @@ s.d(t, {
 });
 var n = s(735250);
 s(470079);
-var a = s(512722), i = s.n(a), r = s(442837), o = s(809206), l = s(634894), c = s(954138), d = s(891728), _ = s(328783), E = s(295474), u = s(150039), T = s(126631), I = s(433411), S = s(532432), N = s(349177), C = s(872736), m = s(134795), A = s(610966), h = s(513901), g = s(451392), O = s(906364), p = s(350327), R = s(621853), x = s(318661), M = s(25990), f = s(594174), D = s(74538), P = s(689938), L = s(121223);
+var a = s(512722), i = s.n(a), r = s(442837), o = s(809206), l = s(634894), c = s(954138), d = s(891728), _ = s(328783), E = s(295474), u = s(150039), T = s(126631), I = s(433411), S = s(532432), N = s(349177), C = s(872736), m = s(134795), A = s(610966), h = s(513901), g = s(451392), O = s(906364), p = s(350327), R = s(621853), x = s(318661), M = s(25990), D = s(594174), f = s(74538), P = s(689938), L = s(121223);
 function Z() {
     var e, t, s, a, Z, b, v, j;
-    let B = (0, r.e7)([f.default], () => {
-            let e = f.default.getCurrentUser();
+    let B = (0, r.e7)([D.default], () => {
+            let e = D.default.getCurrentUser();
             return i()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
         }), U = (0, r.e7)([R.Z], () => R.Z.getUserProfile(B.id)), {
             pendingAvatar: G,
@@ -26,7 +26,7 @@ function Z() {
                 ...e,
                 errors: t
             };
-        }), W = (0, E.gS)(), K = D.ZP.canUsePremiumProfileCustomization(B), z = (0, u.gd)(G, B.avatar), Q = (0, u.f$)(y, null == U ? void 0 : U.banner), X = 'DefaultCustomizationSections';
+        }), W = (0, E.gS)(), K = f.ZP.canUsePremiumProfileCustomization(B), z = (0, u.gd)(G, B.avatar), Q = (0, u.f$)(y, null == U ? void 0 : U.banner), X = 'DefaultCustomizationSections';
     (0, l.j)({
         location: X + ' auto on',
         autoTrackExposure: !0

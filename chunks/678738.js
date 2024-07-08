@@ -1,31 +1,31 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return u;
     }
 });
-var i = n(735250), a = n(470079), s = n(442837), l = n(481060), r = n(607070), o = n(887699);
-function c(e) {
+var r = n(735250), i = n(470079), a = n(442837), o = n(481060), s = n(607070), l = n(887699);
+function u(e) {
     let {
             title: t,
             children: n,
-            scrollIntoView: c = !1,
-            headingColor: d = 'header-secondary'
-        } = e, u = (0, s.e7)([r.Z], () => r.Z.useReducedMotion), h = a.useRef(null);
-    return a.useEffect(() => {
-        let e = h.current;
+            scrollIntoView: u = !1,
+            headingColor: c = 'header-secondary'
+        } = e, d = (0, a.e7)([s.Z], () => s.Z.useReducedMotion), _ = i.useRef(null);
+    return i.useEffect(() => {
+        let e = _.current;
         if (null == e)
             return;
         let t = requestAnimationFrame(() => {
-            e.scrollIntoView({ behavior: u ? 'auto' : 'smooth' });
+            e.scrollIntoView({ behavior: d ? 'auto' : 'smooth' });
         });
         return () => cancelAnimationFrame(t);
-    }, [u]), (0, i.jsxs)('section', {
-        ref: c ? h : void 0,
-        className: o.section,
+    }, [d]), (0, r.jsxs)('section', {
+        ref: u ? _ : void 0,
+        className: l.section,
         children: [
-            (0, i.jsx)(l.Heading, {
+            (0, r.jsx)(o.Heading, {
                 variant: 'text-xs/semibold',
-                color: d,
+                color: c,
                 children: t
             }),
             n

@@ -90,8 +90,8 @@ function x(e) {
             };
         }(), {
             query: M,
-            updateQuery: f,
-            queryResults: D
+            updateQuery: D,
+            queryResults: f
         } = (0, l.Z)({
             visible: !0,
             autocompleterResultTypes: m,
@@ -130,12 +130,12 @@ function x(e) {
             row: L
         });
     }, [L]);
-    let b = null != P ? P.length : D.length, v = (() => {
+    let b = null != P ? P.length : f.length, v = (() => {
             if (null != P) {
                 var e;
                 return null === (e = P[L]) || void 0 === e ? void 0 : e.id;
             }
-            let t = D[L];
+            let t = f[L];
             if ((null == t ? void 0 : t.type) === I.h8.VOICE_CHANNEL)
                 return t.record.id;
         })();
@@ -151,7 +151,7 @@ function x(e) {
                     className: N.inputWrapper,
                     children: (0, n.jsx)(r.TextInput, {
                         value: M,
-                        onChange: f,
+                        onChange: D,
                         onKeyDown: function (e) {
                             x();
                             let t = e.key.toLowerCase();
@@ -164,7 +164,7 @@ function x(e) {
                                         let e = (() => {
                                             if (null != P)
                                                 return P[L];
-                                            let e = D[L];
+                                            let e = f[L];
                                             if ((null == e ? void 0 : e.type) === I.h8.VOICE_CHANNEL)
                                                 return e.record;
                                         })();
@@ -198,7 +198,7 @@ function x(e) {
                         let {row: t} = e, a = (() => {
                                 if (null != P)
                                     return P[t];
-                                let e = D[t];
+                                let e = f[t];
                                 if ((null == e ? void 0 : e.type) === I.h8.VOICE_CHANNEL)
                                     return e.record;
                             })();

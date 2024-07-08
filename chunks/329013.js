@@ -1,9 +1,9 @@
 s.d(t, {
     g: function () {
-        return D;
+        return f;
     },
     i: function () {
-        return f;
+        return D;
     }
 });
 var n = s(735250), a = s(470079), i = s(442837), r = s(704215), o = s(481060), l = s(37234), c = s(100527), d = s(906732), _ = s(238302), E = s(514361), u = s(705262), T = s(605236), I = s(104494), S = s(639119), N = s(165583), C = s(197115), m = s(504983), A = s(626135), h = s(981631), g = s(921944), O = s(474936), p = s(689938), R = s(823749), x = s(549856);
@@ -12,7 +12,7 @@ let M = () => {
             dismissAction: g.L.PRIMARY,
             forceTrack: !0
         }), (0, _.bM)(), (0, l.xf)();
-    }, f = () => {
+    }, D = () => {
         var e, t;
         let {analyticsLocations: s} = (0, d.ZP)(c.Z.USER_SETTINGS), r = (0, i.e7)([E.Z], () => E.Z.isPreview), l = (null === (t = (0, S.N)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === O.Si.TIER_2, _ = (0, I.Ng)(), T = (0, I.Wp)(_, O.Si.TIER_2);
         return a.useEffect(() => {
@@ -74,7 +74,7 @@ let M = () => {
                 (0, n.jsx)(o.FormDivider, { className: x.marginTop20 })
             ]
         });
-    }, D = () => (0, i.e7)([E.Z], () => E.Z.isPreview) ? null : (0, n.jsx)(o.Button, {
+    }, f = () => (0, i.e7)([E.Z], () => E.Z.isPreview) ? null : (0, n.jsx)(o.Button, {
         size: o.ButtonSizes.SMALL,
         onClick: () => M(),
         children: p.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEMES_TITLE

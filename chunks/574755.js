@@ -8,7 +8,7 @@ function p(e) {
     let {
             className: t,
             showHeader: s = !0
-        } = e, p = _.tU.useSetting(), {enableViewerClipping: R} = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }), {analyticsLocations: x} = (0, l.ZP)(), M = (0, u.Go)(), {viewerClipsEnabled: f} = (0, i.cj)([T.Z], () => T.Z.getSettings()), D = (0, I.Z)(E.Z);
+        } = e, p = _.tU.useSetting(), {enableViewerClipping: R} = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }), {analyticsLocations: x} = (0, l.ZP)(), M = (0, u.Go)(), {viewerClipsEnabled: D} = (0, i.cj)([T.Z], () => T.Z.getSettings()), f = (0, I.Z)(E.Z);
     return a.useEffect(() => {
         (0, c.EW)(r.z.CLIPS_SETTINGS_BETA_TAG);
     }), (0, n.jsxs)(l.Gt, {
@@ -44,10 +44,10 @@ function p(e) {
                         onChange: e => S.yg({ allowVoiceRecording: e }),
                         children: A.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
                     }),
-                    R && D && (0, n.jsx)(o.FormSwitch, {
+                    R && f && (0, n.jsx)(o.FormSwitch, {
                         hideBorder: !0,
                         className: g.formItem,
-                        value: f,
+                        value: D,
                         note: A.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
                         onChange: e => S.yl({
                             enabled: e,

@@ -68,7 +68,7 @@ t.Z = e => {
             hideSparkles: p,
             hideSubscribeAndGiftButton: m,
             entrypoint: b
-        } = e, {analyticsLocations: O} = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA), P = (0, E._O)(), L = (0, u.Nx)(), v = (0, R.Vi)(), Z = (0, i.e7)([_.Z], () => _.Z.affinities), D = (0, I.Z)(), {enabled: B} = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }), j = b === N.EZ.ApplicationStoreHome && null != D && B, U = Z.length > 0;
+        } = e, {analyticsLocations: O} = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA), L = (0, E._O)(), P = (0, u.Nx)(), v = (0, R.Vi)(), Z = (0, i.e7)([_.Z], () => _.Z.affinities), D = (0, I.Z)(), {enabled: B} = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }), j = b === N.EZ.ApplicationStoreHome && null != D && B, U = Z.length > 0;
     return (0, s.jsx)(c.Gt, {
         value: O,
         children: (0, s.jsxs)('div', {
@@ -101,8 +101,8 @@ t.Z = e => {
                             })
                         }) : m ? null : (0, s.jsx)(h, {
                             subscriptionTier: d,
-                            inOfferExperience: L,
-                            inTrial: P,
+                            inOfferExperience: P,
+                            inTrial: L,
                             buttonClassName: a
                         }),
                         U && !j && (0, s.jsx)(x, {
@@ -111,7 +111,7 @@ t.Z = e => {
                         })
                     ]
                 }),
-                !(L || p) && (0, s.jsx)(M, { isFullscreen: t })
+                !(P || p) && (0, s.jsx)(M, { isFullscreen: t })
             ]
         })
     });
