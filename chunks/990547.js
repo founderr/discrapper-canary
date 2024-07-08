@@ -61,7 +61,9 @@ n.r(t), n.d(t, {
         return P;
     }
 }), n(757143), n(47120);
-var a, o = n(348327), s = n.n(o), l = n(512722), u = n.n(l), c = n(264344), d = n.n(c), _ = n(627420), E = n(433517), f = n(298444), h = n(979675), p = n(947486), m = n(699407), I = n(20281), T = n(525769);
+var a, o = n(348327), s = n.n(o), l = n(512722), u = n.n(l), c = n(264344), d = n.n(c), _ = n(627420), E = n(433517), f = n(298444), h = n(979675), p = n(947486);
+n(804098);
+var m = n(699407), I = n(20281), T = n(525769);
 let g = 'deviceProperties', S = 'referralProperties', A = {}, N = {}, v = window.DiscordNative;
 if (null != v) {
     let e;
@@ -243,7 +245,7 @@ M(function () {
     var e, t, n;
     let r = {}, i = window.GLOBAL_ENV.RELEASE_CHANNEL;
     i && (r.release_channel = i.split('-')[0]);
-    let a = parseInt((n = '307764', '307764'), 10);
+    let a = parseInt((n = '307779', '307779'), 10);
     !isNaN(a) && (r.client_build_number = a);
     let o = null == v ? void 0 : null === (e = (t = v.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
     return !isNaN(o) && (r.native_build_number = o), r.client_event_source = function () {
