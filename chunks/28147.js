@@ -1,16 +1,16 @@
 t.d(n, {
     Z: function () {
-        return T;
+        return g;
     }
 }), t(47120);
-var i = t(735250), l = t(470079), a = t(392711), r = t.n(a), s = t(209173), o = t(555573), c = t(895924), u = t(809547), d = t(585483), m = t(499254), _ = t(541099), p = t(827498), E = t(392370), A = t(98880), N = t(561160), h = t(41558), C = t(106771), f = t(79984), I = t(981631), v = t(689938), x = t(933693);
-let P = Array(6).fill(0).map((e, n) => n), g = [
+var i = t(735250), l = t(470079), a = t(392711), r = t.n(a), s = t(209173), o = t(555573), c = t(895924), u = t(809547), d = t(585483), m = t(499254), p = t(541099), _ = t(827498), E = t(392370), A = t(98880), N = t(561160), h = t(41558), C = t(106771), f = t(79984), I = t(981631), v = t(689938), x = t(933693);
+let P = Array(6).fill(0).map((e, n) => n), T = [
         ,
         ,
         ,
     ].fill(0).map((e, n) => n);
-function T(e) {
-    return e.enableGlobalSearch ? (0, i.jsx)(M, { ...e }) : (0, i.jsx)(L, { ...e });
+function g(e) {
+    return e.enableGlobalSearch ? (0, i.jsx)(M, { ...e }) : (0, i.jsx)(R, { ...e });
 }
 function M(e) {
     let {
@@ -18,8 +18,8 @@ function M(e) {
             query: t,
             entrypoint: a,
             enableActivitiesSearch: o
-        } = e, c = a === p._b.VOICE || o, d = a === p._b.TEXT, m = a === p._b.TEXT, {
-            loading: _,
+        } = e, c = a === _._b.VOICE || o, d = a === _._b.TEXT, m = a === _._b.TEXT, {
+            loading: p,
             isEmptyState: A,
             commandResults: h,
             hasCommandResults: C,
@@ -37,13 +37,13 @@ function M(e) {
         } = (0, E.Q2)({
             query: t,
             channel: n,
-            fetches: a !== p._b.VOICE
-        }), g = null == x || x === u.M.FETCHING, T = l.useMemo(() => {
+            fetches: a !== _._b.VOICE
+        }), T = null == x || x === u.M.FETCHING, g = l.useMemo(() => {
             let e = f.map(e => ({
                 application: e,
                 installOnDemand: !1
             }));
-            if (a === p._b.VOICE)
+            if (a === _._b.VOICE)
                 return e;
             let n = new Set(f.map(e => {
                 let {id: n} = e;
@@ -61,37 +61,37 @@ function M(e) {
             P,
             f
         ]);
-    return _ ? (0, i.jsx)(j, {}) : A ? (0, i.jsx)(N.A, {
-        type: p.LG.SEARCH_EMPTY,
+    return p ? (0, i.jsx)(j, {}) : A ? (0, i.jsx)(N.A, {
+        type: _.LG.SEARCH_EMPTY,
         searchQuery: t,
-        textContent: a === p._b.TEXT ? v.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : v.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
+        textContent: a === _._b.TEXT ? v.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : v.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
     }) : (0, i.jsxs)('div', {
         children: [
-            C && (0, i.jsx)(R, {
+            C && (0, i.jsx)(L, {
                 channel: n,
                 commandResults: h,
                 query: t
             }),
             I && (0, i.jsx)(S, {
-                applicationResults: T,
-                includePlaceholder: g,
+                applicationResults: g,
+                includePlaceholder: T,
                 query: t,
                 searchesBots: m
             })
         ]
     });
 }
-function L(e) {
+function R(e) {
     let {
             channel: n,
             query: t,
             entrypoint: a,
             enableActivitiesSearch: r
-        } = e, s = a === p._b.VOICE || r, o = a === p._b.TEXT, c = a === p._b.TEXT, {
+        } = e, s = a === _._b.VOICE || r, o = a === _._b.TEXT, c = a === _._b.TEXT, {
             loading: u,
             isEmptyState: d,
             commandResults: m,
-            hasCommandResults: _,
+            hasCommandResults: p,
             applicationResults: A,
             hasApplicationResults: h
         } = (0, E.pe)({
@@ -106,12 +106,12 @@ function L(e) {
             installOnDemand: !1
         })), [A]);
     return u ? (0, i.jsx)(j, {}) : d ? (0, i.jsx)(N.A, {
-        type: p.LG.SEARCH_EMPTY,
+        type: _.LG.SEARCH_EMPTY,
         searchQuery: t,
-        textContent: a === p._b.TEXT ? v.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : v.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
+        textContent: a === _._b.TEXT ? v.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : v.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
     }) : (0, i.jsxs)('div', {
         children: [
-            _ && (0, i.jsx)(R, {
+            p && (0, i.jsx)(L, {
                 channel: n,
                 commandResults: m,
                 query: t
@@ -124,42 +124,49 @@ function L(e) {
         ]
     });
 }
-function R(e) {
+function L(e) {
     let {
-        channel: n,
-        commandResults: t,
-        query: l
-    } = e;
+            channel: n,
+            commandResults: t,
+            query: a
+        } = e, r = t.length > 4, s = l.useMemo(() => r ? t.slice(0, 4) : t, [
+            t,
+            r
+        ]), [u, E] = l.useState(!1), A = l.useCallback(() => E(e => !e), []), N = u ? t : s;
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(h.Z, { title: v.Z.Messages.COMMANDS }),
+            (0, i.jsx)(h.Z, {
+                title: v.Z.Messages.COMMANDS,
+                buttonType: u ? h.Z.buttonTypes.VIEW_MORE : h.Z.buttonTypes.VIEW_LESS,
+                onClickViewButton: r ? A : void 0
+            }),
             (0, i.jsx)('div', {
                 className: x.sectionContentContainer,
-                children: t.map((e, t) => {
+                children: N.map((e, t) => {
                     let {
-                        command: a,
+                        command: l,
                         application: r,
                         section: s
                     } = e;
                     return (0, i.jsx)(C.Z, {
-                        command: a,
+                        command: l,
                         application: r,
                         onClick: () => {
-                            let e = _.Z.entrypoint();
-                            m.y(p.ti.DISMISSED), o.Po({
+                            let e = p.Z.entrypoint();
+                            m.y(_.ti.DISMISSED), o.Po({
                                 channelId: n.id,
-                                command: a,
+                                command: l,
                                 section: s,
                                 location: c.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                                 triggerSection: void 0,
-                                queryLength: l.length,
-                                sectionName: p.L3.SEARCH,
-                                query: l,
+                                queryLength: a.length,
+                                sectionName: _.L3.SEARCH,
+                                query: a,
                                 searchResultsPosition: t,
                                 source: e
                             }), d.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: n.id });
                         }
-                    }, a.id);
+                    }, l.id);
                 })
             })
         ]
@@ -186,13 +193,13 @@ function S(e) {
                         return (0, i.jsx)(O, {
                             application: t,
                             location: c.Vh.APP_LAUNCHER_HOME_SEARCH,
-                            sectionName: p.L3.SEARCH,
+                            sectionName: _.L3.SEARCH,
                             resultsPosition: n,
                             installOnDemand: a,
                             query: l
                         }, t.id);
                     }),
-                    t && g.map(e => (0, i.jsx)(f.Z, {}, e))
+                    t && T.map(e => (0, i.jsx)(f.Z, {}, e))
                 ]
             })
         ]
@@ -211,13 +218,13 @@ function S(e) {
                             application: t,
                             look: A.U4.LARGE_BANNER,
                             location: c.Vh.APP_LAUNCHER_HOME_SEARCH,
-                            sectionName: p.L3.SEARCH,
+                            sectionName: _.L3.SEARCH,
                             resultsPosition: n,
                             installOnDemand: a,
                             query: l
                         }, t.id);
                     }),
-                    t && g.map(e => (0, i.jsx)(f.Z, {}, e))
+                    t && T.map(e => (0, i.jsx)(f.Z, {}, e))
                 ]
             })
         ]
@@ -241,7 +248,7 @@ function j() {
             (0, i.jsx)(h.Z, { title: v.Z.Messages.APPS }),
             (0, i.jsx)('div', {
                 className: x.sectionContentContainer,
-                children: g.map(e => (0, i.jsx)(f.Z, {}, e))
+                children: T.map(e => (0, i.jsx)(f.Z, {}, e))
             })
         ]
     });

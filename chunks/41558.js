@@ -1,42 +1,43 @@
 t.d(n, {
     Z: function () {
-        return o;
+        return u;
     }
 });
-var i = t(735250), l = t(470079), a = t(481060), r = t(689938), s = t(21172);
-function o(e) {
+var i, l, a = t(735250), r = t(470079), s = t(481060), o = t(689938), c = t(21172);
+function u(e) {
     let {
         title: n,
-        onClickViewMore: t
+        buttonType: t,
+        onClickViewButton: i
     } = e;
-    return (0, i.jsxs)('div', {
-        className: s.header,
+    return (0, a.jsxs)('div', {
+        className: c.header,
         children: [
-            (0, i.jsx)(a.Text, {
+            (0, a.jsx)(s.Text, {
                 variant: 'text-md/medium',
                 color: 'header-primary',
                 children: n
             }),
-            null != t && (0, i.jsx)(a.Clickable, {
-                className: s.viewMore,
-                onClick: t,
-                'aria-label': r.Z.Messages.APP_LAUNCHER_VIEW_MORE_ROW_ARIA_LABEL.format({ title: n }),
-                children: (0, i.jsx)(a.Text, {
+            null != t && null != i && (0, a.jsx)(s.Clickable, {
+                className: c.viewMore,
+                onClick: i,
+                'aria-label': o.Z.Messages.APP_LAUNCHER_VIEW_MORE_ROW_ARIA_LABEL.format({ title: n }),
+                children: (0, a.jsx)(s.Text, {
                     variant: 'text-md/semibold',
                     color: 'text-brand',
-                    children: r.Z.Messages.APP_LAUNCHER_VIEW_MORE_ROW
+                    children: 0 === t ? o.Z.Messages.APP_LAUNCHER_VIEW_MORE_ROW : o.Z.Messages.APP_LAUNCHER_VIEW_LESS_ROW
                 })
             })
         ]
     });
 }
-o.Loading = function () {
-    let e = l.useMemo(() => ({ width: ''.concat(10 + 20 * Math.random(), '%') }), []);
-    return (0, i.jsx)('div', {
-        className: s.loadingHeader,
+(i = l || (l = {}))[i.VIEW_MORE = 0] = 'VIEW_MORE', i[i.VIEW_LESS = 1] = 'VIEW_LESS', u.buttonTypes = l, u.Loading = function () {
+    let e = r.useMemo(() => ({ width: ''.concat(10 + 20 * Math.random(), '%') }), []);
+    return (0, a.jsx)('div', {
+        className: c.loadingHeader,
         style: e,
-        children: (0, i.jsx)(a.Text, {
-            className: s.hidden,
+        children: (0, a.jsx)(s.Text, {
+            className: c.hidden,
             variant: 'text-md/medium',
             color: 'header-primary',
             children: '_'
