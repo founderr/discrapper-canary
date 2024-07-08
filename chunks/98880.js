@@ -3,17 +3,17 @@ t.d(n, {
         return i;
     },
     cG: function () {
-        return S;
-    },
-    kA: function () {
         return O;
     },
-    qR: function () {
+    kA: function () {
         return j;
+    },
+    qR: function () {
+        return b;
     }
 }), t(411104);
-var i, l, a = t(735250), r = t(470079), s = t(120356), o = t.n(s), c = t(481060), u = t(542094), d = t(778569), m = t(182906), p = t(367907), _ = t(220082), E = t(318661), A = t(792125), N = t(541099), h = t(783097), C = t(695676), f = t(176412), I = t(753972), x = t(981631), v = t(231338), P = t(689938), g = t(126152);
-function T(e) {
+var i, l, a = t(735250), r = t(470079), s = t(120356), o = t.n(s), c = t(481060), u = t(542094), d = t(778569), m = t(182906), _ = t(367907), p = t(220082), E = t(318661), A = t(792125), N = t(541099), h = t(783097), C = t(695676), f = t(176412), I = t(753972), v = t(981631), x = t(231338), P = t(689938), g = t(126152), T = t(413097);
+function M(e) {
     let {
             application: n,
             look: t = 'large_banner',
@@ -24,14 +24,17 @@ function T(e) {
         } = e, {
             iconURL: d,
             name: m,
-            description: p
-        } = r.useMemo(() => (0, h.sl)(n, { botIconFirst: !0 }), [n]), E = (0, _.ZP)(d, '');
+            description: _
+        } = r.useMemo(() => (0, h.sl)(n, {
+            botIconFirst: !0,
+            fakeAppIconURL: T
+        }), [n]), E = (0, p.ZP)(d, '');
     return 'icon' === t ? (0, a.jsx)(c.Clickable, {
         className: o()(g.container, g.iconCard),
         onClick: l,
         'aria-label': P.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
             applicationName: m,
-            applicationDescription: p
+            applicationDescription: _
         }),
         children: null != d && (0, a.jsx)(I.Z, {
             src: d,
@@ -43,7 +46,7 @@ function T(e) {
         onClick: l,
         'aria-label': P.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
             applicationName: m,
-            applicationDescription: p
+            applicationDescription: _
         }),
         children: [
             (0, a.jsxs)('div', {
@@ -54,7 +57,7 @@ function T(e) {
                 children: [
                     (0, a.jsx)('span', {
                         className: s,
-                        children: (0, a.jsx)(M, {
+                        children: (0, a.jsx)(L, {
                             application: n,
                             fallbackColor: E
                         })
@@ -62,7 +65,7 @@ function T(e) {
                     i && (0, a.jsx)('div', {
                         className: g.partnerLabelWrapper,
                         children: (0, a.jsx)(c.Text, {
-                            className: (0, A.Q)(v.BR.DARK),
+                            className: (0, A.Q)(x.BR.DARK),
                             variant: 'text-sm/medium',
                             color: 'text-normal',
                             children: P.Z.Messages.APP_DIRECTORY_PARTNER
@@ -95,7 +98,7 @@ function T(e) {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
                                 lineClamp: 1,
-                                children: p
+                                children: _
                             })
                         ]
                     })
@@ -104,23 +107,23 @@ function T(e) {
         ]
     });
 }
-function M(e) {
+function L(e) {
     let {
         application: n,
         fallbackColor: t
     } = e;
     if ((0, h.BQ)(n)) {
         if ((0, h.ye)({ application: n }))
-            return (0, a.jsx)(L, { application: n });
+            return (0, a.jsx)(R, { application: n });
         if (null != n.bot)
-            return (0, a.jsx)(R, { bot: n.bot });
+            return (0, a.jsx)(S, { bot: n.bot });
     }
     return (0, a.jsx)('div', {
         className: g.bannerImage,
         style: { backgroundColor: t }
     });
 }
-function L(e) {
+function R(e) {
     let {application: n} = e, t = (0, d.Z)({
             applicationId: n.id,
             size: 600,
@@ -133,7 +136,7 @@ function L(e) {
         imageNotFoundClassName: g.bannerImage
     });
 }
-function R(e) {
+function S(e) {
     let {bot: n} = e, t = (0, E.ZP)(n.id), i = r.useMemo(() => null == t ? void 0 : t.getBannerURL({
             canAnimate: !1,
             size: 600
@@ -144,7 +147,7 @@ function R(e) {
         className: g.bannerImage
     });
 }
-function S(e) {
+function O(e) {
     let {
             application: n,
             sectionName: t,
@@ -153,7 +156,7 @@ function S(e) {
             installOnDemand: a
         } = e, {pushHistory: s} = (0, C.hH)();
     return r.useCallback(e => {
-        e.stopPropagation(), (0, p.yw)(x.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+        e.stopPropagation(), (0, _.yw)(v.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
             application_id: n.id,
             section_name: t,
             search_results_position: i,
@@ -175,14 +178,14 @@ function S(e) {
         t
     ]);
 }
-function O(e) {
-    let n = S(e);
-    return (0, a.jsx)(T, {
+function j(e) {
+    let n = O(e);
+    return (0, a.jsx)(M, {
         ...e,
         onClick: n
     });
 }
-function j(e) {
+function b(e) {
     let {
         channel: n,
         application: t,
@@ -197,20 +200,20 @@ function j(e) {
         onActivityItemSelected: o,
         activityAction: d,
         buttonColor: m,
-        buttonText: p
+        buttonText: _
     } = (0, f.P)(n, t, i, l);
     if (d === u.JS.START)
-        return r ? (0, a.jsx)(T, {
+        return r ? (0, a.jsx)(M, {
             ...s,
             application: t,
             onClick: o
-        }) : (0, a.jsx)(O, {
+        }) : (0, a.jsx)(j, {
             ...s,
             application: t,
             location: i,
             sectionName: l
         });
-    return (0, a.jsx)(T, {
+    return (0, a.jsx)(M, {
         ...s,
         application: t,
         onClick: e => {
@@ -226,7 +229,7 @@ function j(e) {
                 color: m,
                 disabled: !1,
                 onClick: o,
-                children: p
+                children: _
             })
         })
     });
