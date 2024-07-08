@@ -53,7 +53,7 @@ class N {
                 query: { _: Date.now() / 1000 / 60 / 5 | 0 },
                 oldFormErrors: !0
             }).then(e => {
-                if (null == e.body || '5b4f7a649c9727167a19120ec2db24608669ed96' === e.body.hash)
+                if (null == e.body || 'da25ad776e6e00fb9ed208ac892df51778638bde' === e.body.hash)
                     return this._handleUpdateNotAvailable();
                 if (e.body.required || (0, l.fD)())
                     return this._handleUpdateDownloaded(!1);

@@ -1,21 +1,21 @@
 t.d(n, {
     Z: function () {
-        return p;
+        return _;
     }
 });
 var i = t(735250), l = t(470079), a = t(481060), r = t(895924), s = t(424602), o = t(827498), c = t(98880), u = t(772606), d = t(689938), m = t(235435);
-function p(e) {
+function _(e) {
     let {
             channel: n,
             entrypoint: t,
-            title: p,
-            look: _,
+            title: _,
+            look: p,
             items: E,
             sectionName: A
         } = e, {clickOnHomeActivityOpensAppDetail: N} = s.m1.getCurrentConfig({ location: 'AppLauncherApplicationListViewScreen' }, { autoTrackExposure: !1 }), h = l.useMemo(() => t === o._b.TEXT ? c.kA : c.qR, [t]);
     return (0, i.jsxs)('section', {
         className: m.container,
-        'aria-label': d.Z.Messages.APP_LAUNCHER_SECTION_VIEW_MORE_ARIA_LABEL.format({ sectionTitle: p }),
+        'aria-label': d.Z.Messages.APP_LAUNCHER_SECTION_VIEW_MORE_ARIA_LABEL.format({ sectionTitle: _ }),
         children: [
             (0, i.jsxs)('div', {
                 className: m.header,
@@ -24,7 +24,7 @@ function p(e) {
                     (0, i.jsx)(a.Heading, {
                         variant: 'heading-md/medium',
                         color: 'header-primary',
-                        children: p
+                        children: _
                     })
                 ]
             }),
@@ -39,7 +39,7 @@ function p(e) {
                         return (0, i.jsx)(h, {
                             channel: n,
                             application: t,
-                            look: _,
+                            look: p,
                             isPartner: l,
                             sectionName: A,
                             location: r.Vh.APP_LAUNCHER_LIST_VIEW_ALL,

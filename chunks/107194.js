@@ -9,14 +9,14 @@ function I(e) {
     let {
             user: I,
             currentUser: E
-        } = e, f = (0, s.e7)([t.Z], () => t.Z.getAnyStreamForUser(I.id)), _ = (0, s.e7)([l.Z], () => l.Z.findActivity(I.id, e => {
+        } = e, _ = (0, s.e7)([t.Z], () => t.Z.getAnyStreamForUser(I.id)), f = (0, s.e7)([l.Z], () => l.Z.findActivity(I.id, e => {
             let {type: n} = e;
             return n !== d.IIU.CUSTOM_STATUS;
         })), Z = null === (n = (0, a.Z)(I.id, I.id !== (null == E ? void 0 : E.id)).mutualFriends) || void 0 === n ? void 0 : n.length, m = null === (i = (0, r.Z)(I.id, I.id !== (null == E ? void 0 : E.id)).mutualGuilds) || void 0 === i ? void 0 : i.length, v = [{
                 section: c.oh.USER_INFO,
                 text: u.Z.Messages.USER_PROFILE_ABOUT_ME
             }];
-    return (null != f || null != _) && v.push({
+    return (null != _ || null != f) && v.push({
         section: c.oh.ACTIVITY,
         text: u.Z.Messages.USER_PROFILE_ACTIVITY
     }), I.id !== (null == E ? void 0 : E.id) && (v.push({

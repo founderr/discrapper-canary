@@ -3,7 +3,7 @@ i.d(n, {
         return M;
     }
 }), i(47120);
-var o = i(735250), s = i(470079), t = i(442837), l = i(481060), a = i(727637), r = i(100527), c = i(906732), d = i(680295), u = i(158776), I = i(5192), E = i(877485), f = i(785717), _ = i(318661), Z = i(502762), m = i(544989), v = i(481932), S = i(195387), x = i(272510), h = i(171368), N = i(806926), g = i(740021), p = i(228168), C = i(981631), T = i(689938), R = i(505451);
+var o = i(735250), s = i(470079), t = i(442837), l = i(481060), a = i(727637), r = i(100527), c = i(906732), d = i(680295), u = i(158776), I = i(5192), E = i(877485), _ = i(785717), f = i(318661), Z = i(502762), m = i(544989), v = i(481932), S = i(195387), x = i(272510), N = i(171368), h = i(806926), g = i(740021), p = i(228168), C = i(981631), T = i(689938), R = i(505451);
 function M(e) {
     let {
             user: n,
@@ -22,7 +22,7 @@ function M(e) {
         } = e, F = M === C.ME ? void 0 : M, {analyticsLocations: G} = (0, c.ZP)([
             ...B,
             r.Z.SIMPLIFIED_PROFILE_MODAL
-        ]), {originalFriendingEnabled: k} = (0, E.V)({ location: 'SimplifiedUserProfileModal' }), w = (0, f.Q1)({
+        ]), {originalFriendingEnabled: k} = (0, E.V)({ location: 'SimplifiedUserProfileModal' }), w = (0, _.Q1)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
             guildId: F,
@@ -30,7 +30,7 @@ function M(e) {
             messageId: A,
             roleId: P,
             showGuildProfile: D
-        }), Y = (0, _.ZP)(n.id, D ? F : void 0), V = (0, _.ZP)(n.id, F), H = (0, t.e7)([u.Z], () => u.Z.findActivity(n.id, e => {
+        }), Y = (0, f.ZP)(n.id, D ? F : void 0), V = (0, f.ZP)(n.id, F), H = (0, t.e7)([u.Z], () => u.Z.findActivity(n.id, e => {
             let {type: n} = e;
             return n !== C.IIU.CUSTOM_STATUS;
         })), W = s.createRef(), z = (0, a.Z)(W), K = () => (null == V ? void 0 : V.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, o.jsx)(l.MenuItem, {
@@ -41,7 +41,7 @@ function M(e) {
                 w({
                     action: 'PRESS_VIEW_MAIN_PROFILE',
                     analyticsLocations: G
-                }), y(), (0, h.openUserProfileModal)({
+                }), y(), (0, N.openUserProfileModal)({
                     userId: n.id,
                     showGuildProfile: !1,
                     guildId: F,
@@ -60,7 +60,7 @@ function M(e) {
                 w({
                     action: 'PRESS_VIEW_SERVER_PROFILE',
                     analyticsLocations: G
-                }), y(), (0, h.openUserProfileModal)({
+                }), y(), (0, N.openUserProfileModal)({
                     userId: n.id,
                     showGuildProfile: !0,
                     guildId: F,
@@ -74,7 +74,7 @@ function M(e) {
         });
     return (0, o.jsx)(c.Gt, {
         value: G,
-        children: (0, o.jsx)(f.Mt, {
+        children: (0, o.jsx)(_.Mt, {
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
             guildId: F,
@@ -133,7 +133,7 @@ function M(e) {
                                 viewProfileItem: K(),
                                 onClose: y
                             }),
-                            (0, o.jsx)(N.Z, {
+                            (0, o.jsx)(h.Z, {
                                 user: n,
                                 currentUser: i,
                                 channelId: j,

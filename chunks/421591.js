@@ -2,8 +2,8 @@ t(47120);
 var i = t(735250), l = t(470079), a = t(367907), r = t(541099), s = t(695676), o = t(173790), c = t(361917), u = t(684256), d = t(981631), m = t(933320);
 n.Z = l.memo(l.forwardRef(function (e, n) {
     let t, {
-            channel: p,
-            entrypoint: _
+            channel: _,
+            entrypoint: p
         } = e, [E, A] = l.useState(''), N = function (e) {
             let [n, t] = l.useState(null), i = l.useRef(0);
             return l.useEffect(() => {
@@ -24,16 +24,16 @@ n.Z = l.memo(l.forwardRef(function (e, n) {
         }(E);
     l.useEffect(() => {
         (0, a.yw)(d.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
-            source: _,
+            source: p,
             location: 'app_launcher'
         });
-    }, [_]);
+    }, [p]);
     let {
         history: h,
         setHistory: C,
         currentView: f,
         pushHistory: I,
-        goBack: x
+        goBack: v
     } = function () {
         let [e, n] = l.useState([{ type: s.gc.HOME }]), t = e[e.length - 1];
         return {
@@ -60,23 +60,23 @@ n.Z = l.memo(l.forwardRef(function (e, n) {
                 (0, a.yw)(d.rMx.APP_LAUNCHER_CLOSED, {
                     reason: r.Z.closeReason(),
                     time_spent: Date.now() - e,
-                    source: _
+                    source: p
                 });
             };
-        }, [_]), null == f ? void 0 : f.type) {
+        }, [p]), null == f ? void 0 : f.type) {
     case s.gc.HOME:
         t = (0, i.jsx)(c.Z, {
             setScroller: N,
-            channel: p,
-            entrypoint: _,
+            channel: _,
+            entrypoint: p,
             searchQuery: E,
             setSearchQuery: A
         });
         break;
     case s.gc.LIST:
         t = (0, i.jsx)(u.Z, {
-            channel: p,
-            entrypoint: _,
+            channel: _,
+            entrypoint: p,
             title: f.title,
             look: f.look,
             items: f.items,
@@ -85,7 +85,7 @@ n.Z = l.memo(l.forwardRef(function (e, n) {
         break;
     case s.gc.APPLICATION:
         t = (0, i.jsx)(o.Z, {
-            channel: p,
+            channel: _,
             application: f.application,
             sectionName: f.sectionName
         });
@@ -104,7 +104,7 @@ n.Z = l.memo(l.forwardRef(function (e, n) {
                     setHistory: C,
                     currentView: f,
                     pushHistory: I,
-                    goBack: x
+                    goBack: v
                 },
                 children: t
             })

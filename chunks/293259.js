@@ -3,7 +3,7 @@ i.d(n, {
         return M;
     }
 });
-var o = i(735250), s = i(470079), t = i(442837), l = i(692547), a = i(481060), r = i(239091), c = i(233440), d = i(314897), u = i(158776), I = i(699516), E = i(998502), f = i(785717), _ = i(621853), Z = i(204197), m = i(735336), v = i(520978), S = i(184325), x = i(652853), h = i(225714), N = i(228168), g = i(231338), p = i(689938), C = i(520067);
+var o = i(735250), s = i(470079), t = i(442837), l = i(692547), a = i(481060), r = i(239091), c = i(233440), d = i(314897), u = i(158776), I = i(699516), E = i(998502), _ = i(785717), f = i(621853), Z = i(204197), m = i(735336), v = i(520978), S = i(184325), x = i(652853), N = i(225714), h = i(228168), g = i(231338), p = i(689938), C = i(520067);
 let T = a.AvatarSizes.SIZE_120, R = E.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 function M(e) {
     let {
@@ -16,7 +16,7 @@ function M(e) {
             isStreaming: U,
             hasProfileEffect: O,
             onClose: L
-        } = e, b = (0, t.e7)([I.Z], () => I.Z.getRelationshipType(E.id)), y = (0, t.e7)([u.Z], () => u.Z.isMobileOnline(E.id)), D = (0, t.e7)([u.Z], () => u.Z.getStatus(E.id)), B = (0, t.e7)([_.Z], () => _.Z.getUserProfile(E.id)), F = (0, t.e7)([d.default], () => d.default.getId() === E.id), {theme: G} = (0, x.z)(), {trackUserProfileAction: k} = (0, f.KZ)(), {
+        } = e, b = (0, t.e7)([I.Z], () => I.Z.getRelationshipType(E.id)), y = (0, t.e7)([u.Z], () => u.Z.isMobileOnline(E.id)), D = (0, t.e7)([u.Z], () => u.Z.getStatus(E.id)), B = (0, t.e7)([f.Z], () => f.Z.getUserProfile(E.id)), F = (0, t.e7)([d.default], () => d.default.getId() === E.id), {theme: G} = (0, x.z)(), {trackUserProfileAction: k} = (0, _.KZ)(), {
             avatarSrc: w,
             eventHandlers: Y,
             avatarDecorationSrc: V
@@ -34,7 +34,7 @@ function M(e) {
                 displayProfile: n,
                 onClose: L,
                 user: E,
-                profileType: N.y0.MODAL,
+                profileType: h.y0.MODAL,
                 hasProfileEffect: O
             }),
             (0, o.jsxs)('div', {
@@ -84,7 +84,7 @@ function M(e) {
                                         className: C.applicationInstallButton,
                                         application: B.application
                                     }),
-                                    (0, o.jsx)(h.Z, {
+                                    (0, o.jsx)(N.Z, {
                                         user: E,
                                         isCurrentUser: F,
                                         relationshipType: b,

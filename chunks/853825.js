@@ -3,7 +3,7 @@ i.d(n, {
         return U;
     }
 }), i(47120);
-var o = i(735250), s = i(470079), t = i(481060), l = i(727637), a = i(100527), r = i(906732), c = i(680295), d = i(5192), u = i(998502), I = i(785717), E = i(318661), f = i(721987), _ = i(204197), Z = i(78675), m = i(741308), v = i(588822), S = i(900927), x = i(678738), h = i(502762), N = i(530), g = i(679332), p = i(544989), C = i(228168), T = i(981631), R = i(689938), M = i(505451), j = i(247321), A = i(47460);
+var o = i(735250), s = i(470079), t = i(481060), l = i(727637), a = i(100527), r = i(906732), c = i(680295), d = i(5192), u = i(998502), I = i(785717), E = i(318661), _ = i(721987), f = i(204197), Z = i(78675), m = i(741308), v = i(588822), S = i(900927), x = i(678738), N = i(502762), h = i(530), g = i(679332), p = i(544989), C = i(228168), T = i(981631), R = i(689938), M = i(505451), j = i(247321), A = i(47460);
 let P = u.ZP.getEnableHardwareAcceleration() ? t.AnimatedAvatar : t.Avatar;
 function U(e) {
     let {
@@ -18,14 +18,14 @@ function U(e) {
         } = e, {analyticsLocations: D} = (0, r.ZP)([
             ...y,
             a.Z.SIMPLIFIED_PROFILE_MODAL
-        ]), B = i === T.ME ? void 0 : i, F = (0, E.ZP)(n.id, B), {theme: G} = (0, f.Z)({
+        ]), B = i === T.ME ? void 0 : i, F = (0, E.ZP)(n.id, B), {theme: G} = (0, _.Z)({
             user: n,
             displayProfile: F
         }), {
             avatarSrc: k,
             eventHandlers: w,
             avatarDecorationSrc: Y
-        } = (0, _.Z)({
+        } = (0, f.Z)({
             user: n,
             guildId: null == F ? void 0 : F.guildId,
             size: t.AvatarSizes.SIZE_120
@@ -46,7 +46,7 @@ function U(e) {
                 hideShadow: !0,
                 'aria-label': R.Z.Messages.USER_PROFILE_MODAL,
                 children: [
-                    (0, o.jsxs)(h.Z, {
+                    (0, o.jsxs)(N.Z, {
                         user: n,
                         displayProfile: F,
                         profileType: C.y0.FULL_SIZE,
@@ -87,7 +87,7 @@ function U(e) {
                             (0, o.jsxs)('div', {
                                 className: M.body,
                                 children: [
-                                    (0, o.jsx)(N.Z, {
+                                    (0, o.jsx)(h.Z, {
                                         user: n,
                                         profileType: C.y0.FULL_SIZE,
                                         nickname: d.ZP.getName(B, u, n),
@@ -99,7 +99,7 @@ function U(e) {
                                             onClose: b
                                         })
                                     }),
-                                    (0, o.jsx)(h.Z.Overlay, {
+                                    (0, o.jsx)(N.Z.Overlay, {
                                         className: M.overlay,
                                         children: (0, o.jsxs)('div', {
                                             className: A.container,

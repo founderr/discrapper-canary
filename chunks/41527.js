@@ -5,7 +5,7 @@ i.d(n, {
 }), i(47120);
 var o = i(735250);
 i(470079);
-var s = i(481060), t = i(100527), l = i(906732), a = i(5192), r = i(785717), c = i(318661), d = i(741308), u = i(681837), I = i(502762), E = i(530), f = i(437758), _ = i(544989), Z = i(740021), m = i(616140), v = i(29530), S = i(228168), x = i(981631), h = i(689938), N = i(505451);
+var s = i(481060), t = i(100527), l = i(906732), a = i(5192), r = i(785717), c = i(318661), d = i(741308), u = i(681837), I = i(502762), E = i(530), _ = i(437758), f = i(544989), Z = i(740021), m = i(616140), v = i(29530), S = i(228168), x = i(981631), N = i(689938), h = i(505451);
 function g(e) {
     let {
             user: n,
@@ -35,17 +35,17 @@ function g(e) {
             showGuildProfile: !0,
             children: (0, o.jsx)(s.ModalRoot, {
                 transitionState: j,
-                className: N.root,
+                className: h.root,
                 hideShadow: !0,
-                'aria-label': h.Z.Messages.USER_PROFILE_MODAL,
+                'aria-label': N.Z.Messages.USER_PROFILE_MODAL,
                 children: (0, o.jsxs)(I.Z, {
                     user: n,
                     displayProfile: O,
                     profileType: S.y0.FULL_SIZE,
                     children: [
-                        (0, o.jsx)(_.Z, {
+                        (0, o.jsx)(f.Z, {
                             profileType: S.y0.FULL_SIZE,
-                            children: (0, o.jsx)(f.Z, {
+                            children: (0, o.jsx)(_.Z, {
                                 user: n,
                                 guildId: U
                             })
@@ -60,7 +60,7 @@ function g(e) {
                             onClose: A
                         }),
                         (0, o.jsxs)('div', {
-                            className: N.body,
+                            className: h.body,
                             children: [
                                 (0, o.jsx)(E.Z, {
                                     user: n,
@@ -76,7 +76,7 @@ function g(e) {
                                     })
                                 }),
                                 (0, o.jsx)(I.Z.Overlay, {
-                                    className: N.overlay,
+                                    className: h.overlay,
                                     children: (0, o.jsx)(m.Z, {
                                         user: n,
                                         currentUser: i,

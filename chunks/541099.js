@@ -26,10 +26,10 @@ class m extends (r = s.ZP.Store) {
         return u.closeReason;
     }
 }
-function p() {
+function _() {
     d({ closeReason: c.ti.DISMISSED });
 }
-function _() {
+function p() {
     d({ closeReason: c.ti.COMMAND });
 }
 a = 'AppLauncherStore', (l = 'displayName') in (i = m) ? Object.defineProperty(i, l, {
@@ -43,9 +43,9 @@ a = 'AppLauncherStore', (l = 'displayName') in (i = m) ? Object.defineProperty(i
         return u.show = !0, u.entrypoint = n, u.closeReason = c.ti.DISMISSED, !0;
     },
     APP_LAUNCHER_DISMISS: d,
-    CONNECTION_OPEN: p,
-    LOGOUT: p,
-    CHANNEL_SELECT: p,
-    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: _,
-    APP_LAUNCHER_SET_ACTIVE_COMMAND: _
+    CONNECTION_OPEN: _,
+    LOGOUT: _,
+    CHANNEL_SELECT: _,
+    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: p,
+    APP_LAUNCHER_SET_ACTIVE_COMMAND: p
 });

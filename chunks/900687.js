@@ -11,15 +11,15 @@ function I(e) {
             user: n,
             isCurrentUser: I,
             guildId: E,
-            friendToken: f,
-            canDM: _,
+            friendToken: _,
+            canDM: f,
             relationshipType: Z,
             originalFriendingEnabled: m = !1,
             improvedFriendingEnabled: v = !1,
             persistentCallCtaEnabled: S = !1,
             activeInviteToCallCtaEnabled: x = !1,
-            viewProfileItem: h,
-            onClose: N
+            viewProfileItem: N,
+            onClose: h
         } = e, {trackUserProfileAction: g} = (0, l.KZ)();
     function p(e) {
         g({ action: 'PRESS_OPTIONS' }), (0, t.jW)(e, async () => {
@@ -28,12 +28,12 @@ function I(e) {
                 ...i,
                 originalFriendingEnabled: m,
                 relationshipType: Z,
-                viewProfileItem: h,
+                viewProfileItem: N,
                 user: n,
                 isCurrentUser: I,
                 guildId: E,
                 trackUserProfileAction: g,
-                onClose: N
+                onClose: h
             });
         });
     }
@@ -50,14 +50,14 @@ function I(e) {
                         improvedFriendingEnabled: v,
                         persistentCallCtaEnabled: S,
                         activeInviteToCallCtaEnabled: x,
-                        friendToken: f,
-                        onClose: N
+                        friendToken: _,
+                        onClose: h
                     }),
                     I && (0, o.jsx)(a.Z, {
                         user: n,
                         guildId: E,
                         profileType: d.y0.FULL_SIZE,
-                        onClose: N
+                        onClose: h
                     }),
                     !n.isNonUserBot() && m ? (0, o.jsx)(s.Clickable, {
                         focusProps: { offset: { left: 8 } },
@@ -70,14 +70,14 @@ function I(e) {
                     }) : null
                 ]
             }),
-            !m && !v && (_ ? (0, o.jsx)(r.Z, {
+            !m && !v && (f ? (0, o.jsx)(r.Z, {
                 user: n,
-                onClose: N
+                onClose: h
             }) : (0, o.jsx)(a.Z, {
                 user: n,
                 guildId: E,
                 profileType: d.y0.FULL_SIZE,
-                onClose: N
+                onClose: h
             }))
         ]
     });

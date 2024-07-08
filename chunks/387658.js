@@ -3,7 +3,7 @@ t.d(n, {
         return L;
     }
 }), t(47120);
-var i = t(735250), l = t(470079), a = t(140835), r = t(246521), s = t(481060), o = t(911969), c = t(555573), u = t(10718), d = t(895924), m = t(585483), p = t(499254), _ = t(541099), E = t(827498), A = t(496158), N = t(676161), h = t(660090), C = t(783097), f = t(870205), I = t(981631), x = t(689079), v = t(689938), P = t(763963);
+var i = t(735250), l = t(470079), a = t(140835), r = t(246521), s = t(481060), o = t(911969), c = t(555573), u = t(10718), d = t(895924), m = t(585483), _ = t(499254), p = t(541099), E = t(827498), A = t(496158), N = t(676161), h = t(660090), C = t(783097), f = t(870205), I = t(981631), v = t(689079), x = t(689938), P = t(763963);
 function g(e) {
     var n, t;
     let {
@@ -12,8 +12,8 @@ function g(e) {
             section: u,
             sectionName: A
         } = e, N = l.useCallback(() => {
-            let e = _.Z.entrypoint();
-            p.y(E.ti.COMMAND), c.Po({
+            let e = p.Z.entrypoint();
+            _.y(E.ti.COMMAND), c.Po({
                 channelId: r.id,
                 command: o,
                 section: u,
@@ -80,7 +80,7 @@ function T(e) {
                     optionValues: {},
                     context: o,
                     sectionName: a
-                }), p.y(E.ti.COMMAND);
+                }), _.y(E.ti.COMMAND);
             } finally {
                 u(!1);
             }
@@ -97,12 +97,12 @@ function T(e) {
         color: s.Button.Colors.PRIMARY,
         className: P.commandSentCTAButton,
         innerClassName: P.commandSentCTAButtonInner,
-        'aria-label': v.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({ commandName: t.name }),
+        'aria-label': x.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({ commandName: t.name }),
         children: [
             (0, i.jsx)(s.Text, {
                 variant: 'text-sm/medium',
                 color: 'redesign-button-primary-text',
-                children: v.Z.Messages.SEND
+                children: x.Z.Messages.SEND
             }),
             (0, i.jsx)(r.U, {
                 size: 'xs',
@@ -157,11 +157,11 @@ function L(e) {
             sectionDescriptors: d
         } = u.wi(t, { commandType: o.yU.CHAT }, {
             placeholderCount: 0,
-            limit: x.tn,
+            limit: v.tn,
             includeFrecency: !0
         }), m = null !== (n = d.find(e => e.id === a.id)) && void 0 !== n ? n : null, {
-            sortOrder: p,
-            setSortOrder: _,
+            sortOrder: _,
+            setSortOrder: p,
             commands: E,
             canSort: A
         } = (0, h.Z)({
@@ -186,18 +186,18 @@ function L(e) {
                 channel: t,
                 section: m,
                 commands: C,
-                headerName: v.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
+                headerName: x.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
                 sectionName: r
             }),
             (0, i.jsx)(M, {
                 channel: t,
                 section: m,
                 commands: E,
-                headerName: v.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
+                headerName: x.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
                 sectionName: r,
                 children: A && (0, i.jsx)(f.Z, {
-                    sortOrder: p,
-                    onSortOptionClick: _
+                    sortOrder: _,
+                    onSortOptionClick: p
                 })
             })
         ]

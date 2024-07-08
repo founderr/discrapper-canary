@@ -5,7 +5,7 @@ i.d(n, {
 }), i(47120);
 var o = i(735250);
 i(470079);
-var s = i(442837), t = i(974674), l = i(696826), a = i(420660), r = i(233440), c = i(314897), d = i(158776), u = i(699516), I = i(998502), E = i(751009), f = i(332390), _ = i(877485), Z = i(505737), m = i(204197), v = i(78675), S = i(438163), x = i(652853), h = i(900687), N = i(228168), g = i(182294), p = i(602091), C = i(231338), T = i(505451);
+var s = i(442837), t = i(974674), l = i(696826), a = i(420660), r = i(233440), c = i(314897), d = i(158776), u = i(699516), I = i(998502), E = i(751009), _ = i(332390), f = i(877485), Z = i(505737), m = i(204197), v = i(78675), S = i(438163), x = i(652853), N = i(900687), h = i(228168), g = i(182294), p = i(602091), C = i(231338), T = i(505451);
 let R = I.ZP.getEnableHardwareAcceleration() ? t.Xo : t.qE;
 function M(e) {
     let {
@@ -28,10 +28,10 @@ function M(e) {
         }), {profileStatusEditEnabled: D} = (0, E.K)({ location: 'SimplifiedUserProfileModalHeader' }), {
             originalFriendingEnabled: B,
             improvedFriendingEnabled: F
-        } = (0, _.V)({ location: 'SimplifiedUserProfileModalHeader' }), {
+        } = (0, f.V)({ location: 'SimplifiedUserProfileModalHeader' }), {
             persistentCallCtaEnabled: G,
             activeInviteToCallCtaEnabled: k
-        } = (0, f.l)({ location: 'SimplifiedUserProfileModalHeader' }), w = (0, s.e7)([u.Z], () => u.Z.getRelationshipType(n.id)), Y = (0, s.e7)([c.default], () => c.default.getId() === n.id), [V, H] = (0, s.Wu)([d.Z], () => {
+        } = (0, _.l)({ location: 'SimplifiedUserProfileModalHeader' }), w = (0, s.e7)([u.Z], () => u.Z.getRelationshipType(n.id)), Y = (0, s.e7)([c.default], () => c.default.getId() === n.id), [V, H] = (0, s.Wu)([d.Z], () => {
             let e = d.Z.isMobileOnline(n.id);
             return (0, r.W)(n, M) ? [
                 C.Sk.UNKNOWN,
@@ -49,7 +49,7 @@ function M(e) {
             (0, o.jsx)(v.Z, {
                 user: n,
                 displayProfile: i,
-                profileType: N.y0.FULL_SIZE,
+                profileType: h.y0.FULL_SIZE,
                 hasProfileEffect: (null == i ? void 0 : i.profileEffectId) != null
             }),
             (0, o.jsxs)('div', {
@@ -67,10 +67,10 @@ function M(e) {
                             'aria-label': n.username,
                             isMobile: H,
                             statusTooltip: !0,
-                            statusTooltipDelay: N.vB
+                            statusTooltipDelay: h.vB
                         })
                     }),
-                    (0, o.jsx)(h.Z, {
+                    (0, o.jsx)(N.Z, {
                         user: n,
                         isCurrentUser: Y,
                         guildId: I,
@@ -85,7 +85,7 @@ function M(e) {
                     }),
                     (0, o.jsx)(S.Z, {
                         user: n,
-                        profileType: N.y0.FULL_SIZE,
+                        profileType: h.y0.FULL_SIZE,
                         editEnabled: D,
                         hasEntered: j === p.Dv.ENTERED,
                         onClose: P

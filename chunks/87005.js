@@ -1,21 +1,21 @@
 t.d(n, {
     f: function () {
-        return _;
+        return p;
     }
 }), t(47120);
 var i = t(470079), l = t(243814), a = t(442837), r = t(384275), s = t(911969), o = t(10718), c = t(148958), u = t(881998);
 t(445392);
 var d = t(689079);
-let m = { commandType: s.yU.CHAT }, p = {
+let m = { commandType: s.yU.CHAT }, _ = {
         placeholderCount: 0,
         limit: d.tn,
         includeFrecency: !0
     };
-function _(e, n) {
+function p(e, n) {
     let {
         sectionDescriptors: t,
         loading: s
-    } = o.wi(e, m, p);
+    } = o.wi(e, m, _);
     return {
         loading: s,
         frecentApps: function (e, n) {
