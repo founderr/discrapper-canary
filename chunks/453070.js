@@ -174,7 +174,7 @@ function D() {
 }
 function L() {
     let e = D();
-    return (0, i.Wu)([m.Z], () => e.map(e => m.Z.getStickerById(e)).filter(e => void 0 !== e), [e]);
+    return (0, i.Wu)([m.Z], () => e.map(e => m.Z.getStickerById(e)).filter(e => null != e && (!(0, T.J8)(e) || (0, T.V9)(e))), [e]);
 }
 function b() {
     let e = function () {
