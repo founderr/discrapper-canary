@@ -29,8 +29,8 @@ let r = async (e, t, s) => {
         };
     }, o = e => {
         let t = (0, n.cloneDeep)(e), s = Math.floor(101 * Math.random()) + 150;
-        return t.forEach((e, t) => {
-            0 !== t && (e.start += s);
+        return t.forEach(e => {
+            e.duration -= s;
         }), t;
     }, l = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'json', s = '\n[';
