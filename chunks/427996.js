@@ -1,51 +1,51 @@
-t.d(n, {
+n.d(t, {
     W: function () {
         return d;
     }
 });
-var i = t(735250);
-t(470079);
-var a = t(399606), l = t(481060), s = t(337682), r = t(115130), o = t(689938), c = t(903526);
-function d() {
-    let {
-        activityUrlOverride: e,
-        useActivityUrlOverride: n,
-        filter: t
-    } = (0, a.cj)([r.Z], () => ({
-        activityUrlOverride: r.Z.getActivityUrlOverride(),
-        useActivityUrlOverride: r.Z.getUseActivityUrlOverride(),
-        filter: r.Z.getFilter()
-    }), []);
+var i = n(735250);
+n(470079);
+var l = n(399606), r = n(481060), a = n(337682), o = n(115130), u = n(689938), c = n(903526);
+function d(e) {
+    let {hideSearch: t} = e, {
+            activityUrlOverride: n,
+            useActivityUrlOverride: d,
+            filter: s
+        } = (0, l.cj)([o.Z], () => ({
+            activityUrlOverride: o.Z.getActivityUrlOverride(),
+            useActivityUrlOverride: o.Z.getUseActivityUrlOverride(),
+            filter: o.Z.getFilter()
+        }), []);
     return (0, i.jsxs)('div', {
         className: c.container,
         children: [
-            (0, i.jsx)(l.Checkbox, {
-                type: l.Checkbox.Types.INVERTED,
+            (0, i.jsx)(r.Checkbox, {
+                type: r.Checkbox.Types.INVERTED,
                 className: c.__invalid_checkbox,
-                value: n,
-                onClick: s.Y$,
-                children: (0, i.jsx)(l.Text, {
+                value: d,
+                onClick: a.Y$,
+                children: (0, i.jsx)(r.Text, {
                     variant: 'text-md/semibold',
-                    children: o.Z.Messages.EMBEDDED_ACTIVITIES_USE_ACTIVITY_URL_OVERRIDE
+                    children: u.Z.Messages.EMBEDDED_ACTIVITIES_USE_ACTIVITY_URL_OVERRIDE
                 })
             }),
-            (0, i.jsx)(l.FormItem, {
+            (0, i.jsx)(r.FormItem, {
                 className: c.__invalid_urlOverride,
-                title: o.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_URL_OVERRIDE,
-                children: (0, i.jsx)(l.TextInput, {
-                    disabled: !n,
-                    value: null != e ? e : void 0,
-                    onChange: s.jS,
+                title: u.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_URL_OVERRIDE,
+                children: (0, i.jsx)(r.TextInput, {
+                    disabled: !d,
+                    value: null != n ? n : void 0,
+                    onChange: a.jS,
                     placeholder: 'http://localhost:3000'
                 })
             }),
-            (0, i.jsx)('div', {
-                children: (0, i.jsx)(l.SearchBar, {
+            !0 === t ? null : (0, i.jsx)('div', {
+                children: (0, i.jsx)(r.SearchBar, {
                     className: c.searchBar,
-                    query: t,
-                    onChange: s.a8,
+                    query: s,
+                    onChange: a.a8,
                     onClear: function () {
-                        s.a8('');
+                        a.a8('');
                     }
                 })
             })

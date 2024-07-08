@@ -23,9 +23,9 @@ function _(e) {
         is_chat_badged: T
     }), (0, a.openModalLazy)(async () => {
         let {default: e} = await Promise.all([
-            n.e('78594'),
+            n.e('64714'),
             n.e('23919'),
-            n.e('8698')
+            n.e('79058')
         ]).then(n.bind(n, 743161));
         return n => (0, i.jsx)(e, {
             channel: t,
