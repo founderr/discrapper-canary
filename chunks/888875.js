@@ -18,7 +18,7 @@ class O extends s.Z {
             hasChanges: () => c.Z.hasPendingUsage() && p.Z.hasLoaded(I.yP.FRECENCY_AND_FAVORITES_SETTINGS),
             processProto: e => {
                 if (!!c.Z.hasPendingUsage())
-                    p.Z.hasLoaded(I.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (e.emojiFrecency = a.PL.create(), e.emojiFrecency.emojis = (0, m.tU)(c.Z.emojiFrecencyWithoutFetchingLatest.usageHistory, 100));
+                    p.Z.hasLoaded(I.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (e.emojiFrecency = a.PL.create(), e.emojiReactionFrecency = a.PL.create(), e.emojiFrecency.emojis = (0, m.tU)(c.Z.emojiFrecencyWithoutFetchingLatest.usageHistory, 100), e.emojiReactionFrecency.emojis = (0, m.tU)(c.Z.emojiReactionFrecencyWithoutFetchingLatest.usageHistory, 100));
             }
         }), h.DZ.beforeSendCallbacks.push({
             hasChanges: () => d.Z.hasPendingUsage() && p.Z.hasLoaded(I.yP.FRECENCY_AND_FAVORITES_SETTINGS),
