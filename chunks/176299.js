@@ -195,6 +195,8 @@ let ex = e => (0, i.jsx)(ev, { ...e }), eb = e => {
             return (0, i.jsx)(l.l_, { to: eI.Z5c.SETTINGS('privacy-and-safety', 'account-standing') });
         case 'authorized-apps':
             return (0, i.jsx)(l.l_, { to: eI.Z5c.SETTINGS('authorized-apps') });
+        case 'open-shop':
+            return (0, i.jsx)(l.l_, { to: eI.Z5c.COLLECTIBLES_SHOP_FULLSCREEN });
         default:
             return (0, i.jsx)(l.l_, { to: eI.Z5c.ME });
         }
