@@ -195,10 +195,13 @@ let x = {
     },
     message: { react: (e, t, n) => (0, r.jsx)(h.Z, {}, n.key) },
     subtext: {
-        react: (e, t, n) => (0, s.reactElement)('small', (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
-            children: t(e.content, n),
-            className: n.formatInline ? P.inlineFormat : null
-        })
+        react: (e, t, n) => {
+            let r = (0, s.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
+            return (0, s.reactElement)('small', (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
+                children: r,
+                className: n.formatInline ? P.inlineFormat : null
+            });
+        }
     }
 };
 function G(e) {
