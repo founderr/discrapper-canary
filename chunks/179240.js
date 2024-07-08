@@ -30,7 +30,8 @@ let E = [
 ];
 class f extends (i = o.PureComponent) {
     componentDidMount() {
-        Promise.resolve().then(() => this.calculateSize());
+        var e, t;
+        null === (e = (t = this.props).onResize) || void 0 === e || e.call(t, void 0), Promise.resolve().then(() => this.calculateSize());
     }
     componentDidUpdate(e, t) {
         if (this.state.height !== t.height) {

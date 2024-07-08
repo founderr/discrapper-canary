@@ -9,10 +9,12 @@ function o(e, t, n) {
         let r = i.F3.findDocumentOrShadowRoot(e).defaultView;
         if ((null == r ? void 0 : r.ResizeObserver) == null)
             return;
-        let o = a.bN.toDOMNode(e, e), s = o.offsetHeight, l = new r.ResizeObserver(() => {
-                let r = a.bN.toDOMNode(e, e).offsetHeight;
-                s !== r && (null != t.current && (t.current.style.height = ''.concat(r, 'px')), s = r, null == n || n(r));
-            });
+        let o = a.bN.toDOMNode(e, e), s = o.offsetHeight;
+        null == n || n(s);
+        let l = new r.ResizeObserver(() => {
+            let r = a.bN.toDOMNode(e, e).offsetHeight;
+            s !== r && (null != t.current && (t.current.style.height = ''.concat(r, 'px')), s = r, null == n || n(r));
+        });
         return l.observe(o), () => l.disconnect();
     }, [
         t,
