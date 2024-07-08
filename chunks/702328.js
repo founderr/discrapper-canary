@@ -127,7 +127,8 @@ t.Z = e => {
                         subscriptionTier: en,
                         isFullscreen: n || ed,
                         className: i()({
-                            [H.fullscreenHero]: n,
+                            [H.fullscreenHero]: n && !O,
+                            [H.fullscreenHeroModified]: n && x > 1,
                             [H.settingsHeroNoBackground]: !n && ed,
                             [H.trialMarketingMargin]: ed,
                             [H.settingsHeroBogoHeight]: !n && e_,
