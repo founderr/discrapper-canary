@@ -75,46 +75,57 @@ t.Z = function (e) {
             appliedGuildBoostSlots: L,
             unappliedGuildBoostSlots: Z,
             numActiveGuildBoostSlots: b,
-            hasCooldownBoosts: v
+            hasCooldownBoosts: v,
+            allGuildBoostsAreOnCooldown: j
         } = a.useMemo(() => {
-            let e = [], t = [], s = 0, n = !1;
-            return i.forEach(a => {
-                !(0, C.tl)(a) && s++, a.isOnCooldown() && (n = !0), null != a.premiumGuildSubscription ? e.push(a) : t.push(a);
+            let e = [], t = [], s = 0, n = !1, a = !0;
+            return i.forEach(i => {
+                !(0, C.tl)(i) && s++, i.isOnCooldown() ? n = !0 : a = !1, null != i.premiumGuildSubscription ? e.push(i) : t.push(i);
             }), {
                 appliedGuildBoostSlots: e,
                 unappliedGuildBoostSlots: t,
                 numActiveGuildBoostSlots: s,
-                hasCooldownBoosts: n
+                hasCooldownBoosts: n,
+                allGuildBoostsAreOnCooldown: a
             };
-        }, [i]), j = null != E ? (0, d.G)(E, P) : 0, B = Math.max(0, j - L.length), U = b > j, G = j === i.length, F = G ? B : 1, y = a.useMemo(() => {
+        }, [i]), B = null != E ? (0, d.G)(E, P) : 0, U = Math.max(0, B - L.length), G = b > B, F = B === i.length, y = F ? U : 1, V = a.useMemo(() => {
             let e = [];
-            for (let t = 0; t < F; t++)
+            for (let t = 0; t < y; t++)
                 e.push((0, n.jsx)(A.Z, {
                     className: x.headerBoostGem,
                     useReducedMotion: h
                 }, t));
             return e;
         }, [
-            F,
+            y,
             h
-        ]), V = null != P, Y = a.useMemo(() => Z.find(e => e.isAvailable()), [Z]);
+        ]), Y = null != P, w = a.useMemo(() => Z.find(e => e.isAvailable()), [Z]);
     if (0 === Z.length)
         return null;
-    let w = Z.length;
-    return t = G ? 1 === w && V ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION.format({ numUnappliedGuildBoostSlots: w }) : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2.format({ numUnappliedGuildBoostSlots: w }), m.ZP.isPremium(g) ? s = G && 1 === w && V ? P.skuId === p.Ft.FREE_GUILD_BOOST_1_MONTH ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
-        numUnappliedGuildBoostSlots: w,
-        learnMoreHook: (e, t) => (0, n.jsx)(l.Clickable, {
-            className: x.headerLearnMoreLink,
-            tag: 'span',
-            onClick: () => {
-                (0, T.z)();
-            },
-            children: e
-        }, t)
-    }) : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING.format({ numUnappliedGuildBoostSlots: w }), (0, n.jsxs)('div', {
+    let k = Z.length;
+    if (t = F ? 1 === k && Y ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION).format({ numUnappliedGuildBoostSlots: k }) : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2).format({ numUnappliedGuildBoostSlots: k }), m.ZP.isPremium(g)) {
+        if (F && 1 === k && Y)
+            s = P.skuId === p.Ft.FREE_GUILD_BOOST_1_MONTH ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT;
+        else {
+            let e = (e, t) => (0, n.jsx)(l.Clickable, {
+                className: x.headerLearnMoreLink,
+                tag: 'span',
+                onClick: () => {
+                    (0, T.z)();
+                },
+                children: e
+            }, t);
+            s = j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_ALL_COOLDOWN.format({ learnMoreHook: e }) : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
+                numUnappliedGuildBoostSlots: k,
+                learnMoreHook: e
+            });
+        }
+    } else
+        s = j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING.format({ numUnappliedGuildBoostSlots: k });
+    return (0, n.jsxs)('div', {
         className: x.wrapper,
         children: [
-            V && (0, n.jsxs)('div', {
+            Y && (0, n.jsxs)('div', {
                 className: x.specialHeader,
                 children: [
                     (0, n.jsx)(l.Text, {
@@ -131,8 +142,8 @@ t.Z = function (e) {
             }),
             (0, n.jsxs)('div', {
                 className: r()(x.content, {
-                    [x.headerWithBoost]: V,
-                    [x.headerWithoutSpecialHeader]: !V
+                    [x.headerWithBoost]: Y,
+                    [x.headerWithoutSpecialHeader]: !Y
                 }),
                 children: [
                     (0, n.jsxs)('div', {
@@ -143,7 +154,7 @@ t.Z = function (e) {
                                 children: [
                                     (0, n.jsx)('div', {
                                         className: x.headerBoostGems,
-                                        children: y
+                                        children: V
                                     }),
                                     (0, n.jsxs)('div', {
                                         className: x.__invalid_headerCopy,
@@ -166,14 +177,14 @@ t.Z = function (e) {
                             (0, n.jsx)('div', {
                                 className: x.headerContentSecondary,
                                 children: (0, n.jsx)(l.Tooltip, {
-                                    shouldShow: null == Y || u,
+                                    shouldShow: null == w || u,
                                     text: u ? R.Z.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_NO_AVAILABLE_GUILD_BOOST_SLOTS,
                                     children: e => (0, n.jsx)(l.Button, {
                                         ...e,
-                                        disabled: null == Y || u,
-                                        onClick: null != Y ? () => {
+                                        disabled: null == w || u,
+                                        onClick: null != w ? () => {
                                             var e;
-                                            return e = Y, void (0, l.openModalLazy)(async () => t => (0, n.jsx)(_.default, {
+                                            return e = w, void (0, l.openModalLazy)(async () => t => (0, n.jsx)(_.default, {
                                                 ...t,
                                                 guildBoostSlots: [e],
                                                 locationSection: O.jXE.SETTINGS_PREMIUM
@@ -185,11 +196,11 @@ t.Z = function (e) {
                             })
                         ]
                     }),
-                    (!G || v) && (0, n.jsx)('ul', {
+                    (!F || v) && (0, n.jsx)('ul', {
                         className: x.unappliedBoostSlots,
                         children: Z.map(e => (0, n.jsx)(M, {
                             guildBoostSlot: e,
-                            isCancellable: U,
+                            isCancellable: G,
                             onCancel: D,
                             onUncancel: f,
                             premiumSubscription: E,
