@@ -3,8 +3,8 @@ n.d(t, {
         return L;
     }
 }), n(411104), n(47120);
-var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(481060), l = n(493683), u = n(904245), c = n(906732), d = n(541716), _ = n(752305), E = n(893718), f = n(957730), h = n(24311), p = n(131704), m = n(592125), I = n(5192), T = n(838440), g = n(332390), S = n(785717), A = n(993409), N = n(765365), v = n(981631), O = n(689938), R = n(767722), C = n(589273);
-let y = (0, p.kt)({
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(481060), l = n(493683), u = n(904245), c = n(906732), d = n(541716), _ = n(752305), E = n(893718), f = n(957730), h = n(131704), p = n(592125), m = n(5192), I = n(838440), T = n(332390), g = n(785717), S = n(993409), A = n(261253), N = n(765365), v = n(981631), O = n(689938), R = n(767722), C = n(589273);
+let y = (0, h.kt)({
         id: '1',
         type: v.d4z.DM
     }), D = async e => {
@@ -15,14 +15,14 @@ let y = (0, p.kt)({
             } = e, {
                 valid: i,
                 failureReason: a
-            } = await (0, T.v)({
+            } = await (0, I.v)({
                 type: d.I.NORMAL,
                 content: n,
                 channel: null
             });
         if (!i)
             throw Error(a);
-        let o = await l.Z.openPrivateChannel(t, !1, !1, r), s = m.Z.getChannel(o);
+        let o = await l.Z.openPrivateChannel(t, !1, !1, r), s = p.Z.getChannel(o);
         if (null == s)
             throw Error('Failed to open private channel');
         let c = f.ZP.parse(s, n);
@@ -34,122 +34,58 @@ function L(e) {
             guildId: n,
             channelId: a,
             onClose: u
-        } = e, {
-            analyticsLocations: f,
-            newestAnalyticsLocation: p
-        } = (0, c.ZP)(), {trackUserProfileAction: m} = (0, S.KZ)(), {
-            messageCtaEnabled: T,
-            activeInviteToCallCtaEnabled: v,
-            persistentCallCtaEnabled: L
-        } = (0, g.l)({ location: 'BiteSizeProfileDirectMessageSection' }), b = (0, N.Z)({
+        } = e, {newestAnalyticsLocation: f} = (0, c.ZP)(), {trackUserProfileAction: h} = (0, g.KZ)(), {
+            messageCtaEnabled: p,
+            activeInviteToCallCtaEnabled: I,
+            persistentCallCtaEnabled: v
+        } = (0, T.l)({ location: 'BiteSizeProfileDirectMessageSection' }), L = (0, N.Z)({
             user: t,
             onClose: u,
             className: C.biteSizeButton
-        }), [M, P] = i.useState(''), [U, w] = i.useState((0, _.JM)(M)), x = i.useRef(!1), G = () => {
-            m({ action: 'SEND_MESSAGE' }), l.Z.openPrivateChannel(t.id, !1, !1, p), null == u || u();
-        }, k = (0, r.jsxs)('div', {
-            className: C.menuItemLabel,
-            children: [
-                (0, r.jsx)(s.PhoneCallIcon, { size: 'xs' }),
-                ' ',
-                O.Z.Messages.START_VOICE_CALL
-            ]
-        }), B = (0, h.Z)({
-            user: t,
-            label: k,
-            id: 'voice-call',
-            onCall: () => {
-                m({ action: 'VOICE_CALL' }), null == u || u();
-            }
-        }), F = (0, r.jsxs)('div', {
-            className: C.menuItemLabel,
-            children: [
-                (0, r.jsx)(s.VideoIcon, { size: 'xs' }),
-                ' ',
-                O.Z.Messages.START_VIDEO_CALL
-            ]
-        }), V = (0, h.Z)({
-            user: t,
-            label: F,
-            joinCallVideo: !0,
-            id: 'video-call',
-            onCall: () => {
-                m({ action: 'VIDEO_CALL' }), null == u || u();
-            }
-        }), H = (0, r.jsx)(c.Gt, {
-            value: f,
-            children: (0, r.jsx)(s.Popout, {
-                position: 'bottom',
-                renderPopout: e => {
-                    let {closePopout: t} = e;
-                    return (0, r.jsx)(s.Menu, {
-                        navId: 'user-profile-action-call-button',
-                        onSelect: void 0,
-                        onClose: t,
-                        'aria-label': O.Z.Messages.PROFILE_ACTIONS_MENU_LABEL,
-                        children: (0, r.jsxs)(s.MenuGroup, {
-                            children: [
-                                B,
-                                V
-                            ]
-                        })
-                    });
-                },
-                children: e => {
-                    let {
-                        onClick: t,
-                        ...n
-                    } = e;
-                    return (0, r.jsx)(A.Z, {
-                        icon: s.PhoneCallIcon,
-                        text: O.Z.Messages.CALL,
-                        variant: 'icon',
-                        color: o()(C.engagementExpButton, C.biteSizeIconButton),
-                        ...n,
-                        onClick: e => {
-                            m({ action: 'PRESS_CALL' }), t(e);
-                        }
-                    });
-                }
-            })
-        });
-    if (T)
-        return v && null != b ? (0, r.jsxs)('div', {
+        }), [b, M] = i.useState(''), [P, U] = i.useState((0, _.JM)(b)), w = i.useRef(!1), x = () => {
+            h({ action: 'SEND_MESSAGE' }), l.Z.openPrivateChannel(t.id, !1, !1, f), null == u || u();
+        };
+    if (p)
+        return I && null != L ? (0, r.jsxs)('div', {
             className: C.ctaRow,
             children: [
-                (0, r.jsx)(A.Z, {
+                (0, r.jsx)(S.Z, {
                     fullWidth: !0,
                     variant: 'text',
                     color: C.engagementExpButton,
                     className: C.biteSizeButton,
                     tooltipContainerClassName: C.ctaTooltipContainer,
-                    onClick: G,
+                    onClick: x,
                     icon: s.ChatIcon,
                     text: O.Z.Messages.USER_PROFILE_MESSAGE
                 }),
-                b
+                L
             ]
-        }) : L ? (0, r.jsxs)('div', {
+        }) : v ? (0, r.jsxs)('div', {
             className: C.ctaRow,
             children: [
-                (0, r.jsx)(A.Z, {
+                (0, r.jsx)(S.Z, {
                     fullWidth: !0,
                     variant: 'text',
                     color: o()(s.Button.Colors.BRAND, R.color),
-                    onClick: G,
+                    onClick: x,
                     className: C.biteSizeButton,
                     icon: s.ChatIcon,
                     text: O.Z.Messages.USER_PROFILE_MESSAGE,
                     tooltipContainerClassName: C.ctaTooltipContainer
                 }),
-                H
+                (0, r.jsx)(A.Z, {
+                    user: t,
+                    onClose: u,
+                    className: o()(C.engagementExpButton, C.biteSizeIconButton)
+                })
             ]
-        }) : (0, r.jsx)(A.Z, {
+        }) : (0, r.jsx)(S.Z, {
             fullWidth: !0,
             variant: 'text',
             className: C.biteSizeButton,
             color: o()(s.Button.Colors.BRAND, R.color),
-            onClick: G,
+            onClick: x,
             icon: s.ChatIcon,
             text: O.Z.Messages.USER_PROFILE_MESSAGE
         });
@@ -157,28 +93,28 @@ function L(e) {
         innerClassName: C.inner,
         editorClassName: C.editor,
         type: d.I.USER_PROFILE,
-        placeholder: O.Z.Messages.QUICK_DM_USER.format({ name: I.ZP.getName(n, a, t) }),
+        placeholder: O.Z.Messages.QUICK_DM_USER.format({ name: m.ZP.getName(n, a, t) }),
         channel: y,
-        textValue: M,
-        richValue: U,
+        textValue: b,
+        richValue: P,
         onChange: (e, t, n) => {
-            if (t !== M)
-                P(t), w(n);
+            if (t !== b)
+                M(t), U(n);
         },
-        focused: x.current,
+        focused: w.current,
         onFocus: () => {
-            x.current = !0;
+            w.current = !0;
         },
         onBlur: () => {
-            x.current = !1;
+            w.current = !1;
         },
         onSubmit: async e => {
             let {value: n} = e;
             try {
-                return m({ action: 'SEND_DIRECT_MESSAGE' }), await D({
+                return h({ action: 'SEND_DIRECT_MESSAGE' }), await D({
                     userId: t.id,
                     content: n.trim(),
-                    location: p
+                    location: f
                 }), null == u || u(), {
                     shouldClear: !0,
                     shouldRefocus: !1

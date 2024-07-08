@@ -1,280 +1,267 @@
 i.d(n, {
     Z: function () {
-        return v;
+        return m;
     }
 });
 var o = i(735250);
 i(470079);
-var s = i(120356), t = i.n(s), l = i(442837), a = i(481060), r = i(493683), c = i(194359), d = i(906732), u = i(740492), I = i(785717), E = i(993409), f = i(765365), _ = i(981631), Z = i(689938), m = i(682731);
-function v(e) {
+var s = i(120356), t = i.n(s), l = i(481060), a = i(493683), r = i(194359), c = i(906732), d = i(785717), u = i(993409), I = i(261253), E = i(765365), _ = i(981631), f = i(689938), Z = i(682731);
+function m(e) {
     let {
             isCurrentUser: n,
-            user: s,
-            relationshipType: v,
-            friendToken: S,
-            originalFriendingEnabled: x = !1,
-            improvedFriendingEnabled: h = !1,
-            persistentCallCtaEnabled: N = !1,
-            activeInviteToCallCtaEnabled: g = !1,
-            onClose: p
-        } = e, {newestAnalyticsLocation: C} = (0, d.ZP)(), {trackUserProfileAction: T} = (0, I.KZ)(), R = (0, l.e7)([u.ZP], () => !u.ZP.disableCallUserConfirmationPrompt), M = (0, f.Z)({
-            user: s,
-            onClose: p
+            user: i,
+            relationshipType: s,
+            friendToken: m,
+            originalFriendingEnabled: v = !1,
+            improvedFriendingEnabled: S = !1,
+            persistentCallCtaEnabled: x = !1,
+            activeInviteToCallCtaEnabled: N = !1,
+            onClose: h
+        } = e, {newestAnalyticsLocation: g} = (0, c.ZP)(), {trackUserProfileAction: p} = (0, d.KZ)(), C = (0, E.Z)({
+            user: i,
+            onClose: h
         });
-    if (n || v === _.OGo.BLOCKED)
+    if (n || s === _.OGo.BLOCKED)
         return null;
-    let j = () => {
-            T({ action: 'SEND_MESSAGE' }), r.Z.openPrivateChannel(s.id, !1, !1, C), p();
-        }, A = () => {
-            T({ action: 'VOICE_CALL' }), r.Z.openPrivateChannel(s.id, !0), p();
-        }, P = N ? (0, o.jsx)(E.Z, {
-            variant: 'icon',
-            text: Z.Z.Messages.CALL,
-            icon: a.PhoneCallIcon,
-            color: t()(a.Button.Colors.PRIMARY, m.color),
-            onClick: R ? () => {
-                (0, a.openModalLazy)(async () => {
-                    let {default: e} = await i.e('27157').then(i.bind(i, 736454));
-                    return n => (0, o.jsx)(e, {
-                        onSubmit: A,
-                        ...n
-                    });
-                });
-            } : A,
-            className: m.iconButton
+    let T = () => {
+            p({ action: 'SEND_MESSAGE' }), a.Z.openPrivateChannel(i.id, !1, !1, g), h();
+        }, R = x ? (0, o.jsx)(I.Z, {
+            user: i,
+            onClose: h,
+            className: t()(l.Button.Colors.PRIMARY, Z.color, Z.iconButton)
         }) : null;
-    if (h) {
-        if (v === _.OGo.FRIEND && g && null != M)
+    if (S) {
+        if (s === _.OGo.FRIEND && N && null != C)
             return (0, o.jsxs)('div', {
-                className: m.multipleButtons,
+                className: Z.multipleButtons,
                 children: [
-                    (0, o.jsx)(E.Z, {
+                    (0, o.jsx)(u.Z, {
                         variant: 'icon',
-                        text: Z.Z.Messages.SEND_DM,
-                        icon: a.ChatIcon,
-                        className: m.iconButton,
-                        color: t()(a.Button.Colors.PRIMARY, m.color),
-                        onClick: j
+                        text: f.Z.Messages.SEND_DM,
+                        icon: l.ChatIcon,
+                        className: Z.iconButton,
+                        color: t()(l.Button.Colors.PRIMARY, Z.color),
+                        onClick: T
                     }),
-                    M
+                    C
                 ]
             });
-        if (v === _.OGo.FRIEND || s.bot)
+        if (s === _.OGo.FRIEND || i.bot)
             return (0, o.jsxs)('div', {
-                className: m.multipleButtons,
+                className: Z.multipleButtons,
                 children: [
-                    P,
-                    (0, o.jsx)(E.Z, {
+                    R,
+                    (0, o.jsx)(u.Z, {
                         variant: 'text',
-                        text: Z.Z.Messages.SEND_DM,
-                        icon: a.ChatIcon,
-                        color: t()(a.Button.Colors.PRIMARY, m.color),
-                        onClick: j
+                        text: f.Z.Messages.SEND_DM,
+                        icon: l.ChatIcon,
+                        color: t()(l.Button.Colors.PRIMARY, Z.color),
+                        onClick: T
                     })
                 ]
             });
-        if (v === _.OGo.PENDING_OUTGOING)
-            return g && null != M ? (0, o.jsxs)('div', {
-                className: m.multipleButtons,
+        if (s === _.OGo.PENDING_OUTGOING)
+            return N && null != C ? (0, o.jsxs)('div', {
+                className: Z.multipleButtons,
                 children: [
-                    (0, o.jsx)(E.Z, {
+                    (0, o.jsx)(u.Z, {
                         variant: 'icon',
-                        text: Z.Z.Messages.FRIENDS_SECTION_PENDING,
-                        icon: a.UserClockIcon,
-                        className: m.iconButton,
-                        color: t()(a.Button.Colors.PRIMARY, m.color),
+                        text: f.Z.Messages.FRIENDS_SECTION_PENDING,
+                        icon: l.UserClockIcon,
+                        className: Z.iconButton,
+                        color: t()(l.Button.Colors.PRIMARY, Z.color),
                         disabled: !0
                     }),
-                    (0, o.jsx)(E.Z, {
+                    (0, o.jsx)(u.Z, {
                         variant: 'icon',
-                        text: Z.Z.Messages.SEND_DM,
-                        icon: a.ChatIcon,
-                        className: m.iconButton,
-                        color: t()(a.Button.Colors.PRIMARY, m.color),
-                        onClick: j
+                        text: f.Z.Messages.SEND_DM,
+                        icon: l.ChatIcon,
+                        className: Z.iconButton,
+                        color: t()(l.Button.Colors.PRIMARY, Z.color),
+                        onClick: T
                     }),
-                    M
+                    C
                 ]
             }) : (0, o.jsxs)('div', {
-                className: m.multipleButtons,
+                className: Z.multipleButtons,
                 children: [
-                    (0, o.jsx)(E.Z, {
+                    (0, o.jsx)(u.Z, {
                         variant: 'icon',
-                        text: Z.Z.Messages.FRIENDS_SECTION_PENDING,
-                        icon: a.UserClockIcon,
-                        className: m.iconButton,
-                        color: t()(a.Button.Colors.PRIMARY, m.color),
+                        text: f.Z.Messages.FRIENDS_SECTION_PENDING,
+                        icon: l.UserClockIcon,
+                        className: Z.iconButton,
+                        color: t()(l.Button.Colors.PRIMARY, Z.color),
                         disabled: !0
                     }),
-                    P,
-                    (0, o.jsx)(E.Z, {
+                    R,
+                    (0, o.jsx)(u.Z, {
                         variant: 'text',
-                        text: Z.Z.Messages.SEND_DM,
-                        icon: a.ChatIcon,
-                        color: t()(a.Button.Colors.PRIMARY, m.color),
-                        onClick: j
+                        text: f.Z.Messages.SEND_DM,
+                        icon: l.ChatIcon,
+                        color: t()(l.Button.Colors.PRIMARY, Z.color),
+                        onClick: T
                     })
                 ]
             });
-        if (v === _.OGo.PENDING_INCOMING)
-            return g && null != M ? (0, o.jsxs)('div', {
-                className: m.multipleButtons,
+        if (s === _.OGo.PENDING_INCOMING)
+            return N && null != C ? (0, o.jsxs)('div', {
+                className: Z.multipleButtons,
                 children: [
-                    (0, o.jsx)(E.Z, {
+                    (0, o.jsx)(u.Z, {
                         variant: 'icon',
-                        text: Z.Z.Messages.FRIENDS_SECTION_PENDING,
-                        icon: a.UserClockIcon,
-                        className: m.iconButton,
-                        color: t()(a.Button.Colors.PRIMARY, m.color),
+                        text: f.Z.Messages.FRIENDS_SECTION_PENDING,
+                        icon: l.UserClockIcon,
+                        className: Z.iconButton,
+                        color: t()(l.Button.Colors.PRIMARY, Z.color),
                         disabled: !0
                     }),
-                    (0, o.jsx)(E.Z, {
+                    (0, o.jsx)(u.Z, {
                         variant: 'icon',
-                        text: Z.Z.Messages.SEND_DM,
-                        icon: a.ChatIcon,
-                        className: m.iconButton,
-                        color: t()(a.Button.Colors.PRIMARY, m.color),
-                        onClick: j
+                        text: f.Z.Messages.SEND_DM,
+                        icon: l.ChatIcon,
+                        className: Z.iconButton,
+                        color: t()(l.Button.Colors.PRIMARY, Z.color),
+                        onClick: T
                     }),
-                    M
+                    C
                 ]
             }) : (0, o.jsxs)('div', {
-                className: m.multipleButtons,
+                className: Z.multipleButtons,
                 children: [
-                    (0, o.jsx)(E.Z, {
+                    (0, o.jsx)(u.Z, {
                         variant: 'icon',
-                        text: Z.Z.Messages.FRIENDS_SECTION_PENDING,
-                        icon: a.UserClockIcon,
-                        className: m.iconButton,
-                        color: t()(a.Button.Colors.PRIMARY, m.color),
+                        text: f.Z.Messages.FRIENDS_SECTION_PENDING,
+                        icon: l.UserClockIcon,
+                        className: Z.iconButton,
+                        color: t()(l.Button.Colors.PRIMARY, Z.color),
                         disabled: !0
                     }),
-                    P,
-                    (0, o.jsx)(E.Z, {
+                    R,
+                    (0, o.jsx)(u.Z, {
                         variant: 'text',
-                        text: Z.Z.Messages.SEND_DM,
-                        icon: a.ChatIcon,
-                        className: m.iconButton,
-                        color: t()(a.Button.Colors.PRIMARY, m.color),
-                        onClick: j
+                        text: f.Z.Messages.SEND_DM,
+                        icon: l.ChatIcon,
+                        className: Z.iconButton,
+                        color: t()(l.Button.Colors.PRIMARY, Z.color),
+                        onClick: T
                     })
                 ]
             });
-        return g && null != M ? (0, o.jsxs)('div', {
-            className: m.multipleButtons,
+        return N && null != C ? (0, o.jsxs)('div', {
+            className: Z.multipleButtons,
             children: [
-                (0, o.jsx)(E.Z, {
+                (0, o.jsx)(u.Z, {
                     variant: 'icon',
-                    text: Z.Z.Messages.USER_PROFILE_ADD_FRIEND,
-                    className: m.iconButton,
-                    icon: a.UserPlusIcon,
-                    color: t()(a.Button.Colors.PRIMARY, m.color),
+                    text: f.Z.Messages.USER_PROFILE_ADD_FRIEND,
+                    className: Z.iconButton,
+                    icon: l.UserPlusIcon,
+                    color: t()(l.Button.Colors.PRIMARY, Z.color),
                     onClick: () => {
-                        T({ action: 'SEND_FRIEND_REQUEST' }), c.Z.addRelationship({
-                            userId: s.id,
-                            context: { location: C },
-                            friendToken: S
+                        p({ action: 'SEND_FRIEND_REQUEST' }), r.Z.addRelationship({
+                            userId: i.id,
+                            context: { location: g },
+                            friendToken: m
                         });
                     }
                 }),
-                (0, o.jsx)(E.Z, {
+                (0, o.jsx)(u.Z, {
                     variant: 'icon',
-                    text: Z.Z.Messages.SEND_DM,
-                    icon: a.ChatIcon,
-                    className: m.iconButton,
-                    color: t()(a.Button.Colors.PRIMARY, m.color),
-                    onClick: j
+                    text: f.Z.Messages.SEND_DM,
+                    icon: l.ChatIcon,
+                    className: Z.iconButton,
+                    color: t()(l.Button.Colors.PRIMARY, Z.color),
+                    onClick: T
                 }),
-                M
+                C
             ]
         }) : (0, o.jsxs)('div', {
-            className: m.multipleButtons,
+            className: Z.multipleButtons,
             children: [
-                P,
-                (0, o.jsx)(E.Z, {
+                R,
+                (0, o.jsx)(u.Z, {
                     variant: 'icon',
-                    text: Z.Z.Messages.SEND_DM,
-                    icon: a.ChatIcon,
-                    className: m.iconButton,
-                    color: t()(a.Button.Colors.PRIMARY, m.color),
-                    onClick: j
+                    text: f.Z.Messages.SEND_DM,
+                    icon: l.ChatIcon,
+                    className: Z.iconButton,
+                    color: t()(l.Button.Colors.PRIMARY, Z.color),
+                    onClick: T
                 }),
-                (0, o.jsx)(E.Z, {
+                (0, o.jsx)(u.Z, {
                     variant: 'text',
-                    text: Z.Z.Messages.USER_PROFILE_ADD_FRIEND,
-                    icon: a.UserPlusIcon,
-                    color: t()(a.Button.Colors.BRAND, m.color),
+                    text: f.Z.Messages.USER_PROFILE_ADD_FRIEND,
+                    icon: l.UserPlusIcon,
+                    color: t()(l.Button.Colors.BRAND, Z.color),
                     onClick: () => {
-                        T({ action: 'SEND_FRIEND_REQUEST' }), c.Z.addRelationship({
-                            userId: s.id,
-                            context: { location: C },
-                            friendToken: S
+                        p({ action: 'SEND_FRIEND_REQUEST' }), r.Z.addRelationship({
+                            userId: i.id,
+                            context: { location: g },
+                            friendToken: m
                         });
                     }
                 })
             ]
         });
     }
-    if (v === _.OGo.FRIEND || s.bot)
-        return x ? (0, o.jsx)(E.Z, {
+    if (s === _.OGo.FRIEND || i.bot)
+        return v ? (0, o.jsx)(u.Z, {
             variant: 'text',
-            text: Z.Z.Messages.SEND_DM,
-            color: t()(a.Button.Colors.PRIMARY, m.color),
-            onClick: j
-        }) : (0, o.jsx)(E.Z, {
+            text: f.Z.Messages.SEND_DM,
+            color: t()(l.Button.Colors.PRIMARY, Z.color),
+            onClick: T
+        }) : (0, o.jsx)(u.Z, {
             variant: 'text',
-            text: Z.Z.Messages.SEND_MESSAGE,
-            color: a.Button.Colors.GREEN,
-            onClick: j
+            text: f.Z.Messages.SEND_MESSAGE,
+            color: l.Button.Colors.GREEN,
+            onClick: T
         });
-    if (v === _.OGo.PENDING_OUTGOING)
-        return (0, o.jsx)(E.Z, {
+    if (s === _.OGo.PENDING_OUTGOING)
+        return (0, o.jsx)(u.Z, {
             variant: 'text',
-            text: Z.Z.Messages.ADD_FRIEND_BUTTON_AFTER,
-            color: a.Button.Colors.GREEN,
+            text: f.Z.Messages.ADD_FRIEND_BUTTON_AFTER,
+            color: l.Button.Colors.GREEN,
             disabled: !0
         });
-    if (v === _.OGo.PENDING_INCOMING)
-        return x ? (0, o.jsx)(E.Z, {
+    if (s === _.OGo.PENDING_INCOMING)
+        return v ? (0, o.jsx)(u.Z, {
             variant: 'text',
-            text: Z.Z.Messages.SEND_DM,
-            color: t()(a.Button.Colors.PRIMARY, m.color),
-            onClick: j
+            text: f.Z.Messages.SEND_DM,
+            color: t()(l.Button.Colors.PRIMARY, Z.color),
+            onClick: T
         }) : (0, o.jsxs)('div', {
-            className: m.pendingIncoming,
+            className: Z.pendingIncoming,
             children: [
-                (0, o.jsx)(E.Z, {
+                (0, o.jsx)(u.Z, {
                     variant: 'text',
-                    text: Z.Z.Messages.FRIEND_REQUEST_ACCEPT,
-                    color: a.Button.Colors.GREEN,
+                    text: f.Z.Messages.FRIEND_REQUEST_ACCEPT,
+                    color: l.Button.Colors.GREEN,
                     onClick: () => {
-                        T({ action: 'ACCEPT_FRIEND_REQUEST' }), c.Z.addRelationship({
-                            userId: s.id,
-                            context: { location: C },
-                            friendToken: S
+                        p({ action: 'ACCEPT_FRIEND_REQUEST' }), r.Z.addRelationship({
+                            userId: i.id,
+                            context: { location: g },
+                            friendToken: m
                         });
                     }
                 }),
-                (0, o.jsx)(E.Z, {
+                (0, o.jsx)(u.Z, {
                     variant: 'text',
-                    text: Z.Z.Messages.FRIEND_REQUEST_IGNORE,
-                    color: a.Button.Colors.PRIMARY,
+                    text: f.Z.Messages.FRIEND_REQUEST_IGNORE,
+                    color: l.Button.Colors.PRIMARY,
                     onClick: () => {
-                        T({ action: 'IGNORE_FRIEND_REQUEST' }), c.Z.cancelFriendRequest(s.id, { location: C });
+                        p({ action: 'IGNORE_FRIEND_REQUEST' }), r.Z.cancelFriendRequest(i.id, { location: g });
                     },
-                    className: m.actionRightButton
+                    className: Z.actionRightButton
                 })
             ]
         });
-    return (0, o.jsx)(E.Z, {
+    return (0, o.jsx)(u.Z, {
         variant: 'text',
-        text: Z.Z.Messages.ADD_FRIEND_BUTTON,
-        color: a.Button.Colors.GREEN,
+        text: f.Z.Messages.ADD_FRIEND_BUTTON,
+        color: l.Button.Colors.GREEN,
         onClick: () => {
-            T({ action: 'SEND_FRIEND_REQUEST' }), c.Z.addRelationship({
-                userId: s.id,
-                context: { location: C },
-                friendToken: S
+            p({ action: 'SEND_FRIEND_REQUEST' }), r.Z.addRelationship({
+                userId: i.id,
+                context: { location: g },
+                friendToken: m
             });
         }
     });
