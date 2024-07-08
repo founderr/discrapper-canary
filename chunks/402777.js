@@ -52,7 +52,7 @@ function Z(e) {
                             (0, i.jsx)(g.Z, {
                                 user: t,
                                 displayProfile: A,
-                                channelId: n.id,
+                                channel: n,
                                 isHovering: R,
                                 onOpenProfile: j
                             }),

@@ -1,71 +1,79 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return A;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(699516), l = n(246946), r = n(5192), o = n(332390), c = n(824572), d = n(741308), u = n(588822), h = n(681837), p = n(91433), m = n(900927), _ = n(724593), f = n(678738), E = n(502762), C = n(530), g = n(580512), I = n(765365), x = n(228168), T = n(981631), v = n(689938), N = n(790884);
-function S(e) {
+var a = n(442837), s = n(699516), l = n(246946), r = n(5192), o = n(332390), c = n(824572), d = n(621853), u = n(741308), h = n(588822), p = n(940730), m = n(681837), _ = n(91433), f = n(900927), E = n(724593), C = n(678738), g = n(502762), I = n(530), x = n(580512), T = n(765365), v = n(228168), N = n(981631), S = n(689938), Z = n(790884);
+function A(e) {
     let {
             user: t,
             displayProfile: n,
-            channelId: S,
-            isHovering: Z,
-            onOpenProfile: A
-        } = e, {improvedPanelFriendingEnabled: M} = (0, c.O)({ location: 'SimplifiedProfilePanelBody' }), {activeInviteToCallCtaEnabled: b} = (0, o.l)({ location: 'BiteSizeProfileDirectMessageSection' }), R = (0, I.Z)({ user: t }), j = (0, a.e7)([s.Z], () => s.Z.getRelationshipType(t.id)), L = (0, a.e7)([l.Z], () => l.Z.hidePersonalInformation);
+            channel: A,
+            isHovering: M,
+            onOpenProfile: b
+        } = e, {improvedPanelFriendingEnabled: R} = (0, c.O)({ location: 'SimplifiedProfilePanelBody' }), {activeInviteToCallCtaEnabled: j} = (0, o.l)({ location: 'BiteSizeProfileDirectMessageSection' }), L = (0, T.Z)({ user: t }), P = (0, a.e7)([s.Z], () => s.Z.getRelationshipType(t.id)), O = (0, a.e7)([l.Z], () => l.Z.hidePersonalInformation), y = (0, a.e7)([d.Z], () => {
+            var e;
+            return null === (e = d.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
+        });
     return (0, i.jsxs)('div', {
-        className: N.body,
+        className: Z.body,
         children: [
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(I.Z, {
                 user: t,
-                profileType: x.y0.PANEL,
-                nickname: r.ZP.getName(null, S, t),
+                profileType: v.y0.PANEL,
+                nickname: r.ZP.getName(null, A.id, t),
                 pronouns: null == n ? void 0 : n.pronouns,
-                onOpenProfile: A,
-                tags: (0, i.jsx)(d.Z, {
+                onOpenProfile: b,
+                tags: (0, i.jsx)(u.Z, {
                     displayProfile: n,
-                    profileType: x.y0.PANEL
+                    profileType: v.y0.PANEL
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(h.Z, { userId: t.id }),
-                        !L && (0, i.jsx)(_.Z, {
+                        (0, i.jsx)(m.Z, { userId: t.id }),
+                        !O && (0, i.jsx)(E.Z, {
                             user: t,
-                            isHovering: Z,
-                            onOpenProfile: () => A({ subsection: x.Tb.NOTE })
+                            isHovering: M,
+                            onOpenProfile: () => b({ subsection: v.Tb.NOTE })
                         })
                     ]
                 })
             }),
-            M && j === T.OGo.PENDING_INCOMING && (0, i.jsx)(E.Z.Overlay, {
-                children: (0, i.jsx)(p.Z, {
+            R && P === N.OGo.PENDING_INCOMING && (0, i.jsx)(g.Z.Overlay, {
+                children: (0, i.jsx)(_.Z, {
                     user: t,
-                    channelId: S
+                    channelId: A.id
                 })
             }),
-            b && R,
-            (0, i.jsx)(g.Z, {
+            j && L,
+            (0, i.jsx)(x.Z, {
                 user: t,
-                channelId: S
+                channelId: A.id
             }),
-            (0, i.jsxs)(E.Z.Overlay, {
-                className: N.overlay,
+            (0, i.jsxs)(g.Z.Overlay, {
+                className: Z.overlay,
                 children: [
-                    !L && (null == n ? void 0 : n.bio) != null && (null == n ? void 0 : n.bio) !== '' && (0, i.jsx)(f.Z, {
-                        title: v.Z.Messages.USER_POPOUT_ABOUT_ME,
+                    !O && (null == n ? void 0 : n.bio) != null && (null == n ? void 0 : n.bio) !== '' && (0, i.jsx)(C.Z, {
+                        title: S.Z.Messages.USER_POPOUT_ABOUT_ME,
                         headingColor: 'header-primary',
-                        children: (0, i.jsx)(u.Z, {
+                        children: (0, i.jsx)(h.Z, {
                             userBio: n.bio,
                             animateOnHover: !0,
-                            isHovering: Z,
+                            isHovering: M,
                             userId: t.id
                         })
                     }),
-                    (0, i.jsx)(f.Z, {
-                        title: v.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+                    (null == y ? void 0 : y.popularApplicationCommandIds) != null && (0, i.jsx)(p.Z, {
+                        applicationId: y.id,
+                        commandIds: y.popularApplicationCommandIds,
+                        channel: A
+                    }),
+                    (0, i.jsx)(C.Z, {
+                        title: S.Z.Messages.USER_PROFILE_MEMBER_SINCE,
                         headingColor: 'header-primary',
-                        children: (0, i.jsx)(m.Z, { userId: t.id })
+                        children: (0, i.jsx)(f.Z, { userId: t.id })
                     })
                 ]
             })
