@@ -52,7 +52,7 @@ function f(e) {
                     })
                 ]
             }),
-            null != f && (0, i.jsx)(u.b, {
+            (0, i.jsx)(u.b, {
                 className: _.code,
                 chunks: f,
                 columns: h.WK

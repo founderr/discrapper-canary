@@ -10,7 +10,10 @@ function c(e) {
             columns: n,
             className: r
         } = e, c = l.useMemo(() => ({ '--secure-frames-columns': n }), [n]);
-    return (0, i.jsx)('div', {
+    return null == t ? (0, i.jsx)('div', {
+        className: o.loading,
+        children: (0, i.jsx)(s.Spinner, {})
+    }) : (0, i.jsx)('div', {
         style: c,
         className: a()(o.code, r),
         children: t.map((e, t) => (0, i.jsx)('div', {
