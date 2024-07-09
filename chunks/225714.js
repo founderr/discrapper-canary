@@ -10,56 +10,53 @@ function Z(e) {
     let {
             isCurrentUser: n,
             user: i,
-            guildId: s,
-            relationshipType: Z,
-            friendToken: v,
-            improvedFriendingEnabled: S = !1,
-            persistentCallCtaEnabled: x = !1,
-            activeInviteToCallCtaEnabled: h = !1,
-            onClose: g
-        } = e, {newestAnalyticsLocation: N} = (0, r.ZP)(), {trackUserProfileAction: p} = (0, d.KZ)(), T = (0, f.Z)({
+            relationshipType: s,
+            friendToken: Z,
+            improvedFriendingEnabled: v = !1,
+            persistentCallCtaEnabled: S = !1,
+            activeInviteToCallCtaEnabled: x = !1,
+            onClose: h
+        } = e, {newestAnalyticsLocation: N} = (0, r.ZP)(), {trackUserProfileAction: p} = (0, d.KZ)(), g = (0, f.Z)({
             user: i,
-            onClose: g
+            onClose: h
         });
-    if (n || Z === _.OGo.BLOCKED)
+    if (n || s === _.OGo.BLOCKED)
         return null;
-    let C = x ? (0, l.jsx)(u.Z, {
+    let T = S ? (0, l.jsx)(u.Z, {
         user: i,
-        onClose: g,
+        onClose: h,
         className: o()(t.Button.Colors.PRIMARY, m.color, m.iconButton)
     }) : null;
-    if (S) {
-        if (Z === _.OGo.FRIEND && h && null != T)
+    if (v) {
+        if (s === _.OGo.FRIEND && x && null != g)
             return (0, l.jsxs)('div', {
                 className: m.multipleButtons,
                 children: [
                     (0, l.jsx)(I.Z, {
                         user: i,
-                        guildId: s,
                         variant: 'icon',
                         className: m.iconButton,
                         color: o()(t.Button.Colors.PRIMARY, m.color),
-                        onClose: g
+                        onClose: h
                     }),
-                    T
+                    g
                 ]
             });
-        if (Z === _.OGo.FRIEND || i.bot)
+        if (s === _.OGo.FRIEND || i.bot)
             return (0, l.jsxs)('div', {
                 className: m.multipleButtons,
                 children: [
-                    C,
+                    T,
                     (0, l.jsx)(I.Z, {
                         user: i,
-                        guildId: s,
                         variant: 'text',
                         color: o()(t.Button.Colors.PRIMARY, m.color),
-                        onClose: g
+                        onClose: h
                     })
                 ]
             });
-        if (Z === _.OGo.PENDING_OUTGOING)
-            return h && null != T ? (0, l.jsxs)('div', {
+        if (s === _.OGo.PENDING_OUTGOING)
+            return x && null != g ? (0, l.jsxs)('div', {
                 className: m.multipleButtons,
                 children: [
                     (0, l.jsx)(c.Z, {
@@ -72,13 +69,12 @@ function Z(e) {
                     }),
                     (0, l.jsx)(I.Z, {
                         user: i,
-                        guildId: s,
                         variant: 'icon',
                         className: m.iconButton,
                         color: o()(t.Button.Colors.PRIMARY, m.color),
-                        onClose: g
+                        onClose: h
                     }),
-                    T
+                    g
                 ]
             }) : (0, l.jsxs)('div', {
                 className: m.multipleButtons,
@@ -91,18 +87,17 @@ function Z(e) {
                         color: o()(t.Button.Colors.PRIMARY, m.color),
                         disabled: !0
                     }),
-                    C,
+                    T,
                     (0, l.jsx)(I.Z, {
                         user: i,
-                        guildId: s,
                         variant: 'text',
                         color: o()(t.Button.Colors.PRIMARY, m.color),
-                        onClose: g
+                        onClose: h
                     })
                 ]
             });
-        if (Z === _.OGo.PENDING_INCOMING)
-            return h && null != T ? (0, l.jsxs)('div', {
+        if (s === _.OGo.PENDING_INCOMING)
+            return x && null != g ? (0, l.jsxs)('div', {
                 className: m.multipleButtons,
                 children: [
                     (0, l.jsx)(c.Z, {
@@ -115,13 +110,12 @@ function Z(e) {
                     }),
                     (0, l.jsx)(I.Z, {
                         user: i,
-                        guildId: s,
                         variant: 'icon',
                         className: m.iconButton,
                         color: o()(t.Button.Colors.PRIMARY, m.color),
-                        onClose: g
+                        onClose: h
                     }),
-                    T
+                    g
                 ]
             }) : (0, l.jsxs)('div', {
                 className: m.multipleButtons,
@@ -134,18 +128,17 @@ function Z(e) {
                         color: o()(t.Button.Colors.PRIMARY, m.color),
                         disabled: !0
                     }),
-                    C,
+                    T,
                     (0, l.jsx)(I.Z, {
                         user: i,
-                        guildId: s,
                         variant: 'text',
                         className: m.iconButton,
                         color: o()(t.Button.Colors.PRIMARY, m.color),
-                        onClose: g
+                        onClose: h
                     })
                 ]
             });
-        return h && null != T ? (0, l.jsxs)('div', {
+        return x && null != g ? (0, l.jsxs)('div', {
             className: m.multipleButtons,
             children: [
                 (0, l.jsx)(c.Z, {
@@ -158,31 +151,29 @@ function Z(e) {
                         p({ action: 'SEND_FRIEND_REQUEST' }), a.Z.addRelationship({
                             userId: i.id,
                             context: { location: N },
-                            friendToken: v
+                            friendToken: Z
                         });
                     }
                 }),
                 (0, l.jsx)(I.Z, {
                     user: i,
-                    guildId: s,
                     variant: 'icon',
                     className: m.iconButton,
                     color: o()(t.Button.Colors.PRIMARY, m.color),
-                    onClose: g
+                    onClose: h
                 }),
-                T
+                g
             ]
         }) : (0, l.jsxs)('div', {
             className: m.multipleButtons,
             children: [
-                C,
+                T,
                 (0, l.jsx)(I.Z, {
                     user: i,
-                    guildId: s,
                     variant: 'icon',
                     className: m.iconButton,
                     color: o()(t.Button.Colors.PRIMARY, m.color),
-                    onClose: g
+                    onClose: h
                 }),
                 (0, l.jsx)(c.Z, {
                     variant: 'text',
@@ -193,30 +184,28 @@ function Z(e) {
                         p({ action: 'SEND_FRIEND_REQUEST' }), a.Z.addRelationship({
                             userId: i.id,
                             context: { location: N },
-                            friendToken: v
+                            friendToken: Z
                         });
                     }
                 })
             ]
         });
     }
-    return Z === _.OGo.FRIEND || i.bot ? (0, l.jsx)(I.Z, {
+    return s === _.OGo.FRIEND || i.bot ? (0, l.jsx)(I.Z, {
         user: i,
-        guildId: s,
         variant: 'text',
         color: o()(t.Button.Colors.PRIMARY, m.color),
-        onClose: g
-    }) : Z === _.OGo.PENDING_OUTGOING ? (0, l.jsx)(c.Z, {
+        onClose: h
+    }) : s === _.OGo.PENDING_OUTGOING ? (0, l.jsx)(c.Z, {
         variant: 'text',
         text: E.Z.Messages.ADD_FRIEND_BUTTON_AFTER,
         color: t.Button.Colors.GREEN,
         disabled: !0
-    }) : Z === _.OGo.PENDING_INCOMING ? (0, l.jsx)(I.Z, {
+    }) : s === _.OGo.PENDING_INCOMING ? (0, l.jsx)(I.Z, {
         user: i,
-        guildId: s,
         variant: 'text',
         color: o()(t.Button.Colors.PRIMARY, m.color),
-        onClose: g
+        onClose: h
     }) : (0, l.jsx)(c.Z, {
         variant: 'text',
         text: E.Z.Messages.ADD_FRIEND_BUTTON,
@@ -225,7 +214,7 @@ function Z(e) {
             p({ action: 'SEND_FRIEND_REQUEST' }), a.Z.addRelationship({
                 userId: i.id,
                 context: { location: N },
-                friendToken: v
+                friendToken: Z
             });
         }
     });

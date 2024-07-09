@@ -3,7 +3,7 @@ i.d(n, {
         return R;
     }
 });
-var l = i(735250), s = i(470079), o = i(442837), t = i(692547), a = i(481060), r = i(239091), d = i(233440), c = i(314897), u = i(158776), I = i(699516), f = i(998502), _ = i(785717), E = i(621853), m = i(204197), Z = i(735336), v = i(520978), S = i(184325), x = i(652853), h = i(225714), g = i(228168), N = i(231338), p = i(689938), T = i(520067);
+var l = i(735250), s = i(470079), o = i(442837), t = i(692547), a = i(481060), r = i(239091), d = i(233440), c = i(314897), u = i(158776), I = i(699516), f = i(998502), _ = i(785717), E = i(621853), m = i(204197), Z = i(735336), v = i(520978), S = i(184325), x = i(652853), h = i(225714), N = i(228168), p = i(231338), g = i(689938), T = i(520067);
 let C = a.AvatarSizes.SIZE_120, j = f.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 function R(e) {
     let {
@@ -34,7 +34,7 @@ function R(e) {
                 displayProfile: n,
                 onClose: L,
                 user: f,
-                profileType: g.y0.MODAL,
+                profileType: N.y0.MODAL,
                 hasProfileEffect: O
             }),
             (0, l.jsxs)('div', {
@@ -47,7 +47,7 @@ function R(e) {
                             avatarDecoration: V,
                             size: C,
                             className: T.avatar,
-                            status: H ? N.Sk.UNKNOWN : U ? N.Sk.STREAMING : B,
+                            status: H ? p.Sk.UNKNOWN : U ? p.Sk.STREAMING : B,
                             statusBackdropColor: (0, a.getStatusBackdropColor)(G),
                             isMobile: y,
                             statusTooltip: !0,
@@ -58,7 +58,7 @@ function R(e) {
                         className: T.headerTop,
                         children: [
                             (null == D ? void 0 : D.profileFetchFailed) && !f.isClyde() ? (0, l.jsx)(a.Tooltip, {
-                                text: p.Z.Messages.USER_PROFILE_LOAD_ERROR,
+                                text: g.Z.Messages.USER_PROFILE_LOAD_ERROR,
                                 spacing: 20,
                                 children: e => (0, l.jsx)(a.CircleExclamationPointIcon, {
                                     size: 'custom',
@@ -86,7 +86,6 @@ function R(e) {
                                     }),
                                     (0, l.jsx)(h.Z, {
                                         user: f,
-                                        guildId: R,
                                         isCurrentUser: F,
                                         relationshipType: b,
                                         friendToken: M,

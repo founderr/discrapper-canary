@@ -49,7 +49,6 @@ function L(e) {
             children: [
                 (0, r.jsx)(A.Z, {
                     user: t,
-                    guildId: n,
                     fullWidth: !0,
                     variant: 'text',
                     color: C.engagementExpButton,
@@ -64,7 +63,6 @@ function L(e) {
             children: [
                 (0, r.jsx)(A.Z, {
                     user: t,
-                    guildId: n,
                     fullWidth: !0,
                     variant: 'text',
                     color: o()(s.Button.Colors.BRAND, R.color),
@@ -80,7 +78,6 @@ function L(e) {
             ]
         }) : (0, r.jsx)(A.Z, {
             user: t,
-            guildId: n,
             fullWidth: !0,
             variant: 'text',
             className: C.biteSizeButton,

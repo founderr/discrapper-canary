@@ -1,24 +1,23 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return u;
     }
 });
 var r = n(735250);
 n(470079);
-var i = n(481060), a = n(493683), o = n(785717), s = n(505737), l = n(993409), u = n(689938);
-function c(e) {
+var i = n(481060), a = n(493683), o = n(785717), s = n(993409), l = n(689938);
+function u(e) {
     let {
             user: t,
-            guildId: n,
-            onClose: c,
-            ...d
-        } = e, {trackUserProfileAction: _} = (0, o.KZ)();
-    return (0, s.Z)(t.id, n) ? (0, r.jsx)(l.Z, {
+            onClose: n,
+            ...u
+        } = e, {trackUserProfileAction: c} = (0, o.KZ)();
+    return (0, r.jsx)(s.Z, {
         icon: i.ChatIcon,
-        text: u.Z.Messages.USER_PROFILE_MESSAGE,
+        text: l.Z.Messages.USER_PROFILE_MESSAGE,
         onClick: () => {
-            _({ action: 'SEND_MESSAGE' }), a.Z.openPrivateChannel(t.id), null == c || c();
+            c({ action: 'SEND_MESSAGE' }), a.Z.openPrivateChannel(t.id), null == n || n();
         },
-        ...d
-    }) : null;
+        ...u
+    });
 }

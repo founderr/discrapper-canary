@@ -25,7 +25,6 @@ function u(e) {
         children: [
             (0, l.jsx)(r.Z, {
                 user: n,
-                guildId: I,
                 isCurrentUser: u,
                 relationshipType: _,
                 improvedFriendingEnabled: m,
