@@ -117,10 +117,10 @@ let C = (0, E.Z)(function (e) {
                             })
                         }),
                         V && (0, r.jsx)(N.Z, {
-                            variant: E.length > 0 ? 'icon' : 'text',
                             buttonRef: Z,
                             guild: a,
                             guildMember: _,
+                            numRoles: E.length,
                             highestRole: f,
                             onAddRole: C
                         })

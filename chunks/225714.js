@@ -1,220 +1,149 @@
-i.d(n, {
+n.d(i, {
     Z: function () {
-        return Z;
+        return m;
     }
 });
-var l = i(735250);
-i(470079);
-var s = i(120356), o = i.n(s), t = i(481060), a = i(194359), r = i(906732), d = i(785717), c = i(993409), u = i(261253), I = i(30556), f = i(765365), _ = i(981631), E = i(689938), m = i(682731);
-function Z(e) {
+var l = n(735250);
+n(470079);
+var s = n(120356), t = n.n(s), o = n(481060), a = n(194359), r = n(906732), d = n(475413), c = n(261253), u = n(7242), I = n(934861), f = n(981631), _ = n(689938), E = n(682731);
+function m(e) {
     let {
-            isCurrentUser: n,
-            user: i,
+            isCurrentUser: i,
+            user: n,
             relationshipType: s,
-            friendToken: Z,
-            improvedFriendingEnabled: v = !1,
-            persistentCallCtaEnabled: S = !1,
-            activeInviteToCallCtaEnabled: x = !1,
-            onClose: h
-        } = e, {newestAnalyticsLocation: N} = (0, r.ZP)(), {trackUserProfileAction: p} = (0, d.KZ)(), g = (0, f.Z)({
-            user: i,
-            onClose: h
-        });
-    if (n || s === _.OGo.BLOCKED)
+            friendToken: m,
+            improvedFriendingEnabled: Z = !1,
+            persistentCallCtaEnabled: v = !1,
+            activeInviteToCallCtaEnabled: S = !1,
+            onClose: x
+        } = e, {newestAnalyticsLocation: h} = (0, r.ZP)();
+    if (i || s === f.OGo.BLOCKED)
         return null;
-    let T = S ? (0, l.jsx)(u.Z, {
-        user: i,
-        onClose: h,
-        className: o()(t.Button.Colors.PRIMARY, m.color, m.iconButton)
+    let p = v ? (0, l.jsx)(c.Z, {
+        user: n,
+        onClose: x
     }) : null;
-    if (v) {
-        if (s === _.OGo.FRIEND && x && null != g)
+    if (Z) {
+        let e = (0, l.jsx)(u.Z, {
+            user: n,
+            onClose: x
+        });
+        if (s === f.OGo.FRIEND && S && null != e)
             return (0, l.jsxs)('div', {
-                className: m.multipleButtons,
+                className: E.multipleButtons,
                 children: [
-                    (0, l.jsx)(I.Z, {
-                        user: i,
-                        variant: 'icon',
-                        className: m.iconButton,
-                        color: o()(t.Button.Colors.PRIMARY, m.color),
-                        onClose: h
+                    (0, l.jsx)(I.v, {
+                        userId: n.id,
+                        onClose: x
                     }),
-                    g
+                    e
                 ]
             });
-        if (s === _.OGo.FRIEND || i.bot)
+        if (s === f.OGo.FRIEND || n.bot)
             return (0, l.jsxs)('div', {
-                className: m.multipleButtons,
+                className: E.multipleButtons,
                 children: [
-                    T,
-                    (0, l.jsx)(I.Z, {
-                        user: i,
-                        variant: 'text',
-                        color: o()(t.Button.Colors.PRIMARY, m.color),
-                        onClose: h
+                    p,
+                    (0, l.jsx)(I.c, {
+                        userId: n.id,
+                        onClose: x
                     })
                 ]
             });
-        if (s === _.OGo.PENDING_OUTGOING)
-            return x && null != g ? (0, l.jsxs)('div', {
-                className: m.multipleButtons,
+        if (s === f.OGo.PENDING_OUTGOING || s === f.OGo.PENDING_INCOMING)
+            return S && null != e ? (0, l.jsxs)('div', {
+                className: E.multipleButtons,
                 children: [
-                    (0, l.jsx)(c.Z, {
-                        variant: 'icon',
-                        text: E.Z.Messages.FRIENDS_SECTION_PENDING,
-                        icon: t.UserClockIcon,
-                        className: m.iconButton,
-                        color: o()(t.Button.Colors.PRIMARY, m.color),
+                    (0, l.jsx)(d.ef, {
+                        icon: o.UserClockIcon,
+                        tooltipText: _.Z.Messages.FRIENDS_SECTION_PENDING,
                         disabled: !0
                     }),
-                    (0, l.jsx)(I.Z, {
-                        user: i,
-                        variant: 'icon',
-                        className: m.iconButton,
-                        color: o()(t.Button.Colors.PRIMARY, m.color),
-                        onClose: h
+                    (0, l.jsx)(I.v, {
+                        userId: n.id,
+                        onClose: x
                     }),
-                    g
+                    e
                 ]
             }) : (0, l.jsxs)('div', {
-                className: m.multipleButtons,
+                className: E.multipleButtons,
                 children: [
-                    (0, l.jsx)(c.Z, {
-                        variant: 'icon',
-                        text: E.Z.Messages.FRIENDS_SECTION_PENDING,
-                        icon: t.UserClockIcon,
-                        className: m.iconButton,
-                        color: o()(t.Button.Colors.PRIMARY, m.color),
+                    (0, l.jsx)(d.ef, {
+                        icon: o.UserClockIcon,
+                        tooltipText: _.Z.Messages.FRIENDS_SECTION_PENDING,
                         disabled: !0
                     }),
-                    T,
-                    (0, l.jsx)(I.Z, {
-                        user: i,
-                        variant: 'text',
-                        color: o()(t.Button.Colors.PRIMARY, m.color),
-                        onClose: h
+                    p,
+                    (0, l.jsx)(I.c, {
+                        userId: n.id,
+                        onClose: x
                     })
                 ]
             });
-        if (s === _.OGo.PENDING_INCOMING)
-            return x && null != g ? (0, l.jsxs)('div', {
-                className: m.multipleButtons,
-                children: [
-                    (0, l.jsx)(c.Z, {
-                        variant: 'icon',
-                        text: E.Z.Messages.FRIENDS_SECTION_PENDING,
-                        icon: t.UserClockIcon,
-                        className: m.iconButton,
-                        color: o()(t.Button.Colors.PRIMARY, m.color),
-                        disabled: !0
-                    }),
-                    (0, l.jsx)(I.Z, {
-                        user: i,
-                        variant: 'icon',
-                        className: m.iconButton,
-                        color: o()(t.Button.Colors.PRIMARY, m.color),
-                        onClose: h
-                    }),
-                    g
-                ]
-            }) : (0, l.jsxs)('div', {
-                className: m.multipleButtons,
-                children: [
-                    (0, l.jsx)(c.Z, {
-                        variant: 'icon',
-                        text: E.Z.Messages.FRIENDS_SECTION_PENDING,
-                        icon: t.UserClockIcon,
-                        className: m.iconButton,
-                        color: o()(t.Button.Colors.PRIMARY, m.color),
-                        disabled: !0
-                    }),
-                    T,
-                    (0, l.jsx)(I.Z, {
-                        user: i,
-                        variant: 'text',
-                        className: m.iconButton,
-                        color: o()(t.Button.Colors.PRIMARY, m.color),
-                        onClose: h
-                    })
-                ]
-            });
-        return x && null != g ? (0, l.jsxs)('div', {
-            className: m.multipleButtons,
+        return S && null != e ? (0, l.jsxs)('div', {
+            className: E.multipleButtons,
             children: [
-                (0, l.jsx)(c.Z, {
-                    variant: 'icon',
-                    text: E.Z.Messages.USER_PROFILE_ADD_FRIEND,
-                    className: m.iconButton,
-                    icon: t.UserPlusIcon,
-                    color: o()(t.Button.Colors.PRIMARY, m.color),
+                (0, l.jsx)(d.ef, {
+                    action: 'SEND_FRIEND_REQUEST',
+                    icon: o.UserPlusIcon,
+                    tooltipText: _.Z.Messages.USER_PROFILE_ADD_FRIEND,
                     onClick: () => {
-                        p({ action: 'SEND_FRIEND_REQUEST' }), a.Z.addRelationship({
-                            userId: i.id,
-                            context: { location: N },
-                            friendToken: Z
+                        a.Z.addRelationship({
+                            userId: n.id,
+                            context: { location: h },
+                            friendToken: m
                         });
                     }
                 }),
-                (0, l.jsx)(I.Z, {
-                    user: i,
-                    variant: 'icon',
-                    className: m.iconButton,
-                    color: o()(t.Button.Colors.PRIMARY, m.color),
-                    onClose: h
+                (0, l.jsx)(I.v, {
+                    userId: n.id,
+                    onClose: x
                 }),
-                g
+                e
             ]
         }) : (0, l.jsxs)('div', {
-            className: m.multipleButtons,
+            className: E.multipleButtons,
             children: [
-                T,
-                (0, l.jsx)(I.Z, {
-                    user: i,
-                    variant: 'icon',
-                    className: m.iconButton,
-                    color: o()(t.Button.Colors.PRIMARY, m.color),
-                    onClose: h
+                p,
+                (0, l.jsx)(I.v, {
+                    userId: n.id,
+                    onClose: x
                 }),
-                (0, l.jsx)(c.Z, {
-                    variant: 'text',
-                    text: E.Z.Messages.USER_PROFILE_ADD_FRIEND,
-                    icon: t.UserPlusIcon,
-                    color: o()(t.Button.Colors.BRAND, m.color),
+                (0, l.jsx)(d.tG, {
+                    action: 'SEND_FRIEND_REQUEST',
+                    icon: o.UserPlusIcon,
+                    text: _.Z.Messages.USER_PROFILE_ADD_FRIEND,
+                    color: t()(o.Button.Colors.BRAND, E.color),
                     onClick: () => {
-                        p({ action: 'SEND_FRIEND_REQUEST' }), a.Z.addRelationship({
-                            userId: i.id,
-                            context: { location: N },
-                            friendToken: Z
+                        a.Z.addRelationship({
+                            userId: n.id,
+                            context: { location: h },
+                            friendToken: m
                         });
                     }
                 })
             ]
         });
     }
-    return s === _.OGo.FRIEND || i.bot ? (0, l.jsx)(I.Z, {
-        user: i,
-        variant: 'text',
-        color: o()(t.Button.Colors.PRIMARY, m.color),
-        onClose: h
-    }) : s === _.OGo.PENDING_OUTGOING ? (0, l.jsx)(c.Z, {
-        variant: 'text',
-        text: E.Z.Messages.ADD_FRIEND_BUTTON_AFTER,
-        color: t.Button.Colors.GREEN,
+    return s === f.OGo.FRIEND || n.bot ? (0, l.jsx)(I.c, {
+        userId: n.id,
+        onClose: x
+    }) : s === f.OGo.PENDING_OUTGOING ? (0, l.jsx)(d.tG, {
+        text: _.Z.Messages.ADD_FRIEND_BUTTON_AFTER,
+        color: o.Button.Colors.GREEN,
         disabled: !0
-    }) : s === _.OGo.PENDING_INCOMING ? (0, l.jsx)(I.Z, {
-        user: i,
-        variant: 'text',
-        color: o()(t.Button.Colors.PRIMARY, m.color),
-        onClose: h
-    }) : (0, l.jsx)(c.Z, {
-        variant: 'text',
-        text: E.Z.Messages.ADD_FRIEND_BUTTON,
-        color: t.Button.Colors.GREEN,
+    }) : s === f.OGo.PENDING_INCOMING ? (0, l.jsx)(I.c, {
+        userId: n.id,
+        onClose: x
+    }) : (0, l.jsx)(d.tG, {
+        action: 'SEND_FRIEND_REQUEST',
+        text: _.Z.Messages.ADD_FRIEND_BUTTON,
+        color: o.Button.Colors.GREEN,
         onClick: () => {
-            p({ action: 'SEND_FRIEND_REQUEST' }), a.Z.addRelationship({
-                userId: i.id,
-                context: { location: N },
-                friendToken: Z
+            a.Z.addRelationship({
+                userId: n.id,
+                context: { location: h },
+                friendToken: m
             });
         }
     });

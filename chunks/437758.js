@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(735250);
 n(470079);
-var i = n(442837), a = n(481060), o = n(782568), s = n(100527), l = n(906732), u = n(326135), c = n(299206), d = n(389052), _ = n(622724), E = n(706454), f = n(785717), h = n(621853), p = n(993409), m = n(689938);
+var i = n(442837), a = n(481060), o = n(782568), s = n(100527), l = n(906732), u = n(326135), c = n(299206), d = n(389052), _ = n(622724), E = n(706454), f = n(785717), h = n(621853), p = n(475413), m = n(689938);
 function I(e) {
     var t;
     let {
@@ -77,20 +77,11 @@ function I(e) {
                 children: D.map((e, t) => (0, r.jsx)(a.MenuGroup, { children: e.map(e => e) }, t))
             });
         },
-        children: e => {
-            let {
-                onClick: t,
-                ...n
-            } = e;
-            return (0, r.jsx)(p.Z, {
-                variant: 'banner',
-                text: m.Z.Messages.MORE,
-                icon: a.MoreHorizontalIcon,
-                onClick: e => {
-                    g({ action: 'PRESS_OPTIONS' }), t(e);
-                },
-                ...n
-            });
-        }
+        children: e => (0, r.jsx)(p.oY, {
+            action: 'PRESS_OPTIONS',
+            icon: a.MoreHorizontalIcon,
+            tooltipText: m.Z.Messages.MORE,
+            ...e
+        })
     });
 }

@@ -1,46 +1,118 @@
-var i = n(735250);
+n.d(t, {
+    ef: function () {
+        return _;
+    },
+    kF: function () {
+        return c;
+    },
+    oY: function () {
+        return E;
+    },
+    tG: function () {
+        return d;
+    },
+    y: function () {
+        return f;
+    }
+});
+var r = n(735250);
 n(470079);
-var s = n(481060), a = n(584825), r = n(290348), l = n(934826), o = n(660196), c = n(330181), d = n(939225), u = n(36246), _ = n(305342), h = n(726324), E = n(981631), I = n(689938), m = n(952366);
-t.Z = e => {
-    var t, n;
-    let {guild: g} = e, p = (0, a.GG)(g.id)[0];
-    (0, o.Z)({
-        guildId: g.id,
-        groupListingId: null == p ? void 0 : p.id,
-        location: E.Sbl.ROLE_SUBSCRIPTIONS_TAB,
-        relevantSubscriptionListingIds: null == p ? void 0 : p.subscription_listings_ids
+var i = n(120356), a = n.n(i), o = n(693789), s = n(481060), l = n(785717), u = n(663054);
+function c(e) {
+    let {
+            action: t,
+            className: n,
+            innerClassName: i,
+            onClick: s,
+            ...c
+        } = e, {trackUserProfileAction: d} = (0, l.KZ)();
+    return (0, r.jsx)(o.zx, {
+        className: a()(u.button, n),
+        innerClassName: a()(u.buttonInner, i),
+        color: a()(o.Tt.PRIMARY, u.color),
+        look: o.zx.Looks.FILLED,
+        size: o.zx.Sizes.SMALL,
+        onClick: e => {
+            null != t && d({ action: t }), null == s || s(e);
+        },
+        ...c
     });
-    let {activeSubscription: T} = (0, l.Z)(null == p ? void 0 : p.id), S = (0, a.YB)(g.id), C = null == S ? void 0 : S.description, {editStateIds: f} = r.B7(null !== (t = null == p ? void 0 : p.id) && void 0 !== t ? t : null, g.id);
-    return (0, i.jsxs)(i.Fragment, {
+}
+function d(e) {
+    let {
+        text: t,
+        icon: n,
+        ...i
+    } = e;
+    return (0, r.jsxs)(c, {
+        'aria-label': t,
+        ...i,
         children: [
-            (0, i.jsxs)(h.Z, {
-                title: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({ serverName: g.toString() }),
-                description: null != C ? C : null,
-                coverImageAsset: null !== (n = null == S ? void 0 : S.cover_image_asset) && void 0 !== n ? n : null,
-                guild: g,
-                children: [
-                    null != p ? (0, i.jsx)(c.Z, {
-                        className: m.pendingPlanChangeNotice,
-                        groupListingId: p.id,
-                        subscription: T
-                    }) : null,
-                    (0, i.jsx)(d.Z, { subscription: T })
-                ]
+            null != n && (0, r.jsx)(n, {
+                size: 'xs',
+                color: 'currentColor'
             }),
-            (0, i.jsx)(s.HeadingLevel, {
-                children: (0, i.jsx)(u.Z, {
-                    guildId: g.id,
-                    children: f.map(e => {
-                        var t;
-                        return (0, i.jsx)(_.Z, {
-                            guildId: g.id,
-                            groupListingId: null !== (t = null == p ? void 0 : p.id) && void 0 !== t ? t : '',
-                            listingId: e,
-                            analyticsLocation: E.Sbl.ROLE_SUBSCRIPTIONS_TAB
-                        }, e);
-                    })
-                })
-            })
+            t
         ]
     });
-};
+}
+function _(e) {
+    let {
+        icon: t,
+        tooltipText: n,
+        tooltipDelay: i,
+        tooltipClassName: l,
+        tooltipContainerClassName: d,
+        className: _,
+        innerClassName: E,
+        ...f
+    } = e;
+    return (0, r.jsx)(s.TooltipContainer, {
+        text: n,
+        'aria-label': !1,
+        delay: i,
+        className: d,
+        tooltipClassName: l,
+        children: (0, r.jsx)(c, {
+            className: a()(u.icon, _),
+            innerClassName: a()(u.icon, E),
+            look: o.zx.Looks.FILLED,
+            size: o.zx.Sizes.NONE,
+            grow: !1,
+            'aria-label': n,
+            ...f,
+            children: (0, r.jsx)(t, {
+                size: 'xs',
+                color: 'currentColor'
+            })
+        })
+    });
+}
+function E(e) {
+    let {
+        className: t,
+        innerClassName: n,
+        ...i
+    } = e;
+    return (0, r.jsx)(_, {
+        className: a()(u.banner, t),
+        innerClassName: a()(u.banner, n),
+        color: u.bannerColor,
+        ...i
+    });
+}
+function f(e) {
+    let {
+        isHovering: t,
+        className: n,
+        innerClassName: i,
+        ...s
+    } = e;
+    return (0, r.jsx)(_, {
+        className: a()(u.hover, { [u.visible]: t }, n),
+        innerClassName: a()(u.hover, i),
+        color: u.hoverColor,
+        look: o.zx.Looks.BLANK,
+        ...s
+    });
+}

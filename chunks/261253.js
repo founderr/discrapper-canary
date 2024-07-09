@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(735250);
 n(470079);
-var i = n(481060), a = n(24311), o = n(785717), s = n(993409), l = n(689938), u = n(363224);
+var i = n(481060), a = n(24311), o = n(785717), s = n(475413), l = n(689938), u = n(363224);
 function c(e) {
     let {
             user: t,
@@ -58,21 +58,12 @@ function c(e) {
                 })
             });
         },
-        children: e => {
-            let {
-                onClick: t,
-                ...n
-            } = e;
-            return (0, r.jsx)(s.Z, {
-                icon: i.PhoneCallIcon,
-                text: l.Z.Messages.CALL,
-                variant: 'icon',
-                className: c,
-                ...n,
-                onClick: e => {
-                    d({ action: 'PRESS_CALL' }), t(e);
-                }
-            });
-        }
+        children: e => (0, r.jsx)(s.ef, {
+            action: 'PRESS_CALL',
+            icon: i.PhoneCallIcon,
+            tooltipText: l.Z.Messages.CALL,
+            className: c,
+            ...e
+        })
     });
 }

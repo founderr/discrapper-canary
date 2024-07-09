@@ -1,43 +1,43 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return f;
     }
 });
 var r = n(735250);
 n(470079);
-var i = n(442837), a = n(481060), o = n(300284), s = n(314897), l = n(430824), u = n(877485), c = n(785717), d = n(841040), _ = n(993409), E = n(228168), f = n(689938);
-function h(e) {
+var i = n(442837), a = n(481060), o = n(300284), s = n(314897), l = n(430824), u = n(877485), c = n(841040), d = n(475413), _ = n(228168), E = n(689938);
+function f(e) {
     let {
             user: t,
             guildId: n,
-            profileType: h,
+            profileType: f,
+            fullWidth: h,
             onClose: p
-        } = e, m = (0, i.e7)([s.default], () => s.default.getId() === t.id), I = (0, i.e7)([l.Z], () => null != n ? l.Z.getGuild(n) : null), {originalFriendingEnabled: T} = (0, u.V)({ location: 'UserProfileEditMenuButton' }), {trackUserProfileAction: g} = (0, c.KZ)(), S = (0, o.Z)(), A = T && h === E.y0.FULL_SIZE ? void 0 : a.PencilIcon;
-    return m ? null == I ? (0, r.jsx)(_.Z, {
-        variant: 'text',
-        icon: A,
-        text: f.Z.Messages.EDIT_PROFILE,
+        } = e, m = (0, i.e7)([s.default], () => s.default.getId() === t.id), I = (0, i.e7)([l.Z], () => null != n ? l.Z.getGuild(n) : null), {originalFriendingEnabled: T} = (0, u.V)({ location: 'UserProfileEditMenuButton' }), g = (0, o.Z)(), S = T && f === _.y0.FULL_SIZE ? void 0 : a.PencilIcon;
+    return m ? null == I ? (0, r.jsx)(d.tG, {
+        action: 'EDIT_PROFILE',
+        text: E.Z.Messages.EDIT_PROFILE,
+        icon: S,
         autoFocus: !0,
-        fullWidth: !0,
+        fullWidth: h,
         onClick: () => {
-            g({ action: 'EDIT_PROFILE' }), null == p || p(), S();
+            null == p || p(), g();
         }
     }) : (0, r.jsx)(a.Popout, {
         renderPopout: e => {
             let {closePopout: t} = e;
-            return (0, r.jsx)(d.Z, {
+            return (0, r.jsx)(c.Z, {
                 guild: I,
                 onClose: () => {
                     t(), null == p || p();
                 }
             });
         },
-        children: e => (0, r.jsx)(_.Z, {
-            variant: 'text',
-            icon: A,
-            text: f.Z.Messages.EDIT_PROFILE,
+        children: e => (0, r.jsx)(d.tG, {
+            text: E.Z.Messages.EDIT_PROFILE,
+            icon: S,
             autoFocus: !0,
-            fullWidth: !0,
+            fullWidth: h,
             ...e
         })
     }) : null;

@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(735250);
 n(470079);
-var i = n(481060), a = n(100527), o = n(906732), s = n(299206), l = n(785717), u = n(993409), c = n(689938);
+var i = n(481060), a = n(100527), o = n(906732), s = n(299206), l = n(785717), u = n(475413), c = n(689938);
 function d(e) {
     let {
             user: t,
@@ -32,20 +32,11 @@ function d(e) {
                 children: E.map((e, t) => (0, r.jsx)(i.MenuGroup, { children: e.map(e => e) }, t))
             });
         },
-        children: e => {
-            let {
-                onClick: t,
-                ...n
-            } = e;
-            return (0, r.jsx)(u.Z, {
-                variant: 'banner',
-                text: c.Z.Messages.MORE,
-                icon: i.MoreHorizontalIcon,
-                onClick: e => {
-                    d({ action: 'PRESS_OPTIONS' }), t(e);
-                },
-                ...n
-            });
-        }
+        children: e => (0, r.jsx)(u.oY, {
+            action: 'PRESS_OPTIONS',
+            icon: i.MoreHorizontalIcon,
+            tooltipText: c.Z.Messages.MORE,
+            ...e
+        })
     });
 }

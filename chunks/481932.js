@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(735250);
 n(470079);
-var i = n(442837), a = n(481060), o = n(194359), s = n(906732), l = n(822972), u = n(314897), c = n(699516), d = n(877485), _ = n(824572), E = n(785717), f = n(993409), h = n(228168), p = n(981631), m = n(689938);
+var i = n(442837), a = n(481060), o = n(194359), s = n(906732), l = n(822972), u = n(314897), c = n(699516), d = n(877485), _ = n(824572), E = n(785717), f = n(475413), h = n(228168), p = n(981631), m = n(689938);
 function I(e) {
     let {
             user: t,
@@ -31,54 +31,49 @@ function I(e) {
                 children: R
             });
         },
-        children: e => (0, r.jsx)(f.Z, {
-            variant: 'banner',
+        children: e => (0, r.jsx)(f.oY, {
             icon: a.UserCheckIcon,
-            text: m.Z.Messages.FRIENDS,
+            tooltipText: m.Z.Messages.FRIENDS,
             ...e
         })
-    }) : O === p.OGo.PENDING_INCOMING ? I === h.y0.FULL_SIZE ? null : (I === h.y0.PANEL ? S : g || T) ? (0, r.jsx)(f.Z, {
-        variant: 'banner',
+    }) : O === p.OGo.PENDING_INCOMING ? I === h.y0.FULL_SIZE ? null : (I === h.y0.PANEL ? S : g || T) ? (0, r.jsx)(f.oY, {
         icon: a.UserClockIcon,
-        text: m.Z.Messages.FRIENDS_SECTION_PENDING,
+        tooltipText: m.Z.Messages.FRIENDS_SECTION_PENDING,
         disabled: !0
     }) : (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(f.Z, {
-                variant: 'banner',
+            (0, r.jsx)(f.oY, {
+                action: 'ACCEPT_FRIEND_REQUEST',
                 icon: e => (0, r.jsx)(a.CheckmarkLargeIcon, {
                     ...e,
                     color: T ? a.tokens.colors.BUTTON_OUTLINE_POSITIVE_BORDER : a.tokens.colors.TEXT_BRAND
                 }),
-                text: m.Z.Messages.ACCEPT_FRIEND_REQUEST,
+                tooltipText: m.Z.Messages.ACCEPT_FRIEND_REQUEST,
                 onClick: () => {
-                    N({ action: 'ACCEPT_FRIEND_REQUEST' }), o.Z.addRelationship({
+                    o.Z.addRelationship({
                         userId: t.id,
                         friendToken: n,
                         context: { location: A }
                     });
                 }
             }),
-            (0, r.jsx)(f.Z, {
-                variant: 'banner',
+            (0, r.jsx)(f.oY, {
+                action: 'IGNORE_FRIEND_REQUEST',
                 icon: a.CloseSmallIcon,
-                text: m.Z.Messages.IGNORE_FRIEND_REQUEST,
-                onClick: () => {
-                    N({ action: 'IGNORE_FRIEND_REQUEST' }), o.Z.cancelFriendRequest(t.id, { location: A });
-                }
+                tooltipText: m.Z.Messages.IGNORE_FRIEND_REQUEST,
+                onClick: () => o.Z.cancelFriendRequest(t.id, { location: A })
             })
         ]
-    }) : O === p.OGo.PENDING_OUTGOING ? I === h.y0.FULL_SIZE ? null : (0, r.jsx)(f.Z, {
-        variant: 'banner',
+    }) : O === p.OGo.PENDING_OUTGOING ? I === h.y0.FULL_SIZE ? null : (0, r.jsx)(f.oY, {
         icon: a.UserClockIcon,
-        text: m.Z.Messages.FRIENDS_SECTION_PENDING,
+        tooltipText: m.Z.Messages.FRIENDS_SECTION_PENDING,
         disabled: !0
-    }) : I === h.y0.FULL_SIZE ? null : (0, r.jsx)(f.Z, {
-        variant: 'banner',
+    }) : I === h.y0.FULL_SIZE ? null : (0, r.jsx)(f.oY, {
+        action: 'SEND_FRIEND_REQUEST',
         icon: a.UserPlusIcon,
-        text: m.Z.Messages.ADD_FRIEND,
+        tooltipText: m.Z.Messages.ADD_FRIEND,
         onClick: () => {
-            N({ action: 'SEND_FRIEND_REQUEST' }), o.Z.addRelationship({
+            o.Z.addRelationship({
                 userId: t.id,
                 friendToken: n,
                 context: { location: A }

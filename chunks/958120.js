@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 });
-var r = n(735250), i = n(470079), a = n(442837), o = n(481060), s = n(954138), l = n(979264), u = n(699516), c = n(246946), d = n(5192), _ = n(741308), E = n(681837), f = n(91433), h = n(724593), p = n(502762), m = n(530), I = n(790711), T = n(580512), g = n(67152), S = n(579285), A = n(287612), N = n(228168), v = n(981631), O = n(335182);
+var r = n(735250), i = n(470079), a = n(442837), o = n(481060), s = n(954138), l = n(979264), u = n(699516), c = n(246946), d = n(5192), _ = n(741308), E = n(681837), f = n(91433), h = n(502762), p = n(530), m = n(827313), I = n(790711), T = n(580512), g = n(67152), S = n(579285), A = n(287612), N = n(228168), v = n(981631), O = n(335182);
 function R(e) {
     let {
             user: t,
@@ -22,7 +22,7 @@ function R(e) {
         fade: !0,
         className: O.body,
         children: [
-            (0, r.jsx)(m.Z, {
+            (0, r.jsx)(p.Z, {
                 user: t,
                 profileType: N.y0.BITE_SIZE,
                 onOpenProfile: D,
@@ -40,15 +40,15 @@ function R(e) {
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(E.Z, { userId: t.id }),
-                        !U && (0, r.jsx)(h.Z, {
-                            user: t,
+                        !U && (0, r.jsx)(m.Z, {
+                            userId: t.id,
                             isHovering: y,
-                            onOpenProfile: () => null == D ? void 0 : D({ subsection: N.Tb.NOTE })
+                            onOpenProfile: D
                         })
                     ]
                 })
             }),
-            P === v.OGo.PENDING_INCOMING && (0, r.jsx)(p.Z.Overlay, {
+            P === v.OGo.PENDING_INCOMING && (0, r.jsx)(h.Z.Overlay, {
                 children: (0, r.jsx)(f.Z, {
                     user: t,
                     guildId: null == C ? void 0 : C.id,

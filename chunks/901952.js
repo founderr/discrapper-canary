@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     }
 }), n(411104), n(47120);
-var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(481060), l = n(493683), u = n(904245), c = n(906732), d = n(541716), _ = n(752305), E = n(893718), f = n(957730), h = n(131704), p = n(592125), m = n(5192), I = n(838440), T = n(332390), g = n(785717), S = n(261253), A = n(30556), N = n(765365), v = n(981631), O = n(689938), R = n(767722), C = n(589273);
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(481060), l = n(493683), u = n(904245), c = n(906732), d = n(541716), _ = n(752305), E = n(893718), f = n(957730), h = n(131704), p = n(592125), m = n(5192), I = n(838440), T = n(332390), g = n(785717), S = n(261253), A = n(7242), N = n(934861), v = n(981631), O = n(689938), R = n(663054), C = n(589273);
 let y = (0, h.kt)({
         id: '1',
         type: v.d4z.DM
@@ -38,36 +38,32 @@ function L(e) {
             messageCtaEnabled: h,
             activeInviteToCallCtaEnabled: p,
             persistentCallCtaEnabled: I
-        } = (0, T.l)({ location: 'BiteSizeProfileDirectMessageSection' }), v = (0, N.Z)({
+        } = (0, T.l)({ location: 'BiteSizeProfileDirectMessageSection' }), [v, L] = i.useState(''), [b, M] = i.useState((0, _.JM)(v)), P = i.useRef(!1);
+    if (h) {
+        let e = (0, r.jsx)(A.Z, {
             user: t,
-            onClose: l,
             className: C.biteSizeButton
-        }), [L, b] = i.useState(''), [M, P] = i.useState((0, _.JM)(L)), U = i.useRef(!1);
-    if (h)
-        return p && null != v ? (0, r.jsxs)('div', {
+        });
+        return p && null != e ? (0, r.jsxs)('div', {
             className: C.ctaRow,
             children: [
-                (0, r.jsx)(A.Z, {
-                    user: t,
+                (0, r.jsx)(N.c, {
+                    userId: t.id,
                     fullWidth: !0,
-                    variant: 'text',
                     color: C.engagementExpButton,
                     className: C.biteSizeButton,
-                    tooltipContainerClassName: C.ctaTooltipContainer,
                     onClose: l
                 }),
-                v
+                e
             ]
         }) : I ? (0, r.jsxs)('div', {
             className: C.ctaRow,
             children: [
-                (0, r.jsx)(A.Z, {
-                    user: t,
+                (0, r.jsx)(N.c, {
+                    userId: t.id,
                     fullWidth: !0,
-                    variant: 'text',
                     color: o()(s.Button.Colors.BRAND, R.color),
                     className: C.biteSizeButton,
-                    tooltipContainerClassName: C.ctaTooltipContainer,
                     onClose: l
                 }),
                 (0, r.jsx)(S.Z, {
@@ -76,32 +72,32 @@ function L(e) {
                     className: o()(C.engagementExpButton, C.biteSizeIconButton)
                 })
             ]
-        }) : (0, r.jsx)(A.Z, {
-            user: t,
+        }) : (0, r.jsx)(N.c, {
+            userId: t.id,
             fullWidth: !0,
-            variant: 'text',
             className: C.biteSizeButton,
             color: o()(s.Button.Colors.BRAND, R.color),
             onClose: l
         });
+    }
     return (0, r.jsx)(E.Z, {
         innerClassName: C.inner,
         editorClassName: C.editor,
         type: d.I.USER_PROFILE,
         placeholder: O.Z.Messages.QUICK_DM_USER.format({ name: m.ZP.getName(n, a, t) }),
         channel: y,
-        textValue: L,
-        richValue: M,
+        textValue: v,
+        richValue: b,
         onChange: (e, t, n) => {
-            if (t !== L)
-                b(t), P(n);
+            if (t !== v)
+                L(t), M(n);
         },
-        focused: U.current,
+        focused: P.current,
         onFocus: () => {
-            U.current = !0;
+            P.current = !0;
         },
         onBlur: () => {
-            U.current = !1;
+            P.current = !1;
         },
         onSubmit: async e => {
             let {value: n} = e;

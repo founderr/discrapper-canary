@@ -1,19 +1,23 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(735250);
 n(470079);
-var i = n(442837), a = n(693789), o = n(235874), s = n(481060), l = n(944613), u = n(607070), c = n(605436), d = n(496675), _ = n(993409), E = n(689938), f = n(854887);
-function h(e) {
+var i = n(442837), a = n(693789), o = n(235874), s = n(481060), l = n(944613), u = n(607070), c = n(605436), d = n(496675), _ = n(475413), E = n(981631), f = n(689938), h = n(854887);
+function p(e) {
     let {
             guild: t,
             guildMember: n,
-            highestRole: h,
-            onAddRole: p,
-            ...m
-        } = e, I = (0, i.e7)([u.Z], () => u.Z.roleStyle), T = e => (0, c.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, h, e) && -1 === n.roles.indexOf(e.id);
+            numRoles: p,
+            highestRole: m,
+            onAddRole: I,
+            buttonRef: T
+        } = e, g = (0, i.e7)([u.Z], () => u.Z.roleStyle);
+    if (!(0, i.e7)([d.Z], () => d.Z.can(E.Plq.MANAGE_ROLES, t)))
+        return null;
+    let S = e => (0, c.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, m, e) && -1 === n.roles.indexOf(e.id);
     return (0, r.jsx)(o.y, {
         position: 'bottom',
         align: 'center',
@@ -21,21 +25,32 @@ function h(e) {
             let {closePopout: n} = e;
             return (0, r.jsx)(l.Z, {
                 guild: t,
-                roleStyle: I,
-                roleFilter: T,
-                onSelect: p,
+                roleStyle: g,
+                roleFilter: S,
+                onSelect: I,
                 onClose: n
             });
         },
-        children: e => (0, r.jsx)(_.Z, {
-            className: f.button,
-            text: E.Z.Messages.USER_PROFILE_ADD_ROLE,
-            icon: s.PlusSmallIcon,
-            color: a.zx.Colors.CUSTOM,
-            size: a.zx.Sizes.NONE,
-            grow: !1,
-            ...e,
-            ...m
+        children: e => (0, r.jsx)(s.TooltipContainer, {
+            text: f.Z.Messages.USER_PROFILE_ADD_ROLE,
+            'aria-label': !1,
+            shouldShow: p > 0,
+            children: (0, r.jsxs)(_.kF, {
+                className: h.button,
+                color: a.zx.Colors.CUSTOM,
+                size: a.zx.Sizes.NONE,
+                grow: !1,
+                'aria-label': f.Z.Messages.USER_PROFILE_ADD_ROLE,
+                buttonRef: T,
+                ...e,
+                children: [
+                    (0, r.jsx)(s.PlusSmallIcon, {
+                        size: 'xs',
+                        color: 'currentColor'
+                    }),
+                    0 === p && f.Z.Messages.USER_PROFILE_ADD_ROLE
+                ]
+            })
         })
     });
 }

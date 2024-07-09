@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(735250);
 n(470079);
-var i = n(442837), a = n(481060), o = n(592125), s = n(944486), l = n(246946), u = n(5192), c = n(621853), d = n(741308), _ = n(940730), E = n(681837), f = n(724593), h = n(678738), p = n(530), m = n(580512), I = n(67152), T = n(579285), g = n(287612), S = n(228168), A = n(689938), N = n(335182);
+var i = n(442837), a = n(481060), o = n(592125), s = n(944486), l = n(246946), u = n(5192), c = n(621853), d = n(741308), _ = n(940730), E = n(681837), f = n(678738), h = n(530), p = n(827313), m = n(580512), I = n(67152), T = n(579285), g = n(287612), S = n(228168), A = n(689938), N = n(335182);
 function v(e) {
     let {
             user: t,
@@ -32,7 +32,7 @@ function v(e) {
         fade: !0,
         className: N.body,
         children: [
-            (0, r.jsx)(p.Z, {
+            (0, r.jsx)(h.Z, {
                 user: t,
                 profileType: S.y0.BITE_SIZE,
                 onOpenProfile: C,
@@ -46,10 +46,10 @@ function v(e) {
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(E.Z, { userId: t.id }),
-                        !P && (0, r.jsx)(f.Z, {
-                            user: t,
+                        !P && (0, r.jsx)(p.Z, {
+                            userId: t.id,
                             isHovering: R,
-                            onOpenProfile: () => null == C ? void 0 : C({ subsection: S.Tb.NOTE })
+                            onOpenProfile: C
                         })
                     ]
                 })
@@ -77,7 +77,7 @@ function v(e) {
                 guildId: null == O ? void 0 : O.id,
                 onClick: D
             }),
-            null != U && (0, r.jsx)(h.Z, {
+            null != U && (0, r.jsx)(f.Z, {
                 title: A.Z.Messages.ROLES,
                 children: U
             })

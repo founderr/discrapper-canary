@@ -244,7 +244,10 @@ function ee(e) {
                     children: [
                         !ec && (0, i.jsx)(P.Z, {
                             profileType: K.y0.BITE_SIZE,
-                            children: (0, i.jsx)(M.Z, { onClose: n })
+                            children: (0, i.jsx)(M.Z, {
+                                userId: t.id,
+                                onClose: n
+                            })
                         }),
                         (0, i.jsx)(U.Z, {
                             user: t,

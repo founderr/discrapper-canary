@@ -26,7 +26,8 @@ function u(e) {
                 user: t,
                 guildId: n,
                 onClose: c,
-                profileType: s.y0.BITE_SIZE
+                profileType: s.y0.BITE_SIZE,
+                fullWidth: !0
             })
         ]
     });
