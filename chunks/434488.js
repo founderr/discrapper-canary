@@ -51,7 +51,8 @@ function Z(e) {
         };
     return (0, i.jsx)(_.Gt, {
         value: s,
-        children: (0, i.jsxs)(i.Fragment, {
+        children: (0, i.jsxs)(I.Z, {
+            className: v.root,
             children: [
                 (0, i.jsx)(c.Tooltip, {
                     text: T.Z.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
@@ -66,16 +67,13 @@ function Z(e) {
                             onClick: () => {
                                 null == t || t(), u();
                             },
-                            children: (0, i.jsx)(I.Z, {
-                                className: v.root,
-                                children: (0, i.jsx)('div', {
-                                    className: v.iconContainer,
-                                    children: (0, i.jsx)(c.ActivitiesPlusIcon, {
-                                        size: 'custom',
-                                        color: 'currentColor',
-                                        width: 40,
-                                        height: 40
-                                    })
+                            children: (0, i.jsx)('div', {
+                                className: v.iconContainer,
+                                children: (0, i.jsx)(c.ActivitiesPlusIcon, {
+                                    size: 'custom',
+                                    color: 'currentColor',
+                                    width: 40,
+                                    height: 40
                                 })
                             })
                         });
