@@ -1,4 +1,4 @@
-var i, a, s = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(481060), u = n(230711), _ = n(607070), E = n(706454), m = n(63063), I = n(930153), T = n(617136), h = n(272008), N = n(113434), p = n(569984), f = n(497505), C = n(918701), g = n(796111), S = n(566078), A = n(340100), x = n(644646), R = n(667105), O = n(87894), M = n(2660), v = n(46140), L = n(981631), Z = n(689938), P = n(817024), b = n(789002);
+var i, a, s = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(481060), u = n(230711), _ = n(607070), E = n(706454), I = n(63063), m = n(930153), T = n(617136), h = n(272008), N = n(113434), p = n(569984), f = n(497505), C = n(918701), g = n(796111), S = n(566078), A = n(340100), x = n(644646), R = n(667105), O = n(87894), M = n(2660), v = n(46140), L = n(981631), Z = n(689938), P = n(817024), b = n(789002);
 let D = (e, t, n) => (0, O.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium';
 function j(e) {
     let {
@@ -102,8 +102,8 @@ function y(e) {
             inGiftInventory: o,
             hasConsoleTasks: u,
             hasConsoleConnection: E,
-            waitingForConsoleConnection: m
-        } = e, I = n >= 1, N = n >= 3, f = (0, C.Bz)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([p.Z], () => p.Z.isEnrolling(t.id)), x = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), O = function (e) {
+            waitingForConsoleConnection: I
+        } = e, m = n >= 1, N = n >= 3, f = (0, C.Bz)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([p.Z], () => p.Z.isEnrolling(t.id)), x = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), O = function (e) {
             let {
                     quest: t,
                     progressState: n,
@@ -170,6 +170,11 @@ function y(e) {
                             ...e,
                             text: Z.Z.Messages.COLLECTIBLES_USE_NOW
                         };
+                    else if ((0, C.vQ)(t.config))
+                        return {
+                            ...e,
+                            text: Z.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
+                        };
                     return {
                         ...e,
                         text: Z.Z.Messages.QUESTS_SEE_CODE
@@ -192,11 +197,11 @@ function y(e) {
             isInHouseQuest: x,
             location: a,
             isCollectibleQuest: i,
-            waitingForConsoleConnection: m,
+            waitingForConsoleConnection: I,
             questContentPosition: l,
             inGiftInventory: o
         });
-    if (u && I && E && !f && !N && o)
+    if (u && m && E && !f && !N && o)
         return (0, s.jsx)(U, {
             quest: t,
             useReducedMotion: S
@@ -360,8 +365,8 @@ t.Z = e => {
                                 }
                             }) : null != b && null != b.approximateCount ? Z.Z.Messages.QUEST_REWARD_TIERED.format({
                                 maxReward: b.messages.nameWithArticle,
-                                maxRewardCount: (0, I.Bs)(b.approximateCount, d),
-                                helpCenterLink: m.Z.getArticleURL(L.BhN.QUESTS_LEARN_MORE)
+                                maxRewardCount: (0, m.Bs)(b.approximateCount, d),
+                                helpCenterLink: I.Z.getArticleURL(L.BhN.QUESTS_LEARN_MORE)
                             }) : null != P ? Z.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
                                 reward: M,
                                 duration: P
