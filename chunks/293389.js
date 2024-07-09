@@ -298,7 +298,7 @@ t.Z = function (e) {
             runningGame: E.ZP.getVisibleGame(),
             overrideExePaths: j(...E.ZP.getOverrides())
         }));
-    return a.useEffect(() => ((0, u.K)(), u.P), []), (0, n.jsxs)(c.FormSection, {
+    return a.useEffect(() => ((0, u.Ky)(), u.P7), []), (0, n.jsxs)(c.FormSection, {
         tag: 'h1',
         title: s ? O.Z.Messages.REGISTERED_GAMES : null,
         className: t,

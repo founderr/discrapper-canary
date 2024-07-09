@@ -104,7 +104,7 @@ class W extends s.PureComponent {
                         current_user_status: D.Z.getStatus(),
                         game_detection_enabled: (0, g.ik)(v),
                         executable_path: c
-                    });
+                    }), null != c && g.ZP.addExecutableTrackedByAnalytics(c);
                 }, 10000), null != v.name && null != R && L.Z.shouldReport(v.name)) {
                 let e = v.name;
                 r.Z.identifyGame(R, e).then(e => r.Z.reportUnverifiedGame(e)).catch(e => new I.Z('AutoAnalytics').error('Cannot identify game', e));

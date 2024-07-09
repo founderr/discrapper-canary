@@ -1,8 +1,8 @@
 s.d(t, {
-    K: function () {
+    Ky: function () {
         return r;
     },
-    P: function () {
+    P7: function () {
         return o;
     }
 }), s(411104);
@@ -22,3 +22,4 @@ function o() {
         throw Error('Attempted to stop observing candidate games on a non-desktop platform');
     i.ZP.clearCandidateGamesCallback(), n.Z.dispatch({ type: 'GAME_DETECTION_WATCH_CANDIDATE_GAMES_STOP' });
 }
+s(189451).l.ALL;
