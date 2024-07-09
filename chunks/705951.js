@@ -39,32 +39,35 @@ class E extends r.Z {
                 if (null == n || null == n.userStatus)
                     return;
                 let r = (0, s.Gh)(n);
-                if (null != r && Date.now() >= e.updateAt) {
+                if (null == r)
+                    return;
+                let l = Date.now();
+                if (l >= e.updateAt) {
                     let {
                             targetSeconds: o,
                             progressSeconds: s,
-                            taskType: l
-                        } = r, u = (Date.now() - e.updateAt) / i.Z.Millis.SECOND, c = Math.min(s + u, o), d = {
+                            taskType: u
+                        } = r, c = (l - e.updateAt) / i.Z.Millis.SECOND, d = Math.min(s + c, o), E = {
                             ...n.userStatus,
                             progress: {
-                                [l]: {
-                                    ...n.userStatus.progress[l],
-                                    eventName: l,
-                                    value: c
+                                [u]: {
+                                    ...n.userStatus.progress[u],
+                                    eventName: u,
+                                    value: d
                                 }
                             }
                         };
-                    if ((0, a.kP)(d), _.log('Dispatching optimistic update:', {
-                            secondsSinceLastUpdate: u,
-                            optimisticProgressValue: c,
+                    if ((0, a.kP)(E), _.log('Dispatching optimistic update:', {
+                            secondsSinceLastUpdate: c,
+                            optimisticProgressValue: d,
                             optimisticUpdatesMap: this.optimisticUpdatesMap
-                        }), c >= 0.995 * o) {
+                        }), d >= 0.995 * o) {
                         this.optimisticUpdatesMap.delete(t);
                         return;
                     }
                     this.optimisticUpdatesMap.set(t, {
                         updateAt: Date.now(),
-                        taskType: l
+                        taskType: u
                     });
                 }
             });

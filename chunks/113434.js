@@ -182,7 +182,10 @@ function L(e) {
     ]);
 }
 (o = i || (i = {})).UNCLAIMED = 'unclaimed', o.CLAIMED = 'claimed';
-let b = e => s.useMemo(() => (0, m.il)(e), [e]);
+let b = (e, t) => s.useMemo(() => (0, m.il)(e, t), [
+    e,
+    t
+]);
 function M(e) {
     return s.useMemo(() => (0, m.b7)(e), [e]);
 }

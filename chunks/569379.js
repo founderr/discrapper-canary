@@ -1,32 +1,38 @@
 n.d(t, {
     EK: function () {
-        return h;
+        return E;
     },
     GX: function () {
-        return _;
+        return h;
     },
     eQ: function () {
         return g;
     },
+    pe: function () {
+        return f;
+    },
     vf: function () {
         return C;
+    },
+    z: function () {
+        return _;
     }
 }), n(47120);
-var s = n(470079), o = n(338545), r = n(442837), a = n(410030), l = n(706454), i = n(930153), c = n(113434), d = n(569984), u = n(918701), p = n(566078), x = n(46140), m = n(689938);
+var s = n(470079), o = n(338545), r = n(442837), a = n(410030), i = n(706454), l = n(930153), c = n(113434), d = n(569984), u = n(918701), p = n(566078), x = n(46140), m = n(689938);
 function g(e) {
     var t, n;
-    let s = (0, r.e7)([l.default], () => l.default.locale), {percentComplete: o} = (0, c.Rf)(e);
+    let s = (0, r.e7)([i.default], () => i.default.locale), {percentComplete: o} = (0, c.Rf)(e);
     if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null)
         return m.Z.Messages.QUESTS_COMPLETION_COMPLETE;
     if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && o > 0) {
-        let e = (0, i.T3)(s, o, { roundingMode: 'floor' });
+        let e = (0, l.T3)(s, o, { roundingMode: 'floor' });
         return m.Z.Messages.QUESTS_COMPLETION_PROGRESS_STARTED_V2.format({ percent: e });
     }
     return (0, u.$J)(e) ? m.Z.Messages.QUEST_BAR_TITLE_START_PLAYING : m.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED;
 }
 function C(e, t) {
     var n;
-    let s = (0, c.B6)(p.r.build(e.config).rewardsExpireAt), o = (0, c.Rf)(e), r = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, a = f(e);
+    let s = (0, c.B6)(p.r.build(e.config).rewardsExpireAt), o = (0, c.Rf)(e), r = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, a = _(e);
     if (r)
         return m.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: s });
     if (t)
@@ -44,9 +50,13 @@ function C(e, t) {
 }
 function f(e) {
     let t = (0, r.e7)([d.Z], () => d.Z.getQuestLastSuccessfulHeartbeat(e.id));
-    return !!(0, u.Bz)(e) || null != t && Date.now() - t < x.Ot;
+    return null != t && Date.now() - t < x.Ot;
 }
-function _() {
+function _(e) {
+    let t = f(e);
+    return (0, u.Bz)(e) || t;
+}
+function h() {
     let [{spring: e}, t] = (0, o.useSpring)(() => ({ spring: 0 }));
     return {
         completionSpring: e,
@@ -58,18 +68,18 @@ function _() {
         }, [t])
     };
 }
-function h(e, t) {
+function E(e, t) {
     var n;
-    let s = f(e), o = null !== (n = (0, a.i6)()) && void 0 !== n ? n : 0, r = 'var(--green-330)', l = [
+    let s = _(e), o = null !== (n = (0, a.i6)()) && void 0 !== n ? n : 0, r = 'var(--green-330)', i = [
             'var(--background-tertiary)',
             'var(--interactive-normal)'
-        ], i = t ? l[o] : [
+        ], l = t ? i[o] : [
             '#828288',
             '#CBCDD4'
         ][o];
     return {
-        backgroundTop: i,
-        backgroundBottom: t ? l[o] : [
+        backgroundTop: l,
+        backgroundBottom: t ? i[o] : [
             '#535356',
             '#8B8C95'
         ][o],

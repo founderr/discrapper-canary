@@ -123,7 +123,7 @@ class U extends a.Z {
             let {
                     progressSeconds: n,
                     targetSeconds: r
-                } = (0, p.il)(t), i = Math.max(0, (r - n) * E.Z.Millis.SECOND);
+                } = (0, p.il)(t, g.RE), i = Math.max(0, (r - n) * E.Z.Millis.SECOND);
             return i <= N ? i + v : N;
         }), A(this, 'terminateHeartbeat', e => {
             let {
@@ -171,7 +171,7 @@ class U extends a.Z {
                             progressSeconds: t,
                             targetSeconds: n,
                             taskType: r
-                        } = (0, p.il)(o), i = (Date.now() - u) / E.Z.Millis.SECOND, a = t + i;
+                        } = (0, p.il)(o, g.RE), i = (Date.now() - u) / E.Z.Millis.SECOND, a = t + i;
                     if (R.log('~ initiateOptimisticProgressUpdateInterval -> Updating optimistic progress:', {
                             streamKey: e,
                             progressToAdd: i,
