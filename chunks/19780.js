@@ -79,12 +79,9 @@ function C(e, t) {
                 channelId: n
             });
         });
-    }), a.on(d.z.SecureFramesUpdate, e => {
+    }), a.on(d.z.SecureFramesUpdate, () => {
         c.Z.wait(() => {
-            c.Z.dispatch({
-                type: 'RTC_CONNECTION_SECURE_FRAMES_UPDATE',
-                state: e
-            });
+            c.Z.dispatch({ type: 'RTC_CONNECTION_SECURE_FRAMES_UPDATE' });
         });
     }), N = new _.Z(p.default.getId(), t), v = null, O = !1, R = !1, a;
 }
@@ -182,6 +179,9 @@ class M extends (a = u.ZP.Store) {
     isUserConnected(e) {
         let t = null == r ? void 0 : r.getUserIds();
         return null != t && t.has(e);
+    }
+    getSecureFramesRosterMap() {
+        return null == r ? void 0 : r.getSecureFramesRosterMap();
     }
 }
 l = 'RTCConnectionStore', (s = 'displayName') in (o = M) ? Object.defineProperty(o, s, {
