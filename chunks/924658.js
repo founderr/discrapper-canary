@@ -634,7 +634,6 @@ e.exports = Object.freeze({
     E2EE_CLEAR_VERIFICATION: 'Clear Verification',
     E2EE_MARK_AS_VERIFIED: 'Mark as Verified',
     E2EE_VIEW_VERIFICATION_CODE: 'View Verification Code',
-    E2EE_VOICE_DETAILS: 'Voice Details',
     E2EE_CONNECTION: 'Connection',
     E2EE_PRIVACY: 'Privacy',
     E2EE_END_TO_END_ENCRYPTION: 'End-to-end encryption',
