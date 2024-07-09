@@ -468,15 +468,34 @@ function ep(e) {
             useV2Variants: r = !1,
             taskDetails: i,
             thirdPartyTaskDetails: a
-        } = e, o = n.config.messages.gameTitle, s = N.r.build(n.config).defaultReward.messages.nameWithArticle, {targetMinutes: l} = null != i ? i : ev(n), u = ef(n, O.S7.IN_HOUSE_CONSOLE_QUEST), c = J(n.config), d = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null;
+        } = e, o = n.config.messages.gameTitle, s = N.r.build(n.config).defaultReward.messages.nameWithArticle, {targetMinutes: l} = null != i ? i : ev(n), u = ef(n, O.S7.IN_HOUSE_CONSOLE_QUEST), c = J(n.config), _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, E = eC(n) && e_(n);
     if (u && null != c)
-        return d ? C.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
+        return _ ? C.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
             reward: s,
             duration: c
         }) : C.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_ANY_GAME_ON_CONNECTED_CONSOLE.format({
             targetMinutes: l,
             rewardNameWithArticle: s,
             duration: c
+        });
+    if (E)
+        return null != c ? _ ? C.Z.Messages.QUEST_REWARD_MULTIPLATFORM_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
+            gameTitle: o,
+            reward: s,
+            streamingDurationRequirement: ev(n).targetMinutes,
+            onClick: () => {
+                d.Z.open(R.oAB.CONNECTIONS);
+            },
+            duration: c
+        }) : C.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
+            gameTitle: o,
+            targetMinutes: l,
+            rewardNameWithArticle: s,
+            duration: c
+        }) : C.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME.format({
+            gameTitle: o,
+            targetMinutes: l,
+            rewardNameWithArticle: s
         });
     if (eC(n))
         return null != c ? C.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
@@ -489,7 +508,7 @@ function ep(e) {
             targetMinutes: l,
             rewardNameWithArticle: s
         });
-    if (e_(n))
+    else if (e_(n))
         return null != c ? C.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
             gameTitle: o,
             streamingDurationRequirement: l,
