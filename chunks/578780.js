@@ -5,7 +5,7 @@ t.r(n), t.d(n, {
 });
 var o = t(735250);
 t(470079);
-var r = t(100527), a = t(906732), i = t(987209), c = t(598), s = t(409813), l = t(791785), d = t(276442), u = t(793541), f = t(380898), p = t(710094), _ = t(865921), h = t(853872), b = t(806984), g = t(464797), x = t(946211), m = t(231338);
+var r = t(100527), a = t(906732), i = t(987209), c = t(598), s = t(409813), l = t(791785), d = t(276442), u = t(793541), f = t(380898), p = t(710094), _ = t(865921), b = t(853872), h = t(806984), g = t(464797), x = t(946211), m = t(231338);
 let v = [
     {
         key: null,
@@ -16,7 +16,7 @@ let v = [
         renderStep: e => (0, o.jsx)(d.J, {
             ...e,
             onReturn: () => {
-                0 === Object.keys(h.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(s.h8.REVIEW, { trackedFromStep: s.h8.ADD_PAYMENT_STEPS });
+                0 === Object.keys(b.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(s.h8.REVIEW, { trackedFromStep: s.h8.ADD_PAYMENT_STEPS });
             }
         })
     },
@@ -34,7 +34,7 @@ let v = [
     },
     {
         key: s.h8.CONFIRM,
-        renderStep: e => (0, o.jsx)(b.Z, { ...e })
+        renderStep: e => (0, o.jsx)(h.Z, { ...e })
     }
 ];
 function C(e) {

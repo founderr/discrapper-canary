@@ -1,12 +1,12 @@
 t.d(n, {
     Dd: function () {
-        return x;
+        return v;
     }
 });
 var i = t(735250);
 t(470079);
-var a = t(442837), r = t(481060), o = t(628952), s = t(225657), l = t(927699), c = t(987716), d = t(311821), u = t(594174), f = t(285952), p = t(987209), _ = t(598), m = t(409813), C = t(614277), b = t(474936), g = t(689938), v = t(46330);
-let x = {
+var a = t(442837), r = t(481060), o = t(628952), s = t(225657), l = t(927699), c = t(987716), d = t(311821), u = t(594174), f = t(285952), p = t(987209), _ = t(598), m = t(409813), b = t(614277), C = t(474936), g = t(689938), x = t(46330);
+let v = {
     key: m.h8.GIFT_CUSTOMIZATION,
     renderStep: e => (0, i.jsx)(E, { ...e }),
     options: {
@@ -41,7 +41,7 @@ function E(e) {
         } = e, {
             customGiftMessage: d = '',
             setCustomGiftMessage: m,
-            giftRecipientError: x,
+            giftRecipientError: v,
             validatingGiftRecipient: E,
             giftRecipient: T
         } = (0, p.wD)(), {
@@ -50,20 +50,20 @@ function E(e) {
         } = (0, _.usePaymentContext)(), A = (0, a.e7)([u.default], () => u.default.getCurrentUser());
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(C.C3, {
+            (0, i.jsx)(b.C3, {
                 children: (0, i.jsxs)('div', {
-                    className: v.stepBody,
+                    className: x.stepBody,
                     children: [
                         (0, i.jsx)('div', {
-                            className: v.bodyColumnMiddle,
+                            className: x.bodyColumnMiddle,
                             children: (0, i.jsx)(c.q, { isShopGift: !0 })
                         }),
                         (0, i.jsxs)('div', {
-                            className: v.bodyColumnRight,
+                            className: x.bodyColumnRight,
                             children: [
                                 (0, i.jsx)(s.Z, {
                                     selectedSkuId: I,
-                                    className: v.sendTo
+                                    className: x.sendTo
                                 }),
                                 (0, i.jsx)(l.Z, {
                                     sectionTitle: g.Z.Messages.GIFT_OPTIONAL_MESSAGE,
@@ -71,27 +71,27 @@ function E(e) {
                                     pendingText: d,
                                     currentText: d,
                                     disableThemedBackground: !0,
-                                    className: v.customGiftMessageWrapper,
-                                    innerClassName: v.customGiftMessage
+                                    className: x.customGiftMessageWrapper,
+                                    innerClassName: x.customGiftMessage
                                 }),
                                 (0, i.jsx)(o.Z, {
                                     selectedSkuId: I,
                                     selectedSkuPricePreview: S,
-                                    className: v.giftPreview
+                                    className: x.giftPreview
                                 })
                             ]
                         })
                     ]
                 })
             }),
-            (0, i.jsx)(C.O3, {
+            (0, i.jsx)(b.O3, {
                 children: (0, i.jsx)(r.ModalFooter, {
                     justify: f.Z.Justify.BETWEEN,
                     align: f.Z.Align.CENTER,
                     children: (0, i.jsx)(h, {
                         onStepChange: n,
                         onBackClick: t,
-                        disabled: null != x || null == T || T.id === (null == A ? void 0 : A.id) || d.length > b.$n,
+                        disabled: null != v || null == T || T.id === (null == A ? void 0 : A.id) || d.length > C.$n,
                         loading: E
                     })
                 })

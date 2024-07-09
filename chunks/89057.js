@@ -1,79 +1,79 @@
-t.d(n, {
+n.d(a, {
     Vq: function () {
-        return v;
+        return x;
     },
     c8: function () {
-        return m;
+        return B;
     },
     oQ: function () {
-        return C;
+        return N;
     }
 });
-var o = t(735250);
-t(470079);
-var r = t(120356), a = t.n(r), i = t(692547), c = t(780384), s = t(481060), l = t(410030), d = t(285952), u = t(63063), f = t(211242), p = t(981631), _ = t(689938), h = t(736802), b = t(51125), g = t(47268);
-function x(e) {
-    let {className: n} = e, t = (0, l.ZP)(), r = (0, c.wj)(t) ? b : g;
-    return (0, o.jsxs)('div', {
-        className: a()(h.container, n),
+var r = n(735250);
+n(470079);
+var t = n(120356), o = n.n(t), i = n(692547), s = n(780384), c = n(481060), d = n(410030), f = n(285952), l = n(63063), _ = n(211242), u = n(981631), m = n(689938), g = n(736802), h = n(51125), p = n(47268);
+function k(e) {
+    let {className: a} = e, n = (0, d.ZP)(), t = (0, s.wj)(n) ? h : p;
+    return (0, r.jsxs)('div', {
+        className: o()(g.container, a),
         children: [
-            (0, o.jsx)(s.Heading, {
-                className: h.header,
+            (0, r.jsx)(c.Heading, {
+                className: g.header,
                 variant: 'heading-xl/semibold',
-                children: _.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER
+                children: m.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER
             }),
-            (0, o.jsxs)(s.Text, {
-                className: h.description,
+            (0, r.jsxs)(c.Text, {
+                className: g.description,
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 children: [
-                    (0, o.jsx)('p', { children: _.Z.Messages.REGION_BLOCKED_PAYMENTS_BODY }),
-                    (0, o.jsx)('p', { children: _.Z.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({ helpdeskArticle: u.Z.getArticleURL(p.BhN.BLOCKED_PAYMENTS) }) })
+                    (0, r.jsx)('p', { children: m.Z.Messages.REGION_BLOCKED_PAYMENTS_BODY }),
+                    (0, r.jsx)('p', { children: m.Z.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({ helpdeskArticle: l.Z.getArticleURL(u.BhN.BLOCKED_PAYMENTS) }) })
                 ]
             }),
-            (0, o.jsx)('img', {
-                src: r,
-                className: h.splashImage,
+            (0, r.jsx)('img', {
+                src: t,
+                className: g.splashImage,
                 alt: 'Blocked Payments'
             })
         ]
     });
 }
-function m() {
-    return (0, o.jsx)(x, { className: h.settings });
+function B() {
+    return (0, r.jsx)(k, { className: g.settings });
 }
-function v(e) {
-    let {onClose: n} = e;
-    return (0, o.jsxs)(o.Fragment, {
+function x(e) {
+    let {onClose: a} = e;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, o.jsx)(s.ModalHeader, {
-                className: h.blockedPaymentsModalHeader,
-                justify: d.Z.Justify.END,
-                children: (0, o.jsx)(s.ModalCloseButton, { onClick: n })
+            (0, r.jsx)(c.ModalHeader, {
+                className: g.blockedPaymentsModalHeader,
+                justify: f.Z.Justify.END,
+                children: (0, r.jsx)(c.ModalCloseButton, { onClick: a })
             }),
-            (0, o.jsx)(s.ModalContent, {
-                className: h.blockedPaymentsModalContent,
-                children: (0, o.jsx)(x, { className: h.modal })
+            (0, r.jsx)(c.ModalContent, {
+                className: g.blockedPaymentsModalContent,
+                children: (0, r.jsx)(k, { className: g.modal })
             })
         ]
     });
 }
-function C(e) {
-    let {className: n} = e;
-    return (0, f.Q)() ? (0, o.jsxs)(s.Card, {
-        className: a()(h.blockedPaymentsWarning, n),
-        type: s.Card.Types.CUSTOM,
+function N(e) {
+    let {className: a} = e;
+    return (0, _.Q)() ? (0, r.jsxs)(c.Card, {
+        className: o()(g.blockedPaymentsWarning, a),
+        type: c.Card.Types.CUSTOM,
         children: [
-            (0, o.jsx)(s.CircleExclamationPointIcon, {
+            (0, r.jsx)(c.CircleExclamationPointIcon, {
                 size: 'custom',
                 width: 20,
                 height: 20,
-                className: h.blockedPaymentsWarningIcon,
+                className: g.blockedPaymentsWarningIcon,
                 color: i.Z.unsafe_rawColors.YELLOW_300.css
             }),
-            (0, o.jsx)(s.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: 'text-sm/normal',
-                children: _.Z.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({ helpdeskArticle: u.Z.getArticleURL(p.BhN.BLOCKED_PAYMENTS) })
+                children: m.Z.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({ helpdeskArticle: l.Z.getArticleURL(u.BhN.BLOCKED_PAYMENTS) })
             })
         ]
     }) : null;

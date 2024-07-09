@@ -1,23 +1,23 @@
-t.d(n, {
+n.d(t, {
     x: function () {
         return h;
     }
 });
-var i = t(735250);
-t(470079);
-var r = t(512722), o = t.n(r), a = t(780384), s = t(481060), l = t(410030), d = t(973159), c = t(74538), C = t(987209), u = t(598), _ = t(409813), p = t(614223), f = t(689938), x = t(194566);
+var i = n(735250);
+n(470079);
+var r = n(512722), o = n.n(r), a = n(780384), s = n(481060), l = n(410030), d = n(973159), c = n(74538), C = n(987209), u = n(598), _ = n(409813), p = n(614223), f = n(689938), x = n(194566);
 function h(e) {
     let {
-            handleStepChange: n,
-            handleClose: t
+            handleStepChange: t,
+            handleClose: n
         } = e, r = (0, l.ZP)(), {
             activeSubscription: h,
             selectedSkuId: b,
             setSelectedPlanId: g,
             startedPaymentFlowWithPaymentSourcesRef: m
-        } = (0, u.usePaymentContext)(), {isGift: I} = (0, C.wD)(), L = null != h ? (0, c.Af)(h) : null, E = null != L ? (0, c.gq)(L.planId) : null, M = null != L ? (0, c.Rd)(L.planId) : null, T = (0, p.Kp)({
+        } = (0, u.usePaymentContext)(), {isGift: L} = (0, C.wD)(), I = null != h ? (0, c.Af)(h) : null, E = null != I ? (0, c.gq)(I.planId) : null, M = null != I ? (0, c.Rd)(I.planId) : null, T = (0, p.Kp)({
             isTrial: !1,
-            isGift: I,
+            isGift: L,
             selectedSkuId: b,
             startedPaymentFlowWithPaymentSources: m.current
         });
@@ -30,19 +30,19 @@ function h(e) {
             children: [
                 (0, i.jsx)(s.Button, {
                     onClick: () => {
-                        T ? (g((0, p.nA)(b, h)), n(_.h8.REVIEW)) : n(_.h8.PLAN_SELECT);
+                        T ? (g((0, p.nA)(b, h)), t(_.h8.REVIEW)) : t(_.h8.PLAN_SELECT);
                     },
                     children: f.Z.Messages.CONTINUE
                 }),
                 (0, i.jsx)(s.Button, {
                     look: s.Button.Looks.LINK,
                     color: (0, a.wj)(r) ? s.Button.Colors.WHITE : s.Button.Colors.PRIMARY,
-                    onClick: t,
+                    onClick: n,
                     children: f.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
                 })
             ]
         }),
-        onClose: t,
+        onClose: n,
         isDowngrade: !0
     });
 }

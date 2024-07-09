@@ -3,7 +3,7 @@ t.d(n, {
         return g;
     }
 }), t(47120), t(789020);
-var i = t(735250), r = t(470079), o = t(512722), a = t.n(o), s = t(481060), l = t(330726), c = t(716534), d = t(171246), u = t(598), _ = t(409813), p = t(45572), f = t(51499), I = t(678334), m = t(456251), S = t(614277), C = t(698708), T = t(43542), h = t(689938), b = t(736569);
+var i = t(735250), r = t(470079), o = t(512722), a = t.n(o), s = t(481060), l = t(330726), c = t(716534), d = t(171246), u = t(598), _ = t(409813), p = t(45572), f = t(51499), I = t(678334), m = t(456251), C = t(614277), S = t(698708), T = t(43542), b = t(689938), h = t(736569);
 function g(e) {
     var n;
     let {
@@ -28,8 +28,8 @@ function g(e) {
             paymentSources: U,
             priceOptions: Z,
             purchaseError: D,
-            purchaseTokenAuthState: w,
-            selectedPlan: H,
+            purchaseTokenAuthState: H,
+            selectedPlan: w,
             selectedSku: F,
             setCurrency: W,
             setPaymentSourceId: G,
@@ -40,7 +40,7 @@ function g(e) {
             setSubscriptionMetadataRequest: X,
             setHasAcceptedTerms: J
         } = (0, u.usePaymentContext)();
-    a()(null != H, 'Expected plan to be selected'), a()(null != B, 'Expected application');
+    a()(null != w, 'Expected plan to be selected'), a()(null != B, 'Expected application');
     let q = r.useRef(null), [Q, $] = (0, l.Z)(!1, 500), [ee, en] = r.useState(null == z ? void 0 : z.guild_id), et = (0, d.KW)(null !== (n = null == F ? void 0 : F.flags) && void 0 !== n ? n : 0);
     r.useEffect(() => {
         null != D && null != q.current && q.current.scrollIntoView({ behavior: 'smooth' });
@@ -62,36 +62,36 @@ function g(e) {
         ]), eo = r.useRef(null);
     return Y === p.A.PURCHASING ? (0, i.jsx)(m.Z, {}) : (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(f.Z, { className: b.breadcrumbs }),
-            (0, i.jsxs)(S.C3, {
+            (0, i.jsx)(f.Z, { className: h.breadcrumbs }),
+            (0, i.jsxs)(C.C3, {
                 children: [
-                    (0, i.jsx)(C.Z, {}),
+                    (0, i.jsx)(S.Z, {}),
                     et && (0, i.jsxs)('div', {
-                        className: b.userSubscriptionDetailsContainer,
+                        className: h.userSubscriptionDetailsContainer,
                         children: [
                             (0, i.jsx)(s.Text, {
                                 variant: 'eyebrow',
                                 color: 'header-secondary',
-                                children: h.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_TITLE
+                                children: b.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_TITLE
                             }),
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'interactive-normal',
-                                children: h.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_SUBTITLE.format({ applicationName: B.name })
+                                children: b.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_SUBTITLE.format({ applicationName: B.name })
                             })
                         ]
                     }),
                     g && !et && (0, i.jsxs)('div', {
-                        className: b.guildPickerContainer,
+                        className: h.guildPickerContainer,
                         children: [
                             (0, i.jsx)(s.FormTitle, {
                                 tag: s.FormTitleTags.H5,
-                                children: h.Z.Messages.APPLICATION_SUBSCRIPTION_PAYMENT_CHOOSE_SERVER_TITLE
+                                children: b.Z.Messages.APPLICATION_SUBSCRIPTION_PAYMENT_CHOOSE_SERVER_TITLE
                             }),
                             (0, i.jsx)(s.FormText, {
                                 type: s.FormText.Types.DESCRIPTION,
-                                className: b.guildPickerDescription,
-                                children: h.Z.Messages.APPLICATION_SUBSCRIPTION_PAYMENT_CHOOSE_SERVER_SUBTITLE
+                                className: h.guildPickerDescription,
+                                children: b.Z.Messages.APPLICATION_SUBSCRIPTION_PAYMENT_CHOOSE_SERVER_SUBTITLE
                             }),
                             (0, i.jsx)(T.y, {
                                 selectedGuildId: ee,
@@ -101,7 +101,7 @@ function g(e) {
                         ]
                     }),
                     (0, i.jsx)(c.Z, {
-                        selectedPlanId: H.id,
+                        selectedPlanId: w.id,
                         paymentSources: U,
                         onPaymentSourceChange: e => G(null != e ? e.id : null),
                         priceOptions: Z,
@@ -120,7 +120,7 @@ function g(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(S.O3, {
+            (0, i.jsx)(C.O3, {
                 children: (0, i.jsx)(I.Z, {
                     premiumSubscription: null != L ? L : null,
                     setPurchaseState: V,
@@ -133,7 +133,7 @@ function g(e) {
                     baseAnalyticsData: x,
                     flowStartTime: k.startTime,
                     planGroup: O,
-                    purchaseTokenAuthState: w,
+                    purchaseTokenAuthState: H,
                     openInvoiceId: A,
                     metadata: et ? void 0 : z,
                     backButtonEligible: t,

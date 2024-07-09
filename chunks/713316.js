@@ -1,22 +1,22 @@
 t.d(n, {
     w: function () {
-        return f;
+        return _;
     }
 });
 var i = t(735250);
 t(470079);
-var a = t(512722), r = t.n(a), o = t(481060), s = t(598), l = t(698708), c = t(614277), d = t(689938), u = t(811586);
-function f(e) {
+var r = t(512722), o = t.n(r), a = t(481060), s = t(598), l = t(698708), c = t(614277), d = t(689938), u = t(811586);
+function _(e) {
     let {handleClose: n} = e, {
             skusById: t,
-            selectedSkuId: a,
-            application: f
+            selectedSkuId: r,
+            application: _
         } = (0, s.usePaymentContext)();
-    r()(null != a, 'Expected selectedSkuId'), r()(null != f, 'Expected application');
-    let p = t[a];
-    r()(null != p, 'Expected sku');
-    let _ = d.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
-        applicationName: f.name,
+    o()(null != r, 'Expected selectedSkuId'), o()(null != _, 'Expected application');
+    let p = t[r];
+    o()(null != p, 'Expected sku');
+    let f = d.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+        applicationName: _.name,
         itemName: p.name
     });
     return (0, i.jsxs)(c.C3, {
@@ -25,17 +25,17 @@ function f(e) {
             (0, i.jsxs)('div', {
                 className: u.confirmation,
                 children: [
-                    (0, i.jsx)(o.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         variant: 'heading-xxl/bold',
                         className: u.confirmationHeader,
                         children: 'Success!'
                     }),
-                    (0, i.jsx)(o.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
-                        children: _
+                        children: f
                     }),
                     (0, i.jsx)('div', { className: u.divider }),
-                    (0, i.jsx)(o.Button, {
+                    (0, i.jsx)(a.Button, {
                         onClick: n,
                         children: d.Z.Messages.CLOSE
                     })

@@ -1,18 +1,18 @@
-var i = t(735250);
-t(470079);
-n.Z = e => {
+var i = n(735250);
+n(470079);
+t.Z = e => {
     let {
-        className: n,
-        width: t = 83,
+        className: t,
+        width: n = 83,
         height: r = 45
     } = e;
     return (0, i.jsxs)('svg', {
-        width: t,
+        width: n,
         height: r,
         viewBox: '0 0 83 45',
         fill: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
-        className: n,
+        className: t,
         children: [
             (0, i.jsxs)('g', {
                 opacity: '0.4',

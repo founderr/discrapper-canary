@@ -1,11 +1,11 @@
 let o;
 var r, a, i, l, d = n(442837), c = n(544891), u = n(570140), f = n(70956), s = n(314897), _ = n(300429), h = n(981631), b = n(176505);
-let p = 10 * f.Z.Millis.SECOND, I = 1.5 * f.Z.Millis.SECOND, m = {}, E = Object.freeze({});
+let I = 10 * f.Z.Millis.SECOND, p = 1.5 * f.Z.Millis.SECOND, m = {}, E = Object.freeze({});
 function T(e) {
     var t;
     return null !== (t = m[e]) && void 0 !== t ? t : E;
 }
-function g(e) {
+function S(e) {
     var t, n;
     let {
             channelId: o,
@@ -17,7 +17,7 @@ function g(e) {
             channelId: t,
             userId: n
         });
-    }, p)), m[o] = a;
+    }, I)), m[o] = a;
 }
 function C(e) {
     let {
@@ -29,7 +29,7 @@ function C(e) {
     let r = { ...o };
     clearTimeout(r[n]), delete r[n], m[t] = r;
 }
-function S() {
+function g() {
     m = {};
 }
 class v extends (l = d.ZP.Store) {
@@ -46,14 +46,14 @@ i = 'TypingStore', (a = 'displayName') in (r = v) ? Object.defineProperty(r, a, 
     configurable: !0,
     writable: !0
 }) : r[a] = i, t.Z = new v(u.Z, {
-    TYPING_START: g,
+    TYPING_START: S,
     TYPING_STOP: C,
     TYPING_START_LOCAL: function (e) {
         let {channelId: t} = e, n = s.default.getId();
         if (null == n || t === b.V)
             return !1;
         null != o && o.channelId !== t && (null != o.timeout && clearTimeout(o.timeout), o = null);
-        let r = Date.now(), a = 0.8 * p;
+        let r = Date.now(), a = 0.8 * I;
         if (null != o && (null != o.timeout || o.prevSend + a > r))
             return !1;
         let i = setTimeout(() => {
@@ -83,12 +83,12 @@ i = 'TypingStore', (a = 'displayName') in (r = v) ? Object.defineProperty(r, a, 
                         });
                     }
                 });
-        }, null == o || o.prevSend > r - 2 * a ? I : 0);
+        }, null == o || o.prevSend > r - 2 * a ? p : 0);
         return o = {
             channelId: t,
             timeout: i,
             prevSend: r
-        }, g({
+        }, S({
             channelId: t,
             userId: n
         });
@@ -100,8 +100,8 @@ i = 'TypingStore', (a = 'displayName') in (r = v) ? Object.defineProperty(r, a, 
             userId: n
         }));
     },
-    CONNECTION_OPEN: S,
-    OVERLAY_INITIALIZE: S,
+    CONNECTION_OPEN: g,
+    OVERLAY_INITIALIZE: g,
     MESSAGE_CREATE: function (e) {
         let {
             channelId: t,

@@ -9,12 +9,12 @@ let N = e => {
             giftRecipient: s,
             selectedGiftStyle: N,
             setSelectedGiftStyle: T,
-            emojiConfetti: S,
-            soundEffect: x,
+            emojiConfetti: x,
+            soundEffect: S,
             setEmojiConfetti: h,
             setSoundEffect: P
-        } = (0, r.wD)(), [f, A] = t.useState(!1), v = t.useRef(null), M = (0, i.useRadioGroup)({ orientation: 'horizontal' }), g = (0, c.MY)(s, n), C = g === c.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, O = g !== c.xr.DEFAULT, R = (0, u.rK)(), {enabled: L} = u.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: R }), j = null;
-    return O && (j = R && L ? E.V4 : E.QI), (0, l.jsxs)('div', {
+        } = (0, r.wD)(), [f, A] = t.useState(!1), v = t.useRef(null), M = (0, i.useRadioGroup)({ orientation: 'horizontal' }), g = (0, c.MY)(s, n), C = g === c.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, O = g !== c.xr.DEFAULT, R = (0, u.rK)(), {enabled: j} = u.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: R }), L = null;
+    return O && (L = R && j ? E.V4 : E.QI), (0, l.jsxs)('div', {
         children: [
             O && (0, l.jsxs)('div', {
                 className: p.giftMainAnimation,
@@ -32,7 +32,7 @@ let N = e => {
                             (0, l.jsx)('div', {
                                 className: p.sound,
                                 children: (0, l.jsx)(a.Z, {
-                                    sound: x,
+                                    sound: S,
                                     onSelect: e => {
                                         null != P && P(null == e ? void 0 : e);
                                     }
@@ -42,7 +42,7 @@ let N = e => {
                                 className: p.emoji,
                                 children: (0, l.jsx)(_.Z, {
                                     setEmojiConfetti: h,
-                                    emojiConfetti: null == S ? void 0 : S
+                                    emojiConfetti: null == x ? void 0 : x
                                 })
                             })
                         ]
@@ -58,7 +58,7 @@ let N = e => {
                 className: p.giftBoxOptionContainer,
                 'aria-label': I.Z.Messages.SEASONAL_GIFTING_CUSTOMIZE_YOUR_GIFT_BOX,
                 ...M,
-                children: null != j && j.map((e, n) => (0, l.jsx)(m.m, {
+                children: null != L && L.map((e, n) => (0, l.jsx)(m.m, {
                     isSelected: N === e,
                     giftStyle: e,
                     setSelectedGiftStyle: T,

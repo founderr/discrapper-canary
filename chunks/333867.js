@@ -13,11 +13,11 @@ function _(e) {
             skuId: t,
             isGift: _ = !1,
             giftMessage: m,
-            onClose: C,
-            onComplete: b,
+            onClose: b,
+            onComplete: C,
             analyticsLocations: g,
-            analyticsObject: v
-        } = e, x = !1, h = (0, a.Z)(), E = e => {
+            analyticsObject: x
+        } = e, v = !1, h = (0, a.Z)(), E = e => {
             n = e;
         };
     (0, r.openModalLazy)(async () => e => {
@@ -34,10 +34,10 @@ function _(e) {
             giftMessage: m,
             analyticsLocations: g,
             onClose: e => {
-                n(), null == C || C(e);
+                n(), null == b || b(e);
             },
             onComplete: () => {
-                x = !0, null == b || b();
+                v = !0, null == C || C();
             },
             returnRef: a,
             onStepChange: E
@@ -45,13 +45,13 @@ function _(e) {
     }, {
         modalKey: p,
         onCloseCallback: () => {
-            !x && c.default.track(f.rMx.PAYMENT_FLOW_CANCELED, {
+            !v && c.default.track(f.rMx.PAYMENT_FLOW_CANCELED, {
                 load_id: h,
                 payment_type: f.Zuq[f.GZQ.ONE_TIME],
-                location: v,
+                location: x,
                 is_gift: _,
                 location_stack: g
-            }), (0, o.fw)(), (0, s.p)(), null == C || C(x), x && (0, l.qg)();
+            }), (0, o.fw)(), (0, s.p)(), null == b || b(v), v && (0, l.qg)();
         },
         onCloseRequest: () => {
             n === d.h8.REVIEW && (0, r.closeModal)(p);

@@ -3,7 +3,7 @@ t.d(n, {
         return I;
     }
 }), t(47120);
-var i = t(735250), a = t(470079), r = t(120356), o = t.n(r), s = t(887024), l = t(100527), c = t(906732), d = t(987209), u = t(598), f = t(409813), p = t(791785), _ = t(961830), m = t(742956), C = t(346790), b = t(49308), g = t(117652), v = t(126982), x = t(981631), h = t(302800), E = t(231338), T = t(76328);
+var i = t(735250), a = t(470079), r = t(120356), o = t.n(r), s = t(887024), l = t(100527), c = t(906732), d = t(987209), u = t(598), f = t(409813), p = t(791785), _ = t(961830), m = t(742956), b = t(346790), C = t(49308), g = t(117652), x = t(126982), v = t(981631), h = t(302800), E = t(231338), T = t(76328);
 function I(e) {
     let {
             onClose: n,
@@ -27,12 +27,12 @@ function I(e) {
         }, [n]), H = a.useMemo(() => [
             _.WA,
             g.Dd,
-            C.n,
+            b.n,
             ..._.yp,
             _.wo,
             {
                 key: f.h8.CONFIRM,
-                renderStep: e => (0, i.jsx)(b.x, {
+                renderStep: e => (0, i.jsx)(C.x, {
                     ...e,
                     confettiCanvas: k,
                     analyticsLocations: Z,
@@ -66,7 +66,7 @@ function I(e) {
             (0, i.jsx)(u.PaymentContextProvider, {
                 loadId: S,
                 stepConfigs: H,
-                applicationId: x.XAJ,
+                applicationId: v.XAJ,
                 skuIDs: [A],
                 isGift: N,
                 activeSubscription: null,
@@ -78,7 +78,7 @@ function I(e) {
                     children: (0, i.jsx)(p.PaymentModal, {
                         onClose: G,
                         onComplete: D,
-                        applicationId: x.XAJ,
+                        applicationId: v.XAJ,
                         skuId: A,
                         initialPlanId: null,
                         analyticsLocations: Z,
@@ -86,7 +86,7 @@ function I(e) {
                         renderHeader: (e, n, t) => N ? (0, i.jsx)(m.Z, {
                             step: t,
                             onClose: () => n(!1)
-                        }) : (0, i.jsx)(v.Z, {
+                        }) : (0, i.jsx)(x.Z, {
                             step: t,
                             onClose: () => n(!1)
                         }),

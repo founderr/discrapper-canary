@@ -16,8 +16,8 @@ function T(e) {
             pendingText: _,
             placeholder: E,
             currentText: T,
-            className: S,
-            innerClassName: x,
+            className: x,
+            innerClassName: S,
             disabled: h = !1,
             disableThemedBackground: P = !1
         } = e, [f, A] = t.useState(null != _ ? _ : T), [v, M] = t.useState((0, o.JM)(f)), g = t.useRef(!1);
@@ -32,14 +32,14 @@ function T(e) {
         _,
         T
     ]), (0, l.jsx)('div', {
-        className: r()(p.body, S),
+        className: r()(p.body, x),
         children: (0, l.jsxs)(d.Z, {
             title: n,
             errors: s,
             disabled: h,
             children: [
                 (0, l.jsx)(u.Z, {
-                    innerClassName: r()(p.textArea, x),
+                    innerClassName: r()(p.textArea, S),
                     editorClassName: p.editorTextArea,
                     maxCharacterCount: m.$n,
                     onChange: function (e, n, s) {

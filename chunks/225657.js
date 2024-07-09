@@ -7,15 +7,15 @@ n.Z = e => {
             className: t
         } = e, p = (0, a.Wu)([l.Z], () => l.Z.getFriendIDs()), _ = (0, a.Wu)([c.default], () => c.default.filter(e => p.includes(e.id) && !e.bot), [p]), {
             giftRecipient: m,
-            setGiftRecipient: C,
-            giftRecipientError: b,
+            setGiftRecipient: b,
+            giftRecipientError: C,
             setGiftRecipientError: g,
-            setValidatingGiftRecipient: v
+            setValidatingGiftRecipient: x
         } = (0, s.wD)();
     if (null == n)
         return null;
-    let x = async e => {
-        v(!0), null != b && g(), C(e), !await (0, u.B1)(e.id, n) && g(f.Z.Messages.COLLECTIBLES_GIFT_SEND_ERROR_OWNED), v(!1);
+    let v = async e => {
+        x(!0), null != C && g(), b(e), !await (0, u.B1)(e.id, n) && g(f.Z.Messages.COLLECTIBLES_GIFT_SEND_ERROR_OWNED), x(!1);
     };
     return (0, i.jsxs)('div', {
         className: t,
@@ -28,7 +28,7 @@ n.Z = e => {
                     size: r.AvatarSizes.SIZE_20
                 }),
                 value: m,
-                onChange: x,
+                onChange: v,
                 options: _.map(e => ({
                     value: e,
                     label: ''.concat(d.ZP.getUserTag(e))

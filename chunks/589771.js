@@ -15,19 +15,19 @@ function u(e) {
             blockedPayments: f,
             setStep: I,
             hasFetchedSubscriptions: m,
-            hasFetchedSubscriptionPlans: S,
-            currencyLoading: C,
+            hasFetchedSubscriptionPlans: C,
+            currencyLoading: S,
             selectedSkuId: T,
-            setSelectedSkuId: h,
-            setSelectedPlanId: b,
+            setSelectedSkuId: b,
+            setSelectedPlanId: h,
             priceOptions: g,
             setSubscriptionMetadataRequest: E
-        } = (0, c.usePaymentContext)(), {isGift: N} = (0, l.wD)(), [P, O] = r.useState(!m || !S || C);
+        } = (0, c.usePaymentContext)(), {isGift: N} = (0, l.wD)(), [P, O] = r.useState(!m || !C || S);
     return (r.useEffect(() => {
-        O(!m || !S || C);
+        O(!m || !C || S);
     }, [
-        C,
         S,
+        C,
         m
     ]), r.useEffect(() => {
         null != u && E({ guild_id: u });
@@ -35,7 +35,7 @@ function u(e) {
         u,
         E
     ]), r.useEffect(() => {
-        b(t);
+        h(t);
         let e = null != t ? a.Z.get(t) : null;
         if (!P && !f)
             _(n => {
@@ -47,7 +47,7 @@ function u(e) {
                     regular_price: null == e ? void 0 : e.price,
                     currency: g.currency
                 };
-            }), null != e && (h(null == e ? void 0 : e.skuId), I(n));
+            }), null != e && (b(null == e ? void 0 : e.skuId), I(n));
     }, [
         f,
         t,
@@ -56,8 +56,8 @@ function u(e) {
         g,
         T,
         _,
-        b,
         h,
+        b,
         I,
         n
     ]), P) ? (0, i.jsx)(d.Z, {}) : f ? (0, i.jsx)(o.Vq, { onClose: p }) : null;

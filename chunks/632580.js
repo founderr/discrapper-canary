@@ -12,8 +12,8 @@ async function p(e) {
         setPurchaseError: p,
         hasRedirectURL: N,
         setHasRedirectURL: T,
-        isGift: S,
-        baseAnalyticsData: x,
+        isGift: x,
+        baseAnalyticsData: S,
         analyticsLocation: h,
         analyticsLocations: P,
         flowStartTime: f,
@@ -24,8 +24,8 @@ async function p(e) {
         paymentSource: C,
         isPrepaidPaymentPastDue: O,
         openInvoiceId: R,
-        premiumSubscription: L,
-        onNext: j,
+        premiumSubscription: j,
+        onNext: L,
         metadata: y,
         sku: Z,
         skuPricePreview: b,
@@ -39,7 +39,7 @@ async function p(e) {
     try {
         let e, s, l;
         if (d.default.track(E.rMx.PAYMENT_FLOW_COMPLETED, {
-                ...x,
+                ...S,
                 subtotal: null == B ? void 0 : B.subtotal,
                 tax: null == B ? void 0 : B.tax,
                 expected_amount: null == B ? void 0 : B.total,
@@ -51,12 +51,12 @@ async function p(e) {
             t()(null != Z, 'SKU must exist and be fetched.'), t()(null != b, 'SKUPricePreview must exist.'), e = await (0, o.ZZ)(Z.applicationId, Z.id, {
                 expectedAmount: b.amount,
                 expectedCurrency: b.currency,
-                isGift: S,
+                isGift: x,
                 paymentSource: C,
                 loadId: U,
                 giftInfoOptions: F
             });
-        else if (t()(null != A, 'Missing subscriptionPlan'), S) {
+        else if (t()(null != A, 'Missing subscriptionPlan'), x) {
             t()(null != B, 'Missing invoicePreview');
             let n = B.total, s = B.currency;
             e = await (0, o.ZZ)(I.RQ, A.skuId, {
@@ -68,17 +68,17 @@ async function p(e) {
                 loadId: U,
                 giftInfoOptions: F
             });
-        } else if (O && null != R && null != C && null != L)
-            e = E.Uk1.has(C.type) ? await (0, r.G)(L, R, C, g.currency) : await (0, r.Mg)(L, {
+        } else if (O && null != R && null != C && null != j)
+            e = E.Uk1.has(C.type) ? await (0, r.G)(j, R, C, g.currency) : await (0, r.Mg)(j, {
                 paymentSource: C,
                 currency: g.currency
             }, P, h, U);
-        else if (null != L) {
-            let n = (0, _.al)(L, A.id, 1, new Set(v)), s = {
+        else if (null != j) {
+            let n = (0, _.al)(j, A.id, 1, new Set(v)), s = {
                     paymentSource: C,
                     currency: g.currency
                 };
-            L.status === E.O0b.PAUSED ? s.status = E.O0b.ACTIVE : s.items = n, e = await (0, r.Mg)(L, s, P, h, U);
+            j.status === E.O0b.PAUSED ? s.status = E.O0b.ACTIVE : s.items = n, e = await (0, r.Mg)(j, s, P, h, U);
         } else
             e = await (0, c.Ld)({
                 planId: A.id,
@@ -93,10 +93,10 @@ async function p(e) {
             T(null != e.redirectURL);
             return;
         }
-        n(m.A.COMPLETED), 'subscription' in e ? s = null != e.subscription ? u.Z.createFromServer(e.subscription) : null : 'entitlements' in e && (l = null != e.entitlements ? e.entitlements : void 0), j(s, l);
+        n(m.A.COMPLETED), 'subscription' in e ? s = null != e.subscription ? u.Z.createFromServer(e.subscription) : null : 'entitlements' in e && (l = null != e.entitlements ? e.entitlements : void 0), L(s, l);
     } catch (e) {
         n(m.A.FAIL), p(e), d.default.track(E.rMx.PAYMENT_FLOW_FAILED, {
-            ...x,
+            ...S,
             payment_error_code: null == e ? void 0 : e.code,
             payment_source_id: null == C ? void 0 : C.id,
             payment_source_type: null == C ? void 0 : C.type,

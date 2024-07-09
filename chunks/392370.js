@@ -225,7 +225,7 @@ function P(e) {
             T,
             R,
             P
-        ]), L = i.useMemo(() => {
+        ]), S = i.useMemo(() => {
             var e;
             if (!_ && !E)
                 return [];
@@ -309,13 +309,13 @@ function P(e) {
             t,
             T,
             g
-        ]), S = M.length > 0, O = L.length > 0;
+        ]), L = M.length > 0, O = S.length > 0;
     return {
         commandResults: M,
-        hasCommandResults: S,
-        applicationResults: L,
+        hasCommandResults: L,
+        applicationResults: S,
         hasApplicationResults: O,
-        isEmptyState: !S && !O,
+        isEmptyState: !L && !O,
         loading: x && s
     };
 }

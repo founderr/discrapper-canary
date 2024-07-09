@@ -3,7 +3,7 @@ t.d(n, {
         return Y;
     }
 }), t(47120), t(653041), t(724458);
-var i = t(735250), l = t(470079), a = t(392711), r = t.n(a), s = t(892814), o = t(79411), c = t(442837), u = t(481060), d = t(911969), m = t(595519), p = t(115130), _ = t(566620), E = t(127255), A = t(880308), N = t(427996), h = t(367907), f = t(399654), C = t(844439), I = t(254711), v = t(213459), P = t(10718), x = t(895924), T = t(148958), g = t(424602), R = t(541099), M = t(827498), L = t(87005), S = t(695676), O = t(98880), j = t(804307), b = t(888617), y = t(561160), Z = t(41558), H = t(105862), U = t(28147), D = t(981631), k = t(689079), B = t(689938), w = t(678313);
+var i = t(735250), l = t(470079), a = t(392711), r = t.n(a), s = t(892814), o = t(79411), c = t(442837), u = t(481060), d = t(911969), m = t(595519), p = t(115130), _ = t(566620), E = t(127255), A = t(880308), N = t(427996), h = t(367907), f = t(399654), C = t(844439), I = t(254711), v = t(213459), P = t(10718), x = t(895924), T = t(148958), g = t(424602), R = t(541099), M = t(827498), S = t(87005), L = t(695676), O = t(98880), j = t(804307), b = t(888617), y = t(561160), Z = t(41558), H = t(105862), U = t(28147), D = t(981631), k = t(689079), B = t(689938), w = t(678313);
 let V = [], W = Array(8).fill(0).map((e, n) => n), F = [
         {
             cards: [
@@ -35,7 +35,7 @@ function Y(e) {
             searchQuery: a,
             setSearchQuery: r,
             setScroller: s
-        } = e, o = (0, m.NX)(n.id, !0), d = (0, c.e7)([p.Z], () => p.Z.getIsEnabled(), []), E = t === M._b.TEXT, A = t === M._b.TEXT, N = t === M._b.TEXT, h = t === M._b.VOICE, f = t === M._b.TEXT, [C, I] = K(E), [v, P] = K(A), [x, T] = K(N), [g, R] = K(h), L = C && v && x && g, S = (N || A) && !L, O = h && d;
+        } = e, o = (0, m.NX)(n.id, !0), d = (0, c.e7)([p.Z], () => p.Z.getIsEnabled(), []), E = t === M._b.TEXT, A = t === M._b.TEXT, N = t === M._b.TEXT, h = t === M._b.VOICE, f = t === M._b.TEXT, [C, I] = K(E), [v, P] = K(A), [x, T] = K(N), [g, R] = K(h), S = C && v && x && g, L = (N || A) && !S, O = h && d;
     l.useEffect(() => {
         o && (0, _.w1)({
             guildId: n.getGuildId(),
@@ -78,7 +78,7 @@ function Y(e) {
                             channel: n,
                             onEmptyState: P
                         }),
-                        N && (0, i.jsx)($, {
+                        N && (0, i.jsx)(J, {
                             channel: n,
                             onEmptyState: T
                         }),
@@ -86,11 +86,11 @@ function Y(e) {
                             channel: n,
                             onEmptyState: R
                         }),
-                        L && (0, i.jsx)(y.A, {
+                        S && (0, i.jsx)(y.A, {
                             type: M.LG.HOME_EMPTY,
                             textContent: t === M._b.TEXT ? B.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : B.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
                         }),
-                        S && (0, i.jsx)(H.Z, {})
+                        L && (0, i.jsx)(H.Z, {})
                     ]
                 })
             })
@@ -167,7 +167,7 @@ function X(e) {
         } = e, {
             frecentApps: r,
             loading: s
-        } = (0, L.f)(n, !0), o = l.useMemo(() => {
+        } = (0, S.f)(n, !0), o = l.useMemo(() => {
             let e = [];
             for (let n of r)
                 null != n.application && e.push({
@@ -344,7 +344,7 @@ function Q(e) {
         ]
     });
 }
-function $(e) {
+function J(e) {
     let {
             channel: n,
             onEmptyState: t
@@ -429,13 +429,13 @@ function $(e) {
                     })
                 ]
             }, n);
-        }) : r.map(e => (0, i.jsx)(J, {
+        }) : r.map(e => (0, i.jsx)($, {
             recommendationsSection: e,
             remainingActivities: o
         }, e.key))
     });
 }
-function J(e) {
+function $(e) {
     let {
             recommendationsSection: n,
             remainingActivities: t
@@ -507,7 +507,7 @@ function K(e) {
     ];
 }
 function ee(e, n, t, i, a) {
-    let {pushHistory: r} = (0, S.hH)();
+    let {pushHistory: r} = (0, L.hH)();
     return l.useMemo(() => t.length <= i ? {
         items: t,
         handleViewMore: void 0
@@ -518,7 +518,7 @@ function ee(e, n, t, i, a) {
                 section_name: a,
                 source: R.Z.entrypoint()
             }), r({
-                type: S.gc.LIST,
+                type: L.gc.LIST,
                 title: e,
                 look: n,
                 items: t,

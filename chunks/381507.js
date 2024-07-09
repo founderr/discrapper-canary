@@ -1,10 +1,10 @@
-var i = t(735250);
-t(470079);
-var r = t(780384), o = t(481060), a = t(410030), s = t(204197), l = t(51144), d = t(105759), c = t(898969), C = t(703614), u = t(182294), _ = t(689938), p = t(906884);
-n.Z = () => {
+var i = n(735250);
+n(470079);
+var r = n(780384), o = n(481060), a = n(410030), s = n(204197), l = n(51144), d = n(105759), c = n(898969), C = n(703614), u = n(182294), _ = n(689938), p = n(906884);
+t.Z = () => {
     let e = (0, d.Z)(), {
-            avatarSrc: n,
-            eventHandlers: t
+            avatarSrc: t,
+            eventHandlers: n
         } = (0, s.Z)({
             user: e,
             size: u.EF.SIZE_32,
@@ -16,10 +16,10 @@ n.Z = () => {
             (0, i.jsx)('div', {
                 className: p.avatarContainer,
                 children: (0, i.jsx)(o.Avatar, {
-                    src: n,
+                    src: t,
                     'aria-label': e.username,
                     size: u.EF.SIZE_32,
-                    ...t
+                    ...n
                 })
             }),
             (0, i.jsx)(o.Text, {

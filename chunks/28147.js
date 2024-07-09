@@ -10,7 +10,7 @@ let T = Array(6).fill(0).map((e, n) => n), g = [
         ,
     ].fill(0).map((e, n) => n);
 function R(e) {
-    return e.enableGlobalSearch ? (0, i.jsx)(M, { ...e }) : (0, i.jsx)(L, { ...e });
+    return e.enableGlobalSearch ? (0, i.jsx)(M, { ...e }) : (0, i.jsx)(S, { ...e });
 }
 function M(e) {
     let {
@@ -67,7 +67,7 @@ function M(e) {
         textContent: a === _._b.TEXT ? P.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : P.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
     }) : (0, i.jsxs)('div', {
         children: [
-            f && (0, i.jsx)(S, {
+            f && (0, i.jsx)(L, {
                 channel: n,
                 commandResults: N,
                 query: t
@@ -81,7 +81,7 @@ function M(e) {
         ]
     });
 }
-function L(e) {
+function S(e) {
     let {
             channel: n,
             query: t,
@@ -111,7 +111,7 @@ function L(e) {
         textContent: a === _._b.TEXT ? P.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : P.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
     }) : (0, i.jsxs)('div', {
         children: [
-            p && (0, i.jsx)(S, {
+            p && (0, i.jsx)(L, {
                 channel: n,
                 commandResults: m,
                 query: t
@@ -124,7 +124,7 @@ function L(e) {
         ]
     });
 }
-function S(e) {
+function L(e) {
     let {
             channel: n,
             commandResults: t,

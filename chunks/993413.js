@@ -33,8 +33,8 @@ function _(e) {
         hideDivider: p = !1,
         showBorder: N = !1,
         borderType: T,
-        hasBackground: S = !1,
-        forcedDivider: x = !1,
+        hasBackground: x = !1,
+        forcedDivider: S = !1,
         showPremiumIcon: h = !1
     } = e;
     return (0, l.jsx)('div', {
@@ -42,14 +42,14 @@ function _(e) {
             [u.disabled]: I,
             [u.hideDivider]: p,
             [u.showBorder]: N,
-            [u.withDivider]: x
+            [u.withDivider]: S
         }),
         children: (0, l.jsxs)(o.Z, {
             className: u.customizationSectionBorder,
             backgroundClassName: u.customizationSectionBackground,
             isShown: N,
             type: T,
-            hasBackground: S,
+            hasBackground: x,
             children: [
                 (0, l.jsxs)(r.FormTitle, {
                     className: u.title,

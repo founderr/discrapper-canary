@@ -6,8 +6,8 @@ s.d(n, {
 var l = s(735250);
 s(470079);
 var t = s(278074), i = s(979554), r = s(481060), a = s(1585), c = s(125988), o = s(583434), u = s(479446), d = s(981632), _ = s(731896), m = s(680295), E = s(998502), I = s(987209), p = s(689938), N = s(578599), T = s(241822);
-let S = E.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
-function x(e) {
+let x = E.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
+function S(e) {
     let {avatarDecoration: n} = e, {
             avatarDecorationSrc: s,
             eventHandlers: t,
@@ -18,7 +18,7 @@ function x(e) {
         });
     return (0, l.jsx)('div', {
         className: N.giftMainAnimationWrapper,
-        children: (0, l.jsx)(S, {
+        children: (0, l.jsx)(x, {
             ...t,
             avatarDecoration: s,
             src: i,
@@ -44,7 +44,7 @@ function h(e) {
     });
 }
 function P(e) {
-    let {sku: n} = e, {selectedGiftStyle: s} = (0, I.wD)(), {product: r} = (0, o.T)(null == n ? void 0 : n.id), a = null == r ? void 0 : r.items[0], c = (0, t.EQ)(a).with({ type: i.Z.AVATAR_DECORATION }, e => (0, l.jsx)(x, { avatarDecoration: e })).with({ type: i.Z.PROFILE_EFFECT }, e => (0, l.jsx)(h, { id: e.id })).otherwise(() => null);
+    let {sku: n} = e, {selectedGiftStyle: s} = (0, I.wD)(), {product: r} = (0, o.T)(null == n ? void 0 : n.id), a = null == r ? void 0 : r.items[0], c = (0, t.EQ)(a).with({ type: i.Z.AVATAR_DECORATION }, e => (0, l.jsx)(S, { avatarDecoration: e })).with({ type: i.Z.PROFILE_EFFECT }, e => (0, l.jsx)(h, { id: e.id })).otherwise(() => null);
     return null != s && null == c ? (0, l.jsx)('div', {
         className: N.giftMainAnimationWrapper,
         children: (0, l.jsx)(d.Z, {
