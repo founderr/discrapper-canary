@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     }
 });
-var i = n(735250), a = n(470079), s = n(442837), r = n(524437), l = n(481060), o = n(235820), c = n(494404), d = n(110924), u = n(796798), _ = n(198620), E = n(294218), m = n(695346), I = n(592125), T = n(731290), h = n(944486), N = n(455199), p = n(655354), f = n(999671), C = n(324081), g = n(240126), S = n(791914), A = n(981631), x = n(689938), R = n(699723);
+var i = n(735250), a = n(470079), s = n(442837), r = n(524437), l = n(481060), o = n(235820), c = n(494404), d = n(110924), u = n(796798), _ = n(198620), E = n(294218), I = n(695346), m = n(592125), T = n(731290), h = n(944486), N = n(455199), p = n(655354), f = n(999671), C = n(324081), g = n(240126), S = n(791914), A = n(981631), x = n(689938), R = n(699723);
 let O = {
     offset: {
         left: 4,
@@ -20,10 +20,10 @@ function v(e) {
             onJump: n,
             badgeState: l,
             closePopout: E
-        } = e, m = (0, s.e7)([
-            I.Z,
+        } = e, I = (0, s.e7)([
+            m.Z,
             h.Z
-        ], () => I.Z.getChannel(h.Z.getChannelId())), {
+        ], () => m.Z.getChannel(h.Z.getChannelId())), {
             messages: T,
             hasMore: p,
             loading: C,
@@ -40,10 +40,10 @@ function v(e) {
         })), L = (0, d.Z)(g), P = (0, d.Z)(O), D = (0, d.Z)(v);
     a.useEffect(() => {
         if (!N.Z.hasLoadedEver) {
-            M(m, !0);
+            M(I, !0);
             return;
         }
-        (null != L && g !== L || null != P && O !== P || null != D && v !== D) && M(m, !0);
+        (null != L && g !== L || null != P && O !== P || null != D && v !== D) && M(I, !0);
     }, [
         L,
         g,
@@ -51,11 +51,11 @@ function v(e) {
         O,
         D,
         v,
-        m,
+        I,
         !0
     ]);
     a.useEffect(() => {
-        u.l.getCurrentConfig({ location: 'mentions' }).enabled && (null == T ? void 0 : T.some(_.k5)) && (o.Z.clearMentions(), M(m, !0));
+        u.l.getCurrentConfig({ location: 'mentions' }).enabled && (null == T ? void 0 : T.some(_.k5)) && (o.Z.clearMentions(), M(I, !0));
     }, []), a.useEffect(() => () => {
         o.Z.truncateMentions(A.DJj);
     }, []);
@@ -80,13 +80,13 @@ function v(e) {
             onCloseMessage: function (e) {
                 o.Z.deleteRecentMention(e.id);
             },
-            channel: m,
+            channel: I,
             messages: T,
             loading: C,
             hasMore: p,
             analyticsName: 'Recent Mentions',
             loadMore: function () {
-                M(m, !0, null != T && T.length > 0 ? T[T.length - 1].id : null);
+                M(I, !0, null != T && T.length > 0 ? T[T.length - 1].id : null);
             },
             canCloseAllMessages: !0,
             renderHeader: j,
@@ -118,7 +118,7 @@ function P(e) {
     } = e;
     if (null == t)
         return null;
-    let s = I.Z.getChannel(t.channel_id);
+    let s = m.Z.getChannel(t.channel_id);
     if (null == s)
         return null;
     let r = T.Z.didAgree(s.getGuildId()), c = !!s.isNSFW() && !r;
@@ -151,7 +151,7 @@ function P(e) {
                         channel: s,
                         className: R.message,
                         hideAccessories: c,
-                        compact: m.jU.getSetting(),
+                        compact: I.jU.getSetting(),
                         animateAvatar: !1,
                         focusProps: O,
                         trackAnnouncementViews: !0

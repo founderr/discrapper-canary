@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(693789), r = n(260034), l = n(993365), o = n(481060), c = n(230711), d = n(197115), u = n(504983), _ = n(594174), E = n(74538), m = n(981631), I = n(921944), T = n(474936), h = n(526761), N = n(689938), p = n(541311);
+var a = n(442837), s = n(693789), r = n(260034), l = n(993365), o = n(481060), c = n(230711), d = n(197115), u = n(504983), _ = n(594174), E = n(74538), I = n(981631), m = n(921944), T = n(474936), h = n(526761), N = n(689938), p = n(541311);
 function f(e) {
     var t;
     let {
@@ -21,7 +21,7 @@ function f(e) {
         children: [
             null != f ? (0, i.jsx)(o.Clickable, {
                 className: p.close,
-                onClick: () => null == f ? void 0 : f(I.L.DISMISS),
+                onClick: () => null == f ? void 0 : f(m.L.DISMISS),
                 'aria-label': N.Z.Messages.CLOSE,
                 children: (0, i.jsx)(o.CloseSmallIcon, {
                     size: 'xs',
@@ -49,18 +49,18 @@ function f(e) {
             }),
             S ? (0, i.jsx)(s.zx, {
                 onClick: function () {
-                    c.Z.open(m.oAB.VOICE, h.GA), null == n || n(), null == f || f(I.L.PRIMARY);
+                    c.Z.open(I.oAB.VOICE, h.GA), null == n || n(), null == f || f(m.L.PRIMARY);
                 },
                 children: N.Z.Messages.CHECK_IT_OUT
             }) : (0, i.jsx)(d.Z, {
                 buttonText: N.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
                 subscriptionTier: T.Si.TIER_2,
                 premiumModalAnalyticsLocation: {
-                    section: m.jXE.SOUNDBOARD_SOUND_PICKER,
-                    object: m.qAy.BUTTON_CTA
+                    section: I.jXE.SOUNDBOARD_SOUND_PICKER,
+                    object: I.qAy.BUTTON_CTA
                 },
                 color: s.zx.Colors.GREEN,
-                onSubscribeModalClose: () => null == f ? void 0 : f(I.L.PRIMARY)
+                onSubscribeModalClose: () => null == f ? void 0 : f(m.L.PRIMARY)
             })
         ]
     });

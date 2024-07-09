@@ -6,7 +6,7 @@ n.d(t, {
         return O;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(512722), r = n.n(s), l = n(442837), o = n(481060), c = n(131388), d = n(357352), u = n(353254), _ = n(695346), E = n(271383), m = n(594174), I = n(346656), T = n(671533), h = n(810090), N = n(51144), p = n(506071), f = n(696014), C = n(847033), g = n(544978), S = n(893182), A = n(689938), x = n(55686);
+var i = n(735250), a = n(470079), s = n(512722), r = n.n(s), l = n(442837), o = n(481060), c = n(131388), d = n(357352), u = n(353254), _ = n(695346), E = n(271383), I = n(594174), m = n(346656), T = n(671533), h = n(810090), N = n(51144), p = n(506071), f = n(696014), C = n(847033), g = n(544978), S = n(893182), A = n(689938), x = n(55686);
 function R(e) {
     let {onClick: t} = e;
     return (0, i.jsxs)(o.Clickable, {
@@ -66,10 +66,10 @@ function M(e) {
             nickcolor: p
         } = (s = T, (0, l.cj)([
             E.ZP,
-            m.default
+            I.default
         ], () => {
             var e, t;
-            let n = m.default.getCurrentUser();
+            let n = I.default.getCurrentUser();
             r()(null != n, 'user cannot be null');
             let i = E.ZP.getMember(s, n.id);
             return {
@@ -111,9 +111,9 @@ function M(e) {
                 className: x.infoContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        children: (0, i.jsx)(I.Z, {
+                        children: (0, i.jsx)(m.Z, {
                             guild: u,
-                            size: I.Z.Sizes.LARGER,
+                            size: m.Z.Sizes.LARGER,
                             iconSrc: null == u.icon || j ? (0, d.b)('server_products/storefront/default-guild-icon.jpg') : void 0
                         })
                     }),

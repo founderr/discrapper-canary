@@ -12,7 +12,7 @@ n.d(t, {
         return a;
     }
 }), n(653041), n(47120);
-var i, a, s, r, l = n(470079), o = n(836560), c = n(512722), d = n.n(c), u = n(392711), _ = n.n(u), E = n(570140), m = n(904245), I = n(45114), T = n(607070), h = n(853856), N = n(181945), p = n(220444), f = n(601070), C = n(344185), g = n(569471), S = n(723170), A = n(675478), x = n(581883), R = n(131704), O = n(592125), M = n(984933), v = n(731290), L = n(430824), Z = n(375954), P = n(496675), b = n(306680), D = n(771845), j = n(9156), U = n(70956), y = n(823379), B = n(709054), k = n(981631), G = n(124368);
+var i, a, s, r, l = n(470079), o = n(836560), c = n(512722), d = n.n(c), u = n(392711), _ = n.n(u), E = n(570140), I = n(904245), m = n(45114), T = n(607070), h = n(853856), N = n(181945), p = n(220444), f = n(601070), C = n(344185), g = n(569471), S = n(723170), A = n(675478), x = n(581883), R = n(131704), O = n(592125), M = n(984933), v = n(731290), L = n(430824), Z = n(375954), P = n(496675), b = n(306680), D = n(771845), j = n(9156), U = n(70956), y = n(823379), B = n(709054), k = n(981631), G = n(124368);
 function F(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -69,8 +69,8 @@ class V extends o.EventEmitter {
         this.setState({ scrollToChannelIndex: null });
     }
     loadChannelMessages(e) {
-        m.Z.clearChannel(e.channelId);
-        let t = m.Z.fetchMessages({
+        I.Z.clearChannel(e.channelId);
+        let t = I.Z.fetchMessages({
             channelId: e.channelId,
             limit: k.AQB,
             jump: {
@@ -134,7 +134,7 @@ class V extends o.EventEmitter {
                 channelId: t,
                 newestUnreadMessageId: n
             } = e;
-            if (E.Z.wait(() => I.In(t, !0, void 0, n, { section: k.jXE.INBOX })), 1 === this.state.channels.length) {
+            if (E.Z.wait(() => m.In(t, !0, void 0, n, { section: k.jXE.INBOX })), 1 === this.state.channels.length) {
                 this.deleteChannel(t);
                 return;
             }
@@ -152,7 +152,7 @@ class V extends o.EventEmitter {
                 channels: this.state.channels.filter(t => t.channelId !== e)
             }), this.maybeLoadMore();
         }, this.markAllRead = () => {
-            I.y5(this.state.channels.map(e => ({
+            m.y5(this.state.channels.map(e => ({
                 channelId: e.channelId,
                 messageId: e.newestUnreadMessageId
             }))), this.setState({ channels: [] });

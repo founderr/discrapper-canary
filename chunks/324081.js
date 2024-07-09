@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), r = n(91192), l = n(442837), o = n(481060), c = n(788307), d = n(43267), u = n(933557), _ = n(471445), E = n(199902), m = n(592125), I = n(430824), T = n(158776), h = n(594174), N = n(2093), p = n(346656), f = n(153124), C = n(689938), g = n(444771);
+var a = n(120356), s = n.n(a), r = n(91192), l = n(442837), o = n(481060), c = n(788307), d = n(43267), u = n(933557), _ = n(471445), E = n(199902), I = n(592125), m = n(430824), T = n(158776), h = n(594174), N = n(2093), p = n(346656), f = n(153124), C = n(689938), g = n(444771);
 let S = {
     top: 8,
     bottom: 8,
@@ -79,7 +79,7 @@ function O(e) {
     let {
             channel: t,
             gotoChannel: n
-        } = e, a = (0, l.e7)([I.Z], () => I.Z.getGuild(t.guild_id));
+        } = e, a = (0, l.e7)([m.Z], () => m.Z.getGuild(t.guild_id));
     return null == a ? null : (0, i.jsx)(p.Z, {
         'aria-hidden': !0,
         className: g.guildIcon,
@@ -95,7 +95,7 @@ function M(e) {
             channel: t,
             gotoChannel: n,
             mentionCount: a
-        } = e, r = (0, l.e7)([I.Z], () => I.Z.getGuild(t.guild_id)), c = (0, l.e7)([m.Z], () => m.Z.getChannel(t.parent_id)), d = (0, _.KS)(t, r), E = (0, u.ZP)(t, !1), T = null == c ? null == r ? void 0 : r.name : ''.concat(null == r ? void 0 : r.name, ' \u203A ').concat(c.name), h = t.isMultiUserDM() ? C.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 }) : t.isPrivate() ? (0, i.jsx)(v, { channel: t }) : (0, i.jsx)(o.Clickable, {
+        } = e, r = (0, l.e7)([m.Z], () => m.Z.getGuild(t.guild_id)), c = (0, l.e7)([I.Z], () => I.Z.getChannel(t.parent_id)), d = (0, _.KS)(t, r), E = (0, u.ZP)(t, !1), T = null == c ? null == r ? void 0 : r.name : ''.concat(null == r ? void 0 : r.name, ' \u203A ').concat(c.name), h = t.isMultiUserDM() ? C.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 }) : t.isPrivate() ? (0, i.jsx)(v, { channel: t }) : (0, i.jsx)(o.Clickable, {
             className: s()(g.subtext, g.guildName),
             onClick: n,
             children: T

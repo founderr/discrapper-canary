@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     }
 });
-var i = n(735250), a = n(470079), s = n(399606), r = n(704215), l = n(481060), o = n(605236), c = n(434404), d = n(430824), u = n(914010), _ = n(626135), E = n(150340), m = n(981631), I = n(689938);
+var i = n(735250), a = n(470079), s = n(399606), r = n(704215), l = n(481060), o = n(605236), c = n(434404), d = n(430824), u = n(914010), _ = n(626135), E = n(150340), I = n(981631), m = n(689938);
 function T(e) {
     let {dismissCurrentNotice: t} = e, n = (0, s.e7)([u.Z], () => u.Z.getGuildId(), []), T = (0, s.e7)([d.Z], () => d.Z.getGuild(n), [n]);
     return (a.useEffect(() => {
@@ -13,21 +13,21 @@ function T(e) {
         children: [
             (0, i.jsx)(l.NoticeCloseButton, {
                 onClick: () => {
-                    _.default.track(m.rMx.UPSELL_CLICKED, {
+                    _.default.track(I.rMx.UPSELL_CLICKED, {
                         type: r.z[r.z.GUILD_ONBOARDING_UPSELL_NAGBAR],
                         action: 'dismiss'
                     }), t(), (0, E.G)(T.id, r.z.GUILD_ONBOARDING_UPSELL_NAGBAR);
                 }
             }),
-            I.Z.Messages.GUILD_ONBOARDING_NAGBAR_MESSAGE,
+            m.Z.Messages.GUILD_ONBOARDING_NAGBAR_MESSAGE,
             (0, i.jsx)(l.NoticeButton, {
                 onClick: () => {
-                    _.default.track(m.rMx.UPSELL_CLICKED, {
+                    _.default.track(I.rMx.UPSELL_CLICKED, {
                         type: r.z[r.z.GUILD_ONBOARDING_UPSELL_NAGBAR],
                         action: 'primary'
-                    }), c.Z.open(T.id, m.pNK.ONBOARDING), (0, E.G)(T.id, r.z.GUILD_ONBOARDING_UPSELL_NAGBAR);
+                    }), c.Z.open(T.id, I.pNK.ONBOARDING), (0, E.G)(T.id, r.z.GUILD_ONBOARDING_UPSELL_NAGBAR);
                 },
-                children: I.Z.Messages.GUILD_ONBOARDING_UPSELL_COACHMARK_CHECK_IT_OUT
+                children: m.Z.Messages.GUILD_ONBOARDING_UPSELL_COACHMARK_CHECK_IT_OUT
             })
         ]
     });

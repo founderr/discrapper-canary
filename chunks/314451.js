@@ -5,8 +5,8 @@ n.d(t, {
 }), n(47120);
 var i = n(735250), a = n(470079), s = n(442837), r = n(481060), l = n(782568), o = n(31336), c = n(906467), d = n(502568), u = n(63063), _ = n(689938);
 function E() {
-    let e = (0, s.e7)([c.Z], () => c.Z.isDeveloper), [t, E] = a.useState(!1), [m, I] = a.useState(0), T = e => {
-            clearTimeout(m), I(setTimeout(() => {
+    let e = (0, s.e7)([c.Z], () => c.Z.isDeveloper), [t, E] = a.useState(!1), [I, m] = a.useState(0), T = e => {
+            clearTimeout(I), m(setTimeout(() => {
                 E(e);
             }, 100));
         };

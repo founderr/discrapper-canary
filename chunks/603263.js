@@ -85,20 +85,20 @@ function d(e, t) {
 }
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.vpv;
-    return m(e, t);
+    return I(e, t);
 }
 function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.vpv;
-    return m(e, -t);
+    return I(e, -t);
 }
 function E(e, t) {
-    return I(e, t * l.vpv);
-}
-function m(e, t) {
-    let n = s.Z.getOffset(e);
-    return I(e, n + t);
+    return m(e, t * l.vpv);
 }
 function I(e, t) {
+    let n = s.Z.getOffset(e);
+    return m(e, n + t);
+}
+function m(e, t) {
     let n = s.Z.getQuery(e), i = s.Z.getTotalResults(e);
     if (!(t < 0) && !(t > i))
         return o(e, {

@@ -1,5 +1,5 @@
 n(724458), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(749210), d = n(367907), u = n(400106), _ = n(697568), E = n(183023), m = n(524444), I = n(98278), T = n(197115), h = n(430824), N = n(594174), p = n(285952), f = n(514342), C = n(626135), g = n(74538), S = n(453070), A = n(926491), x = n(378233), R = n(419922), O = n(688179), M = n(981631), v = n(474936), L = n(689938), Z = n(379157), P = n(830645);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(749210), d = n(367907), u = n(400106), _ = n(697568), E = n(183023), I = n(524444), m = n(98278), T = n(197115), h = n(430824), N = n(594174), p = n(285952), f = n(514342), C = n(626135), g = n(74538), S = n(453070), A = n(926491), x = n(378233), R = n(419922), O = n(688179), M = n(981631), v = n(474936), L = n(689938), Z = n(379157), P = n(830645);
 let b = (e, t) => t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({ stickerPackName: e.name }) : L.Z.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({ stickerPackName: e.name }), D = e => {
         let {
             sticker: t,
@@ -14,7 +14,7 @@ function j(e) {
     C.default.track(M.rMx.PREMIUM_PROMOTION_OPENED, {
         location_page: null != e.guild_id ? M.ZY5.GUILD_CHANNEL : M.ZY5.DM_CHANNEL,
         location_section: M.jXE.STICKER_POPOUT
-    }), (0, I.z)();
+    }), (0, m.z)();
 }
 function U(e) {
     let {
@@ -62,7 +62,7 @@ let y = e => {
                 stickerPack: c
             });
         (0, S.Pq)(n.pack_id);
-        let I = (0, S.Sd)(s);
+        let m = (0, S.Sd)(s);
         return (a.useEffect(() => {
             r();
         }, [u]), a.useEffect(() => {
@@ -72,7 +72,7 @@ let y = e => {
                 sticker_pack_id: n.pack_id,
                 ...(0, d.v_)(s)
             });
-        }, [n.pack_id]), u || null == c) ? (0, i.jsx)(m.SE, { className: Z.popoutLoader }) : (0, i.jsxs)(m.W_, {
+        }, [n.pack_id]), u || null == c) ? (0, i.jsx)(I.SE, { className: Z.popoutLoader }) : (0, i.jsxs)(I.W_, {
             className: Z.popoutContent,
             children: [
                 (0, i.jsx)(o.Heading, {
@@ -99,7 +99,7 @@ let y = e => {
                         onClick: () => {
                             _ && (0, O.m)({
                                 stickerPack: c,
-                                stickerPickerCategories: I
+                                stickerPickerCategories: m
                             }), t();
                         },
                         children: L.Z.Messages.STICKER_VIEW_MORE_STICKERS
@@ -111,7 +111,7 @@ let y = e => {
         let t, {
                 sticker: n,
                 channel: s,
-                closePopout: I,
+                closePopout: m,
                 refreshPositionKey: f
             } = e, [S, A] = a.useState(null), [x, O] = a.useState(!1), b = N.default.getCurrentUser(), D = g.ZP.canUseCustomStickersEverywhere(b), y = (0, l.e7)([h.Z], () => h.Z.getGuild(n.guild_id)), B = null != y, [k, G] = a.useState(!1), [F, w] = a.useState(null), V = a.useMemo(() => ({
                 page: null != s.guild_id ? M.ZY5.GUILD_CHANNEL : M.ZY5.DM_CHANNEL,
@@ -131,7 +131,7 @@ let y = e => {
         let Y = n.guild_id === s.getGuildId(), W = null != S, z = !1, K = 'Custom Sticker Popout';
         D ? t = B ? Y ? L.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : W ? L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : B ? (Y ? t = L.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, z = !0, K = 'Custom Sticker Popout (Upsell)') : W ? (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, z = !0, K = 'Custom Sticker Popout (Upsell)') : (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
             openPremiumSettings: () => {
-                j(s), I();
+                j(s), m();
             }
         }), K = 'Custom Sticker Popout (Soft Upsell)');
         let Q = !z && !B && W && D;
@@ -145,14 +145,14 @@ let y = e => {
                 type: K,
                 ...H
             });
-        }, []), x) ? (0, i.jsxs)(m.W_, {
+        }, []), x) ? (0, i.jsxs)(I.W_, {
             className: P.popoutContent,
             children: [
                 (() => {
                     let e = async () => {
                         if (null == S || B)
                             return;
-                        I();
+                        m();
                         let e = S.id;
                         try {
                             await c.Z.joinGuild(e), c.Z.transitionToGuildSync(e);
@@ -172,7 +172,7 @@ let y = e => {
                                 size: o.Button.Sizes.SMALL,
                                 fullWidth: !0,
                                 buttonText: L.Z.Messages.EMOJI_POPOUT_PREMIUM_CTA,
-                                onSubscribeModalClose: t => t ? e() : I(),
+                                onSubscribeModalClose: t => t ? e() : m(),
                                 postSuccessGuild: B || null == S ? void 0 : S,
                                 premiumModalAnalyticsLocation: V
                             }),
@@ -233,7 +233,7 @@ let y = e => {
                                         className: P.otherEmojisContainer,
                                         children: t.map(e => (0, i.jsx)(o.Tooltip, {
                                             text: e.name,
-                                            ...m.b_,
+                                            ...I.b_,
                                             children: t => {
                                                 let {
                                                     onMouseEnter: n,
@@ -267,7 +267,7 @@ let y = e => {
                     });
                 })()
             ]
-        }) : (0, i.jsx)(m.SE, { className: Z.popoutLoader });
+        }) : (0, i.jsx)(I.SE, { className: Z.popoutLoader });
     };
 function k(e) {
     let {
@@ -275,7 +275,7 @@ function k(e) {
         closePopout: n,
         sticker: a
     } = e;
-    return (0, i.jsx)(m.W_, {
+    return (0, i.jsx)(I.W_, {
         className: Z.popoutContent,
         children: (0, i.jsx)(U, {
             sticker: a,
@@ -309,7 +309,7 @@ t.Z = e => {
             refreshPositionKey: s
         });
     if (!l)
-        return (0, i.jsx)(m.SE, {});
+        return (0, i.jsx)(I.SE, {});
     else if (l && null == r)
         return (0, i.jsx)(k, {
             channel: n,

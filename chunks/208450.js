@@ -1,5 +1,5 @@
 n(757143);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(371917), o = n(299608), c = n.n(o), d = n(442837), u = n(481060), _ = n(603263), E = n(461745), m = n(349033), I = n(999650), T = n(857595), h = n(607070), N = n(367907), p = n(592125), f = n(984933), C = n(768119), g = n(944486), S = n(153124), A = n(585483), x = n(72006), R = n(405656), O = n(181389), M = n(854709), v = n(778177), L = n(981631), Z = n(689938), P = n(356852);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(371917), o = n(299608), c = n.n(o), d = n(442837), u = n(481060), _ = n(603263), E = n(461745), I = n(349033), m = n(999650), T = n(857595), h = n(607070), N = n(367907), p = n(592125), f = n(984933), C = n(768119), g = n(944486), S = n(153124), A = n(585483), x = n(72006), R = n(405656), O = n(181389), M = n(854709), v = n(778177), L = n(981631), Z = n(689938), P = n(356852);
 function b(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -29,8 +29,8 @@ class U extends a.PureComponent {
         A.S.unsubscribe(L.CkL.PERFORM_SEARCH, this.search), A.S.unsubscribe(L.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), A.S.unsubscribe(L.CkL.FOCUS_SEARCH, this.handleFocusSearch);
     }
     tokenize(e) {
-        let t = R.kG(x.Sq(e)).filter(e => e.type !== m.ZP.NON_TOKEN_TYPE);
-        return x.lv(t, e, I.ZP);
+        let t = R.kG(x.Sq(e)).filter(e => e.type !== I.ZP.NON_TOKEN_TYPE);
+        return x.lv(t, e, m.ZP);
     }
     clearSearch() {
         let {searchId: e} = this.props;
@@ -177,7 +177,7 @@ class U extends a.PureComponent {
             }
             let a = f.ZP.getTextChannelNameDisambiguations(i.getGuildId())[i.id], s = null != a ? a.name : i.name;
             this.handleSetSearchQuery({
-                query: I.ZP[L.dCx.FILTER_IN].key + '#'.concat(s, ' '),
+                query: m.ZP[L.dCx.FILTER_IN].key + '#'.concat(s, ' '),
                 replace: !0
             });
         }), b(this, 'focusEditor', () => {
@@ -279,7 +279,7 @@ t.Z = d.ZP.connectStores([
     C.Z
 ], () => {
     var e;
-    let t = C.Z.getCurrentSearchId(), n = C.Z.getSearchType(), i = null != t && C.Z.isSearching(t), a = null != t && null !== (e = C.Z.getEditorState(t)) && void 0 !== e ? e : x.nR(O.Jl(I.ZP)), s = h.Z.keyboardModeEnabled;
+    let t = C.Z.getCurrentSearchId(), n = C.Z.getSearchType(), i = null != t && C.Z.isSearching(t), a = null != t && null !== (e = C.Z.getEditorState(t)) && void 0 !== e ? e : x.nR(O.Jl(m.ZP)), s = h.Z.keyboardModeEnabled;
     return {
         searchId: t,
         searchType: n,

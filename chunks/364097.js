@@ -8,15 +8,15 @@ n(470079);
 var a = n(442837), s = n(481060), r = n(197409), l = n(846587), o = n(409059), c = n(58346), d = n(689938), u = n(775315), _ = n(182578);
 function E(e) {
     var t;
-    let {code: E} = e, m = (0, a.e7)([o.Z], () => o.Z.getGuildTemplate(E));
-    if (null == m || m.state === c.Rj.RESOLVING)
+    let {code: E} = e, I = (0, a.e7)([o.Z], () => o.Z.getGuildTemplate(E));
+    if (null == I || I.state === c.Rj.RESOLVING)
         return (0, i.jsxs)(r.Z, {
             children: [
                 (0, i.jsx)(r.Z.Header, { text: d.Z.Messages.GUILD_TEMPLATE_RESOLVING_TITLE }),
                 (0, i.jsx)(r.Z.Body, { resolving: !0 })
             ]
         });
-    if (m.state === c.Rj.EXPIRED)
+    if (I.state === c.Rj.EXPIRED)
         return (0, i.jsxs)(r.Z, {
             children: [
                 (0, i.jsx)(r.Z.Header, { text: d.Z.Messages.GUILD_TEMPLATE_INVALID_TITLE }),
@@ -31,7 +31,7 @@ function E(e) {
                 })
             ]
         });
-    let I = __OVERLAY__ ? (0, i.jsx)(r.Z.Button, {
+    let m = __OVERLAY__ ? (0, i.jsx)(r.Z.Button, {
         isDisabled: !0,
         color: r.Z.Button.Colors.PRIMARY,
         children: d.Z.Messages.GUILD_TEMPLATE_EMBED_VIEW_IN_APP
@@ -44,11 +44,11 @@ function E(e) {
                 ]).then(n.bind(n, 766775));
                 return t => (0, i.jsx)(e, {
                     ...t,
-                    guildTemplate: m
+                    guildTemplate: I
                 });
             });
         },
-        submitting: m.state === c.Rj.ACCEPTING,
+        submitting: I.state === c.Rj.ACCEPTING,
         color: r.Z.Button.Colors.GREEN,
         children: d.Z.Messages.GUILD_TEMPLATE_OPEN
     });
@@ -62,12 +62,12 @@ function E(e) {
                         children: [
                             (0, i.jsx)(l.Z, { className: u.icon }),
                             (0, i.jsx)(r.Z.Info, {
-                                title: m.name,
-                                children: d.Z.Messages.GUILD_TEMPLATE_USAGES.format({ usageCount: String(null !== (t = m.usageCount) && void 0 !== t ? t : 0) })
+                                title: I.name,
+                                children: d.Z.Messages.GUILD_TEMPLATE_USAGES.format({ usageCount: String(null !== (t = I.usageCount) && void 0 !== t ? t : 0) })
                             })
                         ]
                     }),
-                    I
+                    m
                 ]
             })
         ]

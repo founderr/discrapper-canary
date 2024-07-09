@@ -10,8 +10,8 @@ let _ = e => {
                 navigatedAway: n,
                 isDesktop: _,
                 withMentions: E = !1,
-                initialPageSize: m
-            } = e, I = (0, a.e7)([d.Z], () => d.Z.shouldReload()), T = i.useRef(!1), [h, N] = i.useState(!1), {
+                initialPageSize: I
+            } = e, m = (0, a.e7)([d.Z], () => d.Z.shouldReload()), T = i.useRef(!1), [h, N] = i.useState(!1), {
                 initialized: p,
                 loading: f,
                 items: C,
@@ -48,21 +48,21 @@ let _ = e => {
             O,
             A
         ]), i.useEffect(() => {
-            let e = I && t;
+            let e = m && t;
             (!p || e) && (0, o.jk)({
-                limit: null != m ? m : E ? 8 : 20,
+                limit: null != I ? I : E ? 8 : 20,
                 with_mentions: E,
                 roles_filter: x,
                 everyone_filter: R
             });
         }, [
             p,
-            I,
+            m,
             t,
             E,
             x,
             R,
-            m
+            I
         ]);
         let M = i.useCallback(async e => {
             !T.current && p && g && null != S && (e || !A) && (T.current = !0, N(!0), await (0, o.jk)({

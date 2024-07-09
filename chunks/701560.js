@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     }
 }), n(47120), n(411104);
-var i, a = n(735250), s = n(470079), r = n(120356), l = n.n(r), o = n(442837), c = n(481060), d = n(239091), u = n(2052), _ = n(594190), E = n(592745), m = n(757266), I = n(417363), T = n(358085), h = n(346329), N = n(981631), p = n(689938), f = n(376296);
+var i, a = n(735250), s = n(470079), r = n(120356), l = n.n(r), o = n(442837), c = n(481060), d = n(239091), u = n(2052), _ = n(594190), E = n(592745), I = n(757266), m = n(417363), T = n(358085), h = n(346329), N = n(981631), p = n(689938), f = n(376296);
 function C(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -139,16 +139,16 @@ function S(e) {
             applicationId: t,
             libraryApplication: n
         } = e, i = (0, u.O)(), [s, r] = (0, o.Wu)([
-            m.Z,
+            I.Z,
             E.Z,
-            I.Z
+            m.Z
         ], () => [
-            m.Z.isConnected(t) || E.Z.isLaunchable(t) || null != n && I.Z.isLaunchable(n.id, n.branchId),
+            I.Z.isConnected(t) || E.Z.isLaunchable(t) || null != n && m.Z.isLaunchable(n.id, n.branchId),
             E.Z.launchingGames.has(t)
         ], [
             t,
             n
-        ]), l = (0, o.e7)([_.ZP], () => new Set(_.ZP.getRunningVerifiedApplicationIds()).has(t), [t]), c = (0, o.e7)([I.Z], () => null != n ? I.Z.getState(n.id, n.branchId) : null, [n]);
+        ]), l = (0, o.e7)([_.ZP], () => new Set(_.ZP.getRunningVerifiedApplicationIds()).has(t), [t]), c = (0, o.e7)([m.Z], () => null != n ? m.Z.getState(n.id, n.branchId) : null, [n]);
     return (0, a.jsx)(g, {
         ...e,
         analyticsContext: i,

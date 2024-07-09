@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(772848), d = n(831209), u = n(399606), _ = n(481060), E = n(607070), m = n(100527), I = n(367907), T = n(1585), h = n(841762), N = n(336197), p = n(406432), f = n(348238), C = n(38267), g = n(484459), S = n(103575), A = n(695346), x = n(271383), R = n(594174), O = n(768581), M = n(900849), v = n(506071), L = n(495114), Z = n(170140), P = n(981631), b = n(959517), D = n(689938), j = n(730752), U = n(527455);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(772848), d = n(831209), u = n(399606), _ = n(481060), E = n(607070), I = n(100527), m = n(367907), T = n(1585), h = n(841762), N = n(336197), p = n(406432), f = n(348238), C = n(38267), g = n(484459), S = n(103575), A = n(695346), x = n(271383), R = n(594174), O = n(768581), M = n(900849), v = n(506071), L = n(495114), Z = n(170140), P = n(981631), b = n(959517), D = n(689938), j = n(730752), U = n(527455);
 function y(e) {
     var t, n, s;
     let {
@@ -27,7 +27,7 @@ function y(e) {
         }, [Y]), ei = a.useCallback(() => {
             Y(!1);
         }, [Y]), ea = a.useCallback(async () => {
-            null != k && ((0, I.yw)(P.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
+            null != k && ((0, m.yw)(P.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
                 media_post_id: k.threadId,
                 channel_id: B.id,
                 can_access: k.canAccess,
@@ -130,7 +130,7 @@ function y(e) {
                         className: j.descriptionFooter,
                         children: [
                             null != eo && (0, i.jsx)(_.Popout, {
-                                renderPopout: e => er(e, [m.Z.AVATAR]),
+                                renderPopout: e => er(e, [I.Z.AVATAR]),
                                 position: 'right',
                                 spacing: 12,
                                 preload: null == k.authorId ? void 0 : es,
@@ -175,7 +175,7 @@ function y(e) {
                                         children: D.Z.Messages.MEDIA_POST_EMBED_FOOTER_WEB.format({
                                             authorName: k.authorName,
                                             authorNameHook: () => (0, i.jsx)(_.Popout, {
-                                                renderPopout: e => er(e, [m.Z.USERNAME]),
+                                                renderPopout: e => er(e, [I.Z.USERNAME]),
                                                 position: 'right',
                                                 preload: null == k.authorId ? void 0 : es,
                                                 children: e => (0, i.jsx)(_.NameWithRoleAnchor, {

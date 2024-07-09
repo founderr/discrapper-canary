@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return m;
     }
 });
 var i = n(735250);
@@ -41,7 +41,7 @@ function E(e) {
         ]
     });
 }
-function m(e) {
+function I(e) {
     let {
             onShowFullDescription: t,
             variant: n
@@ -70,13 +70,13 @@ function m(e) {
         children: a
     });
 }
-function I(e) {
+function m(e) {
     let {
             imageUrl: t,
             name: n,
             description: a,
             formattedPrice: o,
-            role: I,
+            role: m,
             ctaComponent: T,
             shouldShowFullDescriptionButton: h = !0,
             onShowFullDescription: N,
@@ -124,14 +124,14 @@ function I(e) {
                                         text: a
                                     })
                                 }),
-                                h && (0, i.jsx)(m, {
+                                h && (0, i.jsx)(I, {
                                     onShowFullDescription: N,
                                     variant: M
                                 }),
-                                S || null == I || '' === I.name ? null : (0, i.jsxs)(i.Fragment, {
+                                S || null == m || '' === m.name ? null : (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         (0, i.jsx)(r.Spacer, { size: 16 }),
-                                        (0, i.jsx)(d.Z, { role: I })
+                                        (0, i.jsx)(d.Z, { role: m })
                                     ]
                                 })
                             ]

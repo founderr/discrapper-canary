@@ -137,7 +137,7 @@ function L(e) {
         children: [
             (0, i.jsx)(f.Z, {
                 title: P.Z.Messages.COMMANDS,
-                buttonType: u ? f.Z.buttonTypes.VIEW_MORE : f.Z.buttonTypes.VIEW_LESS,
+                buttonType: u ? f.Z.buttonTypes.VIEW_LESS : f.Z.buttonTypes.VIEW_MORE,
                 onClickViewButton: r ? A : void 0
             }),
             (0, i.jsx)('div', {

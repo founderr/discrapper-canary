@@ -11,7 +11,7 @@ function d(e) {
             guildProductListing: t,
             guildId: d,
             sourceAnalyticsLocations: u
-        } = e, _ = !1, E = (0, a.Z)(), m = () => {
+        } = e, _ = !1, E = (0, a.Z)(), I = () => {
             _ = !0;
         };
     (0, s.openModalLazy)(async () => {
@@ -37,7 +37,7 @@ function d(e) {
                 guildId: d
             },
             loadId: E,
-            onComplete: m
+            onComplete: I
         });
     }, {
         onCloseCallback: () => {

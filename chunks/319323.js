@@ -10,12 +10,12 @@ function E(e) {
     let {
             applicationId: t,
             guildId: n
-        } = e, E = (0, r.IX)(t), {listingsLoaded: m} = (0, r.FE)(t, null == E ? void 0 : E.primarySkuId), I = (0, a.e7)([l.Z], () => l.Z.getSubscriptionGroupListingForApplication(t), [t]), T = null != I ? (0, o.Pw)(I) : null, {
+        } = e, E = (0, r.IX)(t), {listingsLoaded: I} = (0, r.FE)(t, null == E ? void 0 : E.primarySkuId), m = (0, a.e7)([l.Z], () => l.Z.getSubscriptionGroupListingForApplication(t), [t]), T = null != m ? (0, o.Pw)(m) : null, {
             openModal: h,
             canOpenModal: N
         } = (0, c.Z)({
             guildId: n,
-            groupListingId: null == I ? void 0 : I.id,
+            groupListingId: null == m ? void 0 : m.id,
             showBenefitsFirst: !0,
             analyticsLocation: d.Sbl.INTERACTION_RESPONSE,
             skuId: null == T ? void 0 : T.id
@@ -24,7 +24,7 @@ function E(e) {
         color: s.Button.Colors.BRAND,
         size: s.Button.Sizes.SMALL,
         onClick: () => h(),
-        disabled: !N || !m,
+        disabled: !N || !I,
         children: (0, i.jsxs)('div', {
             className: _.button,
             children: [

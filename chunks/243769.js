@@ -1,5 +1,5 @@
 n(47120), n(653041);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(692547), o = n(481060), c = n(620662), d = n(994339), u = n(503438), _ = n(484459), E = n(598077), m = n(63063), I = n(153066), T = n(51144), h = n(285952), N = n(936195), p = n(409216), f = n(981631), C = n(616922), g = n(689938), S = n(668420);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(692547), o = n(481060), c = n(620662), d = n(994339), u = n(503438), _ = n(484459), E = n(598077), I = n(63063), m = n(153066), T = n(51144), h = n(285952), N = n(936195), p = n(409216), f = n(981631), C = n(616922), g = n(689938), S = n(668420);
 function A(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -279,7 +279,7 @@ class R extends a.PureComponent {
         null == t || null == a || s ? !s && c && (d = (0, i.jsx)('div', { className: S.artworkSpotifySessionEnded })) : d = (0, i.jsx)('img', {
             alt: '',
             src: t,
-            className: (0, I.l)(S, 'artwork', this.getActionableMode())
+            className: (0, m.l)(S, 'artwork', this.getActionableMode())
         });
         let _ = null != a && null != d && null != a.assets && null != a.assets.large_text && '' !== a.assets.large_text && !c && (0, u.Z)(a) ? a.assets.large_text : null, E = null != _ ? (0, i.jsx)(o.Tooltip, {
                 text: _,
@@ -302,7 +302,7 @@ class R extends a.PureComponent {
                 (0, i.jsx)('div', {
                     className: S.coverImageWrapper,
                     children: (0, i.jsx)('div', {
-                        className: r()((0, I.l)(S, 'coverImage', this.getActionableMode()), null != d ? S.blurred : null),
+                        className: r()((0, m.l)(S, 'coverImage', this.getActionableMode()), null != d ? S.blurred : null),
                         style: { backgroundImage: null != t ? 'url(\''.concat(t, '\')') : void 0 }
                     })
                 }),
@@ -345,7 +345,7 @@ class R extends a.PureComponent {
                     ]
                 }),
                 (0, i.jsx)(o.Anchor, {
-                    href: m.Z.getArticleURL(this.getHelpdeskArticleURL()),
+                    href: I.Z.getArticleURL(this.getHelpdeskArticleURL()),
                     className: S.helpIcon,
                     children: (0, i.jsx)(o.CircleQuestionIcon, {
                         color: l.Z.unsafe_rawColors.PRIMARY_300.css,

@@ -3,12 +3,12 @@ t.Z = e => {
     let {
             channelId: t,
             messageId: n
-        } = e, E = (0, s.e7)([d.Z], () => d.Z.shouldShowBump(n), [n]), m = a.useCallback(() => {
+        } = e, E = (0, s.e7)([d.Z], () => d.Z.shouldShowBump(n), [n]), I = a.useCallback(() => {
             l.Z.dismissPublishBump(n), (0, o.Z)(t, n);
         }, [
             t,
             n
-        ]), I = a.useCallback(() => {
+        ]), m = a.useCallback(() => {
             l.Z.dismissPublishBump(n);
         }, [n]), T = a.useCallback(() => {
             l.Z.permanentlyHidePublishBump(t);
@@ -34,11 +34,11 @@ t.Z = e => {
                         look: r.Button.Looks.LINK,
                         size: r.Button.Sizes.MIN,
                         className: _.publish,
-                        onClick: m,
+                        onClick: I,
                         children: u.Z.Messages.NEWS_CHANNEL_PUBLISH
                     }),
                     (0, i.jsx)(r.Clickable, {
-                        onClick: I,
+                        onClick: m,
                         children: (0, i.jsx)(r.CircleXIcon, {
                             size: 'xs',
                             color: 'currentColor',

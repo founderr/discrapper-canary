@@ -551,7 +551,7 @@ e.exports = Object.freeze({
     APP_LAUNCHER_VIEW_ALL_ROW: 'View all',
     APP_LAUNCHER_VIEW_MORE_ROW: 'View More',
     APP_LAUNCHER_VIEW_MORE_ROW_ARIA_LABEL: 'View more {title}',
-    APP_LAUNCHER_VIEW_LESS_ROW: 'View less',
+    APP_LAUNCHER_VIEW_LESS_ROW: 'View Less',
     APP_LAUNCHER_SHOW_MORE: 'Show More',
     APP_LAUNCHER_SHOW_LESS: 'Show Less',
     APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE: 'Have Questions?',

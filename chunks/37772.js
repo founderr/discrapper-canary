@@ -1,5 +1,5 @@
 n(789020);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(25610), d = n(703751), u = n(628238), _ = n(976853), E = n(977683), m = n(869765), I = n(695346), T = n(592125), h = n(699516), N = n(702346), p = n(630388), f = n(709054), C = n(493892), g = n(901461), S = n(739566), A = n(443877), x = n(492593), R = n(938353), O = n(25015), M = n(689674), v = n(963550), L = n(845080), Z = n(295790), P = n(145807), b = n(56744), D = n(981631), j = n(689938), U = n(985359), y = n(848509);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(25610), d = n(703751), u = n(628238), _ = n(976853), E = n(977683), I = n(869765), m = n(695346), T = n(592125), h = n(699516), N = n(702346), p = n(630388), f = n(709054), C = n(493892), g = n(901461), S = n(739566), A = n(443877), x = n(492593), R = n(938353), O = n(25015), M = n(689674), v = n(963550), L = n(845080), Z = n(295790), P = n(145807), b = n(56744), D = n(981631), j = n(689938), U = n(985359), y = n(848509);
 function B(e) {
     let {
         className: t,
@@ -39,7 +39,7 @@ t.Z = a.memo(function e(t) {
             disableInteraction: F = !1,
             hasThread: w,
             treatSpam: V
-        } = t, H = D.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, l.e7)([m.Z], () => m.Z.getMessageByReference(H)), W = (0, l.e7)([T.Z], () => o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === m.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null), z = I.x4.useSetting(), K = I.RS.useSetting(), Q = I.NA.useSetting(), q = I.QK.useSetting(), X = (0, u.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, _.Z)(null == s ? void 0 : s.id), {disableReactionCreates: $} = (0, A.Z)(s), {
+        } = t, H = D.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, l.e7)([I.Z], () => I.Z.getMessageByReference(H)), W = (0, l.e7)([T.Z], () => o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null), z = m.x4.useSetting(), K = m.RS.useSetting(), Q = m.NA.useSetting(), q = m.QK.useSetting(), X = (0, u.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, _.Z)(null == s ? void 0 : s.id), {disableReactionCreates: $} = (0, A.Z)(s), {
             content: ee,
             hasSpoilerEmbeds: et
         } = (0, O.Z)(o, {
@@ -48,7 +48,7 @@ t.Z = a.memo(function e(t) {
             allowHeading: X,
             allowLinks: !0,
             previewLinkTarget: !0
-        }), en = (0, S.ZP)(o), ei = (0, l.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(f.default.castMessageIdAsChannelId(o.id))), ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === m.Y.LOADED && null != W, es = !ea && void 0 === a, er = (0, M.Z)({
+        }), en = (0, S.ZP)(o), ei = (0, l.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(f.default.castMessageIdAsChannelId(o.id))), ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W, es = !ea && void 0 === a, er = (0, M.Z)({
             message: o,
             channel: s,
             enabled: es

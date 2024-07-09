@@ -13,7 +13,7 @@ function d(e) {
                 marked_all_channels_as_read: !0,
                 num_unread_channels_remaining: 0
             });
-        }, m = e => {
+        }, I = e => {
             e.shiftKey ? E() : _(!0);
         };
     return (0, i.jsxs)(i.Fragment, {
@@ -25,7 +25,7 @@ function d(e) {
             'bottom-floating' === t ? (0, i.jsx)(l.a, {
                 text: c.Z.Messages.MARK_ALL_AS_READ,
                 icon: s.DoubleCheckmarkLargeIcon,
-                onClick: m
+                onClick: I
             }) : (0, i.jsx)(s.CircleIconButton, {
                 tooltip: c.Z.Messages.MARK_ALL_AS_READ,
                 color: s.CircleIconButtonColors.SECONDARY,
@@ -33,7 +33,7 @@ function d(e) {
                     size: 'xs',
                     color: 'currentColor'
                 }),
-                onClick: m
+                onClick: I
             })
         ]
     });

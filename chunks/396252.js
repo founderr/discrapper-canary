@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), r = n(442837), l = n(481060), o = n(430824), c = n(467679), d = n(702346), u = n(739566), _ = n(464891), E = n(83561), m = n(674563), I = n(689938), T = n(713389);
+var a = n(120356), s = n.n(a), r = n(442837), l = n(481060), o = n(430824), c = n(467679), d = n(702346), u = n(739566), _ = n(464891), E = n(83561), I = n(674563), m = n(689938), T = n(713389);
 function h(e) {
     var t;
     let {
@@ -43,10 +43,10 @@ function h(e) {
                                     color: 'text-brand',
                                     tag: 'span',
                                     className: T.username,
-                                    children: I.Z.Messages.GUILD_AUTOMOD_USERNAME
+                                    children: m.Z.Messages.GUILD_AUTOMOD_USERNAME
                                 }),
                                 (0, i.jsx)(c.Z, {
-                                    type: m.Hb.SYSTEM_DM,
+                                    type: I.Hb.SYSTEM_DM,
                                     className: T.systemTag
                                 })
                             ]
@@ -56,7 +56,7 @@ function h(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: s()(T.__invalid_messageContent, { [T.compact]: a }),
-                        children: I.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
+                        children: m.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
                             username: f.nick,
                             usernameHook: C,
                             guildName: null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : ''

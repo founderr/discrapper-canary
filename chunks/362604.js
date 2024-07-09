@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     }
 }), n(47120), n(536091);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(623292), d = n(926491), u = n(419922), _ = n(702346), E = n(626135), m = n(585483), I = n(115610), T = n(981631), h = n(689938), N = n(296361);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(623292), d = n(926491), u = n(419922), _ = n(702346), E = n(626135), I = n(585483), m = n(115610), T = n(981631), h = n(689938), N = n(296361);
 function p(e) {
     let {
             message: t,
@@ -42,7 +42,7 @@ function p(e) {
                                     channel_id: s.id,
                                     guild_id: s.guild_id,
                                     action_type: 'upload_file'
-                                }), m.S.dispatch(T.CkL.UPLOAD_FILE), (0, c.fE)({
+                                }), I.S.dispatch(T.CkL.UPLOAD_FILE), (0, c.fE)({
                                     message: t,
                                     channel: s,
                                     shouldMention: !0
@@ -64,7 +64,7 @@ function p(e) {
                                     channel_id: s.id,
                                     guild_id: s.guild_id,
                                     action_type: 'sticker'
-                                }), (0, I.O)(t.id, s);
+                                }), (0, m.O)(t.id, s);
                             },
                             children: null != C ? (0, i.jsx)(u.ZP, {
                                 size: 32,

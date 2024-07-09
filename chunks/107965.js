@@ -12,7 +12,7 @@ function _(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let E = 1 * o.Z.Millis.HOUR, m = 7 * o.Z.Millis.DAY, I = 1 * o.Z.Millis.DAY, T = a.K.get('lastNonRequiredUpdateShown', Date.now()), h = new l.Z('AutoUpdateManager');
+let E = 1 * o.Z.Millis.HOUR, I = 7 * o.Z.Millis.DAY, m = 1 * o.Z.Millis.DAY, T = a.K.get('lastNonRequiredUpdateShown', Date.now()), h = new l.Z('AutoUpdateManager');
 class N {
     destroy() {
         clearInterval(this._checkInterval);
@@ -53,11 +53,11 @@ class N {
                 query: { _: Date.now() / 1000 / 60 / 5 | 0 },
                 oldFormErrors: !0
             }).then(e => {
-                if (null == e.body || '07a62ae56bd8ff04f60013b464c65fae4645e567' === e.body.hash)
+                if (null == e.body || 'fc833dbd53d4e5836a6a62cdf56ef7ccb4f8b89b' === e.body.hash)
                     return this._handleUpdateNotAvailable();
                 if (e.body.required || (0, r.fD)())
                     return this._handleUpdateDownloaded(!1);
-                let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? m : I;
+                let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? I : m;
                 if (Date.now() - T > t)
                     return a.K.set('lastNonRequiredUpdateShown', Date.now()), this._handleUpdateDownloaded(!1);
             }, () => this._handleUpdateError());

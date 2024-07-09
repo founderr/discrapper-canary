@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(704215), r = n(481060), l = n(232567), o = n(230711), c = n(726542), d = n(100527), u = n(231757), _ = n(674525), E = n(29458), m = n(636629), I = n(33885), T = n(963249), h = n(346585), N = n(303172), p = n(463230), f = n(246965), C = n(703656), g = n(706454), S = n(933429), A = n(395361), x = n(626135), R = n(243778), O = n(921944), M = n(981631), v = n(801461), L = n(474936), Z = n(689938), P = n(708522);
+var a = n(442837), s = n(704215), r = n(481060), l = n(232567), o = n(230711), c = n(726542), d = n(100527), u = n(231757), _ = n(674525), E = n(29458), I = n(636629), m = n(33885), T = n(963249), h = n(346585), N = n(303172), p = n(463230), f = n(246965), C = n(703656), g = n(706454), S = n(933429), A = n(395361), x = n(626135), R = n(243778), O = n(921944), M = n(981631), v = n(801461), L = n(474936), Z = n(689938), P = n(708522);
 let b = e => {
     let {
             dismissibleContent: t,
@@ -23,7 +23,7 @@ let b = e => {
             } = e;
             switch (g) {
             case s.z.GUILD_ONBOARDING_UPSELL_NAGBAR:
-                return (0, i.jsx)(I.Z, { dismissCurrentNotice: () => S(O.L.UNKNOWN) });
+                return (0, i.jsx)(m.Z, { dismissCurrentNotice: () => S(O.L.UNKNOWN) });
             case s.z.NAGBAR_NOTICE_DOWNLOAD:
                 return (0, i.jsxs)(r.Notice, {
                     color: r.NoticeColors.DEFAULT,
@@ -171,7 +171,7 @@ let b = e => {
                 });
             case s.z.QUEST_1_GO_LIVE_BANNER:
                 let R = null == D ? void 0 : null === (t = D.metadata) || void 0 === t ? void 0 : t.partnerGame;
-                return (0, i.jsx)(m.Z, {
+                return (0, i.jsx)(I.Z, {
                     noticeType: b,
                     markAsDismissed: () => S(O.L.UNKNOWN),
                     partnerGame: R

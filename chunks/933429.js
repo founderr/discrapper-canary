@@ -3,7 +3,7 @@ n.d(t, {
         return ej;
     }
 }), n(47120);
-var i, a, s, r, l = n(913527), o = n.n(l), c = n(442837), d = n(743426), u = n(704215), _ = n(433517), E = n(570140), m = n(579806), I = n(726542), T = n(812206), h = n(223892), N = n(674525), p = n(605236), f = n(524347), C = n(853197), g = n(353926), S = n(594190), A = n(38618), x = n(569545), R = n(615365), O = n(528011), M = n(487419), v = n(715903), L = n(223606), Z = n(150340), P = n(160404), b = n(41776), D = n(347649), j = n(332473), U = n(30684), y = n(616106), B = n(995598), k = n(774276), G = n(518638), F = n(1844), w = n(621615), V = n(417626), H = n(569984), Y = n(523255), W = n(768419), z = n(590415), K = n(581883), Q = n(199902), q = n(314897), X = n(881998), J = n(463395), $ = n(592125), ee = n(553795), et = n(427123), en = n(271383), ei = n(430824), ea = n(131951), es = n(292959), er = n(496675), el = n(571474), eo = n(19780), ec = n(944486), ed = n(914010), eu = n(215427), e_ = n(246946), eE = n(558724), em = n(23434), eI = n(594174), eT = n(979651), eh = n(351402), eN = n(853872), ep = n(78839), ef = n(295226), eC = n(580130), eg = n(695103), eS = n(358085), eA = n(74538), ex = n(922156), eR = n(436181), eO = n(941128), eM = n(981631), ev = n(188785), eL = n(702512), eZ = n(474936), eP = n(46140), eb = n(231338), eD = n(65154);
+var i, a, s, r, l = n(913527), o = n.n(l), c = n(442837), d = n(743426), u = n(704215), _ = n(433517), E = n(570140), I = n(579806), m = n(726542), T = n(812206), h = n(223892), N = n(674525), p = n(605236), f = n(524347), C = n(853197), g = n(353926), S = n(594190), A = n(38618), x = n(569545), R = n(615365), O = n(528011), M = n(487419), v = n(715903), L = n(223606), Z = n(150340), P = n(160404), b = n(41776), D = n(347649), j = n(332473), U = n(30684), y = n(616106), B = n(995598), k = n(774276), G = n(518638), F = n(1844), w = n(621615), V = n(417626), H = n(569984), Y = n(523255), W = n(768419), z = n(590415), K = n(581883), Q = n(199902), q = n(314897), X = n(881998), J = n(463395), $ = n(592125), ee = n(553795), et = n(427123), en = n(271383), ei = n(430824), ea = n(131951), es = n(292959), er = n(496675), el = n(571474), eo = n(19780), ec = n(944486), ed = n(914010), eu = n(215427), e_ = n(246946), eE = n(558724), eI = n(23434), em = n(594174), eT = n(979651), eh = n(351402), eN = n(853872), ep = n(78839), ef = n(295226), eC = n(580130), eg = n(695103), eS = n(358085), eA = n(74538), ex = n(922156), eR = n(436181), eO = n(941128), eM = n(981631), ev = n(188785), eL = n(702512), eZ = n(474936), eP = n(46140), eb = n(231338), eD = n(65154);
 let ej = {
         [eM.kVF.LOCALIZED_PRICING]: u.z.NAGBAR_NOTICE_LOCALIZED_PRICING,
         [eM.kVF.DOWNLOAD_NAG]: u.z.NAGBAR_NOTICE_DOWNLOAD,
@@ -326,16 +326,16 @@ let eH = [
                 return null == t ? void 0 : t.hasBouncedEmail;
             }
         },
-        [eM.kVF.CONNECT_SPOTIFY]: { predicate: () => !W.Z.hasConnectedAccount() && S.ZP.isObservedAppRunning(I.Z.get(eM.ABu.SPOTIFY).name) && !eV(eM.kVF.CONNECT_SPOTIFY) },
+        [eM.kVF.CONNECT_SPOTIFY]: { predicate: () => !W.Z.hasConnectedAccount() && S.ZP.isObservedAppRunning(m.Z.get(eM.ABu.SPOTIFY).name) && !eV(eM.kVF.CONNECT_SPOTIFY) },
         [eM.kVF.WIN32_DEPRECATED_MESSAGE]: {
-            predicate: () => (null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.arch) === 'ia32' && (null === m.Z || void 0 === m.Z ? void 0 : m.Z.process.platform) === 'win32',
+            predicate: () => (null === I.Z || void 0 === I.Z ? void 0 : I.Z.os.arch) === 'ia32' && (null === I.Z || void 0 === I.Z ? void 0 : I.Z.process.platform) === 'win32',
             metadata: () => ({ dismissUntil: o()().add(5, 'days').toDate() })
         },
         [eM.kVF.WIN7_8_DEPRECATED_MESSAGE]: {
             predicate: () => {
-                if ((null === m.Z || void 0 === m.Z ? void 0 : m.Z.process.platform) === 'win32')
+                if ((null === I.Z || void 0 === I.Z ? void 0 : I.Z.process.platform) === 'win32')
                     try {
-                        return 10 > parseInt(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release.split('.')[0]);
+                        return 10 > parseInt(null === I.Z || void 0 === I.Z ? void 0 : I.Z.os.release.split('.')[0]);
                     } catch (e) {
                     }
                 return !1;
@@ -344,9 +344,9 @@ let eH = [
         },
         [eM.kVF.MACOS_17_18_DEPRECATED_MESSAGE]: {
             predicate: () => {
-                if ((null === m.Z || void 0 === m.Z ? void 0 : m.Z.process.platform) === 'darwin')
+                if ((null === I.Z || void 0 === I.Z ? void 0 : I.Z.process.platform) === 'darwin')
                     try {
-                        return 19 > parseInt(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release.split('.')[0]);
+                        return 19 > parseInt(null === I.Z || void 0 === I.Z ? void 0 : I.Z.os.release.split('.')[0]);
                     } catch (e) {
                     }
                 return !1;
@@ -546,7 +546,7 @@ function ez() {
     if (!A.Z.isConnected())
         return !1;
     eG = null;
-    let e = eI.default.getCurrentUser();
+    let e = em.default.getCurrentUser();
     if (null == e)
         return !1;
     let t = ep.ZP.getPremiumSubscription(), n = eh.Z.isLocalizedPromoEnabled, i = ed.Z.getGuildId(), a = ec.Z.getVoiceChannelId(), s = null != a ? eT.Z.getVoiceStateForChannel(a) : null;
@@ -595,13 +595,13 @@ class eQ extends (i = c.ZP.Store) {
             M.Z,
             H.Z,
             Q.Z
-        ], ez), this.waitFor(eI.default, eu.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, ed.Z, em.Z, W.Z, S.ZP, el.Z, ex.Z, eR.Z, eg.Z, es.Z, ep.ZP, eO.Z, et.Z, eN.Z, er.Z, F.Z, eC.Z, ef.Z, ee.Z, b.Z, f.Z, N.Z, V.Z, H.Z, Q.Z);
+        ], ez), this.waitFor(em.default, eu.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, ed.Z, eI.Z, W.Z, S.ZP, el.Z, ex.Z, eR.Z, eg.Z, es.Z, ep.ZP, eO.Z, et.Z, eN.Z, er.Z, F.Z, eC.Z, ef.Z, ee.Z, b.Z, f.Z, N.Z, V.Z, H.Z, Q.Z);
     }
     hasNotice() {
         return null != eG && null != eG.type;
     }
     getNotice() {
-        return null == em.Z.getAction() ? eG : null;
+        return null == eI.Z.getAction() ? eG : null;
     }
     isNoticeDismissed(e) {
         return eV(e);

@@ -6,7 +6,7 @@ n.d(t, {
         return M;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(525654), o = n.n(l), c = n(91192), d = n(442837), u = n(524437), _ = n(481060), E = n(570140), m = n(607070), I = n(724757), T = n(626135), h = n(585483), N = n(143316), p = n(240126), f = n(791914), C = n(147522), g = n(809780), S = n(981631), A = n(689938), x = n(418149);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(525654), o = n.n(l), c = n(91192), d = n(442837), u = n(524437), _ = n(481060), E = n(570140), I = n(607070), m = n(724757), T = n(626135), h = n(585483), N = n(143316), p = n(240126), f = n(791914), C = n(147522), g = n(809780), S = n(981631), A = n(689938), x = n(418149);
 function R(e) {
     let {
             setTab: t,
@@ -60,7 +60,7 @@ function R(e) {
     }, []), a.useEffect(() => (E.Z.subscribe('CONNECTION_OPEN', R), () => {
         E.Z.unsubscribe('CONNECTION_OPEN', R);
     }), [R]));
-    let U = (0, d.e7)([m.Z], () => m.Z.messageGroupSpacing), y = (0, I.Z)('unreads', v);
+    let U = (0, d.e7)([I.Z], () => I.Z.messageGroupSpacing), y = (0, m.Z)('unreads', v);
     if (0 === b.length) {
         var B;
         return (0, i.jsxs)('div', {

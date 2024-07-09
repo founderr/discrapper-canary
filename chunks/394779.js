@@ -4,10 +4,10 @@ n.d(t, {
     }
 });
 var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(481060), o = n(346610), c = n(868643), d = n(912332), u = n(503349), _ = n(689938), E = n(691523);
-function m() {
+function I() {
     (0, l.closeModal)(u.c);
 }
-function I(e) {
+function m(e) {
     let {
             className: t,
             channelId: n,
@@ -20,7 +20,7 @@ function I(e) {
                     channelId: n,
                     source: 'media-viewer',
                     forwardOptions: { onlyEmbedIndices: [o.embedIndex] },
-                    onRequestSent: m
+                    onRequestSent: I
                 });
                 return;
             }
@@ -29,7 +29,7 @@ function I(e) {
                 channelId: n,
                 source: 'media-viewer',
                 forwardOptions: { onlyAttachmentIds: [o.attachmentId] },
-                onRequestSent: m
+                onRequestSent: I
             });
         }, [
             n,
@@ -51,7 +51,7 @@ function T(e, t) {
     let {canForwardMessages: n} = o.w.getCurrentConfig({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
     return n && (0, c.h)(e) ? n => {
         let {className: a} = n;
-        return (0, i.jsx)(I, {
+        return (0, i.jsx)(m, {
             className: a,
             channelId: e.channel_id,
             messageId: e.id,

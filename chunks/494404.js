@@ -9,7 +9,7 @@ n.d(t, {
         return P;
     }
 }), n(47120), n(653041);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(392711), o = n.n(l), c = n(91192), d = n(442837), u = n(481060), _ = n(668781), E = n(904245), m = n(724757), I = n(294218), T = n(703656), h = n(210887), N = n(592125), p = n(375954), f = n(496675), C = n(933429), g = n(451478), S = n(387204), A = n(626135), x = n(585483), R = n(981631), O = n(689938), M = n(928482);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(392711), o = n.n(l), c = n(91192), d = n(442837), u = n(481060), _ = n(668781), E = n(904245), I = n(724757), m = n(294218), T = n(703656), h = n(210887), N = n(592125), p = n(375954), f = n(496675), C = n(933429), g = n(451478), S = n(387204), A = n(626135), x = n(585483), R = n(981631), O = n(689938), M = n(928482);
 function v(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -129,13 +129,13 @@ function j(e) {
             loading: l,
             loadMore: _,
             renderHeader: E,
-            renderEmptyState: I,
+            renderEmptyState: m,
             renderItem: T,
             getProTip: N,
             scrollerClassName: p,
             className: f,
             listName: v
-        } = e, Z = a.useRef(null), P = (0, m.Z)(v, Z), b = (0, d.e7)([C.Z], () => C.Z.hasNotice()), D = (0, d.e7)([g.Z], () => g.Z.windowSize());
+        } = e, Z = a.useRef(null), P = (0, I.Z)(v, Z), b = (0, d.e7)([C.Z], () => C.Z.hasNotice()), D = (0, d.e7)([g.Z], () => g.Z.windowSize());
     a.useEffect(() => {
         A.default.track(R.rMx.OPEN_POPOUT, { type: t });
     }, [t]), a.useEffect(() => {
@@ -163,7 +163,7 @@ function j(e) {
     null == n ? U = [(0, i.jsx)('div', {
             className: r()(M.emptyPlaceholder, M.loadingPlaceholder),
             children: (0, i.jsx)(u.Spinner, {})
-        }, 'spinner')] : 0 === n.length ? U.push((0, i.jsx)(a.Fragment, { children: I(h.Z.theme) }, 'empty-state')) : (y = !1, U = [], o().each(n, e => {
+        }, 'spinner')] : 0 === n.length ? U.push((0, i.jsx)(a.Fragment, { children: m(h.Z.theme) }, 'empty-state')) : (y = !1, U = [], o().each(n, e => {
         U.push(...T(e));
     }));
     let B = null;
@@ -181,7 +181,7 @@ function j(e) {
         })
     }) : (0, i.jsx)('div', {
         className: M.scrollingFooterWrap,
-        children: I(h.Z.theme)
+        children: m(h.Z.theme)
     }));
     let k = null == N ? void 0 : N(), G = y && null != k ? (0, i.jsx)('div', {
             className: M.footer,
@@ -244,7 +244,7 @@ function U(e) {
             loading: o,
             loadMore: c,
             onJump: u,
-            canCloseAllMessages: m = !1,
+            canCloseAllMessages: I = !1,
             renderHeader: h,
             renderEmptyState: f,
             renderMessage: C,
@@ -312,7 +312,7 @@ function U(e) {
             return null == n ? [] : (a.push((0, i.jsxs)('div', {
                 className: M.messageGroupWrapper,
                 children: [
-                    (0, i.jsx)(I.Z, {
+                    (0, i.jsx)(m.Z, {
                         className: M.messageGroupCozy,
                         message: t,
                         channel: n
@@ -321,7 +321,7 @@ function U(e) {
                         channel: s,
                         message: t,
                         jumping: L,
-                        canCloseAllMessages: m,
+                        canCloseAllMessages: I,
                         jumpTo: Z,
                         onCloseMessage: x
                     })

@@ -1,5 +1,5 @@
 n(653041), n(724458);
-var i, a, s, r, l = n(442837), o = n(570140), c = n(999650), d = n(279779), u = n(57132), _ = n(483360), E = n(892880), m = n(405656), I = n(51144), T = n(271383), h = n(768119), N = n(246946), p = n(594174), f = n(981631);
+var i, a, s, r, l = n(442837), o = n(570140), c = n(999650), d = n(279779), u = n(57132), _ = n(483360), E = n(892880), I = n(405656), m = n(51144), T = n(271383), h = n(768119), N = n(246946), p = n(594174), f = n(981631);
 let C = {}, g = {};
 function S(e) {
     let {
@@ -42,7 +42,7 @@ function A(e, t) {
             let n = p.default.getUser(t.id);
             return null == n ? e : (e.push({
                 id: n.id,
-                text: I.ZP.getUserTag(n),
+                text: m.ZP.getUserTag(n),
                 user: n
             }), e);
         }, [])).length > t && (e.length = t), e;
@@ -72,7 +72,7 @@ function x(e, t, n) {
             let {record: t} = e;
             return {
                 user: t,
-                text: I.ZP.getUserTag(t)
+                text: m.ZP.getUserTag(t)
             };
         })), i = e.results);
     } else {
@@ -130,7 +130,7 @@ function O(e, t) {
                     ]
                 };
             }
-        }(e, t))), 5 > (0, m.BU)(i) && i.push(R(e)), i;
+        }(e, t))), 5 > (0, I.BU)(i) && i.push(R(e)), i;
     }(t.token, e) : t.type === f.Sap.EMPTY && (n.push(R(t.token)), (0, u.cn)(), n.push(function (e) {
         if (N.Z.hidePersonalInformation)
             return null;
@@ -142,7 +142,7 @@ function O(e, t) {
     }(e))), n;
 }
 function M() {
-    (0, m.WU)();
+    (0, I.WU)();
 }
 function v(e) {
     let t = C[e];
@@ -205,7 +205,7 @@ let P = new Z(o.Z, {
                 searchId: i,
                 tokens: a,
                 cursorScope: s
-            } = e, r = (0, m.cl)(a), l = (0, m.qc)(s, a), o = null !== (t = C[i]) && void 0 !== t ? t : {}, c = g[i], d = !0;
+            } = e, r = (0, I.cl)(a), l = (0, I.qc)(s, a), o = null !== (t = C[i]) && void 0 !== t ? t : {}, c = g[i], d = !0;
         if (r === o.query && (null == o.mode || o.mode.filter === l.filter))
             n = o.autocompletes, d = !1;
         else if (l.type === f.Sap.EMPTY || l.type === f.Sap.FILTER && l.filter !== f.dCx.FILTER_FROM && l.filter !== f.dCx.FILTER_MENTIONS)

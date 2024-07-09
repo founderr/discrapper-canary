@@ -3,7 +3,7 @@ n.d(t, {
         return h;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(392711), r = n.n(s), l = n(442837), o = n(524437), c = n(481060), d = n(317632), u = n(174767), _ = n(240126), E = n(791914), m = n(326838), I = n(689938), T = n(13812);
+var i = n(735250), a = n(470079), s = n(392711), r = n.n(s), l = n(442837), o = n(524437), c = n(481060), d = n(317632), u = n(174767), _ = n(240126), E = n(791914), I = n(326838), m = n(689938), T = n(13812);
 function h(e) {
     let {
             setTab: t,
@@ -31,8 +31,8 @@ function h(e) {
                 className: T.__invalid_emptyStateContainer,
                 children: (0, i.jsx)(_.Z, {
                     Icon: c.GameControllerIcon,
-                    header: I.Z.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
-                    tip: I.Z.Messages.GAME_INVITES_EMPTY_STATE_SUBTITLE
+                    header: m.Z.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
+                    tip: m.Z.Messages.GAME_INVITES_EMPTY_STATE_SUBTITLE
                 })
             })
         ]
@@ -46,7 +46,7 @@ function h(e) {
                 closePopout: h,
                 children: (0, i.jsx)(c.CircleIconButton, {
                     className: T.__invalid_deleteButton,
-                    tooltip: I.Z.Messages.GAME_INVITES_DELETE_ALL,
+                    tooltip: m.Z.Messages.GAME_INVITES_DELETE_ALL,
                     color: c.CircleIconButtonColors.SECONDARY,
                     icon: (0, i.jsx)(c.TrashIcon, { size: 'xs' }),
                     onClick: function () {
@@ -68,9 +68,9 @@ function h(e) {
                     children: [
                         C.length > 0 && (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(N, { title: I.Z.Messages.GAME_INVITES_RECENT_HEADER }),
+                                (0, i.jsx)(N, { title: m.Z.Messages.GAME_INVITES_RECENT_HEADER }),
                                 (0, i.jsx)(i.Fragment, {
-                                    children: C.map(e => (0, i.jsx)(m.Z, {
+                                    children: C.map(e => (0, i.jsx)(I.Z, {
                                         invite: e,
                                         expired: !1
                                     }, e.invite_id))
@@ -79,9 +79,9 @@ function h(e) {
                         }),
                         g.length > 0 && (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(N, { title: I.Z.Messages.GAME_INVITES_EXPIRED_HEADER }),
+                                (0, i.jsx)(N, { title: m.Z.Messages.GAME_INVITES_EXPIRED_HEADER }),
                                 (0, i.jsx)(i.Fragment, {
-                                    children: g.map(e => (0, i.jsx)(m.Z, {
+                                    children: g.map(e => (0, i.jsx)(I.Z, {
                                         invite: e,
                                         expired: !0
                                     }, e.invite_id))

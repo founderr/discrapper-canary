@@ -5,7 +5,7 @@ n.d(t, {
 }), n(47120), n(913527);
 var i, a, s, r = n(149765), l = n(442837);
 n(433517);
-var o = n(570140), c = n(491428), d = n(650774), u = n(430824), _ = n(496675), E = n(914010), m = n(594174), I = n(981631);
+var o = n(570140), c = n(491428), d = n(650774), u = n(430824), _ = n(496675), E = n(914010), I = n(594174), m = n(981631);
 function T(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -48,7 +48,7 @@ function S(e) {
                     continue;
                 }
             }
-            if (t.includes('is_community') && !l.hasFeature(I.oNc.COMMUNITY) || t.includes('is_hub') && !l.hasFeature(I.oNc.HUB))
+            if (t.includes('is_community') && !l.hasFeature(m.oNc.COMMUNITY) || t.includes('is_hub') && !l.hasFeature(m.oNc.HUB))
                 continue;
             if (t.includes('guild_permissions')) {
                 if (0 === i.length)
@@ -66,7 +66,7 @@ function S(e) {
                 if (!e)
                     continue;
             }
-            let o = m.default.getCurrentUser(), c = (null == o ? void 0 : o.id) === l.ownerId, u = _.Z.can(I.Plq.ADMINISTRATOR, l);
+            let o = I.default.getCurrentUser(), c = (null == o ? void 0 : o.id) === l.ownerId, u = _.Z.can(m.Plq.ADMINISTRATOR, l);
             if (t.includes('is_owner') && !c || t.includes('is_admin') && !u)
                 continue;
             null == (p = null != p ? p : {})[e.key] && (p[e.key] = e);

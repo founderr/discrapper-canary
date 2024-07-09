@@ -61,12 +61,12 @@ function d(e) {
             className: t,
             firing: n = !0,
             wind: d = 2
-        } = e, [u, _] = a.useState(null), [E, m] = a.useState(null), I = (0, s.uR)(E, u), T = a.useMemo(() => new s.qA({ wind: d }), [d]), h = a.useCallback(() => {
+        } = e, [u, _] = a.useState(null), [E, I] = a.useState(null), m = (0, s.uR)(E, u), T = a.useMemo(() => new s.qA({ wind: d }), [d]), h = a.useCallback(() => {
             let e = null == E ? void 0 : E.getCanvas();
             if (null == e)
                 return;
             let t = e.getBoundingClientRect();
-            I.createConfetti({
+            m.createConfetti({
                 ...c,
                 position: {
                     type: 'static-random',
@@ -81,7 +81,7 @@ function d(e) {
                 }
             });
         }, [
-            I,
+            m,
             E
         ]);
     return a.useEffect(() => {
@@ -93,7 +93,7 @@ function d(e) {
     ]), (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(s.O_, {
-                ref: m,
+                ref: I,
                 className: t,
                 environment: T
             }),

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return I;
     },
     c: function () {
         return E;
@@ -78,10 +78,10 @@ function E(e) {
         }, [
             t,
             e.parent_id
-        ]), m = (0, a.e7)([o.ZP], () => o.ZP.getNewForumThreadsCreated(e)), I = (0, a.e7)([o.ZP], () => o.ZP.getChannelOverrides(t)[n], [
+        ]), I = (0, a.e7)([o.ZP], () => o.ZP.getNewForumThreadsCreated(e)), m = (0, a.e7)([o.ZP], () => o.ZP.getChannelOverrides(t)[n], [
             t,
             n
-        ]), T = null == I ? d.bL.NULL : I.message_notifications, h = (0, l.p2)(e), N = _(e, h);
+        ]), T = null == m ? d.bL.NULL : m.message_notifications, h = (0, l.p2)(e), N = _(e, h);
     return null == N ? null : (0, i.jsxs)(i.Fragment, {
         children: [
             e.isForumLikeChannel() ? (0, i.jsxs)(i.Fragment, {
@@ -89,8 +89,8 @@ function E(e) {
                     (0, i.jsx)(s.MenuCheckboxItem, {
                         id: 'new-forum-threads-created',
                         label: u.Z.Messages.FORUM_NEW_POSTS_CREATED,
-                        checked: m,
-                        action: () => r.Z.setForumThreadsCreated(e, !m)
+                        checked: I,
+                        action: () => r.Z.setForumThreadsCreated(e, !I)
                     }),
                     (0, i.jsx)(s.MenuSeparator, {})
                 ]
@@ -128,12 +128,12 @@ function E(e) {
         ]
     });
 }
-function m(e) {
+function I(e) {
     var t, n;
-    let r = E(e), c = (0, a.e7)([o.ZP], () => o.ZP.resolvedMessageNotifications(e), [e]), m = (0, a.e7)([o.ZP], () => o.ZP.getChannelOverrides(e.guild_id)[e.id], [
+    let r = E(e), c = (0, a.e7)([o.ZP], () => o.ZP.resolvedMessageNotifications(e), [e]), I = (0, a.e7)([o.ZP], () => o.ZP.getChannelOverrides(e.guild_id)[e.id], [
             e.guild_id,
             e.id
-        ]), I = null == m ? d.bL.NULL : m.message_notifications, T = (0, l.p2)(e), h = I === d.bL.NULL && e.isGuildStageVoice() ? u.Z.Messages.FORM_LABEL_ONLY_MENTIONS.format() : null === (n = _(e, T)) || void 0 === n ? void 0 : null === (t = n.find(e => {
+        ]), m = null == I ? d.bL.NULL : I.message_notifications, T = (0, l.p2)(e), h = m === d.bL.NULL && e.isGuildStageVoice() ? u.Z.Messages.FORM_LABEL_ONLY_MENTIONS.format() : null === (n = _(e, T)) || void 0 === n ? void 0 : null === (t = n.find(e => {
             let {setting: t} = e;
             return t === c;
         })) || void 0 === t ? void 0 : t.label;

@@ -23,8 +23,8 @@ function r(e) {
         isMessageSnapshot: u,
         renderThreadAccessory: _,
         renderComponentAccessory: E,
-        renderSuppressEmbeds: m,
-        forceAddReactions: I,
+        renderSuppressEmbeds: I,
+        forceAddReactions: m,
         className: T
     } = e;
     return d ? null : (0, i.jsx)(a.Z, {
@@ -40,8 +40,8 @@ function r(e) {
             onMediaItemContextMenu: o,
             renderThreadAccessory: _,
             renderComponentAccessory: E,
-            renderSuppressEmbeds: m,
-            forceAddReactions: I
+            renderSuppressEmbeds: I,
+            forceAddReactions: m
         })
     });
 }

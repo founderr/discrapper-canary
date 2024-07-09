@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), r = n(442837), l = n(524437), o = n(481060), c = n(904245), d = n(294218), u = n(703656), _ = n(43690), E = n(115219), m = n(682417), I = n(695346), T = n(375954), h = n(324081), N = n(240126), p = n(791914), f = n(981631), C = n(689938), g = n(166311), S = n(699723);
+var a = n(120356), s = n.n(a), r = n(442837), l = n(524437), o = n(481060), c = n(904245), d = n(294218), u = n(703656), _ = n(43690), E = n(115219), I = n(682417), m = n(695346), T = n(375954), h = n(324081), N = n(240126), p = n(791914), f = n(981631), C = n(689938), g = n(166311), S = n(699723);
 let A = {
     offset: {
         left: 4,
@@ -33,7 +33,7 @@ function R(e) {
     let {savedMessage: t} = e, n = (0, r.e7)([T.Z], () => T.Z.getMessage(t.channelId, t.messageId)), {
             message: a,
             channel: l
-        } = (0, m.p)(t), E = () => {
+        } = (0, I.p)(t), E = () => {
             (0, u.uL)(f.Z5c.CHANNEL(null == l ? void 0 : l.getGuildId(), t.channelId, t.messageId));
         };
     return (0, i.jsxs)('div', {
@@ -60,7 +60,7 @@ function R(e) {
                         message: a,
                         channel: l,
                         className: S.message,
-                        compact: I.jU.getSetting(),
+                        compact: m.jU.getSetting(),
                         animateAvatar: !1,
                         focusProps: A,
                         trackAnnouncementViews: !0

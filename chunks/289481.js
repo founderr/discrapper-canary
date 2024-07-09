@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(338545), o = n(442837), c = n(481060), d = n(570140), u = n(45114), _ = n(367907), E = n(717680), m = n(703656), I = n(592125), T = n(259580), h = n(617379), N = n(324081), p = n(305248), f = n(520116), C = n(981631), g = n(689938), S = n(540895);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(338545), o = n(442837), c = n(481060), d = n(570140), u = n(45114), _ = n(367907), E = n(717680), I = n(703656), m = n(592125), T = n(259580), h = n(617379), N = n(324081), p = n(305248), f = n(520116), C = n(981631), g = n(689938), S = n(540895);
 let A = a.memo(function (e) {
     let {
             channel: t,
@@ -48,7 +48,7 @@ let x = a.memo(function (e) {
             onJump: n,
             deleteChannel: s,
             toggle: r
-        } = e, l = (0, o.e7)([I.Z], () => I.Z.getChannel(t.channelId));
+        } = e, l = (0, o.e7)([m.Z], () => m.Z.getChannel(t.channelId));
     if (a.useEffect(() => {
             null != l && t.isFullyLoaded && !t.hasError && !t.collapsed && 'messages' === t.type && 0 === t.messages.length && d.Z.wait(() => {
                 (0, u.In)(t.channelId, !0), s(t.channelId);
@@ -61,7 +61,7 @@ let x = a.memo(function (e) {
             guild_id: t.guildId
         });
         let a = null != i ? i : t.oldestUnreadMessageId;
-        (0, m.uL)(C.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : a)), n(e);
+        (0, I.uL)(C.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : a)), n(e);
     };
     return (0, i.jsx)('div', {
         className: S.channel,

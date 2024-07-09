@@ -13,7 +13,7 @@ function l(e) {
             usernameHook: o,
             otherUsernameHook: c,
             compact: d
-        } = e, {nick: u} = (0, s.ZP)(t), _ = o(), E = c(), m = r.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD_HOOK.format({
+        } = e, {nick: u} = (0, s.ZP)(t), _ = o(), E = c(), I = r.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD_HOOK.format({
             username: u,
             usernameHook: _,
             otherUsername: l,
@@ -23,6 +23,6 @@ function l(e) {
         icon: n(570111),
         timestamp: t.timestamp,
         compact: d,
-        children: m
+        children: I
     });
 }

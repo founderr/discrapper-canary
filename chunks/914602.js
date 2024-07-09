@@ -1,5 +1,5 @@
 n(47120);
-var i, a = n(735250), s = n(470079), r = n(120356), l = n.n(r), o = n(86357), c = n(54936), d = n(55008), u = n(592771), _ = n(305177), E = n(73346), m = n(568836), I = n(345898), T = n(981631), h = n(659727);
+var i, a = n(735250), s = n(470079), r = n(120356), l = n.n(r), o = n(86357), c = n(54936), d = n(55008), u = n(592771), _ = n(305177), E = n(73346), I = n(568836), m = n(345898), T = n(981631), h = n(659727);
 function N(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -19,7 +19,7 @@ class p extends (i = s.PureComponent) {
                 renderCustomTitle: r,
                 renderCustomMedia: l,
                 isEmbed: o
-            } = this.props, c = o ? m.$G : I.Z;
+            } = this.props, c = o ? I.$G : m.Z;
         return (0, a.jsx)(c, {
             className: i,
             renderMedia: null != l ? l : this.renderMedia,

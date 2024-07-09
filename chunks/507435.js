@@ -3,7 +3,7 @@ n.d(t, {
         return A;
     }
 });
-var i, a, s = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(468194), d = n(481060), u = n(904245), _ = n(596454), E = n(377171), m = n(702346), I = n(809026), T = n(139256), h = n(489887), N = n(689938), p = n(619260);
+var i, a, s = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(468194), d = n(481060), u = n(904245), _ = n(596454), E = n(377171), I = n(702346), m = n(809026), T = n(139256), h = n(489887), N = n(689938), p = n(619260);
 function f() {
     return (0, s.jsx)('svg', {
         width: '24',
@@ -167,7 +167,7 @@ function A(e) {
             message: n,
             compact: i,
             disableInteraction: a = !1
-        } = e, l = n.embeds[0], o = r.useMemo(() => (0, I.Z)(l), [l]), _ = (0, c.aF)(null !== (t = null == o ? void 0 : o.questionText) && void 0 !== t ? t : '', h.Dv), E = n.messageReference, T = r.useCallback(() => {
+        } = e, l = n.embeds[0], o = r.useMemo(() => (0, m.Z)(l), [l]), _ = (0, c.aF)(null !== (t = null == o ? void 0 : o.questionText) && void 0 !== t ? t : '', h.Dv), E = n.messageReference, T = r.useCallback(() => {
             null != E && u.Z.jumpToMessage({
                 channelId: E.channel_id,
                 messageId: E.message_id,
@@ -180,7 +180,7 @@ function A(e) {
         ]);
     return null == o ? null : (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsx)(m.Z, {
+            (0, s.jsx)(I.Z, {
                 iconNode: (0, s.jsx)(d.PollsIcon, { size: 'xs' }),
                 timestamp: n.timestamp,
                 compact: i,

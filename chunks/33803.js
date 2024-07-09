@@ -3,7 +3,7 @@ n.d(t, {
         return Q;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(91192), d = n(722770), u = n(442837), _ = n(481060), E = n(607070), m = n(313889), I = n(825829), T = n(226192), h = n(36459), N = n(336197), p = n(103575), f = n(496675), C = n(594174), g = n(467679), S = n(702346), A = n(5192), x = n(51144), R = n(937889), O = n(739566), M = n(779125), v = n(890410), L = n(464891), Z = n(507418), P = n(348238), b = n(38267), D = n(83561), j = n(959517), U = n(981631), y = n(674563), B = n(590433), k = n(689938), G = n(117414);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(91192), d = n(722770), u = n(442837), _ = n(481060), E = n(607070), I = n(313889), m = n(825829), T = n(226192), h = n(36459), N = n(336197), p = n(103575), f = n(496675), C = n(594174), g = n(467679), S = n(702346), A = n(5192), x = n(51144), R = n(937889), O = n(739566), M = n(779125), v = n(890410), L = n(464891), Z = n(507418), P = n(348238), b = n(38267), D = n(83561), j = n(959517), U = n(981631), y = n(674563), B = n(590433), k = n(689938), G = n(117414);
 function F(e, t) {
     let {
             popouts: n,
@@ -68,21 +68,21 @@ function H(e) {
 }
 function Y(e, t) {
     switch (e) {
-    case m.d.DELETE_USER_MESSAGE:
+    case I.d.DELETE_USER_MESSAGE:
         return (0, i.jsx)(_.TrashIcon, {
             size: 'xs',
             color: 'currentColor',
             className: G.alertActionIcon,
             ...t
         });
-    case m.d.SET_COMPLETED:
+    case I.d.SET_COMPLETED:
         return (0, i.jsx)(_.CheckmarkLargeIcon, {
             size: 'xs',
             color: 'currentColor',
             className: r()(G.alertActionIcon, G.alertActionSetCompletedIcon),
             ...t
         });
-    case m.d.SUBMIT_FEEDBACK:
+    case I.d.SUBMIT_FEEDBACK:
         return (0, i.jsx)(_.FlagIcon, {
             size: 'xs',
             color: 'currentColor',
@@ -107,17 +107,17 @@ function W(e) {
             let a = null !== (i = A.ZP.getNickname(n, null, t)) && void 0 !== i ? i : x.ZP.getUserTag(t), s = o()(e.ts), r = ''.concat(a, ' ').concat(s.fromNow());
             try {
                 switch (parseInt(e.actionType)) {
-                case m.d.DELETE_USER_MESSAGE:
+                case I.d.DELETE_USER_MESSAGE:
                     return k.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_DELETE_MESSAGE.format({
                         userName: a,
                         timestamp: s.fromNow()
                     });
-                case m.d.SET_COMPLETED:
+                case I.d.SET_COMPLETED:
                     return k.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SET_COMPLETED.format({
                         userName: a,
                         timestamp: s.fromNow()
                     });
-                case m.d.SUBMIT_FEEDBACK:
+                case I.d.SUBMIT_FEEDBACK:
                     return k.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SUBMIT_FEEDBACK.format({
                         userName: a,
                         timestamp: s.fromNow()
@@ -164,7 +164,7 @@ let K = a.memo(function (e) {
             guildId: null == a ? void 0 : a.guild_id,
             compact: r,
             ...o
-        }, c), E = C.default.getUser(l), m = F(n, a), T = w(a, E);
+        }, c), E = C.default.getUser(l), I = F(n, a), T = w(a, E);
     if (null != E) {
         let e = (0, O.ij)(E, a), i = (0, L.CF)({
                 message: n,
@@ -172,7 +172,7 @@ let K = a.memo(function (e) {
                 author: e,
                 guildId: null == a ? void 0 : a.guild_id,
                 compact: r,
-                ...m
+                ...I
             }, T);
         t = () => i;
     }
@@ -181,7 +181,7 @@ let K = a.memo(function (e) {
         color: 'header-primary',
         tag: 'span',
         className: G.spanCorrection,
-        children: (0, I.Mq)(n, s, () => (0, i.jsx)('div', {
+        children: (0, m.Mq)(n, s, () => (0, i.jsx)('div', {
             className: G.channelNameContainer,
             children: (0, i.jsx)(M.Z, {
                 channel: s,
@@ -223,7 +223,7 @@ function Q(e) {
             alertActionsExecution: et,
             quarantineType: en,
             interactionUserId: ei
-        } = (0, I.ZP)(s), ea = a.useMemo(() => (0, R.k$)(X, Q, l.id), [
+        } = (0, m.ZP)(s), ea = a.useMemo(() => (0, R.k$)(X, Q, l.id), [
             X,
             Q,
             l
@@ -244,11 +244,11 @@ function Q(e) {
             Y,
             J
         ]), ec = a.useCallback(() => {
-            (0, h.Xx)(s.id, l, m.d.DELETE_USER_MESSAGE);
+            (0, h.Xx)(s.id, l, I.d.DELETE_USER_MESSAGE);
         }, [
             l,
             s.id
-        ]), ed = (0, B.L9)(Number($)), eu = null != ee, e_ = j && null != J && (null == et || !et.actions.hasOwnProperty(m.d.DELETE_USER_MESSAGE));
+        ]), ed = (0, B.L9)(Number($)), eu = null != ee, e_ = j && null != J && (null == et || !et.actions.hasOwnProperty(I.d.DELETE_USER_MESSAGE));
     return (0, i.jsx)('div', {
         onMouseEnter: p,
         onMouseLeave: C,
@@ -347,7 +347,7 @@ function Q(e) {
                                                         color: 'text-muted',
                                                         tag: 'span',
                                                         className: G.titleCase,
-                                                        children: k.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON.format({ reason: (0, I.hU)(en) })
+                                                        children: k.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON.format({ reason: (0, m.hU)(en) })
                                                     })
                                                 ]
                                             })

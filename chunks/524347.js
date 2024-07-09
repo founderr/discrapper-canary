@@ -1,4 +1,4 @@
-var i, a, s, r, l = n(913527), o = n.n(l), c = n(442837), d = n(846519), u = n(570140), _ = n(594190), E = n(569545), m = n(314897), I = n(70956), T = n(960359), h = n(853197), N = n(702512);
+var i, a, s, r, l = n(913527), o = n.n(l), c = n(442837), d = n(846519), u = n(570140), _ = n(594190), E = n(569545), I = n(314897), m = n(70956), T = n(960359), h = n(853197), N = n(702512);
 let p = null, f = null, C = {}, g = {}, S = N._e.LOADING_INITIAL_PROGRESS, A = new d.V7(), x = {
         completed: !1,
         initialProgressFetched: !1,
@@ -13,7 +13,7 @@ let p = null, f = null, C = {}, g = {}, S = N._e.LOADING_INITIAL_PROGRESS, A = n
             gameTitle: s
         } = x;
         if (!(null == t || null == s || a || null == i || null == n || A.isStarted()))
-            e ? (0, T.m0)(t, n, i.pid) : A.start(1 * I.Z.Millis.MINUTE, () => {
+            e ? (0, T.m0)(t, n, i.pid) : A.start(1 * m.Z.Millis.MINUTE, () => {
                 (0, T.m0)(t, n, i.pid);
             });
     }, O = e => {
@@ -138,7 +138,7 @@ s = 'DropsStore', (a = 'displayName') in (i = v) ? Object.defineProperty(i, a, {
                 streamType: n,
                 guildId: i,
                 channelId: a,
-                ownerId: m.default.getId()
+                ownerId: I.default.getId()
             });
         if (null == s)
             return;

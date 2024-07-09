@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return I;
     }
 }), n(47120);
 var i = n(735250);
 n(470079);
 var a = n(120356), s = n.n(a), r = n(481060), l = n(454585), o = n(529815), c = n(702346), d = n(553385), u = n(981631), _ = n(689938), E = n(969361);
-function m(e) {
+function I(e) {
     let {
             message: t,
             channel: a,
@@ -28,7 +28,7 @@ function m(e) {
             }),
             (0, i.jsx)('div', {
                 className: s()(E.__invalid_embedContent, { [E.compact]: l }),
-                children: (0, i.jsx)(I, { message: t })
+                children: (0, i.jsx)(m, { message: t })
             }),
             (0, i.jsx)('div', {
                 className: E.actions,
@@ -43,7 +43,7 @@ function m(e) {
         ]
     });
 }
-function I(e) {
+function m(e) {
     var t;
     let {message: n} = e, [a] = null !== (t = n.embeds) && void 0 !== t ? t : [];
     return null == a ? null : (0, i.jsx)(o.ZP, {

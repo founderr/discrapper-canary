@@ -12,7 +12,7 @@ n.d(t, {
         return u;
     },
     Z0: function () {
-        return m;
+        return I;
     },
     iM: function () {
         return o;
@@ -45,4 +45,4 @@ function o(e) {
     return (null == i ? void 0 : i.enrolledAt) != null && null == i.completedAt || l(n);
 }
 (i = a || (a = {}))[i.FOR_YOU = 0] = 'FOR_YOU', i[i.OTHER = 1] = 'OTHER';
-let c = 100, d = 20, u = 32, _ = 1000, E = 460, m = 280;
+let c = 100, d = 20, u = 32, _ = 1000, E = 460, I = 280;

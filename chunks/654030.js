@@ -1,5 +1,5 @@
 n(47120);
-var i, a = n(735250), s = n(470079), r = n(442837), l = n(481060), o = n(278323), c = n(224706), d = n(763472), u = n(498179), _ = n(276852), E = n(994339), m = n(275920), I = n(431583), T = n(592745), h = n(952164), N = n(768419), p = n(456432), f = n(103575), C = n(789407), g = n(598077), S = n(757266), A = n(831506), x = n(271383), R = n(283595), O = n(293273), M = n(594174), v = n(181106), L = n(417363), Z = n(243769), P = n(768581), b = n(358085), D = n(804739), j = n(410575), U = n(981631), y = n(701488);
+var i, a = n(735250), s = n(470079), r = n(442837), l = n(481060), o = n(278323), c = n(224706), d = n(763472), u = n(498179), _ = n(276852), E = n(994339), I = n(275920), m = n(431583), T = n(592745), h = n(952164), N = n(768419), p = n(456432), f = n(103575), C = n(789407), g = n(598077), S = n(757266), A = n(831506), x = n(271383), R = n(283595), O = n(293273), M = n(594174), v = n(181106), L = n(417363), Z = n(243769), P = n(768581), b = n(358085), D = n(804739), j = n(410575), U = n(981631), y = n(701488);
 function B(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -68,7 +68,7 @@ class G extends (i = s.PureComponent) {
                     applicationId: e.application_id,
                     channelId: a,
                     messageId: i.id
-                }), (0, m.Z)({
+                }), (0, I.Z)({
                     type: U.q5t.JOIN,
                     source: U.Sbl.MESSAGE_EMBED,
                     userId: n,
@@ -101,7 +101,7 @@ class G extends (i = s.PureComponent) {
             } = this.props;
             null != e && null != t && d.Z_(e, t);
         }), B(this, 'handleDownloadApp', () => {
-            (0, l.openModal)(e => (0, a.jsx)(I.default, {
+            (0, l.openModal)(e => (0, a.jsx)(m.default, {
                 source: 'Game Invite',
                 ...e
             }));
@@ -154,8 +154,8 @@ class G extends (i = s.PureComponent) {
                 className: u,
                 channelId: _,
                 message: E,
-                hideParty: m,
-                isSyncable: I,
+                hideParty: I,
+                isSyncable: m,
                 isLaunchable: T,
                 guildId: h
             } = this.props;
@@ -179,12 +179,12 @@ class G extends (i = s.PureComponent) {
                 isLoading: o || this.state.sending,
                 activityActionType: d,
                 isInBrowser: !b.isPlatformEmbedded,
-                isSyncable: I,
+                isSyncable: m,
                 isSender: c,
                 channelId: _,
                 guildId: null != h ? h : void 0,
                 message: E,
-                hideParty: m,
+                hideParty: I,
                 onJoin: this.handleJoin,
                 onInvite: this.handleInvite,
                 onSync: this.handleSync,
@@ -227,14 +227,14 @@ B(G, 'defaultProps', { isPreview: !1 }), t.Z = r.ZP.connectStores([
                 unknownUser: a,
                 nick: n
             };
-        }), _ = null != t && N.Z.canPlay(t), E = N.Z.getSyncingWith(), m = null != E && null != s && E.userId === s;
+        }), _ = null != t && N.Z.canPlay(t), E = N.Z.getSyncingWith(), I = null != E && null != s && E.userId === s;
     return {
         analyticsLocations: n,
         partyMembers: u,
         connectedApplication: null != l ? S.Z.getApplication(l) : null,
         myPartyId: null != c && null != c.party ? c.party.id : null,
         isLaunching: d,
-        isSyncable: _ && !m,
+        isSyncable: _ && !I,
         isLaunchable: null != l && (0, D.t)({
             LibraryApplicationStore: R.Z,
             LaunchableGameStore: T.Z,

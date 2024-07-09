@@ -5,7 +5,7 @@ n.d(t, {
 }), n(724458), n(653041);
 var i = n(735250);
 n(470079);
-var a = n(512722), s = n.n(a), r = n(442837), l = n(131704), o = n(592125), c = n(594174), d = n(197409), u = n(823379), _ = n(358595), E = n(981631), m = n(689938), I = n(182578);
+var a = n(512722), s = n.n(a), r = n(442837), l = n(131704), o = n(592125), c = n(594174), d = n(197409), u = n(823379), _ = n(358595), E = n(981631), I = n(689938), m = n(182578);
 function T(e) {
     let t, {
             invite: n,
@@ -29,17 +29,17 @@ function T(e) {
         g && null != e && t.push(e);
     }
     let S = C.name;
-    (null == S || '' === S) && (S = t.length > 0 ? t.filter(u.lm).map(e => e.username).join(', ') : m.Z.Messages.UNNAMED);
-    let A = g ? h : N, x = m.Z.Messages.JOIN_GUILD, R = d.Z.Button.Colors.GREEN;
-    g && (x = m.Z.Messages.JOINED_GUILD, R = d.Z.Button.Colors.PRIMARY);
-    let O = m.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
-    return p && (O = m.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, i.jsxs)(d.Z, {
+    (null == S || '' === S) && (S = t.length > 0 ? t.filter(u.lm).map(e => e.username).join(', ') : I.Z.Messages.UNNAMED);
+    let A = g ? h : N, x = I.Z.Messages.JOIN_GUILD, R = d.Z.Button.Colors.GREEN;
+    g && (x = I.Z.Messages.JOINED_GUILD, R = d.Z.Button.Colors.PRIMARY);
+    let O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
+    return p && (O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, i.jsxs)(d.Z, {
         children: [
             (0, i.jsx)(d.Z.Header, { text: O }),
             (0, i.jsxs)(d.Z.Body, {
                 children: [
                     (0, i.jsxs)('div', {
-                        className: I.headerLine,
+                        className: m.headerLine,
                         children: [
                             (0, i.jsx)(d.Z.Icon, {
                                 channel: C,

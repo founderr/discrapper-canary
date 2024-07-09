@@ -3,14 +3,14 @@ n.d(t, {
         return O;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(442837), r = n(481060), l = n(2052), o = n(317381), c = n(638880), d = n(146936), u = n(527805), _ = n(952561), E = n(513202), m = n(100527), I = n(906732), T = n(973616), h = n(314897), N = n(592125), p = n(158776), f = n(594174), C = n(602623), g = n(823379), S = n(226378), A = n(701488), x = n(689938), R = n(606472);
+var i = n(735250), a = n(470079), s = n(442837), r = n(481060), l = n(2052), o = n(317381), c = n(638880), d = n(146936), u = n(527805), _ = n(952561), E = n(513202), I = n(100527), m = n(906732), T = n(973616), h = n(314897), N = n(592125), p = n(158776), f = n(594174), C = n(602623), g = n(823379), S = n(226378), A = n(701488), x = n(689938), R = n(606472);
 function O(e) {
     var t;
     let {
             application: n,
             channelId: O,
             guildId: M
-        } = e, [v, L] = a.useState(!1), {analyticsLocations: Z} = (0, I.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED), P = (0, l.O)(), b = (0, _.Z)(), D = (0, s.e7)([N.Z], () => N.Z.getChannel(O)), j = (null == D ? void 0 : null === (t = D.isThread) || void 0 === t ? void 0 : t.call(D)) ? null == D ? void 0 : D.parent_id : O, U = (0, s.e7)([h.default], () => h.default.getId()), {
+        } = e, [v, L] = a.useState(!1), {analyticsLocations: Z} = (0, m.ZP)(I.Z.ACTIVITY_INSTANCE_EMBED), P = (0, l.O)(), b = (0, _.Z)(), D = (0, s.e7)([N.Z], () => N.Z.getChannel(O)), j = (null == D ? void 0 : null === (t = D.isThread) || void 0 === t ? void 0 : t.call(D)) ? null == D ? void 0 : D.parent_id : O, U = (0, s.e7)([h.default], () => h.default.getId()), {
             embeddedActivity: y,
             currentEmbeddedActivity: B
         } = (0, s.cj)([o.ZP], () => ({

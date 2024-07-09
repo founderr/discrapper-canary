@@ -1,13 +1,13 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(749210), d = n(703656), u = n(430824), _ = n(914010), E = n(900849), m = n(41776), I = n(981631), T = n(689938), h = n(736140), N = n(581611);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(749210), d = n(703656), u = n(430824), _ = n(914010), E = n(900849), I = n(41776), m = n(981631), T = n(689938), h = n(736140), N = n(581611);
 t.Z = () => {
-    let e = (0, l.e7)([_.Z], () => _.Z.getGuildId(), []), t = (0, l.e7)([u.Z], () => u.Z.getGuild(e), [e]), n = (0, l.e7)([m.Z], () => m.Z.getHistorySnapshot(), []), [s, p] = a.useState(!1);
+    let e = (0, l.e7)([_.Z], () => _.Z.getGuildId(), []), t = (0, l.e7)([u.Z], () => u.Z.getGuild(e), [e]), n = (0, l.e7)([I.Z], () => I.Z.getHistorySnapshot(), []), [s, p] = a.useState(!1);
     if (null == t)
         return null;
     let f = async () => {
         p(!0);
         try {
-            E.mT(t.id), await c.Z.joinGuild(t.id, { source: I.vtS.NOTICE_BAR });
+            E.mT(t.id), await c.Z.joinGuild(t.id, { source: m.vtS.NOTICE_BAR });
         } catch {
             p(!1);
         }

@@ -1,6 +1,6 @@
 n.d(t, {
     o: function () {
-        return m;
+        return I;
     }
 });
 var i = n(735250);
@@ -19,7 +19,7 @@ function E() {
         })
     });
 }
-function m() {
+function I() {
     let {
         containerRef: e,
         size: t

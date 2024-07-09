@@ -45,7 +45,7 @@ n.d(t, {
         return D;
     }
 }), n(789020), n(47120);
-var i = n(735250), a = n(470079), s = n(668781), r = n(239091), l = n(904245), o = n(144144), c = n(40851), d = n(592125), u = n(323873), _ = n(375954), E = n(594174), m = n(585483), I = n(5967), T = n(630388), h = n(358085), N = n(51144), p = n(91047), f = n(901461), C = n(50284), g = n(981631), S = n(689938);
+var i = n(735250), a = n(470079), s = n(668781), r = n(239091), l = n(904245), o = n(144144), c = n(40851), d = n(592125), u = n(323873), _ = n(375954), E = n(594174), I = n(585483), m = n(5967), T = n(630388), h = n(358085), N = n(51144), p = n(91047), f = n(901461), C = n(50284), g = n(981631), S = n(689938);
 function A(e, t, n) {
     return a.useCallback(() => {
         n({ [e]: !t });
@@ -65,7 +65,7 @@ function x(e, t, n) {
             return;
         }
         let s = '@'.concat(N.ZP.getUserTag(a, { decoration: 'never' })), r = '<@'.concat(e, '>');
-        m.S.dispatchToLastSubscribed(g.CkL.INSERT_TEXT, {
+        I.S.dispatchToLastSubscribed(g.CkL.INSERT_TEXT, {
             plainText: s,
             rawText: r
         }), o.Z.startTyping(t);
@@ -104,10 +104,10 @@ function P(e, t) {
 function b(e, t, s, l) {
     let {id: o} = t, {
             id: E,
-            flags: m
-        } = e, I = (0, T.yE)(m, g.iLy.EPHEMERAL), N = (0, f.Z)(e), p = (0, c.bp)();
+            flags: I
+        } = e, m = (0, T.yE)(I, g.iLy.EPHEMERAL), N = (0, f.Z)(e), p = (0, c.bp)();
     return a.useCallback((e, t) => {
-        if (I)
+        if (m)
             return;
         if (!h.isPlatformEmbedded) {
             let t = e.target;
@@ -117,8 +117,8 @@ function b(e, t, s, l) {
             if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode)))
                 return;
         }
-        let a = d.Z.getChannel(o), c = _.Z.getMessage(o, E), m = u.Z.isEditing(o, E);
-        if (null != a && null != c && !m)
+        let a = d.Z.getChannel(o), c = _.Z.getMessage(o, E), I = u.Z.isEditing(o, E);
+        if (null != a && null != c && !I)
             s({ contextMenu: !0 }), (0, r.jW)(e, async () => {
                 if (N) {
                     let {default: e} = await Promise.all([
@@ -152,7 +152,7 @@ function b(e, t, s, l) {
                 context: p
             });
     }, [
-        I,
+        m,
         o,
         E,
         s,
@@ -206,12 +206,12 @@ function B(e, t, n) {
     let i = ''.concat(e, ':').concat(t), s = a.useRef(n), [r, l] = a.useState(n);
     s.current = r || s.current;
     let o = a.useCallback(() => {
-            !r && (m.S.dispatchKeyed(g.LPv.ANIMATE_CHAT_AVATAR, i, !0), l(!0));
+            !r && (I.S.dispatchKeyed(g.LPv.ANIMATE_CHAT_AVATAR, i, !0), l(!0));
         }, [
             r,
             i
         ]), c = a.useCallback(() => {
-            m.S.dispatchKeyed(g.LPv.ANIMATE_CHAT_AVATAR, i, !1), l(!1);
+            I.S.dispatchKeyed(g.LPv.ANIMATE_CHAT_AVATAR, i, !1), l(!1);
         }, [i]);
     return {
         hasHovered: s.current,
@@ -223,14 +223,14 @@ function B(e, t, n) {
 function k(e, t) {
     let [n, i] = a.useState(!1), [s, r] = a.useState(!1), l = a.useCallback(t => {
             var n, a;
-            let s = null !== (a = null === (n = (0, I.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
+            let s = null !== (a = null === (n = (0, m.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
             (t.target === t.currentTarget || t.currentTarget.contains(s)) && (r(!0), i(!0)), null != e && e(t);
         }, [e]);
     return {
         handleFocus: l,
         handleBlur: a.useCallback(e => {
             var n, a;
-            let s = null !== (a = null === (n = (0, I.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
+            let s = null !== (a = null === (n = (0, m.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
             (e.target === e.currentTarget || !e.currentTarget.contains(s)) && i(!1), null != t && t(e);
         }, [t]),
         isFocused: n,

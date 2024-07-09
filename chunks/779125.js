@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(481060), r = n(475179), l = n(287734), o = n(933557), c = n(124072), d = n(703656), u = n(131704), _ = n(592125), E = n(430824), m = n(699516), I = n(594174), T = n(934415), h = n(900849), N = n(981631);
+var a = n(442837), s = n(481060), r = n(475179), l = n(287734), o = n(933557), c = n(124072), d = n(703656), u = n(131704), _ = n(592125), E = n(430824), I = n(699516), m = n(594174), T = n(934415), h = n(900849), N = n(981631);
 function p(e) {
     let {
             channel: t,
@@ -14,9 +14,9 @@ function p(e) {
             className: f,
             openChatWithoutConnecting: C
         } = e, g = (0, a.e7)([
-            I.default,
-            m.Z
-        ], () => null == t ? '' : (0, o.F6)(t, I.default, m.Z), [t]);
+            m.default,
+            I.Z
+        ], () => null == t ? '' : (0, o.F6)(t, m.default, I.Z), [t]);
     return (0, i.jsx)(s.Tooltip, {
         text: g,
         position: 'top',

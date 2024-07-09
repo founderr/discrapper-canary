@@ -6,7 +6,7 @@ n.d(t, {
         return p;
     },
     Vt: function () {
-        return m;
+        return I;
     },
     XX: function () {
         return u;
@@ -24,7 +24,7 @@ n.d(t, {
         return E;
     },
     ox: function () {
-        return I;
+        return m;
     }
 }), n(724458);
 var i = n(913527), a = n.n(i), s = n(406432), r = n(531441), l = n(800530), o = n(981631), c = n(959517), d = n(689938);
@@ -51,12 +51,12 @@ function E(e) {
         classification_id: s[l.I5.CLASSIFICATION_ID]
     };
 }
-function m(e) {
+function I(e) {
     if (e.type === r.lK.MESSAGE)
         return '' === e.content && 0 === e.attachments.length;
     return !0;
 }
-let I = e => ({
+let m = e => ({
         [l.bK.DIDNT_VIOLATE_POLICY]: d.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DIDNT_VIOLATE_POLICY,
         [l.bK.TOO_STRICT_UNFAIR]: d.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_TOO_STRICT_UNFAIR,
         [l.bK.DONT_AGREE_PENALTY]: d.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DONT_AGREE_PENALTY,

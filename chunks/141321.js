@@ -3,13 +3,13 @@ n.d(t, {
         return N;
     }
 });
-var i = n(735250), a = n(470079), s = n(442837), r = n(481060), l = n(317632), o = n(602478), c = n(306680), d = n(594174), u = n(502568), _ = n(280763), E = n(178088), m = n(222940), I = n(490897), T = n(689938), h = n(423493);
+var i = n(735250), a = n(470079), s = n(442837), r = n(481060), l = n(317632), o = n(602478), c = n(306680), d = n(594174), u = n(502568), _ = n(280763), E = n(178088), I = n(222940), m = n(490897), T = n(689938), h = n(423493);
 function N(e) {
     let {
             onOpen: t,
             onClose: n,
             className: N
-        } = e, p = (0, s.e7)([d.default], () => d.default.getCurrentUser()), f = a.useRef(null), C = (0, s.e7)([c.ZP], () => (null == p ? void 0 : p.id) != null && c.ZP.getMentionCount(p.id, I.W.NOTIFICATION_CENTER) > 0), {enabled: g} = o.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }), S = (0, s.e7)([l.Z], () => g && l.Z.getUnseenInviteCount() > 0);
+        } = e, p = (0, s.e7)([d.default], () => d.default.getCurrentUser()), f = a.useRef(null), C = (0, s.e7)([c.ZP], () => (null == p ? void 0 : p.id) != null && c.ZP.getMentionCount(p.id, m.W.NOTIFICATION_CENTER) > 0), {enabled: g} = o.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }), S = (0, s.e7)([l.Z], () => g && l.Z.getUnseenInviteCount() > 0);
     return (0, i.jsx)(E.k, {
         onOpen: t,
         onClose: n,
@@ -20,7 +20,7 @@ function N(e) {
             ref: f,
             className: h.recentsIcon,
             children: [
-                g && (0, i.jsx)(m.Z, {
+                g && (0, i.jsx)(I.Z, {
                     inboxIconRef: f,
                     recentsPopoutShown: t
                 }),

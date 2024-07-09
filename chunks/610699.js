@@ -3,7 +3,7 @@ n.d(t, {
         return k;
     }
 }), n(653041), n(47120), n(390547);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(442837), d = n(477690), u = n(481060), _ = n(447543), E = n(317381), m = n(778569), I = n(182906), T = n(100527), h = n(906732), N = n(835473), p = n(471445), f = n(601964), C = n(592125), g = n(430824), S = n(496675), A = n(594174), x = n(197409), R = n(514342), O = n(602623), M = n(624138), v = n(358595), L = n(981631), Z = n(245335), P = n(689938), b = n(556849);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(442837), d = n(477690), u = n(481060), _ = n(447543), E = n(317381), I = n(778569), m = n(182906), T = n(100527), h = n(906732), N = n(835473), p = n(471445), f = n(601964), C = n(592125), g = n(430824), S = n(496675), A = n(594174), x = n(197409), R = n(514342), O = n(602623), M = n(624138), v = n(358595), L = n(981631), Z = n(245335), P = n(689938), b = n(556849);
 let D = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE), j = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL), U = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 function y(e) {
     let {
@@ -121,7 +121,7 @@ function k(e) {
                 let {applicationId: t} = e;
                 return G.id === t;
             });
-        }), q = C.Z.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id), X = (0, c.e7)([S.Z], () => null != q && S.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]), {analyticsLocations: J} = (0, h.ZP)(T.Z.INVITE_EMBED), $ = (0, m.Z)({
+        }), q = C.Z.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id), X = (0, c.e7)([S.Z], () => null != q && S.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]), {analyticsLocations: J} = (0, h.ZP)(T.Z.INVITE_EMBED), $ = (0, I.Z)({
             applicationId: G.id,
             size: D,
             names: ['embedded_cover']
@@ -150,7 +150,7 @@ function k(e) {
                     [b.large]: w,
                     [b.stacked]: H
                 }),
-                children: (0, i.jsx)(I.Z, {
+                children: (0, i.jsx)(m.Z, {
                     imageBackground: $,
                     applicationName: null !== (n = null == z ? void 0 : z.name) && void 0 !== n ? n : '',
                     imageClassName: r()(b.img, {

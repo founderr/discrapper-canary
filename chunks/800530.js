@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     },
     Cs: function () {
-        return I;
+        return m;
     },
     EY: function () {
         return A;
@@ -21,7 +21,7 @@ n.d(t, {
         return S;
     },
     bK: function () {
-        return m;
+        return I;
     },
     c6: function () {
         return R;
@@ -45,7 +45,7 @@ n.d(t, {
         return u;
     }
 });
-var i, a, s, r, l, o, c, d, u, _, E, m, I, T, h = n(981631);
+var i, a, s, r, l, o, c, d, u, _, E, I, m, T, h = n(981631);
 function N(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -70,14 +70,14 @@ N(C, 'ICON_TYPE', 'icon_type'), N(C, 'HEADER', 'header'), N(C, 'BODY', 'body'), 
     REQUEST_SENT: h.jXE.APPEAL_INGESTION_REQUEST_SENT,
     THANKS: h.jXE.APPEAL_INGESTION_THANKS,
     SPAM: h.jXE.APPEAL_INGESTION_SPAM
-}), (l = m || (m = {}))[l.DIDNT_VIOLATE_POLICY = 0] = 'DIDNT_VIOLATE_POLICY', l[l.TOO_STRICT_UNFAIR = 1] = 'TOO_STRICT_UNFAIR', l[l.DONT_AGREE_PENALTY = 2] = 'DONT_AGREE_PENALTY', l[l.SOMETHING_ELSE = 3] = 'SOMETHING_ELSE';
+}), (l = I || (I = {}))[l.DIDNT_VIOLATE_POLICY = 0] = 'DIDNT_VIOLATE_POLICY', l[l.TOO_STRICT_UNFAIR = 1] = 'TOO_STRICT_UNFAIR', l[l.DONT_AGREE_PENALTY = 2] = 'DONT_AGREE_PENALTY', l[l.SOMETHING_ELSE = 3] = 'SOMETHING_ELSE';
 let g = [
         0,
         1,
         2,
         3
     ], S = 372, A = 279;
-(o = I || (I = {})).SPEED_BUMP = 'speed-bump', o.COLLECT_SIGNAL = 'collect-signal', o.CONFIRM_SUBMISSION = 'confirm-submission', o.REQUEST_SENT = 'request-sent', o.THANKS = 'thanks';
+(o = m || (m = {})).SPEED_BUMP = 'speed-bump', o.COLLECT_SIGNAL = 'collect-signal', o.CONFIRM_SUBMISSION = 'confirm-submission', o.REQUEST_SENT = 'request-sent', o.THANKS = 'thanks';
 let x = {
         'speed-bump': {
             next: 'collect-signal',

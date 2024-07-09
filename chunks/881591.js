@@ -3,7 +3,7 @@ n.d(t, {
         return b;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(442837), d = n(524437), u = n(481060), _ = n(239091), E = n(904245), m = n(43267), I = n(933557), T = n(294218), h = n(703656), N = n(962796), p = n(802463), f = n(682417), C = n(695346), g = n(592125), S = n(430824), A = n(375954), x = n(346656), R = n(240126), O = n(791914), M = n(981631), v = n(689938), L = n(166311), Z = n(699723);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(442837), d = n(524437), u = n(481060), _ = n(239091), E = n(904245), I = n(43267), m = n(933557), T = n(294218), h = n(703656), N = n(962796), p = n(802463), f = n(682417), C = n(695346), g = n(592125), S = n(430824), A = n(375954), x = n(346656), R = n(240126), O = n(791914), M = n(981631), v = n(689938), L = n(166311), Z = n(699723);
 let P = {
     offset: {
         left: 4,
@@ -52,7 +52,7 @@ function D(e) {
     let t, {messageReminder: a} = e, s = a.complete, l = (0, c.e7)([A.Z], () => A.Z.getMessage(a.channelId, a.messageId)), {
             message: d,
             channel: p
-        } = (0, f.p)(a), R = g.Z.getChannel(p.id), O = (0, I.ZP)(R, !0), b = null != O ? O : p.name, D = (0, c.e7)([S.Z], () => S.Z.getGuild(null == p ? void 0 : p.guild_id)), j = null != p ? (0, m.x)(p) : null, U = null;
+        } = (0, f.p)(a), R = g.Z.getChannel(p.id), O = (0, m.ZP)(R, !0), b = null != O ? O : p.name, D = (0, c.e7)([S.Z], () => S.Z.getGuild(null == p ? void 0 : p.guild_id)), j = null != p ? (0, I.x)(p) : null, U = null;
     return null != a.dueAt && (a.dueAt > new Date() ? (t = 'text-muted', U = v.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({ duration: o().duration(a.dueAt.getTime() - Date.now(), 'millisecond').humanize() })) : (t = 'text-danger', U = v.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({ duration: o().duration(Date.now() - a.dueAt.getTime(), 'millisecond').humanize() }))), (0, i.jsxs)('div', {
         className: Z.container,
         children: [

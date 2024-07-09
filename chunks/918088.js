@@ -12,7 +12,7 @@ n.d(t, {
         return M;
     }
 }), n(47120), n(627341);
-var i = n(278074), a = n(263568), s = n(607070), r = n(339085), l = n(633302), o = n(715903), c = n(69882), d = n(592125), u = n(271383), _ = n(375954), E = n(594174), m = n(768581), I = n(176354), T = n(358085), h = n(798628), N = n(79390), p = n(839963), f = n(897325), C = n(57101), g = n(562293), S = n(981631), A = n(689938);
+var i = n(278074), a = n(263568), s = n(607070), r = n(339085), l = n(633302), o = n(715903), c = n(69882), d = n(592125), u = n(271383), _ = n(375954), E = n(594174), I = n(768581), m = n(176354), T = n(358085), h = n(798628), N = n(79390), p = n(839963), f = n(897325), C = n(57101), g = n(562293), S = n(981631), A = n(689938);
 let x = {
     channelId: S.lds,
     selectedAnswerIds: new Set(),
@@ -54,7 +54,7 @@ function v(e, t) {
     let {formattedExpirationLabel: r} = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, {poll: l} = e;
     if (null == l)
         return;
-    let E = e.state === S.yb.SENT, m = E ? null != r ? r : (0, g.H)(l.expiry) : '', I = null == m && E, {
+    let E = e.state === S.yb.SENT, I = E ? null != r ? r : (0, g.H)(l.expiry) : '', m = null == I && E, {
             selectedAnswerIds: T,
             submitting: N,
             editing: p,
@@ -64,19 +64,19 @@ function v(e, t) {
         let t = _.Z.getMessage(e.channel_id, e.id);
         A = !e.isSearchHit && null != t, C = null !== (s = null == t ? void 0 : t.reactions) && void 0 !== s ? s : C;
     }
-    let R = T.size > 0, O = C.some(e => !0 === e.me_vote), v = !p && O, L = v || I || f, Z = E && A && (!O || p || L), P = null === (i = d.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i), b = null != P ? u.ZP.getSelfMember(P) : null, D = (0, o.EY)(b), j = (0, c.b)(b);
+    let R = T.size > 0, O = C.some(e => !0 === e.me_vote), v = !p && O, L = v || m || f, Z = E && A && (!O || p || L), P = null === (i = d.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i), b = null != P ? u.ZP.getSelfMember(P) : null, D = (0, o.EY)(b), j = (0, c.b)(b);
     return {
         poll: l,
         canTapAnswers: Z,
-        canRemoveVote: v && E && !I,
+        canRemoveVote: v && E && !m,
         canShowVoteCounts: L,
         canSubmitVote: !N && R && !v && E && !D && !j,
-        expirationLabel: m,
+        expirationLabel: I,
         hasSelectedAnswer: R,
         hasVoted: v,
         hasVoteRecorded: O,
         isEditingVote: p,
-        isExpired: I,
+        isExpired: m,
         isInteractive: A,
         isSent: E,
         reactions: C,
@@ -152,7 +152,7 @@ function L(e, t) {
                             id: null == e.id ? null : ''.concat(e.id),
                             name: e.name,
                             displayName: null == e.id ? l.ZP.convertSurrogateToName(e.name) : e.name,
-                            src: null == e.id ? I.ZP.getURL(e.name) : m.ZP.getEmojiURL({
+                            src: null == e.id ? m.ZP.getURL(e.name) : I.ZP.getEmojiURL({
                                 id: e.id,
                                 animated: o,
                                 size: n

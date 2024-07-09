@@ -3,14 +3,14 @@ n.d(t, {
         return x;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(990547), o = n(831209), c = n(442837), d = n(481060), u = n(367907), _ = n(213609), E = n(267101), m = n(336197), I = n(661824), T = n(430824), h = n(346656), N = n(626135), p = n(76535), f = n(866104), C = n(886176), g = n(981631), S = n(689938), A = n(638948);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(990547), o = n(831209), c = n(442837), d = n(481060), u = n(367907), _ = n(213609), E = n(267101), I = n(336197), m = n(661824), T = n(430824), h = n(346656), N = n(626135), p = n(76535), f = n(866104), C = n(886176), g = n(981631), S = n(689938), A = n(638948);
 function x(e) {
     var t;
     let {guildId: n} = e, s = (0, c.e7)([T.Z], () => T.Z.getGuild(n)), {
             loading: x,
             subscriptionsSettings: R
         } = (0, p.H)(n), {listingsLoaded: O} = (0, E.eD)(n), M = (0, E.ue)(n, { publishedOnly: !0 }), v = a.useCallback(async () => {
-            N.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, u.hH)(n) }), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
+            N.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, u.hH)(n) }), await (0, I.Z)(g.Z5c.SERVER_SHOP(n));
         }, [n]);
     (0, _.Z)({
         type: l.ImpressionTypes.VIEW,
@@ -55,7 +55,7 @@ function x(e) {
                 children: R.description
             }),
             (0, i.jsx)(d.Spacer, { size: 16 }),
-            (0, i.jsx)(I.Z, {}),
+            (0, i.jsx)(m.Z, {}),
             (0, i.jsx)(d.Spacer, { size: 16 }),
             (0, i.jsxs)('div', {
                 className: A.guildShopEmbedFooter,

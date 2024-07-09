@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(911969), d = n(906732), u = n(778087), _ = n(603721), E = n(124072), m = n(171368), I = n(592125), T = n(430824), h = n(594174), N = n(739566), p = n(981631), f = n(665692), C = n(689938), g = n(69038);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(911969), d = n(906732), u = n(778087), _ = n(603721), E = n(124072), I = n(171368), m = n(592125), T = n(430824), h = n(594174), N = n(739566), p = n(981631), f = n(665692), C = n(689938), g = n(69038);
 let S = {
         tag: 'span',
         variant: 'text-md/normal',
@@ -86,7 +86,7 @@ t.Z = a.memo(function (e) {
                                 let e = (0, N.ij)(t, O);
                                 g = (0, i.jsxs)(E.Z, {
                                     ...A,
-                                    onClick: () => (0, m.openUserProfileModal)({
+                                    onClick: () => (0, I.openUserProfileModal)({
                                         userId: t.id,
                                         guildId: O.guild_id,
                                         channelId: O.id,
@@ -103,7 +103,7 @@ t.Z = a.memo(function (e) {
                             break;
                         }
                     case c.jw.CHANNEL: {
-                            let e = R.value.toString(), t = I.Z.getChannel(e);
+                            let e = R.value.toString(), t = m.Z.getChannel(e);
                             null != t && (g = (0, i.jsxs)(E.Z, {
                                 ...A,
                                 children: [
@@ -139,7 +139,7 @@ t.Z = a.memo(function (e) {
                                     let e = (0, N.ij)(t, O);
                                     g = (0, i.jsxs)(E.Z, {
                                         ...A,
-                                        onClick: () => (0, m.openUserProfileModal)({
+                                        onClick: () => (0, I.openUserProfileModal)({
                                             userId: t.id,
                                             guildId: O.guild_id,
                                             analyticsLocation: { section: p.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }

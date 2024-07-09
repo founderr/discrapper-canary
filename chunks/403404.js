@@ -13,8 +13,8 @@ function d(e) {
             locationObject: u,
             openInPopout: _,
             initialSelectedApplicationId: E,
-            initialSlide: m = o.ag.DIRECTORY,
-            enableSelectedTextChannelInvite: I = !1,
+            initialSlide: I = o.ag.DIRECTORY,
+            enableSelectedTextChannelInvite: m = !1,
             analyticsLocations: T,
             opensAppLauncherModal: h = !1
         } = e, N = T.length > 0 ? T[T.length - 1] : 'open-activity-shelf', {enabled: p} = s.m1.getCurrentConfig({ location: N }, { autoTrackExposure: !1 });
@@ -38,9 +38,9 @@ function d(e) {
             channel: t,
             guildId: d,
             locationObject: u,
-            initialSlide: m,
+            initialSlide: I,
             initialSelectedApplicationId: E,
-            enableSelectedTextChannelInvite: I,
+            enableSelectedTextChannelInvite: m,
             analyticsLocations: T
         });
     }, {

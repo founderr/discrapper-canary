@@ -6,8 +6,8 @@ t.Z = function (e) {
     var t;
     let {
             dismissCurrentNotice: n,
-            subscriptionTier: m
-        } = e, {analyticsLocations: I} = (0, l.ZP)(function (e) {
+            subscriptionTier: I
+        } = e, {analyticsLocations: m} = (0, l.ZP)(function (e) {
             switch (e) {
             case d.Si.TIER_0:
                 return r.Z.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE;
@@ -16,8 +16,8 @@ t.Z = function (e) {
             default:
                 throw Error('Unsupported subscription tier: '.concat(e));
             }
-        }(m)), T = (0, c.N)(), h = (0, s.Z)(null != T && null != T.expires_at ? Date.parse(T.expires_at) : 0);
-    return null == T || (null === (t = T.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== m || null == T.expires_at || Object.values(h).every(e => 0 === e) ? null : (0, i.jsxs)(a.Notice, {
+        }(I)), T = (0, c.N)(), h = (0, s.Z)(null != T && null != T.expires_at ? Date.parse(T.expires_at) : 0);
+    return null == T || (null === (t = T.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== I || null == T.expires_at || Object.values(h).every(e => 0 === e) ? null : (0, i.jsxs)(a.Notice, {
         color: function (e) {
             switch (e) {
             case d.Si.TIER_0:
@@ -27,7 +27,7 @@ t.Z = function (e) {
             default:
                 throw Error('Unsupported subscription tier: '.concat(e));
             }
-        }(m),
+        }(I),
         children: [
             (0, i.jsx)(a.NoticeCloseButton, { onClick: n }),
             (0, i.jsx)(a.NitroWheelIcon, {
@@ -44,13 +44,13 @@ t.Z = function (e) {
                 default:
                     throw Error('Unsupported subscription tier: '.concat(e));
                 }
-            }(m, h),
+            }(I, h),
             (0, i.jsx)(a.NoticeButton, {
                 onClick: () => {
                     (0, o.Z)({
                         trialId: T.trial_id,
-                        subscriptionTier: m,
-                        analyticsLocations: I,
+                        subscriptionTier: I,
+                        analyticsLocations: m,
                         analyticsObject: {
                             page: u.ZY5.IN_APP,
                             section: u.jXE.NOTIFICATION_BAR,
@@ -67,7 +67,7 @@ t.Z = function (e) {
                     default:
                         throw Error('Unsupported subscription tier: '.concat(e));
                     }
-                }(m)
+                }(I)
             })
         ]
     });

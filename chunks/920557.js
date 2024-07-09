@@ -3,7 +3,7 @@ n.d(t, {
         return x;
     }
 }), n(47120), n(627341);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(297821), o = n(338545), c = n(278074), d = n(748780), u = n(481060), _ = n(542578), E = n(153124), m = n(203143), I = n(79390), T = n(839963), h = n(139256), N = n(294608), p = n(689938), f = n(720760);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(297821), o = n(338545), c = n(278074), d = n(748780), u = n(481060), _ = n(542578), E = n(153124), I = n(203143), m = n(79390), T = n(839963), h = n(139256), N = n(294608), p = n(689938), f = n(720760);
 function C(e) {
     let {
             percentage: t,
@@ -14,7 +14,7 @@ function C(e) {
             channelId: c,
             messageId: d
         } = (0, N.pE)(), [T, h] = a.useState(''), [p, C] = a.useState(!1), g = '' !== T && p, S = a.useCallback(() => {
-            h((0, I.e1)(d, c, r));
+            h((0, m.e1)(d, c, r));
         }, [
             d,
             c,
@@ -24,7 +24,7 @@ function C(e) {
         }, [S]), x = a.useCallback(() => {
             C(!1);
         }, []), R = a.useCallback(() => {
-            (0, m.n)({
+            (0, I.n)({
                 channelId: c,
                 messageId: d,
                 answerId: r

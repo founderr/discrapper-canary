@@ -9,10 +9,10 @@ n.d(t, {
         return E;
     },
     jk: function () {
-        return m;
+        return I;
     },
     wt: function () {
-        return I;
+        return m;
     }
 });
 var i = n(990547), a = n(544891), s = n(283693), r = n(570140), l = n(695346), o = n(573261), c = n(140155), d = n(178480), u = n(981631);
@@ -25,7 +25,7 @@ function _(e) {
 function E() {
     r.Z.dispatch({ type: 'RESET_NOTIFICATION_CENTER' });
 }
-async function m(e, t) {
+async function I(e, t) {
     if (c.Z.loading)
         return;
     await r.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS' });
@@ -57,7 +57,7 @@ async function m(e, t) {
         null == t || t(), await r.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE' });
     }
 }
-function I(e) {
+function m(e) {
     null != e.local_id ? function (e) {
         r.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEMS_LOCAL_ACK',

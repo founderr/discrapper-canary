@@ -3,14 +3,14 @@ n.d(t, {
         return C;
     }
 });
-var i = n(735250), a = n(470079), s = n(442837), r = n(481060), l = n(241559), o = n(527379), c = n(430824), d = n(944486), u = n(914010), _ = n(346656), E = n(626135), m = n(528011), I = n(666657), T = n(533244), h = n(981631), N = n(176505), p = n(689938), f = n(985343);
+var i = n(735250), a = n(470079), s = n(442837), r = n(481060), l = n(241559), o = n(527379), c = n(430824), d = n(944486), u = n(914010), _ = n(346656), E = n(626135), I = n(528011), m = n(666657), T = n(533244), h = n(981631), N = n(176505), p = n(689938), f = n(985343);
 function C(e) {
     var t, C;
     let {onDismiss: g} = e, S = (0, s.e7)([u.Z], () => u.Z.getGuildId()), A = (0, s.e7)([d.Z], () => null != S ? d.Z.getChannelId(S) : null, [S]), x = null != S ? S : null, R = (0, s.e7)([c.Z], () => null != x ? c.Z.getGuild(x) : null, [x]), {
             shouldShowIncidentActions: O,
             incidentData: M,
             isUnderLockdown: v
-        } = (0, m.mI)(x), L = (0, l.n2)(null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : h.lds), Z = a.useCallback(() => null != R && (0, o._X)(R.id), [R]);
+        } = (0, I.mI)(x), L = (0, l.n2)(null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : h.lds), Z = a.useCallback(() => null != R && (0, o._X)(R.id), [R]);
     if (null == R || null == M || !O)
         return null;
     let P = e => {
@@ -23,7 +23,7 @@ function C(e) {
             }
             (0, r.openModalLazy)(async () => {
                 let e = {
-                        source: I.Zu.NAGBAR,
+                        source: m.Zu.NAGBAR,
                         alertType: (0, T.T1)(M)
                     }, {default: t} = await n.e('58175').then(n.bind(n, 664452));
                 return n => (0, i.jsx)(t, {

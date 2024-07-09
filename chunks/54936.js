@@ -1,6 +1,6 @@
 n.d(t, {
     n: function () {
-        return I;
+        return m;
     }
 }), n(411104);
 var i = n(735250);
@@ -20,7 +20,7 @@ let E = {
         getLabel: () => u.Z.Messages.LINUX
     }
 };
-function m(e) {
+function I(e) {
     let {
             operatingSystem: t,
             className: n
@@ -36,7 +36,7 @@ function m(e) {
         })
     });
 }
-let I = e => {
+let m = e => {
     let {
         systems: t,
         className: n,
@@ -44,7 +44,7 @@ let I = e => {
     } = e;
     return (0, i.jsx)('div', {
         className: s()(_.OSSection, n),
-        children: t.map(e => (0, i.jsx)(m, {
+        children: t.map(e => (0, i.jsx)(I, {
             operatingSystem: e,
             className: s()(_.purchaseUnitOperatingSystem, a)
         }, e))

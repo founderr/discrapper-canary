@@ -3,7 +3,7 @@ n.d(t, {
         return D;
     }
 });
-var i = n(735250), a = n(470079), s = n(481060), r = n(99690), l = n(906732), o = n(336197), c = n(454585), d = n(171368), u = n(695346), _ = n(598077), E = n(594174), m = n(626135), I = n(709054), T = n(591759), h = n(833592), N = n(497089), p = n(178480), f = n(418316), C = n(526146), g = n(400565), S = n(148789), A = n(11825), x = n(981631), R = n(689938), O = n(273270), M = n(756688), v = n(886765);
+var i = n(735250), a = n(470079), s = n(481060), r = n(99690), l = n(906732), o = n(336197), c = n(454585), d = n(171368), u = n(695346), _ = n(598077), E = n(594174), I = n(626135), m = n(709054), T = n(591759), h = n(833592), N = n(497089), p = n(178480), f = n(418316), C = n(526146), g = n(400565), S = n(148789), A = n(11825), x = n(981631), R = n(689938), O = n(273270), M = n(756688), v = n(886765);
 function L(e) {
     var t, n, a;
     let {item: l} = e, o = null === (t = l.message) || void 0 === t ? void 0 : t.content;
@@ -97,7 +97,7 @@ let b = a.memo(function (e) {
                         } else
                             await (0, o.Z)(i);
                     }
-                    m.default.track(x.rMx.NOTIFICATION_CENTER_ACTION, {
+                    I.default.track(x.rMx.NOTIFICATION_CENTER_ACTION, {
                         action_type: N.ud.CLICKED,
                         notification_center_id: r.id,
                         item_type: r.type,
@@ -136,7 +136,7 @@ let b = a.memo(function (e) {
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-xs/medium',
                                     color: E ? 'text-muted' : 'header-secondary',
-                                    children: (0, p.a3)(I.default.extractTimestamp(r.id))
+                                    children: (0, p.a3)(m.default.extractTimestamp(r.id))
                                 }),
                                 M
                             ]

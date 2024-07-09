@@ -1,6 +1,6 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(338545), o = n(722770), c = n(442837), d = n(846519), u = n(481060), _ = n(393238), E = n(607070), m = n(210887), I = n(810090), T = n(572004), h = n(617136), N = n(113434), p = n(497505), f = n(918701), C = n(566078), g = n(685613), S = n(611855), A = n(644646), x = n(670638), R = n(87894), O = n(46140), M = n(689938), v = n(793443);
-let L = (0, l.animated)(u.ChevronSmallDownIcon), Z = (0, l.animated)(I.Z), P = e => {
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(338545), o = n(722770), c = n(442837), d = n(846519), u = n(481060), _ = n(393238), E = n(607070), I = n(210887), m = n(810090), T = n(572004), h = n(617136), N = n(113434), p = n(497505), f = n(918701), C = n(566078), g = n(685613), S = n(611855), A = n(644646), x = n(670638), R = n(87894), O = n(46140), M = n(689938), v = n(793443);
+let L = (0, l.animated)(u.ChevronSmallDownIcon), Z = (0, l.animated)(m.Z), P = e => {
         let {
                 quest: t,
                 location: n,
@@ -42,7 +42,7 @@ t.Z = e => {
             isFocused: n,
             isQuestExpired: s,
             quest: d,
-            location: I,
+            location: m,
             size: T,
             expansionSpring: b,
             isAnimating: D,
@@ -57,7 +57,7 @@ t.Z = e => {
             ref: F,
             width: w,
             scrollWidth: V
-        } = (0, _.Z)(), H = (0, c.e7)([m.Z], () => m.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = a.useMemo(() => (0, f.nP)(d.config.assets.hero), [d]), z = a.useRef(null), K = (0, R.uq)(I), Q = I === p.jn.QUESTS_EMBED, q = (0, N.t5)(d, O.dr.QUESTS_CARD, I), X = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(d.config.expiresAt, {
+        } = (0, _.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = a.useMemo(() => (0, f.nP)(d.config.assets.hero), [d]), z = a.useRef(null), K = (0, R.uq)(m), Q = m === p.jn.QUESTS_EMBED, q = (0, N.t5)(d, O.dr.QUESTS_CARD, m), X = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(d.config.expiresAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -68,7 +68,7 @@ t.Z = e => {
         }), ee = e => {
             e.stopPropagation(), e.currentTarget.blur(), B(), (0, h._3)({
                 questId: d.id,
-                questContent: I,
+                questContent: m,
                 questContentCTA: j ? h.jZ.COLLAPSE : h.jZ.EXPAND,
                 questContentPosition: y
             });
@@ -159,7 +159,7 @@ t.Z = e => {
                                             className: v.headerCollapsedContentRewardWrapper,
                                             children: (0, i.jsx)(A.Z, {
                                                 quest: d,
-                                                questContent: I,
+                                                questContent: m,
                                                 className: v.headerCollapsedRewardTile
                                             })
                                         }),
@@ -249,7 +249,7 @@ t.Z = e => {
                                     }),
                                     !s && K && (0, i.jsx)(P, {
                                         quest: d,
-                                        location: I,
+                                        location: m,
                                         questContentPosition: y
                                     })
                                 ]
@@ -272,7 +272,7 @@ t.Z = e => {
                         },
                         children: [
                             (0, i.jsx)(x.r, {
-                                questContent: I,
+                                questContent: m,
                                 quest: d,
                                 questContentPosition: y,
                                 shouldShowDisclosure: !0,
@@ -295,7 +295,7 @@ t.Z = e => {
                                     })
                                 })
                             }),
-                            U && !(0, R.W_)(I) && (0, i.jsx)(u.Clickable, {
+                            U && !(0, R.W_)(m) && (0, i.jsx)(u.Clickable, {
                                 onClick: ee,
                                 className: v.iconWrapper,
                                 'aria-label': j ? M.Z.Messages.COLLAPSE : M.Z.Messages.EXPAND,

@@ -1,6 +1,6 @@
 n.d(t, {
     S: function () {
-        return m;
+        return I;
     },
     m: function () {
         return E;
@@ -25,7 +25,7 @@ function E() {
         }
     };
 }
-function m(e) {
+function I(e) {
     let {src: t} = e;
     return (0, i.jsx)('div', {
         className: u.avatarContainer,

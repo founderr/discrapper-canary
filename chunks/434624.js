@@ -3,7 +3,7 @@ n.d(t, {
         return h;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(866442), o = n(596454), c = n(434650), d = n(56314), u = n(18732), _ = n(566006), E = n(287151), m = n(716862), I = n(372178);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(866442), o = n(596454), c = n(434650), d = n(56314), u = n(18732), _ = n(566006), E = n(287151), I = n(716862), m = n(372178);
 let T = a.memo(function (e) {
         let t, n, {
                 useChatFontScaling: a,
@@ -20,7 +20,7 @@ let T = a.memo(function (e) {
                 isGuest: A,
                 isPendingMember: x,
                 type: R
-            } = e, O = R === _.O.BURST, M = (0, E.y4)(N, p, R), v = (0, d.v)(O && null != C ? C : []), L = a ? I : m, Z = O ? f : h, P = (0, u.y)(Z, E.aO), b = {};
+            } = e, O = R === _.O.BURST, M = (0, E.y4)(N, p, R), v = (0, d.v)(O && null != C ? C : []), L = a ? m : I, Z = O ? f : h, P = (0, u.y)(Z, E.aO), b = {};
         if (O && null != v) {
             var D;
             let {
@@ -68,13 +68,13 @@ let T = a.memo(function (e) {
             }, [
                 r,
                 o
-            ]), m = (0, c.O)(u), I = r && !o || t ? E.le : T;
+            ]), I = (0, c.O)(u), m = r && !o || t ? E.le : T;
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)('div', { ref: m }),
+                (0, i.jsx)('div', { ref: I }),
                 n.map(e => {
                     var t, n;
-                    return (0, i.jsx)(I, {
+                    return (0, i.jsx)(m, {
                         ...s,
                         ...e
                     }, (t = e, ''.concat(t.type === _.O.BURST ? 'burst:' : '').concat(null !== (n = t.emoji.id) && void 0 !== n ? n : 0, ':').concat(t.emoji.name)));

@@ -21,7 +21,7 @@ n.d(t, {
         return g;
     }
 }), n(789020);
-var i = n(735250), a = n(470079), s = n(442837), r = n(993365), l = n(981729), o = n(481060), c = n(543651), d = n(394779), u = n(519320), _ = n(592125), E = n(52824), m = n(630388), I = n(591759), T = n(850908), h = n(524444), N = n(981631), p = n(689938), f = n(736984);
+var i = n(735250), a = n(470079), s = n(442837), r = n(993365), l = n(981729), o = n(481060), c = n(543651), d = n(394779), u = n(519320), _ = n(592125), E = n(52824), I = n(630388), m = n(591759), T = n(850908), h = n(524444), N = n(981631), p = n(689938), f = n(736984);
 function C(e) {
     let t = e.item.originalItem;
     return (0, h.Yi)({
@@ -43,7 +43,7 @@ function C(e) {
 function g(e) {
     let t = e.item.originalItem, n = a.useCallback(() => {
             var e;
-            return (0, m.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, N.J0y.IS_CLIP) ? (0, i.jsxs)(l.DY, {
+            return (0, I.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, N.J0y.IS_CLIP) ? (0, i.jsxs)(l.DY, {
                 text: p.Z.Messages.CLIPS_BETA_TAG_HOVER,
                 className: f.clipPill,
                 children: [
@@ -58,7 +58,7 @@ function g(e) {
                     })
                 ]
             }) : null;
-        }, [t]), s = I.Z.toURLSafe(t.proxy_url);
+        }, [t]), s = m.Z.toURLSafe(t.proxy_url);
     return null == s ? null : (s.searchParams.append('format', 'jpeg'), (0, h.lV)({
         ...e,
         alt: t.description,

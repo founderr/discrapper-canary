@@ -1,22 +1,22 @@
 n(47120);
-var i, a, s, r, l = n(392711), o = n.n(l), c = n(442837), d = n(570140), u = n(314897), _ = n(699516), E = n(885110), m = n(981631);
-let I = {}, T = {};
+var i, a, s, r, l = n(392711), o = n.n(l), c = n(442837), d = n(570140), u = n(314897), _ = n(699516), E = n(885110), I = n(981631);
+let m = {}, T = {};
 function h(e, t) {
     var n;
-    return (null !== (n = I[e]) && void 0 !== n ? n : {})[t];
+    return (null !== (n = m[e]) && void 0 !== n ? n : {})[t];
 }
 function N(e, t) {
     let n = h(e, t);
     if (null == n)
         return;
-    let i = I[e];
-    delete i[t], o().isEmpty(i) && delete I[e];
+    let i = m[e];
+    delete i[t], o().isEmpty(i) && delete m[e];
     let a = T[n];
     null != a && (a.delete(e), 0 === a.size && delete T[n]);
 }
 function p(e, t, n, i) {
     let a = n.find(e => null != e.party && e.party.id), s = null != a && null != a.party ? a.party.id : null, r = h(t, e);
-    if (null == s || i === m.Skl.OFFLINE)
+    if (null == s || i === I.Skl.OFFLINE)
         return null != r && (N(t, e), void 0);
     if (null != r) {
         if (r === s)
@@ -25,8 +25,8 @@ function p(e, t, n, i) {
     }
     !function (e, t, n) {
         var i;
-        let a = I[e];
-        if (null == a && (a = I[e] = {}), a[t] = n, _.Z.isBlocked(e))
+        let a = m[e];
+        if (null == a && (a = m[e] = {}), a[t] = n, _.Z.isBlocked(e))
             return;
         let s = null !== (i = T[n]) && void 0 !== i ? i : new Set();
         T[n] = s, s.add(e);
@@ -50,7 +50,7 @@ function C(e, t) {
 }
 function g() {
     let e = u.default.getId(), t = E.Z.getActivities();
-    return p(m.ME, e, t);
+    return p(I.ME, e, t);
 }
 class S extends (i = c.ZP.Store) {
     initialize() {
@@ -60,7 +60,7 @@ class S extends (i = c.ZP.Store) {
         return null != e && null != T[e] ? T[e] : null;
     }
     getUserParties() {
-        return I;
+        return m;
     }
     getParties() {
         return T;
@@ -82,7 +82,7 @@ r = 'GamePartyStore', (s = 'displayName') in (a = S) ? Object.defineProperty(a, 
                     status: t,
                     activities: a
                 } of n)
-            null != e && !1 !== p(m.ME, e.id, a, t) && (i = !0);
+            null != e && !1 !== p(I.ME, e.id, a, t) && (i = !0);
         for (let e of t)
             !1 !== f({ guild: e }) && (i = !0);
         return i;
@@ -92,7 +92,7 @@ r = 'GamePartyStore', (s = 'displayName') in (a = S) ? Object.defineProperty(a, 
             parties: t,
             userParties: n
         } = e;
-        T = {}, I = { ...n }, Object.keys(t).forEach(e => T[e] = new Set(t[e]));
+        T = {}, m = { ...n }, Object.keys(t).forEach(e => T[e] = new Set(t[e]));
     },
     GUILD_CREATE: f,
     PRESENCES_REPLACE: function (e) {
@@ -101,7 +101,7 @@ r = 'GamePartyStore', (s = 'displayName') in (a = S) ? Object.defineProperty(a, 
                     user: e,
                     activities: i
                 } of t)
-            null != e && !1 !== p(m.ME, e.id, i) && (n = !0);
+            null != e && !1 !== p(I.ME, e.id, i) && (n = !0);
         return n;
     },
     PRESENCE_UPDATES: function (e) {
@@ -113,7 +113,7 @@ r = 'GamePartyStore', (s = 'displayName') in (a = S) ? Object.defineProperty(a, 
                 status: i,
                 activities: a
             } = e;
-            return p(null != t ? t : m.ME, n.id, a, i);
+            return p(null != t ? t : I.ME, n.id, a, i);
         }).some(e => e);
     },
     THREAD_MEMBER_LIST_UPDATE: function (e) {
@@ -134,7 +134,7 @@ r = 'GamePartyStore', (s = 'displayName') in (a = S) ? Object.defineProperty(a, 
         let {relationship: t} = e;
         if (!_.Z.isBlocked(t.id))
             return !1;
-        let n = I[t.id];
+        let n = m[t.id];
         if (null == n)
             return !1;
         for (let e of o().values(n)) {
@@ -143,7 +143,7 @@ r = 'GamePartyStore', (s = 'displayName') in (a = S) ? Object.defineProperty(a, 
         }
     },
     RELATIONSHIP_REMOVE: function (e) {
-        let {relationship: t} = e, n = I[t.id];
+        let {relationship: t} = e, n = m[t.id];
         if (null == n)
             return !1;
         for (let e of o().values(n)) {

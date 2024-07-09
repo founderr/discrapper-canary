@@ -1,5 +1,5 @@
 n(47120), n(653041);
-var i, a, s, r, l = n(392711), o = n.n(l), c = n(442837), d = n(433517), u = n(570140), _ = n(496929), E = n(16084), m = n(728345), I = n(812206), T = n(594190), h = n(594174), N = n(580130), p = n(55563), f = n(981631);
+var i, a, s, r, l = n(392711), o = n.n(l), c = n(442837), d = n(433517), u = n(570140), _ = n(496929), E = n(16084), I = n(728345), m = n(812206), T = n(594190), h = n(594174), N = n(580130), p = n(55563), f = n(981631);
 let C = 'DetectedOffPlatformPremiumPerksStore', g = {}, S = {}, A = [];
 function x() {
     let e = !1;
@@ -9,9 +9,9 @@ function x() {
             } of o().values(S)) {
         if (A.includes(t))
             continue;
-        let i = I.Z.getApplication(n);
+        let i = m.Z.getApplication(n);
         if (null == i) {
-            !I.Z.isFetchingApplication(n) && !I.Z.didFetchingApplicationFail(n) && m.Z.fetchApplication(n);
+            !m.Z.isFetchingApplication(n) && !m.Z.didFetchingApplicationFail(n) && I.Z.fetchApplication(n);
             continue;
         }
         let a = p.Z.get(t);

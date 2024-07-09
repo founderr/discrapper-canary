@@ -3,13 +3,13 @@ n.d(t, {
         return h;
     }
 }), n(536091);
-var i = n(904245), a = n(339085), s = n(957730), r = n(285651), l = n(268350), o = n(926491), c = n(373228), d = n(430824), u = n(594174), _ = n(176354), E = n(709054), m = n(981631), I = n(185923);
+var i = n(904245), a = n(339085), s = n(957730), r = n(285651), l = n(268350), o = n(926491), c = n(373228), d = n(430824), u = n(594174), _ = n(176354), E = n(709054), I = n(981631), m = n(185923);
 function T(e) {
     let t = d.Z.getGuild(e);
-    return null != t && (t.nsfwLevel === m.V_K.DEFAULT || t.nsfwLevel === m.V_K.SAFE);
+    return null != t && (t.nsfwLevel === I.V_K.DEFAULT || t.nsfwLevel === I.V_K.SAFE);
 }
 async function h(e, t) {
-    var n, m, h;
+    var n, I, h;
     let N = t.getGuildId();
     if (null == N || null == d.Z.getGuild(N))
         return;
@@ -33,13 +33,13 @@ async function h(e, t) {
         emoji: e,
         channel: t,
         guildId: N,
-        intention: I.Hz.CHAT
+        intention: m.Hz.CHAT
     })).sort((e, t) => -E.default.compare(e.id, t.id));
     if (g.length > 10) {
         let n = g[Math.floor(Math.pow(Math.random(), 2) * g.length)];
         i.Z.sendMessage(t.id, s.ZP.parse(t, n.allNamesString), !1, {
             messageReference: {
-                guild_id: null !== (m = t.getGuildId()) && void 0 !== m ? m : void 0,
+                guild_id: null !== (I = t.getGuildId()) && void 0 !== I ? I : void 0,
                 channel_id: t.id,
                 message_id: e
             }

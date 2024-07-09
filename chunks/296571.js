@@ -13,8 +13,8 @@ function u(e) {
             compact: u,
             usernameHook: _,
             onClickThread: E,
-            onClickViewThreads: m,
-            onContextMenuThread: I
+            onClickViewThreads: I,
+            onContextMenuThread: m
         } = e, T = (0, o.ZP)(n), h = _(T), N = (0, a.e7)([r.Z], () => {
             var e;
             return r.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
@@ -24,9 +24,9 @@ function u(e) {
             threadName: null !== (t = null == N ? void 0 : N.name) && void 0 !== t ? t : n.content,
             threadOnClick: {
                 onClick: E,
-                onContextMenu: I
+                onContextMenu: m
             },
-            viewThreadsOnClick: m
+            viewThreadsOnClick: I
         });
     return (0, i.jsx)(l.Z, {
         iconNode: (0, i.jsx)(s.ThreadIcon, {

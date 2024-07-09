@@ -11,7 +11,7 @@ function u(e) {
             variant: s,
             text: u,
             lineClamp: _
-        } = e, E = (0, l.usePrivateHeadingLevel)(), m = a.useMemo(() => null == u ? null : (0, o.Z)(u, !0, {
+        } = e, E = (0, l.usePrivateHeadingLevel)(), I = a.useMemo(() => null == u ? null : (0, o.Z)(u, !0, {
             allowHeading: null == _,
             allowList: null == _,
             initialHeaderLevel: E
@@ -28,6 +28,6 @@ function u(e) {
         color: t,
         variant: s,
         lineClamp: _,
-        children: m
+        children: I
     });
 }

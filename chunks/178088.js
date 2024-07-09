@@ -3,7 +3,7 @@ n.d(t, {
         return x;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(349445), r = n(442837), l = n(524437), o = n(481060), c = n(100527), d = n(906732), u = n(602478), _ = n(121254), E = n(742989), m = n(675478), I = n(581883), T = n(585483), h = n(153209), N = n(349643), p = n(881591), f = n(903672), C = n(946443), g = n(264233), S = n(981631), A = n(689938);
+var i = n(735250), a = n(470079), s = n(349445), r = n(442837), l = n(524437), o = n(481060), c = n(100527), d = n(906732), u = n(602478), _ = n(121254), E = n(742989), I = n(675478), m = n(581883), T = n(585483), h = n(153209), N = n(349643), p = n(881591), f = n(903672), C = n(946443), g = n(264233), S = n(981631), A = n(689938);
 function x(e) {
     let {
             onOpen: t,
@@ -13,31 +13,31 @@ function x(e) {
             popoutPosition: O,
             popoutAlign: M
         } = e, {analyticsLocations: v} = (0, d.ZP)(c.Z.NOTIFICATION_CENTER), [L, Z] = a.useState(!1), [P, b] = function () {
-            let e = (0, r.e7)([I.Z], () => {
+            let e = (0, r.e7)([m.Z], () => {
                 var e, t;
-                return null !== (t = null === (e = I.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : l.X.UNREADS;
+                return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : l.X.UNREADS;
             });
             return [
                 e,
                 a.useCallback(e => {
-                    m.hW.updateAsync('inbox', t => {
+                    I.hW.updateAsync('inbox', t => {
                         if (t.currentTab === e)
                             return !1;
                         t.currentTab = e;
-                    }, m.fy.FREQUENT_USER_ACTION);
+                    }, I.fy.FREQUENT_USER_ACTION);
                 }, [])
             ];
         }(), {
             showTutorial: D,
             setSeenTutorial: j
         } = function (e) {
-            let t = (0, r.e7)([I.Z], () => {
+            let t = (0, r.e7)([m.Z], () => {
                     var e, t;
-                    return null !== (t = null === (e = I.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t;
+                    return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t;
                 }), n = a.useCallback(() => {
-                    m.hW.updateAsync('inbox', e => {
+                    I.hW.updateAsync('inbox', e => {
                         e.viewedTutorial = !0;
-                    }, m.fy.INFREQUENT_USER_ACTION);
+                    }, I.fy.INFREQUENT_USER_ACTION);
                 }, []);
             return {
                 showTutorial: !t && e === l.X.UNREADS,

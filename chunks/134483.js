@@ -1,12 +1,12 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(780384), c = n(481060), d = n(230711), u = n(358221), _ = n(594190), E = n(687516), m = n(210887), I = n(937995), T = n(158776), h = n(594174), N = n(617136), p = n(272008), f = n(113434), C = n(569984), g = n(497505), S = n(918701), A = n(5881), x = n(566078), R = n(602667), O = n(340100), M = n(611855), v = n(644646), L = n(670638), Z = n(667105), P = n(860151), b = n(46140), D = n(981631), j = n(354459), U = n(689938), y = n(630706);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(780384), c = n(481060), d = n(230711), u = n(358221), _ = n(594190), E = n(687516), I = n(210887), m = n(937995), T = n(158776), h = n(594174), N = n(617136), p = n(272008), f = n(113434), C = n(569984), g = n(497505), S = n(918701), A = n(5881), x = n(566078), R = n(602667), O = n(340100), M = n(611855), v = n(644646), L = n(670638), Z = n(667105), P = n(860151), b = n(46140), D = n(981631), j = n(354459), U = n(689938), y = n(630706);
 t.Z = function (e) {
     var t, n, s;
     let {
             channelId: B,
             previewQuest: k,
             isParticipatingOverride: G
-        } = e, [F, w] = a.useState(!1), V = a.useCallback(() => w(!0), []), H = a.useCallback(() => w(!1), []), Y = a.useContext(I.h9), W = (0, l.e7)([h.default], () => h.default.getCurrentUser()), z = (0, l.e7)([m.Z], () => m.Z.getState().theme), K = (0, o.wj)(z) ? D.BRd.DARK : D.BRd.LIGHT, {
+        } = e, [F, w] = a.useState(!1), V = a.useCallback(() => w(!0), []), H = a.useCallback(() => w(!1), []), Y = a.useContext(m.h9), W = (0, l.e7)([h.default], () => h.default.getCurrentUser()), z = (0, l.e7)([I.Z], () => I.Z.getState().theme), K = (0, o.wj)(z) ? D.BRd.DARK : D.BRd.LIGHT, {
             isCurrentUserStreamingQuestApplication: Q,
             quest: q
         } = (0, l.cj)([
@@ -85,15 +85,15 @@ t.Z = function (e) {
         }), [q]), ed = (0, f.tP)(q);
     if (null == q || !(0, S.dl)(q))
         return null;
-    let eu = (null === (t = q.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, e_ = (null === (n = q.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, eE = null != q.userStatus && (0, S.zE)(q.userStatus, g.jn.QUEST_LIVE_STREAM), em = null != q.userStatus && (0, S.zE)(q.userStatus, g.jn.QUEST_BAR), eI = (0, S.Mi)(q, g.jn.QUEST_BAR) && !em;
+    let eu = (null === (t = q.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, e_ = (null === (n = q.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, eE = null != q.userStatus && (0, S.zE)(q.userStatus, g.jn.QUEST_LIVE_STREAM), eI = null != q.userStatus && (0, S.zE)(q.userStatus, g.jn.QUEST_BAR), em = (0, S.Mi)(q, g.jn.QUEST_BAR) && !eI;
     ec.info({
         isQuestCallHeaderDismissed: eE,
         isQuestExpired: ed,
-        isQuestBarShowing: eI,
+        isQuestBarShowing: em,
         isCurrentUserCallParticipant: en
     });
     let eT = null != k && (null === (s = q.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null;
-    if (!eT && (eE || ed || eI) || !eT && !en)
+    if (!eT && (eE || ed || em) || !eT && !en)
         return null;
     let eh = (0, S.il)(q), eN = (0, i.jsx)(v.Z, {
             className: y.rewardTile,
