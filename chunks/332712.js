@@ -1,12 +1,12 @@
 n.d(t, {
     _: function () {
-        return l;
+        return a;
     }
 });
-var i = n(442837), s = n(271383), a = n(430824), r = n(823379);
-function l(e) {
-    return (0, i.Wu)([
-        s.ZP,
-        a.Z
-    ], () => s.ZP.memberOf(e).map(a.Z.getGuild).filter(r.lm));
+var i = n(442837), s = n(621853);
+function a(e) {
+    return (0, i.Wu)([s.Z], () => {
+        var t, n;
+        return null !== (n = null === (t = s.Z.getMutualGuilds(e)) || void 0 === t ? void 0 : t.map(e => e.guild)) && void 0 !== n ? n : [];
+    });
 }
