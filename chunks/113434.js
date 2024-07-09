@@ -3,16 +3,16 @@ n.d(t, {
         return L;
     },
     DU: function () {
-        return G;
+        return k;
     },
     EH: function () {
         return y;
     },
     Fr: function () {
-        return x;
+        return G;
     },
     GI: function () {
-        return F;
+        return V;
     },
     J2: function () {
         return O;
@@ -30,22 +30,22 @@ n.d(t, {
         return i;
     },
     iO: function () {
-        return U;
-    },
-    jU: function () {
         return w;
     },
+    jU: function () {
+        return x;
+    },
     kJ: function () {
-        return k;
+        return B;
     },
     t5: function () {
-        return P;
+        return U;
     },
     tP: function () {
         return D;
     },
     z6: function () {
-        return B;
+        return F;
     }
 }), n(47120), n(653041);
 var r, i, a, o, s = n(470079), l = n(846519), u = n(442837), c = n(583434), d = n(706454), _ = n(553795), E = n(617136), f = n(272008), h = n(569984), p = n(497505), m = n(918701), I = n(796111), T = n(977156), g = n(31055), S = n(566078), A = n(46140), N = n(981631), v = n(689938);
@@ -189,23 +189,30 @@ let b = (e, t) => s.useMemo(() => (0, m.il)(e, t), [
 function M(e) {
     return s.useMemo(() => (0, m.b7)(e), [e]);
 }
-function P(e, t, n, r) {
+let P = (e, t, n, r) => () => {
+    r ? (0, m.gI)({
+        quest: e,
+        showInline: (0, I.i)({ location: t })
+    }, {
+        content: n,
+        ctaContent: E.jZ.CONNECT_CONSOLE_LINK
+    }) : (0, m.V$)({ quest: e }, {
+        content: n,
+        ctaContent: E.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
+    });
+};
+function U(e, t, n, r) {
     let {targetMinutes: i} = b(e), a = M(e);
     if ((0, m.zK)(e, A.S7.IN_HOUSE_CONSOLE_QUEST))
         return v.Z.Messages.QUESTS_IN_HOUSE_TASK_WITH_LINK.format({
             minutes: i,
-            onClick: () => {
-                r ? (0, m.gI)({
-                    quest: e,
-                    showInline: (0, I.i)({ location: t })
-                }, {
-                    content: n,
-                    ctaContent: E.jZ.CONNECT_CONSOLE_LINK
-                }) : (0, m.V$)({ quest: e }, {
-                    content: n,
-                    ctaContent: E.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
-                });
-            }
+            onClick: P(e, t, n, r)
+        });
+    if ((0, m.zK)(e, A.S7.MOBILE_CONSOLE_QUEST))
+        return v.Z.Messages.QUESTS_CONSOLE_QUEST_TASK_WITH_LINK.format({
+            minutes: i,
+            onClick: P(e, t, n, r),
+            gameTitle: S.r.build(e.config).application.name
         });
     if (null != a)
         return a.title;
@@ -215,7 +222,7 @@ function P(e, t, n, r) {
         gameTitle: e.config.messages.gameTitle
     });
 }
-function U() {
+function w() {
     let {
             quests: e,
             isFetchingCurrentQuests: t
@@ -245,21 +252,21 @@ function U() {
         t
     ]);
 }
-function w() {
-    let e = U();
+function x() {
+    let e = w();
     s.useEffect(() => {
         for (let t of e)
             (0, f.gl)(t.id, p.jn.GIFT_INVENTORY_SETTINGS_BADGE);
     }, [e]);
 }
-function x(e) {
+function G(e) {
     let t = (0, g.z)({ location: A.dr.MEMBERS_LIST }), n = (0, u.e7)([h.Z], () => t ? h.Z.quests : null), r = s.useMemo(() => (0, m.Jg)(n, e), [
             e,
             n
         ]);
     return D(r) ? null : r;
 }
-function G(e) {
+function k(e) {
     var t;
     let n = (0, m.Xv)(e), {
             product: r,
@@ -271,7 +278,7 @@ function G(e) {
         isFetching: i
     };
 }
-function k(e) {
+function B(e) {
     return {
         handleComplete: () => (0, f.Wf)(e),
         handleResetStatusClick: () => (0, f.eT)(e),
@@ -279,7 +286,7 @@ function k(e) {
         handleOverrideDeliveryClick: () => (0, f.EW)(e)
     };
 }
-function B() {
+function F() {
     let {
             fetching: e,
             accounts: t
@@ -305,7 +312,7 @@ function B() {
         xboxAndPlaystationAccounts: i
     };
 }
-let F = e => {
+let V = e => {
     let {
             questId: t,
             preview: n,

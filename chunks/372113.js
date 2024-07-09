@@ -312,71 +312,54 @@ t.Z = e => {
                         variant: 'lg' === i ? 'text-sm/medium' : 'text-xs/medium',
                         color: 'text-muted',
                         children: function (e) {
-                            var t, n, i, a, s, r, l;
+                            var t, n, i, a, s, r;
                             let {
-                                    quest: o,
-                                    location: c,
-                                    locale: d,
-                                    isQuestExpired: _,
-                                    hasConsoleConnection: E
-                                } = e, T = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, h = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, p = h && (null === (i = o.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, f = (0, C.zK)(o, v.S7.IN_HOUSE_CONSOLE_QUEST), g = (0, C.zK)(o, v.S7.MOBILE_CONSOLE_QUEST), A = (0, O.uq)(c), x = (0, N.B6)(null === (a = o.userStatus) || void 0 === a ? void 0 : a.completedAt, {
+                                    quest: l,
+                                    location: o,
+                                    locale: c,
+                                    isQuestExpired: d
+                                } = e, u = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, _ = u && (null === (n = l.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, E = (0, C.zK)(l, v.S7.IN_HOUSE_CONSOLE_QUEST), T = (0, O.uq)(o), h = (0, N.B6)(null === (i = l.userStatus) || void 0 === i ? void 0 : i.completedAt, {
                                     year: 'numeric',
                                     month: 'long',
                                     day: 'numeric'
-                                }), R = (0, C.oo)({ quest: o }), M = S.r.build(o.config).defaultReward.messages.nameWithArticle, P = (0, C.Kr)(o.config);
-                            if (h && f && A)
-                                return Z.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: x });
-                            if (p) {
-                                let e = R ? (0, C.o9)({
-                                        quest: o,
-                                        idx: null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedTier
-                                    }) : null, t = null !== (r = null == e ? void 0 : e.messages.nameWithArticle) && void 0 !== r ? r : null;
+                                }), p = (0, C.oo)({ quest: l }), f = S.r.build(l.config).defaultReward.messages.nameWithArticle, g = (0, C.Kr)(l.config);
+                            if (u && E && T)
+                                return Z.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: h });
+                            if (_) {
+                                let e = p ? (0, C.o9)({
+                                        quest: l,
+                                        idx: null === (a = l.userStatus) || void 0 === a ? void 0 : a.claimedTier
+                                    }) : null, t = null !== (s = null == e ? void 0 : e.messages.nameWithArticle) && void 0 !== s ? s : null;
                                 return null != t ? Z.Z.Messages.QUEST_REWARD_COMPLETED_CLAIMED.format({
                                     reward: t,
-                                    date: x
+                                    date: h
                                 }) : Z.Z.Messages.QUEST_REWARD_COMPLETED.format({
-                                    reward: M,
-                                    date: x
+                                    reward: f,
+                                    date: h
                                 });
                             }
-                            if (h)
-                                return R ? Z.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: x }) : Z.Z.Messages.QUEST_REWARD_COMPLETED.format({
-                                    reward: M,
-                                    date: x
+                            if (u)
+                                return p ? Z.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: h }) : Z.Z.Messages.QUEST_REWARD_COMPLETED.format({
+                                    reward: f,
+                                    date: h
                                 });
-                            let b = R ? (0, C.o9)({
-                                quest: o,
+                            let A = p ? (0, C.o9)({
+                                quest: l,
                                 idx: 0
                             }) : null;
-                            return _ ? Z.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({ reward: null !== (l = null == b ? void 0 : b.messages.nameWithArticle) && void 0 !== l ? l : M }) : A && !T && !E && g ? null != P ? Z.Z.Messages.QUEST_REWARD_MULTIPLATFORM_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-                                gameTitle: o.config.messages.gameTitle,
-                                reward: M,
-                                streamingDurationRequirement: (0, C.il)(o).targetMinutes,
-                                onClick: () => {
-                                    u.Z.open(L.oAB.CONNECTIONS);
-                                },
-                                duration: P
-                            }) : Z.Z.Messages.QUEST_REWARD_MULTIPLATFORM.format({
-                                gameTitle: o.config.messages.gameTitle,
-                                reward: M,
-                                streamingDurationRequirement: (0, C.il)(o).targetMinutes,
-                                onClick: () => {
-                                    u.Z.open(L.oAB.CONNECTIONS);
-                                }
-                            }) : null != b && null != b.approximateCount ? Z.Z.Messages.QUEST_REWARD_TIERED.format({
-                                maxReward: b.messages.nameWithArticle,
-                                maxRewardCount: (0, m.Bs)(b.approximateCount, d),
+                            return d ? Z.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({ reward: null !== (r = null == A ? void 0 : A.messages.nameWithArticle) && void 0 !== r ? r : f }) : null != A && null != A.approximateCount ? Z.Z.Messages.QUEST_REWARD_TIERED.format({
+                                maxReward: A.messages.nameWithArticle,
+                                maxRewardCount: (0, m.Bs)(A.approximateCount, c),
                                 helpCenterLink: I.Z.getArticleURL(L.BhN.QUESTS_LEARN_MORE)
-                            }) : null != P ? Z.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
-                                reward: M,
-                                duration: P
-                            }) : Z.Z.Messages.QUEST_REWARD.format({ reward: M });
+                            }) : null != g ? Z.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
+                                reward: f,
+                                duration: g
+                            }) : Z.Z.Messages.QUEST_REWARD.format({ reward: f });
                         }({
                             quest: t,
                             location: n,
                             locale: z,
-                            isQuestExpired: r,
-                            hasConsoleConnection: H
+                            isQuestExpired: r
                         })
                     })
                 ]
