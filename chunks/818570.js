@@ -5,13 +5,13 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(197115), l = n(702346), r = n(981631), o = n(474936), c = n(689938), d = n(505376);
+var a = n(481060), s = n(197115), r = n(702346), l = n(981631), o = n(474936), c = n(689938), d = n(505376);
 function u(e) {
     let {
             message: t,
             channel: n
-        } = e, u = null != n.guild_id ? r.jXE.TEXT_IN_VOICE : r.jXE.CHANNEL_TEXT_AREA;
-    return (0, i.jsx)(l.Z, {
+        } = e, u = null != n.guild_id ? l.jXE.TEXT_IN_VOICE : l.jXE.CHANNEL_TEXT_AREA;
+    return (0, i.jsx)(r.Z, {
         contentClassName: d.messageContentContainer,
         iconContainerClassName: d.iconContainer,
         iconNode: (0, i.jsx)(a.BellIcon, { colorClass: d.icon }),
@@ -50,7 +50,7 @@ function u(e) {
                         size: a.Button.Sizes.SMALL,
                         premiumModalAnalyticsLocation: {
                             section: u,
-                            object: r.qAy.MESSAGE
+                            object: l.qAy.MESSAGE
                         }
                     })
                 })

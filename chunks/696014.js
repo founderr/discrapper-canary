@@ -3,7 +3,7 @@ n.d(t, {
         return o;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(670351);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(670351);
 function o() {
     let [e, t] = a.useState(!1);
     return {
@@ -19,7 +19,7 @@ function o() {
                 ref: e => {
                     null != e && t(e.scrollHeight - e.clientHeight > 1);
                 },
-                className: l()(r.lineClamp, a),
+                className: r()(l.lineClamp, a),
                 style: n ? void 0 : {
                     lineClamp: o,
                     WebkitLineClamp: o

@@ -5,12 +5,12 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(442837), r = n(435064), o = n(142592);
+var a = n(120356), s = n.n(a), r = n(442837), l = n(435064), o = n(142592);
 function c() {
-    let e = (0, l.Wu)([r.Z], () => {
+    let e = (0, r.Wu)([l.Z], () => {
         var e;
-        let t = null === (e = r.Z.getLastClipsSession()) || void 0 === e ? void 0 : e.newClipIds;
-        return null == t ? [] : r.Z.getClips().slice(0, 4).filter(e => t.includes(e.id));
+        let t = null === (e = l.Z.getLastClipsSession()) || void 0 === e ? void 0 : e.newClipIds;
+        return null == t ? [] : l.Z.getClips().slice(0, 4).filter(e => t.includes(e.id));
     });
     return (0, i.jsx)('div', {
         className: s()(o.thumbnailStack, {

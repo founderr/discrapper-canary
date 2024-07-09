@@ -5,9 +5,9 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(512722), s = n.n(a), l = n(83474), r = n(245315), o = n(556041), c = n(103575), d = n(592125), u = n(368859);
+var a = n(512722), s = n.n(a), r = n(83474), l = n(245315), o = n(556041), c = n(103575), d = n(592125), u = n(368859);
 function _(e, t) {
-    if ((0, r.cp)(t))
+    if ((0, l.cp)(t))
         return (0, i.jsx)(o.Z, {});
     if ((0, u.Z)(t)) {
         let {
@@ -16,7 +16,7 @@ function _(e, t) {
             message_id: a
         } = t.messageReference;
         if (null != e)
-            return (0, i.jsx)(l.ZP, {
+            return (0, i.jsx)(r.ZP, {
                 guildId: e,
                 channelId: n,
                 messageId: a

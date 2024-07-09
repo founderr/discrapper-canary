@@ -1,6 +1,6 @@
-var i, a, s, l, r = n(442837), o = n(570140);
+var i, a, s, r, l = n(442837), o = n(570140);
 let c = !1, d = !1, u = !1;
-class _ extends (l = r.ZP.Store) {
+class _ extends (r = l.ZP.Store) {
     getIsTargeted() {
         return u;
     }

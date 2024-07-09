@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return l;
     }
 });
 var i = n(689938);
@@ -10,13 +10,13 @@ let a = [
         'c',
         'd'
     ], s = e => e;
-function l(e, t) {
+function r(e, t) {
     let n = {}, i = Math.min(e.length, a.length);
     for (let s = 0; s < i; ++s)
         n[a[s]] = (n, i) => t(e[s], i);
     return n;
 }
-class r {
+class l {
     asString() {
         return this.transformed(s);
     }
@@ -30,11 +30,11 @@ class r {
         case 1:
             return e(this.items[0], '');
         case 2:
-            return i.Z.Messages.GENERIC_FORMATTED_LIST_TWO.format(l(this.items, e));
+            return i.Z.Messages.GENERIC_FORMATTED_LIST_TWO.format(r(this.items, e));
         case 3:
-            return i.Z.Messages.GENERIC_FORMATTED_LIST_THREE.format(l(this.items, e));
+            return i.Z.Messages.GENERIC_FORMATTED_LIST_THREE.format(r(this.items, e));
         default:
-            return i.Z.Messages.GENERIC_FORMATTED_LIST_FOUR.format(l(this.items, e));
+            return i.Z.Messages.GENERIC_FORMATTED_LIST_FOUR.format(r(this.items, e));
         }
     }
     constructor(e) {

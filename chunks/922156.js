@@ -1,4 +1,4 @@
-var i, a, s, l, r = n(442837), o = n(570140), c = n(186901);
+var i, a, s, r, l = n(442837), o = n(570140), c = n(186901);
 let d = null, u = [
         c.ff.REDISTRIBUTABLE_INSTALL_FAILED,
         c.ff.POST_INSTALL_FAILED,
@@ -9,7 +9,7 @@ let d = null, u = [
         c.ff.INTERRUPTED,
         c.ff.DESERIALIZATION_FAILED
     ];
-class E extends (l = r.ZP.Store) {
+class E extends (r = l.ZP.Store) {
     getLastError() {
         return d;
     }

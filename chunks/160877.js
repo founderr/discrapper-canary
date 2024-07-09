@@ -6,7 +6,7 @@ n.d(t, {
         return C;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(470167), o = n(481060), c = n(572691), d = n(406432), u = n(584656), _ = n(153124), E = n(810090), m = n(163268), I = n(719548), T = n(689938), h = n(246829);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(470167), o = n(481060), c = n(572691), d = n(406432), u = n(584656), _ = n(153124), E = n(810090), m = n(163268), I = n(719548), T = n(689938), h = n(246829);
 let N = e => {
         let {attachment: t} = e, {
                 url: n,
@@ -21,8 +21,8 @@ let N = e => {
         let {embed: s} = e;
         if (!I.n2.has(s.type))
             return null;
-        let l = void 0 !== s.video && s.type !== r.h.GIFV ? s.video.url : null !== (a = null === (t = s.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== a ? a : null === (n = s.image) || void 0 === n ? void 0 : n.url;
-        return null == l ? null : (0, i.jsx)(f, { url: l });
+        let r = void 0 !== s.video && s.type !== l.h.GIFV ? s.video.url : null !== (a = null === (t = s.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== a ? a : null === (n = s.image) || void 0 === n ? void 0 : n.url;
+        return null == r ? null : (0, i.jsx)(f, { url: r });
     }, f = e => {
         let {
                 url: t,
@@ -31,11 +31,11 @@ let N = e => {
         return (0, i.jsx)('div', {
             className: h.mediaContainer,
             children: a ? (0, i.jsx)(E.Z, {
-                className: l()(h.video, h.media),
+                className: r()(h.video, h.media),
                 controls: !0,
                 src: t
             }) : (0, i.jsx)('img', {
-                className: l()(h.image, h.media),
+                className: r()(h.image, h.media),
                 src: t,
                 alt: n
             })
@@ -52,8 +52,8 @@ function g(e) {
             channelId: t,
             messageId: n,
             isReportFalsePositiveLoading: s,
-            analyticsContext: l,
-            attachmentPreview: r,
+            analyticsContext: r,
+            attachmentPreview: l,
             embedPreview: c,
             onConfirmPress: d,
             transitionState: u,
@@ -63,24 +63,24 @@ function g(e) {
                 action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: t,
                 messageId: n,
-                context: l
+                context: r
             }), E();
         }, [
             t,
             n,
-            l,
+            r,
             E
         ]), C = a.useCallback(() => {
             null == d || d(), (0, m.aP)({
                 action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
                 channelId: t,
                 messageId: n,
-                context: l
+                context: r
             });
         }, [
             t,
             n,
-            l,
+            r,
             d
         ]);
     return a.useEffect(() => {
@@ -88,12 +88,12 @@ function g(e) {
             action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
             channelId: t,
             messageId: n,
-            context: l
+            context: r
         });
     }, [
         t,
         n,
-        l
+        r
     ]), (0, i.jsxs)(o.ModalRoot, {
         transitionState: u,
         'aria-labelledby': I,
@@ -118,7 +118,7 @@ function g(e) {
                         className: h.subheader,
                         children: T.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
                     }),
-                    null != r && (0, i.jsx)(N, { attachment: r }),
+                    null != l && (0, i.jsx)(N, { attachment: l }),
                     null != c && (0, i.jsx)(p, { embed: c })
                 ]
             }),

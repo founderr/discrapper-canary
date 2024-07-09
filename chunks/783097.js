@@ -3,10 +3,10 @@ t.d(n, {
         return E;
     },
     BQ: function () {
-        return p;
+        return _;
     },
     Wx: function () {
-        return _;
+        return p;
     },
     Y$: function () {
         return h;
@@ -15,27 +15,27 @@ t.d(n, {
         return A;
     },
     sl: function () {
-        return C;
+        return f;
     },
     ye: function () {
         return N;
     }
 }), t(789020);
 var i = t(668781), l = t(904245), a = t(895924), r = t(667204), s = t(957730), o = t(768581), c = t(630388), u = t(981631), d = t(689079), m = t(689938);
-let _ = { id: d.bi.BUILT_IN };
-function p(e) {
+let p = { id: d.bi.BUILT_IN };
+function _(e) {
     return e.id !== d.bi.BUILT_IN;
 }
 function E(e) {
-    return p(e) ? e.name : m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
+    return _(e) ? e.name : m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
 }
 function A(e) {
-    return p(e) ? e.description : m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
+    return _(e) ? e.description : m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
 }
 function N(e) {
     var n;
     let {application: t} = e;
-    return p(t) && (0, c.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, u.udG.EMBEDDED);
+    return _(t) && (0, c.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, u.udG.EMBEDDED);
 }
 function h(e) {
     let {
@@ -45,7 +45,7 @@ function h(e) {
             commandTargetId: c,
             maxSizeCallback: u,
             sectionName: d
-        } = e, {channel: _} = o, p = async () => {
+        } = e, {channel: p} = o, _ = async () => {
             try {
                 let i = await (0, r.Z)({
                     command: n,
@@ -58,7 +58,7 @@ function h(e) {
                 });
                 if (n.inputType === a.iw.BUILT_IN_TEXT && null != i) {
                     var e;
-                    let n = s.ZP.parse(_, i.content);
+                    let n = s.ZP.parse(p, i.content);
                     n.tts = null !== (e = i.tts) && void 0 !== e && e, l.Z.sendMessage(o.channel.id, n);
                 }
             } catch (e) {
@@ -66,18 +66,18 @@ function h(e) {
                     title: m.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE,
                     body: m.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_BODY,
                     confirmText: m.Z.Messages.RETRY,
-                    onConfirm: () => p()
+                    onConfirm: () => _()
                 }), e;
             }
         };
-    return p();
+    return _();
 }
-function C(e) {
+function f(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
             fakeAppIconURL: t,
             ...i
         } = n;
-    return p(e) ? {
+    return _(e) ? {
         iconURL: o.ZP.getApplicationIconURL({
             ...i,
             id: e.id,

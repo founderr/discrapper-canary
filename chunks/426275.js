@@ -3,7 +3,7 @@ n.d(t, {
         return u;
     }
 });
-var i = n(735250), a = n(470079), s = n(692547), l = n(481060), r = n(375954), o = n(876338), c = n(912332), d = n(689938);
+var i = n(735250), a = n(470079), s = n(692547), r = n(481060), l = n(375954), o = n(876338), c = n(912332), d = n(689938);
 function u(e) {
     let {
             className: t,
@@ -12,7 +12,7 @@ function u(e) {
             targetKind: _,
             embedIndex: E
         } = e, m = a.useCallback(() => {
-            let e = r.Z.getMessage(n, u);
+            let e = l.Z.getMessage(n, u);
             if (null == e)
                 return;
             let t = (0, o.j)(e, {
@@ -31,11 +31,11 @@ function u(e) {
             u,
             _
         ]);
-    return (0, i.jsx)(l.CircleIconButton, {
+    return (0, i.jsx)(r.CircleIconButton, {
         className: t,
         tooltip: d.Z.Messages.MESSAGE_ACTION_FORWARD,
-        color: l.CircleIconButtonColors.SECONDARY,
-        icon: (0, i.jsx)(l.ChatArrowRightIcon, {
+        color: r.CircleIconButtonColors.SECONDARY,
+        icon: (0, i.jsx)(r.ChatArrowRightIcon, {
             size: 'xs',
             color: s.Z.colors.INTERACTIVE_NORMAL
         }),

@@ -1,6 +1,6 @@
 n.d(t, {
     Jl: function () {
-        return r;
+        return l;
     },
     g9: function () {
         return o;
@@ -12,11 +12,11 @@ var a = n(999650);
 n(72006);
 var s = n(405656);
 n(981631);
-let l = {
+let r = {
     [a.Qe.FILTER]: i.w,
     [a.Qe.ANSWER]: i.O
 };
-function r() {
+function l() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, t = [];
     return Object.keys(e).forEach(n => {
         let i = e[n];
@@ -27,7 +27,7 @@ function r() {
                     return null !== n && e.getEntity(n).getType() === i;
                 }, n);
             }(i, e, t, n),
-            component: l[i.componentType]
+            component: r[i.componentType]
         });
     }), t;
 }

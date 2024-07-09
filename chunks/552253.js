@@ -1,6 +1,6 @@
 n(47120);
-var i, a = n(735250), s = n(470079), l = n(846519);
-function r(e, t, n) {
+var i, a = n(735250), s = n(470079), r = n(846519);
+function l(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -23,10 +23,10 @@ class o extends (i = s.Component) {
         this.stopTimer();
     }
     componentDidUpdate(e, t) {
-        let n, i, a, s, {props: l} = this;
-        let r = (n = l, i = this.state, !n.disable && !(i.hovered && n.pauseOnHover));
+        let n, i, a, s, {props: r} = this;
+        let l = (n = r, i = this.state, !n.disable && !(i.hovered && n.pauseOnHover));
         let o = (a = e, s = t, !a.disable && !(s.hovered && a.pauseOnHover));
-        r && !o || e.interval !== l.interval ? this.startTimer() : !r && o && this.stopTimer();
+        l && !o || e.interval !== r.interval ? this.startTimer() : !l && o && this.stopTimer();
     }
     startTimer() {
         let {
@@ -60,14 +60,14 @@ class o extends (i = s.Component) {
         });
     }
     constructor(...e) {
-        super(...e), r(this, 'timer', new l.Xp()), r(this, 'state', { hovered: !1 }), r(this, 'handlePause', () => {
+        super(...e), l(this, 'timer', new r.Xp()), l(this, 'state', { hovered: !1 }), l(this, 'handlePause', () => {
             !this.state.hovered && this.setState({ hovered: !0 });
-        }), r(this, 'handleResume', () => {
+        }), l(this, 'handleResume', () => {
             this.setState({ hovered: !1 });
         });
     }
 }
-r(o, 'defaultProps', {
+l(o, 'defaultProps', {
     disable: !1,
     pauseOnHover: !1
 }), t.Z = o;

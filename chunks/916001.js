@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(866442), s = n(481060), l = n(689938), r = n(744882);
+var a = n(866442), s = n(481060), r = n(689938), l = n(744882);
 function o(e) {
     let {
             locked: t,
@@ -13,12 +13,12 @@ function o(e) {
             textVariant: o = 'text-xs/medium'
         } = e, c = (0, s.useToken)(s.tokens.colors.INTERACTIVE_NORMAL).hex();
     return (0, i.jsx)('div', {
-        className: r.roleTagContainer,
+        className: l.roleTagContainer,
         children: (0, i.jsxs)('div', {
-            className: r.roleTag,
+            className: l.roleTag,
             children: [
                 (0, i.jsx)('div', {
-                    className: r.roleColor,
+                    className: l.roleColor,
                     style: { backgroundColor: (0, a.Rf)(n.color) }
                 }),
                 (0, i.jsx)(s.Spacer, {
@@ -29,7 +29,7 @@ function o(e) {
                     variant: o,
                     color: 'text-normal',
                     children: [
-                        (0, i.jsx)(s.HiddenVisually, { children: l.Z.Messages.GUILD_PRODUCT_CARD_HIDDEN_ROLE_SCREEN_READER }),
+                        (0, i.jsx)(s.HiddenVisually, { children: r.Z.Messages.GUILD_PRODUCT_CARD_HIDDEN_ROLE_SCREEN_READER }),
                         n.name
                     ]
                 }),

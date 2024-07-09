@@ -5,14 +5,14 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(904245), l = n(702346), r = n(739566), o = n(689938);
+var a = n(481060), s = n(904245), r = n(702346), l = n(739566), o = n(689938);
 function c(e) {
     let {
             message: t,
             usernameHook: c,
             onClickPins: d,
             compact: u
-        } = e, _ = (0, r.ZP)(t), E = _.nick, m = c(_), I = () => {
+        } = e, _ = (0, l.ZP)(t), E = _.nick, m = c(_), I = () => {
             if (null == t.messageReference)
                 return;
             let {
@@ -30,7 +30,7 @@ function c(e) {
                 color: 'currentColor'
             })
         } : { icon: n(879066) };
-    return (0, i.jsx)(l.Z, {
+    return (0, i.jsx)(r.Z, {
         ...T,
         timestamp: t.timestamp,
         compact: u,

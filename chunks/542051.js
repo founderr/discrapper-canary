@@ -3,7 +3,7 @@ n.d(t, {
         return I;
     }
 }), n(411104);
-var i, a, s, l, r = n(735250), o = n(470079), c = n(120356), d = n.n(c), u = n(481060), _ = n(689938), E = n(452822);
+var i, a, s, r, l = n(735250), o = n(470079), c = n(120356), d = n.n(c), u = n(481060), _ = n(689938), E = n(452822);
 function m(e) {
     e.stopPropagation(), e.preventDefault();
 }
@@ -23,29 +23,29 @@ class T extends (i = o.PureComponent) {
             focusedIndex: i,
             onSelectQuery: a,
             onSelectSearchEverywhere: s,
-            onHighlightQuery: l,
+            onHighlightQuery: r,
             hideQuery: o,
             searchFavorites: c
         } = this.props;
         if (e || o)
             return null;
         let m = -1 === i;
-        return (0, r.jsxs)(r.Fragment, {
+        return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, r.jsxs)(u.Clickable, {
+                (0, l.jsxs)(u.Clickable, {
                     className: d()(E.queryContainer, { [E.focused]: m }),
                     ...I(n, -1, m),
-                    onMouseEnter: l,
+                    onMouseEnter: r,
                     onClick: a,
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, l.jsx)('div', {
                             className: E.queryText,
                             children: c ? _.Z.Messages.SEARCH_FAVORITES : _.Z.Messages.SEARCH_FOR_VALUE.format({ value: t })
                         }),
-                        (0, r.jsx)('div', {
+                        (0, l.jsx)('div', {
                             className: E.queryShortcut,
                             'aria-hidden': !0,
-                            children: (0, r.jsx)(u.KeyCombo, {
+                            children: (0, l.jsx)(u.KeyCombo, {
                                 shortcut: 'return',
                                 dim: !0,
                                 className: E.keyCombo
@@ -53,20 +53,20 @@ class T extends (i = o.PureComponent) {
                         })
                     ]
                 }),
-                c && (0, r.jsxs)(u.Clickable, {
+                c && (0, l.jsxs)(u.Clickable, {
                     className: d()(E.queryContainer, { [E.focused]: m }),
                     ...I(n, -1, m),
-                    onMouseEnter: l,
+                    onMouseEnter: r,
                     onClick: s,
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, l.jsx)('div', {
                             className: E.queryText,
                             children: _.Z.Messages.SEARCH_EVERYWHERE
                         }),
-                        (0, r.jsx)('div', {
+                        (0, l.jsx)('div', {
                             className: E.queryShortcut,
                             'aria-hidden': !0,
-                            children: (0, r.jsx)(u.KeyCombo, {
+                            children: (0, l.jsx)(u.KeyCombo, {
                                 shortcut: 'shift+return',
                                 dim: !0,
                                 className: E.keyCombo
@@ -102,7 +102,7 @@ class T extends (i = o.PureComponent) {
                 navId: n,
                 width: i
             } = this.props, a = '' === e.trim();
-        return (0, r.jsxs)('div', {
+        return (0, l.jsxs)('div', {
             className: E.container,
             style: { width: i },
             onMouseDown: m,
@@ -117,13 +117,13 @@ class T extends (i = o.PureComponent) {
         });
     }
 }
-l = {
+r = {
     renderInitialState: () => null,
     hideQuery: !1,
     width: 320
 }, (s = 'defaultProps') in (a = T) ? Object.defineProperty(a, s, {
-    value: l,
+    value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : a[s] = l, t.Z = T;
+}) : a[s] = r, t.Z = T;

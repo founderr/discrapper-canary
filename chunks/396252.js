@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(442837), r = n(481060), o = n(430824), c = n(467679), d = n(702346), u = n(739566), _ = n(464891), E = n(83561), m = n(674563), I = n(689938), T = n(713389);
+var a = n(120356), s = n.n(a), r = n(442837), l = n(481060), o = n(430824), c = n(467679), d = n(702346), u = n(739566), _ = n(464891), E = n(83561), m = n(674563), I = n(689938), T = n(713389);
 function h(e) {
     var t;
     let {
@@ -13,7 +13,7 @@ function h(e) {
             compact: a,
             usernameHook: h,
             channel: N
-        } = e, p = (0, l.e7)([o.Z], () => o.Z.getGuild(N.guild_id)), f = (0, u.ZP)(n), C = h(f), {
+        } = e, p = (0, r.e7)([o.Z], () => o.Z.getGuild(N.guild_id)), f = (0, u.ZP)(n), C = h(f), {
             avatarSrc: g,
             eventHandlers: {
                 onMouseEnter: S,
@@ -38,7 +38,7 @@ function h(e) {
                         username: (0, i.jsxs)('div', {
                             className: T.spanCorrection,
                             children: [
-                                (0, i.jsx)(r.Text, {
+                                (0, i.jsx)(l.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',

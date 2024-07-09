@@ -5,13 +5,13 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(702346), l = n(739566), r = n(689938), o = n(118496);
+var a = n(481060), s = n(702346), r = n(739566), l = n(689938), o = n(118496);
 function c(e) {
     let {
             message: t,
             compact: n,
             usernameHook: c
-        } = e, d = (0, l.ZP)(t), u = c(d), _ = r.Z.Messages.SYSTEM_MESSAGE_STAGE_RAISE_HAND_HOOK.format({
+        } = e, d = (0, r.ZP)(t), u = c(d), _ = l.Z.Messages.SYSTEM_MESSAGE_STAGE_RAISE_HAND_HOOK.format({
             username: d.nick,
             usernameHook: u
         });

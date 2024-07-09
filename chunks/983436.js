@@ -3,7 +3,7 @@ n.d(t, {
         return I;
     }
 });
-var i = n(735250), a = n(470079), s = n(287734), l = n(475468), r = n(358555), o = n(944486), c = n(914010), d = n(197409), u = n(626135), _ = n(981631), E = n(689938), m = n(182578);
+var i = n(735250), a = n(470079), s = n(287734), r = n(475468), l = n(358555), o = n(944486), c = n(914010), d = n(197409), u = n(626135), _ = n(981631), E = n(689938), m = n(182578);
 function I(e) {
     var t;
     let {
@@ -19,7 +19,7 @@ function I(e) {
                 link_channel_type: I.type,
                 guild_id: h,
                 channel_id: N
-            }), (0, l.K)(n.id, I.id), s.default.selectVoiceChannel(I.id);
+            }), (0, r.K)(n.id, I.id), s.default.selectVoiceChannel(I.id);
         }, [
             null === (t = T.author) || void 0 === t ? void 0 : t.id,
             n.id,
@@ -44,7 +44,7 @@ function I(e) {
                                     E.Z.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({ guildName: n.name }),
                                     (0, i.jsx)('span', {
                                         className: m.infoBadge,
-                                        children: (0, i.jsx)(r.Z, {
+                                        children: (0, i.jsx)(l.Z, {
                                             guild: n,
                                             isBannerVisible: !1
                                         })

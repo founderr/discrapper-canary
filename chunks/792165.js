@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(693789), l = n(260034), r = n(993365), o = n(481060), c = n(230711), d = n(197115), u = n(504983), _ = n(594174), E = n(74538), m = n(981631), I = n(921944), T = n(474936), h = n(526761), N = n(689938), p = n(541311);
+var a = n(442837), s = n(693789), r = n(260034), l = n(993365), o = n(481060), c = n(230711), d = n(197115), u = n(504983), _ = n(594174), E = n(74538), m = n(981631), I = n(921944), T = n(474936), h = n(526761), N = n(689938), p = n(541311);
 function f(e) {
     var t;
     let {
@@ -37,13 +37,13 @@ function f(e) {
                         color: 'currentColor',
                         className: p.nitroWheel
                     }),
-                    (0, i.jsx)(l.X, {
+                    (0, i.jsx)(r.X, {
                         variant: 'heading-sm/bold',
                         children: N.Z.Messages.CALL_SOUNDS_UPSELL_TITLE_NON_SUB
                     })
                 ]
             }),
-            (0, i.jsx)(r.x, {
+            (0, i.jsx)(l.x, {
                 variant: 'text-sm/normal',
                 children: g
             }),

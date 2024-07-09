@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(772848), s = n(481060), l = n(976255), r = n(667), o = n(626135), c = n(981631);
+var a = n(772848), s = n(481060), r = n(976255), l = n(667), o = n(626135), c = n(981631);
 function d(e) {
     let {
             guildProductListing: t,
@@ -46,7 +46,7 @@ function d(e) {
                 payment_type: c.Zuq[c.GZQ.ONE_TIME],
                 is_gift: !1,
                 location_stack: Array.isArray(u) ? u : [u]
-            }), (0, l.fw)(), (0, r.p)();
+            }), (0, r.fw)(), (0, l.p)();
         },
         onCloseRequest: c.dG4
     });

@@ -3,9 +3,9 @@ n.d(t, {
         return T;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(481060), o = n(346610), c = n(868643), d = n(912332), u = n(503349), _ = n(689938), E = n(691523);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(481060), o = n(346610), c = n(868643), d = n(912332), u = n(503349), _ = n(689938), E = n(691523);
 function m() {
-    (0, r.closeModal)(u.c);
+    (0, l.closeModal)(u.c);
 }
 function I(e) {
     let {
@@ -36,10 +36,10 @@ function I(e) {
             s,
             o
         ]);
-    return (0, i.jsx)(r.Clickable, {
-        className: l()(E.container, t),
+    return (0, i.jsx)(l.Clickable, {
+        className: r()(E.container, t),
         onClick: c,
-        children: (0, i.jsx)(r.Text, {
+        children: (0, i.jsx)(l.Text, {
             className: E.text,
             variant: 'text-sm/medium',
             color: 'always-white',

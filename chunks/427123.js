@@ -1,5 +1,5 @@
 n(47120), n(653041);
-var i, a, s, l, r = n(392711), o = n.n(r), c = n(442837), d = n(433517), u = n(570140), _ = n(496929), E = n(16084), m = n(728345), I = n(812206), T = n(594190), h = n(594174), N = n(580130), p = n(55563), f = n(981631);
+var i, a, s, r, l = n(392711), o = n.n(l), c = n(442837), d = n(433517), u = n(570140), _ = n(496929), E = n(16084), m = n(728345), I = n(812206), T = n(594190), h = n(594174), N = n(580130), p = n(55563), f = n(981631);
 let C = 'DetectedOffPlatformPremiumPerksStore', g = {}, S = {}, A = [];
 function x() {
     let e = !1;
@@ -26,7 +26,7 @@ function x() {
     }
     return e;
 }
-class O extends (i = c.ZP.Store) {
+class R extends (i = c.ZP.Store) {
     initialize() {
         var e;
         this.waitFor(T.ZP, p.Z, N.Z), A = null !== (e = d.K.get(C)) && void 0 !== e ? e : A;
@@ -35,12 +35,12 @@ class O extends (i = c.ZP.Store) {
         return o().values(g);
     }
 }
-l = 'DetectedOffPlatformPremiumPerksStore', (s = 'displayName') in (a = O) ? Object.defineProperty(a, s, {
-    value: l,
+r = 'DetectedOffPlatformPremiumPerksStore', (s = 'displayName') in (a = R) ? Object.defineProperty(a, s, {
+    value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : a[s] = l, t.Z = new O(u.Z, {
+}) : a[s] = r, t.Z = new R(u.Z, {
     LOGOUT: function () {
         g = {}, S = {};
     },

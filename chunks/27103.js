@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(481060), r = n(467679), o = n(702346), c = n(739566), d = n(464891), u = n(83561), _ = n(674563), E = n(689938), m = n(713389);
+var a = n(120356), s = n.n(a), r = n(481060), l = n(467679), o = n(702346), c = n(739566), d = n(464891), u = n(83561), _ = n(674563), E = n(689938), m = n(713389);
 function I(e) {
     let {
             message: t,
@@ -36,14 +36,14 @@ function I(e) {
                         username: (0, i.jsxs)('div', {
                             className: m.spanCorrection,
                             children: [
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(r.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
                                     className: m.username,
                                     children: E.Z.Messages.GUILD_AUTOMOD_USERNAME
                                 }),
-                                (0, i.jsx)(r.Z, {
+                                (0, i.jsx)(l.Z, {
                                     type: _.Hb.SYSTEM_DM,
                                     className: m.systemTag
                                 })

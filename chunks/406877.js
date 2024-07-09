@@ -3,7 +3,7 @@ n.d(t, {
         return c;
     }
 }), n(47120);
-var i = n(470079), a = n(668781), s = n(881052), l = n(824389), r = n(179838), o = n(689938);
+var i = n(470079), a = n(668781), s = n(881052), r = n(824389), l = n(179838), o = n(689938);
 function c(e, t) {
     let [n, c] = i.useState(!1);
     return {
@@ -12,12 +12,12 @@ function c(e, t) {
             if (null != e && null != t) {
                 c(!0);
                 try {
-                    let {url: i} = await l.gs({
+                    let {url: i} = await r.gs({
                         guildId: e,
                         productId: t,
                         attachmentId: n
                     });
-                    await r.L(i);
+                    await l.L(i);
                 } catch (t) {
                     let e = t instanceof s.Hx ? t.getAnyErrorMessage() : void 0;
                     a.Z.show({

@@ -1,15 +1,15 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(780384), c = n(481060), d = n(230711), u = n(358221), _ = n(594190), E = n(687516), m = n(210887), I = n(937995), T = n(158776), h = n(594174), N = n(617136), p = n(272008), f = n(113434), C = n(569984), g = n(497505), S = n(918701), A = n(5881), x = n(566078), O = n(602667), R = n(340100), M = n(611855), v = n(644646), L = n(670638), Z = n(667105), P = n(860151), b = n(46140), D = n(981631), j = n(354459), U = n(689938), y = n(630706);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(780384), c = n(481060), d = n(230711), u = n(358221), _ = n(594190), E = n(687516), m = n(210887), I = n(937995), T = n(158776), h = n(594174), N = n(617136), p = n(272008), f = n(113434), C = n(569984), g = n(497505), S = n(918701), A = n(5881), x = n(566078), R = n(602667), O = n(340100), M = n(611855), v = n(644646), L = n(670638), Z = n(667105), P = n(860151), b = n(46140), D = n(981631), j = n(354459), U = n(689938), y = n(630706);
 t.Z = function (e) {
     var t, n, s;
     let {
             channelId: B,
             previewQuest: k,
             isParticipatingOverride: G
-        } = e, [F, w] = a.useState(!1), V = a.useCallback(() => w(!0), []), H = a.useCallback(() => w(!1), []), Y = a.useContext(I.h9), W = (0, r.e7)([h.default], () => h.default.getCurrentUser()), z = (0, r.e7)([m.Z], () => m.Z.getState().theme), K = (0, o.wj)(z) ? D.BRd.DARK : D.BRd.LIGHT, {
+        } = e, [F, w] = a.useState(!1), V = a.useCallback(() => w(!0), []), H = a.useCallback(() => w(!1), []), Y = a.useContext(I.h9), W = (0, l.e7)([h.default], () => h.default.getCurrentUser()), z = (0, l.e7)([m.Z], () => m.Z.getState().theme), K = (0, o.wj)(z) ? D.BRd.DARK : D.BRd.LIGHT, {
             isCurrentUserStreamingQuestApplication: Q,
             quest: q
-        } = (0, r.cj)([
+        } = (0, l.cj)([
             T.Z,
             u.Z,
             C.Z
@@ -50,13 +50,13 @@ t.Z = function (e) {
             B,
             W,
             k
-        ]), X = null != q ? x.r.build(q.config) : null, J = null == X ? void 0 : X.application.id, $ = (0, r.cj)([_.ZP], () => {
+        ]), X = null != q ? x.r.build(q.config) : null, J = null == X ? void 0 : X.application.id, $ = (0, l.cj)([_.ZP], () => {
             let e = _.ZP.getRunningGames().map(e => e.id);
             return (0, S.$H)(q) && e.includes(J);
         }, [
             q,
             J
-        ]), ee = !0 === G || Q || $, et = (0, r.e7)([C.Z], () => null != q && C.Z.isEnrolling(q.id), [q]), en = (0, r.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [
+        ]), ee = !0 === G || Q || $, et = (0, l.e7)([C.Z], () => null != q && C.Z.isEnrolling(q.id), [q]), en = (0, l.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [
             B,
             W
         ]), ei = (0, f.B6)(null == q ? void 0 : q.config.expiresAt), ea = (0, f.B6)(null == X ? void 0 : X.rewardsExpireAt), es = a.useCallback(() => {
@@ -64,13 +64,13 @@ t.Z = function (e) {
                 questContent: g.jn.QUEST_LIVE_STREAM,
                 questContentCTA: N.jZ.ACCEPT_QUEST
             });
-        }, [q]), el = a.useCallback(() => {
+        }, [q]), er = a.useCallback(() => {
             null != q && ((0, N._3)({
                 questId: q.id,
                 questContent: g.jn.QUEST_LIVE_STREAM,
                 questContentCTA: N.jZ.TRACK_PROGRESS
             }), d.Z.open(D.oAB.INVENTORY));
-        }, [q]), er = a.useCallback(() => {
+        }, [q]), el = a.useCallback(() => {
             null != q && ((0, N._3)({
                 questId: q.id,
                 questContent: g.jn.QUEST_LIVE_STREAM,
@@ -101,14 +101,14 @@ t.Z = function (e) {
             quest: q,
             questContent: g.jn.QUEST_LIVE_STREAM
         });
-    return (0, i.jsx)(O.A, {
+    return (0, i.jsx)(R.A, {
         questOrQuests: q,
         overrideVisibility: !Y,
         questContent: g.jn.QUEST_LIVE_STREAM,
         children: () => {
             var e;
             return (0, i.jsxs)('div', {
-                className: l()(y.wrapper, { [y.wrapperAccepted]: eu }),
+                className: r()(y.wrapper, { [y.wrapperAccepted]: eu }),
                 onFocus: V,
                 onMouseEnter: V,
                 onBlur: H,
@@ -192,7 +192,7 @@ t.Z = function (e) {
                                                 color: c.Button.Colors.PRIMARY,
                                                 fullWidth: !0,
                                                 size: c.Button.Sizes.SMALL,
-                                                onClick: er,
+                                                onClick: el,
                                                 children: U.Z.Messages.QUESTS_LEARN_MORE_V2
                                             }),
                                             (0, i.jsx)(c.Button, {
@@ -206,7 +206,7 @@ t.Z = function (e) {
                                             })
                                         ]
                                     }),
-                                    eu && !e_ && ee && (0, i.jsx)(R.Z, {
+                                    eu && !e_ && ee && (0, i.jsx)(O.Z, {
                                         color: c.tokens.colors.BG_BRAND,
                                         quest: q
                                     }),
@@ -214,7 +214,7 @@ t.Z = function (e) {
                                         className: y.cta,
                                         color: c.Button.Colors.BRAND,
                                         fullWidth: !0,
-                                        onClick: el,
+                                        onClick: er,
                                         size: c.Button.Sizes.SMALL,
                                         children: U.Z.Messages.QUESTS_CHECK_PROGRESS
                                     }),

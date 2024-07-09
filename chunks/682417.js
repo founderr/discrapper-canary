@@ -3,10 +3,10 @@ n.d(t, {
         return u;
     }
 });
-var i = n(106351), a = n(131704), s = n(23750), l = n(598077), r = n(592125), o = n(375954), c = n(594174), d = n(981631);
+var i = n(106351), a = n(131704), s = n(23750), r = n(598077), l = n(592125), o = n(375954), c = n(594174), d = n(981631);
 function u(e) {
     var t, n, u;
-    let _ = o.Z.getMessage(e.channelId, e.messageId), E = c.default.getUser(e.authorId), m = r.Z.getChannel(e.channelId), I = null != E ? E : new l.Z({
+    let _ = o.Z.getMessage(e.channelId, e.messageId), E = c.default.getUser(e.authorId), m = l.Z.getChannel(e.channelId), I = null != E ? E : new r.Z({
             id: e.authorId,
             username: e.authorSummary
         }), T = new s.ZP({

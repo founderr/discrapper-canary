@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return l;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(607070), l = n(979993);
-function r(e) {
+var a = n(442837), s = n(607070), r = n(979993);
+function l(e) {
     let {
             guildId: t,
             user: n,
-            className: r
+            className: l
         } = e, o = (0, a.e7)([s.Z], () => !s.Z.useReducedMotion), c = n.getAvatarURL(t, 56, o), d = (0, i.jsx)('foreignObject', {
             x: '30',
             y: '68',
@@ -19,19 +19,19 @@ function r(e) {
             transform: 'skewX(12)',
             children: (0, i.jsx)('img', {
                 src: c,
-                className: l.userAvatar,
+                className: r.userAvatar,
                 alt: ''
             })
         });
     return (0, i.jsx)('div', {
-        className: r,
+        className: l,
         children: (0, i.jsxs)('svg', {
             width: '128',
             height: '200',
             viewBox: '0 0 128 200',
             fill: 'none',
             xmlns: 'http://www.w3.org/2000/svg',
-            className: l.svg,
+            className: r.svg,
             children: [
                 (0, i.jsx)('path', {
                     fillRule: 'evenodd',

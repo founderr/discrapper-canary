@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(499033), l = n(689938), r = n(371965);
+var a = n(481060), s = n(499033), r = n(689938), l = n(371965);
 function o(e) {
     let {
         Icon: t,
@@ -14,23 +14,23 @@ function o(e) {
         disableStars: c
     } = e;
     return (0, i.jsxs)('div', {
-        className: r.container,
+        className: l.container,
         children: [
             (0, i.jsxs)('div', {
-                className: r.iconContainer,
+                className: l.iconContainer,
                 children: [
                     (0, i.jsx)(t, {
                         color: 'currentColor',
                         size: 'custom',
-                        className: r.icon,
+                        className: l.icon,
                         width: 36,
                         height: 36
                     }),
-                    c ? null : (0, i.jsx)(s.Z, { className: r.stars })
+                    c ? null : (0, i.jsx)(s.Z, { className: l.stars })
                 ]
             }),
             (0, i.jsx)(a.Heading, {
-                className: r.header,
+                className: l.header,
                 variant: 'heading-xl/semibold',
                 children: n
             }),
@@ -40,11 +40,11 @@ function o(e) {
                 children: [
                     c ? null : (0, i.jsxs)(a.Text, {
                         tag: 'span',
-                        className: r.protip,
+                        className: l.protip,
                         variant: 'text-xs/bold',
                         color: 'text-positive',
                         children: [
-                            l.Z.Messages.FORM_LABEL_ROLES_PRO_TIP,
+                            r.Z.Messages.FORM_LABEL_ROLES_PRO_TIP,
                             ':',
                             ' '
                         ]

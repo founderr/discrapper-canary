@@ -6,7 +6,7 @@ n.d(t, {
         return c;
     },
     X2: function () {
-        return r;
+        return l;
     },
     Zv: function () {
         return _;
@@ -21,7 +21,7 @@ n.d(t, {
         return s;
     },
     n4: function () {
-        return l;
+        return r;
     },
     oL: function () {
         return u;
@@ -33,15 +33,15 @@ let a = [
         'PLAYSTATION',
         'SWITCH',
         'PC'
-    ], s = 25920000, l = 'https://support.discord.com/hc/en-us/articles/9146392276375', r = { FORTNITE: 'FORTNITE' }, o = {
+    ], s = 25920000, r = 'https://support.discord.com/hc/en-us/articles/9146392276375', l = { FORTNITE: 'FORTNITE' }, o = {
         STREAM_CTA: 'STREAM_CTA',
         LOADING_INITIAL_PROGRESS: 'LOADING_INITIAL_PROGRESS',
         TRACK_PROGRESS: 'TRACK_PROGRESS',
         QUEST_COMPLETION: 'QUEST_COMPLETION'
     }, c = { FORTNITE: ['Fortnite'] }, d = 'YYYY-MM-DD HH:mm', u = '1022633972510752774', _ = {
-        [r.FORTNITE]: {
+        [l.FORTNITE]: {
             title: 'Fortnite',
-            gameSearchTerm: c[r.FORTNITE],
+            gameSearchTerm: c[l.FORTNITE],
             assets: {
                 iconSrc: n(569655),
                 tooltipSrc: n(836110),
@@ -52,7 +52,7 @@ let a = [
             endDate: '2023-05-22 23:59',
             finalClaimDate: '2023-5-29 08:00',
             dropsNoticeBannerDurationDays: 3,
-            articleUrl: l,
+            articleUrl: r,
             messages: {
                 claimTip: () => i.Z.Messages.FORTNITE_REDEMPTION_TIP.format({ learnMoreUrl: 'https://discord.com/blog/fortnite-quest' }),
                 giftInfo: () => i.Z.Messages.FORTNITE_GIFT_INVENTORY_INFO.format({

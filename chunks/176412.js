@@ -6,7 +6,7 @@ t.d(n, {
         return E;
     }
 });
-var i = t(470079), l = t(392711), a = t(481060), r = t(2052), s = t(542094), o = t(513202), c = t(367907), u = t(499254), d = t(541099), m = t(827498), _ = t(981631), p = t(689938);
+var i = t(470079), l = t(392711), a = t(481060), r = t(2052), s = t(542094), o = t(513202), c = t(367907), u = t(499254), d = t(541099), m = t(827498), p = t(981631), _ = t(689938);
 function E(e, n, t, i) {
     var l;
     let E = (0, r.O)(), A = (0, s.Qv)({
@@ -20,7 +20,7 @@ function E(e, n, t, i) {
             locationObject: E.location,
             onActivityItemSelectedProp: e => {
                 let {applicationId: n} = e, l = d.Z.entrypoint();
-                u.y(m.ti.ACTIVITY), (0, c.yw)(_.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                u.y(m.ti.ACTIVITY), (0, c.yw)(p.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                     location: t,
                     application_id: n,
                     section_name: i,
@@ -28,17 +28,17 @@ function E(e, n, t, i) {
                     source: l
                 });
             }
-        }), h = a.ButtonColors.BRAND, C = p.Z.Messages.LAUNCH;
-    return A === s.JS.JOIN ? (h = a.ButtonColors.GREEN, C = p.Z.Messages.JOIN_ACTIVITY) : A === s.JS.LEAVE && (h = a.ButtonColors.RED, C = p.Z.Messages.LEAVE), {
+        }), h = a.ButtonColors.BRAND, f = _.Z.Messages.LAUNCH;
+    return A === s.JS.JOIN ? (h = a.ButtonColors.GREEN, f = _.Z.Messages.JOIN_ACTIVITY) : A === s.JS.LEAVE && (h = a.ButtonColors.RED, f = _.Z.Messages.LEAVE), {
         onActivityItemSelected: N,
         activityAction: A,
         buttonColor: h,
-        buttonText: C
+        buttonText: f
     };
 }
 function A(e, n) {
     let t = d.Z.entrypoint(), a = i.useMemo(() => (0, l.debounce)((e, n) => {
-            (0, c.yw)(_.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+            (0, c.yw)(p.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                 type: e,
                 source: n
             });

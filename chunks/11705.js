@@ -5,7 +5,7 @@ n.d(t, {
 }), n(47120);
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(765400), l = n(937615), r = n(817460), o = n(290348), c = n(367719), d = n(882101), u = n(689938), _ = n(275520);
+var a = n(481060), s = n(765400), r = n(937615), l = n(817460), o = n(290348), c = n(367719), d = n(882101), u = n(689938), _ = n(275520);
 let E = e => {
     let {
             listingId: t,
@@ -29,10 +29,10 @@ let E = e => {
                                 variant: 'text-xs/normal',
                                 className: _.tierPrice,
                                 children: [
-                                    (0, l.T4)(N.price, N.currency),
+                                    (0, r.T4)(N.price, N.currency),
                                     ' ',
                                     u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
-                                        period: (0, r.JE)({
+                                        period: (0, l.JE)({
                                             interval: N.interval,
                                             interval_count: N.interval_count
                                         })

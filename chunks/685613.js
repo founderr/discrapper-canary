@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i, a, s = n(735250);
 n(470079);
-var l = n(120356), r = n.n(l), o = n(780384), c = n(918701), d = n(78826), u = n(981631), _ = n(272467);
+var r = n(120356), l = n.n(r), o = n(780384), c = n(918701), d = n(78826), u = n(981631), _ = n(272467);
 (i = a || (a = {}))[i.SMALL = 24] = 'SMALL', i[i.MEDIUM = 32] = 'MEDIUM';
 t.Z = function (e) {
     let {
@@ -13,12 +13,12 @@ t.Z = function (e) {
             gameTileSize: n = 24,
             quest: i,
             theme: a = u.BRd.DARK,
-            withGameTile: l = !0
+            withGameTile: r = !0
         } = e, E = (0, o.wj)(a) ? u.BRd.DARK : u.BRd.LIGHT;
     return (0, s.jsxs)('div', {
-        className: r()(_.partnerBranding, t),
+        className: l()(_.partnerBranding, t),
         children: [
-            l && (0, s.jsx)(d.Fl, {
+            r && (0, s.jsx)(d.Fl, {
                 id: 'QuestPartnerBranding_gameTile',
                 children: e => (0, s.jsx)('img', {
                     ref: e,

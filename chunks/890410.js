@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(739566), r = n(492593), o = n(930282), c = n(464891), d = n(444190);
+var a = n(120356), s = n.n(a), r = n(739566), l = n(492593), o = n(930282), c = n(464891), d = n(444190);
 function u(e) {
     let {
             message: t,
@@ -17,10 +17,10 @@ function u(e) {
             hideTimestamp: m = !1,
             withFooter: I = !1,
             ...T
-        } = e, h = (0, l.ZP)(t);
+        } = e, h = (0, r.ZP)(t);
     return (0, i.jsx)('div', {
         className: s()({ [d.withFooter]: I }, d.embedCard, { [d.compact]: _ }, u),
-        children: (0, i.jsx)(r.Z, {
+        children: (0, i.jsx)(l.Z, {
             ...T,
             className: s()(d.messageContainer, { [d.compact]: _ }),
             childrenMessageContent: (0, i.jsx)(o.ZP, {

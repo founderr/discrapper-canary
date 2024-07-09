@@ -5,35 +5,35 @@ n.d(t, {
 }), n(47120);
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(481060), r = n(454585), o = n(529815), c = n(702346), d = n(553385), u = n(981631), _ = n(689938), E = n(969361);
+var a = n(120356), s = n.n(a), r = n(481060), l = n(454585), o = n(529815), c = n(702346), d = n(553385), u = n(981631), _ = n(689938), E = n(969361);
 function m(e) {
     let {
             message: t,
             channel: a,
-            compact: r
+            compact: l
         } = e, o = null != t.embeds && t.embeds.length > 0;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(c.Z, {
-                className: s()(E.mainContainer, { [E.compact]: r }),
+                className: s()(E.mainContainer, { [E.compact]: l }),
                 icon: n(570111),
-                compact: r,
+                compact: l,
                 children: (0, i.jsx)('div', {
-                    className: s()(E.__invalid_content, { [E.compact]: r }),
+                    className: s()(E.__invalid_content, { [E.compact]: l }),
                     children: (0, i.jsx)('div', {
-                        className: s()(E.__invalid_messageContent, { [E.compact]: r }),
+                        className: s()(E.__invalid_messageContent, { [E.compact]: l }),
                         children: t.content
                     })
                 })
             }),
             (0, i.jsx)('div', {
-                className: s()(E.__invalid_embedContent, { [E.compact]: r }),
+                className: s()(E.__invalid_embedContent, { [E.compact]: l }),
                 children: (0, i.jsx)(I, { message: t })
             }),
             (0, i.jsx)('div', {
                 className: E.actions,
-                children: (0, i.jsx)(l.Button, {
-                    color: l.Button.Colors.PRIMARY,
+                children: (0, i.jsx)(r.Button, {
+                    color: r.Button.Colors.PRIMARY,
                     onClick: () => {
                         o ? (0, d.z$)(t) : (0, d.XP)(a.guild_id, a.id, t.id);
                     },
@@ -49,8 +49,8 @@ function I(e) {
     return null == a ? null : (0, i.jsx)(o.ZP, {
         className: E.embed,
         embed: a,
-        renderTitle: (e, t) => r.Z.parseEmbedTitle(t, !0, { channelId: n.channel_id }),
-        renderDescription: (e, t, i) => r.Z.parse(t, !0, { channelId: n.channel_id }),
+        renderTitle: (e, t) => l.Z.parseEmbedTitle(t, !0, { channelId: n.channel_id }),
+        renderDescription: (e, t, i) => l.Z.parse(t, !0, { channelId: n.channel_id }),
         autoPlayGif: !1,
         renderImageComponent: u.VqG,
         renderVideoComponent: u.VqG,

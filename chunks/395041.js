@@ -1,9 +1,9 @@
 n.d(t, {
     O: function () {
-        return r;
+        return l;
     },
     w: function () {
-        return l;
+        return r;
     }
 });
 var i = n(735250);
@@ -16,4 +16,4 @@ function s(e, t) {
         children: n
     });
 }
-let l = e => s(e, a.searchFilter), r = e => s(e, a.searchAnswer);
+let r = e => s(e, a.searchFilter), l = e => s(e, a.searchAnswer);

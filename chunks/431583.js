@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
         return L;
     }
 }), n(47120);
-var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(525654), d = n.n(c), u = n(873546), _ = n(213919), E = n(442837), m = n(481060), I = n(391650), T = n(314897), h = n(594174), N = n(153124), p = n(626135), f = n(361207), C = n(792125), g = n(981631), S = n(689938), A = n(59384);
+var i, a, s = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(525654), d = n.n(c), u = n(873546), _ = n(213919), E = n(442837), m = n(481060), I = n(391650), T = n(314897), h = n(594174), N = n(153124), p = n(626135), f = n(361207), C = n(792125), g = n(981631), S = n(689938), A = n(59384);
 (a = i || (i = {}))[a.OSX = 0] = 'OSX', a[a.WINDOWS = 1] = 'WINDOWS', a[a.LINUX = 2] = 'LINUX', a[a.IOS = 3] = 'IOS', a[a.ANDROID = 4] = 'ANDROID';
 let x = [
         {
@@ -33,7 +33,7 @@ let x = [
             ],
             platformKey: 2
         }
-    ], O = [
+    ], R = [
         {
             getOs: () => S.Z.Messages.PLATFORM_IOS,
             icon: A.ios,
@@ -46,7 +46,7 @@ let x = [
             url: () => g.fzT.ANDROID,
             platformKey: 4
         }
-    ], R = (0, C.Q)(g.BRd.LIGHT), M = e => {
+    ], O = (0, C.Q)(g.BRd.LIGHT), M = e => {
         let {
             url: t,
             text: n,
@@ -64,8 +64,8 @@ let x = [
                 platform: n,
                 onClick: i,
                 onMouseEnter: a,
-                isActive: l,
-                claimed: r
+                isActive: r,
+                claimed: l
             } = e, {
                 getOs: c,
                 icon: d,
@@ -74,7 +74,7 @@ let x = [
             } = n, E = c(), I = o()(A.icon, d);
         if (Array.isArray(u))
             t = u.map((e, t) => {
-                let n = r ? e.url() : '';
+                let n = l ? e.url() : '';
                 return (0, s.jsx)(M, {
                     url: n,
                     onClick: () => i(E),
@@ -82,7 +82,7 @@ let x = [
                 }, ''.concat(n, '-').concat(t));
             });
         else {
-            let e = r ? u() : void 0;
+            let e = l ? u() : void 0;
             t = (0, s.jsx)(M, {
                 url: e,
                 onClick: () => i(E),
@@ -90,7 +90,7 @@ let x = [
             });
         }
         return (0, s.jsx)('li', {
-            className: o()(A.platform, { [A.active]: l }),
+            className: o()(A.platform, { [A.active]: r }),
             onMouseEnter: () => a(_),
             children: (0, s.jsxs)('div', {
                 className: A.contentWrapper,
@@ -124,7 +124,7 @@ function L(e) {
             source: t,
             onClose: n,
             transitionState: i
-        } = e, a = (0, E.e7)([h.default], () => h.default.getCurrentUser()), r = (0, E.e7)([T.default], () => T.default.getFingerprint()), c = null == a || a.isClaimed(), [f, C] = l.useState(function () {
+        } = e, a = (0, E.e7)([h.default], () => h.default.getCurrentUser()), l = (0, E.e7)([T.default], () => T.default.getFingerprint()), c = null == a || a.isClaimed(), [f, C] = r.useState(function () {
             var e;
             switch (null === (e = d().os) || void 0 === e ? void 0 : e.family) {
             case 'OS X':
@@ -147,7 +147,7 @@ function L(e) {
             }
         }());
     function M(e) {
-        (null != _.getToken() || null != r) && p.default.track(g.rMx.DOWNLOAD_APP, {
+        (null != _.getToken() || null != l) && p.default.track(g.rMx.DOWNLOAD_APP, {
             platform: e,
             ptb: !1,
             released: !0,
@@ -159,7 +159,7 @@ function L(e) {
     function L(e) {
         C(e);
     }
-    l.useEffect(() => {
+    r.useEffect(() => {
         p.default.track(g.rMx.OPEN_MODAL, {
             type: 'Download App',
             source: { location: t }
@@ -167,7 +167,7 @@ function L(e) {
     }, [t]);
     let Z = (0, N.Dt)();
     return (0, s.jsx)(m.ModalRoot, {
-        className: o()(A.downloadApps, R),
+        className: o()(A.downloadApps, O),
         transitionState: i,
         'aria-labelledby': Z,
         children: (0, s.jsx)('div', {
@@ -217,7 +217,7 @@ function L(e) {
                             children: [
                                 (0, s.jsx)('ul', {
                                     className: A.platforms,
-                                    children: O.map(e => (0, s.jsx)(v, {
+                                    children: R.map(e => (0, s.jsx)(v, {
                                         isActive: f === e.platformKey,
                                         platform: e,
                                         onClick: M,

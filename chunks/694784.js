@@ -3,14 +3,14 @@ n.d(t, {
         return c;
     }
 });
-var i = n(749210), a = n(336197), s = n(592125), l = n(430824), r = n(900849), o = n(981631);
+var i = n(749210), a = n(336197), s = n(592125), r = n(430824), l = n(900849), o = n(981631);
 async function c(e) {
     if (null == e.messageReference)
         return;
     let t = e.messageReference.guild_id, n = e.messageReference.channel_id, c = s.Z.getChannel(n), d = !1;
-    if (null == c && null != t && null == l.Z.getGuild(t))
+    if (null == c && null != t && null == r.Z.getGuild(t))
         try {
-            await (0, r.Ub)(t, { object: o.qAy.FORWARD_BREADCRUMB }, { shouldNavigate: !1 }), d = !0, await (0, i.V)(t), c = s.Z.getChannel(n);
+            await (0, l.Ub)(t, { object: o.qAy.FORWARD_BREADCRUMB }, { shouldNavigate: !1 }), d = !0, await (0, i.V)(t), c = s.Z.getChannel(n);
         } catch {
         }
     let u = d ? n : void 0;

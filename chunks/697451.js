@@ -3,14 +3,14 @@ n.d(t, {
         return M;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r), c = n(913527), d = n.n(c), u = n(481060), _ = n(595519), E = n(566620), m = n(403404), I = n(100527), T = n(906732), h = n(103575), N = n(768581), p = n(55935), f = n(739566), C = n(421399), g = n(310423), S = n(223021), A = n(981631), x = n(689938), O = n(475525);
-function R(e) {
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(913527), d = n.n(c), u = n(481060), _ = n(595519), E = n(566620), m = n(403404), I = n(100527), T = n(906732), h = n(103575), N = n(768581), p = n(55935), f = n(739566), C = n(421399), g = n(310423), S = n(223021), A = n(981631), x = n(689938), R = n(475525);
+function O(e) {
     let {
         width: t = 6,
         height: n = 10,
         color: a = 'currentColor',
         className: s,
-        foreground: l
+        foreground: r
     } = e;
     return (0, i.jsx)('svg', {
         className: s,
@@ -21,7 +21,7 @@ function R(e) {
         xmlns: 'http://www.w3.org/2000/svg',
         children: (0, i.jsx)('path', {
             d: 'M4.61241 0L6 0.845294L1.38759 10L0 9.15471L4.61241 0Z',
-            className: l,
+            className: r,
             fill: a
         })
     });
@@ -31,28 +31,28 @@ function M(e) {
     let n;
     let {
             message: s,
-            channel: r
-        } = e, {analyticsLocations: c} = (0, T.ZP)(I.Z.EXECUTED_COMMAND), M = a.useMemo(() => (e, t, n) => (o()(null != r && null != t, 'ExecuteCommand: user and channel cannot be undefined'), (0, i.jsx)(h.Z, {
+            channel: l
+        } = e, {analyticsLocations: c} = (0, T.ZP)(I.Z.EXECUTED_COMMAND), M = a.useMemo(() => (e, t, n) => (o()(null != l && null != t, 'ExecuteCommand: user and channel cannot be undefined'), (0, i.jsx)(h.Z, {
             ...e,
             location: 'ExecutedCommand',
-            channelId: r.id,
+            channelId: l.id,
             messageId: s.id,
-            guildId: r.guild_id,
+            guildId: l.guild_id,
             userId: t.id,
             newAnalyticsLocations: n
         })), [
-            r,
+            l,
             s.id
-        ]), v = a.useMemo(() => e => (o()(null != r, 'ExecutedCommand: channel cannot be null'), (0, i.jsx)(g.Z, {
+        ]), v = a.useMemo(() => e => (o()(null != l, 'ExecutedCommand: channel cannot be null'), (0, i.jsx)(g.Z, {
             ...e,
-            channel: r,
+            channel: l,
             messageId: s.id,
             interactionData: s.interactionData
         })), [
-            r,
+            l,
             s.id,
             s.interactionData
-        ]), L = (0, f.Sw)(null === (t = s.interaction) || void 0 === t ? void 0 : t.user, r), Z = a.useMemo(() => e.compact ? (0, S.Z)((0, p.vc)(d()(), 'LT')) : null, [e.compact]), P = (0, _.NX)(r.id, !0), b = s.interaction;
+        ]), L = (0, f.Sw)(null === (t = s.interaction) || void 0 === t ? void 0 : t.user, l), Z = a.useMemo(() => e.compact ? (0, S.Z)((0, p.vc)(d()(), 'LT')) : null, [e.compact]), P = (0, _.NX)(l.id, !0), b = s.interaction;
     if (null == b || null == L)
         return null;
     let D = () => {
@@ -60,7 +60,7 @@ function M(e) {
                 let n, {
                         message: a,
                         compact: s,
-                        channel: r,
+                        channel: l,
                         isInteractionUserBlocked: o,
                         showAvatarPopout: c,
                         onClickAvatar: d,
@@ -69,16 +69,16 @@ function M(e) {
                     } = e;
                 if (s && null == a.activityInstance || o)
                     return (0, i.jsx)('div', {
-                        className: O.replyBadge,
-                        children: (0, i.jsx)(R, { className: O.commandIcon })
+                        className: R.replyBadge,
+                        children: (0, i.jsx)(O, { className: R.commandIcon })
                     });
                 if (null != a.interaction) {
                     var m, I, T;
-                    let e = (0, f.ij)(a.interaction.user, r);
+                    let e = (0, f.ij)(a.interaction.user, l);
                     n = null !== (T = N.ZP.getGuildMemberAvatarURL({
                         avatar: null !== (m = e.guildMemberAvatar) && void 0 !== m ? m : void 0,
                         userId: a.interaction.user.id,
-                        guildId: null !== (I = null == r ? void 0 : r.guild_id) && void 0 !== I ? I : ''
+                        guildId: null !== (I = null == l ? void 0 : l.guild_id) && void 0 !== I ? I : ''
                     })) && void 0 !== T ? T : void 0;
                 }
                 let h = () => null != a.interaction && function (e) {
@@ -87,23 +87,23 @@ function M(e) {
                         guildId: n,
                         guildAvatar: a,
                         onClick: s,
-                        onContextMenu: r,
+                        onContextMenu: l,
                         onMouseDown: o
                     } = e;
                     return (0, i.jsx)('img', {
                         alt: '',
                         src: null != a ? a : t.getAvatarURL(n, 16),
                         onClick: s,
-                        onContextMenu: r,
+                        onContextMenu: l,
                         onMouseDown: o,
-                        className: l()({
-                            [O.executedCommandAvatar]: !0,
-                            [O.clickable]: null != s
+                        className: r()({
+                            [R.executedCommandAvatar]: !0,
+                            [R.clickable]: null != s
                         })
                     });
                 }({
                     user: a.interaction.user,
-                    guildId: r.guild_id,
+                    guildId: l.guild_id,
                     guildAvatar: n,
                     onClick: d,
                     onContextMenu: _
@@ -119,8 +119,8 @@ function M(e) {
                 var a;
                 let {
                     message: s,
-                    channel: l,
-                    showUsernamePopout: r,
+                    channel: r,
+                    showUsernamePopout: l,
                     onClickUsername: o,
                     onUserContextMenu: c,
                     onPopoutRequestClose: d
@@ -129,9 +129,9 @@ function M(e) {
                     compact: !0,
                     author: t,
                     message: s,
-                    channel: l,
+                    channel: r,
                     userOverride: null === (a = s.interaction) || void 0 === a ? void 0 : a.user,
-                    showPopout: r,
+                    showPopout: l,
                     renderPopout: n,
                     onClick: o,
                     onContextMenu: c,
@@ -148,10 +148,10 @@ function M(e) {
     if ((null == s ? void 0 : s.activityInstance) !== null) {
         let e = () => {
             (0, m.Z)({
-                channel: r,
-                guildId: r.guild_id,
+                channel: l,
+                guildId: l.guild_id,
                 locationObject: {
-                    page: r.isPrivate() ? A.ZY5.DM_CHANNEL : A.ZY5.GUILD_CHANNEL,
+                    page: l.isPrivate() ? A.ZY5.DM_CHANNEL : A.ZY5.GUILD_CHANNEL,
                     section: A.jXE.CHANNEL_TEXT_AREA,
                     object: A.qAy.APP_COMMAND,
                     objectType: A.Qqv.ACTIVITY
@@ -159,7 +159,7 @@ function M(e) {
                 openInPopout: !1,
                 enableSelectedTextChannelInvite: !0,
                 analyticsLocations: c
-            }), (0, E.w1)({ guildId: r.guild_id });
+            }), (0, E.w1)({ guildId: l.guild_id });
         };
         n = P ? x.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
             userHook: D,
@@ -167,7 +167,7 @@ function M(e) {
                 tag: 'span',
                 onClick: e,
                 children: (0, i.jsx)('div', {
-                    className: l()(O.commandName, O.clickable),
+                    className: r()(R.commandName, R.clickable),
                     children: x.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
                 })
             })
@@ -181,14 +181,14 @@ function M(e) {
                             showDataPopout: n,
                             message: a,
                             onClickCommand: s,
-                            onPopoutRequestClose: r
+                            onPopoutRequestClose: l
                         } = e, o = a.interaction.displayName;
                     return (0, i.jsx)(u.Popout, {
                         renderPopout: t,
                         shouldShow: n,
                         position: 'top',
                         align: 'center',
-                        onRequestClose: r,
+                        onRequestClose: l,
                         animation: u.Popout.Animation.FADE,
                         positionKey: null != a.interactionData ? 'ready' : 'loading',
                         children: e => {
@@ -201,20 +201,20 @@ function M(e) {
                                 tag: 'span',
                                 onClick: s,
                                 children: (0, i.jsxs)('div', {
-                                    className: l()(O.appLauncherOnboardingCommandName, O.clickable),
+                                    className: r()(R.appLauncherOnboardingCommandName, R.clickable),
                                     children: [
                                         (0, i.jsx)(u.AppsIcon, {
                                             size: 'custom',
                                             color: 'currentColor',
                                             height: 10,
                                             width: 10,
-                                            className: O.appsIcon
+                                            className: R.appsIcon
                                         }),
                                         o
                                     ]
                                 })
                             }) : (0, i.jsx)('div', {
-                                className: O.commandName,
+                                className: R.commandName,
                                 children: o
                             });
                         }
@@ -226,7 +226,7 @@ function M(e) {
     return (0, i.jsx)(T.Gt, {
         value: c,
         children: (0, i.jsx)('div', {
-            className: l()(O.repliedMessage, O.executedCommand, Z),
+            className: r()(R.repliedMessage, R.executedCommand, Z),
             'aria-hidden': !e.compact,
             children: n
         })

@@ -1,18 +1,18 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return l;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(702346), s = n(352736), l = n(739566);
-function r(e) {
+var a = n(702346), s = n(352736), r = n(739566);
+function l(e) {
     let {
             message: t,
-            usernameHook: r,
+            usernameHook: l,
             compact: o,
             guildId: c
-        } = e, d = (0, l.ZP)(t), u = r(d), _ = s.Z.getWelcomeMessageKind(c), E = s.Z.getSystemMessageUserJoin(t.id, _).format({
+        } = e, d = (0, r.ZP)(t), u = l(d), _ = s.Z.getWelcomeMessageKind(c), E = s.Z.getSystemMessageUserJoin(t.id, _).format({
             username: d.nick,
             usernameHook: u
         });

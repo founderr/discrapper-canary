@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(91192), r = n(442837), o = n(481060), c = n(788307), d = n(43267), u = n(933557), _ = n(471445), E = n(199902), m = n(592125), I = n(430824), T = n(158776), h = n(594174), N = n(2093), p = n(346656), f = n(153124), C = n(689938), g = n(444771);
+var a = n(120356), s = n.n(a), r = n(91192), l = n(442837), o = n(481060), c = n(788307), d = n(43267), u = n(933557), _ = n(471445), E = n(199902), m = n(592125), I = n(430824), T = n(158776), h = n(594174), N = n(2093), p = n(346656), f = n(153124), C = n(689938), g = n(444771);
 let S = {
     top: 8,
     bottom: 8,
@@ -18,9 +18,9 @@ function A(e) {
             children: n,
             gotoChannel: a,
             mentionCount: s,
-            channelState: r,
+            channelState: l,
             toggleCollapsed: c
-        } = e, d = (0, l.JA)('recents-header-'.concat(t.id, '-').concat((0, f.Dt)()));
+        } = e, d = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, f.Dt)()));
     return (0, i.jsx)(o.FocusRing, {
         offset: S,
         children: (0, i.jsxs)('div', {
@@ -29,7 +29,7 @@ function A(e) {
             tabIndex: 0,
             'data-recents-channel': t.id,
             onKeyDown: function (e) {
-                null != c && null != r && ('ArrowRight' === e.key && r.collapsed || 'ArrowLeft' === e.key && !r.collapsed) && (null == c || c(r));
+                null != c && null != l && ('ArrowRight' === e.key && l.collapsed || 'ArrowLeft' === e.key && !l.collapsed) && (null == c || c(l));
             },
             children: [
                 (0, i.jsx)(x, {
@@ -51,19 +51,19 @@ function x(e) {
         channel: t,
         gotoChannel: n
     } = e;
-    return t.isPrivate() ? (0, i.jsx)(O, {
+    return t.isPrivate() ? (0, i.jsx)(R, {
         channel: t,
         gotoChannel: n
-    }) : (0, i.jsx)(R, {
+    }) : (0, i.jsx)(O, {
         channel: t,
         gotoChannel: n
     });
 }
-function O(e) {
+function R(e) {
     let {
             channel: t,
             gotoChannel: n
-        } = e, a = (0, r.e7)([h.default], () => t.isDM() ? h.default.getUser(t.getRecipientId()) : null), s = null == a ? (0, d.x)(t) : a.getAvatarURL(void 0, 40);
+        } = e, a = (0, l.e7)([h.default], () => t.isDM() ? h.default.getUser(t.getRecipientId()) : null), s = null == a ? (0, d.x)(t) : a.getAvatarURL(void 0, 40);
     return (0, i.jsx)(o.Clickable, {
         onClick: n,
         tabIndex: -1,
@@ -75,11 +75,11 @@ function O(e) {
         })
     });
 }
-function R(e) {
+function O(e) {
     let {
             channel: t,
             gotoChannel: n
-        } = e, a = (0, r.e7)([I.Z], () => I.Z.getGuild(t.guild_id));
+        } = e, a = (0, l.e7)([I.Z], () => I.Z.getGuild(t.guild_id));
     return null == a ? null : (0, i.jsx)(p.Z, {
         'aria-hidden': !0,
         className: g.guildIcon,
@@ -95,7 +95,7 @@ function M(e) {
             channel: t,
             gotoChannel: n,
             mentionCount: a
-        } = e, l = (0, r.e7)([I.Z], () => I.Z.getGuild(t.guild_id)), c = (0, r.e7)([m.Z], () => m.Z.getChannel(t.parent_id)), d = (0, _.KS)(t, l), E = (0, u.ZP)(t, !1), T = null == c ? null == l ? void 0 : l.name : ''.concat(null == l ? void 0 : l.name, ' \u203A ').concat(c.name), h = t.isMultiUserDM() ? C.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 }) : t.isPrivate() ? (0, i.jsx)(v, { channel: t }) : (0, i.jsx)(o.Clickable, {
+        } = e, r = (0, l.e7)([I.Z], () => I.Z.getGuild(t.guild_id)), c = (0, l.e7)([m.Z], () => m.Z.getChannel(t.parent_id)), d = (0, _.KS)(t, r), E = (0, u.ZP)(t, !1), T = null == c ? null == r ? void 0 : r.name : ''.concat(null == r ? void 0 : r.name, ' \u203A ').concat(c.name), h = t.isMultiUserDM() ? C.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 }) : t.isPrivate() ? (0, i.jsx)(v, { channel: t }) : (0, i.jsx)(o.Clickable, {
             className: s()(g.subtext, g.guildName),
             onClick: n,
             children: T
@@ -142,7 +142,7 @@ function v(e) {
             user: n,
             activities: a,
             applicationStream: s
-        } = (0, r.cj)([
+        } = (0, l.cj)([
             h.default,
             T.Z,
             E.Z

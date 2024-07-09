@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     }
 }), n(627341);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(278074), o = n(263568), c = n(481060), d = n(203143), u = n(365206), _ = n(294608), E = n(65145), m = n(920557), I = n(227905);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(278074), o = n(263568), c = n(481060), d = n(203143), u = n(365206), _ = n(294608), E = n(65145), m = n(920557), I = n(227905);
 function T(e) {
     let {media: t} = e;
     return (0, i.jsx)(c.Heading, {
@@ -19,12 +19,12 @@ function h(e) {
         onClick: n,
         variant: a = 'text-sm/medium',
         color: s = 'interactive-active',
-        className: r,
+        className: l,
         buttonRef: o
     } = e;
     return (0, i.jsx)(c.Button, {
         onClick: n,
-        className: l()(I.__invalid_textButton, r),
+        className: r()(I.__invalid_textButton, l),
         look: c.Button.Looks.BLANK,
         size: c.Button.Sizes.NONE,
         buttonRef: o,
@@ -42,16 +42,16 @@ function N(e) {
         secondaryLabel: n,
         handleClick: a,
         isInteractive: s,
-        className: r
+        className: l
     } = e;
     return (0, i.jsxs)('div', {
-        className: l()(I.detailsText, r),
+        className: r()(I.detailsText, l),
         children: [
             s ? (0, i.jsx)(h, {
                 onClick: a,
                 variant: 'text-sm/normal',
                 color: 'none',
-                className: l()(I.detailsTextButton, I.interactive),
+                className: r()(I.detailsTextButton, I.interactive),
                 children: t
             }) : (0, i.jsx)(c.Text, {
                 variant: 'text-sm/normal',
@@ -73,7 +73,7 @@ function p(e) {
             action: t,
             channelId: n,
             messageId: s,
-            isInteractive: r,
+            isInteractive: l,
             className: o
         } = e, {
             actionButtonRef: u,
@@ -97,7 +97,7 @@ function p(e) {
         disabled: !t.enabled,
         color: 'secondaryButton' === t.presentation ? c.Button.Colors.CUSTOM : c.Button.Colors.BRAND,
         size: c.Button.Sizes.SMALL,
-        className: l()(o, I.buttonPresentation, 'secondaryButton' === t.presentation && I.secondaryButtonPresentation),
+        className: r()(o, I.buttonPresentation, 'secondaryButton' === t.presentation && I.secondaryButtonPresentation),
         children: (0, i.jsx)(c.Text, {
             variant: 'text-sm/medium',
             color: 'none',
@@ -113,7 +113,7 @@ function p(e) {
         buttonLabel: t.label,
         secondaryLabel: t.secondaryLabel,
         handleClick: m,
-        isInteractive: r,
+        isInteractive: l,
         className: o
     });
 }
@@ -133,10 +133,10 @@ function f(e) {
                 myAvatarUrl: t.myAvatarUrl,
                 canShowVoteCounts: t.canShowVoteCounts
             };
-            return (0, r.EQ)(t.layoutType).with(o.C.DEFAULT, () => (0, i.jsx)(m.K, { ...n })).with(o.C.IMAGE_ONLY_ANSWERS, () => (0, i.jsx)(u.Z, { ...n })).otherwise(() => null);
+            return (0, l.EQ)(t.layoutType).with(o.C.DEFAULT, () => (0, i.jsx)(m.K, { ...n })).with(o.C.IMAGE_ONLY_ANSWERS, () => (0, i.jsx)(u.Z, { ...n })).otherwise(() => null);
         }(0, n);
     return null == d ? null : (0, i.jsx)('div', {
-        className: l()(I.container, s, a),
+        className: r()(I.container, s, a),
         children: (0, i.jsxs)(c.HeadingLevel, {
             children: [
                 (0, i.jsxs)('div', {

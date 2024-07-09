@@ -10,23 +10,23 @@ function a(e) {
         isHubGuild: n,
         isOwnInvite: a,
         isGuest: s,
-        isStage: l,
-        isStream: r
+        isStage: r,
+        isStream: l
     } = e;
     if (t) {
         if (a) {
-            if (r)
-                return i.Z.Messages.INVITE_BUTTON_TITLE_INVITER_STREAM;
             if (l)
+                return i.Z.Messages.INVITE_BUTTON_TITLE_INVITER_STREAM;
+            if (r)
                 return i.Z.Messages.INVITE_BUTTON_TITLE_INVITER_STAGE_CHANNEL;
             else if (s)
                 return i.Z.Messages.GUEST_INVITE_EMBED_TITLE_SENDER;
             else
                 return i.Z.Messages.INVITE_BUTTON_TITLE_INVITER_VOICE_CHANNEL;
         }
-        if (r)
-            return i.Z.Messages.INVITE_BUTTON_TITLE_INVITED_STREAM;
         if (l)
+            return i.Z.Messages.INVITE_BUTTON_TITLE_INVITED_STREAM;
+        if (r)
             return i.Z.Messages.INVITE_BUTTON_TITLE_INVITED_STAGE_CHANNEL;
         else if (s)
             return i.Z.Messages.GUEST_INVITE_EMBED_TITLE_RECEIVER;

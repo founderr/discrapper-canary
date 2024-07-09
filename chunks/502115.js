@@ -14,7 +14,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(702346), l = n(689938), r = n(721699);
+var a = n(481060), s = n(702346), r = n(689938), l = n(721699);
 function o(e) {
     let {
         message: t,
@@ -25,8 +25,8 @@ function o(e) {
         icon: n(508933),
         timestamp: t.timestamp,
         compact: a,
-        contentClassName: r.messageContent,
-        children: l.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_DISQUALIFIED.format({ onClick: o })
+        contentClassName: l.messageContent,
+        children: r.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_DISQUALIFIED.format({ onClick: o })
     });
 }
 function c(e) {
@@ -38,8 +38,8 @@ function c(e) {
         icon: n(324606),
         timestamp: t.timestamp,
         compact: a,
-        contentClassName: r.messageContent,
-        children: l.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_REQUALIFIED
+        contentClassName: l.messageContent,
+        children: r.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_REQUALIFIED
     });
 }
 function d(e) {
@@ -53,12 +53,12 @@ function d(e) {
             width: 20,
             height: 20,
             color: 'currentColor',
-            className: r.alertIcon
+            className: l.alertIcon
         }),
         timestamp: t.timestamp,
         compact: n,
-        contentClassName: r.messageContent,
-        children: l.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING
+        contentClassName: l.messageContent,
+        children: r.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING
     });
 }
 function u(e) {
@@ -72,11 +72,11 @@ function u(e) {
             width: 20,
             height: 20,
             color: 'currentColor',
-            className: r.alertIcon
+            className: l.alertIcon
         }),
         timestamp: t.timestamp,
         compact: n,
-        contentClassName: r.messageContent,
-        children: l.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING
+        contentClassName: l.messageContent,
+        children: r.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING
     });
 }

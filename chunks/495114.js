@@ -11,10 +11,10 @@ function s(e) {
         width: t = 14,
         height: n = 18,
         color: s = 'currentColor',
-        ...l
+        ...r
     } = e;
     return (0, i.jsx)('svg', {
-        ...(0, a.Z)(l),
+        ...(0, a.Z)(r),
         width: t,
         height: n,
         viewBox: '0 0 10 14',

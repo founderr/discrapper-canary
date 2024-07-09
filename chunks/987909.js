@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(442837), l = n(481060), r = n(904245), o = n(541716), c = n(419922), d = n(665906), u = n(271383), _ = n(496675), E = n(594174), m = n(626135), I = n(709054), T = n(838440), h = n(981631), N = n(609727);
+var i = n(735250), a = n(470079), s = n(442837), r = n(481060), l = n(904245), o = n(541716), c = n(419922), d = n(665906), u = n(271383), _ = n(496675), E = n(594174), m = n(626135), I = n(709054), T = n(838440), h = n(981631), N = n(609727);
 function p(e) {
     let {
             assets: t,
@@ -49,7 +49,7 @@ function f(e) {
                     message: n,
                     sticker: i
                 } = e;
-                r.Z.sendGreetMessage(t.id, i.id, r.Z.getSendMessageOptionsForReply({
+                l.Z.sendGreetMessage(t.id, i.id, l.Z.getSendMessageOptionsForReply({
                     channel: t,
                     message: n,
                     shouldMention: !0,
@@ -81,10 +81,10 @@ function f(e) {
             _,
             E
         ]);
-    return (0, i.jsxs)(l.Button, {
+    return (0, i.jsxs)(r.Button, {
         className: N.CTAMessageButtonOuter,
         innerClassName: N.CTAMessageButton,
-        color: l.ButtonColors.PRIMARY,
+        color: r.ButtonColors.PRIMARY,
         onMouseEnter: () => h(!0),
         onMouseLeave: () => h(!1),
         onClick: g,
@@ -104,8 +104,8 @@ function C(e) {
             channel: t,
             message: n,
             buttonLabels: a,
-            stickers: l,
-            event: r,
+            stickers: r,
+            event: l,
             eventProperties: o
         } = e, c = E.default.getCurrentUser(), m = function (e) {
             let {
@@ -121,8 +121,8 @@ function C(e) {
                 let a = t.guild_id;
                 if (null == i || null == a)
                     return !1;
-                let s = (0, d.xl)(t), l = _.Z.can(h.Plq.SEND_MESSAGES, t), r = null === (e = u.ZP.getMember(a, i.id)) || void 0 === e ? void 0 : e.isPending, o = n.author.bot;
-                return l && !s && !r && !o;
+                let s = (0, d.xl)(t), r = _.Z.can(h.Plq.SEND_MESSAGES, t), l = null === (e = u.ZP.getMember(a, i.id)) || void 0 === e ? void 0 : e.isPending, o = n.author.bot;
+                return r && !s && !l && !o;
             });
         }({
             channel: t,
@@ -136,8 +136,8 @@ function C(e) {
             channel: t,
             message: n,
             buttonLabels: a,
-            stickers: l,
-            event: r,
+            stickers: r,
+            event: l,
             eventProperties: o
         })
     }) : null;

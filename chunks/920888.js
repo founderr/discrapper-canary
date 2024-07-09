@@ -1,5 +1,5 @@
 n(47120), n(653041);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(215569), o = n(481060), c = n(566006), d = n(60174), u = n(453687), _ = n(434624), E = n(287151), m = n(689938), I = n(716862), T = n(372178);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(215569), o = n(481060), c = n(566006), d = n(60174), u = n(453687), _ = n(434624), E = n(287151), m = n(689938), I = n(716862), T = n(372178);
 let h = (e, t) => null == e && null == t || e === t, N = (e, t) => e.findIndex(e => h(e.emoji.id, null == t ? void 0 : t.id) && h(e.emoji.name, null == t ? void 0 : t.name)), p = (e, t) => {
         if (null == t)
             return e;
@@ -34,12 +34,12 @@ class f extends a.PureComponent {
                 useChatFontScaling: S,
                 forceHideReactionCreates: A,
                 remainingReactions: x,
-                combinedReactions: O,
-                visibleReactionsCount: R
-            } = this.props, {disableTransitionAppear: M} = this.state, v = S ? T : I, L = R > 0;
-        return L || C ? (0, i.jsxs)(r.W, {
+                combinedReactions: R,
+                visibleReactionsCount: O
+            } = this.props, {disableTransitionAppear: M} = this.state, v = S ? T : I, L = O > 0;
+        return L || C ? (0, i.jsxs)(l.W, {
             component: 'div',
-            className: l()(v.reactions, f),
+            className: r()(v.reactions, f),
             transitionAppear: !M,
             role: 'group',
             transitionLeave: !1,
@@ -48,7 +48,7 @@ class f extends a.PureComponent {
             onMouseLeave: () => this.setState({ isHovered: !1 }),
             children: [
                 (0, i.jsx)(_.l, {
-                    reactions: O,
+                    reactions: R,
                     message: e,
                     readOnly: n,
                     isLurking: a,
@@ -62,7 +62,7 @@ class f extends a.PureComponent {
                     onClick: t => {
                         t.stopPropagation(), (0, E.op)(p, e);
                     },
-                    className: l()(v.reaction, g, v.remainingReactions),
+                    className: r()(v.reaction, g, v.remainingReactions),
                     'aria-label': m.Z.Messages.ADD_REACTION,
                     children: (0, i.jsxs)(o.Text, {
                         className: v.reactionInner,
@@ -79,7 +79,7 @@ class f extends a.PureComponent {
                     channel: p,
                     useChatFontScaling: S,
                     isHovered: this.state.isHovered,
-                    className: l()({
+                    className: r()({
                         [v.forceShow]: C && !L,
                         [v.forceShowLook]: C
                     })
@@ -107,11 +107,11 @@ t.Z = e => {
             maxReactions: n,
             hoistReaction: s
         } = e, {
-            combinedReactions: l,
-            remainingReactions: r,
+            combinedReactions: r,
+            remainingReactions: l,
             visibleReactionsCount: o
         } = a.useMemo(() => {
-            let e = [], i = p(t.reactions, s), a = null != n && n < i.length ? i.slice(0, n) : i, l = i.length - a.length, r = i.length;
+            let e = [], i = p(t.reactions, s), a = null != n && n < i.length ? i.slice(0, n) : i, r = i.length - a.length, l = i.length;
             return a.forEach(t => {
                 t.burst_count > 0 && e.push({
                     ...t,
@@ -119,11 +119,11 @@ t.Z = e => {
                 }), t.count > 0 && e.push({
                     ...t,
                     type: c.O.NORMAL
-                }), null != t.me_vote && --r;
+                }), null != t.me_vote && --l;
             }), {
                 combinedReactions: e,
-                visibleReactionsCount: r,
-                remainingReactions: l
+                visibleReactionsCount: l,
+                remainingReactions: r
             };
         }, [
             s,
@@ -133,7 +133,7 @@ t.Z = e => {
     return (0, i.jsx)(f, {
         ...e,
         visibleReactionsCount: o,
-        combinedReactions: l,
-        remainingReactions: r
+        combinedReactions: r,
+        remainingReactions: l
     });
 };

@@ -6,27 +6,27 @@ n.d(t, {
         return u;
     }
 }), n(789020);
-var i = n(470079), a = n(442837), s = n(430198), l = n(592125), r = n(630388), o = n(981631);
+var i = n(470079), a = n(442837), s = n(430198), r = n(592125), l = n(630388), o = n(981631);
 let c = o.iLy.CROSSPOSTED | o.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD | o.iLy.GUILD_FEED_HIDDEN | o.iLy.HAS_SNAPSHOT | o.iLy.HAS_THREAD | o.iLy.IS_CROSSPOST | o.iLy.IS_VOICE_MESSAGE | o.iLy.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING | o.iLy.SUPPRESS_EMBEDS | o.iLy.SUPPRESS_NOTIFICATIONS | o.iLy.URGENT;
 function d(e) {
-    return e.state !== o.yb.SEND_FAILED && !!o.V$x.FORWARDABLE.has(e.type) && null == e.poll && !(e.components.length > 0) && null == e.activity && null == e.call && null == e.interaction && 0 === (0, r.Ge)(e.flags, c) && !0;
+    return e.state !== o.yb.SEND_FAILED && !!o.V$x.FORWARDABLE.has(e.type) && null == e.poll && !(e.components.length > 0) && null == e.activity && null == e.call && null == e.interaction && 0 === (0, l.Ge)(e.flags, c) && !0;
 }
 function u(e) {
     var t;
     if (!d(e))
         return !1;
-    let n = null === (t = l.Z.getChannel(e.channel_id)) || void 0 === t ? void 0 : t.guild_id;
+    let n = null === (t = r.Z.getChannel(e.channel_id)) || void 0 === t ? void 0 : t.guild_id;
     return !(null != n && s.Z.isChannelGated(n, e.channel_id)) && !0;
 }
 function _(e) {
     let t = (0, a.e7)([
         s.Z,
-        l.Z
+        r.Z
     ], () => {
         var t;
         if (null == e)
             return !1;
-        let n = null === (t = l.Z.getChannel(e.channel_id)) || void 0 === t ? void 0 : t.guild_id;
+        let n = null === (t = r.Z.getChannel(e.channel_id)) || void 0 === t ? void 0 : t.guild_id;
         return null != n && s.Z.isChannelGated(n, e.channel_id);
     });
     return i.useMemo(() => null != e && d(e), [e]) && !t;

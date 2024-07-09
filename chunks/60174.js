@@ -3,8 +3,8 @@ n.d(t, {
         return M;
     }
 }), n(789020), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(954955), o = n.n(r), c = n(507274), d = n(481060), u = n(130402), _ = n(466794), E = n(659215), m = n(222677), I = n(995774), T = n(931651), h = n(594174), N = n(630388), p = n(74538), f = n(566006), C = n(981631), g = n(185923), S = n(474936), A = n(689938), x = n(716862), O = n(372178);
-function R(e, t, n) {
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(954955), o = n.n(l), c = n(507274), d = n(481060), u = n(130402), _ = n(466794), E = n(659215), m = n(222677), I = n(995774), T = n(931651), h = n(594174), N = n(630388), p = n(74538), f = n(566006), C = n(981631), g = n(185923), S = n(474936), A = n(689938), x = n(716862), R = n(372178);
+function O(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -20,14 +20,14 @@ class M extends a.Component {
                 className: n,
                 children: a,
                 useChatFontScaling: s
-            } = this.props, {isReactionPickerActive: r} = this.state, o = t.state === C.yb.SENDING, c = e === f.O.BURST;
+            } = this.props, {isReactionPickerActive: l} = this.state, o = t.state === C.yb.SENDING, c = e === f.O.BURST;
         if (o || (0, N.yE)(t.flags, C.iLy.EPHEMERAL))
             return null;
         let E = h.default.getCurrentUser(), m = (0, p.I5)(E), I = c ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION;
         !m && c && (I = (0, i.jsx)(_.X, { tooltipText: A.Z.Messages.ADD_BURST_REACTION }));
-        let T = s ? O : x;
+        let T = s ? R : x;
         return (0, i.jsx)(d.Popout, {
-            shouldShow: r,
+            shouldShow: l,
             onRequestClose: this.handleReactionPickerToggle,
             renderPopout: this.renderReactionPopout,
             position: 'right',
@@ -45,7 +45,7 @@ class M extends a.Component {
                         },
                         onMouseEnter: () => (0, u.x)(g.qR.AddReactionPopoutMouseEntered),
                         onFocus: () => (0, u.x)(g.qR.AddReactionPopoutFocused),
-                        className: l()(T.reactionBtn, { [T.active]: s }, n),
+                        className: r()(T.reactionBtn, { [T.active]: s }, n),
                         children: [
                             c ? (0, i.jsx)(i.Fragment, {
                                 children: (0, i.jsx)(d.SuperReactionIcon, {
@@ -68,7 +68,7 @@ class M extends a.Component {
         });
     }
     constructor(...e) {
-        super(...e), R(this, 'state', { isReactionPickerActive: !1 }), R(this, 'onAddReaction', (e, t) => {
+        super(...e), O(this, 'state', { isReactionPickerActive: !1 }), O(this, 'onAddReaction', (e, t) => {
             if (null == e)
                 return;
             let {
@@ -77,9 +77,9 @@ class M extends a.Component {
                 isForumToolbar: a
             } = this.props;
             (0, m.rU)(n.id, i.id, (0, I.g1)(e), a ? m.TW.FORUM_TOOLBAR : m.TW.MESSAGE, { burst: t });
-        }), R(this, 'handleReactionPickerToggle', () => {
+        }), O(this, 'handleReactionPickerToggle', () => {
             this.setState(e => ({ isReactionPickerActive: !e.isReactionPickerActive }));
-        }), R(this, 'handleAddReactionClick', e => {
+        }), O(this, 'handleAddReactionClick', e => {
             let {
                 type: t,
                 channel: n
@@ -94,12 +94,12 @@ class M extends a.Component {
                     object: C.qAy.INLINE_REACTION_PICKER_UPSELL
                 }
             }), this.handleReactionPickerToggle();
-        }), R(this, 'renderReactionPopout', e => {
+        }), O(this, 'renderReactionPopout', e => {
             let {closePopout: t} = e, {
                     type: n,
                     channel: a,
                     message: s
-                } = this.props, l = {
+                } = this.props, r = {
                     openPopoutType: 'message_reaction_emoji_picker',
                     ...n === f.O.BURST && {
                         openPopoutType: 'message_super_reaction_emoji_picker',
@@ -107,20 +107,20 @@ class M extends a.Component {
                         section: (0, I.s4)(a),
                         object: C.qAy.REACTION_RAIL
                     }
-                }, r = (0, i.jsx)(T.$, {
+                }, l = (0, i.jsx)(T.$, {
                     closePopout: t,
                     channel: a,
                     onSelectEmoji: (e, n, i) => {
                         this.onAddReaction(e, i), n && (i ? o()(t, 150)() : t());
                     },
-                    analyticsOverride: l,
+                    analyticsOverride: r,
                     messageId: s.id
                 });
             return (0, i.jsx)(c.M.Consumer, {
                 children: e => e ? (0, i.jsx)(d.Dialog, {
                     'aria-label': A.Z.Messages.REACTION_PICKER,
-                    children: r
-                }) : r
+                    children: l
+                }) : l
             });
         });
     }

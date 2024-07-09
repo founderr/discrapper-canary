@@ -18,7 +18,7 @@ n.d(t, {
         return I;
     },
     Vt: function () {
-        return r;
+        return l;
     },
     dN: function () {
         return o;
@@ -27,12 +27,12 @@ n.d(t, {
         return m;
     }
 });
-var i = n(544891), a = n(570140), s = n(199902), l = n(981631);
-let r = async e => {
+var i = n(544891), a = n(570140), s = n(199902), r = n(981631);
+let l = async e => {
         let t = !1;
         try {
             t = (await i.tn.get({
-                url: l.ANM.DROPS_ELIGIBILITY,
+                url: r.ANM.DROPS_ELIGIBILITY,
                 query: { drops_quest_id: e }
             })).body.eligible;
         } catch (e) {
@@ -47,7 +47,7 @@ let r = async e => {
         let t = [];
         try {
             t = (await i.tn.get({
-                url: l.ANM.DROPS_PLATFORM_AVAILABILITY,
+                url: r.ANM.DROPS_PLATFORM_AVAILABILITY,
                 query: { drops_quest_id: e }
             })).body.available_platforms;
         } catch (e) {
@@ -60,7 +60,7 @@ let r = async e => {
     }, c = async (e, t) => {
         try {
             let n = await i.tn.post({
-                url: l.ANM.DROPS_CLAIM_REWARD_CODE,
+                url: r.ANM.DROPS_CLAIM_REWARD_CODE,
                 query: {
                     drops_quest_id: e,
                     platform: t
@@ -75,7 +75,7 @@ let r = async e => {
         }
     }, d = async () => {
         try {
-            let e = await i.tn.get({ url: l.ANM.DROPS_USER_STATUS });
+            let e = await i.tn.get({ url: r.ANM.DROPS_USER_STATUS });
             a.Z.dispatch({
                 type: 'DROPS_USER_STATUS_FETCH_SUCCESS',
                 codes: e.body
@@ -85,7 +85,7 @@ let r = async e => {
         }
     }, u = async e => {
         await i.tn.del({
-            url: l.ANM.DROPS_ENROLL_USER,
+            url: r.ANM.DROPS_ENROLL_USER,
             query: { drops_quest_id: e }
         }), a.Z.dispatch({
             type: 'DROPS_UNENROLL_USER',
@@ -93,7 +93,7 @@ let r = async e => {
         }), await d();
     }, _ = async e => {
         let t = await i.tn.get({
-            url: l.ANM.DROPS_ENROLL_USER,
+            url: r.ANM.DROPS_ENROLL_USER,
             query: { drops_quest_id: e }
         });
         await a.Z.dispatch({
@@ -104,18 +104,18 @@ let r = async e => {
         });
     }, E = async e => {
         await i.tn.post({
-            url: l.ANM.DROPS_ENROLL_USER,
+            url: r.ANM.DROPS_ENROLL_USER,
             query: { drops_quest_id: e }
         }), a.Z.dispatch({ type: 'DROPS_ENROLL_SUCCESS' });
     }, m = async (e, t, n) => {
-        let r = s.Z.getViewerIds(t);
+        let l = s.Z.getViewerIds(t);
         try {
             let s = await i.tn.post({
-                url: l.ANM.DROPS_HEARTBEAT(e),
+                url: r.ANM.DROPS_HEARTBEAT(e),
                 query: {
                     stream_key: t,
                     application_id: n,
-                    viewer_count: r.length
+                    viewer_count: l.length
                 },
                 retries: 2
             });
@@ -134,7 +134,7 @@ let r = async e => {
         }
     }, I = async e => {
         try {
-            let t = await i.tn.get({ url: l.ANM.DROPS_PROGRESS(e) });
+            let t = await i.tn.get({ url: r.ANM.DROPS_PROGRESS(e) });
             a.Z.dispatch({
                 type: 'DROPS_FETCH_PROGRESS_SUCCESS',
                 dropsQuestId: e,

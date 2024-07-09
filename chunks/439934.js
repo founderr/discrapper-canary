@@ -80,7 +80,7 @@ function O(e) {
             joinableEmbeddedApp: R,
             onActivityItemSelected: k,
             labelType: H,
-            staffReleasePhase: F
+            staffReleasePhase: P
         } = (0, E.ZP)({
             activityItem: t,
             channel: l,
@@ -89,28 +89,28 @@ function O(e) {
             onActivityItemVisible: f,
             onActivityItemSelected: _,
             embeddedActivitiesManager: b.Z
-        }), P = (0, r.e7)([
+        }), F = (0, r.e7)([
             C.Z,
             v.Z
-        ], () => C.Z.inDevModeForApplication(t.application.id) || v.Z.inTestModeForApplication(t.application.id), [t.application.id]), {application: U} = t, Y = a.useCallback(e => e && (null == f ? void 0 : f({ applicationId: t.application.id })), [
+        ], () => C.Z.inDevModeForApplication(t.application.id) || v.Z.inTestModeForApplication(t.application.id), [t.application.id]), {application: Y} = t, w = a.useCallback(e => e && (null == f ? void 0 : f({ applicationId: t.application.id })), [
             t.application.id,
             f
-        ]), w = (0, d.O)(Y, 0.8, !0), [G, W] = a.useState(!1), [z, q] = a.useState(G);
+        ]), U = (0, d.O)(w, 0.8, !0), [G, W] = a.useState(!1), [z, q] = a.useState(G);
     a.useEffect(() => {
         G && q(!0);
     }, [G]);
-    let J = () => W(!0), K = () => W(!1), $ = g.Sb.useSetting(), X = a.useCallback(() => {
-            null == k || k(), u.ZP.maybeQueryForInstallLessApps(U.id, null == l ? void 0 : l.id);
+    let J = () => W(!0), K = () => W(!1), X = g.Sb.useSetting(), $ = a.useCallback(() => {
+            null == k || k(), u.ZP.maybeQueryForInstallLessApps(Y.id, null == l ? void 0 : l.id);
         }, [
-            U.id,
+            Y.id,
             null == l ? void 0 : l.id,
             k
         ]);
     return (0, i.jsxs)(o.Clickable, {
-        onClick: V === E.JS.START ? X : void 0,
-        onContextMenu: $ ? e => {
+        onClick: V === E.JS.START ? $ : void 0,
+        onContextMenu: X ? e => {
             (0, c.vq)(e, e => (0, i.jsx)(M.Z, {
-                application: U,
+                application: Y,
                 ...e
             }));
         } : void 0,
@@ -120,7 +120,7 @@ function O(e) {
         }),
         children: [
             (0, i.jsxs)('div', {
-                ref: w,
+                ref: U,
                 className: s()(Z.activityImageContainer, { [Z.large]: !0 === h }),
                 onMouseEnter: J,
                 onFocus: J,
@@ -129,7 +129,7 @@ function O(e) {
                 children: [
                     (0, i.jsx)(j.Z, {
                         imageBackground: O,
-                        applicationName: U.name,
+                        applicationName: Y.name,
                         imageClassName: s()(Z.activityImage, { [Z.large]: !0 === h }),
                         imageNotFoundClassName: Z.brokenImageIconWrapper
                     }),
@@ -146,19 +146,19 @@ function O(e) {
                     }) : null,
                     V !== E.JS.START ? (0, i.jsx)(S.U, {
                         action: V,
-                        onClick: X
+                        onClick: $
                     }) : null,
                     (0, i.jsx)('div', {
                         className: Z.overlayBadge,
                         children: (0, i.jsx)('div', {
                             className: Z.badgeContainer,
                             children: (0, i.jsx)(N.Z, {
-                                name: U.name,
+                                name: Y.name,
                                 labelType: H
                             })
                         })
                     }),
-                    P ? (0, i.jsx)(o.Tooltip, {
+                    F ? (0, i.jsx)(o.Tooltip, {
                         text: A.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
                         children: e => (0, i.jsx)('div', {
                             className: Z.devShelfBadge,
@@ -175,7 +175,7 @@ function O(e) {
                         className: Z.activityMaxParticipantsLarge,
                         variant: 'text-xs/normal',
                         color: 'interactive-normal',
-                        children: (0, T.Z)(null !== (n = U.maxParticipants) && void 0 !== n ? n : 0)
+                        children: (0, T.Z)(null !== (n = Y.maxParticipants) && void 0 !== n ? n : 0)
                     }) : null,
                     (0, i.jsxs)('div', {
                         className: Z.activityName,
@@ -184,13 +184,13 @@ function O(e) {
                                 className: Z.activityTitleText,
                                 variant: 'heading-md/semibold',
                                 color: 'interactive-active',
-                                children: U.name
+                                children: Y.name
                             }),
-                            null != F ? (0, i.jsx)(o.Tooltip, {
-                                text: F,
+                            null != P ? (0, i.jsx)(o.Tooltip, {
+                                text: P,
                                 children: e => (0, i.jsx)('img', {
                                     className: Z.staffBadge,
-                                    alt: F,
+                                    alt: P,
                                     src: y,
                                     ...e
                                 })
@@ -199,14 +199,14 @@ function O(e) {
                     }),
                     (0, i.jsx)(L, {
                         activity: null == R ? void 0 : R.embeddedActivity,
-                        application: U,
+                        application: Y,
                         channel: l,
                         guildId: p,
                         large: h
                     }),
                     (0, i.jsx)('div', {
                         className: Z.activityTagsContainer,
-                        children: U.tags.slice(0, 3).map(e => (0, i.jsx)(D, { value: e }, 'activity-tag-'.concat(U.id, '-').concat(e)))
+                        children: Y.tags.slice(0, 3).map(e => (0, i.jsx)(D, { value: e }, 'activity-tag-'.concat(Y.id, '-').concat(e)))
                     })
                 ]
             })

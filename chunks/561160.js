@@ -11,13 +11,13 @@ function d(e) {
             searchQuery: n,
             textContent: t,
             type: d
-        } = e, m = (0, r.ZP)(), _ = (0, l.ap)(m) ? u : c;
+        } = e, m = (0, r.ZP)(), p = (0, l.ap)(m) ? u : c;
     return (0, s.B)(d, n), (0, i.jsxs)('div', {
         className: o.emptyStateContainer,
         children: [
             (0, i.jsx)('img', {
                 className: o.emptyStateImage,
-                src: _,
+                src: p,
                 alt: 'empty state'
             }),
             (0, i.jsx)(a.Text, {

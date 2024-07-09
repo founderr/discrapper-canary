@@ -1,14 +1,14 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(338545), o = n(442837), c = n(481060), d = n(570140), u = n(45114), _ = n(367907), E = n(717680), m = n(703656), I = n(592125), T = n(259580), h = n(617379), N = n(324081), p = n(305248), f = n(520116), C = n(981631), g = n(689938), S = n(540895);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(338545), o = n(442837), c = n(481060), d = n(570140), u = n(45114), _ = n(367907), E = n(717680), m = n(703656), I = n(592125), T = n(259580), h = n(617379), N = n(324081), p = n(305248), f = n(520116), C = n(981631), g = n(689938), S = n(540895);
 let A = a.memo(function (e) {
     let {
             channel: t,
             deleteChannel: n
-        } = e, s = a.useRef(null), [[l, o], c] = a.useState([
+        } = e, s = a.useRef(null), [[r, o], c] = a.useState([
             0,
             0
-        ]), d = t.deleted && l > 0;
-    if (t.deleted && 0 === l && null != s.current) {
+        ]), d = t.deleted && r > 0;
+    if (t.deleted && 0 === r && null != s.current) {
         let e = s.current.offsetHeight, t = s.current.offsetTop, n = s.current.parentElement.scrollTop, i = n > t ? e - (n - t) : e;
         c([
             e,
@@ -18,7 +18,7 @@ let A = a.memo(function (e) {
     let {
             opacity: u,
             size: _
-        } = (0, r.useSpring)({
+        } = (0, l.useSpring)({
             config: {
                 clamp: !0,
                 friction: 18,
@@ -33,9 +33,9 @@ let A = a.memo(function (e) {
             opacity: u,
             height: _.to(e => d ? function (e, t, n) {
                 return t + (e - t) * n;
-            }(l, o, e) : 'auto')
+            }(r, o, e) : 'auto')
         };
-    return (0, i.jsx)(r.animated.div, {
+    return (0, i.jsx)(l.animated.div, {
         ref: s,
         style: E,
         children: (0, i.jsx)(x, { ...e })
@@ -47,13 +47,13 @@ let x = a.memo(function (e) {
             channel: t,
             onJump: n,
             deleteChannel: s,
-            toggle: l
-        } = e, r = (0, o.e7)([I.Z], () => I.Z.getChannel(t.channelId));
+            toggle: r
+        } = e, l = (0, o.e7)([I.Z], () => I.Z.getChannel(t.channelId));
     if (a.useEffect(() => {
-            null != r && t.isFullyLoaded && !t.hasError && !t.collapsed && 'messages' === t.type && 0 === t.messages.length && d.Z.wait(() => {
+            null != l && t.isFullyLoaded && !t.hasError && !t.collapsed && 'messages' === t.type && 0 === t.messages.length && d.Z.wait(() => {
                 (0, u.In)(t.channelId, !0), s(t.channelId);
             });
-        }), null == r || !t.hasLoadedAnything)
+        }), null == l || !t.hasLoadedAnything)
         return null;
     let E = (e, i) => {
         (0, _.yw)(C.rMx.INBOX_CHANNEL_CLICKED, {
@@ -67,41 +67,41 @@ let x = a.memo(function (e) {
         className: S.channel,
         children: (0, i.jsx)(c.HeadingLevel, {
             component: (0, i.jsxs)(N.Z, {
-                channel: r,
+                channel: l,
                 gotoChannel: E,
                 mentionCount: t.mentionCount,
-                toggleCollapsed: l,
+                toggleCollapsed: r,
                 channelState: t,
                 children: [
-                    (0, i.jsx)(h.Z, { channel: r }),
-                    (0, i.jsx)(O, { ...e }),
-                    'nsfw' === t.type ? null : (0, i.jsx)(R, { ...e })
+                    (0, i.jsx)(h.Z, { channel: l }),
+                    (0, i.jsx)(R, { ...e }),
+                    'nsfw' === t.type ? null : (0, i.jsx)(O, { ...e })
                 ]
             }),
             children: t.collapsed ? null : 'messages' === t.type ? (0, i.jsx)(f.Z, {
                 channel: t,
-                channelRecord: r,
+                channelRecord: l,
                 gotoChannel: E
             }) : 'forum' === t.type ? (0, i.jsx)(p.Z, {
                 channel: t,
-                channelRecord: r,
+                channelRecord: l,
                 deleteChannel: s
             }) : null
         })
     });
 });
-function O(e) {
+function R(e) {
     let {
             channel: t,
             markChannelRead: n,
             markGuildRead: a,
             getNumUnreadChannels: s
-        } = e, l = (0, E.Z)() && null != t.guildId;
+        } = e, r = (0, E.Z)() && null != t.guildId;
     return (0, i.jsx)(c.CircleIconButton, {
         className: S.markReadButton,
-        tooltip: l ? g.Z.Messages.MARK_GUILD_AS_READ : g.Z.Messages.MARK_AS_READ,
+        tooltip: r ? g.Z.Messages.MARK_GUILD_AS_READ : g.Z.Messages.MARK_AS_READ,
         color: c.CircleIconButtonColors.TERTIARY,
-        icon: l ? (0, i.jsx)(c.DoubleCheckmarkLargeIcon, {
+        icon: r ? (0, i.jsx)(c.DoubleCheckmarkLargeIcon, {
             size: 'xs',
             color: 'currentColor'
         }) : (0, i.jsx)(c.CheckmarkLargeIcon, {
@@ -109,7 +109,7 @@ function O(e) {
             color: 'currentColor'
         }),
         onClick: function () {
-            l && null != t.guildId ? a(t.guildId) : n(t), (0, _.yw)(C.rMx.INBOX_CHANNEL_ACKED, {
+            r && null != t.guildId ? a(t.guildId) : n(t), (0, _.yw)(C.rMx.INBOX_CHANNEL_ACKED, {
                 channel_id: t.channelId,
                 guild_id: t.guildId,
                 marked_all_channels_as_read: !1,
@@ -118,7 +118,7 @@ function O(e) {
         }
     });
 }
-function R(e) {
+function O(e) {
     let {
         channel: t,
         toggle: n,
@@ -136,7 +136,7 @@ function R(e) {
         text: g.Z.Messages.COLLAPSE,
         children: e => (0, i.jsx)(c.Clickable, {
             ...e,
-            className: l()(S.collapseButton, { [S.collapsed]: t.collapsed }),
+            className: r()(S.collapseButton, { [S.collapsed]: t.collapsed }),
             onClick: s,
             children: (0, i.jsx)(T.Z, {
                 width: 16,

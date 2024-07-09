@@ -1,13 +1,13 @@
 n.d(t, {
     g: function () {
-        return d;
+        return c;
     }
 });
-var i = n(470079), l = n(442837), o = n(695346), u = n(115130), a = n(566620), r = n(782769);
-function d() {
-    let e = (0, r.z)(), t = o.Sb.getSetting(), n = (0, l.e7)([u.Z], () => u.Z.getFetchState(), []);
+var i = n(470079), l = n(442837), r = n(695346), a = n(115130), o = n(566620), u = n(782769);
+function c() {
+    let e = (0, u.z)(), t = r.Sb.getSetting(), n = (0, l.e7)([a.Z], () => a.Z.getFetchState(), []);
     return i.useEffect(() => {
-        e && t && null == n && (0, a.$h)();
+        e && t && null == n && (0, o.$h)();
     }, [
         e,
         n,

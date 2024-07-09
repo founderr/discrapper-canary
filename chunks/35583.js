@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(442837), l = n(481060), r = n(668781), o = n(431583), c = n(91372), d = n(19780), u = n(502568), _ = n(35818), E = n(689938), m = n(139715);
+var i = n(735250), a = n(470079), s = n(442837), r = n(481060), l = n(668781), o = n(431583), c = n(91372), d = n(19780), u = n(502568), _ = n(35818), E = n(689938), m = n(139715);
 function I(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -16,7 +16,7 @@ class T extends a.PureComponent {
         } : null;
     }
     handleDownloadApps() {
-        (0, l.openModal)(e => (0, i.jsx)(o.default, {
+        (0, r.openModal)(e => (0, i.jsx)(o.default, {
             source: 'Links',
             ...e
         }));
@@ -29,7 +29,7 @@ class T extends a.PureComponent {
                 tooltip: E.Z.Messages.UPDATE_AVAILABLE,
                 foreground: m.downloadArrow,
                 background: m.cloud,
-                icon: l.DownloadIcon
+                icon: r.DownloadIcon
             });
         case 'UPDATE_MANUALLY':
         case 'UPDATE_DOWNLOADED':
@@ -37,7 +37,7 @@ class T extends a.PureComponent {
                 tooltip: E.Z.Messages.UPDATE_DOWNLOADED,
                 foreground: m.updateIconForeground,
                 onClick: this.handleInstallDownload,
-                icon: l.DownloadIcon
+                icon: r.DownloadIcon
             });
         default:
             return null;
@@ -48,7 +48,7 @@ class T extends a.PureComponent {
             memoizedMode: this.props.mode,
             clicked: !1
         }), I(this, 'handleInstallDownload', () => {
-            d.Z.isConnected() ? r.Z.show({
+            d.Z.isConnected() ? l.Z.show({
                 title: E.Z.Messages.UPDATE_DURING_CALL_TITLE,
                 body: E.Z.Messages.UPDATE_DURING_CALL_BODY,
                 onConfirm: this.doUpdate,

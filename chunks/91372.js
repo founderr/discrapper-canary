@@ -1,9 +1,9 @@
-var i, a, s, l, r = n(442837), o = n(570140);
+var i, a, s, r, l = n(442837), o = n(570140);
 let c = 'UPDATE_NOT_AVAILABLE';
 function d(e) {
     c = e.type;
 }
-class u extends (l = r.ZP.Store) {
+class u extends (r = l.ZP.Store) {
     getState() {
         return c;
     }

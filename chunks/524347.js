@@ -1,10 +1,10 @@
-var i, a, s, l, r = n(913527), o = n.n(r), c = n(442837), d = n(846519), u = n(570140), _ = n(594190), E = n(569545), m = n(314897), I = n(70956), T = n(960359), h = n(853197), N = n(702512);
+var i, a, s, r, l = n(913527), o = n.n(l), c = n(442837), d = n(846519), u = n(570140), _ = n(594190), E = n(569545), m = n(314897), I = n(70956), T = n(960359), h = n(853197), N = n(702512);
 let p = null, f = null, C = {}, g = {}, S = N._e.LOADING_INITIAL_PROGRESS, A = new d.V7(), x = {
         completed: !1,
         initialProgressFetched: !1,
         interrupted: !1,
         retries: 0
-    }, O = e => {
+    }, R = e => {
         let {
             dropsQuestId: t,
             streamKey: n,
@@ -16,13 +16,13 @@ let p = null, f = null, C = {}, g = {}, S = N._e.LOADING_INITIAL_PROGRESS, A = n
             e ? (0, T.m0)(t, n, i.pid) : A.start(1 * I.Z.Millis.MINUTE, () => {
                 (0, T.m0)(t, n, i.pid);
             });
-    }, R = e => {
+    }, O = e => {
         x.retries = 0, x.completed = e.completed, x.initialProgressFetched = !0, x.progress = e.progress, x.lastCheckedAt = o().now(), S = x.completed ? N._e.QUEST_COMPLETION : N._e.TRACK_PROGRESS;
     }, M = (e, t, n) => {
         if (!x.completed || e.dropsQuestId !== x.dropsQuestId)
-            x.game = t, x.dropsQuestId = e.dropsQuestId, x.gameTitle = e.title, x.completed = !1, x.interrupted = !1, x.streamKey = n, x.retries = 0, x.lastCheckedAt = o().now(), A.start(5000, () => O(!0));
+            x.game = t, x.dropsQuestId = e.dropsQuestId, x.gameTitle = e.title, x.completed = !1, x.interrupted = !1, x.streamKey = n, x.retries = 0, x.lastCheckedAt = o().now(), A.start(5000, () => R(!0));
     };
-class v extends (l = c.ZP.Store) {
+class v extends (r = c.ZP.Store) {
     initialize() {
         this.waitFor(_.ZP);
     }
@@ -97,13 +97,13 @@ s = 'DropsStore', (a = 'displayName') in (i = v) ? Object.defineProperty(i, a, {
             enrolledUser: e.enrolledUser
         };
     },
-    DROPS_FETCH_PROGRESS_SUCCESS: R,
+    DROPS_FETCH_PROGRESS_SUCCESS: O,
     DROPS_FETCH_PROGRESS_FAILURE: e => {
         if (!x.initialProgressFetched)
             x.initialProgressFetched = !0, S = N._e.STREAM_CTA;
     },
     DROPS_HEARTBEAT_SUCCESS: e => {
-        R(e), C[e.dropsQuestId] = !0, O();
+        O(e), C[e.dropsQuestId] = !0, R();
     },
     DROPS_HEARTBEAT_FAILURE: e => {
         let {
@@ -111,7 +111,7 @@ s = 'DropsStore', (a = 'displayName') in (i = v) ? Object.defineProperty(i, a, {
             statusCode: n
         } = e;
         if (x.completed = !1, x.initialProgressFetched = !0, x.lastCheckedAt = o().now(), 429 === n && 0 === x.retries) {
-            x.retries = x.retries + 1, O();
+            x.retries = x.retries + 1, R();
             return;
         }
         S = N._e.STREAM_CTA, 403 === n ? C[t] = !1 : x.interrupted = !0;
@@ -134,7 +134,7 @@ s = 'DropsStore', (a = 'displayName') in (i = v) ? Object.defineProperty(i, a, {
                 guildId: i,
                 channelId: a,
                 pid: s
-            } = e, l = (0, E.V9)({
+            } = e, r = (0, E.V9)({
                 streamType: n,
                 guildId: i,
                 channelId: a,
@@ -142,12 +142,12 @@ s = 'DropsStore', (a = 'displayName') in (i = v) ? Object.defineProperty(i, a, {
             });
         if (null == s)
             return;
-        let r = _.ZP.getGameForPID(s);
-        if (null == r)
+        let l = _.ZP.getGameForPID(s);
+        if (null == l)
             return;
         let o = Object.values(N.Zv).find(e => e.gameSearchTerm.find(e => {
             var t;
-            return e.toLowerCase() === (null === (t = r.name) || void 0 === t ? void 0 : t.toLowerCase());
+            return e.toLowerCase() === (null === (t = l.name) || void 0 === t ? void 0 : t.toLowerCase());
         }));
         if (null == o || (0, h.hM)(o))
             return;
@@ -155,9 +155,9 @@ s = 'DropsStore', (a = 'displayName') in (i = v) ? Object.defineProperty(i, a, {
         if (null == c || !c.dropsEnabled)
             return;
         let d = c.autoEnrollment;
-        null != g[o.dropsQuestId] && g[o.dropsQuestId].isEnrolled || d ? M(o, r, l) : u.Z.wait(async () => {
+        null != g[o.dropsQuestId] && g[o.dropsQuestId].isEnrolled || d ? M(o, l, r) : u.Z.wait(async () => {
             var e;
-            await (0, T.BE)(o.dropsQuestId), (null === (e = g[o.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && M(o, r, l);
+            await (0, T.BE)(o.dropsQuestId), (null === (e = g[o.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && M(o, l, r);
         });
     },
     LOGOUT: function () {

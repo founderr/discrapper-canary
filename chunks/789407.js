@@ -3,20 +3,20 @@ n.d(t, {
         return s;
     },
     ZP: function () {
-        return r;
+        return l;
     },
     r9: function () {
         return o;
     }
 });
 var i = n(726542), a = n(973616);
-let s = 'spotify', l = i.Z.get(s);
-class r extends a.Z {
+let s = 'spotify', r = i.Z.get(s);
+class l extends a.Z {
     getIconURL(e) {
-        return l.icon.lightPNG;
+        return r.icon.lightPNG;
     }
     constructor() {
-        super({}), this.id = s, this.name = l.name;
+        super({}), this.id = s, this.name = r.name;
     }
 }
-let o = new r();
+let o = new l();

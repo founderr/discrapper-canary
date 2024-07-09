@@ -3,15 +3,15 @@ n.d(t, {
         return h;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(913527), l = n.n(s), r = n(442837), o = n(481060), c = n(727637), d = n(782568), u = n(317632), _ = n(174767), E = n(594174), m = n(55935), I = n(689938), T = n(852704);
+var i = n(735250), a = n(470079), s = n(913527), r = n.n(s), l = n(442837), o = n(481060), c = n(727637), d = n(782568), u = n(317632), _ = n(174767), E = n(594174), m = n(55935), I = n(689938), T = n(852704);
 function h(e) {
     let {
             invite: t,
             expired: n
-        } = e, s = (0, r.e7)([E.default], () => {
+        } = e, s = (0, l.e7)([E.default], () => {
             var e, n;
             return null !== (n = null === (e = E.default.getUser(t.inviter_id)) || void 0 === e ? void 0 : e.username) && void 0 !== n ? n : '';
-        }), d = (0, m.vc)(l()(t.created_at), 'LT'), u = a.useRef(null), h = (0, c.Z)(u);
+        }), d = (0, m.vc)(r()(t.created_at), 'LT'), u = a.useRef(null), h = (0, c.Z)(u);
     return a.useEffect(() => {
         !n && (0, _.Br)(t);
     }, [
@@ -89,7 +89,7 @@ function N(e) {
             expired: t,
             invite: n,
             isHoveringInvite: s
-        } = e, l = (0, r.e7)([u.Z], () => u.Z.isInviteGameInstalled(n)), c = (0, r.e7)([u.Z], () => u.Z.isInviteJoinable(n)), [E, m] = a.useState(!1), h = a.useCallback(async () => {
+        } = e, r = (0, l.e7)([u.Z], () => u.Z.isInviteGameInstalled(n)), c = (0, l.e7)([u.Z], () => u.Z.isInviteJoinable(n)), [E, m] = a.useState(!1), h = a.useCallback(async () => {
             m(!0);
             try {
                 await (0, _.MH)(n);
@@ -105,7 +105,7 @@ function N(e) {
             m(!1);
         }, [n]);
     if (t)
-        return l && s ? (0, i.jsx)(o.Button, {
+        return r && s ? (0, i.jsx)(o.Button, {
             className: T.primaryButton,
             color: o.ButtonColors.TRANSPARENT,
             disabled: E,
@@ -113,7 +113,7 @@ function N(e) {
             onClick: h,
             children: I.Z.Messages.GAME_INVITES_LAUNCH_GAME
         }) : null;
-    return l && c ? (0, i.jsx)(o.Button, {
+    return r && c ? (0, i.jsx)(o.Button, {
         className: T.primaryButton,
         color: o.ButtonColors.GREEN,
         disabled: E,

@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(438536), l = n(214906), r = n(346479), o = n(723170), c = n(124368);
+var a = n(481060), s = n(438536), r = n(214906), l = n(346479), o = n(723170), c = n(124368);
 function d(e) {
     let {
             channel: t,
@@ -13,7 +13,7 @@ function d(e) {
             onSelect: d,
             navId: u,
             label: _
-        } = e, E = (0, s.Z)(t, 'Notifications Bell'), m = (0, l.Z)(t), I = (0, o.B)(t);
+        } = e, E = (0, s.Z)(t, 'Notifications Bell'), m = (0, r.Z)(t), I = (0, o.B)(t);
     return (0, i.jsxs)(a.Menu, {
         navId: u,
         onClose: n,
@@ -36,7 +36,7 @@ function d(e) {
                         group: 'thread-notifications',
                         id: ''.concat(n),
                         label: s,
-                        action: () => r.Z.setNotificationSettings(t, { flags: n }),
+                        action: () => l.Z.setNotificationSettings(t, { flags: n }),
                         checked: n === I
                     }, n);
                 })

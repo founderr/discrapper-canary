@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(873546), r = n(442837), o = n(100527), c = n(906732), d = n(320007), u = n(141321), _ = n(208450), E = n(594174), m = n(502568), I = n(358085), T = n(998502), h = n(300986), N = n(314451), p = n(35583), f = n(981631), C = n(176505), g = n(139715);
+var a = n(120356), s = n.n(a), r = n(873546), l = n(442837), o = n(100527), c = n(906732), d = n(320007), u = n(141321), _ = n(208450), E = n(594174), m = n(502568), I = n(358085), T = n(998502), h = n(300986), N = n(314451), p = n(35583), f = n(981631), C = n(176505), g = n(139715);
 async function S() {
     if ((0, I.isMac)() && I.isPlatformEmbedded) {
         var e, t, n;
@@ -27,21 +27,21 @@ function A(e) {
             'aria-labelledby': C,
             scrollable: A,
             role: x,
-            hideSearch: O,
-            showDivider: R
-        } = e, M = (0, r.e7)([E.default], () => E.default.getCurrentUser()), v = (null == M ? void 0 : M.isStaff()) || (null == M ? void 0 : M.isStaffPersonal()) || !1;
+            hideSearch: R,
+            showDivider: O
+        } = e, M = (0, l.e7)([E.default], () => E.default.getCurrentUser()), v = (null == M ? void 0 : M.isStaff()) || (null == M ? void 0 : M.isStaffPersonal()) || !1;
     return (0, i.jsx)(m.ZP, {
         className: n,
         innerClassName: o,
         toolbar: function () {
             if (null == I)
                 return null;
-            let e = null != a && !O;
-            return l.tq ? T : (0, i.jsxs)(i.Fragment, {
+            let e = null != a && !R;
+            return r.tq ? T : (0, i.jsxs)(i.Fragment, {
                 children: [
                     I,
                     e ? (0, i.jsx)(_.Z, { className: g.search }, null != s ? s : a) : null,
-                    R && (0, i.jsx)(m.ZP.Divider, {}),
+                    O && (0, i.jsx)(m.ZP.Divider, {}),
                     (0, i.jsx)(p.Z, {}),
                     (0, i.jsx)(d.Z, { canShowReminder: !0 }),
                     (0, i.jsx)(u.Z, {}),
@@ -64,31 +64,31 @@ function x(e) {
         className: n,
         'aria-label': a,
         'aria-labelledby': s,
-        role: l
+        role: r
     } = e;
     return (0, i.jsx)(m.ZP, {
         className: n,
         onDoubleClick: S,
         'aria-label': a,
         'aria-labelledby': s,
-        role: l,
+        role: r,
         children: t
     });
 }
-function O(e) {
+function R(e) {
     let {
             isAuthenticated: t = !0,
             ...n
-        } = e, {analyticsLocations: a} = (0, c.ZP)(o.Z.HEADER_BAR), l = s()(n.className, { [g.forumOrHome]: null != n.channelType && f.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === C.oC.GUILD_HOME });
+        } = e, {analyticsLocations: a} = (0, c.ZP)(o.Z.HEADER_BAR), r = s()(n.className, { [g.forumOrHome]: null != n.channelType && f.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === C.oC.GUILD_HOME });
     return (0, i.jsx)(c.Gt, {
         value: a,
         children: t ? (0, i.jsx)(A, {
             ...n,
-            className: l
+            className: r
         }) : (0, i.jsx)(x, {
             ...n,
-            className: l
+            className: r
         })
     });
 }
-O.Title = m.ZP.Title, O.Icon = m.ZP.Icon, O.Divider = m.ZP.Divider, O.Caret = m.ZP.Caret, t.Z = O;
+R.Title = m.ZP.Title, R.Icon = m.ZP.Icon, R.Divider = m.ZP.Divider, R.Caret = m.ZP.Caret, t.Z = R;

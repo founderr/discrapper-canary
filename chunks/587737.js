@@ -1,20 +1,20 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return l;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(702346), s = n(739566), l = n(689938);
-function r(e) {
+var a = n(702346), s = n(739566), r = n(689938);
+function l(e) {
     let {
             message: t,
-            channel: r,
+            channel: l,
             targetUser: o,
             actorUsernameHook: c,
             targetUsernameHook: d,
             compact: u
-        } = e, _ = (0, s.ZP)(t), E = (0, s.Sw)(o, r), m = c(_), I = d(null != E ? E : void 0), T = l.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
+        } = e, _ = (0, s.ZP)(t), E = (0, s.Sw)(o, l), m = c(_), I = d(null != E ? E : void 0), T = r.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
             actorName: _.nick,
             actorHook: m,
             targetName: null == E ? void 0 : E.nick,

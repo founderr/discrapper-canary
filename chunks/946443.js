@@ -1,19 +1,19 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return R;
     },
     h: function () {
         return M;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(525654), o = n.n(r), c = n(91192), d = n(442837), u = n(524437), _ = n(481060), E = n(570140), m = n(607070), I = n(724757), T = n(626135), h = n(585483), N = n(143316), p = n(240126), f = n(791914), C = n(147522), g = n(809780), S = n(981631), A = n(689938), x = n(418149);
-function O(e) {
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(525654), o = n.n(l), c = n(91192), d = n(442837), u = n(524437), _ = n(481060), E = n(570140), m = n(607070), I = n(724757), T = n(626135), h = n(585483), N = n(143316), p = n(240126), f = n(791914), C = n(147522), g = n(809780), S = n(981631), A = n(689938), x = n(418149);
+function R(e) {
     let {
             setTab: t,
             onJump: n,
             showTutorial: s,
-            setSeenTutorial: r,
-            closePopout: O,
+            setSeenTutorial: l,
+            closePopout: R,
             badgeState: M
         } = e, v = a.useRef(null), [L, Z] = (0, g.ZP)(v), {
             loadState: P,
@@ -30,17 +30,17 @@ function O(e) {
             let {current: s} = e;
             if (null == s || null == a)
                 return;
-            let l = null === (i = s.getScrollerNode()) || void 0 === i ? void 0 : i.children;
-            if (null == l)
-                return;
-            let r = l[a];
+            let r = null === (i = s.getScrollerNode()) || void 0 === i ? void 0 : i.children;
             if (null == r)
+                return;
+            let l = r[a];
+            if (null == l)
                 return;
             let {
                 scrollTop: o,
                 scrollHeight: c
             } = s.getScrollerState();
-            (r.offsetTop < o || r.offsetTop > o + c) && s.scrollTo({ to: r.offsetTop });
+            (l.offsetTop < o || l.offsetTop > o + c) && s.scrollTo({ to: l.offsetTop });
         });
     }(v, L, Z), function (e, t) {
         a.useEffect(() => {
@@ -57,9 +57,9 @@ function O(e) {
         ]);
     }(L, Z), a.useEffect(() => {
         T.default.track(S.rMx.OPEN_POPOUT, { type: 'Inbox' });
-    }, []), a.useEffect(() => (E.Z.subscribe('CONNECTION_OPEN', O), () => {
-        E.Z.unsubscribe('CONNECTION_OPEN', O);
-    }), [O]));
+    }, []), a.useEffect(() => (E.Z.subscribe('CONNECTION_OPEN', R), () => {
+        E.Z.unsubscribe('CONNECTION_OPEN', R);
+    }), [R]));
     let U = (0, d.e7)([m.Z], () => m.Z.messageGroupSpacing), y = (0, I.Z)('unreads', v);
     if (0 === b.length) {
         var B;
@@ -70,7 +70,7 @@ function O(e) {
                     tab: u.X.UNREADS,
                     setTab: t,
                     badgeState: M,
-                    closePopout: O
+                    closePopout: R
                 }),
                 (0, i.jsx)(p.Z, {
                     Icon: _.InboxIcon,
@@ -81,14 +81,14 @@ function O(e) {
         });
     }
     return (0, i.jsxs)('div', {
-        className: l()(x.container, 'group-spacing-'.concat(U)),
+        className: r()(x.container, 'group-spacing-'.concat(U)),
         'aria-label': A.Z.Messages.UNREADS_TAB_LABEL,
         children: [
             (0, i.jsx)(f.Z, {
                 tab: u.X.UNREADS,
                 setTab: t,
                 badgeState: M,
-                closePopout: O,
+                closePopout: R,
                 children: (0, i.jsx)(N.Z, {
                     type: 'top-header',
                     onClick: j
@@ -111,7 +111,7 @@ function O(e) {
                             onScroll: P === g.jd.Done ? void 0 : D,
                             className: x.scroller,
                             children: [
-                                s ? (0, i.jsx)(R, { setSeenTutorial: r }) : null,
+                                s ? (0, i.jsx)(O, { setSeenTutorial: l }) : null,
                                 (0, C.Z)(b, Z, n),
                                 P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: x.spinner })
                             ]
@@ -122,7 +122,7 @@ function O(e) {
         ]
     });
 }
-function R(e) {
+function O(e) {
     let {setSeenTutorial: t} = e;
     return (0, i.jsxs)('div', {
         className: x.tutorial,

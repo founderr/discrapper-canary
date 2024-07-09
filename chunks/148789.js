@@ -3,12 +3,12 @@ n.d(t, {
         return c;
     }
 });
-var i = n(735250), a = n(470079), s = n(481060), l = n(194359), r = n(689938), o = n(273270);
+var i = n(735250), a = n(470079), s = n(481060), r = n(194359), l = n(689938), o = n(273270);
 function c(e) {
     let {userId: t} = e, n = a.useCallback(e => {
-            e.stopPropagation(), l.Z.cancelFriendRequest(t);
+            e.stopPropagation(), r.Z.cancelFriendRequest(t);
         }, [t]), c = a.useCallback(e => {
-            e.stopPropagation(), l.Z.addRelationship({ userId: t });
+            e.stopPropagation(), r.Z.addRelationship({ userId: t });
         }, [t]);
     return (0, i.jsxs)('div', {
         className: o.friendRequestContainer,
@@ -22,7 +22,7 @@ function c(e) {
                 children: (0, i.jsx)(s.Text, {
                     variant: 'text-sm/medium',
                     color: 'always-white',
-                    children: r.Z.Messages.FRIEND_REQUEST_ACCEPT
+                    children: l.Z.Messages.FRIEND_REQUEST_ACCEPT
                 })
             }),
             (0, i.jsx)(s.Button, {
@@ -34,7 +34,7 @@ function c(e) {
                 children: (0, i.jsx)(s.Text, {
                     variant: 'text-sm/medium',
                     color: 'always-white',
-                    children: r.Z.Messages.FRIEND_REQUEST_IGNORE
+                    children: l.Z.Messages.FRIEND_REQUEST_IGNORE
                 })
             })
         ]

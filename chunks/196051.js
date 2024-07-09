@@ -1,6 +1,6 @@
 n.d(t, {
     Bo: function () {
-        return l;
+        return r;
     },
     Ct: function () {
         return o;
@@ -9,7 +9,7 @@ n.d(t, {
         return s;
     },
     NB: function () {
-        return r;
+        return l;
     },
     cP: function () {
         return a;
@@ -33,14 +33,14 @@ function s(e, t) {
         message: t
     });
 }
-function l(e, t) {
+function r(e, t) {
     i.Z.dispatch({
         type: 'SPEAKING_MESSAGE',
         channelId: e,
         messageId: t
     });
 }
-function r() {
+function l() {
     i.Z.dispatch({ type: 'STOP_SPEAKING' });
 }
 function o(e) {

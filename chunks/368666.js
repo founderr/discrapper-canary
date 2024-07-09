@@ -8,7 +8,7 @@ n.d(t, {
 });
 var i, a, s = n(735250);
 n(470079);
-var l = n(120356), r = n.n(l), o = n(692547), c = n(481060), d = n(689938), u = n(404422);
+var r = n(120356), l = n.n(r), o = n(692547), c = n(481060), d = n(689938), u = n(404422);
 (i = a || (a = {})).RED = 'RED', i.GRAY = 'GRAY';
 let _ = {
         LARGE: u.liveLarge,
@@ -25,17 +25,17 @@ function m(e) {
         style: n,
         shape: i = c.BadgeShapes.ROUND,
         look: a = 'RED',
-        size: l = _.LARGE
+        size: r = _.LARGE
     } = e;
     return 'RED' === a ? (0, s.jsx)(c.TextBadge, {
         text: d.Z.Messages.LIVE,
-        className: r()(t, u.live, l),
+        className: l()(t, u.live, r),
         color: o.Z.unsafe_rawColors.RED_400.css,
         shape: E[i],
         style: n
     }) : (0, s.jsx)(c.TextBadge, {
         text: d.Z.Messages.LIVE,
-        className: r()(t, u.live, l, u.grey),
+        className: l()(t, u.live, r, u.grey),
         disableColor: !0,
         shape: E[i],
         style: n

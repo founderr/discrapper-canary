@@ -3,22 +3,22 @@ i.d(n, {
         return a;
     }
 }), i(627341);
-var o = i(278074), s = i(162267), t = i(228168), l = i(689938);
+var l = i(278074), s = i(162267), o = i(228168), t = i(689938);
 function a(e) {
     var n;
     let i = null === (n = (0, s.Z)(e.id, !0).mutualGuilds) || void 0 === n ? void 0 : n.length;
     return [
         {
-            section: t.oh.BOT_INFO,
-            text: l.Z.Messages.USER_PROFILE_ABOUT_ME
+            section: o.oh.BOT_INFO,
+            text: t.Z.Messages.USER_PROFILE_ABOUT_ME
         },
         {
-            section: t.oh.MUTUAL_GUILDS,
-            text: (0, o.EQ)(i).with(void 0, () => l.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => l.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => l.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({ count: e }))
+            section: o.oh.MUTUAL_GUILDS,
+            text: (0, l.EQ)(i).with(void 0, () => t.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => t.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => t.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({ count: e }))
         },
         {
-            section: t.oh.BOT_DATA_ACCESS,
-            text: l.Z.Messages.BOTS_DATA_ACCESS_TAB
+            section: o.oh.BOT_DATA_ACCESS,
+            text: t.Z.Messages.BOTS_DATA_ACCESS_TAB
         }
     ];
 }

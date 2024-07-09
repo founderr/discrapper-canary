@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     }
 }), n(47120), n(653041);
-var i, a, s, l, r, o, c = n(442837), d = n(570140), u = n(973616), _ = n(911955);
+var i, a, s, r, l, o, c = n(442837), d = n(570140), u = n(973616), _ = n(911955);
 (s = i || (i = {}))[s.NOT_FETCHED = 0] = 'NOT_FETCHED', s[s.FETCHING = 1] = 'FETCHING', s[s.FETCHED = 2] = 'FETCHED', s[s.FETCH_FAILED = 3] = 'FETCH_FAILED';
 let E = new Map(), m = new Map(), I = [], T = 0, h = [];
 class N extends (a = c.ZP.Store) {
@@ -32,12 +32,12 @@ class N extends (a = c.ZP.Store) {
 function p(e) {
     return e.sort((e, t) => e.application.name.localeCompare(t.application.name));
 }
-o = 'PrivateChannelIntegrationStore', (r = 'displayName') in (l = N) ? Object.defineProperty(l, r, {
+o = 'PrivateChannelIntegrationStore', (l = 'displayName') in (r = N) ? Object.defineProperty(r, l, {
     value: o,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : l[r] = o;
+}) : r[l] = o;
 let f = new N(d.Z, {
     LOGOUT() {
         E.clear();

@@ -9,26 +9,26 @@ function s(e) {
             onError: t,
             onSuccess: n,
             report: s
-        } = e, [l, r] = i.useState(!1);
+        } = e, [r, l] = i.useState(!1);
     return {
         reportFalsePositive: i.useCallback(async () => {
-            if (!l) {
-                r(!0);
+            if (!r) {
+                l(!0);
                 try {
                     await s(), null == n || n();
                 } catch (n) {
                     let e = new a.Hx(n);
                     null == t || t(e);
                 } finally {
-                    r(!1);
+                    l(!1);
                 }
             }
         }, [
-            l,
+            r,
             t,
             n,
             s
         ]),
-        isReportFalsePositiveLoading: l
+        isReportFalsePositiveLoading: r
     };
 }

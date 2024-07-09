@@ -3,13 +3,13 @@ n.d(t, {
         return p;
     }
 }), n(47120), n(536091);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(623292), d = n(926491), u = n(419922), _ = n(702346), E = n(626135), m = n(585483), I = n(115610), T = n(981631), h = n(689938), N = n(296361);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(623292), d = n(926491), u = n(419922), _ = n(702346), E = n(626135), m = n(585483), I = n(115610), T = n(981631), h = n(689938), N = n(296361);
 function p(e) {
     let {
             message: t,
             channel: s,
             compact: p
-        } = e, f = (0, r.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20), [C, g] = a.useState(null);
+        } = e, f = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20), [C, g] = a.useState(null);
     return (a.useEffect(() => {
         let e = setInterval(() => {
             f.length > 0 && g(f[Math.floor(Math.random() * f.length)]);
@@ -18,13 +18,13 @@ function p(e) {
     }, [f]), null == s.guild_id) ? null : (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(_.Z, {
-                className: l()(N.mainContainer, { [N.compact]: p }),
+                className: r()(N.mainContainer, { [N.compact]: p }),
                 icon: n(570111),
                 compact: p,
                 children: (0, i.jsx)('div', {
-                    className: l()(N.__invalid_content, { [N.compact]: p }),
+                    className: r()(N.__invalid_content, { [N.compact]: p }),
                     children: (0, i.jsx)('div', {
-                        className: l()(N.__invalid_messageContent, { [N.compact]: p }),
+                        className: r()(N.__invalid_messageContent, { [N.compact]: p }),
                         children: '' !== t.content ? t.content : h.Z.Messages.DEADCHAT_PROMPT_1
                     })
                 })

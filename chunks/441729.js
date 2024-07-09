@@ -1,5 +1,5 @@
 var i, a = n(442837), s = n(570140);
-function l(e, t, n) {
+function r(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -7,14 +7,14 @@ function l(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let r = {
+let l = {
         speechRate: 1,
         currentMessage: null
-    }, o = r;
+    }, o = l;
 class c extends (i = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         o = {
-            ...r,
+            ...l,
             ...null != e ? e : null
         };
     }
@@ -32,7 +32,7 @@ class c extends (i = a.ZP.DeviceSettingsStore) {
         return o;
     }
 }
-l(c, 'displayName', 'TTSStore'), l(c, 'persistKey', 'TTSStore'), l(c, 'migrations', []), t.Z = new c(s.Z, __OVERLAY__ ? {} : {
+r(c, 'displayName', 'TTSStore'), r(c, 'persistKey', 'TTSStore'), r(c, 'migrations', []), t.Z = new c(s.Z, __OVERLAY__ ? {} : {
     SPEAKING_MESSAGE: function (e) {
         let {
             messageId: t,

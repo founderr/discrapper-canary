@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(824203), l = n(981631), r = n(689938), o = n(327455);
+var a = n(481060), s = n(824203), r = n(981631), l = n(689938), o = n(327455);
 function c(e) {
     var t;
     let n, {
@@ -17,13 +17,13 @@ function c(e) {
         let e = (0, s.in)(_);
         n = (0, i.jsx)('div', {
             className: o.userAppsBetaContent,
-            children: r.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_WITH_REASON.format({
+            children: l.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_WITH_REASON.format({
                 handleDelete: E,
                 reason: e
             })
         });
     } else
-        n = c.type === l.uaV.STAGE_RAISE_HAND ? r.Z.Messages.STAGE_SYSTEM_MESSAGE_MODERATOR_VISIBILITY_MESSAGE.format({ handleDelete: E }) : r.Z.Messages.ONLY_YOU_CAN_SEE_AND_DELETE_THESE.format({
+        n = c.type === r.uaV.STAGE_RAISE_HAND ? l.Z.Messages.STAGE_SYSTEM_MESSAGE_MODERATOR_VISIBILITY_MESSAGE.format({ handleDelete: E }) : l.Z.Messages.ONLY_YOU_CAN_SEE_AND_DELETE_THESE.format({
             count: 1,
             countMessages: 1,
             handleDelete: E

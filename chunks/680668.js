@@ -5,7 +5,7 @@ n.d(t, {
 }), n(789020);
 var i = n(735250);
 n(470079);
-var a = n(533800), s = n(481060), l = n(358555), r = n(131704), o = n(197409), c = n(630388), d = n(267642), u = n(411198), _ = n(277707), E = n(358595), m = n(981631), I = n(689938), T = n(182578);
+var a = n(533800), s = n(481060), r = n(358555), l = n(131704), o = n(197409), c = n(630388), d = n(267642), u = n(411198), _ = n(277707), E = n(358595), m = n(981631), I = n(689938), T = n(182578);
 function h(e) {
     var t, h;
     let N, p, f, {
@@ -14,12 +14,12 @@ function h(e) {
             guild: S,
             invite: A,
             author: x,
-            currentUserId: O
-        } = e, R = O === x.id, {
+            currentUserId: R
+        } = e, O = R === x.id, {
             channel: M,
             approximate_member_count: v,
             approximate_presence_count: L
-        } = A, Z = A.state === m.r2o.ACCEPTING, P = null != M ? (0, r.jD)(M) : null, b = null != S, D = null != P, j = null != P && P.isGuildVocal(), U = null != P && P.isGuildStageVoice(), y = (0, c.yE)(null !== (t = A.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE), B = null !== (h = null == S ? void 0 : S.hasFeature(m.oNc.HUB)) && void 0 !== h && h;
+        } = A, Z = A.state === m.r2o.ACCEPTING, P = null != M ? (0, l.jD)(M) : null, b = null != S, D = null != P, j = null != P && P.isGuildVocal(), U = null != P && P.isGuildStageVoice(), y = (0, c.yE)(null !== (t = A.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE), B = null !== (h = null == S ? void 0 : S.hasFeature(m.oNc.HUB)) && void 0 !== h && h;
     if (null == S) {
         if (null == A.guild)
             return (0, i.jsx)(E.Z, {});
@@ -29,7 +29,7 @@ function h(e) {
     }
     let k = b ? C : g, G = (0, _.e)({
             isVoiceChannel: j,
-            isOwnInvite: R,
+            isOwnInvite: O,
             isGuest: y,
             isHubGuild: B,
             isStage: U,
@@ -41,7 +41,7 @@ function h(e) {
             (0, i.jsx)(o.Z.GuildName, { guild: S }),
             (0, i.jsx)('span', {
                 className: T.infoBadge,
-                children: (0, i.jsx)(l.Z, {
+                children: (0, i.jsx)(r.Z, {
                     guild: S,
                     isBannerVisible: !1,
                     disableBoostClick: !0
@@ -62,7 +62,7 @@ function h(e) {
             I.Z.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({ guildName: S.name }),
             (0, i.jsx)('span', {
                 className: T.infoBadge,
-                children: (0, i.jsx)(l.Z, {
+                children: (0, i.jsx)(r.Z, {
                     guild: S,
                     isBannerVisible: !1
                 })

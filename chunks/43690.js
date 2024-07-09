@@ -1,13 +1,13 @@
 n.d(t, {
     D: function () {
-        return l;
+        return r;
     },
     h: function () {
-        return r;
+        return l;
     }
 });
 var i = n(873011), a = n(192720), s = n(115219);
-function l(e) {
+function r(e) {
     (0, a.L9)([{
             type: i.J.BOOKMARK,
             messageId: e.id,
@@ -16,7 +16,7 @@ function l(e) {
             ...(0, a.sd)(e)
         }], []);
 }
-function r(e) {
+function l(e) {
     let t = s.Z.getMessageBookmarks();
     (0, a.L9)([], t.filter(t => t.messageId === e));
 }

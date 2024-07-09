@@ -3,7 +3,7 @@ n.d(t, {
         return h;
     }
 }), n(536091);
-var i = n(904245), a = n(339085), s = n(957730), l = n(285651), r = n(268350), o = n(926491), c = n(373228), d = n(430824), u = n(594174), _ = n(176354), E = n(709054), m = n(981631), I = n(185923);
+var i = n(904245), a = n(339085), s = n(957730), r = n(285651), l = n(268350), o = n(926491), c = n(373228), d = n(430824), u = n(594174), _ = n(176354), E = n(709054), m = n(981631), I = n(185923);
 function T(e) {
     let t = d.Z.getGuild(e);
     return null != t && (t.nsfwLevel === m.V_K.DEFAULT || t.nsfwLevel === m.V_K.SAFE);
@@ -16,8 +16,8 @@ async function h(e, t) {
     let p = u.default.getCurrentUser();
     if (null == p)
         return;
-    await (0, r.$p)();
-    let f = Array.from(o.Z.getAllStickersIterator()), C = f.filter(e => e.type === c.n0.GUILD).filter(e => T(e.guild_id) && (0, l.kl)(e, p, t)).sort((e, t) => -E.default.compare(e.id, t.id));
+    await (0, l.$p)();
+    let f = Array.from(o.Z.getAllStickersIterator()), C = f.filter(e => e.type === c.n0.GUILD).filter(e => T(e.guild_id) && (0, r.kl)(e, p, t)).sort((e, t) => -E.default.compare(e.id, t.id));
     if (C.length > 5) {
         let a = [C[Math.floor(Math.pow(Math.random(), 2) * C.length)].id];
         i.Z.sendStickers(t.id, a, '', {

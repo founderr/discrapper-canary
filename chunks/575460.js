@@ -5,13 +5,13 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(259580), l = n(528027), r = n(686807), o = n(113318), c = n(720145);
+var a = n(481060), s = n(259580), r = n(528027), l = n(686807), o = n(113318), c = n(720145);
 function d(e) {
     let {
             benefit: t,
             guildId: n,
             onClick: d
-        } = e, u = (0, o.Z)(n, t.ref_id), _ = (0, i.jsx)(l.Z, {
+        } = e, u = (0, o.Z)(n, t.ref_id), _ = (0, i.jsx)(r.Z, {
             guildId: n,
             emojiId: t.emoji_id,
             emojiName: t.emoji_name
@@ -35,7 +35,7 @@ function d(e) {
                         variant: 'text-md/medium',
                         color: 'header-primary',
                         className: c.name,
-                        children: (0, r.Z)(t)
+                        children: (0, l.Z)(t)
                     }),
                     (0, i.jsx)(a.Text, {
                         color: 'interactive-normal',

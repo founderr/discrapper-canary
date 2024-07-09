@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(477690), l = n(481060), r = n(100527), o = n(367907), c = n(906732), d = n(524444), u = n(624138), _ = n(453070), E = n(373228), m = n(419922), I = n(217588), T = n(981631), h = n(474936), N = n(467481);
+var i = n(735250), a = n(470079), s = n(477690), r = n(481060), l = n(100527), o = n(367907), c = n(906732), d = n(524444), u = n(624138), _ = n(453070), E = n(373228), m = n(419922), I = n(217588), T = n(981631), h = n(474936), N = n(467481);
 let p = (0, u.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_DIMENSION), f = e => {
         if (null != e)
             o.ZP.trackWithMetadata(T.rMx.EXPRESSION_TOOLTIP_VIEWED, {
@@ -15,10 +15,10 @@ t.Z = e => {
             renderableSticker: t,
             channel: n,
             isInteracting: s
-        } = e, [o, u] = a.useState(!0), [E, T] = a.useState(String(Date.now())), [h] = (0, _.XW)(t, s), {analyticsLocations: C} = (0, c.ZP)(r.Z.STICKER_MESSAGE), g = (0, i.jsxs)('span', {
+        } = e, [o, u] = a.useState(!0), [E, T] = a.useState(String(Date.now())), [h] = (0, _.XW)(t, s), {analyticsLocations: C} = (0, c.ZP)(l.Z.STICKER_MESSAGE), g = (0, i.jsxs)('span', {
             className: N.stickerName,
             children: [
-                (0, i.jsx)(l.StickerSmallIcon, {
+                (0, i.jsx)(r.StickerSmallIcon, {
                     size: 'xs',
                     color: 'currentColor',
                     className: N.stickerIcon
@@ -28,9 +28,9 @@ t.Z = e => {
         });
     return (0, i.jsx)(c.Gt, {
         value: C,
-        children: (0, i.jsx)(l.Popout, {
+        children: (0, i.jsx)(r.Popout, {
             align: 'center',
-            animation: l.Popout.Animation.TRANSLATE,
+            animation: r.Popout.Animation.TRANSLATE,
             positionKey: E,
             onRequestClose: () => {
                 u(!0);
@@ -43,7 +43,7 @@ t.Z = e => {
             }),
             children: e => {
                 let {onClick: n} = e;
-                return (0, i.jsx)(l.Tooltip, {
+                return (0, i.jsx)(r.Tooltip, {
                     ...d.b_,
                     shouldShow: o,
                     text: (0, d.Y)(g),
@@ -51,7 +51,7 @@ t.Z = e => {
                     onTooltipShow: () => {
                         f(h);
                     },
-                    children: e => (0, i.jsx)(l.Clickable, {
+                    children: e => (0, i.jsx)(r.Clickable, {
                         ...e,
                         className: N.clickableSticker,
                         onClick: e => {

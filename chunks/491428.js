@@ -12,7 +12,7 @@ n.d(t, {
         return _;
     }
 });
-var i = n(990547), a = n(283693), s = n(570140), l = n(558724), r = n(626135), o = n(573261), c = n(981631);
+var i = n(990547), a = n(283693), s = n(570140), r = n(558724), l = n(626135), o = n(573261), c = n(981631);
 function d(e) {
     s.Z.dispatch({
         type: 'SURVEY_OVERRIDE',
@@ -23,11 +23,11 @@ function u(e, t) {
     s.Z.dispatch({
         type: 'SURVEY_HIDE',
         key: e
-    }), t ? r.default.track(c.rMx.APP_NOTICE_CLOSED, {
+    }), t ? l.default.track(c.rMx.APP_NOTICE_CLOSED, {
         notice_type: c.kVF.SURVEY,
         survey_id: e,
         dismissed: t
-    }) : r.default.track(c.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: c.kVF.SURVEY });
+    }) : l.default.track(c.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: c.kVF.SURVEY });
 }
 function _(e, t) {
     var n = {};
@@ -56,8 +56,8 @@ function _(e, t) {
     });
 }
 function E(e) {
-    let t = l.Z.getLastSeenTimestamp();
-    if (null === t || null != t && Date.now() - t >= l.J)
+    let t = r.Z.getLastSeenTimestamp();
+    if (null === t || null != t && Date.now() - t >= r.J)
         return s.Z.dispatch({
             type: 'SURVEY_SEEN',
             key: e

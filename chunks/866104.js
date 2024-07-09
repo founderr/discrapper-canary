@@ -3,11 +3,11 @@ n.d(t, {
         return M;
     },
     Z: function () {
-        return R;
+        return O;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(512722), l = n.n(s), r = n(442837), o = n(481060), c = n(131388), d = n(357352), u = n(353254), _ = n(695346), E = n(271383), m = n(594174), I = n(346656), T = n(671533), h = n(810090), N = n(51144), p = n(506071), f = n(696014), C = n(847033), g = n(544978), S = n(893182), A = n(689938), x = n(55686);
-function O(e) {
+var i = n(735250), a = n(470079), s = n(512722), r = n.n(s), l = n(442837), o = n(481060), c = n(131388), d = n(357352), u = n(353254), _ = n(695346), E = n(271383), m = n(594174), I = n(346656), T = n(671533), h = n(810090), N = n(51144), p = n(506071), f = n(696014), C = n(847033), g = n(544978), S = n(893182), A = n(689938), x = n(55686);
+function R(e) {
     let {onClick: t} = e;
     return (0, i.jsxs)(o.Clickable, {
         onClick: t,
@@ -29,11 +29,11 @@ function O(e) {
         ]
     });
 }
-function R(e) {
+function O(e) {
     let {
             coverImageAsset: t,
             isPreview: n = !1
-        } = e, a = _.QK.useSetting(), s = (0, p.n)() && a, [l, r] = (0, u.Z)(t, s), o = s ? (0, i.jsx)(h.Z, {
+        } = e, a = _.QK.useSetting(), s = (0, p.n)() && a, [r, l] = (0, u.Z)(t, s), o = s ? (0, i.jsx)(h.Z, {
             autoPlay: !0,
             loop: !0,
             className: x.coverImage,
@@ -46,10 +46,10 @@ function R(e) {
             className: x.coverImage
         });
     return (0, i.jsx)('div', {
-        ref: l,
+        ref: r,
         className: x.coverImageContainer,
-        children: null == r || n ? o : (0, i.jsx)('img', {
-            src: r,
+        children: null == l || n ? o : (0, i.jsx)('img', {
+            src: l,
             alt: '',
             className: x.coverImage
         })
@@ -64,13 +64,13 @@ function M(e) {
     let {
             nickname: h,
             nickcolor: p
-        } = (s = T, (0, r.cj)([
+        } = (s = T, (0, l.cj)([
             E.ZP,
             m.default
         ], () => {
             var e, t;
             let n = m.default.getCurrentUser();
-            l()(null != n, 'user cannot be null');
+            r()(null != n, 'user cannot be null');
             let i = E.ZP.getMember(s, n.id);
             return {
                 nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : N.ZP.getName(n),
@@ -95,7 +95,7 @@ function M(e) {
                 M && (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.Spacer, { size: 4 }),
-                        (0, i.jsx)(O, { onClick: () => (0, S.Z)({ guildId: T }) })
+                        (0, i.jsx)(R, { onClick: () => (0, S.Z)({ guildId: T }) })
                     ]
                 })
             ]
@@ -158,7 +158,7 @@ function M(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(R, {
+            (0, i.jsx)(O, {
                 coverImageAsset: null == _ ? void 0 : _.cover_image_asset,
                 isPreview: j
             })

@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     }
 }), n(653041);
-var i = n(544891), a = n(433517), s = n(570140), l = n(865427), r = n(710845), o = n(70956), c = n(358085), d = n(960048), u = n(998502);
+var i = n(544891), a = n(433517), s = n(570140), r = n(865427), l = n(710845), o = n(70956), c = n(358085), d = n(960048), u = n(998502);
 function _(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -12,7 +12,7 @@ function _(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let E = 1 * o.Z.Millis.HOUR, m = 7 * o.Z.Millis.DAY, I = 1 * o.Z.Millis.DAY, T = a.K.get('lastNonRequiredUpdateShown', Date.now()), h = new r.Z('AutoUpdateManager');
+let E = 1 * o.Z.Millis.HOUR, m = 7 * o.Z.Millis.DAY, I = 1 * o.Z.Millis.DAY, T = a.K.get('lastNonRequiredUpdateShown', Date.now()), h = new l.Z('AutoUpdateManager');
 class N {
     destroy() {
         clearInterval(this._checkInterval);
@@ -53,9 +53,9 @@ class N {
                 query: { _: Date.now() / 1000 / 60 / 5 | 0 },
                 oldFormErrors: !0
             }).then(e => {
-                if (null == e.body || 'da25ad776e6e00fb9ed208ac892df51778638bde' === e.body.hash)
+                if (null == e.body || '23b61c0adb83b944c3f110068790eac7b9c0c2bb' === e.body.hash)
                     return this._handleUpdateNotAvailable();
-                if (e.body.required || (0, l.fD)())
+                if (e.body.required || (0, r.fD)())
                     return this._handleUpdateDownloaded(!1);
                 let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? m : I;
                 if (Date.now() - T > t)

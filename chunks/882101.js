@@ -11,7 +11,7 @@ n.d(t, {
 }), n(47120);
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(765400), l = n(937615), r = n(817460), o = n(290348), c = n(367719), d = n(689938), u = n(477873);
+var a = n(481060), s = n(765400), r = n(937615), l = n(817460), o = n(290348), c = n(367719), d = n(689938), u = n(477873);
 let _ = e => {
     let {listingName: t} = e;
     return (0, i.jsx)(a.Heading, {
@@ -46,14 +46,14 @@ let m = e => {
                 variant: 'heading-xl/semibold',
                 className: u.tierPrice,
                 tag: 'div',
-                children: (0, l.T4)(h.price, h.currency)
+                children: (0, r.T4)(h.price, h.currency)
             }),
             (0, i.jsx)(a.Text, {
                 variant: 'text-xs/normal',
                 color: 'interactive-normal',
                 className: u.tierPeriod,
                 children: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
-                    period: (0, r.JE)({
+                    period: (0, l.JE)({
                         interval: h.interval,
                         interval_count: h.interval_count
                     })

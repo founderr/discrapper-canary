@@ -1,10 +1,10 @@
 n.d(t, {
     M: function () {
-        return r;
+        return l;
     }
 });
-var i, a, s, l, r, o = n(442837), c = n(570140);
-(i = r || (r = {}))[i.NOT_FETCHED = 0] = 'NOT_FETCHED', i[i.FETCHING = 1] = 'FETCHING', i[i.FETCHED = 2] = 'FETCHED', i[i.FAILED = 3] = 'FAILED';
+var i, a, s, r, l, o = n(442837), c = n(570140);
+(i = l || (l = {}))[i.NOT_FETCHED = 0] = 'NOT_FETCHED', i[i.FETCHING = 1] = 'FETCHING', i[i.FETCHED = 2] = 'FETCHED', i[i.FAILED = 3] = 'FAILED';
 let d = {}, u = {};
 class _ extends o.yh {
     getMediaPostEmbed(e) {
@@ -19,12 +19,12 @@ class _ extends o.yh {
         return d;
     }
 }
-l = 'MediaPostEmbedStore', (s = 'displayName') in (a = _) ? Object.defineProperty(a, s, {
-    value: l,
+r = 'MediaPostEmbedStore', (s = 'displayName') in (a = _) ? Object.defineProperty(a, s, {
+    value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : a[s] = l, t.Z = new _(c.Z, {
+}) : a[s] = r, t.Z = new _(c.Z, {
     CONNECTION_OPEN: function () {
         d = {}, u = {};
     },

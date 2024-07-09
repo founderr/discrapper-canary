@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(442837), r = n(524437), o = n(481060), c = n(904245), d = n(294218), u = n(703656), _ = n(43690), E = n(115219), m = n(682417), I = n(695346), T = n(375954), h = n(324081), N = n(240126), p = n(791914), f = n(981631), C = n(689938), g = n(166311), S = n(699723);
+var a = n(120356), s = n.n(a), r = n(442837), l = n(524437), o = n(481060), c = n(904245), d = n(294218), u = n(703656), _ = n(43690), E = n(115219), m = n(682417), I = n(695346), T = n(375954), h = n(324081), N = n(240126), p = n(791914), f = n(981631), C = n(689938), g = n(166311), S = n(699723);
 let A = {
     offset: {
         left: 4,
@@ -16,31 +16,31 @@ function x(e) {
     let {
             setTab: t,
             closePopout: n
-        } = e, a = (0, l.e7)([E.Z], () => E.Z.getMessageBookmarks());
+        } = e, a = (0, r.e7)([E.Z], () => E.Z.getMessageBookmarks());
     return (0, i.jsxs)('div', {
         className: g.container,
         children: [
             (0, i.jsx)(p.Z, {
-                tab: r.X.BOOKMARKS,
+                tab: l.X.BOOKMARKS,
                 setTab: t,
                 closePopout: n
             }),
-            0 === a.length ? (0, i.jsx)(R, {}) : (0, i.jsx)(o.AdvancedScrollerThin, { children: a.map(e => (0, i.jsx)(O, { savedMessage: e }, e.messageId)) })
+            0 === a.length ? (0, i.jsx)(O, {}) : (0, i.jsx)(o.AdvancedScrollerThin, { children: a.map(e => (0, i.jsx)(R, { savedMessage: e }, e.messageId)) })
         ]
     });
 }
-function O(e) {
-    let {savedMessage: t} = e, n = (0, l.e7)([T.Z], () => T.Z.getMessage(t.channelId, t.messageId)), {
+function R(e) {
+    let {savedMessage: t} = e, n = (0, r.e7)([T.Z], () => T.Z.getMessage(t.channelId, t.messageId)), {
             message: a,
-            channel: r
+            channel: l
         } = (0, m.p)(t), E = () => {
-            (0, u.uL)(f.Z5c.CHANNEL(null == r ? void 0 : r.getGuildId(), t.channelId, t.messageId));
+            (0, u.uL)(f.Z5c.CHANNEL(null == l ? void 0 : l.getGuildId(), t.channelId, t.messageId));
         };
     return (0, i.jsxs)('div', {
         className: S.container,
         children: [
             (0, i.jsx)(h.Z, {
-                channel: r,
+                channel: l,
                 gotoChannel: E,
                 children: (0, i.jsx)(o.CircleIconButton, {
                     className: S.closeButton,
@@ -58,7 +58,7 @@ function O(e) {
                 children: [
                     (0, i.jsx)(d.Z, {
                         message: a,
-                        channel: r,
+                        channel: l,
                         className: S.message,
                         compact: I.jU.getSetting(),
                         animateAvatar: !1,
@@ -105,7 +105,7 @@ function O(e) {
         ]
     });
 }
-function R() {
+function O() {
     return (0, i.jsx)(N.Z, {
         Icon: o.DoubleCheckmarkLargeIcon,
         header: C.Z.Messages.MESSAGE_BOOKMARKS_EMPTY,

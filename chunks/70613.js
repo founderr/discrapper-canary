@@ -4,7 +4,7 @@ n.d(t, {
     }
 }), n(47120);
 var i = n(735250), a = n(470079), s = n(887024);
-let l = [n(992134)], r = ['#FFFFFF'], o = 1000 / 60, c = {
+let r = [n(992134)], l = ['#FFFFFF'], o = 1000 / 60, c = {
         velocity: {
             type: 'static-random',
             minValue: {
@@ -99,8 +99,8 @@ function d(e) {
             }),
             (0, i.jsx)(s.Ji, {
                 ref: _,
-                colors: r,
-                sprites: l,
+                colors: l,
+                sprites: r,
                 spriteWidth: 6,
                 spriteHeight: 6
             })

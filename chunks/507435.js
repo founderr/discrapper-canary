@@ -3,7 +3,7 @@ n.d(t, {
         return A;
     }
 });
-var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(468194), d = n(481060), u = n(904245), _ = n(596454), E = n(377171), m = n(702346), I = n(809026), T = n(139256), h = n(489887), N = n(689938), p = n(619260);
+var i, a, s = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(468194), d = n(481060), u = n(904245), _ = n(596454), E = n(377171), m = n(702346), I = n(809026), T = n(139256), h = n(489887), N = n(689938), p = n(619260);
 function f() {
     return (0, s.jsx)('svg', {
         width: '24',
@@ -57,7 +57,7 @@ function g(e) {
     case 'VICTOR':
         let {
             victorAnswerText: a,
-            victorVotePercentage: l
+            victorVotePercentage: r
         } = i;
         t = (0, s.jsxs)(s.Fragment, {
             children: [
@@ -86,7 +86,7 @@ function g(e) {
                     children: [
                         N.Z.Messages.POLL_RESULT_WINNING,
                         ' \u2022 ',
-                        l,
+                        r,
                         '%'
                     ]
                 })
@@ -94,7 +94,7 @@ function g(e) {
         });
         break;
     case 'TIE':
-        let {tiedVotePercentage: r} = i;
+        let {tiedVotePercentage: l} = i;
         t = (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsx)(d.Text, {
@@ -108,7 +108,7 @@ function g(e) {
                     color: 'input-placeholder-text',
                     scaleFontToUserSetting: !0,
                     children: [
-                        r,
+                        l,
                         '%'
                     ]
                 })
@@ -125,7 +125,7 @@ function S(e) {
             className: t,
             data: n,
             onClickPollLink: i
-        } = e, a = l.useMemo(() => function (e) {
+        } = e, a = r.useMemo(() => function (e) {
             if (0 === e.totalVotes)
                 return { type: 'NO_VOTES' };
             let t = null != e.victorAnswerId, n = e.totalVotes > 0 ? Math.round(e.victorAnswerVotes / e.totalVotes * 100) : 0;
@@ -167,7 +167,7 @@ function A(e) {
             message: n,
             compact: i,
             disableInteraction: a = !1
-        } = e, r = n.embeds[0], o = l.useMemo(() => (0, I.Z)(r), [r]), _ = (0, c.aF)(null !== (t = null == o ? void 0 : o.questionText) && void 0 !== t ? t : '', h.Dv), E = n.messageReference, T = l.useCallback(() => {
+        } = e, l = n.embeds[0], o = r.useMemo(() => (0, I.Z)(l), [l]), _ = (0, c.aF)(null !== (t = null == o ? void 0 : o.questionText) && void 0 !== t ? t : '', h.Dv), E = n.messageReference, T = r.useCallback(() => {
             null != E && u.Z.jumpToMessage({
                 channelId: E.channel_id,
                 messageId: E.message_id,

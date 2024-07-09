@@ -3,27 +3,27 @@ n.d(t, {
         return x;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(990547), o = n(831209), c = n(442837), d = n(481060), u = n(367907), _ = n(213609), E = n(267101), m = n(336197), I = n(661824), T = n(430824), h = n(346656), N = n(626135), p = n(76535), f = n(866104), C = n(886176), g = n(981631), S = n(689938), A = n(638948);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(990547), o = n(831209), c = n(442837), d = n(481060), u = n(367907), _ = n(213609), E = n(267101), m = n(336197), I = n(661824), T = n(430824), h = n(346656), N = n(626135), p = n(76535), f = n(866104), C = n(886176), g = n(981631), S = n(689938), A = n(638948);
 function x(e) {
     var t;
     let {guildId: n} = e, s = (0, c.e7)([T.Z], () => T.Z.getGuild(n)), {
             loading: x,
-            subscriptionsSettings: O
-        } = (0, p.H)(n), {listingsLoaded: R} = (0, E.eD)(n), M = (0, E.ue)(n, { publishedOnly: !0 }), v = a.useCallback(async () => {
+            subscriptionsSettings: R
+        } = (0, p.H)(n), {listingsLoaded: O} = (0, E.eD)(n), M = (0, E.ue)(n, { publishedOnly: !0 }), v = a.useCallback(async () => {
             N.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, u.hH)(n) }), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
         }, [n]);
     (0, _.Z)({
-        type: r.ImpressionTypes.VIEW,
-        name: r.ImpressionNames.GUILD_SHOP_EMBED
+        type: l.ImpressionTypes.VIEW,
+        name: l.ImpressionNames.GUILD_SHOP_EMBED
     }, { disableTrack: null == s });
     let L = M.length > 0 ? new Date(Math.min(...M.map(e => Date.parse(e.published_at)))) : void 0;
-    return x || !R ? (0, i.jsx)('div', {
-        className: l()(A.guildShopEmbed, A.spinnerContainer),
+    return x || !O ? (0, i.jsx)('div', {
+        className: r()(A.guildShopEmbed, A.spinnerContainer),
         children: (0, i.jsx)(d.Spinner, {})
-    }) : null == s || null == O ? null : (0, i.jsxs)('div', {
+    }) : null == s || null == R ? null : (0, i.jsxs)('div', {
         className: A.guildShopEmbed,
         children: [
-            (0, i.jsx)(f.Z, { coverImageAsset: null !== (t = O.cover_image_asset) && void 0 !== t ? t : null }),
+            (0, i.jsx)(f.Z, { coverImageAsset: null !== (t = R.cover_image_asset) && void 0 !== t ? t : null }),
             (0, i.jsx)(d.Spacer, { size: 16 }),
             (0, i.jsxs)('div', {
                 className: A.serverShopLabel,
@@ -52,7 +52,7 @@ function x(e) {
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 lineClamp: 2,
-                children: O.description
+                children: R.description
             }),
             (0, i.jsx)(d.Spacer, { size: 16 }),
             (0, i.jsx)(I.Z, {}),

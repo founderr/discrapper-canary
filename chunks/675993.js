@@ -3,7 +3,7 @@ t.d(n, {
         return N;
     }
 }), t(47120);
-var i = t(735250), l = t(470079), a = t(581051), r = t(353381), s = t(993365), o = t(481060), c = t(240991), u = t(810090), d = t(283442), m = t(783097), _ = t(591204), p = t(689938), E = t(970311), A = t(153521);
+var i = t(735250), l = t(470079), a = t(581051), r = t(353381), s = t(993365), o = t(481060), c = t(240991), u = t(810090), d = t(283442), m = t(783097), p = t(591204), _ = t(689938), E = t(970311), A = t(153521);
 function N(e) {
     let {
             channel: n,
@@ -14,7 +14,7 @@ function N(e) {
         } = e, c = l.useMemo(() => {
             var e;
             return null !== (e = (0, m.jD)(t)) && void 0 !== e ? e : '';
-        }, [t]), d = null != a || null != r, _ = c.length > 0;
+        }, [t]), d = null != a || null != r, p = c.length > 0;
     return (0, i.jsxs)('div', {
         className: E.container,
         children: [
@@ -23,7 +23,7 @@ function N(e) {
                 application: t,
                 sectionName: o
             }),
-            d || _ ? (0, i.jsxs)('div', {
+            d || p ? (0, i.jsxs)('div', {
                 className: E.profileAndVideoContainer,
                 children: [
                     d ? (0, i.jsx)('div', {
@@ -32,19 +32,19 @@ function N(e) {
                             loop: !0,
                             autoPlay: !0,
                             muted: !0,
-                            className: _ ? E.videoWithOverview : E.videoNoOverview,
+                            className: p ? E.videoWithOverview : E.videoNoOverview,
                             src: a,
                             poster: r
                         })
                     }) : null,
-                    _ ? (0, i.jsxs)('div', {
+                    p ? (0, i.jsxs)('div', {
                         className: d ? E.overviewContainerWithVideo : E.overviewContainerNoVideo,
                         children: [
                             (0, i.jsx)(s.x, {
                                 variant: 'text-sm/semibold',
-                                children: p.Z.Messages.OVERVIEW
+                                children: _.Z.Messages.OVERVIEW
                             }),
-                            (0, i.jsx)(C, { description: c })
+                            (0, i.jsx)(f, { description: c })
                         ]
                     }) : null
                 ]
@@ -79,7 +79,7 @@ function h(e) {
                     variant: 'heading-xl/extrabold',
                     children: r
                 }),
-                null != s ? (0, i.jsx)(_.Z, {
+                null != s ? (0, i.jsx)(p.Z, {
                     channel: n,
                     application: s,
                     disabled: c,
@@ -90,10 +90,10 @@ function h(e) {
         })
     });
 }
-function C(e) {
+function f(e) {
     let {description: n} = e, [t, u] = l.useState(!1), d = l.useMemo(() => (0, c.YP)(n), [n]), {
             ref: m,
-            lineCount: _
+            lineCount: p
         } = function () {
             let e = l.useRef(null), [n, t] = l.useState(null);
             return l.useEffect(() => {
@@ -117,7 +117,7 @@ function C(e) {
                 lineClamp: t ? void 0 : 3,
                 children: d
             }),
-            null != _ && _ >= 3 ? (0, i.jsxs)(o.Clickable, {
+            null != p && p >= 3 ? (0, i.jsxs)(o.Clickable, {
                 className: E.expandableDescriptionClickable,
                 onClick: () => {
                     u(e => !e);
@@ -127,7 +127,7 @@ function C(e) {
                         ref: m,
                         variant: 'text-sm/semibold',
                         color: 'text-brand',
-                        children: t ? p.Z.Messages.APP_LAUNCHER_SHOW_LESS : p.Z.Messages.APP_LAUNCHER_SHOW_MORE
+                        children: t ? _.Z.Messages.APP_LAUNCHER_SHOW_LESS : _.Z.Messages.APP_LAUNCHER_SHOW_MORE
                     }),
                     t ? (0, i.jsx)(r.u, {
                         size: 'sm',

@@ -233,7 +233,7 @@ let a = {
     partner: { hex: '#4087ed' },
     paypal: { hex: '#13216b' },
     playstation: { hex: '#032f87' },
-    'plum-23-alpha': { hex: '#A5B0E9' },
+    'plum-23-alpha': { hex: '#BCBCF0' },
     'plum-0': { hex: '#f9f9fa' },
     'plum-1': { hex: '#f3f3f4' },
     'plum-10': { hex: '#818491' },

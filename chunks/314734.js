@@ -7,10 +7,10 @@ n.d(t, {
         return i;
     },
     e9: function () {
-        return l;
+        return r;
     },
     t4: function () {
-        return r;
+        return l;
     }
 }), (a = i || (i = {}))[a.POPULAR = 0] = 'POPULAR', a[a.ALPHABETICAL = 1] = 'ALPHABETICAL';
-let s = 'app-launcher-element', l = 'app-launcher-modal', r = 'app-launcher-entrypoint';
+let s = 'app-launcher-element', r = 'app-launcher-modal', l = 'app-launcher-entrypoint';

@@ -1,6 +1,6 @@
-var i, a, s, l, r = n(913527), o = n.n(r), c = n(442837), d = n(570140), u = n(255078), _ = n(594174), E = n(74538);
+var i, a, s, r, l = n(913527), o = n.n(l), c = n(442837), d = n(570140), u = n(255078), _ = n(594174), E = n(74538);
 let m = !1;
-class I extends (l = c.ZP.Store) {
+class I extends (r = c.ZP.Store) {
     shouldShowReactivateNotice() {
         let e = _.default.getCurrentUser();
         return !(0, E.I5)(e) && m;

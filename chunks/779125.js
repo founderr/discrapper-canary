@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(481060), l = n(475179), r = n(287734), o = n(933557), c = n(124072), d = n(703656), u = n(131704), _ = n(592125), E = n(430824), m = n(699516), I = n(594174), T = n(934415), h = n(900849), N = n(981631);
+var a = n(442837), s = n(481060), r = n(475179), l = n(287734), o = n(933557), c = n(124072), d = n(703656), u = n(131704), _ = n(592125), E = n(430824), m = n(699516), I = n(594174), T = n(934415), h = n(900849), N = n(981631);
 function p(e) {
     let {
             channel: t,
@@ -41,10 +41,10 @@ function p(e) {
                         let a = _.Z.getChannel(t);
                         if (null != a && (0, u.bw)(a.type)) {
                             if (n) {
-                                l.Z.updateChatOpen(a.id, !0), (0, d.uL)(N.Z5c.CHANNEL(e, t));
+                                r.Z.updateChatOpen(a.id, !0), (0, d.uL)(N.Z5c.CHANNEL(e, t));
                                 return;
                             }
-                            r.default.selectVoiceChannel(a.id);
+                            l.default.selectVoiceChannel(a.id);
                             return;
                         }
                         (0, d.uL)(N.Z5c.CHANNEL(e, t));

@@ -1,6 +1,6 @@
 n.d(t, {
     Ui: function () {
-        return l;
+        return r;
     },
     p$: function () {
         return o;
@@ -18,7 +18,7 @@ let s = (0, i.B)({
             config: { enabled: !0 }
         }]
 });
-function l(e) {
+function r(e) {
     var t;
     let {enabled: n} = s.useExperiment({
         guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : a.lds,
@@ -26,7 +26,7 @@ function l(e) {
     }, { autoTrackExposure: !0 });
     return (null == e ? void 0 : e.id) != null && n;
 }
-let r = (0, i.B)({
+let l = (0, i.B)({
     kind: 'user',
     id: '2023-04_guild_media_channel_post_preview_embed_users',
     label: 'Guild Role Subscription Users',
@@ -38,6 +38,6 @@ let r = (0, i.B)({
         }]
 });
 function o() {
-    let {enabledForUser: e} = r.useExperiment({ location: '96e84c_2' }, { autoTrackExposure: !0 });
+    let {enabledForUser: e} = l.useExperiment({ location: '96e84c_2' }, { autoTrackExposure: !0 });
     return e;
 }

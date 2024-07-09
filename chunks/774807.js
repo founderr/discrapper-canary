@@ -1,7 +1,7 @@
 n(47120);
 var i, a = n(442837), s = n(570140);
 n(57132);
-var l = n(455199), r = n(70956), o = n(709054), c = n(497089);
+var r = n(455199), l = n(70956), o = n(709054), c = n(497089);
 function d(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -10,7 +10,7 @@ function d(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let u = 90 * r.Z.Millis.DAY, _ = {
+let u = 90 * l.Z.Millis.DAY, _ = {
         tab: null,
         localItemAcks: {},
         hasNewMentions: !1,
@@ -19,7 +19,7 @@ let u = 90 * r.Z.Millis.DAY, _ = {
     };
 class E extends (i = a.ZP.PersistedStore) {
     initialize(e) {
-        if (this.waitFor(l.Z), null != e) {
+        if (this.waitFor(r.Z), null != e) {
             var t;
             (_ = e).localItemAcks = function (e) {
                 let t = {};

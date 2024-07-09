@@ -1,5 +1,5 @@
 n(47120);
-var i, a, s, l, r = n(442837), o = n(570140), c = n(823379), d = n(981631);
+var i, a, s, r, l = n(442837), o = n(570140), c = n(823379), d = n(981631);
 let u = [], _ = {}, E = null, m = 0;
 function I(e) {
     let t = null;
@@ -20,7 +20,7 @@ function I(e) {
     }
     return null;
 }
-class T extends (i = r.ZP.Store) {
+class T extends (i = l.ZP.Store) {
     getInvites() {
         return u;
     }
@@ -42,12 +42,12 @@ class T extends (i = r.ZP.Store) {
         return m;
     }
 }
-l = 'GameInviteStore', (s = 'displayName') in (a = T) ? Object.defineProperty(a, s, {
-    value: l,
+r = 'GameInviteStore', (s = 'displayName') in (a = T) ? Object.defineProperty(a, s, {
+    value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : a[s] = l, t.Z = new T(o.Z, {
+}) : a[s] = r, t.Z = new T(o.Z, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let {gameInvites: t} = e;
         u = t.map(I).filter(c.lm);

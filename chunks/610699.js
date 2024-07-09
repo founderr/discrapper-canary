@@ -3,7 +3,7 @@ n.d(t, {
         return k;
     }
 }), n(653041), n(47120), n(390547);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r), c = n(442837), d = n(477690), u = n(481060), _ = n(447543), E = n(317381), m = n(778569), I = n(182906), T = n(100527), h = n(906732), N = n(835473), p = n(471445), f = n(601964), C = n(592125), g = n(430824), S = n(496675), A = n(594174), x = n(197409), O = n(514342), R = n(602623), M = n(624138), v = n(358595), L = n(981631), Z = n(245335), P = n(689938), b = n(556849);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(442837), d = n(477690), u = n(481060), _ = n(447543), E = n(317381), m = n(778569), I = n(182906), T = n(100527), h = n(906732), N = n(835473), p = n(471445), f = n(601964), C = n(592125), g = n(430824), S = n(496675), A = n(594174), x = n(197409), R = n(514342), O = n(602623), M = n(624138), v = n(358595), L = n(981631), Z = n(245335), P = n(689938), b = n(556849);
 let D = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE), j = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL), U = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 function y(e) {
     let {
@@ -11,8 +11,8 @@ function y(e) {
             membersOnline: n,
             isLarge: a,
             isStacked: s
-        } = e, r = [];
-    return null != n && n > 0 && r.push((0, i.jsxs)('div', {
+        } = e, l = [];
+    return null != n && n > 0 && l.push((0, i.jsxs)('div', {
         className: b.statusWrapper,
         children: [
             (0, i.jsx)('i', { className: b.statusOnline }),
@@ -22,7 +22,7 @@ function y(e) {
                 children: P.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: n })
             })
         ]
-    }, 'onlineCount')), null != t && r.push((0, i.jsxs)('div', {
+    }, 'onlineCount')), null != t && l.push((0, i.jsxs)('div', {
         className: b.statusWrapper,
         children: [
             (0, i.jsx)('i', { className: b.statusOffline }),
@@ -33,11 +33,11 @@ function y(e) {
             })
         ]
     }, 'memberCount')), (0, i.jsx)('div', {
-        className: l()(b.statusCounts, {
+        className: r()(b.statusCounts, {
             [b.large]: a,
             [b.stacked]: s
         }),
-        children: r
+        children: l
     });
 }
 function B(e) {
@@ -50,7 +50,7 @@ function B(e) {
     if (null != t && null != n) {
         let e = (0, p.KS)(t, n);
         return (0, i.jsxs)('div', {
-            className: l()(b.channel, {
+            className: r()(b.channel, {
                 [b.stacked]: a,
                 [b.ended]: s
             }),
@@ -60,7 +60,7 @@ function B(e) {
                     size: 'xs',
                     color: 'currentColor'
                 }) : null,
-                (0, i.jsx)(O.Z, {
+                (0, i.jsx)(R.Z, {
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-xs/normal',
                         children: P.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
@@ -73,11 +73,11 @@ function B(e) {
         });
     }
     return null != n ? (0, i.jsx)('div', {
-        className: l()(b.channel, {
+        className: r()(b.channel, {
             [b.stacked]: a,
             [b.ended]: s
         }),
-        children: (0, i.jsx)(O.Z, {
+        children: (0, i.jsx)(R.Z, {
             children: (0, i.jsx)(u.Text, {
                 variant: 'text-xs/normal',
                 children: P.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: n.name })
@@ -87,11 +87,11 @@ function B(e) {
 }
 function k(e) {
     var t, n;
-    let s, r, {
+    let s, l, {
             invite: d,
             getAcceptInviteContext: p
         } = e, {
-            approximate_member_count: O,
+            approximate_member_count: R,
             approximate_presence_count: M,
             target_type: k,
             target_application: G
@@ -141,30 +141,30 @@ function k(e) {
                 analyticsLocations: J
             });
         };
-    return (ei && K && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = K ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START, null == d.code || '' === d.code) ? null : (0, i.jsxs)('div', {
+    return (ei && K && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), l = K ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START, null == d.code || '' === d.code) ? null : (0, i.jsxs)('div', {
         className: b.container,
         ref: F,
         children: [
             (0, i.jsx)('div', {
-                className: l()(b.imgContainer, {
+                className: r()(b.imgContainer, {
                     [b.large]: w,
                     [b.stacked]: H
                 }),
                 children: (0, i.jsx)(I.Z, {
                     imageBackground: $,
                     applicationName: null !== (n = null == z ? void 0 : z.name) && void 0 !== n ? n : '',
-                    imageClassName: l()(b.img, {
+                    imageClassName: r()(b.img, {
                         [b.large]: w,
                         [b.stacked]: H
                     }),
-                    imageNotFoundClassName: l()(b.brokenImg, {
+                    imageNotFoundClassName: r()(b.brokenImg, {
                         [b.large]: w,
                         [b.stacked]: H
                     })
                 })
             }),
             (0, i.jsxs)(x.Z, {
-                className: l()(b.content, {
+                className: r()(b.content, {
                     [b.large]: w,
                     [b.stacked]: H
                 }),
@@ -187,13 +187,13 @@ function k(e) {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: l()(b.currentState, {
+                        className: r()(b.currentState, {
                             [b.large]: w,
                             [b.split]: !Q && H
                         }),
                         children: [
                             !Q && ei ? (0, i.jsxs)('div', {
-                                className: l()(b.endedNote, { [b.large]: w }),
+                                className: r()(b.endedNote, { [b.large]: w }),
                                 children: [
                                     (0, i.jsx)(u.Text, {
                                         variant: 'text-xs/medium',
@@ -206,7 +206,7 @@ function k(e) {
                                 ]
                             }) : null,
                             ei ? null : (0, i.jsx)(y, {
-                                members: O,
+                                members: R,
                                 membersOnline: M,
                                 isLarge: w,
                                 isStacked: H
@@ -216,7 +216,7 @@ function k(e) {
                                 children: [
                                     null != W && Q ? (0, i.jsx)('div', {
                                         className: b.avatars,
-                                        children: (0, i.jsx)(R.Z, {
+                                        children: (0, i.jsx)(O.Z, {
                                             guildId: W.id,
                                             users: et,
                                             max: 4
@@ -239,7 +239,7 @@ function k(e) {
                                                 submitting: en,
                                                 disabled: ea,
                                                 color: u.ButtonColors.GREEN,
-                                                children: r
+                                                children: l
                                             });
                                         }
                                     })

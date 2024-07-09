@@ -6,12 +6,12 @@ n.d(t, {
         return p;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(338545), l = n(442837), r = n(686777), o = n(113434), c = n(569984), d = n(497505), u = n(602667), _ = n(87894), E = n(372113), m = n(206044), I = n(266843), T = n(46140), h = n(959445);
+var i = n(735250), a = n(470079), s = n(338545), r = n(442837), l = n(686777), o = n(113434), c = n(569984), d = n(497505), u = n(602667), _ = n(87894), E = n(372113), m = n(206044), I = n(266843), T = n(46140), h = n(959445);
 function N(e) {
     let {
             questId: t,
             ...n
-        } = e, a = (0, l.e7)([c.Z], () => c.Z.getQuest(t));
+        } = e, a = (0, r.e7)([c.Z], () => c.Z.getQuest(t));
     if (null == a)
         return null;
     {
@@ -26,19 +26,19 @@ function p(e) {
     let {
             quest: t,
             location: n,
-            initiallyExpanded: l,
+            initiallyExpanded: r,
             contentPosition: c
         } = e, [N, p] = a.useState(!1), f = a.useCallback(() => p(!0), []), C = a.useCallback(() => p(!1), []), g = (0, o.tP)(t), {
             containerRef: S,
             size: A,
             height: x
-        } = (0, I.h)([t]), O = (0, r.q)({ location: T.dr.QUESTS_CARD }), {
-            expansionSpring: R,
+        } = (0, I.h)([t]), R = (0, l.q)({ location: T.dr.QUESTS_CARD }), {
+            expansionSpring: O,
             isAnimating: M,
             isExpanded: v,
             toggleExpanded: L
         } = (0, I.O)({
-            initiallyExpanded: !O || l || (0, _.iM)({
+            initiallyExpanded: !R || r || (0, _.iM)({
                 location: n,
                 quest: t
             })
@@ -51,7 +51,7 @@ function p(e) {
         children: e => (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)(s.animated.div, {
                 style: {
-                    maxHeight: n === d.jn.QUESTS_EMBED ? void 0 : R.to({
+                    maxHeight: n === d.jn.QUESTS_EMBED ? void 0 : O.to({
                         range: [
                             0,
                             1
@@ -77,10 +77,10 @@ function p(e) {
                         location: n,
                         quest: t,
                         size: A,
-                        expansionSpring: R,
+                        expansionSpring: O,
                         isAnimating: M,
                         isExpanded: v,
-                        isInConcurrentQuestExperiment: O,
+                        isInConcurrentQuestExperiment: R,
                         contentPosition: c,
                         toggleExpanded: L
                     }),

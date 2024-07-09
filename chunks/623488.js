@@ -5,28 +5,28 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(481060), r = n(240657), o = n(765400), c = n(153124), d = n(916001), u = n(689938), _ = n(690326);
+var a = n(120356), s = n.n(a), r = n(481060), l = n(240657), o = n(765400), c = n(153124), d = n(916001), u = n(689938), _ = n(690326);
 function E(e) {
     let {
         hidePurchaseToUnlockBadge: t,
         showDraftBadge: n,
         className: a,
-        children: r
+        children: l
     } = e;
     return (0, i.jsxs)('div', {
         className: s()(_.productThumbnailContainer, a),
         children: [
-            r,
+            l,
             !t && (0, i.jsxs)('div', {
                 className: _.purchaseToUnlockBadge,
                 children: [
-                    (0, i.jsx)(l.LockIcon, {
+                    (0, i.jsx)(r.LockIcon, {
                         size: 'xs',
                         className: _.lockIcon,
                         color: 'currentColor',
                         'aria-hidden': !0
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'always-white',
                         className: _.__invalid_unlockText,
@@ -47,12 +47,12 @@ function m(e) {
             variant: n
         } = e, a = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(l.Text, {
+                (0, i.jsx)(r.Text, {
                     variant: n,
                     color: null != t ? 'text-link' : 'interactive-hover',
                     children: u.Z.Messages.GUILD_PRODUCT_CARD_SEE_FULL_DESCRIPTION
                 }),
-                (0, i.jsx)(l.ArrowSmallRightIcon, {
+                (0, i.jsx)(r.ArrowSmallRightIcon, {
                     size: 'xs',
                     color: 'currentColor',
                     className: _.arrowIcon
@@ -62,7 +62,7 @@ function m(e) {
     return null == t ? (0, i.jsx)('div', {
         className: _.showMoreButton,
         children: a
-    }) : (0, i.jsx)(l.Clickable, {
+    }) : (0, i.jsx)(r.Clickable, {
         className: s()(_.showMoreButton, _.hasAction),
         onClick: e => {
             e.stopPropagation(), null != t && t();
@@ -87,8 +87,8 @@ function I(e) {
             hideRoleTag: S = !1,
             lineClamp: A = 1,
             cardWidth: x = 332,
-            cardHeight: O,
-            thumbnailHeight: R = 187,
+            cardHeight: R,
+            thumbnailHeight: O = 187,
             descriptionTextVariant: M = 'text-sm/normal',
             isDraft: v = !1
         } = e, L = (0, c.hQ)(), Z = (0, i.jsxs)(i.Fragment, {
@@ -100,7 +100,7 @@ function I(e) {
                         alt: '',
                         src: t,
                         className: _.productThumbnail,
-                        style: { height: R }
+                        style: { height: O }
                     })
                 }),
                 (0, i.jsxs)('div', {
@@ -109,15 +109,15 @@ function I(e) {
                         (0, i.jsxs)('div', {
                             className: _.productDetailContent,
                             children: [
-                                (0, i.jsx)(l.Heading, {
+                                (0, i.jsx)(r.Heading, {
                                     variant: 'text-md/medium',
                                     color: 'header-primary',
                                     className: _.productName,
                                     id: L,
                                     children: n
                                 }),
-                                (0, i.jsx)(l.FocusBlock, {
-                                    children: (0, i.jsx)(r.Z, {
+                                (0, i.jsx)(r.FocusBlock, {
+                                    children: (0, i.jsx)(l.Z, {
                                         variant: M,
                                         color: 'text-muted',
                                         lineClamp: A,
@@ -130,7 +130,7 @@ function I(e) {
                                 }),
                                 S || null == I || '' === I.name ? null : (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        (0, i.jsx)(l.Spacer, { size: 16 }),
+                                        (0, i.jsx)(r.Spacer, { size: 16 }),
                                         (0, i.jsx)(d.Z, { role: I })
                                     ]
                                 })
@@ -142,13 +142,13 @@ function I(e) {
                 (0, i.jsxs)('div', {
                     className: _.purchaseDetails,
                     children: [
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(r.Text, {
                             variant: 'text-md/medium',
                             color: 'interactive-active',
                             className: _.__invalid_productPrice,
                             children: null != o ? o : u.Z.Messages.GUILD_PRODUCT_CARD_EMPTY_PRICE
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(r.Text, {
                             variant: 'text-xxs/normal',
                             color: 'text-normal',
                             className: _.__invalid_productType,
@@ -172,9 +172,9 @@ function I(e) {
     }) : (0, i.jsx)('div', {
         style: {
             width: x,
-            height: O
+            height: R
         },
-        children: (0, i.jsx)(l.ClickableContainer, {
+        children: (0, i.jsx)(r.ClickableContainer, {
             tag: 'article',
             'aria-label': u.Z.Messages.GUILD_SHOP_LISTING_CARD_A11Y_LABEL.format({ productName: n }),
             className: s()(_.productCard, g ? _.opaqueBackground : _.solidBackground, _.cardClickableContainer),

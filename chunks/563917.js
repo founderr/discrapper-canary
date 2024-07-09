@@ -5,8 +5,8 @@ t.Z = e => {
     let {
         stageInstance: t,
         guild: n,
-        isMember: l,
-        onTransitionToInviteChannel: r,
+        isMember: r,
+        onTransitionToInviteChannel: l,
         onAcceptInstantInvite: o
     } = e;
     return (0, i.jsx)(s.Z, {
@@ -14,7 +14,7 @@ t.Z = e => {
             isEmbed: !0,
             stageInstance: t,
             guild: n,
-            onClick: l ? r : o
+            onClick: r ? l : o
         })
     });
 };

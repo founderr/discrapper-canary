@@ -1,6 +1,6 @@
 n.d(t, {
     BW: function () {
-        return r;
+        return l;
     },
     Kp: function () {
         return d;
@@ -15,8 +15,8 @@ n.d(t, {
         return o;
     }
 });
-var i = n(873011), a = n(570140), s = n(192720), l = n(802463);
-function r(e, t) {
+var i = n(873011), a = n(570140), s = n(192720), r = n(802463);
+function l(e, t) {
     (0, s.L9)([{
             type: i.J.REMINDER,
             messageId: e.id,
@@ -27,7 +27,7 @@ function r(e, t) {
         }], []);
 }
 function o(e, t) {
-    let n = l.Z.getMessageReminders().find(t => t.messageId === e);
+    let n = r.Z.getMessageReminders().find(t => t.messageId === e);
     if (null != n)
         (0, s.L9)([{
                 ...n,
@@ -43,10 +43,10 @@ function c(e, t) {
     });
 }
 function d(e) {
-    let t = l.Z.getMessageReminders();
+    let t = r.Z.getMessageReminders();
     (0, s.L9)([], t.filter(t => t.messageId === e));
 }
 function u() {
-    let e = l.Z.getMessageReminders();
+    let e = r.Z.getMessageReminders();
     e.some(e => e.complete) && (0, s.L9)([], e.filter(e => e.complete));
 }

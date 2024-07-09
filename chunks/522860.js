@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(702346), l = n(368666), r = n(739566), o = n(689938);
+var a = n(481060), s = n(702346), r = n(368666), l = n(739566), o = n(689938);
 function c(e) {
     var t;
     let {
@@ -15,7 +15,7 @@ function c(e) {
             onJoinStream: u,
             usernameHook: _,
             compact: E
-        } = e, m = (0, r.ZP)(n), I = null === (t = n.call) || void 0 === t ? void 0 : t.duration, T = _(m), h = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
+        } = e, m = (0, l.ZP)(n), I = null === (t = n.call) || void 0 === t ? void 0 : t.duration, T = _(m), h = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
             username: m.nick,
             activityName: null != d ? d.name : 'unknown',
             onJoinStream: u,
@@ -32,7 +32,7 @@ function c(e) {
             color: 'currentColor',
             width: 20,
             height: 20
-        }) : (0, i.jsx)(l.ZP, { size: l.ZP.Sizes.SMALL }),
+        }) : (0, i.jsx)(r.ZP, { size: r.ZP.Sizes.SMALL }),
         timestamp: n.timestamp,
         compact: E,
         children: h

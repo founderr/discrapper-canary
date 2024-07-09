@@ -15,9 +15,9 @@ n.d(t, {
         return u;
     }
 });
-var i = n(166459), a = n(966390), s = n(476326), l = n(703558), r = n(398805);
+var i = n(166459), a = n(966390), s = n(476326), r = n(703558), l = n(398805);
 async function o(e, t, n) {
-    let i = (0, r.Yk)(t, n), a = await fetch(n);
+    let i = (0, l.Yk)(t, n), a = await fetch(n);
     return c(e, t, new File([await a.blob()], i, { type: 'image/gif' })), n;
 }
 function c(e, t, n) {
@@ -30,14 +30,14 @@ function c(e, t, n) {
     i.Z.addFile({
         file: a,
         channelId: e,
-        draftType: l.d.Poll
+        draftType: r.d.Poll
     });
 }
 async function d(e, t, n) {
-    i.Z.remove(e, t, l.d.Poll);
+    i.Z.remove(e, t, r.d.Poll);
 }
 async function u(e) {
-    i.Z.clearAll(e, l.d.Poll);
+    i.Z.clearAll(e, r.d.Poll);
 }
 async function _(e) {
     let {
@@ -45,12 +45,12 @@ async function _(e) {
         items: n,
         poll: i,
         nonce: s,
-        maxSizeCallback: r
+        maxSizeCallback: l
     } = e;
     return a.Z.uploadFiles({
         channelId: t.id,
         uploads: n,
-        draftType: l.d.Poll,
+        draftType: r.d.Poll,
         parsedMessage: {
             content: '',
             tts: !1,

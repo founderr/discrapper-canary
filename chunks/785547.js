@@ -3,7 +3,7 @@ n.d(t, {
         return P;
     }
 }), n(411104), n(47120);
-var i, a, s, l = n(735250), r = n(470079), o = n(442837), c = n(692547), d = n(481060), u = n(58642), _ = n(2052), E = n(710845), m = n(703656), I = n(173747), T = n(7956), h = n(293245), N = n(417363), p = n(941128), f = n(780570), C = n(358085), g = n(814225), S = n(346329), A = n(701560), x = n(981631), O = n(689938), R = n(553163);
+var i, a, s, r = n(735250), l = n(470079), o = n(442837), c = n(692547), d = n(481060), u = n(58642), _ = n(2052), E = n(710845), m = n(703656), I = n(173747), T = n(7956), h = n(293245), N = n(417363), p = n(941128), f = n(780570), C = n(358085), g = n(814225), S = n(346329), A = n(701560), x = n(981631), R = n(689938), O = n(553163);
 function M(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -21,18 +21,18 @@ let v = Object.freeze({
         [x.apO.MOVE_UP]: 'queued',
         [x.apO.RESUME]: 'paused'
     }), L = () => [
-        O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_1,
-        O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_2,
-        O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_3,
-        O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_4,
-        O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_5,
-        O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_6,
-        O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_7,
-        O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_8,
-        O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_9,
-        O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_10
+        R.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_1,
+        R.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_2,
+        R.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_3,
+        R.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_4,
+        R.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_5,
+        R.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_6,
+        R.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_7,
+        R.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_8,
+        R.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_9,
+        R.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_10
     ];
-class Z extends (a = r.Component) {
+class Z extends (a = l.Component) {
     get analyticsLocation() {
         return {
             ...this.props.analyticsContext.location,
@@ -43,24 +43,24 @@ class Z extends (a = r.Component) {
         switch ('uninstalling' !== e && (this._uninstallStringIndex = null), e) {
         case 'install':
         case 'unsupported_os':
-            return O.Z.Messages.GAME_ACTION_BUTTON_INSTALL;
+            return R.Z.Messages.GAME_ACTION_BUTTON_INSTALL;
         case 'update':
-            return O.Z.Messages.GAME_ACTION_BUTTON_UPDATE;
+            return R.Z.Messages.GAME_ACTION_BUTTON_UPDATE;
         case 'paused':
-            return O.Z.Messages.GAME_ACTION_BUTTON_PAUSED;
+            return R.Z.Messages.GAME_ACTION_BUTTON_PAUSED;
         case 'locate':
-            return O.Z.Messages.GAME_ACTION_BUTTON_LOCATE;
+            return R.Z.Messages.GAME_ACTION_BUTTON_LOCATE;
         case 'uninstalling':
             let t = L();
             return null == this._uninstallStringIndex && (this._uninstallStringIndex = Math.floor(Math.random() * t.length)), t[this._uninstallStringIndex];
         case 'queued':
-            return O.Z.Messages.GAME_ACTION_BUTTON_QUEUED;
+            return R.Z.Messages.GAME_ACTION_BUTTON_QUEUED;
         case 'downloading':
-            return O.Z.Messages.GAME_ACTION_BUTTON_DOWNLOADING;
+            return R.Z.Messages.GAME_ACTION_BUTTON_DOWNLOADING;
         case 'preorder_wait':
-            return O.Z.Messages.GAME_ACTION_BUTTON_PREORDER_WAIT;
+            return R.Z.Messages.GAME_ACTION_BUTTON_PREORDER_WAIT;
         case 'add_to_library':
-            return O.Z.Messages.GAME_ACTION_BUTTON_ADD_TO_LIBRARY;
+            return R.Z.Messages.GAME_ACTION_BUTTON_ADD_TO_LIBRARY;
         default:
             throw Error('Unexpected button state');
         }
@@ -86,12 +86,12 @@ class Z extends (a = r.Component) {
             color: i,
             customDisabledColor: a,
             isPlayShiny: s,
-            onDropdownOpen: r,
+            onDropdownOpen: l,
             onDropdownClose: o,
             analyticsListSort: c,
             analyticsListIndex: d
         } = this.props;
-        return (0, l.jsx)(A.Z, {
+        return (0, r.jsx)(A.Z, {
             applicationId: e.id,
             libraryApplication: e,
             fullWidth: t,
@@ -99,7 +99,7 @@ class Z extends (a = r.Component) {
             color: i,
             customDisabledColor: a,
             isShiny: s,
-            onDropdownOpen: r,
+            onDropdownOpen: l,
             onDropdownClose: o,
             analyticsListSort: c,
             analyticsListIndex: d
@@ -111,27 +111,27 @@ class Z extends (a = r.Component) {
             fullWidth: i,
             size: a,
             customDisabledColor: s,
-            tooltipPosition: r
+            tooltipPosition: l
         } = this.props;
-        return (0, l.jsxs)('div', {
-            className: R.disabledButtonWrapper,
+        return (0, r.jsxs)('div', {
+            className: O.disabledButtonWrapper,
             children: [
-                (0, l.jsxs)(d.Button, {
+                (0, r.jsxs)(d.Button, {
                     className: n,
                     fullWidth: i,
                     size: a,
-                    color: null != s ? s : R.disabledButtonColor,
+                    color: null != s ? s : O.disabledButtonColor,
                     disabled: !0,
                     children: [
                         this.getText(e),
                         this.renderProgressBar()
                     ]
                 }),
-                (0, l.jsx)(d.Tooltip, {
+                (0, r.jsx)(d.Tooltip, {
                     text: t,
-                    position: r,
-                    children: e => (0, l.jsx)('div', {
-                        className: R.disabledButtonOverlay,
+                    position: l,
+                    children: e => (0, r.jsx)('div', {
+                        className: O.disabledButtonOverlay,
                         ...e
                     })
                 })
@@ -149,12 +149,12 @@ class Z extends (a = r.Component) {
         if (null == n)
             return null;
         let i = n.type === x.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : f.xI(Number(n.progress), Number(n.total));
-        return (0, l.jsx)(d.Progress, {
+        return (0, r.jsx)(d.Progress, {
             percent: i,
             size: d.Progress.Sizes.XSMALL,
             foregroundColor: n.paused ? c.Z.unsafe_rawColors.PRIMARY_500.css : c.Z.unsafe_rawColors.GREEN_360.css,
             backgroundColor: c.Z.unsafe_rawColors.TRANSPARENT.css,
-            className: R.progress
+            className: O.progress
         });
     }
     renderActionButton(e, t) {
@@ -163,14 +163,14 @@ class Z extends (a = r.Component) {
             fullWidth: i,
             size: a,
             color: s,
-            isCloudSyncing: r
+            isCloudSyncing: l
         } = this.props;
-        return (0, l.jsxs)(d.Button, {
+        return (0, r.jsxs)(d.Button, {
             className: n,
             fullWidth: i,
             size: a,
             color: null != s ? s : d.Button.Colors.GREEN,
-            submitting: 'uninstalling' === e || r,
+            submitting: 'uninstalling' === e || l,
             onClick: e => this.handleClick(e, t),
             children: [
                 this.getText(e),
@@ -188,12 +188,12 @@ class Z extends (a = r.Component) {
         if ('preorder_wait' === n)
             return this.renderDisabledButton(n, function (e) {
                 let t = g.en(e.sku);
-                return null != t ? O.Z.Messages.GAME_ACTION_BUTTON_PREORDER_WAIT_TOOLTIP.format({ date: t }) : null;
+                return null != t ? R.Z.Messages.GAME_ACTION_BUTTON_PREORDER_WAIT_TOOLTIP.format({ date: t }) : null;
             }(t));
         if ('unsupported_os' === n)
-            return this.renderDisabledButton(n, O.Z.Messages.GAME_ACTION_BUTTON_UNAVAILABLE_TOOLTIP.format({ operatingSystem: O.Z.Messages.WINDOWS }));
+            return this.renderDisabledButton(n, R.Z.Messages.GAME_ACTION_BUTTON_UNAVAILABLE_TOOLTIP.format({ operatingSystem: R.Z.Messages.WINDOWS }));
         if ('install' === n && e)
-            return this.renderDisabledButton(n, O.Z.Messages.GAME_ACTION_BUTTON_CANNOT_INSTALL);
+            return this.renderDisabledButton(n, R.Z.Messages.GAME_ACTION_BUTTON_CANNOT_INSTALL);
         let i = this.onClickHandlers[n];
         return null == i ? this.renderDisabledButton(n) : this.renderActionButton(n, i);
     }
@@ -231,14 +231,14 @@ function P(e) {
         ], () => [
             (0, T.i)(t, N.Z, p.Z),
             N.Z.getState(t.id, t.branchId)
-        ], [t]), s = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]), r = (0, o.e7)([I.Z], () => I.Z.hasNoBuild(t.id, t.branchId), [t]);
-    return (0, l.jsx)(Z, {
+        ], [t]), s = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]), l = (0, o.e7)([I.Z], () => I.Z.hasNoBuild(t.id, t.branchId), [t]);
+    return (0, r.jsx)(Z, {
         ...e,
         analyticsContext: n,
         actionState: i,
         dispatchState: a,
         isCloudSyncing: s,
-        hasNoBuild: r
+        hasNoBuild: l
     });
 }
 M(Z, 'defaultProps', {

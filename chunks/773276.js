@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(399606), s = n(481060), l = n(923500), r = n(522664), o = n(163268), c = n(774863), d = n(668058), u = n(160877), _ = n(689938);
+var a = n(399606), s = n(481060), r = n(923500), l = n(522664), o = n(163268), c = n(774863), d = n(668058), u = n(160877), _ = n(689938);
 function E(e) {
     let {
             channelId: t,
@@ -17,13 +17,13 @@ function E(e) {
             isReportFalsePositiveLoading: p
         } = (0, d.$)({
             onSuccess: () => {
-                (0, u.s)(m), l.Z.disableFalsePositiveButton(t, n);
+                (0, u.s)(m), r.Z.disableFalsePositiveButton(t, n);
             },
             onError: () => {
                 (0, s.showToast)((0, s.createToast)(_.Z.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE));
             },
             report: () => {
-                (0, r.Eq)(t, n, T, h);
+                (0, l.Eq)(t, n, T, h);
             }
         });
     return !(I.attachments.length > 0) && m(), (0, i.jsx)(u.$, {

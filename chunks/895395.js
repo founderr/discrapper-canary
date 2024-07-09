@@ -21,8 +21,8 @@ function y(e) {
             enableFilter: !0,
             channel: n
         }), B = (0, o.e7)([m.default], () => m.default.getCurrentUser()), V = (0, o.e7)([v.Z], () => v.Z.getGuild(t), [t]), {analyticsLocations: R} = (0, g.ZP)(u.Z.ACTIVITY_DIRECTORY), k = (0, C.Z)(null == n ? void 0 : n.id), {enableAmazonMusicShelfPoster: H} = f.p.useExperiment({ location: 'ActivitiesShelf' }, { autoTrackExposure: !0 }), {
-            isDeveloperActivityShelfEnabled: F,
-            filter: P
+            isDeveloperActivityShelfEnabled: P,
+            filter: F
         } = (0, o.cj)([x.Z], () => ({
             filter: x.Z.getFilter(),
             isDeveloperActivityShelfEnabled: x.Z.getIsEnabled()
@@ -48,8 +48,8 @@ function y(e) {
             k
         ]), (0, h.g)(), null == V && !k || null == B)
         return null;
-    let U = O.length > 0;
-    function Y(e) {
+    let Y = O.length > 0;
+    function w(e) {
         r();
     }
     return (0, i.jsx)(g.Gt, {
@@ -57,7 +57,7 @@ function y(e) {
         children: (0, i.jsxs)('div', {
             className: N.scrollContainer,
             children: [
-                U ? (0, i.jsx)('div', {
+                Y ? (0, i.jsx)('div', {
                     className: N.scrollBackgroundContainer,
                     style: { top: -D },
                     children: (0, i.jsx)('div', {
@@ -99,7 +99,7 @@ function y(e) {
                             }
                             return null;
                         }(),
-                        U ? (0, i.jsx)('div', {
+                        Y ? (0, i.jsx)('div', {
                             className: N.scrollSection,
                             children: (0, i.jsx)('div', {
                                 className: s()(N.shelf),
@@ -116,10 +116,10 @@ function y(e) {
                                     }
                                 }, 'activity-shelf-item-'.concat(e.application.id)))
                             })
-                        }) : F && P.length > 0 ? (0, i.jsx)(d.Text, {
+                        }) : P && F.length > 0 ? (0, i.jsx)(d.Text, {
                             variant: 'text-md/normal',
                             className: N.filterError,
-                            children: j.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({ filter: P })
+                            children: j.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({ filter: F })
                         }) : (0, i.jsx)('div', {
                             className: N.spinnerContainer,
                             children: (0, i.jsx)(d.Spinner, {})

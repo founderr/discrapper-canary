@@ -1,6 +1,6 @@
 n.d(t, {
     cE: function () {
-        return r;
+        return l;
     },
     eu: function () {
         return o;
@@ -10,7 +10,7 @@ n.d(t, {
     }
 });
 var i = n(652874), a = n(902704);
-let s = {}, l = (0, i.Z)(e => ({
+let s = {}, r = (0, i.Z)(e => ({
         polls: {},
         updatePollState(t, n, i) {
             e(e => {
@@ -27,16 +27,16 @@ let s = {}, l = (0, i.Z)(e => ({
             });
         }
     }));
-function r(e) {
-    return l(t => {
+function l(e) {
+    return r(t => {
         var n;
         return null !== (n = t.polls[e]) && void 0 !== n ? n : s;
     }, a.Z);
 }
 function o(e, t, n) {
-    l.getState().updatePollState(e, t, n);
+    r.getState().updatePollState(e, t, n);
 }
 function c(e, t) {
     var n;
-    return null === (n = l.getState().polls[e]) || void 0 === n ? void 0 : n[t];
+    return null === (n = r.getState().polls[e]) || void 0 === n ? void 0 : n[t];
 }

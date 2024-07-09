@@ -1,10 +1,10 @@
 n.d(t, {
     k: function () {
-        return l;
+        return r;
     }
 });
 var i = n(544891), a = n(570140), s = n(981631);
-function l(e) {
+function r(e) {
     return a.Z.dispatch({
         type: 'APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING',
         applicationId: e

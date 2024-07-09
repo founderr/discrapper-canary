@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return O;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(442837), l = n(481060), r = n(2052), o = n(317381), c = n(638880), d = n(146936), u = n(527805), _ = n(952561), E = n(513202), m = n(100527), I = n(906732), T = n(973616), h = n(314897), N = n(592125), p = n(158776), f = n(594174), C = n(602623), g = n(823379), S = n(226378), A = n(701488), x = n(689938), O = n(606472);
-function R(e) {
+var i = n(735250), a = n(470079), s = n(442837), r = n(481060), l = n(2052), o = n(317381), c = n(638880), d = n(146936), u = n(527805), _ = n(952561), E = n(513202), m = n(100527), I = n(906732), T = n(973616), h = n(314897), N = n(592125), p = n(158776), f = n(594174), C = n(602623), g = n(823379), S = n(226378), A = n(701488), x = n(689938), R = n(606472);
+function O(e) {
     var t;
     let {
             application: n,
-            channelId: R,
+            channelId: O,
             guildId: M
-        } = e, [v, L] = a.useState(!1), {analyticsLocations: Z} = (0, I.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED), P = (0, r.O)(), b = (0, _.Z)(), D = (0, s.e7)([N.Z], () => N.Z.getChannel(R)), j = (null == D ? void 0 : null === (t = D.isThread) || void 0 === t ? void 0 : t.call(D)) ? null == D ? void 0 : D.parent_id : R, U = (0, s.e7)([h.default], () => h.default.getId()), {
+        } = e, [v, L] = a.useState(!1), {analyticsLocations: Z} = (0, I.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED), P = (0, l.O)(), b = (0, _.Z)(), D = (0, s.e7)([N.Z], () => N.Z.getChannel(O)), j = (null == D ? void 0 : null === (t = D.isThread) || void 0 === t ? void 0 : t.call(D)) ? null == D ? void 0 : D.parent_id : O, U = (0, s.e7)([h.default], () => h.default.getId()), {
             embeddedActivity: y,
             currentEmbeddedActivity: B
         } = (0, s.cj)([o.ZP], () => ({
@@ -28,7 +28,7 @@ function R(e) {
             return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.wT), e;
         }, [n]), w = (0, u.s5)({
             userId: U,
-            channelId: R,
+            channelId: O,
             application: F
         }), V = null == y, H = (0, S.NL)({
             embeddedActivity: y,
@@ -41,7 +41,7 @@ function R(e) {
                 V ? await (0, d.Z)({
                     targetApplicationId: n.id,
                     currentEmbeddedApplication: b,
-                    channelId: R,
+                    channelId: O,
                     guildId: M,
                     locationObject: P.location,
                     embeddedActivitiesManager: E.Z,
@@ -49,7 +49,7 @@ function R(e) {
                 }) : await (0, c.Z)({
                     applicationId: y.applicationId,
                     currentEmbeddedApplication: b,
-                    activityChannelId: R,
+                    activityChannelId: O,
                     locationObject: P.location,
                     embeddedActivitiesManager: E.Z,
                     analyticsLocations: Z
@@ -59,19 +59,19 @@ function R(e) {
             }
         }, W = H.disabled ? x.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : x.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
     return (0, i.jsx)('div', {
-        className: O.container,
+        className: R.container,
         children: (0, i.jsxs)('div', {
-            className: O.contentContainer,
+            className: R.contentContainer,
             children: [
                 (0, i.jsx)('div', {
-                    className: O.headerContainer,
+                    className: R.headerContainer,
                     children: V ? (0, i.jsx)('div', {
-                        className: O.__invalid_endedNote,
-                        children: (0, i.jsx)(l.Text, {
+                        className: R.__invalid_endedNote,
+                        children: (0, i.jsx)(r.Text, {
                             variant: 'text-md/medium',
                             children: W
                         })
-                    }) : (0, i.jsx)(l.Text, {
+                    }) : (0, i.jsx)(r.Text, {
                         variant: 'text-md/medium',
                         lineClamp: 1,
                         color: 'text-normal',
@@ -79,22 +79,22 @@ function R(e) {
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: O.footerContainer,
+                    className: R.footerContainer,
                     children: [
-                        (0, i.jsx)(l.Tooltip, {
+                        (0, i.jsx)(r.Tooltip, {
                             text: H.tooltip,
                             children: e => {
                                 let {
                                     onClick: t,
                                     ...n
                                 } = e;
-                                return (0, a.createElement)(l.Button, {
+                                return (0, a.createElement)(r.Button, {
                                     ...n,
                                     key: ''.concat(H.isJoinAction),
                                     onClick: () => {
                                         Y(), null == t || t();
                                     },
-                                    color: H.isJoinAction ? l.ButtonColors.GREEN : l.ButtonColors.PRIMARY,
+                                    color: H.isJoinAction ? r.ButtonColors.GREEN : r.ButtonColors.PRIMARY,
                                     submitting: v,
                                     disabled: H.disabled
                                 }, H.text);

@@ -11,16 +11,16 @@ function s(e) {
         width: t = 440,
         height: n = 200,
         avatar: s,
-        ...l
+        ...r
     } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, a.Z)(l),
+        ...(0, a.Z)(r),
         width: t,
         height: n,
         viewBox: '0 0 '.concat(t, ' ').concat(n),
         fill: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
-        ...l,
+        ...r,
         children: [
             (0, i.jsx)('rect', {
                 y: '12',

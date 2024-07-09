@@ -6,7 +6,7 @@ n.d(t, {
         return eN;
     }
 });
-var i = n(735250), a = n(470079), s = n(913527), l = n.n(s), r = n(613828), o = n(442837), c = n(481060), d = n(668781), u = n(893776), _ = n(117266), E = n(37234), m = n(254854), I = n(195500), T = n(287734), h = n(205355), N = n(558381), p = n(223245), f = n(491428), C = n(401430), g = n(230711), S = n(726542), A = n(100527), x = n(906732), O = n(812206), R = n(391650), M = n(605236), v = n(749277), L = n(492435), Z = n(353926), P = n(506357), b = n(36459), D = n(236069), j = n(305325), U = n(281956), y = n(574650), B = n(665302), k = n(434404), G = n(918658), F = n(859428), w = n(963249), V = n(774276), H = n(14335), Y = n(246965), W = n(272008), z = n(523255), K = n(852923), Q = n(592125), q = n(430824), X = n(131951), J = n(19780), $ = n(914010), ee = n(594174), et = n(55563), en = n(695103), ei = n(933429), ea = n(285952), es = n(626135), el = n(63063), er = n(72924), eo = n(69499), ec = n(912193), ed = n(981631), eu = n(474936), e_ = n(610674), eE = n(65154), em = n(689938), eI = n(708522);
+var i = n(735250), a = n(470079), s = n(913527), r = n.n(s), l = n(613828), o = n(442837), c = n(481060), d = n(668781), u = n(893776), _ = n(117266), E = n(37234), m = n(254854), I = n(195500), T = n(287734), h = n(205355), N = n(558381), p = n(223245), f = n(491428), C = n(401430), g = n(230711), S = n(726542), A = n(100527), x = n(906732), R = n(812206), O = n(391650), M = n(605236), v = n(749277), L = n(492435), Z = n(353926), P = n(506357), b = n(36459), D = n(236069), j = n(305325), U = n(281956), y = n(574650), B = n(665302), k = n(434404), G = n(918658), F = n(859428), w = n(963249), V = n(774276), H = n(14335), Y = n(246965), W = n(272008), z = n(523255), K = n(852923), Q = n(592125), q = n(430824), X = n(131951), J = n(19780), $ = n(914010), ee = n(594174), et = n(55563), en = n(695103), ei = n(933429), ea = n(285952), es = n(626135), er = n(63063), el = n(72924), eo = n(69499), ec = n(912193), ed = n(981631), eu = n(474936), e_ = n(610674), eE = n(65154), em = n(689938), eI = n(708522);
 let eT = () => (0, i.jsxs)(c.Notice, {
         color: c.NoticeColors.DANGER,
         children: [
@@ -17,7 +17,7 @@ let eT = () => (0, i.jsxs)(c.Notice, {
             }),
             em.Z.Messages.NOTICE_NO_INPUT_DETECTED,
             (0, i.jsx)(c.NoticeButtonAnchor, {
-                href: el.Z.getArticleURL(ed.BhN.NO_INPUT_DETECTED),
+                href: er.Z.getArticleURL(ed.BhN.NO_INPUT_DETECTED),
                 children: em.Z.Messages.NOTICE_NO_INPUT_DETECTED_HELP_LINK_TEXT
             })
         ]
@@ -39,7 +39,7 @@ let eT = () => (0, i.jsxs)(c.Notice, {
         ]
     });
 function eN(e) {
-    m.Z.dismiss(null != e ? { untilAtLeast: l()(e) } : void 0);
+    m.Z.dismiss(null != e ? { untilAtLeast: r()(e) } : void 0);
 }
 let ep = 12633 == n.j ? a.memo(function () {
     var e, t, s;
@@ -84,27 +84,27 @@ let ep = 12633 == n.j ? a.memo(function () {
         let {dismissUntil: ex} = ec.metadata;
         return (0, i.jsx)(P.Z, { onDismiss: () => eN(ex) });
     case ed.kVF.WIN32_DEPRECATED_MESSAGE:
-        let {dismissUntil: eO} = ec.metadata;
-        return (0, i.jsxs)(c.Notice, {
-            color: c.NoticeColors.WARNING,
-            children: [
-                (0, i.jsx)(c.NoticeCloseButton, {
-                    onClick: () => eN(eO),
-                    noticeType: ed.kVF.WIN32_DEPRECATED_MESSAGE
-                }),
-                em.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({ helpCenterLink: el.Z.getArticleURL(ed.BhN.WIN32_DEPRECATE) })
-            ]
-        });
-    case ed.kVF.WIN7_8_DEPRECATED_MESSAGE:
         let {dismissUntil: eR} = ec.metadata;
         return (0, i.jsxs)(c.Notice, {
             color: c.NoticeColors.WARNING,
             children: [
                 (0, i.jsx)(c.NoticeCloseButton, {
                     onClick: () => eN(eR),
+                    noticeType: ed.kVF.WIN32_DEPRECATED_MESSAGE
+                }),
+                em.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({ helpCenterLink: er.Z.getArticleURL(ed.BhN.WIN32_DEPRECATE) })
+            ]
+        });
+    case ed.kVF.WIN7_8_DEPRECATED_MESSAGE:
+        let {dismissUntil: eO} = ec.metadata;
+        return (0, i.jsxs)(c.Notice, {
+            color: c.NoticeColors.WARNING,
+            children: [
+                (0, i.jsx)(c.NoticeCloseButton, {
+                    onClick: () => eN(eO),
                     noticeType: ed.kVF.WIN7_8_DEPRECATED_MESSAGE
                 }),
-                em.Z.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({ helpCenterLink: el.Z.getArticleURL(ed.BhN.WIN7_8_DEPRECATE) })
+                em.Z.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({ helpCenterLink: er.Z.getArticleURL(ed.BhN.WIN7_8_DEPRECATE) })
             ]
         });
     case ed.kVF.MACOS_17_18_DEPRECATED_MESSAGE:
@@ -116,7 +116,7 @@ let ep = 12633 == n.j ? a.memo(function () {
                     onClick: () => eN(eM),
                     noticeType: ed.kVF.MACOS_17_18_DEPRECATED_MESSAGE
                 }),
-                em.Z.Messages.MACOS_DEPRECATED_WARNING.format({ helpCenterLink: el.Z.getArticleURL(ed.BhN.MACOS_17_18_DEPRECATE) })
+                em.Z.Messages.MACOS_DEPRECATED_WARNING.format({ helpCenterLink: er.Z.getArticleURL(ed.BhN.MACOS_17_18_DEPRECATE) })
             ]
         });
     case ed.kVF.GENERIC:
@@ -215,7 +215,7 @@ let ep = 12633 == n.j ? a.memo(function () {
                 }),
                 (0, i.jsx)(c.Anchor, {
                     className: eI.textLinkSmall,
-                    href: el.Z.getArticleURL(ed.BhN.SPOTIFY_AUTO_PAUSED),
+                    href: er.Z.getArticleURL(ed.BhN.SPOTIFY_AUTO_PAUSED),
                     target: '_blank',
                     children: em.Z.Messages.NOTICE_WHATS_THIS
                 })
@@ -228,7 +228,7 @@ let ep = 12633 == n.j ? a.memo(function () {
                 em.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT,
                 (0, i.jsx)(c.PrimaryCTANoticeButton, {
                     noticeType: ed.kVF.UNCLAIMED_ACCOUNT,
-                    onClick: () => eg && null != A ? (0, j.hk)(A) : R.j(),
+                    onClick: () => eg && null != A ? (0, j.hk)(A) : O.j(),
                     children: em.Z.Messages.CLAIM_ACCOUNT
                 })
             ]
@@ -245,7 +245,7 @@ let ep = 12633 == n.j ? a.memo(function () {
                             title: em.Z.Messages.VERIFICATION_EMAIL_TITLE,
                             body: em.Z.Messages.VERIFICATION_EMAIL_BODY.format({ email: null == m ? void 0 : m.email }),
                             secondaryConfirmText: em.Z.Messages.CHANGE_EMAIL,
-                            onConfirmSecondary: R.j
+                            onConfirmSecondary: O.j
                         });
                     },
                     children: em.Z.Messages.RESEND_EMAIL_SHORT
@@ -335,7 +335,7 @@ let ep = 12633 == n.j ? a.memo(function () {
         let {
                 skuId: eP,
                 applicationId: eb
-            } = ec.metadata, eD = et.Z.get(eP), ej = O.Z.getApplication(eb);
+            } = ec.metadata, eD = et.Z.get(eP), ej = R.Z.getApplication(eb);
         if (null == eD || null == ej)
             return null;
         let eU = { page: ed.ZY5.IN_APP };
@@ -357,7 +357,7 @@ let ep = 12633 == n.j ? a.memo(function () {
                 }),
                 (0, i.jsx)(c.PrimaryCTANoticeButton, {
                     noticeType: ed.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK,
-                    onClick: () => (0, er.S)({
+                    onClick: () => (0, el.S)({
                         applicationId: ej.id,
                         skuId: eD.id,
                         openPremiumPaymentModal: () => {
@@ -382,7 +382,7 @@ let ep = 12633 == n.j ? a.memo(function () {
             let {
                     skuId: e,
                     applicationId: t
-                } = ec.metadata, n = et.Z.get(e), a = O.Z.getApplication(t);
+                } = ec.metadata, n = et.Z.get(e), a = R.Z.getApplication(t);
             if (null == n || null == a)
                 return null;
             return (0, i.jsxs)(c.Notice, {
@@ -402,7 +402,7 @@ let ep = 12633 == n.j ? a.memo(function () {
                         skuName: n.name
                     }),
                     (0, i.jsx)(c.NoticeButton, {
-                        children: (0, i.jsx)(r.rU, {
+                        children: (0, i.jsx)(l.rU, {
                             onClick: () => eN(),
                             to: {
                                 pathname: ed.Z5c.APPLICATION_STORE_LISTING_SKU(n.id),
@@ -471,7 +471,7 @@ let ep = 12633 == n.j ? a.memo(function () {
             children: [
                 em.Z.Messages.NOTICE_CORRUPT_INSTALLATION,
                 (0, i.jsx)(c.NoticeButtonAnchor, {
-                    href: el.Z.getArticleURL(ed.BhN.CORRUPT_INSTALLATION),
+                    href: er.Z.getArticleURL(ed.BhN.CORRUPT_INSTALLATION),
                     target: '_blank',
                     children: em.Z.Messages.NOTICE_CORRUPT_INSTALLATION_HELP_LINK_TEXT
                 })
@@ -768,7 +768,7 @@ let ep = 12633 == n.j ? a.memo(function () {
                     children: em.Z.Messages.LIMITED_ACCESS_NAG_BAR_APPEAL
                 }),
                 (0, i.jsx)(c.Anchor, {
-                    href: el.Z.getArticleURL(ed.BhN.QUARANTINE),
+                    href: er.Z.getArticleURL(ed.BhN.QUARANTINE),
                     target: '_blank',
                     className: eI.quarantineLearnMoreLink,
                     children: em.Z.Messages.LEARN_MORE
@@ -854,7 +854,7 @@ let ep = 12633 == n.j ? a.memo(function () {
             ]
         });
     case ed.kVF.PREMIUM_TIER_2_TRIAL_ENDING:
-        let eY = l()().add(5, 'days').toDate();
+        let eY = r()().add(5, 'days').toDate();
         return (0, i.jsx)(Y.Z, {
             dismissCurrentNotice: () => {
                 (0, M.EW)(ei.m[ed.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), eN(eY);

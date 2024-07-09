@@ -39,7 +39,7 @@ n.d(t, {
         return A;
     }
 });
-var i = n(913527), a = n.n(i), s = n(594190), l = n(695346), r = n(77498), o = n(70956), c = n(346114), d = n(702512), u = n(689938);
+var i = n(913527), a = n.n(i), s = n(594190), r = n(695346), l = n(77498), o = n(70956), c = n(346114), d = n(702512), u = n(689938);
 function _(e) {
     let t = g(e);
     return null == t ? null : E(t);
@@ -52,7 +52,7 @@ function E(e) {
 function m(e, t) {
     if (null == e)
         return !1;
-    let n = r.Z.getGameByName(e);
+    let n = l.Z.getGameByName(e);
     return !!(null != n && t.some(e => {
         var t;
         return e.toLowerCase() === (null == n ? void 0 : null === (t = n.name) || void 0 === t ? void 0 : t.toLowerCase());
@@ -62,14 +62,14 @@ function I() {
     return Math.floor(Date.now() / 1000) - d.kS;
 }
 function T(e, t, n) {
-    var i, a, s, l;
+    var i, a, s, r;
     if (null == g(e))
         return !1;
-    let r = (i = t, a = d.RN[e], null !== (s = i.find(e => m(e.name, a))) && void 0 !== s ? s : null);
-    if (null != r) {
+    let l = (i = t, a = d.RN[e], null !== (s = i.find(e => m(e.name, a))) && void 0 !== s ? s : null);
+    if (null != l) {
         ;
-        let e = null !== (l = null == r ? void 0 : r.lastLaunched) && void 0 !== l ? l : 0;
-        return n <= r.lastFocused || n * o.Z.Millis.SECOND <= e;
+        let e = null !== (r = null == l ? void 0 : l.lastLaunched) && void 0 !== r ? r : 0;
+        return n <= l.lastFocused || n * o.Z.Millis.SECOND <= e;
     }
     return !1;
 }
@@ -77,15 +77,15 @@ function h(e) {
     return T(e, s.ZP.getGamesSeen(!1), I());
 }
 function N(e, t) {
-    let {endDate: n} = e, i = a()(), s = a()(n, d.fS), l = a()(i.clone().add(e.dropsNoticeBannerDurationDays, 'days').format(d.fS)), r = s.isSameOrBefore(l), o = s.isBefore(i, 'minute');
-    return r && (t && !o || !t && o);
+    let {endDate: n} = e, i = a()(), s = a()(n, d.fS), r = a()(i.clone().add(e.dropsNoticeBannerDurationDays, 'days').format(d.fS)), l = s.isSameOrBefore(r), o = s.isBefore(i, 'minute');
+    return l && (t && !o || !t && o);
 }
 function p(e) {
     var t;
     let n = g(e);
     if (null == n || !(null === (t = _(e)) || void 0 === t ? void 0 : t.getCurrentConfig({ location: '1' }, { autoTrackExposure: !1 }).dropsEnabled))
         return !1;
-    let i = l.bh.getSetting(), a = N(n, !0);
+    let i = r.bh.getSetting(), a = N(n, !0);
     return !i && a;
 }
 function f(e) {
@@ -93,7 +93,7 @@ function f(e) {
     let i = g(e);
     if (null == i || !(null === (n = _(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({ location: '2' }, { autoTrackExposure: !1 })) || void 0 === t ? void 0 : t.dropsEnabled))
         return !1;
-    let a = l.bh.getSetting(), s = N(i, !1);
+    let a = r.bh.getSetting(), s = N(i, !1);
     return C(i) && !a && s;
 }
 function C(e) {

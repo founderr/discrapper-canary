@@ -1,13 +1,13 @@
 n.d(t, {
     T: function () {
-        return a;
+        return i;
     },
     m1: function () {
-        return s;
+        return a;
     }
 });
-var i = n(818083);
-let a = (0, i.B)({
+var r = n(818083);
+let i = (0, r.B)({
         kind: 'user',
         id: '2023-11_app_launcher_desktop',
         label: 'App Launcher - Desktop',
@@ -17,7 +17,7 @@ let a = (0, i.B)({
                 label: 'Enable the app launcher feature on desktop',
                 config: { enabled: !0 }
             }]
-    }), s = (0, i.B)({
+    }), a = (0, r.B)({
         kind: 'user',
         id: '2024-06_desktop_app_launcher_in_activities_shelf',
         label: 'Desktop App Launcher In Activities Shelf',
@@ -44,7 +44,7 @@ let a = (0, i.B)({
             }
         ]
     });
-(0, i.B)({
+(0, r.B)({
     kind: 'user',
     id: '2024-06_mobile_app_launcher_in_activities_shelf',
     label: '[Mobile] App Launcher in Activities Shelf',

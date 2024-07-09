@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(430824), l = n(702346), r = n(646504), o = n(981631), c = n(689938), d = n(180090);
+var a = n(481060), s = n(430824), r = n(702346), l = n(646504), o = n(981631), c = n(689938), d = n(180090);
 function u(e) {
     let t, {
             compact: u,
@@ -25,7 +25,7 @@ function u(e) {
                     channel: E,
                     source: o.t4x.INVITE_SYSTEM_MESSAGE
                 });
-            }), (0, r.w)());
+            }), (0, l.w)());
         }, I = (e, t) => (0, i.jsx)(a.Anchor, {
             className: d.inviteLink,
             onClick: m,
@@ -52,7 +52,7 @@ function u(e) {
                 children: c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_BUTTON
             })
         ]
-    }), (0, i.jsx)(l.Z, {
+    }), (0, i.jsx)(r.Z, {
         className: u ? d.compact : d.inviteContent,
         iconNode: u ? null : (0, i.jsx)('img', {
             alt: '',

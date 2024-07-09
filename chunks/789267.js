@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return l;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(702346), s = n(739566), l = n(689938);
-function r(e) {
+var a = n(702346), s = n(739566), r = n(689938);
+function l(e) {
     let {
             message: t,
-            compact: r,
+            compact: l,
             missed: o,
             joinable: c,
             usernameHook: d,
@@ -21,31 +21,31 @@ function r(e) {
     return o ? (0, i.jsx)(a.Z, {
         icon: n(154239),
         timestamp: t.timestamp,
-        compact: r,
-        children: null != I ? l.Z.Messages.SYSTEM_MESSAGE_CALL_MISSED_WITH_DURATION_HOOK.format({
+        compact: l,
+        children: null != I ? r.Z.Messages.SYSTEM_MESSAGE_CALL_MISSED_WITH_DURATION_HOOK.format({
             username: E,
             usernameHook: m,
             callDuration: I
-        }) : l.Z.Messages.SYSTEM_MESSAGE_CALL_MISSED_HOOK.format({
+        }) : r.Z.Messages.SYSTEM_MESSAGE_CALL_MISSED_HOOK.format({
             username: E,
             usernameHook: m
         })
     }) : (0, i.jsxs)(a.Z, {
         icon: n(344163),
         timestamp: t.timestamp,
-        compact: r,
+        compact: l,
         children: [
-            null != I ? l.Z.Messages.SYSTEM_MESSAGE_CALL_STARTED_WITH_DURATION_HOOK.format({
+            null != I ? r.Z.Messages.SYSTEM_MESSAGE_CALL_STARTED_WITH_DURATION_HOOK.format({
                 username: E,
                 usernameHook: m,
                 callDuration: I
-            }) : l.Z.Messages.SYSTEM_MESSAGE_CALL_STARTED_HOOK.format({
+            }) : r.Z.Messages.SYSTEM_MESSAGE_CALL_STARTED_HOOK.format({
                 username: E,
                 usernameHook: m
             }),
             c ? (0, i.jsx)(a.Z.Action, {
                 onClick: u,
-                children: l.Z.Messages.SYSTEM_MESSAGE_JOIN_CALL
+                children: r.Z.Messages.SYSTEM_MESSAGE_JOIN_CALL
             }) : null
         ]
     });

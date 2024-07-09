@@ -1,5 +1,5 @@
 n(724458), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(749210), d = n(367907), u = n(400106), _ = n(697568), E = n(183023), m = n(524444), I = n(98278), T = n(197115), h = n(430824), N = n(594174), p = n(285952), f = n(514342), C = n(626135), g = n(74538), S = n(453070), A = n(926491), x = n(378233), O = n(419922), R = n(688179), M = n(981631), v = n(474936), L = n(689938), Z = n(379157), P = n(830645);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(749210), d = n(367907), u = n(400106), _ = n(697568), E = n(183023), m = n(524444), I = n(98278), T = n(197115), h = n(430824), N = n(594174), p = n(285952), f = n(514342), C = n(626135), g = n(74538), S = n(453070), A = n(926491), x = n(378233), R = n(419922), O = n(688179), M = n(981631), v = n(474936), L = n(689938), Z = n(379157), P = n(830645);
 let b = (e, t) => t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({ stickerPackName: e.name }) : L.Z.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({ stickerPackName: e.name }), D = e => {
         let {
             sticker: t,
@@ -23,7 +23,7 @@ function U(e) {
     } = e;
     return (0, i.jsxs)(p.Z, {
         children: [
-            (0, i.jsx)(O.ZP, {
+            (0, i.jsx)(R.ZP, {
                 sticker: t,
                 size: 48,
                 isInteracting: !0
@@ -52,8 +52,8 @@ let y = e => {
                 closePopout: t,
                 sticker: n,
                 channel: s,
-                refreshPositionKey: l
-            } = e, [c, u, _] = (0, r.Wu)([A.Z], () => [
+                refreshPositionKey: r
+            } = e, [c, u, _] = (0, l.Wu)([A.Z], () => [
                 A.Z.getStickerPack(n.pack_id),
                 !A.Z.hasLoadedStickerPacks,
                 A.Z.isPremiumPack(n.pack_id)
@@ -64,7 +64,7 @@ let y = e => {
         (0, S.Pq)(n.pack_id);
         let I = (0, S.Sd)(s);
         return (a.useEffect(() => {
-            l();
+            r();
         }, [u]), a.useEffect(() => {
             C.default.track(M.rMx.OPEN_POPOUT, {
                 type: M.jXE.STICKER_POPOUT,
@@ -85,7 +85,7 @@ let y = e => {
                 }),
                 (0, i.jsx)('ul', {
                     className: Z.stickersList,
-                    children: E.map(e => (0, i.jsx)(O.ZP, {
+                    children: E.map(e => (0, i.jsx)(R.ZP, {
                         isInteracting: !0,
                         size: 80,
                         sticker: e
@@ -97,7 +97,7 @@ let y = e => {
                         color: o.Button.Colors.PRIMARY,
                         size: o.Button.Sizes.SMALL,
                         onClick: () => {
-                            _ && (0, R.m)({
+                            _ && (0, O.m)({
                                 stickerPack: c,
                                 stickerPickerCategories: I
                             }), t();
@@ -113,7 +113,7 @@ let y = e => {
                 channel: s,
                 closePopout: I,
                 refreshPositionKey: f
-            } = e, [S, A] = a.useState(null), [x, R] = a.useState(!1), b = N.default.getCurrentUser(), D = g.ZP.canUseCustomStickersEverywhere(b), y = (0, r.e7)([h.Z], () => h.Z.getGuild(n.guild_id)), B = null != y, [k, G] = a.useState(!1), [F, w] = a.useState(null), V = a.useMemo(() => ({
+            } = e, [S, A] = a.useState(null), [x, O] = a.useState(!1), b = N.default.getCurrentUser(), D = g.ZP.canUseCustomStickersEverywhere(b), y = (0, l.e7)([h.Z], () => h.Z.getGuild(n.guild_id)), B = null != y, [k, G] = a.useState(!1), [F, w] = a.useState(null), V = a.useMemo(() => ({
                 page: null != s.guild_id ? M.ZY5.GUILD_CHANNEL : M.ZY5.DM_CHANNEL,
                 section: M.jXE.STICKER_POPOUT
             }), [s.guild_id]), {current: H} = a.useRef({
@@ -122,7 +122,7 @@ let y = e => {
             });
         a.useEffect(() => {
             (async () => {
-                (null == y || y.hasFeature(M.oNc.DISCOVERABLE)) && A(await (0, _.Z)(n.id)), R(!0);
+                (null == y || y.hasFeature(M.oNc.DISCOVERABLE)) && A(await (0, _.Z)(n.id)), O(!0);
             })();
         }, [
             n.id,
@@ -221,7 +221,7 @@ let y = e => {
                                                 (0, i.jsx)(o.ChevronSmallDownIcon, {
                                                     size: 'md',
                                                     color: 'currentColor',
-                                                    className: l()(P.showMoreEmojisArrow, { [P.showMoreEmojisArrowCollapsed]: !k })
+                                                    className: r()(P.showMoreEmojisArrow, { [P.showMoreEmojisArrowCollapsed]: !k })
                                                 })
                                             ]
                                         })
@@ -241,7 +241,7 @@ let y = e => {
                                                     ...s
                                                 } = t;
                                                 return (0, i.jsx)('div', {
-                                                    className: l()(P.otherEmoji, { [Z.nonInteractingSticker]: null != F && F !== e.id }),
+                                                    className: r()(P.otherEmoji, { [Z.nonInteractingSticker]: null != F && F !== e.id }),
                                                     onMouseEnter: () => {
                                                         null == n || n(), w(e.id);
                                                     },
@@ -249,7 +249,7 @@ let y = e => {
                                                         null == a || a(), w(null);
                                                     },
                                                     ...s,
-                                                    children: (0, i.jsx)(O.ZP, {
+                                                    children: (0, i.jsx)(R.ZP, {
                                                         size: 32,
                                                         enlargeOnInteraction: !0,
                                                         enlargeWithName: !1,
@@ -293,24 +293,24 @@ t.Z = e => {
             channel: n,
             closePopout: a,
             refreshPositionKey: s
-        } = e, [l, r] = (0, S.XW)(t, !0);
-    if (null != l && (0, x.jl)(l))
+        } = e, [r, l] = (0, S.XW)(t, !0);
+    if (null != r && (0, x.jl)(r))
         return (0, i.jsx)(y, {
-            sticker: l,
+            sticker: r,
             closePopout: a,
             channel: n,
             refreshPositionKey: s
         });
-    if (null != l && (0, x.J8)(l))
+    if (null != r && (0, x.J8)(r))
         return (0, i.jsx)(B, {
-            sticker: l,
+            sticker: r,
             channel: n,
             closePopout: a,
             refreshPositionKey: s
         });
-    if (!r)
+    if (!l)
         return (0, i.jsx)(m.SE, {});
-    else if (r && null == l)
+    else if (l && null == r)
         return (0, i.jsx)(k, {
             channel: n,
             closePopout: a,

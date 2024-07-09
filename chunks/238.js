@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     }
 }), n(47120);
-var i, a, s, l, r, o, c = n(442837), d = n(570140), u = n(55563), _ = n(551428);
+var i, a, s, r, l, o, c = n(442837), d = n(570140), u = n(55563), _ = n(551428);
 let E = new Map(), m = new Map();
 (s = i || (i = {}))[s.NONE = 0] = 'NONE', s[s.FETCHING = 1] = 'FETCHING', s[s.FETCHED = 2] = 'FETCHED', s[s.FAILED = 3] = 'FAILED';
 let I = {
@@ -26,12 +26,12 @@ class T extends (a = c.ZP.Store) {
         return E.has(e) ? 2 : null !== (t = m.get(e)) && void 0 !== t ? t : 0;
     }
 }
-o = 'ApplicationStoreDirectoryStore', (r = 'displayName') in (l = T) ? Object.defineProperty(l, r, {
+o = 'ApplicationStoreDirectoryStore', (l = 'displayName') in (r = T) ? Object.defineProperty(r, l, {
     value: o,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : l[r] = o, t.Z = new T(d.Z, {
+}) : r[l] = o, t.Z = new T(d.Z, {
     APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: function (e) {
         let {
             applicationId: t,

@@ -1,21 +1,21 @@
 n.d(t, {
     o: function () {
-        return a;
+        return o;
     }
 });
-var i = n(470079), l = n(442837), o = n(115130), u = n(701488);
-let a = () => {
+var i = n(470079), l = n(442837), r = n(115130), a = n(701488);
+let o = () => {
     let {
             isEnabled: e,
             lastUsedObject: t
-        } = (0, l.cj)([o.Z], () => ({
-            isEnabled: o.Z.getIsEnabled(),
-            lastUsedObject: o.Z.getLastUsedObject()
-        }), []), n = (0, l.Wu)([o.Z], () => o.Z.getDeveloperShelfItems(), []);
+        } = (0, l.cj)([r.Z], () => ({
+            isEnabled: r.Z.getIsEnabled(),
+            lastUsedObject: r.Z.getLastUsedObject()
+        }), []), n = (0, l.Wu)([r.Z], () => r.Z.getDeveloperShelfItems(), []);
     return i.useMemo(() => e ? n.map(e => ({
         application: e,
         activity: {
-            ...u.wT,
+            ...a.wT,
             ...e.embeddedActivityConfig,
             application_id: e.id
         }

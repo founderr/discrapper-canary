@@ -3,7 +3,7 @@ n.d(t, {
         return c;
     }
 });
-var i = n(735250), a = n(470079), s = n(481060), l = n(833592), r = n(689938);
+var i = n(735250), a = n(470079), s = n(481060), r = n(833592), l = n(689938);
 let o = e => {
         let {
             item: t,
@@ -13,13 +13,13 @@ let o = e => {
             navId: 'notification-actions',
             onClose: n,
             onSelect: n,
-            'aria-label': r.Z.Messages.RECENTS_NOTIFICATIONS_MENU_LABEL,
+            'aria-label': l.Z.Messages.RECENTS_NOTIFICATIONS_MENU_LABEL,
             children: (0, i.jsx)(s.MenuItem, {
                 id: 'delete',
-                label: r.Z.Messages.DELETE,
+                label: l.Z.Messages.DELETE,
                 icon: s.TrashIcon,
                 action: async () => {
-                    await (0, l.g3)(t);
+                    await (0, r.g3)(t);
                 }
             })
         });
@@ -36,7 +36,7 @@ let o = e => {
             children: e => {
                 let {onClick: t} = e;
                 return (0, i.jsx)(s.CircleIconButton, {
-                    tooltip: r.Z.Messages.MORE,
+                    tooltip: l.Z.Messages.MORE,
                     color: s.CircleIconButtonColors.TERTIARY,
                     icon: (0, i.jsx)(s.MoreHorizontalIcon, {
                         size: 'xs',

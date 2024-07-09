@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return l;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(987209), l = n(981631);
-function r(e) {
+var a = n(481060), s = n(987209), r = n(981631);
+function l(e) {
     let {
         initialPlanId: t,
-        activeSubscription: r,
+        activeSubscription: l,
         trialId: o,
         trialFooterMessageOverride: c,
         onClose: d,
@@ -29,7 +29,7 @@ function r(e) {
                 n.e('6416'),
                 n.e('32776'),
                 n.e('87786')
-            ]).then(n.bind(n, 791785)), {STEPS: l} = await Promise.all([
+            ]).then(n.bind(n, 791785)), {STEPS: r} = await Promise.all([
                 n.e('96427'),
                 n.e('77298'),
                 n.e('23357'),
@@ -49,8 +49,8 @@ function r(e) {
                 ...C
             } = n;
             return (0, i.jsx)(e, {
-                activeSubscription: r,
-                stepConfigs: l,
+                activeSubscription: l,
+                stepConfigs: r,
                 skuIDs: [p],
                 children: (0, i.jsx)(s.KB, {
                     children: (0, i.jsx)(a, {
@@ -78,6 +78,6 @@ function r(e) {
         onCloseCallback: () => {
             null == d || d(!1);
         },
-        onCloseRequest: l.dG4
+        onCloseRequest: r.dG4
     });
 }

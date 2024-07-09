@@ -1,12 +1,12 @@
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(481060), r = n(318713), o = n(104642);
+var a = n(120356), s = n.n(a), r = n(481060), l = n(318713), o = n(104642);
 function c(e) {
     let {
         icon: t,
         iconNode: n,
         timestamp: a,
-        className: l,
+        className: r,
         children: c,
         contentClassName: d,
         iconClassName: u,
@@ -14,7 +14,7 @@ function c(e) {
         compact: E = !1
     } = e;
     return (0, i.jsxs)('div', {
-        className: s()(l, {
+        className: s()(r, {
             [o.container]: !0,
             [o.compact]: E,
             [o.cozy]: !E
@@ -36,7 +36,7 @@ function c(e) {
                 className: s()(d, o.content),
                 children: [
                     c,
-                    null != a && (0, i.jsx)(r.Z, { timestamp: a })
+                    null != a && (0, i.jsx)(l.Z, { timestamp: a })
                 ]
             })
         ]
@@ -51,7 +51,7 @@ c.Action = e => {
         className: o.action,
         children: [
             '\u2014',
-            (0, i.jsx)(l.Anchor, {
+            (0, i.jsx)(r.Anchor, {
                 onClick: t,
                 className: o.actionAnchor,
                 children: n

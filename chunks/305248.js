@@ -3,16 +3,16 @@ n.d(t, {
         return p;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(392711), l = n.n(s), r = n(442837), o = n(570140), c = n(45114), d = n(404616), u = n(470623), _ = n(344185), E = n(488131), m = n(592125), I = n(823379), T = n(709054), h = n(124368), N = n(735501);
+var i = n(735250), a = n(470079), s = n(392711), r = n.n(s), l = n(442837), o = n(570140), c = n(45114), d = n(404616), u = n(470623), _ = n(344185), E = n(488131), m = n(592125), I = n(823379), T = n(709054), h = n(124368), N = n(735501);
 function p(e) {
     let {
             channel: t,
             channelRecord: n,
             deleteChannel: s
-        } = e, p = (0, r.Wu)([
+        } = e, p = (0, l.Wu)([
             _.Z,
             m.Z
-        ], () => l()(_.Z.getThreadsForParent(n.guild_id, n.id)).values().filter(e => {
+        ], () => r()(_.Z.getThreadsForParent(n.guild_id, n.id)).values().filter(e => {
             let {id: n} = e;
             return T.default.compare(n, t.oldestReadMessageId) > 0;
         }).map(e => {

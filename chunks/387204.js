@@ -1,9 +1,9 @@
-var i, a, s, l, r = n(735250), o = n(470079), c = n(120356), d = n.n(c), u = n(481060), _ = n(689938), E = n(20356);
+var i, a, s, r, l = n(735250), o = n(470079), c = n(120356), d = n.n(c), u = n(481060), _ = n(689938), E = n(20356);
 let m = {
     BLOCK: E.block,
     INLINE: E.inline
 };
-class I extends (l = o.PureComponent) {
+class I extends (r = o.PureComponent) {
     render() {
         let {
             children: e,
@@ -12,11 +12,11 @@ class I extends (l = o.PureComponent) {
             type: i = m.BLOCK,
             style: a
         } = this.props;
-        return (0, r.jsxs)('div', {
+        return (0, l.jsxs)('div', {
             className: d()(t, i),
             style: a,
             children: [
-                (0, r.jsxs)(u.Text, {
+                (0, l.jsxs)(u.Text, {
                     variant: 'text-sm/bold',
                     tag: 'div',
                     color: 'text-positive',
@@ -26,7 +26,7 @@ class I extends (l = o.PureComponent) {
                         ':'
                     ]
                 }),
-                (0, r.jsx)(u.Text, {
+                (0, l.jsx)(u.Text, {
                     className: d()(E.tip, n),
                     variant: 'text-sm/normal',
                     children: e

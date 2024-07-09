@@ -3,9 +3,9 @@ n.d(t, {
         return C;
     }
 });
-var i = n(735250), a = n(470079), s = n(793030), l = n(442837), r = n(481060), o = n(230711), c = n(2052), d = n(906732), u = n(963249), _ = n(594174), E = n(626135), m = n(74538), I = n(163684), T = n(748770), h = n(474936), N = n(981631), p = n(689938), f = n(345478);
+var i = n(735250), a = n(470079), s = n(793030), r = n(442837), l = n(481060), o = n(230711), c = n(2052), d = n(906732), u = n(963249), _ = n(594174), E = n(626135), m = n(74538), I = n(163684), T = n(748770), h = n(474936), N = n(981631), p = n(689938), f = n(345478);
 function C() {
-    let e = (0, l.e7)([_.default], () => m.ZP.isPremium(_.default.getCurrentUser())), {
+    let e = (0, r.e7)([_.default], () => m.ZP.isPremium(_.default.getCurrentUser())), {
             enabled: t,
             getNitroCTA: n
         } = I.g.useExperiment({ location: 'OutboundPromotionNotice' }, {
@@ -33,16 +33,16 @@ function C() {
             S,
             A
         ]);
-    return (0, i.jsxs)(r.Notice, {
-        color: r.NoticeColors.PREMIUM_TIER_2,
+    return (0, i.jsxs)(l.Notice, {
+        color: l.NoticeColors.PREMIUM_TIER_2,
         children: [
-            (0, i.jsx)(r.NoticeCloseButton, {
+            (0, i.jsx)(l.NoticeCloseButton, {
                 noticeType: N.kVF.OUTBOUND_PROMOTION,
                 onClick: () => {
                     T.ZP.dismissOutboundPromotionNotice();
                 }
             }),
-            (0, i.jsx)(r.NitroWheelIcon, {
+            (0, i.jsx)(l.NitroWheelIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: f.premiumIcon
@@ -56,7 +56,7 @@ function C() {
                     p.Z.Messages.LEARN_MORE_CLICK.format({ onClick: A })
                 ]
             }) : p.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE : p.Z.Messages.OUTBOUND_PROMOTION_NOTICE,
-            (0, i.jsx)(r.PrimaryCTANoticeButton, {
+            (0, i.jsx)(l.PrimaryCTANoticeButton, {
                 noticeType: N.kVF.OUTBOUND_PROMOTION,
                 onClick: x,
                 children: n ? p.Z.Messages.PREMIUM_UPSELL_GET_NITRO : p.Z.Messages.TAKE_ME_THERE

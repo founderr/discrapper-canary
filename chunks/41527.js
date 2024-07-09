@@ -1,90 +1,90 @@
 i.d(n, {
     Z: function () {
-        return g;
+        return p;
     }
 }), i(47120);
-var o = i(735250);
+var l = i(735250);
 i(470079);
-var s = i(481060), t = i(100527), l = i(906732), a = i(5192), r = i(785717), c = i(318661), d = i(741308), u = i(681837), I = i(502762), E = i(530), _ = i(437758), f = i(544989), Z = i(740021), m = i(616140), v = i(29530), S = i(228168), x = i(981631), N = i(689938), h = i(505451);
-function g(e) {
+var s = i(481060), o = i(100527), t = i(906732), a = i(5192), r = i(785717), d = i(318661), c = i(741308), u = i(681837), I = i(502762), f = i(530), _ = i(437758), E = i(544989), m = i(740021), Z = i(616140), v = i(29530), S = i(228168), x = i(981631), h = i(689938), N = i(505451);
+function p(e) {
     let {
             user: n,
             currentUser: i,
-            guildId: g,
-            channelId: p,
-            messageId: C,
-            roleId: T,
-            initialSection: R,
-            initialSubsection: M,
-            transitionState: j,
-            onClose: A,
+            guildId: p,
+            channelId: g,
+            messageId: T,
+            roleId: C,
+            initialSection: j,
+            initialSubsection: R,
+            transitionState: A,
+            onClose: M,
             sourceAnalyticsLocations: P = []
-        } = e, U = g === x.ME ? void 0 : g, O = (0, c.ZP)(n.id, U), {analyticsLocations: L} = (0, l.ZP)([
+        } = e, U = p === x.ME ? void 0 : p, O = (0, d.ZP)(n.id, U), {analyticsLocations: L} = (0, t.ZP)([
             ...P,
-            t.Z.SIMPLIFIED_PROFILE_MODAL
+            o.Z.SIMPLIFIED_PROFILE_MODAL
         ]), b = (0, v.Z)(n);
-    return (0, o.jsx)(l.Gt, {
+    return (0, l.jsx)(t.Gt, {
         value: L,
-        children: (0, o.jsx)(r.Mt, {
+        children: (0, l.jsx)(r.Mt, {
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
             guildId: U,
-            channelId: p,
-            messageId: C,
-            roleId: T,
+            channelId: g,
+            messageId: T,
+            roleId: C,
             showGuildProfile: !0,
-            children: (0, o.jsx)(s.ModalRoot, {
-                transitionState: j,
-                className: h.root,
+            children: (0, l.jsx)(s.ModalRoot, {
+                transitionState: A,
+                className: N.root,
                 hideShadow: !0,
-                'aria-label': N.Z.Messages.USER_PROFILE_MODAL,
-                children: (0, o.jsxs)(I.Z, {
+                'aria-label': h.Z.Messages.USER_PROFILE_MODAL,
+                children: (0, l.jsxs)(I.Z, {
                     user: n,
                     displayProfile: O,
                     profileType: S.y0.FULL_SIZE,
                     children: [
-                        (0, o.jsx)(f.Z, {
+                        (0, l.jsx)(E.Z, {
                             profileType: S.y0.FULL_SIZE,
-                            children: (0, o.jsx)(_.Z, {
+                            children: (0, l.jsx)(_.Z, {
                                 user: n,
                                 guildId: U
                             })
                         }),
-                        (0, o.jsx)(Z.Z, {
+                        (0, l.jsx)(m.Z, {
                             user: n,
                             displayProfile: O,
                             guildId: U,
-                            channelId: p,
+                            channelId: g,
                             activity: void 0,
-                            transitionState: j,
-                            onClose: A
+                            transitionState: A,
+                            onClose: M
                         }),
-                        (0, o.jsxs)('div', {
-                            className: h.body,
+                        (0, l.jsxs)('div', {
+                            className: N.body,
                             children: [
-                                (0, o.jsx)(E.Z, {
+                                (0, l.jsx)(f.Z, {
                                     user: n,
                                     profileType: S.y0.FULL_SIZE,
-                                    nickname: a.ZP.getName(U, p, n),
+                                    nickname: a.ZP.getName(U, g, n),
                                     pronouns: null == O ? void 0 : O.pronouns,
                                     nicknameVariant: 'heading-xl/bold',
-                                    nicknameIcons: (0, o.jsx)(u.Z, { userId: n.id }),
-                                    tags: (0, o.jsx)(d.Z, {
+                                    nicknameIcons: (0, l.jsx)(u.Z, { userId: n.id }),
+                                    tags: (0, l.jsx)(c.Z, {
                                         displayProfile: O,
                                         profileType: S.y0.FULL_SIZE,
-                                        onClose: A
+                                        onClose: M
                                     })
                                 }),
-                                (0, o.jsx)(I.Z.Overlay, {
-                                    className: h.overlay,
-                                    children: (0, o.jsx)(m.Z, {
+                                (0, l.jsx)(I.Z.Overlay, {
+                                    className: N.overlay,
+                                    children: (0, l.jsx)(Z.Z, {
                                         user: n,
                                         currentUser: i,
                                         displayProfile: O,
                                         items: b,
-                                        initialSection: null != R ? R : S.oh.BOT_INFO,
-                                        initialSubsection: M,
-                                        onClose: A
+                                        initialSection: null != j ? j : S.oh.BOT_INFO,
+                                        initialSubsection: R,
+                                        onClose: M
                                     })
                                 })
                             ]

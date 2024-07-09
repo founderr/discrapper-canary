@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     }
 });
-var i = n(735250), a = n(470079), s = n(990547), l = n(91192), r = n(481060), o = n(724757), c = n(213609), d = n(441358), u = n(426521), _ = n(537959);
+var i = n(735250), a = n(470079), s = n(990547), r = n(91192), l = n(481060), o = n(724757), c = n(213609), d = n(441358), u = n(426521), _ = n(537959);
 function E(e) {
     let {
             initialized: t,
@@ -23,15 +23,15 @@ function E(e) {
             t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && m();
     };
     return t ? 0 === n.length ? (0, i.jsx)(d.v, {}) : (0, i.jsx)(i.Fragment, {
-        children: (0, i.jsx)(l.bG, {
+        children: (0, i.jsx)(r.bG, {
             navigator: T,
-            children: (0, i.jsx)(l.SJ, {
+            children: (0, i.jsx)(r.SJ, {
                 children: e => {
                     let {
                         ref: t,
                         ...a
                     } = e;
-                    return (0, i.jsxs)(r.AdvancedScroller, {
+                    return (0, i.jsxs)(l.AdvancedScroller, {
                         className: _.container,
                         ref: e => {
                             var n;
@@ -41,11 +41,11 @@ function E(e) {
                         onScroll: h,
                         children: [
                             (0, i.jsx)(u.U, { items: n }),
-                            E ? (0, i.jsx)(r.Spinner, { className: _.spinner }) : null
+                            E ? (0, i.jsx)(l.Spinner, { className: _.spinner }) : null
                         ]
                     });
                 }
             })
         })
-    }) : (0, i.jsx)(r.Spinner, { className: _.loadingPlaceholder });
+    }) : (0, i.jsx)(l.Spinner, { className: _.loadingPlaceholder });
 }

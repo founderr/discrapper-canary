@@ -1,6 +1,6 @@
-var i, a, s, l, r = n(873011), o = n(442837), c = n(570140);
+var i, a, s, r, l = n(873011), o = n(442837), c = n(570140);
 let d = [], u = 0;
-class _ extends (l = o.ZP.Store) {
+class _ extends (r = o.ZP.Store) {
     initialize() {
     }
     getMessageBookmarks() {
@@ -24,6 +24,6 @@ s = 'MessageBookmarksStore', (a = 'displayName') in (i = _) ? Object.definePrope
 }) : i[a] = s, t.Z = new _(c.Z, {
     SAVED_MESSAGES_UPDATE: function (e) {
         let {messages: t} = e;
-        u = new Date().getTime(), d = t.filter(e => e.type === r.J.BOOKMARK);
+        u = new Date().getTime(), d = t.filter(e => e.type === l.J.BOOKMARK);
     }
 });

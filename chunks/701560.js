@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     }
 }), n(47120), n(411104);
-var i, a = n(735250), s = n(470079), l = n(120356), r = n.n(l), o = n(442837), c = n(481060), d = n(239091), u = n(2052), _ = n(594190), E = n(592745), m = n(757266), I = n(417363), T = n(358085), h = n(346329), N = n(981631), p = n(689938), f = n(376296);
+var i, a = n(735250), s = n(470079), r = n(120356), l = n.n(r), o = n(442837), c = n(481060), d = n(239091), u = n(2052), _ = n(594190), E = n(592745), m = n(757266), I = n(417363), T = n(358085), h = n(346329), N = n(981631), p = n(689938), f = n(376296);
 function C(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -40,8 +40,8 @@ class g extends (i = s.PureComponent) {
             className: n,
             fullWidth: i,
             size: s,
-            customDisabledColor: l,
-            tooltipPosition: r
+            customDisabledColor: r,
+            tooltipPosition: l
         } = this.props;
         return (0, a.jsxs)('div', {
             className: f.disabledButtonWrapper,
@@ -50,13 +50,13 @@ class g extends (i = s.PureComponent) {
                     className: n,
                     fullWidth: i,
                     size: s,
-                    color: null != l ? l : f.disabledButtonColor,
+                    color: null != r ? r : f.disabledButtonColor,
                     disabled: !0,
                     children: e
                 }),
                 (0, a.jsx)(c.Tooltip, {
                     text: t,
-                    position: r,
+                    position: l,
                     children: e => (0, a.jsx)('div', {
                         className: f.disabledButtonOverlay,
                         ...e
@@ -72,7 +72,7 @@ class g extends (i = s.PureComponent) {
             size: n,
             color: i,
             isLaunchable: s,
-            isLaunching: l,
+            isLaunching: r,
             isRunning: o,
             isShiny: d,
             hideNotLaunchable: u
@@ -83,12 +83,12 @@ class g extends (i = s.PureComponent) {
             return this.renderDisabledButton(p.Z.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
         let _ = d ? c.ShinyButton : c.Button;
         return (0, a.jsxs)(_, {
-            className: r()(f.playButton, e),
+            className: l()(f.playButton, e),
             innerClassName: f.playButtonContents,
             fullWidth: t,
             size: n,
             color: null != i ? i : c.Button.Colors.GREEN,
-            submitting: l,
+            submitting: r,
             onClick: this.handleClick,
             children: [
                 (0, a.jsx)('div', {
@@ -138,7 +138,7 @@ function S(e) {
     let {
             applicationId: t,
             libraryApplication: n
-        } = e, i = (0, u.O)(), [s, l] = (0, o.Wu)([
+        } = e, i = (0, u.O)(), [s, r] = (0, o.Wu)([
             m.Z,
             E.Z,
             I.Z
@@ -148,13 +148,13 @@ function S(e) {
         ], [
             t,
             n
-        ]), r = (0, o.e7)([_.ZP], () => new Set(_.ZP.getRunningVerifiedApplicationIds()).has(t), [t]), c = (0, o.e7)([I.Z], () => null != n ? I.Z.getState(n.id, n.branchId) : null, [n]);
+        ]), l = (0, o.e7)([_.ZP], () => new Set(_.ZP.getRunningVerifiedApplicationIds()).has(t), [t]), c = (0, o.e7)([I.Z], () => null != n ? I.Z.getState(n.id, n.branchId) : null, [n]);
     return (0, a.jsx)(g, {
         ...e,
         analyticsContext: i,
         isLaunchable: s,
-        isLaunching: l,
-        isRunning: r,
+        isLaunching: r,
+        isRunning: l,
         dispatchState: c
     });
 }

@@ -12,7 +12,7 @@ function u(e) {
             size: u,
             botIconFirst: d,
             fallbackAvatar: m
-        } = e, _ = l.useMemo(() => null != n ? s.ZP.getApplicationIconURL({
+        } = e, p = l.useMemo(() => null != n ? s.ZP.getApplicationIconURL({
             id: n.id,
             icon: n.icon,
             bot: n.bot,
@@ -26,10 +26,10 @@ function u(e) {
             d,
             m
         ]);
-    return null == _ ? null : (0, i.jsx)('img', {
+    return null == p ? null : (0, i.jsx)('img', {
         className: r()(c.icon, a),
         alt: o.Z.Messages.IMAGE,
-        src: _,
+        src: p,
         'aria-hidden': !0
     });
 }

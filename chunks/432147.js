@@ -5,12 +5,12 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(442837), r = n(481060), o = n(239091), c = n(901461), d = n(592125), u = n(709054), _ = n(723774), E = n(144140), m = n(91159), I = n(576799), T = n(488131), h = n(981631), N = n(689938), p = n(265940);
+var a = n(120356), s = n.n(a), r = n(442837), l = n(481060), o = n(239091), c = n(901461), d = n(592125), u = n(709054), _ = n(723774), E = n(144140), m = n(91159), I = n(576799), T = n(488131), h = n(981631), N = n(689938), p = n(265940);
 function f(e) {
     let {
             message: t,
             compact: n
-        } = e, a = (0, l.e7)([d.Z], () => d.Z.getChannel(u.default.castMessageIdAsChannelId(t.id)));
+        } = e, a = (0, r.e7)([d.Z], () => d.Z.getChannel(u.default.castMessageIdAsChannelId(t.id)));
     return null == a ? null : (0, i.jsx)(C, {
         channel: a,
         compact: n,
@@ -22,9 +22,9 @@ function C(e) {
             channel: t,
             compact: a,
             isSystemMessage: c
-        } = e, d = (0, l.e7)([E.Z], () => E.Z.getCount(t.id)), u = function (e) {
+        } = e, d = (0, r.e7)([E.Z], () => E.Z.getCount(t.id)), u = function (e) {
             var t;
-            let n = (0, l.e7)([E.Z], () => E.Z.getMostRecentMessage(e.id)), a = (0, l.e7)([E.Z], () => E.Z.getCount(e.id)), s = (0, m.Ok)(e);
+            let n = (0, r.e7)([E.Z], () => E.Z.getMostRecentMessage(e.id)), a = (0, r.e7)([E.Z], () => E.Z.getCount(e.id)), s = (0, m.Ok)(e);
             return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived) ? N.Z.Messages.NO_RECENT_THREAD_MESSAGES : null == a || 0 === a ? N.Z.Messages.NO_THREAD_MESSAGES : null == n ? (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)('span', { children: N.Z.Messages.NO_RECENT_THREAD_MESSAGES }),
@@ -54,7 +54,7 @@ function C(e) {
                     [p.systemMessageSpine]: c
                 })
             }),
-            (0, i.jsx)(r.Clickable, {
+            (0, i.jsx)(l.Clickable, {
                 onClick: function (e) {
                     e.stopPropagation(), (0, T.ok)(t, e.shiftKey);
                 },
@@ -78,12 +78,12 @@ function C(e) {
                 },
                 'aria-roledescription': N.Z.Messages.THREAD_MESSAGE_ROLE_DESCRIPTION,
                 className: s()(p.container, { [p.systemMessageContainer]: c }),
-                children: (0, i.jsxs)(r.BlockInteractions, {
+                children: (0, i.jsxs)(l.BlockInteractions, {
                     children: [
                         (0, i.jsxs)('div', {
                             className: p.topLine,
                             children: [
-                                (0, i.jsx)(r.HiddenVisually, { children: N.Z.Messages.THREAD }),
+                                (0, i.jsx)(l.HiddenVisually, { children: N.Z.Messages.THREAD }),
                                 (0, i.jsx)('span', {
                                     className: p.name,
                                     children: t.name

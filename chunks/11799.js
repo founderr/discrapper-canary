@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     }
 }), n(47120);
-var i = n(470079), a = n(442837), s = n(45114), l = n(733427), r = n(455199), o = n(833592), c = n(140155), d = n(774807), u = n(490897);
+var i = n(470079), a = n(442837), s = n(45114), r = n(733427), l = n(455199), o = n(833592), c = n(140155), d = n(774807), u = n(490897);
 let _ = e => {
         let {
                 isFocused: t,
@@ -27,10 +27,10 @@ let _ = e => {
                 errored: c.Z.errored
             })), {
                 roleFilter: x,
-                everyoneFilter: O
-            } = (0, a.cj)([r.Z], () => ({
-                everyoneFilter: r.Z.everyoneFilter,
-                roleFilter: r.Z.roleFilter
+                everyoneFilter: R
+            } = (0, a.cj)([l.Z], () => ({
+                everyoneFilter: l.Z.everyoneFilter,
+                roleFilter: l.Z.roleFilter
             }));
         i.useEffect(() => ((0, o.Vk)(!0), () => (0, o.Vk)(!1)), []), i.useEffect(() => {
             p && t && (0, s.FT)(u.W.NOTIFICATION_CENTER);
@@ -38,14 +38,14 @@ let _ = e => {
             t,
             p
         ]);
-        let R = (0, l.Z)();
+        let O = (0, r.Z)();
         i.useEffect(() => () => {
-            _ ? !R() && (A || C.length > 100) && (0, o.jF)() : n && C.length > 100 && (0, o.jF)();
+            _ ? !O() && (A || C.length > 100) && (0, o.jF)() : n && C.length > 100 && (0, o.jF)();
         }, [
             n,
             C,
             _,
-            R,
+            O,
             A
         ]), i.useEffect(() => {
             let e = I && t;
@@ -53,7 +53,7 @@ let _ = e => {
                 limit: null != m ? m : E ? 8 : 20,
                 with_mentions: E,
                 roles_filter: x,
-                everyone_filter: O
+                everyone_filter: R
             });
         }, [
             p,
@@ -61,7 +61,7 @@ let _ = e => {
             t,
             E,
             x,
-            O,
+            R,
             m
         ]);
         let M = i.useCallback(async e => {
@@ -69,7 +69,7 @@ let _ = e => {
                 after: S,
                 with_mentions: E,
                 roles_filter: x,
-                everyone_filter: O,
+                everyone_filter: R,
                 limit: E ? 8 : 20
             }, () => {
                 T.current = !1;
@@ -81,7 +81,7 @@ let _ = e => {
             A,
             E,
             x,
-            O
+            R
         ]);
         return {
             initialized: p,

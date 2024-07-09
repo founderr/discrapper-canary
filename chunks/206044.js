@@ -1,12 +1,12 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(338545), o = n(722770), c = n(442837), d = n(846519), u = n(481060), _ = n(393238), E = n(607070), m = n(210887), I = n(810090), T = n(572004), h = n(617136), N = n(113434), p = n(497505), f = n(918701), C = n(566078), g = n(685613), S = n(611855), A = n(644646), x = n(670638), O = n(87894), R = n(46140), M = n(689938), v = n(793443);
-let L = (0, r.animated)(u.ChevronSmallDownIcon), Z = (0, r.animated)(I.Z), P = e => {
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(338545), o = n(722770), c = n(442837), d = n(846519), u = n(481060), _ = n(393238), E = n(607070), m = n(210887), I = n(810090), T = n(572004), h = n(617136), N = n(113434), p = n(497505), f = n(918701), C = n(566078), g = n(685613), S = n(611855), A = n(644646), x = n(670638), R = n(87894), O = n(46140), M = n(689938), v = n(793443);
+let L = (0, l.animated)(u.ChevronSmallDownIcon), Z = (0, l.animated)(I.Z), P = e => {
         let {
                 quest: t,
                 location: n,
                 questContentPosition: s,
-                ...l
-            } = e, [r, o] = a.useState(!1), c = a.useRef(new d.V7());
+                ...r
+            } = e, [l, o] = a.useState(!1), c = a.useRef(new d.V7());
         a.useEffect(() => {
             let e = c.current;
             return function () {
@@ -22,12 +22,12 @@ let L = (0, r.animated)(u.ChevronSmallDownIcon), Z = (0, r.animated)(I.Z), P = e
             }), (0, T.JG)((0, f.Rs)(t.id)), o(!0), c.current.start(1000, () => o(!1));
         };
         return (0, i.jsx)(u.Tooltip, {
-            forceOpen: r,
-            shouldShow: r,
+            forceOpen: l,
+            shouldShow: l,
             color: u.Tooltip.Colors.GREEN,
             text: M.Z.Messages.COPY_SUCCESS_1,
             children: () => (0, i.jsx)(u.Button, {
-                ...l,
+                ...r,
                 className: v.shareButton,
                 color: u.Button.Colors.PRIMARY,
                 size: u.Button.Sizes.SMALL,
@@ -57,7 +57,7 @@ t.Z = e => {
             ref: F,
             width: w,
             scrollWidth: V
-        } = (0, _.Z)(), H = (0, c.e7)([m.Z], () => m.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = a.useMemo(() => (0, f.nP)(d.config.assets.hero), [d]), z = a.useRef(null), K = (0, O.uq)(I), Q = I === p.jn.QUESTS_EMBED, q = (0, N.t5)(d, R.dr.QUESTS_CARD, I), X = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(d.config.expiresAt, {
+        } = (0, _.Z)(), H = (0, c.e7)([m.Z], () => m.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = a.useMemo(() => (0, f.nP)(d.config.assets.hero), [d]), z = a.useRef(null), K = (0, R.uq)(I), Q = I === p.jn.QUESTS_EMBED, q = (0, N.t5)(d, O.dr.QUESTS_CARD, I), X = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(d.config.expiresAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -81,7 +81,7 @@ t.Z = e => {
     ]);
     let et = (0, f.j8)(d);
     return (0, i.jsxs)('div', {
-        className: l()(v.outerContainer, {
+        className: r()(v.outerContainer, {
             [v.outerContainerGiftInventory]: K,
             [v.outerContainerEmbed]: Q,
             [v.outerContainerXs]: 'xs' === T
@@ -119,8 +119,8 @@ t.Z = e => {
                 className: v.header,
                 'aria-expanded': j,
                 children: [
-                    (0, i.jsxs)(r.animated.div, {
-                        className: l()(v.headerContent, { [v.headerContentEmbed]: Q }),
+                    (0, i.jsxs)(l.animated.div, {
+                        className: r()(v.headerContent, { [v.headerContentEmbed]: Q }),
                         style: {
                             y: K ? b.to({
                                 range: [
@@ -128,13 +128,13 @@ t.Z = e => {
                                     1
                                 ],
                                 output: [
-                                    O.DJ,
+                                    R.DJ,
                                     0
                                 ]
                             }) : void 0
                         },
                         children: [
-                            K && (0, i.jsx)(r.animated.div, {
+                            K && (0, i.jsx)(l.animated.div, {
                                 className: v.headerCollapsedContent,
                                 style: {
                                     opacity: b.to({
@@ -187,11 +187,11 @@ t.Z = e => {
                                     ]
                                 })
                             }),
-                            (0, i.jsxs)(r.animated.div, {
+                            (0, i.jsxs)(l.animated.div, {
                                 ref: e => {
                                     k.current = e;
                                 },
-                                className: l()(v.headerExpandedContent, {
+                                className: r()(v.headerExpandedContent, {
                                     [v.outerContainerGiftInventory]: K,
                                     [v.outerContainerEmbed]: Q
                                 }),
@@ -256,7 +256,7 @@ t.Z = e => {
                             })
                         ]
                     }),
-                    (0, i.jsxs)(r.animated.div, {
+                    (0, i.jsxs)(l.animated.div, {
                         className: v.iconsContainer,
                         style: {
                             top: K ? b.to({
@@ -265,10 +265,10 @@ t.Z = e => {
                                     1
                                 ],
                                 output: [
-                                    O.DJ / 2 - O.Z$ / 2,
-                                    O.jc
+                                    R.DJ / 2 - R.Z$ / 2,
+                                    R.jc
                                 ]
-                            }) : O.jc
+                            }) : R.jc
                         },
                         children: [
                             (0, i.jsx)(x.r, {
@@ -278,7 +278,7 @@ t.Z = e => {
                                 shouldShowDisclosure: !0,
                                 hideLearnMore: K,
                                 showShareLink: !s && Q,
-                                children: e => (0, i.jsx)(r.animated.div, {
+                                children: e => (0, i.jsx)(l.animated.div, {
                                     style: {
                                         opacity: b,
                                         visibility: D || j ? 'visible' : 'hidden'
@@ -295,7 +295,7 @@ t.Z = e => {
                                     })
                                 })
                             }),
-                            U && !(0, O.W_)(I) && (0, i.jsx)(u.Clickable, {
+                            U && !(0, R.W_)(I) && (0, i.jsx)(u.Clickable, {
                                 onClick: ee,
                                 className: v.iconWrapper,
                                 'aria-label': j ? M.Z.Messages.COLLAPSE : M.Z.Messages.EXPAND,

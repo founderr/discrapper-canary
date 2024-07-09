@@ -5,17 +5,17 @@ n.d(t, {
 }), n(47120), n(789020);
 var i = n(735250);
 n(470079);
-var a = n(613828), s = n(442837), l = n(477690), r = n(481060), o = n(668781), c = n(2052), d = n(100527), u = n(906732), _ = n(835473), E = n(522474), m = n(523746), I = n(592125), T = n(594174), h = n(602623), N = n(630388), p = n(823379), f = n(624138), C = n(317381), g = n(638880), S = n(146936), A = n(147865), x = n(778569), O = n(513202), R = n(403404), M = n(701488), v = n(981631), L = n(689938), Z = n(615010);
-let P = (0, f.Mg)(l.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+var a = n(613828), s = n(442837), r = n(477690), l = n(481060), o = n(668781), c = n(2052), d = n(100527), u = n(906732), _ = n(835473), E = n(522474), m = n(523746), I = n(592125), T = n(594174), h = n(602623), N = n(630388), p = n(823379), f = n(624138), C = n(317381), g = n(638880), S = n(146936), A = n(147865), x = n(778569), R = n(513202), O = n(403404), M = n(701488), v = n(981631), L = n(689938), Z = n(615010);
+let P = (0, f.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function b(e) {
-    var t, n, l, f;
+    var t, n, r, f;
     let {
             applicationId: b,
             message: D
         } = e, {analyticsLocations: j} = (0, u.ZP)(d.Z.ACTIVITY_BOOKMARK), U = (0, c.O)(), y = D.channel_id, B = (0, s.e7)([I.Z], () => I.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, s.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivityForChannel(y)), w = (null == F ? void 0 : F.applicationId) === b, [V, H] = (0, _.Z)([
             b,
             null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : ''
-        ]), Y = (0, A.Z)(null !== (l = null == V ? void 0 : V.maxParticipants) && void 0 !== l ? l : 0), [W] = (0, s.Wu)([C.ZP], () => G ? C.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === b) : [], [
+        ]), Y = (0, A.Z)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0), [W] = (0, s.Wu)([C.ZP], () => G ? C.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === b) : [], [
             b,
             y,
             G
@@ -30,7 +30,7 @@ function b(e) {
                         applicationId: W.applicationId,
                         currentEmbeddedApplication: H,
                         activityChannelId: y,
-                        embeddedActivitiesManager: O.Z,
+                        embeddedActivitiesManager: R.Z,
                         locationObject: U.location,
                         analyticsLocations: j
                     });
@@ -40,7 +40,7 @@ function b(e) {
                             currentEmbeddedApplication: H,
                             channelId: y,
                             guildId: k,
-                            embeddedActivitiesManager: O.Z,
+                            embeddedActivitiesManager: R.Z,
                             analyticsLocations: j
                         });
                     e ? o.Z.show({
@@ -52,7 +52,7 @@ function b(e) {
                     }) : t();
                 }
             } else
-                (0, R.Z)({
+                (0, O.Z)({
                     guildId: k,
                     locationObject: U.location,
                     openInPopout: q,
@@ -77,17 +77,17 @@ function b(e) {
                 (0, i.jsxs)('div', {
                     className: Z.content,
                     children: [
-                        (0, i.jsx)(r.Heading, {
+                        (0, i.jsx)(l.Heading, {
                             className: Z.heading,
                             variant: 'heading-xl/semibold',
                             children: V.name
                         }),
-                        (0, i.jsx)(r.Heading, {
+                        (0, i.jsx)(l.Heading, {
                             className: Z.description,
                             variant: 'heading-sm/medium',
                             children: null === (t = V.description) || void 0 === t ? void 0 : t.trim()
                         }),
-                        (0, i.jsx)(r.Heading, {
+                        (0, i.jsx)(l.Heading, {
                             className: Z.learnMore,
                             variant: 'heading-sm/medium',
                             children: (0, i.jsx)(a.rU, {
@@ -108,12 +108,12 @@ function b(e) {
                                 }) : (0, i.jsxs)('div', {
                                     className: Z.maxParticipants,
                                     children: [
-                                        (0, i.jsx)(r.GroupIcon, {
+                                        (0, i.jsx)(l.GroupIcon, {
                                             size: 'md',
                                             color: 'currentColor',
                                             className: Z.peopleIcon
                                         }),
-                                        (0, i.jsx)(r.Text, {
+                                        (0, i.jsx)(l.Text, {
                                             variant: 'text-xs/semibold',
                                             children: Y
                                         })
@@ -121,10 +121,10 @@ function b(e) {
                                 }),
                                 (0, i.jsx)('div', {
                                     className: Z.buttonWrapper,
-                                    children: (0, i.jsx)(r.Button, {
+                                    children: (0, i.jsx)(l.Button, {
                                         onClick: J,
                                         className: Z.button,
-                                        color: r.ButtonColors.GREEN,
+                                        color: l.ButtonColors.GREEN,
                                         disabled: w,
                                         children: X
                                     })

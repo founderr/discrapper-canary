@@ -3,10 +3,10 @@ n.d(t, {
         return s;
     },
     gP: function () {
-        return r;
+        return l;
     },
     sF: function () {
-        return l;
+        return r;
     }
 });
 var i = n(626135), a = n(981631);
@@ -17,13 +17,13 @@ function s(e, t, n) {
         source: n
     });
 }
-function l(e, t) {
+function r(e, t) {
     i.default.track(a.rMx.FORWARD_MESSAGE_CANCELLED, {
         channel_id: e,
         message_id: t
     });
 }
-function r(e, t, n, s) {
+function l(e, t, n, s) {
     i.default.track(a.rMx.FORWARD_MESSAGE_SENT, {
         channel_id: e,
         message_id: t,

@@ -24,7 +24,7 @@ n.d(t, {
         return m;
     },
     c6: function () {
-        return O;
+        return R;
     },
     d9: function () {
         return x;
@@ -45,7 +45,7 @@ n.d(t, {
         return u;
     }
 });
-var i, a, s, l, r, o, c, d, u, _, E, m, I, T, h = n(981631);
+var i, a, s, r, l, o, c, d, u, _, E, m, I, T, h = n(981631);
 function N(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -63,14 +63,14 @@ class f {
 N(f, 'CLASSIFICATION_ID', 'classification_id'), N(f, 'INCIDENT_TIMESTAMP', 'incident_time'), (a = u || (u = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail', a.LEARN_MORE_LINK = 'learn_more_link';
 class C {
 }
-N(C, 'ICON_TYPE', 'icon_type'), N(C, 'HEADER', 'header'), N(C, 'BODY', 'body'), N(C, 'CTAS', 'ctas'), N(C, 'TIMESTAMP', 'timestamp'), N(C, 'THEME', 'theme'), N(C, 'CLIENT_VERSION_MESSAGE', 'client_version_message'), N(C, 'LEARN_MORE_LINK', 'learn_more_link'), N(C, 'CLASSIFICATION_ID', 'classification_id'), (s = _ || (_ = {}))[s.ViewViolationDetail = 0] = 'ViewViolationDetail', s[s.ViewViolationsDropdown = 1] = 'ViewViolationsDropdown', s[s.ClickLetUsKnow = 2] = 'ClickLetUsKnow', s[s.ClickAgeVerificationLink = 3] = 'ClickAgeVerificationLink', s[s.ClickSpamWebformLink = 4] = 'ClickSpamWebformLink', s[s.ClickLearnMoreLink = 5] = 'ClickLearnMoreLink', s[s.ClickCommunityGuidelinesLink = 6] = 'ClickCommunityGuidelinesLink', s[s.ClickWarningSystemHelpcenterLink = 7] = 'ClickWarningSystemHelpcenterLink', (l = E || (E = {}))[l.SystemDM = 0] = 'SystemDM', l[l.StandingTab = 1] = 'StandingTab', l[l.AppealIngestion = 2] = 'AppealIngestion', Object.freeze({
+N(C, 'ICON_TYPE', 'icon_type'), N(C, 'HEADER', 'header'), N(C, 'BODY', 'body'), N(C, 'CTAS', 'ctas'), N(C, 'TIMESTAMP', 'timestamp'), N(C, 'THEME', 'theme'), N(C, 'CLIENT_VERSION_MESSAGE', 'client_version_message'), N(C, 'LEARN_MORE_LINK', 'learn_more_link'), N(C, 'CLASSIFICATION_ID', 'classification_id'), (s = _ || (_ = {}))[s.ViewViolationDetail = 0] = 'ViewViolationDetail', s[s.ViewViolationsDropdown = 1] = 'ViewViolationsDropdown', s[s.ClickLetUsKnow = 2] = 'ClickLetUsKnow', s[s.ClickAgeVerificationLink = 3] = 'ClickAgeVerificationLink', s[s.ClickSpamWebformLink = 4] = 'ClickSpamWebformLink', s[s.ClickLearnMoreLink = 5] = 'ClickLearnMoreLink', s[s.ClickCommunityGuidelinesLink = 6] = 'ClickCommunityGuidelinesLink', s[s.ClickWarningSystemHelpcenterLink = 7] = 'ClickWarningSystemHelpcenterLink', (r = E || (E = {}))[r.SystemDM = 0] = 'SystemDM', r[r.StandingTab = 1] = 'StandingTab', r[r.AppealIngestion = 2] = 'AppealIngestion', Object.freeze({
     SPEED_BUMP: h.jXE.APPEAL_INGESTION_SPEED_BUMP,
     COLLECT_SIGNAL: h.jXE.APPEAL_INGESTION_COLLECT_SIGNAL,
     CONFIRM_SUBMISSION: h.jXE.APPEAL_INGESTION_CONFIRM_SUBMISSION,
     REQUEST_SENT: h.jXE.APPEAL_INGESTION_REQUEST_SENT,
     THANKS: h.jXE.APPEAL_INGESTION_THANKS,
     SPAM: h.jXE.APPEAL_INGESTION_SPAM
-}), (r = m || (m = {}))[r.DIDNT_VIOLATE_POLICY = 0] = 'DIDNT_VIOLATE_POLICY', r[r.TOO_STRICT_UNFAIR = 1] = 'TOO_STRICT_UNFAIR', r[r.DONT_AGREE_PENALTY = 2] = 'DONT_AGREE_PENALTY', r[r.SOMETHING_ELSE = 3] = 'SOMETHING_ELSE';
+}), (l = m || (m = {}))[l.DIDNT_VIOLATE_POLICY = 0] = 'DIDNT_VIOLATE_POLICY', l[l.TOO_STRICT_UNFAIR = 1] = 'TOO_STRICT_UNFAIR', l[l.DONT_AGREE_PENALTY = 2] = 'DONT_AGREE_PENALTY', l[l.SOMETHING_ELSE = 3] = 'SOMETHING_ELSE';
 let g = [
         0,
         1,
@@ -95,7 +95,7 @@ let x = {
             next: null,
             prev: null
         }
-    }, O = {
+    }, R = {
         'collect-signal': {
             next: 'thanks',
             prev: null

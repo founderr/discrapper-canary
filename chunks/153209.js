@@ -3,13 +3,13 @@ n.d(t, {
         return C;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(442837), l = n(524437), r = n(481060), o = n(140155), c = n(497089), d = n(178480), u = n(11799), _ = n(632523), E = n(695346), m = n(626135), I = n(709054), T = n(791914), h = n(981631), N = n(689938), p = n(557032);
+var i = n(735250), a = n(470079), s = n(442837), r = n(524437), l = n(481060), o = n(140155), c = n(497089), d = n(178480), u = n(11799), _ = n(632523), E = n(695346), m = n(626135), I = n(709054), T = n(791914), h = n(981631), N = n(689938), p = n(557032);
 function f(e) {
     let {onClick: t} = e;
-    return (0, i.jsx)(r.CircleIconButton, {
+    return (0, i.jsx)(l.CircleIconButton, {
         tooltip: N.Z.Messages.MARK_ALL_AS_READ,
-        color: r.CircleIconButtonColors.SECONDARY,
-        icon: (0, i.jsx)(r.DoubleCheckmarkLargeIcon, {
+        color: l.CircleIconButtonColors.SECONDARY,
+        icon: (0, i.jsx)(l.DoubleCheckmarkLargeIcon, {
             size: 'xs',
             color: 'currentColor'
         }),
@@ -20,7 +20,7 @@ function C(e) {
     let {
             setTab: t,
             badgeState: n,
-            closePopout: r
+            closePopout: l
         } = e, {
             initialized: N,
             items: C,
@@ -32,32 +32,32 @@ function C(e) {
             ].sort((e, t) => -1 * I.default.compare(e.id, t.id))], [
             C,
             A
-        ]), O = C.length > 0 ? C[0] : null, R = E.d$.useSetting(), M = a.useMemo(() => {
-            if (null != O && 0 >= I.default.compare(O.id, R))
+        ]), R = C.length > 0 ? C[0] : null, O = E.d$.useSetting(), M = a.useMemo(() => {
+            if (null != R && 0 >= I.default.compare(R.id, O))
                 return !1;
             for (let e of x) {
-                if (0 >= I.default.compare(e.id, R))
+                if (0 >= I.default.compare(e.id, O))
                     break;
-                if (!(0, d.r)(e, R))
+                if (!(0, d.r)(e, O))
                     return !0;
             }
             return !1;
         }, [
-            O,
             R,
+            O,
             x
         ]);
     return (0, i.jsxs)('div', {
         className: p.container,
         children: [
             (0, i.jsx)(T.Z, {
-                tab: l.X.FOR_YOU,
+                tab: r.X.FOR_YOU,
                 setTab: t,
                 badgeState: n,
-                closePopout: r,
+                closePopout: l,
                 children: M ? (0, i.jsx)(f, {
                     onClick: () => {
-                        null != O && (E.d$.updateSetting(O.id), m.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
+                        null != R && (E.d$.updateSetting(R.id), m.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
                     }
                 }) : null
             }),

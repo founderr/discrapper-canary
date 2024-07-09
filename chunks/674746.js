@@ -228,7 +228,7 @@ let r = Object.freeze({
     PARTNER: '#4087ed',
     PAYPAL: '#13216b',
     PLAYSTATION: '#032f87',
-    PLUM_23_ALPHA: '#A5B0E9',
+    PLUM_23_ALPHA: '#BCBCF0',
     PLUM_0: '#f9f9fa',
     PLUM_1: '#f3f3f4',
     PLUM_10: '#818491',

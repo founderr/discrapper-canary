@@ -37,13 +37,13 @@ function L(e) {
             applicationId: null !== (t = null == M ? void 0 : M.application.id) && void 0 !== t ? t : '',
             size: 1024,
             names: D
-        }), H = (0, l.e7)([p.Z], () => p.Z.getGuild(d)), F = (0, l.e7)([
+        }), H = (0, l.e7)([p.Z], () => p.Z.getGuild(d)), P = (0, l.e7)([
             g.Z,
             m.Z
-        ], () => g.Z.getChannel(m.Z.getChannelId())), P = y(null != d ? d : void 0);
+        ], () => g.Z.getChannel(m.Z.getChannelId())), F = y(null != d ? d : void 0);
     if ((null == M ? void 0 : M.application) == null || null == H)
         return null;
-    let U = (null == F ? void 0 : F.name) == null || (null == F ? void 0 : F.name) === '' ? A.Z.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME : '#'.concat(F.name);
+    let Y = (null == P ? void 0 : P.name) == null || (null == P ? void 0 : P.name) === '' ? A.Z.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME : '#'.concat(P.name);
     return (0, i.jsxs)(s.Scroller, {
         className: Z.scroll,
         children: [
@@ -109,7 +109,7 @@ function L(e) {
                     });
                 }
             }),
-            P && h ? (0, i.jsxs)(s.Clickable, {
+            F && h ? (0, i.jsxs)(s.Clickable, {
                 className: Z.checkboxContainer,
                 onClick: () => {
                     let e = !L;
@@ -127,7 +127,7 @@ function L(e) {
                         children: [
                             A.Z.Messages.EMBEDDED_ACTIVITIES_SEND_ACTIVITY_INVITE,
                             ' ',
-                            (0, i.jsx)('strong', { children: U })
+                            (0, i.jsx)('strong', { children: Y })
                         ]
                     })
                 ]
