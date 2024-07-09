@@ -74,7 +74,7 @@ function R(e) {
             onClose: s,
             onAccept: r,
             ...o
-        } = e, f = (0, _.Dt)(), I = (0, C.Cc)(n), T = (0, C.E8)(), [v, S] = a.useState(!0), [R, j] = a.useState(!1), L = a.useCallback(() => {
+        } = e, f = (0, _.Dt)(), I = (0, C.Cc)(n), T = (0, C.E8)(n), [v, S] = a.useState(!0), [R, j] = a.useState(!1), L = a.useCallback(() => {
             r(), s();
         }, [
             r,
