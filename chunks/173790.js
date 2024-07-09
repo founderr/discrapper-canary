@@ -1,49 +1,49 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return N;
     }
 });
-var i = t(735250), l = t(470079), a = t(218061), r = t(481060), s = t(127255), o = t(361213), c = t(778569), u = t(783097), d = t(753972), m = t(387658), p = t(536650), _ = t(675993), E = t(689938), A = t(132439), N = t(413097);
-function h(e) {
+var i = t(735250), l = t(470079), a = t(218061), r = t(481060), s = t(361213), o = t(778569), c = t(783097), u = t(753972), d = t(387658), m = t(536650), p = t(675993), _ = t(689938), E = t(132439), A = t(413097);
+function N(e) {
     let {
             channel: n,
             application: t,
             sectionName: s
-        } = e, o = (0, u.ye)({ application: t }), c = o ? f : _.Z, h = l.useRef(null), {
+        } = e, o = (0, c.ye)({ application: t }), N = o ? h : p.Z, f = l.useRef(null), {
             iconURL: C,
             name: I
-        } = l.useMemo(() => (0, u.sl)(t, {
+        } = l.useMemo(() => (0, c.sl)(t, {
             botIconFirst: !o,
-            fakeAppIconURL: N,
+            fakeAppIconURL: A,
             size: 80
         }), [
             t,
             o
         ]);
     return (0, i.jsxs)(r.ScrollerNone, {
-        className: A.container,
+        className: E.container,
         fade: !0,
-        ref: h,
+        ref: f,
         role: 'region',
-        'aria-label': E.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: I }),
+        'aria-label': _.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: I }),
         children: [
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(m.Z, {
                 name: I,
                 iconURL: C,
-                scrollerRef: h
+                scrollerRef: f
             }),
-            null != C && (0, i.jsx)(d.Z, {
+            null != C && (0, i.jsx)(u.Z, {
                 src: C,
-                className: A.appIcon,
+                className: E.appIcon,
                 size: 80
             }),
             (0, i.jsx)(a.Z, { size: 54 }),
-            (0, i.jsx)(c, {
+            (0, i.jsx)(N, {
                 channel: n,
                 application: t,
                 sectionName: s
             }),
-            (0, i.jsx)(m.Z, {
+            (0, i.jsx)(d.Z, {
                 channel: n,
                 application: t,
                 sectionName: s
@@ -51,23 +51,20 @@ function h(e) {
         ]
     });
 }
-function f(e) {
+function h(e) {
     let {
             channel: n,
             application: t,
             sectionName: l
-        } = e, a = (0, s.Z)({
-            guildId: n.getGuildId(),
-            channel: n
-        }).find(e => e.activity.application_id === t.id), r = (0, c.Z)({
+        } = e, a = (0, o.Z)({
             applicationId: t.id,
             size: 2048,
             names: ['embedded_cover']
-        }), u = null != a && null != a.activity.activity_preview_video_asset_id ? (0, o.Z)(t.id, a.activity.activity_preview_video_asset_id) : null;
-    return (0, i.jsx)(_.Z, {
+        }), r = (0, c.yJ)(t), u = null != r && null != r.activity_preview_video_asset_id ? (0, s.Z)(t.id, r.activity_preview_video_asset_id) : null;
+    return (0, i.jsx)(p.Z, {
         channel: n,
         application: t,
-        imageCoverUrl: r.url,
+        imageCoverUrl: a.url,
         videoUrl: u,
         sectionName: l
     });

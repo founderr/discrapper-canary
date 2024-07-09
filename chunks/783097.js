@@ -1,43 +1,49 @@
 t.d(n, {
     $d: function () {
-        return E;
-    },
-    BQ: function () {
-        return _;
-    },
-    Wx: function () {
-        return p;
-    },
-    Y$: function () {
-        return h;
-    },
-    jD: function () {
         return A;
     },
+    BQ: function () {
+        return E;
+    },
+    Wx: function () {
+        return _;
+    },
+    Y$: function () {
+        return C;
+    },
+    jD: function () {
+        return N;
+    },
     sl: function () {
+        return I;
+    },
+    yJ: function () {
         return f;
     },
     ye: function () {
-        return N;
+        return h;
     }
 }), t(789020);
-var i = t(668781), l = t(904245), a = t(895924), r = t(667204), s = t(957730), o = t(768581), c = t(630388), u = t(981631), d = t(689079), m = t(689938);
-let p = { id: d.bi.BUILT_IN };
-function _(e) {
-    return e.id !== d.bi.BUILT_IN;
-}
+var i = t(668781), l = t(904245), a = t(895924), r = t(667204), s = t(957730), o = t(973616), c = t(768581), u = t(630388), d = t(981631), m = t(689079), p = t(689938);
+let _ = { id: m.bi.BUILT_IN };
 function E(e) {
-    return _(e) ? e.name : m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
+    return e.id !== m.bi.BUILT_IN;
 }
 function A(e) {
-    return _(e) ? e.description : m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
+    return E(e) ? e.name : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
 }
 function N(e) {
-    var n;
-    let {application: t} = e;
-    return _(t) && (0, c.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, u.udG.EMBEDDED);
+    return E(e) ? e.description : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
 }
 function h(e) {
+    var n;
+    let {application: t} = e;
+    return E(t) && (0, u.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, d.udG.EMBEDDED);
+}
+function f(e) {
+    return E(e) && h({ application: e }) ? e instanceof o.Z ? e.embeddedActivityConfig : e.embedded_activity_config : null;
+}
+function C(e) {
     let {
             command: n,
             optionValues: t,
@@ -45,7 +51,7 @@ function h(e) {
             commandTargetId: c,
             maxSizeCallback: u,
             sectionName: d
-        } = e, {channel: p} = o, _ = async () => {
+        } = e, {channel: m} = o, _ = async () => {
             try {
                 let i = await (0, r.Z)({
                     command: n,
@@ -58,27 +64,27 @@ function h(e) {
                 });
                 if (n.inputType === a.iw.BUILT_IN_TEXT && null != i) {
                     var e;
-                    let n = s.ZP.parse(p, i.content);
+                    let n = s.ZP.parse(m, i.content);
                     n.tts = null !== (e = i.tts) && void 0 !== e && e, l.Z.sendMessage(o.channel.id, n);
                 }
             } catch (e) {
                 throw i.Z.show({
-                    title: m.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE,
-                    body: m.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_BODY,
-                    confirmText: m.Z.Messages.RETRY,
+                    title: p.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE,
+                    body: p.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_BODY,
+                    confirmText: p.Z.Messages.RETRY,
                     onConfirm: () => _()
                 }), e;
             }
         };
     return _();
 }
-function f(e) {
+function I(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
             fakeAppIconURL: t,
             ...i
         } = n;
-    return _(e) ? {
-        iconURL: o.ZP.getApplicationIconURL({
+    return E(e) ? {
+        iconURL: c.ZP.getApplicationIconURL({
             ...i,
             id: e.id,
             icon: e.icon,
@@ -88,7 +94,7 @@ function f(e) {
         description: e.description
     } : {
         iconURL: null != t ? t : null,
-        name: m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME,
-        description: m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
+        name: p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME,
+        description: p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
     };
 }
