@@ -154,6 +154,7 @@ let U = e => {
                     guildId: null != a ? a.id : null,
                     roleId: i,
                     roleColor: o.color,
+                    roleName: '@'.concat(o.name),
                     color: o.color,
                     colorString: o.colorString,
                     content: [{
