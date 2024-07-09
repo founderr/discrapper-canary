@@ -23,11 +23,11 @@ function f(e) {
                 children: [
                     (0, i.jsx)(a.LockIcon, {
                         size: 'xxs',
-                        color: a.tokens.colors.STATUS_POSITIVE
+                        color: a.tokens.colors.TEXT_POSITIVE
                     }),
                     (0, i.jsx)(a.Text, {
                         variant: 'text-xs/medium',
-                        color: 'status-positive',
+                        color: 'text-positive',
                         children: p.Z.Messages.E2EE_END_TO_END_ENCRYPTED
                     })
                 ]
