@@ -11,7 +11,7 @@ function _(e) {
         location: n,
         channelId: t
     } = e;
-    return 'location:'.concat(n, ' channelId:').concat(t);
+    return 'location:'.concat(n, ' channelId:').concat('0');
 }
 let E = Object.freeze([]);
 class A extends (o = c.ZP.Store) {
@@ -52,7 +52,7 @@ r = void 0, (a = 'displayName') in (l = A) ? Object.defineProperty(l, a, {
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : l[a] = r, n.Z = new A(u.Z, {
+}) : l[a] = r, n.ZP = new A(u.Z, {
     APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function (e) {
         let {
             location: n,

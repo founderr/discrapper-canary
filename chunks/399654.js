@@ -9,10 +9,10 @@ async function u(e) {
     let {
             channelId: n,
             location: t
-        } = e, r = Date.now(), u = s.Z.getFetchState({
+        } = e, r = Date.now(), u = s.ZP.getFetchState({
             location: t,
             channelId: n
-        }), d = s.Z.getLastFetchTimeMs({
+        }), d = s.ZP.getLastFetchTimeMs({
             location: t,
             channelId: n
         });

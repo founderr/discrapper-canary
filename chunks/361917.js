@@ -365,12 +365,12 @@ function J(e) {
                 n,
                 t
             ]);
-            let [i, a] = (0, c.Wu)([C.Z], () => [
-                C.Z.getFetchState({
+            let [i, a] = (0, c.Wu)([C.ZP], () => [
+                C.ZP.getFetchState({
                     channelId: n,
                     location: t
                 }),
-                C.Z.getRecommendations({
+                C.ZP.getRecommendations({
                     channelId: n,
                     location: t
                 })
