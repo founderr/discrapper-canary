@@ -691,6 +691,11 @@ let i = {
         actions: ['RUNNING_GAMES_CHANGE'],
         inlineRequire: () => n(182573).Z,
         neverLoadBeforeConnectionOpen: !0
+    },
+    SharedSpacesWarningManager: {
+        actions: ['CHANNEL_SELECT'],
+        inlineRequire: () => n(414509).Z,
+        neverLoadBeforeConnectionOpen: !0
     }
 };
 (0, r.j)(i);
