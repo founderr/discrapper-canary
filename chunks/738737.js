@@ -26,7 +26,7 @@ function l(e) {
     (0, a.openModalLazy)(async () => {
         let {PaymentContextProvider: e} = await Promise.resolve().then(n.bind(n, 598)), {PaymentModal: a} = await Promise.all([
                 n.e('15972'),
-                n.e('6416'),
+                n.e('47006'),
                 n.e('32776'),
                 n.e('87786')
             ]).then(n.bind(n, 791785)), {STEPS: r} = await Promise.all([
@@ -35,7 +35,7 @@ function l(e) {
                 n.e('23357'),
                 n.e('15972'),
                 n.e('12013'),
-                n.e('6416'),
+                n.e('47006'),
                 n.e('29609'),
                 n.e('32776'),
                 n.e('95900'),

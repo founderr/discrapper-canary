@@ -31,7 +31,7 @@ function p(e) {
     (0, r.openModalLazy)(async () => {
         let {PaymentContextProvider: e} = await Promise.resolve().then(t.bind(t, 598)), r = (await Promise.all([
                 t.e('15972'),
-                t.e('6416'),
+                t.e('47006'),
                 t.e('32776'),
                 t.e('16083')
             ]).then(t.bind(t, 405083))).default, {getApplicationPaymentSteps: f} = await Promise.all([
