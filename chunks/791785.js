@@ -187,7 +187,7 @@ function w(n) {
             nD,
             nM
         ]);
-    (0, m.bp)(nE, n_, nw), (0, R.dZ)(nE, nu, ni), (0, T.p)(nE, np, nw), (0, E.Z)(nD), (0, M.w)(nm, () => C(!1), nP), (0, m.D6)(n_);
+    (0, m.bp)(nE, n_, nw, ni), (0, R.dZ)(nE, nu, ni), (0, T.p)(nE, np, nw), (0, E.Z)(nD), (0, M.w)(nm, () => C(!1), nP), (0, m.D6)(n_);
     let nb = (0, Z.U)({
         renderHeader: B,
         referralTrialOfferId: X,
