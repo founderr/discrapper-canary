@@ -105,7 +105,8 @@ function v(e) {
                         },
                         hasSpoilerEmbeds: C,
                         isInteracting: !1,
-                        isMessageSnapshot: !0
+                        isMessageSnapshot: !0,
+                        renderThreadAccessory: !1
                     }),
                     (0, i.jsx)(M, {
                         message: n,
