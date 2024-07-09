@@ -19,18 +19,20 @@ class S extends r.Z {
         a.Z.unsubscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), a.Z.unsubscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
     }
     constructor(...e) {
-        super(...e), p(this, 'maybeOpenServerDriveAnnouncementModal', (e, t) => {
+        super(...e), p(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
             let a = (0, m.extractAnnouncementModalContent)({
                 content: e,
                 isPreview: t
             });
-            return null != a && ((0, s.closeModal)(T), (0, s.openModalLazy)(async () => {
-                let {default: e} = await Promise.resolve().then(n.bind(n, 318199));
-                return t => (0, i.jsx)(e, {
-                    renderModalProps: t,
-                    properties: a
-                });
-            }, { modalKey: T }), !0);
+            if (null != a)
+                return !!((null == a ? void 0 : a.contentIdentifier) !== 'summer_bogo_content' || await (0, I.k)()) && ((0, s.closeModal)(T), (0, s.openModalLazy)(async () => {
+                    let {default: e} = await Promise.resolve().then(n.bind(n, 318199));
+                    return t => (0, i.jsx)(e, {
+                        renderModalProps: t,
+                        properties: a
+                    });
+                }, { modalKey: T }), !0);
+            return !1;
         }), p(this, 'handlePreview', e => {
             let {properties: t} = e;
             this.maybeOpenServerDriveAnnouncementModal(t, !0);
@@ -61,13 +63,9 @@ class S extends r.Z {
             if (await (0, I.l2)(), !d.s.isDisallowPopupsSet()) {
                 if (!(0, s.hasAnyModalOpen)() && u.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled) {
                     for (let e of await (0, h.H)(this.getOfferFromStore()))
-                        if (this.maybeOpenServerDriveAnnouncementModal(e, !1))
+                        if (await this.maybeOpenServerDriveAnnouncementModal(e, !1))
                             break;
                 }
-                !(0, s.hasAnyModalOpen)() && await (0, I.k)() && (0, s.openModalLazy)(async () => {
-                    let {default: e} = await n.e('28614').then(n.bind(n, 868508));
-                    return t => (0, i.jsx)(e, { renderModalProps: t });
-                });
             }
         });
     }
