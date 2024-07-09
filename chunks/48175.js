@@ -3,7 +3,7 @@ t.d(e, {
         return i;
     },
     Z: function () {
-        return r;
+        return a;
     }
 });
 var l = t(639119), u = t(474936);
@@ -15,11 +15,11 @@ function i(n) {
     } = n;
     return !t && null != e && null != l && u.nG[e.trial_id].skus.includes(l);
 }
-function r(n) {
+function a(n) {
     let {
             isGift: e,
             skuId: t,
             referralTrialOfferId: i
-        } = n, r = (0, l.N)(i);
-    return !e && null != r && null != t && u.nG[r.trial_id].skus.includes(t);
+        } = n, a = (0, l.N)(i);
+    return !e && null != a && null != t && u.nG[a.trial_id].skus.includes(t);
 }

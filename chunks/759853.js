@@ -1,5 +1,5 @@
 n(47120);
-var s = n(735250), o = n(470079), r = n(887024), a = n(338545), l = n(442837), i = n(110924), c = n(607070), d = n(819640), u = n(569379), p = n(675654), x = n(267925), m = n(197857);
+var s = n(735250), o = n(470079), r = n(887024), a = n(338545), i = n(442837), l = n(110924), c = n(607070), d = n(819640), u = n(569379), p = n(675654), x = n(267925), m = n(197857);
 let g = ['#51BC9D'];
 t.Z = e => {
     var t;
@@ -10,7 +10,7 @@ t.Z = e => {
         } = e, {
             completionSpring: _,
             startCompletionAnimation: h
-        } = (0, u.GX)(), E = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = o.useRef(!1), T = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), N = o.useRef(null), v = (0, l.e7)([d.Z], () => d.Z.hasLayers()), A = (0, i.Z)(v), [j, B] = o.useState(null), [b, O] = o.useState(null), R = o.useRef(new r.qA({
+        } = (0, u.GX)(), E = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = o.useRef(!1), T = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), N = o.useRef(null), v = (0, i.e7)([d.Z], () => d.Z.hasLayers()), A = (0, l.Z)(v), [j, B] = o.useState(null), [b, O] = o.useState(null), R = o.useRef(new r.qA({
             gravity: 0,
             wind: 0
         })), I = (0, r.uR)(j, b), y = o.useCallback(() => {
@@ -21,12 +21,12 @@ t.Z = e => {
                 var n, s, o, r;
                 let {
                         x: a,
-                        y: l
+                        y: i
                     } = e.getBoundingClientRect(), {
-                        x: i,
+                        x: l,
                         y: c
                     } = t.getBoundingClientRect();
-                I.createMultipleConfetti((n = a - i, s = l - c, o = e.clientHeight, r = e.clientWidth, {
+                I.createMultipleConfetti((n = a - l, s = i - c, o = e.clientHeight, r = e.clientWidth, {
                     ...p.We,
                     position: {
                         type: 'static-random',
@@ -71,7 +71,7 @@ t.Z = e => {
             N,
             I,
             T
-        ]), M = (0, i.Z)(f);
+        ]), M = (0, l.Z)(f);
     return (o.useEffect(() => {
         E && f && !M && (h(), y());
     }, [

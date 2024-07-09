@@ -5,8 +5,8 @@ t.Z = function (e) {
     let {
         expandedContentRef: t,
         expansionSpring: n,
-        isExpanded: l,
-        isExpansionAnimationComplete: i,
+        isExpanded: i,
+        isExpansionAnimationComplete: l,
         onCtxMenuOpened: c,
         onCtxMenuClosed: d,
         onCtxMenuSelection: u,
@@ -18,8 +18,8 @@ t.Z = function (e) {
             (0, s.jsx)(o.Z, {
                 className: a.content,
                 expansionSpring: n,
-                isExpanded: l,
-                isExpansionAnimationComplete: i,
+                isExpanded: i,
+                isExpansionAnimationComplete: l,
                 quest: p,
                 useReducedMotion: x
             }),
@@ -28,8 +28,8 @@ t.Z = function (e) {
                 onCtxMenuOpen: c,
                 onCtxMenuClose: d,
                 onCtxMenuSelect: u,
-                isExpanded: l,
-                isExpansionAnimationComplete: i,
+                isExpanded: i,
+                isExpansionAnimationComplete: l,
                 quest: p,
                 useReducedMotion: x,
                 ref: t

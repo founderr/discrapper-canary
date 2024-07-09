@@ -1,4 +1,4 @@
-var s = n(735250), o = n(470079), r = n(120356), a = n.n(r), l = n(338545), i = n(481060), c = n(617136), d = n(497505), u = n(918701), p = n(685613), x = n(670638), m = n(341907), g = n(898170), C = n(689938), f = n(560594);
+var s = n(735250), o = n(470079), r = n(120356), a = n.n(r), i = n(338545), l = n(481060), c = n(617136), d = n(497505), u = n(918701), p = n(685613), x = n(670638), m = n(341907), g = n(898170), C = n(689938), f = n(560594);
 t.Z = e => {
     let {
             quest: t,
@@ -20,7 +20,7 @@ t.Z = e => {
                 ctaContent: c.jZ.OPEN_GAME_LINK
             });
         }, [t]), j = T && N;
-    return (0, s.jsxs)(l.animated.div, {
+    return (0, s.jsxs)(i.animated.div, {
         className: a()(f.wrapper, { [f.interactable]: j }),
         style: {
             margin: r.to({
@@ -102,7 +102,7 @@ t.Z = e => {
             ]).to(e => 'blur('.concat(10 * e, 'px) brightness(').concat(1 - e / 5, ')'))
         },
         children: [
-            (0, s.jsx)(l.animated.div, {
+            (0, s.jsx)(i.animated.div, {
                 className: f.backgroundWrapper,
                 style: {
                     opacity: r.to({
@@ -143,7 +143,7 @@ t.Z = e => {
                     useReducedMotion: S
                 })
             }),
-            (0, s.jsx)(l.animated.img, {
+            (0, s.jsx)(i.animated.img, {
                 alt: '',
                 className: f.wreathIcon,
                 style: {
@@ -160,7 +160,7 @@ t.Z = e => {
                 },
                 src: n(858595)
             }),
-            (0, s.jsx)(l.animated.div, {
+            (0, s.jsx)(i.animated.div, {
                 style: {
                     opacity: r.to({
                         range: [
@@ -183,7 +183,7 @@ t.Z = e => {
                         ]
                     })
                 },
-                children: (0, s.jsx)(i.Clickable, {
+                children: (0, s.jsx)(l.Clickable, {
                     onClick: A,
                     className: a()({ [f.logo]: j }),
                     children: (0, s.jsx)(p.Z, {
@@ -192,7 +192,7 @@ t.Z = e => {
                     })
                 })
             }),
-            (0, s.jsx)(l.animated.div, {
+            (0, s.jsx)(i.animated.div, {
                 className: f.questAvailable,
                 style: {
                     opacity: r.to({
@@ -216,14 +216,14 @@ t.Z = e => {
                         ]
                     })
                 },
-                children: (0, s.jsx)(i.Text, {
+                children: (0, s.jsx)(l.Text, {
                     color: 'always-white',
                     variant: 'text-xs/medium',
                     className: f.questAvailableText,
                     children: C.Z.Messages.QUEST_AVAILABLE
                 })
             }),
-            (0, s.jsxs)(l.animated.div, {
+            (0, s.jsxs)(i.animated.div, {
                 className: f.promotedBadgeWrapper,
                 style: {
                     opacity: r.to({
@@ -238,17 +238,17 @@ t.Z = e => {
                     })
                 },
                 children: [
-                    (0, s.jsxs)(i.Clickable, {
+                    (0, s.jsxs)(l.Clickable, {
                         className: f.promotedBadge,
                         onClick: v,
                         children: [
-                            (0, s.jsx)(i.Text, {
+                            (0, s.jsx)(l.Text, {
                                 color: 'always-white',
                                 variant: 'text-xs/normal',
                                 children: C.Z.Messages.QUESTS_PROMOTED
                             }),
-                            (0, s.jsx)(i.CircleQuestionIcon, {
-                                color: i.tokens.colors.WHITE,
+                            (0, s.jsx)(l.CircleQuestionIcon, {
+                                color: l.tokens.colors.WHITE,
                                 className: f.promotedBadgeIcon
                             })
                         ]
@@ -261,11 +261,11 @@ t.Z = e => {
                         quest: t,
                         shouldShowDisclosure: !0,
                         showShareLink: !0,
-                        children: e => (0, s.jsx)(i.Clickable, {
+                        children: e => (0, s.jsx)(l.Clickable, {
                             ...e,
                             className: f.submenuWrapper,
                             'aria-label': C.Z.Messages.ACTIONS,
-                            children: (0, s.jsx)(i.MoreHorizontalIcon, {
+                            children: (0, s.jsx)(l.MoreHorizontalIcon, {
                                 size: 'md',
                                 color: 'currentColor',
                                 className: a()(f.submenuIcon, f.white)

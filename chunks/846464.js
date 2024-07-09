@@ -17,8 +17,8 @@ function m(e) {
             startedPaymentFlowWithPaymentSourcesRef: d,
             setSelectedPlanId: c,
             priceOptions: b
-        } = (0, _.usePaymentContext)(), {isGift: g} = (0, u.wD)(), m = (0, l.N)(r), I = (0, s.Nx)();
-    return (0, i.jsx)(L, {
+        } = (0, _.usePaymentContext)(), {isGift: g} = (0, u.wD)(), m = (0, l.N)(r), L = (0, s.Nx)();
+    return (0, i.jsx)(I, {
         selectSku: e => function (e) {
             let {
                 activeSubscription: t,
@@ -56,11 +56,11 @@ function m(e) {
         }),
         onClose: n,
         isGift: g,
-        inOfferExperience: I,
+        inOfferExperience: L,
         priceOptions: b
     });
 }
-function L(e) {
+function I(e) {
     let {
         selectSku: t,
         onClose: n,

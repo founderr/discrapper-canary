@@ -3,11 +3,11 @@ t.Z = o.forwardRef((e, t) => {
     let {
             quest: n,
             percentComplete: o,
-            size: l = 42,
-            strokeWidth: i = 3,
+            size: i = 42,
+            strokeWidth: l = 3,
             glowBlur: c = 0.4,
             children: d
-        } = e, u = (0, r.EK)(n, o > 0), p = l / 2, x = l / 2 - i / 2, m = 2 * Math.PI * x, g = m - o * m, C = {
+        } = e, u = (0, r.EK)(n, o > 0), p = i / 2, x = i / 2 - l / 2, m = 2 * Math.PI * x, g = m - o * m, C = {
             strokeDasharray: ''.concat(m, ' ').concat(m),
             strokeDashoffset: g
         }, f = {
@@ -25,8 +25,8 @@ t.Z = o.forwardRef((e, t) => {
             }),
             (0, s.jsxs)('svg', {
                 className: a.progressBar,
-                height: l,
-                width: l,
+                height: i,
+                width: i,
                 children: [
                     (0, s.jsxs)('defs', {
                         children: [
@@ -68,7 +68,7 @@ t.Z = o.forwardRef((e, t) => {
                     }),
                     (0, s.jsx)('circle', {
                         className: a.progress,
-                        strokeWidth: i,
+                        strokeWidth: l,
                         fill: 'transparent',
                         r: x,
                         cx: p,
@@ -78,7 +78,7 @@ t.Z = o.forwardRef((e, t) => {
                     }),
                     (0, s.jsx)('circle', {
                         className: a.progress,
-                        strokeWidth: i,
+                        strokeWidth: l,
                         fill: 'transparent',
                         r: x,
                         cx: p,

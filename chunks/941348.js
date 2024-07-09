@@ -1,4 +1,4 @@
-var s = n(735250), o = n(470079), r = n(308069), a = n(613087), l = n(457153), i = n(254197), c = n(321025), d = n(768545);
+var s = n(735250), o = n(470079), r = n(308069), a = n(613087), i = n(457153), l = n(254197), c = n(321025), d = n(768545);
 t.Z = function (e) {
     var t;
     let {
@@ -28,7 +28,7 @@ t.Z = function (e) {
                 onCtxMenuClose: g,
                 onCtxMenuSelect: C
             }),
-            (0, s.jsx)(l.Z, {
+            (0, s.jsx)(i.Z, {
                 ref: h,
                 className: d.content,
                 expansionSpring: u,
@@ -37,7 +37,7 @@ t.Z = function (e) {
                 quest: f,
                 useReducedMotion: _
             }),
-            (0, s.jsx)(i.Z, {
+            (0, s.jsx)(l.Z, {
                 expansionSpring: u,
                 className: d.content,
                 onCtxMenuOpen: m,

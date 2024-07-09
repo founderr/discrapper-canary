@@ -6,7 +6,7 @@ t.d(n, {
         return C;
     },
     On: function () {
-        return A;
+        return I;
     },
     tQ: function () {
         return d;
@@ -41,7 +41,7 @@ let d = {
         binds: (0, a.isMac)() ? ['mod+['] : ['alt+left'],
         comboKeysBindGlobal: !0,
         action: () => ((0, o.op)(), !1)
-    }, A = {
+    }, I = {
         binds: (0, a.isMac)() ? ['mod+]'] : ['alt+right'],
         comboKeysBindGlobal: !0,
         action: () => ((0, o.eH)(), !1)

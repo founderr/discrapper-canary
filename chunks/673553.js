@@ -1,6 +1,6 @@
 t.d(n, {
     U: function () {
-        return I;
+        return A;
     }
 }), t(47120);
 var i = t(802498), l = t(607070), o = t(819640), E = t(131951), r = t(19780), u = t(585483), a = t(5967), s = t(13140), d = t(981631);
@@ -55,7 +55,7 @@ let _ = new Set([
         'Find',
         'ZoomIn',
         'ZoomOut'
-    ]), A = new Set([
+    ]), I = new Set([
         'ChannelDown',
         'ChannelUp',
         'MediaFastForward',
@@ -85,14 +85,14 @@ let _ = new Set([
         'VolumeUp',
         'VolumeDown',
         'VolumeMute'
-    ]), I = {
+    ]), A = {
         binds: ['any-character'],
         keydown(e, n) {
             var t;
-            let I = null === (t = (0, a.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-            if ((0, a.VG)(I) || i.fC.isActive() || c.has(n) || C.has(n) || A.has(n))
+            let A = null === (t = (0, a.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+            if ((0, a.VG)(A) || i.fC.isActive() || c.has(n) || C.has(n) || I.has(n))
                 return !1;
-            let S = null != I && 'BODY' === I.tagName;
+            let S = null != A && 'BODY' === A.tagName;
             return !(l.Z.keyboardModeEnabled && !S && !/^[a-zA-Z0-9]$/.test(n) || u.S.hasSubscribers(d.CkL.MODAL_CLOSE) || o.Z.hasLayers()) && ('Tab' === n && u.S.hasSubscribers(d.CkL.TEXTAREA_FOCUS) && null != document.querySelector('[data-can-focus="true"]') ? (e.preventDefault(), u.S.dispatch(d.CkL.TEXTAREA_FOCUS), !1) : !(r.Z.isConnected() && E.Z.getMode() === d.pM4.PUSH_TO_TALK && !E.Z.isSelfMute() && Object.values(E.Z.getShortcuts()).map(s.d2).some(n => n.map(e => e.keyCode).includes(e.keyCode))) && void (!e.metaKey && !e.ctrlKey && !_.has(n) && u.S.dispatchToLastSubscribed(d.CkL.TEXTAREA_FOCUS)));
         }
     };

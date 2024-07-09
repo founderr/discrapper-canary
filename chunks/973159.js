@@ -1,5 +1,5 @@
 n(627341), n(47120), n(724458), n(653041);
-var t = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(512722), o = n.n(l), c = n(392711), u = n.n(c), _ = n(278074), d = n(442837), I = n(780384), m = n(481060), C = n(570140), E = n(179360), N = n(230711), T = n(410030), p = n(607070), A = n(44315), S = n(543241), L = n(906411), x = n(822179), R = n(419922), M = n(484459), f = n(318661), g = n(735336), O = n(502762), h = n(652853), P = n(430824), j = n(594174), Z = n(314884), U = n(346656), v = n(180828), b = n(709586), F = n(154921), G = n(626135), y = n(768581), B = n(63063), D = n(998502), H = n(53900), k = n(789155), z = n(55610), w = n(798769), Y = n(474936), V = n(981631), W = n(228168), K = n(689938), J = n(820944), X = n(834982), q = n(912450), Q = n(703548), $ = n(869333), ee = n(652528), es = n(874692), en = n(391458), et = n(70967), ea = n(674264), ei = n(360088), er = n(304880);
+var t = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(512722), o = n.n(l), c = n(392711), u = n.n(c), _ = n(278074), d = n(442837), I = n(780384), m = n(481060), C = n(570140), E = n(179360), N = n(230711), T = n(410030), p = n(607070), A = n(44315), S = n(543241), L = n(906411), x = n(822179), R = n(419922), M = n(484459), f = n(318661), g = n(735336), O = n(502762), h = n(652853), P = n(430824), j = n(594174), U = n(314884), Z = n(346656), v = n(180828), b = n(709586), F = n(154921), G = n(626135), y = n(768581), B = n(63063), D = n(998502), H = n(53900), k = n(789155), z = n(55610), w = n(798769), Y = n(474936), V = n(981631), W = n(228168), K = n(689938), J = n(820944), X = n(834982), q = n(912450), Q = n(703548), $ = n(869333), ee = n(652528), es = n(874692), en = n(391458), et = n(70967), ea = n(674264), ei = n(360088), er = n(304880);
 let el = D.ZP.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar, eo = {
         boostItemVisual: ee,
         emojiStickersVisual: es,
@@ -178,10 +178,10 @@ function eC(e) {
     } = e;
     a.useEffect(() => C.Z.wait(() => (0, E.X8)()), []);
     let i = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), [l, o] = (0, d.Wu)([
-            Z.Z,
+            U.Z,
             P.Z
         ], () => {
-            let e = Z.Z.boostSlots, s = new Map();
+            let e = U.Z.boostSlots, s = new Map();
             u()(e).map('premiumGuildSubscription').map('guildId').forEach(e => {
                 if (null != P.Z.getGuild(e)) {
                     var n;
@@ -205,9 +205,9 @@ function eC(e) {
             children: (0, t.jsxs)('div', {
                 className: J.boostCard,
                 children: [
-                    (0, t.jsx)(U.Z, {
+                    (0, t.jsx)(Z.Z, {
                         guild: l,
-                        size: U.Z.Sizes.MEDIUM,
+                        size: Z.Z.Sizes.MEDIUM,
                         animate: !i,
                         className: J.boostCardIcon
                     }),

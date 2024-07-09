@@ -1,4 +1,4 @@
-var s = n(735250), o = n(470079), r = n(120356), a = n.n(r), l = n(442837), i = n(950104), c = n(780384), d = n(481060), u = n(810090), p = n(358085), x = n(617136), m = n(272008), g = n(113434), C = n(569984), f = n(497505), _ = n(918701), h = n(865364), E = n(566078), S = n(340100), T = n(611855), N = n(644646), v = n(78826), A = n(670638), j = n(667105), B = n(46140), b = n(689938), O = n(47067);
+var s = n(735250), o = n(470079), r = n(120356), a = n.n(r), i = n(442837), l = n(950104), c = n(780384), d = n(481060), u = n(810090), p = n(358085), x = n(617136), m = n(272008), g = n(113434), C = n(569984), f = n(497505), _ = n(918701), h = n(865364), E = n(566078), S = n(340100), T = n(611855), N = n(644646), v = n(78826), A = n(670638), j = n(667105), B = n(46140), b = n(689938), O = n(47067);
 let R = o.forwardRef(function (e, t) {
     var n, r;
     let {
@@ -10,7 +10,7 @@ let R = o.forwardRef(function (e, t) {
             onCtxMenuSelect: q,
             quest: Z,
             useReducedMotion: P
-        } = e, k = (0, l.e7)([C.Z], () => C.Z.isEnrolling(Z.id), [Z]), L = (0, g.B6)(Z.config.expiresAt), Q = E.r.build(Z.config), w = (0, g.B6)(Q.rewardsExpireAt), W = o.useMemo(() => (0, _.nP)(Z.config.assets.questBarHero), [Z]), H = (0, j.tP)(Q.application.id), D = o.useCallback(() => {
+        } = e, k = (0, i.e7)([C.Z], () => C.Z.isEnrolling(Z.id), [Z]), L = (0, g.B6)(Z.config.expiresAt), Q = E.r.build(Z.config), w = (0, g.B6)(Q.rewardsExpireAt), W = o.useMemo(() => (0, _.nP)(Z.config.assets.questBarHero), [Z]), H = (0, j.tP)(Q.application.id), D = o.useCallback(() => {
             (0, m.AH)(Z.id, {
                 questContent: f.jn.QUEST_BAR,
                 questContentCTA: x.jZ.ACCEPT_QUEST
@@ -34,8 +34,8 @@ let R = o.forwardRef(function (e, t) {
             });
             return {
                 '--custom-cta-color': e,
-                '--custom-cta-color-hover': (0, i.r5)(e, 0.3),
-                '--custom-cta-color-active': (0, i.r5)(e, 0.35)
+                '--custom-cta-color-hover': (0, l.r5)(e, 0.3),
+                '--custom-cta-color-active': (0, l.r5)(e, 0.35)
             };
         }, [Z.config.colors.primary]);
     return (0, s.jsx)('div', {

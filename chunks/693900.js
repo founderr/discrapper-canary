@@ -6,7 +6,7 @@ n.d(t, {
         return u;
     }
 }), n(47120);
-var s = n(735250), o = n(470079), r = n(338545), a = n(442837), l = n(393238), i = n(110924), c = n(607070);
+var s = n(735250), o = n(470079), r = n(338545), a = n(442837), i = n(393238), l = n(110924), c = n(607070);
 let d = o.createContext({
     springConfig: {},
     onHeightChange: () => {
@@ -37,7 +37,7 @@ function p(e) {
         } = o.useContext(d), m = (0, a.e7)([c.Z], () => c.Z.useReducedMotion), {
             ref: g,
             height: C = null
-        } = (0, l.Z)(), f = null !== (t = (0, i.Z)(C)) && void 0 !== t ? t : null, [{height: _}, h] = (0, r.useSpring)(() => ({
+        } = (0, i.Z)(), f = null !== (t = (0, l.Z)(C)) && void 0 !== t ? t : null, [{height: _}, h] = (0, r.useSpring)(() => ({
             from: { height: 0 },
             config: u,
             immediate: m

@@ -1,6 +1,6 @@
 var s = n(735250);
 n(470079);
-var o = n(120356), r = n.n(o), a = n(338545), l = n(481060), i = n(113434), c = n(497505), d = n(685613), u = n(340100), p = n(644646), x = n(898170), m = n(689938), g = n(974772);
+var o = n(120356), r = n.n(o), a = n(338545), i = n(481060), l = n(113434), c = n(497505), d = n(685613), u = n(340100), p = n(644646), x = n(898170), m = n(689938), g = n(974772);
 t.Z = function (e) {
     var t;
     let {
@@ -10,7 +10,7 @@ t.Z = function (e) {
             isExpansionAnimationComplete: f,
             quest: _,
             useReducedMotion: h
-        } = e, E = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {percentComplete: S} = (0, i.Rf)(_), T = (0, i.Jf)(_), N = null != T ? T.completedRatio > 0 : S > 0;
+        } = e, E = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {percentComplete: S} = (0, l.Rf)(_), T = (0, l.Jf)(_), N = null != T ? T.completedRatio > 0 : S > 0;
     return (0, s.jsxs)(a.animated.div, {
         'aria-hidden': C && f,
         className: r()(n, g.contentCollapsed, {
@@ -48,7 +48,7 @@ t.Z = function (e) {
                         N ? (0, s.jsx)(u.Z, {
                             className: g.questProgressBar,
                             quest: _
-                        }) : (0, s.jsx)(l.Text, {
+                        }) : (0, s.jsx)(i.Text, {
                             className: g.questProgressHint,
                             color: 'always-white',
                             variant: 'text-sm/semibold',
@@ -62,7 +62,7 @@ t.Z = function (e) {
                             className: g.partnerBranding,
                             quest: _
                         }),
-                        (0, s.jsx)(l.Heading, {
+                        (0, s.jsx)(i.Heading, {
                             color: 'always-white',
                             variant: 'heading-sm/medium',
                             className: g.questName,

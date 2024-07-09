@@ -1,86 +1,86 @@
-var a = s(735250);
-s(470079);
-var t = s(120356), r = s.n(t), c = s(442837), i = s(481060), L = s(607070), C = s(285952), l = s(483444), u = s(599250), o = s(926153), d = s(27693), h = s(70613), N = s(74538), T = s(937615), S = s(104494), E = s(639119), f = s(474936), R = s(689938), p = s(620983);
-let M = e => {
+var s = t(735250);
+t(470079);
+var r = t(120356), a = t.n(r), i = t(442837), c = t(481060), l = t(607070), L = t(285952), C = t(483444), o = t(599250), u = t(926153), d = t(27693), S = t(70613), f = t(74538), h = t(937615), p = t(104494), T = t(639119), N = t(474936), R = t(689938), I = t(620983);
+let E = e => {
     let {
             isTier0: n,
-            discountAmount: s
-        } = e, t = (0, E.N)(), c = null != t && t.trial_id === f.a7, L = R.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT;
-    return void 0 !== s ? L = R.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({ percent: s }) : c && (L = R.Z.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL), (0, a.jsx)('div', {
-        className: p.trialBadgeContainer,
-        children: (0, a.jsx)(i.Text, {
+            discountAmount: t
+        } = e, r = (0, T.N)(), i = null != r && r.trial_id === N.a7, l = R.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT;
+    return void 0 !== t ? l = R.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({ percent: t }) : i && (l = R.Z.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL), (0, s.jsx)('div', {
+        className: I.trialBadgeContainer,
+        children: (0, s.jsx)(c.Text, {
             variant: 'text-xs/bold',
-            className: r()(p.trialOfferText, { [p.tier0TrialOffer]: n }),
-            children: L
+            className: a()(I.trialOfferText, { [I.tier0TrialOffer]: n }),
+            children: l
         })
     });
 };
 n.Z = function (e) {
     var n;
-    let s;
+    let t;
     let {
-            hideCloseButton: t = !1,
-            hideCloseOnFullScreen: E,
-            shouldShowPrice: I,
-            plan: _,
-            renderAnimation: x,
-            onClose: m,
-            isGift: g,
-            upgradeToPremiumType: A,
-            headerTheme: Z = f.nL.DEFAULT,
-            className: j,
-            showTrialBadge: v = !1,
+            hideCloseButton: r = !1,
+            hideCloseOnFullScreen: T,
+            shouldShowPrice: m,
+            plan: M,
+            renderAnimation: _,
+            onClose: g,
+            isGift: x,
+            upgradeToPremiumType: v,
+            headerTheme: A = N.nL.DEFAULT,
+            className: Z,
+            showTrialBadge: j = !1,
             showDiscountBadge: O = !1
-        } = e, F = A === f.p9.TIER_2;
-    s = A === f.p9.TIER_0 ? u.Z : A === f.p9.TIER_1 ? o.Z : l.Z;
-    let H = (0, c.e7)([L.Z], () => L.Z.useReducedMotion), B = (0, S.Ng)(), P = null == B ? void 0 : null === (n = B.discount) || void 0 === n ? void 0 : n.amount;
-    return (0, a.jsxs)('div', {
+        } = e, F = v === N.p9.TIER_2;
+    t = v === N.p9.TIER_0 ? o.Z : v === N.p9.TIER_1 ? u.Z : C.Z;
+    let H = (0, i.e7)([l.Z], () => l.Z.useReducedMotion), P = (0, p.Ng)(), B = null == P ? void 0 : null === (n = P.discount) || void 0 === n ? void 0 : n.amount;
+    return (0, s.jsxs)('div', {
         'aria-hidden': !0,
-        className: r()({
-            [p.headerBackground]: !F,
-            [Z === f.nL.WINTER ? p.tier2HeaderBackgroundWinterTheme : p.tier2HeaderBackground]: F
-        }, j),
+        className: a()({
+            [I.headerBackground]: !F,
+            [A === N.nL.WINTER ? I.tier2HeaderBackgroundWinterTheme : I.tier2HeaderBackground]: F
+        }, Z),
         children: [
-            H || Z !== f.nL.WINTER ? null : (0, a.jsx)(h.Z, {
-                className: p.snow,
+            H || A !== N.nL.WINTER ? null : (0, s.jsx)(S.Z, {
+                className: I.snow,
                 wind: 5
             }),
-            (v || O) && (0, a.jsx)(d.Z, { className: p.trialBadgeSparkles }),
-            x(),
-            (0, a.jsxs)(C.Z, {
-                align: C.Z.Align.START,
-                justify: C.Z.Justify.BETWEEN,
-                className: p.headerTop,
+            (j || O) && (0, s.jsx)(d.Z, { className: I.trialBadgeSparkles }),
+            _(),
+            (0, s.jsxs)(L.Z, {
+                align: L.Z.Align.START,
+                justify: L.Z.Justify.BETWEEN,
+                className: I.headerTop,
                 children: [
-                    (0, a.jsxs)('div', {
+                    (0, s.jsxs)('div', {
                         children: [
-                            (0, a.jsx)(s, { className: r()(p.headerIcon, { [p.nonTier2]: !F }) }),
-                            (v || O) && (0, a.jsx)(M, {
-                                isTier0: A === f.p9.TIER_0,
-                                discountAmount: O ? P : void 0
+                            (0, s.jsx)(t, { className: a()(I.headerIcon, { [I.nonTier2]: !F }) }),
+                            (j || O) && (0, s.jsx)(E, {
+                                isTier0: v === N.p9.TIER_0,
+                                discountAmount: O ? B : void 0
                             })
                         ]
                     }),
-                    !t && (0, a.jsx)(i.ModalCloseButton, {
-                        hideOnFullscreen: E,
-                        onClick: m,
-                        className: p.closeButton
+                    !r && (0, s.jsx)(c.ModalCloseButton, {
+                        hideOnFullscreen: T,
+                        onClick: g,
+                        className: I.closeButton
                     })
                 ]
             }),
-            I && null != _ ? (0, a.jsx)('div', {
-                className: p.price,
+            m && null != M ? (0, s.jsx)('div', {
+                className: I.price,
                 children: function (e, n) {
-                    let s = N.ZP.getDefaultPrice(e), {intervalType: a} = N.ZP.getInterval(e), t = (0, T.T4)(s.amount, s.currency);
+                    let t = f.ZP.getDefaultPrice(e), {intervalType: s} = f.ZP.getInterval(e), r = (0, h.T4)(t.amount, t.currency);
                     if (n)
-                        return t;
-                    switch (a) {
-                    case f.rV.MONTH:
-                        return R.Z.Messages.BILLING_PRICE_PER_MONTH.format({ price: t });
-                    case f.rV.YEAR:
-                        return R.Z.Messages.BILLING_PRICE_PER_YEAR.format({ price: t });
+                        return r;
+                    switch (s) {
+                    case N.rV.MONTH:
+                        return R.Z.Messages.BILLING_PRICE_PER_MONTH.format({ price: r });
+                    case N.rV.YEAR:
+                        return R.Z.Messages.BILLING_PRICE_PER_YEAR.format({ price: r });
                     }
-                }(_, g)
+                }(M, x)
             }) : null
         ]
     });

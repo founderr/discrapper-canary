@@ -9,7 +9,7 @@ n.d(t, {
         return u;
     }
 }), n(47120), n(653041);
-var s = n(735250), o = n(470079), r = n(699581), a = n(338545), l = n(130653), i = n(743294);
+var s = n(735250), o = n(470079), r = n(699581), a = n(338545), i = n(130653), l = n(743294);
 let c = o.createContext({
         registerComponent: () => {
         },
@@ -26,7 +26,7 @@ let c = o.createContext({
     }), d = o.forwardRef(function (e, t) {
         let {
                 children: n,
-                id: i,
+                id: l,
                 inState: d,
                 isTextTransition: u = !1
             } = e, {
@@ -35,21 +35,21 @@ let c = o.createContext({
                 registerComponent: m,
                 unregisterComponent: g,
                 expansionSpring: C
-            } = o.useContext(c), f = o.useRef(null), _ = o.useRef(null), h = o.useContext(l.T);
+            } = o.useContext(c), f = o.useRef(null), _ = o.useRef(null), h = o.useContext(i.T);
         o.useEffect(() => {
             x();
         }, [x]), o.useEffect(() => {
             let e = f.current;
-            return null != e && m(e, i, d), () => {
-                null != e && g(i, d);
+            return null != e && m(e, l, d), () => {
+                null != e && g(l, d);
             };
         }, [
-            i,
+            l,
             d,
             m,
             g
         ]);
-        let E = document.getElementById(h ? 'quest-bar-v2-preview-' + i : 'quest-bar-v2-' + i), S = null;
+        let E = document.getElementById(h ? 'quest-bar-v2-preview-' + l : 'quest-bar-v2-' + l), S = null;
         return null == E ? S = null : u && null != C ? S = (0, s.jsxs)(s.Fragment, {
             children: [
                 'collapsed' === d && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
@@ -99,7 +99,7 @@ let c = o.createContext({
                 expandedContentRef: n,
                 collapsedContentRef: r,
                 expansionSpring: a,
-                isExpansionAnimationComplete: l
+                isExpansionAnimationComplete: i
             } = e, [d, u] = o.useState({}), [p, x] = o.useState([]), m = o.useCallback((e, t, n) => {
                 u(s => {
                     var o;
@@ -135,14 +135,14 @@ let c = o.createContext({
                     let s = d[t].collapsed, o = d[t].expanded;
                     if (null == s || null == o)
                         continue;
-                    let a = o.getBoundingClientRect().top - n.current.getBoundingClientRect().top + i.Li, l = s.getBoundingClientRect().top - r.current.getBoundingClientRect().top, c = o.getBoundingClientRect().left - n.current.getBoundingClientRect().left + i.Li, u = s.getBoundingClientRect().left - r.current.getBoundingClientRect().left, p = -o.getBoundingClientRect().right + n.current.getBoundingClientRect().right + i.Li, x = -s.getBoundingClientRect().right + r.current.getBoundingClientRect().right;
+                    let a = o.getBoundingClientRect().top - n.current.getBoundingClientRect().top + l.Li, i = s.getBoundingClientRect().top - r.current.getBoundingClientRect().top, c = o.getBoundingClientRect().left - n.current.getBoundingClientRect().left + l.Li, u = s.getBoundingClientRect().left - r.current.getBoundingClientRect().left, p = -o.getBoundingClientRect().right + n.current.getBoundingClientRect().right + l.Li, x = -s.getBoundingClientRect().right + r.current.getBoundingClientRect().right;
                     e.push({
                         id: t,
                         collapsedLeft: u,
                         expandedLeft: c,
                         collapsedRight: x,
                         expandedRight: p,
-                        collapsedTop: l,
+                        collapsedTop: i,
                         expandedTop: a
                     });
                 }
@@ -155,7 +155,7 @@ let c = o.createContext({
             ]);
         return (0, s.jsx)(c.Provider, {
             value: {
-                isExpansionAnimationComplete: l,
+                isExpansionAnimationComplete: i,
                 registerComponent: m,
                 unregisterComponent: g,
                 animatedComponents: d,

@@ -15,14 +15,14 @@ function h(e) {
             selectedSkuId: b,
             setSelectedPlanId: g,
             startedPaymentFlowWithPaymentSourcesRef: m
-        } = (0, u.usePaymentContext)(), {isGift: L} = (0, C.wD)(), I = null != h ? (0, c.Af)(h) : null, E = null != I ? (0, c.gq)(I.planId) : null, M = null != I ? (0, c.Rd)(I.planId) : null, T = (0, p.Kp)({
+        } = (0, u.usePaymentContext)(), {isGift: I} = (0, C.wD)(), L = null != h ? (0, c.Af)(h) : null, E = null != L ? (0, c.gq)(L.planId) : null, T = null != L ? (0, c.Rd)(L.planId) : null, M = (0, p.Kp)({
             isTrial: !1,
-            isGift: L,
+            isGift: I,
             selectedSkuId: b,
             startedPaymentFlowWithPaymentSources: m.current
         });
-    return o()(null != M, 'Expected premium type'), (0, i.jsx)(d.Z, {
-        premiumType: M,
+    return o()(null != T, 'Expected premium type'), (0, i.jsx)(d.Z, {
+        premiumType: T,
         titleText: f.Z.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_TITLE,
         subtitleText: f.Z.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_SUBTITLE.format({ subscriptionName: E }),
         footer: (0, i.jsxs)('div', {
@@ -30,7 +30,7 @@ function h(e) {
             children: [
                 (0, i.jsx)(s.Button, {
                     onClick: () => {
-                        T ? (g((0, p.nA)(b, h)), t(_.h8.REVIEW)) : t(_.h8.PLAN_SELECT);
+                        M ? (g((0, p.nA)(b, h)), t(_.h8.REVIEW)) : t(_.h8.PLAN_SELECT);
                     },
                     children: f.Z.Messages.CONTINUE
                 }),

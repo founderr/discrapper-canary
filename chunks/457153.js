@@ -1,4 +1,4 @@
-var s = n(735250), o = n(470079), r = n(120356), a = n.n(r), l = n(338545), i = n(759853), c = n(95985), d = n(743294), u = n(985444);
+var s = n(735250), o = n(470079), r = n(120356), a = n.n(r), i = n(338545), l = n(759853), c = n(95985), d = n(743294), u = n(985444);
 let p = o.forwardRef(function (e, t) {
     var n;
     let {
@@ -8,7 +8,7 @@ let p = o.forwardRef(function (e, t) {
             isExpansionAnimationComplete: m,
             quest: g
         } = e, C = o.useRef(null), f = (null === (n = g.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null;
-    return (0, s.jsxs)(l.animated.div, {
+    return (0, s.jsxs)(i.animated.div, {
         ref: t,
         'aria-hidden': x && m,
         className: a()(r, u.contentCollapsed, {
@@ -32,7 +32,7 @@ let p = o.forwardRef(function (e, t) {
                 className: u.postEnrollmentBackground,
                 style: { backgroundImage: 'linear-gradient(90deg, '.concat(d.aY, ', ').concat(d.v6, ')') }
             }) : null,
-            (0, s.jsx)(i.Z, {
+            (0, s.jsx)(l.Z, {
                 progressBarRef: C,
                 quest: g,
                 isExpanded: x
