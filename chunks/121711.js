@@ -16,7 +16,7 @@ t.Z = function (e) {
         className: S.container,
         children: [
             (0, i.jsx)(c.f, {
-                icon: (0, i.jsx)(r.QuestsIcon, {}),
+                icon: (0, i.jsx)(r.QuestsIcon, { color: 'var(--header-primary)' }),
                 title: T.Z.Messages.QUESTS,
                 tabs: n,
                 selectedTab: C,
@@ -30,7 +30,6 @@ t.Z = function (e) {
                     (0, i.jsx)(u.c, {
                         title: T.Z.Messages.QUESTS_HOME_HERO_TITLE,
                         description: T.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-                        eyebrow: T.Z.Messages.QUESTS_HOME_HERO_EYEBROW,
                         backgroundImageUrl: 'https://cdn.discordapp.com/assets/discovery/generic-hero-background.png',
                         button: (0, i.jsxs)(r.Button, {
                             size: 'medium',
