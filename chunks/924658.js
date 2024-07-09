@@ -682,7 +682,7 @@ e.exports = Object.freeze({
     E2EE_LINKING_CODE_UNABLE_TO_VERIFY_TITLE: 'Cannot Determine Code',
     E2EE_LINKING_CODE_UNABLE_TO_VERIFY_SUBTITLE: 'We were unable to verify the code for **{username}**.',
     E2EE_LINKING_CODE_MISMATCH_TITLE: 'Codes Do Not Match',
-    E2EE_LINKING_CODE_MISMATCH_SUBTITLE: 'The verification code from **{username}** does not match.',
+    E2EE_LINKING_CODE_MISMATCH_SUBTITLE: 'The verification code from **{username}** does not match. Someone could be attempting to intercept or listen in on your conversation. You should disconnect from the call and try again.',
     E2EE_LINKING_CODE_ALREADY_VERIFIED_TITLE: 'Already Verified',
     E2EE_LINKING_CODE_ALREADY_VERIFIED_SUBTITLE: 'You have already verified **{username}**.',
     E2EE_LINKING_CODE_MATCH_TITLE: 'It\'s a match!',
