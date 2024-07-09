@@ -50,7 +50,10 @@ t.Z = function (e) {
                             ]
                         })
                     }),
-                    (0, i.jsx)(m.Z, { quests: A })
+                    (0, i.jsx)('div', {
+                        className: S.gridContainer,
+                        children: (0, i.jsx)(m.Z, { quests: A })
+                    })
                 ]
             })
         ]
