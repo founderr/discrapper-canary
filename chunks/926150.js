@@ -36,7 +36,7 @@ function A(e) {
                         !O && (0, i.jsx)(E.Z, {
                             user: t,
                             isHovering: M,
-                            onOpenProfile: () => b({ subsection: v.Tb.NOTE })
+                            onOpenProfile: () => null == b ? void 0 : b({ subsection: v.Tb.NOTE })
                         })
                     ]
                 })

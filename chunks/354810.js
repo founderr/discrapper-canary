@@ -1,79 +1,84 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return M;
     }
 });
-var i = n(735250), a = n(470079), s = n(442837), l = n(974674), r = n(481060), o = n(420660), c = n(100527), d = n(906732), u = n(233440), h = n(199902), p = n(158776), m = n(998502), _ = n(785717), f = n(204197), E = n(78675), C = n(438163), g = n(652853), I = n(228168), x = n(981631), T = n(739116);
-let v = m.ZP.getEnableHardwareAcceleration() ? l.Xo : l.qE, N = r.AvatarSizes.SIZE_80;
-function S(e) {
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(974674), c = n(481060), d = n(420660), u = n(100527), h = n(906732), p = n(233440), m = n(199902), _ = n(158776), f = n(998502), E = n(785717), C = n(204197), g = n(78675), I = n(438163), x = n(652853), T = n(256059), v = n(228168), N = n(981631), S = n(739116);
+let Z = f.ZP.getEnableHardwareAcceleration() ? o.Xo : o.qE, A = c.AvatarSizes.SIZE_80;
+function M(e) {
     let {
             user: t,
             displayProfile: n,
-            channel: l,
-            isHovering: m,
-            onOpenProfile: S
-        } = e, {theme: Z} = (0, g.z)(), {analyticsLocations: A} = (0, d.ZP)(c.Z.AVATAR), {trackUserProfileAction: M} = (0, _.KZ)(), b = null == n ? void 0 : n.canUsePremiumProfileCustomization, {
-            avatarSrc: R,
-            eventHandlers: j,
-            avatarDecorationSrc: L
-        } = (0, f.Z)({
+            channel: s,
+            isHovering: o,
+            onOpenProfile: f
+        } = e, {theme: M} = (0, x.z)(), {analyticsLocations: b} = (0, h.ZP)(u.Z.AVATAR), {trackUserProfileAction: R} = (0, E.KZ)(), j = null == n ? void 0 : n.canUsePremiumProfileCustomization, {
+            avatarSrc: L,
+            eventHandlers: P,
+            avatarDecorationSrc: O
+        } = (0, C.Z)({
             user: t,
-            size: N,
-            animateOnHover: !m
-        }), P = a.useMemo(() => (0, u.W)(t, l.id), [
+            size: A,
+            animateOnHover: !o
+        }), y = a.useMemo(() => (0, p.W)(t, s.id), [
             t,
-            l.id
+            s.id
         ]), {
-            status: O,
-            isMobileOnline: y
-        } = (0, s.cj)([
-            h.Z,
-            p.Z
+            status: D,
+            isMobileOnline: k
+        } = (0, r.cj)([
+            m.Z,
+            _.Z
         ], () => {
-            let e = null != h.Z.getAnyStreamForUser(t.id), n = p.Z.findActivity(t.id, t => {
+            let e = null != m.Z.getAnyStreamForUser(t.id), n = _.Z.findActivity(t.id, t => {
                     let {type: n} = t;
-                    return e ? n === x.IIU.PLAYING : n !== x.IIU.CUSTOM_STATUS;
+                    return e ? n === N.IIU.PLAYING : n !== N.IIU.CUSTOM_STATUS;
                 });
             return {
-                status: (0, o.Z)(n) ? r.StatusTypes.STREAMING : p.Z.getStatus(t.id),
-                isMobileOnline: p.Z.isMobileOnline(t.id)
+                status: (0, d.Z)(n) ? c.StatusTypes.STREAMING : _.Z.getStatus(t.id),
+                isMobileOnline: _.Z.isMobileOnline(t.id)
             };
+        }), U = () => {
+            R({
+                action: 'PRESS_VIEW_PROFILE',
+                analyticsLocations: b
+            }), null == f || f();
+        }, w = (0, i.jsx)(Z, {
+            src: L,
+            avatarDecoration: O,
+            size: A,
+            imageClassName: S.overlay,
+            status: y || t.isNonUserBot() ? c.StatusTypes.UNKNOWN : D,
+            statusBackdropColor: j && !y ? (0, c.getStatusBackdropColor)(M) : void 0,
+            'aria-label': t.username,
+            isMobile: k,
+            statusTooltip: !0,
+            statusTooltipDelay: v.vB
         });
     return (0, i.jsxs)('header', {
-        className: T.header,
+        className: S.header,
         children: [
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(g.Z, {
                 user: t,
                 displayProfile: n,
-                profileType: I.y0.PANEL,
-                animateOnHover: !m
+                profileType: v.y0.PANEL,
+                animateOnHover: !o
             }),
-            (0, i.jsx)(r.Clickable, {
-                ...j,
-                className: T.clickable,
-                onClick: () => {
-                    M({
-                        action: 'PRESS_VIEW_PROFILE',
-                        analyticsLocations: A
-                    }), null == S || S();
-                },
-                children: (0, i.jsx)(v, {
-                    src: R,
-                    avatarDecoration: L,
-                    size: N,
-                    imageClassName: T.overlay,
-                    status: P || t.isNonUserBot() ? r.StatusTypes.UNKNOWN : O,
-                    statusBackdropColor: b && !P ? (0, r.getStatusBackdropColor)(Z) : void 0,
-                    'aria-label': t.username,
-                    isMobile: y,
-                    statusTooltip: !0,
-                    statusTooltipDelay: I.vB
-                })
+            null == f ? (0, i.jsx)('div', {
+                ...P,
+                className: S.avatar,
+                children: w
+            }) : (0, i.jsx)(c.Clickable, {
+                ...P,
+                className: l()(S.avatar, S.clickable),
+                onClick: U,
+                children: w
             }),
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(I.Z, {
                 user: t,
-                profileType: I.y0.PANEL
-            })
+                profileType: v.y0.PANEL
+            }),
+            (0, i.jsx)(T.Z, { user: t })
         ]
     });
 }

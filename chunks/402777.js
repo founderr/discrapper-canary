@@ -8,26 +8,26 @@ function Z(e) {
     let {
             user: t,
             channel: n
-        } = e, {analyticsLocations: Z} = (0, c.ZP)(o.Z.PROFILE_PANEL), A = (0, h.ZP)(t.id), M = (0, r.ZP)(), b = a.useRef(null), R = (0, l.Z)(b), j = e => {
+        } = e, Z = __OVERLAY__, {analyticsLocations: A} = (0, c.ZP)(o.Z.PROFILE_PANEL), M = (0, h.ZP)(t.id), b = (0, r.ZP)(), R = a.useRef(null), j = (0, l.Z)(R), L = e => {
             (0, C.openUserProfileModal)({
-                sourceAnalyticsLocations: Z,
+                sourceAnalyticsLocations: A,
                 userId: t.id,
                 channelId: n.id,
                 ...e
             });
         };
     return (0, i.jsx)(c.Gt, {
-        value: Z,
+        value: A,
         children: (0, i.jsx)(u.Mt, {
             layout: 'SIMPLIFIED_DM_PANEL',
             userId: t.id,
             channelId: n.id,
             children: (0, i.jsxs)(p.Z, {
-                ref: b,
+                ref: R,
                 user: t,
-                displayProfile: A,
+                displayProfile: M,
                 profileType: N.y0.PANEL,
-                themeOverride: M,
+                themeOverride: b,
                 className: S.container,
                 children: [
                     (0, i.jsxs)(s.u2, {
@@ -44,17 +44,17 @@ function Z(e) {
                             }),
                             (0, i.jsx)(x.Z, {
                                 user: t,
-                                displayProfile: A,
+                                displayProfile: M,
                                 channel: n,
-                                isHovering: R,
-                                onOpenProfile: j
+                                isHovering: j,
+                                onOpenProfile: Z ? void 0 : L
                             }),
                             (0, i.jsx)(g.Z, {
                                 user: t,
-                                displayProfile: A,
+                                displayProfile: M,
                                 channel: n,
-                                isHovering: R,
-                                onOpenProfile: j
+                                isHovering: j,
+                                onOpenProfile: Z ? void 0 : L
                             }),
                             (0, i.jsx)(T.Z, {
                                 user: t,
@@ -62,7 +62,7 @@ function Z(e) {
                             }),
                             (0, i.jsx)(v.Z, {
                                 user: t,
-                                displayProfile: A
+                                displayProfile: M
                             })
                         ]
                     }),
@@ -70,9 +70,9 @@ function Z(e) {
                         user: t,
                         channelId: n.id
                     }),
-                    (null == A ? void 0 : A.profileEffectId) != null && (0, i.jsx)(d.Z, {
-                        profileEffectId: null == A ? void 0 : A.profileEffectId,
-                        isHovering: R
+                    (null == M ? void 0 : M.profileEffectId) != null && (0, i.jsx)(d.Z, {
+                        profileEffectId: null == M ? void 0 : M.profileEffectId,
+                        isHovering: j
                     })
                 ]
             })
