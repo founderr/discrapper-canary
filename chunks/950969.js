@@ -19,7 +19,7 @@ t.Z = l.forwardRef(function (e, t) {
             guildChannels: l,
             guildChannelsVersion: s,
             ...o
-        } = e, c = (0, a.T)(n, l, s, !1, { ignoreRecents: !0 }), u = (0, r.e7)([h.Z], () => h.Z.isFocused());
+        } = e, c = (0, a.T)(n, l, s, { withVoiceChannels: !1 }, { ignoreRecents: !0 }), u = (0, r.e7)([h.Z], () => h.Z.isFocused());
     return (0, i.jsx)(p.Z, {
         ref: t,
         ...o,
