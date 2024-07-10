@@ -19,7 +19,7 @@ n.d(t, {
     }
 });
 var r, i, a, o, s = n(772848), l = n(146282), u = n(626135), c = n(981631), d = n(206583);
-(r = a || (a = {}))[r.FollowGame = 0] = 'FollowGame', r[r.UnfollowGame = 1] = 'UnfollowGame', r[r.ClickMessageUser = 2] = 'ClickMessageUser', r[r.SendMessageUser = 3] = 'SendMessageUser', r[r.JoinVC = 4] = 'JoinVC', r[r.WatchStream = 5] = 'WatchStream', r[r.ClickSimilarGame = 6] = 'ClickSimilarGame', r[r.WebsiteLink = 7] = 'WebsiteLink', r[r.XLink = 8] = 'XLink', r[r.YouTubeLink = 9] = 'YouTubeLink', r[r.ShowMore = 10] = 'ShowMore', r[r.ShowLess = 11] = 'ShowLess', r[r.JoinOfficialServer = 12] = 'JoinOfficialServer', r[r.ClickImage = 13] = 'ClickImage', (i = o || (o = {})).ActivityCard = 'activity_card', i.UserProfile = 'user_profile', i.SimilarGames = 'similar_games';
+(r = a || (a = {}))[r.FollowGame = 0] = 'FollowGame', r[r.UnfollowGame = 1] = 'UnfollowGame', r[r.ClickMessageUser = 2] = 'ClickMessageUser', r[r.SendMessageUser = 3] = 'SendMessageUser', r[r.JoinVC = 4] = 'JoinVC', r[r.WatchStream = 5] = 'WatchStream', r[r.ClickSimilarGame = 6] = 'ClickSimilarGame', r[r.WebsiteLink = 7] = 'WebsiteLink', r[r.XLink = 8] = 'XLink', r[r.YouTubeLink = 9] = 'YouTubeLink', r[r.ShowMore = 10] = 'ShowMore', r[r.ShowLess = 11] = 'ShowLess', r[r.JoinOfficialServer = 12] = 'JoinOfficialServer', r[r.ClickImage = 13] = 'ClickImage', (i = o || (o = {})).ActivityCard = 'activity_card', i.UserProfile = 'user_profile', i.SimilarGames = 'similar_games', i.DevTools = 'dev_tools';
 let _ = () => (0, s.Z)(), E = e => {
         let {
             viewId: t,
