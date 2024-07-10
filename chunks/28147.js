@@ -61,7 +61,7 @@ function M(e) {
             x,
             C
         ]);
-    return p ? (0, i.jsx)(y, {}) : A ? (0, i.jsx)(h.A, {
+    return p ? (0, i.jsx)(b, {}) : A ? (0, i.jsx)(h.A, {
         type: _.LG.SEARCH_EMPTY,
         searchQuery: t,
         textContent: a === _._b.TEXT ? P.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : P.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
@@ -105,7 +105,7 @@ function S(e) {
             application: e,
             installOnDemand: !1
         })), [A]);
-    return u ? (0, i.jsx)(y, {}) : d ? (0, i.jsx)(h.A, {
+    return u ? (0, i.jsx)(b, {}) : d ? (0, i.jsx)(h.A, {
         type: _.LG.SEARCH_EMPTY,
         searchQuery: t,
         textContent: a === _._b.TEXT ? P.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : P.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
@@ -207,7 +207,7 @@ function j(e) {
                             application: t,
                             installOnDemand: a
                         } = e;
-                        return (0, i.jsx)(b, {
+                        return (0, i.jsx)(y, {
                             application: t,
                             location: c.Vh.APP_LAUNCHER_HOME_SEARCH,
                             sectionName: _.L3.SEARCH,
@@ -247,7 +247,7 @@ function j(e) {
         ]
     });
 }
-function b(e) {
+function y(e) {
     let n = (0, A.cG)(e);
     return (0, i.jsx)(C.Z, {
         application: e.application,
@@ -256,7 +256,7 @@ function b(e) {
         searchResultsPosition: e.resultsPosition
     });
 }
-function y() {
+function b() {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(f.Z, { title: P.Z.Messages.COMMANDS }),

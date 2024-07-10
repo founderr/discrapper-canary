@@ -38,7 +38,7 @@ function O(e) {
             sectionPosition: p
         }), [T, g] = r.useState(!1), O = r.useCallback(() => {
             !0 === u && g(!0);
-        }, [u]), b = r.useCallback(() => g(!1), []);
+        }, [u]), y = r.useCallback(() => g(!1), []);
     return 'icon' === t ? (0, a.jsx)(c.Clickable, {
         innerRef: _ ? e => v.current = e : void 0,
         className: o()(S.container, S.iconCard),
@@ -64,8 +64,8 @@ function O(e) {
             (0, a.jsxs)('div', {
                 onMouseEnter: O,
                 onFocus: O,
-                onMouseLeave: b,
-                onBlur: b,
+                onMouseLeave: y,
+                onBlur: y,
                 className: o()(S.bannerImageContainer, {
                     [S.mediumBanner]: 'medium_banner' === t,
                     [S.largeBanner]: 'large_banner' === t
@@ -132,19 +132,19 @@ function j(e) {
     } = e;
     if ((0, C.BQ)(n)) {
         if ((0, C.ye)({ application: n }))
-            return (0, a.jsx)(b, {
+            return (0, a.jsx)(y, {
                 application: n,
                 showVideo: i
             });
         if (null != n.bot)
-            return (0, a.jsx)(y, { bot: n.bot });
+            return (0, a.jsx)(b, { bot: n.bot });
     }
     return (0, a.jsx)('div', {
         className: S.bannerImage,
         style: { backgroundColor: t }
     });
 }
-function b(e) {
+function y(e) {
     let {
             application: n,
             showVideo: t
@@ -180,7 +180,7 @@ function b(e) {
         ]
     });
 }
-function y(e) {
+function b(e) {
     let {bot: n} = e, t = (0, A.ZP)(n.id), i = r.useMemo(() => null == t ? void 0 : t.getBannerURL({
             canAnimate: !1,
             size: 600

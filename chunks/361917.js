@@ -3,7 +3,7 @@ t.d(n, {
         return Y;
     }
 }), t(47120), t(653041), t(724458);
-var i = t(735250), l = t(470079), a = t(392711), r = t.n(a), s = t(892814), o = t(79411), c = t(442837), u = t(481060), d = t(911969), m = t(595519), p = t(115130), _ = t(566620), E = t(127255), A = t(880308), N = t(427996), h = t(367907), f = t(399654), C = t(844439), I = t(254711), v = t(213459), P = t(10718), x = t(895924), T = t(148958), g = t(424602), R = t(541099), M = t(827498), S = t(87005), L = t(695676), O = t(98880), j = t(804307), b = t(888617), y = t(561160), Z = t(41558), H = t(105862), U = t(28147), D = t(981631), k = t(689079), B = t(689938), w = t(678313);
+var i = t(735250), l = t(470079), a = t(392711), r = t.n(a), s = t(892814), o = t(79411), c = t(442837), u = t(481060), d = t(911969), m = t(595519), p = t(115130), _ = t(566620), E = t(127255), A = t(880308), N = t(427996), h = t(367907), f = t(399654), C = t(844439), I = t(254711), v = t(213459), P = t(10718), x = t(895924), T = t(148958), g = t(424602), R = t(541099), M = t(827498), S = t(87005), L = t(695676), O = t(98880), j = t(804307), y = t(888617), b = t(561160), Z = t(41558), H = t(105862), U = t(28147), D = t(981631), k = t(689079), B = t(689938), w = t(678313);
 let V = [], W = Array(8).fill(0).map((e, n) => n), F = [
         {
             cards: [
@@ -86,7 +86,7 @@ function Y(e) {
                             channel: n,
                             onEmptyState: R
                         }),
-                        S && (0, i.jsx)(y.A, {
+                        S && (0, i.jsx)(b.A, {
                             type: M.LG.HOME_EMPTY,
                             textContent: t === M._b.TEXT ? B.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : B.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
                         }),
@@ -237,7 +237,7 @@ function q(e) {
     let a = (0, E.Z)({
             guildId: n.getGuildId(),
             channel: n
-        }), r = O.U4.LARGE_BANNER, {trackSectionImpressionRef: s} = (0, b.Z)({
+        }), r = O.U4.LARGE_BANNER, {trackSectionImpressionRef: s} = (0, y.Z)({
             sectionName: M.L3.ACTIVITIES,
             numItems: a.length,
             numVisibleItems: a.length
@@ -304,7 +304,7 @@ function Q(e) {
         })).map(e => ({ application: e })), [p]), {
             items: A,
             handleViewMore: N
-        } = ee(B.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, O.U4.NO_BANNER, E, 8, _), {trackSectionImpressionRef: h} = (0, b.Z)({
+        } = ee(B.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, O.U4.NO_BANNER, E, 8, _), {trackSectionImpressionRef: h} = (0, y.Z)({
             sectionName: _,
             numItems: E.length,
             numVisibleItems: A.length
@@ -461,7 +461,7 @@ function $(e) {
         ]), c = n.key, {
             items: u,
             handleViewMore: d
-        } = ee(a, r, s, 8, c), {trackSectionImpressionRef: m} = (0, b.Z)({
+        } = ee(a, r, s, 8, c), {trackSectionImpressionRef: m} = (0, y.Z)({
             sectionName: c,
             numItems: s.length,
             numVisibleItems: u.length
