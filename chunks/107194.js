@@ -1,18 +1,18 @@
-i.d(n, {
+n.d(i, {
     Z: function () {
         return I;
     }
-}), i(653041), i(627341);
-var l = i(278074), s = i(442837), o = i(199902), t = i(158776), a = i(726059), r = i(162267), d = i(228168), c = i(981631), u = i(689938);
+}), n(653041), n(627341);
+var l = n(278074), s = n(442837), t = n(199902), o = n(158776), a = n(726059), r = n(162267), d = n(228168), c = n(981631), u = n(689938);
 function I(e) {
-    var n, i;
+    var i, n;
     let {
             user: I,
             currentUser: f
-        } = e, _ = (0, s.e7)([o.Z], () => o.Z.getAnyStreamForUser(I.id)), E = (0, s.e7)([t.Z], () => t.Z.findActivity(I.id, e => {
-            let {type: n} = e;
-            return n !== c.IIU.CUSTOM_STATUS;
-        })), m = null === (n = (0, a.Z)(I.id, I.id !== (null == f ? void 0 : f.id)).mutualFriends) || void 0 === n ? void 0 : n.length, Z = null === (i = (0, r.Z)(I.id, I.id !== (null == f ? void 0 : f.id)).mutualGuilds) || void 0 === i ? void 0 : i.length, v = [{
+        } = e, _ = (0, s.e7)([t.Z], () => t.Z.getAnyStreamForUser(I.id)), E = (0, s.e7)([o.Z], () => o.Z.findActivity(I.id, e => {
+            let {type: i} = e;
+            return i !== c.IIU.CUSTOM_STATUS;
+        })), m = null === (i = (0, a.Z)(I.id, I.id !== (null == f ? void 0 : f.id)).mutualFriends) || void 0 === i ? void 0 : i.length, Z = null === (n = (0, r.Z)(I.id, I.id !== (null == f ? void 0 : f.id)).mutualGuilds) || void 0 === n ? void 0 : n.length, v = [{
                 section: d.oh.USER_INFO,
                 text: u.Z.Messages.USER_PROFILE_ABOUT_ME
             }];

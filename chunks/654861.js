@@ -46,12 +46,12 @@ var n = function (t) {
         for (var e = t.length; 0 === t[--e];);
         t.length = e + 1;
     }
-    function u(t) {
+    function T(t) {
         for (var e = Array(t), r = -1; ++r < t;)
             e[r] = 0;
         return e;
     }
-    function T(t) {
+    function u(t) {
         return t > 0 ? Math.floor(t) : Math.ceil(t);
     }
     function l(t, e) {
@@ -117,7 +117,7 @@ var n = function (t) {
         return 'number' == typeof (E = I(E)) ? (r && (E = -E), new o(E)) : new i(E, r);
     }
     function p(t, e) {
-        var r, n, _, a, i = t.length, o = e.length, E = u(i + o);
+        var r, n, _, a, i = t.length, o = e.length, E = T(i + o);
         for (_ = 0; _ < i; ++_) {
             a = t[_];
             for (var s = 0; s < o; ++s)
@@ -172,7 +172,7 @@ var n = function (t) {
         return t < 10000000 ? new i(S(e, t), r) : new i(p(e, c(t)), r);
     }
     function L(t) {
-        var e, r, n, _, a = t.length, i = u(a + a);
+        var e, r, n, _, a = t.length, i = T(a + a);
         for (n = 0; n < a; n++) {
             r = 0 - (_ = t[n]) * _;
             for (var o = n; o < a; o++)
@@ -219,9 +219,9 @@ var n = function (t) {
         return new E(this.value * this.value);
     };
     function h(t, e) {
-        var r, n, _, a, i = t.length, o = u(i);
+        var r, n, _, a, i = t.length, o = T(i);
         for (_ = 0, r = i - 1; r >= 0; --r)
-            n = T((a = 10000000 * _ + t[r]) / e), _ = a - n * e, o[r] = 0 | n;
+            n = u((a = 10000000 * _ + t[r]) / e), _ = a - n * e, o[r] = 0 | n;
         return [
             o,
             0 | _
@@ -239,7 +239,7 @@ var n = function (t) {
             throw Error('Cannot divide by zero');
         if (t.isSmall)
             return s.isSmall ? [
-                new o(T(l / A)),
+                new o(u(l / A)),
                 new o(l % A)
             ] : [
                 a[0],
@@ -282,9 +282,9 @@ var n = function (t) {
                 a[0]
             ];
         r = (n = l.length + A.length <= 200 ? function (t, e) {
-            var r, n, _, a, i, o, E, s = t.length, c = e.length, R = u(e.length), T = e[c - 1], l = Math.ceil(10000000 / (2 * T)), A = S(t, l), N = S(e, l);
-            for (A.length <= s && A.push(0), N.push(0), T = N[c - 1], n = s - c; n >= 0; n--) {
-                for (r = 10000000 - 1, A[n + c] !== T && (r = Math.floor((10000000 * A[n + c] + A[n + c - 1]) / T)), _ = 0, a = 0, o = N.length, i = 0; i < o; i++)
+            var r, n, _, a, i, o, E, s = t.length, c = e.length, R = T(e.length), u = e[c - 1], l = Math.ceil(10000000 / (2 * u)), A = S(t, l), N = S(e, l);
+            for (A.length <= s && A.push(0), N.push(0), u = N[c - 1], n = s - c; n >= 0; n--) {
+                for (r = 10000000 - 1, A[n + c] !== u && (r = Math.floor((10000000 * A[n + c] + A[n + c - 1]) / u)), _ = 0, a = 0, o = N.length, i = 0; i < o; i++)
                     _ += r * N[i], E = Math.floor(_ / 10000000), a += A[n + i] - (_ - 10000000 * E), _ = E, a < 0 ? (A[n + i] = a + 10000000, a = -1) : (A[n + i] = a, a = 0);
                 for (; 0 !== a;) {
                     for (r -= 1, _ = 0, i = 0; i < o; i++)
@@ -381,7 +381,7 @@ var n = function (t) {
         if (!_.isSmall)
             throw Error('The exponent ' + _.toString() + ' is too large.');
         if (this.isSmall && s(e = Math.pow(i, E)))
-            return new o(T(e));
+            return new o(u(e));
         for (r = this, n = a[1]; !0 & E && (n = n.times(r), --E), 0 !== E;) {
             ;
             E /= 2, r = r.square();
@@ -554,9 +554,9 @@ var n = function (t) {
         e = W(e);
         for (var _ = t.isNegative(), a = e.isNegative(), i = _ ? t.not() : t, o = a ? e.not() : e, E = 0, s = 0, c = null, I = null, R = []; !i.isZero() || !o.isZero();)
             E = (c = C(i, m))[1].toJSNumber(), _ && (E = m - 1 - E), s = (I = C(o, m))[1].toJSNumber(), a && (s = m - 1 - s), i = c[0], o = I[0], R.push(r(E, s));
-        for (var u = 0 !== r(_ ? 1 : 0, a ? 1 : 0) ? n(-1) : n(0), T = R.length - 1; T >= 0; T -= 1)
-            u = u.multiply(m).add(n(R[T]));
-        return u;
+        for (var T = 0 !== r(_ ? 1 : 0, a ? 1 : 0) ? n(-1) : n(0), u = R.length - 1; u >= 0; u -= 1)
+            T = T.multiply(m).add(n(R[u]));
+        return T;
     }
     i.prototype.shiftLeft = function (t) {
         var e = W(t).toJSNumber();
@@ -742,7 +742,7 @@ var n = function (t) {
     function F(t) {
         if (s(+t)) {
             var e = +t;
-            if (e === T(e))
+            if (e === u(e))
                 return _ ? new E(BigInt(e)) : new o(e);
             throw Error('Invalid integer: ' + t);
         }
@@ -753,7 +753,7 @@ var n = function (t) {
             throw Error('Invalid integer: ' + n.join('e'));
         if (2 === n.length) {
             var a = n[1];
-            if ('+' === a[0] && (a = a.slice(1)), (a = +a) !== T(a) || !s(a))
+            if ('+' === a[0] && (a = a.slice(1)), (a = +a) !== u(a) || !s(a))
                 throw Error('Invalid integer: ' + a + ' is not a valid exponent.');
             var c = n[0], I = c.indexOf('.');
             if (I >= 0 && (a -= c.length - I - 1, c = c.slice(0, I) + c.slice(I + 1)), a < 0)
@@ -764,9 +764,9 @@ var n = function (t) {
             throw Error('Invalid integer: ' + t);
         if (_)
             return new E(BigInt(r ? '-' + t : t));
-        for (var u = [], l = t.length, A = l - 7; l > 0;)
-            u.push(+t.slice(A, l)), (A -= 7) < 0 && (A = 0), l -= 7;
-        return R(u), new i(u, r);
+        for (var T = [], l = t.length, A = l - 7; l > 0;)
+            T.push(+t.slice(A, l)), (A -= 7) < 0 && (A = 0), l -= 7;
+        return R(T), new i(T, r);
     }
     i.prototype.toArray = function (t) {
         return V(this, t);
@@ -796,7 +796,7 @@ var n = function (t) {
             if (_)
                 return new E(BigInt(t));
             if (s(t)) {
-                if (t !== T(t))
+                if (t !== u(t))
                     throw Error(t + ' is not an integer.');
                 return new o(t);
             }
@@ -815,7 +815,7 @@ var n = function (t) {
         if (i.isSmall)
             return _.add(Math.floor(n() * i));
         for (var o = V(i, 10000000).value, E = [], s = !0, c = 0; c < o.length; c++) {
-            var I = s ? o[c] : 10000000, R = T(n() * I);
+            var I = s ? o[c] : 10000000, R = u(n() * I);
             E.push(R), R < I && (s = !1);
         }
         return _.add(a.fromArray(E, 10000000, !1));

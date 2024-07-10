@@ -27,7 +27,7 @@ r.d(e, {
         return l;
     },
     zQ: function () {
-        return u;
+        return T;
     }
 });
 var n = r(177668), _ = r(10674), a = r(442853);
@@ -115,7 +115,7 @@ function R(t, e, r) {
         o
     ];
 }
-function u(t, e) {
+function T(t, e) {
     let r = 'string' == typeof t.data ? c(t.data, e) : t.data;
     return [
         (0, a.Jr)({
@@ -128,7 +128,7 @@ function u(t, e) {
         r
     ];
 }
-let T = {
+let u = {
     session: 'session',
     sessions: 'session',
     attachment: 'attachment',
@@ -142,7 +142,7 @@ let T = {
     check_in: 'monitor'
 };
 function l(t) {
-    return T[t];
+    return u[t];
 }
 function A(t) {
     if (!t || !t.sdk)

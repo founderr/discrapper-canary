@@ -1,6 +1,6 @@
 r.d(e, {
     Gd: function () {
-        return u;
+        return T;
     },
     Xb: function () {
         return c;
@@ -12,7 +12,7 @@ r.d(e, {
         return R;
     },
     vi: function () {
-        return T;
+        return u;
     }
 });
 var n = r(862315), _ = r(868145), a = r(529866), i = r(24716), o = r(28434), E = r(703498), s = r(741900);
@@ -219,10 +219,10 @@ function I() {
     }, i.n2;
 }
 function R(t) {
-    let e = I(), r = T(e);
+    let e = I(), r = u(e);
     return l(e, t), r;
 }
-function u() {
+function T() {
     let t = I();
     if (t.__SENTRY__ && t.__SENTRY__.acs) {
         let e = t.__SENTRY__.acs.getCurrentHub();
@@ -232,10 +232,10 @@ function u() {
     return function (t = I()) {
         return (!function (t) {
             return !!(t && t.__SENTRY__ && t.__SENTRY__.hub);
-        }(t) || T(t).isOlderThan(4)) && l(t, new c()), T(t);
+        }(t) || u(t).isOlderThan(4)) && l(t, new c()), u(t);
     }(t);
 }
-function T(t) {
+function u(t) {
     return (0, i.YO)('hub', () => new c(), t);
 }
 function l(t, e) {

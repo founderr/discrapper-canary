@@ -1,28 +1,28 @@
-i.d(n, {
+n.d(i, {
     Z: function () {
         return S;
     }
 });
-var l = i(735250), s = i(470079), o = i(120356), t = i.n(o), a = i(442837), r = i(481060), d = i(717881), c = i(906732), u = i(199902), I = i(158776), f = i(543595), _ = i(785717), E = i(221292), m = i(981631), Z = i(501649), v = i(735393);
+var l = n(735250), s = n(470079), t = n(120356), o = n.n(t), a = n(442837), r = n(481060), d = n(717881), c = n(906732), u = n(199902), I = n(158776), f = n(543595), _ = n(785717), E = n(221292), m = n(981631), Z = n(501649), v = n(735393);
 function S(e) {
     let {
-            user: n,
-            type: i,
-            showActions: o,
+            user: i,
+            type: n,
+            showActions: t,
             onClose: S
-        } = e, x = (0, a.e7)([u.Z], () => null != u.Z.getAnyStreamForUser(n.id)), h = (0, a.e7)([I.Z], () => I.Z.getActivities(n.id)), N = s.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), p = s.useMemo(() => x ? N.find(e => e.type === m.IIU.PLAYING) : null, [
-            N,
-            x
-        ]), g = s.useMemo(() => N.filter(e => e !== p), [
+        } = e, x = (0, a.e7)([u.Z], () => null != u.Z.getAnyStreamForUser(i.id)), h = (0, a.e7)([I.Z], () => I.Z.getActivities(i.id)), p = s.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), g = s.useMemo(() => x ? p.find(e => e.type === m.IIU.PLAYING) : null, [
             p,
-            N
+            x
+        ]), N = s.useMemo(() => p.filter(e => e !== g), [
+            g,
+            p
         ]), {
             analyticsLocations: T,
             newestAnalyticsLocation: C
         } = (0, c.ZP)(), {
             trackUserProfileAction: j,
-            ...R
-        } = (0, _.KZ)(), A = {
+            ...A
+        } = (0, _.KZ)(), R = {
             location: {
                 page: m.ZY5.USER_PROFILE,
                 section: m.jXE.PROFILE_MODAL
@@ -33,39 +33,39 @@ function S(e) {
         fade: !0,
         children: [
             x ? (0, l.jsx)(d.Z, {
-                type: i,
-                user: n,
+                type: n,
+                user: i,
                 source: C,
                 className: Z.userProfileActivity,
-                showChannelDetails: i === f.Y.SIMPLIFIED_PROFILE,
-                activity: p,
+                showChannelDetails: n === f.Y.SIMPLIFIED_PROFILE,
+                activity: g,
                 actionColor: Z.actionColor,
-                analyticsParams: A,
-                showActions: o,
+                analyticsParams: R,
+                showActions: t,
                 onGameProfileOpened: S,
                 onAction: () => {
                     j({ action: 'JOIN_ACTIVITY' }), (0, E.Ac)({
                         activityType: m.IIU.STREAMING,
-                        activityName: null == p ? void 0 : p.name,
-                        activityPlatform: null == p ? void 0 : p.platform,
-                        activitySessionId: null == p ? void 0 : p.session_id,
-                        applicationId: null == p ? void 0 : p.application_id,
+                        activityName: null == g ? void 0 : g.name,
+                        activityPlatform: null == g ? void 0 : g.platform,
+                        activitySessionId: null == g ? void 0 : g.session_id,
+                        applicationId: null == g ? void 0 : g.application_id,
                         analyticsLocations: T,
-                        ...R
+                        ...A
                     });
                 }
             }) : null,
-            g.map(e => (0, l.jsx)(d.Z, {
-                type: i,
+            N.map(e => (0, l.jsx)(d.Z, {
+                type: n,
                 activity: e,
-                user: n,
+                user: i,
                 useStoreStream: !1,
                 source: C,
-                className: t()(Z.userProfileActivity, i === f.Y.SIMPLIFIED_PROFILE && Z.simplifiedProfileActivity),
-                showChannelDetails: i === f.Y.SIMPLIFIED_PROFILE,
+                className: o()(Z.userProfileActivity, n === f.Y.SIMPLIFIED_PROFILE && Z.simplifiedProfileActivity),
+                showChannelDetails: n === f.Y.SIMPLIFIED_PROFILE,
                 actionColor: Z.actionColor,
-                analyticsParams: A,
-                showActions: o,
+                analyticsParams: R,
+                showActions: t,
                 onGameProfileOpened: S,
                 onAction: () => {
                     j({ action: 'JOIN_ACTIVITY' }), (0, E.Ac)({
@@ -75,7 +75,7 @@ function S(e) {
                         activitySessionId: e.session_id,
                         applicationId: e.application_id,
                         analyticsLocations: T,
-                        ...R
+                        ...A
                     });
                 }
             }, ''.concat(e.application_id, '-').concat(e.session_id, '-').concat(e.name)))

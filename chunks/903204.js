@@ -1,10 +1,10 @@
 r.d(e, {
     R: function () {
-        return u;
+        return T;
     }
 });
 var n = r(861579), _ = r(139782), a = r(468391), i = r(529866), o = r(854569), E = r(177668), s = r(590171), c = r(643487), I = r(124969), R = r(184612);
-class u extends n.W {
+class T extends n.W {
     constructor(t) {
         let e = c.m9.SENTRY_SDK_SOURCE || (0, a.S)();
         t._metadata = t._metadata || {}, t._metadata.sdk = t._metadata.sdk || {

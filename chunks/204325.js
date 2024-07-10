@@ -3,8 +3,8 @@ r.d(e, {
         return l;
     }
 });
-var n = r(376097), _ = r(90668), a = r(147816), i = r(529866), o = r(874230), E = r(829919), s = r(321611), c = r(799821), I = r(722994), R = r(263951), u = r(607190);
-let T = {
+var n = r(376097), _ = r(90668), a = r(147816), i = r(529866), o = r(874230), E = r(829919), s = r(321611), c = r(799821), I = r(722994), R = r(263951), T = r(607190);
+let u = {
     ...n.AT,
     markBackgroundTransactions: !0,
     routingInstrumentation: R.R,
@@ -23,7 +23,7 @@ class l {
     }
     constructor(t) {
         l.prototype.__init.call(this), l.prototype.__init2.call(this), (0, _.T)(), ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && (this._hasSetTracePropagationTargets = !!(t && (t.tracePropagationTargets || t.tracingOrigins))), this.options = {
-            ...T,
+            ...u,
             ...t
         }, void 0 !== this.options._experiments.enableLongTask && (this.options.enableLongTask = this.options._experiments.enableLongTask), t && !t.tracePropagationTargets && t.tracingOrigins && (this.options.tracePropagationTargets = t.tracingOrigins), this._collectWebVitals = (0, c.PR)(), this.options.enableLongTask && (0, c.Fv)(), this.options._experiments.enableInteractions && (0, c.sn)();
     }
@@ -36,8 +36,8 @@ class l {
                 markBackgroundTransactions: E,
                 traceFetch: c,
                 traceXHR: R,
-                shouldCreateSpanForRequest: u,
-                enableHTTPTimings: T,
+                shouldCreateSpanForRequest: T,
+                enableHTTPTimings: u,
                 _experiments: l
             } = this.options, A = n && n.tracePropagationTargets, N = A || this.options.tracePropagationTargets;
         ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && this._hasSetTracePropagationTargets && A && i.kg.warn('[Tracing] The `tracePropagationTargets` option was set in the BrowserTracing integration and top level `Sentry.init`. The top level `Sentry.init` value is being used.'), _(t => {
@@ -47,8 +47,8 @@ class l {
             traceFetch: c,
             traceXHR: R,
             tracePropagationTargets: N,
-            shouldCreateSpanForRequest: u,
-            enableHTTPTimings: T
+            shouldCreateSpanForRequest: T,
+            enableHTTPTimings: u
         });
     }
     _createRouteTransaction(t) {
@@ -62,15 +62,15 @@ class l {
                 finalTimeout: a,
                 heartbeatInterval: E
             } = this.options, s = 'pageload' === t.op, I = s ? A('sentry-trace') : '', R = s ? A('baggage') : '', {
-                traceparentData: T,
+                traceparentData: u,
                 dynamicSamplingContext: l,
                 propagationContext: N
             } = (0, o.KA)(I, R), d = {
                 ...t,
-                ...T,
+                ...u,
                 metadata: {
                     ...t.metadata,
-                    dynamicSamplingContext: T && !l ? {} : l
+                    dynamicSamplingContext: u && !l ? {} : l
                 },
                 trimEnd: !0
             }, O = 'function' == typeof r ? r(d) : d, p = void 0 === O ? {
@@ -81,8 +81,8 @@ class l {
             ...p.metadata,
             source: 'custom'
         } : p.metadata, this._latestRouteName = p.name, this._latestRouteSource = p.metadata && p.metadata.source, !1 === p.sampled && ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.log(`[Tracing] Will not send ${ p.op } transaction because of beforeNavigate.`), ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.log(`[Tracing] Starting ${ p.op } transaction on scope`);
-        let {location: S} = u.m, D = (0, _.l)(e, p, n, a, !0, { location: S }, E), f = e.getScope();
-        return s && T ? f.setPropagationContext(N) : f.setPropagationContext({
+        let {location: S} = T.m, D = (0, _.l)(e, p, n, a, !0, { location: S }, E), f = e.getScope();
+        return s && u ? f.setPropagationContext(N) : f.setPropagationContext({
             traceId: D.traceId,
             spanId: D.spanId,
             parentSpanId: D.parentSpanId,
@@ -114,7 +114,7 @@ class l {
                 ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.warn(`[Tracing] Did not create ${ o } transaction because _latestRouteName is missing.`);
                 return;
             }
-            let s = this._getCurrentHub(), {location: c} = u.m, I = {
+            let s = this._getCurrentHub(), {location: c} = T.m, I = {
                     name: this._latestRouteName,
                     op: o,
                     trimEnd: !0,

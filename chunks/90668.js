@@ -1,9 +1,9 @@
 r.d(e, {
     T: function () {
-        return T;
+        return u;
     },
     l: function () {
-        return u;
+        return T;
     }
 });
 var n = r(529866), _ = r(46834), a = r(876122), i = r(633401), o = r(750513), E = r(376097), s = r(912033);
@@ -28,7 +28,7 @@ The transaction will not be sampled. Please use the ${ a } instrumentation to st
         ...e
     })).sampled && o.initSpanRecorder(_._experiments && _._experiments.maxSpans), r && r.emit && r.emit('startTransaction', o), o;
 }
-function u(t, e, r, n, _, a, i) {
+function T(t, e, r, n, _, a, i) {
     let o = t.getClient(), s = o && o.getOptions() || {}, c = new E.io(e, t, r, n, i, _);
     return (c = I(c, s, {
         parentSampled: e.parentSampled,
@@ -36,7 +36,7 @@ function u(t, e, r, n, _, a, i) {
         ...a
     })).sampled && c.initSpanRecorder(s._experiments && s._experiments.maxSpans), o && o.emit && o.emit('startTransaction', c), c;
 }
-function T() {
+function u() {
     let t = (0, a.cu)();
     if (!!t.__SENTRY__)
         t.__SENTRY__.extensions = t.__SENTRY__.extensions || {}, !t.__SENTRY__.extensions.startTransaction && (t.__SENTRY__.extensions.startTransaction = R), !t.__SENTRY__.extensions.traceHeaders && (t.__SENTRY__.extensions.traceHeaders = c), (0, o.e)();

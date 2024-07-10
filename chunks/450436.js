@@ -19,7 +19,7 @@ r.d(e, {
     }
 });
 var n, _ = r(28434), a = r(876122), i = r(529866), o = r(862315), E = r(868145), s = r(50074), c = r(24716), I = r(643487);
-let R = String(0), u = '', T = '', l = '', A = I.m9.navigator && I.m9.navigator.userAgent || '', N = '', d = I.m9.navigator && I.m9.navigator.language || I.m9.navigator && I.m9.navigator.languages && I.m9.navigator.languages['0'] || '', O = I.m9.navigator && I.m9.navigator.userAgentData;
+let R = String(0), T = '', u = '', l = '', A = I.m9.navigator && I.m9.navigator.userAgent || '', N = '', d = I.m9.navigator && I.m9.navigator.language || I.m9.navigator && I.m9.navigator.languages && I.m9.navigator.languages['0'] || '', O = I.m9.navigator && I.m9.navigator.userAgentData;
 if ('object' == typeof (n = O) && null !== n && 'getHighEntropyValues' in n)
     O.getHighEntropyValues([
         'architecture',
@@ -28,7 +28,7 @@ if ('object' == typeof (n = O) && null !== n && 'getHighEntropyValues' in n)
         'platformVersion',
         'fullVersionList'
     ]).then(t => {
-        if (u = t.platform || '', l = t.architecture || '', N = t.model || '', T = t.platformVersion || '', t.fullVersionList && t.fullVersionList.length > 0) {
+        if (T = t.platform || '', l = t.architecture || '', N = t.model || '', u = t.platformVersion || '', t.fullVersionList && t.fullVersionList.length > 0) {
             let e = t.fullVersionList[t.fullVersionList.length - 1];
             A = `${ e.brand } ${ e.version }`;
         }
@@ -122,8 +122,8 @@ function L(t, e, r) {
                 version: I.m9.navigator.userAgent
             },
             os: {
-                name: u,
-                version: T,
+                name: T,
+                version: u,
                 build_number: A
             },
             device: {

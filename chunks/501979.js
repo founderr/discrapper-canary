@@ -3,14 +3,14 @@ t.exports = function (t, e, r, i, o, E) {
     var s = 1 & r, c = t.length, I = e.length;
     if (c != I && !(s && I > c))
         return !1;
-    var R = E.get(t), u = E.get(e);
-    if (R && u)
-        return R == e && u == t;
-    var T = -1, l = !0, A = 2 & r ? new n() : void 0;
-    for (E.set(t, e), E.set(e, t); ++T < c;) {
-        var N = t[T], d = e[T];
+    var R = E.get(t), T = E.get(e);
+    if (R && T)
+        return R == e && T == t;
+    var u = -1, l = !0, A = 2 & r ? new n() : void 0;
+    for (E.set(t, e), E.set(e, t); ++u < c;) {
+        var N = t[u], d = e[u];
         if (i)
-            var O = s ? i(d, N, T, e, t, E) : i(N, d, T, t, e, E);
+            var O = s ? i(d, N, u, e, t, E) : i(N, d, u, t, e, E);
         if (void 0 !== O) {
             if (O)
                 continue;

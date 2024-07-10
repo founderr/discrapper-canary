@@ -36,7 +36,7 @@ r.d(e, {
         return A;
     },
     GZ: function () {
-        return T;
+        return u;
     },
     H0: function () {
         return tp;
@@ -48,7 +48,7 @@ r.d(e, {
         return to.I;
     },
     Jj: function () {
-        return u;
+        return T;
     },
     MA: function () {
         return M;
@@ -93,7 +93,7 @@ r.d(e, {
         return R;
     },
     U9: function () {
-        return tT;
+        return tu;
     },
     Uk: function () {
         return tS;
@@ -153,7 +153,7 @@ r.d(e, {
         return f;
     },
     rx: function () {
-        return tu;
+        return tT;
     },
     tN: function () {
         return a;
@@ -177,11 +177,11 @@ r.d(e, {
         return N;
     }
 }), r(47120);
-var n, _, a, i, o, E, s, c, I, R, u, T, l, A, N, d, O, p, S, D, f, L, h, C, g, P, M, U, G, m, y, b, v, B, w, H, Y, K, k, V, x, F, W, X, j, z, $, q, Z, J, Q, tt, te, tr, tn, t_ = r(290926), ta = r(149765), ti = r(860911);
+var n, _, a, i, o, E, s, c, I, R, T, u, l, A, N, d, O, p, S, D, f, L, h, C, g, P, M, U, G, m, y, b, v, B, w, H, Y, K, k, V, x, F, W, X, j, z, $, q, Z, J, Q, tt, te, tr, tn, t_ = r(290926), ta = r(149765), ti = r(860911);
 r(674746);
 var to = r(691324), tE = r(481677);
 r(722770);
-let ts = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT, tc = location.protocol + '//discord.gg', tI = 'discord.com', tR = 'support.discord.com', tu = 'support-dev.discord.com', tT = 'discord.com';
+let ts = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT, tc = location.protocol + '//discord.gg', tI = 'discord.com', tR = 'support.discord.com', tT = 'support-dev.discord.com', tu = 'discord.com';
 Object.freeze({
     HINT_PURPLE: '#c9d2f0',
     DARK_PURPLE: '#697ec4',
@@ -319,7 +319,7 @@ let td = new Map([
 (w = s || (s = {}))[w.NEW = 1] = 'NEW', (H = c || (c = {}))[H.PENDING = 0] = 'PENDING', H[H.COMPLETED = 1] = 'COMPLETED', H[H.FAILED = 2] = 'FAILED', H[H.REVERSED = 3] = 'REVERSED', H[H.REFUNDED = 4] = 'REFUNDED', H[H.CANCELED = 5] = 'CANCELED', (Y = I || (I = {}))[Y.PREMIUM = 1] = 'PREMIUM', Y[Y.GUILD = 2] = 'GUILD', Y[Y.APPLICATION = 3] = 'APPLICATION', (K = R || (R = {})).PAYPAL_POPUP_CLOSED = 'PAYPAL_POPUP_CLOSED', K.VENMO_APP_CANCELED = 'VENMO_APP_CANCELED', K.VENMO_CANCELED = 'VENMO_CANCELED', Object.freeze({
     CONSTANT: 1,
     APPLE_STICKER: 2
-}), (k = u || (u = {}))[k.DISCOVERY = 0] = 'DISCOVERY', k[k.CHECKOUT = 1] = 'CHECKOUT', (V = T || (T = {}))[V.SUBSCRIPTION = 0] = 'SUBSCRIPTION', V[V.ONE_TIME = 1] = 'ONE_TIME';
+}), (k = T || (T = {}))[k.DISCOVERY = 0] = 'DISCOVERY', k[k.CHECKOUT = 1] = 'CHECKOUT', (V = u || (u = {}))[V.SUBSCRIPTION = 0] = 'SUBSCRIPTION', V[V.ONE_TIME = 1] = 'ONE_TIME';
 let th = Object.freeze({
     0: 'subscription',
     1: 'sku'
@@ -398,14 +398,14 @@ let tB = 'token', tw = 'tokens', tH = 'https://'.concat('status.discord.com'), t
         STATUS: 'https://discordstatus.com',
         HELP_AND_SUPPORT: '//'.concat(tR, '/hc/en-us'),
         FEEDBACK: '//'.concat('feedback.discord.com'),
-        EMAIL_SUPPORT: 'mailto:support@'.concat(tT),
-        EMAIL_LAW_ENFORCEMENT: 'mailto:lawenforcement@'.concat(tT),
-        EMAIL_HYPESQUAD: 'mailto:hypesquad@'.concat(tT),
-        EMAIL_JOBS: 'mailto:jobs@'.concat(tT),
+        EMAIL_SUPPORT: 'mailto:support@'.concat(tu),
+        EMAIL_LAW_ENFORCEMENT: 'mailto:lawenforcement@'.concat(tu),
+        EMAIL_HYPESQUAD: 'mailto:hypesquad@'.concat(tu),
+        EMAIL_JOBS: 'mailto:jobs@'.concat(tu),
         DEV_PERKS_FORM: 'https://goo.gl/forms/oZfKBStV3sR8GHdU2',
         VERIFICATION_REQUIREMENTS: 'https://dis.gd/vfqual',
         BASE_URL: 'https://'.concat(tI),
-        PRESS_INQUIRIES: 'mailto:press@'.concat(tT),
+        PRESS_INQUIRIES: 'mailto:press@'.concat(tu),
         CONTACT_US: 'https://dis.gd/contact',
         DEV_LANDING: '/build',
         DEV_PORTAL: '/developers',

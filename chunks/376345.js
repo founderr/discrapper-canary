@@ -1,11 +1,11 @@
 r(411104);
 var n = r(688619), _ = r.n(n), a = r(402903), i = r.n(a), o = r(190558), E = r(949180), s = r(777910), c = r(897710), I = r(15202), R = r(211468);
-let {Themes: u} = I.V, {
-        SemanticColors: T,
+let {Themes: T} = I.V, {
+        SemanticColors: u,
         RawColors: l
     } = o.V, {Shadows: A} = s.V, {Spacing: N} = c.V, d = Symbol('semanticColor'), O = {
-        themes: u,
-        colors: i()(T, (t, e) => ({ [d]: e })),
+        themes: T,
+        colors: i()(u, (t, e) => ({ [d]: e })),
         unsafe_rawColors: l,
         shadows: i()(A, t => {
             function e(e) {
@@ -29,13 +29,13 @@ let {Themes: u} = I.V, {
                 t = function (t) {
                     if ('string' == typeof t) {
                         let e = t.toUpperCase();
-                        if (!(e in u))
+                        if (!(e in T))
                             throw Error('Invalid theme: '.concat(t));
-                        t = u[e];
+                        t = T[e];
                     }
                     return t;
                 }(t);
-                let i = T[e[d]], {category: o} = i, E = i[t], s = l[E.raw], c = E.opacity;
+                let i = u[e[d]], {category: o} = i, E = i[t], s = l[E.raw], c = E.opacity;
                 if ((null == r ? void 0 : r.gradient) != null && 'gradient' in i) {
                     let t = i.gradient[null == r ? void 0 : r.gradient.theme];
                     if (null != t) {

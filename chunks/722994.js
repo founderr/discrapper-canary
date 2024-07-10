@@ -1,37 +1,37 @@
 r.d(e, {
     L7: function () {
-        return T;
+        return u;
     },
     k3: function () {
-        return u;
+        return T;
     }
 });
 var n = r(633401), _ = r(876122), a = r(154405), i = r(793884), o = r(868145), E = r(336344), s = r(874230), c = r(545459), I = r(46834);
 let R = [
         'localhost',
         /^\/(?!\/)/
-    ], u = {
+    ], T = {
         traceFetch: !0,
         traceXHR: !0,
         enableHTTPTimings: !0,
         tracingOrigins: R,
         tracePropagationTargets: R
     };
-function T(t) {
+function u(t) {
     let {
             traceFetch: e,
             traceXHR: r,
             tracePropagationTargets: o,
-            tracingOrigins: T,
+            tracingOrigins: u,
             shouldCreateSpanForRequest: A,
             enableHTTPTimings: d
         } = {
-            traceFetch: u.traceFetch,
-            traceXHR: u.traceXHR,
+            traceFetch: T.traceFetch,
+            traceXHR: T.traceXHR,
             ...t
         }, O = 'function' == typeof A ? A : t => !0, p = t => function (t, e) {
             return (0, E.U0)(t, e || R);
-        }(t, o || T), S = {};
+        }(t, o || u), S = {};
     e && (0, i.oq)('fetch', t => {
         let e = function (t, e, r, i) {
             if (!(0, n.z)() || !t.fetchData)
@@ -53,10 +53,10 @@ function T(t) {
                 }
                 return;
             }
-            let E = (0, _.Gd)(), R = E.getScope(), u = E.getClient(), T = R.getSpan(), {
+            let E = (0, _.Gd)(), R = E.getScope(), T = E.getClient(), u = R.getSpan(), {
                     method: l,
                     url: A
-                } = t.fetchData, N = o && T ? T.startChild({
+                } = t.fetchData, N = o && u ? u.startChild({
                     data: {
                         url: A,
                         type: 'fetch',
@@ -65,7 +65,7 @@ function T(t) {
                     description: `${ l } ${ A }`,
                     op: 'http.client'
                 }) : void 0;
-            if (N && (t.fetchData.__span = N.spanId, i[N.spanId] = N), r(t.fetchData.url) && u) {
+            if (N && (t.fetchData.__span = N.spanId, i[N.spanId] = N), r(t.fetchData.url) && T) {
                 let e = t.args[0];
                 t.args[1] = t.args[1] || {};
                 let r = t.args[1];
@@ -74,22 +74,22 @@ function T(t) {
                             traceId: o,
                             sampled: E,
                             dsc: R
-                        } = r.getPropagationContext(), u = _ ? _.toTraceparent() : (0, s.$p)(o, void 0, E), T = i ? i.getDynamicSamplingContext() : R || (0, a._)(o, e, r), l = (0, c.IQ)(T), A = 'undefined' != typeof Request && (0, I.V9)(t, Request) ? t.headers : n.headers;
+                        } = r.getPropagationContext(), T = _ ? _.toTraceparent() : (0, s.$p)(o, void 0, E), u = i ? i.getDynamicSamplingContext() : R || (0, a._)(o, e, r), l = (0, c.IQ)(u), A = 'undefined' != typeof Request && (0, I.V9)(t, Request) ? t.headers : n.headers;
                     if (!A)
                         return {
-                            'sentry-trace': u,
+                            'sentry-trace': T,
                             baggage: l
                         };
                     if ('undefined' != typeof Headers && (0, I.V9)(A, Headers)) {
                         let t = new Headers(A);
-                        return t.append('sentry-trace', u), l && t.append(c.bU, l), t;
+                        return t.append('sentry-trace', T), l && t.append(c.bU, l), t;
                     }
                     if (Array.isArray(A)) {
                         let t = [
                             ...A,
                             [
                                 'sentry-trace',
-                                u
+                                T
                             ]
                         ];
                         return l && t.push([
@@ -100,11 +100,11 @@ function T(t) {
                         let t = 'baggage' in A ? A.baggage : void 0, e = [];
                         return Array.isArray(t) ? e.push(...t) : t && e.push(t), l && e.push(l), {
                             ...A,
-                            'sentry-trace': u,
+                            'sentry-trace': T,
                             baggage: e.length > 0 ? e.join(',') : void 0
                         };
                     }
-                }(e, u, R, r);
+                }(e, T, R, r);
             }
             return N;
         }(t, O, p, S);
@@ -123,7 +123,7 @@ function T(t) {
                 e && (e.setHttpStatus(I.status_code), e.finish(), delete o[t]);
                 return;
             }
-            let u = (0, _.Gd)(), T = u.getScope(), l = T.getSpan(), A = R && l ? l.startChild({
+            let T = (0, _.Gd)(), u = T.getScope(), l = u.getSpan(), A = R && l ? l.startChild({
                     data: {
                         ...I.data,
                         type: 'xhr',
@@ -138,11 +138,11 @@ function T(t) {
                     let t = A && A.transaction, e = t && t.getDynamicSamplingContext(), r = (0, c.IQ)(e);
                     N(E, A.toTraceparent(), r);
                 } else {
-                    let t = u.getClient(), {
+                    let t = T.getClient(), {
                             traceId: e,
                             sampled: r,
                             dsc: n
-                        } = T.getPropagationContext(), _ = (0, s.$p)(e, void 0, r), i = n || (t ? (0, a._)(e, t, T) : void 0);
+                        } = u.getPropagationContext(), _ = (0, s.$p)(e, void 0, r), i = n || (t ? (0, a._)(e, t, u) : void 0);
                     N(E, _, (0, c.IQ)(i));
                 }
             }

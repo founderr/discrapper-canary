@@ -21,7 +21,7 @@ r.d(e, {
         return o;
     },
     zf: function () {
-        return T;
+        return u;
     }
 });
 var n = r(829919), _ = r(46834), a = r(336344);
@@ -59,7 +59,7 @@ function I(t) {
             message: t.message,
             name: t.name,
             stack: t.stack,
-            ...u(t)
+            ...T(t)
         };
     if (!(0, _.cO)(t))
         return t;
@@ -68,7 +68,7 @@ function I(t) {
             type: t.type,
             target: R(t.target),
             currentTarget: R(t.currentTarget),
-            ...u(t)
+            ...T(t)
         };
         return 'undefined' != typeof CustomEvent && (0, _.V9)(t, CustomEvent) && (e.detail = t.detail), e;
     }
@@ -80,7 +80,7 @@ function R(t) {
         return '<unknown>';
     }
 }
-function u(t) {
+function T(t) {
     if ('object' != typeof t || null === t)
         return {};
     {
@@ -90,7 +90,7 @@ function u(t) {
         return e;
     }
 }
-function T(t, e = 40) {
+function u(t, e = 40) {
     let r = Object.keys(I(t));
     if (r.sort(), !r.length)
         return '[object has no keys]';

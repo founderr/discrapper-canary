@@ -30,7 +30,7 @@ r.d(e, {
         return G;
     }
 });
-var n = r(344106), _ = r(740054), a = r(595208), i = r(110575), o = r(876122), E = r(507506), s = r(432038), c = r(698892), I = r(529866), R = r(880803), u = r(793884), T = r(903204), l = r(643487), A = r(297280), N = r(382078), d = r(124969), O = r(140735), p = r(612568), S = r(683900), D = r(202406), f = r(393746), L = r(975927);
+var n = r(344106), _ = r(740054), a = r(595208), i = r(110575), o = r(876122), E = r(507506), s = r(432038), c = r(698892), I = r(529866), R = r(880803), T = r(793884), u = r(903204), l = r(643487), A = r(297280), N = r(382078), d = r(124969), O = r(140735), p = r(612568), S = r(683900), D = r(202406), f = r(393746), L = r(975927);
 let h = [
     new n.QD(),
     new _.c(),
@@ -49,14 +49,14 @@ function C(t = {}) {
         integrations: (0, a.m8)(t),
         transport: t.transport || ((0, c.Ak)() ? f.f : L.K)
     };
-    (0, i.M)(T.R, e), t.autoSessionTracking && function () {
+    (0, i.M)(u.R, e), t.autoSessionTracking && function () {
         if (void 0 === l.m9.document) {
             ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && I.kg.warn('Session tracking in non-browser environment with @sentry/browser is not supported.');
             return;
         }
         let t = (0, o.Gd)();
         if (!!t.captureSession)
-            b(t), (0, u.oq)('history', ({
+            b(t), (0, T.oq)('history', ({
                 from: t,
                 to: e
             }) => {

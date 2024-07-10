@@ -4,7 +4,7 @@ r.d(e, {
         return rr;
     }
 });
-var E, s, c, I, R, u, T, l, A, N, d, O, p, S, D, f, L = r(876122), h = r(703498), C = r(392405), g = r(138122), P = r(24716), M = r(10674), U = r(442853), G = r(829919), m = r(529866), y = r(862315), b = r(793884), v = r(336344), B = r(868145), w = r(50074), H = r(635602), Y = r(444675);
+var E, s, c, I, R, T, u, l, A, N, d, O, p, S, D, f, L = r(876122), h = r(703498), C = r(392405), g = r(138122), P = r(24716), M = r(10674), U = r(442853), G = r(829919), m = r(529866), y = r(862315), b = r(793884), v = r(336344), B = r(868145), w = r(50074), H = r(635602), Y = r(444675);
 let K = P.n2, k = 'sentryReplaySession', V = 'Unable to send Replay';
 (E = A || (A = {}))[E.Document = 0] = 'Document', E[E.DocumentType = 1] = 'DocumentType', E[E.Element = 2] = 'Element', E[E.Text = 3] = 'Text', E[E.CDATA = 4] = 'CDATA', E[E.Comment = 5] = 'Comment';
 function x(t) {
@@ -205,8 +205,8 @@ function tR(t, e) {
             maskTextClass: c,
             maskTextSelector: I,
             unmaskTextSelector: R,
-            skipChild: u = !1,
-            inlineStylesheet: T = !0,
+            skipChild: T = !1,
+            inlineStylesheet: u = !0,
             maskInputSelector: l,
             unmaskInputSelector: N,
             maskAllText: d,
@@ -232,8 +232,8 @@ function tR(t, e) {
                 blockSelector: c,
                 unblockSelector: I,
                 maskTextClass: R,
-                maskTextSelector: u,
-                unmaskTextSelector: T,
+                maskTextSelector: T,
+                unmaskTextSelector: u,
                 inlineStylesheet: l,
                 maskInputSelector: N,
                 unmaskInputSelector: d,
@@ -299,7 +299,7 @@ function tR(t, e) {
                         } of Array.from(t.attributes))
                     !function (t, e, r) {
                         return ('video' === t || 'audio' === t) && 'autoplay' === e;
-                    }(P, e) && (M[e] = ts(E, t, P, e, r, O, T, S));
+                    }(P, e) && (M[e] = ts(E, t, P, e, r, O, u, S));
                 if ('link' === P && l) {
                     let e = Array.from(E.styleSheets).find(e => e.href === t.href), r = null;
                     e && (r = J(e)), r && (delete M.rel, delete M.href, M._cssText = t_(r, e.href));
@@ -397,7 +397,7 @@ function tR(t, e) {
                     unmaskInputSelector: d,
                     maskInputOptions: p,
                     maskInputFn: D
-                }) : !m && !y && tc(t, R, u, T, O) && G && (G = S ? S(G) : Z(G)), {
+                }) : !m && !y && tc(t, R, T, u, O) && G && (G = S ? S(G) : Z(G)), {
                     type: A.Text,
                     textContent: G || '',
                     isStyle: m,
@@ -426,7 +426,7 @@ function tR(t, e) {
             maskTextClass: c,
             maskTextSelector: I,
             unmaskTextSelector: R,
-            inlineStylesheet: T,
+            inlineStylesheet: u,
             maskInputSelector: l,
             unmaskInputSelector: N,
             maskAllText: d,
@@ -469,7 +469,7 @@ function tR(t, e) {
     if (t.__sn = m, -2 === r)
         return null;
     i[r] = t, C && C(t);
-    let y = !u;
+    let y = !T;
     if (m.type === A.Element && (y = y && !m.needBlock, delete m.needBlock, t.shadowRoot && (m.isShadowHost = !0)), (m.type === A.Document || m.type === A.Element) && y) {
         var b;
         D.headWhitespace && G.type === A.Element && 'head' === G.tagName && (U = !1);
@@ -482,8 +482,8 @@ function tR(t, e) {
             maskTextClass: c,
             maskTextSelector: I,
             unmaskTextSelector: R,
-            skipChild: u,
-            inlineStylesheet: T,
+            skipChild: T,
+            inlineStylesheet: u,
             maskInputSelector: l,
             unmaskInputSelector: N,
             maskAllText: d,
@@ -549,7 +549,7 @@ function tR(t, e) {
                 maskTextSelector: I,
                 unmaskTextSelector: R,
                 skipChild: !1,
-                inlineStylesheet: T,
+                inlineStylesheet: u,
                 maskInputSelector: l,
                 unmaskInputSelector: N,
                 maskAllText: d,
@@ -570,24 +570,24 @@ function tR(t, e) {
         }
     }, P), m;
 }
-function tu(t, e, r = document) {
+function tT(t, e, r = document) {
     let n = {
         capture: !0,
         passive: !0
     };
     return r.addEventListener(t, e, n), () => r.removeEventListener(t, e, n);
 }
-(s = N || (N = {}))[s.DomContentLoaded = 0] = 'DomContentLoaded', s[s.Load = 1] = 'Load', s[s.FullSnapshot = 2] = 'FullSnapshot', s[s.IncrementalSnapshot = 3] = 'IncrementalSnapshot', s[s.Meta = 4] = 'Meta', s[s.Custom = 5] = 'Custom', s[s.Plugin = 6] = 'Plugin', (c = d || (d = {}))[c.Mutation = 0] = 'Mutation', c[c.MouseMove = 1] = 'MouseMove', c[c.MouseInteraction = 2] = 'MouseInteraction', c[c.Scroll = 3] = 'Scroll', c[c.ViewportResize = 4] = 'ViewportResize', c[c.Input = 5] = 'Input', c[c.TouchMove = 6] = 'TouchMove', c[c.MediaInteraction = 7] = 'MediaInteraction', c[c.StyleSheetRule = 8] = 'StyleSheetRule', c[c.CanvasMutation = 9] = 'CanvasMutation', c[c.Font = 10] = 'Font', c[c.Log = 11] = 'Log', c[c.Drag = 12] = 'Drag', c[c.StyleDeclaration = 13] = 'StyleDeclaration', (I = O || (O = {}))[I.MouseUp = 0] = 'MouseUp', I[I.MouseDown = 1] = 'MouseDown', I[I.Click = 2] = 'Click', I[I.ContextMenu = 3] = 'ContextMenu', I[I.DblClick = 4] = 'DblClick', I[I.Focus = 5] = 'Focus', I[I.Blur = 6] = 'Blur', I[I.TouchStart = 7] = 'TouchStart', I[I.TouchMove_Departed = 8] = 'TouchMove_Departed', I[I.TouchEnd = 9] = 'TouchEnd', I[I.TouchCancel = 10] = 'TouchCancel', (R = p || (p = {}))[R['2D'] = 0] = '2D', R[R.WebGL = 1] = 'WebGL', R[R.WebGL2 = 2] = 'WebGL2', (u = S || (S = {}))[u.Play = 0] = 'Play', u[u.Pause = 1] = 'Pause', u[u.Seeked = 2] = 'Seeked', u[u.VolumeChange = 3] = 'VolumeChange', (T = D || (D = {})).Start = 'start', T.Pause = 'pause', T.Resume = 'resume', T.Resize = 'resize', T.Finish = 'finish', T.FullsnapshotRebuilded = 'fullsnapshot-rebuilded', T.LoadStylesheetStart = 'load-stylesheet-start', T.LoadStylesheetEnd = 'load-stylesheet-end', T.SkipStart = 'skip-start', T.SkipEnd = 'skip-end', T.MouseInteraction = 'mouse-interaction', T.EventCast = 'event-cast', T.CustomEvent = 'custom-event', T.Flush = 'flush', T.StateChange = 'state-change', T.PlayBack = 'play-back';
-let tT = 'Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.', tl = {
+(s = N || (N = {}))[s.DomContentLoaded = 0] = 'DomContentLoaded', s[s.Load = 1] = 'Load', s[s.FullSnapshot = 2] = 'FullSnapshot', s[s.IncrementalSnapshot = 3] = 'IncrementalSnapshot', s[s.Meta = 4] = 'Meta', s[s.Custom = 5] = 'Custom', s[s.Plugin = 6] = 'Plugin', (c = d || (d = {}))[c.Mutation = 0] = 'Mutation', c[c.MouseMove = 1] = 'MouseMove', c[c.MouseInteraction = 2] = 'MouseInteraction', c[c.Scroll = 3] = 'Scroll', c[c.ViewportResize = 4] = 'ViewportResize', c[c.Input = 5] = 'Input', c[c.TouchMove = 6] = 'TouchMove', c[c.MediaInteraction = 7] = 'MediaInteraction', c[c.StyleSheetRule = 8] = 'StyleSheetRule', c[c.CanvasMutation = 9] = 'CanvasMutation', c[c.Font = 10] = 'Font', c[c.Log = 11] = 'Log', c[c.Drag = 12] = 'Drag', c[c.StyleDeclaration = 13] = 'StyleDeclaration', (I = O || (O = {}))[I.MouseUp = 0] = 'MouseUp', I[I.MouseDown = 1] = 'MouseDown', I[I.Click = 2] = 'Click', I[I.ContextMenu = 3] = 'ContextMenu', I[I.DblClick = 4] = 'DblClick', I[I.Focus = 5] = 'Focus', I[I.Blur = 6] = 'Blur', I[I.TouchStart = 7] = 'TouchStart', I[I.TouchMove_Departed = 8] = 'TouchMove_Departed', I[I.TouchEnd = 9] = 'TouchEnd', I[I.TouchCancel = 10] = 'TouchCancel', (R = p || (p = {}))[R['2D'] = 0] = '2D', R[R.WebGL = 1] = 'WebGL', R[R.WebGL2 = 2] = 'WebGL2', (T = S || (S = {}))[T.Play = 0] = 'Play', T[T.Pause = 1] = 'Pause', T[T.Seeked = 2] = 'Seeked', T[T.VolumeChange = 3] = 'VolumeChange', (u = D || (D = {})).Start = 'start', u.Pause = 'pause', u.Resume = 'resume', u.Resize = 'resize', u.Finish = 'finish', u.FullsnapshotRebuilded = 'fullsnapshot-rebuilded', u.LoadStylesheetStart = 'load-stylesheet-start', u.LoadStylesheetEnd = 'load-stylesheet-end', u.SkipStart = 'skip-start', u.SkipEnd = 'skip-end', u.MouseInteraction = 'mouse-interaction', u.EventCast = 'event-cast', u.CustomEvent = 'custom-event', u.Flush = 'flush', u.StateChange = 'state-change', u.PlayBack = 'play-back';
+let tu = 'Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.', tl = {
         map: {},
-        getId: () => (console.error(tT), -1),
-        getNode: () => (console.error(tT), null),
+        getId: () => (console.error(tu), -1),
+        getNode: () => (console.error(tu), null),
         removeNodeFromMap() {
-            console.error(tT);
+            console.error(tu);
         },
-        has: () => (console.error(tT), !1),
+        has: () => (console.error(tu), !1),
         reset() {
-            console.error(tT);
+            console.error(tu);
         }
     };
 function tA(t, e, r = {}) {
@@ -650,7 +650,7 @@ function tS(t, e, r, n) {
 function tD(t) {
     return '__sn' in t && -2 === t.__sn.id;
 }
-'undefined' != typeof window && window.Proxy && window.Reflect && (tl = new Proxy(tl, { get: (t, e, r) => ('map' === e && console.error(tT), Reflect.get(t, e, r)) }));
+'undefined' != typeof window && window.Proxy && window.Reflect && (tl = new Proxy(tl, { get: (t, e, r) => ('map' === e && console.error(tu), Reflect.get(t, e, r)) }));
 function tf(t) {
     return !!t.changedTouches;
 }
@@ -721,10 +721,10 @@ class tU {
                     let I = !this.doc.contains(n) && (!c || !this.doc.contains(c));
                     if (!n.parentNode || I)
                         return;
-                    let R = x(n.parentNode) ? this.mirror.getId(s) : this.mirror.getId(n.parentNode), u = r(n);
-                    if (-1 === R || -1 === u)
+                    let R = x(n.parentNode) ? this.mirror.getId(s) : this.mirror.getId(n.parentNode), T = r(n);
+                    if (-1 === R || -1 === T)
                         return e.addNode(n);
-                    let T = tR(n, {
+                    let u = tR(n, {
                         doc: this.doc,
                         map: this.mirror.map,
                         blockClass: this.blockClass,
@@ -751,10 +751,10 @@ class tU {
                             this.iframeManager.attachIframe(t, e), this.shadowDomManager.observeAttachShadow(t);
                         }
                     });
-                    T && t.push({
+                    u && t.push({
                         parentId: R,
-                        nextId: u,
-                        node: T
+                        nextId: T,
+                        node: u
                     });
                 };
             for (; this.mapRemoves.length;)
@@ -1018,7 +1018,7 @@ function tH({
                 y: o.scrollTop
             });
     }, i.scroll || 100);
-    return tu('scroll', tb(o), e);
+    return tT('scroll', tb(o), e);
 }
 function tY(t, e) {
     let r = Object.assign({}, t);
@@ -1109,9 +1109,9 @@ function tx(t, e = {}) {
                         timeOffset: Date.now() - _
                     }), E('undefined' != typeof DragEvent && t instanceof DragEvent ? d.Drag : t instanceof MouseEvent ? d.MouseMove : d.TouchMove);
                 }, a, { trailing: !1 }), c = [
-                    tu('mousemove', tb(s), r),
-                    tu('touchmove', tb(s), r),
-                    tu('drag', tb(s), r)
+                    tT('mousemove', tb(s), r),
+                    tT('touchmove', tb(s), r),
+                    tT('drag', tb(s), r)
                 ];
             return tb(() => {
                 c.forEach(t => t());
@@ -1148,7 +1148,7 @@ function tx(t, e = {}) {
                 };
             return Object.keys(O).filter(t => Number.isNaN(Number(t)) && !t.endsWith('_Departed') && !1 !== o[t]).forEach(t => {
                 let r = t.toLowerCase(), n = tb(s(t));
-                E.push(tu(r, n, e));
+                E.push(tT(r, n, e));
             }), tb(() => {
                 E.forEach(t => t());
             });
@@ -1160,7 +1160,7 @@ function tx(t, e = {}) {
                         height: Number(n)
                     }), e = n, r = _);
                 }, 200);
-            return tu('resize', tb(n), window);
+            return tT('resize', tb(n), window);
         }(t), E = function ({
             inputCb: t,
             doc: e,
@@ -1175,10 +1175,10 @@ function tx(t, e = {}) {
             maskInputOptions: c,
             maskInputFn: I,
             sampling: R,
-            userTriggeredOnInput: u
+            userTriggeredOnInput: T
         }) {
-            function T(t) {
-                let r = tB(t), R = r && r.tagName, T = t.isTrusted;
+            function u(t) {
+                let r = tB(t), R = r && r.tagName, u = t.isTrusted;
                 if ('OPTION' === R && (r = r.parentElement), !r || !R || 0 > tK.indexOf(R) || tS(r, n, _, a))
                     return;
                 let A = r, N = j(A);
@@ -1213,8 +1213,8 @@ function tx(t, e = {}) {
                 })), l(r, tb(tY)({
                     text: d,
                     isChecked: O,
-                    userTriggered: T
-                }, u));
+                    userTriggered: u
+                }, T));
                 let p = r.name;
                 'radio' === N && p && O && e.querySelectorAll(`input[type="radio"][name="${ p }"]`).forEach(t => {
                     if (t !== r) {
@@ -1232,7 +1232,7 @@ function tx(t, e = {}) {
                             text: e,
                             isChecked: !O,
                             userTriggered: !1
-                        }, u));
+                        }, T));
                     }
                 });
             }
@@ -1247,7 +1247,7 @@ function tx(t, e = {}) {
             let A = ('last' === R.input ? ['change'] : [
                     'input',
                     'change'
-                ]).map(t => tu(t, tb(T), e)), N = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value'), d = [
+                ]).map(t => tT(t, tb(u), e)), N = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value'), d = [
                     [
                         HTMLInputElement.prototype,
                         'value'
@@ -1275,7 +1275,7 @@ function tx(t, e = {}) {
                 ];
             return N && N.set && A.push(...d.map(t => tN(t[0], t[1], {
                 set() {
-                    tb(T)({ target: this });
+                    tb(u)({ target: this });
                 }
             }))), tb(() => {
                 A.forEach(t => t());
@@ -1305,10 +1305,10 @@ function tx(t, e = {}) {
                         muted: c
                     });
                 }), a.media || 500), o = [
-                    tu('play', i(0)),
-                    tu('pause', i(1)),
-                    tu('seeked', i(2)),
-                    tu('volumechange', i(3))
+                    tT('play', i(0)),
+                    tT('pause', i(1)),
+                    tT('seeked', i(2)),
+                    tT('volumechange', i(3))
                 ];
             return tb(() => {
                 o.forEach(t => t());
@@ -1449,16 +1449,16 @@ function tx(t, e = {}) {
                 n.forEach(t => t());
             });
         }(t) : () => {
-        }, u = [];
+        }, T = [];
     for (let e of t.plugins)
-        u.push(e.observer(e.callback, r, e.options));
+        T.push(e.observer(e.callback, r, e.options));
     return tb(() => {
         tv.forEach(t => t.reset()), n.disconnect(), _(), a(), i(), o(), E(), s();
         try {
             c(), I();
         } catch (t) {
         }
-        R(), u.forEach(t => t());
+        R(), T.forEach(t => t());
     });
 }
 function tF(t) {
@@ -1805,8 +1805,8 @@ function t4(t = {}) {
         ignoreClass: c = 'rr-ignore',
         ignoreSelector: I = null,
         maskTextClass: R = 'rr-mask',
-        maskTextSelector: u = null,
-        maskInputSelector: T = null,
+        maskTextSelector: T = null,
+        maskInputSelector: u = null,
         unmaskTextSelector: l = null,
         unmaskInputSelector: A = null,
         inlineStylesheet: O = !0,
@@ -1917,9 +1917,9 @@ function t4(t = {}) {
                 blockSelector: E,
                 unblockSelector: s,
                 maskTextClass: R,
-                maskTextSelector: u,
+                maskTextSelector: T,
                 unmaskTextSelector: l,
-                maskInputSelector: T,
+                maskInputSelector: u,
                 unmaskInputSelector: A,
                 inlineStylesheet: O,
                 maskAllText: p,
@@ -1958,8 +1958,8 @@ function t4(t = {}) {
                     recordCanvas: c = !1,
                     maskInputSelector: I = null,
                     unmaskInputSelector: R = null,
-                    maskAllText: u = !1,
-                    maskAllInputs: T = !1,
+                    maskAllText: T = !1,
+                    maskAllInputs: u = !1,
                     maskTextFn: l,
                     maskInputFn: A,
                     slimDOM: N = !1,
@@ -1984,8 +1984,8 @@ function t4(t = {}) {
                     inlineStylesheet: E,
                     maskInputSelector: I,
                     unmaskInputSelector: R,
-                    maskAllText: u,
-                    maskInputOptions: !0 === T ? {
+                    maskAllText: T,
+                    maskInputOptions: !0 === u ? {
                         color: !0,
                         date: !0,
                         'datetime-local': !0,
@@ -2001,7 +2001,7 @@ function t4(t = {}) {
                         week: !0,
                         textarea: !0,
                         select: !0
-                    } : !1 === T ? {} : T,
+                    } : !1 === u ? {} : u,
                     maskTextFn: l,
                     maskInputFn: A,
                     slimDOMOptions: !0 === N || 'all' === N ? {
@@ -2032,9 +2032,9 @@ function t4(t = {}) {
             blockSelector: E,
             unblockSelector: s,
             maskTextClass: R,
-            maskTextSelector: u,
+            maskTextSelector: T,
             unmaskTextSelector: l,
-            maskInputSelector: T,
+            maskInputSelector: u,
             unmaskInputSelector: A,
             inlineStylesheet: O,
             maskAllText: p,
@@ -2066,7 +2066,7 @@ function t4(t = {}) {
     };
     try {
         let t = [];
-        t.push(tu('DOMContentLoaded', () => {
+        t.push(tT('DOMContentLoaded', () => {
             a(t6({
                 type: N.DomContentLoaded,
                 data: {}
@@ -2118,9 +2118,9 @@ function t4(t = {}) {
                 ignoreClass: c,
                 ignoreSelector: I,
                 maskTextClass: R,
-                maskTextSelector: u,
+                maskTextSelector: T,
                 unmaskTextSelector: l,
-                maskInputSelector: T,
+                maskInputSelector: u,
                 unmaskInputSelector: A,
                 maskInputOptions: w,
                 inlineStylesheet: O,
@@ -2163,7 +2163,7 @@ function t4(t = {}) {
         let r = () => {
             i(), t.push(e(document));
         };
-        return 'interactive' === document.readyState || 'complete' === document.readyState ? r() : t.push(tu('load', () => {
+        return 'interactive' === document.readyState || 'complete' === document.readyState ? r() : t.push(tT('load', () => {
             a(t6({
                 type: N.Load,
                 data: {}
@@ -2493,7 +2493,7 @@ class eR {
         return t ? t8(t) : null;
     }
 }
-class eu {
+class eT {
     constructor(t) {
         this._worker = t, this._id = 0;
     }
@@ -2532,12 +2532,12 @@ class eu {
         return this._id++;
     }
 }
-class eT {
+class eu {
     __init() {
         this._totalSize = 0;
     }
     constructor(t) {
-        eT.prototype.__init.call(this), this._worker = new eu(t), this._earliestTimestamp = null;
+        eu.prototype.__init.call(this), this._worker = new eT(t), this._earliestTimestamp = null;
     }
     get hasEvents() {
         return !!this._earliestTimestamp;
@@ -2576,7 +2576,7 @@ class eT {
 }
 class el {
     constructor(t) {
-        this._fallback = new eR(), this._compression = new eT(t), this._used = this._fallback, this._ensureWorkerIsLoadedPromise = this._ensureWorkerIsLoaded();
+        this._fallback = new eR(), this._compression = new eu(t), this._used = this._fallback, this._ensureWorkerIsLoadedPromise = this._ensureWorkerIsLoaded();
     }
     get type() {
         return this._used.type;
@@ -3193,13 +3193,13 @@ async function ej(t, e, r) {
                         response: ev(I)
                     };
                 }
-                let R = i[b.xU], u = R ? ew(R.request_headers, r.networkRequestHeaders) : {}, T = ew(function (t) {
+                let R = i[b.xU], T = R ? ew(R.request_headers, r.networkRequestHeaders) : {}, u = ew(function (t) {
                         let e = t.getAllResponseHeaders();
                         return e ? e.split('\r\n').reduce((t, e) => {
                             let [r, n] = e.split(': ');
                             return t[r.toLowerCase()] = n, t;
                         }, {}) : {};
-                    }(i), r.networkResponseHeaders), l = eB(u, c, r.networkCaptureBodies ? ey(a) : void 0);
+                    }(i), r.networkResponseHeaders), l = eB(T, c, r.networkCaptureBodies ? ey(a) : void 0);
                 return {
                     startTimestamp: n,
                     endTimestamp: _,
@@ -3207,7 +3207,7 @@ async function ej(t, e, r) {
                     method: E,
                     statusCode: s,
                     request: l,
-                    response: eB(T, I, r.networkCaptureBodies ? e.xhr.responseText : void 0)
+                    response: eB(u, I, r.networkCaptureBodies ? e.xhr.responseText : void 0)
                 };
             }(t, e, r), _ = eb('resource.xhr', n);
         eP(r.replay, _);
@@ -3348,17 +3348,17 @@ let eJ = {
             loadEventStart: c,
             loadEventEnd: I,
             redirectCount: R,
-            startTime: u,
-            transferSize: T,
+            startTime: T,
+            transferSize: u,
             type: l
         } = t;
         return 0 === _ ? null : {
             type: `${ e }.${ l }`,
-            start: e0(u),
+            start: e0(T),
             end: e0(a),
             name: r,
             data: {
-                size: T,
+                size: u,
                 decodedBodySize: n,
                 encodedBodySize: i,
                 duration: _,
@@ -3454,8 +3454,8 @@ async function e2({
             headers: { segment_id: r }
         }), {
             urls: R,
-            errorIds: u,
-            traceIds: T,
+            errorIds: T,
+            traceIds: u,
             initialTimestamp: l
         } = n, A = (0, L.Gd)(), N = A.getClient(), d = A.getScope(), O = N && N.getTransport(), p = N && N.getDsn();
     if (!N || !O || !p || !a.sampled)
@@ -3464,8 +3464,8 @@ async function e2({
             type: 'replay_event',
             replay_start_timestamp: l / 1000,
             timestamp: _ / 1000,
-            error_ids: u,
-            trace_ids: T,
+            error_ids: T,
+            trace_ids: u,
             urls: R,
             replay_id: e,
             segment_id: r,
@@ -4361,8 +4361,8 @@ class rr {
         blockAllMedia: c = !0,
         mutationBreadcrumbLimit: I = 750,
         mutationLimit: R = 10000,
-        slowClickTimeout: u = 7000,
-        slowClickIgnoreSelectors: T = [],
+        slowClickTimeout: T = 7000,
+        slowClickIgnoreSelectors: u = [],
         networkDetailAllowUrls: l = [],
         networkDetailDenyUrls: A = [],
         networkCaptureBodies: N = !0,
@@ -4459,8 +4459,8 @@ class rr {
                 maskAllText: E,
                 mutationBreadcrumbLimit: I,
                 mutationLimit: R,
-                slowClickTimeout: u,
-                slowClickIgnoreSelectors: T,
+                slowClickTimeout: T,
+                slowClickIgnoreSelectors: u,
                 networkDetailAllowUrls: l,
                 networkDetailDenyUrls: A,
                 networkCaptureBodies: N,

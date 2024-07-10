@@ -1,6 +1,6 @@
 r.d(e, {
     O: function () {
-        return u;
+        return T;
     },
     p: function () {
         return R;
@@ -8,15 +8,15 @@ r.d(e, {
 });
 var n = r(876122), _ = r(793884), a = r(862315), i = r(529866), o = r(829919), E = r(869139), s = r(336344), c = r(841866), I = r(643487);
 let R = 'Breadcrumbs';
-class u {
+class T {
     static __initStatic() {
         this.id = R;
     }
     __init() {
-        this.name = u.id;
+        this.name = T.id;
     }
     constructor(t) {
-        u.prototype.__init.call(this), this.options = {
+        T.prototype.__init.call(this), this.options = {
             console: !0,
             dom: !0,
             fetch: !0,
@@ -27,7 +27,7 @@ class u {
         };
     }
     setupOnce() {
-        this.options.console && (0, _.oq)('console', T), this.options.dom && (0, _.oq)('dom', function (t) {
+        this.options.console && (0, _.oq)('console', u), this.options.dom && (0, _.oq)('dom', function (t) {
             return function (e) {
                 let r;
                 let _ = 'object' == typeof t ? t.serializeAttribute : void 0, a = 'object' == typeof t && 'number' == typeof t.maxStringLength ? t.maxStringLength : void 0;
@@ -67,8 +67,8 @@ class u {
         }, { event: t });
     }
 }
-u.__initStatic();
-function T(t) {
+T.__initStatic();
+function u(t) {
     for (let e = 0; e < t.args.length; e++)
         if ('ref=Ref<' === t.args[e]) {
             t.args[e + 1] = 'viewRef';

@@ -1,11 +1,11 @@
-i.d(n, {
+n.d(i, {
     Z: function () {
         return a;
     }
 });
-var l = i(470079), s = i(442837), o = i(621853);
-let t = [];
+var l = n(470079), s = n(442837), t = n(621853);
+let o = [];
 function a(e) {
-    let n = (0, s.e7)([o.Z], () => o.Z.getUserProfile(e));
-    return (0, l.useMemo)(() => (null == n ? void 0 : n.applicationRoleConnections) == null ? t : n.applicationRoleConnections, [null == n ? void 0 : n.applicationRoleConnections]);
+    let i = (0, s.e7)([t.Z], () => t.Z.getUserProfile(e));
+    return (0, l.useMemo)(() => (null == i ? void 0 : i.applicationRoleConnections) == null ? o : i.applicationRoleConnections, [null == i ? void 0 : i.applicationRoleConnections]);
 }

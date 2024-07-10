@@ -6,8 +6,8 @@ r.d(e, {
 var n = r(862315), _ = r(868145), a = r(880803), i = r(336344), o = r(24716), E = r(10674), s = r(28434), c = r(703498);
 function I(t, e, r, I) {
     let {
-            normalizeDepth: u = 3,
-            normalizeMaxBreadth: T = 1000
+            normalizeDepth: T = 3,
+            normalizeMaxBreadth: u = 1000
         } = t, l = {
             ...e,
             event_id: e.event_id || r.event_id || (0, n.DM)(),
@@ -93,7 +93,7 @@ function I(t, e, r, I) {
                 debug_id: e[t]
             });
         });
-    }(t), 'number' == typeof u && u > 0) ? function (t, e, r) {
+    }(t), 'number' == typeof T && T > 0) ? function (t, e, r) {
         if (!t)
             return null;
         let n = {
@@ -109,6 +109,6 @@ function I(t, e, r, I) {
             ...t.extra && { extra: (0, E.Fv)(t.extra, e, r) }
         };
         return t.contexts && t.contexts.trace && n.contexts && (n.contexts.trace = t.contexts.trace, t.contexts.trace.data && (n.contexts.trace.data = (0, E.Fv)(t.contexts.trace.data, e, r))), t.spans && (n.spans = t.spans.map(t => (t.data && (t.data = (0, E.Fv)(t.data, e, r)), t))), n;
-    }(t, u, T) : t);
+    }(t, T, u) : t);
 }
 let R = new WeakMap();

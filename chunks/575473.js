@@ -19,16 +19,16 @@ t.exports = function (t, e, r, n, s, I, R) {
     case '[object String]':
         return t == e + '';
     case '[object Map]':
-        var u = o;
+        var T = o;
     case '[object Set]':
-        var T = 1 & n;
-        if (u || (u = E), t.size != e.size && !T)
+        var u = 1 & n;
+        if (T || (T = E), t.size != e.size && !u)
             break;
         var l = R.get(t);
         if (l)
             return l == e;
         n |= 2, R.set(t, e);
-        var A = i(u(t), u(e), n, s, I, R);
+        var A = i(T(t), T(e), n, s, I, R);
         return R.delete(t), A;
     case '[object Symbol]':
         if (c)

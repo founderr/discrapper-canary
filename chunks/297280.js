@@ -14,7 +14,7 @@ class I {
     __init2() {
         this._installFunc = {
             onerror: R,
-            onunhandledrejection: u
+            onunhandledrejection: T
         };
     }
     constructor(t) {
@@ -49,9 +49,9 @@ function R() {
         } = t;
         if ((0, c.Wz)() || R && R.__sentry_own_request__)
             return;
-        let u = void 0 === R && (0, a.HD)(_) ? function (t, e, r, n) {
+        let T = void 0 === R && (0, a.HD)(_) ? function (t, e, r, n) {
             let _ = (0, a.VW)(t) ? t.message : t, i = 'Error', o = _.match(/^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i);
-            return o && (i = o[1], _ = o[2]), T({
+            return o && (i = o[1], _ = o[2]), u({
                 exception: {
                     values: [{
                             type: i,
@@ -59,11 +59,11 @@ function R() {
                         }]
                 }
             }, e, r, n);
-        }(_, i, o, E) : T((0, s.ME)(r, R || _, void 0, n, !1), i, o, E);
-        u.level = 'error', l(e, R, u, 'onerror');
+        }(_, i, o, E) : u((0, s.ME)(r, R || _, void 0, n, !1), i, o, E);
+        T.level = 'error', l(e, R, T, 'onerror');
     });
 }
-function u() {
+function T() {
     (0, _.oq)('unhandledrejection', t => {
         let [e, r, n] = A();
         if (!e.getIntegration(I))
@@ -89,11 +89,11 @@ function u() {
     });
 }
 I.__initStatic();
-function T(t, e, r, n) {
-    let _ = t.exception = t.exception || {}, o = _.values = _.values || [], E = o[0] = o[0] || {}, s = E.stacktrace = E.stacktrace || {}, c = s.frames = s.frames || [], I = isNaN(parseInt(n, 10)) ? void 0 : n, R = isNaN(parseInt(r, 10)) ? void 0 : r, u = (0, a.HD)(e) && e.length > 0 ? e : (0, i.l4)();
+function u(t, e, r, n) {
+    let _ = t.exception = t.exception || {}, o = _.values = _.values || [], E = o[0] = o[0] || {}, s = E.stacktrace = E.stacktrace || {}, c = s.frames = s.frames || [], I = isNaN(parseInt(n, 10)) ? void 0 : n, R = isNaN(parseInt(r, 10)) ? void 0 : r, T = (0, a.HD)(e) && e.length > 0 ? e : (0, i.l4)();
     return 0 === c.length && c.push({
         colno: I,
-        filename: u,
+        filename: T,
         function: '?',
         in_app: !0,
         lineno: R

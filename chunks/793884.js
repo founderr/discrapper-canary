@@ -4,26 +4,26 @@ r.d(e, {
         return N;
     },
     xU: function () {
-        return T;
+        return u;
     }
 });
 var i = r(46834), o = r(529866), E = r(442853), s = r(432038), c = r(698892), I = r(24716), R = r(30865);
-let u = (0, I.Rf)(), T = '__sentry_xhr_v2__', l = {}, A = {};
+let T = (0, I.Rf)(), u = '__sentry_xhr_v2__', l = {}, A = {};
 function N(t, e) {
     l[t] = l[t] || [], l[t].push(e), !function (t) {
         if (!A[t])
             switch (A[t] = !0, t) {
             case 'console':
                 (function () {
-                    if ('console' in u)
+                    if ('console' in T)
                         o.RU.forEach(function (t) {
-                            if (t in u.console)
-                                (0, E.hl)(u.console, t, function (e) {
+                            if (t in T.console)
+                                (0, E.hl)(T.console, t, function (e) {
                                     return function (...r) {
                                         d('console', {
                                             args: r,
                                             level: t
-                                        }), e && e.apply(u.console, r);
+                                        }), e && e.apply(T.console, r);
                                     };
                                 });
                         });
@@ -31,14 +31,14 @@ function N(t, e) {
                 break;
             case 'dom':
                 (function () {
-                    if (!('document' in u))
+                    if (!('document' in T))
                         return;
                     let t = d.bind(null, 'dom'), e = S(t, !0);
-                    u.document.addEventListener('click', e, !1), u.document.addEventListener('keypress', e, !1), [
+                    T.document.addEventListener('click', e, !1), T.document.addEventListener('keypress', e, !1), [
                         'EventTarget',
                         'Node'
                     ].forEach(e => {
-                        let r = u[e] && u[e].prototype;
+                        let r = T[e] && T[e].prototype;
                         if (!!r && !!r.hasOwnProperty && !!r.hasOwnProperty('addEventListener'))
                             (0, E.hl)(r, 'addEventListener', function (e) {
                                 return function (r, n, _) {
@@ -70,19 +70,19 @@ function N(t, e) {
                 break;
             case 'xhr':
                 (function () {
-                    if (!('XMLHttpRequest' in u))
+                    if (!('XMLHttpRequest' in T))
                         return;
                     let t = XMLHttpRequest.prototype;
                     (0, E.hl)(t, 'open', function (t) {
                         return function (...e) {
-                            let r = e[1], n = this[T] = {
+                            let r = e[1], n = this[u] = {
                                     method: (0, i.HD)(e[0]) ? e[0].toUpperCase() : e[0],
                                     url: e[1],
                                     request_headers: {}
                                 };
                             (0, i.HD)(r) && 'POST' === n.method && r.match(/sentry_key/) && (this.__sentry_own_request__ = !0);
                             let _ = () => {
-                                let t = this[T];
+                                let t = this[u];
                                 if (!!t) {
                                     if (4 === this.readyState) {
                                         try {
@@ -104,14 +104,14 @@ function N(t, e) {
                                 };
                             }) : this.addEventListener('readystatechange', _), (0, E.hl)(this, 'setRequestHeader', function (t) {
                                 return function (...e) {
-                                    let [r, n] = e, _ = this[T];
+                                    let [r, n] = e, _ = this[u];
                                     return _ && (_.request_headers[r.toLowerCase()] = n), t.apply(this, e);
                                 };
                             }), t.apply(this, e);
                         };
                     }), (0, E.hl)(t, 'send', function (t) {
                         return function (...e) {
-                            let r = this[T];
+                            let r = this[u];
                             return r && void 0 !== e[0] && (r.body = e[0]), d('xhr', {
                                 args: e,
                                 startTimestamp: Date.now(),
@@ -124,7 +124,7 @@ function N(t, e) {
             case 'fetch':
                 (function () {
                     if (!!(0, c.t$)())
-                        (0, E.hl)(u, 'fetch', function (t) {
+                        (0, E.hl)(T, 'fetch', function (t) {
                             return function (...e) {
                                 let {
                                         method: r,
@@ -155,7 +155,7 @@ function N(t, e) {
                                         },
                                         startTimestamp: Date.now()
                                     };
-                                return d('fetch', { ..._ }), t.apply(u, e).then(t => (d('fetch', {
+                                return d('fetch', { ..._ }), t.apply(T, e).then(t => (d('fetch', {
                                     ..._,
                                     endTimestamp: Date.now(),
                                     response: t
@@ -174,7 +174,7 @@ function N(t, e) {
                 (function () {
                     if (!(0, R.B)())
                         return;
-                    let t = u.onpopstate;
+                    let t = T.onpopstate;
                     function e(t) {
                         return function (...e) {
                             let r = e.length > 2 ? e[2] : void 0;
@@ -188,8 +188,8 @@ function N(t, e) {
                             return t.apply(this, e);
                         };
                     }
-                    u.onpopstate = function (...e) {
-                        let r = u.location.href, _ = n;
+                    T.onpopstate = function (...e) {
+                        let r = T.location.href, _ = n;
                         if (n = r, d('history', {
                                 from: _,
                                 to: r
@@ -198,12 +198,12 @@ function N(t, e) {
                                 return t.apply(this, e);
                             } catch (t) {
                             }
-                    }, (0, E.hl)(u.history, 'pushState', e), (0, E.hl)(u.history, 'replaceState', e);
+                    }, (0, E.hl)(T.history, 'pushState', e), (0, E.hl)(T.history, 'replaceState', e);
                 }());
                 break;
             case 'error':
                 (function () {
-                    D = u.onerror, u.onerror = function (t, e, r, n, _) {
+                    D = T.onerror, T.onerror = function (t, e, r, n, _) {
                         return d('error', {
                             column: n,
                             error: _,
@@ -211,14 +211,14 @@ function N(t, e) {
                             msg: t,
                             url: e
                         }), !!D && !D.__SENTRY_LOADER__ && D.apply(this, arguments);
-                    }, u.onerror.__SENTRY_INSTRUMENTED__ = !0;
+                    }, T.onerror.__SENTRY_INSTRUMENTED__ = !0;
                 }());
                 break;
             case 'unhandledrejection':
                 (function () {
-                    f = u.onunhandledrejection, u.onunhandledrejection = function (t) {
+                    f = T.onunhandledrejection, T.onunhandledrejection = function (t) {
                         return d('unhandledrejection', t), !f || !!f.__SENTRY_LOADER__ || f.apply(this, arguments);
-                    }, u.onunhandledrejection.__SENTRY_INSTRUMENTED__ = !0;
+                    }, T.onunhandledrejection.__SENTRY_INSTRUMENTED__ = !0;
                 }());
                 break;
             default:
@@ -279,7 +279,7 @@ function S(t, e = !1) {
             event: r,
             name: n,
             global: e
-        }), a = r), clearTimeout(_), _ = u.setTimeout(() => {
+        }), a = r), clearTimeout(_), _ = T.setTimeout(() => {
             _ = void 0;
         }, 1000);
     };

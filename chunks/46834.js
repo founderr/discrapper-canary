@@ -9,7 +9,7 @@ r.d(e, {
         return l;
     },
     Kj: function () {
-        return T;
+        return u;
     },
     PO: function () {
         return I;
@@ -36,7 +36,7 @@ r.d(e, {
         return N;
     },
     kK: function () {
-        return u;
+        return T;
     },
     pt: function () {
         return c;
@@ -77,10 +77,10 @@ function I(t) {
 function R(t) {
     return 'undefined' != typeof Event && d(t, Event);
 }
-function u(t) {
+function T(t) {
     return 'undefined' != typeof Element && d(t, Element);
 }
-function T(t) {
+function u(t) {
     return a(t, 'RegExp');
 }
 function l(t) {

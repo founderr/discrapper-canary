@@ -63,20 +63,20 @@ function R() {
         }(t);
     }
 }
-function u(t, e) {
+function T(t, e) {
     this.fun = t, this.array = e;
 }
-function T() {
+function u() {
 }
 _.nextTick = function (t) {
     var e = Array(arguments.length - 1);
     if (arguments.length > 1)
         for (var r = 1; r < arguments.length; r++)
             e[r - 1] = arguments[r];
-    E.push(new u(t, e)), 1 === E.length && !s && o(R);
-}, u.prototype.run = function () {
+    E.push(new T(t, e)), 1 === E.length && !s && o(R);
+}, T.prototype.run = function () {
     this.fun.apply(null, this.array);
-}, _.title = 'browser', _.browser = !0, _.env = {}, _.argv = [], _.version = '', _.versions = {}, _.on = T, _.addListener = T, _.once = T, _.off = T, _.removeListener = T, _.removeAllListeners = T, _.emit = T, _.prependListener = T, _.prependOnceListener = T, _.listeners = function (t) {
+}, _.title = 'browser', _.browser = !0, _.env = {}, _.argv = [], _.version = '', _.versions = {}, _.on = u, _.addListener = u, _.once = u, _.off = u, _.removeListener = u, _.removeAllListeners = u, _.emit = u, _.prependListener = u, _.prependOnceListener = u, _.listeners = function (t) {
     return [];
 }, _.binding = function (t) {
     throw Error('process.binding is not supported');

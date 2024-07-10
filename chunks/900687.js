@@ -1,14 +1,14 @@
-i.d(n, {
+n.d(i, {
     Z: function () {
         return u;
     }
 });
-var l = i(735250);
-i(470079);
-var s = i(481060), o = i(239091), t = i(785717), a = i(705556), r = i(225714), d = i(228168), c = i(984904);
+var l = n(735250);
+n(470079);
+var s = n(481060), t = n(239091), o = n(785717), a = n(705556), r = n(225714), d = n(228168), c = n(984904);
 function u(e) {
     let {
-            user: n,
+            user: i,
             isCurrentUser: u,
             guildId: I,
             friendToken: f,
@@ -19,12 +19,12 @@ function u(e) {
             activeInviteToCallCtaEnabled: v = !1,
             viewProfileItem: S,
             onClose: x
-        } = e, {trackUserProfileAction: h} = (0, t.KZ)();
+        } = e, {trackUserProfileAction: h} = (0, o.KZ)();
     return (0, l.jsxs)('div', {
         className: c.buttons,
         children: [
             (0, l.jsx)(r.Z, {
-                user: n,
+                user: i,
                 isCurrentUser: u,
                 relationshipType: _,
                 improvedFriendingEnabled: m,
@@ -34,22 +34,22 @@ function u(e) {
                 onClose: x
             }),
             (0, l.jsx)(a.Z, {
-                user: n,
+                user: i,
                 guildId: I,
                 profileType: d.y0.FULL_SIZE,
                 onClose: x
             }),
-            !n.isNonUserBot() && E ? (0, l.jsx)(s.Clickable, {
+            !i.isNonUserBot() && E ? (0, l.jsx)(s.Clickable, {
                 focusProps: { offset: { left: 8 } },
                 onClick: function (e) {
-                    h({ action: 'PRESS_OPTIONS' }), (0, o.jW)(e, async () => {
-                        let {default: e} = await i.e('29136').then(i.bind(i, 193646));
-                        return i => (0, l.jsx)(e, {
-                            ...i,
+                    h({ action: 'PRESS_OPTIONS' }), (0, t.jW)(e, async () => {
+                        let {default: e} = await n.e('29136').then(n.bind(n, 193646));
+                        return n => (0, l.jsx)(e, {
+                            ...n,
                             originalFriendingEnabled: E,
                             relationshipType: _,
                             viewProfileItem: S,
-                            user: n,
+                            user: i,
                             isCurrentUser: u,
                             guildId: I,
                             trackUserProfileAction: h,

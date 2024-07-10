@@ -9,7 +9,7 @@ r.d(e, {
 var n = r(46834), _ = r(868145), a = r(880803), i = r(529866), o = r(862315), E = r(24716), s = r(741900);
 class c {
     constructor() {
-        this._notifyingListeners = !1, this._scopeListeners = [], this._eventProcessors = [], this._breadcrumbs = [], this._attachments = [], this._user = {}, this._tags = {}, this._extra = {}, this._contexts = {}, this._sdkProcessingMetadata = {}, this._propagationContext = u();
+        this._notifyingListeners = !1, this._scopeListeners = [], this._eventProcessors = [], this._breadcrumbs = [], this._attachments = [], this._user = {}, this._tags = {}, this._extra = {}, this._contexts = {}, this._sdkProcessingMetadata = {}, this._propagationContext = T();
     }
     static clone(t) {
         let e = new c();
@@ -113,7 +113,7 @@ class c {
         }, t.user && (this._user = t.user), t.level && (this._level = t.level), t.fingerprint && (this._fingerprint = t.fingerprint), t.requestSession && (this._requestSession = t.requestSession), t.propagationContext && (this._propagationContext = t.propagationContext)), this;
     }
     clear() {
-        return this._breadcrumbs = [], this._tags = {}, this._extra = {}, this._user = {}, this._contexts = {}, this._level = void 0, this._transactionName = void 0, this._fingerprint = void 0, this._requestSession = void 0, this._span = void 0, this._session = void 0, this._notifyScopeListeners(), this._attachments = [], this._propagationContext = u(), this;
+        return this._breadcrumbs = [], this._tags = {}, this._extra = {}, this._user = {}, this._contexts = {}, this._level = void 0, this._transactionName = void 0, this._fingerprint = void 0, this._requestSession = void 0, this._span = void 0, this._session = void 0, this._notifyScopeListeners(), this._attachments = [], this._propagationContext = T(), this;
     }
     addBreadcrumb(t, e) {
         let r = 'number' == typeof e ? e : 100;
@@ -224,7 +224,7 @@ function I() {
 function R(t) {
     I().push(t);
 }
-function u() {
+function T() {
     return {
         traceId: (0, o.DM)(),
         spanId: (0, o.DM)().substring(16),

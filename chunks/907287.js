@@ -8,9 +8,9 @@ t.exports = function (t, e, r, a, i, o) {
         if (!(E ? R in e : _.call(e, R)))
             return !1;
     }
-    var u = o.get(t), T = o.get(e);
-    if (u && T)
-        return u == e && T == t;
+    var T = o.get(t), u = o.get(e);
+    if (T && u)
+        return T == e && u == t;
     var l = !0;
     o.set(t, e), o.set(e, t);
     for (var A = E; ++I < c;) {

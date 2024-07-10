@@ -40,22 +40,22 @@ function c(t) {
     if (!e)
         return t;
     ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && _.kg.log(`[Profiling] started profiling transaction: ${ t.name || t.description }`);
-    let u = (0, a.DM)();
-    async function T() {
+    let T = (0, a.DM)();
+    async function u() {
         if (!t || !e)
             return null;
         let r = t.startChild({
             description: 'profiler.stop',
             op: 'profiler'
         });
-        return e.stop().then(e => (r.finish(), l && (i.m9.clearTimeout(l), l = void 0), ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && _.kg.log(`[Profiling] stopped profiling of transaction: ${ t.name || t.description }`), e) ? ((0, o.M$)(u, e), null) : (('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && _.kg.log(`[Profiling] profiler returned null profile for: ${ t.name || t.description }`, 'this may indicate an overlapping transaction or a call to stopProfiling with a profile title that was never started'), null)).catch(t => (r.finish(), ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && _.kg.log('[Profiling] error while stopping profiler:', t), null));
+        return e.stop().then(e => (r.finish(), l && (i.m9.clearTimeout(l), l = void 0), ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && _.kg.log(`[Profiling] stopped profiling of transaction: ${ t.name || t.description }`), e) ? ((0, o.M$)(T, e), null) : (('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && _.kg.log(`[Profiling] profiler returned null profile for: ${ t.name || t.description }`, 'this may indicate an overlapping transaction or a call to stopProfiling with a profile title that was never started'), null)).catch(t => (r.finish(), ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && _.kg.log('[Profiling] error while stopping profiler:', t), null));
     }
     let l = i.m9.setTimeout(() => {
-            ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && _.kg.log('[Profiling] max profile duration elapsed, stopping profiling for:', t.name || t.description), T();
+            ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && _.kg.log('[Profiling] max profile duration elapsed, stopping profiling for:', t.name || t.description), u();
         }, 30000), A = t.finish.bind(t);
     return t.finish = function () {
-        return t ? (T().then(() => {
-            t.setContext('profile', { profile_id: u }), A();
+        return t ? (u().then(() => {
+            t.setContext('profile', { profile_id: T }), A();
         }, () => {
             A();
         }), t) : A();

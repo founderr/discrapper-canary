@@ -17,10 +17,10 @@ function I(e) {
             giftMessage: P,
             analyticsLocations: j,
             returnRef: O
-        } = e, {analyticsLocations: Z} = (0, c.ZP)([
+        } = e, {analyticsLocations: B} = (0, c.ZP)([
             ...j,
             l.Z.COLLECTIBLES_PAYMENT_MODAL
-        ]), B = a.useRef(new s.qA()), [k, w] = a.useState(null), [R, M] = a.useState(!1), L = a.useMemo(() => (0, h.UY)(A), [A]), D = a.useCallback(() => {
+        ]), Z = a.useRef(new s.qA()), [k, w] = a.useState(null), [R, M] = a.useState(!1), L = a.useMemo(() => (0, h.UY)(A), [A]), D = a.useCallback(() => {
             M(!0), null == t || t();
         }, [t]), G = a.useCallback(e => {
             M(!1), n(e);
@@ -35,7 +35,7 @@ function I(e) {
                 renderStep: e => (0, i.jsx)(C.x, {
                     ...e,
                     confettiCanvas: k,
-                    analyticsLocations: Z,
+                    analyticsLocations: B,
                     hideConfetti: null != L
                 }),
                 options: {
@@ -44,17 +44,17 @@ function I(e) {
                 }
             }
         ], [
-            Z,
+            B,
             k,
             L
         ]);
     return (0, i.jsxs)(c.Gt, {
-        value: Z,
+        value: B,
         children: [
             (0, i.jsx)(s.O_, {
                 ref: w,
                 className: T.confettiCanvas,
-                environment: B.current
+                environment: Z.current
             }),
             null != L && (0, i.jsx)('img', {
                 src: L.confettiAssetSrc,
@@ -81,7 +81,7 @@ function I(e) {
                         applicationId: v.XAJ,
                         skuId: A,
                         initialPlanId: null,
-                        analyticsLocations: Z,
+                        analyticsLocations: B,
                         transitionState: I,
                         renderHeader: (e, n, t) => N ? (0, i.jsx)(m.Z, {
                             step: t,

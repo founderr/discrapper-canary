@@ -3,7 +3,7 @@ r.d(e, {
         return N;
     }
 });
-var n = r(177668), _ = r(529866), a = r(862315), i = r(46834), o = r(880803), E = r(50074), s = r(303155), c = r(507506), I = r(419767), R = r(595208), u = r(741900), T = r(154405), l = r(392405);
+var n = r(177668), _ = r(529866), a = r(862315), i = r(46834), o = r(880803), E = r(50074), s = r(303155), c = r(507506), I = r(419767), R = r(595208), T = r(741900), u = r(154405), l = r(392405);
 let A = 'Not capturing exception because it\'s already been captured.';
 class N {
     __init() {
@@ -62,7 +62,7 @@ class N {
             ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && _.kg.warn('SDK not enabled, will not capture session.');
             return;
         }
-        'string' != typeof t.release ? ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && _.kg.warn('Discarded session because of missing or non-string release') : (this.sendSession(t), (0, u.CT)(t, { init: !1 }));
+        'string' != typeof t.release ? ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && _.kg.warn('Discarded session because of missing or non-string release') : (this.sendSession(t), (0, T.CT)(t, { init: !1 }));
     }
     getDsn() {
         return this._dsn;
@@ -137,7 +137,7 @@ class N {
                 }
             }
         let a = 'ok' === t.status;
-        (a && 0 === t.errors || a && r) && ((0, u.CT)(t, {
+        (a && 0 === t.errors || a && r) && ((0, T.CT)(t, {
             ...r && { status: 'crashed' },
             errors: t.errors || Number(n || r)
         }), this.captureSession(t));
@@ -173,7 +173,7 @@ class N {
                     },
                     ...t.contexts
                 };
-                let o = i || (0, T._)(n, this, r);
+                let o = i || (0, u._)(n, this, r);
                 t.sdkProcessingMetadata = {
                     dynamicSamplingContext: o,
                     ...t.sdkProcessingMetadata

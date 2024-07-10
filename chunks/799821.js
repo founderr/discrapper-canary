@@ -13,7 +13,7 @@ r.d(e, {
         return D;
     }
 });
-var a = r(147816), i = r(868145), o = r(829919), E = r(529866), s = r(607190), c = r(540161), I = r(282572), R = r(301072), u = r(233863), T = r(544457), l = r(72609);
+var a = r(147816), i = r(868145), o = r(829919), E = r(529866), s = r(607190), c = r(540161), I = r(282572), R = r(301072), T = r(233863), u = r(544457), l = r(72609);
 function A(t) {
     return t / 1000;
 }
@@ -65,7 +65,7 @@ function p() {
     return () => void 0;
 }
 function S() {
-    (0, T.N)('longtask', t => {
+    (0, u.N)('longtask', t => {
         for (let e of t) {
             let t = (0, a.x1)();
             if (!t)
@@ -81,7 +81,7 @@ function S() {
     });
 }
 function D() {
-    (0, T.N)('event', t => {
+    (0, u.N)('event', t => {
         for (let e of t) {
             let t = (0, a.x1)();
             if (!t)
@@ -146,7 +146,7 @@ function f(t) {
                                 startTimestamp: a
                             });
                         }(t, n, _, a, c));
-                        let e = (0, u.Y)(), r = n.startTime < e.firstHiddenTime;
+                        let e = (0, T.Y)(), r = n.startTime < e.firstHiddenTime;
                         'first-paint' === n.name && r && (('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && E.kg.log('[Measurements] Adding FP'), O.fp = {
                             value: n.startTime,
                             unit: 'millisecond'

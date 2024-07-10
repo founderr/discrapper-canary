@@ -22,7 +22,7 @@ function o(t, e = 100, o = Infinity) {
                     'string'
                 ].includes(typeof o) && !(0, n.i2)(o))
                 return o;
-            let u = function (t, e) {
+            let T = function (t, e) {
                 try {
                     if ('domain' === t && e && 'object' == typeof e && e._events)
                         return '[Domain]';
@@ -55,19 +55,19 @@ function o(t, e = 100, o = Infinity) {
                     return `**non-serializable** (${ t })`;
                 }
             }(e, o);
-            if (!u.startsWith('[object '))
-                return u;
+            if (!T.startsWith('[object '))
+                return T;
             if (o.__sentry_skip_normalization__)
                 return o;
-            let T = 'number' == typeof o.__sentry_override_normalization_depth__ ? o.__sentry_override_normalization_depth__ : E;
-            if (0 === T)
-                return u.replace('object ', '');
+            let u = 'number' == typeof o.__sentry_override_normalization_depth__ ? o.__sentry_override_normalization_depth__ : E;
+            if (0 === u)
+                return T.replace('object ', '');
             if (I(o))
                 return '[Circular ~]';
             if (o && 'function' == typeof o.toJSON)
                 try {
                     let e = o.toJSON();
-                    return t('', e, T - 1, s, c);
+                    return t('', e, u - 1, s, c);
                 } catch (t) {
                 }
             let l = Array.isArray(o) ? [] : {}, A = 0, N = (0, a.Sh)(o);
@@ -79,7 +79,7 @@ function o(t, e = 100, o = Infinity) {
                     break;
                 }
                 let r = N[e];
-                l[e] = t(e, r, T - 1, s, c), A++;
+                l[e] = t(e, r, u - 1, s, c), A++;
             }
             return R(o), l;
         }('', t, e, o);
