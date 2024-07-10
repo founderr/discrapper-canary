@@ -41,7 +41,7 @@ function c(e) {
                 d({ action: 'VIDEO_CALL' }), null == n || n();
             }
         });
-    return (0, r.jsx)(i.Popout, {
+    return t.bot ? null : (0, r.jsx)(i.Popout, {
         position: 'bottom',
         renderPopout: e => {
             let {closePopout: t} = e;

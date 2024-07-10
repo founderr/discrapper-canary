@@ -1,125 +1,123 @@
 i.d(n, {
     Z: function () {
-        return A;
+        return O;
     }
 }), i(47120);
 var s = i(735250);
 i(470079);
-var l = i(481060), o = i(100527), t = i(906732), r = i(5192), a = i(332390), d = i(877485), c = i(785717), u = i(318661), I = i(78675), _ = i(741308), f = i(899007), E = i(438163), m = i(681837), S = i(502762), Z = i(530), x = i(437758), v = i(544989), h = i(900687), p = i(616140), T = i(29530), g = i(228168), N = i(981631), C = i(689938), j = i(505451);
-function A(e) {
+var l = i(481060), o = i(100527), t = i(906732), r = i(5192), a = i(785717), d = i(318661), c = i(78675), u = i(741308), I = i(899007), _ = i(438163), f = i(681837), E = i(502762), m = i(530), S = i(645410), Z = i(437758), x = i(666665), v = i(544989), h = i(934861), p = i(616140), T = i(29530), g = i(228168), N = i(981631), C = i(689938), j = i(984904), A = i(505451);
+function O(e) {
     let {
             user: n,
             currentUser: i,
-            guildId: A,
-            channelId: U,
-            messageId: R,
-            roleId: O,
-            initialSection: M,
-            initialSubsection: L,
-            transitionState: P,
-            onClose: b,
-            sourceAnalyticsLocations: y = []
-        } = e, D = A === N.ME ? void 0 : A, F = (0, u.ZP)(n.id, D), {analyticsLocations: B} = (0, t.ZP)([
-            ...y,
+            guildId: O,
+            channelId: R,
+            messageId: U,
+            roleId: M,
+            initialSection: L,
+            initialSubsection: P,
+            transitionState: b,
+            onClose: y,
+            sourceAnalyticsLocations: D = []
+        } = e, F = O === N.ME ? void 0 : O, B = (0, d.ZP)(n.id, F), {analyticsLocations: G} = (0, t.ZP)([
+            ...D,
             o.Z.SIMPLIFIED_PROFILE_MODAL
-        ]), {
-            originalFriendingEnabled: G,
-            improvedFriendingEnabled: w
-        } = (0, d.V)({ location: 'UserBotProfileModal' }), {
-            persistentCallCtaEnabled: k,
-            activeInviteToCallCtaEnabled: V
-        } = (0, a.l)({ location: 'UserBotProfileModal' }), Y = (0, T.Z)(n);
+        ]), w = (0, T.Z)(n);
     return (0, s.jsx)(t.Gt, {
-        value: B,
-        children: (0, s.jsx)(c.Mt, {
+        value: G,
+        children: (0, s.jsx)(a.Mt, {
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
-            guildId: D,
-            channelId: U,
-            messageId: R,
-            roleId: O,
+            guildId: F,
+            channelId: R,
+            messageId: U,
+            roleId: M,
             showGuildProfile: !0,
             children: (0, s.jsx)(l.ModalRoot, {
-                transitionState: P,
-                className: j.root,
+                transitionState: b,
+                className: A.root,
                 hideShadow: !0,
                 'aria-label': C.Z.Messages.USER_PROFILE_MODAL,
-                children: (0, s.jsxs)(S.Z, {
+                children: (0, s.jsxs)(E.Z, {
                     user: n,
-                    displayProfile: F,
+                    displayProfile: B,
                     profileType: g.y0.FULL_SIZE,
                     children: [
                         (0, s.jsx)(v.Z, {
                             profileType: g.y0.FULL_SIZE,
-                            children: (0, s.jsx)(x.Z, {
+                            children: (0, s.jsx)(Z.Z, {
                                 user: n,
-                                guildId: D
+                                guildId: F
                             })
                         }),
                         (0, s.jsxs)('header', {
                             children: [
-                                (0, s.jsx)(I.Z, {
+                                (0, s.jsx)(c.Z, {
                                     user: n,
-                                    displayProfile: F,
+                                    displayProfile: B,
                                     profileType: g.y0.FULL_SIZE,
-                                    hasProfileEffect: (null == F ? void 0 : F.profileEffectId) != null
+                                    hasProfileEffect: (null == B ? void 0 : B.profileEffectId) != null
                                 }),
                                 (0, s.jsxs)('div', {
-                                    className: j.headerInner,
+                                    className: A.headerInner,
                                     children: [
-                                        (0, s.jsx)(f.Z, {
+                                        (0, s.jsx)(I.Z, {
                                             user: n,
-                                            displayProfile: F,
-                                            guildId: D,
-                                            channelId: U,
+                                            displayProfile: B,
+                                            guildId: F,
+                                            channelId: R,
                                             profileType: g.y0.FULL_SIZE
                                         }),
-                                        (0, s.jsx)(h.Z, {
-                                            user: n,
-                                            isCurrentUser: n.id === i.id,
-                                            guildId: D,
-                                            originalFriendingEnabled: G,
-                                            improvedFriendingEnabled: w,
-                                            persistentCallCtaEnabled: k,
-                                            activeInviteToCallCtaEnabled: V,
-                                            onClose: b
+                                        (0, s.jsxs)('div', {
+                                            className: j.buttons,
+                                            children: [
+                                                (0, s.jsx)(x.V, {
+                                                    user: n,
+                                                    guildId: F
+                                                }),
+                                                (0, s.jsx)(S.Z, { user: n }),
+                                                (0, s.jsx)(h.c, {
+                                                    userId: n.id,
+                                                    onClose: y
+                                                })
+                                            ]
                                         }),
-                                        (0, s.jsx)(E.Z, {
+                                        (0, s.jsx)(_.Z, {
                                             user: n,
                                             profileType: g.y0.FULL_SIZE,
-                                            hasEntered: P === l.ModalTransitionState.ENTERED,
-                                            onClose: b
+                                            hasEntered: b === l.ModalTransitionState.ENTERED,
+                                            onClose: y
                                         })
                                     ]
                                 })
                             ]
                         }),
                         (0, s.jsxs)('div', {
-                            className: j.body,
+                            className: A.body,
                             children: [
-                                (0, s.jsx)(Z.Z, {
+                                (0, s.jsx)(m.Z, {
                                     user: n,
                                     profileType: g.y0.FULL_SIZE,
-                                    nickname: r.ZP.getName(D, U, n),
-                                    pronouns: null == F ? void 0 : F.pronouns,
+                                    nickname: r.ZP.getName(F, R, n),
+                                    pronouns: null == B ? void 0 : B.pronouns,
                                     nicknameVariant: 'heading-xl/bold',
-                                    nicknameIcons: (0, s.jsx)(m.Z, { userId: n.id }),
-                                    tags: (0, s.jsx)(_.Z, {
-                                        displayProfile: F,
+                                    nicknameIcons: (0, s.jsx)(f.Z, { userId: n.id }),
+                                    tags: (0, s.jsx)(u.Z, {
+                                        displayProfile: B,
                                         profileType: g.y0.FULL_SIZE,
-                                        onClose: b
+                                        onClose: y
                                     })
                                 }),
-                                (0, s.jsx)(S.Z.Overlay, {
-                                    className: j.overlay,
+                                (0, s.jsx)(E.Z.Overlay, {
+                                    className: A.overlay,
                                     children: (0, s.jsx)(p.Z, {
                                         user: n,
                                         currentUser: i,
-                                        displayProfile: F,
-                                        items: Y,
-                                        initialSection: null != M ? M : g.oh.BOT_INFO,
-                                        initialSubsection: L,
-                                        onClose: b
+                                        displayProfile: B,
+                                        items: w,
+                                        initialSection: null != L ? L : g.oh.BOT_INFO,
+                                        initialSubsection: P,
+                                        onClose: y
                                     })
                                 })
                             ]

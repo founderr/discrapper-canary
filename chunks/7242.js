@@ -16,7 +16,7 @@ function T(e) {
             var e;
             return _.Z.getChannel(null === (e = f.Z.getVoiceStateForUser(T)) || void 0 === e ? void 0 : e.channelId);
         }), S = null == g ? void 0 : g.isPrivate(), A = (0, o.e7)([E.Z], () => E.Z.can(p.Plq.CREATE_INSTANT_INVITE, g));
-    if (null == g || S || !A)
+    if (null == g || S || !A || t.bot)
         return null;
     let N = async () => {
         await u.Z.createInvite(null == g ? void 0 : g.id, {

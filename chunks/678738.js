@@ -26,6 +26,7 @@ function u(e) {
             (0, r.jsx)(o.Heading, {
                 variant: 'text-xs/semibold',
                 color: c,
+                className: l.heading,
                 children: t
             }),
             n
