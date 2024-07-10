@@ -2,6 +2,9 @@ n.d(t, {
     AC: function () {
         return en;
     },
+    Cb: function () {
+        return Y;
+    },
     Cw: function () {
         return X;
     },
@@ -26,6 +29,9 @@ n.d(t, {
     GR: function () {
         return U;
     },
+    Gv: function () {
+        return Z;
+    },
     IF: function () {
         return V;
     },
@@ -40,9 +46,6 @@ n.d(t, {
     },
     MO: function () {
         return b;
-    },
-    N4: function () {
-        return Y;
     },
     NC: function () {
         return Q;
@@ -61,9 +64,6 @@ n.d(t, {
     },
     S4: function () {
         return a;
-    },
-    SL: function () {
-        return Z;
     },
     Si: function () {
         return J;
@@ -144,12 +144,15 @@ let O = 160, R = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=
         B,
         W,
         G,
+        '1050941609774166066',
         j,
         Y,
+        '1050941416555151461',
         Q,
         M,
         '1194351737264406548',
         w,
+        '1050941472389734400',
         '1245041113882955918',
         '1245040907732910201',
         '1245040436427489471',
