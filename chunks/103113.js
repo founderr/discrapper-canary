@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     }
 }), n(47120);
-var r = n(735250), i = n(470079), a = n(481060), o = n(727637), s = n(100527), l = n(906732), u = n(580552), c = n(680295), d = n(5192), _ = n(785717), E = n(318661), f = n(78675), h = n(741308), p = n(588822), m = n(502762), I = n(530), T = n(256059), g = n(679332), S = n(544989), A = n(171368), N = n(513099), v = n(228168), O = n(689938), R = n(335182);
+var r = n(735250), i = n(470079), a = n(481060), o = n(727637), s = n(100527), l = n(906732), u = n(580552), c = n(680295), d = n(5192), _ = n(785717), E = n(318661), f = n(78675), h = n(741308), p = n(588822), m = n(899007), I = n(502762), T = n(530), g = n(256059), S = n(679332), A = n(544989), N = n(171368), v = n(228168), O = n(689938), R = n(335182);
 function C(e) {
     let {
             user: t,
@@ -33,7 +33,7 @@ function C(e) {
         L
     ]);
     let B = () => {
-            null == b || b(), (0, A.openUserProfileModal)({
+            null == b || b(), (0, N.openUserProfileModal)({
                 sourceAnalyticsLocations: w,
                 userId: t.id,
                 guildId: n,
@@ -55,14 +55,14 @@ function C(e) {
                 ref: G,
                 'aria-label': t.username,
                 children: [
-                    (0, r.jsxs)(m.Z, {
+                    (0, r.jsxs)(I.Z, {
                         user: t,
                         displayProfile: U,
                         profileType: v.y0.BITE_SIZE,
                         children: [
-                            (0, r.jsx)(S.Z, {
+                            (0, r.jsx)(A.Z, {
                                 profileType: v.y0.BITE_SIZE,
-                                children: (0, r.jsx)(g.Z, {
+                                children: (0, r.jsx)(S.Z, {
                                     user: t,
                                     viewProfileItem: F ? (0, r.jsx)(a.MenuItem, {
                                         id: 'view-profile',
@@ -86,21 +86,22 @@ function C(e) {
                                         profileType: v.y0.BITE_SIZE,
                                         hasProfileEffect: (null == U ? void 0 : U.profileEffectId) != null
                                     }),
-                                    (0, r.jsx)(N.Z, {
+                                    (0, r.jsx)(m.Z, {
                                         user: t,
                                         displayProfile: U,
                                         guildId: n,
                                         channelId: C,
+                                        profileType: v.y0.BITE_SIZE,
                                         onOpenProfile: F ? B : void 0
                                     }),
-                                    (0, r.jsx)(T.Z, { user: t })
+                                    (0, r.jsx)(g.Z, { user: t })
                                 ]
                             }),
                             (0, r.jsxs)(a.Scroller, {
                                 fade: !0,
                                 className: R.body,
                                 children: [
-                                    (0, r.jsx)(I.Z, {
+                                    (0, r.jsx)(T.Z, {
                                         user: t,
                                         profileType: v.y0.BITE_SIZE,
                                         nickname: d.ZP.getName(n, C, t),
