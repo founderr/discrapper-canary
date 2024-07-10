@@ -28,22 +28,12 @@ function _(e) {
                             className: c.heroImage
                         })
                     }),
-                    (0, s.jsxs)('div', {
+                    (0, s.jsx)('div', {
                         className: c.headerWrapper,
-                        children: [
-                            (0, s.jsx)(n.Heading, {
-                                variant: 'heading-xl/bold',
-                                children: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_HEADER
-                            }),
-                            (0, s.jsx)('div', {
-                                className: c.betaTag,
-                                children: (0, s.jsx)(n.Text, {
-                                    variant: 'text-xs/semibold',
-                                    color: 'always-white',
-                                    children: l.Z.Messages.BETA
-                                })
-                            })
-                        ]
+                        children: (0, s.jsx)(n.Heading, {
+                            variant: 'heading-xl/bold',
+                            children: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_HEADER
+                        })
                     })
                 ]
             }),
@@ -58,7 +48,7 @@ function _(e) {
                                 color: 'header-secondary',
                                 children: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_DESCRIPTION
                             }),
-                            (0, s.jsx)(m, {})
+                            (0, s.jsx)(N, {})
                         ]
                     }),
                     (0, s.jsxs)('div', {
@@ -87,7 +77,7 @@ function _(e) {
         ]
     });
 }
-let m = () => {
+let N = () => {
     let e = [
         {
             icon: (0, s.jsx)(n.FriendsIcon, { className: c.icon }),

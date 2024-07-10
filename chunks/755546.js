@@ -2,7 +2,6 @@ e.exports = {
     modalRoot: 'modalRoot_fd9982',
     modalHeader: 'modalHeader_fd9982',
     headerWrapper: 'headerWrapper_fd9982',
-    betaTag: 'betaTag_fd9982',
     imageFrame: 'imageFrame_fd9982',
     heroImage: 'heroImage_fd9982',
     modalContent: 'modalContent_fd9982',
