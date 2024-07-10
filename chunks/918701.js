@@ -678,7 +678,8 @@ function eM(e, t) {
         questContent: t.content,
         questContentPosition: t.position,
         questContentCTA: t.ctaContent
-    }), d.Z.open(R.oAB.CONNECTIONS);
+    });
+    d.Z.open(R.oAB.CONNECTIONS);
 }
 function eP() {
     return window.location.pathname.startsWith(R.Z5c.QUEST_HOME);

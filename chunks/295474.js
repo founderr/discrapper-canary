@@ -60,7 +60,8 @@ function f(e) {
             if (null == m)
                 return;
             let e = I.oAB.PROFILE_CUSTOMIZATION, t = T.NB.GUILD;
-            h ? (0, l.Fq)(m, null != c ? c : E) : t = T.NB.USER_PROFILE, s.Z.open(e, t, {
+            h ? (0, l.Fq)(m, null != c ? c : E) : t = T.NB.USER_PROFILE;
+            s.Z.open(e, t, {
                 scrollPosition: n,
                 analyticsLocation: o,
                 analyticsLocations: c,

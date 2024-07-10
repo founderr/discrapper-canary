@@ -15,11 +15,12 @@ function u() {
             openWithoutBackstack: c
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, {analyticsLocations: d} = (0, a.ZP)();
     return (0, r.useCallback)(() => {
-        null != e && (0, o.Fq)(e, null != u ? u : d), i.Z.open(s.oAB.PROFILE_CUSTOMIZATION, null != e ? l.NB.GUILD : l.NB.USER_PROFILE, {
-            scrollPosition: t,
+        null != e && (0, o.Fq)(e, null != u ? u : d);
+        i.Z.open(s.oAB.PROFILE_CUSTOMIZATION, null != e ? l.NB.GUILD : l.NB.USER_PROFILE, {
             analyticsLocation: n,
             analyticsLocations: u,
-            openWithoutBackstack: c
+            openWithoutBackstack: c,
+            scrollPosition: t
         });
     }, [
         e,

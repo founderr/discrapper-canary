@@ -1,8 +1,18 @@
-var r = n(544891), i = n(433517), a = n(570140), o = n(443684), s = n(663389), l = n(626135), u = n(768581), c = n(546796), d = n(981631), _ = n(792101), E = n(689938);
+var r = n(544891), i = n(433517), a = n(570140);
+n(773399);
+var o = n(663389), s = n(626135), l = n(768581), u = n(546796);
+n(960048);
+var c = n(37234), d = n(981631), _ = n(792101), E = n(689938);
 t.Z = {
     open() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null, t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { openWithoutBackstack: !1 };
-        (0, o.Z)(e, t, n);
+        a.Z.dispatch({
+            type: 'USER_SETTINGS_MODAL_OPEN',
+            section: e,
+            subsection: t,
+            ...n
+        });
+        (0, c.jN)(d.S9g.USER_SETTINGS);
     },
     init: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, n = arguments.length > 2 ? arguments[2] : void 0;
@@ -14,7 +24,7 @@ t.Z = {
         });
     },
     close() {
-        let e = s.Z.onClose;
+        let e = o.Z.onClose;
         a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }), null != e && e();
     },
     setSection(e) {
@@ -55,26 +65,26 @@ t.Z = {
         let {
                 username: n,
                 email: o,
-                emailToken: s,
+                emailToken: c,
                 password: f,
                 avatar: h,
                 newPassword: p,
                 discriminator: m
             } = e, {close: I} = t;
-        return (0, c.Z)(e => {
+        return (0, u.Z)(e => {
             let t = {
                     username: n,
                     email: o,
-                    email_token: s,
+                    email_token: c,
                     password: f,
                     avatar: h,
                     new_password: p,
                     ...e,
                     discriminator: null != m && '' !== m ? m : void 0
-                }, a = i.K.get(d.JkL), l = (0, _.xJ)();
-            null != l && null != a && (t.push_provider = l, t.push_token = a);
-            let u = i.K.get(d.scU);
-            return null != _.mv && null != u && (t.push_voip_provider = _.mv, t.push_voip_token = u), r.tn.patch({
+                }, a = i.K.get(d.JkL), s = (0, _.xJ)();
+            null != s && null != a && (t.push_provider = s, t.push_token = a);
+            let l = i.K.get(d.scU);
+            return null != _.mv && null != l && (t.push_voip_provider = _.mv, t.push_voip_token = l), r.tn.patch({
                 url: d.ANM.ME,
                 oldFormErrors: !0,
                 body: t
@@ -90,7 +100,7 @@ t.Z = {
             }
         }).then(e => {
             let t = e.body, n = t.token;
-            return l.default.track(d.rMx.USER_AVATAR_UPDATED, { animated: (0, u.xR)(t.avatar) }), delete t.token, a.Z.dispatch({
+            return s.default.track(d.rMx.USER_AVATAR_UPDATED, { animated: (0, l.xR)(t.avatar) }), delete t.token, a.Z.dispatch({
                 type: 'UPDATE_TOKEN',
                 token: n,
                 userId: t.id
