@@ -46,6 +46,12 @@ class f extends s.Z {
     senderSupportsSimulcast() {
         return this.videoStreams.length > 1;
     }
+    onClientConnect(e) {
+        e.forEach(e => this.otherUsers.add(e)), this.update();
+    }
+    onClientDisconnect(e) {
+        this.otherUsers.delete(e), this.update();
+    }
     update() {
         if (void 0 === this.userId || null === this.userId)
             return;
@@ -62,6 +68,9 @@ class f extends s.Z {
     }
     isDowngradeChangeAllowed(e) {
         return !this.throttleDowngradeChanges || void 0 === this.lastDowngradeChangeTime || (e ? Date.now() - this.lastDowngradeChangeTime >= E : Date.now() - this.lastDowngradeChangeTime >= _);
+    }
+    isOneToOneCall() {
+        return 1 === this.otherUsers.size;
     }
     getQualityConfig() {
         let e = o().minBy(this.videoStreams, e => e.quality), t = o().maxBy(this.videoStreams, e => e.quality);
@@ -81,7 +90,7 @@ class f extends s.Z {
                 t.ssrc,
                 100
             ];
-        if (this.debugQualityOverride === c.Z.HIGH)
+        if (this.debugQualityOverride === c.Z.HIGH || this.isOneToOneCall())
             return [
                 t.ssrc,
                 100,
@@ -104,7 +113,7 @@ class f extends s.Z {
             ];
     }
     constructor(e) {
-        super(), d(this, 'supportsSeamless', void 0), d(this, 'userId', void 0), d(this, 'videoStreams', void 0), d(this, 'audioSSRC', void 0), d(this, 'downgraded', void 0), d(this, 'debugQualityOverride', void 0), d(this, 'pendingSSRC', void 0), d(this, 'everReceivedFrame', void 0), d(this, 'pendingSSRCReceived', void 0), d(this, 'throttleDowngradeChanges', void 0), d(this, 'lastDowngradeChangeTime', void 0), this.supportsSeamless = e, this.videoStreams = [], this.audioSSRC = 0, this.downgraded = !1, this.debugQualityOverride = c.Z.NO_OVERRIDE, this.pendingSSRC = -1, this.everReceivedFrame = !1, this.pendingSSRCReceived = !1, this.throttleDowngradeChanges = !0, this.lastDowngradeChangeTime = void 0, l.Z.subscribe(() => {
+        super(), d(this, 'supportsSeamless', void 0), d(this, 'userId', void 0), d(this, 'videoStreams', void 0), d(this, 'audioSSRC', void 0), d(this, 'downgraded', void 0), d(this, 'debugQualityOverride', void 0), d(this, 'pendingSSRC', void 0), d(this, 'everReceivedFrame', void 0), d(this, 'pendingSSRCReceived', void 0), d(this, 'throttleDowngradeChanges', void 0), d(this, 'lastDowngradeChangeTime', void 0), d(this, 'otherUsers', void 0), this.supportsSeamless = e, this.videoStreams = [], this.audioSSRC = 0, this.downgraded = !1, this.debugQualityOverride = c.Z.NO_OVERRIDE, this.pendingSSRC = -1, this.everReceivedFrame = !1, this.pendingSSRCReceived = !1, this.throttleDowngradeChanges = !0, this.lastDowngradeChangeTime = void 0, this.otherUsers = new Set(), l.Z.subscribe(() => {
             this.update();
         });
     }

@@ -667,14 +667,15 @@ class er extends d.Z {
         };
     }
     _handleClientConnect(e) {
-        e.forEach(e => this._userIds.add(e)), this.emit(Z.z.ClientConnect, e);
+        var t;
+        e.forEach(e => this._userIds.add(e)), this.emit(Z.z.ClientConnect, e), null === (t = this._goLiveQualityManager) || void 0 === t || t.onClientConnect(e);
     }
     _handleClientDisconnect(e) {
-        var t, n, r;
-        let i = this._videoQuality;
-        if (null != i && this.context === J.Yn.DEFAULT) {
-            let t = i.getInboundStats(e), a = null !== (n = null == t ? void 0 : t.num_frames) && void 0 !== n ? n : 0;
-            null != t && a > 0 && (k.default.track($.rMx.VIDEO_STREAM_ENDED, {
+        var t, n, r, i;
+        let a = this._videoQuality;
+        if (null != a && this.context === J.Yn.DEFAULT) {
+            let t = a.getInboundStats(e), n = null !== (r = null == t ? void 0 : t.num_frames) && void 0 !== r ? r : 0;
+            null != t && n > 0 && (k.default.track($.rMx.VIDEO_STREAM_ENDED, {
                 ...this._getAnalyticsProperties(),
                 media_session_id: this.getMediaSessionId(),
                 sender_user_id: e,
@@ -684,12 +685,12 @@ class er extends d.Z {
                 hostname: this.hostname,
                 hardware_enabled: P.Z.getHardwareEncoding(),
                 ...t,
-                ...i.getNetworkStats(),
-                ...i.getCodecUsageStats('receiver', e)
-            }), i.destroyUser(e), null === (r = this._videoHealthManager) || void 0 === r || r.deleteUser(e));
+                ...a.getNetworkStats(),
+                ...a.getCodecUsageStats('receiver', e)
+            }), a.destroyUser(e), null === (i = this._videoHealthManager) || void 0 === i || i.deleteUser(e));
         }
-        let a = this._connection;
-        null != a && a.destroyUser(e), null === (t = this._localMediaSinkWantsManager) || void 0 === t || t.destroyUser(e), this._userIds.delete(e), this.emit(Z.z.ClientDisconnect, e);
+        let o = this._connection;
+        null != o && o.destroyUser(e), null === (t = this._localMediaSinkWantsManager) || void 0 === t || t.destroyUser(e), this._userIds.delete(e), this.emit(Z.z.ClientDisconnect, e), null === (n = this._goLiveQualityManager) || void 0 === n || n.onClientDisconnect(e);
     }
     _handleCodecs(e, t) {
         let n = this._connection;
