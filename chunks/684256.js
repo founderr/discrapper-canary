@@ -11,8 +11,8 @@ function p(e) {
             title: p,
             look: _,
             items: E,
-            sectionName: A
-        } = e, {clickOnHomeActivityOpensAppDetail: N} = s.m1.getCurrentConfig({ location: 'AppLauncherApplicationListViewScreen' }, { autoTrackExposure: !1 }), h = l.useMemo(() => t === o._b.TEXT ? c.kA : c.qR, [t]);
+            sectionName: h
+        } = e, {clickOnHomeActivityOpensAppDetail: A} = s.m1.getCurrentConfig({ location: 'AppLauncherApplicationListViewScreen' }, { autoTrackExposure: !1 }), N = l.useMemo(() => t === o._b.TEXT ? c.kA : c.qR, [t]);
     return (0, i.jsxs)('section', {
         className: m.container,
         'aria-label': d.Z.Messages.APP_LAUNCHER_SECTION_VIEW_MORE_ARIA_LABEL.format({ sectionTitle: p }),
@@ -36,15 +36,15 @@ function p(e) {
                             application: l,
                             isPartner: a
                         } = e;
-                        return (0, i.jsx)(h, {
+                        return (0, i.jsx)(N, {
                             channel: n,
                             application: l,
                             look: _,
                             isPartner: a,
-                            sectionName: A,
+                            sectionName: h,
                             resultsPosition: t,
                             location: r.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
-                            isOneClickCTA: N
+                            isOneClickCTA: A
                         }, l.id);
                     })
                 })

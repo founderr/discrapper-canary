@@ -14,19 +14,19 @@ function d(e) {
             searchResultsPosition: _
         } = e, {
             iconURL: E,
-            name: A,
-            description: N
+            name: h,
+            description: A
         } = l.useMemo(() => (0, r.sl)(d, {
             botIconFirst: !0,
             fakeAppIconURL: u
-        }), [d]), {trackSearchResultsItemImpressionRef: h} = (0, o.Z)({
+        }), [d]), {trackSearchResultsItemImpressionRef: N} = (0, o.Z)({
             applicationId: d.id,
             commandId: null == t ? void 0 : t.id,
             query: p,
             searchResultsPosition: _
         });
     return (0, i.jsxs)(a.Clickable, {
-        innerRef: e => h.current = e,
+        innerRef: e => N.current = e,
         className: c.container,
         onClick: m,
         children: [
@@ -42,13 +42,13 @@ function d(e) {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
                         lineClamp: 1,
-                        children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : A
+                        children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : h
                     }),
                     (0, i.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
                         lineClamp: 1,
-                        children: N
+                        children: A
                     })
                 ]
             }),
@@ -56,7 +56,7 @@ function d(e) {
                 className: c.cmdAppName,
                 variant: 'text-sm/normal',
                 color: 'text-secondary',
-                children: A
+                children: h
             }) : null,
             (0, i.jsx)('div', { className: c.underline })
         ]

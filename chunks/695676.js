@@ -3,15 +3,15 @@ t.d(n, {
         return l;
     },
     hH: function () {
-        return r;
+        return s;
     },
     uX: function () {
-        return s;
+        return r;
     }
 });
 var i, l, a = t(470079);
 (i = l || (l = {})).HOME = 'home', i.LIST = 'list', i.APPLICATION = 'application';
-let s = a.createContext({
+let r = a.createContext({
     history: [],
     discard: {},
     currentView: void 0,
@@ -21,6 +21,6 @@ let s = a.createContext({
     },
     getMostRecentHistoryItemByType: () => void 0
 });
-function r() {
-    return a.useContext(s);
+function s() {
+    return a.useContext(r);
 }

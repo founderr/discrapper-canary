@@ -1,6 +1,6 @@
 t.d(n, {
     $d: function () {
-        return A;
+        return h;
     },
     BQ: function () {
         return E;
@@ -12,16 +12,16 @@ t.d(n, {
         return C;
     },
     jD: function () {
-        return N;
+        return A;
     },
     sl: function () {
-        return I;
+        return v;
     },
     yJ: function () {
         return f;
     },
     ye: function () {
-        return h;
+        return N;
     }
 }), t(789020);
 var i = t(668781), l = t(904245), a = t(895924), r = t(667204), s = t(957730), o = t(973616), c = t(768581), u = t(630388), d = t(981631), m = t(689079), p = t(689938);
@@ -29,19 +29,19 @@ let _ = { id: m.bi.BUILT_IN };
 function E(e) {
     return e.id !== m.bi.BUILT_IN;
 }
-function A(e) {
+function h(e) {
     return E(e) ? e.name : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
 }
-function N(e) {
+function A(e) {
     return E(e) ? e.description : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
 }
-function h(e) {
+function N(e) {
     var n;
     let {application: t} = e;
     return E(t) && (0, u.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, d.udG.EMBEDDED);
 }
 function f(e) {
-    return E(e) && h({ application: e }) ? e instanceof o.Z ? e.embeddedActivityConfig : e.embedded_activity_config : null;
+    return E(e) && N({ application: e }) ? e instanceof o.Z ? e.embeddedActivityConfig : e.embedded_activity_config : null;
 }
 function C(e) {
     let {
@@ -78,7 +78,7 @@ function C(e) {
         };
     return _();
 }
-function I(e) {
+function v(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
             fakeAppIconURL: t,
             ...i

@@ -1,19 +1,19 @@
 t.d(n, {
     Z: function () {
-        return N;
+        return A;
     }
 });
-var i = t(735250), l = t(470079), a = t(780384), r = t(481060), s = t(410030), o = t(782568), c = t(63063), u = t(827498), d = t(888617), m = t(981631), p = t(689938), _ = t(720123), E = t(983008), A = t(478408);
-function N() {
-    let e = (0, s.ZP)(), n = (0, a.ap)(e) ? A : E, t = l.useCallback(() => {
+var i = t(735250), l = t(470079), a = t(780384), r = t(481060), s = t(410030), o = t(782568), c = t(63063), u = t(827498), d = t(888617), m = t(981631), p = t(689938), _ = t(720123), E = t(983008), h = t(478408);
+function A() {
+    let e = (0, s.ZP)(), n = (0, a.ap)(e) ? h : E, t = l.useCallback(() => {
             (0, o.Z)(c.Z.getArticleURL(m.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON));
-        }, []), {trackSectionImpressionRef: N} = (0, d.Z)({
+        }, []), {trackSectionImpressionRef: A} = (0, d.Z)({
             sectionName: u.L3.NEW_TO_APPS,
             numItems: 1,
             numVisibleItems: 1
         });
     return (0, i.jsxs)('div', {
-        ref: e => N.current = e,
+        ref: e => A.current = e,
         className: _.container,
         children: [
             (0, i.jsx)('img', {

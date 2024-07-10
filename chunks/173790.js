@@ -1,20 +1,20 @@
 t.d(n, {
     Z: function () {
-        return N;
+        return A;
     }
 });
-var i = t(735250), l = t(470079), a = t(218061), r = t(481060), s = t(361213), o = t(778569), c = t(783097), u = t(753972), d = t(387658), m = t(536650), p = t(675993), _ = t(689938), E = t(132439), A = t(413097);
-function N(e) {
+var i = t(735250), l = t(470079), a = t(218061), r = t(481060), s = t(361213), o = t(778569), c = t(783097), u = t(753972), d = t(387658), m = t(536650), p = t(675993), _ = t(689938), E = t(132439), h = t(413097);
+function A(e) {
     let {
             channel: n,
             application: t,
             sectionName: s
-        } = e, o = (0, c.ye)({ application: t }), N = o ? h : p.Z, f = l.useRef(null), {
+        } = e, o = (0, c.ye)({ application: t }), A = o ? N : p.Z, f = l.useRef(null), {
             iconURL: C,
-            name: I
+            name: v
         } = l.useMemo(() => (0, c.sl)(t, {
             botIconFirst: !o,
-            fakeAppIconURL: A,
+            fakeAppIconURL: h,
             size: 80
         }), [
             t,
@@ -25,10 +25,10 @@ function N(e) {
         fade: !0,
         ref: f,
         role: 'region',
-        'aria-label': _.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: I }),
+        'aria-label': _.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: v }),
         children: [
             (0, i.jsx)(m.Z, {
-                name: I,
+                name: v,
                 iconURL: C,
                 scrollerRef: f
             }),
@@ -38,7 +38,7 @@ function N(e) {
                 size: 80
             }),
             (0, i.jsx)(a.Z, { size: 54 }),
-            (0, i.jsx)(N, {
+            (0, i.jsx)(A, {
                 channel: n,
                 application: t,
                 sectionName: s
@@ -51,7 +51,7 @@ function N(e) {
         ]
     });
 }
-function h(e) {
+function N(e) {
     let {
             channel: n,
             application: t,
