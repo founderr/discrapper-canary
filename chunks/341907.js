@@ -21,8 +21,7 @@ function o(e) {
     (0, i.openModalLazy)(async () => {
         let {default: e} = await Promise.all([
             n.e('54535'),
-            n.e('54340'),
-            n.e('87353')
+            n.e('12506')
         ]).then(n.bind(n, 985866));
         return n => (0, r.jsx)(e, {
             ...n,
@@ -34,14 +33,10 @@ function o(e) {
 }
 function s(e, t) {
     (0, i.openModalLazy)(async () => {
-        let {default: i} = await Promise.all([
-            n.e('54535'),
-            n.e('54340'),
-            n.e('12360')
-        ]).then(n.bind(n, 117571));
+        let {default: i} = await n.e('88938').then(n.bind(n, 390238));
         return n => (0, r.jsx)(i, {
             ...n,
-            questId: e,
+            quest: e,
             location: t
         });
     });
