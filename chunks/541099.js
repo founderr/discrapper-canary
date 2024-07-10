@@ -2,6 +2,7 @@ var i, l, a, r, s = t(442837), o = t(570140), c = t(827498);
 let u = {
     show: !1,
     entrypoint: c._b.NONE,
+    activeViewType: null,
     closeReason: c.ti.DISMISSED
 };
 function d(e) {
@@ -22,6 +23,9 @@ class m extends (r = s.ZP.Store) {
     entrypoint() {
         return u.entrypoint;
     }
+    activeViewType() {
+        return u.activeViewType;
+    }
     closeReason() {
         return u.closeReason;
     }
@@ -39,8 +43,11 @@ a = 'AppLauncherStore', (l = 'displayName') in (i = m) ? Object.defineProperty(i
     writable: !0
 }) : i[l] = a, n.Z = new m(o.Z, {
     APP_LAUNCHER_SHOW: function (e) {
-        let {entrypoint: n} = e;
-        return u.show = !0, u.entrypoint = n, u.closeReason = c.ti.DISMISSED, !0;
+        let {
+            entrypoint: n,
+            activeViewType: t
+        } = e;
+        return u.show = !0, u.entrypoint = n, u.closeReason = c.ti.DISMISSED, u.activeViewType = t, !0;
     },
     APP_LAUNCHER_DISMISS: d,
     CONNECTION_OPEN: p,
