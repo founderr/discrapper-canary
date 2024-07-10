@@ -26,9 +26,10 @@ let s = e => {
                         ToastPosition: e,
                         ToastType: t,
                         createToast: r,
-                        showToast: a
+                        popToast: a,
+                        showToast: o
                     } = await Promise.resolve().then(n.bind(n, 481060));
-                    a(r(i.Z.Messages.COLLECTIBLES_PROFILE_UPDATE_NOTIFICATION, t.MESSAGE, {
+                    a(), o(r(i.Z.Messages.COLLECTIBLES_PROFILE_UPDATE_NOTIFICATION, t.MESSAGE, {
                         duration: 6000,
                         position: e.TOP
                     }));

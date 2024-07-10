@@ -69,10 +69,7 @@ t.Z = function (e) {
     let eb = (0, S.Z)({ analyticsLocations: $ }), ex = s.useRef(null), {
             handleUseNow: eI,
             isApplying: eE
-        } = (0, A.W)({
-            product: t,
-            onSuccess: m.xf
-        }), eL = () => {
+        } = (0, A.W)({ product: t }), eL = () => {
             if ((0, m.xf)(), eb(), t.type === u.Z.AVATAR_DECORATION && null != er) {
                 l()(er.type === t.type, 'product type is equivlant to first item\'s check for avatar deco'), (0, I.ps)({
                     initialSelectedDecoration: er,
