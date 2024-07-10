@@ -256,7 +256,8 @@ function ee(e) {
                             onOpenProfile: B ? void 0 : eo,
                             onClose: n
                         }),
-                        (0, i.jsxs)('div', {
+                        (0, i.jsxs)(d.Scroller, {
+                            fade: !0,
                             className: Q.body,
                             children: [
                                 (0, i.jsx)(b.Z, {
