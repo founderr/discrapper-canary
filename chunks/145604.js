@@ -74,37 +74,41 @@ class W extends s.PureComponent {
             });
         }
         if (e.runningGame !== v && null != v && !v.isLauncher) {
-            let e = L.Z.getGameByName(v.name), t = g.ZP.getOverrideForGame(v), n = O.Z.getGuildIds(), i = A.SE.getSetting(), s = n.filter(e => !i.includes(e)).slice(0, 200), a = null;
-            a = null != t ? 'custom_override' : null != e ? 'verified_game' : 'launcher';
-            let o = (0, g.jk)(v);
+            let e = L.Z.getGameByName(v.name), t = g.ZP.getOverrideForGame(v), n = O.Z.getGuildIds(), i = A.SE.getSetting(), c = n.filter(e => !i.includes(e)).slice(0, 200), d = null;
+            d = null != t ? 'custom_override' : null != e ? 'verified_game' : 'launcher';
+            let u = (0, g.jk)(v);
             if (setTimeout(() => {
                     var t;
                     let n = V.ZP.GetWindowFullscreenTypeByPid(v.pid, v.name, v.fullscreenType), {
                             gameName: i,
                             gameId: r,
-                            exe: c,
-                            distributor: d
+                            exe: _,
+                            distributor: h
                         } = (0, m.G8)(v);
                     w.default.track(F.rMx.LAUNCH_GAME, {
                         game: i,
                         game_id: r,
-                        verified: null != e && (0, m.vp)(c, null == e ? void 0 : e.executables),
+                        verified: null != e && (0, m.vp)(_, null == e ? void 0 : e.executables),
                         elevated: v.elevated,
                         is_launcher: null !== (t = null == v ? void 0 : v.isLauncher) && void 0 !== t && t,
                         game_platform: F.M7m.DESKTOP,
-                        detection_method: a,
-                        distributor: d,
+                        detection_method: d,
+                        distributor: h,
                         is_overlay_enabled: k.Z.enabled,
-                        is_overlay_game_enabled: o.enabled,
-                        is_overlay_game_source: o.source,
+                        is_overlay_game_enabled: u.enabled,
+                        is_overlay_game_source: u.source,
                         fullscreen_type: l.Jx[n],
-                        overlay_method: Y.gl[o.overlayMethod],
+                        overlay_method: Y.gl[u.overlayMethod],
                         activity_status_enabled: A.G6.getSetting(),
-                        activity_status_shared_guilds: s,
+                        activity_status_shared_guilds: c,
                         current_user_status: D.Z.getStatus(),
                         game_detection_enabled: (0, g.ik)(v),
-                        executable_path: c
-                    }), null != c && g.ZP.addExecutableTrackedByAnalytics(c);
+                        executable_path: _,
+                        voice_channel_id: s,
+                        voice_channel_type: o,
+                        voice_channel_bitrate: p,
+                        voice_channel_guild_id: a
+                    }), null != _ && g.ZP.addExecutableTrackedByAnalytics(_);
                 }, 10000), null != v.name && null != R && L.Z.shouldReport(v.name)) {
                 let e = v.name;
                 r.Z.identifyGame(R, e).then(e => r.Z.reportUnverifiedGame(e)).catch(e => new I.Z('AutoAnalytics').error('Cannot identify game', e));
