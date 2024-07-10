@@ -1,66 +1,73 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return O;
     }
 });
-var r = n(735250), i = n(470079), a = n(442837), o = n(481060), s = n(310752), l = n(174609), u = n(703656), c = n(210887), d = n(594174), _ = n(626135), E = n(424218), f = n(74538), h = n(104494), p = n(639119), m = n(631771), I = n(790527), T = n(474936), g = n(981631), S = n(731994), A = n(689938), N = n(761770);
-function v(e) {
+var r = n(735250), i = n(470079), a = n(442837), o = n(481060), s = n(310752), l = n(174609), u = n(703656), c = n(210887), d = n(594174), _ = n(626135), E = n(424218), f = n(380684), h = n(74538), p = n(104494), m = n(639119), I = n(631771), T = n(790527), g = n(474936), S = n(981631), A = n(731994), N = n(689938), v = n(761770);
+function O(e) {
     let {
             onClose: t,
             ...n
-        } = e, v = (0, a.e7)([d.default], () => d.default.getCurrentUser()), O = (0, a.e7)([c.Z], () => c.Z.theme), R = (0, p.N)(), C = (0, h.Ng)(), y = null != R || null != C, {enabled: D} = m.MP.useExperiment({ location: 'File Upload Roadblock' }, {
-            autoTrackExposure: !y,
-            disable: y
-        }), L = O === g.BRd.LIGHT ? 'light' : 'dark', b = D ? (0, r.jsx)('img', {
-            className: N.updatedArt,
+        } = e, O = (0, a.e7)([d.default], () => d.default.getCurrentUser()), R = (0, a.e7)([c.Z], () => c.Z.theme), C = null == O ? void 0 : O.premiumType, y = (0, m.N)(), D = (0, p.Ng)(), L = null != y || null != D, {enabled: b} = I.MP.useExperiment({ location: 'File Upload Roadblock' }, {
+            autoTrackExposure: !L,
+            disable: L
+        }), M = R === S.BRd.LIGHT ? 'light' : 'dark', P = b ? (0, r.jsx)('img', {
+            className: v.updatedArt,
             alt: 'File Upload Nitro Perk',
-            src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(L, '.png')
-        }) : (0, r.jsx)(s.Z, { icons: S.J6 }), M = i.useMemo(() => {
-            let e = f.ZP.getUserMaxFileSize(v), t = (0, E.BU)(e / 1024, { useKibibytes: !0 }), n = A.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({ maxSize: t });
-            switch (null == v ? void 0 : v.premiumType) {
-            case T.p9.TIER_0:
-                n = A.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({ maxSize: t });
+            src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(M, '.png')
+        }) : (0, r.jsx)(s.Z, { icons: A.J6 }), U = i.useMemo(() => {
+            let e = h.ZP.getUserMaxFileSize(O);
+            return (0, E.BU)(e / 1024, { useKibibytes: !0 });
+        }, [O]), w = i.useMemo(() => {
+            let e = N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({ maxSize: U });
+            switch (C) {
+            case g.p9.TIER_0:
+                e = N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({ maxSize: U });
                 break;
-            case T.p9.TIER_1:
-                n = A.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({ maxSize: t });
+            case g.p9.TIER_1:
+                e = N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({ maxSize: U });
             }
-            return n;
-        }, [v]), P = D ? A.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_TIER_2 : A.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE, U = D ? (0, r.jsx)('div', {
-            className: N.body,
+            return e;
+        }, [
+            C,
+            U
+        ]), x = (0, f.Xv)(), G = (0, E.BU)((x ? g.wb : g.Uq) / 1024, { useKibibytes: !0 }), k = b ? N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_TIER_2 : N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_3.format({ premiumMaxSize: G }), B = b ? (0, r.jsx)('div', {
+            className: v.body,
             children: (0, r.jsx)(o.Text, {
                 variant: 'text-sm/medium',
-                children: P
+                children: k
             })
         }) : (0, r.jsxs)('div', {
-            className: N.body,
+            className: v.body,
             children: [
-                (0, r.jsx)('span', { children: M }),
+                (0, r.jsx)('span', { children: w }),
                 (0, r.jsx)(o.Text, {
                     variant: 'text-md/medium',
-                    children: P
+                    children: k
                 })
             ]
         });
-    return (0, r.jsx)(I.Z, {
-        artElement: b,
-        artContainerClassName: D ? N.updatedArtContainer : N.artContainer,
+    return (0, r.jsx)(T.Z, {
+        artElement: P,
+        artContainerClassName: b ? v.updatedArtContainer : v.artContainer,
         enableArtBoxShadow: !1,
-        type: T.cd.UPLOAD_ERROR_UPSELL,
-        title: A.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-        body: U,
-        context: A.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({ maxSize: A.Z.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD }),
-        glowUp: P,
-        analyticsLocation: { section: g.jXE.FILE_UPLOAD_POPOUT },
+        type: g.cd.UPLOAD_ERROR_UPSELL,
+        title: N.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+        body: B,
+        context: N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({ maxSize: U }),
+        glowUp: k,
+        analyticsLocation: { section: S.jXE.FILE_UPLOAD_POPOUT },
         onClose: t,
-        subscriptionTier: T.Si.TIER_2,
-        secondaryCTA: D ? A.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA : void 0,
-        onSecondaryClick: D ? function () {
-            (0, l.Z)(), t(), _.default.track(g.rMx.PREMIUM_PROMOTION_OPENED, {
-                location_section: g.jXE.FILE_UPLOAD_UPSELL_MODAL,
-                location_object: g.qAy.NAVIGATION_LINK
-            }), (0, u.uL)(g.Z5c.APPLICATION_STORE);
+        subscriptionTier: g.Si.TIER_2,
+        secondaryCTA: b ? N.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA : void 0,
+        onSecondaryClick: b ? function () {
+            (0, l.Z)(), t(), _.default.track(S.rMx.PREMIUM_PROMOTION_OPENED, {
+                location_section: S.jXE.FILE_UPLOAD_UPSELL_MODAL,
+                location_object: S.qAy.NAVIGATION_LINK
+            }), (0, u.uL)(S.Z5c.APPLICATION_STORE);
         } : void 0,
-        showEnhancedUpsell: D,
+        showEnhancedUpsell: b,
+        showBetaBadge: x,
         ...n
     });
 }

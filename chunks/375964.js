@@ -3230,6 +3230,7 @@ e.exports = Object.freeze({
     UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2: 'Upgrade to Discord Nitro to upload files up to {premiumMaxSize}',
     UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2: 'Upgrade to {premiumPlan} to upload files up to {premiumMaxSize}',
     UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE: 'Upgrade to Discord Nitro to upload files up to \n 500MB (Available on desktop and iOS only)',
+    UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_3: 'Upgrade to Discord Nitro to upload files up to \n {premiumMaxSize} (Available on desktop and iOS only)',
     UPLOAD_AREA_PREMIUM_UPSELL_WITH_SIZE_AND_ACTION: 'Lift off with Discord Nitro to upload files up to {premiumMaxSize}. [Learn more](onClick).',
     UPLOAD_AREA_PREMIUM_UPSELL_WITH_SIZE_AND_ACTION_V2: 'Lift off with {planName} to upload files up to {premiumMaxSize}. [Learn more](onClick).',
     UPLOAD_AREA_TOO_LARGE_HELP: 'Max file size is {maxSize} please.',

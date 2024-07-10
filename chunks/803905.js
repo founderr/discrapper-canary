@@ -109,7 +109,7 @@ class d extends o.Z {
     }
 }
 let _ = new d(r.q.ANIMATED_EMOJIS), E = new d(r.q.EMOJIS_EVERYWHERE), f = new d(r.q.STICKERS_EVERYWHERE), h = new d(r.q.SOUNDBOARD_EVERYWHERE), p = new d(r.q.CUSTOM_CALL_SOUNDS), m = new d(r.q.ANIMATED_AVATAR), I = new d(r.q.CUSTOM_DISCRIMINATOR), T = new d(r.q.PREMIUM_GUILD_MEMBER_PROFILE), g = new d('profileBadges'), S = new d(r.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'), A = new d('collectibles'), N = new d('appIcons'), v = new d(r.q.CLIENT_THEMES), O = new d('boostDiscount'), R = new d('freeBoosts'), C = new d(r.q.STREAM_MID_QUALITY), y = new d(r.q.STREAM_HIGH_QUALITY), D = new d(r.q.CUSTOM_NOTIFICATION_SOUNDS), L = new d('fancyVoiceChannelReactions'), b = new d('installPremiumApplications'), M = new d('redeemPremiumPerks'), P = new d(r.q.VIDEO_FILTER_ASSETS);
-new o.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, a.h);
+new o.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, a.h6);
 let U = new d(r.q.INCREASED_GUILD_LIMIT), w = new d(r.q.INCREASED_MESSAGE_LENGTH), x = new d('increasedVideoUploadQuality'), G = new d('uploadLargeFiles'), k = Object.freeze({
         [l.Si.TIER_0]: new s.Z(l.Si.TIER_0, [
             _,

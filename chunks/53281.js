@@ -1,13 +1,13 @@
 n(653041);
-var r = n(735250), i = n(470079), a = n(834427), o = n(579806), s = n(403182), l = n(358085), u = n(861990);
-function c(e) {
+var r = n(735250), i = n(470079), a = n(834427), o = n(579806), s = n(403182), l = n(358085), u = n(380684), c = n(861990);
+function d(e) {
     let t = ['openFile'];
     e.multiple && t.push('multiSelections');
     let n = e.filters;
     o.Z.fileManager.openFiles({
         properties: t,
         filters: n
-    }, u.zz).then(t => {
+    }, (0, u.Xv)() ? c.Ld : c.zz).then(t => {
         let n = t.map(e => s.qF(e));
         null != n && e.onChange({
             stopPropagation: () => null,
@@ -25,7 +25,7 @@ function c(e) {
         });
     });
 }
-class d extends i.Component {
+class _ extends i.Component {
     activateUploadDialogue() {
         if (null != this._ref)
             return this._ref.activateUploadDialogue();
@@ -36,7 +36,7 @@ class d extends i.Component {
     render() {
         return (0, r.jsx)(a.S, {
             ref: this.setRef,
-            handleNativeClick: c,
+            handleNativeClick: d,
             embedded: (0, l.isDesktop)(),
             ...this.props
         });
@@ -51,4 +51,4 @@ class d extends i.Component {
         }) : t[n] = r, this.setRef = this.setRef.bind(this);
     }
 }
-t.Z = d;
+t.Z = _;

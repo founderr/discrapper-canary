@@ -413,7 +413,12 @@ function en(e) {
                 }),
                 (0, d.jsx)(X, {
                     Icon: T.UploadIcon,
-                    text: j.Z.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({ maxUploadPremium: (0, M.v9)(Z.p9.TIER_2, { useSpace: !1 }) })
+                    text: j.Z.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
+                        maxUploadPremium: (0, M.v9)(Z.p9.TIER_2, {
+                            useSpace: !1,
+                            useWithoutExperiment: r
+                        })
+                    })
                 }),
                 (0, d.jsx)(X, {
                     Icon: T.ReactionIcon,
@@ -446,7 +451,12 @@ function en(e) {
                 }),
                 (0, d.jsx)(X, {
                     Icon: T.CheckmarkLargeIcon,
-                    text: j.Z.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({ maxUploadPremium: (0, M.v9)(Z.p9.TIER_2, { useSpace: !1 }) }),
+                    text: j.Z.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
+                        maxUploadPremium: (0, M.v9)(Z.p9.TIER_2, {
+                            useSpace: !1,
+                            useWithoutExperiment: r
+                        })
+                    }),
                     className: W.modifiedItem,
                     textVariant: 'text-sm/normal'
                 }),
@@ -470,7 +480,12 @@ function en(e) {
             children: [
                 (0, d.jsx)(X, {
                     Icon: T.UploadIcon,
-                    text: j.Z.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({ maxUploadPremium: (0, M.v9)(Z.p9.TIER_2, { useSpace: !1 }) })
+                    text: j.Z.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
+                        maxUploadPremium: (0, M.v9)(Z.p9.TIER_2, {
+                            useSpace: !1,
+                            useWithoutExperiment: r
+                        })
+                    })
                 }),
                 (0, d.jsx)(X, {
                     Icon: T.ReactionIcon,

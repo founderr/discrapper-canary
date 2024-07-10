@@ -16,5 +16,6 @@ e.exports = {
     artContainerBoxShadow: 'artContainerBoxShadow_ffaecb',
     art: 'art_ffaecb',
     sparkleBadge: 'sparkleBadge_ffaecb',
-    newBadge: 'newBadge_ffaecb'
+    newBadge: 'newBadge_ffaecb',
+    betaBadge: 'betaBadge_ffaecb'
 };

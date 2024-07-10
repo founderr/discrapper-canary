@@ -1053,8 +1053,11 @@ function eM(e) {
     return e;
 }
 function eP(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { useSpace: !0 }, n = U.a1[e].fileSize;
-    return (0, R.BU)(n / 1024, {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+        useSpace: !0,
+        useWithoutExperiment: !1
+    };
+    return (0, R.BU)(((0, y.Xv)() && e === U.p9.TIER_2 && !t.useWithoutExperiment ? U.m0[e].fileSize : U.a1[e].fileSize) / 1024, {
         useKibibytes: !0,
         useSpace: t.useSpace
     });
@@ -1124,7 +1127,7 @@ t.ZP = Object.freeze({
             return 12 * t;
         throw Error(''.concat(e, ' interval subscription period not implemented'));
     },
-    getUserMaxFileSize: y.h,
+    getUserMaxFileSize: y.h6,
     getSkuIdForPlan: ei,
     getSkuIdForPremiumType: function (e) {
         switch (e) {
