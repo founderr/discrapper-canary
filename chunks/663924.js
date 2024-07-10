@@ -56,21 +56,24 @@ t.Z = a.memo(function (e) {
         positionTargetRef: t,
         ...n
     } = e;
-    return (0, i.jsx)(c.W5, {
-        className: C.positionLayer,
-        targetRef: t,
-        position: 'top',
-        align: 'right',
-        spacing: 8,
-        autoInvert: !0,
-        children: e => {
-            let {isPositioned: t} = e;
-            return (0, i.jsx)('section', {
-                className: C.positionContainer,
-                role: 'dialog',
-                'aria-label': E.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_LAUNCHER_ARIA_LABEL,
-                children: t && (0, i.jsx)(I, { ...n })
-            });
-        }
+    return (0, i.jsx)('span', {
+        style: _.u$,
+        children: (0, i.jsx)(c.W5, {
+            className: C.positionLayer,
+            targetRef: t,
+            position: 'top',
+            align: 'right',
+            spacing: 8,
+            autoInvert: !0,
+            children: e => {
+                let {isPositioned: t} = e;
+                return (0, i.jsx)('section', {
+                    className: C.positionContainer,
+                    role: 'dialog',
+                    'aria-label': E.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_LAUNCHER_ARIA_LABEL,
+                    children: t && (0, i.jsx)(I, { ...n })
+                });
+            }
+        })
     });
 });

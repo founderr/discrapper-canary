@@ -3,24 +3,24 @@ t.d(n, {
         return l;
     },
     hH: function () {
-        return s;
+        return r;
     },
     uX: function () {
-        return r;
+        return s;
     }
 });
 var i, l, a = t(470079);
 (i = l || (l = {})).HOME = 'home', i.LIST = 'list', i.APPLICATION = 'application';
-let r = a.createContext({
+let s = a.createContext({
     history: [],
-    setHistory: () => {
-    },
+    discard: {},
     currentView: void 0,
     pushHistory: () => {
     },
     goBack: () => {
-    }
+    },
+    getMostRecentHistoryItemByType: () => void 0
 });
-function s() {
-    return a.useContext(r);
+function r() {
+    return a.useContext(s);
 }
