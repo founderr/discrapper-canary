@@ -75,8 +75,8 @@ function N(e) {
         } = c, R = null !== (r = null === (t = u.find(e => {
             let {value: t} = e;
             return t === E;
-        })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : 'Unknown', O = null != T, B = null != T && new Date(T).getTime() < Date.now(), P = (null == Z ? void 0 : Z.sku_id) === f.Si.TIER_0, L = async () => {
-            w(!0), O ? await C(S, 'trial') : await (0, d.a)(c), h(), w(!1);
+        })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : 'Unknown', B = null != T, O = null != T && new Date(T).getTime() < Date.now(), P = (null == Z ? void 0 : Z.sku_id) === f.Si.TIER_0, L = async () => {
+            w(!0), B ? await C(S, 'trial') : await (0, d.a)(c), h(), w(!1);
         };
     n.useEffect(() => {
         if (p) {
@@ -100,7 +100,7 @@ function N(e) {
         y
     ]);
     let A = 'Active';
-    return O && (A = 'Acknowledged'), B && (A = 'Expired'), (0, a.jsxs)('div', {
+    return B && (A = 'Acknowledged'), O && (A = 'Expired'), (0, a.jsxs)('div', {
         className: o()(x.card, P ? x.gradientWrapperTier0 : x.gradientWrapperTier2),
         children: [
             (0, a.jsxs)('div', {
@@ -194,8 +194,8 @@ function N(e) {
                     (0, a.jsx)(s.Clickable, {
                         onClick: L,
                         className: o()(x.badge, x.clickable, {
-                            [x.acked]: O,
-                            [x.expired]: B
+                            [x.acked]: B,
+                            [x.expired]: O
                         }),
                         children: (0, a.jsx)(s.Text, {
                             variant: 'eyebrow',
@@ -413,7 +413,7 @@ function T() {
             null != l && (await v(l, 'trial'), E(!0));
         }, R = async () => {
             null != g && (await v(g, 'discount'), E(!0));
-        }, O = async () => {
+        }, B = async () => {
             await j(), E(!0);
         };
     return (0, a.jsx)(s.ScrollerThin, {
@@ -433,7 +433,7 @@ function T() {
                             children: [
                                 (0, a.jsx)(s.Button, {
                                     size: s.Button.Sizes.SMALL,
-                                    onClick: O,
+                                    onClick: B,
                                     children: 'Clear all User Offers'
                                 }),
                                 (0, a.jsx)(s.Button, {
