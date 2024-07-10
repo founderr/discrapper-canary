@@ -3,7 +3,7 @@ a.r(n), a.d(n, {
         return T;
     }
 }), a(47120), a(789020);
-var i = a(735250), t = a(470079), l = a(266067), s = a(692547), r = a(481060), o = a(100527), c = a(906732), u = a(703656), d = a(502568), g = a(810090), p = a(630388), m = a(566620), x = a(146936), v = a(678173), f = a(880308), b = a(636508), I = a(696068), h = a(361213), j = a(952561), S = a(778569), _ = a(513202), y = a(412019), C = a(431136), M = a(226799), N = a(981631), Z = a(689938), E = a(779277);
+var i = a(735250), t = a(470079), l = a(266067), s = a(692547), r = a(481060), o = a(100527), c = a(906732), u = a(703656), d = a(502568), g = a(810090), p = a(630388), m = a(566620), x = a(146936), v = a(678173), f = a(880308), b = a(636508), I = a(696068), h = a(361213), j = a(952561), S = a(778569), _ = a(513202), y = a(412019), C = a(431136), M = a(226799), Z = a(981631), N = a(689938), E = a(779277);
 function T(e) {
     var n, a;
     let {match: x} = e, b = null !== (n = (0, u.DR)()) && void 0 !== n ? n : [], {analyticsLocations: I} = (0, c.ZP)([
@@ -20,8 +20,8 @@ function T(e) {
         }), y = (0, v.T)(null, null != j && '' !== j ? j : null, void 0);
     if (null == j || null == y)
         return null;
-    if (!(0, p.yE)(y.application.flags, N.udG.EMBEDDED))
-        return (0, i.jsx)(l.l_, { to: N.Z5c.ACTIVITIES });
+    if (!(0, p.yE)(y.application.flags, Z.udG.EMBEDDED))
+        return (0, i.jsx)(l.l_, { to: Z.Z5c.ACTIVITIES });
     let C = null != y.activity.activity_preview_video_asset_id ? (0, h.Z)(j, y.activity.activity_preview_video_asset_id) : null, T = M.o[j], D = (null == T ? void 0 : T.playersSuggestionMin) != null && (null == T ? void 0 : T.playersSuggestionMax) != null ? ''.concat(T.playersSuggestionMin, ' - ').concat(T.playersSuggestionMax) : void 0;
     return (0, i.jsx)(c.Gt, {
         value: I,
@@ -75,7 +75,7 @@ function T(e) {
                                             (0, i.jsx)(r.Heading, {
                                                 color: 'always-white',
                                                 variant: 'heading-lg/semibold',
-                                                children: Z.Z.Messages.BACK
+                                                children: N.Z.Messages.BACK
                                             })
                                         ]
                                     })
@@ -113,7 +113,7 @@ function T(e) {
                                                                             (0, i.jsx)(r.Text, {
                                                                                 variant: 'text-xs/semibold',
                                                                                 className: E.detailItemText,
-                                                                                children: Z.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_PLAYERS.format({ nPlayers: D })
+                                                                                children: N.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_PLAYERS.format({ nPlayers: D })
                                                                             })
                                                                         ]
                                                                     }) : null,
@@ -127,7 +127,7 @@ function T(e) {
                                                                             (0, i.jsx)(r.Text, {
                                                                                 variant: 'text-xs/semibold',
                                                                                 className: E.detailItemText,
-                                                                                children: Z.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_MINUTES.format({ nMinutes: T.timeSuggestionMinutes })
+                                                                                children: N.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_MINUTES.format({ nMinutes: T.timeSuggestionMinutes })
                                                                             })
                                                                         ]
                                                                     }) : null,
@@ -160,7 +160,7 @@ function T(e) {
                                                         children: [
                                                             (null !== (a = null == T ? void 0 : T.gameplayImageUrls) && void 0 !== a ? a : []).map(e => (0, i.jsx)('img', {
                                                                 src: e,
-                                                                alt: Z.Z.Messages.EMBEDDED_ACTIVITIES_GAMEPLAY_ALT.format({ activityName: y.application.name }),
+                                                                alt: N.Z.Messages.EMBEDDED_ACTIVITIES_GAMEPLAY_ALT.format({ activityName: y.application.name }),
                                                                 className: E.activityImage
                                                             }, e)),
                                                             (0, i.jsx)(g.Z, {
@@ -230,10 +230,10 @@ function A(e) {
         children: [
             (0, i.jsx)(r.Text, {
                 variant: 'text-md/medium',
-                children: Z.Z.Messages.EMBEDDED_ACTIVITIES_START_OR_SHARE
+                children: N.Z.Messages.EMBEDDED_ACTIVITIES_START_OR_SHARE
             }),
             (0, i.jsx)(r.Select, {
-                placeholder: Z.Z.Messages.GUILD_SELECT,
+                placeholder: N.Z.Messages.GUILD_SELECT,
                 optionClassName: E.__invalid_option,
                 options: v,
                 renderOptionValue: e => {
@@ -252,7 +252,7 @@ function A(e) {
                 serialize: e => e
             }),
             (0, i.jsx)(r.Select, {
-                placeholder: Z.Z.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
+                placeholder: N.Z.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
                 optionClassName: E.__invalid_option,
                 options: f,
                 isSelected: e => {
@@ -291,14 +291,14 @@ function A(e) {
                 fullWidth: !0,
                 disabled: null == d || null == p || !v.some(e => e.value === d) || !f.some(e => e.value.channel.id === p),
                 onClick: h,
-                children: Z.Z.Messages.START
+                children: N.Z.Messages.START
             }),
             (0, i.jsx)('div', { className: E.divider }),
             (0, i.jsx)(r.Button, {
                 fullWidth: !0,
                 color: r.Button.Colors.PRIMARY,
                 onClick: S,
-                children: Z.Z.Messages.SHARE
+                children: N.Z.Messages.SHARE
             })
         ]
     });

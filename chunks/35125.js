@@ -1,9 +1,9 @@
 n.d(t, {
     PA: function () {
-        return d;
+        return l;
     },
     Tn: function () {
-        return l;
+        return d;
     },
     _i: function () {
         return N;
@@ -21,7 +21,7 @@ n.d(t, {
 var i = n(367907), r = n(200876), a = n(430824), o = n(594174);
 n(709054), n(523361);
 var u = n(981631), s = n(689938);
-function l(e) {
+function d(e) {
     let {
             username: t,
             usernameOnClickHandler: n,
@@ -40,7 +40,7 @@ function l(e) {
         });
     return o.format(u);
 }
-function d(e) {
+function l(e) {
     let {
             username: t,
             usernameOnClickHandler: n,
@@ -78,11 +78,11 @@ function _(e) {
             roleSubscriptionData: o
         } = e, {
             guild: u,
-            totalMonthsSubscribed: l,
-            showWithDuration: d,
+            totalMonthsSubscribed: d,
+            showWithDuration: l,
             isRenewal: _
         } = E(a, o);
-    return t = d ? _ ? s.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION : s.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_WITH_DURATION : _ ? s.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW : s.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN, {
+    return t = l ? _ ? s.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION : s.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_WITH_DURATION : _ ? s.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW : s.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN, {
         content: t,
         formatParams: {
             username: n,
@@ -90,7 +90,7 @@ function _(e) {
             guildName: null == u ? void 0 : u.name,
             handleGuildNameClick: r,
             tierName: null == o ? void 0 : o.tier_name,
-            months: l
+            months: d
         }
     };
 }
@@ -102,12 +102,12 @@ function I(e) {
             guildId: a,
             roleSubscriptionData: o
         } = e, {
-            guild: l,
-            totalMonthsSubscribed: d,
+            guild: d,
+            totalMonthsSubscribed: l,
             showWithDuration: _,
             isRenewal: I
         } = E(a, o), c = {
-            guildName: null == l ? void 0 : l.name,
+            guildName: null == d ? void 0 : d.name,
             tierName: null == o ? void 0 : o.tier_name,
             username: n,
             usernameOnClick: i,
@@ -115,10 +115,10 @@ function I(e) {
         };
     return t = _ ? I ? s.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION_MOBILE.astFormat({
         ...c,
-        months: d
+        months: l
     }) : s.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_WITH_DURATION_MOBILE.astFormat({
         ...c,
-        months: d
+        months: l
     }) : I ? s.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_MOBILE.astFormat(c) : s.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_MOBILE.astFormat(c);
 }
 function c(e) {

@@ -3,7 +3,7 @@ a.d(n, {
         return B;
     }
 });
-var i = a(701488), t = a(114954), l = a(956089), s = a(407407), r = a(942006), o = a(836479), c = a(779337), u = a(694111), d = a(442405), g = a(974379), p = a(873444), m = a(216989), x = a(188225), v = a(337664), f = a(585681), b = a(288021), I = a(114089), h = a(8361), j = a(655297), S = a(616297), _ = a(213860), y = a(747604), C = a(237931), M = a(992910), N = a(652120), Z = a(824046), E = a(943615), T = a(669001), A = a(248313), D = a(928119), U = a(497664), k = a(685358), O = a(33218), P = a(975570);
+var i = a(701488), t = a(114954), l = a(956089), s = a(407407), r = a(942006), o = a(836479), c = a(779337), u = a(694111), d = a(442405), g = a(974379), p = a(873444), m = a(216989), x = a(188225), v = a(337664), f = a(585681), b = a(288021), I = a(114089), h = a(8361), j = a(655297), S = a(616297), _ = a(213860), y = a(747604), C = a(237931), M = a(992910), Z = a(652120), N = a(824046), E = a(943615), T = a(669001), A = a(248313), D = a(928119), U = a(497664), k = a(685358), O = a(33218), P = a(975570);
 let B = {
     [i.MO]: {
         playersSuggestionMin: 1,
@@ -106,11 +106,11 @@ let B = {
         playersSuggestionMax: 7,
         timeSuggestionMinutes: 15,
         gameplayImageUrls: [
-            N,
-            Z
+            Z,
+            N
         ]
     },
-    [i.SL]: {
+    [i.Gv]: {
         playersSuggestionMin: 2,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 15,
@@ -119,7 +119,7 @@ let B = {
             M
         ]
     },
-    [i.N4]: {
+    [i.Cb]: {
         playersSuggestionMin: 2,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 15,
