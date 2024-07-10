@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     }
 });
-var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(743236), l = n(21340), u = n(153850), c = n(206227);
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(539907), l = n(743236), u = n(21340), c = n(206227);
 function d(e) {
     let {
             subMenuClassName: t,
@@ -18,13 +18,14 @@ function d(e) {
         } = d, p = i.useRef(null), m = i.useRef(null), I = i.useRef(null);
     return i.useLayoutEffect(() => {
         var e;
-        a && ((0, s.F)(p), null === (e = I.current) || void 0 === e || e.focus());
+        a && ((0, l.F)(p), null === (e = I.current) || void 0 === e || e.focus());
     }, [a]), (0, r.jsxs)('div', {
         ref: p,
+        className: c.__invalid_submenuContainer,
         children: [
             (0, r.jsx)('div', { ref: m }),
             n,
-            a ? (0, r.jsx)(u.W5, {
+            a ? (0, r.jsx)(s.j, {
                 targetRef: m,
                 autoInvert: !0,
                 nudgeAlignIntoViewport: !0,
@@ -38,7 +39,7 @@ function d(e) {
                         className: o()(c.submenu, t),
                         ...h,
                         ref: I,
-                        children: (0, r.jsx)(l.zJ, {
+                        children: (0, r.jsx)(u.zJ, {
                             className: c.scroller,
                             children: _()
                         })

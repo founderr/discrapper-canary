@@ -15,8 +15,9 @@ function y(e) {
             (0, o.jW)(e, async () => {
                 let {default: e} = await Promise.all([
                     n.e('79695'),
-                    n.e('45984'),
-                    n.e('59820')
+                    n.e('17400'),
+                    n.e('60677'),
+                    n.e('33952')
                 ]).then(n.bind(n, 354589));
                 return n => (0, i.jsx)(e, {
                     ...n,

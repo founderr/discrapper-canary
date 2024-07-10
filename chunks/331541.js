@@ -272,7 +272,7 @@ function ei(e) {
                                 })
                             ]
                         }),
-                        (0, i.jsxs)(d.Scroller, {
+                        (0, i.jsxs)('div', {
                             className: J.body,
                             children: [
                                 (0, i.jsx)(D.Z, {
