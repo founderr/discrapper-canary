@@ -279,7 +279,7 @@ class eU extends a.PureComponent {
                         return (0, _.jW)(t, async () => {
                             let {default: e} = await Promise.all([
                                 n.e('79695'),
-                                n.e('17400'),
+                                n.e('45984'),
                                 n.e('22036'),
                                 n.e('56826'),
                                 n.e('79598')
@@ -297,9 +297,8 @@ class eU extends a.PureComponent {
                         return (0, _.jW)(t, async () => {
                             let {default: e} = await Promise.all([
                                 n.e('79695'),
-                                n.e('17400'),
-                                n.e('60677'),
-                                n.e('33952')
+                                n.e('45984'),
+                                n.e('59820')
                             ]).then(n.bind(n, 354589));
                             return t => (0, i.jsx)(e, {
                                 ...t,
@@ -316,7 +315,7 @@ class eU extends a.PureComponent {
                         return o()(null != h, 'GuildID null for guild voice channel'), (0, _.jW)(t, async () => {
                             let {default: e} = await Promise.all([
                                 n.e('79695'),
-                                n.e('17400'),
+                                n.e('45984'),
                                 n.e('12435'),
                                 n.e('17463')
                             ]).then(n.bind(n, 757387));
