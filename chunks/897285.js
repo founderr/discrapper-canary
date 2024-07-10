@@ -24,10 +24,12 @@ class d extends r.Z {
     getGuildEventsForCurrentUser(e) {
         return c(e);
     }
-    handleConnectionOpen() {
+    async handleConnectionOpen() {
         u.clear(), l = {};
         let e = (0, i.cn)(), t = a.Z.getLastSelectedGuildId();
-        e && null != t && o.ZP.getGuildScheduledEventsForGuild(t).forEach(e => this.getGuildEventUserCounts(t, e.id, []));
+        if (e && null != t)
+            for (let e of o.ZP.getGuildScheduledEventsForGuild(t))
+                await this.getGuildEventUserCounts(t, e.id, []), await new Promise(e => setTimeout(e, 200 * Math.random() + 50));
     }
     handleGuildUnavailable(e) {
         let {guildId: t} = e;
@@ -43,10 +45,15 @@ class d extends r.Z {
         if (null != r && null != i)
             c(i);
     }
-    handleChannelSelect(e) {
+    async handleChannelSelect(e) {
         let {guildId: t} = e;
         if (null != t)
-            o.ZP.getGuildScheduledEventsForGuild(t).forEach(e => this.getGuildEventUserCounts(t, e.id, []));
+            for (let e of o.ZP.getGuildScheduledEventsForGuild(t))
+                try {
+                    await this.getGuildEventUserCounts(t, e.id, []);
+                } finally {
+                    await new Promise(e => setTimeout(e, 200 * Math.random() + 50));
+                }
     }
     constructor(...e) {
         var t, n, r;
