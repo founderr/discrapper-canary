@@ -1,5 +1,5 @@
 e.exports = {
     container: 'container_a97111',
-    expired: 'expired_a97111',
-    live: 'live_a97111'
+    noCta: 'noCta_a97111',
+    cta: 'cta_a97111'
 };
