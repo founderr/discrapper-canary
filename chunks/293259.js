@@ -10,9 +10,9 @@ function A(e) {
             displayProfile: n,
             user: _,
             guildId: A,
-            channelId: U,
+            channelId: O,
             friendToken: R,
-            className: O,
+            className: U,
             isStreaming: M,
             hasProfileEffect: L,
             onClose: P
@@ -23,12 +23,12 @@ function A(e) {
         } = (0, m.Z)({
             user: _,
             size: C
-        }), H = l.useMemo(() => (0, d.W)(_, U), [
+        }), H = l.useMemo(() => (0, d.W)(_, O), [
             _,
-            U
+            O
         ]);
     return (0, s.jsxs)('header', {
-        className: O,
+        className: U,
         children: [
             (0, s.jsx)(S.Z, {
                 displayProfile: n,

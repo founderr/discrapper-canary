@@ -1,39 +1,39 @@
-s(411104);
-var n = s(735250);
-s(470079);
-var a = s(481060), i = s(689938);
-t.Z = {
-    openSecureFramesUserVerificationModal: function (e, t) {
-        (0, a.openModalLazy)(async () => {
-            let a = (await Promise.all([
-                s.e('95437'),
-                s.e('33397')
-            ]).then(s.bind(s, 963410))).default;
-            return s => (0, n.jsx)(a, {
+r(411104);
+var i = r(735250);
+r(470079);
+var s = r(481060), a = r(689938);
+n.Z = {
+    openSecureFramesUserVerificationModal: function (e, n) {
+        (0, s.openModalLazy)(async () => {
+            let s = (await Promise.all([
+                r.e('95437'),
+                r.e('33397')
+            ]).then(r.bind(r, 963410))).default;
+            return r => (0, i.jsx)(s, {
                 userId: e,
-                channelId: t,
-                ...s
+                channelId: n,
+                ...r
             });
         });
     },
     openSecureFramesUpdateConfirmation: function (e) {
         let {
-            title: t,
-            subtitle: r,
-            onConfirm: o
+            title: n,
+            subtitle: t,
+            onConfirm: l
         } = e;
-        (0, a.openModalLazy)(async () => {
-            let {ConfirmModal: e} = await Promise.resolve().then(s.bind(s, 481060));
-            return s => (0, n.jsx)(e, {
-                header: t,
-                confirmText: i.Z.Messages.CONFIRM,
-                cancelText: i.Z.Messages.CANCEL,
-                onConfirm: o,
-                ...s,
-                children: (0, n.jsx)(a.Text, {
+        (0, s.openModalLazy)(async () => {
+            let {ConfirmModal: e} = await Promise.resolve().then(r.bind(r, 481060));
+            return r => (0, i.jsx)(e, {
+                header: n,
+                confirmText: a.Z.Messages.CONFIRM,
+                cancelText: a.Z.Messages.CANCEL,
+                onConfirm: l,
+                ...r,
+                children: (0, i.jsx)(s.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: r
+                    children: t
                 })
             });
         });

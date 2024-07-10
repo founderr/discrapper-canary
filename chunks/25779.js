@@ -27,7 +27,7 @@ function c() {
         dsn: 'https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984',
         autoSessionTracking: !1,
         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-        release: 'discord_web-657a4569f645390dfbaa772d05b0f7f8cb393613',
+        release: 'discord_web-69f3039d5eaf4910f46f30d601f478819769320c',
         beforeSend: t => {
             var e, r;
             return !(null != (e = t).exception && null != e.exception.values && e.exception.values.every(t => null == t.stacktrace || null != t.stacktrace.frames && 1 === t.stacktrace.frames.length) && 'canary' !== window.GLOBAL_ENV.RELEASE_CHANNEL || o.some(t => window.navigator.appVersion.toLowerCase().indexOf(t) >= 0)) && !E() && !('Aborted' === (r = t).message || 'cancel captcha' === r.message) && s() ? t : null;
@@ -80,8 +80,8 @@ function c() {
             /mobilediscord\.com/,
             /betterdiscord:\/\//
         ]
-    }), a.YA('buildNumber', (t = '308625', '308625'));
-    a.YA('builtAt', String('1720646162847'));
+    }), a.YA('buildNumber', (t = '308682', '308682'));
+    a.YA('builtAt', String('1720651073966'));
     let e = window.GLOBAL_ENV.SENTRY_TAGS;
     if (null != e && 'object' == typeof e)
         for (let t in e)

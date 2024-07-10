@@ -13,7 +13,7 @@ function p(e) {
             displayProfile: p,
             subsection: T,
             onClose: g
-        } = e, {theme: N} = (0, m.z)(), {trackUserProfileAction: C} = (0, c.KZ)(), j = null == p ? void 0 : p.guildId, A = (0, l.e7)([a.Z], () => null != j ? a.Z.getGuild(j) : null), U = (0, l.e7)([d.Z], () => d.Z.getGuildId()), R = (0, l.e7)([r.default], () => r.default.locale), O = (0, I.Z)(n.id), M = (0, u.Z)(n.id);
+        } = e, {theme: N} = (0, m.z)(), {trackUserProfileAction: C} = (0, c.KZ)(), j = null == p ? void 0 : p.guildId, A = (0, l.e7)([a.Z], () => null != j ? a.Z.getGuild(j) : null), O = (0, l.e7)([d.Z], () => d.Z.getGuildId()), R = (0, l.e7)([r.default], () => r.default.locale), U = (0, I.Z)(n.id), M = (0, u.Z)(n.id);
     return (0, s.jsxs)(o.ScrollerThin, {
         fade: !0,
         className: h.scroller,
@@ -36,10 +36,10 @@ function p(e) {
                     tooltipDelay: x.vB
                 })
             }),
-            O.length > 0 && (0, s.jsx)(E.Z, {
+            U.length > 0 && (0, s.jsx)(E.Z, {
                 title: v.Z.Messages.CONNECTIONS,
                 children: (0, s.jsx)(S.OA, {
-                    connectedAccounts: O,
+                    connectedAccounts: U,
                     className: h.connections,
                     userId: n.id,
                     theme: N,
@@ -55,7 +55,7 @@ function p(e) {
                     onApplicationClicked: () => {
                         C({ action: 'PRESS_APP_CONNECTION' }), g();
                     },
-                    selectedGuildId: null != U ? U : void 0
+                    selectedGuildId: null != O ? O : void 0
                 }, e.application.id))
             }),
             (0, s.jsx)(E.Z, {

@@ -1,27 +1,27 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return Z;
     }
 });
-var s = t(735250);
+var l = t(735250);
 t(470079);
-var i = t(442837), l = t(481060), a = t(846027), o = t(131951), u = t(594174), d = t(36703), r = t(358085), c = t(65154), Z = t(689938);
-function E(e) {
+var r = t(442837), u = t(481060), a = t(846027), s = t(131951), o = t(594174), i = t(36703), d = t(358085), c = t(65154), M = t(689938);
+function Z(e) {
     var n;
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.Yn.DEFAULT, E = (0, i.e7)([o.Z], () => o.Z.getLocalVolume(e, t), [
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.Yn.DEFAULT, Z = (0, r.e7)([s.Z], () => s.Z.getLocalVolume(e, t), [
             e,
             t
-        ]), M = e === (null === (n = u.default.getCurrentUser()) || void 0 === n ? void 0 : n.id), _ = t === c.Yn.STREAM;
-    return M ? null : (0, s.jsx)(l.MenuControlItem, {
+        ]), g = e === (null === (n = o.default.getCurrentUser()) || void 0 === n ? void 0 : n.id), I = t === c.Yn.STREAM;
+    return g ? null : (0, l.jsx)(u.MenuControlItem, {
         id: 'user-volume',
-        label: _ ? Z.Z.Messages.STREAM_VOLUME : Z.Z.Messages.USER_VOLUME,
-        control: (n, i) => (0, s.jsx)(l.MenuSliderControl, {
+        label: I ? M.Z.Messages.STREAM_VOLUME : M.Z.Messages.USER_VOLUME,
+        control: (n, r) => (0, l.jsx)(u.MenuSliderControl, {
             ...n,
-            ref: i,
-            value: (0, d.P)(E),
-            maxValue: r.isPlatformEmbedded ? 200 : 100,
-            onChange: n => a.Z.setLocalVolume(e, (0, d.A)(n), t),
-            'aria-label': _ ? Z.Z.Messages.STREAM_VOLUME : Z.Z.Messages.USER_VOLUME
+            ref: r,
+            value: (0, i.P)(Z),
+            maxValue: d.isPlatformEmbedded ? 200 : 100,
+            onChange: n => a.Z.setLocalVolume(e, (0, i.A)(n), t),
+            'aria-label': I ? M.Z.Messages.STREAM_VOLUME : M.Z.Messages.USER_VOLUME
         })
     });
 }

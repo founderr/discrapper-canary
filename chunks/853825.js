@@ -1,16 +1,16 @@
 i.d(n, {
     Z: function () {
-        return U;
+        return O;
     }
 }), i(47120);
 var s = i(735250), l = i(470079), o = i(481060), t = i(727637), r = i(100527), a = i(906732), d = i(680295), c = i(5192), u = i(785717), I = i(318661), _ = i(78675), f = i(741308), E = i(588822), m = i(899007), S = i(900927), Z = i(678738), x = i(502762), v = i(530), h = i(679332), p = i(544989), T = i(228168), g = i(981631), N = i(689938), C = i(505451), j = i(247321), A = i(47460);
-function U(e) {
+function O(e) {
     let {
             user: n,
             guildId: i,
-            channelId: U,
+            channelId: O,
             messageId: R,
-            roleId: O,
+            roleId: U,
             transitionState: M,
             onClose: L,
             sourceAnalyticsLocations: P = []
@@ -24,9 +24,9 @@ function U(e) {
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
             guildId: y,
-            channelId: U,
+            channelId: O,
             messageId: R,
-            roleId: O,
+            roleId: U,
             showGuildProfile: !0,
             children: (0, s.jsxs)(o.ModalRoot, {
                 transitionState: M,
@@ -58,7 +58,7 @@ function U(e) {
                                             user: n,
                                             displayProfile: D,
                                             guildId: y,
-                                            channelId: U,
+                                            channelId: O,
                                             profileType: T.y0.FULL_SIZE
                                         })
                                     })
@@ -70,7 +70,7 @@ function U(e) {
                                     (0, s.jsx)(v.Z, {
                                         user: n,
                                         profileType: T.y0.FULL_SIZE,
-                                        nickname: c.ZP.getName(y, U, n),
+                                        nickname: c.ZP.getName(y, O, n),
                                         pronouns: null == D ? void 0 : D.pronouns,
                                         nicknameVariant: 'heading-xl/bold',
                                         tags: (0, s.jsx)(f.Z, {

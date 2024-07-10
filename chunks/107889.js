@@ -3,7 +3,7 @@ i.d(n, {
         return L;
     }
 }), i(47120);
-var s = i(735250), l = i(470079), o = i(442837), t = i(481060), r = i(727637), a = i(100527), d = i(906732), c = i(680295), u = i(699516), I = i(5192), _ = i(751009), f = i(332390), E = i(877485), m = i(785717), S = i(318661), Z = i(78675), x = i(899007), v = i(438163), h = i(502762), p = i(544989), T = i(481932), g = i(195387), N = i(272510), C = i(171368), j = i(900687), A = i(806926), U = i(228168), R = i(981631), O = i(689938), M = i(505451);
+var s = i(735250), l = i(470079), o = i(442837), t = i(481060), r = i(727637), a = i(100527), d = i(906732), c = i(680295), u = i(699516), I = i(5192), _ = i(751009), f = i(332390), E = i(877485), m = i(785717), S = i(318661), Z = i(78675), x = i(899007), v = i(438163), h = i(502762), p = i(544989), T = i(481932), g = i(195387), N = i(272510), C = i(171368), j = i(900687), A = i(806926), O = i(228168), R = i(981631), U = i(689938), M = i(505451);
 function L(e) {
     let {
             user: n,
@@ -38,8 +38,8 @@ function L(e) {
             activeInviteToCallCtaEnabled: J
         } = (0, f.l)({ location: 'SimplifiedUserProfileModalHeader' }), X = (0, S.ZP)(n.id, k ? Y : void 0), $ = (0, S.ZP)(n.id, Y), ee = (0, o.e7)([u.Z], () => u.Z.getRelationshipType(n.id)), en = l.createRef(), ei = (0, r.Z)(en), es = () => (null == $ ? void 0 : $.guildId) == null ? null : (null == X ? void 0 : X.guildId) != null ? (0, s.jsx)(t.MenuItem, {
             id: 'view-main-profile',
-            label: O.Z.Messages.VIEW_MAIN_PROFILE,
-            subtext: O.Z.Messages.AKA_DISPLAY_NAME.format({ displayName: I.ZP.getName(void 0, void 0, n) }),
+            label: U.Z.Messages.VIEW_MAIN_PROFILE,
+            subtext: U.Z.Messages.AKA_DISPLAY_NAME.format({ displayName: I.ZP.getName(void 0, void 0, n) }),
             action: () => {
                 W({
                     action: 'PRESS_VIEW_MAIN_PROFILE',
@@ -57,8 +57,8 @@ function L(e) {
             }
         }) : (0, s.jsx)(t.MenuItem, {
             id: 'view-server-profile',
-            label: O.Z.Messages.VIEW_SERVER_PROFILE,
-            subtext: O.Z.Messages.AKA_DISPLAY_NAME.format({ displayName: I.ZP.getName(Y, P, n) }),
+            label: U.Z.Messages.VIEW_SERVER_PROFILE,
+            subtext: U.Z.Messages.AKA_DISPLAY_NAME.format({ displayName: I.ZP.getName(Y, P, n) }),
             action: () => {
                 W({
                     action: 'PRESS_VIEW_SERVER_PROFILE',
@@ -89,16 +89,16 @@ function L(e) {
                 transitionState: G,
                 className: M.root,
                 hideShadow: !0,
-                'aria-label': O.Z.Messages.USER_PROFILE_MODAL,
+                'aria-label': U.Z.Messages.USER_PROFILE_MODAL,
                 children: [
                     (0, s.jsxs)(h.Z, {
                         user: n,
                         displayProfile: X,
-                        profileType: U.y0.FULL_SIZE,
+                        profileType: O.y0.FULL_SIZE,
                         ref: en,
                         children: [
                             z ? (0, s.jsx)(p.Z, {
-                                profileType: U.y0.FULL_SIZE,
+                                profileType: O.y0.FULL_SIZE,
                                 children: (0, s.jsx)(g.Z, {
                                     user: n,
                                     guildId: Y,
@@ -106,7 +106,7 @@ function L(e) {
                                     onClose: w
                                 })
                             }) : (0, s.jsxs)(p.Z, {
-                                profileType: U.y0.FULL_SIZE,
+                                profileType: O.y0.FULL_SIZE,
                                 children: [
                                     (0, s.jsx)(g.Z, {
                                         user: n,
@@ -115,7 +115,7 @@ function L(e) {
                                         onClose: w
                                     }),
                                     (0, s.jsx)(T.Z, {
-                                        profileType: U.y0.FULL_SIZE,
+                                        profileType: O.y0.FULL_SIZE,
                                         user: n,
                                         friendToken: D
                                     }),
@@ -131,7 +131,7 @@ function L(e) {
                                     (0, s.jsx)(Z.Z, {
                                         user: n,
                                         displayProfile: X,
-                                        profileType: U.y0.FULL_SIZE,
+                                        profileType: O.y0.FULL_SIZE,
                                         hasProfileEffect: (null == X ? void 0 : X.profileEffectId) != null
                                     }),
                                     (0, s.jsxs)('div', {
@@ -142,7 +142,7 @@ function L(e) {
                                                 displayProfile: X,
                                                 guildId: Y,
                                                 channelId: P,
-                                                profileType: U.y0.FULL_SIZE
+                                                profileType: O.y0.FULL_SIZE
                                             }),
                                             (0, s.jsx)(j.Z, {
                                                 user: n,
@@ -158,7 +158,7 @@ function L(e) {
                                             }),
                                             (0, s.jsx)(v.Z, {
                                                 user: n,
-                                                profileType: U.y0.FULL_SIZE,
+                                                profileType: O.y0.FULL_SIZE,
                                                 editEnabled: q,
                                                 hasEntered: G === t.ModalTransitionState.ENTERED,
                                                 onClose: w

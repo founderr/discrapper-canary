@@ -1,10 +1,10 @@
 t.d(n, {
     Z: function () {
-        return B;
+        return P;
     }
 });
-var i = t(735250), l = t(470079), a = t(120356), r = t.n(a), o = t(442837), c = t(481060), s = t(447543), d = t(906732), u = t(171368), _ = t(271383), f = t(430824), g = t(940627), v = t(346656), h = t(51144), b = t(897285), m = t(978227), I = t(894017), p = t(79874), x = t(315416), E = t(236373), N = t(854698), C = t(391174), Z = t(810561), T = t(390966), j = t(390072), S = t(981631), L = t(689938), k = t(794797);
-function D(e) {
+var i = t(735250), l = t(470079), a = t(120356), r = t.n(a), o = t(442837), c = t(481060), s = t(447543), d = t(906732), u = t(171368), _ = t(271383), f = t(430824), g = t(940627), v = t(346656), h = t(51144), b = t(897285), I = t(978227), m = t(894017), p = t(79874), x = t(315416), E = t(236373), N = t(854698), C = t(391174), T = t(810561), Z = t(390966), j = t(390072), S = t(981631), L = t(689938), k = t(794797);
+function R(e) {
     var n;
     let {
             creator: t,
@@ -52,7 +52,7 @@ function D(e) {
         ]
     });
 }
-function R(e) {
+function D(e) {
     let {
             guild: n,
             onClick: t,
@@ -122,7 +122,7 @@ function M(e) {
         ]
     });
 }
-function B(e) {
+function P(e) {
     let {
             guildEvent: n,
             guild: t,
@@ -136,10 +136,10 @@ function B(e) {
             setRecurrenceId: h
         } = e, S = (0, o.e7)([f.Z], () => null != f.Z.getGuild(t.id), [t.id]), {
             startTime: L,
-            endTime: B
-        } = (0, p.ZP)(n, v), P = (0, x.Z)(n.guild_id, n.id, v), y = l.useCallback(e => {
+            endTime: P
+        } = (0, p.ZP)(n, v), B = (0, x.Z)(n.guild_id, n.id, v), y = l.useCallback(e => {
             e.stopPropagation(), null != n && (0, s.B)(n);
-        }, [n]), w = (0, I.Z)(v, n.id), A = (0, m.Z)(n);
+        }, [n]), w = (0, m.Z)(v, n.id), A = (0, I.Z)(n);
     l.useEffect(() => {
         b.Z.getGuildEventUserCounts(t.id, n.id, null != v ? [v] : []), b.Z.getGuildEventsForCurrentUser(t.id);
     }, [
@@ -147,17 +147,17 @@ function B(e) {
         n.id,
         v
     ]);
-    let G = (0, E.KV)(n.recurrence_rule), O = (null == n ? void 0 : n.scheduled_start_time) != null ? (0, N.lh)(w, L, new Date(null == n ? void 0 : n.scheduled_start_time)) : null;
+    let G = (0, E.KV)(n.recurrence_rule), U = (null == n ? void 0 : n.scheduled_start_time) != null ? (0, N.lh)(w, L, new Date(null == n ? void 0 : n.scheduled_start_time)) : null;
     return (0, i.jsxs)('div', {
         ref: g,
         children: [
             (0, i.jsxs)('div', {
                 className: k.header,
                 children: [
-                    (0, i.jsx)(T.z, {
+                    (0, i.jsx)(Z.z, {
                         startTime: L.toISOString(),
-                        endTime: null == B ? void 0 : B.toISOString(),
-                        status: null != O ? O : n.status,
+                        endTime: null == P ? void 0 : P.toISOString(),
+                        status: null != U ? U : n.status,
                         eventType: n.entity_type,
                         guildEventId: n.id,
                         recurrenceId: v
@@ -174,7 +174,7 @@ function B(e) {
             (0, i.jsxs)('div', {
                 className: k.body,
                 children: [
-                    (0, i.jsx)(R, {
+                    (0, i.jsx)(D, {
                         guild: t,
                         onClick: S ? y : void 0,
                         onClose: d
@@ -184,11 +184,11 @@ function B(e) {
                         channel: a,
                         onClose: d
                     }),
-                    null != P && (0, i.jsx)(M, {
-                        userCount: P,
+                    null != B && (0, i.jsx)(M, {
+                        userCount: B,
                         onClick: u
                     }),
-                    !_ && null != A && (0, i.jsx)(D, {
+                    !_ && null != A && (0, i.jsx)(R, {
                         creator: A,
                         guildId: t.id,
                         channelId: null == a ? void 0 : a.id
@@ -204,7 +204,7 @@ function B(e) {
                 ]
             }),
             null != G && (0, i.jsx)('hr', { className: k.divider }),
-            null != G && (0, i.jsx)(Z.Z, {
+            null != G && (0, i.jsx)(T.Z, {
                 guildId: t.id,
                 recurrenceRule: G,
                 guildEventId: n.id,

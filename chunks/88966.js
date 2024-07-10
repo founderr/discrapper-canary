@@ -1,18 +1,18 @@
 t.d(n, {
     Z: function () {
-        return d;
+        return o;
     }
 });
-var i = t(735250);
+var l = t(735250);
 t(470079);
-var r = t(481060), a = t(493683), s = t(37234), o = t(314897), l = t(981631), u = t(689938);
-function d(e, n) {
-    let t = o.default.getId(), d = n === l.IlC.POPOUT;
-    return t === e || d ? null : (0, i.jsx)(r.MenuItem, {
+var i = t(481060), a = t(493683), r = t(37234), u = t(314897), s = t(981631), d = t(689938);
+function o(e, n) {
+    let t = u.default.getId(), o = n === s.IlC.POPOUT;
+    return t === e || o ? null : (0, l.jsx)(i.MenuItem, {
         id: 'message-user',
-        label: u.Z.Messages.USER_POPOUT_MESSAGE,
+        label: d.Z.Messages.USER_POPOUT_MESSAGE,
         action: () => {
-            a.Z.openPrivateChannel(e), (0, s.xf)();
+            a.Z.openPrivateChannel(e), (0, r.xf)();
         }
     });
 }

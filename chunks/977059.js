@@ -1,9 +1,9 @@
 t.d(n, {
     c: function () {
-        return i;
+        return E;
     }
 });
-let i = (0, t(987170).Z)({
+let E = (0, t(987170).Z)({
     kind: 'user',
     id: '2024-05_secure_frames_ui_rollout',
     label: 'Secure Frames Rollout',

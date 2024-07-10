@@ -1,90 +1,90 @@
 t.d(n, {
     U: function () {
-        return m;
+        return O;
     },
     Uf: function () {
-        return S;
+        return x;
     },
     ng: function () {
-        return O;
+        return h;
     }
 }), t(47120);
-var i = t(735250), a = t(470079), l = t(442837), r = t(704215), u = t(481060), s = t(706140), o = t(9156), d = t(594174), c = t(672752), _ = t(74538), M = t(759198), I = t(11352), f = t(213931), E = t(767157), N = t(112440), T = t(671105), A = t(552958), Z = t(981631), C = t(921944), x = t(871465), h = t(689938), g = t(935107);
-function O(e, n) {
-    let t = I.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }), a = R(e, void 0, r.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE, t.nestedEntry ? 'trailing' : 'top'), l = t.nestedEntry && n || !t.nestedEntry && !n;
-    return (0, i.jsx)(i.Fragment, { children: l && a });
+var i = t(735250), a = t(470079), r = t(442837), l = t(704215), u = t(481060), s = t(706140), o = t(9156), d = t(594174), c = t(672752), _ = t(74538), M = t(759198), I = t(11352), f = t(213931), E = t(767157), N = t(112440), T = t(671105), Z = t(552958), A = t(981631), C = t(921944), S = t(871465), g = t(689938), m = t(935107);
+function h(e, n) {
+    let t = I.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }), a = R(e, void 0, l.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE, t.nestedEntry ? 'trailing' : 'top'), r = t.nestedEntry && n || !t.nestedEntry && !n;
+    return (0, i.jsx)(i.Fragment, { children: r && a });
 }
-function S(e, n, t) {
-    return R(e, n, r.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE, t);
+function x(e, n, t) {
+    return R(e, n, l.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE, t);
 }
-function m() {
-    let e = I.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }), [n] = (0, s.c)([r.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]);
+function O() {
+    let e = I.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }), [n] = (0, s.c)([l.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]);
     return (0, i.jsx)(i.Fragment, {
-        children: e.enabled && e.nestedEntry && n === r.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE && (0, i.jsx)(u.TextBadge, {
-            className: g.newBadge,
-            text: h.Z.Messages.NEW
+        children: e.enabled && e.nestedEntry && n === l.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE && (0, i.jsx)(u.TextBadge, {
+            className: m.newBadge,
+            text: g.Z.Messages.NEW
         })
     });
 }
-function R(e, n, r, O) {
-    var S, m;
-    let R = (0, T.OR)(e), p = (0, T._c)(e, n), U = (0, l.e7)([d.default], () => d.default.getCurrentUser()), v = (0, l.e7)([o.ZP], () => o.ZP.isMuted(e), [e]), j = _.ZP.canUseCustomNotificationSounds(U), G = j ? null != p ? p : R : x.YC.CLASSIC, P = I.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }).enabled, [y, D] = a.useState(!1), {playSound: b} = (0, A.Z)(), [L, F] = (0, s.c)([r]), V = L === r;
+function R(e, n, l, h) {
+    var x, O;
+    let R = (0, T.OR)(e), U = (0, T._c)(e, n), p = (0, r.e7)([d.default], () => d.default.getCurrentUser()), v = (0, r.e7)([o.ZP], () => o.ZP.isMuted(e), [e]), j = _.ZP.canUseCustomNotificationSounds(p), P = j ? null != U ? U : R : S.YC.CLASSIC, G = I.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }).enabled, [y, b] = a.useState(!1), {playSound: L} = (0, Z.Z)(), [F, D] = (0, s.c)([l]), V = F === l;
     if (a.useEffect(() => () => {
-            y && F(C.L.TAKE_ACTION);
+            y && D(C.L.TAKE_ACTION);
         }, [
             y,
-            F
-        ]), !P)
+            D
+        ]), !G)
         return null;
     let k = t => {
-            if (b(t), F(C.L.TAKE_ACTION), !j && t !== x.YC.CLASSIC) {
+            if (L(t), D(C.L.TAKE_ACTION), !j && t !== S.YC.CLASSIC) {
                 (0, E.Z)(t, 'contextMenu'), (0, N.Z)();
                 return;
             }
-            null != n ? (0, f.M)(e, n, G, t, 'contextMenu') : (0, f.t)(e, G, t, 'contextMenu');
-        }, Y = j ? u.Text : M.Z, z = (0, x.LB)(), w = null !== (m = null === (S = z.find(e => e.value === G)) || void 0 === S ? void 0 : S.label) && void 0 !== m ? m : h.Z.Messages.SOUNDPACK_DEFAULT_LABEL, B = (0, i.jsx)(u.TextBadge, {
-            className: g.newBadge,
-            text: h.Z.Messages.NEW
+            null != n ? (0, f.M)(e, n, P, t, 'contextMenu') : (0, f.t)(e, P, t, 'contextMenu');
+        }, Y = j ? u.Text : M.Z, w = (0, S.LB)(), z = null !== (O = null === (x = w.find(e => e.value === P)) || void 0 === x ? void 0 : x.label) && void 0 !== O ? O : g.Z.Messages.SOUNDPACK_DEFAULT_LABEL, K = (0, i.jsx)(u.TextBadge, {
+            className: m.newBadge,
+            text: g.Z.Messages.NEW
         });
     return (0, i.jsx)(u.MenuItem, {
         id: 'notification-sounds',
         label: e => {
             let {isFocused: n} = e;
-            return n && D(n), (0, i.jsxs)('div', {
-                className: g.rootContainer,
+            return n && b(n), (0, i.jsxs)('div', {
+                className: m.rootContainer,
                 children: [
                     (0, i.jsxs)('div', {
                         children: [
-                            V && 'top' === O && B,
+                            V && 'top' === h && K,
                             (0, i.jsxs)('div', {
-                                className: g.headerContainer,
+                                className: m.headerContainer,
                                 children: [
                                     (0, i.jsx)(Y, {
-                                        className: g.text,
+                                        className: m.text,
                                         color: n ? 'always-white' : void 0,
                                         variant: 'text-sm/medium',
-                                        children: h.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND
+                                        children: g.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND
                                     }),
                                     (0, i.jsx)(u.NitroWheelIcon, {
                                         size: 'xs',
-                                        className: g.nitroWheel,
+                                        className: m.nitroWheel,
                                         color: n ? 'white' : j ? void 0 : c.JX.PREMIUM_TIER_2
                                     })
                                 ]
                             }),
-                            null != w && (0, i.jsx)(Y, {
-                                className: g.text,
+                            null != z && (0, i.jsx)(Y, {
+                                className: m.text,
                                 color: n ? 'always-white' : void 0,
                                 variant: 'text-xs/normal',
-                                children: w
+                                children: z
                             })
                         ]
                     }),
-                    V && 'trailing' === O && B
+                    V && 'trailing' === h && K
                 ]
             });
         },
-        action: e !== Z.aIL ? () => (0, u.openModalLazy)(async () => {
+        action: e !== A.aIL ? () => (0, u.openModalLazy)(async () => {
             let {default: n} = await Promise.all([
                 t.e('86977'),
                 t.e('5863'),
@@ -98,12 +98,12 @@ function R(e, n, r, O) {
         hasSubmenu: !0,
         children: (0, i.jsxs)(u.MenuGroup, {
             children: [
-                z.map((e, n) => (0, i.jsxs)(a.Fragment, {
+                w.map((e, n) => (0, i.jsxs)(a.Fragment, {
                     children: [
-                        j || e.value === x.YC.CLASSIC ? (0, i.jsx)(u.MenuRadioItem, {
+                        j || e.value === S.YC.CLASSIC ? (0, i.jsx)(u.MenuRadioItem, {
                             id: e.label,
                             group: 'notification-preset',
-                            checked: (null != G ? G : x.YC.CLASSIC) === e.value,
+                            checked: (null != P ? P : S.YC.CLASSIC) === e.value,
                             label: e.label,
                             action: () => k(e.value)
                         }) : (0, i.jsx)(u.MenuItem, {
@@ -111,7 +111,7 @@ function R(e, n, r, O) {
                             label: n => {
                                 let {isFocused: t} = n;
                                 return (0, i.jsxs)('div', {
-                                    className: g.labelContainer,
+                                    className: m.labelContainer,
                                     children: [
                                         (0, i.jsx)(M.Z, {
                                             color: t ? 'always-white' : void 0,
@@ -119,7 +119,7 @@ function R(e, n, r, O) {
                                             children: e.label
                                         }),
                                         (0, i.jsx)(u.CirclePlayIcon, {
-                                            className: g.playButton,
+                                            className: m.playButton,
                                             color: t ? u.tokens.colors.INTERACTIVE_ACTIVE : u.tokens.colors.INTERACTIVE_NORMAL
                                         })
                                     ]
@@ -127,7 +127,7 @@ function R(e, n, r, O) {
                             },
                             action: () => k(e.value)
                         }),
-                        e.value === x.YC.CLASSIC ? (0, i.jsx)(u.MenuSeparator, {}) : null
+                        e.value === S.YC.CLASSIC ? (0, i.jsx)(u.MenuSeparator, {}) : null
                     ]
                 }, n)),
                 v && (0, i.jsxs)(i.Fragment, {
@@ -136,9 +136,9 @@ function R(e, n, r, O) {
                         (0, i.jsx)(u.MenuItem, {
                             id: 'label',
                             label: (0, i.jsx)(u.Text, {
-                                className: g.mutedLabel,
+                                className: m.mutedLabel,
                                 variant: 'text-sm/medium',
-                                children: h.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_WARNING
+                                children: g.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_WARNING
                             })
                         })
                     ]

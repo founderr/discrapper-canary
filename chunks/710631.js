@@ -1,57 +1,57 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return S;
+        return N;
     }
-}), n(653041), n(47120);
-var r = n(735250), i = n(470079), a = n(442837), o = n(481060), s = n(493683), l = n(447543), u = n(904245), c = n(159300), d = n(592125), _ = n(984933), E = n(430824), f = n(496675), h = n(699516), p = n(771845), m = n(594174), I = n(981631), T = n(689938);
-function g(e, t) {
-    s.Z.ensurePrivateChannel(e).then(e => {
-        null != d.Z.getChannel(e) && u.Z.sendInvite(e, t, 'context_menu', null);
+}), t(653041), t(47120);
+var l = t(735250), i = t(470079), a = t(442837), r = t(481060), u = t(493683), s = t(447543), d = t(904245), o = t(159300), c = t(592125), Z = t(984933), E = t(430824), M = t(496675), f = t(699516), _ = t(771845), g = t(594174), I = t(981631), m = t(689938);
+function R(e, n) {
+    u.Z.ensurePrivateChannel(e).then(e => {
+        null != c.Z.getChannel(e) && d.Z.sendInvite(e, n, 'context_menu', null);
     });
 }
-function S(e) {
+function N(e) {
     let {
-            user: t,
-            guildId: n,
-            onAction: s
-        } = e, u = (0, a.e7)([m.default], () => m.default.getCurrentUser(), []), d = (0, a.Wu)([
-            p.ZP,
+            user: n,
+            guildId: t,
+            onAction: u
+        } = e, d = (0, a.e7)([g.default], () => g.default.getCurrentUser(), []), c = (0, a.Wu)([
+            _.ZP,
             E.Z,
-            f.Z
+            M.Z
         ], () => {
-            let e = p.ZP.getFlattenedGuildIds(), t = [];
+            let e = _.ZP.getFlattenedGuildIds(), n = [];
             return e.forEach(e => {
-                let r = E.Z.getGuild(e);
-                null != r && (0, c.b)(f.Z, r) && r.id !== n && t.push(r);
-            }), t;
-        }, [n]), [S, A] = i.useState({});
-    return (null == u ? void 0 : u.id) === t.id || t.bot || 0 === d.length || h.Z.isBlocked(t.id) ? null : (0, r.jsx)(o.MenuItem, {
+                let l = E.Z.getGuild(e);
+                null != l && (0, o.b)(M.Z, l) && l.id !== t && n.push(l);
+            }), n;
+        }, [t]), [N, C] = i.useState({});
+    return (null == d ? void 0 : d.id) === n.id || n.bot || 0 === c.length || f.Z.isBlocked(n.id) ? null : (0, l.jsx)(r.MenuItem, {
         id: 'invite-to-server',
-        label: T.Z.Messages.INVITE_TO_SERVER,
-        children: d.map(e => S[e.id] ? (0, r.jsx)(o.MenuItem, {
+        label: m.Z.Messages.INVITE_TO_SERVER,
+        children: c.map(e => N[e.id] ? (0, l.jsx)(r.MenuItem, {
             id: e.id,
             disabled: !0,
-            label: T.Z.Messages.INVITE_SENT
-        }, e.id) : (0, r.jsx)(o.MenuItem, {
+            label: m.Z.Messages.INVITE_SENT
+        }, e.id) : (0, l.jsx)(r.MenuItem, {
             id: e.id,
             label: e.name,
             action: () => {
-                null == s || s(), !function (e, t) {
-                    let n = _.ZP.getDefaultChannel(e.id, !0, I.Plq.CREATE_INSTANT_INVITE);
-                    if (null != n) {
-                        if (A({
-                                ...S,
+                null == u || u(), !function (e, n) {
+                    let t = Z.ZP.getDefaultChannel(e.id, !0, I.Plq.CREATE_INSTANT_INVITE);
+                    if (null != t) {
+                        if (C({
+                                ...N,
                                 [e.id]: !0
-                            }), !f.Z.can(I.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode) {
-                            g(t, e.vanityURLCode);
+                            }), !M.Z.can(I.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode) {
+                            R(n, e.vanityURLCode);
                             return;
                         }
-                        l.Z.createInvite(n.id, {
+                        s.Z.createInvite(t.id, {
                             max_uses: 1,
                             unique: !0
-                        }, 'User Invite Context Menu').then(e => g(t, e.code));
+                        }, 'User Invite Context Menu').then(e => R(n, e.code));
                     }
-                }(e, t.id);
+                }(e, n.id);
             }
         }, e.id))
     });

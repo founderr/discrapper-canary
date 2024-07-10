@@ -11,7 +11,7 @@ function p(e) {
             displayProfile: p,
             autoFocusNote: T = !1,
             scrollToConnections: g = !1
-        } = e, {trackUserProfileAction: N} = (0, _.KZ)(), C = (0, o.e7)([I.Z], () => I.Z.hidePersonalInformation), {theme: j} = (0, S.z)(), A = (0, o.e7)([u.default], () => u.default.locale), U = (0, d.Z)('user_profile'), R = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, a.Z)(i.id), O = (0, f.Z)(i.id), M = l.useRef(null);
+        } = e, {trackUserProfileAction: N} = (0, _.KZ)(), C = (0, o.e7)([I.Z], () => I.Z.hidePersonalInformation), {theme: j} = (0, S.z)(), A = (0, o.e7)([u.default], () => u.default.locale), O = (0, d.Z)('user_profile'), R = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, a.Z)(i.id), U = (0, f.Z)(i.id), M = l.useRef(null);
     return (l.useLayoutEffect(() => {
         if (g) {
             var e;
@@ -51,7 +51,7 @@ function p(e) {
                             })
                         ]
                     }),
-                    U && (0, s.jsx)('div', {
+                    O && (0, s.jsx)('div', {
                         className: h.clans,
                         children: (0, s.jsx)('div', {
                             className: h.userInfoText,
@@ -77,7 +77,7 @@ function p(e) {
             }),
             (0, s.jsx)(Z.OA, {
                 ref: M,
-                connectedAccounts: O,
+                connectedAccounts: U,
                 theme: j,
                 locale: A,
                 className: h.userInfoSection,
