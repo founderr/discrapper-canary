@@ -79,10 +79,10 @@ async function o(e, t) {
         }), t;
     } catch (t) {
         let e = t.body;
-        (null == e ? void 0 : e.username) != null && (e.nick = e.username, delete e.username), i.Z.dispatch({
+        return (null == e ? void 0 : e.username) != null && (e.nick = e.username, delete e.username), i.Z.dispatch({
             type: 'GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE',
             errors: t.body
-        });
+        }), t;
     }
 }
 function s(e) {
