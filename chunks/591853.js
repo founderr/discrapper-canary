@@ -522,6 +522,7 @@ function eu(e) {
                             onClick: null != d ? d : C,
                             children: (0, i.jsx)(Q.f, {
                                 size: 72,
+                                constrain: 'width',
                                 alt: s,
                                 src: n,
                                 fallbackSrc: a,
