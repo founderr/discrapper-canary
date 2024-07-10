@@ -10679,6 +10679,7 @@ e.exports = Object.freeze({
     APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_WITH_REASON_MOBILE: 'Only you can see this message.\n{reason} \u2022 [Dismiss](handleDelete)',
     APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_CANNOT_SEND: 'Message Cannot be Sent',
     APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_CANNOT_USE_COMMAND: 'You cannot use this command in this channel',
+    APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_CANNOT_USE_EXTERNAL_APPS: 'You cannot use external apps in this channel',
     APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_AUTOMOD_BLOCKED: 'This message was blocked by AutoMod. The message may also be viewed by the community owners.',
     APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_HARMFUL_LINK: 'This message contains a link blocked by Discord.',
     APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_BETA: 'Only you can see this message during beta',
