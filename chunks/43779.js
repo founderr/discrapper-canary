@@ -12,7 +12,7 @@ function I(e) {
             quest: t,
             useV2Variants: !0,
             taskDetails: m
-        }), T = !(0, o.zi)(t), S = s.useCallback(() => (0, i.jsx)(a.Text, {
+        }), T = s.useCallback(() => (0, i.jsx)(a.Text, {
             variant: 'text-md/semibold',
             color: 'text-brand',
             tag: 'span',
@@ -54,7 +54,7 @@ function I(e) {
                                     variant: 'text-md/semibold',
                                     color: 'header-primary',
                                     className: E.header,
-                                    children: h.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({ rewardHook: S })
+                                    children: h.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({ rewardHook: T })
                                 })
                             }),
                             null != p ? (0, i.jsx)(a.Text, {
@@ -67,7 +67,7 @@ function I(e) {
                     })
                 ]
             }),
-            T ? (0, i.jsx)(_.Z, { quest: t }) : null
+            (0, i.jsx)(_.Z, { quest: t })
         ]
     });
 }
