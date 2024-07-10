@@ -5,14 +5,14 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(120356), a = n.n(s), r = n(481060), l = n(100527), o = n(360048), c = n(709158), d = n(689938), u = n(139510);
+var s = n(481060), a = n(100527), r = n(44315), l = n(360048), o = n(709158), c = n(981631), d = n(689938), u = n(139510);
 function _(e) {
     let {
-        isSelected: t,
-        onClick: n
-    } = e;
-    return (0, c.Z)(l.Z.QUEST_HOME_PAGE) ? (0, i.jsx)(o.Z, {
-        avatar: (0, i.jsx)(r.QuestsIcon, { className: a()({ [u.iconSelected]: t }) }),
+            isSelected: t,
+            onClick: n
+        } = e, _ = (0, o.Z)(a.Z.QUEST_HOME_PAGE), h = (0, r.Sl)(c.Ilk.WHITE);
+    return _ ? (0, i.jsx)(l.Z, {
+        avatar: (0, i.jsx)(s.QuestsIcon, { color: t ? h.hex : void 0 }),
         name: d.Z.Messages.QUESTS,
         focusProps: {
             offset: {
