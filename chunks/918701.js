@@ -480,77 +480,93 @@ function em(e) {
     return (0, a.EQ)(r).with({ tag: l.w.REWARD_CODE }, e => e).with({ type: l.w.REWARD_CODE }, e => e).otherwise(() => null);
 }
 function eI(e) {
-    var t;
     let {
-            quest: n,
-            useV2Variants: r = !1,
-            taskDetails: i,
-            thirdPartyTaskDetails: a
-        } = e, o = n.config.messages.gameTitle, s = N.r.build(n.config).defaultReward.messages.nameWithArticle, {targetMinutes: l} = null != i ? i : eC(n), u = ep(n, O.S7.IN_HOUSE_CONSOLE_QUEST), c = ee(n.config), _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, E = eL(n) && ef(n);
-    if (u && null != c)
-        return _ ? C.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
-            reward: s,
-            duration: c
-        }) : C.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_ANY_GAME_ON_CONNECTED_CONSOLE.format({
-            targetMinutes: l,
-            rewardNameWithArticle: s,
-            duration: c
-        });
-    if (E)
-        return null != c ? _ ? C.Z.Messages.QUEST_REWARD_MULTIPLATFORM_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-            gameTitle: o,
-            reward: s,
-            streamingDurationRequirement: eC(n).targetMinutes,
-            onClick: () => {
-                d.Z.open(R.oAB.CONNECTIONS);
-            },
-            duration: c
-        }) : C.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-            gameTitle: o,
-            targetMinutes: l,
-            rewardNameWithArticle: s,
-            duration: c
-        }) : C.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME.format({
-            gameTitle: o,
-            targetMinutes: l,
-            rewardNameWithArticle: s
-        });
-    if (eL(n))
-        return null != c ? C.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-            gameTitle: o,
-            targetMinutes: l,
-            rewardNameWithArticle: s,
-            duration: c
-        }) : C.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME.format({
-            gameTitle: o,
-            targetMinutes: l,
-            rewardNameWithArticle: s
-        });
-    else if (ef(n))
-        return null != c ? C.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-            gameTitle: o,
-            streamingDurationRequirement: l,
-            rewardNameWithArticle: s,
-            duration: c
-        }) : C.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD.format({
-            gameTitle: o,
-            questReward: s,
-            streamingDurationRequirement: l
-        });
-    else if (ed({ quest: n }))
-        return (r ? C.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2 : C.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED).format({
-            gameTitle: o,
-            streamingDurationRequirement: l
-        });
-    return null != a ? a.description : null != c ? C.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-        gameTitle: o,
-        streamingDurationRequirement: l,
-        questReward: s,
-        duration: c
-    }) : (r ? C.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2 : C.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD).format({
-        gameTitle: o,
-        questReward: s,
-        streamingDurationRequirement: l
+            quest: t,
+            useV2Variants: n = !1,
+            taskDetails: r,
+            thirdPartyTaskDetails: i
+        } = e, a = t.config.messages.gameTitle, o = N.r.build(t.config).defaultReward.messages.nameWithArticle, {targetMinutes: s} = null != r ? r : eC(t), l = ep(t, O.S7.IN_HOUSE_CONSOLE_QUEST), u = ee(t.config), c = eL(t) && ef(t);
+    if (l && null != u)
+        return function (e, t) {
+            var n;
+            let r = N.r.build(e.config).defaultReward.messages.nameWithArticle, i = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, a = ee(e.config), {targetMinutes: o} = null != t ? t : eC(e);
+            return i && C.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
+                reward: r,
+                duration: a
+            }), C.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_ANY_GAME_ON_CONNECTED_CONSOLE.format({
+                targetMinutes: o,
+                rewardNameWithArticle: r,
+                duration: a
+            });
+        }(t, r);
+    if (c)
+        !function (e, t) {
+            var n;
+            let r = N.r.build(e.config).defaultReward.messages.nameWithArticle, i = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, a = ee(e.config), {targetMinutes: o} = null != t ? t : eC(e), s = e.config.messages.gameTitle;
+            null != a ? i ? C.Z.Messages.QUEST_REWARD_MULTIPLATFORM_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
+                gameTitle: s,
+                reward: r,
+                streamingDurationRequirement: eC(e).targetMinutes,
+                onClick: () => {
+                    d.Z.open(R.oAB.CONNECTIONS);
+                },
+                duration: a
+            }) : C.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
+                gameTitle: s,
+                targetMinutes: o,
+                rewardNameWithArticle: r,
+                duration: a
+            }) : C.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME.format({
+                gameTitle: s,
+                targetMinutes: o,
+                rewardNameWithArticle: r
+            });
+        }(t, r);
+    else if (eL(t))
+        return function (e, t) {
+            let n = N.r.build(e.config).defaultReward.messages.nameWithArticle, r = ee(e.config), {targetMinutes: i} = null != t ? t : eC(e), a = e.config.messages.gameTitle;
+            return null != r ? C.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
+                gameTitle: a,
+                targetMinutes: i,
+                rewardNameWithArticle: n,
+                duration: r
+            }) : C.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME.format({
+                gameTitle: a,
+                targetMinutes: i,
+                rewardNameWithArticle: n
+            });
+        }(t, r);
+    else if (ef(t))
+        return function (e, t) {
+            let n = N.r.build(e.config).defaultReward.messages.nameWithArticle, r = ee(e.config), {targetMinutes: i} = null != t ? t : eC(e), a = e.config.messages.gameTitle;
+            return null != r ? C.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
+                gameTitle: a,
+                streamingDurationRequirement: i,
+                rewardNameWithArticle: n,
+                duration: r
+            }) : C.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD.format({
+                gameTitle: a,
+                questReward: n,
+                streamingDurationRequirement: i
+            });
+        }(t, r);
+    else if (ed({ quest: t }))
+        return function (e, t, n) {
+            let {targetMinutes: r} = null != n ? n : eC(t), i = t.config.messages.gameTitle;
+            return (e ? C.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2 : C.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED).format({
+                gameTitle: i,
+                streamingDurationRequirement: r
+            });
+        }(n, t, r);
+    return null != i ? i.description : null != u ? C.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
+        gameTitle: a,
+        streamingDurationRequirement: s,
+        questReward: o,
+        duration: u
+    }) : (n ? C.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2 : C.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD).format({
+        gameTitle: a,
+        questReward: o,
+        streamingDurationRequirement: s
     });
 }
 function eT(e, t) {
