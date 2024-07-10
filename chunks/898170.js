@@ -75,18 +75,18 @@ function f(e) {
                     t.b
                 ], []);
             return C(i.id, n);
-        }, [i]), S = (null === (t = i.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = !l && g;
+        }, [i]), T = (null === (t = i.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, S = !l && g;
     o.useEffect(() => {
         var e, t, n, s;
-        g ? T && (null === (s = f.current) || void 0 === s || null === (n = s.animation) || void 0 === n || n.play()) : null === (t = f.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
+        g ? S && (null === (s = f.current) || void 0 === s || null === (n = s.animation) || void 0 === n || n.play()) : null === (t = f.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
     }, [
-        T,
+        S,
         g
     ]);
     let N = o.useCallback(() => {
         h(!0);
     }, []);
-    return null == E || S ? (0, s.jsx)('div', {
+    return null == E || T ? (0, s.jsx)('div', {
         className: x.backgroundFallback,
         style: { backgroundImage: 'linear-gradient(90deg, '.concat(i.config.colors.primary, ', ').concat(i.config.colors.secondary, ')') }
     }) : (0, s.jsx)('div', {
@@ -95,7 +95,7 @@ function f(e) {
             ref: f,
             onComplete: N,
             importData: () => E,
-            shouldAnimate: !_ && T,
+            shouldAnimate: !_ && S,
             className: a()(x.lottieAnimation, x.lottieAnimationBackground, n),
             loop: 0,
             rendererSettings: { preserveAspectRatio: 'none' }

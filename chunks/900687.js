@@ -1,14 +1,14 @@
-n.d(i, {
+i.d(n, {
     Z: function () {
         return u;
     }
 });
-var s = n(735250);
-n(470079);
-var l = n(481060), t = n(239091), o = n(785717), r = n(705556), a = n(225714), d = n(228168), c = n(984904);
+var s = i(735250);
+i(470079);
+var l = i(481060), o = i(239091), t = i(785717), r = i(705556), a = i(225714), d = i(228168), c = i(984904);
 function u(e) {
     let {
-            user: i,
+            user: n,
             isCurrentUser: u,
             guildId: I,
             friendToken: _,
@@ -16,44 +16,44 @@ function u(e) {
             originalFriendingEnabled: E = !1,
             improvedFriendingEnabled: m = !1,
             persistentCallCtaEnabled: S = !1,
-            activeInviteToCallCtaEnabled: v = !1,
-            viewProfileItem: Z,
-            onClose: x
-        } = e, {trackUserProfileAction: h} = (0, o.KZ)();
+            activeInviteToCallCtaEnabled: Z = !1,
+            viewProfileItem: x,
+            onClose: v
+        } = e, {trackUserProfileAction: h} = (0, t.KZ)();
     return (0, s.jsxs)('div', {
         className: c.buttons,
         children: [
             (0, s.jsx)(a.Z, {
-                user: i,
+                user: n,
                 isCurrentUser: u,
                 relationshipType: f,
                 improvedFriendingEnabled: m,
                 persistentCallCtaEnabled: S,
-                activeInviteToCallCtaEnabled: v,
+                activeInviteToCallCtaEnabled: Z,
                 friendToken: _,
-                onClose: x
+                onClose: v
             }),
             (0, s.jsx)(r.Z, {
-                user: i,
+                user: n,
                 guildId: I,
                 profileType: d.y0.FULL_SIZE,
-                onClose: x
+                onClose: v
             }),
-            !i.isNonUserBot() && E ? (0, s.jsx)(l.Clickable, {
+            !n.isNonUserBot() && E ? (0, s.jsx)(l.Clickable, {
                 focusProps: { offset: { left: 8 } },
                 onClick: function (e) {
-                    h({ action: 'PRESS_OPTIONS' }), (0, t.jW)(e, async () => {
-                        let {default: e} = await n.e('29136').then(n.bind(n, 193646));
-                        return n => (0, s.jsx)(e, {
-                            ...n,
+                    h({ action: 'PRESS_OPTIONS' }), (0, o.jW)(e, async () => {
+                        let {default: e} = await i.e('29136').then(i.bind(i, 193646));
+                        return i => (0, s.jsx)(e, {
+                            ...i,
                             originalFriendingEnabled: E,
                             relationshipType: f,
-                            viewProfileItem: Z,
-                            user: i,
+                            viewProfileItem: x,
+                            user: n,
                             isCurrentUser: u,
                             guildId: I,
                             trackUserProfileAction: h,
-                            onClose: x
+                            onClose: v
                         });
                     });
                 },

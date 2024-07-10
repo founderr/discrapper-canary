@@ -1,6 +1,6 @@
 n.d(t, {
     $_: function () {
-        return P;
+        return L;
     },
     FM: function () {
         return B;
@@ -21,7 +21,7 @@ n.d(t, {
         return x;
     },
     rM: function () {
-        return L;
+        return P;
     },
     yQ: function () {
         return M;
@@ -109,7 +109,7 @@ function O() {
             S.Ft.FREE_GUILD_BOOST_3_MONTHS
         ], e);
 }
-let L = e => {
+let P = e => {
         if (null == e || (null == e ? void 0 : e.showNotification) === !1)
             return [];
         switch (e.nitroTenureStatus) {
@@ -120,11 +120,11 @@ let L = e => {
         default:
             return [];
         }
-    }, P = () => {
-        let e = M(), [t, n] = s.useState(L(e)), a = (0, g.c)({ location: 'Home' });
+    }, L = () => {
+        let e = M(), [t, n] = s.useState(P(e)), a = (0, g.c)({ location: 'Home' });
         s.useEffect(() => {
             if (!1 !== a)
-                n(L(e));
+                n(P(e));
         }, [
             e,
             a
@@ -136,7 +136,7 @@ let L = e => {
         let t = null === (e = M()) || void 0 === e ? void 0 : e.nitroTenureStatus, n = (0, g.c)({ location: 'Home' }) && null != t && t === S.EB.REDEEMABLE, [s] = (0, u.U)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
         return !!n && s === l.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
     }, Z = () => {
-        let e = M(), t = s.useMemo(() => L(e), [e]), [n] = (0, _.c)(t), a = s.useRef(!1);
+        let e = M(), t = s.useMemo(() => P(e), [e]), [n] = (0, _.c)(t), a = s.useRef(!1);
         return s.useCallback(() => {
             null != e && !0 === e.showNotification && (n === l.z.TENURE_REWARD_REDEEMABLE || n === l.z.TENURE_REWARD_PENDING) && ((0, d.EW)(n), n === l.z.TENURE_REWARD_PENDING && !1 === a.current && (R.default.track(h.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {
                 user_tenure_reward_id: null == e ? void 0 : e.tenureRewardStatusId,

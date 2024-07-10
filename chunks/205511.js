@@ -1,4 +1,4 @@
-var s = n(735250), o = n(470079), r = n(120356), a = n.n(r), i = n(442837), l = n(481060), c = n(607070), d = n(706454), u = n(63063), p = n(617136), x = n(113434), m = n(497505), g = n(918701), C = n(566078), f = n(667105), _ = n(585857), h = n(46140), E = n(981631), S = n(689938), T = n(778239);
+var s = n(735250), o = n(470079), r = n(120356), a = n.n(r), i = n(442837), l = n(481060), c = n(607070), d = n(706454), u = n(63063), p = n(617136), x = n(113434), m = n(497505), g = n(918701), C = n(566078), f = n(667105), _ = n(585857), h = n(46140), E = n(981631), T = n(689938), S = n(778239);
 function N(e) {
     let {
         children: t,
@@ -6,37 +6,37 @@ function N(e) {
         hasNextStep: o
     } = e;
     return (0, s.jsxs)('li', {
-        className: a()(T.stepWrapper, { [T.stepWrapperComplete]: n }, { [T.stepWrapperWithNextStep]: o }),
+        className: a()(S.stepWrapper, { [S.stepWrapperComplete]: n }, { [S.stepWrapperWithNextStep]: o }),
         children: [
             (0, s.jsxs)('div', {
-                className: T.stepIndicator,
+                className: S.stepIndicator,
                 children: [
                     (0, s.jsx)('div', {
-                        className: T.stepIconWrapper,
+                        className: S.stepIconWrapper,
                         children: n && (0, s.jsx)(l.CheckmarkBoldIcon, {
-                            className: T.stepIcon,
+                            className: S.stepIcon,
                             color: l.tokens.colors.WHITE
                         })
                     }),
-                    o && (0, s.jsx)('div', { className: T.stepConnector })
+                    o && (0, s.jsx)('div', { className: S.stepConnector })
                 ]
             }),
             (0, s.jsx)('div', {
-                className: T.stepContent,
+                className: S.stepContent,
                 children: t
             })
         ]
     });
 }
-function v(e) {
+function A(e) {
     let {
             quest: t,
             useReducedMotion: n,
             connectedAccounts: r
         } = e, c = (0, i.e7)([d.default], () => d.default.locale), _ = (0, f.g2)({ useReducedMotion: n }), {
             errorHints: N,
-            startingConsoleQuest: v,
-            startConsoleQuest: A
+            startingConsoleQuest: A,
+            startConsoleQuest: v
         } = (0, x.GI)({
             questId: t.id,
             beforeRequest: () => {
@@ -53,7 +53,7 @@ function v(e) {
         } = o.useMemo(() => {
             let e = N.length > 0, n = () => (0, s.jsx)('div', {
                     children: N.map((e, t) => (0, s.jsx)(l.Text, {
-                        className: T.microphoneUnitBodyText,
+                        className: S.microphoneUnitBodyText,
                         color: 'text-muted',
                         variant: 'text-xxs/normal',
                         children: e
@@ -61,22 +61,22 @@ function v(e) {
                 });
             if ((0, g.zK)(t, h.S7.IN_HOUSE_CONSOLE_QUEST))
                 return {
-                    header: e ? S.Z.Messages.QUESTS_ANY_GAME_NOT_DETECTED : S.Z.Messages.QUESTS_MICROPHONE_UNIT_HEADER,
+                    header: e ? T.Z.Messages.QUESTS_ANY_GAME_NOT_DETECTED : T.Z.Messages.QUESTS_MICROPHONE_UNIT_HEADER,
                     renderBody: e ? n : () => (0, s.jsx)(l.Text, {
-                        className: T.microphoneUnitBodyText,
+                        className: S.microphoneUnitBodyText,
                         color: 'text-muted',
                         variant: 'text-xxs/normal',
-                        children: S.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY_ANY_GAME
+                        children: T.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY_ANY_GAME
                     })
                 };
             let o = C.r.build(t.config).application.name;
             return {
-                header: e ? S.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({ gameTitle: o }) : S.Z.Messages.QUESTS_LAUNCHED_GAME.format({ gameTitle: o }),
+                header: e ? T.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({ gameTitle: o }) : T.Z.Messages.QUESTS_LAUNCHED_GAME.format({ gameTitle: o }),
                 renderBody: e ? n : () => (0, s.jsx)(l.Text, {
-                    className: T.microphoneUnitBodyText,
+                    className: S.microphoneUnitBodyText,
                     color: 'text-muted',
                     variant: 'text-xxs/normal',
-                    children: S.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({ gameTitle: o })
+                    children: T.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({ gameTitle: o })
                 })
             };
         }, [
@@ -84,15 +84,15 @@ function v(e) {
             N
         ]);
     return (0, s.jsxs)('div', {
-        className: T.microphoneUnit,
+        className: S.microphoneUnit,
         children: [
             (0, s.jsxs)('div', {
-                className: T.microphoneUnitHeader,
+                className: S.microphoneUnitHeader,
                 children: [
                     (0, s.jsx)(l.CircleExclamationPointIcon, {
                         size: 'custom',
                         color: 'currentColor',
-                        className: 0 === N.length ? T.warningCircle : T.errorCircle,
+                        className: 0 === N.length ? S.warningCircle : S.errorCircle,
                         width: 16,
                         height: 16
                     }),
@@ -101,23 +101,23 @@ function v(e) {
                         children: j
                     }),
                     (0, s.jsx)(l.Clickable, {
-                        className: a()(T.microphoneUnitRefreshIconWrapper, { [T.disabled]: v }),
-                        onClick: () => A(),
+                        className: a()(S.microphoneUnitRefreshIconWrapper, { [S.disabled]: A }),
+                        onClick: () => v(),
                         children: _.render()
                     })
                 ]
             }),
             B(),
             0 === N.length ? null : (0, s.jsx)(l.Text, {
-                className: T.microphoneUnitBodyText,
+                className: S.microphoneUnitBodyText,
                 color: 'text-muted',
                 variant: 'text-xxs/normal',
                 children: function () {
                     let e = r.playstationAccounts.length > 0, t = r.xboxAccounts.length > 0;
-                    return e && !t || !e && t ? 'en-US' === c ? S.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_HELP_ARTICLE_SINGLE.format({ helpdeskArticle: u.Z.getArticleURL(e ? E.BhN.QUEST_HOW_TO_PLAYSTATION : E.BhN.QUEST_HOW_TO_XBOX) }) : S.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_SINGLE_CONSOLE.format({ helpdeskArticle: u.Z.getArticleURL(e ? E.BhN.PS_CONNECTION : E.BhN.XBOX_CONNECTION) }) : 'en-US' === c ? S.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_HELP_ARTICLE_MULTI.format({
+                    return e && !t || !e && t ? 'en-US' === c ? T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_HELP_ARTICLE_SINGLE.format({ helpdeskArticle: u.Z.getArticleURL(e ? E.BhN.QUEST_HOW_TO_PLAYSTATION : E.BhN.QUEST_HOW_TO_XBOX) }) : T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_SINGLE_CONSOLE.format({ helpdeskArticle: u.Z.getArticleURL(e ? E.BhN.PS_CONNECTION : E.BhN.XBOX_CONNECTION) }) : 'en-US' === c ? T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_HELP_ARTICLE_MULTI.format({
                         psHelpdeskArticle: u.Z.getArticleURL(E.BhN.QUEST_HOW_TO_PLAYSTATION),
                         xboxHelpdeskArticle: u.Z.getArticleURL(E.BhN.QUEST_HOW_TO_XBOX)
-                    }) : S.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_PLAYSTATION_OR_XBOX.format({
+                    }) : T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_PLAYSTATION_OR_XBOX.format({
                         psHelpdeskArticle: u.Z.getArticleURL(E.BhN.PS_CONNECTION),
                         xboxHelpdeskArticle: u.Z.getArticleURL(E.BhN.XBOX_CONNECTION)
                     });
@@ -126,7 +126,7 @@ function v(e) {
         ]
     });
 }
-function A(e) {
+function v(e) {
     let {text: t} = e;
     return (0, s.jsx)(l.Text, {
         color: 'text-muted',
@@ -153,11 +153,11 @@ t.Z = function (e) {
                         isComplete: n || o || c
                     },
                     {
-                        renderContent: () => (0, s.jsx)(A, { text: i ? S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_ANY_GAME : S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME.format({ gameTitle: l }) }),
+                        renderContent: () => (0, s.jsx)(v, { text: i ? T.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_ANY_GAME : T.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME.format({ gameTitle: l }) }),
                         isComplete: o || c
                     },
                     {
-                        renderContent: () => (0, s.jsx)(A, { text: S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({ numMinutes: r.targetMinutes }) }),
+                        renderContent: () => (0, s.jsx)(v, { text: T.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({ numMinutes: r.targetMinutes }) }),
                         isComplete: c
                     }
                 ],
@@ -171,18 +171,18 @@ t.Z = function (e) {
             r
         ]);
     return (0, s.jsxs)('div', {
-        className: T.wrapper,
+        className: S.wrapper,
         children: [
             (0, s.jsx)('div', {
-                className: T.headingWrapper,
+                className: S.headingWrapper,
                 children: (0, s.jsx)(l.Heading, {
-                    className: T.heading,
+                    className: S.heading,
                     variant: 'text-xs/medium',
-                    children: S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_HEADING
+                    children: T.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_HEADING
                 })
             }),
             (0, s.jsxs)('div', {
-                className: T.stepsWrapper,
+                className: S.stepsWrapper,
                 children: [
                     (0, s.jsx)('ul', {
                         children: d.map((e, t) => (0, s.jsx)(N, {
@@ -191,7 +191,7 @@ t.Z = function (e) {
                             children: e.renderContent()
                         }, t))
                     }),
-                    u && !p && !m && (0, s.jsx)(v, {
+                    u && !p && !m && (0, s.jsx)(A, {
                         connectedAccounts: a,
                         useReducedMotion: n,
                         quest: t

@@ -9,7 +9,7 @@ t.d(n, {
         return m;
     },
     ll: function () {
-        return I;
+        return g;
     }
 });
 var l = t(735250);
@@ -80,7 +80,7 @@ function x(e) {
         } = e, d = a.author_id, f = (0, o.e7)([c.default], () => c.default.getUser(d)), {
             displayParticipants: v,
             numOtherParticipants: m
-        } = (0, _.Z)(a, r), x = (0, o.e7)([u.ZP], () => u.ZP.getMember(n, d)), I = (0, o.e7)([s.Z], () => {
+        } = (0, _.Z)(a, r), x = (0, o.e7)([u.ZP], () => u.ZP.getMember(n, d)), g = (0, o.e7)([s.Z], () => {
             var e;
             return (null == x ? void 0 : x.colorRoleId) != null ? null === (e = s.Z.getRole(n, x.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
         }, [
@@ -89,7 +89,7 @@ function x(e) {
         ]);
     if (null == f)
         return null;
-    let g = null == x ? void 0 : x.colorString, h = E.ZP.getName(n, t, f);
+    let h = null == x ? void 0 : x.colorString, I = E.ZP.getName(n, t, f);
     return (0, l.jsxs)('div', {
         className: T.userSection,
         children: [
@@ -98,9 +98,9 @@ function x(e) {
                 guildId: n
             }),
             (0, l.jsx)(i.NameWithRole, {
-                color: null != g ? g : void 0,
-                roleName: I,
-                name: h,
+                color: null != h ? h : void 0,
+                roleName: g,
+                name: I,
                 className: T.userName
             }),
             m > 0 ? (0, l.jsx)('div', {
@@ -118,7 +118,7 @@ function x(e) {
         ]
     });
 }
-function I(e) {
+function g(e) {
     let {children: n} = e;
     return (0, l.jsx)(i.Heading, {
         variant: 'heading-sm/normal',

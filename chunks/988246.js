@@ -1,18 +1,18 @@
-n.d(i, {
+i.d(n, {
     Z: function () {
-        return o;
+        return t;
     }
 });
-var s = n(735250);
-n(470079);
-var l = n(689938), t = n(735393);
-function o() {
+var s = i(735250);
+i(470079);
+var l = i(689938), o = i(735393);
+function t() {
     return (0, s.jsxs)('div', {
-        className: t.empty,
+        className: o.empty,
         children: [
-            (0, s.jsx)('div', { className: t.emptyIconStreamerMode }),
+            (0, s.jsx)('div', { className: o.emptyIconStreamerMode }),
             (0, s.jsx)('div', {
-                className: t.emptyText,
+                className: o.emptyText,
                 children: l.Z.Messages.STREAMER_MODE_ENABLED
             })
         ]

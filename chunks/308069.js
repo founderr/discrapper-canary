@@ -6,20 +6,20 @@ t.Z = e => {
             onCtxMenuSelect: _,
             onCtxMenuOpen: h,
             onCtxMenuClose: E,
-            useReducedMotion: S,
-            isExpanded: T,
+            useReducedMotion: T,
+            isExpanded: S,
             isExpansionAnimationComplete: N
-        } = e, v = o.useCallback(() => {
+        } = e, A = o.useCallback(() => {
             (0, m.az)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });
-        }, [t]), A = o.useCallback(() => {
+        }, [t]), v = o.useCallback(() => {
             (0, u.FE)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK
             });
-        }, [t]), j = T && N;
+        }, [t]), j = S && N;
     return (0, s.jsxs)(i.animated.div, {
         className: a()(f.wrapper, { [f.interactable]: j }),
         style: {
@@ -140,7 +140,7 @@ t.Z = e => {
                     className: f.background,
                     animationClassName: f.backgroundAnimation,
                     quest: t,
-                    useReducedMotion: S
+                    useReducedMotion: T
                 })
             }),
             (0, s.jsx)(i.animated.img, {
@@ -184,7 +184,7 @@ t.Z = e => {
                     })
                 },
                 children: (0, s.jsx)(l.Clickable, {
-                    onClick: A,
+                    onClick: v,
                     className: a()({ [f.logo]: j }),
                     children: (0, s.jsx)(p.Z, {
                         quest: t,
@@ -240,7 +240,7 @@ t.Z = e => {
                 children: [
                     (0, s.jsxs)(l.Clickable, {
                         className: f.promotedBadge,
-                        onClick: v,
+                        onClick: A,
                         children: [
                             (0, s.jsx)(l.Text, {
                                 color: 'always-white',

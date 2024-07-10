@@ -1,6 +1,6 @@
 n.d(t, {
     Q: function () {
-        return T;
+        return S;
     }
 });
 var s = n(735250);
@@ -115,7 +115,7 @@ function E(e) {
         ]
     });
 }
-function S(e) {
+function T(e) {
     let {
         xboxAndPlaystationAccounts: t,
         quest: n
@@ -125,7 +125,7 @@ function S(e) {
         quest: n
     }) : null;
 }
-function T(e) {
+function S(e) {
     let t = (0, x.P)({ location: m.dr.QUESTS_BAR });
     return (0, s.jsxs)(s.Fragment, {
         children: [
@@ -134,7 +134,7 @@ function T(e) {
                 variant: 'text-xs/medium',
                 children: C.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT
             }),
-            t ? (0, s.jsx)(E, { ...e }) : (0, s.jsx)(S, { ...e })
+            t ? (0, s.jsx)(E, { ...e }) : (0, s.jsx)(T, { ...e })
         ]
     });
 }

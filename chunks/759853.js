@@ -10,11 +10,11 @@ t.Z = e => {
         } = e, {
             completionSpring: _,
             startCompletionAnimation: h
-        } = (0, u.GX)(), E = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = o.useRef(!1), T = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), N = o.useRef(null), v = (0, i.e7)([d.Z], () => d.Z.hasLayers()), A = (0, l.Z)(v), [j, B] = o.useState(null), [b, O] = o.useState(null), R = o.useRef(new r.qA({
+        } = (0, u.GX)(), E = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, T = o.useRef(!1), S = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), N = o.useRef(null), A = (0, i.e7)([d.Z], () => d.Z.hasLayers()), v = (0, l.Z)(A), [j, B] = o.useState(null), [b, O] = o.useState(null), R = o.useRef(new r.qA({
             gravity: 0,
             wind: 0
         })), I = (0, r.uR)(j, b), y = o.useCallback(() => {
-            if (T)
+            if (S)
                 return;
             let e = C.current, t = N.current;
             if (null != t && null != e && I.isReady) {
@@ -70,36 +70,36 @@ t.Z = e => {
             C,
             N,
             I,
-            T
-        ]), M = (0, l.Z)(f);
+            S
+        ]), U = (0, l.Z)(f);
     return (o.useEffect(() => {
-        E && f && !M && (h(), y());
+        E && f && !U && (h(), y());
     }, [
         f,
         E,
         h,
         y,
-        M
+        U
     ]), o.useEffect(() => {
-        E && !v && A && setTimeout(() => {
+        E && !A && v && setTimeout(() => {
             h(), y();
         }, 200);
     }, [
         E,
-        A,
         v,
+        A,
         h,
         y
     ]), o.useEffect(() => {
         if (!!I.isReady)
-            !S.current && E && (h(), y()), S.current = E;
+            !T.current && E && (h(), y()), T.current = E;
     }, [
         E,
-        S,
+        T,
         y,
         h,
         I
-    ]), T) ? null : (0, s.jsxs)('div', {
+    ]), S) ? null : (0, s.jsxs)('div', {
         className: x.wrapper,
         'aria-hidden': 'true',
         ref: N,

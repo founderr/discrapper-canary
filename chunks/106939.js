@@ -6,7 +6,7 @@ n.d(t, {
         return Y;
     }
 });
-var s = n(735250), a = n(470079), r = n(120356), i = n.n(r), l = n(873546), o = n(286379), c = n(399606), d = n(704215), _ = n(481060), u = n(150063), E = n(758119), T = n(100527), I = n(906732), R = n(252618), C = n(605236), p = n(984370), g = n(797614), A = n(108427), m = n(210887), N = n(695346), f = n(594174), S = n(153124), h = n(626135), M = n(792125), x = n(280570), b = n(914788), O = n(841409), L = n(652262), P = n(880257), v = n(631885), Z = n(830746), D = n(731934), B = n(521450), j = n(292352), U = n(981631), G = n(723359), y = n(921944), H = n(689938), k = n(67742);
+var s = n(735250), a = n(470079), r = n(120356), i = n.n(r), l = n(873546), o = n(286379), c = n(399606), d = n(704215), _ = n(481060), u = n(150063), E = n(758119), T = n(100527), I = n(906732), R = n(252618), C = n(605236), p = n(984370), g = n(797614), A = n(108427), m = n(210887), N = n(695346), f = n(594174), S = n(153124), h = n(626135), M = n(792125), x = n(280570), b = n(914788), O = n(841409), P = n(652262), L = n(880257), v = n(631885), Z = n(830746), D = n(731934), B = n(521450), j = n(292352), U = n(981631), G = n(723359), y = n(921944), H = n(689938), k = n(67742);
 let w = {
         [j.dG.REQUESTS]: () => (0, s.jsx)(D.Z, {}),
         [j.dG.ACTIVITY]: () => (0, s.jsx)(Z.Z, {}),
@@ -19,7 +19,7 @@ function V(e) {
     let {
             section: t,
             handleItemSelect: n
-        } = e, a = (0, v.gU)(), r = (0, P.Z)();
+        } = e, a = (0, v.gU)(), r = (0, L.Z)();
     return (0, s.jsxs)(_.TabBar, {
         className: k.settingsTabBar,
         'aria-label': H.Z.Messages.FAMILY_CENTER_TITLE,
@@ -105,7 +105,7 @@ function W(e) {
     });
 }
 function K() {
-    let e = (0, P.Z)(), t = (0, v.M8)(), n = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), r = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), l = (0, L.M)(), {
+    let e = (0, L.Z)(), t = (0, v.M8)(), n = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), r = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), l = (0, P.M)(), {
             selectedTab: u,
             handleTabChange: T
         } = (0, O.Z)(), I = (0, S.Dt)(), p = f.default.getCurrentUser(), m = null != e, N = r && null != p && !m;
@@ -146,7 +146,7 @@ function K() {
     });
 }
 function Y() {
-    let {analyticsLocations: e} = (0, I.ZP)(T.Z.FAMILY_CENTER), t = (0, P.Z)(), n = (0, v.M8)(), r = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), l = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), p = (0, L.M)(), M = (0, c.e7)([m.Z], () => m.Z.theme), {
+    let {analyticsLocations: e} = (0, I.ZP)(T.Z.FAMILY_CENTER), t = (0, L.Z)(), n = (0, v.M8)(), r = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), l = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), p = (0, P.M)(), M = (0, c.e7)([m.Z], () => m.Z.theme), {
             selectedTab: Z,
             handleTabChange: D
         } = (0, O.Z)(), B = (0, S.Dt)(), w = f.default.getCurrentUser(), V = null != t, K = l && null != w && !V;

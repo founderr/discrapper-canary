@@ -9,7 +9,7 @@ function M(e) {
     let {quest: T} = e, M = (0, p.T)({
             quest: T,
             location: f.dr.QUESTS_BAR
-        }), x = (0, C.Zy)({ location: f.dr.QUESTS_BAR }), b = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), O = (0, o.e7)([_.Z], () => _.Z.hasLayers()), L = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, P = (0, c.Z)(L), v = (null === (n = T.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, Z = (0, c.Z)(v), D = (null === (r = T.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null, B = null != T.userStatus && (0, R.zE)(T.userStatus, I.jn.QUEST_BAR), j = (0, E.tP)(T), {
+        }), x = (0, C.Zy)({ location: f.dr.QUESTS_BAR }), b = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), O = (0, o.e7)([_.Z], () => _.Z.hasLayers()), P = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, L = (0, c.Z)(P), v = (null === (n = T.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, Z = (0, c.Z)(v), D = (null === (r = T.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null, B = null != T.userStatus && (0, R.zE)(T.userStatus, I.jn.QUEST_BAR), j = (0, E.tP)(T), {
             hasError: U,
             isLoading: G
         } = (0, A.d7)(), y = x && !B && !D && !j && !G, H = a.useRef(y), k = (0, N.B)(T, y && !U), w = a.useRef(-1), F = a.useRef(!1), [V, W] = a.useState(!1), [K, Y] = a.useState(!1), [z, Q] = a.useState(!0), [J, q] = a.useState(!0), [X, $] = a.useState(k.preEnrollmentExpandedHeight), ee = a.useRef(null), et = a.useCallback(() => {
@@ -62,21 +62,21 @@ function M(e) {
         v,
         k.shouldExpandOnQuestComplete
     ]), a.useLayoutEffect(() => {
-        L && !P && F.current && en();
+        P && !L && F.current && en();
     }, [
         en,
-        L,
-        P
+        P,
+        L
     ]), a.useLayoutEffect(() => {
-        !v && L && !P && !F.current && Y(!1);
+        !v && P && !L && !F.current && Y(!1);
     }, [
-        L,
+        P,
         v,
-        P
+        L
     ]), a.useLayoutEffect(() => {
         y !== H.current && q(!1), H.current = y;
     }, [y]);
-    let eu = L ? f.XZ : f.R4, [{expansionSpring: eE}, eT] = (0, l.useSpring)(() => ({
+    let eu = P ? f.XZ : f.R4, [{expansionSpring: eE}, eT] = (0, l.useSpring)(() => ({
             from: { expansionSpring: 0 },
             config: eu,
             immediate: b,
@@ -156,11 +156,11 @@ function M(e) {
                     onBlur: eo,
                     className: i()(h.contentWrapper, {
                         [h.contentWrapperExpanded]: K,
-                        [h.contentWrapperAccepted]: L
+                        [h.contentWrapperAccepted]: P
                     }),
                     style: {
                         backgroundColor: k.preEnrollmentBackgroundColor,
-                        backgroundImage: L ? k.postEnrollmentBackgroundImage : void 0,
+                        backgroundImage: P ? k.postEnrollmentBackgroundImage : void 0,
                         height: eI,
                         transform: eC.to({
                             range: [

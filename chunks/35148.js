@@ -10,7 +10,7 @@ t.Z = function (e) {
             isExpansionAnimationComplete: f,
             quest: _,
             useReducedMotion: h
-        } = e, E = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {percentComplete: S} = (0, l.Rf)(_), T = (0, l.Jf)(_), N = null != T ? T.completedRatio > 0 : S > 0;
+        } = e, E = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {percentComplete: T} = (0, l.Rf)(_), S = (0, l.Jf)(_), N = null != S ? S.completedRatio > 0 : T > 0;
     return (0, s.jsxs)(a.animated.div, {
         'aria-hidden': C && f,
         className: r()(n, g.contentCollapsed, {
