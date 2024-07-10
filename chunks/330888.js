@@ -1,5 +1,6 @@
 e.exports = {
     container: 'container_c32acf',
+    bot: 'bot_c32acf',
     clickableUsername: 'clickableUsername_c32acf',
     nickname: 'nickname_c32acf',
     userTagUsername: 'userTagUsername_c32acf',
@@ -9,11 +10,9 @@ e.exports = {
     nicknameIcons: 'nicknameIcons_c32acf',
     usernameRow: 'usernameRow_c32acf',
     tags: 'tags_c32acf',
-    tagsWithPronouns: 'tagsWithPronouns_c32acf',
+    pronouns: 'pronouns_c32acf userTag_c32acf',
     userTag: 'userTag_c32acf',
     pronounsTooltip: 'pronounsTooltip_c32acf',
-    pronouns: 'pronouns_c32acf userTag_c32acf',
     userTagDiscriminator: 'userTagDiscriminator_c32acf',
-    botTag: 'botTag_c32acf',
     dotSpacer: 'dotSpacer_c32acf'
 };
