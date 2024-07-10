@@ -4472,6 +4472,7 @@ e.exports = Object.freeze({
     COPIED: 'Copied',
     COPY_ID: 'Copy ID',
     COPY_ID_APPLICATION: 'Copy Application ID',
+    COPY_ID_APP: 'Copy App ID',
     COPY_ID_AUTOMOD_RULE: 'Copy AutoMod Rule ID',
     COPY_ID_CHANNEL: 'Copy Channel ID',
     COPY_ID_COMMAND: 'Copy Command ID',
