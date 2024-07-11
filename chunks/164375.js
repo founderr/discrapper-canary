@@ -1,19 +1,19 @@
 a.r(s), a.d(s, {
     default: function () {
-        return _;
+        return l;
     }
 });
 var n = a(735250);
 a(470079);
-var t = a(481060), r = a(493683), o = a(594174), i = a(799352), c = a(689938), d = a(251846), l = a(444812);
-function _(e) {
+var t = a(481060), r = a(493683), o = a(594174), i = a(799352), c = a(689938), _ = a(251846), d = a(444812);
+function l(e) {
     var s;
     let {
             channelId: a,
-            blockedUserIds: _,
+            blockedUserIds: l,
             transitionState: E,
             onClose: u
-        } = e, N = _.map(e => o.default.getUser(e)), h = () => {
+        } = e, N = l.map(e => o.default.getUser(e)), h = () => {
             u(), (0, i.O)(a);
         }, m = N.length > 1;
     return (0, n.jsxs)(t.ModalRoot, {
@@ -21,30 +21,30 @@ function _(e) {
         children: [
             (0, n.jsx)('img', {
                 alt: '',
-                className: d.headerImage,
-                src: l
+                className: _.headerImage,
+                src: d
             }),
             (0, n.jsx)(t.ModalHeader, {
                 separator: !1,
-                className: d.header,
+                className: _.header,
                 children: (0, n.jsxs)(t.Heading, {
                     variant: 'heading-lg/bold',
-                    className: d.title,
+                    className: _.title,
                     children: [
-                        m ? c.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_HEADER : c.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_HEADER,
+                        m ? c.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_HEADER_MODAL : c.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_HEADER_MODAL,
                         (0, n.jsx)('br', {}),
-                        c.Z.Messages.GDM_BLOCKED_USER_WARNING_LEAVE_GROUP
+                        c.Z.Messages.GDM_BLOCKED_USER_WARNING_LEAVE_GROUP_MODAL
                     ]
                 })
             }),
             (0, n.jsxs)(t.ModalContent, {
-                className: d.content,
+                className: _.content,
                 children: [
                     (0, n.jsxs)('div', {
-                        className: d.infoGroup,
+                        className: _.infoGroup,
                         children: [
                             (0, n.jsx)('div', {
-                                className: d.infoRow,
+                                className: _.infoRow,
                                 children: m ? (0, n.jsxs)(n.Fragment, {
                                     children: [
                                         (0, n.jsx)(t.GroupIcon, {}),
@@ -64,7 +64,7 @@ function _(e) {
                                 })
                             }),
                             (0, n.jsxs)('div', {
-                                className: d.infoRow,
+                                className: _.infoRow,
                                 children: [
                                     (0, n.jsx)(t.BellSlashIcon, {}),
                                     (0, n.jsx)(t.Text, {
@@ -74,7 +74,7 @@ function _(e) {
                                 ]
                             }),
                             (0, n.jsxs)('div', {
-                                className: d.infoRow,
+                                className: _.infoRow,
                                 children: [
                                     (0, n.jsx)(t.EnvelopeIcon, {}),
                                     (0, n.jsx)(t.Text, {
@@ -87,7 +87,7 @@ function _(e) {
                         ]
                     }),
                     (0, n.jsxs)('div', {
-                        className: d.buttonGroup,
+                        className: _.buttonGroup,
                         children: [
                             (0, n.jsx)(t.Button, {
                                 type: 'submit',

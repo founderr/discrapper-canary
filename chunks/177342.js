@@ -34,7 +34,7 @@ function h(e) {
         p
     ]);
     return (0, i.jsxs)('div', {
-        className: d.strangerDangerBanner,
+        className: d.safetyWarningBanner,
         children: [
             (0, i.jsxs)('div', {
                 className: d.shieldAndHeading,

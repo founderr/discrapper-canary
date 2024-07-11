@@ -1,6 +1,9 @@
 n.d(t, {
     E: function () {
         return r;
+    },
+    f: function () {
+        return i;
     }
 });
 let r = (0, n(818083).B)({
@@ -33,3 +36,7 @@ let r = (0, n(818083).B)({
         }
     ]
 });
+function i(e) {
+    let {location: t} = e, n = r.getCurrentConfig({ location: t }, { autoTrackExposure: !1 });
+    return n.enabled && n.showAsBanner;
+}
