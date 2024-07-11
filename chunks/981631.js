@@ -1805,7 +1805,6 @@ let ad = 128, aO = 1024, ap = 2000, aS = 64000, aD = 96000, af = '0000', aL = '1
         DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION: t => ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/developers/servers/').concat(t, '/analytics/premium-membership'),
         COMPANY: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/company'),
         PARTNERS: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/partners'),
-        HYPESQUAD: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/hypesquad'),
         TERMS: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/terms'),
         PAID_TERMS: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/terms/paid-services-terms'),
         PRIVACY: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/privacy'),

@@ -3486,7 +3486,6 @@ e.exports = Object.freeze({
     HYPESQUAD_ERROR_HEADING: 'Uh oh, we broke Discord!',
     HYPESQUAD_ERROR_BODY: 'There was an error adding you to HypeSquad Online. If the error persists, please contact [{emailAddress}]({emailAddressLink}).',
     HYPESQUAD_LEAVE_ERROR: 'There was an error removing you from HypeSquad Online. Please try again.',
-    HYPESQUAD_ATTENDEE_CTA: 'Interested in repping the HypeSquad at a local event? Coordinating an event of your own? [Apply here!]({url})',
     HYPESQUAD_YOUR_HOUSE: 'Your House:',
     HYPESQUAD_MEMBERSHIP_HEADING: 'House of {houseName}',
     HYPESQUAD_DESCRIPTION_HOUSE_1: 'The universe needs people to lead the charge with confident optimism and tenacity. Without the brave, the HypeSquad would descend into chaos.',
