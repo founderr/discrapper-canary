@@ -23,8 +23,7 @@ function j(e) {
             isEmptyState: _,
             commandResults: A,
             hasCommandResults: f,
-            applicationResults: N,
-            hasApplicationResults: v
+            applicationResults: N
         } = (0, h.pe)({
             channel: n,
             query: t,
@@ -32,13 +31,13 @@ function j(e) {
             searchesCommands: u,
             searchesBots: m
         }), {
-            fetchState: I,
-            applicationResults: x
+            fetchState: v,
+            applicationResults: I
         } = (0, h.Q2)({
             query: t,
             channel: n,
             fetches: r !== E._b.VOICE
-        }), P = null == I || I === d.M.FETCHING, T = l.useMemo(() => {
+        }), x = null == v || v === d.M.FETCHING, P = l.useMemo(() => {
             let e = N.map(e => ({
                 application: e,
                 installOnDemand: !1
@@ -51,17 +50,17 @@ function j(e) {
             }));
             return [
                 ...e,
-                ...a().compact(x.map(e => e.type === s.s.CONNECTION || n.has(e.data.id) ? null : {
+                ...a().compact(I.map(e => e.type === s.s.CONNECTION || n.has(e.data.id) ? null : {
                     application: e.data,
                     installOnDemand: !0
                 }))
             ];
         }, [
             r,
-            x,
+            I,
             N
-        ]);
-    return p ? (0, i.jsx)(U, {}) : _ ? (0, i.jsx)(C.A, {
+        ]), T = P.length > 0, R = _ && !T && !x;
+    return p ? (0, i.jsx)(U, {}) : R ? (0, i.jsx)(C.A, {
         type: E.LG.SEARCH_EMPTY,
         searchQuery: t,
         textContent: r === E._b.TEXT ? g.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : g.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
@@ -72,9 +71,9 @@ function j(e) {
                 commandResults: A,
                 query: t
             }),
-            v && (0, i.jsx)(Z, {
-                applicationResults: T,
-                includePlaceholder: P,
+            (T || x) && (0, i.jsx)(Z, {
+                applicationResults: P,
+                includePlaceholder: x,
                 query: t,
                 searchesBots: m
             })
