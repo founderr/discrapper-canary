@@ -3,12 +3,12 @@ t.d(n, {
         return s;
     }
 }), t(47120);
-var i = t(470079), l = t(674588), a = t(70956), r = t(314734);
+var i = t(470079), l = t(674588), r = t(70956), a = t(314734);
 function s(e) {
     let {
             sectionId: n,
             commandsByActiveSection: t
-        } = e, [s, o] = i.useState(r.bS.ALPHABETICAL), c = i.useMemo(() => {
+        } = e, [s, o] = i.useState(a.bS.ALPHABETICAL), c = i.useMemo(() => {
             var e, i;
             return null !== (i = null === (e = t.find(e => e.section.id === n)) || void 0 === e ? void 0 : e.data) && void 0 !== i ? i : [];
         }, [
@@ -52,17 +52,17 @@ function s(e) {
             }, [n]);
         }({ alphabeticalSortedCommands: c });
     i.useEffect(() => {
-        l.i6(n, { dontRefetchMs: a.Z.Millis.DAY });
+        l.i6(n, { dontRefetchMs: r.Z.Millis.DAY });
     }, [n]), i.useEffect(() => {
         if (!!d)
-            o(r.bS.POPULAR);
+            o(a.bS.POPULAR);
     }, [d]);
     let m = c;
     switch (s) {
-    case r.bS.POPULAR:
+    case a.bS.POPULAR:
         m = u;
         break;
-    case r.bS.ALPHABETICAL:
+    case a.bS.ALPHABETICAL:
         m = c;
     }
     return {

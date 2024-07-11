@@ -1,4 +1,4 @@
-var i, l, a, r, s = t(442837), o = t(570140), c = t(827498);
+var i, l, r, a, s = t(442837), o = t(570140), c = t(827498);
 let u = {
     show: !1,
     entrypoint: c._b.NONE,
@@ -11,7 +11,7 @@ function d(e) {
     } = e;
     return u.show = !1, u.entrypoint = c._b.NONE, u.closeReason = n, !0;
 }
-class m extends (r = s.ZP.Store) {
+class m extends (a = s.ZP.Store) {
     initialize() {
     }
     shouldShowPopup() {
@@ -36,12 +36,12 @@ function p() {
 function _() {
     d({ closeReason: c.ti.COMMAND });
 }
-a = 'AppLauncherStore', (l = 'displayName') in (i = m) ? Object.defineProperty(i, l, {
-    value: a,
+r = 'AppLauncherStore', (l = 'displayName') in (i = m) ? Object.defineProperty(i, l, {
+    value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : i[l] = a, n.Z = new m(o.Z, {
+}) : i[l] = r, n.Z = new m(o.Z, {
     APP_LAUNCHER_SHOW: function (e) {
         let {
             entrypoint: n,

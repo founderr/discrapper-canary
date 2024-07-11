@@ -3,7 +3,7 @@ t.d(n, {
         return p;
     }
 });
-var i = t(735250), l = t(470079), a = t(481060), r = t(895924), s = t(424602), o = t(827498), c = t(98880), u = t(772606), d = t(689938), m = t(235435);
+var i = t(735250), l = t(470079), r = t(481060), a = t(895924), s = t(424602), o = t(827498), c = t(98880), u = t(772606), d = t(689938), m = t(235435);
 function p(e) {
     let {
             channel: n,
@@ -21,29 +21,29 @@ function p(e) {
                 className: m.header,
                 children: [
                     (0, i.jsx)(u.Z, { className: m.backButton }),
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(r.Heading, {
                         variant: 'heading-md/medium',
                         color: 'header-primary',
                         children: p
                     })
                 ]
             }),
-            (0, i.jsx)(a.Scroller, {
+            (0, i.jsx)(r.Scroller, {
                 children: (0, i.jsx)('div', {
                     className: m.appGrid,
                     children: E.map((e, t) => {
                         let {
                             application: l,
-                            isPartner: a
+                            isPartner: r
                         } = e;
                         return (0, i.jsx)(N, {
                             channel: n,
                             application: l,
                             look: _,
-                            isPartner: a,
+                            isPartner: r,
                             sectionName: h,
                             resultsPosition: t,
-                            location: r.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
+                            location: a.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
                             isOneClickCTA: A
                         }, l.id);
                     })

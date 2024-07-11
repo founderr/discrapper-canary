@@ -3,7 +3,7 @@ t.d(n, {
         return d;
     }
 });
-var i = t(735250), l = t(470079), a = t(120356), r = t.n(a), s = t(442837), o = t(481060), c = t(607070), u = t(9258);
+var i = t(735250), l = t(470079), r = t(120356), a = t.n(r), s = t(442837), o = t(481060), c = t(607070), u = t(9258);
 function d() {
     let e = (0, s.e7)([c.Z], () => c.Z.useReducedMotion), {
             styleLarge: n,
@@ -13,7 +13,7 @@ function d() {
             styleSmall: { width: ''.concat(30 + 60 * Math.random(), '%') }
         }), []);
     return (0, i.jsxs)('div', {
-        className: r()(u.container, { [u.noAnimation]: e }),
+        className: a()(u.container, { [u.noAnimation]: e }),
         children: [
             (0, i.jsx)('div', { className: u.iconPlaceholder }),
             (0, i.jsxs)('div', {

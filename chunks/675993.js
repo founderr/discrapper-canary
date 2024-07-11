@@ -3,18 +3,18 @@ t.d(n, {
         return N;
     }
 }), t(47120);
-var i = t(735250), l = t(470079), a = t(581051), r = t(353381), s = t(993365), o = t(481060), c = t(240991), u = t(810090), d = t(283442), m = t(783097), p = t(520315), _ = t(591204), E = t(689938), h = t(970311), A = t(153521);
+var i = t(735250), l = t(470079), r = t(581051), a = t(353381), s = t(993365), o = t(481060), c = t(240991), u = t(810090), d = t(283442), m = t(783097), p = t(520315), _ = t(591204), E = t(689938), h = t(970311), A = t(153521);
 function N(e) {
     let {
             channel: n,
             application: t,
-            videoUrl: a,
-            imageCoverUrl: r,
+            videoUrl: r,
+            imageCoverUrl: a,
             sectionName: o
         } = e, c = l.useMemo(() => {
             var e;
             return null !== (e = (0, m.jD)(t)) && void 0 !== e ? e : '';
-        }, [t]), d = null != a || null != r, p = c.length > 0;
+        }, [t]), d = null != r || null != a, p = c.length > 0;
     return (0, i.jsxs)('div', {
         className: h.container,
         children: [
@@ -33,8 +33,8 @@ function N(e) {
                             autoPlay: !0,
                             muted: !0,
                             className: p ? h.videoWithOverview : h.videoNoOverview,
-                            src: a,
-                            poster: r
+                            src: r,
+                            poster: a
                         })
                     }) : null,
                     p ? (0, i.jsxs)('div', {
@@ -56,9 +56,9 @@ function f(e) {
     let {
             channel: n,
             application: t,
-            sectionName: a
+            sectionName: r
         } = e, {
-            name: r,
+            name: a,
             activityApplication: s
         } = l.useMemo(() => {
             var e;
@@ -77,13 +77,13 @@ function f(e) {
             children: [
                 (0, i.jsx)(o.Heading, {
                     variant: 'heading-xl/extrabold',
-                    children: r
+                    children: a
                 }),
                 null != s ? (0, i.jsx)(_.Z, {
                     channel: n,
                     application: s,
                     disabled: c,
-                    sectionName: a,
+                    sectionName: r,
                     commandName: u
                 }) : null
             ]
@@ -136,10 +136,10 @@ function C(e) {
                         color: 'text-brand',
                         children: v ? E.Z.Messages.APP_LAUNCHER_SHOW_LESS : E.Z.Messages.APP_LAUNCHER_SHOW_MORE
                     }),
-                    v ? (0, i.jsx)(r.u, {
+                    v ? (0, i.jsx)(a.u, {
                         size: 'sm',
                         color: o.tokens.colors.TEXT_BRAND
-                    }) : (0, i.jsx)(a.C, {
+                    }) : (0, i.jsx)(r.C, {
                         size: 'sm',
                         color: o.tokens.colors.TEXT_BRAND
                     })

@@ -1,10 +1,10 @@
 t.d(n, {
     D: function () {
-        return a;
+        return r;
     }
 });
 var i = t(470079), l = t(430824);
-function a(e) {
+function r(e) {
     return i.useMemo(() => {
         var n;
         return {

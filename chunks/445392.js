@@ -1,5 +1,5 @@
-var i, l = t(442837), a = t(570140);
-function r(e, n, t) {
+var i, l = t(442837), r = t(570140);
+function a(e, n, t) {
     return n in e ? Object.defineProperty(e, n, {
         value: t,
         enumerable: !0,
@@ -23,7 +23,7 @@ class c extends (i = l.ZP.PersistedStore) {
         return null == o.lastUsedTimeMs || null == o.lastUsedCommandId ? null : (e > o.lastUsedTimeMs + s && (o.lastUsedCommandId = null, o.lastUsedTimeMs = null), o.lastUsedCommandId);
     }
 }
-r(c, 'displayName', 'AppLauncherLastUsedCommandStore'), r(c, 'persistKey', 'AppLauncherLastUsedCommandStore'), new c(a.Z, {
+a(c, 'displayName', 'AppLauncherLastUsedCommandStore'), a(c, 'persistKey', 'AppLauncherLastUsedCommandStore'), new c(r.Z, {
     APPLICATION_COMMAND_USED: function (e) {
         let {command: n} = e;
         o.lastUsedCommandId = n.id, o.lastUsedTimeMs = Date.now();
