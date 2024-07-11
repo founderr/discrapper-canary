@@ -38,7 +38,7 @@ t.Z = {
     isDiscordUrlOrUri: e => h(e) || p(e),
     isAppRoute: e => {
         let t = e.toLowerCase();
-        return t.startsWith('/channels/') || t.startsWith(l.Z5c.APPLICATION_STORE) || t.startsWith(l.Z5c.APPLICATION_LIBRARY) || t.startsWith(l.Z5c.MESSAGE_REQUESTS) || t.startsWith(l.Z5c.ACTIVITIES) || t.startsWith(l.Z5c.COLLECTIBLES_SHOP) || t.startsWith(l.Z5c.ACTIVITY);
+        return t.startsWith('/channels/') || t.startsWith(l.Z5c.APPLICATION_STORE) || t.startsWith(l.Z5c.APPLICATION_LIBRARY) || t.startsWith(l.Z5c.MESSAGE_REQUESTS) || t.startsWith(l.Z5c.FAMILY_CENTER) || t.startsWith(l.Z5c.ACTIVITIES) || t.startsWith(l.Z5c.COLLECTIBLES_SHOP) || t.startsWith(l.Z5c.ACTIVITY);
     },
     format: e => s.format(e),
     formatPathWithQuery: (e, t) => s.format({
