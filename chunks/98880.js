@@ -12,7 +12,7 @@ t.d(n, {
         return U;
     }
 }), t(47120), t(411104);
-var i, l, a = t(735250), r = t(470079), s = t(120356), o = t.n(s), c = t(481060), u = t(361213), d = t(542094), m = t(778569), p = t(182906), _ = t(367907), E = t(220082), h = t(318661), A = t(810090), N = t(792125), f = t(541099), C = t(783097), v = t(695676), I = t(176412), x = t(226026), P = t(753972), T = t(981631), g = t(217702), R = t(231338), S = t(689938), M = t(126152), L = t(413097);
+var i, l, r = t(735250), a = t(470079), s = t(120356), o = t.n(s), c = t(481060), u = t(361213), d = t(542094), m = t(778569), p = t(182906), _ = t(367907), E = t(220082), h = t(318661), A = t(810090), N = t(792125), f = t(541099), C = t(783097), v = t(695676), I = t(176412), P = t(226026), x = t(753972), T = t(981631), g = t(217702), R = t(231338), S = t(689938), M = t(126152), L = t(413097);
 function j(e) {
     let {
             application: n,
@@ -29,17 +29,17 @@ function j(e) {
             iconURL: h,
             name: A,
             description: f
-        } = r.useMemo(() => (0, C.sl)(n, {
+        } = a.useMemo(() => (0, C.sl)(n, {
             botIconFirst: !0,
             fakeAppIconURL: L
-        }), [n]), v = (0, E.ZP)(h, ''), {trackItemImpressionRef: I} = (0, x.Z)({
+        }), [n]), v = (0, E.ZP)(h, ''), {trackItemImpressionRef: I} = (0, P.Z)({
             applicationId: n.id,
             sectionName: m,
             sectionPosition: p
-        }), [T, g] = r.useState(!1), j = r.useCallback(() => {
+        }), [T, g] = a.useState(!1), j = a.useCallback(() => {
             !0 === u && g(!0);
-        }, [u]), y = r.useCallback(() => g(!1), []);
-    return 'icon' === t ? (0, a.jsx)(c.Clickable, {
+        }, [u]), y = a.useCallback(() => g(!1), []);
+    return 'icon' === t ? (0, r.jsx)(c.Clickable, {
         innerRef: _ ? e => I.current = e : void 0,
         className: o()(M.container, M.iconCard),
         onClick: l,
@@ -47,12 +47,13 @@ function j(e) {
             applicationName: A,
             applicationDescription: f
         }),
-        children: null != h && (0, a.jsx)(P.Z, {
+        children: (0, r.jsx)(x.Z, {
             src: h,
             className: M.iconCard,
-            'aria-hidden': !0
+            'aria-hidden': !0,
+            rendersPlaceholder: !0
         })
-    }) : (0, a.jsxs)(c.Clickable, {
+    }) : (0, r.jsxs)(c.Clickable, {
         innerRef: _ ? e => I.current = e : void 0,
         className: M.container,
         onClick: l,
@@ -61,7 +62,7 @@ function j(e) {
             applicationDescription: f
         }),
         children: [
-            (0, a.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 onMouseEnter: j,
                 onFocus: j,
                 onMouseLeave: y,
@@ -71,47 +72,48 @@ function j(e) {
                     [M.largeBanner]: 'large_banner' === t
                 }),
                 children: [
-                    (0, a.jsx)('span', {
+                    (0, r.jsx)('span', {
                         className: s,
-                        children: (0, a.jsx)(O, {
+                        children: (0, r.jsx)(O, {
                             application: n,
                             fallbackColor: v,
                             showVideo: T
                         })
                     }),
-                    i && (0, a.jsx)('div', {
+                    i && (0, r.jsx)('div', {
                         className: M.partnerLabelWrapper,
-                        children: (0, a.jsx)(c.Text, {
+                        children: (0, r.jsx)(c.Text, {
                             className: (0, N.Q)(R.BR.DARK),
                             variant: 'text-sm/medium',
                             color: 'text-normal',
                             children: S.Z.Messages.APP_DIRECTORY_PARTNER
                         })
                     }),
-                    'large_banner' === t || 'medium_banner' === t ? (0, a.jsx)('div', {
+                    'large_banner' === t || 'medium_banner' === t ? (0, r.jsx)('div', {
                         className: M.bannerImageChildContainer,
                         children: d
                     }) : null
                 ]
             }),
-            (0, a.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: M.appDetailsContainer,
                 children: [
-                    null != h && (0, a.jsx)(P.Z, {
+                    (0, r.jsx)(x.Z, {
                         src: h,
                         className: M.icon,
-                        'aria-hidden': !0
+                        'aria-hidden': !0,
+                        rendersPlaceholder: !0
                     }),
-                    (0, a.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: M.appDetails,
                         children: [
-                            (0, a.jsx)(c.Heading, {
+                            (0, r.jsx)(c.Heading, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
                                 lineClamp: 1,
                                 children: A
                             }),
-                            (0, a.jsx)(c.Text, {
+                            (0, r.jsx)(c.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
                                 lineClamp: 1,
@@ -132,14 +134,14 @@ function O(e) {
     } = e;
     if ((0, C.BQ)(n)) {
         if ((0, C.ye)({ application: n }))
-            return (0, a.jsx)(y, {
+            return (0, r.jsx)(y, {
                 application: n,
                 showVideo: i
             });
         if (null != n.bot)
-            return (0, a.jsx)(b, { bot: n.bot });
+            return (0, r.jsx)(b, { bot: n.bot });
     }
-    return (0, a.jsx)('div', {
+    return (0, r.jsx)('div', {
         className: M.bannerImage,
         style: { backgroundColor: t }
     });
@@ -152,18 +154,18 @@ function y(e) {
             applicationId: n.id,
             size: 600,
             names: ['embedded_cover']
-        }), l = r.useMemo(() => {
+        }), l = a.useMemo(() => {
             let e = (0, C.yJ)(n);
             return null != e && null != e.activity_preview_video_asset_id ? (0, u.Z)(n.id, e.activity_preview_video_asset_id) : null;
-        }, [n]), [s, c] = r.useState(t);
-    return r.useEffect(() => {
+        }, [n]), [s, c] = a.useState(t);
+    return a.useEffect(() => {
         t && c(!0);
-    }, [t]), (0, a.jsxs)(a.Fragment, {
+    }, [t]), (0, r.jsxs)(r.Fragment, {
         children: [
-            null != l && s ? (0, a.jsx)('div', {
+            null != l && s ? (0, r.jsx)('div', {
                 className: o()(M.activityVideo, { [M.videoFadeOut]: !t }),
                 onAnimationEnd: () => t ? null : c(!1),
-                children: (0, a.jsx)(A.Z, {
+                children: (0, r.jsx)(A.Z, {
                     src: l,
                     mediaLayoutType: g.hV.MOSAIC,
                     loop: !0,
@@ -171,7 +173,7 @@ function y(e) {
                     muted: !0
                 })
             }) : null,
-            (0, a.jsx)(p.Z, {
+            (0, r.jsx)(p.Z, {
                 imageBackground: i,
                 applicationName: n.name,
                 imageClassName: M.bannerImage,
@@ -181,11 +183,11 @@ function y(e) {
     });
 }
 function b(e) {
-    let {bot: n} = e, t = (0, h.ZP)(n.id), i = r.useMemo(() => null == t ? void 0 : t.getBannerURL({
+    let {bot: n} = e, t = (0, h.ZP)(n.id), i = a.useMemo(() => null == t ? void 0 : t.getBannerURL({
             canAnimate: !1,
             size: 600
         }), [t]);
-    return (0, a.jsx)('img', {
+    return (0, r.jsx)('img', {
         src: i,
         alt: '',
         className: M.bannerImage
@@ -197,10 +199,10 @@ function Z(e) {
             sectionName: t,
             resultsPosition: i,
             query: l,
-            installOnDemand: a,
+            installOnDemand: r,
             location: s
         } = e, {pushHistory: o} = (0, v.hH)();
-    return r.useCallback(e => {
+    return a.useCallback(e => {
         e.stopPropagation(), (0, _.yw)(T.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
             application_id: n.id,
             section_name: t,
@@ -211,12 +213,12 @@ function Z(e) {
         }), o({
             type: v.gc.APPLICATION,
             application: n,
-            installOnDemand: a,
+            installOnDemand: r,
             sectionName: t
         });
     }, [
         n,
-        a,
+        r,
         s,
         o,
         l,
@@ -226,7 +228,7 @@ function Z(e) {
 }
 function H(e) {
     let n = Z(e);
-    return (0, a.jsx)(j, {
+    return (0, r.jsx)(j, {
         ...e,
         onClick: n,
         enableVideoBanner: !0
@@ -238,7 +240,7 @@ function U(e) {
         application: t,
         location: i,
         sectionName: l,
-        isOneClickCTA: r,
+        isOneClickCTA: a,
         ...s
     } = e;
     if (!(0, C.BQ)(t))
@@ -250,19 +252,19 @@ function U(e) {
         buttonText: p
     } = (0, I.P)(n, t, i, l);
     if (u === d.JS.START)
-        return r ? (0, a.jsx)(j, {
+        return a ? (0, r.jsx)(j, {
             ...s,
             sectionName: l,
             application: t,
             onClick: o,
             enableVideoBanner: !0
-        }) : (0, a.jsx)(H, {
+        }) : (0, r.jsx)(H, {
             ...s,
             sectionName: l,
             application: t,
             location: i
         });
-    return (0, a.jsx)(j, {
+    return (0, r.jsx)(j, {
         ...s,
         sectionName: l,
         application: t,
@@ -270,9 +272,9 @@ function U(e) {
             e.stopPropagation();
         },
         bannerImageStyle: M.darkenBannerImage,
-        children: (0, a.jsx)('div', {
+        children: (0, r.jsx)('div', {
             className: M.voiceLauncherAppCardContainer,
-            children: (0, a.jsx)(c.Button, {
+            children: (0, r.jsx)(c.Button, {
                 className: M.voiceLauncherAppCardButton,
                 type: 'submit',
                 size: c.Button.Sizes.LARGE,
