@@ -282,7 +282,8 @@ function Z(e) {
                                     onClick: () => a()
                                 }),
                                 !eu && (0, s.jsx)(N.p, {
-                                    sentrySource: M.dr.REWARD_CODE_MODAL,
+                                    source: M.dr.REWARD_CODE_MODAL,
+                                    questId: r.id,
                                     children: (0, s.jsx)(w, {
                                         quest: r,
                                         rewardCode: W,

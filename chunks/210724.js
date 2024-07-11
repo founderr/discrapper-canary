@@ -3,7 +3,7 @@ n.d(t, {
         return M;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), r = n(120356), i = n.n(r), l = n(338545), o = n(442837), c = n(110924), d = n(607070), _ = n(819640), u = n(617136), E = n(113434), T = n(569984), I = n(497505), R = n(918701), C = n(977156), p = n(5881), g = n(602667), A = n(78826), m = n(693900), N = n(617889), f = n(46140), S = n(981631), h = n(487383);
+var s = n(735250), a = n(470079), r = n(120356), i = n.n(r), l = n(338545), o = n(442837), c = n(110924), d = n(607070), _ = n(819640), u = n(617136), E = n(113434), T = n(569984), I = n(497505), R = n(918701), C = n(977156), p = n(5881), g = n(602667), A = n(78826), N = n(693900), m = n(617889), f = n(46140), S = n(981631), h = n(487383);
 function M(e) {
     var t, n, r;
     let {quest: T} = e, M = (0, p.T)({
@@ -12,7 +12,7 @@ function M(e) {
         }), x = (0, C.Zy)({ location: f.dr.QUESTS_BAR }), b = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), O = (0, o.e7)([_.Z], () => _.Z.hasLayers()), P = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, L = (0, c.Z)(P), v = (null === (n = T.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, Z = (0, c.Z)(v), D = (null === (r = T.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null, B = null != T.userStatus && (0, R.zE)(T.userStatus, I.jn.QUEST_BAR), j = (0, E.tP)(T), {
             hasError: U,
             isLoading: G
-        } = (0, A.d7)(), y = x && !B && !D && !j && !G, H = a.useRef(y), k = (0, N.B)(T, y && !U), w = a.useRef(-1), F = a.useRef(!1), [V, W] = a.useState(!1), [K, Y] = a.useState(!1), [z, Q] = a.useState(!0), [J, q] = a.useState(!0), [X, $] = a.useState(k.preEnrollmentExpandedHeight), ee = a.useRef(null), et = a.useCallback(() => {
+        } = (0, A.d7)(), y = x && !B && !D && !j && !G, H = a.useRef(y), k = (0, m.B)(T, y && !U), w = a.useRef(-1), F = a.useRef(!1), [V, W] = a.useState(!1), [K, Y] = a.useState(!1), [z, Q] = a.useState(!0), [q, J] = a.useState(!0), [X, $] = a.useState(k.preEnrollmentExpandedHeight), ee = a.useRef(null), et = a.useCallback(() => {
             var e, t;
             $((null !== (t = null === (e = ee.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 2 * k.paddingVertical);
         }, [k.paddingVertical]), en = a.useCallback(() => {
@@ -74,7 +74,7 @@ function M(e) {
         v,
         L
     ]), a.useLayoutEffect(() => {
-        y !== H.current && q(!1), H.current = y;
+        y !== H.current && J(!1), H.current = y;
     }, [y]);
     let eu = P ? f.XZ : f.R4, [{expansionSpring: eE}, eT] = (0, l.useSpring)(() => ({
             from: { expansionSpring: 0 },
@@ -110,10 +110,10 @@ function M(e) {
         },
         immediate: b,
         onRest: () => {
-            q(!0);
+            J(!0);
         },
         onStart: () => {
-            q(!1);
+            J(!1);
         }
     });
     return (a.useLayoutEffect(() => {
@@ -124,7 +124,27 @@ function M(e) {
         k.canCollapseOnBlur,
         et,
         Z
-    ]), x && (y || !J || G) && !U) ? (0, s.jsx)(g.A, {
+    ]), a.useEffect(() => {
+        U && (0, u.dA)({
+            questId: T.id,
+            event: S.rMx.QUEST_CONTENT_RENDERING_FAILURE,
+            properties: {
+                ...(0, u.mH)(I.jn.QUEST_BAR),
+                reason: 'asset_loading_error'
+            }
+        }), !x && (0, u.dA)({
+            questId: T.id,
+            event: S.rMx.QUEST_CONTENT_RENDERING_FAILURE,
+            properties: {
+                ...(0, u.mH)(I.jn.QUEST_BAR),
+                reason: 'not_eligible_for_quest'
+            }
+        });
+    }, [
+        U,
+        x,
+        T.id
+    ]), x && (y || !q || G) && !U) ? (0, s.jsx)(g.A, {
         questOrQuests: T,
         questContent: k.trackingCtx.content,
         overrideVisibility: !O && y,
@@ -134,7 +154,7 @@ function M(e) {
                 'aria-hidden': !y,
                 className: i()(h.wrapper, {
                     [h.wrapperInvisible]: !y,
-                    [h.wrapperVisible]: y && J
+                    [h.wrapperVisible]: y && q
                 }),
                 style: {
                     color: T.config.colors.secondary,
@@ -173,7 +193,7 @@ function M(e) {
                             ]
                         }).to(e => 'translateY('.concat(e, '%)'))
                     },
-                    children: (0, s.jsx)(m.t, {
+                    children: (0, s.jsx)(N.t, {
                         springConfig: eu,
                         isExpanded: K,
                         onHeightChange: e_,
@@ -200,7 +220,8 @@ t.Z = 12633 == n.j ? function (e) {
             return null !== (e = null != t ? t : T.Z.questDeliveryOverride) && void 0 !== e ? e : (0, R._)(T.Z.quests, I.jn.QUEST_BAR);
         });
     return null == n ? null : (0, s.jsx)(A.p, {
-        sentrySource: f.dr.QUESTS_BAR,
+        source: f.dr.QUESTS_BAR,
+        questId: n.id,
         children: (0, s.jsx)(M, { quest: n })
     }, n.id);
 } : null;

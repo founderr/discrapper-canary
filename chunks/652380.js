@@ -457,6 +457,8 @@ function D() {
                                         className: h.questBarPreview,
                                         children: (0, n.jsx)(_.p, {
                                             isPreview: !0,
+                                            source: 'preview',
+                                            questId: '0',
                                             children: (0, n.jsx)(d.Z, { children: (0, n.jsx)(c.P, { quest: g }) })
                                         })
                                     })
@@ -469,6 +471,8 @@ function D() {
                             (0, n.jsx)(r.FormTitle, { children: 'Gift Inventory' }),
                             (0, n.jsx)(_.p, {
                                 isPreview: !0,
+                                source: 'preview',
+                                questId: '0',
                                 children: (0, n.jsx)(E.Z, {
                                     quest: g,
                                     location: l.jn.GIFT_INVENTORY_FOR_YOU
@@ -489,6 +493,8 @@ function D() {
                                 className: h.questBarPreviewWrapper,
                                 children: (0, n.jsx)(_.p, {
                                     isPreview: !0,
+                                    source: 'preview',
+                                    questId: '0',
                                     children: (0, n.jsx)('div', {
                                         className: h.questChannelCallHeaderPreview,
                                         children: (0, n.jsx)(u.Z, {
