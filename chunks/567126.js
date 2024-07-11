@@ -155,7 +155,7 @@ function U(e) {
             }, e.id)
         }, s);
     });
-    function Q() {
+    function J() {
         let e = V.current;
         null != e && y(!e.isScrolledToTop());
     }
@@ -197,7 +197,7 @@ function U(e) {
                 children: (0, l.jsx)(m.AdvancedScroller, {
                     ref: z,
                     className: j.sourceScroller,
-                    onScroll: Q,
+                    onScroll: J,
                     children: (0, l.jsx)(x.Z, {
                         layout: x.Z.Layout.WRAP,
                         columns: 2,
@@ -208,7 +208,7 @@ function U(e) {
             }) : (0, l.jsxs)(m.AdvancedScroller, {
                 ref: z,
                 className: j.sourceScroller,
-                onScroll: Q,
+                onScroll: J,
                 children: [
                     b === o.vA.WINDOW && null != W && (0, l.jsx)(C.Z, { quest: W.quest }),
                     (0, l.jsx)(x.Z, {

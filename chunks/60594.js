@@ -12,11 +12,11 @@ function H(e) {
             selectSource: z = !0,
             guildId: K,
             analyticsLocation: Y,
-            onClose: Q,
-            transitionState: J
+            onClose: J,
+            transitionState: Q
         } = e, {
-            preset: q,
-            resolution: X,
+            preset: X,
+            resolution: q,
             fps: $,
             soundshareEnabled: ee
         } = (0, c.cj)([N.Z], () => N.Z.getState()), en = (0, c.e7)([
@@ -31,13 +31,13 @@ function H(e) {
         }), es = null !== (n = null == en ? void 0 : en.getGuildId()) && void 0 !== n ? n : K, ea = (0, c.e7)([I.Z], () => {
             var e;
             return null != es ? null === (e = I.Z.getGuild(es)) || void 0 === e ? void 0 : e.premiumTier : null;
-        }), [ei, er] = null !== (l = (0, j.Z)(q, el, ea)) && void 0 !== l ? l : [
+        }), [ei, er] = null !== (l = (0, j.Z)(X, el, ea)) && void 0 !== l ? l : [
             w.LY.RESOLUTION_720,
             w.ws.FPS_30
         ];
-    q !== w.tI.PRESET_CUSTOM && (X = ei, $ = er), !(0, O.Z)(q, X, $, el, ea) && (X = ei, $ = er);
+    X !== w.tI.PRESET_CUSTOM && (q = ei, $ = er), !(0, O.Z)(X, q, $, el, ea) && (q = ei, $ = er);
     let eo = (0, v.Dt)();
-    let [eu, ec] = i.useState((H = F, W = z, H ? 0 : W ? 1 : 2)), [ed, em] = i.useState(null), [eE, e_] = i.useState(!1), [eS, eg] = i.useState(null), [eh, eC] = i.useState(null), [eN, eZ] = i.useState(null), [eI, ex] = i.useState(q), [ef, eA] = i.useState(X), [eR, eT] = i.useState($), [ev, eL] = i.useState(ee), [eM, ep] = i.useState(null != K ? K : null), eO = null !== (s = null == en ? void 0 : en.id) && void 0 !== s ? s : eS;
+    let [eu, ec] = i.useState((H = F, W = z, H ? 0 : W ? 1 : 2)), [ed, em] = i.useState(null), [eE, e_] = i.useState(!1), [eS, eg] = i.useState(null), [eh, eC] = i.useState(null), [eN, eZ] = i.useState(null), [eI, ex] = i.useState(X), [ef, eA] = i.useState(q), [eR, eT] = i.useState($), [ev, eL] = i.useState(ee), [eM, ep] = i.useState(null != K ? K : null), eO = null !== (s = null == en ? void 0 : en.id) && void 0 !== s ? s : eS;
     i.useEffect(() => {
         let e = (0, M.isWindows)() ? (0, P.Z)(h.ZP, R.Z) : null, n = (null == e ? void 0 : e.id) != null ? g.Z.getApplication(e.id) : null;
         L.default.track(B.rMx.OPEN_MODAL, {
@@ -76,7 +76,7 @@ function H(e) {
                     body: V.Z.Messages.WARNING_SCREEN_RECORDING_PERMISSION_BODY
                 });
             })();
-        }(), Q();
+        }(), J();
     }
     let eP = i.useCallback((e, n, t) => {
         let l = (0, j.Z)(e, el, ea), [s, a] = null != l ? l : [
@@ -216,11 +216,11 @@ function H(e) {
                             onChangeAudioDevice: e => eZ(e),
                             onChangeGuild: () => ec(0),
                             onChangeSound: e => eL(e),
-                            onClose: Q,
+                            onClose: J,
                             selectedGuildId: eM,
                             targetGuildPremiumTier: ea,
                             selectGuild: F,
-                            isAnimationDone: 2 === ed && J === d.ModalTransitionState.ENTERED
+                            isAnimationDone: 2 === ed && Q === d.ModalTransitionState.ENTERED
                         })
                     })
                 })
@@ -253,7 +253,7 @@ function H(e) {
                     look: d.Button.Looks.LINK,
                     size: d.Button.Sizes.SMALL,
                     color: d.ButtonColors.PRIMARY,
-                    onClick: Q,
+                    onClick: J,
                     children: V.Z.Messages.CANCEL
                 }) : (0, a.jsx)(d.Button, {
                     size: d.Button.Sizes.SMALL,
@@ -267,12 +267,12 @@ function H(e) {
         page: B.ZY5.GO_LIVE_MODAL,
         children: (0, a.jsxs)(d.ModalRoot, {
             'aria-labelledby': eo,
-            transitionState: J,
+            transitionState: Q,
             size: d.ModalSize.DYNAMIC,
             className: k.modalSize,
             children: [
                 (0, a.jsx)(d.ModalCloseButton, {
-                    onClick: Q,
+                    onClick: J,
                     className: k.modalCloseButton
                 }),
                 (0, a.jsx)('div', { className: k.art }),

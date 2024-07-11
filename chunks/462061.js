@@ -6,7 +6,7 @@ n.d(t, {
         return j;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(475179), d = n(763520), u = n(358221), h = n(414910), p = n(928518), m = n(204197), _ = n(470956), f = n(314897), E = n(271383), C = n(131951), g = n(451478), I = n(783259), x = n(40300), T = n(5192), v = n(44136), N = n(981631), S = n(65154), Z = n(689938), A = n(26864);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(475179), d = n(763520), u = n(358221), h = n(414910), p = n(928518), m = n(204197), _ = n(470956), f = n(314897), E = n(271383), C = n(131951), g = n(451478), I = n(783259), x = n(40300), T = n(5192), N = n(44136), v = n(981631), S = n(65154), Z = n(689938), A = n(26864);
 let M = o.AvatarSizes.SIZE_80, b = o.AvatarSizes.SIZE_40;
 function R(e) {
     let {
@@ -41,7 +41,7 @@ function j(e) {
             user: U,
             streamId: w,
             speaking: B
-        } = t, H = U.id === k, G = (0, v.ZP)(t), V = (0, r.e7)([g.Z], () => g.Z.isFocused()), F = (0, r.e7)([p.Z], () => p.Z.getWindowFocused(N.KJ3.CHANNEL_CALL_POPOUT)), W = (0, r.e7)([C.Z], () => null != U.id && C.Z.isLocalVideoDisabled(U.id, (0, h.Z)(t.type)), [
+        } = t, H = U.id === k, G = (0, N.ZP)(t), V = (0, r.e7)([g.Z], () => g.Z.isFocused()), F = (0, r.e7)([p.Z], () => p.Z.getWindowFocused(v.KJ3.CHANNEL_CALL_POPOUT)), W = (0, r.e7)([C.Z], () => null != U.id && C.Z.isLocalVideoDisabled(U.id, (0, h.Z)(t.type)), [
             U.id,
             t.type
         ]), z = (0, r.e7)([E.ZP], () => E.ZP.isGuestOrLurker(n.guild_id, U.id)), Y = T.ZP.getName(n.getGuildId(), n.id, U) + (z ? ' '.concat(Z.Z.Messages.GUEST_NAME_SUFFIX) : ''), K = B && (F || V), q = o < 124 ? b : M, {

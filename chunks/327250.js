@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(399606), r = n(481060), o = n(493683), c = n(906732), d = n(69882), u = n(251794), h = n(386696), p = n(910693), m = n(314897), _ = n(271383), f = n(430824), E = n(496675), C = n(158776), g = n(885110), I = n(594174), x = n(572004), T = n(5192), v = n(51144), N = n(991570), S = n(981631), Z = n(689938), A = n(614603);
+var a = n(120356), s = n.n(a), l = n(399606), r = n(481060), o = n(493683), c = n(906732), d = n(69882), u = n(251794), h = n(386696), p = n(910693), m = n(314897), _ = n(271383), f = n(430824), E = n(496675), C = n(158776), g = n(885110), I = n(594174), x = n(572004), T = n(5192), N = n(51144), v = n(991570), S = n(981631), Z = n(689938), A = n(614603);
 function M(e) {
     let {
             user: t,
@@ -51,7 +51,7 @@ function M(e) {
                         children: (0, i.jsx)(r.Text, {
                             variant: 'text-md/medium',
                             color: 'text-normal',
-                            children: v.ZP.getUserTag(t)
+                            children: N.ZP.getUserTag(t)
                         })
                     })
                 ]
@@ -118,13 +118,13 @@ function R(e) {
         }), [
             a,
             _
-        ]), v = (0, d.b)(s), {
-            analyticsLocations: N,
+        ]), N = (0, d.b)(s), {
+            analyticsLocations: v,
             newestAnalyticsLocation: M
         } = (0, c.ZP)(), R = (0, p.sE)(m, {
             targetUserId: a.id,
             location: M,
-            locations: N
+            locations: v
         });
     return (0, i.jsxs)('div', {
         className: A.bottomRow,
@@ -212,7 +212,7 @@ function R(e) {
                 'aria-label': Z.Z.Messages.TIMEOUT_USER,
                 style: { backgroundColor: t },
                 onClick: () => {
-                    v ? (0, u.q)(s.guildId, s.userId, N) : (0, u.z)(s.guildId, s.userId, N);
+                    N ? (0, u.q)(s.guildId, s.userId, v) : (0, u.z)(s.guildId, s.userId, v);
                 },
                 children: [
                     (0, i.jsx)(r.ClockWarningIcon, {
@@ -224,7 +224,7 @@ function R(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: v ? Z.Z.Messages.REMOVE : Z.Z.Messages.TIMEOUT_USER
+                        children: N ? Z.Z.Messages.REMOVE : Z.Z.Messages.TIMEOUT_USER
                     })
                 ]
             }),
@@ -260,7 +260,7 @@ function j(e) {
         } = e, s = (0, l.e7)([I.default], () => I.default.getUser(t), [t]), o = (0, l.e7)([_.ZP], () => _.ZP.getMember(n, t), [
             n,
             t
-        ]), c = (0, N.f)(t, n, 0.8, r.tokens.colors.BACKGROUND_SECONDARY);
+        ]), c = (0, v.f)(t, n, 0.8, r.tokens.colors.BACKGROUND_SECONDARY);
     return null == s || null == o ? null : (0, i.jsxs)('div', {
         className: A.container,
         children: [

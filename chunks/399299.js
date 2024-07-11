@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return X;
+        return q;
     }
 });
 var l = t(735250), s = t(470079), a = t(120356), i = t.n(a), r = t(442837), o = t(481060), u = t(230711), c = t(812206), d = t(605436), m = t(924557), E = t(954564), _ = t(98131), S = t(594190), g = t(695346), h = t(494620), C = t(592125), N = t(650774), Z = t(430824), I = t(131951), x = t(944486), f = t(594174), A = t(449224), R = t(285952), T = t(366695), v = t(346656), L = t(626135), M = t(823379), p = t(63063), O = t(358085), j = t(653255), P = t(989941), D = t(618407), G = t(586290), U = t(233037), b = t(810013), w = t(537135), B = t(641115), y = t(143135), V = t(70722), k = t(981631), H = t(526761), W = t(689938), F = t(829800), z = t(1871);
@@ -77,7 +77,7 @@ function Y(e) {
         })
     });
 }
-function Q(e) {
+function J(e) {
     let {text: n} = e;
     return (0, l.jsxs)(R.Z, {
         align: R.Z.Align.CENTER,
@@ -98,7 +98,7 @@ function Q(e) {
         ]
     });
 }
-function J(e) {
+function Q(e) {
     let {guildId: n} = e, t = (0, r.e7)([N.Z], () => {
             var e;
             return null !== (e = N.Z.getMemberCount(n)) && void 0 !== e ? e : 0;
@@ -118,7 +118,7 @@ function J(e) {
         })
     }) : null;
 }
-function q(e) {
+function X(e) {
     let {
             enabled: n,
             onChange: t,
@@ -139,7 +139,7 @@ function q(e) {
         })
     });
 }
-function X(e) {
+function q(e) {
     let {
             selectedSource: n,
             selectedFPS: t,
@@ -165,7 +165,7 @@ function X(e) {
         } = e, z = (0, r.e7)([
             x.Z,
             C.Z
-        ], () => C.Z.getChannel(x.Z.getVoiceChannelId())), X = (0, r.e7)([j.Z], () => j.Z.GPUDriversOutdated), $ = (0, r.e7)([j.Z], () => j.Z.problematicGPUDriver), ee = (0, r.e7)([f.default], () => f.default.getCurrentUser()), en = (0, m.Go)(), et = (0, m.Zq)({ autoTrackExposure: !en }), el = (0, D.Z)();
+        ], () => C.Z.getChannel(x.Z.getVoiceChannelId())), q = (0, r.e7)([j.Z], () => j.Z.GPUDriversOutdated), $ = (0, r.e7)([j.Z], () => j.Z.problematicGPUDriver), ee = (0, r.e7)([f.default], () => f.default.getCurrentUser()), en = (0, m.Go)(), et = (0, m.Zq)({ autoTrackExposure: !en }), el = (0, D.Z)();
     null != n && n.id.startsWith('screen') && !I.Z.supportsScreenSoundshare() && (el = W.Z.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
     let es = en ? (0, l.jsx)(_.Z, {
             guildId: S,
@@ -185,8 +185,8 @@ function X(e) {
                         onChangeSource: O,
                         selectedSource: n
                     }),
-                    null != el ? (0, l.jsx)(Q, { text: el }) : null,
-                    null != n && null == el ? (0, l.jsx)(q, {
+                    null != el ? (0, l.jsx)(J, { text: el }) : null,
+                    null != n && null == el ? (0, l.jsx)(X, {
                         enabled: A,
                         onChange: y,
                         screen: n.id.startsWith('screen')
@@ -202,9 +202,9 @@ function X(e) {
                 selectedChannelId: a,
                 onChangeSelectedChannelId: M
             }),
-            null != S && ei && er ? (0, l.jsx)(J, { guildId: S }) : null,
-            X ? (0, l.jsx)(Q, { text: W.Z.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED }) : null,
-            $ ? (0, l.jsx)(Q, { text: W.Z.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({ helpCenterLink: p.Z.getArticleURL(k.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
+            null != S && ei && er ? (0, l.jsx)(Q, { guildId: S }) : null,
+            q ? (0, l.jsx)(J, { text: W.Z.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED }) : null,
+            $ ? (0, l.jsx)(J, { text: W.Z.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({ helpCenterLink: p.Z.getArticleURL(k.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
             eo && (0, l.jsx)(h.Z, {
                 look: h.z.WARNING,
                 className: F.hardwareWarning,

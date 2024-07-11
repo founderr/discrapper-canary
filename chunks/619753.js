@@ -3,7 +3,7 @@ n.d(t, {
         return P;
     }
 }), n(724458), n(653041), n(47120);
-var i = n(735250), a = n(470079), s = n(837969), l = n(481060), r = n(668781), o = n(904245), c = n(603263), d = n(963374), u = n(607070), h = n(933557), p = n(471445), m = n(905405), _ = n(255269), f = n(937889), E = n(703656), C = n(359110), g = n(695346), I = n(592125), x = n(430824), T = n(496675), v = n(699516), N = n(768119), S = n(944486), Z = n(594174), A = n(68588), M = n(101695), b = n(683101), R = n(981631), j = n(689938), L = n(179562);
+var i = n(735250), a = n(470079), s = n(837969), l = n(481060), r = n(668781), o = n(904245), c = n(603263), d = n(963374), u = n(607070), h = n(933557), p = n(471445), m = n(905405), _ = n(255269), f = n(937889), E = n(703656), C = n(359110), g = n(695346), I = n(592125), x = n(430824), T = n(496675), N = n(699516), v = n(768119), S = n(944486), Z = n(594174), A = n(68588), M = n(101695), b = n(683101), R = n(981631), j = n(689938), L = n(179562);
 function P(e) {
     var t;
     let {
@@ -37,7 +37,7 @@ function P(e) {
                 });
             else {
                 let t = I.Z.getChannel(e.channel_id), n = null != t ? t.getGuildId() : null;
-                o.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: N.Z.getAnalyticsId(h) }), (0, E.uL)(R.Z5c.CHANNEL(n, e.channel_id, e.id));
+                o.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: v.Z.getAnalyticsId(h) }), (0, E.uL)(R.Z5c.CHANNEL(n, e.channel_id, e.id));
             }
         }, [h]), b = a.useMemo(() => {
             let e;
@@ -46,7 +46,7 @@ function P(e) {
             let t = 0;
             return _.reduce((n, i) => {
                 let a = i.find(e => e.isSearchHit);
-                if (!S && null != a && v.Z.isBlockedForMessage(a))
+                if (!S && null != a && N.Z.isBlockedForMessage(a))
                     return n;
                 let s = I.Z.getChannel(i[0].channel_id);
                 return null == s ? n : ((null == e || e !== s.id) && n.push({
@@ -78,7 +78,7 @@ function P(e) {
             focusedIndex: 0,
             setFocus: D,
             onSelect: k
-        }), w = N.Z.getQuery(h), B = N.Z.getSearchType(h) === R.aib.FAVORITES, H = (0, d.nC)(null !== (t = null == w ? void 0 : w.content) && void 0 !== t ? t : ''), G = b.map(e => {
+        }), w = v.Z.getQuery(h), B = v.Z.getSearchType(h) === R.aib.FAVORITES, H = (0, d.nC)(null !== (t = null == w ? void 0 : w.content) && void 0 !== t ? t : ''), G = b.map(e => {
             let {
                 channel: t,
                 results: n,
@@ -147,7 +147,7 @@ function O(e) {
             resultRefs: d,
             totalResults: u,
             scrollTo: E,
-            searchId: N,
+            searchId: v,
             renderEmbeds: M,
             offset: j,
             jumpToMessage: P,
@@ -159,7 +159,7 @@ function O(e) {
             let t = I.Z.getChannel(e);
             if (null != t && !!T.Z.can(R.Plq.VIEW_CHANNEL, t))
                 (0, C.Kh)(t.id);
-        }, []), w = null != s ? (0, h.F6)(s, Z.default, v.Z, !1) : '???', B = y && null != s.guild_id ? null === (t = x.Z.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, H = (null == s ? void 0 : s.parent_id) != null ? I.Z.getChannel(s.parent_id) : null, G = null != H ? H.name : null, V = null !== (n = (0, p.KS)(s)) && void 0 !== n ? n : l.TextIcon, F = null != H ? (0, p.KS)(H) : null, W = T.Z.can(R.Plq.MANAGE_MESSAGES, s), {content: z} = (0, f.ZP)({
+        }, []), w = null != s ? (0, h.F6)(s, Z.default, N.Z, !1) : '???', B = y && null != s.guild_id ? null === (t = x.Z.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, H = (null == s ? void 0 : s.parent_id) != null ? I.Z.getChannel(s.parent_id) : null, G = null != H ? H.name : null, V = null !== (n = (0, p.KS)(s)) && void 0 !== n ? n : l.TextIcon, F = null != H ? (0, p.KS)(H) : null, W = T.Z.can(R.Plq.MANAGE_MESSAGES, s), {content: z} = (0, f.ZP)({
             content: w,
             embeds: []
         }, {
@@ -233,7 +233,7 @@ function O(e) {
                         ref: e => d.current[n] = e,
                         totalResults: u,
                         scrollTo: E,
-                        searchId: N,
+                        searchId: v,
                         renderEmbeds: M,
                         searchOffset: j,
                         pageResultsLength: r.length,

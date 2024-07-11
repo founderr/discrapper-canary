@@ -61,12 +61,12 @@ function f(e) {
             E,
             f,
             x
-        ]), v = a.useCallback(() => {
+        ]), N = a.useCallback(() => {
             C(), x(h.NM.USER_BANNER_BLOCK_CONFIRM);
         }, [
             C,
             x
-        ]), N = a.useCallback(() => {
+        ]), v = a.useCallback(() => {
             C(), x(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
         }, [
             C,
@@ -81,8 +81,8 @@ function f(e) {
                     } = n;
                     return (0, i.jsx)(e, {
                         transitionState: a,
-                        onBlock: v,
-                        onBlockAndReport: N,
+                        onBlock: N,
+                        onBlockAndReport: v,
                         onCancel: () => {
                             null == s || s(), x(h.NM.USER_BANNER_BLOCK_CANCEL);
                         },
@@ -93,8 +93,8 @@ function f(e) {
                 };
             });
         }, [
-            v,
             N,
+            v,
             E,
             t,
             x

@@ -10,7 +10,7 @@ t.Z = function (e) {
         }, [t]), [E, C] = a.useState(!1), g = (0, s.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id), [t]), I = (0, o.Aq)(), x = (0, c.Dd)(t.id), T = a.useCallback(() => {
             !n && C(e => !e);
         }, [n]);
-    function v(e) {
+    function N(e) {
         !(null == e ? void 0 : e.shiftKey) && I.dispatch(_.CkL.POPOUT_CLOSE);
     }
     return (a.useEffect(() => (m.S.subscribe(_.CkL.TOGGLE_CHANNEL_PINS, T), () => {
@@ -26,7 +26,7 @@ t.Z = function (e) {
         renderPopout: function (e) {
             return (0, i.jsx)(r.Z, {
                 ...e,
-                onJump: v,
+                onJump: N,
                 channel: t
             });
         },

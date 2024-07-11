@@ -15,7 +15,7 @@ function C(e) {
             joinRequest: I,
             isModmin: x,
             guildId: T,
-            maxMembers: v
+            maxMembers: N
         } = (0, a.cj)([
             h.Z,
             o.Z,
@@ -28,7 +28,7 @@ function C(e) {
                 guildId: null == t ? void 0 : t.id,
                 maxMembers: null == t ? void 0 : t.maxMembers
             };
-        }), N = (0, a.e7)([r.Z], () => null != T ? r.Z.getMemberCount(T) : 0), S = null != v && (null != N ? N : 0) >= v, {
+        }), v = (0, a.e7)([r.Z], () => null != T ? r.Z.getMemberCount(T) : 0), S = null != N && (null != v ? v : 0) >= N, {
             approveRequest: Z,
             rejectRequest: A,
             submitting: M

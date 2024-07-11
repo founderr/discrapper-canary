@@ -23,8 +23,8 @@ let I = {
         DURATION_OUT: 170,
         EASING_IN: r.Z.Easing.inOut(r.Z.Easing.back()),
         EASING_OUT: r.Z.Easing.quad
-    }, T = 200, v = 125;
-class N extends a.PureComponent {
+    }, T = 200, N = 125;
+class v extends a.PureComponent {
     componentDidMount() {
         this.componentDidAppear();
     }
@@ -75,7 +75,7 @@ class N extends a.PureComponent {
             r.Z.sequence(s),
             r.Z.timing(a, {
                 toValue: 0,
-                duration: v
+                duration: N
             })
         ]).start(e);
     }
@@ -172,7 +172,7 @@ function S(e) {
                 speaking: r,
                 ringing: o
             } = e;
-            return (0, i.jsx)(N, {
+            return (0, i.jsx)(v, {
                 className: f.participant,
                 width: (0, u.getAvatarSize)(I),
                 theme: g,

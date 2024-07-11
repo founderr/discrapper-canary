@@ -1,5 +1,5 @@
 n(47120);
-var i, a = n(735250), s = n(470079), l = n(120356), r = n.n(l), o = n(512722), c = n.n(o), d = n(613828), u = n(442837), h = n(481060), p = n(490173), m = n(40851), _ = n(607070), f = n(899663), E = n(317381), C = n(496616), g = n(100527), I = n(906732), x = n(168551), T = n(597952), v = n(628123), N = n(151851), S = n(587061), Z = n(392358), A = n(892254), M = n(706454), b = n(210887), R = n(740492), j = n(451478), L = n(153850), P = n(806519), O = n(358085), y = n(792125), D = n(998502), k = n(473159), U = n(928518), w = n(981631), B = n(689938), H = n(536792);
+var i, a = n(735250), s = n(470079), l = n(120356), r = n.n(l), o = n(512722), c = n.n(o), d = n(613828), u = n(442837), h = n(481060), p = n(490173), m = n(40851), _ = n(607070), f = n(899663), E = n(317381), C = n(496616), g = n(100527), I = n(906732), x = n(168551), T = n(597952), N = n(628123), v = n(151851), S = n(587061), Z = n(392358), A = n(892254), M = n(706454), b = n(210887), R = n(740492), j = n(451478), L = n(153850), P = n(806519), O = n(358085), y = n(792125), D = n(998502), k = n(473159), U = n(928518), w = n(981631), B = n(689938), H = n(536792);
 function G(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -116,7 +116,7 @@ class V extends (i = s.Component) {
                             children: (0, a.jsx)(h.FocusRingScope, {
                                 containerRef: this.rootRef,
                                 children: (0, a.jsx)(f.Z, {
-                                    children: (0, a.jsxs)(v.Z, {
+                                    children: (0, a.jsxs)(N.Z, {
                                         children: [
                                             (0, a.jsx)(P.Co, {}),
                                             (0, a.jsx)(m.Wu, {
@@ -127,7 +127,7 @@ class V extends (i = s.Component) {
                                                         (0, a.jsxs)('div', {
                                                             className: H.popout,
                                                             children: [
-                                                                C && null != S ? (0, a.jsx)(N.Z, {
+                                                                C && null != S ? (0, a.jsx)(v.Z, {
                                                                     focused: n,
                                                                     type: S,
                                                                     windowKey: l,
@@ -197,7 +197,7 @@ let F = s.forwardRef(function (e, t) {
             fontScaleClass: f,
             saturation: C,
             systemForcedColors: T,
-            useForcedColors: v
+            useForcedColors: N
         } = (0, u.cj)([_.Z], () => ({
             fontScale: _.Z.fontScale,
             keyboardModeEnabled: _.Z.keyboardModeEnabled,
@@ -206,7 +206,7 @@ let F = s.forwardRef(function (e, t) {
             saturation: _.Z.saturation,
             systemForcedColors: _.Z.systemForcedColors,
             useForcedColors: _.Z.useForcedColors
-        })), N = (0, u.e7)([E.ZP], () => null != e.channelId && null !== E.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
+        })), v = (0, u.e7)([E.ZP], () => null != e.channelId && null !== E.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
     (0, S.Z)(n, !1);
     let A = (0, Z.Z)(n, i), {analyticsLocations: R} = (0, I.ZP)(g.Z.POPOUT_WINDOW), {
             clientThemesClassName: L,
@@ -224,13 +224,13 @@ let F = s.forwardRef(function (e, t) {
                 locale: l,
                 theme: r,
                 forcedColors: o,
-                useForcedColors: v,
+                useForcedColors: N,
                 systemForcedColors: T,
                 fontScale: d,
                 keyboardModeEnabled: p,
                 mouseModeEnabled: A,
                 reducedMotionEnabled: m,
-                connectedToEmbeddedActivity: N,
+                connectedToEmbeddedActivity: v,
                 fontScaleClass: f,
                 saturation: C,
                 clientThemesClassName: L,

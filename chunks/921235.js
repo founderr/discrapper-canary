@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return N;
     }
 }), n(47120);
 var i = n(735250), a = n(470079), s = n(392711), l = n.n(s), r = n(442837), o = n(481060), c = n(904245), d = n(268350), u = n(926491), h = n(419922), p = n(314897), m = n(375954), _ = n(594174), f = n(626135), E = n(51144), C = n(901461), g = n(981631), I = n(689938), x = n(383953);
 let T = '749054660769218631';
-function v(e) {
+function N(e) {
     var t;
-    let {channel: n} = e, [s, v] = a.useState('');
+    let {channel: n} = e, [s, N] = a.useState('');
     a.useEffect(() => {
         (0, d.FQ)('847199849233514549', !0);
     }, []);
-    let N = (0, r.e7)([
+    let v = (0, r.e7)([
             m.Z,
             p.default
         ], () => !!l()(m.Z.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== p.default.getId() && e.state === g.yb.SENT && !(0, C.Z)(e))), S = (0, r.e7)([_.default], () => _.default.getUser(n.isPrivate() ? n.getRecipientId() : null)), Z = null !== (t = E.ZP.useName(S)) && void 0 !== t ? t : I.Z.Messages.WAVE_DEFAULT_RECIPIENT, A = (0, r.e7)([u.Z], () => u.Z.getStickerById(T)), M = a.useCallback(async () => {
@@ -24,7 +24,7 @@ function v(e) {
                         type: 'Send wave'
                     });
                 } catch (e) {
-                    !e.ok && 429 === e.status && v(I.Z.Messages.RATE_LIMITED);
+                    !e.ok && 429 === e.status && N(I.Z.Messages.RATE_LIMITED);
                 }
         }, [
             n.id,
@@ -36,7 +36,7 @@ function v(e) {
             variant: 'text-sm/normal',
             children: s
         }) : null;
-    return N ? (0, i.jsxs)('div', {
+    return v ? (0, i.jsxs)('div', {
         className: x.containerCompact,
         children: [
             (0, i.jsxs)(o.Clickable, {

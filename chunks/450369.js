@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 });
-var i = n(735250), a = n(470079), s = n(512722), l = n.n(s), r = n(442837), o = n(481060), c = n(475179), d = n(239091), u = n(872810), h = n(40851), p = n(358221), m = n(258609), _ = n(569545), f = n(382182), E = n(484459), C = n(103575), g = n(199902), I = n(430824), x = n(496675), T = n(979651), v = n(40300), N = n(88751), S = n(252132), Z = n(248400), A = n(981631), M = n(354459), b = n(508283);
+var i = n(735250), a = n(470079), s = n(512722), l = n.n(s), r = n(442837), o = n(481060), c = n(475179), d = n(239091), u = n(872810), h = n(40851), p = n(358221), m = n(258609), _ = n(569545), f = n(382182), E = n(484459), C = n(103575), g = n(199902), I = n(430824), x = n(496675), T = n(979651), N = n(40300), v = n(88751), S = n(252132), Z = n(248400), A = n(981631), M = n(354459), b = n(508283);
 let R = 16 / 9, j = e => {
         let {
                 stageParticipant: t,
@@ -61,7 +61,7 @@ let R = 16 / 9, j = e => {
                 onContextMenu: h,
                 inPopout: E
             } = e, {reducedMotion: C} = a.useContext(o.AccessibilityPreferencesContext), {
-                id: N,
+                id: v,
                 blocked: j
             } = t, L = (0, r.Wu)([g.Z], () => g.Z.getAllActiveStreams(), []), {
                 selectedParticipant: P,
@@ -85,7 +85,7 @@ let R = 16 / 9, j = e => {
         return (0, i.jsx)(S.Z, {
             participant: n,
             aspectRatio: R,
-            fit: n.type === M.fO.USER ? v.L.COVER : void 0,
+            fit: n.type === M.fO.USER ? N.L.COVER : void 0,
             blocked: j,
             channel: s,
             className: b.tile,
@@ -97,7 +97,7 @@ let R = 16 / 9, j = e => {
             pulseSpeakingIndicator: !C.enabled,
             width: l,
             children: d && n.type === M.fO.USER && (0, i.jsx)(Z.Z, {})
-        }, N);
+        }, v);
     };
 t.Z = a.memo(function (e) {
     var t;
@@ -110,7 +110,7 @@ t.Z = a.memo(function (e) {
     let {user: m} = a, _ = (0, r.e7)([p.Z], () => p.Z.getParticipant(s.id, a.id), [
             s.id,
             a.id
-        ]), f = (0, r.e7)([N.ZP], () => N.ZP.isModerator(m.id, s.id), [
+        ]), f = (0, r.e7)([v.ZP], () => v.ZP.isModerator(m.id, s.id), [
             s.id,
             m.id
         ]);

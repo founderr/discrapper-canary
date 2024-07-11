@@ -1,25 +1,25 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return v;
     }
 });
 var i = n(735250), a = n(470079), s = n(442837), l = n(25209), r = n(39154), o = n(35125), c = n(905405), d = n(628238), u = n(499401), h = n(693912), p = n(869765), m = n(699516), _ = n(352736), f = n(937889), E = n(739566), C = n(267128), g = n(507418), I = n(348238), x = n(981631), T = n(689938);
-let v = a.memo(function (e) {
+let N = a.memo(function (e) {
     var t;
     let {
             baseMessage: n,
-            referencedMessage: v,
-            channel: N,
+            referencedMessage: N,
+            channel: v,
             compact: S = !1,
             referencedUsernameProfile: Z,
             referencedAvatarProfile: A,
             setPopout: M
-        } = e, b = v.state === p.Y.LOADED ? v.message : void 0, R = (0, E.Uj)(b), j = (0, c.p)(), L = (0, d.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = a.useMemo(() => {
+        } = e, b = N.state === p.Y.LOADED ? N.message : void 0, R = (0, E.Uj)(b), j = (0, c.p)(), L = (0, d.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = a.useMemo(() => {
             if (null == b)
                 return null;
             let e = (0, r.Z)(b);
             if (e.type === x.uaV.USER_JOIN) {
-                let t = _.Z.getWelcomeMessageKind(N.guild_id);
+                let t = _.Z.getWelcomeMessageKind(v.guild_id);
                 return (0, l.Rp)(_.Z.getSystemMessageUserJoin(e.id, t).astFormat({
                     username: null != R ? R.nick : e.author.username,
                     usernameHook: e => e
@@ -28,7 +28,7 @@ let v = a.memo(function (e) {
             if (e.type === x.uaV.ROLE_SUBSCRIPTION_PURCHASE)
                 return (0, l.Rp)((0, o.PA)({
                     username: null != R ? R.nick : e.author.username,
-                    guildId: null == N ? void 0 : N.guild_id,
+                    guildId: null == v ? void 0 : v.guild_id,
                     roleSubscriptionData: e.roleSubscriptionData
                 }));
             if (e.type === x.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
@@ -53,7 +53,7 @@ let v = a.memo(function (e) {
                         formatInline: !0,
                         allowLinks: !0,
                         shouldFilterKeywords: j
-                    }, n = e.isFirstMessageInForumPost(N) ? {
+                    }, n = e.isFirstMessageInForumPost(v) ? {
                         ...t,
                         noStyleAndInteraction: !0,
                         allowHeading: !0,
@@ -70,19 +70,19 @@ let v = a.memo(function (e) {
         }, [
             b,
             R,
-            N,
+            v,
             L,
             j
-        ]), O = (0, s.e7)([m.Z], () => null != b && m.Z.isBlockedForMessage(b), [b]), y = (0, I.wq)(null == b ? void 0 : b.author.id, N.id), D = (0, I.$3)(n, b, O), k = (0, I.Wl)(b, N, Z, M), U = (0, I.rY)(A, M), w = a.useCallback(() => M({
+        ]), O = (0, s.e7)([m.Z], () => null != b && m.Z.isBlockedForMessage(b), [b]), y = (0, I.wq)(null == b ? void 0 : b.author.id, v.id), D = (0, I.$3)(n, b, O), k = (0, I.Wl)(b, v, Z, M), U = (0, I.rY)(A, M), w = a.useCallback(() => M({
             referencedUsernameProfile: !1,
             referencedAvatarProfile: !1
         }), [M]), B = (0, E.Uj)(n);
     return (0, i.jsx)(C.Z, {
         repliedAuthor: R,
         baseMessage: n,
-        channel: N,
+        channel: v,
         baseAuthor: B,
-        referencedMessage: v,
+        referencedMessage: N,
         content: P,
         compact: S,
         isReplyAuthorBlocked: O,
@@ -96,7 +96,7 @@ let v = a.memo(function (e) {
         onPopoutRequestClose: w
     });
 });
-function N(e, t, n, a, s) {
+function v(e, t, n, a, s) {
     let {
             message: l,
             channel: r,
@@ -104,7 +104,7 @@ function N(e, t, n, a, s) {
         } = e, {
             referencedUsernameProfile: c,
             referencedAvatarProfile: d
-        } = n, u = l.type === x.uaV.REPLY && null != a && (0, i.jsx)(v, {
+        } = n, u = l.type === x.uaV.REPLY && null != a && (0, i.jsx)(N, {
             baseMessage: l,
             replyReference: a,
             referencedMessage: s,

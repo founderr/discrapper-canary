@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(512722), l = n.n(s), r = n(873546), o = n(106351), c = n(442837), d = n(481060), u = n(430742), h = n(904245), p = n(144144), m = n(166459), _ = n(966390), f = n(738619), E = n(410575), C = n(744061), g = n(857595), I = n(607070), x = n(367907), T = n(555573), v = n(456007), N = n(10718), S = n(895924), Z = n(581364), A = n(667204), M = n(541716), b = n(752305), R = n(516887), j = n(974251), L = n(893718), P = n(436660), O = n(603009), y = n(28546), D = n(295474), k = n(521476), U = n(69882), w = n(71619), B = n(185145), H = n(736052), G = n(898188), V = n(925975), F = n(957730), W = n(400023), z = n(64078), Y = n(351780), K = n(843693), q = n(217871), X = n(139577), Q = n(247944), J = n(623292), $ = n(807092), ee = n(268350), et = n(557494), en = n(314897), ei = n(433355), ea = n(703558), es = n(323873), el = n(271383), er = n(375954), eo = n(496675), ec = n(944486), ed = n(117530), eu = n(594174), eh = n(482207), ep = n(626135), em = n(459273), e_ = n(585483), ef = n(709054), eE = n(838440), eC = n(228488), eg = n(127654), eI = n(979956), ex = n(655687), eT = n(165540), ev = n(583027), eN = n(25007), eS = n(199649), eZ = n(1397), eA = n(981631), eM = n(689938), eb = n(489919);
+var i = n(735250), a = n(470079), s = n(512722), l = n.n(s), r = n(873546), o = n(106351), c = n(442837), d = n(481060), u = n(430742), h = n(904245), p = n(144144), m = n(166459), _ = n(966390), f = n(738619), E = n(410575), C = n(744061), g = n(857595), I = n(607070), x = n(367907), T = n(555573), N = n(456007), v = n(10718), S = n(895924), Z = n(581364), A = n(667204), M = n(541716), b = n(752305), R = n(516887), j = n(974251), L = n(893718), P = n(436660), O = n(603009), y = n(28546), D = n(295474), k = n(521476), U = n(69882), w = n(71619), B = n(185145), H = n(736052), G = n(898188), V = n(925975), F = n(957730), W = n(400023), z = n(64078), Y = n(351780), K = n(843693), q = n(217871), X = n(139577), Q = n(247944), J = n(623292), $ = n(807092), ee = n(268350), et = n(557494), en = n(314897), ei = n(433355), ea = n(703558), es = n(323873), el = n(271383), er = n(375954), eo = n(496675), ec = n(944486), ed = n(117530), eu = n(594174), eh = n(482207), ep = n(626135), em = n(459273), e_ = n(585483), ef = n(709054), eE = n(838440), eC = n(228488), eg = n(127654), eI = n(979956), ex = n(655687), eT = n(165540), eN = n(583027), ev = n(25007), eS = n(199649), eZ = n(1397), eA = n(981631), eM = n(689938), eb = n(489919);
 function eR(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -54,7 +54,7 @@ class eO extends a.PureComponent {
             } = (0, Z.XA)(e.interactionData), {
                 command: a,
                 application: s
-            } = N.Xq(t, n);
+            } = v.Xq(t, n);
         if (null != a) {
             var l, r;
             let e = null != s ? {
@@ -69,7 +69,7 @@ class eO extends a.PureComponent {
                 command: a,
                 section: e,
                 location: S.Vh.RECALL,
-                initialValues: (0, v.Dw)(a, null != i ? i : [])
+                initialValues: (0, N.Dw)(a, null != i ? i : [])
             });
         }
     }
@@ -312,7 +312,7 @@ class eO extends a.PureComponent {
             null != i && (P.Q.select(i, []), i.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus());
         }), eR(this, 'handleResize', e => {
             var t, n;
-            null === (t = (n = this.props).onResize) || void 0 === t || t.call(n, e), (0, ev.A)(e);
+            null === (t = (n = this.props).onResize) || void 0 === t || t.call(n, e), (0, eN.A)(e);
         }), eR(this, 'renderAttachButton', (e, t) => (0, i.jsx)(j.Z, {
             className: t,
             channel: this.props.channel,
@@ -366,9 +366,9 @@ class ey extends a.PureComponent {
                 showAutomodUserProfileChatBlocker: x
             } = this.props, {
                 textAreaFocused: T,
-                textAreaHighlighted: v
-            } = this.state, N = c === M.I.SIDEBAR;
-        t = N && n.type === eA.d4z.GUILD_VOICE ? eM.Z.Messages.TEXT_IN_VOICE_A11Y_LABEL : N && n.type === eA.d4z.GUILD_STAGE_VOICE ? eM.Z.Messages.TEXT_IN_STAGE_A11Y_LABEL : o.T.THREADS.has(n.type) ? eM.Z.Messages.THREAD_A11Y_LABEL : eM.Z.Messages.CHANNEL_A11Y_LABEL;
+                textAreaHighlighted: N
+            } = this.state, v = c === M.I.SIDEBAR;
+        t = v && n.type === eA.d4z.GUILD_VOICE ? eM.Z.Messages.TEXT_IN_VOICE_A11Y_LABEL : v && n.type === eA.d4z.GUILD_STAGE_VOICE ? eM.Z.Messages.TEXT_IN_STAGE_A11Y_LABEL : o.T.THREADS.has(n.type) ? eM.Z.Messages.THREAD_A11Y_LABEL : eM.Z.Messages.CHANNEL_A11Y_LABEL;
         let S = (0, i.jsxs)('div', {
             className: eb.channelBottomBarArea,
             children: [
@@ -378,7 +378,7 @@ class ey extends a.PureComponent {
                     offsetX: 75,
                     children: (0, i.jsx)(eO, {
                         focused: T,
-                        highlighted: v,
+                        highlighted: N,
                         channel: n,
                         guild: a,
                         keyboardModeEnabled: s,
@@ -419,17 +419,17 @@ class ey extends a.PureComponent {
                             handler: this.handleOpenExpressionPicker
                         }),
                         (0, i.jsxs)(eP, {
-                            isSidebar: N,
+                            isSidebar: v,
                             className: eb.chatContent,
                             'aria-label': t.format({ channelName: n.name }),
                             onMouseDown: this.handleChatInteract,
                             onKeyDown: this.handleKeyDown,
                             onFocus: this.handleChatInteract,
                             children: [
-                                (0, i.jsx)(eN.Z, {
+                                (0, i.jsx)(ev.Z, {
                                     channel: n,
                                     guild: a,
-                                    narrow: N
+                                    narrow: v
                                 }),
                                 (0, i.jsxs)(d.HeadingLevel, {
                                     component: (0, i.jsx)(d.HiddenVisually, { children: (0, i.jsx)(d.H, { children: eM.Z.Messages.CHANNEL_CHAT_HEADING.format({ channelName: n.name }) }) }),
@@ -440,7 +440,7 @@ class ey extends a.PureComponent {
                                             filterAfterTimestamp: m,
                                             showingQuarantineBanner: p
                                         }),
-                                        null == n.guild_id || N ? null : (0, i.jsx)(G.Z, {
+                                        null == n.guild_id || v ? null : (0, i.jsx)(G.Z, {
                                             guildId: n.guild_id,
                                             channel: n
                                         }),
@@ -467,7 +467,7 @@ class ey extends a.PureComponent {
                                                     channel: n,
                                                     poggermodeEnabled: g
                                                 }),
-                                                !N && (0, i.jsx)(O.Z, {})
+                                                !v && (0, i.jsx)(O.Z, {})
                                             ]
                                         }),
                                         (0, i.jsx)(eh.kw, {})

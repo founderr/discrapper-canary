@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r), c = n(442837), d = n(704215), u = n(846519), h = n(481060), p = n(570140), m = n(475179), _ = n(239091), f = n(287734), E = n(872810), C = n(153867), g = n(944543), I = n(410575), x = n(393238), T = n(110924), v = n(40851), N = n(115130), S = n(317381), Z = n(596040), A = n(296797), M = n(349619), b = n(100527), R = n(367907), j = n(906732), L = n(211644), P = n(258609), O = n(446226), y = n(276598), D = n(569545), k = n(382182), U = n(788983), w = n(928518), B = n(703656), H = n(740492), G = n(793319), V = n(3861), F = n(493754), W = n(937995), z = n(618158), Y = n(880831), K = n(73563), q = n(751843), X = n(616286), Q = n(268353), J = n(786915), $ = n(800965), ee = n(107169), et = n(891551), en = n(488785), ei = n(199902), ea = n(314897), es = n(979696), el = n(523746), er = n(430824), eo = n(496675), ec = n(306680), ed = n(944486), eu = n(594174), eh = n(979651), ep = n(285952), em = n(626135), e_ = n(934415), ef = n(585483), eE = n(358085), eC = n(792125), eg = n(998502), eI = n(228488), ex = n(358221), eT = n(414910), ev = n(887012), eN = n(909820), eS = n(493010), eZ = n(742603), eA = n(221888), eM = n(900211), eb = n(18759), eR = n(878752), ej = n(354459), eL = n(981631), eP = n(689938), eO = n(568336);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r), c = n(442837), d = n(704215), u = n(846519), h = n(481060), p = n(570140), m = n(475179), _ = n(239091), f = n(287734), E = n(872810), C = n(153867), g = n(944543), I = n(410575), x = n(393238), T = n(110924), N = n(40851), v = n(115130), S = n(317381), Z = n(596040), A = n(296797), M = n(349619), b = n(100527), R = n(367907), j = n(906732), L = n(211644), P = n(258609), O = n(446226), y = n(276598), D = n(569545), k = n(382182), U = n(788983), w = n(928518), B = n(703656), H = n(740492), G = n(793319), V = n(3861), F = n(493754), W = n(937995), z = n(618158), Y = n(880831), K = n(73563), q = n(751843), X = n(616286), Q = n(268353), J = n(786915), $ = n(800965), ee = n(107169), et = n(891551), en = n(488785), ei = n(199902), ea = n(314897), es = n(979696), el = n(523746), er = n(430824), eo = n(496675), ec = n(306680), ed = n(944486), eu = n(594174), eh = n(979651), ep = n(285952), em = n(626135), e_ = n(934415), ef = n(585483), eE = n(358085), eC = n(792125), eg = n(998502), eI = n(228488), ex = n(358221), eT = n(414910), eN = n(887012), ev = n(909820), eS = n(493010), eZ = n(742603), eA = n(221888), eM = n(900211), eb = n(18759), eR = n(878752), ej = n(354459), eL = n(981631), eP = n(689938), eO = n(568336);
 function ey(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -529,7 +529,7 @@ class eU extends a.PureComponent {
                 channel: n,
                 inCall: a
             } = this.props;
-            return !e || t || this.popoutOpen && !this.inPopout && a ? null : (0, i.jsx)(eN.ZP, {
+            return !e || t || this.popoutOpen && !this.inPopout && a ? null : (0, i.jsx)(ev.ZP, {
                 children: (0, i.jsx)(Y.Z, {
                     className: eO.chatToasts,
                     channelId: n.id
@@ -591,7 +591,7 @@ t.Z = function (e) {
             width: u = 0,
             height: p = 0,
             ref: _
-        } = (0, x.Z)(), {ref: f} = (0, x.Z)(), E = (0, v.bp)(), g = (0, O.Z)(), M = (0, c.e7)([ed.Z], () => {
+        } = (0, x.Z)(), {ref: f} = (0, x.Z)(), E = (0, N.bp)(), g = (0, O.Z)(), M = (0, c.e7)([ed.Z], () => {
             var e;
             return (null !== (e = null == g ? void 0 : g.channelId) && void 0 !== e ? e : ed.Z.getVoiceChannelId()) === n.id;
         }), R = (0, T.Z)(M), {
@@ -628,7 +628,7 @@ t.Z = function (e) {
             popoutWindowAlwaysOnTop: w.Z.getIsAlwaysOnTop(eL.KJ3.CHANNEL_CALL_POPOUT)
         })), $ = (0, c.e7)([eo.Z], () => eo.Z.can(eL.Plq.CONNECT, n)), ee = (0, c.e7)([es.Z], () => es.Z.getToastsEnabled(n.id)), et = (0, c.e7)([P.Z], () => P.Z.getAwaitingRemoteSessionInfo()), en = (0, c.e7)([H.ZP], () => H.ZP.callHeaderHeight), eu = a.useCallback(e => {
             C.ZP.updatedUnsyncedSettings({ callHeaderHeight: e });
-        }, []), eh = null !== (t = null == Y ? void 0 : Y.id) && void 0 !== t ? t : null, ep = (0, Z.Z)(eh, n.id), em = (0, c.e7)([N.Z], () => N.Z.getFetchState(), []), e_ = (0, T.Z)(em);
+        }, []), eh = null !== (t = null == Y ? void 0 : Y.id) && void 0 !== t ? t : null, ep = (0, Z.Z)(eh, n.id), em = (0, c.e7)([v.Z], () => v.Z.getFetchState(), []), e_ = (0, T.Z)(em);
     a.useEffect(() => {
         'errored' === em && 'errored' !== e_ && (0, h.showToast)((0, h.createToast)(eP.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FETCH_ERROR, h.ToastType.FAILURE));
     }, [
@@ -654,12 +654,12 @@ t.Z = function (e) {
         M,
         U
     ]), (0, A.Z)({ onTransition: void 0 });
-    let eE = (0, ev.Z)(n, !0), eC = (0, L.bn)(d.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK), {analyticsLocations: eI} = (0, j.ZP)(b.Z.CHANNEL_CALL), eT = S.ZP.getEmbeddedActivitiesForChannel(n.id);
+    let eE = (0, eN.Z)(n, !0), eC = (0, L.bn)(d.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK), {analyticsLocations: eI} = (0, j.ZP)(b.Z.CHANNEL_CALL), eT = S.ZP.getEmbeddedActivitiesForChannel(n.id);
     return (0, i.jsx)(j.Gt, {
         value: eI,
         children: (0, i.jsx)(I.Z, {
             page: eL.ZY5.CHANNEL_CALL,
-            children: (0, i.jsx)(eN.B2, {
+            children: (0, i.jsx)(ev.B2, {
                 children: (0, i.jsxs)(eb._A, {
                     children: [
                         (0, i.jsx)(eU, {
@@ -705,7 +705,7 @@ t.Z = function (e) {
                             currentChannelActivities: eT
                         }),
                         !n.isPrivate() && (0, i.jsx)(eb.YR, {}),
-                        (0, i.jsx)(eN.H_, {})
+                        (0, i.jsx)(ev.H_, {})
                     ]
                 })
             })

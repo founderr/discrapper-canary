@@ -1,10 +1,10 @@
 n.d(t, {
     p: function () {
-        return N;
+        return v;
     }
 });
 var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(913527), o = n.n(r), c = n(442837), d = n(481060), u = n(430824), h = n(650461), p = n(353093), m = n(105671), _ = n(532490), f = n(979264), E = n(570938), C = n(550271), g = n(116175), I = n(308083), x = n(689938), T = n(322591);
-function v(e) {
+function N(e) {
     let {
         guildId: t,
         tag: n,
@@ -35,7 +35,7 @@ function v(e) {
         })
     });
 }
-function N(e) {
+function v(e) {
     let {
             applicationIds: t,
             playstyle: n,
@@ -78,7 +78,7 @@ t.Z = 12633 == n.j ? e => {
     return (0, i.jsxs)(_.Z, {
         ...e,
         children: [
-            (0, i.jsx)(v, {
+            (0, i.jsx)(N, {
                 guildId: t,
                 tag: f,
                 badge: E,
@@ -103,7 +103,7 @@ t.Z = 12633 == n.j ? e => {
                 className: T.overviewText,
                 children: x.Z.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({ date: o()().format('MMMM YYYY') })
             }),
-            (0, i.jsx)(N, {
+            (0, i.jsx)(v, {
                 applicationIds: l,
                 playstyle: r
             }),

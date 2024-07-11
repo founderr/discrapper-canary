@@ -3,7 +3,7 @@ n.d(t, {
         return Z;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n.n(r), c = n(442837), d = n(704215), u = n(481060), h = n(788307), p = n(605236), m = n(594174), _ = n(768581), f = n(906605), E = n(106301), C = n(833858), g = n(866071), I = n(223135), x = n(981631), T = n(231338), v = n(689938), N = n(686129);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n.n(r), c = n(442837), d = n(704215), u = n(481060), h = n(788307), p = n(605236), m = n(594174), _ = n(768581), f = n(906605), E = n(106301), C = n(833858), g = n(866071), I = n(223135), x = n(981631), T = n(231338), N = n(689938), v = n(686129);
 let S = e => {
         let {
             style: t,
@@ -14,7 +14,7 @@ let S = e => {
         return (0, i.jsx)(u.Tooltip, {
             text: a,
             children: e => (0, i.jsx)('div', {
-                className: l()(n, N.iconWidget),
+                className: l()(n, v.iconWidget),
                 style: t,
                 ...e,
                 children: null != s && s
@@ -53,52 +53,52 @@ let S = e => {
                 });
             }, []);
         return (0, i.jsxs)('div', {
-            className: N.popout,
+            className: v.popout,
             children: [
                 !Z && (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)('div', { className: N.popoutBackground }),
+                        (0, i.jsx)('div', { className: v.popoutBackground }),
                         (0, i.jsxs)('div', {
-                            className: N.onboarding,
+                            className: v.onboarding,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: N.title,
+                                    className: v.title,
                                     children: [
                                         (0, i.jsx)(u.Text, {
                                             variant: 'text-md/semibold',
                                             color: 'header-primary',
-                                            children: v.Z.Messages.ACTIVITY_STATUS
+                                            children: N.Z.Messages.ACTIVITY_STATUS
                                         }),
                                         (0, i.jsx)(u.TextBadge, {
-                                            text: v.Z.Messages.BETA,
+                                            text: N.Z.Messages.BETA,
                                             disableColor: !0,
-                                            className: N.newBadge
+                                            className: v.newBadge
                                         })
                                     ]
                                 }),
                                 (0, i.jsx)(u.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
-                                    className: N.helpText,
-                                    children: v.Z.Messages.HANG_STATUS_HELP
+                                    className: v.helpText,
+                                    children: N.Z.Messages.HANG_STATUS_HELP
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: N.iconGroup,
+                                    className: v.iconGroup,
                                     children: [
                                         null != R && (0, i.jsxs)('div', {
-                                            className: N.avatarWrapper,
+                                            className: v.avatarWrapper,
                                             children: [
                                                 (0, i.jsx)(u.Avatar, {
-                                                    className: N.avatar,
+                                                    className: v.avatar,
                                                     size: u.AvatarSizes.SIZE_40,
                                                     src: (0, _.ov)(R),
                                                     'aria-hidden': !0
                                                 }),
-                                                (0, i.jsx)('div', { className: N.outline })
+                                                (0, i.jsx)('div', { className: v.outline })
                                             ]
                                         }),
                                         (0, i.jsx)(I.Z, {
-                                            className: N.statusIcon,
+                                            className: v.statusIcon,
                                             hangStatusActivity: M
                                         })
                                     ]
@@ -108,10 +108,10 @@ let S = e => {
                     ]
                 }),
                 (0, i.jsxs)('div', {
-                    className: N.options,
+                    className: v.options,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: N.iconsContainer,
+                            className: v.iconsContainer,
                             children: [
                                 Object.entries(A).map(e => {
                                     let [n, a] = e;
@@ -120,37 +120,37 @@ let S = e => {
                                         onMouseEnter: () => D(n),
                                         onClick: e => L(e, n),
                                         children: (0, i.jsx)(S, {
-                                            className: l()(N.iconWidget, { [N.selectedWidget]: n === (null == t ? void 0 : t.state) }),
+                                            className: l()(v.iconWidget, { [v.selectedWidget]: n === (null == t ? void 0 : t.state) }),
                                             name: a.title,
                                             icon: (0, i.jsx)('img', {
                                                 src: a.icon,
                                                 alt: '',
-                                                className: N.icon
+                                                className: v.icon
                                             }),
                                             style: n === (null == t ? void 0 : t.state) ? { backgroundColor: null != a.color ? a.color : void 0 } : {}
                                         })
                                     }, n);
                                 }),
                                 (0, i.jsx)(u.Clickable, {
-                                    'aria-label': v.Z.Messages.STATUS_POPOUT_CLEAR_STATUS,
+                                    'aria-label': N.Z.Messages.STATUS_POPOUT_CLEAR_STATUS,
                                     onClick: O,
                                     onMouseEnter: () => b(null),
                                     children: (0, i.jsx)(S, {
-                                        className: N.optionButton,
-                                        name: v.Z.Messages.STATUS_POPOUT_CLEAR_STATUS,
+                                        className: v.optionButton,
+                                        name: N.Z.Messages.STATUS_POPOUT_CLEAR_STATUS,
                                         icon: (0, i.jsx)(u.DenyIcon, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: N.editIcon,
-                                            colorClass: N.editIconColor
+                                            className: v.editIcon,
+                                            colorClass: v.editIconColor
                                         })
                                     })
                                 })
                             ]
                         }),
-                        (0, i.jsx)('div', { className: N.divider }),
+                        (0, i.jsx)('div', { className: v.divider }),
                         (0, i.jsxs)('div', {
-                            className: N.iconsContainer,
+                            className: v.iconsContainer,
                             children: [
                                 r.current.map((e, n) => {
                                     let a = e.status === (null == t ? void 0 : t.details) && o().isEqual(e.emoji, null == t ? void 0 : t.emoji), r = null != e.emoji && !(0, g.K)(e.emoji, s);
@@ -158,58 +158,58 @@ let S = e => {
                                         'aria-label': e.status,
                                         onMouseEnter: () => k(e),
                                         onClick: r ? void 0 : t => P(t, e),
-                                        className: N.statusOptionContainer,
+                                        className: v.statusOptionContainer,
                                         children: [
                                             (0, i.jsx)(S, {
-                                                className: l()(N.iconWidget, { [N.selectedWidget]: a }),
+                                                className: l()(v.iconWidget, { [v.selectedWidget]: a }),
                                                 name: e.status,
                                                 icon: null != e.emoji ? (0, i.jsx)(h.I, {
-                                                    className: N.customIcon,
+                                                    className: v.customIcon,
                                                     emoji: e.emoji,
                                                     hideTooltip: !0
                                                 }) : null,
                                                 style: a ? { backgroundColor: '#7174B7B3' } : { backgroundColor: '#6466914D' }
                                             }),
                                             r ? (0, i.jsx)('div', {
-                                                className: N.emojiLockIconContainer,
+                                                className: v.emojiLockIconContainer,
                                                 children: (0, i.jsx)(u.LockIcon, {
                                                     size: 'xs',
                                                     color: 'currentColor',
-                                                    className: N.emojiLockIcon
+                                                    className: v.emojiLockIcon
                                                 })
                                             }) : null
                                         ]
                                     }, 'custom-status-'.concat(n));
                                 }),
                                 r.current.length > 0 ? (0, i.jsx)(u.Clickable, {
-                                    'aria-label': null != t ? v.Z.Messages.STATUS_POPOUT_EDIT_CUSTOM : v.Z.Messages.STATUS_POPOUT_SET_CUSTOM,
+                                    'aria-label': null != t ? N.Z.Messages.STATUS_POPOUT_EDIT_CUSTOM : N.Z.Messages.STATUS_POPOUT_SET_CUSTOM,
                                     onClick: y,
                                     children: (0, i.jsx)(S, {
-                                        className: N.optionButton,
-                                        name: null != t ? v.Z.Messages.STATUS_POPOUT_EDIT_CUSTOM : v.Z.Messages.STATUS_POPOUT_SET_CUSTOM,
+                                        className: v.optionButton,
+                                        name: null != t ? N.Z.Messages.STATUS_POPOUT_EDIT_CUSTOM : N.Z.Messages.STATUS_POPOUT_SET_CUSTOM,
                                         icon: (0, i.jsx)(u.PencilIcon, {
                                             size: 'custom',
                                             color: 'currentColor',
                                             width: 20,
                                             height: 20,
-                                            colorClass: N.editIconColor
+                                            colorClass: v.editIconColor
                                         })
                                     })
                                 }, 'custom-status-edit') : (0, i.jsxs)(u.Clickable, {
-                                    'aria-label': v.Z.Messages.STATUS_POPOUT_SET_CUSTOM,
+                                    'aria-label': N.Z.Messages.STATUS_POPOUT_SET_CUSTOM,
                                     onClick: y,
-                                    className: N.setCustomButton,
+                                    className: v.setCustomButton,
                                     children: [
                                         (0, i.jsx)(u.PencilIcon, {
                                             size: 'xs',
                                             color: 'currentColor',
-                                            className: N.editIcon,
-                                            colorClass: N.editIconColor
+                                            className: v.editIcon,
+                                            colorClass: v.editIconColor
                                         }),
                                         (0, i.jsx)(u.Text, {
                                             variant: 'text-xs/medium',
                                             color: 'interactive-active',
-                                            children: v.Z.Messages.STATUS_POPOUT_SET_CUSTOM
+                                            children: N.Z.Messages.STATUS_POPOUT_SET_CUSTOM
                                         })
                                     ]
                                 }, 'custom-status-edit-full')

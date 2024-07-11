@@ -3,7 +3,7 @@ n.d(t, {
         return b;
     }
 });
-var i = n(735250), a = n(470079), s = n(392711), l = n.n(s), r = n(442837), o = n(570140), c = n(239091), d = n(561472), u = n(367907), h = n(731429), p = n(188471), m = n(933557), _ = n(287746), f = n(541716), E = n(910611), C = n(359110), g = n(592125), I = n(703558), x = n(430824), T = n(979651), v = n(502568), N = n(664342), S = n(124368), Z = n(981631), A = n(689938), M = n(822006);
+var i = n(735250), a = n(470079), s = n(392711), l = n.n(s), r = n(442837), o = n(570140), c = n(239091), d = n(561472), u = n(367907), h = n(731429), p = n(188471), m = n(933557), _ = n(287746), f = n(541716), E = n(910611), C = n(359110), g = n(592125), I = n(703558), x = n(430824), T = n(979651), N = n(502568), v = n(664342), S = n(124368), Z = n(981631), A = n(689938), M = n(822006);
 function b(e) {
     let {
             channelId: t,
@@ -38,7 +38,7 @@ function b(e) {
             b
         ]), null == R || null == j)
         return null;
-    let O = (0, i.jsx)(N.Z, {
+    let O = (0, i.jsx)(v.Z, {
         channel: R,
         baseChannelId: s
     });
@@ -48,7 +48,7 @@ function b(e) {
                 channel: R,
                 draftType: I.d.ChannelMessage
             }),
-            (0, i.jsx)(v.ZP, {
+            (0, i.jsx)(N.ZP, {
                 toolbar: O,
                 'aria-label': A.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
                 children: (0, E.ud)({

@@ -20,7 +20,7 @@ n.d(t, {
 }), n(47120);
 var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r);
 n(699581);
-var c = n(442837), d = n(704215), u = n(692547), h = n(481060), p = n(493683), m = n(475179), _ = n(287734), f = n(872810), E = n(607070), C = n(220779), g = n(201133), I = n(605236), x = n(543241), T = n(318374), v = n(258609), N = n(810568), S = n(168524), Z = n(382182), A = n(871118), M = n(359110), b = n(171368), R = n(12168), j = n(592125), L = n(430824), P = n(496675), O = n(699516), y = n(9156), D = n(979651), k = n(938475), U = n(346656), w = n(409216), B = n(368666), H = n(626135), G = n(768581), V = n(5192), F = n(26033), W = n(192918), z = n(22211), Y = n(571243), K = n(69259), q = n(206295), X = n(111386), Q = n(43205), J = n(469153), $ = n(206583), ee = n(981631), et = n(689938), en = n(331679);
+var c = n(442837), d = n(704215), u = n(692547), h = n(481060), p = n(493683), m = n(475179), _ = n(287734), f = n(872810), E = n(607070), C = n(220779), g = n(201133), I = n(605236), x = n(543241), T = n(318374), N = n(258609), v = n(810568), S = n(168524), Z = n(382182), A = n(871118), M = n(359110), b = n(171368), R = n(12168), j = n(592125), L = n(430824), P = n(496675), O = n(699516), y = n(9156), D = n(979651), k = n(938475), U = n(346656), w = n(409216), B = n(368666), H = n(626135), G = n(768581), V = n(5192), F = n(26033), W = n(192918), z = n(22211), Y = n(571243), K = n(69259), q = n(206295), X = n(111386), Q = n(43205), J = n(469153), $ = n(206583), ee = n(981631), et = n(689938), en = n(331679);
 function ei(e) {
     let {children: t} = e, n = a.useRef(null);
     return (0, h.useFocusLock)(n), (0, i.jsx)('div', {
@@ -79,7 +79,7 @@ function er(e) {
             requestId: f,
             buttons: E = [],
             header: x
-        } = e, [T, v] = a.useState(!1), [N, S] = a.useState(null), Z = (0, c.e7)([P.Z], () => P.Z.can(ee.Plq.SEND_MESSAGES, t)), A = (0, Y.a)({ location: 'PopoutReactor' }), [b, R] = a.useState(!1), [B, G] = a.useState(!1), {
+        } = e, [T, N] = a.useState(!1), [v, S] = a.useState(null), Z = (0, c.e7)([P.Z], () => P.Z.can(ee.Plq.SEND_MESSAGES, t)), A = (0, Y.a)({ location: 'PopoutReactor' }), [b, R] = a.useState(!1), [B, G] = a.useState(!1), {
             voiceBar: F,
             joinVoiceButton: W
         } = function (e) {
@@ -231,7 +231,7 @@ function er(e) {
                         interactionType: $.xP.REACTION_EMOJI_REACT_SENT
                     });
                 }
-                es(!0), null != N && (N.insertEmoji(e, !1, !1), N.focus());
+                es(!0), null != v && (v.insertEmoji(e, !1, !1), v.focus());
             }
         }, eu = async e => {
             let i;
@@ -329,7 +329,7 @@ function er(e) {
                             children: e => (0, i.jsx)(h.Clickable, {
                                 ...e,
                                 className: en.shareToChannelButton,
-                                onClick: () => v(e => !e),
+                                onClick: () => N(e => !e),
                                 children: T ? (0, i.jsx)(h.TextIcon, {
                                     size: 'custom',
                                     width: 20,
@@ -505,7 +505,7 @@ function eu(e) {
         } = e, {entry: _} = m, f = (0, F.d)(_), E = (0, S.Z)({
             location: 'ContentPopout',
             applicationId: f ? null === (t = _.extra) || void 0 === t ? void 0 : t.application_id : void 0,
-            source: N.m1.ActivityCard,
+            source: v.m1.ActivityCard,
             trackEntryPointImpression: !0,
             sourceUserId: _.author_id
         }), C = f ? E : void 0;
@@ -569,7 +569,7 @@ function eh(e) {
             badges: n,
             stream: s,
             ...l
-        } = e, r = (0, c.e7)([j.Z], () => j.Z.getChannel(null == s ? void 0 : s.channelId)), [o] = a.useMemo(() => (0, Z.p9)(r, D.Z, L.Z, P.Z, v.Z), [r]);
+        } = e, r = (0, c.e7)([j.Z], () => j.Z.getChannel(null == s ? void 0 : s.channelId)), [o] = a.useMemo(() => (0, Z.p9)(r, D.Z, L.Z, P.Z, N.Z), [r]);
     return null == s ? null : (0, i.jsxs)(ea, {
         className: en.streamingPopoutHero,
         children: [

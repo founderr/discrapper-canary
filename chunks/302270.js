@@ -3,15 +3,15 @@ n.d(t, {
         return H;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(692547), c = n(481060), d = n(475179), u = n(40851), h = n(358221), p = n(933557), m = n(320007), _ = n(236091), f = n(623624), E = n(984370), C = n(141321), g = n(618158), I = n(390322), x = n(616286), T = n(961048), v = n(430824), N = n(496675), S = n(502568), Z = n(626135), A = n(792125), M = n(431328), b = n(501655), R = n(200498), j = n(146085), L = n(427679), P = n(592473), O = n(831002), y = n(903108), D = n(981631), k = n(474936), U = n(689938), w = n(581544);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(692547), c = n(481060), d = n(475179), u = n(40851), h = n(358221), p = n(933557), m = n(320007), _ = n(236091), f = n(623624), E = n(984370), C = n(141321), g = n(618158), I = n(390322), x = n(616286), T = n(961048), N = n(430824), v = n(496675), S = n(502568), Z = n(626135), A = n(792125), M = n(431328), b = n(501655), R = n(200498), j = n(146085), L = n(427679), P = n(592473), O = n(831002), y = n(903108), D = n(981631), k = n(474936), U = n(689938), w = n(581544);
 function B(e) {
     let {
             inPopout: t,
             channel: n,
             toggleRequestToSpeakSidebar: s,
             showRequestToSpeakSidebar: o
-        } = e, p = (0, u.bp)(), f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)), E = (0, R.B)(n.id), v = (0, M.Rk)(n.id, b.pV.REQUESTED_TO_SPEAK_ONLY), {
-            preventIdle: N,
+        } = e, p = (0, u.bp)(), f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)), E = (0, R.B)(n.id), N = (0, M.Rk)(n.id, b.pV.REQUESTED_TO_SPEAK_ONLY), {
+            preventIdle: v,
             allowIdle: S
         } = (0, g.Y)('popup');
     return (0, i.jsxs)(i.Fragment, {
@@ -42,7 +42,7 @@ function B(e) {
             }, 'more-options-popout'),
             !t && (0, i.jsx)(m.Z, { className: w.button }, 'clips'),
             (0, i.jsx)(C.Z, {
-                onOpen: N,
+                onOpen: v,
                 onClose: S,
                 className: w.button
             }, 'recents'),
@@ -53,7 +53,7 @@ function B(e) {
                         f && d.Z.updateChatOpen(n.id, !1), s();
                     },
                     showRequestToSpeakSidebar: o,
-                    numRequestToSpeak: v
+                    numRequestToSpeak: N
                 })
             }) : null,
             !f && (0, i.jsx)('div', {
@@ -75,7 +75,7 @@ function H(e) {
             channel: u,
             toggleRequestToSpeakSidebar: h,
             showRequestToSpeakSidebar: m
-        } = e, _ = (0, p.ZP)(u), C = (0, r.e7)([L.Z], () => L.Z.getStageInstanceByChannel(u.id)), g = (0, M.Io)(u.id), I = (0, M.Rk)(u.id, b.pV.AUDIENCE), x = (0, r.e7)([v.Z], () => v.Z.getGuild(u.guild_id), [u.guild_id]), T = null !== (t = null == x ? void 0 : x.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, R = (null == x ? void 0 : x.isCommunity()) ? T < D.TU7 : (null == x ? void 0 : x.premiumTier) !== D.Eu4.TIER_3 && T <= D.eez, P = (0, y.Z)(u), O = (0, r.e7)([N.Z], () => N.Z.can(j.yP, u)), H = () => {
+        } = e, _ = (0, p.ZP)(u), C = (0, r.e7)([L.Z], () => L.Z.getStageInstanceByChannel(u.id)), g = (0, M.Io)(u.id), I = (0, M.Rk)(u.id, b.pV.AUDIENCE), x = (0, r.e7)([N.Z], () => N.Z.getGuild(u.guild_id), [u.guild_id]), T = null !== (t = null == x ? void 0 : x.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, R = (null == x ? void 0 : x.isCommunity()) ? T < D.TU7 : (null == x ? void 0 : x.premiumTier) !== D.Eu4.TIER_3 && T <= D.eez, P = (0, y.Z)(u), O = (0, r.e7)([v.Z], () => v.Z.can(j.yP, u)), H = () => {
             d.Z.updateStageVideoLimitBoostUpsellDismissed(u.id, !0), Z.default.track(D.rMx.BOOSTING_UPSELL_CLICKED, {
                 guild_id: u.guild_id,
                 type: k.cd.VIDEO_STAGE_LIMIT,

@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(338545), o = n(468194), c = n(442837), d = n(692547), u = n(477690), h = n(481060), p = n(2052), m = n(906732), _ = n(484459), f = n(594174), E = n(368666), C = n(626135), g = n(74538), I = n(557457), x = n(475674), T = n(981631), v = n(474936), N = n(689938), S = n(102572);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(338545), o = n(468194), c = n(442837), d = n(692547), u = n(477690), h = n(481060), p = n(2052), m = n(906732), _ = n(484459), f = n(594174), E = n(368666), C = n(626135), g = n(74538), I = n(557457), x = n(475674), T = n(981631), N = n(474936), v = n(689938), S = n(102572);
 let Z = (0, o.Mg)(u.Z.LIVE_INDICATOR_BORDER_RADIUS), A = {
         opacity: 0,
         transform: 'translate3d(100%, 0, 0)'
@@ -32,7 +32,7 @@ let Z = (0, o.Mg)(u.Z.LIVE_INDICATOR_BORDER_RADIUS), A = {
         } catch (e) {
             s = !1;
         }
-        let P = t || s, {location: O} = (0, p.O)(), y = (0, c.e7)([f.default], () => f.default.getCurrentUser()), D = o && !g.ZP.isPremium(y, v.p9.TIER_1) && !g.ZP.canStreamQuality(g.ZP.StreamQuality.MID, y), k = a.useCallback(() => {
+        let P = t || s, {location: O} = (0, p.O)(), y = (0, c.e7)([f.default], () => f.default.getCurrentUser()), D = o && !g.ZP.isPremium(y, N.p9.TIER_1) && !g.ZP.canStreamQuality(g.ZP.StreamQuality.MID, y), k = a.useCallback(() => {
                 D && P && (0, h.openModalLazy)(async () => {
                     let {default: e} = await n.e('28479').then(n.bind(n, 78865));
                     return t => (0, i.jsx)(e, {
@@ -47,7 +47,7 @@ let Z = (0, o.Mg)(u.Z.LIVE_INDICATOR_BORDER_RADIUS), A = {
             ]);
         if (a.useEffect(() => {
                 !Z && P && (C.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: v.cd.STREAM_QUALITY_INDICATOR,
+                    type: N.cd.STREAM_QUALITY_INDICATOR,
                     has_premium_stream_fps: t,
                     has_premium_stream_resolution: s,
                     location_stack: j
@@ -62,7 +62,7 @@ let Z = (0, o.Mg)(u.Z.LIVE_INDICATOR_BORDER_RADIUS), A = {
             ]), null == R)
             return null;
         let U = (0, i.jsx)(h.Tooltip, {
-            text: L ? N.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : P ? N.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : N.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
+            text: L ? v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : P ? v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
             position: 'bottom',
             color: h.Tooltip.Colors.GREY,
             children: e => (0, i.jsxs)(h.Clickable, {

@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(699516), l = n(246946), r = n(5192), o = n(332390), c = n(824572), d = n(621853), u = n(741308), h = n(588822), p = n(940730), m = n(681837), _ = n(91433), f = n(900927), E = n(678738), C = n(502762), g = n(530), I = n(7242), x = n(827313), T = n(580512), v = n(228168), N = n(981631), S = n(689938), Z = n(790884);
+var a = n(442837), s = n(699516), l = n(246946), r = n(5192), o = n(332390), c = n(824572), d = n(621853), u = n(741308), h = n(588822), p = n(940730), m = n(681837), _ = n(91433), f = n(900927), E = n(678738), C = n(502762), g = n(530), I = n(7242), x = n(827313), T = n(580512), N = n(228168), v = n(981631), S = n(689938), Z = n(790884);
 function A(e) {
     let {
             user: t,
@@ -22,13 +22,13 @@ function A(e) {
         children: [
             (0, i.jsx)(g.Z, {
                 user: t,
-                profileType: v.y0.PANEL,
+                profileType: N.y0.PANEL,
                 nickname: r.ZP.getName(null, A.id, t),
                 pronouns: null == n ? void 0 : n.pronouns,
                 onOpenProfile: b,
                 tags: (0, i.jsx)(u.Z, {
                     displayProfile: n,
-                    profileType: v.y0.PANEL
+                    profileType: N.y0.PANEL
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -41,7 +41,7 @@ function A(e) {
                     ]
                 })
             }),
-            R && L === N.OGo.PENDING_INCOMING && (0, i.jsx)(C.Z.Overlay, {
+            R && L === v.OGo.PENDING_INCOMING && (0, i.jsx)(C.Z.Overlay, {
                 children: (0, i.jsx)(_.Z, {
                     user: t,
                     channelId: A.id

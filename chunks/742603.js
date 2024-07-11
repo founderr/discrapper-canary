@@ -5,13 +5,13 @@ n.d(t, {
 }), n(47120);
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(442837), r = n(481060), o = n(99690), c = n(40851), d = n(657305), u = n(835473), h = n(12498), p = n(933557), m = n(471445), _ = n(554747), f = n(854698), E = n(897669), C = n(984370), g = n(910611), I = n(454585), x = n(134483), T = n(210975), v = n(809244), N = n(618158), S = n(366695), Z = n(502568), A = n(792125), M = n(358221), b = n(362721), R = n(887012), j = n(613548), L = n(221888), P = n(339340), O = n(354459), y = n(981631), D = n(231338), k = n(689938), U = n(818087), w = n(153521);
+var a = n(120356), s = n.n(a), l = n(442837), r = n(481060), o = n(99690), c = n(40851), d = n(657305), u = n(835473), h = n(12498), p = n(933557), m = n(471445), _ = n(554747), f = n(854698), E = n(897669), C = n(984370), g = n(910611), I = n(454585), x = n(134483), T = n(210975), N = n(809244), v = n(618158), S = n(366695), Z = n(502568), A = n(792125), M = n(358221), b = n(362721), R = n(887012), j = n(613548), L = n(221888), P = n(339340), O = n(354459), y = n(981631), D = n(231338), k = n(689938), U = n(818087), w = n(153521);
 function B(e) {
     let {
             focusedParticipant: t,
             channel: n
         } = e, a = (0, c.bp)(), s = (0, l.e7)([M.Z], () => M.Z.getLayout(n.id, a));
-    return (0, i.jsx)(N.Z, {
+    return (0, i.jsx)(v.Z, {
         children: (0, i.jsx)(L.Z, {
             className: U.participants,
             participant: t,
@@ -28,7 +28,7 @@ function H(e) {
             channel: n,
             stream: a,
             color: s
-        } = e, l = (0, v.Z)(n, t, a);
+        } = e, l = (0, N.Z)(n, t, a);
     return null == t || null == a ? null : (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.Z, {
@@ -110,7 +110,7 @@ function V(e) {
         } = e, {focusedParticipant: f} = (0, l.cj)([M.Z], () => ({
             focusedParticipant: M.Z.getSelectedParticipant(t.id),
             participantsOpen: M.Z.getParticipantsOpen(t.id)
-        }), [t.id]), E = (0, p.ZP)(t), v = (0, m.KS)(t), [N] = (0, u.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), S = k.Z.Messages.VOICE_CHANNEL;
+        }), [t.id]), E = (0, p.ZP)(t), N = (0, m.KS)(t), [v] = (0, u.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), S = k.Z.Messages.VOICE_CHANNEL;
     t.isDM() ? S = k.Z.Messages.DM : t.isGroupDM() && (S = k.Z.Messages.GROUP_DM);
     let R = (0, l.e7)([h.Z], () => h.Z.getChannelStatus(t)), L = t.isGuildVoice() && c && null != R && R.length > 0, B = (0, b.Z)(t), H = L ? (0, i.jsx)(r.Tooltip, {
             text: k.Z.Messages.VOICE_CHANNEL_SET_STATUS,
@@ -167,8 +167,8 @@ function V(e) {
                     exitFullScreen: _
                 }),
                 children: [
-                    null != v ? (0, i.jsx)(Z.ZP.Icon, {
-                        icon: v,
+                    null != N ? (0, i.jsx)(Z.ZP.Icon, {
+                        icon: N,
                         disabled: !0,
                         'aria-label': S
                     }) : null,
@@ -190,7 +190,7 @@ function V(e) {
                         guild: a
                     }),
                     (0, i.jsx)(G, {
-                        focusedApplication: N,
+                        focusedApplication: v,
                         focusedParticipant: f,
                         channel: t
                     })

@@ -3,7 +3,7 @@ n.d(t, {
         return F;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(512722), l = n.n(s), r = n(442837), o = n(481060), c = n(893776), d = n(528963), u = n(749210), h = n(607070), p = n(391650), m = n(645896), _ = n(353093), f = n(717057), E = n(693546), C = n(881952), g = n(305325), I = n(246364), x = n(937111), T = n(270801), v = n(652730), N = n(41776), S = n(657352), Z = n(33154), A = n(144114), M = n(703656), b = n(210887), R = n(237904), j = n(271383), L = n(430824), P = n(607744), O = n(496675), y = n(594174), D = n(700785), k = n(862679), U = n(981631), w = n(815660), B = n(689938), H = n(305157);
+var i = n(735250), a = n(470079), s = n(512722), l = n.n(s), r = n(442837), o = n(481060), c = n(893776), d = n(528963), u = n(749210), h = n(607070), p = n(391650), m = n(645896), _ = n(353093), f = n(717057), E = n(693546), C = n(881952), g = n(305325), I = n(246364), x = n(937111), T = n(270801), N = n(652730), v = n(41776), S = n(657352), Z = n(33154), A = n(144114), M = n(703656), b = n(210887), R = n(237904), j = n(271383), L = n(430824), P = n(607744), O = n(496675), y = n(594174), D = n(700785), k = n(862679), U = n(981631), w = n(815660), B = n(689938), H = n(305157);
 function G(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -55,8 +55,8 @@ class V extends a.PureComponent {
                 isStaff: x,
                 guildJoinRequest: T
             } = this.props, {
-                shouldShowLurkerModeUpsellPopout: v,
-                shouldShowLurkerModeSuccessPopout: N
+                shouldShowLurkerModeUpsellPopout: N,
+                shouldShowLurkerModeSuccessPopout: v
             } = this.state, S = {
                 theme: p,
                 useReducedMotion: g
@@ -89,7 +89,7 @@ class V extends a.PureComponent {
         return (0, i.jsx)(o.Popout, {
             position: 'top',
             align: 'left',
-            shouldShow: N,
+            shouldShow: v,
             onRequestClose: () => this.setState({ shouldShowLurkerModeSuccessPopout: !1 }),
             renderPopout: this.renderSuccessPopout,
             children: e => (0, i.jsx)(k.Z, {
@@ -99,7 +99,7 @@ class V extends a.PureComponent {
                         this.renderMemberVerificationSuccessModal(),
                         E ? (0, i.jsx)(o.Popout, {
                             renderPopout: this.renderLurkerModeUpsellPopout,
-                            shouldShow: v,
+                            shouldShow: N,
                             position: 'top',
                             children: e => (0, i.jsx)(o.Clickable, {
                                 ...e,
@@ -243,10 +243,10 @@ function F(e) {
     let {
             channel: s,
             children: l
-        } = e, o = s.getGuildId(), c = (0, r.e7)([L.Z], () => L.Z.getGuild(o)), d = (0, r.e7)([P.Z], () => P.Z.getCheck(o)), u = s.type === U.d4z.GUILD_ANNOUNCEMENT && null != c && c.hasFeature(U.oNc.NEWS), p = (0, r.e7)([R.Z], () => u ? R.Z.getFollowerStatsForChannel(s.id) : null), f = (0, r.e7)([N.Z], () => N.Z.isLurking(o)), E = (0, r.e7)([y.default], () => y.default.getCurrentUser()), g = null !== (t = null == E ? void 0 : E.isStaff()) && void 0 !== t && t, T = (0, r.e7)([j.ZP], () => {
+        } = e, o = s.getGuildId(), c = (0, r.e7)([L.Z], () => L.Z.getGuild(o)), d = (0, r.e7)([P.Z], () => P.Z.getCheck(o)), u = s.type === U.d4z.GUILD_ANNOUNCEMENT && null != c && c.hasFeature(U.oNc.NEWS), p = (0, r.e7)([R.Z], () => u ? R.Z.getFollowerStatsForChannel(s.id) : null), f = (0, r.e7)([v.Z], () => v.Z.isLurking(o)), E = (0, r.e7)([y.default], () => y.default.getCurrentUser()), g = null !== (t = null == E ? void 0 : E.isStaff()) && void 0 !== t && t, T = (0, r.e7)([j.ZP], () => {
             var e, t;
             return null != E && null !== (t = null === (e = j.ZP.getMember(o, E.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t;
-        }), S = !!(null == c ? void 0 : c.hasVerificationGate()), Z = (T || d.notClaimed) && S, A = (0, r.e7)([v.Z], () => v.Z.shouldShowPopout(o)), M = (0, r.e7)([O.Z], () => O.Z.can(U.Plq.SEND_MESSAGES, s)), k = (0, r.e7)([x.Z], () => x.Z.getRequest(o)), [w, B] = (0, m.L_)(o), H = (0, m.Cc)(o), G = (null == k ? void 0 : k.applicationStatus) === I.wB.APPROVED;
+        }), S = !!(null == c ? void 0 : c.hasVerificationGate()), Z = (T || d.notClaimed) && S, A = (0, r.e7)([N.Z], () => N.Z.shouldShowPopout(o)), M = (0, r.e7)([O.Z], () => O.Z.can(U.Plq.SEND_MESSAGES, s)), k = (0, r.e7)([x.Z], () => x.Z.getRequest(o)), [w, B] = (0, m.L_)(o), H = (0, m.Cc)(o), G = (null == k ? void 0 : k.applicationStatus) === I.wB.APPROVED;
     a.useEffect(() => {
         if (!(!(0, _.EJ)(c) || !G || (0, C.d3)(k)) && null == H)
             B();

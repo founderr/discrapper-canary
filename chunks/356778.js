@@ -233,7 +233,7 @@ function T(e, t, n) {
                     }
                 });
             }
-            N({});
+            v({});
         });
         return () => {
             e.cancel(), clearTimeout(n);
@@ -246,7 +246,7 @@ function T(e, t, n) {
         T,
         I
     ]);
-    let [v, N] = s.useState({});
+    let [N, v] = s.useState({});
     return {
         messagesCount: null !== (i = null == o ? void 0 : o.messageCount) && void 0 !== i ? i : p,
         linksCount: null !== (a = null == u ? void 0 : u.messageCount) && void 0 !== a ? a : p,

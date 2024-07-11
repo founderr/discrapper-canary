@@ -26,7 +26,7 @@ function r(e) {
             participant: I,
             width: x,
             ...T
-        } = e, v = s.Z.getVideoComponent();
+        } = e, N = s.Z.getVideoComponent();
     return (0, i.jsx)('div', {
         style: { width: x },
         className: l.spaceBetweenTiles,
@@ -49,7 +49,7 @@ function r(e) {
                     participant: I,
                     paused: C,
                     pulseSpeakingIndicator: g,
-                    videoComponent: v,
+                    videoComponent: N,
                     width: x,
                     ...T
                 }),

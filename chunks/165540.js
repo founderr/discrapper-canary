@@ -1,8 +1,8 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(149765), o = n(442837), c = n(481060), d = n(367907), u = n(499254), h = n(424602), p = n(541099), m = n(827498), _ = n(663924), f = n(998698), E = n(747127), C = n(665906), g = n(271383), I = n(496675), x = n(594174), T = n(583027), v = n(981631), N = n(314734), S = n(689938), Z = n(979030);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(149765), o = n(442837), c = n(481060), d = n(367907), u = n(499254), h = n(424602), p = n(541099), m = n(827498), _ = n(663924), f = n(998698), E = n(747127), C = n(665906), g = n(271383), I = n(496675), x = n(594174), T = n(583027), N = n(981631), v = n(314734), S = n(689938), Z = n(979030);
 let A = a.forwardRef(function (e, t) {
     let {type: n} = e, [s, r] = a.useState(!1), h = (0, o.e7)([p.Z], () => p.Z.shouldShowPopup()), _ = a.useCallback(() => {
-            (0, d.yw)(v.rMx.CHAT_INPUT_COMPONENT_VIEWED, { type: v.K98.APPS_BUTTON }), h ? u.y(m.ti.DISMISSED) : u._(m._b.TEXT, n);
+            (0, d.yw)(N.rMx.CHAT_INPUT_COMPONENT_VIEWED, { type: N.K98.APPS_BUTTON }), h ? u.y(m.ti.DISMISSED) : u._(m._b.TEXT, n);
         }, [
             h,
             n
@@ -21,7 +21,7 @@ let A = a.forwardRef(function (e, t) {
         text: S.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
         children: e => (0, i.jsx)('div', {
             ...e,
-            className: l()(Z.buttonContainer, N.t4),
+            className: l()(Z.buttonContainer, v.t4),
             ref: I,
             children: (0, i.jsx)(c.Button, {
                 look: c.Button.Looks.BLANK,
@@ -63,7 +63,7 @@ t.Z = a.memo(a.forwardRef(function (e) {
                     return null !== (t = null != n && null != i ? null === (e = g.ZP.getMember(n, i.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t;
                 }), {messagesDisabled: a} = (0, o.cj)([I.Z], () => {
                     var n, a;
-                    let s = e.isPrivate(), l = I.Z.computePermissions(e), o = r.e$(l, v.Plq.CREATE_PUBLIC_THREADS) || r.e$(l, v.Plq.CREATE_PRIVATE_THREADS), c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(l, v.Plq.SEND_MESSAGES)), d = (0, C.xl)(e);
+                    let s = e.isPrivate(), l = I.Z.computePermissions(e), o = r.e$(l, N.Plq.CREATE_PUBLIC_THREADS) || r.e$(l, N.Plq.CREATE_PRIVATE_THREADS), c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(l, N.Plq.SEND_MESSAGES)), d = (0, C.xl)(e);
                     return { messagesDisabled: i || !s && !c || d };
                 }, [
                     e,

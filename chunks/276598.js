@@ -3,8 +3,8 @@ n.d(t, {
         return S;
     }
 }), n(47120), n(653041);
-var i = n(735250), a = n(470079), s = n(442837), l = n(704215), r = n(481060), o = n(358221), c = n(243778), d = n(390322), u = n(871499), h = n(819640), p = n(797258), m = n(446226), _ = n(937393), f = n(43982), E = n(721351), C = n(420529), g = n(927923), I = n(981631), x = n(921944), T = n(689938), v = n(646897);
-function N(e) {
+var i = n(735250), a = n(470079), s = n(442837), l = n(704215), r = n(481060), o = n(358221), c = n(243778), d = n(390322), u = n(871499), h = n(819640), p = n(797258), m = n(446226), _ = n(937393), f = n(43982), E = n(721351), C = n(420529), g = n(927923), I = n(981631), x = n(921944), T = n(689938), N = n(646897);
+function v(e) {
     let {
             onClose: t,
             channel: n
@@ -44,7 +44,7 @@ function S(e) {
                 } = e, o = a === l.z.DONUT_DESKTOP_NUX;
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    n ? (0, i.jsx)('div', { className: v.leftDivider }) : null,
+                    n ? (0, i.jsx)('div', { className: N.leftDivider }) : null,
                     (0, i.jsx)(r.Popout, {
                         position: y,
                         spacing: o ? 16 : void 0,
@@ -61,7 +61,7 @@ function S(e) {
                                         s(x.L.UNKNOWN), O(!0);
                                     },
                                     gameConsoleAccounts: L
-                                }) : (0, i.jsx)(N, {
+                                }) : (0, i.jsx)(v, {
                                     onClose: () => {
                                         n();
                                     },

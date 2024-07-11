@@ -3,13 +3,13 @@ n.d(t, {
         return A;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(481060), l = n(32750), r = n(323597), o = n(438536), c = n(193987), d = n(933793), u = n(13736), h = n(732393), p = n(214906), m = n(612856), _ = n(137591), f = n(299206), E = n(727429), C = n(359110), g = n(502568), I = n(585483), x = n(739830), T = n(488131), v = n(981631), N = n(689938);
+var i = n(735250), a = n(470079), s = n(481060), l = n(32750), r = n(323597), o = n(438536), c = n(193987), d = n(933793), u = n(13736), h = n(732393), p = n(214906), m = n(612856), _ = n(137591), f = n(299206), E = n(727429), C = n(359110), g = n(502568), I = n(585483), x = n(739830), T = n(488131), N = n(981631), v = n(689938);
 function S(e) {
     let {channel: t} = e, [n, l] = a.useState(!1);
     function r() {
         l(e => !e);
     }
-    let o = N.Z.Messages.MORE;
+    let o = v.Z.Messages.MORE;
     return (0, i.jsx)(s.Popout, {
         shouldShow: n,
         animation: s.Popout.Animation.NONE,
@@ -43,7 +43,7 @@ function Z(e) {
             onSelect: a
         } = e, E = (0, o.Z)(t, 'Sidebar Overflow'), g = (0, d.Z)(t), x = (0, p.Z)(t), T = (0, m.Z)(t), S = (0, l.Z)(t), Z = (0, c.Z)(t), A = (0, h.Z)(t.id), M = (0, u.Z)(t), b = (0, r.Z)(t), R = (0, f.Z)({
             id: t.id,
-            label: N.Z.Messages.COPY_ID_THREAD
+            label: v.Z.Messages.COPY_ID_THREAD
         }), j = (0, _.Z)(t);
     function L() {
         (0, C.Kh)(t.id);
@@ -51,7 +51,7 @@ function Z(e) {
     return (0, i.jsxs)(s.Menu, {
         navId: 'thread-context',
         onClose: n,
-        'aria-label': N.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
+        'aria-label': v.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
         onSelect: a,
         children: [
             (0, i.jsxs)(s.MenuGroup, {
@@ -59,7 +59,7 @@ function Z(e) {
                     E,
                     (0, i.jsx)(s.MenuItem, {
                         id: 'open',
-                        label: N.Z.Messages.OPEN_IN_FULL_VIEW,
+                        label: v.Z.Messages.OPEN_IN_FULL_VIEW,
                         action: L
                     })
                 ]
@@ -81,20 +81,20 @@ function Z(e) {
                 children: [
                     (0, i.jsx)(s.MenuItem, {
                         id: 'search',
-                        label: N.Z.Messages.SEARCH,
+                        label: v.Z.Messages.SEARCH,
                         icon: s.WindowLaunchIcon,
                         action: function () {
                             L(), setTimeout(() => {
-                                I.S.dispatch(v.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
+                                I.S.dispatch(N.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
                             }, 2000);
                         }
                     }),
                     (0, i.jsx)(s.MenuItem, {
                         id: 'pins',
-                        label: N.Z.Messages.PINS,
+                        label: v.Z.Messages.PINS,
                         icon: s.WindowLaunchIcon,
                         action: function () {
-                            L(), I.S.dispatch(v.CkL.TOGGLE_CHANNEL_PINS);
+                            L(), I.S.dispatch(N.CkL.TOGGLE_CHANNEL_PINS);
                         }
                     })
                 ]
@@ -122,7 +122,7 @@ function A(e) {
             (0, i.jsx)(S, { channel: t }),
             (0, i.jsx)(g.ZP.Icon, {
                 icon: s.CloseSmallIcon,
-                tooltip: N.Z.Messages.CLOSE,
+                tooltip: v.Z.Messages.CLOSE,
                 onClick: () => (0, T.vN)((0, E.e)(t), null != n ? n : t.parent_id)
             })
         ]

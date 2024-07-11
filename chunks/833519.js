@@ -6,7 +6,7 @@ n.d(t, {
         return H;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(475179), d = n(872810), u = n(763520), h = n(710845), p = n(590293), m = n(863908), _ = n(871118), f = n(517525), E = n(590076), C = n(507675), g = n(199902), I = n(314897), x = n(592125), T = n(131951), v = n(451478), N = n(40300), S = n(368666), Z = n(685203), A = n(112560), M = n(442168), b = n(822296), R = n(916771), j = n(792517), L = n(979425), P = n(651183), O = n(623825), y = n(981631), D = n(354459), k = n(65154), U = n(689938), w = n(26864);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(475179), d = n(872810), u = n(763520), h = n(710845), p = n(590293), m = n(863908), _ = n(871118), f = n(517525), E = n(590076), C = n(507675), g = n(199902), I = n(314897), x = n(592125), T = n(131951), N = n(451478), v = n(40300), S = n(368666), Z = n(685203), A = n(112560), M = n(442168), b = n(822296), R = n(916771), j = n(792517), L = n(979425), P = n(651183), O = n(623825), y = n(981631), D = n(354459), k = n(65154), U = n(689938), w = n(26864);
 let B = new h.Z('StreamTile');
 function H(e) {
     let {
@@ -48,7 +48,7 @@ function G(e) {
         } = t, Y = (0, r.e7)([x.Z], () => x.Z.getChannel(F.channelId)), K = (0, r.e7)([g.Z], () => g.Z.getActiveStreamForUser(W.id, F.guildId), [
             W.id,
             F.guildId
-        ]), q = (0, r.e7)([g.Z], () => g.Z.getAllActiveStreams().length > 0), X = (0, r.e7)([v.Z], () => v.Z.isFocused()), Q = (null == K ? void 0 : K.ownerId) === G, J = Q && !X && !S, $ = null != K ? (0, m.Z)(K, W, W.id === G, J) : null, ee = P < 195;
+        ]), q = (0, r.e7)([g.Z], () => g.Z.getAllActiveStreams().length > 0), X = (0, r.e7)([N.Z], () => N.Z.isFocused()), Q = (null == K ? void 0 : K.ownerId) === G, J = Q && !X && !S, $ = null != K ? (0, m.Z)(K, W, W.id === G, J) : null, ee = P < 195;
     if (a.useEffect(() => {
             !q && (null == Y ? void 0 : Y.isGuildStageVoice()) && !Q && ((0, d.rn)(F), c.Z.updateStageStreamSize(F.channelId, !1));
         }, []), a.useEffect(() => {
@@ -93,7 +93,7 @@ function G(e) {
                     hasScreenMessage: null != $,
                     stream: F
                 }) : null,
-                (0, i.jsx)(N.Z, {
+                (0, i.jsx)(v.Z, {
                     onResize: s,
                     wrapperClassName: w.videoWrapper,
                     className: w.content,

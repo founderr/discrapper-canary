@@ -6,7 +6,7 @@ function T() {
         target: 'premium marketing page'
     }), (0, u.uL)(E.Z5c.APPLICATION_STORE);
 }
-function v(e) {
+function N(e) {
     let {
             avatarSrc: t,
             username: n
@@ -61,7 +61,7 @@ function v(e) {
         ]
     });
 }
-function N(e) {
+function v(e) {
     let {
             avatarSrc: t,
             username: n
@@ -134,12 +134,12 @@ function Z(e) {
         username: a
     } = e;
     if (1 === t)
-        return (0, i.jsx)(v, {
+        return (0, i.jsx)(N, {
             avatarSrc: n,
             username: a
         });
     if (2 === t)
-        return (0, i.jsx)(N, {
+        return (0, i.jsx)(v, {
             avatarSrc: n,
             username: a
         });

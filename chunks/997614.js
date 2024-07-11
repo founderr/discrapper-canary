@@ -9,9 +9,9 @@ function x(e) {
             channel: t,
             themeable: x
         } = e, T = t.getGuildId(), {
-            mute: v,
-            suppress: N
-        } = (0, p.Z)(t), S = (0, s.e7)([f.Z], () => f.Z.isDeaf()), Z = v || N || S, A = (0, d.sR)({ isSoundboardButtonDisabled: Z }), [M, b] = (0, c.c)(A);
+            mute: N,
+            suppress: v
+        } = (0, p.Z)(t), S = (0, s.e7)([f.Z], () => f.Z.isDeaf()), Z = N || v || S, A = (0, d.sR)({ isSoundboardButtonDisabled: Z }), [M, b] = (0, c.c)(A);
     function R(e) {
         null != T && (0, o.jW)(e, async () => {
             let {default: e} = await n.e('56049').then(n.bind(n, 338991));
@@ -48,9 +48,9 @@ function x(e) {
         children: e => (0, i.jsx)(_.Z, {
             themeable: x,
             label: function () {
-                if (v)
-                    return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
                 if (N)
+                    return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
+                if (v)
                     return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
                 if (S)
                     return I.Z.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;

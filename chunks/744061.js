@@ -33,7 +33,7 @@ function _(e) {
         }, [
             f,
             t
-        ]), v = a.useRef(null);
+        ]), N = a.useRef(null);
     return a.useEffect(() => {
         let e;
         let t = c.Z.theme, i = !1;
@@ -42,8 +42,8 @@ function _(e) {
                 Promise.resolve().then(n.t.bind(n, 500923, 23)),
                 (0, l.wj)(t) ? I.dark() : I.light()
             ]);
-            !i && null != v.current && (e = a.loadAnimation({
-                container: v.current,
+            !i && null != N.current && (e = a.loadAnimation({
+                container: N.current,
                 renderer: 'svg',
                 loop: !0,
                 autoplay: !0,
@@ -63,7 +63,7 @@ function _(e) {
                     children: [
                         null != I && (0, i.jsx)('div', {
                             className: p.animation,
-                            ref: v
+                            ref: N
                         }),
                         (0, i.jsxs)('div', {
                             className: p.content,

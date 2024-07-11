@@ -1,19 +1,19 @@
 let i;
 n(47120), n(724458), n(653041);
 var a, s, l, r, o = n(392711), c = n.n(o), d = n(442837), u = n(570140), h = n(279779), p = n(131704), m = n(624138), _ = n(51144), f = n(592125), E = n(580005), C = n(699516), g = n(594174), I = n(981631);
-let x = !1, T = '', v = 0, N = [], S = !1, Z = new Set(), A = null;
+let x = !1, T = '', N = 0, v = [], S = !1, Z = new Set(), A = null;
 function M() {
-    T = '', v = 0, N = [], Z = new Set(), x = !1, A = null;
+    T = '', N = 0, v = [], Z = new Set(), x = !1, A = null;
 }
 function b(e) {
-    T = e, v = 0, R();
+    T = e, N = 0, R();
 }
 function R() {
     if (!x)
         return !1;
     let e = f.Z.getChannel(A);
     if (0 === T.trim().length)
-        return null != i && i.clearQuery(), N = function (e) {
+        return null != i && i.clearQuery(), v = function (e) {
             let t = C.Z.getFriendIDs();
             return (null == e ? void 0 : e.isPrivate()) && (t = t.filter(t => !e.recipients.includes(t))), t.reduce((e, t) => {
                 let n = g.default.getUser(t);
@@ -44,7 +44,7 @@ function L(e, t) {
 function P(e) {
     let {results: t} = e;
     if (!!x && '' !== T)
-        N = t.map(e => {
+        v = t.map(e => {
             let {id: t} = e;
             return { user: g.default.getUser(t) };
         }).filter(e => null != e.user), w.emitChange();
@@ -73,7 +73,7 @@ class U extends (a = d.ZP.Store) {
         ], R), this.syncWith([C.Z], j);
     }
     getResults() {
-        return N;
+        return v;
     }
     hasFriends() {
         return S;
@@ -87,9 +87,9 @@ class U extends (a = d.ZP.Store) {
     getState() {
         return {
             query: T,
-            selectedRow: v,
+            selectedRow: N,
             selectedUsers: Z,
-            results: N,
+            results: v,
             hasFriends: S
         };
     }
@@ -126,7 +126,7 @@ let w = new U(u.Z, {
         A = e.channelId, b(e.query);
     },
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
-        v = e.row;
+        N = e.row;
     },
     PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function (e) {
         let {userId: t} = e;
