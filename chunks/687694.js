@@ -1,6 +1,6 @@
 t.d(n, {
     C: function () {
-        return a;
+        return r;
     }
 });
 let l = (0, t(818083).B)({
@@ -37,16 +37,16 @@ let l = (0, t(818083).B)({
                 }
             }
         ]
-    }), a = e => {
+    }), r = e => {
         let {
                 location: n,
                 autoTrackExposure: t = !0
             } = e, {
-                showReplyIcon: a,
-                openOnHover: r
+                showReplyIcon: r,
+                openOnHover: a
             } = l.useExperiment({ location: n }, { autoTrackExposure: t });
         return {
-            showReplyIcon: a,
-            openOnHover: r
+            showReplyIcon: r,
+            openOnHover: a
         };
     };

@@ -6,13 +6,13 @@ t.d(n, {
         return I;
     },
     Yp: function () {
-        return h;
+        return N;
     },
     bt: function () {
-        return N;
+        return h;
     }
 }), t(47120), t(653041);
-var r = t(470079), u = t(392711), l = t(259443), i = t(286379), c = t(442837), o = t(413523), a = t(797614), s = t(314897), d = t(878884), f = t(19780), C = t(979651), Z = t(413402);
+var r = t(470079), u = t(392711), l = t(259443), i = t(286379), c = t(442837), a = t(413523), o = t(797614), s = t(314897), d = t(878884), f = t(19780), C = t(979651), Z = t(413402);
 let E = new l.Y('RTCConnectionDesyncHooks');
 function g(e, n) {
     let t = (0, Z.M)(), l = (0, c.e7)([
@@ -26,7 +26,7 @@ function g(e, n) {
         for (let e of n)
             t.push(e), r.add(e.user.id);
         return e.forEach(e => {
-            r.has(e.user.id) && (E.info('Found duplicate user voice state: '.concat(e.user.id, '.')), a.Z.increment({ name: i.V.RTC_CONNECTION_DUPLICATE_USER })), t.splice((0, u.sortedIndexBy)(t, e, e => {
+            r.has(e.user.id) && (E.info('Found duplicate user voice state: '.concat(e.user.id, '.')), o.Z.increment({ name: i.V.RTC_CONNECTION_DUPLICATE_USER })), t.splice((0, u.sortedIndexBy)(t, e, e => {
                 let {comparator: n} = e;
                 return n;
             }), 0, e);
@@ -36,7 +36,7 @@ function g(e, n) {
         n
     ]);
 }
-function N(e, n) {
+function h(e, n) {
     let t = function (e) {
         let n = (0, Z.M)();
         return (0, c.e7)([
@@ -49,14 +49,14 @@ function N(e, n) {
             return n;
         let t = [...n];
         return e.forEach(e => {
-            t.splice((0, u.sortedIndexBy)(t, e, e => (0, o.Yr)(e)), 0, e);
+            t.splice((0, u.sortedIndexBy)(t, e, e => (0, a.Yr)(e)), 0, e);
         }), t;
     }(t, n), [
         t,
         n
     ]);
 }
-function h(e, n) {
+function N(e, n) {
     let t = (0, Z.M)(), u = (0, c.e7)([
             d.Z,
             f.Z
@@ -70,10 +70,10 @@ function h(e, n) {
     ]);
 }
 function I(e, n) {
-    let t = (0, Z.M)(), u = (0, c.e7)([s.default], () => s.default.getId() === n), l = (0, c.e7)([f.Z], () => f.Z.getChannelId()), i = r.useRef(null), [o, a] = r.useState(!1), [d, E] = r.useState(!1), g = (0, c.e7)([
+    let t = (0, Z.M)(), u = (0, c.e7)([s.default], () => s.default.getId() === n), l = (0, c.e7)([f.Z], () => f.Z.getChannelId()), i = r.useRef(null), [a, o] = r.useState(!1), [d, E] = r.useState(!1), g = (0, c.e7)([
             f.Z,
             C.Z
-        ], () => null != n && null != e && f.Z.getChannelId() === e && null != C.Z.isInChannel(e, n) && f.Z.isUserConnected(n)), N = (0, c.e7)([
+        ], () => null != n && null != e && f.Z.getChannelId() === e && null != C.Z.isInChannel(e, n) && f.Z.isUserConnected(n)), h = (0, c.e7)([
             f.Z,
             C.Z
         ], () => null != n && null != e && f.Z.getChannelId() === e && null != C.Z.isInChannel(e, n) && !f.Z.isUserConnected(n));
@@ -84,9 +84,9 @@ function I(e, n) {
     }, [
         e,
         l
-    ]), r.useEffect(() => (N && null == i.current ? i.current = setTimeout(() => {
-        i.current = null, a(!0);
-    }, 250) : (clearTimeout(i.current), i.current = null, a(!1)), () => {
+    ]), r.useEffect(() => (h && null == i.current ? i.current = setTimeout(() => {
+        i.current = null, o(!0);
+    }, 250) : (clearTimeout(i.current), i.current = null, o(!1)), () => {
         clearTimeout(i.current), i.current = null;
-    }), [N]), t && !u && d && o;
+    }), [h]), t && !u && d && a;
 }

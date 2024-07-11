@@ -10,8 +10,8 @@ function A(e) {
             displayProfile: n,
             user: _,
             guildId: A,
-            channelId: O,
-            friendToken: R,
+            channelId: R,
+            friendToken: O,
             className: U,
             isStreaming: M,
             hasProfileEffect: L,
@@ -23,9 +23,9 @@ function A(e) {
         } = (0, m.Z)({
             user: _,
             size: C
-        }), H = l.useMemo(() => (0, d.W)(_, O), [
+        }), H = l.useMemo(() => (0, d.W)(_, R), [
             _,
-            O
+            R
         ]);
     return (0, s.jsxs)('header', {
         className: U,
@@ -88,7 +88,7 @@ function A(e) {
                                         user: _,
                                         isCurrentUser: B,
                                         relationshipType: b,
-                                        friendToken: R,
+                                        friendToken: O,
                                         onClose: P
                                     }),
                                     B || _.isNonUserBot() ? null : (0, s.jsx)(r.Clickable, {

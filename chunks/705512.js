@@ -1,6 +1,6 @@
-var l, a;
+var l, r;
 t.d(n, {
     o: function () {
         return l;
     }
-}), (a = l || (l = {}))[a.TRENDING_TYPE_UNSPECIFIED = 0] = 'TRENDING_TYPE_UNSPECIFIED', a[a.GLOBAL = 1] = 'GLOBAL';
+}), (r = l || (l = {}))[r.TRENDING_TYPE_UNSPECIFIED = 0] = 'TRENDING_TYPE_UNSPECIFIED', r[r.GLOBAL = 1] = 'GLOBAL';

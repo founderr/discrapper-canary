@@ -6,7 +6,7 @@ t.d(n, {
         return R;
     }
 }), t(653041);
-var l = t(512722), a = t.n(l), r = t(913527), o = t.n(r), i = t(705512), u = t(812206), s = t(55000), c = t(220082), d = t(693824), E = t(690725), _ = t(706454), f = t(594174), T = t(70956), v = t(709054), m = t(561308), N = t(206295), x = t(737583), g = t(438226), h = t(169040), I = t(689938);
+var l = t(512722), r = t.n(l), a = t(913527), o = t.n(a), i = t(705512), u = t(812206), s = t(55000), c = t(220082), d = t(693824), E = t(690725), _ = t(706454), f = t(594174), T = t(70956), v = t(709054), m = t(561308), N = t(206295), x = t(737583), g = t(438226), h = t(169040), I = t(689938);
 let M = (e, n) => ({
         AvatarImage1: e[0],
         ...null != e[1] && { AvatarImage2: e[1] },
@@ -34,10 +34,10 @@ let M = (e, n) => ({
             iconPath: h.Op,
             text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
         });
-        let a = (0, m.dw)(e);
-        if (null != a && t.push({
+        let r = (0, m.dw)(e);
+        if (null != r && t.push({
                 iconPath: h.Z,
-                text: (0, m.GE)(a)
+                text: (0, m.GE)(r)
             }), (0, m.V5)(e) && t.push({
                 iconPath: h.Md,
                 text: (0, m.kr)(e) ? (0, m.z5)(e) : (0, m.nB)(e)
@@ -56,8 +56,8 @@ let M = (e, n) => ({
         let {
                 timestamp: t,
                 colors: l,
-                description: a,
-                entry: r,
+                description: r,
+                entry: a,
                 numAvatars: o
             } = n, i = l.map((e, n) => ({
                 color: e,
@@ -119,13 +119,13 @@ let M = (e, n) => ({
         }), e.setColor('white'), e.setFont({
             size: 16,
             truncate: d.GX.Wrap
-        }), e.drawText(a, {
+        }), e.drawText(r, {
             x: h.Iq,
             y: 64,
             h: 32,
             w: h.kC
         }, !0);
-        let u = A(r, t);
+        let u = A(a, t);
         (0, x.J)({
             canvas: e,
             badges: u,
@@ -137,17 +137,17 @@ let M = (e, n) => ({
                 applicationImageSrc: n,
                 entry: t,
                 avatarSrcs: l,
-                description: a,
-                timestamp: r,
+                description: r,
+                timestamp: a,
                 colors: o,
                 channelId: i
             } = e, u = t.extra.game_name, s = M(l, n);
         return await (0, E.f)({
             assetsToLoad: s,
             drawImage: e => C(e, {
-                timestamp: r,
+                timestamp: a,
                 colors: o,
-                description: a,
+                description: r,
                 entry: t,
                 numAvatars: l.length
             }),
@@ -161,8 +161,8 @@ let M = (e, n) => ({
         });
     };
 async function Z(e, n, t) {
-    let l = e.extra.game_name, r = u.Z.getApplication(e.extra.application_id), o = null == r ? void 0 : r.getIconURL(128), i = f.default.getUser(e.author_id);
-    a()(null != i, 'Author must not be null'), await (0, c.vM)(null != o ? o : '');
+    let l = e.extra.game_name, a = u.Z.getApplication(e.extra.application_id), o = null == a ? void 0 : a.getIconURL(128), i = f.default.getUser(e.author_id);
+    r()(null != i, 'Author must not be null'), await (0, c.vM)(null != o ? o : '');
     let s = [null == i ? void 0 : i.getAvatarURL(n.guild_id, 128)], T = M(s, o), v = _.default.locale, x = (0, m.yh)(e, v), {
             primaryColor: h,
             secondaryColor: I

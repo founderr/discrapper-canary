@@ -3,13 +3,13 @@ t.d(n, {
         return _;
     }
 });
-var l = t(442837), a = t(661869), r = t(543882), o = t(199902), i = t(592125), u = t(496675), s = t(158776), c = t(979651), d = t(561308), E = t(231338);
+var l = t(442837), r = t(661869), a = t(543882), o = t(199902), i = t(592125), u = t(496675), s = t(158776), c = t(979651), d = t(561308), E = t(231338);
 function _(e) {
     let n = (0, l.e7)([
             c.Z,
             i.Z
         ], () => {
-            if (!(0, d.kr)(e) || e.author_type !== a.i.USER)
+            if (!(0, d.kr)(e) || e.author_type !== r.i.USER)
                 return null;
             let n = c.Z.getVoiceStateForUser(e.author_id);
             return i.Z.getChannel(null == n ? void 0 : n.channelId);
@@ -22,13 +22,13 @@ function _(e) {
         } = (0, l.cj)([
             o.Z,
             u.Z,
-            r.Z
+            a.Z
         ], () => {
             let t;
             if (null == n)
                 return {};
             let l = o.Z.getAnyStreamForUser(e.author_id);
-            return null == l ? {} : (u.Z.canBasicChannel(E.S7.CONNECT, n) && (null == l ? void 0 : l.channelId) === n.id && (t = r.Z.getPreviewURL(l.guildId, l.channelId, l.ownerId)), {
+            return null == l ? {} : (u.Z.canBasicChannel(E.S7.CONNECT, n) && (null == l ? void 0 : l.channelId) === n.id && (t = a.Z.getPreviewURL(l.guildId, l.channelId, l.ownerId)), {
                 stream: l,
                 streamPreviewUrl: t
             });

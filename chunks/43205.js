@@ -3,16 +3,16 @@ t.d(n, {
         return c;
     }
 }), t(47120);
-var l = t(735250), a = t(470079), r = t(120356), o = t.n(r), i = t(481060), u = t(410030), s = t(906044);
+var l = t(735250), r = t(470079), a = t(120356), o = t.n(a), i = t(481060), u = t(410030), s = t(906044);
 function c(e) {
     let {
             src: n,
             size: t,
-            constrain: r = 'height',
+            constrain: a = 'height',
             className: c,
             alt: d = 'icon',
             fallbackSrc: E
-        } = e, _ = (0, u.ZP)(), [f, T] = a.useState(!1), [v, m] = a.useState(!1), N = null == E || v;
+        } = e, _ = (0, u.ZP)(), [f, T] = r.useState(!1), [v, m] = r.useState(!1), N = null == E || v;
     if (null == n || f && N)
         return (0, l.jsx)(i.UnknownGameIcon, {
             size: 'custom',
@@ -21,7 +21,7 @@ function c(e) {
             color: 'dark' === _ ? 'white' : 'black',
             className: o()(s.contentImage, c)
         });
-    let x = 'height' === r ? {
+    let x = 'height' === a ? {
         maxWidth: ''.concat(t, 'px'),
         height: ''.concat(t, 'px')
     } : {

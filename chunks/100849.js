@@ -22,7 +22,7 @@ function x(e) {
         } = (0, c.ZP)(), {
             trackUserProfileAction: j,
             ...A
-        } = (0, f.KZ)(), O = {
+        } = (0, f.KZ)(), R = {
             location: {
                 page: m.ZY5.USER_PROFILE,
                 section: m.jXE.PROFILE_MODAL
@@ -40,7 +40,7 @@ function x(e) {
                 showChannelDetails: i === _.Y.SIMPLIFIED_PROFILE,
                 activity: T,
                 actionColor: S.actionColor,
-                analyticsParams: O,
+                analyticsParams: R,
                 showActions: o,
                 onGameProfileOpened: x,
                 onAction: () => {
@@ -64,7 +64,7 @@ function x(e) {
                 className: t()(S.userProfileActivity, i === _.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
                 showChannelDetails: i === _.Y.SIMPLIFIED_PROFILE,
                 actionColor: S.actionColor,
-                analyticsParams: O,
+                analyticsParams: R,
                 showActions: o,
                 onGameProfileOpened: x,
                 onAction: () => {
