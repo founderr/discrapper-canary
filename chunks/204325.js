@@ -73,15 +73,15 @@ class l {
                     dynamicSamplingContext: u && !l ? {} : l
                 },
                 trimEnd: !0
-            }, O = 'function' == typeof r ? r(d) : d, p = void 0 === O ? {
+            }, O = 'function' == typeof r ? r(d) : d, S = void 0 === O ? {
                 ...d,
                 sampled: !1
             } : O;
-        p.metadata = p.name !== d.name ? {
-            ...p.metadata,
+        S.metadata = S.name !== d.name ? {
+            ...S.metadata,
             source: 'custom'
-        } : p.metadata, this._latestRouteName = p.name, this._latestRouteSource = p.metadata && p.metadata.source, !1 === p.sampled && ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.log(`[Tracing] Will not send ${ p.op } transaction because of beforeNavigate.`), ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.log(`[Tracing] Starting ${ p.op } transaction on scope`);
-        let {location: S} = T.m, D = (0, _.l)(e, p, n, a, !0, { location: S }, E), f = e.getScope();
+        } : S.metadata, this._latestRouteName = S.name, this._latestRouteSource = S.metadata && S.metadata.source, !1 === S.sampled && ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.log(`[Tracing] Will not send ${ S.op } transaction because of beforeNavigate.`), ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.log(`[Tracing] Starting ${ S.op } transaction on scope`);
+        let {location: p} = T.m, D = (0, _.l)(e, S, n, a, !0, { location: p }, E), f = e.getScope();
         return s && u ? f.setPropagationContext(N) : f.setPropagationContext({
             traceId: D.traceId,
             spanId: D.spanId,

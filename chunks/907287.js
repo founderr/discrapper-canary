@@ -24,8 +24,8 @@ t.exports = function (t, e, r, a, i, o) {
         A || (A = 'constructor' == R);
     }
     if (l && !A) {
-        var p = t.constructor, S = e.constructor;
-        p != S && 'constructor' in t && 'constructor' in e && !('function' == typeof p && p instanceof p && 'function' == typeof S && S instanceof S) && (l = !1);
+        var S = t.constructor, p = e.constructor;
+        S != p && 'constructor' in t && 'constructor' in e && !('function' == typeof S && S instanceof S && 'function' == typeof p && p instanceof p) && (l = !1);
     }
     return o.delete(t), o.delete(e), l;
 };

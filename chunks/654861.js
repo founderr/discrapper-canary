@@ -116,7 +116,7 @@ var n = function (t) {
             s = Math.floor((_ = t[n] + s) / 10000000), _ %= 10000000, E[n] = _ < 0 ? _ + 10000000 : _;
         return 'number' == typeof (E = I(E)) ? (r && (E = -E), new o(E)) : new i(E, r);
     }
-    function p(t, e) {
+    function S(t, e) {
         var r, n, _, a, i = t.length, o = e.length, E = T(i + o);
         for (_ = 0; _ < i; ++_) {
             a = t[_];
@@ -125,7 +125,7 @@ var n = function (t) {
         }
         return R(E), E;
     }
-    function S(t, e) {
+    function p(t, e) {
         var r, n, _ = t.length, a = Array(_), i = 0;
         for (n = 0; n < _; n++)
             i = Math.floor((r = t[n] * e + i) / 10000000), a[n] = r - 10000000 * i;
@@ -169,7 +169,7 @@ var n = function (t) {
         return new E(this.value >= 0 ? this.value : -this.value);
     };
     function f(t, e, r) {
-        return t < 10000000 ? new i(S(e, t), r) : new i(p(e, c(t)), r);
+        return t < 10000000 ? new i(p(e, t), r) : new i(S(e, c(t)), r);
     }
     function L(t) {
         var e, r, n, _, a = t.length, i = T(a + a);
@@ -191,17 +191,17 @@ var n = function (t) {
             if (-1 === E)
                 return this.negate();
             if ((n = Math.abs(E)) < 10000000)
-                return new i(S(o, n), s);
+                return new i(p(o, n), s);
             E = c(n);
         }
         return (e = o.length, -0.012 * e - 0.012 * (r = E.length) + 0.000015 * e * r > 0) ? new i(function t(e, r) {
             var n = Math.max(e.length, r.length);
             if (n <= 30)
-                return p(e, r);
+                return S(e, r);
             n = Math.ceil(n / 2);
             var _ = e.slice(n), a = e.slice(0, n), i = r.slice(n), o = r.slice(0, n), E = t(a, o), s = t(_, i), c = t(A(a, _), A(o, i)), I = A(A(E, D(d(d(c, E), s), n)), D(s, 2 * n));
             return R(I), I;
-        }(o, E), s) : new i(p(o, E), s);
+        }(o, E), s) : new i(S(o, E), s);
     }, i.prototype.times = i.prototype.multiply, o.prototype._multiplyBySmall = function (t) {
         return s(t.value * this.value) ? new o(t.value * this.value) : f(Math.abs(t.value), c(Math.abs(this.value)), this.sign !== t.sign);
     }, i.prototype._multiplyBySmall = function (t) {
@@ -270,19 +270,19 @@ var n = function (t) {
             }
             A = c(N);
         }
-        var p = g(l, A);
-        if (-1 === p)
+        var S = g(l, A);
+        if (-1 === S)
             return [
                 a[0],
                 t
             ];
-        if (0 === p)
+        if (0 === S)
             return [
                 a[t.sign === s.sign ? 1 : -1],
                 a[0]
             ];
         r = (n = l.length + A.length <= 200 ? function (t, e) {
-            var r, n, _, a, i, o, E, s = t.length, c = e.length, R = T(e.length), u = e[c - 1], l = Math.ceil(10000000 / (2 * u)), A = S(t, l), N = S(e, l);
+            var r, n, _, a, i, o, E, s = t.length, c = e.length, R = T(e.length), u = e[c - 1], l = Math.ceil(10000000 / (2 * u)), A = p(t, l), N = p(e, l);
             for (A.length <= s && A.push(0), N.push(0), u = N[c - 1], n = s - c; n >= 0; n--) {
                 for (r = 10000000 - 1, A[n + c] !== u && (r = Math.floor((10000000 * A[n + c] + A[n + c - 1]) / u)), _ = 0, a = 0, o = N.length, i = 0; i < o; i++)
                     _ += r * N[i], E = Math.floor(_ / 10000000), a += A[n + i] - (_ - 10000000 * E), _ = E, a < 0 ? (A[n + i] = a + 10000000, a = -1) : (A[n + i] = a, a = 0);
@@ -305,7 +305,7 @@ var n = function (t) {
                 }
                 n = c.length, _ = 10000000 * c[n - 1] + c[n - 2], a = 10000000 * e[E - 1] + e[E - 2], n > E && (_ = (_ + 1) * 10000000), r = Math.ceil(_ / a);
                 do {
-                    if (0 >= g(i = S(e, r), c))
+                    if (0 >= g(i = p(e, r), c))
                         break;
                     r--;
                 } while (r);

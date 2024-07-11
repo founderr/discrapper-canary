@@ -33,7 +33,7 @@ function N(t, e) {
                 (function () {
                     if (!('document' in T))
                         return;
-                    let t = d.bind(null, 'dom'), e = S(t, !0);
+                    let t = d.bind(null, 'dom'), e = p(t, !0);
                     T.document.addEventListener('click', e, !1), T.document.addEventListener('keypress', e, !1), [
                         'EventTarget',
                         'Node'
@@ -46,7 +46,7 @@ function N(t, e) {
                                         try {
                                             let n = this.__sentry_instrumentation_handlers__ = this.__sentry_instrumentation_handlers__ || {}, a = n[r] = n[r] || { refCount: 0 };
                                             if (!a.handler) {
-                                                let n = S(t);
+                                                let n = p(t);
                                                 a.handler = n, e.call(this, r, n, _);
                                             }
                                             a.refCount++;
@@ -138,13 +138,13 @@ function N(t, e) {
                                         if (2 === t.length) {
                                             let [e, r] = t;
                                             return {
-                                                url: p(e),
+                                                url: S(e),
                                                 method: O(r, 'method') ? String(r.method).toUpperCase() : 'GET'
                                             };
                                         }
                                         let e = t[0];
                                         return {
-                                            url: p(e),
+                                            url: S(e),
                                             method: O(e, 'method') ? String(e.method).toUpperCase() : 'GET'
                                         };
                                     }(e), _ = {
@@ -242,10 +242,10 @@ Error:`, e);
 function O(t, e) {
     return !!t && 'object' == typeof t && !!t[e];
 }
-function p(t) {
+function S(t) {
     return 'string' == typeof t ? t : t ? O(t, 'url') ? t.url : t.toString ? t.toString() : '' : '';
 }
-function S(t, e = !1) {
+function p(t, e = !1) {
     return r => {
         if (!r || a === r || function (t) {
                 if ('keypress' !== t.type)

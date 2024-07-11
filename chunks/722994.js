@@ -29,9 +29,9 @@ function u(t) {
             traceFetch: T.traceFetch,
             traceXHR: T.traceXHR,
             ...t
-        }, O = 'function' == typeof A ? A : t => !0, p = t => function (t, e) {
+        }, O = 'function' == typeof A ? A : t => !0, S = t => function (t, e) {
             return (0, E.U0)(t, e || R);
-        }(t, o || u), S = {};
+        }(t, o || u), p = {};
     e && (0, i.oq)('fetch', t => {
         let e = function (t, e, r, i) {
             if (!(0, n.z)() || !t.fetchData)
@@ -107,7 +107,7 @@ function u(t) {
                 }(e, T, R, r);
             }
             return N;
-        }(t, O, p, S);
+        }(t, O, S, p);
         d && e && l(e);
     }), r && (0, i.oq)('xhr', t => {
         let e = function (t, e, r, o) {
@@ -147,7 +147,7 @@ function u(t) {
                 }
             }
             return A;
-        }(t, O, p, S);
+        }(t, O, S, p);
         d && e && l(e);
     });
 }

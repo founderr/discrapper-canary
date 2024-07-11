@@ -3,7 +3,7 @@ n.d(t, {
         return F;
     }
 });
-var l = n(735250), a = n(470079), i = n(120356), s = n.n(i), r = n(913527), c = n.n(r), o = n(91192), u = n(442837), d = n(481060), _ = n(700582), E = n(724757), h = n(212819), f = n(933557), S = n(266076), g = n(448486), I = n(987509), A = n(592125), p = n(430824), m = n(158776), b = n(306680), C = n(699516), L = n(594174), N = n(104175), T = n(55935), Z = n(823379), y = n(51144), x = n(784384), v = n(490897), R = n(803519);
+var l = n(735250), a = n(470079), i = n(120356), s = n.n(i), r = n(913527), c = n.n(r), o = n(91192), u = n(442837), d = n(481060), _ = n(700582), f = n(724757), E = n(212819), h = n(933557), S = n(266076), g = n(448486), I = n(987509), A = n(592125), p = n(430824), m = n(158776), C = n(306680), b = n(699516), L = n(594174), N = n(104175), T = n(55935), Z = n(823379), y = n(51144), x = n(784384), v = n(490897), R = n(803519);
 function M(e) {
     let {
             destination: t,
@@ -13,9 +13,9 @@ function M(e) {
             selected: c,
             disabled: u,
             onPressDestination: _,
-            'aria-setsize': E,
-            'aria-posinset': h
-        } = e, f = a.useCallback(() => {
+            'aria-setsize': f,
+            'aria-posinset': E
+        } = e, h = a.useCallback(() => {
             null == _ || _(t);
         }, [
             _,
@@ -23,10 +23,10 @@ function M(e) {
         ]), S = (0, o.JA)(t.id);
     return (0, l.jsxs)(d.Clickable, {
         className: s()(R.destinationRow, { [R.disabled]: u }),
-        onClick: u ? void 0 : f,
+        onClick: u ? void 0 : h,
         'aria-selected': c,
-        'aria-setsize': E,
-        'aria-posinset': h,
+        'aria-setsize': f,
+        'aria-posinset': E,
         ...S,
         children: [
             (0, l.jsxs)('div', {
@@ -66,12 +66,12 @@ function M(e) {
         ]
     });
 }
-function D(e) {
+function P(e) {
     let {
             user: t,
             subLabel: n,
             ...a
-        } = e, i = y.ZP.useName(t), s = y.ZP.useUserTag(t, { decoration: 'never' }), r = (0, u.e7)([C.Z], () => C.Z.getNickname(t.id)), c = (0, u.e7)([m.Z], () => m.Z.getStatus(t.id));
+        } = e, i = y.ZP.useName(t), s = y.ZP.useUserTag(t, { decoration: 'never' }), r = (0, u.e7)([b.Z], () => b.Z.getNickname(t.id)), c = (0, u.e7)([m.Z], () => m.Z.getStatus(t.id));
     return (0, l.jsx)(M, {
         ...a,
         icon: (0, l.jsx)(_.Z, {
@@ -84,12 +84,12 @@ function D(e) {
         subLabel: null != n ? n : s
     });
 }
-function P(e) {
+function D(e) {
     let {
             channel: t,
             subLabel: n,
             ...a
-        } = e, i = (0, f.ZP)(t), s = (0, g._)(t);
+        } = e, i = (0, h.ZP)(t), s = (0, g._)(t);
     return (0, l.jsx)(M, {
         ...a,
         icon: (0, l.jsx)(S.Z, {
@@ -107,14 +107,14 @@ function O(e) {
             channel: t,
             subLabel: n,
             ...a
-        } = e, i = (0, u.e7)([p.Z], () => p.Z.getGuild(null == t ? void 0 : t.guild_id)), s = (0, f.ZP)(t), r = (0, u.e7)([
+        } = e, i = (0, u.e7)([p.Z], () => p.Z.getGuild(null == t ? void 0 : t.guild_id)), s = (0, h.ZP)(t), r = (0, u.e7)([
             A.Z,
             L.default,
-            C.Z
+            b.Z
         ], () => {
             let e = A.Z.getChannel(t.parent_id);
-            return null == e ? null : (0, f.F6)(e, L.default, C.Z, !1);
-        }), o = (0, u.e7)([b.ZP], () => b.ZP.lastMessageTimestamp(t.id, v.W.CHANNEL)), _ = null == i ? void 0 : i.name;
+            return null == e ? null : (0, h.F6)(e, L.default, b.Z, !1);
+        }), o = (0, u.e7)([C.ZP], () => C.ZP.lastMessageTimestamp(t.id, v.W.CHANNEL)), _ = null == i ? void 0 : i.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? d.ForumIcon : d.TextIcon;
         _ = (0, l.jsxs)('div', {
@@ -168,7 +168,7 @@ function F(e) {
             handleToggleDestination: r,
             disableSelection: c,
             ...u
-        } = e, _ = a.useMemo(() => [t.length], [t.length]), f = a.useCallback(() => 48, []), S = a.useMemo(() => {
+        } = e, _ = a.useMemo(() => [t.length], [t.length]), h = a.useCallback(() => 48, []), S = a.useMemo(() => {
             var e;
             return null !== (e = null == s ? void 0 : s.map(I.hC)) && void 0 !== e ? e : [];
         }, [s]), g = a.useCallback(e => {
@@ -182,35 +182,35 @@ function F(e) {
                 type: o,
                 record: u
             } = t[s];
-            if (o === h.h8.HEADER)
+            if (o === E.h8.HEADER)
                 return;
-            let d = o === h.h8.USER ? {
+            let d = o === E.h8.USER ? {
                     type: 'user',
                     id: u.id
                 } : {
                     type: 'channel',
                     id: u.id
-                }, _ = (0, I.hC)(d), E = (0, x.H)(n, i, u), f = S.includes(_), g = {
+                }, _ = (0, I.hC)(d), f = (0, x.H)(n, i, u), h = S.includes(_), g = {
                     key: _,
                     destination: d,
-                    subLabel: null != E ? E.label : void 0,
-                    disabled: c && !f || null != E,
-                    selected: f,
+                    subLabel: null != f ? f.label : void 0,
+                    disabled: c && !h || null != f,
+                    selected: h,
                     onPressDestination: r,
                     'aria-posinset': s + 1,
                     'aria-setsize': t.length
                 };
-            if (o === h.h8.USER)
-                return (0, l.jsx)(D, {
+            if (o === E.h8.USER)
+                return (0, l.jsx)(P, {
                     user: u,
                     ...g
                 });
-            if (o === h.h8.GROUP_DM)
-                return (0, l.jsx)(P, {
+            if (o === E.h8.GROUP_DM)
+                return (0, l.jsx)(D, {
                     channel: u,
                     ...g
                 });
-            if (o === h.h8.TEXT_CHANNEL || o === h.h8.VOICE_CHANNEL)
+            if (o === E.h8.TEXT_CHANNEL || o === E.h8.VOICE_CHANNEL)
                 return (0, l.jsx)(O, {
                     channel: u,
                     ...g
@@ -224,7 +224,7 @@ function F(e) {
             i,
             t,
             S
-        ]), A = a.useRef(null), p = (0, E.Z)('forward-modal', A);
+        ]), A = a.useRef(null), p = (0, f.Z)('forward-modal', A);
     return (0, l.jsx)(o.bG, {
         navigator: p,
         children: (0, l.jsx)(o.SJ, {
@@ -243,7 +243,7 @@ function F(e) {
                     sections: _,
                     sectionHeight: 0,
                     renderRow: g,
-                    rowHeight: f
+                    rowHeight: h
                 });
             }
         })

@@ -1,6 +1,6 @@
 var l = n(735250), a = n(470079), i = n(120356), s = n.n(i), r = n(974674), c = n(438784), o = n(481060), u = n(806519), d = n(525049), _ = n(345390);
-let E = {}, h = 1 / 4;
-function f(e) {
+let f = {}, E = 1 / 4;
+function h(e) {
     let {
         height: t,
         fillColor: n
@@ -17,7 +17,7 @@ function f(e) {
         },
         children: (0, l.jsx)(c.b, {
             className: _.dots,
-            dotRadius: t * h
+            dotRadius: t * E
         })
     });
 }
@@ -33,7 +33,7 @@ function S(e) {
             top: n.y,
             left: n.x
         },
-        children: (0, l.jsx)(f, {
+        children: (0, l.jsx)(h, {
             height: n.height,
             fillColor: i
         })
@@ -111,14 +111,14 @@ t.Z = function (e) {
     var t, n, i;
     let {
             backSrc: c,
-            frontSrc: h,
-            size: f,
+            frontSrc: E,
+            size: h,
             isTyping: A,
             status: p,
             style: m,
-            className: b,
-            ...C
-        } = e, {size: L} = o.AvatarSizeSpecs[f], {
+            className: C,
+            ...b
+        } = e, {size: L} = o.AvatarSizeSpecs[h], {
             statusCoords: N,
             frontAvatarOffsetPx: T,
             frontAvatarSizePx: Z,
@@ -126,7 +126,7 @@ t.Z = function (e) {
         } = a.useMemo(() => {
             var e;
             let t = ''.concat(L, '-').concat(A);
-            return null !== (e = E[t]) && void 0 !== e ? e : function (e, t, n) {
+            return null !== (e = f[t]) && void 0 !== e ? e : function (e, t, n) {
                 let l = o.AvatarSizeSpecs[e], a = l.size / (d.z3 + d.o), i = a * d.z3, s = a * d.o, c = {
                         statusCoords: (0, r.Vq)(l, o.StatusTypes.ONLINE, !1, t),
                         frontAvatarSizePx: i,
@@ -134,23 +134,23 @@ t.Z = function (e) {
                         frontAvatarOffsetPx: s,
                         frontAvatarCenter: s + i / 2
                     };
-                return E[n] = c, c;
-            }(f, A, t);
+                return f[n] = c, c;
+            }(h, A, t);
         }, [
             L,
             A,
-            f
+            h
         ]);
-    let x = (t = null != p, n = A, i = f, n ? I[i].typing : t ? I[i].status : I[i].default);
+    let x = (t = null != p, n = A, i = h, n ? I[i].typing : t ? I[i].status : I[i].default);
     return (0, l.jsxs)('div', {
         style: {
             width: L,
             height: L,
             ...m
         },
-        'aria-label': C['aria-label'],
-        'aria-hidden': C['aria-hidden'],
-        className: s()(_.container, b),
+        'aria-label': b['aria-label'],
+        'aria-hidden': b['aria-hidden'],
+        className: s()(_.container, C),
         children: [
             (0, l.jsxs)(u.ZP, {
                 mask: x,
@@ -170,7 +170,7 @@ t.Z = function (e) {
                             left: T
                         },
                         children: (0, l.jsx)(g, {
-                            src: h,
+                            src: E,
                             size: Z,
                             isTyping: A,
                             status: p

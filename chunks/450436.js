@@ -1,6 +1,6 @@
 r.d(e, {
     AJ: function () {
-        return S;
+        return p;
     },
     M$: function () {
         return C;
@@ -9,7 +9,7 @@ r.d(e, {
         return f;
     },
     db: function () {
-        return p;
+        return S;
     },
     nm: function () {
         return L;
@@ -33,7 +33,7 @@ if ('object' == typeof (n = O) && null !== n && 'getHighEntropyValues' in n)
             A = `${ e.brand } ${ e.version }`;
         }
     }).catch(t => void 0);
-function p(t, e) {
+function S(t, e) {
     if (!e.length)
         return t;
     for (let r of e)
@@ -43,7 +43,7 @@ function p(t, e) {
         ]);
     return t;
 }
-function S(t) {
+function p(t) {
     let e = [];
     return (0, s.gv)(t, (t, r) => {
         if ('transaction' === r)
@@ -109,7 +109,7 @@ function L(t, e, r) {
                     }
                     return n;
                 }(t);
-            }(e), O = 'number' == typeof t.start_timestamp ? 1000 * t.start_timestamp : Date.now(), p = 'number' == typeof t.timestamp ? 1000 * t.timestamp : Date.now();
+            }(e), O = 'number' == typeof t.start_timestamp ? 1000 * t.start_timestamp : Date.now(), S = 'number' == typeof t.timestamp ? 1000 * t.timestamp : Date.now();
         return {
             event_id: r,
             timestamp: new Date(O).toISOString(),
@@ -182,7 +182,7 @@ function L(t, e, r) {
                     trace_id: n,
                     active_thread_id: R,
                     relative_start_ns: '0',
-                    relative_end_ns: ((p - O) * 1000000).toFixed(0)
+                    relative_end_ns: ((S - O) * 1000000).toFixed(0)
                 }]
         };
     }(r, e, t) : null;

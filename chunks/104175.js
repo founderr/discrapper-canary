@@ -20,22 +20,22 @@ t.Z = function (e) {
     var t, n, l;
     let {
         className: i,
-        iconClassName: E,
-        size: h,
-        channel: f,
+        iconClassName: f,
+        size: E,
+        channel: h,
         guild: S,
         locked: g,
         hasActiveThreads: I
     } = e;
     if (null == S)
         return null;
-    let A = S.getIconURL(48), p = _[h], m = d[h], b = (0, c.KS)(f, S, {
+    let A = S.getIconURL(48), p = _[E], m = d[E], C = (0, c.KS)(h, S, {
             locked: g,
             hasActiveThreads: I
         });
-    if (null == b)
+    if (null == C)
         return null;
-    let C = (0, r.Zg)(null !== (t = null == S ? void 0 : S.toString()) && void 0 !== t ? t : null);
+    let b = (0, r.Zg)(null !== (t = null == S ? void 0 : S.toString()) && void 0 !== t ? t : null);
     return (0, a.jsxs)('div', {
         role: 'img',
         className: i,
@@ -53,15 +53,15 @@ t.Z = function (e) {
                 }) : (0, a.jsx)('div', {
                     className: s()(u.channelGuildIcon, u.acronym),
                     style: {
-                        fontSize: (n = p, (l = C).length - 1 > n.length ? n[n.length - 1] : n[l.length - 1]),
+                        fontSize: (n = p, (l = b).length - 1 > n.length ? n[n.length - 1] : n[l.length - 1]),
                         width: m,
                         height: m
                     },
-                    children: C
+                    children: b
                 })
             }),
-            (0, a.jsx)(b, {
-                className: s()(u.icon, u.iconWithGuildIcon, E),
+            (0, a.jsx)(C, {
+                className: s()(u.icon, u.iconWithGuildIcon, f),
                 color: 'currentColor'
             })
         ]

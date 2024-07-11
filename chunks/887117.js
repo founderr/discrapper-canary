@@ -1,6 +1,6 @@
 r.r(e), r.d(e, {
     Breadcrumbs: function () {
-        return S.O;
+        return p.O;
     },
     BrowserClient: function () {
         return i.R;
@@ -48,7 +48,7 @@ r.r(e), r.d(e, {
         return _.sX;
     },
     TryCatch: function () {
-        return p.p;
+        return S.p;
     },
     WINDOW: function () {
         return a.m9;
@@ -204,7 +204,7 @@ r.r(e), r.d(e, {
         return R.re;
     }
 });
-var n = r(89837), _ = r(91320), a = r(643487), i = r(903204), o = r(393746), E = r(975927), s = r(202406), c = r(590171), I = r(184612), R = r(846297), T = r(53383), u = r(438142), l = r(752875), A = r(490753), N = r(65534), d = r(643714), O = r(297280), p = r(382078), S = r(124969), D = r(140735), f = r(612568), L = r(683900);
+var n = r(89837), _ = r(91320), a = r(643487), i = r(903204), o = r(393746), E = r(975927), s = r(202406), c = r(590171), I = r(184612), R = r(846297), T = r(53383), u = r(438142), l = r(752875), A = r(490753), N = r(65534), d = r(643714), O = r(297280), S = r(382078), p = r(124969), D = r(140735), f = r(612568), L = r(683900);
 let h = {};
 a.m9.Sentry && a.m9.Sentry.Integrations && (h = a.m9.Sentry.Integrations);
 let C = {

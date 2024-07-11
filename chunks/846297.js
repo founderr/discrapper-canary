@@ -30,7 +30,7 @@ r.d(e, {
         return G;
     }
 });
-var n = r(344106), _ = r(740054), a = r(595208), i = r(110575), o = r(876122), E = r(507506), s = r(432038), c = r(698892), I = r(529866), R = r(880803), T = r(793884), u = r(903204), l = r(643487), A = r(297280), N = r(382078), d = r(124969), O = r(140735), p = r(612568), S = r(683900), D = r(202406), f = r(393746), L = r(975927);
+var n = r(344106), _ = r(740054), a = r(595208), i = r(110575), o = r(876122), E = r(507506), s = r(432038), c = r(698892), I = r(529866), R = r(880803), T = r(793884), u = r(903204), l = r(643487), A = r(297280), N = r(382078), d = r(124969), O = r(140735), S = r(612568), p = r(683900), D = r(202406), f = r(393746), L = r(975927);
 let h = [
     new n.QD(),
     new _.c(),
@@ -38,8 +38,8 @@ let h = [
     new d.O(),
     new A.d(),
     new O.i(),
-    new S.I(),
-    new p.q()
+    new p.I(),
+    new S.q()
 ];
 function C(t = {}) {
     void 0 === t.defaultIntegrations && (t.defaultIntegrations = h), void 0 === t.release && ('string' == typeof __SENTRY_RELEASE__ && (t.release = __SENTRY_RELEASE__), l.m9.SENTRY_RELEASE && l.m9.SENTRY_RELEASE.id && (t.release = l.m9.SENTRY_RELEASE.id)), void 0 === t.autoSessionTracking && (t.autoSessionTracking = !0), void 0 === t.sendClientReports && (t.sendClientReports = !0);

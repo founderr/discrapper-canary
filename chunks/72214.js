@@ -1,16 +1,16 @@
 n.d(t, {
     s: function () {
-        return E;
+        return f;
     }
 }), n(47120);
 var l = n(470079), a = n(442837), i = n(38618), s = n(51596), r = n(516373), c = n(314897), o = n(580005), u = n(987509), d = n(601565), _ = n(41837);
-function E(e) {
+function f(e) {
     let {
             searchText: t,
             targetDestination: n,
-            selectedDestinations: E,
-            originDestination: h,
-            includeMissingDMs: f = !1
+            selectedDestinations: f,
+            originDestination: E,
+            includeMissingDMs: h = !1
         } = e, S = (0, a.e7)([c.default], () => c.default.getId()), g = l.useMemo(() => ({
             searchOptions: {
                 blacklist: new Set(['user:'.concat(S)]),
@@ -31,7 +31,7 @@ function E(e) {
                 queryMode: a,
                 resultTypes: l
             };
-        }(t), [t]), {queryMode: b} = m, [C, L] = l.useState(null != E ? E : []);
+        }(t), [t]), {queryMode: C} = m, [b, L] = l.useState(null != f ? f : []);
     l.useLayoutEffect(() => {
         let {
             query: e,
@@ -40,7 +40,7 @@ function E(e) {
         I({
             query: e,
             resultTypes: t
-        }), L(null != E ? E : []);
+        }), L(null != f ? f : []);
     }, [
         I,
         m
@@ -49,24 +49,24 @@ function E(e) {
     return l.useMemo(() => (0, u.ZP)({
         results: p,
         hasQuery: Z,
-        queryMode: b,
+        queryMode: C,
         targetDestination: n,
         frequentChannels: N,
-        selectedDestinations: E,
-        pinnedDestinations: C,
-        originDestination: h,
-        includeMissingDMs: f,
+        selectedDestinations: f,
+        pinnedDestinations: b,
+        originDestination: E,
+        includeMissingDMs: h,
         isConnected: T
     }), [
         p,
         Z,
-        b,
+        C,
         n,
         N,
-        E,
-        C,
-        h,
         f,
+        b,
+        E,
+        h,
         T
     ]);
 }

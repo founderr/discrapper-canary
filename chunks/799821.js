@@ -1,10 +1,10 @@
 let n, _;
 r.d(e, {
     Fv: function () {
-        return S;
+        return p;
     },
     PR: function () {
-        return p;
+        return S;
     },
     f7: function () {
         return f;
@@ -21,7 +21,7 @@ function N() {
     return s.m && s.m.addEventListener && s.m.performance;
 }
 let d = 0, O = {};
-function p() {
+function S() {
     let t = N();
     if (t && i.Z1) {
         t.mark && s.m.performance.mark('sentry-tracing-init'), function () {
@@ -64,7 +64,7 @@ function p() {
     }
     return () => void 0;
 }
-function S() {
+function p() {
     (0, u.N)('longtask', t => {
         for (let e of t) {
             let t = (0, a.x1)();

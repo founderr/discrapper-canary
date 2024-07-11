@@ -4,8 +4,8 @@ let U = o.forwardRef(function (e, t) {
     let {
             className: E,
             isExpanded: U,
-            isExpansionAnimationComplete: Z,
-            onCtxMenuOpen: q,
+            isExpansionAnimationComplete: q,
+            onCtxMenuOpen: Z,
             onCtxMenuClose: P,
             onCtxMenuSelect: k,
             quest: L,
@@ -27,7 +27,7 @@ let U = o.forwardRef(function (e, t) {
                 content: _.jn.QUEST_BAR,
                 ctaContent: m.jZ.OPEN_GAME_LINK
             });
-        }, [L]), J = H.features.has(b.S7.POST_ENROLLMENT_CTA), $ = (0, C.Rf)(L), ee = (0, C.Jf)(L), et = null != ee ? ee.progress > 0 : $.progressSeconds > 0, en = (null === (n = L.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, es = (null === (r = L.userStatus) || void 0 === r ? void 0 : r.completedAt) != null, eo = o.useMemo(() => (0, h.Xv)(L.config), [L.config]), er = U && Z, ea = (0, h.ph)(L), ei = (0, h.pG)({
+        }, [L]), J = H.features.has(b.S7.POST_ENROLLMENT_CTA), $ = (0, C.Rf)(L), ee = (0, C.Jf)(L), et = null != ee ? ee.progress > 0 : $.progressSeconds > 0, en = (null === (n = L.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, es = (null === (r = L.userStatus) || void 0 === r ? void 0 : r.completedAt) != null, eo = o.useMemo(() => (0, h.Xv)(L.config), [L.config]), er = U && q, ea = (0, h.ph)(L), ei = (0, h.pG)({
             quest: L,
             taskDetails: $,
             thirdPartyTaskDetails: null != ee ? ee : void 0
@@ -84,7 +84,7 @@ let U = o.forwardRef(function (e, t) {
                             ]
                         }),
                         (0, s.jsx)(j.r, {
-                            onOpen: q,
+                            onOpen: Z,
                             onClose: P,
                             onSelect: k,
                             questContent: _.jn.QUEST_BAR,
@@ -132,7 +132,7 @@ let U = o.forwardRef(function (e, t) {
                             children: [
                                 (0, s.jsx)(N.Z, { color: 'always-white' }),
                                 (0, s.jsx)(j.r, {
-                                    onOpen: q,
+                                    onOpen: Z,
                                     onClose: P,
                                     onSelect: k,
                                     questContent: _.jn.QUEST_BAR,
