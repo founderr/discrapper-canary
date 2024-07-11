@@ -6,36 +6,49 @@ t.d(n, {
 var i = t(470079), l = t(442837), r = t(607070);
 function a(e) {
     let {
-            isExpanded: n,
-            durationMs: t = 100
-        } = e, a = (0, l.e7)([r.Z], () => r.Z.useReducedMotion), [s, o] = i.useState(null), c = i.useCallback(() => {
-        }, []), u = i.useRef(), d = i.useRef(), [m, p] = i.useState(!1), _ = i.useCallback(() => p(!1), []);
+            key: n,
+            isExpanded: t,
+            durationMs: a = 100,
+            maxAnimationHeight: s
+        } = e, o = (0, l.e7)([r.Z], () => r.Z.useReducedMotion), [c, u] = i.useState(null), d = i.useCallback(() => {
+        }, []), m = i.useRef(), p = i.useRef(), _ = i.useRef(n), E = i.useRef(a);
+    E.current = a;
+    let h = i.useRef(s);
+    h.current = s;
+    let [A, f] = i.useState(!1), N = i.useCallback(() => f(!1), []);
     return i.useLayoutEffect(() => {
-        if (null == s)
+        void 0 !== n && (m.current = void 0, p.current = void 0, f(!1));
+    }, [n]), i.useLayoutEffect(() => {
+        var e;
+        if (null == c)
             return;
-        let {height: e} = s.getBoundingClientRect();
-        !n && (null == u.current || e < u.current) && (u.current = e), n && (null == d.current || e > d.current) && (d.current = e);
-        let i = n ? u.current : d.current, l = n ? d.current : u.current;
-        if (null == i || null == l)
+        let {height: i} = c.getBoundingClientRect();
+        !t && (null == m.current || i < m.current) && (m.current = i), t && (null == p.current || i > p.current) && (p.current = i);
+        let l = m.current, r = p.current, a = _.current !== n;
+        if (_.current = n, null == l || null == r || a)
             return;
-        p(!0), s.style.height = ''.concat(i, 'px'), s.style.transition = '';
-        let r = null;
-        return r = requestAnimationFrame(() => {
-            r = null, s.style.height = ''.concat(l, 'px'), s.style.transition = 'height '.concat(t, 'ms ease-in-out');
-        }), () => null != r ? cancelAnimationFrame(r) : void 0;
+        let s = Math.min(null !== (e = h.current) && void 0 !== e ? e : r, r), o = t ? l : s, u = t ? s : l;
+        if (!(o !== u))
+            return;
+        f(!0), c.style.height = ''.concat(o, 'px'), c.style.transition = '';
+        let d = null;
+        return d = requestAnimationFrame(() => {
+            d = null, c.style.height = ''.concat(u, 'px'), c.style.transition = 'height '.concat(E.current, 'ms ease-in-out');
+        }), () => null != d ? cancelAnimationFrame(d) : void 0;
     }, [
-        s,
         n,
+        c,
         t
-    ]), i.useEffect(() => {
-        if (null != s && !m)
-            s.style.height = '', s.style.transition = '';
+    ]), i.useLayoutEffect(() => {
+        if (null != c && !A)
+            c.style.height = '', c.style.transition = '';
     }, [
-        s,
-        m
+        n,
+        c,
+        A
     ]), {
-        ref: a ? c : o,
-        isTransitioning: m,
-        onTransitionEnd: _
+        ref: o ? d : u,
+        isTransitioning: A,
+        onTransitionEnd: N
     };
 }
