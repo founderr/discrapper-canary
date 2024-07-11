@@ -151,7 +151,8 @@ class z extends (r = c.ZP.Store) {
             allowEmptySections: n.allowEmptySections,
             contextState: r,
             userState: i,
-            applicationStates: o,
+            applicationStates: n.allowApplicationState ? o : new Map(),
+            sortOptions: n.sortOptions,
             singleApplicationId: n.applicationId
         });
         return c.loading = c.loading || u, c;
@@ -481,7 +482,20 @@ let ee = Object.freeze({
 });
 function et(e, t, n) {
     let r = (0, D.Hs)(e, t.commandType), i = !1 !== t.applicationCommands, a = Q(e, i, n.allowFetch), s = $(i, n.allowFetch), l = (0, c.e7)([q], () => q.getApplicationStates()), u = (0, c.e7)([q], () => q.applicationIndicesVersion);
-    return o.useMemo(() => en({
+    return !function (e, t) {
+        let [n, r] = o.useState(!0), i = (0, c.e7)([q], () => q.getApplicationState(e));
+        o.useEffect(() => {
+            n && (t && ea(i) && null != e && (0, O.j)({
+                type: 'application',
+                applicationId: e
+            }), r(!1));
+        }, [
+            t,
+            e,
+            i,
+            n
+        ]);
+    }(n.applicationId, n.allowFetch), o.useMemo(() => en({
         permissionContext: r,
         text: t.text,
         allowApplicationCommands: i,
