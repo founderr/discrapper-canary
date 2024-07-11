@@ -17522,6 +17522,7 @@ e.exports = Object.freeze({
     MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME: '{userName} played **{gameName}**',
     MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME: '{userName} is playing a new game: **{gameName}**',
     MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME: '{userName} played a new game: **{gameName}**',
+    MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MONTHS_AGO: '{count}mo ago',
     MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: '{count}w ago',
     MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: '{count}d ago',
     MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: '{count}h ago',
