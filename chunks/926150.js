@@ -13,7 +13,7 @@ function A(e) {
             channel: A,
             isHovering: M,
             onOpenProfile: b
-        } = e, {improvedPanelFriendingEnabled: R} = (0, c.O)({ location: 'SimplifiedProfilePanelBody' }), {activeInviteToCallCtaEnabled: j} = (0, o.l)({ location: 'BiteSizeProfileDirectMessageSection' }), L = (0, a.e7)([s.Z], () => s.Z.getRelationshipType(t.id)), P = (0, a.e7)([l.Z], () => l.Z.hidePersonalInformation), O = (0, a.e7)([d.Z], () => {
+        } = e, {improvedPanelFriendingEnabled: R} = (0, c.O)({ location: 'SimplifiedProfilePanelBody' }), {activeInviteToCallCtaEnabled: j} = (0, o.l)({ location: 'SimplifiedProfilePanelBody' }), L = (0, a.e7)([s.Z], () => s.Z.getRelationshipType(t.id)), P = (0, a.e7)([l.Z], () => l.Z.hidePersonalInformation), O = (0, a.e7)([d.Z], () => {
             var e;
             return null === (e = d.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         });

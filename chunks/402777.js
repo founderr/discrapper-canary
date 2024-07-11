@@ -1,94 +1,95 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return R;
     }
 });
-var i = n(735250), a = n(470079), s = n(597312), l = n(727637), r = n(410030), o = n(100527), c = n(906732), d = n(680295), u = n(785717), h = n(318661), p = n(78675), m = n(899007), _ = n(438163), f = n(502762), E = n(256059), C = n(437758), g = n(544989), I = n(481932), x = n(272510), T = n(171368), v = n(926150), N = n(308829), S = n(940885), Z = n(625015), A = n(228168), M = n(642402);
-function b(e) {
+var i = n(735250), a = n(470079), s = n(597312), l = n(727637), r = n(410030), o = n(100527), c = n(906732), d = n(680295), u = n(317179), h = n(785717), p = n(318661), m = n(78675), _ = n(899007), f = n(438163), E = n(502762), C = n(256059), g = n(437758), I = n(544989), x = n(481932), T = n(272510), v = n(171368), N = n(926150), S = n(308829), Z = n(940885), A = n(625015), M = n(228168), b = n(642402);
+function R(e) {
     let {
             user: t,
             channel: n
-        } = e, b = __OVERLAY__, {analyticsLocations: R} = (0, c.ZP)(o.Z.PROFILE_PANEL), j = (0, h.ZP)(t.id), L = (0, r.ZP)(), P = a.useRef(null), O = (0, l.Z)(P), y = e => {
-            (0, T.openUserProfileModal)({
-                sourceAnalyticsLocations: R,
+        } = e, R = __OVERLAY__, {analyticsLocations: j} = (0, c.ZP)(o.Z.PROFILE_PANEL), L = (0, p.ZP)(t.id), P = (0, r.ZP)(), {statusReactReplyEnabled: O} = (0, u.t)({ location: 'SimplifiedProfilePanel' }), y = a.useRef(null), D = (0, l.Z)(y), k = e => {
+            (0, v.openUserProfileModal)({
+                sourceAnalyticsLocations: j,
                 userId: t.id,
                 channelId: n.id,
                 ...e
             });
         };
     return (0, i.jsx)(c.Gt, {
-        value: R,
-        children: (0, i.jsx)(u.Mt, {
+        value: j,
+        children: (0, i.jsx)(h.Mt, {
             layout: 'SIMPLIFIED_DM_PANEL',
             userId: t.id,
             channelId: n.id,
-            children: (0, i.jsxs)(f.Z, {
-                ref: P,
+            children: (0, i.jsxs)(E.Z, {
+                ref: y,
                 user: t,
-                displayProfile: j,
-                profileType: A.y0.PANEL,
-                themeOverride: L,
-                className: M.container,
+                displayProfile: L,
+                profileType: M.y0.PANEL,
+                themeOverride: P,
+                className: b.container,
                 children: [
                     (0, i.jsxs)(s.u2, {
                         children: [
-                            (0, i.jsxs)(g.Z, {
-                                profileType: A.y0.PANEL,
+                            (0, i.jsxs)(I.Z, {
+                                profileType: M.y0.PANEL,
                                 children: [
-                                    (0, i.jsx)(I.Z, {
+                                    (0, i.jsx)(x.Z, {
                                         user: t,
-                                        profileType: A.y0.PANEL
+                                        profileType: M.y0.PANEL
                                     }),
-                                    t.bot ? (0, i.jsx)(C.Z, { user: t }) : (0, i.jsx)(x.Z, { user: t })
+                                    t.bot ? (0, i.jsx)(g.Z, { user: t }) : (0, i.jsx)(T.Z, { user: t })
                                 ]
                             }),
                             (0, i.jsxs)('header', {
-                                className: M.header,
+                                className: b.header,
                                 children: [
-                                    (0, i.jsx)(p.Z, {
-                                        user: t,
-                                        displayProfile: j,
-                                        profileType: A.y0.PANEL,
-                                        animateOnHover: !O
-                                    }),
                                     (0, i.jsx)(m.Z, {
                                         user: t,
-                                        displayProfile: j,
-                                        channelId: n.id,
-                                        profileType: A.y0.PANEL,
-                                        onOpenProfile: b ? void 0 : y
+                                        displayProfile: L,
+                                        profileType: M.y0.PANEL,
+                                        animateOnHover: !D
                                     }),
                                     (0, i.jsx)(_.Z, {
                                         user: t,
-                                        profileType: A.y0.PANEL
+                                        displayProfile: L,
+                                        channelId: n.id,
+                                        profileType: M.y0.PANEL,
+                                        onOpenProfile: R ? void 0 : k
                                     }),
-                                    (0, i.jsx)(E.Z, { user: t })
+                                    (0, i.jsx)(f.Z, {
+                                        user: t,
+                                        profileType: M.y0.PANEL,
+                                        reactReplyEnabled: O
+                                    }),
+                                    (0, i.jsx)(C.Z, { user: t })
                                 ]
                             }),
-                            (0, i.jsx)(v.Z, {
+                            (0, i.jsx)(N.Z, {
                                 user: t,
-                                displayProfile: j,
+                                displayProfile: L,
                                 channel: n,
-                                isHovering: O,
-                                onOpenProfile: b ? void 0 : y
-                            }),
-                            (0, i.jsx)(S.Z, {
-                                user: t,
-                                channelId: n.id
+                                isHovering: D,
+                                onOpenProfile: R ? void 0 : k
                             }),
                             (0, i.jsx)(Z.Z, {
                                 user: t,
-                                displayProfile: j
+                                channelId: n.id
+                            }),
+                            (0, i.jsx)(A.Z, {
+                                user: t,
+                                displayProfile: L
                             })
                         ]
                     }),
-                    (0, i.jsx)(N.Z, {
+                    (0, i.jsx)(S.Z, {
                         user: t,
                         channelId: n.id
                     }),
-                    (null == j ? void 0 : j.profileEffectId) != null && (0, i.jsx)(d.Z, {
-                        profileEffectId: null == j ? void 0 : j.profileEffectId,
-                        isHovering: O
+                    (null == L ? void 0 : L.profileEffectId) != null && (0, i.jsx)(d.Z, {
+                        profileEffectId: null == L ? void 0 : L.profileEffectId,
+                        isHovering: D
                     })
                 ]
             })
