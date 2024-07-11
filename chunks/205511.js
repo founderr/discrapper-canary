@@ -135,14 +135,17 @@ function v(e) {
     });
 }
 t.Z = function (e) {
-    let {quest: t} = e, n = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), r = (0, x.Rf)(t), a = (0, x.z6)(), {
+    let {
+            quest: t,
+            taskDetails: n
+        } = e, r = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), a = (0, x.z6)(), {
             steps: d,
             hasConnectedAccounts: u,
             isProgressingQuestForLaunchedGame: p,
             isQuestComplete: m
         } = o.useMemo(() => {
             var e;
-            let n = a.xboxAndPlaystationAccounts.length > 0, o = n && (0, g.Bz)(t), i = (0, g.zK)(t, h.S7.IN_HOUSE_CONSOLE_QUEST), l = C.r.build(t.config).application.name, c = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
+            let o = a.xboxAndPlaystationAccounts.length > 0, r = o && (0, g.Bz)(t), i = (0, g.zK)(t, h.S7.IN_HOUSE_CONSOLE_QUEST), l = C.r.build(t.config).application.name, c = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
             return {
                 steps: [
                     {
@@ -150,25 +153,25 @@ t.Z = function (e) {
                             ...a,
                             quest: t
                         }),
-                        isComplete: n || o || c
+                        isComplete: o || r || c
                     },
                     {
                         renderContent: () => (0, s.jsx)(v, { text: i ? T.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_ANY_GAME : T.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME.format({ gameTitle: l }) }),
-                        isComplete: o || c
+                        isComplete: r || c
                     },
                     {
-                        renderContent: () => (0, s.jsx)(v, { text: T.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({ numMinutes: r.targetMinutes }) }),
+                        renderContent: () => (0, s.jsx)(v, { text: T.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({ numMinutes: n.targetMinutes }) }),
                         isComplete: c
                     }
                 ],
-                hasConnectedAccounts: n,
-                isProgressingQuestForLaunchedGame: o,
+                hasConnectedAccounts: o,
+                isProgressingQuestForLaunchedGame: r,
                 isQuestComplete: c
             };
         }, [
             a,
             t,
-            r
+            n
         ]);
     return (0, s.jsxs)('div', {
         className: S.wrapper,
@@ -193,7 +196,7 @@ t.Z = function (e) {
                     }),
                     u && !p && !m && (0, s.jsx)(A, {
                         connectedAccounts: a,
-                        useReducedMotion: n,
+                        useReducedMotion: r,
                         quest: t
                     })
                 ]

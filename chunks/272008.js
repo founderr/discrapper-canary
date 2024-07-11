@@ -6,7 +6,7 @@ n.d(t, {
         return h;
     },
     EW: function () {
-        return D;
+        return y;
     },
     QB: function () {
         return S;
@@ -28,9 +28,6 @@ n.d(t, {
     },
     is: function () {
         return p;
-    },
-    kP: function () {
-        return y;
     },
     m0: function () {
         return I;
@@ -330,12 +327,6 @@ async function C(e) {
     }
 }
 function y(e) {
-    a.Z.dispatch({
-        type: 'QUESTS_OPTIMISTIC_PROGRESS_UPDATE',
-        userStatus: e
-    });
-}
-function D(e) {
     a.Z.dispatch({
         type: 'QUESTS_DELIVERY_OVERRIDE',
         questId: e

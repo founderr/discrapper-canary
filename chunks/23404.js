@@ -53,8 +53,8 @@ t.Z = function (e) {
         }, [o]), y = (0, f.hf)({
             quest: o,
             location: m.jn.ACTIVITY_PANEL
-        }), j = (0, E.tP)(o), U = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, G = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, k = (null === (a = o.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null;
-    return (null == o ? void 0 : o.userStatus) == null || (0, g.zE)(o.userStatus, m.jn.ACTIVITY_PANEL) || j || k || !(0, g.dl)(o) ? null : (0, i.jsx)(T.A, {
+        }), j = (0, E.tP)(o), U = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, G = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, k = (null === (a = o.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, w = (null == o ? void 0 : o.userStatus) == null || (0, g.zE)(o.userStatus, m.jn.ACTIVITY_PANEL), B = (0, E.Rf)(o);
+    return w || j || k || !(0, g.dl)(o) ? null : (0, i.jsx)(T.A, {
         questOrQuests: o,
         questContent: m.jn.ACTIVITY_PANEL,
         children: e => {
@@ -99,7 +99,10 @@ t.Z = function (e) {
                                 className: L.instructions,
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
-                                children: (0, g.pG)({ quest: o })
+                                children: (0, g.pG)({
+                                    quest: o,
+                                    taskDetails: B
+                                })
                             })
                         ]
                     }),
@@ -107,7 +110,8 @@ t.Z = function (e) {
                         autoplay: p,
                         className: L.rewardTileWithInstructions,
                         quest: o,
-                        questContent: m.jn.ACTIVITY_PANEL
+                        questContent: m.jn.ACTIVITY_PANEL,
+                        taskDetails: B
                     }),
                     (0, i.jsxs)('div', {
                         className: L.ctas,

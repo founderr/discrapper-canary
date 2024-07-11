@@ -6,8 +6,12 @@ t.Z = function (e) {
             className: t,
             autoplay: n,
             quest: a,
-            questContent: d
-        } = e, u = (0, l.pG)({ quest: a });
+            questContent: d,
+            taskDetails: u
+        } = e, _ = (0, l.pG)({
+            quest: a,
+            taskDetails: u
+        });
     return (0, i.jsxs)('div', {
         className: s()(c.wrapper, t),
         style: { color: a.config.colors.primary },
@@ -22,7 +26,7 @@ t.Z = function (e) {
                 className: c.instructions,
                 variant: 'text-sm/normal',
                 color: 'text-normal',
-                children: u
+                children: _
             })
         ]
     });

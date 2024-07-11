@@ -1,27 +1,28 @@
 let r, i, a, o, s, l, u, c, d, _, E, f, h;
 n(47120);
-var p, m, I, T, g = n(906280), S = n.n(g), A = n(887003), N = n(442837), v = n(570140), O = n(497505), R = n(918701), C = n(5881), y = n(46140);
+var p, m, I, T, g = n(392711), S = n(754700), A = n(887003), N = n(442837), v = n(570140), O = n(497505), R = n(918701), C = n(5881), y = n(46140);
 function D() {
-    r = !1, i = new Map(), a = 0, o = new Set(), s = new Set(), l = new Set(), u = new Set(), c = new Set(), d = new Map(), _ = new Map(), E = new Map(), f = new Map(), h = null;
+    r = !1, i = new Map(), a = 0, o = new Set(), s = new Set(), l = new Set(), u = new Set(), c = new Set(), _ = new Map(), E = new Map(), f = new Map(), h = null, d = new Set();
 }
+D();
 function L(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { updateProgress: !1 }, r = (i = new Map(i)).get(e);
-    if (null != r) {
-        var a, o;
-        let s = null === (a = r.userStatus) || void 0 === a ? void 0 : a.streamProgressSeconds, l = null === (o = r.userStatus) || void 0 === o ? void 0 : o.progress, u = null == s && null == l, c = {
-                ...r,
-                ...t
-            };
-        !(n.updateProgress || null == c.userStatus || u || null != c.userStatus.completedAt || null == c.userStatus.enrolledAt) && null != c.userStatus && (c.userStatus = {
-            ...c.userStatus,
-            streamProgressSeconds: null != s ? s : 0,
-            progress: null != l ? l : {}
-        }), i.set(e, c);
+    let n = (i = new Map(i)).get(e);
+    if (null != n) {
+        let r = {
+            ...n,
+            ...t
+        };
+        !function (e, t) {
+            var n, r, i;
+            if (null != t.userStatus)
+                for (let a of Object.values(null !== (r = null === (n = t.userStatus) || void 0 === n ? void 0 : n.progress) && void 0 !== r ? r : {}))
+                    !(0, g.isNil)(a) && S.T.DESKTOP.has(a.eventName) && (null === (i = a.heartbeat) || void 0 === i ? void 0 : i.lastBeatAt) == null && d.delete(e);
+        }(e, t), i.set(e, r);
     }
 }
 function b(e, t) {
-    let n = new Map(d);
-    n.set(e, t), d = n;
+    let n = new Map(_);
+    n.set(e, t), _ = n;
 }
 function M(e, t) {
     b(e, t);
@@ -33,9 +34,8 @@ function M(e, t) {
         }
     });
 }
-D();
 function P(e) {
-    null != E.get(e) && (E = new Map(E)).delete(e);
+    null != f.get(e) && (f = new Map(f)).delete(e);
 }
 function U(e) {
     let t = new Set(o);
@@ -74,19 +74,19 @@ class x extends (p = N.ZP.Store) {
         return c.has(e);
     }
     getRewardCode(e) {
-        return d.get(e);
-    }
-    getRewards(e) {
         return _.get(e);
     }
-    getStreamHeartbeatFailure(e) {
+    getRewards(e) {
         return E.get(e);
     }
-    getQuestLastSuccessfulHeartbeat(e) {
+    getStreamHeartbeatFailure(e) {
         return f.get(e);
     }
     getQuest(e) {
         return i.get(e);
+    }
+    isProgressingOnDesktop(e) {
+        return d.has(e);
     }
 }
 T = 'QuestsStore', (I = 'displayName') in (m = x) ? Object.defineProperty(m, I, {
@@ -103,20 +103,8 @@ T = 'QuestsStore', (I = 'displayName') in (m = x) ? Object.defineProperty(m, I, 
     },
     QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: function (e) {
         let {quests: t} = e;
-        r = !1;
-        let n = new Map(i);
-        for (let e of (i = new Map(), t)) {
-            var a, o;
-            let t = S()(e), r = n.get(t.id), s = (null === (a = t.userStatus) || void 0 === a ? void 0 : a.enrolledAt) != null && null == t.userStatus.completedAt;
-            if ((null == r ? void 0 : r.userStatus) != null && null != t.userStatus && s) {
-                let e = t.userStatus.progress, n = r.userStatus.progress;
-                for (let [t, r] of Object.entries(e)) {
-                    let e = null == n ? void 0 : null === (o = n[t]) || void 0 === o ? void 0 : o.value;
-                    null != e && null != r && e > r.value && (r.value = e);
-                }
-            }
-            i.set(t.id, t), t.targetedContent.includes(O.jn.QUEST_BAR) && (0, C.T)({ location: y.dr.QUESTS_STORE }).log('Delivered '.concat(t.config.messages.questName, ' (').concat(t.id, ')'));
-        }
+        for (let e of (r = !1, i = new Map(), t))
+            i.set(e.id, e), e.targetedContent.includes(O.jn.QUEST_BAR) && (0, C.T)({ location: y.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
     },
     QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function () {
         a = 0, r = !1;
@@ -127,14 +115,14 @@ T = 'QuestsStore', (I = 'displayName') in (m = x) ? Object.defineProperty(m, I, 
             streamKey: n,
             userStatus: r
         } = e;
-        L(t, { userStatus: r }, { updateProgress: !0 }), P(n), (f = new Map(f)).set(t, Date.now());
+        d.add(t), L(t, { userStatus: r }), P(n);
     },
     QUESTS_SEND_HEARTBEAT_FAILURE: function (e) {
         let {
             questId: t,
             streamKey: n
         } = e;
-        null == E.get(n) && (E = new Map(E)).set(n, {
+        null == f.get(n) && (f = new Map(f)).set(n, {
             questId: t,
             streamKey: n,
             firstFailedAt: Date.now()
@@ -192,8 +180,8 @@ T = 'QuestsStore', (I = 'displayName') in (m = x) ? Object.defineProperty(m, I, 
                 entitlements: n
             } = e, r = new Set(l);
         r.delete(t), l = r, !function (e, t) {
-            let n = new Map(_);
-            n.set(e, t.items), _ = n;
+            let n = new Map(E);
+            n.set(e, t.items), E = n;
             let r = i.get(e), a = null == r ? void 0 : r.userStatus;
             if (null != a && null == a.claimedAt) {
                 var o;
@@ -230,7 +218,7 @@ T = 'QuestsStore', (I = 'displayName') in (m = x) ? Object.defineProperty(m, I, 
     },
     QUESTS_USER_STATUS_UPDATE: function (e) {
         let {user_status: t} = e;
-        (0, C.T)({ location: y.dr.QUESTS_STORE }).log('Received user status update for '.concat(t.quest_id), t), L(t.quest_id, { userStatus: (0, R.U3)(t) }, { updateProgress: !0 });
+        (0, C.T)({ location: y.dr.QUESTS_STORE }).log('Received user status update for '.concat(t.quest_id), t), L(t.quest_id, { userStatus: (0, R.U3)(t) });
     },
     STREAM_CLOSE: function (e) {
         let {streamKey: t} = e;
@@ -242,11 +230,7 @@ T = 'QuestsStore', (I = 'displayName') in (m = x) ? Object.defineProperty(m, I, 
     },
     QUESTS_PREVIEW_UPDATE_SUCCESS: function (e) {
         let {previewQuestUserStatus: t} = e;
-        L(t.questId, { userStatus: t }), null == t.claimedAt && (d = new Map(d)).delete(t.questId);
-    },
-    QUESTS_OPTIMISTIC_PROGRESS_UPDATE: function (e) {
-        let {userStatus: t} = e;
-        L(t.questId, { userStatus: t }, { updateProgress: !0 });
+        L(t.questId, { userStatus: t }), null == t.claimedAt && (_ = new Map(_)).delete(t.questId);
     },
     QUESTS_DELIVERY_OVERRIDE: function (e) {
         let {questId: t} = e;

@@ -136,7 +136,6 @@ t.Z = function (e) {
                                         src: (0, S.uo)(q, K)
                                     }),
                                     (0, i.jsxs)('div', {
-                                        className: y.__invalid_details,
                                         children: [
                                             (0, i.jsxs)('div', {
                                                 className: y.headingWithSubmenu,
@@ -180,7 +179,8 @@ t.Z = function (e) {
                             eu && !e_ && !ee && (0, i.jsx)(P.Z, {
                                 autoplay: F,
                                 quest: q,
-                                questContent: g.jn.QUEST_LIVE_STREAM
+                                questContent: g.jn.QUEST_LIVE_STREAM,
+                                taskDetails: eh
                             }),
                             (0, i.jsxs)('div', {
                                 className: y.ctas,

@@ -1,27 +1,27 @@
 n.d(t, {
     y: function () {
-        return E;
+        return h;
     }
 });
-var s = n(735250), o = n(470079), r = n(481060), a = n(617136), i = n(113434), l = n(497505), c = n(918701), d = n(796111), u = n(667105), p = n(569379), x = n(46140), m = n(689938), g = n(941624);
-let C = e => {
+var s = n(735250), o = n(470079), r = n(481060), a = n(617136), i = n(113434), l = n(497505), c = n(918701), d = n(796111), u = n(667105), p = n(46140), x = n(689938), m = n(941624);
+let g = e => {
         let {quest: t} = e;
         return (0, s.jsx)('div', {
-            className: g.ctaContainer,
+            className: m.ctaContainer,
             children: (0, s.jsx)(r.Button, {
-                className: g.flex,
+                className: m.flex,
                 size: r.Button.Sizes.SMALL,
                 onClick: () => (0, c.FE)(t, {
                     content: l.jn.QUEST_BAR_V2,
                     ctaContent: a.jZ.OPEN_GAME_LINK
                 }),
-                children: m.Z.Messages.QUESTS_GET_THIS_GAME
+                children: x.Z.Messages.QUESTS_GET_THIS_GAME
             })
         });
-    }, f = e => {
+    }, C = e => {
         let {quest: t} = e;
         return (0, s.jsx)('div', {
-            className: g.ctaContainer,
+            className: m.ctaContainer,
             children: (0, s.jsx)(r.Button, {
                 fullWidth: !0,
                 onClick: () => (0, c.gI)({
@@ -32,10 +32,10 @@ let C = e => {
                     ctaContent: a.jZ.CONNECT_CONSOLE
                 }),
                 size: r.Button.Sizes.SMALL,
-                children: m.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
+                children: x.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
             })
         });
-    }, _ = e => {
+    }, f = e => {
         let {
                 quest: t,
                 useReducedMotion: n,
@@ -45,18 +45,18 @@ let C = e => {
                 location: l.jn.QUEST_BAR_V2
             });
         return (0, s.jsx)('div', {
-            className: g.ctaContainer,
+            className: m.ctaContainer,
             children: (0, s.jsx)(r.ShinyButton, {
                 fullWidth: !0,
                 size: r.Button.Sizes.SMALL,
                 onClick: a,
                 pauseAnimation: n || !o,
-                buttonShineClassName: g.shine,
-                children: m.Z.Messages.QUESTS_CLAIM_REWARD
+                buttonShineClassName: m.shine,
+                children: x.Z.Messages.QUESTS_CLAIM_REWARD
             })
         });
-    }, h = e => {
-        let {quest: t} = e, {xboxAndPlaystationAccounts: n} = (0, i.z6)(), s = (0, d.P)({ location: x.dr.QUESTS_BAR });
+    }, _ = e => {
+        let {quest: t} = e, {xboxAndPlaystationAccounts: n} = (0, i.z6)(), s = (0, d.P)({ location: p.dr.QUESTS_BAR });
         return o.useMemo(() => {
             let e = (0, c.$J)(t), o = 0 === n.length;
             return e && o && !s;
@@ -65,23 +65,23 @@ let C = e => {
             n,
             s
         ]);
-    }, E = e => {
+    }, h = e => {
         var t;
         let {
                 quest: n,
                 useReducedMotion: o,
                 isExpanded: r,
                 hasMadeProgress: a
-            } = e, i = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, l = h({ quest: n }), d = (0, p.z)(n);
-        if (i)
-            return (0, s.jsx)(_, {
+            } = e, l = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, d = _({ quest: n }), u = (0, i.z)(n);
+        if (l)
+            return (0, s.jsx)(f, {
                 quest: n,
                 useReducedMotion: o,
                 isExpanded: r
             });
-        if (l)
-            return (0, s.jsx)(f, { quest: n });
-        if (!a && !d && !(0, c.zK)(n, x.S7.IN_HOUSE_CONSOLE_QUEST))
+        if (d)
             return (0, s.jsx)(C, { quest: n });
+        if (!a && !u && !(0, c.zK)(n, p.S7.IN_HOUSE_CONSOLE_QUEST))
+            return (0, s.jsx)(g, { quest: n });
         return null;
     };

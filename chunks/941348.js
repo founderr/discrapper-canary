@@ -1,57 +1,59 @@
-var s = n(735250), o = n(470079), r = n(308069), a = n(613087), i = n(457153), l = n(254197), c = n(321025), d = n(768545);
+var s = n(735250), o = n(470079), r = n(113434), a = n(308069), i = n(613087), l = n(457153), c = n(254197), d = n(321025), u = n(768545);
 t.Z = function (e) {
     var t;
     let {
             expandedContentRef: n,
-            expansionSpring: u,
-            isExpanded: p,
-            isExpansionAnimationComplete: x,
-            onCtxMenuOpened: m,
-            onCtxMenuClosed: g,
-            onCtxMenuSelection: C,
-            quest: f,
-            useReducedMotion: _
-        } = e, h = o.useRef(null), E = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null;
-    return (0, s.jsxs)(a.p, {
+            expansionSpring: p,
+            isExpanded: x,
+            isExpansionAnimationComplete: m,
+            onCtxMenuOpened: g,
+            onCtxMenuClosed: C,
+            onCtxMenuSelection: f,
+            quest: _,
+            useReducedMotion: h
+        } = e, E = o.useRef(null), T = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, S = (0, r.Rf)(_);
+    return (0, s.jsxs)(i.p, {
         expandedContentRef: n,
-        collapsedContentRef: h,
-        expansionSpring: u,
-        isExpansionAnimationComplete: x,
+        collapsedContentRef: E,
+        expansionSpring: p,
+        isExpansionAnimationComplete: m,
         children: [
-            !E && (0, s.jsx)(r.Z, {
-                quest: f,
-                expansionSpring: u,
-                useReducedMotion: _,
-                isExpanded: p,
-                isExpansionAnimationComplete: x,
-                onCtxMenuOpen: m,
-                onCtxMenuClose: g,
-                onCtxMenuSelect: C
-            }),
-            (0, s.jsx)(i.Z, {
-                ref: h,
-                className: d.content,
-                expansionSpring: u,
-                isExpanded: p,
-                isExpansionAnimationComplete: x,
-                quest: f,
-                useReducedMotion: _
+            !T && (0, s.jsx)(a.Z, {
+                quest: _,
+                expansionSpring: p,
+                useReducedMotion: h,
+                isExpanded: x,
+                isExpansionAnimationComplete: m,
+                onCtxMenuOpen: g,
+                onCtxMenuClose: C,
+                onCtxMenuSelect: f
             }),
             (0, s.jsx)(l.Z, {
-                expansionSpring: u,
-                className: d.content,
-                onCtxMenuOpen: m,
-                onCtxMenuClose: g,
-                onCtxMenuSelect: C,
-                isExpanded: p,
-                isExpansionAnimationComplete: x,
-                quest: f,
-                useReducedMotion: _,
-                ref: n
+                ref: E,
+                className: u.content,
+                expansionSpring: p,
+                isExpanded: x,
+                isExpansionAnimationComplete: m,
+                quest: _,
+                useReducedMotion: h,
+                taskDetails: S
             }),
             (0, s.jsx)(c.Z, {
-                expansionSpring: u,
-                isExpanded: p
+                expansionSpring: p,
+                className: u.content,
+                onCtxMenuOpen: g,
+                onCtxMenuClose: C,
+                onCtxMenuSelect: f,
+                isExpanded: x,
+                isExpansionAnimationComplete: m,
+                quest: _,
+                useReducedMotion: h,
+                ref: n,
+                taskDetails: S
+            }),
+            (0, s.jsx)(d.Z, {
+                expansionSpring: p,
+                isExpanded: x
             })
         ]
     });
