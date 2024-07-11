@@ -17683,5 +17683,10 @@ e.exports = Object.freeze({
     GLOBAL_DISCOVERY_SERVERS_EDUCATION_DESCRIPTION: 'Connect with students, teachers, and learning centers.',
     GLOBAL_DISCOVERY_SERVERS_HUB_TITLE: 'Join the Student Hub for your school',
     GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION: 'Meet classmates from your school, discover communities, and share your servers.',
-    GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER: 'Search results for "{query}"'
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER: 'Search results for "{query}"',
+    EMAIL_CHANGE_REASONING_HEADER: 'Why are you changing your email?',
+    EMAIL_CHANGE_REASONING_DISCORD_EMPLOYEE_ASKED: 'A Discord employee asked me to',
+    EMAIL_CHANGE_REASONING_SOMEONE_ASKED: 'Someone asked me to',
+    EMAIL_CHANGE_REASONING_NEW_EMAIL: 'I recently created a new email',
+    EMAIL_CHANGE_REASONING_SOMETHING_ELSE: 'Something else'
 });
