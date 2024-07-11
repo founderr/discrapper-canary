@@ -421,7 +421,7 @@ class j extends b.Z {
             });
             if (!n || this.isSessionEstablished())
                 try {
-                    null != this.webSocket ? this.webSocket.send(r) : G.warn('Attempted to send without a websocket that exists. Opcode: '.concat(e));
+                    null != this.webSocket ? this.webSocket.send(r) : (G.warn('Attempted to send without a websocket that exists. Opcode: '.concat(e)), e === b.j.EMBEDDED_ACTIVITY_CLOSE && v.Z.captureMessage('EMBEDDED_ACTIVITY_CLOSE was not sent due to no web socket existing'));
                 } catch (e) {
                 }
             else
