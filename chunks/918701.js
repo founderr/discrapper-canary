@@ -359,7 +359,7 @@ function Q(e) {
     return C.Z.Messages.QUESTS_TITLE.format({ questName: r.config.messages.questName });
 }
 function X(e) {
-    return e === A.jn.QUEST_BAR_V2 || Object.keys(O.a_).includes(A.jn[e]);
+    return Object.keys(O.a_).includes(A.jn[e]);
 }
 function $(e, t) {
     if (!X(t))
