@@ -1,13 +1,13 @@
 t.d(n, {
     Q2: function () {
-        return x;
+        return T;
     },
     pe: function () {
-        return P;
+        return x;
     }
 }), t(47120), t(653041), t(536091);
-var i = t(470079), l = t(392711), r = t.n(l), a = t(373793), s = t(442837), o = t(911969), c = t(127255), u = t(654455), d = t(213459), m = t(807169), p = t(104793), _ = t(674588), E = t(809547), h = t(822245), A = t(631827), N = t(783097), f = t(689079);
-function C(e, n) {
+var i = t(470079), l = t(392711), r = t.n(l), a = t(373793), s = t(442837), o = t(911969), c = t(127255), u = t(654455), d = t(213459), m = t(807169), p = t(104793), _ = t(674588), E = t(809547), h = t(822245), A = t(631827), N = t(783097), f = t(689079), C = t(665692);
+function I(e, n) {
     let t = h.Z.getScoreWithoutLoadingLatest(e.id);
     return h.Z.getScoreWithoutLoadingLatest(n.id) - t;
 }
@@ -15,22 +15,24 @@ function v(e, n) {
     let t = (0, N.$d)(e), i = (0, N.$d)(n);
     return (0, d.un)(t, i);
 }
-function I(e, n) {
+function P(e, n) {
     return (0, d.un)(e.displayName, n.displayName);
 }
-function P(e) {
+function x(e) {
     let {
-            channel: n,
-            query: t,
-            commandLimit: l,
-            applicationLimit: a,
-            searchesCommands: s = !0,
-            searchesBots: _ = !0,
-            searchesActivities: E = !0
-        } = e, {
+        channel: n,
+        query: t,
+        commandLimit: l,
+        applicationLimit: a,
+        searchesCommands: s = !0,
+        searchesBots: _ = !0,
+        searchesActivities: E = !0
+    } = e;
+    t.startsWith(''.concat(C.GI)) && (t = t.substring(1));
+    let {
             commands: h,
-            commandSectionMap: P,
-            loading: x
+            commandSectionMap: x,
+            loading: T
         } = function (e) {
             var n, t;
             let {
@@ -68,7 +70,7 @@ function P(e) {
         }({
             channel: n,
             includeBuiltIn: !0
-        }), {apps: T} = function (e) {
+        }), {apps: g} = function (e) {
             let {
                     channel: n,
                     onlyWithCommands: t,
@@ -93,10 +95,10 @@ function P(e) {
             channel: n,
             onlyWithCommands: !0,
             includeBuiltIn: !0
-        }), g = (0, c.Z)({
+        }), R = (0, c.Z)({
             guildId: n.getGuildId(),
             channel: n
-        }), R = i.useMemo(() => {
+        }), S = i.useMemo(() => {
             var e;
             if (!s)
                 return [];
@@ -193,7 +195,7 @@ function P(e) {
                             return u.ZP.getScoreWithoutLoadingLatest(e, t) - i;
                         };
                     }({ channel: n }),
-                    I
+                    P
                 ]
             });
         }, [
@@ -202,19 +204,19 @@ function P(e) {
             l,
             n,
             t
-        ]), S = i.useMemo(() => {
-            if (0 === R.length)
+        ]), M = i.useMemo(() => {
+            if (0 === S.length)
                 return [];
-            let e = new Map(T.map(e => [
+            let e = new Map(g.map(e => [
                 e.id,
                 e
             ]));
-            return r().compact(R.map(n => {
+            return r().compact(S.map(n => {
                 var t;
                 let i = e.get(n.applicationId);
                 if (null == i)
                     return null;
-                let l = null !== (t = P[n.id]) && void 0 !== t ? t : null;
+                let l = null !== (t = x[n.id]) && void 0 !== t ? t : null;
                 return {
                     command: n,
                     application: i,
@@ -222,20 +224,20 @@ function P(e) {
                 };
             }));
         }, [
-            T,
-            R,
-            P
-        ]), M = i.useMemo(() => {
+            g,
+            S,
+            x
+        ]), L = i.useMemo(() => {
             var e;
             if (!_ && !E)
                 return [];
             let i = [];
             if (_ && E) {
-                let e = new Set(T.map(e => {
+                let e = new Set(g.map(e => {
                     let {id: n} = e;
                     return n;
                 }));
-                i.push(...T), i.push(...g.filter(n => {
+                i.push(...g), i.push(...R.filter(n => {
                     let {
                         application: {id: t}
                     } = n;
@@ -245,7 +247,7 @@ function P(e) {
                     return n;
                 }));
             } else
-                i = _ ? T : g.map(e => {
+                i = _ ? g : R.map(e => {
                     let {application: n} = e;
                     return n;
                 });
@@ -297,7 +299,7 @@ function P(e) {
                     }(e)
                 ],
                 sortComparers: [
-                    C,
+                    I,
                     v
                 ]
             });
@@ -307,24 +309,26 @@ function P(e) {
             a,
             n,
             t,
-            T,
-            g
-        ]), L = S.length > 0, j = M.length > 0;
+            g,
+            R
+        ]), j = M.length > 0, O = L.length > 0;
     return {
-        commandResults: S,
-        hasCommandResults: L,
-        applicationResults: M,
-        hasApplicationResults: j,
-        isEmptyState: !L && !j,
-        loading: x && s
+        commandResults: M,
+        hasCommandResults: j,
+        applicationResults: L,
+        hasApplicationResults: O,
+        isEmptyState: !j && !O,
+        loading: T && s
     };
 }
-function x(e) {
+function T(e) {
     let {
-            channel: n,
-            query: t,
-            fetches: l = !0
-        } = e, [r, o] = i.useState(1), c = i.useRef(r);
+        channel: n,
+        query: t,
+        fetches: l = !0
+    } = e;
+    t.startsWith(''.concat(C.GI)) && (t = t.substring(1));
+    let [r, o] = i.useState(1), c = i.useRef(r);
     c.current = r;
     let {
             fetchState: u,
