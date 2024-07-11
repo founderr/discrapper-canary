@@ -1,12 +1,12 @@
 t.d(n, {
     Z: function () {
-        return u;
+        return o;
     }
 });
 var i = t(735250);
 t(470079);
 var a = t(481060), r = t(346479), d = t(665906), s = t(689938);
-function u(e) {
+function o(e) {
     let n = (0, d.Xb)(e), t = e.isLockedThread();
     if (n)
         return t ? (0, i.jsx)(a.MenuItem, {

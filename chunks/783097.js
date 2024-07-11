@@ -15,7 +15,7 @@ t.d(n, {
         return A;
     },
     sl: function () {
-        return v;
+        return I;
     },
     yJ: function () {
         return f;
@@ -78,7 +78,7 @@ function C(e) {
         };
     return _();
 }
-function v(e) {
+function I(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
             fakeAppIconURL: t,
             ...i

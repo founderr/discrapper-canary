@@ -1,9 +1,9 @@
 t.d(n, {
     Z: function () {
-        return Y;
+        return G;
     }
 }), t(47120), t(653041), t(724458);
-var i = t(735250), l = t(470079), r = t(392711), a = t.n(r), s = t(892814), o = t(79411), c = t(442837), u = t(481060), d = t(911969), m = t(595519), p = t(115130), _ = t(566620), E = t(127255), h = t(880308), A = t(427996), N = t(367907), f = t(399654), C = t(844439), v = t(254711), I = t(213459), P = t(10718), x = t(895924), T = t(148958), g = t(424602), R = t(541099), S = t(827498), M = t(87005), L = t(695676), j = t(98880), O = t(804307), y = t(888617), b = t(561160), Z = t(41558), H = t(105862), U = t(28147), D = t(981631), k = t(689079), B = t(689938), w = t(678313);
+var i = t(735250), l = t(470079), r = t(392711), a = t.n(r), s = t(892814), o = t(79411), c = t(442837), u = t(481060), d = t(911969), m = t(595519), p = t(115130), _ = t(566620), E = t(127255), h = t(880308), A = t(427996), N = t(367907), f = t(399654), C = t(844439), I = t(254711), v = t(213459), P = t(10718), x = t(895924), T = t(148958), g = t(424602), R = t(541099), S = t(827498), M = t(87005), L = t(695676), j = t(98880), O = t(804307), y = t(888617), b = t(561160), Z = t(41558), H = t(105862), U = t(28147), D = t(981631), k = t(689079), B = t(689938), w = t(678313);
 let V = [], W = Array(8).fill(0).map((e, n) => n), F = [
         {
             cards: [
@@ -28,14 +28,14 @@ let V = [], W = Array(8).fill(0).map((e, n) => n), F = [
             look: j.U4.NO_BANNER
         }
     ];
-function Y(e) {
+function G(e) {
     let {
             channel: n,
             entrypoint: t,
             searchQuery: r,
             setSearchQuery: a,
             setScroller: s
-        } = e, o = (0, m.NX)(n.id, !0), d = (0, c.e7)([p.Z], () => p.Z.getIsEnabled(), []), E = t === S._b.TEXT, h = t === S._b.TEXT, A = t === S._b.TEXT, N = t === S._b.VOICE, f = t === S._b.TEXT, [C, v] = K(E), [I, P] = K(h), [x, T] = K(A), [g, R] = K(N), M = C && I && x && g, L = (A || h) && !M, j = N && d;
+        } = e, o = (0, m.NX)(n.id, !0), d = (0, c.e7)([p.Z], () => p.Z.getIsEnabled(), []), E = t === S._b.TEXT, h = t === S._b.TEXT, A = t === S._b.TEXT, N = t === S._b.VOICE, f = t === S._b.TEXT, [C, I] = K(E), [v, P] = K(h), [x, T] = K(A), [g, R] = K(N), M = C && v && x && g, L = (A || h) && !M, j = N && d;
     l.useEffect(() => {
         o && (0, _.w1)({
             guildId: n.getGuildId(),
@@ -49,7 +49,7 @@ function Y(e) {
     return (0, i.jsxs)('div', {
         className: w.container,
         children: [
-            j ? (0, i.jsx)(G, {}) : null,
+            j ? (0, i.jsx)(Y, {}) : null,
             (0, i.jsx)(z, {
                 searchQuery: r,
                 setSearchQuery: a,
@@ -72,7 +72,7 @@ function Y(e) {
                         E && (0, i.jsx)(X, {
                             channel: n,
                             entrypoint: t,
-                            onEmptyState: v
+                            onEmptyState: I
                         }),
                         h && (0, i.jsx)(Q, {
                             channel: n,
@@ -97,7 +97,7 @@ function Y(e) {
         ]
     });
 }
-function G() {
+function Y() {
     return (0, i.jsxs)('div', {
         className: w.developerShelfControlsContainer,
         children: [
@@ -276,7 +276,7 @@ function Q(e) {
     let {
             channel: t,
             onEmptyState: r
-        } = e, s = (0, I.LD)(t.guild_id, !0), {
+        } = e, s = (0, v.LD)(t.guild_id, !0), {
             commandsByActiveSection: o,
             loading: c
         } = P.wi(t, { commandType: d.yU.CHAT }, {
@@ -294,7 +294,7 @@ function Q(e) {
             return Object.values(null !== (n = null === (e = s.result) || void 0 === e ? void 0 : e.sections) && void 0 !== n ? n : {}).map(e => {
                 let {descriptor: n} = e;
                 return n;
-            }).filter(e => !(e.id in v.Tm) && u.has(e.id));
+            }).filter(e => !(e.id in I.Tm) && u.has(e.id));
         }, [
             null === (n = s.result) || void 0 === n ? void 0 : n.sections,
             u

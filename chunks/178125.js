@@ -3,13 +3,13 @@ t.r(n), t.d(n, {
         return _;
     }
 }), t(47120);
-var r = t(735250), i = t(470079), o = t(106351), l = t(442837), a = t(481060), d = t(471445), c = t(856768), u = t(324067), s = t(771845), m = t(9156), h = t(117984), f = t(593214), g = t(378337), v = t(689938), x = t(629568);
+var r = t(735250), i = t(470079), o = t(106351), l = t(442837), a = t(481060), d = t(471445), c = t(856768), s = t(324067), u = t(771845), m = t(9156), h = t(117984), f = t(593214), g = t(378337), v = t(689938), x = t(629568);
 function _(e) {
     let {
             transitionState: n,
             onClose: t,
             parentId: o
-        } = e, d = (0, l.e7)([s.ZP], () => s.ZP.getFlattenedGuildIds()[0]), [u, m] = i.useState(d), [h, f] = i.useState(!1);
+        } = e, d = (0, l.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()[0]), [s, m] = i.useState(d), [h, f] = i.useState(!1);
     return (0, r.jsxs)(a.ModalRoot, {
         transitionState: n,
         children: [
@@ -29,7 +29,7 @@ function _(e) {
                     (0, r.jsx)('div', {
                         className: x.guildSelector,
                         children: (0, r.jsx)(c.q, {
-                            guildId: u,
+                            guildId: s,
                             onChange: function (e) {
                                 null != e && m(e.id);
                             }
@@ -40,7 +40,7 @@ function _(e) {
             (0, r.jsx)(a.ModalContent, {
                 className: x.modalContent,
                 children: (0, r.jsx)(p, {
-                    guildId: u,
+                    guildId: s,
                     hideMutedChannels: h,
                     parentId: o
                 })
@@ -78,12 +78,12 @@ function p(e) {
             guildId: n,
             hideMutedChannels: t,
             parentId: a
-        } = e, d = (0, l.e7)([u.Z], () => u.Z.getCategories(n)), c = (0, g.Z)(d), s = i.useRef(null);
+        } = e, d = (0, l.e7)([s.Z], () => s.Z.getCategories(n)), c = (0, g.Z)(d), u = i.useRef(null);
     return i.useEffect(() => {
         var e;
-        null == s || null === (e = s.current) || void 0 === e || e.scroll({ top: 0 });
+        null == u || null === (e = u.current) || void 0 === e || e.scroll({ top: 0 });
     }, [n]), (0, r.jsx)('div', {
-        ref: s,
+        ref: u,
         children: c.map(e => e.type === o.d.GUILD_CATEGORY ? (0, r.jsx)(C, { name: e.name }, e.id) : (0, r.jsx)(B, {
             channel: e,
             hideMutedChannels: t,

@@ -6,7 +6,7 @@ t.d(n, {
         return _;
     }
 }), t(733860);
-var r = t(735250), i = t(470079), o = t(120356), l = t.n(o), a = t(442837), d = t(481060), c = t(993413), u = t(430824), s = t(771845), m = t(346656), h = t(823379), f = t(778825), g = t(689938), v = t(417813);
+var r = t(735250), i = t(470079), o = t(120356), l = t.n(o), a = t(442837), d = t(481060), c = t(993413), s = t(430824), u = t(771845), m = t(346656), h = t(823379), f = t(778825), g = t(689938), v = t(417813);
 function x(e) {
     let {
         guildId: n,
@@ -35,7 +35,7 @@ function _(e) {
             globalOption: t,
             onChange: o,
             renderOptionSuffix: l
-        } = e, c = (0, a.e7)([f.Z], () => f.Z.showNotice()), x = (0, a.e7)([s.ZP], () => s.ZP.getFlattenedGuildIds()), _ = (0, a.e7)([u.Z], () => u.Z.getGuilds()), p = i.useMemo(() => {
+        } = e, c = (0, a.e7)([f.Z], () => f.Z.showNotice()), x = (0, a.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()), _ = (0, a.e7)([s.Z], () => s.Z.getGuilds()), p = i.useMemo(() => {
             let e = x.map(e => {
                 let n = _[e];
                 return null == n ? null : {

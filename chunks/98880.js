@@ -12,7 +12,7 @@ t.d(n, {
         return U;
     }
 }), t(47120), t(411104);
-var i, l, r = t(735250), a = t(470079), s = t(120356), o = t.n(s), c = t(481060), u = t(361213), d = t(542094), m = t(778569), p = t(182906), _ = t(367907), E = t(220082), h = t(318661), A = t(810090), N = t(792125), f = t(541099), C = t(783097), v = t(695676), I = t(176412), P = t(226026), x = t(753972), T = t(981631), g = t(217702), R = t(231338), S = t(689938), M = t(126152), L = t(413097);
+var i, l, r = t(735250), a = t(470079), s = t(120356), o = t.n(s), c = t(481060), u = t(361213), d = t(542094), m = t(778569), p = t(182906), _ = t(367907), E = t(220082), h = t(318661), A = t(810090), N = t(792125), f = t(541099), C = t(783097), I = t(695676), v = t(176412), P = t(226026), x = t(753972), T = t(981631), g = t(217702), R = t(231338), S = t(689938), M = t(126152), L = t(413097);
 function j(e) {
     let {
             application: n,
@@ -32,7 +32,7 @@ function j(e) {
         } = a.useMemo(() => (0, C.sl)(n, {
             botIconFirst: !0,
             fakeAppIconURL: L
-        }), [n]), v = (0, E.ZP)(h, ''), {trackItemImpressionRef: I} = (0, P.Z)({
+        }), [n]), I = (0, E.ZP)(h, ''), {trackItemImpressionRef: v} = (0, P.Z)({
             applicationId: n.id,
             sectionName: m,
             sectionPosition: p
@@ -40,7 +40,7 @@ function j(e) {
             !0 === u && g(!0);
         }, [u]), y = a.useCallback(() => g(!1), []);
     return 'icon' === t ? (0, r.jsx)(c.Clickable, {
-        innerRef: _ ? e => I.current = e : void 0,
+        innerRef: _ ? e => v.current = e : void 0,
         className: o()(M.container, M.iconCard),
         onClick: l,
         'aria-label': S.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
@@ -54,7 +54,7 @@ function j(e) {
             rendersPlaceholder: !0
         })
     }) : (0, r.jsxs)(c.Clickable, {
-        innerRef: _ ? e => I.current = e : void 0,
+        innerRef: _ ? e => v.current = e : void 0,
         className: M.container,
         onClick: l,
         'aria-label': S.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
@@ -76,7 +76,7 @@ function j(e) {
                         className: s,
                         children: (0, r.jsx)(O, {
                             application: n,
-                            fallbackColor: v,
+                            fallbackColor: I,
                             showVideo: T
                         })
                     }),
@@ -201,7 +201,7 @@ function Z(e) {
             query: l,
             installOnDemand: r,
             location: s
-        } = e, {pushHistory: o} = (0, v.hH)();
+        } = e, {pushHistory: o} = (0, I.hH)();
     return a.useCallback(e => {
         e.stopPropagation(), (0, _.yw)(T.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
             application_id: n.id,
@@ -211,7 +211,7 @@ function Z(e) {
             location: s,
             query: l
         }), o({
-            type: v.gc.APPLICATION,
+            type: I.gc.APPLICATION,
             application: n,
             installOnDemand: r,
             sectionName: t
@@ -250,7 +250,7 @@ function U(e) {
         activityAction: u,
         buttonColor: m,
         buttonText: p
-    } = (0, I.P)(n, t, i, l);
+    } = (0, v.P)(n, t, i, l);
     if (u === d.JS.START)
         return a ? (0, r.jsx)(j, {
             ...s,

@@ -3,7 +3,7 @@ t.d(n, {
         return S;
     }
 }), t(47120);
-var i = t(735250), l = t(470079), r = t(140835), a = t(246521), s = t(481060), o = t(911969), c = t(555573), u = t(10718), d = t(895924), m = t(585483), p = t(499254), _ = t(541099), E = t(827498), h = t(496158), A = t(676161), N = t(660090), f = t(783097), C = t(870205), v = t(981631), I = t(689079), P = t(689938), x = t(763963);
+var i = t(735250), l = t(470079), r = t(140835), a = t(246521), s = t(481060), o = t(911969), c = t(555573), u = t(10718), d = t(895924), m = t(585483), p = t(499254), _ = t(541099), E = t(827498), h = t(496158), A = t(676161), N = t(660090), f = t(783097), C = t(870205), I = t(981631), v = t(689079), P = t(689938), x = t(763963);
 function T(e) {
     var n, t;
     let {
@@ -21,7 +21,7 @@ function T(e) {
                 sectionName: h,
                 source: e,
                 commandOrigin: d.bB.APPLICATION_LAUNCHER
-            }), m.S.dispatch(v.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id });
+            }), m.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id });
         }, [
             a.id,
             o,
@@ -158,7 +158,7 @@ function S(e) {
             sectionDescriptors: d
         } = u.wi(t, { commandType: o.yU.CHAT }, {
             placeholderCount: 0,
-            limit: I.tn,
+            limit: v.tn,
             includeFrecency: !0
         }), m = null !== (n = d.find(e => e.id === r.id)) && void 0 !== n ? n : null, {
             sortOrder: p,

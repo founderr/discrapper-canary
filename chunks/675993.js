@@ -111,7 +111,7 @@ function C(e) {
             ref: N,
             isTransitioning: f,
             onTransitionEnd: C
-        } = (0, p.Z)({ isExpanded: t }), v = t || f;
+        } = (0, p.Z)({ isExpanded: t }), I = t || f;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
@@ -122,7 +122,7 @@ function C(e) {
                     ref: m,
                     className: A.markup,
                     variant: 'text-sm/medium',
-                    lineClamp: v ? void 0 : 3,
+                    lineClamp: I ? void 0 : 3,
                     children: d
                 })
             }),
@@ -134,9 +134,9 @@ function C(e) {
                         ref: m,
                         variant: 'text-sm/semibold',
                         color: 'text-brand',
-                        children: v ? E.Z.Messages.APP_LAUNCHER_SHOW_LESS : E.Z.Messages.APP_LAUNCHER_SHOW_MORE
+                        children: I ? E.Z.Messages.APP_LAUNCHER_SHOW_LESS : E.Z.Messages.APP_LAUNCHER_SHOW_MORE
                     }),
-                    v ? (0, i.jsx)(a.u, {
+                    I ? (0, i.jsx)(a.u, {
                         size: 'sm',
                         color: o.tokens.colors.TEXT_BRAND
                     }) : (0, i.jsx)(r.C, {

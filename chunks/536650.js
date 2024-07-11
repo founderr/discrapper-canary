@@ -18,19 +18,19 @@ function h(e) {
             name: n,
             iconURL: t,
             scrollerRef: _
-        } = e, h = (0, a.ap)((0, o.ZP)()), A = l.useRef(null), N = l.useRef(null), f = l.useRef(null), C = (0, s.useToken)(s.tokens.colors.BG_BASE_PRIMARY).hex(), v = (0, c.ZP)('number' == typeof t ? '' : t, null != C ? C : ''), I = l.useMemo(() => {
+        } = e, h = (0, a.ap)((0, o.ZP)()), A = l.useRef(null), N = l.useRef(null), f = l.useRef(null), C = (0, s.useToken)(s.tokens.colors.BG_BASE_PRIMARY).hex(), I = (0, c.ZP)('number' == typeof t ? '' : t, null != C ? C : ''), v = l.useMemo(() => {
             var e, n;
             let t = (0, r.compact)([
-                u.Z.parseHexString(v),
+                u.Z.parseHexString(I),
                 u.Z.parseHexString(h ? '#000000' : '#ffffff')
             ]);
             return null !== (n = null === (e = (0, d.k8)({
                 colors: t,
                 ratio: 5,
                 saturationFactor: 0.6
-            })) || void 0 === e ? void 0 : e.toHexString()) && void 0 !== n ? n : v;
+            })) || void 0 === e ? void 0 : e.toHexString()) && void 0 !== n ? n : I;
         }, [
-            v,
+            I,
             h
         ]), P = E(A), x = E(N), T = l.useCallback(() => {
             var e, n, t, i, l, a, s, o, c;
@@ -39,11 +39,11 @@ function h(e) {
                 ;
                 let e = null !== (t = u.scrollTop) && void 0 !== t ? t : 0, n = 0 !== u.scrollHeight ? u.scrollHeight : E + 20, _ = 0 !== u.clientHeight ? u.clientHeight : E + 20, A = E - p, N = (0, r.clamp)(n - _, A + 1, E + 20);
                 let f = (i = e, (l = A) === (a = N) ? 1 : (0, r.clamp)((i - l) / (a - l), 0, 1));
-                d.style.filter = 'brightness('.concat(1 + ((h ? 1.4 : 0.6) - (s = 1)) * f, ')'), d.style.backgroundColor = 'color-mix(in oklab,'.concat(v, ' ').concat((1 - f) * 100, '%, ').concat(I, ')'), m.style.opacity = ''.concat(0 + (1 - (o = 0)) * f), m.style.transform = 'translateY('.concat((c = p / 4) + (0 - c) * f, 'px)');
+                d.style.filter = 'brightness('.concat(1 + ((h ? 1.4 : 0.6) - (s = 1)) * f, ')'), d.style.backgroundColor = 'color-mix(in oklab,'.concat(I, ' ').concat((1 - f) * 100, '%, ').concat(v, ')'), m.style.opacity = ''.concat(0 + (1 - (o = 0)) * f), m.style.transform = 'translateY('.concat((c = p / 4) + (0 - c) * f, 'px)');
             }
         }, [
-            I,
             v,
+            I,
             null == x ? void 0 : x.height,
             h,
             _,
@@ -94,7 +94,7 @@ function h(e) {
             (0, i.jsx)('div', {
                 ref: N,
                 className: p.bannerBackground,
-                style: { backgroundColor: v }
+                style: { backgroundColor: I }
             })
         ]
     });

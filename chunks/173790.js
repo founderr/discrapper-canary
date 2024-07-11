@@ -11,7 +11,7 @@ function A(e) {
             sectionName: s
         } = e, o = (0, c.ye)({ application: t }), A = o ? N : p.Z, f = l.useRef(null), {
             iconURL: C,
-            name: v
+            name: I
         } = l.useMemo(() => (0, c.sl)(t, {
             botIconFirst: !o,
             fakeAppIconURL: h,
@@ -25,10 +25,10 @@ function A(e) {
         fade: !0,
         ref: f,
         role: 'region',
-        'aria-label': _.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: v }),
+        'aria-label': _.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: I }),
         children: [
             (0, i.jsx)(m.Z, {
-                name: v,
+                name: I,
                 iconURL: C,
                 scrollerRef: f
             }),

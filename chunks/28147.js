@@ -3,7 +3,7 @@ t.d(n, {
         return R;
     }
 }), t(47120);
-var i = t(735250), l = t(470079), r = t(392711), a = t.n(r), s = t(209173), o = t(555573), c = t(895924), u = t(809547), d = t(585483), m = t(499254), p = t(541099), _ = t(827498), E = t(392370), h = t(98880), A = t(532309), N = t(561160), f = t(41558), C = t(106771), v = t(79984), I = t(981631), P = t(689938), x = t(933693);
+var i = t(735250), l = t(470079), r = t(392711), a = t.n(r), s = t(209173), o = t(555573), c = t(895924), u = t(809547), d = t(585483), m = t(499254), p = t(541099), _ = t(827498), E = t(392370), h = t(98880), A = t(532309), N = t(561160), f = t(41558), C = t(106771), I = t(79984), v = t(981631), P = t(689938), x = t(933693);
 let T = Array(6).fill(0).map((e, n) => n), g = [
         ,
         ,
@@ -24,7 +24,7 @@ function S(e) {
             commandResults: A,
             hasCommandResults: f,
             applicationResults: C,
-            hasApplicationResults: v
+            hasApplicationResults: I
         } = (0, E.pe)({
             channel: n,
             query: t,
@@ -32,13 +32,13 @@ function S(e) {
             searchesCommands: d,
             searchesBots: m
         }), {
-            fetchState: I,
+            fetchState: v,
             applicationResults: x
         } = (0, E.Q2)({
             query: t,
             channel: n,
             fetches: r !== _._b.VOICE
-        }), T = null == I || I === u.M.FETCHING, g = l.useMemo(() => {
+        }), T = null == v || v === u.M.FETCHING, g = l.useMemo(() => {
             let e = C.map(e => ({
                 application: e,
                 installOnDemand: !1
@@ -72,7 +72,7 @@ function S(e) {
                 commandResults: A,
                 query: t
             }),
-            v && (0, i.jsx)(O, {
+            I && (0, i.jsx)(O, {
                 applicationResults: g,
                 includePlaceholder: T,
                 query: t,
@@ -166,7 +166,7 @@ function L(e) {
                                 query: r,
                                 searchResultsPosition: t,
                                 source: e
-                            }), d.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: n.id });
+                            }), d.S.dispatch(v.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: n.id });
                         }
                     }, l.id);
                 })
@@ -216,7 +216,7 @@ function O(e) {
                             query: l
                         }, t.id);
                     }),
-                    t && g.map(e => (0, i.jsx)(v.Z, {}, e))
+                    t && g.map(e => (0, i.jsx)(I.Z, {}, e))
                 ]
             })
         ]
@@ -241,7 +241,7 @@ function O(e) {
                             query: l
                         }, t.id);
                     }),
-                    t && g.map(e => (0, i.jsx)(v.Z, {}, e))
+                    t && g.map(e => (0, i.jsx)(I.Z, {}, e))
                 ]
             })
         ]
@@ -262,12 +262,12 @@ function b() {
             (0, i.jsx)(f.Z, { title: P.Z.Messages.COMMANDS }),
             (0, i.jsx)('div', {
                 className: x.sectionContentContainer,
-                children: T.map(e => (0, i.jsx)(v.Z, {}, e))
+                children: T.map(e => (0, i.jsx)(I.Z, {}, e))
             }),
             (0, i.jsx)(f.Z, { title: P.Z.Messages.APPS }),
             (0, i.jsx)('div', {
                 className: x.sectionContentContainer,
-                children: g.map(e => (0, i.jsx)(v.Z, {}, e))
+                children: g.map(e => (0, i.jsx)(I.Z, {}, e))
             })
         ]
     });
