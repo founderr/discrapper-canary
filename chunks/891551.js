@@ -1,14 +1,14 @@
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(442837), r = n(846027), o = n(131951), c = n(80618), d = n(36703), u = n(358085), h = n(618158), p = n(306451);
-t.Z = l.ZP.connectStores([o.Z], e => {
+var a = n(120356), s = n.n(a), l = n(442837), r = n(846027), o = n(793148), c = n(131951), d = n(36703), u = n(358085), h = n(618158), p = n(306451);
+t.Z = l.ZP.connectStores([c.Z], e => {
     let {
         userId: t,
         context: n
     } = e;
     return {
-        currentVolume: o.Z.getLocalVolume(t, n),
-        muted: o.Z.isLocalMute(t, n)
+        currentVolume: c.Z.getLocalVolume(t, n),
+        muted: c.Z.isLocalMute(t, n)
     };
 })(function (e) {
     let {
@@ -16,18 +16,18 @@ t.Z = l.ZP.connectStores([o.Z], e => {
         iconClassName: n,
         sliderClassName: a,
         userId: l,
-        currentVolume: o,
+        currentVolume: c,
         muted: m,
         context: _,
         currentWindow: f = window
     } = e;
     return (0, i.jsx)(h.Z, {
-        children: (0, i.jsx)(c.Z, {
+        children: (0, i.jsx)(o.Z, {
             currentWindow: f,
             iconClassName: s()(n, p.controlIcon),
             sliderClassName: a,
             className: t,
-            value: (0, d.P)(o),
+            value: (0, d.P)(c),
             muted: m,
             maxValue: u.isPlatformEmbedded ? 200 : 100,
             onValueChange: e => {

@@ -3,7 +3,7 @@ n.d(t, {
         return G;
     }
 }), n(653041), n(47120), n(411104);
-var r, i, a = n(735250), o = n(470079), s = n(120356), l = n.n(s), u = n(392711), c = n.n(u), d = n(748780), _ = n(481060), E = n(818083), f = n(268353), h = n(866960), p = n(196050), m = n(27268), I = n(259773), T = n(80618), g = n(181058), S = n(810090), A = n(626135), N = n(70956), v = n(36703), O = n(228488), R = n(540026), C = n(981631), y = n(217702), D = n(689938), L = n(301312), b = n(483085);
+var r, i, a = n(735250), o = n(470079), s = n(120356), l = n.n(s), u = n(392711), c = n.n(u), d = n(748780), _ = n(481060), E = n(818083), f = n(268353), h = n(866960), p = n(196050), m = n(181058), I = n(810090), T = n(626135), g = n(70956), S = n(36703), A = n(228488), N = n(540026), v = n(455813), O = n(283756), R = n(793148), C = n(981631), y = n(217702), D = n(689938), L = n(301312), b = n(483085);
 function M(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -114,7 +114,7 @@ class B extends (r = o.Component) {
             onClick: i,
             tabIndex: o ? -1 : 0,
             'aria-label': D.Z.Messages.PLAY_AGAIN,
-            children: (0, a.jsx)(g.Z, { className: L.controlIcon }, 'replay')
+            children: (0, a.jsx)(m.Z, { className: L.controlIcon }, 'replay')
         }) : (0, a.jsx)(_.Clickable, {
             className: L.videoButton,
             onClick: i,
@@ -155,25 +155,25 @@ class B extends (r = o.Component) {
                     current: n,
                     duration: r
                 }) : null,
-                (0, a.jsx)(R.Z, {
+                (0, a.jsx)(N.Z, {
                     buffers: e,
                     value: null != r ? r : 0,
                     onDrag: o,
                     onDragEnd: s,
                     onDragStart: l,
-                    type: R.Z.Types.DURATION,
+                    type: N.Z.Types.DURATION,
                     ref: this.setDurationRef
                 }),
                 (0, a.jsx)('div', {
                     className: b.flex,
-                    children: (0, a.jsx)(T.Z, {
+                    children: (0, a.jsx)(R.Z, {
                         ref: this.setVolumeButtonRef,
                         muted: i,
                         value: f,
                         minValue: 0,
                         maxValue: 1,
                         currentWindow: window,
-                        onValueChange: e => o(e, R.Z.Types.VOLUME),
+                        onValueChange: e => o(e, N.Z.Types.VOLUME),
                         onToggleMute: u,
                         onVolumeShow: c,
                         onVolumeHide: _,
@@ -327,7 +327,7 @@ class Z {
         throw Error('uhoh');
     }
     sendEvent() {
-        this.analyticsEnabled && A.default.track(C.rMx.MEDIA_PLAY_FINISHED, {
+        this.analyticsEnabled && T.default.track(C.rMx.MEDIA_PLAY_FINISHED, {
             play_time_sec: this.playTimeSec,
             play_wall_time_ms: this.playWallTimeMs,
             first_play_waiting_ms: this.firstPlayWaitingMs,
@@ -502,16 +502,16 @@ class Y extends (i = o.PureComponent) {
         if (null == c)
             return;
         a && !t.playing ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && (null == d || d.pop(a))) : !a && t.playing && (c.pause(), null == d || d.pop(a), null == n || n());
-        let _ = (0, O.fn)(c.parentNode, c);
-        o && !t.fullscreen && null != _ ? ((0, O.Dj)(_), _.addEventListener(O.NO, this.handleFullScreenExit)) : !o && t.fullscreen && null != _ && (_.removeEventListener(O.NO, this.handleFullScreenExit), (0, O.Pr)(_)), l === R.Z.Types.DURATION && t.dragging !== R.Z.Types.DURATION && a ? c.pause() : l !== R.Z.Types.DURATION && t.dragging === R.Z.Types.DURATION && a && c.play(), s !== t.muted && (c.muted = s, null == i || i(s)), u !== t.volume && (c.volume = u, null == r || r(u));
+        let _ = (0, A.fn)(c.parentNode, c);
+        o && !t.fullscreen && null != _ ? ((0, A.Dj)(_), _.addEventListener(A.NO, this.handleFullScreenExit)) : !o && t.fullscreen && null != _ && (_.removeEventListener(A.NO, this.handleFullScreenExit), (0, A.Pr)(_)), l === N.Z.Types.DURATION && t.dragging !== N.Z.Types.DURATION && a ? c.pause() : l !== N.Z.Types.DURATION && t.dragging === N.Z.Types.DURATION && a && c.play(), s !== t.muted && (c.muted = s, null == i || i(s)), u !== t.volume && (c.volume = u, null == r || r(u));
     }
     componentWillUnmount() {
         this._unmounted = !0;
         let {current: e} = this.mediaRef;
         if (null == e)
             return;
-        let t = (0, O.fn)(e.parentNode, e);
-        null != t && (t.removeEventListener(O.NO, this.handleFullScreenExit), (0, O.Pr)(t));
+        let t = (0, A.fn)(e.parentNode, e);
+        null != t && (t.removeEventListener(A.NO, this.handleFullScreenExit), (0, A.Pr)(t));
     }
     play() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0], {
@@ -529,7 +529,7 @@ class Y extends (i = o.PureComponent) {
                 let e = r();
                 e !== this.state.muted && (i.muted = e, a.muted = e);
             }
-            this.setState(a), i.play(), null == t || t(e, i.currentTime * N.Z.Millis.SECOND, i.duration * N.Z.Millis.SECOND);
+            this.setState(a), i.play(), null == t || t(e, i.currentTime * g.Z.Millis.SECOND, i.duration * g.Z.Millis.SECOND);
         }
     }
     getWidth() {
@@ -570,7 +570,7 @@ class Y extends (i = o.PureComponent) {
                 playing: s,
                 fullscreen: l
             } = this.state, u = this.getWidth(), c = this.getHeight();
-        return n ? (0, a.jsx)(S.Z, {
+        return n ? (0, a.jsx)(I.Z, {
             className: L.video,
             controls: !1,
             height: c,
@@ -580,7 +580,7 @@ class Y extends (i = o.PureComponent) {
             mediaLayoutType: o,
             playsInline: !0,
             autoPlay: s
-        }) : (0, a.jsx)(S.Z, {
+        }) : (0, a.jsx)(I.Z, {
             className: L.video,
             controls: !1,
             playsInline: !0,
@@ -638,16 +638,16 @@ class Y extends (i = o.PureComponent) {
                     hideControls: E,
                     muted: h,
                     playing: p,
-                    fullscreen: I,
-                    volume: T,
-                    dragging: g
+                    fullscreen: m,
+                    volume: I,
+                    dragging: T
                 }
-            } = this, S = this.getWidth();
+            } = this, g = this.getWidth();
         return _ || n || t === w.AUDIO ? (0, a.jsx)(B, {
             buffers: u,
             currentTime: c,
             duration: d,
-            volume: (0, v.P)(T, 1),
+            volume: (0, S.P)(I, 1),
             hide: t === w.VIDEO && E,
             muted: h,
             autoPlay: n,
@@ -662,10 +662,10 @@ class Y extends (i = o.PureComponent) {
             onControlsShow: l,
             onControlsHide: s,
             playing: p,
-            dragging: g,
+            dragging: T,
             type: t,
             ref: this.controlsRef,
-            width: I ? window.screen.width : S,
+            width: m ? window.screen.width : g,
             disabled: !r,
             children: t === w.VIDEO ? (0, a.jsx)(f.Z, {
                 'aria-label': D.Z.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
@@ -673,9 +673,9 @@ class Y extends (i = o.PureComponent) {
                 iconClassName: L.controlIcon,
                 guestWindow: window,
                 onClick: this.toggleFullscreen,
-                node: (0, O.fn)(null == e ? void 0 : e.parentNode, e)
+                node: (0, A.fn)(null == e ? void 0 : e.parentNode, e)
             }) : null
-        }) : (0, a.jsx)(m.Z, {
+        }) : (0, a.jsx)(v.Z, {
             onPlay: this.handleVideoClick,
             inactive: !r
         });
@@ -744,7 +744,7 @@ class Y extends (i = o.PureComponent) {
                     this.renderVideo(),
                     (0, a.jsx)('div', {
                         className: L.playCenter,
-                        children: (0, a.jsx)(I.Z, {
+                        children: (0, a.jsx)(O.Z, {
                             className: L.__invalid_playButton,
                             externalURL: n,
                             renderLinkComponent: o
@@ -779,8 +779,8 @@ class Y extends (i = o.PureComponent) {
             let {current: e} = this.mediaRef;
             if (null == e)
                 return;
-            let t = (0, O.fn)(e.parentNode, e);
-            (null == t || !(0, O.rB)(t)) && this.setState({ fullscreen: !1 });
+            let t = (0, A.fn)(e.parentNode, e);
+            (null == t || !(0, A.rB)(t)) && this.setState({ fullscreen: !1 });
         }), M(this, 'toggleFullscreen', () => {
             let e = !this.state.fullscreen;
             this.setState({ fullscreen: e });
@@ -799,10 +799,10 @@ class Y extends (i = o.PureComponent) {
                 e.duration > 0 && this.updateValue(e.currentTime / e.duration), this.updateTime(e.currentTime, e.duration), this.updateControlsVisibility(), requestAnimationFrame(this.handleUIUpdate);
         }), M(this, 'handleDrag', (e, t) => {
             let {current: n} = this.mediaRef;
-            if (t === R.Z.Types.DURATION)
+            if (t === N.Z.Types.DURATION)
                 null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
-            else if (t === R.Z.Types.VOLUME) {
-                let t = (0, v.A)(e, 1);
+            else if (t === N.Z.Types.VOLUME) {
+                let t = (0, S.A)(e, 1);
                 0 === t ? this.setState({
                     muted: !0,
                     volume: t

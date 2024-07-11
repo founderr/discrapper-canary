@@ -3,8 +3,8 @@ n.d(t, {
         return T;
     }
 }), n(47120);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(442837), o = n(481060), c = n(503438), u = n(594174), d = n(672938), h = n(936195), p = n(727218), _ = n(602623), f = n(81063), m = n(768581), g = n(823379), C = n(51144), I = n(604972);
-let E = _.u.SIZE_24;
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(442837), o = n(481060), c = n(503438), u = n(39628), d = n(884338), h = n(594174), p = n(936195), _ = n(727218), f = n(81063), m = n(768581), g = n(823379), C = n(51144), I = n(604972);
+let E = d.u.SIZE_24;
 function N(e) {
     var t, n;
     let {
@@ -74,7 +74,7 @@ function x(e) {
             children: r
         });
     }
-    return (0, i.jsx)(p.Z, {
+    return (0, i.jsx)(_.Z, {
         title: a,
         className: I.header,
         children: s
@@ -86,7 +86,7 @@ function S(e) {
             user: n,
             onOpenSpotifyArtist: l
         } = e, r = null == t ? void 0 : t.details, s = null == t ? void 0 : t.state, o = r;
-    return (null != t && (0, c.Z)(t) && null != s && (o = [(0, i.jsx)(h.Z, {
+    return (null != t && (0, c.Z)(t) && null != s && (o = [(0, i.jsx)(p.Z, {
             artists: s,
             linkClassName: I.bodyLink,
             canOpen: null != t.sync_id,
@@ -116,7 +116,7 @@ function Z(e) {
         start: l,
         end: r
     } = n;
-    return (0, i.jsx)(d.Z, {
+    return (0, i.jsx)(u.Z, {
         start: l,
         end: r,
         className: I.timeBar,
@@ -130,20 +130,20 @@ function T(e) {
             embeddedApp: n,
             user: r,
             channel: a,
-            sortedVoiceStates: d,
-            onOpenSpotifyTrack: h,
-            onOpenSpotifyArtist: p,
+            sortedVoiceStates: u,
+            onOpenSpotifyTrack: p,
+            onOpenSpotifyArtist: _,
             onOpenSpotifyAlbum: f
         } = e, m = [];
-    null != n ? m = Array.from(n.embeddedActivity.userIds) : (0, c.Z)(t) && null != d && (m = d.map(e => e.user.id));
-    let T = (0, s.Wu)([u.default], () => m.map(e => u.default.getUser(e)).filter(g.lm)), L = null != n || (0, c.Z)(t), A = l.useMemo(() => {
+    null != n ? m = Array.from(n.embeddedActivity.userIds) : (0, c.Z)(t) && null != u && (m = u.map(e => e.user.id));
+    let T = (0, s.Wu)([h.default], () => m.map(e => h.default.getUser(e)).filter(g.lm)), L = null != n || (0, c.Z)(t), A = l.useMemo(() => {
             let e = new Map();
-            return L && null != d && d.forEach(t => {
+            return L && null != u && u.forEach(t => {
                 let n = t.member;
                 null != n && e.set(t.user.id, n);
             }), e;
         }, [
-            d,
+            u,
             L
         ]);
     return L ? (0, i.jsxs)('div', {
@@ -164,15 +164,15 @@ function T(e) {
                             (0, i.jsx)(x, {
                                 activity: t,
                                 embeddedApp: n,
-                                onOpenSpotifyTrack: h
+                                onOpenSpotifyTrack: p
                             }),
                             (0, i.jsx)(S, {
                                 activity: t,
                                 user: r,
-                                onOpenSpotifyArtist: p
+                                onOpenSpotifyArtist: _
                             }),
                             (0, i.jsx)(v, { activity: t }),
-                            m.length > 0 && (0, i.jsx)(_.Z, {
+                            m.length > 0 && (0, i.jsx)(d.Z, {
                                 className: I.usersSummary,
                                 guildId: a.guild_id,
                                 users: T,
