@@ -500,10 +500,10 @@ function eI(e) {
             });
         }(t, r);
     if (c)
-        !function (e, t) {
+        return function (e, t) {
             var n;
             let r = N.r.build(e.config).defaultReward.messages.nameWithArticle, i = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, a = ee(e.config), {targetMinutes: o} = null != t ? t : eC(e), s = e.config.messages.gameTitle;
-            null != a ? i ? C.Z.Messages.QUEST_REWARD_MULTIPLATFORM_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
+            return null != a ? i ? C.Z.Messages.QUEST_REWARD_MULTIPLATFORM_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
                 gameTitle: s,
                 reward: r,
                 streamingDurationRequirement: eC(e).targetMinutes,
@@ -522,7 +522,7 @@ function eI(e) {
                 rewardNameWithArticle: r
             });
         }(t, r);
-    else if (eL(t))
+    if (eL(t))
         return function (e, t) {
             let n = N.r.build(e.config).defaultReward.messages.nameWithArticle, r = ee(e.config), {targetMinutes: i} = null != t ? t : eC(e), a = e.config.messages.gameTitle;
             return null != r ? C.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
