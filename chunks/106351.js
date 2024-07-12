@@ -272,6 +272,12 @@ let a = {
         12,
         13
     ]),
+    ACTIVITY_LAUNCHABLE: new Set([
+        0,
+        1,
+        2,
+        3
+    ]),
     ALL: new Set([
         0,
         1,
