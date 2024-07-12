@@ -172,7 +172,8 @@ function m() {
                                 let n = [...s], a = s[t];
                                 return a.start = +e.target.value, n[t] = a, n;
                             });
-                        }
+                        },
+                        contentEditable: !0
                     }),
                     (0, n.jsx)('label', { children: 'Duration' }),
                     (0, n.jsx)('input', {
@@ -184,7 +185,8 @@ function m() {
                                 let n = [...s], a = s[t];
                                 return a.duration = +e.target.value, n[t] = a, n;
                             });
-                        }
+                        },
+                        contentEditable: !0
                     }),
                     (0, n.jsx)('label', { children: 'Loop' }),
                     (0, n.jsx)('input', {
@@ -210,7 +212,8 @@ function m() {
                                         let n = [...s], a = s[t];
                                         return a.loopDelay = +e.target.value, n[t] = a, n;
                                     });
-                                }
+                                },
+                                contentEditable: !0
                             })
                         ]
                     }),
@@ -225,7 +228,8 @@ function m() {
                                 let n = [...s], a = s[t];
                                 return a.zIndex = +e.target.value, n[t] = a, n;
                             });
-                        }
+                        },
+                        contentEditable: !0
                     })
                 ]
             }, t)),
