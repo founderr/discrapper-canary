@@ -194,8 +194,8 @@ function y(e) {
                             })
                         }),
                         J && (0, r.jsx)(g.Z, {
-                            isHovering: ei,
-                            className: v.reactReplyBar
+                            isVisible: ei,
+                            isExpandable: en
                         }),
                         $ && (0, r.jsx)(T.Z, {
                             isVisible: ei,

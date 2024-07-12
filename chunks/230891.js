@@ -7,7 +7,6 @@ e.exports = {
     fullSize: 'fullSize_d0a252',
     panel: 'panel_d0a252',
     visibleContainer: 'visibleContainer_d0a252',
-    reactReplyBar: 'reactReplyBar_d0a252',
     statusBubble: 'statusBubble_d0a252',
     statusBubbleCopyStatusCursor: 'statusBubbleCopyStatusCursor_d0a252',
     statusBubbleOuterAddStatusCursor: 'statusBubbleOuterAddStatusCursor_d0a252',
