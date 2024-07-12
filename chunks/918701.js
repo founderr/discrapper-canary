@@ -4,19 +4,19 @@ n.d(t, {
         return ep;
     },
     $J: function () {
-        return eU;
+        return eP;
     },
     AV: function () {
         return $;
     },
     Bz: function () {
-        return ex;
+        return ew;
     },
     CE: function () {
         return U;
     },
     FE: function () {
-        return eS;
+        return eg;
     },
     GN: function () {
         return J;
@@ -67,13 +67,13 @@ n.d(t, {
         return q;
     },
     b7: function () {
-        return eM;
+        return eb;
     },
     dl: function () {
         return em;
     },
     f2: function () {
-        return eA;
+        return eS;
     },
     gI: function () {
         return eG;
@@ -85,7 +85,7 @@ n.d(t, {
         return x;
     },
     il: function () {
-        return eb;
+        return eL;
     },
     j8: function () {
         return Y;
@@ -104,9 +104,6 @@ n.d(t, {
     },
     oo: function () {
         return eE;
-    },
-    pG: function () {
-        return eg;
     },
     ph: function () {
         return j;
@@ -476,180 +473,7 @@ function eT(e) {
     let r = t.config.rewardsConfig.rewards[n];
     return (0, o.EQ)(r).with({ tag: u.w.REWARD_CODE }, e => e).with({ type: u.w.REWARD_CODE }, e => e).otherwise(() => null);
 }
-function eg(e) {
-    let {
-            quest: t,
-            useV2Variants: n = !1,
-            taskDetails: r,
-            thirdPartyTaskDetails: i,
-            expiryDate: a
-        } = e, o = t.config.messages.gameTitle, s = O.r.build(t.config).defaultReward.messages.nameWithArticle, {targetMinutes: l} = r, u = eI(t, C.S7.IN_HOUSE_CONSOLE_QUEST), c = en(t.config), d = eU(t) && ep(t);
-    if (u && null != c)
-        return function (e, t, n) {
-            var r;
-            let i = O.r.build(e.config).defaultReward.messages.nameWithArticle, a = (null === (r = e.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null, o = en(e.config), {targetMinutes: s} = null != t ? t : eb(e);
-            return a ? null != n ? D.Z.Messages.QUEST_REWARD_WITH_EXPIRATION_WITH_EXPIRY_DATE.format({
-                reward: i,
-                duration: o,
-                expiryDate: n
-            }) : D.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
-                reward: i,
-                duration: o
-            }) : null != n ? D.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_ANY_GAME_ON_CONNECTED_CONSOLE_WITH_EXPIRY_DATE.format({
-                targetMinutes: s,
-                rewardNameWithArticle: i,
-                duration: o,
-                expiryDate: n
-            }) : D.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_ANY_GAME_ON_CONNECTED_CONSOLE.format({
-                targetMinutes: s,
-                rewardNameWithArticle: i,
-                duration: o
-            });
-        }(t, r, a);
-    if (d)
-        return function (e, t, n) {
-            var r;
-            let i = O.r.build(e.config).defaultReward.messages.nameWithArticle, a = (null === (r = e.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null, o = en(e.config), {targetMinutes: s} = null != t ? t : eb(e), l = e.config.messages.gameTitle, u = () => {
-                    _.Z.open(y.oAB.CONNECTIONS);
-                };
-            if (null != o)
-                return a ? null != n ? D.Z.Messages.QUEST_REWARD_MULTIPLATFORM_WITH_EXPIRING_COLLECTIBLE_REWARD_WITH_EXPIRY_DATE.format({
-                    gameTitle: l,
-                    reward: i,
-                    streamingDurationRequirement: eb(e).targetMinutes,
-                    onClick: u,
-                    duration: o,
-                    expiryDate: n
-                }) : D.Z.Messages.QUEST_REWARD_MULTIPLATFORM_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-                    gameTitle: l,
-                    reward: i,
-                    streamingDurationRequirement: eb(e).targetMinutes,
-                    onClick: u,
-                    duration: o
-                }) : null != n ? D.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD_WITH_EXPIRY_DATE.format({
-                    gameTitle: l,
-                    targetMinutes: s,
-                    rewardNameWithArticle: i,
-                    duration: o,
-                    expiryDate: n
-                }) : D.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-                    gameTitle: l,
-                    targetMinutes: s,
-                    rewardNameWithArticle: i,
-                    duration: o
-                });
-            return null != n ? D.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRY_DATE.format({
-                gameTitle: l,
-                targetMinutes: s,
-                rewardNameWithArticle: i,
-                expiryDate: n
-            }) : D.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME.format({
-                gameTitle: l,
-                targetMinutes: s,
-                rewardNameWithArticle: i
-            });
-        }(t, r, a);
-    if (eU(t))
-        return function (e, t, n) {
-            let r = O.r.build(e.config).defaultReward.messages.nameWithArticle, i = en(e.config), {targetMinutes: a} = null != t ? t : eb(e), o = e.config.messages.gameTitle;
-            return null != i ? null != n ? D.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD_WITH_EXPIRY_DATE.format({
-                gameTitle: o,
-                targetMinutes: a,
-                rewardNameWithArticle: r,
-                duration: i,
-                expiryDate: n
-            }) : D.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-                gameTitle: o,
-                targetMinutes: a,
-                rewardNameWithArticle: r,
-                duration: i
-            }) : null != n ? D.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRY_DATE.format({
-                gameTitle: o,
-                targetMinutes: a,
-                rewardNameWithArticle: r,
-                expiryDate: n
-            }) : D.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME.format({
-                gameTitle: o,
-                targetMinutes: a,
-                rewardNameWithArticle: r
-            });
-        }(t, r, a);
-    else if (ep(t))
-        return function (e, t, n) {
-            let r = O.r.build(e.config).defaultReward.messages.nameWithArticle, i = en(e.config), {targetMinutes: a} = null != t ? t : eb(e), o = e.config.messages.gameTitle;
-            return null != i ? null != n ? D.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD_WITH_EXPIRY_DATE.format({
-                gameTitle: o,
-                streamingDurationRequirement: a,
-                rewardNameWithArticle: r,
-                duration: i,
-                expiryDate: n
-            }) : D.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-                gameTitle: o,
-                streamingDurationRequirement: a,
-                rewardNameWithArticle: r,
-                duration: i
-            }) : null != n ? D.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRY_DATE.format({
-                gameTitle: o,
-                questReward: r,
-                streamingDurationRequirement: a,
-                expiryDate: n
-            }) : D.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD.format({
-                gameTitle: o,
-                questReward: r,
-                streamingDurationRequirement: a
-            });
-        }(t, r, a);
-    else if (eE({ quest: t }))
-        return function (e, t, n, r) {
-            let {targetMinutes: i} = null != n ? n : eb(t), a = t.config.messages.gameTitle;
-            return e ? null != r ? D.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2_WITH_EXPIRY_DATE.format({
-                gameTitle: a,
-                streamingDurationRequirement: i,
-                expiryDate: r
-            }) : D.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2.format({
-                gameTitle: a,
-                streamingDurationRequirement: i
-            }) : null != r ? D.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_WITH_EXPIRY_DATE.format({
-                gameTitle: a,
-                streamingDurationRequirement: i,
-                expiryDate: r
-            }) : D.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED.format({
-                gameTitle: a,
-                streamingDurationRequirement: i
-            });
-        }(n, t, r, a);
-    return null != i ? i.description : null != c ? null != a ? D.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD_WITH_EXPIRY_DATE.format({
-        gameTitle: o,
-        streamingDurationRequirement: l,
-        questReward: s,
-        duration: c,
-        expiryDate: a
-    }) : D.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-        gameTitle: o,
-        streamingDurationRequirement: l,
-        questReward: s,
-        duration: c
-    }) : n ? null != a ? D.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2_WITH_EXPIRY_DATE.format({
-        gameTitle: o,
-        questReward: s,
-        streamingDurationRequirement: l,
-        expiryDate: a
-    }) : D.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2.format({
-        gameTitle: o,
-        questReward: s,
-        streamingDurationRequirement: l
-    }) : null != a ? D.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRY_DATE.format({
-        gameTitle: o,
-        questReward: s,
-        streamingDurationRequirement: l,
-        expiryDate: a
-    }) : D.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
-        gameTitle: o,
-        questReward: s,
-        streamingDurationRequirement: l
-    });
-}
-function eS(e, t) {
+function eg(e, t) {
     let n = O.r.build(e.config).application.link;
     (0, T.q)({
         href: n,
@@ -663,28 +487,28 @@ function eS(e, t) {
         }
     });
 }
-let eA = (e, t) => {
+let eS = (e, t) => {
         (0, S._3)({
             questId: e,
             questContent: t.content,
             questContentCTA: t.ctaContent,
             questContentPosition: t.position
         }), (0, h.JG)(z(e));
-    }, eN = (e, t) => e > 0 ? (0, a.floor)(Math.min(t / e, 1), 4) : 0, ev = e => ex(e) || N.Z.isProgressingOnDesktop(e.id), eO = (e, t) => {
+    }, eA = (e, t) => e > 0 ? (0, a.floor)(Math.min(t / e, 1), 4) : 0, eN = e => ew(e) || N.Z.isProgressingOnDesktop(e.id), ev = (e, t) => {
         var n, r, i, o;
         let s = null === (o = e.userStatus) || void 0 === o ? void 0 : null === (i = o.progress) || void 0 === i ? void 0 : null === (r = i[t.eventName]) || void 0 === r ? void 0 : null === (n = r.heartbeat) || void 0 === n ? void 0 : n.lastBeatAt;
-        if (null == s || !ev(e))
+        if (null == s || !eN(e))
             return 0;
         let l = Date.now() - new Date(s).valueOf();
         return (0, a.floor)(l / p.Z.Millis.SECOND, 2);
-    }, eR = (e, t) => {
+    }, eO = (e, t) => {
         var n, r, i;
         let o = t.target, s = e.userStatus;
         if ((null == s ? void 0 : s.completedAt) != null)
             return o;
-        let l = null == s ? void 0 : null === (n = s.progress) || void 0 === n ? void 0 : n[t.eventName], u = null !== (i = null !== (r = null == l ? void 0 : l.value) && void 0 !== r ? r : null == s ? void 0 : s.streamProgressSeconds) && void 0 !== i ? i : 0, c = eO(e, t), d = Math.min(0.99 * o, u + c);
+        let l = null == s ? void 0 : null === (n = s.progress) || void 0 === n ? void 0 : n[t.eventName], u = null !== (i = null !== (r = null == l ? void 0 : l.value) && void 0 !== r ? r : null == s ? void 0 : s.streamProgressSeconds) && void 0 !== i ? i : 0, c = ev(e, t), d = Math.min(0.99 * o, u + c);
         return (0, a.floor)(d, 2);
-    }, eC = e => {
+    }, eR = e => {
         var t, n;
         let {
                 quest: r,
@@ -696,15 +520,15 @@ let eA = (e, t) => {
         let l = null != i ? i : null === (t = Object.values(o.tasks).filter(e => a.has(e.eventName))[0]) || void 0 === t ? void 0 : t.eventName, u = null !== (n = o.tasks[l]) && void 0 !== n ? n : o.tasks[s.X.STREAM_ON_DESKTOP];
         if (null == u)
             throw Error('No task with type '.concat(i, ' found for quest ').concat(r.id, '!'));
-        let d = u.target, _ = eR(r, u);
+        let d = u.target, _ = eO(r, u);
         return {
             progressSeconds: _,
             targetSeconds: d,
             targetMinutes: Math.round(d / p.Z.Seconds.MINUTE),
-            percentComplete: eN(d, _),
+            percentComplete: eA(d, _),
             taskType: l
         };
-    }, ey = e => s.T.ALL.has(e) ? e : null, eD = e => {
+    }, eC = e => s.T.ALL.has(e) ? e : null, ey = e => {
         var t, n;
         let {
             quest: r,
@@ -722,52 +546,52 @@ let eA = (e, t) => {
                 else
                     return 1;
             }).filter(I.lm)) {
-            let t = ey(e.eventName);
+            let t = eC(e.eventName);
             if (null != t) {
                 if (null == i ? void 0 : i.has(t))
-                    return eC({
+                    return eR({
                         quest: r,
                         taskType: t,
                         includeTaskTypes: i
                     });
             }
         }
-        return eC({
+        return eR({
             quest: r,
             includeTaskTypes: i
         });
-    }, eL = e => {
+    }, eD = e => {
         var t, n;
         let r = null !== (n = null === (t = e.userStatus) || void 0 === t ? void 0 : t.streamProgressSeconds) && void 0 !== n ? n : 0, i = Math.round(e.config.streamDurationRequirementMinutes * p.Z.Seconds.MINUTE);
         return {
             progressSeconds: r,
             targetSeconds: i,
             targetMinutes: e.config.streamDurationRequirementMinutes,
-            percentComplete: eN(i, r),
+            percentComplete: eA(i, r),
             taskType: s.X.STREAM_ON_DESKTOP
         };
-    }, eb = (e, t) => (0, o.EQ)(e).with({ config: { configVersion: 1 } }, eL).with({ config: { configVersion: 2 } }, e => e.config.taskConfig.type !== c.L.FIRST_PARTY ? {
+    }, eL = (e, t) => (0, o.EQ)(e).with({ config: { configVersion: 1 } }, eD).with({ config: { configVersion: 2 } }, e => e.config.taskConfig.type !== c.L.FIRST_PARTY ? {
         progressSeconds: 0,
         targetSeconds: 1,
         targetMinutes: 1,
         percentComplete: 0,
         taskType: s.X.STREAM_ON_DESKTOP
-    } : eP(e) ? eD({
+    } : eM(e) ? ey({
         quest: e,
-        includeTaskTypes: null != t ? t : ex(e) ? s.T.CONSOLE : s.T.ALL
-    }) : ep(e) ? eC({
+        includeTaskTypes: null != t ? t : ew(e) ? s.T.CONSOLE : s.T.ALL
+    }) : ep(e) ? eR({
         quest: e,
         taskType: s.X.PLAY_ON_DESKTOP
-    }) : eC({
+    }) : eR({
         quest: e,
         taskType: s.X.STREAM_ON_DESKTOP
     })).exhaustive();
-function eM(e) {
+function eb(e) {
     return (0, o.EQ)(e.config).with({ configVersion: 1 }, e => null).with({ configVersion: 2 }, t => {
         var n, r, i, a;
         if (t.taskConfig.type !== c.L.THIRD_PARTY || 0 === Object.keys(t.taskConfig.tasks).length)
             return null;
-        let o = Object.keys(t.taskConfig.tasks)[0], s = t.taskConfig.tasks[o], l = null !== (a = null === (i = e.userStatus) || void 0 === i ? void 0 : null === (r = i.progress) || void 0 === r ? void 0 : null === (n = r[o]) || void 0 === n ? void 0 : n.value) && void 0 !== a ? a : 0, u = eN(s.target, l);
+        let o = Object.keys(t.taskConfig.tasks)[0], s = t.taskConfig.tasks[o], l = null !== (a = null === (i = e.userStatus) || void 0 === i ? void 0 : null === (r = i.progress) || void 0 === r ? void 0 : null === (n = r[o]) || void 0 === n ? void 0 : n.value) && void 0 !== a ? a : 0, u = eA(s.target, l);
         return {
             title: s.title,
             description: s.description,
@@ -777,17 +601,20 @@ function eM(e) {
         };
     }).exhaustive();
 }
-let eP = (r = [
+let eM = (r = [
         s.X.PLAY_ON_XBOX,
         s.X.PLAY_ON_PLAYSTATION
-    ], e => r.some(t => null != e.config.taskConfig.tasks[t])), eU = e => (0, o.EQ)(e).with({ config: { configVersion: 1 } }, () => !1).with({ config: { configVersion: 2 } }, eP).exhaustive(), ew = (e, t) => {
+    ], e => r.some(t => null != e.config.taskConfig.tasks[t])), eP = e => (0, o.EQ)(e).with({ config: { configVersion: 1 } }, () => !1).with({ config: { configVersion: 2 } }, eM).exhaustive(), eU = (e, t) => {
         var n, r;
         let i = null == e ? void 0 : null === (r = e.progress[t]) || void 0 === r ? void 0 : null === (n = r.heartbeat) || void 0 === n ? void 0 : n.expiresAt;
         if (null == i)
             return !1;
         let a = new Date(i).valueOf();
         return !isNaN(a) && a > Date.now();
-    }, ex = e => (0, o.EQ)(e).with({ config: { configVersion: 1 } }, () => !1).with({ config: { configVersion: 2 } }, e => null != e.userStatus && (ew(e.userStatus, s.X.PLAY_ON_XBOX) || ew(e.userStatus, s.X.PLAY_ON_PLAYSTATION))).exhaustive();
+    }, ew = e => (0, o.EQ)(e).with({ config: { configVersion: 1 } }, () => !1).with({ config: { configVersion: 2 } }, e => null != e.userStatus && (eU(e.userStatus, s.X.PLAY_ON_XBOX) || eU(e.userStatus, s.X.PLAY_ON_PLAYSTATION))).exhaustive();
+function ex() {
+    _.Z.open(y.oAB.CONNECTIONS);
+}
 function eG(e, t) {
     let {
         quest: n,
@@ -798,7 +625,7 @@ function eG(e, t) {
         questContent: t.content,
         questContentPosition: t.position,
         questContentCTA: t.ctaContent
-    }), !r && _.Z.open(y.oAB.CONNECTIONS), d.Z.dispatch({
+    }), !r && ex(), d.Z.dispatch({
         type: 'CONNECTIONS_GRID_MODAL_SHOW',
         onComplete: e => (0, f.Z)({ platformType: e }),
         includedPlatformTypes: new Set([
@@ -814,8 +641,7 @@ function ek(e, t) {
         questContent: t.content,
         questContentPosition: t.position,
         questContentCTA: t.ctaContent
-    });
-    _.Z.open(y.oAB.CONNECTIONS);
+    }), ex();
 }
 function eB() {
     return window.location.pathname.startsWith(y.Z5c.QUEST_HOME);

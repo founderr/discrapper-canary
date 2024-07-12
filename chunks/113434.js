@@ -23,6 +23,9 @@ n.d(t, {
     Rf: function () {
         return U;
     },
+    _s: function () {
+        return j;
+    },
     bA: function () {
         return y;
     },
@@ -46,6 +49,9 @@ n.d(t, {
     },
     tP: function () {
         return L;
+    },
+    uA: function () {
+        return x;
     },
     z: function () {
         return P;
@@ -217,36 +223,47 @@ let U = e => {
 function w(e) {
     return s.useMemo(() => (0, I.b7)(e), [e]);
 }
-let x = (e, t, n, r) => () => {
-    r ? (0, I.gI)({
-        quest: e,
-        showInline: (0, T.i)({ location: t })
-    }, {
-        content: n,
-        ctaContent: f.jZ.CONNECT_CONSOLE_LINK
-    }) : (0, I.V$)({ quest: e }, {
-        content: n,
-        ctaContent: f.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
-    });
+let x = e => {
+    let {
+            quest: t,
+            location: n,
+            questContent: r
+        } = e, i = j({ quest: t });
+    return () => {
+        i ? (0, I.gI)({
+            quest: t,
+            showInline: (0, T.i)({ location: n })
+        }, {
+            content: r,
+            ctaContent: f.jZ.CONNECT_CONSOLE_LINK
+        }) : (0, I.V$)({ quest: t }, {
+            content: r,
+            ctaContent: f.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
+        });
+    };
 };
-function G(e, t, n, r) {
-    let {targetMinutes: i} = U(e), a = w(e);
+function G(e, t, n) {
+    let {targetMinutes: r} = U(e), i = w(e), a = x({
+            quest: e,
+            location: t,
+            questContent: n
+        });
     if ((0, I.zK)(e, N.S7.IN_HOUSE_CONSOLE_QUEST))
         return O.Z.Messages.QUESTS_IN_HOUSE_TASK_WITH_LINK.format({
-            minutes: i,
-            onClick: x(e, t, n, r)
+            minutes: r,
+            onClick: a
         });
     if ((0, I.zK)(e, N.S7.MOBILE_CONSOLE_QUEST))
         return O.Z.Messages.QUESTS_CONSOLE_QUEST_TASK_WITH_LINK.format({
-            minutes: i,
-            onClick: x(e, t, n, r),
+            minutes: r,
+            onClick: a,
             gameTitle: A.r.build(e.config).application.name
         });
-    if (null != a)
-        return a.title;
+    if (null != i)
+        return i.title;
     let o = O.Z.Messages.QUESTS_STREAM_TASK;
     return (0, I.Nj)({ quest: e }) && (o = O.Z.Messages.QUESTS_PLAY_TASK), o.format({
-        minutes: i,
+        minutes: r,
         gameTitle: e.config.messages.gameTitle
     });
 }
@@ -341,31 +358,34 @@ function Z() {
     };
 }
 let Y = e => {
-    let {
-            questId: t,
-            preview: n,
-            beforeRequest: r,
-            afterRequest: i
-        } = e, [a, o] = s.useState([]), [l, u] = s.useState(!1);
-    return {
-        startConsoleQuest: s.useCallback(async () => {
-            if (!l) {
-                null == r || r(), u(!0);
-                try {
-                    let e = await (0, h.CS)(t, n);
-                    o(e.errorHints);
-                } finally {
-                    u(!1), null == i || i();
+        let {
+                questId: t,
+                preview: n,
+                beforeRequest: r,
+                afterRequest: i
+            } = e, [a, o] = s.useState([]), [l, u] = s.useState(!1);
+        return {
+            startConsoleQuest: s.useCallback(async () => {
+                if (!l) {
+                    null == r || r(), u(!0);
+                    try {
+                        let e = await (0, h.CS)(t, n);
+                        o(e.errorHints);
+                    } finally {
+                        u(!1), null == i || i();
+                    }
                 }
-            }
-        }, [
-            l,
-            r,
-            i,
-            n,
-            t
-        ]),
-        startingConsoleQuest: l,
-        errorHints: a
+            }, [
+                l,
+                r,
+                i,
+                n,
+                t
+            ]),
+            startingConsoleQuest: l,
+            errorHints: a
+        };
+    }, j = e => {
+        let {quest: t} = e, {xboxAndPlaystationAccounts: n} = Z(), r = P(t), i = 0 === n.length;
+        return (0, I.$J)(t) && i && !r;
     };
-};

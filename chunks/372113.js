@@ -1,4 +1,4 @@
-var i, a, s = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(481060), u = n(230711), _ = n(607070), E = n(706454), I = n(63063), m = n(930153), T = n(617136), h = n(272008), N = n(113434), f = n(569984), p = n(497505), C = n(918701), g = n(796111), S = n(566078), A = n(340100), x = n(644646), R = n(667105), O = n(87894), M = n(2660), v = n(46140), L = n(981631), Z = n(689938), P = n(817024), b = n(789002);
+var i, a, s = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(481060), u = n(230711), _ = n(607070), E = n(706454), I = n(63063), m = n(930153), T = n(617136), h = n(272008), N = n(113434), f = n(569984), p = n(497505), C = n(918701), g = n(796111), S = n(566078), A = n(340100), R = n(644646), x = n(667105), O = n(87894), M = n(2660), v = n(46140), L = n(981631), Z = n(689938), P = n(817024), b = n(789002);
 let D = (e, t, n) => (0, O.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium';
 function j(e) {
     let {
@@ -30,7 +30,7 @@ function U(e) {
     let {
             quest: t,
             useReducedMotion: n
-        } = e, i = (0, R.g2)({
+        } = e, i = (0, x.g2)({
             useReducedMotion: n,
             className: P.refreshIcon
         }), {
@@ -101,9 +101,8 @@ function y(e) {
             questContentPosition: l,
             inGiftInventory: o,
             hasConsoleTasks: u,
-            hasConsoleConnection: E,
-            waitingForConsoleConnection: I
-        } = e, m = n >= 1, N = n >= 3, p = (0, C.Bz)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([f.Z], () => f.Z.isEnrolling(t.id)), x = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), O = function (e) {
+            hasConsoleConnection: E
+        } = e, I = n >= 1, m = n >= 3, p = (0, C.Bz)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([f.Z], () => f.Z.isEnrolling(t.id)), R = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), O = (0, N._s)({ quest: t }), M = function (e) {
             let {
                     quest: t,
                     progressState: n,
@@ -113,7 +112,7 @@ function y(e) {
                     waitingForConsoleConnection: l,
                     isInHouseQuest: o,
                     inGiftInventory: c
-                } = e, d = (0, R.hf)({
+                } = e, d = (0, x.hf)({
                     quest: t,
                     location: a,
                     questContentPosition: s
@@ -194,46 +193,46 @@ function y(e) {
         }({
             progressState: n,
             quest: t,
-            isInHouseQuest: x,
+            isInHouseQuest: R,
             location: a,
             isCollectibleQuest: i,
-            waitingForConsoleConnection: I,
+            waitingForConsoleConnection: O,
             questContentPosition: l,
             inGiftInventory: o
         });
-    if (u && m && E && !p && !N && o)
+    if (u && I && E && !p && !m && o)
         return (0, s.jsx)(U, {
             quest: t,
             useReducedMotion: S
         });
-    let M = x && o && N, L = M ? P.inHouseButton : d.ButtonColors.BRAND, D = N && !S ? d.ShinyButton : d.Button;
+    let L = R && o && m, D = L ? P.inHouseButton : d.ButtonColors.BRAND, j = m && !S ? d.ShinyButton : d.Button;
     return (0, s.jsx)(d.Tooltip, {
-        text: O.tooltipText,
+        text: M.tooltipText,
         tooltipContentClassName: P.ctaTooltipText,
         children: e => {
             var t;
-            return (0, s.jsx)(D, {
+            return (0, s.jsx)(j, {
                 ...e,
                 wrapperClassName: P.ctaButtonWrapper,
-                color: L,
-                disabled: null == O.onClick,
+                color: D,
+                disabled: null == M.onClick,
                 submitting: A,
-                onClick: null !== (t = O.onClick) && void 0 !== t ? t : () => {
+                onClick: null !== (t = M.onClick) && void 0 !== t ? t : () => {
                 },
                 children: (0, s.jsxs)('div', {
                     className: P.ctaButtonInner,
                     children: [
-                        M && (0, s.jsx)('img', {
+                        L && (0, s.jsx)('img', {
                             src: b,
                             alt: '',
                             className: P.inHouseIcon
                         }),
-                        O.text
+                        M.text
                     ]
                 })
             });
         }
-    }, O.tooltipText);
+    }, M.tooltipText);
 }
 t.Z = e => {
     let {
@@ -258,7 +257,7 @@ t.Z = e => {
                 return 1;
             else
                 return 0;
-        }(t), g = f >= 1, R = f >= 3, b = f >= 4, U = (0, C.Xv)(t.config), B = (0, O.uq)(n), k = n === p.jn.QUESTS_EMBED, G = l || _, {xboxAndPlaystationAccounts: F} = (0, N.z6)(), w = (0, C.$J)(t), V = g && !b && B, H = F.length > 0, Y = g && w && !H, W = (0, N.t5)(t, v.dr.QUESTS_CARD, n, Y), z = (0, c.e7)([E.default], () => E.default.locale), K = B && U, Q = r && !R, q = (0, s.jsx)(x.Z, {
+        }(t), g = f >= 1, x = f >= 3, b = f >= 4, U = (0, C.Xv)(t.config), B = (0, O.uq)(n), k = n === p.jn.QUESTS_EMBED, G = l || _, {xboxAndPlaystationAccounts: F} = (0, N.z6)(), w = (0, C.$J)(t), V = g && !b && B, H = F.length > 0, Y = (0, N.t5)(t, v.dr.QUESTS_CARD, n), W = (0, c.e7)([E.default], () => E.default.locale), z = B && U, K = r && !x, Q = (0, s.jsx)(R.Z, {
             autoplay: a,
             className: o()(P.gridImg, {
                 [P.questRewardGiftInventory]: B && 'lg' === i,
@@ -281,9 +280,9 @@ t.Z = e => {
         'aria-hidden': !G,
         children: [
             (0, s.jsx)(d.Tooltip, {
-                text: Q ? Z.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
+                text: K ? Z.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
                 tooltipContentClassName: P.rewardTileExpirationTooltip,
-                shouldShow: Q,
+                shouldShow: K,
                 children: e => (0, s.jsxs)('div', {
                     className: P.rewardTileWrapper,
                     ...e,
@@ -292,11 +291,11 @@ t.Z = e => {
                             className: P.rewardTileExpired,
                             children: (0, s.jsx)(d.CircleExclamationPointIcon, { color: d.tokens.colors.WHITE })
                         }),
-                        K ? (0, s.jsx)(M.Z, {
+                        z ? (0, s.jsx)(M.Z, {
                             questConfig: t.config,
-                            fallback: q,
+                            fallback: Q,
                             isFocused: a
-                        }) : q
+                        }) : Q
                     ]
                 })
             }),
@@ -306,7 +305,7 @@ t.Z = e => {
                     (0, s.jsx)(d.Text, {
                         variant: D(n, i, g),
                         className: P.taskInstructions,
-                        children: r ? Z.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({ questName: t.config.messages.questName }) : W
+                        children: r ? Z.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({ questName: t.config.messages.questName }) : Y
                     }),
                     (0, s.jsx)(d.Text, {
                         variant: 'lg' === i ? 'text-sm/medium' : 'text-xs/medium',
@@ -358,7 +357,7 @@ t.Z = e => {
                         }({
                             quest: t,
                             location: n,
-                            locale: z,
+                            locale: W,
                             isQuestExpired: r
                         })
                     })
@@ -379,21 +378,20 @@ t.Z = e => {
                         },
                         children: Z.Z.Messages.QUESTS_LEARN_MORE_V2
                     }),
-                    r && !R ? null : (0, s.jsx)(y, {
+                    r && !x ? null : (0, s.jsx)(y, {
                         quest: t,
                         progressState: f,
                         isCollectibleQuest: U,
                         location: n,
                         inGiftInventory: B,
                         hasConsoleTasks: w,
-                        hasConsoleConnection: H,
-                        waitingForConsoleConnection: Y
+                        hasConsoleConnection: H
                     })
                 ]
             }),
             V && (0, s.jsx)(A.Z, {
                 className: P.gridProgressBar,
-                color: R ? d.tokens.colors.TEXT_POSITIVE : d.tokens.colors.BG_BRAND,
+                color: x ? d.tokens.colors.TEXT_POSITIVE : d.tokens.colors.BG_BRAND,
                 quest: t,
                 isInventory: B
             })

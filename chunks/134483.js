@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(780384), c = n(481060), d = n(230711), u = n(358221), _ = n(594190), E = n(687516), I = n(210887), m = n(937995), T = n(158776), h = n(594174), N = n(617136), f = n(272008), p = n(113434), C = n(569984), g = n(497505), S = n(918701), A = n(5881), x = n(566078), R = n(602667), O = n(340100), M = n(611855), v = n(644646), L = n(670638), Z = n(667105), P = n(860151), b = n(46140), D = n(981631), j = n(354459), U = n(689938), y = n(630706);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(780384), c = n(481060), d = n(230711), u = n(358221), _ = n(594190), E = n(687516), I = n(210887), m = n(937995), T = n(158776), h = n(594174), N = n(617136), f = n(272008), p = n(113434), C = n(569984), g = n(497505), S = n(918701), A = n(5881), R = n(566078), x = n(602667), O = n(340100), M = n(611855), v = n(644646), L = n(670638), Z = n(667105), P = n(860151), b = n(46140), D = n(981631), j = n(354459), U = n(689938), y = n(630706);
 t.Z = function (e) {
     var t, n, s;
     let {
@@ -39,7 +39,7 @@ t.Z = function (e) {
                 isCurrentUserStreamingQuestApplication: null != t && null != W && function (e, t, n, i) {
                     for (let s of e) {
                         var a;
-                        if (s.type === j.fO.STREAM && s.user.id === n.id && x.r.build(t.config).application.id === (null === (a = (0, E.L2)(s.stream, i)) || void 0 === a ? void 0 : a.id))
+                        if (s.type === j.fO.STREAM && s.user.id === n.id && R.r.build(t.config).application.id === (null === (a = (0, E.L2)(s.stream, i)) || void 0 === a ? void 0 : a.id))
                             return !0;
                     }
                     return !1;
@@ -50,7 +50,7 @@ t.Z = function (e) {
             B,
             W,
             k
-        ]), X = null != q ? x.r.build(q.config) : null, J = null == X ? void 0 : X.application.id, $ = (0, l.cj)([_.ZP], () => {
+        ]), X = null != q ? R.r.build(q.config) : null, J = null == X ? void 0 : X.application.id, $ = (0, l.cj)([_.ZP], () => {
             let e = _.ZP.getRunningGames().map(e => e.id);
             return (0, S.$H)(q) && e.includes(J);
         }, [
@@ -101,7 +101,7 @@ t.Z = function (e) {
             quest: q,
             questContent: g.jn.QUEST_LIVE_STREAM
         });
-    return (0, i.jsx)(R.A, {
+    return (0, i.jsx)(x.A, {
         questOrQuests: q,
         overrideVisibility: !Y,
         questContent: g.jn.QUEST_LIVE_STREAM,
@@ -180,7 +180,8 @@ t.Z = function (e) {
                                 autoplay: F,
                                 quest: q,
                                 questContent: g.jn.QUEST_LIVE_STREAM,
-                                taskDetails: eh
+                                taskDetails: eh,
+                                location: b.dr.QUEST_CHANNEL_CALL_HEADER
                             }),
                             (0, i.jsxs)('div', {
                                 className: y.ctas,

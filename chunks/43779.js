@@ -1,90 +1,92 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return m;
     }
 });
-var i = n(735250), s = n(470079), a = n(481060), r = n(113434), l = n(497505), o = n(918701), c = n(566078), d = n(472144), u = n(644646), _ = n(69439), h = n(689938), E = n(855892);
-function I(e) {
+var i = n(735250), s = n(470079), a = n(481060), r = n(113434), l = n(497505), o = n(585500), c = n(566078), d = n(472144), u = n(644646), _ = n(69439), h = n(46140), E = n(689938), I = n(855892);
+function m(e) {
     var t, n;
     let {
-            quest: I,
-            questContent: m
-        } = e, g = c.r.build(I.config).defaultReward.messages.name, p = (0, r.Rf)(I), T = p.percentComplete > 0, S = (0, r.B6)(I.config.expiresAt, {
+            quest: m,
+            questContent: g
+        } = e, p = c.r.build(m.config).defaultReward.messages.name, T = (0, r.Rf)(m), S = T.percentComplete > 0, C = (0, r.B6)(m.config.expiresAt, {
             month: '2-digit',
             day: '2-digit'
-        }), C = (0, o.pG)({
-            quest: I,
+        }), f = (0, o.D)({
+            quest: m,
+            taskDetails: T,
+            location: h.dr.QUEST_HOME_DESKTOP,
+            questContent: l.jn.QUEST_HOME_DESKTOP,
             useV2Variants: !0,
-            taskDetails: p,
-            expiryDate: S
-        }), f = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, N = (0, r.B6)(null === (n = I.userStatus) || void 0 === n ? void 0 : n.claimedAt), A = s.useCallback(() => (0, i.jsx)(a.Text, {
+            expiryDate: C
+        }), N = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, A = (0, r.B6)(null === (n = m.userStatus) || void 0 === n ? void 0 : n.claimedAt), Z = s.useCallback(() => (0, i.jsx)(a.Text, {
             variant: 'text-md/semibold',
             color: 'text-brand',
             tag: 'span',
-            className: E.header,
-            children: g
-        }), [g]), Z = s.useMemo(() => f ? A() : h.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({ rewardHook: A }), [
+            className: I.header,
+            children: p
+        }), [p]), L = s.useMemo(() => N ? Z() : E.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({ rewardHook: Z }), [
+            N,
+            Z
+        ]), v = s.useMemo(() => N ? (0, i.jsx)(a.Text, {
+            variant: 'text-sm/medium',
+            color: 'text-muted',
+            className: I.description,
+            children: E.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({ claimDate: A })
+        }) : null != f ? (0, i.jsx)(a.Text, {
+            variant: 'text-sm/medium',
+            color: 'text-muted',
+            className: I.description,
+            children: f
+        }) : null, [
+            N,
             f,
             A
-        ]), L = s.useMemo(() => f ? (0, i.jsx)(a.Text, {
-            variant: 'text-sm/medium',
-            color: 'text-muted',
-            className: E.description,
-            children: h.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({ claimDate: N })
-        }) : null != C ? (0, i.jsx)(a.Text, {
-            variant: 'text-sm/medium',
-            color: 'text-muted',
-            className: E.description,
-            children: C
-        }) : null, [
-            f,
-            C,
-            N
         ]);
     return (0, i.jsxs)('div', {
-        className: E.container,
+        className: I.container,
         children: [
             (0, i.jsxs)('div', {
-                className: E.rewardDescriptionContainer,
+                className: I.rewardDescriptionContainer,
                 children: [
-                    T && !f ? (0, i.jsx)('div', {
-                        className: E.progressWrapper,
+                    S && !N ? (0, i.jsx)('div', {
+                        className: I.progressWrapper,
                         children: (0, i.jsx)(d.Z, {
-                            quest: I,
+                            quest: m,
                             size: 76,
-                            percentComplete: p.percentComplete,
+                            percentComplete: T.percentComplete,
                             children: (0, i.jsx)('div', {
-                                className: E.circularRewardTileWrapper,
+                                className: I.circularRewardTileWrapper,
                                 children: (0, i.jsx)(u.Z, {
-                                    quest: I,
-                                    questContent: m,
-                                    className: E.circularQuestRewardTileAsset
+                                    quest: m,
+                                    questContent: g,
+                                    className: I.circularQuestRewardTileAsset
                                 })
                             })
                         })
                     }) : (0, i.jsx)(u.Z, {
-                        quest: I,
+                        quest: m,
                         questContent: l.jn.QUEST_HOME_DESKTOP,
-                        className: E.questRewardTileAsset
+                        className: I.questRewardTileAsset
                     }),
                     (0, i.jsxs)('div', {
-                        className: E.textContainer,
+                        className: I.textContainer,
                         children: [
                             (0, i.jsx)('span', {
-                                className: E.headerSpan,
+                                className: I.headerSpan,
                                 children: (0, i.jsx)(a.Text, {
                                     variant: 'text-md/semibold',
                                     color: 'header-primary',
-                                    className: E.header,
-                                    children: Z
+                                    className: I.header,
+                                    children: L
                                 })
                             }),
-                            L
+                            v
                         ]
                     })
                 ]
             }),
-            (0, i.jsx)(_.Z, { quest: I })
+            (0, i.jsx)(_.Z, { quest: m })
         ]
     });
 }

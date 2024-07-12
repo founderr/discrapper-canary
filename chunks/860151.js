@@ -1,16 +1,19 @@
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), r = n(481060), l = n(918701), o = n(644646), c = n(268167);
+var a = n(120356), s = n.n(a), r = n(481060), l = n(585500), o = n(644646), c = n(268167);
 t.Z = function (e) {
     let {
             className: t,
             autoplay: n,
             quest: a,
             questContent: d,
-            taskDetails: u
-        } = e, _ = (0, l.pG)({
+            taskDetails: u,
+            location: _
+        } = e, E = (0, l.D)({
             quest: a,
-            taskDetails: u
+            taskDetails: u,
+            location: _,
+            questContent: d
         });
     return (0, i.jsxs)('div', {
         className: s()(c.wrapper, t),
@@ -26,7 +29,7 @@ t.Z = function (e) {
                 className: c.instructions,
                 variant: 'text-sm/normal',
                 color: 'text-normal',
-                children: _
+                children: E
             })
         ]
     });
