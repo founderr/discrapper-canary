@@ -252,6 +252,7 @@ let e5 = [
             eK.Z5c.COLLECTIBLES_SHOP_FULLSCREEN,
             eK.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(':skuId'),
             eK.Z5c.GUILD_DISCOVERY,
+            eK.Z5c.QUEST_HOME,
             eK.Z5c.GLOBAL_DISCOVERY,
             eK.Z5c.GUILD_MEMBER_VERIFICATION(':guildId', ':inviteCode?'),
             eK.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(':guildId', ':inviteCode?'),
