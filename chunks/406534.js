@@ -39,131 +39,131 @@ let ee = a.memo(function (e) {
 });
 function et(e) {
     var t;
-    let n, a, r, {
-            channel: j,
-            messages: B,
-            unreadCount: et,
-            showNewMessagesBar: en,
-            messageDisplayCompact: ei,
-            channelStream: ea,
-            uploads: es,
-            scrollManager: el,
-            specs: er,
-            filterAfterTimestamp: eo,
-            showingQuarantineBanner: ec,
-            hideSummaries: ed
-        } = e, eu = R.default.getCurrentUser(), eh = () => el.isInitialized() || B.ready, ep = (0, w.$)(j), em = B.length > 0 && (null === (t = B.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(j)), e_ = (0, o.ts)(j), ef = (0, s.e7)([v.Z], () => v.Z.shouldShowTopicsBar() && !ed), eE = (0, g.P)(j.id, Q.zr), eC = (0, E.z)(j.id, Q.zr), eg = (0, U.Z)(), eI = null != eE ? eE : eC;
-    j.isDM() && null != eI ? n = eI.type === f.pj.STRANGER_DANGER ? (0, i.jsx)(I.M, {
-        channelId: j.id,
-        warningId: eI.id,
-        senderId: j.getRecipientId()
-    }) : (0, i.jsx)(C.Y, {
-        channelId: j.id,
-        warningId: eI.id,
-        senderId: j.getRecipientId()
-    }) : j.isGroupDM() && (0, x.f)({ location: 'blocked_user_banner' }) && (n = (0, i.jsx)(T.e, { channel: j }));
-    let ex = j.isForumPost() && !em ? (0, i.jsx)(h.Z, { postId: j.id }) : null, eT = (0, m.Z)(j.id);
+    let n, a, {
+            channel: r,
+            messages: j,
+            unreadCount: B,
+            showNewMessagesBar: et,
+            messageDisplayCompact: en,
+            channelStream: ei,
+            uploads: ea,
+            scrollManager: es,
+            specs: el,
+            filterAfterTimestamp: er,
+            showingQuarantineBanner: eo,
+            hideSummaries: ec
+        } = e, ed = R.default.getCurrentUser(), eu = () => es.isInitialized() || j.ready, eh = (0, w.$)(r), ep = j.length > 0 && (null === (t = j.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(r)), em = (0, o.ts)(r), e_ = (0, s.e7)([v.Z], () => v.Z.shouldShowTopicsBar() && !ec), ef = (0, g.P)(r.id, Q.zr), eE = (0, E.z)(r.id, Q.zr), eC = (0, U.Z)(), eg = function (e, t) {
+            return e.isDM() && null != t ? t.type === f.pj.STRANGER_DANGER ? (0, i.jsx)(I.M, {
+                channelId: e.id,
+                warningId: t.id,
+                senderId: e.getRecipientId()
+            }) : (0, i.jsx)(C.Y, {
+                channelId: e.id,
+                warningId: t.id,
+                senderId: e.getRecipientId()
+            }) : e.isGroupDM() && (0, x.f)({ location: 'blocked_user_banner' }) ? (0, i.jsx)(T.e, { channel: e }) : null;
+        }(r, null != ef ? ef : eE), eI = r.isForumPost() && !ep ? (0, i.jsx)(h.Z, { postId: r.id }) : null, ex = (0, m.Z)(r.id);
     (0, Y.Z)();
-    let ev = null, eN = [], eS = ea.map((e, t) => {
+    let eT = null, ev = [], eN = ei.map((e, t) => {
             if (e.type === X.ys_.DIVIDER) {
                 var n, a;
                 let s = null != e.unreadId;
-                return null != eo ? null : e.isSummaryDivider ? (0, i.jsx)(S.Z, {
+                return null != er ? null : e.isSummaryDivider ? (0, i.jsx)(S.Z, {
                     index: t,
                     item: e,
-                    channel: j,
-                    isBeforeGroup: null == e.content && $(ea[t + 1])
+                    channel: r,
+                    isBeforeGroup: null == e.content && $(ei[t + 1])
                 }) : (0, i.jsx)(V.Z, {
                     isUnread: s,
-                    isBeforeGroup: null == e.content && $(ea[t + 1]),
+                    isBeforeGroup: null == e.content && $(ei[t + 1]),
                     id: s ? q.j1 : void 0,
                     children: e.content
                 }, 'divider-'.concat(null !== (a = null !== (n = e.contentKey) && void 0 !== n ? n : e.unreadId) && void 0 !== a ? a : t));
             }
             if (e.type === X.ys_.FORUM_POST_ACTION_BAR)
                 return (0, i.jsx)(h.Z, {
-                    parentChannelId: j.parent_id,
-                    postId: j.id,
-                    isLastItem: t + 1 === ea.length,
+                    parentChannelId: r.parent_id,
+                    postId: r.id,
+                    isLastItem: t + 1 === ei.length,
                     isFirstMessage: !0
-                }, 'forum-post-action-bar-'.concat(j.id));
+                }, 'forum-post-action-bar-'.concat(r.id));
             if (e.type === X.ys_.MESSAGE_GROUP_BLOCKED || e.type === X.ys_.MESSAGE_GROUP_SPAMMER) {
                 let t;
                 return t = e.type === X.ys_.MESSAGE_GROUP_BLOCKED ? J.Z.Messages.BLOCKED_MESSAGE_COUNT : J.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, i.jsx)(G.Z, {
                     unreadId: q.j1,
                     messages: e,
-                    channel: j,
-                    compact: ei,
+                    channel: r,
+                    compact: en,
                     collapsedReason: t
                 }, e.key);
             }
-            if (null != eo && eo > e.content.timestamp.getTime() * P.Z.Millis.SECOND)
+            if (null != er && er > e.content.timestamp.getTime() * P.Z.Millis.SECOND)
                 return;
-            let s = A.Z.can(X.Plq.CREATE_INSTANT_INVITE, j);
+            let s = A.Z.can(X.Plq.CREATE_INSTANT_INVITE, r);
             if ((0, D.Z)(e.content, s))
                 return;
-            e.type === X.ys_.MESSAGE && null == ev && (ev = e);
-            let l = e.groupId === (null == ev ? void 0 : ev.groupId) ? ev.content.id : e.groupId, r = e.type === X.ys_.THREAD_STARTER_MESSAGE ? H.Ru : H.ZP;
-            return (0, i.jsx)(r, {
-                compact: ei,
-                channel: j,
+            e.type === X.ys_.MESSAGE && null == eT && (eT = e);
+            let l = e.groupId === (null == eT ? void 0 : eT.groupId) ? eT.content.id : e.groupId, o = e.type === X.ys_.THREAD_STARTER_MESSAGE ? H.Ru : H.ZP;
+            return (0, i.jsx)(o, {
+                compact: en,
+                channel: r,
                 message: e.content,
                 groupId: l,
                 flashKey: e.flashKey,
-                id: (0, y.p)(j.id, e.content.id),
-                isLastItem: t >= ea.length - 1,
-                renderContentOnly: eT
+                id: (0, y.p)(r.id, e.content.id),
+                isLastItem: t >= ei.length - 1,
+                renderContentOnly: ex
             }, e.content.id);
         });
-    eN.push(...eS);
-    let eZ = ea[ea.length - 1];
-    if (null != eu && es.forEach((e, t) => {
-            let n = 0 === t && (0, k.J)(j, eZ, new Z.ZP({
+    ev.push(...eN);
+    let eS = ei[ei.length - 1];
+    if (null != ed && ea.forEach((e, t) => {
+            let n = 0 === t && (0, k.J)(r, eS, new Z.ZP({
                 type: X.uaV.DEFAULT,
-                author: eu
+                author: ed
             }));
-            eN.push((0, i.jsx)(ee, {
+            ev.push((0, i.jsx)(ee, {
                 file: e,
-                channel: j,
-                user: eu,
+                channel: r,
+                user: ed,
                 isGroupStart: n
             }, 'upload-'.concat(e.id)));
-        }), B.hasMoreBefore && null == eo) {
-        B.length > 0 && eN.unshift((0, i.jsx)('div', {
+        }), j.hasMoreBefore && null == er) {
+        j.length > 0 && ev.unshift((0, i.jsx)('div', {
             style: {
                 height: q.D4,
                 flex: '0 0 auto'
             }
         }, 'buffer'));
         let {useReducedMotion: e} = c.Z;
-        (e && eh() || !e) && eN.unshift((0, i.jsx)(W.ZP, {
-            compact: ei,
-            ...er
+        (e && eu() || !e) && ev.unshift((0, i.jsx)(W.ZP, {
+            compact: en,
+            ...el
         }, 'has-more'));
     }
-    if ((!B.hasMoreBefore || null != eo) && eN.unshift((0, i.jsx)(u.Z, {
-            channel: j,
-            showingBanner: ec
-        }, 'empty-message')), B.hasMoreAfter && eN.push((0, i.jsx)(W.ZP, {
-            compact: ei,
-            ...er
-        }, 'has-more-after')), !ec && ep && eh() && eN.push((0, i.jsx)(z.Z, { channel: j })), et > 0 && en && eh()) {
+    if ((!j.hasMoreBefore || null != er) && ev.unshift((0, i.jsx)(u.Z, {
+            channel: r,
+            showingBanner: eo
+        }, 'empty-message')), j.hasMoreAfter && ev.push((0, i.jsx)(W.ZP, {
+            compact: en,
+            ...el
+        }, 'has-more-after')), !eo && eh && eu() && ev.push((0, i.jsx)(z.Z, { channel: r })), B > 0 && et && eu()) {
         let e, t;
-        let n = M.ZP.getOldestUnreadTimestamp(j.id), s = 0 !== n ? n : O.default.extractTimestamp(j.id), l = (0, L.KC)(new Date(), new Date(s));
-        if (M.ZP.isEstimated(j.id) ? (e = l ? J.Z.Messages.NEW_MESSAGES_ESTIMATED : J.Z.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = J.Z.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = l ? J.Z.Messages.NEW_MESSAGES : J.Z.Messages.NEW_MESSAGES_WITH_DATE, t = J.Z.Messages.NEW_MESSAGES_SUMMARIES), e_ && (0, o.tW)(j) && eg.includes(K.E.SUMMARIES)) {
-            let n = M.ZP.ackMessageId(j.id), l = (0, N.q)(j.id, M.ZP.getOldestUnreadMessageId(j.id));
+        let a = M.ZP.getOldestUnreadTimestamp(r.id), s = 0 !== a ? a : O.default.extractTimestamp(r.id), l = (0, L.KC)(new Date(), new Date(s));
+        if (M.ZP.isEstimated(r.id) ? (e = l ? J.Z.Messages.NEW_MESSAGES_ESTIMATED : J.Z.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = J.Z.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = l ? J.Z.Messages.NEW_MESSAGES : J.Z.Messages.NEW_MESSAGES_WITH_DATE, t = J.Z.Messages.NEW_MESSAGES_SUMMARIES), em && (0, o.tW)(r) && eC.includes(K.E.SUMMARIES)) {
+            let a = M.ZP.ackMessageId(r.id), l = (0, N.q)(r.id, M.ZP.getOldestUnreadMessageId(r.id));
             if ((0, d.yw)(X.rMx.SUMMARIES_UNREAD_BAR_VIEWED, {
                     num_unread_summaries: l,
-                    num_unread_messages: et,
-                    last_ack_message_id: n,
-                    summaries_enabled_by_user: ef,
-                    summaries_enabled_for_channel: (0, o.Lp)(j)
-                }), (0, o.Lp)(j)) {
-                let n = ef ? t.format({ count: et }) : e.format({
-                    count: et,
+                    num_unread_messages: B,
+                    last_ack_message_id: a,
+                    summaries_enabled_by_user: e_,
+                    summaries_enabled_for_channel: (0, o.Lp)(r)
+                }), (0, o.Lp)(r)) {
+                let a = e_ ? t.format({ count: B }) : e.format({
+                    count: B,
                     timestamp: s
                 });
-                if (ef) {
+                if (e_) {
                     let e = l > 0 ? (0, i.jsxs)('div', {
                         style: {
                             display: 'flex',
@@ -173,7 +173,7 @@ function et(e) {
                             left: '40%'
                         },
                         children: [
-                            t.format({ count: et }),
+                            t.format({ count: B }),
                             (0, i.jsx)(p.Z, {
                                 style: {
                                     paddingLeft: 8,
@@ -192,12 +192,12 @@ function et(e) {
                             position: 'absolute',
                             left: '45%'
                         },
-                        children: n
+                        children: a
                     });
-                    a = (0, i.jsx)(F.G5, {
-                        scrollManager: el,
+                    n = (0, i.jsx)(F.G5, {
+                        scrollManager: es,
                         content: e,
-                        channel: j
+                        channel: r
                     });
                 } else {
                     let e = (0, i.jsx)('div', {
@@ -208,7 +208,7 @@ function et(e) {
                         },
                         children: l > 0 ? (0, i.jsxs)(i.Fragment, {
                             children: [
-                                t.format({ count: et }),
+                                t.format({ count: B }),
                                 (0, i.jsx)(p.Z, {
                                     style: {
                                         paddingLeft: 8,
@@ -219,45 +219,45 @@ function et(e) {
                                 }),
                                 J.Z.Messages.NEW_SUMMARIES.format({ count: l })
                             ]
-                        }) : (0, i.jsx)(i.Fragment, { children: n })
+                        }) : (0, i.jsx)(i.Fragment, { children: a })
                     });
-                    a = (0, i.jsx)(F.LE, {
+                    n = (0, i.jsx)(F.LE, {
                         content: e,
-                        channelId: j.id
+                        channelId: r.id
                     });
                 }
             }
         } else
-            eg.includes(K.E.NEW_MESSAGES) && (a = (0, i.jsx)(F.LE, {
+            eC.includes(K.E.NEW_MESSAGES) && (n = (0, i.jsx)(F.LE, {
                 content: e.format({
-                    count: et,
+                    count: B,
                     timestamp: s
                 }),
-                channelId: j.id
+                channelId: r.id
             }));
     }
-    if (null == a && (0, o.Lp)(j) && ef && eg.includes(K.E.SUMMARIES) && (a = (0, i.jsx)(F.BO, {
-            channel: j,
-            scrollManager: el
-        })), B.error)
-        r = (0, i.jsx)(F.Rp, {
-            loading: B.loadingMore,
+    if (null == n && (0, o.Lp)(r) && e_ && eC.includes(K.E.SUMMARIES) && (n = (0, i.jsx)(F.BO, {
+            channel: r,
+            scrollManager: es
+        })), j.error)
+        a = (0, i.jsx)(F.Rp, {
+            loading: j.loadingMore,
             onClick: () => {
                 var e;
-                return e = j.id, void l.Z.fetchMessages({
+                return e = r.id, void l.Z.fetchMessages({
                     channelId: e,
                     limit: X.AQB,
                     truncate: !0
                 });
             }
         });
-    else if (B.hasMoreAfter && eh()) {
-        let {jumpReturnTargetId: e} = B;
-        r = B.loadingMore && B.jumpedToPresent ? (0, i.jsx)(F.DR, {}) : null != e ? (0, i.jsx)(F.DR, {
+    else if (j.hasMoreAfter && eu()) {
+        let {jumpReturnTargetId: e} = j;
+        a = j.loadingMore && j.jumpedToPresent ? (0, i.jsx)(F.DR, {}) : null != e ? (0, i.jsx)(F.DR, {
             type: F.A7.REPLY,
             onClick: () => {
                 var t, n;
-                return t = j, n = e, void l.Z.jumpToMessage({
+                return t = r, n = e, void l.Z.jumpToMessage({
                     channelId: t.id,
                     messageId: n,
                     flash: !0
@@ -268,14 +268,14 @@ function et(e) {
                 l.Z.jumpToPresent(e.id, X.AQB);
                 let t = b.Z.getChannelId();
                 e.id === t && (0, _.Kh)(e.id);
-            }(j)
+            }(r)
         });
     }
     return {
-        channelStreamMarkup: eN,
-        newMessagesBar: a,
-        jumpToPresentBar: r,
-        forumPostActionBar: ex,
-        safetyWarningBanner: n
+        channelStreamMarkup: ev,
+        newMessagesBar: n,
+        jumpToPresentBar: a,
+        forumPostActionBar: eI,
+        safetyWarningBanner: eg
     };
 }
