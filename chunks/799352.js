@@ -1,9 +1,9 @@
-a.d(s, {
+n.d(s, {
     O: function () {
-        return r;
+        return o;
     }
 });
-var n = a(544891), t = a(981631);
-function r(e) {
-    return n.tn.post({ url: t.ANM.CHANNEL_BLOCKED_USER_WARNING_ACK(e) });
+var t = n(544891), a = n(981631);
+function o(e) {
+    return t.tn.post({ url: a.ANM.CHANNEL_BLOCKED_USER_WARNING_ACK(e) });
 }
