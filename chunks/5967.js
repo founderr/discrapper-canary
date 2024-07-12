@@ -1,13 +1,26 @@
 n.d(t, {
     VG: function () {
-        return a;
+        return o;
     },
     uB: function () {
-        return o;
+        return s;
     }
-});
-let r = /input/i, i = /textarea/i;
-function a(e) {
+}), n(47120);
+let r = /input/i, i = /textarea/i, a = new Set([
+        'text',
+        'password',
+        'number',
+        'date',
+        'datetime-local',
+        'time',
+        'week',
+        'month',
+        'email',
+        'search',
+        'tel',
+        'url'
+    ]);
+function o(e) {
     if (null == e)
         return !1;
     if ('true' === e.getAttribute('contenteditable') || i.test(e.tagName))
@@ -15,12 +28,12 @@ function a(e) {
     if (r.test(e.tagName)) {
         var t;
         let n = null !== (t = e.getAttribute('type')) && void 0 !== t ? t : 'text';
-        if ('text' === n || 'password' === n)
+        if (a.has(n))
             return !0;
     }
     return !1;
 }
-function o(e) {
+function s(e) {
     let {target: t} = e;
     return null == t ? null : 'ownerDocument' in t ? t.ownerDocument : 'document' in t ? t.document : (console.warn('Unable to get owner document from event', e.type), null);
 }
