@@ -106,6 +106,10 @@ class z extends (r = c.ZP.Store) {
         let a = this.indices[null != n ? n : t];
         return e in (null !== (i = null == a ? void 0 : null === (r = a.result) || void 0 === r ? void 0 : r.sections) && void 0 !== i ? i : {});
     }
+    getGuildState(e) {
+        var t;
+        return null == e ? F : null !== (t = this.indices[e]) && void 0 !== t ? t : V;
+    }
     getUserState() {
         var e;
         return null !== (e = this.indices[x]) && void 0 !== e ? e : V;

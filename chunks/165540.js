@@ -11,7 +11,7 @@ let A = a.forwardRef(function (e, t) {
         }, C = () => {
             r(!1);
         }, g = a.useRef(), I = (0, E.Z)(t, g);
-    return a.useEffect(() => T.H.subscribe(e => {
+    return a.useEffect(() => T.HJ.subscribe(e => {
         let {channelTextAreaHeight: t} = e;
         return t;
     }, e => {

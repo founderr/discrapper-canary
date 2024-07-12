@@ -1,44 +1,47 @@
 t.d(n, {
-    B: function () {
-        return h;
+    Bm: function () {
+        return C;
     },
-    P: function () {
-        return E;
+    L_: function () {
+        return v;
+    },
+    P7: function () {
+        return N;
     }
 });
-var i = t(470079), l = t(392711), r = t(481060), a = t(2052), s = t(542094), o = t(513202), c = t(367907), u = t(499254), d = t(541099), m = t(827498), p = t(981631), _ = t(689938);
-function E(e, n, t, i) {
+var i = t(470079), l = t(392711), a = t(373793), r = t(481060), s = t(2052), o = t(542094), c = t(513202), u = t(367907), d = t(812206), m = t(69580), p = t(499254), _ = t(541099), E = t(827498), A = t(981631), h = t(689079), f = t(689938);
+function N(e, n, t, i) {
     var l;
-    let E = (0, a.O)(), h = (0, s.Qv)({
+    let a = (0, s.O)(), d = (0, o.Qv)({
             applicationId: n.id,
             channelId: e.id
-        }), A = (0, s.w1)({
+        }), m = (0, o.w1)({
             applicationId: n.id,
-            embeddedActivitiesManager: o.Z,
+            embeddedActivitiesManager: c.Z,
             channelId: e.id,
             guildId: null !== (l = e.getGuildId()) && void 0 !== l ? l : void 0,
-            locationObject: E.location,
+            locationObject: a.location,
             onActivityItemSelectedProp: e => {
-                let {applicationId: n} = e, l = d.Z.entrypoint();
-                u.y(m.ti.ACTIVITY), (0, c.yw)(p.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                let {applicationId: n} = e, l = _.Z.entrypoint();
+                p.y(E.ti.ACTIVITY), (0, u.yw)(A.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                     location: t,
                     application_id: n,
                     section_name: i,
-                    action: h,
+                    action: d,
                     source: l
                 });
             }
-        }), f = r.ButtonColors.BRAND, N = _.Z.Messages.LAUNCH;
-    return h === s.JS.JOIN ? (f = r.ButtonColors.GREEN, N = _.Z.Messages.JOIN_ACTIVITY) : h === s.JS.LEAVE && (f = r.ButtonColors.RED, N = _.Z.Messages.LEAVE), {
-        onActivityItemSelected: A,
-        activityAction: h,
-        buttonColor: f,
+        }), h = r.ButtonColors.BRAND, N = f.Z.Messages.LAUNCH;
+    return d === o.JS.JOIN ? (h = r.ButtonColors.GREEN, N = f.Z.Messages.JOIN_ACTIVITY) : d === o.JS.LEAVE && (h = r.ButtonColors.RED, N = f.Z.Messages.LEAVE), {
+        onActivityItemSelected: m,
+        activityAction: d,
+        buttonColor: h,
         buttonText: N
     };
 }
-function h(e, n) {
-    let t = d.Z.entrypoint(), r = i.useMemo(() => (0, l.debounce)((e, n) => {
-            (0, c.yw)(p.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+function C(e, n) {
+    let t = _.Z.entrypoint(), a = i.useMemo(() => (0, l.debounce)((e, n) => {
+            (0, u.yw)(A.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                 type: e,
                 source: n
             });
@@ -47,11 +50,46 @@ function h(e, n) {
             trailing: !0
         }), []);
     i.useEffect(() => {
-        null != e && r(e, t);
+        null != e && a(e, t);
     }, [
         e,
         n,
         t,
-        r
+        a
     ]);
+}
+function v(e) {
+    var n, t, i, l, r;
+    let {
+        applicationId: s,
+        userIndexState: o,
+        guildIndexState: c,
+        sectionName: p,
+        location: _
+    } = e;
+    if (s === h.bi.BUILT_IN || (null === (n = o.result) || void 0 === n ? void 0 : n.sections[s]) != null || (null === (t = c.result) || void 0 === t ? void 0 : t.sections[s]) != null)
+        return Promise.resolve(!0);
+    (0, u.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
+        location: _,
+        application_id: s,
+        section_name: p
+    });
+    let E = d.Z.getApplication(s), f = a.Y.USER_INSTALL, N = null == E ? void 0 : null === (r = E.integrationTypesConfig) || void 0 === r ? void 0 : null === (l = r[f]) || void 0 === l ? void 0 : null === (i = l.oauth2InstallParams) || void 0 === i ? void 0 : i.scopes;
+    return new Promise(e => {
+        (0, m.openOAuth2Modal)({
+            clientId: s,
+            integrationType: f,
+            scopes: N,
+            callback: n => {
+                let {location: t} = n;
+                null != t && ((0, u.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
+                    location: _,
+                    application_id: s,
+                    section_name: p
+                }), e(!0));
+            }
+        }, () => {
+            e(!1);
+        });
+    });
 }

@@ -1,70 +1,79 @@
 t.d(n, {
     Z: function () {
-        return A;
+        return C;
     }
 });
-var i = t(735250), l = t(470079), r = t(218061), a = t(481060), s = t(361213), o = t(778569), c = t(783097), u = t(753972), d = t(387658), m = t(536650), p = t(675993), _ = t(689938), E = t(132439), h = t(413097);
-function A(e) {
+var i = t(735250), l = t(470079), a = t(218061), r = t(481060), s = t(361213), o = t(778569), c = t(213459), u = t(835473), d = t(783097), m = t(753972), p = t(387658), _ = t(536650), E = t(675993), A = t(689079), h = t(689938), f = t(132439), N = t(413097);
+function C(e) {
+    var n;
     let {
-            channel: n,
-            application: t,
-            sectionName: s
-        } = e, o = (0, c.ye)({ application: t }), A = o ? f : p.Z, N = l.useRef(null), {
-            iconURL: C,
-            name: v
-        } = l.useMemo(() => (0, c.sl)(t, {
-            botIconFirst: !o,
-            fakeAppIconURL: h,
+            channel: t,
+            application: s,
+            sectionName: o,
+            installOnDemand: C
+        } = e, I = null !== (n = (0, u.q)(s.id === A.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, P = (0, d.ye)({ application: I }), x = P ? v : E.Z, T = l.useRef(null), {
+            iconURL: g,
+            name: R
+        } = l.useMemo(() => (0, d.sl)(I, {
+            botIconFirst: !P,
+            fakeAppIconURL: N,
             size: 80
         }), [
-            t,
-            o
+            I,
+            P
         ]);
-    return (0, i.jsxs)(a.ScrollerNone, {
-        className: E.container,
+    return l.useEffect(() => {
+        C ? c.ZP.queryInstallOnDemandApp(I.id, t.id) : c.ZP.maybeQueryForInstallLessApps(I.id, t.id);
+    }, [
+        I.id,
+        t.id,
+        C
+    ]), (0, i.jsxs)(r.ScrollerNone, {
+        className: f.container,
         fade: !0,
-        ref: N,
+        ref: T,
         role: 'region',
-        'aria-label': _.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: v }),
+        'aria-label': h.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: R }),
         children: [
-            (0, i.jsx)(m.Z, {
-                name: v,
-                iconURL: C,
-                scrollerRef: N
+            (0, i.jsx)(_.Z, {
+                name: R,
+                iconURL: g,
+                scrollerRef: T
             }),
-            null != C && (0, i.jsx)(u.Z, {
-                src: C,
-                className: E.appIcon
+            null != g && (0, i.jsx)(m.Z, {
+                src: g,
+                className: f.appIcon
             }),
-            (0, i.jsx)(r.Z, { size: 54 }),
-            (0, i.jsx)(A, {
-                channel: n,
-                application: t,
-                sectionName: s
+            (0, i.jsx)(a.Z, { size: 54 }),
+            (0, i.jsx)(x, {
+                channel: t,
+                application: I,
+                sectionName: o
             }),
-            (0, i.jsx)(d.Z, {
-                channel: n,
-                application: t,
-                sectionName: s
+            (0, i.jsx)(p.Z, {
+                channel: t,
+                application: I,
+                sectionName: o,
+                installOnDemand: C
             })
         ]
     });
 }
-function f(e) {
+function v(e) {
     let {
             channel: n,
             application: t,
             sectionName: l
-        } = e, r = (0, o.Z)({
+        } = e, a = (0, o.Z)({
             applicationId: t.id,
             size: 2048,
             names: ['embedded_cover']
-        }), a = (0, c.yJ)(t), u = null != a && null != a.activity_preview_video_asset_id ? (0, s.Z)(t.id, a.activity_preview_video_asset_id) : null;
-    return (0, i.jsx)(p.Z, {
+        }), r = (0, d.yJ)(t), c = null != r && null != r.activity_preview_video_asset_id ? (0, s.Z)(t.id, r.activity_preview_video_asset_id) : null;
+    return (0, i.jsx)(E.Z, {
         channel: n,
         application: t,
-        imageCoverUrl: r.url,
-        videoUrl: u,
+        imageCoverUrl: a.url,
+        videoUrl: c,
         sectionName: l
     });
 }
