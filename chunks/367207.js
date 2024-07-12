@@ -82,7 +82,7 @@ class w extends c.Z {
             let e = f.default.getCurrentUser();
             if (null != e && e.verified) {
                 let t = !(0, C.I5)(e) && m.Z.shouldFetchOffer();
-                await (0, L.T)(t);
+                await (0, L.T)('PremiumManager', t);
             }
             s.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
         }), U(this, '_maybeFetchCheckoutRecovery', async () => {

@@ -55,7 +55,7 @@ async function C() {
     let t = c.default.getCurrentUser(), n = !(null == t ? void 0 : t.isClaimed()), {paymentsBlocked: r} = l.Z.getCurrentConfig({ location: '153d31_3' }, { autoTrackExposure: !1 }), {enabled: i} = (0, p.aW)(), {enabled: a} = h.Z.getCurrentConfig({ location: '153d31_4' }, { autoTrackExposure: !1 });
     if (n || r || !i || !a)
         return !1;
-    if (_.Z.shouldFetchOffer() && !(0, E.I5)(t) && await (0, f.T)(), _.Z.hasFetchedOffer() && (_.Z.hasAnyUnexpiredOffer() || _.Z.hasAnyUnexpiredDiscountOffer()))
+    if (_.Z.shouldFetchOffer() && !(0, E.I5)(t) && await (0, f.T)('BogoPromotionUtils'), _.Z.hasFetchedOffer() && (_.Z.hasAnyUnexpiredOffer() || _.Z.hasAnyUnexpiredDiscountOffer()))
         return !1;
     !d.ZP.hasFetchedMostRecentPremiumTypeSubscription() && (null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasHadSKU(A.Si.TIER_2)) && await (0, o.ou)(), !d.ZP.hasFetchedSubscriptions() && await (0, o.jg)();
     let s = d.ZP.getMostRecentPremiumTypeSubscription();

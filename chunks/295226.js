@@ -24,7 +24,7 @@ function m() {
 }
 function I() {
     let e = l.default.getCurrentUser();
-    !(0, u.I5)(e) && Object.keys(f.userDiscountOffers).length > 0 && (0, s.T)(!0);
+    !(0, u.I5)(e) && Object.keys(f.userDiscountOffers).length > 0 && (0, s.T)('UserOfferStore', !0);
 }
 function T() {
     var e;
