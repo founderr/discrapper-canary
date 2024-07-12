@@ -13,6 +13,7 @@ e.exports = {
     progressBarImage: 'progressBarImage_f0a9ff',
     marginTop16: 'marginTop16_f0a9ff',
     marginTop8: 'marginTop8_f0a9ff',
+    marginBottom0: 'marginBottom0_f0a9ff',
     marginBottom8: 'marginBottom8_f0a9ff',
     marginTop20: 'marginTop20_f0a9ff',
     marginBottom20: 'marginBottom20_f0a9ff',
