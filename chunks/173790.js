@@ -3,7 +3,7 @@ t.d(n, {
         return C;
     }
 });
-var i = t(735250), l = t(470079), a = t(218061), r = t(481060), s = t(361213), o = t(778569), c = t(213459), u = t(835473), d = t(783097), m = t(753972), p = t(387658), _ = t(536650), E = t(675993), A = t(689079), h = t(689938), f = t(132439), N = t(413097);
+var i = t(735250), l = t(470079), a = t(218061), r = t(481060), s = t(361213), o = t(778569), c = t(213459), u = t(835473), d = t(783097), m = t(753972), p = t(387658), _ = t(536650), E = t(675993), A = t(689079), f = t(689938), h = t(132439), N = t(413097);
 function C(e) {
     var n;
     let {
@@ -11,17 +11,13 @@ function C(e) {
             application: s,
             sectionName: o,
             installOnDemand: C
-        } = e, I = null !== (n = (0, u.q)(s.id === A.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, P = (0, d.ye)({ application: I }), x = P ? v : E.Z, T = l.useRef(null), {
-            iconURL: g,
-            name: R
+        } = e, I = null !== (n = (0, u.q)(s.id === A.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, P = (0, d.ye)({ application: I }) ? v : E.Z, x = l.useRef(null), {
+            iconURL: T,
+            name: g
         } = l.useMemo(() => (0, d.sl)(I, {
-            botIconFirst: !P,
             fakeAppIconURL: N,
-            size: 80
-        }), [
-            I,
-            P
-        ]);
+            size: 84
+        }), [I]);
     return l.useEffect(() => {
         C ? c.ZP.queryInstallOnDemandApp(I.id, t.id) : c.ZP.maybeQueryForInstallLessApps(I.id, t.id);
     }, [
@@ -29,23 +25,23 @@ function C(e) {
         t.id,
         C
     ]), (0, i.jsxs)(r.ScrollerNone, {
-        className: f.container,
+        className: h.container,
         fade: !0,
-        ref: T,
+        ref: x,
         role: 'region',
-        'aria-label': h.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: R }),
+        'aria-label': f.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: g }),
         children: [
             (0, i.jsx)(_.Z, {
-                name: R,
-                iconURL: g,
-                scrollerRef: T
+                name: g,
+                iconURL: T,
+                scrollerRef: x
             }),
-            null != g && (0, i.jsx)(m.Z, {
-                src: g,
-                className: f.appIcon
+            null != T && (0, i.jsx)(m.Z, {
+                src: T,
+                className: h.appIcon
             }),
             (0, i.jsx)(a.Z, { size: 54 }),
-            (0, i.jsx)(x, {
+            (0, i.jsx)(P, {
                 channel: t,
                 application: I,
                 sectionName: o

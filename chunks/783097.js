@@ -12,7 +12,7 @@ t.d(n, {
         return C;
     },
     jD: function () {
-        return h;
+        return f;
     },
     sl: function () {
         return v;
@@ -21,7 +21,7 @@ t.d(n, {
         return N;
     },
     ye: function () {
-        return f;
+        return h;
     }
 }), t(789020);
 var i = t(668781), l = t(904245), a = t(895924), r = t(667204), s = t(957730), o = t(973616), c = t(768581), u = t(630388), d = t(981631), m = t(689079), p = t(689938);
@@ -32,16 +32,16 @@ function E(e) {
 function A(e) {
     return E(e) ? e.name : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
 }
-function h(e) {
+function f(e) {
     return E(e) ? e.description : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
 }
-function f(e) {
+function h(e) {
     var n;
     let {application: t} = e;
     return E(t) && (0, u.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, d.udG.EMBEDDED);
 }
 function N(e) {
-    return E(e) && f({ application: e }) ? e instanceof o.Z ? e.embeddedActivityConfig : e.embedded_activity_config : null;
+    return E(e) && h({ application: e }) ? e instanceof o.Z ? e.embeddedActivityConfig : e.embedded_activity_config : null;
 }
 function C(e) {
     let {
@@ -88,7 +88,8 @@ function v(e) {
             ...i,
             id: e.id,
             icon: e.icon,
-            bot: e.bot
+            bot: e.bot,
+            botIconFirst: !h({ application: e })
         }),
         name: e.name,
         description: e.description
