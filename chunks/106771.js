@@ -3,7 +3,7 @@ t.d(n, {
         return d;
     }
 });
-var i = t(735250), l = t(470079), r = t(481060), a = t(783097), s = t(753972), o = t(532309), c = t(875164), u = t(413097);
+var i = t(735250), l = t(470079), a = t(481060), r = t(783097), s = t(753972), o = t(532309), c = t(875164), u = t(413097);
 function d(e) {
     var n;
     let {
@@ -14,9 +14,9 @@ function d(e) {
             searchResultsPosition: _
         } = e, {
             iconURL: E,
-            name: h,
-            description: A
-        } = l.useMemo(() => (0, a.sl)(d, {
+            name: A,
+            description: h
+        } = l.useMemo(() => (0, r.sl)(d, {
             botIconFirst: !0,
             fakeAppIconURL: u
         }), [d]), {trackSearchResultsItemImpressionRef: f} = (0, o.Z)({
@@ -25,7 +25,7 @@ function d(e) {
             query: p,
             searchResultsPosition: _
         });
-    return (0, i.jsxs)(r.Clickable, {
+    return (0, i.jsxs)(a.Clickable, {
         innerRef: e => f.current = e,
         className: c.container,
         onClick: m,
@@ -39,25 +39,25 @@ function d(e) {
             (0, i.jsxs)('div', {
                 className: c.cmdDetails,
                 children: [
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
                         lineClamp: 1,
-                        children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : h
+                        children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : A
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
                         lineClamp: 1,
-                        children: A
+                        children: h
                     })
                 ]
             }),
-            null != t ? (0, i.jsx)(r.Text, {
+            null != t ? (0, i.jsx)(a.Text, {
                 className: c.cmdAppName,
                 variant: 'text-sm/normal',
                 color: 'text-secondary',
-                children: h
+                children: A
             }) : null,
             (0, i.jsx)('div', { className: c.underline })
         ]

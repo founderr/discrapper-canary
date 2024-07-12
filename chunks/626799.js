@@ -3,8 +3,8 @@ n.d(t, {
         return Z;
     }
 }), n(47120), n(411104);
-var i, a = n(735250), s = n(470079), r = n(613828), l = n(442837), o = n(481060), c = n(558381), d = n(410575), u = n(498179), _ = n(86357), E = n(914602), I = n(568836), m = n(730749), T = n(112724), h = n(812206), N = n(283595), f = n(558314), p = n(55563), C = n(551428), g = n(73346), S = n(981631), A = n(689938), x = n(91612);
-function R(e, t, n) {
+var i, a = n(735250), s = n(470079), r = n(613828), l = n(442837), o = n(481060), c = n(558381), d = n(410575), u = n(498179), _ = n(86357), E = n(914602), I = n(568836), m = n(730749), T = n(112724), h = n(812206), N = n(283595), f = n(558314), p = n(55563), C = n(551428), g = n(73346), S = n(981631), A = n(689938), R = n(91612);
+function x(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -35,7 +35,7 @@ class O extends (i = s.Component) {
     renderViewInStoreButton() {
         return (0, a.jsx)(o.Button.Link, {
             to: this.getStoreListingLocation(),
-            className: x.actionButton,
+            className: R.actionButton,
             color: o.Button.Colors.GREEN,
             size: o.Button.Sizes.SMALL,
             children: A.Z.Messages.GAME_ACTION_BUTTON_VIEW_IN_STORE
@@ -66,16 +66,16 @@ class O extends (i = s.Component) {
         });
     }
     constructor(...e) {
-        super(...e), R(this, 'state', {
+        super(...e), x(this, 'state', {
             playing: !1,
             muted: !0
-        }), R(this, 'handleToggleMute', () => {
+        }), x(this, 'handleToggleMute', () => {
             this.setState({ muted: !this.state.muted });
-        }), R(this, 'handleMouseEnter', () => {
+        }), x(this, 'handleMouseEnter', () => {
             this.setState({ playing: !0 });
-        }), R(this, 'handleMouseLeave', () => {
+        }), x(this, 'handleMouseLeave', () => {
             this.setState({ playing: !1 });
-        }), R(this, 'getStoreListingLocation', () => {
+        }), x(this, 'getStoreListingLocation', () => {
             let {sku: e} = this.props;
             if (null == e)
                 throw Error('Should not be link to ApplicationStoreListing without SKU');
@@ -83,10 +83,10 @@ class O extends (i = s.Component) {
                 slug: e.slug,
                 analyticsSource: this.analyticsLocation
             });
-        }), R(this, 'handleActionButtonClick', e => e.preventDefault()), R(this, 'handleBuyButtonClick', e => e.preventDefault()), R(this, 'handleLinkClick', e => {
+        }), x(this, 'handleActionButtonClick', e => e.preventDefault()), x(this, 'handleBuyButtonClick', e => e.preventDefault()), x(this, 'handleLinkClick', e => {
             let {onEmbedClick: t} = this.props;
             null != t && t(e);
-        }), R(this, 'renderApplicationTile', (e, t) => {
+        }), x(this, 'renderApplicationTile', (e, t) => {
             let {
                     inLibrary: n,
                     width: i,
@@ -111,7 +111,7 @@ class O extends (i = s.Component) {
                 isHorizontal: d,
                 isEmbed: !0
             });
-        }), R(this, 'renderActions', e => {
+        }), x(this, 'renderActions', e => {
             let {
                 inLibrary: t,
                 application: n,
@@ -121,20 +121,20 @@ class O extends (i = s.Component) {
             } = this.props;
             if (null != r)
                 return (0, a.jsx)('div', {
-                    className: x.tileActions,
+                    className: R.tileActions,
                     children: r()
                 });
             if (null == n)
                 return null;
             let l = null != n && n.primarySkuId === i, c = null != s && s.hasFlag(S.eHb.HIDDEN);
             return (0, a.jsxs)('div', {
-                className: x.tileActions,
+                className: R.tileActions,
                 children: [
                     !l || c ? this.renderViewInStoreButton() : (0, a.jsx)(u.Z, {
                         application: n,
                         customDisabledColor: o.Button.Colors.PRIMARY,
                         size: o.Button.Sizes.SMALL,
-                        className: x.actionButton,
+                        className: R.actionButton,
                         source: S.Sbl.MESSAGE_EMBED,
                         onClick: this.handleActionButtonClick
                     }),
@@ -148,7 +148,7 @@ class O extends (i = s.Component) {
         });
     }
 }
-R(O, 'defaultProps', { renderFallback: S.dG4 });
+x(O, 'defaultProps', { renderFallback: S.dG4 });
 let M = [
     p.Z,
     f.Z,

@@ -3,12 +3,12 @@ t.d(n, {
         return u;
     }
 });
-var i = t(735250), l = t(470079), r = t(120356), a = t.n(r), s = t(768581), o = t(689938), c = t(106477);
+var i = t(735250), l = t(470079), a = t(120356), r = t.n(a), s = t(768581), o = t(689938), c = t(106477);
 function u(e) {
     let {
             application: n,
             src: t,
-            className: r,
+            className: a,
             size: u,
             botIconFirst: d,
             fallbackAvatar: m,
@@ -28,9 +28,9 @@ function u(e) {
             m
         ]);
     if (null == _)
-        return p ? (0, i.jsx)('div', { className: a()(c.icon, c.placeholder, r) }) : null;
+        return p ? (0, i.jsx)('div', { className: r()(c.icon, c.placeholder, a) }) : null;
     return (0, i.jsx)('img', {
-        className: a()(c.icon, r),
+        className: r()(c.icon, a),
         alt: o.Z.Messages.IMAGE,
         src: _,
         'aria-hidden': !0

@@ -3,7 +3,7 @@ n.d(t, {
         return M;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(913527), d = n.n(c), u = n(481060), _ = n(595519), E = n(566620), I = n(403404), m = n(100527), T = n(906732), h = n(103575), N = n(768581), f = n(55935), p = n(739566), C = n(421399), g = n(310423), S = n(223021), A = n(981631), x = n(689938), R = n(475525);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(913527), d = n.n(c), u = n(481060), _ = n(595519), E = n(566620), I = n(403404), m = n(100527), T = n(906732), h = n(103575), N = n(768581), f = n(55935), p = n(739566), C = n(421399), g = n(310423), S = n(223021), A = n(981631), R = n(689938), x = n(475525);
 function O(e) {
     let {
         width: t = 6,
@@ -69,8 +69,8 @@ function M(e) {
                     } = e;
                 if (s && null == a.activityInstance || o)
                     return (0, i.jsx)('div', {
-                        className: R.replyBadge,
-                        children: (0, i.jsx)(O, { className: R.commandIcon })
+                        className: x.replyBadge,
+                        children: (0, i.jsx)(O, { className: x.commandIcon })
                     });
                 if (null != a.interaction) {
                     var I, m, T;
@@ -97,8 +97,8 @@ function M(e) {
                         onContextMenu: l,
                         onMouseDown: o,
                         className: r()({
-                            [R.executedCommandAvatar]: !0,
-                            [R.clickable]: null != s
+                            [x.executedCommandAvatar]: !0,
+                            [x.clickable]: null != s
                         })
                     });
                 }({
@@ -161,19 +161,19 @@ function M(e) {
                 analyticsLocations: c
             }), (0, E.w1)({ guildId: l.guild_id });
         };
-        n = P ? x.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
+        n = P ? R.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
             userHook: D,
             activityHook: () => (0, i.jsx)(u.Clickable, {
                 tag: 'span',
                 onClick: e,
                 children: (0, i.jsx)('div', {
-                    className: r()(R.commandName, R.clickable),
-                    children: x.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
+                    className: r()(x.commandName, x.clickable),
+                    children: R.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
                 })
             })
-        }) : x.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({ userHook: D });
+        }) : R.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({ userHook: D });
     } else
-        n = x.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
+        n = R.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
             userHook: D,
             commandHook: () => {
                 let t = function (e, t) {
@@ -201,20 +201,20 @@ function M(e) {
                                 tag: 'span',
                                 onClick: s,
                                 children: (0, i.jsxs)('div', {
-                                    className: r()(R.appLauncherOnboardingCommandName, R.clickable),
+                                    className: r()(x.appLauncherOnboardingCommandName, x.clickable),
                                     children: [
                                         (0, i.jsx)(u.AppsIcon, {
                                             size: 'custom',
                                             color: 'currentColor',
                                             height: 10,
                                             width: 10,
-                                            className: R.appsIcon
+                                            className: x.appsIcon
                                         }),
                                         o
                                     ]
                                 })
                             }) : (0, i.jsx)('div', {
-                                className: R.commandName,
+                                className: x.commandName,
                                 children: o
                             });
                         }
@@ -226,7 +226,7 @@ function M(e) {
     return (0, i.jsx)(T.Gt, {
         value: c,
         children: (0, i.jsx)('div', {
-            className: r()(R.repliedMessage, R.executedCommand, Z),
+            className: r()(x.repliedMessage, x.executedCommand, Z),
             'aria-hidden': !e.compact,
             children: n
         })

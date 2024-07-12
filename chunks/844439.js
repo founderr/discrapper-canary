@@ -3,7 +3,7 @@ t.d(n, {
         return s;
     }
 });
-var i, l, r, a, s, o, c = t(442837), u = t(570140);
+var i, l, a, r, s, o, c = t(442837), u = t(570140);
 (i = s || (s = {}))[i.FETCHING = 0] = 'FETCHING', i[i.FETCHED = 1] = 'FETCHED', i[i.ERROR = 2] = 'ERROR';
 let d = {}, m = {}, p = {};
 function _(e) {
@@ -14,7 +14,7 @@ function _(e) {
     return 'location:'.concat(n, ' channelId:').concat('0');
 }
 let E = Object.freeze([]);
-class h extends (o = c.ZP.Store) {
+class A extends (o = c.ZP.Store) {
     getLastFetchTimeMs(e) {
         let {
             location: n,
@@ -47,12 +47,12 @@ class h extends (o = c.ZP.Store) {
         })]) && void 0 !== n ? n : E;
     }
 }
-a = void 0, (r = 'displayName') in (l = h) ? Object.defineProperty(l, r, {
-    value: a,
+r = void 0, (a = 'displayName') in (l = A) ? Object.defineProperty(l, a, {
+    value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : l[r] = a, n.ZP = new h(u.Z, {
+}) : l[a] = r, n.ZP = new A(u.Z, {
     APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function (e) {
         let {
             location: n,
@@ -82,10 +82,10 @@ a = void 0, (r = 'displayName') in (l = h) ? Object.defineProperty(l, r, {
             ...m,
             [l]: 1
         };
-        let r = Date.now();
+        let a = Date.now();
         p = {
             ...p,
-            [l]: r
+            [l]: a
         };
     },
     APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_FAILURE: function (e) {

@@ -32,7 +32,7 @@ function A(e) {
                 null != c && null != l && ('ArrowRight' === e.key && l.collapsed || 'ArrowLeft' === e.key && !l.collapsed) && (null == c || c(l));
             },
             children: [
-                (0, i.jsx)(x, {
+                (0, i.jsx)(R, {
                     channel: t,
                     gotoChannel: a
                 }),
@@ -46,12 +46,12 @@ function A(e) {
         })
     });
 }
-function x(e) {
+function R(e) {
     let {
         channel: t,
         gotoChannel: n
     } = e;
-    return t.isPrivate() ? (0, i.jsx)(R, {
+    return t.isPrivate() ? (0, i.jsx)(x, {
         channel: t,
         gotoChannel: n
     }) : (0, i.jsx)(O, {
@@ -59,7 +59,7 @@ function x(e) {
         gotoChannel: n
     });
 }
-function R(e) {
+function x(e) {
     let {
             channel: t,
             gotoChannel: n

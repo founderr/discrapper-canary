@@ -5,18 +5,18 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(399606), r = n(481060), o = n(271383), c = n(594174), d = n(777288), u = n(991570), h = n(753042), p = n(787469), m = n(477718), _ = n(791176), f = n(908474), E = n(467014), C = n(689938), g = n(749348);
+var a = n(120356), l = n.n(a), s = n(399606), r = n(481060), o = n(271383), c = n(594174), d = n(777288), u = n(991570), h = n(753042), p = n(787469), m = n(477718), _ = n(791176), f = n(908474), E = n(467014), C = n(689938), g = n(749348);
 function I(e) {
     let {
             userId: t,
             guildId: n
         } = e, a = (0, u.f)(t, n, 0.8, r.tokens.colors.BACKGROUND_SECONDARY);
     return (0, i.jsxs)('div', {
-        className: s()(g.header),
+        className: l()(g.header),
         style: { backgroundColor: a },
         children: [
             (0, i.jsxs)('div', {
-                className: s()(g.headerTitle),
+                className: l()(g.headerTitle),
                 children: [
                     (0, i.jsx)(d.Z, {
                         width: 16,
@@ -45,12 +45,12 @@ function x(e) {
             location: a,
             className: d,
             onNavigate: C
-        } = e, x = (0, l.e7)([c.default], () => c.default.getUser(t), [t]), T = (0, l.e7)([o.ZP], () => o.ZP.getMember(n, t), [
+        } = e, x = (0, s.e7)([c.default], () => c.default.getUser(t), [t]), T = (0, s.e7)([o.ZP], () => o.ZP.getMember(n, t), [
             n,
             t
         ]), v = (0, u.f)(t, n);
     return null == x || null == T ? null : (0, i.jsxs)(r.Scroller, {
-        className: s()(g.container, d),
+        className: l()(g.container, d),
         style: { backgroundColor: v },
         children: [
             (0, i.jsx)(I, {
@@ -58,7 +58,7 @@ function x(e) {
                 guildId: n
             }),
             (0, i.jsxs)('div', {
-                className: s()(g.innerContainer),
+                className: l()(g.innerContainer),
                 children: [
                     (0, i.jsx)(f.Z, { member: T }),
                     (0, i.jsx)(E.Z, {

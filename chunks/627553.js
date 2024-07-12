@@ -3,7 +3,7 @@ n.d(t, {
         return r;
     }
 });
-var i = n(735250), a = n(470079), s = n(772848), l = n(325767);
+var i = n(735250), a = n(470079), l = n(772848), s = n(325767);
 function r(e) {
     let {
             width: t = 16,
@@ -12,9 +12,9 @@ function r(e) {
             foreground: o,
             background: c,
             ...d
-        } = e, u = a.useRef((0, s.Z)());
+        } = e, u = a.useRef((0, l.Z)());
     return (0, i.jsxs)('svg', {
-        ...(0, l.Z)(d),
+        ...(0, s.Z)(d),
         width: t,
         height: n,
         viewBox: '0 0 24 24',

@@ -1,6 +1,6 @@
 E.d(_, {
     RE: function () {
-        return S;
+        return D;
     },
     RN: function () {
         return l;
@@ -9,7 +9,7 @@ E.d(_, {
         return T;
     },
     qr: function () {
-        return D;
+        return S;
     },
     xb: function () {
         return G;
@@ -19,7 +19,7 @@ E.d(_, {
     }
 });
 var s, T, I = E(470079), n = E(399606), A = E(906732), t = E(171368), a = E(430824), r = E(594174), N = E(91047), L = E(981631);
-let S = (e, _) => {
+let D = (e, _) => {
     let {
         guildId: E,
         userId: s,
@@ -36,7 +36,7 @@ let S = (e, _) => {
         }
     });
 };
-function D(e, _, E) {
+function S(e, _, E) {
     let {analyticsLocations: s} = (0, A.ZP)();
     return I.useCallback(T => {
         if (null == e)

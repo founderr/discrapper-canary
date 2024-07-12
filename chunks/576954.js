@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     }
 });
-var i = n(735250), a = n(470079), s = n(286379), l = n(481060), r = n(194359), o = n(797614), c = n(378298), d = n(359119), u = n(473092), h = n(177342), p = n(134612), m = n(981631), _ = n(689938);
+var i = n(735250), a = n(470079), l = n(286379), s = n(481060), r = n(194359), o = n(797614), c = n(378298), d = n(359119), u = n(473092), h = n(177342), p = n(134612), m = n(981631), _ = n(689938);
 function f(e) {
     let {
             channelId: t,
@@ -19,7 +19,7 @@ function f(e) {
                 userId: E,
                 context: { location: p.zr },
                 type: m.OGo.BLOCKED
-            }), C(), (0, l.showToast)((0, l.createToast)(_.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, l.ToastType.SUCCESS)), (0, u.qc)({
+            }), C(), (0, s.showToast)((0, s.createToast)(_.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, s.ToastType.SUCCESS)), (0, u.qc)({
                 channelId: t,
                 warningId: f,
                 senderId: E,
@@ -38,23 +38,23 @@ function f(e) {
             warningId: f,
             senderId: E,
             warningType: d.pj.STRANGER_DANGER
-        }), o.Z.increment({ name: s.V.SAFETY_WARNING_VIEW });
+        }), o.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
     }, [
         t,
         f,
         E
     ]);
     let I = () => {
-            (0, l.openModalLazy)(async () => {
+            (0, s.openModalLazy)(async () => {
                 let {default: e} = await n.e('95226').then(n.bind(n, 816960));
                 return n => {
                     let {
                         transitionState: a,
-                        onClose: s
+                        onClose: l
                     } = n;
                     return (0, i.jsx)(e, {
                         transitionState: a,
-                        onClose: s,
+                        onClose: l,
                         channelId: t,
                         warningId: f,
                         senderId: E,
@@ -64,15 +64,15 @@ function f(e) {
                     });
                 };
             });
-        }, x = (e, a, s) => {
-            (0, l.openModalLazy)(async () => {
-                let {default: l} = await n.e('68747').then(n.bind(n, 744373));
-                return n => (0, i.jsx)(l, {
+        }, x = (e, a, l) => {
+            (0, s.openModalLazy)(async () => {
+                let {default: s} = await n.e('68747').then(n.bind(n, 744373));
+                return n => (0, i.jsx)(s, {
                     ...n,
                     userId: E,
                     confirmBlock: g(e),
                     onCancel: () => {
-                        null == s || s(), (0, u.qc)({
+                        null == l || l(), (0, u.qc)({
                             channelId: t,
                             warningId: f,
                             senderId: E,
@@ -94,7 +94,7 @@ function f(e) {
         buttons: [
             {
                 text: _.Z.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,
-                color: l.Button.Colors.BRAND,
+                color: s.Button.Colors.BRAND,
                 onclick: () => {
                     I(), (0, u.qc)({
                         channelId: t,
@@ -107,7 +107,7 @@ function f(e) {
             },
             {
                 text: _.Z.Messages.STRANGER_DANGER_BANNER_BLOCK,
-                color: l.Button.Colors.RED,
+                color: s.Button.Colors.RED,
                 onclick: () => x(u.NM.USER_BANNER_BLOCK_CONFIRM, u.NM.USER_BANNER_BLOCK_CANCEL)
             }
         ]

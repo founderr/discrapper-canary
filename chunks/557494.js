@@ -3,8 +3,8 @@ n.d(t, {
         return E;
     }
 });
-var i, a, s, l, r = n(735250), o = n(470079), c = n(699581), d = n(374470), u = n(442837), h = n(260300), p = n(451478), m = n(5560), _ = n(10401);
-class f extends (l = o.Component) {
+var i, a, l, s, r = n(735250), o = n(470079), c = n(699581), d = n(374470), u = n(442837), h = n(260300), p = n(451478), m = n(5560), _ = n(10401);
+class f extends (s = o.Component) {
     componentDidMount() {
         let {
             visible: e,
@@ -22,10 +22,10 @@ class f extends (l = o.Component) {
             offsetX: n,
             offsetY: i,
             tutorialId: a,
-            visible: s,
-            windowSize: l
+            visible: l,
+            windowSize: s
         } = e;
-        a !== this.props.tutorialId ? h.Z.hide(a) : (s !== this.props.visible || t !== this.props.position || n !== this.props.offsetX || i !== this.props.offsetY || l !== this.props.windowSize) && this.show(this.props.visible);
+        a !== this.props.tutorialId ? h.Z.hide(a) : (l !== this.props.visible || t !== this.props.position || n !== this.props.offsetX || i !== this.props.offsetY || s !== this.props.windowSize) && this.show(this.props.visible);
     }
     show(e) {
         let {
@@ -33,28 +33,28 @@ class f extends (l = o.Component) {
             position: n,
             offsetX: i,
             offsetY: a,
-            visible: s,
-            inlineSpecs: l,
+            visible: l,
+            inlineSpecs: s,
             autoInvert: r
         } = this.props;
-        if (e && null == l) {
+        if (e && null == s) {
             let e = (0, c.findDOMNode)(this);
             if (!(0, d.k)(e))
                 return;
             let {
-                top: s,
-                left: l,
+                top: l,
+                left: s,
                 right: o,
                 bottom: u
             } = e.getBoundingClientRect();
             h.Z.show(t, {
                 position: n,
-                targetWidth: o - l,
-                targetHeight: u - s,
+                targetWidth: o - s,
+                targetHeight: u - l,
                 autoInvert: r,
                 origin: {
-                    x: l,
-                    y: s
+                    x: s,
+                    y: l
                 },
                 offset: {
                     x: i,
@@ -62,7 +62,7 @@ class f extends (l = o.Component) {
                 }
             });
         } else
-            s && h.Z.hide(t);
+            l && h.Z.hide(t);
     }
     render() {
         let {
@@ -71,15 +71,15 @@ class f extends (l = o.Component) {
                 children: n,
                 visible: i,
                 windowFocused: a,
-                position: s,
-                autoInvert: l
+                position: l,
+                autoInvert: s
             } = this.props, c = _.Z.getData()[t];
         return null != e && null != c ? (0, r.jsxs)(r.Fragment, {
             children: [
                 n,
                 i && (0, r.jsx)(m.V, {
-                    autoInvert: l,
-                    position: s,
+                    autoInvert: s,
+                    position: l,
                     tutorialId: t,
                     tutorialDefinition: c,
                     focused: a,
@@ -98,14 +98,14 @@ function E(e) {
         windowSize: a
     });
 }
-s = {
+l = {
     position: 'top',
     offsetX: 0,
     offsetY: 0,
     autoInvert: !0
 }, (a = 'defaultProps') in (i = f) ? Object.defineProperty(i, a, {
-    value: s,
+    value: l,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : i[a] = s;
+}) : i[a] = l;

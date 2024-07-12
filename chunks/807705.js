@@ -15,6 +15,6 @@ function a(e, t) {
         e,
         t
     ]);
-    let s = e !== a.current, l = n.current;
-    return s || l;
+    let l = e !== a.current, s = n.current;
+    return l || s;
 }

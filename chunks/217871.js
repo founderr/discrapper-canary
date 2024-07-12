@@ -1,36 +1,36 @@
 n(47120), n(177593);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(338545), o = n(442837), c = n(481060), d = n(393238), u = n(607070), h = n(44315), p = n(314897), m = n(111583), _ = n(889901), f = n(64078), E = n(351780), C = n(843693), g = n(641033), I = n(989830), x = n(689938), T = n(934376);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(338545), o = n(442837), c = n(481060), d = n(393238), u = n(607070), h = n(44315), p = n(314897), m = n(111583), _ = n(889901), f = n(64078), E = n(351780), C = n(843693), g = n(641033), I = n(989830), x = n(689938), T = n(934376);
 let v = a.memo(function (e) {
         let {
                 channelId: t,
                 width: n
-            } = e, s = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), l = (0, o.e7)([C.ZP], () => C.ZP.getMostRecentMessageCombo(t), [t]), [d, h] = a.useState(!1);
+            } = e, l = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), s = (0, o.e7)([C.ZP], () => C.ZP.getMostRecentMessageCombo(t), [t]), [d, h] = a.useState(!1);
         a.useEffect(() => {
-            if (null == l ? void 0 : l.displayed)
+            if (null == s ? void 0 : s.displayed)
                 return;
             h(!1), setImmediate(() => {
-                h((null != l ? (0, g.Eo)(l.combo) : 0) > 0);
+                h((null != s ? (0, g.Eo)(s.combo) : 0) > 0);
             });
             let e = setTimeout(() => {
-                h(!1), null != l && (0, f.ew)(l);
+                h(!1), null != s && (0, f.ew)(s);
             }, 2000);
             return () => clearTimeout(e);
-        }, [l]);
-        let p = null != l ? '100%' : '200%', m = (0, r.useSpring)({
+        }, [s]);
+        let p = null != s ? '100%' : '200%', m = (0, r.useSpring)({
                 opacity: d ? 1 : 0,
                 translateY: d ? '0' : p,
                 pointerEvents: 'none',
                 width: n,
-                config: s ? r.config.stiff : r.config.slow
+                config: l ? r.config.stiff : r.config.slow
             });
         return (0, i.jsx)(i.Fragment, {
-            children: null != l && (0, i.jsx)(r.animated.div, {
+            children: null != s && (0, i.jsx)(r.animated.div, {
                 className: T.messageComboScore,
                 style: m,
                 children: (0, i.jsx)(c.Text, {
                     className: T.comboScore,
                     variant: 'text-sm/bold',
-                    children: (0, g.Eo)(l.combo)
+                    children: (0, g.Eo)(s.combo)
                 })
             })
         });
@@ -39,10 +39,10 @@ let v = a.memo(function (e) {
                 value: t,
                 multiplier: n
             } = e, {
-                color: s,
+                color: l,
                 square: r,
                 flair: o
-            } = a.useMemo(() => (0, g.yz)(n), [n]), d = (0, h.Lq)(s);
+            } = a.useMemo(() => (0, g.yz)(n), [n]), d = (0, h.Lq)(l);
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.Text, {
@@ -63,11 +63,11 @@ let v = a.memo(function (e) {
                         r && (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: l()(T.comboSquare, T.left),
+                                    className: s()(T.comboSquare, T.left),
                                     style: { backgroundColor: d }
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: l()(T.comboSquare, T.right),
+                                    className: s()(T.comboSquare, T.right),
                                     style: { backgroundColor: d }
                                 })
                             ]
@@ -75,14 +75,14 @@ let v = a.memo(function (e) {
                         o && (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: l()(T.confettiIcon, T.left),
+                                    className: s()(T.confettiIcon, T.left),
                                     children: (0, i.jsx)(_.Z, {
                                         width: 24,
                                         height: 24
                                     })
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: l()(T.confettiIcon, T.right),
+                                    className: s()(T.confettiIcon, T.right),
                                     children: (0, i.jsx)(_.Z, {
                                         width: 24,
                                         height: 24
@@ -101,16 +101,16 @@ let v = a.memo(function (e) {
         });
     });
 t.Z = a.memo(function (e) {
-    let {channelId: t} = e, n = (0, o.e7)([p.default], () => p.default.getId()), s = (0, o.e7)([m.Z], () => m.Z.isTyping(t, n), [
+    let {channelId: t} = e, n = (0, o.e7)([p.default], () => p.default.getId()), l = (0, o.e7)([m.Z], () => m.Z.isTyping(t, n), [
             t,
             n
-        ]), l = (0, o.e7)([E.Z], () => E.Z.isEnabled()), c = (0, o.e7)([C.ZP], () => C.ZP.isComboing(n, t), [
+        ]), s = (0, o.e7)([E.Z], () => E.Z.isEnabled()), c = (0, o.e7)([C.ZP], () => C.ZP.isComboing(n, t), [
             t,
             n
         ]), {
             ref: h,
             width: _ = 0
-        } = (0, d.Z)(), f = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), [g, x] = a.useState(!1), S = (0, I.Z)(t), Z = l && c && s;
+        } = (0, d.Z)(), f = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), [g, x] = a.useState(!1), S = (0, I.Z)(t), Z = s && c && l;
     a.useEffect(() => {
         Z && x(!0);
         let e = setTimeout(() => x(Z), 1000);

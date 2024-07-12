@@ -3,7 +3,7 @@ n.d(t, {
         return M;
     }
 }), n(789020), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(954955), o = n.n(l), c = n(507274), d = n(481060), u = n(130402), _ = n(466794), E = n(659215), I = n(222677), m = n(995774), T = n(931651), h = n(594174), N = n(630388), f = n(74538), p = n(566006), C = n(981631), g = n(185923), S = n(474936), A = n(689938), x = n(716862), R = n(372178);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(954955), o = n.n(l), c = n(507274), d = n(481060), u = n(130402), _ = n(466794), E = n(659215), I = n(222677), m = n(995774), T = n(931651), h = n(594174), N = n(630388), f = n(74538), p = n(566006), C = n(981631), g = n(185923), S = n(474936), A = n(689938), R = n(716862), x = n(372178);
 function O(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -25,7 +25,7 @@ class M extends a.Component {
             return null;
         let E = h.default.getCurrentUser(), I = (0, f.I5)(E), m = c ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION;
         !I && c && (m = (0, i.jsx)(_.X, { tooltipText: A.Z.Messages.ADD_BURST_REACTION }));
-        let T = s ? R : x;
+        let T = s ? x : R;
         return (0, i.jsx)(d.Popout, {
             shouldShow: l,
             onRequestClose: this.handleReactionPickerToggle,

@@ -9,7 +9,7 @@ n.d(t, {
         return P;
     }
 }), n(47120), n(653041);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(392711), o = n.n(l), c = n(91192), d = n(442837), u = n(481060), _ = n(668781), E = n(904245), I = n(724757), m = n(294218), T = n(703656), h = n(210887), N = n(592125), f = n(375954), p = n(496675), C = n(933429), g = n(451478), S = n(387204), A = n(626135), x = n(585483), R = n(981631), O = n(689938), M = n(928482);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(392711), o = n.n(l), c = n(91192), d = n(442837), u = n(481060), _ = n(668781), E = n(904245), I = n(724757), m = n(294218), T = n(703656), h = n(210887), N = n(592125), f = n(375954), p = n(496675), C = n(933429), g = n(451478), S = n(387204), A = n(626135), R = n(585483), x = n(981631), O = n(689938), M = n(928482);
 function v(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -119,7 +119,7 @@ class b extends a.PureComponent {
 }
 let D = d.ZP.connectStores([p.Z], e => {
     let {channel: t} = e;
-    return { canManageMessages: null != t && p.Z.can(R.Plq.MANAGE_MESSAGES, t) };
+    return { canManageMessages: null != t && p.Z.can(x.Plq.MANAGE_MESSAGES, t) };
 })(b);
 function j(e) {
     let {
@@ -137,7 +137,7 @@ function j(e) {
             listName: v
         } = e, Z = a.useRef(null), P = (0, I.Z)(v, Z), b = (0, d.e7)([C.Z], () => C.Z.hasNotice()), D = (0, d.e7)([g.Z], () => g.Z.windowSize());
     a.useEffect(() => {
-        A.default.track(R.rMx.OPEN_POPOUT, { type: t });
+        A.default.track(x.rMx.OPEN_POPOUT, { type: t });
     }, [t]), a.useEffect(() => {
         function e() {
             var e;
@@ -147,8 +147,8 @@ function j(e) {
             var e;
             null === (e = Z.current) || void 0 === e || e.scrollPageDown({ animate: !0 });
         }
-        return x.S.subscribe(R.CkL.SCROLL_PAGE_DOWN, t), x.S.subscribe(R.CkL.SCROLL_PAGE_UP, e), () => {
-            x.S.unsubscribe(R.CkL.SCROLL_PAGE_DOWN, t), x.S.unsubscribe(R.CkL.SCROLL_PAGE_UP, e);
+        return R.S.subscribe(x.CkL.SCROLL_PAGE_DOWN, t), R.S.subscribe(x.CkL.SCROLL_PAGE_UP, e), () => {
+            R.S.unsubscribe(x.CkL.SCROLL_PAGE_DOWN, t), R.S.unsubscribe(x.CkL.SCROLL_PAGE_UP, e);
         };
     }, []);
     let j = a.useCallback(() => {
@@ -251,7 +251,7 @@ function U(e) {
             getProTip: g,
             scrollerClassName: S,
             className: A,
-            onCloseMessage: x,
+            onCloseMessage: R,
             listName: v
         } = e, L = (0, d.e7)([f.Z], () => {
             let e = null != s ? f.Z.getMessages(s.id) : null;
@@ -272,7 +272,7 @@ function U(e) {
             });
         else if (!L) {
             let e = N.Z.getChannel(r);
-            null != e && (E.Z.trackJump(r, i, t), (0, T.uL)(R.Z5c.CHANNEL(e.getGuildId(), r, i))), null == u || u(n);
+            null != e && (E.Z.trackJump(r, i, t), (0, T.uL)(x.Z5c.CHANNEL(e.getGuildId(), r, i))), null == u || u(n);
         }
     }
     a.useEffect(() => {
@@ -323,7 +323,7 @@ function U(e) {
                         jumping: L,
                         canCloseAllMessages: I,
                         jumpTo: Z,
-                        onCloseMessage: x
+                        onCloseMessage: R
                     })
                 ]
             }, t.id)), a);

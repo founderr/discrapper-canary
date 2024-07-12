@@ -4,7 +4,7 @@ E.d(_, {
     }
 });
 var s, T, I, n, A = E(442837), t = E(570140);
-let a = {}, r = {}, N = {}, L = !1, S = !1, D = !1;
+let a = {}, r = {}, N = {}, L = !1, D = !1, S = !1;
 function l(e) {
     let {guild: _} = e.invite;
     return (null == _ ? void 0 : _.welcome_screen) != null && (r[_.id] = _.welcome_screen, !0);
@@ -22,10 +22,10 @@ class G extends (n = A.ZP.Store) {
             return r[e];
     }
     isFetching() {
-        return S;
+        return D;
     }
     hasError() {
-        return D;
+        return S;
     }
     hasSeen(e) {
         let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -65,10 +65,10 @@ I = 'WelcomeScreenStore', (T = 'displayName') in (s = G) ? Object.defineProperty
         N[_] = !1;
     },
     WELCOME_SCREEN_FETCH_START: function () {
-        S = !0, D = !1;
+        D = !0, S = !1;
     },
     WELCOME_SCREEN_FETCH_SUCCESS: function (e) {
-        S = !1, D = !1;
+        D = !1, S = !1;
         let {
             welcomeScreen: _,
             guildId: E
@@ -76,6 +76,6 @@ I = 'WelcomeScreenStore', (T = 'displayName') in (s = G) ? Object.defineProperty
         r[E] = null != _ ? _ : a;
     },
     WELCOME_SCREEN_FETCH_FAIL: function () {
-        S = !1, D = !0;
+        D = !1, S = !0;
     }
 });

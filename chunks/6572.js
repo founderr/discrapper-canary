@@ -5,12 +5,12 @@ n.d(t, {
 }), n(47120);
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(442837), r = n(963838), o = n(37091), c = n(689938), d = n(187509);
+var a = n(120356), l = n.n(a), s = n(442837), r = n(963838), o = n(37091), c = n(689938), d = n(187509);
 function u(e) {
     let t, {
             channelId: n,
             userId: a
-        } = e, [u, h] = (0, l.Wu)([o.Z], () => [
+        } = e, [u, h] = (0, s.Wu)([o.Z], () => [
             o.Z.getWaitingHighFive(n, a),
             o.Z.getCompletedHighFive(n, a)
         ]);
@@ -24,7 +24,7 @@ function u(e) {
                         id: null,
                         animated: !1
                     }),
-                    className: s()(d.completeLeft, d.highFive)
+                    className: l()(d.completeLeft, d.highFive)
                 }),
                 (0, i.jsx)('img', {
                     alt: c.Z.Messages.CALL_HIGH_FIVE_EXCLAMATION,
@@ -33,7 +33,7 @@ function u(e) {
                         id: null,
                         animated: !1
                     }),
-                    className: s()(d.completeRight, d.highFive)
+                    className: l()(d.completeRight, d.highFive)
                 })
             ]
         });
@@ -47,7 +47,7 @@ function u(e) {
                 id: null,
                 animated: !1
             }),
-            className: s()(d.waiting, d.highFive)
+            className: l()(d.waiting, d.highFive)
         });
     }
     return (0, i.jsx)('div', {

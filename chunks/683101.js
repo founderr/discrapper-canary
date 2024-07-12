@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(392711), l = n.n(s), r = n(374470), o = n(481060), c = n(239091), d = n(294218), u = n(592125), h = n(689938), p = n(183528);
+var i = n(735250), a = n(470079), l = n(392711), s = n.n(l), r = n(374470), o = n(481060), c = n(239091), d = n(294218), u = n(592125), h = n(689938), p = n(183528);
 function m(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -19,8 +19,8 @@ class _ extends a.PureComponent {
                 listItemProps: t,
                 searchOffset: n,
                 index: a,
-                totalResults: s
-            } = this.props, r = l().find(e, e => e.isSearchHit);
+                totalResults: l
+            } = this.props, r = s().find(e, e => e.isSearchHit);
         if (null == r)
             return null;
         let c = u.Z.getChannel(r.channel_id);
@@ -35,7 +35,7 @@ class _ extends a.PureComponent {
                 className: p.container,
                 ...t,
                 'aria-posinset': 1 + n + a,
-                'aria-setsize': s,
+                'aria-setsize': l,
                 'aria-labelledby': m,
                 children: [
                     (0, i.jsx)(o.Clickable, {

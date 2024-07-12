@@ -26,8 +26,8 @@ function A(e) {
             'aria-label': p,
             'aria-labelledby': C,
             scrollable: A,
-            role: x,
-            hideSearch: R,
+            role: R,
+            hideSearch: x,
             showDivider: O
         } = e, M = (0, l.e7)([E.default], () => E.default.getCurrentUser()), v = (null == M ? void 0 : M.isStaff()) || (null == M ? void 0 : M.isStaffPersonal()) || !1;
     return (0, i.jsx)(T.ZP, {
@@ -36,7 +36,7 @@ function A(e) {
         toolbar: function () {
             if (null == I)
                 return null;
-            let e = null != a && !R;
+            let e = null != a && !x;
             return r.tq ? m : (0, i.jsxs)(i.Fragment, {
                 children: [
                     I,
@@ -53,12 +53,12 @@ function A(e) {
         onDoubleClick: S,
         'aria-label': p,
         'aria-labelledby': C,
-        role: x,
+        role: R,
         scrollable: A,
         children: t
     });
 }
-function x(e) {
+function R(e) {
     let {
         children: t,
         className: n,
@@ -75,7 +75,7 @@ function x(e) {
         children: t
     });
 }
-function R(e) {
+function x(e) {
     let {
             isAuthenticated: t = !0,
             ...n
@@ -85,10 +85,10 @@ function R(e) {
         children: t ? (0, i.jsx)(A, {
             ...n,
             className: r
-        }) : (0, i.jsx)(x, {
+        }) : (0, i.jsx)(R, {
             ...n,
             className: r
         })
     });
 }
-R.Title = T.ZP.Title, R.Icon = T.ZP.Icon, R.Divider = T.ZP.Divider, R.Caret = T.ZP.Caret, t.Z = R;
+x.Title = T.ZP.Title, x.Icon = T.ZP.Icon, x.Divider = T.ZP.Divider, x.Caret = T.ZP.Caret, t.Z = x;

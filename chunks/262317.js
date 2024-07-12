@@ -6,7 +6,7 @@ n.d(t, {
         return U;
     }
 }), n(47120);
-var i, a = n(735250), s = n(470079), l = n(120356), r = n.n(l), o = n(149765), c = n(846519), d = n(481060), u = n(475179), h = n(239091), p = n(287734), m = n(872810), _ = n(888651), f = n(100527), E = n(258609), C = n(257115), g = n(569545), I = n(382182), x = n(525925), T = n(701362), v = n(224184), N = n(484459), S = n(103575), Z = n(314897), A = n(430824), M = n(496675), b = n(979651), R = n(805009), j = n(981631), L = n(927923), P = n(70722), O = n(689938), y = n(431841);
+var i, a = n(735250), l = n(470079), s = n(120356), r = n.n(s), o = n(149765), c = n(846519), d = n(481060), u = n(475179), h = n(239091), p = n(287734), m = n(872810), _ = n(888651), f = n(100527), E = n(258609), C = n(257115), g = n(569545), I = n(382182), x = n(525925), T = n(701362), v = n(224184), N = n(484459), S = n(103575), Z = n(314897), A = n(430824), M = n(496675), b = n(979651), R = n(805009), j = n(981631), L = n(927923), P = n(70722), O = n(689938), y = n(431841);
 function D(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -53,7 +53,7 @@ function U(e) {
         ]
     });
 }
-class w extends (i = s.PureComponent) {
+class w extends (i = l.PureComponent) {
     get canWatchStream() {
         let {
             channel: e,
@@ -66,17 +66,17 @@ class w extends (i = s.PureComponent) {
                 connectUserDragSource: t,
                 canDrag: n,
                 isSelfOnOtherClient: i,
-                user: s,
-                channel: l
+                user: l,
+                channel: s
             } = this.props, r = (0, a.jsx)('div', {
                 className: y.draggable,
-                'data-dnd-name': l.name,
+                'data-dnd-name': s.name,
                 onMouseEnter: i ? void 0 : this.handleMouseEnter,
                 onMouseLeave: i ? void 0 : this.handleHidePreview,
                 children: (0, a.jsx)(d.Popout, {
-                    preload: () => (0, N.W)(s.id, s.getAvatarURL(l.guild_id, 80), {
-                        guildId: l.guild_id,
-                        channelId: l.id
+                    preload: () => (0, N.W)(l.id, l.getAvatarURL(s.guild_id, 80), {
+                        guildId: s.guild_id,
+                        channelId: s.id
                     }),
                     position: 'right',
                     renderPopout: this.renderUserPopout,
@@ -88,7 +88,7 @@ class w extends (i = s.PureComponent) {
         return n ? t(r) : r;
     }
     constructor(...e) {
-        super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
+        super(...e), D(this, 'domElementRef', l.createRef()), D(this, 'state', {
             userPopoutOpen: !1,
             isHoveringHangStatus: !1
         }), D(this, 'setIsHoveringHangStatusDelayed', new c.sW(500, () => {
@@ -207,8 +207,8 @@ class w extends (i = s.PureComponent) {
                     isSelfOnOtherClient: t,
                     otherClientSessionType: n,
                     voicePlatform: i,
-                    shouldShowPreview: s,
-                    mute: l,
+                    shouldShowPreview: l,
+                    mute: s,
                     localMute: o,
                     localVideoDisabled: c,
                     speaking: u,
@@ -237,7 +237,7 @@ class w extends (i = s.PureComponent) {
                     user: p,
                     speaking: u,
                     disconnected: h,
-                    mute: l,
+                    mute: s,
                     localMute: o,
                     localVideoDisabled: c,
                     isStreaming: E,
@@ -287,7 +287,7 @@ class w extends (i = s.PureComponent) {
             return (0, a.jsx)(d.Popout, {
                 position: 'right',
                 renderPopout: M && D || !E ? this.renderHangStatusPopout : this.renderStreamPopout,
-                shouldShow: s && !P,
+                shouldShow: l && !P,
                 onRequestClose: this.handleHidePreview,
                 spacing: 0,
                 children: () => (0, a.jsx)(R.Z, {

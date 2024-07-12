@@ -1,7 +1,7 @@
 n(733860), n(653041);
-var i, a, s, r, l = n(392711), o = n.n(l), c = n(442837), d = n(433517), u = n(379649), _ = n(570140), E = n(786761), I = n(572804), m = n(901461), T = n(814082), h = n(23750), N = n(314897), f = n(592125), p = n(375954), C = n(306680), g = n(699516), S = n(914010), A = n(9156), x = n(594174), R = n(981631);
+var i, a, s, r, l = n(392711), o = n.n(l), c = n(442837), d = n(433517), u = n(379649), _ = n(570140), E = n(786761), I = n(572804), m = n(901461), T = n(814082), h = n(23750), N = n(314897), f = n(592125), p = n(375954), C = n(306680), g = n(699516), S = n(914010), A = n(9156), R = n(594174), x = n(981631);
 let O = 'recentMentionFilterSettings', M = [], v = {}, L = !1, Z = !0, P = d.K.get(O, {
-        guildFilter: R.NgX.ALL_SERVERS,
+        guildFilter: x.NgX.ALL_SERVERS,
         everyoneFilter: !0,
         roleFilter: !0
     }), b = !1, D = 0, j = !1, U = !1;
@@ -13,11 +13,11 @@ function y(e) {
 }
 function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    if ((0, m.Z)(e) && !R.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type))
+    if ((0, m.Z)(e) && !x.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type))
         return null;
     null == t && (t = e.channel_id);
     let n = f.Z.getChannel(t);
-    if (null == n || n.type === R.d4z.DM || P.guildFilter === R.NgX.THIS_SERVER && n.getGuildId() !== S.Z.getGuildId())
+    if (null == n || n.type === x.d4z.DM || P.guildFilter === x.NgX.THIS_SERVER && n.getGuildId() !== S.Z.getGuildId())
         return null;
     let i = N.default.getId();
     if (g.Z.isBlockedForMessage(e) || (0, T.Z)(e, i))
@@ -55,7 +55,7 @@ function F(e) {
         'roleFilter',
         'everyoneFilter'
     ]), P), d.K.set(O, P);
-    let n = (e, n) => t[e] !== P[e] && P[e] === n, i = n('guildFilter', R.NgX.THIS_SERVER) || n('everyoneFilter', !1) || n('roleFilter', !1);
+    let n = (e, n) => t[e] !== P[e] && P[e] === n, i = n('guildFilter', x.NgX.THIS_SERVER) || n('everyoneFilter', !1) || n('roleFilter', !1);
     v = {};
     let a = [];
     i && M.forEach(e => {
@@ -75,7 +75,7 @@ function H(e) {
 }
 class Y extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(x.default, f.Z, p.Z, C.ZP);
+        this.waitFor(R.default, f.Z, p.Z, C.ZP);
     }
     isOpen() {
         return j;
@@ -119,7 +119,7 @@ r = 'RecentMentionsStore', (s = 'displayName') in (a = Y) ? Object.definePropert
 }) : a[s] = r, t.Z = new Y(_.Z, {
     LOAD_RECENT_MENTIONS: function (e) {
         let {guildId: t} = e;
-        L = !0, null == t && P.guildFilter === R.NgX.THIS_SERVER && F({ guildFilter: R.NgX.ALL_SERVERS });
+        L = !0, null == t && P.guildFilter === x.NgX.THIS_SERVER && F({ guildFilter: x.NgX.ALL_SERVERS });
     },
     LOAD_RECENT_MENTIONS_SUCCESS: function (e) {
         let {
@@ -146,7 +146,7 @@ r = 'RecentMentionsStore', (s = 'displayName') in (a = Y) ? Object.definePropert
         n > (M = M.slice(0, t)).length && (Z = !0);
     },
     CHANNEL_SELECT: function () {
-        if (P.guildFilter !== R.NgX.THIS_SERVER)
+        if (P.guildFilter !== x.NgX.THIS_SERVER)
             return !1;
         b = !1;
     },
@@ -162,7 +162,7 @@ r = 'RecentMentionsStore', (s = 'displayName') in (a = Y) ? Object.definePropert
         let {
                 channelId: t,
                 message: n
-            } = e, i = x.default.getCurrentUser();
+            } = e, i = R.default.getCurrentUser();
         if (null == i || !(0, I.Hl)({
                 rawMessage: n,
                 userId: i.id,

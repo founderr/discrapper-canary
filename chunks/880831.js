@@ -6,11 +6,11 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n(338545), c = n(442837), d = n(481060), u = n(570140), h = n(475179), p = n(904245), m = n(372900), _ = n(905405), f = n(937889), E = n(739566), C = n(267128), g = n(378233), I = n(419922), x = n(375954), T = n(699516), v = n(768581), N = n(70956), S = n(823379), Z = n(792125), A = n(981631), M = n(217702), b = n(858359);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n(338545), c = n(442837), d = n(481060), u = n(570140), h = n(475179), p = n(904245), m = n(372900), _ = n(905405), f = n(937889), E = n(739566), C = n(267128), g = n(378233), I = n(419922), x = n(375954), T = n(699516), v = n(768581), N = n(70956), S = n(823379), Z = n(792125), A = n(981631), M = n(217702), b = n(858359);
 let R = 10 * N.Z.Millis.SECOND;
 function j(e) {
     var t;
-    let {message: n} = e, s = (0, c.e7)([T.Z], () => T.Z.isBlockedForMessage(n)), r = (0, E.Uj)(n), o = a.useContext(m.Z), [u, x] = a.useState(!1), N = (0, _.p)(), S = a.useCallback(e => {
+    let {message: n} = e, l = (0, c.e7)([T.Z], () => T.Z.isBlockedForMessage(n)), r = (0, E.Uj)(n), o = a.useContext(m.Z), [u, x] = a.useState(!1), N = (0, _.p)(), S = a.useCallback(e => {
             if ('A' !== e.target.nodeName)
                 h.Z.updateChatOpen(n.channel_id, !0), p.Z.jumpToMessage({
                     channelId: n.channel_id,
@@ -28,7 +28,7 @@ function j(e) {
             renderedContent: R,
             trailingIcon: j,
             leadingIcon: L
-        } = (0, C.f)(n, Z, s, b.messageContent, {
+        } = (0, C.f)(n, Z, l, b.messageContent, {
             trailingIconClass: b.messageContentTrailingIcon,
             leadingIconClass: b.messageContentLeadingIcon,
             iconSize: M.WW
@@ -49,7 +49,7 @@ function j(e) {
         onClick: S,
         children: [
             (0, i.jsxs)('div', {
-                className: l()(b.messageContentWrapper, { [b.mentioned]: n.mentioned }),
+                className: s()(b.messageContentWrapper, { [b.mentioned]: n.mentioned }),
                 children: [
                     null != O ? null : L,
                     null !== (t = null != R ? R : O) && void 0 !== t ? t : (0, i.jsx)('span', { children: A }),
@@ -72,7 +72,7 @@ function L(e) {
     let {
             channelId: t,
             className: n
-        } = e, [s, d] = a.useState(!1), {
+        } = e, [l, d] = a.useState(!1), {
             toastsHidden: h,
             toastMessages: p
         } = function (e) {
@@ -80,8 +80,8 @@ function L(e) {
             let {
                     channelId: n,
                     isFrozen: i,
-                    count: s,
-                    lingerMs: l
+                    count: l,
+                    lingerMs: s
                 } = e, [r, o] = a.useState([]), [d, h] = a.useState(!1), p = a.useRef(null), m = a.useRef(), _ = a.useCallback(() => {
                     o([]), h(!0);
                 }, []);
@@ -92,7 +92,7 @@ function L(e) {
                         message: i
                     } = e;
                     if (t === n && i.type !== A.uaV.STAGE_START && i.type !== A.uaV.STAGE_END && i.type !== A.uaV.STAGE_TOPIC && i.type !== A.uaV.STAGE_SPEAKER && i.type !== A.uaV.STAGE_RAISE_HAND)
-                        clearTimeout(m.current), m.current = setTimeout(_, l), o(e => [
+                        clearTimeout(m.current), m.current = setTimeout(_, s), o(e => [
                             ...e,
                             i.id
                         ]);
@@ -103,8 +103,8 @@ function L(e) {
             }, [
                 n,
                 _,
-                s,
-                l
+                l,
+                s
             ]), a.useEffect(() => () => {
                 clearTimeout(m.current);
             }, []), a.useEffect(() => {
@@ -123,7 +123,7 @@ function L(e) {
             };
         }({
             channelId: t,
-            isFrozen: s,
+            isFrozen: l,
             count: 3,
             lingerMs: R
         }), m = a.useRef({}), [_, f] = a.useState({}), E = a.useCallback((e, t) => {
@@ -169,7 +169,7 @@ function L(e) {
             }
         });
     return (0, i.jsx)('div', {
-        className: l()(n, (0, Z.Q)(A.BRd.DARK)),
+        className: s()(n, (0, Z.Q)(A.BRd.DARK)),
         onMouseEnter: () => {
             d(!0);
         },

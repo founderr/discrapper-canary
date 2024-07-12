@@ -26,7 +26,7 @@ function C() {
             C
         ]), A = a.useCallback(() => {
             o.Z.open(N.oAB.INVENTORY), T.ZP.dismissOutboundPromotionNotice();
-        }, []), x = a.useCallback(() => {
+        }, []), R = a.useCallback(() => {
             E.default.track(N.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? S() : A();
         }, [
             n,
@@ -58,7 +58,7 @@ function C() {
             }) : f.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE : f.Z.Messages.OUTBOUND_PROMOTION_NOTICE,
             (0, i.jsx)(l.PrimaryCTANoticeButton, {
                 noticeType: N.kVF.OUTBOUND_PROMOTION,
-                onClick: x,
+                onClick: R,
                 children: n ? f.Z.Messages.PREMIUM_UPSELL_GET_NITRO : f.Z.Messages.TAKE_ME_THERE
             })
         ]

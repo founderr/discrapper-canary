@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n(772848), c = n(442837), d = n(570140), u = n(596454), h = n(607070), p = n(746355);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n(772848), c = n(442837), d = n(570140), u = n(596454), h = n(607070), p = n(746355);
 let m = [
         p.emoji1,
         p.emoji2,
@@ -13,15 +13,15 @@ let m = [
         var t;
         let {
                 emoji: n,
-                onAnimationEnd: s
+                onAnimationEnd: l
             } = e, o = (0, r.sample)(m), c = a.useCallback(() => {
-                s(n.key);
+                l(n.key);
             }, [
                 n.key,
-                s
+                l
             ]);
         return (0, i.jsx)('div', {
-            className: l()(p.emoji, o),
+            className: s()(p.emoji, o),
             onAnimationEnd: c,
             children: (0, i.jsx)(u.Z, {
                 emojiId: n.id,
@@ -34,14 +34,14 @@ function f(e) {
     let {
             channelId: t,
             callHeight: n
-        } = e, s = (0, c.e7)([h.Z], () => h.Z.useReducedMotion), [l, r] = a.useState([]);
+        } = e, l = (0, c.e7)([h.Z], () => h.Z.useReducedMotion), [s, r] = a.useState([]);
     a.useEffect(() => {
         function e(e) {
             let {
                 channelId: n,
                 emoji: i
             } = e;
-            if (n === t && !s && null != i)
+            if (n === t && !l && null != i)
                 r(e => [
                     ...e,
                     {
@@ -55,16 +55,16 @@ function f(e) {
         };
     }, [
         t,
-        s
+        l
     ]);
     let u = a.useCallback(e => {
         r(t => t.filter(t => t.key !== e));
     }, []);
-    return s ? null : (0, i.jsx)('div', {
+    return l ? null : (0, i.jsx)('div', {
         className: p.container,
         style: { top: n - 16 },
         'aria-hidden': !0,
-        children: l.map(e => (0, i.jsx)(_, {
+        children: s.map(e => (0, i.jsx)(_, {
             emoji: e,
             onAnimationEnd: u
         }, e.key))

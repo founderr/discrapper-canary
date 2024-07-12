@@ -1,5 +1,5 @@
 n(733860);
-var i, a = n(31775), s = n.n(a), l = n(442837), r = n(570140);
+var i, a = n(31775), l = n.n(a), s = n(442837), r = n(570140);
 function o(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -9,13 +9,13 @@ function o(e, t, n) {
     }) : e[t] = n, e;
 }
 let c = {
-    channelVisits: new (s())({ max: 1000 }),
+    channelVisits: new (l())({ max: 1000 }),
     bannerRenders: []
 };
 function d(e, t) {
     return e + t;
 }
-class u extends (i = l.ZP.PersistedStore) {
+class u extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         if (null != e)
             Array.isArray(e.bannerRenders) && (c.bannerRenders = e.bannerRenders), null != e.channelVisitsDump && c.channelVisits.load(e.channelVisitsDump);
@@ -48,7 +48,7 @@ o(u, 'displayName', 'UnreadSettingNoticeStore'), o(u, 'persistKey', 'UnreadSetti
         let {
                 guildId: n,
                 channelId: i
-            } = e, a = n + i, s = null !== (t = c.channelVisits.get(a)) && void 0 !== t ? t : [];
-        s.length > 100 && s.pop(), s.unshift(Date.now()), c.channelVisits.set(a, s);
+            } = e, a = n + i, l = null !== (t = c.channelVisits.get(a)) && void 0 !== t ? t : [];
+        l.length > 100 && l.pop(), l.unshift(Date.now()), c.channelVisits.set(a, l);
     }
 });

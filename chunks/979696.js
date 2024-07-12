@@ -1,5 +1,5 @@
-var i, a = n(442837), s = n(570140);
-function l(e, t, n) {
+var i, a = n(442837), l = n(570140);
+function s(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -20,7 +20,7 @@ class c extends (i = a.ZP.PersistedStore) {
         return o;
     }
 }
-l(c, 'displayName', 'CallChatToastsStore'), l(c, 'persistKey', 'CallChatToasts'), t.Z = new c(s.Z, {
+s(c, 'displayName', 'CallChatToastsStore'), s(c, 'persistKey', 'CallChatToasts'), t.Z = new c(l.Z, {
     CALL_CHAT_TOASTS_SET_ENABLED: function (e) {
         let {
             channelId: t,

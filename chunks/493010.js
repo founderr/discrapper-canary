@@ -1,4 +1,4 @@
-var i = n(735250), a = n(470079), s = n(704215), l = n(481060), r = n(475179), o = n(561472), c = n(287746), d = n(325708), u = n(541716), h = n(605236), p = n(665149), m = n(703558), _ = n(585483), f = n(909820), E = n(981631), C = n(921944), g = n(689938), I = n(822006);
+var i = n(735250), a = n(470079), l = n(704215), s = n(481060), r = n(475179), o = n(561472), c = n(287746), d = n(325708), u = n(541716), h = n(605236), p = n(665149), m = n(703558), _ = n(585483), f = n(909820), E = n(981631), C = n(921944), g = n(689938), I = n(822006);
 t.Z = function (e) {
     let {
         channel: t,
@@ -6,12 +6,12 @@ t.Z = function (e) {
         maxWidth: x
     } = e;
     a.useEffect(() => {
-        (0, h.EW)(s.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: C.L.AUTO });
+        (0, h.EW)(l.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: C.L.AUTO });
     }, []);
     let T = a.useCallback(() => {
             r.Z.updateChatOpen(t.id, !1), _.S.safeDispatch(E.CkL.FOCUS_CHAT_BUTTON);
         }, [t.id]), v = (0, i.jsx)(p.ZP.Icon, {
-            icon: l.CloseSmallIcon,
+            icon: s.CloseSmallIcon,
             tooltip: g.Z.Messages.CLOSE,
             onClick: T
         });
@@ -29,7 +29,7 @@ t.Z = function (e) {
                 'aria-label': g.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
                 children: [
                     (0, i.jsx)(p.ZP.Icon, {
-                        icon: l.ChatIcon,
+                        icon: s.ChatIcon,
                         disabled: !0,
                         'aria-label': g.Z.Messages.VOICE_CHAT_TEXT_CHANNEL
                     }),

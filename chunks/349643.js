@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return R;
     }
 });
 var i = n(735250);
@@ -12,7 +12,7 @@ let A = {
         right: -12
     }
 };
-function x(e) {
+function R(e) {
     let {
             setTab: t,
             closePopout: n
@@ -25,11 +25,11 @@ function x(e) {
                 setTab: t,
                 closePopout: n
             }),
-            0 === a.length ? (0, i.jsx)(O, {}) : (0, i.jsx)(o.AdvancedScrollerThin, { children: a.map(e => (0, i.jsx)(R, { savedMessage: e }, e.messageId)) })
+            0 === a.length ? (0, i.jsx)(O, {}) : (0, i.jsx)(o.AdvancedScrollerThin, { children: a.map(e => (0, i.jsx)(x, { savedMessage: e }, e.messageId)) })
         ]
     });
 }
-function R(e) {
+function x(e) {
     let {savedMessage: t} = e, n = (0, r.e7)([T.Z], () => T.Z.getMessage(t.channelId, t.messageId)), {
             message: a,
             channel: l

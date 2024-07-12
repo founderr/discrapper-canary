@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(704215), l = n(974674), r = n(481060), o = n(243778), c = n(261892), d = n(197115), u = n(703656), h = n(594174), p = n(626135), m = n(74538), _ = n(204197), f = n(502762), E = n(981631), C = n(921944), g = n(474936), I = n(689938), x = n(186916);
+var i = n(735250), a = n(470079), l = n(704215), s = n(974674), r = n(481060), o = n(243778), c = n(261892), d = n(197115), u = n(703656), h = n(594174), p = n(626135), m = n(74538), _ = n(204197), f = n(502762), E = n(981631), C = n(921944), g = n(474936), I = n(689938), x = n(186916);
 function T() {
     p.default.track(E.rMx.PREMIUM_UPSELL_INTERACTED, {
         cta_type: 'Learn more button',
@@ -10,14 +10,14 @@ function v(e) {
     let {
             avatarSrc: t,
             username: n
-        } = e, [a, c] = (0, o.U)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
-    return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL ? null : (0, i.jsxs)(f.Z.Overlay, {
+        } = e, [a, c] = (0, o.U)([l.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
+    return a !== l.z.NITRO_ON_PROFILE_SIDE_PANEL ? null : (0, i.jsxs)(f.Z.Overlay, {
         className: x.overlay,
         children: [
             (0, i.jsxs)('div', {
                 className: x.contentGroup,
                 children: [
-                    (0, i.jsx)(l.qE, {
+                    (0, i.jsx)(s.qE, {
                         src: t,
                         size: r.AvatarSizes.SIZE_32,
                         status: r.StatusTypes.UNKNOWN,
@@ -65,13 +65,13 @@ function N(e) {
     let {
             avatarSrc: t,
             username: n
-        } = e, [a, c] = (0, o.U)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
-    return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL ? null : (0, i.jsx)(f.Z.Overlay, {
+        } = e, [a, c] = (0, o.U)([l.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
+    return a !== l.z.NITRO_ON_PROFILE_SIDE_PANEL ? null : (0, i.jsx)(f.Z.Overlay, {
         className: x.overlay2,
         children: (0, i.jsxs)('div', {
             className: x.contentGroup,
             children: [
-                (0, i.jsx)(l.qE, {
+                (0, i.jsx)(s.qE, {
                     src: t,
                     size: r.AvatarSizes.SIZE_32,
                     status: r.StatusTypes.UNKNOWN,
@@ -109,7 +109,7 @@ function S(e) {
         children: (0, i.jsxs)('div', {
             className: x.contentGroup,
             children: [
-                (0, i.jsx)(l.qE, {
+                (0, i.jsx)(s.qE, {
                     src: t,
                     size: r.AvatarSizes.SIZE_32,
                     status: r.StatusTypes.UNKNOWN,
@@ -157,12 +157,12 @@ let A = a.memo(function (e) {
         } = e, {avatarSrc: a} = (0, _.Z)({
             user: t,
             size: r.AvatarSizes.SIZE_32
-        }), s = h.default.getCurrentUser(), l = m.ZP.isPremium(s) || null == n || !m.ZP.isPremiumAtLeast(n.premiumType, g.p9.TIER_2), {
+        }), l = h.default.getCurrentUser(), s = m.ZP.isPremium(l) || null == n || !m.ZP.isPremiumAtLeast(n.premiumType, g.p9.TIER_2), {
             enabled: o,
             variant: d
         } = c.f.useExperiment({ location: 'SimplifiedProfilePanelPremiumUpsell' }, {
-            disable: l,
-            autoTrackExposure: !l
+            disable: s,
+            autoTrackExposure: !s
         });
     return o ? (0, i.jsx)(Z, {
         variant: d,

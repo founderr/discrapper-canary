@@ -3,7 +3,7 @@ n.d(t, {
         return u;
     }
 });
-var i = n(470079), a = n(399606), s = n(673125), l = n(292793), r = n(88315), o = n(179295), c = n(370663), d = n(743597);
+var i = n(470079), a = n(399606), l = n(673125), s = n(292793), r = n(88315), o = n(179295), c = n(370663), d = n(743597);
 function u(e) {
     let {
             user: t,
@@ -12,7 +12,7 @@ function u(e) {
             stream: h,
             focused: p,
             canvas: m
-        } = e, _ = i.useRef(!1), f = (0, a.e7)([s.Z], () => s.Z.getDrawMode()), E = (0, o.Z)((0, c.Z)(t.id, n, u), h), C = (0, o.Z)((0, d.Z)(t.id, n, u), h), g = i.useCallback((e, t, n) => {
+        } = e, _ = i.useRef(!1), f = (0, a.e7)([l.Z], () => l.Z.getDrawMode()), E = (0, o.Z)((0, c.Z)(t.id, n, u), h), C = (0, o.Z)((0, d.Z)(t.id, n, u), h), g = i.useCallback((e, t, n) => {
             if (null == m)
                 return;
             let {
@@ -20,9 +20,9 @@ function u(e) {
                 y: a
             } = (0, r.hn)(m, n);
             switch (t.type) {
-            case l.W.LINE:
+            case s.W.LINE:
                 return E[e](t, i, a);
-            case l.W.EMOJI_HOSE:
+            case s.W.EMOJI_HOSE:
                 return C[e](t, i, a);
             }
         }, [

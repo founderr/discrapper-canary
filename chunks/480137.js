@@ -9,7 +9,7 @@ E.d(_, {
         return a;
     },
     gV: function () {
-        return S;
+        return D;
     },
     uo: function () {
         return L;
@@ -112,7 +112,7 @@ function L(e, _) {
             userId: e
         }), a(_, e);
 }
-function S(e, _) {
+function D(e, _) {
     if (!A() && null != _)
         return T.Z.dispatch({
             type: 'AUDIT_LOG_FILTER_BY_TARGET',

@@ -18,7 +18,7 @@ n.d(t, {
         return f;
     },
     Un: function () {
-        return x;
+        return R;
     },
     Xt: function () {
         return h;
@@ -109,7 +109,7 @@ function S(e) {
 function A(e) {
     return Object.keys(d.Zv).find(t => d.Zv[t].dropsQuestId === e);
 }
-function x(e) {
+function R(e) {
     switch (e) {
     case 'SWITCH':
         return u.Z.Messages.DROPS_PLATFORM_SWITCH;

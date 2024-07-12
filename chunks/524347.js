@@ -1,26 +1,26 @@
 var i, a, s, r, l = n(913527), o = n.n(l), c = n(442837), d = n(846519), u = n(570140), _ = n(594190), E = n(569545), I = n(314897), m = n(70956), T = n(960359), h = n(853197), N = n(702512);
-let f = null, p = null, C = {}, g = {}, S = N._e.LOADING_INITIAL_PROGRESS, A = new d.V7(), x = {
+let f = null, p = null, C = {}, g = {}, S = N._e.LOADING_INITIAL_PROGRESS, A = new d.V7(), R = {
         completed: !1,
         initialProgressFetched: !1,
         interrupted: !1,
         retries: 0
-    }, R = e => {
+    }, x = e => {
         let {
             dropsQuestId: t,
             streamKey: n,
             game: i,
             completed: a,
             gameTitle: s
-        } = x;
+        } = R;
         if (!(null == t || null == s || a || null == i || null == n || A.isStarted()))
             e ? (0, T.m0)(t, n, i.pid) : A.start(1 * m.Z.Millis.MINUTE, () => {
                 (0, T.m0)(t, n, i.pid);
             });
     }, O = e => {
-        x.retries = 0, x.completed = e.completed, x.initialProgressFetched = !0, x.progress = e.progress, x.lastCheckedAt = o().now(), S = x.completed ? N._e.QUEST_COMPLETION : N._e.TRACK_PROGRESS;
+        R.retries = 0, R.completed = e.completed, R.initialProgressFetched = !0, R.progress = e.progress, R.lastCheckedAt = o().now(), S = R.completed ? N._e.QUEST_COMPLETION : N._e.TRACK_PROGRESS;
     }, M = (e, t, n) => {
-        if (!x.completed || e.dropsQuestId !== x.dropsQuestId)
-            x.game = t, x.dropsQuestId = e.dropsQuestId, x.gameTitle = e.title, x.completed = !1, x.interrupted = !1, x.streamKey = n, x.retries = 0, x.lastCheckedAt = o().now(), A.start(5000, () => R(!0));
+        if (!R.completed || e.dropsQuestId !== R.dropsQuestId)
+            R.game = t, R.dropsQuestId = e.dropsQuestId, R.gameTitle = e.title, R.completed = !1, R.interrupted = !1, R.streamKey = n, R.retries = 0, R.lastCheckedAt = o().now(), A.start(5000, () => x(!0));
     };
 class v extends (r = c.ZP.Store) {
     initialize() {
@@ -35,7 +35,7 @@ class v extends (r = c.ZP.Store) {
         if (null == n || null == p)
             return !1;
         let i = !!(null === (t = p[n.dropsQuestId]) || void 0 === t ? void 0 : t.completed_at);
-        return x.completed && x.gameTitle === n.title || i;
+        return R.completed && R.gameTitle === n.title || i;
     }
     get serverEligibleByQuestIds() {
         return C;
@@ -53,19 +53,19 @@ class v extends (r = c.ZP.Store) {
         return g;
     }
     get hasInitialProgressFetched() {
-        return x.initialProgressFetched;
+        return R.initialProgressFetched;
     }
     get isCurrentQuestCompleted() {
-        return x.completed;
+        return R.completed;
     }
     get isCurrentQuestInterrupted() {
-        return x.interrupted;
+        return R.interrupted;
     }
     get currentDropQuestGameTitle() {
-        return x.gameTitle;
+        return R.gameTitle;
     }
     get currentDropQuestStreamProgress() {
-        let e = x.progress;
+        let e = R.progress;
         if (null == e || null == e.steps || 0 === e.steps.length)
             return 0;
         let t = e.steps.find(e => 'stream_length' === e.name);
@@ -99,25 +99,25 @@ s = 'DropsStore', (a = 'displayName') in (i = v) ? Object.defineProperty(i, a, {
     },
     DROPS_FETCH_PROGRESS_SUCCESS: O,
     DROPS_FETCH_PROGRESS_FAILURE: e => {
-        if (!x.initialProgressFetched)
-            x.initialProgressFetched = !0, S = N._e.STREAM_CTA;
+        if (!R.initialProgressFetched)
+            R.initialProgressFetched = !0, S = N._e.STREAM_CTA;
     },
     DROPS_HEARTBEAT_SUCCESS: e => {
-        O(e), C[e.dropsQuestId] = !0, R();
+        O(e), C[e.dropsQuestId] = !0, x();
     },
     DROPS_HEARTBEAT_FAILURE: e => {
         let {
             dropsQuestId: t,
             statusCode: n
         } = e;
-        if (x.completed = !1, x.initialProgressFetched = !0, x.lastCheckedAt = o().now(), 429 === n && 0 === x.retries) {
-            x.retries = x.retries + 1, R();
+        if (R.completed = !1, R.initialProgressFetched = !0, R.lastCheckedAt = o().now(), 429 === n && 0 === R.retries) {
+            R.retries = R.retries + 1, x();
             return;
         }
-        S = N._e.STREAM_CTA, 403 === n ? C[t] = !1 : x.interrupted = !0;
+        S = N._e.STREAM_CTA, 403 === n ? C[t] = !1 : R.interrupted = !0;
     },
     DROPS_UNENROLL_USER: e => {
-        p = null, C = { ...C }, delete C[e.dropsQuestId], g = { ...g }, delete g[e.dropsQuestId], x.dropsQuestId === e.dropsQuestId && (x = {
+        p = null, C = { ...C }, delete C[e.dropsQuestId], g = { ...g }, delete g[e.dropsQuestId], R.dropsQuestId === e.dropsQuestId && (R = {
             completed: !1,
             initialProgressFetched: !1,
             interrupted: !1,
@@ -125,7 +125,7 @@ s = 'DropsStore', (a = 'displayName') in (i = v) ? Object.defineProperty(i, a, {
         });
     },
     STREAM_CLOSE: () => {
-        x.completed && (S = N._e.QUEST_COMPLETION), x.interrupted = !1, x.retries = 0, A.stop();
+        R.completed && (S = N._e.QUEST_COMPLETION), R.interrupted = !1, R.retries = 0, A.stop();
     },
     STREAM_START: function (e) {
         var t;

@@ -5,7 +5,7 @@ let S = {
         variant: 'text-md/normal',
         color: 'header-secondary'
     }, A = { className: r()('mention', g.mention) };
-function x(e) {
+function R(e) {
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(o.Text, {
             ...S,
@@ -15,7 +15,7 @@ function x(e) {
     });
 }
 t.Z = a.memo(function (e) {
-    var t, n, s, r, R, O;
+    var t, n, s, r, x, O;
     let M, {
             channel: v,
             messageId: L,
@@ -40,32 +40,32 @@ t.Z = a.memo(function (e) {
                 e.name,
                 e
             ]));
-        for (let n of null !== (R = Z.options) && void 0 !== R ? R : [])
+        for (let n of null !== (x = Z.options) && void 0 !== x ? x : [])
             e = e.concat(function e(t) {
                 var n, s, r, l, d, u, _;
                 let g, {
-                        option: R,
+                        option: x,
                         channel: O,
                         guild: M,
                         messageId: v,
                         parentOptionKey: L,
                         commandOptionSpec: Z,
                         sourceAnalyticsLocations: P
-                    } = t, b = null != L ? L + ' ' + R.name : R.name;
-                if (R.type === c.jw.SUB_COMMAND || R.type === c.jw.SUB_COMMAND_GROUP) {
+                    } = t, b = null != L ? L + ' ' + x.name : x.name;
+                if (x.type === c.jw.SUB_COMMAND || x.type === c.jw.SUB_COMMAND_GROUP) {
                     let t = [(0, i.jsxs)(a.Fragment, {
                                 children: [
                                     ' ',
                                     (0, i.jsx)(o.Text, {
                                         ...S,
-                                        children: null !== (s = null == Z ? void 0 : Z.name_localized) && void 0 !== s ? s : R.name
+                                        children: null !== (s = null == Z ? void 0 : Z.name_localized) && void 0 !== s ? s : x.name
                                     })
                                 ]
                             }, b)], c = Object.fromEntries(null === (n = null !== (r = null == Z ? void 0 : Z.options) && void 0 !== r ? r : []) || void 0 === n ? void 0 : n.map(e => [
                             e.name,
                             e
                         ]));
-                    for (let n of null !== (l = R.options) && void 0 !== l ? l : [])
+                    for (let n of null !== (l = x.options) && void 0 !== l ? l : [])
                         t = t.concat(e({
                             option: n,
                             channel: O,
@@ -77,11 +77,11 @@ t.Z = a.memo(function (e) {
                         }));
                     return t;
                 }
-                let D = R.value;
-                if (null != R.value)
-                    switch (R.type) {
+                let D = x.value;
+                if (null != x.value)
+                    switch (x.type) {
                     case c.jw.USER: {
-                            let e = R.value.toString(), t = h.default.getUser(e);
+                            let e = x.value.toString(), t = h.default.getUser(e);
                             if (null != t) {
                                 let e = (0, N.ij)(t, O);
                                 g = (0, i.jsxs)(E.Z, {
@@ -103,7 +103,7 @@ t.Z = a.memo(function (e) {
                             break;
                         }
                     case c.jw.CHANNEL: {
-                            let e = R.value.toString(), t = m.Z.getChannel(e);
+                            let e = x.value.toString(), t = m.Z.getChannel(e);
                             null != t && (g = (0, i.jsxs)(E.Z, {
                                 ...A,
                                 children: [
@@ -114,7 +114,7 @@ t.Z = a.memo(function (e) {
                             break;
                         }
                     case c.jw.ROLE: {
-                            let e = R.value.toString(), t = null != M ? T.Z.getRole(M.id, e) : void 0;
+                            let e = x.value.toString(), t = null != M ? T.Z.getRole(M.id, e) : void 0;
                             null != t && (g = (0, i.jsxs)(E.Z, {
                                 ...A,
                                 children: [
@@ -125,7 +125,7 @@ t.Z = a.memo(function (e) {
                             break;
                         }
                     case c.jw.MENTIONABLE: {
-                            let e = R.value.toString(), t = null != M ? T.Z.getRole(M.id, e) : void 0;
+                            let e = x.value.toString(), t = null != M ? T.Z.getRole(M.id, e) : void 0;
                             if (null != t)
                                 g = (0, i.jsxs)(E.Z, {
                                     children: [
@@ -154,20 +154,20 @@ t.Z = a.memo(function (e) {
                             break;
                         }
                     case c.jw.ATTACHMENT:
-                        g = x(C.Z.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
+                        g = R(C.Z.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
                         break;
                     default: {
-                            let e = null == Z ? void 0 : null === (d = Z.choices) || void 0 === d ? void 0 : d.find(e => e.value === R.value);
+                            let e = null == Z ? void 0 : null === (d = Z.choices) || void 0 === d ? void 0 : d.find(e => e.value === x.value);
                             null != e && (D = null !== (u = e.name_localized) && void 0 !== u ? u : e.name);
                         }
                     }
-                return null == g && (g = x(null == D ? void 0 : D.toString())), [(0, i.jsxs)(a.Fragment, {
+                return null == g && (g = R(null == D ? void 0 : D.toString())), [(0, i.jsxs)(a.Fragment, {
                         children: [
                             (0, i.jsxs)(o.Text, {
                                 ...S,
                                 children: [
                                     ' ',
-                                    null !== (_ = null == Z ? void 0 : Z.name_localized) && void 0 !== _ ? _ : R.name,
+                                    null !== (_ = null == Z ? void 0 : Z.name_localized) && void 0 !== _ ? _ : x.name,
                                     ': '
                                 ]
                             }),

@@ -3,20 +3,20 @@ t.d(n, {
         return f;
     }
 }), t(47120);
-var i = t(735250), l = t(470079), r = t(581051), a = t(353381), s = t(993365), o = t(481060), c = t(240991), u = t(810090), d = t(283442), m = t(783097), p = t(520315), _ = t(591204), E = t(689938), h = t(970311), A = t(153521);
+var i = t(735250), l = t(470079), a = t(581051), r = t(353381), s = t(993365), o = t(481060), c = t(240991), u = t(810090), d = t(283442), m = t(783097), p = t(520315), _ = t(591204), E = t(689938), A = t(970311), h = t(153521);
 function f(e) {
     let {
             channel: n,
             application: t,
-            videoUrl: r,
-            imageCoverUrl: a,
+            videoUrl: a,
+            imageCoverUrl: r,
             sectionName: o
         } = e, c = l.useMemo(() => {
             var e;
             return null !== (e = (0, m.jD)(t)) && void 0 !== e ? e : '';
-        }, [t]), d = null != r || null != a, p = c.length > 0;
+        }, [t]), d = null != a || null != r, p = c.length > 0;
     return (0, i.jsxs)('div', {
-        className: h.container,
+        className: A.container,
         children: [
             (0, i.jsx)(N, {
                 channel: n,
@@ -24,21 +24,21 @@ function f(e) {
                 sectionName: o
             }),
             d || p ? (0, i.jsxs)('div', {
-                className: h.profileAndVideoContainer,
+                className: A.profileAndVideoContainer,
                 children: [
                     d ? (0, i.jsx)('div', {
-                        className: h.videoContainer,
+                        className: A.videoContainer,
                         children: (0, i.jsx)(u.Z, {
                             loop: !0,
                             autoPlay: !0,
                             muted: !0,
-                            className: p ? h.videoWithOverview : h.videoNoOverview,
-                            src: r,
-                            poster: a
+                            className: p ? A.videoWithOverview : A.videoNoOverview,
+                            src: a,
+                            poster: r
                         })
                     }) : null,
                     p ? (0, i.jsxs)('div', {
-                        className: d ? h.overviewContainerWithVideo : h.overviewContainerNoVideo,
+                        className: d ? A.overviewContainerWithVideo : A.overviewContainerNoVideo,
                         children: [
                             (0, i.jsx)(s.x, {
                                 variant: 'text-sm/semibold',
@@ -56,9 +56,9 @@ function N(e) {
     let {
             channel: n,
             application: t,
-            sectionName: r
+            sectionName: a
         } = e, {
-            name: a,
+            name: r,
             activityApplication: s
         } = l.useMemo(() => {
             var e;
@@ -71,19 +71,19 @@ function N(e) {
             channel: n
         });
     return (0, i.jsx)('div', {
-        className: h.titleContainer,
+        className: A.titleContainer,
         children: (0, i.jsxs)('div', {
-            className: h.titleInnerContainer,
+            className: A.titleInnerContainer,
             children: [
                 (0, i.jsx)(o.Heading, {
                     variant: 'heading-xl/extrabold',
-                    children: a
+                    children: r
                 }),
                 null != s ? (0, i.jsx)(_.Z, {
                     channel: n,
                     application: s,
                     disabled: c,
-                    sectionName: r,
+                    sectionName: a,
                     commandName: u
                 }) : null
             ]
@@ -98,14 +98,14 @@ function C(e) {
             lineHeight: _,
             lineCount: f
         } = function () {
-            let e = l.useRef(null), [n, t] = l.useState(null), [i, r] = l.useState(null);
+            let e = l.useRef(null), [n, t] = l.useState(null), [i, a] = l.useState(null);
             return l.useLayoutEffect(() => {
                 let n = e.current;
                 if (null === n || 0 === n.clientHeight)
                     return;
                 let i = parseInt(getComputedStyle(n).lineHeight);
                 if (!isNaN(i))
-                    t(i), r(Math.floor(n.clientHeight / i));
+                    t(i), a(Math.floor(n.clientHeight / i));
             }, []), {
                 ref: e,
                 lineHeight: n,
@@ -130,35 +130,35 @@ function C(e) {
         } = (0, p.Z)({
             isExpanded: t,
             ...N
-        }), x = t || v;
+        }), P = t || v;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
                 ref: C,
-                className: h.overflowHidden,
+                className: A.overflowHidden,
                 onTransitionEnd: I,
                 children: (0, i.jsx)(s.x, {
                     ref: m,
-                    className: A.markup,
+                    className: h.markup,
                     variant: 'text-sm/medium',
-                    lineClamp: x ? void 0 : 3,
-                    style: { maxHeight: x ? void 0 : N.minHeightOverride },
+                    lineClamp: P ? void 0 : 3,
+                    style: { maxHeight: P ? void 0 : N.minHeightOverride },
                     children: d
                 })
             }),
             null != f && f > 3 ? (0, i.jsxs)(o.Clickable, {
-                className: h.expandableDescriptionClickable,
+                className: A.expandableDescriptionClickable,
                 onClick: () => u(e => !e),
                 children: [
                     (0, i.jsx)(s.x, {
                         variant: 'text-sm/semibold',
                         color: 'text-brand',
-                        children: x ? E.Z.Messages.APP_LAUNCHER_SHOW_LESS : E.Z.Messages.APP_LAUNCHER_SHOW_MORE
+                        children: P ? E.Z.Messages.APP_LAUNCHER_SHOW_LESS : E.Z.Messages.APP_LAUNCHER_SHOW_MORE
                     }),
-                    x ? (0, i.jsx)(a.u, {
+                    P ? (0, i.jsx)(r.u, {
                         size: 'sm',
                         color: o.tokens.colors.TEXT_BRAND
-                    }) : (0, i.jsx)(r.C, {
+                    }) : (0, i.jsx)(a.C, {
                         size: 'sm',
                         color: o.tokens.colors.TEXT_BRAND
                     })

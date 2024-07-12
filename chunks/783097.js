@@ -1,6 +1,6 @@
 t.d(n, {
     $d: function () {
-        return h;
+        return A;
     },
     BQ: function () {
         return E;
@@ -12,7 +12,7 @@ t.d(n, {
         return C;
     },
     jD: function () {
-        return A;
+        return h;
     },
     sl: function () {
         return v;
@@ -24,15 +24,15 @@ t.d(n, {
         return f;
     }
 }), t(789020);
-var i = t(668781), l = t(904245), r = t(895924), a = t(667204), s = t(957730), o = t(973616), c = t(768581), u = t(630388), d = t(981631), m = t(689079), p = t(689938);
+var i = t(668781), l = t(904245), a = t(895924), r = t(667204), s = t(957730), o = t(973616), c = t(768581), u = t(630388), d = t(981631), m = t(689079), p = t(689938);
 let _ = { id: m.bi.BUILT_IN };
 function E(e) {
     return e.id !== m.bi.BUILT_IN;
 }
-function h(e) {
+function A(e) {
     return E(e) ? e.name : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
 }
-function A(e) {
+function h(e) {
     return E(e) ? e.description : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
 }
 function f(e) {
@@ -53,16 +53,16 @@ function C(e) {
             sectionName: d
         } = e, {channel: m} = o, _ = async () => {
             try {
-                let i = await (0, a.Z)({
+                let i = await (0, r.Z)({
                     command: n,
                     optionValues: t,
                     context: o,
                     commandTargetId: c,
                     maxSizeCallback: u,
-                    commandOrigin: r.bB.APPLICATION_LAUNCHER,
+                    commandOrigin: a.bB.APPLICATION_LAUNCHER,
                     sectionName: d
                 });
-                if (n.inputType === r.iw.BUILT_IN_TEXT && null != i) {
+                if (n.inputType === a.iw.BUILT_IN_TEXT && null != i) {
                     var e;
                     let n = s.ZP.parse(m, i.content);
                     n.tts = null !== (e = i.tts) && void 0 !== e && e, l.Z.sendMessage(o.channel.id, n);

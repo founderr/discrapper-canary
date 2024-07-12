@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     }
 });
-var i = n(735250), a = n(470079), s = n(442837), r = n(447543), l = n(410575), o = n(906732), c = n(924301), d = n(11868), u = n(413605), _ = n(451603), E = n(885714), I = n(314897), m = n(430824), T = n(701190), h = n(610699), N = n(313876), f = n(778333), p = n(949981), C = n(680668), g = n(143708), S = n(358595), A = n(563917), x = n(135845), R = n(981631);
+var i = n(735250), a = n(470079), s = n(442837), r = n(447543), l = n(410575), o = n(906732), c = n(924301), d = n(11868), u = n(413605), _ = n(451603), E = n(885714), I = n(314897), m = n(430824), T = n(701190), h = n(610699), N = n(313876), f = n(778333), p = n(949981), C = n(680668), g = n(143708), S = n(358595), A = n(563917), R = n(135845), x = n(981631);
 function O(e) {
     let {
             code: t,
@@ -20,7 +20,7 @@ function O(e) {
         null == M && r.Z.resolveInvite(t);
     }, [t]);
     let L = null != M ? M : {
-            state: R.r2o.RESOLVING,
+            state: x.r2o.RESOLVING,
             code: ''
         }, {analyticsLocations: Z} = (0, o.ZP)(), P = (0, s.e7)([m.Z], () => (null == M ? void 0 : M.guild) != null ? m.Z.getGuild(M.guild.id) : null, [M]), b = (0, s.e7)([I.default], () => I.default.getId()), D = (0, s.e7)([c.ZP], () => {
             var e;
@@ -29,10 +29,10 @@ function O(e) {
             null != L.channel && r.Z.transitionToInviteSync(L);
         }, U = () => {
             (0, _.yU)() ? (0, E.Z)({
-                analyticsSource: { page: R.ZY5.INVITE_EMBED },
+                analyticsSource: { page: x.ZY5.INVITE_EMBED },
                 analyticsLocation: {
-                    page: R.ZY5.INVITE_EMBED,
-                    section: R.jXE.GUILD_CAP_UPSELL_MODAL
+                    page: x.ZY5.INVITE_EMBED,
+                    section: x.jXE.GUILD_CAP_UPSELL_MODAL
                 },
                 analyticsLocations: Z
             }) : r.Z.acceptInviteAndTransitionToInviteChannel({
@@ -48,17 +48,17 @@ function O(e) {
             author: n
         });
     switch (L.state) {
-    case R.r2o.RESOLVING:
+    case x.r2o.RESOLVING:
         y = (0, i.jsx)(S.Z, {});
         break;
-    case R.r2o.EXPIRED:
-    case R.r2o.BANNED:
+    case x.r2o.EXPIRED:
+    case x.r2o.BANNED:
         y = (0, i.jsx)(g.Z, {
-            banned: L.state === R.r2o.BANNED,
+            banned: L.state === x.r2o.BANNED,
             author: n
         });
         break;
-    case R.r2o.ERROR:
+    case x.r2o.ERROR:
         y = (0, i.jsx)(N.Z, {
             author: n,
             inviteError: v
@@ -84,7 +84,7 @@ function O(e) {
             break;
         default:
             if ((0, u.TY)(L)) {
-                y = (0, i.jsx)(x.Z, {
+                y = (0, i.jsx)(R.Z, {
                     onTransitionToInviteChannel: j,
                     onAcceptInstantInvite: U,
                     currentUserId: b,
@@ -121,7 +121,7 @@ function O(e) {
         }
     }
     return (0, i.jsx)(l.Z, {
-        section: R.jXE.INVITE_LINK,
+        section: x.jXE.INVITE_LINK,
         children: y
     });
 }

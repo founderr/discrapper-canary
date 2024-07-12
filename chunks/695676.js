@@ -6,12 +6,12 @@ t.d(n, {
         return s;
     },
     uX: function () {
-        return a;
+        return r;
     }
 });
-var i, l, r = t(470079);
+var i, l, a = t(470079);
 (i = l || (l = {})).HOME = 'home', i.LIST = 'list', i.APPLICATION = 'application';
-let a = r.createContext({
+let r = a.createContext({
     history: [],
     discard: {},
     currentView: void 0,
@@ -22,5 +22,5 @@ let a = r.createContext({
     getMostRecentHistoryItemByType: () => void 0
 });
 function s() {
-    return r.useContext(a);
+    return a.useContext(r);
 }

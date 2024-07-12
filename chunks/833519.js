@@ -6,17 +6,17 @@ n.d(t, {
         return H;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(475179), d = n(872810), u = n(763520), h = n(710845), p = n(590293), m = n(863908), _ = n(871118), f = n(517525), E = n(590076), C = n(507675), g = n(199902), I = n(314897), x = n(592125), T = n(131951), v = n(451478), N = n(40300), S = n(368666), Z = n(685203), A = n(112560), M = n(442168), b = n(822296), R = n(916771), j = n(792517), L = n(979425), P = n(651183), O = n(623825), y = n(981631), D = n(354459), k = n(65154), U = n(689938), w = n(26864);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(475179), d = n(872810), u = n(763520), h = n(710845), p = n(590293), m = n(863908), _ = n(871118), f = n(517525), E = n(590076), C = n(507675), g = n(199902), I = n(314897), x = n(592125), T = n(131951), v = n(451478), N = n(40300), S = n(368666), Z = n(685203), A = n(112560), M = n(442168), b = n(822296), R = n(916771), j = n(792517), L = n(979425), P = n(651183), O = n(623825), y = n(981631), D = n(354459), k = n(65154), U = n(689938), w = n(26864);
 let B = new h.Z('StreamTile');
 function H(e) {
     let {
             participant: t,
             selected: n,
             focused: a,
-            idle: s,
-            width: l,
+            idle: l,
+            width: s,
             premiumIndicator: o
-        } = e, c = (0, r.e7)([g.Z], () => g.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)), d = (0, O.K)(l);
+        } = e, c = (0, r.e7)([g.Z], () => g.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)), d = (0, O.K)(s);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             n ? null : (0, i.jsx)(P.Z, { participant: t }),
@@ -24,7 +24,7 @@ function H(e) {
                 size: S.ZP.Sizes.SMALL,
                 className: w.liveIndicator,
                 participant: t,
-                showQuality: !d && !s,
+                showQuality: !d && !l,
                 isUpsellEnabled: !1,
                 premiumIndicator: o
             })
@@ -35,7 +35,7 @@ function G(e) {
     let {
             participant: t,
             selected: n,
-            onVideoResize: s,
+            onVideoResize: l,
             paused: h,
             fit: f,
             inPopout: S,
@@ -94,7 +94,7 @@ function G(e) {
                     stream: F
                 }) : null,
                 (0, i.jsx)(N.Z, {
-                    onResize: s,
+                    onResize: l,
                     wrapperClassName: w.videoWrapper,
                     className: w.content,
                     streamId: z,
@@ -116,11 +116,11 @@ function G(e) {
         });
     else
         return (0, i.jsxs)('div', {
-            className: l()(w.content, w.streamPreview, { [w.small]: ee }),
+            className: s()(w.content, w.streamPreview, { [w.small]: ee }),
             children: [
                 (0, i.jsx)(_.Z, {
                     noText: !0,
-                    className: l()(w.absoluteFill, { [w.streamPreviewOpacity]: null == K }),
+                    className: s()(w.absoluteFill, { [w.streamPreviewOpacity]: null == K }),
                     stream: t.stream
                 }),
                 n ? null : (0, i.jsxs)(i.Fragment, {

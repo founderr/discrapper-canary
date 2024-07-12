@@ -3,7 +3,7 @@ n.d(t, {
         return c;
     }
 });
-var i = n(735250), a = n(470079), s = n(481060), l = n(689938), r = n(381881), o = n(560580);
+var i = n(735250), a = n(470079), l = n(481060), s = n(689938), r = n(381881), o = n(560580);
 function c(e) {
     let {
             header: t,
@@ -27,12 +27,12 @@ function c(e) {
                     }),
                     (0, i.jsxs)('div', {
                         children: [
-                            (0, i.jsx)(s.Heading, {
+                            (0, i.jsx)(l.Heading, {
                                 variant: 'heading-md/semibold',
                                 color: 'text-primary',
                                 children: t
                             }),
-                            (0, i.jsx)(s.Text, {
+                            (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-primary',
                                 children: n
@@ -45,8 +45,8 @@ function c(e) {
                 className: r.buttons,
                 children: null == d ? void 0 : d.map((e, t) => {
                     var n;
-                    return (0, i.jsx)(s.Button, {
-                        size: null !== (n = e.size) && void 0 !== n ? n : s.Button.Sizes.SMALL,
+                    return (0, i.jsx)(l.Button, {
+                        size: null !== (n = e.size) && void 0 !== n ? n : l.Button.Sizes.SMALL,
                         color: e.color,
                         'aria-label': e.text,
                         onClick: e.onclick,
@@ -55,12 +55,12 @@ function c(e) {
                     }, t);
                 })
             }),
-            u ? (0, i.jsx)(s.Clickable, {
+            u ? (0, i.jsx)(l.Clickable, {
                 className: r.closeButton,
                 onClick: h,
                 role: 'button',
-                'aria-label': l.Z.Messages.DISMISS,
-                children: (0, i.jsx)(s.CloseSmallIcon, {
+                'aria-label': s.Z.Messages.DISMISS,
+                children: (0, i.jsx)(l.CloseSmallIcon, {
                     size: 'md',
                     color: 'currentColor',
                     className: r.closeButton

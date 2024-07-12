@@ -1,13 +1,13 @@
 n(627494), n(757143);
-var i = n(735250), a = n(470079), s = n(317261), l = n(442837), r = n(18323), o = n(594174), c = n(823379), d = n(5192), u = n(561308), h = n(256726), p = n(206295), m = n(278399), _ = n(297781), f = n(591853), E = n(410441), C = n(616922), g = n(689938);
+var i = n(735250), a = n(470079), l = n(317261), s = n(442837), r = n(18323), o = n(594174), c = n(823379), d = n(5192), u = n(561308), h = n(256726), p = n(206295), m = n(278399), _ = n(297781), f = n(591853), E = n(410441), C = n(616922), g = n(689938);
 let I = (e, t, n, i) => {
         let a = function (e) {
-                if (e === s._.WEEK)
+                if (e === l._.WEEK)
                     return g.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_WEEK_POPOUT;
-            }(i), l = d.ZP.getName(t.guild_id, t.id, n), r = e.extra.artist.name;
+            }(i), s = d.ZP.getName(t.guild_id, t.id, n), r = e.extra.artist.name;
         return a.plainFormat({
             artist: r,
-            userName: l
+            userName: s
         }).replaceAll('*', '');
     }, x = (e, t) => g.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_TOP_ARTIST.format({
         username: t.username,
@@ -17,13 +17,13 @@ t.Z = e => {
     let {
             channel: t,
             entry: n,
-            requestId: s,
+            requestId: l,
             closePopout: d
         } = e, {
             parent_title: T,
             provider: v,
             image_url: N
-        } = n.extra.media, S = n.extra.artist.name, Z = (0, l.e7)([o.default], () => o.default.getUser(n.author_id)), {
+        } = n.extra.media, S = n.extra.artist.name, Z = (0, s.e7)([o.default], () => o.default.getUser(n.author_id)), {
             primaryColor: A,
             secondaryColor: M
         } = (0, p.Z)(N), b = (0, u.Nq)(n), R = a.useCallback(() => {
@@ -87,7 +87,7 @@ t.Z = e => {
                     generateReactionImage: R,
                     reactionImageAltText: x(n, Z),
                     entry: n,
-                    requestId: s
+                    requestId: l
                 })
             })
         ]

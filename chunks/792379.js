@@ -3,12 +3,12 @@ n.d(t, {
         return L;
     }
 });
-var i = n(735250), a = n(470079), s = n(597312), l = n(727637), r = n(410030), o = n(100527), c = n(906732), d = n(580552), u = n(680295), h = n(5192), p = n(785717), m = n(318661), _ = n(78675), f = n(741308), E = n(588822), C = n(899007), g = n(900927), I = n(678738), x = n(502762), T = n(530), v = n(256059), N = n(679332), S = n(544989), Z = n(171368), A = n(308829), M = n(228168), b = n(689938), R = n(642402), j = n(790884);
+var i = n(735250), a = n(470079), l = n(597312), s = n(727637), r = n(410030), o = n(100527), c = n(906732), d = n(580552), u = n(680295), h = n(5192), p = n(785717), m = n(318661), _ = n(78675), f = n(741308), E = n(588822), C = n(899007), g = n(900927), I = n(678738), x = n(502762), T = n(530), v = n(256059), N = n(679332), S = n(544989), Z = n(171368), A = n(308829), M = n(228168), b = n(689938), R = n(642402), j = n(790884);
 function L(e) {
     let {
             user: t,
             channel: n
-        } = e, L = __OVERLAY__ || !(0, d.Z)(t.id), {analyticsLocations: P} = (0, c.ZP)(o.Z.PROFILE_PANEL), O = (0, m.ZP)(t.id), y = (0, r.ZP)(), D = a.useRef(null), k = (0, l.Z)(D), U = e => {
+        } = e, L = __OVERLAY__ || !(0, d.Z)(t.id), {analyticsLocations: P} = (0, c.ZP)(o.Z.PROFILE_PANEL), O = (0, m.ZP)(t.id), y = (0, r.ZP)(), D = a.useRef(null), k = (0, s.Z)(D), U = e => {
             (0, Z.openUserProfileModal)({
                 sourceAnalyticsLocations: P,
                 userId: t.id,
@@ -30,7 +30,7 @@ function L(e) {
                 themeOverride: y,
                 className: R.container,
                 children: [
-                    (0, i.jsxs)(s.u2, {
+                    (0, i.jsxs)(l.u2, {
                         children: [
                             (0, i.jsx)(S.Z, {
                                 profileType: M.y0.PANEL,

@@ -3,28 +3,28 @@ n.d(t, {
         return a;
     }
 });
-var i, a, s = n(735250);
+var s, a, r = n(735250);
 n(470079);
-var r = n(120356), l = n.n(r), o = n(780384), c = n(918701), d = n(78826), u = n(981631), _ = n(272467);
-(i = a || (a = {}))[i.SMALL = 24] = 'SMALL', i[i.MEDIUM = 32] = 'MEDIUM';
+var i = n(120356), o = n.n(i), u = n(780384), _ = n(918701), l = n(78826), T = n(981631), E = n(272467);
+(s = a || (a = {}))[s.SMALL = 24] = 'SMALL', s[s.MEDIUM = 32] = 'MEDIUM';
 t.Z = function (e) {
     let {
             className: t,
             gameTileSize: n = 24,
-            quest: i,
-            theme: a = u.BRd.DARK,
-            withGameTile: r = !0
-        } = e, E = (0, o.wj)(a) ? u.BRd.DARK : u.BRd.LIGHT;
-    return (0, s.jsxs)('div', {
-        className: l()(_.partnerBranding, t),
+            quest: s,
+            theme: a = T.BRd.DARK,
+            withGameTile: i = !0
+        } = e, I = (0, u.wj)(a) ? T.BRd.DARK : T.BRd.LIGHT;
+    return (0, r.jsxs)('div', {
+        className: o()(E.partnerBranding, t),
         children: [
-            r && (0, s.jsx)(d.Fl, {
+            i && (0, r.jsx)(l.Fl, {
                 id: 'QuestPartnerBranding_gameTile',
-                children: e => (0, s.jsx)('img', {
+                children: e => (0, r.jsx)('img', {
                     ref: e,
-                    className: _.partnerBrandingGameTile,
+                    className: E.partnerBrandingGameTile,
                     alt: '',
-                    src: (0, c.uo)(i, E),
+                    src: (0, _.uo)(s, I),
                     style: {
                         borderRadius: function (e) {
                             switch (e) {
@@ -39,13 +39,13 @@ t.Z = function (e) {
                     }
                 })
             }),
-            (0, s.jsx)(d.Fl, {
+            (0, r.jsx)(l.Fl, {
                 id: 'QuestPartnerBranding_gameLogotype',
-                children: e => (0, s.jsx)('img', {
+                children: e => (0, r.jsx)('img', {
                     ref: e,
-                    className: _.partnerBrandingLogotype,
-                    alt: i.config.messages.gameTitle,
-                    src: (0, c.Gs)(i, E)
+                    className: E.partnerBrandingLogotype,
+                    alt: s.config.messages.gameTitle,
+                    src: (0, _.Gs)(s, I)
                 })
             })
         ]

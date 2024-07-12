@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(692547), l = n(780384), r = n(481060), o = n(367907), c = n(210887), d = n(626135), u = n(981631), h = n(689938), p = n(768749), m = n(153521);
+var i = n(735250), a = n(470079), l = n(692547), s = n(780384), r = n(481060), o = n(367907), c = n(210887), d = n(626135), u = n(981631), h = n(689938), p = n(768749), m = n(153521);
 function _(e) {
     let {
         onClose: t,
@@ -38,16 +38,16 @@ function _(e) {
         let e;
         let t = c.Z.theme, i = !1;
         return null != I && (async () => {
-            let [{default: a}, s] = await Promise.all([
+            let [{default: a}, l] = await Promise.all([
                 Promise.resolve().then(n.t.bind(n, 500923, 23)),
-                (0, l.wj)(t) ? I.dark() : I.light()
+                (0, s.wj)(t) ? I.dark() : I.light()
             ]);
             !i && null != v.current && (e = a.loadAnimation({
                 container: v.current,
                 renderer: 'svg',
                 loop: !0,
                 autoplay: !0,
-                animationData: s
+                animationData: l
             }));
         })(), () => {
             i = !0, null != e && (e.destroy(), e = void 0);
@@ -125,7 +125,7 @@ function _(e) {
                     children: [
                         (0, i.jsx)(r.CircleInformationIcon, {
                             size: 'xs',
-                            color: s.Z.unsafe_rawColors.PRIMARY_400.css,
+                            color: l.Z.unsafe_rawColors.PRIMARY_400.css,
                             className: p.icon
                         }),
                         (0, i.jsx)(r.Text, {

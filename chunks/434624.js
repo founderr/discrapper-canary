@@ -18,9 +18,9 @@ let T = a.memo(function (e) {
                 readOnly: g,
                 isLurking: S,
                 isGuest: A,
-                isPendingMember: x,
-                type: R
-            } = e, O = R === _.O.BURST, M = (0, E.y4)(N, f, R), v = (0, d.v)(O && null != C ? C : []), L = a ? m : I, Z = O ? p : h, P = (0, u.y)(Z, E.aO), b = {};
+                isPendingMember: R,
+                type: x
+            } = e, O = x === _.O.BURST, M = (0, E.y4)(N, f, x), v = (0, d.v)(O && null != C ? C : []), L = a ? m : I, Z = O ? p : h, P = (0, u.y)(Z, E.aO), b = {};
         if (O && null != v) {
             var D;
             let {
@@ -38,7 +38,7 @@ let T = a.memo(function (e) {
         return (0, i.jsxs)('div', {
             className: r()(L.reaction, L.reactionInner, T, {
                 [L.reactionMe]: M,
-                [L.reactionReadOnly]: g && !S && !x && !A
+                [L.reactionReadOnly]: g && !S && !R && !A
             }),
             style: b,
             children: [

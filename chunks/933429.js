@@ -3,7 +3,7 @@ n.d(t, {
         return ej;
     }
 }), n(47120);
-var i, a, s, r, l = n(913527), o = n.n(l), c = n(442837), d = n(743426), u = n(704215), _ = n(433517), E = n(570140), I = n(579806), m = n(726542), T = n(812206), h = n(223892), N = n(674525), f = n(605236), p = n(524347), C = n(853197), g = n(353926), S = n(594190), A = n(38618), x = n(569545), R = n(615365), O = n(528011), M = n(487419), v = n(715903), L = n(223606), Z = n(150340), P = n(160404), b = n(41776), D = n(347649), j = n(332473), U = n(30684), y = n(616106), B = n(995598), k = n(774276), G = n(518638), F = n(1844), w = n(621615), V = n(417626), H = n(569984), Y = n(523255), W = n(768419), z = n(590415), K = n(581883), Q = n(199902), q = n(314897), X = n(881998), J = n(463395), $ = n(592125), ee = n(553795), et = n(427123), en = n(271383), ei = n(430824), ea = n(131951), es = n(292959), er = n(496675), el = n(571474), eo = n(19780), ec = n(944486), ed = n(914010), eu = n(215427), e_ = n(246946), eE = n(558724), eI = n(23434), em = n(594174), eT = n(979651), eh = n(351402), eN = n(853872), ef = n(78839), ep = n(295226), eC = n(580130), eg = n(695103), eS = n(358085), eA = n(74538), ex = n(922156), eR = n(436181), eO = n(941128), eM = n(981631), ev = n(188785), eL = n(702512), eZ = n(474936), eP = n(46140), eb = n(231338), eD = n(65154);
+var i, a, s, r, l = n(913527), o = n.n(l), c = n(442837), d = n(743426), u = n(704215), _ = n(433517), E = n(570140), I = n(579806), m = n(726542), T = n(812206), h = n(223892), N = n(674525), f = n(605236), p = n(524347), C = n(853197), g = n(353926), S = n(594190), A = n(38618), R = n(569545), x = n(615365), O = n(528011), M = n(487419), v = n(715903), L = n(223606), Z = n(150340), P = n(160404), b = n(41776), D = n(347649), j = n(332473), U = n(30684), y = n(616106), B = n(995598), k = n(774276), G = n(518638), F = n(1844), w = n(621615), V = n(417626), H = n(569984), Y = n(523255), W = n(768419), z = n(590415), K = n(581883), Q = n(199902), q = n(314897), X = n(881998), J = n(463395), $ = n(592125), ee = n(553795), et = n(427123), en = n(271383), ei = n(430824), ea = n(131951), es = n(292959), er = n(496675), el = n(571474), eo = n(19780), ec = n(944486), ed = n(914010), eu = n(215427), e_ = n(246946), eE = n(558724), eI = n(23434), em = n(594174), eT = n(979651), eh = n(351402), eN = n(853872), ef = n(78839), ep = n(295226), eC = n(580130), eg = n(695103), eS = n(358085), eA = n(74538), eR = n(922156), ex = n(436181), eO = n(941128), eM = n(981631), ev = n(188785), eL = n(702512), eZ = n(474936), eP = n(46140), eb = n(231338), eD = n(65154);
 let ej = {
         [eM.kVF.LOCALIZED_PRICING]: u.z.NAGBAR_NOTICE_LOCALIZED_PRICING,
         [eM.kVF.DOWNLOAD_NAG]: u.z.NAGBAR_NOTICE_DOWNLOAD,
@@ -236,12 +236,12 @@ let eH = [
             }
         },
         [eM.kVF.DISPATCH_ERROR]: {
-            predicate: () => null != ex.Z.getLastError(),
-            metadata: () => ({ error: ex.Z.getLastError() })
+            predicate: () => null != eR.Z.getLastError(),
+            metadata: () => ({ error: eR.Z.getLastError() })
         },
         [eM.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS]: {
-            predicate: () => null != eR.Z.getLastProgress(),
-            metadata: () => eR.Z.getLastProgress()
+            predicate: () => null != ex.Z.getLastProgress(),
+            metadata: () => ex.Z.getLastProgress()
         },
         [eM.kVF.SPOTIFY_AUTO_PAUSED]: { predicate: () => W.Z.wasAutoPaused() },
         [eM.kVF.BLOCKED_BY_PROXY]: { predicate: () => !eV(eM.kVF.BLOCKED_BY_PROXY) && V.Z.blockedByProxy && w.Z.getCurrentConfig({ location: 'notice_store' }).eligibleForNotice },
@@ -301,7 +301,7 @@ let eH = [
         [eM.kVF.SERVER_USAGE_SURVEY]: {
             predicate: e => {
                 let {selectedGuildId: t} = e;
-                return null != t && R.Z.getCurrentConfig({ location: 'notice_store' }).showSurvey && !eV(eM.kVF.SERVER_USAGE_SURVEY);
+                return null != t && x.Z.getCurrentConfig({ location: 'notice_store' }).showSurvey && !eV(eM.kVF.SERVER_USAGE_SURVEY);
             },
             metadata: e => {
                 let {
@@ -526,12 +526,12 @@ let eH = [
                 let e = Q.Z.getCurrentUserActiveStream();
                 if (null == e)
                     return !1;
-                let t = (0, x.V9)(e), n = H.Z.getStreamHeartbeatFailure(t);
+                let t = (0, R.V9)(e), n = H.Z.getStreamHeartbeatFailure(t);
                 return null != n && Date.now() - n.firstFailedAt >= eP.Ot;
             },
             metadata: () => {
                 let e = Q.Z.getCurrentUserActiveStream();
-                return { streamKey: null != e ? (0, x.V9)(e) : null };
+                return { streamKey: null != e ? (0, R.V9)(e) : null };
             }
         },
         [eM.kVF.CHECKOUT_RECOVERY_NAGBAR]: {
@@ -595,7 +595,7 @@ class eQ extends (i = c.ZP.Store) {
             M.Z,
             H.Z,
             Q.Z
-        ], ez), this.waitFor(em.default, eu.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, ed.Z, eI.Z, W.Z, S.ZP, el.Z, ex.Z, eR.Z, eg.Z, es.Z, ef.ZP, eO.Z, et.Z, eN.Z, er.Z, F.Z, eC.Z, ep.Z, ee.Z, b.Z, p.Z, N.Z, V.Z, H.Z, Q.Z);
+        ], ez), this.waitFor(em.default, eu.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, ed.Z, eI.Z, W.Z, S.ZP, el.Z, eR.Z, ex.Z, eg.Z, es.Z, ef.ZP, eO.Z, et.Z, eN.Z, er.Z, F.Z, eC.Z, ep.Z, ee.Z, b.Z, p.Z, N.Z, V.Z, H.Z, Q.Z);
     }
     hasNotice() {
         return null != eG && null != eG.type;

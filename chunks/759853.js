@@ -10,10 +10,10 @@ t.Z = e => {
         } = e, {
             completionSpring: _,
             startCompletionAnimation: h
-        } = (0, u.GX)(), E = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, T = o.useRef(!1), S = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), N = o.useRef(null), A = (0, i.e7)([d.Z], () => d.Z.hasLayers()), v = (0, l.Z)(A), [j, B] = o.useState(null), [b, O] = o.useState(null), R = o.useRef(new r.qA({
+        } = (0, u.GX)(), E = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, T = o.useRef(!1), S = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), N = o.useRef(null), A = (0, i.e7)([d.Z], () => d.Z.hasLayers()), v = (0, l.Z)(A), [j, B] = o.useState(null), [R, b] = o.useState(null), O = o.useRef(new r.qA({
             gravity: 0,
             wind: 0
-        })), I = (0, r.uR)(j, b), y = o.useCallback(() => {
+        })), I = (0, r.uR)(j, R), U = o.useCallback(() => {
             if (S)
                 return;
             let e = C.current, t = N.current;
@@ -71,32 +71,32 @@ t.Z = e => {
             N,
             I,
             S
-        ]), U = (0, l.Z)(f);
+        ]), y = (0, l.Z)(f);
     return (o.useEffect(() => {
-        E && f && !U && (h(), y());
+        E && f && !y && (h(), U());
     }, [
         f,
         E,
         h,
-        y,
-        U
+        U,
+        y
     ]), o.useEffect(() => {
         E && !A && v && setTimeout(() => {
-            h(), y();
+            h(), U();
         }, 200);
     }, [
         E,
         v,
         A,
         h,
-        y
+        U
     ]), o.useEffect(() => {
         if (!!I.isReady)
-            !T.current && E && (h(), y()), T.current = E;
+            !T.current && E && (h(), U()), T.current = E;
     }, [
         E,
         T,
-        y,
+        U,
         h,
         I
     ]), S) ? null : (0, s.jsxs)('div', {
@@ -111,10 +111,10 @@ t.Z = e => {
             (0, s.jsx)(r.O_, {
                 ref: B,
                 className: x.confetti,
-                environment: R.current
+                environment: O.current
             }),
             (0, s.jsx)(r.Ji, {
-                ref: O,
+                ref: b,
                 sprites: [m],
                 colors: g,
                 spriteWidth: p.Ko,

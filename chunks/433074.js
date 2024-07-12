@@ -9,7 +9,7 @@ function S(e) {
     let {
             code: S,
             message: A
-        } = e, [x, R, O] = (0, r.Wu)([h.Z], () => [
+        } = e, [R, x, O] = (0, r.Wu)([h.Z], () => [
             h.Z.getApplication(S),
             h.Z.isInvalidApplication(S),
             h.Z.getApplicationFetchState(S)
@@ -38,7 +38,7 @@ function S(e) {
         A.author.id,
         O
     ]), a.useEffect(() => {
-        Z && R && I.default.track(p.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+        Z && x && I.default.track(p.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
             device_platform: s.tq ? 'mobile_web' : 'desktop_web',
             sender_user_id: A.author.id,
             guild_id: v,
@@ -47,7 +47,7 @@ function S(e) {
     }, [
         Z,
         v,
-        R,
+        x,
         A.author.id,
         A.channel_id
     ]);
@@ -65,7 +65,7 @@ function S(e) {
             entrypoint: { name: N.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED }
         });
     };
-    if (R)
+    if (x)
         return (0, i.jsxs)(E.Z, {
             containerRef: D,
             children: [
@@ -85,7 +85,7 @@ function S(e) {
                 })
             ]
         });
-    if (null == x || O === h.M.FETCHING)
+    if (null == R || O === h.M.FETCHING)
         return (0, i.jsxs)(E.Z, {
             containerRef: D,
             children: [
@@ -96,7 +96,7 @@ function S(e) {
     let U = new Intl.NumberFormat(M, {
         notation: 'compact',
         compactDisplay: 'short'
-    }).format(null !== (n = null === (t = x.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0);
+    }).format(null !== (n = null === (t = R.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0);
     return (0, i.jsxs)(E.Z, {
         containerRef: D,
         children: [
@@ -107,14 +107,14 @@ function S(e) {
                         className: g.applicationInfoContainer,
                         children: [
                             (0, i.jsx)(E.Z.Icon, {
-                                application: d.Z.createFromServer(x),
+                                application: d.Z.createFromServer(R),
                                 className: g.applicationIcon,
                                 onClick: () => j('application_icon')
                             }),
                             (0, i.jsx)(E.Z.Info, {
                                 title: (0, i.jsx)(l.Clickable, {
                                     onClick: () => j('application_name'),
-                                    children: x.name
+                                    children: R.name
                                 }),
                                 children: (0, i.jsxs)(l.Clickable, {
                                     className: g.guildCountContainer,
@@ -135,12 +135,12 @@ function S(e) {
                     }),
                     (0, i.jsx)(E.Z.Button, {
                         onClick: () => {
-                            if (null != x)
+                            if (null != R)
                                 (0, m.L)({
                                     applicationId: S,
-                                    customInstallUrl: x.custom_install_url,
-                                    installParams: x.install_params,
-                                    integrationTypesConfig: x.integration_types_config,
+                                    customInstallUrl: R.custom_install_url,
+                                    installParams: R.install_params,
+                                    integrationTypesConfig: R.integration_types_config,
                                     guildId: v,
                                     source: 'app_directory_profile_embed'
                                 });

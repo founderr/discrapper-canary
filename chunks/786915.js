@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(512722), s = n.n(a), l = n(442837), r = n(481060), o = n(40851), c = n(430824), d = n(496675), u = n(871499), h = n(981631), p = n(689938);
+var a = n(512722), l = n.n(a), s = n(442837), r = n(481060), o = n(40851), c = n(430824), d = n(496675), u = n(871499), h = n(981631), p = n(689938);
 function m(e) {
     var t, a;
     let {
@@ -17,15 +17,15 @@ function m(e) {
             analyticsLocation: g,
             guildScheduledEvent: I,
             ...x
-        } = e, T = (0, o.bp)(), v = null == f ? void 0 : f.getGuildId(), N = (0, l.e7)([c.Z], () => null != v ? c.Z.getGuild(v) : null, [v]);
+        } = e, T = (0, o.bp)(), v = null == f ? void 0 : f.getGuildId(), N = (0, s.e7)([c.Z], () => null != v ? c.Z.getGuild(v) : null, [v]);
     return (t = N, a = f, null != t && null != a && d.Z.can(h.Plq.CREATE_INSTANT_INVITE, a)) ? (0, i.jsx)(u.Z, {
         onClick: () => {
-            s()(null != N, 'guild cannot be null'), s()(null != f, 'channel cannot be null'), !function (e) {
+            l()(null != N, 'guild cannot be null'), l()(null != f, 'channel cannot be null'), !function (e) {
                 let {
                     guild: t,
                     channel: a,
-                    streamUserId: s,
-                    applicationId: l,
+                    streamUserId: l,
+                    applicationId: s,
                     appContext: o,
                     exitFullScreen: c,
                     analyticsLocation: d,
@@ -40,8 +40,8 @@ function m(e) {
                         ...n,
                         guild: t,
                         channel: a,
-                        streamUserId: s,
-                        applicationId: l,
+                        streamUserId: l,
+                        applicationId: s,
                         analyticsLocation: d,
                         source: a.isGuildStageVoice() ? h.t4x.STAGE_CHANNEL : h.t4x.STREAM_INVITE,
                         guildScheduledEvent: u

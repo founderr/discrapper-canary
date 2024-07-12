@@ -15,8 +15,8 @@ function N(e, t) {
             rawMediaPostEmbedData: g,
             guild: S,
             parentChannel: A,
-            user: x,
-            selectedGuildId: R,
+            user: R,
+            selectedGuildId: x,
             canAccess: O
         } = (0, a.cj)([
             m.Z,
@@ -40,20 +40,20 @@ function N(e, t) {
                 mediaPostEmbedData: g,
                 guild: S,
                 parentChannel: A,
-                user: x,
-                selectedGuildId: R,
+                user: R,
+                selectedGuildId: x,
                 canAccess: O
             });
             return null == e ? null : {
                 ...e,
-                user: x
+                user: R
             };
         }, [
             g,
             S,
             A,
-            x,
             R,
+            x,
             O
         ]);
     return i.useEffect(() => {

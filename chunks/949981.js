@@ -30,8 +30,8 @@ function T(e) {
     }
     let S = C.name;
     (null == S || '' === S) && (S = t.length > 0 ? t.filter(u.lm).map(e => e.username).join(', ') : I.Z.Messages.UNNAMED);
-    let A = g ? h : N, x = I.Z.Messages.JOIN_GUILD, R = d.Z.Button.Colors.GREEN;
-    g && (x = I.Z.Messages.JOINED_GUILD, R = d.Z.Button.Colors.PRIMARY);
+    let A = g ? h : N, R = I.Z.Messages.JOIN_GUILD, x = d.Z.Button.Colors.GREEN;
+    g && (R = I.Z.Messages.JOINED_GUILD, x = d.Z.Button.Colors.PRIMARY);
     let O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
     return f && (O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, i.jsxs)(d.Z, {
         children: [
@@ -56,8 +56,8 @@ function T(e) {
                         onClick: A,
                         submitting: p,
                         isDisabled: g,
-                        color: R,
-                        children: x
+                        color: x,
+                        children: R
                     })
                 ]
             })

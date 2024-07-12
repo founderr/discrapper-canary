@@ -3,7 +3,7 @@ n.d(t, {
         return o;
     }
 });
-var i = n(735250), a = n(470079), s = n(864094), l = n(871499), r = n(689938);
+var i = n(735250), a = n(470079), l = n(864094), s = n(871499), r = n(689938);
 function o(e) {
     let t, {
             hasPermission: n,
@@ -15,13 +15,13 @@ function o(e) {
             premiumGlow: p,
             buttonRef: m,
             ..._
-        } = e, f = d ? l.d : l.Z;
+        } = e, f = d ? s.d : s.Z;
     t = o ? c ? r.Z.Messages.STOP_STREAMING : r.Z.Messages.STOP_WATCHING : n ? r.Z.Messages.SHARE_YOUR_SCREEN : r.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE;
     let {
         Component: E,
         events: C,
         play: g
-    } = (0, s.P)(o ? 'disable' : 'enable');
+    } = (0, l.P)(o ? 'disable' : 'enable');
     return a.useEffect(() => () => g(), [
         o,
         g

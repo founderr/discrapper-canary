@@ -5,11 +5,11 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(399606), r = n(481060), o = n(388905), c = n(376923), d = n(16829), u = n(430824), h = n(944486), p = n(189432), m = n(776767), _ = n(981631), f = n(689938), E = n(749348);
+var a = n(120356), l = n.n(a), s = n(399606), r = n(481060), o = n(388905), c = n(376923), d = n(16829), u = n(430824), h = n(944486), p = n(189432), m = n(776767), _ = n(981631), f = n(689938), E = n(749348);
 function C(e) {
-    let {member: t} = e, n = (0, l.e7)([u.Z], () => u.Z.getGuild(t.guildId), [t.guildId]), a = (0, c.mh)(t.userId, t.guildId), C = (0, c.mV)(t.userId, t.guildId), g = (0, c.LD)(t.userId), I = (0, c.wi)(t.userId, t.guildId);
+    let {member: t} = e, n = (0, s.e7)([u.Z], () => u.Z.getGuild(t.guildId), [t.guildId]), a = (0, c.mh)(t.userId, t.guildId), C = (0, c.mV)(t.userId, t.guildId), g = (0, c.LD)(t.userId), I = (0, c.wi)(t.userId, t.guildId);
     return null == n ? null : (0, i.jsx)('div', {
-        className: s()(E.__invalid_safetySignalsMainContainer),
+        className: l()(E.__invalid_safetySignalsMainContainer),
         children: (0, i.jsx)(r.FormItem, {
             title: f.Z.Messages.ACCOUNT,
             titleClassName: E.infoTitle,

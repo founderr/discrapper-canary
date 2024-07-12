@@ -3,7 +3,7 @@ n.d(t, {
         return b;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(442837), d = n(524437), u = n(481060), _ = n(239091), E = n(904245), I = n(43267), m = n(933557), T = n(294218), h = n(703656), N = n(962796), f = n(802463), p = n(682417), C = n(695346), g = n(592125), S = n(430824), A = n(375954), x = n(346656), R = n(240126), O = n(791914), M = n(981631), v = n(689938), L = n(166311), Z = n(699723);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(442837), d = n(524437), u = n(481060), _ = n(239091), E = n(904245), I = n(43267), m = n(933557), T = n(294218), h = n(703656), N = n(962796), f = n(802463), p = n(682417), C = n(695346), g = n(592125), S = n(430824), A = n(375954), R = n(346656), x = n(240126), O = n(791914), M = n(981631), v = n(689938), L = n(166311), Z = n(699723);
 let P = {
     offset: {
         left: 4,
@@ -52,7 +52,7 @@ function D(e) {
     let t, {messageReminder: a} = e, s = a.complete, l = (0, c.e7)([A.Z], () => A.Z.getMessage(a.channelId, a.messageId)), {
             message: d,
             channel: f
-        } = (0, p.p)(a), R = g.Z.getChannel(f.id), O = (0, m.ZP)(R, !0), b = null != O ? O : f.name, D = (0, c.e7)([S.Z], () => S.Z.getGuild(null == f ? void 0 : f.guild_id)), j = null != f ? (0, I.x)(f) : null, U = null;
+        } = (0, p.p)(a), x = g.Z.getChannel(f.id), O = (0, m.ZP)(x, !0), b = null != O ? O : f.name, D = (0, c.e7)([S.Z], () => S.Z.getGuild(null == f ? void 0 : f.guild_id)), j = null != f ? (0, I.x)(f) : null, U = null;
     return null != a.dueAt && (a.dueAt > new Date() ? (t = 'text-muted', U = v.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({ duration: o().duration(a.dueAt.getTime() - Date.now(), 'millisecond').humanize() })) : (t = 'text-danger', U = v.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({ duration: o().duration(Date.now() - a.dueAt.getTime(), 'millisecond').humanize() }))), (0, i.jsxs)('div', {
         className: Z.container,
         children: [
@@ -64,10 +64,10 @@ function D(e) {
                             (0, i.jsxs)('div', {
                                 className: L.messageInfo,
                                 children: [
-                                    null != D ? (0, i.jsx)(x.Z, {
+                                    null != D ? (0, i.jsx)(R.Z, {
                                         className: L.guildIcon,
                                         guild: D,
-                                        size: x.Z.Sizes.SMALL,
+                                        size: R.Z.Sizes.SMALL,
                                         active: !0
                                     }) : (0, i.jsx)(u.Avatar, {
                                         'aria-hidden': !0,
@@ -191,7 +191,7 @@ function D(e) {
     });
 }
 function j() {
-    return (0, i.jsx)(R.Z, {
+    return (0, i.jsx)(x.Z, {
         Icon: u.DoubleCheckmarkLargeIcon,
         header: v.Z.Messages.MESSAGE_REMINDERS_EMPTY,
         tip: v.Z.Messages.MESSAGE_REMINDERS_EMPTY_TIP

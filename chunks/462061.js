@@ -6,7 +6,7 @@ n.d(t, {
         return j;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(475179), d = n(763520), u = n(358221), h = n(414910), p = n(928518), m = n(204197), _ = n(470956), f = n(314897), E = n(271383), C = n(131951), g = n(451478), I = n(783259), x = n(40300), T = n(5192), v = n(44136), N = n(981631), S = n(65154), Z = n(689938), A = n(26864);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(475179), d = n(763520), u = n(358221), h = n(414910), p = n(928518), m = n(204197), _ = n(470956), f = n(314897), E = n(271383), C = n(131951), g = n(451478), I = n(783259), x = n(40300), T = n(5192), v = n(44136), N = n(981631), S = n(65154), Z = n(689938), A = n(26864);
 let M = o.AvatarSizes.SIZE_80, b = o.AvatarSizes.SIZE_40;
 function R(e) {
     let {
@@ -28,7 +28,7 @@ function j(e) {
     let {
             participant: t,
             channel: n,
-            inCall: s,
+            inCall: l,
             width: o,
             paused: _,
             selected: R,
@@ -55,7 +55,7 @@ function j(e) {
         }), J = (0, r.e7)([u.Z], () => u.Z.getSelectedParticipant(n.id));
     return (a.useEffect(() => {
         n.isGuildStageVoice() && !G && (null == J ? void 0 : J.id) === U.id && c.Z.selectParticipant(n.id, null);
-    }, [G]), s && !W && !O && G && !R && null != D && C.Z.supports(S.AN.VIDEO)) ? (0, i.jsx)(x.Z, {
+    }, [G]), l && !W && !O && G && !R && null != D && C.Z.supports(S.AN.VIDEO)) ? (0, i.jsx)(x.Z, {
         onResize: L,
         wrapperClassName: A.videoWrapper,
         className: A.content,
@@ -67,7 +67,7 @@ function j(e) {
         videoSpinnerContext: U.id === k ? d.m.SELF_VIDEO : d.m.REMOTE_VIDEO,
         userId: U.id
     }, w) : (0, i.jsx)('div', {
-        className: l()(A.content, { [A.blockedAvatar]: P }),
+        className: s()(A.content, { [A.blockedAvatar]: P }),
         children: (0, i.jsx)(I.Z, {
             'aria-label': Y,
             src: X,

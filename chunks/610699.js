@@ -3,7 +3,7 @@ n.d(t, {
         return k;
     }
 }), n(653041), n(47120), n(390547);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(442837), d = n(477690), u = n(481060), _ = n(447543), E = n(317381), I = n(778569), m = n(182906), T = n(884338), h = n(100527), N = n(906732), f = n(835473), p = n(471445), C = n(601964), g = n(592125), S = n(430824), A = n(496675), x = n(594174), R = n(197409), O = n(514342), M = n(624138), v = n(358595), L = n(981631), Z = n(245335), P = n(689938), b = n(556849);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(442837), d = n(477690), u = n(481060), _ = n(447543), E = n(317381), I = n(778569), m = n(182906), T = n(884338), h = n(100527), N = n(906732), f = n(835473), p = n(471445), C = n(601964), g = n(592125), S = n(430824), A = n(496675), R = n(594174), x = n(197409), O = n(514342), M = n(624138), v = n(358595), L = n(981631), Z = n(245335), P = n(689938), b = n(556849);
 let D = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE), j = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL), U = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 function y(e) {
     let {
@@ -128,7 +128,7 @@ function k(e) {
         }), ee = (0, c.Wu)([E.ZP], () => null != q ? E.ZP.getEmbeddedActivitiesForChannel(q.id).filter(e => e.applicationId === G.id).flatMap(e => Array.from(e.userIds)) : [], [
             q,
             G.id
-        ]), et = (0, c.Wu)([x.default], () => ee.map(e => x.default.getUser(e)), [ee]), en = d.state === L.r2o.ACCEPTING, ei = null != W;
+        ]), et = (0, c.Wu)([R.default], () => ee.map(e => R.default.getUser(e)), [ee]), en = d.state === L.r2o.ACCEPTING, ei = null != W;
     if (null == W) {
         if (null == d.guild)
             return (0, i.jsx)(v.Z, {});
@@ -163,7 +163,7 @@ function k(e) {
                     })
                 })
             }),
-            (0, i.jsxs)(R.Z, {
+            (0, i.jsxs)(x.Z, {
                 className: r()(b.content, {
                     [b.large]: w,
                     [b.stacked]: H

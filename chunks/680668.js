@@ -13,9 +13,9 @@ function h(e) {
             onAcceptInstantInvite: g,
             guild: S,
             invite: A,
-            author: x,
-            currentUserId: R
-        } = e, O = R === x.id, {
+            author: R,
+            currentUserId: x
+        } = e, O = x === R.id, {
             channel: M,
             approximate_member_count: v,
             approximate_presence_count: L

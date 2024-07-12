@@ -5,13 +5,13 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(704215), r = n(481060), l = n(232567), o = n(230711), c = n(726542), d = n(100527), u = n(231757), _ = n(674525), E = n(29458), I = n(636629), m = n(33885), T = n(963249), h = n(346585), N = n(303172), f = n(463230), p = n(246965), C = n(703656), g = n(706454), S = n(933429), A = n(395361), x = n(626135), R = n(243778), O = n(921944), M = n(981631), v = n(801461), L = n(474936), Z = n(689938), P = n(708522);
+var a = n(442837), s = n(704215), r = n(481060), l = n(232567), o = n(230711), c = n(726542), d = n(100527), u = n(231757), _ = n(674525), E = n(29458), I = n(636629), m = n(33885), T = n(963249), h = n(346585), N = n(303172), f = n(463230), p = n(246965), C = n(703656), g = n(706454), S = n(933429), A = n(395361), R = n(626135), x = n(243778), O = n(921944), M = n(981631), v = n(801461), L = n(474936), Z = n(689938), P = n(708522);
 let b = e => {
     let {
             dismissibleContent: t,
             noticeType: b
         } = e, D = (0, a.e7)([S.Z], () => S.Z.getNotice()), j = (0, a.e7)([g.default], () => g.default.locale);
-    return (0, i.jsx)(R.Z, {
+    return (0, i.jsx)(x.Z, {
         contentTypes: [t],
         groupName: O.R.NOTICE_BAR,
         bypassAutoDismiss: !0,
@@ -120,7 +120,7 @@ let b = e => {
                             className: P.premiumAction,
                             noticeType: b,
                             onClick: () => {
-                                x.default.track(M.rMx.PREMIUM_PROMOTION_OPENED, {
+                                R.default.track(M.rMx.PREMIUM_PROMOTION_OPENED, {
                                     location_section: M.jXE.NOTIFICATION_BAR,
                                     location_object: M.qAy.BUTTON_CTA
                                 }), o.Z.open(M.oAB.PREMIUM);
@@ -170,11 +170,11 @@ let b = e => {
                     dismissCurrentNotice: () => S(O.L.UNKNOWN)
                 });
             case s.z.QUEST_1_GO_LIVE_BANNER:
-                let R = null == D ? void 0 : null === (t = D.metadata) || void 0 === t ? void 0 : t.partnerGame;
+                let x = null == D ? void 0 : null === (t = D.metadata) || void 0 === t ? void 0 : t.partnerGame;
                 return (0, i.jsx)(I.Z, {
                     noticeType: b,
                     markAsDismissed: () => S(O.L.UNKNOWN),
-                    partnerGame: R
+                    partnerGame: x
                 });
             case s.z.QUEST_1_ENDED_INCOMPLETE:
                 let U = null == D ? void 0 : null === (a = D.metadata) || void 0 === a ? void 0 : a.partnerGame;

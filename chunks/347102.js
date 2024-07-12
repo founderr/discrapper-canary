@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(693789), s = n(493683), l = n(596739), r = n(699516), o = n(280006), c = n(799352), d = n(689938);
+var a = n(693789), l = n(493683), s = n(596739), r = n(699516), o = n(280006), c = n(799352), d = n(689938);
 function u(e) {
     let {channel: t} = e;
     if (!(0, o.f)({ location: 'blocked_user_banner' }) || null == t || !t.isGroupDM() || t.blockedUserWarningDismissed)
@@ -20,7 +20,7 @@ function u(e) {
                 text: d.Z.Messages.GDM_BLOCKED_USER_WARNING_LEAVE,
                 color: a.zx.Colors.BRAND,
                 onclick: () => {
-                    h(), s.Z.closePrivateChannel(t.id, !0, !0);
+                    h(), l.Z.closePrivateChannel(t.id, !0, !0);
                 },
                 size: a.zx.Sizes.MEDIUM
             },
@@ -31,7 +31,7 @@ function u(e) {
                 size: a.zx.Sizes.MEDIUM
             }
         ];
-    return (0, i.jsx)(l.W, {
+    return (0, i.jsx)(s.W, {
         header: u,
         description: d.Z.Messages.GDM_BLOCKED_USER_WARNING_BANNER_DESCRIPTION,
         buttons: p,

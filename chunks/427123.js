@@ -1,7 +1,7 @@
 n(47120), n(653041);
 var i, a, s, r, l = n(392711), o = n.n(l), c = n(442837), d = n(433517), u = n(570140), _ = n(496929), E = n(16084), I = n(728345), m = n(812206), T = n(594190), h = n(594174), N = n(580130), f = n(55563), p = n(981631);
 let C = 'DetectedOffPlatformPremiumPerksStore', g = {}, S = {}, A = [];
-function x() {
+function R() {
     let e = !1;
     for (let {
                 skuId: t,
@@ -26,7 +26,7 @@ function x() {
     }
     return e;
 }
-class R extends (i = c.ZP.Store) {
+class x extends (i = c.ZP.Store) {
     initialize() {
         var e;
         this.waitFor(T.ZP, f.Z, N.Z), A = null !== (e = d.K.get(C)) && void 0 !== e ? e : A;
@@ -35,19 +35,19 @@ class R extends (i = c.ZP.Store) {
         return o().values(g);
     }
 }
-r = 'DetectedOffPlatformPremiumPerksStore', (s = 'displayName') in (a = R) ? Object.defineProperty(a, s, {
+r = 'DetectedOffPlatformPremiumPerksStore', (s = 'displayName') in (a = x) ? Object.defineProperty(a, s, {
     value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : a[s] = r, t.Z = new R(u.Z, {
+}) : a[s] = r, t.Z = new x(u.Z, {
     LOGOUT: function () {
         g = {}, S = {};
     },
-    SKU_FETCH_SUCCESS: x,
-    ENTITLEMENT_FETCH_APPLICATION_SUCCESS: x,
-    ENTITLEMENT_CREATE: x,
-    APPLICATION_FETCH_SUCCESS: x,
+    SKU_FETCH_SUCCESS: R,
+    ENTITLEMENT_FETCH_APPLICATION_SUCCESS: R,
+    ENTITLEMENT_CREATE: R,
+    APPLICATION_FETCH_SUCCESS: R,
     DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
         let {skuId: t} = e;
         if (delete g[t], A.includes(t))
@@ -71,6 +71,6 @@ r = 'DetectedOffPlatformPremiumPerksStore', (s = 'displayName') in (a = R) ? Obj
                             applicationId: i
                         }, e = !0);
                 }
-        return e && x(), e;
+        return e && R(), e;
     }
 });

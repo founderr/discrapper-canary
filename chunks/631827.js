@@ -1,5 +1,5 @@
 function i(e, n) {
-    var t, i, l, r, a;
+    var t, i, l, a, r;
     let s;
     let o = null !== (t = n.limit) && void 0 !== t ? t : 1 / 0, c = function (e, n) {
             return e.filter(e => n.every(n => n(e)));
@@ -33,14 +33,14 @@ function i(e, n) {
     }(c, null !== (l = n.bucketPredicates) && void 0 !== l ? l : []) : function (e, n, t) {
         let i = [], l = e;
         for (let e of n) {
-            let n = [], r = [];
+            let n = [], a = [];
             for (let t of l)
-                e(t) ? r.push(t) : n.push(t);
-            if (i.push(r), l = n, i.reduce((e, n) => n.length + e, 0) >= t)
+                e(t) ? a.push(t) : n.push(t);
+            if (i.push(a), l = n, i.reduce((e, n) => n.length + e, 0) >= t)
                 break;
         }
         return i;
-    }(c, null !== (r = n.bucketPredicates) && void 0 !== r ? r : [], o) : [c], null !== (a = n.sortComparers) && void 0 !== a ? a : [], o).slice(0, o);
+    }(c, null !== (a = n.bucketPredicates) && void 0 !== a ? a : [], o) : [c], null !== (r = n.sortComparers) && void 0 !== r ? r : [], o).slice(0, o);
 }
 t.d(n, {
     N: function () {

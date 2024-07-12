@@ -1,24 +1,24 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
 }), n(47120);
 var i = n(735250);
 n(470079);
-var a = n(479099), s = n(748776);
-function l(e) {
+var a = n(479099), l = n(748776);
+function s(e) {
     let {
             appliedTags: t,
             setAppliedTags: n
-        } = e, l = null != n ? e => {
+        } = e, s = null != n ? e => {
             t.has(e) && (t.delete(e), n(new Set(t)));
         } : void 0;
     return (0, i.jsx)('div', {
-        className: s.tags,
+        className: l.tags,
         children: Array.from(t).map(e => (0, i.jsx)(a.Z, {
             tag: e,
-            onRemove: l,
-            size: null == l ? a.Z.Sizes.SMALL : a.Z.Sizes.MEDIUM
+            onRemove: s,
+            size: null == s ? a.Z.Sizes.SMALL : a.Z.Sizes.MEDIUM
         }, e.id))
     });
 }

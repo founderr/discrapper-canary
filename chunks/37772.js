@@ -1,5 +1,5 @@
 n(789020);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(25610), d = n(703751), u = n(628238), _ = n(976853), E = n(977683), I = n(869765), m = n(695346), T = n(592125), h = n(699516), N = n(702346), f = n(630388), p = n(709054), C = n(493892), g = n(901461), S = n(739566), A = n(443877), x = n(492593), R = n(938353), O = n(25015), M = n(689674), v = n(963550), L = n(845080), Z = n(295790), P = n(145807), b = n(56744), D = n(981631), j = n(689938), U = n(985359), y = n(848509);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(25610), d = n(703751), u = n(628238), _ = n(976853), E = n(977683), I = n(869765), m = n(695346), T = n(592125), h = n(699516), N = n(702346), f = n(630388), p = n(709054), C = n(493892), g = n(901461), S = n(739566), A = n(443877), R = n(492593), x = n(938353), O = n(25015), M = n(689674), v = n(963550), L = n(845080), Z = n(295790), P = n(145807), b = n(56744), D = n(981631), j = n(689938), U = n(985359), y = n(848509);
 function B(e) {
     let {
         className: t,
@@ -7,7 +7,7 @@ function B(e) {
         compact: a,
         collapsedReason: s
     } = e;
-    return (0, i.jsx)(x.Z, {
+    return (0, i.jsx)(R.Z, {
         className: t,
         compact: a,
         role: 'group',
@@ -63,7 +63,7 @@ t.Z = a.memo(function e(t) {
         compact: N,
         count: 1,
         collapsedReason: a
-    }) : (0, i.jsx)(x.Z, {
+    }) : (0, i.jsx)(R.Z, {
         compact: N,
         className: r()(U, {
             [y.ephemeral]: (0, f.yE)(o.flags, D.iLy.EPHEMERAL),
@@ -76,7 +76,7 @@ t.Z = a.memo(function e(t) {
             author: en,
             guildId: s.guild_id
         }),
-        childrenAccessories: (0, i.jsx)(R.BB, {
+        childrenAccessories: (0, i.jsx)(x.BB, {
             channel: s,
             message: o,
             hasSpoilerEmbeds: et,

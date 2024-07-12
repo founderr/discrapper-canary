@@ -38,11 +38,11 @@ let A = a.memo(function (e) {
     return (0, i.jsx)(l.animated.div, {
         ref: s,
         style: E,
-        children: (0, i.jsx)(x, { ...e })
+        children: (0, i.jsx)(R, { ...e })
     });
 });
 t.Z = A;
-let x = a.memo(function (e) {
+let R = a.memo(function (e) {
     let {
             channel: t,
             onJump: n,
@@ -74,7 +74,7 @@ let x = a.memo(function (e) {
                 channelState: t,
                 children: [
                     (0, i.jsx)(h.Z, { channel: l }),
-                    (0, i.jsx)(R, { ...e }),
+                    (0, i.jsx)(x, { ...e }),
                     'nsfw' === t.type ? null : (0, i.jsx)(O, { ...e })
                 ]
             }),
@@ -90,7 +90,7 @@ let x = a.memo(function (e) {
         })
     });
 });
-function R(e) {
+function x(e) {
     let {
             channel: t,
             markChannelRead: n,

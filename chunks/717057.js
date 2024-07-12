@@ -3,29 +3,29 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(913527), o = n.n(r), c = n(442837), d = n(481060), u = n(410030), h = n(271383), p = n(430824), m = n(594174), _ = n(153124), f = n(709054), E = n(931240), C = n(645896), g = n(603368), I = n(532490), x = n(380365), T = n(979264), v = n(620929), N = n(284019), S = n(308083), Z = n(981631), A = n(689938), M = n(560666);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(913527), o = n.n(r), c = n(442837), d = n(481060), u = n(410030), h = n(271383), p = n(430824), m = n(594174), _ = n(153124), f = n(709054), E = n(931240), C = n(645896), g = n(603368), I = n(532490), x = n(380365), T = n(979264), v = n(620929), N = n(284019), S = n(308083), Z = n(981631), A = n(689938), M = n(560666);
 function b(e) {
     var t;
     let {
             guildId: n,
-            clanInfo: s,
+            clanInfo: l,
             onSignCharter: r
         } = e, c = a.useMemo(() => {
             let e = f.default.extractTimestamp(n);
             return o()(new Date(e)).format('MMMM YYYY');
-        }, [n]), u = a.useMemo(() => new Set(s.games), [s.games]);
+        }, [n]), u = a.useMemo(() => new Set(l.games), [l.games]);
     return (0, i.jsx)(I.Z, {
         guildId: n,
         signHintPosition: I.p.LEFT,
-        primaryColor: null === (t = s.branding) || void 0 === t ? void 0 : t.primaryColor,
+        primaryColor: null === (t = l.branding) || void 0 === t ? void 0 : t.primaryColor,
         onSignCharter: r,
         children: (0, i.jsxs)('div', {
             className: M.scrollContentsContainer,
             children: [
                 (0, i.jsx)(T.aG, {
                     guildId: n,
-                    clanBadge: s.badge.imageHash,
-                    clanTag: s.tag,
+                    clanBadge: l.badge.imageHash,
+                    clanTag: l.tag,
                     textVariant: 'heading-lg/semibold',
                     badgeSize: S.NC.SIZE_24,
                     className: M.clanTagChiplet
@@ -42,7 +42,7 @@ function b(e) {
                             variant: 'heading-xxl/bold',
                             color: 'interactive-active',
                             className: M.charterHeaderText,
-                            children: s.name
+                            children: l.name
                         }),
                         (0, i.jsx)(d.Text, {
                             variant: 'text-md/normal',
@@ -54,8 +54,8 @@ function b(e) {
                 }),
                 (0, i.jsx)(v.p, {
                     applicationIds: u,
-                    playstyle: s.playstyle,
-                    className: l()(M.charterBodyText, M.gameSection)
+                    playstyle: l.playstyle,
+                    className: s()(M.charterBodyText, M.gameSection)
                 }),
                 (0, i.jsx)(d.Text, {
                     variant: 'text-sm/normal',
@@ -71,14 +71,14 @@ function R(e) {
     var t;
     let {
             guildId: n,
-            onClose: s,
+            onClose: l,
             onAccept: r,
             ...o
         } = e, f = (0, _.Dt)(), I = (0, C.Cc)(n), T = (0, C.E8)(n), [v, S] = a.useState(!0), [R, j] = a.useState(!1), L = a.useCallback(() => {
-            r(), s();
+            r(), l();
         }, [
             r,
-            s
+            l
         ]);
     a.useEffect(() => {
         null == I && !T && L();
@@ -152,7 +152,7 @@ function R(e) {
                     color: d.Button.Colors.BRAND,
                     themeColor: w,
                     fullWidth: !1,
-                    className: l()(M.ctaButton, R ? M.ctaButtonSigned : null),
+                    className: s()(M.ctaButton, R ? M.ctaButtonSigned : null),
                     children: (0, i.jsxs)('div', {
                         className: M.ctaButtonInner,
                         children: [

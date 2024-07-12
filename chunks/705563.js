@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(481060), l = n(665149), r = n(171368), o = n(650774), c = n(430824), d = n(496675), u = n(709054), h = n(826581), p = n(246364), m = n(360328), _ = n(981631), f = n(689938), E = n(593269);
+var a = n(442837), l = n(481060), s = n(665149), r = n(171368), o = n(650774), c = n(430824), d = n(496675), u = n(709054), h = n(826581), p = n(246364), m = n(360328), _ = n(981631), f = n(689938), E = n(593269);
 function C(e) {
     let {
             channelId: t,
@@ -36,28 +36,28 @@ function C(e) {
     return null != I && I.applicationStatus === p.wB.SUBMITTED && x ? (0, i.jsxs)('div', {
         className: E.buttons,
         children: [
-            (0, i.jsx)(s.Tooltip, {
+            (0, i.jsx)(l.Tooltip, {
                 text: f.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
                 shouldShow: S,
-                children: e => (0, i.jsx)(s.Button, {
+                children: e => (0, i.jsx)(l.Button, {
                     ...e,
-                    color: s.Button.Colors.GREEN,
+                    color: l.Button.Colors.GREEN,
                     submitting: M,
                     onClick: Z,
-                    size: s.ButtonSizes.SMALL,
+                    size: l.ButtonSizes.SMALL,
                     disabled: S,
                     children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
                 })
             }),
-            (0, i.jsx)(s.Button, {
-                color: s.Button.Colors.RED,
+            (0, i.jsx)(l.Button, {
+                color: l.Button.Colors.RED,
                 onClick: A,
-                size: s.ButtonSizes.SMALL,
+                size: l.ButtonSizes.SMALL,
                 disabled: M || I.applicationStatus !== p.wB.SUBMITTED,
                 children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
             }),
-            n && (0, i.jsx)(s.Button, {
-                color: s.Button.Colors.TRANSPARENT,
+            n && (0, i.jsx)(l.Button, {
+                color: l.Button.Colors.TRANSPARENT,
                 onClick: () => {
                     (0, r.openUserProfileModal)({
                         userId: I.userId,
@@ -68,10 +68,10 @@ function C(e) {
                         }
                     });
                 },
-                size: s.ButtonSizes.SMALL,
+                size: l.ButtonSizes.SMALL,
                 children: f.Z.Messages.VIEW_PROFILE
             }),
-            C && (0, i.jsx)(l.ZP.Divider, {})
+            C && (0, i.jsx)(s.ZP.Divider, {})
         ]
     }) : null;
 }

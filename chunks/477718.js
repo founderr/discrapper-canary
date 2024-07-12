@@ -3,12 +3,12 @@ n.d(t, {
         return M;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(913527), o = n.n(r), c = n(399606), d = n(481060), u = n(480137), h = n(906732), p = n(884737), m = n(376923), _ = n(472596), f = n(987707), E = n(501801), C = n(271383), g = n(430824), I = n(274730), x = n(5192), T = n(776767), v = n(689938), N = n(490346), S = n(347099), Z = n(749348);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(913527), o = n.n(r), c = n(399606), d = n(481060), u = n(480137), h = n(906732), p = n(884737), m = n(376923), _ = n(472596), f = n(987707), E = n(501801), C = n(271383), g = n(430824), I = n(274730), x = n(5192), T = n(776767), v = n(689938), N = n(490346), S = n(347099), Z = n(749348);
 function A(e) {
     let {
             log: t,
             member: n,
-            guild: s
+            guild: l
         } = e, {analyticsLocations: r} = (0, h.ZP)(), u = p.nm(t), f = p.QM(t), g = p.of(t), I = p.J5(t), T = (0, m.LJ)(t.id), Z = (0, c.e7)([C.ZP], () => null != t.userId ? C.ZP.getMember(n.guildId, t.userId) : null, [
             n.guildId,
             t.userId
@@ -19,14 +19,14 @@ function A(e) {
             children: e => {
                 var a;
                 let {
-                    onMouseEnter: s,
+                    onMouseEnter: l,
                     onMouseLeave: r
                 } = e;
                 return (0, i.jsx)(d.Clickable, {
                     tag: 'span',
                     className: N.username,
                     onClick: A(Z),
-                    onMouseEnter: s,
+                    onMouseEnter: l,
                     onMouseLeave: r,
                     children: (0, i.jsxs)(d.Text, {
                         variant: 'text-sm/medium',
@@ -36,7 +36,7 @@ function A(e) {
                             (0, i.jsx)(d.NameWithRole, {
                                 name: x.ZP.getName(n.guildId, null, t.user),
                                 color: null !== (a = null == Z ? void 0 : Z.colorString) && void 0 !== a ? a : void 0,
-                                className: l()(N.__invalid_memberNameText)
+                                className: s()(N.__invalid_memberNameText)
                             })
                         ]
                     })
@@ -49,7 +49,7 @@ function A(e) {
             Z
         ])();
     return (0, i.jsxs)('div', {
-        className: l()(S.modInfoItem, N.auditLogItem),
+        className: s()(S.modInfoItem, N.auditLogItem),
         children: [
             (0, i.jsxs)('div', {
                 className: N.auditLogItemTitleContainer,
@@ -123,7 +123,7 @@ function A(e) {
                         tag: 'span',
                         children: (0, i.jsx)(E.tP, {
                             log: t,
-                            guild: s,
+                            guild: l,
                             onContentClick: () => {
                             },
                             className: N.auditLogExpandedChangeDetails
@@ -135,7 +135,7 @@ function A(e) {
     });
 }
 function M(e) {
-    let {member: t} = e, n = (0, c.e7)([g.Z], () => g.Z.getGuild(t.guildId), [t.guildId]), s = (0, c.e7)([f.Z], () => {
+    let {member: t} = e, n = (0, c.e7)([g.Z], () => g.Z.getGuild(t.guildId), [t.guildId]), l = (0, c.e7)([f.Z], () => {
             let e = f.Z.logs;
             return null == e || null == n ? [] : I._$(e, n);
         }, [n]);
@@ -146,13 +146,13 @@ function M(e) {
     }, [
         t.guildId,
         t.userId
-    ]), null == n || 0 === s.length) ? null : (0, i.jsx)('div', {
-        className: l()(Z.__invalid_safetySignalsMainContainer),
+    ]), null == n || 0 === l.length) ? null : (0, i.jsx)('div', {
+        className: s()(Z.__invalid_safetySignalsMainContainer),
         children: (0, i.jsx)(d.FormItem, {
             title: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
             titleClassName: Z.infoTitle,
-            children: s.length > 0 ? (0, i.jsx)(T.WM, {
-                children: s.map(e => (0, i.jsx)(A, {
+            children: l.length > 0 ? (0, i.jsx)(T.WM, {
+                children: l.map(e => (0, i.jsx)(A, {
                     log: e,
                     member: t,
                     guild: n

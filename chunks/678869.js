@@ -3,21 +3,21 @@ n.d(t, {
         return R;
     }
 }), n(627494), n(757143), n(653041);
-var i = n(735250), a = n(470079), s = n(423875), l = n(442837), r = n(902704), o = n(481060), c = n(952164), d = n(768419), u = n(239470), h = n(894344), p = n(314897), m = n(936195), _ = n(5192), f = n(561308), E = n(256726), C = n(206295), g = n(551228), I = n(591853), x = n(371991), T = n(410441), v = n(981631), N = n(616922), S = n(689938), Z = n(153602), A = n(331679);
+var i = n(735250), a = n(470079), l = n(423875), s = n(442837), r = n(902704), o = n(481060), c = n(952164), d = n(768419), u = n(239470), h = n(894344), p = n(314897), m = n(936195), _ = n(5192), f = n(561308), E = n(256726), C = n(206295), g = n(551228), I = n(591853), x = n(371991), T = n(410441), v = n(981631), N = n(616922), S = n(689938), Z = n(153602), A = n(331679);
 let M = (e, t, n) => {
     let {
             artist: i,
             media: a
-        } = e, s = S.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_LISTENING_TO_MEDIA_ARTIST, l = _.ZP.getName(t.guild_id, t.id, n);
-    return s.plainFormat({
+        } = e, l = S.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_LISTENING_TO_MEDIA_ARTIST, s = _.ZP.getName(t.guild_id, t.id, n);
+    return l.plainFormat({
         artist: i,
-        userName: l,
+        userName: s,
         media: a
     }).replaceAll('*', '');
 };
 function b(e) {
-    let {activity: t} = e, n = t.timestamps, s = (0, x.tS)(n), {
-            durationTimestamp: l,
+    let {activity: t} = e, n = t.timestamps, l = (0, x.tS)(n), {
+            durationTimestamp: s,
             seekBarStyles: r
         } = a.useMemo(() => {
             var e;
@@ -27,14 +27,14 @@ function b(e) {
             } = null !== (e = t.timestamps) && void 0 !== e ? e : {};
             if (null == n || null == i)
                 return {};
-            let a = Math.min(i, s), l = i - n, r = Math.floor((a - n) / l * 100);
+            let a = Math.min(i, l), s = i - n, r = Math.floor((a - n) / s * 100);
             return {
                 seekBarStyles: { width: ''.concat(r, '%') },
                 durationTimestamp: (0, f.T_)({ start: i }, n)
             };
         }, [
             t,
-            s
+            l
         ]);
     return null == r ? null : (0, i.jsxs)('div', {
         className: Z.listeningTimeline,
@@ -51,7 +51,7 @@ function b(e) {
                 variant: 'text-xs/normal',
                 tabularNumbers: !0,
                 color: void 0,
-                children: l
+                children: s
             })
         ]
     });
@@ -73,7 +73,7 @@ function R(e) {
         } = (0, g.pi)(L), {
             primaryColor: H,
             secondaryColor: G
-        } = (0, C.Z)(U), V = (0, l.e7)([
+        } = (0, C.Z)(U), V = (0, s.e7)([
             d.Z,
             p.default
         ], () => (null == y ? void 0 : y.type) === v.IIU.LISTENING && null != B ? (0, u.Z)(d.Z, p.default, B, y) : void 0, [
@@ -113,7 +113,7 @@ function R(e) {
     if (null == y || null == D)
         return null;
     let W = k, z = [];
-    if (D.media.provider === s.p.SPOTIFY && (null == V ? void 0 : V.syncDisabled) === !1) {
+    if (D.media.provider === l.p.SPOTIFY && (null == V ? void 0 : V.syncDisabled) === !1) {
         x = () => {
             (0, c.aG)(y);
         }, z.push((0, i.jsx)(I.Ll, {

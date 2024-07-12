@@ -1,5 +1,5 @@
 n(653041), n(47120);
-var i, a, s, l, r = n(442837), o = n(570140), c = n(633302), d = n(594174), u = n(176354), h = n(292793), p = n(88315), m = n(813900);
+var i, a, l, s, r = n(442837), o = n(570140), c = n(633302), d = n(594174), u = n(176354), h = n(292793), p = n(88315), m = n(813900);
 let _ = {}, f = {}, E = {}, C = !0, g = null;
 function I(e) {
     if (null == f[e]) {
@@ -27,12 +27,12 @@ class x extends (i = r.ZP.Store) {
         return g;
     }
 }
-l = 'SharedCanvasStore', (s = 'displayName') in (a = x) ? Object.defineProperty(a, s, {
-    value: l,
+s = 'SharedCanvasStore', (l = 'displayName') in (a = x) ? Object.defineProperty(a, l, {
+    value: s,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : a[s] = l;
+}) : a[l] = s;
 let T = new x(o.Z, {
     SHARED_CANVAS_UPDATE_LINE_POINTS: function (e) {
         let {
@@ -40,8 +40,8 @@ let T = new x(o.Z, {
                 newPoints: n,
                 userId: i,
                 streamerId: a
-            } = e, s = _[a];
-        if (null == s)
+            } = e, l = _[a];
+        if (null == l)
             _[a] = [{
                     type: h.W.LINE,
                     id: t,
@@ -49,8 +49,8 @@ let T = new x(o.Z, {
                     points: n
                 }];
         else {
-            let e = s.find(e => e.id === t);
-            null == e ? s.push({
+            let e = l.find(e => e.id === t);
+            null == e ? l.push({
                 type: h.W.LINE,
                 id: t,
                 userId: i,
@@ -63,20 +63,20 @@ let T = new x(o.Z, {
         var t, n, i;
         let {
                 emojiHose: a,
-                streamerId: s,
-                userId: l
+                streamerId: l,
+                userId: s
             } = e, r = {
                 ...a,
                 type: h.W.EMOJI_HOSE
             };
-        if (null == _[s])
-            _[s] = [r];
+        if (null == _[l])
+            _[l] = [r];
         else {
-            let e = _[s].findIndex(e => e.id === a.id);
-            e >= 0 ? _[s][e] = {
-                ..._[s][e],
+            let e = _[l].findIndex(e => e.id === a.id);
+            e >= 0 ? _[l][e] = {
+                ..._[l][e],
                 ...r
-            } : _[s].push(r);
+            } : _[l].push(r);
         }
         let o = null !== (n = null !== (t = a.emojiId) && void 0 !== t ? t : a.emojiName) && void 0 !== n ? n : '';
         if (null == E[o]) {
@@ -87,7 +87,7 @@ let T = new x(o.Z, {
                 animated: !1
             }, m.qh);
         }
-        I(l);
+        I(s);
     },
     SHARED_CANVAS_CLEAR_DRAWABLES: function (e) {
         let {

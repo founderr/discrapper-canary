@@ -1,15 +1,15 @@
 n.d(t, {
     k: function () {
-        return x;
+        return R;
     }
 }), n(47120);
 var i = n(735250), a = n(470079), s = n(349445), r = n(442837), l = n(524437), o = n(481060), c = n(100527), d = n(906732), u = n(602478), _ = n(121254), E = n(742989), I = n(675478), m = n(581883), T = n(585483), h = n(153209), N = n(349643), f = n(881591), p = n(903672), C = n(946443), g = n(264233), S = n(981631), A = n(689938);
-function x(e) {
+function R(e) {
     let {
             onOpen: t,
             onClose: n,
-            children: x,
-            badgeState: R,
+            children: R,
+            badgeState: x,
             popoutPosition: O,
             popoutAlign: M
         } = e, {analyticsLocations: v} = (0, d.ZP)(c.Z.NOTIFICATION_CENTER), [L, Z] = a.useState(!1), [P, b] = function () {
@@ -82,16 +82,16 @@ function x(e) {
                     'aria-label': A.Z.Messages.INBOX,
                     children: P === l.X.FOR_YOU ? (0, i.jsx)(h.Z, {
                         setTab: b,
-                        badgeState: R,
+                        badgeState: x,
                         closePopout: U
                     }) : P === l.X.MENTIONS ? (0, i.jsx)(p.Z, {
                         setTab: b,
                         onJump: w,
-                        badgeState: R,
+                        badgeState: x,
                         closePopout: U
                     }) : F && P === l.X.GAME_INVITES ? (0, i.jsx)(g.Z, {
                         setTab: b,
-                        badgeState: R,
+                        badgeState: x,
                         closePopout: U
                     }) : G && P === l.X.BOOKMARKS ? (0, i.jsx)(N.Z, {
                         setTab: b,
@@ -105,7 +105,7 @@ function x(e) {
                         fallback: (0, i.jsx)(C.h, {
                             setTab: b,
                             closePopout: U,
-                            badgeState: R
+                            badgeState: x
                         }),
                         children: (0, i.jsx)(C.Z, {
                             setTab: b,
@@ -113,7 +113,7 @@ function x(e) {
                             showTutorial: D,
                             setSeenTutorial: j,
                             closePopout: U,
-                            badgeState: R
+                            badgeState: x
                         })
                     })
                 });
@@ -121,7 +121,7 @@ function x(e) {
             ignoreModalClicks: !0,
             children: (e, t) => {
                 let {isShown: n} = t;
-                return x(y, n, e);
+                return R(y, n, e);
             }
         })
     });

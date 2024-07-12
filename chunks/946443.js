@@ -1,19 +1,19 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return x;
     },
     h: function () {
         return M;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(525654), o = n.n(l), c = n(91192), d = n(442837), u = n(524437), _ = n(481060), E = n(570140), I = n(607070), m = n(724757), T = n(626135), h = n(585483), N = n(143316), f = n(240126), p = n(791914), C = n(147522), g = n(809780), S = n(981631), A = n(689938), x = n(418149);
-function R(e) {
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(525654), o = n.n(l), c = n(91192), d = n(442837), u = n(524437), _ = n(481060), E = n(570140), I = n(607070), m = n(724757), T = n(626135), h = n(585483), N = n(143316), f = n(240126), p = n(791914), C = n(147522), g = n(809780), S = n(981631), A = n(689938), R = n(418149);
+function x(e) {
     let {
             setTab: t,
             onJump: n,
             showTutorial: s,
             setSeenTutorial: l,
-            closePopout: R,
+            closePopout: x,
             badgeState: M
         } = e, v = a.useRef(null), [L, Z] = (0, g.ZP)(v), {
             loadState: P,
@@ -57,20 +57,20 @@ function R(e) {
         ]);
     }(L, Z), a.useEffect(() => {
         T.default.track(S.rMx.OPEN_POPOUT, { type: 'Inbox' });
-    }, []), a.useEffect(() => (E.Z.subscribe('CONNECTION_OPEN', R), () => {
-        E.Z.unsubscribe('CONNECTION_OPEN', R);
-    }), [R]));
+    }, []), a.useEffect(() => (E.Z.subscribe('CONNECTION_OPEN', x), () => {
+        E.Z.unsubscribe('CONNECTION_OPEN', x);
+    }), [x]));
     let U = (0, d.e7)([I.Z], () => I.Z.messageGroupSpacing), y = (0, m.Z)('unreads', v);
     if (0 === b.length) {
         var B;
         return (0, i.jsxs)('div', {
-            className: x.container,
+            className: R.container,
             children: [
                 (0, i.jsx)(p.Z, {
                     tab: u.X.UNREADS,
                     setTab: t,
                     badgeState: M,
-                    closePopout: R
+                    closePopout: x
                 }),
                 (0, i.jsx)(f.Z, {
                     Icon: _.InboxIcon,
@@ -81,14 +81,14 @@ function R(e) {
         });
     }
     return (0, i.jsxs)('div', {
-        className: r()(x.container, 'group-spacing-'.concat(U)),
+        className: r()(R.container, 'group-spacing-'.concat(U)),
         'aria-label': A.Z.Messages.UNREADS_TAB_LABEL,
         children: [
             (0, i.jsx)(p.Z, {
                 tab: u.X.UNREADS,
                 setTab: t,
                 badgeState: M,
-                closePopout: R,
+                closePopout: x,
                 children: (0, i.jsx)(N.Z, {
                     type: 'top-header',
                     onClick: j
@@ -109,11 +109,11 @@ function R(e) {
                             },
                             ...a,
                             onScroll: P === g.jd.Done ? void 0 : D,
-                            className: x.scroller,
+                            className: R.scroller,
                             children: [
                                 s ? (0, i.jsx)(O, { setSeenTutorial: l }) : null,
                                 (0, C.Z)(b, Z, n),
-                                P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: x.spinner })
+                                P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: R.spinner })
                             ]
                         });
                     }
@@ -125,10 +125,10 @@ function R(e) {
 function O(e) {
     let {setSeenTutorial: t} = e;
     return (0, i.jsxs)('div', {
-        className: x.tutorial,
+        className: R.tutorial,
         children: [
             (0, i.jsx)('div', {
-                className: x.tutorialIcon,
+                className: R.tutorialIcon,
                 children: (0, i.jsx)(_.InboxIcon, {
                     size: 'md',
                     color: 'currentColor'
@@ -137,7 +137,7 @@ function O(e) {
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsx)(_.Heading, {
-                        className: x.__invalid_tutorialHeader,
+                        className: R.__invalid_tutorialHeader,
                         variant: 'heading-md/semibold',
                         children: A.Z.Messages.UNREADS_TUTORIAL_HEADER
                     }),
@@ -147,7 +147,7 @@ function O(e) {
                         children: A.Z.Messages.UNREADS_TUTORIAL_BODY
                     }),
                     (0, i.jsx)(_.Button, {
-                        className: x.tutorialButton,
+                        className: R.tutorialButton,
                         onClick: t,
                         size: _.Button.Sizes.SMALL,
                         children: A.Z.Messages.TUTORIAL_CLOSE
@@ -164,7 +164,7 @@ function M(e) {
         closePopout: a
     } = e;
     return (0, i.jsxs)('div', {
-        className: x.container,
+        className: R.container,
         children: [
             (0, i.jsx)(p.Z, {
                 tab: u.X.UNREADS,

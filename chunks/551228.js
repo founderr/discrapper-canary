@@ -3,14 +3,14 @@ n.d(t, {
         return E;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(512722), l = n.n(s), r = n(442837), o = n(276852), c = n(594174), d = n(719247), u = n(297781), h = n(443487), p = n(43205), m = n(689938), _ = n(827418);
+var i = n(735250), a = n(470079), l = n(512722), s = n.n(l), r = n(442837), o = n(276852), c = n(594174), d = n(719247), u = n(297781), h = n(443487), p = n(43205), m = n(689938), _ = n(827418);
 let f = [u.XF];
 function E(e) {
-    var t, n, i, a, s, l, u;
+    var t, n, i, a, l, s, u;
     let h = (0, r.e7)([d.Z], () => d.Z.getMatchingActivity(e)), p = (0, r.e7)([c.default], () => c.default.getUser(e.author_id));
     if (null == h || null == p)
         return {};
-    let m = e.extra.entries[0], _ = null !== (a = null !== (i = (0, o.Z)(h)) && void 0 !== i ? i : null === (t = h.assets) || void 0 === t ? void 0 : t.small_image) && void 0 !== a ? a : m.media.image_url, f = null !== (l = null !== (s = h.state) && void 0 !== s ? s : null === (n = m.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== l ? l : m.media.title, E = null !== (u = h.details) && void 0 !== u ? u : m.media.title;
+    let m = e.extra.entries[0], _ = null !== (a = null !== (i = (0, o.Z)(h)) && void 0 !== i ? i : null === (t = h.assets) || void 0 === t ? void 0 : t.small_image) && void 0 !== a ? a : m.media.image_url, f = null !== (s = null !== (l = h.state) && void 0 !== l ? l : null === (n = m.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== s ? s : m.media.title, E = null !== (u = h.details) && void 0 !== u ? u : m.media.title;
     return {
         activity: h,
         artist: f,
@@ -26,11 +26,11 @@ t.ZP = a.memo(function (e) {
             channel: n,
             selected: a
         } = e, {
-            activity: s,
+            activity: l,
             artist: r,
             imageUrl: o
         } = E(t);
-    return l()(null != s, 'There must be a matching live Activity for LISTENED_SESSION'), (0, i.jsxs)(h.Zb, {
+    return s()(null != l, 'There must be a matching live Activity for LISTENED_SESSION'), (0, i.jsxs)(h.Zb, {
         selected: a,
         children: [
             (0, i.jsxs)(h.e$, {

@@ -5,14 +5,14 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(399606), r = n(481060), o = n(493683), c = n(906732), d = n(69882), u = n(251794), h = n(386696), p = n(910693), m = n(314897), _ = n(271383), f = n(430824), E = n(496675), C = n(158776), g = n(885110), I = n(594174), x = n(572004), T = n(5192), v = n(51144), N = n(991570), S = n(981631), Z = n(689938), A = n(614603);
+var a = n(120356), l = n.n(a), s = n(399606), r = n(481060), o = n(493683), c = n(906732), d = n(69882), u = n(251794), h = n(386696), p = n(910693), m = n(314897), _ = n(271383), f = n(430824), E = n(496675), C = n(158776), g = n(885110), I = n(594174), x = n(572004), T = n(5192), v = n(51144), N = n(991570), S = n(981631), Z = n(689938), A = n(614603);
 function M(e) {
     let {
             user: t,
             backgroundColor: n,
             guildId: a,
-            onClose: s
-        } = e, o = t.id, c = (0, l.e7)([
+            onClose: l
+        } = e, o = t.id, c = (0, s.e7)([
             g.Z,
             C.Z,
             m.default
@@ -63,7 +63,7 @@ function M(e) {
                     color: 'text-normal',
                     children: (0, i.jsx)(r.Clickable, {
                         className: A.closeAction,
-                        onClick: s,
+                        onClick: l,
                         children: (0, i.jsx)(r.CloseSmallIcon, {
                             size: 'md',
                             color: 'currentColor'
@@ -79,14 +79,14 @@ function b(e) {
         tag: t = 'div',
         disabled: n,
         children: a,
-        onClick: l,
+        onClick: s,
         ...o
     } = e;
     return (0, i.jsx)(r.Clickable, {
         ...o,
         tag: t,
-        className: s()(A.bottomRowAction, { [A.bottomRowActionDisabled]: n }),
-        onClick: n ? void 0 : l,
+        className: l()(A.bottomRowAction, { [A.bottomRowActionDisabled]: n }),
+        onClick: n ? void 0 : s,
         children: (0, i.jsx)('div', {
             className: A.innerBottomRowAction,
             children: a
@@ -97,13 +97,13 @@ function R(e) {
     let {
             backgroundColor: t,
             user: a,
-            member: s,
+            member: l,
             guildId: m
-        } = e, _ = (0, l.e7)([f.Z], () => f.Z.getGuild(m)), {
+        } = e, _ = (0, s.e7)([f.Z], () => f.Z.getGuild(m)), {
             canKickUser: C,
             canBanUser: g,
             canModerateMembers: T
-        } = (0, l.cj)([
+        } = (0, s.cj)([
             E.Z,
             I.default,
             f.Z
@@ -118,7 +118,7 @@ function R(e) {
         }), [
             a,
             _
-        ]), v = (0, d.b)(s), {
+        ]), v = (0, d.b)(l), {
             analyticsLocations: N,
             newestAnalyticsLocation: M
         } = (0, c.ZP)(), R = (0, p.sE)(m, {
@@ -212,7 +212,7 @@ function R(e) {
                 'aria-label': Z.Z.Messages.TIMEOUT_USER,
                 style: { backgroundColor: t },
                 onClick: () => {
-                    v ? (0, u.q)(s.guildId, s.userId, N) : (0, u.z)(s.guildId, s.userId, N);
+                    v ? (0, u.q)(l.guildId, l.userId, N) : (0, u.z)(l.guildId, l.userId, N);
                 },
                 children: [
                     (0, i.jsx)(r.ClockWarningIcon, {
@@ -257,21 +257,21 @@ function j(e) {
             userId: t,
             guildId: n,
             onClose: a
-        } = e, s = (0, l.e7)([I.default], () => I.default.getUser(t), [t]), o = (0, l.e7)([_.ZP], () => _.ZP.getMember(n, t), [
+        } = e, l = (0, s.e7)([I.default], () => I.default.getUser(t), [t]), o = (0, s.e7)([_.ZP], () => _.ZP.getMember(n, t), [
             n,
             t
         ]), c = (0, N.f)(t, n, 0.8, r.tokens.colors.BACKGROUND_SECONDARY);
-    return null == s || null == o ? null : (0, i.jsxs)('div', {
+    return null == l || null == o ? null : (0, i.jsxs)('div', {
         className: A.container,
         children: [
             (0, i.jsx)(M, {
-                user: s,
+                user: l,
                 guildId: n,
                 onClose: a,
                 backgroundColor: c
             }),
             (0, i.jsx)(R, {
-                user: s,
+                user: l,
                 member: o,
                 guildId: n,
                 backgroundColor: c

@@ -11,25 +11,25 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(481060), r = n(534091), o = n(981631), c = n(118655);
+var a = n(120356), l = n.n(a), s = n(481060), r = n(534091), o = n(981631), c = n(118655);
 function d(e) {
     let {
             locked: t = !1,
             channelType: n
-        } = e, a = (0, l.useRedesignIconContext)().enabled, r = n === o.d4z.GUILD_VOICE || n === o.d4z.GUILD_STAGE_VOICE;
+        } = e, a = (0, s.useRedesignIconContext)().enabled, r = n === o.d4z.GUILD_VOICE || n === o.d4z.GUILD_STAGE_VOICE;
     if (!a)
         return (0, i.jsx)('div', {
-            className: s()(c.emptyChannelIcon, c.emptyChannelIconSvg, {
+            className: l()(c.emptyChannelIcon, c.emptyChannelIconSvg, {
                 [c.locked]: t,
                 [c.voiceChat]: r
             })
         });
     {
-        let e = r ? l.ChatIcon : t ? l.TextLockIcon : l.TextIcon;
+        let e = r ? s.ChatIcon : t ? s.TextLockIcon : s.TextIcon;
         return (0, i.jsx)('div', {
-            className: s()(c.emptyChannelIcon, c.emptyChannelIconComponent),
+            className: l()(c.emptyChannelIcon, c.emptyChannelIconComponent),
             children: (0, i.jsx)(e, {
-                color: l.tokens.colors.WHITE,
+                color: s.tokens.colors.WHITE,
                 size: 'custom',
                 width: 42,
                 height: 42
@@ -42,16 +42,16 @@ function u(e) {
         children: t,
         className: n
     } = e;
-    return (0, i.jsx)(l.Heading, {
+    return (0, i.jsx)(s.Heading, {
         'aria-hidden': 'true',
-        className: s()(n, c.header),
+        className: l()(n, c.header),
         variant: 'heading-xxl/extrabold',
         children: t
     });
 }
 function h(e) {
     let {children: t} = e;
-    return (0, i.jsx)(l.Text, {
+    return (0, i.jsx)(s.Text, {
         variant: 'text-md/normal',
         color: 'none',
         className: c.description,
@@ -63,12 +63,12 @@ t.ZP = function (e) {
         className: t,
         channelId: n,
         children: a,
-        ...l
+        ...s
     } = e;
     return (0, i.jsx)('div', {
-        className: s()(t, c.container),
+        className: l()(t, c.container),
         id: (0, r.p)(n, n),
-        ...l,
+        ...s,
         children: a
     });
 };

@@ -12,7 +12,7 @@ n.d(t, {
         return a;
     }
 }), n(653041), n(47120);
-var i, a, s, r, l = n(470079), o = n(836560), c = n(512722), d = n.n(c), u = n(392711), _ = n.n(u), E = n(570140), I = n(904245), m = n(45114), T = n(607070), h = n(853856), N = n(181945), f = n(220444), p = n(601070), C = n(344185), g = n(569471), S = n(723170), A = n(675478), x = n(581883), R = n(131704), O = n(592125), M = n(984933), v = n(731290), L = n(430824), Z = n(375954), P = n(496675), b = n(306680), D = n(771845), j = n(9156), U = n(70956), y = n(823379), B = n(709054), k = n(981631), G = n(124368);
+var i, a, s, r, l = n(470079), o = n(836560), c = n(512722), d = n.n(c), u = n(392711), _ = n.n(u), E = n(570140), I = n(904245), m = n(45114), T = n(607070), h = n(853856), N = n(181945), f = n(220444), p = n(601070), C = n(344185), g = n(569471), S = n(723170), A = n(675478), R = n(581883), x = n(131704), O = n(592125), M = n(984933), v = n(731290), L = n(430824), Z = n(375954), P = n(496675), b = n(306680), D = n(771845), j = n(9156), U = n(70956), y = n(823379), B = n(709054), k = n(981631), G = n(124368);
 function F(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -216,7 +216,7 @@ function H(e, t) {
 function Y() {
     let e = function () {
             var e, t;
-            let n = {}, i = null !== (t = null === (e = x.Z.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : {};
+            let n = {}, i = null !== (t = null === (e = R.Z.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : {};
             for (let e in i)
                 for (let t in i[e].channels) {
                     let a = O.Z.getChannel(t);
@@ -252,7 +252,7 @@ function W(e, t, n, i) {
     if (null == i)
         return;
     let a = O.Z.getChannel(i);
-    if (null == a || !R.Ec.has(a.type) && j.ZP.isGuildOrCategoryOrChannelMuted(n, a.id))
+    if (null == a || !x.Ec.has(a.type) && j.ZP.isGuildOrCategoryOrChannelMuted(n, a.id))
         return;
     if (a.isPrivate()) {
         if (0 === b.ZP.getMentionCount(i))

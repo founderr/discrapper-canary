@@ -31,18 +31,18 @@ function f(e) {
         } = e, [N, f] = a.useState(!1), p = a.useCallback(() => f(!0), []), C = a.useCallback(() => f(!1), []), g = (0, o.tP)(t), {
             containerRef: S,
             size: A,
-            height: x
-        } = (0, m.h)([t]), R = (0, l.q)({ location: T.dr.QUESTS_CARD }), {
+            height: R
+        } = (0, m.h)([t]), x = (0, l.q)({ location: T.dr.QUESTS_CARD }), {
             expansionSpring: O,
             isAnimating: M,
             isExpanded: v,
             toggleExpanded: L
         } = (0, m.O)({
-            initiallyExpanded: !R || r || (0, _.iM)({
+            initiallyExpanded: !x || r || (0, _.iM)({
                 location: n,
                 quest: t
             })
-        }), Z = null != x ? x : _.U0;
+        }), Z = null != R ? R : _.U0;
     return (0, i.jsx)(u.A, {
         questOrQuests: t,
         questContent: n,
@@ -80,7 +80,7 @@ function f(e) {
                         expansionSpring: O,
                         isAnimating: M,
                         isExpanded: v,
-                        isInConcurrentQuestExperiment: R,
+                        isInConcurrentQuestExperiment: x,
                         contentPosition: c,
                         toggleExpanded: L
                     }),

@@ -16,10 +16,10 @@ function h(e) {
         } = e, g = null == f ? void 0 : f.id, S = (0, r.e7)([d.Z], () => d.Z.getGuildId()), A = (0, r.e7)([c.Z], () => null != h && null != h.target_user ? c.Z.getActiveStreamForUser(h.target_user.id, g) : null, [
             h,
             g
-        ]), x = (0, r.e7)([c.Z], () => null != h && null != h.target_user ? c.Z.getStreamForUser(h.target_user.id, g) : null, [
+        ]), R = (0, r.e7)([c.Z], () => null != h && null != h.target_user ? c.Z.getStreamForUser(h.target_user.id, g) : null, [
             h,
             g
-        ]), R = null != h && h.target_type === I.Iq.STREAM && null != h.target_user && null != A, O = null != h && null != x && null != h.channel && null != h.guild && x.channelId === h.channel.id && x.guildId === h.guild.id;
+        ]), x = null != h && h.target_type === I.Iq.STREAM && null != h.target_user && null != A, O = null != h && null != R && null != h.channel && null != h.guild && R.channelId === h.channel.id && R.guildId === h.guild.id;
     s()(null != h, 'Invite cannot be null');
     let {
         target_type: M,
@@ -32,8 +32,8 @@ function h(e) {
             return (0, i.jsx)(_.Z, {});
         f = new o.ZP(h.guild);
     }
-    let b = null != h.channel ? (0, l.jD)(h.channel) : null, D = R ? p : C;
-    P && !O ? a = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({ name: v.username }) : (t = m.Z.Messages.WATCH, n = u.Z.Button.Colors.GREEN, R && (t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING, n = u.Z.Button.Colors.PRIMARY), a = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({ name: v.username }));
+    let b = null != h.channel ? (0, l.jD)(h.channel) : null, D = x ? p : C;
+    P && !O ? a = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({ name: v.username }) : (t = m.Z.Messages.WATCH, n = u.Z.Button.Colors.GREEN, x && (t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING, n = u.Z.Button.Colors.PRIMARY), a = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({ name: v.username }));
     let j = S === f.id && null != b ? (0, i.jsx)(u.Z.Channel, { channel: b }) : m.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: f.name });
     return (0, i.jsxs)(u.Z, {
         children: [
@@ -58,7 +58,7 @@ function h(e) {
                         disabled: P && !O,
                         onClick: D,
                         submitting: Z,
-                        isDisabled: R && O,
+                        isDisabled: x && O,
                         color: n,
                         children: t
                     }) : null

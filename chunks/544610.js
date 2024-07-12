@@ -1,6 +1,6 @@
 let i;
 n(47120), n(724458), n(653041);
-var a, s, l, r, o = n(392711), c = n.n(o), d = n(442837), u = n(570140), h = n(279779), p = n(353926), m = n(60349), _ = n(814443), f = n(428598), E = n(131704), C = n(624138), g = n(51144), I = n(592125), x = n(580005), T = n(699516), v = n(594174), N = n(981631);
+var a, l, s, r, o = n(392711), c = n.n(o), d = n(442837), u = n(570140), h = n(279779), p = n(353926), m = n(60349), _ = n(814443), f = n(428598), E = n(131704), C = n(624138), g = n(51144), I = n(592125), x = n(580005), T = n(699516), v = n(594174), N = n(981631);
 let S = !1, Z = '', A = 0, M = [], b = !1, R = new Set(), j = null;
 function L() {
     Z = '', A = 0, M = [], R = new Set(), S = !1, j = null;
@@ -27,8 +27,8 @@ function O() {
                 return x.Z.getScoreWithoutFetchingLatest(t);
             })), n = {};
         return e.forEach(e => {
-            let i = x.Z.getScoreWithoutFetchingLatest(e.id), a = e.getRecipientId(), s = T.Z.isFriend(a) ? 0.2 : 0, l = null != I.Z.getDMFromUserId(a) ? 0.1 : 0;
-            n[a] = 1 + i / t + s + l;
+            let i = x.Z.getScoreWithoutFetchingLatest(e.id), a = e.getRecipientId(), l = T.Z.isFriend(a) ? 0.2 : 0, s = null != I.Z.getDMFromUserId(a) ? 0.1 : 0;
+            n[a] = 1 + i / t + l + s;
         }), n;
     }()), !1;
 }
@@ -40,13 +40,13 @@ function y() {
 }
 function D(e, t) {
     return m.Z.getCurrentConfig({ location: 'dm_store' }, { autoTrackExposure: !1 }).useV2 ? function (e, t) {
-        var n, i, a, s;
-        let l = null !== (a = null === (n = f.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.dmProbability) && void 0 !== a ? a : 0;
-        return (null !== (s = null === (i = f.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.dmProbability) && void 0 !== s ? s : 0) - l;
+        var n, i, a, l;
+        let s = null !== (a = null === (n = f.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.dmProbability) && void 0 !== a ? a : 0;
+        return (null !== (l = null === (i = f.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.dmProbability) && void 0 !== l ? l : 0) - s;
     }(e, t) : m.Z.getCurrentConfig({ location: 'dm_store' }, { autoTrackExposure: !1 }).useV1 ? function (e, t) {
-        var n, i, a, s;
-        let l = null !== (a = null === (n = _.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== a ? a : 0;
-        return (null !== (s = null === (i = _.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== s ? s : 0) - l;
+        var n, i, a, l;
+        let s = null !== (a = null === (n = _.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== a ? a : 0;
+        return (null !== (l = null === (i = _.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== l ? l : 0) - s;
     }(e, t) : (0, C._I)(g.ZP.getName(e.user).toLocaleLowerCase()).localeCompare((0, C._I)(g.ZP.getName(t.user).toLocaleLowerCase()));
 }
 function k(e) {
@@ -102,12 +102,12 @@ class G extends (a = d.ZP.Store) {
         };
     }
 }
-r = 'PrivateChannelRecipientsInviteStore', (l = 'displayName') in (s = G) ? Object.defineProperty(s, l, {
+r = 'PrivateChannelRecipientsInviteStore', (s = 'displayName') in (l = G) ? Object.defineProperty(l, s, {
     value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : s[l] = r;
+}) : l[s] = r;
 let V = new G(u.Z, {
     CONNECTION_OPEN: function () {
         L();

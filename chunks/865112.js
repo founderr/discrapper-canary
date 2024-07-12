@@ -1,6 +1,6 @@
 n.d(t, {
     RB: function () {
-        return R;
+        return x;
     },
     VH: function () {
         return S;
@@ -12,7 +12,7 @@ n.d(t, {
         return M;
     },
     q7: function () {
-        return x;
+        return R;
     }
 });
 var i, a, s, r, l = n(692547), o = n(497089), c = n(650473), d = n(34482), u = n(137492), _ = n(387661), E = n(659953), I = n(319707), m = n(584914), T = n(334702), h = n(333722), N = n(549931), f = n(178561), p = n(39863), C = n(130312);
@@ -47,7 +47,7 @@ let S = {
         default:
             return 'NOTIFICATION_CENTER';
         }
-    }, x = e => {
+    }, R = e => {
         switch (e.type) {
         case 'lifecycle_item':
             return A(e);
@@ -62,7 +62,7 @@ let S = {
         default:
             return 'NOTIFICATION_CENTER';
         }
-    }, R = e => {
+    }, x = e => {
         if ('icHighlight' === e)
             return 'TOP_MESSAGES';
         return 'NOTIFICATION_CENTER';

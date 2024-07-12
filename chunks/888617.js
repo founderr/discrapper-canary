@@ -1,17 +1,17 @@
 t.d(n, {
     Z: function () {
-        return a;
+        return r;
     }
 });
-var i = t(990547), l = t(213609), r = t(312871);
-function a(e) {
+var i = t(990547), l = t(213609), a = t(312871);
+function r(e) {
     let {
         sectionName: n,
         numItems: t,
-        numVisibleItems: a
+        numVisibleItems: r
     } = e;
     return {
-        trackSectionImpressionRef: (0, r.Z)({
+        trackSectionImpressionRef: (0, a.Z)({
             onVisible: () => {
                 (0, l.h)({
                     type: i.ImpressionTypes.VIEW,
@@ -19,7 +19,7 @@ function a(e) {
                     properties: {
                         section_name: n,
                         num_items: t,
-                        num_visible_items: a
+                        num_visible_items: r
                     }
                 });
             },

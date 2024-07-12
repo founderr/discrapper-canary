@@ -13,7 +13,7 @@ function f(e) {
             children: a,
             badgeState: f,
             closePopout: p
-        } = e, {showReminders: C} = I.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }), {enabled: g} = E.Z.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }), {enabled: S} = _.Z.useExperiment({ location: 'RecentsHeader' }), A = (0, r.e7)([u.Z], () => u.Z.getUnseenInviteCount()), x = (0, r.e7)([m.Z], () => m.Z.getMessageReminders()).length;
+        } = e, {showReminders: C} = I.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }), {enabled: g} = E.Z.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }), {enabled: S} = _.Z.useExperiment({ location: 'RecentsHeader' }), A = (0, r.e7)([u.Z], () => u.Z.getUnseenInviteCount()), R = (0, r.e7)([m.Z], () => m.Z.getMessageReminders()).length;
     return (0, i.jsxs)(c.h4, {
         className: s()(N.header, N.expanded),
         children: [
@@ -88,7 +88,7 @@ function f(e) {
                                 className: s()(N.tab, N.expanded, { [N.active]: t === l.X.TODOS }),
                                 children: [
                                     h.Z.Messages.MESSAGE_REMINDERS_HEADER,
-                                    x > 0 ? (0, i.jsx)(o.CircleBadge, {
+                                    R > 0 ? (0, i.jsx)(o.CircleBadge, {
                                         color: d.Z.STATUS_DANGER,
                                         className: s()(N.iconBadge)
                                     }) : null

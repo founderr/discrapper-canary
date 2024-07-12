@@ -3,12 +3,12 @@ n.d(t, {
         return H;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(692547), c = n(481060), d = n(475179), u = n(40851), h = n(358221), p = n(933557), m = n(320007), _ = n(236091), f = n(623624), E = n(665149), C = n(984370), g = n(141321), I = n(618158), x = n(390322), T = n(616286), v = n(961048), N = n(430824), S = n(496675), Z = n(626135), A = n(792125), M = n(431328), b = n(501655), R = n(200498), j = n(146085), L = n(427679), P = n(592473), O = n(831002), y = n(903108), D = n(981631), k = n(474936), U = n(689938), w = n(581544);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(692547), c = n(481060), d = n(475179), u = n(40851), h = n(358221), p = n(933557), m = n(320007), _ = n(236091), f = n(623624), E = n(665149), C = n(984370), g = n(141321), I = n(618158), x = n(390322), T = n(616286), v = n(961048), N = n(430824), S = n(496675), Z = n(626135), A = n(792125), M = n(431328), b = n(501655), R = n(200498), j = n(146085), L = n(427679), P = n(592473), O = n(831002), y = n(903108), D = n(981631), k = n(474936), U = n(689938), w = n(581544);
 function B(e) {
     let {
             inPopout: t,
             channel: n,
-            toggleRequestToSpeakSidebar: s,
+            toggleRequestToSpeakSidebar: l,
             showRequestToSpeakSidebar: o
         } = e, p = (0, u.bp)(), f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)), E = (0, R.B)(n.id), C = (0, M.Rk)(n.id, b.pV.REQUESTED_TO_SPEAK_ONLY), {
             preventIdle: N,
@@ -50,18 +50,18 @@ function B(e) {
                 className: w.button,
                 children: (0, i.jsx)(P.Z, {
                     toggleRequestToSpeakSidebar: () => {
-                        f && d.Z.updateChatOpen(n.id, !1), s();
+                        f && d.Z.updateChatOpen(n.id, !1), l();
                     },
                     showRequestToSpeakSidebar: o,
                     numRequestToSpeak: C
                 })
             }) : null,
             !f && (0, i.jsx)('div', {
-                className: l()(w.button, { [w.sidebarOpen]: o }),
+                className: s()(w.button, { [w.sidebarOpen]: o }),
                 children: (0, i.jsx)(T.T, {
                     channelId: n.id,
                     showRequestToSpeakSidebar: o,
-                    toggleRequestToSpeakSidebar: s,
+                    toggleRequestToSpeakSidebar: l,
                     iconClassName: w.buttonIcon
                 })
             })
@@ -71,7 +71,7 @@ function B(e) {
 function H(e) {
     var t, n;
     let {
-            inPopout: s,
+            inPopout: l,
             channel: u,
             toggleRequestToSpeakSidebar: h,
             showRequestToSpeakSidebar: m
@@ -93,14 +93,14 @@ function H(e) {
     }, [P]);
     let V = (0, i.jsxs)(E.ZP, {
         toolbar: (0, i.jsx)(B, {
-            inPopout: s,
+            inPopout: l,
             toggleRequestToSpeakSidebar: h,
             showRequestToSpeakSidebar: m,
             channel: u
         }),
         onDoubleClick: C.O,
         transparent: !0,
-        className: l()((0, A.Q)(D.BRd.DARK), w.participants),
+        className: s()((0, A.Q)(D.BRd.DARK), w.participants),
         children: [
             (0, i.jsx)(E.ZP.Icon, {
                 icon: c.StageIcon,

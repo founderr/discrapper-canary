@@ -3,22 +3,22 @@ n.d(t, {
         return v;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(873546), d = n(442837), u = n(481060), _ = n(568836), E = n(100527), I = n(906732), m = n(963249), T = n(594174), h = n(78839), N = n(55935), f = n(63063), p = n(74538), C = n(276444), g = n(790368), S = n(786397), A = n(474936), x = n(981631), R = n(689938), O = n(951992);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(873546), d = n(442837), u = n(481060), _ = n(568836), E = n(100527), I = n(906732), m = n(963249), T = n(594174), h = n(78839), N = n(55935), f = n(63063), p = n(74538), C = n(276444), g = n(790368), S = n(786397), A = n(474936), R = n(981631), x = n(689938), O = n(951992);
 class M extends a.Component {
     renderTitle(e, t, n) {
         let {trialOffer: i} = this.props, a = T.default.getUser(i.user_id), s = null != a ? a.username : '???', r = T.default.getUser(i.referrer_id), l = null != r ? r.username : '???';
         if (e && void 0 === i.redeemed_at)
-            return R.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({ username: s });
+            return x.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({ username: s });
         if (t)
-            return n ? R.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_HEADER : R.Z.Messages.REFERRAL_PROGRAM_EMBED_TIRAL_EXPIRED.format({ userName: l });
-        return R.Z.Messages.REFERRAL_PROGRAM_EMBED_HEADER.format({
+            return n ? x.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_HEADER : x.Z.Messages.REFERRAL_PROGRAM_EMBED_TIRAL_EXPIRED.format({ userName: l });
+        return x.Z.Messages.REFERRAL_PROGRAM_EMBED_HEADER.format({
             senderUserName: l,
             recipientUserName: s
         });
     }
     renderBody(e, t, n) {
         let {trialOffer: i} = this.props;
-        return e && !n && void 0 === i.redeemed_at ? R.Z.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({ helpdeskArticle: f.Z.getArticleURL(x.BhN.REFERRAL_PROGRAM) }) : t ? null : R.Z.Messages.REFERRAL_PROGRAM_EMBED_BODY;
+        return e && !n && void 0 === i.redeemed_at ? x.Z.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({ helpdeskArticle: f.Z.getArticleURL(R.BhN.REFERRAL_PROGRAM) }) : t ? null : x.Z.Messages.REFERRAL_PROGRAM_EMBED_BODY;
     }
     renderActions(e, t, n) {
         let {
@@ -47,7 +47,7 @@ class M extends a.Component {
                                 referralTrialOfferId: a.id
                             });
                         },
-                        children: R.Z.Messages.START_TRIAL
+                        children: x.Z.Messages.START_TRIAL
                     })
                 }),
                 (0, i.jsx)('div', {
@@ -63,21 +63,21 @@ class M extends a.Component {
             trialEndsAt: a
         } = this.props;
         if (void 0 !== i.redeemed_at && !n && null !== a)
-            return R.Z.Messages.TRIAL_EXPIRES.format({ date: (0, N.vc)(o()(a), 'LL') });
+            return x.Z.Messages.TRIAL_EXPIRES.format({ date: (0, N.vc)(o()(a), 'LL') });
         if (e || void 0 === i.expires_at)
             return null;
         let s = o()(i.expires_at);
         if (t)
-            return R.Z.Messages.EXPIRED_DATE.format({ date: (0, N.vc)(o()(s), 'LL') });
+            return x.Z.Messages.EXPIRED_DATE.format({ date: (0, N.vc)(o()(s), 'LL') });
         let r = s.diff(o()(), 'h');
         if (r > 48) {
             let e = s.diff(o()(), 'd');
-            return R.Z.Messages.EXPIRES_DAYS.format({ numDays: e });
+            return x.Z.Messages.EXPIRES_DAYS.format({ numDays: e });
         }
         if (r > 1)
-            return R.Z.Messages.EXPIRES_HOURS.format({ numHours: r });
+            return x.Z.Messages.EXPIRES_HOURS.format({ numHours: r });
         let l = s.diff(o()(), 'minutes');
-        return R.Z.Messages.EXPIRES_MINUTES.format({ numMinutes: l });
+        return x.Z.Messages.EXPIRES_MINUTES.format({ numMinutes: l });
     }
     renderMedia(e) {
         return (0, i.jsx)('div', {

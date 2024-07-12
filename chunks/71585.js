@@ -1,6 +1,6 @@
 n(47120), n(653041);
-var i, a = n(442837), s = n(570140);
-function l(e, t, n) {
+var i, a = n(442837), l = n(570140);
+function s(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -23,10 +23,10 @@ function m() {
             break;
     }
     t > 0 && (o.itemImpressions = o.itemImpressions.slice(t));
-    let i = p ? 1000 : 57600000, a = new Set(), s = new Set(), l = Date.now() - i, r = null;
+    let i = p ? 1000 : 57600000, a = new Set(), l = new Set(), s = Date.now() - i, r = null;
     for (let [e, t] of o.itemImpressions)
-        t < l ? a.add(e) : null == r && (r = t + i), s.add(e);
-    c = a, d = s, u = null != r ? r : 1 / 0, h = !0;
+        t < s ? a.add(e) : null == r && (r = t + i), l.add(e);
+    c = a, d = l, u = null != r ? r : 1 / 0, h = !0;
 }
 class _ extends (i = a.ZP.PersistedStore) {
     initialize(e) {
@@ -48,7 +48,7 @@ class _ extends (i = a.ZP.PersistedStore) {
         o = r();
     }
 }
-l(_, 'displayName', 'ContentInventoryPersistedStore'), l(_, 'persistKey', 'ContentInventoryPersistedStore'), t.Z = new _(s.Z, {
+s(_, 'displayName', 'ContentInventoryPersistedStore'), s(_, 'persistKey', 'ContentInventoryPersistedStore'), t.Z = new _(l.Z, {
     CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: function (e) {
         let {itemIds: t} = e;
         !h && m();

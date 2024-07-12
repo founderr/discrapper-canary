@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     }
 }), n(47120), n(653041);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n(442837), c = n(475179), d = n(358221), u = n(306680), h = n(944486), p = n(111583), m = n(459273), _ = n(880831), f = n(774168), E = n(871499), C = n(981631), g = n(689938);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n(442837), c = n(475179), d = n(358221), u = n(306680), h = n(944486), p = n(111583), m = n(459273), _ = n(880831), f = n(774168), E = n(871499), C = n(981631), g = n(689938);
 function I(e) {
     let t = (0, o.e7)([p.Z], () => !(0, r.isEmpty)(p.Z.getTypingUsers(e)), [e]), n = (0, o.e7)([h.Z], () => h.Z.getVoiceChannelId() === e, [e]), {
             unreadCount: i,
@@ -25,22 +25,22 @@ function x(e) {
             channelId: n
         } = e, {
             unreadCount: a,
-            mentionCount: s,
-            isTyping: l,
+            mentionCount: l,
+            isTyping: s,
             voiceChannelIsSelected: r
         } = I(n);
     return (0, i.jsx)(f.Z, {
         className: t,
         unreadCount: a,
-        mentionCount: s,
-        isTyping: l,
+        mentionCount: l,
+        isTyping: s,
         canBadge: r
     });
 }
 function T(e) {
     let t, {
             channelId: n,
-            className: s,
+            className: l,
             showingClassName: r,
             onClick: u,
             inPopout: h,
@@ -56,17 +56,17 @@ function T(e) {
                     unreadCount: t,
                     mentionCount: n,
                     isTyping: i
-                } = I(e), [s, l] = a.useState(!1);
+                } = I(e), [l, s] = a.useState(!1);
             return a.useEffect(() => {
-                l(t > 0);
+                s(t > 0);
                 let e = setTimeout(() => {
-                    l(!1);
+                    s(!1);
                 }, _.z);
                 return () => {
-                    clearTimeout(e), l(!1);
+                    clearTimeout(e), s(!1);
                 };
             }, [t]), {
-                isShowing: s || n > 0 || i,
+                isShowing: l || n > 0 || i,
                 unreadCount: t,
                 mentionCount: n
             };
@@ -114,7 +114,7 @@ function T(e) {
         'aria-label': y.join(', '),
         iconComponent: R,
         tooltipPosition: 'bottom',
-        wrapperClassName: l()(s, null != r && { [r]: Z }),
+        wrapperClassName: s()(l, null != r && { [r]: Z }),
         forceTooltipOpen: L,
         ...T
     });

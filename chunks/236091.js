@@ -1,12 +1,12 @@
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(442837), r = n(692547), o = n(481060), c = n(358221), d = n(594190), u = n(836157), h = n(199902), p = n(924557), m = n(435064), _ = n(354459), f = n(689938), E = n(147466);
+var a = n(120356), l = n.n(a), s = n(442837), r = n(692547), o = n(481060), c = n(358221), d = n(594190), u = n(836157), h = n(199902), p = n(924557), m = n(435064), _ = n(354459), f = n(689938), E = n(147466);
 t.Z = e => {
     let {
             className: t,
             channelId: n
         } = e, a = (0, p.Go)(), {enableDecoupledGameClipping: C} = u.Z.useExperiment({ location: 'ClipsEnabledIndicator' }, { autoTrackExposure: !1 });
-    return (0, l.e7)([
+    return (0, s.e7)([
         h.Z,
         c.Z,
         m.Z,
@@ -20,7 +20,7 @@ t.Z = e => {
     }) ? (0, i.jsxs)(o.TooltipContainer, {
         text: f.Z.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,
         color: o.TooltipColors.GREY,
-        className: s()(t, E.clipsEnabledIndicator),
+        className: l()(t, E.clipsEnabledIndicator),
         children: [
             (0, i.jsx)(o.IconBadge, {
                 icon: o.ClipsIcon,

@@ -5,7 +5,7 @@ n.d(t, {
 }), n(47120), n(789020);
 var i = n(735250);
 n(470079);
-var a = n(613828), s = n(442837), r = n(477690), l = n(481060), o = n(668781), c = n(2052), d = n(100527), u = n(906732), _ = n(835473), E = n(522474), I = n(523746), m = n(592125), T = n(594174), h = n(630388), N = n(823379), f = n(624138), p = n(317381), C = n(638880), g = n(146936), S = n(147865), A = n(778569), x = n(513202), R = n(884338), O = n(403404), M = n(701488), v = n(981631), L = n(689938), Z = n(615010);
+var a = n(613828), s = n(442837), r = n(477690), l = n(481060), o = n(668781), c = n(2052), d = n(100527), u = n(906732), _ = n(835473), E = n(522474), I = n(523746), m = n(592125), T = n(594174), h = n(630388), N = n(823379), f = n(624138), p = n(317381), C = n(638880), g = n(146936), S = n(147865), A = n(778569), R = n(513202), x = n(884338), O = n(403404), M = n(701488), v = n(981631), L = n(689938), Z = n(615010);
 let P = (0, f.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function b(e) {
     var t, n, r, f;
@@ -30,7 +30,7 @@ function b(e) {
                         applicationId: W.applicationId,
                         currentEmbeddedApplication: H,
                         activityChannelId: y,
-                        embeddedActivitiesManager: x.Z,
+                        embeddedActivitiesManager: R.Z,
                         locationObject: U.location,
                         analyticsLocations: j
                     });
@@ -40,7 +40,7 @@ function b(e) {
                             currentEmbeddedApplication: H,
                             channelId: y,
                             guildId: k,
-                            embeddedActivitiesManager: x.Z,
+                            embeddedActivitiesManager: R.Z,
                             analyticsLocations: j
                         });
                     e ? o.Z.show({
@@ -100,7 +100,7 @@ function b(e) {
                             children: [
                                 K.length > 0 ? (0, i.jsx)('div', {
                                     className: Z.avatars,
-                                    children: (0, i.jsx)(R.Z, {
+                                    children: (0, i.jsx)(x.Z, {
                                         guildId: k,
                                         users: K,
                                         max: 4

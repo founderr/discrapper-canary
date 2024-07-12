@@ -3,11 +3,11 @@ n.d(t, {
         return w;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(613828), o = n(772848), c = n(442837), d = n(481060), u = n(2052), h = n(40851), p = n(607070), m = n(100527), _ = n(906732), f = n(703656), E = n(210887), C = n(390322), g = n(626135), I = n(348600), x = n(566620), T = n(520599), v = n(611370), N = n(138138), S = n(127255), Z = n(5200), A = n(558317), M = n(403404), b = n(701488), R = n(981631), j = n(689938), L = n(791499), P = n(587952), O = n(736733), y = n(932463), D = n(988967), k = n(463738);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(613828), o = n(772848), c = n(442837), d = n(481060), u = n(2052), h = n(40851), p = n(607070), m = n(100527), _ = n(906732), f = n(703656), E = n(210887), C = n(390322), g = n(626135), I = n(348600), x = n(566620), T = n(520599), v = n(611370), N = n(138138), S = n(127255), Z = n(5200), A = n(558317), M = n(403404), b = n(701488), R = n(981631), j = n(689938), L = n(791499), P = n(587952), O = n(736733), y = n(932463), D = n(988967), k = n(463738);
 let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
         let {
                 channel: n,
-                isHovered: s,
+                isHovered: l,
                 closePopout: o,
                 onMouseEnter: w,
                 onMouseLeave: B,
@@ -26,10 +26,10 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
             q,
             X
         ]), a.useEffect(() => {
-            !s && o();
+            !l && o();
         }, [
             o,
-            s
+            l
         ]);
         let Q = (0, h.bp)(), {analyticsLocations: J} = (0, _.ZP)(m.Z.ACTIVITIES_MINI_SHELF), {analyticsLocations: $} = (0, _.ZP)([
                 ...J,
@@ -69,7 +69,7 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
             }, [
                 w,
                 n
-            ]), es = V ? (0, i.jsxs)(r.rU, {
+            ]), el = V ? (0, i.jsxs)(r.rU, {
                 to: R.Z5c.ACTIVITIES,
                 children: [
                     (0, i.jsx)('img', {
@@ -80,7 +80,7 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
                     (0, i.jsx)('div', { className: L.posterDivider })
                 ]
             }) : W ? (0, i.jsxs)(d.Clickable, {
-                className: l()(L.clickableBanner),
+                className: s()(L.clickableBanner),
                 onClick: () => {
                     H(), o(), (0, f.uL)(R.Z5c.ACTIVITY_DETAILS(b.Fu), { sourceLocationStack: $ });
                 },
@@ -93,7 +93,7 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
                     (0, i.jsx)('div', { className: L.posterDivider })
                 ]
             }) : F ? (0, i.jsxs)(d.Clickable, {
-                className: l()(L.clickableBanner),
+                className: s()(L.clickableBanner),
                 onClick: () => {
                     H(), o(), (0, f.uL)(R.Z5c.ACTIVITY_DETAILS(b.NC), { sourceLocationStack: $ });
                 },
@@ -106,7 +106,7 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
                     (0, i.jsx)('div', { className: L.posterDivider })
                 ]
             }) : z ? (0, i.jsxs)(d.Clickable, {
-                className: l()(L.clickableBanner),
+                className: s()(L.clickableBanner),
                 onClick: () => {
                     H(), o(), (0, f.uL)(R.Z5c.ACTIVITY_DETAILS(b.Eq), { sourceLocationStack: $ });
                 },
@@ -179,7 +179,7 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
                                 }),
                                 (0, i.jsx)(_.Gt, {
                                     value: $,
-                                    children: es
+                                    children: el
                                 }),
                                 (0, i.jsxs)('div', {
                                     className: L.activityContainer,
@@ -194,7 +194,7 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
                                             animatedDivClass: L.activitySuggestion
                                         }, e.application.id)),
                                         (0, i.jsx)('div', {
-                                            className: l()(L.wumpusRocketOuterContainer, { [L.wumpusReducedMotion]: K }),
+                                            className: s()(L.wumpusRocketOuterContainer, { [L.wumpusReducedMotion]: K }),
                                             children: (0, i.jsx)('div', {
                                                 className: L.wumpusRocketInnerContainer,
                                                 children: (0, i.jsx)(A.Z, { className: L.wumpusRocket })

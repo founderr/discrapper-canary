@@ -3,23 +3,23 @@ n.d(t, {
         return F;
     }
 }), n(653041);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n.n(r), c = n(848246), d = n(442837), u = n(481060), h = n(320007), p = n(236091), m = n(569545), _ = n(517525), f = n(665149), E = n(6242), C = n(757692), g = n(141321), I = n(44136), x = n(651183), T = n(618158), v = n(390322), N = n(616286), S = n(961048), Z = n(179424), A = n(786915), M = n(975146), b = n(991617), R = n(606304), j = n(594174), L = n(805009), P = n(368666), O = n(74538), y = n(358221), D = n(887012), k = n(444253), U = n(355827), w = n(354459), B = n(981631), H = n(689938), G = n(867358);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n.n(r), c = n(848246), d = n(442837), u = n(481060), h = n(320007), p = n(236091), m = n(569545), _ = n(517525), f = n(665149), E = n(6242), C = n(757692), g = n(141321), I = n(44136), x = n(651183), T = n(618158), v = n(390322), N = n(616286), S = n(961048), Z = n(179424), A = n(786915), M = n(975146), b = n(991617), R = n(606304), j = n(594174), L = n(805009), P = n(368666), O = n(74538), y = n(358221), D = n(887012), k = n(444253), U = n(355827), w = n(354459), B = n(981631), H = n(689938), G = n(867358);
 function V(e) {
     let {
             channelId: t,
             guildId: n
-        } = e, a = Date.now(), s = (0, d.e7)([
+        } = e, a = Date.now(), l = (0, d.e7)([
             R.Z,
             y.Z
         ], () => o()(R.Z.getSpeakers()).map(e => y.Z.getParticipant(t, e)).filter(e => null != e && e.type === w.fO.USER && e.speaking && !(0, I.ZP)(e)).sortBy(e => -R.Z.getSpeakingDuration(e.user.id, a)).slice(0, 3).value());
-    return 0 === s.length ? null : (0, i.jsx)(i.Fragment, {
-        children: s.map((e, t) => (0, i.jsx)(u.Tooltip, {
+    return 0 === l.length ? null : (0, i.jsx)(i.Fragment, {
+        children: l.map((e, t) => (0, i.jsx)(u.Tooltip, {
             position: 'bottom',
             color: u.Tooltip.Colors.GREY,
             text: H.Z.Messages.CHANNEL_CALL_CURRENT_SPEAKER.format({ username: e.user.username }),
             children: a => (0, i.jsx)(L.Z, {
                 ...a,
-                className: l()(G.speaker, { [G.last]: t === s.length - 1 }),
+                className: s()(G.speaker, { [G.last]: t === l.length - 1 }),
                 user: e.user,
                 speaking: !0,
                 collapsed: !0,
@@ -32,8 +32,8 @@ function F(e) {
     let {
             inPopout: t,
             channel: n,
-            appContext: s,
-            inCall: l,
+            appContext: l,
+            inCall: s,
             isChatOpen: r,
             exitFullScreen: o
         } = e, I = n.id, {
@@ -87,7 +87,7 @@ function F(e) {
                 className: G.button
             });
         }
-    }, 'call-members-popout')), l && Q.push(null != L ? (0, i.jsx)(Z.Z, {
+    }, 'call-members-popout')), s && Q.push(null != L ? (0, i.jsx)(Z.Z, {
         className: G.button,
         channelId: I
     }, 'deselect-participant') : (0, i.jsx)(b.Z, {
@@ -106,7 +106,7 @@ function F(e) {
                 children: (0, i.jsx)(k.Z, {
                     channelId: I,
                     onClose: t,
-                    appContext: s,
+                    appContext: l,
                     exitFullScreen: o
                 })
             });

@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(338545), o = n(468194), c = n(442837), d = n(692547), u = n(477690), h = n(481060), p = n(2052), m = n(906732), _ = n(484459), f = n(594174), E = n(368666), C = n(626135), g = n(74538), I = n(557457), x = n(475674), T = n(981631), v = n(474936), N = n(689938), S = n(102572);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(338545), o = n(468194), c = n(442837), d = n(692547), u = n(477690), h = n(481060), p = n(2052), m = n(906732), _ = n(484459), f = n(594174), E = n(368666), C = n(626135), g = n(74538), I = n(557457), x = n(475674), T = n(981631), v = n(474936), N = n(689938), S = n(102572);
 let Z = (0, o.Mg)(u.Z.LIVE_INDICATOR_BORDER_RADIUS), A = {
         opacity: 0,
         transform: 'translate3d(100%, 0, 0)'
@@ -12,7 +12,7 @@ let Z = (0, o.Mg)(u.Z.LIVE_INDICATOR_BORDER_RADIUS), A = {
         friction: 18,
         clamp: !0
     }, O = e => {
-        let t, s, {
+        let t, l, {
                 participant: r,
                 isUpsellEnabled: o,
                 shape: u,
@@ -28,11 +28,11 @@ let Z = (0, o.Mg)(u.Z.LIVE_INDICATOR_BORDER_RADIUS), A = {
             t = !1;
         }
         try {
-            s = (0, I.tR)(R);
+            l = (0, I.tR)(R);
         } catch (e) {
-            s = !1;
+            l = !1;
         }
-        let P = t || s, {location: O} = (0, p.O)(), y = (0, c.e7)([f.default], () => f.default.getCurrentUser()), D = o && !g.ZP.isPremium(y, v.p9.TIER_1) && !g.ZP.canStreamQuality(g.ZP.StreamQuality.MID, y), k = a.useCallback(() => {
+        let P = t || l, {location: O} = (0, p.O)(), y = (0, c.e7)([f.default], () => f.default.getCurrentUser()), D = o && !g.ZP.isPremium(y, v.p9.TIER_1) && !g.ZP.canStreamQuality(g.ZP.StreamQuality.MID, y), k = a.useCallback(() => {
                 D && P && (0, h.openModalLazy)(async () => {
                     let {default: e} = await n.e('28479').then(n.bind(n, 78865));
                     return t => (0, i.jsx)(e, {
@@ -49,12 +49,12 @@ let Z = (0, o.Mg)(u.Z.LIVE_INDICATOR_BORDER_RADIUS), A = {
                 !Z && P && (C.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: v.cd.STREAM_QUALITY_INDICATOR,
                     has_premium_stream_fps: t,
-                    has_premium_stream_resolution: s,
+                    has_premium_stream_resolution: l,
                     location_stack: j
                 }), A(!0));
             }, [
                 t,
-                s,
+                l,
                 P,
                 Z,
                 A,
@@ -68,7 +68,7 @@ let Z = (0, o.Mg)(u.Z.LIVE_INDICATOR_BORDER_RADIUS), A = {
             children: e => (0, i.jsxs)(h.Clickable, {
                 ...e,
                 onClick: k,
-                className: l()(S.qualityIndicator, _, E.eE[u], L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, { [S.clickable]: D && P }),
+                className: s()(S.qualityIndicator, _, E.eE[u], L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, { [S.clickable]: D && P }),
                 children: [
                     P ? (0, i.jsx)(h.NitroWheelIcon, {
                         size: 'md',
@@ -85,7 +85,7 @@ let Z = (0, o.Mg)(u.Z.LIVE_INDICATOR_BORDER_RADIUS), A = {
         });
         return (0, i.jsx)(h.TextBadge, {
             text: U,
-            className: l()(M, S.qualityIndicatorBadge, { [S.qualityIndicatorBadgePremium]: b }),
+            className: s()(M, S.qualityIndicatorBadge, { [S.qualityIndicatorBadgePremium]: b }),
             color: d.Z.unsafe_rawColors.PRIMARY_500.css,
             shape: u
         });
@@ -94,7 +94,7 @@ t.Z = e => {
     let {
             participant: t,
             showQuality: n,
-            isUpsellEnabled: s = !0,
+            isUpsellEnabled: l = !0,
             size: o,
             className: c,
             premiumIndicator: d
@@ -119,7 +119,7 @@ t.Z = e => {
             popoutProps: a
         } = e;
         return (0, i.jsxs)('div', {
-            className: l()(S.streamQualityIndicator, n),
+            className: s()(S.streamQualityIndicator, n),
             ...a,
             children: [
                 g((e, n) => n ? (0, i.jsx)(r.animated.div, {
@@ -129,7 +129,7 @@ t.Z = e => {
                         participant: t,
                         size: o,
                         shape: h.BadgeShapes.ROUND_LEFT,
-                        isUpsellEnabled: s,
+                        isUpsellEnabled: l,
                         didTrackUpsellViewed: u,
                         setDidTrackUpsellViewed: p,
                         premiumIndicator: d

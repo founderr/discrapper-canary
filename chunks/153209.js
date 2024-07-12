@@ -26,16 +26,16 @@ function C(e) {
             items: C,
             loading: g,
             loadMore: S
-        } = (0, u.y6)(), A = (0, s.e7)([o.Z], () => o.Z.localItems), x = a.useMemo(() => [...[
+        } = (0, u.y6)(), A = (0, s.e7)([o.Z], () => o.Z.localItems), R = a.useMemo(() => [...[
                 ...C,
                 ...A
             ].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [
             C,
             A
-        ]), R = C.length > 0 ? C[0] : null, O = E.d$.useSetting(), M = a.useMemo(() => {
-            if (null != R && 0 >= m.default.compare(R.id, O))
+        ]), x = C.length > 0 ? C[0] : null, O = E.d$.useSetting(), M = a.useMemo(() => {
+            if (null != x && 0 >= m.default.compare(x.id, O))
                 return !1;
-            for (let e of x) {
+            for (let e of R) {
                 if (0 >= m.default.compare(e.id, O))
                     break;
                 if (!(0, d.r)(e, O))
@@ -43,9 +43,9 @@ function C(e) {
             }
             return !1;
         }, [
-            R,
+            x,
             O,
-            x
+            R
         ]);
     return (0, i.jsxs)('div', {
         className: f.container,
@@ -57,13 +57,13 @@ function C(e) {
                 closePopout: l,
                 children: M ? (0, i.jsx)(p, {
                     onClick: () => {
-                        null != R && (E.d$.updateSetting(R.id), I.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
+                        null != x && (E.d$.updateSetting(x.id), I.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
                     }
                 }) : null
             }),
             (0, i.jsx)(_.Z, {
                 initialized: N,
-                items: x,
+                items: R,
                 loading: g,
                 loadMore: S
             })

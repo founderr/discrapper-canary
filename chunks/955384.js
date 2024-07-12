@@ -3,7 +3,7 @@ n.d(t, {
         return h;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(925975), l = n(957730), r = n(981631), o = n(689938), c = n(586146);
+var i = n(735250), a = n(470079), l = n(925975), s = n(957730), r = n(981631), o = n(689938), c = n(586146);
 function d(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -22,8 +22,8 @@ class h extends a.PureComponent {
             textValue: t,
             richValue: n,
             message: a,
-            channel: s,
-            onCancel: l,
+            channel: l,
+            onCancel: s,
             children: r
         } = this.props;
         return (0, i.jsxs)('div', {
@@ -35,7 +35,7 @@ class h extends a.PureComponent {
                     textValue: t,
                     richValue: n,
                     message: a,
-                    channel: s,
+                    channel: l,
                     onChange: this.onChange,
                     onSubmit: this.onSubmit,
                     onKeyDown: this.onKeyDown
@@ -43,7 +43,7 @@ class h extends a.PureComponent {
                 (0, i.jsx)('div', {
                     className: c.operations,
                     children: o.Z.Messages.EDIT_TEXTAREA_HELP.format({
-                        onCancel: () => l(s.id),
+                        onCancel: () => s(l.id),
                         onSave: this.onClickSave
                     })
                 })
@@ -76,12 +76,12 @@ class h extends a.PureComponent {
                         shouldClear: !1,
                         shouldRefocus: !1
                     });
-                let o = (0, s.g)(e, {
+                let o = (0, l.g)(e, {
                     channel: n,
                     isEdit: !0
                 });
                 (null == o ? void 0 : o.content) != null && (e = o.content);
-                let c = l.ZP.parse(this.props.channel, e);
+                let c = s.ZP.parse(this.props.channel, e);
                 return c.content !== this.props.message.content && r(this.props.channel.id, this.props.message.id, c), a(n.id), Promise.resolve({
                     shouldClear: !0,
                     shouldRefocus: !0

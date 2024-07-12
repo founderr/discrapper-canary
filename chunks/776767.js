@@ -11,7 +11,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(481060), r = n(347099);
+var a = n(120356), l = n.n(a), s = n(481060), r = n(347099);
 let o = 16;
 function c(e) {
     let {
@@ -22,32 +22,32 @@ function c(e) {
         className: d,
         missingNavIcon: u
     } = e;
-    return (0, i.jsxs)(l.Clickable, {
+    return (0, i.jsxs)(s.Clickable, {
         onClick: c,
-        className: s()(r.modInfoItem, null != c && r.modInfoAction, d),
+        className: l()(r.modInfoItem, null != c && r.modInfoAction, d),
         children: [
             null != a && (0, i.jsx)('div', {
-                className: s()(r.modInfoItemIcon),
+                className: l()(r.modInfoItemIcon),
                 children: a
             }),
             null != n && (0, i.jsx)('div', {
-                className: s()(r.modInfoItemName),
+                className: l()(r.modInfoItemName),
                 children: n
             }),
             (0, i.jsx)('div', {
-                className: s()(r.modInfoItemDescription),
+                className: l()(r.modInfoItemDescription),
                 children: t
             }),
             null != c && (0, i.jsx)('div', {
-                className: s()(r.modInfoItemActionIcon),
-                children: (0, i.jsx)(l.ChevronLargeRightIcon, {
+                className: l()(r.modInfoItemActionIcon),
+                children: (0, i.jsx)(s.ChevronLargeRightIcon, {
                     size: 'custom',
                     width: o,
                     height: o
                 })
             }),
             null == c && null != u && (0, i.jsx)('div', {
-                className: s()(r.modInfoItemActionIcon),
+                className: l()(r.modInfoItemActionIcon),
                 children: u
             })
         ]
@@ -56,7 +56,7 @@ function c(e) {
 function d(e) {
     let {children: t} = e;
     return (0, i.jsx)('div', {
-        className: s()(r.modInfoItemContainer),
+        className: l()(r.modInfoItemContainer),
         children: t
     });
 }

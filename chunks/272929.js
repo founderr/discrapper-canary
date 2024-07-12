@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(338545), s = n(481060), l = n(871499), r = n(689938), o = n(61197);
+var a = n(338545), l = n(481060), s = n(871499), r = n(689938), o = n(61197);
 let c = (0, a.animated)(e => {
     let {percentComplete: t} = e, n = 20;
     return (0, i.jsx)('svg', {
@@ -42,7 +42,7 @@ function d(e) {
                 ...a.config.molasses,
                 duration: 1000
             }
-        }), g = E ? r.Z.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({ seconds: n }) : void 0, I = _ ? l.d : l.Z;
+        }), g = E ? r.Z.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({ seconds: n }) : void 0, I = _ ? s.d : s.Z;
     return (0, i.jsxs)('div', {
         className: o.container,
         children: [
@@ -51,7 +51,7 @@ function d(e) {
                 ...f,
                 disabled: E,
                 label: g,
-                iconComponent: s.ReactionIcon,
+                iconComponent: l.ReactionIcon,
                 onClick: d,
                 onKeyDown: u,
                 onMouseEnter: h,

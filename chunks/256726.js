@@ -9,7 +9,7 @@ n.d(t, {
         return u;
     }
 }), n(627494), n(757143);
-var i = n(884439), a = n(55000), s = n(693824), l = n(690725), r = n(561308), o = n(737583), c = n(169040), d = n(689938);
+var i = n(884439), a = n(55000), l = n(693824), s = n(690725), r = n(561308), o = n(737583), c = n(169040), d = n(689938);
 let u = e => {
         let {timestamp: t} = e;
         return [{
@@ -45,7 +45,7 @@ let u = e => {
                 avatarSrc: t.getAvatarURL(n.guild_id, 128),
                 mediaImageSrc: i
             }), f = r.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
-        return await (0, l.f)({
+        return await (0, s.f)({
             assetsToLoad: _,
             drawImage: e => {
                 (function (e, t) {
@@ -81,7 +81,7 @@ let u = e => {
                             'sans-serif'
                         ],
                         weight: 500,
-                        truncate: s.GX.None
+                        truncate: l.GX.None
                     }), e.drawText(d.Z.Messages.BETA, {
                         x: c.nx - c.sB - 29,
                         y: 26
@@ -93,7 +93,7 @@ let u = e => {
                     }, {
                         w: c.Pu,
                         h: c.Pu
-                    }, 8, { fillMode: s.JU.Contain }) === s.vP.Failure && e.drawPath(a.Cv, {
+                    }, 8, { fillMode: l.JU.Contain }) === l.vP.Failure && e.drawPath(a.Cv, {
                         x: c.sB,
                         y: c.sB
                     }, !0, 2 + 2 / 3);
@@ -108,7 +108,7 @@ let u = e => {
                 }(e), function (e, t) {
                     e.setColor('white'), e.setFont({
                         size: 16,
-                        truncate: s.GX.Wrap
+                        truncate: l.GX.Wrap
                     }), e.drawText(t, {
                         x: c.Iq,
                         y: 64,
@@ -123,7 +123,7 @@ let u = e => {
                 }));
             },
             exportConfigs: {
-                format: s.kH.CloudUpload,
+                format: l.kH.CloudUpload,
                 quality: 1,
                 fileName: 'user-reacting-to-'.concat(f, '.png').toLowerCase(),
                 fileType: 'png',

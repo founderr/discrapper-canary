@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     }
 }), n(653041), n(47120);
-var i = n(275726), a = n(135938), s = n(55935), l = n(709054), r = n(554838), o = n(493892), c = n(981631);
+var i = n(275726), a = n(135938), l = n(55935), s = n(709054), r = n(554838), o = n(493892), c = n(981631);
 function d(e) {
     let t, n, d, {
             channel: u,
@@ -12,16 +12,16 @@ function d(e) {
             treatSpam: m,
             summaries: _,
             selectedSummary: f
-        } = e, E = [], C = !1, g = null != p ? l.default.extractTimestamp(p) : null, I = null;
+        } = e, E = [], C = !1, g = null != p ? s.default.extractTimestamp(p) : null, I = null;
     return h.forEach(e => {
         var a, x, T, v, N, S, Z, A;
         if (null != _ && _.length > 0) {
             ;
-            let t = l.default.extractTimestamp(e.id);
+            let t = s.default.extractTimestamp(e.id);
             for (let e = 0; a = e < (null == _ ? void 0 : _.length), a; e++) {
                 if (null == _[e])
                     continue;
-                let n = l.default.extractTimestamp(_[e].startId), i = l.default.extractTimestamp(_[e].endId);
+                let n = s.default.extractTimestamp(_[e].startId), i = s.default.extractTimestamp(_[e].endId);
                 if (t >= n && t <= i) {
                     if (I === _[e].id)
                         break;
@@ -34,7 +34,7 @@ function d(e) {
                 }
             }
         }
-        let M = (0, s.vc)(e.timestamp, 'LL');
+        let M = (0, l.vc)(e.timestamp, 'LL');
         M !== t && null == I && (E.push({
             type: c.ys_.DIVIDER,
             content: M,
@@ -77,7 +77,7 @@ function d(e) {
                     unreadId: e.id
                 }), g = null;
         } else
-            null != g && l.default.extractTimestamp(e.id) > g && (!e.isFirstMessageInForumPost(u) && E.push({
+            null != g && s.default.extractTimestamp(e.id) > g && (!e.isFirstMessageInForumPost(u) && E.push({
                 type: c.ys_.DIVIDER,
                 unreadId: e.id
             }), g = null);

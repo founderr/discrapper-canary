@@ -70,14 +70,14 @@ let f = e => {
                 (0, u.jsx)(S, { sku: t })
             ]
         });
-    }, x = e => {
+    }, R = e => {
         let {className: t} = e;
         return (0, u.jsx)('div', {
             className: t,
             children: h.Z.Messages.APPLICATION_STORE_FREE
         });
     };
-class R extends (s = _.PureComponent) {
+class x extends (s = _.PureComponent) {
     getState() {
         let {
             inLibrary: e,
@@ -105,7 +105,7 @@ class R extends (s = _.PureComponent) {
         } = this.props;
         switch (e) {
         case 5:
-            return (0, u.jsx)(x, { className: I()(t, n) });
+            return (0, u.jsx)(R, { className: I()(t, n) });
         case 1:
             return (0, u.jsx)(f, { className: I()(t, n) });
         case 3:
@@ -132,7 +132,7 @@ class R extends (s = _.PureComponent) {
         } = this.props;
         switch (e) {
         case 5:
-            return (0, u.jsx)(x, { className: I()(t) });
+            return (0, u.jsx)(R, { className: I()(t) });
         case 3:
             return (0, u.jsx)(p, {
                 sku: n,
@@ -158,7 +158,7 @@ class R extends (s = _.PureComponent) {
         } = this.props;
         switch (e) {
         case 5:
-            t = (0, u.jsx)(x, {});
+            t = (0, u.jsx)(R, {});
             break;
         case 2:
             t = (0, u.jsxs)(_.Fragment, {
@@ -202,9 +202,9 @@ class R extends (s = _.PureComponent) {
         }
     }
 }
-o = R, c = 'Types', d = i, c in o ? Object.defineProperty(o, c, {
+o = x, c = 'Types', d = i, c in o ? Object.defineProperty(o, c, {
     value: d,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : o[c] = d, t.Z = R;
+}) : o[c] = d, t.Z = x;

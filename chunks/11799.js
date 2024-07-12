@@ -26,8 +26,8 @@ let _ = e => {
                 cursor: c.Z.cursor,
                 errored: c.Z.errored
             })), {
-                roleFilter: x,
-                everyoneFilter: R
+                roleFilter: R,
+                everyoneFilter: x
             } = (0, a.cj)([l.Z], () => ({
                 everyoneFilter: l.Z.everyoneFilter,
                 roleFilter: l.Z.roleFilter
@@ -52,24 +52,24 @@ let _ = e => {
             (!f || e) && (0, o.jk)({
                 limit: null != I ? I : E ? 8 : 20,
                 with_mentions: E,
-                roles_filter: x,
-                everyone_filter: R
+                roles_filter: R,
+                everyone_filter: x
             });
         }, [
             f,
             m,
             t,
             E,
-            x,
             R,
+            x,
             I
         ]);
         let M = i.useCallback(async e => {
             !T.current && f && g && null != S && (e || !A) && (T.current = !0, N(!0), await (0, o.jk)({
                 after: S,
                 with_mentions: E,
-                roles_filter: x,
-                everyone_filter: R,
+                roles_filter: R,
+                everyone_filter: x,
                 limit: E ? 8 : 20
             }, () => {
                 T.current = !1;
@@ -80,8 +80,8 @@ let _ = e => {
             S,
             A,
             E,
-            x,
-            R
+            R,
+            x
         ]);
         return {
             initialized: f,

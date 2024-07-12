@@ -18,14 +18,14 @@ n.d(t, {
         return G;
     }
 }), n(627341);
-var i, a, s = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(278074), d = n(481060), u = n(596454), _ = n(44315), E = n(377171), I = n(695346), m = n(261922), T = n(186523), h = n(553826), N = n(506071), f = n(203143), p = n(79390), C = n(839963), g = n(294608), S = n(65145), A = n(981631), x = n(689938), R = n(357298);
+var i, a, s = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(278074), d = n(481060), u = n(596454), _ = n(44315), E = n(377171), I = n(695346), m = n(261922), T = n(186523), h = n(553826), N = n(506071), f = n(203143), p = n(79390), C = n(839963), g = n(294608), S = n(65145), A = n(981631), R = n(689938), x = n(357298);
 function O(e) {
     let {
         className: t,
         children: n
     } = e;
     return (0, s.jsx)('ul', {
-        'aria-label': x.Z.Messages.POLL_OPTIONS_ARIA,
+        'aria-label': R.Z.Messages.POLL_OPTIONS_ARIA,
         className: t,
         children: n
     });
@@ -36,7 +36,7 @@ function M(e) {
         children: n
     } = e;
     return (0, s.jsx)('div', {
-        'aria-label': x.Z.Messages.POLL_OPTIONS_ARIA,
+        'aria-label': R.Z.Messages.POLL_OPTIONS_ARIA,
         role: 'group',
         className: t,
         children: n
@@ -48,7 +48,7 @@ function v(e) {
             children: n
         } = e, i = (0, d.useRadioGroup)({ orientation: 'vertical' });
     return (0, s.jsx)('div', {
-        'aria-label': x.Z.Messages.POLL_OPTIONS_ARIA,
+        'aria-label': R.Z.Messages.POLL_OPTIONS_ARIA,
         ...i,
         className: t,
         children: n
@@ -64,7 +64,7 @@ function L(e) {
         } = e, {pollAnswerRef: l} = (0, S.dv)();
     return (0, s.jsx)(d.Clickable, {
         role: 'checkbox',
-        className: o()(t, R.enabled),
+        className: o()(t, x.enabled),
         onClick: n,
         'aria-checked': i,
         ref: a ? l : void 0,
@@ -84,7 +84,7 @@ function Z(e) {
     let {pollAnswerRef: u} = (0, S.dv)();
     return (0, s.jsx)(d.Clickable, {
         role: 'radio',
-        className: o()(n, R.enabled),
+        className: o()(n, x.enabled),
         onClick: a,
         'aria-checked': r,
         tabIndex: t,
@@ -127,7 +127,7 @@ function P(e) {
     return (0, s.jsx)(_, {
         className: l,
         children: t.map((e, t) => (0, s.jsx)(b, {
-            className: o()(R.__invalid_answer, d),
+            className: o()(x.__invalid_answer, d),
             answer: e,
             isFirstAnswer: 0 === t,
             elementType: E,
@@ -193,7 +193,7 @@ function D(e) {
         } = e, a = (0, N.n)(), r = I.QK.useSetting();
     return (0, s.jsx)(m.Z, {
         className: i,
-        imageClassName: R.attachmentImage,
+        imageClassName: x.attachmentImage,
         src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,
         alt: null !== (t = n.description) && void 0 !== t ? t : (0, p.fw)(n.filename),
         responsive: !0,
@@ -292,12 +292,12 @@ function k(e) {
         } = e, a = {
             width: n,
             height: n,
-            background: R.radioBackground,
+            background: x.radioBackground,
             'aria-hidden': !0
         };
     return t ? (0, s.jsx)(h.Z, {
         ...a,
-        foreground: R.radioForeground,
+        foreground: x.radioForeground,
         className: i
     }) : (0, s.jsx)(T.Z, {
         ...a,
@@ -311,7 +311,7 @@ function G(e) {
             className: i
         } = e, a = 0.85 * n;
     return (0, s.jsx)('div', {
-        className: o()(R.checkbox, { [R.checkboxSelected]: t }, i),
+        className: o()(x.checkbox, { [x.checkboxSelected]: t }, i),
         style: {
             width: n,
             height: n

@@ -8,7 +8,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(780384), r = n(481060), o = n(239091), c = n(37234), d = n(410030), u = n(44315), h = n(769654), p = n(346656), m = n(51144), _ = n(162267), f = n(228168), E = n(981631), C = n(689938), g = n(735393), I = n(401298);
+var a = n(120356), l = n.n(a), s = n(780384), r = n(481060), o = n(239091), c = n(37234), d = n(410030), u = n(44315), h = n(769654), p = n(346656), m = n(51144), _ = n(162267), f = n(228168), E = n(981631), C = n(689938), g = n(735393), I = n(401298);
 let x = (0, r.getAvatarSize)(r.AvatarSizes.SIZE_16);
 function T(e) {
     let {
@@ -51,8 +51,8 @@ function T(e) {
                 tabIndex: -1,
                 guild: a,
                 showBadge: !0,
-                className: s()(g.listAvatar, null == a.icon ? I.guildAvatarWithoutIcon : null),
-                badgeStrokeColor: (0, u.Lq)((0, l.wj)(d) ? E.Ilk.PRIMARY_600 : E.Ilk.WHITE_500),
+                className: l()(g.listAvatar, null == a.icon ? I.guildAvatarWithoutIcon : null),
+                badgeStrokeColor: (0, u.Lq)((0, s.wj)(d) ? E.Ilk.PRIMARY_600 : E.Ilk.WHITE_500),
                 badgeTooltipColor: r.TooltipColors.PRIMARY,
                 badgeTooltipDelay: f.vB,
                 size: p.Z.Sizes.MEDIUM,
@@ -86,7 +86,7 @@ function v(e) {
     let {
             user: t,
             onClose: n
-        } = e, {mutualGuilds: a} = (0, _.Z)(t.id), s = (0, d.ZP)(), l = e => {
+        } = e, {mutualGuilds: a} = (0, _.Z)(t.id), l = (0, d.ZP)(), s = e => {
             (0, h.X)(e), n(), (0, c.xf)();
         };
     return (0, i.jsx)(r.ScrollerThin, {
@@ -113,8 +113,8 @@ function v(e) {
                 user: t,
                 guild: n,
                 nick: a,
-                theme: s,
-                onSelect: () => l(n.id)
+                theme: l,
+                onSelect: () => s(n.id)
             }, n.id);
         })
     });

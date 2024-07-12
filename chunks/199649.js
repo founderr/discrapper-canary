@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(481060), l = n(194359), r = n(631937), o = n(702321), c = n(377171), d = n(699516), u = n(626135), h = n(63063), p = n(862679), m = n(981631), _ = n(596401), f = n(689938);
+var a = n(442837), l = n(481060), s = n(194359), r = n(631937), o = n(702321), c = n(377171), d = n(699516), u = n(626135), h = n(63063), p = n(862679), m = n(981631), _ = n(596401), f = n(689938);
 function E(e) {
     let {
             channel: t,
@@ -17,7 +17,7 @@ function E(e) {
         let e = g ? (0, i.jsxs)(i.Fragment, {
             children: [
                 f.Z.Messages.SYSTEM_DM_OPEN_BLOG,
-                (0, i.jsx)(s.WindowLaunchIcon, {
+                (0, i.jsx)(l.WindowLaunchIcon, {
                     size: 'xs',
                     color: c.Z.HEADER_PRIMARY
                 })
@@ -35,7 +35,7 @@ function E(e) {
         }, T.imageSrc = n(780961);
     } else
         x && (T.message = f.Z.Messages.DM_VERIFICATION_TEXT_BLOCKED, T.buttonText = f.Z.Messages.UNBLOCK, T.onButtonClick = () => {
-            l.Z.unblockUser(t.getRecipientId());
+            s.Z.unblockUser(t.getRecipientId());
         });
     return (0, i.jsx)(p.Z, {
         ...T,

@@ -6,21 +6,21 @@ n.d(t, {
         return L;
     },
     ef: function () {
-        return R;
+        return x;
     },
     r8: function () {
         return M;
     }
 }), n(47120), n(627341);
 var i = n(278074), a = n(263568), s = n(607070), r = n(339085), l = n(633302), o = n(715903), c = n(69882), d = n(592125), u = n(271383), _ = n(375954), E = n(594174), I = n(768581), m = n(176354), T = n(358085), h = n(798628), N = n(79390), f = n(839963), p = n(897325), C = n(57101), g = n(562293), S = n(981631), A = n(689938);
-let x = {
+let R = {
     channelId: S.lds,
     selectedAnswerIds: new Set(),
     submitting: !1,
     editing: !1,
     showResults: !1
 };
-function R(e, t) {
+function x(e, t) {
     for (let n of e)
         if (('number' == typeof n.emoji.id ? ''.concat(n.emoji.id) : n.emoji.id) === t)
             return n;
@@ -59,20 +59,20 @@ function v(e, t) {
             submitting: N,
             editing: f,
             showResults: p
-        } = null !== (a = null != t ? t : (0, h.fU)(e.getChannelId(), e.id)) && void 0 !== a ? a : x, C = e.reactions, A = !0;
+        } = null !== (a = null != t ? t : (0, h.fU)(e.getChannelId(), e.id)) && void 0 !== a ? a : R, C = e.reactions, A = !0;
     if (!M(e)) {
         let t = _.Z.getMessage(e.channel_id, e.id);
         A = !e.isSearchHit && null != t, C = null !== (s = null == t ? void 0 : t.reactions) && void 0 !== s ? s : C;
     }
-    let R = T.size > 0, O = C.some(e => !0 === e.me_vote), v = !f && O, L = v || m || p, Z = E && A && (!O || f || L), P = null === (i = d.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i), b = null != P ? u.ZP.getSelfMember(P) : null, D = (0, o.EY)(b), j = (0, c.b)(b);
+    let x = T.size > 0, O = C.some(e => !0 === e.me_vote), v = !f && O, L = v || m || p, Z = E && A && (!O || f || L), P = null === (i = d.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i), b = null != P ? u.ZP.getSelfMember(P) : null, D = (0, o.EY)(b), j = (0, c.b)(b);
     return {
         poll: l,
         canTapAnswers: Z,
         canRemoveVote: v && E && !m,
         canShowVoteCounts: L,
-        canSubmitVote: !N && R && !v && E && !D && !j,
+        canSubmitVote: !N && x && !v && E && !D && !j,
         expirationLabel: I,
-        hasSelectedAnswer: R,
+        hasSelectedAnswer: x,
         hasVoted: v,
         hasVoteRecorded: O,
         isEditingVote: f,
@@ -98,7 +98,7 @@ function L(e, t) {
     let g = E.default.getCurrentUser();
     if (null == g)
         return;
-    let S = s.Z.useReducedMotion, x = null === (o = d.Z.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o), M = (0, p.E)(g, x), L = h.answers, Z = h.layout_type, P = v(e, t, { formattedExpirationLabel: _ });
+    let S = s.Z.useReducedMotion, R = null === (o = d.Z.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o), M = (0, p.E)(g, R), L = h.answers, Z = h.layout_type, P = v(e, t, { formattedExpirationLabel: _ });
     if (null == P)
         return;
     let {
@@ -119,11 +119,11 @@ function L(e, t) {
             showResults: z
         } = P, K = (0, N.cZ)(V), Q = A.Z.Messages.POLL_VOTES_COUNT.format({ count: K.toLocaleString() }), q = Math.max(...L.map(e => {
             var t, n;
-            let i = R(V, ''.concat(e.answer_id));
+            let i = x(V, ''.concat(e.answer_id));
             return null !== (n = null == i ? void 0 : null === (t = i.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0;
         })), X = L.map(e => {
             var t, n, s;
-            let o = ''.concat(e.answer_id), d = R(V, o), u = null !== (n = null == d ? void 0 : null === (t = d.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0, _ = 0 === K ? 0 : u / K, E = H.has(o), T = u >= q && 0 !== u, h = k && null !== (s = null == d ? void 0 : d.me_vote) && void 0 !== s && s, N = O({
+            let o = ''.concat(e.answer_id), d = x(V, o), u = null !== (n = null == d ? void 0 : null === (t = d.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0, _ = 0 === K ? 0 : u / K, E = H.has(o), T = u >= q && 0 !== u, h = k && null !== (s = null == d ? void 0 : d.me_vote) && void 0 !== s && s, N = O({
                     didSelfVote: h,
                     hasVoted: k,
                     isExpired: F,

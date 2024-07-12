@@ -87,7 +87,7 @@ function A(e) {
         p = t;
     }
 }
-function x() {
+function R() {
     if (null != p && (S(p) || (p = null, 0)))
         return !1;
     !function () {
@@ -104,9 +104,9 @@ function x() {
         p = null;
     }();
 }
-class R extends (a = l.ZP.PersistedStore) {
+class x extends (a = l.ZP.PersistedStore) {
     initialize(e) {
-        N = null != e ? e : h, this.syncWith([E.Z], x);
+        N = null != e ? e : h, this.syncWith([E.Z], R);
     }
     getState() {
         return N;
@@ -121,7 +121,7 @@ class R extends (a = l.ZP.PersistedStore) {
         return N.lastSeen;
     }
 }
-T(R, 'displayName', 'SurveyStore'), T(R, 'persistKey', 'SurveyStore'), T(R, 'migrations', [
+T(x, 'displayName', 'SurveyStore'), T(x, 'persistKey', 'SurveyStore'), T(x, 'migrations', [
     e => {
         let t = { ...e };
         return delete t.validSurveys, delete t.currentSurvey, delete t.iosIsPushNotificationClicked, delete t.iosIsInviteShown, delete t.iosFirstRunDate, t;
@@ -140,7 +140,7 @@ T(R, 'displayName', 'SurveyStore'), T(R, 'persistKey', 'SurveyStore'), T(R, 'mig
             hiddenSurveys: null !== (t = e.hiddenSurveys) && void 0 !== t ? t : {}
         };
     }
-]), t.Z = new R(o.Z, {
+]), t.Z = new x(o.Z, {
     CONNECTION_OPEN: function () {
         var e;
         if (!(null != N.lastFetched && Date.now() - (null !== (e = N.lastFetched) && void 0 !== e ? e : 0) < C) || null != N.surveyOverride)

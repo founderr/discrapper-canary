@@ -1,5 +1,5 @@
 E(653041), E(47120), E(733860);
-var s, T, I, n, A = E(392711), t = E.n(A), a = E(149765), r = E(442837), N = E(570140), L = E(387667), S = E(131704), D = E(271383), l = E(430824), U = E(981631);
+var s, T, I, n, A = E(392711), t = E.n(A), a = E(149765), r = E(442837), N = E(570140), L = E(387667), D = E(131704), S = E(271383), l = E(430824), U = E(981631);
 let G = [
         U.Plq.KICK_MEMBERS,
         U.Plq.BAN_MEMBERS,
@@ -37,14 +37,14 @@ function V(e) {
                 userId: e.user_id,
                 changes: n,
                 options: e.options
-            }), D = _[0];
+            }), S = _[0];
         if (function (e, _, E) {
                 let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 30, T = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 50;
                 return null != e && e.action === _.action && e.targetId === _.targetId && e.userId === _.userId && t().isEqual(e.options, _.options) && _.timestampStart.diff(e.timestampStart, 'minutes') < s && E < T && _.targetType !== U.KFR.INVITE && _.action !== U.rsA.MESSAGE_DELETE && _.action !== U.rsA.MESSAGE_BULK_DELETE && _.action !== U.rsA.MESSAGE_PIN && _.action !== U.rsA.MESSAGE_UNPIN && _.action !== U.rsA.MEMBER_MOVE && _.action !== U.rsA.MEMBER_DISCONNECT && _.action !== U.rsA.BOT_ADD && _.action !== U.rsA.APPLICATION_COMMAND_PERMISSION_UPDATE && _.action !== U.rsA.MEMBER_PRUNE;
-            }(D, N, E)) {
-            _[0] = D.merge({
+            }(S, N, E)) {
+            _[0] = S.merge({
                 changes: [
-                    ...D.changes,
+                    ...S.changes,
                     ...N.changes
                 ],
                 timestampEnd: N.timestampStart
@@ -53,7 +53,7 @@ function V(e) {
         }
         if (N.actionType === U.vB8.DELETE && (null != A || null != a)) {
             let e = null !== (I = null == A ? void 0 : A.oldValue) && void 0 !== I ? I : null == a ? void 0 : a.oldValue;
-            (N.targetType === U.KFR.CHANNEL || N.targetType === U.KFR.CHANNEL_OVERWRITE) && null !== r && (0, S.r8)(r.oldValue) && (e = '#'.concat(e)), null == F[N.targetType] ? F[N.targetType] = { [N.targetId]: e } : F[N.targetType][N.targetId] = e;
+            (N.targetType === U.KFR.CHANNEL || N.targetType === U.KFR.CHANNEL_OVERWRITE) && null !== r && (0, D.r8)(r.oldValue) && (e = '#'.concat(e)), null == F[N.targetType] ? F[N.targetType] = { [N.targetId]: e } : F[N.targetType][N.targetId] = e;
         }
         E = 0, _.unshift(N);
     }), _;
@@ -62,7 +62,7 @@ function B(e) {
     let {section: _} = e;
     if (_ !== U.pNK.AUDIT_LOG)
         return !1;
-    let E = D.ZP.getMembers(O), s = l.Z.getGuild(O), T = null != O ? l.Z.getRoles(O) : void 0;
+    let E = S.ZP.getMembers(O), s = l.Z.getGuild(O), T = null != O ? l.Z.getRoles(O) : void 0;
     R = t()(E).filter(e => e.roles.some(_ => {
         if (null != s) {
             if (e.userId === s.ownerId)

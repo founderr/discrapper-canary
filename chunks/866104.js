@@ -6,12 +6,12 @@ n.d(t, {
         return O;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(512722), r = n.n(s), l = n(442837), o = n(481060), c = n(131388), d = n(357352), u = n(353254), _ = n(695346), E = n(271383), I = n(594174), m = n(346656), T = n(671533), h = n(810090), N = n(51144), f = n(506071), p = n(696014), C = n(847033), g = n(544978), S = n(893182), A = n(689938), x = n(55686);
-function R(e) {
+var i = n(735250), a = n(470079), s = n(512722), r = n.n(s), l = n(442837), o = n(481060), c = n(131388), d = n(357352), u = n(353254), _ = n(695346), E = n(271383), I = n(594174), m = n(346656), T = n(671533), h = n(810090), N = n(51144), f = n(506071), p = n(696014), C = n(847033), g = n(544978), S = n(893182), A = n(689938), R = n(55686);
+function x(e) {
     let {onClick: t} = e;
     return (0, i.jsxs)(o.Clickable, {
         onClick: t,
-        className: x.showMoreButton,
+        className: R.showMoreButton,
         children: [
             (0, i.jsx)(o.Text, {
                 variant: 'text-sm/medium',
@@ -24,7 +24,7 @@ function R(e) {
             }),
             (0, i.jsx)(T.Z, {
                 direction: T.Z.Directions.RIGHT,
-                className: x.showMoreArrow
+                className: R.showMoreArrow
             })
         ]
     });
@@ -36,22 +36,22 @@ function O(e) {
         } = e, a = _.QK.useSetting(), s = (0, f.n)() && a, [r, l] = (0, u.Z)(t, s), o = s ? (0, i.jsx)(h.Z, {
             autoPlay: !0,
             loop: !0,
-            className: x.coverImage,
+            className: R.coverImage,
             width: 655,
             poster: (0, d.b)('server_products/storefront/default-header.png'),
             src: (0, d.b)('server_products/storefront/default-header.mov')
         }) : (0, i.jsx)('img', {
             src: (0, d.b)('server_products/storefront/default-header.png'),
             alt: '',
-            className: x.coverImage
+            className: R.coverImage
         });
     return (0, i.jsx)('div', {
         ref: r,
-        className: x.coverImageContainer,
+        className: R.coverImageContainer,
         children: null == l || n ? o : (0, i.jsx)('img', {
             src: l,
             alt: '',
-            className: x.coverImage
+            className: R.coverImage
         })
     });
 }
@@ -95,7 +95,7 @@ function M(e) {
                 M && (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.Spacer, { size: 4 }),
-                        (0, i.jsx)(R, { onClick: () => (0, S.Z)({ guildId: T }) })
+                        (0, i.jsx)(x, { onClick: () => (0, S.Z)({ guildId: T }) })
                     ]
                 })
             ]
@@ -105,10 +105,10 @@ function M(e) {
             children: j ? U : A.Z.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
         });
     return (0, i.jsxs)('div', {
-        className: x.container,
+        className: R.container,
         children: [
             (0, i.jsxs)('div', {
-                className: x.infoContainer,
+                className: R.infoContainer,
                 children: [
                     (0, i.jsx)('div', {
                         children: (0, i.jsx)(m.Z, {

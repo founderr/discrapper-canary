@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(286379), l = n(442837), r = n(481060), o = n(797614), c = n(699516), d = n(378298), u = n(359119), h = n(473092), p = n(177342), m = n(134612), _ = n(689938);
+var i = n(735250), a = n(470079), l = n(286379), s = n(442837), r = n(481060), o = n(797614), c = n(699516), d = n(378298), u = n(359119), h = n(473092), p = n(177342), m = n(134612), _ = n(689938);
 function f(e) {
     let {
             channelId: t,
@@ -14,7 +14,7 @@ function f(e) {
         }, [
             t,
             f
-        ]), g = (0, l.e7)([c.Z], () => c.Z.isBlocked(E)), I = a.useMemo(() => ({
+        ]), g = (0, s.e7)([c.Z], () => c.Z.isBlocked(E)), I = a.useMemo(() => ({
             channelId: t,
             warningId: f,
             senderId: E,
@@ -28,7 +28,7 @@ function f(e) {
         (0, h.KQ)({
             ...I,
             viewName: h.pb.SAFETY_WARNING_BANNER
-        }), o.Z.increment({ name: s.V.SAFETY_WARNING_VIEW });
+        }), o.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
     }, [I]);
     let x = a.useCallback(e => {
             (0, h.qc)({
@@ -44,7 +44,7 @@ function f(e) {
                 return n => {
                     let {
                         transitionState: a,
-                        onClose: s
+                        onClose: l
                     } = n;
                     return (0, i.jsx)(e, {
                         otherUserId: E,
@@ -52,7 +52,7 @@ function f(e) {
                         warningId: f,
                         warningType: u.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
                         transitionState: a,
-                        onClose: s
+                        onClose: l
                     });
                 };
             }, { modalKey: m.X_ }), x(h.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
@@ -77,16 +77,16 @@ function f(e) {
                 return n => {
                     let {
                         transitionState: a,
-                        onClose: s
+                        onClose: l
                     } = n;
                     return (0, i.jsx)(e, {
                         transitionState: a,
                         onBlock: v,
                         onBlockAndReport: N,
                         onCancel: () => {
-                            null == s || s(), x(h.NM.USER_BANNER_BLOCK_CANCEL);
+                            null == l || l(), x(h.NM.USER_BANNER_BLOCK_CANCEL);
                         },
-                        onClose: s,
+                        onClose: l,
                         userId: E,
                         channelId: t
                     });

@@ -1,5 +1,5 @@
 n(724458), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(749210), d = n(367907), u = n(400106), _ = n(697568), E = n(183023), I = n(524444), m = n(98278), T = n(197115), h = n(430824), N = n(594174), f = n(285952), p = n(514342), C = n(626135), g = n(74538), S = n(453070), A = n(926491), x = n(378233), R = n(419922), O = n(688179), M = n(981631), v = n(474936), L = n(689938), Z = n(379157), P = n(830645);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(442837), o = n(481060), c = n(749210), d = n(367907), u = n(400106), _ = n(697568), E = n(183023), I = n(524444), m = n(98278), T = n(197115), h = n(430824), N = n(594174), f = n(285952), p = n(514342), C = n(626135), g = n(74538), S = n(453070), A = n(926491), R = n(378233), x = n(419922), O = n(688179), M = n(981631), v = n(474936), L = n(689938), Z = n(379157), P = n(830645);
 let b = (e, t) => t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({ stickerPackName: e.name }) : L.Z.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({ stickerPackName: e.name }), D = e => {
         let {
             sticker: t,
@@ -23,7 +23,7 @@ function U(e) {
     } = e;
     return (0, i.jsxs)(f.Z, {
         children: [
-            (0, i.jsx)(R.ZP, {
+            (0, i.jsx)(x.ZP, {
                 sticker: t,
                 size: 48,
                 isInteracting: !0
@@ -85,7 +85,7 @@ let y = e => {
                 }),
                 (0, i.jsx)('ul', {
                     className: Z.stickersList,
-                    children: E.map(e => (0, i.jsx)(R.ZP, {
+                    children: E.map(e => (0, i.jsx)(x.ZP, {
                         isInteracting: !0,
                         size: 80,
                         sticker: e
@@ -113,7 +113,7 @@ let y = e => {
                 channel: s,
                 closePopout: m,
                 refreshPositionKey: p
-            } = e, [S, A] = a.useState(null), [x, O] = a.useState(!1), b = N.default.getCurrentUser(), D = g.ZP.canUseCustomStickersEverywhere(b), y = (0, l.e7)([h.Z], () => h.Z.getGuild(n.guild_id)), B = null != y, [k, G] = a.useState(!1), [F, w] = a.useState(null), V = a.useMemo(() => ({
+            } = e, [S, A] = a.useState(null), [R, O] = a.useState(!1), b = N.default.getCurrentUser(), D = g.ZP.canUseCustomStickersEverywhere(b), y = (0, l.e7)([h.Z], () => h.Z.getGuild(n.guild_id)), B = null != y, [k, G] = a.useState(!1), [F, w] = a.useState(null), V = a.useMemo(() => ({
                 page: null != s.guild_id ? M.ZY5.GUILD_CHANNEL : M.ZY5.DM_CHANNEL,
                 section: M.jXE.STICKER_POPOUT
             }), [s.guild_id]), {current: H} = a.useRef({
@@ -138,14 +138,14 @@ let y = e => {
         return (a.useEffect(() => {
             p();
         }, [
-            x,
+            R,
             S
         ]), a.useEffect(() => {
             C.default.track(M.rMx.OPEN_POPOUT, {
                 type: K,
                 ...H
             });
-        }, []), x) ? (0, i.jsxs)(I.W_, {
+        }, []), R) ? (0, i.jsxs)(I.W_, {
             className: P.popoutContent,
             children: [
                 (() => {
@@ -249,7 +249,7 @@ let y = e => {
                                                         null == a || a(), w(null);
                                                     },
                                                     ...s,
-                                                    children: (0, i.jsx)(R.ZP, {
+                                                    children: (0, i.jsx)(x.ZP, {
                                                         size: 32,
                                                         enlargeOnInteraction: !0,
                                                         enlargeWithName: !1,
@@ -294,14 +294,14 @@ t.Z = e => {
             closePopout: a,
             refreshPositionKey: s
         } = e, [r, l] = (0, S.XW)(t, !0);
-    if (null != r && (0, x.jl)(r))
+    if (null != r && (0, R.jl)(r))
         return (0, i.jsx)(y, {
             sticker: r,
             closePopout: a,
             channel: n,
             refreshPositionKey: s
         });
-    if (null != r && (0, x.J8)(r))
+    if (null != r && (0, R.J8)(r))
         return (0, i.jsx)(B, {
             sticker: r,
             channel: n,

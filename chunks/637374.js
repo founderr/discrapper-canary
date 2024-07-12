@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(442837), d = n(481060), u = n(230711), _ = n(568836), E = n(730749), I = n(112724), m = n(607070), T = n(884697), h = n(479446), N = n(930114), f = n(981632), p = n(703656), C = n(314897), g = n(82142), S = n(283595), A = n(594174), x = n(509545), R = n(55563), O = n(285952), M = n(199480), v = n(70613), L = n(626135), Z = n(669079), P = n(74538), b = n(296848), D = n(51144), j = n(626799), U = n(981631), y = n(474936), B = n(689938), k = n(85412);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(442837), d = n(481060), u = n(230711), _ = n(568836), E = n(730749), I = n(112724), m = n(607070), T = n(884697), h = n(479446), N = n(930114), f = n(981632), p = n(703656), C = n(314897), g = n(82142), S = n(283595), A = n(594174), R = n(509545), x = n(55563), O = n(285952), M = n(199480), v = n(70613), L = n(626135), Z = n(669079), P = n(74538), b = n(296848), D = n(51144), j = n(626799), U = n(981631), y = n(474936), B = n(689938), k = n(85412);
 function G(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -309,10 +309,10 @@ class V extends a.Component {
 let H = (0, I.Z)((0, E.Z)(V));
 t.Z = c.ZP.connectStores([
     g.Z,
-    R.Z,
+    x.Z,
     A.default,
     S.Z,
-    x.Z,
+    R.Z,
     C.default,
     m.Z
 ], e => {
@@ -320,7 +320,7 @@ t.Z = c.ZP.connectStores([
             code: t,
             author: n,
             currentUser: i
-        } = e, a = g.Z.get(t), s = null != a ? R.Z.get(a.skuId) : null, r = null != a && null != a.userId ? A.default.getUser(a.userId) : null, l = m.Z.useReducedMotion;
+        } = e, a = g.Z.get(t), s = null != a ? x.Z.get(a.skuId) : null, r = null != a && null != a.userId ? A.default.getUser(a.userId) : null, l = m.Z.useReducedMotion;
     return {
         sku: s,
         giftCode: a,

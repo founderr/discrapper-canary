@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(392711), d = n.n(c), u = n(913527), _ = n.n(u), E = n(608787), I = n(442837), m = n(481060), T = n(603263), h = n(542051), N = n(349033), f = n(999650), p = n(933557), C = n(471445), g = n(592125), S = n(271383), A = n(699516), x = n(250758), R = n(944486), O = n(914010), M = n(246946), v = n(594174), L = n(585483), Z = n(63063), P = n(405656), b = n(51144), D = n(854709), j = n(981631), U = n(689938), y = n(368002);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(392711), d = n.n(c), u = n(913527), _ = n.n(u), E = n(608787), I = n(442837), m = n(481060), T = n(603263), h = n(542051), N = n(349033), f = n(999650), p = n(933557), C = n(471445), g = n(592125), S = n(271383), A = n(699516), R = n(250758), x = n(944486), O = n(914010), M = n(246946), v = n(594174), L = n(585483), Z = n(63063), P = n(405656), b = n(51144), D = n(854709), j = n(981631), U = n(689938), y = n(368002);
 function B(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -427,12 +427,12 @@ class W extends a.PureComponent {
 t.ZP = a.forwardRef((e, t) => {
     let [n, a, s] = (0, I.Wu)([
         O.Z,
-        R.Z,
-        x.Z
+        x.Z,
+        R.Z
     ], () => {
-        let e = O.Z.getGuildId(), t = R.Z.getChannelId(), n = null != e ? e : t;
+        let e = O.Z.getGuildId(), t = x.Z.getChannelId(), n = null != e ? e : t;
         o()(null != n, 'SearchPopout.getStateFromStores - invalid searchId');
-        let i = x.Z.getState(n), a = P.BU(i.autocompletes);
+        let i = R.Z.getState(n), a = P.BU(i.autocompletes);
         return [
             n,
             i,

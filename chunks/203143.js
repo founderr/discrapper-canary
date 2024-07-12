@@ -3,7 +3,7 @@ n.d(t, {
         return D;
     }
 }), n(411104), n(47120), n(390547), n(724458);
-var i = n(512722), a = n.n(i), s = n(392711), r = n.n(s), l = n(263568), o = n(442837), c = n(570140), d = n(668781), u = n(749210), _ = n(904245), E = n(881052), I = n(367907), m = n(41776), T = n(566006), h = n(48854), N = n(869765), f = n(314897), p = n(592125), C = n(703558), g = n(607744), S = n(375954), A = n(117530), x = n(553803), R = n(316758), O = n(467531), M = n(798628), v = n(918088), L = n(981631), Z = n(689938);
+var i = n(512722), a = n.n(i), s = n(392711), r = n.n(s), l = n(263568), o = n(442837), c = n(570140), d = n(668781), u = n(749210), _ = n(904245), E = n(881052), I = n(367907), m = n(41776), T = n(566006), h = n(48854), N = n(869765), f = n(314897), p = n(592125), C = n(703558), g = n(607744), S = n(375954), A = n(117530), R = n(553803), x = n(316758), O = n(467531), M = n(798628), v = n(918088), L = n(981631), Z = n(689938);
 function P(e, t) {
     let n = [...t], i = 0, a = 0;
     for (let t of n) {
@@ -53,7 +53,7 @@ function D(e) {
     if (null == s || null == s.poll || 0 === s.poll.answers.length)
         return;
     let r = null != i ? i : String(s.poll.answers[0].answer_id);
-    x.A({
+    R.A({
         message: s,
         initialAnswerId: r
     });
@@ -307,7 +307,7 @@ async function F(e) {
         if (null != c && c.length > 0) {
             var I;
             let e = null !== (I = f.default.getToken()) && void 0 !== I ? I : '';
-            await R.sk({
+            await x.sk({
                 channel: t,
                 items: c,
                 token: e,

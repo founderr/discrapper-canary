@@ -21,7 +21,7 @@ n.d(t, {
         return O;
     },
     XO: function () {
-        return R;
+        return x;
     },
     Xn: function () {
         return F;
@@ -55,7 +55,7 @@ function A(e, t, n) {
         t
     ]);
 }
-function x(e, t, n) {
+function R(e, t, n) {
     return a.useCallback(i => {
         let a = E.default.getUser(e);
         if (null == a)
@@ -75,17 +75,17 @@ function x(e, t, n) {
         n
     ]);
 }
-function R(e, t, n, i) {
+function x(e, t, n, i) {
     let a = A('usernameProfile', n, i);
-    return x(e.author.id, t.id, a);
+    return R(e.author.id, t.id, a);
 }
 function O(e, t, n, i) {
     let a = A('referencedUsernameProfile', n, i);
-    return x(null == e ? void 0 : e.author.id, t.id, a);
+    return R(null == e ? void 0 : e.author.id, t.id, a);
 }
 function M(e, t, n, i) {
     let a = A('interactionUsernameProfile', n, i);
-    return x(null == e ? void 0 : e.user.id, t.id, a);
+    return R(null == e ? void 0 : e.user.id, t.id, a);
 }
 function v(e) {
     return a.useCallback(t => {

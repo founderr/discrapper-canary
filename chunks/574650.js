@@ -7,13 +7,13 @@ t.Z = () => {
     let a = (0, l.e7)([d.Z], () => d.Z.getGuildId(), []), p = (0, l.e7)([c.Z], () => c.Z.getGuild(a), [a]), C = (0, l.e7)([I.Z], () => null != a ? I.Z.getRequest(a) : null, [a]), g = (0, r.TH)(), S = (null === (e = (0, r.LX)(g.pathname, m.Z5c.CHANNEL(null == p ? void 0 : p.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
     if (null == p || !p.hasVerificationGate() || S)
         return null;
-    let A = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : E.wB.STARTED, x = null, R = null, O = null, M = [
+    let A = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : E.wB.STARTED, R = null, x = null, O = null, M = [
             N.notice,
             f.notice
         ];
     switch (A) {
     case E.wB.SUBMITTED:
-        x = h.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, R = h.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, O = () => {
+        R = h.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, x = h.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, O = () => {
             (0, o.openModal)(e => (0, i.jsx)(o.ConfirmModal, {
                 header: h.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
                 confirmText: h.Z.Messages.CONFIRM,
@@ -29,7 +29,7 @@ t.Z = () => {
         };
         break;
     case E.wB.REJECTED:
-        x = h.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, R = h.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE, O = () => {
+        R = h.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, x = h.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE, O = () => {
             (0, o.openModalLazy)(async () => {
                 let {default: e} = await n.e('3378').then(n.bind(n, 76075));
                 return t => (0, i.jsx)(e, {
@@ -40,7 +40,7 @@ t.Z = () => {
         }, M.push(N.error);
         break;
     default:
-        x = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, R = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA, O = () => {
+        R = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, x = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA, O = () => {
             (0, _.hk)(p.id);
         };
     }
@@ -50,7 +50,7 @@ t.Z = () => {
             (0, i.jsx)(o.Text, {
                 className: N.header,
                 variant: 'text-sm/normal',
-                children: x
+                children: R
             }),
             (0, i.jsx)(o.Button, {
                 className: N.button,
@@ -58,7 +58,7 @@ t.Z = () => {
                 color: o.Button.Colors.WHITE,
                 size: o.Button.Sizes.NONE,
                 onClick: O,
-                children: R
+                children: x
             })
         ]
     });

@@ -3,16 +3,16 @@ n.d(t, {
         return r;
     },
     Fq: function () {
-        return l;
+        return s;
     },
     Ks: function () {
         return i;
     },
     q2: function () {
-        return s;
+        return l;
     },
     qh: function () {
         return a;
     }
 });
-let i = 80, a = 48, s = 3, l = 500, r = 5000;
+let i = 80, a = 48, l = 3, s = 500, r = 5000;

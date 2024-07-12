@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     }
 });
-var i = n(735250), a = n(470079), s = n(442837), l = n(699516), r = n(697451), o = n(348238);
+var i = n(735250), a = n(470079), l = n(442837), s = n(699516), r = n(697451), o = n(348238);
 let c = a.memo(function (e) {
     var t;
     let {
@@ -14,7 +14,7 @@ let c = a.memo(function (e) {
             interactionAvatarProfile: h,
             interactionData: p,
             setPopout: m
-        } = e, _ = (0, s.e7)([l.Z], () => l.Z.isBlockedForMessage(n), [n]), f = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id), E = (0, o.Nk)(n.interaction, c, u, m), C = (0, o.NU)(h, m), g = (0, o.Xn)(p, m), I = a.useCallback(() => m({
+        } = e, _ = (0, l.e7)([s.Z], () => s.Z.isBlockedForMessage(n), [n]), f = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id), E = (0, o.Nk)(n.interaction, c, u, m), C = (0, o.NU)(h, m), g = (0, o.Xn)(p, m), I = a.useCallback(() => m({
             interactionUsernameProfile: !1,
             interactionAvatarProfile: !1,
             interactionData: !1
@@ -37,8 +37,8 @@ let c = a.memo(function (e) {
 function d(e, t, n) {
     let {
             message: a,
-            channel: s,
-            compact: l
+            channel: l,
+            compact: s
         } = e, {
             interactionUsernameProfile: r,
             interactionAvatarProfile: o,
@@ -46,8 +46,8 @@ function d(e, t, n) {
         } = n;
     return null != a.interaction && '' !== a.interaction.displayName ? (0, i.jsx)(c, {
         message: a,
-        channel: s,
-        compact: l,
+        channel: l,
+        compact: s,
         setPopout: t,
         interactionUsernameProfile: r,
         interactionAvatarProfile: o,

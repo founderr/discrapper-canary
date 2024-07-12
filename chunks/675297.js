@@ -16,8 +16,8 @@ function f(e) {
             lineClamp: g = 1,
             cardWidth: S,
             cardHeight: A,
-            thumbnailHeight: x,
-            descriptionTextVariant: R = 'text-sm/normal',
+            thumbnailHeight: R,
+            descriptionTextVariant: x = 'text-sm/normal',
             showOpaqueBackground: O = !1
         } = e, M = (0, a.e7)([o.Z], () => o.Z.getGuild(n), [n]), v = (0, a.e7)([o.Z], () => {
             var e;
@@ -76,8 +76,8 @@ function f(e) {
         lineClamp: g,
         cardWidth: S,
         cardHeight: A,
-        thumbnailHeight: x,
-        descriptionTextVariant: R,
+        thumbnailHeight: R,
+        descriptionTextVariant: x,
         isDraft: !t.published
     }, t.id);
 }

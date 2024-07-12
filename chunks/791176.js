@@ -1,10 +1,10 @@
 n(653041);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(399606), o = n(481060), c = n(285173), d = n(422559), u = n(430824), h = n(233608), p = n(776767), m = n(351127), _ = n(50493), f = n(981631), E = n(689938), C = n(648668);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(399606), o = n(481060), c = n(285173), d = n(422559), u = n(430824), h = n(233608), p = n(776767), m = n(351127), _ = n(50493), f = n(981631), E = n(689938), C = n(648668);
 function g(e) {
     var t, n;
     let {
             permission: a,
-            roleIds: s,
+            roleIds: l,
             guild: h,
             specMap: p
         } = e, _ = f.Plq[a], g = null !== (n = null === (t = p[_.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, d.wt)(_), I = m._o.has(_), x = (0, r.e7)([u.Z], () => u.Z.getRoles(h.id));
@@ -19,8 +19,8 @@ function g(e) {
                     variant: 'text-sm/normal',
                     children: I ? E.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY : E.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY
                 }),
-                s.map(e => (0, i.jsx)('div', {
-                    className: l()(C.roleTooltipItem),
+                l.map(e => (0, i.jsx)('div', {
+                    className: s()(C.roleTooltipItem),
                     children: (0, i.jsx)(c.Z, {
                         role: x[e],
                         guildId: h.id
@@ -34,7 +34,7 @@ function g(e) {
                 onMouseLeave: n
             } = e;
             return (0, i.jsxs)(o.Clickable, {
-                className: l()(C.permissionChiplet, { [C.elevatedPermission]: I }),
+                className: s()(C.permissionChiplet, { [C.elevatedPermission]: I }),
                 onMouseEnter: t,
                 onMouseLeave: n,
                 children: [
@@ -58,12 +58,12 @@ t.Z = a.memo(function (e) {
     let {
             member: t,
             onNavigate: n
-        } = e, s = (0, r.e7)([u.Z], () => u.Z.getGuild(t.guildId), [t.guildId]), c = (0, m.B2)(t.userId, t.guildId, m.Qn), d = (0, m.B2)(t.userId, t.guildId, m.pd), I = Object.keys(c).length, x = Object.keys(d).length, T = a.useMemo(() => null != s ? h.Z.getGuildPermissionSpecMap(s) : null, [s]), v = a.useMemo(() => null != s ? h.Z.generateGuildPermissionSpec(s) : null, [s]), N = a.useMemo(() => {
-            if (null == s || null == T)
+        } = e, l = (0, r.e7)([u.Z], () => u.Z.getGuild(t.guildId), [t.guildId]), c = (0, m.B2)(t.userId, t.guildId, m.Qn), d = (0, m.B2)(t.userId, t.guildId, m.pd), I = Object.keys(c).length, x = Object.keys(d).length, T = a.useMemo(() => null != l ? h.Z.getGuildPermissionSpecMap(l) : null, [l]), v = a.useMemo(() => null != l ? h.Z.generateGuildPermissionSpec(l) : null, [l]), N = a.useMemo(() => {
+            if (null == l || null == T)
                 return null;
             if (0 === I)
                 return (0, i.jsx)('div', {
-                    className: l()(C.permissionChiplet, C.noModPerms),
+                    className: s()(C.permissionChiplet, C.noModPerms),
                     children: (0, i.jsx)(o.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-positive',
@@ -76,24 +76,24 @@ t.Z = a.memo(function (e) {
                     let n = t.flag, a = m.pd.find(e => f.Plq[e] === n);
                     if (null == a)
                         return;
-                    let l = c[a];
-                    if (null != l)
+                    let s = c[a];
+                    if (null != s)
                         e.push((0, i.jsx)(g, {
                             permission: a,
-                            roleIds: l,
-                            guild: s,
+                            roleIds: s,
+                            guild: l,
                             specMap: T
                         }, a));
                 });
             }), e;
         }, [
-            s,
+            l,
             I,
             c,
             v,
             T
         ]);
-    return null == s ? null : (0, i.jsx)(o.FormItem, {
+    return null == l ? null : (0, i.jsx)(o.FormItem, {
         title: (0, i.jsxs)('div', {
             className: C.headerContainer,
             children: [

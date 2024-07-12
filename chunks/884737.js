@@ -66,7 +66,7 @@ E.d(_, {
         return z;
     }
 }), E(411104), E(653041);
-var s = E(654861), T = E.n(s), I = E(149765), n = E(866442), A = E(144830), t = E(911969), a = E(933557), r = E(710845), N = E(339085), L = E(987707), S = E(427679), D = E(926491), l = E(387667), U = E(592125), G = E(430824), O = E(699516), i = E(594174), M = E(971130), R = E(709054), o = E(981631), u = E(765305), c = E(689938);
+var s = E(654861), T = E.n(s), I = E(149765), n = E(866442), A = E(144830), t = E(911969), a = E(933557), r = E(710845), N = E(339085), L = E(987707), D = E(427679), S = E(926491), l = E(387667), U = E(592125), G = E(430824), O = E(699516), i = E(594174), M = E(971130), R = E(709054), o = E(981631), u = E(765305), c = E(689938);
 let C = new r.Z('AuditLogUtils'), g = -1, d = () => ({ [o.zUn.REASON]: c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON }), f = () => ({
         [o.zUn.NAME]: c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_NAME_CHANGE,
         [o.zUn.DESCRIPTION]: eT(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CLEAR, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CHANGE),
@@ -857,11 +857,11 @@ function Q(e, _) {
                 case o.KFR.EMOJI:
                     return e_(e, o.zUn.NAME, e => N.Z.getGuildEmoji(_.id).find(_ => _.id === e), e => e.name);
                 case o.KFR.STICKER:
-                    return e_(e, o.zUn.NAME, e => D.Z.getStickerById(e), e => e.name);
+                    return e_(e, o.zUn.NAME, e => S.Z.getStickerById(e), e => e.name);
                 case o.KFR.STAGE_INSTANCE:
                     return e_(e, o.zUn.TOPIC, e => {
                         var E;
-                        return null === (E = Object.values(S.Z.getStageInstancesByGuild(_.id))) || void 0 === E ? void 0 : E.find(_ => _.id === e);
+                        return null === (E = Object.values(D.Z.getStageInstancesByGuild(_.id))) || void 0 === E ? void 0 : E.find(_ => _.id === e);
                     }, e => e.topic);
                 case o.KFR.GUILD_SCHEDULED_EVENT:
                     return e_(e, o.zUn.NAME, e => L.Z.guildScheduledEvents.find(_ => _.id === e), e => e.name);

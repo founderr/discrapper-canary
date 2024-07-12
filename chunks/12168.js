@@ -6,7 +6,7 @@ n.d(t, {
         return Z;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n(338545), c = n(481060), d = n(596454), u = n(727637), h = n(543241), p = n(907040), m = n(633302), _ = n(806966), f = n(401227), E = n(153124), C = n(176354), g = n(823379), I = n(354459), x = n(185923), T = n(420212), v = n(419477);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n(338545), c = n(481060), d = n(596454), u = n(727637), h = n(543241), p = n(907040), m = n(633302), _ = n(806966), f = n(401227), E = n(153124), C = n(176354), g = n(823379), I = n(354459), x = n(185923), T = n(420212), v = n(419477);
 let N = x.Hz.CHAT, S = [
         m.ZP.getByName('thumbsup'),
         m.ZP.getByName('eyes'),
@@ -19,13 +19,13 @@ function Z(e) {
     let {
             emoji: t,
             isDisabled: n = !1,
-            onClick: s,
+            onClick: l,
             className: r
         } = e, h = a.useRef(null), p = (0, u.Z)(h);
     return (0, i.jsx)('span', {
         ref: h,
         children: (0, i.jsx)(c.Button, {
-            onClick: s,
+            onClick: l,
             look: c.Button.Looks.BLANK,
             size: c.Button.Sizes.NONE,
             focusProps: { enabled: !n },
@@ -46,7 +46,7 @@ function Z(e) {
                             ]).to(e => 'scale('.concat(e, ')'))
                         },
                         children: (0, i.jsx)(d.Z, {
-                            className: l()(v.emoji, r, { [v.emojiItemDisabled]: n }),
+                            className: s()(v.emoji, r, { [v.emojiItemDisabled]: n }),
                             emojiId: t.id,
                             emojiName: null == t ? void 0 : t.surrogates,
                             animated: t.animated
@@ -62,7 +62,7 @@ function A(e) {
         otherAccessories: t,
         isEmojiPickerExpanded: n,
         onSetExpanded: a,
-        onFocus: s
+        onFocus: l
     } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -70,12 +70,12 @@ function A(e) {
             (0, i.jsx)(c.Clickable, {
                 className: v.dropDownContainer,
                 onClick: () => {
-                    a(!n), s();
+                    a(!n), l();
                 },
                 children: (0, i.jsx)(c.ChevronSmallDownIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: l()(v.dropDown, { [v.dropDownOpen]: n })
+                    className: s()(v.dropDown, { [v.dropDownOpen]: n })
                 })
             })
         ]
@@ -85,7 +85,7 @@ function M(e) {
     let {
             channel: t,
             title: n,
-            closePopout: s,
+            closePopout: l,
             onFocus: o,
             onSelectEmoji: d,
             onSelectDisabledEmoji: u,
@@ -106,7 +106,7 @@ function M(e) {
             j(e), null == m || m(e);
         }, y = (e, t) => {
             if (null == e && t) {
-                s();
+                l();
                 return;
             }
             null != e && d(e);
@@ -130,9 +130,9 @@ function M(e) {
                     (0, i.jsx)(p.Z, {
                         analyticsOverride: M,
                         channel: t,
-                        className: l()(v.animatedPicker, { [v.animatedPickerTall]: R }),
-                        headerClassName: l()(v.emojiPickerHeader, { [v.emojiPickerHeaderExpanded]: R }),
-                        closePopout: s,
+                        className: s()(v.animatedPicker, { [v.animatedPickerTall]: R }),
+                        headerClassName: s()(v.emojiPickerHeader, { [v.emojiPickerHeaderExpanded]: R }),
+                        closePopout: l,
                         onSelectEmoji: R ? y : () => {
                         },
                         shouldHidePickerActions: !R,
@@ -154,7 +154,7 @@ function M(e) {
                     (0, i.jsx)('div', {
                         className: v.slotsContainer,
                         children: (0, i.jsx)('div', {
-                            className: l()(v.slots, v.slotsWide),
+                            className: s()(v.slots, v.slotsWide),
                             children: P.map(e => {
                                 let n = C.ZP.isEmojiDisabled({
                                     emoji: e,

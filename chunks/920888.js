@@ -33,8 +33,8 @@ class p extends a.PureComponent {
                 reactionClassName: g,
                 useChatFontScaling: S,
                 forceHideReactionCreates: A,
-                remainingReactions: x,
-                combinedReactions: R,
+                remainingReactions: R,
+                combinedReactions: x,
                 visibleReactionsCount: O
             } = this.props, {disableTransitionAppear: M} = this.state, v = S ? T : m, L = O > 0;
         return L || C ? (0, i.jsxs)(l.W, {
@@ -48,7 +48,7 @@ class p extends a.PureComponent {
             onMouseLeave: () => this.setState({ isHovered: !1 }),
             children: [
                 (0, i.jsx)(_.l, {
-                    reactions: R,
+                    reactions: x,
                     message: e,
                     readOnly: n,
                     isLurking: a,
@@ -58,7 +58,7 @@ class p extends a.PureComponent {
                     useChatFontScaling: S,
                     className: g
                 }),
-                x > 0 && (0, i.jsx)(o.Clickable, {
+                R > 0 && (0, i.jsx)(o.Clickable, {
                     onClick: t => {
                         t.stopPropagation(), (0, E.op)(f, e);
                     },
@@ -69,7 +69,7 @@ class p extends a.PureComponent {
                         variant: 'text-sm/normal',
                         children: [
                             '+',
-                            x
+                            R
                         ]
                     })
                 }),

@@ -3,7 +3,7 @@ n.d(t, {
         return D;
     }
 });
-var i = n(735250), a = n(470079), s = n(481060), r = n(99690), l = n(906732), o = n(336197), c = n(454585), d = n(171368), u = n(695346), _ = n(598077), E = n(594174), I = n(626135), m = n(709054), T = n(591759), h = n(833592), N = n(497089), f = n(178480), p = n(418316), C = n(526146), g = n(400565), S = n(148789), A = n(11825), x = n(981631), R = n(689938), O = n(273270), M = n(756688), v = n(886765);
+var i = n(735250), a = n(470079), s = n(481060), r = n(99690), l = n(906732), o = n(336197), c = n(454585), d = n(171368), u = n(695346), _ = n(598077), E = n(594174), I = n(626135), m = n(709054), T = n(591759), h = n(833592), N = n(497089), f = n(178480), p = n(418316), C = n(526146), g = n(400565), S = n(148789), A = n(11825), R = n(981631), x = n(689938), O = n(273270), M = n(756688), v = n(886765);
 function L(e) {
     var t, n, a;
     let {item: l} = e, o = null === (t = l.message) || void 0 === t ? void 0 : t.content;
@@ -43,8 +43,8 @@ function Z(e) {
     });
 }
 function P(e) {
-    let {item: t} = e, n = v, a = R.Z.Messages.NOTIFICATION_CENTER_TODO;
-    return t.completed && (n = M, a = R.Z.Messages.NOTIFICATION_CENTER_DONE), (0, i.jsxs)('div', {
+    let {item: t} = e, n = v, a = x.Z.Messages.NOTIFICATION_CENTER_TODO;
+    return t.completed && (n = M, a = x.Z.Messages.NOTIFICATION_CENTER_DONE), (0, i.jsxs)('div', {
         className: O.lifecycleContainer,
         children: [
             (0, i.jsx)('img', {
@@ -66,7 +66,7 @@ let b = a.memo(function (e) {
         let {
                 item: r,
                 ackedBeforeId: u
-            } = e, {analyticsLocations: _} = (0, l.ZP)(), E = (0, C.I)(r, u), R = a.useCallback(async () => {
+            } = e, {analyticsLocations: _} = (0, l.ZP)(), E = (0, C.I)(r, u), x = a.useCallback(async () => {
                 if (!E && (0, h.wt)(r), null != r.item_enum && r.item_enum === N.AM.FIND_FRIENDS) {
                     (0, s.openModalLazy)(async () => {
                         let {default: e} = await n.e('6074').then(n.bind(n, 443189));
@@ -92,12 +92,12 @@ let b = a.memo(function (e) {
                                 userId: t[1],
                                 messageId: null === (e = r.message) || void 0 === e ? void 0 : e.id,
                                 sourceAnalyticsLocations: _,
-                                analyticsLocation: { section: x.jXE.NOTIFICATION_CENTER }
+                                analyticsLocation: { section: R.jXE.NOTIFICATION_CENTER }
                             });
                         } else
                             await (0, o.Z)(i);
                     }
-                    I.default.track(x.rMx.NOTIFICATION_CENTER_ACTION, {
+                    I.default.track(R.rMx.NOTIFICATION_CENTER_ACTION, {
                         action_type: N.ud.CLICKED,
                         notification_center_id: r.id,
                         item_type: r.type,
@@ -118,7 +118,7 @@ let b = a.memo(function (e) {
                     className: O.rowContent,
                     focusProps: { offset: 4 },
                     'aria-label': b,
-                    onClick: R,
+                    onClick: x,
                     children: [
                         E ? null : (0, i.jsx)('div', { className: O.unread }),
                         (0, i.jsx)(g.U, { item: r }),

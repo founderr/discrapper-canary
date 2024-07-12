@@ -3,7 +3,7 @@ n.d(t, {
         return c;
     }
 });
-var i = n(735250), a = n(470079), s = n(286379), l = n(797614), r = n(596739), o = n(473092);
+var i = n(735250), a = n(470079), l = n(286379), s = n(797614), r = n(596739), o = n(473092);
 function c(e) {
     let {
         channelId: t,
@@ -16,7 +16,7 @@ function c(e) {
         buttons: m
     } = e;
     a.useEffect(() => {
-        l.Z.increment({ name: s.V.SAFETY_WARNING_VIEW });
+        s.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
     }, []);
     let _ = a.useCallback(() => {
         null == p || p(), (0, o.qc)({

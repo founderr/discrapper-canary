@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(592471), s = n(871499);
-function l(e) {
+var a = n(592471), l = n(871499);
+function s(e) {
     let t, {
             isActivityActive: n,
-            onMouseEnter: l,
+            onMouseEnter: s,
             onMouseLeave: r,
             onClick: o,
             ...c
@@ -17,12 +17,12 @@ function l(e) {
             Component: d,
             events: u
         } = (0, a.s)();
-    return (0, i.jsx)(s.d, {
+    return (0, i.jsx)(l.d, {
         isActive: n,
         color: t,
         iconComponent: d,
         onMouseEnter: e => {
-            null == l || l(e), u.onMouseEnter();
+            null == s || s(e), u.onMouseEnter();
         },
         onMouseLeave: e => {
             null == r || r(e), u.onMouseLeave();

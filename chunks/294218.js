@@ -1,5 +1,5 @@
 n(789020);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(91192), o = n(442837), c = n(518738), d = n(628238), u = n(869765), _ = n(592125), E = n(496675), I = n(630388), m = n(709054), T = n(900164), h = n(739566), N = n(492593), f = n(453687), p = n(25015), C = n(689674), g = n(438075), S = n(963550), A = n(845080), x = n(295790), R = n(145807), O = n(56744), M = n(981631), v = n(848509);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(91192), o = n(442837), c = n(518738), d = n(628238), u = n(869765), _ = n(592125), E = n(496675), I = n(630388), m = n(709054), T = n(900164), h = n(739566), N = n(492593), f = n(453687), p = n(25015), C = n(689674), g = n(438075), S = n(963550), A = n(845080), R = n(295790), x = n(145807), O = n(56744), M = n(981631), v = n(848509);
 t.Z = a.memo(function (e) {
     var t, n;
     let {
@@ -44,7 +44,7 @@ t.Z = a.memo(function (e) {
         }),
         disableInteraction: F,
         childrenRepliedMessage: (0, O.Z)(a, D, W, z, s),
-        childrenExecutedCommand: (0, R.Z)(a, D, s),
+        childrenExecutedCommand: (0, x.Z)(a, D, s),
         childrenHeader: (0, A.Z)({
             ...e,
             guildId: D.guild_id,
@@ -53,7 +53,7 @@ t.Z = a.memo(function (e) {
         }),
         childrenAccessories: e.hideAccessories ? void 0 : (0, g.Q)(e, Y),
         childrenMessageContent: (0, S.Z)(e, H),
-        childrenSystemMessage: (0, x.Z)({
+        childrenSystemMessage: (0, R.Z)({
             ...e,
             disableInteraction: F
         }),

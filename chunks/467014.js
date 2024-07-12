@@ -3,12 +3,12 @@ n.d(t, {
         return m;
     }
 });
-var i = n(735250), a = n(470079), s = n(442837), l = n(481060), r = n(433355), o = n(189432), c = n(356778), d = n(776767), u = n(50493), h = n(689938), p = n(749348);
+var i = n(735250), a = n(470079), l = n(442837), s = n(481060), r = n(433355), o = n(189432), c = n(356778), d = n(776767), u = n(50493), h = n(689938), p = n(749348);
 function m(e) {
     let {
             userId: t,
             guildId: n
-        } = e, m = (0, s.e7)([r.ZP], () => r.ZP.getGuildSidebarState(n), [n]), {
+        } = e, m = (0, l.e7)([r.ZP], () => r.ZP.getGuildSidebarState(n), [n]), {
             messagesCount: _,
             linksCount: f,
             mediaCount: E
@@ -25,27 +25,27 @@ function m(e) {
             m,
             t
         ]);
-    return (0, i.jsx)(l.FormItem, {
+    return (0, i.jsx)(s.FormItem, {
         title: h.Z.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_MESSAGE_ACTIVITY_TITLE,
         titleClassName: p.infoTitle,
         children: (0, i.jsxs)(d.WM, {
             children: [
                 (0, i.jsx)(d._2, {
-                    icon: (0, i.jsx)(l.ChatIcon, {
+                    icon: (0, i.jsx)(s.ChatIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         width: d.Mn,
                         height: d.Mn
                     }),
-                    name: (0, i.jsx)(l.Text, {
+                    name: (0, i.jsx)(s.Text, {
                         variant: 'text-sm/semibold',
                         color: 'text-normal',
                         children: h.Z.Messages.MESSAGES
                     }),
-                    description: _ === c.II ? (0, i.jsx)(l.Spinner, {
-                        type: l.SpinnerTypes.SPINNING_CIRCLE,
+                    description: _ === c.II ? (0, i.jsx)(s.Spinner, {
+                        type: s.SpinnerTypes.SPINNING_CIRCLE,
                         className: p.loadingSpinner
-                    }) : (0, i.jsx)(l.Text, {
+                    }) : (0, i.jsx)(s.Text, {
                         variant: 'text-sm/semibold',
                         color: 'interactive-normal',
                         children: C
@@ -53,20 +53,20 @@ function m(e) {
                     onNavigate: _ > 0 ? () => x(c.mw.MESSAGES) : void 0
                 }),
                 (0, i.jsx)(d._2, {
-                    icon: (0, i.jsx)(l.LinkIcon, {
+                    icon: (0, i.jsx)(s.LinkIcon, {
                         size: 'custom',
                         width: d.Mn,
                         height: d.Mn
                     }),
-                    name: (0, i.jsx)(l.Text, {
+                    name: (0, i.jsx)(s.Text, {
                         variant: 'text-sm/semibold',
                         color: 'text-normal',
                         children: h.Z.Messages.QUICKSEARCH_LINKS
                     }),
-                    description: f === c.II ? (0, i.jsx)(l.Spinner, {
-                        type: l.SpinnerTypes.SPINNING_CIRCLE,
+                    description: f === c.II ? (0, i.jsx)(s.Spinner, {
+                        type: s.SpinnerTypes.SPINNING_CIRCLE,
                         className: p.loadingSpinner
-                    }) : (0, i.jsx)(l.Text, {
+                    }) : (0, i.jsx)(s.Text, {
                         variant: 'text-sm/semibold',
                         color: 'interactive-normal',
                         children: g
@@ -74,20 +74,20 @@ function m(e) {
                     onNavigate: f > 0 ? () => x(c.mw.LINKS) : void 0
                 }),
                 (0, i.jsx)(d._2, {
-                    icon: (0, i.jsx)(l.ImagesIcon, {
+                    icon: (0, i.jsx)(s.ImagesIcon, {
                         size: 'custom',
                         width: d.Mn,
                         height: d.Mn
                     }),
-                    name: (0, i.jsx)(l.Text, {
+                    name: (0, i.jsx)(s.Text, {
                         variant: 'text-sm/semibold',
                         color: 'text-normal',
                         children: h.Z.Messages.QUICKSEARCH_MEDIA
                     }),
-                    description: E === c.II ? (0, i.jsx)(l.Spinner, {
-                        type: l.SpinnerTypes.SPINNING_CIRCLE,
+                    description: E === c.II ? (0, i.jsx)(s.Spinner, {
+                        type: s.SpinnerTypes.SPINNING_CIRCLE,
                         className: p.loadingSpinner
-                    }) : (0, i.jsx)(l.Text, {
+                    }) : (0, i.jsx)(s.Text, {
                         variant: 'text-sm/semibold',
                         color: 'interactive-normal',
                         children: I

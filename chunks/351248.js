@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     }
 }), n(653041), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(748780), o = n(442837), c = n(215569), d = n(780384), u = n(481060), h = n(410030), p = n(451478), m = n(584511), _ = n(354459), f = n(861414), E = n(483085), C = n(66487);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(748780), o = n(442837), c = n(215569), d = n(780384), u = n(481060), h = n(410030), p = n(451478), m = n(584511), _ = n(354459), f = n(861414), E = n(483085), C = n(66487);
 function g(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -60,9 +60,9 @@ class N extends a.PureComponent {
             widthAnimation: a
         } = this;
         i.setValue(1), n.setValue(0);
-        let s = [];
+        let l = [];
         for (let e = 0; e < I.STEPS; e++)
-            s.push(r.Z.timing(n, {
+            l.push(r.Z.timing(n, {
                 toValue: -I.FRAME_SIZE * e,
                 duration: I.FRAME_DURATION
             }));
@@ -72,7 +72,7 @@ class N extends a.PureComponent {
                 duration: x.DURATION_OUT,
                 easing: x.EASING_OUT
             }),
-            r.Z.sequence(s),
+            r.Z.sequence(l),
             r.Z.timing(a, {
                 toValue: 0,
                 duration: v
@@ -126,18 +126,18 @@ class N extends a.PureComponent {
                 theme: e,
                 children: t,
                 className: n
-            } = this.props, a = (0, d.wj)(e), s = l()(f.sprite, {
+            } = this.props, a = (0, d.wj)(e), l = s()(f.sprite, {
                 [C.crossWhite]: a,
                 [C.crossGrey]: !a
             });
         return (0, i.jsxs)(r.Z.div, {
-            className: l()(f.transition, n),
+            className: s()(f.transition, n),
             style: this.getWidthStyle(),
             children: [
                 (0, i.jsx)('div', {
-                    className: l()(f.spriteWrapper, E.horizontal, E.justifyCenter, E.alignCenter),
+                    className: s()(f.spriteWrapper, E.horizontal, E.justifyCenter, E.alignCenter),
                     children: (0, i.jsx)(r.Z.div, {
-                        className: s,
+                        className: l,
                         style: this.getSpriteStyle()
                     })
                 }),
@@ -156,7 +156,7 @@ function S(e) {
     var t, n;
     let {
             participants: a,
-            onContextMenu: s,
+            onContextMenu: l,
             className: r,
             onClick: d,
             width: E,
@@ -168,7 +168,7 @@ function S(e) {
                 return null;
             let {
                 user: a,
-                voiceState: l,
+                voiceState: s,
                 speaking: r,
                 ringing: o
             } = e;
@@ -179,18 +179,18 @@ function S(e) {
                 children: (0, i.jsx)(m.Z, {
                     src: a.getAvatarURL(C, (0, u.getAvatarSize)(I), r && x),
                     size: I,
-                    muted: null !== (t = null == l ? void 0 : l.isVoiceMuted()) && void 0 !== t && t,
-                    deafen: null !== (n = null == l ? void 0 : l.isVoiceDeafened()) && void 0 !== n && n,
+                    muted: null !== (t = null == s ? void 0 : s.isVoiceMuted()) && void 0 !== t && t,
+                    deafen: null !== (n = null == s ? void 0 : s.isVoiceDeafened()) && void 0 !== n && n,
                     speaking: r,
                     ringing: o,
                     onClick: t => null == d ? void 0 : d(e, t),
-                    onContextMenu: t => null == s ? void 0 : s(e, t)
+                    onContextMenu: t => null == l ? void 0 : l(e, t)
                 }, e.id)
             }, a.id);
         });
     return (0, i.jsx)(c.W, {
         component: 'div',
-        className: l()(f.root, r),
+        className: s()(f.root, r),
         children: T
     });
 }

@@ -9,7 +9,7 @@ E.d(_, {
         return c;
     }
 }), E(653041);
-var s = E(735250), T = E(470079), I = E(120356), n = E.n(I), A = E(392711), t = E.n(A), a = E(913527), r = E.n(a), N = E(481060), L = E(596454), S = E(479099), D = E(592125), l = E(430824), U = E(594174), G = E(274730), O = E(934415), i = E(823379), M = E(624138), R = E(981631), o = E(689938), u = E(980468);
+var s = E(735250), T = E(470079), I = E(120356), n = E.n(I), A = E(392711), t = E.n(A), a = E(913527), r = E.n(a), N = E(481060), L = E(596454), D = E(479099), S = E(592125), l = E(430824), U = E(594174), G = E(274730), O = E(934415), i = E(823379), M = E(624138), R = E(981631), o = E(689938), u = E(980468);
 function c(e, _) {
     let E = G.vc[e.targetType];
     return null != E && !0 === E[_.key];
@@ -35,14 +35,14 @@ function g(e) {
             null == e && null != _[G.Et] ? _ = _[G.Et] : null != e && (_ = e);
         }
         if (null != _ && null != _.format) {
-            var r, D;
+            var r, S;
             a = _.format({
                 user: I.user,
                 target: I.target,
                 oldValue: n,
                 newValue: A,
                 count: Array.isArray(A) ? A.length : null,
-                subtarget: null !== (D = null !== (r = I.options.subtarget) && void 0 !== r ? r : t.subtarget) && void 0 !== D ? D : null,
+                subtarget: null !== (S = null !== (r = I.options.subtarget) && void 0 !== r ? r : t.subtarget) && void 0 !== S ? S : null,
                 newColorHook: (e, _) => (0, s.jsx)('div', {
                     className: u.colorHook,
                     style: { backgroundColor: t.newValue }
@@ -51,13 +51,13 @@ function g(e) {
                     className: u.colorHook,
                     style: { backgroundColor: t.oldValue }
                 }, _),
-                oldTagHook: (e, _) => (0, s.jsx)(S.Z, {
+                oldTagHook: (e, _) => (0, s.jsx)(D.Z, {
                     tag: n,
-                    size: S.Z.Sizes.SMALL
+                    size: D.Z.Sizes.SMALL
                 }, _),
-                newTagHook: (e, _) => (0, s.jsx)(S.Z, {
+                newTagHook: (e, _) => (0, s.jsx)(D.Z, {
                     tag: A,
-                    size: S.Z.Sizes.SMALL
+                    size: D.Z.Sizes.SMALL
                 }, _),
                 oldEmojiHook: (e, _) => (0, s.jsx)(L.Z, { emojiId: n }, _),
                 newEmojiHook: (e, _) => (0, s.jsx)(L.Z, { emojiId: A }, _)
@@ -196,14 +196,14 @@ function f(e) {
                                 return null == s ? null : '@'.concat(s);
                             }, A = e => {
                                 var _;
-                                let E = null === (_ = D.Z.getChannel(e)) || void 0 === _ ? void 0 : _.name;
+                                let E = null === (_ = S.Z.getChannel(e)) || void 0 === _ ? void 0 : _.name;
                                 return null == E ? null : '#'.concat(E);
                             }, a = (e, E) => {
                                 let {
                                         title: T,
                                         id: I
-                                    } = E, a = e.role_ids.map(n).filter(i.lm), r = e.channel_ids.map(A).filter(i.lm), L = E.role_ids.map(n).filter(i.lm), S = E.channel_ids.map(A).filter(i.lm), D = t().difference(L, a), l = t().difference(a, L), U = t().difference(S, r), G = t().difference(r, S), O = [];
-                                return (!t().isEqual(e.title, E.title) && O.push('title'), !t().isEqual(e.description, E.description) && O.push('description'), 0 === D.length && 0 === l.length && 0 === U.length && 0 === G.length && 0 === O.length) ? null : (0, s.jsxs)('li', {
+                                    } = E, a = e.role_ids.map(n).filter(i.lm), r = e.channel_ids.map(A).filter(i.lm), L = E.role_ids.map(n).filter(i.lm), D = E.channel_ids.map(A).filter(i.lm), S = t().difference(L, a), l = t().difference(a, L), U = t().difference(D, r), G = t().difference(r, D), O = [];
+                                return (!t().isEqual(e.title, E.title) && O.push('title'), !t().isEqual(e.description, E.description) && O.push('description'), 0 === S.length && 0 === l.length && 0 === U.length && 0 === G.length && 0 === O.length) ? null : (0, s.jsxs)('li', {
                                     children: [
                                         (0, s.jsxs)('div', {
                                             className: u.onboardingChangeLogItemTitle,
@@ -222,9 +222,9 @@ function f(e) {
                                         (0, s.jsxs)('div', {
                                             className: u.onboardingChangeLogItemChanges,
                                             children: [
-                                                D.length > 0 && (0, s.jsx)(N.Text, {
+                                                S.length > 0 && (0, s.jsx)(N.Text, {
                                                     variant: 'text-md/normal',
-                                                    children: o.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_ROLES.format({ roles: D.join(', ') })
+                                                    children: o.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_ROLES.format({ roles: S.join(', ') })
                                                 }),
                                                 l.length > 0 && (0, s.jsx)(N.Text, {
                                                     variant: 'text-md/normal',
@@ -250,11 +250,11 @@ function f(e) {
                                         })
                                     ]
                                 }, I);
-                            }, r = t().keyBy(null != I ? I : [], 'id'), L = t().keyBy(null != T ? T : [], 'id'), S = t().difference(Object.keys(L), Object.keys(r)).map(e => L[e]), U = t().difference(Object.keys(r), Object.keys(L)).map(e => r[e]), G = t().intersection(Object.keys(L), Object.keys(r));
+                            }, r = t().keyBy(null != I ? I : [], 'id'), L = t().keyBy(null != T ? T : [], 'id'), D = t().difference(Object.keys(L), Object.keys(r)).map(e => L[e]), U = t().difference(Object.keys(r), Object.keys(L)).map(e => r[e]), G = t().intersection(Object.keys(L), Object.keys(r));
                         return (0, s.jsxs)('ul', {
                             className: u.onboardingChangeLogContainer,
                             children: [
-                                S.map(e => {
+                                D.map(e => {
                                     let {
                                             role_ids: E,
                                             channel_ids: T,

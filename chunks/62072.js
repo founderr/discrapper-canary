@@ -1,4 +1,4 @@
-var i = n(470079), a = n(904245), s = n(346610), l = n(868643), r = n(912332), o = n(41776), c = n(280845), d = n(665906), u = n(488131), h = n(695346), p = n(314897), m = n(592125), _ = n(323873), f = n(271383), E = n(607744), C = n(375954), g = n(496675), I = n(572004), x = n(585483), T = n(358085), v = n(709054), N = n(418476), S = n(901461), Z = n(432376), A = n(996861), M = n(981631);
+var i = n(470079), a = n(904245), l = n(346610), s = n(868643), r = n(912332), o = n(41776), c = n(280845), d = n(665906), u = n(488131), h = n(695346), p = n(314897), m = n(592125), _ = n(323873), f = n(271383), E = n(607744), C = n(375954), g = n(496675), I = n(572004), x = n(585483), T = n(358085), v = n(709054), N = n(418476), S = n(901461), Z = n(432376), A = n(996861), M = n(981631);
 function b(e) {
     return g.Z.can(M.Plq.MANAGE_MESSAGES, e);
 }
@@ -51,7 +51,7 @@ t.Z = function (e, t, n) {
             (y || w) && (0, c.o)(H, B) && (n.preventDefault(), (0, A.HH)(H, B, n));
             break;
         case 'f':
-            (y || w) && s.w.getCurrentConfig({ location: 'keyboard-shortcut' }, { autoTrackExposure: !1 }).canForwardMessages && (0, l.h)(B) && (n.preventDefault(), (0, r.l8)({
+            (y || w) && l.w.getCurrentConfig({ location: 'keyboard-shortcut' }, { autoTrackExposure: !1 }).canForwardMessages && (0, s.h)(B) && (n.preventDefault(), (0, r.l8)({
                 messageId: B.id,
                 channelId: H.id,
                 source: 'keyboard-shortcut'

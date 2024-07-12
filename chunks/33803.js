@@ -3,7 +3,7 @@ n.d(t, {
         return Q;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(91192), d = n(722770), u = n(442837), _ = n(481060), E = n(607070), I = n(313889), m = n(825829), T = n(226192), h = n(36459), N = n(336197), f = n(103575), p = n(496675), C = n(594174), g = n(467679), S = n(702346), A = n(5192), x = n(51144), R = n(937889), O = n(739566), M = n(779125), v = n(890410), L = n(464891), Z = n(507418), P = n(348238), b = n(38267), D = n(83561), j = n(959517), U = n(981631), y = n(674563), B = n(590433), k = n(689938), G = n(117414);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(91192), d = n(722770), u = n(442837), _ = n(481060), E = n(607070), I = n(313889), m = n(825829), T = n(226192), h = n(36459), N = n(336197), f = n(103575), p = n(496675), C = n(594174), g = n(467679), S = n(702346), A = n(5192), R = n(51144), x = n(937889), O = n(739566), M = n(779125), v = n(890410), L = n(464891), Z = n(507418), P = n(348238), b = n(38267), D = n(83561), j = n(959517), U = n(981631), y = n(674563), B = n(590433), k = n(689938), G = n(117414);
 function F(e, t) {
     let {
             popouts: n,
@@ -104,7 +104,7 @@ function W(e) {
             return Y(e, {});
         let s = function (e, t, n) {
             var i;
-            let a = null !== (i = A.ZP.getNickname(n, null, t)) && void 0 !== i ? i : x.ZP.getUserTag(t), s = o()(e.ts), r = ''.concat(a, ' ').concat(s.fromNow());
+            let a = null !== (i = A.ZP.getNickname(n, null, t)) && void 0 !== i ? i : R.ZP.getUserTag(t), s = o()(e.ts), r = ''.concat(a, ' ').concat(s.fromNow());
             try {
                 switch (parseInt(e.actionType)) {
                 case I.d.DELETE_USER_MESSAGE:
@@ -205,7 +205,7 @@ function Q(e) {
             }
         } = (0, D.m)(!0), {
             onFocus: A,
-            ...x
+            ...R
         } = (0, c.JA)(null != t ? t : ''), {
             isFocused: O,
             handleFocus: M,
@@ -223,7 +223,7 @@ function Q(e) {
             alertActionsExecution: et,
             quarantineType: en,
             interactionUserId: ei
-        } = (0, m.ZP)(s), ea = a.useMemo(() => (0, R.k$)(X, Q, l.id), [
+        } = (0, m.ZP)(s), ea = a.useMemo(() => (0, x.k$)(X, Q, l.id), [
             X,
             Q,
             l
@@ -293,7 +293,7 @@ function Q(e) {
                     (0, i.jsx)('div', {
                         className: r()(G.messageContent, { [G.compact]: n }),
                         children: (0, i.jsx)(v.Z, {
-                            ...x,
+                            ...R,
                             message: s,
                             channel: Y,
                             content: ea,

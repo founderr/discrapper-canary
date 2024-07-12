@@ -9,12 +9,12 @@ n.d(t, {
         return M;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(933557), d = n(471445), u = n(266076), h = n(703656), p = n(699516), m = n(914010), _ = n(594174), f = n(467679), E = n(346656), C = n(946734), g = n(99843), I = n(372564), x = n(984370), T = n(217314), v = n(981631), N = n(689938), S = n(489919);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(933557), d = n(471445), u = n(266076), h = n(703656), p = n(699516), m = n(914010), _ = n(594174), f = n(467679), E = n(346656), C = n(946734), g = n(99843), I = n(372564), x = n(984370), T = n(217314), v = n(981631), N = n(689938), S = n(489919);
 function Z(e) {
     let {
             channel: t,
             channelName: n,
-            parentChannel: s,
+            parentChannel: l,
             guild: r,
             inSidebar: h = !1,
             handleClick: m,
@@ -149,8 +149,8 @@ function Z(e) {
     case v.d4z.PUBLIC_THREAD:
     case v.d4z.PRIVATE_THREAD:
         let j = null;
-        if (!h && null != s) {
-            let e = (0, d.KS)(s, r);
+        if (!h && null != l) {
+            let e = (0, d.KS)(l, r);
             j = (0, i.jsxs)(a.Fragment, {
                 children: [
                     b(e, N.Z.Messages.TEXT_CHANNEL),
@@ -158,14 +158,14 @@ function Z(e) {
                         level: M,
                         onContextMenu: C,
                         onClick: E,
-                        className: l()(S.parentChannelName, S.cursorPointer),
-                        children: (0, c.F6)(s, _.default, p.Z)
+                        className: s()(S.parentChannelName, S.cursorPointer),
+                        children: (0, c.F6)(l, _.default, p.Z)
                     }),
                     (0, i.jsx)(x.Z.Caret, {})
                 ]
             });
         }
-        let L = (null == s ? void 0 : s.type) != null && v.TPd.GUILD_THREADS_ONLY.has(s.type);
+        let L = (null == l ? void 0 : l.type) != null && v.TPd.GUILD_THREADS_ONLY.has(l.type);
         return (0, i.jsxs)(a.Fragment, {
             children: [
                 j,
@@ -174,7 +174,7 @@ function Z(e) {
                     level: M,
                     onContextMenu: f,
                     onClick: m,
-                    className: l()({
+                    className: s()({
                         [S.cursorPointer]: h,
                         [S.forumPostTitle]: L
                     }),
@@ -270,7 +270,7 @@ function R(e) {
                 onClick: () => {
                     (0, h.XU)(t.id, n.id);
                 },
-                className: l()(S.parentChannelName, S.cursorPointer),
+                className: s()(S.parentChannelName, S.cursorPointer),
                 children: t.name
             }),
             'right' === a && (0, i.jsx)(x.Z.Caret, { direction: 'right' })

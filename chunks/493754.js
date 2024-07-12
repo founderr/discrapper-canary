@@ -5,11 +5,11 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(512722), r = n.n(l), o = n(442837), c = n(481060), d = n(924301), u = n(786915), h = n(430824), p = n(496675), m = n(981631), _ = n(689938), f = n(191109);
+var a = n(120356), l = n.n(a), s = n(512722), r = n.n(s), o = n(442837), c = n(481060), d = n(924301), u = n(786915), h = n(430824), p = n(496675), m = n(981631), _ = n(689938), f = n(191109);
 function E(e) {
     var t, a;
     let {
-            stream: l,
+            stream: s,
             applicationId: E,
             channel: C,
             exitFullScreen: g,
@@ -21,7 +21,7 @@ function E(e) {
     if (t = Z, a = C, !(null != t && null != a && p.Z.can(m.Plq.CREATE_INSTANT_INVITE, a)))
         return null;
     let M = _.Z.Messages.INSTANT_INVITE;
-    return null != l ? M = _.Z.Messages.INVITE_STREAM_HEADER : null != E && (M = _.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY), (0, i.jsxs)(i.Fragment, {
+    return null != s ? M = _.Z.Messages.INVITE_STREAM_HEADER : null != E && (M = _.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY), (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(c.Button, {
                 size: c.Button.Sizes.SMALL,
@@ -31,8 +31,8 @@ function E(e) {
                         let {
                             guild: t,
                             channel: a,
-                            streamUserId: s,
-                            applicationId: l,
+                            streamUserId: l,
+                            applicationId: s,
                             appContext: r,
                             exitFullScreen: o,
                             analyticsLocation: d,
@@ -47,8 +47,8 @@ function E(e) {
                                 ...n,
                                 guild: t,
                                 channel: a,
-                                streamUserId: s,
-                                applicationId: l,
+                                streamUserId: l,
+                                applicationId: s,
                                 analyticsLocation: d,
                                 source: a.isGuildStageVoice() ? m.t4x.STAGE_CHANNEL : m.t4x.STREAM_INVITE,
                                 guildScheduledEvent: u
@@ -60,7 +60,7 @@ function E(e) {
                     }({
                         guild: Z,
                         channel: C,
-                        streamUserId: null == l ? void 0 : l.ownerId,
+                        streamUserId: null == s ? void 0 : s.ownerId,
                         applicationId: E,
                         appContext: I,
                         exitFullScreen: g,
@@ -68,15 +68,15 @@ function E(e) {
                         guildScheduledEvent: A
                     });
                 },
-                className: s()(T, f.textButton),
+                className: l()(T, f.textButton),
                 ...v,
                 children: M
             }),
             (0, i.jsx)(u.Z, {
                 channel: C,
-                stream: l,
+                stream: s,
                 appContext: I,
-                className: s()(T, f.iconButton),
+                className: l()(T, f.iconButton),
                 exitFullScreen: g,
                 analyticsLocation: x,
                 guildScheduledEvent: A

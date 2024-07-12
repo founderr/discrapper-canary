@@ -5,41 +5,41 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(689938), l = n(137396);
+var a = n(481060), l = n(689938), s = n(137396);
 function r(e) {
     let {
         onClose: t,
         guildName: n
     } = e;
     return (0, i.jsxs)('div', {
-        className: l.container,
+        className: s.container,
         children: [
             (0, i.jsx)('div', {
-                className: l.iconContainer,
+                className: s.iconContainer,
                 children: (0, i.jsx)(a.ClockWarningIcon, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: l.icon,
+                    className: s.icon,
                     width: 20,
                     height: 20
                 })
             }),
             (0, i.jsxs)('div', {
-                className: l.header,
+                className: s.header,
                 children: [
                     (0, i.jsx)(a.Heading, {
                         variant: 'heading-md/semibold',
-                        className: l.headerText,
-                        children: s.Z.Messages.GUILD_COMMUNICATION_DISABLED_POPOUT_HEADER
+                        className: s.headerText,
+                        children: l.Z.Messages.GUILD_COMMUNICATION_DISABLED_POPOUT_HEADER
                     }),
                     (0, i.jsx)(a.Text, {
                         variant: 'text-sm/normal',
-                        children: s.Z.Messages.GUILD_COMMUNICATION_DISABLED_POPOUT_SUBHEADER.format({ guildName: n })
+                        children: l.Z.Messages.GUILD_COMMUNICATION_DISABLED_POPOUT_SUBHEADER.format({ guildName: n })
                     }),
                     (0, i.jsx)(a.Button, {
                         onClick: t,
-                        className: l.button,
-                        children: s.Z.Messages.OKAY
+                        className: s.button,
+                        children: l.Z.Messages.OKAY
                     })
                 ]
             })

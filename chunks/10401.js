@@ -1,5 +1,5 @@
 n(47120);
-var i, a, s, l, r = n(873546), o = n(442837), c = n(570140), d = n(38618), u = n(268967), h = n(188785);
+var i, a, l, s, r = n(873546), o = n(442837), c = n(570140), d = n(38618), u = n(268967), h = n(188785);
 let p = {}, m = {}, _ = !0, f = {}, E = !1;
 function C() {
     return u.Z;
@@ -38,12 +38,12 @@ class I extends (i = o.ZP.Store) {
         return null != t ? t[e] : null;
     }
 }
-l = 'TutorialIndicatorStore', (s = 'displayName') in (a = I) ? Object.defineProperty(a, s, {
-    value: l,
+s = 'TutorialIndicatorStore', (l = 'displayName') in (a = I) ? Object.defineProperty(a, l, {
+    value: s,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : a[s] = l, t.Z = new I(c.Z, {
+}) : a[l] = s, t.Z = new I(c.Z, {
     CONNECTION_OPEN: function (e) {
         let {tutorial: t} = e;
         E = !0, _ = !0, p = {}, null != t && (_ = t.indicators_suppressed, t.indicators_confirmed.forEach(e => p[e] = !1)), g();

@@ -1,4 +1,4 @@
-var i, a = n(442837), s = n(570140), l = n(592125), r = n(176505);
+var i, a = n(442837), l = n(570140), s = n(592125), r = n(176505);
 function o(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -24,7 +24,7 @@ class u extends (i = a.ZP.PersistedStore) {
         return null == e ? null : null !== (t = c[e]) && void 0 !== t ? t : d[e];
     }
 }
-o(u, 'displayName', 'GuildOnboardingHomeNavigationStore'), o(u, 'persistKey', 'GuildOnboardingHomeNavigationStore'), t.Z = new u(s.Z, {
+o(u, 'displayName', 'GuildOnboardingHomeNavigationStore'), o(u, 'persistKey', 'GuildOnboardingHomeNavigationStore'), t.Z = new u(l.Z, {
     CHANNEL_SELECT: function (e) {
         let {
             channelId: t,
@@ -32,12 +32,12 @@ o(u, 'displayName', 'GuildOnboardingHomeNavigationStore'), o(u, 'persistKey', 'G
         } = e;
         if (null == n || t === r.oC.GUILD_HOME)
             return;
-        let i = l.Z.getChannel(t), a = c[n], s = d[n];
+        let i = s.Z.getChannel(t), a = c[n], l = d[n];
         if (!((null == i ? void 0 : i.isThread()) && (null == i ? void 0 : i.parent_id) != null && [
-                s,
+                l,
                 a
             ].includes(null == i ? void 0 : i.parent_id)))
-            t !== a && delete c[n], t !== s && delete d[n];
+            t !== a && delete c[n], t !== l && delete d[n];
     },
     SELECT_HOME_RESOURCE_CHANNEL: function (e) {
         let {

@@ -8,7 +8,7 @@ function A(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-class x extends a.PureComponent {
+class R extends a.PureComponent {
     render() {
         let {
             member: e,
@@ -48,7 +48,7 @@ class x extends a.PureComponent {
         });
     }
 }
-class R extends a.PureComponent {
+class x extends a.PureComponent {
     isDeadInvite() {
         let {
             isPreview: e,
@@ -393,7 +393,7 @@ class R extends a.PureComponent {
                 renderUserPopout: a,
                 guildId: s
             } = this.props;
-            return null != e ? (0, i.jsx)(x, {
+            return null != e ? (0, i.jsx)(R, {
                 member: e,
                 renderUserPopout: a,
                 className: t,
@@ -402,4 +402,4 @@ class R extends a.PureComponent {
         });
     }
 }
-t.Z = R;
+t.Z = x;

@@ -3,7 +3,7 @@ n.d(t, {
         return o;
     }
 });
-var i = n(735250), a = n(470079), s = n(652844), l = n(628581), r = n(871499);
+var i = n(735250), a = n(470079), l = n(652844), s = n(628581), r = n(871499);
 function o(e) {
     let {
             selfMute: t,
@@ -14,11 +14,11 @@ function o(e) {
             onMouseEnter: u,
             onMouseLeave: h,
             ...p
-        } = e, m = t || n || o, _ = c ? r.d : r.Z, f = (0, l.Z)(t, n, o, d), {
+        } = e, m = t || n || o, _ = c ? r.d : r.Z, f = (0, s.Z)(t, n, o, d), {
             Component: E,
             play: C,
             events: g
-        } = (0, s.O)(m ? 'unmute' : 'mute');
+        } = (0, l.O)(m ? 'unmute' : 'mute');
     return a.useEffect(() => () => C(), [
         C,
         m

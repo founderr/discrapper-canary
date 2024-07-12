@@ -3,15 +3,15 @@ n.d(t, {
         return _;
     }
 });
-var i = n(735250), a = n(470079), s = n(512722), l = n.n(s), r = n(399606), o = n(618158), c = n(594174), d = n(822183), u = n(364125), h = n(610947), p = n(345392);
+var i = n(735250), a = n(470079), l = n(512722), s = n.n(l), r = n(399606), o = n(618158), c = n(594174), d = n(822183), u = n(364125), h = n(610947), p = n(345392);
 function m(e) {
     let {
             focused: t,
             channelId: n,
-            streamerId: s,
+            streamerId: l,
             stream: d
         } = e, m = a.useRef(null), _ = (0, r.e7)([c.default], () => c.default.getCurrentUser());
-    l()(null != _, 'user cannot be null'), (0, h.Z)(m, _, s, n);
+    s()(null != _, 'user cannot be null'), (0, h.Z)(m, _, l, n);
     let {
         handleClick: f,
         handleMouseDown: E,
@@ -21,7 +21,7 @@ function m(e) {
     } = (0, u.Z)({
         user: _,
         channelId: n,
-        streamerId: s,
+        streamerId: l,
         stream: d,
         focused: t,
         canvas: m.current

@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(27457), s = n(131951), l = n(862978);
+var a = n(27457), l = n(131951), s = n(862978);
 function r(e) {
     let {
             aspectRatio: t,
@@ -26,12 +26,12 @@ function r(e) {
             participant: I,
             width: x,
             ...T
-        } = e, v = s.Z.getVideoComponent();
+        } = e, v = l.Z.getVideoComponent();
     return (0, i.jsx)('div', {
         style: { width: x },
-        className: l.spaceBetweenTiles,
+        className: s.spaceBetweenTiles,
         children: (0, i.jsxs)('div', {
-            className: l.tileSizer,
+            className: s.tileSizer,
             style: { aspectRatio: t },
             children: [
                 (0, i.jsx)(a.ZP, {

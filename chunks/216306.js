@@ -18,13 +18,13 @@ E.d(_, {
         return P;
     }
 }), E(733860);
-var s = E(470079), T = E(658722), I = E.n(T), n = E(913527), A = E.n(n), t = E(442837), a = E(704215), r = E(45114), N = E(740504), L = E(605236), S = E(931261), D = E(540126), l = E(671098), U = E(703656), G = E(592125), O = E(324067), i = E(306680), M = E(709054), R = E(981631), o = E(176505), u = E(443063), c = E(490897), C = E(689938);
+var s = E(470079), T = E(658722), I = E.n(T), n = E(913527), A = E.n(n), t = E(442837), a = E(704215), r = E(45114), N = E(740504), L = E(605236), D = E(931261), S = E(540126), l = E(671098), U = E(703656), G = E(592125), O = E(324067), i = E(306680), M = E(709054), R = E(981631), o = E(176505), u = E(443063), c = E(490897), C = E(689938);
 function g(e, _) {
     e.index = _;
 }
 function d(e, _, E, T) {
     T = T.toLowerCase();
-    let n = (0, S.g)(e), A = s.useCallback((e, _) => !(n && e.channel.hasFlag(o.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== R.d4z.GUILD_DIRECTORY && (0 === _.length || I()(_, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(_)), [n]);
+    let n = (0, D.g)(e), A = s.useCallback((e, _) => !(n && e.channel.hasFlag(o.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== R.d4z.GUILD_DIRECTORY && (0 === _.length || I()(_, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(_)), [n]);
     return s.useMemo(() => {
         let e = {
             null: [],
@@ -43,7 +43,7 @@ function d(e, _, E, T) {
 }
 function f(e) {
     let _ = e.getSections();
-    if (_[D.zm] > 0)
+    if (_[S.zm] > 0)
         switch (e.getCommunitySection().getRow(0)) {
         case u.f.GUILD_HOME:
             return o.oC.GUILD_HOME;
@@ -52,7 +52,7 @@ function f(e) {
         case u.f.GUILD_MEMBER_APPLICATIONS:
             return o.oC.MEMBER_APPLICATIONS;
         }
-    for (let s = D.wd; s < e.voiceChannelsSectionNumber; s++)
+    for (let s = S.wd; s < e.voiceChannelsSectionNumber; s++)
         if (_[s] > 0) {
             var E;
             let _ = null === (E = e.getChannelFromSectionRow(s, 0)) || void 0 === E ? void 0 : E.channel;
