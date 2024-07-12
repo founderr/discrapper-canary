@@ -1,6 +1,6 @@
 n(47120);
-var s = n(735250), a = n(470079), r = n(512722), i = n.n(r), l = n(399606), o = n(481060), c = n(626135), d = n(709054), _ = n(914788), u = n(546791), E = n(259756), T = n(785681), I = n(985002), R = n(858719), C = n(780985), p = n(880257), g = n(631885), A = n(240351), N = n(792258), m = n(657825), f = n(198952), S = n(329242), h = n(895328), M = n(292352), x = n(981631), b = n(689938), O = n(661624);
-function P() {
+var s = n(735250), a = n(470079), r = n(512722), i = n.n(r), l = n(399606), o = n(481060), c = n(626135), d = n(709054), _ = n(914788), u = n(546791), E = n(259756), T = n(785681), I = n(985002), R = n(858719), C = n(780985), p = n(880257), g = n(631885), A = n(240351), m = n(792258), N = n(657825), f = n(198952), S = n(329242), h = n(895328), M = n(292352), x = n(981631), b = n(689938), O = n(661624);
+function L() {
     let e = a.useCallback(() => {
         (0, o.openModalLazy)(async () => {
             let {default: e} = await n.e('66462').then(n.bind(n, 756226));
@@ -19,7 +19,7 @@ function P() {
         })
     });
 }
-function L(e) {
+function P(e) {
     let {displayType: t} = e, n = a.useCallback(() => {
             (0, o.showToast)((0, o.createToast)(b.Z.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE));
         }, []), r = (0, p.Z)(), l = (0, R.ws)(t), c = (0, R.C7)(t), {
@@ -34,15 +34,15 @@ function L(e) {
     i()(C, 'No text for action type');
     let h = C.sectionHeader(c), x = a.useCallback(e => {
             let {row: t} = e, n = l[t];
-            return (0, u.iB)(n) ? (0, s.jsx)(m.Z, {
+            return (0, u.iB)(n) ? (0, s.jsx)(N.Z, {
                 userId: n.entity_id,
                 timestamp: d.default.extractTimestamp(n.event_id),
                 timestampFormatter: C.timestampFormatter
-            }, n.event_id) : (0, u.f0)(n) ? (0, s.jsx)(N.Z, { guildId: n.entity_id }, n.event_id) : void 0;
+            }, n.event_id) : (0, u.f0)(n) ? (0, s.jsx)(m.Z, { guildId: n.entity_id }, n.event_id) : void 0;
         }, [
             l,
             C.timestampFormatter
-        ]), P = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
+        ]), L = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsx)(o.Text, {
                     className: O.sectionHeader,
@@ -65,17 +65,17 @@ function L(e) {
         ]);
     if (0 === l.length)
         return null;
-    let L = l.slice(0, g);
+    let P = l.slice(0, g);
     return (0, s.jsxs)('div', {
         className: O.actionSection,
         children: [
-            P(),
+            L(),
             (0, s.jsx)('div', {
                 className: O.actions,
-                style: { maxHeight: 65 * L.length },
-                children: L.map((e, t) => x({ row: t }))
+                style: { maxHeight: 65 * P.length },
+                children: P.map((e, t) => x({ row: t }))
             }),
-            L.length !== c ? (0, s.jsx)(o.Clickable, {
+            P.length !== c ? (0, s.jsx)(o.Clickable, {
                 className: O.loadMoreBar,
                 onClick: S,
                 role: 'button',
@@ -85,7 +85,7 @@ function L(e) {
                 }) : (0, s.jsx)(o.Text, {
                     className: O.loadMore,
                     variant: 'text-sm/bold',
-                    children: b.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({ pageSize: Math.min(c - L.length, M.iB) })
+                    children: b.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({ pageSize: Math.min(c - P.length, M.iB) })
                 })
             }) : null
         ]
@@ -173,7 +173,7 @@ t.Z = e => {
                 className: O.connectedCounter,
                 children: [
                     (0, s.jsx)(v, {}),
-                    (0, s.jsx)(P, {})
+                    (0, s.jsx)(L, {})
                 ]
             }),
             (0, s.jsxs)('div', {
@@ -200,7 +200,7 @@ t.Z = e => {
                                 className: O.activityOverview,
                                 children: a ? n.map(e => {
                                     let [t] = e;
-                                    return (0, s.jsx)(L, { displayType: t }, ''.concat(t, '-list'));
+                                    return (0, s.jsx)(P, { displayType: t }, ''.concat(t, '-list'));
                                 }) : (0, s.jsx)(h.Z, {
                                     className: O.emptyActivity,
                                     text: null != i ? i : ''

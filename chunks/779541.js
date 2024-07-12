@@ -1,9 +1,9 @@
-function n(e) {
+function a(e) {
     if ('undefined' != typeof Symbol && null != e[Symbol.iterator] || null != e['@@iterator'])
         return Array.from(e);
 }
 r.d(t, {
     Z: function () {
-        return n;
+        return a;
     }
 });

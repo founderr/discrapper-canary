@@ -1,9 +1,9 @@
 t(47120), t(852437);
 var i = t(735250), l = t(470079), a = t(481060), r = t(100527), s = t(367907), o = t(906732), c = t(541099), u = t(695676), d = t(173790), m = t(361917), p = t(684256), _ = t(314734), E = t(981631), A = t(933320);
-let h = {
+let f = {
         width: _.Gy,
         height: _.lv
-    }, f = { height: _.lv };
+    }, h = { height: _.lv };
 function N(e) {
     let {children: n} = e, [t, a] = l.useState([{ type: u.gc.HOME }]), [r, s] = l.useState({}), o = t[t.length - 1], c = l.useCallback(e => {
             a(n => [
@@ -62,7 +62,7 @@ function C(e) {
         } = (0, u.hH)();
     if (null == c)
         return null;
-    let h = E(u.gc.LIST), N = E(u.gc.APPLICATION);
+    let f = E(u.gc.LIST), N = E(u.gc.APPLICATION);
     return (0, i.jsxs)(a.Slides, {
         activeSlide: c.type,
         width: _.Gy,
@@ -71,7 +71,7 @@ function C(e) {
                 id: u.gc.HOME,
                 children: (0, i.jsx)('div', {
                     className: A.slideContent,
-                    style: f,
+                    style: h,
                     children: (0, i.jsx)(m.Z, {
                         setScroller: o,
                         channel: n,
@@ -85,14 +85,14 @@ function C(e) {
                 id: u.gc.LIST,
                 children: (0, i.jsx)('div', {
                     className: A.slideContent,
-                    style: f,
-                    children: null != h && (0, i.jsx)(p.Z, {
+                    style: h,
+                    children: null != f && (0, i.jsx)(p.Z, {
                         channel: n,
                         entrypoint: t,
-                        title: h.title,
-                        look: h.look,
-                        items: h.items,
-                        sectionName: h.sectionName
+                        title: f.title,
+                        look: f.look,
+                        items: f.items,
+                        sectionName: f.sectionName
                     })
                 })
             }),
@@ -100,7 +100,7 @@ function C(e) {
                 id: u.gc.APPLICATION,
                 children: (0, i.jsx)('div', {
                     className: A.slideContent,
-                    style: f,
+                    style: h,
                     children: null != N && (0, i.jsx)(d.Z, {
                         channel: n,
                         application: N.application,
@@ -134,7 +134,7 @@ n.Z = l.memo(l.forwardRef(function (e, n) {
     }, [a]), (0, i.jsx)('div', {
         className: A.drawerSizingWrapper,
         ref: n,
-        style: h,
+        style: f,
         children: (0, i.jsx)('div', {
             className: A.contentWrapper,
             children: (0, i.jsx)(o.Gt, {

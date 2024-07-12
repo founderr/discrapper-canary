@@ -17,7 +17,7 @@ function p(e, t) {
     }
     return r;
 }
-function y(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
         t % 2 ? p(Object(r), !0).forEach(function (t) {
@@ -28,8 +28,8 @@ function y(e) {
     }
     return e;
 }
-var g = function (e) {
-    var t = e.getItemString, r = e.keyPath, n = e.labelRenderer, i = e.styling, c = e.value, p = e.valueRenderer, g = e.isCustomNode, v = (0, s.Z)(e, h), m = g(c) ? 'Custom' : (0, u.Z)(c), O = {
+var y = function (e) {
+    var t = e.getItemString, r = e.keyPath, n = e.labelRenderer, i = e.styling, c = e.value, p = e.valueRenderer, y = e.isCustomNode, v = (0, s.Z)(e, h), m = y(c) ? 'Custom' : (0, u.Z)(c), O = {
             getItemString: t,
             key: r[0],
             keyPath: r,
@@ -38,9 +38,9 @@ var g = function (e) {
             styling: i,
             value: c,
             valueRenderer: p
-        }, w = y(y(y({}, v), O), {}, {
+        }, w = g(g(g({}, v), O), {}, {
             data: c,
-            isCustomNode: g
+            isCustomNode: y
         });
     switch (m) {
     case 'Object':
@@ -102,7 +102,7 @@ var g = function (e) {
         }));
     }
 };
-g.propTypes = {
+y.propTypes = {
     getItemString: c().func.isRequired,
     keyPath: c().arrayOf(c().oneOfType([
         c().string,
@@ -113,4 +113,4 @@ g.propTypes = {
     value: c().any,
     valueRenderer: c().func.isRequired,
     isCustomNode: c().func.isRequired
-}, t.Z = g;
+}, t.Z = y;

@@ -6,13 +6,13 @@ t.d(n, {
         return x;
     }
 }), t(47120), t(653041), t(536091);
-var i = t(470079), l = t(392711), a = t.n(l), r = t(373793), s = t(442837), o = t(911969), c = t(127255), u = t(654455), d = t(213459), m = t(807169), p = t(104793), _ = t(674588), E = t(809547), A = t(822245), h = t(631827), f = t(783097), N = t(689079), C = t(665692);
+var i = t(470079), l = t(392711), a = t.n(l), r = t(373793), s = t(442837), o = t(911969), c = t(127255), u = t(654455), d = t(213459), m = t(807169), p = t(104793), _ = t(674588), E = t(809547), A = t(822245), f = t(631827), h = t(783097), N = t(689079), C = t(665692);
 function v(e, n) {
     let t = A.Z.getScoreWithoutLoadingLatest(e.id);
     return A.Z.getScoreWithoutLoadingLatest(n.id) - t;
 }
 function I(e, n) {
-    let t = (0, f.$d)(e), i = (0, f.$d)(n);
+    let t = (0, h.$d)(e), i = (0, h.$d)(n);
     return (0, d.un)(t, i);
 }
 function P(e, n) {
@@ -87,7 +87,7 @@ function x(e) {
                     let n = e.descriptor.application;
                     null != n && !u.has(n.id) && (Object.keys(e.commands).length > 0 || !t) && c.push(n);
                 }
-            return i && c.push(f.Wx), {
+            return i && c.push(h.Wx), {
                 apps: c,
                 loading: (null == r ? void 0 : r.fetchState.fetching) === !0 || (null == s ? void 0 : s.fetchState.fetching) === !0
             };
@@ -102,7 +102,7 @@ function x(e) {
             var e;
             if (!s)
                 return [];
-            return (0, h.N)(A, {
+            return (0, f.N)(A, {
                 limit: l,
                 filterPredicates: [function (e) {
                         let n = (0, m.k)(e, o.yU.CHAT), t = {};
@@ -251,7 +251,7 @@ function x(e) {
                     let {application: n} = e;
                     return n;
                 });
-            return (0, h.N)(i, {
+            return (0, f.N)(i, {
                 limit: r,
                 filterPredicates: [function (e) {
                         let n = (0, m.k)(e, o.yU.CHAT);
@@ -278,22 +278,22 @@ function x(e) {
                     }(n)],
                 bucketPredicates: [
                     function (e) {
-                        return n => (0, f.$d)(n).toLocaleLowerCase().startsWith(e.toLocaleLowerCase());
+                        return n => (0, h.$d)(n).toLocaleLowerCase().startsWith(e.toLocaleLowerCase());
                     }(e = t),
                     function (e) {
-                        return n => (0, f.$d)(n).toLocaleLowerCase().includes(e.toLocaleLowerCase());
+                        return n => (0, h.$d)(n).toLocaleLowerCase().includes(e.toLocaleLowerCase());
                     }(e),
                     function (e) {
                         return n => {
                             var t, i;
-                            let l = null === (t = (0, f.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
+                            let l = null === (t = (0, h.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
                             return null !== (i = null == l ? void 0 : l.startsWith(e.toLocaleLowerCase())) && void 0 !== i && i;
                         };
                     }(e),
                     function (e) {
                         return n => {
                             var t, i;
-                            let l = null === (t = (0, f.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
+                            let l = null === (t = (0, h.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
                             return null !== (i = null == l ? void 0 : l.includes(e.toLocaleLowerCase())) && void 0 !== i && i;
                         };
                     }(e)

@@ -13,10 +13,10 @@ function r(e) {
             maxHeightOverride: o,
             maxAnimationHeight: c
         } = e, u = (0, l.e7)([a.Z], () => a.Z.useReducedMotion), [d, m] = i.useState(null), p = i.useCallback(() => {
-        }, []), _ = i.useRef(), E = i.useRef(), A = i.useRef(n), h = i.useRef(r);
-    h.current = r;
-    let f = i.useRef(s);
-    f.current = s;
+        }, []), _ = i.useRef(), E = i.useRef(), A = i.useRef(n), f = i.useRef(r);
+    f.current = r;
+    let h = i.useRef(s);
+    h.current = s;
     let N = i.useRef(o);
     N.current = o;
     let C = i.useRef(c);
@@ -30,7 +30,7 @@ function r(e) {
             return;
         let {height: a} = d.getBoundingClientRect();
         !t && (null == _.current || a < _.current) && (_.current = a), t && (null == E.current || a > E.current) && (E.current = a);
-        let r = null !== (e = f.current) && void 0 !== e ? e : _.current, s = null !== (i = N.current) && void 0 !== i ? i : E.current, o = A.current !== n;
+        let r = null !== (e = h.current) && void 0 !== e ? e : _.current, s = null !== (i = N.current) && void 0 !== i ? i : E.current, o = A.current !== n;
         if (A.current = n, null == r || null == s || o)
             return;
         let c = Math.min(null !== (l = C.current) && void 0 !== l ? l : s, s), u = t ? r : c, m = t ? c : r;
@@ -39,7 +39,7 @@ function r(e) {
         I(!0), d.style.height = ''.concat(u, 'px'), d.style.transition = '';
         let p = null;
         return p = requestAnimationFrame(() => {
-            p = null, d.style.height = ''.concat(m, 'px'), d.style.transition = 'height '.concat(h.current, 'ms ease-in-out');
+            p = null, d.style.height = ''.concat(m, 'px'), d.style.transition = 'height '.concat(f.current, 'ms ease-in-out');
         }), () => null != p ? cancelAnimationFrame(p) : void 0;
     }, [
         n,

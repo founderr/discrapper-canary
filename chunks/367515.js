@@ -29,7 +29,7 @@ function C(e) {
         }, [
             p,
             t
-        ]), N = a.useCallback(() => {
+        ]), m = a.useCallback(() => {
             i()(void 0 !== p, 'User must be logged in to decline a link request'), (0, o.openModalLazy)(async () => {
                 let {default: e} = await n.e('69015').then(n.bind(n, 247265));
                 return n => (0, s.jsx)(e, {
@@ -58,7 +58,7 @@ function C(e) {
                     icon: o.CloseSmallIcon,
                     className: R.__invalid_actionDeny,
                     tooltip: I.Z.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
-                    onClick: N
+                    onClick: m
                 }) : (0, s.jsxs)(s.Fragment, {
                     children: [
                         C ? null : (0, s.jsx)(u.Z, {

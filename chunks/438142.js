@@ -45,7 +45,7 @@ function j(t) {
 function z(t, e, r) {
     return ('string' == typeof r && r.toLowerCase(), 'INPUT' === e && ('radio' === r || 'checkbox' === r)) ? t.getAttribute('value') || '' : t.value;
 }
-let $ = 1, q = RegExp('[^a-z0-9-_:]');
+let q = 1, $ = RegExp('[^a-z0-9-_:]');
 function Z(t) {
     return t ? t.replace(/[\S]/g, '*') : '';
 }
@@ -291,7 +291,7 @@ function tR(t, e) {
                         if (t instanceof HTMLFormElement)
                             return 'form';
                         let e = t.tagName.toLowerCase().trim();
-                        return q.test(e) ? 'div' : e;
+                        return $.test(e) ? 'div' : e;
                     }(t), M = {};
                 for (let {
                             name: e,
@@ -464,7 +464,7 @@ function tR(t, e) {
             }
         }
         return !1;
-    }(G, D) && (U || G.type !== A.Text || G.isStyle || G.textContent.replace(/^\s+|\s+$/gm, '').length) ? $++ : -2;
+    }(G, D) && (U || G.type !== A.Text || G.isStyle || G.textContent.replace(/^\s+|\s+$/gm, '').length) ? q++ : -2;
     let m = Object.assign(G, { id: r });
     if (t.__sn = m, -2 === r)
         return null;
@@ -1530,8 +1530,8 @@ class tj {
         this.restorePatches.forEach(t => t());
     }
 }
-for (var tz = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/', t$ = 'undefined' == typeof Uint8Array ? [] : new Uint8Array(256), tq = 0; tq < tz.length; tq++)
-    t$[tz.charCodeAt(tq)] = tq;
+for (var tz = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/', tq = 'undefined' == typeof Uint8Array ? [] : new Uint8Array(256), t$ = 0; t$ < tz.length; t$++)
+    tq[tz.charCodeAt(t$)] = t$;
 var tZ = function (t) {
     var e, r = new Uint8Array(t), n = r.length, _ = '';
     for (e = 0; e < n; e += 3)
@@ -3215,7 +3215,7 @@ async function ej(t, e, r) {
         ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && m.kg.error('[Replay] Failed to capture fetch breadcrumb', t);
     }
 }
-let ez = null, e$ = t => e => {
+let ez = null, eq = t => e => {
         if (!t.isEnabled())
             return;
         let r = function (t) {
@@ -3261,7 +3261,7 @@ let ez = null, e$ = t => e => {
         if (!!r)
             t7(t, r);
     };
-function eq(t) {
+function e$(t) {
     return !!(t && t.on);
 }
 async function eZ(t) {
@@ -3907,7 +3907,7 @@ class e4 {
             K.document.addEventListener('visibilitychange', this._handleVisibilityChange), K.addEventListener('blur', this._handleWindowBlur), K.addEventListener('focus', this._handleWindowFocus), K.addEventListener('keydown', this._handleKeyboardEvent), this.clickDetector && this.clickDetector.addListeners(), !this._hasInitializedCoreListeners && (!function (t) {
                 var e;
                 let r = (0, L.Gd)().getScope(), n = (0, L.Gd)().getClient();
-                r && r.addScopeListener(e$(t)), (0, b.oq)('dom', ei(t)), (0, b.oq)('history', (e = t, t => {
+                r && r.addScopeListener(eq(t)), (0, b.oq)('dom', ei(t)), (0, b.oq)('history', (e = t, t => {
                     if (!e.isEnabled())
                         return;
                     let r = function (t) {

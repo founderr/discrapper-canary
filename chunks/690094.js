@@ -43,10 +43,10 @@ function u(e, t) {
         if (!(p in i))
             throw Error('Unable to parse color from object: ' + JSON.stringify(e));
         this.model = i[p];
-        var y = n[this.model].labels, g = [];
-        for (r = 0; r < y.length; r++)
-            g.push(e[y[r]]);
-        this.color = f(g);
+        var g = n[this.model].labels, y = [];
+        for (r = 0; r < g.length; r++)
+            y.push(e[g[r]]);
+        this.color = f(y);
     }
     if (c[this.model])
         for (r = 0, l = n[this.model].channels; r < l; r++) {

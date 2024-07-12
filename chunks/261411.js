@@ -142,8 +142,8 @@ function i(e, t, r, n) {
     } else if (h <= n && !d)
         return f(l, b).entries;
     if ('Iterable' === e) {
-        var p = f(l, l + n - 1), y = p.hasMore, g = p.entries;
-        u = y ? [].concat((0, a.Z)(g), (0, a.Z)(o(l + n, l + 2 * n - 1, n))) : g;
+        var p = f(l, l + n - 1), g = p.hasMore, y = p.entries;
+        u = g ? [].concat((0, a.Z)(y), (0, a.Z)(o(l + n, l + 2 * n - 1, n))) : y;
     } else
         u = d ? o(l, b, n) : [].concat((0, a.Z)(f(0, n - 5).entries), (0, a.Z)(o(n - 4, h - 5, n)), (0, a.Z)(f(h - 4, h - 1).entries));
     return u;

@@ -5,23 +5,23 @@ let T = (0, d.uk)('poggermode_applause', r.Z.getSoundpack()), I = !1, R = !1, C 
             T.loop(), I = !0;
     }, A = () => {
         T.stop(), I = !1;
-    }, N = () => {
+    }, m = () => {
         let e = _.Z.isEnabled(), t = _.Z.comboSoundsEnabled;
         return !!e && !!t && null != o.Z.getChannelId() || !1;
-    }, m = () => {
-        if (0 === C.length || !N() || R)
+    }, N = () => {
+        if (0 === C.length || !m() || R)
             return;
         R = !0;
         let [e, t] = C[C.length - 1];
         (0, d.GN)(e, t), p = setTimeout(f, 1000);
     }, f = () => {
-        C.pop(), R = !1, m();
+        C.pop(), R = !1, N();
     }, S = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1, n = l.Z.isConnected();
         C.push([
             e,
             t * (n ? 0.1 : 1)
-        ]), m();
+        ]), N();
     };
 class h extends a.Z {
     _initialize() {
@@ -43,7 +43,7 @@ class h extends a.Z {
     }
     startAudio() {
         var e;
-        if (!N())
+        if (!m())
             return;
         let t = o.Z.getChannelId();
         if (null == t)
@@ -52,7 +52,7 @@ class h extends a.Z {
         s && r >= 7 ? g() : A();
     }
     playAchievementUnlockSound() {
-        if (!!N())
+        if (!!m())
             S('poggermode_achievement_unlock');
     }
 }

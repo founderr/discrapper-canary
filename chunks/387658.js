@@ -3,7 +3,7 @@ t.d(n, {
         return O;
     }
 }), t(47120);
-var i = t(735250), l = t(470079), a = t(140835), r = t(246521), s = t(481060), o = t(911969), c = t(555573), u = t(213459), d = t(10718), m = t(895924), p = t(583027), _ = t(585483), E = t(499254), A = t(541099), h = t(827498), f = t(496158), N = t(676161), C = t(660090), v = t(783097), I = t(176412), P = t(870205), x = t(981631), T = t(689079), g = t(689938), R = t(763963);
+var i = t(735250), l = t(470079), a = t(140835), r = t(246521), s = t(481060), o = t(911969), c = t(555573), u = t(213459), d = t(10718), m = t(895924), p = t(583027), _ = t(585483), E = t(499254), A = t(541099), f = t(827498), h = t(496158), N = t(676161), C = t(660090), v = t(783097), I = t(176412), P = t(870205), x = t(981631), T = t(689079), g = t(689938), R = t(763963);
 function S(e) {
     var n, t;
     let {
@@ -11,9 +11,9 @@ function S(e) {
             command: o,
             section: u,
             sectionName: d
-        } = e, f = l.useCallback(() => {
+        } = e, h = l.useCallback(() => {
             let e = A.Z.entrypoint();
-            E.y(h.ti.COMMAND), (0, p.Mo)({
+            E.y(f.ti.COMMAND), (0, p.Mo)({
                 command: o,
                 location: m.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                 sectionName: d
@@ -52,7 +52,7 @@ function S(e) {
         ]);
     return (0, i.jsxs)(s.Clickable, {
         className: R.command,
-        onClick: f,
+        onClick: h,
         children: [
             C,
             N ? (0, i.jsx)(a.F, {}) : (0, i.jsx)(L, {
@@ -68,7 +68,7 @@ function L(e) {
             channel: n,
             command: t,
             sectionName: a
-        } = e, o = (0, u.PL)(!0, !0), c = (0, u.LD)(n.guild_id, !0), d = (0, f.D)(n), [p, _] = l.useState(!1), A = l.useCallback(async e => {
+        } = e, o = (0, u.PL)(!0, !0), c = (0, u.LD)(n.guild_id, !0), d = (0, h.D)(n), [p, _] = l.useState(!1), A = l.useCallback(async e => {
             e.stopPropagation();
             try {
                 await (0, I.L_)({
@@ -82,7 +82,7 @@ function L(e) {
                     optionValues: {},
                     context: d,
                     sectionName: a
-                }), E.y(h.ti.COMMAND));
+                }), E.y(f.ti.COMMAND));
             } finally {
                 _(!1);
             }
@@ -170,7 +170,7 @@ function O(e) {
             sortOrder: _,
             setSortOrder: E,
             commands: A,
-            canSort: h
+            canSort: f
         } = (0, C.Z)({
             sectionId: a.id,
             commandsByActiveSection: u
@@ -181,7 +181,7 @@ function O(e) {
         a.id,
         c
     ]);
-    let f = (0, N.Z)({
+    let h = (0, N.Z)({
         channel: t,
         commands: A,
         limit: 5
@@ -192,7 +192,7 @@ function O(e) {
             (0, i.jsx)(M, {
                 channel: t,
                 section: p,
-                commands: f,
+                commands: h,
                 headerName: g.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
                 sectionName: r
             }),
@@ -202,7 +202,7 @@ function O(e) {
                 commands: A,
                 headerName: g.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
                 sectionName: r,
-                children: h && (0, i.jsx)(P.Z, {
+                children: f && (0, i.jsx)(P.Z, {
                     sortOrder: _,
                     onSortOptionClick: E
                 })

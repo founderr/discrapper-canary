@@ -345,10 +345,10 @@ e = 0, r = function () {
                 return 'hcg';
         }
     });
-    var $ = o.unpack, q = o.last, Z = Math.round, J = function () {
+    var q = o.unpack, $ = o.last, Z = Math.round, J = function () {
             for (var t = [], e = arguments.length; e--;)
                 t[e] = arguments[e];
-            var r = $(t, 'rgba'), n = r[0], _ = r[1], a = r[2], i = r[3], o = q(t) || 'auto';
+            var r = q(t, 'rgba'), n = r[0], _ = r[1], a = r[2], i = r[3], o = $(t) || 'auto';
             void 0 === i && (i = 1), 'auto' === o && (o = i < 1 ? 'rgba' : 'rgb'), n = Z(n), _ = Z(_);
             var E = '000000' + (n << 16 | _ << 8 | (a = Z(a))).toString(16);
             E = E.substr(E.length - 6);
@@ -609,14 +609,14 @@ e = 0, r = function () {
                 i,
                 o
             ];
-        }, tX = o.unpack, tj = o.unpack, tz = o.DEG2RAD, t$ = Math.sin, tq = Math.cos, tZ = function () {
+        }, tX = o.unpack, tj = o.unpack, tz = o.DEG2RAD, tq = Math.sin, t$ = Math.cos, tZ = function () {
             for (var t = [], e = arguments.length; e--;)
                 t[e] = arguments[e];
             var r = tj(t, 'lch'), n = r[0], _ = r[1], a = r[2];
             return isNaN(a) && (a = 0), [
                 n,
-                tq(a *= tz) * _,
-                t$(a) * _
+                t$(a *= tz) * _,
+                tq(a) * _
             ];
         }, tJ = o.unpack, tQ = function () {
             for (var t = [], e = arguments.length; e--;)
@@ -1203,7 +1203,7 @@ e = 0, r = function () {
                 n[0] += eK(o[0], 2) * i, n[1] += eK(o[1], 2) * i, n[2] += eK(o[2], 2) * i, n[3] += o[3] * i;
             }
             return n[0] = ek(n[0]), n[1] = ek(n[1]), n[2] = ek(n[2]), n[3] > 0.9999999 && (n[3] = 1), new R(eY(n));
-        }, ej = o.type, ez = Math.pow, e$ = function (t) {
+        }, ej = o.type, ez = Math.pow, eq = function (t) {
             var e = 'rgb', r = T('#ccc'), n = 0, _ = [
                     0,
                     1
@@ -1388,7 +1388,7 @@ e = 0, r = function () {
             }, f.nodata = function (t) {
                 return null != t ? (r = T(t), f) : r;
             }, f;
-        }, eq = function (t) {
+        }, e$ = function (t) {
             for (var e = [
                         1,
                         1
@@ -1441,7 +1441,7 @@ e = 0, r = function () {
             else if (t.length >= 5)
                 s = t.map(function (t) {
                     return t.lab();
-                }), c = eq(I = t.length - 1), _ = function (t) {
+                }), c = e$(I = t.length - 1), _ = function (t) {
                     var e = 1 - t;
                     return new R([
                         0,
@@ -2051,7 +2051,7 @@ e = 0, r = function () {
     }, T.bezier = function (t) {
         var e = eZ(t);
         return e.scale = function () {
-            return e$(e);
+            return eq(e);
         }, e;
     }, T.blend = eJ, T.cubehelix = function (t, e, r, n, _) {
         void 0 === t && (t = 300), void 0 === e && (e = -1.5), void 0 === r && (r = 1), void 0 === n && (n = 1), void 0 === _ && (_ = [
@@ -2092,7 +2092,7 @@ e = 0, r = function () {
         for (var t = '#', e = 0; e < 6; e++)
             t += '0123456789abcdef'.charAt(e8(16 * e7()));
         return new R(t, 'hex');
-    }, T.scale = e$, T.analyze = ra, T.contrast = function (t, e) {
+    }, T.scale = eq, T.analyze = ra, T.contrast = function (t, e) {
         t = new R(t), e = new R(e);
         var r = t.luminance(), n = e.luminance();
         return r > n ? (r + 0.05) / (n + 0.05) : (n + 0.05) / (r + 0.05);
@@ -2126,13 +2126,13 @@ e = 0, r = function () {
         }
     }, T.scales = {
         cool: function () {
-            return e$([
+            return eq([
                 T.hsl(180, 1, 0.9),
                 T.hsl(250, 0.7, 0.4)
             ]);
         },
         hot: function () {
-            return e$([
+            return eq([
                 '#000',
                 '#f00',
                 '#ff0',

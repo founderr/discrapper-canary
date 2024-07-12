@@ -1,10 +1,10 @@
 r.d(t, {
     Z: function () {
-        return i;
+        return n;
     }
 });
-var n = r(192617);
-function i(e) {
+var a = r(192617);
+function n(e) {
     if (Array.isArray(e))
-        return (0, n.Z)(e);
+        return (0, a.Z)(e);
 }

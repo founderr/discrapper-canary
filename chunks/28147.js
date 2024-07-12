@@ -3,7 +3,7 @@ t.d(n, {
         return O;
     }
 }), t(47120);
-var i = t(735250), l = t(470079), a = t(392711), r = t.n(a), s = t(209173), o = t(110924), c = t(555573), u = t(895924), d = t(809547), m = t(583027), p = t(585483), _ = t(499254), E = t(541099), A = t(827498), h = t(392370), f = t(98880), N = t(520315), C = t(532309), v = t(561160), I = t(41558), P = t(106771), x = t(79984), T = t(314734), g = t(981631), R = t(689938), S = t(933693);
+var i = t(735250), l = t(470079), a = t(392711), r = t.n(a), s = t(209173), o = t(110924), c = t(555573), u = t(895924), d = t(809547), m = t(583027), p = t(585483), _ = t(499254), E = t(541099), A = t(827498), f = t(392370), h = t(98880), N = t(520315), C = t(532309), v = t(561160), I = t(41558), P = t(106771), x = t(79984), T = t(314734), g = t(981631), R = t(689938), S = t(933693);
 let L = Array(6).fill(0).map((e, n) => n), M = [
         ,
         ,
@@ -22,9 +22,9 @@ function y(e) {
             loading: p,
             isEmptyState: _,
             commandResults: E,
-            hasCommandResults: f,
+            hasCommandResults: h,
             applicationResults: N
-        } = (0, h.pe)({
+        } = (0, f.pe)({
             channel: n,
             query: t,
             searchesActivities: c,
@@ -33,7 +33,7 @@ function y(e) {
         }), {
             fetchState: C,
             applicationResults: I
-        } = (0, h.Q2)({
+        } = (0, f.Q2)({
             query: t,
             channel: n,
             fetches: a !== A._b.VOICE
@@ -66,7 +66,7 @@ function y(e) {
         textContent: a === A._b.TEXT ? R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
     }) : (0, i.jsxs)('div', {
         children: [
-            f && (0, i.jsx)(b, {
+            h && (0, i.jsx)(b, {
                 channel: n,
                 commandResults: E,
                 query: t
@@ -93,14 +93,14 @@ function j(e) {
             hasCommandResults: p,
             applicationResults: _,
             hasApplicationResults: E
-        } = (0, h.pe)({
+        } = (0, f.pe)({
             channel: n,
             query: t,
             commandLimit: 10,
             searchesCommands: o,
             searchesBots: c,
             searchesActivities: s
-        }), f = l.useMemo(() => _.map(e => ({
+        }), h = l.useMemo(() => _.map(e => ({
             application: e,
             installOnDemand: !1
         })), [_]);
@@ -116,7 +116,7 @@ function j(e) {
                 query: t
             }),
             E && (0, i.jsx)(H, {
-                applicationResults: f,
+                applicationResults: h,
                 query: t,
                 searchesBots: c
             })
@@ -132,8 +132,8 @@ function b(e) {
         } = e, s = a.length > 4, d = l.useMemo(() => s ? a.slice(0, 4) : a, [
             a,
             s
-        ]), [h, f] = l.useState(!1), C = l.useCallback(() => f(e => !e), []), v = (null !== (n = (0, o.Z)(r)) && void 0 !== n ? n : r)[0] !== r[0], x = h && !v;
-    l.useLayoutEffect(() => f(!1), [v]);
+        ]), [f, h] = l.useState(!1), C = l.useCallback(() => h(e => !e), []), v = (null !== (n = (0, o.Z)(r)) && void 0 !== n ? n : r)[0] !== r[0], x = f && !v;
+    l.useLayoutEffect(() => h(!1), [v]);
     let {
             ref: L,
             isTransitioning: M,
@@ -200,7 +200,7 @@ function Z(e) {
     return (0, i.jsx)('div', {
         className: S.searchOpenAppDetailAppCard,
         ref: e => n.current = e,
-        children: (0, i.jsx)(f.kA, {
+        children: (0, i.jsx)(h.kA, {
             ...e,
             tracksImpression: !1
         })
@@ -250,7 +250,7 @@ function H(e) {
                         } = e;
                         return (0, i.jsx)(Z, {
                             application: t,
-                            look: f.U4.LARGE_BANNER,
+                            look: h.U4.LARGE_BANNER,
                             location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
                             sectionName: A.L3.SEARCH,
                             resultsPosition: n,
@@ -265,7 +265,7 @@ function H(e) {
     });
 }
 function U(e) {
-    let n = (0, f.cG)(e);
+    let n = (0, h.cG)(e);
     return (0, i.jsx)(P.Z, {
         application: e.application,
         onClick: n,

@@ -71,15 +71,15 @@ t.Z = e => {
             N,
             I,
             S
-        ]), y = (0, l.Z)(f);
+        ]), M = (0, l.Z)(f);
     return (o.useEffect(() => {
-        E && f && !y && (h(), U());
+        E && f && !M && (h(), U());
     }, [
         f,
         E,
         h,
         U,
-        y
+        M
     ]), o.useEffect(() => {
         E && !A && v && setTimeout(() => {
             h(), U();

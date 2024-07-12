@@ -3,7 +3,7 @@ r.d(t, {
         return k;
     }
 });
-var a = r(521464), n = r(157680), s = r(15393), o = r(337309), i = r(774375), c = r(748024), u = r(692378), l = r(870271), b = r(599295), f = r(470079), d = r(639519), h = r.n(d), p = r(949179), y = r(261411), g = r(852153), v = r(703205);
+var a = r(521464), n = r(157680), s = r(15393), o = r(337309), i = r(774375), c = r(748024), u = r(692378), l = r(870271), b = r(599295), f = r(470079), d = r(639519), h = r.n(d), p = r(949179), g = r(261411), y = r(852153), v = r(703205);
 function m(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -73,7 +73,7 @@ var k = function (e) {
             value: function () {
                 var e = this.props, t = e.getItemString, r = e.nodeTypeIndicator, a = e.nodeType, n = e.data, s = e.hideRoot, o = e.createItemString, i = e.styling, c = e.collectionLimit, u = e.keyPath, d = e.labelRenderer, h = e.expandable, m = this.state.expanded, w = m || s && 0 === this.props.level ? function e(t, r, a) {
                         var n = t.nodeType, s = t.data, o = t.collectionLimit, i = t.circularCache, c = t.keyPath, u = t.postprocessValue, d = t.sortObjectKeys, h = [];
-                        return (0, y.Z)(n, s, d, o, r, a).forEach(function (r) {
+                        return (0, g.Z)(n, s, d, o, r, a).forEach(function (r) {
                             if (void 0 !== r.to)
                                 h.push(f.createElement(v.Z, (0, b.Z)({}, t, {
                                     key: 'ItemRange--'.concat(r.from, '-').concat(r.to),
@@ -83,7 +83,7 @@ var k = function (e) {
                                 })));
                             else {
                                 var a = r.key, n = r.value, s = -1 !== i.indexOf(n);
-                                h.push(f.createElement(g.Z, (0, b.Z)({}, t, {
+                                h.push(f.createElement(y.Z, (0, b.Z)({}, t, {
                                     postprocessValue: u,
                                     collectionLimit: o,
                                     key: 'Node--'.concat(a),

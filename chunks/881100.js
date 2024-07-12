@@ -3,7 +3,7 @@ n.d(t, {
         return k;
     }
 });
-var s = n(399606), a = n(780384), r = n(230711), i = n(410030), l = n(594174), o = n(424218), c = n(380684), d = n(74538), _ = n(474936), u = n(981631), E = n(526761), T = n(689938), I = n(323780), R = n(101732), C = n(450598), p = n(633030), g = n(97942), A = n(269987), N = n(548629), m = n(507084), f = n(680313), S = n(926433), h = n(302036), M = n(994554), x = n(1549), b = n(13327), O = n(59137), P = n(405991), L = n(24615), v = n(193943), Z = n(334347), D = n(943734), B = n(603076), j = n(472656), U = n(912429), G = n(772969), y = n(926262);
+var s = n(399606), a = n(780384), r = n(230711), i = n(410030), l = n(594174), o = n(424218), c = n(380684), d = n(74538), _ = n(474936), u = n(981631), E = n(526761), T = n(689938), I = n(323780), R = n(101732), C = n(450598), p = n(633030), g = n(97942), A = n(269987), m = n(548629), N = n(507084), f = n(680313), S = n(926433), h = n(302036), M = n(994554), x = n(1549), b = n(13327), O = n(59137), L = n(405991), P = n(24615), v = n(193943), Z = n(334347), D = n(943734), B = n(603076), j = n(472656), U = n(912429), G = n(772969), y = n(926262);
 let H = (e, t, n) => (0, a.wj)(e) ? t : n, k = e => {
         let {styles: t} = e, n = (0, i.ZP)(), a = (0, s.e7)([l.default], () => {
                 let e = l.default.getCurrentUser();
@@ -26,7 +26,7 @@ let H = (e, t, n) => (0, a.wj)(e) ? t : n, k = e => {
                 title: T.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE,
                 description: T.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION,
                 className: t.clientThemesCard,
-                imageSource: L,
+                imageSource: P,
                 imageClassName: t.clientThemesImage
             },
             customAppIcons: {
@@ -70,13 +70,13 @@ let H = (e, t, n) => (0, a.wj)(e) ? t : n, k = e => {
             moreGuildsAlt: {
                 title: T.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                 description: T.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                imageSource: H(n, m, f),
+                imageSource: H(n, N, f),
                 imageClassName: t.moreGuildsAltImage
             },
             remix: {
                 title: T.Z.Messages.REMIXING_PERKS_CARD_TITLE,
                 description: T.Z.Messages.REMIXING_PERKS_CARD_DESCRIPTION,
-                imageSource: H(n, A, N),
+                imageSource: H(n, A, m),
                 imageClassName: t.remixingImage,
                 isEarlyAccess: !0
             },
@@ -125,7 +125,7 @@ let H = (e, t, n) => (0, a.wj)(e) ? t : n, k = e => {
             videoBackground: {
                 title: T.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_TITLE,
                 description: T.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
-                imageSource: H(n, O, P),
+                imageSource: H(n, O, L),
                 imageClassName: t.videoBackgroundImage
             }
         };
