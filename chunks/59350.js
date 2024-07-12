@@ -336,55 +336,52 @@ function el(e) {
             })
         });
     }
-    return (0, l.jsx)('div', {
-        className: X.scrollerContainer,
-        children: (0, l.jsxs)(_.AdvancedScroller, {
-            className: X.scroller,
-            fade: !0,
-            children: [
-                (0, l.jsxs)('div', {
-                    className: X.pageBody,
-                    children: [
-                        (g.length > 0 || b.length > 0) && (0, l.jsxs)(l.Fragment, {
-                            children: [
-                                (0, l.jsx)('div', {
-                                    children: (0, l.jsx)(_.Heading, {
+    return (0, l.jsxs)(_.AdvancedScroller, {
+        className: X.scroller,
+        fade: !0,
+        children: [
+            (0, l.jsxs)('div', {
+                className: X.pageBody,
+                children: [
+                    (g.length > 0 || b.length > 0) && (0, l.jsxs)(l.Fragment, {
+                        children: [
+                            (0, l.jsx)('div', {
+                                children: (0, l.jsx)(_.Heading, {
+                                    variant: 'heading-md/semibold',
+                                    color: 'header-primary',
+                                    children: Y.Z.Messages.ONBOARDING_PROMPT_ANSWERS_NEW.format({ count: g.length + Z })
+                                })
+                            }),
+                            g.map(T),
+                            b.map(T),
+                            (0, l.jsx)('div', { className: X.sectionSeparator })
+                        ]
+                    }),
+                    v.length > 0 && (0, l.jsxs)(l.Fragment, {
+                        children: [
+                            (0, l.jsxs)('div', {
+                                children: [
+                                    (0, l.jsx)(_.Heading, {
                                         variant: 'heading-md/semibold',
                                         color: 'header-primary',
-                                        children: Y.Z.Messages.ONBOARDING_PROMPT_ANSWERS_NEW.format({ count: g.length + Z })
+                                        children: Y.Z.Messages.ONBOARDING_PROMPT_QUESTIONS_HEADER.format({ count: v.length })
+                                    }),
+                                    (0, l.jsx)(_.Text, {
+                                        variant: 'text-xs/normal',
+                                        color: 'text-muted',
+                                        children: Y.Z.Messages.ONBOARDING_PROMPT_MEMBER_DESCRIPTION
                                     })
-                                }),
-                                g.map(T),
-                                b.map(T),
-                                (0, l.jsx)('div', { className: X.sectionSeparator })
-                            ]
-                        }),
-                        v.length > 0 && (0, l.jsxs)(l.Fragment, {
-                            children: [
-                                (0, l.jsxs)('div', {
-                                    children: [
-                                        (0, l.jsx)(_.Heading, {
-                                            variant: 'heading-md/semibold',
-                                            color: 'header-primary',
-                                            children: Y.Z.Messages.ONBOARDING_PROMPT_QUESTIONS_HEADER.format({ count: v.length })
-                                        }),
-                                        (0, l.jsx)(_.Text, {
-                                            variant: 'text-xs/normal',
-                                            color: 'text-muted',
-                                            children: Y.Z.Messages.ONBOARDING_PROMPT_MEMBER_DESCRIPTION
-                                        })
-                                    ]
-                                }),
-                                v.map(T)
-                            ]
-                        })
-                    ]
-                }),
-                c && (0, l.jsx)(ee, {
-                    guild: s,
-                    user: o
-                })
-            ]
-        })
+                                ]
+                            }),
+                            v.map(T)
+                        ]
+                    })
+                ]
+            }),
+            c && (0, l.jsx)(ee, {
+                guild: s,
+                user: o
+            })
+        ]
     });
 }

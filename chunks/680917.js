@@ -21,6 +21,5 @@ e.exports = {
     title: 'title_c6b11b',
     roles: 'roles_c6b11b',
     role: 'role_c6b11b',
-    roleDot: 'roleDot_c6b11b',
-    scrollerContainer: 'scrollerContainer_c6b11b'
+    roleDot: 'roleDot_c6b11b'
 };
