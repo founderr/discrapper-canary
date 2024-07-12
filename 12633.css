@@ -5881,7 +5881,8 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 }
 
 .applicationDetails_d6f023 {
-    padding-top: 24px
+    padding-top: 24px;
+    padding-bottom: 24px
 }
 
 .entry_d6f023 {
@@ -6602,7 +6603,8 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 }
 
 .content_c5a065 {
-    padding: 0 16px
+    padding: 0 16px;
+    position: relative
 }
 
 .sectionGroup_c5a065 {
@@ -6621,8 +6623,10 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 }
 
 .intObserver_c5a065 {
-    height: 24px;
-    margin-bottom: 16px
+    bottom: 24px;
+    height: 1px;
+    pointer-events: none;
+    position: absolute
 }
 
 .errorCodeMessage_c78a6e {
