@@ -1,18 +1,18 @@
 n.d(t, {
     JA: function () {
-        return M;
+        return P;
     },
     Jw: function () {
         return r;
     },
     Od: function () {
-        return b;
+        return M;
     },
     Wj: function () {
-        return U;
+        return w;
     },
     gK: function () {
-        return P;
+        return U;
     },
     oD: function () {
         return L;
@@ -33,12 +33,17 @@ function L(e, t) {
     return null !== (n = e.isPrivate) && void 0 !== n && n;
 }
 function b(e, t) {
-    var n, r, i, a;
-    let o = null == t ? null : I.Z.getMessage(e.id, t), s = null !== (i = null == o ? void 0 : null === (r = o.embeds) || void 0 === r ? void 0 : null === (n = r[0]) || void 0 === n ? void 0 : n.rawTitle) && void 0 !== i ? i : '';
-    if ('' !== s)
-        return s.length > 40 ? s.substring(0, 40) + '...' : s;
+    return e.length > t ? e.substring(0, t) + '...' : e;
+}
+function M(e, t) {
+    var n, r, i, a, o, s, l;
+    let u = null == t ? null : I.Z.getMessage(e.id, t), c = null !== (o = null == u ? void 0 : null === (r = u.embeds) || void 0 === r ? void 0 : null === (n = r[0]) || void 0 === n ? void 0 : n.rawTitle) && void 0 !== o ? o : '', d = null !== (s = null == u ? void 0 : null === (a = u.poll) || void 0 === a ? void 0 : null === (i = a.question) || void 0 === i ? void 0 : i.text) && void 0 !== s ? s : '';
+    if ('' !== c)
+        return b(c, 40);
+    if ('' !== d)
+        return b(d, 80);
     {
-        let t = f.ZP.unparse(null !== (a = null == o ? void 0 : o.content) && void 0 !== a ? a : '', e.id, !0), n = (0, O.Z)(t.split('\n')[0], !0);
+        let t = f.ZP.unparse(null !== (l = null == u ? void 0 : u.content) && void 0 !== l ? l : '', e.id, !0), n = (0, O.Z)(t.split('\n')[0], !0);
         n = n.replace(/^[ #-]+/, '');
         let r = [];
         for (;;) {
@@ -56,10 +61,10 @@ function b(e, t) {
                 break;
             i = t;
         }
-        return i.length > 40 && (i = i.substring(0, 40) + '...'), i;
+        return b(i, 40);
     }
 }
-function M(e) {
+function P(e) {
     let {
         parentChannel: t,
         parentMessageId: n,
@@ -74,10 +79,10 @@ function M(e) {
         var I;
         let T = null == n, g = L(r, i), S = null !== (I = r.name) && void 0 !== I ? I : '';
         if ('' === S && _) {
-            let e = b(t, n);
+            let e = M(t, n);
             S = '' !== e ? e : y.Z.Messages.THREAD;
         }
-        let v = (0, N.WD)(t), O = p.Z.getChannel(A.default.castMessageIdAsChannelId(n)), R = await w(t, () => {
+        let v = (0, N.WD)(t), O = p.Z.getChannel(A.default.castMessageIdAsChannelId(n)), R = await x(t, () => {
                 let e = null != n ? C.ANM.CHANNEL_MESSAGE_THREADS(t.id, n) : C.ANM.CHANNEL_THREADS(t.id);
                 return o.tn.post({
                     url: e,
@@ -108,8 +113,8 @@ function M(e) {
         E
     ]);
 }
-function P(e, t, n, r, i) {
-    return w(e, () => o.tn.post({
+function U(e, t, n, r, i) {
+    return x(e, () => o.tn.post({
         url: C.ANM.CHANNEL_THREADS(e.id),
         body: {
             name: t,
@@ -119,7 +124,7 @@ function P(e, t, n, r, i) {
         }
     }));
 }
-function U(e) {
+function w(e) {
     let {
         parentChannel: t,
         name: n,
@@ -139,7 +144,7 @@ function U(e) {
                     sticker_ids: a,
                     flags: 0 !== c ? c : void 0
                 }
-            }, g = await w(t, () => null != l && l.length > 0 ? s(I, T, l) : o.tn.post({
+            }, g = await x(t, () => null != l && l.length > 0 ? s(I, T, l) : o.tn.post({
                 url: I,
                 body: T
             }));
@@ -157,7 +162,7 @@ function U(e) {
     ]);
 }
 (i = r || (r = {}))[i.Disabled = 1] = 'Disabled', i[i.Enabled = 2] = 'Enabled', i[i.PrivateOnly = 3] = 'PrivateOnly';
-async function w(e, t) {
+async function x(e, t) {
     let n;
     let r = e.isForumLikeChannel();
     try {
