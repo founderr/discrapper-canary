@@ -307,6 +307,10 @@ function ei(e) {
                                     user: t,
                                     onClose: n
                                 }),
+                                (null == W ? void 0 : W.profileEffectId) != null && (0, i.jsx)(N.Z, {
+                                    profileEffectId: null == W ? void 0 : W.profileEffectId,
+                                    isHovering: ed
+                                }),
                                 (0, i.jsxs)('div', {
                                     className: J.menus,
                                     children: [
@@ -429,10 +433,6 @@ function ei(e) {
                                     ]
                                 })
                             ]
-                        }),
-                        (null == W ? void 0 : W.profileEffectId) != null && (0, i.jsx)(N.Z, {
-                            profileEffectId: null == W ? void 0 : W.profileEffectId,
-                            isHovering: ed
                         })
                     ]
                 })
