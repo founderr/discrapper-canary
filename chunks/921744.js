@@ -1,1 +1,3 @@
-e.exports = { mutedConfig: 'mutedConfig_f7fdc7' };
+e.exports = {
+  mutedConfig: 'mutedConfig_f7fdc7'
+};

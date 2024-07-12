@@ -1,8 +1,9 @@
+
 function r() {
-    return {};
+  return {};
 }
 n.d(t, {
-    Z: function () {
-        return r;
-    }
+  Z: function() {
+return r;
+  }
 });

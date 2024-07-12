@@ -1,1 +1,3 @@
-e.exports = { inlineTimestamp: 'inlineTimestamp_c5d1c1' };
+e.exports = {
+  inlineTimestamp: 'inlineTimestamp_c5d1c1'
+};

@@ -1,4 +1,4 @@
 e.exports = {
-    multipleButtons: 'multipleButtons_fcef98',
-    color: 'color_fcef98'
+  multipleButtons: 'multipleButtons_fcef98',
+  color: 'color_fcef98'
 };

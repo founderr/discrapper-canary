@@ -1,1 +1,3 @@
-e.exports = { heading: 'heading_b6f065' };
+e.exports = {
+  heading: 'heading_b6f065'
+};

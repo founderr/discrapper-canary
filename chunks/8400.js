@@ -1,6 +1,4 @@
 t.exports = {
-    initODS: function () {
-    },
-    handleExtensionCausedError: function () {
-    }
+  initODS: function() {},
+  handleExtensionCausedError: function() {}
 };

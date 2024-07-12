@@ -1,1 +1,3 @@
-e.exports = { learnMoreLink: 'learnMoreLink_c0dac3' };
+e.exports = {
+  learnMoreLink: 'learnMoreLink_c0dac3'
+};

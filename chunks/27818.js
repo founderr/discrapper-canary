@@ -1,7 +1,9 @@
 n.d(t, {
-    Z: function () {
-        return r;
-    }
+  Z: function() {
+return r;
+  }
 });
 var r = {};
-r = { breadcrumbs: `\u{130}\xe7erik haritalar\u{131}` };
+r = {
+  breadcrumbs: `\u{130}\xe7erik haritalar\u{131}`
+};

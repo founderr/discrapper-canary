@@ -1,1 +1,3 @@
-e.exports = { popIn: 'popIn_c1ccd5' };
+e.exports = {
+  popIn: 'popIn_c1ccd5'
+};

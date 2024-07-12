@@ -1,1 +1,3 @@
-e.exports = { participants: 'participants_a07d72' };
+e.exports = {
+  participants: 'participants_a07d72'
+};

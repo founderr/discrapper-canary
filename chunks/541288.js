@@ -1,8 +1,5 @@
 t.Z = {
-    init() {
-    },
-    donateSentMessage(e, t) {
-    },
-    deleteAllInteractions() {
-    }
+  init() {},
+  donateSentMessage(e, t) {},
+  deleteAllInteractions() {}
 };

@@ -1,1 +1,3 @@
-e.exports = { input: 'input_df4dd0' };
+e.exports = {
+  input: 'input_df4dd0'
+};

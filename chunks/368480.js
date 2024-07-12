@@ -1,16 +1,16 @@
 n.d(t, {
-    Z: function () {
-        return r;
-    }
+  Z: function() {
+return r;
+  }
 });
 var r = {};
 r = {
-    buttonLabel: `Prika\u{17E}i predloge`,
-    countAnnouncement: (e, t) => `Na voljo je ${ t.plural(e.optionCount, {
+  buttonLabel: `Prika\u{17E}i predloge`,
+  countAnnouncement: (e, t) => `Na voljo je ${ t.plural(e.optionCount, {
         one: () => `${ t.number(e.optionCount) } opcija`,
         other: () => `${ t.number(e.optionCount) } opcije`
     }) }.`,
-    focusAnnouncement: (e, t) => `${ t.select({
+  focusAnnouncement: (e, t) => `${ t.select({
         true: () => `Vnesena skupina ${ e.groupTitle }, z ${ t.plural(e.groupCount, {
             one: () => `${ t.number(e.groupCount) } opcija`,
             other: () => `${ t.number(e.groupCount) } opcije`
@@ -20,6 +20,6 @@ r = {
         true: ', izbrano',
         other: ''
     }, e.isSelected) }`,
-    listboxLabel: 'Predlogi',
-    selectedAnnouncement: e => `${ e.optionText }, izbrano`
+  listboxLabel: 'Predlogi',
+  selectedAnnouncement: e => `${ e.optionText }, izbrano`
 };

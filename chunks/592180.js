@@ -1,8 +1,9 @@
 t.d(n, {
-    a: function () {
-        return i;
-    }
+  a: function() {
+return i;
+  }
 });
+
 function i(e) {
-    return null != e.interactionMetadata;
+  return null != e.interactionMetadata;
 }

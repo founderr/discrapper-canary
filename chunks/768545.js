@@ -1,1 +1,3 @@
-e.exports = { content: 'content_fb2cb3' };
+e.exports = {
+  content: 'content_fb2cb3'
+};

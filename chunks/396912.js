@@ -1,1 +1,3 @@
-e.exports = { tag: 'tag_f2440e' };
+e.exports = {
+  tag: 'tag_f2440e'
+};

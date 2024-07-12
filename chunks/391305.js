@@ -1,1 +1,3 @@
-e.exports = { emptyStateContainer: 'emptyStateContainer_c353e6' };
+e.exports = {
+  emptyStateContainer: 'emptyStateContainer_c353e6'
+};

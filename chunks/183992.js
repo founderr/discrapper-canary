@@ -1,1 +1,3 @@
-e.exports = { popularApplicationCommandsList: 'popularApplicationCommandsList_d2db23' };
+e.exports = {
+  popularApplicationCommandsList: 'popularApplicationCommandsList_d2db23'
+};

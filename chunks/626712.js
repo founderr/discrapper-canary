@@ -1,1 +1,3 @@
-e.exports = { noticeContainer: 'noticeContainer_ca1b5d' };
+e.exports = {
+  noticeContainer: 'noticeContainer_ca1b5d'
+};

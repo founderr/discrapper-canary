@@ -1,1 +1,3 @@
-e.exports = { storeBtn: 'storeBtn_dc5dc7' };
+e.exports = {
+  storeBtn: 'storeBtn_dc5dc7'
+};

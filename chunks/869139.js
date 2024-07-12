@@ -1,16 +1,17 @@
 r.d(e, {
-    VT: function () {
-        return _;
-    }
+  VT: function() {
+return _;
+  }
 });
 let n = [
-    'fatal',
-    'error',
-    'warning',
-    'log',
-    'info',
-    'debug'
+  'fatal',
+  'error',
+  'warning',
+  'log',
+  'info',
+  'debug'
 ];
+
 function _(t) {
-    return 'warn' === t ? 'warning' : n.includes(t) ? t : 'log';
+  return 'warn' === t ? 'warning' : n.includes(t) ? t : 'log';
 }

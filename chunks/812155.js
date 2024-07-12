@@ -1,1 +1,3 @@
-e.exports = { listItemContents: 'listItemContents_f71b83' };
+e.exports = {
+  listItemContents: 'listItemContents_f71b83'
+};

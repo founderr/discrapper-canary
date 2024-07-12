@@ -1,1 +1,3 @@
-e.exports = { channelAttachmentArea: 'channelAttachmentArea_e8c527' };
+e.exports = {
+  channelAttachmentArea: 'channelAttachmentArea_e8c527'
+};

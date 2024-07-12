@@ -1,16 +1,16 @@
 n.d(t, {
-    Z: function () {
-        return r;
-    }
+  Z: function() {
+return r;
+  }
 });
 var r = {};
 r = {
-    buttonLabel: 'Empfehlungen anzeigen',
-    countAnnouncement: (e, t) => `${ t.plural(e.optionCount, {
+  buttonLabel: 'Empfehlungen anzeigen',
+  countAnnouncement: (e, t) => `${ t.plural(e.optionCount, {
         one: () => `${ t.number(e.optionCount) } Option`,
         other: () => `${ t.number(e.optionCount) } Optionen`
     }) } verf\xfcgbar.`,
-    focusAnnouncement: (e, t) => `${ t.select({
+  focusAnnouncement: (e, t) => `${ t.select({
         true: () => `Eingetretene Gruppe ${ e.groupTitle }, mit ${ t.plural(e.groupCount, {
             one: () => `${ t.number(e.groupCount) } Option`,
             other: () => `${ t.number(e.groupCount) } Optionen`
@@ -20,6 +20,6 @@ r = {
         true: `, ausgew\xe4hlt`,
         other: ''
     }, e.isSelected) }`,
-    listboxLabel: 'Empfehlungen',
-    selectedAnnouncement: e => `${ e.optionText }, ausgew\xe4hlt`
+  listboxLabel: 'Empfehlungen',
+  selectedAnnouncement: e => `${ e.optionText }, ausgew\xe4hlt`
 };

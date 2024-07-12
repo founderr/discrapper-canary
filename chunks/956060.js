@@ -1,1 +1,3 @@
-t.Z = { disabled: !1 };
+t.Z = {
+  disabled: !1
+};

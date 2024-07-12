@@ -1,1 +1,3 @@
-e.exports = { svg: 'svg_d48241' };
+e.exports = {
+  svg: 'svg_d48241'
+};

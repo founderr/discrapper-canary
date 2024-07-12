@@ -1,1 +1,3 @@
-e.exports = { containerScrollGradient: 'containerScrollGradient_c2f634' };
+e.exports = {
+  containerScrollGradient: 'containerScrollGradient_c2f634'
+};

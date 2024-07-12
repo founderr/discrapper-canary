@@ -1,1 +1,3 @@
-e.exports = { awaitingWrapper: 'awaitingWrapper_a4ec0f' };
+e.exports = {
+  awaitingWrapper: 'awaitingWrapper_a4ec0f'
+};

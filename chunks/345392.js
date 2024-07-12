@@ -1,1 +1,3 @@
-e.exports = { sharedCanvas: 'sharedCanvas_dd2b1e' };
+e.exports = {
+  sharedCanvas: 'sharedCanvas_dd2b1e'
+};

@@ -1,1 +1,3 @@
-e.exports = { datePicker: 'datePicker_b71016' };
+e.exports = {
+  datePicker: 'datePicker_b71016'
+};

@@ -1,7 +1,7 @@
-function r() {
-}
+
+function r() {}
 n.d(t, {
-    D: function () {
-        return r;
-    }
+  D: function() {
+return r;
+  }
 });

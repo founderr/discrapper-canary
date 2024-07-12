@@ -1,16 +1,16 @@
 n.d(t, {
-    Z: function () {
-        return r;
-    }
+  Z: function() {
+return r;
+  }
 });
 var r = {};
 r = {
-    buttonLabel: 'Vis forslag',
-    countAnnouncement: (e, t) => `${ t.plural(e.optionCount, {
+  buttonLabel: 'Vis forslag',
+  countAnnouncement: (e, t) => `${ t.plural(e.optionCount, {
         one: () => `${ t.number(e.optionCount) } mulighed tilg\xe6ngelig`,
         other: () => `${ t.number(e.optionCount) } muligheder tilg\xe6ngelige`
     }) }.`,
-    focusAnnouncement: (e, t) => `${ t.select({
+  focusAnnouncement: (e, t) => `${ t.select({
         true: () => `Angivet gruppe ${ e.groupTitle }, med ${ t.plural(e.groupCount, {
             one: () => `${ t.number(e.groupCount) } mulighed`,
             other: () => `${ t.number(e.groupCount) } muligheder`
@@ -20,6 +20,6 @@ r = {
         true: ', valgt',
         other: ''
     }, e.isSelected) }`,
-    listboxLabel: 'Forslag',
-    selectedAnnouncement: e => `${ e.optionText }, valgt`
+  listboxLabel: 'Forslag',
+  selectedAnnouncement: e => `${ e.optionText }, valgt`
 };

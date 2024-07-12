@@ -1,1 +1,3 @@
-e.exports = { container: 'container_b11148' };
+e.exports = {
+  container: 'container_b11148'
+};

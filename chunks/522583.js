@@ -1,1 +1,3 @@
-e.exports = { emoji: 'emoji_bd4cdf' };
+e.exports = {
+  emoji: 'emoji_bd4cdf'
+};

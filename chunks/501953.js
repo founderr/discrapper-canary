@@ -1,2 +1,1 @@
-t.exports = function () {
-};
+t.exports = function() {};

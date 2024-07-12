@@ -1,1 +1,3 @@
-e.exports = { formItem: 'formItem_b3ae59' };
+e.exports = {
+  formItem: 'formItem_b3ae59'
+};

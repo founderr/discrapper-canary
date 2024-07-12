@@ -1,1 +1,3 @@
-e.exports = { search: 'search_aabd24' };
+e.exports = {
+  search: 'search_aabd24'
+};

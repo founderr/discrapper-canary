@@ -1,7 +1,9 @@
 n.d(t, {
-    Z: function () {
-        return r;
-    }
+  Z: function() {
+return r;
+  }
 });
 var r = {};
-r = { dismiss: `Hylk\xe4\xe4` };
+r = {
+  dismiss: `Hylk\xe4\xe4`
+};

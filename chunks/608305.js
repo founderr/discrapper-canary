@@ -1,1 +1,3 @@
-e.exports = { root: 'root_ebf21e' };
+e.exports = {
+  root: 'root_ebf21e'
+};
