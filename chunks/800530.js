@@ -1,6 +1,6 @@
 n.d(t, {
     Cg: function () {
-        return f;
+        return p;
     },
     Cs: function () {
         return m;
@@ -39,7 +39,7 @@ n.d(t, {
         return E;
     },
     sQ: function () {
-        return p;
+        return f;
     },
     wo: function () {
         return u;
@@ -55,12 +55,12 @@ function N(e, t, n) {
     }) : e[t] = n, e;
 }
 (i = d || (d = {})).SETTINGS = 'SETTINGS', i.ACCOUNT_STANDING = 'ACCOUNT_STANDING', i.GUILD_SETTINGS = 'GUILD_SETTINGS', i.ENCRYPTION = 'ENCRYPTION';
-class p {
-}
-N(p, 'TOS_LINK', 'https://discord.com/terms'), N(p, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), N(p, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), N(p, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), N(p, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), N(p, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__');
 class f {
 }
-N(f, 'CLASSIFICATION_ID', 'classification_id'), N(f, 'INCIDENT_TIMESTAMP', 'incident_time'), (a = u || (u = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail', a.LEARN_MORE_LINK = 'learn_more_link';
+N(f, 'TOS_LINK', 'https://discord.com/terms'), N(f, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), N(f, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), N(f, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), N(f, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), N(f, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__');
+class p {
+}
+N(p, 'CLASSIFICATION_ID', 'classification_id'), N(p, 'INCIDENT_TIMESTAMP', 'incident_time'), (a = u || (u = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail', a.LEARN_MORE_LINK = 'learn_more_link';
 class C {
 }
 N(C, 'ICON_TYPE', 'icon_type'), N(C, 'HEADER', 'header'), N(C, 'BODY', 'body'), N(C, 'CTAS', 'ctas'), N(C, 'TIMESTAMP', 'timestamp'), N(C, 'THEME', 'theme'), N(C, 'CLIENT_VERSION_MESSAGE', 'client_version_message'), N(C, 'LEARN_MORE_LINK', 'learn_more_link'), N(C, 'CLASSIFICATION_ID', 'classification_id'), (s = _ || (_ = {}))[s.ViewViolationDetail = 0] = 'ViewViolationDetail', s[s.ViewViolationsDropdown = 1] = 'ViewViolationsDropdown', s[s.ClickLetUsKnow = 2] = 'ClickLetUsKnow', s[s.ClickAgeVerificationLink = 3] = 'ClickAgeVerificationLink', s[s.ClickSpamWebformLink = 4] = 'ClickSpamWebformLink', s[s.ClickLearnMoreLink = 5] = 'ClickLearnMoreLink', s[s.ClickCommunityGuidelinesLink = 6] = 'ClickCommunityGuidelinesLink', s[s.ClickWarningSystemHelpcenterLink = 7] = 'ClickWarningSystemHelpcenterLink', (r = E || (E = {}))[r.SystemDM = 0] = 'SystemDM', r[r.StandingTab = 1] = 'StandingTab', r[r.AppealIngestion = 2] = 'AppealIngestion', Object.freeze({

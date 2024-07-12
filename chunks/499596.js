@@ -5,14 +5,14 @@ t.d(n, {
 });
 var l = t(735250);
 t(470079);
-var s = t(120356), a = t.n(s), i = t(481060), r = t(933557), o = t(471445), u = t(602623), c = t(5192), d = t(689938), m = t(336387);
+var s = t(120356), a = t.n(s), i = t(481060), r = t(884338), o = t(933557), u = t(471445), c = t(5192), d = t(689938), m = t(336387);
 function E(e) {
     let {
             channel: n,
             users: t,
             selected: s = !1
-        } = e, E = (0, r.ZP)(n), _ = null;
-    null != t && t.length > 0 && (_ = (0, l.jsx)(u.Z, {
+        } = e, E = (0, o.ZP)(n), _ = null;
+    null != t && t.length > 0 && (_ = (0, l.jsx)(r.Z, {
         guildId: n.guild_id,
         className: m.voiceUserList,
         users: t,
@@ -59,7 +59,7 @@ function E(e) {
         max: 5,
         showUserPopout: !1
     }));
-    let S = (0, o.KS)(n);
+    let S = (0, u.KS)(n);
     return (0, l.jsxs)('div', {
         className: a()(m.channelInfo, { [m.selected]: s }),
         children: [

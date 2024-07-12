@@ -7,7 +7,7 @@ t.Z = function (e) {
             color: n = l.Z.colors.WHITE,
             quest: a,
             isInventory: m
-        } = e, T = (0, r.e7)([c.default], () => c.default.locale), {percentComplete: h} = (0, u.Rf)(a), N = (0, u.Jf)(a), p = null != N ? N.completedRatio : h, f = null != N ? ''.concat(null == N ? void 0 : N.progress, '/').concat(null == N ? void 0 : N.target) : (0, d.T3)(T, p, { roundingMode: 'floor' }), C = 100 * p, g = (0, _.r)(a);
+        } = e, T = (0, r.e7)([c.default], () => c.default.locale), {percentComplete: h} = (0, u.Rf)(a), N = (0, u.Jf)(a), f = null != N ? N.completedRatio : h, p = null != N ? ''.concat(null == N ? void 0 : N.progress, '/').concat(null == N ? void 0 : N.target) : (0, d.T3)(T, f, { roundingMode: 'floor' }), C = 100 * f, g = (0, _.r)(a);
     return g && !m ? (0, i.jsx)(E.Z, {}) : (0, i.jsxs)('div', {
         className: s()(I.wrapper, t),
         style: { color: n.css },
@@ -19,7 +19,7 @@ t.Z = function (e) {
                         variant: 'text-xs/semibold',
                         className: I.percentCompleteLabel,
                         color: 'none',
-                        children: f
+                        children: p
                     }),
                     (0, i.jsx)('div', {
                         className: I.percentCompleteLabelOffset,

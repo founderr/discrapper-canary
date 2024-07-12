@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(873546), d = n(442837), u = n(481060), _ = n(568836), E = n(100527), I = n(906732), m = n(963249), T = n(594174), h = n(78839), N = n(55935), p = n(63063), f = n(74538), C = n(276444), g = n(790368), S = n(786397), A = n(474936), x = n(981631), R = n(689938), O = n(951992);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(873546), d = n(442837), u = n(481060), _ = n(568836), E = n(100527), I = n(906732), m = n(963249), T = n(594174), h = n(78839), N = n(55935), f = n(63063), p = n(74538), C = n(276444), g = n(790368), S = n(786397), A = n(474936), x = n(981631), R = n(689938), O = n(951992);
 class M extends a.Component {
     renderTitle(e, t, n) {
         let {trialOffer: i} = this.props, a = T.default.getUser(i.user_id), s = null != a ? a.username : '???', r = T.default.getUser(i.referrer_id), l = null != r ? r.username : '???';
@@ -18,7 +18,7 @@ class M extends a.Component {
     }
     renderBody(e, t, n) {
         let {trialOffer: i} = this.props;
-        return e && !n && void 0 === i.redeemed_at ? R.Z.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({ helpdeskArticle: p.Z.getArticleURL(x.BhN.REFERRAL_PROGRAM) }) : t ? null : R.Z.Messages.REFERRAL_PROGRAM_EMBED_BODY;
+        return e && !n && void 0 === i.redeemed_at ? R.Z.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({ helpdeskArticle: f.Z.getArticleURL(x.BhN.REFERRAL_PROGRAM) }) : t ? null : R.Z.Messages.REFERRAL_PROGRAM_EMBED_BODY;
     }
     renderActions(e, t, n) {
         let {
@@ -30,7 +30,7 @@ class M extends a.Component {
                     this.handleStartTrial(a, r);
                 },
                 color: u.Button.Colors.BRAND
-            }, o = s.id !== a.user_id || (0, f.I5)(s) || !s.verified || (0, S.B)(a), c = this.renderExpirationDate(e, t, n);
+            }, o = s.id !== a.user_id || (0, p.I5)(s) || !s.verified || (0, S.B)(a), c = this.renderExpirationDate(e, t, n);
         return l.disabled = o, (0, i.jsxs)('div', {
             className: O.buttonContainer,
             children: [
@@ -151,7 +151,7 @@ function v(e) {
         }), [
             n,
             t
-        ]), r = T.default.getCurrentUser(), l = (0, d.e7)([T.default], () => null != a && (0, f.I5)(void 0 !== r && a.user_id === r.id ? r : T.default.getUser(a.user_id))), o = (0, d.e7)([h.ZP], () => {
+        ]), r = T.default.getCurrentUser(), l = (0, d.e7)([T.default], () => null != a && (0, p.I5)(void 0 !== r && a.user_id === r.id ? r : T.default.getUser(a.user_id))), o = (0, d.e7)([h.ZP], () => {
             var e;
             return l ? null === (e = h.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt : null;
         }), {analyticsLocations: u} = (0, I.ZP)(E.Z.SHARE_NITRO_EMBED), {enabled: m} = g.Z.useExperiment({ location: 'f4ff1d_1' }, { autoTrackExposure: !0 });

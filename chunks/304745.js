@@ -3,7 +3,7 @@ n.d(t, {
         return Z;
     }
 }), n(653041);
-var i = n(735250), a = n(470079), s = n(442837), l = n(704215), r = n(481060), o = n(2052), c = n(40851), d = n(317381), u = n(683921), h = n(588580), p = n(374065), m = n(451576), _ = n(526846), f = n(938655), E = n(403404), C = n(906732), g = n(424602), I = n(243778), x = n(579185), T = n(301076), N = n(981631), v = n(921944), S = n(269794);
+var i = n(735250), a = n(470079), s = n(442837), l = n(704215), r = n(481060), o = n(2052), c = n(40851), d = n(317381), u = n(683921), h = n(588580), p = n(374065), m = n(451576), _ = n(526846), f = n(938655), E = n(403404), C = n(906732), g = n(424602), I = n(243778), x = n(579185), T = n(301076), v = n(981631), N = n(921944), S = n(269794);
 function Z(e) {
     let {channel: t} = e, n = (0, s.e7)([d.ZP], () => d.ZP.isLaunchingActivity()), Z = (0, p.KF)(t.id), A = (0, p.g5)(Z), M = Z !== p.jy.CAN_LAUNCH || n, {
             isHovered: b,
@@ -12,7 +12,7 @@ function Z(e) {
             onMouseLeave: L
         } = (0, x.Z)(200, 300), P = (0, h.a)(), O = (0, u.Z)({ channelId: t.id }), y = !M, D = a.useCallback(e => {
             'focus' !== e.type && j();
-        }, [j]), k = (0, o.O)(), U = (0, c.bp)() === N.IlC.POPOUT, {analyticsLocations: w} = (0, C.ZP)(), B = w.length > 0 ? w[w.length - 1] : 'open-activity-shelf';
+        }, [j]), k = (0, o.O)(), U = (0, c.bp)() === v.IlC.POPOUT, {analyticsLocations: w} = (0, C.ZP)(), B = w.length > 0 ? w[w.length - 1] : 'open-activity-shelf';
     g.m1.useExperiment({ location: B }, { autoTrackExposure: !0 });
     let H = a.useCallback(() => {
             (0, E.Z)({
@@ -58,7 +58,7 @@ function Z(e) {
                         onMouseEnter: j,
                         onMouseLeave: L,
                         isHovered: b,
-                        onClick: () => a(v.L.UNKNOWN)
+                        onClick: () => a(N.L.UNKNOWN)
                     }) : (0, i.jsx)(i.Fragment, {});
                 },
                 children: () => (0, i.jsxs)(i.Fragment, {
@@ -70,7 +70,7 @@ function Z(e) {
                             isActivityActive: O || b,
                             className: S.controlButton,
                             onClick: () => {
-                                H(), (n === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || n === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(v.L.UNKNOWN);
+                                H(), (n === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || n === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(N.L.UNKNOWN);
                             },
                             onMouseEnter: D,
                             onMouseLeave: L

@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n(399606), c = n(481060), d = n(963374), u = n(735020), h = n(786761), p = n(937889), m = n(619753), _ = n(433355), f = n(271383), E = n(594174), C = n(189432), g = n(356778), I = n(370595), x = n(991570), T = n(50493), N = n(749348), v = n(458563);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n(399606), c = n(481060), d = n(963374), u = n(735020), h = n(786761), p = n(937889), m = n(619753), _ = n(433355), f = n(271383), E = n(594174), C = n(189432), g = n(356778), I = n(370595), x = n(991570), T = n(50493), v = n(749348), N = n(458563);
 function S(e) {
     var t, n;
     let {
@@ -103,7 +103,7 @@ function S(e) {
             H
         ]);
     return null == y || null == D || null == V ? null : (0, i.jsxs)('div', {
-        className: l()(N.container, A),
+        className: l()(v.container, A),
         style: { backgroundColor: k },
         children: [
             (0, i.jsx)(I.Z, {
@@ -112,7 +112,7 @@ function S(e) {
                 onNavigate: M
             }),
             (0, i.jsx)(c.AdvancedScroller, {
-                className: l()(v.innerContainer),
+                className: l()(N.innerContainer),
                 ref: b,
                 onScroll: w,
                 children: (0, i.jsx)(m.Z, {

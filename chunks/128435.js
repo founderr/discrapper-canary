@@ -68,7 +68,7 @@ function N(e) {
         ]
     });
 }
-function p(e) {
+function f(e) {
     let {
             action: t,
             channelId: n,
@@ -117,7 +117,7 @@ function p(e) {
         className: o
     });
 }
-function f(e) {
+function p(e) {
     let {
             message: t,
             poll: n,
@@ -156,20 +156,20 @@ function f(e) {
                 (0, i.jsxs)('div', {
                     className: m.bottomBar,
                     children: [
-                        (0, i.jsx)(p, {
+                        (0, i.jsx)(f, {
                             channelId: t.getChannelId(),
                             messageId: t.id,
                             action: n.secondaryAction,
                             className: m.secondaryAction,
                             isInteractive: n.isInteractive
                         }),
-                        (0, i.jsx)(p, {
+                        (0, i.jsx)(f, {
                             channelId: t.getChannelId(),
                             messageId: t.id,
                             action: n.tertiaryAction,
                             className: m.tertiaryAction
                         }),
-                        (0, i.jsx)(p, {
+                        (0, i.jsx)(f, {
                             channelId: t.getChannelId(),
                             messageId: t.id,
                             action: n.primaryAction
@@ -190,7 +190,7 @@ function C(e) {
         message: t,
         poll: n,
         children: (0, i.jsx)(E.Pk, {
-            children: (0, i.jsx)(f, {
+            children: (0, i.jsx)(p, {
                 message: t,
                 poll: n,
                 className: a

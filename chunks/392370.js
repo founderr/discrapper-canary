@@ -3,22 +3,22 @@ t.d(n, {
         return T;
     },
     pe: function () {
-        return x;
+        return P;
     }
 }), t(47120), t(653041), t(536091);
-var i = t(470079), l = t(392711), r = t.n(l), a = t(373793), s = t(442837), o = t(911969), c = t(127255), u = t(654455), d = t(213459), m = t(807169), p = t(104793), _ = t(674588), E = t(809547), h = t(822245), A = t(631827), N = t(783097), f = t(689079), C = t(665692);
-function I(e, n) {
+var i = t(470079), l = t(392711), r = t.n(l), a = t(373793), s = t(442837), o = t(911969), c = t(127255), u = t(654455), d = t(213459), m = t(807169), p = t(104793), _ = t(674588), E = t(809547), h = t(822245), A = t(631827), f = t(783097), N = t(689079), C = t(665692);
+function v(e, n) {
     let t = h.Z.getScoreWithoutLoadingLatest(e.id);
     return h.Z.getScoreWithoutLoadingLatest(n.id) - t;
 }
-function v(e, n) {
-    let t = (0, N.$d)(e), i = (0, N.$d)(n);
+function I(e, n) {
+    let t = (0, f.$d)(e), i = (0, f.$d)(n);
     return (0, d.un)(t, i);
 }
-function P(e, n) {
+function x(e, n) {
     return (0, d.un)(e.displayName, n.displayName);
 }
-function x(e) {
+function P(e) {
     let {
         channel: n,
         query: t,
@@ -31,7 +31,7 @@ function x(e) {
     t.startsWith(''.concat(C.GI)) && (t = t.substring(1));
     let {
             commands: h,
-            commandSectionMap: x,
+            commandSectionMap: P,
             loading: T
         } = function (e) {
             var n, t;
@@ -46,7 +46,7 @@ function x(e) {
                         ...Object.keys(c),
                         ...Object.keys(u).filter(e => !(e in c))
                     ];
-                r && m.push(f.bi.BUILT_IN);
+                r && m.push(N.bi.BUILT_IN);
                 let p = [], _ = {};
                 for (let e of m) {
                     let n = (0, d.If)(l, e), t = null !== (a = n.sectionCommands) && void 0 !== a ? a : [];
@@ -87,7 +87,7 @@ function x(e) {
                     let n = e.descriptor.application;
                     null != n && !u.has(n.id) && (Object.keys(e.commands).length > 0 || !t) && c.push(n);
                 }
-            return i && c.push(N.Wx), {
+            return i && c.push(f.Wx), {
                 apps: c,
                 loading: (null == a ? void 0 : a.fetchState.fetching) === !0 || (null == s ? void 0 : s.fetchState.fetching) === !0
             };
@@ -195,7 +195,7 @@ function x(e) {
                             return u.ZP.getScoreWithoutLoadingLatest(e, t) - i;
                         };
                     }({ channel: n }),
-                    P
+                    x
                 ]
             });
         }, [
@@ -216,7 +216,7 @@ function x(e) {
                 let i = e.get(n.applicationId);
                 if (null == i)
                     return null;
-                let l = null !== (t = x[n.id]) && void 0 !== t ? t : null;
+                let l = null !== (t = P[n.id]) && void 0 !== t ? t : null;
                 return {
                     command: n,
                     application: i,
@@ -226,7 +226,7 @@ function x(e) {
         }, [
             g,
             S,
-            x
+            P
         ]), L = i.useMemo(() => {
             var e;
             if (!_ && !E)
@@ -278,29 +278,29 @@ function x(e) {
                     }(n)],
                 bucketPredicates: [
                     function (e) {
-                        return n => (0, N.$d)(n).toLocaleLowerCase().startsWith(e.toLocaleLowerCase());
+                        return n => (0, f.$d)(n).toLocaleLowerCase().startsWith(e.toLocaleLowerCase());
                     }(e = t),
                     function (e) {
-                        return n => (0, N.$d)(n).toLocaleLowerCase().includes(e.toLocaleLowerCase());
+                        return n => (0, f.$d)(n).toLocaleLowerCase().includes(e.toLocaleLowerCase());
                     }(e),
                     function (e) {
                         return n => {
                             var t, i;
-                            let l = null === (t = (0, N.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
+                            let l = null === (t = (0, f.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
                             return null !== (i = null == l ? void 0 : l.startsWith(e.toLocaleLowerCase())) && void 0 !== i && i;
                         };
                     }(e),
                     function (e) {
                         return n => {
                             var t, i;
-                            let l = null === (t = (0, N.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
+                            let l = null === (t = (0, f.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
                             return null !== (i = null == l ? void 0 : l.includes(e.toLocaleLowerCase())) && void 0 !== i && i;
                         };
                     }(e)
                 ],
                 sortComparers: [
-                    I,
-                    v
+                    v,
+                    I
                 ]
             });
         }, [

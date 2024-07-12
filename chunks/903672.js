@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     }
 });
-var i = n(735250), a = n(470079), s = n(442837), r = n(524437), l = n(481060), o = n(235820), c = n(494404), d = n(110924), u = n(796798), _ = n(198620), E = n(294218), I = n(695346), m = n(592125), T = n(731290), h = n(944486), N = n(455199), p = n(655354), f = n(999671), C = n(324081), g = n(240126), S = n(791914), A = n(981631), x = n(689938), R = n(699723);
+var i = n(735250), a = n(470079), s = n(442837), r = n(524437), l = n(481060), o = n(235820), c = n(494404), d = n(110924), u = n(796798), _ = n(198620), E = n(294218), I = n(695346), m = n(592125), T = n(731290), h = n(944486), N = n(455199), f = n(655354), p = n(999671), C = n(324081), g = n(240126), S = n(791914), A = n(981631), x = n(689938), R = n(699723);
 let O = {
     offset: {
         left: 4,
@@ -25,7 +25,7 @@ function v(e) {
             h.Z
         ], () => m.Z.getChannel(h.Z.getChannelId())), {
             messages: T,
-            hasMore: p,
+            hasMore: f,
             loading: C,
             guildFilter: g,
             roleFilter: O,
@@ -64,7 +64,7 @@ function v(e) {
         setTab: t,
         badgeState: l,
         closePopout: E,
-        children: (0, i.jsx)(f.Z, {})
+        children: (0, i.jsx)(p.Z, {})
     }), [
         !0,
         t,
@@ -83,7 +83,7 @@ function v(e) {
             channel: I,
             messages: T,
             loading: C,
-            hasMore: p,
+            hasMore: f,
             analyticsName: 'Recent Mentions',
             loadMore: function () {
                 M(I, !0, null != T && T.length > 0 ? T[T.length - 1].id : null);
@@ -142,7 +142,7 @@ function P(e) {
             (0, i.jsxs)('div', {
                 className: R.messageContainer,
                 children: [
-                    (0, i.jsx)(p.Z, {
+                    (0, i.jsx)(f.Z, {
                         className: R.jumpMessageButton,
                         onJump: n
                     }),

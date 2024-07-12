@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(442837), r = n(481060), l = n(668781), o = n(431583), c = n(91372), d = n(19780), u = n(502568), _ = n(35818), E = n(689938), I = n(139715);
+var i = n(735250), a = n(470079), s = n(442837), r = n(481060), l = n(668781), o = n(431583), c = n(91372), d = n(19780), u = n(35818), _ = n(665149), E = n(689938), I = n(139715);
 function m(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -24,7 +24,7 @@ class T extends a.PureComponent {
     render() {
         switch (this.props.mode) {
         case 'UPDATE_AVAILABLE':
-            return (0, i.jsx)(u.JO, {
+            return (0, i.jsx)(_.JO, {
                 hideOnClick: !1,
                 tooltip: E.Z.Messages.UPDATE_AVAILABLE,
                 foreground: I.downloadArrow,
@@ -33,7 +33,7 @@ class T extends a.PureComponent {
             });
         case 'UPDATE_MANUALLY':
         case 'UPDATE_DOWNLOADED':
-            return (0, i.jsx)(u.JO, {
+            return (0, i.jsx)(_.JO, {
                 tooltip: E.Z.Messages.UPDATE_DOWNLOADED,
                 foreground: I.updateIconForeground,
                 onClick: this.handleInstallDownload,
@@ -56,7 +56,7 @@ class T extends a.PureComponent {
                 confirmText: E.Z.Messages.UPDATE_DURING_CALL_CONTINUE
             }) : this.doUpdate();
         }), m(this, 'doUpdate', () => {
-            !this.state.clicked && (this.setState({ clicked: !0 }), (0, _.Q)());
+            !this.state.clicked && (this.setState({ clicked: !0 }), (0, u.Q)());
         });
     }
 }

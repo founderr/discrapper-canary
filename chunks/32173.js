@@ -5,10 +5,10 @@ n.d(t, {
 });
 var s, a, r = n(735250);
 n(470079);
-var i = n(399606), l = n(704215), o = n(230711), c = n(410030), d = n(100527), _ = n(906732), u = n(779618), E = n(300284), T = n(703656), I = n(547972), R = n(131951), C = n(78839), p = n(424218), g = n(63063), A = n(380684), m = n(74538), N = n(494127), f = n(314684), S = n(687362), h = n(119269), M = n(391110), x = n(75077), b = n(474936), O = n(981631), P = n(526761), L = n(332325), v = n(689938), Z = n(660372), D = n(926433), B = n(302036), j = n(994554), U = n(704565), G = n(393305), y = n(338879), H = n(203302), k = n(766491), w = n(193943), F = n(707046), V = n(488459), W = n(334347), K = n(132015), Y = n(142416), z = n(607762), Q = n(474106), J = n(567452), q = n(572501), X = n(755590), $ = n(909910), ee = n(637810), et = n(570423), en = n(912429), es = n(91394), ea = n(209672), er = n(698173), ei = n(926262);
+var i = n(399606), l = n(704215), o = n(230711), c = n(410030), d = n(100527), _ = n(906732), u = n(779618), E = n(300284), T = n(703656), I = n(547972), R = n(131951), C = n(78839), p = n(424218), g = n(63063), A = n(380684), N = n(74538), m = n(494127), f = n(314684), S = n(687362), h = n(119269), M = n(391110), x = n(75077), b = n(474936), O = n(981631), P = n(526761), L = n(332325), v = n(689938), Z = n(660372), D = n(926433), B = n(302036), j = n(994554), U = n(704565), G = n(393305), y = n(338879), H = n(203302), k = n(766491), w = n(193943), F = n(707046), V = n(488459), W = n(334347), K = n(132015), Y = n(142416), z = n(607762), Q = n(474106), q = n(567452), J = n(572501), X = n(755590), $ = n(909910), ee = n(637810), et = n(570423), en = n(912429), es = n(91394), ea = n(209672), er = n(698173), ei = n(926262);
 (s = a || (a = {})).AVATAR_DECORATIONS = 'avatarDecorations', s.CLIENT_THEMES = 'clientThemes', s.CLIPS = 'clips', s.EARLY_ACCESS = 'earlyAccess', s.ENTRANCE_SOUNDS = 'entranceSounds', s.PROFILE_EFFECTS = 'profileEffects', s.PROFILES = 'profiles', s.REMIXING = 'remixing', s.SERVER_BOOSTS = 'serverBoosts', s.SPECIAL_MEMBER_PRICING = 'specialMemberPricing', s.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = 'specialMemberPricingSeeAllVariant', s.SPECIAL_SHOP_PERKS = 'specialShopPerks', s.UNLIMITED_SUPER_REACTIONS = 'unlimitedSuperReactions', s.SUPER_REACTIONS = 'superReactions', s.UPCOMING_DROP_UNTIMED = 'upcomingDropUntimed', s.CUSTOM_APP_ICONS = 'customAppIcons', s.MORE_EMOJI_POWER = 'moreEmojiPower', s.CUSTOM_SOUNDS_EVERYWHERE = 'customSoundsEverywhere', s.SPECIAL_STICKER_ACCESS = 'specialStickerAccess', s.LARGE_UPLOADS = 'largeUploads', s.HD_VIDEO = 'hdVideo', s.BADGE = 'badge', s.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = 'entranceSoundsSeeAllVariation', s.EARLY_ACCESS_SEE_ALL_VARIATION = 'earlyAccessSeeAllVariant', s.FREE_BOOST = 'freeBoost', s.REFERRAL_PROGRAM = 'referralProgram', s.NEW_APP_STYLES_UPDATE_JUNE_2024 = 'newAppStylesUpdateJune2024', s.SERVER_PROFILES = 'serverProfiles';
 t.Z = () => {
-    let {analyticsLocations: e} = (0, _.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD), t = (0, c.ZP)(), n = (0, p.BU)(((0, A.Xv)() ? b.wb : b.Uq) / 1024, { useKibibytes: !0 }), s = (0, i.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), a = null != s ? m.ZP.getPremiumPlanItem(s) : null, el = null != a ? m.ZP.getSkuIdForPlan(a.planId) : null, eo = el === b.Si.TIER_2, ec = el === b.Si.TIER_0, {flipped: ed} = (0, N.JP)(), {flipped: e_} = (0, N.as)(), eu = (0, f.nY)({ showAnimations: !0 }), eE = null != eu ? eu.initialPercentage : void 0, eT = null != eu ? eu.percentage : void 0, eI = (0, u.Z)(R.Z), eR = (0, S.Z)(), eC = (0, E.Z)({
+    let {analyticsLocations: e} = (0, _.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD), t = (0, c.ZP)(), n = (0, p.BU)(((0, A.Xv)() ? b.wb : b.Uq) / 1024, { useKibibytes: !0 }), s = (0, i.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), a = null != s ? N.ZP.getPremiumPlanItem(s) : null, el = null != a ? N.ZP.getSkuIdForPlan(a.planId) : null, eo = el === b.Si.TIER_2, ec = el === b.Si.TIER_0, {flipped: ed} = (0, m.JP)(), {flipped: e_} = (0, m.as)(), eu = (0, f.nY)({ showAnimations: !0 }), eE = null != eu ? eu.initialPercentage : void 0, eT = null != eu ? eu.percentage : void 0, eI = (0, u.Z)(R.Z), eR = (0, S.Z)(), eC = (0, E.Z)({
             scrollPosition: P.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }), ep = () => {
@@ -20,7 +20,7 @@ t.Z = () => {
             (0, T.uL)(O.Z5c.COLLECTIBLES_SHOP);
         }, eA = () => {
             o.Z.open(O.oAB.APPEARANCE, null, { scrollPosition: P.h1.CUSTOM_APP_ICONS });
-        }, em = {
+        }, eN = {
             avatarDecorations: eo ? {
                 name: 'avatarDecorations',
                 title: v.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
@@ -146,7 +146,7 @@ t.Z = () => {
                 descriptionCta: v.Z.Messages.VISIT_THE_SHOP_CTA,
                 onCtaClick: eg,
                 pillText: v.Z.Messages.EARLY_ACCESS,
-                perkImage: J,
+                perkImage: q,
                 canReveal: e_,
                 dismissibleContentType: l.z.WHATS_NEW_PROFILE_EFFECTS_FLIP
             } : {
@@ -155,7 +155,7 @@ t.Z = () => {
                 subtitle: v.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
                 description: v.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
                 pillText: v.Z.Messages.EARLY_ACCESS,
-                perkImage: J,
+                perkImage: q,
                 canReveal: e_,
                 dismissibleContentType: l.z.WHATS_NEW_PROFILE_EFFECTS_FLIP
             },
@@ -344,7 +344,7 @@ t.Z = () => {
                 description: v.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_DESCRIPTION.format({ helpdeskArticle: g.Z.getArticleURL(O.BhN.REFERRAL_PROGRAM) }),
                 descriptionCta: v.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
                 isPremiumGetCta: !eo || void 0,
-                perkImage: q
+                perkImage: J
             },
             serverProfiles: {
                 name: 'serverProfiles',
@@ -369,7 +369,7 @@ t.Z = () => {
                 percentage: eT,
                 initialPercentage: eE
             });
-        em.freeBoost = {
+        eN.freeBoost = {
             name: 'freeBoost',
             title: t,
             subtitle: n,
@@ -384,5 +384,5 @@ t.Z = () => {
             dismissibleContentType: l
         };
     }
-    return em;
+    return eN;
 };

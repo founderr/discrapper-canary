@@ -12,7 +12,7 @@ t.d(n, {
         return U;
     }
 }), t(47120), t(411104);
-var i, l, r = t(735250), a = t(470079), s = t(120356), o = t.n(s), c = t(481060), u = t(361213), d = t(542094), m = t(778569), p = t(182906), _ = t(367907), E = t(220082), h = t(318661), A = t(810090), N = t(792125), f = t(541099), C = t(783097), I = t(695676), v = t(176412), P = t(226026), x = t(753972), T = t(981631), g = t(217702), R = t(231338), S = t(689938), M = t(126152), L = t(413097);
+var i, l, r = t(735250), a = t(470079), s = t(120356), o = t.n(s), c = t(481060), u = t(361213), d = t(542094), m = t(778569), p = t(182906), _ = t(367907), E = t(220082), h = t(318661), A = t(810090), f = t(792125), N = t(541099), C = t(783097), v = t(695676), I = t(176412), x = t(226026), P = t(753972), T = t(981631), g = t(217702), R = t(231338), S = t(689938), M = t(126152), L = t(413097);
 function j(e) {
     let {
             application: n,
@@ -28,11 +28,11 @@ function j(e) {
         } = e, {
             iconURL: h,
             name: A,
-            description: f
+            description: N
         } = a.useMemo(() => (0, C.sl)(n, {
             botIconFirst: !0,
             fakeAppIconURL: L
-        }), [n]), I = (0, E.ZP)(h, ''), {trackItemImpressionRef: v} = (0, P.Z)({
+        }), [n]), v = (0, E.ZP)(h, ''), {trackItemImpressionRef: I} = (0, x.Z)({
             applicationId: n.id,
             sectionName: m,
             sectionPosition: p
@@ -40,26 +40,26 @@ function j(e) {
             !0 === u && g(!0);
         }, [u]), y = a.useCallback(() => g(!1), []);
     return 'icon' === t ? (0, r.jsx)(c.Clickable, {
-        innerRef: _ ? e => v.current = e : void 0,
+        innerRef: _ ? e => I.current = e : void 0,
         className: o()(M.container, M.iconCard),
         onClick: l,
         'aria-label': S.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
             applicationName: A,
-            applicationDescription: f
+            applicationDescription: N
         }),
-        children: (0, r.jsx)(x.Z, {
+        children: (0, r.jsx)(P.Z, {
             src: h,
             className: M.iconCard,
             'aria-hidden': !0,
             rendersPlaceholder: !0
         })
     }) : (0, r.jsxs)(c.Clickable, {
-        innerRef: _ ? e => v.current = e : void 0,
+        innerRef: _ ? e => I.current = e : void 0,
         className: M.container,
         onClick: l,
         'aria-label': S.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
             applicationName: A,
-            applicationDescription: f
+            applicationDescription: N
         }),
         children: [
             (0, r.jsxs)('div', {
@@ -76,14 +76,14 @@ function j(e) {
                         className: s,
                         children: (0, r.jsx)(O, {
                             application: n,
-                            fallbackColor: I,
+                            fallbackColor: v,
                             showVideo: T
                         })
                     }),
                     i && (0, r.jsx)('div', {
                         className: M.partnerLabelWrapper,
                         children: (0, r.jsx)(c.Text, {
-                            className: (0, N.Q)(R.BR.DARK),
+                            className: (0, f.Q)(R.BR.DARK),
                             variant: 'text-sm/medium',
                             color: 'text-normal',
                             children: S.Z.Messages.APP_DIRECTORY_PARTNER
@@ -98,7 +98,7 @@ function j(e) {
             (0, r.jsxs)('div', {
                 className: M.appDetailsContainer,
                 children: [
-                    (0, r.jsx)(x.Z, {
+                    (0, r.jsx)(P.Z, {
                         src: h,
                         className: M.icon,
                         'aria-hidden': !0,
@@ -117,7 +117,7 @@ function j(e) {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
                                 lineClamp: 1,
-                                children: f
+                                children: N
                             })
                         ]
                     })
@@ -201,17 +201,17 @@ function Z(e) {
             query: l,
             installOnDemand: r,
             location: s
-        } = e, {pushHistory: o} = (0, I.hH)();
+        } = e, {pushHistory: o} = (0, v.hH)();
     return a.useCallback(e => {
         e.stopPropagation(), (0, _.yw)(T.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
             application_id: n.id,
             section_name: t,
             search_results_position: i,
-            source: f.Z.entrypoint(),
+            source: N.Z.entrypoint(),
             location: s,
             query: l
         }), o({
-            type: I.gc.APPLICATION,
+            type: v.gc.APPLICATION,
             application: n,
             installOnDemand: r,
             sectionName: t
@@ -250,7 +250,7 @@ function U(e) {
         activityAction: u,
         buttonColor: m,
         buttonText: p
-    } = (0, v.P)(n, t, i, l);
+    } = (0, I.P)(n, t, i, l);
     if (u === d.JS.START)
         return a ? (0, r.jsx)(j, {
             ...s,

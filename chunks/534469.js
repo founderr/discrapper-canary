@@ -6,7 +6,7 @@ n.d(t, {
         return q;
     }
 }), n(789020);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r), c = n(91192), d = n(442837), u = n(481060), h = n(607070), p = n(223606), m = n(518738), _ = n(628238), f = n(807092), E = n(869765), C = n(703656), g = n(695346), I = n(592125), x = n(906467), T = n(323873), N = n(630388), v = n(709054), S = n(534091), Z = n(901461), A = n(739566), M = n(233715), b = n(492593), R = n(453687), j = n(348238), L = n(62072), P = n(38267), O = n(25015), y = n(689674), D = n(438075), k = n(764893), U = n(481363), w = n(900902), B = n(252032), H = n(737243), G = n(614584), V = n(295790), F = n(959517), W = n(981631), z = n(689938), Y = n(848509);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r), c = n(91192), d = n(442837), u = n(481060), h = n(607070), p = n(223606), m = n(518738), _ = n(628238), f = n(807092), E = n(869765), C = n(703656), g = n(695346), I = n(592125), x = n(906467), T = n(323873), v = n(630388), N = n(709054), S = n(534091), Z = n(901461), A = n(739566), M = n(233715), b = n(492593), R = n(453687), j = n(348238), L = n(62072), P = n(38267), O = n(25015), y = n(689674), D = n(438075), k = n(764893), U = n(481363), w = n(900902), B = n(252032), H = n(737243), G = n(614584), V = n(295790), F = n(959517), W = n(981631), z = n(689938), Y = n(848509);
 function K(e, t, n) {
     return e.getElementById((0, S.p)(t, n));
 }
@@ -66,7 +66,7 @@ function X(e) {
             compact: I = !1,
             className: x,
             groupId: T,
-            viewingChannelId: v
+            viewingChannelId: N
         } = e, S = r.type === W.uaV.REPLY ? r.messageReference : void 0, {
             onFocus: M,
             ...y
@@ -93,7 +93,7 @@ function X(e) {
             allowHeading: ee,
             allowLinks: !0,
             previewLinkTarget: !0,
-            viewingChannelId: v
+            viewingChannelId: N
         }), ec = (0, L.Z)(o, p, ea), ed = (0, A.ZP)(r), eu = (0, R.iG)(r, T), eh = (0, R.Gx)(r), ep = (0, B.Z)(e, er, !1), em = a.useCallback(() => (0, C.XU)(f, p, o), [
             f,
             p,
@@ -119,7 +119,7 @@ function X(e) {
                     [Y.message]: !0,
                     [Y.cozyMessage]: !I,
                     [Y.mentioned]: r.mentioned,
-                    [Y.ephemeral]: (0, N.yE)(r.flags, W.iLy.EPHEMERAL),
+                    [Y.ephemeral]: (0, v.yE)(r.flags, W.iLy.EPHEMERAL),
                     [Y.systemMessage]: (0, Z.Z)(r),
                     [Y.groupStart]: r.id === T || r.type === W.uaV.REPLY,
                     [Y.selected]: es
@@ -193,12 +193,12 @@ t.ZP = a.memo(function (e) {
         } = (0, j.bb)(en), eI = (0, d.e7)([T.Z], () => T.Z.isEditing(q, S), [
             q,
             S
-        ]), ex = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled), eT = eo || eI || ex && ef, eN = eT || e_, ev = (0, d.e7)([I.Z], () => C.hasFlag(W.iLy.HAS_THREAD) && I.Z.getChannel(v.default.castMessageIdAsChannelId(C.id))), eS = C.isFirstMessageInForumPost(K), eZ = (0, _.A)((null !== (n = C.editedTimestamp) && void 0 !== n ? n : C.timestamp).valueOf()), eA = (0, d.e7)([x.Z], () => x.Z.isDeveloper), {
+        ]), ex = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled), eT = eo || eI || ex && ef, ev = eT || e_, eN = (0, d.e7)([I.Z], () => C.hasFlag(W.iLy.HAS_THREAD) && I.Z.getChannel(N.default.castMessageIdAsChannelId(C.id))), eS = C.isFirstMessageInForumPost(K), eZ = (0, _.A)((null !== (n = C.editedTimestamp) && void 0 !== n ? n : C.timestamp).valueOf()), eA = (0, d.e7)([x.Z], () => x.Z.isDeveloper), {
             content: eM,
             hasSpoilerEmbeds: eb
         } = (0, O.Z)(C, {
             hideSimpleEmbedContent: ea && es,
-            isInteracting: eN,
+            isInteracting: ev,
             formatInline: !1,
             allowList: eS || eZ,
             allowHeading: eS || eZ,
@@ -242,7 +242,7 @@ t.ZP = a.memo(function (e) {
                         [Y.message]: !0,
                         [Y.cozyMessage]: !X,
                         [Y.mentioned]: C.mentioned,
-                        [Y.ephemeral]: (0, N.yE)(C.flags, W.iLy.EPHEMERAL),
+                        [Y.ephemeral]: (0, v.yE)(C.flags, W.iLy.EPHEMERAL),
                         [Y.nitroMessage]: C.type === W.uaV.NITRO_NOTIFICATION,
                         [Y.systemMessage]: (0, Z.Z)(C),
                         [Y.groupStart]: !ee && (eB || C.type === W.uaV.REPLY),
@@ -267,7 +267,7 @@ t.ZP = a.memo(function (e) {
                         channelMessageProps: e,
                         hasSpoilerEmbeds: eb,
                         handleContextMenu: ed,
-                        isInteracting: eN,
+                        isInteracting: ev,
                         isAutomodBlockedMessage: ew
                     }),
                     childrenButtons: em || eE ? (0, U.Z)({
@@ -280,7 +280,7 @@ t.ZP = a.memo(function (e) {
                     childrenMessageContent: s,
                     onMouseMove: eh,
                     onMouseLeave: ep,
-                    hasThread: !ee && C.hasFlag(W.iLy.HAS_THREAD) && null != ev,
+                    hasThread: !ee && C.hasFlag(W.iLy.HAS_THREAD) && null != eN,
                     isSystemMessage: (0, Z.Z)(C),
                     hasReply: C.type === W.uaV.REPLY,
                     messageRef: eU

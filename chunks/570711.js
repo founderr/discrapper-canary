@@ -12,13 +12,13 @@ t.Z = function (e) {
             analyticsLocationsOverride: b,
             repeatPurchase: g,
             ...m
-        } = e, I = (0, r.e7)([d.default], () => d.default.getCurrentUser()), L = (0, r.e7)([c.Z], () => c.Z.isFocused()), {analyticsLocations: E} = (0, a.ZP)();
+        } = e, L = (0, r.e7)([d.default], () => d.default.getCurrentUser()), I = (0, r.e7)([c.Z], () => c.Z.isFocused()), {analyticsLocations: E} = (0, a.ZP)();
     return (0, i.jsx)(o.ShinyButton, {
-        pauseAnimation: !L,
+        pauseAnimation: !I,
         className: _.tier2Gradient,
         color: o.Button.Colors.CUSTOM,
         onClick: e => {
-            if (e.preventDefault(), null == I) {
+            if (e.preventDefault(), null == L) {
                 (0, l.uL)(C.Z5c.LOGIN);
                 return;
             }

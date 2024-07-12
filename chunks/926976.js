@@ -3,7 +3,7 @@ r.d(t, {
         return I;
     }
 }), r(47120);
-var a = r(735250), n = r(470079), i = r(120356), o = r.n(i), l = r(913527), c = r.n(l), s = r(442837), d = r(481060), u = r(129861), h = r(594174), m = r(502568), g = r(55935), p = r(120816), b = r(31336), f = r(257785), y = r(484036), x = r(681619), k = r(621060), v = r(689938), _ = r(813064), C = r(979756);
+var a = r(735250), n = r(470079), i = r(120356), o = r.n(i), l = r(913527), c = r.n(l), s = r(442837), d = r(481060), u = r(129861), h = r(665149), m = r(594174), g = r(55935), p = r(120816), b = r(31336), f = r(257785), y = r(484036), x = r(681619), k = r(621060), v = r(689938), _ = r(813064), C = r(979756);
 let w = [
     {
         key: 'event',
@@ -58,17 +58,17 @@ let S = [{
                             timestamp: n,
                             fingerprint: i
                         }
-                    } = e, l = h.default.getUser(i), s = c()(n);
+                    } = e, l = m.default.getUser(i), s = c()(n);
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsxs)(m.ZP, {
+                        (0, a.jsxs)(h.ZP, {
                             className: o()(C.headerBar, _.subPanelHeaderBar),
                             children: [
-                                (0, a.jsx)(m.ZP.Icon, {
+                                (0, a.jsx)(h.ZP.Icon, {
                                     icon: d.AnalyticsIcon,
                                     tooltip: t
                                 }),
-                                (0, a.jsx)(m.ZP.Title, { children: t })
+                                (0, a.jsx)(h.ZP.Title, { children: t })
                             ]
                         }),
                         (0, a.jsxs)(f.E, {

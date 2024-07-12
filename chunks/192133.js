@@ -3,7 +3,7 @@ n.d(t, {
         return x;
     }
 }), n(47120);
-var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(442837), l = n(481060), u = n(100527), c = n(580552), d = n(314897), _ = n(592125), E = n(246946), f = n(5192), h = n(51144), p = n(342656), m = n(621853), I = n(652853), T = n(421486), g = n(138394), S = n(790711), A = n(248345), N = n(337125), v = n(19836), O = n(207570), R = n(77097), C = n(538564), y = n(489642), D = n(319300), L = n(591600), b = n(579729), M = n(186395), P = n(584045), U = n(981631), w = n(869754);
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(442837), l = n(481060), u = n(100527), c = n(580552), d = n(314897), _ = n(592125), E = n(246946), f = n(5192), h = n(51144), p = n(621853), m = n(310427), I = n(652853), T = n(421486), g = n(138394), S = n(790711), A = n(248345), N = n(337125), v = n(19836), O = n(207570), R = n(77097), C = n(538564), y = n(489642), D = n(319300), L = n(591600), b = n(579729), M = n(186395), P = n(584045), U = n(981631), w = n(869754);
 function x(e) {
     var t, n, a;
     let {
@@ -20,9 +20,9 @@ function x(e) {
             hideNote: W = !1,
             showCopiableUsername: K = !1,
             analyticsParams: z
-        } = e, q = (0, s.e7)([E.Z], () => E.Z.hidePersonalInformation), Q = (0, s.e7)([m.Z], () => {
+        } = e, q = (0, s.e7)([E.Z], () => E.Z.hidePersonalInformation), Q = (0, s.e7)([p.Z], () => {
             var e;
-            return null === (e = m.Z.getUserProfile(k.id)) || void 0 === e ? void 0 : e.application;
+            return null === (e = p.Z.getUserProfile(k.id)) || void 0 === e ? void 0 : e.application;
         }), X = (0, s.e7)([_.Z], () => _.Z.getChannel(H)), {theme: $} = (0, I.z)(), J = i.useRef(null), [ee, et] = i.useState(!0), en = i.useCallback(() => {
             let {current: e} = J;
             null != e && et(0 === e.getScrollerState().scrollTop);
@@ -32,7 +32,7 @@ function x(e) {
         let {current: t} = J;
         null != t && (null === (e = t.getScrollerNode()) || void 0 === e || e.scrollTo({ top: 0 }));
     }, []);
-    let er = (0, s.e7)([d.default], () => d.default.getId()), ei = k.id === er, ea = k.bot || ei, {enabled: eo} = (0, p.qI)({
+    let er = (0, s.e7)([d.default], () => d.default.getId()), ei = k.id === er, ea = k.bot || ei, {enabled: eo} = (0, m.qI)({
             autoTrackExposure: !0,
             location: u.Z.PROFILE_POPOUT,
             disable: ea

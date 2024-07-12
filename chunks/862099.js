@@ -9,7 +9,7 @@ n.d(t, {
         return H;
     }
 }), n(47120);
-var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(481060), u = n(471445), _ = n(986332), h = n(662842), E = n(703656), I = n(922482), m = n(565799), g = n(501655), p = n(192079), T = n(427679), S = n(448206), C = n(496675), f = n(938475), N = n(602623), A = n(626135), Z = n(823379), L = n(15274), v = n(924301), O = n(504160), R = n(151864), x = n(835184), b = n(725436), P = n(497656), M = n(79874), D = n(554747), y = n(230900), j = n(854698), U = n(139712), G = n(765305), k = n(981631), w = n(689938), B = n(538704);
+var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(481060), u = n(884338), _ = n(471445), h = n(986332), E = n(662842), I = n(703656), m = n(922482), g = n(565799), p = n(501655), T = n(192079), S = n(427679), C = n(448206), f = n(496675), N = n(938475), A = n(626135), Z = n(823379), L = n(15274), v = n(924301), O = n(504160), R = n(151864), x = n(835184), b = n(725436), P = n(497656), M = n(79874), D = n(554747), y = n(230900), j = n(854698), U = n(139712), G = n(765305), k = n(981631), w = n(689938), B = n(538704);
 let H = r.memo(function (e) {
     let {
             heading: t,
@@ -94,10 +94,10 @@ function V(e) {
     let {
             guildEvent: t,
             channel: n
-        } = e, i = (0, c.Wu)([f.ZP], () => f.ZP.getVoiceStatesForChannel(n).map(e => {
+        } = e, i = (0, c.Wu)([N.ZP], () => N.ZP.getVoiceStatesForChannel(n).map(e => {
             let {user: t} = e;
             return t;
-        }), [n]), s = (0, u.KS)(n);
+        }), [n]), s = (0, _.KS)(n);
     return (0, a.jsx)(H, {
         onClickCloseIcon: () => (0, O.ji)({ eventId: null == t ? void 0 : t.id }),
         heading: w.Z.Messages.STAGE_CHANNEL_LIVE_NOW,
@@ -159,7 +159,7 @@ function Y(e) {
     let {
             guildEvent: n,
             noticeType: i
-        } = e, s = (0, y.cS)(n), l = null != s ? (0, b.m)(s, !0) : null, c = (0, y.nE)(n), _ = (0, u.KS)(c), {
+        } = e, s = (0, y.cS)(n), l = null != s ? (0, b.m)(s, !0) : null, c = (0, y.nE)(n), u = (0, _.KS)(c), {
             startTime: h,
             endTime: E
         } = (0, M.ZP)(n), {
@@ -228,7 +228,7 @@ function Y(e) {
             (0, a.jsxs)('div', {
                 className: o()(B.textBlock, B.singleLine),
                 children: [
-                    null != _ ? (0, a.jsx)(_, {
+                    null != u ? (0, a.jsx)(u, {
                         size: 'xs',
                         color: 'currentColor',
                         className: B.stageIcon
@@ -293,7 +293,7 @@ function K(e) {
         fullWidth: !0,
         className: B.joinButton,
         onClick: () => {
-            null != t && null != t.getGuildId() && ((0, I.Cq)(t), (0, E.XU)(t.getGuildId(), t.id));
+            null != t && null != t.getGuildId() && ((0, m.Cq)(t), (0, I.XU)(t.getGuildId(), t.id));
         },
         color: d.Button.Colors.GREEN,
         size: d.Button.Sizes.SMALL,
@@ -304,7 +304,7 @@ function q(e) {
     let {
             stageInstance: t,
             channel: n
-        } = e, i = (0, c.Wu)([m.Z], () => [...new Set(m.Z.getMutableParticipants(n.id, g.pV.SPEAKER).map(e => e.user))], [n.id]), s = (0, c.e7)([m.Z], () => m.Z.getParticipantCount(n.id, g.pV.AUDIENCE), [n.id]), r = w.Z.Messages.LISTENING_COUNT.format({ count: ''.concat(s) });
+        } = e, i = (0, c.Wu)([g.Z], () => [...new Set(g.Z.getMutableParticipants(n.id, p.pV.SPEAKER).map(e => e.user))], [n.id]), s = (0, c.e7)([g.Z], () => g.Z.getParticipantCount(n.id, p.pV.AUDIENCE), [n.id]), r = w.Z.Messages.LISTENING_COUNT.format({ count: ''.concat(s) });
     return (0, a.jsx)(H, {
         onClickCloseIcon: () => (0, O.ji)({ stageId: null == t ? void 0 : t.id }),
         heading: w.Z.Messages.STAGE_CHANNEL_LIVE_NOW,
@@ -337,16 +337,16 @@ function Q(e) {
             channel: t,
             speakers: n,
             voiceType: i
-        } = e, s = t.getGuildId(), l = r.useMemo(() => n.slice(0, 3), [n]), u = (0, c.e7)([C.Z], () => C.Z.can(k.Plq.CONNECT, t)), _ = (0, S.Z)(t.id), h = w.Z.Messages.JOIN;
+        } = e, s = t.getGuildId(), l = r.useMemo(() => n.slice(0, 3), [n]), _ = (0, c.e7)([f.Z], () => f.Z.can(k.Plq.CONNECT, t)), h = (0, C.Z)(t.id), E = w.Z.Messages.JOIN;
     switch (i) {
     case 1:
-        h = w.Z.Messages.JOIN;
+        E = w.Z.Messages.JOIN;
         break;
     case 2:
-        h = w.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON, (null == _ ? void 0 : _.speaker) ? h = w.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != _ && (h = w.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON);
+        E = w.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON, (null == h ? void 0 : h.speaker) ? E = w.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != h && (E = w.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON);
         break;
     case 3:
-        h = w.Z.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA;
+        E = w.Z.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA;
         break;
     default:
         (0, Z.vE)(i);
@@ -356,29 +356,29 @@ function Q(e) {
             l.length > 0 ? (0, a.jsxs)('div', {
                 className: o()(B.textBlock, B.singleLine),
                 children: [
-                    (0, a.jsx)(N.Z, {
+                    (0, a.jsx)(u.Z, {
                         guildId: s,
                         users: l,
                         showUserPopout: !0,
-                        size: N.u.SIZE_16
+                        size: u.u.SIZE_16
                     }),
                     (0, a.jsx)(d.Text, {
                         color: 'header-secondary',
                         variant: 'text-xs/normal',
                         className: B.userNames,
-                        children: (0, p.ER)(s, l, null == t ? void 0 : t.id, n.length)
+                        children: (0, T.ER)(s, l, null == t ? void 0 : t.id, n.length)
                     })
                 ]
             }) : null,
-            u && null == _ && (0, a.jsx)(K, {
+            _ && null == h && (0, a.jsx)(K, {
                 channel: t,
-                label: h
+                label: E
             })
         ]
     });
 }
 (s = i || (i = {}))[s.VOICE = 1] = 'VOICE', s[s.STAGE = 2] = 'STAGE', s[s.STUDY_ROOM = 3] = 'STUDY_ROOM', t.ZP = r.memo(function (e) {
-    let {guild: t} = e, {showRedesignedLiveChannelNotice: n} = (0, _.o)(!0), i = (0, P.y)(t.id), s = (0, D.k5)(t.id), r = (0, D.Vm)(t.id), l = (0, c.e7)([T.Z], () => T.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
+    let {guild: t} = e, {showRedesignedLiveChannelNotice: n} = (0, h.o)(!0), i = (0, P.y)(t.id), s = (0, D.k5)(t.id), r = (0, D.Vm)(t.id), l = (0, c.e7)([S.Z], () => S.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
             isStageNoticeHidden: o,
             isEventNoticeHidden: d
         } = (0, c.cj)([R.Z], () => ({
@@ -387,13 +387,13 @@ function Q(e) {
         }), [
             l,
             s
-        ]), u = null, E = null != l && null != i && !o;
+        ]), u = null, _ = null != l && null != i && !o;
     if (n)
-        return (0, a.jsx)(h.Z, { guild: t });
-    null == s || d ? E && (u = (0, a.jsx)(q, {
+        return (0, a.jsx)(E.Z, { guild: t });
+    null == s || d ? _ && (u = (0, a.jsx)(q, {
         stageInstance: l,
         channel: i
-    })) : s.entity_type === G.WX.STAGE_INSTANCE && E ? u = (0, a.jsx)(q, {
+    })) : s.entity_type === G.WX.STAGE_INSTANCE && _ ? u = (0, a.jsx)(q, {
         stageInstance: l,
         channel: i
     }) : s.entity_type === G.WX.EXTERNAL ? u = (0, a.jsx)(W, { guildEvent: s }) : s.entity_type === G.WX.VOICE && null != i && (u = (0, a.jsx)(V, {

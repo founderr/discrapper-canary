@@ -1,5 +1,5 @@
 n(47120);
-var s = n(735250), a = n(470079), r = n(512722), i = n.n(r), l = n(399606), o = n(481060), c = n(626135), d = n(709054), _ = n(914788), u = n(546791), E = n(259756), T = n(785681), I = n(985002), R = n(858719), C = n(780985), p = n(880257), g = n(631885), A = n(240351), m = n(792258), N = n(657825), f = n(198952), S = n(329242), h = n(895328), M = n(292352), x = n(981631), b = n(689938), O = n(661624);
+var s = n(735250), a = n(470079), r = n(512722), i = n.n(r), l = n(399606), o = n(481060), c = n(626135), d = n(709054), _ = n(914788), u = n(546791), E = n(259756), T = n(785681), I = n(985002), R = n(858719), C = n(780985), p = n(880257), g = n(631885), A = n(240351), N = n(792258), m = n(657825), f = n(198952), S = n(329242), h = n(895328), M = n(292352), x = n(981631), b = n(689938), O = n(661624);
 function P() {
     let e = a.useCallback(() => {
         (0, o.openModalLazy)(async () => {
@@ -34,11 +34,11 @@ function L(e) {
     i()(C, 'No text for action type');
     let h = C.sectionHeader(c), x = a.useCallback(e => {
             let {row: t} = e, n = l[t];
-            return (0, u.iB)(n) ? (0, s.jsx)(N.Z, {
+            return (0, u.iB)(n) ? (0, s.jsx)(m.Z, {
                 userId: n.entity_id,
                 timestamp: d.default.extractTimestamp(n.event_id),
                 timestampFormatter: C.timestampFormatter
-            }, n.event_id) : (0, u.f0)(n) ? (0, s.jsx)(m.Z, { guildId: n.entity_id }, n.event_id) : void 0;
+            }, n.event_id) : (0, u.f0)(n) ? (0, s.jsx)(N.Z, { guildId: n.entity_id }, n.event_id) : void 0;
         }, [
             l,
             C.timestampFormatter

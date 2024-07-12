@@ -10,8 +10,8 @@ function I(e) {
     let t, n, I, {
             author: m,
             banned: T
-        } = e, h = (0, a.e7)([r.default], () => r.default.getId()), N = (0, a.e7)([l.Z], () => l.Z.getChannelId()), p = d.ZP.useName(m), f = h === m.id;
-    return f ? (t = _.Z.Messages.INVITE_BUTTON_INVALID_OWNER, I = _.Z.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID) : (I = _.Z.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, T ? t = _.Z.Messages.INSTANT_INVITE_BANNED_INFO : null != p ? (t = _.Z.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({ username: p }), n = (0, i.jsx)(o.Z.Button, {
+        } = e, h = (0, a.e7)([r.default], () => r.default.getId()), N = (0, a.e7)([l.Z], () => l.Z.getChannelId()), f = d.ZP.useName(m), p = h === m.id;
+    return p ? (t = _.Z.Messages.INVITE_BUTTON_INVALID_OWNER, I = _.Z.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID) : (I = _.Z.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, T ? t = _.Z.Messages.INSTANT_INVITE_BANNED_INFO : null != f ? (t = _.Z.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({ username: f }), n = (0, i.jsx)(o.Z.Button, {
         onClick: function () {
             let {id: e} = m, t = '@'.concat(d.ZP.getUserTag(m, { decoration: 'never' }));
             c.S.dispatchToLastSubscribed(u.CkL.INSERT_TEXT, {

@@ -21,20 +21,20 @@ t.Z = e => {
             ellipseOpacity: p,
             customAnimationClassName: g,
             circleColor: A
-        } = e, m = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), N = t && !m;
+        } = e, N = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), m = t && !N;
     return (0, r.jsx)('div', {
         className: l()(E.progressCircle, n, { [E.progressCricleBottomMargin]: 0 === C }),
         children: (0, r.jsx)(u.Z, {
             animationClassName: l()(E.activeProgressCircle, {
-                [E.activeProgressCircleAnimation]: N,
-                [null != g ? g : '']: N
+                [E.activeProgressCircleAnimation]: m,
+                [null != g ? g : '']: m
             }),
             progressCircleStrokeSize: i,
             percentage: null != s ? s : I,
             initialPercentage: null != s ? s : R,
             progressCircleVariation: C,
             children: 0 === C ? (0, r.jsx)(d.Z, {
-                className: N ? E.nitroGemAnimation : void 0,
+                className: m ? E.nitroGemAnimation : void 0,
                 backgroundColor: l()(E.gemBackgroundFill, a),
                 backgroundCircleSize: T
             }) : (0, r.jsx)(_.Z, {

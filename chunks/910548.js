@@ -3,7 +3,7 @@ n.d(t, {
         return G;
     }
 }), n(47120);
-var i, a, s, r, l = n(735250), o = n(470079), c = n(120356), d = n.n(c), u = n(887024), _ = n(772848), E = n(468194), I = n(477690), m = n(481060), T = n(230711), h = n(745510), N = n(64078), p = n(29270), f = n(709586), C = n(482207), g = n(702346), S = n(267642), A = n(739566), x = n(981631), R = n(689938), O = n(845379);
+var i, a, s, r, l = n(735250), o = n(470079), c = n(120356), d = n.n(c), u = n(887024), _ = n(772848), E = n(468194), I = n(477690), m = n(481060), T = n(230711), h = n(745510), N = n(64078), f = n(29270), p = n(709586), C = n(482207), g = n(702346), S = n(267642), A = n(739566), x = n(981631), R = n(689938), O = n(845379);
 (s = i || (i = {})).ENTER = 'enter', s.CONFETTI = 'confetti', s.LEAF_PEEL = 'leaf_peel', s.LEAF_FALL = 'leaf_fall', s.EXIT = 'exit';
 let M = {
     enter: {
@@ -120,7 +120,7 @@ function k(e) {
         }()), {
             createMultipleConfettiAt: T,
             confettiCanvas: N
-        } = o.useContext(h.h), [p, f] = o.useState(null), C = (0, u.uR)(N, p), g = function (e, t) {
+        } = o.useContext(h.h), [f, p] = o.useState(null), C = (0, u.uR)(N, f), g = function (e, t) {
             if (null == e)
                 return 'enter';
             switch (e) {
@@ -239,7 +239,7 @@ function k(e) {
     ]), (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(u.Ji, {
-                ref: f,
+                ref: p,
                 sprites: y,
                 colors: D,
                 spriteWidth: 45,
@@ -284,7 +284,7 @@ function G(e) {
                 return x.Eu4.TIER_3;
             }
             return null;
-        }(n), d = (0, p.Z)(n), {
+        }(n), d = (0, f.Z)(n), {
             createMultipleConfettiAt: u,
             addClickListener: _
         } = o.useContext(h.h), [E, I] = o.useState(!1), M = o.useRef(null), {reducedMotion: v} = o.useContext(m.AccessibilityPreferencesContext), L = (0, A.ZH)(n), Z = L.nick, P = s(L);
@@ -333,7 +333,7 @@ function G(e) {
         className: O.iconWrapper,
         innerRef: M,
         onClick: r,
-        children: (0, l.jsx)(f.Z, {
+        children: (0, l.jsx)(p.Z, {
             className: O.icon,
             onMouseEnter: D
         })

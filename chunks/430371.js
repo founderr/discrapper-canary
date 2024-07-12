@@ -4,7 +4,7 @@ n.d(t, {
     }
 }), n(47120);
 var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(338545), o = n(110924), c = n(988980), d = n(157813), u = n(314897), h = n(131951), p = n(585483), m = n(807705), _ = n(27457), f = n(111248), E = n(312703), C = n(796638), g = n(981631), I = n(354459), x = n(524465), T = n(456515);
-let N = 16 / 9, v = 8 + C.cF;
+let v = 16 / 9, N = 8 + C.cF;
 function S(e) {
     let t, {
             onSelectParticipant: n,
@@ -23,9 +23,9 @@ function S(e) {
             height: D,
             layout: k,
             idle: U
-        } = e, w = null != M, B = h.Z.getVideoComponent(), H = u.default.getId(), [G, V] = a.useState(null), [F, W] = a.useState(!0), [z, Y] = a.useState(!1), K = j.type === I.fO.ACTIVITY, q = (0, c.Z)(j.id), X = !K && null != j.streamId, Q = D <= 2 * v + 144, J = L && !Q, $ = (0, o.Z)(J), ee = k === g.AEg.MINIMUM || k === g.AEg.NORMAL, et = !Q && (!ee || K), en = (0, m.Z)(et, 100), ei = 0;
-    (K || J) && (ei += 72), K && !J && (et ? ei += 48 : ei += 8), J && (ei += 0.5 * v + 8);
-    let ea = a.useMemo(() => K && q ? y / (D - 2 * ei) : X && null != G && G.width > 0 && G.height > 0 ? G.width / G.height : N, [
+        } = e, w = null != M, B = h.Z.getVideoComponent(), H = u.default.getId(), [G, V] = a.useState(null), [F, W] = a.useState(!0), [z, Y] = a.useState(!1), K = j.type === I.fO.ACTIVITY, q = (0, c.Z)(j.id), X = !K && null != j.streamId, Q = D <= 2 * N + 144, J = L && !Q, $ = (0, o.Z)(J), ee = k === g.AEg.MINIMUM || k === g.AEg.NORMAL, et = !Q && (!ee || K), en = (0, m.Z)(et, 100), ei = 0;
+    (K || J) && (ei += 72), K && !J && (et ? ei += 48 : ei += 8), J && (ei += 0.5 * N + 8);
+    let ea = a.useMemo(() => K && q ? y / (D - 2 * ei) : X && null != G && G.width > 0 && G.height > 0 ? G.width / G.height : v, [
             X,
             G,
             K,
@@ -33,7 +33,7 @@ function S(e) {
             D,
             ei,
             q
-        ]), es = D - 2 * ei, el = K && q ? y : es * ea, er = Math.floor(Math.min(y, el) / ea), eo = D > y / ea + 72 + v + 8;
+        ]), es = D - 2 * ei, el = K && q ? y : es * ea, er = Math.floor(Math.min(y, el) / ea), eo = D > y / ea + 72 + N + 8;
     t = J || K ? J ? -16 : -8 : 40 + Math.max(0, 72 - (D - er) / 2), a.useEffect(() => {
         let e = setTimeout(() => {
             W(!1);
@@ -98,7 +98,7 @@ function S(e) {
                 children: [
                     (0, i.jsxs)(r.animated.div, {
                         className: T.videoFrame,
-                        style: { top: ed.value.to(e => -e * v / 2) },
+                        style: { top: ed.value.to(e => -e * N / 2) },
                         children: [
                             (0, i.jsx)(r.animated.div, {
                                 style: { width: eu.value },
@@ -145,7 +145,7 @@ function S(e) {
                     (0, i.jsx)(r.animated.div, {
                         className: T.participantsWrapperAnimated,
                         style: {
-                            translateY: ec.value.to(e => e * v / 2),
+                            translateY: ec.value.to(e => e * N / 2),
                             opacity: ec.value,
                             visibility: ec.value.to(e => 0 === e ? 'hidden' : 'visible')
                         },

@@ -3,7 +3,7 @@ n.d(t, {
         return P;
     }
 });
-var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(442837), l = n(481060), u = n(620662), c = n(841784), d = n(850827), _ = n(812206), E = n(202458), f = n(220779), h = n(142550), p = n(954017), m = n(314091), I = n(159244), T = n(574176), g = n(952164), S = n(199902), A = n(592125), N = n(430824), v = n(496675), O = n(979651), R = n(543595), C = n(626135), y = n(153066), D = n(981631), L = n(689938), b = n(434544);
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(442837), l = n(481060), u = n(620662), c = n(841784), d = n(387903), _ = n(850827), E = n(812206), f = n(202458), h = n(220779), p = n(142550), m = n(954017), I = n(314091), T = n(159244), g = n(574176), S = n(952164), A = n(199902), N = n(592125), v = n(430824), O = n(496675), R = n(979651), C = n(626135), y = n(153066), D = n(981631), L = n(689938), b = n(434544);
 function M(e) {
     let {
         type: t,
@@ -13,11 +13,11 @@ function M(e) {
         user: o,
         guildId: s,
         channelId: u,
-        onAction: _,
+        onAction: d,
         isEmbedded: E = (0, c.Z)(i),
         actionColor: f
     } = e;
-    return (0, r.jsx)(d.Z, {
+    return (0, r.jsx)(_.Z, {
         className: (0, y.l)(b, 'actions', t),
         type: t,
         source: n,
@@ -28,11 +28,11 @@ function M(e) {
         look: l.Button.Looks.FILLED,
         color: null != f ? f : l.Button.Colors.PRIMARY,
         channelId: u,
-        onAction: _,
+        onAction: d,
         isEmbedded: E
     });
 }
-let P = R.Z.Types;
+let P = d.Z.Types;
 t.Z = function (e) {
     let {
             activity: t,
@@ -40,30 +40,30 @@ t.Z = function (e) {
             useStoreStream: a = !0,
             showActions: l = !0,
             hideHeader: c = !1,
-            showChannelDetails: d = !1,
+            showChannelDetails: _ = !1,
             analyticsParams: y,
             ...P
         } = e, U = (0, s.e7)([
-            O.Z,
-            A.Z
+            R.Z,
+            N.Z
         ], () => {
             var e;
-            return A.Z.getChannel(null === (e = O.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
-        }), {enableHangStatus: w} = T.n.useExperiment({
+            return N.Z.getChannel(null === (e = R.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
+        }), {enableHangStatus: w} = g.n.useExperiment({
             guildId: null == U ? void 0 : U.guild_id,
             location: 'UserActivityContainer'
-        }, { autoTrackExposure: !1 }), x = (0, s.e7)([S.Z], () => a ? S.Z.getAnyStreamForUser(n.id) : null), G = w && v.Z.can(D.Plq.CONNECT, U), k = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && G ? U : null, B = (0, s.e7)([
-            N.Z,
-            O.Z,
-            A.Z
+        }, { autoTrackExposure: !1 }), x = (0, s.e7)([A.Z], () => a ? A.Z.getAnyStreamForUser(n.id) : null), G = w && O.Z.can(D.Plq.CONNECT, U), k = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && G ? U : null, B = (0, s.e7)([
+            v.Z,
+            R.Z,
+            N.Z
         ], () => {
             var e, r;
-            return (0, u.Z)(t, D.xjy.EMBEDDED) ? N.Z.getGuild(null === (e = A.Z.getChannel(null === (r = O.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? N.Z.getGuild(k.getGuildId()) : null;
-        }), F = (0, s.e7)([N.Z], () => null != x ? N.Z.getGuild(x.guildId) : null), V = (0, s.e7)([_.Z], () => {
+            return (0, u.Z)(t, D.xjy.EMBEDDED) ? v.Z.getGuild(null === (e = N.Z.getChannel(null === (r = R.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? v.Z.getGuild(k.getGuildId()) : null;
+        }), F = (0, s.e7)([v.Z], () => null != x ? v.Z.getGuild(x.guildId) : null), V = (0, s.e7)([E.Z], () => {
             if (null != t)
-                return null != t.application_id ? _.Z.getApplication(t.application_id) : _.Z.getApplicationByName(t.name);
+                return null != t.application_id ? E.Z.getApplication(t.application_id) : E.Z.getApplicationByName(t.name);
             return null;
-        }), H = (0, E.Z)(), Z = (0, I.Z)(n), Y = H && null != t && Z;
+        }), H = (0, f.Z)(), Z = (0, T.Z)(n), Y = H && null != t && Z;
     return (i.useEffect(() => {
         (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && G && C.default.track(D.rMx.VIEW_HANG_STATUS, {
             source: 'UserProfilePopout',
@@ -74,7 +74,7 @@ t.Z = function (e) {
         null == t ? void 0 : t.type,
         G,
         k
-    ]), (null == t ? void 0 : t.type) !== D.IIU.HANG_STATUS || G) ? (0, r.jsx)(R.Z, {
+    ]), (null == t ? void 0 : t.type) !== D.IIU.HANG_STATUS || G) ? (0, r.jsx)(d.Z, {
         ...P,
         activity: t,
         user: n,
@@ -82,8 +82,8 @@ t.Z = function (e) {
         hideHeader: c,
         activityGuild: null != B ? B : F,
         showReactions: Y,
-        showChannelDetails: d,
-        channel: d ? U : void 0,
+        showChannelDetails: _,
+        channel: _ ? U : void 0,
         renderActions: l ? () => (0, r.jsxs)('div', {
             className: o()(Y && b.actionsWrapper),
             children: [
@@ -93,7 +93,7 @@ t.Z = function (e) {
                     activity: t,
                     user: n
                 }),
-                Y && (0, r.jsx)(f.ZP, {
+                Y && (0, r.jsx)(h.ZP, {
                     showReact: !0,
                     showReply: !0,
                     popoutProps: {
@@ -110,27 +110,27 @@ t.Z = function (e) {
                             application_id: t.application_id,
                             interaction_type: r,
                             ...y
-                        }), r === h.L.ReactSubmit && null != i && (0, p.sendReactionToActivity)({
+                        }), r === p.L.ReactSubmit && null != i && (0, m.sendReactionToActivity)({
                             reaction: i,
                             user: n,
                             activity: t,
                             application: V,
-                            altText: (0, m.xC)(n, t),
+                            altText: (0, I.xC)(n, t),
                             stream: x
-                        }), r === h.L.ReplySubmit && null != a && (0, p.sendReplyToActivity)({
+                        }), r === p.L.ReplySubmit && null != a && (0, m.sendReplyToActivity)({
                             reply: a,
                             user: n,
                             activity: t,
                             application: V,
-                            altText: (0, m.xC)(n, t),
+                            altText: (0, I.xC)(n, t),
                             stream: x
                         });
                     }
                 })
             ]
         }) : null,
-        onOpenSpotifyTrack: g.aG,
-        onOpenSpotifyArtist: g.d$,
-        onOpenSpotifyAlbum: g.Z5
+        onOpenSpotifyTrack: S.aG,
+        onOpenSpotifyArtist: S.d$,
+        onOpenSpotifyAlbum: S.Z5
     }) : null;
 };

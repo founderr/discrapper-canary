@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(512722), o = n.n(s), c = n(442837), u = n(704215), d = n(692547), h = n(481060), p = n(988298), _ = n(475179), f = n(925549), m = n(872810), g = n(438139), C = n(730749), I = n(607070), E = n(566620), N = n(317381), x = n(620662), S = n(835473), v = n(67212), Z = n(757454), T = n(552740), L = n(933557), A = n(311352), b = n(730417), M = n(524347), R = n(853197), O = n(616360), y = n(858064), P = n(594190), j = n(569545), D = n(382182), U = n(74299), G = n(914923), w = n(165393), k = n(989941), B = n(803647), V = n(231664), H = n(759198), F = n(131704), W = n(199902), Y = n(314897), z = n(592125), K = n(984933), q = n(430824), Q = n(131951), J = n(496675), X = n(158776), $ = n(699516), ee = n(944486), et = n(885110), en = n(594174), ei = n(449224), el = n(366695), er = n(672752), ea = n(499150), es = n(976401), eo = n(333454), ec = n(864441), eu = n(368666), ed = n(626135), eh = n(358085), ep = n(793224), e_ = n(978769), ef = n(981631), em = n(918559), eg = n(702512), eC = n(689938), eI = n(115851);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(512722), o = n.n(s), c = n(442837), u = n(704215), d = n(692547), h = n(481060), p = n(988298), _ = n(475179), f = n(925549), m = n(872810), g = n(438139), C = n(730749), I = n(607070), E = n(566620), N = n(317381), x = n(620662), S = n(835473), v = n(67212), Z = n(757454), T = n(552740), L = n(933557), A = n(311352), b = n(730417), M = n(524347), R = n(853197), O = n(616360), y = n(858064), P = n(594190), j = n(569545), D = n(382182), U = n(74299), w = n(914923), G = n(165393), k = n(989941), B = n(803647), V = n(231664), H = n(759198), F = n(131704), W = n(199902), Y = n(314897), z = n(592125), K = n(984933), q = n(430824), Q = n(131951), J = n(496675), X = n(158776), $ = n(699516), ee = n(944486), et = n(885110), en = n(594174), ei = n(449224), el = n(366695), er = n(672752), ea = n(499150), es = n(976401), eo = n(333454), ec = n(864441), eu = n(368666), ed = n(626135), eh = n(358085), ep = n(793224), e_ = n(978769), ef = n(981631), em = n(918559), eg = n(702512), eC = n(689938), eI = n(115851);
 function eE(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -194,11 +194,11 @@ class ex extends l.PureComponent {
             } = this.props, {
                 title: r,
                 sanitizedTitle: s
-            } = (0, G.Z)(n);
+            } = (0, w.Z)(n);
         return (0, i.jsxs)('div', {
             className: eI.gameWrapper,
             children: [
-                e ? (0, i.jsx)(w.Z, { title: s }) : (0, i.jsx)(eu.ZP, {
+                e ? (0, i.jsx)(G.Z, { title: s }) : (0, i.jsx)(eu.ZP, {
                     look: eu.ZP.Looks.GRAY,
                     size: eu.ZP.Sizes.SMALL,
                     className: eI.liveIndicator
@@ -426,10 +426,10 @@ t.Z = (0, C.Z)(function (e) {
                     return a.id;
                 if (null != x)
                     return x.applicationId;
-            }()) && void 0 !== t ? t : '']), A = (0, c.e7)([Q.Z], () => (0, U.Z)(Q.Z) && (0, eh.isWindows)()), R = (0, c.e7)([X.Z], () => null != r ? X.Z.findActivity(r, e => e.type === ef.IIU.PLAYING) : null), O = null != p && p.ownerId === r && p.state !== ef.jm8.ENDED, y = (0, c.e7)([et.Z], () => et.Z.getBroadcast()), j = (0, Z.Z)() && null != a, G = (0, c.e7)([
+            }()) && void 0 !== t ? t : '']), A = (0, c.e7)([Q.Z], () => (0, U.Z)(Q.Z) && (0, eh.isWindows)()), R = (0, c.e7)([X.Z], () => null != r ? X.Z.findActivity(r, e => e.type === ef.IIU.PLAYING) : null), O = null != p && p.ownerId === r && p.state !== ef.jm8.ENDED, y = (0, c.e7)([et.Z], () => et.Z.getBroadcast()), j = (0, Z.Z)() && null != a, w = (0, c.e7)([
             en.default,
             $.Z
-        ], () => null != d ? (0, L.F6)(d, en.default, $.Z) : void 0), w = (0, V.Z)(null == s ? void 0 : s.id, r);
+        ], () => null != d ? (0, L.F6)(d, en.default, $.Z) : void 0), G = (0, V.Z)(null == s ? void 0 : s.id, r);
     return (0, i.jsx)(ex, {
         ...l,
         guildId: n,
@@ -451,8 +451,8 @@ t.Z = (0, C.Z)(function (e) {
         streamMetadata: _,
         broadcast: y,
         canStartBroadcast: j,
-        channelName: G,
+        channelName: w,
         guildForConnectedChannel: h,
-        streamQualityIndicator: w
+        streamQualityIndicator: G
     });
 });

@@ -1,5 +1,5 @@
 n(789020);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(91192), o = n(442837), c = n(518738), d = n(628238), u = n(869765), _ = n(592125), E = n(496675), I = n(630388), m = n(709054), T = n(900164), h = n(739566), N = n(492593), p = n(453687), f = n(25015), C = n(689674), g = n(438075), S = n(963550), A = n(845080), x = n(295790), R = n(145807), O = n(56744), M = n(981631), v = n(848509);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(91192), o = n(442837), c = n(518738), d = n(628238), u = n(869765), _ = n(592125), E = n(496675), I = n(630388), m = n(709054), T = n(900164), h = n(739566), N = n(492593), f = n(453687), p = n(25015), C = n(689674), g = n(438075), S = n(963550), A = n(845080), x = n(295790), R = n(145807), O = n(56744), M = n(981631), v = n(848509);
 t.Z = a.memo(function (e) {
     var t, n;
     let {
@@ -19,7 +19,7 @@ t.Z = a.memo(function (e) {
         } = e, F = a.type === M.uaV.POLL_RESULT || null !== (t = e.disableInteraction) && void 0 !== t && t, w = a.isFirstMessageInForumPost(D), V = (0, d.A)((null !== (n = a.editedTimestamp) && void 0 !== n ? n : a.timestamp).valueOf()), {
             content: H,
             hasSpoilerEmbeds: Y
-        } = (0, f.Z)(a, {
+        } = (0, p.Z)(a, {
             hideSimpleEmbedContent: b,
             allowList: w || V,
             allowHeading: w || V,
@@ -35,7 +35,7 @@ t.Z = a.memo(function (e) {
         });
     if ((0, T.Z)(a, J))
         return null;
-    let ee = (0, p.iG)(a), et = (0, p.Gx)(a);
+    let ee = (0, f.iG)(a), et = (0, f.Gx)(a);
     return (0, i.jsx)(N.Z, {
         compact: s,
         className: r()(L, {

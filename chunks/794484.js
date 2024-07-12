@@ -36,8 +36,8 @@ t.Z = e => {
             variant: r = T.R0.PERKS_DISCOVERABILITY,
             noBackground: g = !1,
             leftAlignHeaders: A = !1,
-            showAllPerksButton: m,
-            headerClassname: N,
+            showAllPerksButton: N,
+            headerClassname: m,
             isFullScreen: f = !0
         } = e, S = a.useRef(null), h = (0, _.yQ)(), M = (0, u.Ag)(h), x = (0, c.ZP)('perks-discoverability');
     (0, u.I2)();
@@ -88,17 +88,17 @@ t.Z = e => {
                 }, n),
                 children: [
                     (0, s.jsx)(p, {
-                        showAllPerksButton: m,
+                        showAllPerksButton: N,
                         leftAlignHeaders: A,
                         title: L.title,
-                        headerClassname: N
+                        headerClassname: m
                     }),
                     (0, s.jsx)(o.Text, {
                         variant: 'text-lg/normal',
                         color: 'header-primary',
                         className: i()(C.subtitle, {
-                            [C.subtitle]: null == m || A,
-                            [C.subtitleWithButton]: null != m && !A,
+                            [C.subtitle]: null == N || A,
+                            [C.subtitleWithButton]: null != N && !A,
                             [C.fullWidth]: O || A,
                             [C.moreSubtitleMargin]: B,
                             [C.leftAlignSubtitle]: A,
@@ -106,9 +106,9 @@ t.Z = e => {
                         }),
                         children: L.subtitle
                     }),
-                    !A && null != m && (0, s.jsx)('div', {
+                    !A && null != N && (0, s.jsx)('div', {
                         className: i()(C.showAllPerksButtonCenter),
-                        children: m
+                        children: N
                     }),
                     (0, s.jsx)('div', {
                         className: i()({

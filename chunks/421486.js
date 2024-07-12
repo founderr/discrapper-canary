@@ -1,7 +1,7 @@
 n(47120);
 var r, i, a = n(735250), o = n(470079), s = n(120356), l = n.n(s), u = n(442837), c = n(481060), d = n(906732), _ = n(318374), E = n(522289), f = n(314897), h = n(346656);
 n(5192);
-var p = n(342656), m = n(785717), I = n(726059), T = n(162267), g = n(171368), S = n(228168), A = n(689938), N = n(926708);
+var p = n(785717), m = n(310427), I = n(726059), T = n(162267), g = n(171368), S = n(228168), A = n(689938), N = n(926708);
 (i = r || (r = {}))[i.NOT_CHECKED = 0] = 'NOT_CHECKED', i[i.NOT_OVERFLOWING = 1] = 'NOT_OVERFLOWING', i[i.OVERFLOWING_LARGE_ONLY = 2] = 'OVERFLOWING_LARGE_ONLY', i[i.OVERFLOWING_ALL = 3] = 'OVERFLOWING_ALL';
 let v = o.memo(function (e) {
     let {
@@ -12,13 +12,13 @@ let v = o.memo(function (e) {
             analyticsLocation: s,
             maxIcons: u = 3,
             underlineTextOnHover: f = !1,
-            showTooltips: p = !0
+            showTooltips: m = !0
         } = e, {analyticsLocations: I} = (0, d.ZP)(), {
             guildId: T,
             channelId: v,
             messageId: O,
             roleId: R
-        } = (0, m.KZ)(), C = o.useMemo(() => {
+        } = (0, p.KZ)(), C = o.useMemo(() => {
             var e;
             return null !== (e = null == n ? void 0 : n.map(e => {
                 let {user: t} = e;
@@ -90,7 +90,7 @@ let v = o.memo(function (e) {
                         })
                     ]
                 });
-                return p ? (0, a.jsx)(c.TooltipContainer, {
+                return m ? (0, a.jsx)(c.TooltipContainer, {
                     text: A.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
                     children: e
                 }) : e;
@@ -122,7 +122,7 @@ let v = o.memo(function (e) {
                         })
                     ]
                 });
-                return p ? (0, a.jsx)(c.TooltipContainer, {
+                return m ? (0, a.jsx)(c.TooltipContainer, {
                     text: A.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
                     children: e
                 }) : e;
@@ -137,7 +137,7 @@ t.ZP = o.memo(function (e) {
             onClose: i,
             className: o,
             sourceAnaylticsLocations: s
-        } = e, {analyticsLocations: _} = (0, d.ZP)(), E = null !== (n = null !== (t = null == s ? void 0 : s[0]) && void 0 !== t ? t : null == _ ? void 0 : _[0]) && void 0 !== n ? n : null, h = (0, u.e7)([f.default], () => f.default.getId()), m = r.id === h, g = r.bot || m, {enabled: S} = (0, p.qI)({
+        } = e, {analyticsLocations: _} = (0, d.ZP)(), E = null !== (n = null !== (t = null == s ? void 0 : s[0]) && void 0 !== t ? t : null == _ ? void 0 : _[0]) && void 0 !== n ? n : null, h = (0, u.e7)([f.default], () => f.default.getId()), p = r.id === h, g = r.bot || p, {enabled: S} = (0, m.qI)({
             autoTrackExposure: !1,
             location: E,
             disable: g

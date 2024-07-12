@@ -33,12 +33,12 @@ t.Z = l.memo(function (e) {
             mentionCount: f.ZP.getMentionCount(t.id)
         })), D = (0, o.e7)([h.Z], () => h.Z.isMuted(t.id)), U = l.useCallback(e => {
             (0, p.ok)(t, !e.shiftKey, v.on.CHANNEL_LIST);
-        }, [t]), G = l.useCallback(() => {
+        }, [t]), w = l.useCallback(() => {
             u.Z.preload(t.guild_id, t.id);
         }, [
             t.guild_id,
             t.id
-        ]), w = l.useCallback(e => {
+        ]), G = l.useCallback(e => {
             let l = _.Z.getChannel(t.id);
             null != l && (0, d.jW)(e, async () => {
                 let {default: e} = await n.e('40157').then(n.bind(n, 422200));
@@ -78,8 +78,8 @@ t.Z = l.memo(function (e) {
                         [L.modeUnreadImportant]: !D && !r && P,
                         [L.withGuildIcon]: R
                     }),
-                    onMouseDown: G,
-                    onContextMenu: w,
+                    onMouseDown: w,
+                    onContextMenu: G,
                     children: [
                         !P || D || r ? null : (0, i.jsx)('div', { className: a()(L.unread, L.unreadImportant) }),
                         (0, i.jsx)(c.Clickable, {

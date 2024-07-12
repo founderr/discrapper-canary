@@ -99,11 +99,11 @@ t.ZP = l.memo(function (e) {
             headerClassName: R,
             communityInfoVisible: O,
             hasSubheader: y
-        } = e, P = L.hasFeature(_.oNc.ANIMATED_BANNER), j = (0, u.Z)(L), D = !j && L.hasCommunityInfoSubheader(), U = (0, h.xR)(A) && P && !v, [G, w] = l.useState(!1), k = l.useRef(), B = l.useRef(null), V = l.useRef(), H = d.QK.getSetting();
+        } = e, P = L.hasFeature(_.oNc.ANIMATED_BANNER), j = (0, u.Z)(L), D = !j && L.hasCommunityInfoSubheader(), U = (0, h.xR)(A) && P && !v, [w, G] = l.useState(!1), k = l.useRef(), B = l.useRef(null), V = l.useRef(), H = d.QK.getSetting();
     l.useEffect(() => {
         if (U && n && !k.current && H)
-            return w(!0), V.current = setTimeout(() => {
-                w(!1);
+            return G(!0), V.current = setTimeout(() => {
+                G(!1);
             }, 5000), () => {
                 clearTimeout(V.current);
             };
@@ -184,16 +184,16 @@ t.ZP = l.memo(function (e) {
                         guild: L,
                         controller: r,
                         guildBanner: A,
-                        animate: G
+                        animate: w
                     }) : null
                 ]
             }),
             U && F() ? (0, i.jsx)('div', {
                 className: g.animatedBannerHoverLayer,
                 onMouseEnter: () => {
-                    w(!0), clearTimeout(V.current);
+                    G(!0), clearTimeout(V.current);
                 },
-                onMouseLeave: () => w(!1),
+                onMouseLeave: () => G(!1),
                 style: { height: b }
             }) : null
         ]

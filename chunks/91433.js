@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(735250);
 n(470079);
-var i = n(120356), a = n.n(i), o = n(481060), s = n(194359), l = n(906732), u = n(5192), c = n(877485), d = n(785717), _ = n(689938), E = n(508101);
+var i = n(120356), a = n.n(i), o = n(481060), s = n(194359), l = n(906732), u = n(5192), c = n(785717), d = n(642113), _ = n(689938), E = n(508101);
 function f(e) {
     let {
             user: t,
@@ -13,7 +13,7 @@ function f(e) {
             channelId: i,
             friendToken: f,
             className: h
-        } = e, p = u.ZP.getName(n, i, t), {trackUserProfileAction: m} = (0, d.KZ)(), {newestAnalyticsLocation: I} = (0, l.ZP)(), {originalFriendingEnabled: T} = (0, c.V)({ location: 'UserProfileIncomingFriendRequestBanner' });
+        } = e, p = u.ZP.getName(n, i, t), {trackUserProfileAction: m} = (0, c.KZ)(), {newestAnalyticsLocation: I} = (0, l.ZP)(), {originalFriendingEnabled: T} = (0, d.V)({ location: 'UserProfileIncomingFriendRequestBanner' });
     return (0, r.jsxs)('div', {
         className: a()(E.container, h),
         children: [

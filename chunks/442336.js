@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(442837), l = n(481060), r = n(92114), o = n(9156), c = n(502568), d = n(585483), u = n(621600), h = n(110255), p = n(981631), m = n(689938), _ = n(896117);
+var i = n(735250), a = n(470079), s = n(442837), l = n(481060), r = n(92114), o = n(9156), c = n(585483), d = n(621600), u = n(665149), h = n(110255), p = n(981631), m = n(689938), _ = n(896117);
 function f(e) {
     let {channel: t} = e, n = (0, l.useRedesignIconContext)().enabled, [f, E] = (0, s.Wu)([o.ZP], () => [
             o.ZP.isChannelMuted(t.getGuildId(), t.id),
@@ -11,12 +11,12 @@ function f(e) {
         ], [t]), [C, g] = a.useState(!1);
     a.useEffect(() => {
         let e = () => g(!0);
-        return d.S.subscribe(p.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
-            d.S.unsubscribe(p.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
+        return c.S.subscribe(p.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
+            c.S.unsubscribe(p.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
         };
     }, []);
     let I = e => {
-            e.shiftKey ? r.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !f }, u.UE.muted(!f)) : g(e => !e);
+            e.shiftKey ? r.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !f }, d.UE.muted(!f)) : g(e => !e);
         }, x = m.Z.Messages.NOTIFICATION_SETTINGS;
     return (0, i.jsx)(l.Popout, {
         shouldShow: C,
@@ -33,7 +33,7 @@ function f(e) {
         }),
         children: (e, t) => {
             let {isShown: a} = t;
-            return (0, i.jsx)(c.ZP.Icon, {
+            return (0, i.jsx)(u.ZP.Icon, {
                 ...e,
                 onClick: I,
                 tooltip: a ? null : x,

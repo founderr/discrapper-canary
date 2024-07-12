@@ -1,7 +1,7 @@
 n(653041);
-var s = n(735250), a = n(470079), r = n(120356), i = n.n(r), l = n(442837), o = n(780384), c = n(481060), d = n(634894), _ = n(410030), u = n(100527), E = n(906732), T = n(15640), I = n(594174), R = n(78839), C = n(74538), p = n(775412), g = n(104494), A = n(639119), m = n(230916), N = n(248042), f = n(823188), S = n(21023), h = n(318747), M = n(409100), x = n(474936), b = n(689938), O = n(471587), P = n(102655), L = n(768236), v = n(314907), Z = n(826701);
+var s = n(735250), a = n(470079), r = n(120356), i = n.n(r), l = n(442837), o = n(780384), c = n(481060), d = n(634894), _ = n(410030), u = n(100527), E = n(906732), T = n(15640), I = n(594174), R = n(78839), C = n(74538), p = n(775412), g = n(104494), A = n(639119), N = n(230916), m = n(248042), f = n(823188), S = n(21023), h = n(318747), M = n(409100), x = n(474936), b = n(689938), O = n(471587), P = n(102655), L = n(768236), v = n(314907), Z = n(826701);
 let D = e => {
-        let {isLightTheme: t} = e, n = (0, N.W1)();
+        let {isLightTheme: t} = e, n = (0, m.W1)();
         return (0, s.jsx)(f.Cy, {
             text: n,
             className: O.bogoPillWithSparkles,
@@ -106,7 +106,7 @@ t.Z = e => {
         location: F + ' auto off',
         autoTrackExposure: !1
     });
-    let V = (0, _.ZP)(), W = (0, o.ap)(V), K = (0, l.e7)([I.default], () => I.default.getCurrentUser()), Y = (0, C.M5)(K, x.p9.TIER_2), z = (0, A.N)(), Q = null == z ? void 0 : null === (t = z.subscription_trial) || void 0 === t ? void 0 : t.sku_id, J = (0, p.rT)(), q = (0, g.Ng)(), X = null != q && (0, g.Wp)(q, x.Si.TIER_2), $ = (0, m.A)(x.Xh.PREMIUM_MONTH_TIER_2), ee = ''.concat($, '/').concat((0, C.eP)(x.rV.MONTH)), et = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_0), en = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_2), es = (0, S.n)(et, en, X, ee), ea = (0, N.Vi)();
+    let V = (0, _.ZP)(), W = (0, o.ap)(V), K = (0, l.e7)([I.default], () => I.default.getCurrentUser()), Y = (0, C.M5)(K, x.p9.TIER_2), z = (0, A.N)(), Q = null == z ? void 0 : null === (t = z.subscription_trial) || void 0 === t ? void 0 : t.sku_id, q = (0, p.rT)(), J = (0, g.Ng)(), X = null != J && (0, g.Wp)(J, x.Si.TIER_2), $ = (0, N.A)(x.Xh.PREMIUM_MONTH_TIER_2), ee = ''.concat($, '/').concat((0, C.eP)(x.rV.MONTH)), et = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_0), en = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_2), es = (0, S.n)(et, en, X, ee), ea = (0, m.Vi)();
     if (!k || !w)
         return null;
     let er = {
@@ -142,7 +142,7 @@ t.Z = e => {
                     subscriptionTier: x.Si.TIER_0,
                     showIcon: !1
                 }),
-                J === x.p9.TIER_2 || null != Q ? null : (0, s.jsx)(h.Z, {
+                q === x.p9.TIER_2 || null != Q ? null : (0, s.jsx)(h.Z, {
                     className: O.button,
                     subscriptionTier: x.Si.TIER_0
                 })
@@ -163,7 +163,7 @@ t.Z = e => {
                     showIcon: !1,
                     isEligibleForBogoPromotion: ea
                 }),
-                J === x.p9.TIER_0 || null != Q ? null : (0, s.jsx)(h.Z, {
+                q === x.p9.TIER_0 || null != Q ? null : (0, s.jsx)(h.Z, {
                     className: O.button,
                     subscriptionTier: x.Si.TIER_2
                 })
@@ -172,12 +172,12 @@ t.Z = e => {
         withBottomBorder: !1,
         withBottomBorderRadius: !0,
         buttonsRow: null == Q
-    }), n = v ? null : null != Q || null != J ? (0, s.jsx)(f.Cy, {
+    }), n = v ? null : null != Q || null != q ? (0, s.jsx)(f.Cy, {
         text: null != Q ? b.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
         className: O.freeTrialPillWithSparkles,
         colorOptions: Q === x.Si.TIER_0 ? W ? f.VE.PREMIUM_TIER_0_GRADIENT_FILL : f.VE.PREMIUM_TIER_0_WHITE_FILL : W ? Y ? f.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : f.VE.PREMIUM_TIER_2_WHITE_FILL
     }) : ea ? (0, s.jsx)(D, { isLightTheme: W }) : (0, s.jsx)(B, {});
-    let ei = Q === x.Si.TIER_0 || J === x.p9.TIER_0 || y === x.p9.TIER_0;
+    let ei = Q === x.Si.TIER_0 || q === x.p9.TIER_0 || y === x.p9.TIER_0;
     return (0, s.jsx)(E.Gt, {
         value: H,
         children: (0, s.jsxs)('div', {

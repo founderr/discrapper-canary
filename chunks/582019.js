@@ -8,7 +8,7 @@ t.d(n, {
 });
 var s = t(735250);
 t(470079);
-var i = t(442837), r = t(692547), c = t(481060), a = t(239091), o = t(154921), l = t(421600), d = t(51144), u = t(88751), _ = t(930180), E = t(689938), I = t(387224);
+var i = t(442837), r = t(692547), c = t(481060), a = t(239091), o = t(584511), l = t(154921), d = t(51144), u = t(88751), _ = t(930180), E = t(689938), I = t(387224);
 let T = e => {
         let {channelId: n} = e, t = (0, _._d)(n);
         return 0 === t ? null : (0, s.jsxs)('div', {
@@ -49,7 +49,7 @@ let T = e => {
         return t && (T = r ? E.Z.Messages.STAGE_SPEAKER : _ ? E.Z.Messages.STAGE_MODERATOR_TOOLTIP : E.Z.Messages.STAGE_AUDIENCE), (0, s.jsxs)('div', {
             className: I.user,
             children: [
-                (0, s.jsx)(l.Z, {
+                (0, s.jsx)(o.Z, {
                     src: n.getAvatarURL(null, 32),
                     size: c.AvatarSizes.SIZE_32,
                     muted: !1,
@@ -68,13 +68,13 @@ let T = e => {
                         (0, s.jsxs)('div', {
                             className: I.username,
                             children: [
-                                (0, s.jsx)(o.Z, {
-                                    size: t ? o.Z.Sizes.SIZE_16 : o.Z.Sizes.SIZE_14,
+                                (0, s.jsx)(l.Z, {
+                                    size: t ? l.Z.Sizes.SIZE_16 : l.Z.Sizes.SIZE_14,
                                     children: d.ZP.getName(n)
                                 }),
-                                (0, s.jsx)(o.Z, {
-                                    size: t ? o.Z.Sizes.SIZE_16 : o.Z.Sizes.SIZE_14,
-                                    color: o.Z.Colors.HEADER_SECONDARY,
+                                (0, s.jsx)(l.Z, {
+                                    size: t ? l.Z.Sizes.SIZE_16 : l.Z.Sizes.SIZE_14,
+                                    color: l.Z.Colors.HEADER_SECONDARY,
                                     children: '#'.concat(n.discriminator)
                                 })
                             ]

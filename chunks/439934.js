@@ -3,7 +3,7 @@ t.d(n, {
         return O;
     }
 }), t(47120);
-var i = t(735250), a = t(470079), l = t(120356), s = t.n(l), r = t(442837), o = t(481060), c = t(239091), d = t(434650), u = t(213459), g = t(695346), p = t(594174), v = t(695103), m = t(880448), x = t(602623), I = t(810090), f = t(823379), _ = t(5192), h = t(624138), C = t(115130), T = t(147865), E = t(542094), S = t(665811), j = t(182906), N = t(556505), b = t(513202), M = t(823531), A = t(689938), Z = t(93679), y = t(969728);
+var i = t(735250), a = t(470079), l = t(120356), s = t.n(l), r = t(442837), o = t(481060), c = t(239091), d = t(434650), u = t(213459), g = t(695346), p = t(594174), v = t(695103), m = t(880448), x = t(810090), I = t(823379), f = t(5192), _ = t(624138), h = t(115130), C = t(147865), T = t(542094), E = t(665811), S = t(182906), j = t(556505), N = t(513202), b = t(884338), M = t(823531), A = t(689938), Z = t(93679), y = t(969728);
 function D(e) {
     let {
         value: n,
@@ -14,7 +14,7 @@ function D(e) {
         color: 'interactive-normal',
         variant: 'text-xs/semibold',
         children: [
-            (0, f.lm)(t) ? (0, i.jsx)(t, { className: Z.icon }) : null,
+            (0, I.lm)(t) ? (0, i.jsx)(t, { className: Z.icon }) : null,
             n
         ]
     });
@@ -31,11 +31,11 @@ function L(e) {
             return Array.from(null !== (e = null == n ? void 0 : n.userIds) && void 0 !== e ? e : []).map(e => {
                 let [n] = e;
                 return p.default.getUser(n);
-            }).filter(f.lm);
-        }), d = _.ZP.getName(l, null == a ? void 0 : a.id, null == c ? void 0 : c[0]);
-    if (d = (0, h.aF)(d, 15), null == n || 0 === c.length) {
+            }).filter(I.lm);
+        }), d = f.ZP.getName(l, null == a ? void 0 : a.id, null == c ? void 0 : c[0]);
+    if (d = (0, _.aF)(d, 15), null == n || 0 === c.length) {
         var u, g;
-        let e = ''.concat((0, T.Z)(null !== (u = t.maxParticipants) && void 0 !== u ? u : 0));
+        let e = ''.concat((0, C.Z)(null !== (u = t.maxParticipants) && void 0 !== u ? u : 0));
         return s && (e = null !== (g = t.description) && void 0 !== g ? g : ''), (0, i.jsx)(o.Text, {
             className: Z.activitySubtitleText,
             variant: 'text-xs/normal',
@@ -54,8 +54,8 @@ function L(e) {
                     count: c.length - 1
                 }) : A.Z.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({ username: d })
             }),
-            (0, i.jsx)(x.Z, {
-                size: s ? x.u.SIZE_24 : x.u.SIZE_16,
+            (0, i.jsx)(b.Z, {
+                size: s ? b.u.SIZE_24 : b.u.SIZE_16,
                 guildId: l,
                 users: c,
                 max: 6
@@ -69,10 +69,10 @@ function O(e) {
             activityItem: t,
             channel: l,
             guildId: p,
-            locationObject: x,
+            locationObject: I,
             onActivityItemVisible: f,
             onActivityItemSelected: _,
-            large: h = !1
+            large: b = !1
         } = e, {
             imageBackground: O,
             videoUrl: B,
@@ -81,18 +81,18 @@ function O(e) {
             onActivityItemSelected: k,
             labelType: H,
             staffReleasePhase: P
-        } = (0, E.ZP)({
+        } = (0, T.ZP)({
             activityItem: t,
             channel: l,
             guildId: p,
-            locationObject: x,
+            locationObject: I,
             onActivityItemVisible: f,
             onActivityItemSelected: _,
-            embeddedActivitiesManager: b.Z
+            embeddedActivitiesManager: N.Z
         }), F = (0, r.e7)([
-            C.Z,
+            h.Z,
             v.Z
-        ], () => C.Z.inDevModeForApplication(t.application.id) || v.Z.inTestModeForApplication(t.application.id), [t.application.id]), {application: Y} = t, w = a.useCallback(e => e && (null == f ? void 0 : f({ applicationId: t.application.id })), [
+        ], () => h.Z.inDevModeForApplication(t.application.id) || v.Z.inTestModeForApplication(t.application.id), [t.application.id]), {application: Y} = t, w = a.useCallback(e => e && (null == f ? void 0 : f({ applicationId: t.application.id })), [
             t.application.id,
             f
         ]), U = (0, d.O)(w, 0.8, !0), [G, W] = a.useState(!1), [z, q] = a.useState(G);
@@ -107,7 +107,7 @@ function O(e) {
             k
         ]);
     return (0, i.jsxs)(o.Clickable, {
-        onClick: V === E.JS.START ? $ : void 0,
+        onClick: V === T.JS.START ? $ : void 0,
         onContextMenu: X ? e => {
             (0, c.vq)(e, e => (0, i.jsx)(M.Z, {
                 application: Y,
@@ -115,28 +115,28 @@ function O(e) {
             }));
         } : void 0,
         className: s()(Z.activityItem, {
-            [Z.large]: !0 === h,
-            [Z.disabled]: V !== E.JS.START
+            [Z.large]: !0 === b,
+            [Z.disabled]: V !== T.JS.START
         }),
         children: [
             (0, i.jsxs)('div', {
                 ref: U,
-                className: s()(Z.activityImageContainer, { [Z.large]: !0 === h }),
+                className: s()(Z.activityImageContainer, { [Z.large]: !0 === b }),
                 onMouseEnter: J,
                 onFocus: J,
                 onMouseLeave: K,
                 onBlur: K,
                 children: [
-                    (0, i.jsx)(j.Z, {
+                    (0, i.jsx)(S.Z, {
                         imageBackground: O,
                         applicationName: Y.name,
-                        imageClassName: s()(Z.activityImage, { [Z.large]: !0 === h }),
+                        imageClassName: s()(Z.activityImage, { [Z.large]: !0 === b }),
                         imageNotFoundClassName: Z.brokenImageIconWrapper
                     }),
-                    null != B && z && V === E.JS.START ? (0, i.jsx)('div', {
+                    null != B && z && V === T.JS.START ? (0, i.jsx)('div', {
                         className: s()(Z.activityVideo, { [Z.videoFadeOut]: !G }),
                         onAnimationEnd: () => G ? null : q(!1),
-                        children: (0, i.jsx)(I.Z, {
+                        children: (0, i.jsx)(x.Z, {
                             className: Z.activityVideo,
                             src: B,
                             loop: !0,
@@ -144,7 +144,7 @@ function O(e) {
                             muted: !0
                         })
                     }) : null,
-                    V !== E.JS.START ? (0, i.jsx)(S.U, {
+                    V !== T.JS.START ? (0, i.jsx)(E.U, {
                         action: V,
                         onClick: $
                     }) : null,
@@ -152,7 +152,7 @@ function O(e) {
                         className: Z.overlayBadge,
                         children: (0, i.jsx)('div', {
                             className: Z.badgeContainer,
-                            children: (0, i.jsx)(N.Z, {
+                            children: (0, i.jsx)(j.Z, {
                                 name: Y.name,
                                 labelType: H
                             })
@@ -169,13 +169,13 @@ function O(e) {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: s()(Z.activityTextContainer, { [Z.large]: h }),
+                className: s()(Z.activityTextContainer, { [Z.large]: b }),
                 children: [
-                    h ? (0, i.jsx)(o.Text, {
+                    b ? (0, i.jsx)(o.Text, {
                         className: Z.activityMaxParticipantsLarge,
                         variant: 'text-xs/normal',
                         color: 'interactive-normal',
-                        children: (0, T.Z)(null !== (n = Y.maxParticipants) && void 0 !== n ? n : 0)
+                        children: (0, C.Z)(null !== (n = Y.maxParticipants) && void 0 !== n ? n : 0)
                     }) : null,
                     (0, i.jsxs)('div', {
                         className: Z.activityName,
@@ -202,7 +202,7 @@ function O(e) {
                         application: Y,
                         channel: l,
                         guildId: p,
-                        large: h
+                        large: b
                     }),
                     (0, i.jsx)('div', {
                         className: Z.activityTagsContainer,

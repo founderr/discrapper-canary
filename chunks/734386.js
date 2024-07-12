@@ -3,7 +3,7 @@ n.d(t, {
         return P;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n.n(r), c = n(149765), d = n(866442), u = n(442837), h = n(481060), p = n(787014), m = n(911969), _ = n(933557), f = n(605436), E = n(185413), C = n(434404), g = n(454585), I = n(430824), x = n(496675), T = n(594174), N = n(183156), v = n(52736), S = n(700785), Z = n(51144), A = n(396769), M = n(967128), b = n(318374), R = n(981631), j = n(689938), L = n(375175);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n.n(r), c = n(149765), d = n(866442), u = n(442837), h = n(481060), p = n(787014), m = n(911969), _ = n(933557), f = n(605436), E = n(185413), C = n(434404), g = n(454585), I = n(430824), x = n(496675), T = n(594174), v = n(183156), N = n(52736), S = n(700785), Z = n(51144), A = n(396769), M = n(967128), b = n(318374), R = n(981631), j = n(689938), L = n(375175);
 function P(e) {
     let {channel: t} = e, [n, s] = a.useState(!1), r = (0, _.ZP)(t, !0), P = t.guild_id, O = (0, u.e7)([I.Z], () => null != P ? I.Z.getRoles(P) : void 0), y = (0, u.e7)([
             T.default,
@@ -125,7 +125,7 @@ function P(e) {
                     k.map((e, n) => {
                         var a, s;
                         let r = null !== (s = e.colorString) && void 0 !== s ? s : (0, d.Rf)(R.p6O), o = (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) !== void 0;
-                        return w ? (0, i.jsx)(N.Z, {
+                        return w ? (0, i.jsx)(v.Z, {
                             className: l()(L.role, { [L.last]: n === k.length - 1 }),
                             roleName: e.name,
                             roleColor: r,
@@ -134,7 +134,7 @@ function P(e) {
                             onClick: () => {
                                 C.Z.open(t.guild_id, R.pNK.MEMBERS), C.Z.selectRole(e.id);
                             }
-                        }, e.id) : (0, i.jsx)(v.Z, {
+                        }, e.id) : (0, i.jsx)(N.Z, {
                             className: l()(L.role, { [L.last]: n === k.length - 1 }),
                             roleName: e.name,
                             roleColor: r,

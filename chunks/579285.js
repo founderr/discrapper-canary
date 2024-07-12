@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     }
 }), n(47120);
-var r = n(735250), i = n(470079), a = n(512722), o = n.n(a), s = n(772848), l = n(924826), u = n(91192), c = n(442837), d = n(481060), _ = n(749210), E = n(112724), f = n(434404), h = n(271383), p = n(430824), m = n(496675), I = n(259580), T = n(700785), g = n(630249), S = n(785717), A = n(256226), N = n(314172), v = n(981631), O = n(689938), R = n(228892);
+var r = n(735250), i = n(470079), a = n(512722), o = n.n(a), s = n(772848), l = n(924826), u = n(91192), c = n(442837), d = n(481060), _ = n(749210), E = n(112724), f = n(434404), h = n(271383), p = n(430824), m = n(496675), I = n(259580), T = n(700785), g = n(785717), S = n(556239), A = n(256226), N = n(314172), v = n(981631), O = n(689938), R = n(228892);
 let C = (0, E.Z)(function (e) {
     let {
         user: t,
@@ -64,7 +64,7 @@ let C = (0, E.Z)(function (e) {
                 onRemove: () => m(e),
                 canRemove: f ? T.r6(a, n.id, E, e) : (null === (o = e.tags) || void 0 === o ? void 0 : o.guild_connections) === null && t.id === n.id
             }, e.id);
-        }), {expandRolesInlineEnabled: W} = (0, g.L)({ location: 'BiteSizeProfileMemberRolesListSection' }), {trackUserProfileAction: K} = (0, S.KZ)(), z = i.useCallback(() => {
+        }), {expandRolesInlineEnabled: W} = (0, S.L)({ location: 'BiteSizeProfileMemberRolesListSection' }), {trackUserProfileAction: K} = (0, g.KZ)(), z = i.useCallback(() => {
             P(!0), K({ action: 'EXPAND_ROLES' });
         }, [K]), q = i.useCallback(() => {
             P(!1), K({ action: 'COLLAPSE_ROLES' });
@@ -128,14 +128,14 @@ function y(e) {
             currentUser: n,
             guild: a,
             onOpenProfile: o
-        } = e, {trackUserProfileAction: s} = (0, S.KZ)(), l = (0, c.e7)([h.ZP], () => h.ZP.getMember(a.id, t.id)), u = (0, c.e7)([p.Z], () => p.Z.getRoles(a.id)), d = null == l ? void 0 : l.roles, E = i.useMemo(() => null == d || 0 === d.length ? [] : Object.values(u).filter(e => d.includes(e.id)).sort((e, t) => {
+        } = e, {trackUserProfileAction: s} = (0, g.KZ)(), l = (0, c.e7)([h.ZP], () => h.ZP.getMember(a.id, t.id)), u = (0, c.e7)([p.Z], () => p.Z.getRoles(a.id)), d = null == l ? void 0 : l.roles, E = i.useMemo(() => null == d || 0 === d.length ? [] : Object.values(u).filter(e => d.includes(e.id)).sort((e, t) => {
             var n, r;
             let i = (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) !== null, a = (null === (r = t.tags) || void 0 === r ? void 0 : r.guild_connections) !== null;
             return i && !a ? 1 : !i && a ? -1 : 0;
         }), [
             u,
             d
-        ]), I = T.e9(a, n.id), [g] = (0, c.Wu)([m.Z], () => [
+        ]), I = T.e9(a, n.id), [S] = (0, c.Wu)([m.Z], () => [
             m.Z.can(v.Plq.MANAGE_ROLES, a),
             null != a ? m.Z.getGuildVersion(a.id) : null
         ]), A = i.useCallback(e => {
@@ -157,7 +157,7 @@ function y(e) {
             a.id,
             t.id,
             s
-        ]), O = g && null != l;
+        ]), O = S && null != l;
     return 0 !== E.length || O ? (0, r.jsx)('div', {
         children: (0, r.jsx)(C, {
             user: t,
@@ -166,7 +166,7 @@ function y(e) {
             guildMember: l,
             roles: E,
             highestRole: I,
-            canManageRoles: g,
+            canManageRoles: S,
             onAddRole: N,
             onRemoveRole: A,
             onOpenProfile: o

@@ -1,5 +1,5 @@
 n(757143);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(371917), o = n(299608), c = n.n(o), d = n(442837), u = n(481060), _ = n(603263), E = n(461745), I = n(349033), m = n(999650), T = n(857595), h = n(607070), N = n(367907), p = n(592125), f = n(984933), C = n(768119), g = n(944486), S = n(153124), A = n(585483), x = n(72006), R = n(405656), O = n(181389), M = n(854709), v = n(778177), L = n(981631), Z = n(689938), P = n(356852);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(371917), o = n(299608), c = n.n(o), d = n(442837), u = n(481060), _ = n(603263), E = n(461745), I = n(349033), m = n(999650), T = n(857595), h = n(607070), N = n(367907), f = n(592125), p = n(984933), C = n(768119), g = n(944486), S = n(153124), A = n(585483), x = n(72006), R = n(405656), O = n(181389), M = n(854709), v = n(778177), L = n(981631), Z = n(689938), P = n(356852);
 function b(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -170,12 +170,12 @@ class U extends a.PureComponent {
                 this.focusEditor();
                 return;
             }
-            let n = g.Z.getChannelId(), i = p.Z.getChannel(n);
-            if ((null == i ? void 0 : i.isThread()) && (i = p.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate()) {
+            let n = g.Z.getChannelId(), i = f.Z.getChannel(n);
+            if ((null == i ? void 0 : i.isThread()) && (i = f.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate()) {
                 this.focusEditor();
                 return;
             }
-            let a = f.ZP.getTextChannelNameDisambiguations(i.getGuildId())[i.id], s = null != a ? a.name : i.name;
+            let a = p.ZP.getTextChannelNameDisambiguations(i.getGuildId())[i.id], s = null != a ? a.name : i.name;
             this.handleSetSearchQuery({
                 query: m.ZP[L.dCx.FILTER_IN].key + '#'.concat(s, ' '),
                 replace: !0

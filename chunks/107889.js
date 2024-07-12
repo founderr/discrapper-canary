@@ -3,7 +3,7 @@ i.d(n, {
         return P;
     }
 }), i(47120);
-var s = i(735250), l = i(470079), o = i(442837), t = i(481060), r = i(727637), a = i(100527), d = i(906732), c = i(680295), u = i(699516), I = i(5192), _ = i(751009), f = i(332390), E = i(877485), m = i(317179), S = i(785717), Z = i(318661), x = i(78675), v = i(899007), h = i(438163), p = i(502762), T = i(544989), g = i(481932), N = i(195387), C = i(272510), j = i(171368), A = i(900687), R = i(806926), O = i(228168), U = i(981631), M = i(689938), L = i(505451);
+var s = i(735250), l = i(470079), o = i(442837), t = i(481060), r = i(727637), a = i(100527), d = i(906732), c = i(680295), u = i(699516), I = i(5192), _ = i(785717), f = i(481046), E = i(910128), m = i(642113), S = i(718107), Z = i(318661), x = i(78675), v = i(899007), h = i(438163), p = i(502762), T = i(544989), g = i(481932), N = i(195387), C = i(272510), j = i(171368), A = i(900687), R = i(806926), O = i(228168), U = i(981631), M = i(689938), L = i(505451);
 function P(e) {
     let {
             user: n,
@@ -22,7 +22,7 @@ function P(e) {
         } = e, H = P === U.ME ? void 0 : P, {analyticsLocations: W} = (0, d.ZP)([
             ...Y,
             a.Z.SIMPLIFIED_PROFILE_MODAL
-        ]), z = (0, S.Q1)({
+        ]), z = (0, _.Q1)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
             guildId: H,
@@ -33,10 +33,10 @@ function P(e) {
         }), {
             originalFriendingEnabled: K,
             improvedFriendingEnabled: q
-        } = (0, E.V)({ location: 'SimplifiedUserProfileModal' }), {profileStatusEditEnabled: Q} = (0, _.K)({ location: 'SimplifiedUserProfileModalHeader' }), {statusReactReplyEnabled: J} = (0, m.t)({ location: 'SimplifiedUserProfileModalHeader' }), {
+        } = (0, m.V)({ location: 'SimplifiedUserProfileModal' }), {profileStatusEditEnabled: Q} = (0, f.K)({ location: 'SimplifiedUserProfileModalHeader' }), {statusReactReplyEnabled: J} = (0, S.t)({ location: 'SimplifiedUserProfileModalHeader' }), {
             persistentCallCtaEnabled: X,
             activeInviteToCallCtaEnabled: $
-        } = (0, f.l)({ location: 'SimplifiedUserProfileModalHeader' }), ee = (0, Z.ZP)(n.id, V ? H : void 0), en = (0, Z.ZP)(n.id, H), ei = (0, o.e7)([u.Z], () => u.Z.getRelationshipType(n.id)), es = l.createRef(), el = (0, r.Z)(es), eo = () => (null == en ? void 0 : en.guildId) == null ? null : (null == ee ? void 0 : ee.guildId) != null ? (0, s.jsx)(t.MenuItem, {
+        } = (0, E.l)({ location: 'SimplifiedUserProfileModalHeader' }), ee = (0, Z.ZP)(n.id, V ? H : void 0), en = (0, Z.ZP)(n.id, H), ei = (0, o.e7)([u.Z], () => u.Z.getRelationshipType(n.id)), es = l.createRef(), el = (0, r.Z)(es), eo = () => (null == en ? void 0 : en.guildId) == null ? null : (null == ee ? void 0 : ee.guildId) != null ? (0, s.jsx)(t.MenuItem, {
             id: 'view-main-profile',
             label: M.Z.Messages.VIEW_MAIN_PROFILE,
             subtext: M.Z.Messages.AKA_DISPLAY_NAME.format({ displayName: I.ZP.getName(void 0, void 0, n) }),
@@ -77,7 +77,7 @@ function P(e) {
         });
     return (0, s.jsx)(d.Gt, {
         value: W,
-        children: (0, s.jsx)(S.Mt, {
+        children: (0, s.jsx)(_.Mt, {
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
             guildId: H,

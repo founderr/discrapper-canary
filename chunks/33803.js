@@ -3,7 +3,7 @@ n.d(t, {
         return Q;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(91192), d = n(722770), u = n(442837), _ = n(481060), E = n(607070), I = n(313889), m = n(825829), T = n(226192), h = n(36459), N = n(336197), p = n(103575), f = n(496675), C = n(594174), g = n(467679), S = n(702346), A = n(5192), x = n(51144), R = n(937889), O = n(739566), M = n(779125), v = n(890410), L = n(464891), Z = n(507418), P = n(348238), b = n(38267), D = n(83561), j = n(959517), U = n(981631), y = n(674563), B = n(590433), k = n(689938), G = n(117414);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(91192), d = n(722770), u = n(442837), _ = n(481060), E = n(607070), I = n(313889), m = n(825829), T = n(226192), h = n(36459), N = n(336197), f = n(103575), p = n(496675), C = n(594174), g = n(467679), S = n(702346), A = n(5192), x = n(51144), R = n(937889), O = n(739566), M = n(779125), v = n(890410), L = n(464891), Z = n(507418), P = n(348238), b = n(38267), D = n(83561), j = n(959517), U = n(981631), y = n(674563), B = n(590433), k = n(689938), G = n(117414);
 function F(e, t) {
     let {
             popouts: n,
@@ -32,7 +32,7 @@ function F(e, t) {
 function w(e, t) {
     return a.useMemo(() => {
         if (null != t)
-            return n => (0, i.jsx)(p.Z, {
+            return n => (0, i.jsx)(f.Z, {
                 ...n,
                 location: 'AutomodFlagToChannel',
                 userId: t.id,
@@ -200,7 +200,7 @@ function Q(e) {
         } = e, {
             avatarSrc: o,
             eventHandlers: {
-                onMouseEnter: p,
+                onMouseEnter: f,
                 onMouseLeave: C
             }
         } = (0, D.m)(!0), {
@@ -210,7 +210,7 @@ function Q(e) {
             isFocused: O,
             handleFocus: M,
             handleBlur: Z
-        } = (0, P.bb)(A), b = (0, u.e7)([E.Z], () => E.Z.keyboardModeEnabled), j = (0, u.e7)([f.Z], () => f.Z.can(U.Plq.MANAGE_MESSAGES, l), [l]), {
+        } = (0, P.bb)(A), b = (0, u.e7)([E.Z], () => E.Z.keyboardModeEnabled), j = (0, u.e7)([p.Z], () => p.Z.can(U.Plq.MANAGE_MESSAGES, l), [l]), {
             ruleName: w,
             embedChannel: Y,
             decisionId: W,
@@ -250,7 +250,7 @@ function Q(e) {
             s.id
         ]), ed = (0, B.L9)(Number($)), eu = null != ee, e_ = j && null != J && (null == et || !et.actions.hasOwnProperty(I.d.DELETE_USER_MESSAGE));
     return (0, i.jsx)('div', {
-        onMouseEnter: p,
+        onMouseEnter: f,
         onMouseLeave: C,
         children: (0, i.jsx)(S.Z, {
             className: r()(G.mainContainer, { [G.compact]: n }),

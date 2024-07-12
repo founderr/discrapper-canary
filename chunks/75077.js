@@ -6,7 +6,7 @@ n.d(t, {
         return M;
     },
     gx: function () {
-        return N;
+        return m;
     },
     k3: function () {
         return p;
@@ -18,7 +18,7 @@ n.d(t, {
         return h;
     },
     t2: function () {
-        return m;
+        return N;
     },
     vZ: function () {
         return g;
@@ -59,7 +59,7 @@ let p = e => {
             return;
         }
     };
-function m(e, t) {
+function N(e, t) {
     switch (e) {
     case R.EB.PENDING:
         return null != t ? C.Z.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({ days: t }) : '';
@@ -71,7 +71,7 @@ function m(e, t) {
         return '';
     }
 }
-let N = (e, t, n) => (0, r.wj)(e) ? t : n, f = 'getWhatsNewRow', S = e => {
+let m = (e, t, n) => (0, r.wj)(e) ? t : n, f = 'getWhatsNewRow', S = e => {
         let {
                 cards: t,
                 perksCards: n,

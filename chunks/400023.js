@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(91192), o = n(442837), c = n(481060), d = n(904245), u = n(902840), h = n(607070), p = n(580747), m = n(135938), _ = n(160404), f = n(765104), E = n(695346), C = n(314897), g = n(323873), I = n(607744), x = n(375954), T = n(496675), N = n(306680), v = n(62817), S = n(594174), Z = n(68588), A = n(459273), M = n(255269), b = n(47481), R = n(977391), j = n(73274), L = n(419388), P = n(406534), O = n(981631), y = n(689938), D = n(431747);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(91192), o = n(442837), c = n(481060), d = n(904245), u = n(902840), h = n(607070), p = n(580747), m = n(135938), _ = n(160404), f = n(765104), E = n(695346), C = n(314897), g = n(323873), I = n(607744), x = n(375954), T = n(496675), v = n(306680), N = n(62817), S = n(594174), Z = n(68588), A = n(459273), M = n(255269), b = n(47481), R = n(977391), j = n(73274), L = n(419388), P = n(406534), O = n(981631), y = n(689938), D = n(431747);
 let k = a.memo(function (e) {
     var t, n;
     let {
@@ -13,8 +13,8 @@ let k = a.memo(function (e) {
             messageDisplayCompact: g,
             channelStream: I,
             uploads: x,
-            hasUnreads: N,
-            editingMessageId: v,
+            hasUnreads: v,
+            editingMessageId: N,
             fontSize: S,
             keyboardModeEnabled: Z,
             filterAfterTimestamp: M,
@@ -42,15 +42,15 @@ let k = a.memo(function (e) {
             messages: f,
             channel: m,
             compact: g,
-            hasUnreads: N,
-            focusId: v,
+            hasUnreads: v,
+            focusId: N,
             placeholderHeight: B.totalHeight,
             canLoadMore: null == M,
             handleScrollToBottom: a.useCallback(() => w(!0), [w]),
             handleScrollFromBottom: a.useCallback(() => w(!1), [w])
         }), G = (0, j.Z)({
             scrollerRef: H.ref,
-            isEditing: null != v,
+            isEditing: null != N,
             keyboardModeEnabled: Z,
             hasMoreAfter: f.hasMoreAfter
         });
@@ -228,9 +228,9 @@ t.Z = a.memo(function (e) {
             editingMessageId: B
         } = function (e) {
             var t, n;
-            let i = (0, o.e7)([x.Z], () => x.Z.getMessages(e.id), [e.id]), s = (0, o.e7)([N.ZP], () => {
+            let i = (0, o.e7)([x.Z], () => x.Z.getMessages(e.id), [e.id]), s = (0, o.e7)([v.ZP], () => {
                     var t;
-                    return null !== (t = N.ZP.getOldestUnreadMessageId(e.id)) && void 0 !== t ? t : null;
+                    return null !== (t = v.ZP.getOldestUnreadMessageId(e.id)) && void 0 !== t ? t : null;
                 }, [e.id]), {enabled: l} = m.Z.useExperiment({ location: '41de6d_1' }, { autoTrackExposure: !1 }), r = null !== (n = null === (t = S.default.getUser(C.default.getId())) || void 0 === t ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && void 0 !== n && n, c = (0, u.ts)(e), d = (0, p.Z)('use_topic_dividers_in_chat'), h = (0, o.Wu)([f.Z], () => {
                     var t;
                     return c && d && null !== (t = f.Z.summaries(e.id)) && void 0 !== t ? t : [];
@@ -277,8 +277,8 @@ t.Z = a.memo(function (e) {
             messages: D,
             channelStream: U,
             permissionVersion: _,
-            uploads: (0, o.e7)([v.Z], () => v.Z.getFiles(t.id), [t]),
-            unreadCount: (0, o.e7)([N.ZP], () => N.ZP.getUnreadCount(t.id), [t]),
+            uploads: (0, o.e7)([N.Z], () => N.Z.getFiles(t.id), [t]),
+            unreadCount: (0, o.e7)([v.ZP], () => v.ZP.getUnreadCount(t.id), [t]),
             hasUnreads: null != w,
             canChat: A,
             editingMessageId: B,

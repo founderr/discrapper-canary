@@ -12,7 +12,7 @@ t.Z = function (e) {
             C.id,
             C.guild_id,
             I
-        ]), T = p.filter(e => e.type === m.Ui.VOICE), N = 4 === T.length ? 2 : 3, v = (0, s.Wu)([o.Z], () => T.map(e => o.Z.getParticipant(C.id, e.id)).filter(h.lm), [
+        ]), T = p.filter(e => e.type === m.Ui.VOICE), v = 4 === T.length ? 2 : 3, N = (0, s.Wu)([o.Z], () => T.map(e => o.Z.getParticipant(C.id, e.id)).filter(h.lm), [
             C.id,
             T
         ]);
@@ -21,8 +21,8 @@ t.Z = function (e) {
         children: [
             (0, i.jsx)('div', {
                 className: f.tiles,
-                style: { maxWidth: 168 * N },
-                children: v.slice(0, 5).map(e => (0, i.jsx)(u.ZP, {
+                style: { maxWidth: 168 * v },
+                children: N.slice(0, 5).map(e => (0, i.jsx)(u.ZP, {
                     participant: e,
                     channel: C,
                     className: f.tile,

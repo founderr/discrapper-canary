@@ -1,4 +1,4 @@
-var i = n(735250), a = n(470079), s = n(873546), l = n(442837), r = n(481060), o = n(194359), c = n(333984), d = n(486622), u = n(922409), h = n(86203), p = n(6025), m = n(621853), _ = n(171368), f = n(433355), E = n(699516), C = n(594174), g = n(806519), I = n(768581), x = n(525541), T = n(981631), N = n(377668), v = n(228168), S = n(689938), Z = n(855299);
+var i = n(735250), a = n(470079), s = n(873546), l = n(442837), r = n(481060), o = n(194359), c = n(333984), d = n(486622), u = n(922409), h = n(86203), p = n(6025), m = n(621853), _ = n(171368), f = n(433355), E = n(699516), C = n(594174), g = n(806519), I = n(768581), x = n(525541), T = n(981631), v = n(377668), N = n(228168), S = n(689938), Z = n(855299);
 let A = e => {
         let {
                 userId: t,
@@ -39,7 +39,7 @@ let A = e => {
                         (0, _.openUserProfileModal)({
                             userId: t,
                             channelId: n,
-                            section: v.oh.MUTUAL_GUILDS,
+                            section: N.oh.MUTUAL_GUILDS,
                             analyticsLocation: { section: T.jXE.DIRECT_MESSAGE }
                         });
                     },
@@ -206,7 +206,7 @@ t.Z = e => {
             channel: n,
             showingBanner: a
         } = e, {channelId: r} = (0, u._)(), o = (0, l.e7)([c.Z], () => null != r && c.Z.isSpam(r), [r]), d = (0, l.e7)([E.Z], () => E.Z.getRelationshipType(t), [t]), p = n.id === r;
-    return t === N.fL ? null : o || p ? (0, i.jsxs)('div', {
+    return t === v.fL ? null : o || p ? (0, i.jsxs)('div', {
         className: Z.mobileContainer,
         children: [
             (0, i.jsx)('div', {

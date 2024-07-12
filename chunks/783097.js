@@ -15,13 +15,13 @@ t.d(n, {
         return A;
     },
     sl: function () {
-        return I;
+        return v;
     },
     yJ: function () {
-        return f;
+        return N;
     },
     ye: function () {
-        return N;
+        return f;
     }
 }), t(789020);
 var i = t(668781), l = t(904245), r = t(895924), a = t(667204), s = t(957730), o = t(973616), c = t(768581), u = t(630388), d = t(981631), m = t(689079), p = t(689938);
@@ -35,13 +35,13 @@ function h(e) {
 function A(e) {
     return E(e) ? e.description : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
 }
-function N(e) {
+function f(e) {
     var n;
     let {application: t} = e;
     return E(t) && (0, u.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, d.udG.EMBEDDED);
 }
-function f(e) {
-    return E(e) && N({ application: e }) ? e instanceof o.Z ? e.embeddedActivityConfig : e.embedded_activity_config : null;
+function N(e) {
+    return E(e) && f({ application: e }) ? e instanceof o.Z ? e.embeddedActivityConfig : e.embedded_activity_config : null;
 }
 function C(e) {
     let {
@@ -78,7 +78,7 @@ function C(e) {
         };
     return _();
 }
-function I(e) {
+function v(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
             fakeAppIconURL: t,
             ...i

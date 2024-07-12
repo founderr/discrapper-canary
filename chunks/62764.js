@@ -3,7 +3,7 @@ n.d(t, {
         return j;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(852229), o = n(442837), c = n(481060), d = n(393238), u = n(330726), h = n(48929), p = n(333535), m = n(566006), _ = n(443877), f = n(60174), E = n(216337), C = n(920888), g = n(287151), I = n(569471), x = n(346479), T = n(592125), N = n(934415), v = n(456269), S = n(109590), Z = n(228392), A = n(981631), M = n(689938), b = n(150631), R = n(716862);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(852229), o = n(442837), c = n(481060), d = n(393238), u = n(330726), h = n(48929), p = n(333535), m = n(566006), _ = n(443877), f = n(60174), E = n(216337), C = n(920888), g = n(287151), I = n(569471), x = n(346479), T = n(592125), v = n(934415), N = n(456269), S = n(109590), Z = n(228392), A = n(981631), M = n(689938), b = n(150631), R = n(716862);
 function j(e) {
     let {
             postId: t,
@@ -19,7 +19,7 @@ function j(e) {
             isLurking: W,
             isGuest: z,
             isPendingMember: Y
-        } = (0, _.Z)(B), K = (0, o.e7)([T.Z], () => T.Z.getChannel(j)), q = (0, v.Bs)(K), X = (0, o.e7)([h.Z], () => h.Z.shouldDisplayPrompt(t) && !0 === n, [
+        } = (0, _.Z)(B), K = (0, o.e7)([T.Z], () => T.Z.getChannel(j)), q = (0, N.Bs)(K), X = (0, o.e7)([h.Z], () => h.Z.shouldDisplayPrompt(t) && !0 === n, [
             t,
             n
         ]), Q = a.useCallback(e => {
@@ -50,7 +50,7 @@ function j(e) {
             (0, Z.B)({
                 postId: B.id,
                 location: { section: A.jXE.CHANNEL_HEADER }
-            }), (0, r.J)((0, N.EO)(B, K)), w(!0);
+            }), (0, r.J)((0, v.EO)(B, K)), w(!0);
         }, ei = G ? c.CheckmarkLargeIcon : c.BellIcon;
     return (0, i.jsxs)(i.Fragment, {
         children: [

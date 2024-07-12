@@ -16,8 +16,8 @@ function E(e) {
             appContext: I,
             analyticsLocation: x,
             className: T,
-            ...N
-        } = e, v = null == C ? void 0 : C.getGuildId(), S = null == C ? void 0 : C.id, Z = (0, o.e7)([h.Z], () => null != v ? h.Z.getGuild(v) : null, [v]), A = (0, o.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(S), [S]);
+            ...v
+        } = e, N = null == C ? void 0 : C.getGuildId(), S = null == C ? void 0 : C.id, Z = (0, o.e7)([h.Z], () => null != N ? h.Z.getGuild(N) : null, [N]), A = (0, o.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(S), [S]);
     if (t = Z, a = C, !(null != t && null != a && p.Z.can(m.Plq.CREATE_INSTANT_INVITE, a)))
         return null;
     let M = _.Z.Messages.INSTANT_INVITE;
@@ -41,7 +41,7 @@ function E(e) {
                         null == o || o(), (0, c.openModalLazy)(async () => {
                             let {default: e} = await Promise.all([
                                 n.e('7654'),
-                                n.e('39405')
+                                n.e('21026')
                             ]).then(n.bind(n, 560114));
                             return n => (0, i.jsx)(e, {
                                 ...n,
@@ -69,7 +69,7 @@ function E(e) {
                     });
                 },
                 className: s()(T, f.textButton),
-                ...N,
+                ...v,
                 children: M
             }),
             (0, i.jsx)(u.Z, {

@@ -3,7 +3,7 @@ i.d(n, {
         return h;
     }
 }), i(47120);
-var s = i(735250), l = i(470079), o = i(442837), t = i(706898), r = i(481060), a = i(246946), d = i(543595), c = i(785717), u = i(100849), I = i(944546), _ = i(470900), f = i(988246), E = i(970041), m = i(715388), S = i(834534), Z = i(228168), x = i(47460);
+var s = i(735250), l = i(470079), o = i(442837), t = i(706898), r = i(481060), a = i(387903), d = i(246946), c = i(785717), u = i(100849), I = i(944546), _ = i(470900), f = i(988246), E = i(970041), m = i(715388), S = i(834534), Z = i(228168), x = i(47460);
 function v(e) {
     let {
         section: n,
@@ -16,7 +16,7 @@ function v(e) {
     return n === Z.oh.ACTIVITY ? (0, s.jsx)(u.Z, {
         showActions: (null == o ? void 0 : o.id) !== l.id,
         user: l,
-        type: d.Y.SIMPLIFIED_PROFILE,
+        type: a.Y.SIMPLIFIED_PROFILE,
         onClose: r
     }) : n === Z.oh.MUTUAL_FRIENDS ? (0, s.jsx)(I.Z, {
         user: l,
@@ -39,7 +39,7 @@ function v(e) {
     });
 }
 function h(e) {
-    var n, i, d;
+    var n, i, a;
     let {
             user: u,
             currentUser: I,
@@ -48,14 +48,14 @@ function h(e) {
             initialSection: m = Z.oh.USER_INFO,
             initialSubsection: S,
             onClose: h
-        } = e, {trackUserProfileAction: p} = (0, c.KZ)(), T = (0, o.e7)([a.Z], () => a.Z.hidePersonalInformation), [{
+        } = e, {trackUserProfileAction: p} = (0, c.KZ)(), T = (0, o.e7)([d.Z], () => d.Z.hidePersonalInformation), [{
                 section: g,
                 subsection: N
             }, C] = l.useState({
-            section: null !== (d = null === (n = E.find(e => {
+            section: null !== (a = null === (n = E.find(e => {
                 let {section: n} = e;
                 return n === m;
-            })) || void 0 === n ? void 0 : n.section) && void 0 !== d ? d : null === (i = E[0]) || void 0 === i ? void 0 : i.section,
+            })) || void 0 === n ? void 0 : n.section) && void 0 !== a ? a : null === (i = E[0]) || void 0 === i ? void 0 : i.section,
             subsection: S
         }), j = l.useCallback(e => {
             p({

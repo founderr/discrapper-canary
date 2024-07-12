@@ -79,7 +79,7 @@ function x(e) {
         }, [
             D,
             A
-        ]), G = l.useCallback(e => {
+        ]), w = l.useCallback(e => {
             if (null == e)
                 return;
             let t = A[e];
@@ -88,7 +88,7 @@ function x(e) {
         }, [
             A,
             j
-        ]), w = l.useMemo(() => A.map(e => (0, i.jsx)(I.ZP, {
+        ]), G = l.useMemo(() => A.map(e => (0, i.jsx)(I.ZP, {
             interactive: Z,
             className: N.soundButton,
             sound: e,
@@ -110,9 +110,9 @@ function x(e) {
             showDeadZoneIndicator: !v,
             activeItem: R,
             onItemSelect: U,
-            onItemAction: G,
+            onItemAction: w,
             interactive: Z,
-            children: w
+            children: G
         })
     });
 }

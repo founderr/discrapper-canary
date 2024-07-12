@@ -6,7 +6,7 @@ n.d(t, {
         return M;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(525654), o = n.n(l), c = n(91192), d = n(442837), u = n(524437), _ = n(481060), E = n(570140), I = n(607070), m = n(724757), T = n(626135), h = n(585483), N = n(143316), p = n(240126), f = n(791914), C = n(147522), g = n(809780), S = n(981631), A = n(689938), x = n(418149);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(525654), o = n.n(l), c = n(91192), d = n(442837), u = n(524437), _ = n(481060), E = n(570140), I = n(607070), m = n(724757), T = n(626135), h = n(585483), N = n(143316), f = n(240126), p = n(791914), C = n(147522), g = n(809780), S = n(981631), A = n(689938), x = n(418149);
 function R(e) {
     let {
             setTab: t,
@@ -66,13 +66,13 @@ function R(e) {
         return (0, i.jsxs)('div', {
             className: x.container,
             children: [
-                (0, i.jsx)(f.Z, {
+                (0, i.jsx)(p.Z, {
                     tab: u.X.UNREADS,
                     setTab: t,
                     badgeState: M,
                     closePopout: R
                 }),
-                (0, i.jsx)(p.Z, {
+                (0, i.jsx)(f.Z, {
                     Icon: _.InboxIcon,
                     header: A.Z.Messages.UNREADS_EMPTY_STATE_HEADER,
                     tip: (null === (B = o().os) || void 0 === B ? void 0 : B.family) === 'OS X' ? A.Z.Messages.UNREADS_EMPTY_STATE_TIP_MAC : A.Z.Messages.UNREADS_EMPTY_STATE_TIP
@@ -84,7 +84,7 @@ function R(e) {
         className: r()(x.container, 'group-spacing-'.concat(U)),
         'aria-label': A.Z.Messages.UNREADS_TAB_LABEL,
         children: [
-            (0, i.jsx)(f.Z, {
+            (0, i.jsx)(p.Z, {
                 tab: u.X.UNREADS,
                 setTab: t,
                 badgeState: M,
@@ -166,13 +166,13 @@ function M(e) {
     return (0, i.jsxs)('div', {
         className: x.container,
         children: [
-            (0, i.jsx)(f.Z, {
+            (0, i.jsx)(p.Z, {
                 tab: u.X.UNREADS,
                 setTab: t,
                 badgeState: n,
                 closePopout: a
             }),
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(f.Z, {
                 Icon: _.InboxIcon,
                 disableStars: !0,
                 header: A.Z.Messages.UNREADS_EMPTY_STATE_ERROR_HEADER,

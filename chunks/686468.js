@@ -5,10 +5,10 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(692547), l = n(481060), r = n(688641), o = n(596449), c = n(459502), d = n(856691), u = n(889161), h = n(496675), p = n(602623), m = n(146085), _ = n(979339), f = n(643632), E = n(939863), C = n(689938), g = n(576961);
+var a = n(442837), s = n(692547), l = n(481060), r = n(884338), o = n(688641), c = n(596449), d = n(459502), u = n(856691), h = n(889161), p = n(496675), m = n(146085), _ = n(979339), f = n(643632), E = n(939863), C = n(689938), g = n(576961);
 function I(e) {
     let {onClick: t} = e;
-    return (0, i.jsx)(r.Z, {
+    return (0, i.jsx)(o.Z, {
         iconContainerClassName: g.continueIconContainer,
         icon: (0, i.jsx)(l.StageIcon, {
             size: 'custom',
@@ -31,11 +31,11 @@ function x(e) {
     return (0, i.jsxs)('div', {
         className: g.audienceSummary,
         children: [
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(r.Z, {
                 className: g.summaryItem,
                 guildId: t.guild_id,
                 users: a,
-                size: p.u.SIZE_16
+                size: r.u.SIZE_16
             }),
             (0, i.jsx)(l.Text, {
                 variant: 'text-sm/normal',
@@ -65,7 +65,7 @@ function T(e) {
     let {
             channel: t,
             onContinueClick: n
-        } = e, s = (0, a.e7)([h.Z], () => h.Z.can(m.yP, t), [t]), r = t.guild_id, {canCreateGuildEvent: p} = (0, u.XJ)(t), T = (0, f.Z)(t.id), {usersInSummary: N} = (0, _.Z)(t.id);
+        } = e, s = (0, a.e7)([p.Z], () => p.Z.can(m.yP, t), [t]), r = t.guild_id, {canCreateGuildEvent: o} = (0, h.XJ)(t), T = (0, f.Z)(t.id), {usersInSummary: v} = (0, _.Z)(t.id);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(E.Z, {
@@ -95,16 +95,16 @@ function T(e) {
                     })
                 ]
             }),
-            T ? null : (0, i.jsx)(c.Z, { channelId: t.id }),
-            s ? (0, i.jsx)(d.Z, {
+            T ? null : (0, i.jsx)(d.Z, { channelId: t.id }),
+            s ? (0, i.jsx)(u.Z, {
                 className: g.eventPrompt,
                 channel: t
             }) : null,
-            p ? (0, i.jsx)(o.Z, {
+            o ? (0, i.jsx)(c.Z, {
                 className: g.eventPrompt,
                 guildId: r
             }) : null,
-            (s || N.length > 0) && (0, i.jsx)('hr', { className: g.separator }),
+            (s || v.length > 0) && (0, i.jsx)('hr', { className: g.separator }),
             s ? (0, i.jsx)(I, { onClick: n }) : null,
             (0, i.jsx)(x, { channel: t })
         ]

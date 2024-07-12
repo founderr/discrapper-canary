@@ -12,8 +12,8 @@ let _ = e => {
                 withMentions: E = !1,
                 initialPageSize: I
             } = e, m = (0, a.e7)([d.Z], () => d.Z.shouldReload()), T = i.useRef(!1), [h, N] = i.useState(!1), {
-                initialized: p,
-                loading: f,
+                initialized: f,
+                loading: p,
                 items: C,
                 hasMore: g,
                 cursor: S,
@@ -33,10 +33,10 @@ let _ = e => {
                 roleFilter: l.Z.roleFilter
             }));
         i.useEffect(() => ((0, o.Vk)(!0), () => (0, o.Vk)(!1)), []), i.useEffect(() => {
-            p && t && (0, s.FT)(u.W.NOTIFICATION_CENTER);
+            f && t && (0, s.FT)(u.W.NOTIFICATION_CENTER);
         }, [
             t,
-            p
+            f
         ]);
         let O = (0, r.Z)();
         i.useEffect(() => () => {
@@ -49,14 +49,14 @@ let _ = e => {
             A
         ]), i.useEffect(() => {
             let e = m && t;
-            (!p || e) && (0, o.jk)({
+            (!f || e) && (0, o.jk)({
                 limit: null != I ? I : E ? 8 : 20,
                 with_mentions: E,
                 roles_filter: x,
                 everyone_filter: R
             });
         }, [
-            p,
+            f,
             m,
             t,
             E,
@@ -65,7 +65,7 @@ let _ = e => {
             I
         ]);
         let M = i.useCallback(async e => {
-            !T.current && p && g && null != S && (e || !A) && (T.current = !0, N(!0), await (0, o.jk)({
+            !T.current && f && g && null != S && (e || !A) && (T.current = !0, N(!0), await (0, o.jk)({
                 after: S,
                 with_mentions: E,
                 roles_filter: x,
@@ -75,7 +75,7 @@ let _ = e => {
                 T.current = !1;
             }), N(!1));
         }, [
-            p,
+            f,
             g,
             S,
             A,
@@ -84,8 +84,8 @@ let _ = e => {
             R
         ]);
         return {
-            initialized: p,
-            loading: f,
+            initialized: f,
+            loading: p,
             items: C,
             hasMore: g,
             loadMore: M,

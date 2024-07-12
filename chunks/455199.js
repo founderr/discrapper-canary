@@ -1,5 +1,5 @@
 n(733860), n(653041);
-var i, a, s, r, l = n(392711), o = n.n(l), c = n(442837), d = n(433517), u = n(379649), _ = n(570140), E = n(786761), I = n(572804), m = n(901461), T = n(814082), h = n(23750), N = n(314897), p = n(592125), f = n(375954), C = n(306680), g = n(699516), S = n(914010), A = n(9156), x = n(594174), R = n(981631);
+var i, a, s, r, l = n(392711), o = n.n(l), c = n(442837), d = n(433517), u = n(379649), _ = n(570140), E = n(786761), I = n(572804), m = n(901461), T = n(814082), h = n(23750), N = n(314897), f = n(592125), p = n(375954), C = n(306680), g = n(699516), S = n(914010), A = n(9156), x = n(594174), R = n(981631);
 let O = 'recentMentionFilterSettings', M = [], v = {}, L = !1, Z = !0, P = d.K.get(O, {
         guildFilter: R.NgX.ALL_SERVERS,
         everyoneFilter: !0,
@@ -8,7 +8,7 @@ let O = 'recentMentionFilterSettings', M = [], v = {}, L = !1, Z = !0, P = d.K.g
 function y(e) {
     if (e instanceof h.ZP)
         return e;
-    let t = f.Z.getMessage(e.channel_id, e.id);
+    let t = p.Z.getMessage(e.channel_id, e.id);
     return null != t ? t : (0, E.e5)(e);
 }
 function B(e) {
@@ -16,7 +16,7 @@ function B(e) {
     if ((0, m.Z)(e) && !R.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type))
         return null;
     null == t && (t = e.channel_id);
-    let n = p.Z.getChannel(t);
+    let n = f.Z.getChannel(t);
     if (null == n || n.type === R.d4z.DM || P.guildFilter === R.NgX.THIS_SERVER && n.getGuildId() !== S.Z.getGuildId())
         return null;
     let i = N.default.getId();
@@ -75,7 +75,7 @@ function H(e) {
 }
 class Y extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(x.default, p.Z, f.Z, C.ZP);
+        this.waitFor(x.default, f.Z, p.Z, C.ZP);
     }
     isOpen() {
         return j;
@@ -154,7 +154,7 @@ r = 'RecentMentionsStore', (s = 'displayName') in (a = Y) ? Object.definePropert
     GUILD_DELETE: function (e) {
         let {guild: t} = e;
         M = o().filter(M, e => {
-            let n = p.Z.getChannel(e.channel_id);
+            let n = f.Z.getChannel(e.channel_id);
             return null != n && n.getGuildId() !== t.id || (delete v[e.id], !1);
         });
     },

@@ -1,15 +1,15 @@
 n(47120), n(653041), n(724458);
-var i, l, r, a, s = n(392711), o = n.n(s), c = n(442837), u = n(570140), d = n(782769), h = n(527805), p = n(841784), _ = n(503438), f = n(802856), m = n(420660), g = n(728345), C = n(812206), I = n(710845), E = n(38618), N = n(656063), x = n(761282), S = n(814443), v = n(789407), Z = n(630186), T = n(250889), L = n(199902), A = n(592125), b = n(480294), M = n(831506), R = n(731290), O = n(430824), y = n(496675), P = n(158776), j = n(699516), D = n(594174), U = n(979651), G = n(823379), w = n(981631);
+var i, l, r, a, s = n(392711), o = n.n(s), c = n(442837), u = n(570140), d = n(782769), h = n(527805), p = n(841784), _ = n(503438), f = n(802856), m = n(420660), g = n(728345), C = n(812206), I = n(710845), E = n(38618), N = n(656063), x = n(761282), S = n(814443), v = n(789407), Z = n(630186), T = n(250889), L = n(199902), A = n(592125), b = n(480294), M = n(831506), R = n(731290), O = n(430824), y = n(496675), P = n(158776), j = n(699516), D = n(594174), U = n(979651), w = n(823379), G = n(981631);
 let k = !1, B = !1, V = [], H = [], F = {}, W = {}, Y = new Set(), z = new Set();
 function K() {
     let e = j.Z.getFriendIDs();
-    return b.Z.hasConsented(w.pjP.PERSONALIZATION) ? new Set([
+    return b.Z.hasConsented(G.pjP.PERSONALIZATION) ? new Set([
         ...S.Z.getUserAffinitiesUserIds(),
         ...e
     ]) : new Set(e);
 }
 function q(e) {
-    return P.Z.findActivity(e, e => e.type !== w.IIU.CUSTOM_STATUS);
+    return P.Z.findActivity(e, e => e.type !== G.IIU.CUSTOM_STATUS);
 }
 function Q(e) {
     return null == F[e] && (F = {
@@ -34,7 +34,7 @@ function $(e) {
 }
 function ee(e) {
     let t = U.Z.getVoiceStateForUser(e);
-    return (null == t ? void 0 : t.channelId) != null && y.Z.canWithPartialContext(w.Plq.VIEW_CHANNEL, { channelId: t.channelId }) ? t.channelId : null;
+    return (null == t ? void 0 : t.channelId) != null && y.Z.canWithPartialContext(G.Plq.VIEW_CHANNEL, { channelId: t.channelId }) ? t.channelId : null;
 }
 function et(e) {
     return j.Z.isFriend(e.id);
@@ -42,13 +42,13 @@ function et(e) {
 function en(e, t, n) {
     var i, l, r, a, s, c;
     let u;
-    let _ = D.default.getCurrentUser(), f = null !== (i = null == _ ? void 0 : _.nsfwAllowed) && void 0 !== i && i, m = t.map(e => e.id), g = t.filter(t => e.has(t.id)), E = !1, S = [], b = new Set(), j = !1, w = [];
+    let _ = D.default.getCurrentUser(), f = null !== (i = null == _ ? void 0 : _.nsfwAllowed) && void 0 !== i && i, m = t.map(e => e.id), g = t.filter(t => e.has(t.id)), E = !1, S = [], b = new Set(), j = !1, G = [];
     for (let e of t) {
         let n = L.Z.getAnyStreamForUser(e.id), i = A.Z.getChannel(null == n ? void 0 : n.channelId);
         if ((null == i ? void 0 : i.isNSFW()) && (!f || !R.Z.didAgree(null == i ? void 0 : i.getGuildId())))
             continue;
         let s = q(e.id);
-        if (null != n && w.push({
+        if (null != n && G.push({
                 stream: n,
                 streamUser: e,
                 activity: s
@@ -107,7 +107,7 @@ function en(e, t, n) {
             let e = o()(U.Z.getVoiceStatesForChannel(i.id)).map(e => {
                 let {userId: t} = e;
                 return D.default.getUser(t);
-            }).filter(G.lm).orderBy([et], ['desc']).value();
+            }).filter(w.lm).orderBy([et], ['desc']).value();
             e.filter(e => !m.includes(e.id)).forEach(e => t.push(e)), k ? !H.has(l) && (u = null) : (u = r, k = !0), H.add(l), V.add(n), B.push({
                 channel: i,
                 guild: r,
@@ -136,7 +136,7 @@ function en(e, t, n) {
             'desc',
             'asc'
         ])).value(),
-        applicationStreams: w
+        applicationStreams: G
     };
 }
 function ei() {
@@ -172,7 +172,7 @@ let el = o().throttle(() => {
             'asc',
             'asc'
         ]).value().filter(e => e.voiceChannels.length >= 1 || e.currentActivities.length > 0 || e.applicationStreams.length > 0)).map(e => ({
-            type: w.GOo.USER,
+            type: G.GOo.USER,
             party: e
         })), !function () {
             if (Y.size > 0) {

@@ -14,14 +14,14 @@ t.Z = function (e) {
             localizedPricingPromo: t,
             subscription: p,
             userLocale: C
-        }), m = a.toLowerCase() + 'Banner';
+        }), N = a.toLowerCase() + 'Banner';
     return (0, s.jsxs)('div', {
         className: r()(R.bannerContainer, {
             [R.smallGap]: n,
             [R.bigGap]: !n
         }),
         children: [
-            (0, s.jsx)('div', { className: r()(R[m], R.bannerImageContainer) }),
+            (0, s.jsx)('div', { className: r()(R[N], R.bannerImageContainer) }),
             (0, s.jsx)(l.Heading, {
                 className: R.bannerHeading,
                 variant: 'heading-xl/semibold',

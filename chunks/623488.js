@@ -80,8 +80,8 @@ function m(e) {
             ctaComponent: T,
             shouldShowFullDescriptionButton: h = !0,
             onShowFullDescription: N,
-            productType: p,
-            onTapCard: f,
+            productType: f,
+            onTapCard: p,
             actionMenu: C,
             showOpaqueBackground: g = !1,
             hideRoleTag: S = !1,
@@ -152,7 +152,7 @@ function m(e) {
                             variant: 'text-xxs/normal',
                             color: 'text-normal',
                             className: _.__invalid_productType,
-                            children: p
+                            children: f
                         }),
                         (0, i.jsx)('div', {
                             className: _.productActionButton,
@@ -165,7 +165,7 @@ function m(e) {
                 })
             ]
         });
-    return null == f ? (0, i.jsx)('article', {
+    return null == p ? (0, i.jsx)('article', {
         className: s()(_.productCard, g ? _.opaqueBackground : _.solidBackground),
         'aria-labelledby': L,
         children: Z
@@ -178,7 +178,7 @@ function m(e) {
             tag: 'article',
             'aria-label': u.Z.Messages.GUILD_SHOP_LISTING_CARD_A11Y_LABEL.format({ productName: n }),
             className: s()(_.productCard, g ? _.opaqueBackground : _.solidBackground, _.cardClickableContainer),
-            onClick: f,
+            onClick: p,
             children: Z
         })
     });

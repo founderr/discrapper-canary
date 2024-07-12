@@ -63,19 +63,19 @@ let Z = l.memo(function (e) {
             role: j,
             tabIndex: D,
             ...U
-        } = (0, s.JA)(r.id), G = l.useRef(null), w = l.useRef(null), k = (0, i.jsxs)('li', {
+        } = (0, s.JA)(r.id), w = l.useRef(null), G = l.useRef(null), k = (0, i.jsxs)('li', {
             className: t,
             'data-dnd-name': r.name,
             children: [
                 (0, i.jsx)(c.FocusRing, {
-                    focusTarget: G,
-                    ringTarget: w,
+                    focusTarget: w,
+                    ringTarget: G,
                     offset: {
                         left: 4,
                         right: 4
                     },
                     children: (0, i.jsxs)('div', {
-                        ref: w,
+                        ref: G,
                         className: a()(S.iconVisibility, S.wrapper, {
                             [S.collapsed]: M,
                             [S.muted]: b,
@@ -84,7 +84,7 @@ let Z = l.memo(function (e) {
                         onContextMenu: y,
                         children: [
                             (0, i.jsxs)(c.Clickable, {
-                                innerRef: G,
+                                innerRef: w,
                                 className: S.mainContent,
                                 tabIndex: D,
                                 ...U,

@@ -112,7 +112,7 @@ class T extends a.PureComponent {
                     [I.notAnimating]: !t,
                     [I.highPriority]: d
                 };
-            }, N = this.getTutorialPopoutText();
+            }, v = this.getTutorialPopoutText();
         return (0, i.jsx)(f.ZP, {
             position: m,
             renderMedia: r,
@@ -124,7 +124,7 @@ class T extends a.PureComponent {
             arrowAlignment: p,
             onSkipAll: this.handleSkipTips,
             onComplete: this.handleDismiss,
-            ...N,
+            ...v,
             children: (e, t) => {
                 let {isShown: n} = t;
                 return (0, i.jsx)(h.Clickable, {

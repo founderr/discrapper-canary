@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     }
 }), n(653041), n(47120);
-var i = n(735250), a = n(470079), s = n(831209), l = n(442837), r = n(704215), o = n(481060), c = n(538239), d = n(566620), u = n(403404), h = n(906732), p = n(605236), m = n(706140), _ = n(243778), f = n(488131), E = n(375954), C = n(626135), g = n(585483), I = n(403182), x = n(127654), T = n(752305), N = n(951211), v = n(981631), S = n(921944), Z = n(489887), A = n(689938), M = n(249741);
+var i = n(735250), a = n(470079), s = n(831209), l = n(442837), r = n(704215), o = n(481060), c = n(538239), d = n(566620), u = n(403404), h = n(906732), p = n(605236), m = n(706140), _ = n(243778), f = n(488131), E = n(375954), C = n(626135), g = n(585483), I = n(403182), x = n(127654), T = n(752305), v = n(951211), N = n(981631), S = n(921944), Z = n(489887), A = n(689938), M = n(249741);
 function b(e, t, a, s) {
     (0, o.openModalLazy)(async () => {
         let {default: l} = await Promise.resolve().then(n.bind(n, 538239));
@@ -47,7 +47,7 @@ function L(e) {
             openClips: O
         } = e, {analyticsLocations: y} = (0, h.ZP)();
     a.useEffect(() => {
-        C.default.track(v.rMx.OPEN_POPOUT, {
+        C.default.track(N.rMx.OPEN_POPOUT, {
             type: 'Send Attachment',
             channel_id: t.id,
             guild_id: t.guild_id
@@ -60,7 +60,7 @@ function L(e) {
         (0, f.R6)(t, void 0, 'Plus Button');
     }
     function k() {
-        C.default.track(v.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P('/', (0, T.JM)('/'));
+        C.default.track(N.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P('/', (0, T.JM)('/'));
     }
     function U() {
         O();
@@ -75,7 +75,7 @@ function L(e) {
         }, { modalKey: Z.$z });
     }
     function B() {
-        C.default.track(v.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+        C.default.track(N.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id
@@ -83,10 +83,10 @@ function L(e) {
             channel: t,
             guildId: t.guild_id,
             locationObject: {
-                page: t.isPrivate() ? v.ZY5.DM_CHANNEL : v.ZY5.GUILD_CHANNEL,
-                section: v.jXE.CHANNEL_TEXT_AREA,
-                object: v.qAy.CONTEXT_MENU_ITEM,
-                objectType: v.Qqv.ACTIVITY
+                page: t.isPrivate() ? N.ZY5.DM_CHANNEL : N.ZY5.GUILD_CHANNEL,
+                section: N.jXE.CHANNEL_TEXT_AREA,
+                object: N.qAy.CONTEXT_MENU_ITEM,
+                objectType: N.Qqv.ACTIVITY
             },
             openInPopout: !1,
             enableSelectedTextChannelInvite: !0,
@@ -95,7 +95,7 @@ function L(e) {
     }
     function H() {
         let e = L, n = 'txt', i = '', a = L.match(R);
-        null != a && (i = a[1], n = a[2], e = a[3], i += a[4]), (0, x.d)([(0, I.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, E), g.S.dispatchToLastSubscribed(v.CkL.CLEAR_TEXT), '' !== i && g.S.dispatchToLastSubscribed(v.CkL.INSERT_TEXT, { plainText: i });
+        null != a && (i = a[1], n = a[2], e = a[3], i += a[4]), (0, x.d)([(0, I.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, E), g.S.dispatchToLastSubscribed(N.CkL.CLEAR_TEXT), '' !== i && g.S.dispatchToLastSubscribed(N.CkL.INSERT_TEXT, { plainText: i });
     }
     return (0, i.jsx)(o.Menu, {
         onSelect: _,
@@ -124,13 +124,13 @@ function L(e) {
                 ]
             });
             switch (e.type) {
-            case N.r.UPLOAD_A_FILE:
+            case v.r.UPLOAD_A_FILE:
                 return (0, i.jsx)(o.MenuItem, {
                     id: 'upload-file',
                     label: a,
                     action: c
                 }, 'upload-file');
-            case N.r.UPLOAD_TEXT_AS_FILE:
+            case v.r.UPLOAD_TEXT_AS_FILE:
                 if ('' === L)
                     return null;
                 return (0, i.jsx)(o.MenuItem, {
@@ -138,68 +138,68 @@ function L(e) {
                     label: a,
                     action: H
                 }, 'upload-text-as-file');
-            case N.r.CLIPS:
+            case v.r.CLIPS:
                 return (0, i.jsx)(o.MenuItem, {
                     id: 'clips',
                     label: a,
                     action: U
                 }, 'clips');
-            case N.r.POLL:
+            case v.r.POLL:
                 return (0, i.jsx)(o.MenuItem, {
                     id: 'poll',
                     label: a,
                     action: w
                 }, 'poll');
-            case N.r.INVITE_TO_PLAY_GAME:
+            case v.r.INVITE_TO_PLAY_GAME:
                 return (0, i.jsx)(o.MenuItem, {
                     id: 'play',
                     label: a,
                     action: () => {
                         var n;
-                        return n = e.activity, void (C.default.track(v.rMx.OPEN_MODAL, {
+                        return n = e.activity, void (C.default.track(N.rMx.OPEN_MODAL, {
                             type: 'Send Join Invite',
                             application_id: n.application_id,
-                            location: v.jXE.CHANNEL_TEXT_AREA
-                        }), b(n, t, v.mFx.JOIN, y));
+                            location: N.jXE.CHANNEL_TEXT_AREA
+                        }), b(n, t, N.mFx.JOIN, y));
                     }
                 }, 'play');
-            case N.r.INVITE_TO_LISTEN:
+            case v.r.INVITE_TO_LISTEN:
                 return (0, i.jsx)(o.MenuItem, {
                     id: 'listen',
                     label: a,
                     action: () => {
                         var n;
-                        return n = e.activity, void (C.default.track(v.rMx.OPEN_MODAL, {
+                        return n = e.activity, void (C.default.track(N.rMx.OPEN_MODAL, {
                             type: 'Send Listen Invite',
-                            location: v.jXE.CHANNEL_TEXT_AREA
-                        }), b(n, t, v.mFx.LISTEN, y));
+                            location: N.jXE.CHANNEL_TEXT_AREA
+                        }), b(n, t, N.mFx.LISTEN, y));
                     }
                 }, 'listen');
-            case N.r.INVITE_TO_WATCH:
+            case v.r.INVITE_TO_WATCH:
                 return (0, i.jsx)(o.MenuItem, {
                     id: 'watch',
                     label: a,
                     action: () => {
                         var n;
-                        return n = e.activity, void (C.default.track(v.rMx.OPEN_MODAL, {
+                        return n = e.activity, void (C.default.track(N.rMx.OPEN_MODAL, {
                             type: 'Send Watch Invite',
-                            location: v.jXE.CHANNEL_TEXT_AREA
-                        }), b(n, t, v.mFx.WATCH, y));
+                            location: N.jXE.CHANNEL_TEXT_AREA
+                        }), b(n, t, N.mFx.WATCH, y));
                     }
                 }, 'watch');
-            case N.r.CREATE_THREAD:
+            case v.r.CREATE_THREAD:
                 return (0, i.jsx)(o.MenuItem, {
                     id: 'THREAD',
                     label: a,
                     action: D
                 }, 'THREAD');
-            case N.r.SLASH_COMMAND:
+            case v.r.SLASH_COMMAND:
                 return (0, i.jsx)(o.MenuItem, {
                     id: 'SLASH_COMMAND',
                     label: a,
                     action: k
                 }, 'SLASH_COMMAND');
-            case N.r.ACTIVITY:
+            case v.r.ACTIVITY:
                 return (0, i.jsx)(o.MenuItem, {
                     id: 'activity',
                     label: a,

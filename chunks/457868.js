@@ -3,7 +3,7 @@ n.d(t, {
         return X;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n.n(r), c = n(91192), d = n(924826), u = n(873546), h = n(442837), p = n(481060), m = n(239091), _ = n(144144), f = n(607070), E = n(100527), C = n(906732), g = n(623624), I = n(518738), x = n(965376), T = n(159299), N = n(484459), v = n(103575), S = n(199902), Z = n(271383), A = n(430824), M = n(158776), b = n(885110), R = n(111583), j = n(594174), L = n(499033), P = n(151827), O = n(176278), y = n(626135), D = n(585483), k = n(700785), U = n(51144), w = n(998502), B = n(276264), H = n(981631), G = n(689938), V = n(890555), F = n(849787);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n.n(r), c = n(91192), d = n(924826), u = n(873546), h = n(442837), p = n(481060), m = n(239091), _ = n(144144), f = n(607070), E = n(100527), C = n(906732), g = n(623624), I = n(518738), x = n(965376), T = n(159299), v = n(484459), N = n(103575), S = n(199902), Z = n(271383), A = n(430824), M = n(158776), b = n(885110), R = n(111583), j = n(594174), L = n(499033), P = n(151827), O = n(176278), y = n(626135), D = n(585483), k = n(700785), U = n(51144), w = n(998502), B = n(276264), H = n(981631), G = n(689938), V = n(890555), F = n(849787);
 let W = w.ZP.getEnableHardwareAcceleration(), z = 44 + B.x, Y = a.memo(function (e) {
         let {
                 channel: t,
@@ -62,11 +62,11 @@ let W = w.ZP.getEnableHardwareAcceleration(), z = 44 + B.x, Y = a.memo(function 
             return null;
         let Y = null == d ? void 0 : d.premiumSince;
         return (0, i.jsx)(p.Popout, {
-            preload: () => (0, N.W)(E, {
+            preload: () => (0, v.W)(E, {
                 guildId: t.guild_id,
                 channelId: t.id
             }),
-            renderPopout: e => (0, i.jsx)(v.Z, {
+            renderPopout: e => (0, i.jsx)(N.Z, {
                 ...e,
                 location: 'ThreadMembers',
                 userId: E.id,
@@ -233,7 +233,7 @@ function X(e) {
             t.type
         ]), I)
         return (0, i.jsx)(Q, { channel: t });
-    let T = o().omit(_.containerProps, ['ref']), N = k.iJ(n);
+    let T = o().omit(_.containerProps, ['ref']), v = k.iJ(n);
     return (0, i.jsx)(C.Gt, {
         value: r,
         children: (0, i.jsx)(c.bG, {
@@ -268,7 +268,7 @@ function X(e) {
                                 channel: t,
                                 sectionId: l,
                                 userId: s[a],
-                                guildOwnerId: N
+                                guildOwnerId: v
                             }, s[a]);
                         },
                         footerHeight: e => u[e] === m && t.type === H.d4z.PRIVATE_THREAD ? 80 : 0,

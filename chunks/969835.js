@@ -3,7 +3,7 @@ n.d(t, {
         return b;
     }
 }), n(47120);
-var r = n(735250), i = n(470079), a = n(442837), o = n(481060), s = n(727637), l = n(100527), u = n(906732), c = n(680295), d = n(271383), _ = n(430824), E = n(751009), f = n(317179), h = n(785717), p = n(318661), m = n(78675), I = n(899007), T = n(438163), g = n(502762), S = n(544989), A = n(481932), N = n(195387), v = n(272510), O = n(171368), R = n(958120), C = n(215633), y = n(228168), D = n(689938), L = n(335182);
+var r = n(735250), i = n(470079), a = n(442837), o = n(481060), s = n(727637), l = n(100527), u = n(906732), c = n(680295), d = n(271383), _ = n(430824), E = n(785717), f = n(481046), h = n(718107), p = n(318661), m = n(78675), I = n(899007), T = n(438163), g = n(502762), S = n(544989), A = n(481932), N = n(195387), v = n(272510), O = n(171368), R = n(958120), C = n(215633), y = n(228168), D = n(689938), L = n(335182);
 function b(e) {
     let {
             user: t,
@@ -19,14 +19,14 @@ function b(e) {
         } = e, {analyticsLocations: B} = (0, u.ZP)([
             ...k,
             l.Z.BITE_SIZE_PROFILE_POPOUT
-        ]), F = (0, h.Q1)({
+        ]), F = (0, E.Q1)({
             layout: 'BITE_SIZE_POPOUT',
             userId: t.id,
             guildId: b,
             channelId: M,
             messageId: P,
             roleId: U
-        }), V = (0, a.e7)([_.Z], () => null != b ? _.Z.getGuild(b) : null), H = (0, a.e7)([d.ZP], () => null != b ? d.ZP.getMember(b, t.id) : null), {profileStatusEditEnabled: Z} = (0, E.K)({ location: 'BiteSizeProfilePopout' }), {statusReactReplyEnabled: Y} = (0, f.t)({ location: 'BiteSizeProfilePopout' }), j = i.useRef(null), W = (0, p.ZP)(t.id, b), K = (0, s.Z)(j);
+        }), V = (0, a.e7)([_.Z], () => null != b ? _.Z.getGuild(b) : null), H = (0, a.e7)([d.ZP], () => null != b ? d.ZP.getMember(b, t.id) : null), {profileStatusEditEnabled: Z} = (0, f.K)({ location: 'BiteSizeProfilePopout' }), {statusReactReplyEnabled: Y} = (0, h.t)({ location: 'BiteSizeProfilePopout' }), j = i.useRef(null), W = (0, p.ZP)(t.id, b), K = (0, s.Z)(j);
     i.useEffect(() => {
         null == x || x(null == j ? void 0 : j.current);
     }, [
@@ -46,7 +46,7 @@ function b(e) {
     };
     return (0, r.jsx)(u.Gt, {
         value: B,
-        children: (0, r.jsx)(h.Mt, {
+        children: (0, r.jsx)(E.Mt, {
             layout: 'BITE_SIZE_POPOUT',
             userId: t.id,
             guildId: b,

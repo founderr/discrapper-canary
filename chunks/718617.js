@@ -19,12 +19,12 @@ function g(e) {
             guildId: I,
             onClose: x,
             analyticsLocation: T,
-            className: N
-        } = e, v = (0, l.e7)([d.ZP], () => d.ZP.getGuildSidebarState(I), [I]), S = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : f.k.INFO, Z = (0, o.Z)(g);
+            className: v
+        } = e, N = (0, l.e7)([d.ZP], () => d.ZP.getGuildSidebarState(I), [I]), S = null !== (t = null == N ? void 0 : N.details.modViewPanel) && void 0 !== t ? t : f.k.INFO, Z = (0, o.Z)(g);
     let A = null == (n = S) ? null : n === f.k.INFO ? 'backwards' : 'forwards', M = (0, u.Z)(A), {reducedMotion: b} = a.useContext(r.S), R = a.useCallback(e => {
-            null != v && (0, h.r)(I, g, v.baseChannelId, { modViewPanel: e });
+            null != N && (0, h.r)(I, g, N.baseChannelId, { modViewPanel: e });
         }, [
-            v,
+            N,
             I,
             g
         ]), j = a.useMemo(() => ({
@@ -80,21 +80,21 @@ function g(e) {
                             userId: g,
                             guildId: I,
                             onNavigate: R,
-                            className: N
+                            className: v
                         });
                     case f.k.MESSAGE_HISTORY:
                         return (0, i.jsx)(m.Z, {
                             userId: g,
                             guildId: I,
                             onNavigate: () => R(f.k.INFO),
-                            className: N
+                            className: v
                         });
                     case f.k.PERMISSIONS:
                         return (0, i.jsx)(_.Z, {
                             userId: g,
                             guildId: I,
                             onNavigate: () => R(f.k.INFO),
-                            className: N
+                            className: v
                         });
                     default:
                         return null;

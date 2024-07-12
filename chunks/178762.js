@@ -6,7 +6,7 @@ n.d(t, {
         return b;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(392711), l = n.n(s), r = n(91192), o = n(876215), c = n(442837), d = n(481060), u = n(239091), h = n(607070), p = n(439170), m = n(594174), _ = n(687694), f = n(69259), E = n(91140), C = n(227172), g = n(551228), I = n(678869), x = n(278399), T = n(886217), N = n(555672), v = n(644548), S = n(335326), Z = n(268010), A = n(206583);
+var i = n(735250), a = n(470079), s = n(392711), l = n.n(s), r = n(91192), o = n(876215), c = n(442837), d = n(481060), u = n(239091), h = n(607070), p = n(439170), m = n(594174), _ = n(687694), f = n(69259), E = n(91140), C = n(227172), g = n(551228), I = n(678869), x = n(278399), T = n(886217), v = n(555672), N = n(644548), S = n(335326), Z = n(268010), A = n(206583);
 let M = 72;
 function b(e) {
     return (null == e ? void 0 : e.type) === p.so.CONTENT_INVENTORY ? M : 0;
@@ -33,7 +33,7 @@ let R = l().throttle(e => {
                 entry: t
             });
         case o.s.TOP_GAME:
-            return (0, i.jsx)(N.ZP, {
+            return (0, i.jsx)(v.ZP, {
                 ...n,
                 entry: t
             });
@@ -67,7 +67,7 @@ let R = l().throttle(e => {
                 entry: t
             });
         case o.s.TOP_GAME:
-            return (0, i.jsx)(v.Z, {
+            return (0, i.jsx)(N.Z, {
                 ...n,
                 entry: t
             });
@@ -95,7 +95,7 @@ t.ZP = a.memo(e => {
             channelId: l.channel.id,
             guildId: l.channel.guild_id,
             requestId: l.requestId
-        }, {openOnHover: I} = (0, _.C)({ location: 'MemberListContentRow' }), x = a.useRef(!1), [T, N] = a.useState(!1), [v, S] = a.useState(!1), [Z, M] = a.useState(!1), b = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
+        }, {openOnHover: I} = (0, _.C)({ location: 'MemberListContentRow' }), x = a.useRef(!1), [T, v] = a.useState(!1), [N, S] = a.useState(!1), [Z, M] = a.useState(!1), b = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
     a.useEffect(() => {
         T && b && M(!0);
     }, [
@@ -118,13 +118,13 @@ t.ZP = a.memo(e => {
             p(String(Date.now()));
         }, []), y = () => {
             x.current = !1, setTimeout(() => {
-                !x.current && (N(!1), M(b));
+                !x.current && (v(!1), M(b));
             }, 100);
         };
     return (0, i.jsx)('div', {
         onMouseEnter: () => {
             x.current = !0, setTimeout(() => {
-                x.current && N(!0), I && (0, f.L)(A.xP.CARD_CLICK, g);
+                x.current && v(!0), I && (0, f.L)(A.xP.CARD_CLICK, g);
             }, 100);
         },
         onMouseLeave: y,
@@ -138,18 +138,18 @@ t.ZP = a.memo(e => {
                 });
             },
             position: 'left',
-            shouldShow: I ? T : v,
+            shouldShow: I ? T : N,
             positionKey: o,
             onRequestOpen: () => (0, f.L)(A.xP.CARD_CLICK, g),
             onRequestClose: () => {
-                Z && y(), !I && (N(!1), S(!1));
+                Z && y(), !I && (v(!1), S(!1));
             },
             spacing: 8,
             children: (e, t) => {
                 let {isShown: n} = t;
                 return (0, i.jsx)(d.Clickable, {
                     onClick: () => {
-                        I && !T && N(!0), !I && S(e => !e);
+                        I && !T && v(!0), !I && S(e => !e);
                     },
                     children: (0, i.jsx)(d.FocusRing, {
                         offset: {

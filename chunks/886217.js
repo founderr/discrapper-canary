@@ -21,19 +21,19 @@ t.Z = e => {
             closePopout: d
         } = e, {
             parent_title: T,
-            provider: N,
-            image_url: v
+            provider: v,
+            image_url: N
         } = n.extra.media, S = n.extra.artist.name, Z = (0, l.e7)([o.default], () => o.default.getUser(n.author_id)), {
             primaryColor: A,
             secondaryColor: M
-        } = (0, p.Z)(v), b = (0, u.Nq)(n), R = a.useCallback(() => {
+        } = (0, p.Z)(N), b = (0, u.Nq)(n), R = a.useCallback(() => {
             if (null == Z || !(0, c.Hi)(b, m.y9))
                 return;
             let e = I(n, t, Z, b);
             return (0, h.CR)({
                 user: Z,
                 channel: t,
-                mediaImageSrc: v,
+                mediaImageSrc: N,
                 artist: S,
                 description: e,
                 colors: [
@@ -43,7 +43,7 @@ t.Z = e => {
                 badges: (0, h.UU)(n)
             });
         }, [
-            v,
+            N,
             S,
             t,
             n,
@@ -67,10 +67,10 @@ t.Z = e => {
                     window.open(t);
                 },
                 onClickThumbnail: j,
-                thumbnailSrc: v,
+                thumbnailSrc: N,
                 channel: t,
                 entry: n,
-                headerIcons: (0, i.jsx)(E.Z, { provider: N }),
+                headerIcons: (0, i.jsx)(E.Z, { provider: v }),
                 userDescription: g.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
                 title: T,
                 subtitle: S,

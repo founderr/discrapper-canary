@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(481060), l = n(171368), r = n(650774), o = n(430824), c = n(496675), d = n(502568), u = n(709054), h = n(826581), p = n(246364), m = n(360328), _ = n(981631), f = n(689938), E = n(593269);
+var a = n(442837), s = n(481060), l = n(665149), r = n(171368), o = n(650774), c = n(430824), d = n(496675), u = n(709054), h = n(826581), p = n(246364), m = n(360328), _ = n(981631), f = n(689938), E = n(593269);
 function C(e) {
     let {
             channelId: t,
@@ -15,20 +15,20 @@ function C(e) {
             joinRequest: I,
             isModmin: x,
             guildId: T,
-            maxMembers: N
+            maxMembers: v
         } = (0, a.cj)([
             h.Z,
-            o.Z,
-            c.Z
+            c.Z,
+            d.Z
         ], () => {
-            let e = h.Z.getRequest(g), t = o.Z.getGuild(null == e ? void 0 : e.guildId);
+            let e = h.Z.getRequest(g), t = c.Z.getGuild(null == e ? void 0 : e.guildId);
             return {
                 joinRequest: e,
-                isModmin: null != t && c.Z.can(_.Plq.KICK_MEMBERS, t),
+                isModmin: null != t && d.Z.can(_.Plq.KICK_MEMBERS, t),
                 guildId: null == t ? void 0 : t.id,
                 maxMembers: null == t ? void 0 : t.maxMembers
             };
-        }), v = (0, a.e7)([r.Z], () => null != T ? r.Z.getMemberCount(T) : 0), S = null != N && (null != v ? v : 0) >= N, {
+        }), N = (0, a.e7)([o.Z], () => null != T ? o.Z.getMemberCount(T) : 0), S = null != v && (null != N ? N : 0) >= v, {
             approveRequest: Z,
             rejectRequest: A,
             submitting: M
@@ -59,7 +59,7 @@ function C(e) {
             n && (0, i.jsx)(s.Button, {
                 color: s.Button.Colors.TRANSPARENT,
                 onClick: () => {
-                    (0, l.openUserProfileModal)({
+                    (0, r.openUserProfileModal)({
                         userId: I.userId,
                         guildId: I.guildId,
                         analyticsLocation: {
@@ -71,7 +71,7 @@ function C(e) {
                 size: s.ButtonSizes.SMALL,
                 children: f.Z.Messages.VIEW_PROFILE
             }),
-            C && (0, i.jsx)(d.ZP.Divider, {})
+            C && (0, i.jsx)(l.ZP.Divider, {})
         ]
     }) : null;
 }

@@ -3,14 +3,14 @@ n.d(t, {
         return m;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(442837), l = n(481060), r = n(731290), o = n(594174), c = n(502568), d = n(91159), u = n(593130), h = n(689938), p = n(64505);
+var i = n(735250), a = n(470079), s = n(442837), l = n(481060), r = n(665149), o = n(731290), c = n(594174), d = n(91159), u = n(593130), h = n(689938), p = n(64505);
 function m(e) {
     let {channel: t} = e, [n, m] = a.useState(!1), _ = (0, s.e7)([
-            r.Z,
-            o.default
+            o.Z,
+            c.default
         ], () => {
-            let e = o.default.getCurrentUser();
-            return null == e || t.isNSFW() && (!e.nsfwAllowed || !r.Z.didAgree(t.getGuildId()));
+            let e = c.default.getCurrentUser();
+            return null == e || t.isNSFW() && (!e.nsfwAllowed || !o.Z.didAgree(t.getGuildId()));
         }, [t]), f = a.useCallback(() => {
             m(!1);
         }, []), E = a.useCallback(() => {
@@ -34,7 +34,7 @@ function m(e) {
         },
         children: (e, t) => {
             let {isShown: n} = t;
-            return (0, i.jsx)(c.JO, {
+            return (0, i.jsx)(r.JO, {
                 ...e,
                 className: p.icon,
                 onClick: E,

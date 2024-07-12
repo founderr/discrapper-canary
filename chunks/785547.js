@@ -3,7 +3,7 @@ n.d(t, {
         return P;
     }
 }), n(411104), n(47120);
-var i, a, s, r = n(735250), l = n(470079), o = n(442837), c = n(692547), d = n(481060), u = n(58642), _ = n(2052), E = n(710845), I = n(703656), m = n(173747), T = n(7956), h = n(293245), N = n(417363), p = n(941128), f = n(780570), C = n(358085), g = n(814225), S = n(346329), A = n(701560), x = n(981631), R = n(689938), O = n(553163);
+var i, a, s, r = n(735250), l = n(470079), o = n(442837), c = n(692547), d = n(481060), u = n(58642), _ = n(2052), E = n(710845), I = n(703656), m = n(173747), T = n(7956), h = n(293245), N = n(417363), f = n(941128), p = n(780570), C = n(358085), g = n(814225), S = n(346329), A = n(701560), x = n(981631), R = n(689938), O = n(553163);
 function M(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -145,10 +145,10 @@ class Z extends (a = l.Component) {
         } = this.props;
         if (e)
             return null;
-        let n = f.KJ(t);
+        let n = p.KJ(t);
         if (null == n)
             return null;
-        let i = n.type === x.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : f.xI(Number(n.progress), Number(n.total));
+        let i = n.type === x.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : p.xI(Number(n.progress), Number(n.total));
         return (0, r.jsx)(d.Progress, {
             percent: i,
             size: d.Progress.Sizes.XSMALL,
@@ -227,9 +227,9 @@ class Z extends (a = l.Component) {
 function P(e) {
     let {libraryApplication: t} = e, n = (0, _.O)(), [i, a] = (0, o.Wu)([
             N.Z,
-            p.Z
+            f.Z
         ], () => [
-            (0, T.i)(t, N.Z, p.Z),
+            (0, T.i)(t, N.Z, f.Z),
             N.Z.getState(t.id, t.branchId)
         ], [t]), s = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]), l = (0, o.e7)([m.Z], () => m.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, r.jsx)(Z, {

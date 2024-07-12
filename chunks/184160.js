@@ -15,9 +15,9 @@ function h(e) {
             selectedSkuId: b,
             setSelectedPlanId: g,
             startedPaymentFlowWithPaymentSourcesRef: m
-        } = (0, u.usePaymentContext)(), {isGift: I} = (0, C.wD)(), L = null != h ? (0, c.Af)(h) : null, E = null != L ? (0, c.gq)(L.planId) : null, T = null != L ? (0, c.Rd)(L.planId) : null, M = (0, p.Kp)({
+        } = (0, u.usePaymentContext)(), {isGift: L} = (0, C.wD)(), I = null != h ? (0, c.Af)(h) : null, E = null != I ? (0, c.gq)(I.planId) : null, T = null != I ? (0, c.Rd)(I.planId) : null, M = (0, p.Kp)({
             isTrial: !1,
-            isGift: I,
+            isGift: L,
             selectedSkuId: b,
             startedPaymentFlowWithPaymentSources: m.current
         });

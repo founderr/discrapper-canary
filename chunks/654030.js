@@ -1,5 +1,5 @@
 n(47120);
-var i, a = n(735250), s = n(470079), r = n(442837), l = n(481060), o = n(278323), c = n(224706), d = n(763472), u = n(498179), _ = n(276852), E = n(994339), I = n(275920), m = n(431583), T = n(592745), h = n(952164), N = n(768419), p = n(456432), f = n(103575), C = n(789407), g = n(598077), S = n(757266), A = n(831506), x = n(271383), R = n(283595), O = n(293273), M = n(594174), v = n(181106), L = n(417363), Z = n(243769), P = n(768581), b = n(358085), D = n(804739), j = n(410575), U = n(981631), y = n(701488);
+var i, a = n(735250), s = n(470079), r = n(442837), l = n(481060), o = n(278323), c = n(224706), d = n(763472), u = n(498179), _ = n(276852), E = n(994339), I = n(275920), m = n(917621), T = n(431583), h = n(592745), N = n(952164), f = n(768419), p = n(456432), C = n(103575), g = n(789407), S = n(598077), A = n(757266), x = n(831506), R = n(271383), O = n(283595), M = n(293273), v = n(594174), L = n(181106), Z = n(417363), P = n(768581), b = n(358085), D = n(804739), j = n(410575), U = n(981631), y = n(701488);
 function B(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -23,20 +23,20 @@ class G extends (i = s.PureComponent) {
             if (null != t)
                 return t;
         }
-        return null == n || n instanceof C.ZP ? null : P.ZP.getApplicationIconURL({
+        return null == n || n instanceof g.ZP ? null : P.ZP.getApplicationIconURL({
             id: n.id,
             icon: null != t ? t.coverImage : n.coverImage,
             size: y.cc
         });
     }
     handleOpenSpotifyTrack(e) {
-        (0, h.aG)(e);
+        (0, N.aG)(e);
     }
     handleOpenSpotifyArtist(e, t, n) {
-        (0, h.d$)(e, t, n);
+        (0, N.d$)(e, t, n);
     }
     handleOpenSpotifyAlbum(e, t) {
-        (0, h.Z5)(e, t);
+        (0, N.Z5)(e, t);
     }
     shouldRenderCustomButton() {
         let {
@@ -101,7 +101,7 @@ class G extends (i = s.PureComponent) {
             } = this.props;
             null != e && null != t && d.Z_(e, t);
         }), B(this, 'handleDownloadApp', () => {
-            (0, l.openModal)(e => (0, a.jsx)(m.default, {
+            (0, l.openModal)(e => (0, a.jsx)(T.default, {
                 source: 'Game Invite',
                 ...e
             }));
@@ -112,7 +112,7 @@ class G extends (i = s.PureComponent) {
                 message: s,
                 analyticsLocations: r
             } = this.props;
-            return null == n ? null : (0, a.jsx)(f.Z, {
+            return null == n ? null : (0, a.jsx)(C.Z, {
                 ...t,
                 location: 'ActivityInviteEmbed',
                 userId: e.id,
@@ -155,9 +155,9 @@ class G extends (i = s.PureComponent) {
                 channelId: _,
                 message: E,
                 hideParty: I,
-                isSyncable: m,
-                isLaunchable: T,
-                guildId: h
+                isSyncable: T,
+                isLaunchable: h,
+                guildId: N
             } = this.props;
             if (null != s)
                 e = s.name;
@@ -165,7 +165,7 @@ class G extends (i = s.PureComponent) {
                 let [t] = n.split(':');
                 e = k[t];
             }
-            return (0, a.jsx)(Z.Z, {
+            return (0, a.jsx)(m.Z, {
                 activity: t,
                 partyId: n,
                 myPartyId: i,
@@ -175,14 +175,14 @@ class G extends (i = s.PureComponent) {
                 className: u,
                 coverImage: this.getCoverImage(),
                 isPreview: l,
-                isGameLaunchable: T,
+                isGameLaunchable: h,
                 isLoading: o || this.state.sending,
                 activityActionType: d,
                 isInBrowser: !b.isPlatformEmbedded,
-                isSyncable: m,
+                isSyncable: T,
                 isSender: c,
                 channelId: _,
-                guildId: null != h ? h : void 0,
+                guildId: null != N ? N : void 0,
                 message: E,
                 hideParty: I,
                 onJoin: this.handleJoin,
@@ -200,16 +200,16 @@ class G extends (i = s.PureComponent) {
     }
 }
 B(G, 'defaultProps', { isPreview: !1 }), t.Z = r.ZP.connectStores([
-    N.Z,
-    A.Z,
+    f.Z,
+    x.Z,
+    M.Z,
     O.Z,
-    R.Z,
-    T.Z,
+    h.Z,
+    Z.Z,
+    A.Z,
     L.Z,
-    S.Z,
-    v.Z,
-    M.default,
-    x.ZP
+    v.default,
+    R.ZP
 ], e => {
     let {
             activity: t,
@@ -218,28 +218,28 @@ B(G, 'defaultProps', { isPreview: !1 }), t.Z = r.ZP.connectStores([
             partyId: a,
             userId: s,
             guildId: r
-        } = e, {id: l} = null != i ? i : {}, o = null != t && null != t.party && t.party.id === a ? A.Z.getParty(t.party.id) : null, c = null != l ? O.Z.getApplicationActivity(l) : O.Z.findActivity(e => e.type === U.IIU.LISTENING), d = !1;
-    null != l && (d = v.Z.getState(l, U.mFx.JOIN) === U.OcF.LOADING);
+        } = e, {id: l} = null != i ? i : {}, o = null != t && null != t.party && t.party.id === a ? x.Z.getParty(t.party.id) : null, c = null != l ? M.Z.getApplicationActivity(l) : M.Z.findActivity(e => e.type === U.IIU.LISTENING), d = !1;
+    null != l && (d = L.Z.getState(l, U.mFx.JOIN) === U.OcF.LOADING);
     let u = Array.from(null != o ? o : []).map(e => {
-            let t = null != r ? x.ZP.getMember(r, e) : null, n = null != t ? t.nick : null, i = M.default.getUser(e), a = null == i;
-            return null == i && (i = new g.Z({ discriminator: '0005' })), {
+            let t = null != r ? R.ZP.getMember(r, e) : null, n = null != t ? t.nick : null, i = v.default.getUser(e), a = null == i;
+            return null == i && (i = new S.Z({ discriminator: '0005' })), {
                 user: i,
                 unknownUser: a,
                 nick: n
             };
-        }), _ = null != t && N.Z.canPlay(t), E = N.Z.getSyncingWith(), I = null != E && null != s && E.userId === s;
+        }), _ = null != t && f.Z.canPlay(t), E = f.Z.getSyncingWith(), I = null != E && null != s && E.userId === s;
     return {
         analyticsLocations: n,
         partyMembers: u,
-        connectedApplication: null != l ? S.Z.getApplication(l) : null,
+        connectedApplication: null != l ? A.Z.getApplication(l) : null,
         myPartyId: null != c && null != c.party ? c.party.id : null,
         isLaunching: d,
         isSyncable: _ && !I,
         isLaunchable: null != l && (0, D.t)({
-            LibraryApplicationStore: R.Z,
-            LaunchableGameStore: T.Z,
-            DispatchApplicationStore: L.Z,
-            ConnectedAppsStore: S.Z,
+            LibraryApplicationStore: O.Z,
+            LaunchableGameStore: h.Z,
+            DispatchApplicationStore: Z.Z,
+            ConnectedAppsStore: A.Z,
             applicationId: l
         })
     };

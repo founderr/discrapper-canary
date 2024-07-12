@@ -120,17 +120,17 @@ function U(e) {
     let {
             guild: j,
             channel: U,
-            inviter: G,
-            target_application: w
+            inviter: w,
+            target_application: G
         } = f, k = null != j, B = null != f.stage_instance, V = null == f.guild && null == f.channel && null != f.inviter;
-    if (null != w)
-        t = null == j ? void 0 : j.name, n = m.Z.createFromServer(w).getCoverImageURL(1024);
+    if (null != G)
+        t = null == j ? void 0 : j.name, n = m.Z.createFromServer(G).getCoverImageURL(1024);
     else if (null != j)
         t = j.name, n = v.ZP.getGuildSplashURL({
             id: j.id,
             splash: j.splash
         });
-    else if ((null == (t = U.name) || '' === t) && null != G && (t = G.username), null == t)
+    else if ((null == (t = U.name) || '' === t) && null != w && (t = w.username), null == t)
         throw Error('no name for group DM invite');
     let H = (0, _.yU)(), F = B ? R.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE : R.Z.Messages.INVITE_MODAL_BUTTON.format({ guildName: t });
     return V && (F = R.Z.Messages.ACCEPT_INVITE_MODAL_BUTTON), (0, i.jsx)(d.Gt, {
@@ -170,7 +170,7 @@ function U(e) {
                                 (0, i.jsxs)('div', {
                                     children: [
                                         H ? (0, i.jsx)(P, {}) : null,
-                                        null == w ? (0, i.jsx)(o.Tooltip, {
+                                        null == G ? (0, i.jsx)(o.Tooltip, {
                                             text: H ? R.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
                                             position: 'bottom',
                                             children: e => {

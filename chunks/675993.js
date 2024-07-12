@@ -1,10 +1,10 @@
 t.d(n, {
     Z: function () {
-        return N;
+        return f;
     }
 }), t(47120);
 var i = t(735250), l = t(470079), r = t(581051), a = t(353381), s = t(993365), o = t(481060), c = t(240991), u = t(810090), d = t(283442), m = t(783097), p = t(520315), _ = t(591204), E = t(689938), h = t(970311), A = t(153521);
-function N(e) {
+function f(e) {
     let {
             channel: n,
             application: t,
@@ -18,7 +18,7 @@ function N(e) {
     return (0, i.jsxs)('div', {
         className: h.container,
         children: [
-            (0, i.jsx)(f, {
+            (0, i.jsx)(N, {
                 channel: n,
                 application: t,
                 sectionName: o
@@ -52,7 +52,7 @@ function N(e) {
         ]
     });
 }
-function f(e) {
+function N(e) {
     let {
             channel: n,
             application: t,
@@ -108,21 +108,21 @@ function C(e) {
                 lineCount: n
             };
         }(), {
-            ref: N,
-            isTransitioning: f,
+            ref: f,
+            isTransitioning: N,
             onTransitionEnd: C
-        } = (0, p.Z)({ isExpanded: t }), I = t || f;
+        } = (0, p.Z)({ isExpanded: t }), v = t || N;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                ref: N,
+                ref: f,
                 className: h.overflowHidden,
                 onTransitionEnd: C,
                 children: (0, i.jsx)(s.x, {
                     ref: m,
                     className: A.markup,
                     variant: 'text-sm/medium',
-                    lineClamp: I ? void 0 : 3,
+                    lineClamp: v ? void 0 : 3,
                     children: d
                 })
             }),
@@ -134,9 +134,9 @@ function C(e) {
                         ref: m,
                         variant: 'text-sm/semibold',
                         color: 'text-brand',
-                        children: I ? E.Z.Messages.APP_LAUNCHER_SHOW_LESS : E.Z.Messages.APP_LAUNCHER_SHOW_MORE
+                        children: v ? E.Z.Messages.APP_LAUNCHER_SHOW_LESS : E.Z.Messages.APP_LAUNCHER_SHOW_MORE
                     }),
-                    I ? (0, i.jsx)(a.u, {
+                    v ? (0, i.jsx)(a.u, {
                         size: 'sm',
                         color: o.tokens.colors.TEXT_BRAND
                     }) : (0, i.jsx)(r.C, {

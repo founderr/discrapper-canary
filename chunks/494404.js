@@ -9,7 +9,7 @@ n.d(t, {
         return P;
     }
 }), n(47120), n(653041);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(392711), o = n.n(l), c = n(91192), d = n(442837), u = n(481060), _ = n(668781), E = n(904245), I = n(724757), m = n(294218), T = n(703656), h = n(210887), N = n(592125), p = n(375954), f = n(496675), C = n(933429), g = n(451478), S = n(387204), A = n(626135), x = n(585483), R = n(981631), O = n(689938), M = n(928482);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(392711), o = n.n(l), c = n(91192), d = n(442837), u = n(481060), _ = n(668781), E = n(904245), I = n(724757), m = n(294218), T = n(703656), h = n(210887), N = n(592125), f = n(375954), p = n(496675), C = n(933429), g = n(451478), S = n(387204), A = n(626135), x = n(585483), R = n(981631), O = n(689938), M = n(928482);
 function v(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -117,9 +117,9 @@ class b extends a.PureComponent {
         });
     }
 }
-let D = d.ZP.connectStores([f.Z], e => {
+let D = d.ZP.connectStores([p.Z], e => {
     let {channel: t} = e;
-    return { canManageMessages: null != t && f.Z.can(R.Plq.MANAGE_MESSAGES, t) };
+    return { canManageMessages: null != t && p.Z.can(R.Plq.MANAGE_MESSAGES, t) };
 })(b);
 function j(e) {
     let {
@@ -132,8 +132,8 @@ function j(e) {
             renderEmptyState: m,
             renderItem: T,
             getProTip: N,
-            scrollerClassName: p,
-            className: f,
+            scrollerClassName: f,
+            className: p,
             listName: v
         } = e, Z = a.useRef(null), P = (0, I.Z)(v, Z), b = (0, d.e7)([C.Z], () => C.Z.hasNotice()), D = (0, d.e7)([g.Z], () => g.Z.windowSize());
     a.useEffect(() => {
@@ -197,7 +197,7 @@ function j(e) {
     b && (F.maxHeight -= 40);
     let w = null != _ && s;
     return (0, i.jsx)('div', {
-        className: r()(f, M.messagesPopoutWrap),
+        className: r()(p, M.messagesPopoutWrap),
         style: F,
         onClick: L,
         onDoubleClick: L,
@@ -206,7 +206,7 @@ function j(e) {
             component: E(),
             children: [
                 (0, i.jsxs)(u.AdvancedScroller, {
-                    className: r()(M.messagesPopout, p),
+                    className: r()(M.messagesPopout, f),
                     onScroll: w ? j : void 0,
                     ref: Z,
                     children: [
@@ -246,15 +246,15 @@ function U(e) {
             onJump: u,
             canCloseAllMessages: I = !1,
             renderHeader: h,
-            renderEmptyState: f,
+            renderEmptyState: p,
             renderMessage: C,
             getProTip: g,
             scrollerClassName: S,
             className: A,
             onCloseMessage: x,
             listName: v
-        } = e, L = (0, d.e7)([p.Z], () => {
-            let e = null != s ? p.Z.getMessages(s.id) : null;
+        } = e, L = (0, d.e7)([f.Z], () => {
+            let e = null != s ? f.Z.getMessages(s.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
     function Z(e, n) {
@@ -294,7 +294,7 @@ function U(e) {
         items: P,
         loading: o,
         analyticsName: t,
-        renderEmptyState: f,
+        renderEmptyState: p,
         renderHeader: h,
         hasMore: l,
         loadMore: c,

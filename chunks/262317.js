@@ -6,7 +6,7 @@ n.d(t, {
         return U;
     }
 }), n(47120);
-var i, a = n(735250), s = n(470079), l = n(120356), r = n.n(l), o = n(149765), c = n(846519), d = n(481060), u = n(475179), h = n(239091), p = n(287734), m = n(872810), _ = n(888651), f = n(100527), E = n(258609), C = n(257115), g = n(569545), I = n(382182), x = n(525925), T = n(701362), N = n(224184), v = n(484459), S = n(103575), Z = n(314897), A = n(430824), M = n(496675), b = n(979651), R = n(805009), j = n(981631), L = n(927923), P = n(70722), O = n(689938), y = n(431841);
+var i, a = n(735250), s = n(470079), l = n(120356), r = n.n(l), o = n(149765), c = n(846519), d = n(481060), u = n(475179), h = n(239091), p = n(287734), m = n(872810), _ = n(888651), f = n(100527), E = n(258609), C = n(257115), g = n(569545), I = n(382182), x = n(525925), T = n(701362), v = n(224184), N = n(484459), S = n(103575), Z = n(314897), A = n(430824), M = n(496675), b = n(979651), R = n(805009), j = n(981631), L = n(927923), P = n(70722), O = n(689938), y = n(431841);
 function D(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -74,7 +74,7 @@ class w extends (i = s.PureComponent) {
                 onMouseEnter: i ? void 0 : this.handleMouseEnter,
                 onMouseLeave: i ? void 0 : this.handleHidePreview,
                 children: (0, a.jsx)(d.Popout, {
-                    preload: () => (0, v.W)(s.id, s.getAvatarURL(l.guild_id, 80), {
+                    preload: () => (0, N.W)(s.id, s.getAvatarURL(l.guild_id, 80), {
                         guildId: l.guild_id,
                         channelId: l.id
                     }),
@@ -196,7 +196,7 @@ class w extends (i = s.PureComponent) {
                 user: n,
                 channel: i
             } = this.props;
-            return (0, a.jsx)(N.Z, {
+            return (0, a.jsx)(v.Z, {
                 userId: n.id,
                 channel: i,
                 hangStatusActivity: e,
@@ -222,8 +222,8 @@ class w extends (i = s.PureComponent) {
                     nick: I,
                     video: x,
                     serverMute: T,
-                    serverDeaf: N,
-                    tabIndex: v,
+                    serverDeaf: v,
+                    tabIndex: N,
                     embeddedApplication: S,
                     channel: Z,
                     hangStatusActivity: A,
@@ -249,8 +249,8 @@ class w extends (i = s.PureComponent) {
                     collapsed: f,
                     overlap: f,
                     serverMute: T,
-                    serverDeaf: N,
-                    tabIndex: v,
+                    serverDeaf: v,
+                    tabIndex: N,
                     otherClientSessionType: n,
                     voicePlatform: i,
                     embeddedApplication: S,

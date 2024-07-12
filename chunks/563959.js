@@ -1,9 +1,9 @@
 n.d(t, {
     P: function () {
-        return p;
+        return f;
     },
     e: function () {
-        return f;
+        return p;
     }
 });
 var i = n(735250), a = n(470079), s = n(481060), r = n(239091), l = n(739566), o = n(942951), c = n(484459), d = n(103575), u = n(594174), _ = n(702346), E = n(768581), I = n(91047), m = n(628566), T = n(693912), h = n(981631);
@@ -15,7 +15,7 @@ function N(e, t) {
                 icon: a.icon,
                 bot: a.bot,
                 botIconFirst: !0
-            }), h = u.default.getUser(null === (_ = a.bot) || void 0 === _ ? void 0 : _.id), N = m.Z.getIntegration(e.id, a.id), p = e.isPrivate() && null != N ? t => {
+            }), h = u.default.getUser(null === (_ = a.bot) || void 0 === _ ? void 0 : _.id), N = m.Z.getIntegration(e.id, a.id), f = e.isPrivate() && null != N ? t => {
                 (0, r.jW)(t, async () => {
                     let {default: t} = await n.e('30887').then(n.bind(n, 496281));
                     return n => (0, i.jsx)(t, {
@@ -24,24 +24,24 @@ function N(e, t) {
                         integration: N
                     });
                 });
-            } : null != h ? t => (0, I.Pv)(t, h, e) : void 0, {bot: f} = a;
-        return null == f ? l : (0, i.jsx)(s.Popout, {
+            } : null != h ? t => (0, I.Pv)(t, h, e) : void 0, {bot: p} = a;
+        return null == p ? l : (0, i.jsx)(s.Popout, {
             position: 'right',
-            preload: () => (0, c.W)(f.id, T, {
+            preload: () => (0, c.W)(p.id, T, {
                 guildId: e.guild_id,
                 channelId: e.id
             }),
             renderPopout: n => (0, i.jsx)(d.Z, {
                 ...n,
                 location: 'PrivateChannelIntegrationSystemMessage',
-                userId: f.id,
+                userId: p.id,
                 guildId: e.guild_id,
                 channelId: e.id,
                 messageId: t.id
             }),
             children: e => (0, i.jsx)(s.Anchor, {
                 ...e,
-                onContextMenu: p,
+                onContextMenu: f,
                 children: l
             })
         }, o);
@@ -50,7 +50,7 @@ function N(e, t) {
         t.id
     ]);
 }
-function p(e) {
+function f(e) {
     let {
             message: t,
             channel: a,
@@ -73,7 +73,7 @@ function p(e) {
         })
     });
 }
-function f(e) {
+function p(e) {
     let {
             message: t,
             channel: a,

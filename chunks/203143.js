@@ -3,7 +3,7 @@ n.d(t, {
         return D;
     }
 }), n(411104), n(47120), n(390547), n(724458);
-var i = n(512722), a = n.n(i), s = n(392711), r = n.n(s), l = n(263568), o = n(442837), c = n(570140), d = n(668781), u = n(749210), _ = n(904245), E = n(881052), I = n(367907), m = n(41776), T = n(566006), h = n(48854), N = n(869765), p = n(314897), f = n(592125), C = n(703558), g = n(607744), S = n(375954), A = n(117530), x = n(553803), R = n(316758), O = n(467531), M = n(798628), v = n(918088), L = n(981631), Z = n(689938);
+var i = n(512722), a = n.n(i), s = n(392711), r = n.n(s), l = n(263568), o = n(442837), c = n(570140), d = n(668781), u = n(749210), _ = n(904245), E = n(881052), I = n(367907), m = n(41776), T = n(566006), h = n(48854), N = n(869765), f = n(314897), p = n(592125), C = n(703558), g = n(607744), S = n(375954), A = n(117530), x = n(553803), R = n(316758), O = n(467531), M = n(798628), v = n(918088), L = n(981631), Z = n(689938);
 function P(e, t) {
     let n = [...t], i = 0, a = 0;
     for (let t of n) {
@@ -38,7 +38,7 @@ function D(e) {
             channelId: t,
             messageId: n,
             answerId: i
-        } = e, a = f.Z.getChannel(t);
+        } = e, a = p.Z.getChannel(t);
     if (null == a)
         return;
     if (m.Z.isLurking(a.guild_id)) {
@@ -90,7 +90,7 @@ async function y(e) {
         } = e, a = U({
             channelId: t,
             messageId: n
-        }), s = r().difference(a, i), l = r().difference(i, a), d = p.default.getId(), u = [
+        }), s = r().difference(a, i), l = r().difference(i, a), d = f.default.getId(), u = [
             ...s.map(e => ({
                 type: 'MESSAGE_REACTION_REMOVE',
                 id: e
@@ -125,7 +125,7 @@ async function B(e) {
     let {
             channelId: t,
             messageId: n
-        } = e, i = f.Z.getChannel(t);
+        } = e, i = p.Z.getChannel(t);
     if (null == i)
         return;
     if (m.Z.isLurking(i.guild_id)) {
@@ -187,7 +187,7 @@ async function k(e) {
     let {
             channelId: t,
             messageId: n
-        } = e, i = f.Z.getChannel(t);
+        } = e, i = p.Z.getChannel(t);
     if (null != i) {
         if (m.Z.isLurking(i.guild_id)) {
             b({
@@ -306,7 +306,7 @@ async function F(e) {
     try {
         if (null != c && c.length > 0) {
             var I;
-            let e = null !== (I = p.default.getToken()) && void 0 !== I ? I : '';
+            let e = null !== (I = f.default.getToken()) && void 0 !== I ? I : '';
             await R.sk({
                 channel: t,
                 items: c,

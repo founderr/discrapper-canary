@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     }
 }), n(411104), n(47120);
-var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(481060), l = n(493683), u = n(904245), c = n(906732), d = n(541716), _ = n(752305), E = n(893718), f = n(957730), h = n(131704), p = n(592125), m = n(5192), I = n(838440), T = n(332390), g = n(785717), S = n(261253), A = n(7242), N = n(934861), v = n(981631), O = n(689938), R = n(663054), C = n(589273);
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(481060), l = n(493683), u = n(904245), c = n(906732), d = n(541716), _ = n(752305), E = n(893718), f = n(957730), h = n(131704), p = n(592125), m = n(5192), I = n(838440), T = n(785717), g = n(910128), S = n(261253), A = n(7242), N = n(934861), v = n(981631), O = n(689938), R = n(663054), C = n(589273);
 let y = (0, h.kt)({
         id: '1',
         type: v.d4z.DM
@@ -34,11 +34,11 @@ function L(e) {
             guildId: n,
             channelId: a,
             onClose: l
-        } = e, {newestAnalyticsLocation: u} = (0, c.ZP)(), {trackUserProfileAction: f} = (0, g.KZ)(), {
+        } = e, {newestAnalyticsLocation: u} = (0, c.ZP)(), {trackUserProfileAction: f} = (0, T.KZ)(), {
             messageCtaEnabled: h,
             activeInviteToCallCtaEnabled: p,
             persistentCallCtaEnabled: I
-        } = (0, T.l)({ location: 'BiteSizeProfileDirectMessageSection' }), [v, L] = i.useState(''), [b, M] = i.useState((0, _.JM)(v)), P = i.useRef(!1);
+        } = (0, g.l)({ location: 'BiteSizeProfileDirectMessageSection' }), [v, L] = i.useState(''), [b, M] = i.useState((0, _.JM)(v)), P = i.useRef(!1);
     if (h) {
         let e = (0, r.jsx)(A.Z, {
             user: t,

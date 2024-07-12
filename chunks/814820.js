@@ -1,10 +1,10 @@
 n.d(t, {
     f: function () {
-        return f;
+        return p;
     }
 }), n(47120);
 var i = n(735250), a = n(470079), s = n(442837), r = n(481060), l = n(541716), o = n(419922), c = n(665906), d = n(271383), u = n(430824), _ = n(496675), E = n(594174), I = n(838440), m = n(779139), T = n(981631), h = n(689938), N = n(356039);
-let p = e => {
+let f = e => {
         let {
                 channel: t,
                 message: n
@@ -43,7 +43,7 @@ let p = e => {
                 ]
             })
         });
-    }, f = e => {
+    }, p = e => {
         let {
                 message: t,
                 channel: n
@@ -57,7 +57,7 @@ let p = e => {
                 let i = E.default.getCurrentUser(), s = (0, c.xl)(n), r = _.Z.can(T.Plq.SEND_MESSAGES, n), l = null != a && null != i && (null === (e = d.ZP.getMember(a, i.id)) || void 0 === e ? void 0 : e.isPending), o = t.author.bot, I = u.Z.getGuild(a), m = null != I && (I.systemChannelFlags & T.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
                 return r && !s && !l && !o && m;
             });
-        return null != a && r ? (0, i.jsx)(p, {
+        return null != a && r ? (0, i.jsx)(f, {
             message: t,
             channel: n
         }) : null;

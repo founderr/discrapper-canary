@@ -10,8 +10,8 @@ t.Z = e => {
             buttonClassName: p = '',
             subtitle: g = '',
             description: A = '',
-            descriptionCta: m = '',
-            isPremiumGetCta: N,
+            descriptionCta: N = '',
+            isPremiumGetCta: m,
             onCtaClick: f,
             cardVariant: S
         } = e, h = (0, d.N)(), M = null == h ? void 0 : h.subscription_trial, x = (0, c.Ng)(), b = (0, l.Rt)({
@@ -34,17 +34,17 @@ t.Z = e => {
                 subtitle: g,
                 description: A
             }),
-            N && (0, s.jsx)(E.Z, {
+            m && (0, s.jsx)(E.Z, {
                 className: p,
                 subscriptionTier: T.Si.TIER_2,
                 buttonText: O,
                 color: i.Button.Colors.GREEN,
                 look: i.Button.Looks.FILLED
             }),
-            0 !== m.length && (null == (n = null == P ? void 0 : P.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 && null != f && (0, s.jsx)(i.Button, {
+            0 !== N.length && (null == (n = null == P ? void 0 : P.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 && null != f && (0, s.jsx)(i.Button, {
                 className: p,
                 onClick: f,
-                children: m
+                children: N
             })
         ]
     });

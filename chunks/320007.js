@@ -3,12 +3,12 @@ n.d(t, {
         return N;
     }
 });
-var i = n(735250), a = n(470079), s = n(442837), r = n(481060), l = n(618158), o = n(819640), c = n(131951), d = n(502568), u = n(924557), _ = n(435064), E = n(779618), I = n(175470), m = n(203259), T = n(356659), h = n(689938);
+var i = n(735250), a = n(470079), s = n(442837), r = n(481060), l = n(665149), o = n(618158), c = n(819640), d = n(131951), u = n(924557), _ = n(435064), E = n(779618), I = n(175470), m = n(203259), T = n(356659), h = n(689938);
 function N(e) {
     let {
             canShowReminder: t = !1,
             className: N
-        } = e, p = (0, E.Z)(c.Z), {showClipsHeaderEntrypoint: f} = u.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }), {
+        } = e, f = (0, E.Z)(d.Z), {showClipsHeaderEntrypoint: p} = u.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }), {
             hasClips: C,
             hasNewClips: g,
             lastClipsSession: S,
@@ -20,10 +20,10 @@ function N(e) {
             lastClipsSession: _.Z.getLastClipsSession(),
             remindersEnabled: _.Z.getSettings().remindersEnabled,
             hasAnyClipAnimations: _.Z.hasAnyClipAnimations()
-        })), R = null != S && S.newClipIds.length > 0, O = (0, I.n)(e => e.clipsButtonRef), M = (0, I.n)(e => e.setClipsButtonRef), v = (0, s.e7)([o.Z], () => o.Z.hasLayers()), {
+        })), R = null != S && S.newClipIds.length > 0, O = (0, I.n)(e => e.clipsButtonRef), M = (0, I.n)(e => e.setClipsButtonRef), v = (0, s.e7)([c.Z], () => c.Z.hasLayers()), {
             preventIdle: L,
             allowIdle: Z
-        } = (0, l.Y)('animation');
+        } = (0, o.Y)('animation');
     function P() {
         (0, r.openModalLazy)(async () => {
             let {default: e} = await Promise.all([
@@ -37,7 +37,7 @@ function N(e) {
         x,
         L,
         Z
-    ]), f && p && C) ? (0, i.jsxs)(i.Fragment, {
+    ]), p && f && C) ? (0, i.jsxs)(i.Fragment, {
         children: [
             null != O && t && A && R && !(0, r.hasAnyModalOpen)() && !v && (0, i.jsx)(m.Z, {
                 clipIconRef: O,
@@ -46,7 +46,7 @@ function N(e) {
             }),
             (0, i.jsx)('div', {
                 ref: M,
-                children: (0, i.jsx)(d.JO, {
+                children: (0, i.jsx)(l.JO, {
                     className: N,
                     icon: r.ClipsIcon,
                     showBadge: g,

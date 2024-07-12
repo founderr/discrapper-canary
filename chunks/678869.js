@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 }), n(627494), n(757143), n(653041);
-var i = n(735250), a = n(470079), s = n(423875), l = n(442837), r = n(902704), o = n(481060), c = n(952164), d = n(768419), u = n(239470), h = n(894344), p = n(314897), m = n(936195), _ = n(5192), f = n(561308), E = n(256726), C = n(206295), g = n(551228), I = n(591853), x = n(371991), T = n(410441), N = n(981631), v = n(616922), S = n(689938), Z = n(153602), A = n(331679);
+var i = n(735250), a = n(470079), s = n(423875), l = n(442837), r = n(902704), o = n(481060), c = n(952164), d = n(768419), u = n(239470), h = n(894344), p = n(314897), m = n(936195), _ = n(5192), f = n(561308), E = n(256726), C = n(206295), g = n(551228), I = n(591853), x = n(371991), T = n(410441), v = n(981631), N = n(616922), S = n(689938), Z = n(153602), A = n(331679);
 let M = (e, t, n) => {
     let {
             artist: i,
@@ -76,7 +76,7 @@ function R(e) {
         } = (0, C.Z)(U), V = (0, l.e7)([
             d.Z,
             p.default
-        ], () => (null == y ? void 0 : y.type) === N.IIU.LISTENING && null != B ? (0, u.Z)(d.Z, p.default, B, y) : void 0, [
+        ], () => (null == y ? void 0 : y.type) === v.IIU.LISTENING && null != B ? (0, u.Z)(d.Z, p.default, B, y) : void 0, [
             y,
             B
         ], r.Z), F = a.useCallback(() => {
@@ -118,7 +118,7 @@ function R(e) {
             (0, c.aG)(y);
         }, z.push((0, i.jsx)(I.Ll, {
             onClick: () => {
-                (0, h.Z)(V, v.kG.USER_ACTIVITY_SYNC), O();
+                (0, h.Z)(V, N.kG.USER_ACTIVITY_SYNC), O();
             },
             IconComponent: o.UserPlayIcon,
             children: S.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_LISTEN_ALONG

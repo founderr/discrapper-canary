@@ -3,15 +3,15 @@ n.d(t, {
         return L;
     }
 }), n(47120);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(225857), o = n(338545), c = n(91192), u = n(477690), d = n(153867), h = n(771845), p = n(880080), _ = n(624138), f = n(727258), m = n(199540), g = n(40153), C = n(252686), I = n(682662), E = n(662146), N = n(689938), x = n(524343), S = n(690310);
-let v = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION), Z = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE), T = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(225857), o = n(338545), c = n(91192), u = n(477690), d = n(153867), h = n(771845), p = n(624138), _ = n(727258), f = n(276952), m = n(199540), g = n(40153), C = n(252686), I = n(682662), E = n(662146), N = n(689938), x = n(524343), S = n(690310);
+let v = (0, p.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION), Z = (0, p.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE), T = (0, p.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function L(e) {
     let {
             folderNode: t,
             setNodeRef: n,
             selected: r,
             expanded: u,
-            mediaState: _,
+            mediaState: p,
             mentionCount: L = 0,
             unread: A = !1,
             defaultFolderName: b,
@@ -23,9 +23,9 @@ function L(e) {
             onExpandCollapse: j,
             onContextMenu: D,
             renderChildNode: U,
-            folderIconContent: G
+            folderIconContent: w
         } = e, {
-            id: w,
+            id: G,
             name: k,
             children: B
         } = t, [V, H] = l.useState(!1), [F, W] = l.useState(!1), Y = V || F;
@@ -33,9 +33,9 @@ function L(e) {
         O && H(!1);
     }, [O]);
     let [{dragging: z}, K] = (0, s.c)({
-            type: f.eD.FOLDER,
+            type: _.eD.FOLDER,
             item: () => (null == y || y(), {
-                type: f.eD.FOLDER,
+                type: _.eD.FOLDER,
                 nodeId: t.id
             }),
             end() {
@@ -49,17 +49,17 @@ function L(e) {
         }, [
             j,
             u
-        ]), J = null != k && '' !== k ? k : null != b && '' !== b ? b : N.Z.Messages.SERVER_FOLDER_PLACEHOLDER, X = (0, c.Ie)(''.concat(w)), $ = 'folder-items-'.concat(w), ee = B.length * (Z + T), et = (0, o.useTransition)(!z && u, {
+        ]), J = null != k && '' !== k ? k : null != b && '' !== b ? b : N.Z.Messages.SERVER_FOLDER_PLACEHOLDER, X = (0, c.Ie)(''.concat(G)), $ = 'folder-items-'.concat(G), ee = B.length * (Z + T), et = (0, o.useTransition)(!z && u, {
             from: { height: 0 },
             enter: { height: 1 },
             leave: { height: 0 },
             config: { duration: v }
-        }), en = l.useCallback(e => null == n ? void 0 : n(w, e), [
+        }), en = l.useCallback(e => null == n ? void 0 : n(G, e), [
             n,
-            w
+            G
         ]), ei = (0, i.jsxs)(I.H, {
             children: [
-                (0, i.jsx)(p.Z, {
+                (0, i.jsx)(f.Z, {
                     disabled: z || u,
                     hovered: V,
                     selected: r,
@@ -80,7 +80,7 @@ function L(e) {
                             expanded: u,
                             forceCircular: M,
                             sorting: O,
-                            mediaState: _,
+                            mediaState: p,
                             mentionCount: L,
                             tooltipName: J,
                             folderGroupId: $,
@@ -89,7 +89,7 @@ function L(e) {
                             onHoverChange: H,
                             onKeyDown: Q,
                             treeItemProps: X,
-                            folderIconContent: G
+                            folderIconContent: w
                         })
                     })
                 }),

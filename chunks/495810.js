@@ -3,20 +3,20 @@ a.r(L), a.d(L, {
         return e4;
     }
 }), a(47120), a(757143), a(653041);
-var C, t, i, r, s = a(735250), n = a(470079), l = a(120356), o = a.n(l), H = a(716), c = a(266067), d = a(990547), V = a(442837), M = a(477690), Z = a(481060), _ = a(150063), E = a(393238), I = a(110924), h = a(315263), p = a(607070), u = a(100527), f = a(906732), T = a(213609), m = a(216547), g = a(812206), x = a(706454), N = a(210887), D = a(592125), v = a(430824), A = a(771845), S = a(594174), b = a(517802), w = a(471731), j = a(502568), R = a(602623), B = a(810090), O = a(626135), k = a(823379), P = a(5192), y = a(624138), F = a(792125), W = a(712092), G = a(507885), U = a(566620), Y = a(317381), K = a(379146), X = a(273003), J = a(754332), z = a(140863), Q = a(969345), q = a(257968), $ = a(127255), ee = a(361213), eL = a(542094), ea = a(778569), eC = a(840000), et = a(537789), ei = a(841547), er = a(239298), es = a(513202), en = a(701488), el = a(981631), eo = a(689938), eH = a(291553), ec = a(131454), ed = a(372065), eV = a(376226), eM = a(785930), eZ = a(143824), e_ = a(848366), eE = a(392381), eI = a(176890), eh = a(997074), ep = a(901924), eu = a(448096), ef = a(286557), eT = a(358176), em = a(610924), eg = a(326822), ex = a(797956), eN = a(612852), eD = a(369827);
+var C, t, i, r, s = a(735250), n = a(470079), l = a(120356), o = a.n(l), H = a(716), c = a(266067), d = a(990547), V = a(442837), M = a(477690), Z = a(481060), _ = a(150063), E = a(393238), I = a(110924), h = a(315263), p = a(607070), u = a(100527), f = a(906732), T = a(213609), m = a(216547), g = a(812206), x = a(665149), N = a(706454), D = a(210887), v = a(592125), A = a(430824), S = a(771845), b = a(594174), w = a(517802), j = a(471731), R = a(810090), B = a(626135), O = a(823379), k = a(5192), P = a(624138), y = a(792125), F = a(712092), W = a(507885), G = a(566620), U = a(317381), Y = a(379146), K = a(273003), X = a(754332), J = a(140863), z = a(969345), Q = a(257968), q = a(127255), $ = a(361213), ee = a(542094), eL = a(778569), ea = a(840000), eC = a(537789), et = a(841547), ei = a(239298), er = a(513202), es = a(884338), en = a(701488), el = a(981631), eo = a(689938), eH = a(291553), ec = a(131454), ed = a(372065), eV = a(376226), eM = a(785930), eZ = a(143824), e_ = a(848366), eE = a(392381), eI = a(176890), eh = a(997074), ep = a(901924), eu = a(448096), ef = a(286557), eT = a(358176), em = a(610924), eg = a(326822), ex = a(797956), eN = a(612852), eD = a(369827);
 let ev = 'celebrate-with-us', eA = ''.concat(el.Z5c.ACTIVITIES, '#').concat(ev), eS = 'https://support.discord.com/hc/en-us/articles/13771635451415-Share-Nitro-Trials-with-a-Friend-FAQ', eb = 'https://discord.gg/discord-townhall', ew = 'https://discordmerch.com/dxcprod';
 function ej() {
     var e, L;
     let {
             width: a,
             ref: C
-        } = (0, E.Z)(), t = (0, V.e7)([p.Z], () => p.Z.useReducedMotion), i = (0, V.e7)([G.Z], () => G.Z.isAcknowledged(en.ES.FREE)), [r, l] = n.useState(!1), [d, M] = n.useState(!1), [I, h] = n.useState(!1), T = (0, c.k6)(), m = (0, c.TH)(), g = (0, V.e7)([N.Z], () => N.Z.getState().theme), [x] = n.useState((0, q.c)(G.Z) > 0), {analyticsLocations: D} = (0, f.ZP)([
+        } = (0, E.Z)(), t = (0, V.e7)([p.Z], () => p.Z.useReducedMotion), i = (0, V.e7)([W.Z], () => W.Z.isAcknowledged(en.ES.FREE)), [r, l] = n.useState(!1), [d, M] = n.useState(!1), [I, h] = n.useState(!1), T = (0, c.k6)(), m = (0, c.TH)(), g = (0, V.e7)([D.Z], () => D.Z.getState().theme), [N] = n.useState((0, Q.c)(W.Z) > 0), {analyticsLocations: v} = (0, f.ZP)([
             ...null !== (L = null == m ? void 0 : null === (e = m.state) || void 0 === e ? void 0 : e.analyticsLocations) && void 0 !== L ? L : [],
             u.Z.ACTIVITIES_PAGE
-        ]), v = n.useRef(new Date());
+        ]), A = n.useRef(new Date());
     return n.useEffect(() => {
         setTimeout(() => {
-            !i && W.Z(en.ES.FREE);
+            !i && F.Z(en.ES.FREE);
         }, 500);
     }, [i]), n.useEffect(() => {
         !i && (setTimeout(() => {
@@ -26,29 +26,29 @@ function ej() {
         }, 1500), setTimeout(() => {
             h(!0);
         }, 1700));
-    }, [i]), n.useEffect(() => ((0, _.Y)(el.Z5c.ACTIVITIES), x && !D.includes(u.Z.ACTIVITIES_PAGE_NOTIFICATION_DOT) && T.replace(el.Z5c.ACTIVITIES, {
+    }, [i]), n.useEffect(() => ((0, _.Y)(el.Z5c.ACTIVITIES), N && !v.includes(u.Z.ACTIVITIES_PAGE_NOTIFICATION_DOT) && T.replace(el.Z5c.ACTIVITIES, {
         analyticsLocations: [
-            ...D,
+            ...v,
             u.Z.ACTIVITIES_PAGE_NOTIFICATION_DOT
         ]
     }), () => {
-        let e = v.current, L = Math.ceil((new Date().getTime() - e.getTime()) / 1000);
-        O.default.track(el.rMx.ROUTE_UNMOUNT, {
+        let e = A.current, L = Math.ceil((new Date().getTime() - e.getTime()) / 1000);
+        B.default.track(el.rMx.ROUTE_UNMOUNT, {
             route: '/activities',
             page_view_duration_s: L
         });
     }), [
-        D,
+        v,
         T,
-        x
+        N
     ]), (0, s.jsx)(f.Gt, {
-        value: D,
+        value: v,
         children: (0, s.jsxs)('div', {
             className: eH.outerContainer,
             children: [
-                (0, s.jsxs)(j.ZP, {
+                (0, s.jsxs)(x.ZP, {
                     children: [
-                        (0, s.jsx)(b.Z, { className: o()(eH.activitiesBirthdayIcon, { [eH.activitiesBirthdayIconLight]: 'light' === g }) }),
+                        (0, s.jsx)(w.Z, { className: o()(eH.activitiesBirthdayIcon, { [eH.activitiesBirthdayIconLight]: 'light' === g }) }),
                         (0, s.jsx)(Z.Heading, {
                             variant: 'heading-md/semibold',
                             children: eo.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_TAB_TITLE
@@ -94,7 +94,7 @@ function ej() {
                                     }) : null
                                 ]
                             }),
-                            null != a && a < 660 ? (0, s.jsx)(B.Z, {
+                            null != a && a < 660 ? (0, s.jsx)(R.Z, {
                                 autoPlay: !0,
                                 muted: !0,
                                 src: eV,
@@ -129,7 +129,7 @@ function eR(e) {
                 children: (0, s.jsxs)('div', {
                     className: eH.freeForeverText,
                     children: [
-                        (0, s.jsx)(w.Z, {
+                        (0, s.jsx)(j.Z, {
                             className: o()(eH.freeForeverLogo, {
                                 [eH.freeForeverLogoMedium]: null != L && L < 1000,
                                 [eH.freeForeverLogoSmall]: null != L && L < 480
@@ -148,7 +148,7 @@ function eR(e) {
             }),
             null != L && L > 660 ? (0, s.jsx)('div', {
                 className: eH.freeForeverRight,
-                children: (0, s.jsx)(B.Z, {
+                children: (0, s.jsx)(R.Z, {
                     autoPlay: !0,
                     muted: !0,
                     loop: !0,
@@ -167,7 +167,7 @@ function eB() {
         children: [
             (0, s.jsx)('div', {
                 className: eH.birthdayBalloonsContainer,
-                children: (0, s.jsx)(eC.j, { className: o()(eH.birthdayExplanationBalloonsLeft, eH.balloon) })
+                children: (0, s.jsx)(ea.j, { className: o()(eH.birthdayExplanationBalloonsLeft, eH.balloon) })
             }),
             (0, s.jsx)(Z.Heading, {
                 variant: 'heading-md/semibold',
@@ -189,7 +189,7 @@ function eB() {
             }),
             (0, s.jsx)('div', {
                 className: eH.birthdayBalloonsContainer,
-                children: (0, s.jsx)(eC.j, {
+                children: (0, s.jsx)(ea.j, {
                     className: o()(eH.birthdayExplanationBalloonsRight, eH.balloon),
                     flipX: !0
                 })
@@ -197,7 +197,7 @@ function eB() {
         ]
     });
 }
-let eO = 'whats-new', ek = (0, y.Mg)(M.Z.ACTIVITIES_HOME_WHATS_NEW_TILE_WIDTH), eP = (0, y.Mg)(M.Z.ACTIVITIES_HOME_WHATS_NEW_HORIZONTAL_MARGIN), ey = [
+let eO = 'whats-new', ek = (0, P.Mg)(M.Z.ACTIVITIES_HOME_WHATS_NEW_TILE_WIDTH), eP = (0, P.Mg)(M.Z.ACTIVITIES_HOME_WHATS_NEW_HORIZONTAL_MARGIN), ey = [
         Z.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css,
         Z.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_GREEN.css,
         Z.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css,
@@ -205,7 +205,7 @@ let eO = 'whats-new', ek = (0, y.Mg)(M.Z.ACTIVITIES_HOME_WHATS_NEW_TILE_WIDTH), 
         Z.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_YELLOW.css
     ];
 function eF() {
-    let {enabled: e} = K.q.useExperiment({ location: 'd72ecf_2' }), {enabled: L} = X.q.useExperiment({ location: 'd72ecf_3' }), {enabled: a} = z.u.useExperiment({ location: 'd72ecf_4' }), {enabled: C} = J.m.useExperiment({ location: 'd72ecf_5' }), t = n.useMemo(() => {
+    let {enabled: e} = Y.q.useExperiment({ location: 'd72ecf_2' }), {enabled: L} = K.q.useExperiment({ location: 'd72ecf_3' }), {enabled: a} = J.u.useExperiment({ location: 'd72ecf_4' }), {enabled: C} = X.m.useExperiment({ location: 'd72ecf_5' }), t = n.useMemo(() => {
             let t = [];
             return t.push({
                 id: en.ES.DISCORD_TURNS_8,
@@ -318,17 +318,17 @@ function eW(e) {
             cardImgUrl: c,
             revealDate: d,
             enabled: M
-        } = e, _ = (0, V.e7)([p.Z], () => p.Z.useReducedMotion), E = (0, V.e7)([x.default], () => x.default.locale), {analyticsLocations: h} = (0, f.ZP)(u.Z.ACTIVITIES_PAGE_WHATS_NEW_TILE), [T, m] = n.useState(!1), g = (0, I.Z)(T), N = (0, V.e7)([G.Z], () => {
+        } = e, _ = (0, V.e7)([p.Z], () => p.Z.useReducedMotion), E = (0, V.e7)([N.default], () => N.default.locale), {analyticsLocations: h} = (0, f.ZP)(u.Z.ACTIVITIES_PAGE_WHATS_NEW_TILE), [T, m] = n.useState(!1), g = (0, I.Z)(T), x = (0, V.e7)([W.Z], () => {
             if (!M)
                 return 0;
-            let e = G.Z.isOpened(l);
-            return l === en.ES.JAMSPACE ? e || G.Z.isOpened(en.ES.JAMSPACE_OLD) ? 2 : 1 : e ? 2 : 1;
+            let e = W.Z.isOpened(l);
+            return l === en.ES.JAMSPACE ? e || W.Z.isOpened(en.ES.JAMSPACE_OLD) ? 2 : 1 : e ? 2 : 1;
         }, [
             M,
             l
         ]);
     n.useEffect(() => {
-        M && W.Z(l);
+        M && F.Z(l);
     }, [
         M,
         l
@@ -373,26 +373,26 @@ function eW(e) {
         children: (0, s.jsxs)('div', {
             className: eH.flipCardOuter,
             children: [
-                _ || 2 !== N || T || !g ? null : (0, s.jsx)('div', {
+                _ || 2 !== x || T || !g ? null : (0, s.jsx)('div', {
                     className: eH.flipCardConfetti,
                     children: (0, s.jsx)(H.Z, { colors: ey })
                 }),
                 (0, s.jsx)(eG, {
-                    openState: N,
+                    openState: x,
                     link: i,
                     isAppLink: r,
                     onOpen: () => {
-                        m(!0), W.E(l), O.default.track(el.rMx.ACTIVITIES_WHATS_NEW_OPENED, { section_id: l }), setTimeout(() => {
+                        m(!0), F.E(l), B.default.track(el.rMx.ACTIVITIES_WHATS_NEW_OPENED, { section_id: l }), setTimeout(() => {
                             m(!1);
                         }, 500);
                     },
                     onCardContentClick: () => {
-                        O.default.track(el.rMx.ACTIVITIES_WHATS_NEW_CLICKED, { section_id: l });
+                        B.default.track(el.rMx.ACTIVITIES_WHATS_NEW_CLICKED, { section_id: l });
                     }
                 }),
                 (0, s.jsxs)('div', {
                     className: o()(eH.flipCardInner, {
-                        [eH.flipCardInnerFlipped]: 2 === N,
+                        [eH.flipCardInnerFlipped]: 2 === x,
                         [eH.flipCardOpening]: T && !_,
                         [eH.flipCardInnerReducedMotion]: _
                     }),
@@ -400,7 +400,7 @@ function eW(e) {
                         (0, s.jsx)('div', {
                             className: eH.flipCardOpened,
                             children: (() => {
-                                switch (N) {
+                                switch (x) {
                                 case 0:
                                 case 1:
                                     return (0, s.jsx)(Z.Text, {
@@ -426,7 +426,7 @@ function eW(e) {
                                     alt: eo.Z.Messages.EMBEDDED_ACTIVITIES_PLAYING_CARD_ALT
                                 }),
                                 (() => {
-                                    switch (N) {
+                                    switch (x) {
                                     case 0:
                                         return (0, s.jsx)(Z.Text, {
                                             variant: 'text-sm/semibold',
@@ -472,7 +472,7 @@ function eG(e) {
         if (null == a)
             return (0, s.jsx)('div', { className: o()(eH.clickableContainer, eH.noPointer, { [eH.clickableContainerReducedMotion]: n }) });
         if (C)
-            return (0, s.jsx)(er.o, {
+            return (0, s.jsx)(ei.o, {
                 className: o()(eH.clickableContainer, { [eH.clickableContainerReducedMotion]: n }),
                 onClick: i,
                 to: {
@@ -492,7 +492,7 @@ function eG(e) {
     }
 }
 (i = C || (C = {}))[i.LOCKED = 0] = 'LOCKED', i[i.UNLOCKED = 1] = 'UNLOCKED', i[i.OPENED = 2] = 'OPENED';
-let eU = 'happening-now', eY = (0, y.Mg)(M.Z.ACTIVITIES_HOME_HAPPENING_NOW_CARD_WIDTH), eK = (0, y.Mg)(M.Z.ACTIVITIES_HOME_HAPPENING_NOW_GAP);
+let eU = 'happening-now', eY = (0, P.Mg)(M.Z.ACTIVITIES_HOME_HAPPENING_NOW_CARD_WIDTH), eK = (0, P.Mg)(M.Z.ACTIVITIES_HOME_HAPPENING_NOW_GAP);
 function eX(e, L) {
     if (e.length !== L.length)
         return !1;
@@ -503,26 +503,26 @@ function eX(e, L) {
 }
 function eJ() {
     let {analyticsLocations: e} = (0, f.ZP)(u.Z.ACTIVITIES_HAPPENING_NOW), L = (0, V.e7)([
-            Y.ZP,
+            U.ZP,
             g.Z,
-            D.Z,
-            S.default,
-            A.ZP
+            v.Z,
+            b.default,
+            S.ZP
         ], () => {
-            let e = [], L = S.default.getCurrentUser();
+            let e = [], L = b.default.getCurrentUser();
             if (null == L)
                 return e;
-            let a = Y.ZP.getShelfActivities(null), C = a.map(e => g.Z.getApplication(e.application_id)).filter(k.lm);
-            return A.ZP.getFlattenedGuildIds().forEach(t => {
-                Y.ZP.getEmbeddedActivitiesForGuild(t).forEach(t => {
-                    let i = D.Z.getChannel(t.channelId);
+            let a = U.ZP.getShelfActivities(null), C = a.map(e => g.Z.getApplication(e.application_id)).filter(O.lm);
+            return S.ZP.getFlattenedGuildIds().forEach(t => {
+                U.ZP.getEmbeddedActivitiesForGuild(t).forEach(t => {
+                    let i = v.Z.getChannel(t.channelId);
                     if (null == i || t.userIds.has(L.id))
                         return;
-                    let r = (0, Q.Z)({
+                    let r = (0, z.Z)({
                             activityConfigs: a,
                             applicationId: t.applicationId,
                             applications: C
-                        }), s = Array.from(t.userIds).map(e => S.default.getUser(e)).filter(k.lm);
+                        }), s = Array.from(t.userIds).map(e => b.default.getUser(e)).filter(O.lm);
                     null != r && e.push({
                         activityItem: r,
                         channel: i,
@@ -575,22 +575,22 @@ function ez(e) {
         } = e, t = (0, V.e7)([p.Z], () => p.Z.useReducedMotion), {
             imageBackground: i,
             onActivityItemSelected: r
-        } = (0, eL.ZP)({
+        } = (0, ee.ZP)({
             activityItem: L,
             channel: a,
             guildId: a.guild_id,
             locationObject: {},
-            embeddedActivitiesManager: es.Z,
+            embeddedActivitiesManager: er.Z,
             backgroundResolution: 512
-        }), n = P.ZP.getName(a.guild_id, a.id, null == C ? void 0 : C[0]);
-    n = (0, y.aF)(n, 25);
-    let l = (0, V.e7)([v.Z], () => {
+        }), n = k.ZP.getName(a.guild_id, a.id, null == C ? void 0 : C[0]);
+    n = (0, P.aF)(n, 25);
+    let l = (0, V.e7)([A.Z], () => {
         var e;
-        return null === (e = v.Z.getGuild(a.guild_id)) || void 0 === e ? void 0 : e.name;
+        return null === (e = A.Z.getGuild(a.guild_id)) || void 0 === e ? void 0 : e.name;
     });
     return (0, s.jsxs)(Z.Clickable, {
         onClick: r,
-        className: o()((0, F.Q)(el.BRd.DARK), eH.happeningNowCard, { [eH.happeningNowCardReducedMotion]: t }),
+        className: o()((0, y.Q)(el.BRd.DARK), eH.happeningNowCard, { [eH.happeningNowCardReducedMotion]: t }),
         children: [
             (0, s.jsx)('img', {
                 src: i.url,
@@ -604,7 +604,7 @@ function ez(e) {
                         variant: 'heading-lg/bold',
                         children: L.application.name
                     }),
-                    (0, s.jsx)(R.Z, {
+                    (0, s.jsx)(es.Z, {
                         guildId: a.guild_id,
                         users: C,
                         max: 4,
@@ -627,8 +627,8 @@ function ez(e) {
                         variant: 'text-xs/medium',
                         className: eH.happeningNowChannelAndGuildName,
                         children: eo.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
-                            channelName: (0, y.aF)(a.name, 25),
-                            serverName: (0, y.aF)(l, 25)
+                            channelName: (0, P.aF)(a.name, 25),
+                            serverName: (0, P.aF)(l, 25)
                         })
                     }) : null
                 ]
@@ -637,12 +637,12 @@ function ez(e) {
     });
 }
 function eQ() {
-    let e = (0, $.Z)({
+    let e = (0, q.Z)({
         guildId: null,
         channel: void 0
     });
     return n.useEffect(() => {
-        (0, U.w1)({ guildId: null });
+        (0, G.w1)({ guildId: null });
     }, []), (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)('div', {
@@ -670,15 +670,15 @@ function eQ() {
 }
 function eq(e) {
     var L;
-    let {activityItem: a} = e, {analyticsLocations: C} = (0, f.ZP)(), t = (0, ea.Z)({
+    let {activityItem: a} = e, {analyticsLocations: C} = (0, f.ZP)(), t = (0, eL.Z)({
             applicationId: a.application.id,
             size: 512
-        }), i = (0, V.e7)([p.Z], () => p.Z.useReducedMotion), r = (null === (L = a.application.embeddedActivityConfig) || void 0 === L ? void 0 : L.activity_preview_video_asset_id) != null ? (0, ee.Z)(a.application.id, a.application.embeddedActivityConfig.activity_preview_video_asset_id) : null, [l, H] = n.useState(!1), [c, d] = n.useState(l);
+        }), i = (0, V.e7)([p.Z], () => p.Z.useReducedMotion), r = (null === (L = a.application.embeddedActivityConfig) || void 0 === L ? void 0 : L.activity_preview_video_asset_id) != null ? (0, $.Z)(a.application.id, a.application.embeddedActivityConfig.activity_preview_video_asset_id) : null, [l, H] = n.useState(!1), [c, d] = n.useState(l);
     n.useEffect(() => {
         l && d(!0);
     }, [l]);
     let M = () => H(!0), _ = () => H(!1), E = null == a.application.maxParticipants || -1 === a.application.maxParticipants ? eo.Z.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS : eo.Z.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format({ count: a.application.maxParticipants });
-    return (0, s.jsxs)(er.o, {
+    return (0, s.jsxs)(ei.o, {
         to: {
             pathname: el.Z5c.ACTIVITY_DETAILS(a.application.id),
             state: { analyticsLocations: C }
@@ -700,7 +700,7 @@ function eq(e) {
                     !i && null != r && c ? (0, s.jsx)('div', {
                         className: o()(eH.video, { [eH.videoFadeOut]: !l }),
                         onAnimationEnd: () => l ? null : d(!1),
-                        children: (0, s.jsx)(B.Z, {
+                        children: (0, s.jsx)(R.Z, {
                             className: eH.video,
                             src: r,
                             loop: !0,
@@ -771,7 +771,7 @@ function e$() {
                         href: eS,
                         target: '_blank',
                         className: eH.celebrateCardContainer,
-                        onClick: () => O.default.track(el.rMx.ACTIVITIES_PAGE_CELEBRATE_TILE_CLICKED, { section: 'share_nitro' }),
+                        onClick: () => B.default.track(el.rMx.ACTIVITIES_PAGE_CELEBRATE_TILE_CLICKED, { section: 'share_nitro' }),
                         children: [
                             (0, s.jsx)('img', {
                                 src: eu,
@@ -802,7 +802,7 @@ function e$() {
                         target: '_blank',
                         className: eH.celebrateCardContainer,
                         onClick: () => {
-                            O.default.track(el.rMx.ACTIVITIES_PAGE_CELEBRATE_TILE_CLICKED, { section: 'disxcore_merch' });
+                            B.default.track(el.rMx.ACTIVITIES_PAGE_CELEBRATE_TILE_CLICKED, { section: 'disxcore_merch' });
                         },
                         children: [
                             (0, s.jsx)(Z.Heading, {
@@ -830,7 +830,7 @@ function e$() {
                         className: eH.celebrateCardContainer,
                         onClick: e => {
                             var L;
-                            O.default.track(el.rMx.ACTIVITIES_PAGE_CELEBRATE_TILE_CLICKED, { section: 'town_hall' }), null === (L = (0, h.default)(eb)) || void 0 === L || L(e);
+                            B.default.track(el.rMx.ACTIVITIES_PAGE_CELEBRATE_TILE_CLICKED, { section: 'town_hall' }), null === (L = (0, h.default)(eb)) || void 0 === L || L(e);
                         },
                         children: [
                             (0, s.jsx)(Z.Heading, {
@@ -859,10 +859,10 @@ function e$() {
 function e6() {
     return (0, s.jsx)('div', {
         className: eH.kitBashContainer,
-        children: (0, s.jsx)(ei.i, {})
+        children: (0, s.jsx)(et.i, {})
     });
 }
 function e4() {
-    return (0, s.jsx)(et.i, { children: (0, s.jsx)(ej, {}) });
+    return (0, s.jsx)(eC.i, { children: (0, s.jsx)(ej, {}) });
 }
 (r = t || (t = {})).SHARE_NITRO = 'share_nitro', r.DISXCORE_MERCH = 'disxcore_merch', r.TOWN_HALL = 'town_hall';

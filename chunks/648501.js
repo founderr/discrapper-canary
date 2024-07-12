@@ -20,9 +20,9 @@ function L(e) {
             isNewChannel: P,
             muted: j,
             resolvedUnreadSetting: D
-        } = e, U = (0, l.e7)([_.ZP], () => _.ZP.getMentionCount(n.id)), G = (0, s.ZP)(n), w = (0, l.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, n)), k = (0, l.e7)([f.Z], () => f.Z.hasVideo(n.id)), B = (0, u.PK)(n.id) && n.isGuildStageVoice(), V = (0, I.ZP)({
+        } = e, U = (0, l.e7)([_.ZP], () => _.ZP.getMentionCount(n.id)), w = (0, s.ZP)(n), G = (0, l.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, n)), k = (0, l.e7)([f.Z], () => f.Z.hasVideo(n.id)), B = (0, u.PK)(n.id) && n.isGuildStageVoice(), V = (0, I.ZP)({
             channel: n,
-            locked: w,
+            locked: G,
             video: k || B,
             selected: L
         }), H = (0, l.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)), F = (0, o.n2)(n.guild_id, n.id), W = (0, l.e7)([h.Z], () => {
@@ -59,8 +59,8 @@ function L(e) {
     }) : A && (0, m.a)(b) && W ? (0, i.jsx)(a.TextBadge, {
         text: Z.Z.Messages.LIVE,
         color: r.Z.unsafe_rawColors.RED_400.css
-    }) : null != R && R && (0, g.u)(G) ? (0, i.jsx)(E.Z, {
-        embeddedApps: G,
+    }) : null != R && R && (0, g.u)(w) ? (0, i.jsx)(E.Z, {
+        embeddedApps: w,
         muted: j
     }) : null;
 }

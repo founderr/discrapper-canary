@@ -9,9 +9,9 @@ function A(e) {
             channel: n,
             application: t,
             sectionName: s
-        } = e, o = (0, c.ye)({ application: t }), A = o ? N : p.Z, f = l.useRef(null), {
+        } = e, o = (0, c.ye)({ application: t }), A = o ? f : p.Z, N = l.useRef(null), {
             iconURL: C,
-            name: I
+            name: v
         } = l.useMemo(() => (0, c.sl)(t, {
             botIconFirst: !o,
             fakeAppIconURL: h,
@@ -23,14 +23,14 @@ function A(e) {
     return (0, i.jsxs)(a.ScrollerNone, {
         className: E.container,
         fade: !0,
-        ref: f,
+        ref: N,
         role: 'region',
-        'aria-label': _.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: I }),
+        'aria-label': _.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: v }),
         children: [
             (0, i.jsx)(m.Z, {
-                name: I,
+                name: v,
                 iconURL: C,
-                scrollerRef: f
+                scrollerRef: N
             }),
             null != C && (0, i.jsx)(u.Z, {
                 src: C,
@@ -50,7 +50,7 @@ function A(e) {
         ]
     });
 }
-function N(e) {
+function f(e) {
     let {
             channel: n,
             application: t,

@@ -6,10 +6,10 @@ t.d(n, {
         return s;
     }
 });
-var r = t(470079), i = t(442837), o = t(584825), l = t(17079), u = t(281320);
+var i = t(470079), r = t(442837), o = t(584825), l = t(17079), u = t(281320);
 function s(e, n) {
-    let t = (0, i.e7)([u.Z], () => u.Z.getPriceTiersForGuildAndType(e, n)), o = (0, i.e7)([u.Z], () => u.Z.getPriceTiersFetchStateForGuildAndType(e, n));
-    return r.useEffect(() => {
+    let t = (0, r.e7)([u.Z], () => u.Z.getPriceTiersForGuildAndType(e, n)), o = (0, r.e7)([u.Z], () => u.Z.getPriceTiersFetchStateForGuildAndType(e, n));
+    return i.useEffect(() => {
         o === u.M.NOT_FETCHED && (0, l.T)(e, n);
     }, [
         e,
@@ -24,9 +24,9 @@ function a(e) {
     let {
         fetchSubscriptionsSettings: n,
         loading: t,
-        error: i
+        error: r
     } = (0, o.JH)();
-    r.useEffect(() => {
+    i.useEffect(() => {
         n(e);
     }, [
         n,
@@ -37,6 +37,6 @@ function a(e) {
         loaded: null != l && !t,
         subscriptionsSettings: l,
         loading: t,
-        error: i
+        error: r
     };
 }

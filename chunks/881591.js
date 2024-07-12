@@ -3,7 +3,7 @@ n.d(t, {
         return b;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(442837), d = n(524437), u = n(481060), _ = n(239091), E = n(904245), I = n(43267), m = n(933557), T = n(294218), h = n(703656), N = n(962796), p = n(802463), f = n(682417), C = n(695346), g = n(592125), S = n(430824), A = n(375954), x = n(346656), R = n(240126), O = n(791914), M = n(981631), v = n(689938), L = n(166311), Z = n(699723);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(913527), o = n.n(l), c = n(442837), d = n(524437), u = n(481060), _ = n(239091), E = n(904245), I = n(43267), m = n(933557), T = n(294218), h = n(703656), N = n(962796), f = n(802463), p = n(682417), C = n(695346), g = n(592125), S = n(430824), A = n(375954), x = n(346656), R = n(240126), O = n(791914), M = n(981631), v = n(689938), L = n(166311), Z = n(699723);
 let P = {
     offset: {
         left: 4,
@@ -14,7 +14,7 @@ function b(e) {
     let {
             setTab: t,
             closePopout: n
-        } = e, s = (0, c.e7)([p.Z], () => p.Z.getMessageReminders());
+        } = e, s = (0, c.e7)([f.Z], () => f.Z.getMessageReminders());
     a.useEffect(() => () => {
         (0, N.Mf)();
     }, []);
@@ -51,8 +51,8 @@ function b(e) {
 function D(e) {
     let t, {messageReminder: a} = e, s = a.complete, l = (0, c.e7)([A.Z], () => A.Z.getMessage(a.channelId, a.messageId)), {
             message: d,
-            channel: p
-        } = (0, f.p)(a), R = g.Z.getChannel(p.id), O = (0, m.ZP)(R, !0), b = null != O ? O : p.name, D = (0, c.e7)([S.Z], () => S.Z.getGuild(null == p ? void 0 : p.guild_id)), j = null != p ? (0, I.x)(p) : null, U = null;
+            channel: f
+        } = (0, p.p)(a), R = g.Z.getChannel(f.id), O = (0, m.ZP)(R, !0), b = null != O ? O : f.name, D = (0, c.e7)([S.Z], () => S.Z.getGuild(null == f ? void 0 : f.guild_id)), j = null != f ? (0, I.x)(f) : null, U = null;
     return null != a.dueAt && (a.dueAt > new Date() ? (t = 'text-muted', U = v.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({ duration: o().duration(a.dueAt.getTime() - Date.now(), 'millisecond').humanize() })) : (t = 'text-danger', U = v.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({ duration: o().duration(Date.now() - a.dueAt.getTime(), 'millisecond').humanize() }))), (0, i.jsxs)('div', {
         className: Z.container,
         children: [
@@ -141,7 +141,7 @@ function D(e) {
                 children: [
                     (0, i.jsx)(T.Z, {
                         message: d,
-                        channel: p,
+                        channel: f,
                         className: Z.message,
                         compact: C.jU.getSetting(),
                         animateAvatar: !1,
@@ -173,7 +173,7 @@ function D(e) {
                             }) : null,
                             (0, i.jsx)(u.Button, {
                                 onClick: () => {
-                                    (0, h.uL)(M.Z5c.CHANNEL(null == p ? void 0 : p.getGuildId(), a.channelId, a.messageId));
+                                    (0, h.uL)(M.Z5c.CHANNEL(null == f ? void 0 : f.getGuildId(), a.channelId, a.messageId));
                                 },
                                 size: u.Button.Sizes.MIN,
                                 color: u.Button.Colors.TRANSPARENT,

@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(442837), r = n(692547), l = n(481060), o = n(287734), c = n(872810), d = n(367907), u = n(835473), _ = n(871118), h = n(543882), E = n(314897), I = n(944486), m = n(594174), g = n(366695), p = n(602623), T = n(51144), S = n(498058), C = n(158631), f = n(143614), N = n(981631), A = n(70722), Z = n(689938), L = n(106963);
+var i = n(735250), s = n(470079), a = n(442837), r = n(692547), l = n(481060), o = n(287734), c = n(872810), d = n(884338), u = n(367907), _ = n(835473), h = n(871118), E = n(543882), I = n(314897), m = n(944486), g = n(594174), p = n(366695), T = n(51144), S = n(498058), C = n(158631), f = n(143614), N = n(981631), A = n(70722), Z = n(689938), L = n(106963);
 function v(e) {
     let {users: t} = e;
     return (0, i.jsxs)('div', {
@@ -15,12 +15,12 @@ function v(e) {
                 height: 16,
                 color: r.Z.colors.HEADER_PRIMARY.css
             }),
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(d.Z, {
                 showUserPopout: !0,
                 useFallbackUserForPopout: !0,
                 users: t,
                 max: 6,
-                size: p.u.SIZE_24
+                size: d.u.SIZE_24
             })
         ]
     });
@@ -29,10 +29,10 @@ function O(e) {
     var t;
     let {broadcast: n} = e, {
             userId: r,
-            applicationId: p,
+            applicationId: d,
             channelId: O,
             streamKey: R
-        } = n, [x, b] = s.useState(!1), P = (0, a.e7)([m.default], () => m.default.getUser(r)), [M] = (0, u.Z)([p]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, f.Z)(), j = (0, a.e7)([h.Z], () => h.Z.getPreviewURL(null, O, r)), U = (0, a.e7)([I.Z], () => I.Z.getVoiceChannelId()), G = (0, C.ZP)(), k = (0, S.Z)(O);
+        } = n, [x, b] = s.useState(!1), P = (0, a.e7)([g.default], () => g.default.getUser(r)), [M] = (0, _.Z)([d]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, f.Z)(), j = (0, a.e7)([E.Z], () => E.Z.getPreviewURL(null, O, r)), U = (0, a.e7)([m.Z], () => m.Z.getVoiceChannelId()), G = (0, C.ZP)(), k = (0, S.Z)(O);
     if (s.useEffect(() => {
             x && U === O && b(!1);
         }, [
@@ -46,7 +46,7 @@ function O(e) {
         buttonCTA: B,
         disabled: H
     } = function (e, t) {
-        let n = E.default.getId(), i = t.some(e => e.id === n) || e === n, s = t.length >= N.keq;
+        let n = I.default.getId(), i = t.some(e => e.id === n) || e === n, s = t.length >= N.keq;
         return {
             buttonColor: s ? l.ButtonColors.RED : l.ButtonColors.GREEN,
             buttonCTA: s ? Z.Z.Messages.BROADCAST_FULL : i ? Z.Z.Messages.VIEW_BROADCAST : Z.Z.Messages.JOIN_BROADCAST,
@@ -83,7 +83,7 @@ function O(e) {
                                         o.default.selectPrivateChannel(O);
                                         return;
                                     }
-                                    b(!0), (0, c.W1)(O, R), d.ZP.trackWithMetadata(N.rMx.BROADCAST_VIEWED, {
+                                    b(!0), (0, c.W1)(O, R), u.ZP.trackWithMetadata(N.rMx.BROADCAST_VIEWED, {
                                         num_active_broadcasts: y.length,
                                         broadcast_position: y.findIndex(e => e.userId === r) + 1,
                                         is_broadcasting: G,
@@ -109,16 +109,16 @@ function O(e) {
                     })
                 ]
             }),
-            null != j ? (0, i.jsx)(_.Z, {
+            null != j ? (0, i.jsx)(h.Z, {
                 className: L.stream,
                 stream: {
                     streamType: A.lo.CALL,
                     ownerId: r,
                     channelId: O
                 }
-            }) : (0, i.jsx)(g.Z, {
+            }) : (0, i.jsx)(p.Z, {
                 game: M,
-                size: g.Z.Sizes.LARGE,
+                size: p.Z.Sizes.LARGE,
                 className: L.gameIcon
             })
         ]

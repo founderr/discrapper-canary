@@ -3,7 +3,7 @@ n.d(t, {
         return M;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(913527), d = n.n(c), u = n(481060), _ = n(595519), E = n(566620), I = n(403404), m = n(100527), T = n(906732), h = n(103575), N = n(768581), p = n(55935), f = n(739566), C = n(421399), g = n(310423), S = n(223021), A = n(981631), x = n(689938), R = n(475525);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(913527), d = n.n(c), u = n(481060), _ = n(595519), E = n(566620), I = n(403404), m = n(100527), T = n(906732), h = n(103575), N = n(768581), f = n(55935), p = n(739566), C = n(421399), g = n(310423), S = n(223021), A = n(981631), x = n(689938), R = n(475525);
 function O(e) {
     let {
         width: t = 6,
@@ -52,7 +52,7 @@ function M(e) {
             l,
             s.id,
             s.interactionData
-        ]), L = (0, f.Sw)(null === (t = s.interaction) || void 0 === t ? void 0 : t.user, l), Z = a.useMemo(() => e.compact ? (0, S.Z)((0, p.vc)(d()(), 'LT')) : null, [e.compact]), P = (0, _.NX)(l.id, !0), b = s.interaction;
+        ]), L = (0, p.Sw)(null === (t = s.interaction) || void 0 === t ? void 0 : t.user, l), Z = a.useMemo(() => e.compact ? (0, S.Z)((0, f.vc)(d()(), 'LT')) : null, [e.compact]), P = (0, _.NX)(l.id, !0), b = s.interaction;
     if (null == b || null == L)
         return null;
     let D = () => {
@@ -74,7 +74,7 @@ function M(e) {
                     });
                 if (null != a.interaction) {
                     var I, m, T;
-                    let e = (0, f.ij)(a.interaction.user, l);
+                    let e = (0, p.ij)(a.interaction.user, l);
                     n = null !== (T = N.ZP.getGuildMemberAvatarURL({
                         avatar: null !== (I = e.guildMemberAvatar) && void 0 !== I ? I : void 0,
                         userId: a.interaction.user.id,

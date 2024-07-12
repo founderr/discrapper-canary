@@ -1,6 +1,6 @@
 var r = n(735250);
 n(470079);
-var i = n(120356), a = n.n(i), o = n(512722), s = n.n(o), l = n(442837), u = n(481060), c = n(730749), d = n(726542), _ = n(750154), E = n(592125), f = n(594174), h = n(979651), p = n(285952), m = n(543595), I = n(374129), T = n(639351), g = n(503438), S = n(802856), A = n(606925), N = n(719216), v = n(429589), O = n(276149), R = n(636245), C = n(697761), y = n(611459), D = n(544671), L = n(757182), b = n(910424), M = n(981631), P = n(914829);
+var i = n(120356), a = n.n(i), o = n(512722), s = n.n(o), l = n(442837), u = n(481060), c = n(730749), d = n(726542), _ = n(750154), E = n(592125), f = n(594174), h = n(979651), p = n(285952), m = n(374129), I = n(639351), T = n(503438), g = n(802856), S = n(387903), A = n(606925), N = n(719216), v = n(429589), O = n(276149), R = n(636245), C = n(697761), y = n(611459), D = n(544671), L = n(757182), b = n(910424), M = n(981631), P = n(914829);
 t.Z = (0, c.Z)(e => {
     let {
             activity: t,
@@ -19,7 +19,7 @@ t.Z = (0, c.Z)(e => {
         } = e, H = (0, l.e7)([f.default], () => {
             let e = f.default.getCurrentUser();
             return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
-        }), Z = B === m.Y.PROFILE || B === m.Y.PROFILE_V2 || B === m.Y.SIMPLIFIED_PROFILE, Y = B === m.Y.STREAM_PREVIEW || null != o, j = B === m.Y.SIMPLIFIED_PROFILE || B === m.Y.BITE_SIZE_POPOUT, W = (0, g.Z)(t), K = Z ? p.Z.Align.END : p.Z.Align.STRETCH, z = W || Y ? p.Z.Direction.HORIZONTAL : p.Z.Direction.VERTICAL, q = (null == t ? void 0 : t.type) === M.IIU.HANG_STATUS, Q = (0, l.e7)([
+        }), Z = B === S.Y.PROFILE || B === S.Y.PROFILE_V2 || B === S.Y.SIMPLIFIED_PROFILE, Y = B === S.Y.STREAM_PREVIEW || null != o, j = B === S.Y.SIMPLIFIED_PROFILE || B === S.Y.BITE_SIZE_POPOUT, W = (0, T.Z)(t), K = Z ? p.Z.Align.END : p.Z.Align.STRETCH, z = W || Y ? p.Z.Direction.HORIZONTAL : p.Z.Direction.VERTICAL, q = (null == t ? void 0 : t.type) === M.IIU.HANG_STATUS, Q = (0, l.e7)([
             h.Z,
             E.Z
         ], () => {
@@ -33,13 +33,13 @@ t.Z = (0, c.Z)(e => {
         wrap: X ? p.Z.Wrap.WRAP : p.Z.Wrap.NO_WRAP,
         className: a()(c, P.buttonsWrapper, X ? P.vertical : P.horizontal),
         children: (() => {
-            if ((0, S.Z)(t))
+            if ((0, g.Z)(t))
                 return (0, r.jsx)(A.Z, {
                     platform: d.Z.get(M.ABu.XBOX),
                     look: k,
                     color: G,
                     onAction: F,
-                    Icon: T.Z
+                    Icon: I.Z
                 }, 'ConnectPlatformActivityButton');
             if ((null == t ? void 0 : t.platform) === M.M7m.PS4 || (null == t ? void 0 : t.platform) === M.M7m.PS5)
                 return (0, r.jsx)(A.Z, {
@@ -47,7 +47,7 @@ t.Z = (0, c.Z)(e => {
                     color: G,
                     platform: d.Z.get(M.ABu.PLAYSTATION),
                     onAction: F,
-                    Icon: I.Z
+                    Icon: m.Z
                 }, 'ConnectPlatformActivityButton');
             if (W) {
                 let e = (0, r.jsx)(D.Z, {

@@ -50,12 +50,12 @@ t.ZP = e => {
         P,
         u
     ]);
-    let U = ''.concat(Math.min(100, u / (0, E.vn)(t.id)[O] * 100), '%'), {current: G} = l.useRef(U), w = {
-            from: { width: P === u ? G : '0%' },
+    let U = ''.concat(Math.min(100, u / (0, E.vn)(t.id)[O] * 100), '%'), {current: w} = l.useRef(U), G = {
+            from: { width: P === u ? w : '0%' },
             to: { width: U },
             config: y,
             immediate: j
-        }, [k, B] = (0, s.useSpring)(() => w), V = () => {
+        }, [k, B] = (0, s.useSpring)(() => G), V = () => {
             (0, f.yw)(T.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: T.jXE.PREMIUM_GUILD_PROGRESS_BAR },
                 guild_id: g,
@@ -98,7 +98,7 @@ t.ZP = e => {
                 onClick: V,
                 onMouseEnter: () => {
                     var t;
-                    null === (t = e.onMouseEnter) || void 0 === t || t.call(e), B(w);
+                    null === (t = e.onMouseEnter) || void 0 === t || t.call(e), B(G);
                 },
                 className: a()(A.container, { [A.containerWithMargin]: n }),
                 onContextMenu: e => {

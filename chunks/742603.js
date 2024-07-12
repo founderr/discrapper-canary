@@ -5,13 +5,13 @@ n.d(t, {
 }), n(47120);
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(442837), r = n(481060), o = n(99690), c = n(40851), d = n(657305), u = n(835473), h = n(12498), p = n(933557), m = n(471445), _ = n(554747), f = n(854698), E = n(897669), C = n(984370), g = n(910611), I = n(454585), x = n(134483), T = n(210975), N = n(809244), v = n(618158), S = n(366695), Z = n(502568), A = n(792125), M = n(358221), b = n(362721), R = n(887012), j = n(613548), L = n(221888), P = n(339340), O = n(354459), y = n(981631), D = n(231338), k = n(689938), U = n(818087), w = n(153521);
+var a = n(120356), s = n.n(a), l = n(442837), r = n(481060), o = n(99690), c = n(40851), d = n(657305), u = n(835473), h = n(12498), p = n(933557), m = n(471445), _ = n(554747), f = n(854698), E = n(897669), C = n(665149), g = n(984370), I = n(910611), x = n(454585), T = n(134483), v = n(210975), N = n(809244), S = n(618158), Z = n(366695), A = n(792125), M = n(358221), b = n(362721), R = n(887012), j = n(613548), L = n(221888), P = n(339340), O = n(354459), y = n(981631), D = n(231338), k = n(689938), U = n(818087), w = n(153521);
 function B(e) {
     let {
             focusedParticipant: t,
             channel: n
         } = e, a = (0, c.bp)(), s = (0, l.e7)([M.Z], () => M.Z.getLayout(n.id, a));
-    return (0, i.jsx)(v.Z, {
+    return (0, i.jsx)(S.Z, {
         children: (0, i.jsx)(L.Z, {
             className: U.participants,
             participant: t,
@@ -55,8 +55,8 @@ function G(e) {
     if ((null == a ? void 0 : a.type) === O.fO.ACTIVITY)
         null != n && (t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(Z.ZP.Divider, { className: U.divider }),
-                (0, i.jsx)(S.Z, {
+                (0, i.jsx)(C.ZP.Divider, { className: U.divider }),
+                (0, i.jsx)(Z.Z, {
                     game: n,
                     className: U.activityIcon
                 }),
@@ -76,7 +76,7 @@ function G(e) {
         let e = a.user, n = a.stream;
         t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(Z.ZP.Divider, { className: U.divider }),
+                (0, i.jsx)(C.ZP.Divider, { className: U.divider }),
                 (0, i.jsx)(H, {
                     user: e,
                     channel: s,
@@ -110,8 +110,8 @@ function V(e) {
         } = e, {focusedParticipant: f} = (0, l.cj)([M.Z], () => ({
             focusedParticipant: M.Z.getSelectedParticipant(t.id),
             participantsOpen: M.Z.getParticipantsOpen(t.id)
-        }), [t.id]), E = (0, p.ZP)(t), N = (0, m.KS)(t), [v] = (0, u.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), S = k.Z.Messages.VOICE_CHANNEL;
-    t.isDM() ? S = k.Z.Messages.DM : t.isGroupDM() && (S = k.Z.Messages.GROUP_DM);
+        }), [t.id]), E = (0, p.ZP)(t), N = (0, m.KS)(t), [S] = (0, u.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), Z = k.Z.Messages.VOICE_CHANNEL;
+    t.isDM() ? Z = k.Z.Messages.DM : t.isGroupDM() && (Z = k.Z.Messages.GROUP_DM);
     let R = (0, l.e7)([h.Z], () => h.Z.getChannelStatus(t)), L = t.isGuildVoice() && c && null != R && R.length > 0, B = (0, b.Z)(t), H = L ? (0, i.jsx)(r.Tooltip, {
             text: k.Z.Messages.VOICE_CHANNEL_SET_STATUS,
             delay: 500,
@@ -125,7 +125,7 @@ function V(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-xs/normal',
                         className: s()(U.channelStatus, w.markup, { [U.hoverable]: B }),
-                        children: I.Z.parseVoiceChannelStatus(R, !0, { channelId: t.id })
+                        children: x.Z.parseVoiceChannelStatus(R, !0, { channelId: t.id })
                     }),
                     B && (0, i.jsx)(r.PencilIcon, {
                         size: 'custom',
@@ -146,15 +146,15 @@ function V(e) {
             });
         }, { modalKey: P.VOICE_CHANNEL_STATUS_MODAL_KEY });
     }
-    let F = (0, T.m$)({
+    let F = (0, v.m$)({
         channelId: t.id,
         location: 'ChannelCallHeader'
     });
     return (0, i.jsxs)('div', {
         className: U.subtitleContainer,
         children: [
-            (0, i.jsxs)(Z.ZP, {
-                onDoubleClick: C.O,
+            (0, i.jsxs)(C.ZP, {
+                onDoubleClick: g.O,
                 transparent: !0,
                 className: (0, A.Q)(D.BR.DARK),
                 childrenBottom: H,
@@ -167,12 +167,12 @@ function V(e) {
                     exitFullScreen: _
                 }),
                 children: [
-                    null != N ? (0, i.jsx)(Z.ZP.Icon, {
+                    null != N ? (0, i.jsx)(C.ZP.Icon, {
                         icon: N,
                         disabled: !0,
-                        'aria-label': S
+                        'aria-label': Z
                     }) : null,
-                    (0, i.jsx)(Z.ZP.Title, {
+                    (0, i.jsx)(C.ZP.Title, {
                         children: (0, i.jsxs)(i.Fragment, {
                             children: [
                                 E,
@@ -185,18 +185,18 @@ function V(e) {
                             ]
                         })
                     }),
-                    (0, i.jsx)(g.TS, {
+                    (0, i.jsx)(I.TS, {
                         channel: t,
                         guild: a
                     }),
                     (0, i.jsx)(G, {
-                        focusedApplication: v,
+                        focusedApplication: S,
                         focusedParticipant: f,
                         channel: t
                     })
                 ]
             }),
-            (0, i.jsx)(x.Z, { channelId: t.id })
+            (0, i.jsx)(T.Z, { channelId: t.id })
         ]
     });
 }

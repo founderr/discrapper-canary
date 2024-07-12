@@ -13,8 +13,8 @@ t.Z = l.memo(function (e) {
             canSignCharter: a = !0,
             onSignCharter: r,
             animationDelayMs: T = 1000,
-            signHintButtonText: N,
-            signHintHelperText: v,
+            signHintButtonText: v,
+            signHintHelperText: N,
             signHintPosition: S = 'left',
             className: Z,
             fullHeight: A
@@ -130,7 +130,7 @@ t.Z = l.memo(function (e) {
                                                                 className: o()(x.signCarot, { [x.signCarotCustomColors]: null != q }),
                                                                 style: null != q ? q : { borderColor: K }
                                                             }),
-                                                            null != N ? N : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
+                                                            null != v ? v : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
                                                         ]
                                                     })
                                                 }),
@@ -138,7 +138,7 @@ t.Z = l.memo(function (e) {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
                                                     className: x.signHintHelperText,
-                                                    children: null != v ? N : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
+                                                    children: null != N ? v : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
                                                 })
                                             ]
                                         })

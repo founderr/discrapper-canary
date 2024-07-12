@@ -17,8 +17,8 @@ function d(e) {
             enableSelectedTextChannelInvite: m = !1,
             analyticsLocations: T,
             opensAppLauncherModal: h = !1
-        } = e, N = T.length > 0 ? T[T.length - 1] : 'open-activity-shelf', {enabled: p} = s.m1.getCurrentConfig({ location: N }, { autoTrackExposure: !1 });
-    if (h && p) {
+        } = e, N = T.length > 0 ? T[T.length - 1] : 'open-activity-shelf', {enabled: f} = s.m1.getCurrentConfig({ location: N }, { autoTrackExposure: !1 });
+    if (h && f) {
         null != t && (0, r.Z)({
             openInPopout: _,
             channel: t,
@@ -27,7 +27,7 @@ function d(e) {
         return;
     }
     _ && (0, l.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
-    let f = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+    let p = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
     return (0, a.openModalLazy)(async () => {
         let {default: e} = await Promise.all([
             n.e('64714'),
@@ -45,6 +45,6 @@ function d(e) {
         });
     }, {
         modalKey: o.AC,
-        contextKey: f
+        contextKey: p
     });
 }

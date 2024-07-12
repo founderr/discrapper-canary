@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
         return Z;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(512722), l = n.n(s), r = n(442837), o = n(481060), c = n(904245), d = n(654030), u = n(744061), h = n(367907), p = n(728345), m = n(812206), _ = n(541716), f = n(752305), E = n(893718), C = n(957730), g = n(789407), I = n(300429), x = n(838440), T = n(981631), N = n(689938), v = n(811082);
+var i = n(735250), a = n(470079), s = n(512722), l = n.n(s), r = n(442837), o = n(481060), c = n(904245), d = n(654030), u = n(744061), h = n(367907), p = n(728345), m = n(812206), _ = n(541716), f = n(752305), E = n(893718), C = n(957730), g = n(789407), I = n(300429), x = n(838440), T = n(981631), v = n(689938), N = n(811082);
 function S(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -32,11 +32,11 @@ class A extends a.PureComponent {
         let {activity: e} = this.props;
         switch (e.type) {
         case T.IIU.LISTENING:
-            return N.Z.Messages.INVITE_EMBED_LISTENING_INVITE;
+            return v.Z.Messages.INVITE_EMBED_LISTENING_INVITE;
         case T.IIU.PLAYING:
         case T.IIU.STREAMING:
         default:
-            return N.Z.Messages.INVITE_EMBED_GAME_INVITE;
+            return v.Z.Messages.INVITE_EMBED_GAME_INVITE;
         }
     }
     render() {
@@ -54,7 +54,7 @@ class A extends a.PureComponent {
                 application: m,
                 transitionState: f,
                 onClose: C
-            } = this.props, g = p > 0, I = g ? N.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({ seconds: Math.round((p + 1000) / 1000) }) : null;
+            } = this.props, g = p > 0, I = g ? v.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({ seconds: Math.round((p + 1000) / 1000) }) : null;
         return (0, i.jsxs)(o.ModalRoot, {
             size: o.ModalSize.SMALL,
             transitionState: f,
@@ -70,21 +70,21 @@ class A extends a.PureComponent {
                 (0, i.jsxs)(o.ModalContent, {
                     children: [
                         (0, i.jsx)('div', {
-                            className: v.subHeader,
-                            children: N.Z.Messages.MESSAGE_PREVIEW
+                            className: N.subHeader,
+                            children: v.Z.Messages.MESSAGE_PREVIEW
                         }),
                         (0, i.jsx)(d.Z, {
                             activityActionType: h,
                             activity: s,
-                            className: v.preview,
+                            className: N.preview,
                             application: m,
                             partyId: null != s.party ? s.party.id : null,
                             isPreview: !0,
                             analyticsLocations: r
                         }),
                         (0, i.jsx)('div', {
-                            className: v.subHeader,
-                            children: N.Z.Messages.ADD_A_COMMENT_OPTIONAL
+                            className: N.subHeader,
+                            children: v.Z.Messages.ADD_A_COMMENT_OPTIONAL
                         }),
                         (0, i.jsx)(o.Popout, {
                             position: 'top',
@@ -101,7 +101,7 @@ class A extends a.PureComponent {
                                 });
                             },
                             children: () => (0, i.jsx)(E.Z, {
-                                className: v.textArea,
+                                className: N.textArea,
                                 textValue: e,
                                 richValue: t,
                                 focused: n,
@@ -124,7 +124,7 @@ class A extends a.PureComponent {
                                 children: (0, i.jsx)(o.Button, {
                                     disabled: g,
                                     onClick: this.handleShare,
-                                    children: N.Z.Messages.INVITE_EMBED_SEND_INVITE
+                                    children: v.Z.Messages.INVITE_EMBED_SEND_INVITE
                                 })
                             })
                         }),
@@ -132,7 +132,7 @@ class A extends a.PureComponent {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.PRIMARY,
                             onClick: C,
-                            children: N.Z.Messages.CANCEL
+                            children: v.Z.Messages.CANCEL
                         })
                     ]
                 })

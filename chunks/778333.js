@@ -9,7 +9,7 @@ function h(e) {
     let {
             invite: n,
             getAcceptInviteContext: h
-        } = e, N = (0, s.e7)([c.default], () => c.default.getId()), p = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === N, f = n.state === I.r2o.ACCEPTING, C = (0, s.e7)([u.Z], () => {
+        } = e, N = (0, s.e7)([c.default], () => c.default.getId()), f = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === N, p = n.state === I.r2o.ACCEPTING, C = (0, s.e7)([u.Z], () => {
             var e;
             return null != n.inviter && u.Z.isFriend(null === (e = n.inviter) || void 0 === e ? void 0 : e.id);
         }), g = a.useCallback(() => {
@@ -27,8 +27,8 @@ function h(e) {
     if (null == n.inviter)
         return null;
     let A = C ? g : S, x = m.Z.Messages.INVITE_BUTTON_ADD_FRIEND, R = _.Z.Button.Colors.GREEN;
-    C ? (x = m.Z.Messages.INVITE_BUTTON_ALREADY_FRIENDS, R = _.Z.Button.Colors.PRIMARY) : p && (x = m.Z.Messages.INVITE_BUTTON_ADD_FRIEND, R = _.Z.Button.Colors.PRIMARY);
-    let O = p ? m.Z.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : m.Z.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND, M = null != n.inviter ? ''.concat(n.inviter.username) : '', v = null != n.inviter ? E.ZP.getUserTag(n.inviter) : '';
+    C ? (x = m.Z.Messages.INVITE_BUTTON_ALREADY_FRIENDS, R = _.Z.Button.Colors.PRIMARY) : f && (x = m.Z.Messages.INVITE_BUTTON_ADD_FRIEND, R = _.Z.Button.Colors.PRIMARY);
+    let O = f ? m.Z.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : m.Z.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND, M = null != n.inviter ? ''.concat(n.inviter.username) : '', v = null != n.inviter ? E.ZP.getUserTag(n.inviter) : '';
     return (0, i.jsxs)(_.Z, {
         children: [
             (0, i.jsx)(_.Z.Header, { text: O }),
@@ -50,8 +50,8 @@ function h(e) {
                     }),
                     (0, i.jsx)(_.Z.Button, {
                         onClick: A,
-                        submitting: f,
-                        isDisabled: p,
+                        submitting: p,
+                        isDisabled: f,
                         color: R,
                         children: x
                     })

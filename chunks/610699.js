@@ -3,7 +3,7 @@ n.d(t, {
         return k;
     }
 }), n(653041), n(47120), n(390547);
-var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(442837), d = n(477690), u = n(481060), _ = n(447543), E = n(317381), I = n(778569), m = n(182906), T = n(100527), h = n(906732), N = n(835473), p = n(471445), f = n(601964), C = n(592125), g = n(430824), S = n(496675), A = n(594174), x = n(197409), R = n(514342), O = n(602623), M = n(624138), v = n(358595), L = n(981631), Z = n(245335), P = n(689938), b = n(556849);
+var i = n(735250), a = n(470079), s = n(120356), r = n.n(s), l = n(512722), o = n.n(l), c = n(442837), d = n(477690), u = n(481060), _ = n(447543), E = n(317381), I = n(778569), m = n(182906), T = n(884338), h = n(100527), N = n(906732), f = n(835473), p = n(471445), C = n(601964), g = n(592125), S = n(430824), A = n(496675), x = n(594174), R = n(197409), O = n(514342), M = n(624138), v = n(358595), L = n(981631), Z = n(245335), P = n(689938), b = n(556849);
 let D = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE), j = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL), U = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 function y(e) {
     let {
@@ -60,7 +60,7 @@ function B(e) {
                     size: 'xs',
                     color: 'currentColor'
                 }) : null,
-                (0, i.jsx)(R.Z, {
+                (0, i.jsx)(O.Z, {
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-xs/normal',
                         children: P.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
@@ -77,7 +77,7 @@ function B(e) {
             [b.stacked]: a,
             [b.ended]: s
         }),
-        children: (0, i.jsx)(R.Z, {
+        children: (0, i.jsx)(O.Z, {
             children: (0, i.jsx)(u.Text, {
                 variant: 'text-xs/normal',
                 children: P.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: n.name })
@@ -91,7 +91,7 @@ function k(e) {
             invite: d,
             getAcceptInviteContext: p
         } = e, {
-            approximate_member_count: R,
+            approximate_member_count: O,
             approximate_presence_count: M,
             target_type: k,
             target_application: G
@@ -112,7 +112,7 @@ function k(e) {
         V,
         Y
     ]);
-    let W = (0, c.e7)([g.Z], () => null != d.guild ? g.Z.getGuild(d.guild.id) : null, [d]), z = (0, N.Z)([G.id])[0], K = (0, c.e7)([E.ZP], () => {
+    let W = (0, c.e7)([S.Z], () => null != d.guild ? S.Z.getGuild(d.guild.id) : null, [d]), z = (0, f.Z)([G.id])[0], K = (0, c.e7)([E.ZP], () => {
             var e;
             return (null == d ? void 0 : d.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === G.id;
         }), Q = (0, c.e7)([E.ZP], () => {
@@ -121,18 +121,18 @@ function k(e) {
                 let {applicationId: t} = e;
                 return G.id === t;
             });
-        }), q = C.Z.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id), X = (0, c.e7)([S.Z], () => null != q && S.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]), {analyticsLocations: J} = (0, h.ZP)(T.Z.INVITE_EMBED), $ = (0, I.Z)({
+        }), q = g.Z.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id), X = (0, c.e7)([A.Z], () => null != q && A.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]), {analyticsLocations: J} = (0, N.ZP)(h.Z.INVITE_EMBED), $ = (0, I.Z)({
             applicationId: G.id,
             size: D,
             names: ['embedded_cover']
         }), ee = (0, c.Wu)([E.ZP], () => null != q ? E.ZP.getEmbeddedActivitiesForChannel(q.id).filter(e => e.applicationId === G.id).flatMap(e => Array.from(e.userIds)) : [], [
             q,
             G.id
-        ]), et = (0, c.Wu)([A.default], () => ee.map(e => A.default.getUser(e)), [ee]), en = d.state === L.r2o.ACCEPTING, ei = null != W;
+        ]), et = (0, c.Wu)([x.default], () => ee.map(e => x.default.getUser(e)), [ee]), en = d.state === L.r2o.ACCEPTING, ei = null != W;
     if (null == W) {
         if (null == d.guild)
             return (0, i.jsx)(v.Z, {});
-        W = new f.ZP(d.guild);
+        W = new C.ZP(d.guild);
     }
     let ea = ei && !X || ei && K, es = () => {
             _.Z.acceptInviteAndTransitionToInviteChannel({
@@ -163,7 +163,7 @@ function k(e) {
                     })
                 })
             }),
-            (0, i.jsxs)(x.Z, {
+            (0, i.jsxs)(R.Z, {
                 className: r()(b.content, {
                     [b.large]: w,
                     [b.stacked]: H
@@ -206,7 +206,7 @@ function k(e) {
                                 ]
                             }) : null,
                             ei ? null : (0, i.jsx)(y, {
-                                members: R,
+                                members: O,
                                 membersOnline: M,
                                 isLarge: w,
                                 isStacked: H
@@ -216,7 +216,7 @@ function k(e) {
                                 children: [
                                     null != W && Q ? (0, i.jsx)('div', {
                                         className: b.avatars,
-                                        children: (0, i.jsx)(O.Z, {
+                                        children: (0, i.jsx)(T.Z, {
                                             guildId: W.id,
                                             users: et,
                                             max: 4

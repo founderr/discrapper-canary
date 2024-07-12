@@ -1,101 +1,101 @@
-let o;
-var r, a, i, l, d = n(442837), c = n(544891), u = n(570140), f = n(70956), s = n(314897), _ = n(300429), h = n(981631), b = n(176505);
-let I = 10 * f.Z.Millis.SECOND, p = 1.5 * f.Z.Millis.SECOND, m = {}, E = Object.freeze({});
-function T(e) {
-    var t;
-    return null !== (t = m[e]) && void 0 !== t ? t : E;
-}
+let i;
+var r, o, a, l, d = n(442837), u = n(544891), c = n(570140), f = n(70956), s = n(314897), _ = n(300429), h = n(981631), I = n(176505);
+let b = 10 * f.Z.Millis.SECOND, m = 1.5 * f.Z.Millis.SECOND, p = {}, E = Object.freeze({});
 function S(e) {
+    var t;
+    return null !== (t = p[e]) && void 0 !== t ? t : E;
+}
+function v(e) {
     var t, n;
     let {
-            channelId: o,
+            channelId: i,
             userId: r
-        } = e, a = { ...T(o) };
-    clearTimeout(a[r]), a[r] = (t = o, n = r, setTimeout(() => {
-        u.Z.dispatch({
+        } = e, o = { ...S(i) };
+    clearTimeout(o[r]), o[r] = (t = i, n = r, setTimeout(() => {
+        c.Z.dispatch({
             type: 'TYPING_STOP',
             channelId: t,
             userId: n
         });
-    }, I)), m[o] = a;
+    }, b)), p[i] = o;
 }
-function C(e) {
+function T(e) {
     let {
             channelId: t,
             userId: n
-        } = e, o = m[t];
-    if (null == o || null == o[n])
+        } = e, i = p[t];
+    if (null == i || null == i[n])
         return !1;
-    let r = { ...o };
-    clearTimeout(r[n]), delete r[n], m[t] = r;
+    let r = { ...i };
+    clearTimeout(r[n]), delete r[n], p[t] = r;
 }
 function g() {
-    m = {};
+    p = {};
 }
-class v extends (l = d.ZP.Store) {
+class A extends (l = d.ZP.Store) {
     getTypingUsers(e) {
-        return T(e);
+        return S(e);
     }
     isTyping(e, t) {
-        return null != T(e)[t];
+        return null != S(e)[t];
     }
 }
-i = 'TypingStore', (a = 'displayName') in (r = v) ? Object.defineProperty(r, a, {
-    value: i,
+a = 'TypingStore', (o = 'displayName') in (r = A) ? Object.defineProperty(r, o, {
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : r[a] = i, t.Z = new v(u.Z, {
-    TYPING_START: S,
-    TYPING_STOP: C,
+}) : r[o] = a, t.Z = new A(c.Z, {
+    TYPING_START: v,
+    TYPING_STOP: T,
     TYPING_START_LOCAL: function (e) {
         let {channelId: t} = e, n = s.default.getId();
-        if (null == n || t === b.V)
+        if (null == n || t === I.V)
             return !1;
-        null != o && o.channelId !== t && (null != o.timeout && clearTimeout(o.timeout), o = null);
-        let r = Date.now(), a = 0.8 * I;
-        if (null != o && (null != o.timeout || o.prevSend + a > r))
+        null != i && i.channelId !== t && (null != i.timeout && clearTimeout(i.timeout), i = null);
+        let r = Date.now(), o = 0.8 * b;
+        if (null != i && (null != i.timeout || i.prevSend + o > r))
             return !1;
-        let i = setTimeout(() => {
-            if (null == o || o.channelId !== t || n !== s.default.getId() || null == o.timeout)
+        let a = setTimeout(() => {
+            if (null == i || i.channelId !== t || n !== s.default.getId() || null == i.timeout)
                 return;
-            if (o.timeout = null, !(function (e) {
-                    let t = T(e);
+            if (i.timeout = null, !(function (e) {
+                    let t = S(e);
                     return t === E ? 0 : Object.keys(t).length;
                 }(t) > 5))
-                c.tn.post({
+                u.tn.post({
                     url: h.ANM.TYPING(t),
                     oldFormErrors: !0
                 }).then(e => {
                     if (200 === e.status) {
-                        var n, o;
-                        let r = null !== (n = e.body.message_send_cooldown_ms) && void 0 !== n ? n : 0, a = null !== (o = e.body.thread_create_cooldown_ms) && void 0 !== o ? o : 0;
-                        r > 0 && u.Z.dispatch({
+                        var n, i;
+                        let r = null !== (n = e.body.message_send_cooldown_ms) && void 0 !== n ? n : 0, o = null !== (i = e.body.thread_create_cooldown_ms) && void 0 !== i ? i : 0;
+                        r > 0 && c.Z.dispatch({
                             type: 'SLOWMODE_SET_COOLDOWN',
                             channelId: t,
                             slowmodeType: _.S.SendMessage,
                             cooldownMs: r
-                        }), a > 0 && u.Z.dispatch({
+                        }), o > 0 && c.Z.dispatch({
                             type: 'SLOWMODE_SET_COOLDOWN',
                             channelId: t,
                             slowmodeType: _.S.CreateThread,
-                            cooldownMs: a
+                            cooldownMs: o
                         });
                     }
                 });
-        }, null == o || o.prevSend > r - 2 * a ? p : 0);
-        return o = {
+        }, null == i || i.prevSend > r - 2 * o ? m : 0);
+        return i = {
             channelId: t,
-            timeout: i,
+            timeout: a,
             prevSend: r
-        }, S({
+        }, v({
             channelId: t,
             userId: n
         });
     },
     TYPING_STOP_LOCAL: function (e) {
         let {channelId: t} = e, n = s.default.getId();
-        return null != n && null != o && o.channelId === t && null != o.timeout && (clearTimeout(o.timeout), o = null, C({
+        return null != n && null != i && i.channelId === t && null != i.timeout && (clearTimeout(i.timeout), i = null, T({
             channelId: t,
             userId: n
         }));
@@ -109,10 +109,10 @@ i = 'TypingStore', (a = 'displayName') in (r = v) ? Object.defineProperty(r, a, 
             optimistic: r
         } = e;
         return r && !function (e) {
-            if (null == o || o.channelId !== e)
+            if (null == i || i.channelId !== e)
                 return;
-            null != o.timeout && clearTimeout(o.timeout), o = null;
-        }(t), null != n && C({
+            null != i.timeout && clearTimeout(i.timeout), i = null;
+        }(t), null != n && T({
             channelId: t,
             userId: n.id
         });

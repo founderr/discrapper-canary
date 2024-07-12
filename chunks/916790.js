@@ -3,7 +3,7 @@ r.d(t, {
         return S;
     }
 }), r(47120);
-var a = r(735250), n = r(470079), i = r(120356), o = r.n(i), l = r(913527), c = r.n(l), s = r(481060), d = r(570140), u = r(4912), h = r(502568), m = r(55935), g = r(428530), p = r(257785), b = r(484036), f = r(681619), y = r(621060), x = r(159138), k = r(979756);
+var a = r(735250), n = r(470079), i = r(120356), o = r.n(i), l = r(913527), c = r.n(l), s = r(481060), d = r(570140), u = r(665149), h = r(4912), m = r(55935), g = r(428530), p = r(257785), b = r(484036), f = r(681619), y = r(621060), x = r(159138), k = r(979756);
 function v(e) {
     return parseFloat(e.toFixed(3));
 }
@@ -93,7 +93,7 @@ function j(e) {
                 id: 'error',
                 name: (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsx)(u.Z, { className: x.errorIcon }),
+                        (0, a.jsx)(h.Z, { className: x.errorIcon }),
                         'Error'
                     ]
                 }),
@@ -131,14 +131,14 @@ function j(e) {
         initialHeight: r,
         children: [
             (0, a.jsx)(l, {}),
-            (0, a.jsxs)(h.ZP, {
+            (0, a.jsxs)(u.ZP, {
                 className: o()(k.headerBar, x.subPanelHeaderBar),
                 children: [
-                    (0, a.jsx)(h.ZP.Icon, {
+                    (0, a.jsx)(u.ZP.Icon, {
                         icon: s.ReceiptIcon,
                         tooltip: t.name
                     }),
-                    (0, a.jsx)(h.ZP.Title, { children: t.name })
+                    (0, a.jsx)(u.ZP.Title, { children: t.name })
                 ]
             }),
             c({ actionLog: t })
@@ -153,7 +153,7 @@ let N = [
             let {actionLog: t} = e;
             return (0, a.jsxs)(a.Fragment, {
                 children: [
-                    t.error && (0, a.jsx)(u.Z, { className: x.errorIcon }),
+                    t.error && (0, a.jsx)(h.Z, { className: x.errorIcon }),
                     t.name
                 ]
             });

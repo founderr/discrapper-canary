@@ -6,7 +6,7 @@ n.d(t, {
         return j;
     }
 }), n(47120), n(653041);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(77866), o = n(748780), c = n(442837), d = n(704215), u = n(481060), h = n(699682), p = n(367907), m = n(812206), _ = n(644914), f = n(434404), E = n(330010), C = n(314897), g = n(430824), I = n(594174), x = n(259580), T = n(585483), N = n(63063), v = n(358085), S = n(709054), Z = n(967128), A = n(981631), M = n(231873), b = n(689938), R = n(454229);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(77866), o = n(748780), c = n(442837), d = n(704215), u = n(481060), h = n(699682), p = n(367907), m = n(812206), _ = n(644914), f = n(434404), E = n(330010), C = n(314897), g = n(430824), I = n(594174), x = n(259580), T = n(585483), v = n(63063), N = n(358085), S = n(709054), Z = n(967128), A = n(981631), M = n(231873), b = n(689938), R = n(454229);
 function j(e) {
     let {
             className: t,
@@ -72,7 +72,7 @@ function L(e) {
                     }), null != e && (0, u.openModalLazy)(async () => {
                         let {default: t} = await Promise.all([
                             n.e('7654'),
-                            n.e('39405')
+                            n.e('21026')
                         ]).then(n.bind(n, 560114));
                         return n => (0, i.jsx)(t, {
                             ...n,
@@ -220,7 +220,7 @@ function L(e) {
             completed: k,
             onClick: B
         })
-    }, 'message')), (0, v.isWeb)() && K.push((0, i.jsx)(o.Z.div, {
+    }, 'message')), (0, N.isWeb)() && K.push((0, i.jsx)(o.Z.div, {
         className: R.cardWrapper,
         style: F ? { opacity: z[K.length] } : {},
         children: (0, i.jsx)(j, {
@@ -241,7 +241,7 @@ function L(e) {
     }, 'addapp')));
     let q = x ? b.Z.Messages.WELCOME_CTA_SUBTITLE_OWNER : b.Z.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
     h && (q = b.Z.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-    let X = ''.concat(N.Z.getArticleURL(A.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
+    let X = ''.concat(v.Z.getArticleURL(A.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
     return (0, i.jsx)(Z.ZP, {
         channelId: t.id,
         children: (0, i.jsx)('div', {

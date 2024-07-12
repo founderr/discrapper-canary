@@ -19,14 +19,14 @@ function d(e) {
         } = l.useMemo(() => (0, a.sl)(d, {
             botIconFirst: !0,
             fakeAppIconURL: u
-        }), [d]), {trackSearchResultsItemImpressionRef: N} = (0, o.Z)({
+        }), [d]), {trackSearchResultsItemImpressionRef: f} = (0, o.Z)({
             applicationId: d.id,
             commandId: null == t ? void 0 : t.id,
             query: p,
             searchResultsPosition: _
         });
     return (0, i.jsxs)(r.Clickable, {
-        innerRef: e => N.current = e,
+        innerRef: e => f.current = e,
         className: c.container,
         onClick: m,
         children: [

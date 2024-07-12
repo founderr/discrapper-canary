@@ -28,12 +28,12 @@ function E(e, n, t, i) {
                     source: l
                 });
             }
-        }), N = r.ButtonColors.BRAND, f = _.Z.Messages.LAUNCH;
-    return h === s.JS.JOIN ? (N = r.ButtonColors.GREEN, f = _.Z.Messages.JOIN_ACTIVITY) : h === s.JS.LEAVE && (N = r.ButtonColors.RED, f = _.Z.Messages.LEAVE), {
+        }), f = r.ButtonColors.BRAND, N = _.Z.Messages.LAUNCH;
+    return h === s.JS.JOIN ? (f = r.ButtonColors.GREEN, N = _.Z.Messages.JOIN_ACTIVITY) : h === s.JS.LEAVE && (f = r.ButtonColors.RED, N = _.Z.Messages.LEAVE), {
         onActivityItemSelected: A,
         activityAction: h,
-        buttonColor: N,
-        buttonText: f
+        buttonColor: f,
+        buttonText: N
     };
 }
 function h(e, n) {

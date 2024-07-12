@@ -3,10 +3,10 @@ a.r(n), a.d(n, {
         return T;
     }
 }), a(47120), a(789020);
-var i = a(735250), t = a(470079), l = a(266067), s = a(692547), r = a(481060), o = a(100527), c = a(906732), u = a(703656), d = a(502568), g = a(810090), p = a(630388), m = a(566620), x = a(146936), v = a(678173), f = a(880308), b = a(636508), I = a(696068), h = a(361213), j = a(952561), S = a(778569), _ = a(513202), y = a(412019), C = a(431136), M = a(226799), Z = a(981631), N = a(689938), E = a(779277);
+var i = a(735250), t = a(470079), l = a(266067), s = a(692547), r = a(481060), o = a(100527), c = a(906732), u = a(665149), d = a(703656), g = a(810090), p = a(630388), m = a(566620), x = a(146936), v = a(678173), f = a(880308), b = a(636508), I = a(696068), h = a(361213), j = a(952561), S = a(778569), _ = a(513202), y = a(412019), C = a(431136), M = a(226799), Z = a(981631), N = a(689938), E = a(779277);
 function T(e) {
     var n, a;
-    let {match: x} = e, b = null !== (n = (0, u.DR)()) && void 0 !== n ? n : [], {analyticsLocations: I} = (0, c.ZP)([
+    let {match: x} = e, b = null !== (n = (0, d.DR)()) && void 0 !== n ? n : [], {analyticsLocations: I} = (0, c.ZP)([
             ...b,
             o.Z.ACTIVITY_DETAIL_PAGE
         ]), {applicationId: j} = x.params;
@@ -28,7 +28,7 @@ function T(e) {
         children: (0, i.jsxs)('div', {
             className: E.outerContainer,
             children: [
-                (0, i.jsxs)(d.ZP, {
+                (0, i.jsxs)(u.ZP, {
                     children: [
                         (0, i.jsxs)('div', {
                             className: E.titleContainer,
@@ -63,7 +63,7 @@ function T(e) {
                                     (0, i.jsx)('div', { className: E.headerImageOverlay }),
                                     (0, i.jsxs)(r.Clickable, {
                                         onClick: () => {
-                                            (0, u.op)();
+                                            (0, d.op)();
                                         },
                                         className: E.backButtonContainer,
                                         children: [

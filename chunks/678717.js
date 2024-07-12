@@ -3,7 +3,7 @@ r.r(t), r.d(t, {
         return W;
     }
 }), r(653041), r(47120);
-var a = r(735250), n = r(470079), i = r(120356), o = r.n(i), l = r(990547), c = r(442837), s = r(481060), d = r(347469), u = r(213609), h = r(213713), m = r(906467), g = r(259580), p = r(502568), b = r(31336), f = r(19759), y = r(432877);
+var a = r(735250), n = r(470079), i = r(120356), o = r.n(i), l = r(990547), c = r(442837), s = r(481060), d = r(347469), u = r(213609), h = r(213713), m = r(665149), g = r(906467), p = r(259580), b = r(31336), f = r(19759), y = r(432877);
 r(381996);
 var x = r(392750), k = r(926976), v = r(592197), _ = r(860337), C = r(789654), w = r(691867), j = r(916790), N = r(912072), S = r(246992), T = r(442954), I = r(702904), E = r(178821), Z = r(248526), R = r(958328), B = r(514866), O = r(678639), P = r(351930), L = r(771751), A = r(596768), D = r(621060), M = r(689938), G = r(683597), H = r(979756);
 function F(e) {
@@ -48,7 +48,7 @@ function z() {
                     render: () => (0, a.jsx)(j.Z, {})
                 }
             ];
-            return m.Z.isDeveloper && (e.push({
+            return g.Z.isDeveloper && (e.push({
                 id: 'quick_actions',
                 name: 'Quick Actions',
                 render: () => (0, a.jsx)(B.Z, {})
@@ -56,7 +56,7 @@ function z() {
                 id: 'perks_demos',
                 name: 'Perks Demos',
                 render: () => (0, a.jsx)(Z.Z, {})
-            })), m.Z.isDeveloper && (e.push({
+            })), g.Z.isDeveloper && (e.push({
                 id: 'clans',
                 name: 'Clans',
                 render: () => (0, a.jsx)(_.Z, {})
@@ -92,7 +92,7 @@ function z() {
                 id: 'affinity',
                 name: 'Affinity',
                 render: () => (0, a.jsx)(x.Z, {})
-            }), m.Z.isDeveloper && e.push({
+            }), g.Z.isDeveloper && e.push({
                 id: 'content_inventory',
                 name: 'Content Inventory',
                 render: () => (0, a.jsx)(h.Z, {})
@@ -130,19 +130,19 @@ function z() {
         properties: { panel: o }
     }), (0, a.jsxs)(S.Gk, {
         children: [
-            (0, a.jsxs)(p.ZP, {
+            (0, a.jsxs)(m.ZP, {
                 className: H.headerBar,
-                toolbar: (0, a.jsx)(p.ZP.Icon, {
+                toolbar: (0, a.jsx)(m.ZP.Icon, {
                     icon: s.CloseSmallIcon,
                     tooltip: M.Z.Messages.CLOSE,
                     onClick: b.SO
                 }),
                 children: [
-                    (0, a.jsx)(p.ZP.Icon, {
+                    (0, a.jsx)(m.ZP.Icon, {
                         icon: s.StaffBadgeIcon,
                         tooltip: 'DevTools'
                     }),
-                    (0, a.jsx)(p.ZP.Title, { children: 'DevTools' })
+                    (0, a.jsx)(m.ZP.Title, { children: 'DevTools' })
                 ]
             }),
             (0, a.jsx)(r, {}),
@@ -190,15 +190,15 @@ function V() {
         className: G.container,
         children: (0, a.jsx)(s.Clickable, {
             onClick: b.SO,
-            children: (0, a.jsxs)(p.ZP, {
+            children: (0, a.jsxs)(m.ZP, {
                 className: o()(H.headerBar, G.mobileHeaderCollapsed),
-                toolbar: (0, a.jsx)(g.Z, { direction: g.Z.Directions.UP }),
+                toolbar: (0, a.jsx)(p.Z, { direction: p.Z.Directions.UP }),
                 children: [
-                    (0, a.jsx)(p.ZP.Icon, {
+                    (0, a.jsx)(m.ZP.Icon, {
                         icon: s.StaffBadgeIcon,
                         tooltip: 'DevTools'
                     }),
-                    (0, a.jsx)(p.ZP.Title, { children: 'DevTools' })
+                    (0, a.jsx)(m.ZP.Title, { children: 'DevTools' })
                 ]
             })
         })

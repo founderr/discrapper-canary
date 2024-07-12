@@ -3,7 +3,7 @@ s.d(t, {
         return S;
     }
 }), s(47120);
-var n, i = s(735250), a = s(470079), r = s(120356), l = s.n(r), o = s(748780), h = s(481060), d = s(112724), u = s(524444), c = s(494735), p = s(574735), m = s(529815), g = s(250496), I = s(552253), C = s(261922), x = s(259773), f = s(585483), N = s(981631), v = s(567698);
+var n, i = s(735250), a = s(470079), r = s(120356), l = s.n(r), o = s(748780), h = s(481060), d = s(112724), u = s(283756), c = s(524444), p = s(494735), m = s(574735), g = s(529815), I = s(250496), C = s(552253), x = s(261922), f = s(585483), N = s(981631), v = s(567698);
 function b(e, t, s) {
     return t in e ? Object.defineProperty(e, t, {
         value: s,
@@ -39,20 +39,20 @@ let S = {
     }, L = {
         width: 1280,
         height: 720
-    }, y = e => (0, u.lV)({
+    }, y = e => (0, c.lV)({
         ...e,
         className: v.videoWrapper,
         mediaPlayerClassName: v.mediaPlayer
-    }), O = e => (0, i.jsx)(C.Z, { ...e }), j = e => {
+    }), O = e => (0, i.jsx)(x.Z, { ...e }), j = e => {
         let t, s, n, {
                 item: a,
                 size: r,
                 onPlay: l,
                 onEnded: o,
                 onClick: d,
-                playable: c,
+                playable: u,
                 volume: p,
-                isMuted: I,
+                isMuted: m,
                 onVolumeChange: C,
                 onMute: x
             } = e;
@@ -63,7 +63,7 @@ let S = {
             }, s = {
                 url: ''.concat((0, N.ivE)(a.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1'),
                 ...L
-            }, n = g.pn.YOUTUBE;
+            }, n = I.pn.YOUTUBE;
         else {
             let e = null != a.width ? a.width : 0, n = null != a.height ? a.height : 0;
             t = {
@@ -77,7 +77,7 @@ let S = {
                 height: n
             };
         }
-        let f = (0, i.jsx)(m.BC, {
+        let f = (0, i.jsx)(g.BC, {
             href: null,
             thumbnail: t,
             video: s,
@@ -87,28 +87,28 @@ let S = {
             maxWidth: r.width,
             onPlay: l,
             onEnded: o,
-            playable: c,
+            playable: u,
             className: v.video,
             volume: p,
             onVolumeChange: C,
-            autoMute: I,
+            autoMute: m,
             onMute: x,
-            autoPlay: c,
+            autoPlay: u,
             renderVideoComponent: y,
             renderImageComponent: O,
-            renderLinkComponent: u.iT
+            renderLinkComponent: c.iT
         });
-        return c ? f : (0, i.jsx)(h.Clickable, {
+        return u ? f : (0, i.jsx)(h.Clickable, {
             className: v.itemImageWrapper,
             onClick: d,
             children: f
         });
     }, k = () => (0, i.jsx)('div', {
         className: v.paginationVideoOverlay,
-        children: (0, i.jsx)(x.Z, {
+        children: (0, i.jsx)(u.Z, {
             inactive: !0,
             className: v.paginationVideoPlayPill,
-            renderLinkComponent: u.iT
+            renderLinkComponent: c.iT
         })
     });
 class M extends (n = a.PureComponent) {
@@ -159,7 +159,7 @@ class M extends (n = a.PureComponent) {
                 animate: s,
                 hoveringPreviousItem: n,
                 hoveringNextItem: a
-            } = this.state, r = (0, i.jsx)(p.ZP, {
+            } = this.state, r = (0, i.jsx)(m.ZP, {
                 items: e,
                 itemSize: this.getItemSize(),
                 renderItem: this.renderItem,
@@ -171,11 +171,11 @@ class M extends (n = a.PureComponent) {
             className: v.carouselButtonsContainer,
             children: [
                 r,
-                (0, i.jsx)(c.am, {
+                (0, i.jsx)(p.am, {
                     onClick: this.manualPrevious,
                     className: l()(v.arrow, { [v.arrowHovered]: n })
                 }),
-                (0, i.jsx)(c.Pz, {
+                (0, i.jsx)(p.Pz, {
                     onClick: this.manualNext,
                     className: l()(v.arrow, { [v.arrowHovered]: a })
                 })
@@ -196,7 +196,7 @@ class M extends (n = a.PureComponent) {
                 playingVideo: r,
                 hasInteracted: l
             } = this.state;
-        return (0, i.jsxs)(I.Z, {
+        return (0, i.jsxs)(C.Z, {
             pauseOnHover: !0,
             onInterval: this.autoNext,
             interval: s,
@@ -206,14 +206,14 @@ class M extends (n = a.PureComponent) {
                 this.renderCarousel(),
                 (0, i.jsx)('div', {
                     className: v.pagination,
-                    children: (0, i.jsx)(c.ZP, {
+                    children: (0, i.jsx)(p.ZP, {
                         renderItem: this.renderPaginationItem,
                         scrollToPadding: 85,
                         items: e,
                         selectedIndex: a,
                         onSetItem: e => this.setItem(e, !0),
                         paginationContainerClass: v.scroller,
-                        align: e.length < 6 ? c.ZP.Align.LEFT : c.ZP.Align.CENTER
+                        align: e.length < 6 ? p.ZP.Align.LEFT : p.ZP.Align.CENTER
                     })
                 })
             ]
@@ -239,7 +239,7 @@ class M extends (n = a.PureComponent) {
                         onIntentionalChange: n
                     },
                     state: {currentIndex: i}
-                } = this, a = (0, p.gN)(i, s.length), r = (0, p.gN)(e, s.length), l = 1 === Math.abs(e - a) || e === s.length - 1 && 0 === a || 0 === e && a === s.length - 1;
+                } = this, a = (0, m.gN)(i, s.length), r = (0, m.gN)(e, s.length), l = 1 === Math.abs(e - a) || e === s.length - 1 && 0 === a || 0 === e && a === s.length - 1;
             this.setState({
                 playingVideo: !1,
                 currentIndex: r,
@@ -296,7 +296,7 @@ class M extends (n = a.PureComponent) {
                     currentIndex: n,
                     volume: a,
                     isMuted: r
-                } = this.state, h = t === (0, p.gN)(n, this.props.items.length);
+                } = this.state, h = t === (0, m.gN)(n, this.props.items.length);
             return (0, i.jsx)(o.Z.div, {
                 className: l()(v.item, { [v.currentItem]: h }),
                 style: null != s ? this.getStyle(t, s) : null,

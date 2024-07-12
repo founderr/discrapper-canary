@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), r = n(91192), l = n(442837), o = n(481060), c = n(788307), d = n(43267), u = n(933557), _ = n(471445), E = n(199902), I = n(592125), m = n(430824), T = n(158776), h = n(594174), N = n(2093), p = n(346656), f = n(153124), C = n(689938), g = n(444771);
+var a = n(120356), s = n.n(a), r = n(91192), l = n(442837), o = n(481060), c = n(788307), d = n(43267), u = n(933557), _ = n(471445), E = n(199902), I = n(592125), m = n(430824), T = n(158776), h = n(594174), N = n(2093), f = n(346656), p = n(153124), C = n(689938), g = n(444771);
 let S = {
     top: 8,
     bottom: 8,
@@ -20,7 +20,7 @@ function A(e) {
             mentionCount: s,
             channelState: l,
             toggleCollapsed: c
-        } = e, d = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, f.Dt)()));
+        } = e, d = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, p.Dt)()));
     return (0, i.jsx)(o.FocusRing, {
         offset: S,
         children: (0, i.jsxs)('div', {
@@ -80,11 +80,11 @@ function O(e) {
             channel: t,
             gotoChannel: n
         } = e, a = (0, l.e7)([m.Z], () => m.Z.getGuild(t.guild_id));
-    return null == a ? null : (0, i.jsx)(p.Z, {
+    return null == a ? null : (0, i.jsx)(f.Z, {
         'aria-hidden': !0,
         className: g.guildIcon,
         guild: a,
-        size: p.Z.Sizes.MEDIUM,
+        size: f.Z.Sizes.MEDIUM,
         active: !0,
         onClick: n,
         tabIndex: -1

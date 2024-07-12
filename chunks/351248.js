@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     }
 }), n(653041), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(748780), o = n(442837), c = n(215569), d = n(780384), u = n(481060), h = n(410030), p = n(451478), m = n(421600), _ = n(354459), f = n(861414), E = n(483085), C = n(66487);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(748780), o = n(442837), c = n(215569), d = n(780384), u = n(481060), h = n(410030), p = n(451478), m = n(584511), _ = n(354459), f = n(861414), E = n(483085), C = n(66487);
 function g(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -23,8 +23,8 @@ let I = {
         DURATION_OUT: 170,
         EASING_IN: r.Z.Easing.inOut(r.Z.Easing.back()),
         EASING_OUT: r.Z.Easing.quad
-    }, T = 200, N = 125;
-class v extends a.PureComponent {
+    }, T = 200, v = 125;
+class N extends a.PureComponent {
     componentDidMount() {
         this.componentDidAppear();
     }
@@ -75,7 +75,7 @@ class v extends a.PureComponent {
             r.Z.sequence(s),
             r.Z.timing(a, {
                 toValue: 0,
-                duration: N
+                duration: v
             })
         ]).start(e);
     }
@@ -172,7 +172,7 @@ function S(e) {
                 speaking: r,
                 ringing: o
             } = e;
-            return (0, i.jsx)(v, {
+            return (0, i.jsx)(N, {
                 className: f.participant,
                 width: (0, u.getAvatarSize)(I),
                 theme: g,

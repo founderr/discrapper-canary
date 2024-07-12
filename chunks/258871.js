@@ -58,7 +58,7 @@ let m = [
         handler: (e, t) => (0, a.openModalLazy)(async () => {
             let {default: l} = await Promise.all([
                 n.e('7654'),
-                n.e('39405')
+                n.e('21026')
             ]).then(n.bind(n, 560114));
             return n => (0, i.jsx)(l, {
                 ...n,
