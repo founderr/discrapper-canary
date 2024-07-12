@@ -1,6 +1,6 @@
 let i = (0, n(818083).B)({
     kind: 'user',
-    id: '2024-06_user_affinities',
+    id: '2024-06_user_affinities_v2',
     label: 'User Affinity V2',
     defaultConfig: {
         useV2: !1,

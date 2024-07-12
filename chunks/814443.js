@@ -34,7 +34,7 @@ class f extends (r = i.ZP.PersistedStore) {
         this.waitFor(o.Z), null != e && (d.userAffinities = e.userAffinities, d.lastFetched = e.lastFetched, E()), this.syncWith([o.Z], E);
     }
     needsRefresh() {
-        return Date.now() - d.lastFetched > 86400000;
+        return !l && Date.now() - d.lastFetched > 86400000;
     }
     getFetching() {
         return l;

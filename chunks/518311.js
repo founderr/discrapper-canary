@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return eu;
+        return eh;
     }
 }), n(411104), n(653041), n(47120);
-var i, a = n(735250), s = n(470079), l = n(120356), r = n.n(l), o = n(392711), c = n.n(o), d = n(913527), u = n.n(d), h = n(873546), p = n(442837), m = n(481060), _ = n(570140), f = n(26151), E = n(493683), C = n(758059), g = n(447543), I = n(708690), x = n(194359), T = n(425493), N = n(461745), v = n(40851), S = n(367907), Z = n(762914), A = n(43267), M = n(933557), b = n(366980), R = n(703656), j = n(60349), L = n(131704), P = n(592125), O = n(341165), y = n(544610), D = n(19780), k = n(306680), U = n(699516), w = n(246946), B = n(594174), H = n(285952), G = n(153124), V = n(502568), F = n(626135), W = n(572004), z = n(585483), Y = n(823379), K = n(709054), q = n(51144), X = n(73752), Q = n(575464), J = n(981631), $ = n(689938), ee = n(620077), et = n(216315), en = n(549856);
-function ei(e, t, n) {
+var i, a = n(735250), s = n(470079), l = n(120356), r = n.n(l), o = n(392711), c = n.n(o), d = n(913527), u = n.n(d), h = n(873546), p = n(442837), m = n(481060), _ = n(570140), f = n(26151), E = n(493683), C = n(758059), g = n(447543), I = n(708690), x = n(194359), T = n(425493), v = n(461745), N = n(40851), S = n(367907), Z = n(762914), A = n(43267), M = n(933557), b = n(366980), R = n(703656), j = n(93127), L = n(60349), P = n(131704), O = n(592125), y = n(341165), D = n(544610), k = n(19780), U = n(306680), w = n(699516), B = n(246946), H = n(594174), G = n(285952), V = n(153124), F = n(626135), W = n(572004), z = n(585483), Y = n(823379), K = n(709054), q = n(51144), X = n(73752), Q = n(665149), J = n(575464), $ = n(981631), ee = n(689938), et = n(620077), en = n(216315), ei = n(549856);
+function ea(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -12,38 +12,38 @@ function ei(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let ea = (0, G.hQ)(), es = (0, G.hQ)();
-function el(e) {
+let es = (0, V.hQ)(), el = (0, V.hQ)();
+function er(e) {
     let {
         className: t,
         children: n
     } = e;
-    return (0, a.jsxs)(H.Z, {
-        align: H.Z.Align.CENTER,
-        justify: H.Z.Justify.CENTER,
-        direction: H.Z.Direction.VERTICAL,
-        className: r()(ee.errorState, t),
+    return (0, a.jsxs)(G.Z, {
+        align: G.Z.Align.CENTER,
+        justify: G.Z.Justify.CENTER,
+        direction: G.Z.Direction.VERTICAL,
+        className: r()(et.errorState, t),
         children: [
-            (0, a.jsx)('div', { className: r()(ee.errorStateIcon, en.marginBottom20) }),
+            (0, a.jsx)('div', { className: r()(et.errorStateIcon, ei.marginBottom20) }),
             n
         ]
     });
 }
-let er = e => {
+let eo = e => {
         var t;
         let {
                 channel: n,
                 onClose: i
-            } = e, s = null !== (t = (0, M.ZP)(n)) && void 0 !== t ? t : '', l = (0, p.e7)([k.ZP], () => {
+            } = e, s = null !== (t = (0, M.ZP)(n)) && void 0 !== t ? t : '', l = (0, p.e7)([U.ZP], () => {
                 var e;
-                return null !== (e = k.ZP.lastMessageId(n.id)) && void 0 !== e ? e : n.id;
+                return null !== (e = U.ZP.lastMessageId(n.id)) && void 0 !== e ? e : n.id;
             });
         return (0, a.jsx)(m.Clickable, {
             onClick: () => {
-                (0, R.XU)(J.ME, n.id), i();
+                (0, R.XU)($.ME, n.id), i();
             },
             children: (0, a.jsxs)('div', {
-                className: ee.confirmChannelItemContainer,
+                className: et.confirmChannelItemContainer,
                 children: [
                     (0, a.jsx)(m.Avatar, {
                         src: (0, A.x)(n),
@@ -51,45 +51,45 @@ let er = e => {
                         'aria-label': s
                     }),
                     (0, a.jsx)('span', {
-                        className: ee.confirmChannelName,
+                        className: et.confirmChannelName,
                         children: s
                     }),
                     (0, a.jsx)('span', {
-                        className: ee.lastActiveTimestamp,
+                        className: et.lastActiveTimestamp,
                         children: u()(K.default.extractTimestamp(l)).fromNow()
                     })
                 ]
             })
         });
-    }, eo = e => {
+    }, ec = e => {
         let {
                 onConfirm: t,
                 channelIds: n,
                 ...i
-            } = e, s = (0, p.Wu)([P.Z], () => Array.from(n).map(P.Z.getChannel), [n]);
+            } = e, s = (0, p.Wu)([O.Z], () => Array.from(n).map(O.Z.getChannel), [n]);
         return (0, a.jsxs)(m.ConfirmModal, {
-            header: $.Z.Messages.GROUP_DM_INVITE_CONFIRM,
-            confirmText: $.Z.Messages.GROUP_DM_INVITE_CONFIRM_BUTTON,
-            cancelText: $.Z.Messages.CANCEL,
+            header: ee.Z.Messages.GROUP_DM_INVITE_CONFIRM,
+            confirmText: ee.Z.Messages.GROUP_DM_INVITE_CONFIRM_BUTTON,
+            cancelText: ee.Z.Messages.CANCEL,
             onConfirm: t,
             confirmButtonColor: m.Button.Colors.BRAND,
             ...i,
             children: [
                 (0, a.jsx)(m.Text, {
                     variant: 'text-md/normal',
-                    children: $.Z.Messages.GROUP_DM_INVITE_CONFIRM_DESCRIPTION
+                    children: ee.Z.Messages.GROUP_DM_INVITE_CONFIRM_DESCRIPTION
                 }),
                 (0, a.jsx)(m.FormTitle, {
-                    className: ee.selectExistingFormHeader,
-                    children: $.Z.Messages.GROUP_DM_INVITE_SELECT_EXISTING
+                    className: et.selectExistingFormHeader,
+                    children: ee.Z.Messages.GROUP_DM_INVITE_SELECT_EXISTING
                 }),
                 (0, a.jsx)(m.Scroller, {
-                    className: ee.confirmInviteScroller,
+                    className: et.confirmInviteScroller,
                     children: s.filter(Y.lm).sort((e, t) => {
                         var n, i;
                         let a = null !== (n = e.lastMessageId) && void 0 !== n ? n : e.id, s = null !== (i = t.lastMessageId) && void 0 !== i ? i : t.id;
                         return K.default.compare(s, a);
-                    }).map(e => (0, a.jsx)(er, {
+                    }).map(e => (0, a.jsx)(eo, {
                         onClose: i.onClose,
                         channel: e
                     }, e.id))
@@ -97,28 +97,28 @@ let er = e => {
             ]
         });
     };
-class ec extends (i = s.PureComponent) {
+class ed extends (i = s.PureComponent) {
     componentDidMount() {
         let {channel: e} = this.props;
         _.Z.wait(() => I.Z.open(null == e ? void 0 : e.id));
         let t = (0, S.v_)(e);
-        null != e ? e.isDM() ? F.default.track(J.rMx.OPEN_POPOUT, {
+        null != e ? e.isDM() ? F.default.track($.rMx.OPEN_POPOUT, {
             ...t,
             type: 'Add Friends to DM',
             source: 'DM',
             is_friend: !this.isNotFriends()
-        }) : F.default.track(J.rMx.OPEN_POPOUT, {
+        }) : F.default.track($.rMx.OPEN_POPOUT, {
             ...t,
             type: 'Add Friends to DM',
             source: 'Group DM'
-        }) : F.default.track(J.rMx.OPEN_POPOUT, {
+        }) : F.default.track($.rMx.OPEN_POPOUT, {
             ...t,
             type: 'New Group DM',
             source: 'Friends List'
-        }), z.S.subscribe(J.CkL.SCROLL_PAGE_UP, this.scrollPageUp), z.S.subscribe(J.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown);
+        }), z.S.subscribe($.CkL.SCROLL_PAGE_UP, this.scrollPageUp), z.S.subscribe($.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown);
     }
     componentWillUnmount() {
-        z.S.unsubscribe(J.CkL.SCROLL_PAGE_UP, this.scrollPageUp), z.S.unsubscribe(J.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), _.Z.wait(() => I.Z.close());
+        z.S.unsubscribe($.CkL.SCROLL_PAGE_UP, this.scrollPageUp), z.S.unsubscribe($.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), _.Z.wait(() => I.Z.close());
     }
     isNotFriends() {
         let {channel: e} = this.props;
@@ -127,22 +127,22 @@ class ec extends (i = s.PureComponent) {
         let t = e.getRecipientId();
         if (null == t)
             throw Error('no recipient in DM');
-        return !U.Z.isFriend(t);
+        return !w.Z.isFriend(t);
     }
     createInvite() {
         let {channel: e} = this.props;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull())
             return;
         let {inviteMaxAgeSeconds: t} = X.Z.getCurrentConfig({ location: '5326c5_1' }, { autoTrackExposure: !1 });
-        g.Z.createInvite(e.id, { max_age: t }, J.t4x.GROUP_DM);
+        g.Z.createInvite(e.id, { max_age: t }, $.t4x.GROUP_DM);
     }
     isPartyFull() {
         let {channel: e} = this.props;
         return null != e && e.recipients.length + 1 >= this.getMaxParticipants();
     }
     getMaxParticipants() {
-        let {channel: e} = this.props, t = B.default.getCurrentUser();
-        return null != t && t.isStaff() ? J.p3w : null != e && e.isBroadcastChannel() ? J.keq : null != e && e.userLimit > 0 ? e.userLimit : J.pAY;
+        let {channel: e} = this.props, t = H.default.getCurrentUser();
+        return null != t && t.isStaff() ? $.p3w : null != e && e.isBroadcastChannel() ? $.keq : null != e && e.userLimit > 0 ? e.userLimit : $.pAY;
     }
     getRemaining() {
         let {
@@ -155,7 +155,7 @@ class ec extends (i = s.PureComponent) {
         let {
                 channel: e,
                 selectedUsers: t
-            } = this.props, n = this.getRemaining(), i = null != e && 0 === t.size || n < 0, s = t.size > 1 ? $.Z.Messages.CREATE_GROUP_DM : $.Z.Messages.CREATE_DM;
+            } = this.props, n = this.getRemaining(), i = null != e && 0 === t.size || n < 0, s = t.size > 1 ? ee.Z.Messages.CREATE_GROUP_DM : ee.Z.Messages.CREATE_DM;
         return (0, a.jsx)(m.Button, {
             fullWidth: !0,
             disabled: i,
@@ -172,22 +172,22 @@ class ec extends (i = s.PureComponent) {
             return;
         let n = this.getRemaining(), i = 0 === t.size || n < 0;
         return (0, a.jsx)('div', {
-            className: ee.addButton,
+            className: et.addButton,
             children: (0, a.jsx)(m.Button, {
                 size: m.Button.Sizes.SMALL,
                 disabled: i,
                 onClick: this.handleInviteUsers,
-                children: $.Z.Messages.ADD
+                children: ee.Z.Messages.ADD
             })
         });
     }
     renderSubtitle() {
         if (!this.props.hasFriends || this.isNotFriends() || this.isPartyFull())
             return null;
-        let e = this.getRemaining(), t = e <= 0 ? $.Z.Messages.GROUP_DM_INVITE_FULL_SUB2.format({ number: this.getMaxParticipants() }) : $.Z.Messages.GROUP_DM_INVITE_REMAINING.format({ number: e });
+        let e = this.getRemaining(), t = e <= 0 ? ee.Z.Messages.GROUP_DM_INVITE_FULL_SUB2.format({ number: this.getMaxParticipants() }) : ee.Z.Messages.GROUP_DM_INVITE_REMAINING.format({ number: e });
         return (0, a.jsx)(m.Text, {
             variant: 'text-xs/normal',
-            className: r()(ee.subtitle, { [ee.subtitleWarning]: e < 0 }, en.marginTop4),
+            className: r()(et.subtitle, { [et.subtitleWarning]: e < 0 }, ei.marginTop4),
             children: t
         });
     }
@@ -204,18 +204,18 @@ class ec extends (i = s.PureComponent) {
             return null;
         let o = [];
         return l.forEach(e => {
-            let t = B.default.getUser(e);
+            let t = H.default.getUser(e);
             null != t && o.push(q.ZP.getName(t));
-        }), (0, a.jsxs)(H.Z, {
-            className: r()(ee.searchBar, en.marginTop20),
+        }), (0, a.jsxs)(G.Z, {
+            className: r()(et.searchBar, ei.marginTop20),
             children: [
-                (0, a.jsx)(N.ZP, {
+                (0, a.jsx)(v.ZP, {
                     ref: this.searchBarRef,
-                    className: ee.searchBarComponent,
+                    className: et.searchBarComponent,
                     autoFocus: !0,
-                    placeholder: 0 === l.size ? $.Z.Messages.GROUP_DM_SEARCH_PLACEHOLDER : void 0,
+                    placeholder: 0 === l.size ? ee.Z.Messages.GROUP_DM_SEARCH_PLACEHOLDER : void 0,
                     disabled: this.isPartyFull(),
-                    size: N.ZP.Sizes.MEDIUM,
+                    size: v.ZP.Sizes.MEDIUM,
                     query: t,
                     selectedRow: s,
                     sections: [null !== (e = null == i ? void 0 : i.length) && void 0 !== e ? e : 0],
@@ -225,8 +225,8 @@ class ec extends (i = s.PureComponent) {
                     onQueryChange: this.handleQueryChange,
                     onRemoveTag: this.handleRemoveUser,
                     inputProps: {
-                        'aria-labelledby': ea,
-                        'aria-controls': es,
+                        'aria-labelledby': es,
+                        'aria-controls': el,
                         'aria-expanded': !0,
                         'aria-activedescendant': 'user-row-'.concat(s)
                     }
@@ -236,16 +236,16 @@ class ec extends (i = s.PureComponent) {
         });
     }
     renderHeader() {
-        let e = null != this.scrollerRef.current && this.state.separator, t = this.isNotFriends() ? $.Z.Messages.GROUP_DM_ADD_FRIENDS : $.Z.Messages.GROUP_DM_HEADER;
+        let e = null != this.scrollerRef.current && this.state.separator, t = this.isNotFriends() ? ee.Z.Messages.GROUP_DM_ADD_FRIENDS : ee.Z.Messages.GROUP_DM_HEADER;
         return (0, a.jsxs)(m.ModalHeader, {
-            direction: H.Z.Direction.VERTICAL,
-            align: H.Z.Align.STRETCH,
-            className: ee.__invalid_header,
+            direction: G.Z.Direction.VERTICAL,
+            align: G.Z.Align.STRETCH,
+            className: et.__invalid_header,
             separator: e,
             children: [
                 h.tq ? this.renderMobileCloseButton() : null,
                 (0, a.jsx)(m.Heading, {
-                    id: ea,
+                    id: es,
                     variant: 'heading-lg/semibold',
                     children: t
                 }),
@@ -264,34 +264,34 @@ class ec extends (i = s.PureComponent) {
             let t = null != e ? e.getRecipientId() : null;
             if (null == t)
                 throw Error('no recipient in DM');
-            let n = B.default.getUser(t), i = null != n ? n.username : '', s = null != n && U.Z.getRelationshipType(n.id) === J.OGo.PENDING_OUTGOING;
-            return (0, a.jsxs)(el, {
-                className: ee.notFriends,
+            let n = H.default.getUser(t), i = null != n ? n.username : '', s = null != n && w.Z.getRelationshipType(n.id) === $.OGo.PENDING_OUTGOING;
+            return (0, a.jsxs)(er, {
+                className: et.notFriends,
                 children: [
-                    (0, a.jsx)('div', { children: $.Z.Messages.GROUP_DM_INVITE_NOT_FRIENDS.format({ username: i }) }),
+                    (0, a.jsx)('div', { children: ee.Z.Messages.GROUP_DM_INVITE_NOT_FRIENDS.format({ username: i }) }),
                     (0, a.jsx)(m.Button, {
                         disabled: s,
                         size: m.Button.Sizes.SMALL,
                         onClick: () => null != n ? this.handleAddFriend(n) : null,
-                        className: en.marginTop20,
-                        children: s ? $.Z.Messages.ADD_FRIEND_BUTTON_AFTER : $.Z.Messages.ADD_FRIEND_BUTTON
+                        className: ei.marginTop20,
+                        children: s ? ee.Z.Messages.ADD_FRIEND_BUTTON_AFTER : ee.Z.Messages.ADD_FRIEND_BUTTON
                     })
                 ]
             });
         }
-        return t ? this.isPartyFull() ? (0, a.jsxs)(el, {
-            className: ee.partyFull,
+        return t ? this.isPartyFull() ? (0, a.jsxs)(er, {
+            className: et.partyFull,
             children: [
-                (0, a.jsx)('div', { children: $.Z.Messages.GROUP_DM_INVITE_FULL_MAIN }),
-                (0, a.jsx)('div', { children: $.Z.Messages.GROUP_DM_INVITE_FULL_SUB2.format({ number: this.getMaxParticipants() }) })
+                (0, a.jsx)('div', { children: ee.Z.Messages.GROUP_DM_INVITE_FULL_MAIN }),
+                (0, a.jsx)('div', { children: ee.Z.Messages.GROUP_DM_INVITE_FULL_SUB2.format({ number: this.getMaxParticipants() }) })
             ]
-        }) : 0 === n.length ? (0, a.jsx)(el, {
-            className: r()(ee.noResults, en.marginBottom20),
-            children: (0, a.jsx)('div', { children: $.Z.Messages.GROUP_DM_INVITE_EMPTY })
+        }) : 0 === n.length ? (0, a.jsx)(er, {
+            className: r()(et.noResults, ei.marginBottom20),
+            children: (0, a.jsx)('div', { children: ee.Z.Messages.GROUP_DM_INVITE_EMPTY })
         }) : (0, a.jsx)(m.List, {
             ref: this.scrollerRef,
             sections: [n.length],
-            className: ee.scroller,
+            className: et.scroller,
             renderRow: this.renderRow,
             rowHeight: this.getRowHeight,
             renderSection: this.renderSection,
@@ -302,21 +302,21 @@ class ec extends (i = s.PureComponent) {
             fade: !0,
             role: void 0,
             innerRole: 'listbox',
-            innerId: es,
+            innerId: el,
             innerAriaMultiselectable: !0,
             innerAriaOrientation: 'vertical'
-        }) : (0, a.jsxs)(el, {
-            className: ee.noFriends,
+        }) : (0, a.jsxs)(er, {
+            className: et.noFriends,
             children: [
-                (0, a.jsx)('div', { children: $.Z.Messages.GROUP_DM_INVITE_NO_FRIENDS }),
+                (0, a.jsx)('div', { children: ee.Z.Messages.GROUP_DM_INVITE_NO_FRIENDS }),
                 (0, a.jsx)(m.Button, {
                     autoFocus: !0,
                     color: m.Button.Colors.GREEN,
                     fullWidth: !0,
                     size: m.Button.Sizes.SMALL,
                     onClick: this.handleAddFriendNavigation,
-                    className: en.marginTop20,
-                    children: $.Z.Messages.ADD_FRIEND
+                    className: ei.marginTop20,
+                    children: ee.Z.Messages.ADD_FRIEND
                 })
             ]
         });
@@ -337,52 +337,52 @@ class ec extends (i = s.PureComponent) {
             children: [
                 (0, a.jsx)(m.FormTitle, {
                     tag: 'h5',
-                    className: en.marginBottom8,
-                    children: $.Z.Messages.GROUP_DM_INVITE_LINK_TITLE
+                    className: ei.marginBottom8,
+                    children: ee.Z.Messages.GROUP_DM_INVITE_LINK_TITLE
                 }),
-                (0, a.jsxs)(H.Z, {
-                    className: r()(et.input, { [et.success]: i }),
-                    justify: H.Z.Justify.BETWEEN,
-                    align: H.Z.Align.CENTER,
+                (0, a.jsxs)(G.Z, {
+                    className: r()(en.input, { [en.success]: i }),
+                    justify: G.Z.Justify.BETWEEN,
+                    align: G.Z.Align.CENTER,
                     children: [
                         l.length > 0 ? (0, a.jsx)(m.TextInput, {
-                            className: ee.copyInput,
+                            className: et.copyInput,
                             name: 'invite',
-                            value: n ? $.Z.Messages.INSTANT_INVITE_HIDDEN : l,
+                            value: n ? ee.Z.Messages.INSTANT_INVITE_HIDDEN : l,
                             editable: !1,
-                            inputClassName: ee.input,
+                            inputClassName: et.input,
                             spellCheck: 'false',
                             onClick: e => e.currentTarget.select()
                         }) : (0, a.jsx)(m.TextInput, {
-                            className: ee.copyInput,
+                            className: et.copyInput,
                             name: 'invite',
                             value: l,
-                            placeholder: (0, b.Z)($.Z.Messages.GROUP_DM_INVITE_LINK_EXAMPLE),
+                            placeholder: (0, b.Z)(ee.Z.Messages.GROUP_DM_INVITE_LINK_EXAMPLE),
                             editable: !1,
-                            inputClassName: ee.input,
+                            inputClassName: et.input,
                             spellCheck: 'false',
                             onClick: () => this.createInvite()
                         }),
                         W.wS && l.length > 0 ? (0, a.jsx)(m.Button, {
                             size: m.Button.Sizes.SMALL,
                             color: i ? m.Button.Colors.GREEN : m.Button.Colors.BRAND,
-                            className: ee.copyButton,
+                            className: et.copyButton,
                             onClick: () => this.handleCopyInvite(l),
-                            children: i ? $.Z.Messages.INVITE_COPIED : $.Z.Messages.COPY
+                            children: i ? ee.Z.Messages.INVITE_COPIED : ee.Z.Messages.COPY
                         }) : null,
                         0 === l.length ? (0, a.jsx)(m.Button, {
                             size: m.Button.Sizes.SMALL,
                             color: m.Button.Colors.BRAND,
-                            className: ee.copyButton,
+                            className: et.copyButton,
                             onClick: () => this.createInvite(),
-                            children: $.Z.Messages.GROUP_DM_INVITE_LINK_CREATE
+                            children: ee.Z.Messages.GROUP_DM_INVITE_LINK_CREATE
                         }) : null
                     ]
                 }),
                 l.length > 0 ? (0, a.jsx)(m.Text, {
                     variant: 'text-xs/normal',
-                    className: r()(en.marginTop8, ee.footerText),
-                    children: $.Z.Messages.INVITE_EXPIRES_HOURS.format({ numHours: ''.concat(24) })
+                    className: r()(ei.marginTop8, et.footerText),
+                    children: ee.Z.Messages.INVITE_EXPIRES_HOURS.format({ numHours: ''.concat(24) })
                 }) : null
             ]
         });
@@ -398,10 +398,10 @@ class ec extends (i = s.PureComponent) {
         if (null != n)
             return (0, a.jsxs)(s.Fragment, {
                 children: [
-                    (0, a.jsx)('div', { className: ee.footerSeparator }),
-                    (0, a.jsx)(H.Z, {
-                        direction: H.Z.Direction.VERTICAL,
-                        className: ee.footer,
+                    (0, a.jsx)('div', { className: et.footerSeparator }),
+                    (0, a.jsx)(G.Z, {
+                        direction: G.Z.Direction.VERTICAL,
+                        className: et.footer,
                         children: n
                     })
                 ]
@@ -411,7 +411,7 @@ class ec extends (i = s.PureComponent) {
         let {transitionState: e} = this.props;
         return (0, a.jsxs)(m.ModalRoot, {
             transitionState: null != e ? e : m.ModalTransitionState.ENTERED,
-            className: ee.popout,
+            className: et.popout,
             children: [
                 this.renderHeader(),
                 this.renderBody(),
@@ -426,34 +426,34 @@ class ec extends (i = s.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e), ei(this, 'state', {
+        super(...e), ea(this, 'state', {
             separator: !1,
             copied: !1
-        }), ei(this, 'copyTimeout', void 0), ei(this, 'scrollerRef', s.createRef()), ei(this, 'searchBarRef', s.createRef()), ei(this, '_mobileCloseRef', s.createRef()), ei(this, 'scrollPageUp', () => {
+        }), ea(this, 'copyTimeout', void 0), ea(this, 'scrollerRef', s.createRef()), ea(this, 'searchBarRef', s.createRef()), ea(this, '_mobileCloseRef', s.createRef()), ea(this, 'scrollPageUp', () => {
             var e;
             null === (e = this.scrollerRef.current) || void 0 === e || e.scrollPageUp({ animate: !0 });
-        }), ei(this, 'scrollPageDown', () => {
+        }), ea(this, 'scrollPageDown', () => {
             var e;
             null === (e = this.scrollerRef.current) || void 0 === e || e.scrollPageDown({ animate: !0 });
-        }), ei(this, 'renderMobileCloseButton', () => (0, a.jsx)('div', {
-            className: r()(ee.mobileToolsContainer),
+        }), ea(this, 'renderMobileCloseButton', () => (0, a.jsx)('div', {
+            className: r()(et.mobileToolsContainer),
             ref: this._mobileCloseRef,
             children: (0, a.jsx)(m.FocusRingScope, {
                 containerRef: this._mobileCloseRef,
                 children: (0, a.jsx)('div', {
                     children: (0, a.jsx)(T.Z, {
-                        className: ee.mobileToolsCloseIcon,
+                        className: et.mobileToolsCloseIcon,
                         closeAction: this.props.onClose,
                         keybind: 'ESC'
                     })
                 })
             })
-        })), ei(this, 'getRowHeight', (e, t) => {
+        })), ea(this, 'getRowHeight', (e, t) => {
             if (e > 0)
                 return 0;
             let {results: n} = this.props;
             return null != n[t] ? 42 : 0;
-        }), ei(this, 'renderRow', e => {
+        }), ea(this, 'renderRow', e => {
             let {
                 section: t,
                 row: n
@@ -472,7 +472,7 @@ class ec extends (i = s.PureComponent) {
                     user: c,
                     comparator: d
                 } = o, u = s.has(c.id);
-            return (0, a.jsx)(Q.Z, {
+            return (0, a.jsx)(J.Z, {
                 row: n,
                 user: c,
                 hideDiscriminator: r,
@@ -484,18 +484,18 @@ class ec extends (i = s.PureComponent) {
                 'aria-posinset': n + 1,
                 'aria-setsize': i.length
             }, c.id);
-        }), ei(this, 'forceFocus', () => {
+        }), ea(this, 'forceFocus', () => {
             let e = this.searchBarRef.current;
             null == e || e.focus();
-        }), ei(this, 'focusResult', e => {
+        }), ea(this, 'focusResult', e => {
             I.Z.select(e);
-        }), ei(this, 'handleSelect', (e, t) => {
+        }), ea(this, 'handleSelect', (e, t) => {
             let {
                 results: n,
                 channel: i
             } = this.props;
             null == t ? I.Z.clear(null == i ? void 0 : i.id) : null != n && this.handleClick(n[t].user.id);
-        }), ei(this, 'handleSelectionChange', (e, t) => {
+        }), ea(this, 'handleSelectionChange', (e, t) => {
             I.Z.select(t);
             let n = this.scrollerRef.current;
             null != n && n.scrollToIndex({
@@ -503,29 +503,29 @@ class ec extends (i = s.PureComponent) {
                 row: t,
                 padding: 8
             });
-        }), ei(this, 'handleQueryChange', e => {
+        }), ea(this, 'handleQueryChange', e => {
             let {channel: t} = this.props;
             I.Z.search(e, null == t ? void 0 : t.id);
-        }), ei(this, 'handleRemoveUser', e => {
+        }), ea(this, 'handleRemoveUser', e => {
             let t = Array.from(this.props.selectedUsers);
             I.Z.removeUser(t[e]), this.forceFocus();
-        }), ei(this, 'handleClick', e => {
+        }), ea(this, 'handleClick', e => {
             let {
                 selectedUsers: t,
                 query: n,
                 channel: i
             } = this.props;
             t.has(e) ? I.Z.removeUser(e) : (I.Z.addUser(e), n.length > 0 && I.Z.clear(null == i ? void 0 : i.id)), this.forceFocus();
-        }), ei(this, 'handleAddFriendNavigation', () => {
-            (0, R.uL)(J.Z5c.FRIENDS), C.Z.setSection(J.pJs.ADD_FRIEND), this.props.onClose();
-        }), ei(this, 'handleScroll', () => {
+        }), ea(this, 'handleAddFriendNavigation', () => {
+            (0, R.uL)($.Z5c.FRIENDS), C.Z.setSection($.pJs.ADD_FRIEND), this.props.onClose();
+        }), ea(this, 'handleScroll', () => {
             let e = this.scrollerRef.current;
             null != e && this.setState({ separator: !e.isScrolledToTop() });
-        }), ei(this, 'createNewDM', e => {
+        }), ea(this, 'createNewDM', e => {
             E.Z.openPrivateChannel(e, !1, !1, 'New Group DM');
-        }), ei(this, 'pushToExistingDM', (e, t) => {
-            let n = D.Z.getChannelId() === e.id;
-            E.Z.addRecipients(e.id, t, J.Sbl.ADD_FRIENDS_TO_DM).then(i => {
+        }), ea(this, 'pushToExistingDM', (e, t) => {
+            let n = k.Z.getChannelId() === e.id;
+            E.Z.addRecipients(e.id, t, $.Sbl.ADD_FRIENDS_TO_DM).then(i => {
                 if (!!n) {
                     if (e.isDM() && i !== e.id) {
                         f.Z.call(i, !1, !0);
@@ -534,74 +534,74 @@ class ec extends (i = s.PureComponent) {
                     f.Z.ring(i, t);
                 }
             });
-        }), ei(this, 'handleInviteUsers', () => {
+        }), ea(this, 'handleInviteUsers', () => {
             let {
                     channel: e,
                     selectedUsers: t,
                     onClose: n
                 } = this.props, i = Array.from(t);
             if (null != e) {
-                let t = eh(Array.from(new Set([
+                let t = ep(Array.from(new Set([
                     ...e.recipients,
                     ...i
                 ])));
-                t.size > 0 ? (0, m.openModal)(n => (0, a.jsx)(eo, {
+                t.size > 0 ? (0, m.openModal)(n => (0, a.jsx)(ec, {
                     ...n,
                     onConfirm: () => this.pushToExistingDM(e, i),
                     channelIds: t
                 }), {}, (0, m.modalContextFromAppContext)(this.context.appContext)) : this.pushToExistingDM(e, i);
             } else {
-                let e = eh(i);
-                i.length > 1 && e.size > 0 ? (0, m.openModal)(t => (0, a.jsx)(eo, {
+                let e = ep(i);
+                i.length > 1 && e.size > 0 ? (0, m.openModal)(t => (0, a.jsx)(ec, {
                     ...t,
                     onConfirm: () => this.createNewDM(i),
                     channelIds: e
                 }), {}, (0, m.modalContextFromAppContext)(this.context.appContext)) : this.createNewDM(i);
             }
             n();
-        }), ei(this, 'handleCopyInvite', e => {
+        }), ea(this, 'handleCopyInvite', e => {
             let {
                 channel: t,
                 invite: n
             } = this.props;
             null != n && (0, W.JG)(e), null != this.copyTimeout && clearTimeout(this.copyTimeout), this.setState({ copied: !0 }), this.copyTimeout = setTimeout(() => {
                 this.setState({ copied: !1 });
-            }, 1000), F.default.track(J.rMx.COPY_INSTANT_INVITE, {
+            }, 1000), F.default.track($.rMx.COPY_INSTANT_INVITE, {
                 server: null,
                 channel: null != t ? t.id : null,
                 channel_type: null != t ? t.type : null,
-                location: J.Sbl.ADD_FRIENDS_TO_DM,
+                location: $.Sbl.ADD_FRIENDS_TO_DM,
                 code: null != n ? n.code : null
             });
         });
     }
 }
-function ed(e) {
+function eu(e) {
     let {
         channel: t,
         ...n
     } = e;
-    j.Z.useExperiment({ location: 'desktop_dm_list' });
+    L.Z.useExperiment({ location: 'desktop_dm_list' });
     let i = (0, p.cj)([
+        D.Z,
         y.Z,
-        O.Z,
-        w.Z
+        B.Z
     ], () => {
         let e;
-        return null != t && null != (e = O.Z.getInvite(t.id)) && e.isExpired() && (e = null), {
-            ...y.Z.getState(),
+        return null != t && null != (e = y.Z.getInvite(t.id)) && e.isExpired() && (e = null), {
+            ...D.Z.getState(),
             invite: e,
-            hideDiscriminator: w.Z.hidePersonalInformation,
-            hideInstantInvites: w.Z.hideInstantInvites
+            hideDiscriminator: B.Z.hidePersonalInformation,
+            hideInstantInvites: B.Z.hideInstantInvites
         };
     });
-    return (0, a.jsx)(ec, {
+    return (0, a.jsx)(ed, {
         channel: t,
         ...n,
         ...i
     });
 }
-function eu(e) {
+function eh(e) {
     let {
             channel: t,
             iconClassName: n,
@@ -612,13 +612,23 @@ function eu(e) {
             popoutAlign: c = 'right',
             subscribeToGlobalHotkey: d = !1
         } = e, [u, h] = s.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), p = (0, Z.Dd)(null == t ? void 0 : t.id), _ = s.useCallback(() => h(e => !e), []);
-    return (s.useEffect(() => (d && z.S.subscribe(J.CkL.TOGGLE_DM_CREATE, _), () => {
-        z.S.unsubscribe(J.CkL.TOGGLE_DM_CREATE, _);
+    s.useEffect(() => (d && z.S.subscribe($.CkL.TOGGLE_DM_CREATE, _), () => {
+        z.S.unsubscribe($.CkL.TOGGLE_DM_CREATE, _);
     }), [
         d,
         _
+    ]);
+    let {
+        useV1: f,
+        useV2: E
+    } = L.Z.useExperiment({ location: 'desktop_dm_list' }, { autoTrackExposure: !1 });
+    return (s.useEffect(() => {
+        f && (0, j.W)(), E && (0, j._)();
+    }, [
+        f,
+        E
     ]), p) ? null : (0, a.jsx)(m.Popout, {
-        renderPopout: e => (0, a.jsx)(ed, {
+        renderPopout: e => (0, a.jsx)(eu, {
             ...e,
             onClose: e.closePopout,
             channel: t
@@ -628,7 +638,7 @@ function eu(e) {
         align: c,
         onRequestClose: () => h(!1),
         animation: m.Popout.Animation.NONE,
-        children: e => (0, a.jsx)(V.ZP.Icon, {
+        children: e => (0, a.jsx)(Q.ZP.Icon, {
             ...e,
             onClick: _,
             icon: null != i ? i : null == t ? m.ChatPlusIcon : m.GroupPlusIcon,
@@ -639,11 +649,11 @@ function eu(e) {
         })
     });
 }
-function eh(e) {
-    let t = ep(e);
-    return new Set(c()(P.Z.getMutablePrivateChannels()).values().filter(e => (0, L.bc)(e.type)).filter(e => ep(e.recipients) === t).map(e => e.id).value());
-}
 function ep(e) {
+    let t = em(e);
+    return new Set(c()(O.Z.getMutablePrivateChannels()).values().filter(e => (0, P.bc)(e.type)).filter(e => em(e.recipients) === t).map(e => e.id).value());
+}
+function em(e) {
     return JSON.stringify(e.sort());
 }
-ei(ec, 'contextType', v.ZP);
+ea(ed, 'contextType', N.ZP);
