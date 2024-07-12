@@ -20254,14 +20254,10 @@ span.clanTag_a31c43 {
     row-gap: 8px
 }
 
-.tags_c32acf.pronouns_c32acf {
+.tags_c32acf.pronouns_c32acf,
+.tags_c32acf.bot_c32acf {
     -moz-column-gap: 6px;
     column-gap: 6px
-}
-
-.tags_c32acf.bot_c32acf {
-    -moz-column-gap: 8px;
-    column-gap: 8px
 }
 
 .userTag_c32acf {

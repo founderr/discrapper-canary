@@ -91,52 +91,71 @@ function N(e) {
     });
 }
 function C(e) {
-    let {description: n} = e, [t, u] = l.useState(!1), d = l.useMemo(() => (0, c.YP)(n), [n]), {
+    let {description: n} = e, [t, u] = l.useState(!0);
+    l.useLayoutEffect(() => u(!1), []);
+    let d = l.useMemo(() => (0, c.YP)(n), [n]), {
             ref: m,
-            lineCount: _
+            lineHeight: _,
+            lineCount: f
         } = function () {
-            let e = l.useRef(null), [n, t] = l.useState(null);
-            return l.useEffect(() => {
+            let e = l.useRef(null), [n, t] = l.useState(null), [i, r] = l.useState(null);
+            return l.useLayoutEffect(() => {
                 let n = e.current;
                 if (null === n || 0 === n.clientHeight)
                     return;
                 let i = parseInt(getComputedStyle(n).lineHeight);
                 if (!isNaN(i))
-                    t(Math.max(Math.floor(n.clientHeight / i)));
+                    t(i), r(Math.floor(n.clientHeight / i));
             }, []), {
                 ref: e,
-                lineCount: n
+                lineHeight: n,
+                lineCount: i
             };
-        }(), {
-            ref: f,
-            isTransitioning: N,
-            onTransitionEnd: C
-        } = (0, p.Z)({ isExpanded: t }), v = t || N;
+        }(), N = l.useMemo(() => {
+            if (null == _ || null == f)
+                return { key: 0 };
+            let e = _ * f;
+            return {
+                key: 1,
+                minHeightOverride: Math.min(e, 3 * _),
+                maxHeightOverride: e
+            };
+        }, [
+            f,
+            _
+        ]), {
+            ref: C,
+            isTransitioning: v,
+            onTransitionEnd: I
+        } = (0, p.Z)({
+            isExpanded: t,
+            ...N
+        }), x = t || v;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                ref: f,
+                ref: C,
                 className: h.overflowHidden,
-                onTransitionEnd: C,
+                onTransitionEnd: I,
                 children: (0, i.jsx)(s.x, {
                     ref: m,
                     className: A.markup,
                     variant: 'text-sm/medium',
-                    lineClamp: v ? void 0 : 3,
+                    lineClamp: x ? void 0 : 3,
+                    style: { maxHeight: x ? void 0 : N.minHeightOverride },
                     children: d
                 })
             }),
-            null != _ && _ >= 3 ? (0, i.jsxs)(o.Clickable, {
+            null != f && f > 3 ? (0, i.jsxs)(o.Clickable, {
                 className: h.expandableDescriptionClickable,
                 onClick: () => u(e => !e),
                 children: [
                     (0, i.jsx)(s.x, {
-                        ref: m,
                         variant: 'text-sm/semibold',
                         color: 'text-brand',
-                        children: v ? E.Z.Messages.APP_LAUNCHER_SHOW_LESS : E.Z.Messages.APP_LAUNCHER_SHOW_MORE
+                        children: x ? E.Z.Messages.APP_LAUNCHER_SHOW_LESS : E.Z.Messages.APP_LAUNCHER_SHOW_MORE
                     }),
-                    v ? (0, i.jsx)(a.u, {
+                    x ? (0, i.jsx)(a.u, {
                         size: 'sm',
                         color: o.tokens.colors.TEXT_BRAND
                     }) : (0, i.jsx)(r.C, {
