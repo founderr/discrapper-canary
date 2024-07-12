@@ -12,7 +12,8 @@ function u(e, t, a, s) {
             text: u.length > 0 ? u : '',
             expiresAtMs: null != a ? String(n()().add((0, r.Z)(a), 'ms').toDate().getTime()) : '0',
             emojiId: null != t && null != t.id ? t.id : '0',
-            emojiName: null != t ? t.name : ''
+            emojiName: null != t ? t.name : '',
+            createdAtMs: String(n()().toDate().getTime())
         }), o.default.track(i.rMx.CUSTOM_STATUS_UPDATED, {
             location: null != s ? s.location : null,
             emoji_type: null == (d = t) ? null : null != d.id ? 'custom' : 'unicode',

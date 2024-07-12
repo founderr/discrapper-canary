@@ -2017,7 +2017,8 @@ class e_ extends v.C {
             text: '',
             emojiId: '0',
             emojiName: '',
-            expiresAtMs: '0'
+            expiresAtMs: '0',
+            createdAtMs: '0'
         };
         return globalThis.Object.defineProperty(t, N.C, {
             enumerable: !1,
@@ -2041,6 +2042,9 @@ class e_ extends v.C {
             case 4:
                 i.expiresAtMs = e.fixed64().toString();
                 break;
+            case 5:
+                i.createdAtMs = e.fixed64().toString();
+                break;
             default:
                 let a = n.readUnknownField;
                 if ('throw' === a)
@@ -2052,7 +2056,7 @@ class e_ extends v.C {
         return i;
     }
     internalBinaryWrite(e, t, n) {
-        '' !== e.text && t.tag(1, S.TD.LengthDelimited).string(e.text), '0' !== e.emojiId && t.tag(2, S.TD.Bit64).fixed64(e.emojiId), '' !== e.emojiName && t.tag(3, S.TD.LengthDelimited).string(e.emojiName), '0' !== e.expiresAtMs && t.tag(4, S.TD.Bit64).fixed64(e.expiresAtMs);
+        '' !== e.text && t.tag(1, S.TD.LengthDelimited).string(e.text), '0' !== e.emojiId && t.tag(2, S.TD.Bit64).fixed64(e.emojiId), '' !== e.emojiName && t.tag(3, S.TD.LengthDelimited).string(e.emojiName), '0' !== e.expiresAtMs && t.tag(4, S.TD.Bit64).fixed64(e.expiresAtMs), '0' !== e.createdAtMs && t.tag(5, S.TD.Bit64).fixed64(e.createdAtMs);
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? S.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -2079,6 +2083,12 @@ class e_ extends v.C {
             {
                 no: 4,
                 name: 'expires_at_ms',
+                kind: 'scalar',
+                T: 6
+            },
+            {
+                no: 5,
+                name: 'created_at_ms',
                 kind: 'scalar',
                 T: 6
             }
