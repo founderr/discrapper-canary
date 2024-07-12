@@ -21,8 +21,7 @@ class c extends a.Z {
     }
     constructor(...e) {
         super(...e), o(this, 'handleMainWindowFocus', e => {
-            let {focused: t} = e;
-            t && this.injectWindowAnimationFrame(window);
+            e.focused && e.windowId === window.__DISCORD_WINDOW_ID && this.injectWindowAnimationFrame(window);
         }), o(this, 'handlePopoutWindowChange', () => {
             let e = l.Z.getWindowKeys().find(e => l.Z.getWindowFocused(e));
             if (null == e)

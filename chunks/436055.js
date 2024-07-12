@@ -12,7 +12,7 @@ function a(e) {
         } = e, s = i.useMemo(() => {
             if (null == t)
                 return null;
-            let e = l.toByteArray(t), i = (0, r.D)(e, a, n);
+            let e = l.toByteArray(t), i = (0, r.Dq)(e, a, n);
             if (null == i)
                 return null;
             let s = RegExp('.{1,'.concat(n, '}'), 'g'), o = i.match(s);
