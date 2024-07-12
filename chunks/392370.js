@@ -311,13 +311,13 @@ function P(e) {
             t,
             g,
             R
-        ]), j = M.length > 0, O = L.length > 0;
+        ]), y = M.length > 0, j = L.length > 0;
     return {
         commandResults: M,
-        hasCommandResults: j,
+        hasCommandResults: y,
         applicationResults: L,
-        hasApplicationResults: O,
-        isEmptyState: !j && !O,
+        hasApplicationResults: j,
+        isEmptyState: !y && !j,
         loading: T && s
     };
 }

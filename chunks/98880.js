@@ -13,7 +13,7 @@ t.d(n, {
     }
 }), t(47120), t(411104);
 var i, l, r = t(735250), a = t(470079), s = t(120356), o = t.n(s), c = t(481060), u = t(361213), d = t(542094), m = t(778569), p = t(182906), _ = t(367907), E = t(220082), h = t(318661), A = t(810090), f = t(792125), N = t(541099), C = t(783097), v = t(695676), I = t(176412), x = t(226026), P = t(753972), T = t(981631), g = t(217702), R = t(231338), S = t(689938), M = t(126152), L = t(413097);
-function j(e) {
+function y(e) {
     let {
             application: n,
             look: t = 'large_banner',
@@ -36,9 +36,9 @@ function j(e) {
             applicationId: n.id,
             sectionName: m,
             sectionPosition: p
-        }), [T, g] = a.useState(!1), j = a.useCallback(() => {
+        }), [T, g] = a.useState(!1), y = a.useCallback(() => {
             !0 === u && g(!0);
-        }, [u]), y = a.useCallback(() => g(!1), []);
+        }, [u]), O = a.useCallback(() => g(!1), []);
     return 'icon' === t ? (0, r.jsx)(c.Clickable, {
         innerRef: _ ? e => I.current = e : void 0,
         className: o()(M.container, M.iconCard),
@@ -63,10 +63,10 @@ function j(e) {
         }),
         children: [
             (0, r.jsxs)('div', {
-                onMouseEnter: j,
-                onFocus: j,
-                onMouseLeave: y,
-                onBlur: y,
+                onMouseEnter: y,
+                onFocus: y,
+                onMouseLeave: O,
+                onBlur: O,
                 className: o()(M.bannerImageContainer, {
                     [M.mediumBanner]: 'medium_banner' === t,
                     [M.largeBanner]: 'large_banner' === t
@@ -74,7 +74,7 @@ function j(e) {
                 children: [
                     (0, r.jsx)('span', {
                         className: s,
-                        children: (0, r.jsx)(O, {
+                        children: (0, r.jsx)(j, {
                             application: n,
                             fallbackColor: v,
                             showVideo: T
@@ -126,7 +126,7 @@ function j(e) {
         ]
     });
 }
-function O(e) {
+function j(e) {
     let {
         application: n,
         fallbackColor: t,
@@ -134,7 +134,7 @@ function O(e) {
     } = e;
     if ((0, C.BQ)(n)) {
         if ((0, C.ye)({ application: n }))
-            return (0, r.jsx)(y, {
+            return (0, r.jsx)(O, {
                 application: n,
                 showVideo: i
             });
@@ -146,7 +146,7 @@ function O(e) {
         style: { backgroundColor: t }
     });
 }
-function y(e) {
+function O(e) {
     let {
             application: n,
             showVideo: t
@@ -228,7 +228,7 @@ function Z(e) {
 }
 function H(e) {
     let n = Z(e);
-    return (0, r.jsx)(j, {
+    return (0, r.jsx)(y, {
         ...e,
         onClick: n,
         enableVideoBanner: !0
@@ -252,7 +252,7 @@ function U(e) {
         buttonText: p
     } = (0, I.P)(n, t, i, l);
     if (u === d.JS.START)
-        return a ? (0, r.jsx)(j, {
+        return a ? (0, r.jsx)(y, {
             ...s,
             sectionName: l,
             application: t,
@@ -264,7 +264,7 @@ function U(e) {
             application: t,
             location: i
         });
-    return (0, r.jsx)(j, {
+    return (0, r.jsx)(y, {
         ...s,
         sectionName: l,
         application: t,

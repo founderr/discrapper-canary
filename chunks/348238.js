@@ -122,7 +122,7 @@ function b(e, t, s, l) {
             s({ contextMenu: !0 }), (0, r.jW)(e, async () => {
                 if (N) {
                     let {default: e} = await Promise.all([
-                        n.e('47939'),
+                        n.e('29975'),
                         n.e('10941')
                     ]).then(n.bind(n, 240678));
                     return n => (0, i.jsx)(e, {
@@ -134,7 +134,7 @@ function b(e, t, s, l) {
                 }
                 {
                     let {default: e} = await Promise.all([
-                        n.e('47939'),
+                        n.e('29975'),
                         n.e('37220'),
                         n.e('92557'),
                         n.e('53926')

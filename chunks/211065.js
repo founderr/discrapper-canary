@@ -1,5 +1,5 @@
 a.r(t), a(47120);
-var s = a(735250), n = a(470079), l = a(512722), o = a.n(l), r = a(442837), i = a(481060), u = a(596454), d = a(410575), c = a(907040), S = a(246133), h = a(695346), m = a(293273), p = a(594174), T = a(401227), _ = a(626135), C = a(51144), f = a(720449), g = a(875425), O = a(981631), A = a(185923), j = a(689938), M = a(290913);
+var s = a(735250), n = a(470079), l = a(512722), o = a.n(l), r = a(442837), i = a(481060), u = a(596454), d = a(410575), c = a(907040), S = a(246133), m = a(695346), h = a(293273), T = a(594174), p = a(401227), _ = a(626135), C = a(51144), g = a(720449), f = a(875425), A = a(981631), O = a(185923), j = a(689938), M = a(290913);
 function b(e, t, a) {
     return t in e ? Object.defineProperty(e, t, {
         value: a,
@@ -8,7 +8,7 @@ function b(e, t, a) {
         writable: !0
     }) : e[t] = a, e;
 }
-let N = Object.values(g.F).filter(e => 'number' == typeof e).sort((e, t) => e - t);
+let N = Object.values(f.F).filter(e => 'number' == typeof e).sort((e, t) => e - t);
 function x(e) {
     return (0, s.jsxs)('div', {
         className: M.statusOptionItem,
@@ -50,9 +50,9 @@ class v extends n.PureComponent {
             sourceAnalyticsLocations: e,
             sourceAnalyticsContext: t
         } = this.props;
-        _.default.track(O.rMx.OPEN_MODAL, {
+        _.default.track(A.rMx.OPEN_MODAL, {
             source: null == t ? void 0 : t.location,
-            type: O.jXE.CUSTOM_STATUS_MODAL,
+            type: A.jXE.CUSTOM_STATUS_MODAL,
             load_id: null == t ? void 0 : t.loadId,
             location_stack: e
         });
@@ -61,22 +61,22 @@ class v extends n.PureComponent {
         return [
             {
                 key: 1,
-                value: g.F.TODAY,
+                value: f.F.TODAY,
                 label: j.Z.Messages.CUSTOM_STATUS_TODAY
             },
             {
                 key: 2,
-                value: g.F.HOURS_4,
+                value: f.F.HOURS_4,
                 label: j.Z.Messages.CUSTOM_STATUS_HOURS.format({ hours: 4 })
             },
             {
                 key: 3,
-                value: g.F.HOURS_1,
+                value: f.F.HOURS_1,
                 label: j.Z.Messages.CUSTOM_STATUS_HOURS.format({ hours: 1 })
             },
             {
                 key: 4,
-                value: g.F.MINUTES_30,
+                value: f.F.MINUTES_30,
                 label: j.Z.Messages.CUSTOM_STATUS_MINUTES.format({ minutes: 30 })
             },
             {
@@ -87,7 +87,7 @@ class v extends n.PureComponent {
         ];
     }
     get analyticsLocation() {
-        return { page: O.ZY5.CUSTOM_STATUS_MODAL };
+        return { page: A.ZY5.CUSTOM_STATUS_MODAL };
     }
     getEmojiButtonRenderer() {
         let {emojiInfo: e} = this.state;
@@ -118,7 +118,7 @@ class v extends n.PureComponent {
                             align: 'top',
                             children: (e, t) => {
                                 let {isShown: a} = t;
-                                return (0, s.jsx)(T.Z, {
+                                return (0, s.jsx)(p.Z, {
                                     ...e,
                                     active: a,
                                     className: M.emojiButton,
@@ -129,7 +129,7 @@ class v extends n.PureComponent {
                         })
                     }),
                     (0, s.jsx)(i.TextInput, {
-                        maxLength: g.s,
+                        maxLength: f.s,
                         value: t,
                         inputClassName: M.input,
                         placeholder: j.Z.Messages.CUSTOM_STATUS_MODAL_PLACEHOLDER,
@@ -250,20 +250,20 @@ class v extends n.PureComponent {
             text: null != this.props.customStatus && null != this.props.customStatus.state ? this.props.customStatus.state : '',
             clearAfter: function () {
                 var e, t, a;
-                let s = h.Ok.getSetting();
+                let s = m.Ok.getSetting();
                 if (null == s || '' === s.expiresAtMs)
-                    return g.F.TODAY;
+                    return f.F.TODAY;
                 let n = Number(s.expiresAtMs);
                 if (isNaN(n))
-                    return g.F.TODAY;
+                    return f.F.TODAY;
                 let l = new Date(), o = new Date(n);
                 if (t = l, a = o, t.getFullYear() !== a.getFullYear() || t.getMonth() !== a.getMonth() || t.getDate() !== a.getDate())
-                    return g.F.TODAY;
+                    return f.F.TODAY;
                 let r = Number(n) - Date.now();
-                return null !== (e = N.find(e => r <= e)) && void 0 !== e ? e : g.F.TODAY;
+                return null !== (e = N.find(e => r <= e)) && void 0 !== e ? e : f.F.TODAY;
             }(),
             status: function () {
-                let e = h.co.getSetting();
+                let e = m.co.getSetting();
                 return U.some(t => t.value === e) ? e : i.StatusTypes.ONLINE;
             }()
         }), b(this, 'handleClearStatus', () => {
@@ -301,10 +301,10 @@ class v extends n.PureComponent {
                     text: s,
                     clearAfter: n,
                     status: l
-                } = this.state, o = h.co.getSetting();
-            o !== l && (0, S.Z)(l, o, e), (0, f.Z)(s, a, n, e), t();
+                } = this.state, o = m.co.getSetting();
+            o !== l && (0, S.Z)(l, o, e), (0, g.Z)(s, a, n, e), t();
         }), b(this, 'handleKeyPress', e => {
-            e.which === O.yXg.ENTER && this.handleSaveStatus();
+            e.which === A.yXg.ENTER && this.handleSaveStatus();
         }), b(this, 'renderEmojiPicker', e => {
             let {closePopout: t} = e, {onClose: a} = this.props;
             return (0, s.jsx)(c.Z, {
@@ -312,19 +312,19 @@ class v extends n.PureComponent {
                 onSelectEmoji: (e, a) => {
                     this.handleEmojiChange(e), a && t();
                 },
-                pickerIntention: A.Hz.STATUS,
+                pickerIntention: O.Hz.STATUS,
                 onNavigateAway: a
             });
         });
     }
 }
 t.default = r.ZP.connectStores([
-    m.Z,
-    p.default
+    h.Z,
+    T.default
 ], () => {
-    let e = p.default.getCurrentUser();
+    let e = T.default.getCurrentUser();
     return o()(null != e, 'CustomStatusModal: user cannot be null'), {
-        customStatus: m.Z.getCustomStatusActivity(),
+        customStatus: h.Z.getCustomStatusActivity(),
         user: e
     };
 }, { forwardRef: !0 })(v);

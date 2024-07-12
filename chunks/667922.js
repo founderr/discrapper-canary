@@ -3,18 +3,18 @@ t.d(n, {
         return Z;
     }
 });
-var i = t(735250), a = t(470079), r = t(442837), l = t(481060), o = t(543241), s = t(222677), u = t(995774), c = t(665906), d = t(695346), E = t(496675), f = t(768581), M = t(585483), I = t(176354), g = t(981631), m = t(185923), _ = t(689938);
+var i = t(735250), a = t(470079), r = t(442837), l = t(481060), o = t(543241), s = t(222677), u = t(995774), c = t(665906), d = t(695346), E = t(496675), M = t(768581), I = t(585483), m = t(176354), _ = t(981631), g = t(185923), f = t(689938);
 function Z(e, n) {
-    let {reducedMotion: t} = a.useContext(l.AccessibilityPreferencesContext), Z = (0, c.$R)(n), S = (0, r.e7)([E.Z], () => (n.isPrivate() || E.Z.can(g.Plq.ADD_REACTIONS, n)) && Z, [
+    let {reducedMotion: t} = a.useContext(l.AccessibilityPreferencesContext), Z = (0, c.$R)(n), S = (0, r.e7)([E.Z], () => (n.isPrivate() || E.Z.can(_.Plq.ADD_REACTIONS, n)) && Z, [
             n,
             Z
         ]), v = (0, o.MZ)(n.getGuildId());
-    if (!d.nc.getSetting() || !S || e.type === g.uaV.GUILD_INVITE_REMINDER)
+    if (!d.nc.getSetting() || !S || e.type === _.uaV.GUILD_INVITE_REMINDER)
         return null;
-    let A = v.filter(e => !I.ZP.isEmojiFilteredOrLocked({
+    let A = v.filter(e => !m.ZP.isEmojiFilteredOrLocked({
         emoji: e,
         channel: n,
-        intention: m.Hz.REACTION
+        intention: g.Hz.REACTION
     })).slice(0, 12).map((a, r) => {
         var o, c;
         return (0, i.jsx)(l.MenuItem, {
@@ -24,11 +24,11 @@ function Z(e, n) {
             imageUrl: e => {
                 var n;
                 let {isFocused: i} = e;
-                return null != a.id ? f.ZP.getEmojiURL({
+                return null != a.id ? M.ZP.getEmojiURL({
                     id: a.id,
                     animated: a.animated && (!t.enabled || i),
                     size: 18
-                }) : I.ZP.getURL(null !== (n = a.optionallyDiverseSequence) && void 0 !== n ? n : '');
+                }) : m.ZP.getURL(null !== (n = a.optionallyDiverseSequence) && void 0 !== n ? n : '');
             },
             action: () => {
                 (0, s.rU)(n.id, e.id, (0, u.g1)(a), void 0);
@@ -38,9 +38,9 @@ function Z(e, n) {
     });
     return (0, i.jsx)(l.MenuItem, {
         id: 'add-reaction',
-        label: _.Z.Messages.ADD_REACTION,
+        label: f.Z.Messages.ADD_REACTION,
         action: () => {
-            M.S.dispatchKeyed(g.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+            I.S.dispatchKeyed(_.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
         color: 'default',
         children: (0, i.jsxs)(i.Fragment, {
@@ -50,10 +50,10 @@ function Z(e, n) {
                 (0, i.jsx)(l.MenuItem, {
                     color: 'default',
                     id: 'other-reactions',
-                    label: _.Z.Messages.VIEW_MORE,
+                    label: f.Z.Messages.VIEW_MORE,
                     icon: l.ReactionIcon,
                     action: () => {
-                        M.S.dispatchKeyed(g.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+                        I.S.dispatchKeyed(_.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
                     }
                 })
             ]

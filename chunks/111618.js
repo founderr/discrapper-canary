@@ -1,16 +1,16 @@
-var i, a, r, l, o = t(442837), s = t(570140);
+var i, s, l, a, r = t(442837), o = t(570140);
 let u = {};
-class c extends (l = o.ZP.Store) {
+class d extends (a = r.ZP.Store) {
     getOptions(e) {
         return u[e];
     }
 }
-r = 'SendMessageOptionsStore', (a = 'displayName') in (i = c) ? Object.defineProperty(i, a, {
-    value: r,
+l = 'SendMessageOptionsStore', (s = 'displayName') in (i = d) ? Object.defineProperty(i, s, {
+    value: l,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : i[a] = r, n.Z = new c(s.Z, {
+}) : i[s] = l, n.Z = new d(o.Z, {
     MESSAGE_CREATE: function (e) {
         let {
             message: n,

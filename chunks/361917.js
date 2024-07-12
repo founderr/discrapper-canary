@@ -3,7 +3,7 @@ t.d(n, {
         return G;
     }
 }), t(47120), t(653041), t(724458);
-var i = t(735250), l = t(470079), r = t(392711), a = t.n(r), s = t(892814), o = t(79411), c = t(442837), u = t(481060), d = t(911969), m = t(595519), p = t(115130), _ = t(566620), E = t(127255), h = t(880308), A = t(427996), f = t(367907), N = t(399654), C = t(844439), v = t(254711), I = t(213459), x = t(10718), P = t(895924), T = t(148958), g = t(424602), R = t(541099), S = t(827498), M = t(87005), L = t(695676), j = t(98880), O = t(804307), y = t(888617), b = t(561160), Z = t(41558), H = t(105862), U = t(28147), D = t(981631), k = t(689079), B = t(689938), w = t(678313);
+var i = t(735250), l = t(470079), r = t(392711), a = t.n(r), s = t(892814), o = t(79411), c = t(442837), u = t(481060), d = t(911969), m = t(595519), p = t(115130), _ = t(566620), E = t(127255), h = t(880308), A = t(427996), f = t(367907), N = t(399654), C = t(844439), v = t(254711), I = t(213459), x = t(10718), P = t(895924), T = t(148958), g = t(424602), R = t(541099), S = t(827498), M = t(87005), L = t(695676), y = t(98880), j = t(804307), O = t(888617), b = t(561160), Z = t(41558), H = t(105862), U = t(28147), D = t(981631), k = t(689079), B = t(689938), w = t(678313);
 let V = [], W = Array(8).fill(0).map((e, n) => n), F = [
         {
             cards: [
@@ -12,11 +12,11 @@ let V = [], W = Array(8).fill(0).map((e, n) => n), F = [
                 ,
                 ,
             ].fill(0).map((e, n) => n),
-            look: j.U4.LARGE_BANNER
+            look: y.U4.LARGE_BANNER
         },
         {
             cards: Array(8).fill(0).map((e, n) => n),
-            look: j.U4.NO_BANNER
+            look: y.U4.NO_BANNER
         },
         {
             cards: [
@@ -25,7 +25,7 @@ let V = [], W = Array(8).fill(0).map((e, n) => n), F = [
                 ,
                 ,
             ].fill(0).map((e, n) => n),
-            look: j.U4.NO_BANNER
+            look: y.U4.NO_BANNER
         }
     ];
 function G(e) {
@@ -35,7 +35,7 @@ function G(e) {
             searchQuery: r,
             setSearchQuery: a,
             setScroller: s
-        } = e, o = (0, m.NX)(n.id, !0), d = (0, c.e7)([p.Z], () => p.Z.getIsEnabled(), []), E = t === S._b.TEXT, h = t === S._b.TEXT, A = t === S._b.TEXT, f = t === S._b.VOICE, N = t === S._b.TEXT, [C, v] = K(E), [I, x] = K(h), [P, T] = K(A), [g, R] = K(f), M = C && I && P && g, L = (A || h) && !M, j = f && d;
+        } = e, o = (0, m.NX)(n.id, !0), d = (0, c.e7)([p.Z], () => p.Z.getIsEnabled(), []), E = t === S._b.TEXT, h = t === S._b.TEXT, A = t === S._b.TEXT, f = t === S._b.VOICE, N = t === S._b.TEXT, [C, v] = K(E), [I, x] = K(h), [P, T] = K(A), [g, R] = K(f), M = C && I && P && g, L = (A || h) && !M, y = f && d;
     l.useEffect(() => {
         o && (0, _.w1)({
             guildId: n.getGuildId(),
@@ -45,11 +45,11 @@ function G(e) {
         o,
         n
     ]);
-    let O = r.length > 0;
+    let j = r.length > 0;
     return (0, i.jsxs)('div', {
         className: w.container,
         children: [
-            j ? (0, i.jsx)(Y, {}) : null,
+            y ? (0, i.jsx)(Y, {}) : null,
             (0, i.jsx)(z, {
                 searchQuery: r,
                 setSearchQuery: a,
@@ -59,7 +59,7 @@ function G(e) {
                 ref: s,
                 className: w.scrollableContent,
                 fade: !0,
-                children: O ? (0, i.jsx)('div', {
+                children: j ? (0, i.jsx)('div', {
                     children: (0, i.jsx)(U.Z, {
                         channel: n,
                         query: r,
@@ -178,7 +178,7 @@ function X(e) {
         }, [a]), c = B.Z.Messages.APP_LAUNCHER_HOME_RECENT_APPS_HEADER, {
             items: u,
             handleViewMore: d
-        } = ee(c, t === S._b.VOICE ? j.U4.LARGE_BANNER : j.U4.NO_BANNER, o, 8, S.L3.RECENT_APPS);
+        } = ee(c, t === S._b.VOICE ? y.U4.LARGE_BANNER : y.U4.NO_BANNER, o, 8, S.L3.RECENT_APPS);
     l.useEffect(() => {
         if (!0 !== s.current)
             0 !== u.length && (0, f.yw)(D.rMx.APP_LAUNCHER_FRECENTS_SEEN, {
@@ -214,9 +214,9 @@ function X(e) {
                             application: t,
                             isPartner: l
                         } = e;
-                        return (0, i.jsx)(j.kA, {
+                        return (0, i.jsx)(y.kA, {
                             application: t,
-                            look: j.U4.ICON,
+                            look: y.U4.ICON,
                             isPartner: l,
                             location: S.G0.HOME,
                             sectionName: S.L3.RECENT_APPS,
@@ -237,7 +237,7 @@ function q(e) {
     let r = (0, E.Z)({
             guildId: n.getGuildId(),
             channel: n
-        }), a = j.U4.LARGE_BANNER, {trackSectionImpressionRef: s} = (0, y.Z)({
+        }), a = y.U4.LARGE_BANNER, {trackSectionImpressionRef: s} = (0, O.Z)({
             sectionName: S.L3.ACTIVITIES,
             numItems: r.length,
             numVisibleItems: r.length
@@ -257,7 +257,7 @@ function q(e) {
                 className: w.sectionContentContainer,
                 children: r.map((e, t) => {
                     let {application: l} = e;
-                    return (0, i.jsx)(j.qR, {
+                    return (0, i.jsx)(y.qR, {
                         channel: n,
                         application: l,
                         look: a,
@@ -304,7 +304,7 @@ function Q(e) {
         })).map(e => ({ application: e })), [p]), {
             items: h,
             handleViewMore: A
-        } = ee(B.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, j.U4.NO_BANNER, E, 8, _), {trackSectionImpressionRef: f} = (0, y.Z)({
+        } = ee(B.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, y.U4.NO_BANNER, E, 8, _), {trackSectionImpressionRef: f} = (0, O.Z)({
             sectionName: _,
             numItems: E.length,
             numVisibleItems: h.length
@@ -326,15 +326,15 @@ function Q(e) {
             }),
             (0, i.jsx)('div', {
                 className: w.sectionContentContainer,
-                children: N ? W.map(e => (0, i.jsx)(O.Z, { look: j.U4.NO_BANNER }, e)) : h.map((e, n) => {
+                children: N ? W.map(e => (0, i.jsx)(j.Z, { look: y.U4.NO_BANNER }, e)) : h.map((e, n) => {
                     let {
                         application: t,
                         isPartner: l
                     } = e;
-                    return null != t ? (0, i.jsx)(j.kA, {
+                    return null != t ? (0, i.jsx)(y.kA, {
                         application: t,
                         isPartner: l,
-                        look: j.U4.NO_BANNER,
+                        look: y.U4.NO_BANNER,
                         sectionName: _,
                         resultsPosition: n,
                         location: P.Vh.APP_LAUNCHER_HOME
@@ -425,7 +425,7 @@ function J(e) {
                     (0, i.jsx)(Z.Z.Loading, {}),
                     (0, i.jsx)('div', {
                         className: w.sectionContentContainer,
-                        children: t.map(e => (0, i.jsx)(O.Z, { look: l }, e))
+                        children: t.map(e => (0, i.jsx)(j.Z, { look: l }, e))
                     })
                 ]
             }, n);
@@ -439,7 +439,7 @@ function $(e) {
     let {
             recommendationsSection: n,
             remainingActivities: t
-        } = e, r = n.section_title, a = n.type === o.i.BANNER_CARDS ? j.U4.LARGE_BANNER : j.U4.NO_BANNER, s = l.useMemo(() => {
+        } = e, r = n.section_title, a = n.type === o.i.BANNER_CARDS ? y.U4.LARGE_BANNER : y.U4.NO_BANNER, s = l.useMemo(() => {
             let e = n.items.map(e => {
                 let {
                     application: n,
@@ -461,7 +461,7 @@ function $(e) {
         ]), c = n.key, {
             items: u,
             handleViewMore: d
-        } = ee(r, a, s, 8, c), {trackSectionImpressionRef: m} = (0, y.Z)({
+        } = ee(r, a, s, 8, c), {trackSectionImpressionRef: m} = (0, O.Z)({
             sectionName: c,
             numItems: s.length,
             numVisibleItems: u.length
@@ -483,7 +483,7 @@ function $(e) {
                         application: t,
                         isPartner: l
                     } = e;
-                    return (0, i.jsx)(j.kA, {
+                    return (0, i.jsx)(y.kA, {
                         application: t,
                         look: a,
                         isPartner: l,

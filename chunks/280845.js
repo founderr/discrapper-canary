@@ -3,25 +3,25 @@ t.d(n, {
         return f;
     },
     o: function () {
-        return M;
+        return g;
     }
 }), t(47120);
-var i = t(275726), a = t(442837), r = t(71619), l = t(665906), o = t(496675), s = t(594174), u = t(981631), c = t(231338);
-function d(e, n, t) {
-    let a;
-    return (a = e.isPrivate() ? !e.isSystemDM() : t.can(c.Pl.SEND_MESSAGES, e) && t.can(c.Pl.READ_MESSAGE_HISTORY, e)) && i.V.REPLYABLE.has(n.type);
+var i = t(275726), s = t(442837), l = t(71619), a = t(665906), r = t(496675), o = t(594174), u = t(981631), d = t(231338);
+function c(e, n, t) {
+    let s;
+    return (s = e.isPrivate() ? !e.isSystemDM() : t.can(d.Pl.SEND_MESSAGES, e) && t.can(d.Pl.READ_MESSAGE_HISTORY, e)) && i.V.REPLYABLE.has(n.type);
 }
-function E(e, n, t, i, a) {
-    let r = n.hasFlag(u.iLy.EPHEMERAL), l = n.state === u.yb.SENT, o = !e.isArchivedThread() || a;
-    return t && l && !r && !i && o;
+function E(e, n, t, i, s) {
+    let l = n.hasFlag(u.iLy.EPHEMERAL), a = n.state === u.yb.SENT, r = !e.isArchivedThread() || s;
+    return t && a && !l && !i && r;
 }
 function f(e, n) {
     var t;
-    let i = (0, l.tc)(e), [, s] = (0, r.AB)(null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : void 0), u = (0, a.e7)([o.Z], () => null != e && null != n && d(e, n, o.Z));
-    return null != e && null != n && E(e, n, u, s, i);
+    let i = (0, a.tc)(e), [, o] = (0, l.AB)(null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : void 0), u = (0, s.e7)([r.Z], () => null != e && null != n && c(e, n, r.Z));
+    return null != e && null != n && E(e, n, u, o, i);
 }
-function M(e, n) {
+function g(e, n) {
     var t;
-    let i = (0, l.kn)(e), a = d(e, n, o.Z), u = s.default.getCurrentUser(), [, c] = (0, r.s5)(null == u ? void 0 : u.id, null !== (t = e.getGuildId()) && void 0 !== t ? t : void 0);
-    return E(e, n, a, c, i);
+    let i = (0, a.kn)(e), s = c(e, n, r.Z), u = o.default.getCurrentUser(), [, d] = (0, l.s5)(null == u ? void 0 : u.id, null !== (t = e.getGuildId()) && void 0 !== t ? t : void 0);
+    return E(e, n, s, d, i);
 }

@@ -1,16 +1,16 @@
-s.d(n, {
+t.d(n, {
     Z: function () {
         return o;
     }
 });
-var t = s(735250);
-s(470079);
-var l = s(481060), i = s(665906), a = s(50284), r = s(689938);
+var i = t(735250);
+t(470079);
+var s = t(481060), l = t(665906), a = t(50284), r = t(689938);
 function o(e, n) {
-    return (0, i.$R)(n) ? (0, t.jsx)(l.MenuItem, {
+    return (0, l.$R)(n) ? (0, i.jsx)(s.MenuItem, {
         id: 'mark-unread',
         label: r.Z.Messages.MARK_UNREAD,
         action: () => (0, a.Z)(n.id, e.id),
-        icon: l.ChatMarkUnreadIcon
+        icon: s.ChatMarkUnreadIcon
     }) : null;
 }

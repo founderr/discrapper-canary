@@ -1,18 +1,18 @@
 t.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = t(735250);
 t(470079);
-var a = t(481060), r = t(280845), l = t(996861), o = t(689938);
-function s(e, n) {
-    return (0, r.U)(n, e) ? (0, i.jsx)(a.MenuItem, {
+var s = t(481060), l = t(280845), a = t(996861), r = t(689938);
+function o(e, n) {
+    return (0, l.U)(n, e) ? (0, i.jsx)(s.MenuItem, {
         id: 'reply',
-        label: o.Z.Messages.MESSAGE_ACTION_REPLY,
-        icon: a.ArrowAngleLeftUpIcon,
+        label: r.Z.Messages.MESSAGE_ACTION_REPLY,
+        icon: s.ArrowAngleLeftUpIcon,
         action: t => {
-            (0, l.HH)(n, e, t);
+            (0, a.HH)(n, e, t);
         }
     }) : null;
 }

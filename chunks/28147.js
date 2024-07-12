@@ -10,9 +10,9 @@ let S = Array(6).fill(0).map((e, n) => n), M = [
         ,
     ].fill(0).map((e, n) => n);
 function L(e) {
-    return e.enableGlobalSearch ? (0, i.jsx)(j, { ...e }) : (0, i.jsx)(O, { ...e });
+    return e.enableGlobalSearch ? (0, i.jsx)(y, { ...e }) : (0, i.jsx)(j, { ...e });
 }
-function j(e) {
+function y(e) {
     let {
             channel: n,
             query: t,
@@ -66,7 +66,7 @@ function j(e) {
         textContent: r === E._b.TEXT ? g.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : g.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
     }) : (0, i.jsxs)('div', {
         children: [
-            f && (0, i.jsx)(y, {
+            f && (0, i.jsx)(O, {
                 channel: n,
                 commandResults: A,
                 query: t
@@ -80,7 +80,7 @@ function j(e) {
         ]
     });
 }
-function O(e) {
+function j(e) {
     let {
             channel: n,
             query: t,
@@ -110,7 +110,7 @@ function O(e) {
         textContent: r === E._b.TEXT ? g.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : g.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
     }) : (0, i.jsxs)('div', {
         children: [
-            p && (0, i.jsx)(y, {
+            p && (0, i.jsx)(O, {
                 channel: n,
                 commandResults: m,
                 query: t
@@ -123,7 +123,7 @@ function O(e) {
         ]
     });
 }
-function y(e) {
+function O(e) {
     var n;
     let {
             channel: t,
@@ -143,19 +143,19 @@ function y(e) {
             isExpanded: x,
             durationMs: 200,
             maxAnimationHeight: P.lv
-        }), j = x || M, O = x ? v.Z.buttonTypes.VIEW_LESS : v.Z.buttonTypes.VIEW_MORE, y = j ? r : d;
+        }), y = x || M, j = x ? v.Z.buttonTypes.VIEW_LESS : v.Z.buttonTypes.VIEW_MORE, O = y ? r : d;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(v.Z, {
                 title: g.Z.Messages.COMMANDS,
-                buttonType: O,
+                buttonType: j,
                 onClickViewButton: s ? N : void 0
             }),
             (0, i.jsx)('div', {
                 className: R.sectionContentContainer,
                 ref: S,
                 onTransitionEnd: L,
-                children: y.map((e, n) => {
+                children: O.map((e, n) => {
                     let {
                         command: l,
                         application: r,
