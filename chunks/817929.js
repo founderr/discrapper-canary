@@ -9,17 +9,20 @@ n.d(t, {
 var l = n(735250);
 n(470079);
 var r = n(120356), i = n.n(r), a = n(729594), o = n(689938), d = n(45209);
-let s = 'sessionshare.sp-int.playstation.com', u = (e, t) => 'https://'.concat(s, '/embed/').concat(e, '?locale=').concat(t), m = ['PlayStation'], h = (e, t) => {
+let s = [
+        'sessionshare.sp-int.playstation.com',
+        'sessionshare.playstation.com'
+    ], u = (e, t, n) => 'https://'.concat(e, '/embed/').concat(t, '?locale=').concat(n), m = ['PlayStation'], h = (e, t) => {
         let {
                 host: n,
                 pathname: l
             } = t, r = [];
         switch (null != l && (r = l.split('/')), e) {
         case 'PlayStation':
-            if (n !== s || 2 !== r.length)
+            if (null == n || !s.includes(n) || 2 !== r.length)
                 break;
             return {
-                embedUrl: u(r[1], o.Z.getLocale()),
+                embedUrl: u(n, r[1], o.Z.getLocale()),
                 style: {
                     width: 400,
                     height: 300,
