@@ -136,7 +136,7 @@ t.Z = {
 let r = function(e, t) {
     if (null != t)
       return t;
-    if (!(0, c.cn)() || !!(0, E.JH)())
+    if (!(0, c.cn)() || !!(0, E.J)())
       return (0, h.V)(e);
   }((await x(e)).id, n),
   i = t;
@@ -414,7 +414,7 @@ o.Z.dispatch({
 });
   },
   nsfwReturnToSafety(e) {
-if ((0, c.cn)() && !(0, E.JH)()) {
+if ((0, c.cn)() && !(0, E.J)()) {
   let e = (0, d.D)();
   if ((null == e ? void 0 : e.isReady()) !== !0)
     return;
