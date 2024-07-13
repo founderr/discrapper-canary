@@ -1,39 +1,25 @@
 n.d(t, {
   JH: function() {
-return s;
-  },
-  O7: function() {
-return u;
+return a;
   },
   Z0: function() {
-return c;
+return s;
   },
   x7: function() {
-return l;
+return o;
   }
 });
 var r = n(57132),
-  i = n(215355),
-  a = n(289551),
-  o = n(981631);
+  i = n(981631);
 
-function s() {
+function a() {
   return (0, r.cn)();
 }
 
-function l() {
-  return (0, r.cn)() && !(0, i.LI)({
-location: 'isSplitMessagesTab'
-  }).mergeTabs;
+function o() {
+  return !1;
 }
 
-function u() {
-  if (!l())
-return !1;
-  let e = (0, a.Z)();
-  return (null == e ? void 0 : e.name) === 'messages';
-}
-
-function c(e) {
-  return !!s() && (!l() || null != e && e !== o.ME);
+function s(e) {
+  return !!a() || !1;
 }
