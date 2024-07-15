@@ -380,10 +380,7 @@ let {
 }, {
   autoTrackExposure: !0
 });
-if (n && a().isEmpty(t) && a().isEmpty(j.emojiReactionPendingUsages) && es.overwriteHistory(a().mapValues(e, e => ({
-    ...e,
-    recentUses: e.recentUses.map(Number).filter(e => e > 0)
-  })), []), a().isEmpty(e) && a().isEmpty(j.pendingUsages) && A.Z.hasLoaded(H.yP.FRECENCY_AND_FAVORITES_SETTINGS)) {
+if (a().isEmpty(e) && a().isEmpty(j.pendingUsages) && A.Z.hasLoaded(H.yP.FRECENCY_AND_FAVORITES_SETTINGS))
   for (let e of [
       'thumbsup',
       'thumbsup',
@@ -400,24 +397,23 @@ if (n && a().isEmpty(t) && a().isEmpty(j.emojiReactionPendingUsages) && es.overw
       '100'
     ])
     eo.track(e);
-  if (n && a().isEmpty(t) && a().isEmpty(j.emojiReactionPendingUsages))
-    for (let e of [
-        '100',
-        '100',
-        'thumbsup',
-        'thumbsup',
-        'thumbsdown',
-        'thumbsdown',
-        'heart',
-        'point_up',
-        'eyes',
-        'weary',
-        'laughing',
-        'white_check_mark',
-        'x'
-      ])
-      es.track(e);
-}
+if (n && a().isEmpty(t) && a().isEmpty(j.emojiReactionPendingUsages) && A.Z.hasLoaded(H.yP.FRECENCY_AND_FAVORITES_SETTINGS))
+  for (let e of [
+      '100',
+      '100',
+      'thumbsup',
+      'thumbsup',
+      'thumbsdown',
+      'thumbsdown',
+      'heart',
+      'point_up',
+      'eyes',
+      'weary',
+      'laughing',
+      'white_check_mark',
+      'x'
+    ])
+    es.track(e);
   }(u, c);
 }
 
@@ -611,7 +607,7 @@ Z(eh, 'displayName', 'EmojiStore'), Z(eh, 'persistKey', 'EmojiStoreV2'), Z(eh, '
   ...e
 })]), t.Z = new eh(c.Z, {
   LOGOUT: function() {
-j.pendingUsages = [];
+j.pendingUsages = [], j.emojiReactionPendingUsages = [];
   },
   BACKGROUND_SYNC: function() {
 el();
@@ -662,18 +658,12 @@ eu(t.id), ee.delete(t.id), ec();
   MESSAGE_REACTION_ADD: function(e) {
 if (!e.optimistic)
   return !1;
-let {
-  canSplitFrecencyList: t
-} = U.Z.getCurrentConfig({
-  location: 'handleAddReaction'
-}, {
-  autoTrackExposure: !0
-}), n = null != e.emoji.id && '0' !== e.emoji.id ? e.emoji : w.ZP.getByName(w.ZP.convertSurrogateToName(e.emoji.name, !1));
-if (null == n)
+let t = null != e.emoji.id && '0' !== e.emoji.id ? e.emoji : w.ZP.getByName(w.ZP.convertSurrogateToName(e.emoji.name, !1));
+if (null == t)
   return !1;
-t ? function(e) {
+(function(e) {
   if (null == e)
-    return !1;
+    return 0;
   for (let r of e) {
     var t, n;
     let e = null !== (n = null !== (t = r.id) && void 0 !== t ? t : r.uniqueName) && void 0 !== n ? n : r.name;
@@ -683,8 +673,8 @@ t ? function(e) {
     }));
   }
   let r = e.length > 0;
-  return r && 0 !== q && es.compute(), r;
-}([n]) : eE([n]);
+  r && 0 !== q && es.compute();
+}([t]), eE([t]));
   },
   EMOJI_TRACK_USAGE: function(e) {
 let {

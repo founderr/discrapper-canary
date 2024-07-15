@@ -175,6 +175,22 @@ run(e) {
 cleanup() {
   l.K.remove(_);
 }
+  },
+  {
+version: 10,
+run(e) {
+  var t;
+  if (null == e.emojiFrecency)
+    return !1;
+  let n = null !== (t = e.emojiFrecency.emojis) && void 0 !== t ? t : {},
+    i = !1;
+  if (s().size(n) > 0) {
+    let t = r.PL.create();
+    r.PL.mergePartial(t, e.emojiFrecency), null != e.emojiReactionFrecency && r.PL.mergePartial(t, e.emojiReactionFrecency), e.emojiReactionFrecency = t, i = !0;
+  }
+  return i;
+},
+cleanup() {}
   }
 ];
 t.Z = h;
