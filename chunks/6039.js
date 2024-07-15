@@ -17,8 +17,8 @@ var i = n(735250),
   p = n(390500),
   T = n(200305),
   S = n(981631),
-  C = n(898625),
-  f = n(689938),
+  f = n(898625),
+  C = n(689938),
   N = n(131147);
 t.Z = e => {
   var t;
@@ -26,7 +26,7 @@ t.Z = e => {
   let {
 guildId: Z,
 inviteCode: L
-  } = e, [v, O] = s.useState(C.hO.INITIAL), R = (0, a.e7)([h.Z], () => h.Z.get(Z)), x = (0, a.e7)([m.Z], () => m.Z.getRequest(Z)), b = (0, a.e7)([c.Z], () => c.Z.getGuild(Z)), {
+  } = e, [v, O] = s.useState(f.hO.INITIAL), R = (0, a.e7)([h.Z], () => h.Z.get(Z)), x = (0, a.e7)([m.Z], () => m.Z.getRequest(Z)), b = (0, a.e7)([c.Z], () => c.Z.getGuild(Z)), {
 hasFetchedRequestToJoinGuilds: P,
 guildPreviewDisabled: M
   } = (0, a.cj)([m.Z], () => ({
@@ -49,16 +49,16 @@ y = async e => {
 }, j = () => {
   _.Z.resetGuildJoinRequest(Z);
 };
-  let U = (n = f.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
+  let U = (n = C.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
   name: null == M ? void 0 : M.toString()
 }), A = () => {
-  O(Math.max(v, C.hO.FILLING)), _.Z.removeGuildJoinRequest(Z), (0, o.uL)(S.Z5c.ME);
+  O(Math.max(v, f.hO.FILLING)), _.Z.removeGuildJoinRequest(Z), (0, o.uL)(S.Z5c.ME);
 }, () => {
   (0, r.openModal)(e => (0, i.jsx)(r.ConfirmModal, {
-    header: f.Z.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
-    cancelText: f.Z.Messages.NEVERMIND,
+    header: C.Z.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
+    cancelText: C.Z.Messages.NEVERMIND,
     onConfirm: A,
-    confirmText: f.Z.Messages.YES_TEXT,
+    confirmText: C.Z.Messages.YES_TEXT,
     confirmButtonColor: r.Button.Colors.RED,
     ...e,
     children: (0, i.jsx)(r.Text, {
@@ -95,9 +95,9 @@ children: (0, i.jsxs)(l.Z, {
             });
           case I.wB.REJECTED:
             return (0, i.jsx)(g.Z, {
-              reapplyText: f.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
+              reapplyText: C.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
               onReapply: j,
-              confirmText: f.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
+              confirmText: C.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
               onWithdrawApplication: U,
               rejectionReason: null == x ? void 0 : x.rejectionReason,
               guild: M

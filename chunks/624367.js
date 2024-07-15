@@ -27,8 +27,8 @@ var a = n(613828),
   S = n(147865),
   A = n(778569),
   R = n(513202),
-  x = n(884338),
-  O = n(403404),
+  O = n(884338),
+  x = n(403404),
   M = n(701488),
   v = n(981631),
   L = n(689938),
@@ -49,13 +49,13 @@ null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : ''
 b,
 y,
 G
-  ]), z = Array.from(null !== (f = null == W ? void 0 : W.userIds) && void 0 !== f ? f : []), K = (0, s.Wu)([T.default], () => z.map(e => T.default.getUser(e)).filter(N.lm), [z]), Q = (0, A.Z)({
+  ]), K = Array.from(null !== (f = null == W ? void 0 : W.userIds) && void 0 !== f ? f : []), z = (0, s.Wu)([T.default], () => K.map(e => T.default.getUser(e)).filter(N.lm), [K]), Q = (0, A.Z)({
 applicationId: b,
 size: P,
 names: ['embedded_cover']
-  }), q = E.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), X = K.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START, J = async () => {
+  }), q = E.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), X = z.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START, J = async () => {
 if (G) {
-  if (null != W && K.length > 0)
+  if (null != W && z.length > 0)
     await (0, C.Z)({
       applicationId: W.applicationId,
       currentEmbeddedApplication: H,
@@ -83,7 +83,7 @@ if (G) {
     }) : t();
   }
 } else
-  (0, O.Z)({
+  (0, x.Z)({
     guildId: k,
     locationObject: U.location,
     openInPopout: q,
@@ -129,11 +129,11 @@ children: (0, i.jsxs)('div', {
         (0, i.jsxs)('div', {
           className: Z.cta,
           children: [
-            K.length > 0 ? (0, i.jsx)('div', {
+            z.length > 0 ? (0, i.jsx)('div', {
               className: Z.avatars,
-              children: (0, i.jsx)(x.Z, {
+              children: (0, i.jsx)(O.Z, {
                 guildId: k,
-                users: K,
+                users: z,
                 max: 4
               })
             }) : (0, i.jsxs)('div', {

@@ -17,8 +17,8 @@ var i = n(735250),
   p = n(451478),
   T = n(390697),
   S = n(434184),
-  C = n(701861),
-  f = n(437314),
+  f = n(701861),
+  C = n(437314),
   N = n(696577),
   A = n(163417),
   Z = n(492347),
@@ -63,7 +63,7 @@ return (0, i.jsxs)('div', {
   className: x.emptyStateContainer,
   children: [
     t === O.pJs.ONLINE && (0, i.jsx)(I.Z, {}),
-    (0, i.jsx)(f.Z, {
+    (0, i.jsx)(C.Z, {
       type: t,
       onClick: () => {
         c.Z.setSection(O.pJs.ADD_FRIEND);
@@ -133,8 +133,8 @@ children: (0, i.jsxs)(u.Z, {
     }),
     H ? (0, i.jsx)('div', {
       className: x.emptyStateContainer,
-      children: (0, i.jsx)(f.Z, {
-        type: f.j.SECTION_NO_RESULTS
+      children: (0, i.jsx)(C.Z, {
+        type: C.j.SECTION_NO_RESULTS
       }, P)
     }) : (0, i.jsx)(A.Z, {
       relationshipCount: D,
@@ -159,7 +159,7 @@ children: (0, i.jsxs)(u.Z, {
           case O.pJs.ONLINE:
           case O.pJs.ALL:
           default:
-            return (0, i.jsx)(C.Z, {
+            return (0, i.jsx)(f.Z, {
               ...e,
               isFocused: M
             });

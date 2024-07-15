@@ -21,8 +21,8 @@ var i = n(392711),
   p = n(979651),
   T = n(626135),
   S = n(823379),
-  C = n(358085),
-  f = n(914946),
+  f = n(358085),
+  C = n(914946),
   N = n(238679),
   A = n(863141),
   Z = n(981631),
@@ -39,7 +39,7 @@ writable: !0
 }
 class R {
   loadServer() {
-for (let e of (C.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports))
+for (let e of (f.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports))
   this.rpcServer.registerTransport(e);
 for (let [e, t] of Object.entries(this.rpcCommandHandlers))
   this.rpcServer.setCommandHandler(e, t);
@@ -101,7 +101,7 @@ null != n && this.rpcServer.dispatchToSubscriptions(t, {
   channel_id: n
 }, {
   channel_id: n,
-  message: (0, f.Xb)(i)
+  message: (0, C.Xb)(i)
 }, s);
   }
   handleSpeaking(e) {
@@ -148,8 +148,8 @@ let {
 if (0 !== this.rpcServer.subscriptions.length)
   this.rpcServer.dispatchToSubscriptions(Z.zMe.NOTIFICATION_CREATE, {}, {
     channel_id: t,
-    message: (0, f.Xb)(n),
-    icon_url: null != i ? (0, f.RE)(i) : null,
+    message: (0, C.Xb)(n),
+    icon_url: null != i ? (0, C.RE)(i) : null,
     title: s,
     body: a
   });
@@ -291,7 +291,7 @@ let {
   }
 } = e;
 if (0 !== this.rpcServer.subscriptions.length)
-  this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(n, t));
+  this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(n, t));
   }
   handleRelationshipRemove(e) {
 let {
@@ -300,7 +300,7 @@ let {
   }
 } = e;
 if (0 !== this.rpcServer.subscriptions.length)
-  this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(Z.OGo.NONE, t));
+  this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(Z.OGo.NONE, t));
   }
   handlePresenceUpdate(e) {
 let {
@@ -317,13 +317,13 @@ if (0 !== this.rpcServer.subscriptions.length)
     if (null != t)
       return;
     let i = I.Z.getRelationshipType(n);
-    i === Z.OGo.NONE && o.Z.getUserAffinitiesUserIds().has(n) && (i = Z.OGo.IMPLICIT), i !== Z.OGo.NONE && this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(i, n));
+    i === Z.OGo.NONE && o.Z.getUserAffinitiesUserIds().has(n) && (i = Z.OGo.IMPLICIT), i !== Z.OGo.NONE && this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(i, n));
   });
   }
   handlePresencesReplace() {
 if (0 !== this.rpcServer.subscriptions.length)
   s().forEach(I.Z.getRelationships(), (e, t) => {
-    this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(e, t));
+    this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(e, t));
   });
   }
   handleEntitlementCreate(e) {

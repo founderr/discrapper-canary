@@ -27,7 +27,7 @@ autoWidth: u = !1
 T && (h(!1), g(!1));
   }, [T]);
   let S = d && (m || E),
-C = s.useMemo(() => (0, i.jsxs)(o.Clickable, {
+f = s.useMemo(() => (0, i.jsxs)(o.Clickable, {
   className: I.tooltipContentWrapper,
   onClick: c,
   onMouseEnter: () => {
@@ -48,7 +48,7 @@ C = s.useMemo(() => (0, i.jsxs)(o.Clickable, {
   T
 ]);
   return (0, i.jsx)(o.Tooltip, {
-text: C,
+text: f,
 position: 'bottom',
 'aria-label': a,
 shouldShow: S,

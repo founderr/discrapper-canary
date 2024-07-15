@@ -21,8 +21,8 @@ var i = n(735250),
   p = n(933557),
   T = n(287746),
   S = n(689938),
-  C = n(240196),
-  f = n(712759);
+  f = n(240196),
+  C = n(712759);
 
 function N(e) {
   let {
@@ -63,15 +63,15 @@ children: [
     })
   }),
   v && (0, i.jsxs)('div', {
-    className: f.hamBanner,
+    className: C.hamBanner,
     children: [
       (0, i.jsx)(r.Text, {
-        className: f.__invalid_hamBannerText,
+        className: C.__invalid_hamBannerText,
         variant: 'text-sm/normal',
         children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
       }),
       (0, i.jsx)(r.Button, {
-        className: f.hamBannerButton,
+        className: C.hamBannerButton,
         size: r.ButtonSizes.SMALL,
         onClick: () => b(t, O),
         children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
@@ -79,7 +79,7 @@ children: [
     ]
   }),
   (0, i.jsx)('div', {
-    className: C.chat,
+    className: f.chat,
     children: (0, i.jsx)(T.Z, {
       channel: t,
       guild: null,

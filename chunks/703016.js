@@ -17,8 +17,8 @@ var i = n(913527),
   p = n(292959),
   T = n(699516),
   S = n(944486),
-  C = n(9156),
-  f = n(594174),
+  f = n(9156),
+  C = n(594174),
   N = n(51144),
   A = n(196051),
   Z = n(441729),
@@ -35,7 +35,7 @@ function D(e, t, n, i) {
   let a = m.Z.getGuild(n),
 r = e.replace(M, O.Z.Messages.SPOILER).replace(/<@!?(\d+)>/g, (e, t) => {
   var i;
-  let s = f.default.getUser(t);
+  let s = C.default.getUser(t);
   if (null == s)
     return e;
   return null !== (i = I.ZP.getNick(n, s.id)) && void 0 !== i ? i : N.ZP.getName(s);
@@ -44,7 +44,7 @@ r = e.replace(M, O.Z.Messages.SPOILER).replace(/<@!?(\d+)>/g, (e, t) => {
   return null != n && null != n.name ? n.name : O.Z.Messages.MESSAGE_TTS_DELETED_ROLE;
 }).replace(/<#(\d+)>/g, (e, t) => {
   let n = h.Z.getChannel(t);
-  return null == n ? e : (0, l.F6)(n, f.default, T.Z);
+  return null == n ? e : (0, l.F6)(n, C.default, T.Z);
 }).replace(/<a?:(\w+):(\d+)>/g, (e, t) => ''.concat(O.Z.Messages.EMOJI, ' ').concat(t)).replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => '/'.concat(t)).replace(/<t:(\d+):([A-Z]|[a-z])>/g, (e, t, n) => {
   let i = o.Qh[n],
     a = 1000 * parseInt(t, 10),
@@ -120,8 +120,8 @@ return !1;
   if (null == d)
 return !1;
   let m = S.Z.getChannelId(),
-f = E.ZP.getCurrentSidebarChannelId(m),
-A = l === m || l === f,
+C = E.ZP.getCurrentSidebarChannelId(m),
+A = l === m || l === C,
 Z = u.OW.getSetting() && o.tts && A,
 O = p.Z.getTTSType(),
 x = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== _.default.getId() && (O === v.PrB.ALL_CHANNELS || O === v.PrB.SELECTED_CHANNEL && A);
@@ -130,7 +130,7 @@ if (R.indexOf(o.id) >= 0)
   return !1;
 R.unshift(o.id) > 10 && R.pop();
 let e = d.getGuildId();
-if (null != e && C.ZP.getMutedChannels(e).has(l))
+if (null != e && f.ZP.getMutedChannels(e).has(l))
   return !1;
 let t = null !== (a = null !== (s = I.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== s ? s : N.ZP.getName(o.author)) && void 0 !== a ? a : '',
   c = o.type === v.uaV.REPLY ? null === (i = o.referenced_message) || void 0 === i ? void 0 : i.author : null,

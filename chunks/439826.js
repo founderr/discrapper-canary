@@ -27,8 +27,8 @@ function S(e) {
 quest: n,
 isHovering: a,
 onCtxMenuClose: S,
-onCtxMenuOpen: C,
-onCtxMenuSelect: f
+onCtxMenuOpen: f,
+onCtxMenuSelect: C
   } = e, N = (0, h.ph)(n), A = (0, d.ZP)(), Z = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, L = Z === g.BRd.DARK, v = s.useMemo(() => (0, h.nP)(n.config.assets.questBarHero), [n]), O = s.useContext(l.S).reducedMotion.enabled, R = (0, h.Mi)(n, E.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = s.useRef(a), M = s.useRef(null);
   return s.useEffect(() => {
 if (v && null != M.current)
@@ -92,9 +92,9 @@ children: [
               })
             }),
             (0, i.jsx)(m.r, {
-              onOpen: C,
+              onOpen: f,
               onClose: S,
-              onSelect: f,
+              onSelect: C,
               questContent: E.jn.QUEST_HOME_DESKTOP,
               quest: n,
               hideLearnMore: !0,

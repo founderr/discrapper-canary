@@ -40,7 +40,7 @@ errors: i,
 handleClanUpdate: s.useCallback(t => l._9(e, t), [e])
   };
 }
-let C = {
+let f = {
   [p.Wy.GAMES]: function(e) {
 let {
   guildId: t
@@ -174,12 +174,12 @@ return (0, i.jsx)(E.Z, {
   }
 };
 
-function f(e) {
+function C(e) {
   return e.currentStep.toString();
 }
 
 function N(e) {
-  let t = C[e.currentStep];
+  let t = f[e.currentStep];
   return (0, i.jsx)(t, {
 guildId: e.guildId
   });
@@ -202,6 +202,6 @@ t
 currentStep: r,
 items: l,
 renderItem: N,
-getItemKey: f
+getItemKey: C
   });
 }

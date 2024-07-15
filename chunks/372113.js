@@ -19,15 +19,15 @@ var i, a, s = n(735250),
   S = n(566078),
   A = n(340100),
   R = n(644646),
-  x = n(667105),
-  O = n(87894),
+  O = n(667105),
+  x = n(87894),
   M = n(2660),
   v = n(46140),
   L = n(981631),
   Z = n(689938),
   P = n(817024),
   b = n(789002);
-let D = (e, t, n) => (0, O.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium';
+let D = (e, t, n) => (0, x.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium';
 
 function j(e) {
   let {
@@ -60,7 +60,7 @@ function U(e) {
   let {
 quest: t,
 useReducedMotion: n
-  } = e, i = (0, x.g2)({
+  } = e, i = (0, O.g2)({
 useReducedMotion: n,
 className: P.refreshIcon
   }), {
@@ -142,7 +142,7 @@ questContentPosition: l,
 inGiftInventory: o,
 hasConsoleTasks: u,
 hasConsoleConnection: E
-  } = e, I = n >= 1, m = n >= 3, p = (0, C.Bz)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([f.Z], () => f.Z.isEnrolling(t.id)), R = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), O = (0, N._s)({
+  } = e, I = n >= 1, m = n >= 3, p = (0, C.Bz)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([f.Z], () => f.Z.isEnrolling(t.id)), R = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), x = (0, N._s)({
 quest: t
   }), M = function(e) {
 let {
@@ -154,7 +154,7 @@ let {
   waitingForConsoleConnection: l,
   isInHouseQuest: o,
   inGiftInventory: c
-} = e, d = (0, x.hf)({
+} = e, d = (0, O.hf)({
   quest: t,
   location: a,
   questContentPosition: s
@@ -240,7 +240,7 @@ quest: t,
 isInHouseQuest: R,
 location: a,
 isCollectibleQuest: i,
-waitingForConsoleConnection: O,
+waitingForConsoleConnection: x,
 questContentPosition: l,
 inGiftInventory: o
   });
@@ -305,9 +305,9 @@ else if (a)
   return 1;
 else
   return 0;
-  }(t), g = f >= 1, x = f >= 3, b = f >= 4, U = (0, C.Xv)(t.config), B = (0, O.uq)(n), k = n === p.jn.QUESTS_EMBED, G = l || _, {
+  }(t), g = f >= 1, O = f >= 3, b = f >= 4, U = (0, C.Xv)(t.config), B = (0, x.uq)(n), k = n === p.jn.QUESTS_EMBED, G = l || _, {
 xboxAndPlaystationAccounts: F
-  } = (0, N.z6)(), w = (0, C.$J)(t), V = g && !b && B, H = F.length > 0, Y = (0, N.t5)(t, v.dr.QUESTS_CARD, n), W = (0, c.e7)([E.default], () => E.default.locale), z = B && U, K = r && !x, Q = (0, s.jsx)(R.Z, {
+  } = (0, N.z6)(), w = (0, C.$J)(t), V = g && !b && B, H = F.length > 0, Y = (0, N.t5)(t, v.dr.QUESTS_CARD, n), W = (0, c.e7)([E.default], () => E.default.locale), K = B && U, z = r && !O, Q = (0, s.jsx)(R.Z, {
 autoplay: a,
 className: o()(P.gridImg, {
   [P.questRewardGiftInventory]: B && 'lg' === i,
@@ -332,9 +332,9 @@ style: {
 'aria-hidden': !G,
 children: [
   (0, s.jsx)(d.Tooltip, {
-    text: K ? Z.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
+    text: z ? Z.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
     tooltipContentClassName: P.rewardTileExpirationTooltip,
-    shouldShow: K,
+    shouldShow: z,
     children: e => (0, s.jsxs)('div', {
       className: P.rewardTileWrapper,
       ...e,
@@ -345,7 +345,7 @@ children: [
             color: d.tokens.colors.WHITE
           })
         }),
-        z ? (0, s.jsx)(M.Z, {
+        K ? (0, s.jsx)(M.Z, {
           questConfig: t.config,
           fallback: Q,
           isFocused: a
@@ -373,7 +373,7 @@ children: [
             location: o,
             locale: c,
             isQuestExpired: d
-          } = e, u = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, _ = u && (null === (n = l.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, E = (0, C.zK)(l, v.S7.IN_HOUSE_CONSOLE_QUEST), T = (0, O.uq)(o), h = (0, N.B6)(null === (i = l.userStatus) || void 0 === i ? void 0 : i.completedAt, {
+          } = e, u = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, _ = u && (null === (n = l.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, E = (0, C.zK)(l, v.S7.IN_HOUSE_CONSOLE_QUEST), T = (0, x.uq)(o), h = (0, N.B6)(null === (i = l.userStatus) || void 0 === i ? void 0 : i.completedAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -445,7 +445,7 @@ children: [
         },
         children: Z.Z.Messages.QUESTS_LEARN_MORE_V2
       }),
-      r && !x ? null : (0, s.jsx)(y, {
+      r && !O ? null : (0, s.jsx)(y, {
         quest: t,
         progressState: f,
         isCollectibleQuest: U,
@@ -458,7 +458,7 @@ children: [
   }),
   V && (0, s.jsx)(A.Z, {
     className: P.gridProgressBar,
-    color: x ? d.tokens.colors.TEXT_POSITIVE : d.tokens.colors.BG_BRAND,
+    color: O ? d.tokens.colors.TEXT_POSITIVE : d.tokens.colors.BG_BRAND,
     quest: t,
     isInventory: B
   })

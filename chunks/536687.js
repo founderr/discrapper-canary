@@ -22,8 +22,8 @@ var i, s, a = n(470079),
   p = n(541566),
   T = n(192513),
   S = n(255791),
-  C = n(70956),
-  f = n(267642),
+  f = n(70956),
+  C = n(267642),
   N = n(981631);
 
 function A(e) {
@@ -47,7 +47,7 @@ L = (0, r.e7)([S.Z], () => S.Z.isVisible(e)),
 v = (0, r.e7)([g.Z], () => g.Z.can(N.Plq.ADMINISTRATOR, e)),
 O = null != s && Date.now() - s <= N.Dge,
 R = null != e ? e.premiumSubscriberCount : 0,
-x = (0, f.rF)(R, n) !== N.Eu4.NONE,
+x = (0, C.rF)(R, n) !== N.Eu4.NONE,
 b = null != i && Date.now() - i <= 43200000,
 P = !b && !O && v && x,
 M = (0, c.m)(n),
@@ -67,7 +67,7 @@ B = (0, r.e7)([I.Z], () => null != I.Z.getActiveGuildSignUp(n));
   let e = -1;
   return P && (e = window.setTimeout(() => {
     null != n && (0, l.C0)(n);
-  }, 30 * Math.random() * C.Z.Millis.SECOND)), () => {
+  }, 30 * Math.random() * f.Z.Millis.SECOND)), () => {
     window.clearTimeout(e);
   };
 }, [

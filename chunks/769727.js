@@ -15,8 +15,8 @@ var i, s, a = n(735250),
   p = n(807933),
   T = n(702646),
   S = n(207796),
-  C = n(543550),
-  f = n(895068),
+  f = n(543550),
+  C = n(895068),
   N = n(921944),
   A = n(540736);
 (s = i || (i = {})).TOP_PICKS = 'top_picks', s.OTHER_GUILDS = 'other_guilds';
@@ -75,9 +75,9 @@ switch (r.useEffect(() => {
     g
   ]), i) {
   case S.v0.ADMIN_UPSELL:
-    return (0, a.jsx)(C.$, {});
+    return (0, a.jsx)(f.$, {});
   case S.v0.GET_STARTED:
-    return (0, a.jsx)(C.J, {});
+    return (0, a.jsx)(f.J, {});
   case S.v0.DISCOVERY:
   case S.v0.GAMES:
   case S.v0.PLAYSTYLE:
@@ -112,7 +112,7 @@ switch (r.useEffect(() => {
               0
             ]).to(e => 'translateY('.concat(e, 'px)'))
           },
-          children: (0, a.jsx)(f.ZP, {
+          children: (0, a.jsx)(C.ZP, {
             width: t,
             isAnimating: s
           })

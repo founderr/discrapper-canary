@@ -26,18 +26,18 @@ function C(e) {
   var t, C;
   let {
 onDismiss: g
-  } = e, S = (0, s.e7)([u.Z], () => u.Z.getGuildId()), A = (0, s.e7)([d.Z], () => null != S ? d.Z.getChannelId(S) : null, [S]), R = null != S ? S : null, x = (0, s.e7)([c.Z], () => null != R ? c.Z.getGuild(R) : null, [R]), {
-shouldShowIncidentActions: O,
+  } = e, S = (0, s.e7)([u.Z], () => u.Z.getGuildId()), A = (0, s.e7)([d.Z], () => null != S ? d.Z.getChannelId(S) : null, [S]), R = null != S ? S : null, O = (0, s.e7)([c.Z], () => null != R ? c.Z.getGuild(R) : null, [R]), {
+shouldShowIncidentActions: x,
 incidentData: M,
 isUnderLockdown: v
-  } = (0, I.mI)(R), L = (0, l.n2)(null !== (t = null == x ? void 0 : x.id) && void 0 !== t ? t : h.lds), Z = a.useCallback(() => null != x && (0, o._X)(x.id), [x]);
-  if (null == x || null == M || !O)
+  } = (0, I.mI)(R), L = (0, l.n2)(null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : h.lds), Z = a.useCallback(() => null != O && (0, o._X)(O.id), [O]);
+  if (null == O || null == M || !x)
 return null;
   let P = e => {
   if (e && L && A !== N.oC.MEMBER_SAFETY && Z()) {
     E.default.track(h.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
       notice_type: h.kVF.GUILD_RAID_NOTIFICATION,
-      guild_id: x.id
+      guild_id: O.id
     });
     return;
   }
@@ -51,17 +51,17 @@ return null;
       } = await n.e('58175').then(n.bind(n, 664452));
     return n => (0, i.jsx)(t, {
       ...n,
-      guildId: x.id,
+      guildId: O.id,
       analyticsData: e
     });
   });
 },
 b = (0, i.jsx)(_.Z, {
   className: p.guildIcon,
-  guild: x,
+  guild: O,
   size: _.Z.Sizes.MINI
 }),
-D = (0, T.OY)(M, x.name);
+D = (0, T.OY)(M, O.name);
   if (null != (null !== (C = M.dmsDisabledUntil) && void 0 !== C ? C : M.invitesDisabledUntil) && v)
 return (0, i.jsxs)(r.Notice, {
   className: p.notice,
@@ -92,11 +92,11 @@ return (0, i.jsxs)(r.Notice, {
   ]
 });
   let j = (0, T.CG)(M) ? f.Z.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({
-  guildName: x.name
+  guildName: O.name
 }) : (0, T.kk)(M) ? f.Z.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({
-  guildName: x.name
+  guildName: O.name
 }) : f.Z.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({
-  guildName: x.name
+  guildName: O.name
 }),
 U = L && A === N.oC.MEMBER_SAFETY;
   return (0, i.jsxs)(r.Notice, {

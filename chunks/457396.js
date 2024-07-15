@@ -20,8 +20,8 @@ var r = n(91192),
   p = n(647265),
   T = n(650032),
   S = n(104494),
-  C = n(639119),
-  f = n(655525),
+  f = n(639119),
+  C = n(655525),
   N = n(314684),
   A = n(52188),
   Z = n(248042),
@@ -48,7 +48,7 @@ w = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
 B = (0, l.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
 H = (0, m.Qo)(w, B),
 V = (0, r.JA)('nitro'),
-F = (0, C.N)(),
+F = (0, f.N)(),
 Y = (0, S.Ng)(),
 W = (0, l.e7)([E.Z], () => E.Z.isLocalizedPromoEnabled) && null == F,
 z = (0, Z.Vi)(),
@@ -72,7 +72,7 @@ en = (0, p.N9)({
 });
   if (!($ = $ || null != w && null != J && Date.now() - J.getTime() > en))
 return null;
-  z ? (n = (0, a.jsx)(f.Z, {}), i = 0) : null != q ? (n = (0, a.jsx)(R.Z, {
+  z ? (n = (0, a.jsx)(C.Z, {}), i = 0) : null != q ? (n = (0, a.jsx)(R.Z, {
 copy: q
   }), i = 1) : K ? (n = (0, a.jsx)(R.Z, {}), i = 2) : null != Y ? (n = (0, a.jsx)(L.GN, {
 userDiscount: Y,

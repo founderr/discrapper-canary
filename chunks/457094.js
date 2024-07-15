@@ -17,8 +17,8 @@ var i = n(735250),
   p = n(503737),
   T = n(513202),
   S = n(318891),
-  C = n(687751),
-  f = n(912471),
+  f = n(687751),
+  C = n(912471),
   N = n(100527),
   A = n(838134),
   Z = n(77987),
@@ -71,8 +71,8 @@ var i = n(735250),
   ep = n(377368),
   eT = n(262702),
   eS = n(639033),
-  eC = n(479313),
-  ef = n(911560),
+  ef = n(479313),
+  eC = n(911560),
   eN = n(703016),
   eA = n(171368),
   eZ = n(429974),
@@ -112,7 +112,7 @@ writable: !0
 }
 n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(55563), n(455173), n(882029), n(959457), n(653255), n(663389), n(25990), n(778825), n(999382), n(388610), n(533947), n(277053), n(371398), n(141233), n(471073), n(628566);
 let eJ = !1;
-(0, f.DL)(), l.ZP.initialize(), eh.Z.loadServer(), eY.isPlatformEmbedded && (eW.ZP.on('USER_SETTINGS_OPEN', () => {
+(0, C.DL)(), l.ZP.initialize(), eh.Z.loadServer(), eY.isPlatformEmbedded && (eW.ZP.on('USER_SETTINGS_OPEN', () => {
   !ej.Z.getLayers().includes(eK.S9g.USER_SETTINGS) && h.Z.open(eK.oAB.ACCOUNT);
 }), eW.ZP.on('LAUNCH_APPLICATION', (e, t) => {
   let n = eU.Z.getActiveLibraryApplication(t);
@@ -475,7 +475,7 @@ null == eM.Z.getChannel(t) ? (0, eE.dL)(eK.Z5c.CHANNEL(n)) : (0, eE.dL)(i);
 }
 class e6 extends s.PureComponent {
   componentDidMount() {
-eW.ZP.setZoomFactor(I.Z.zoom), eh.Z.init(), L.Z.initialize(), er.Z.initialize(), j.Z.initialize(), ex.Z.initialize(), U.Z.initialize(), eo.Z.initialize(), Q.Z.initialize(), m.Z.init(), k.Z.init(), G.Z.init(), et.Z.initialize(), C.Z.initialize(), D.Z.initialize(), ec.Z.initialize(), S.ZP.initialize(), eR.Z.initialize(), ea.Z.initialize(), T.Z.initialize(), H.Z.init(), K.Z.init(), eH.Z.init(), eF.Z.init(), p.Z.initialize(), eN.Z.init(), eB.Z.init(), eL.Z.init(), eT.Z.initialize(), eS.Z.initialize(), eZ.Z.initialize(), ev.Z.init(), M.Z.initialize(), g.Z.initialize(), eI.Z.initialize(), ep.Z.initialize(), ei.Z.initialize(), en.Z.initialize(), es.Z.initialize(), O.Z.initialize(), q.Z.init({
+eW.ZP.setZoomFactor(I.Z.zoom), eh.Z.init(), L.Z.initialize(), er.Z.initialize(), j.Z.initialize(), ex.Z.initialize(), U.Z.initialize(), eo.Z.initialize(), Q.Z.initialize(), m.Z.init(), k.Z.init(), G.Z.init(), et.Z.initialize(), f.Z.initialize(), D.Z.initialize(), ec.Z.initialize(), S.ZP.initialize(), eR.Z.initialize(), ea.Z.initialize(), T.Z.initialize(), H.Z.init(), K.Z.init(), eH.Z.init(), eF.Z.init(), p.Z.initialize(), eN.Z.init(), eB.Z.init(), eL.Z.init(), eT.Z.initialize(), eS.Z.initialize(), eZ.Z.initialize(), ev.Z.init(), M.Z.initialize(), g.Z.initialize(), eI.Z.initialize(), ep.Z.initialize(), ei.Z.initialize(), en.Z.initialize(), es.Z.initialize(), O.Z.initialize(), q.Z.init({
   hasModalOpen: o.hasAnyModalOpen,
   openModal: () => (0, o.openModalLazy)(async () => {
     let {
@@ -538,7 +538,7 @@ let {
       let {
         summaryId: e
       } = (0, a.parse)(t);
-      null != e && eC.ZP.setSelectedSummary(s, e);
+      null != e && ef.ZP.setSelectedSummary(s, e);
     }
     if (null != o && E) {
       let e = eP.ZP.getCurrentSidebarChannelId(n) !== o,
@@ -595,7 +595,7 @@ let {
 if (null != s && (0, e_.c)(s) && !(0, eq.AB)(s) && r) {
   let n = eM.Z.getChannel(s);
   if (null == n)
-    ef.Z.loadThread(s).then(() => e3({
+    eC.Z.loadThread(s).then(() => e3({
       channelId: s,
       guildId: i,
       pathname: t
@@ -610,7 +610,7 @@ if (null != s && (0, e_.c)(s) && !(0, eq.AB)(s) && r) {
       return null;
     let n = eM.Z.getChannel(a);
     if (null == n)
-      ef.Z.loadThread(a).then(() => e3({
+      eC.Z.loadThread(a).then(() => e3({
         channelId: a,
         guildId: i,
         pathname: t

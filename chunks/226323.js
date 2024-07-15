@@ -23,7 +23,7 @@ var i = n(735250),
 let S = {
 offset: 2
   },
-  C = {
+  f = {
 serverDeaf: {
   icon: o.HeadphonesDenyIcon,
   colorize: !0,
@@ -51,12 +51,12 @@ localMute: {
 }
   };
 
-function f(e) {
+function C(e) {
   var t, s;
   let {
 channel: a,
 user: h,
-nick: f,
+nick: C,
 mute: N,
 deaf: A,
 serverMute: Z,
@@ -64,7 +64,7 @@ serverDeaf: L
   } = e, v = (0, l.e7)([I.Z], () => I.Z.isLocalMute(h.id)), O = (0, d.Z)({
 userId: h.id,
 checkSoundSharing: !0
-  }), R = null !== (t = a.getGuildId()) && void 0 !== t ? t : void 0, x = h.getAvatarURL(a.guild_id, 24), b = null != f ? f : m.ZP.getName(h), {
+  }), R = null !== (t = a.getGuildId()) && void 0 !== t ? t : void 0, x = h.getAvatarURL(a.guild_id, 24), b = null != C ? C : m.ZP.getName(h), {
 icon: P,
 colorize: M,
 getStatus: D
@@ -77,15 +77,15 @@ let {
   localMute: a
 } = e;
 if (t)
-  return C.serverDeaf;
+  return f.serverDeaf;
 if (n)
-  return C.deaf;
+  return f.deaf;
 if (i)
-  return C.serverMute;
+  return f.serverMute;
 else if (a)
-  return C.localMute;
+  return f.localMute;
 else if (s)
-  return C.mute;
+  return f.mute;
   }({
 serverDeaf: L,
 deaf: A,
@@ -221,7 +221,7 @@ children: (0, i.jsxs)('div', {
         nick: s,
         voiceState: a
       } = e;
-      return t.id !== E ? (0, i.jsx)(f, {
+      return t.id !== E ? (0, i.jsx)(C, {
         channel: n,
         user: t,
         nick: s,

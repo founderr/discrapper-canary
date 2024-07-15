@@ -27,12 +27,12 @@ var e, n;
 return null !== (n = null === (e = c.ZP.getDiscoverableGuilds()[t]) || void 0 === e ? void 0 : e.guilds) && void 0 !== n ? n : I;
   }), T = (0, a.e7)([c.ZP], () => c.ZP.getLoadId()), {
 handleViewGuild: S,
-onGuildCardSeen: C
-  } = (0, E.g)(t, T), f = (0, u.vb)(n), N = (0, u.q9)(n), A = (0, u.QW)(n);
+onGuildCardSeen: f
+  } = (0, E.g)(t, T), C = (0, u.Mf)(n), N = (0, u.a$)(n), A = (0, u.QW)(n);
   return s.useEffect(() => {
 (0, l.K5)(t);
   }, [t]), (0, i.jsxs)(_.Z, {
-title: f,
+title: C,
 description: N,
 onScroll: m,
 children: [
@@ -48,7 +48,7 @@ children: [
       guild: e,
       onView: e => S(e, t),
       theme: g,
-      onGuildCardSeen: C
+      onGuildCardSeen: f
     }, e.id))
   })
 ]

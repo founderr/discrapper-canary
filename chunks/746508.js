@@ -17,8 +17,8 @@ var i = n(735250),
   p = n(925549),
   T = n(284056),
   S = n(730749),
-  C = n(2052),
-  f = n(40851),
+  f = n(2052),
+  C = n(40851),
   N = n(317381),
   A = n(596040),
   Z = n(588580),
@@ -71,8 +71,8 @@ var i = n(735250),
   ep = n(699516),
   eT = n(594174),
   eS = n(979651),
-  eC = n(938475),
-  ef = n(285952),
+  ef = n(938475),
+  eC = n(285952),
   eN = n(976401),
   eA = n(333454),
   eZ = n(626135),
@@ -144,8 +144,8 @@ children: [
     className: r()(eD.marginBottom8, eD.marginTop20),
     children: eP.Z.Messages.NOISE_CANCELLATION_POPOUT_FOOTER
   }),
-  (0, i.jsxs)(ef.Z, {
-    justify: ef.Z.Justify.BETWEEN,
+  (0, i.jsxs)(eC.Z, {
+    justify: eC.Z.Justify.BETWEEN,
     className: eM.__invalid_footer,
     children: [
       (0, i.jsx)(I.Anchor, {
@@ -188,7 +188,7 @@ reachedLimit: _,
 limit: h
   } = (0, en.Z)(t), g = s.useCallback(() => {
 (0, ea.Z)();
-  }, []), p = (0, f.bp)(), T = s.useCallback(e => {
+  }, []), p = (0, C.bp)(), T = s.useCallback(e => {
 if (eI.Z.isVideoEnabled() === e)
   return;
 let n = () => {
@@ -200,7 +200,7 @@ e ? (0, eo.Z)(n, p) : n();
 t,
 p
   ]), S = c || n || u, {
-Component: C,
+Component: f,
 play: A,
 events: Z
   } = (0, E.o)(l.enabled ? 'disable' : 'enable');
@@ -222,7 +222,7 @@ children: e => {
     label: s,
     iconComponent: a,
     ...l
-  } = e, o = (0, i.jsx)(C, {
+  } = e, o = (0, i.jsx)(f, {
     size: 'custom',
     width: 20,
     height: 20,
@@ -281,8 +281,8 @@ children: e => {
           innerClassName: eM.buttonContents,
           wrapperClassName: eM.button,
           fullWidth: !0,
-          children: S ? o : (0, i.jsxs)(ef.Z, {
-            align: ef.Z.Align.CENTER,
+          children: S ? o : (0, i.jsxs)(eC.Z, {
+            align: eC.Z.Align.CENTER,
             children: [
               o,
               eP.Z.Messages.VIDEO
@@ -300,13 +300,13 @@ function ew(e) {
   let {
 channel: t,
 enableActivities: n
-  } = e, s = (0, f.bp)(), {
+  } = e, s = (0, C.bp)(), {
 analyticsLocations: a
   } = (0, b.ZP)(), l = s === ex.IlC.POPOUT, o = (0, L.KF)(t.id), c = (0, L.g5)(o), [_] = (0, d.e7)([N.ZP], () => null != t.id && '' !== t.id ? N.ZP.getEmbeddedActivitiesForChannel(t.id) : N.i6), {
 userInActivity: E
   } = (0, d.cj)([N.ZP], () => ({
 userInActivity: null != N.ZP.getSelfEmbeddedActivityForChannel(t.id)
-  })), h = (0, C.O)(), m = (0, Z.a)(), g = o !== L.jy.CAN_LAUNCH, {
+  })), h = (0, f.O)(), m = (0, Z.a)(), g = o !== L.jy.CAN_LAUNCH, {
 Component: p,
 events: T
   } = (0, u.s)();
@@ -380,8 +380,8 @@ p = s.useCallback(() => {
 T = u.find(e => e.ownerId === (null == c ? void 0 : c.id)),
 S = (0, es.E)(n, c, u);
   t = null == T ? a ? p : er.Z : () => (0, k.Z)(T);
-  let C = null != T || S.length > 0,
-f = E ? eP.Z.Messages.SHARE_YOUR_SCREEN : eP.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
+  let f = null != T || S.length > 0,
+C = E ? eP.Z.Messages.SHARE_YOUR_SCREEN : eP.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
 A = m || l || g,
 Z = null != T,
 {
@@ -422,20 +422,20 @@ children: e => {
     ...a
   } = e;
   return (0, i.jsx)(I.Tooltip, {
-    text: f,
+    text: C,
     children: e => (0, i.jsx)(I.Button, {
       ...e,
       size: I.Button.Sizes.SMALL,
       onClick: i => {
         var s;
-        C ? n(i) : t(), null === (s = e.onClick) || void 0 === s || s.call(e);
+        f ? n(i) : t(), null === (s = e.onClick) || void 0 === s || s.call(e);
       },
       disabled: !E || o,
       className: r()(eM.button, eM.buttonColor, {
         [eM.buttonActive]: null != T,
         [eM.disabled]: !E || o
       }),
-      ...C ? a : null,
+      ...f ? a : null,
       onMouseEnter: () => {
         var t;
         null == s || s(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), v.onMouseEnter();
@@ -446,8 +446,8 @@ children: e => {
       },
       innerClassName: eM.buttonContents,
       wrapperClassName: eM.button,
-      children: A ? R : (0, i.jsxs)(ef.Z, {
-        align: ef.Z.Align.CENTER,
+      children: A ? R : (0, i.jsxs)(eC.Z, {
+        align: eC.Z.Align.CENTER,
         children: [
           R,
           eP.Z.Messages.GO_LIVE_SHARE_SCREEN
@@ -615,15 +615,15 @@ return null == e ? null : (0, i.jsx)(I.Popout, {
   children: () => (0, i.jsxs)('div', {
     className: eM.container,
     children: [
-      (0, i.jsxs)(ef.Z, {
+      (0, i.jsxs)(eC.Z, {
         className: eM.connection,
-        align: ef.Z.Align.CENTER,
+        align: eC.Z.Align.CENTER,
         children: [
           (0, i.jsx)('div', {
             className: eM.inner,
             children: this.renderConnectionStatus()
           }),
-          (0, i.jsxs)(ef.Z, {
+          (0, i.jsxs)(eC.Z, {
             grow: 0,
             shrink: 0,
             children: [
@@ -775,8 +775,8 @@ T = (0, d.e7)([em.Z], () => p && !em.Z.can(ex.Plq.VIEW_CHANNEL, o), [
   o
 ]),
 S = ee.Fg.useSetting(),
-[C, f, N] = (0, d.Wu)([
-  eC.ZP,
+[f, C, N] = (0, d.Wu)([
+  ef.ZP,
   z.Z
 ], () => (null == o ? void 0 : o.isGuildStageVoice()) ? [
   z.Z.getMutableParticipants(o.id, K.pV.SPEAKER),
@@ -785,11 +785,11 @@ S = ee.Fg.useSetting(),
 ] : [
   null,
   null,
-  null != o ? eC.ZP.getVoiceStatesForChannel(o) : null
+  null != o ? ef.ZP.getVoiceStatesForChannel(o) : null
 ], [o]),
 Z = s.useMemo(() => {
   var e, t;
-  return null !== (t = null !== (e = null == C ? void 0 : C.map(e => {
+  return null !== (t = null !== (e = null == f ? void 0 : f.map(e => {
     let {
       user: t,
       userNick: n,
@@ -802,8 +802,8 @@ Z = s.useMemo(() => {
     };
   })) && void 0 !== e ? e : N) && void 0 !== t ? t : [];
 }, [
-  C,
   f,
+  C,
   N
 ]),
 [L, O] = s.useState(!1);

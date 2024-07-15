@@ -37,7 +37,7 @@ canSeeInAppReportingButtons: S
 location: '0e35b9_1'
   }, {
 autoTrackExposure: !1
-  }), C = () => {
+  }), f = () => {
 (0, r.Zy)(), null == I || I();
   };
   return (0, i.jsxs)(a.Menu, {
@@ -51,7 +51,7 @@ children: [
       id: 'report-guild-discovery-listing',
       label: E.Z.Messages.REPORT_SERVER_NO_NAME,
       action: () => {
-        (0, o.lt)(t), C();
+        (0, o.lt)(t), f();
       },
       icon: a.FlagIcon,
       color: 'danger'

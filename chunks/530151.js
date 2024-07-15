@@ -17,8 +17,8 @@ var i = n(735250),
   p = n(112724),
   T = n(812206),
   S = n(44315),
-  C = n(210887),
-  f = n(283595),
+  f = n(210887),
+  C = n(283595),
   N = n(417363),
   A = n(941128),
   Z = n(451478),
@@ -679,7 +679,7 @@ return null != o && e.push({
   branchId: l,
   state: c,
   application: o,
-  libraryApplication: f.Z.getLibraryApplication(r, l),
+  libraryApplication: C.Z.getLibraryApplication(r, l),
   finished: t,
   index: a
 }), e;
@@ -689,7 +689,7 @@ t.Z = (0, p.Z)(c.ZP.connectStores([
   T.Z,
   N.Z,
   A.Z,
-  C.Z,
+  f.Z,
   Z.Z
 ], () => {
   let e = et(A.Z.activeItems, !1, T.Z, N.Z);
@@ -700,6 +700,6 @@ applications: [
 ],
 paused: A.Z.paused,
 isFocused: Z.Z.isFocused(),
-theme: C.Z.theme
+theme: f.Z.theme
   };
 })((0, g.Z)(ee)));

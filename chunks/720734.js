@@ -21,8 +21,8 @@ var i = n(735250),
   p = n(941129),
   T = n(83200),
   S = n(634894),
-  C = n(586902),
-  f = n(515550),
+  f = n(586902),
+  C = n(515550),
   N = n(1585),
   A = n(304761),
   Z = n(865427),
@@ -75,8 +75,8 @@ var i = n(735250),
   ep = n(546591),
   eT = n(976401),
   eS = n(333454),
-  eC = n(864441),
-  ef = n(626135),
+  ef = n(864441),
+  eC = n(626135),
   eN = n(768581),
   eA = n(572004),
   eZ = n(70956),
@@ -167,7 +167,7 @@ return (c || o && a.isPomelo()) && (e = (0, i.jsx)(ep.Z, {
   children: [
     (0, i.jsx)('div', {
       className: eM.panelTitleContainer,
-      children: (0, i.jsx)(eC.Z, {
+      children: (0, i.jsx)(ef.Z, {
         children: l
       })
     }),
@@ -409,7 +409,7 @@ return null == e ? null : (0, i.jsxs)('div', {
                   position: 'top',
                   align: 'center',
                   shouldShow: !0,
-                  renderPopout: () => (0, i.jsx)(f.Z, {
+                  renderPopout: () => (0, i.jsx)(C.Z, {
                     markAsDismissed: n
                   }),
                   children: this.renderSettingsGear
@@ -541,7 +541,7 @@ super(...e), eD(this, 'copiedTimeout', new c.V7()), eD(this, 'copiedDecayTimeout
   (0, eA.JG)(ev.ZP.getUserTag(e, {
     decoration: 'never',
     identifiable: 'always'
-  })), ef.default.track(eR.rMx.TEXT_COPIED, {
+  })), eC.default.track(eR.rMx.TEXT_COPIED, {
     type: 'User Tag'
   });
   let i = {
@@ -604,7 +604,7 @@ c = (0, P.a)(),
   streaming: null != eE.Z.findActivity(e => e.type === eR.IIU.STREAMING),
   status: eE.Z.getStatus()
 })),
-_ = (0, C.Z)({
+_ = (0, f.Z)({
   userId: r
 }),
 I = ev.ZP.useUserTag(n, {
@@ -619,7 +619,7 @@ g = (0, l.e7)([
   return null != e ? ec.Z.getChannel(e) : null;
 }),
 {
-  mute: f,
+  mute: C,
   selfMute: N,
   suppress: L
 } = (0, el.Z)(g),
@@ -701,14 +701,14 @@ eT = function() {
 } = (0, W._)({
   location: 'AccountConnected'
 }),
-eC = {
+ef = {
   avatar: [],
   settings: []
 };
-  return !y && (eT && eC.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), a && (eC.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), V && K === (null === (t = (0, G.BS)(eb.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && eC.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), X && J && eC.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), $ && (1 === et ? eC.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eC.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), ep && eC.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), en && eC.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), es && eC.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eS && eC.settings.push(o.z.PRIDE_ICONS_COACHMARK), ea && eC.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, i.jsx)(eU, {
+  return !y && (eT && ef.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), a && (ef.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), V && K === (null === (t = (0, G.BS)(eb.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && ef.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), X && J && ef.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), $ && (1 === et ? ef.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : ef.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), ep && ef.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), en && ef.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), es && ef.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eS && ef.settings.push(o.z.PRIDE_ICONS_COACHMARK), ea && ef.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, i.jsx)(eU, {
 currentUser: n,
 customStatusActivity: c,
-dismissibleContents: eC,
+dismissibleContents: ef,
 userTag: I,
 hidePrivateData: m,
 occluded: y,
@@ -716,7 +716,7 @@ premiumSubscription: x,
 selfDeaf: v,
 selfMute: N,
 serverDeaf: O,
-serverMute: f,
+serverMute: C,
 speaking: _,
 speakingWhileMuted: b,
 status: u,

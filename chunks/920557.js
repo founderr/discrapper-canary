@@ -41,7 +41,7 @@ r
 S(), C(!0);
   }, [S]), R = a.useCallback(() => {
 C(!1);
-  }, []), x = a.useCallback(() => {
+  }, []), O = a.useCallback(() => {
 (0, I.n)({
   channelId: c,
   messageId: d,
@@ -61,7 +61,7 @@ if (!!f)
 f,
 S
   ]);
-  let O = (0, i.jsx)(u.Text, {
+  let x = (0, i.jsx)(u.Text, {
 variant: 'text-xs/semibold',
 color: 'none',
 className: p.voteCount,
@@ -88,12 +88,12 @@ children: [
           onMouseLeave: R,
           onFocus: A,
           onBlur: R,
-          onClick: x,
+          onClick: O,
           className: p.voteCountButton,
           'aria-describedby': g ? o : void 0,
           look: u.Button.Looks.BLANK,
           size: u.Button.Sizes.NONE,
-          children: O
+          children: x
         })
       }),
       g && (0, i.jsx)(l.T, {
@@ -102,7 +102,7 @@ children: [
       })
     ]
   }) : (0, i.jsx)(i.Fragment, {
-    children: O
+    children: x
   }),
   (0, i.jsxs)(u.Text, {
     variant: 'text-md/bold',

@@ -29,19 +29,19 @@ channel: g
 });
   }, []), S = s.useCallback(() => {
 c.Z.closeChannelSidebar(d.uZ);
-  }, []), C = s.useCallback(() => {
+  }, []), f = s.useCallback(() => {
 c.Z.closeChannelSidebar(d.uZ), p && (0, o.Kh)(g.id);
   }, [
 g.id,
 p
   ]), {
-acceptMessageRequest: f,
+acceptMessageRequest: C,
 isAcceptLoading: N,
 isUserProfileLoading: A,
 isOptimisticAccepted: Z
   } = (0, _.m)({
 user: n,
-onAcceptSuccess: C,
+onAcceptSuccess: f,
 onRejectSuccess: S,
 onError: T
   }), L = N || A, v = L || Z;
@@ -61,7 +61,7 @@ children: [
         color: r.ButtonColors.PRIMARY,
         size: r.Button.Sizes.SMALL,
         onClick: e => {
-          f(g.id), e.stopPropagation();
+          C(g.id), e.stopPropagation();
         },
         disabled: v,
         submitting: L,

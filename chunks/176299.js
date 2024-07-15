@@ -21,8 +21,8 @@ var i = n(735250),
   p = n(765717),
   T = n(358221),
   S = n(823748),
-  C = n(626421),
-  f = n(118379),
+  f = n(626421),
+  C = n(118379),
   N = n(652515),
   A = n(544978),
   Z = n(194729),
@@ -78,13 +78,13 @@ let eS = () => (0, i.jsx)('div', {
 className: eT.loader,
 children: (0, i.jsx)(_.Spinner, {})
   }),
-  eC = (0, c.Un)({
+  ef = (0, c.Un)({
 createPromise: () => n.e('68614').then(n.bind(n, 650788)),
 webpackId: 650788,
 name: 'GuildShopPage',
 renderLoader: eS
   }),
-  ef = (0, c.Un)({
+  eC = (0, c.Un)({
 createPromise: () => n.e('44798').then(n.bind(n, 998420)),
 webpackId: 998420,
 name: 'GuildMemberApplicationReview',
@@ -159,20 +159,20 @@ let {
 if (null != s && null != a && (0, em.AB)(a))
   switch (a) {
     case em.oC.ROLE_SUBSCRIPTIONS:
-      return d ? (0, i.jsx)(eC, {
+      return d ? (0, i.jsx)(ef, {
         guildId: s,
         initialTab: A.y.GUILD_ROLE_SUBSCRIPTIONS
       }) : (0, i.jsx)(D.Z, {
         guildId: s
       });
     case em.oC.GUILD_SHOP:
-      return (0, i.jsx)(eC, {
+      return (0, i.jsx)(ef, {
         guildId: s,
         productId: r,
         initialTab: c
       });
     case em.oC.MEMBER_APPLICATIONS:
-      return (0, i.jsx)(ef, {
+      return (0, i.jsx)(eC, {
         guildId: s
       });
     case em.oC.GUILD_HOME:
@@ -275,7 +275,7 @@ return null != t.params.guildId ? (0, i.jsx)(U.Z, {
   ej = function() {
 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
 return function(t) {
-  return (0, i.jsx)(f.Z, {
+  return (0, i.jsx)(C.Z, {
     isFullScreen: e,
     ...t
   });
@@ -436,7 +436,7 @@ children: (0, i.jsxs)('div', {
           (0, i.jsxs)('div', {
             className: eT.content,
             children: [
-              (0, i.jsx)(C.Z, {}),
+              (0, i.jsx)(f.Z, {}),
               (0, i.jsx)(eV, {
                 hasNotice: t,
                 sidebarTheme: n,

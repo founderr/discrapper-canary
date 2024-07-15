@@ -20,8 +20,8 @@ var i, s = n(735250),
   p = n(799777),
   T = n(285952),
   S = n(366695),
-  C = n(366966),
-  f = n(151011),
+  f = n(366966),
+  C = n(151011),
   N = n(626135),
   A = n(780570),
   Z = n(624138),
@@ -119,9 +119,9 @@ return (0, s.jsx)(_.Tooltip, {
   bodyCellClassName: R.textCell,
   render(e) {
     let t;
-    return t = e.isRunning ? O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? O.Z.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(C.ZP, {
+    return t = e.isRunning ? O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? O.Z.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(f.ZP, {
       end: e.lastPlayed,
-      location: C.ZP.Locations.GAME_LIBRARY_LAST_PLAYED
+      location: f.ZP.Locations.GAME_LIBRARY_LAST_PLAYED
     }) : O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(T.Z, {
       align: T.Z.Align.CENTER,
       className: l()({
@@ -339,7 +339,7 @@ let {
 } = this.state;
 return (0, s.jsxs)(a.Fragment, {
   children: [
-    n.length > 0 ? (0, s.jsx)(f.Z, {
+    n.length > 0 ? (0, s.jsx)(C.Z, {
       columns: y,
       data: n,
       sortData: !1,

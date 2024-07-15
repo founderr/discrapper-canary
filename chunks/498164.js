@@ -15,8 +15,8 @@ var r = n(756647),
   p = n(626135),
   T = n(585483),
   S = n(591759),
-  C = n(998502),
-  f = n(996106),
+  f = n(998502),
+  C = n(996106),
   N = n(186901),
   A = n(981631);
 
@@ -42,7 +42,7 @@ async handler(e) {
     invite: n
   } = await E.Z.resolveInvite(t, 'Desktop Modal');
   if (null == n)
-    throw new f.Z({
+    throw new C.Z({
       errorCode: A.lTL.INVALID_INVITE
     }, 'Invalid invite id: '.concat(t));
   return m.default.isAuthenticated() ? o.Z.dispatch({
@@ -70,10 +70,10 @@ async handler(e) {
     guildTemplate: i
   } = await h.Z.resolveGuildTemplate(t);
   if (null == i)
-    throw new f.Z({
+    throw new C.Z({
       errorCode: A.lTL.INVALID_GUILD_TEMPLATE
     }, 'Invalid guild template id: '.concat(t));
-  return C.ZP.focus(), (0, l.openModalLazy)(async () => {
+  return f.ZP.focus(), (0, l.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([
@@ -104,7 +104,7 @@ handler(e) {
         let {
           giftCode: s
         } = i;
-        C.ZP.focus(), p.default.track(A.rMx.OPEN_MODAL, {
+        f.ZP.focus(), p.default.track(A.rMx.OPEN_MODAL, {
           type: 'gift_accept',
           location: A.SaU
         }), (0, l.openModalLazy)(async () => {
@@ -121,7 +121,7 @@ handler(e) {
         }), e({
           giftCode: s
         });
-      }).catch(() => i(new f.Z({
+      }).catch(() => i(new C.Z({
         errorCode: A.lTL.INVALID_GIFT_CODE
       }, 'Invalid gift code: '.concat(t))));
     });
@@ -137,7 +137,7 @@ handler(e) {
       params: n
     }
   } = e;
-  switch (C.ZP.focus(), t) {
+  switch (f.ZP.focus(), t) {
     case N.jE.USER_SETTINGS:
       null != n && ((0, I.dL)(A.Z5c.SETTINGS(n.section, n.subsection)), Z(n.fingerprint, 'settings'));
       break;
@@ -176,7 +176,7 @@ handler(e) {
       fingerprint: n
     }
   } = e;
-  C.ZP.focus(null, !0), (0, d.lx)(t, n);
+  f.ZP.focus(null, !0), (0, d.lx)(t, n);
 }
   },
   [A.Etm.CONNECTIONS_CALLBACK]: {

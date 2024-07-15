@@ -26,19 +26,19 @@ var i = n(735250),
   S = n(694784),
   A = n(39154),
   R = n(689938),
-  x = n(309243);
+  O = n(309243);
 
-function O() {
+function x() {
   return (0, i.jsxs)('div', {
-className: x.headerContainer,
+className: O.headerContainer,
 children: [
   (0, i.jsx)(c.ChatArrowRightIcon, {
     size: 'xs',
-    className: x.headerIcon,
+    className: O.headerIcon,
     color: o.Z.colors.TEXT_LOW_CONTRAST
   }),
   (0, i.jsx)(s.x, {
-    className: x.headerText,
+    className: O.headerText,
     variant: 'text-sm/semibold',
     color: 'text-low-contrast',
     children: R.Z.Messages.MESSAGE_FORWARDED
@@ -67,16 +67,16 @@ d.Z
 (0, S.Z)(t);
   }, [t]);
   return null == E ? null : (0, i.jsxs)(c.Clickable, {
-className: x.footerContainer,
+className: O.footerContainer,
 onClick: I,
 children: [
   null != E.originIconUrl ? (0, i.jsx)('img', {
-    className: x.originIcon,
+    className: O.originIcon,
     src: E.originIconUrl,
     alt: ''
   }) : null,
   (0, i.jsx)(s.x, {
-    className: x.footerText,
+    className: O.footerText,
     variant: 'text-sm/medium',
     color: 'none',
     children: ''.concat(E.originLabel, '  \u2022  ').concat(E.timestampLabel)
@@ -112,15 +112,15 @@ allowDevLinks: N,
 previewLinkTarget: !0
   }), g = (0, r.e7)([T.Z], () => T.Z.getChannel(n.channel_id)), S = m.jU.useSetting();
   return null == g ? null : (0, i.jsxs)('div', {
-className: x.container,
+className: O.container,
 children: [
   (0, i.jsx)('div', {
-    className: x.quote
+    className: O.quote
   }),
   (0, i.jsxs)('div', {
-    className: x.content,
+    className: O.content,
     children: [
-      (0, i.jsx)(O, {}),
+      (0, i.jsx)(x, {}),
       (0, i.jsx)(_.ZP, {
         message: o,
         content: p

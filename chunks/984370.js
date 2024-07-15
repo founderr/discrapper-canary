@@ -46,8 +46,8 @@ mobileToolbar: m,
 'aria-labelledby': C,
 scrollable: A,
 role: R,
-hideSearch: x,
-showDivider: O
+hideSearch: O,
+showDivider: x
   } = e, M = (0, l.e7)([E.default], () => E.default.getCurrentUser()), v = (null == M ? void 0 : M.isStaff()) || (null == M ? void 0 : M.isStaffPersonal()) || !1;
   return (0, i.jsx)(T.ZP, {
 className: n,
@@ -55,14 +55,14 @@ innerClassName: o,
 toolbar: function() {
   if (null == I)
     return null;
-  let e = null != a && !x;
+  let e = null != a && !O;
   return r.tq ? m : (0, i.jsxs)(i.Fragment, {
     children: [
       I,
       e ? (0, i.jsx)(_.Z, {
         className: g.search
       }, null != s ? s : a) : null,
-      O && (0, i.jsx)(T.ZP.Divider, {}),
+      x && (0, i.jsx)(T.ZP.Divider, {}),
       (0, i.jsx)(f.Z, {}),
       (0, i.jsx)(d.Z, {
         canShowReminder: !0
@@ -100,7 +100,7 @@ children: t
   });
 }
 
-function x(e) {
+function O(e) {
   let {
 isAuthenticated: t = !0,
 ...n
@@ -120,4 +120,4 @@ children: t ? (0, i.jsx)(A, {
 })
   });
 }
-x.Title = T.ZP.Title, x.Icon = T.ZP.Icon, x.Divider = T.ZP.Divider, x.Caret = T.ZP.Caret, t.Z = x;
+O.Title = T.ZP.Title, O.Icon = T.ZP.Icon, O.Divider = T.ZP.Divider, O.Caret = T.ZP.Caret, t.Z = O;

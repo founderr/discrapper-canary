@@ -26,22 +26,22 @@ var i = n(735250),
   S = n(786397),
   A = n(474936),
   R = n(981631),
-  x = n(689938),
-  O = n(951992);
+  O = n(689938),
+  x = n(951992);
 class M extends a.Component {
   renderTitle(e, t, n) {
 let {
   trialOffer: i
 } = this.props, a = T.default.getUser(i.user_id), s = null != a ? a.username : '???', r = T.default.getUser(i.referrer_id), l = null != r ? r.username : '???';
 if (e && void 0 === i.redeemed_at)
-  return x.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({
+  return O.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({
     username: s
   });
 if (t)
-  return n ? x.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_HEADER : x.Z.Messages.REFERRAL_PROGRAM_EMBED_TIRAL_EXPIRED.format({
+  return n ? O.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_HEADER : O.Z.Messages.REFERRAL_PROGRAM_EMBED_TIRAL_EXPIRED.format({
     userName: l
   });
-return x.Z.Messages.REFERRAL_PROGRAM_EMBED_HEADER.format({
+return O.Z.Messages.REFERRAL_PROGRAM_EMBED_HEADER.format({
   senderUserName: l,
   recipientUserName: s
 });
@@ -50,9 +50,9 @@ return x.Z.Messages.REFERRAL_PROGRAM_EMBED_HEADER.format({
 let {
   trialOffer: i
 } = this.props;
-return e && !n && void 0 === i.redeemed_at ? x.Z.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({
+return e && !n && void 0 === i.redeemed_at ? O.Z.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({
   helpdeskArticle: f.Z.getArticleURL(R.BhN.REFERRAL_PROGRAM)
-}) : t ? null : x.Z.Messages.REFERRAL_PROGRAM_EMBED_BODY;
+}) : t ? null : O.Z.Messages.REFERRAL_PROGRAM_EMBED_BODY;
   }
   renderActions(e, t, n) {
 let {
@@ -66,7 +66,7 @@ let {
   color: u.Button.Colors.BRAND
 }, o = s.id !== a.user_id || (0, p.I5)(s) || !s.verified || (0, S.B)(a), c = this.renderExpirationDate(e, t, n);
 return l.disabled = o, (0, i.jsxs)('div', {
-  className: O.buttonContainer,
+  className: x.buttonContainer,
   children: [
     (0, i.jsx)('div', {
       children: (0, i.jsx)(u.Button, {
@@ -81,11 +81,11 @@ return l.disabled = o, (0, i.jsxs)('div', {
             referralTrialOfferId: a.id
           });
         },
-        children: x.Z.Messages.START_TRIAL
+        children: O.Z.Messages.START_TRIAL
       })
     }),
     (0, i.jsx)('div', {
-      className: O.metadata,
+      className: x.metadata,
       children: c
     })
   ]
@@ -97,37 +97,37 @@ let {
   trialEndsAt: a
 } = this.props;
 if (void 0 !== i.redeemed_at && !n && null !== a)
-  return x.Z.Messages.TRIAL_EXPIRES.format({
+  return O.Z.Messages.TRIAL_EXPIRES.format({
     date: (0, N.vc)(o()(a), 'LL')
   });
 if (e || void 0 === i.expires_at)
   return null;
 let s = o()(i.expires_at);
 if (t)
-  return x.Z.Messages.EXPIRED_DATE.format({
+  return O.Z.Messages.EXPIRED_DATE.format({
     date: (0, N.vc)(o()(s), 'LL')
   });
 let r = s.diff(o()(), 'h');
 if (r > 48) {
   let e = s.diff(o()(), 'd');
-  return x.Z.Messages.EXPIRES_DAYS.format({
+  return O.Z.Messages.EXPIRES_DAYS.format({
     numDays: e
   });
 }
 if (r > 1)
-  return x.Z.Messages.EXPIRES_HOURS.format({
+  return O.Z.Messages.EXPIRES_HOURS.format({
     numHours: r
   });
 let l = s.diff(o()(), 'minutes');
-return x.Z.Messages.EXPIRES_MINUTES.format({
+return O.Z.Messages.EXPIRES_MINUTES.format({
   numMinutes: l
 });
   }
   renderMedia(e) {
 return (0, i.jsx)('div', {
   className: r()({
-    [O.referral]: !e,
-    [O.birthdayReferral]: e
+    [x.referral]: !e,
+    [x.birthdayReferral]: e
   })
 });
   }
@@ -139,25 +139,25 @@ let {
   shouldShowBirthdayUX: a
 } = this.props, s = (0, S.B)(e), l = t.id === e.referrer_id;
 return (0, i.jsxs)('div', {
-  className: r()(O.tile, O.container),
+  className: r()(x.tile, x.container),
   children: [
     (0, i.jsx)('div', {
-      className: O.media,
+      className: x.media,
       children: this.renderMedia(a)
     }),
     (0, i.jsxs)('div', {
-      className: O.description,
+      className: x.description,
       children: [
         (0, i.jsx)(u.H, {
-          className: O.title,
+          className: x.title,
           children: this.renderTitle(n, s, l)
         }),
         (0, i.jsx)('div', {
-          className: O.tagline,
+          className: x.tagline,
           children: this.renderBody(n, s, l)
         }),
         (0, i.jsx)('div', {
-          className: O.actions,
+          className: x.actions,
           children: this.renderActions(n, s, l)
         })
       ]
@@ -219,9 +219,9 @@ analyticsLocations: u,
 shouldShowBirthdayUX: m,
 ...e
   }) : (0, i.jsx)('div', {
-className: O.invalidWrapper,
+className: x.invalidWrapper,
 children: (0, i.jsx)('div', {
-  className: O.invalid
+  className: x.invalid
 })
   });
 }

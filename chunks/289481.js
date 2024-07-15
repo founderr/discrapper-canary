@@ -103,10 +103,10 @@ children: (0, i.jsx)(c.HeadingLevel, {
       (0, i.jsx)(h.Z, {
         channel: l
       }),
-      (0, i.jsx)(x, {
+      (0, i.jsx)(O, {
         ...e
       }),
-      'nsfw' === t.type ? null : (0, i.jsx)(O, {
+      'nsfw' === t.type ? null : (0, i.jsx)(x, {
         ...e
       })
     ]
@@ -124,7 +124,7 @@ children: (0, i.jsx)(c.HeadingLevel, {
   });
 });
 
-function x(e) {
+function O(e) {
   let {
 channel: t,
 markChannelRead: n,
@@ -153,7 +153,7 @@ onClick: function() {
   });
 }
 
-function O(e) {
+function x(e) {
   let {
 channel: t,
 toggle: n,

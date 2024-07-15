@@ -31,7 +31,7 @@ hasError: g
   } = e, p = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), T = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY), S = s.useMemo(() => (0, u.j1)(m, T.hex()), [
 m,
 T
-  ]), C = null != S, f = (0, l.useSpring)({
+  ]), f = null != S, C = (0, l.useSpring)({
 transform: _ ? 'translateX(0%)' : 'translateX(-100%)',
 config: {
   ...l.config.stiff,
@@ -79,11 +79,11 @@ children: e => (0, i.jsxs)(c.Clickable, {
       className: h.progressStep,
       children: (0, i.jsx)(l.animated.div, {
         style: {
-          ...f,
+          ...C,
           ...S
         },
         className: r()(h.progressStepFill, {
-          [h.customProgressStepFill]: C
+          [h.customProgressStepFill]: f
         })
       })
     })

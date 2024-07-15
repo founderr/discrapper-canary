@@ -26,8 +26,8 @@ var i = n(735250),
   S = n(103575),
   A = n(695346),
   R = n(271383),
-  x = n(594174),
-  O = n(768581),
+  O = n(594174),
+  x = n(768581),
   M = n(900849),
   v = n(506071),
   L = n(495114),
@@ -46,12 +46,12 @@ message: y,
 channel: B
   } = e, k = (0, Z.J)(l, y), {
 setPopout: G
-  } = (0, C.Z)(y.id, b.d$), F = (0, p.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = a.useState(!1), [W, z] = a.useState((null == k ? void 0 : k.coverImage) == null), K = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, u.e7)([
+  } = (0, C.Z)(y.id, b.d$), F = (0, p.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = a.useState(!1), [W, K] = a.useState((null == k ? void 0 : k.coverImage) == null), z = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, u.e7)([
 R.ZP,
-x.default
+O.default
   ], () => {
 var e;
-return R.ZP.isMember(null == k ? void 0 : k.guildId, null === (e = x.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
+return R.ZP.isMember(null == k ? void 0 : k.guildId, null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
   }, [k]), q = (0, u.e7)([R.ZP], () => (null == k ? void 0 : k.authorId) != null ? R.ZP.getMember(k.guildId, k.authorId) : null), [X, J] = a.useMemo(() => {
 var e;
 return [
@@ -96,7 +96,7 @@ return null;
   roleId: J,
   newAnalyticsLocations: t
 })),
-el = (0, O.NZ)({
+el = (0, x.NZ)({
   avatarDecoration: (null == q ? void 0 : q.avatarDecoration) != null ? null == q ? void 0 : q.avatarDecoration : null === (t = k.user) || void 0 === t ? void 0 : t.avatarDecoration,
   size: (0, T.y9)(_.AvatarSizes.SIZE_40),
   canAnimate: ee
@@ -123,7 +123,7 @@ children: [
           [j.spoiler]: k.shouldSpoiler
         }),
         onContextMenu: F,
-        onError: () => z(!0)
+        onError: () => K(!0)
       }) : (0, i.jsx)(h.Z, {
         src: !(V && (w || H)) && eu ? ''.concat(ed, '?format=png') : ed,
         backgroundSrc: ''.concat(ed, '?format=png'),
@@ -134,7 +134,7 @@ children: [
         }),
         imageChildClassName: j.thumbnailImage,
         onContextMenu: F,
-        onError: () => z(!0)
+        onError: () => K(!0)
       })),
       null != k.coverImageOverlayText && (0, i.jsx)(_.Clickable, {
         onClick: ea,
@@ -249,7 +249,7 @@ children: [
               children: k.ctaText
             })
           }) : (0, i.jsx)(_.ShinyButton, {
-            pauseAnimation: K,
+            pauseAnimation: z,
             onClick: ea,
             className: r()(j.__invalid_ctaButtonContent, j.subscribeButton),
             color: _.Button.Colors.CUSTOM,

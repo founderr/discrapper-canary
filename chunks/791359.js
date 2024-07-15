@@ -21,8 +21,8 @@ var i = n(735250),
   p = n(626135),
   T = n(70956),
   S = n(225559),
-  C = n(910436),
-  f = n(203028),
+  f = n(910436),
+  C = n(203028),
   N = n(358924),
   A = n(292140),
   Z = n(525296),
@@ -37,10 +37,10 @@ let {
   onUserContextMenu: n,
   onChannelContextMenu: a,
   quest: r
-} = e, l = (0, i.jsx)(f.Z, {
+} = e, l = (0, i.jsx)(C.Z, {
   party: t,
   onUserContextMenu: n
-}), c = (0, i.jsx)(C.Z, {
+}), c = (0, i.jsx)(f.Z, {
   party: t,
   onChannelContextMenu: a,
   quest: r

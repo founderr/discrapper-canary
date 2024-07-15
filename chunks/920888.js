@@ -51,11 +51,11 @@ let {
   useChatFontScaling: S,
   forceHideReactionCreates: A,
   remainingReactions: R,
-  combinedReactions: x,
-  visibleReactionsCount: O
+  combinedReactions: O,
+  visibleReactionsCount: x
 } = this.props, {
   disableTransitionAppear: M
-} = this.state, v = S ? T : m, L = O > 0;
+} = this.state, v = S ? T : m, L = x > 0;
 return L || C ? (0, i.jsxs)(l.W, {
   component: 'div',
   className: r()(v.reactions, p),
@@ -71,7 +71,7 @@ return L || C ? (0, i.jsxs)(l.W, {
   }),
   children: [
     (0, i.jsx)(_.l, {
-      reactions: x,
+      reactions: O,
       message: e,
       readOnly: n,
       isLurking: a,

@@ -29,8 +29,8 @@ var i = n(735250),
   S = n(726542),
   A = n(100527),
   R = n(906732),
-  x = n(812206),
-  O = n(391650),
+  O = n(812206),
+  x = n(391650),
   M = n(605236),
   v = n(749277),
   L = n(492435),
@@ -50,8 +50,8 @@ var i = n(735250),
   H = n(14335),
   Y = n(246965),
   W = n(272008),
-  z = n(523255),
-  K = n(852923),
+  K = n(523255),
+  z = n(852923),
   Q = n(592125),
   q = n(430824),
   X = n(131951),
@@ -163,7 +163,7 @@ case ed.kVF.LURKING_GUILD:
 case ed.kVF.PENDING_MEMBER:
   return (0, i.jsx)(y.Z, {});
 case ed.kVF.INVITED_TO_SPEAK:
-  return (0, i.jsx)(K.Z, {});
+  return (0, i.jsx)(z.Z, {});
 case ed.kVF.GUILD_RAID_NOTIFICATION:
   let {
     dismissUntil: eR
@@ -173,13 +173,13 @@ case ed.kVF.GUILD_RAID_NOTIFICATION:
   });
 case ed.kVF.WIN32_DEPRECATED_MESSAGE:
   let {
-    dismissUntil: ex
+    dismissUntil: eO
   } = ec.metadata;
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.WARNING,
     children: [
       (0, i.jsx)(c.NoticeCloseButton, {
-        onClick: () => eN(ex),
+        onClick: () => eN(eO),
         noticeType: ed.kVF.WIN32_DEPRECATED_MESSAGE
       }),
       eI.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({
@@ -189,13 +189,13 @@ case ed.kVF.WIN32_DEPRECATED_MESSAGE:
   });
 case ed.kVF.WIN7_8_DEPRECATED_MESSAGE:
   let {
-    dismissUntil: eO
+    dismissUntil: ex
   } = ec.metadata;
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.WARNING,
     children: [
       (0, i.jsx)(c.NoticeCloseButton, {
-        onClick: () => eN(eO),
+        onClick: () => eN(ex),
         noticeType: ed.kVF.WIN7_8_DEPRECATED_MESSAGE
       }),
       eI.Z.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({
@@ -328,7 +328,7 @@ case ed.kVF.UNCLAIMED_ACCOUNT:
       eI.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: ed.kVF.UNCLAIMED_ACCOUNT,
-        onClick: () => eg && null != A ? (0, j.hk)(A) : O.j(),
+        onClick: () => eg && null != A ? (0, j.hk)(A) : x.j(),
         children: eI.Z.Messages.CLAIM_ACCOUNT
       })
     ]
@@ -347,7 +347,7 @@ case ed.kVF.UNVERIFIED_ACCOUNT:
               email: null == I ? void 0 : I.email
             }),
             secondaryConfirmText: eI.Z.Messages.CHANGE_EMAIL,
-            onConfirmSecondary: O.j
+            onConfirmSecondary: x.j
           });
         },
         children: eI.Z.Messages.RESEND_EMAIL_SHORT
@@ -437,7 +437,7 @@ case ed.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
   let {
     skuId: eP,
       applicationId: eb
-  } = ec.metadata, eD = et.Z.get(eP), ej = x.Z.getApplication(eb);
+  } = ec.metadata, eD = et.Z.get(eP), ej = O.Z.getApplication(eb);
   if (null == eD || null == ej)
     return null;
   let eU = {
@@ -486,7 +486,7 @@ case ed.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL: {
   let {
     skuId: e,
     applicationId: t
-  } = ec.metadata, n = et.Z.get(e), a = x.Z.getApplication(t);
+  } = ec.metadata, n = et.Z.get(e), a = O.Z.getApplication(t);
   if (null == n || null == a)
     return null;
   return (0, i.jsxs)(c.Notice, {
@@ -983,7 +983,7 @@ case ed.kVF.SAFETY_USER_SENTIMENT_NAGBAR:
       (0, i.jsx)(c.NoticeCloseButton, {
         noticeType: ed.kVF.SAFETY_USER_SENTIMENT_NAGBAR,
         onClick: () => {
-          z.hZ(), eN();
+          K.hZ(), eN();
         }
       }),
       eI.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE,
@@ -997,7 +997,7 @@ case ed.kVF.SAFETY_USER_SENTIMENT_NAGBAR:
             return t => (0, i.jsx)(e, {
               ...t
             });
-          }), z.hZ(), eN();
+          }), K.hZ(), eN();
         },
         children: eI.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE_CTA
       })

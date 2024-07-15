@@ -27,9 +27,9 @@ S = s.useCallback(() => {
   var t;
   (0, d.Qd)(a.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds, !0, _.L.DISMISS);
 }, [e]),
-C = s.useRef(!1);
+f = s.useRef(!1);
   s.useEffect(() => {
-if (T && !C.current) {
+if (T && !f.current) {
   var t;
   (0, r.openModalLazy)(async () => {
     let {
@@ -46,7 +46,7 @@ if (T && !C.current) {
   }), o.default.track(u.rMx.DISMISSIBLE_CONTENT_SHOWN, {
     type: a.C[a.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
     guild_id: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds
-  }), C.current = !0;
+  }), f.current = !0;
 }
   }, [
 m,

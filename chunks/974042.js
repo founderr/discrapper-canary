@@ -40,7 +40,7 @@ applicationStream: u.Z.getAnyStreamForUser(e)
   };
 }
 
-function C(e) {
+function f(e) {
   let t = [];
   return a()(_.ZP.memberOf(e)).map(E.Z.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
 null != e && t.push(e);
@@ -49,7 +49,7 @@ mutualGuildsLength: t.length,
 mutualGuilds: t.slice(0, 5)
   };
 }
-class f extends c.Z {
+class C extends c.Z {
   get comparator() {
 var e, t, n, i, s;
 return [
@@ -63,21 +63,21 @@ super(), p(this, 'key', void 0), p(this, 'type', void 0), p(this, 'status', void
 }
 class N {
   reset() {
-let e = a().map(I.Z.getRelationships(), (e, t) => new f({
+let e = a().map(I.Z.getRelationships(), (e, t) => new C({
     key: t,
     type: e,
     nickname: I.Z.getNickname(t),
     ...T(t),
     ...S(t),
-    ...C(t)
+    ...f(t)
   })),
-  t = a().map(d.Z.getSuggestions(), e => new f({
+  t = a().map(d.Z.getSuggestions(), e => new C({
     key: e.key,
     type: 99,
     nickname: e.name,
     ...T(e.key),
     ...S(e.key),
-    ...C(e.key)
+    ...f(e.key)
   }));
 return new N(a().concat(e, t));
   }

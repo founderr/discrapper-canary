@@ -39,9 +39,9 @@ var i, a, s = n(735250),
   S = n(65145),
   A = n(981631),
   R = n(689938),
-  x = n(357298);
+  O = n(357298);
 
-function O(e) {
+function x(e) {
   let {
 className: t,
 children: n
@@ -93,7 +93,7 @@ pollAnswerRef: l
   } = (0, S.dv)();
   return (0, s.jsx)(d.Clickable, {
 role: 'checkbox',
-className: o()(t, x.enabled),
+className: o()(t, O.enabled),
 onClick: n,
 'aria-checked': i,
 ref: a ? l : void 0,
@@ -116,7 +116,7 @@ pollAnswerRef: u
   } = (0, S.dv)();
   return (0, s.jsx)(d.Clickable, {
 role: 'radio',
-className: o()(n, x.enabled),
+className: o()(n, O.enabled),
 onClick: a,
 'aria-checked': r,
 tabIndex: t,
@@ -155,16 +155,16 @@ answerElementType: 2
 canTapAnswers: !0,
 answersInteraction: C.Y7.LIST
   }, () => ({
-ContainerComponent: O,
+ContainerComponent: x,
 answerElementType: 3
   })).otherwise(() => ({
-ContainerComponent: O,
+ContainerComponent: x,
 answerElementType: 0
   }));
   return (0, s.jsx)(_, {
 className: l,
 children: t.map((e, t) => (0, s.jsx)(b, {
-  className: o()(x.__invalid_answer, d),
+  className: o()(O.__invalid_answer, d),
   answer: e,
   isFirstAnswer: 0 === t,
   elementType: E,
@@ -232,7 +232,7 @@ className: i
   } = e, a = (0, N.n)(), r = I.QK.useSetting();
   return (0, s.jsx)(m.Z, {
 className: i,
-imageClassName: x.attachmentImage,
+imageClassName: O.attachmentImage,
 src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,
 alt: null !== (t = n.description) && void 0 !== t ? t : (0, p.fw)(n.filename),
 responsive: !0,
@@ -342,12 +342,12 @@ className: i
   } = e, a = {
 width: n,
 height: n,
-background: x.radioBackground,
+background: O.radioBackground,
 'aria-hidden': !0
   };
   return t ? (0, s.jsx)(h.Z, {
 ...a,
-foreground: x.radioForeground,
+foreground: O.radioForeground,
 className: i
   }) : (0, s.jsx)(T.Z, {
 ...a,
@@ -362,8 +362,8 @@ size: n,
 className: i
   } = e, a = 0.85 * n;
   return (0, s.jsx)('div', {
-className: o()(x.checkbox, {
-  [x.checkboxSelected]: t
+className: o()(O.checkbox, {
+  [O.checkboxSelected]: t
 }, i),
 style: {
   width: n,

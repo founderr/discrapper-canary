@@ -21,14 +21,14 @@ var i = n(735250),
   p = n(565216),
   T = n(981631),
   S = n(921944),
-  C = n(757601);
-let f = e => {
+  f = n(757601);
+let C = e => {
 let {
   tagText: t,
   className: n
 } = e;
 return (0, i.jsx)(c.TextBadge, {
-  className: r()(C.tag, n),
+  className: r()(f.tag, n),
   text: t
 });
   },
@@ -41,27 +41,27 @@ let {
   wideStyle: l
 } = e;
 return (0, i.jsxs)('div', {
-  className: r()(C.featureCard, {
-    [C.wideStyle]: l
+  className: r()(f.featureCard, {
+    [f.wideStyle]: l
   }),
   children: [
-    null != a ? (0, i.jsx)(f, {
+    null != a ? (0, i.jsx)(C, {
       tagText: a,
-      className: C.featureCardTag
+      className: f.featureCardTag
     }) : null,
     (0, i.jsx)('img', {
       alt: '',
-      className: r()(C.featureCardImg, {
-        [C.wideStyle]: l
+      className: r()(f.featureCardImg, {
+        [f.wideStyle]: l
       }),
       src: s
     }),
     (0, i.jsxs)('div', {
-      className: C.featureCardTextGroup,
+      className: f.featureCardTextGroup,
       children: [
         (0, i.jsx)(c.Heading, {
           variant: 'heading-md/extrabold',
-          className: C.featureCardTextHeader,
+          className: f.featureCardTextHeader,
           children: t
         }),
         (0, i.jsx)(c.Text, {
@@ -79,7 +79,7 @@ function A(e) {
 className: t,
 renderModalProps: n,
 heroArt: a,
-heroArtClassName: f,
+heroArtClassName: C,
 modalDismissibleContent: A,
 modalTopExtra: Z,
 header: L,
@@ -144,31 +144,31 @@ return g.default.track(T.rMx.CHANGE_LOG_OPENED, {
 A,
 b
   ]), (0, i.jsxs)(c.ModalRoot, {
-className: r()(C.root, t),
+className: r()(f.root, t),
 transitionState: y,
 'aria-labelledby': j,
 children: [
   (0, i.jsx)(c.ModalCloseButton, {
-    className: C.closeButton,
+    className: f.closeButton,
     onClick: D
   }),
   (0, i.jsx)(p.Z, {
-    className: C.splash
+    className: f.splash
   }),
   null == Z ? void 0 : Z(),
   (0, i.jsxs)(c.ModalContent, {
-    className: C.content,
+    className: f.content,
     children: [
       (0, i.jsx)(c.Heading, {
         variant: 'display-md',
-        className: r()(C.headerText, v),
+        className: r()(f.headerText, v),
         children: L
       }),
       (() => {
         if ('video' === a.type) {
           var e;
           return (0, i.jsx)(m.Z, {
-            className: r()(C.video, f),
+            className: r()(f.video, C),
             autoPlay: !G,
             loop: !0,
             muted: !0,
@@ -204,7 +204,7 @@ children: [
           });
         }
         return 'embed' === a.type ? (0, i.jsx)(E.BC, {
-          className: r()(C.video, f),
+          className: r()(f.video, C),
           allowFullScreen: !1,
           href: a.href,
           thumbnail: a.thumbnail,
@@ -223,13 +223,13 @@ children: [
           }
         }) : 'image' === a.type ? (0, i.jsx)('img', {
           alt: '',
-          className: r()(C.video, f),
+          className: r()(f.video, C),
           src: a.src
         }) : null;
       })(),
       (0, i.jsxs)(c.Heading, {
         variant: 'heading-lg/semibold',
-        className: C.subHeader,
+        className: f.subHeader,
         children: [
           O,
           null == R ? void 0 : R()
@@ -237,12 +237,12 @@ children: [
       }),
       null != M && (0, i.jsx)(c.Heading, {
         variant: 'heading-md/medium',
-        className: C.bodyText,
+        className: f.bodyText,
         children: M
       }),
       (0, i.jsx)('div', {
-        className: r()(C.featureCardGroup, {
-          [C.wideStyle]: U
+        className: r()(f.featureCardGroup, {
+          [f.wideStyle]: U
         }),
         children: x.map((e, t) => (0, i.jsx)(N, {
           ...e,

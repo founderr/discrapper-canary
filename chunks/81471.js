@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(981631),
   T = n(217702),
   S = n(689938),
-  C = n(958633),
-  f = n(153521);
+  f = n(958633),
+  C = n(153521);
 let N = s.memo(function(e) {
   let {
 channel: t
@@ -39,7 +39,7 @@ A
   ]), R = null;
   if (a)
 R = (0, i.jsx)(o.Text, {
-  className: C.messageReplacement,
+  className: f.messageReplacement,
   variant: 'text-sm/normal',
   color: 'text-muted',
   children: S.Z.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
@@ -47,7 +47,7 @@ R = (0, i.jsx)(o.Text, {
   else if (n) {
 if (null != N && Z)
   R = (0, i.jsx)(o.Text, {
-    className: C.messageReplacement,
+    className: f.messageReplacement,
     variant: 'text-sm/normal',
     color: 'text-muted',
     children: S.Z.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
@@ -56,26 +56,26 @@ else if (null != N) {
   let {
     contentPlaceholder: e,
     renderedContent: t
-  } = (0, _.f)(N, O, Z, r()(C.messageContent, f.inlineFormat), {
-    leadingIconClass: C.messageContentIcon,
-    trailingIconClass: C.messageContentIcon,
+  } = (0, _.f)(N, O, Z, r()(f.messageContent, C.inlineFormat), {
+    leadingIconClass: f.messageContentIcon,
+    trailingIconClass: f.messageContentIcon,
     iconSize: T.WW
   });
   R = null != t ? (0, i.jsx)(o.Text, {
     variant: 'text-sm/normal',
     color: 'text-muted',
-    className: C.messageContent,
+    className: f.messageContent,
     children: t
   }) : (0, i.jsx)(o.Text, {
     tag: 'span',
     variant: 'text-sm/normal',
     color: 'text-muted',
-    className: C.messageReplacement,
+    className: f.messageReplacement,
     children: e
   });
 } else
   R = (0, i.jsx)(o.Text, {
-    className: C.messageReplacement,
+    className: f.messageReplacement,
     variant: 'text-sm/normal',
     color: 'text-muted',
     children: S.Z.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
@@ -85,7 +85,7 @@ R = null;
   return (0, i.jsx)(m.a.Provider, {
 value: (0, d.Z)(v, L),
 children: (0, i.jsx)(o.FocusBlock, {
-  className: C.messageFocusBlock,
+  className: f.messageFocusBlock,
   children: R
 })
   });

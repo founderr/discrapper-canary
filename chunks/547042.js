@@ -23,8 +23,8 @@ var i, s, a = n(735250),
   T = n(689938),
   S = n(660979);
 (i = s || (s = {})).BOOSTING = 'BOOSTING', i.NITRO = 'NITRO', i.BASH_OUT = 'BASH_OUT', i.GAME_NIGHT = 'GAME_NIGHT';
-let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
-  f = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
+let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
+  C = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
   N = e => {
 let {
   channelId: t,
@@ -50,8 +50,8 @@ let {
           description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION,
           learnMore: !0,
           title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE,
-          videoPosterUrl: f,
-          videoUrl: C,
+          videoPosterUrl: C,
+          videoUrl: f,
           ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT,
           dismissText: T.Z.Messages.DISMISS
       };
@@ -62,8 +62,8 @@ let {
           description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION,
           learnMore: !0,
           title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE,
-          videoPosterUrl: f,
-          videoUrl: C,
+          videoPosterUrl: C,
+          videoUrl: f,
           ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT,
           dismissText: T.Z.Messages.DISMISS
       };

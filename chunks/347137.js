@@ -16,25 +16,25 @@ var i = n(735250),
   p = n(296386),
   T = n(150192),
   S = n(889010),
-  C = n(488905),
-  f = n(731455),
+  f = n(488905),
+  C = n(731455),
   N = n(981631),
   A = n(689938),
   Z = n(885181);
 let L = e => {
   switch (e) {
-case f.Gj.Activity:
-  return f.fW.Activity;
-case f.Gj.Music:
-  return f.fW.Music;
-case f.Gj.Television:
-  return f.fW.Television;
-case f.Gj.Science:
-  return f.fW.Science;
-case f.Gj.Education:
-  return f.fW.Education;
+case C.Gj.Activity:
+  return C.fW.Activity;
+case C.Gj.Music:
+  return C.fW.Music;
+case C.Gj.Television:
+  return C.fW.Television;
+case C.Gj.Science:
+  return C.fW.Science;
+case C.Gj.Education:
+  return C.fW.Education;
 default:
-  return f.fW.Server;
+  return C.fW.Server;
   }
 };
 t.Z = function() {
@@ -48,13 +48,13 @@ isViewingSearchResults: m.ZP.getMostRecentQuery().length > 0
 ...e,
 icon: L(e.categoryId)
   })), R = e => {
-(0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, E.OG)() && e !== f.Gj.Quests && (0, a.uL)(N.Z5c.GUILD_DISCOVERY), !(0, E.OG)() && e === f.Gj.Quests && (0, a.uL)(N.Z5c.QUEST_HOME);
+(0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, E.OG)() && e !== C.Gj.Quests && (0, a.uL)(N.Z5c.GUILD_DISCOVERY), !(0, E.OG)() && e === C.Gj.Quests && (0, a.uL)(N.Z5c.QUEST_HOME);
   };
   return s.useEffect(() => {
 (0, p.le)(!1, !0);
   }, [e]), (0, i.jsxs)(r.Scroller, {
 children: [
-  (0, i.jsx)(C.V, {
+  (0, i.jsx)(f.V, {
     text: A.Z.Messages.DISCOVER
   }),
   (0, i.jsx)(g.Z, {
@@ -67,9 +67,9 @@ children: [
         bottom: 1
       }
     },
-    onClick: () => R(f.Gj.Clans),
+    onClick: () => R(C.Gj.Clans),
     wrapContent: !0,
-    selected: e === f.Gj.Clans,
+    selected: e === C.Gj.Clans,
     className: Z.categoryItem,
     selectedClassName: Z.selectedCategoryItem,
     innerClassName: Z.itemInner
@@ -86,8 +86,8 @@ children: [
     shouldDisplaySelectedCategory: !t
   }),
   n && (0, i.jsx)(h.Z, {
-    onClick: () => R(f.Gj.Quests),
-    isSelected: e === f.Gj.Quests
+    onClick: () => R(C.Gj.Quests),
+    isSelected: e === C.Gj.Quests
   })
 ]
   });

@@ -22,8 +22,8 @@ var i = n(735250),
   S = n(918701),
   A = n(5881),
   R = n(566078),
-  x = n(602667),
-  O = n(340100),
+  O = n(602667),
+  x = n(340100),
   M = n(611855),
   v = n(644646),
   L = n(670638),
@@ -40,7 +40,7 @@ t.Z = function(e) {
 channelId: B,
 previewQuest: k,
 isParticipatingOverride: G
-  } = e, [F, w] = a.useState(!1), V = a.useCallback(() => w(!0), []), H = a.useCallback(() => w(!1), []), Y = a.useContext(m.h9), W = (0, l.e7)([h.default], () => h.default.getCurrentUser()), z = (0, l.e7)([I.Z], () => I.Z.getState().theme), K = (0, o.wj)(z) ? D.BRd.DARK : D.BRd.LIGHT, {
+  } = e, [F, w] = a.useState(!1), V = a.useCallback(() => w(!0), []), H = a.useCallback(() => w(!1), []), Y = a.useContext(m.h9), W = (0, l.e7)([h.default], () => h.default.getCurrentUser()), K = (0, l.e7)([I.Z], () => I.Z.getState().theme), z = (0, o.wj)(K) ? D.BRd.DARK : D.BRd.LIGHT, {
 isCurrentUserStreamingQuestApplication: Q,
 quest: q
   } = (0, l.cj)([
@@ -142,7 +142,7 @@ eN = (0, i.jsx)(v.Z, {
   quest: q,
   questContent: g.jn.QUEST_LIVE_STREAM
 });
-  return (0, i.jsx)(x.A, {
+  return (0, i.jsx)(O.A, {
 questOrQuests: q,
 overrideVisibility: !Y,
 questContent: g.jn.QUEST_LIVE_STREAM,
@@ -176,7 +176,7 @@ children: () => {
               eu && ee ? eN : (0, i.jsx)('img', {
                 className: y.gameTile,
                 alt: q.config.messages.gameTitle,
-                src: (0, S.uo)(q, K)
+                src: (0, S.uo)(q, z)
               }),
               (0, i.jsxs)('div', {
                 children: [
@@ -256,7 +256,7 @@ children: () => {
                   })
                 ]
               }),
-              eu && !e_ && ee && (0, i.jsx)(O.Z, {
+              eu && !e_ && ee && (0, i.jsx)(x.Z, {
                 color: c.tokens.colors.BG_BRAND,
                 quest: q
               }),

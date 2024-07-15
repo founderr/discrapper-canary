@@ -25,7 +25,7 @@ loading: m
   } = (0, u.LE)(), {
 ref: g,
 width: p
-  } = (0, c.Z)(), T = (0, E.GN)(e => e.mode, r.Z), [S, C] = s.useState(!0), f = (0, a.useSpring)({
+  } = (0, c.Z)(), T = (0, E.GN)(e => e.mode, r.Z), [S, f] = s.useState(!0), C = (0, a.useSpring)({
 from: {
   opacity: 0
 },
@@ -39,7 +39,7 @@ config: {
 },
 delay: 200,
 immediate: n,
-onRest: () => C(!1)
+onRest: () => f(!1)
   });
   return (0, i.jsxs)('section', {
 ref: g,
@@ -51,7 +51,7 @@ children: [
   }) : (0, i.jsx)(a.animated.div, {
     className: I.list,
     style: {
-      opacity: f.opacity
+      opacity: C.opacity
     },
     children: (0, i.jsx)(h.ZP, {
       width: null != p ? p : 0,

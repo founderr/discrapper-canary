@@ -21,8 +21,8 @@ var i = n(735250),
   p = n(879484),
   T = n(26580),
   S = n(206887),
-  C = n(981631),
-  f = n(689938),
+  f = n(981631),
+  C = n(689938),
   N = n(465423),
   A = n(129512),
   Z = n(330065);
@@ -53,9 +53,9 @@ splash: x,
 size: 240 * (0, d.x_)()
   }), V = null != H ? H : function(e) {
 switch (e) {
-  case C.BRd.DARK:
+  case f.BRd.DARK:
     return A;
-  case C.BRd.LIGHT:
+  case f.BRd.LIGHT:
     return Z;
 }
   }(L), F = null !== (t = I.ZP.getGuildIconURL({
@@ -70,11 +70,11 @@ if (!t.includes('Menu')) {
   if ((0, u.yU)()) {
     (0, _.Z)({
       analyticsSource: {
-        page: C.ZY5.GUILD_DISCOVERY
+        page: f.ZY5.GUILD_DISCOVERY
       },
       analyticsLocation: {
-        page: C.ZY5.GUILD_DISCOVERY,
-        section: C.jXE.GUILD_CAP_UPSELL_MODAL
+        page: f.ZY5.GUILD_DISCOVERY,
+        section: f.jXE.GUILD_CAP_UPSELL_MODAL
       },
       analyticsLocations: B
     });
@@ -195,7 +195,7 @@ children: [
                     children: (0, i.jsx)(l.Text, {
                       variant: 'text-xs/normal',
                       color: 'header-secondary',
-                      children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                      children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                         membersOnline: D
                       })
                     })
@@ -210,7 +210,7 @@ children: [
                         children: (0, i.jsx)(l.Text, {
                           variant: 'text-xs/normal',
                           color: 'header-secondary',
-                          children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                          children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                             count: y
                           })
                         })

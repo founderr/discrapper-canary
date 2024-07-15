@@ -33,7 +33,7 @@ function h(e) {
   var t, n, h, I;
   let {
 quest: m
-  } = e, g = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (h = m.userStatus) || void 0 === h ? void 0 : h.claimedAt) == null, T = (0, c.iQ)(m), S = !(0, c.zi)(m), C = (null === (I = m.userStatus) || void 0 === I ? void 0 : I.claimedAt) != null, f = (0, d.hf)({
+  } = e, g = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (h = m.userStatus) || void 0 === h ? void 0 : h.claimedAt) == null, T = (0, c.iQ)(m), S = !(0, c.zi)(m), f = (null === (I = m.userStatus) || void 0 === I ? void 0 : I.claimedAt) != null, C = (0, d.hf)({
 quest: m,
 location: o.jn.QUEST_BAR
   }), N = s.useCallback(() => {
@@ -43,8 +43,8 @@ location: o.jn.QUEST_BAR
 });
   }, [m]);
   return T && p || S && p ? (0, i.jsx)(E, {
-onClick: f
-  }) : S && g && !C ? (0, i.jsx)('div', {
+onClick: C
+  }) : S && g && !f ? (0, i.jsx)('div', {
 className: _.container,
 children: (0, i.jsx)(a.Button, {
   color: a.ButtonColors.PRIMARY,

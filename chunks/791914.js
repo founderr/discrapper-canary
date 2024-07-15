@@ -14,9 +14,9 @@ var a = n(120356),
   d = n(377171),
   u = n(317632),
   _ = n(602478),
-  E = n(121254),
-  I = n(742989),
-  m = n(802463),
+  E = n(768943),
+  I = n(121254),
+  m = n(742989),
   T = n(818186),
   h = n(689938),
   N = n(39767);
@@ -30,13 +30,13 @@ badgeState: f,
 closePopout: p
   } = e, {
 showReminders: C
-  } = I.Z.useExperiment({
+  } = m.Z.useExperiment({
 location: 'RecentsHeader'
   }, {
 autoTrackExposure: !1
   }), {
 enabled: g
-  } = E.Z.useExperiment({
+  } = I.Z.useExperiment({
 location: 'RecentsPopout'
   }, {
 autoTrackExposure: !1
@@ -44,7 +44,7 @@ autoTrackExposure: !1
 enabled: S
   } = _.Z.useExperiment({
 location: 'RecentsHeader'
-  }), A = (0, r.e7)([u.Z], () => u.Z.getUnseenInviteCount()), R = (0, r.e7)([m.Z], () => m.Z.getMessageReminders()).length;
+  }), A = (0, r.e7)([u.Z], () => u.Z.getUnseenInviteCount()), R = (0, r.e7)([E.Z], () => E.Z.getMessageReminders()).length;
   return (0, i.jsxs)(c.h4, {
 className: s()(N.header, N.expanded),
 children: [

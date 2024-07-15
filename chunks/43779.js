@@ -22,16 +22,16 @@ function m(e) {
   let {
 quest: m,
 questContent: g
-  } = e, p = c.r.build(m.config).defaultReward.messages.name, T = (0, r.Rf)(m), S = T.percentComplete > 0, C = (0, r.B6)(m.config.expiresAt, {
+  } = e, p = c.r.build(m.config).defaultReward.messages.name, T = (0, r.Rf)(m), S = T.percentComplete > 0, f = (0, r.B6)(m.config.expiresAt, {
 month: '2-digit',
 day: '2-digit'
-  }), f = (0, o.D)({
+  }), C = (0, o.D)({
 quest: m,
 taskDetails: T,
 location: E.dr.QUEST_HOME_DESKTOP,
 questContent: l.jn.QUEST_HOME_DESKTOP,
 useV2Variants: !0,
-expiryDate: C
+expiryDate: f
   }), N = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, A = (0, r.B6)(null === (n = m.userStatus) || void 0 === n ? void 0 : n.claimedAt), Z = s.useCallback(() => (0, i.jsx)(a.Text, {
 variant: 'text-md/semibold',
 color: 'text-brand',
@@ -50,14 +50,14 @@ className: I.description,
 children: h.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
   claimDate: A
 })
-  }) : null != f ? (0, i.jsx)(a.Text, {
+  }) : null != C ? (0, i.jsx)(a.Text, {
 variant: 'text-sm/medium',
 color: 'text-muted',
 className: I.description,
-children: f
+children: C
   }) : null, [
 N,
-f,
+C,
 A
   ]);
   return (0, i.jsxs)('div', {

@@ -21,8 +21,8 @@ var i = n(735250),
   p = n(432632),
   T = n(35313),
   S = n(284019),
-  C = n(672775),
-  f = n(601463),
+  f = n(672775),
+  C = n(601463),
   N = n(192565),
   A = n(641037),
   Z = n(689938),
@@ -223,7 +223,7 @@ children: (0, i.jsxs)(d.FocusRingScope, {
               className: r()(L.navigationContainer, {
                 [L.elevatedNavigationContainer]: !w
               }),
-              children: (0, i.jsx)(C.Z, {
+              children: (0, i.jsx)(f.Z, {
                 steps: M,
                 progress: R,
                 updateCurrentStep: z,
@@ -247,7 +247,7 @@ children: (0, i.jsxs)(d.FocusRingScope, {
           className: r()(L.sidebar, {
             [L.sidebarResponsive]: w
           }),
-          children: (0, i.jsx)(f.Z, {
+          children: (0, i.jsx)(C.Z, {
             guildId: t,
             signed: D,
             setSigned: w ? void 0 : y,

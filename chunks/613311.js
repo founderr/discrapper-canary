@@ -17,8 +17,8 @@ var i = n(735250),
   p = n(666743),
   T = n(115130),
   S = n(812206),
-  C = n(252618),
-  f = n(100159),
+  f = n(252618),
+  C = n(100159),
   N = n(646288),
   A = n(984370),
   Z = n(706454),
@@ -148,7 +148,7 @@ k.default.track(es.rMx.STORE_LISTING_VIEWED, {
   carousel_video_count: s.videos,
   location: i.location.page,
   source: this._analyticsSource,
-  ...(0, f.Z)(e, !0)
+  ...(0, C.Z)(e, !0)
 }), this._trackedViewed = !0;
   }
   renderHeader(e, t) {
@@ -436,7 +436,7 @@ if (!a && t.showAgeGate) {
   });
   return (0, i.jsxs)(s.Fragment, {
     children: [
-      (0, i.jsx)(C.yY, {
+      (0, i.jsx)(f.yY, {
         location: e.name
       }),
       this.renderJsonLD(),
@@ -451,7 +451,7 @@ if (!a && t.showAgeGate) {
 return r ? (0, i.jsxs)('div', {
   className: el.listingWrapper,
   children: [
-    (0, i.jsx)(C.yY, {
+    (0, i.jsx)(f.yY, {
       location: e.name
     }),
     this.renderJsonLD(),
@@ -466,7 +466,7 @@ return r ? (0, i.jsxs)('div', {
   ]
 }) : (0, i.jsxs)('div', {
   children: [
-    (0, i.jsx)(C.yY, {
+    (0, i.jsx)(f.yY, {
       location: e.name
     }),
     this.renderJsonLD(),
@@ -484,7 +484,7 @@ super(...e), eo(this, 'showCopyLinkTextTimeout', new o.V7()), eo(this, '_tracked
     sku: i
   } = this.props;
   null != i && k.default.track(es.rMx.STORE_LISTING_MEDIA_SCROLLED, {
-    ...(0, f.Z)(i),
+    ...(0, C.Z)(i),
     card_index: n,
     card_type: e.type === es.s9s.IMG ? 'image' : 'video'
   });

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return C;
+return f;
   }
 }), n(47120);
 var i = n(735250),
@@ -136,7 +136,7 @@ super(...e), T(this, 'searchBarRef', null), T(this, 'state', {
   }
 }
 
-function C() {
+function f() {
   let e = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
 t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
   return (0, i.jsx)(S, {

@@ -24,15 +24,15 @@ var i = n(735250),
   p = n(304231),
   T = n(895068),
   S = n(490610),
-  C = n(981631),
-  f = n(689938),
+  f = n(981631),
+  C = n(689938),
   N = n(813580);
 let A = (e, t) => {
   switch (e) {
 case m.hz.GENSHIN:
-  return t === C.BRd.DARK ? N.genshinUpsellBackgroundImageDark : N.genshinUpsellBackgroundImageLight;
+  return t === f.BRd.DARK ? N.genshinUpsellBackgroundImageDark : N.genshinUpsellBackgroundImageLight;
 case m.hz.VALORANT:
-  return t === C.BRd.DARK ? N.valorantUpsellBackgroundImageDark : N.valorantUpsellBackgroundImageLight;
+  return t === f.BRd.DARK ? N.valorantUpsellBackgroundImageDark : N.valorantUpsellBackgroundImageLight;
   }
 };
 
@@ -54,7 +54,7 @@ g = (0, l.useSpring)({
   }
 }),
 S = (0, _.ZP)(),
-f = s.useMemo(() => A(e, S), [
+C = s.useMemo(() => A(e, S), [
   e,
   S
 ]),
@@ -64,9 +64,9 @@ Z = s.useCallback(e => {
 L = s.useMemo(() => {
   switch (e) {
     case m.hz.GENSHIN:
-      return S === C.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
+      return S === f.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
     case m.hz.VALORANT:
-      return S === C.BRd.DARK ? N.valorantOnboardingBackgroundImageDark : N.valorantOnboardingBackgroundImageLight;
+      return S === f.BRd.DARK ? N.valorantOnboardingBackgroundImageDark : N.valorantOnboardingBackgroundImageLight;
   }
 }, [
   e,
@@ -126,7 +126,7 @@ case m.o2.USER_UPSELL:
             },
             children: [
               (0, i.jsx)('div', {
-                className: f
+                className: C
               }),
               (0, i.jsx)('div', {
                 className: N.backgroundImageBlur
@@ -211,8 +211,8 @@ children: (0, i.jsxs)(c.u2, {
       ]
     }),
     (0, i.jsx)(S.Z, {
-      title: f.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
-      subtitle: I ? f.Z.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
+      title: C.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
+      subtitle: I ? C.Z.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
     })
   ]
 })

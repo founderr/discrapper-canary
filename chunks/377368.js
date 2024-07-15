@@ -19,7 +19,7 @@ var s = n(481060),
   T = n(981631),
   S = n(65154);
 
-function C(e, t, n) {
+function f(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -27,7 +27,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class f extends _.Z {
+class C extends _.Z {
   _initialize() {
 super._initialize(), !__OVERLAY__ && a.Z.subscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
   }
@@ -36,13 +36,13 @@ super._terminate(), !__OVERLAY__ && a.Z.unsubscribe('OVERLAY_SOUNDBOARD_SOUNDS_F
   }
   constructor(...e) {
 var t;
-super(...e), t = this, C(this, 'playingSoundsWeb', new Map()), C(this, '_stopAndClearSounds', () => {
+super(...e), t = this, f(this, 'playingSoundsWeb', new Map()), f(this, '_stopAndClearSounds', () => {
   c.Z.supports(S.AN.SAMPLE_PLAYBACK) && c.Z.getMediaEngine().eachConnection(e => {
     e.stopAllSamplesLocalPlayback();
   }), this.playingSoundsWeb.forEach(e => {
     e.pause(), e.src = '';
   }), this.playingSoundsWeb = new Map();
-}), C(this, '_playSound', async function(e) {
+}), f(this, '_playSound', async function(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
     i = arguments.length > 2 ? arguments[2] : void 0,
     s = arguments.length > 3 ? arguments[3] : void 0,
@@ -59,9 +59,9 @@ super(...e), t = this, C(this, 'playingSoundsWeb', new Map()), C(this, '_stopAnd
     } finally {
       (0, E.R)(e, i);
     }
-}), C(this, '_handleOverlaySoundboardSoundsFetchRequest', () => {
+}), f(this, '_handleOverlaySoundboardSoundsFetchRequest', () => {
   (0, E.w)();
-}), C(this, '_handleOpenEducationModal', (e, t) => {
+}), f(this, '_handleOpenEducationModal', (e, t) => {
   if (null == e)
     return;
   let a = o.Z.getChannel(t),
@@ -80,4 +80,4 @@ super(...e), t = this, C(this, 'playingSoundsWeb', new Map()), C(this, '_stopAnd
 });
   }
 }
-t.Z = new f();
+t.Z = new C();

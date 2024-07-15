@@ -22,8 +22,8 @@ var i = n(735250),
   S = n(283595),
   A = n(594174),
   R = n(509545),
-  x = n(55563),
-  O = n(285952),
+  O = n(55563),
+  x = n(285952),
   M = n(199480),
   v = n(70613),
   L = n(626135),
@@ -117,10 +117,10 @@ return {
 let {
   libraryApplication: t
 } = this.props;
-return (0, i.jsxs)(O.Z, {
-  justify: O.Z.Justify.BETWEEN,
+return (0, i.jsxs)(x.Z, {
+  justify: x.Z.Justify.BETWEEN,
   children: [
-    (0, i.jsxs)(O.Z, {
+    (0, i.jsxs)(x.Z, {
       children: [
         this.renderButton(e),
         null == t || e.isSubscription ? null : (0, i.jsx)(F, {
@@ -129,11 +129,11 @@ return (0, i.jsxs)(O.Z, {
         })
       ]
     }),
-    (0, i.jsxs)(O.Z, {
-      align: O.Z.Align.END,
-      justify: O.Z.Justify.END,
+    (0, i.jsxs)(x.Z, {
+      align: x.Z.Align.END,
+      justify: x.Z.Justify.END,
       className: k.metadata,
-      direction: O.Z.Direction.VERTICAL,
+      direction: x.Z.Direction.VERTICAL,
       children: [
         e.hasMultipleCopies ? (0, i.jsx)('div', {
           children: this.renderGiftCodeCopiesLeft(e)
@@ -391,7 +391,7 @@ super(...e), G(this, 'handleViewLibrary', e => {
 let H = (0, I.Z)((0, E.Z)(V));
 t.Z = c.ZP.connectStores([
   g.Z,
-  x.Z,
+  O.Z,
   A.default,
   S.Z,
   R.Z,
@@ -402,7 +402,7 @@ t.Z = c.ZP.connectStores([
 code: t,
 author: n,
 currentUser: i
-  } = e, a = g.Z.get(t), s = null != a ? x.Z.get(a.skuId) : null, r = null != a && null != a.userId ? A.default.getUser(a.userId) : null, l = m.Z.useReducedMotion;
+  } = e, a = g.Z.get(t), s = null != a ? O.Z.get(a.skuId) : null, r = null != a && null != a.userId ? A.default.getUser(a.userId) : null, l = m.Z.useReducedMotion;
   return {
 sku: s,
 giftCode: a,

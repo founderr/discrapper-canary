@@ -22,8 +22,8 @@ var i = n(735250),
   S = n(271383),
   A = n(699516),
   R = n(250758),
-  x = n(944486),
-  O = n(914010),
+  O = n(944486),
+  x = n(914010),
   M = n(246946),
   v = n(594174),
   L = n(585483),
@@ -533,12 +533,12 @@ super(...e), t = this, B(this, 'state', {
 }
 t.ZP = a.forwardRef((e, t) => {
   let [n, a, s] = (0, I.Wu)([
-O.Z,
 x.Z,
+O.Z,
 R.Z
   ], () => {
-let e = O.Z.getGuildId(),
-  t = x.Z.getChannelId(),
+let e = x.Z.getGuildId(),
+  t = O.Z.getChannelId(),
   n = null != e ? e : t;
 o()(null != n, 'SearchPopout.getStateFromStores - invalid searchId');
 let i = R.Z.getState(n),

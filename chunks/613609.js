@@ -21,14 +21,14 @@ inviteCode: n
 null != n && r.Z.resolveInvite(n, 'Hub').finally(() => T(!1));
   }, [n]);
   let S = (0, a.e7)([d.Z], () => null != n ? d.Z.getInvite(n) : null),
-C = (0, a.e7)([c.Z], () => c.Z.getGuild(t));
+f = (0, a.e7)([c.Z], () => c.Z.getGuild(t));
   s.useEffect(() => {
-null != C && (0, o.uL)(E.Z5c.CHANNEL(t));
+null != f && (0, o.uL)(E.Z5c.CHANNEL(t));
   }, [
-C,
+f,
 t
   ]);
-  let f = s.useCallback(e => {
+  let C = s.useCallback(e => {
   g(t => Math.max(t, e));
 }, []),
 N = (0, u.gK)();
@@ -39,7 +39,7 @@ children: (0, i.jsxs)(l.Z, {
   splash: N,
   waveState: m,
   showLogo: !1,
-  updateWaveState: f,
+  updateWaveState: C,
   children: [
     (0, i.jsx)('div', {
       className: I.dragRegion

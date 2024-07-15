@@ -46,7 +46,7 @@ playstyle: e
   });
 }
 
-function C(e) {
+function f(e) {
   let {
 selectedGame: t
   } = e, n = (0, I.J)({
@@ -62,7 +62,7 @@ hidePreview: !0
   });
 }
 
-function f(e) {
+function C(e) {
   return e.toString();
 }
 t.Z = s.memo(function(e) {
@@ -149,7 +149,7 @@ G = s.useCallback(e => {
     case 1:
       return (0, i.jsx)(S, {});
     case 2:
-      return (0, i.jsx)(C, {
+      return (0, i.jsx)(f, {
         selectedGame: t
       });
   }
@@ -165,7 +165,7 @@ children: [
       currentStep: N,
       items: U,
       renderItem: G,
-      getItemKey: f
+      getItemKey: C
     })
   }),
   (0, i.jsxs)(a.animated.div, {

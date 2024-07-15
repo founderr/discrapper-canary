@@ -22,8 +22,8 @@ var i = n(735250),
   S = n(453070),
   A = n(926491),
   R = n(378233),
-  x = n(419922),
-  O = n(688179),
+  O = n(419922),
+  x = n(688179),
   M = n(981631),
   v = n(474936),
   L = n(689938),
@@ -59,7 +59,7 @@ description: n
   } = e;
   return (0, i.jsxs)(f.Z, {
 children: [
-  (0, i.jsx)(x.ZP, {
+  (0, i.jsx)(O.ZP, {
     sticker: t,
     size: 48,
     isInteracting: !0
@@ -125,7 +125,7 @@ return (a.useEffect(() => {
     }),
     (0, i.jsx)('ul', {
       className: Z.stickersList,
-      children: E.map(e => (0, i.jsx)(x.ZP, {
+      children: E.map(e => (0, i.jsx)(O.ZP, {
         isInteracting: !0,
         size: 80,
         sticker: e
@@ -137,7 +137,7 @@ return (a.useEffect(() => {
         color: o.Button.Colors.PRIMARY,
         size: o.Button.Sizes.SMALL,
         onClick: () => {
-          _ && (0, O.m)({
+          _ && (0, x.m)({
             stickerPack: c,
             stickerPickerCategories: m
           }), t();
@@ -156,7 +156,7 @@ let t, {
     refreshPositionKey: p
   } = e,
   [S, A] = a.useState(null),
-  [R, O] = a.useState(!1),
+  [R, x] = a.useState(!1),
   b = N.default.getCurrentUser(),
   D = g.ZP.canUseCustomStickersEverywhere(b),
   y = (0, l.e7)([h.Z], () => h.Z.getGuild(n.guild_id)),
@@ -175,7 +175,7 @@ let t, {
   });
 a.useEffect(() => {
   (async () => {
-    (null == y || y.hasFeature(M.oNc.DISCOVERABLE)) && A(await (0, _.Z)(n.id)), O(!0);
+    (null == y || y.hasFeature(M.oNc.DISCOVERABLE)) && A(await (0, _.Z)(n.id)), x(!0);
   })();
 }, [
   n.id,
@@ -183,14 +183,14 @@ a.useEffect(() => {
 ]);
 let Y = n.guild_id === s.getGuildId(),
   W = null != S,
-  z = !1,
-  K = 'Custom Sticker Popout';
-D ? t = B ? Y ? L.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : W ? L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : B ? (Y ? t = L.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, z = !0, K = 'Custom Sticker Popout (Upsell)') : W ? (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, z = !0, K = 'Custom Sticker Popout (Upsell)') : (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
+  K = !1,
+  z = 'Custom Sticker Popout';
+D ? t = B ? Y ? L.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : W ? L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : B ? (Y ? t = L.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, K = !0, z = 'Custom Sticker Popout (Upsell)') : W ? (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, K = !0, z = 'Custom Sticker Popout (Upsell)') : (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
   openPremiumSettings: () => {
     j(s), m();
   }
-}), K = 'Custom Sticker Popout (Soft Upsell)');
-let Q = !z && !B && W && D;
+}), z = 'Custom Sticker Popout (Soft Upsell)');
+let Q = !K && !B && W && D;
 return (a.useEffect(() => {
   p();
 }, [
@@ -198,7 +198,7 @@ return (a.useEffect(() => {
   S
 ]), a.useEffect(() => {
   C.default.track(M.rMx.OPEN_POPOUT, {
-    type: K,
+    type: z,
     ...H
   });
 }, []), R) ? (0, i.jsxs)(I.W_, {
@@ -221,7 +221,7 @@ return (a.useEffect(() => {
             description: t,
             sticker: n
           }),
-          z && (0, i.jsx)(T.Z, {
+          K && (0, i.jsx)(T.Z, {
             className: P.ctaButton,
             subscriptionTier: v.Si.TIER_2,
             size: o.Button.Sizes.SMALL,
@@ -309,7 +309,7 @@ return (a.useEffect(() => {
                         null == a || a(), w(null);
                       },
                       ...s,
-                      children: (0, i.jsx)(x.ZP, {
+                      children: (0, i.jsx)(O.ZP, {
                         size: 32,
                         enlargeOnInteraction: !0,
                         enlargeWithName: !1,

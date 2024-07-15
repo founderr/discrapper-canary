@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(748780),
   o = n(399606),
   c = n(607070),
-  d = n(742989),
-  u = n(802463),
+  d = n(768943),
+  u = n(742989),
   _ = n(862479);
 class E extends a.PureComponent {
   componentDidUpdate(e) {
@@ -57,11 +57,11 @@ function I(e) {
 className: t
   } = e, {
 showReminders: n
-  } = d.Z.useExperiment({
+  } = u.Z.useExperiment({
 location: 'f79435_1'
   }, {
 autoTrackExposure: !1
-  }), a = (0, o.e7)([u.Z], () => n ? u.Z.getOverdueMessageReminderCount() : 0, [n]), s = (0, o.e7)([c.Z], () => c.Z.useReducedMotion);
+  }), a = (0, o.e7)([d.Z], () => n ? d.Z.getOverdueMessageReminderCount() : 0, [n]), s = (0, o.e7)([c.Z], () => c.Z.useReducedMotion);
   return n ? (0, i.jsx)(E, {
 count: a,
 className: t,

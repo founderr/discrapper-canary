@@ -24,7 +24,7 @@ return !1;
   s.Z.wait(() => a.xv(t)), null === (e = h.Z.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), i = null;
 }
 
-function C() {
+function f() {
   let e = h.Z.getChannelId(),
 t = i === e;
   return function() {
@@ -53,12 +53,12 @@ s.Z.wait(() => a.bA(n.id, p.NYg.VIDEO, {
 })), null === (t = h.Z.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), i = e;
   }(e));
 }
-class f extends r.Z {
+class C extends r.Z {
   _initialize() {
-I.Z.addChangeListener(C), m.Z.addChangeListener(C), h.Z.addChangeListener(C), g.Z.addChangeListener(C), u.Z.addChangeListener(C), c.Z.addChangeListener(C), o.Z.addChangeListener(C), _.Z.addChangeListener(C), l.ZP.addChangeListener(C);
+I.Z.addChangeListener(f), m.Z.addChangeListener(f), h.Z.addChangeListener(f), g.Z.addChangeListener(f), u.Z.addChangeListener(f), c.Z.addChangeListener(f), o.Z.addChangeListener(f), _.Z.addChangeListener(f), l.ZP.addChangeListener(f);
   }
   _terminate() {
-I.Z.removeChangeListener(C), m.Z.removeChangeListener(C), h.Z.removeChangeListener(C), g.Z.removeChangeListener(C), u.Z.removeChangeListener(C), c.Z.removeChangeListener(C), o.Z.removeChangeListener(C), _.Z.removeChangeListener(C), l.ZP.removeChangeListener(C);
+I.Z.removeChangeListener(f), m.Z.removeChangeListener(f), h.Z.removeChangeListener(f), g.Z.removeChangeListener(f), u.Z.removeChangeListener(f), c.Z.removeChangeListener(f), o.Z.removeChangeListener(f), _.Z.removeChangeListener(f), l.ZP.removeChangeListener(f);
   }
 }
-t.Z = new f();
+t.Z = new C();

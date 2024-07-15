@@ -24,8 +24,8 @@ let {
   undismissable: p,
   onDismissed: T,
   onClick: S,
-  cta: C,
-  ctaColor: f
+  cta: f,
+  ctaColor: C
 } = e;
 s.useEffect(() => {
   I(_.rMx.CHANNEL_NOTICE_VIEWED, {
@@ -37,7 +37,7 @@ s.useEffect(() => {
   d
 ]);
 let N = null;
-'function' == typeof C ? N = C() : null != C && (N = (0, i.jsx)(l.Button, {
+'function' == typeof f ? N = f() : null != f && (N = (0, i.jsx)(l.Button, {
   className: h.btn,
   size: l.Button.Sizes.SMALL,
   onClick: () => {
@@ -48,8 +48,8 @@ let N = null;
     }), null == S || S();
   },
   fullWidth: !0,
-  color: f,
-  children: C
+  color: C,
+  children: f
 }));
 let A = null != u ? ''.concat(u, 'px') : '16px';
 return (0, i.jsxs)('div', {

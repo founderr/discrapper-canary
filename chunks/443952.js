@@ -18,8 +18,8 @@ var s = n(243814),
   p = n(293273),
   T = n(885110),
   S = n(451478),
-  C = n(630388),
-  f = n(823379),
+  f = n(630388),
+  C = n(823379),
   N = n(591759),
   A = n(228488),
   Z = n(996106),
@@ -247,13 +247,13 @@ handler(e) {
         }, 1000);
       };
       a.addEventListener('change', () => {
-        (0, f.lm)(a.files) && e(a.files[0]), r();
+        (0, C.lm)(a.files) && e(a.files[0]), r();
       }), a.addEventListener('cancel', () => {
         r();
       }), s.document.body.addEventListener('focus', r, !0), s.document.body.appendChild(a), a.click();
     }(async n => {
       let a = await (0, E.kv)(i, s, n);
-      (0, f.lm)(a) && (0, f.lm)(a.url) && !(a instanceof u.Z) ? e({
+      (0, C.lm)(a) && (0, C.lm)(a.url) && !(a instanceof u.Z) ? e({
         image_url: a.url
       }): t(a);
     }, () => t(Error('Upload canceled')));
@@ -283,7 +283,7 @@ handler(e) {
     throw new Z.Z({
       errorCode: P.lTL.INVALID_COMMAND
     }, 'No application.');
-  if (!(0, C.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.udG.EMBEDDED))
+  if (!(0, f.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.udG.EMBEDDED))
     throw new Z.Z({
       errorCode: P.lTL.INVALID_COMMAND
     }, 'This application cannot access this API');

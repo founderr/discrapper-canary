@@ -6,7 +6,7 @@ return v;
 return L;
   },
   ef: function() {
-return x;
+return O;
   },
   r8: function() {
 return M;
@@ -42,12 +42,12 @@ let R = {
   showResults: !1
 };
 
-function x(e, t) {
+function O(e, t) {
   for (let n of e)
 if (('number' == typeof n.emoji.id ? ''.concat(n.emoji.id) : n.emoji.id) === t)
   return n;
 }
-let O = e => (0, i.EQ)(e).with({
+let x = e => (0, i.EQ)(e).with({
   isExpired: !0,
   isLeader: !0,
   didSelfVote: !0
@@ -101,11 +101,11 @@ A = !0;
 let t = _.Z.getMessage(e.channel_id, e.id);
 A = !e.isSearchHit && null != t, C = null !== (s = null == t ? void 0 : t.reactions) && void 0 !== s ? s : C;
   }
-  let x = T.size > 0,
-O = C.some(e => !0 === e.me_vote),
-v = !f && O,
+  let O = T.size > 0,
+x = C.some(e => !0 === e.me_vote),
+v = !f && x,
 L = v || m || p,
-Z = E && A && (!O || f || L),
+Z = E && A && (!x || f || L),
 P = null === (i = d.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
 b = null != P ? u.ZP.getSelfMember(P) : null,
 D = (0, o.EY)(b),
@@ -115,11 +115,11 @@ poll: l,
 canTapAnswers: Z,
 canRemoveVote: v && E && !m,
 canShowVoteCounts: L,
-canSubmitVote: !N && x && !v && E && !D && !j,
+canSubmitVote: !N && O && !v && E && !D && !j,
 expirationLabel: I,
-hasSelectedAnswer: x,
+hasSelectedAnswer: O,
 hasVoted: v,
-hasVoteRecorded: O,
+hasVoteRecorded: x,
 isEditingVote: f,
 isExpired: m,
 isInteractive: A,
@@ -171,29 +171,29 @@ reactions: V,
 selectedAnswerIds: H,
 submitting: Y,
 tapShouldOpenVotersModal: W,
-showResults: z
-  } = P, K = (0, N.cZ)(V), Q = A.Z.Messages.POLL_VOTES_COUNT.format({
-count: K.toLocaleString()
+showResults: K
+  } = P, z = (0, N.cZ)(V), Q = A.Z.Messages.POLL_VOTES_COUNT.format({
+count: z.toLocaleString()
   }), q = Math.max(...L.map(e => {
 var t, n;
-let i = x(V, ''.concat(e.answer_id));
+let i = O(V, ''.concat(e.answer_id));
 return null !== (n = null == i ? void 0 : null === (t = i.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0;
   })), X = L.map(e => {
 var t, n, s;
 let o = ''.concat(e.answer_id),
-  d = x(V, o),
+  d = O(V, o),
   u = null !== (n = null == d ? void 0 : null === (t = d.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
-  _ = 0 === K ? 0 : u / K,
+  _ = 0 === z ? 0 : u / z,
   E = H.has(o),
   T = u >= q && 0 !== u,
   h = k && null !== (s = null == d ? void 0 : d.me_vote) && void 0 !== s && s,
-  N = O({
+  N = x({
     didSelfVote: h,
     hasVoted: k,
     isExpired: F,
     isSelected: E,
     isLeader: T,
-    showResults: z
+    showResults: K
   });
 return {
   answerId: o,
@@ -246,7 +246,7 @@ hasVoted: k,
 isEditingVote: G,
 canRemoveVote: D,
 isInteractive: w,
-showResults: z
+showResults: K
   }).with({
 isInteractive: !1
   }, () => void 0).with({
@@ -303,7 +303,7 @@ accessibilityHint: $,
 presentation: 'text',
 enabled: !0,
 type: 'showVoterDetails'
-  })), et = !w || F || k || z ? void 0 : {
+  })), et = !w || F || k || K ? void 0 : {
 label: A.Z.Messages.POLL_SHOW_VOTES,
 presentation: 'textButton',
 enabled: !0,

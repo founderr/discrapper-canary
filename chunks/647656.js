@@ -94,13 +94,13 @@ handler(e) {
   let {
     assets: T,
     party: S,
-    secrets: C,
-    timestamps: f,
+    secrets: f,
+    timestamps: C,
     buttons: N,
     type: A
   } = _;
-  if ((null == A || A !== h.IIU.PLAYING && !g) && (_.type = h.IIU.PLAYING), null != C) {
-    let e = s().values(C).filter(e => !!e);
+  if ((null == A || A !== h.IIU.PLAYING && !g) && (_.type = h.IIU.PLAYING), null != f) {
+    let e = s().values(f).filter(e => !!e);
     if (null != S && s().intersection(e, [S.id]).length > 0 && !I.includes(i.application.id))
       throw new d.Z({
         errorCode: h.lTL.INVALID_ACTIVITY_SECRET
@@ -116,9 +116,9 @@ handler(e) {
   }
   if (null != N && (_.metadata = {
       button_urls: N.map(e => e.url)
-    }, _.buttons = N.map(e => e.label)), null != f)
-    for (let e of Object.keys(f))
-      Date.now().toString().length - f[e].toString().length > 2 && (f[e] = Math.floor(f[e] * c.Z.Millis.SECOND));
+    }, _.buttons = N.map(e => e.label)), null != C)
+    for (let e of Object.keys(C))
+      Date.now().toString().length - C[e].toString().length > 2 && (C[e] = Math.floor(C[e] * c.Z.Millis.SECOND));
   if (null == T)
     n = Promise.resolve([]);
   else {

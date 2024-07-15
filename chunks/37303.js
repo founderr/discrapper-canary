@@ -50,15 +50,15 @@ contentPosition: c
 containerRef: S,
 size: A,
 height: R
-  } = (0, m.h)([t]), x = (0, l.q)({
+  } = (0, m.h)([t]), O = (0, l.q)({
 location: T.dr.QUESTS_CARD
   }), {
-expansionSpring: O,
+expansionSpring: x,
 isAnimating: M,
 isExpanded: v,
 toggleExpanded: L
   } = (0, m.O)({
-initiallyExpanded: !x || r || (0, _.iM)({
+initiallyExpanded: !O || r || (0, _.iM)({
   location: n,
   quest: t
 })
@@ -71,7 +71,7 @@ trackGuildAndChannelMetadata: n === d.jn.QUESTS_EMBED,
 children: e => (0, i.jsx)(i.Fragment, {
   children: (0, i.jsxs)(s.animated.div, {
     style: {
-      maxHeight: n === d.jn.QUESTS_EMBED ? void 0 : O.to({
+      maxHeight: n === d.jn.QUESTS_EMBED ? void 0 : x.to({
         range: [
           0,
           1
@@ -97,10 +97,10 @@ children: e => (0, i.jsx)(i.Fragment, {
         location: n,
         quest: t,
         size: A,
-        expansionSpring: O,
+        expansionSpring: x,
         isAnimating: M,
         isExpanded: v,
-        isInConcurrentQuestExperiment: x,
+        isInConcurrentQuestExperiment: O,
         contentPosition: c,
         toggleExpanded: L
       }),

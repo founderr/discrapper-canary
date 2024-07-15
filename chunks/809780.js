@@ -31,8 +31,8 @@ var i, a, s, r, l = n(470079),
   S = n(723170),
   A = n(675478),
   R = n(581883),
-  x = n(131704),
-  O = n(592125),
+  O = n(131704),
+  x = n(592125),
   M = n(984933),
   v = n(731290),
   L = n(430824),
@@ -279,14 +279,14 @@ function Y() {
     i = null !== (t = null === (e = R.Z.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : {};
   for (let e in i)
     for (let t in i[e].channels) {
-      let a = O.Z.getChannel(t);
+      let a = x.Z.getChannel(t);
       (!(t in n) || (null == a ? void 0 : a.guild_id) === e) && (n[t] = i[e].channels[t].collapsedInInbox);
     }
   return n;
 }(),
 t = function(e) {
   let t = [];
-  return O.Z.getSortedPrivateChannels().forEach(n => W(e, t, null, n.id)), D.ZP.getFlattenedGuildIds().forEach(n => {
+  return x.Z.getSortedPrivateChannels().forEach(n => W(e, t, null, n.id)), D.ZP.getFlattenedGuildIds().forEach(n => {
     if (null == n)
       return;
     let i = M.ZP.getSelectableChannelIds(n),
@@ -315,8 +315,8 @@ scrollToChannelIndex: null
 function W(e, t, n, i) {
   if (null == i)
 return;
-  let a = O.Z.getChannel(i);
-  if (null == a || !x.Ec.has(a.type) && j.ZP.isGuildOrCategoryOrChannelMuted(n, a.id))
+  let a = x.Z.getChannel(i);
+  if (null == a || !O.Ec.has(a.type) && j.ZP.isGuildOrCategoryOrChannelMuted(n, a.id))
 return;
   if (a.isPrivate()) {
 if (0 === b.ZP.getMentionCount(i))
@@ -352,7 +352,7 @@ hasError: !1,
 hasMentionsOrUnreads: c,
 mentionCount: o,
 sortOrder: function(e, t, n) {
-  let i = O.Z.getChannel(t);
+  let i = x.Z.getChannel(t);
   if (h.Z.isFavorite(t))
     return 0;
   if (i.isPrivate())
@@ -361,9 +361,9 @@ sortOrder: function(e, t, n) {
     return 2;
   if (null != n) {
     let e = B.default.extractTimestamp(n);
-    if (Date.now() - e > K)
-      return 7;
     if (Date.now() - e > z)
+      return 7;
+    if (Date.now() - e > K)
       return 5;
   }
   if (i.isThread()) {
@@ -388,8 +388,8 @@ type: 'messages',
 messages: []
   });
 }
-let z = 2 * U.Z.Millis.DAY,
-  K = 10 * U.Z.Millis.DAY;
+let K = 2 * U.Z.Millis.DAY,
+  z = 10 * U.Z.Millis.DAY;
 
 function Q(e) {
   let [t, n] = l.useState(() => new V(Y(), e)), [i, a] = l.useState(!1), s = l.useRef(Date.now()), [r, o] = l.useState(() => Y());

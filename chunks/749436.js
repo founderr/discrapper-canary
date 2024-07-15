@@ -20,8 +20,8 @@ var i, s = n(735250),
   p = n(117496),
   T = n(150192),
   S = n(731455),
-  C = n(981631),
-  f = n(689938),
+  f = n(981631),
+  C = n(689938),
   N = n(920052);
 
 function A(e, t, n) {
@@ -67,7 +67,7 @@ let {
   query: s,
   isHandlingTagSearch: a
 } = this.state, r = this.context;
-if (null == E.ZP.getSearchIndex() && _.Ue(), I.S.subscribe(C.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.subscribe(C.CkL.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
+if (null == E.ZP.getSearchIndex() && _.Ue(), I.S.subscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.subscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
   let l = n !== S.Hk ? n : null;
   Z({
     loadId: e,
@@ -110,7 +110,7 @@ let {
 });
   }
   componentWillUnmount() {
-I.S.unsubscribe(C.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.unsubscribe(C.CkL.TEXTAREA_FOCUS, this.focusInput);
+I.S.unsubscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.unsubscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput);
   }
   renderSearchOptions() {
 var e;
@@ -149,7 +149,7 @@ return (0, s.jsx)('div', {
     let [n, i] = t;
     return (0, s.jsx)(L, {
       categoryId: n,
-      name: n === S.Hk ? f.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
+      name: n === S.Hk ? C.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
       onCategoryChange: this.handleCategoryChange,
       isSelected: e === n,
       count: i
@@ -181,7 +181,7 @@ return (0, s.jsxs)(s.Fragment, {
             inputClassName: i ? void 0 : N.searchBoxInput,
             closeIconClassName: i ? void 0 : N.closeIcon,
             searchIconClassName: i ? void 0 : N.searchIcon,
-            label: f.Z.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
+            label: C.Z.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
             placeholder: n,
             onChange: this.handleQueryChanged,
             onClear: this.handleQueryCleared,
@@ -189,7 +189,7 @@ return (0, s.jsxs)(s.Fragment, {
             onBlur: this.handleSearchBlurred,
             onKeyPress: this.handleSearchKeyPress,
             autoFocus: !i,
-            cta: t && null != e && e.length > 1 ? f.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
+            cta: t && null != e && e.length > 1 ? C.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
           })
         }),
         i ? this.renderSearchOptions() : null
@@ -237,7 +237,7 @@ super(e), A(this, '_searchRef', a.createRef()), A(this, 'canSearch', e => e.trim
     loadId: i,
     currentCategoryId: s
   } = this.props, a = s !== S.Hk ? s : null;
-  this.canSearch(t) && n && e.charCode === C.yXg.ENTER ? (m.tI(i, a), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === C.yXg.ENTER && this.setState({
+  this.canSearch(t) && n && e.charCode === f.yXg.ENTER ? (m.tI(i, a), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === f.yXg.ENTER && this.setState({
     isSearching: !1
   });
 }), A(this, 'handleQueryChanged', e => {

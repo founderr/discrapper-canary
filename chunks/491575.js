@@ -16,7 +16,7 @@ var i = n(735250),
   p = n(145604),
   T = n(718813),
   S = n(981631),
-  C = n(582614);
+  f = n(582614);
 t.Z = s.memo(function() {
   let e = s.useRef(null),
 t = s.useCallback(t => {
@@ -35,10 +35,10 @@ t = s.useCallback(t => {
 g.S.unsubscribe(S.CkL.SHAKE_APP, t);
   }), [t]), (0, E.Z)(), (0, i.jsxs)(l.Shakeable, {
 ref: e,
-className: C.app,
+className: f.app,
 children: [
   (0, i.jsx)(T.Z, {
-    className: C.layers,
+    className: f.layers,
     children: (0, i.jsx)(o.Z, {})
   }),
   (0, i.jsx)(h.Z, {}),

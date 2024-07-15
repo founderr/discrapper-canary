@@ -17,8 +17,8 @@ var i = n(735250),
   p = n(353093),
   T = n(603839),
   S = n(430824),
-  C = n(725568),
-  f = n(231467),
+  f = n(725568),
+  C = n(231467),
   N = n(207796),
   A = n(316553),
   Z = n(273254),
@@ -240,7 +240,7 @@ U
   !o && ((0, I._9)({
     guildId: x,
     location: E.Z.CLAN_DISCOVERY
-  }), (0, C.q4)(e => {
+  }), (0, f.q4)(e => {
     let {
       closeLayer: t
     } = e;
@@ -377,7 +377,7 @@ children: [
           ...W,
           ...Y
         },
-        children: (0, i.jsx)(f.xV, {
+        children: (0, i.jsx)(C.xV, {
           clan: H[0],
           className: R.clanCardOuterLeft
         })
@@ -388,7 +388,7 @@ children: [
           ...z,
           ...Y
         },
-        children: (0, i.jsx)(f.xV, {
+        children: (0, i.jsx)(C.xV, {
           clan: H[1],
           className: R.clanCardInnerLeft
         })
@@ -404,7 +404,7 @@ children: [
             },
             children: (0, i.jsx)(l.animated.div, {
               style: X,
-              children: (0, i.jsx)(f.xV, {
+              children: (0, i.jsx)(C.xV, {
                 clan: B,
                 className: R.clanCardCenter,
                 bannerUrl: (0, p.pY)(H[4].id, H[4].bannerHash)
@@ -419,7 +419,7 @@ children: [
           ...K,
           ...Y
         },
-        children: (0, i.jsx)(f.xV, {
+        children: (0, i.jsx)(C.xV, {
           clan: H[2],
           className: R.clanCardInnerRight
         })
@@ -430,7 +430,7 @@ children: [
           ...q,
           ...Y
         },
-        children: (0, i.jsx)(f.xV, {
+        children: (0, i.jsx)(C.xV, {
           clan: H[3],
           className: R.clanCardOuterRight
         })

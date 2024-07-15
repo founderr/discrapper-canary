@@ -18,10 +18,10 @@ return L;
 return j;
   },
   Wl: function() {
-return O;
+return x;
   },
   XO: function() {
-return x;
+return O;
   },
   Xn: function() {
 return F;
@@ -103,12 +103,12 @@ n
   ]);
 }
 
-function x(e, t, n, i) {
+function O(e, t, n, i) {
   let a = A('usernameProfile', n, i);
   return R(e.author.id, t.id, a);
 }
 
-function O(e, t, n, i) {
+function x(e, t, n, i) {
   let a = A('referencedUsernameProfile', n, i);
   return R(null == e ? void 0 : e.author.id, t.id, a);
 }

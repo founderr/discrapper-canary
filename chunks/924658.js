@@ -185,7 +185,7 @@ e.exports = Object.freeze({
   MESSAGE_BOOKMARKS_HEADER: 'Bookmarks',
   MESSAGE_BOOKMARKS_BOOKMARK: 'Bookmark Message',
   MESSAGE_BOOKMARKS_REMOVE_BOOKMARK: 'Remove Bookmark',
-  MESSAGE_BOOKMARKS_EMPTY: 'You have no bookmarks!',
+  MESSAGE_BOOKMARKS_EMPTY: 'You have no Bookmarks!',
   MESSAGE_BOOKMARKS_EMPTY_TIP: 'You can bookmark any message to have it appear here.',
   APPLICATION_AUTOMOD_BADGE: 'Uses AutoMod',
   SHARED_CANVAS_DRAW_MODE_LINE: 'Draw',

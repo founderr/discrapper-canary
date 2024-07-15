@@ -11,22 +11,22 @@ var r, l, o, c, d = n(392711),
   p = n(855674),
   T = n(981631);
 let S = [],
-  C = null,
-  f = !1,
+  f = null,
+  C = !1,
   N = T.QZA.CLOSED,
   A = {},
   Z = !1,
   L = null;
 
 function v() {
-  if (i = null != (s = I.Z.getChannel()) ? m.Z.getGuild(s.guild_id) : null, S = null != s && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, s) ? p.Z.getWebhooksForChannel(i.id, s.id) : [], null != C) {
-let e = R(C.id);
-null != e && (C = e);
+  if (i = null != (s = I.Z.getChannel()) ? m.Z.getGuild(s.guild_id) : null, S = null != s && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, s) ? p.Z.getWebhooksForChannel(i.id, s.id) : [], null != f) {
+let e = R(f.id);
+null != e && (f = e);
   }
   N = T.QZA.OPEN, A = {}, Z = !1;
 }
 let O = u().debounce(() => {
-  Z && ((null == C || u().isEqual(C, R(C.id))) && (Z = !1), !Z && b.emitChange());
+  Z && ((null == f || u().isEqual(f, R(f.id))) && (Z = !1), !Z && b.emitChange());
 }, 500);
 
 function R(e) {
@@ -48,7 +48,7 @@ return Z;
 return S;
   }
   get editedWebhook() {
-return C;
+return f;
   }
   get formState() {
 return N;
@@ -63,11 +63,11 @@ return this.hasChanges();
 return {
   submitting: N === T.QZA.SUBMITTING,
   webhooks: S,
-  editedWebhook: C,
+  editedWebhook: f,
   section: a,
   sectionId: L,
   hasChanges: this.hasChanges(),
-  isFetching: f,
+  isFetching: C,
   errors: A
 };
   }
@@ -90,7 +90,7 @@ if (t !== T.CoT.INTEGRATIONS)
 if (a = T.b4C.OVERVIEW, null == i) {
   let e = I.Z.getChannel(),
     t = null == e ? void 0 : e.getGuildId();
-  null != e && null != t && (h.Z.fetchForChannel(t, e.id), f = !0), v();
+  null != e && null != t && (h.Z.fetchForChannel(t, e.id), C = !0), v();
 }
   },
   INTEGRATION_SETTINGS_SET_SECTION: function(e) {
@@ -106,23 +106,23 @@ let {
 } = e, n = R(t);
 if (null == n)
   return !1;
-C = n, A = {}, Z = !1;
+f = n, A = {}, Z = !1;
   },
   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function() {
-C = null, A = {}, Z = !1;
+f = null, A = {}, Z = !1;
   },
   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function(e) {
 let {
   settings: t
 } = e;
-if (null == C)
+if (null == f)
   return !1;
-C = {
-  ...C
-}, null != t.name && C.name !== t.name && (C.name = t.name, Z = !0), void 0 !== t.avatar && C.avatar !== t.avatar && (C.avatar = t.avatar, Z = !0), null != t.channelId && C.channel_id !== t.channelId && (C.channel_id = t.channelId, Z = !0), Z && O();
+f = {
+  ...f
+}, null != t.name && f.name !== t.name && (f.name = t.name, Z = !0), void 0 !== t.avatar && f.avatar !== t.avatar && (f.avatar = t.avatar, Z = !0), null != t.channelId && f.channel_id !== t.channelId && (f.channel_id = t.channelId, Z = !0), Z && O();
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-s = null, i = null, S = [], C = null, N = T.QZA.CLOSED;
+s = null, i = null, S = [], f = null, N = T.QZA.CLOSED;
   },
   WEBHOOKS_UPDATE: function(e) {
 let {
@@ -132,7 +132,7 @@ let {
 } = e;
 if (null == i || t !== i.id || null == s || n !== s.id || null == a || N === T.QZA.SUBMITTING)
   return !1;
-f = !1;
+C = !1;
 for (let e = S.length - 1; e >= 0; e--) {
   let t = S[e];
   if (null != n && (null == t ? void 0 : t.channel_id) !== n)
@@ -149,9 +149,9 @@ for (let e = S.length - 1; e >= 0; e--) {
       ...t,
       ...i
     };
-    S[e] = n, !Z && (null == C ? void 0 : C.id) === n.id && (C = n);
+    S[e] = n, !Z && (null == f ? void 0 : f.id) === n.id && (f = n);
   } else
-    (null == C ? void 0 : C.id) === t.id && (C = null), S.splice(e, 1);
+    (null == f ? void 0 : f.id) === t.id && (f = null), S.splice(e, 1);
 }
 for (let e of a)
   null == S.find(t => {

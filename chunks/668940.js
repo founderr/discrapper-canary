@@ -17,8 +17,8 @@ var s = n(948789),
   p = n(488905),
   T = n(347137),
   S = n(731455),
-  C = n(981631),
-  f = n(689938),
+  f = n(981631),
+  C = n(689938),
   N = n(468918);
 let A = e => {
 switch (e) {
@@ -47,13 +47,13 @@ let {
   ...e,
   icon: A(e.categoryId)
 })), Z = e => {
-  (0, l.uY)(e, !0), u.Z.closeSidebar(), t && (0, l.AQ)(), (0, _.OG)() && e !== S.Gj.Quests && (0, s.uL)(C.Z5c.GUILD_DISCOVERY), !(0, _.OG)() && e === S.Gj.Quests && (0, s.uL)(C.Z5c.QUEST_HOME);
+  (0, l.uY)(e, !0), u.Z.closeSidebar(), t && (0, l.AQ)(), (0, _.OG)() && e !== S.Gj.Quests && (0, s.uL)(f.Z5c.GUILD_DISCOVERY), !(0, _.OG)() && e === S.Gj.Quests && (0, s.uL)(f.Z5c.QUEST_HOME);
 };
 return (0, i.jsxs)(r.Scroller, {
   className: N.sidebarContainer,
   children: [
     (0, i.jsx)(p.V, {
-      text: f.Z.Messages.DISCOVER
+      text: C.Z.Messages.DISCOVER
     }),
     (0, i.jsx)(g.Z, {
       categories: T,

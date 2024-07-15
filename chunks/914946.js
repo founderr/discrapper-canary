@@ -68,8 +68,8 @@ var i, s = n(729594),
   p = n(131951),
   T = n(375954),
   S = n(158776),
-  C = n(594174),
-  f = n(979651),
+  f = n(594174),
+  C = n(979651),
   N = n(70956),
   A = n(5192),
   Z = n(226951),
@@ -116,8 +116,8 @@ T.Z.whenReady(e.id, () => t()), c.Z.fetchMessages({
 });
   })), Promise.all(n).then(() => {
 var n;
-let s = (!e.isNSFW() || (null === (n = C.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(k) : [],
-  a = Object.values(f.Z.getVoiceStatesForChannel(e.id)).map(t => w(i, e.id, t));
+let s = (!e.isNSFW() || (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(k) : [],
+  a = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map(t => w(i, e.id, t));
 return {
   id: e.id,
   name: e.name,
@@ -169,7 +169,7 @@ selfMute: a,
 selfDeaf: r,
 suppress: l,
 userId: o
-  } = n, c = C.default.getUser(o);
+  } = n, c = f.default.getUser(o);
   if (null == c)
 throw Error('Invalid user id: '.concat(o));
   return {
@@ -189,7 +189,7 @@ user: (0, v.Z)(c)
 }
 
 function B(e, t, n) {
-  let i = C.default.getUser(t);
+  let i = f.default.getUser(t);
   return {
 type: e,
 user: null != i ? (0, v.Z)(i) : null,

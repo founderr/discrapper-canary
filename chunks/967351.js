@@ -103,7 +103,7 @@ case I.CLOSE:
   }
   S(e);
 }
-class C extends d.Z {
+class f extends d.Z {
   send(e) {
 h.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(T(I.FRAME, e));
   }
@@ -123,7 +123,7 @@ super('ipc', t, n), i = this, a = void 0, (s = 'socket') in i ? Object.definePro
 }) : i[s] = a, this.socket = e;
   }
 }
-class f extends s.EventEmitter {
+class C extends s.EventEmitter {
   handleConnection(e) {
 m(e, !1), e.pause(), e.on('readable', () => {
   try {
@@ -139,7 +139,7 @@ m(e, !1), e.pause(), e.on('readable', () => {
   let i = t.client_id,
     s = +t.v;
   try {
-    n = new C(e, s, 'json');
+    n = new f(e, s, 'json');
   } catch (t) {
     e.end(T(I.CLOSE, {
       code: t.code,
@@ -172,4 +172,4 @@ e.on('error', e => h.error('Error: '.concat(e.message))), E.getAvailableSocket(p
 });
   }
 }
-t.Z = new f();
+t.Z = new C();

@@ -26,8 +26,8 @@ var i = n(735250),
   S = n(893729),
   A = n(838940),
   R = n(882101),
-  x = n(11705),
-  O = n(81273),
+  O = n(11705),
+  x = n(81273),
   M = n(293810),
   v = n(981631),
   L = n(689938),
@@ -207,13 +207,13 @@ openModal: p,
 canOpenModal: C,
 cannotOpenReason: S,
 isCheckingTrialEligibility: A
-  } = (0, O.Z)(f, s, _, E), P = (0, l.e7)([u.Z], () => u.Z.isSyncing), {
+  } = (0, x.Z)(f, s, _, E), P = (0, l.e7)([u.Z], () => u.Z.isSyncing), {
 activeSubscription: b,
 activeSubscriptionListing: U
   } = (0, h.Z)(_), y = (null == U ? void 0 : U.id) === n, B = (null == b ? void 0 : b.status) === v.O0b.CANCELED, [k, G] = a.useState(!1), [F, w] = a.useState(!1), V = a.useCallback(e => {
 let t = !1;
 null != e && (t = e.scrollHeight - e.clientHeight > 1), w(t);
-  }, []), [H] = T._T(n), [Y] = T.PK(n), [W] = T.TT(n), [z] = T.F2(n), K = (0, N.Z)(s, n), Q = null != W && null == b && K, q = (0, c.Z)(M.iP), [X, J] = a.useState(!1), $ = X || !q, ee = (0, l.e7)([d.Z], () => d.Z.isViewingServerShop(s)), et = (null == f ? void 0 : f.published) === !0, en = (null == f ? void 0 : f.soft_deleted) === !0, ei = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
+  }, []), [H] = T._T(n), [Y] = T.PK(n), [W] = T.TT(n), [K] = T.F2(n), z = (0, N.Z)(s, n), Q = null != W && null == b && z, q = (0, c.Z)(M.iP), [X, J] = a.useState(!1), $ = X || !q, ee = (0, l.e7)([d.Z], () => d.Z.isViewingServerShop(s)), et = (null == f ? void 0 : f.published) === !0, en = (null == f ? void 0 : f.soft_deleted) === !0, ei = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
   return (et || ee) && !en ? (0, i.jsxs)('article', {
 className: Z.container,
 'aria-label': H,
@@ -230,7 +230,7 @@ children: [
       (0, i.jsx)(o.Tooltip, {
         clickableOnMobile: !0,
         text: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({
-          activeTrialUserLimit: null != z ? z : 0
+          activeTrialUserLimit: null != K ? K : 0
         }),
         children: e => (0, i.jsx)(o.CircleInformationIcon, {
           size: 'xs',
@@ -247,7 +247,7 @@ children: [
       (0, i.jsxs)('div', {
         className: Z.tierInfoContainer,
         children: [
-          q ? (0, i.jsx)(x.e, {
+          q ? (0, i.jsx)(O.e, {
             listingId: n,
             isListingPublished: et,
             expanded: $,

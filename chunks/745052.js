@@ -17,8 +17,8 @@ var i = n(735250),
   p = n(209613),
   T = n(325708),
   S = n(320149),
-  C = n(252618),
-  f = n(605236),
+  f = n(252618),
+  C = n(605236),
   N = n(243778),
   A = n(984370),
   Z = n(797614),
@@ -90,7 +90,7 @@ S = s.useCallback(() => {
   n,
   I
 ]),
-C = s.useCallback(e => {
+f = s.useCallback(e => {
   var t, s;
   let {
     row: l
@@ -110,7 +110,7 @@ C = s.useCallback(e => {
   n,
   T
 ]),
-f = s.useCallback(() => (0, i.jsxs)(y.Z, {
+C = s.useCallback(() => (0, i.jsxs)(y.Z, {
   className: en.sectionTitle,
   children: [
     t > 0 ? et.Z.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({
@@ -167,8 +167,8 @@ children: (0, i.jsx)(l.SJ, {
       paddingBottom: 24,
       sectionHeight: X.oi,
       rowHeight: X.WN,
-      renderSection: f,
-      renderRow: C,
+      renderSection: C,
+      renderRow: f,
       sections: [n.length],
       chunkSize: 30,
       fade: !0,
@@ -217,7 +217,7 @@ let t = (0, B.Z)(),
   n = () => D.Z.hasLayers() || (0, u.hasAnyModalOpen)(),
   a = (0, c.e7)([g.Z], () => g.Z.useReducedMotion);
 return s.useEffect(() => {
-  (0, f.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+  (0, C.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
 }, []), (0, i.jsx)(N.Z, {
   contentTypes: [d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
   children: s => {
@@ -293,7 +293,7 @@ m,
 g
   ]);
   let [T, S] = s.useState(X.pS.REQUESTS);
-  return (0, C.Tt)({
+  return (0, f.Tt)({
 location: et.Z.Messages.MESSAGE_REQUESTS
   }), (0, i.jsxs)(i.Fragment, {
 children: [

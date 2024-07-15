@@ -22,8 +22,8 @@ var i = n(735250),
   S = n(963550),
   A = n(845080),
   R = n(295790),
-  x = n(145807),
-  O = n(56744),
+  O = n(145807),
+  x = n(56744),
   M = n(981631),
   v = n(848509);
 t.Z = a.memo(function(e) {
@@ -51,7 +51,7 @@ allowList: w || V,
 allowHeading: w || V,
 allowLinks: !0,
 previewLinkTarget: !0
-  }), W = a.type === M.uaV.REPLY ? a.messageReference : void 0, z = (0, o.e7)([u.Z], () => u.Z.getMessageByReference(W)), K = (0, l.JA)(a.id), Q = (0, h.ZP)(a), q = (0, o.e7)([_.Z], () => a.hasFlag(M.iLy.HAS_THREAD) && _.Z.getChannel(m.default.castMessageIdAsChannelId(a.id))), X = (0, c.p9)({
+  }), W = a.type === M.uaV.REPLY ? a.messageReference : void 0, K = (0, o.e7)([u.Z], () => u.Z.getMessageByReference(W)), z = (0, l.JA)(a.id), Q = (0, h.ZP)(a), q = (0, o.e7)([_.Z], () => a.hasFlag(M.iLy.HAS_THREAD) && _.Z.getChannel(m.default.castMessageIdAsChannelId(a.id))), X = (0, c.p9)({
 guildId: D.guild_id,
 roleId: Q.iconRoleId
   }), J = (0, o.e7)([E.Z], () => E.Z.can(M.Plq.CREATE_INSTANT_INVITE, D)), $ = (0, C.Z)({
@@ -70,8 +70,8 @@ className: r()(L, {
   [v.disableInteraction]: F
 }),
 disableInteraction: F,
-childrenRepliedMessage: (0, O.Z)(a, D, W, z, s),
-childrenExecutedCommand: (0, x.Z)(a, D, s),
+childrenRepliedMessage: (0, x.Z)(a, D, W, K, s),
+childrenExecutedCommand: (0, O.Z)(a, D, s),
 childrenHeader: (0, A.Z)({
   ...e,
   guildId: D.guild_id,
@@ -91,7 +91,7 @@ hasReply: a.type === M.uaV.REPLY,
 'aria-labelledby': ee,
 'aria-describedby': et,
 messageRef: $,
-...K,
+...z,
 ...G
   });
 });

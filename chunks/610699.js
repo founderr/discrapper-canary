@@ -26,8 +26,8 @@ var i = n(735250),
   S = n(430824),
   A = n(496675),
   R = n(594174),
-  x = n(197409),
-  O = n(514342),
+  O = n(197409),
+  x = n(514342),
   M = n(624138),
   v = n(358595),
   L = n(981631),
@@ -102,7 +102,7 @@ return (0, i.jsxs)('div', {
       size: 'xs',
       color: 'currentColor'
     }) : null,
-    (0, i.jsx)(O.Z, {
+    (0, i.jsx)(x.Z, {
       children: (0, i.jsx)(u.Text, {
         variant: 'text-xs/normal',
         children: P.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
@@ -119,7 +119,7 @@ className: r()(b.channel, {
   [b.stacked]: a,
   [b.ended]: s
 }),
-children: (0, i.jsx)(O.Z, {
+children: (0, i.jsx)(x.Z, {
   children: (0, i.jsx)(u.Text, {
     variant: 'text-xs/normal',
     children: P.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
@@ -137,7 +137,7 @@ function k(e) {
   getAcceptInviteContext: p
 } = e,
 {
-  approximate_member_count: O,
+  approximate_member_count: x,
   approximate_presence_count: M,
   target_type: k,
   target_application: G
@@ -162,8 +162,8 @@ V,
 Y
   ]);
   let W = (0, c.e7)([S.Z], () => null != d.guild ? S.Z.getGuild(d.guild.id) : null, [d]),
-z = (0, f.Z)([G.id])[0],
-K = (0, c.e7)([E.ZP], () => {
+K = (0, f.Z)([G.id])[0],
+z = (0, c.e7)([E.ZP], () => {
   var e;
   return (null == d ? void 0 : d.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === G.id;
 }),
@@ -198,7 +198,7 @@ if (null == d.guild)
   return (0, i.jsx)(v.Z, {});
 W = new C.ZP(d.guild);
   }
-  let ea = ei && !X || ei && K,
+  let ea = ei && !X || ei && z,
 es = () => {
   _.Z.acceptInviteAndTransitionToInviteChannel({
     inviteKey: d.code,
@@ -206,7 +206,7 @@ es = () => {
     analyticsLocations: J
   });
 };
-  return (ei && K && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), l = K ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START, null == d.code || '' === d.code) ? null : (0, i.jsxs)('div', {
+  return (ei && z && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), l = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START, null == d.code || '' === d.code) ? null : (0, i.jsxs)('div', {
 className: b.container,
 ref: F,
 children: [
@@ -217,7 +217,7 @@ children: [
     }),
     children: (0, i.jsx)(m.Z, {
       imageBackground: $,
-      applicationName: null !== (n = null == z ? void 0 : z.name) && void 0 !== n ? n : '',
+      applicationName: null !== (n = null == K ? void 0 : K.name) && void 0 !== n ? n : '',
       imageClassName: r()(b.img, {
         [b.large]: w,
         [b.stacked]: H
@@ -228,7 +228,7 @@ children: [
       })
     })
   }),
-  (0, i.jsxs)(x.Z, {
+  (0, i.jsxs)(O.Z, {
     className: r()(b.content, {
       [b.large]: w,
       [b.stacked]: H
@@ -243,7 +243,7 @@ children: [
           (0, i.jsx)(u.Heading, {
             className: b.heading,
             variant: 'heading-xl/semibold',
-            children: null == z ? void 0 : z.name
+            children: null == K ? void 0 : K.name
           }),
           (0, i.jsx)(B, {
             channel: q,
@@ -275,7 +275,7 @@ children: [
             ]
           }) : null,
           ei ? null : (0, i.jsx)(y, {
-            members: O,
+            members: x,
             membersOnline: M,
             isLarge: w,
             isStacked: H

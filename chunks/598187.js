@@ -26,8 +26,8 @@ var i = n(735250),
   S = n(103575),
   A = n(204197),
   R = n(592125),
-  x = n(271383),
-  O = n(594174),
+  O = n(271383),
+  x = n(594174),
   M = n(467679),
   v = n(702346),
   L = n(464891),
@@ -138,7 +138,7 @@ function F(e) {
   let {
 message: n,
 compact: s
-  } = e, r = O.default.getUser((0, f.Sw)(n)), l = null === (t = R.Z.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, c = null != l && null != r ? x.ZP.getMember(l, r.id) : null, {
+  } = e, r = x.default.getUser((0, f.Sw)(n)), l = null === (t = R.Z.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, c = null != l && null != r ? O.ZP.getMember(l, r.id) : null, {
 avatarSrc: d,
 avatarDecorationSrc: u,
 eventHandlers: _
@@ -244,8 +244,8 @@ dmsSent: m,
 raidType: C,
 resolvedReason: g
   } = (0, f.FL)(s), S = (0, _.e7)([R.Z], () => R.Z.getChannel(s.channel_id), [s.channel_id]), A = null !== (t = null == S ? void 0 : S.guild_id) && void 0 !== t ? t : null, {
-incidentData: x,
-shouldShowIncidentActions: O
+incidentData: O,
+shouldShowIncidentActions: x
   } = (0, T.mI)(A), M = (0, Z.sR)(s.author.id, s.channel_id), v = a.useCallback(() => {
 let e = null == S ? void 0 : S.guild_id;
 null != e && (0, p.kW)(s.id, e);
@@ -309,11 +309,11 @@ footerButtons: (0, i.jsxs)('div', {
   children: [
     (0, i.jsx)(I.Button, {
       onClick: e => {
-        if (null != A && O) {
+        if (null != A && x) {
           let e = {
             source: h.Zu.MESSAGE,
             messageId: s.id,
-            alertType: (0, N.T1)(x)
+            alertType: (0, N.T1)(O)
           };
           (0, I.openModalLazy)(async () => {
             let {
@@ -334,7 +334,7 @@ footerButtons: (0, i.jsxs)('div', {
       className: U.buttonStyle,
       children: (0, i.jsx)('div', {
         className: U.footerAction,
-        children: O ? (0, i.jsxs)(i.Fragment, {
+        children: x ? (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)(I.LockIcon, {
               size: 'xs',

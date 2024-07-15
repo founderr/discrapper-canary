@@ -26,8 +26,8 @@ var i = n(735250),
   S = n(791914),
   A = n(981631),
   R = n(689938),
-  x = n(699723);
-let O = {
+  O = n(699723);
+let x = {
   offset: {
 left: 4,
 right: -12
@@ -56,7 +56,7 @@ messages: T,
 hasMore: f,
 loading: C,
 guildFilter: g,
-roleFilter: O,
+roleFilter: x,
 everyoneFilter: v
   } = (0, s.cj)([N.Z], () => ({
 messages: N.Z.getMentions(),
@@ -65,18 +65,18 @@ loading: N.Z.loading,
 guildFilter: N.Z.guildFilter,
 roleFilter: N.Z.roleFilter,
 everyoneFilter: N.Z.everyoneFilter
-  })), L = (0, d.Z)(g), P = (0, d.Z)(O), D = (0, d.Z)(v);
+  })), L = (0, d.Z)(g), P = (0, d.Z)(x), D = (0, d.Z)(v);
   a.useEffect(() => {
 if (!N.Z.hasLoadedEver) {
   M(I, !0);
   return;
 }
-(null != L && g !== L || null != P && O !== P || null != D && v !== D) && M(I, !0);
+(null != L && g !== L || null != P && x !== P || null != D && v !== D) && M(I, !0);
   }, [
 L,
 g,
 P,
-O,
+x,
 D,
 v,
 I,
@@ -103,8 +103,8 @@ E
   ]);
   return (0, i.jsx)(i.Fragment, {
 children: (0, i.jsx)(c.ZP, {
-  className: x.recentMentionsPopout,
-  scrollerClassName: x.scroller,
+  className: O.recentMentionsPopout,
+  scrollerClassName: O.scroller,
   onFetch: () => null,
   onJump: n,
   onCloseMessage: function(e) {
@@ -157,13 +157,13 @@ return null;
   let r = T.Z.didAgree(s.getGuildId()),
 c = !!s.isNSFW() && !r;
   return (0, i.jsxs)('div', {
-className: x.container,
+className: O.container,
 children: [
   (0, i.jsx)(C.Z, {
     channel: s,
     gotoChannel: n,
     children: null != a ? (0, i.jsx)(l.CircleIconButton, {
-      className: x.closeButton,
+      className: O.closeButton,
       tooltip: R.Z.Messages.CLOSE,
       color: l.CircleIconButtonColors.TERTIARY,
       icon: (0, i.jsx)(l.CloseSmallIcon, {
@@ -174,20 +174,20 @@ children: [
     }) : null
   }),
   (0, i.jsxs)('div', {
-    className: x.messageContainer,
+    className: O.messageContainer,
     children: [
       (0, i.jsx)(f.Z, {
-        className: x.jumpMessageButton,
+        className: O.jumpMessageButton,
         onJump: n
       }),
       (0, i.jsx)(E.Z, {
         message: t,
         channel: s,
-        className: x.message,
+        className: O.message,
         hideAccessories: c,
         compact: I.jU.getSetting(),
         animateAvatar: !1,
-        focusProps: O,
+        focusProps: x,
         trackAnnouncementViews: !0
       }, t.id)
     ]

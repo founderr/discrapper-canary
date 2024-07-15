@@ -17,8 +17,8 @@ var i = n(735250),
   p = n(585500),
   T = n(566078),
   S = n(602667),
-  C = n(611855),
-  f = n(670638),
+  f = n(611855),
+  C = n(670638),
   N = n(667105),
   A = n(860151),
   Z = n(46140),
@@ -119,10 +119,10 @@ children: e => {
         children: [
           k ? (0, i.jsx)(R, {
             quest: o
-          }) : (0, i.jsx)(C.Z, {
+          }) : (0, i.jsx)(f.Z, {
             textOpacity: 0.5
           }),
-          (0, i.jsx)(f.r, {
+          (0, i.jsx)(C.r, {
             quest: o,
             questContent: m.jn.ACTIVITY_PANEL,
             shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,

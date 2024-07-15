@@ -12,8 +12,8 @@ var a, r, l, o, c = n(392711),
   p = n(71080);
 let T = new Set(),
   S = g.QZA.CLOSED,
-  C = !1,
-  f = null,
+  f = !1,
+  C = null,
   N = null,
   A = null,
   Z = null,
@@ -33,26 +33,26 @@ function x() {
   if (A = I.Z.getChannel(), Z = I.Z.getCategory(), null == A)
 return !1;
   let e = A.getGuildId();
-  N = f = R(A), null == f[L] && (L = e), s = null != Z, i = h.o4(A, Z), v = null, C = !1, S = g.QZA.CLOSED, T.clear();
+  N = C = R(A), null == C[L] && (L = e), s = null != Z, i = h.o4(A, Z), v = null, f = !1, S = g.QZA.CLOSED, T.clear();
 }
 class b extends(a = u.ZP.Store) {
   initialize() {
 this.waitFor(I.Z, m.Z);
   }
   hasChanges() {
-return C;
+return f;
   }
   showNotice() {
 return this.hasChanges();
   }
   getPermissionOverwrite(e) {
-return null == f ? void 0 : f[e];
+return null == C ? void 0 : C[e];
   }
   get editedPermissionIds() {
 return Array.from(T);
   }
   get permissionOverwrites() {
-return f;
+return C;
   }
   get selectedOverwriteId() {
 return L;
@@ -96,23 +96,23 @@ let {
   id: t,
   allow: n,
   deny: s
-} = e, a = null == f ? void 0 : f[t];
+} = e, a = null == C ? void 0 : C[t];
 if (null == a || null == A)
   return !1;
 a = {
   ...a,
   allow: n,
   deny: s
-}, f = {
-  ...f,
+}, C = {
+  ...C,
   [t]: a
-}, T.add(t), S = g.QZA.OPEN, C = !d().isEqual(f, N), i = h.o4(A, Z);
+}, T.add(t), S = g.QZA.OPEN, f = !d().isEqual(C, N), i = h.o4(A, Z);
   },
   CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function(e) {
 let {
   id: t
 } = e;
-if (null != f && null != f[t])
+if (null != C && null != C[t])
   L = t;
 else {
   if (null == A)
@@ -121,7 +121,7 @@ else {
 }
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-S = g.QZA.CLOSED, f = null, N = null, A = null, Z = null, C = !1, T.clear(), L = null, v = null;
+S = g.QZA.CLOSED, C = null, N = null, A = null, Z = null, f = !1, T.clear(), L = null, v = null;
   },
   CHANNEL_UPDATES: function(e) {
 let {
@@ -141,11 +141,11 @@ for (let e of t)
     N = R(A);
     let n = {};
     return T.forEach(e => {
-      null != f && (n[e] = f[e]);
-    }), null == n[t] && null == A.permissionOverwrites[t] && (n[t] = h.we(t)), null == (f = {
+      null != C && (n[e] = C[e]);
+    }), null == n[t] && null == A.permissionOverwrites[t] && (n[t] = h.we(t)), null == (C = {
       ...A.permissionOverwrites,
       ...n
-    })[L] ? L = t : null != v && null != f[v] && (L = v, v = null), i = h.o4(A, Z), !0;
+    })[L] ? L = t : null != v && null != C[v] && (L = v, v = null), i = h.o4(A, Z), !0;
   }(e.id) && (n = !0);
 return n;
   },

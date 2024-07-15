@@ -71,7 +71,7 @@ super(...e), A(this, 'renderUserPopout', e => {
 });
   }
 }
-class x extends a.PureComponent {
+class O extends a.PureComponent {
   isDeadInvite() {
 let {
   isPreview: e,
@@ -459,4 +459,4 @@ super(...e), A(this, 'handleJoin', () => {
 });
   }
 }
-t.Z = x;
+t.Z = O;

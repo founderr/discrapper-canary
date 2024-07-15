@@ -17,8 +17,8 @@ var i = n(735250),
   p = n(825682),
   T = n(170245),
   S = n(981631),
-  C = n(65154),
-  f = n(689938),
+  f = n(65154),
+  C = n(689938),
   N = n(920175);
 
 function A(e, t, n) {
@@ -38,42 +38,42 @@ onSelect: n
 u.Z.removeFriend(t.id, {
   location: 'Friends'
 });
-  }, a = (0, l.e7)([h.Z], () => h.Z.supports(C.AN.VIDEO));
+  }, a = (0, l.e7)([h.Z], () => h.Z.supports(f.AN.VIDEO));
   return (0, i.jsxs)(o.Menu, {
 navId: 'friend-row',
-'aria-label': f.Z.Messages.USER_ACTIONS_MENU_LABEL,
+'aria-label': C.Z.Messages.USER_ACTIONS_MENU_LABEL,
 onClose: d.Zy,
 onSelect: n,
 children: [
   a ? (0, i.jsx)(o.MenuItem, {
     id: 'start-video-call',
-    label: f.Z.Messages.START_VIDEO_CALL,
+    label: C.Z.Messages.START_VIDEO_CALL,
     action: function() {
       c.Z.openPrivateChannel(t.id, !0, !0);
     }
   }) : null,
   (0, i.jsx)(o.MenuItem, {
     id: 'start-voice-call',
-    label: f.Z.Messages.START_VOICE_CALL,
+    label: C.Z.Messages.START_VOICE_CALL,
     action: () => {
       c.Z.openPrivateChannel(t.id, !0);
     }
   }),
   (0, i.jsx)(o.MenuItem, {
     id: 'remove-friend',
-    label: f.Z.Messages.REMOVE_FRIEND,
+    label: C.Z.Messages.REMOVE_FRIEND,
     action: () => {
       (0, o.openModal)(e => (0, i.jsx)(o.ConfirmModal, {
-        header: f.Z.Messages.REMOVE_FRIEND_TITLE.format({
+        header: C.Z.Messages.REMOVE_FRIEND_TITLE.format({
           name: I.ZP.getName(t)
         }),
-        confirmText: f.Z.Messages.REMOVE_FRIEND,
-        cancelText: f.Z.Messages.CANCEL,
+        confirmText: C.Z.Messages.REMOVE_FRIEND,
+        cancelText: C.Z.Messages.CANCEL,
         onConfirm: s,
         ...e,
         children: (0, i.jsx)(o.Text, {
           variant: 'text-md/normal',
-          children: f.Z.Messages.REMOVE_FRIEND_BODY.format({
+          children: C.Z.Messages.REMOVE_FRIEND_BODY.format({
             name: I.ZP.getName(t)
           })
         })
@@ -131,13 +131,13 @@ return (0, i.jsx)(g.Z, {
         children: [
           (0, i.jsx)(m.Z, {
             icon: o.ChatIcon,
-            tooltip: f.Z.Messages.SEND_DM,
+            tooltip: C.Z.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t
           }),
           (0, i.jsx)(m.Z, {
             icon: o.MoreVerticalIcon,
-            tooltip: f.Z.Messages.MORE,
+            tooltip: C.Z.Messages.MORE,
             onClick: this.handleOpenActionsMenu,
             shouldHighlight: t
           })

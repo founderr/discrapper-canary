@@ -20,8 +20,8 @@ var i, s, a, r, l = n(735250),
   p = n(231467),
   T = n(931515),
   S = n(702646),
-  C = n(207796),
-  f = n(526282),
+  f = n(207796),
+  C = n(526282),
   N = n(777734),
   A = n(976757),
   Z = n(981631),
@@ -40,7 +40,7 @@ loaded: a,
 clans: r,
 searchResult: R,
 searchCriteria: x
-  } = (0, T.Qc)(), b = (0, C.GN)(e => e.selectedTraits, d.Z), P = (0, _.Z)(R), [M, D] = o.useState(0), y = o.useMemo(() => ({
+  } = (0, T.Qc)(), b = (0, f.GN)(e => e.selectedTraits, d.Z), P = (0, _.Z)(R), [M, D] = o.useState(0), y = o.useMemo(() => ({
 height: M
   }), [M]), j = (0, c.useSpring)({
 opacity: M > 0 ? 1 : 0,
@@ -203,7 +203,7 @@ z = o.useCallback((e, t) => {
   } = F[e];
   switch (a) {
     case 'upsell':
-      return (0, l.jsx)(f.Z, {});
+      return (0, l.jsx)(C.Z, {});
     case 'hero':
       return (0, l.jsx)(m.Z, {
         title: L.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,

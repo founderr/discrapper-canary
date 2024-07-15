@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return f;
+return C;
   }
 });
 var i = n(735250);
@@ -44,7 +44,7 @@ children: g.Z.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY.format({
 })
   });
 }
-let C = {
+let f = {
   [h.D5.Error]: {
 textColor: 'text-primary',
 buttonLook: l.Button.Looks.FILLED,
@@ -85,7 +85,7 @@ containerClass: a()(p.container, p.containerEnabled)
   }
 };
 
-function f() {
+function C() {
   var e;
   let {
 decoupledClipsEnabled: t,
@@ -103,7 +103,7 @@ clipsError: _.Z.getLastClipsError()
   buttonColor: u,
   buttonLook: I,
   containerClass: m
-} = C[s];
+} = f[s];
   return (0, i.jsxs)('div', {
 className: m,
 children: [

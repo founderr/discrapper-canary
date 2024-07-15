@@ -5,13 +5,13 @@ return S;
 }), t(47120), t(724458);
 var i = t(735250),
   a = t(470079),
-  r = t(481060),
-  l = t(239091),
+  l = t(481060),
+  r = t(239091),
   o = t(236413),
   s = t(727072),
   u = t(85960),
-  c = t(676317),
-  d = t(65912),
+  d = t(676317),
+  c = t(65912),
   E = t(556012),
   M = t(572456),
   I = t(434404),
@@ -28,16 +28,16 @@ perGuildMaxCount: t
 isLoading: S,
 saveRule: v,
 errorMessage: A
-  } = (0, d.w)(), {
+  } = (0, c.w)(), {
 createNewEditingRule: O
-  } = (0, d.V)(), [T, R] = a.useState(!1), [N, h] = (0, s.I2)(n), {
+  } = (0, c.V)(), [T, R] = a.useState(!1), [h, N] = (0, s.I2)(n), {
 rulesByTriggerType: p,
 updateRule: x
   } = (0, s.pH)(n), b = a.useMemo(() => {
 var e;
 return null !== (e = p[Z]) && void 0 !== e ? e : [];
   }, [p]), j = 0 === b.length, C = t > b.length && !j;
-  if (!a.useMemo(() => (0, c.ze)(n), [n]) || null == e || 0 === e.length || null == n)
+  if (!a.useMemo(() => (0, d.ze)(n), [n]) || null == e || 0 === e.length || null == n)
 return null;
   let P = e.split(' '),
 L = P.length;
@@ -48,7 +48,7 @@ return null;
   }
   let D = () => {
   if (null != n)
-    (0, l.Zy)(), I.Z.open(n, m.pNK.GUILD_AUTOMOD), setTimeout(() => {
+    (0, r.Zy)(), I.Z.open(n, m.pNK.GUILD_AUTOMOD), setTimeout(() => {
       O(n, Z, {
         triggerMetadata: {
           keywordFilter: [e],
@@ -60,7 +60,7 @@ return null;
 },
 G = async n => {
   var t, i;
-  if ((0, l.Zy)(), !await (0, M.XN)(n.name, e))
+  if ((0, r.Zy)(), !await (0, M.XN)(n.name, e))
     return;
   let a = {
     ...n,
@@ -72,16 +72,16 @@ G = async n => {
       ]
     }
   };
-  await v(a, b), x(a), null != A ? (0, r.showToast)((0, r.createToast)(g.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_ERROR, r.ToastType.FAILURE)) : (0, r.showToast)((0, r.createToast)(g.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_SUCCESS, r.ToastType.SUCCESS));
+  await v(a, b), x(a), null != A ? (0, l.showToast)((0, l.createToast)(g.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_ERROR, l.ToastType.FAILURE)) : (0, l.showToast)((0, l.createToast)(g.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_SUCCESS, l.ToastType.SUCCESS));
 }, U = (0, i.jsx)(i.Fragment, {
-  children: (0, i.jsx)(r.MenuItem, {
+  children: (0, i.jsx)(l.MenuItem, {
     id: 'automod-rules-loading',
     label: g.Z.Messages.LOADING
   })
 });
-  return !N && (U = (0, i.jsxs)(i.Fragment, {
+  return !h && (U = (0, i.jsxs)(i.Fragment, {
 children: [
-  j && (0, i.jsx)(r.MenuItem, {
+  j && (0, i.jsx)(l.MenuItem, {
     id: 'add-first-rule',
     label: g.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE,
     action: D,
@@ -100,10 +100,10 @@ children: [
       let a = (0, E.c)(t, i);
       return n += ', '.concat(null == a ? void 0 : a.headerText);
     }, '');
-    return (0, i.jsx)(r.MenuRadioItem, {
+    return (0, i.jsx)(l.MenuRadioItem, {
       id: e.id,
       label: e.name,
-      subtext: (0, i.jsx)(r.Text, {
+      subtext: (0, i.jsx)(l.Text, {
         color: 'text-muted',
         className: f.actionTextHeader,
         variant: 'text-xs/normal',
@@ -117,8 +117,8 @@ children: [
   }),
   C && (0, i.jsxs)(i.Fragment, {
     children: [
-      (0, i.jsx)(r.MenuSeparator, {}),
-      (0, i.jsx)(r.MenuItem, {
+      (0, i.jsx)(l.MenuSeparator, {}),
+      (0, i.jsx)(l.MenuItem, {
         id: 'add-another-rule',
         label: g.Z.Messages.GUILD_AUTOMOD_ADD_NEW_RULE,
         action: D,
@@ -127,14 +127,14 @@ children: [
     ]
   })
 ]
-  })), (0, i.jsx)(r.MenuItem, {
+  })), (0, i.jsx)(l.MenuItem, {
 id: 'guild-automod-add-selection',
 label: g.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION.format({
   keywordCount: L
 }),
 onFocus: () => {
   if (!T)
-    R(!0), h();
+    R(!0), N();
 },
 children: U
   });

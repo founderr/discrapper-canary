@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return C;
+return f;
   }
 }), n(47120);
 var i = n(735250),
@@ -142,7 +142,7 @@ super(...e), t = this, n = 'handleRestoreHiddenLibraryApplication', i = e => {
   }
 }
 
-function C() {
+function f() {
   let e = {
 installShortcutDesktop: o.Xc.useSetting(),
 installShortcutStartMenu: o.Pe.useSetting(),

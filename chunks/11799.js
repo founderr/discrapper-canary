@@ -35,7 +35,7 @@ let {
   errored: c.Z.errored
 })), {
   roleFilter: R,
-  everyoneFilter: x
+  everyoneFilter: O
 } = (0, a.cj)([l.Z], () => ({
   everyoneFilter: l.Z.everyoneFilter,
   roleFilter: l.Z.roleFilter
@@ -46,14 +46,14 @@ i.useEffect(() => ((0, o.Vk)(!0), () => (0, o.Vk)(!1)), []), i.useEffect(() => {
   t,
   f
 ]);
-let O = (0, r.Z)();
+let x = (0, r.Z)();
 i.useEffect(() => () => {
-  _ ? !O() && (A || C.length > 100) && (0, o.jF)() : n && C.length > 100 && (0, o.jF)();
+  _ ? !x() && (A || C.length > 100) && (0, o.jF)() : n && C.length > 100 && (0, o.jF)();
 }, [
   n,
   C,
   _,
-  O,
+  x,
   A
 ]), i.useEffect(() => {
   let e = m && t;
@@ -61,7 +61,7 @@ i.useEffect(() => () => {
     limit: null != I ? I : E ? 8 : 20,
     with_mentions: E,
     roles_filter: R,
-    everyone_filter: x
+    everyone_filter: O
   });
 }, [
   f,
@@ -69,7 +69,7 @@ i.useEffect(() => () => {
   t,
   E,
   R,
-  x,
+  O,
   I
 ]);
 let M = i.useCallback(async e => {
@@ -77,7 +77,7 @@ let M = i.useCallback(async e => {
     after: S,
     with_mentions: E,
     roles_filter: R,
-    everyone_filter: x,
+    everyone_filter: O,
     limit: E ? 8 : 20
   }, () => {
     T.current = !1;
@@ -89,7 +89,7 @@ let M = i.useCallback(async e => {
   A,
   E,
   R,
-  x
+  O
 ]);
 return {
   initialized: f,

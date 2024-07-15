@@ -22,8 +22,8 @@ var i = n(735250),
   S = n(739566),
   A = n(443877),
   R = n(492593),
-  x = n(938353),
-  O = n(25015),
+  O = n(938353),
+  x = n(25015),
   M = n(689674),
   v = n(963550),
   L = n(845080),
@@ -76,13 +76,13 @@ onClick: G,
 disableInteraction: F = !1,
 hasThread: w,
 treatSpam: V
-  } = t, H = D.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, l.e7)([I.Z], () => I.Z.getMessageByReference(H)), W = (0, l.e7)([T.Z], () => o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null), z = m.x4.useSetting(), K = m.RS.useSetting(), Q = m.NA.useSetting(), q = m.QK.useSetting(), X = (0, u.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, _.Z)(null == s ? void 0 : s.id), {
+  } = t, H = D.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, l.e7)([I.Z], () => I.Z.getMessageByReference(H)), W = (0, l.e7)([T.Z], () => o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null), K = m.x4.useSetting(), z = m.RS.useSetting(), Q = m.NA.useSetting(), q = m.QK.useSetting(), X = (0, u.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, _.Z)(null == s ? void 0 : s.id), {
 disableReactionCreates: $
   } = (0, A.Z)(s), {
 content: ee,
 hasSpoilerEmbeds: et
-  } = (0, O.Z)(o, {
-hideSimpleEmbedContent: K && Q,
+  } = (0, x.Z)(o, {
+hideSimpleEmbedContent: z && Q,
 allowList: X,
 allowHeading: X,
 allowLinks: !0,
@@ -115,7 +115,7 @@ childrenHeader: (0, L.Z)({
   author: en,
   guildId: s.guild_id
 }),
-childrenAccessories: (0, i.jsx)(x.BB, {
+childrenAccessories: (0, i.jsx)(O.BB, {
   channel: s,
   message: o,
   hasSpoilerEmbeds: et,
@@ -127,8 +127,8 @@ childrenAccessories: (0, i.jsx)(x.BB, {
   disableReactionUpdates: !1,
   renderThreadAccessory: w,
   renderComponentAccessory: !1,
-  inlineAttachmentMedia: z,
-  inlineEmbedMedia: K,
+  inlineAttachmentMedia: K,
+  inlineEmbedMedia: z,
   renderEmbeds: Q,
   gifAutoPlay: q,
   poll: ec,

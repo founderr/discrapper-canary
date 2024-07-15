@@ -64,17 +64,17 @@ if (!R)
   return {
     snapshotIndex: g
   };
-let x = (0, u.Xf)(A.message.timestamp),
-  O = T.getChannel(this.parentMessage.channel_id);
-if (null != O && O.guild_id === (null === (e = S.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
+let O = (0, u.Xf)(A.message.timestamp),
+  x = T.getChannel(this.parentMessage.channel_id);
+if (null != x && x.guild_id === (null === (e = S.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
   let e = T.getChannel(null === (d = S.messageReference) || void 0 === d ? void 0 : d.channel_id);
   if (null == e) {
-    let e = p.getGuild(O.guild_id);
+    let e = p.getGuild(x.guild_id);
     return null == e ? {
       snapshotIndex: g
     } : {
       snapshotIndex: g,
-      footerInfo: m(e, x)
+      footerInfo: m(e, O)
     };
   }
   if (!f.can(e.accessPermissions, e))
@@ -86,10 +86,10 @@ if (null != O && O.guild_id === (null === (e = S.messageReference) || void 0 ===
     snapshotIndex: g,
     footerInfo: {
       originLabel: t,
-      timestampLabel: x,
+      timestampLabel: O,
       accessibilityLabel: E.Z.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
         origin: t,
-        timestamp: x
+        timestamp: O
       })
     }
   };
@@ -107,7 +107,7 @@ if (null == v)
 let L = T.getChannel(null === (n = S.messageReference) || void 0 === n ? void 0 : n.channel_id);
 return null == L || f.can(L.accessPermissions, L) ? {
   snapshotIndex: g,
-  footerInfo: m(v, x)
+  footerInfo: m(v, O)
 } : {
   snapshotIndex: g
 };

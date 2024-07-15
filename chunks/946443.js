@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return x;
+return O;
   },
   h: function() {
 return M;
@@ -30,13 +30,13 @@ var i = n(735250),
   A = n(689938),
   R = n(418149);
 
-function x(e) {
+function O(e) {
   let {
 setTab: t,
 onJump: n,
 showTutorial: s,
 setSeenTutorial: l,
-closePopout: x,
+closePopout: O,
 badgeState: M
   } = e, v = a.useRef(null), [L, Z] = (0, g.ZP)(v), {
 loadState: P,
@@ -88,9 +88,9 @@ a.useEffect(() => {
 T.default.track(S.rMx.OPEN_POPOUT, {
   type: 'Inbox'
 });
-  }, []), a.useEffect(() => (E.Z.subscribe('CONNECTION_OPEN', x), () => {
-E.Z.unsubscribe('CONNECTION_OPEN', x);
-  }), [x]));
+  }, []), a.useEffect(() => (E.Z.subscribe('CONNECTION_OPEN', O), () => {
+E.Z.unsubscribe('CONNECTION_OPEN', O);
+  }), [O]));
   let U = (0, d.e7)([I.Z], () => I.Z.messageGroupSpacing),
 y = (0, m.Z)('unreads', v);
   if (0 === b.length) {
@@ -102,7 +102,7 @@ return (0, i.jsxs)('div', {
       tab: u.X.UNREADS,
       setTab: t,
       badgeState: M,
-      closePopout: x
+      closePopout: O
     }),
     (0, i.jsx)(f.Z, {
       Icon: _.InboxIcon,
@@ -120,7 +120,7 @@ children: [
     tab: u.X.UNREADS,
     setTab: t,
     badgeState: M,
-    closePopout: x,
+    closePopout: O,
     children: (0, i.jsx)(N.Z, {
       type: 'top-header',
       onClick: j
@@ -143,7 +143,7 @@ children: [
           onScroll: P === g.jd.Done ? void 0 : D,
           className: R.scroller,
           children: [
-            s ? (0, i.jsx)(O, {
+            s ? (0, i.jsx)(x, {
               setSeenTutorial: l
             }) : null,
             (0, C.Z)(b, Z, n),
@@ -159,7 +159,7 @@ children: [
   });
 }
 
-function O(e) {
+function x(e) {
   let {
 setSeenTutorial: t
   } = e;

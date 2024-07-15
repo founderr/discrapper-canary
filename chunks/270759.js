@@ -17,8 +17,8 @@ var i = n(735250),
   p = n(199104),
   T = n(108427),
   S = n(210887),
-  C = n(974042),
-  f = n(153124),
+  f = n(974042),
+  C = n(153124),
   N = n(792125),
   A = n(666286),
   Z = n(596957),
@@ -61,10 +61,10 @@ null != t && E.Z.setInitialSection(t);
 {
   section: b,
   pendingCount: P
-} = (0, c.cj)([C.ZP], () => C.ZP.getState()),
+} = (0, c.cj)([f.ZP], () => f.ZP.getState()),
 M = (0, c.cj)([I.Z], () => I.Z.getSuggestionCount()),
-D = (0, f.Dt)(),
-y = (0, f.Dt)();
+D = (0, C.Dt)(),
+y = (0, C.Dt)();
   return (0, i.jsxs)('main', {
 className: R.container,
 'aria-label': O.Z.Messages.FRIENDS,

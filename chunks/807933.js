@@ -108,7 +108,7 @@ function S(e) {
   return e;
 }
 
-function C(e, t, n, s) {
+function f(e, t, n, s) {
   return (0, i.jsx)(T, {
 item: t,
 state: n,
@@ -121,7 +121,7 @@ mode: t
   } = e, n = s.useMemo(() => null != p[t] ? [t] : [], [t]);
   return (0, i.jsx)(o.TransitionGroup, {
 items: n,
-renderItem: C,
+renderItem: f,
 getItemKey: S
   });
 });

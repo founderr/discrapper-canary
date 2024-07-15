@@ -54,15 +54,15 @@ guildsData: g,
 analyticsContext: p,
 theme: T,
 onViewGuild: S,
-fetchGuilds: C,
-onGuildCardSeen: f,
+fetchGuilds: f,
+onGuildCardSeen: C,
 currentCategoryId: N,
 loadId: A,
 onTagClick: Z,
 showMoreCards: L = !1
   } = e;
   s.useEffect(() => {
-r.Z.wait(() => C());
+r.Z.wait(() => f());
   }, [N]);
   let v = (0, u.Z)(L ? I : h),
 {
@@ -104,7 +104,7 @@ t = R.slice(0, v).map(e => (0, i.jsx)(d.Z, {
   guild: e,
   onView: P,
   theme: T,
-  onGuildCardSeen: f,
+  onGuildCardSeen: C,
   onTagClick: Z
 }, e.id));
   return (0, i.jsx)('section', {

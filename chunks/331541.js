@@ -21,8 +21,8 @@ var i = n(735250),
   p = n(299206),
   T = n(440051),
   S = n(734934),
-  C = n(158238),
-  f = n(300284),
+  f = n(158238),
+  C = n(300284),
   N = n(680295),
   A = n(785717),
   Z = n(481046),
@@ -179,7 +179,7 @@ let n = T.Y.useExperiment({
   }).expiringStatus,
   s = w.Cr.useSetting(),
   a = (0, S.p)(),
-  r = C.e.useExperiment({
+  r = f.e.useExperiment({
     location: 'account popout'
   }).allowQuietMode || a,
   o = w.fv.useSetting(),
@@ -294,7 +294,7 @@ a
 } = (0, Z.K)({
   location: 'AccountProfilePopout'
 }),
-eE = (0, f.Z)({
+eE = (0, C.Z)({
   analyticsLocations: es
 }),
 eh = (0, S.p)(),

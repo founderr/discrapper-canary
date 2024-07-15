@@ -26,9 +26,9 @@ var i = n(735250),
   S = n(223021),
   A = n(981631),
   R = n(689938),
-  x = n(475525);
+  O = n(475525);
 
-function O(e) {
+function x(e) {
   let {
 width: t = 6,
 height: n = 10,
@@ -96,9 +96,9 @@ let t = function(e, t) {
     } = e;
     if (s && null == a.activityInstance || o)
       return (0, i.jsx)('div', {
-        className: x.replyBadge,
-        children: (0, i.jsx)(O, {
-          className: x.commandIcon
+        className: O.replyBadge,
+        children: (0, i.jsx)(x, {
+          className: O.commandIcon
         })
       });
     if (null != a.interaction) {
@@ -126,8 +126,8 @@ let t = function(e, t) {
         onContextMenu: l,
         onMouseDown: o,
         className: r()({
-          [x.executedCommandAvatar]: !0,
-          [x.clickable]: null != s
+          [O.executedCommandAvatar]: !0,
+          [O.clickable]: null != s
         })
       });
     }({
@@ -199,7 +199,7 @@ n = P ? R.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
     tag: 'span',
     onClick: e,
     children: (0, i.jsx)('div', {
-      className: r()(x.commandName, x.clickable),
+      className: r()(O.commandName, O.clickable),
       children: R.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
     })
   })
@@ -235,20 +235,20 @@ n = R.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
             tag: 'span',
             onClick: s,
             children: (0, i.jsxs)('div', {
-              className: r()(x.appLauncherOnboardingCommandName, x.clickable),
+              className: r()(O.appLauncherOnboardingCommandName, O.clickable),
               children: [
                 (0, i.jsx)(u.AppsIcon, {
                   size: 'custom',
                   color: 'currentColor',
                   height: 10,
                   width: 10,
-                  className: x.appsIcon
+                  className: O.appsIcon
                 }),
                 o
               ]
             })
           }) : (0, i.jsx)('div', {
-            className: x.commandName,
+            className: O.commandName,
             children: o
           });
         }
@@ -262,7 +262,7 @@ n = R.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
   return (0, i.jsx)(T.Gt, {
 value: c,
 children: (0, i.jsx)('div', {
-  className: r()(x.repliedMessage, x.executedCommand, Z),
+  className: r()(O.repliedMessage, O.executedCommand, Z),
   'aria-hidden': !e.compact,
   children: n
 })

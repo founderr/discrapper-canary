@@ -28,11 +28,11 @@ let I = {},
   p = {},
   T = {},
   S = {},
-  C = {
+  f = {
 id: null,
 justChanged: !1
   },
-  f = {
+  C = {
 id: null,
 justChanged: !1
   },
@@ -73,13 +73,13 @@ return S;
 return p;
   }
   get lastInputSystemDevice() {
-return C;
+return f;
   }
   get outputDevices() {
 return T;
   }
   get lastOutputSystemDevice() {
-return f;
+return C;
   }
 }
 h(L, 'displayName', 'ConnectedDeviceStore'), h(L, 'persistKey', 'ConnectedDeviceStore'), t.Z = new L(l.Z, {
@@ -88,19 +88,19 @@ let {
   inputDevices: t,
   outputDevices: n
 } = e, i = {};
-C.justChanged = !1, t.forEach(e => {
+f.justChanged = !1, t.forEach(e => {
   if (i[A(e)] = e.id, e.id === E.w5) {
     var t;
     let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-    n !== C.id && (C.justChanged = !0), C.id = n;
+    n !== f.id && (f.justChanged = !0), f.id = n;
   }
 });
 let s = {};
-if (f.justChanged = !1, n.forEach(e => {
+if (C.justChanged = !1, n.forEach(e => {
     if (s[A(e)] = e.id, e.id === E.w5) {
       var t;
       let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-      n !== f.id && (f.justChanged = !0), f.id = n;
+      n !== C.id && (C.justChanged = !0), C.id = n;
     }
   }), !g) {
   p = i, T = s, g = !0;

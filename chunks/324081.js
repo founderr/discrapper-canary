@@ -71,16 +71,16 @@ function R(e) {
 channel: t,
 gotoChannel: n
   } = e;
-  return t.isPrivate() ? (0, i.jsx)(x, {
+  return t.isPrivate() ? (0, i.jsx)(O, {
 channel: t,
 gotoChannel: n
-  }) : (0, i.jsx)(O, {
+  }) : (0, i.jsx)(x, {
 channel: t,
 gotoChannel: n
   });
 }
 
-function x(e) {
+function O(e) {
   let {
 channel: t,
 gotoChannel: n
@@ -97,7 +97,7 @@ children: (0, i.jsx)('img', {
   });
 }
 
-function O(e) {
+function x(e) {
   let {
 channel: t,
 gotoChannel: n

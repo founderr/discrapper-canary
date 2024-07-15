@@ -17,8 +17,8 @@ var i = n(735250),
   p = n(276645),
   T = n(970731),
   S = n(626135),
-  C = n(267642),
-  f = n(981631),
+  f = n(267642),
+  C = n(981631),
   N = n(921944),
   A = n(30513),
   Z = n(474936),
@@ -32,22 +32,22 @@ var i = n(735250),
 
 function M(e) {
   if (null != e)
-I.Z.open(e.id, f.pNK.OVERVIEW, {
-  section: f.jXE.PREMIUM_GUILD_PROGRESS_BAR
-}, f.KsC.DISPLAY);
+I.Z.open(e.id, C.pNK.OVERVIEW, {
+  section: C.jXE.PREMIUM_GUILD_PROGRESS_BAR
+}, C.KsC.DISPLAY);
 }
 
 function D(e, t) {
-  t && I.Z.open(e.id, f.pNK.DISCOVERY);
+  t && I.Z.open(e.id, C.pNK.DISCOVERY);
 }
 
 function y(e, t) {
   if (null != t)
-(0, C.f2)(t, f.Eu4.TIER_1) ? I.Z.open(t.id, f.pNK.OVERVIEW, {
-  section: f.jXE.PREMIUM_GUILD_INVITE_SPLASH
-}, f.KsC.INVITE) : (0, _.Z)({
+(0, f.f2)(t, C.Eu4.TIER_1) ? I.Z.open(t.id, C.pNK.OVERVIEW, {
+  section: C.jXE.PREMIUM_GUILD_INVITE_SPLASH
+}, C.KsC.INVITE) : (0, _.Z)({
   analyticsLocations: e,
-  analyticsSourceLocation: f.jXE.PREMIUM_GUILD_INVITE_SPLASH,
+  analyticsSourceLocation: C.jXE.PREMIUM_GUILD_INVITE_SPLASH,
   guild: t,
   perks: (0, A.o9)()
 });
@@ -79,17 +79,17 @@ renderGuildHeaderDropdownButton: l
   } = e, {
 analyticsLocations: _
   } = (0, o.ZP)(), A = () => {
-S.default.track(f.rMx.TOOLTIP_VIEWED, {
+S.default.track(C.rMx.TOOLTIP_VIEWED, {
   type: Z.cd.PREMIUM_PROGRESS_BAR,
   location: {
-    page: f.ZY5.GUILD_CHANNEL
+    page: C.ZY5.GUILD_CHANNEL
   }
 });
   }, U = () => {
-S.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
+S.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
   type: Z.cd.INVITE_SPLASH_UPSELL,
   location: {
-    page: f.ZY5.GUILD_CHANNEL
+    page: C.ZY5.GUILD_CHANNEL
   },
   location_stack: _
 });
@@ -169,10 +169,10 @@ children: (() => {
         renderGuildHeaderDropdownButton: l
       });
     case a.z.GUILD_HEADER_INVITE_SPLASH:
-      let e = (0, C.f2)(s, f.Eu4.TIER_1) ? L.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : L.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
-          boostCount: (0, C.KK)(s, f.Eu4.TIER_1)
+      let e = (0, f.f2)(s, C.Eu4.TIER_1) ? L.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : L.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
+          boostCount: (0, f.KK)(s, C.Eu4.TIER_1)
         }),
-        t = (0, C.f2)(s, f.Eu4.TIER_1) ? L.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : L.Z.Messages.LEARN_MORE;
+        t = (0, f.f2)(s, C.Eu4.TIER_1) ? L.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : L.Z.Messages.LEARN_MORE;
       return (0, i.jsx)(j, {
         renderPopout: (0, i.jsx)(T.ZP, {
           onComponentMount: U,
@@ -223,7 +223,7 @@ children: (() => {
             className: O.fullWidthImage
           }),
           onClick: () => {
-            I.Z.open(s.id, f.pNK.ROLES), I.Z.selectRole(s.getEveryoneRoleId(), L.Z.Messages.USE_SOUNDBOARD);
+            I.Z.open(s.id, C.pNK.ROLES), I.Z.selectRole(s.getEveryoneRoleId(), L.Z.Messages.USE_SOUNDBOARD);
           },
           markAsDismissed: w
         }),

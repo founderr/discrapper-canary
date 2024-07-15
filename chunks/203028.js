@@ -52,7 +52,7 @@ switch (n.length) {
 }
   }(t), {
 subtitle: S,
-icon: C
+icon: f
   } = function(e) {
 var t;
 let {
@@ -60,13 +60,13 @@ let {
   partiedMembers: d,
   voiceChannels: m,
   currentActivities: g
-} = e, p = s.length, T = d.length - p, S = g[0], C = null == S ? void 0 : S.activity, f = null == S ? void 0 : S.startedPlayingTime, N = {
-  name: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : ''
+} = e, p = s.length, T = d.length - p, S = g[0], f = null == S ? void 0 : S.activity, C = null == S ? void 0 : S.startedPlayingTime, N = {
+  name: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : ''
 };
-if ((0, r.Z)(C) && null != C)
+if ((0, r.Z)(f) && null != f)
   return {
     subtitle: (0, i.jsx)(c.ZP, {
-      start: f,
+      start: C,
       location: c.ZP.Locations.ACTIVITY_FEED_NEW,
       messageProps: N
     }),
@@ -76,17 +76,17 @@ if (p + T === 1 && null != S) {
   let {
     game: e
   } = S;
-  if (null == C)
+  if (null == f)
     return {
       subtitle: null,
       icon: null
     };
-  let t = u.dc(C);
+  let t = u.dc(f);
   if (null != t)
     return t;
-  switch (C.type) {
+  switch (f.type) {
     case h.IIU.PLAYING:
-      if ((0, o.Z)(C))
+      if ((0, o.Z)(f))
         return {
           subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
           icon: (0, i.jsx)(_.Z.Header.Icon, {
@@ -95,7 +95,7 @@ if (p + T === 1 && null != S) {
         };
       return {
         subtitle: (0, i.jsx)(c.ZP, {
-            start: f,
+            start: C,
             location: c.ZP.Locations.ACTIVITY_FEED_NEW,
             messageProps: N
           }),
@@ -112,7 +112,7 @@ if (p + T === 1 && null != S) {
       };
     case h.IIU.LISTENING:
       let s;
-      return s = (0, l.Z)(C) ? (0, i.jsx)(_.Z.Header.Icon, {
+      return s = (0, l.Z)(f) ? (0, i.jsx)(_.Z.Header.Icon, {
         src: _.Z.Header.Icon.Src.SPOTIFY
       }) : null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
         src: e.getIconURL(E.Z)
@@ -120,7 +120,7 @@ if (p + T === 1 && null != S) {
         src: n(211827)
       }), {
         subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({
-          name: C.name
+          name: f.name
         }),
         icon: s
       };
@@ -197,7 +197,7 @@ priorityUser: p,
 guildId: null == g ? void 0 : g.id,
 title: T,
 subtitle: S,
-icon: C,
+icon: f,
 onContextMenu: e => s(e, p.user)
   });
 }

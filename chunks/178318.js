@@ -31,8 +31,8 @@ try {
 i = _.ZP.requireModule('erlpack');
   } catch (e) {}
 }
-let C = _.ZP.requireModule('discord_rpc').RPCWebSocket,
-  f = window.GLOBAL_ENV.MARKETING_ENDPOINT,
+let f = _.ZP.requireModule('discord_rpc').RPCWebSocket,
+  C = window.GLOBAL_ENV.MARKETING_ENDPOINT,
   N = new d.Z('RPCServer:WSS'),
   A = [];
 
@@ -134,7 +134,7 @@ if ('/rpc' === n && ('GET' === s || a)) {
         protocol: i,
         host: s
       } = o.parse(null !== (e = n.get('callback')) && void 0 !== e ? e : '');
-      i === location.protocol && s === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', f), t.writeHead(301), t.end();
+      i === location.protocol && s === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', C), t.writeHead(301), t.end();
     },
     c = new x(a ? v.bind(null, e, t) : l, a ? O.bind(null, e, t, 400) : l, Number(n.get('v')), s);
   if (a)
@@ -198,14 +198,14 @@ try {
 var e;
 super();
 let t = 0;
-(s = C.http.createServer()).on('error', e => {
+(s = f.http.createServer()).on('error', e => {
   N.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => L(++t), 1000);
 }), s.on('request', this.handleRequest.bind(this)), L(t);
 let n = {
   instanceId: null !== (e = s.instanceId) && void 0 !== e ? e : 0,
   server: s
 };
-new C.ws.Server(n).on('connection', e => this.handleConnection(e));
+new f.ws.Server(n).on('connection', e => this.handleConnection(e));
   }
 }
 t.Z = new b();

@@ -17,8 +17,8 @@ var i = n(735250),
   p = n(100527),
   T = n(963202),
   S = n(252618),
-  C = n(440190),
-  f = n(665149),
+  f = n(440190),
+  C = n(665149),
   N = n(5955),
   A = n(121711),
   Z = n(709158),
@@ -310,7 +310,7 @@ return (0, i.jsxs)('div', {
         [z.searchPageDrag]: d
       })
     }),
-    u.tq && (0, i.jsx)(f.ZP, {
+    u.tq && (0, i.jsx)(C.ZP, {
       children: (0, i.jsx)(s.Fragment, {})
     }),
     (0, i.jsx)(E.AdvancedScrollerAuto, {
@@ -508,10 +508,10 @@ searchRoute: t
 fetching: n,
 loadId: s,
 recommendedGuilds: a
-  } = (0, _.cj)([C.Z], () => ({
-recommendedGuilds: C.Z.getRecommendedGuilds(),
-loadId: C.Z.getLoadId(),
-fetching: C.Z.isFetching()
+  } = (0, _.cj)([f.Z], () => ({
+recommendedGuilds: f.Z.getRecommendedGuilds(),
+loadId: f.Z.getLoadId(),
+fetching: f.Z.isFetching()
   }));
   return (0, i.jsx)(J, {
 searchRoute: t,
