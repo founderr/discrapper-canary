@@ -113,11 +113,7 @@ function v(e) {
 iconURL: c.ZP.getApplicationIconURL({
   ...i,
   id: e.id,
-  icon: e.icon,
-  bot: e.bot,
-  botIconFirst: !h({
-    application: e
-  })
+  icon: e.icon
 }),
 name: e.name,
 description: e.description
