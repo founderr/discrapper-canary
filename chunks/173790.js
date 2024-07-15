@@ -32,7 +32,7 @@ installOnDemand: C
 application: I
   }) ? v : E.Z, x = l.useRef(null), {
 iconURL: T,
-name: g
+name: R
   } = l.useMemo(() => (0, d.sl)(I, {
 fakeAppIconURL: N,
 size: 84
@@ -49,11 +49,11 @@ fade: !0,
 ref: x,
 role: 'region',
 'aria-label': f.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({
-  applicationName: g
+  applicationName: R
 }),
 children: [
   (0, i.jsx)(_.Z, {
-    name: g,
+    name: R,
     iconURL: T,
     scrollerRef: x
   }),

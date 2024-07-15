@@ -3,7 +3,7 @@ s.d(a, {
 return I;
   },
   ZK: function() {
-return o;
+return _;
   },
   en: function() {
 return d;
@@ -18,12 +18,12 @@ var l = s(981631),
   i = s(689938);
 let E = {},
   c = {},
-  _ = Object.freeze({
+  o = Object.freeze({
 ALL: -1,
 ...l.EKQ
   });
 
-function o(e) {
+function _(e) {
   let a = (0, r.LX)(e, {
 path: l.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug')
   });
@@ -174,9 +174,9 @@ default:
   return i.Z.Messages.APPLICATION_STORE_GENRE_MISCELLANEOUS;
   }
 }
-Object.keys(_).forEach(e => {
+Object.keys(o).forEach(e => {
   let a = e.toLowerCase().replace(/_/g, '-'),
-s = _[e];
+s = o[e];
   E[a] = s, c[s] = a;
 });
 let A = [

@@ -26,10 +26,10 @@ var i = t(735250),
   P = t(870205),
   x = t(981631),
   T = t(689079),
-  g = t(689938),
-  R = t(763963);
+  R = t(689938),
+  S = t(763963);
 
-function S(e) {
+function g(e) {
   var n, t;
   let {
 channel: r,
@@ -59,7 +59,7 @@ o,
 u,
 d
   ]), N = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0, C = l.useMemo(() => (0, i.jsxs)('div', {
-className: R.commandTextContainer,
+className: S.commandTextContainer,
 children: [
   (0, i.jsx)(s.Text, {
     variant: 'text-sm/semibold',
@@ -78,7 +78,7 @@ o.displayDescription,
 o.displayName
   ]);
   return (0, i.jsxs)(s.Clickable, {
-className: R.command,
+className: S.command,
 onClick: h,
 children: [
   C,
@@ -127,16 +127,16 @@ onClick: A,
 disabled: p,
 size: s.ButtonSizes.ICON,
 color: s.Button.Colors.PRIMARY,
-className: R.commandSentCTAButton,
-innerClassName: R.commandSentCTAButtonInner,
-'aria-label': g.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({
+className: S.commandSentCTAButton,
+innerClassName: S.commandSentCTAButtonInner,
+'aria-label': R.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({
   commandName: t.name
 }),
 children: [
   (0, i.jsx)(s.Text, {
     variant: 'text-sm/medium',
     color: 'redesign-button-primary-text',
-    children: g.Z.Messages.SEND
+    children: R.Z.Messages.SEND
   }),
   (0, i.jsx)(r.U, {
     size: 'xs',
@@ -158,7 +158,7 @@ children: o
   return 0 === t.length ? null : (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsxs)('div', {
-    className: R.commandListHeader,
+    className: S.commandListHeader,
     children: [
       (0, i.jsx)(s.Heading, {
         variant: 'heading-sm/semibold',
@@ -168,9 +168,9 @@ children: [
     ]
   }),
   (0, i.jsx)('ul', {
-    className: R.commandContainer,
+    className: S.commandContainer,
     'aria-label': a,
-    children: t.map(e => (0, i.jsx)(S, {
+    children: t.map(e => (0, i.jsx)(g, {
       channel: n,
       command: e,
       section: l,
@@ -221,20 +221,20 @@ commands: A,
 limit: 5
   });
   return (0, i.jsxs)('ul', {
-className: R.contentContainer,
+className: S.contentContainer,
 children: [
   (0, i.jsx)(M, {
     channel: t,
     section: p,
     commands: h,
-    headerName: g.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
+    headerName: R.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
     sectionName: r
   }),
   (0, i.jsx)(M, {
     channel: t,
     section: p,
     commands: A,
-    headerName: g.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
+    headerName: R.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
     sectionName: r,
     children: f && (0, i.jsx)(P.Z, {
       sortOrder: _,

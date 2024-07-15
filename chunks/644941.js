@@ -6,8 +6,8 @@ var n = s(735250),
   i = s(512722),
   E = s.n(i),
   c = s(758713),
-  _ = s(442837),
-  o = s(433517),
+  o = s(442837),
+  _ = s(433517),
   I = s(481060),
   A = s(224706),
   d = s(812206),
@@ -35,7 +35,7 @@ let {
   game: a,
   onClose: s,
   trackClick: t
-} = e, r = (0, _.e7)([d.Z], () => {
+} = e, r = (0, o.e7)([d.Z], () => {
   var e;
   return d.Z.getApplication(null !== (e = null == a ? void 0 : a.applicationId) && void 0 !== e ? e : '');
 });
@@ -105,13 +105,13 @@ let {
   source: D,
   sourceUserId: F,
   transitionState: B,
-  onClose: w
+  onClose: b
 } = e, {
-  clientThemesClassName: b
+  clientThemesClassName: w
 } = (0, u.ZP)(), {
   width: Q,
   height: H
-} = (0, m.b)(), [y, Y] = t.useState(null !== (a = o.K.get(Z)) && void 0 !== a ? a : {}), k = (0, _.e7)([P.default], () => P.default.locale), [W, V] = t.useState(!0), [z, X] = t.useState(!1), J = t.useRef(null), q = t.useMemo(() => (0, M.fP)(), []);
+} = (0, m.b)(), [y, Y] = t.useState(null !== (a = _.K.get(Z)) && void 0 !== a ? a : {}), k = (0, o.e7)([P.default], () => P.default.locale), [W, V] = t.useState(!0), [z, X] = t.useState(!1), J = t.useRef(null), q = t.useMemo(() => (0, M.fP)(), []);
 t.useEffect(() => {
   let e = J.current;
   null != e && X(e.scrollHeight - e.clientHeight > 1);
@@ -122,11 +122,11 @@ t.useEffect(() => {
 ]), t.useEffect(() => {
   (0, O.J)();
 }, []);
-let $ = (0, _.Wu)([G.Z], () => {
+let $ = (0, o.Wu)([G.Z], () => {
     var e;
     return (null !== (e = G.Z.getSimilarGames(c)) && void 0 !== e ? e : []).slice(0, 25);
   }),
-  ee = (0, _.Wu)([T.Z], () => $.map(e => T.Z.getGame(e)).filter(p.W1).slice(0, 5)),
+  ee = (0, o.Wu)([T.Z], () => $.map(e => T.Z.getGame(e)).filter(p.W1).slice(0, 5)),
   ea = t.useRef([]);
 t.useEffect(() => {
   ea.current = $;
@@ -183,7 +183,7 @@ t.useEffect(() => {
   $
 ]);
 let et = d.Z.getApplication(c),
-  er = (0, _.e7)([T.Z], () => T.Z.getGame(c)),
+  er = (0, o.e7)([T.Z], () => T.Z.getGame(c)),
   el = t.useMemo(() => null == er ? void 0 : er.genres.map(L.P3).join(', '), [er]),
   ei = t.useMemo(() => {
     if (null == er)
@@ -219,7 +219,7 @@ let et = d.Z.getApplication(c),
   ]),
   ec = (e, a) => {
     (0, M.UE)({
-      gameName: null != eo ? eo : '',
+      gameName: null != e_ ? e_ : '',
       applicationId: c,
       action: e,
       similarGameId: a,
@@ -227,15 +227,15 @@ let et = d.Z.getApplication(c),
     });
   },
   {
-    shouldOpenGameProfile: e_
+    shouldOpenGameProfile: eo
   } = (0, p.ZP)({
     location: 'GameProfileModal',
     applicationId: c,
     trackEntryPointImpression: !1
   });
-if (E()(e_, 'Game Profile was opened when it thinks it shouldn\'t have been.  Make sure to use `useShouldOpenGameProfileModal` before calling `openGameProfileModal`'), null == er)
+if (E()(eo, 'Game Profile was opened when it thinks it shouldn\'t have been.  Make sure to use `useShouldOpenGameProfileModal` before calling `openGameProfileModal`'), null == er)
   return null;
-let eo = null !== (r = er.name) && void 0 !== r ? r : null == et ? void 0 : et.name,
+let e_ = null !== (r = er.name) && void 0 !== r ? r : null == et ? void 0 : et.name,
   eI = null == et ? void 0 : et.getIconURL(160, g.$k ? 'webp' : 'png'),
   eA = null !== (i = er.coverImageUrl) && void 0 !== i ? i : eI,
   {
@@ -248,7 +248,7 @@ let eo = null !== (r = er.name) && void 0 !== r ? r : null == et ? void 0 : et.n
 return (0, n.jsxs)(I.ModalRoot, {
   transitionState: B,
   size: I.ModalSize.DYNAMIC,
-  className: l()(b, v.gameProfileModal),
+  className: l()(w, v.gameProfileModal),
   children: [
     (0, n.jsxs)('div', {
       className: v.gameArtHero,
@@ -273,7 +273,7 @@ return (0, n.jsxs)(I.ModalRoot, {
             className: v.logo,
             src: eA,
             alt: x.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({
-              game: eo
+              game: e_
             })
           })
         }),
@@ -284,7 +284,7 @@ return (0, n.jsxs)(I.ModalRoot, {
               children: [
                 (0, n.jsx)(I.Heading, {
                   variant: 'heading-xl/bold',
-                  children: eo
+                  children: e_
                 }),
                 (0, n.jsxs)('div', {
                   className: l()(v.row, v.gapSm),
@@ -304,7 +304,7 @@ return (0, n.jsxs)(I.ModalRoot, {
                           src: eI,
                           height: 16,
                           alt: x.Z.Messages.GAME_PROFILE_GAME_ICON_ALT.format({
-                            game: eo
+                            game: e_
                           })
                         })
                       ]
@@ -324,7 +324,7 @@ return (0, n.jsxs)(I.ModalRoot, {
                     let e = {
                       ...y
                     };
-                    e[c] = !e[c], Y(e), o.K.set(Z, e), ec(e[c] ? M.as.FollowGame : M.as.UnfollowGame);
+                    e[c] = !e[c], Y(e), _.K.set(Z, e), ec(e[c] ? M.as.FollowGame : M.as.UnfollowGame);
                   },
                   children: [
                     eN ? (0, n.jsx)(I.BellSlashIcon, {
@@ -367,7 +367,7 @@ return (0, n.jsxs)(I.ModalRoot, {
                     children: null == en ? void 0 : en.map(e => (0, n.jsx)(f.Z, {
                       entry: e,
                       viewId: q,
-                      onClose: w
+                      onClose: b
                     }, e.id))
                   })
                 ]
@@ -408,7 +408,7 @@ return (0, n.jsxs)(I.ModalRoot, {
                         src: e.src,
                         className: v.gameArtwork,
                         alt: x.Z.Messages.GAME_PROFILE_GAME_ARTWORK_ALT.format({
-                          game: eo
+                          game: e_
                         })
                       })
                     }, e.src))
@@ -426,7 +426,7 @@ return (0, n.jsxs)(I.ModalRoot, {
                     style: {},
                     children: ee.map(e => (0, n.jsx)(K, {
                       game: e,
-                      onClose: w,
+                      onClose: b,
                       trackClick: ec
                     }, null == e ? void 0 : e.applicationId))
                   })

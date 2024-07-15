@@ -6,8 +6,8 @@ var n = s(735250),
   i = s(643872),
   E = s(481060),
   c = s(570140),
-  _ = s(652898),
-  o = s(93093),
+  o = s(652898),
+  _ = s(93093),
   I = s(768581),
   A = s(810568),
   d = s(981631),
@@ -28,10 +28,10 @@ let {
 } = a;
 if (null == r)
   return null;
-let i = o.Z.isMember(r.id);
+let i = _.Z.isMember(r.id);
 if (!(null == r ? void 0 : r.features.includes('VERIFIED')) && !(null == r ? void 0 : r.features.includes('PARTNER')))
   return null;
-let _ = I.ZP.getGuildIconURL({
+let o = I.ZP.getGuildIconURL({
   id: r.id,
   icon: r.icon,
   size: 32
@@ -48,7 +48,7 @@ return (0, n.jsxs)('div', {
       children: [
         (0, n.jsx)('img', {
           className: O.icon,
-          src: _,
+          src: o,
           alt: u.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({
             guildName: r.name
           })
@@ -94,13 +94,13 @@ let {
   category: a
 } = e;
 return a === i.p.DISCORD;
-  }), [c, o] = t.useState();
+  }), [c, _] = t.useState();
   if (t.useEffect(() => {
   let e = async e => {
     let a = e.split('/').pop();
     if (null != a) {
-      let e = await (0, _.Z)(a);
-      !0 !== e.banned && o(e.invite);
+      let e = await (0, o.Z)(a);
+      !0 !== e.banned && _(e.invite);
     }
   };
   null != r && e(r.url);

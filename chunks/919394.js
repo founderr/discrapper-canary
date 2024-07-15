@@ -23,9 +23,9 @@ var l = t(512722),
   m = t(561308),
   N = t(206295),
   x = t(737583),
-  g = t(438226),
-  h = t(169040),
-  I = t(689938);
+  I = t(438226),
+  g = t(169040),
+  h = t(689938);
 let M = (e, n) => ({
 AvatarImage1: e[0],
 ...null != e[1] && {
@@ -40,45 +40,45 @@ AvatarImage1: e[0],
   }),
   A = (e, n) => {
 let t = [{
-    iconPath: h.NM,
+    iconPath: g.NM,
     text: n
   }],
   l = v.default.extractTimestamp(e.extra.application_id);
 if (7 >= o()().diff(o()(l), 'days') && t.push({
-    iconPath: h.As,
-    text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
+    iconPath: g.As,
+    text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
   }), (0, m.Ol)(e) && t.push({
-    iconPath: h.fO,
-    text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
+    iconPath: g.fO,
+    text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
   }), (0, m.q_)(e)) {
   let n = (0, m.vU)(e);
   t.push({
-    iconPath: h.t1,
-    text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
+    iconPath: g.t1,
+    text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
       days: n
     })
   });
 }
 (0, m.ig)(e) === i.o.GLOBAL && t.push({
-  iconPath: h.Op,
-  text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+  iconPath: g.Op,
+  text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
 });
 let r = (0, m.dw)(e);
 if (null != r && t.push({
-    iconPath: h.Z,
+    iconPath: g.Z,
     text: (0, m.GE)(r)
   }), (0, m.V5)(e) && t.push({
-    iconPath: h.Md,
+    iconPath: g.Md,
     text: (0, m.kr)(e) ? (0, m.z5)(e) : (0, m.nB)(e)
   }), (0, m.Jd)(e)) {
   let n = (0, m.yA)(e);
   if (null != n) {
-    let e = I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({
+    let e = h.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({
       hours: Math.round(n / T.Z.Seconds.HOUR)
     });
     return [{
-      iconPath: h.eF,
-      text: ''.concat(I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, ' \u2014 ').concat(e)
+      iconPath: g.eF,
+      text: ''.concat(h.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, ' \u2014 ').concat(e)
     }];
   }
 }
@@ -96,24 +96,24 @@ let {
   stop: n
 }));
 e.setSize({
-  w: h.nx,
-  h: h.bg
+  w: g.nx,
+  h: g.bg
 }, 4), e.drawRoundedGradientRect(i, {
   x: 0,
-  y: h.bg
+  y: g.bg
 }, {
-  x: h.nx,
+  x: g.nx,
   y: 0
 }, {
   x: 0,
   y: 0,
-  h: h.bg,
-  w: h.nx
+  h: g.bg,
+  w: g.nx
 }, 8), e.setColor('rgba(108, 111, 124, 0.24)'), e.drawRoundedRect({
-  x: h.nx - h.sB - h.if,
-  y: h.sB,
-  w: h.if,
-  h: h.wI
+  x: g.nx - g.sB - g.if,
+  y: g.sB,
+  w: g.if,
+  h: g.wI
 }, 4, !0), e.setColor('rgba(255, 255, 255, 0.5)');
 e.setFont({
   size: 12,
@@ -123,18 +123,18 @@ e.setFont({
   ],
   weight: 500,
   truncate: d.GX.None
-}), e.drawText(I.Z.Messages.BETA, {
-  x: h.nx - h.sB - 29,
-  y: h.sB + 12 + 2
+}), e.drawText(h.Z.Messages.BETA, {
+  x: g.nx - g.sB - 29,
+  y: g.sB + 12 + 2
 }, !0), e.setColor('white'), e.drawRoundedImage('ApplicationImage', {
-  x: h.sB,
-  y: h.sB
+  x: g.sB,
+  y: g.sB
 }, {
-  w: h.Pu,
-  h: h.Pu
+  w: g.Pu,
+  h: g.Pu
 }, 8) === d.vP.Failure && e.drawPath(s.Cv, {
-  x: h.sB,
-  y: h.sB
+  x: g.sB,
+  y: g.sB
 }, !0, 2 + 2 / 3);
 (0, x.l)({
   canvas: e,
@@ -144,25 +144,25 @@ e.setFont({
     'AvatarImage3'
   ].slice(0, o),
   position: {
-    x: h.Iq,
-    y: h.sB
+    x: g.Iq,
+    y: g.sB
   },
-  avatarImageSize: h.$S
+  avatarImageSize: g.$S
 }), e.setColor('white'), e.setFont({
   size: 16,
   truncate: d.GX.Wrap
 }), e.drawText(r, {
-  x: h.Iq,
+  x: g.Iq,
   y: 64,
   h: 32,
-  w: h.kC
+  w: g.kC
 }, !0);
 let u = A(a, t);
 (0, x.J)({
   canvas: e,
   badges: u,
-  startPosition: h.Iq,
-  maxWidth: h.kC
+  startPosition: g.Iq,
+  maxWidth: g.kC
 });
   },
   R = async e => {
@@ -204,10 +204,10 @@ T = M(s, o),
 v = _.default.locale,
 x = (0, m.yh)(e, v),
 {
-  primaryColor: h,
-  secondaryColor: I
+  primaryColor: g,
+  secondaryColor: h
 } = (0, N.w)(null != o ? o : ''),
-A = (0, g.HV)(e, n, i),
+A = (0, I.HV)(e, n, i),
 R = {
   format: t,
   quality: 1,
@@ -223,8 +223,8 @@ assetsToLoad: T,
 drawImage: n => C(n, {
   timestamp: x,
   colors: [
-    h,
-    I
+    g,
+    h
   ],
   description: A,
   entry: e,

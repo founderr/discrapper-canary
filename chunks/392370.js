@@ -97,7 +97,7 @@ return i.useMemo(() => {
 channel: n,
 includeBuiltIn: !0
   }), {
-apps: g
+apps: R
   } = function(e) {
 let {
   channel: n,
@@ -123,10 +123,10 @@ return i && c.push(h.Wx), {
 channel: n,
 onlyWithCommands: !0,
 includeBuiltIn: !0
-  }), R = (0, c.Z)({
+  }), S = (0, c.Z)({
 guildId: n.getGuildId(),
 channel: n
-  }), S = i.useMemo(() => {
+  }), g = i.useMemo(() => {
 var e;
 if (!s)
   return [];
@@ -243,13 +243,13 @@ l,
 n,
 t
   ]), L = i.useMemo(() => {
-if (0 === S.length)
+if (0 === g.length)
   return [];
-let e = new Map(g.map(e => [
+let e = new Map(R.map(e => [
   e.id,
   e
 ]));
-return a().compact(S.map(n => {
+return a().compact(g.map(n => {
   var t;
   let i = e.get(n.applicationId);
   if (null == i)
@@ -262,8 +262,8 @@ return a().compact(S.map(n => {
   };
 }));
   }, [
+R,
 g,
-S,
 x
   ]), M = i.useMemo(() => {
 var e;
@@ -271,13 +271,13 @@ if (!_ && !E)
   return [];
 let i = [];
 if (_ && E) {
-  let e = new Set(g.map(e => {
+  let e = new Set(R.map(e => {
     let {
       id: n
     } = e;
     return n;
   }));
-  i.push(...g), i.push(...R.filter(n => {
+  i.push(...R), i.push(...S.filter(n => {
     let {
       application: {
         id: t
@@ -291,7 +291,7 @@ if (_ && E) {
     return n;
   }));
 } else
-  i = _ ? g : R.map(e => {
+  i = _ ? R : S.map(e => {
     let {
       application: n
     } = e;
@@ -355,8 +355,8 @@ E,
 r,
 n,
 t,
-g,
-R
+R,
+S
   ]), O = L.length > 0, y = M.length > 0;
   return {
 commandResults: L,

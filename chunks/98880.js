@@ -33,9 +33,9 @@ var i, l, a = t(735250),
   P = t(226026),
   x = t(753972),
   T = t(981631),
-  g = t(217702),
-  R = t(231338),
-  S = t(689938),
+  R = t(217702),
+  S = t(231338),
+  g = t(689938),
   L = t(126152),
   M = t(413097);
 
@@ -63,14 +63,14 @@ trackItemImpressionRef: I
 applicationId: n.id,
 sectionName: m,
 sectionPosition: p
-  }), [T, g] = r.useState(!1), O = r.useCallback(() => {
-!0 === u && g(!0);
-  }, [u]), j = r.useCallback(() => g(!1), []);
+  }), [T, R] = r.useState(!1), O = r.useCallback(() => {
+!0 === u && R(!0);
+  }, [u]), j = r.useCallback(() => R(!1), []);
   return 'icon' === t ? (0, a.jsx)(c.Clickable, {
 innerRef: _ ? e => I.current = e : void 0,
 className: o()(L.container, L.iconCard),
 onClick: l,
-'aria-label': S.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
+'aria-label': g.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
   applicationName: f,
   applicationDescription: N
 }),
@@ -84,7 +84,7 @@ children: (0, a.jsx)(x.Z, {
 innerRef: _ ? e => I.current = e : void 0,
 className: L.container,
 onClick: l,
-'aria-label': S.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
+'aria-label': g.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
   applicationName: f,
   applicationDescription: N
 }),
@@ -110,10 +110,10 @@ children: [
       i && (0, a.jsx)('div', {
         className: L.partnerLabelWrapper,
         children: (0, a.jsx)(c.Text, {
-          className: (0, h.Q)(R.BR.DARK),
+          className: (0, h.Q)(S.BR.DARK),
           variant: 'text-sm/medium',
           color: 'text-normal',
-          children: S.Z.Messages.APP_DIRECTORY_PARTNER
+          children: g.Z.Messages.APP_DIRECTORY_PARTNER
         })
       }),
       'large_banner' === t || 'medium_banner' === t ? (0, a.jsx)('div', {
@@ -204,7 +204,7 @@ children: [
       onAnimationEnd: () => t ? null : c(!1),
       children: (0, a.jsx)(f.Z, {
         src: l,
-        mediaLayoutType: g.hV.MOSAIC,
+        mediaLayoutType: R.hV.MOSAIC,
         loop: !0,
         autoPlay: !0,
         muted: !0

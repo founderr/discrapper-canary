@@ -29,19 +29,19 @@ let m = (0, r.e7)([o.default], () => o.default.locale),
   N = (0, r.e7)([i.default], () => i.default.getUser(e.author_id)),
   {
     activity: x,
-    activityApplication: g,
-    fallbackApplication: h
+    activityApplication: I,
+    fallbackApplication: g
   } = (0, c.qy)(e),
-  I = (0, s.wh)('useGamingContentData'),
-  M = null !== (f = null === (n = null != h ? h : g) || void 0 === n ? void 0 : n.getIconURL(d.Si.LARGE)) && void 0 !== f ? f : void 0;
-if (!I || null == x)
+  h = (0, s.wh)('useGamingContentData'),
+  M = null !== (f = null === (n = null != g ? g : I) || void 0 === n ? void 0 : n.getIconURL(d.Si.LARGE)) && void 0 !== f ? f : void 0;
+if (!h || null == x)
   return {
     iconUrl: M,
     gameTitle: e.extra.game_name,
     user: N,
-    inExperiment: I
+    inExperiment: h
   };
-let A = null != g && (null === (t = x.assets) || void 0 === t ? void 0 : t.large_image) != null ? (0, u.getAssetImage)(g.id, x.assets.large_image, [
+let A = null != I && (null === (t = x.assets) || void 0 === t ? void 0 : t.large_image) != null ? (0, u.getAssetImage)(I.id, x.assets.large_image, [
     d.Si.LARGE,
     d.Si.LARGE
   ]) : void 0,
@@ -66,6 +66,6 @@ return {
   party: p,
   gameTitle: R,
   gameTime: O,
-  inExperiment: I
+  inExperiment: h
 };
   };
