@@ -113,7 +113,7 @@ let {
   }
 };
 if (f.ZP.get('send_fail_100')) {
-  this.logger.log('Skipping message sened because send_fail_100 is enabled'), t(null, {
+  this.logger.log('Skipping message send because send_fail_100 is enabled'), t(null, {
     ok: !1,
     hasErr: !1,
     status: 500,
