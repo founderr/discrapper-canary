@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return R;
+return A;
   }
 });
 var i = n(735250);
@@ -10,133 +10,102 @@ var a = n(120356),
   r = n(442837),
   l = n(524437),
   o = n(481060),
-  c = n(904245),
-  d = n(294218),
-  u = n(703656),
+  c = n(294218),
+  d = n(703656),
+  u = n(768943),
   _ = n(43690),
-  E = n(115219),
-  I = n(682417),
-  m = n(695346),
-  T = n(375954),
-  h = n(324081),
-  N = n(240126),
-  f = n(791914),
-  p = n(981631),
-  C = n(689938),
-  g = n(166311),
-  S = n(699723);
-let A = {
+  E = n(695346),
+  I = n(592125),
+  m = n(655354),
+  T = n(324081),
+  h = n(240126),
+  N = n(791914),
+  f = n(981631),
+  p = n(689938),
+  C = n(166311),
+  g = n(699723);
+let S = {
   offset: {
 left: 4,
 right: -12
   }
 };
 
-function R(e) {
+function A(e) {
   let {
 setTab: t,
 closePopout: n
-  } = e, a = (0, r.e7)([E.Z], () => E.Z.getMessageBookmarks());
+  } = e, a = (0, r.e7)([u.Z], () => u.Z.getMessageBookmarks());
   return (0, i.jsxs)('div', {
-className: g.container,
+className: C.container,
 children: [
-  (0, i.jsx)(f.Z, {
+  (0, i.jsx)(N.Z, {
     tab: l.X.BOOKMARKS,
     setTab: t,
     closePopout: n
   }),
   0 === a.length ? (0, i.jsx)(O, {}) : (0, i.jsx)(o.AdvancedScrollerThin, {
-    children: a.map(e => (0, i.jsx)(x, {
+    children: a.map(e => (0, i.jsx)(R, {
       savedMessage: e
-    }, e.messageId))
+    }, e.saveData.messageId))
   })
 ]
   });
 }
 
-function x(e) {
+function R(e) {
   let {
 savedMessage: t
-  } = e, n = (0, r.e7)([T.Z], () => T.Z.getMessage(t.channelId, t.messageId)), {
-message: a,
-channel: l
-  } = (0, I.p)(t), E = () => {
-(0, u.uL)(p.Z5c.CHANNEL(null == l ? void 0 : l.getGuildId(), t.channelId, t.messageId));
+  } = e, n = (0, r.e7)([I.Z], () => I.Z.getChannel(t.saveData.channelId)), a = () => {
+(0, d.uL)(f.Z5c.CHANNEL(null == n ? void 0 : n.getGuildId(), t.saveData.channelId, t.saveData.messageId));
   };
-  return (0, i.jsxs)('div', {
-className: S.container,
-children: [
-  (0, i.jsx)(h.Z, {
-    channel: l,
-    gotoChannel: E,
-    children: (0, i.jsx)(o.CircleIconButton, {
-      className: S.closeButton,
-      tooltip: C.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
-      color: o.CircleIconButtonColors.TERTIARY,
-      icon: (0, i.jsx)(o.CloseSmallIcon, {
-        size: 'xs',
-        color: 'currentColor'
-      }),
-      onClick: () => (0, _.h)(t.messageId)
-    })
-  }),
-  (0, i.jsxs)('div', {
-    className: s()(S.messageContainer, g.unloadedMessage),
-    children: [
-      (0, i.jsx)(d.Z, {
-        message: a,
-        channel: l,
-        className: S.message,
-        compact: m.jU.getSetting(),
-        animateAvatar: !1,
-        focusProps: A,
-        trackAnnouncementViews: !0
-      }, a.id),
-      (0, i.jsxs)('div', {
-        className: g.actions,
-        children: [
-          null == n ? (0, i.jsx)(o.Button, {
-            onClick: () => {
-              c.Z.fetchMessages({
-                channelId: t.channelId,
-                limit: 1,
-                jump: {
-                  messageId: t.messageId,
-                  flash: !1,
-                  offset: 1
-                }
-              });
-            },
-            size: o.Button.Sizes.MIN,
-            color: o.Button.Colors.TRANSPARENT,
-            className: g.loadButton,
-            children: (0, i.jsx)(o.Text, {
-              variant: 'text-xs/normal',
-              children: 'Load'
-            })
-          }) : null,
-          (0, i.jsx)(o.Button, {
-            onClick: E,
-            size: o.Button.Sizes.MIN,
-            color: o.Button.Colors.TRANSPARENT,
-            className: g.loadButton,
-            children: (0, i.jsx)(o.Text, {
-              variant: 'text-xs/normal',
-              children: C.Z.Messages.JUMP
-            })
-          })
-        ]
+  return (0, i.jsx)('div', {
+className: g.container,
+children: null != n && null != t.message ? (0, i.jsxs)(i.Fragment, {
+  children: [
+    (0, i.jsx)(T.Z, {
+      channel: n,
+      gotoChannel: a,
+      children: (0, i.jsx)(o.CircleIconButton, {
+        className: g.closeButton,
+        tooltip: p.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
+        color: o.CircleIconButtonColors.TERTIARY,
+        icon: (0, i.jsx)(o.CloseSmallIcon, {
+          size: 'xs',
+          color: 'currentColor'
+        }),
+        onClick: () => (0, _.h)(t.saveData)
       })
-    ]
-  })
-]
+    }),
+    (0, i.jsxs)('div', {
+      className: s()(g.messageContainer, C.unloadedMessage),
+      children: [
+        (0, i.jsx)(m.Z, {
+          className: g.jumpMessageButton,
+          onJump: a
+        }),
+        (0, i.jsx)(c.Z, {
+          message: t.message,
+          channel: n,
+          className: g.message,
+          compact: E.jU.getSetting(),
+          animateAvatar: !1,
+          focusProps: S,
+          trackAnnouncementViews: !0
+        }, t.message.id)
+      ]
+    })
+  ]
+}) : (0, i.jsx)('div', {
+  children: 'The message isn\'t accessible. We will deal with this later.'
+})
   });
 }
 
 function O() {
-  return (0, i.jsx)(N.Z, {
+  return (0, i.jsx)(h.Z, {
 Icon: o.DoubleCheckmarkLargeIcon,
-header: C.Z.Messages.MESSAGE_BOOKMARKS_EMPTY,
-tip: C.Z.Messages.MESSAGE_BOOKMARKS_EMPTY_TIP
+header: p.Z.Messages.MESSAGE_BOOKMARKS_EMPTY,
+tip: p.Z.Messages.MESSAGE_BOOKMARKS_EMPTY_TIP
   });
 }

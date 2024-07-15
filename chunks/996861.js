@@ -67,8 +67,8 @@ var u = t(623292),
   m = t(626135),
   M = t(934415),
   _ = t(572004),
-  N = t(585483),
-  h = t(709054),
+  h = t(585483),
+  N = t(709054),
   I = t(111618),
   Z = t(50284),
   p = t(730954),
@@ -126,7 +126,7 @@ channel: e,
 message: n,
 shouldMention: !t.shiftKey && !s,
 showMentionToggle: !i && !s
-  }), N.S.dispatchToLastSubscribed(A.CkL.TEXTAREA_FOCUS);
+  }), h.S.dispatchToLastSubscribed(A.CkL.TEXTAREA_FOCUS);
 }
 
 function b(e, n) {
@@ -134,24 +134,36 @@ function b(e, n) {
 }
 
 function y(e, n) {
-  let t = g.Z.getChannel(h.default.castMessageIdAsChannelId(n.id));
+  let t = g.Z.getChannel(N.default.castMessageIdAsChannelId(n.id));
   null != t && (0, E.ok)(t);
 }
 
 function j(e, n) {
-  (0, d.D)(n);
+  (0, d.D)({
+channelId: e.id,
+messageId: n.id
+  });
 }
 
 function R(e, n) {
-  (0, d.h)(n.id);
+  (0, d.h)({
+channelId: e.id,
+messageId: n.id
+  });
 }
 
 function U(e, n) {
-  (0, c.BW)(n);
+  (0, c.HG)({
+channelId: e.id,
+messageId: n.id
+  });
 }
 
 function k(e, n) {
-  (0, c.Kp)(n.id);
+  (0, c.bn)({
+channelId: e.id,
+messageId: n.id
+  });
 }
 
 function w(e, n) {

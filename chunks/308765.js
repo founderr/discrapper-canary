@@ -363,7 +363,9 @@ neverLoadBeforeConnectionOpen: !0
   MessageRemindersNotificationManager: {
 actions: [
   'POST_CONNECTION_OPEN',
-  'SAVED_MESSAGES_UPDATE'
+  'SAVED_MESSAGES_UPDATE',
+  'SAVED_MESSAGE_CREATE',
+  'SAVED_MESSAGE_DELETE'
 ],
 inlineRequire: () => n(937603).Z,
 neverLoadBeforeConnectionOpen: !0
