@@ -10,11 +10,9 @@ return _;
   }
 });
 var r = n(544891),
-  i = n(570140);
-n(933557);
-var a = n(786761);
-n(592125), n(430824), n(699516), n(594174);
-var o = n(70956),
+  i = n(570140),
+  a = n(786761),
+  o = n(70956),
   s = n(768943),
   l = n(686478),
   u = n(981631);
@@ -30,7 +28,7 @@ body: {
 type: 'SAVED_MESSAGE_CREATE',
 savedMessage: {
   message: t.body.message && (0, a.e5)(t.body.message),
-  saveData: (0, l.vL)(t.body.save_data)
+  saveData: (0, l.v)(t.body.save_data)
 }
   });
 }
@@ -52,7 +50,7 @@ return Promise.resolve();
 url: u.ANM.GET_SAVED_MESSAGES
   })).body.results.map(e => ({
 message: null != e.message ? (0, a.e5)(e.message) : null,
-saveData: (0, l.vL)(e.save_data)
+saveData: (0, l.v)(e.save_data)
   }));
   i.Z.dispatch({
 type: 'SAVED_MESSAGES_UPDATE',

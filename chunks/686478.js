@@ -15,7 +15,7 @@ dueAt: null != e.due_at ? new Date(e.due_at) : void 0
   };
 }
 n.d(t, {
-  vL: function() {
+  v: function() {
 return r;
   }
 });

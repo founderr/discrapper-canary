@@ -1611,7 +1611,6 @@ SHARED_CANVAS_EMOJI_HOSES: (t, e) => '/channels/'.concat(t, '/').concat(e, '/sha
 SHARED_CANVAS_EMOJI_HOSE: (t, e, r) => '/channels/'.concat(t, '/').concat(e, '/shared-canvas/emoji-hose/').concat(r),
 USER_PREMIUM_LIKELIHOOD: '/users/@me/billing/premium-likelihood',
 BURST_CREDIT_BALANCE: '/users/@me/burst-credits',
-SAVED_MESSAGES_LEGACY: '/saved-messages',
 GET_SAVED_MESSAGES: '/users/@me/saved-messages',
 PUT_SAVED_MESSAGE: (t, e) => '/users/@me/saved-messages/'.concat(t, '/').concat(e),
 DELETE_SAVED_MESSAGE: (t, e) => '/users/@me/saved-messages/'.concat(t, '/').concat(e),
