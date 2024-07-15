@@ -6,8 +6,8 @@ var n = s(735250),
   i = s(512722),
   E = s.n(i),
   c = s(442837),
-  _ = s(481060),
-  o = s(493683),
+  o = s(481060),
+  _ = s(493683),
   I = s(220779),
   A = s(142550),
   d = s(201133),
@@ -32,7 +32,7 @@ nickName: r
   } = e, [i, c] = t.useState();
   return t.useEffect(() => {
 (async () => {
-  let e = await o.Z.getOrEnsurePrivateChannel(a.author_id),
+  let e = await _.Z.getOrEnsurePrivateChannel(a.author_id),
     n = m.Z.getChannel(e);
   E()(null != n, 'DM channel cannot be null');
   let t = await (0, O.QC)(a, n, u.kH.Base64),
@@ -101,7 +101,7 @@ children: [
         children: (0, n.jsxs)('div', {
           className: l()(C.column, C.gapNone),
           children: [
-            (0, n.jsxs)(_.Text, {
+            (0, n.jsxs)(o.Text, {
               variant: 'text-sm/bold',
               color: 'text-normal',
               lineClamp: 1,
@@ -112,8 +112,8 @@ children: [
               ]
             }),
             (0, n.jsx)(N.Gk, {
-              location: N.Gt.CARD,
-              children: R.W.slice(0, 2).map((e, s) => (0, n.jsx)(e, {
+              location: N.Gt.GAME_PROFILE,
+              children: R.W.map((e, s) => (0, n.jsx)(e, {
                 entry: a
               }, s))
             })
@@ -146,7 +146,7 @@ children: [
             recipientUserId: a.author_id,
             viewId: s
           });
-          let e = await o.Z.getOrEnsurePrivateChannel(a.author_id),
+          let e = await _.Z.getOrEnsurePrivateChannel(a.author_id),
             n = m.Z.getChannel(e);
           E()(null != n, 'GameProfile ReactReply - DM channel cannot be null'), E()(null != x, 'GameProfile ReactReply - Reaction Image cannot be null'), (0, d.B)({
             file: x,
