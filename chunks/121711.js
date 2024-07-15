@@ -54,10 +54,12 @@ children: [
   (0, i.jsx)(u.Z, {
     title: T.Z.Messages.QUESTS_HOME_HERO_TITLE,
     description: T.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-    backgroundImageUrl: 'https://cdn.discordapp.com/assets/discovery/generic-hero-background.png',
+    backgroundImageUrl: 'https://cdn.discordapp.com/assets/discovery/quest-mountain-hero.png',
     onScroll: N,
+    bannerContainerClassName: S.hero,
     button: (0, i.jsxs)(r.Button, {
       size: 'medium',
+      color: r.ButtonColors.TRANSPARENT,
       className: S.button,
       onClick: v,
       innerClassName: S.innerButton,
