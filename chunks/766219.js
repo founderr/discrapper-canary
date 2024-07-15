@@ -1,12 +1,15 @@
 n.d(t, {
+  Mf: function() {
+return c;
+  },
   QW: function() {
+return u;
+  },
+  a$: function() {
 return d;
   },
   lg: function() {
-return u;
-  },
-  q9: function() {
-return c;
+return _;
   },
   sm: function() {
 return l;
@@ -37,6 +40,25 @@ default:
 
 function o(e) {
   switch (e) {
+case s.vf.GUILDS:
+  return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_CATEGORY;
+case s.vf.GAMING:
+  return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_CATEGORY;
+case s.vf.MUSIC:
+  return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_CATEGORY;
+case s.vf.ENTERTAINMENT:
+  return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_CATEGORY;
+case s.vf.TECH:
+  return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_CATEGORY;
+case s.vf.EDUCATION:
+  return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_CATEGORY;
+case s.vf.HUBS:
+  return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUBS_CATEGORY;
+  }
+}
+
+function c(e) {
+  switch (e) {
 case s.vf.GAMING:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_TITLE;
 case s.vf.MUSIC:
@@ -44,15 +66,17 @@ case s.vf.MUSIC:
 case s.vf.ENTERTAINMENT:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_TITLE;
 case s.vf.TECH:
-case s.vf.EDUCATION:
-case s.vf.HUBS:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_TITLE;
+case s.vf.EDUCATION:
+  return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_TITLE;
+case s.vf.HUBS:
+  return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE;
 default:
   throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
   }
 }
 
-function c(e) {
+function d(e) {
   switch (e) {
 case s.vf.GAMING:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_DESCRIPTION;
@@ -71,7 +95,7 @@ default:
   }
 }
 
-function d(e) {
+function u(e) {
   switch (e) {
 case s.vf.GAMING:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_GAMING;
@@ -88,7 +112,7 @@ default:
   }
 }
 
-function u(e) {
+function _(e) {
   switch (e) {
 case s.vf.GUILDS:
   return a.Hk;

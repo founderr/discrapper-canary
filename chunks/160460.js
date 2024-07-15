@@ -1,64 +1,46 @@
 n.d(t, {
-  x: function() {
-return h;
+  Z: function() {
+return I;
   }
 });
 var i = n(735250),
   s = n(399606),
-  a = n(481060),
+  a = n(260034),
   r = n(410030),
   l = n(650394),
   o = n(683301),
   c = n(900849),
-  d = n(402691),
-  u = n(689938),
-  _ = n(45304);
-let E = [];
+  d = n(864677),
+  u = n(402691),
+  _ = n(689938),
+  E = n(45304);
+let h = [];
 
-function h(e) {
+function I(e) {
   var t, n;
   let {
-searchQuery: h,
-categoryId: I,
-onSearchClear: m
-  } = e, g = (0, s.e7)([o.ZP], () => o.ZP.isFetchingSearch()), p = (0, s.e7)([o.ZP], () => o.ZP.getDiscoverableGuilds().search), T = (0, s.e7)([o.ZP], () => o.ZP.getLoadId()), S = null !== (n = null === (t = p[h]) || void 0 === t ? void 0 : t[I]) && void 0 !== n ? n : E, C = (0, r.ZP)(), {
-handleViewGuild: f,
+searchResultsQuery: I,
+categoryId: m
+  } = e, g = (0, s.e7)([o.ZP], () => o.ZP.isFetchingSearch()), p = (0, s.e7)([o.ZP], () => o.ZP.getDiscoverableGuilds().search), T = (0, s.e7)([o.ZP], () => o.ZP.getLoadId()), S = null !== (n = null === (t = p[I]) || void 0 === t ? void 0 : t[m]) && void 0 !== n ? n : h, f = (0, r.ZP)(), {
+handleViewGuild: C,
 onGuildCardSeen: N
-  } = (0, d.g)(I, T);
-  return (0, i.jsxs)('section', {
-className: _.searchResults,
+  } = (0, u.g)(m, T);
+  return (0, i.jsxs)(d.Z, {
 children: [
-  (0, i.jsxs)('div', {
-    className: _.searchResultsHeader,
-    children: [
-      (0, i.jsxs)(a.Button, {
-        look: a.ButtonLooks.OUTLINED,
-        color: a.ButtonColors.PRIMARY,
-        onClick: m,
-        innerClassName: _.searchResultsBackButton,
-        children: [
-          (0, i.jsx)(a.ArrowLargeLeftIcon, {}),
-          (0, i.jsx)(a.Text, {
-            variant: 'text-md/semibold',
-            children: u.Z.Messages.BACK
-          })
-        ]
-      }),
-      (0, i.jsx)(a.Heading, {
-        variant: 'heading-xl/bold',
-        children: u.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({
-          query: h
-        })
-      })
-    ]
+  (0, i.jsx)(a.X, {
+    variant: 'heading-xl/bold',
+    className: E.heading,
+    children: _.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({
+      query: I
+    })
   }),
   (0, i.jsx)(l.Z, {
     guilds: S.guilds,
     loading: g,
     loadingPlaceholderCount: 12,
-    onViewGuild: f,
+    onViewGuild: C,
     loadingGuildId: null,
-    theme: C,
+    theme: f,
     analyticsContext: c.P1.SEARCH,
     onGuildCardSeen: N
   })

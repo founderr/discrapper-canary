@@ -11,14 +11,17 @@ var i = n(470079),
 
 function o(e) {
   var t;
-  let [n, o] = i.useState(!1), [c, d] = i.useState(''), u = l.dU, _ = a.default.locale, E = null !== (t = u.find(e => e.code === _)) && void 0 !== t ? t : u[0];
+  let [n, o] = i.useState(!1), [c, d] = i.useState(''), [u, _] = i.useState(''), E = i.useRef('');
   i.useEffect(() => {
 s.Ue();
   }, []);
-  let h = i.useCallback(t => {
-  o(!0), s.bR(t, {
+  let h = l.dU,
+I = a.default.locale,
+m = null !== (t = h.find(e => e.code === I)) && void 0 !== t ? t : h[0],
+g = i.useCallback(() => {
+  o(!0), d(E.current), s.bR(E.current, {
     categoryId: e,
-    preferredLocale: E.code,
+    preferredLocale: m.code,
     offset: 0,
     length: 12,
     filters: {
@@ -26,20 +29,26 @@ s.Ue();
     }
   }, !1);
 }, [
-  E.code,
-  e
-]),
-I = i.useCallback(() => {
-  d(''), o(!1);
-}, [
-  d,
-  o
+  e,
+  m.code
 ]);
+  i.useEffect(() => {
+n && g();
+  }, [
+n,
+g
+  ]);
+  let p = i.useCallback(e => {
+_(e), E.current = e, '' === e && o(!1);
+  }, []);
   return {
-searching: n,
-searchQuery: c,
-setSearchQuery: d,
-handleSearchSubmit: h,
-handleSearchClear: I
+isSearchActive: n,
+searchQuery: u,
+searchResultsQuery: c,
+onSearchTextChange: p,
+onSearchSubmit: g,
+resetSearch: i.useCallback(() => {
+  _(''), E.current = '', o(!1);
+}, [])
   };
 }
