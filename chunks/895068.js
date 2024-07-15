@@ -12,10 +12,10 @@ var i, s, a, r, l = n(735250),
   d = n(143927),
   u = n(481060),
   _ = n(110924),
-  h = n(393903),
-  E = n(638730),
+  E = n(393903),
+  h = n(638730),
   I = n(970606),
-  m = n(624383),
+  m = n(17845),
   g = n(945124),
   p = n(231467),
   T = n(931515),
@@ -57,13 +57,13 @@ if (null == e) {
   return;
 }
 D(e.getBoundingClientRect().y + 8 + 400 + 64);
-  }, []), B = (0, h.y)(w), H = o.useCallback(e => {
+  }, []), B = (0, E.y)(w), H = o.useCallback(e => {
 w(B.current), null != e && (null == s || s(e));
   }, [
 w,
 B,
 s
-  ]), V = (0, E.h)(H, 10, [H], {
+  ]), V = (0, h.h)(H, 10, [H], {
 leading: !0,
 trailing: !0
   });
@@ -205,7 +205,7 @@ z = o.useCallback((e, t) => {
     case 'upsell':
       return (0, l.jsx)(f.Z, {});
     case 'hero':
-      return (0, l.jsx)(m.c, {
+      return (0, l.jsx)(m.Z, {
         title: L.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,
         description: L.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
         backgroundImageUrl: 'https://cdn.discordapp.com/assets/discovery/guilds-hero-background.png',

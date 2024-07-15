@@ -13,19 +13,19 @@ var i = n(735250),
   d = n(607070),
   u = n(931515),
   _ = n(807933),
-  h = n(207796),
-  E = n(895068),
+  E = n(207796),
+  h = n(895068),
   I = n(374109);
 
 function m(e) {
   let {
-scrollManager: t
+onScroll: t
   } = e, n = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), {
 loading: m
   } = (0, u.LE)(), {
 ref: g,
 width: p
-  } = (0, c.Z)(), T = (0, h.GN)(e => e.mode, r.Z), [S, C] = s.useState(!0), f = (0, a.useSpring)({
+  } = (0, c.Z)(), T = (0, E.GN)(e => e.mode, r.Z), [S, C] = s.useState(!0), f = (0, a.useSpring)({
 from: {
   opacity: 0
 },
@@ -40,10 +40,7 @@ config: {
 delay: 200,
 immediate: n,
 onRest: () => C(!1)
-  }), N = s.useCallback(e => {
-var n;
-null === (n = t.current) || void 0 === n || n.handleScroll(e);
-  }, [t]);
+  });
   return (0, i.jsxs)('section', {
 ref: g,
 className: I.guilds,
@@ -56,11 +53,11 @@ children: [
     style: {
       opacity: f.opacity
     },
-    children: (0, i.jsx)(E.ZP, {
+    children: (0, i.jsx)(h.ZP, {
       width: null != p ? p : 0,
       isAnimating: S,
-      variant: E.Bj.GLOBAL_DISCOVERY,
-      onScroll: N
+      variant: h.Bj.GLOBAL_DISCOVERY,
+      onScroll: t
     })
   }),
   (0, i.jsx)('div', {

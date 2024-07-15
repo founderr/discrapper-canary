@@ -7,15 +7,9 @@ var i = n(652874),
   s = n(868888),
   a = n(433517),
   r = n(49898);
-let l = (0, i.Z)((0, s.tJ)(e => ({
-  selectedPage: r.SM.SERVERS,
-  setSelectedPage: t => e({
-selectedPage: t
-  }),
-  selectedServerTab: 'gaming',
-  setSelectedServerTab: t => e({
-selectedServerTab: t
-  })
+let l = (0, i.Z)((0, s.tJ)(() => ({
+  selectedPage: r.F$.SERVERS,
+  selectedServerTab: r.vf.GAMING
 }), {
   name: 'global-discovery',
   getStorage: () => ({

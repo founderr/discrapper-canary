@@ -4,81 +4,79 @@ var i = n(735250),
   r = n(481060),
   l = n(100527),
   o = n(252618),
-  c = n(51448),
-  d = n(164427),
-  u = n(624383),
-  _ = n(742916),
-  h = n(63063),
+  c = n(212476),
+  d = n(374939),
+  u = n(791734),
+  _ = n(63063),
   E = n(113434),
-  I = n(709158),
-  m = n(710914),
-  g = n(452081),
-  p = n(981631),
-  T = n(689938),
-  S = n(852595);
+  h = n(709158),
+  I = n(710914),
+  m = n(452081),
+  g = n(981631),
+  p = n(689938),
+  T = n(852595);
 t.Z = function(e) {
-  let {} = e, t = (0, I.Z)(l.Z.QUEST_HOME_PAGE), {
+  let {} = e, t = (0, h.Z)(l.Z.QUEST_HOME_PAGE), {
 tabs: n,
-selectedTab: C,
-onSelectTab: f
-  } = (0, g.z)(), N = s.useRef(new _.m()), {
+selectedTab: S,
+onSelectTab: C
+  } = (0, m.z)(), {
+handleScroll: f,
+scrollPosition: N
+  } = (0, c.c)(), {
 quests: A
-  } = (0, E.bA)(C.id);
+  } = (0, E.bA)(S.id);
   s.useEffect(() => {
-!t && (0, a.uL)(p.Z5c.FRIENDS);
+!t && (0, a.uL)(g.Z5c.FRIENDS);
   }, [t]), s.useEffect(() => {}, []);
   let Z = s.useCallback(() => {
-window.open(h.Z.getArticleURL(p.BhN.QUESTS_LEARN_MORE));
+window.open(_.Z.getArticleURL(g.BhN.QUESTS_LEARN_MORE));
   }, []);
   return ((0, o.Tt)({
-location: T.Z.Messages.QUESTS
+location: p.Z.Messages.QUESTS
   }), t) ? (0, i.jsxs)('div', {
-className: S.container,
+className: T.container,
 children: [
-  (0, i.jsx)(c.f, {
+  (0, i.jsx)(u.Z, {
     icon: (0, i.jsx)(r.QuestsIcon, {
       color: 'var(--header-primary)'
     }),
-    title: T.Z.Messages.QUESTS,
+    title: p.Z.Messages.QUESTS,
     tabs: n,
-    selectedTab: C,
-    onTabSelect: f,
+    selectedTab: S,
+    onTabSelect: C,
     showSearch: !1,
-    scrollManager: N
+    scrollPosition: N
   }),
-  (0, i.jsxs)(d.J, {
-    scrollManager: N,
-    children: [
-      (0, i.jsx)(u.c, {
-        title: T.Z.Messages.QUESTS_HOME_HERO_TITLE,
-        description: T.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-        backgroundImageUrl: 'https://cdn.discordapp.com/assets/discovery/generic-hero-background.png',
-        button: (0, i.jsxs)(r.Button, {
-          size: 'medium',
-          className: S.button,
-          onClick: Z,
-          innerClassName: S.innerButton,
-          children: [
-            (0, i.jsx)(r.Text, {
-              variant: 'text-md/semibold',
-              color: 'always-white',
-              className: S.externalLinkText,
-              children: T.Z.Messages.LEARN_MORE
-            }),
-            (0, i.jsx)(r.LinkExternalSmallIcon, {
-              className: S.icon,
-              color: 'var(--white-500)'
-            })
-          ]
+  (0, i.jsx)(d.Z, {
+    title: p.Z.Messages.QUESTS_HOME_HERO_TITLE,
+    description: p.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
+    backgroundImageUrl: 'https://cdn.discordapp.com/assets/discovery/generic-hero-background.png',
+    onScroll: f,
+    button: (0, i.jsxs)(r.Button, {
+      size: 'medium',
+      className: T.button,
+      onClick: Z,
+      innerClassName: T.innerButton,
+      children: [
+        (0, i.jsx)(r.Text, {
+          variant: 'text-md/semibold',
+          color: 'always-white',
+          className: T.externalLinkText,
+          children: p.Z.Messages.LEARN_MORE
+        }),
+        (0, i.jsx)(r.LinkExternalSmallIcon, {
+          className: T.icon,
+          color: 'var(--white-500)'
         })
-      }),
-      (0, i.jsx)('div', {
-        className: S.gridContainer,
-        children: (0, i.jsx)(m.Z, {
-          quests: A
-        })
+      ]
+    }),
+    children: (0, i.jsx)('div', {
+      className: T.gridContainer,
+      children: (0, i.jsx)(I.Z, {
+        quests: A
       })
-    ]
+    })
   })
 ]
   }) : null;

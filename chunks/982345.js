@@ -44,7 +44,9 @@ d = null !== (e = c.find(e => e.id === n)) && void 0 !== e ? e : c[0];
 tabs: c,
 selectedTab: d,
 onSelectTab: i.useCallback(e => {
-  r.d.getState().setSelectedServerTab(e.id);
+  r.d.setState({
+    selectedServerTab: e.id
+  });
 }, [])
   };
 }

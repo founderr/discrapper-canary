@@ -1,47 +1,54 @@
 n.d(t, {
-  j: function() {
-return E;
+  Z: function() {
+return m;
   }
 });
 var i = n(735250),
   s = n(470079),
   a = n(442837),
-  r = n(212093),
-  l = n(410030),
-  o = n(683301),
-  c = n(514611),
-  d = n(624383),
-  u = n(402691),
-  _ = n(854761);
-let h = [];
+  r = n(481060),
+  l = n(212093),
+  o = n(410030),
+  c = n(683301),
+  d = n(514611),
+  u = n(766219),
+  _ = n(374939),
+  E = n(402691),
+  h = n(854761);
+let I = [];
 
-function E(e) {
+function m(e) {
   let {
 categoryId: t,
-title: n,
-description: E
-  } = e, I = (0, a.Wu)([o.ZP], () => {
+tab: n,
+onScroll: m
+  } = e, g = (0, o.ZP)(), p = (0, a.Wu)([c.ZP], () => {
 var e, n;
-return null !== (n = null === (e = o.ZP.getDiscoverableGuilds()[t]) || void 0 === e ? void 0 : e.guilds) && void 0 !== n ? n : h;
-  }), m = (0, a.e7)([o.ZP], () => o.ZP.getLoadId()), {
-handleViewGuild: g,
-onGuildCardSeen: p
-  } = (0, u.g)(t, m), T = (0, l.ZP)();
+return null !== (n = null === (e = c.ZP.getDiscoverableGuilds()[t]) || void 0 === e ? void 0 : e.guilds) && void 0 !== n ? n : I;
+  }), T = (0, a.e7)([c.ZP], () => c.ZP.getLoadId()), {
+handleViewGuild: S,
+onGuildCardSeen: C
+  } = (0, E.g)(t, T), f = (0, u.vb)(n), N = (0, u.q9)(n), A = (0, u.QW)(n);
   return s.useEffect(() => {
-(0, r.K5)(t);
-  }, [t]), (0, i.jsxs)(i.Fragment, {
+(0, l.K5)(t);
+  }, [t]), (0, i.jsxs)(_.Z, {
+title: f,
+description: N,
+onScroll: m,
 children: [
-  (0, i.jsx)(d.c, {
-    title: n,
-    description: E
+  (0, i.jsx)(r.Heading, {
+    className: h.sectionTitle,
+    variant: 'heading-lg/semibold',
+    color: 'header-primary',
+    children: A
   }),
-  (0, i.jsx)('section', {
-    className: _.servers,
-    children: I.map((e, t) => (0, i.jsx)(c.Z, {
+  (0, i.jsx)('div', {
+    className: h.content,
+    children: p.map((e, t) => (0, i.jsx)(d.Z, {
       guild: e,
-      onView: e => g(e, t),
-      theme: T,
-      onGuildCardSeen: p
+      onView: e => S(e, t),
+      theme: g,
+      onGuildCardSeen: C
     }, e.id))
   })
 ]

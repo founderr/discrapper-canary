@@ -1,3 +1,3 @@
 e.exports = {
-  hubs: 'hubs_ba24db'
+  content: 'content_ba24db'
 };

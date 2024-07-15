@@ -1,30 +1,57 @@
 n.d(t, {
   X: function() {
-return c;
+return h;
   }
 });
 var i = n(735250);
 n(470079);
-var s = n(602597),
-  a = n(526383),
-  r = n(624383),
-  l = n(689938),
-  o = n(121019);
+var s = n(442837),
+  a = n(481060),
+  r = n(749210),
+  l = n(469988),
+  o = n(526383),
+  c = n(210887),
+  d = n(514611),
+  u = n(374939),
+  _ = n(689938),
+  E = n(121019);
 
-function c() {
-  let e = (0, a.Z)();
-  return (0, i.jsxs)(i.Fragment, {
-children: [
-  (0, i.jsx)(r.c, {
-    title: l.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
-    description: l.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION
-  }),
-  (0, i.jsx)('section', {
-    className: o.hubs,
-    children: (0, i.jsx)(s.Z, {
-      guilds: e
+function h(e) {
+  let {
+onScroll: t
+  } = e, n = (0, o.Z)(), h = (0, s.e7)([c.Z], () => c.Z.theme);
+  return (0, i.jsx)(u.Z, {
+title: _.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
+description: _.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
+onScroll: t,
+children: (0, i.jsx)('div', {
+  className: E.content,
+  children: n.length > 0 ? (0, i.jsxs)('div', {
+    children: [
+      (0, i.jsx)(a.Heading, {
+        variant: 'heading-lg/semibold',
+        children: _.Z.Messages.YOUR_HUB
+      }),
+      n.map(e => (0, i.jsx)(d.Z, {
+        onView: () => r.Z.transitionToGuildSync(e.id),
+        guild: {
+          ...e,
+          presenceCount: void 0,
+          memberCount: void 0,
+          premiumSubscriptionCount: void 0,
+          emojis: void 0
+        },
+        theme: h
+      }, e.id)),
+      (0, i.jsx)(l.Z, {
+        hasHub: !0
+      })
+    ]
+  }) : (0, i.jsx)('div', {
+    children: (0, i.jsx)(l.Z, {
+      hasHub: !1
     })
   })
-]
+})
   });
 }

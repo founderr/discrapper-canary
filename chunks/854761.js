@@ -1,3 +1,4 @@
 e.exports = {
-  servers: 'servers_c7041a'
+  sectionTitle: 'sectionTitle_c7041a',
+  content: 'content_c7041a'
 };

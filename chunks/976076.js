@@ -9,17 +9,19 @@ var i = n(470079),
   r = n(49898);
 
 function l() {
-  let e = (0, a.d)(e => e.selectedPage, s.Z),
-t = a.d.getState().setSelectedPage;
+  let e = (0, a.d)(e => e.selectedPage, s.Z);
   return i.useEffect(() => {
-t(function(e) {
+let e = function(e) {
   switch (e) {
     case '/discovery':
     default:
-      return r.SM.SERVERS;
+      return r.F$.SERVERS;
     case '/discovery/quests':
-      return r.SM.QUESTS;
+      return r.F$.QUESTS;
   }
-}(new URL(window.location.href).pathname));
-  }, [t]), e;
+}(new URL(window.location.href).pathname);
+a.d.setState({
+  selectedPage: e
+});
+  }, []), e;
 }

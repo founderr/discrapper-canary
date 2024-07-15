@@ -1,34 +1,19 @@
+var i, s, a, r;
 n.d(t, {
-  $G: function() {
-return c;
+  F$: function() {
+return i;
   },
-  SM: function() {
-return a;
+  mc: function() {
+return l;
   },
   vf: function() {
-return r;
+return s;
   }
-});
-var i, s, a, r, l = n(823379),
-  o = n(731455);
-
-function c(e) {
-  switch (e) {
-case 'guilds':
-case 'hubs':
-  return o.Hk;
-case 'gaming':
-  return o.Gj.Activity;
-case 'music':
-  return o.Gj.Music;
-case 'entertainment':
-  return o.Gj.Television;
-case 'tech':
-  return o.Gj.Science;
-case 'education':
-  return o.Gj.Education;
-default:
-  (0, l.vE)(e);
-  }
-}
-(i = a || (a = {})).SERVERS = 'servers', i.APPS = 'apps', i.QUESTS = 'quests', i.SHOP = 'shop', (s = r || (r = {})).GUILDS = 'guilds', s.GAMING = 'gaming', s.MUSIC = 'music', s.ENTERTAINMENT = 'entertainment', s.TECH = 'tech', s.EDUCATION = 'education', s.HUBS = 'hubs';
+}), (a = i || (i = {})).SERVERS = 'servers', a.APPS = 'apps', a.QUESTS = 'quests', a.SHOP = 'shop';
+let l = [
+  'servers',
+  'apps',
+  'quests',
+  'shop'
+];
+(r = s || (s = {})).GUILDS = 'guilds', r.GAMING = 'gaming', r.MUSIC = 'music', r.ENTERTAINMENT = 'entertainment', r.TECH = 'tech', r.EDUCATION = 'education', r.HUBS = 'hubs';
