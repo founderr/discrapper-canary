@@ -334,10 +334,6 @@ children: (0, i.jsx)(A.Mt, {
             onClose: n
           })
         }),
-        (null == W ? void 0 : W.profileEffectId) != null && (0, i.jsx)(N.Z, {
-          profileEffectId: null == W ? void 0 : W.profileEffectId,
-          isHovering: ed
-        }),
         (0, i.jsxs)('header', {
           className: $.header,
           children: [
@@ -360,6 +356,10 @@ children: (0, i.jsx)(A.Mt, {
               onClose: n
             })
           ]
+        }),
+        (null == W ? void 0 : W.profileEffectId) != null && (0, i.jsx)(N.Z, {
+          profileEffectId: null == W ? void 0 : W.profileEffectId,
+          isHovering: ed
         }),
         (0, i.jsxs)(d.Scroller, {
           className: J.body,

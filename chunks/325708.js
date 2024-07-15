@@ -65,7 +65,7 @@ u.ZP.updatedUnsyncedSettings({
 });
   }, [E]), x = (0, m.W)({
 maxWidth: n
-  }), T = (0, c.clamp)(C, m.C, n), v = x ? T : T + d.Z.modules.chat.RESIZE_HANDLE_WIDTH;
+  }), T = (0, c.clamp)(C, m.C, n), N = x ? T : T + d.Z.modules.chat.RESIZE_HANDLE_WIDTH;
   s.useEffect(() => {
 null == i || i(T, x);
   }, [
@@ -73,7 +73,7 @@ T,
 i,
 x
   ]);
-  let N = (0, l.jsxs)(l.Fragment, {
+  let v = (0, l.jsxs)(l.Fragment, {
 children: [
   (0, l.jsx)('div', {
     className: o()(_.chatTarget, {
@@ -81,7 +81,7 @@ children: [
       [_.notFloating]: !x
     }),
     style: {
-      width: v
+      width: N
     }
   }),
   !x && (0, l.jsx)(f, {
@@ -107,11 +107,11 @@ let e = null != r ? r : s.Fragment;
 return (0, l.jsx)(e, {
   children: (0, l.jsx)('div', {
     className: _.chatLayerWrapper,
-    children: N
+    children: v
   })
 });
   }
   return (0, l.jsx)(l.Fragment, {
-children: N
+children: v
   });
 }

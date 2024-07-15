@@ -19,8 +19,8 @@ var i = n(735250),
   I = n(561472),
   x = n(36311),
   T = n(112724),
-  v = n(902840),
-  N = n(110924),
+  N = n(902840),
+  v = n(110924),
   S = n(317381),
   Z = n(82888),
   A = n(917107),
@@ -73,8 +73,8 @@ var i = n(735250),
   eI = n(66556),
   ex = n(739830),
   eT = n(377929),
-  ev = n(900157),
-  eN = n(108427),
+  eN = n(900157),
+  ev = n(108427),
   eS = n(171368),
   eZ = n(346967),
   eA = n(524329),
@@ -130,7 +130,7 @@ children: (0, i.jsx)(f.Spinner, {})
 });
 class e9 extends a.PureComponent {
   componentDidMount() {
-(0, eN.e)('guild_channel');
+(0, ev.e)('guild_channel');
   }
   componentDidUpdate(e) {
 null != this.props.channel && null != e.channel && this.props.channel.id !== e.channel.id && this.state.topicExpanded && this.setState({
@@ -171,7 +171,7 @@ o()(null != a, 'Missing user in Channel.openDMContextMenu'), (0, E.jW)(e, async 
     default: e
   } = await Promise.all([
     n.e('79695'),
-    n.e('17400'),
+    n.e('45984'),
     n.e('22036'),
     n.e('56826'),
     n.e('79598')
@@ -392,7 +392,7 @@ if (n === eJ.ULH.SIDEBAR_CHAT && null != a) {
       });
       break;
     case ef.tI.VIEW_THREAD:
-      let n = (null == t ? void 0 : t.isForumLikeChannel()) ? k.Z : ev.Z;
+      let n = (null == t ? void 0 : t.isForumLikeChannel()) ? k.Z : eN.Z;
       e = (0, i.jsx)(n, {
         channelId: a.channelId
       });
@@ -634,7 +634,7 @@ super(...e), e5(this, 'state', {
         channel: e
       }, 'pins')), !e.isArchivedThread() && s.push((0, i.jsx)(Y.Z, {
         channelId: e.id
-      }, 'members')), null != t && (0, v.Lp)(e) && s.push((0, i.jsx)(X.Z, {
+      }, 'members')), null != t && (0, N.Lp)(e) && s.push((0, i.jsx)(X.Z, {
         channel: e
       }, 'summaries')), s.push((0, i.jsx)(eT.Z, {
         channel: e
@@ -652,7 +652,7 @@ super(...e), e5(this, 'state', {
         channel: e
       }, 'pins')), s.push((0, i.jsx)(Y.Z, {
         channelId: e.id
-      }, 'members')), (0, v.Lp)(e) && s.push((0, i.jsx)(X.Z, {
+      }, 'members')), (0, N.Lp)(e) && s.push((0, i.jsx)(X.Z, {
         channel: e
       }, 'summaries'));
       break;
@@ -841,10 +841,10 @@ null != l && null != c && ee && c.id === l && !$ && ((0, eE.Cq)(c), s(null));
 l,
 ee
   ]);
-  let et = (0, v.ts)(c),
+  let et = (0, N.ts)(c),
 en = null != c && c.isPrivate(),
-ei = (0, N.Z)(en),
-ea = (0, N.Z)(null == c ? void 0 : c.id);
+ei = (0, v.Z)(en),
+ea = (0, v.Z)(null == c ? void 0 : c.id);
   a.useEffect(() => {
 let e = ei && !en,
   t = ei && en && (null == c ? void 0 : c.id) !== ea;

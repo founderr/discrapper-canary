@@ -27,10 +27,10 @@ appContext: C,
 analyticsLocation: g,
 guildScheduledEvent: I,
 ...x
-  } = e, T = (0, o.bp)(), v = null == f ? void 0 : f.getGuildId(), N = (0, s.e7)([c.Z], () => null != v ? c.Z.getGuild(v) : null, [v]);
-  return (t = N, a = f, null != t && null != a && d.Z.can(h.Plq.CREATE_INSTANT_INVITE, a)) ? (0, i.jsx)(u.Z, {
+  } = e, T = (0, o.bp)(), N = null == f ? void 0 : f.getGuildId(), v = (0, s.e7)([c.Z], () => null != N ? c.Z.getGuild(N) : null, [N]);
+  return (t = v, a = f, null != t && null != a && d.Z.can(h.Plq.CREATE_INSTANT_INVITE, a)) ? (0, i.jsx)(u.Z, {
 onClick: () => {
-  l()(null != N, 'guild cannot be null'), l()(null != f, 'channel cannot be null'), ! function(e) {
+  l()(null != v, 'guild cannot be null'), l()(null != f, 'channel cannot be null'), ! function(e) {
     let {
       guild: t,
       channel: a,
@@ -63,7 +63,7 @@ onClick: () => {
       contextKey: o === h.IlC.POPOUT ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
     });
   }({
-    guild: N,
+    guild: v,
     channel: f,
     streamUserId: null == _ ? void 0 : _.ownerId,
     applicationId: m,

@@ -19,8 +19,8 @@ var i = n(735250),
   I = n(41776),
   x = n(222677),
   T = n(995774),
-  v = n(931651),
-  N = n(280845),
+  N = n(931651),
+  v = n(280845),
   S = n(121254),
   Z = n(115219),
   A = n(742989),
@@ -162,7 +162,7 @@ canPublish: C,
 canReact: g,
 canConfigureJoin: x,
 canReply: T,
-canStartThread: v,
+canStartThread: N,
 canViewThread: L,
 canForward: U,
 isExpanded: Y,
@@ -189,14 +189,14 @@ let {
   author: o
 } = n, d = (0, c.e7)([O.Z], () => O.Z.getGuild(t.guild_id), [t.guild_id]), u = (0, c.e7)([j.default], () => j.default.getId()), m = (0, b.$R)(t), _ = (0, b.Gu)(t), C = R.nc.useSetting(), g = R.Sb.useSetting(), x = (0, c.e7)([y.Z], () => null == t.guild_id || y.Z.canChatInGuild(t.guild_id), [t]), {
   canManageMessages: T,
-  canAddNewReactions: v
+  canAddNewReactions: N
 } = (0, c.cj)([D.Z], () => ({
   canAddNewReactions: x && D.Z.can(q.Plq.ADD_REACTIONS, t),
   canManageMessages: D.Z.can(q.Plq.MANAGE_MESSAGES, t)
 }), [
   t,
   x
-]), L = (0, N.U)(t, n), k = (0, b.NE)(t, n), U = (0, b.Ek)(n), w = (0, c.e7)([I.Z], () => null != t.guild_id && I.Z.isLurking(t.guild_id), [t]), W = (0, c.e7)([P.ZP], () => null != t.guild_id && P.ZP.isCurrentUserGuest(t.guild_id), [t]), z = o.id === u, Y = (T || n.canDeleteOwnMessage(u)) && m && !q.V$x.UNDELETABLE.has(n.type);
+]), L = (0, v.U)(t, n), k = (0, b.NE)(t, n), U = (0, b.Ek)(n), w = (0, c.e7)([I.Z], () => null != t.guild_id && I.Z.isLurking(t.guild_id), [t]), W = (0, c.e7)([P.ZP], () => null != t.guild_id && P.ZP.isCurrentUserGuest(t.guild_id), [t]), z = o.id === u, Y = (T || n.canDeleteOwnMessage(u)) && m && !q.V$x.UNDELETABLE.has(n.type);
 n.type === q.uaV.AUTO_MODERATION_ACTION && (Y = Y && T);
 let X = (0, H.a4)(n),
   Q = (0, V.Z)(n, t, T),
@@ -207,7 +207,7 @@ let X = (0, H.a4)(n),
     channel: t,
     canChat: x,
     renderReactions: C,
-    canAddNewReactions: v,
+    canAddNewReactions: N,
     isLurking: w,
     isGuest: W,
     isActiveChannelOrUnarchivableThread: m
@@ -356,7 +356,7 @@ children: [
         icon: u.PinIcon,
         onClick: W.rY
       }) : null,
-      v && U ? et({
+      N && U ? et({
         key: 'thread',
         channel: t,
         message: n,
@@ -409,7 +409,7 @@ children: [
     onTooltipHide: ex,
     showNewBadge: !eC && eE
   }) : null,
-  v && !U ? et({
+  N && !U ? et({
     key: 'thread',
     channel: t,
     message: n,
@@ -417,7 +417,7 @@ children: [
     icon: u.ThreadIcon,
     onClick: W.gK
   }) : null,
-  !v && L ? et({
+  !N && L ? et({
     key: 'view-thread',
     channel: t,
     message: n,
@@ -524,7 +524,7 @@ l = {
     object: q.qAy.EMOJI_REACTION_PICKER_POPOUT
   }
 };
-  return (0, i.jsx)(v.$, {
+  return (0, i.jsx)(N.$, {
 channel: e,
 closePopout: n,
 onSelectEmoji: (i, a, l) => {

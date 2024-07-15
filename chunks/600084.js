@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(967128),
   x = n(320781),
   T = n(269203),
-  v = n(753898),
-  N = n(734386),
+  N = n(753898),
+  v = n(734386),
   S = n(184279),
   Z = n(438306),
   A = n(544142),
@@ -54,7 +54,7 @@ return (0, i.jsx)(M.Z, {
   channel: n
 });
   else if (a)
-return (0, i.jsx)(N.Z, {
+return (0, i.jsx)(v.Z, {
   channel: n
 });
   return (0, i.jsx)(Z.Z, {
@@ -70,7 +70,7 @@ showingBanner: c
   } = e, d = (0, o.ZP)(n), {
 type: m
   } = n, _ = (0, l.e7)([E.default], () => n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null), x = C.ZP.useUserTag(_), {
-canManageRoles: N,
+canManageRoles: v,
 canReadMessageHistory: Z
   } = (0, l.cj)([f.Z], () => ({
 canManageRoles: f.Z.can(b.Plq.MANAGE_ROLES, n),
@@ -97,12 +97,12 @@ autoTrackExposure: null !== (t = n.isSystemDM()) && void 0 !== t && t
 ]), n.isSystemDM())
 return M ? (0, i.jsx)(S.Z, {
   channel: n
-}) : (0, i.jsx)(v.Z, {
+}) : (0, i.jsx)(N.Z, {
   channel: n,
   children: j.Z.Messages.SYSTEM_DM_EMPTY_MESSAGE
 });
   if (m === b.d4z.DM)
-return (0, i.jsxs)(v.Z, {
+return (0, i.jsxs)(N.Z, {
   channel: n,
   user: _,
   children: [
@@ -136,7 +136,7 @@ return n.isManaged() ? (0, i.jsxs)(I.ZP, {
   ]
 }) : n.hasFlag(R.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL) ? (0, i.jsx)(T.Z, {
   channel: n
-}) : (0, i.jsx)(v.Z, {
+}) : (0, i.jsx)(N.Z, {
   channel: n,
   children: j.Z.Messages.BEGINNING_GROUP_DM.format({
     name: d
@@ -144,7 +144,7 @@ return n.isManaged() ? (0, i.jsxs)(I.ZP, {
 });
   return Z ? (0, i.jsx)(P, {
 channel: n,
-canManageRoles: N
+canManageRoles: v
   }) : (0, i.jsx)(I.ZP, {
 channelId: n.id,
 children: (0, i.jsx)(I.jz, {

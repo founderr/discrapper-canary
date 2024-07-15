@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(683818),
   x = n(16853),
   T = n(981631),
-  v = n(689938),
-  N = n(979768),
+  N = n(689938),
+  v = n(979768),
   S = n(883760);
 let Z = e => {
   let {
@@ -32,7 +32,7 @@ onClick: t
   } = e;
   return (0, i.jsxs)(o.Clickable, {
 onClick: t,
-className: N.addEntryCard,
+className: v.addEntryCard,
 children: [
   (0, i.jsx)('img', {
     alt: '',
@@ -41,8 +41,8 @@ children: [
   (0, i.jsx)(o.Text, {
     variant: 'text-sm/semibold',
     color: 'header-primary',
-    className: N.addServerText,
-    children: v.Z.Messages.HUB_ADD_SERVER_CTA
+    className: v.addServerText,
+    children: N.Z.Messages.HUB_ADD_SERVER_CTA
   })
 ]
   });
@@ -55,13 +55,13 @@ entry: t
 canEdit: c
   } = (0, I.Z)(t);
   return (0, i.jsx)('div', {
-className: s()(N.actionButtonsContainer, {
-  [N.forceButtonsShow]: l
+className: s()(v.actionButtonsContainer, {
+  [v.forceButtonsShow]: l
 }),
 children: (0, i.jsxs)(C.ZP, {
   children: [
     c ? (0, i.jsx)(o.Tooltip, {
-      text: v.Z.Messages.HUB_ENTRY_UPDATE,
+      text: N.Z.Messages.HUB_ENTRY_UPDATE,
       hideOnClick: !0,
       children: e => {
         let {
@@ -81,11 +81,11 @@ children: (0, i.jsxs)(C.ZP, {
               });
             });
           },
-          'aria-label': v.Z.Messages.HUB_ENTRY_UPDATE,
+          'aria-label': N.Z.Messages.HUB_ENTRY_UPDATE,
           children: (0, i.jsx)(o.PencilIcon, {
             size: 'xs',
             color: 'currentColor',
-            className: N.overflowIcon
+            className: v.overflowIcon
           })
         });
       }
@@ -101,7 +101,7 @@ children: (0, i.jsxs)(C.ZP, {
           ...n
         } = e;
         return (0, i.jsx)(o.Tooltip, {
-          text: v.Z.Messages.MORE,
+          text: N.Z.Messages.MORE,
           hideOnClick: !0,
           children: e => {
             let {
@@ -114,11 +114,11 @@ children: (0, i.jsxs)(C.ZP, {
               onClick: e => {
                 null == a || a(), t(e);
               },
-              'aria-label': v.Z.Messages.MORE,
+              'aria-label': N.Z.Messages.MORE,
               children: (0, i.jsx)(o.MoreHorizontalIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: N.overflowIcon
+                className: v.overflowIcon
               })
             });
           }
@@ -150,9 +150,9 @@ size: 300 * (0, u.x_)()
 id: l.guildId,
 icon: l.icon,
 size: 40
-  })) && void 0 !== t ? t : void 0, M = v.Z.Messages.JOIN;
-  return I && (M = v.Z.Messages.HUB_DIRECTORY_CARD_JOINED_GUILD_BUTTON), (0, i.jsxs)('div', {
-className: N.card,
+  })) && void 0 !== t ? t : void 0, M = N.Z.Messages.JOIN;
+  return I && (M = N.Z.Messages.HUB_DIRECTORY_CARD_JOINED_GUILD_BUTTON), (0, i.jsxs)('div', {
+className: v.card,
 onContextMenu: e => {
   (0, c.jW)(e, async () => {
     let {
@@ -166,26 +166,26 @@ onContextMenu: e => {
 },
 children: [
   (0, i.jsxs)('div', {
-    className: N.cardHeader,
+    className: v.cardHeader,
     children: [
       (0, i.jsx)('div', {
-        className: N.splash,
+        className: v.splash,
         children: null != S && (0, i.jsx)('img', {
           src: S,
           alt: '',
-          className: N.splashImage
+          className: v.splashImage
         })
       }),
       (0, i.jsx)('div', {
-        className: N.guildIcon,
+        className: v.guildIcon,
         children: (0, i.jsx)(E.ZP, {
           mask: E.ZP.Masks.SQUIRCLE,
           width: 48,
           height: 48,
           children: (0, i.jsx)('div', {
-            className: N.iconMask,
+            className: v.iconMask,
             children: (0, i.jsx)(f.Z, {
-              className: N.icon,
+              className: v.icon,
               iconSrc: Z,
               guild: new p.ZP(l),
               size: f.Z.Sizes.MEDIUM,
@@ -197,18 +197,18 @@ children: [
     ]
   }),
   (0, i.jsxs)('div', {
-    className: N.guildInfo,
+    className: v.guildInfo,
     children: [
       (0, i.jsxs)('div', {
-        className: N.title,
+        className: v.title,
         children: [
           (0, i.jsx)(_.Z, {
-            className: N.guildBadge,
+            className: v.guildBadge,
             guild: l,
             tooltipColor: o.Tooltip.Colors.PRIMARY
           }),
           (0, i.jsx)(o.Text, {
-            className: N.guildName,
+            className: v.guildName,
             variant: 'heading-md/semibold',
             color: 'header-primary',
             children: l.name
@@ -216,39 +216,39 @@ children: [
         ]
       }),
       (0, i.jsx)(o.Text, {
-        className: N.description,
+        className: v.description,
         variant: 'text-sm/normal',
         color: 'header-secondary',
         children: l.description
       }),
       (0, i.jsxs)('div', {
-        className: N.memberInfo,
+        className: v.memberInfo,
         children: [
           null != l.approximatePresenceCount && (0, i.jsxs)('div', {
-            className: N.memberCount,
+            className: v.memberCount,
             children: [
               (0, i.jsx)('div', {
-                className: N.dotOnline
+                className: v.dotOnline
               }),
               (0, i.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'header-secondary',
-                children: v.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                   membersOnline: l.approximatePresenceCount
                 })
               })
             ]
           }),
           null != l.approximateMemberCount && (0, i.jsxs)('div', {
-            className: N.memberCount,
+            className: v.memberCount,
             children: [
               (0, i.jsx)('div', {
-                className: N.dotOffline
+                className: v.dotOffline
               }),
               (0, i.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'header-secondary',
-                children: v.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                   count: l.approximateMemberCount
                 })
               })
@@ -258,7 +258,7 @@ children: [
       }),
       (0, i.jsx)(o.Button, {
         submitting: s,
-        className: N.joinButton,
+        className: v.joinButton,
         color: I ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
         onClick: x,
         children: M

@@ -76,7 +76,7 @@ t.Z = a.memo(function(e) {
   let {
 member: t,
 onNavigate: n
-  } = e, l = (0, r.e7)([u.Z], () => u.Z.getGuild(t.guildId), [t.guildId]), c = (0, m.B2)(t.userId, t.guildId, m.Qn), d = (0, m.B2)(t.userId, t.guildId, m.pd), I = Object.keys(c).length, x = Object.keys(d).length, T = a.useMemo(() => null != l ? h.Z.getGuildPermissionSpecMap(l) : null, [l]), v = a.useMemo(() => null != l ? h.Z.generateGuildPermissionSpec(l) : null, [l]), N = a.useMemo(() => {
+  } = e, l = (0, r.e7)([u.Z], () => u.Z.getGuild(t.guildId), [t.guildId]), c = (0, m.B2)(t.userId, t.guildId, m.Qn), d = (0, m.B2)(t.userId, t.guildId, m.pd), I = Object.keys(c).length, x = Object.keys(d).length, T = a.useMemo(() => null != l ? h.Z.getGuildPermissionSpecMap(l) : null, [l]), N = a.useMemo(() => null != l ? h.Z.generateGuildPermissionSpec(l) : null, [l]), v = a.useMemo(() => {
 if (null == l || null == T)
   return null;
 if (0 === I)
@@ -89,7 +89,7 @@ if (0 === I)
     })
   });
 let e = [];
-return null == v || v.forEach(t => {
+return null == N || N.forEach(t => {
   t.permissions.forEach(t => {
     let n = t.flag,
       a = m.pd.find(e => f.Plq[e] === n);
@@ -109,7 +109,7 @@ return null == v || v.forEach(t => {
 l,
 I,
 c,
-v,
+N,
 T
   ]);
   return null == l ? null : (0, i.jsx)(o.FormItem, {
@@ -146,7 +146,7 @@ children: (0, i.jsx)(p.WM, {
   children: (0, i.jsx)(p._2, {
     description: (0, i.jsx)('div', {
       className: C.permissionsContainer,
-      children: N
+      children: v
     })
   })
 })

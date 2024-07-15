@@ -24,8 +24,8 @@ var a = n(120356),
   I = n(594174),
   x = n(572004),
   T = n(5192),
-  v = n(51144),
-  N = n(991570),
+  N = n(51144),
+  v = n(991570),
   S = n(981631),
   Z = n(689938),
   A = n(614603);
@@ -77,7 +77,7 @@ children: [
         children: (0, i.jsx)(r.Text, {
           variant: 'text-md/medium',
           color: 'text-normal',
-          children: v.ZP.getUserTag(t)
+          children: N.ZP.getUserTag(t)
         })
       })
     ]
@@ -148,13 +148,13 @@ canModerateMembers: null != _ && (0, h.F)(_.id, a.id, [
   }), [
 a,
 _
-  ]), v = (0, d.b)(l), {
-analyticsLocations: N,
+  ]), N = (0, d.b)(l), {
+analyticsLocations: v,
 newestAnalyticsLocation: M
   } = (0, c.ZP)(), R = (0, p.sE)(m, {
 targetUserId: a.id,
 location: M,
-locations: N
+locations: v
   });
   return (0, i.jsxs)('div', {
 className: A.bottomRow,
@@ -254,7 +254,7 @@ children: [
       backgroundColor: t
     },
     onClick: () => {
-      v ? (0, u.q)(l.guildId, l.userId, N) : (0, u.z)(l.guildId, l.userId, N);
+      N ? (0, u.q)(l.guildId, l.userId, v) : (0, u.z)(l.guildId, l.userId, v);
     },
     children: [
       (0, i.jsx)(r.ClockWarningIcon, {
@@ -266,7 +266,7 @@ children: [
       (0, i.jsx)(r.Text, {
         variant: 'text-sm/normal',
         color: 'none',
-        children: v ? Z.Z.Messages.REMOVE : Z.Z.Messages.TIMEOUT_USER
+        children: N ? Z.Z.Messages.REMOVE : Z.Z.Messages.TIMEOUT_USER
       })
     ]
   }),
@@ -305,7 +305,7 @@ onClose: a
   } = e, l = (0, s.e7)([I.default], () => I.default.getUser(t), [t]), o = (0, s.e7)([_.ZP], () => _.ZP.getMember(n, t), [
 n,
 t
-  ]), c = (0, N.f)(t, n, 0.8, r.tokens.colors.BACKGROUND_SECONDARY);
+  ]), c = (0, v.f)(t, n, 0.8, r.tokens.colors.BACKGROUND_SECONDARY);
   return null == l || null == o ? null : (0, i.jsxs)('div', {
 className: A.container,
 children: [

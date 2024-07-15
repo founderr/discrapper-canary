@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(591853),
   x = n(371991),
   T = n(410441),
-  v = n(981631),
-  N = n(616922),
+  N = n(981631),
+  v = n(616922),
   S = n(689938),
   Z = n(153602),
   A = n(331679);
@@ -115,7 +115,7 @@ function R(e) {
 V = (0, s.e7)([
   d.Z,
   p.default
-], () => (null == y ? void 0 : y.type) === v.IIU.LISTENING && null != B ? (0, u.Z)(d.Z, p.default, B, y) : void 0, [
+], () => (null == y ? void 0 : y.type) === N.IIU.LISTENING && null != B ? (0, u.Z)(d.Z, p.default, B, y) : void 0, [
   y,
   B
 ], r.Z),
@@ -164,7 +164,7 @@ x = () => {
   (0, c.aG)(y);
 }, z.push((0, i.jsx)(I.Ll, {
   onClick: () => {
-    (0, h.Z)(V, N.kG.USER_ACTIVITY_SYNC), O();
+    (0, h.Z)(V, v.kG.USER_ACTIVITY_SYNC), O();
   },
   IconComponent: o.UserPlayIcon,
   children: S.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_LISTEN_ALONG

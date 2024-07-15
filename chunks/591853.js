@@ -39,8 +39,8 @@ var c = n(442837),
   I = n(605236),
   x = n(543241),
   T = n(318374),
-  v = n(258609),
-  N = n(810568),
+  N = n(258609),
+  v = n(810568),
   S = n(168524),
   Z = n(382182),
   A = n(871118),
@@ -139,7 +139,7 @@ entry: _,
 requestId: f,
 buttons: E = [],
 header: x
-  } = e, [T, v] = a.useState(!1), [N, S] = a.useState(null), Z = (0, c.e7)([P.Z], () => P.Z.can(ee.Plq.SEND_MESSAGES, t)), A = (0, Y.a)({
+  } = e, [T, N] = a.useState(!1), [v, S] = a.useState(null), Z = (0, c.e7)([P.Z], () => P.Z.can(ee.Plq.SEND_MESSAGES, t)), A = (0, Y.a)({
 location: 'PopoutReactor'
   }), [b, R] = a.useState(!1), [B, G] = a.useState(!1), {
 voiceBar: F,
@@ -303,7 +303,7 @@ if (null != e) {
       interactionType: $.xP.REACTION_EMOJI_REACT_SENT
     });
   }
-  el(!0), null != N && (N.insertEmoji(e, !1, !1), N.focus());
+  el(!0), null != v && (v.insertEmoji(e, !1, !1), v.focus());
 }
   }, eu = async e => {
 let i;
@@ -398,7 +398,7 @@ children: [
           children: e => (0, i.jsx)(h.Clickable, {
             ...e,
             className: en.shareToChannelButton,
-            onClick: () => v(e => !e),
+            onClick: () => N(e => !e),
             children: T ? (0, i.jsx)(h.TextIcon, {
               size: 'custom',
               width: 20,
@@ -598,7 +598,7 @@ entry: _
   } = m, f = (0, F.d)(_), E = (0, S.Z)({
 location: 'ContentPopout',
 applicationId: f ? null === (t = _.extra) || void 0 === t ? void 0 : t.application_id : void 0,
-source: N.m1.ActivityCard,
+source: v.m1.ActivityCard,
 trackEntryPointImpression: !0,
 sourceUserId: _.author_id
   }), C = f ? E : void 0;
@@ -667,7 +667,7 @@ title: t,
 badges: n,
 stream: l,
 ...s
-  } = e, r = (0, c.e7)([j.Z], () => j.Z.getChannel(null == l ? void 0 : l.channelId)), [o] = a.useMemo(() => (0, Z.p9)(r, D.Z, L.Z, P.Z, v.Z), [r]);
+  } = e, r = (0, c.e7)([j.Z], () => j.Z.getChannel(null == l ? void 0 : l.channelId)), [o] = a.useMemo(() => (0, Z.p9)(r, D.Z, L.Z, P.Z, N.Z), [r]);
   return null == l ? null : (0, i.jsxs)(ea, {
 className: en.streamingPopoutHero,
 children: [

@@ -19,8 +19,8 @@ var i = n(735250),
   I = n(271383),
   x = n(131951),
   T = n(496675),
-  v = n(158776),
-  N = n(885110),
+  N = n(158776),
+  v = n(885110),
   S = n(797258),
   Z = n(606304),
   A = n(979651),
@@ -63,9 +63,9 @@ return t.has(M);
 M,
 s.id
   ]), G = (0, h.Z)(null != H ? [H.applicationId] : []), V = (0, R.Hr)('voice_users_eligibility_check', !1), F = (0, r.e7)([
-v.Z,
-N.Z
-  ], () => O ? N.Z.getActivities() : v.Z.getActivities(M, s.guild_id)).find(e => null != e.application_id && e.type === L.IIU.PLAYING), W = (0, r.e7)([u.Z], () => (null == F ? void 0 : F.application_id) != null ? u.Z.getApplication(null == F ? void 0 : F.application_id) : void 0);
+N.Z,
+v.Z
+  ], () => O ? v.Z.getActivities() : N.Z.getActivities(M, s.guild_id)).find(e => null != e.application_id && e.type === L.IIU.PLAYING), W = (0, r.e7)([u.Z], () => (null == F ? void 0 : F.application_id) != null ? u.Z.getApplication(null == F ? void 0 : F.application_id) : void 0);
   null != W && R.ZP.trackExposure({
 location: 'voice_users'
   });
@@ -83,7 +83,7 @@ enableHangStatus: Q
   } = m.n.useExperiment({
 guildId: s.guild_id,
 location: 'VoiceUsers'
-  }), J = (0, p.Z)(s, !0, l), $ = (0, r.e7)([_.Z], () => O ? _.Z.getHangStatusActivity() : null, [O]), ee = (0, r.e7)([v.Z], () => v.Z.findActivity(M, e => e.type === L.IIU.HANG_STATUS), [M]), et = (0, E.Eu)(s.id, M);
+  }), J = (0, p.Z)(s, !0, l), $ = (0, r.e7)([_.Z], () => O ? _.Z.getHangStatusActivity() : null, [O]), ee = (0, r.e7)([N.Z], () => N.Z.findActivity(M, e => e.type === L.IIU.HANG_STATUS), [M]), et = (0, E.Eu)(s.id, M);
   return (0, i.jsx)(f.Z, {
 shakeLocation: P.oZ.VOICE_USER,
 isShaking: w,
@@ -127,10 +127,10 @@ numAudience: _,
 withGuildIcon: f = !1,
 className: C,
 children: I
-  } = e, [x, N] = a.useState(null), [S, Z] = a.useState(!1), A = a.useRef(null), b = (0, E.Es)(l.id, null != c ? c : D), R = a.useRef(new o.sW(50, () => {
-N(A.current), A.current = null;
+  } = e, [x, v] = a.useState(null), [S, Z] = a.useState(!1), A = a.useRef(null), b = (0, E.Es)(l.id, null != c ? c : D), R = a.useRef(new o.sW(50, () => {
+v(A.current), A.current = null;
   })), P = a.useRef(new o.sW(175, () => {
-N(null);
+v(null);
   })), k = a.useCallback(e => {
 t && (Z(!0), P.current.cancel(), A.current = e, R.current.delay());
   }, [t]), U = a.useCallback(e => {
@@ -138,7 +138,7 @@ t && (R.current.cancel(), x === e && (Z(!1), P.current.delay()));
   }, [
 t,
 x
-  ]), w = (0, r.Wu)([v.Z], () => {
+  ]), w = (0, r.Wu)([N.Z], () => {
 if (d)
   return [];
 let e = new Set();
@@ -146,7 +146,7 @@ return null == b || b.forEach(t => {
   let {
     user: n
   } = t;
-  v.Z.getActivities(n.id, l.guild_id).forEach(t => {
+  N.Z.getActivities(n.id, l.guild_id).forEach(t => {
     null != t.application_id && e.add(t.application_id);
   });
 }), Array.from(e);

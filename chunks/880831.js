@@ -26,20 +26,20 @@ var i = n(735250),
   I = n(419922),
   x = n(375954),
   T = n(699516),
-  v = n(768581),
-  N = n(70956),
+  N = n(768581),
+  v = n(70956),
   S = n(823379),
   Z = n(792125),
   A = n(981631),
   M = n(217702),
   b = n(858359);
-let R = 10 * N.Z.Millis.SECOND;
+let R = 10 * v.Z.Millis.SECOND;
 
 function j(e) {
   var t;
   let {
 message: n
-  } = e, l = (0, c.e7)([T.Z], () => T.Z.isBlockedForMessage(n)), r = (0, E.Uj)(n), o = a.useContext(m.Z), [u, x] = a.useState(!1), N = (0, _.p)(), S = a.useCallback(e => {
+  } = e, l = (0, c.e7)([T.Z], () => T.Z.isBlockedForMessage(n)), r = (0, E.Uj)(n), o = a.useContext(m.Z), [u, x] = a.useState(!1), v = (0, _.p)(), S = a.useCallback(e => {
 if ('A' !== e.target.nodeName)
   h.Z.updateChatOpen(n.channel_id, !0), p.Z.jumpToMessage({
     channelId: n.channel_id,
@@ -51,7 +51,7 @@ n.channel_id,
 n.id
   ]), Z = null != n.content && '' !== n.content ? (0, f.ZP)(n, {
 isInteracting: u,
-shouldFilterKeywords: N
+shouldFilterKeywords: v
   }).content : null, {
 contentPlaceholder: A,
 renderedContent: R,
@@ -91,7 +91,7 @@ children: [
   }),
   (0, i.jsx)('img', {
     alt: '',
-    src: (null == r ? void 0 : r.guildMemberAvatar) != null && null != o ? (0, v.JM)({
+    src: (null == r ? void 0 : r.guildMemberAvatar) != null && null != o ? (0, N.JM)({
       guildId: o,
       userId: n.author.id,
       avatar: r.guildMemberAvatar

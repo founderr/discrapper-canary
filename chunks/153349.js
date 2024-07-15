@@ -21,8 +21,8 @@ var i, a, l = n(735250),
   I = n(496675),
   x = n(158776),
   T = n(471253),
-  v = n(431328),
-  N = n(145834),
+  N = n(431328),
+  v = n(145834),
   S = n(590415),
   Z = n(614173),
   A = n(618896),
@@ -71,7 +71,7 @@ let f = t.getGuildId();
 d()(null != f, 'Channel cannot be guildless');
 let {
   isMobile: I,
-  status: v
+  status: N
 } = (0, u.cj)([x.Z], () => ({
   isMobile: x.Z.isMobileOnline(i.user.id),
   status: x.Z.getStatus(i.user.id, f)
@@ -97,7 +97,7 @@ let P = e => {
       default: e
     } = await Promise.all([
       n.e('79695'),
-      n.e('17400'),
+      n.e('45984'),
       n.e('12435'),
       n.e('17463')
     ]).then(n.bind(n, 757387));
@@ -139,7 +139,7 @@ return (0, l.jsxs)('div', {
               className: R.participantAvatar,
               user: i.user,
               isMobile: I,
-              status: v
+              status: N
             }),
             (0, l.jsxs)('div', {
               className: R.participantTextContainer,
@@ -152,7 +152,7 @@ return (0, l.jsxs)('div', {
                 (0, l.jsx)(h.Text, {
                   variant: 'text-xs/normal',
                   color: 'header-secondary',
-                  children: (0, N.$)(i)
+                  children: (0, v.$)(i)
                 })
               ]
             })
@@ -229,7 +229,7 @@ function y(e) {
 channel: t,
 toggleRequestToSpeakSidebar: n,
 chatOpen: i
-  } = e, a = (0, v.Fd)(t.id), s = [
+  } = e, a = (0, N.Fd)(t.id), s = [
 (0, u.e7)([I.Z], () => I.Z.can(M.Pl.MANAGE_CHANNELS, t) || I.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0,
 Math.max(1, a.length)
   ];

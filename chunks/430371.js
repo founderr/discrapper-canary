@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(354459),
   x = n(524465),
   T = n(456515);
-let v = 16 / 9,
-  N = 8 + C.cF;
+let N = 16 / 9,
+  v = 8 + C.cF;
 
 function S(e) {
   let t, {
@@ -54,15 +54,15 @@ H = u.default.getId(),
 K = j.type === I.fO.ACTIVITY,
 q = (0, c.Z)(j.id),
 X = !K && null != j.streamId,
-Q = D <= 2 * N + 144,
+Q = D <= 2 * v + 144,
 J = L && !Q,
 $ = (0, o.Z)(J),
 ee = k === g.AEg.MINIMUM || k === g.AEg.NORMAL,
 et = !Q && (!ee || K),
 en = (0, m.Z)(et, 100),
 ei = 0;
-  (K || J) && (ei += 72), K && !J && (et ? ei += 48 : ei += 8), J && (ei += 0.5 * N + 8);
-  let ea = a.useMemo(() => K && q ? y / (D - 2 * ei) : X && null != G && G.width > 0 && G.height > 0 ? G.width / G.height : v, [
+  (K || J) && (ei += 72), K && !J && (et ? ei += 48 : ei += 8), J && (ei += 0.5 * v + 8);
+  let ea = a.useMemo(() => K && q ? y / (D - 2 * ei) : X && null != G && G.width > 0 && G.height > 0 ? G.width / G.height : N, [
   X,
   G,
   K,
@@ -74,7 +74,7 @@ ei = 0;
 el = D - 2 * ei,
 es = K && q ? y : el * ea,
 er = Math.floor(Math.min(y, es) / ea),
-eo = D > y / ea + 72 + N + 8;
+eo = D > y / ea + 72 + v + 8;
   t = J || K ? J ? -16 : -8 : 40 + Math.max(0, 72 - (D - er) / 2), a.useEffect(() => {
 let e = setTimeout(() => {
   W(!1);
@@ -155,7 +155,7 @@ children: [
       (0, i.jsxs)(r.animated.div, {
         className: T.videoFrame,
         style: {
-          top: ed.value.to(e => -e * N / 2)
+          top: ed.value.to(e => -e * v / 2)
         },
         children: [
           (0, i.jsx)(r.animated.div, {
@@ -213,7 +213,7 @@ children: [
       (0, i.jsx)(r.animated.div, {
         className: T.participantsWrapperAnimated,
         style: {
-          translateY: ec.value.to(e => e * N / 2),
+          translateY: ec.value.to(e => e * v / 2),
           opacity: ec.value,
           visibility: ec.value.to(e => 0 === e ? 'hidden' : 'visible')
         },

@@ -19,8 +19,8 @@ var l = t(120356),
   v = t(885110),
   h = t(594174),
   b = t(315416),
-  I = t(765305),
-  m = t(689938),
+  m = t(765305),
+  I = t(689938),
   p = t(918831);
 
 function x(e) {
@@ -53,7 +53,7 @@ children: (0, i.jsx)(o.Heading, {
   color: 'header-primary',
   variant: 'heading-xl/semibold',
   className: p.title,
-  children: m.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_EMPTY_TITLE
+  children: I.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_EMPTY_TITLE
 })
   });
 }
@@ -64,7 +64,7 @@ children: (0, i.jsx)(o.Heading, {
   color: 'header-secondary',
   variant: 'heading-md/semibold',
   className: p.errorTitle,
-  children: m.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_FETCH_ERROR
+  children: I.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_FETCH_ERROR
 })
   });
 }
@@ -90,7 +90,7 @@ children: (0, i.jsxs)('div', {
     (0, i.jsx)(o.Text, {
       color: 'text-normal',
       variant: 'text-md/normal',
-      children: m.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_REMAINING.format({
+      children: I.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_REMAINING.format({
         userRemainCount: n
       })
     })
@@ -99,7 +99,7 @@ children: (0, i.jsxs)('div', {
   });
 }
 
-function T(e) {
+function Z(e) {
   let {
 eventUser: n,
 guildId: t,
@@ -155,7 +155,7 @@ children: (e, r) => {
   });
 }
 
-function Z(e) {
+function T(e) {
   let {
 eventUsers: n,
 guildId: t,
@@ -165,7 +165,7 @@ onContextMenu: a
   return (0, i.jsxs)(o.ScrollerThin, {
 className: p.listScroller,
 children: [
-  n.map(e => (0, i.jsx)(T, {
+  n.map(e => (0, i.jsx)(Z, {
     guildId: t,
     eventUser: e,
     onContextMenu: a
@@ -225,11 +225,11 @@ return (0, i.jsx)(S, {
   children: (0, i.jsx)(N, {})
 });
   let _ = 0;
-  return a.length >= I.rC && u > I.rC && (_ = Math.max(u - a.length, 0)), 0 === a.length ? (0, i.jsx)(S, {
+  return a.length >= m.rC && u > m.rC && (_ = Math.max(u - a.length, 0)), 0 === a.length ? (0, i.jsx)(S, {
 height: d,
 children: (0, i.jsx)(E, {})
   }) : (0, i.jsx)(j, {
-children: (0, i.jsx)(Z, {
+children: (0, i.jsx)(T, {
   eventUsers: a,
   guildId: n.guild_id,
   onContextMenu: function(e, n) {
@@ -238,8 +238,8 @@ children: (0, i.jsx)(Z, {
         default: e
       } = await Promise.all([
         t.e('79695'),
-        t.e('17400'),
-        t.e('30508')
+        t.e('69220'),
+        t.e('91605')
       ]).then(t.bind(t, 881351));
       return t => (0, i.jsx)(e, {
         ...t,

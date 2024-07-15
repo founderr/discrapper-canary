@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(967128),
   x = n(665149),
   T = n(294218),
-  v = n(913663),
-  N = n(268350),
+  N = n(913663),
+  v = n(268350),
   S = n(695346),
   Z = n(592125),
   A = n(703558),
@@ -172,7 +172,7 @@ return {
   messageError: d,
   submit: a.useCallback(async (e, a, l) => {
     var r, o, d;
-    null == e && (e = s.textValue), e = e.trim(), (null == a || 0 === a.length) && (a = null === (r = v.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == l || 0 === l.length) && (l = R.Z.getUploads(t.id, A.d.FirstThreadMessage));
+    null == e && (e = s.textValue), e = e.trim(), (null == a || 0 === a.length) && (a = null === (r = N.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == l || 0 === l.length) && (l = R.Z.getUploads(t.id, A.d.FirstThreadMessage));
     let p = null !== (o = i.name) && void 0 !== o ? o : '',
       m = null == n && 0 === p.length,
       _ = '' === e && (null == a || 0 === a.length) && 0 === l.length;
@@ -205,7 +205,7 @@ return {
         shouldRefocus: !0
       };
     }
-    return (0, N.qB)(t.id, F.drafts.type), {
+    return (0, v.qB)(t.id, F.drafts.type), {
       shouldClear: !0,
       shouldRefocus: !1
     };

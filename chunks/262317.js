@@ -25,8 +25,8 @@ var i, a = n(735250),
   I = n(382182),
   x = n(525925),
   T = n(701362),
-  v = n(224184),
-  N = n(484459),
+  N = n(224184),
+  v = n(484459),
   S = n(103575),
   Z = n(314897),
   A = n(430824),
@@ -116,7 +116,7 @@ let {
   onMouseEnter: i ? void 0 : this.handleMouseEnter,
   onMouseLeave: i ? void 0 : this.handleHidePreview,
   children: (0, a.jsx)(d.Popout, {
-    preload: () => (0, N.W)(l.id, l.getAvatarURL(s.guild_id, 80), {
+    preload: () => (0, v.W)(l.id, l.getAvatarURL(s.guild_id, 80), {
       guildId: s.guild_id,
       channelId: s.id
     }),
@@ -205,7 +205,7 @@ super(...e), D(this, 'domElementRef', l.createRef()), D(this, 'state', {
       default: e
     } = await Promise.all([
       n.e('79695'),
-      n.e('17400'),
+      n.e('45984'),
       n.e('12435'),
       n.e('17463')
     ]).then(n.bind(n, 757387));
@@ -252,7 +252,7 @@ super(...e), D(this, 'domElementRef', l.createRef()), D(this, 'state', {
     user: n,
     channel: i
   } = this.props;
-  return (0, a.jsx)(v.Z, {
+  return (0, a.jsx)(N.Z, {
     userId: n.id,
     channel: i,
     hangStatusActivity: e,
@@ -278,8 +278,8 @@ super(...e), D(this, 'domElementRef', l.createRef()), D(this, 'state', {
     nick: I,
     video: x,
     serverMute: T,
-    serverDeaf: v,
-    tabIndex: N,
+    serverDeaf: N,
+    tabIndex: v,
     embeddedApplication: S,
     channel: Z,
     hangStatusActivity: A,
@@ -305,8 +305,8 @@ super(...e), D(this, 'domElementRef', l.createRef()), D(this, 'state', {
     collapsed: f,
     overlap: f,
     serverMute: T,
-    serverDeaf: v,
-    tabIndex: N,
+    serverDeaf: N,
+    tabIndex: v,
     otherClientSessionType: n,
     voicePlatform: i,
     embeddedApplication: S,

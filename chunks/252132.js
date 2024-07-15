@@ -29,7 +29,7 @@ pulseSpeakingIndicator: g,
 participant: I,
 width: x,
 ...T
-  } = e, v = l.Z.getVideoComponent();
+  } = e, N = l.Z.getVideoComponent();
   return (0, i.jsx)('div', {
 style: {
   width: x
@@ -56,7 +56,7 @@ children: (0, i.jsxs)('div', {
       participant: I,
       paused: C,
       pulseSpeakingIndicator: g,
-      videoComponent: v,
+      videoComponent: N,
       width: x,
       ...T
     }),

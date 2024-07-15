@@ -19,16 +19,16 @@ var i = n(735250),
   I = n(496675),
   x = n(594174),
   T = n(583027),
-  v = n(981631),
-  N = n(314734),
+  N = n(981631),
+  v = n(314734),
   S = n(689938),
   Z = n(979030);
 let A = a.forwardRef(function(e, t) {
   let {
 type: n
   } = e, [l, r] = a.useState(!1), h = (0, o.e7)([p.Z], () => p.Z.shouldShowPopup()), _ = a.useCallback(() => {
-(0, d.yw)(v.rMx.CHAT_INPUT_COMPONENT_VIEWED, {
-  type: v.K98.APPS_BUTTON
+(0, d.yw)(N.rMx.CHAT_INPUT_COMPONENT_VIEWED, {
+  type: N.K98.APPS_BUTTON
 }), h ? u.y(m.ti.DISMISSED) : u._(m._b.TEXT, n);
   }, [
 h,
@@ -50,7 +50,7 @@ null != t && (t.style.transform = null != e ? 'translateY(calc(100% - '.concat(e
 text: S.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
 children: e => (0, i.jsx)('div', {
   ...e,
-  className: s()(Z.buttonContainer, N.t4),
+  className: s()(Z.buttonContainer, v.t4),
   ref: I,
   children: (0, i.jsx)(c.Button, {
     look: c.Button.Looks.BLANK,
@@ -100,8 +100,8 @@ let n = e.getGuildId(),
     var n, a;
     let l = e.isPrivate(),
       s = I.Z.computePermissions(e),
-      o = r.e$(s, v.Plq.CREATE_PUBLIC_THREADS) || r.e$(s, v.Plq.CREATE_PRIVATE_THREADS),
-      c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(s, v.Plq.SEND_MESSAGES)),
+      o = r.e$(s, N.Plq.CREATE_PUBLIC_THREADS) || r.e$(s, N.Plq.CREATE_PRIVATE_THREADS),
+      c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(s, N.Plq.SEND_MESSAGES)),
       d = (0, C.xl)(e);
     return {
       messagesDisabled: i || !l && !c || d

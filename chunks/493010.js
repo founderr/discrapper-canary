@@ -30,7 +30,7 @@ maxWidth: x
   let T = a.useCallback(() => {
   r.Z.updateChatOpen(t.id, !1), _.S.safeDispatch(E.CkL.FOCUS_CHAT_BUTTON);
 }, [t.id]),
-v = (0, i.jsx)(p.ZP.Icon, {
+N = (0, i.jsx)(p.ZP.Icon, {
   icon: s.CloseSmallIcon,
   tooltip: g.Z.Messages.CLOSE,
   onClick: T
@@ -45,7 +45,7 @@ children: [
     draftType: m.d.ChannelMessage
   }),
   (0, i.jsxs)(p.ZP, {
-    toolbar: v,
+    toolbar: N,
     'aria-label': g.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
     children: [
       (0, i.jsx)(p.ZP.Icon, {

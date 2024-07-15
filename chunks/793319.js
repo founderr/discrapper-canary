@@ -3,7 +3,7 @@ n.d(t, {
 return eS;
   },
   r: function() {
-return eN;
+return ev;
   }
 }), n(47120);
 var i, a, l = n(735250),
@@ -24,8 +24,8 @@ var i, a, l = n(735250),
   I = n(317381),
   x = n(596040),
   T = n(100527),
-  v = n(906732),
-  N = n(67212),
+  N = n(906732),
+  v = n(67212),
   S = n(757454),
   Z = n(158631),
   A = n(709369),
@@ -78,9 +78,9 @@ var i, a, l = n(735250),
   eI = n(173507),
   ex = n(981631),
   eT = n(354459),
-  ev = n(269794);
+  eN = n(269794);
 
-function eN(e, t) {
+function ev(e, t) {
   if (el.Z.isVideoEnabled() === e)
 return;
   let n = () => _.Z.setVideoEnabled(e);
@@ -108,14 +108,14 @@ x,
 t.id,
 a,
 i
-  ]), v = (0, p.e7)([
+  ]), N = (0, p.e7)([
 D.ZP,
 eo.Z
-  ], () => (0, w.Z)(D.ZP, eo.Z)), A = (0, Z.ZP)(), b = (0, S.Z)() && null != v, R = () => {
+  ], () => (0, w.Z)(D.ZP, eo.Z)), A = (0, Z.ZP)(), b = (0, S.Z)() && null != N, R = () => {
 b && (null == d ? (0, E.tE)({
   channelId: t.id,
-  pid: null == v ? void 0 : v.pid
-}) : (0, N.v$)((0, k.V9)(d), null == v ? void 0 : v.pid));
+  pid: null == N ? void 0 : N.pid
+}) : (0, v.v$)((0, k.V9)(d), null == N ? void 0 : N.pid));
   }, j = () => {
 if (b) {
   (0, M.D)(R);
@@ -143,7 +143,7 @@ return (0, l.jsx)(et.O, {
   ...i,
   centerButton: !0,
   disabled: o || !r,
-  className: ev.controlButton,
+  className: eN.controlButton,
   hasPermission: r,
   streamActive: null != d,
   isSelfStream: !0,
@@ -214,7 +214,7 @@ function eZ(e) {
 channel: t
   } = e, n = t.getGuildId();
   return (0, x.Z)(n, t.id) ? (0, l.jsx)('div', {
-className: ev.buttonContainer,
+className: eN.buttonContainer,
 children: (0, l.jsx)(em.M, {
   channel: t
 })
@@ -247,7 +247,7 @@ r,
 t,
 C,
 I
-  ]), [v, N] = s.useState(T()), S = (0, u.useSpring)({
+  ]), [N, v] = s.useState(T()), S = (0, u.useSpring)({
 opacity: c ? 0.2 : 1,
 transform: c && !o.enabled ? 'scale(0.7)' : 'scale(1)',
 config: {
@@ -258,13 +258,13 @@ config: {
   clamp: c
 },
 onRest: () => {
-  N(T()), d(!1);
+  v(T()), d(!1);
 }
   });
   s.useEffect(() => {
-T() !== v && d(!0);
+T() !== N && d(!0);
   }, [
-v,
+N,
 T
   ]);
   let M = s.useCallback(() => {
@@ -280,10 +280,10 @@ T
 R = (e, t) => {
   let s = {
     centerButton: !0,
-    className: ev.controlButton,
+    className: eN.controlButton,
     popoutOpen: e
   };
-  switch (v) {
+  switch (N) {
     case 'ACTIVITY':
       if (null == r || null == n)
         return;
@@ -390,20 +390,20 @@ children: [
     cameraUnavailable: n,
     hasPermission: i,
     onCameraUnavailable: h,
-    className: ev.controlButton,
-    iconClassName: ev.__invalid_joinIcon,
+    className: eN.controlButton,
+    iconClassName: eN.__invalid_joinIcon,
     onChange: u
   }),
   (0, l.jsx)(Q.Z, {
     centerButton: !0,
     color: 'green',
     channel: t,
-    className: o()(ev.controlButton, ev.__invalid_lastButton)
+    className: o()(eN.controlButton, eN.__invalid_lastButton)
   }),
   m ? (0, l.jsx)(X.Z, {
     color: 'red',
     channel: t,
-    className: ev.controlButton
+    className: eN.controlButton
   }) : null
 ]
   });
@@ -428,7 +428,7 @@ mute: f
 canGoLive: E
   } = (0, p.cj)([el.Z], () => ({
 canGoLive: (0, U.Z)(el.Z)
-  })), g = (0, y.Z)(), x = (0, p.e7)([O.Z], () => null != O.Z.getAwaitingRemoteSessionInfo()), N = null != g, S = (0, p.e7)([es.Z], () => {
+  })), g = (0, y.Z)(), x = (0, p.e7)([O.Z], () => null != O.Z.getAwaitingRemoteSessionInfo()), v = null != g, S = (0, p.e7)([es.Z], () => {
 var e;
 return (null !== (e = null == g ? void 0 : g.channelId) && void 0 !== e ? e : es.Z.getVoiceChannelId()) === t.id;
   }), Z = (0, R.Z)(t, !0), A = (0, p.e7)([I.ZP], () => {
@@ -439,9 +439,9 @@ reachedLimit: M,
 limit: b
   } = (0, eu.Z)(t), {
 analyticsLocations: D
-  } = (0, v.ZP)(T.Z.VOICE_CONTROL_TRAY);
+  } = (0, N.ZP)(T.Z.VOICE_CONTROL_TRAY);
   if (!S)
-return (0, l.jsx)(v.Gt, {
+return (0, l.jsx)(N.Gt, {
   value: D,
   children: (0, l.jsx)(eM, {
     channel: t,
@@ -455,21 +455,21 @@ permission: ex.Plq.ADD_REACTIONS,
 user: s,
 context: t
   }) && !t.isPrivate() && !Z;
-  return (0, l.jsx)(v.Gt, {
+  return (0, l.jsx)(N.Gt, {
 value: D,
 children: (0, l.jsxs)(C.Z, {
   section: ex.jXE.VOICE_CONTROL_TRAY,
   children: [
     (0, l.jsx)('div', {
-      className: ev.eventPromptsContainer,
+      className: eN.eventPromptsContainer,
       children: (0, l.jsx)(V.Z, {
         channelId: t.id
       })
     }),
     (0, l.jsxs)('div', {
-      className: o()(ev.wrapper, n),
+      className: o()(eN.wrapper, n),
       children: [
-        !N && (0, l.jsx)(m.Popout, {
+        !v && (0, l.jsx)(m.Popout, {
           renderPopout: e => {
             let {
               closePopout: t
@@ -492,10 +492,10 @@ children: (0, l.jsxs)(C.Z, {
             return (0, l.jsx)(en.C, {
               centerButton: !0,
               hasPermission: u,
-              className: ev.controlButton,
+              className: eN.controlButton,
               enabled: c,
               cameraUnavailable: r,
-              onChange: eN,
+              onChange: ev,
               onCameraUnavailable: eE.Z,
               channelLimitReached: M,
               channelLimit: b,
@@ -504,10 +504,10 @@ children: (0, l.jsxs)(C.Z, {
             });
           }
         }),
-        !N && (0, l.jsx)(eZ, {
+        !v && (0, l.jsx)(eZ, {
           channel: t
         }),
-        !N && (0, l.jsx)(eS, {
+        !v && (0, l.jsx)(eS, {
           channel: t,
           currentUser: s,
           exitFullScreen: a,
@@ -539,8 +539,8 @@ children: (0, l.jsxs)(C.Z, {
             } = t;
             return (0, l.jsx)(ee.Z, {
               centerButton: !0,
-              onPopoutClick: N ? null : n,
-              className: ev.controlButton,
+              onPopoutClick: v ? null : n,
+              className: eN.controlButton,
               selfMute: _,
               serverMute: f,
               suppress: h,
@@ -550,8 +550,8 @@ children: (0, l.jsxs)(C.Z, {
             });
           }
         }),
-        k && !N ? (0, l.jsx)('div', {
-          className: ev.buttonContainer,
+        k && !v ? (0, l.jsx)('div', {
+          className: eN.buttonContainer,
           children: (0, l.jsx)(e_.Z, {
             channel: t
           })

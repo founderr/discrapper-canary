@@ -24,8 +24,8 @@ var a = n(120356),
   I = n(910611),
   x = n(454585),
   T = n(134483),
-  v = n(210975),
-  N = n(809244),
+  N = n(210975),
+  v = n(809244),
   S = n(618158),
   Z = n(366695),
   A = n(792125),
@@ -65,7 +65,7 @@ user: t,
 channel: n,
 stream: a,
 color: l
-  } = e, s = (0, N.Z)(n, t, a);
+  } = e, s = (0, v.Z)(n, t, a);
   return null == t || null == a ? null : (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(o.Z, {
@@ -160,7 +160,7 @@ focusedParticipant: f
   } = (0, s.cj)([M.Z], () => ({
 focusedParticipant: M.Z.getSelectedParticipant(t.id),
 participantsOpen: M.Z.getParticipantsOpen(t.id)
-  }), [t.id]), E = (0, p.ZP)(t), N = (0, m.KS)(t), [S] = (0, u.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), Z = k.Z.Messages.VOICE_CHANNEL;
+  }), [t.id]), E = (0, p.ZP)(t), v = (0, m.KS)(t), [S] = (0, u.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), Z = k.Z.Messages.VOICE_CHANNEL;
   t.isDM() ? Z = k.Z.Messages.DM : t.isGroupDM() && (Z = k.Z.Messages.GROUP_DM);
   let R = (0, s.e7)([h.Z], () => h.Z.getChannelStatus(t)),
 L = t.isGuildVoice() && c && null != R && R.length > 0,
@@ -210,7 +210,7 @@ H = L ? (0, i.jsx)(r.Tooltip, {
   modalKey: P.VOICE_CHANNEL_STATUS_MODAL_KEY
 });
   }
-  let F = (0, v.m$)({
+  let F = (0, N.m$)({
 channelId: t.id,
 location: 'ChannelCallHeader'
   });
@@ -231,8 +231,8 @@ children: [
       exitFullScreen: _
     }),
     children: [
-      null != N ? (0, i.jsx)(C.ZP.Icon, {
-        icon: N,
+      null != v ? (0, i.jsx)(C.ZP.Icon, {
+        icon: v,
         disabled: !0,
         'aria-label': Z
       }) : null,

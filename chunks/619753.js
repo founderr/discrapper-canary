@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(592125),
   x = n(430824),
   T = n(496675),
-  v = n(699516),
-  N = n(768119),
+  N = n(699516),
+  v = n(768119),
   S = n(944486),
   Z = n(594174),
   A = n(68588),
@@ -71,7 +71,7 @@ else {
   let t = I.Z.getChannel(e.channel_id),
     n = null != t ? t.getGuildId() : null;
   o.Z.trackJump(e.channel_id, e.id, 'Search Results', {
-    search_id: N.Z.getAnalyticsId(h)
+    search_id: v.Z.getAnalyticsId(h)
   }), (0, E.uL)(R.Z5c.CHANNEL(n, e.channel_id, e.id));
 }
   }, [h]), b = a.useMemo(() => {
@@ -81,7 +81,7 @@ if (null == _)
 let t = 0;
 return _.reduce((n, i) => {
   let a = i.find(e => e.isSearchHit);
-  if (!S && null != a && v.Z.isBlockedForMessage(a))
+  if (!S && null != a && N.Z.isBlockedForMessage(a))
     return n;
   let l = I.Z.getChannel(i[0].channel_id);
   return null == l ? n : ((null == e || e !== l.id) && n.push({
@@ -114,7 +114,7 @@ itemCount: y,
 focusedIndex: 0,
 setFocus: D,
 onSelect: k
-  }), w = N.Z.getQuery(h), B = N.Z.getSearchType(h) === R.aib.FAVORITES, H = (0, d.nC)(null !== (t = null == w ? void 0 : w.content) && void 0 !== t ? t : ''), G = b.map(e => {
+  }), w = v.Z.getQuery(h), B = v.Z.getSearchType(h) === R.aib.FAVORITES, H = (0, d.nC)(null !== (t = null == w ? void 0 : w.content) && void 0 !== t ? t : ''), G = b.map(e => {
 let {
   channel: t,
   results: n,
@@ -190,7 +190,7 @@ startIndex: c,
 resultRefs: d,
 totalResults: u,
 scrollTo: E,
-searchId: N,
+searchId: v,
 renderEmbeds: M,
 offset: j,
 jumpToMessage: P,
@@ -202,7 +202,7 @@ if (e === S.Z.getChannelId())
 let t = I.Z.getChannel(e);
 if (null != t && !!T.Z.can(R.Plq.VIEW_CHANNEL, t))
   (0, C.Kh)(t.id);
-  }, []), w = null != l ? (0, h.F6)(l, Z.default, v.Z, !1) : '???', B = y && null != l.guild_id ? null === (t = x.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name : null, H = (null == l ? void 0 : l.parent_id) != null ? I.Z.getChannel(l.parent_id) : null, G = null != H ? H.name : null, V = null !== (n = (0, p.KS)(l)) && void 0 !== n ? n : s.TextIcon, F = null != H ? (0, p.KS)(H) : null, W = T.Z.can(R.Plq.MANAGE_MESSAGES, l), {
+  }, []), w = null != l ? (0, h.F6)(l, Z.default, N.Z, !1) : '???', B = y && null != l.guild_id ? null === (t = x.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name : null, H = (null == l ? void 0 : l.parent_id) != null ? I.Z.getChannel(l.parent_id) : null, G = null != H ? H.name : null, V = null !== (n = (0, p.KS)(l)) && void 0 !== n ? n : s.TextIcon, F = null != H ? (0, p.KS)(H) : null, W = T.Z.can(R.Plq.MANAGE_MESSAGES, l), {
 content: z
   } = (0, f.ZP)({
 content: w,
@@ -278,7 +278,7 @@ children: (0, i.jsxs)('ul', {
         ref: e => d.current[n] = e,
         totalResults: u,
         scrollTo: E,
-        searchId: N,
+        searchId: v,
         renderEmbeds: M,
         searchOffset: j,
         pageResultsLength: r.length,

@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(618158),
   x = n(390322),
   T = n(616286),
-  v = n(961048),
-  N = n(430824),
+  N = n(961048),
+  v = n(430824),
   S = n(496675),
   Z = n(626135),
   A = n(792125),
@@ -48,7 +48,7 @@ channel: n,
 toggleRequestToSpeakSidebar: l,
 showRequestToSpeakSidebar: o
   } = e, p = (0, u.bp)(), f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)), E = (0, R.B)(n.id), C = (0, M.Rk)(n.id, b.pV.REQUESTED_TO_SPEAK_ONLY), {
-preventIdle: N,
+preventIdle: v,
 allowIdle: S
   } = (0, I.Y)('popup');
   return (0, i.jsxs)(i.Fragment, {
@@ -72,7 +72,7 @@ children: [
       let {
         isShown: n
       } = t;
-      return (0, a.createElement)(v.Z, {
+      return (0, a.createElement)(N.Z, {
         ...e,
         key: 'more-options',
         isActive: n,
@@ -85,7 +85,7 @@ children: [
     className: w.button
   }, 'clips'),
   (0, i.jsx)(g.Z, {
-    onOpen: N,
+    onOpen: v,
     onClose: S,
     className: w.button
   }, 'recents'),
@@ -121,7 +121,7 @@ inPopout: l,
 channel: u,
 toggleRequestToSpeakSidebar: h,
 showRequestToSpeakSidebar: m
-  } = e, _ = (0, p.ZP)(u), g = (0, r.e7)([L.Z], () => L.Z.getStageInstanceByChannel(u.id)), I = (0, M.Io)(u.id), x = (0, M.Rk)(u.id, b.pV.AUDIENCE), T = (0, r.e7)([N.Z], () => N.Z.getGuild(u.guild_id), [u.guild_id]), v = null !== (t = null == T ? void 0 : T.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, R = (null == T ? void 0 : T.isCommunity()) ? v < D.TU7 : (null == T ? void 0 : T.premiumTier) !== D.Eu4.TIER_3 && v <= D.eez, P = (0, y.Z)(u), O = (0, r.e7)([S.Z], () => S.Z.can(j.yP, u)), H = () => {
+  } = e, _ = (0, p.ZP)(u), g = (0, r.e7)([L.Z], () => L.Z.getStageInstanceByChannel(u.id)), I = (0, M.Io)(u.id), x = (0, M.Rk)(u.id, b.pV.AUDIENCE), T = (0, r.e7)([v.Z], () => v.Z.getGuild(u.guild_id), [u.guild_id]), N = null !== (t = null == T ? void 0 : T.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, R = (null == T ? void 0 : T.isCommunity()) ? N < D.TU7 : (null == T ? void 0 : T.premiumTier) !== D.Eu4.TIER_3 && N <= D.eez, P = (0, y.Z)(u), O = (0, r.e7)([S.Z], () => S.Z.can(j.yP, u)), H = () => {
 d.Z.updateStageVideoLimitBoostUpsellDismissed(u.id, !0), Z.default.track(D.rMx.BOOSTING_UPSELL_CLICKED, {
   guild_id: u.guild_id,
   type: k.cd.VIDEO_STAGE_LIMIT,

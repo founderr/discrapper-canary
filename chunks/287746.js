@@ -19,8 +19,8 @@ var i = n(735250),
   I = n(607070),
   x = n(367907),
   T = n(176412),
-  v = n(555573),
-  N = n(213459),
+  N = n(555573),
+  v = n(213459),
   S = n(456007),
   Z = n(10718),
   A = n(998698),
@@ -73,8 +73,8 @@ var i = n(735250),
   eI = n(838440),
   ex = n(228488),
   eT = n(127654),
-  ev = n(979956),
-  eN = n(655687),
+  eN = n(979956),
+  ev = n(655687),
   eS = n(165540),
   eZ = n(583027),
   eA = n(25007),
@@ -160,7 +160,7 @@ if (null != a) {
     name: l.name,
     application: l
   } : null;
-  v.Po({
+  N.Po({
     channelId: t.id,
     command: a,
     section: e,
@@ -354,8 +354,8 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
       } = null !== (p = (0, eZ._U)(a)) && void 0 !== p ? p : {};
       if (!await (0, T.L_)({
           applicationId: a.applicationId,
-          userIndexState: N.ZP.getUserState(),
-          guildIndexState: N.ZP.getGuildState(o.guild_id),
+          userIndexState: v.ZP.getUserState(),
+          guildIndexState: v.ZP.getGuildState(o.guild_id),
           location: e,
           sectionName: t
         }))
@@ -419,8 +419,8 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
         shouldRefocus: !0
       };
     if (null != n && n.length > 0) {
-      let e = (0, ev.KZ)(n);
-      if ((0, ev.Bf)(e, null == r ? void 0 : r.id))
+      let e = (0, eN.KZ)(n);
+      if ((0, eN.Bf)(e, null == r ? void 0 : r.id))
         return (0, eT.G)(o, e), {
           shouldClear: !1,
           shouldRefocus: !1
@@ -509,9 +509,9 @@ let {
   showAutomodUserProfileChatBlocker: x
 } = this.props, {
   textAreaFocused: T,
-  textAreaHighlighted: v
-} = this.state, N = c === j.I.SIDEBAR;
-t = N && n.type === eR.d4z.GUILD_VOICE ? ej.Z.Messages.TEXT_IN_VOICE_A11Y_LABEL : N && n.type === eR.d4z.GUILD_STAGE_VOICE ? ej.Z.Messages.TEXT_IN_STAGE_A11Y_LABEL : o.T.THREADS.has(n.type) ? ej.Z.Messages.THREAD_A11Y_LABEL : ej.Z.Messages.CHANNEL_A11Y_LABEL;
+  textAreaHighlighted: N
+} = this.state, v = c === j.I.SIDEBAR;
+t = v && n.type === eR.d4z.GUILD_VOICE ? ej.Z.Messages.TEXT_IN_VOICE_A11Y_LABEL : v && n.type === eR.d4z.GUILD_STAGE_VOICE ? ej.Z.Messages.TEXT_IN_STAGE_A11Y_LABEL : o.T.THREADS.has(n.type) ? ej.Z.Messages.THREAD_A11Y_LABEL : ej.Z.Messages.CHANNEL_A11Y_LABEL;
 let S = (0, i.jsxs)('div', {
   className: eL.channelBottomBarArea,
   children: [
@@ -521,7 +521,7 @@ let S = (0, i.jsxs)('div', {
       offsetX: 75,
       children: (0, i.jsx)(ek, {
         focused: T,
-        highlighted: v,
+        highlighted: N,
         channel: n,
         guild: a,
         keyboardModeEnabled: l,
@@ -562,7 +562,7 @@ return (0, i.jsx)(E.Z, {
           handler: this.handleOpenExpressionPicker
         }),
         (0, i.jsxs)(eD, {
-          isSidebar: N,
+          isSidebar: v,
           className: eL.chatContent,
           'aria-label': t.format({
             channelName: n.name
@@ -574,7 +574,7 @@ return (0, i.jsx)(E.Z, {
             (0, i.jsx)(eA.Z, {
               channel: n,
               guild: a,
-              narrow: N
+              narrow: v
             }),
             (0, i.jsxs)(d.HeadingLevel, {
               component: (0, i.jsx)(d.HiddenVisually, {
@@ -591,7 +591,7 @@ return (0, i.jsx)(E.Z, {
                   filterAfterTimestamp: m,
                   showingQuarantineBanner: p
                 }),
-                null == n.guild_id || N ? null : (0, i.jsx)(W.Z, {
+                null == n.guild_id || v ? null : (0, i.jsx)(W.Z, {
                   guildId: n.guild_id,
                   channel: n
                 }),
@@ -620,7 +620,7 @@ return (0, i.jsx)(E.Z, {
                       channel: n,
                       poggermodeEnabled: g
                     }),
-                    !N && (0, i.jsx)(k.Z, {})
+                    !v && (0, i.jsx)(k.Z, {})
                   ]
                 }),
                 (0, i.jsx)(e_.kw, {})
@@ -734,7 +734,7 @@ filterAfterTimestamp: l
   } = e, {
 placeholder: s,
 accessibilityLabel: r
-  } = (0, eN.Z)(t), o = (0, ee.S)(em.default.getCurrentUser(), t), [u] = (0, G.AB)(null == n ? void 0 : n.id), h = (0, w.Ux)(null == n ? void 0 : n.id), p = (0, c.e7)([em.default], () => em.default.getCurrentUser()), m = (0, c.e7)([ec.ZP], () => {
+  } = (0, ev.Z)(t), o = (0, ee.S)(em.default.getCurrentUser(), t), [u] = (0, G.AB)(null == n ? void 0 : n.id), h = (0, w.Ux)(null == n ? void 0 : n.id), p = (0, c.e7)([em.default], () => em.default.getCurrentUser()), m = (0, c.e7)([ec.ZP], () => {
 var e, t, i;
 return null != p && null !== (i = null === (e = ec.ZP.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eR.lds, null == p ? void 0 : p.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== i && i;
   }), _ = (0, c.e7)([X.Z], () => X.Z.isEnabled()), f = (0, $.Z)(t.id), E = (0, F.Z)(t.id);

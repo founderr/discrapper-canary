@@ -29,8 +29,8 @@ children: i,
 canSignCharter: a = !0,
 onSignCharter: r,
 animationDelayMs: T = 1000,
-signHintButtonText: v,
-signHintHelperText: N,
+signHintButtonText: N,
+signHintHelperText: v,
 signHintPosition: S = 'left',
 className: Z,
 fullHeight: A
@@ -160,7 +160,7 @@ children: (0, l.jsx)(C.Z, {
                               borderColor: K
                             }
                           }),
-                          null != v ? v : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
+                          null != N ? N : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
                         ]
                       })
                     }),
@@ -168,7 +168,7 @@ children: (0, l.jsx)(C.Z, {
                       variant: 'text-xs/normal',
                       color: 'text-muted',
                       className: x.signHintHelperText,
-                      children: null != N ? v : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
+                      children: null != v ? N : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
                     })
                   ]
                 })

@@ -35,7 +35,7 @@ return null;
   }
   n();
 },
-v = () => {
+N = () => {
   h.Z.endEvent(C.id, C.guild_id);
 };
   return x ? (0, i.jsx)(l.Popout, {
@@ -52,7 +52,7 @@ renderPopout: e => {
       children: (0, i.jsx)(l.MenuItem, {
         id: 'end-voice-event',
         color: 'danger',
-        action: v,
+        action: N,
         label: _.Z.Messages.END_EVENT,
         icon: l.CircleXIcon
       })

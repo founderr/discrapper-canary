@@ -26,8 +26,8 @@ var i = n(735250),
   I = n(594174),
   x = n(259580),
   T = n(585483),
-  v = n(63063),
-  N = n(358085),
+  N = n(63063),
+  v = n(358085),
   S = n(709054),
   Z = n(967128),
   A = n(981631),
@@ -278,7 +278,7 @@ children: (0, i.jsx)(j, {
   completed: k,
   onClick: B
 })
-  }, 'message')), (0, N.isWeb)() && K.push((0, i.jsx)(o.Z.div, {
+  }, 'message')), (0, v.isWeb)() && K.push((0, i.jsx)(o.Z.div, {
 className: R.cardWrapper,
 style: F ? {
   opacity: z[K.length]
@@ -303,7 +303,7 @@ children: (0, i.jsx)(j, {
   }, 'addapp')));
   let q = x ? b.Z.Messages.WELCOME_CTA_SUBTITLE_OWNER : b.Z.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
   h && (q = b.Z.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-  let X = ''.concat(v.Z.getArticleURL(A.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
+  let X = ''.concat(N.Z.getArticleURL(A.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
   return (0, i.jsx)(Z.ZP, {
 channelId: t.id,
 children: (0, i.jsx)('div', {

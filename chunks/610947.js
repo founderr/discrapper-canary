@@ -24,7 +24,7 @@ g = (0, s.useToken)(l.Z.unsafe_rawColors.BLACK_500).hex(),
 I = (0, s.useToken)(l.Z.unsafe_rawColors.WHITE_500).hex(),
 x = i.useRef({}),
 T = i.useRef(new a.Xp()),
-v = i.useCallback(t => {
+N = i.useCallback(t => {
   let n = d.Z.getDrawables(t);
   (0, h.UN)(e), ! function(e) {
     let {
@@ -131,28 +131,28 @@ let t = new ResizeObserver(() => {
     width: i,
     height: a
   } = t.getBoundingClientRect();
-  t.width = i * window.devicePixelRatio, t.height = a * window.devicePixelRatio, v(n);
+  t.width = i * window.devicePixelRatio, t.height = a * window.devicePixelRatio, N(n);
 });
 return null != e.current && t.observe(e.current), () => t.disconnect();
   }, [
 e,
-v,
+N,
 n
   ]);
-  let N = i.useCallback(() => {
+  let v = i.useCallback(() => {
 let t = d.Z.getDrawables(n),
   i = p.U.getState().particles,
   a = t.length > 0 || Object.keys(i).length > 0;
-a && null == T.current._ref && (null == T.current._ref ? (v(n), T.current.start(f, () => v(n))) : !a && null != T.current._ref && (T.current.stop(), (0, h.UN)(e)));
+a && null == T.current._ref && (null == T.current._ref ? (N(n), T.current.start(f, () => N(n))) : !a && null != T.current._ref && (T.current.stop(), (0, h.UN)(e)));
   }, [
 e,
-v,
+N,
 n
   ]);
   i.useEffect(() => {
 let e = T.current;
-return d.Z.addChangeListener(N), N(), (0, r.vM)(t.getAvatarURL(null, _.Ks)), () => {
-  d.Z.removeChangeListener(N), e.stop();
+return d.Z.addChangeListener(v), v(), (0, r.vM)(t.getAvatarURL(null, _.Ks)), () => {
+  d.Z.removeChangeListener(v), e.stop();
 };
   });
 }

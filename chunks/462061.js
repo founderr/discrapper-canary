@@ -26,8 +26,8 @@ var i = n(735250),
   I = n(783259),
   x = n(40300),
   T = n(5192),
-  v = n(44136),
-  N = n(981631),
+  N = n(44136),
+  v = n(981631),
   S = n(65154),
   Z = n(689938),
   A = n(26864);
@@ -70,7 +70,7 @@ pulseSpeakingIndicator: y = !1
 user: U,
 streamId: w,
 speaking: B
-  } = t, H = U.id === k, G = (0, v.ZP)(t), V = (0, r.e7)([g.Z], () => g.Z.isFocused()), F = (0, r.e7)([p.Z], () => p.Z.getWindowFocused(N.KJ3.CHANNEL_CALL_POPOUT)), W = (0, r.e7)([C.Z], () => null != U.id && C.Z.isLocalVideoDisabled(U.id, (0, h.Z)(t.type)), [
+  } = t, H = U.id === k, G = (0, N.ZP)(t), V = (0, r.e7)([g.Z], () => g.Z.isFocused()), F = (0, r.e7)([p.Z], () => p.Z.getWindowFocused(v.KJ3.CHANNEL_CALL_POPOUT)), W = (0, r.e7)([C.Z], () => null != U.id && C.Z.isLocalVideoDisabled(U.id, (0, h.Z)(t.type)), [
 U.id,
 t.type
   ]), z = (0, r.e7)([E.ZP], () => E.ZP.isGuestOrLurker(n.guild_id, U.id)), Y = T.ZP.getName(n.getGuildId(), n.id, U) + (z ? ' '.concat(Z.Z.Messages.GUEST_NAME_SUFFIX) : ''), K = B && (F || V), q = o < 124 ? b : M, {

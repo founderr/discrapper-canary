@@ -24,8 +24,8 @@ var i, a, l = n(735250),
   I = n(513202),
   x = n(318891),
   T = n(884338),
-  v = n(719296),
-  N = n(958185),
+  N = n(719296),
+  v = n(958185),
   S = n(100527),
   Z = n(906732),
   A = n(835473),
@@ -91,8 +91,8 @@ d.AvatarSizes.SIZE_24,
   ], T = (0, c.Wu)([
 j.default,
 b.default
-  ], () => Array.from(s).map(e => (0, m.J)(e, b.default) ? null : j.default.getUser(e.userId)).filter(L.lm)), v = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === r.id)), {
-analyticsLocations: N
+  ], () => Array.from(s).map(e => (0, m.J)(e, b.default) ? null : j.default.getUser(e.userId)).filter(L.lm)), N = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === r.id)), {
+analyticsLocations: v
   } = (0, Z.ZP)(), S = (0, u.O)(), A = P.ZP.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), M = (0, _.s5)({
 userId: null === (t = j.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
 channelId: E.id,
@@ -132,14 +132,14 @@ children: [
     className: y.buttons,
     children: M ? (0, l.jsx)(d.Button, {
       onClick: function(e) {
-        if (e.stopPropagation(), null != v)
+        if (e.stopPropagation(), null != N)
           (0, p.Z)({
-            applicationId: v.applicationId,
+            applicationId: N.applicationId,
             currentEmbeddedApplication: f,
             activityChannelId: E.id,
             locationObject: S.location,
             embeddedActivitiesManager: I.Z,
-            analyticsLocations: N
+            analyticsLocations: v
           });
       },
       size: function(e) {
@@ -181,13 +181,13 @@ size: 1024
   }), I = !i && h, T = !h, b = !h && !i, j = (0, c.e7)([
 R.Z,
 M.Z
-  ], () => (0, N.Z)({
+  ], () => (0, v.Z)({
 LayerStore: R.Z,
 PopoutWindowStore: M.Z
   }));
   return s.useEffect(() => {
 if (I && null != u && !j) {
-  let e = (0, v.Z)(u.channelId, u.applicationId);
+  let e = (0, N.Z)(u.channelId, u.applicationId);
   (0, x.jy)(e);
 }
   }, [
@@ -202,7 +202,7 @@ children: (0, l.jsx)('div', {
     children: [
       I && (0, l.jsx)(g.Z, {
         className: y.iframe,
-        embedId: (0, v.Z)(r.id, d)
+        embedId: (0, N.Z)(r.id, d)
       }),
       T && null != m && null != _ && '' !== _ ? (0, l.jsx)('img', {
         className: y.splashImage,

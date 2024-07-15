@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(189357),
   x = n(718617),
   T = n(327250),
-  v = n(228168),
-  N = n(204246);
+  N = n(228168),
+  v = n(204246);
 
 function S(e) {
   let {
@@ -84,7 +84,7 @@ l
 n,
 t
   ]), M) ? j || null == b || null == R ? (0, i.jsx)('div', {
-className: s()(N.sidebarContianer, N.loadingContainer, S),
+className: s()(v.sidebarContianer, v.loadingContainer, S),
 style: A,
 children: (0, i.jsx)(o.Spinner, {
   animated: !0,
@@ -93,16 +93,16 @@ children: (0, i.jsx)(o.Spinner, {
   }) : (0, i.jsx)(p.Gt, {
 value: y,
 children: (0, i.jsx)('div', {
-  className: s()(N.sidebarContianer, S),
+  className: s()(v.sidebarContianer, S),
   style: A,
   children: (0, i.jsx)(E.Z, {
     user: b,
     displayProfile: D,
-    profileType: v.y0.MODAL,
+    profileType: N.y0.MODAL,
     forceShowPremium: !0,
-    className: s()(N.profileThemedContainer),
+    className: s()(v.profileThemedContainer),
     children: (0, i.jsxs)('div', {
-      className: s()(N.innerContainer),
+      className: s()(v.innerContainer),
       children: [
         (0, i.jsx)(T.Z, {
           userId: t,

@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(532490),
   x = n(380365),
   T = n(979264),
-  v = n(620929),
-  N = n(284019),
+  N = n(620929),
+  v = n(284019),
   S = n(308083),
   Z = n(981631),
   A = n(689938),
@@ -80,7 +80,7 @@ children: (0, i.jsxs)('div', {
         })
       ]
     }),
-    (0, i.jsx)(v.p, {
+    (0, i.jsx)(N.p, {
       applicationIds: u,
       playstyle: l.playstyle,
       className: s()(M.charterBodyText, M.gameSection)
@@ -103,7 +103,7 @@ guildId: n,
 onClose: l,
 onAccept: r,
 ...o
-  } = e, f = (0, _.Dt)(), I = (0, C.Cc)(n), T = (0, C.E8)(n), [v, S] = a.useState(!0), [R, j] = a.useState(!1), L = a.useCallback(() => {
+  } = e, f = (0, _.Dt)(), I = (0, C.Cc)(n), T = (0, C.E8)(n), [N, S] = a.useState(!0), [R, j] = a.useState(!1), L = a.useCallback(() => {
 r(), l();
   }, [
 r,
@@ -117,11 +117,11 @@ L,
 T
   ]);
   let P = a.useCallback(() => {
-  v && (0, E.nE)(n, v, Z.Sbl.CREATE_JOIN_GUILD_MODAL), L();
+  N && (0, E.nE)(n, N, Z.Sbl.CREATE_JOIN_GUILD_MODAL), L();
 }, [
   n,
   L,
-  v
+  N
 ]),
 O = a.useCallback(() => {
   j(!0);
@@ -173,7 +173,7 @@ children: (0, i.jsxs)(d.ModalContent, {
         }),
         (0, i.jsx)(x.Z, {
           guildId: n,
-          isTagAdopted: v,
+          isTagAdopted: N,
           onChangeUseTag: S
         })
       ]
@@ -186,7 +186,7 @@ children: (0, i.jsxs)(d.ModalContent, {
         onSignCharter: O
       })
     }),
-    (0, i.jsx)(N.Z, {
+    (0, i.jsx)(v.Z, {
       onClick: P,
       color: d.Button.Colors.BRAND,
       themeColor: w,

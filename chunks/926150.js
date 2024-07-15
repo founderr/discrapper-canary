@@ -24,8 +24,8 @@ var a = n(442837),
   I = n(7242),
   x = n(827313),
   T = n(580512),
-  v = n(228168),
-  N = n(981631),
+  N = n(228168),
+  v = n(981631),
   S = n(689938),
   Z = n(790884);
 
@@ -53,13 +53,13 @@ className: Z.body,
 children: [
   (0, i.jsx)(g.Z, {
     user: t,
-    profileType: v.y0.PANEL,
+    profileType: N.y0.PANEL,
     nickname: r.ZP.getName(null, A.id, t),
     pronouns: null == n ? void 0 : n.pronouns,
     onOpenProfile: b,
     tags: (0, i.jsx)(u.Z, {
       displayProfile: n,
-      profileType: v.y0.PANEL
+      profileType: N.y0.PANEL
     }),
     nicknameIcons: (0, i.jsxs)(i.Fragment, {
       children: [
@@ -74,7 +74,7 @@ children: [
       ]
     })
   }),
-  R && L === N.OGo.PENDING_INCOMING && (0, i.jsx)(C.Z.Overlay, {
+  R && L === v.OGo.PENDING_INCOMING && (0, i.jsx)(C.Z.Overlay, {
     children: (0, i.jsx)(_.Z, {
       user: t,
       channelId: A.id

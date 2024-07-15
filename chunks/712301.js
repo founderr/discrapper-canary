@@ -1,37 +1,37 @@
-t.d(n, {
+l.d(n, {
   Z: function() {
 return C;
   }
 });
-var l = t(735250);
-t(470079);
-var i = t(442837),
-  a = t(481060),
-  r = t(749210),
-  u = t(287734),
-  s = t(933557),
-  d = t(314897),
-  o = t(592125),
-  c = t(984933),
-  Z = t(271383),
-  E = t(430824),
-  M = t(496675),
-  f = t(699516),
-  _ = t(594174),
-  g = t(979651),
-  I = t(934415),
-  m = t(700785),
-  R = t(981631),
-  N = t(689938);
+var t = l(735250);
+l(470079);
+var i = l(442837),
+  r = l(481060),
+  a = l(749210),
+  s = l(287734),
+  u = l(933557),
+  o = l(314897),
+  d = l(592125),
+  c = l(984933),
+  Z = l(271383),
+  E = l(430824),
+  M = l(496675),
+  _ = l(699516),
+  f = l(594174),
+  g = l(979651),
+  m = l(934415),
+  R = l(700785),
+  I = l(981631),
+  N = l(689938);
 
 function C(e, n) {
-  let t = (0, i.e7)([c.ZP], () => c.ZP.getChannels(n)[c.Zb], [n]),
+  let l = (0, i.e7)([c.ZP], () => c.ZP.getChannels(n)[c.Zb], [n]),
 C = (0, i.e7)([
   g.Z,
-  o.Z
+  d.Z
 ], () => {
-  let t = g.Z.getUserVoiceChannelId(n, e.id);
-  return o.Z.getChannel(t);
+  let l = g.Z.getUserVoiceChannelId(n, e.id);
+  return d.Z.getChannel(l);
 }, [
   n,
   e.id
@@ -41,33 +41,33 @@ C = (0, i.e7)([
   e.id
 ]) || null == C)
 return null;
-  let T = e.id === d.default.getId();
-  if (!T && !M.Z.can(R.Plq.MOVE_MEMBERS, C))
+  let O = e.id === o.default.getId();
+  if (!O && !M.Z.can(I.Plq.MOVE_MEMBERS, C))
 return null;
-  let A = t.filter(n => {
+  let A = l.filter(n => {
 let {
-  channel: t
+  channel: l
 } = n;
-return t.id !== C.id && (T ? M.Z.can(R.Plq.CONNECT, t) && !(0, I.rY)(t, g.Z, E.Z) : M.Z.can(R.Plq.MOVE_MEMBERS, t) && (M.Z.can(R.Plq.CONNECT, t) || m.BT({
-  permission: R.Plq.CONNECT,
+return l.id !== C.id && (O ? M.Z.can(I.Plq.CONNECT, l) && !(0, m.rY)(l, g.Z, E.Z) : M.Z.can(I.Plq.MOVE_MEMBERS, l) && (M.Z.can(I.Plq.CONNECT, l) || R.BT({
+  permission: I.Plq.CONNECT,
   user: e,
-  context: t
-})) && !(0, I.rY)(t, g.Z, E.Z));
+  context: l
+})) && !(0, m.rY)(l, g.Z, E.Z));
   });
-  return 0 === A.length ? null : (0, l.jsx)(a.MenuItem, {
+  return 0 === A.length ? null : (0, t.jsx)(r.MenuItem, {
 id: 'voice-move',
 label: N.Z.Messages.MOVE_TO,
-children: A.map(t => {
+children: A.map(l => {
   let {
     channel: i
-  } = t;
-  return (0, l.jsx)(a.MenuItem, {
+  } = l;
+  return (0, t.jsx)(r.MenuItem, {
     id: i.id,
     action: () => {
-      var t;
-      return t = i, void(e.id === d.default.getId() ? u.default.selectVoiceChannel(t.id) : r.Z.setChannel(n, e.id, t.id));
+      var l;
+      return l = i, void(e.id === o.default.getId() ? s.default.selectVoiceChannel(l.id) : a.Z.setChannel(n, e.id, l.id));
     },
-    label: (0, s.F6)(i, _.default, f.Z)
+    label: (0, u.F6)(i, f.default, _.Z)
   }, i.id);
 })
   });

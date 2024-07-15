@@ -22,8 +22,8 @@ var i, a = n(735250),
   I = n(51144),
   x = n(981631),
   T = n(354459),
-  v = n(927923),
-  N = n(689938),
+  N = n(927923),
+  v = n(689938),
   S = n(665861);
 
 function Z(e, t, n) {
@@ -54,7 +54,7 @@ let {
 } = e;
 return i && null == t ? (0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
-  text: N.Z.Messages.HANG_STATUS_VC_ROW_ADD,
+  text: v.Z.Messages.HANG_STATUS_VC_ROW_ADD,
   children: (0, a.jsx)(o.PlusLargeIcon, {
     className: r()(S.icon, n)
   })
@@ -77,7 +77,7 @@ let {
   serverMute: l
 } = this.props;
 return t && !n ? (0, a.jsx)(o.Tooltip, {
-  text: N.Z.Messages.PRIORITY_SPEAKER,
+  text: v.Z.Messages.PRIORITY_SPEAKER,
   children: t => (0, a.jsx)('div', {
     className: r()(S.iconPriortySpeaker, {
       [S.iconPriortySpeakerSpeaking]: !i && !l && e
@@ -128,7 +128,7 @@ let {
       className: S.guestSuffix,
       children: [
         '\xA0',
-        N.Z.Messages.GUEST_NAME_SUFFIX
+        v.Z.Messages.GUEST_NAME_SUFFIX
       ]
     }) : ''
   ]
@@ -192,7 +192,7 @@ let H = [],
   });
 u && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
-  text: N.Z.Messages.LOCAL_VIDEO_DISABLED,
+  text: v.Z.Messages.LOCAL_VIDEO_DISABLED,
   children: (0, a.jsx)(o.VideoSlashIcon, {
     size: 'md',
     color: 'currentColor',
@@ -201,7 +201,7 @@ u && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
   })
 }, 'video')) : H.push((0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
-  text: N.Z.Messages.VIDEO,
+  text: v.Z.Messages.VIDEO,
   children: (0, a.jsx)(o.VideoIcon, {
     size: 'md',
     color: 'currentColor',
@@ -209,7 +209,7 @@ u && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
   })
 }, 'video'))), B && H.push((0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
-  text: N.Z.Messages.NOTICE_USER_DISCONNECTED,
+  text: v.Z.Messages.NOTICE_USER_DISCONNECTED,
   children: (0, a.jsx)(o.CircleExclamationPointIcon, {
     className: r()(S.icon, _),
     color: o.tokens.colors.STATUS_WARNING_BACKGROUND
@@ -222,12 +222,12 @@ u && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
     color: 'currentColor',
     className: r()(S.icon, _)
   })
-}, 'activity')), Z === v.YE.XBOX || A === T.wR.XBOX ? H.push((0, a.jsx)('div', {
+}, 'activity')), Z === N.YE.XBOX || A === T.wR.XBOX ? H.push((0, a.jsx)('div', {
   className: r()(S.iconSpacing),
   children: (0, a.jsx)(E.Z, {
     className: r()(S.icon, _)
   })
-}, 'xbox')) : (Z === v.YE.PLAYSTATION || A === T.wR.PLAYSTATION) && H.push((0, a.jsx)('div', {
+}, 'xbox')) : (Z === N.YE.PLAYSTATION || A === T.wR.PLAYSTATION) && H.push((0, a.jsx)('div', {
   className: r()(S.iconSpacing),
   children: (0, a.jsx)(f.Z, {
     className: r()(S.icon, _)
@@ -239,7 +239,7 @@ u && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
   })
 }, 'stream')) : m && H.push((0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
-  text: N.Z.Messages.WATCH_STREAM_WATCHING,
+  text: v.Z.Messages.WATCH_STREAM_WATCHING,
   children: (0, a.jsx)(o.EyeIcon, {
     size: 'xs',
     color: 'currentColor',
@@ -386,10 +386,10 @@ i,
 d,
 h
   ]), (0, a.jsx)(o.TooltipContainer, {
-text: N.Z.Messages.UNFORMATTED_PLAYING_GAME.format({
+text: v.Z.Messages.UNFORMATTED_PLAYING_GAME.format({
   game: t.name
 }),
-'aria-label': N.Z.Messages.UNFORMATTED_PLAYING_GAME.format({
+'aria-label': v.Z.Messages.UNFORMATTED_PLAYING_GAME.format({
   game: t.name
 }),
 className: S.iconSpacing,
@@ -441,7 +441,7 @@ if (d) {
     colorClass: i ? S.strikethrough : void 0
   });
 u.push((0, a.jsx)(o.TooltipContainer, {
-  text: i ? N.Z.Messages.LOCAL_MUTED : l ? N.Z.Messages.SERVER_MUTED : N.Z.Messages.VOICE_CHANNEL_MUTED,
+  text: i ? v.Z.Messages.LOCAL_MUTED : l ? v.Z.Messages.SERVER_MUTED : v.Z.Messages.VOICE_CHANNEL_MUTED,
   className: S.iconSpacing,
   children: e
 }, 'mute'));
@@ -466,7 +466,7 @@ if (d) {
   });
 u.push((0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
-  text: c ? N.Z.Messages.SERVER_DEAFENED : N.Z.Messages.VOICE_CHANNEL_DEAFENED,
+  text: c ? v.Z.Messages.SERVER_DEAFENED : v.Z.Messages.VOICE_CHANNEL_DEAFENED,
   children: e
 }, 'deaf'));
   }

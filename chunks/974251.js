@@ -19,8 +19,8 @@ var i = n(735250),
   I = n(79390),
   x = n(665906),
   T = n(695346),
-  v = n(433355),
-  N = n(819640),
+  N = n(433355),
+  v = n(819640),
   S = n(375954),
   Z = n(496675),
   A = n(885110),
@@ -53,7 +53,7 @@ X = (0, r.e7)([A.Z], () => A.Z.getActivities()),
 Q = (0, r.e7)([f.Z], () => f.Z.getSettings().clipsEnabled),
 J = (0, r.e7)([f.Z], () => f.Z.getLastClipsSession()),
 $ = (0, r.Wu)([f.Z], () => f.Z.getNewClipIds()),
-ee = (0, r.e7)([v.ZP], () => null == v.ZP.getCurrentSidebarChannelId(V.id)),
+ee = (0, r.e7)([N.ZP], () => null == N.ZP.getCurrentSidebarChannelId(V.id)),
 {
   showClipsHeaderEntrypoint: et
 } = _.NV.useExperiment({
@@ -63,7 +63,7 @@ ee = (0, r.e7)([v.ZP], () => null == v.ZP.getCurrentSidebarChannelId(V.id)),
 }),
 en = (0, r.e7)([g.qc], () => g.qc.hasHotspot(g.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
 ei = (0, c.useModalsStore)(e => (0, c.hasModalOpenSelector)(e, k.Qr)),
-ea = (0, r.e7)([N.Z], () => N.Z.hasLayers()),
+ea = (0, r.e7)([v.Z], () => v.Z.hasLayers()),
 el = (0, r.e7)([f.Z], () => f.Z.hasClips()),
 [es, er] = a.useState(null),
 eo = (0, _.Go)() && (Q || el),
@@ -126,12 +126,12 @@ eT = (0, y.Z)({
 });
   if (0 === eT.length)
 return null;
-  let ev = X.some(e => (0, m.Z)(e, D.xjy.SYNC)),
-eN = X.some(e => (0, m.Z)(e, D.xjy.JOIN) && !(0, m.Z)(e, D.xjy.EMBEDDED)) || ev;
+  let eN = X.some(e => (0, m.Z)(e, D.xjy.SYNC)),
+ev = X.some(e => (0, m.Z)(e, D.xjy.JOIN) && !(0, m.Z)(e, D.xjy.EMBEDDED)) || eN;
   H = eg ? (0, i.jsx)(c.CirclePlusIcon, {
 className: B.__invalid_attachButtonIcon,
 colorClass: B.attachButtonPlus
-  }) : eN ? (0, i.jsx)(b.Z, {
+  }) : ev ? (0, i.jsx)(b.Z, {
 className: B.__invalid_attachButtonIcon,
 foreground: B.attachButtonPlay,
 background: B.attachButtonPlus,

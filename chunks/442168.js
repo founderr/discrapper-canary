@@ -37,7 +37,7 @@ stream: t,
 inPopout: n
   } = e, {
 reducedMotion: C
-  } = a.useContext(r.Sf), g = (0, a.useRef)(null), I = d.n.getState().clipsButtonRef, x = (0, u.V9)(t), T = (0, s.e7)([o.Z], () => o.Z.getActiveAnimation()), v = (0, s.Wu)([o.Z], () => o.Z.getStreamClipAnimations(x)), N = (0, a.useRef)();
+  } = a.useContext(r.Sf), g = (0, a.useRef)(null), I = d.n.getState().clipsButtonRef, x = (0, u.V9)(t), T = (0, s.e7)([o.Z], () => o.Z.getActiveAnimation()), N = (0, s.Wu)([o.Z], () => o.Z.getStreamClipAnimations(x)), v = (0, a.useRef)();
   a.useEffect(() => () => {
 (0, c.Gh)(x);
   }, [x]);
@@ -53,7 +53,7 @@ reducedMotion: C
 },
 Z = e => {
   let t = null == I ? void 0 : I.getBoundingClientRect();
-  if (N.current = t, e.timestamp !== T || null == t || n)
+  if (v.current = t, e.timestamp !== T || null == t || n)
     return m;
   let {
     top: i,
@@ -67,7 +67,7 @@ Z = e => {
   };
 },
 A = (0, a.useRef)(null),
-M = (0, l.useTransition)(v, {
+M = (0, l.useTransition)(N, {
   keys: e => e.timestamp,
   ref: A,
   from: {
@@ -79,7 +79,7 @@ M = (0, l.useTransition)(v, {
   config: _
 }),
 b = (0, a.useRef)(null),
-R = (0, l.useTransition)(v, {
+R = (0, l.useTransition)(N, {
   ref: b,
   keys: e => e.timestamp,
   from: e => ({
@@ -99,17 +99,17 @@ R = (0, l.useTransition)(v, {
       height: 0,
       width: 0,
       ...(() => {
-        if (null != N.current)
+        if (null != v.current)
           return {
-            top: N.current.top + 12,
-            left: N.current.left + 12
+            top: v.current.top + 12,
+            left: v.current.left + 12
           };
       })()
     }
   },
   config: C.enabled ? E : f,
   onRest: (e, t) => {
-    null != t.item && null != v.find(e => e.timestamp === t.item.timestamp) && (0, c.Gh)(x, t.item.timestamp);
+    null != t.item && null != N.find(e => e.timestamp === t.item.timestamp) && (0, c.Gh)(x, t.item.timestamp);
   }
 });
   return (0, l.useChain)([

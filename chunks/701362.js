@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(626135),
   x = n(382182),
   T = n(687516),
-  v = n(718805),
-  N = n(871118),
+  N = n(718805),
+  v = n(871118),
   S = n(981631),
   Z = n(689938),
   A = n(482831);
@@ -55,7 +55,7 @@ return (0, i.jsxs)(o.Clickable, {
   onClick: t,
   className: A.previewContainer,
   children: [
-    (0, i.jsx)(N.Z, {
+    (0, i.jsx)(v.Z, {
       className: A.previewImage,
       stream: e
     }),
@@ -65,7 +65,7 @@ return (0, i.jsxs)(o.Clickable, {
         variant: 'text-sm/normal',
         color: 'none',
         className: A.white,
-        children: (0, v.Z)(e, n, a, s)
+        children: (0, N.Z)(e, n, a, s)
       })
     }) : null
   ]
@@ -134,13 +134,13 @@ C.Z,
 _.Z,
 f.Z,
 h.Z
-  ], () => (0, x.p9)(n, C.Z, _.Z, f.Z, h.Z)), c = (0, r.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())), u = (0, r.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)), g = (0, r.e7)([m.default], () => m.default.getId()), I = (0, T.Cf)(c), v = (0, r.e7)([E.Z], () => (0, T.Um)(c, E.Z)), N = a.useMemo(() => ({
+  ], () => (0, x.p9)(n, C.Z, _.Z, f.Z, h.Z)), c = (0, r.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())), u = (0, r.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)), g = (0, r.e7)([m.default], () => m.default.getId()), I = (0, T.Cf)(c), N = (0, r.e7)([E.Z], () => (0, T.Um)(c, E.Z)), v = a.useMemo(() => ({
 [n.guild_id]: [t.id]
   }), [
 n.guild_id,
 t.id
   ]);
-  return (0, d.$)(N), (0, i.jsx)(M, {
+  return (0, d.$)(v), (0, i.jsx)(M, {
 ...l,
 canWatch: s,
 unavailableReason: o,
@@ -149,6 +149,6 @@ streamApplication: I,
 stream: c,
 activeStream: u,
 currentUserId: g,
-activity: v
+activity: N
   });
 }

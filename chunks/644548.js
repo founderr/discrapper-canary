@@ -41,8 +41,8 @@ user: I,
 details: x,
 gameTitle: T
   } = (0, m.F)(n), {
-primaryColor: v,
-secondaryColor: N
+primaryColor: N,
+secondaryColor: v
   } = (0, d.Z)(C), S = (0, o.yA)(n), Z = (0, o.Nq)(n), A = a.useCallback(e => {
 if (null != I && null != S && null != Z && !!(0, u.qy)(Z))
   return (0, c.SO)({
@@ -54,8 +54,8 @@ if (null != I && null != S && null != Z && !!(0, u.qy)(Z))
       hours: Math.round(S / s.Z.Seconds.HOUR)
     }),
     colors: [
-      v,
-      N
+      N,
+      v
     ],
     channelId: e
   });
@@ -64,9 +64,9 @@ C,
 t,
 S,
 n,
-v,
-Z,
 N,
+Z,
+v,
 I
   ]);
   return null != I && null != S && null != Z && (0, u.qy)(Z) ? (0, i.jsxs)(p.yR, {

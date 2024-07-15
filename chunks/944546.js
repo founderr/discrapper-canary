@@ -37,8 +37,8 @@ onContextMenu: e => {
       default: e
     } = await Promise.all([
       n.e('79695'),
-      n.e('17400'),
-      n.e('13806')
+      n.e('69220'),
+      n.e('86541')
     ]).then(n.bind(n, 881351));
     return n => (0, i.jsx)(e, {
       ...n,

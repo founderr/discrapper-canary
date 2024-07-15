@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(348600),
   x = n(566620),
   T = n(520599),
-  v = n(611370),
-  N = n(138138),
+  N = n(611370),
+  v = n(138138),
   S = n(127255),
   Z = n(5200),
   A = n(558317),
@@ -54,7 +54,7 @@ let {
   location: '8009ca_3'
 }), {
   enableRythmMiniShelfBanner: F
-} = N.u.useExperiment({
+} = v.u.useExperiment({
   location: 'ActivitiesMiniShelf'
 }, {
   autoTrackExposure: !0
@@ -66,7 +66,7 @@ let {
   autoTrackExposure: !0
 }), {
   enableFarmMergeValleyMiniShelfBanner: z
-} = v.T.useExperiment({
+} = N.T.useExperiment({
   location: 'ActivitiesMiniShelf'
 }, {
   autoTrackExposure: !0
