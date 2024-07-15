@@ -523,74 +523,91 @@ children: m ? Y.map((e, n) => {
 }
 
 function K(e) {
-  let {
-recommendationsSection: n,
-remainingActivities: t,
-isInstallOnDemand: a
-  } = e, r = n.section_title, s = n.type === o.i.BANNER_CARDS ? y.U4.LARGE_BANNER : y.U4.NO_BANNER, c = l.useMemo(() => {
-let e = n.items.map(e => {
-  let {
-    application: n,
-    is_partner: t
-  } = e;
-  return {
-    application: n,
-    isPartner: t,
-    installOnDemand: a(n)
-  };
-});
-return n.appends_remaining_activities && e.push(...t.map(e => {
-  let {
-    application: n
-  } = e;
-  return {
-    application: n,
-    isPartner: !1,
-    installOnDemand: !1
-  };
-})), e;
-  }, [
-n.items,
-n.appends_remaining_activities,
-a,
-t
-  ]), u = n.key, {
-items: d,
-handleViewMore: m
-  } = en(r, s, c, 8, u), {
-trackSectionImpressionRef: p
-  } = (0, b.Z)({
-sectionName: u,
-numItems: c.length,
-numVisibleItems: d.length
+  let n, {
+  recommendationsSection: t,
+  remainingActivities: a,
+  isInstallOnDemand: r
+} = e,
+s = t.section_title;
+  switch (t.type) {
+case o.i.BANNER_CARDS:
+  n = y.U4.LARGE_BANNER;
+  break;
+case o.i.SMALL_BANNER_CARDS:
+  n = y.U4.MEDIUM_BANNER;
+  break;
+default:
+  n = y.U4.NO_BANNER;
+  }
+  let c = l.useMemo(() => {
+  let e = t.items.map(e => {
+    let {
+      application: n,
+      is_partner: t
+    } = e;
+    return {
+      application: n,
+      isPartner: t,
+      installOnDemand: r(n)
+    };
   });
+  return t.appends_remaining_activities && e.push(...a.map(e => {
+    let {
+      application: n
+    } = e;
+    return {
+      application: n,
+      isPartner: !1,
+      installOnDemand: !1
+    };
+  })), e;
+}, [
+  t.items,
+  t.appends_remaining_activities,
+  r,
+  a
+]),
+u = t.key,
+{
+  items: d,
+  handleViewMore: m
+} = en(s, n, c, 8, u),
+{
+  trackSectionImpressionRef: p
+} = (0, b.Z)({
+  sectionName: u,
+  numItems: c.length,
+  numVisibleItems: d.length
+}),
+_ = t.type !== o.i.SMALL_BANNER_CARDS;
   return (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)('div', {
     ref: e => p.current = e,
     children: (0, i.jsx)(H.Z, {
-      title: n.section_title,
+      title: t.section_title,
       buttonType: H.Z.buttonTypes.VIEW_MORE,
       onClickViewButton: m
     })
   }),
   (0, i.jsx)('div', {
     className: V.sectionContentContainer,
-    children: d.map((e, n) => {
+    children: d.map((e, t) => {
       let {
-        application: t,
-        isPartner: l,
-        installOnDemand: a
+        application: l,
+        isPartner: a,
+        installOnDemand: r
       } = e;
       return (0, i.jsx)(y.kA, {
-        application: t,
-        look: s,
-        isPartner: l,
+        application: l,
+        look: n,
+        isPartner: a,
         sectionName: u,
-        resultsPosition: n,
+        resultsPosition: t,
         location: x.Vh.APP_LAUNCHER_HOME,
-        installOnDemand: a
-      }, t.id);
+        installOnDemand: r,
+        enableVideoBanner: _
+      }, l.id);
     })
   })
 ]

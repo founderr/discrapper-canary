@@ -239,7 +239,8 @@ className: S.searchOpenAppDetailAppCard,
 ref: e => n.current = e,
 children: (0, i.jsx)(h.kA, {
   ...e,
-  tracksImpression: !1
+  tracksImpression: !1,
+  enableVideoBanner: !0
 })
   });
 }

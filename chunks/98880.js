@@ -46,7 +46,7 @@ look: t = 'large_banner',
 isPartner: i,
 onClick: l,
 bannerImageStyle: s,
-enableVideoBanner: u,
+enableVideoBanner: u = !0,
 children: d,
 sectionName: m,
 resultsPosition: p,
@@ -290,8 +290,7 @@ function U(e) {
   let n = H(e);
   return (0, a.jsx)(O, {
 ...e,
-onClick: n,
-enableVideoBanner: !0
+onClick: n
   });
 }
 
@@ -333,6 +332,7 @@ onClick: e => {
   e.stopPropagation();
 },
 bannerImageStyle: L.darkenBannerImage,
+enableVideoBanner: !1,
 children: (0, a.jsx)('div', {
   className: L.voiceLauncherAppCardContainer,
   children: (0, a.jsx)(c.Button, {
