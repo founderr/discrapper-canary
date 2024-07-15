@@ -196,16 +196,19 @@ t && c(!0);
   }, [t]), (0, a.jsxs)(a.Fragment, {
 children: [
   null != l && s ? (0, a.jsx)('div', {
-    className: o()(L.activityVideo, {
-      [L.videoFadeOut]: !t
-    }),
-    onAnimationEnd: () => t ? null : c(!1),
-    children: (0, a.jsx)(f.Z, {
-      src: l,
-      mediaLayoutType: g.hV.MOSAIC,
-      loop: !0,
-      autoPlay: !0,
-      muted: !0
+    className: L.activityVideoContainer,
+    children: (0, a.jsx)('div', {
+      className: o()(L.activityVideo, {
+        [L.videoFadeOut]: !t
+      }),
+      onAnimationEnd: () => t ? null : c(!1),
+      children: (0, a.jsx)(f.Z, {
+        src: l,
+        mediaLayoutType: g.hV.MOSAIC,
+        loop: !0,
+        autoPlay: !0,
+        muted: !0
+      })
     })
   }) : null,
   (0, a.jsx)(p.Z, {

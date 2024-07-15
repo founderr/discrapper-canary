@@ -13,6 +13,7 @@ e.exports = {
   bannerImageChildContainer: 'bannerImageChildContainer_e5da8b',
   voiceLauncherAppCardContainer: 'voiceLauncherAppCardContainer_e5da8b',
   voiceLauncherAppCardButton: 'voiceLauncherAppCardButton_e5da8b',
+  activityVideoContainer: 'activityVideoContainer_e5da8b',
   activityVideo: 'activityVideo_e5da8b',
   videoFadeOut: 'videoFadeOut_e5da8b'
 };
