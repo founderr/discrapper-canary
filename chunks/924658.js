@@ -610,6 +610,7 @@ e.exports = Object.freeze({
   ICYMI_VALUE_PROP_3: 'Know when you\'ve caught up',
   ICYMI_EXPERIMENTAL_WARNING: 'In Case You Missed It (ICYMI) is a super-duper, early-access, experimental, & pre-alpha feature. $[Send Feedback](feedbackHook)',
   ICYMI_SHOW_NSFW: 'Show NSFW content',
+  ICYMI_SHOW_NEGATIVE: 'Show negative scored content',
   ICYMI_ADJUST_RANKING: 'Adjust Server/Channel Ranking',
   ICYMI_ADJUST_SCORE_SUCCESS: 'Thanks! This will take effect shortly.',
   ICYMI_ADJUST_SCORE_ERROR: 'Something went wrong. Please try again later.',
