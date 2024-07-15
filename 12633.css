@@ -6459,7 +6459,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     margin: 24px auto 0
 }
 
-@media : (min-width: 830px) {
+@media(min-width:830px) {
     .logo_bb3b80 {
         position: fixed;
         top: 24px;
