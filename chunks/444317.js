@@ -1,10 +1,10 @@
 n.d(t, {
   Z: function() {
-return s;
+return a;
   }
 });
 var i = n(338545);
-class s {
+class a {
   handleScroll(e) {
 this.top.set(e.currentTarget.scrollTop);
   }

@@ -5,15 +5,15 @@ return r;
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(969277);
+var a = n(481060),
+  s = n(969277);
 
 function r(e) {
   let {
 children: t
   } = e;
-  return (0, i.jsx)(s.AdvancedScroller, {
-className: a.container,
+  return (0, i.jsx)(a.AdvancedScroller, {
+className: s.container,
 children: t
   });
 }

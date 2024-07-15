@@ -4,8 +4,8 @@ return N;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(541716),
   o = n(665149),
@@ -20,24 +20,24 @@ var i = n(735250),
   g = n(433355),
   p = n(933557),
   T = n(287746),
-  S = n(689938),
-  f = n(240196),
+  f = n(689938),
+  S = n(240196),
   C = n(712759);
 
 function N(e) {
   let {
 channel: t,
 baseChannelId: n
-  } = e, N = (0, p.ZP)(t), A = (0, _.K)(), Z = (0, _.V)(), L = (0, a.e7)([d.Z], () => d.Z.isMessageRequest(t.id)), v = (0, a.e7)([u.Z], () => u.Z.isSpam(t.id)), O = (0, h.V)(t.id, t.getRecipientId()), R = s.useCallback(() => {
-m.Z.closeChannelSidebar(g.uZ), L && A && (0, I.Kh)(t.id), v && Z && (0, I.Kh)(t.id);
+  } = e, N = (0, p.ZP)(t), A = (0, _.K)(), v = (0, _.V)(), Z = (0, s.e7)([d.Z], () => d.Z.isMessageRequest(t.id)), L = (0, s.e7)([u.Z], () => u.Z.isSpam(t.id)), O = (0, h.V)(t.id, t.getRecipientId()), R = a.useCallback(() => {
+m.Z.closeChannelSidebar(g.uZ), Z && A && (0, I.Kh)(t.id), L && v && (0, I.Kh)(t.id);
   }, [
 t.id,
+L,
 v,
 Z,
-L,
 A
-  ]), x = s.useCallback(() => {
-(0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
+  ]), x = a.useCallback(() => {
+(0, r.showToast)((0, r.createToast)(f.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
   }, []), {
 markAsNotSpam: b
   } = (0, E.m)({
@@ -48,38 +48,38 @@ onError: x
 return null;
   let P = [(0, i.jsx)(o.ZP.Icon, {
 icon: r.CloseSmallIcon,
-tooltip: S.Z.Messages.CLOSE,
+tooltip: f.Z.Messages.CLOSE,
 onClick: () => m.Z.closeChannelSidebar(n)
   }, 'close')];
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(o.ZP, {
     toolbar: P,
-    'aria-label': S.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
+    'aria-label': f.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
     children: (0, c.ud)({
       channel: t,
       channelName: N,
       inSidebar: !0
     })
   }),
-  v && (0, i.jsxs)('div', {
+  L && (0, i.jsxs)('div', {
     className: C.hamBanner,
     children: [
       (0, i.jsx)(r.Text, {
         className: C.__invalid_hamBannerText,
         variant: 'text-sm/normal',
-        children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
+        children: f.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
       }),
       (0, i.jsx)(r.Button, {
         className: C.hamBannerButton,
         size: r.ButtonSizes.SMALL,
         onClick: () => b(t, O),
-        children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
+        children: f.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
       })
     ]
   }),
   (0, i.jsx)('div', {
-    className: f.chat,
+    className: S.chat,
     children: (0, i.jsx)(T.Z, {
       channel: t,
       guild: null,

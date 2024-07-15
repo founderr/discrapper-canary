@@ -5,8 +5,8 @@ return h;
 });
 var i = n(735250);
 n(470079);
-var s = n(252618),
-  a = n(121711),
+var a = n(252618),
+  s = n(121711),
   r = n(823379),
   l = n(976076),
   o = n(626426),
@@ -25,7 +25,7 @@ t = function(e) {
     case u.F$.APPS:
       return (0, i.jsx)(o.z, {});
     case u.F$.QUESTS:
-      return (0, i.jsx)(a.Z, {});
+      return (0, i.jsx)(s.Z, {});
     case u.F$.SHOP:
       return (0, i.jsx)(d.t, {});
     default:
@@ -35,7 +35,7 @@ t = function(e) {
   return (0, i.jsxs)('section', {
 className: E.container,
 children: [
-  (0, i.jsx)(s.yY, {
+  (0, i.jsx)(a.yY, {
     location: function(e) {
       switch (e) {
         case u.F$.SERVERS:

@@ -1,4 +1,4 @@
-var i, s, a, r;
+var i, a, s, r;
 n.d(t, {
   F$: function() {
 return i;
@@ -7,13 +7,13 @@ return i;
 return l;
   },
   vf: function() {
-return s;
+return a;
   }
-}), (a = i || (i = {})).SERVERS = 'servers', a.APPS = 'apps', a.QUESTS = 'quests', a.SHOP = 'shop';
+}), (s = i || (i = {})).SERVERS = 'servers', s.APPS = 'apps', s.QUESTS = 'quests', s.SHOP = 'shop';
 let l = [
   'servers',
   'apps',
   'quests',
   'shop'
 ];
-(r = s || (s = {})).GUILDS = 'guilds', r.GAMING = 'gaming', r.MUSIC = 'music', r.ENTERTAINMENT = 'entertainment', r.TECH = 'tech', r.EDUCATION = 'education', r.HUBS = 'hubs';
+(r = a || (a = {})).GUILDS = 'guilds', r.GAMING = 'gaming', r.MUSIC = 'music', r.ENTERTAINMENT = 'entertainment', r.TECH = 'tech', r.EDUCATION = 'education', r.HUBS = 'hubs';

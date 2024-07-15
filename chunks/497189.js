@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(338545),
   o = n(143927),
   c = n(442837),
@@ -16,14 +16,14 @@ var i = n(735250),
   g = n(650461),
   p = n(353093),
   T = n(603839),
-  S = n(430824),
-  f = n(725568),
+  f = n(430824),
+  S = n(725568),
   C = n(231467),
   N = n(207796),
   A = n(316553),
-  Z = n(273254),
-  L = n(559469),
-  v = n(308083),
+  v = n(273254),
+  Z = n(559469),
+  L = n(308083),
   O = n(689938),
   R = n(330468),
   x = n(345480),
@@ -86,19 +86,19 @@ function y(e) {
   let {
 selectedGuildId: t,
 setSelectedGuildId: n,
-eligibleGuilds: a,
+eligibleGuilds: s,
 onButtonClick: l,
 buttonText: c,
 hasCompletedUpsell: u,
 isBrowseButtonVisible: _
-  } = e, E = (0, N.GN)(e => e.setUserUpsellScreen, o.Z), h = (0, N.GN)(e => e.started, o.Z), I = s.useMemo(() => a.map(e => ({
+  } = e, E = (0, N.GN)(e => e.setUserUpsellScreen, o.Z), h = (0, N.GN)(e => e.started, o.Z), I = a.useMemo(() => s.map(e => ({
 value: e.id,
 label: e.name
-  })), [a]), m = s.useCallback(() => {
+  })), [s]), m = a.useCallback(() => {
 (0, N.fH)(N.v0.DISCOVERY);
-  }, []), g = s.useCallback(() => {
+  }, []), g = a.useCallback(() => {
 (0, N.fH)(N.v0.GET_STARTED), E(N.o2.USER_ONBOARDING);
-  }, [E]), p = a.length > 1;
+  }, [E]), p = s.length > 1;
   return (0, i.jsxs)(i.Fragment, {
 children: [
   u ? (0, i.jsxs)(i.Fragment, {
@@ -195,20 +195,20 @@ children: [
 ]
   });
 }
-t.Z = s.memo(function(e) {
+t.Z = a.memo(function(e) {
   let {
 eligibleGuilds: t,
 eligibleGuildsIncludingConverted: n,
-selectedGame: a,
+selectedGame: s,
 isBrowseButtonVisible: r
-  } = e, o = 0 === t.length, [x, b] = s.useState(() => {
+  } = e, o = 0 === t.length, [x, b] = a.useState(() => {
 let e = new Set(g.ZP.getGuildIds());
 for (let n of t)
   if (e.has(n.id))
     return n.id;
 return o ? n[0].id : t[0].id;
   });
-  s.useEffect(() => {
+  a.useEffect(() => {
 !o && (0, I.TE)({
   guildId: x,
   location: E.Z.CLAN_DISCOVERY
@@ -217,10 +217,10 @@ return o ? n[0].id : t[0].id;
 o,
 x
   ]);
-  let D = (0, c.e7)([S.Z], () => S.Z.getGuild(x)),
+  let D = (0, c.e7)([f.Z], () => f.Z.getGuild(x)),
 j = (0, c.e7)([g.ZP], () => null != x ? g.ZP.getStateForGuild(x).progress : null),
 U = (0, A.J)({
-  selectedGame: a
+  selectedGame: s
 }),
 {
   defaultGameId: G
@@ -229,18 +229,18 @@ U = (0, A.J)({
   location: 'ClanDiscoveryAdminUpsell',
   includeConverted: !1
 });
-  s.useEffect(() => {
-let e = G === v.nJ ? N.hz.VALORANT : G === v.xn ? N.hz.GENSHIN : void 0;
+  a.useEffect(() => {
+let e = G === L.nJ ? N.hz.VALORANT : G === L.xn ? N.hz.GENSHIN : void 0;
 null != e && U !== G && N.GN.getState().setGame(e);
   }, [
 G,
 U
   ]);
-  let k = s.useCallback(() => {
+  let k = a.useCallback(() => {
   !o && ((0, I._9)({
     guildId: x,
     location: E.Z.CLAN_DISCOVERY
-  }), (0, f.q4)(e => {
+  }), (0, S.q4)(e => {
     let {
       closeLayer: t
     } = e;
@@ -249,19 +249,19 @@ U
       guildId: x
     });
   }, {
-    layerKey: v.Pv
+    layerKey: L.Pv
   }));
 }, [
   o,
   x
 ]),
 w = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
-B = (0, Z.L)({
+B = (0, v.L)({
   guild: D,
-  selectedGame: a
+  selectedGame: s
 }),
-H = (0, L.n)(U),
-[V, F] = s.useState(!0),
+H = (0, Z.n)(U),
+[V, F] = a.useState(!0),
 Y = (0, l.useSpring)({
   from: {
     opacity: 0
@@ -350,11 +350,11 @@ X = (0, l.useSpring)({
   delay: 250,
   onRest: () => F(!1)
 }),
-J = s.useMemo(() => null == j ? O.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : O.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [j]),
-$ = s.useCallback(async () => {
+J = a.useMemo(() => null == j ? O.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : O.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [j]),
+$ = a.useCallback(async () => {
   await (0, h.Zx)(x), u.Z.transitionToGuildSync('936317138904440892');
 }, [x]),
-ee = s.useCallback(e => (0, i.jsx)(d.Clickable, {
+ee = a.useCallback(e => (0, i.jsx)(d.Clickable, {
   tag: 'span',
   className: R.joinWFSLink,
   onClick: $,

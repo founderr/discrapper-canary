@@ -1,12 +1,12 @@
 n.d(t, {
   Bj: function() {
-return s;
+return a;
   },
   ZP: function() {
 return R;
   }
 }), n(47120);
-var i, s, a, r, l = n(735250),
+var i, a, s, r, l = n(735250),
   o = n(470079),
   c = n(338545),
   d = n(143927),
@@ -19,14 +19,14 @@ var i, s, a, r, l = n(735250),
   g = n(945124),
   p = n(231467),
   T = n(931515),
-  S = n(702646),
-  f = n(207796),
+  f = n(702646),
+  S = n(207796),
   C = n(526282),
   N = n(777734),
   A = n(976757),
-  Z = n(981631),
-  L = n(689938),
-  v = n(477975);
+  v = n(981631),
+  Z = n(689938),
+  L = n(477975);
 let O = 40;
 
 function R(e) {
@@ -34,13 +34,13 @@ function R(e) {
 width: t,
 isAnimating: n,
 variant: i = 'default',
-onScroll: s
+onScroll: a
   } = e, {
-loaded: a,
+loaded: s,
 clans: r,
 searchResult: R,
 searchCriteria: x
-  } = (0, T.Qc)(), b = (0, f.GN)(e => e.selectedTraits, d.Z), P = (0, _.Z)(R), [M, D] = o.useState(0), y = o.useMemo(() => ({
+  } = (0, T.Qc)(), b = (0, S.GN)(e => e.selectedTraits, d.Z), P = (0, _.Z)(R), [M, D] = o.useState(0), y = o.useMemo(() => ({
 height: M
   }), [M]), j = (0, c.useSpring)({
 opacity: M > 0 ? 1 : 0,
@@ -58,11 +58,11 @@ if (null == e) {
 }
 D(e.getBoundingClientRect().y + 8 + 400 + 64);
   }, []), B = (0, E.y)(w), H = o.useCallback(e => {
-w(B.current), null != e && (null == s || s(e));
+w(B.current), null != e && (null == a || a(e));
   }, [
 w,
 B,
-s
+a
   ]), V = (0, h.h)(H, 10, [H], {
 leading: !0,
 trailing: !0
@@ -100,20 +100,20 @@ R
           sectionHeight: O,
           itemHeight: 400,
           props: {
-            className: v.glassBackgroundTop
+            className: L.glassBackgroundTop
           },
-          header: L.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-          subtitle: L.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+          header: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+          subtitle: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
         },
         {
           section: 'other_guilds',
           items: e.slice(t),
           sectionHeight: O,
           props: {
-            className: v.glassBackground
+            className: L.glassBackground
           },
           itemHeight: 400,
-          header: L.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
+          header: Z.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
         }
       ];
     case 'upsell':
@@ -129,10 +129,10 @@ R
           sectionHeight: O,
           itemHeight: 400,
           props: {
-            className: v.glassBackgroundTop
+            className: L.glassBackgroundTop
           },
-          header: L.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-          subtitle: L.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+          header: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+          subtitle: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
         },
         {
           section: 'other_guilds',
@@ -140,7 +140,7 @@ R
           sectionHeight: 0,
           itemHeight: 400,
           props: {
-            className: v.glassBackground
+            className: L.glassBackground
           }
         }
       ];
@@ -150,15 +150,15 @@ R
           items: e.slice(0, t),
           sectionHeight: O,
           itemHeight: 400,
-          header: L.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-          subtitle: L.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+          header: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+          subtitle: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
         },
         {
           section: 'other_guilds',
           items: e.slice(t),
           sectionHeight: O,
           itemHeight: 400,
-          header: L.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
+          header: Z.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
         }
       ];
     default:
@@ -171,21 +171,21 @@ R
 ]),
 Y = o.useMemo(() => new Set(x.games), [x.games]),
 W = o.useCallback((e, t, n, i) => {
-  var s;
+  var a;
   let {
-    items: a,
+    items: s,
     section: r
   } = F[e];
   if ('upsell' === r || 'hero' === r)
     return null;
-  let o = a[t];
+  let o = s[t];
   return (0, l.jsx)(p.ZP, {
     clan: o,
-    affinity: null !== (s = o.affininty) && void 0 !== s ? s : (0, g.y)(o, x),
+    affinity: null !== (a = o.affininty) && void 0 !== a ? a : (0, g.y)(o, x),
     traitsToHighlight: b,
-    className: v.card,
+    className: L.card,
     style: n,
-    source: Z.jXE.DISCOVER_SEARCH,
+    source: v.jXE.DISCOVER_SEARCH,
     prioritizedGameIds: Y,
     onlyAnimateIconOnHover: !0
   }, i);
@@ -198,22 +198,22 @@ W = o.useCallback((e, t, n, i) => {
 z = o.useCallback((e, t) => {
   let {
     header: n,
-    subtitle: s,
-    section: a
+    subtitle: a,
+    section: s
   } = F[e];
-  switch (a) {
+  switch (s) {
     case 'upsell':
       return (0, l.jsx)(C.Z, {});
     case 'hero':
       return (0, l.jsx)(m.Z, {
-        title: L.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,
-        description: L.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
+        title: Z.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,
+        description: Z.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
         backgroundImageUrl: 'https://cdn.discordapp.com/assets/discovery/guilds-hero-background.png',
-        className: v.hero
+        className: L.hero
       });
     case 'top_picks':
       return (0, l.jsxs)('div', {
-        className: v.topPicksSection,
+        className: L.topPicksSection,
         children: [
           (0, l.jsx)(N.Z, {
             ref: B,
@@ -226,11 +226,11 @@ z = o.useCallback((e, t) => {
               position: 'absolute'
             },
             title: n,
-            subtitle: s
+            subtitle: a
           }),
           'global_discovery' === i ? (0, l.jsx)('div', {
-            className: v.topPicksToolbar,
-            children: (0, l.jsx)(S.Z, {})
+            className: L.topPicksToolbar,
+            children: (0, l.jsx)(f.Z, {})
           }) : null
         ]
       });
@@ -239,7 +239,7 @@ z = o.useCallback((e, t) => {
         return null;
       return (0, l.jsx)(N.Z, {
         title: n,
-        subtitle: s,
+        subtitle: a,
         style: {
           ...t,
           position: 'absolute'
@@ -251,13 +251,13 @@ z = o.useCallback((e, t) => {
   B,
   i
 ]);
-  return 0 !== r.length && a ? (0, l.jsx)(l.Fragment, {
+  return 0 !== r.length && s ? (0, l.jsx)(l.Fragment, {
 children: (0, l.jsxs)('div', {
-  className: v.masonryListContainer,
+  className: L.masonryListContainer,
   children: [
     !U && (0, l.jsx)(l.Fragment, {
       children: (0, l.jsx)(c.animated.div, {
-        className: v.masonryListGradient,
+        className: L.masonryListGradient,
         style: {
           ...j,
           ...y
@@ -265,7 +265,7 @@ children: (0, l.jsxs)('div', {
       })
     }),
     (0, l.jsx)(u.MasonryList, {
-      className: v.masonryList,
+      className: L.masonryList,
       sections: F.map(e => {
         let {
           items: t
@@ -294,4 +294,4 @@ children: (0, l.jsxs)('div', {
 })
   }) : null;
 }
-(a = i || (i = {})).UPSELL = 'upsell', a.TOP_PICKS = 'top_picks', a.OTHER_GUILDS = 'other_guilds', a.HERO = 'hero', (r = s || (s = {})).DEFAULT = 'default', r.UPSELL = 'upsell', r.GLOBAL_DISCOVERY = 'global_discovery';
+(s = i || (i = {})).UPSELL = 'upsell', s.TOP_PICKS = 'top_picks', s.OTHER_GUILDS = 'other_guilds', s.HERO = 'hero', (r = a || (a = {})).DEFAULT = 'default', r.UPSELL = 'upsell', r.GLOBAL_DISCOVERY = 'global_discovery';

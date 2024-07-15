@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(748780),
   o = n(91192),
   c = n(481060),
@@ -12,7 +12,7 @@ var i = n(735250),
 t.Z = function(e) {
   let {
 index: t,
-children: a,
+children: s,
 user: E,
 channel: h,
 onClick: I,
@@ -20,11 +20,11 @@ isFocused: m,
 isActive: g,
 onOtherHover: p,
 className: T
-  } = e, [S, f] = s.useState(!1), [C, N] = s.useState(!1), A = () => {
-f(!0), m && !g && !C && (null == p || p());
-  }, Z = () => {
-f(!1);
-  }, L = (e, t) => {
+  } = e, [f, S] = a.useState(!1), [C, N] = a.useState(!1), A = () => {
+S(!0), m && !g && !C && (null == p || p());
+  }, v = () => {
+S(!1);
+  }, Z = (e, t) => {
 if (null != t)
   N(!0), (0, d.jW)(e, async () => {
     let {
@@ -56,16 +56,16 @@ children: e => (0, i.jsx)(c.FocusRing, {
       [_.active]: g || C,
       [_.firstItem]: 0 === t
     }),
-    onContextMenu: e => L(e, E),
+    onContextMenu: e => Z(e, E),
     onMouseEnter: A,
-    onMouseLeave: Z,
+    onMouseLeave: v,
     onClick: null != I ? I : void 0,
     style: {
       LIST_ROW_HEIGHT: u.WN,
       opacity: 1
     },
     ...e,
-    children: a(S || g || C)
+    children: s(f || g || C)
   })
 })
   });

@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(338545),
-  a = n(442837),
+var a = n(338545),
+  s = n(442837),
   r = n(536442),
   l = n(984933),
   o = n(496675),
@@ -14,12 +14,12 @@ function E(e) {
   let {
 channel: t,
 guild: n
-  } = e, l = (0, a.e7)([r.qc], () => r.qc.hasHotspot(r.v6.HUB_STUDY_ROOM_NOTICE)), o = (0, u.r)(t.guild_id), _ = (0, s.useSpring)({
+  } = e, l = (0, s.e7)([r.qc], () => r.qc.hasHotspot(r.v6.HUB_STUDY_ROOM_NOTICE)), o = (0, u.r)(t.guild_id), _ = (0, a.useSpring)({
 maxHeight: o ? 0 : 300,
 overflow: 'hidden',
 delay: 400
   });
-  return (0, i.jsx)(s.animated.div, {
+  return (0, i.jsx)(a.animated.div, {
 style: _,
 children: l ? (0, i.jsx)(c.Z, {
   channel: t,
@@ -33,8 +33,8 @@ children: l ? (0, i.jsx)(c.Z, {
 t.Z = function(e) {
   let {
 guild: t
-  } = e, n = (0, a.e7)([l.ZP], () => l.ZP.getChannels(t.id)[l.Zb][0]), s = (0, a.e7)([o.Z], () => null != n && o.Z.can(_.Plq.CONNECT, n.channel));
-  return t.hasFeature(_.oNc.HUB) && null != n && s ? (0, i.jsx)(E, {
+  } = e, n = (0, s.e7)([l.ZP], () => l.ZP.getChannels(t.id)[l.Zb][0]), a = (0, s.e7)([o.Z], () => null != n && o.Z.can(_.Plq.CONNECT, n.channel));
+  return t.hasFeature(_.oNc.HUB) && null != n && a ? (0, i.jsx)(E, {
 channel: n.channel,
 guild: t
   }) : null;

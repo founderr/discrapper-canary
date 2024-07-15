@@ -1,6 +1,6 @@
 n(47120);
-var i, s = n(735250),
-  a = n(470079),
+var i, a = n(735250),
+  s = n(470079),
   r = n(120356),
   l = n.n(r),
   o = n(622535),
@@ -15,15 +15,15 @@ var i, s = n(735250),
   g = n(768581),
   p = n(900849),
   T = n(940627),
-  S = n(806519),
-  f = n(981631),
+  f = n(806519),
+  S = n(981631),
   C = n(689938),
   N = n(445222),
   A = n(129512),
-  Z = n(330065),
-  L = n(755386);
+  v = n(330065),
+  Z = n(755386);
 
-function v(e, t, n) {
+function L(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -31,15 +31,15 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class O extends(i = a.PureComponent) {
+class O extends(i = s.PureComponent) {
   getDefaultSplashURL(e, t) {
 if (t)
-  return L;
+  return Z;
 switch (e) {
-  case f.BRd.DARK:
+  case S.BRd.DARK:
     return A;
-  case f.BRd.LIGHT:
-    return Z;
+  case S.BRd.LIGHT:
+    return v;
 }
   }
   render() {
@@ -48,19 +48,19 @@ let {
   guild: t,
   className: n,
   theme: i,
-  onTagClick: a
+  onTagClick: s
 } = this.props, {
   loaded: r,
   hasBeenSeen: d,
   isVisible: A,
-  submitting: Z
+  submitting: v
 } = this.state, {
-  name: L,
-  description: v,
+  name: Z,
+  description: L,
   presenceCount: O,
   memberCount: R,
   keywords: x
-} = t, b = null === (e = t.features) || void 0 === e ? void 0 : e.has(f.oNc.HUB), P = g.ZP.getGuildDiscoverySplashURL({
+} = t, b = null === (e = t.features) || void 0 === e ? void 0 : e.has(S.oNc.HUB), P = g.ZP.getGuildDiscoverySplashURL({
   id: t.id,
   splash: t.discoverySplash,
   size: 300 * (0, I.x_)()
@@ -89,38 +89,38 @@ u.N.trackExposure({
   location: 'de1ef6_4'
 });
 let U = m.Sb.getSetting();
-return (0, s.jsx)(o.$, {
+return (0, a.jsx)(o.$, {
   active: !A,
   onChange: this.setIsVisible,
   threshold: 0.1,
-  children: A ? (0, s.jsx)(o.$, {
+  children: A ? (0, a.jsx)(o.$, {
     onChange: this.handleVisibilityChange,
     active: !d,
     threshold: 0.55,
-    children: (0, s.jsxs)('div', {
+    children: (0, a.jsxs)('div', {
       className: l()(n, {
         [N.loaded]: r,
         [N.loading]: !r
       }),
       children: [
-        Z ? (0, s.jsx)(c.Spinner, {
+        v ? (0, a.jsx)(c.Spinner, {
           type: c.Spinner.Type.PULSING_ELLIPSIS,
           className: N.spinner
         }) : null,
-        (0, s.jsxs)(c.Clickable, {
+        (0, a.jsxs)(c.Clickable, {
           onClick: this.handleClickView,
           className: l()(N.card, {
-            [N.submitting]: Z,
+            [N.submitting]: v,
             [N.cardWithTags]: y
           }),
           onContextMenu: this.handleContextMenu,
           children: [
-            (0, s.jsxs)('div', {
+            (0, a.jsxs)('div', {
               className: N.cardHeader,
               children: [
-                (0, s.jsx)('div', {
+                (0, a.jsx)('div', {
                   className: N.splash,
-                  children: (0, s.jsx)('img', {
+                  children: (0, a.jsx)('img', {
                     src: M,
                     alt: '',
                     className: l()(N.splashImage, {
@@ -131,25 +131,25 @@ return (0, s.jsx)(o.$, {
                     })
                   })
                 }),
-                U || j ? (0, s.jsx)('div', {
+                U || j ? (0, a.jsx)('div', {
                   className: N.actionButtons,
-                  children: (0, s.jsx)(h.Z, {
+                  children: (0, a.jsx)(h.Z, {
                     guild: t
                   })
                 }) : null,
-                (0, s.jsx)('div', {
+                (0, a.jsx)('div', {
                   className: N.guildIcon,
-                  children: (0, s.jsx)(S.ZP, {
-                    mask: S.ZP.Masks.SQUIRCLE,
+                  children: (0, a.jsx)(f.ZP, {
+                    mask: f.ZP.Masks.SQUIRCLE,
                     width: 48,
                     height: 48,
-                    children: (0, s.jsx)('div', {
+                    children: (0, a.jsx)('div', {
                       className: N.iconMask,
-                      children: (0, s.jsx)(S.ZP, {
-                        mask: S.ZP.Masks.SQUIRCLE,
+                      children: (0, a.jsx)(f.ZP, {
+                        mask: f.ZP.Masks.SQUIRCLE,
                         width: 40,
                         height: 40,
-                        children: (0, s.jsx)('img', {
+                        children: (0, a.jsx)('img', {
                           src: D,
                           alt: '',
                           className: N.avatar
@@ -160,46 +160,46 @@ return (0, s.jsx)(o.$, {
                 })
               ]
             }),
-            (0, s.jsxs)('div', {
+            (0, a.jsxs)('div', {
               className: N.guildInfo,
               children: [
-                (0, s.jsxs)('div', {
+                (0, a.jsxs)('div', {
                   className: N.title,
                   children: [
-                    (0, s.jsx)(T.Z, {
+                    (0, a.jsx)(T.Z, {
                       className: N.guildBadge,
                       guild: t,
                       tooltipColor: c.Tooltip.Colors.PRIMARY
                     }),
-                    (0, s.jsx)(c.Heading, {
+                    (0, a.jsx)(c.Heading, {
                       variant: 'heading-md/semibold',
                       className: N.guildName,
-                      children: L
+                      children: Z
                     })
                   ]
                 }),
-                (0, s.jsx)(c.Text, {
+                (0, a.jsx)(c.Text, {
                   className: N.description,
                   variant: 'text-sm/normal',
                   color: 'header-secondary',
-                  children: v
+                  children: L
                 }),
-                y && null != x && null != a && (0, s.jsx)(E.F, {
+                y && null != x && null != s && (0, a.jsx)(E.F, {
                   tags: x,
-                  onTagClick: e => a(e, t.id),
+                  onTagClick: e => s(e, t.id),
                   guildId: t.id,
                   section: p.P1.POPULAR
                 }),
-                (0, s.jsxs)('div', {
+                (0, a.jsxs)('div', {
                   className: N.memberInfo,
                   children: [
-                    null != O && (0, s.jsxs)('div', {
+                    null != O && (0, a.jsxs)('div', {
                       className: N.memberCount,
                       children: [
-                        (0, s.jsx)('div', {
+                        (0, a.jsx)('div', {
                           className: N.dotOnline
                         }),
-                        (0, s.jsx)(c.Text, {
+                        (0, a.jsx)(c.Text, {
                           variant: 'text-xs/normal',
                           color: 'header-secondary',
                           children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
@@ -208,13 +208,13 @@ return (0, s.jsx)(o.$, {
                         })
                       ]
                     }),
-                    null != R && (0, s.jsxs)('div', {
+                    null != R && (0, a.jsxs)('div', {
                       className: N.memberCount,
                       children: [
-                        (0, s.jsx)('div', {
+                        (0, a.jsx)('div', {
                           className: N.dotOffline
                         }),
-                        (0, s.jsx)(c.Text, {
+                        (0, a.jsx)(c.Text, {
                           variant: 'text-xs/normal',
                           color: 'header-secondary',
                           children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
@@ -231,7 +231,7 @@ return (0, s.jsx)(o.$, {
         })
       ]
     })
-  }) : (0, s.jsx)('div', {
+  }) : (0, a.jsx)('div', {
     className: l()(N.card, {
       [N.cardWithTags]: y
     })
@@ -239,12 +239,12 @@ return (0, s.jsx)(o.$, {
 });
   }
   constructor(...e) {
-super(...e), v(this, 'state', {
+super(...e), L(this, 'state', {
   loaded: !1,
   hasBeenSeen: !1,
   isVisible: !1,
   submitting: !1
-}), v(this, 'handleClickView', async e => {
+}), L(this, 'handleClickView', async e => {
   let {
     className: t
   } = e.target;
@@ -264,7 +264,7 @@ super(...e), v(this, 'state', {
       submitting: !1
     });
   }
-}), v(this, 'handleVisibilityChange', e => {
+}), L(this, 'handleVisibilityChange', e => {
   let {
     onGuildCardSeen: t,
     guild: n
@@ -272,23 +272,23 @@ super(...e), v(this, 'state', {
   null != n && !this.state.hasBeenSeen && e && (this.setState({
     hasBeenSeen: e
   }), null != t && t(n.id));
-}), v(this, 'handleContextMenu', e => {
+}), L(this, 'handleContextMenu', e => {
   (0, d.jW)(e, async () => {
     let {
       default: e
     } = await Promise.resolve().then(n.bind(n, 455839));
-    return t => (0, s.jsx)(e, {
+    return t => (0, a.jsx)(e, {
       ...t,
       guild: this.props.guild
     });
   });
-}), v(this, 'setIsVisible', e => {
+}), L(this, 'setIsVisible', e => {
   this.setState({
     isVisible: e
   });
 });
   }
 }
-v(O, 'Placeholder', e => (0, s.jsx)('div', {
+L(O, 'Placeholder', e => (0, a.jsx)('div', {
   className: l()(e.className, N.cardPlaceholder)
 })), t.Z = O;

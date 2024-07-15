@@ -1,7 +1,7 @@
 n(47120), n(789020), n(411104);
 var i = n(392711),
-  s = n.n(i),
-  a = n(243814),
+  a = n.n(i),
+  s = n(243814),
   r = n(570140),
   l = n(626135),
   o = n(81063),
@@ -16,8 +16,8 @@ t.Z = {
   [h.Etm.SET_ACTIVITY]: {
 scope: {
   [E.Gp.ANY]: [
-    a.x.RPC,
-    a.x.RPC_ACTIVITIES_WRITE,
+    s.x.RPC,
+    s.x.RPC_ACTIVITIES_WRITE,
     E.lH
   ]
 },
@@ -63,7 +63,7 @@ handler(e) {
   let n, {
     socket: i,
     args: {
-      pid: a,
+      pid: s,
       activity: _
     },
     isSocketConnected: m
@@ -76,7 +76,7 @@ handler(e) {
     throw new d.Z({
       errorCode: h.lTL.INVALID_COMMAND
     }, 'command not available from "'.concat(i.transport, '" transport'));
-  if (null == a && E.He.IPC === i.transport)
+  if (null == s && E.He.IPC === i.transport)
     throw new d.Z({
       errorCode: h.lTL.INVALID_COMMAND
     }, 'nonzero pid required');
@@ -84,7 +84,7 @@ handler(e) {
     return r.Z.dispatch({
       type: 'LOCAL_ACTIVITY_UPDATE',
       socketId: i.id,
-      pid: a,
+      pid: s,
       activity: _
     }), Promise.resolve(_);
   _.name = i.application.name, _.application_id = i.application.id;
@@ -93,19 +93,19 @@ handler(e) {
   p > 0 && (_.flags = p), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
   let {
     assets: T,
-    party: S,
-    secrets: f,
+    party: f,
+    secrets: S,
     timestamps: C,
     buttons: N,
     type: A
   } = _;
-  if ((null == A || A !== h.IIU.PLAYING && !g) && (_.type = h.IIU.PLAYING), null != f) {
-    let e = s().values(f).filter(e => !!e);
-    if (null != S && s().intersection(e, [S.id]).length > 0 && !I.includes(i.application.id))
+  if ((null == A || A !== h.IIU.PLAYING && !g) && (_.type = h.IIU.PLAYING), null != S) {
+    let e = a().values(S).filter(e => !!e);
+    if (null != f && a().intersection(e, [f.id]).length > 0 && !I.includes(i.application.id))
       throw new d.Z({
         errorCode: h.lTL.INVALID_ACTIVITY_SECRET
       }, 'secrets cannot match the party id');
-    if (s().uniq(e).length < e.length)
+    if (a().uniq(e).length < e.length)
       throw new d.Z({
         errorCode: h.lTL.INVALID_ACTIVITY_SECRET
       }, 'secrets must be unique');
@@ -131,13 +131,13 @@ handler(e) {
   }
   return n.then(e => {
     var t, n;
-    let [s, o] = e;
-    if (null != T && (null != s ? T.large_image = s : delete T.large_image, null != o ? T.small_image = o : delete T.small_image), !m())
+    let [a, o] = e;
+    if (null != T && (null != a ? T.large_image = a : delete T.large_image, null != o ? T.small_image = o : delete T.small_image), !m())
       return;
     r.Z.dispatch({
       type: 'LOCAL_ACTIVITY_UPDATE',
       socketId: i.id,
-      pid: a,
+      pid: s,
       activity: _
     });
     let {

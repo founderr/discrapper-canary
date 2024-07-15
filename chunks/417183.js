@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(748780),
   o = n(91192),
   c = n(481060),
@@ -18,7 +18,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class h extends s.PureComponent {
+class h extends a.PureComponent {
   componentWillLeave(e) {
 l.Z.parallel([
   l.Z.timing(this.state.opacity, {
@@ -48,9 +48,9 @@ let {
   height: e,
   opacity: t,
   hovered: n,
-  isContextMenuActive: s
+  isContextMenuActive: a
 } = this.state, {
-  children: a,
+  children: s,
   user: d,
   onClick: u,
   isActive: E
@@ -64,7 +64,7 @@ return (0, i.jsx)(o.mh, {
     },
     children: (0, i.jsx)(l.Z.div, {
       className: r()(_.peopleListItem, {
-        [_.active]: E || s
+        [_.active]: E || a
       }),
       onContextMenu: e => this.handleContextMenu(e, d),
       onMouseEnter: this.handleMouseEnter,
@@ -75,7 +75,7 @@ return (0, i.jsx)(o.mh, {
         opacity: t
       },
       ...o,
-      children: a(n || E || s)
+      children: s(n || E || a)
     })
   })
 });

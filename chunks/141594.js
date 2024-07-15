@@ -1,7 +1,7 @@
 n(47120);
 var i = n(470079),
-  s = n(442837),
-  a = n(704215),
+  a = n(442837),
+  s = n(704215),
   r = n(243778),
   l = n(594174),
   o = n(51144),
@@ -11,20 +11,20 @@ var i = n(470079),
   _ = n(921944);
 let E = 'useCollectiblesShopTabNewBadge';
 t.Z = () => {
-  let e = (0, s.e7)([l.default], () => l.default.getCurrentUser()),
+  let e = (0, a.e7)([l.default], () => l.default.getCurrentUser()),
 t = (0, d.I)(E),
 n = i.useMemo(() => {
   if ((0, o.Fc)(e)) {
     if (t === u.LM.DARK_FANTASY)
-      return [a.z.COLLECTIBLES_SHOP_DARK_FANTASY_MARKETING];
+      return [s.z.COLLECTIBLES_SHOP_DARK_FANTASY_MARKETING];
     if (t === u.LM.TIDE)
-      return [a.z.COLLECTIBLES_SHOP_TIDE_COACHTIP];
+      return [s.z.COLLECTIBLES_SHOP_TIDE_COACHTIP];
     else if (t === u.LM.ARCADE)
-      return [a.z.COLLECTIBLES_SHOP_ARCADE_COACHTIP];
+      return [s.z.COLLECTIBLES_SHOP_ARCADE_COACHTIP];
     else if (t === u.LM.RETRO_AND_PIRATES)
-      return [a.z.COLLECTIBLES_SHOP_RETRO_AND_PIRATES_COACHTIP];
+      return [s.z.COLLECTIBLES_SHOP_RETRO_AND_PIRATES_COACHTIP];
     else if (t === u.LM.GALAXY)
-      return [a.z.COLLECTIBLES_SHOP_GALAXY_COACHTIP];
+      return [s.z.COLLECTIBLES_SHOP_GALAXY_COACHTIP];
   }
   return [];
 }, [

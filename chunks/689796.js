@@ -1,12 +1,12 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(378720),
+  a = n(470079),
+  s = n(378720),
   r = n(232126),
   l = n(285952),
   o = n(981631),
   c = n(689938),
   d = n(963087);
-class u extends s.PureComponent {
+class u extends a.PureComponent {
   renderContentRatingImage() {
 let {
   contentRating: e,
@@ -28,7 +28,7 @@ let {
 } = this.props;
 if (null == e || null == t)
   return null;
-let s = {
+let a = {
     [o.aIt.ESRB]: {
       1: c.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ALCOHOL_REFERENCE,
       2: c.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ANIMATED_BLOOD,
@@ -84,11 +84,11 @@ let s = {
       7: c.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_DISCRIMINATION
     }
   },
-  r = e.descriptors.map(e => s[t][e]).join(', ');
+  r = e.descriptors.map(e => a[t][e]).join(', ');
 return (0, i.jsxs)('div', {
   className: n,
   children: [
-    (0, i.jsx)(a.Z, {
+    (0, i.jsx)(s.Z, {
       children: c.Z.Messages.APPLICATION_STORE_SECTION_TITLE_RATINGS
     }),
     (0, i.jsxs)(l.Z, {

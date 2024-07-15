@@ -5,8 +5,8 @@ return l;
 });
 var i = n(735250);
 n(470079);
-var s = n(497505),
-  a = n(415104),
+var a = n(497505),
+  s = n(415104),
   r = n(456727);
 
 function l(e) {
@@ -15,9 +15,9 @@ quests: t
   } = e;
   return (0, i.jsx)('div', {
 className: r.container,
-children: t.map(e => (0, i.jsx)(a.Z, {
+children: t.map(e => (0, i.jsx)(s.Z, {
   quest: e,
-  questContent: s.jn.QUEST_HOME_DESKTOP
+  questContent: a.jn.QUEST_HOME_DESKTOP
 }, e.id))
   });
 }

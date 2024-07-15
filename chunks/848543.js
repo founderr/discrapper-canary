@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-return Z;
+return v;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(399606),
   o = n(704215),
   c = n(923462),
@@ -20,23 +20,23 @@ var i = n(735250),
   g = n(459273),
   p = n(242291),
   T = n(792165),
-  S = n(603074),
-  f = n(981631),
+  f = n(603074),
+  S = n(981631),
   C = n(921944),
   N = n(689938),
   A = n(902569);
 
-function Z(e) {
+function v(e) {
   let {
 channel: t,
-iconClassName: a,
-className: Z,
-innerClassName: L,
-...v
+iconClassName: s,
+className: v,
+innerClassName: Z,
+...L
   } = e, {
 mute: O,
 suppress: R
-  } = (0, I.Z)(t), x = (0, l.e7)([m.Z], () => m.Z.isDeaf()), b = O || R || x, [P, M] = s.useState(!1), D = t.getGuildId(), y = (0, p.sR)({
+  } = (0, I.Z)(t), x = (0, l.e7)([m.Z], () => m.Z.isDeaf()), b = O || R || x, [P, M] = a.useState(!1), D = t.getGuildId(), y = (0, p.sR)({
 isSoundboardButtonDisabled: b
   }), [j, U] = (0, h.c)(y), {
 analyticsLocations: G
@@ -69,7 +69,7 @@ renderPopout: e => {
   let {
     closePopout: n
   } = e;
-  return (0, i.jsx)(S.Z, {
+  return (0, i.jsx)(f.Z, {
     guildId: D,
     channel: t,
     onClose: n,
@@ -84,12 +84,12 @@ children: t => (0, i.jsx)('div', {
   children: (0, i.jsx)(d.Button, {
     ...e,
     ...t,
-    className: r()(Z, {
+    className: r()(v, {
       [A.buttonActive]: P,
       [A.disabled]: b
     }),
-    wrapperClassName: Z,
-    innerClassName: L,
+    wrapperClassName: v,
+    innerClassName: Z,
     disabled: b,
     onClick: () => {
       var t, n;
@@ -97,31 +97,31 @@ children: t => (0, i.jsx)('div', {
     },
     onMouseEnter: t => {
       var n, i;
-      null === (n = v.onMouseEnter) || void 0 === n || n.call(v, t), null == e || null === (i = e.onMouseEnter) || void 0 === i || i.call(e), H();
+      null === (n = L.onMouseEnter) || void 0 === n || n.call(L, t), null == e || null === (i = e.onMouseEnter) || void 0 === i || i.call(e), H();
     },
     onMouseLeave: t => {
       var n, i;
-      null === (n = v.onMouseLeave) || void 0 === n || n.call(v, t), null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e), V();
+      null === (n = L.onMouseLeave) || void 0 === n || n.call(L, t), null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e), V();
     },
     onContextMenu: k,
     fullWidth: !0,
     size: d.Button.Sizes.SMALL,
-    ...v,
+    ...L,
     children: (0, i.jsx)(w, {
-      className: a,
+      className: s,
       size: 'sm',
       color: P ? 'white' : d.tokens.colors.INTERACTIVE_ACTIVE
     })
   })
 })
-  }), Y = s.useCallback(() => {
+  }), Y = a.useCallback(() => {
 !b && M(!P);
   }, [
 b,
 P
   ]);
   return (0, g.yp)({
-event: f.CkL.TOGGLE_SOUNDBOARD,
+event: S.CkL.TOGGLE_SOUNDBOARD,
 handler: Y
   }), (0, i.jsx)(E.Gt, {
 value: G,

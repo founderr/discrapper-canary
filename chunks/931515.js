@@ -7,8 +7,8 @@ return m;
   }
 });
 var i = n(470079),
-  s = n(348327),
-  a = n.n(s),
+  a = n(348327),
+  s = n.n(a),
   r = n(143927),
   l = n(442837),
   o = n(224706),
@@ -23,7 +23,7 @@ function I() {
   let e = (0, _.GN)(e => e.setGame, r.Z),
 t = (0, _.GN)(e => e.setSelectedGames, r.Z),
 n = (0, _.GN)(e => e.selectedGames, r.Z),
-s = (0, _.GN)(_.t1, a()),
+a = (0, _.GN)(_.t1, s()),
 E = (0, c.An)({
   location: 'clan_discovery'
 }),
@@ -46,9 +46,9 @@ t,
 m,
 n
   ]), i.useEffect(() => {
-g && (0, d.j)(s);
+g && (0, d.j)(a);
   }, [
-s,
+a,
 g
   ]), i.useEffect(() => {
 o.Z.getDetectableGames();
@@ -59,22 +59,22 @@ loading: p
 
 function m() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-t = (0, _.GN)(_.t1, a()),
+t = (0, _.GN)(_.t1, s()),
 n = (0, l.e7)([u.Z], () => u.Z.hasLoadedStaticClanDiscovery()),
-s = (0, l.e7)([u.Z], () => u.Z.getSearchResult(t), [t]);
+a = (0, l.e7)([u.Z], () => u.Z.getSearchResult(t), [t]);
   return {
 loaded: n,
 clans: i.useMemo(() => {
-  if ((0, E.Pw)(s)) {
-    let t = s.items;
+  if ((0, E.Pw)(a)) {
+    let t = a.items;
     return null != e ? t.slice(0, e) : t;
   }
   return [];
 }, [
   e,
-  s
+  a
 ]),
 searchCriteria: t,
-searchResult: s
+searchResult: a
   };
 }

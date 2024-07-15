@@ -4,9 +4,9 @@ return c;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(481060),
   o = n(960794);
 
@@ -14,10 +14,10 @@ function c(e) {
   let {
 title: t,
 description: n,
-button: a,
+button: s,
 backgroundImageUrl: c = 'https://cdn.discordapp.com/assets/discovery/generic-hero-background.png',
 className: d
-  } = e, u = s.useMemo(() => ({
+  } = e, u = a.useMemo(() => ({
 backgroundImage: 'url('.concat(c, ')')
   }), [c]);
   return (0, i.jsxs)('div', {
@@ -36,7 +36,7 @@ children: [
         color: 'text-muted',
         children: n
       }),
-      a
+      s
     ]
   }),
   (0, i.jsx)('div', {

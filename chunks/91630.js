@@ -1,11 +1,11 @@
 n.d(t, {
   U: function() {
-return f;
+return S;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(481060),
+  a = n(470079),
+  s = n(481060),
   r = n(823379),
   l = n(766219),
   o = n(212476),
@@ -20,37 +20,37 @@ var i = n(735250),
   g = n(982345),
   p = n(49898),
   T = n(689938),
-  S = n(65050);
+  f = n(65050);
 
-function f() {
+function S() {
   let {
 tabs: e,
 selectedTab: t,
 onSelectTab: n
   } = (0, g.Y)(), {
-handleScroll: f,
+handleScroll: S,
 scrollPosition: C
   } = (0, o.c)(), N = (0, l.lg)(t.id), {
 isSearchActive: A,
-searchQuery: Z,
-searchResultsQuery: L,
-resetSearch: v,
+searchQuery: v,
+searchResultsQuery: Z,
+resetSearch: L,
 onSearchSubmit: O,
 onSearchTextChange: R
   } = (0, m.C)(N), x = A && t.id !== p.vf.HUBS && t.id !== p.vf.GUILDS;
-  s.useEffect(() => {
-A && !x && v();
+  a.useEffect(() => {
+A && !x && L();
   }, [
 A,
 x,
-v
+L
   ]);
-  let b = s.useMemo(() => {
+  let b = a.useMemo(() => {
   if (x)
     return (0, i.jsx)(I.Z, {
-      searchResultsQuery: L,
+      searchResultsQuery: Z,
       categoryId: N,
-      onSearchClear: v
+      onSearchClear: L
     });
   switch (t.id) {
     case p.vf.GAMING:
@@ -61,43 +61,43 @@ v
       return (0, i.jsx)(_.Z, {
         categoryId: N,
         tab: t.id,
-        onScroll: f
+        onScroll: S
       });
     case p.vf.HUBS:
       return (0, i.jsx)(h.X, {
-        onScroll: f
+        onScroll: S
       });
     case p.vf.GUILDS:
       return (0, i.jsx)(E.U, {
-        onScroll: f
+        onScroll: S
       });
     default:
       (0, r.vE)(t.id);
   }
 }, [
   N,
-  f,
+  S,
   x,
-  v,
   L,
+  Z,
   t.id
 ]),
-P = s.useMemo(() => x ? (0, i.jsx)(a.Clickable, {
-  className: S.clickable,
-  onClick: v,
-  children: (0, i.jsx)(a.ArrowLargeLeftIcon, {
-    color: a.tokens.colors.HEADER_PRIMARY,
+P = a.useMemo(() => x ? (0, i.jsx)(s.Clickable, {
+  className: f.clickable,
+  onClick: L,
+  children: (0, i.jsx)(s.ArrowLargeLeftIcon, {
+    color: s.tokens.colors.HEADER_PRIMARY,
     size: 'md'
   })
-}) : (0, i.jsx)(a.ServerIcon, {
-  color: a.tokens.colors.HEADER_PRIMARY,
+}) : (0, i.jsx)(s.ServerIcon, {
+  color: s.tokens.colors.HEADER_PRIMARY,
   size: 'md'
 }), [
   x,
-  v
+  L
 ]),
 M = (0, l.vb)(t.id),
-D = s.useMemo(() => {
+D = a.useMemo(() => {
   switch (t.id) {
     case p.vf.GAMING:
     case p.vf.MUSIC:
@@ -105,12 +105,12 @@ D = s.useMemo(() => {
     case p.vf.TECH:
     case p.vf.EDUCATION:
       return (0, i.jsx)(d.Z, {
-        query: Z,
+        query: v,
         placeholder: T.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({
           title: M
         }),
         onTextChange: R,
-        onClear: v,
+        onClear: L,
         onSubmit: O
       });
     default:
@@ -119,8 +119,8 @@ D = s.useMemo(() => {
 }, [
   O,
   R,
+  L,
   v,
-  Z,
   t.id,
   M
 ]),
@@ -128,7 +128,7 @@ y = (0, c.Z)({
   scrollPosition: C
 });
   return (0, i.jsxs)('div', {
-className: S.container,
+className: f.container,
 children: [
   (0, i.jsx)(u.Z, {
     tabs: e,

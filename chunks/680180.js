@@ -4,8 +4,8 @@ return l;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(481060),
+  a = n(470079),
+  s = n(481060),
   r = n(986348);
 
 function l(e) {
@@ -15,13 +15,13 @@ placeholder: n,
 onTextChange: l,
 onClear: o,
 onSubmit: c
-  } = e, d = s.useCallback(e => {
+  } = e, d = a.useCallback(e => {
 'Enter' === e.key && c();
   }, [c]);
   return (0, i.jsx)('div', {
 className: r.search,
-children: (0, i.jsx)(a.SearchBar, {
-  size: a.SearchBar.Sizes.MEDIUM,
+children: (0, i.jsx)(s.SearchBar, {
+  size: s.SearchBar.Sizes.MEDIUM,
   query: t,
   placeholder: n,
   onChange: l,

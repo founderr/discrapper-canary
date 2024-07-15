@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(593473),
   o = n(442837),
   c = n(481060),
@@ -16,13 +16,13 @@ var i = n(735250),
   g = n(430824),
   p = n(378720),
   T = n(285952),
-  S = n(346656),
-  f = n(843445),
+  f = n(346656),
+  S = n(843445),
   C = n(981631),
   N = n(689938),
   A = n(81772);
 
-function Z(e, t, n) {
+function v(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -30,7 +30,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class L extends s.PureComponent {
+class Z extends a.PureComponent {
   renderMemberInfo() {
 let {
   approximateMemberCount: e,
@@ -66,8 +66,8 @@ let {
   guild: e,
   inChannel: t,
   isInGuild: n,
-  isLurking: s,
-  isAuthenticated: a,
+  isLurking: a,
+  isAuthenticated: s,
   className: l,
   pageSize: o
 } = this.props;
@@ -78,7 +78,7 @@ let d = new m.ZP(e),
   _ = this.handleJoinOrView,
   E = c.Button.Looks.FILLED,
   h = c.Button.Colors.PRIMARY;
-return a ? n ? (E = c.Button.Looks.OUTLINED, h = A.buttonColorInGuild, u = (0, i.jsxs)(T.Z, {
+return s ? n ? (E = c.Button.Looks.OUTLINED, h = A.buttonColorInGuild, u = (0, i.jsxs)(T.Z, {
   align: T.Z.Align.CENTER,
   children: [
     (0, i.jsx)('div', {
@@ -90,8 +90,8 @@ return a ? n ? (E = c.Button.Looks.OUTLINED, h = A.buttonColorInGuild, u = (0, i
       className: A.joinedCheckmark
     })
   ]
-})) : s && t && (u = N.Z.Messages.JOIN_GUILD) : (u = N.Z.Messages._LOGIN, _ = this.handleLogin), (0, i.jsxs)('div', {
-  className: r()(l, o === f.b.SMALL ? A.inviteSmall : A.inviteLarge),
+})) : a && t && (u = N.Z.Messages.JOIN_GUILD) : (u = N.Z.Messages._LOGIN, _ = this.handleLogin), (0, i.jsxs)('div', {
+  className: r()(l, o === S.b.SMALL ? A.inviteSmall : A.inviteLarge),
   children: [
     (0, i.jsx)(p.Z, {
       children: N.Z.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
@@ -102,10 +102,10 @@ return a ? n ? (E = c.Button.Looks.OUTLINED, h = A.buttonColorInGuild, u = (0, i
         (0, i.jsxs)('div', {
           className: A.info,
           children: [
-            (0, i.jsx)(S.Z, {
+            (0, i.jsx)(f.Z, {
               guild: d,
               active: !0,
-              size: S.Z.Sizes.LARGE,
+              size: f.Z.Sizes.LARGE,
               className: A.guildIcon
             }),
             (0, i.jsxs)('div', {
@@ -135,25 +135,25 @@ return a ? n ? (E = c.Button.Looks.OUTLINED, h = A.buttonColorInGuild, u = (0, i
 });
   }
   constructor(...e) {
-super(...e), Z(this, 'handleJoinOrView', async () => {
+super(...e), v(this, 'handleJoinOrView', async () => {
   let {
     guild: e,
     skuId: t,
     isInGuild: n,
     isLurking: i
-  } = this.props, s = () => (0, I.X)(e.id);
+  } = this.props, a = () => (0, I.X)(e.id);
   if (i)
-    (0, u.Oj)(t).then(s);
+    (0, u.Oj)(t).then(a);
   else if (n)
-    s();
+    a();
   else
     try {
       await d.Z.joinGuild(e.id, {
         lurker: !0,
         source: C.vtS.APPLICATION_STORE
-      }), s();
+      }), a();
     } catch {}
-}), Z(this, 'handleLogin', () => {
+}), v(this, 'handleLogin', () => {
   let e = {
     redirect_to: C.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId)
   };
@@ -174,4 +174,4 @@ guild: t
 isInGuild: null != g.Z.getGuild(t.id) && !n,
 isLurking: n
   };
-})(L));
+})(Z));

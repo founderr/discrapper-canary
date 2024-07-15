@@ -1,5 +1,5 @@
 n(47120);
-var i, s, a = n(735250),
+var i, a, s = n(735250),
   r = n(470079),
   l = n(338545),
   o = n(143927),
@@ -14,37 +14,37 @@ var i, s, a = n(735250),
   g = n(931515),
   p = n(807933),
   T = n(702646),
-  S = n(207796),
-  f = n(543550),
+  f = n(207796),
+  S = n(543550),
   C = n(895068),
   N = n(921944),
   A = n(540736);
-(s = i || (i = {})).TOP_PICKS = 'top_picks', s.OTHER_GUILDS = 'other_guilds';
-let Z = {
+(a = i || (i = {})).TOP_PICKS = 'top_picks', a.OTHER_GUILDS = 'other_guilds';
+let v = {
 mass: 1,
 tension: 600,
 friction: 60
   },
-  L = r.memo(function(e) {
+  Z = r.memo(function(e) {
 let {
   width: t
-} = e, n = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), i = (0, S.GN)(e => e.mode, o.Z), [s, d] = r.useState(!0), _ = (0, l.useSpring)({
+} = e, n = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), i = (0, f.GN)(e => e.mode, o.Z), [a, d] = r.useState(!0), _ = (0, l.useSpring)({
   from: {
     opacity: 0
   },
   to: {
-    opacity: i === S.v0.GET_STARTED ? 0 : 1
+    opacity: i === f.v0.GET_STARTED ? 0 : 1
   },
-  config: Z,
+  config: v,
   delay: 500,
   immediate: n,
   onRest: () => d(!1)
-}), g = (0, S.GN)(e => e.userUpsellScreen, o.Z), L = (0, S.GN)(e => e.started, o.Z), {
-  guilds: v
+}), g = (0, f.GN)(e => e.userUpsellScreen, o.Z), Z = (0, f.GN)(e => e.started, o.Z), {
+  guilds: L
 } = (0, h.C3)({
   location: 'ClanDiscoveryAdminContainer',
   includeConverted: !0
-}), O = r.useMemo(() => v.filter(e => !(0, I.EJ)(e)), [v]), {
+}), O = r.useMemo(() => L.filter(e => !(0, I.EJ)(e)), [L]), {
   enableApplication: R
 } = (0, h.Fg)('ClanDiscoveryAdminContainer'), x = (0, m.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
 switch (r.useEffect(() => {
@@ -53,39 +53,39 @@ switch (r.useEffect(() => {
       forceTrack: !0
     });
   }, [x]), r.useEffect(() => {
-    let e = v.length > 0;
-    if (e && !R && g === S.o2.USER_UPSELL) {
-      (0, S.fH)(S.v0.ADMIN_UPSELL);
+    let e = L.length > 0;
+    if (e && !R && g === f.o2.USER_UPSELL) {
+      (0, f.fH)(f.v0.ADMIN_UPSELL);
       return;
     }
-    if (!e && R && !L) {
-      (0, S.fH)(S.v0.GET_STARTED);
+    if (!e && R && !Z) {
+      (0, f.fH)(f.v0.GET_STARTED);
       return;
     }
-    if (R && i === S.v0.ADMIN_UPSELL && 0 === O.length) {
-      (0, S.fH)(S.v0.GET_STARTED), S.GN.getState().setUserUpsellScreen(S.o2.USER_UPSELL);
+    if (R && i === f.v0.ADMIN_UPSELL && 0 === O.length) {
+      (0, f.fH)(f.v0.GET_STARTED), f.GN.getState().setUserUpsellScreen(f.o2.USER_UPSELL);
       return;
     }
   }, [
     O.length,
-    v.length,
-    L,
+    L.length,
+    Z,
     R,
     i,
     g
   ]), i) {
-  case S.v0.ADMIN_UPSELL:
-    return (0, a.jsx)(f.$, {});
-  case S.v0.GET_STARTED:
-    return (0, a.jsx)(f.J, {});
-  case S.v0.DISCOVERY:
-  case S.v0.GAMES:
-  case S.v0.PLAYSTYLE:
-  case S.v0.TRAITS:
-    return (0, a.jsxs)('div', {
+  case f.v0.ADMIN_UPSELL:
+    return (0, s.jsx)(S.$, {});
+  case f.v0.GET_STARTED:
+    return (0, s.jsx)(S.J, {});
+  case f.v0.DISCOVERY:
+  case f.v0.GAMES:
+  case f.v0.PLAYSTYLE:
+  case f.v0.TRAITS:
+    return (0, s.jsxs)('div', {
       className: A.discoveryContainer,
       children: [
-        (0, a.jsx)(l.animated.div, {
+        (0, s.jsx)(l.animated.div, {
           className: A.toolbar,
           style: {
             opacity: _.opacity,
@@ -98,9 +98,9 @@ switch (r.useEffect(() => {
             ]).to(e => 'translateY('.concat(e, 'px)')),
             borderBottom: '1px solid var(--bg-mod-strong)'
           },
-          children: (0, a.jsx)(T.Z, {})
+          children: (0, s.jsx)(T.Z, {})
         }),
-        (0, a.jsx)(l.animated.div, {
+        (0, s.jsx)(l.animated.div, {
           className: A.content,
           style: {
             opacity: _.opacity,
@@ -112,14 +112,14 @@ switch (r.useEffect(() => {
               0
             ]).to(e => 'translateY('.concat(e, 'px)'))
           },
-          children: (0, a.jsx)(C.ZP, {
+          children: (0, s.jsx)(C.ZP, {
             width: t,
-            isAnimating: s
+            isAnimating: a
           })
         }),
-        (0, a.jsx)('div', {
+        (0, s.jsx)('div', {
           className: A.selectors,
-          children: (0, a.jsx)(p.Z, {
+          children: (0, s.jsx)(p.Z, {
             mode: i
           })
         })
@@ -134,17 +134,17 @@ loading: e
 ref: t,
 width: n
   } = (0, _.Z)();
-  return (0, a.jsxs)('main', {
+  return (0, s.jsxs)('main', {
 className: A.container,
 ref: t,
 children: [
-  (0, a.jsx)('div', {
+  (0, s.jsx)('div', {
     className: A.dragRegion
   }),
-  e ? (0, a.jsx)('div', {
+  e ? (0, s.jsx)('div', {
     className: A.loading,
-    children: (0, a.jsx)(d.Spinner, {})
-  }) : (0, a.jsx)(L, {
+    children: (0, s.jsx)(d.Spinner, {})
+  }) : (0, s.jsx)(Z, {
     width: null != n ? n : 0
   })
 ]

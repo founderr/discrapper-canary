@@ -1,7 +1,7 @@
 n(47120), n(773603);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(447543),
   l = n(568154),
   o = n(703656),
@@ -16,19 +16,19 @@ t.Z = e => {
   let {
 guildId: t,
 inviteCode: n
-  } = e, [m, g] = s.useState(h.hO.INITIAL), [p, T] = s.useState(null != n);
-  s.useEffect(() => {
+  } = e, [m, g] = a.useState(h.hO.INITIAL), [p, T] = a.useState(null != n);
+  a.useEffect(() => {
 null != n && r.Z.resolveInvite(n, 'Hub').finally(() => T(!1));
   }, [n]);
-  let S = (0, a.e7)([d.Z], () => null != n ? d.Z.getInvite(n) : null),
-f = (0, a.e7)([c.Z], () => c.Z.getGuild(t));
-  s.useEffect(() => {
-null != f && (0, o.uL)(E.Z5c.CHANNEL(t));
+  let f = (0, s.e7)([d.Z], () => null != n ? d.Z.getInvite(n) : null),
+S = (0, s.e7)([c.Z], () => c.Z.getGuild(t));
+  a.useEffect(() => {
+null != S && (0, o.uL)(E.Z5c.CHANNEL(t));
   }, [
-f,
+S,
 t
   ]);
-  let C = s.useCallback(e => {
+  let C = a.useCallback(e => {
   g(t => Math.max(t, e));
 }, []),
 N = (0, u.gK)();
@@ -47,7 +47,7 @@ children: (0, i.jsxs)(l.Z, {
     (0, i.jsx)('div', {
       className: I.contentWrapper,
       children: !p && (0, i.jsx)(_.HubEmailConnectionModalView, {
-        invite: S
+        invite: f
       })
     })
   ]

@@ -1,17 +1,17 @@
 n.d(t, {
   g: function() {
-return a;
+return s;
   }
 });
 var i = n(470079),
-  s = n(900849);
+  a = n(900849);
 
-function a(e, t) {
-  let n = i.useCallback((n, i) => s.Lq({
+function s(e, t) {
+  let n = i.useCallback((n, i) => a.Lq({
 loadId: t,
 guildId: n,
 index: i,
-analyticsContext: s.P1.GLOBAL_DISCOVERY,
+analyticsContext: a.P1.GLOBAL_DISCOVERY,
 categoryId: e
   }), [
 e,

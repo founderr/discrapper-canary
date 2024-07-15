@@ -4,8 +4,8 @@ return m;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(338545),
+  a = n(470079),
+  s = n(338545),
   r = n(143927),
   l = n(399606),
   o = n(481060),
@@ -25,7 +25,7 @@ loading: m
   } = (0, u.LE)(), {
 ref: g,
 width: p
-  } = (0, c.Z)(), T = (0, E.GN)(e => e.mode, r.Z), [S, f] = s.useState(!0), C = (0, a.useSpring)({
+  } = (0, c.Z)(), T = (0, E.GN)(e => e.mode, r.Z), [f, S] = a.useState(!0), C = (0, s.useSpring)({
 from: {
   opacity: 0
 },
@@ -39,7 +39,7 @@ config: {
 },
 delay: 200,
 immediate: n,
-onRest: () => f(!1)
+onRest: () => S(!1)
   });
   return (0, i.jsxs)('section', {
 ref: g,
@@ -48,14 +48,14 @@ children: [
   m ? (0, i.jsx)('div', {
     className: I.loading,
     children: (0, i.jsx)(o.Spinner, {})
-  }) : (0, i.jsx)(a.animated.div, {
+  }) : (0, i.jsx)(s.animated.div, {
     className: I.list,
     style: {
       opacity: C.opacity
     },
     children: (0, i.jsx)(h.ZP, {
       width: null != p ? p : 0,
-      isAnimating: S,
+      isAnimating: f,
       variant: h.Bj.GLOBAL_DISCOVERY,
       onScroll: t
     })

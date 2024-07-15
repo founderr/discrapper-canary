@@ -5,8 +5,8 @@ return c;
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(481060),
   l = n(17845),
   o = n(622548);
@@ -15,14 +15,14 @@ function c(e) {
   let {
 title: t,
 description: n,
-onScroll: s,
+onScroll: a,
 backgroundImageUrl: c,
 button: d,
 children: u,
 bannerContainerClassName: _
   } = e;
   return (0, i.jsxs)(r.AdvancedScroller, {
-onScroll: s,
+onScroll: a,
 className: o.container,
 children: [
   (0, i.jsx)(l.Z, {
@@ -33,7 +33,7 @@ children: [
     className: _
   }),
   (0, i.jsx)('section', {
-    className: a()(o.content, o.gradient),
+    className: s()(o.content, o.gradient),
     children: u
   })
 ]

@@ -4,9 +4,9 @@ return N;
   }
 }), n(653041), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(442837),
   o = n(481060),
   c = n(239091),
@@ -20,10 +20,10 @@ var i = n(735250),
   g = n(524484),
   p = n(689938),
   T = n(372844);
-let S = {
+let f = {
 offset: 2
   },
-  f = {
+  S = {
 serverDeaf: {
   icon: o.HeadphonesDenyIcon,
   colorize: !0,
@@ -52,47 +52,47 @@ localMute: {
   };
 
 function C(e) {
-  var t, s;
+  var t, a;
   let {
-channel: a,
+channel: s,
 user: h,
 nick: C,
 mute: N,
 deaf: A,
-serverMute: Z,
-serverDeaf: L
-  } = e, v = (0, l.e7)([I.Z], () => I.Z.isLocalMute(h.id)), O = (0, d.Z)({
+serverMute: v,
+serverDeaf: Z
+  } = e, L = (0, l.e7)([I.Z], () => I.Z.isLocalMute(h.id)), O = (0, d.Z)({
 userId: h.id,
 checkSoundSharing: !0
-  }), R = null !== (t = a.getGuildId()) && void 0 !== t ? t : void 0, x = h.getAvatarURL(a.guild_id, 24), b = null != C ? C : m.ZP.getName(h), {
+  }), R = null !== (t = s.getGuildId()) && void 0 !== t ? t : void 0, x = h.getAvatarURL(s.guild_id, 24), b = null != C ? C : m.ZP.getName(h), {
 icon: P,
 colorize: M,
 getStatus: D
-  } = null !== (s = function(e) {
+  } = null !== (a = function(e) {
 let {
   serverDeaf: t,
   deaf: n,
   serverMute: i,
-  mute: s,
-  localMute: a
+  mute: a,
+  localMute: s
 } = e;
 if (t)
-  return f.serverDeaf;
+  return S.serverDeaf;
 if (n)
-  return f.deaf;
+  return S.deaf;
 if (i)
-  return f.serverMute;
-else if (a)
-  return f.localMute;
+  return S.serverMute;
 else if (s)
-  return f.mute;
+  return S.localMute;
+else if (a)
+  return S.mute;
   }({
-serverDeaf: L,
+serverDeaf: Z,
 deaf: A,
-serverMute: Z,
+serverMute: v,
 mute: N,
-localMute: v
-  })) && void 0 !== s ? s : {}, y = null != D ? p.Z.Messages.VOICE_PANEL_USER_TOOLTIP.format({
+localMute: L
+  })) && void 0 !== a ? a : {}, y = null != D ? p.Z.Messages.VOICE_PANEL_USER_TOOLTIP.format({
 userName: b,
 status: D()
   }) : b;
@@ -111,7 +111,7 @@ null != R ? (0, c.jW)(e, async () => {
     ...t,
     user: h,
     guildId: R,
-    channel: a,
+    channel: s,
     showMediaItems: !0
   });
 }) : (0, c.jW)(e, async () => {
@@ -132,14 +132,14 @@ null != R ? (0, c.jW)(e, async () => {
   return (0, i.jsx)(o.Popout, {
 preload: () => (0, _.W)(h.id, h.getAvatarURL(R, 80), {
   guildId: R,
-  channelId: a.id
+  channelId: s.id
 }),
 position: 'top',
 renderPopout: e => (0, i.jsx)(E.Z, {
   location: 'RTCConnectionVoiceUsers',
   userId: h.id,
   guildId: R,
-  channelId: a.id,
+  channelId: s.id,
   ...e
 }),
 children: e => (0, i.jsx)(o.Tooltip, {
@@ -149,7 +149,7 @@ children: e => (0, i.jsx)(o.Tooltip, {
     ...e,
     className: T.avatarContainer,
     onContextMenu: j,
-    focusProps: S,
+    focusProps: f,
     children: (0, i.jsx)(u.Z, {
       shakeLocation: g.oZ.VOICE_USER,
       isShaking: O,
@@ -178,8 +178,8 @@ function N(e) {
   let {
 voiceStates: t,
 channel: n,
-className: a
-  } = e, [c, d] = s.useState(!1), u = c ? o.MinusIcon : o.PlusSmallIcon, _ = (0, i.jsx)(o.CircleIconButton, {
+className: s
+  } = e, [c, d] = a.useState(!1), u = c ? o.MinusIcon : o.PlusSmallIcon, _ = (0, i.jsx)(o.CircleIconButton, {
 className: T.expandButton,
 onClick: () => d(!c),
 color: o.CircleIconButtonColors.PRIMARY,
@@ -189,7 +189,7 @@ icon: (0, i.jsx)(u, {
   size: 'xs',
   color: 'currentColor'
 }),
-focusProps: S
+focusProps: f
   }), E = (0, l.e7)([h.default], () => h.default.getId(), []), [I, m] = function(e, t) {
 let n = [];
 for (let i of e) {
@@ -208,7 +208,7 @@ return [
 ];
   }(t, E), g = m && c ? t : I;
   return g.length <= 0 ? null : (0, i.jsx)(o.ScrollerThin, {
-className: r()(T.scroller, a),
+className: r()(T.scroller, s),
 fade: !0,
 children: (0, i.jsxs)('div', {
   className: T.voiceUsers,
@@ -218,18 +218,18 @@ children: (0, i.jsxs)('div', {
     g.map(e => {
       let {
         user: t,
-        nick: s,
-        voiceState: a
+        nick: a,
+        voiceState: s
       } = e;
       return t.id !== E ? (0, i.jsx)(C, {
         channel: n,
         user: t,
-        nick: s,
-        mute: a.isVoiceMuted(),
-        deaf: a.isVoiceDeafened(),
-        video: a.selfVideo,
-        serverMute: a.mute,
-        serverDeaf: a.deaf
+        nick: a,
+        mute: s.isVoiceMuted(),
+        deaf: s.isVoiceDeafened(),
+        video: s.selfVideo,
+        serverMute: s.mute,
+        serverDeaf: s.deaf
       }, t.id) : null;
     }),
     m ? _ : null

@@ -4,8 +4,8 @@ return E;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(338545),
+  a = n(470079),
+  s = n(338545),
   r = n(442837),
   l = n(481060),
   o = n(607070),
@@ -24,14 +24,14 @@ clamp: !0
   };
 
 function _(e) {
-  var t, n, s, _;
+  var t, n, a, _;
   let {
 state: E,
 direction: h,
 cleanUp: I,
 children: m
   } = e, g = (0, r.e7)([o.Z], () => o.Z.useReducedMotion);
-  let p = (0, a.useSpring)((t = E, n = h, s = I, _ = g, t === l.TransitionStates.MOUNTED ? {
+  let p = (0, s.useSpring)((t = E, n = h, a = I, _ = g, t === l.TransitionStates.MOUNTED ? {
 from: {
   opacity: 0,
   transform: 'translateY(40px) translateX(0px)'
@@ -67,10 +67,10 @@ to: {
 config: u,
 immediate: _,
 onRest: () => {
-  s();
+  a();
 }
   }));
-  return (0, i.jsx)(a.animated.div, {
+  return (0, i.jsx)(s.animated.div, {
 style: p,
 className: c.step,
 children: (0, i.jsx)(l.ScrollerThin, {
@@ -84,16 +84,16 @@ function E(e) {
   let {
 currentStep: t,
 renderItem: n,
-items: a,
+items: s,
 getItemKey: r
-  } = e, o = s.useRef(t - 1);
-  s.useEffect(() => {
+  } = e, o = a.useRef(t - 1);
+  a.useEffect(() => {
 o.current = t;
   }, [t]);
-  let d = s.useMemo(() => null == o.current || t === o.current ? 0 : o.current < t ? 1 : -1, [t]),
-u = s.useCallback((e, t, s, a) => (0, i.jsx)(_, {
-  state: s,
-  cleanUp: a,
+  let d = a.useMemo(() => null == o.current || t === o.current ? 0 : o.current < t ? 1 : -1, [t]),
+u = a.useCallback((e, t, a, s) => (0, i.jsx)(_, {
+  state: a,
+  cleanUp: s,
   direction: d,
   children: n(t)
 }, e), [
@@ -103,7 +103,7 @@ u = s.useCallback((e, t, s, a) => (0, i.jsx)(_, {
   return (0, i.jsx)('div', {
 className: c.stepsTransitionGroup,
 children: (0, i.jsx)(l.TransitionGroup, {
-  items: a,
+  items: s,
   renderItem: u,
   getItemKey: r
 })

@@ -7,9 +7,9 @@ return g;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(338545),
   o = n(442837),
   c = n(481060),
@@ -23,15 +23,15 @@ function I(e) {
   let {
 index: t,
 onClick: n,
-name: a,
+name: s,
 isActive: _,
 animate: I,
 fillBackgroundColor: m,
 hasError: g
-  } = e, p = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), T = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY), S = s.useMemo(() => (0, u.j1)(m, T.hex()), [
+  } = e, p = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), T = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY), f = a.useMemo(() => (0, u.j1)(m, T.hex()), [
 m,
 T
-  ]), f = null != S, C = (0, l.useSpring)({
+  ]), S = null != f, C = (0, l.useSpring)({
 transform: _ ? 'translateX(0%)' : 'translateX(-100%)',
 config: {
   ...l.config.stiff,
@@ -54,12 +54,12 @@ children: [
   });
   return (0, i.jsx)(c.Tooltip, {
 color: g ? c.Tooltip.Colors.GREY : c.Tooltip.Colors.BRAND,
-text: g ? N : a,
-'aria-label': g ? E.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : a,
+text: g ? N : s,
+'aria-label': g ? E.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : s,
 shouldShow: null != n,
-tooltipStyle: S,
+tooltipStyle: f,
 tooltipClassName: r()(h.progressStepTooltip, {
-  [h.progressStepTooltipCustomColors]: !g && null != S
+  [h.progressStepTooltipCustomColors]: !g && null != f
 }),
 children: e => (0, i.jsxs)(c.Clickable, {
   ...e,
@@ -80,10 +80,10 @@ children: e => (0, i.jsxs)(c.Clickable, {
       children: (0, i.jsx)(l.animated.div, {
         style: {
           ...C,
-          ...S
+          ...f
         },
         className: r()(h.progressStepFill, {
-          [h.customProgressStepFill]: f
+          [h.customProgressStepFill]: S
         })
       })
     })
@@ -96,8 +96,8 @@ function m(e) {
   let {
 steps: t,
 currentStepIndex: n,
-furthestStepIndex: s,
-onStepClick: a,
+furthestStepIndex: a,
+onStepClick: s,
 stepFillColor: o,
 animationStyle: c,
 className: d
@@ -113,7 +113,7 @@ children: t.map(e => {
   } = e;
   return (0, i.jsx)(I, {
     name: r,
-    onClick: t <= s ? () => a(t) : void 0,
+    onClick: t <= a ? () => s(t) : void 0,
     isActive: t <= n,
     hasError: l,
     index: t,
@@ -128,8 +128,8 @@ function g(e) {
   let {
 className: t,
 isBackDisabled: n,
-isNextDisabled: s,
-onNextClick: a,
+isNextDisabled: a,
+onNextClick: s,
 onBackClick: o,
 nextButtonBackgroundColor: d,
 nextButtonClassName: u,
@@ -154,8 +154,8 @@ children: [
       color: c.Button.Colors.BRAND,
       look: c.Button.Looks.FILLED,
       size: c.Button.Sizes.MEDIUM,
-      onClick: a,
-      disabled: s,
+      onClick: s,
+      disabled: a,
       children: E.Z.Messages.NEXT
     })
   })

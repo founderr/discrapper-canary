@@ -4,8 +4,8 @@ return m;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(212093),
   o = n(410030),
@@ -22,14 +22,14 @@ function m(e) {
 categoryId: t,
 tab: n,
 onScroll: m
-  } = e, g = (0, o.ZP)(), p = (0, a.Wu)([c.ZP], () => {
+  } = e, g = (0, o.ZP)(), p = (0, s.Wu)([c.ZP], () => {
 var e, n;
 return null !== (n = null === (e = c.ZP.getDiscoverableGuilds()[t]) || void 0 === e ? void 0 : e.guilds) && void 0 !== n ? n : I;
-  }), T = (0, a.e7)([c.ZP], () => c.ZP.getLoadId()), {
-handleViewGuild: S,
-onGuildCardSeen: f
+  }), T = (0, s.e7)([c.ZP], () => c.ZP.getLoadId()), {
+handleViewGuild: f,
+onGuildCardSeen: S
   } = (0, E.g)(t, T), C = (0, u.Mf)(n), N = (0, u.a$)(n), A = (0, u.QW)(n);
-  return s.useEffect(() => {
+  return a.useEffect(() => {
 (0, l.K5)(t);
   }, [t]), (0, i.jsxs)(_.Z, {
 title: C,
@@ -46,9 +46,9 @@ children: [
     className: h.content,
     children: p.map((e, t) => (0, i.jsx)(d.Z, {
       guild: e,
-      onView: e => S(e, t),
+      onView: e => f(e, t),
       theme: g,
-      onGuildCardSeen: f
+      onGuildCardSeen: S
     }, e.id))
   })
 ]

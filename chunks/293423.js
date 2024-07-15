@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(584825),
+var a = n(481060),
+  s = n(584825),
   r = n(290348),
   l = n(934826),
   o = n(660196),
@@ -17,7 +17,7 @@ t.Z = e => {
   var t, n;
   let {
 guild: g
-  } = e, p = (0, a.GG)(g.id)[0];
+  } = e, p = (0, s.GG)(g.id)[0];
   (0, o.Z)({
 guildId: g.id,
 groupListingId: null == p ? void 0 : p.id,
@@ -26,7 +26,7 @@ relevantSubscriptionListingIds: null == p ? void 0 : p.subscription_listings_ids
   });
   let {
 activeSubscription: T
-  } = (0, l.Z)(null == p ? void 0 : p.id), S = (0, a.YB)(g.id), f = null == S ? void 0 : S.description, {
+  } = (0, l.Z)(null == p ? void 0 : p.id), f = (0, s.YB)(g.id), S = null == f ? void 0 : f.description, {
 editStateIds: C
   } = r.B7(null !== (t = null == p ? void 0 : p.id) && void 0 !== t ? t : null, g.id);
   return (0, i.jsxs)(i.Fragment, {
@@ -35,8 +35,8 @@ children: [
     title: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({
       serverName: g.toString()
     }),
-    description: null != f ? f : null,
-    coverImageAsset: null !== (n = null == S ? void 0 : S.cover_image_asset) && void 0 !== n ? n : null,
+    description: null != S ? S : null,
+    coverImageAsset: null !== (n = null == f ? void 0 : f.cover_image_asset) && void 0 !== n ? n : null,
     guild: g,
     children: [
       null != p ? (0, i.jsx)(c.Z, {
@@ -49,7 +49,7 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(s.HeadingLevel, {
+  (0, i.jsx)(a.HeadingLevel, {
     children: (0, i.jsx)(u.Z, {
       guildId: g.id,
       children: C.map(e => {

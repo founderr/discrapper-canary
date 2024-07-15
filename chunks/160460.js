@@ -4,8 +4,8 @@ return I;
   }
 });
 var i = n(735250),
-  s = n(399606),
-  a = n(260034),
+  a = n(399606),
+  s = n(260034),
   r = n(410030),
   l = n(650394),
   o = n(683301),
@@ -21,13 +21,13 @@ function I(e) {
   let {
 searchResultsQuery: I,
 categoryId: m
-  } = e, g = (0, s.e7)([o.ZP], () => o.ZP.isFetchingSearch()), p = (0, s.e7)([o.ZP], () => o.ZP.getDiscoverableGuilds().search), T = (0, s.e7)([o.ZP], () => o.ZP.getLoadId()), S = null !== (n = null === (t = p[I]) || void 0 === t ? void 0 : t[m]) && void 0 !== n ? n : h, f = (0, r.ZP)(), {
+  } = e, g = (0, a.e7)([o.ZP], () => o.ZP.isFetchingSearch()), p = (0, a.e7)([o.ZP], () => o.ZP.getDiscoverableGuilds().search), T = (0, a.e7)([o.ZP], () => o.ZP.getLoadId()), f = null !== (n = null === (t = p[I]) || void 0 === t ? void 0 : t[m]) && void 0 !== n ? n : h, S = (0, r.ZP)(), {
 handleViewGuild: C,
 onGuildCardSeen: N
   } = (0, u.g)(m, T);
   return (0, i.jsxs)(d.Z, {
 children: [
-  (0, i.jsx)(a.X, {
+  (0, i.jsx)(s.X, {
     variant: 'heading-xl/bold',
     className: E.heading,
     children: _.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({
@@ -35,12 +35,12 @@ children: [
     })
   }),
   (0, i.jsx)(l.Z, {
-    guilds: S.guilds,
+    guilds: f.guilds,
     loading: g,
     loadingPlaceholderCount: 12,
     onViewGuild: C,
     loadingGuildId: null,
-    theme: f,
+    theme: S,
     analyticsContext: c.P1.SEARCH,
     onGuildCardSeen: N
   })

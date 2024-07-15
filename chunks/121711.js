@@ -1,6 +1,6 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(948789),
+  a = n(470079),
+  s = n(948789),
   r = n(481060),
   l = n(100527),
   o = n(252618),
@@ -15,30 +15,30 @@ var i = n(735250),
   g = n(452081),
   p = n(981631),
   T = n(689938),
-  S = n(852595);
+  f = n(852595);
 t.Z = function(e) {
   let {} = e, t = (0, I.Z)(l.Z.QUEST_HOME_PAGE), {
 tabs: n,
-selectedTab: f,
+selectedTab: S,
 onSelectTab: C
   } = (0, g.z)(), {
 handleScroll: N,
 scrollPosition: A
-  } = (0, c.c)(), Z = (0, d.Z)({
+  } = (0, c.c)(), v = (0, d.Z)({
 scrollPosition: A
   }), {
-quests: L
-  } = (0, h.bA)(f.id);
-  s.useEffect(() => {
-!t && (0, a.uL)(p.Z5c.FRIENDS);
-  }, [t]), s.useEffect(() => {}, []);
-  let v = s.useCallback(() => {
+quests: Z
+  } = (0, h.bA)(S.id);
+  a.useEffect(() => {
+!t && (0, s.uL)(p.Z5c.FRIENDS);
+  }, [t]), a.useEffect(() => {}, []);
+  let L = a.useCallback(() => {
 window.open(E.Z.getArticleURL(p.BhN.QUESTS_LEARN_MORE));
   }, []);
   return ((0, o.Tt)({
 location: T.Z.Messages.QUESTS
   }), t) ? (0, i.jsxs)('div', {
-className: S.container,
+className: f.container,
 children: [
   (0, i.jsx)(_.Z, {
     leading: (0, i.jsx)(r.QuestsIcon, {
@@ -46,40 +46,40 @@ children: [
       size: 'md'
     }),
     tabs: n,
-    selectedTab: f,
+    selectedTab: S,
     onTabSelect: C,
     scrollPosition: A,
-    backgroundStyle: Z
+    backgroundStyle: v
   }),
   (0, i.jsx)(u.Z, {
     title: T.Z.Messages.QUESTS_HOME_HERO_TITLE,
     description: T.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
     backgroundImageUrl: 'https://cdn.discordapp.com/assets/discovery/quest-mountain-hero.png',
     onScroll: N,
-    bannerContainerClassName: S.hero,
+    bannerContainerClassName: f.hero,
     button: (0, i.jsxs)(r.Button, {
       size: 'medium',
       color: r.ButtonColors.TRANSPARENT,
-      className: S.button,
-      onClick: v,
-      innerClassName: S.innerButton,
+      className: f.button,
+      onClick: L,
+      innerClassName: f.innerButton,
       children: [
         (0, i.jsx)(r.Text, {
           variant: 'text-md/semibold',
           color: 'always-white',
-          className: S.externalLinkText,
+          className: f.externalLinkText,
           children: T.Z.Messages.LEARN_MORE
         }),
         (0, i.jsx)(r.LinkExternalSmallIcon, {
-          className: S.icon,
+          className: f.icon,
           color: 'var(--white-500)'
         })
       ]
     }),
     children: (0, i.jsx)('div', {
-      className: S.gridContainer,
+      className: f.gridContainer,
       children: (0, i.jsx)(m.Z, {
-        quests: L
+        quests: Z
       })
     })
   })

@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(981631),
   l = n(198568);
 let o = {
@@ -40,9 +40,9 @@ t.Z = e => {
   let {
 agency: t,
 rating: n,
-className: s
+className: a
   } = e, r = d[t][n];
   return null == r ? null : (0, i.jsx)('div', {
-className: a()(l.contentRating, r, s)
+className: s()(l.contentRating, r, a)
   });
 };
