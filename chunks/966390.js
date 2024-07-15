@@ -109,18 +109,25 @@ if (t === y.evJ.AUTOMOD_MESSAGE_BLOCKED) {
   });
   return;
 }
-if (t !== y.evJ.GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS)
-  U ? x.reject(new u.Hx({
-    status: t,
-    body: null != n ? n : {}
-  }, t)) : (0, l.openUploadError)({
-    title: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-    help: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-  }), '' !== G.content && '' === v.Z.getDraft(_, b) && a.Z.saveDraft(_, G.content, b), 0 === O.Z.getUploadCount(_, b) && s.Z.setUploads({
+if (t !== y.evJ.GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS) {
+  if (U)
+    x.reject(new u.Hx({
+      status: t,
+      body: null != n ? n : {}
+    }, t));
+  else {
+    var E;
+    (0, l.openUploadError)({
+      title: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
+      help: null !== (E = null == n ? void 0 : n.message) && void 0 !== E ? E : D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
+    });
+  }
+  '' !== G.content && '' === v.Z.getDraft(_, b) && a.Z.saveDraft(_, G.content, b), 0 === O.Z.getUploadCount(_, b) && s.Z.setUploads({
     channelId: _,
     uploads: L,
     draftType: b
   });
+}
   }), w.on('complete', (e, t) => {
 i.Z.dispatch({
   type: 'UPLOAD_COMPLETE',
