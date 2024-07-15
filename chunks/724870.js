@@ -6,14 +6,14 @@ return f;
 return I;
   }
 }), t(789020);
-var i = t(735250);
+var r = t(735250);
 t(470079);
-var r = t(512722),
-  o = t.n(r),
+var i = t(512722),
+  o = t.n(i),
   l = t(481060),
   u = t(496929),
-  s = t(171246),
-  a = t(509545),
+  a = t(171246),
+  s = t(509545),
   c = t(55563),
   d = t(987209),
   _ = t(981631);
@@ -21,11 +21,11 @@ var r = t(512722),
 function f(e) {
   let {
 initialPlanId: n,
-activeSubscription: r,
+activeSubscription: i,
 analyticsObject: o,
 analyticsLocation: u,
-analyticsLocations: s,
-analyticsSubscriptionType: a,
+analyticsLocations: a,
+analyticsSubscriptionType: s,
 renderHeader: c,
 planGroup: f,
 skuId: E,
@@ -34,8 +34,8 @@ reviewWarningMessage: g,
 applicationId: p,
 showBenefitsFirst: S,
 eligibleApplicationSubscriptionGuilds: C,
-onComplete: m,
-forcesTransitionToGuild: T
+onComplete: T,
+forcesTransitionToGuild: m
   } = e;
   (0, l.openModalLazy)(async () => {
 let {
@@ -56,32 +56,32 @@ let {
   t.e('95900'),
   t.e('95854'),
   t.e('75018')
-]).then(t.bind(t, 759386)), h = _({
+]).then(t.bind(t, 759386)), A = _({
   guildId: I,
   showBenefitsFirst: S,
   eligibleApplicationSubscriptionGuilds: C
 });
-return t => (0, i.jsx)(e, {
+return t => (0, r.jsx)(e, {
   applicationId: p,
-  activeSubscription: r,
-  stepConfigs: h,
+  activeSubscription: i,
+  stepConfigs: A,
   skuIDs: [E],
-  children: (0, i.jsx)(d.KB, {
-    children: (0, i.jsx)(l, {
+  children: (0, r.jsx)(d.KB, {
+    children: (0, r.jsx)(l, {
       ...t,
       initialPlanId: n,
       skuId: E,
-      analyticsLocations: s,
+      analyticsLocations: a,
       analyticsObject: o,
       analyticsLocation: u,
-      analyticsSubscriptionType: a,
+      analyticsSubscriptionType: s,
       renderHeader: c,
       planGroup: f,
       reviewWarningMessage: g,
       applicationId: p,
       guildId: null != I ? I : void 0,
-      onComplete: m,
-      forcesTransitionToGuild: T
+      onComplete: T,
+      forcesTransitionToGuild: m
     })
   })
 });
@@ -97,23 +97,23 @@ async function I(e) {
   var n;
   let {
 applicationId: t,
-skuId: i,
-initialPlanId: r,
+skuId: r,
+initialPlanId: i,
 analyticsLocationObject: l,
 analyticsLocations: u,
 renderHeader: d
-  } = e, I = c.Z.get(i), g = a.Z.getForSKU(i);
+  } = e, I = c.Z.get(r), g = s.Z.getForSKU(r);
   o()(null != I, 'Failed to find SKU');
-  let p = (0, s.KW)(I.flags);
-  o()(p, 'Guild application subscriptions unsupported!'), await E(t, i), f({
-initialPlanId: null != r ? r : null === (n = g[0]) || void 0 === n ? void 0 : n.id,
+  let p = (0, a.KW)(I.flags);
+  o()(p, 'Guild application subscriptions unsupported!'), await E(t, r), f({
+initialPlanId: null != i ? i : null === (n = g[0]) || void 0 === n ? void 0 : n.id,
 activeSubscription: null,
 analyticsLocations: u,
 analyticsLocationObject: l,
 analyticsSubscriptionType: _.NYc.APPLICATION,
 renderHeader: d,
 planGroup: [],
-skuId: i,
+skuId: r,
 guildId: null,
 eligibleApplicationSubscriptionGuilds: [],
 showBenefitsFirst: !1,

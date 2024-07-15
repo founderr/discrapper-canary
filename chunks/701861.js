@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(239091),
   u = n(194359),
   _ = n(703656),
-  h = n(592125),
-  E = n(131951),
+  E = n(592125),
+  h = n(131951),
   I = n(51144),
   m = n(321488),
   g = n(417183),
@@ -38,7 +38,7 @@ onSelect: n
 u.Z.removeFriend(t.id, {
   location: 'Friends'
 });
-  }, a = (0, l.e7)([E.Z], () => E.Z.supports(C.AN.VIDEO));
+  }, a = (0, l.e7)([h.Z], () => h.Z.supports(C.AN.VIDEO));
   return (0, i.jsxs)(o.Menu, {
 navId: 'friend-row',
 'aria-label': f.Z.Messages.USER_ACTIONS_MENU_LABEL,
@@ -155,7 +155,7 @@ super(...e), A(this, 'peopleListItemRef', s.createRef()), A(this, 'state', {
     user: t
   } = this.props;
   e.stopPropagation();
-  let n = r().find(h.Z.getMutablePrivateChannels(), e => e.type === S.d4z.DM && e.getRecipientId() === t.id);
+  let n = r().find(E.Z.getMutablePrivateChannels(), e => e.type === S.d4z.DM && e.getRecipientId() === t.id);
   null != n ? (0, _.uL)(S.Z5c.CHANNEL(S.ME, n.id)) : c.Z.openPrivateChannel(t.id);
 }), A(this, 'handleOpenActionsMenu', e => {
   let {

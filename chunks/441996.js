@@ -69,11 +69,11 @@ super(...e), d(this, 'dataChangedAt', void 0), d(this, 'fillColor', void 0), d(t
   if (s.length < 2)
     return;
   let _ = Math.max(Math.min((e - this.dataChangedAt) / a, 1), 0),
-    h = i.getContext('2d'),
-    E = this.maxValue;
-  h.strokeStyle = r, h.lineWidth = c;
-  let I = i.height - h.lineWidth,
-    m = h.createLinearGradient(0, 0, 0, I);
+    E = i.getContext('2d'),
+    h = this.maxValue;
+  E.strokeStyle = r, E.lineWidth = c;
+  let I = i.height - E.lineWidth,
+    m = E.createLinearGradient(0, 0, 0, I);
   if (null != u)
     m.addColorStop(0, u);
   else {
@@ -84,19 +84,19 @@ super(...e), d(this, 'dataChangedAt', void 0), d(this, 'fillColor', void 0), d(t
     } = o.oo(r);
     m.addColorStop(0, 'rgba('.concat(e, ', ').concat(t, ', ').concat(n, ', 0)'));
   }
-  m.addColorStop(1, this.fillColor), h.fillStyle = m;
+  m.addColorStop(1, this.fillColor), E.fillStyle = m;
   let g = s.length >= l ? l : s.length;
-  h.setTransform(1, 0, 0, -1, 0, i.height), h.clearRect(0, 0, i.width, i.height), h.translate(0, 0.5 * h.lineWidth);
+  E.setTransform(1, 0, 0, -1, 0, i.height), E.clearRect(0, 0, i.width, i.height), E.translate(0, 0.5 * E.lineWidth);
   let p = Math.floor(i.width / (g - 3)),
     T = 0.5 * p;
-  h.translate(p - p * _, 0), h.beginPath();
+  E.translate(p - p * _, 0), E.beginPath();
   let S = -p;
   s.forEach((e, i) => {
     t = {
       x: S,
-      y: I * e / E
-    }, 0 === i ? h.moveTo(t.x, t.y) : h.bezierCurveTo(n.x + T, n.y, t.x - T, t.y, t.x, t.y), n = t, S += p;
-  }), h.stroke(), h.lineTo(S - p, 0), h.lineTo(0, 0), h.fill(), d && _ < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
+      y: I * e / h
+    }, 0 === i ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + T, n.y, t.x - T, t.y, t.x, t.y), n = t, S += p;
+  }), E.stroke(), E.lineTo(S - p, 0), E.lineTo(0, 0), E.fill(), d && _ < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
 });
   }
 }

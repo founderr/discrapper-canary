@@ -7,8 +7,8 @@ var i, s, a = n(735250),
   d = n(481060),
   u = n(442837),
   _ = n(393238),
-  h = n(607070),
-  E = n(963202),
+  E = n(607070),
+  h = n(963202),
   I = n(353093),
   m = n(605236),
   g = n(931515),
@@ -28,7 +28,7 @@ friction: 60
   L = r.memo(function(e) {
 let {
   width: t
-} = e, n = (0, u.e7)([h.Z], () => h.Z.useReducedMotion), i = (0, S.GN)(e => e.mode, o.Z), [s, d] = r.useState(!0), _ = (0, l.useSpring)({
+} = e, n = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), i = (0, S.GN)(e => e.mode, o.Z), [s, d] = r.useState(!0), _ = (0, l.useSpring)({
   from: {
     opacity: 0
   },
@@ -41,12 +41,12 @@ let {
   onRest: () => d(!1)
 }), g = (0, S.GN)(e => e.userUpsellScreen, o.Z), L = (0, S.GN)(e => e.started, o.Z), {
   guilds: v
-} = (0, E.C3)({
+} = (0, h.C3)({
   location: 'ClanDiscoveryAdminContainer',
   includeConverted: !0
 }), O = r.useMemo(() => v.filter(e => !(0, I.EJ)(e)), [v]), {
   enableApplication: R
-} = (0, E.Fg)('ClanDiscoveryAdminContainer'), x = (0, m.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
+} = (0, h.Fg)('ClanDiscoveryAdminContainer'), x = (0, m.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
 switch (r.useEffect(() => {
     !x && (0, m.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
       dismissAction: N.L.TAKE_ACTION,

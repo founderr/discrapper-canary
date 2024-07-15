@@ -7,8 +7,8 @@ var r = n(756647),
   d = n(899742),
   u = n(457330),
   _ = n(533307),
-  h = n(447543),
-  E = n(962220),
+  E = n(447543),
+  h = n(962220),
   I = n(703656),
   m = n(314897),
   g = n(594174),
@@ -40,7 +40,7 @@ async handler(e) {
     }
   } = e, {
     invite: n
-  } = await h.Z.resolveInvite(t, 'Desktop Modal');
+  } = await E.Z.resolveInvite(t, 'Desktop Modal');
   if (null == n)
     throw new f.Z({
       errorCode: A.lTL.INVALID_INVITE
@@ -68,7 +68,7 @@ async handler(e) {
     return;
   let {
     guildTemplate: i
-  } = await E.Z.resolveGuildTemplate(t);
+  } = await h.Z.resolveGuildTemplate(t);
   if (null == i)
     throw new f.Z({
       errorCode: A.lTL.INVALID_GUILD_TEMPLATE

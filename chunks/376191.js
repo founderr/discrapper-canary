@@ -14,8 +14,8 @@ var s = n(442837),
   d = n(125988),
   u = n(43267),
   _ = n(522289),
-  h = n(699516),
-  E = n(546591),
+  E = n(699516),
+  h = n(546591),
   I = n(51144),
   m = n(998502),
   g = n(620924),
@@ -60,7 +60,7 @@ function A(e) {
 channel: n,
 otherUser: o,
 active: _
-  } = e, m = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), p = (0, s.e7)([h.Z], () => null == o ? null : h.Z.getNickname(o.id)), A = !m && _, Z = (0, g.c)(n), {
+  } = e, m = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), p = (0, s.e7)([E.Z], () => null == o ? null : E.Z.getNickname(o.id)), A = !m && _, Z = (0, g.c)(n), {
 avatarDecorationSrc: L
   } = (0, d.Z)({
 user: o,
@@ -98,7 +98,7 @@ children: [
           })
         ]
       }),
-      (0, i.jsx)(E.Z, {
+      (0, i.jsx)(h.Z, {
         hoverText: (0, i.jsx)(T.Z, {
           channel: n
         }),

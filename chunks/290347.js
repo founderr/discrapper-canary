@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(607070),
   u = n(605236),
   _ = n(524444),
-  h = n(529815),
-  E = n(250496),
+  E = n(529815),
+  h = n(250496),
   I = n(153124),
   m = n(810090),
   g = n(626135),
@@ -203,13 +203,13 @@ children: [
             })
           });
         }
-        return 'embed' === a.type ? (0, i.jsx)(h.BC, {
+        return 'embed' === a.type ? (0, i.jsx)(E.BC, {
           className: r()(C.video, f),
           allowFullScreen: !1,
           href: a.href,
           thumbnail: a.thumbnail,
           video: a.embed,
-          provider: E.pn.YOUTUBE,
+          provider: h.pn.YOUTUBE,
           maxWidth: a.embed.width,
           maxHeight: a.embed.height,
           renderVideoComponent: _.lV,

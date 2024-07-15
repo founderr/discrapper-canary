@@ -14,8 +14,8 @@ var s = n(442837),
   d = n(626135),
   u = n(51144),
   _ = n(480387),
-  h = n(726745),
-  E = n(251423),
+  E = n(726745),
+  h = n(251423),
   I = n(383832),
   m = n(981631),
   g = n(689938),
@@ -26,7 +26,7 @@ function T() {
 t = (0, s.e7)([o.Z], () => o.Z.hidePersonalInformation),
 {
   multiAccountUsers: n
-} = (0, E.L)(),
+} = (0, h.L)(),
 T = t => {
   if (t !== (null == e ? void 0 : e.id))
     d.default.track(m.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
@@ -38,7 +38,7 @@ T = t => {
 S = n.map(n => {
   let s = new l.Z(n),
     o = s.id === (null == e ? void 0 : e.id),
-    c = n.tokenStatus === h.q.INVALID,
+    c = n.tokenStatus === E.q.INVALID,
     d = t ? null : '#'.concat(s.discriminator);
   return (0, i.jsx)(a.MenuItem, {
     id: s.id,

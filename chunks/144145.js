@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(726542),
   u = n(620662),
   _ = n(841784),
-  h = n(802856),
-  E = n(594190),
+  E = n(802856),
+  h = n(594190),
   I = n(592745),
   m = n(553795),
   g = n(757266),
@@ -37,7 +37,7 @@ let {
   let {
     activity: t
   } = e;
-  return (0, h.Z)(t);
+  return (0, E.Z)(t);
 });
 return n || !s ? null : (0, i.jsx)(r.MenuItem, {
   id: 'xbox-connect',
@@ -51,7 +51,7 @@ let {
   currentActivities: t
 } = e, n = s.useContext(S.AnalyticsContext);
 return (0, a.Wu)([
-  E.ZP,
+  h.ZP,
   p.Z,
   I.Z,
   T.Z,
@@ -74,7 +74,7 @@ return (0, a.Wu)([
       branchId: null != s ? s.branchId : null
     }),
     isLaunching: I.Z.launchingGames.has(i.id),
-    isRunning: E.ZP.getRunningVerifiedApplicationIds().includes(i.id),
+    isRunning: h.ZP.getRunningVerifiedApplicationIds().includes(i.id),
     location: n.location
   };
 }), [

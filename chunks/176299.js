@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(873546),
   u = n(442837),
   _ = n(481060),
-  h = n(711237),
-  E = n(532835),
+  E = n(711237),
+  h = n(532835),
   I = n(290297),
   m = n(918854),
   g = n(279240),
@@ -67,8 +67,8 @@ var i = n(735250),
   ed = n(256638),
   eu = n(663701),
   e_ = n(410575),
-  eh = n(425369),
-  eE = n(715702),
+  eE = n(425369),
+  eh = n(715702),
   eI = n(981631),
   em = n(176505),
   eg = n(290511),
@@ -270,8 +270,8 @@ return null != t.params.guildId ? (0, i.jsx)(U.Z, {
   inviteCode: t.params.inviteCode
 }) : null;
   },
-  eD = () => (0, i.jsx)(eh.Z, {}),
-  ey = () => (0, i.jsx)(eE.Z, {}),
+  eD = () => (0, i.jsx)(eE.Z, {}),
+  ey = () => (0, i.jsx)(eh.Z, {}),
   ej = function() {
 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
 return function(t) {
@@ -341,13 +341,13 @@ hasNotice: t,
 sidebarTheme: n,
 hideSidebar: s
   } = e;
-  (0, E.t)(!0);
+  (0, h.t)(!0);
   let a = 'app view user trigger debugging';
-  h.R6.useExperiment({
+  E.R6.useExperiment({
 location: a
   }, {
 autoTrackExposure: !1
-  }), h.R6.trackExposure({
+  }), E.R6.trackExposure({
 location: a
   });
   let l = (0, u.e7)([T.Z], () => T.Z.isFullscreenInContext());
@@ -412,23 +412,23 @@ _ = function() {
   let t = (0, l.TH)();
   return (null === (e = (0, l.LX)(t.pathname, eI.Z5c.COLLECTIBLES_SHOP_FULLSCREEN)) || void 0 === e ? void 0 : e.isExact) === !0;
 }(),
-h = (0, u.e7)([H.Z], () => H.Z.getIsOpen()),
-E = (0, l.$B)([
+E = (0, u.e7)([H.Z], () => H.Z.getIsOpen()),
+h = (0, l.$B)([
   eI.Z5c.CHANNEL(eI.ME, ':channelId'),
   eI.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')
 ]),
-m = (null == E ? void 0 : null === (e = E.params) || void 0 === e ? void 0 : e.channelId) === em.oC.GUILD_ONBOARDING,
+m = (null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === em.oC.GUILD_ONBOARDING,
 g = s.useCallback(() => B.Z.openSidebar(), []);
   return (0, i.jsx)(i.Fragment, {
 children: (0, i.jsxs)('div', {
   className: eT.container,
   children: [
-    h && !_ && (0, i.jsx)(j.Z, {
+    E && !_ && (0, i.jsx)(j.Z, {
       className: eT.guilds,
       themeOverride: n
     }),
     (0, i.jsx)(x.Z.Provider, {
-      value: (null == E ? void 0 : E.params.guildId) === eI.ME ? void 0 : null == E ? void 0 : E.params.guildId,
+      value: (null == h ? void 0 : h.params.guildId) === eI.ME ? void 0 : null == h ? void 0 : h.params.guildId,
       children: (0, i.jsxs)('div', {
         className: eT.base,
         children: [
@@ -440,7 +440,7 @@ children: (0, i.jsxs)('div', {
               (0, i.jsx)(eV, {
                 hasNotice: t,
                 sidebarTheme: n,
-                hideSidebar: a || r || c || _ || m || !h
+                hideSidebar: a || r || c || _ || m || !E
               }),
               (0, i.jsx)(I.Z.Provider, {
                 value: g,

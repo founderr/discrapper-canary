@@ -8,7 +8,7 @@ var i = n(735250),
   d = n(420212),
   u = n(689938),
   _ = n(576513);
-let h = {
+let E = {
   mass: 1,
   tension: 600,
   friction: 60,
@@ -18,15 +18,15 @@ t.Z = function(e) {
   let {
 children: t,
 onClose: n
-  } = e, E = s.useCallback(() => {
+  } = e, h = s.useCallback(() => {
 (0, c.fH)(c.v0.DISCOVERY), null == n || n();
   }, [n]);
   s.useEffect(() => {
 let e = e => {
-  e.key === d.vn.ESCAPE && E();
+  e.key === d.vn.ESCAPE && h();
 };
 return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
-  }, [E]);
+  }, [h]);
   let I = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
 m = (0, a.useSpring)({
   from: {
@@ -35,7 +35,7 @@ m = (0, a.useSpring)({
   to: {
     opacity: 1
   },
-  config: h,
+  config: E,
   delay: 500,
   immediate: I
 });
@@ -45,7 +45,7 @@ children: [
   (0, i.jsx)('div', {
     className: _.saveContainer,
     children: (0, i.jsx)(l.Button, {
-      onClick: E,
+      onClick: h,
       look: l.ButtonLooks.OUTLINED,
       color: l.ButtonColors.PRIMARY,
       children: u.Z.Messages.SAVE

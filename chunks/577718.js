@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(282051),
   u = n(243778),
   _ = n(26323),
-  h = n(433280),
-  E = n(34131),
+  E = n(433280),
+  h = n(34131),
   I = n(434404),
   m = n(567458),
   g = n(782959),
@@ -145,7 +145,7 @@ children: (() => {
       });
     case a.z.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
       return (0, i.jsx)(j, {
-        renderPopout: (0, i.jsx)(h.Z, {
+        renderPopout: (0, i.jsx)(E.Z, {
           guildId: s.id,
           markAsDismissed: w
         }),
@@ -239,7 +239,7 @@ children: (() => {
       });
     case a.z.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
       return (0, i.jsx)(j, {
-        renderPopout: (0, i.jsx)(E.Z, {
+        renderPopout: (0, i.jsx)(h.Z, {
           guildId: s.id,
           markAsDismissed: w
         }),

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return h;
+return E;
   }
 });
 var i = n(735250);
@@ -15,7 +15,7 @@ var s = n(481060),
   u = n(689938),
   _ = n(893895);
 
-function h(e) {
+function E(e) {
   let {
 markAsDismissed: t
   } = e, {

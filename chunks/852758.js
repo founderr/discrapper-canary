@@ -19,8 +19,8 @@ var i = n(735250),
   d = n(37234),
   u = n(809206),
   _ = n(110924),
-  h = n(714338),
-  E = n(213609),
+  E = n(714338),
+  h = n(213609),
   I = n(144114),
   m = n(210887),
   g = n(23434),
@@ -44,7 +44,7 @@ m.Z
 action: g.Z.getAction(),
 theme: m.Z.theme
   })), L = S.Z.getVerificationTypes(e), [v, O] = s.useState(0), R = (0, _.Z)(L);
-  (0, E.Z)({
+  (0, h.Z)({
 type: a.ImpressionTypes.MODAL,
 name: a.ImpressionNames.USER_ACTION_REQUIRED,
 properties: {
@@ -82,8 +82,8 @@ b = () => {
     Layer: T.ZP
   });
 };
-  return s.useEffect(() => (h.Z.disable(), () => {
-h.Z.enable();
+  return s.useEffect(() => (E.Z.disable(), () => {
+E.Z.enable();
   }), []), s.useEffect(() => {
 (null == R ? void 0 : R[0]) === C.PUi.PHONE && (null == L ? void 0 : L[0]) === C.PUi.EMAIL && (0, o.openModalLazy)(async () => {
   let {

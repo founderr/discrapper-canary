@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(449934),
   u = n(768581),
   _ = n(693546),
-  h = n(863249),
-  E = n(944163),
+  E = n(863249),
+  h = n(944163),
   I = n(246364),
   m = n(937111),
   g = n(523924),
@@ -26,7 +26,7 @@ t.Z = e => {
   let {
 guildId: Z,
 inviteCode: L
-  } = e, [v, O] = s.useState(C.hO.INITIAL), R = (0, a.e7)([E.Z], () => E.Z.get(Z)), x = (0, a.e7)([m.Z], () => m.Z.getRequest(Z)), b = (0, a.e7)([c.Z], () => c.Z.getGuild(Z)), {
+  } = e, [v, O] = s.useState(C.hO.INITIAL), R = (0, a.e7)([h.Z], () => h.Z.get(Z)), x = (0, a.e7)([m.Z], () => m.Z.getRequest(Z)), b = (0, a.e7)([c.Z], () => c.Z.getGuild(Z)), {
 hasFetchedRequestToJoinGuilds: P,
 guildPreviewDisabled: M
   } = (0, a.cj)([m.Z], () => ({
@@ -45,7 +45,7 @@ Z
   O(t => Math.max(t, e));
 }, []),
 y = async e => {
-  await h.Z.submitVerificationForm(Z, e);
+  await E.Z.submitVerificationForm(Z, e);
 }, j = () => {
   _.Z.resetGuildJoinRequest(Z);
 };

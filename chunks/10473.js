@@ -15,14 +15,14 @@ writable: !0
 let d = [],
   u = !1,
   _ = !1,
-  h = {
+  E = {
 status: 'unloaded'
   },
-  E = {};
+  h = {};
 class I extends(i = r.ZP.Store) {
   getSearchResult(e) {
-let t = E[a().v3(JSON.stringify(e))];
-return null == t || t.loadedAt < Date.now() - o.Z.Millis.HOUR ? h : t;
+let t = h[a().v3(JSON.stringify(e))];
+return null == t || t.loadedAt < Date.now() - o.Z.Millis.HOUR ? E : t;
   }
   hasLoadedStaticClanDiscovery() {
 return u;
@@ -45,6 +45,6 @@ d = e.clans, u = !0, _ = !1;
 _ = !1;
   },
   FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS: function(e) {
-E[e.criteriaHash] = e.searchResult;
+h[e.criteriaHash] = e.searchResult;
   }
 });

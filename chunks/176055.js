@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(749210),
   u = n(558381),
   _ = n(666743),
-  h = n(41776),
-  E = n(703656),
+  E = n(41776),
+  h = n(703656),
   I = n(769654),
   m = n(601964),
   g = n(430824),
@@ -76,9 +76,9 @@ if (t && n)
 let d = new m.ZP(e),
   u = N.Z.Messages.LURKER_MODE_VIEW_GUILD,
   _ = this.handleJoinOrView,
-  h = c.Button.Looks.FILLED,
-  E = c.Button.Colors.PRIMARY;
-return a ? n ? (h = c.Button.Looks.OUTLINED, E = A.buttonColorInGuild, u = (0, i.jsxs)(T.Z, {
+  E = c.Button.Looks.FILLED,
+  h = c.Button.Colors.PRIMARY;
+return a ? n ? (E = c.Button.Looks.OUTLINED, h = A.buttonColorInGuild, u = (0, i.jsxs)(T.Z, {
   align: T.Z.Align.CENTER,
   children: [
     (0, i.jsx)('div', {
@@ -124,8 +124,8 @@ return a ? n ? (h = c.Button.Looks.OUTLINED, E = A.buttonColorInGuild, u = (0, i
           size: c.Button.Sizes.SMALL,
           className: A.actionButton,
           fullWidth: !0,
-          color: E,
-          look: h,
+          color: h,
+          look: E,
           onClick: _,
           children: u
         })
@@ -157,7 +157,7 @@ super(...e), Z(this, 'handleJoinOrView', async () => {
   let e = {
     redirect_to: f.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId)
   };
-  (0, E.uL)(f.Z5c.LOGIN, {
+  (0, h.uL)(f.Z5c.LOGIN, {
     search: (0, l.stringify)(e)
   });
 });
@@ -165,11 +165,11 @@ super(...e), Z(this, 'handleJoinOrView', async () => {
 }
 t.Z = (0, _.Z)(o.ZP.connectStores([
   g.Z,
-  h.Z
+  E.Z
 ], e => {
   let {
 guild: t
-  } = e, n = h.Z.isLurking(t.id);
+  } = e, n = E.Z.isLurking(t.id);
   return {
 isInGuild: null != g.Z.getGuild(t.id) && !n,
 isLurking: n

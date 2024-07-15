@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(134432),
   u = n(451603),
   _ = n(885714),
-  h = n(940627),
-  E = n(806519),
+  E = n(940627),
+  h = n(806519),
   I = n(768581),
   m = n(900849),
   g = n(556017),
@@ -146,8 +146,8 @@ children: [
               (0, i.jsxs)('div', {
                 className: N.header,
                 children: [
-                  (0, i.jsx)(E.ZP, {
-                    mask: E.ZP.Masks.SQUIRCLE,
+                  (0, i.jsx)(h.ZP, {
+                    mask: h.ZP.Masks.SQUIRCLE,
                     width: 32,
                     height: 32,
                     children: (0, i.jsx)('img', {
@@ -160,7 +160,7 @@ children: [
                     className: N.headerName,
                     children: [
                       (0, i.jsx)('div', {
-                        children: (0, i.jsx)(h.Z, {
+                        children: (0, i.jsx)(E.Z, {
                           guild: a,
                           className: N.guildBadge,
                           size: 16

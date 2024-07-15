@@ -3,10 +3,10 @@ n.d(t, {
 return _;
   },
   PJ: function() {
-return E;
+return h;
   },
   fH: function() {
-return h;
+return E;
   },
   hz: function() {
 return l;
@@ -71,7 +71,7 @@ selectedTraits: e.selectedTraits
   })
 }));
 
-function h(e) {
+function E(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
 n = _.getState().mode,
 i = _.getState().started;
@@ -82,7 +82,7 @@ started: t || i
   });
 }
 
-function E() {
+function h() {
   _.setState({
 started: !1,
 mode: 'admin_upsell',

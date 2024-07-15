@@ -17,16 +17,16 @@ guild: t,
 selectedGame: n
   } = e, d = (0, r.J)({
 selectedGame: n
-  }), u = i.useMemo(() => null == d ? [] : [d], [d]), _ = (0, l.n)(d), h = (0, a.Cc)(null == t ? void 0 : t.id), [E, I] = (0, a.L_)(null == t ? void 0 : t.id);
+  }), u = i.useMemo(() => null == d ? [] : [d], [d]), _ = (0, l.n)(d), E = (0, a.Cc)(null == t ? void 0 : t.id), [h, I] = (0, a.L_)(null == t ? void 0 : t.id);
   return i.useEffect(() => {
-!E && null != t && I();
+!h && null != t && I();
   }, [
 t,
-E,
+h,
 I
   ]), i.useMemo(() => {
 var e;
-return null != h ? h : null == t ? null : {
+return null != E ? E : null == t ? null : {
   ..._[_.length - 1],
   id: t.id,
   name: t.name,
@@ -43,6 +43,6 @@ return null != h ? h : null == t ? null : {
 u,
 t,
 _,
-h
+E
   ]);
 }

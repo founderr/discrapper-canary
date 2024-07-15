@@ -9,8 +9,8 @@ var s = n(481060),
   d = n(699516),
   u = n(594174),
   _ = n(626135),
-  h = n(621853),
-  E = n(981631),
+  E = n(621853),
+  h = n(981631),
   I = n(616922);
 let m = null;
 async function g(e) {
@@ -19,7 +19,7 @@ async function g(e) {
 userId: p,
 section: T,
 subsection: S,
-guildId: C = E.ME,
+guildId: C = h.ME,
 channelId: f,
 friendToken: N,
 analyticsLocation: A,
@@ -27,7 +27,7 @@ analyticsLocation: A,
   } = e, L = u.default.getUser(p);
   if (null == L)
 return;
-  let v = h.Z.getUserProfile(p),
+  let v = E.Z.getUserProfile(p),
 O = c.Z.getPrimaryActivity(p),
 R = c.Z.getStatus(p),
 x = c.Z.isMobileOnline(p),
@@ -37,8 +37,8 @@ x = c.Z.isMobileOnline(p),
   application_id: M
 } = null != O ? O : {},
 D = null != M ? o.Z.getApplication(M) : null,
-y = x ? E.j28.ONLINE_MOBILE : E.j28.ONLINE_DESKTOP,
-j = R === E.Skl.ONLINE ? y : R;
+y = x ? h.j28.ONLINE_MOBILE : h.j28.ONLINE_DESKTOP,
+j = R === h.Skl.ONLINE ? y : R;
   m = await (0, s.openModalLazy)(async () => {
 let {
   default: e
@@ -54,9 +54,9 @@ return t => (0, i.jsx)(e, {
   ...t,
   ...Z
 });
-  }), _.default.track(E.rMx.OPEN_MODAL, {
+  }), _.default.track(h.rMx.OPEN_MODAL, {
 type: 'Profile Modal',
-guild_id: C !== E.ME ? C : null,
+guild_id: C !== h.ME ? C : null,
 channel_id: f,
 other_user_id: p,
 application_id: null !== (a = null == O ? void 0 : O.application_id) && void 0 !== a ? a : null,
@@ -66,7 +66,7 @@ is_friend: d.Z.isFriend(p),
 has_images: !!(null !== (g = null == P ? void 0 : P.large_image) && void 0 !== g ? g : null == P ? void 0 : P.small_image),
 party_max: null == b ? void 0 : null === (t = b.size) || void 0 === t ? void 0 : t[1],
 party_id: null == b ? void 0 : b.id,
-party_platform: (0, I.Ps)(null == b ? void 0 : b.id) ? E.ABu.SPOTIFY : null,
+party_platform: (0, I.Ps)(null == b ? void 0 : b.id) ? h.ABu.SPOTIFY : null,
 game_platform: (0, l.Z)(O),
 profile_user_status: j,
 profile_has_nitro_customization: (null == v ? void 0 : v.banner) != null,

@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(472144),
   u = n(644646),
   _ = n(69439),
-  h = n(46140),
-  E = n(689938),
+  E = n(46140),
+  h = n(689938),
   I = n(855892);
 
 function m(e) {
@@ -28,7 +28,7 @@ day: '2-digit'
   }), f = (0, o.D)({
 quest: m,
 taskDetails: T,
-location: h.dr.QUEST_HOME_DESKTOP,
+location: E.dr.QUEST_HOME_DESKTOP,
 questContent: l.jn.QUEST_HOME_DESKTOP,
 useV2Variants: !0,
 expiryDate: C
@@ -38,7 +38,7 @@ color: 'text-brand',
 tag: 'span',
 className: I.header,
 children: p
-  }), [p]), L = s.useMemo(() => N ? Z() : E.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
+  }), [p]), L = s.useMemo(() => N ? Z() : h.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
 rewardHook: Z
   }), [
 N,
@@ -47,7 +47,7 @@ Z
 variant: 'text-sm/medium',
 color: 'text-muted',
 className: I.description,
-children: E.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
+children: h.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
   claimDate: A
 })
   }) : null != f ? (0, i.jsx)(a.Text, {

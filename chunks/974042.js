@@ -8,8 +8,8 @@ var i, s = n(392711),
   d = n(5254),
   u = n(199902),
   _ = n(271383),
-  h = n(430824),
-  E = n(158776),
+  E = n(430824),
+  h = n(158776),
   I = n(699516),
   m = n(594174),
   g = n(981631);
@@ -33,16 +33,16 @@ usernameLower: null != t ? t.username.toLowerCase() : null
 
 function S(e) {
   return {
-status: E.Z.getStatus(e),
-isMobile: E.Z.isMobileOnline(e),
-activities: E.Z.getActivities(e),
+status: h.Z.getStatus(e),
+isMobile: h.Z.isMobileOnline(e),
+activities: h.Z.getActivities(e),
 applicationStream: u.Z.getAnyStreamForUser(e)
   };
 }
 
 function C(e) {
   let t = [];
-  return a()(_.ZP.memberOf(e)).map(h.Z.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
+  return a()(_.ZP.memberOf(e)).map(E.Z.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
 null != e && t.push(e);
   }), {
 mutualGuildsLength: t.length,
@@ -168,8 +168,8 @@ return !O && !!v.update(e) && (v = v.clone(), !0);
 }
 class D extends(i = r.ZP.Store) {
   initialize() {
-this.waitFor(I.Z, E.Z, m.default, h.Z, _.ZP, u.Z, d.Z), this.syncWith([I.Z], P), this.syncWith([d.Z], P), this.syncWith([m.default], M(T)), this.syncWith([
-  E.Z,
+this.waitFor(I.Z, h.Z, m.default, E.Z, _.ZP, u.Z, d.Z), this.syncWith([I.Z], P), this.syncWith([d.Z], P), this.syncWith([m.default], M(T)), this.syncWith([
+  h.Z,
   u.Z
 ], M(S)), b();
   }

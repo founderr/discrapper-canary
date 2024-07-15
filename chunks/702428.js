@@ -18,10 +18,10 @@ function _(e) {
   let {
 isSelected: t,
 onClick: n
-  } = e, _ = (0, o.Z)(a.Z.QUEST_HOME_PAGE), h = (0, r.Sl)(c.Ilk.WHITE);
+  } = e, _ = (0, o.Z)(a.Z.QUEST_HOME_PAGE), E = (0, r.Sl)(c.Ilk.WHITE);
   return _ ? (0, i.jsx)(l.Z, {
 avatar: (0, i.jsx)(s.QuestsIcon, {
-  color: t ? h.hex : void 0
+  color: t ? E.hex : void 0
 }),
 name: d.Z.Messages.QUESTS,
 focusProps: {

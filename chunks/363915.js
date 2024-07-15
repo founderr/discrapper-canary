@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return h;
+return E;
   }
 });
 var i = n(735250),
@@ -26,12 +26,12 @@ clamp: !0
 function _(e) {
   var t, n, s, _;
   let {
-state: h,
-direction: E,
+state: E,
+direction: h,
 cleanUp: I,
 children: m
   } = e, g = (0, r.e7)([o.Z], () => o.Z.useReducedMotion);
-  let p = (0, a.useSpring)((t = h, n = E, s = I, _ = g, t === l.TransitionStates.MOUNTED ? {
+  let p = (0, a.useSpring)((t = E, n = h, s = I, _ = g, t === l.TransitionStates.MOUNTED ? {
 from: {
   opacity: 0,
   transform: 'translateY(40px) translateX(0px)'
@@ -80,7 +80,7 @@ children: (0, i.jsx)(l.ScrollerThin, {
   });
 }
 
-function h(e) {
+function E(e) {
   let {
 currentStep: t,
 renderItem: n,

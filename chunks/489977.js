@@ -9,30 +9,30 @@ var s = n(481060),
   d = n(594174),
   u = n(74538),
   _ = n(486324);
-let h = e => {
+let E = e => {
 let {
   imageSrc: t,
   file: a,
   guildId: l,
-  isTryItOutFlow: h
+  isTryItOutFlow: E
 } = e;
-if (h) {
+if (E) {
   (0, c.c_)(t);
   return;
 }
-let E = d.default.getCurrentUser(),
+let h = d.default.getCurrentUser(),
   I = null != l ? o.I5 : r.I5;
-if (u.ZP.canUseAnimatedAvatar(E) || 'image/gif' !== a.type) {
+if (u.ZP.canUseAnimatedAvatar(h) || 'image/gif' !== a.type) {
   I(t);
   return;
 }
-if (null != E)
+if (null != h)
   return (0, s.openModalLazy)(async () => {
     let {
       default: e
     } = await n.e('12736').then(n.bind(n, 844594));
     return n => (0, i.jsx)(e, {
-      user: E,
+      user: h,
       imageSrc: t,
       uploadType: _.pC.AVATAR,
       onSubscribe: () => I(t),
@@ -40,7 +40,7 @@ if (null != E)
     });
   });
   },
-  E = e => {
+  h = e => {
 let {
   imageSrc: t,
   guildId: a,
@@ -51,9 +51,9 @@ if (r) {
   return;
 }
 let l = d.default.getCurrentUser(),
-  h = null != a ? o.g_ : c.g_;
+  E = null != a ? o.g_ : c.g_;
 if (u.ZP.canUsePremiumProfileCustomization(l)) {
-  h(t);
+  E(t);
   return;
 }
 if (null != l)
@@ -65,7 +65,7 @@ if (null != l)
       user: l,
       imageSrc: t,
       uploadType: _.pC.BANNER,
-      onSubscribe: () => h(t),
+      onSubscribe: () => E(t),
       ...n
     });
   });
@@ -78,7 +78,7 @@ a.Z.subscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfileP
 a.Z.unsubscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
   }
   maybeOpenProfilePreviewModal(e) {
-return e.uploadType === _.pC.AVATAR ? h(e) : e.uploadType === _.pC.BANNER ? E(e) : void 0;
+return e.uploadType === _.pC.AVATAR ? E(e) : e.uploadType === _.pC.BANNER ? h(e) : void 0;
   }
 }
 t.Z = new I();

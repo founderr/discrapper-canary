@@ -16,8 +16,8 @@ var i = n(735250),
   d = n(607070),
   u = n(603368),
   _ = n(284019),
-  h = n(689938),
-  E = n(206240);
+  E = n(689938),
+  h = n(206240);
 
 function I(e) {
   let {
@@ -43,47 +43,47 @@ children: [
   (0, i.jsx)(c.Text, {
     variant: 'text-sm/medium',
     color: 'header-primary',
-    children: h.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
+    children: E.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
   }),
   (0, i.jsx)(c.Text, {
     variant: 'text-xs/normal',
     color: 'text-muted',
-    children: h.Z.Messages.CLAN_SUBMIT_ERROR_SUBTITLE
+    children: E.Z.Messages.CLAN_SUBMIT_ERROR_SUBTITLE
   })
 ]
   });
   return (0, i.jsx)(c.Tooltip, {
 color: g ? c.Tooltip.Colors.GREY : c.Tooltip.Colors.BRAND,
 text: g ? N : a,
-'aria-label': g ? h.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : a,
+'aria-label': g ? E.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : a,
 shouldShow: null != n,
 tooltipStyle: S,
-tooltipClassName: r()(E.progressStepTooltip, {
-  [E.progressStepTooltipCustomColors]: !g && null != S
+tooltipClassName: r()(h.progressStepTooltip, {
+  [h.progressStepTooltipCustomColors]: !g && null != S
 }),
 children: e => (0, i.jsxs)(c.Clickable, {
   ...e,
-  'aria-label': h.Z.Messages.STEP_NUMBER.format({
+  'aria-label': E.Z.Messages.STEP_NUMBER.format({
     number: t
   }),
   tabIndex: null == n ? -1 : void 0,
   onClick: n,
-  className: E.progressStepWrapper,
+  className: h.progressStepWrapper,
   children: [
     g && (0, i.jsx)(c.WarningIcon, {
       size: 'xs',
       color: 'currentColor',
-      className: E.errorIcon
+      className: h.errorIcon
     }),
     (0, i.jsx)('div', {
-      className: E.progressStep,
+      className: h.progressStep,
       children: (0, i.jsx)(l.animated.div, {
         style: {
           ...f,
           ...S
         },
-        className: r()(E.progressStepFill, {
-          [E.customProgressStepFill]: C
+        className: r()(h.progressStepFill, {
+          [h.customProgressStepFill]: C
         })
       })
     })
@@ -104,7 +104,7 @@ className: d
   } = e;
   return (0, i.jsx)(l.animated.div, {
 style: c,
-className: r()(E.progressContainer, d),
+className: r()(h.progressContainer, d),
 children: t.map(e => {
   let {
     index: t,
@@ -136,7 +136,7 @@ nextButtonClassName: u,
 nextButtonAnimationStyle: I
   } = e;
   return (0, i.jsxs)('div', {
-className: r()(E.buttonsContainer, t),
+className: r()(h.buttonsContainer, t),
 children: [
   (0, i.jsx)(c.Button, {
     look: c.Button.Looks.OUTLINED,
@@ -144,7 +144,7 @@ children: [
     color: c.Button.Colors.PRIMARY,
     onClick: o,
     disabled: n,
-    children: h.Z.Messages.BACK
+    children: E.Z.Messages.BACK
   }),
   (0, i.jsx)(l.animated.div, {
     style: I,
@@ -156,7 +156,7 @@ children: [
       size: c.Button.Sizes.MEDIUM,
       onClick: a,
       disabled: s,
-      children: h.Z.Messages.NEXT
+      children: E.Z.Messages.NEXT
     })
   })
 ]

@@ -14,10 +14,10 @@ t.Z = function(e) {
 title: n,
 className: s,
 color: _,
-animate: h,
-gradientStopColor: E,
+animate: E,
+gradientStopColor: h,
 getHistoricalTotalBytes: I
-  } = e, m = (0, r.Sl)(_).hex, g = null === (t = (0, r.Sl)(E)) || void 0 === t ? void 0 : t.hex;
+  } = e, m = (0, r.Sl)(_).hex, g = null === (t = (0, r.Sl)(h)) || void 0 === t ? void 0 : t.hex;
   return (0, i.jsx)(c.Z, {
 getHistoricalTotalBytes: I,
 children: (e, t, r) => {
@@ -55,7 +55,7 @@ children: (e, t, r) => {
             color: m,
             gradientStopColor: g,
             numUpdatesToShow: r,
-            animate: h,
+            animate: E,
             pixelWidth: 600,
             pixelHeight: 48,
             lineWidth: 4

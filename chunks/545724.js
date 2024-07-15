@@ -13,8 +13,8 @@ t.Z = function(e) {
   let {
 index: t,
 children: a,
-user: h,
-channel: E,
+user: E,
+channel: h,
 onClick: I,
 isFocused: m,
 isActive: g,
@@ -45,7 +45,7 @@ if (null != t)
   });
   };
   return (0, i.jsx)(o.mh, {
-id: E.id,
+id: h.id,
 children: e => (0, i.jsx)(c.FocusRing, {
   offset: {
     left: -8,
@@ -56,7 +56,7 @@ children: e => (0, i.jsx)(c.FocusRing, {
       [_.active]: g || f,
       [_.firstItem]: 0 === t
     }),
-    onContextMenu: e => L(e, h),
+    onContextMenu: e => L(e, E),
     onMouseEnter: A,
     onMouseLeave: Z,
     onClick: null != I ? I : void 0,

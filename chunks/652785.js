@@ -1,12 +1,12 @@
 n.d(t, {
   HG: function() {
-return E;
+return h;
   },
   Iv: function() {
 return _;
   },
   XN: function() {
-return h;
+return E;
   }
 });
 var i = n(704215),
@@ -19,7 +19,7 @@ var i = n(704215),
   d = n(823379),
   u = n(981631);
 let _ = 'lastHiddenChannelNotice',
-  h = [{
+  E = [{
   type: u.vID.CLAN_ADMIN_UPSELL,
   dismissibleContentType: i.z.CHANNEL_LIST_CLAN_ADMIN_UPSELL
 },
@@ -58,4 +58,4 @@ let _ = 'lastHiddenChannelNotice',
   dismissibleContentType: i.z.LINKED_ROLE_ADMIN_GUILD
 }
   ],
-  E = h.map(e => e.store).filter(d.lm);
+  h = E.map(e => e.store).filter(d.lm);

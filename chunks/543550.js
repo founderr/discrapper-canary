@@ -16,8 +16,8 @@ var i = n(735250),
   d = n(481060),
   u = n(393238),
   _ = n(410030),
-  h = n(963202),
-  E = n(353093),
+  E = n(963202),
+  h = n(353093),
   I = n(702646),
   m = n(207796),
   g = n(497189),
@@ -44,13 +44,13 @@ n = (0, m.GN)(e => e.setUserUpsellScreen, o.Z),
   ref: a,
   width: c
 } = (0, u.Z)(),
-[h, E] = s.useState(0),
+[E, h] = s.useState(0),
 g = (0, l.useSpring)({
   from: {
     scrollHeight: 0
   },
   to: {
-    scrollHeight: h
+    scrollHeight: E
   }
 }),
 S = (0, _.ZP)(),
@@ -59,8 +59,8 @@ f = s.useMemo(() => A(e, S), [
   S
 ]),
 Z = s.useCallback(e => {
-  E(e.currentTarget.scrollTop);
-}, [E]),
+  h(e.currentTarget.scrollTop);
+}, [h]),
 L = s.useMemo(() => {
   switch (e) {
     case m.hz.GENSHIN:
@@ -173,14 +173,14 @@ function L() {
 t = (0, m.GN)(e => e.game, o.Z),
 {
   enableApplication: n
-} = (0, h.Fg)('ClanDiscoveryAdminContainer'),
+} = (0, E.Fg)('ClanDiscoveryAdminContainer'),
 {
   guilds: a
-} = (0, h.C3)({
+} = (0, E.C3)({
   location: 'ClanDiscoveryAdminContainer',
   includeConverted: !0
 }),
-l = s.useMemo(() => a.filter(e => !(0, E.EJ)(e)), [a]),
+l = s.useMemo(() => a.filter(e => !(0, h.EJ)(e)), [a]),
 d = (0, _.ZP)(),
 u = s.useMemo(() => A(t, d), [
   t,

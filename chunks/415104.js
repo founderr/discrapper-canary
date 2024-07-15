@@ -17,18 +17,18 @@ function _(e) {
   var t;
   let {
 quest: n
-  } = e, a = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, _ = !(0, o.zi)(n) || (0, o.iQ)(n) && a, [h, E] = s.useState(!1);
+  } = e, a = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, _ = !(0, o.zi)(n) || (0, o.iQ)(n) && a, [E, h] = s.useState(!1);
   return (0, i.jsxs)('div', {
 className: r()(u.container, {
   [u.noCta]: !_,
   [u.cta]: _
 }),
-onMouseEnter: () => E(!0),
-onMouseLeave: () => E(!1),
+onMouseEnter: () => h(!0),
+onMouseLeave: () => h(!1),
 children: [
   (0, i.jsx)(c.Z, {
     quest: n,
-    isHovering: h
+    isHovering: E
   }),
   (0, i.jsx)(d.Z, {
     quest: n,

@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(194359),
   u = n(410575),
   _ = n(607070),
-  h = n(100527),
-  E = n(906732),
+  E = n(100527),
+  h = n(906732),
   I = n(205976),
   m = n(699516),
   g = n(974042),
@@ -33,7 +33,7 @@ sectionFilter: t,
 titleId: n
   } = e, {
 analyticsLocations: a
-  } = (0, E.ZP)(h.Z.FRIENDS_LIST), {
+  } = (0, h.ZP)(E.Z.FRIENDS_LIST), {
 rows: b,
 section: P
   } = (0, l.cj)([g.ZP], () => g.ZP.getState()), M = (0, l.e7)([p.Z], () => p.Z.isFocused()), D = (0, l.e7)([m.Z], () => m.Z.getRelationshipCount()), y = (0, T.T)(), [j, U] = s.useState(() => {
@@ -75,7 +75,7 @@ return (0, i.jsxs)('div', {
 H = 0 === w.length && '' !== j[t],
 V = w.filter(e => e.type === O.OGo.PENDING_INCOMING).length,
 F = t === O.pJs.PENDING && V > 0 && y && V >= v.yf;
-  return (0, i.jsx)(E.Gt, {
+  return (0, i.jsx)(h.Gt, {
 value: a,
 children: (0, i.jsxs)(u.Z, {
   section: O.jXE.FRIENDS_LIST,

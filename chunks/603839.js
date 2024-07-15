@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(481060),
   u = n(607070),
   _ = n(207796),
-  h = n(889711),
-  E = n(931240),
+  E = n(889711),
+  h = n(931240),
   I = n(970606),
   m = n(963202),
   g = n(650461),
@@ -88,7 +88,7 @@ else if (0 === G)
   k(1);
 else {
   var n;
-  E._9(t, {
+  h._9(t, {
     currentStep: e,
     furthestStep: Math.max(null !== (n = R.furthestStep) && void 0 !== n ? n : 0, e)
   });
@@ -105,13 +105,13 @@ M.length
 t,
 R.currentStep
   ]), s.useEffect(() => {
-let e = (0, h.pP)((0, l.debounce)(() => U(window.innerWidth), 250));
-return (0, h.YP)(e, document.body), () => (0, h.UC)(e, document.body);
+let e = (0, E.pP)((0, l.debounce)(() => U(window.innerWidth), 250));
+return (0, E.YP)(e, document.body), () => (0, E.UC)(e, document.body);
   }, [
 G,
 w
   ]), s.useEffect(() => {
-null != P && (0, E._9)(t, {
+null != P && (0, h._9)(t, {
   requiredGameId: P
 });
   }, [
@@ -121,7 +121,7 @@ t
   let K = s.useMemo(() => null != x && Object.values(x).some(e => null != e), [x]),
 q = s.useMemo(() => null != x && Object.values(x).length > 0 ? (0, A.G)(x).find(e => e.hasError) : null, [x]),
 Q = s.useCallback(() => {
-  k(1), E._9(t, {
+  k(1), h._9(t, {
     currentStep: null == q ? void 0 : q.index
   });
 }, [

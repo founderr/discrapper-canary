@@ -1,6 +1,6 @@
 n.d(t, {
   A: function() {
-return E;
+return h;
   }
 });
 var i = n(735250);
@@ -14,37 +14,37 @@ var s = n(252618),
   d = n(754420),
   u = n(49898),
   _ = n(689938),
-  h = n(143731);
+  E = n(143731);
 
-function E() {
+function h() {
   let e = (0, l.Z)(),
 t = function(e) {
   switch (e) {
-    case u.SM.SERVERS:
+    case u.F$.SERVERS:
       return (0, i.jsx)(c.U, {});
-    case u.SM.APPS:
+    case u.F$.APPS:
       return (0, i.jsx)(o.z, {});
-    case u.SM.QUESTS:
+    case u.F$.QUESTS:
       return (0, i.jsx)(a.Z, {});
-    case u.SM.SHOP:
+    case u.F$.SHOP:
       return (0, i.jsx)(d.t, {});
     default:
       (0, r.vE)(e);
   }
 }(e);
   return (0, i.jsxs)('section', {
-className: h.container,
+className: E.container,
 children: [
   (0, i.jsx)(s.yY, {
     location: function(e) {
       switch (e) {
-        case u.SM.SERVERS:
+        case u.F$.SERVERS:
           return _.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TITLE;
-        case u.SM.APPS:
+        case u.F$.APPS:
           return _.Z.Messages.GLOBAL_DISCOVERY_APPS_TITLE;
-        case u.SM.QUESTS:
+        case u.F$.QUESTS:
           return _.Z.Messages.GLOBAL_DISCOVERY_QUESTS_TITLE;
-        case u.SM.SHOP:
+        case u.F$.SHOP:
           return _.Z.Messages.GLOBAL_DISCOVERY_SHOP_TITLE;
         default:
           (0, r.vE)(e);
@@ -52,7 +52,7 @@ children: [
     }(e)
   }),
   (0, i.jsx)('div', {
-    className: h.dragRegion
+    className: E.dragRegion
   }),
   t
 ]

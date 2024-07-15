@@ -8,8 +8,8 @@ var i, s = n(735250),
   d = n(239091),
   u = n(556017),
   _ = n(879484),
-  h = n(26580),
-  E = n(206887),
+  E = n(26580),
+  h = n(206887),
   I = n(134432),
   m = n(695346),
   g = n(768581),
@@ -133,7 +133,7 @@ return (0, s.jsx)(o.$, {
                 }),
                 U || j ? (0, s.jsx)('div', {
                   className: N.actionButtons,
-                  children: (0, s.jsx)(E.Z, {
+                  children: (0, s.jsx)(h.Z, {
                     guild: t
                   })
                 }) : null,
@@ -184,7 +184,7 @@ return (0, s.jsx)(o.$, {
                   color: 'header-secondary',
                   children: v
                 }),
-                y && null != x && null != a && (0, s.jsx)(h.F, {
+                y && null != x && null != a && (0, s.jsx)(E.F, {
                   tags: x,
                   onTagClick: e => a(e, t.id),
                   guildId: t.id,

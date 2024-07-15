@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(481060),
   u = n(570140),
   _ = n(150063),
-  h = n(758059),
-  E = n(252618),
+  E = n(758059),
+  h = n(252618),
   I = n(5254),
   m = n(984370),
   g = n(518311),
@@ -55,7 +55,7 @@ n
   ]), s.useEffect(() => {
 _.Y(L.Z5c.FRIENDS), (0, T.e)('friends');
   }, []), s.useEffect(() => {
-null != t && h.Z.setInitialSection(t);
+null != t && E.Z.setInitialSection(t);
   }, [t]);
   let g = (0, c.e7)([S.Z], () => S.Z.theme),
 {
@@ -69,7 +69,7 @@ y = (0, f.Dt)();
 className: R.container,
 'aria-label': O.Z.Messages.FRIENDS,
 children: [
-  (0, i.jsx)(E.yY, {
+  (0, i.jsx)(h.yY, {
     location: O.Z.Messages.FRIENDS
   }),
   (0, i.jsxs)(m.Z, {
@@ -93,7 +93,7 @@ children: [
         selectedItem: b,
         type: 'top-pill',
         onItemSelect: e => {
-          h.Z.setSection(e);
+          E.Z.setSection(e);
         },
         className: R.tabBar,
         children: [

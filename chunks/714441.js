@@ -3,9 +3,9 @@ t.d(n, {
 return o;
   }
 });
-var i = t(735250);
+var r = t(735250);
 t(470079);
-var r = t(481060);
+var i = t(481060);
 
 function o(e) {
   let {
@@ -13,11 +13,11 @@ applicationName: n,
 onConfirm: o,
 onCancel: l
   } = e;
-  return (0, r.openModalLazy)(async () => {
+  return (0, i.openModalLazy)(async () => {
 let {
   ConfirmNoSharedServerSubscribeWarningModal: e
 } = await t.e('99809').then(t.bind(t, 525549));
-return t => (0, i.jsx)(e, {
+return t => (0, r.jsx)(e, {
   ...t,
   applicationName: n,
   onConfirm: o,

@@ -16,21 +16,21 @@ var i = n(470079),
   d = n(229765),
   u = n(10473),
   _ = n(207796),
-  h = n(976757),
-  E = n(308083);
+  E = n(976757),
+  h = n(308083);
 
 function I() {
   let e = (0, _.GN)(e => e.setGame, r.Z),
 t = (0, _.GN)(e => e.setSelectedGames, r.Z),
 n = (0, _.GN)(e => e.selectedGames, r.Z),
 s = (0, _.GN)(_.t1, a()),
-h = (0, c.An)({
+E = (0, c.An)({
   location: 'clan_discovery'
 }),
 {
   defaultGameId: I
 } = (0, c.nk)('clan_discovery'),
-m = null != h ? h : I,
+m = null != E ? E : I,
 g = function() {
   let e = (0, l.e7)([u.Z], () => u.Z.hasLoadedStaticClanDiscovery());
   return i.useEffect(() => {
@@ -39,7 +39,7 @@ g = function() {
 }(),
 p = (0, l.e7)([u.Z], () => u.Z.isLoading());
   return i.useEffect(() => {
-!(n.length > 0) && (m === E.nJ ? (e(_.hz.VALORANT), t([m])) : m === E.xn && (e(_.hz.GENSHIN), t([m])));
+!(n.length > 0) && (m === h.nJ ? (e(_.hz.VALORANT), t([m])) : m === h.xn && (e(_.hz.GENSHIN), t([m])));
   }, [
 e,
 t,
@@ -65,7 +65,7 @@ s = (0, l.e7)([u.Z], () => u.Z.getSearchResult(t), [t]);
   return {
 loaded: n,
 clans: i.useMemo(() => {
-  if ((0, h.Pw)(s)) {
+  if ((0, E.Pw)(s)) {
     let t = s.items;
     return null != e ? t.slice(0, e) : t;
   }

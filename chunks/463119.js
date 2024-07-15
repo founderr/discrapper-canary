@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(481060),
   u = n(596454),
   _ = n(515753),
-  h = n(410030),
-  E = n(607070),
+  E = n(410030),
+  h = n(607070),
   I = n(100527),
   m = n(906732),
   g = n(821982),
@@ -45,15 +45,15 @@ let {
   onMouseLeave: r,
   children: o,
   ...c
-} = e, u = (0, l.JA)('shop'), h = I.Z.HOME_PAGE_SHOP_TAB, {
-  analyticsLocations: E
-} = (0, m.ZP)(h), g = s.useCallback(() => (0, C.mK)({
+} = e, u = (0, l.JA)('shop'), E = I.Z.HOME_PAGE_SHOP_TAB, {
+  analyticsLocations: h
+} = (0, m.ZP)(E), g = s.useCallback(() => (0, C.mK)({
   openInLayer: !1,
-  analyticsSource: h,
-  analyticsLocations: E
+  analyticsSource: E,
+  analyticsLocations: h
 }), [
-  h,
-  E
+  E,
+  h
 ]);
 return (0, i.jsx)(_.Qj, {
   selected: t,
@@ -84,7 +84,7 @@ return (0, i.jsx)(O, {
 let {
   displayOptions: t,
   assetId: n
-} = e, s = (0, o.e7)([E.Z], () => E.Z.useReducedMotion), a = null != n ? (0, g.Z)(n, d.AvatarSizes.SIZE_80, !s) : void 0, r = t.title(), l = t.type === N.k2.COACHTIP_HEADLINE_ONLY;
+} = e, s = (0, o.e7)([h.Z], () => h.Z.useReducedMotion), a = null != n ? (0, g.Z)(n, d.AvatarSizes.SIZE_80, !s) : void 0, r = t.title(), l = t.type === N.k2.COACHTIP_HEADLINE_ONLY;
 return (0, i.jsxs)('div', {
   className: L.shopMarketingTooltipContent,
   children: [
@@ -120,7 +120,7 @@ let {
   selected: t,
   locationState: n,
   displayOptions: a
-} = e, [l, o] = s.useState(0), [u, _] = s.useState(!1), E = (0, h.ZP)(), I = a.entrypointDecorationAssets, m = s.useCallback(e => {
+} = e, [l, o] = s.useState(0), [u, _] = s.useState(!1), h = (0, E.ZP)(), I = a.entrypointDecorationAssets, m = s.useCallback(e => {
   o(e => (e + 1) % a.assetIds.length), _(!0), null == e || e();
 }, [a.assetIds]), g = s.useCallback(e => {
   _(!1), null == e || e();
@@ -145,7 +145,7 @@ return (0, i.jsx)(d.Tooltip, {
     onMouseLeave: () => g(e.onMouseLeave),
     children: [
       null != I && (0, i.jsx)('img', {
-        src: (0, c.wj)(E) ? I.srcDark : I.srcLight,
+        src: (0, c.wj)(h) ? I.srcDark : I.srcLight,
         className: r()(L.marketingButtonImage, {
           [L.marketingButtonImageHovered]: u
         }),

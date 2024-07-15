@@ -10,8 +10,8 @@ var s = n(481060),
   d = n(374023),
   u = n(913976),
   _ = n(104494),
-  h = n(29920),
-  E = n(786397),
+  E = n(29920),
+  h = n(786397),
   I = n(248042),
   m = n(318199),
   g = n(474936);
@@ -79,7 +79,7 @@ super(...e), p(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
     g.ET,
     g.C2,
     g.Hk
-  ].map(e => o.Z.getUserTrialOffer(e)).filter(e => null != e && !(0, E.B)(e)).shift();
+  ].map(e => o.Z.getUserTrialOffer(e)).filter(e => null != e && !(0, h.B)(e)).shift();
   return null != n ? {
     userTrialOffer: n
   } : {};
@@ -88,7 +88,7 @@ super(...e), p(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
     if (!(0, s.hasAnyModalOpen)() && u.Z.getCurrentConfig({
         location: 'OfferAnnouncementManager'
       }).enabled) {
-      for (let e of await (0, h.H)(this.getOfferFromStore()))
+      for (let e of await (0, E.H)(this.getOfferFromStore()))
         if (await this.maybeOpenServerDriveAnnouncementModal(e, !1))
           break;
     }

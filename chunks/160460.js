@@ -1,6 +1,6 @@
 n.d(t, {
   x: function() {
-return E;
+return h;
   }
 });
 var i = n(735250),
@@ -13,15 +13,15 @@ var i = n(735250),
   d = n(402691),
   u = n(689938),
   _ = n(45304);
-let h = [];
+let E = [];
 
-function E(e) {
+function h(e) {
   var t, n;
   let {
-searchQuery: E,
+searchQuery: h,
 categoryId: I,
 onSearchClear: m
-  } = e, g = (0, s.e7)([o.ZP], () => o.ZP.isFetchingSearch()), p = (0, s.e7)([o.ZP], () => o.ZP.getDiscoverableGuilds().search), T = (0, s.e7)([o.ZP], () => o.ZP.getLoadId()), S = null !== (n = null === (t = p[E]) || void 0 === t ? void 0 : t[I]) && void 0 !== n ? n : h, C = (0, r.ZP)(), {
+  } = e, g = (0, s.e7)([o.ZP], () => o.ZP.isFetchingSearch()), p = (0, s.e7)([o.ZP], () => o.ZP.getDiscoverableGuilds().search), T = (0, s.e7)([o.ZP], () => o.ZP.getLoadId()), S = null !== (n = null === (t = p[h]) || void 0 === t ? void 0 : t[I]) && void 0 !== n ? n : E, C = (0, r.ZP)(), {
 handleViewGuild: f,
 onGuildCardSeen: N
   } = (0, d.g)(I, T);
@@ -47,7 +47,7 @@ children: [
       (0, i.jsx)(a.Heading, {
         variant: 'heading-xl/bold',
         children: u.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({
-          query: E
+          query: h
         })
       })
     ]

@@ -10,7 +10,7 @@ var s = n(481060),
   d = n(590415),
   u = n(981631);
 let _ = 'STAGE_INVITED_TO_SPEAK_MODAL';
-class h extends r.Z {
+class E extends r.Z {
   _initialize() {
 a.Z.subscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
   }
@@ -23,10 +23,10 @@ super(...e), t = this, a = 'handleVoiceStateUpdates', r = e => {
   var t;
   let {
     voiceStates: a
-  } = e, r = l.default.getId(), h = null === (t = c.Z.getSession()) || void 0 === t ? void 0 : t.sessionId, E = a.find(e => e.userId === r && e.sessionId === h);
-  if (null == E)
+  } = e, r = l.default.getId(), E = null === (t = c.Z.getSession()) || void 0 === t ? void 0 : t.sessionId, h = a.find(e => e.userId === r && e.sessionId === E);
+  if (null == h)
     return;
-  let I = E.channelId;
+  let I = h.channelId;
   if (null == I) {
     (0, s.hasModalOpen)(_) && (0, s.closeModal)(_);
     return;
@@ -34,7 +34,7 @@ super(...e), t = this, a = 'handleVoiceStateUpdates', r = e => {
   let m = o.Z.getChannel(I);
   if (!(null == m ? void 0 : m.isGuildStageVoice()))
     return;
-  let g = (0, d.gf)(E) === d.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+  let g = (0, d.gf)(h) === d.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
   if (null != m && g) {
     if ((0, s.hasModalOpen)(_))
       return;
@@ -59,4 +59,4 @@ super(...e), t = this, a = 'handleVoiceStateUpdates', r = e => {
 }) : t[a] = r;
   }
 }
-t.Z = new h();
+t.Z = new E();

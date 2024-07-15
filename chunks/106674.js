@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(884338),
   u = n(367907),
   _ = n(835473),
-  h = n(871118),
-  E = n(543882),
+  E = n(871118),
+  h = n(543882),
   I = n(314897),
   m = n(944486),
   g = n(594174),
@@ -61,7 +61,7 @@ userId: r,
 applicationId: d,
 channelId: O,
 streamKey: R
-  } = n, [x, b] = s.useState(!1), P = (0, a.e7)([g.default], () => g.default.getUser(r)), [M] = (0, _.Z)([d]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, f.Z)(), j = (0, a.e7)([E.Z], () => E.Z.getPreviewURL(null, O, r)), U = (0, a.e7)([m.Z], () => m.Z.getVoiceChannelId()), G = (0, C.ZP)(), k = (0, S.Z)(O);
+  } = n, [x, b] = s.useState(!1), P = (0, a.e7)([g.default], () => g.default.getUser(r)), [M] = (0, _.Z)([d]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, f.Z)(), j = (0, a.e7)([h.Z], () => h.Z.getPreviewURL(null, O, r)), U = (0, a.e7)([m.Z], () => m.Z.getVoiceChannelId()), G = (0, C.ZP)(), k = (0, S.Z)(O);
   if (s.useEffect(() => {
   x && U === O && b(!1);
 }, [
@@ -144,7 +144,7 @@ children: [
       })
     ]
   }),
-  null != j ? (0, i.jsx)(h.Z, {
+  null != j ? (0, i.jsx)(E.Z, {
     className: L.stream,
     stream: {
       streamType: A.lo.CALL,

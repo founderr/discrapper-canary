@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(410030),
   u = n(810090),
   _ = n(113434),
-  h = n(497505),
-  E = n(918701),
+  E = n(497505),
+  h = n(918701),
   I = n(78826),
   m = n(670638),
   g = n(981631),
@@ -29,7 +29,7 @@ isHovering: a,
 onCtxMenuClose: S,
 onCtxMenuOpen: C,
 onCtxMenuSelect: f
-  } = e, N = (0, E.ph)(n), A = (0, d.ZP)(), Z = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, L = Z === g.BRd.DARK, v = s.useMemo(() => (0, E.nP)(n.config.assets.questBarHero), [n]), O = s.useContext(l.S).reducedMotion.enabled, R = (0, E.Mi)(n, h.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = s.useRef(a), M = s.useRef(null);
+  } = e, N = (0, h.ph)(n), A = (0, d.ZP)(), Z = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, L = Z === g.BRd.DARK, v = s.useMemo(() => (0, h.nP)(n.config.assets.questBarHero), [n]), O = s.useContext(l.S).reducedMotion.enabled, R = (0, h.Mi)(n, E.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = s.useRef(a), M = s.useRef(null);
   return s.useEffect(() => {
 if (v && null != M.current)
   return P.current !== a && (a ? M.current.play() : (M.current.pause(), M.current.currentTime = 0)), P.current = a, () => {
@@ -55,7 +55,7 @@ children: [
         controls: !1,
         children: (0, i.jsx)('source', {
           src: N,
-          type: (0, E.mN)(N)
+          type: (0, h.mN)(N)
         })
       }))
     }) : (0, i.jsx)(I.Fl, {
@@ -95,7 +95,7 @@ children: [
               onOpen: C,
               onClose: S,
               onSelect: f,
-              questContent: h.jn.QUEST_HOME_DESKTOP,
+              questContent: E.jn.QUEST_HOME_DESKTOP,
               quest: n,
               hideLearnMore: !0,
               shouldShowDisclosure: !0,
@@ -119,7 +119,7 @@ children: [
             ref: e,
             className: T.partnerBranding,
             alt: n.config.messages.gameTitle,
-            src: (0, E.Gs)(n, Z)
+            src: (0, h.Gs)(n, Z)
           })
         }),
         (0, i.jsx)('div', {

@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(586902),
   u = n(512384),
   _ = n(484459),
-  h = n(103575),
-  E = n(314897),
+  E = n(103575),
+  h = n(314897),
   I = n(131951),
   m = n(51144),
   g = n(524484),
@@ -55,16 +55,16 @@ function f(e) {
   var t, s;
   let {
 channel: a,
-user: E,
+user: h,
 nick: f,
 mute: N,
 deaf: A,
 serverMute: Z,
 serverDeaf: L
-  } = e, v = (0, l.e7)([I.Z], () => I.Z.isLocalMute(E.id)), O = (0, d.Z)({
-userId: E.id,
+  } = e, v = (0, l.e7)([I.Z], () => I.Z.isLocalMute(h.id)), O = (0, d.Z)({
+userId: h.id,
 checkSoundSharing: !0
-  }), R = null !== (t = a.getGuildId()) && void 0 !== t ? t : void 0, x = E.getAvatarURL(a.guild_id, 24), b = null != f ? f : m.ZP.getName(E), {
+  }), R = null !== (t = a.getGuildId()) && void 0 !== t ? t : void 0, x = h.getAvatarURL(a.guild_id, 24), b = null != f ? f : m.ZP.getName(h), {
 icon: P,
 colorize: M,
 getStatus: D
@@ -109,7 +109,7 @@ null != R ? (0, c.jW)(e, async () => {
   ]).then(n.bind(n, 757387));
   return t => (0, i.jsx)(e, {
     ...t,
-    user: E,
+    user: h,
     guildId: R,
     channel: a,
     showMediaItems: !0
@@ -124,20 +124,20 @@ null != R ? (0, c.jW)(e, async () => {
   ]).then(n.bind(n, 881351));
   return t => (0, i.jsx)(e, {
     ...t,
-    user: E,
+    user: h,
     showMediaItems: !0
   });
 });
   }
   return (0, i.jsx)(o.Popout, {
-preload: () => (0, _.W)(E.id, E.getAvatarURL(R, 80), {
+preload: () => (0, _.W)(h.id, h.getAvatarURL(R, 80), {
   guildId: R,
   channelId: a.id
 }),
 position: 'top',
-renderPopout: e => (0, i.jsx)(h.Z, {
+renderPopout: e => (0, i.jsx)(E.Z, {
   location: 'RTCConnectionVoiceUsers',
-  userId: E.id,
+  userId: h.id,
   guildId: R,
   channelId: a.id,
   ...e
@@ -190,7 +190,7 @@ icon: (0, i.jsx)(u, {
   color: 'currentColor'
 }),
 focusProps: S
-  }), h = (0, l.e7)([E.default], () => E.default.getId(), []), [I, m] = function(e, t) {
+  }), E = (0, l.e7)([h.default], () => h.default.getId(), []), [I, m] = function(e, t) {
 let n = [];
 for (let i of e) {
   if (!(i.user.id === t || n.some(e => e.user.id === i.user.id))) {
@@ -206,7 +206,7 @@ return [
   n,
   !1
 ];
-  }(t, h), g = m && c ? t : I;
+  }(t, E), g = m && c ? t : I;
   return g.length <= 0 ? null : (0, i.jsx)(o.ScrollerThin, {
 className: r()(T.scroller, a),
 fade: !0,
@@ -221,7 +221,7 @@ children: (0, i.jsxs)('div', {
         nick: s,
         voiceState: a
       } = e;
-      return t.id !== h ? (0, i.jsx)(f, {
+      return t.id !== E ? (0, i.jsx)(f, {
         channel: n,
         user: t,
         nick: s,

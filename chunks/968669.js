@@ -11,14 +11,14 @@ var i = n(470079),
 
 function o(e) {
   var t;
-  let [n, o] = i.useState(!1), [c, d] = i.useState(''), u = l.dU, _ = a.default.locale, h = null !== (t = u.find(e => e.code === _)) && void 0 !== t ? t : u[0];
+  let [n, o] = i.useState(!1), [c, d] = i.useState(''), u = l.dU, _ = a.default.locale, E = null !== (t = u.find(e => e.code === _)) && void 0 !== t ? t : u[0];
   i.useEffect(() => {
 s.Ue();
   }, []);
-  let E = i.useCallback(t => {
+  let h = i.useCallback(t => {
   o(!0), s.bR(t, {
     categoryId: e,
-    preferredLocale: h.code,
+    preferredLocale: E.code,
     offset: 0,
     length: 12,
     filters: {
@@ -26,7 +26,7 @@ s.Ue();
     }
   }, !1);
 }, [
-  h.code,
+  E.code,
   e
 ]),
 I = i.useCallback(() => {
@@ -39,7 +39,7 @@ I = i.useCallback(() => {
 searching: n,
 searchQuery: c,
 setSearchQuery: d,
-handleSearchSubmit: E,
+handleSearchSubmit: h,
 handleSearchClear: I
   };
 }

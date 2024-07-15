@@ -11,7 +11,7 @@ var i = n(735250),
 t.Z = function(e) {
   let {
 guild: t
-  } = e, [n, a] = s.useState(!1), _ = s.useCallback(() => a(!0), [a]), h = s.useCallback(() => a(!0), [a]);
+  } = e, [n, a] = s.useState(!1), _ = s.useCallback(() => a(!0), [a]), E = s.useCallback(() => a(!0), [a]);
   return (0, i.jsx)('div', {
 className: r()(u.actionButtonsContainer, {
   [u.forceButtonsShow]: n
@@ -19,7 +19,7 @@ className: r()(u.actionButtonsContainer, {
 children: (0, i.jsx)(o.ZP, {
   children: (0, i.jsx)(c.GuildDiscoveryMenuPopout, {
     onRequestOpen: _,
-    onRequestClose: h,
+    onRequestClose: E,
     guild: t,
     children: e => {
       let {

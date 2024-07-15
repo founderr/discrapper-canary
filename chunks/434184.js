@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(321488),
   u = n(417183),
   _ = n(170245),
-  h = n(981631),
-  E = n(689938),
+  E = n(981631),
+  h = n(689938),
   I = n(812155);
 
 function m(e) {
@@ -43,13 +43,13 @@ children: e => (0, i.jsxs)('div', {
     (0, i.jsx)(_.Z, {
       user: t,
       hovered: e,
-      status: h.Skl.UNKNOWN,
-      subText: E.Z.Messages.BLOCKED
+      status: E.Skl.UNKNOWN,
+      subText: h.Z.Messages.BLOCKED
     }),
     (0, i.jsx)(d.Z, {
       icon: a.UserMinusIcon,
       actionType: d.Z.ActionTypes.DENY,
-      tooltip: E.Z.Messages.UNBLOCK,
+      tooltip: h.Z.Messages.UNBLOCK,
       onClick: T,
       shouldHighlight: e
     })

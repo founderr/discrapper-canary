@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return E;
+return h;
   }
 });
 var i = n(735250),
@@ -14,7 +14,7 @@ var i = n(735250),
   u = n(689938),
   _ = n(207637);
 
-function h(e) {
+function E(e) {
   let {
 onClick: t
   } = e;
@@ -29,11 +29,11 @@ children: (0, i.jsx)(a.Button, {
   });
 }
 
-function E(e) {
-  var t, n, E, I;
+function h(e) {
+  var t, n, h, I;
   let {
 quest: m
-  } = e, g = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (E = m.userStatus) || void 0 === E ? void 0 : E.claimedAt) == null, T = (0, c.iQ)(m), S = !(0, c.zi)(m), C = (null === (I = m.userStatus) || void 0 === I ? void 0 : I.claimedAt) != null, f = (0, d.hf)({
+  } = e, g = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (h = m.userStatus) || void 0 === h ? void 0 : h.claimedAt) == null, T = (0, c.iQ)(m), S = !(0, c.zi)(m), C = (null === (I = m.userStatus) || void 0 === I ? void 0 : I.claimedAt) != null, f = (0, d.hf)({
 quest: m,
 location: o.jn.QUEST_BAR
   }), N = s.useCallback(() => {
@@ -42,7 +42,7 @@ location: o.jn.QUEST_BAR
   questContentCTA: r.jZ.ACCEPT_QUEST
 });
   }, [m]);
-  return T && p || S && p ? (0, i.jsx)(h, {
+  return T && p || S && p ? (0, i.jsx)(E, {
 onClick: f
   }) : S && g && !C ? (0, i.jsx)('div', {
 className: _.container,

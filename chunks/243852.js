@@ -4,8 +4,8 @@ var i, s, a, r, l, o = n(442837),
   d = n(846519),
   u = n(570140),
   _ = n(278323),
-  h = n(581567),
-  E = n(594190),
+  E = n(581567),
+  h = n(594190),
   I = n(581883),
   m = n(70956),
   g = n(780570),
@@ -56,7 +56,7 @@ mediaSessionId: l
 
 function P() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-t = E.ZP.getVisibleRunningGames(),
+t = h.ZP.getVisibleRunningGames(),
 n = new Set();
   for (let {
   name: e,
@@ -70,7 +70,7 @@ if (null != t)
     applicationId: t.id,
     updatedAt: Date.now(),
     distributor: i,
-    exePath: (0, h.N6)(null != s ? s : '')
+    exePath: (0, E.N6)(null != s ? s : '')
   });
   }
   for (let t of Object.keys(v))
@@ -84,7 +84,7 @@ x(v[e]);
 }
 class D extends(s = o.ZP.Store) {
   initialize() {
-this.waitFor(E.ZP, I.Z, S.Z), this.syncWith([I.Z], P);
+this.waitFor(h.ZP, I.Z, S.Z), this.syncWith([I.Z], P);
   }
   getActivities() {
 return v;

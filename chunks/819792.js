@@ -10,7 +10,7 @@ var s = n(338545),
   u = n(503856),
   _ = n(981631);
 
-function h(e) {
+function E(e) {
   let {
 channel: t,
 guild: n
@@ -34,7 +34,7 @@ t.Z = function(e) {
   let {
 guild: t
   } = e, n = (0, a.e7)([l.ZP], () => l.ZP.getChannels(t.id)[l.Zb][0]), s = (0, a.e7)([o.Z], () => null != n && o.Z.can(_.Plq.CONNECT, n.channel));
-  return t.hasFeature(_.oNc.HUB) && null != n && s ? (0, i.jsx)(h, {
+  return t.hasFeature(_.oNc.HUB) && null != n && s ? (0, i.jsx)(E, {
 channel: n.channel,
 guild: t
   }) : null;
