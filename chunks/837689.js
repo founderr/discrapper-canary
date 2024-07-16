@@ -1,22 +1,23 @@
 n(47120);
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(570140),
-  r = n(317770),
-  l = n(594174),
-  o = n(295226),
-  c = n(74538),
-  d = n(374023),
-  u = n(913976),
-  _ = n(104494),
-  E = n(29920),
-  h = n(786397),
-  I = n(248042),
-  m = n(318199),
-  g = n(474936);
+var a = n(873546),
+  s = n(481060),
+  r = n(570140),
+  l = n(317770),
+  o = n(594174),
+  c = n(295226),
+  d = n(74538),
+  u = n(374023),
+  _ = n(913976),
+  E = n(104494),
+  h = n(29920),
+  I = n(786397),
+  m = n(248042),
+  g = n(318199),
+  p = n(474936);
 
-function p(e, t, n) {
+function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -24,71 +25,71 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let T = 'PremiumServerDriveAnnouncementModal';
-class f extends r.Z {
+let f = 'PremiumServerDriveAnnouncementModal';
+class S extends l.Z {
   _initialize() {
-s.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), s.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
+r.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), r.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
   }
   _terminate() {
-s.Z.unsubscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), s.Z.unsubscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
+r.Z.unsubscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), r.Z.unsubscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
   }
   constructor(...e) {
-super(...e), p(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
-  let s = (0, m.extractAnnouncementModalContent)({
+super(...e), T(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
+  let a = (0, g.extractAnnouncementModalContent)({
     content: e,
     isPreview: t
   });
-  if (null != s)
-    return !!((null == s ? void 0 : s.contentIdentifier) !== 'summer_bogo_content' || await (0, I.k)()) && ((0, a.closeModal)(T), (0, a.openModalLazy)(async () => {
+  if (null != a)
+    return !!(!1 !== t || (null == a ? void 0 : a.contentIdentifier) !== 'summer_bogo_content' || await (0, m.k)()) && ((0, s.closeModal)(f), (0, s.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.resolve().then(n.bind(n, 318199));
       return t => (0, i.jsx)(e, {
         renderModalProps: t,
-        properties: s
+        properties: a
       });
     }, {
-      modalKey: T
+      modalKey: f
     }), !0);
   return !1;
-}), p(this, 'handlePreview', e => {
+}), T(this, 'handlePreview', e => {
   let {
     properties: t
   } = e;
   this.maybeOpenServerDriveAnnouncementModal(t, !0);
-}), p(this, 'getOfferFromStore', () => {
-  let e = l.default.getCurrentUser();
-  if ((0, c.I5)(e))
+}), T(this, 'getOfferFromStore', () => {
+  let e = o.default.getCurrentUser();
+  if ((0, d.I5)(e))
     return {};
   let t = [
-    g.hs,
-    g.RU,
-    g.rB,
-    g.ih
-  ].map(e => o.Z.getUserDiscountOffer(e)).filter(e => null != e && !(0, _.kA)(e)).shift();
+    p.hs,
+    p.RU,
+    p.rB,
+    p.ih
+  ].map(e => c.Z.getUserDiscountOffer(e)).filter(e => null != e && !(0, E.kA)(e)).shift();
   if (null != t)
     return {
       userDiscountOffer: t
     };
   let n = [
-    g.i_,
-    g.Cn,
-    g.wh,
-    g.AU,
-    g.TL,
-    g.ET,
-    g.C2,
-    g.Hk
-  ].map(e => o.Z.getUserTrialOffer(e)).filter(e => null != e && !(0, h.B)(e)).shift();
+    p.i_,
+    p.Cn,
+    p.wh,
+    p.AU,
+    p.TL,
+    p.ET,
+    p.C2,
+    p.Hk
+  ].map(e => c.Z.getUserTrialOffer(e)).filter(e => null != e && !(0, I.B)(e)).shift();
   return null != n ? {
     userTrialOffer: n
   } : {};
-}), p(this, 'mayShowAnnouncementModal', async () => {
-  if (await (0, I.l2)(), !d.s.isDisallowPopupsSet()) {
-    if (!(0, a.hasAnyModalOpen)() && u.Z.getCurrentConfig({
+}), T(this, 'mayShowAnnouncementModal', async () => {
+  if (await (0, m.l2)(), !u.s.isDisallowPopupsSet()) {
+    if (!(0, s.hasAnyModalOpen)() && _.Z.getCurrentConfig({
         location: 'OfferAnnouncementManager'
-      }).enabled) {
-      for (let e of await (0, E.H)(this.getOfferFromStore()))
+      }).enabled && !a.tq) {
+      for (let e of await (0, h.H)(this.getOfferFromStore()))
         if (await this.maybeOpenServerDriveAnnouncementModal(e, !1))
           break;
     }
@@ -96,4 +97,4 @@ super(...e), p(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
 });
   }
 }
-t.Z = new f();
+t.Z = new S();
