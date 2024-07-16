@@ -15,12 +15,12 @@ return _;
 var r = n(470079),
   i = n(979590),
   a = n.n(i),
-  o = n(652874),
-  s = n(442837),
+  s = n(652874),
+  o = n(442837),
   l = n(607070),
   u = n(302221),
   c = n(956664);
-let d = (0, o.Z)(() => ({
+let d = (0, s.Z)(() => ({
   palette: {},
   fetching: {}
 }));
@@ -71,7 +71,7 @@ function f(e, t) {
 function h(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
 i = d(t => null == e ? void 0 : t.palette[e]),
-o = (0, s.e7)([l.Z], () => n && l.Z.desaturateUserColors ? l.Z.saturation : 1);
+s = (0, o.e7)([l.Z], () => n && l.Z.desaturateUserColors ? l.Z.saturation : 1);
   r.useEffect(() => {
 if (null != e && null == i)
   E(e);
@@ -82,7 +82,7 @@ i
   let u = r.useMemo(() => null == i ? void 0 : i.map(e => {
 let [t, n, r] = e, {
   h: i,
-  s,
+  s: o,
   l
 } = a()({
   r: t,
@@ -91,12 +91,12 @@ let [t, n, r] = e, {
 }).toHsl();
 return a()({
   h: i,
-  s: s * o,
+  s: o * s,
   l
 }).toHexString();
   }), [
 i,
-o
+s
   ]);
   return null != u ? u : [
 t,
