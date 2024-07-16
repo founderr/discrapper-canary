@@ -147,7 +147,7 @@ channelId: r.id
   }), {
 transitions: y,
 setVisible: D
-  } = (0, I.H)(L), F = s.useCallback(() => {
+  } = (0, I.H)(), F = s.useCallback(() => {
 D(!1), _.Z.hideAdminOnboarding(r.id, !0);
   }, [
 r,

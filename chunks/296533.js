@@ -81,7 +81,7 @@ let s = t[Math.floor(Math.random() * t.length)];
 return h.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_TEMPLATE.format({
   perk: s
 });
-  }(t), [t]), E = (0, i.useTransition)(r, {
+  }(t), [t]), E = (0, o.useTransition)(r, {
 from: {
   opacity: 0
 },
@@ -91,7 +91,7 @@ enter: {
 leave: {
   opacity: 0
 }
-  });
+  }, 'animate-always');
   return l || t === m.Eu4.NONE ? (0, n.jsx)('div', {
 className: g.boostDescriptionInnerContainer,
 children: (0, n.jsx)(o.Text, {

@@ -30,7 +30,7 @@ e.stopPropagation(), (0, p.Z)({
   channel: n,
   rating: i
 });
-  }, c = (0, s.useTransition)(null == a, {
+  }, c = (0, o.useTransition)(null == a, {
 enter: {
   from: {
     opacity: 0
@@ -48,7 +48,7 @@ config: {
   friction: 18,
   clamp: !0
 }
-  });
+  }, 'animate-always');
   return (0, i.jsx)(i.Fragment, {
 children: c((e, t) => t ? (0, i.jsx)('div', {
   className: E.summaryFeedbackWrapper,

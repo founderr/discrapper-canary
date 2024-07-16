@@ -3,8 +3,9 @@ var s = n(735250),
   i = n(120356),
   r = n.n(i),
   l = n(338545),
-  o = n(939389);
-class c extends a.Component {
+  o = n(481060),
+  c = n(939389);
+class d extends a.Component {
   render() {
 let {
   icon: e,
@@ -17,14 +18,14 @@ return (0, s.jsx)(e, {
 });
   }
 }
-let d = (0, l.animated)(c);
+let u = (0, l.animated)(d);
 t.Z = function(e) {
   let {
 className: t,
 name: n,
 icon: a,
 iconClassName: i
-  } = e, c = (0, l.useTransition)({
+  } = e, l = (0, o.useTransition)({
 name: n,
 icon: a,
 iconClassName: i
@@ -40,17 +41,17 @@ enter: {
 leave: {
   opacity: 0
 }
-  });
+  }, 'animate-always');
   return (0, s.jsx)('div', {
-className: r()(o.crossfade, t),
-children: c((e, t) => {
+className: r()(c.crossfade, t),
+children: l((e, t) => {
   let {
     icon: n,
     iconClassName: a
   } = t;
-  return (0, s.jsx)(d, {
+  return (0, s.jsx)(u, {
     icon: n,
-    className: r()(o.icon, a),
+    className: r()(c.icon, a),
     style: e
   });
 })

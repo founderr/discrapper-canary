@@ -26,7 +26,7 @@ t.Z = e => {
 shown: t,
 sent: n,
 className: c
-  } = e, d = (0, l.e7)([r.Z], () => r.Z.useReducedMotion), h = (0, a.useTransition)(t, {
+  } = e, d = (0, l.e7)([r.Z], () => r.Z.useReducedMotion), h = (0, s.useTransition)(t, {
 from: {
   transform: d ? 'translateY(0)' : 'translateY(16px)',
   opacity: 0
@@ -46,7 +46,7 @@ config: {
   clamp: !0
 },
 delay: 200
-  });
+  }, 'animate-always');
   return (0, i.jsx)(i.Fragment, {
 children: h((e, t) => t && (0, i.jsx)(a.animated.div, {
   className: c,

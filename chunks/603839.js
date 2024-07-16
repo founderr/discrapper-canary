@@ -59,7 +59,7 @@ immediate: s
 transform: 'translateX('.concat(1 === G ? 0 : -1 * (j - 380) / 2 + 190, 'px)'),
 config: L,
 immediate: s
-  }), Y = (0, o.useTransition)(0 === G, {
+  }), Y = (0, d.useTransition)(0 === G, {
 from: {
   opacity: 0
 },
@@ -67,9 +67,8 @@ enter: {
   opacity: 1,
   delay: 500
 },
-config: L,
-immediate: s
-  }), W = (0, o.useTransition)(0 === G, {
+config: L
+  }), W = (0, d.useTransition)(0 === G, {
 from: {
   opacity: 0
 },
@@ -79,8 +78,7 @@ enter: {
 leave: {
   opacity: 0
 },
-config: L,
-immediate: s
+config: L
   }), z = a.useCallback(e => {
 if (e === M.length)
   k(0), (0, I.Lp)(t, 'signature');

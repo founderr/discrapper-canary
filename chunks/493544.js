@@ -128,7 +128,7 @@ scrollerRef: a,
 mobileSidebarOpen: d,
 toggleSidebar: x,
 hideSidebar: N = !1
-  } = e, C = u.useRef(null), T = u.useRef(null), R = (0, v.Z)(s), I = (0, m.useTransition)(N, {
+  } = e, C = u.useRef(null), T = u.useRef(null), R = (0, v.Z)(s), I = (0, S.useTransition)(N, {
 from: {
   position: 'absolute',
   opacity: 0
@@ -138,7 +138,7 @@ enter: {
 },
 reverse: N,
 config: m.config.stiff
-  }), A = u.useCallback(e => {
+  }, 'animate-always'), A = u.useCallback(e => {
 C.current = e, null != a && (a.current = e);
   }, [a]);
   u.useLayoutEffect(() => {

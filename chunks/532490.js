@@ -90,7 +90,7 @@ q = (0, E.j1)(K, z.hex()),
   height: X = 87,
   ref: Q
 } = (0, h.Z)(a),
-J = (0, c.useTransition)(a, {
+J = (0, u.useTransition)(a, {
   from: {
     opacity: 0,
     height: 0
@@ -99,8 +99,7 @@ J = (0, c.useTransition)(a, {
     opacity: 1,
     height: null != X ? X : 87
   },
-  config: c.config.stiff,
-  immediate: w
+  config: c.config.stiff
 });
   return (0, l.jsx)('div', {
 className: o()(x.container, Z),

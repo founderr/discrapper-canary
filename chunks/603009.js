@@ -62,7 +62,7 @@ return null != t && (t.style.zIndex = '1003'), () => {
 P = a.useCallback(e => {
   e.stopPropagation(), e.preventDefault(), o();
 }, [o]),
-O = (0, r.useTransition)(l, {
+O = (0, c.useTransition)(l, {
   from: {
     transform: S ? 'translateY(0)' : 'translateY(16px)',
     opacity: 0,
@@ -85,7 +85,7 @@ O = (0, r.useTransition)(l, {
     clamp: !0
   },
   delay: 200
-}),
+}, 'animate-always'),
 y = (0, x.Zp)(n, j),
 D = y ? A.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_TITLE.format({
   guildName: n.name

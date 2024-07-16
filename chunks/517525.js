@@ -163,14 +163,14 @@ reducedMotion: f
   dispatchWait: !0
 });
   }, [t]);
-  let g = (0, r.useTransition)(C, {
+  let g = (0, h.useTransition)(C, {
   enter: {
     from: f.enabled ? b : A,
     to: f.enabled ? R : M
   },
   leave: f.enabled ? b : A,
   config: P
-}),
+}, 'animate-always'),
 x = (0, r.useSpring)({
   to: C ? L : j,
   config: P

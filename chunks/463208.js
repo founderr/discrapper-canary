@@ -13,7 +13,7 @@ var r, i = n(735250),
   l = n(338545),
   u = n(84735),
   c = n(15127),
-  d = n(993365),
+  d = n(481060),
   _ = n(699682),
   E = n(689938),
   f = n(216315);
@@ -34,7 +34,7 @@ let p = {
 function m(e) {
   let {
 error: t
-  } = e, n = (0, l.useTransition)(t, {
+  } = e, n = (0, d.useTransition)(t, {
 config: {
   tension: 250,
   clamp: !0
@@ -75,7 +75,7 @@ children: n((e, n, a) => {
       style: {
         transform: s
       },
-      children: (0, i.jsx)(d.x, {
+      children: (0, i.jsx)(d.Text, {
         color: 'text-danger',
         variant: 'text-xs/normal',
         children: null != t && '' !== t ? t : r

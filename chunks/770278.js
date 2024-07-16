@@ -35,7 +35,7 @@ opacity: 0
   }), p = {
 background: h,
 backdropFilter: 'blur(0px)'
-  }, m = (0, d.Z)(r), I = (0, u.useTransition)(s, {
+  }, m = (0, d.Z)(r), I = (0, c.useTransition)(s, {
 keys: e => e ? 'backdrop' : 'empty',
 config: {
   duration: r || m ? 0 : 300
@@ -46,7 +46,7 @@ enter: {
   backdropFilter: 'blur('.concat('BLUR' === n ? 8 : 0, 'px)')
 },
 leave: p
-  });
+  }, 'animate-always');
   if (null == o) {
 let e = {
   zIndex: 1000 + i
