@@ -16,9 +16,10 @@ page: r,
 categoryId: i,
 integrationType: a,
 minUserInstallCommandCount: o,
-excludeAppsWithCustomInstallUrl: s
+excludeAppsWithCustomInstallUrl: s,
+source: l
   } = e;
-  return 'query:\''.concat(t, '\' guildId:').concat(n, ' page:').concat(r, ' categoryId:').concat(i, ' integrationType:').concat(a, ' minUserInstallCommandCount:').concat(o, ' excludeAppsWithCustomInstallUrl:').concat(s);
+  return 'query:\''.concat(t, '\' guildId:').concat(n, ' page:').concat(r, ' categoryId:').concat(i, ' integrationType:').concat(a, ' minUserInstallCommandCount:').concat(o, ' excludeAppsWithCustomInstallUrl:').concat(s, ' source:').concat(l);
 }
 (r = s || (s = {}))[r.FETCHING = 0] = 'FETCHING', r[r.FETCHED = 1] = 'FETCHED', r[r.ERROR = 2] = 'ERROR';
 let f = new(c())({
@@ -34,17 +35,19 @@ let {
   categoryId: i,
   integrationType: a,
   minUserInstallCommandCount: o,
-  excludeAppsWithCustomInstallUrl: s
-} = e, l = E({
+  excludeAppsWithCustomInstallUrl: s,
+  source: l
+} = e, u = E({
   query: t,
   guildId: n,
   page: r,
   categoryId: i,
   integrationType: a,
   minUserInstallCommandCount: o,
-  excludeAppsWithCustomInstallUrl: s
+  excludeAppsWithCustomInstallUrl: s,
+  source: l
 });
-return f.get(l);
+return f.get(u);
   }
   getFetchState(e) {
 let {
@@ -54,7 +57,8 @@ let {
   categoryId: i,
   integrationType: a,
   minUserInstallCommandCount: o,
-  excludeAppsWithCustomInstallUrl: s
+  excludeAppsWithCustomInstallUrl: s,
+  source: l
 } = e;
 return h[E({
   query: t,
@@ -63,7 +67,8 @@ return h[E({
   categoryId: i,
   integrationType: a,
   minUserInstallCommandCount: o,
-  excludeAppsWithCustomInstallUrl: s
+  excludeAppsWithCustomInstallUrl: s,
+  source: l
 })];
   }
 }
@@ -81,19 +86,21 @@ let {
   categoryId: i,
   integrationType: a,
   minUserInstallCommandCount: o,
-  excludeAppsWithCustomInstallUrl: s
-} = e, l = E({
+  excludeAppsWithCustomInstallUrl: s,
+  source: l
+} = e, u = E({
   query: t,
   guildId: n,
   page: r,
   categoryId: i,
   integrationType: a,
   minUserInstallCommandCount: o,
-  excludeAppsWithCustomInstallUrl: s
+  excludeAppsWithCustomInstallUrl: s,
+  source: l
 });
 h = {
   ...h,
-  [l]: 0
+  [u]: 0
 };
   },
   APPLICATION_DIRECTORY_FETCH_SEARCH_SUCCESS: function(e) {
@@ -105,22 +112,24 @@ let {
   result: a,
   integrationType: o,
   minUserInstallCommandCount: s,
-  excludeAppsWithCustomInstallUrl: l
-} = e, u = E({
+  excludeAppsWithCustomInstallUrl: l,
+  source: u
+} = e, c = E({
   query: t,
   guildId: n,
   page: r,
   categoryId: i,
   integrationType: o,
   minUserInstallCommandCount: s,
-  excludeAppsWithCustomInstallUrl: l
+  excludeAppsWithCustomInstallUrl: l,
+  source: u
 });
-f.set(u, {
+f.set(c, {
   lastFetchTimeMs: Date.now(),
   ...a
 }), h = {
   ...h,
-  [u]: 1
+  [c]: 1
 };
   },
   APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE: function(e) {
@@ -131,19 +140,21 @@ let {
   categoryId: i,
   integrationType: a,
   minUserInstallCommandCount: o,
-  excludeAppsWithCustomInstallUrl: s
-} = e, l = E({
+  excludeAppsWithCustomInstallUrl: s,
+  source: l
+} = e, u = E({
   query: t,
   guildId: n,
   page: r,
   categoryId: i,
   integrationType: a,
   minUserInstallCommandCount: o,
-  excludeAppsWithCustomInstallUrl: s
+  excludeAppsWithCustomInstallUrl: s,
+  source: l
 });
 h = {
   ...h,
-  [l]: 2
+  [u]: 2
 };
   }
 });
