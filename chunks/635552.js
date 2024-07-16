@@ -1,33 +1,35 @@
 n.d(t, {
   W: function() {
-return s;
+return d;
   }
 }), n(47120);
 var r = n(470079),
-  a = n(809206),
-  o = n(350327),
-  l = n(328456),
-  i = n(689938);
-let s = e => {
+  a = n(979554),
+  o = n(809206),
+  l = n(350327),
+  i = n(884697),
+  s = n(328456),
+  c = n(689938);
+let d = e => {
   let {
 product: t,
-onSuccess: s,
-onError: c
-  } = e, [d, u] = r.useState(!1), {
-firstAvatarDecoration: f,
-firstProfileEffect: p
-  } = (0, l.R)(t);
+onSuccess: d,
+onError: u
+  } = e, [f, p] = r.useState(!1), {
+firstAvatarDecoration: g,
+firstProfileEffect: C
+  } = (0, s.R)(t), v = (0, i.x6)(t) ? c.Z.Messages.COLLECTIBLES_PROFILE_UPDATE_NOTIFICATION : t.type === a.Z.AVATAR_DECORATION ? c.Z.Messages.COLLECTIBLES_AVATAR_DECO_UPDATED_NOTIFICATION : c.Z.Messages.COLLECTIBLES_PFX_UPDATED_NOTIFICATION;
   return {
 handleUseNow: r.useCallback(async () => {
-  u(!0);
+  p(!0);
   try {
-    if (null != f && await (0, a.Mn)({
-        avatarDecoration: f
-      }), null != p) {
+    if (null != g && await (0, o.Mn)({
+        avatarDecoration: g
+      }), null != C) {
       let e = {
-        profile_effect_id: p.id
+        profile_effect_id: C.id
       };
-      await (0, o.Z)(e);
+      await (0, l.Z)(e);
     } {
       let {
         ToastPosition: e,
@@ -36,23 +38,24 @@ handleUseNow: r.useCallback(async () => {
         popToast: a,
         showToast: o
       } = await Promise.resolve().then(n.bind(n, 481060));
-      a(), o(r(i.Z.Messages.COLLECTIBLES_PROFILE_UPDATE_NOTIFICATION, t.MESSAGE, {
+      a(), o(r(v, t.MESSAGE, {
         duration: 6000,
         position: e.TOP
       }));
     }
-    null == s || s();
+    null == d || d();
   } catch (e) {
-    null == c || c(e);
+    null == u || u(e);
   } finally {
-    u(!1);
+    p(!1);
   }
 }, [
-  f,
-  p,
-  s,
-  c
+  g,
+  C,
+  d,
+  v,
+  u
 ]),
-isApplying: d
+isApplying: f
   };
 };

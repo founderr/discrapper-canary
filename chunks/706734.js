@@ -1,0 +1,78 @@
+t.d(s, {
+  Z: function() {
+return _;
+  }
+});
+var n = t(735250);
+t(470079);
+var o = t(481060),
+  a = t(488889),
+  l = t(259076),
+  i = t(689938),
+  r = t(103877),
+  E = t(660817);
+
+function _(e) {
+  let {
+onNext: s,
+onClose: t,
+reason: _,
+onReasonChange: d
+  } = e, u = l.z.map(e => ({
+value: e,
+name: (0, a.S)(e)
+  }));
+  return (0, n.jsxs)('form', {
+onSubmit: s,
+children: [
+  (0, n.jsxs)(o.ModalHeader, {
+    separator: !1,
+    className: E.header,
+    children: [
+      (0, n.jsx)(o.Heading, {
+        variant: 'heading-xl/extrabold',
+        children: i.Z.Messages.EMAIL_CHANGE_REASONING_HEADER
+      }),
+      (0, n.jsx)(o.ModalCloseButton, {
+        onClick: t,
+        className: E.modalCloseButton
+      })
+    ]
+  }),
+  (0, n.jsx)(o.ModalContent, {
+    className: r.content,
+    children: (0, n.jsx)(o.RadioGroup, {
+      radioPosition: 'right',
+      radioItemClassName: r.radioItem,
+      size: o.RadioGroup.Sizes.NOT_SET,
+      value: _,
+      options: u,
+      onChange: e => {
+        let {
+          value: s
+        } = e;
+        return d(s);
+      }
+    })
+  }),
+  (0, n.jsxs)(o.ModalFooter, {
+    className: E.modalFooter,
+    children: [
+      (0, n.jsx)(o.Button, {
+        color: o.Button.Colors.BRAND,
+        disabled: null == _,
+        size: o.Button.Sizes.MEDIUM,
+        onClick: s,
+        children: i.Z.Messages.CONTINUE
+      }),
+      (0, n.jsx)(o.Button, {
+        look: o.Button.Looks.LINK,
+        color: o.Button.Colors.PRIMARY,
+        onClick: t,
+        children: i.Z.Messages.CANCEL
+      })
+    ]
+  })
+]
+  });
+}

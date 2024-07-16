@@ -23,7 +23,7 @@ bannerContainerClassName: _
   } = e;
   return (0, i.jsxs)(r.AdvancedScroller, {
 onScroll: a,
-className: o.container,
+className: s()(o.container, o.background),
 children: [
   (0, i.jsx)(l.Z, {
     title: t,
@@ -33,8 +33,11 @@ children: [
     className: _
   }),
   (0, i.jsx)('section', {
-    className: s()(o.content, o.gradient),
-    children: u
+    className: s()(o.contentContainer, o.gradient),
+    children: (0, i.jsx)('div', {
+      className: s()(o.content),
+      children: u
+    })
   })
 ]
   });

@@ -10,8 +10,8 @@ var r = n(735250),
   _ = n(937111),
   E = n(741606),
   f = n(703656),
-  h = n(314897),
-  p = n(271383),
+  p = n(314897),
+  h = n(271383),
   m = n(594174),
   I = n(63063),
   T = n(970606),
@@ -36,13 +36,13 @@ clan: n,
 isLoading: b,
 onClose: M,
 profileViewedAnalytics: P
-  } = e, U = null == n ? void 0 : n.identityGuildId, w = (0, g.Cc)(null != U ? U : null), x = null == n ? void 0 : n.tag, G = (0, v.Z)('clan_guild_profile'), k = (0, N.Z)('base_clan_tag_chiplet'), B = (0, s.e7)([h.default], () => h.default.getId()), F = (0, s.e7)([p.ZP], () => null != U ? p.ZP.getMember(U, B) : null, [
+  } = e, U = null == n ? void 0 : n.identityGuildId, w = (0, g.Cc)(null != U ? U : null), x = null == n ? void 0 : n.tag, G = (0, v.Z)('clan_guild_profile'), k = (0, N.Z)('base_clan_tag_chiplet'), B = (0, s.e7)([p.default], () => p.default.getId()), F = (0, s.e7)([h.ZP], () => null != U ? h.ZP.getMember(U, B) : null, [
 U,
 B
   ]), V = (0, s.e7)([_.Z], () => {
 var e;
 return (null == w ? void 0 : w.id) != null && (null === (e = _.Z.getRequest(w.id)) || void 0 === e ? void 0 : e.applicationStatus) === d.wB.SUBMITTED;
-  }), H = null != w && w.memberCount >= R.Du, Z = (0, c.wE)(a.z.CLAN_TAG_WAITLIST), Y = (0, s.e7)([m.default], () => m.default.getUser(B), [B]), j = (null == F ? void 0 : F.joinedAt) != null, W = (0, A.Z4)(U, null == Y ? void 0 : Y.clan), K = null != (0, E.Z)(U);
+  }), H = null != w && w.memberCount >= R.Du, Z = (0, c.wE)(a.z.CLAN_TAG_WAITLIST), Y = (0, s.e7)([m.default], () => m.default.getUser(B), [B]), j = (null == F ? void 0 : F.joinedAt) != null, W = (0, A.Z4)(U, null == Y ? void 0 : Y.primaryGuild), K = null != (0, E.Z)(U);
   i.useEffect(() => {
 null != U && (0, T.u0)({
   guildId: U,

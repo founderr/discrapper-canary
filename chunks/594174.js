@@ -24,8 +24,8 @@ var r = n(348327),
   _ = n(823379),
   E = n(314897),
   f = n(412788),
-  h = n(981631),
-  p = n(308083),
+  p = n(981631),
+  h = n(308083),
   m = n(474936);
 
 function I(e, t, n) {
@@ -48,28 +48,32 @@ function A(e, t, n) {
 }
 
 function N(e, t) {
-  return !i()(e.clan, t.clan) && (null == e.clan || null != t.clan) && (e.clan = (0, p.yi)(t.clan), T[e.id] = e, !0);
+  var n;
+  let r = null !== (n = t.primary_guild) && void 0 !== n ? n : t.clan,
+a = e.primaryGuild;
+  return !i()(a, r) && (null == a || null != r) && (e.primaryGuild = (0, h.hW)(r), T[e.id] = e, !0);
 }
 
 function v(e) {
-  let t = e.mfa_enabled;
-  null != t && (e.mfaEnabled = t, delete e.mfa_enabled);
-  let n = (0, u.G)(e.premium_type);
-  void 0 !== n && (e.premiumType = n, delete e.premium_type);
-  let r = e.nsfw_allowed;
-  null != r && (e.nsfwAllowed = r, delete e.nsfw_allowed);
-  let i = e.public_flags;
-  null != i && (e.publicFlags = i, delete e.public_flags);
-  let a = e.purchased_flags;
-  void 0 !== a && (e.purchasedFlags = a, delete e.purchased_flags);
-  let s = e.premium_usage_flags;
-  void 0 !== s && (e.premiumUsageFlags = s, delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color;
-  let l = e.avatar_decoration_data;
-  void 0 !== l && (e.avatarDecorationData = (0, o.FG)(l), delete e.avatar_decoration_data);
-  let c = e.global_name;
-  void 0 !== c && (e.globalName = c, delete e.global_name);
-  let d = e.clan;
-  return void 0 !== d && (e.clan = (0, p.yi)(d)), e;
+  var t;
+  let n = e.mfa_enabled;
+  null != n && (e.mfaEnabled = n, delete e.mfa_enabled);
+  let r = (0, u.G)(e.premium_type);
+  void 0 !== r && (e.premiumType = r, delete e.premium_type);
+  let i = e.nsfw_allowed;
+  null != i && (e.nsfwAllowed = i, delete e.nsfw_allowed);
+  let a = e.public_flags;
+  null != a && (e.publicFlags = a, delete e.public_flags);
+  let s = e.purchased_flags;
+  void 0 !== s && (e.purchasedFlags = s, delete e.purchased_flags);
+  let l = e.premium_usage_flags;
+  void 0 !== l && (e.premiumUsageFlags = l, delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color;
+  let c = e.avatar_decoration_data;
+  void 0 !== c && (e.avatarDecorationData = (0, o.FG)(c), delete e.avatar_decoration_data);
+  let d = e.global_name;
+  void 0 !== d && (e.globalName = d, delete e.global_name);
+  let _ = null !== (t = e.primary_guild) && void 0 !== t ? t : e.clan;
+  return void 0 !== _ && (e.clan = (0, h.hW)(_), e.primary_guild = (0, h.hW)(_)), e;
 }
 
 function O(e) {
@@ -91,15 +95,18 @@ void 0 !== (t = null !== (o = n.premium_type) && void 0 !== o ? o : n.premiumTyp
     r = C((0, u.VR)(e), n);
   return void 0 !== e.premiumType ? e.premiumType = r : void 0 !== e.premium_type && (e.premium_type = r), e;
 }(n)), n = function(e, t) {
+  var n;
+  let r = null !== (n = t.primary_guild) && void 0 !== n ? n : t.clan,
+    a = e.primaryGuild;
   switch (!0) {
-    case null == e.clan && null == t.clan:
+    case null == a && null == r:
       break;
-    case null != e.clan && null == t.clan:
-    case i()(e.clan, t.clan):
-      t.clan = e.clan;
+    case null != a && null == r:
+    case i()(a, r):
+      t.primary_guild = a;
       break;
     default:
-      t.clan = (0, p.yi)(t.clan);
+      t.primary_guild = (0, h.hW)(r);
   }
   return t;
 }(r, n), r = r.merge(n);
@@ -306,9 +313,9 @@ function W(e) {
   let {
 message: t
   } = e;
-  if (y(t, !0), null != t.flags && d.yE(t.flags, h.iLy.URGENT)) {
+  if (y(t, !0), null != t.flags && d.yE(t.flags, p.iLy.URGENT)) {
 let e = T[E.default.getId()];
-return null != e && (T[E.default.getId()] = e.set('flags', d.mB(e.flags, h.xW$.HAS_UNREAD_URGENT_MESSAGES, !0)), !0);
+return null != e && (T[E.default.getId()] = e.set('flags', d.mB(e.flags, p.xW$.HAS_UNREAD_URGENT_MESSAGES, !0)), !0);
   }
   return !1;
 }
@@ -529,7 +536,7 @@ giftCode: t
   return null != t.user && R(t.user);
 }
 
-function eh(e) {
+function ep(e) {
   let {
 appliedBoosts: t
   } = e;
@@ -542,7 +549,7 @@ if (null != t)
   });
 }
 
-function ep(e) {
+function eh(e) {
   let {
 request: t
   } = e, {
@@ -721,8 +728,8 @@ super({
   GUILD_BAN_REMOVE: J,
   CHANNEL_RECIPIENT_ADD: ee,
   CHANNEL_RECIPIENT_REMOVE: ee,
-  GUILD_JOIN_REQUEST_CREATE: ep,
-  GUILD_JOIN_REQUEST_UPDATE: ep,
+  GUILD_JOIN_REQUEST_CREATE: eh,
+  GUILD_JOIN_REQUEST_UPDATE: eh,
   GUILD_MEMBER_ADD: et,
   GUILD_MEMBER_UPDATE: et,
   GUILD_MEMBERS_CHUNK_BATCH: er,
@@ -738,7 +745,7 @@ super({
   AUDIT_LOG_FETCH_SUCCESS: eE,
   AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: eE,
   GIFT_CODE_RESOLVE_SUCCESS: ef,
-  GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: eh,
+  GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: ep,
   LOAD_THREADS_SUCCESS: F,
   LOAD_ARCHIVED_THREADS_SUCCESS: F,
   LOAD_FORUM_POSTS: V,

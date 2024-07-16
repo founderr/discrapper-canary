@@ -10,8 +10,8 @@ var r = n(735250),
   _ = n(267128),
   E = n(25015),
   f = n(592125),
-  h = n(217702),
-  p = n(689938),
+  p = n(217702),
+  h = n(689938),
   m = n(200287);
 t.Z = e => {
   let {
@@ -27,16 +27,17 @@ let {
 } = (0, _.f)(t, g, !1, '', {
   leadingIconClass: m.attachmentIcon,
   trailingIconClass: m.attachmentIcon,
-  iconSize: h.WW
-}), i = null == g || '' === g || Array.isArray(g) && 0 === g.length;
+  iconSize: p.WW
+});
 return (0, r.jsxs)('div', {
   className: m.contentContainer,
   children: [
     e,
-    i ? n : (0, r.jsx)(c.ZP, {
+    (0, r.jsx)(c.ZP, {
       message: t,
       content: g
-    })
+    }),
+    n
   ]
 });
   }, [
@@ -49,7 +50,7 @@ children: [
   (0, r.jsx)(o.Heading, {
     className: m.header,
     variant: 'heading-sm/semibold',
-    children: p.Z.Messages.MOBILE_REPORTS_MESSAGE_PREVIEW_TITLE
+    children: h.Z.Messages.MOBILE_REPORTS_MESSAGE_PREVIEW_TITLE
   }),
   (0, r.jsx)(o.Scroller, {
     className: m.messagePreviewContainer,

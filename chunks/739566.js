@@ -1,6 +1,6 @@
 n.d(t, {
   Sw: function() {
-return h;
+return p;
   },
   Uj: function() {
 return E;
@@ -12,7 +12,7 @@ return f;
 return _;
   },
   ij: function() {
-return p;
+return h;
   }
 });
 var r = n(512722),
@@ -39,8 +39,8 @@ _ = (0, a.e7)([s.ZP], () => null == i || null == r ? null : s.ZP.getMember(i, r)
 E = (0, a.e7)([c.default], () => c.default.getUser(r), [r]),
 f = d.ZP.useName((null == e ? void 0 : e.author.bot) ? null == e ? void 0 : e.author : E),
 {
-  guild: h,
-  guildRoles: p
+  guild: p,
+  guildRoles: h
 } = (0, a.cj)([l.Z], () => {
   let e = l.Z.getGuild(i),
     t = null != e ? l.Z.getRoles(e.id) : void 0;
@@ -53,8 +53,8 @@ I = (0, a.e7)([u.Z], () => null != r && (null == n ? void 0 : n.isPrivate()) ? u
   return null == e ? null : m({
 user: e.author,
 channel: n,
-guild: h,
-guildRoles: p,
+guild: p,
+guildRoles: h,
 userName: f,
 member: _,
 friendNickname: I
@@ -63,10 +63,10 @@ friendNickname: I
 
 function f(e) {
   let t = o.Z.getChannel(e.channel_id);
-  return p(e.author, t);
+  return h(e.author, t);
 }
 
-function h(e, t) {
+function p(e, t) {
   let n = null == e ? void 0 : e.id,
 r = null == t ? void 0 : t.guild_id,
 i = (0, a.e7)([s.ZP], () => null == r || null == n ? null : s.ZP.getMember(r, n)),
@@ -94,7 +94,7 @@ friendNickname: _
   });
 }
 
-function p(e, t) {
+function h(e, t) {
   let n = null == e ? void 0 : e.id,
 r = null == t ? void 0 : t.guild_id,
 i = l.Z.getGuild(r),
@@ -139,6 +139,6 @@ colorRoleId: u.colorRoleId,
 iconRoleId: u.iconRoleId,
 guildMemberAvatar: u.avatar,
 guildMemberAvatarDecoration: u.avatarDecoration,
-clan: null !== (i = a.clan) && void 0 !== i ? i : void 0
+primaryGuild: null !== (i = a.primaryGuild) && void 0 !== i ? i : void 0
   };
 }

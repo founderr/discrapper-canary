@@ -1,49 +1,57 @@
 n.d(t, {
   Z: function() {
-return c;
+return u;
   }
 });
 var i = n(735250),
   a = n(470079),
   s = n(120356),
   r = n.n(s),
-  l = n(481060),
-  o = n(960794);
+  l = n(780384),
+  o = n(481060),
+  c = n(410030),
+  d = n(960794);
 
-function c(e) {
+function u(e) {
   let {
 title: t,
 description: n,
 button: s,
-backgroundImageUrl: c = 'https://cdn.discordapp.com/assets/discovery/generic-hero-background.png',
-className: d
-  } = e, u = a.useMemo(() => ({
-backgroundImage: 'url('.concat(c, ')')
-  }), [c]);
+backgroundImageUrl: u,
+className: _
+  } = e, E = (0, l.wj)((0, c.ZP)()), h = a.useMemo(() => null != u ? u : E ? 'https://cdn.discordapp.com/assets/discovery/generic-hero-background.png' : 'https://cdn.discordapp.com/assets/discovery/generic-hero-background-light-mode.png', [
+E,
+u
+  ]), I = a.useMemo(() => ({
+backgroundImage: 'url('.concat(h, ')')
+  }), [h]);
   return (0, i.jsxs)('div', {
-className: r()(o.imageContainer, d),
+className: r()(d.imageContainer, _),
 children: [
-  (0, i.jsxs)('div', {
-    className: o.imageContent,
-    children: [
-      (0, i.jsx)(l.Heading, {
-        variant: 'heading-lg/medium',
-        color: 'always-white',
-        children: t
-      }),
-      (0, i.jsx)(l.Text, {
-        variant: 'text-md/medium',
-        color: 'text-muted',
-        children: n
-      }),
-      s
-    ]
+  (0, i.jsx)('div', {
+    className: d.imageContent,
+    children: (0, i.jsxs)('div', {
+      className: d.textContainer,
+      children: [
+        (0, i.jsx)(o.Heading, {
+          variant: 'heading-lg/medium',
+          color: 'always-white',
+          children: t
+        }),
+        (0, i.jsx)(o.Text, {
+          variant: 'text-md/medium',
+          color: 'text-muted',
+          children: n
+        }),
+        s
+      ]
+    })
   }),
   (0, i.jsx)('div', {
-    className: o.imageBackground,
-    style: u,
+    className: d.imageBackground,
+    style: I,
     children: (0, i.jsx)('div', {
-      className: o.imageBackgroundOverlay
+      className: d.imageBackgroundOverlay
     })
   })
 ]

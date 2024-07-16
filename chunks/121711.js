@@ -30,7 +30,7 @@ scrollPosition: Z
 scrollPosition: Z
   }), O = (0, r.wj)((0, o.ZP)()), {
 quests: R
-  } = (0, m.bA)(N.id), x = a.useMemo(() => O ? 'https://cdn.discordapp.com/assets/discovery/quest-mountain-hero.png' : 'https://cdn.discordapp.com/assets/discovery/quest-mountain-hero-light-mode.png', [O]);
+  } = (0, m.bA)(N.id), x = a.useMemo(() => O ? 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-dark-mode.png' : 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-light-mode.png', [O]);
   a.useEffect(() => {
 !t && (0, s.uL)(f.Z5c.FRIENDS);
   }, [t]), a.useEffect(() => {}, []);
@@ -61,20 +61,20 @@ children: [
     bannerContainerClassName: C.hero,
     button: (0, i.jsxs)(l.Button, {
       size: 'medium',
-      color: l.ButtonColors.TRANSPARENT,
+      color: O ? l.ButtonColors.TRANSPARENT : l.ButtonColors.WHITE,
       className: C.button,
       onClick: b,
       innerClassName: C.innerButton,
       children: [
         (0, i.jsx)(l.Text, {
           variant: 'text-md/semibold',
-          color: 'always-white',
+          color: O ? 'always-white' : 'text-normal',
           className: C.externalLinkText,
           children: S.Z.Messages.LEARN_MORE
         }),
         (0, i.jsx)(l.LinkExternalSmallIcon, {
           className: C.icon,
-          color: 'var(--white-500)'
+          color: O ? 'var(--white-500)' : 'var(--redesign-button-secondary-text'
         })
       ]
     }),

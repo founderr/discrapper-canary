@@ -1,6 +1,6 @@
 n.d(t, {
   EJ: function() {
-return p;
+return h;
   },
   SS: function() {
 return f;
@@ -23,8 +23,8 @@ return N;
   pY: function() {
 return A;
   },
-  vh: function() {
-return h;
+  qd: function() {
+return p;
   }
 }), n(47120);
 var r = n(108131),
@@ -48,7 +48,7 @@ return r - i().v3(''.concat(n).concat(t));
   }), new Set(n);
 }
 
-function h(e) {
+function p(e) {
   return null != e && e.identityEnabled ? {
 guildId: e.identityGuildId,
 tag: e.tag,
@@ -56,7 +56,7 @@ badge: e.badge
   } : {};
 }
 
-function p(e) {
+function h(e) {
   return null != e && e.hasFeature(_.oNc.CLAN);
 }
 
@@ -142,7 +142,7 @@ i = (0, a.e7)([l.ZP], () => {
 {
   tag: d,
   guildId: _
-} = h(null == r ? void 0 : r.clan),
+} = p(null == r ? void 0 : r.primaryGuild),
 E = (0, c.Z)('clan_tag_chiplet');
   return !n && !!E && null != _ && null != d && !i && !0;
 }

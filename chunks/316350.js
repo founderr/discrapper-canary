@@ -39,7 +39,7 @@ n(2);
 return null;
   let E = I || c ? g.hidden : null,
 m = I ? T.Z.Stages.FLYING : T.Z.Stages.HOVERING;
-  return (0, l.jsx)(u.Spring, {
+  return (0, l.jsx)(_.Spring, {
 from: {
   opacity: 0
 },
@@ -47,6 +47,7 @@ to: {
   opacity: 1
 },
 config: x,
+shouldAnimate: 'animate-always',
 children: e => (0, l.jsxs)(u.animated.div, {
   className: g.tierClose,
   style: e,
@@ -85,7 +86,7 @@ onSetRef: a,
 tier: i,
 showHeaderLockStatus: r,
 headerButton: c = null,
-subscriptionsRequired: _,
+subscriptionsRequired: u,
 subscriptionCount: I,
 className: E
   } = e, T = e => {
@@ -93,7 +94,7 @@ null == a || a(e);
   }, [N, S] = o.useState(0);
   return o.useLayoutEffect(() => {
 n && S(1);
-  }, [n]), (0, l.jsx)(u.Spring, {
+  }, [n]), (0, l.jsx)(_.Spring, {
 from: {
   unlockedTranslateY: 50
 },
@@ -126,12 +127,12 @@ children: e => (0, l.jsx)('div', {
       r ? (0, l.jsx)(L, {
         transform: null == e ? void 0 : e.unlockedTranslateY.to(e => 'translate3d(0, '.concat(e, 'px, 0)')),
         headerButton: c,
-        subscriptionsRequired: _,
+        subscriptionsRequired: u,
         hasAnimatedUnlocked: s
       }) : null,
       (0, l.jsx)(p, {
         numUnlocked: I,
-        numRequired: _
+        numRequired: u
       })
     ]
   })

@@ -226,7 +226,7 @@ let {
 if (!(0, p.rK)('GravityStore-handleMessageCreate') || null == a || (null === (t = i.author) || void 0 === t ? void 0 : t.id) === o.default.getId() || (null !== (n = R[a]) && void 0 !== n ? n : 0) < 0)
   return !1;
 let r = c.Z.getChannel(s);
-if (null == r || r.type !== T.d4z.GUILD_ANNOUNCEMENT || _.ZP.isChannelMuted(a, s) || a in R && R[a] < 0 || s in x[a] && x[a][s] < 0)
+if (null == r || r.type !== T.d4z.GUILD_ANNOUNCEMENT || _.ZP.isChannelMuted(a, s) || a in R && R[a] < 0 || null != x[a] && s in x[a] && null != x[a][s] && x[a][s] < 0)
   return !1;
 let u = d.Z.getMessage(i.channel_id, i.id);
 null == u && (u = (0, l.e5)(i));

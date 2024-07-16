@@ -16,12 +16,12 @@ function c(e) {
 userId: c
   } = e, d = (0, a.e7)([r.default], () => {
 var e;
-return null === (e = r.default.getUser(c)) || void 0 === e ? void 0 : e.clan;
+return null === (e = r.default.getUser(c)) || void 0 === e ? void 0 : e.primaryGuild;
   }), {
 tag: _,
 badge: E,
 guildId: u
-  } = (0, l.vh)(d);
+  } = (0, l.qd)(d);
   n.useEffect(() => {
 (0, o._S)(u);
   }, [u]);

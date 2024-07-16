@@ -107,7 +107,7 @@ clan: S,
 userId: N
   } = e, C = (0, T.C)(), m = (0, o.e7)([d.default], () => {
 var e;
-return (0, u.vh)(null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId;
+return (0, u.qd)(null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.primaryGuild).guildId;
   }), p = a.useMemo(() => {
 if (i !== m) {
   if (C.has(i))

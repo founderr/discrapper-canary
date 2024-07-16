@@ -142,22 +142,21 @@ questContentPosition: l,
 inGiftInventory: o,
 hasConsoleTasks: u,
 hasConsoleConnection: E
-  } = e, I = n >= 1, m = n >= 3, p = (0, C.Bz)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([f.Z], () => f.Z.isEnrolling(t.id)), R = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), x = (0, N._s)({
-quest: t
-  }), M = function(e) {
+  } = e, I = n >= 1, m = n >= 3, p = (0, N.z)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([f.Z], () => f.Z.isEnrolling(t.id)), R = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), x = function(e) {
 let {
   quest: t,
   progressState: n,
   isCollectibleQuest: i,
   location: a,
   questContentPosition: s,
-  waitingForConsoleConnection: l,
-  isInHouseQuest: o,
-  inGiftInventory: c
-} = e, d = (0, O.hf)({
+  isInHouseQuest: l,
+  inGiftInventory: o
+} = e, c = (0, O.hf)({
   quest: t,
   location: a,
   questContentPosition: s
+}), d = (0, N._s)({
+  quest: t
 });
 return r.useMemo(() => {
   switch (n) {
@@ -173,7 +172,7 @@ return r.useMemo(() => {
       };
     case 1:
     case 2:
-      if (l && c)
+      if (d && o)
         return {
           text: Z.Z.Messages.QUESTS_CONNECT_CONSOLE,
           tooltipText: null,
@@ -195,15 +194,15 @@ return r.useMemo(() => {
     case 3:
       return {
         text: Z.Z.Messages.QUESTS_CLAIM_REWARD,
-          tooltipText: o ? Z.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : null,
-          onClick: d
+          tooltipText: l ? Z.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : null,
+          onClick: c
       };
     case 4:
       let e = {
         tooltipText: null,
-        onClick: d
+        onClick: c
       };
-      if (o)
+      if (l)
         return {
           ...e,
           text: Z.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
@@ -226,13 +225,13 @@ return r.useMemo(() => {
 }, [
   t,
   i,
-  o,
+  l,
   a,
-  d,
+  c,
   n,
   s,
-  l,
-  c
+  d,
+  o
 ]);
   }({
 progressState: n,
@@ -240,7 +239,6 @@ quest: t,
 isInHouseQuest: R,
 location: a,
 isCollectibleQuest: i,
-waitingForConsoleConnection: x,
 questContentPosition: l,
 inGiftInventory: o
   });
@@ -249,35 +247,35 @@ return (0, s.jsx)(U, {
   quest: t,
   useReducedMotion: S
 });
-  let L = R && o && m,
-D = L ? P.inHouseButton : d.ButtonColors.BRAND,
-j = m && !S ? d.ShinyButton : d.Button;
+  let M = R && o && m,
+L = M ? P.inHouseButton : d.ButtonColors.BRAND,
+D = m && !S ? d.ShinyButton : d.Button;
   return (0, s.jsx)(d.Tooltip, {
-text: M.tooltipText,
+text: x.tooltipText,
 tooltipContentClassName: P.ctaTooltipText,
 children: e => {
   var t;
-  return (0, s.jsx)(j, {
+  return (0, s.jsx)(D, {
     ...e,
     wrapperClassName: P.ctaButtonWrapper,
-    color: D,
-    disabled: null == M.onClick,
+    color: L,
+    disabled: null == x.onClick,
     submitting: A,
-    onClick: null !== (t = M.onClick) && void 0 !== t ? t : () => {},
+    onClick: null !== (t = x.onClick) && void 0 !== t ? t : () => {},
     children: (0, s.jsxs)('div', {
       className: P.ctaButtonInner,
       children: [
-        L && (0, s.jsx)('img', {
+        M && (0, s.jsx)('img', {
           src: b,
           alt: '',
           className: P.inHouseIcon
         }),
-        M.text
+        x.text
       ]
     })
   });
 }
-  }, M.tooltipText);
+  }, x.tooltipText);
 }
 t.Z = e => {
   let {

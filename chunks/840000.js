@@ -57,12 +57,12 @@ function f(e) {
 flipX: L,
 children: a,
 colors: i
-  } = e, [r, o] = t.useState(!1), [H, d] = t.useState(0), [V, h] = t.useState(!1), f = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
+  } = e, [r, n] = t.useState(!1), [o, d] = t.useState(0), [V, h] = t.useState(!1), f = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
 
   function T() {
 d(e => {
   let L = e + 0.2;
-  return L >= 1 && (h(!0), 6 == ++I && (E.play(), o(!0))), L;
+  return L >= 1 && (h(!0), 6 == ++I && (E.play(), n(!0))), L;
 });
   }
   return V ? (0, C.jsxs)(C.Fragment, {
@@ -76,14 +76,15 @@ children: [
     alt: M.Z.Messages.EMBEDDED_ACTIVITIES_ALT_WUMPUS_ROCKET
   }) : null
 ]
-  }) : (0, C.jsx)(n.Spring, {
+  }) : (0, C.jsx)(H.Spring, {
 config: f ? u : p,
 from: {
   value: 0
 },
 to: {
-  value: H
+  value: o
 },
+shouldAnimate: 'animate-always',
 children: e => {
   let {
     value: C

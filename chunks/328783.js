@@ -21,7 +21,7 @@ e.id,
 e
   ])), [t]), c = (0, i.e7)([l.default], () => {
 var e;
-return (0, _.vh)(null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId;
+return (0, _.qd)(null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.primaryGuild).guildId;
   }), N = a.useMemo(() => t.reduce((e, t) => {
 var s;
 return (null === (s = t.clan) || void 0 === s ? void 0 : s.tag) != null && e.push({

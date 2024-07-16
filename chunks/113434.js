@@ -68,8 +68,8 @@ var r, i, a, o, s = n(470079),
   _ = n(553795),
   E = n(70956),
   f = n(617136),
-  h = n(272008),
-  p = n(569984),
+  p = n(272008),
+  h = n(569984),
   m = n(497505),
   I = n(918701),
   T = n(796111),
@@ -85,20 +85,20 @@ function R() {
   fetchPolicy: 'cache-only'
 },
 [t, n] = s.useState(!1),
-r = (0, u.Wu)([p.Z], () => [...p.Z.quests.values()]),
+r = (0, u.Wu)([h.Z], () => [...h.Z.quests.values()]),
 {
   isFetchingCurrentQuests: i,
   lastFetchedCurrentQuests: a
-} = (0, u.cj)([p.Z], () => ({
-  isFetchingCurrentQuests: p.Z.isFetchingCurrentQuests,
-  lastFetchedCurrentQuests: p.Z.lastFetchedCurrentQuests
+} = (0, u.cj)([h.Z], () => ({
+  isFetchingCurrentQuests: h.Z.isFetchingCurrentQuests,
+  lastFetchedCurrentQuests: h.Z.lastFetchedCurrentQuests
 })),
 o = (0, g.cB)({
   location: N.dr.USE_QUESTS
 });
   return s.useEffect(() => {
 if ('cache-only' !== e.fetchPolicy)
-  ('cache-and-network' === e.fetchPolicy || 'cache-or-network' === e.fetchPolicy && 0 === a) && o && !t && !i && (n(!0), (0, h.xw)());
+  ('cache-and-network' === e.fetchPolicy || 'cache-or-network' === e.fetchPolicy && 0 === a) && o && !t && !i && (n(!0), (0, p.xw)());
   }, [
 e.fetchPolicy,
 o,
@@ -145,8 +145,8 @@ return s.useMemo(() => {
       _ = (0, I.Mi)(e, m.jn.GIFT_INVENTORY_FOR_YOU),
       E = (0, I.Mi)(t, m.jn.GIFT_INVENTORY_FOR_YOU),
       f = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
-      h = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
-    return l !== u ? l ? -1 : 1 : c !== d && l && u ? c ? -1 : 1 : _ !== E ? _ ? -1 : 1 : f !== h ? f ? -1 : 1 : l && u ? C(null === (o = e.config) || void 0 === o ? void 0 : o.expiresAt, null === (s = t.config) || void 0 === s ? void 0 : s.expiresAt, 1) : C(null === (i = e.config) || void 0 === i ? void 0 : i.expiresAt, null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt, 0);
+      p = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
+    return l !== u ? l ? -1 : 1 : c !== d && l && u ? c ? -1 : 1 : _ !== E ? _ ? -1 : 1 : f !== p ? f ? -1 : 1 : l && u ? C(null === (o = e.config) || void 0 === o ? void 0 : o.expiresAt, null === (s = t.config) || void 0 === s ? void 0 : s.expiresAt, 1) : C(null === (i = e.config) || void 0 === i ? void 0 : i.expiresAt, null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt, 0);
   }).map(e => e.id);
   return n.current = e, e;
 }, [t]);
@@ -245,7 +245,7 @@ n
 }
 
 function M(e) {
-  return (0, u.e7)([p.Z], () => p.Z.isProgressingOnDesktop(e.id));
+  return (0, u.e7)([h.Z], () => h.Z.isProgressingOnDesktop(e.id));
 }
 
 function P(e) {
@@ -318,7 +318,7 @@ return O.Z.Messages.QUESTS_IN_HOUSE_TASK_WITH_LINK.format({
   minutes: r,
   onClick: a
 });
-  if ((0, I.zK)(e, N.S7.MOBILE_CONSOLE_QUEST))
+  if ((0, I.$J)(e))
 return O.Z.Messages.QUESTS_CONSOLE_QUEST_TASK_WITH_LINK.format({
   minutes: r,
   onClick: a,
@@ -373,7 +373,7 @@ function B() {
   let e = k();
   s.useEffect(() => {
 for (let t of e)
-  (0, h.gl)(t.id, m.jn.GIFT_INVENTORY_SETTINGS_BADGE);
+  (0, p.gl)(t.id, m.jn.GIFT_INVENTORY_SETTINGS_BADGE);
   }, [e]);
 }
 
@@ -381,7 +381,7 @@ function F(e) {
   let t = (0, S.z)({
   location: N.dr.MEMBERS_LIST
 }),
-n = (0, u.e7)([p.Z], () => t ? p.Z.quests : null),
+n = (0, u.e7)([h.Z], () => t ? h.Z.quests : null),
 r = s.useMemo(() => (0, I.Jg)(n, e), [
   e,
   n
@@ -405,10 +405,10 @@ isFetching: i
 
 function H(e) {
   return {
-handleComplete: () => (0, h.Wf)(e),
-handleResetStatusClick: () => (0, h.eT)(e),
-handleResetDismissibilityClick: () => (0, h.T0)(e),
-handleOverrideDeliveryClick: () => (0, h.EW)(e)
+handleComplete: () => (0, p.Wf)(e),
+handleResetStatusClick: () => (0, p.eT)(e),
+handleResetDismissibilityClick: () => (0, p.T0)(e),
+handleOverrideDeliveryClick: () => (0, p.EW)(e)
   };
 }
 
@@ -453,7 +453,7 @@ return {
     if (!l) {
       null == r || r(), u(!0);
       try {
-        let e = await (0, h.CS)(t, n);
+        let e = await (0, p.CS)(t, n);
         o(e.errorHints);
       } finally {
         u(!1), null == i || i();
