@@ -1,0 +1,1 @@
+e.exports = '/assets/8ac4a16591a3017b7d11.svg';

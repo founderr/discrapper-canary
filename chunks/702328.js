@@ -14,8 +14,8 @@ var s = n(735250),
   I = n(74538),
   R = n(140465),
   C = n(730314),
-  p = n(91802),
-  g = n(104494),
+  g = n(91802),
+  p = n(104494),
   A = n(639119),
   m = n(8647),
   N = n(568126),
@@ -96,7 +96,7 @@ isFullscreen: n,
 entrypoint: r
   } = e, {
 bucket: x
-  } = (0, C.wj)('PremiumMarketingHome'), O = x > 0, P = a.useRef(null), [L, U] = a.useState(!1), [Y, z] = a.useState(!1), [Q, q] = a.useState(!1), [J, X] = a.useState(!1), $ = (0, l.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()), ee = null != $ ? (0, I.Af)($) : null, et = null != ee ? I.ZP.getSkuIdForPlan(ee.planId) : null, en = null !== et && et !== G.Si.TIER_2 ? G.Si.TIER_2 : null, es = (0, p.n)(), ea = null != es, [er, ei] = a.useState(!1), el = (0, g.Ng)(), eo = (0, A.N)(), ec = null == eo ? void 0 : null === (t = eo.subscription_trial) || void 0 === t ? void 0 : t.sku_id, ed = (0, R.Nx)(), e_ = (0, S.Vi)(), {
+  } = (0, C.wj)('PremiumMarketingHome'), O = x > 0, P = a.useRef(null), [L, U] = a.useState(!1), [Y, z] = a.useState(!1), [Q, q] = a.useState(!1), [J, X] = a.useState(!1), $ = (0, l.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()), ee = null != $ ? (0, I.Af)($) : null, et = null != ee ? I.ZP.getSkuIdForPlan(ee.planId) : null, en = null !== et && et !== G.Si.TIER_2 ? G.Si.TIER_2 : null, es = (0, g.n)(), ea = null != es, [er, ei] = a.useState(!1), el = (0, p.Ng)(), eo = (0, A.N)(), ec = null == eo ? void 0 : null === (t = eo.subscription_trial) || void 0 === t ? void 0 : t.sku_id, ed = (0, R.Nx)(), e_ = (0, S.Vi)(), {
 analyticsLocations: eu
   } = (0, u.ZP)(_.Z.PREMIUM_MARKETING), eE = 'PremiumMarketingHome';
   (0, d.j)({
@@ -196,7 +196,9 @@ eI = (0, s.jsxs)('div', {
     (0, s.jsxs)('div', {
       className: H.promoBannerContainer,
       children: [
-        (0, s.jsx)(m.Z, {}),
+        (0, s.jsx)(m.Z, {
+          isFullScreen: n
+        }),
         n && ea && (0, s.jsx)(N.Z, {
           localizedPricingPromo: es
         })
