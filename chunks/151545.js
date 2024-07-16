@@ -15,8 +15,8 @@ var r = n(735250),
   _ = n(812206),
   E = n(202458),
   f = n(220779),
-  p = n(142550),
-  h = n(954017),
+  h = n(142550),
+  p = n(954017),
   m = n(314091),
   I = n(159244),
   T = n(574176),
@@ -114,7 +114,6 @@ user: n,
 application: V,
 hideHeader: c,
 activityGuild: null != B ? B : F,
-showReactions: Y,
 showChannelDetails: d,
 channel: d ? U : void 0,
 renderActions: l ? () => (0, r.jsxs)('div', {
@@ -147,14 +146,14 @@ renderActions: l ? () => (0, r.jsxs)('div', {
           application_id: t.application_id,
           interaction_type: r,
           ...C
-        }), r === p.L.ReactSubmit && null != i && (0, h.sendReactionToActivity)({
+        }), r === h.L.ReactSubmit && null != i && (0, p.sendReactionToActivity)({
           reaction: i,
           user: n,
           activity: t,
           application: V,
           altText: (0, m.xC)(n, t),
           stream: x
-        }), r === p.L.ReplySubmit && null != a && (0, h.sendReplyToActivity)({
+        }), r === h.L.ReplySubmit && null != a && (0, p.sendReplyToActivity)({
           reply: a,
           user: n,
           activity: t,
