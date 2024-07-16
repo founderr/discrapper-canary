@@ -664,26 +664,27 @@ _sendMessage(e, t, n) {
       stickerIds: O,
       messageReference: R,
       allowedMentions: C,
-      poll: U
+      poll: U,
+      contentInventoryEntry: F
     } = n,
-    F = null !== (i = n.flags) && void 0 !== i ? i : 0,
-    [Z, Y] = (0, H.Z)(c);
-  Z && (c = Y, F = (0, en.pj)(F, el.iLy.SUPPRESS_NOTIFICATIONS));
-  let j = (null === (r = n.messageReference) || void 0 === r ? void 0 : r.type) === el.Uvt.FORWARD;
-  if ('' === c && null == T && null == O && null == U && !j)
+    Z = null !== (i = n.flags) && void 0 !== i ? i : 0,
+    [Y, j] = (0, H.Z)(c);
+  Y && (c = j, Z = (0, en.pj)(Z, el.iLy.SUPPRESS_NOTIFICATIONS));
+  let z = (null === (r = n.messageReference) || void 0 === r ? void 0 : r.type) === el.Uvt.FORWARD;
+  if ('' === c && null == T && null == O && null == U && !z)
     return Promise.resolve();
-  let z = null != R ? el.uaV.REPLY : el.uaV.DEFAULT,
-    q = null !== (a = n.nonce) && void 0 !== a ? a : (0, M.r)();
+  let q = null != R ? el.uaV.REPLY : el.uaV.DEFAULT,
+    X = null !== (a = n.nonce) && void 0 !== a ? a : (0, M.r)();
   if (!1 !== n.eagerDispatch) {
     let t = (0, b.ZP)({
       channelId: e,
       content: c,
       tts: I,
-      type: z,
+      type: q,
       messageReference: R,
       allowedMentions: C,
-      flags: 0 !== F ? F : void 0,
-      nonce: q,
+      flags: 0 !== Z ? Z : void 0,
+      nonce: X,
       poll: (0, G.x9)(U)
     });
     (0, w.EL)(e, t.id), null != O && (t.sticker_items = O.map(e => V.Z.getStickerById(e)).filter(e => null != e)), eI.receiveMessage(e, t, !0, n);
@@ -696,16 +697,16 @@ _sendMessage(e, t, n) {
       channelId: e
     }) ? (t = ed.Z.Messages.INVALID_EXTERNAL_EMOJI_BODY_UPGRADE, n = 'INVALID_EXTERNAL_EMOJI_BODY_UPGRADE') : (t = ed.Z.Messages.INVALID_EXTERNAL_EMOJI_BODY, n = 'INVALID_EXTERNAL_EMOJI_BODY'), eI.sendBotMessage(e, t, n);
   }
-  let X = {
+  let $ = {
     type: l.$V.SEND,
     message: {
       channelId: e,
       content: c,
-      nonce: q,
+      nonce: X,
       tts: I,
       message_reference: R,
       allowed_mentions: C,
-      flags: F
+      flags: Z
     }
   };
   if (null != T) {
@@ -718,14 +719,14 @@ _sendMessage(e, t, n) {
         {
           activity: n
         } = T;
-      null != n.party && null != n.party.id && (t.party_id = n.party.id), X.message.application_id = n.application_id, X.message.activity = t;
+      null != n.party && null != n.party.id && (t.party_id = n.party.id), $.message.application_id = n.application_id, $.message.activity = t;
     }
   }
-  return null != U && (X.message.poll = U), null != O && (X.message.sticker_ids = O), x.Z.isEnabled() && (X.message.has_poggermode_enabled = !0), new Promise((t, r) => {
+  return null != U && ($.message.poll = U), null != O && ($.message.sticker_ids = O), x.Z.isEnabled() && ($.message.has_poggermode_enabled = !0), null != F && ($.message.content_inventory_entry = F), new Promise((t, r) => {
     let i = Date.now(),
       a = l.ZP.length,
       s = Math.floor(10000 * Math.random());
-    eE.info('Queueing message to be sent LogId:'.concat(s)), l.ZP.enqueue(X, s => {
+    eE.info('Queueing message to be sent LogId:'.concat(s)), l.ZP.enqueue($, s => {
       let d = Date.now() - i;
       if (s.ok) {
         L.Z.donateSentMessage(c, e), eI.receiveMessage(e, s.body, !0, {
@@ -751,7 +752,7 @@ _sendMessage(e, t, n) {
             joinRequestUserId: n
           });
         }
-        y.Z.recordMessageSendApiResponse(q);
+        y.Z.recordMessageSendApiResponse(X);
         o.Z.dispatch({
           type: 'SLOWMODE_RESET_COOLDOWN',
           slowmodeType: J.S.SendMessage,
@@ -868,18 +869,18 @@ _sendMessage(e, t, n) {
           } else
             A.U8.has(s.body.code) ? o.Z.dispatch({
               type: 'MESSAGE_SEND_FAILED_AUTOMOD',
-              messageData: X,
+              messageData: $,
               errorResponseBody: {
                 code: s.body.code,
                 message: s.body.message
               }
             }) : s.body.code === el.evJ.POGGERMODE_TEMPORARILY_DISABLED ? o.Z.dispatch({
               type: 'POGGERMODE_TEMPORARILY_DISABLED'
-            }) : null != U || j || eI.sendClydeError(e, s.body.code);
+            }) : null != U || z || eI.sendClydeError(e, s.body.code);
         }
-        t ? eI.deleteMessage(e, q, !0) : (o.Z.dispatch({
+        t ? eI.deleteMessage(e, X, !0) : (o.Z.dispatch({
           type: 'MESSAGE_SEND_FAILED',
-          messageId: q,
+          messageId: X,
           channelId: e,
           shouldNotify: !0
         }), (0, P.x)({
