@@ -126,7 +126,7 @@ if ('video' === s.type || 'embed' === s.type) {
 }
   }, [
 b,
-s
+s.type
   ]), a.useEffect(() => {
 null != A && (0, u.kk)(A);
 let e = Date.now();
