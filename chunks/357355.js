@@ -22,5 +22,8 @@ let {
   res: t
 } = e;
 a.affinities = t;
+  },
+  LOGOUT: function() {
+a.fetched = !1, a.affinities = [];
   }
 });
