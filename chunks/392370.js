@@ -20,15 +20,15 @@ var i = t(470079),
   _ = t(104793),
   E = t(674588),
   A = t(809547),
-  f = t(822245),
-  h = t(631827),
+  h = t(822245),
+  f = t(631827),
   N = t(783097),
   C = t(689079),
   v = t(665692);
 
 function I(e, n) {
-  let t = f.Z.getScoreWithoutLoadingLatest(e.id);
-  return f.Z.getScoreWithoutLoadingLatest(n.id) - t;
+  let t = h.Z.getScoreWithoutLoadingLatest(e.id);
+  return h.Z.getScoreWithoutLoadingLatest(n.id) - t;
 }
 
 function P(e, n) {
@@ -54,7 +54,7 @@ searchesActivities: E = !0
   t.startsWith(''.concat(v.GI)) && (t = t.substring(1));
   let {
 commands: A,
-commandSectionMap: f,
+commandSectionMap: h,
 loading: T
   } = function(e) {
 var n, t;
@@ -124,14 +124,14 @@ return i && o.push(N.Wx), {
 channel: n,
 onlyWithCommands: !0,
 includeBuiltIn: !0
-  }), L = (0, u.Z)({
+  }), S = (0, u.Z)({
 guildId: n.getGuildId(),
 channel: n
-  }), S = i.useMemo(() => {
+  }), L = i.useMemo(() => {
 var e;
 if (!s)
   return [];
-return (0, h.N)(A, {
+return (0, f.N)(A, {
   limit: l,
   filterPredicates: [function(e) {
     let n = (0, p.k)(e, c.yU.CHAT),
@@ -244,18 +244,18 @@ l,
 n,
 t
   ]), g = i.useMemo(() => {
-if (0 === S.length)
+if (0 === L.length)
   return [];
 let e = new Map(R.map(e => [
   e.id,
   e
 ]));
-return a().compact(S.map(n => {
+return a().compact(L.map(n => {
   var t;
   let i = e.get(n.applicationId);
   if (null == i)
     return null;
-  let l = null !== (t = f[n.id]) && void 0 !== t ? t : null;
+  let l = null !== (t = h[n.id]) && void 0 !== t ? t : null;
   return {
     command: n,
     application: i,
@@ -264,8 +264,8 @@ return a().compact(S.map(n => {
 }));
   }, [
 R,
-S,
-f
+L,
+h
   ]), M = i.useMemo(() => {
 var e;
 if (!o && !E)
@@ -278,7 +278,7 @@ if (o && E) {
     } = e;
     return n;
   }));
-  i.push(...R), i.push(...L.filter(n => {
+  i.push(...R), i.push(...S.filter(n => {
     let {
       application: {
         id: t
@@ -292,13 +292,13 @@ if (o && E) {
     return n;
   }));
 } else
-  i = o ? R : L.map(e => {
+  i = o ? R : S.map(e => {
     let {
       application: n
     } = e;
     return n;
   });
-return (0, h.N)(i, {
+return (0, f.N)(i, {
   limit: r,
   filterPredicates: [function(e) {
     let n = (0, p.k)(e, c.yU.CHAT);
@@ -357,14 +357,14 @@ r,
 n,
 t,
 R,
-L
-  ]), O = g.length > 0, y = M.length > 0;
+S
+  ]), y = g.length > 0, O = M.length > 0;
   return {
 commandResults: g,
-hasCommandResults: O,
+hasCommandResults: y,
 applicationResults: M,
-hasApplicationResults: y,
-isEmptyState: !O && !y,
+hasApplicationResults: O,
+isEmptyState: !y && !O,
 loading: T && s
   };
 }
@@ -432,7 +432,7 @@ d,
 u,
 p,
 m
-  ]), f = i.useCallback(e => {
+  ]), h = i.useCallback(e => {
 let {
   query: n,
   page: t,
@@ -452,7 +452,7 @@ E.yC({
   }, []);
   return i.useEffect(() => {
 if (!!l)
-  f({
+  h({
     query: t,
     page: a,
     guildId: n.guild_id
@@ -460,7 +460,7 @@ if (!!l)
   }, [
 t,
 n.guild_id,
-f,
+h,
 a,
 l
   ]), i.useEffect(() => {

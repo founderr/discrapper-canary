@@ -17,8 +17,8 @@ var i = t(735250),
   _ = t(536650),
   E = t(675993),
   A = t(689079),
-  f = t(689938),
-  h = t(132439),
+  h = t(689938),
+  f = t(132439),
   N = t(413097);
 
 function C(e) {
@@ -44,11 +44,11 @@ I.id,
 t.id,
 C
   ]), (0, i.jsxs)(r.ScrollerNone, {
-className: h.container,
+className: f.container,
 fade: !0,
 ref: x,
 role: 'region',
-'aria-label': f.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({
+'aria-label': h.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({
   applicationName: R
 }),
 children: [
@@ -59,7 +59,7 @@ children: [
   }),
   null != T && (0, i.jsx)(m.Z, {
     src: T,
-    className: h.appIcon
+    className: f.appIcon
   }),
   (0, i.jsx)(a.Z, {
     size: 54

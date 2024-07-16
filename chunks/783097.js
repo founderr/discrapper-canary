@@ -12,7 +12,7 @@ return _;
 return C;
   },
   jD: function() {
-return f;
+return h;
   },
   sl: function() {
 return v;
@@ -21,7 +21,7 @@ return v;
 return N;
   },
   ye: function() {
-return h;
+return f;
   }
 }), t(789020);
 var i = t(668781),
@@ -47,11 +47,11 @@ function A(e) {
   return E(e) ? e.name : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
 }
 
-function f(e) {
+function h(e) {
   return E(e) ? e.description : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
 }
 
-function h(e) {
+function f(e) {
   var n;
   let {
 application: t
@@ -60,7 +60,7 @@ application: t
 }
 
 function N(e) {
-  return E(e) && h({
+  return E(e) && f({
 application: e
   }) ? e instanceof o.Z ? e.embeddedActivityConfig : e.embedded_activity_config : null;
 }

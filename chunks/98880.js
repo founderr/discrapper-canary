@@ -24,8 +24,8 @@ var i, l, a = t(735250),
   _ = t(367907),
   E = t(220082),
   A = t(810090),
-  f = t(768581),
-  h = t(792125),
+  h = t(768581),
+  f = t(792125),
   N = t(541099),
   C = t(783097),
   v = t(695676),
@@ -34,12 +34,12 @@ var i, l, a = t(735250),
   x = t(753972),
   T = t(981631),
   R = t(217702),
-  L = t(231338),
-  S = t(689938),
+  S = t(231338),
+  L = t(689938),
   g = t(126152),
   M = t(413097);
 
-function O(e) {
+function y(e) {
   let {
 application: n,
 look: t = 'large_banner',
@@ -53,7 +53,7 @@ resultsPosition: p,
 tracksImpression: _ = !0
   } = e, {
 iconURL: A,
-name: f,
+name: h,
 description: N
   } = r.useMemo(() => (0, C.sl)(n, {
 fakeAppIconURL: M
@@ -63,15 +63,15 @@ trackItemImpressionRef: I
 applicationId: n.id,
 sectionName: m,
 sectionPosition: p
-  }), [T, R] = r.useState(!1), O = r.useCallback(() => {
+  }), [T, R] = r.useState(!1), y = r.useCallback(() => {
 !0 === u && R(!0);
   }, [u]), j = r.useCallback(() => R(!1), []);
   return 'icon' === t ? (0, a.jsx)(c.Clickable, {
 innerRef: _ ? e => I.current = e : void 0,
 className: o()(g.container, g.iconCard),
 onClick: l,
-'aria-label': S.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
-  applicationName: f,
+'aria-label': L.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
+  applicationName: h,
   applicationDescription: N
 }),
 children: (0, a.jsx)(x.Z, {
@@ -84,14 +84,14 @@ children: (0, a.jsx)(x.Z, {
 innerRef: _ ? e => I.current = e : void 0,
 className: g.container,
 onClick: l,
-'aria-label': S.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
-  applicationName: f,
+'aria-label': L.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
+  applicationName: h,
   applicationDescription: N
 }),
 children: [
   (0, a.jsxs)('div', {
-    onMouseEnter: O,
-    onFocus: O,
+    onMouseEnter: y,
+    onFocus: y,
     onMouseLeave: j,
     onBlur: j,
     className: o()(g.bannerImageContainer, {
@@ -101,7 +101,7 @@ children: [
     children: [
       (0, a.jsx)('span', {
         className: s,
-        children: (0, a.jsx)(y, {
+        children: (0, a.jsx)(O, {
           application: n,
           fallbackColor: v,
           showVideo: T
@@ -110,10 +110,10 @@ children: [
       i && (0, a.jsx)('div', {
         className: g.partnerLabelWrapper,
         children: (0, a.jsx)(c.Text, {
-          className: (0, h.Q)(L.BR.DARK),
+          className: (0, f.Q)(S.BR.DARK),
           variant: 'text-sm/medium',
           color: 'text-normal',
-          children: S.Z.Messages.APP_DIRECTORY_PARTNER
+          children: L.Z.Messages.APP_DIRECTORY_PARTNER
         })
       }),
       'large_banner' === t || 'medium_banner' === t ? (0, a.jsx)('div', {
@@ -138,7 +138,7 @@ children: [
             variant: 'heading-md/semibold',
             color: 'header-primary',
             lineClamp: 1,
-            children: f
+            children: h
           }),
           (0, a.jsx)(c.Text, {
             variant: 'text-sm/normal',
@@ -154,7 +154,7 @@ children: [
   });
 }
 
-function y(e) {
+function O(e) {
   let {
 application: n,
 fallbackColor: t,
@@ -225,7 +225,7 @@ function b(e) {
   let {
 bot: n,
 fallbackColor: t
-  } = e, i = (0, f.aN)({
+  } = e, i = (0, h.aN)({
 id: n.id,
 banner: n.banner,
 canAnimate: !1,
@@ -290,7 +290,7 @@ t
 
 function U(e) {
   let n = H(e);
-  return (0, a.jsx)(O, {
+  return (0, a.jsx)(y, {
 ...e,
 onClick: n
   });
@@ -314,7 +314,7 @@ buttonColor: m,
 buttonText: p
   } = (0, I.P7)(n, t, i, l);
   if (u === d.JS.START)
-return r ? (0, a.jsx)(O, {
+return r ? (0, a.jsx)(y, {
   ...s,
   sectionName: l,
   application: t,
@@ -326,7 +326,7 @@ return r ? (0, a.jsx)(O, {
   application: t,
   location: i
 });
-  return (0, a.jsx)(O, {
+  return (0, a.jsx)(y, {
 ...s,
 sectionName: l,
 application: t,

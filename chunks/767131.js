@@ -16,7 +16,6 @@ e.exports = {
   clanTagChiplet: 'clanTagChiplet_e0fe28',
   traitsContainer: 'traitsContainer_e0fe28',
   thinTrait: 'thinTrait_e0fe28',
-  selectedTrait: 'selectedTrait_e0fe28',
   cardFooter: 'cardFooter_e0fe28',
   cardFooterInfo: 'cardFooterInfo_e0fe28',
   cardFooterMembers: 'cardFooterMembers_e0fe28',
@@ -25,5 +24,6 @@ e.exports = {
   clanInfoItem: 'clanInfoItem_e0fe28',
   wildCardText: 'wildCardText_e0fe28',
   nameText: 'nameText_e0fe28',
-  bannerImage: 'bannerImage_e0fe28'
+  bannerImage: 'bannerImage_e0fe28',
+  selectedTrait: 'selectedTrait_e0fe28'
 };

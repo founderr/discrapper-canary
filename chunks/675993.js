@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return h;
+return f;
   }
 }), t(47120);
 var i = t(735250),
@@ -17,9 +17,9 @@ var i = t(735250),
   _ = t(591204),
   E = t(689938),
   A = t(970311),
-  f = t(153521);
+  h = t(153521);
 
-function h(e) {
+function f(e) {
   let {
 channel: n,
 application: t,
@@ -122,7 +122,7 @@ description: n
 {
   ref: m,
   lineHeight: _,
-  lineCount: h
+  lineCount: f
 } = function() {
   let e = l.useRef(null),
     [n, t] = l.useState(null),
@@ -141,18 +141,18 @@ description: n
   };
 }(),
 N = l.useMemo(() => {
-  if (null == _ || null == h)
+  if (null == _ || null == f)
     return {
       key: 0
     };
-  let e = _ * h;
+  let e = _ * f;
   return {
     key: 1,
     minHeightOverride: Math.min(e, 3 * _),
     maxHeightOverride: e
   };
 }, [
-  h,
+  f,
   _
 ]),
 {
@@ -172,7 +172,7 @@ children: [
     onTransitionEnd: I,
     children: (0, i.jsx)(s.x, {
       ref: m,
-      className: f.markup,
+      className: h.markup,
       variant: 'text-sm/medium',
       lineClamp: P ? void 0 : 3,
       style: {
@@ -181,7 +181,7 @@ children: [
       children: d
     })
   }),
-  null != h && h > 3 ? (0, i.jsxs)(o.Clickable, {
+  null != f && f > 3 ? (0, i.jsxs)(o.Clickable, {
     className: A.expandableDescriptionClickable,
     onClick: () => u(e => !e),
     children: [

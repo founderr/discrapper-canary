@@ -23,11 +23,11 @@ searchResultsPosition: _
   } = e, {
 iconURL: E,
 name: A,
-description: f
+description: h
   } = l.useMemo(() => (0, r.sl)(d, {
 fakeAppIconURL: u
   }), [d]), {
-trackSearchResultsItemImpressionRef: h
+trackSearchResultsItemImpressionRef: f
   } = (0, o.Z)({
 applicationId: d.id,
 commandId: null == t ? void 0 : t.id,
@@ -35,7 +35,7 @@ query: p,
 searchResultsPosition: _
   });
   return (0, i.jsxs)(a.Clickable, {
-innerRef: e => h.current = e,
+innerRef: e => f.current = e,
 className: c.container,
 onClick: m,
 children: [
@@ -58,7 +58,7 @@ children: [
         variant: 'text-sm/normal',
         color: 'text-secondary',
         lineClamp: 1,
-        children: f
+        children: h
       })
     ]
   }),

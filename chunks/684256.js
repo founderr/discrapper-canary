@@ -23,12 +23,12 @@ look: _,
 items: E,
 sectionName: A
   } = e, {
-clickOnHomeActivityOpensAppDetail: f
+clickOnHomeActivityOpensAppDetail: h
   } = s.m1.getCurrentConfig({
 location: 'AppLauncherApplicationListViewScreen'
   }, {
 autoTrackExposure: !1
-  }), h = l.useMemo(() => t === o._b.TEXT ? c.kA : c.qR, [t]);
+  }), f = l.useMemo(() => t === o._b.TEXT ? c.kA : c.qR, [t]);
   return (0, i.jsxs)('section', {
 className: m.container,
 'aria-label': d.Z.Messages.APP_LAUNCHER_SECTION_VIEW_MORE_ARIA_LABEL.format({
@@ -57,7 +57,7 @@ children: [
           isPartner: a,
           installOnDemand: s
         } = e;
-        return (0, i.jsx)(h, {
+        return (0, i.jsx)(f, {
           channel: n,
           application: l,
           look: _,
@@ -66,7 +66,7 @@ children: [
           resultsPosition: t,
           location: r.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
           installOnDemand: s,
-          isOneClickCTA: f
+          isOneClickCTA: h
         }, l.id);
       })
     })

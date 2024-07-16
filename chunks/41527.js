@@ -20,7 +20,7 @@ var l = n(481060),
   m = n(530),
   S = n(645410),
   Z = n(437758),
-  x = n(666665),
+  x = n(357836),
   v = n(544989),
   h = n(934861),
   p = n(616140),
@@ -98,16 +98,16 @@ children: (0, s.jsx)(a.Mt, {
                 (0, s.jsxs)('div', {
                   className: j.buttons,
                   children: [
-                    (0, s.jsx)(x.V, {
+                    (0, s.jsx)(h.v, {
+                      userId: i.id,
+                      onClose: y
+                    }),
+                    (0, s.jsx)(x.Z, {
                       user: i,
                       guildId: F
                     }),
                     (0, s.jsx)(S.Z, {
                       user: i
-                    }),
-                    (0, s.jsx)(h.c, {
-                      userId: i.id,
-                      onClose: y
                     })
                   ]
                 }),

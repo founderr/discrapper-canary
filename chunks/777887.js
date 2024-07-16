@@ -18,7 +18,7 @@ var i = n(442837),
   f = n(678738),
   h = n(530),
   p = n(645410),
-  m = n(666665),
+  m = n(357836),
   I = n(827313),
   T = n(580512),
   g = n(67152),
@@ -87,7 +87,7 @@ children: [
         user: t,
         className: R.button
       }),
-      (0, r.jsx)(m.c, {
+      (0, r.jsx)(m.Z, {
         user: t,
         guildId: null == y ? void 0 : y.id,
         className: R.button

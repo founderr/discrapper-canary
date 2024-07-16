@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return O;
+return y;
   }
 }), t(47120);
 var i = t(735250),
@@ -17,8 +17,8 @@ var i = t(735250),
   _ = t(585483),
   E = t(499254),
   A = t(541099),
-  f = t(827498),
-  h = t(496158),
+  h = t(827498),
+  f = t(496158),
   N = t(676161),
   C = t(660090),
   v = t(783097),
@@ -27,18 +27,18 @@ var i = t(735250),
   x = t(981631),
   T = t(689079),
   R = t(689938),
-  L = t(763963);
+  S = t(763963);
 
-function S(e) {
+function L(e) {
   var n, t;
   let {
 channel: r,
 command: o,
 section: u,
 sectionName: d
-  } = e, h = l.useCallback(() => {
+  } = e, f = l.useCallback(() => {
 let e = A.Z.entrypoint();
-E.y(f.ti.COMMAND), (0, p.Mo)({
+E.y(h.ti.COMMAND), (0, p.Mo)({
   command: o,
   location: m.Vh.APP_LAUNCHER_APPLICATION_VIEW,
   sectionName: d
@@ -59,7 +59,7 @@ o,
 u,
 d
   ]), N = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0, C = l.useMemo(() => (0, i.jsxs)('div', {
-className: L.commandTextContainer,
+className: S.commandTextContainer,
 children: [
   (0, i.jsx)(s.Text, {
     variant: 'text-sm/semibold',
@@ -78,8 +78,8 @@ o.displayDescription,
 o.displayName
   ]);
   return (0, i.jsxs)(s.Clickable, {
-className: L.command,
-onClick: h,
+className: S.command,
+onClick: f,
 children: [
   C,
   N ? (0, i.jsx)(a.F, {}) : (0, i.jsx)(g, {
@@ -96,7 +96,7 @@ function g(e) {
 channel: n,
 command: t,
 sectionName: a
-  } = e, o = (0, u.PL)(!0, !0), c = (0, u.LD)(n.guild_id, !0), d = (0, h.D)(n), [p, _] = l.useState(!1), A = l.useCallback(async e => {
+  } = e, o = (0, u.PL)(!0, !0), c = (0, u.LD)(n.guild_id, !0), d = (0, f.D)(n), [p, _] = l.useState(!1), A = l.useCallback(async e => {
 e.stopPropagation();
 try {
   await (0, I.L_)({
@@ -110,7 +110,7 @@ try {
     optionValues: {},
     context: d,
     sectionName: a
-  }), E.y(f.ti.COMMAND));
+  }), E.y(h.ti.COMMAND));
 } finally {
   _(!1);
 }
@@ -127,8 +127,8 @@ onClick: A,
 disabled: p,
 size: s.ButtonSizes.ICON,
 color: s.Button.Colors.PRIMARY,
-className: L.commandSentCTAButton,
-innerClassName: L.commandSentCTAButtonInner,
+className: S.commandSentCTAButton,
+innerClassName: S.commandSentCTAButtonInner,
 'aria-label': R.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({
   commandName: t.name
 }),
@@ -158,7 +158,7 @@ children: o
   return 0 === t.length ? null : (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsxs)('div', {
-    className: L.commandListHeader,
+    className: S.commandListHeader,
     children: [
       (0, i.jsx)(s.Heading, {
         variant: 'heading-sm/semibold',
@@ -168,9 +168,9 @@ children: [
     ]
   }),
   (0, i.jsx)('ul', {
-    className: L.commandContainer,
+    className: S.commandContainer,
     'aria-label': a,
-    children: t.map(e => (0, i.jsx)(S, {
+    children: t.map(e => (0, i.jsx)(L, {
       channel: n,
       command: e,
       section: l,
@@ -181,7 +181,7 @@ children: [
   });
 }
 
-function O(e) {
+function y(e) {
   var n;
   let {
 channel: t,
@@ -204,7 +204,7 @@ applicationId: a.id
 sortOrder: _,
 setSortOrder: E,
 commands: A,
-canSort: f
+canSort: h
   } = (0, C.Z)({
 sectionId: a.id,
 commandsByActiveSection: u
@@ -215,18 +215,18 @@ c(a.id);
 a.id,
 c
   ]);
-  let h = (0, N.Z)({
+  let f = (0, N.Z)({
 channel: t,
 commands: A,
 limit: 5
   });
   return (0, i.jsxs)('ul', {
-className: L.contentContainer,
+className: S.contentContainer,
 children: [
   (0, i.jsx)(M, {
     channel: t,
     section: p,
-    commands: h,
+    commands: f,
     headerName: R.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
     sectionName: r
   }),
@@ -236,7 +236,7 @@ children: [
     commands: A,
     headerName: R.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
     sectionName: r,
-    children: f && (0, i.jsx)(P.Z, {
+    children: h && (0, i.jsx)(P.Z, {
       sortOrder: _,
       onSortOptionClick: E
     })

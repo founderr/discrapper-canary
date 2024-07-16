@@ -13,11 +13,11 @@ var i = t(735250),
   _ = t(314734),
   E = t(981631),
   A = t(933320);
-let f = {
+let h = {
 width: _.Gy,
 height: _.lv
   },
-  h = {
+  f = {
 height: _.lv
   };
 
@@ -85,7 +85,7 @@ getMostRecentHistoryItemByType: E
   } = (0, u.hH)();
   if (null == c)
 return null;
-  let f = E(u.gc.LIST),
+  let h = E(u.gc.LIST),
 N = E(u.gc.APPLICATION);
   return (0, i.jsxs)(a.Slides, {
 activeSlide: c.type,
@@ -95,7 +95,7 @@ children: [
     id: u.gc.HOME,
     children: (0, i.jsx)('div', {
       className: A.slideContent,
-      style: h,
+      style: f,
       children: (0, i.jsx)(m.Z, {
         setScroller: o,
         channel: n,
@@ -109,14 +109,14 @@ children: [
     id: u.gc.LIST,
     children: (0, i.jsx)('div', {
       className: A.slideContent,
-      style: h,
-      children: null != f && (0, i.jsx)(p.Z, {
+      style: f,
+      children: null != h && (0, i.jsx)(p.Z, {
         channel: n,
         entrypoint: t,
-        title: f.title,
-        look: f.look,
-        items: f.items,
-        sectionName: f.sectionName
+        title: h.title,
+        look: h.look,
+        items: h.items,
+        sectionName: h.sectionName
       })
     })
   }),
@@ -124,7 +124,7 @@ children: [
     id: u.gc.APPLICATION,
     children: (0, i.jsx)('div', {
       className: A.slideContent,
-      style: h,
+      style: f,
       children: null != N && (0, i.jsx)(d.Z, {
         channel: n,
         application: N.application,
@@ -160,7 +160,7 @@ return () => {
   }, [a]), (0, i.jsx)('div', {
 className: A.drawerSizingWrapper,
 ref: n,
-style: f,
+style: h,
 children: (0, i.jsx)('div', {
   className: A.contentWrapper,
   children: (0, i.jsx)(o.Gt, {
