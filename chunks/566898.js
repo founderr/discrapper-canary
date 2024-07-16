@@ -24,9 +24,9 @@ return m;
 var i = n(735250);
 n(470079);
 var a = n(120356),
-  l = n.n(a),
-  s = n(392711),
-  r = n.n(s),
+  s = n.n(a),
+  l = n(392711),
+  r = n.n(l),
   o = n(481060),
   c = n(994732);
 
@@ -50,7 +50,7 @@ opacity: n,
 className: a
   } = e;
   return (0, i.jsx)('div', {
-className: l()(a, {
+className: s()(a, {
   [c.blob]: !0
 }),
 style: {
@@ -64,7 +64,7 @@ function p(e) {
   let t, {
   groupStart: n = !1,
   compact: a = !1,
-  attachmentSpecs: s,
+  attachmentSpecs: l,
   usernameWidth: d,
   usernameOpacity: p,
   className: m,
@@ -87,7 +87,7 @@ children: [
 children: [
   a && (0, i.jsx)(h, {
     width: f,
-    className: l()({
+    className: s()({
       [c.compactTimestamp]: !0,
       [c.hidden]: !n
     })
@@ -102,7 +102,7 @@ children: [
 ]
   })), (0, i.jsxs)('div', {
 'aria-hidden': !0,
-className: l()(m, {
+className: s()(m, {
   [c.wrapper]: !0,
   [c.compact]: a,
   [c.cozy]: !a
@@ -122,13 +122,13 @@ children: [
       })
     ]
   }),
-  null != s && (0, i.jsx)('div', {
+  null != l && (0, i.jsx)('div', {
     className: c.attachmentContainer,
     children: (0, i.jsx)('div', {
       className: c.attachment,
       style: {
         opacity: 0.03,
-        ...s
+        ...l
       }
     })
   })
@@ -146,17 +146,17 @@ function g(e) {
 messages: t,
 groupSpacing: n = 0,
 compact: a = !1,
-attachmentSpecs: l,
-className: s
-  } = e, o = null != l ? l.last ? t - 1 : r().random(0, t - 1) : -1, c = r().random(80, 120), u = r().random(0.1, 0.2);
+attachmentSpecs: s,
+className: l
+  } = e, o = null != s ? s.last ? t - 1 : r().random(0, t - 1) : -1, c = r().random(80, 120), u = r().random(0.1, 0.2);
   return (0, i.jsx)(i.Fragment, {
 children: Array(t).fill(null).map((e, t) => (0, i.jsx)(p, {
   compact: a,
-  className: s,
+  className: l,
   usernameWidth: c,
   usernameOpacity: u,
   groupStart: 0 === t,
-  attachmentSpecs: t === o ? l : void 0,
+  attachmentSpecs: t === o ? s : void 0,
   style: 0 === t ? {
     marginTop: d(n)
   } : void 0

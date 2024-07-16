@@ -5,8 +5,8 @@ return A;
 }), n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(780384),
   u = n(481060),
   c = n(410030),
@@ -37,7 +37,7 @@ let {
   imageClassName: n,
   readyState: r,
   src: a,
-  placeholder: o,
+  placeholder: s,
   placeholderVersion: l,
   alt: c,
   width: E,
@@ -82,7 +82,7 @@ let G = (0, _.Tj)({
 })), e = (0, i.jsx)(f.N, {
   readyState: r,
   aspectRatio: k,
-  placeholder: o,
+  placeholder: s,
   placeholderVersion: l,
   placeholderStyle: v(G, R),
   children: e
@@ -92,7 +92,7 @@ return B = null != B ? B : y, (0, i.jsx)(u.FocusRing, {
   ringTarget: this._containerRef,
   focusTarget: this._clickableRef,
   children: (0, i.jsxs)('div', {
-    className: s()(I.imageWrapper, {
+    className: o()(I.imageWrapper, {
       [I.imageZoom]: D,
       [I.imageWrapperBackground]: r !== h.zo9.READY,
       [I.clickable]: null != P
@@ -190,13 +190,13 @@ let {
   size: n,
   alt: r,
   className: a,
-  mediaLayoutType: o
+  mediaLayoutType: s
 } = e;
 return (0, i.jsx)('img', {
   className: null != a ? a : void 0,
   alt: null != r ? r : m.Z.Messages.IMAGE,
   src: t,
-  style: v(n, o)
+  style: v(n, s)
 });
   },
   minWidth: 0,

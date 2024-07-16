@@ -4,8 +4,8 @@ return S;
   }
 }), n(47120);
 var i = n(470079),
-  a = n(166516),
-  s = n.n(a),
+  s = n(166516),
+  a = n.n(s),
   r = n(525654),
   l = n.n(r),
   o = n(442837),
@@ -27,7 +27,7 @@ let p = new Set([
 if (E.isPlatformEmbedded)
   T = e => h.ZP.setBadge(e);
 else if (p.has(l().layout)) {
-  let e = new(s())({
+  let e = new(a())({
 animation: 'none'
   });
   T = t => {
@@ -48,8 +48,8 @@ t = (0, o.e7)([
     t = u.Z.getPendingCount(),
     n = c.default.hasAnyUnread(),
     i = d.Z.getDisableUnreadBadge(),
-    a = e + t;
-  return 0 === a && n && !i && (a = -1), a;
+    s = e + t;
+  return 0 === s && n && !i && (s = -1), s;
 });
   i.useEffect(() => {
 if (!e)

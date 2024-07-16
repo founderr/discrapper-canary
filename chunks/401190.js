@@ -1,13 +1,13 @@
-var n = s(544891),
-  a = s(570140),
-  i = s(881052),
-  r = s(981631);
+var n = t(544891),
+  a = t(570140),
+  i = t(881052),
+  r = t(981631);
 let o = {
   [r.gkr.HOUSE_1]: 1,
   [r.gkr.HOUSE_2]: 2,
   [r.gkr.HOUSE_3]: 3
 };
-t.Z = {
+s.Z = {
   joinHypeSquadOnline: e => n.tn.post({
 url: r.ANM.HYPESQUAD_ONLINE,
 body: {

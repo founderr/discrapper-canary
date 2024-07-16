@@ -1,7 +1,7 @@
 var i = n(735250),
   a = n(470079),
-  l = n(481369),
-  s = n(944103),
+  s = n(481369),
+  l = n(944103),
   r = n(946050),
   o = n(256413),
   c = n(292853),
@@ -11,10 +11,10 @@ t.Z = a.memo(function(e) {
   let {
 channel: t,
 narrow: n
-  } = e, a = (0, o.Z)(t), h = (0, l.Z)(), {
+  } = e, a = (0, o.Z)(t), h = (0, s.Z)(), {
 canRenderNotice: p,
 recordNoticeRender: m
-  } = (0, s.Z)(t);
+  } = (0, l.Z)(t);
   return t.isArchivedLockedThread() ? (0, i.jsx)(d.s, {
 channel: t,
 narrow: n

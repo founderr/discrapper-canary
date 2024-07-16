@@ -1,6 +1,6 @@
 let r;
 n(47120);
-var i, a, o, s, l = n(442837),
+var i, a, s, o, l = n(442837),
   u = n(570140);
 let c = new Map(),
   d = new Map(),
@@ -38,12 +38,12 @@ return f;
 return E;
   }
 }
-s = 'ContentInventoryStore', (o = 'displayName') in(a = p) ? Object.defineProperty(a, o, {
-  value: s,
+o = 'ContentInventoryStore', (s = 'displayName') in(a = p) ? Object.defineProperty(a, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = s, t.Z = new p(u.Z, {
+}) : a[s] = o, t.Z = new p(u.Z, {
   CONNECTION_OPEN: function() {
 c = new Map(), E = !1;
   },

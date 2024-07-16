@@ -5,8 +5,8 @@ return u;
 }), n(653041);
 var i = n(55000),
   a = n(693824),
-  l = n(690725),
-  s = n(737583),
+  s = n(690725),
+  l = n(737583),
   r = n(169040),
   o = n(689938);
 let c = (e, t, n) => ({
@@ -39,7 +39,7 @@ let {
   colors: _,
   channelId: f
 } = e, E = n.extra.media_title, C = c(u, t);
-return await (0, l.f)({
+return await (0, s.f)({
   assetsToLoad: C,
   drawImage: e => {
     let t = _.map((e, t) => ({
@@ -110,10 +110,10 @@ return await (0, l.f)({
       h: 32,
       w: r.kC
     }, !0);
-    let l = d(p, m);
-    (0, s.J)({
+    let s = d(p, m);
+    (0, l.J)({
       canvas: e,
-      badges: l,
+      badges: s,
       startPosition: r.Iq,
       maxWidth: r.kC
     });

@@ -6,8 +6,8 @@ return o;
 var i = n(735250);
 n(470079);
 var a = n(399606),
-  l = n(481060),
-  s = n(351780),
+  s = n(481060),
+  l = n(351780),
   r = n(170248);
 
 function o(e) {
@@ -17,9 +17,9 @@ shakeLocation: n,
 children: o,
 className: c
   } = e, d = (0, r.Z)(n);
-  return (0, a.e7)([s.Z], () => s.Z.isEnabled({
+  return (0, a.e7)([l.Z], () => l.Z.isEnabled({
 shakeLocation: n
-  })) ? (0, i.jsx)(l.Shaker, {
+  })) ? (0, i.jsx)(s.Shaker, {
 isShaking: t,
 intensity: d,
 className: c,

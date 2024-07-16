@@ -5,19 +5,19 @@ return r;
 });
 var i = n(470079),
   a = n(772848),
-  l = n(125268);
-let s = () => {};
+  s = n(125268);
+let l = () => {};
 
 function r(e, t, n) {
   let r = i.useRef((0, a.Z)()),
 o = i.useRef(Date.now()),
 c = i.useCallback((i, a) => {
-  let s = {
+  let l = {
     x: i,
     y: a,
     deltaTime: Date.now() - o.current
   };
-  (0, l.oW)(t, r.current, e, n, s), (0, l.cV)(r.current, e, n, [s]);
+  (0, s.oW)(t, r.current, e, n, l), (0, s.cV)(r.current, e, n, [l]);
 }, [
   t,
   n,
@@ -31,7 +31,7 @@ h = i.useCallback((e, t, n) => d(e, t, n), [d]);
   return i.useMemo(() => ({
 handleMouseDown: d,
 handleMouseMove: u,
-handleMouseUp: s,
+handleMouseUp: l,
 handleMouseEnter: h
   }), [
 d,

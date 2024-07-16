@@ -6,8 +6,8 @@ return N;
 var l = s(735250),
   t = s(470079),
   i = s(481060),
-  r = s(987209),
-  a = s(321051),
+  a = s(987209),
+  r = s(321051),
   c = s(669079),
   o = s(479446),
   u = s(646476),
@@ -28,7 +28,7 @@ emojiConfetti: x,
 soundEffect: S,
 setEmojiConfetti: h,
 setSoundEffect: P
-  } = (0, r.wD)(), [f, A] = t.useState(!1), v = t.useRef(null), M = (0, i.useRadioGroup)({
+  } = (0, a.wD)(), [f, A] = t.useState(!1), v = t.useRef(null), M = (0, i.useRadioGroup)({
 orientation: 'horizontal'
   }), g = (0, c.MY)(s, n), C = g === c.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, O = g !== c.xr.DEFAULT, R = (0, u.rK)(), {
 enabled: j
@@ -56,7 +56,7 @@ children: [
         children: [
           (0, l.jsx)('div', {
             className: p.sound,
-            children: (0, l.jsx)(a.Z, {
+            children: (0, l.jsx)(r.Z, {
               sound: S,
               onSelect: e => {
                 null != P && P(null == e ? void 0 : e);

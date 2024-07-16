@@ -42,8 +42,8 @@ var s = n(470079),
   I = n(580130),
   R = n(626135),
   C = n(823379),
-  p = n(111361),
-  g = n(595878),
+  g = n(111361),
+  p = n(595878),
   A = n(944880),
   m = n(513785),
   N = n(106255),
@@ -136,7 +136,7 @@ function O() {
 }, [], C.OL),
 t = (0, i.e7)([E.default], () => {
   let e = E.default.getCurrentUser();
-  return null != e && (0, p.M5)(e, f.p9.TIER_2);
+  return null != e && (0, g.M5)(e, f.p9.TIER_2);
 });
   if (null != (0, N.kG)(e) || !!t)
 return (0, N.MR)([
@@ -159,7 +159,7 @@ switch (e.nitroTenureStatus) {
   L = () => {
 let e = M(),
   [t, n] = s.useState(P(e)),
-  a = (0, g.c)({
+  a = (0, p.c)({
     location: 'Home'
   });
 s.useEffect(() => {
@@ -175,7 +175,7 @@ return a ? null != e && !0 === e.showNotification && (r === l.z.TENURE_REWARD_RE
   v = () => {
 var e;
 let t = null === (e = M()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-  n = (0, g.c)({
+  n = (0, p.c)({
     location: 'Home'
   }) && null != t && t === S.EB.REDEEMABLE,
   [s] = (0, u.U)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
@@ -208,7 +208,7 @@ hasFetchedPremiumApplicationEntitlements: I.Z.isFetchedForApplication(f.RQ),
 isFetchingPremiumApplicationEntitlements: I.Z.isFetchingForApplication(f.RQ)
   })), n = (0, i.e7)([E.default], () => {
 let e = E.default.getCurrentUser();
-return null != e && (0, p.M5)(e, f.p9.TIER_2);
+return null != e && (0, g.M5)(e, f.p9.TIER_2);
   }), a = s.useRef(!1);
   s.useEffect(() => {
 !1 === e && !1 === t && !0 === n && !1 === a.current && (o.yD(f.RQ), a.current = !0);

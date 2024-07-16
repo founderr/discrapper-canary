@@ -1,12 +1,12 @@
 n.d(t, {
   BP: function() {
-return es;
+return el;
   }
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(848246),
   o = n(442837),
   c = n(692547),
@@ -58,7 +58,7 @@ var i = n(735250),
   et = n(689938),
   en = n(26864);
 let ei = a.memo(e => {
-  var t, n, l, c, E;
+  var t, n, s, c, E;
   let {
 participant: I,
 onDoubleClick: x,
@@ -67,7 +67,7 @@ onClick: G,
 onMouseDown: q,
 onKeyDown: ei,
 className: ea,
-style: es,
+style: el,
 channel: er,
 width: eo,
 inPopout: ec,
@@ -92,15 +92,15 @@ speaking: ej,
 ringing: eL,
 hasVideo: eP
   } = (0, X.Z)(I, eN), eO = function(e, t, n) {
-var i, a, l, s;
+var i, a, s, l;
 let r = (0, o.cj)([w.Z], () => {
     var e, i, a;
-    let l = w.Z.getVoiceState(n, t.id);
+    let s = w.Z.getVoiceState(n, t.id);
     return {
-      muted: null !== (e = null == l ? void 0 : l.mute) && void 0 !== e && e,
-      deafened: null !== (i = null == l ? void 0 : l.deaf) && void 0 !== i && i,
-      suppressed: null !== (a = null == l ? void 0 : l.suppress) && void 0 !== a && a,
-      voiceChannelId: null == l ? void 0 : l.channelId
+      muted: null !== (e = null == s ? void 0 : s.mute) && void 0 !== e && e,
+      deafened: null !== (i = null == s ? void 0 : s.deaf) && void 0 !== i && i,
+      suppressed: null !== (a = null == s ? void 0 : s.suppress) && void 0 !== a && a,
+      voiceChannelId: null == s ? void 0 : s.channelId
     };
   }),
   c = (0, o.cj)([D.Z], () => {
@@ -123,8 +123,8 @@ return {
   serverDeafened: r.deafened,
   suppressed: r.suppressed,
   localMuted: c.muted,
-  muted: null !== (l = t.type === J.fO.USER && (null === (i = t.voiceState) || void 0 === i ? void 0 : i.isVoiceMuted())) && void 0 !== l && l,
-  deafened: null !== (s = t.type === J.fO.USER && (null === (a = t.voiceState) || void 0 === a ? void 0 : a.isVoiceDeafened())) && void 0 !== s && s
+  muted: null !== (s = t.type === J.fO.USER && (null === (i = t.voiceState) || void 0 === i ? void 0 : i.isVoiceMuted())) && void 0 !== s && s,
+  deafened: null !== (l = t.type === J.fO.USER && (null === (a = t.voiceState) || void 0 === a ? void 0 : a.isVoiceDeafened())) && void 0 !== l && l
 };
   }(eN, I, er.getGuildId()), ey = I.type === J.fO.STREAM && eS === eN, eD = (0, V.So)(r.q.STREAM_HIGH_QUALITY), ek = (0, M.j$)(), eU = eD && ey, ew = (0, A.o)(I, ev), eB = (0, Z.lL)('CallTile', !0, ev, ew), eH = eB.persistentQualityIndicator && eB.enabled, eG = (0, o.e7)([L.Z], () => null != eS ? L.Z.getEffectForUserId(eS) : null), eV = (0, o.e7)([w.Z], () => w.Z.getVoicePlatformForChannel(er.id, null != eS ? eS : Q.lds)), {
 enableHangStatus: eF
@@ -254,7 +254,7 @@ e8 = I.type === J.fO.STREAM ? d.ScreenIcon : d.VideoIcon;
   return (0, i.jsx)(h.Z, {
 section: Q.jXE.VOICE_CHANNEL_TILE,
 children: (0, i.jsx)('div', {
-  className: s()(en.wrapper, {
+  className: l()(en.wrapper, {
     [en.ringing]: eL
   }, ea),
   children: (0, i.jsxs)(S.Z, {
@@ -264,13 +264,13 @@ children: (0, i.jsx)('div', {
     children: [
       (0, i.jsx)(z.Z, {
         ref: e6,
-        className: s()(en.tile, {
+        className: l()(en.tile, {
           [en.noBorder]: ep,
           [en.noInteraction]: null == G,
           [en.idle]: eI
         }),
         noBorder: ep,
-        style: es,
+        style: el,
         participantUserId: eS,
         children: (0, i.jsxs)(d.ClickableContainer, {
           'aria-label': e5,
@@ -297,7 +297,7 @@ children: (0, i.jsx)('div', {
                 guildId: er.getGuildId(),
                 containerDimensions: {
                   width: null !== (c = null == e6 ? void 0 : null === (n = e6.current) || void 0 === n ? void 0 : n.clientWidth) && void 0 !== c ? c : 0,
-                  height: null !== (E = null == e6 ? void 0 : null === (l = e6.current) || void 0 === l ? void 0 : l.clientHeight) && void 0 !== E ? E : 0
+                  height: null !== (E = null == e6 ? void 0 : null === (s = e6.current) || void 0 === s ? void 0 : s.clientHeight) && void 0 !== E ? E : 0
                 }
               })
             }) : null,
@@ -318,7 +318,7 @@ children: (0, i.jsx)('div', {
                 className: en.selectedIcon
               })
             }) : null,
-            I.type !== J.fO.ACTIVITY ? (0, i.jsx)(el, {
+            I.type !== J.fO.ACTIVITY ? (0, i.jsx)(es, {
               focused: e_,
               width: eo,
               inCall: eu,
@@ -345,7 +345,7 @@ children: (0, i.jsx)('div', {
               channelId: er.id
             }) : null,
             eu && !ep ? (0, i.jsx)('div', {
-              className: s()(en.border, {
+              className: l()(en.border, {
                 [en.voiceChannelEffect]: !e_ && null != eG,
                 [en.speaking]: ej && !e_
               })
@@ -397,12 +397,12 @@ default:
   }
 }
 ei.displayName = 'CallTile';
-let el = a.memo(e => {
+let es = a.memo(e => {
   let {
 muted: t,
 deafened: n,
 localMuted: a,
-serverMuted: l,
+serverMuted: s,
 serverDeafened: r,
 idle: u,
 title: h,
@@ -441,7 +441,7 @@ if (a && S === J.fO.STREAM && m && !T)
         onClick: e => {
           e.stopPropagation(), null == t || t(), M();
         },
-        className: s()(en.interactive, en.toggleMute),
+        className: l()(en.interactive, en.toggleMute),
         children: (0, i.jsx)(d.VoiceXIcon, {
           size: 'md',
           color: 'currentColor'
@@ -452,7 +452,7 @@ if (a && S === J.fO.STREAM && m && !T)
 else if (a || S !== J.fO.STREAM || !m || w || T) {
   if (G) {
     let e;
-    r ? e = d.HeadphonesDenyIcon : l ? e = d.MicrophoneDenyIcon : n ? e = d.HeadphonesSlashIcon : a ? e = d.MicrophoneDenyIcon : t && (e = d.MicrophoneSlashIcon), O = null != e ? (0, i.jsx)(e, {
+    r ? e = d.HeadphonesDenyIcon : s ? e = d.MicrophoneDenyIcon : n ? e = d.HeadphonesSlashIcon : a ? e = d.MicrophoneDenyIcon : t && (e = d.MicrophoneSlashIcon), O = null != e ? (0, i.jsx)(e, {
       color: c.Z.colors.WHITE
     }) : null;
   } else if (n || t || a) {
@@ -474,7 +474,7 @@ else if (a || S !== J.fO.STREAM || !m || w || T) {
         onClick: e => {
           e.stopPropagation(), null == t || t(), M();
         },
-        className: s()(en.interactive, en.toggleMute),
+        className: l()(en.interactive, en.toggleMute),
         children: (0, i.jsx)(d.VoiceNormalIcon, {
           size: 'md',
           color: 'currentColor'
@@ -502,7 +502,7 @@ children: e => {
     onClick: e => {
       e.stopPropagation(), null == t || t(), A(e);
     },
-    className: s()(en.status, en.interactive),
+    className: l()(en.status, en.interactive),
     children: (0, i.jsx)(d.MoreHorizontalIcon, {
       size: 'md',
       color: 'currentColor'
@@ -513,7 +513,7 @@ children: e => {
 text: (0, I.O8)(R),
 children: e => (0, i.jsx)('div', {
   ...e,
-  className: s()(en.hangStatusContainer, {
+  className: l()(en.hangStatusContainer, {
     [en.hangStatusSmall]: p < 500
   }),
   children: (0, i.jsx)(x.Z, {
@@ -528,7 +528,7 @@ text: et.Z.Messages.UNFORMATTED_PLAYING_GAME.format({
 }),
 children: e => (0, i.jsx)('div', {
   ...e,
-  className: s()(en.hangStatusContainer, {
+  className: l()(en.hangStatusContainer, {
     [en.hangStatusSmall]: p < 500
   }),
   children: (0, i.jsx)(E.Z, {
@@ -541,7 +541,7 @@ children: e => (0, i.jsx)('div', {
 className: en.overlayContainer,
 children: [
   (0, i.jsx)('div', {
-    className: s()(en.overlayTop, {
+    className: l()(en.overlayTop, {
       [en.small]: p < 195
     }),
     children: H || g === Q.ZUi.AUTO_PROBING ? u ? (0, i.jsx)('div', {
@@ -551,7 +551,7 @@ children: [
         color: 'currentColor'
       })
     }) : (0, i.jsxs)('div', {
-      className: s()(en.overlayTitle, en.videoDisabledTitle),
+      className: l()(en.overlayTitle, en.videoDisabledTitle),
       children: [
         (0, i.jsx)('div', {
           className: en.status,
@@ -569,12 +569,12 @@ children: [
     }) : null
   }),
   (0, i.jsxs)('div', {
-    className: s()(en.overlayBottom, {
+    className: l()(en.overlayBottom, {
       [en.small]: p < 195
     }),
     children: [
       B ? (0, i.jsx)('div', {}) : (0, i.jsxs)(d.Text, {
-        className: s()(en.overlayTitle, {
+        className: l()(en.overlayTitle, {
           [en.idle]: u
         }),
         color: 'none',
@@ -625,6 +625,6 @@ children: [
 ]
   });
 });
-el.displayName = 'CallTileOverlay';
-let es = B.L;
+es.displayName = 'CallTileOverlay';
+let el = B.L;
 t.ZP = ei;

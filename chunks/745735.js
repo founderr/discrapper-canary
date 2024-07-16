@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(470079),
   i = n(512722),
   a = n.n(i);
 
-function o(e, t) {
+function s(e, t) {
   let n = (0, r.useRef)(e);
   (0, r.useEffect)(() => {
 n.current = e;

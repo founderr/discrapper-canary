@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var a = n(948789),
-  s = n(442837),
+var s = n(948789),
+  a = n(442837),
   r = n(481060),
   l = n(212093),
   o = n(100527),
@@ -40,14 +40,14 @@ switch (e) {
 let {
   currentCategoryId: e,
   isViewingSearchResults: t
-} = (0, s.cj)([I.ZP], () => ({
+} = (0, a.cj)([I.ZP], () => ({
   currentCategoryId: I.ZP.getCurrentCategoryId(),
   isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0
-})), n = (0, h.Z)(o.Z.QUEST_HOME_PAGE), c = (0, s.e7)([m.Z], () => m.Z.getDiscoveryCategories(), [], m.j), T = null == c ? void 0 : c.map(e => ({
+})), n = (0, h.Z)(o.Z.QUEST_HOME_PAGE), c = (0, a.e7)([m.Z], () => m.Z.getDiscoveryCategories(), [], m.j), T = null == c ? void 0 : c.map(e => ({
   ...e,
   icon: A(e.categoryId)
 })), v = e => {
-  (0, l.uY)(e, !0), u.Z.closeSidebar(), t && (0, l.AQ)(), (0, _.OG)() && e !== S.Gj.Quests && (0, a.uL)(f.Z5c.GUILD_DISCOVERY), !(0, _.OG)() && e === S.Gj.Quests && (0, a.uL)(f.Z5c.QUEST_HOME);
+  (0, l.uY)(e, !0), u.Z.closeSidebar(), t && (0, l.AQ)(), (0, _.OG)() && e !== S.Gj.Quests && (0, s.uL)(f.Z5c.GUILD_DISCOVERY), !(0, _.OG)() && e === S.Gj.Quests && (0, s.uL)(f.Z5c.QUEST_HOME);
 };
 return (0, i.jsxs)(r.Scroller, {
   className: N.sidebarContainer,

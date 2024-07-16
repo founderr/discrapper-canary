@@ -1,21 +1,21 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return S;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(120356),
-  i = s.n(a),
-  r = s(481060),
-  o = s(208049),
-  l = s(242291),
-  c = s(153124),
-  d = s(63063),
-  _ = s(36703),
-  E = s(981631),
-  u = s(689938),
-  T = s(712244);
+var n = t(735250);
+t(470079);
+var a = t(120356),
+  i = t.n(a),
+  r = t(481060),
+  o = t(208049),
+  l = t(242291),
+  c = t(153124),
+  d = t(63063),
+  _ = t(36703),
+  E = t(981631),
+  u = t(689938),
+  T = t(712244);
 let I = (0, c.hQ)();
 
 function S() {
@@ -53,8 +53,8 @@ children: [
         initialValue: (0, _.P)(e),
         maxValue: 100,
         onValueRender: e => ''.concat(e.toFixed(0), '%'),
-        asValueChanges: function(t) {
-          e = (0, _.A)(t), (0, o.xz)(e);
+        asValueChanges: function(s) {
+          e = (0, _.A)(s), (0, o.xz)(e);
         },
         'aria-labelledby': I
       })

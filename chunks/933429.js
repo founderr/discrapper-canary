@@ -15,8 +15,8 @@ var i, a, s, r, l = n(913527),
   T = n(812206),
   h = n(223892),
   N = n(674525),
-  p = n(605236),
-  f = n(524347),
+  f = n(605236),
+  p = n(524347),
   C = n(853197),
   g = n(353926),
   S = n(594190),
@@ -69,8 +69,8 @@ var i, a, s, r, l = n(913527),
   eT = n(979651),
   eh = n(351402),
   eN = n(853872),
-  ep = n(78839),
-  ef = n(295226),
+  ef = n(78839),
+  ep = n(295226),
   eC = n(580130),
   eg = n(695103),
   eS = n(358085),
@@ -171,7 +171,7 @@ let {
 return t ? null : ej[e];
   }(e);
   if (null != t)
-return (0, p.un)(t);
+return (0, f.un)(t);
   let n = eU[e];
   if (null != n) {
 let t = function(e) {
@@ -506,10 +506,10 @@ eM.kVF.SCHEDULED_MAINTENANCE
   predicate: () => ee.Z.isSuggestedAccountType(eM.ABu.PLAYSTATION) && null == ee.Z.getAccount(null, eM.ABu.PLAYSTATION) && !eV(eM.kVF.CONNECT_PLAYSTATION)
 },
 [eM.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: {
-  predicate: () => ef.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_2]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_2_TRIAL_ENDING)
+  predicate: () => ep.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_2]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_2_TRIAL_ENDING)
 },
 [eM.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: {
-  predicate: () => ef.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_0]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_0_TRIAL_ENDING)
+  predicate: () => ep.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_0]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_0_TRIAL_ENDING)
 },
 [eM.kVF.PREMIUM_UNCANCEL]: {
   predicate: e => {
@@ -658,15 +658,15 @@ eM.kVF.SCHEDULED_MAINTENANCE
   }
 },
 [eM.kVF.DROPS_GO_LIVE_BANNER]: {
-  predicate: () => !eV(eM.kVF.DROPS_GO_LIVE_BANNER) && (0, p.un)(u.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, p.un)(u.z.QUEST_2_COMPLETION_TOOLTIP) && (0, C.Tn)(eL.X2.FORTNITE),
+  predicate: () => !eV(eM.kVF.DROPS_GO_LIVE_BANNER) && (0, f.un)(u.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, f.un)(u.z.QUEST_2_COMPLETION_TOOLTIP) && (0, C.Tn)(eL.X2.FORTNITE),
   metadata: () => ({
     partnerGame: eL.X2.FORTNITE
   })
 },
 [eM.kVF.DROPS_PROGRESS_INTERRUPTION]: {
-  predicate: () => f.Z.isCurrentQuestInterrupted && null != f.Z.currentDropQuestGameTitle,
+  predicate: () => p.Z.isCurrentQuestInterrupted && null != p.Z.currentDropQuestGameTitle,
   metadata: () => ({
-    gameTitle: f.Z.currentDropQuestGameTitle,
+    gameTitle: p.Z.currentDropQuestGameTitle,
     reloadCallback: () => window.location.reload(!0)
   })
 },
@@ -674,7 +674,7 @@ eM.kVF.SCHEDULED_MAINTENANCE
   predicate: () => (0, j.e)() && !eV(eM.kVF.POMELO_ELIGIBLE) && !(0, D.ov)()
 },
 [eM.kVF.DROPS_ENDED_INCOMPLETE]: {
-  predicate: () => !eV(eM.kVF.DROPS_ENDED_INCOMPLETE) && (0, p.un)(u.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, p.un)(u.z.QUEST_2_COMPLETION_TOOLTIP) && (0, C.FL)(eL.X2.FORTNITE),
+  predicate: () => !eV(eM.kVF.DROPS_ENDED_INCOMPLETE) && (0, f.un)(u.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, f.un)(u.z.QUEST_2_COMPLETION_TOOLTIP) && (0, C.FL)(eL.X2.FORTNITE),
   metadata: () => ({
     partnerGame: eL.X2.FORTNITE
   })
@@ -755,7 +755,7 @@ return !1;
   let e = em.default.getCurrentUser();
   if (null == e)
 return !1;
-  let t = ep.ZP.getPremiumSubscription(),
+  let t = ef.ZP.getPremiumSubscription(),
 n = eh.Z.isLocalizedPromoEnabled,
 i = ed.Z.getGuildId(),
 a = ec.Z.getVoiceChannelId(),
@@ -799,14 +799,14 @@ this.syncWith([
   et.Z,
   ed.Z,
   F.Z,
-  ef.Z,
+  ep.Z,
   X.Z,
   ee.Z,
   z.Z,
   M.Z,
   H.Z,
   Q.Z
-], eK), this.waitFor(em.default, eu.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, ed.Z, eI.Z, W.Z, S.ZP, el.Z, eR.Z, eO.Z, eg.Z, es.Z, ep.ZP, ex.Z, et.Z, eN.Z, er.Z, F.Z, eC.Z, ef.Z, ee.Z, b.Z, f.Z, N.Z, V.Z, H.Z, Q.Z);
+], eK), this.waitFor(em.default, eu.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, ed.Z, eI.Z, W.Z, S.ZP, el.Z, eR.Z, eO.Z, eg.Z, es.Z, ef.ZP, ex.Z, et.Z, eN.Z, er.Z, F.Z, eC.Z, ep.Z, ee.Z, b.Z, p.Z, N.Z, V.Z, H.Z, Q.Z);
   }
   hasNotice() {
 return null != eG && null != eG.type;

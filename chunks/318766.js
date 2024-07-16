@@ -6,8 +6,8 @@ return f;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(338545),
+  s = n.n(a),
+  o = n(338545),
   l = n(481060),
   u = n(130402),
   c = n(153066),
@@ -52,7 +52,7 @@ D = i.useCallback(() => (0, u.x)(d.qR.EmojiButtonFocused), []);
 look: l.Button.Looks.BLANK,
 size: l.Button.Sizes.NONE,
 tabIndex: n,
-className: o()(O, a),
+className: s()(O, a),
 onMouseEnter: C,
 onMouseOver: C,
 onMouseLeave: y,
@@ -72,7 +72,7 @@ children: null != h ? h() : (0, r.jsx)(l.Spring, {
     let {
       value: t
     } = e;
-    return (0, r.jsxs)(s.animated.div, {
+    return (0, r.jsxs)(o.animated.div, {
       className: E.spriteContainer,
       style: {
         ...R,
@@ -86,10 +86,10 @@ children: null != h ? h() : (0, r.jsx)(l.Spring, {
       },
       children: [
         (0, r.jsx)('div', {
-          className: o()(E.sprite, E.spriteColored, v ? E.active : E.inactive)
+          className: s()(E.sprite, E.spriteColored, v ? E.active : E.inactive)
         }),
         (0, r.jsx)('div', {
-          className: o()(E.sprite, E.spriteGreyscale, v ? E.inactive : E.active)
+          className: s()(E.sprite, E.spriteGreyscale, v ? E.inactive : E.active)
         })
       ]
     });

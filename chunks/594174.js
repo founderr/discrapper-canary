@@ -15,8 +15,8 @@ return T;
 var r = n(348327),
   i = n.n(r),
   a = n(392711),
-  o = n(864106),
-  s = n(502087),
+  s = n(864106),
+  o = n(502087),
   l = n(911955),
   u = n(168232),
   c = n(598077),
@@ -64,12 +64,12 @@ function v(e) {
   null != i && (e.nsfwAllowed = i, delete e.nsfw_allowed);
   let a = e.public_flags;
   null != a && (e.publicFlags = a, delete e.public_flags);
-  let s = e.purchased_flags;
-  void 0 !== s && (e.purchasedFlags = s, delete e.purchased_flags);
+  let o = e.purchased_flags;
+  void 0 !== o && (e.purchasedFlags = o, delete e.purchased_flags);
   let l = e.premium_usage_flags;
   void 0 !== l && (e.premiumUsageFlags = l, delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color;
   let c = e.avatar_decoration_data;
-  void 0 !== c && (e.avatarDecorationData = (0, o.FG)(c), delete e.avatar_decoration_data);
+  void 0 !== c && (e.avatarDecorationData = (0, s.FG)(c), delete e.avatar_decoration_data);
   let d = e.global_name;
   void 0 !== d && (e.globalName = d, delete e.global_name);
   let _ = null !== (t = e.primary_guild) && void 0 !== t ? t : e.clan;
@@ -87,9 +87,9 @@ a = void 0 !== e.id && e.id === E.default.getId();
   if (null == r)
 void 0 !== (t = (r = new c.Z(e)).premiumType) && a && (r.premiumType = C((0, u.QI)(r), r.premiumType));
   else if (n) {
-var o;
+var s;
 let n = v(e);
-void 0 !== (t = null !== (o = n.premium_type) && void 0 !== o ? o : n.premiumType) && a && (0, u.VR)(n) && (n = function(e) {
+void 0 !== (t = null !== (s = n.premium_type) && void 0 !== s ? s : n.premiumType) && a && (0, u.VR)(n) && (n = function(e) {
   var t;
   let n = null !== (t = e.premium_type) && void 0 !== t ? t : e.premiumType,
     r = C((0, u.VR)(e), n);
@@ -112,20 +112,20 @@ void 0 !== (t = null !== (o = n.premium_type) && void 0 !== o ? o : n.premiumTyp
 }(r, n), r = r.merge(n);
   }
   (0, u.jX)((0, u.QI)(r), t, r.premiumType);
-  let s = T[e.id] !== r;
-  return T[e.id] = r, s && g++, s;
+  let o = T[e.id] !== r;
+  return T[e.id] = r, o && g++, o;
 }
 
 function C(e, t) {
   if (!e)
 return t;
-  let n = s.Z.getPremiumTypeOverride(),
-r = s.Z.getPremiumTypeActual();
+  let n = o.Z.getPremiumTypeOverride(),
+r = o.Z.getPremiumTypeActual();
   return n === m.F_ ? r : n;
 }
 
 function y(e, t) {
-  var n, r, i, a, o;
+  var n, r, i, a, s;
   if (null != e.author && 'SENDING' !== e.state && O(e.author) && R(e.author, t), null === (n = e.mentions) || void 0 === n || n.forEach(e => {
   O(e) && R(e, t);
 }), (null === (r = e.interaction) || void 0 === r ? void 0 : r.user) != null && O(null === (i = e.interaction) || void 0 === i ? void 0 : i.user) && R(e.interaction.user, t), null === (a = e.attachments) || void 0 === a || a.forEach(e => {
@@ -133,7 +133,7 @@ function y(e, t) {
   null === (n = e.clip_participants) || void 0 === n || n.forEach(e => {
     O(e) && R(e, t);
   });
-}), (null === (o = e.resolved) || void 0 === o ? void 0 : o.users) != null)
+}), (null === (s = e.resolved) || void 0 === s ? void 0 : s.users) != null)
 for (let n in e.resolved.users) {
   let r = e.resolved.users[n];
   O(r) && R(r, t);
@@ -453,7 +453,7 @@ function ea(e) {
   return n;
 }
 
-function eo(e) {
+function es(e) {
   let {
 members: t
   } = e, n = !1;
@@ -462,7 +462,7 @@ null != e.member && R(e.member.user) && (n = !0), null != e.presence && R(e.pres
   }), n;
 }
 
-function es(e) {
+function eo(e) {
   let {
 addedMembers: t
   } = e, n = !1;
@@ -482,19 +482,19 @@ let {
     username: r,
     avatar: i,
     discriminator: a,
-    bot: o
+    bot: s
   },
-  avatar: s
+  avatar: o
 } = e;
 n !== E.default.getId() && R({
   id: n,
   username: r,
   avatar: i,
   discriminator: a,
-  bot: o
+  bot: s
 });
 let l = T[n];
-null != l && A(l, t.id, s);
+null != l && A(l, t.id, o);
   });
 }
 
@@ -734,8 +734,8 @@ super({
   GUILD_MEMBER_UPDATE: et,
   GUILD_MEMBERS_CHUNK_BATCH: er,
   GUILD_MEMBER_LIST_UPDATE: en,
-  THREAD_MEMBER_LIST_UPDATE: eo,
-  THREAD_MEMBERS_UPDATE: es,
+  THREAD_MEMBER_LIST_UPDATE: es,
+  THREAD_MEMBERS_UPDATE: eo,
   CHANNEL_CREATE: K,
   CHANNEL_UPDATES: z,
   RELATIONSHIP_ADD: eu,

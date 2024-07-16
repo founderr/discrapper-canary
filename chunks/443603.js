@@ -4,9 +4,9 @@ return i;
   }
 });
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(338545),
   c = n(481060),
   d = n(855981),
@@ -37,14 +37,14 @@ scale: 0.6,
 opacity: 0
   }
 };
-t.Z = o.memo(function(e) {
+t.Z = s.memo(function(e) {
   let {
 className: t,
 disabled: n = !1,
 innerClassName: r,
 childClassName: i,
-iconClassName: o,
-icon: s,
+iconClassName: s,
+icon: o,
 children: p,
 onClick: m,
 isActive: I,
@@ -118,12 +118,12 @@ children: [
       children: b({
         component: p
       })
-    }, r) : null != s ? (0, a.jsx)(u.animated.div, {
+    }, r) : null != o ? (0, a.jsx)(u.animated.div, {
       style: e,
       className: l()(f.buttonWrapper, i),
       children: b({
-        component: (0, a.jsx)(s, {
-          className: l()(f.icon, o, {
+        component: (0, a.jsx)(o, {
+          className: l()(f.icon, s, {
             [f.pulseIcon]: N
           }),
           color: 'currentColor'

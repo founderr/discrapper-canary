@@ -5,19 +5,19 @@ return r;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(338545),
-  s = n(481060);
+  s = n(338545),
+  l = n(481060);
 
 function r(e) {
   let {
 children: t,
 className: n,
 flashKey: r
-  } = e, o = (0, s.useToken)(s.tokens.colors.BACKGROUND_MESSAGE_HIGHLIGHT).spring({
+  } = e, o = (0, l.useToken)(l.tokens.colors.BACKGROUND_MESSAGE_HIGHLIGHT).spring({
 opacity: 1
-  }), c = (0, s.useToken)(s.tokens.colors.BACKGROUND_MESSAGE_HIGHLIGHT).spring({
+  }), c = (0, l.useToken)(l.tokens.colors.BACKGROUND_MESSAGE_HIGHLIGHT).spring({
 opacity: 0
-  }), [d, u] = (0, l.useSpring)(() => ({
+  }), [d, u] = (0, s.useSpring)(() => ({
 immediate: !0,
 from: {
   backgroundColor: o
@@ -40,7 +40,7 @@ u({
   }, [
 r,
 u
-  ]), (0, i.jsx)(l.animated.div, {
+  ]), (0, i.jsx)(s.animated.div, {
 style: d,
 className: n,
 children: t

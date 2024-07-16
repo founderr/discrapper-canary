@@ -5,8 +5,8 @@ return S;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(392711),
   o = n(399606),
   c = n(481060),
@@ -29,18 +29,18 @@ var i = n(735250),
 function S(e) {
   var t, n;
   let {
-userId: l,
+userId: s,
 guildId: S,
 location: Z,
 className: A,
 onNavigate: M
-  } = e, b = a.useRef(null), R = (0, o.e7)([_.ZP], () => _.ZP.getGuildSidebarState(S), [S]), j = a.useRef(0), [L, P] = a.useState(null !== (t = null == R ? void 0 : R.details.additionalSearchQuery) && void 0 !== t ? t : {}), O = (0, g.z0)(l, S, {
+  } = e, b = a.useRef(null), R = (0, o.e7)([_.ZP], () => _.ZP.getGuildSidebarState(S), [S]), j = a.useRef(0), [L, P] = a.useState(null !== (t = null == R ? void 0 : R.details.additionalSearchQuery) && void 0 !== t ? t : {}), O = (0, g.z0)(s, S, {
 addtionalQuery: L,
 shouldDispatch: !0
-  }), y = (0, o.e7)([E.default], () => E.default.getUser(l), [l]), D = (0, o.e7)([f.ZP], () => f.ZP.getMember(S, l), [
+  }), y = (0, o.e7)([E.default], () => E.default.getUser(s), [s]), D = (0, o.e7)([f.ZP], () => f.ZP.getMember(S, s), [
 S,
-l
-  ]), k = (0, x.f)(l, S);
+s
+  ]), k = (0, x.f)(s, S);
   a.useLayoutEffect(() => {
 let e = null == R ? void 0 : R.details.scrollOffset;
 if (null != e) {
@@ -55,14 +55,14 @@ if (null != e) {
   if (null == R)
     return;
   let t = e.target.scrollTop;
-  j.current = t, (0, C.r)(S, l, R.baseChannelId, {
+  j.current = t, (0, C.r)(S, s, R.baseChannelId, {
     modViewPanel: T.k.MESSAGE_HISTORY,
     additionalSearchQuery: L,
     scrollOffset: j.current
   });
 }, [
   S,
-  l,
+  s,
   R,
   L
 ]),
@@ -74,14 +74,14 @@ B = a.useCallback(e => {
     ...L,
     offset: 25 * e
   };
-  P(t), (0, C.r)(S, l, R.baseChannelId, {
+  P(t), (0, C.r)(S, s, R.baseChannelId, {
     modViewPanel: T.k.MESSAGE_HISTORY,
     additionalSearchQuery: t,
     scrollOffset: j.current
   });
 }, [
   S,
-  l,
+  s,
   R,
   L
 ]),
@@ -132,24 +132,24 @@ V = a.useMemo(() => {
   H
 ]);
   return null == y || null == D || null == V ? null : (0, i.jsxs)('div', {
-className: s()(N.container, A),
+className: l()(N.container, A),
 style: {
   backgroundColor: k
 },
 children: [
   (0, i.jsx)(I.Z, {
     guildId: S,
-    userId: l,
+    userId: s,
     onNavigate: M
   }),
   (0, i.jsx)(c.AdvancedScroller, {
-    className: s()(v.innerContainer),
+    className: l()(v.innerContainer),
     ref: b,
     onScroll: w,
     children: (0, i.jsx)(m.Z, {
       searchResults: G,
       search: V,
-      searchId: l,
+      searchId: s,
       renderEmbeds: !0,
       blockCount: 0,
       scrollTo: () => {},

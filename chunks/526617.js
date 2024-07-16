@@ -6,8 +6,8 @@ return K;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(239091),
   c = n(788911),
@@ -63,7 +63,7 @@ index: a
   return (0, r.jsx)('div', {
 className: V.sectionContainer,
 children: (0, r.jsx)(l.Clickable, {
-  className: o()(V.sectionHeader, {
+  className: s()(V.sectionHeader, {
     [V.notFirstSectionHeader]: 0 !== a
   }),
   onClick: i,
@@ -155,8 +155,8 @@ function W(e) {
 descriptors: t,
 soundButtonProps: n,
 rowIndex: a,
-isUsingKeyboardNavigation: o,
-suppressPlaySound: s,
+isUsingKeyboardNavigation: s,
+suppressPlaySound: o,
 gridRowProps: l,
 getItemProps: u,
 onSelectItem: c,
@@ -168,7 +168,7 @@ buttonOverlay: _
 className: V.soundRow,
 children: t.map((e, t) => {
   let r = 'item-'.concat(t),
-    l = o && f.rowIndex === a && f.columnIndex === t;
+    l = s && f.rowIndex === a && f.columnIndex === t;
   switch (e.item.type) {
     case C.vB.SOUND:
       return (0, i.createElement)(P.ZP, {
@@ -176,7 +176,7 @@ children: t.map((e, t) => {
         ...n,
         key: ''.concat(r, '-').concat(e.item.sound.soundId),
         sound: e.item.sound,
-        suppressPlaySound: s,
+        suppressPlaySound: o,
         focused: l,
         onMouseEnter: () => d(t),
         onSelectItem: () => c(e),
@@ -199,7 +199,7 @@ function K(e) {
   let {
 guildId: t,
 channel: a,
-containerWidth: o,
+containerWidth: s,
 onClose: c,
 onSelect: _,
 suppressPlaySound: A = !1,
@@ -213,12 +213,12 @@ defaultSoundsOnly: Q = !1
 currentPreviewRef: X
   } = i.useContext(O.Z), {
 analyticsLocations: $
-  } = (0, d.ZP)(), [J, ee] = i.useState(null), et = (0, s.e7)([T.default], () => T.default.getCurrentUser()), en = (0, s.e7)([g.Z], () => {
+  } = (0, d.ZP)(), [J, ee] = i.useState(null), et = (0, o.e7)([T.default], () => T.default.getCurrentUser()), en = (0, o.e7)([g.Z], () => {
 var e;
 return g.Z.getVoiceState(t, null !== (e = null == et ? void 0 : et.id) && void 0 !== e ? e : B.lds);
   }), er = (null == en ? void 0 : en.selfDeaf) || (null == en ? void 0 : en.mute) || (null == en ? void 0 : en.suppress), ei = (0, f.Iu)(e => e.searchQuery), ea = (0, S.Dt)(), {
-categories: eo
-  } = (0, M.ZP)(a, void 0, Q), [es, el] = i.useState([]), eu = (0, M.FS)(eo, es, ei), ec = I.T4.useSetting(), ed = i.useMemo(() => new Set(ec), [ec]), e_ = null == a, eE = v.ZP.canUseCustomCallSounds(et), ef = i.useCallback(e => {
+categories: es
+  } = (0, M.ZP)(a, void 0, Q), [eo, el] = i.useState([]), eu = (0, M.FS)(es, eo, ei), ec = I.T4.useSetting(), ed = i.useMemo(() => new Set(ec), [ec]), e_ = null == a, eE = v.ZP.canUseCustomCallSounds(et), ef = i.useCallback(e => {
 ed.has(e) ? ed.delete(e) : ed.add(e), I.T4.updateSetting(Array.from(ed));
   }, [ed]), eh = i.useCallback((e, t) => {
 if (!A && (0, y.Nq)(et, e, a, !1)) {
@@ -251,13 +251,13 @@ switch (e.item.type) {
 $,
 eh,
 _
-  ]), em = i.useCallback((e, t, n, i, o) => (0, r.jsx)(W, {
+  ]), em = i.useCallback((e, t, n, i, s) => (0, r.jsx)(W, {
 descriptors: e,
 rowIndex: n.rowIndex,
 isUsingKeyboardNavigation: n.isUsingKeyboardNavigation,
 gridRowProps: t,
 getItemProps: i,
-onItemMouseEnter: o,
+onItemMouseEnter: s,
 suppressPlaySound: A,
 onSelectItem: ep,
 soundButtonProps: {
@@ -287,10 +287,10 @@ return (0, r.jsx)(Y, {
   }, [
 ed,
 ef
-  ]), eT = i.useCallback(e => el((0, b.ZP)(e, eo, et, a, $)), [
+  ]), eT = i.useCallback(e => el((0, b.ZP)(e, es, et, a, $)), [
 a,
 et,
-eo,
+es,
 $
   ]), eg = i.useCallback(e => {
 (0, u.jW)(e, async () => {
@@ -313,10 +313,10 @@ children: (0, r.jsx)(l.VoiceNormalIcon, {
 })
   }), [eg]), eA = i.useCallback(e => (0, r.jsx)(w.Z, {
 soundboardListRef: e,
-categories: eo,
+categories: es,
 listPadding: z
   }), [
-eo,
+es,
 z
   ]), eN = i.useCallback(e => {
 if ((null == e ? void 0 : e.item.type) === C.vB.SOUND) {
@@ -364,11 +364,11 @@ children: [
   (0, r.jsx)(h.Z, {
     categories: eu,
     collapsedCategories: ed,
-    containerWidth: o,
+    containerWidth: s,
     store: E.Wq,
     onSelectItem: ep,
     onSearchExpressions: eT,
-    hasSearchResults: es.length > 0,
+    hasSearchResults: eo.length > 0,
     defaultSearchPlaceholder: F.Z.Messages.SOUNDBOARD_SEARCH_PLACEHOLDER,
     renderRow: em,
     renderSectionHeader: eI,

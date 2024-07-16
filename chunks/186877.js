@@ -5,8 +5,8 @@ return d;
 });
 var i = n(442837),
   a = n(355298),
-  l = n(88101),
-  s = n(375954),
+  s = n(88101),
+  l = n(375954),
   r = n(699516),
   o = n(594174),
   c = n(981631);
@@ -14,9 +14,9 @@ var i = n(442837),
 function d(e) {
   let t = e.isDM() && !e.isSystemDM() && !e.rawRecipients.some(e => e.bot),
 n = t ? e.getRecipientId() : null,
-d = (0, l.P)(e.id, 'dm_convo_starter');
+d = (0, s.P)(e.id, 'dm_convo_starter');
   return (0, i.e7)([
-s.Z,
+l.Z,
 a.Z,
 r.Z,
 o.default
@@ -28,8 +28,8 @@ if (null != n) {
   if (null != e && e.hasFlag(c.xW$.PROVISIONAL_ACCOUNT))
     return !1;
 }
-let i = s.Z.getMessages(e.id);
-return i.ready && !i.hasMoreBefore && !i.hasMoreAfter && i.length < 25 && !s.Z.hasCurrentUserSentMessage(e.id);
+let i = l.Z.getMessages(e.id);
+return i.ready && !i.hasMoreBefore && !i.hasMoreAfter && i.length < 25 && !l.Z.hasCurrentUserSentMessage(e.id);
   }, [
 d,
 t,

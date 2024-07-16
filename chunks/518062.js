@@ -1,26 +1,26 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return _;
   }
-}), s(47120);
-var n = s(735250);
-s(470079);
-var a = s(442837),
-  i = s(481060),
-  r = s(607070),
-  o = s(122890),
-  l = s(285952),
-  c = s(300395),
-  d = s(546590);
+}), t(47120);
+var n = t(735250);
+t(470079);
+var a = t(442837),
+  i = t(481060),
+  r = t(607070),
+  o = t(122890),
+  l = t(285952),
+  c = t(300395),
+  d = t(546590);
 
 function _(e) {
   let {
-purchaseState: t,
-currentStep: s,
+purchaseState: s,
+currentStep: t,
 onClose: _
   } = e, [E, u] = (0, o.z)({
-purchaseState: t,
-currentStep: s,
+purchaseState: s,
+currentStep: t,
 initialScene: c.fe.Scenes.ENTRY,
 purchaseScene: c.fe.Scenes.STARS,
 errorScene: c.fe.Scenes.ERROR,

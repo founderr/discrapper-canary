@@ -1,6 +1,6 @@
 let r, i;
 n.r(t), n(47120), n(177593), n(653041), n(411104);
-var a, o, s, l, u = n(512722),
+var a, s, o, l, u = n(512722),
   c = n.n(u),
   d = n(213919),
   _ = n(756647),
@@ -51,8 +51,8 @@ let b = n(952265).nf,
   er = {},
   ei = null,
   ea = null,
-  eo = null,
   es = null,
+  eo = null,
   el = !1;
 
 function eu(e) {
@@ -161,13 +161,13 @@ type: (null == e ? void 0 : e.isSwitchingAccount) ? 'user-data-only' : 'all'
 }
 class eI extends(a = E.ZP.Store) {
   initialize() {
-x = h.K.get(w), G = h.K.get(U), eo = h.K.get('login_cache'), null == d.getToken() && ed(), this.addChangeListener(() => (0, T.u)(x));
+x = h.K.get(w), G = h.K.get(U), es = h.K.get('login_cache'), null == d.getToken() && ed(), this.addChangeListener(() => (0, T.u)(x));
   }
   getEmail() {
 return G;
   }
   getLogin() {
-return eo;
+return es;
   }
   didVerifyFail() {
 return ee;
@@ -270,18 +270,18 @@ return !W;
 return Q;
   }
   getSuspendedUserToken() {
-return es;
+return eo;
   }
   getIsPasswordlessActive() {
 return el;
   }
 }
-l = 'AuthenticationStore', (s = 'displayName') in(o = eI) ? Object.defineProperty(o, s, {
+l = 'AuthenticationStore', (o = 'displayName') in(s = eI) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.default = new eI(p.Z, {
+}) : s[o] = l, t.default = new eI(p.Z, {
   CONNECTION_OPEN: function(e) {
 var t;
 let {
@@ -289,10 +289,10 @@ let {
   sessionId: r,
   authSessionIdHash: i,
   analyticsToken: a,
-  auth: o,
-  staticAuthSessionId: s
+  auth: s,
+  staticAuthSessionId: o
 } = e;
-ec('handleConnectionOpen called'), R.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, N.Z)(n)), k = r, B = i, F = s, Z = a, x = n.id, G = n.email, void 0 !== o && (K = o.authenticator_types), h.K.set(U, n.email), h.K.set(w, n.id);
+ec('handleConnectionOpen called'), R.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, N.Z)(n)), k = r, B = i, F = o, Z = a, x = n.id, G = n.email, void 0 !== s && (K = s.authenticator_types), h.K.set(U, n.email), h.K.set(w, n.id);
   },
   OVERLAY_INITIALIZE: function(e) {
 var t;
@@ -325,7 +325,7 @@ let {
 null != t && (B = t);
   },
   LOGIN: function(e) {
-er = {}, Y = D.u34.LOGGING_IN, J = '', i = null, null != e.login && (eo = e.login);
+er = {}, Y = D.u34.LOGGING_IN, J = '', i = null, null != e.login && (es = e.login);
   },
   LOGIN_SUCCESS: function(e) {
 let {
@@ -410,7 +410,7 @@ Y = D.u34.NONE;
 let {
   suspendedUserToken: t
 } = e;
-el = !1, es = t, setImmediate(() => (0, A.uL)(D.Z5c.ACCOUNT_STANDING));
+el = !1, eo = t, setImmediate(() => (0, A.uL)(D.Z5c.ACCOUNT_STANDING));
   },
   SET_LOGIN_CREDENTIALS: function(e) {
 let {
@@ -499,7 +499,7 @@ x = t.id, G = t.email, void 0 !== t.authenticator_types && (K = t.authenticator_
 er = {};
   },
   CLOSE_SUSPENDED_USER: function() {
-es = null, Y = D.u34.NONE, em(), setImmediate(() => (0, A.uL)(D.Z5c.DEFAULT_LOGGED_OUT));
+eo = null, Y = D.u34.NONE, em(), setImmediate(() => (0, A.uL)(D.Z5c.DEFAULT_LOGGED_OUT));
   },
   PASSWORDLESS_FAILURE: function(e) {
 let {

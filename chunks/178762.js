@@ -8,8 +8,8 @@ return b;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(392711),
-  s = n.n(l),
+  s = n(392711),
+  l = n.n(s),
   r = n(91192),
   o = n(876215),
   c = n(442837),
@@ -36,7 +36,7 @@ let M = 72;
 function b(e) {
   return (null == e ? void 0 : e.type) === p.so.CONTENT_INVENTORY ? M : 0;
 }
-let R = s().throttle(e => {
+let R = l().throttle(e => {
 (0, f.L)(A.xP.CARD_HOVER, e);
   }, 5000, {
 leading: !0,
@@ -115,13 +115,13 @@ switch (t.content_type) {
 t.ZP = a.memo(e => {
   var t;
   let {
-index: l,
-...s
-  } = e, [o, p] = a.useState('default'), E = (0, r.JA)(''.concat(l)), C = null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), g = {
-entry: s.entry,
-channelId: s.channel.id,
-guildId: s.channel.guild_id,
-requestId: s.requestId
+index: s,
+...l
+  } = e, [o, p] = a.useState('default'), E = (0, r.JA)(''.concat(s)), C = null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), g = {
+entry: l.entry,
+channelId: l.channel.id,
+guildId: l.channel.guild_id,
+requestId: l.requestId
   }, {
 openOnHover: I
   } = (0, _.C)({
@@ -140,12 +140,12 @@ b
         default: e
       } = await n.e('153').then(n.bind(n, 330150));
       return () => (0, i.jsx)(e, {
-        entry: s.entry,
-        requestId: s.requestId
+        entry: l.entry,
+        requestId: l.requestId
       });
     });
 }, [
-  s,
+  l,
   C
 ]),
 O = a.useCallback(() => {
@@ -171,7 +171,7 @@ children: (0, i.jsx)(d.Popout, {
     return (0, i.jsx)(L, {
       closePopout: t,
       updatePopoutPosition: O,
-      ...s
+      ...l
     });
   },
   position: 'left',
@@ -205,7 +205,7 @@ children: (0, i.jsx)(d.Popout, {
           },
           onContextMenu: P,
           children: (0, i.jsx)(j, {
-            ...s,
+            ...l,
             selected: n,
             hovered: x.current
           })

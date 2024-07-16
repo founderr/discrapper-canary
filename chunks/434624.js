@@ -24,8 +24,8 @@ let t, n, {
     className: T,
     count: h,
     me: N,
-    me_burst: p,
-    burst_count: f,
+    me_burst: f,
+    burst_count: p,
     burst_colors: C,
     readOnly: g,
     isLurking: S,
@@ -34,10 +34,10 @@ let t, n, {
     type: O
   } = e,
   x = O === _.O.BURST,
-  M = (0, E.y4)(N, p, O),
+  M = (0, E.y4)(N, f, O),
   v = (0, u.v)(x && null != C ? C : []),
   L = a ? m : I,
-  Z = x ? f : h,
+  Z = x ? p : h,
   P = (0, d.y)(Z, E.aO),
   b = {};
 if (x && null != v) {

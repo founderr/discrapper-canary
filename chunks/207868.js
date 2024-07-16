@@ -1,7 +1,7 @@
 var i = n(735250),
   a = n(470079),
-  l = n(392711),
-  s = n.n(l),
+  s = n(392711),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(557135),
@@ -17,18 +17,18 @@ var i = n(735250),
 t.Z = a.memo(function(e) {
   let {
 channel: t
-  } = e, n = (0, d.Z)(), l = (0, r.e7)([m.Z], () => m.Z.isInChannel(t.id)), g = (0, r.e7)([m.Z], () => !s().isEmpty(m.Z.getVoiceStatesForChannel(t.id))), I = (0, r.e7)([p.Z], () => p.Z.can(E.Plq.CONNECT, t)), {
+  } = e, n = (0, d.Z)(), s = (0, r.e7)([m.Z], () => m.Z.isInChannel(t.id)), g = (0, r.e7)([m.Z], () => !l().isEmpty(m.Z.getVoiceStatesForChannel(t.id))), I = (0, r.e7)([p.Z], () => p.Z.can(E.Plq.CONNECT, t)), {
 needSubscriptionToAccess: x
   } = (0, u.Z)(t.id), T = (0, h.$R)(t), N = a.useCallback(() => {
 c.Z.handleVoiceConnect({
   channel: t,
-  connected: l,
+  connected: s,
   needSubscriptionToAccess: x,
   locked: !1
 });
   }, [
 t,
-l,
+s,
 x
   ]);
   return (a.useEffect(() => (_.S.subscribe(E.CkL.CALL_START, N), () => {
@@ -38,7 +38,7 @@ guildId: t.guild_id,
 location: '63250c_1'
   }, {
 autoTrackExposure: !1
-  }).enabled && !n && !l && I && T && t.isVocalThread()) ? (0, i.jsx)(f.ZP.Icon, {
+  }).enabled && !n && !s && I && T && t.isVocalThread()) ? (0, i.jsx)(f.ZP.Icon, {
 icon: o.PhoneCallIcon,
 onClick: N,
 tooltip: g ? C.Z.Messages.JOIN_VOICE_CALL : C.Z.Messages.START_VOICE_CALL

@@ -5,8 +5,8 @@ return h;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(925975),
-  s = n(957730),
+  s = n(925975),
+  l = n(957730),
   r = n(981631),
   o = n(689938),
   c = n(586146);
@@ -30,8 +30,8 @@ let {
   textValue: t,
   richValue: n,
   message: a,
-  channel: l,
-  onCancel: s,
+  channel: s,
+  onCancel: l,
   children: r
 } = this.props;
 return (0, i.jsxs)('div', {
@@ -43,7 +43,7 @@ return (0, i.jsxs)('div', {
       textValue: t,
       richValue: n,
       message: a,
-      channel: l,
+      channel: s,
       onChange: this.onChange,
       onSubmit: this.onSubmit,
       onKeyDown: this.onKeyDown
@@ -51,7 +51,7 @@ return (0, i.jsxs)('div', {
     (0, i.jsx)('div', {
       className: c.operations,
       children: o.Z.Messages.EDIT_TEXTAREA_HELP.format({
-        onCancel: () => s(l.id),
+        onCancel: () => l(s.id),
         onSave: this.onClickSave
       })
     })
@@ -88,12 +88,12 @@ super(...e), d(this, 'node', a.createRef()), d(this, 'onClickSave', () => {
         shouldClear: !1,
         shouldRefocus: !1
       });
-    let o = (0, l.g)(e, {
+    let o = (0, s.g)(e, {
       channel: n,
       isEdit: !0
     });
     (null == o ? void 0 : o.content) != null && (e = o.content);
-    let c = s.ZP.parse(this.props.channel, e);
+    let c = l.ZP.parse(this.props.channel, e);
     return c.content !== this.props.message.content && r(this.props.channel.id, this.props.message.id, c), a(n.id), Promise.resolve({
       shouldClear: !0,
       shouldRefocus: !0

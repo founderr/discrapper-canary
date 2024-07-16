@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(392711),
-  o = n.n(a),
-  s = n(818405),
+  s = n.n(a),
+  o = n(818405),
   l = n(587158),
   u = n(286379),
   c = n(442837),
@@ -53,11 +53,11 @@ className: v.clearOverrideButton,
 children: N.Z.Messages.CLEAR_BUILD_OVERRIDE
   });
 }
-let C = o().throttle(e => {
+let C = s().throttle(e => {
   m.Z.increment({
 name: u.V.APP_CRASHED,
 tags: [
-  'reason:'.concat(s.v.UNHANDLED_JS_ERROR),
+  'reason:'.concat(o.v.UNHANDLED_JS_ERROR),
   'level:'.concat(l.c.FATAL),
   'modded_client:'.concat(e)
 ]

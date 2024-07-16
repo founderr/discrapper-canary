@@ -1,18 +1,18 @@
-var n = s(735250);
-s(470079);
-var a = s(481060),
-  i = s(230711),
-  r = s(63063),
-  o = s(74538),
-  l = s(937615),
-  c = s(981631),
-  d = s(474936),
-  _ = s(689938),
-  E = s(39007);
-t.Z = function(e) {
+var n = t(735250);
+t(470079);
+var a = t(481060),
+  i = t(230711),
+  r = t(63063),
+  o = t(74538),
+  l = t(937615),
+  c = t(981631),
+  d = t(474936),
+  _ = t(689938),
+  E = t(39007);
+s.Z = function(e) {
   let {
-hasAppliedGuildBoosts: t,
-isUserPremiumTier2: s,
+hasAppliedGuildBoosts: s,
+isUserPremiumTier2: t,
 hasGuildAffinitiesOrInGuild: u,
 subscriptionIsPausedOrPausePending: T
   } = e, {
@@ -20,8 +20,8 @@ subtitle: I,
 flavor: S
   } = function(e) {
 let {
-  hasAppliedGuildBoosts: t,
-  isUserPremiumTier2: s,
+  hasAppliedGuildBoosts: s,
+  isUserPremiumTier2: t,
   hasGuildAffinitiesOrInGuild: n,
   subscriptionIsPausedOrPausePending: a
 } = e;
@@ -35,7 +35,7 @@ if (!n)
   return {
     subtitle: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_NO_JOINED_SERVER_SUBTITLE
   };
-if (t)
+if (s)
   return {
     subtitle: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_ACTIVE_BOOSTS,
     flavor: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_ACTIVE_BOOSTS_FLAVOR.format({
@@ -43,17 +43,17 @@ if (t)
     })
   };
 let E = d.GP[d.Xh.PREMIUM_MONTH_GUILD],
-  u = o.ZP.getDefaultPrice(E.id, s),
+  u = o.ZP.getDefaultPrice(E.id, t),
   T = (0, l.og)((0, l.T4)(u.amount, u.currency), E.interval, E.intervalCount);
 return {
-  subtitle: s ? _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_SUBBED_NO_ACTIVE_BOOSTS : _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_NO_SUB_NO_ACTIVE_BOOSTS,
+  subtitle: t ? _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_SUBBED_NO_ACTIVE_BOOSTS : _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_NO_SUB_NO_ACTIVE_BOOSTS,
   flavor: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_NO_ACTIVE_BOOSTS_FLAVOR.format({
     monthlyGuildBoostPrice: T
   })
 };
   }({
-hasAppliedGuildBoosts: t,
-isUserPremiumTier2: s,
+hasAppliedGuildBoosts: s,
+isUserPremiumTier2: t,
 hasGuildAffinitiesOrInGuild: u,
 subscriptionIsPausedOrPausePending: T
   });

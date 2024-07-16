@@ -1,8 +1,8 @@
 n(627494), n(757143);
 var i = n(735250),
   a = n(470079),
-  l = n(317261),
-  s = n(70956),
+  s = n(317261),
+  l = n(70956),
   r = n(5192),
   o = n(561308),
   c = n(919394),
@@ -14,14 +14,14 @@ var i = n(735250),
   _ = n(689938);
 let f = (e, t, n, i) => {
 let a = function(e) {
-    if (e === l._.WEEK)
+    if (e === s._.WEEK)
       return _.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
   }(i),
-  s = r.ZP.getName(t.guild_id, t.id, n),
+  l = r.ZP.getName(t.guild_id, t.id, n),
   o = e.extra.game_name;
 return a.plainFormat({
   gameName: o,
-  userName: s
+  userName: l
 }).replaceAll('*', '');
   },
   E = (e, t) => _.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
@@ -32,7 +32,7 @@ t.Z = e => {
   let {
 channel: t,
 entry: n,
-requestId: l,
+requestId: s,
 closePopout: r
   } = e, {
 iconUrl: C,
@@ -51,7 +51,7 @@ if (null != I && null != S && null != Z && !!(0, u.qy)(Z))
     avatarSrcs: [I.getAvatarURL(t.guild_id, 128)],
     description: f(n, t, I, Z),
     timestamp: _.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
-      hours: Math.round(S / s.Z.Seconds.HOUR)
+      hours: Math.round(S / l.Z.Seconds.HOUR)
     }),
     colors: [
       N,
@@ -94,7 +94,7 @@ children: [
       generateReactionImage: A,
       reactionImageAltText: E(n, I),
       entry: n,
-      requestId: l
+      requestId: s
     })
   })
 ]

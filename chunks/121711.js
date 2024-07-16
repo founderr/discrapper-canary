@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(948789),
+  s = n(470079),
+  a = n(948789),
   r = n(780384),
   l = n(481060),
   o = n(410030),
@@ -31,7 +31,7 @@ scrollPosition: Z
 scrollPosition: Z
   }), O = (0, r.wj)((0, o.ZP)()), {
 quests: R
-  } = (0, m.bA)(N.id), x = a.useMemo(() => O ? 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-dark-mode.png' : 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-light-mode.png', [O]), b = null;
+  } = (0, m.bA)(N.id), x = s.useMemo(() => O ? 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-dark-mode.png' : 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-light-mode.png', [O]), b = null;
   if (window.location.hash.length > 0) {
 let e = window.location.hash.slice(1);
 for (let t of R)
@@ -40,10 +40,10 @@ for (let t of R)
     break;
   }
   }
-  a.useEffect(() => {
-!t && (0, s.uL)(S.Z5c.FRIENDS);
-  }, [t]), a.useEffect(() => {}, []);
-  let P = a.useCallback(() => {
+  s.useEffect(() => {
+!t && (0, a.uL)(S.Z5c.FRIENDS);
+  }, [t]), s.useEffect(() => {}, []);
+  let P = s.useCallback(() => {
 window.open(I.Z.getArticleURL(S.BhN.QUESTS_LEARN_MORE));
   }, []);
   return ((0, d.Tt)({

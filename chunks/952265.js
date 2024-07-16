@@ -45,26 +45,26 @@ return E;
 var r = n(97613),
   i = n.n(r),
   a = n(652874),
-  o = n(40851),
-  s = n(602091),
+  s = n(40851),
+  o = n(602091),
   l = n(981631);
 let u = n(338305).Z,
   c = [
-s.z1,
-s.u1
+o.z1,
+o.u1
   ];
 
 function d() {
-  let e = (0, o.GB)();
-  return null != e ? _(e) : s.z1;
+  let e = (0, s.GB)();
+  return null != e ? _(e) : o.z1;
 }
 
 function _(e) {
-  return e === l.IlC.POPOUT ? s.u1 : s.z1;
+  return e === l.IlC.POPOUT ? o.u1 : o.z1;
 }
 let E = (0, a.Z)(e => ({
-  [s.z1]: [],
-  [s.u1]: []
+  [o.z1]: [],
+  [o.u1]: []
 }));
 async function f(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -73,15 +73,15 @@ async function f(e) {
   ...r
 } = t,
 a = null != t.modalKey ? t.modalKey : i()(),
-o = !1,
-s = setTimeout(() => {
-  o = !0, h(u, {
+s = !1,
+o = setTimeout(() => {
+  s = !0, h(u, {
     ...r,
     modalKey: a
   }, n);
 }, 300),
 l = await e();
-  return clearTimeout(s), o ? v(a, n) && m(a, l, r.onCloseRequest, r.onCloseCallback, n) : h(l, {
+  return clearTimeout(o), s ? v(a, n) && m(a, l, r.onCloseRequest, r.onCloseCallback, n) : h(l, {
 ...r,
 modalKey: a
   }, n), a;
@@ -93,8 +93,8 @@ n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d(),
 {
   modalKey: r,
   instant: a,
-  Layer: o,
-  onCloseRequest: s,
+  Layer: s,
+  onCloseRequest: o,
   onCloseCallback: l,
   backdropStyle: u
 } = t,
@@ -112,9 +112,9 @@ return void 0 !== r && r.some(e => {
     ...r,
     {
       key: c,
-      Layer: o,
+      Layer: s,
       render: e,
-      onCloseRequest: null != s ? s : () => p(c, n),
+      onCloseRequest: null != o ? o : () => p(c, n),
       onCloseCallback: l,
       instant: a,
       backdropStyle: u
@@ -191,7 +191,7 @@ for (let n of e[t])
 }
 
 function N(e, t) {
-  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.z1,
+  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.z1,
 r = e[n];
   return null != r && r.some(e => e.key === t);
 }

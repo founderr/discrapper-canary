@@ -5,8 +5,8 @@ return j;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(852229),
   o = n(442837),
   c = n(481060),
@@ -36,7 +36,7 @@ function j(e) {
   let {
 postId: t,
 isFirstMessage: n,
-isLastItem: l = !1,
+isLastItem: s = !1,
 parentChannelId: j
   } = e, {
 ref: L,
@@ -93,13 +93,13 @@ ei = G ? c.CheckmarkLargeIcon : c.BellIcon;
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsxs)('div', {
-    className: s()(b.container, {
+    className: l()(b.container, {
       [b.header]: D
     }),
     ref: L,
     children: [
       (0, i.jsxs)('div', {
-        className: s()(b.reactButtons, {
+        className: l()(b.reactButtons, {
           [b.loading]: J
         }),
         children: [
@@ -157,7 +157,7 @@ children: [
               size: c.Button.Sizes.SMALL,
               onClick: et,
               className: b.button,
-              innerClassName: s()(b.buttonInner, {
+              innerClassName: l()(b.buttonInner, {
                 [b.active]: G
               }),
               children: [
@@ -203,7 +203,7 @@ children: [
   }),
   (0, i.jsx)(E.Z, {
     channel: B,
-    isLastItem: l
+    isLastItem: s
   })
 ]
   });

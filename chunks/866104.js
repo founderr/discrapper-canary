@@ -22,8 +22,8 @@ var i = n(735250),
   T = n(671533),
   h = n(810090),
   N = n(51144),
-  p = n(506071),
-  f = n(696014),
+  f = n(506071),
+  p = n(696014),
   C = n(847033),
   g = n(544978),
   S = n(893182),
@@ -59,7 +59,7 @@ function x(e) {
   let {
 coverImageAsset: t,
 isPreview: n = !1
-  } = e, a = E.QK.useSetting(), s = (0, p.n)() && a, [r, l] = (0, _.Z)(t, s), o = s ? (0, i.jsx)(h.Z, {
+  } = e, a = E.QK.useSetting(), s = (0, f.n)() && a, [r, l] = (0, _.Z)(t, s), o = s ? (0, i.jsx)(h.Z, {
 autoPlay: !0,
 loop: !0,
 className: R.coverImage,
@@ -90,7 +90,7 @@ subscriptionsSettings: E
   } = e, T = _.id;
   let {
 nickname: h,
-nickcolor: p
+nickcolor: f
   } = (s = T, (0, l.cj)([
 I.ZP,
 m.default
@@ -106,7 +106,7 @@ return {
   }, [s])), {
 isTruncated: M,
 ExpandableTextContainer: v
-  } = (0, f.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = a.useState(1), b = (0, c.Z)('(max-width: 1439px)'), {
+  } = (0, p.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = a.useState(1), b = (0, c.Z)('(max-width: 1439px)'), {
 selectedTab: D,
 isPhantomPreview: j
   } = (0, C.m)(), U = D === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, i.jsxs)(i.Fragment, {
@@ -182,7 +182,7 @@ children: [
                   usernameHook: function(e, t) {
                     return (0, i.jsx)('span', {
                       style: {
-                        color: p
+                        color: f
                       },
                       children: e
                     }, t);

@@ -6,8 +6,8 @@ return N;
 var i = n(735250);
 n(470079);
 var a = n(512722),
-  l = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  l = n(442837),
   r = n(779618),
   o = n(446226),
   c = n(441167),
@@ -30,9 +30,9 @@ function N(e) {
 channel: t,
 hasActiveStream: n,
 themeable: a = !1
-  } = e, N = (0, s.e7)([p.default], () => {
+  } = e, N = (0, l.e7)([p.default], () => {
 let e = p.default.getCurrentUser();
-return l()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
+return s()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
   }), v = (0, o.Z)(), {
 isSharedCanvasEnabled: S
   } = d.Z.useExperiment({

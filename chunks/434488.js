@@ -5,8 +5,8 @@ return S;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(704215),
   o = n(692547),
   c = n(481060),
@@ -31,29 +31,29 @@ function S(e) {
 channel: t,
 guild: n,
 width: a,
-inPopout: l,
-handleClose: s,
+inPopout: s,
+handleClose: l,
 userParticipantCount: r
   } = e;
   return a < 250 ? (0, i.jsx)(Z, {
 channel: t,
 guild: n,
 width: a,
-inPopout: l,
-handleClose: s,
+inPopout: s,
+handleClose: l,
 userParticipantCount: r
   }) : r > 1 ? (0, i.jsx)(M, {
 channel: t,
 guild: n,
 width: a,
-inPopout: l,
-handleClose: s,
+inPopout: s,
+handleClose: l,
 userParticipantCount: r
   }) : (0, i.jsx)(A, {
 channel: t,
 guild: n,
 width: a,
-inPopout: l
+inPopout: s
   });
 }
 
@@ -63,19 +63,19 @@ channel: t,
 inPopout: n,
 handleClose: a
   } = e, {
-analyticsLocations: l
+analyticsLocations: s
   } = (0, _.ZP)(m.Z.VC_TILE_ACTIVITY_SHELF_BUTTON), r = (0, d.O)(), u = () => {
 (0, p.Z)({
   channel: t,
   guildId: t.guild_id,
   locationObject: r.location,
   openInPopout: n,
-  analyticsLocations: l,
+  analyticsLocations: s,
   opensAppLauncherModal: !0
 });
   };
   return (0, i.jsx)(_.Gt, {
-value: l,
+value: s,
 children: (0, i.jsxs)(I.Z, {
   className: N.root,
   children: [
@@ -106,7 +106,7 @@ children: (0, i.jsxs)(I.Z, {
     }),
     (0, i.jsx)(c.Clickable, {
       onClick: a,
-      className: s()((0, g.Q)(x.BRd.DARK), N.shelfButtonCloseButton),
+      className: l()((0, g.Q)(x.BRd.DARK), N.shelfButtonCloseButton),
       children: (0, i.jsx)(c.CircleXIcon, {
         size: 'md',
         color: 'currentColor',
@@ -122,8 +122,8 @@ children: (0, i.jsxs)(I.Z, {
 function A(e) {
   let {
 channel: t,
-guild: l,
-inPopout: s,
+guild: s,
+inPopout: l,
 width: r
   } = e;
   a.useEffect(() => {
@@ -170,12 +170,12 @@ children: (0, i.jsxs)(I.Z, {
               ]).then(n.bind(n, 560114));
               return n => (0, i.jsx)(e, {
                 ...n,
-                guild: l,
+                guild: s,
                 channel: t,
                 source: x.t4x.ACTIVITY_ENTRY_POINT_TILE
               });
             }, {
-              contextKey: s ? c.POPOUT_MODAL_CONTEXT : c.DEFAULT_MODAL_CONTEXT
+              contextKey: l ? c.POPOUT_MODAL_CONTEXT : c.DEFAULT_MODAL_CONTEXT
             });
           },
           children: [
@@ -195,7 +195,7 @@ children: (0, i.jsxs)(I.Z, {
               channel: t,
               guildId: t.guild_id,
               locationObject: o.location,
-              openInPopout: s,
+              openInPopout: l,
               analyticsLocations: u,
               opensAppLauncherModal: !0
             });
@@ -219,7 +219,7 @@ function M(e) {
   let {
 channel: t,
 guild: n,
-handleClose: l,
+handleClose: s,
 width: o,
 userParticipantCount: d
   } = e;
@@ -252,7 +252,7 @@ children: (0, i.jsxs)(I.Z, {
       children: T.Z.Messages.EMBEDDED_ACTIVITIES_VC_TILE_ENTRY_POINT_TITLE
     }) : null,
     (0, i.jsx)('div', {
-      className: s()(N.activitiesContainer, {
+      className: l()(N.activitiesContainer, {
         [N.activitiesContainerSmol]: o <= 300
       }),
       children: p.map(e => (0, i.jsx)(h.Y, {
@@ -286,7 +286,7 @@ children: (0, i.jsxs)(I.Z, {
           tile_type: 'activity suggestion',
           close_type: 'temporary',
           n_participants: d
-        }), l();
+        }), s();
       },
       children: (0, i.jsx)(c.CloseSmallIcon, {
         size: 'md',

@@ -22,9 +22,9 @@ return C;
   }
 });
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(338545),
   c = n(990547),
   d = n(748780),
@@ -55,7 +55,7 @@ function R(e) {
 transitionState: n,
 children: r,
 size: i = 'small',
-role: s = 'dialog',
+role: o = 'dialog',
 className: E,
 fullscreenOnMobile: p = !0,
 hideShadow: m = !1,
@@ -64,7 +64,7 @@ returnRef: T,
 ...g
   } = e, N = n === S.Dv.ENTERING || n === S.Dv.ENTERED, {
 reducedMotion: R
-  } = o.useContext(_.S), C = (0, u.useSpring)({
+  } = s.useContext(_.S), C = (0, u.useSpring)({
 opacity: N ? 1 : 0,
 transform: N || R.enabled ? 'scale(1)' : 'scale(0.7)',
 config: {
@@ -73,7 +73,7 @@ config: {
   clamp: !0
 },
 onRest: I
-  }), y = o.useRef(null), D = null != g['aria-label'], L = null != g['aria-labelledby'], b = o.useId(), M = null !== (t = g['aria-labelledby']) && void 0 !== t ? t : b, P = o.useMemo(() => ({
+  }), y = s.useRef(null), D = null != g['aria-label'], L = null != g['aria-labelledby'], b = s.useId(), M = null !== (t = g['aria-labelledby']) && void 0 !== t ? t : b, P = s.useMemo(() => ({
 headerId: M,
 headerIdIsManaged: L
   }), [
@@ -84,7 +84,7 @@ L
 value: P,
 children: (0, a.jsx)(f.V, {
   className: v.focusLock,
-  role: s,
+  role: o,
   returnRef: T,
   impressionType: c.ImpressionTypes.MODAL,
   'aria-labelledby': D ? void 0 : P.headerId,
@@ -106,11 +106,11 @@ children: (0, a.jsx)(f.V, {
 }
 
 function C(e) {
-  var t, n, r, i, s;
+  var t, n, r, i, o;
   let {
 headerId: u,
 headerIdIsManaged: c
-  } = o.useContext(S.zM);
+  } = s.useContext(S.zM);
   return (0, a.jsx)(g.Z, {
 grow: 0,
 shrink: 0,
@@ -119,7 +119,7 @@ justify: null !== (n = e.justify) && void 0 !== n ? n : g.Z.Justify.START,
 align: null !== (r = e.align) && void 0 !== r ? r : g.Z.Align.CENTER,
 wrap: null !== (i = e.wrap) && void 0 !== i ? i : g.Z.Wrap.NO_WRAP,
 className: l()(v.header, e.className, {
-  [v.separator]: null === (s = e.separator) || void 0 === s || s
+  [v.separator]: null === (o = e.separator) || void 0 === o || o
 }),
 id: c ? void 0 : u,
 children: e.children
@@ -132,8 +132,8 @@ className: t,
 children: n,
 scrollerRef: r,
 scrollbarType: i,
-...o
-  } = e, s = function(e) {
+...s
+  } = e, o = function(e) {
 switch (null != e ? e : 'thin') {
   case 'auto':
     return T.yW;
@@ -143,10 +143,10 @@ switch (null != e ? e : 'thin') {
     return T.h2;
 }
   }(i);
-  return (0, a.jsx)(s, {
+  return (0, a.jsx)(o, {
 className: l()(v.content, t),
 ref: r,
-...o,
+...s,
 children: (0, a.jsx)(p.y, {
   children: n
 })
@@ -154,7 +154,7 @@ children: (0, a.jsx)(p.y, {
 }
 
 function D(e) {
-  var t, n, r, i, o;
+  var t, n, r, i, s;
   return (0, a.jsx)(g.Z, {
 grow: 0,
 shrink: 0,
@@ -163,7 +163,7 @@ justify: null !== (n = e.justify) && void 0 !== n ? n : g.Z.Justify.START,
 align: null !== (r = e.align) && void 0 !== r ? r : g.Z.Align.STRETCH,
 wrap: null !== (i = e.wrap) && void 0 !== i ? i : g.Z.Wrap.NO_WRAP,
 className: l()(v.footer, e.className, {
-  [v.footerSeparator]: null === (o = e.separator) || void 0 === o || o
+  [v.footerSeparator]: null === (s = e.separator) || void 0 === s || s
 }),
 children: (0, a.jsx)(p.y, {
   children: e.children

@@ -1,6 +1,6 @@
 var i = n(735250),
-  a = n(470079),
-  s = n(338545),
+  s = n(470079),
+  a = n(338545),
   r = n(442837),
   l = n(481060),
   o = n(607070),
@@ -18,17 +18,17 @@ t.Z = function(e) {
   let {
 children: t,
 onClose: n
-  } = e, h = a.useCallback(() => {
+  } = e, h = s.useCallback(() => {
 (0, c.fH)(c.v0.DISCOVERY), null == n || n();
   }, [n]);
-  a.useEffect(() => {
+  s.useEffect(() => {
 let e = e => {
   e.key === d.vn.ESCAPE && h();
 };
 return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
   }, [h]);
   let I = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
-m = (0, s.useSpring)({
+m = (0, a.useSpring)({
   from: {
     opacity: 0
   },
@@ -51,7 +51,7 @@ children: [
       children: u.Z.Messages.SAVE
     })
   }),
-  (0, i.jsx)(s.animated.div, {
+  (0, i.jsx)(a.animated.div, {
     style: {
       opacity: m.opacity,
       transform: m.opacity.to([

@@ -4,8 +4,8 @@ return o;
   }
 }), n(47120);
 var i = n(470079),
-  a = n(212093),
-  s = n(706454),
+  s = n(212093),
+  a = n(706454),
   r = n(900849),
   l = n(731455);
 
@@ -15,13 +15,13 @@ function o(e) {
 categoryId: n
   } = e, [o, c] = i.useState(!1), [d, u] = i.useState(''), [_, E] = i.useState(''), h = i.useRef('');
   i.useEffect(() => {
-a.Ue();
+s.Ue();
   }, []);
   let I = l.dU,
-m = s.default.locale,
+m = a.default.locale,
 g = null !== (t = I.find(e => e.code === m)) && void 0 !== t ? t : I[0],
 p = i.useCallback(() => {
-  c(!0), u(h.current), a.bR(h.current, {
+  c(!0), u(h.current), s.bR(h.current, {
     categoryId: n,
     preferredLocale: g.code,
     offset: 0,

@@ -5,8 +5,8 @@ return _;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(392711),
-  s = n.n(l),
+  s = n(392711),
+  l = n.n(s),
   r = n(374470),
   o = n(481060),
   c = n(239091),
@@ -30,8 +30,8 @@ let {
   listItemProps: t,
   searchOffset: n,
   index: a,
-  totalResults: l
-} = this.props, r = s().find(e, e => e.isSearchHit);
+  totalResults: s
+} = this.props, r = l().find(e, e => e.isSearchHit);
 if (null == r)
   return null;
 let c = u.Z.getChannel(r.channel_id);
@@ -46,7 +46,7 @@ return (0, i.jsx)(o.FocusRing, {
     className: p.container,
     ...t,
     'aria-posinset': 1 + n + a,
-    'aria-setsize': l,
+    'aria-setsize': s,
     'aria-labelledby': m,
     children: [
       (0, i.jsx)(o.Clickable, {

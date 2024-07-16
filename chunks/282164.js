@@ -1,6 +1,6 @@
 var n = t(735250),
-  r = t(470079),
-  s = t(442837),
+  s = t(470079),
+  r = t(442837),
   l = t(481060),
   o = t(873115),
   i = t(219929),
@@ -8,7 +8,7 @@ var n = t(735250),
   u = t(975060),
   d = t(689938),
   E = t(647728);
-class _ extends r.PureComponent {
+class _ extends s.PureComponent {
   componentDidMount() {
 null != this.props.paypalClient && o.f6();
   }
@@ -43,7 +43,7 @@ return (0, n.jsx)(l.FormSection, {
 });
   }
 }
-a.Z = s.ZP.connectStores([
+a.Z = r.ZP.connectStores([
   c.Z,
   u.Z
 ], () => ({

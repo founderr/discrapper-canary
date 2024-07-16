@@ -1,6 +1,6 @@
 t.r(n), t.d(n, {
   default: function() {
-return g;
+return p;
   }
 }), t(47120);
 var i = t(735250),
@@ -19,17 +19,17 @@ var i = t(735250),
   E = t(676770),
   T = t(981631),
   h = t(689938),
-  p = t(647421);
+  g = t(647421);
 
-function g(e) {
+function p(e) {
   let {
 guildId: n,
 transitionState: t,
-onClose: g,
+onClose: p,
 analyticsData: C
   } = e, f = (0, l.e7)([d.Z], () => d.Z.getGuild(n), [n]), x = !!(null == f ? void 0 : f.hasFeature(T.oNc.INVITES_DISABLED)), [O] = a.useState(!1), [S, A] = a.useState(E.Fl), R = (0, l.e7)([_.Z], () => _.Z.getGuildIncident(n)), b = (0, I.BT)(f), Z = (0, m.SG)(R) || x, v = (0, m.sN)(R), [M, L] = a.useState(Z), [j, D] = a.useState(v), [P, B] = a.useState(!1), y = M !== Z || j !== v || P, G = x && !b;
   if (null == f)
-return g(), null;
+return p(), null;
 
   function k() {
 L(e => !e);
@@ -41,7 +41,7 @@ children: [
   (0, i.jsx)(o.ModalHeader, {
     separator: !0,
     children: (0, i.jsxs)('div', {
-      className: p.headerContainer,
+      className: g.headerContainer,
       children: [
         (0, i.jsx)(o.LockIcon, {
           size: 'xs',
@@ -58,7 +58,7 @@ children: [
   }),
   (0, i.jsx)(o.ModalContent, {
     children: (0, i.jsxs)('div', {
-      className: p.mainContainer,
+      className: g.mainContainer,
       children: [
         (0, i.jsx)(o.Select, {
           placeholder: h.Z.Messages.GUILD_SERVER_LOCKDOWN_DURATION_PLACEHOLDER,
@@ -70,10 +70,10 @@ children: [
           serialize: e => String(e)
         }),
         (0, i.jsxs)('div', {
-          className: p.pauseContainer,
+          className: g.pauseContainer,
           children: [
             (0, i.jsxs)('div', {
-              className: p.pauseText,
+              className: g.pauseText,
               children: [
                 (0, i.jsx)(o.Text, {
                   variant: 'text-md/semibold',
@@ -93,7 +93,7 @@ children: [
               children: e => (0, i.jsx)('div', {
                 ...e,
                 children: (0, i.jsx)(o.Switch, {
-                  className: p.toggle,
+                  className: g.toggle,
                   onChange: k,
                   checked: M,
                   disabled: G
@@ -103,10 +103,10 @@ children: [
           ]
         }),
         (0, i.jsxs)('div', {
-          className: p.pauseContainer,
+          className: g.pauseContainer,
           children: [
             (0, i.jsxs)('div', {
-              className: p.pauseText,
+              className: g.pauseText,
               children: [
                 (0, i.jsx)(o.Text, {
                   variant: 'text-md/semibold',
@@ -121,7 +121,7 @@ children: [
               ]
             }),
             (0, i.jsx)(o.Switch, {
-              className: p.toggle,
+              className: g.toggle,
               onChange: function() {
                 D(e => !e);
               },
@@ -153,7 +153,7 @@ children: [
             intervention_type_enabled: (0, m.sO)(M, j),
             intervention_type_disabled: (0, m.lk)(M, j),
             duration: 60 * S
-          }), g();
+          }), p();
         },
         color: o.Button.Colors.BRAND,
         look: o.Button.Looks.FILLED,
@@ -162,7 +162,7 @@ children: [
         children: h.Z.Messages.GUILD_SERVER_LOCKDOWN_MODAL_CTA
       }),
       (0, i.jsx)(o.Button, {
-        onClick: g,
+        onClick: p,
         color: o.Button.Colors.PRIMARY,
         look: o.Button.Looks.LINK,
         disabled: O,

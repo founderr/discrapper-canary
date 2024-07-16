@@ -5,8 +5,8 @@ return E;
 });
 var i = n(735250);
 n(470079);
-var a = n(990547),
-  s = n(481060),
+var s = n(990547),
+  a = n(481060),
   r = n(230711),
   l = n(730417),
   o = n(981631),
@@ -24,7 +24,7 @@ function E(e) {
 markAsDismissed: t,
 partnerGame: n
   } = e;
-  (0, l.hs)(n, a.ImpressionTypes.POPOUT, a.ImpressionNames.DROPS_QUEST_COMPLETION);
+  (0, l.hs)(n, s.ImpressionTypes.POPOUT, s.ImpressionNames.DROPS_QUEST_COMPLETION);
   let E = (0, l.au)(n);
   if (null == E)
 return null;
@@ -43,41 +43,41 @@ children: [
     alt: '',
     className: m
   }),
-  (0, i.jsx)(s.Clickable, {
+  (0, i.jsx)(a.Clickable, {
     className: u.__invalid_buttonClose,
     'aria-label': d.Z.Messages.CLOSE,
     onClick: g,
-    children: (0, i.jsx)(s.CloseSmallIcon, {
+    children: (0, i.jsx)(a.CloseSmallIcon, {
       size: 'xs',
       color: 'currentColor',
       className: u.closeIcon
     })
   }),
-  (0, i.jsx)(s.Heading, {
+  (0, i.jsx)(a.Heading, {
     className: u.title,
     variant: 'heading-md/extrabold',
     children: d.Z.Messages.DROPS_QUEST_COMPLETION_TOOLTIP_HEADER
   }),
-  (0, i.jsx)(s.Text, {
+  (0, i.jsx)(a.Text, {
     variant: 'text-sm/medium',
     className: u.subTitle,
     children: h
   }),
-  (0, i.jsx)(s.Button, {
-    color: s.Button.Colors.BRAND_INVERTED,
+  (0, i.jsx)(a.Button, {
+    color: a.Button.Colors.BRAND_INVERTED,
     fullWidth: !0,
     onClick: () => {
       r.Z.open(o.oAB.INVENTORY), t(c.L.PRIMARY);
     },
     children: d.Z.Messages.REDEEM
   }),
-  (0, i.jsx)(s.Button, {
+  (0, i.jsx)(a.Button, {
     className: u.linkButtonContainer,
     innerClassName: u.linkButton,
     onClick: g,
-    look: s.Button.Looks.LINK,
+    look: a.Button.Looks.LINK,
     fullWidth: !0,
-    color: s.Button.Colors.WHITE,
+    color: a.Button.Colors.WHITE,
     children: d.Z.Messages.NOT_NOW
   }),
   (0, i.jsx)('div', {

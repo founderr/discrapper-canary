@@ -3,8 +3,8 @@ n.d(t, {
 return i;
   }
 }), n(47120);
-var i, a, l = n(735250),
-  s = n(470079),
+var i, a, s = n(735250),
+  l = n(470079),
   r = n(120356),
   o = n.n(r),
   c = n(338545),
@@ -21,7 +21,7 @@ var i, a, l = n(735250),
   I = n(689938),
   x = n(333626);
 (a = i || (i = {})).LEFT = 'left', a.RIGHT = 'right';
-t.Z = s.memo(function(e) {
+t.Z = l.memo(function(e) {
   let {
 guildId: t,
 primaryColor: n,
@@ -34,9 +34,9 @@ signHintHelperText: v,
 signHintPosition: S = 'left',
 className: Z,
 fullHeight: A
-  } = e, M = s.useRef(null), [b, R] = s.useState(!1), j = s.useCallback(e => {
+  } = e, M = l.useRef(null), [b, R] = l.useState(!1), j = l.useCallback(e => {
 e.preventDefault(), e.stopPropagation(), null == r || r(), R(!0);
-  }, [r]), [L, P] = s.useState(!1), [O, y] = s.useState(!1), D = s.useRef(null), k = s.useCallback(e => {
+  }, [r]), [L, P] = l.useState(!1), [O, y] = l.useState(!1), D = l.useRef(null), k = l.useCallback(e => {
 e && (D.current = setTimeout(() => {
   y(!0);
 }, T));
@@ -56,7 +56,7 @@ onRest: () => {
   b && P(!0);
 }
   }));
-  s.useEffect(() => {
+  l.useEffect(() => {
 if (O)
   G({
     ...'left' === S ? {
@@ -78,7 +78,7 @@ O && b && F({
 O,
 b,
 S
-  ]), s.useEffect(() => () => {
+  ]), l.useEffect(() => () => {
 null != D.current && clearTimeout(D.current);
   }, []);
   let W = o()(x.signHintAnimationContainer, L && x.noDisplay, 'left' === S ? x.signTextLeft : x.signTextRight),
@@ -101,46 +101,46 @@ J = (0, u.useTransition)(a, {
   },
   config: c.config.stiff
 });
-  return (0, l.jsx)('div', {
+  return (0, s.jsx)('div', {
 className: o()(x.container, Z),
 ref: U,
-children: (0, l.jsx)(C.Z, {
+children: (0, s.jsx)(C.Z, {
   fullHeight: A,
-  children: (0, l.jsxs)('div', {
+  children: (0, s.jsxs)('div', {
     className: o()(x.overviewSidebarWrapper, A && x.fullHeight),
     children: [
-      (0, l.jsx)(u.ScrollerNone, {
+      (0, s.jsx)(u.ScrollerNone, {
         fade: !0,
         className: x.overviewSidebarContent,
-        children: (0, l.jsx)('div', {
+        children: (0, s.jsx)('div', {
           className: x.scrollContentContainer,
           children: i
         })
       }),
-      J((e, n) => n && (0, l.jsx)(c.animated.div, {
+      J((e, n) => n && (0, s.jsx)(c.animated.div, {
         className: x.signatureBlockContainer,
         style: e,
-        children: (0, l.jsx)('div', {
+        children: (0, s.jsx)('div', {
           ref: Q,
-          children: (0, l.jsxs)(u.Clickable, {
+          children: (0, s.jsxs)(u.Clickable, {
             onClick: j,
             className: o()(x.signatureBlock, {
               [x.clickable]: null != r
             }),
             children: [
-              (0, l.jsx)('div', {
+              (0, s.jsx)('div', {
                 ref: M,
                 className: x.signHintContainer,
-                children: (0, l.jsxs)(c.animated.div, {
+                children: (0, s.jsxs)(c.animated.div, {
                   className: W,
                   style: {
                     ...H,
                     ...V
                   },
                   children: [
-                    (0, l.jsx)('div', {
+                    (0, s.jsx)('div', {
                       className: x.signContainerButton,
-                      children: (0, l.jsxs)(g.Z, {
+                      children: (0, s.jsxs)(g.Z, {
                         themeColor: K,
                         className: x.signButton,
                         size: u.Button.Sizes.SMALL,
@@ -151,7 +151,7 @@ children: (0, l.jsx)(C.Z, {
                           }), j(e);
                         },
                         children: [
-                          (0, l.jsx)('div', {
+                          (0, s.jsx)('div', {
                             className: o()(x.signCarot, {
                               [x.signCarotCustomColors]: null != q
                             }),
@@ -163,7 +163,7 @@ children: (0, l.jsx)(C.Z, {
                         ]
                       })
                     }),
-                    (0, l.jsx)(u.Text, {
+                    (0, s.jsx)(u.Text, {
                       variant: 'text-xs/normal',
                       color: 'text-muted',
                       className: x.signHintHelperText,
@@ -172,17 +172,17 @@ children: (0, l.jsx)(C.Z, {
                   ]
                 })
               }),
-              (0, l.jsx)(u.Text, {
+              (0, s.jsx)(u.Text, {
                 variant: 'text-md/normal',
                 color: 'none',
                 children: 'x'
               }),
-              b ? (0, l.jsx)(u.Text, {
+              b ? (0, s.jsx)(u.Text, {
                 variant: 'text-lg/normal',
                 color: 'header-primary',
                 className: x.signatureText,
                 children: f.ZP.getName(t, null, B)
-              }) : (0, l.jsx)(u.Text, {
+              }) : (0, s.jsx)(u.Text, {
                 variant: 'text-lg/normal',
                 color: 'none',
                 className: x.signatureText,

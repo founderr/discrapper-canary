@@ -6,13 +6,13 @@ return d;
 var r = n(470079),
   i = n(399606),
   a = n(430824),
-  o = n(339085),
-  s = n(906411),
+  s = n(339085),
+  o = n(906411),
   l = n(400106),
   u = n(981631);
 let c = (e, t, n) => {
 let r = null != n ? e.getCustomEmojiById(n) : null;
-if ((null == r ? void 0 : r.type) === s.B.GUILD)
+if ((null == r ? void 0 : r.type) === o.B.GUILD)
   return {
     emoji: r,
     joinedEmojiSourceGuildRecord: t.getGuild(null == r ? void 0 : r.guildId)
@@ -27,12 +27,12 @@ let {
   emojiId: t,
   refreshPositionKey: n
 } = e, {
-  joinedEmojiSourceGuildRecord: s,
+  joinedEmojiSourceGuildRecord: o,
   emoji: d
 } = (0, i.cj)([
-  o.Z,
+  s.Z,
   a.Z
-], () => c(o.Z, a.Z, t)), _ = null != s, E = null != s && s.hasFeature(u.oNc.DISCOVERABLE), f = (!_ || E) && null != t, [h, p] = r.useState(f), m = null != s ? l.Z.createFromGuildRecord(s) : null, [I, T] = r.useState(m);
+], () => c(s.Z, a.Z, t)), _ = null != o, E = null != o && o.hasFeature(u.oNc.DISCOVERABLE), f = (!_ || E) && null != t, [h, p] = r.useState(f), m = null != o ? l.Z.createFromGuildRecord(o) : null, [I, T] = r.useState(m);
 return r.useEffect(() => {
   null == n || n();
   let e = async () => {
@@ -48,7 +48,7 @@ return r.useEffect(() => {
   f
 ]), {
   expressionSourceGuild: I,
-  joinedEmojiSourceGuildRecord: s,
+  joinedEmojiSourceGuildRecord: o,
   hasJoinedEmojiSourceGuild: _,
   emoji: d,
   isFetching: h

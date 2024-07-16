@@ -1,19 +1,19 @@
 s.d(l, {
   P: function() {
-return t;
+return n;
   }
 });
 var a = s(544891),
   i = s(570140),
-  n = s(981631);
-async function t(e) {
+  t = s(981631);
+async function n(e) {
   i.Z.dispatch({
 type: 'GUILD_POPOUT_FETCH_START',
 guildId: e
   });
   try {
 let l = await a.tn.get({
-  url: n.ANM.GUILD_PREVIEW(e),
+  url: t.ANM.GUILD_PREVIEW(e),
   oldFormErrors: !0
 });
 i.Z.dispatch({

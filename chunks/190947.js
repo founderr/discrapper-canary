@@ -1,6 +1,6 @@
 s.d(n, {
   b: function() {
-return r;
+return a;
   }
 });
 var l = s(735250);
@@ -8,7 +8,7 @@ s(470079);
 var t = s(481060),
   i = s(991862);
 
-function r(e) {
+function a(e) {
   let {
 currencies: n,
 className: s,
@@ -23,8 +23,8 @@ n.Z = function(e) {
   let {
 currencies: n,
 onChange: s,
-selectedCurrency: r,
-className: a,
+selectedCurrency: a,
+className: r,
 disabled: c = !1
   } = e;
   if (n.length < 2)
@@ -35,12 +35,12 @@ value: e,
 label: ''.concat(e.toUpperCase(), ' - ').concat((0, i.T)(e))
   }));
   return (0, l.jsx)(t.SingleSelect, {
-value: r,
+value: a,
 options: o,
 onChange: e => {
   null != e && s(e);
 },
-className: a,
+className: r,
 isDisabled: c
   });
 };

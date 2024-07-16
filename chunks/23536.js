@@ -5,8 +5,8 @@ return E;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(780384),
+  s = n(442837),
+  l = n(780384),
   r = n(481060),
   o = n(332148),
   c = n(796798),
@@ -25,14 +25,14 @@ onJump: E
   } = e, {
 messages: C,
 loading: g
-  } = (0, l.cj)([u.Z], () => {
+  } = (0, s.cj)([u.Z], () => {
 let e = u.Z.getPinnedMessages(t.id),
   n = null != e ? e.messages : f;
 return {
   messages: n,
   loading: null == n || null != e && e.loading
 };
-  }), I = (0, l.e7)([h.ZP], () => h.ZP.hasUnreadPins(t.id));
+  }), I = (0, s.e7)([h.ZP], () => h.ZP.hasUnreadPins(t.id));
   return a.useEffect(() => {
 c.l.getCurrentConfig({
   location: 'pins'
@@ -65,10 +65,10 @@ children: (0, i.jsx)(p.ZP, {
   renderEmptyState: function(e) {
     let a = _.Z.Messages.NO_PINS_IN_CHANNEL;
     t.isPrivate() && (a = _.Z.Messages.NO_PINS_IN_DM);
-    let l = (0, s.ap)(e) ? n(306059) : n(281485);
+    let s = (0, l.ap)(e) ? n(306059) : n(281485);
     return (0, i.jsx)(p.nH, {
       msg: a,
-      image: l
+      image: s
     }, 'emptystate');
   },
   listName: 'pins'

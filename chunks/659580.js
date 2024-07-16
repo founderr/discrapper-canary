@@ -6,8 +6,8 @@ return _;
 var i = n(735250);
 n(470079);
 var a = n(481060),
-  l = n(410575),
-  s = n(821564),
+  s = n(410575),
+  l = n(821564),
   r = n(619031),
   o = n(632304),
   c = n(947150),
@@ -26,8 +26,8 @@ renderInputModes: f = !1,
 renderInputVolume: E = !1,
 renderOutputVolume: C = !1,
 onSelect: g
-  } = e, I = (0, u.Z)(), x = (0, c.Z)(), T = (0, d.Z)(), N = (0, s.Z)(), v = (0, r.Z)(), S = (0, o.Z)();
-  return (0, i.jsx)(l.Z, {
+  } = e, I = (0, u.Z)(), x = (0, c.Z)(), T = (0, d.Z)(), N = (0, l.Z)(), v = (0, r.Z)(), S = (0, o.Z)();
+  return (0, i.jsx)(s.Z, {
 object: h.qAy.CONTEXT_MENU,
 children: (0, i.jsxs)(a.Menu, {
   onSelect: g,

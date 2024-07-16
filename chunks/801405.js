@@ -5,8 +5,8 @@ return I;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(570140),
+  s = n(442837),
+  l = n(570140),
   r = n(475179),
   o = n(367907),
   c = n(358221),
@@ -20,20 +20,20 @@ var i = n(735250),
   E = n(981631),
   C = n(495585);
 let g = () => {
-  s.Z.wait(() => d.xv(E.KJ3.CHANNEL_CALL_POPOUT));
+  l.Z.wait(() => d.xv(E.KJ3.CHANNEL_CALL_POPOUT));
 };
 
 function I(e) {
   let {
 channel: t,
 appContext: n,
-popoutOpen: s,
+popoutOpen: l,
 popoutWindow: d,
 currentWindow: I
   } = e, x = n === E.IlC.POPOUT, T = a.useRef(null), {
 currentLayout: N,
 mode: v
-  } = (0, l.cj)([c.Z], () => {
+  } = (0, s.cj)([c.Z], () => {
 let e = c.Z.getMode(t.id),
   i = n === E.IlC.POPOUT;
 i && (e = E.WtW.VIDEO);
@@ -45,7 +45,7 @@ return i && a !== E.AEg.FULL_SCREEN && (a = E.AEg.NO_CHAT), {
   }, [
 t,
 n
-  ]), S = (0, l.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
+  ]), S = (0, s.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
   a.useEffect(() => {
 T.current = v;
   });
@@ -66,7 +66,7 @@ T.current = v;
   x,
   I
 ]),
-b = s && !x,
+b = l && !x,
 R = v === E.WtW.VIDEO && S && !b,
 j = a.useCallback((e, i) => {
   i !== e && (r.Z.updateLayout(t.id, i, n), i === E.AEg.FULL_SCREEN && t.isPrivate() && m.S.dispatch(E.CkL.TEXTAREA_BLUR));

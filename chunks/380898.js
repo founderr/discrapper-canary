@@ -6,8 +6,8 @@ return u;
 var l = s(735250),
   t = s(470079),
   i = s(16084),
-  r = s(86040),
-  a = s(51499),
+  a = s(86040),
+  r = s(51499),
   c = s(614277),
   o = s(767625);
 
@@ -17,16 +17,16 @@ n(!0), await (0, i.xA)();
   };
   return (0, l.jsxs)(l.Fragment, {
 children: [
-  (0, l.jsx)(a.Z, {}),
+  (0, l.jsx)(r.Z, {}),
   (0, l.jsx)(c.C3, {
-    children: (0, l.jsx)(r.C, {
+    children: (0, l.jsx)(a.C, {
       className: o.body,
       isEmailResent: e,
       resendEmail: s
     })
   }),
   (0, l.jsx)(c.O3, {
-    children: (0, l.jsx)(r.N, {})
+    children: (0, l.jsx)(a.N, {})
   })
 ]
   });

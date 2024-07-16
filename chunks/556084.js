@@ -5,8 +5,8 @@ return c;
 }), n(47120);
 var i = n(470079),
   a = n(442837),
-  l = n(512751),
-  s = n(57132),
+  s = n(512751),
+  l = n(57132),
   r = n(943209),
   o = n(628566);
 
@@ -14,8 +14,8 @@ function c(e) {
   let {
 channelId: t
   } = e;
-  (0, s.SO)();
-  let n = (0, l.o)(t),
+  (0, l.SO)();
+  let n = (0, s.o)(t),
 {
   installedIntegrations: c,
   applicationsShelf: d,

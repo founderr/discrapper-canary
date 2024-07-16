@@ -5,8 +5,8 @@ return h;
 }), n(47120);
 var i = n(470079),
   a = n(876215),
-  l = n(442837),
-  s = n(146282),
+  s = n(442837),
+  l = n(146282),
   r = n(219634),
   o = n(520951),
   c = n(897674),
@@ -30,7 +30,7 @@ entries: n,
 filteredIds: a
   } = (0, o.Z)(t);
   return t = n, {
-requestId: (0, l.e7)([s.Z], () => s.Z.getFeedRequestId(d.YN.GLOBAL_FEED)),
+requestId: (0, s.e7)([l.Z], () => l.Z.getFeedRequestId(d.YN.GLOBAL_FEED)),
 entries: t,
 impressionCappedEntryIds: a
   };

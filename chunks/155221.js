@@ -6,8 +6,8 @@ return V;
 var r = n(735250),
   i = n(470079),
   a = n(664751),
-  o = n(266067),
-  s = n(990547),
+  s = n(266067),
+  o = n(990547),
   l = n(719711),
   u = n(271579),
   c = n(756647),
@@ -278,9 +278,9 @@ let {
   migrationStatus: n,
   skipsSettingDefaultPageTitle: i
 } = this.props;
-return e = n === m.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.jsxs)(o.rs, {
+return e = n === m.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.jsxs)(s.rs, {
   children: [
-    (0, r.jsx)(o.AW, {
+    (0, r.jsx)(s.AW, {
       exact: !0,
       path: R.Z5c.INDEX,
       render: () => (0, r.jsx)(E.Z, {})
@@ -290,7 +290,7 @@ return e = n === m.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.js
       path: R.Z5c.APPS,
       component: L
     }),
-    (0, r.jsx)(o.AW, {
+    (0, r.jsx)(s.AW, {
       path: z([
         R.Z5c.LOGIN,
         R.Z5c.REGISTER,
@@ -306,26 +306,26 @@ return e = n === m.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.js
       path: R.Z5c.INVITE_PROXY(':channelId'),
       component: b
     }),
-    (0, r.jsx)(o.l_, {
+    (0, r.jsx)(s.l_, {
       from: R.Z5c.INVITE(''),
       to: R.Z5c.LOGIN
     }),
-    (0, r.jsx)(o.l_, {
+    (0, r.jsx)(s.l_, {
       from: R.Z5c.GIFT_CODE(''),
       to: R.Z5c.LOGIN
     }),
-    (0, r.jsx)(o.AW, {
+    (0, r.jsx)(s.AW, {
       render: W
     })
   ]
-}) : (0, r.jsxs)(o.rs, {
+}) : (0, r.jsxs)(s.rs, {
   children: [
     (0, r.jsx)(f.Z, {
       exact: !0,
       path: R.Z5c.INDEX,
       render: () => (0, r.jsx)(E.Z, {})
     }),
-    (0, r.jsx)(o.AW, {
+    (0, r.jsx)(s.AW, {
       path: z([
         R.Z5c.LOGIN,
         R.Z5c.LOGIN_HANDOFF,
@@ -346,15 +346,15 @@ return e = n === m.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.js
       ], C.a),
       component: G
     }),
-    t ? null : (0, r.jsx)(o.AW, {
+    t ? null : (0, r.jsx)(s.AW, {
       path: R.Z5c.PICK_GUILD_SETTINGS(':section?', ':subsection?'),
       component: G
     }),
-    t ? null : (0, r.jsx)(o.AW, {
+    t ? null : (0, r.jsx)(s.AW, {
       path: R.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?'),
       component: G
     }),
-    (0, r.jsx)(o.l_, {
+    (0, r.jsx)(s.l_, {
       from: R.Z5c.INVITE(''),
       to: R.Z5c.LOGIN
     }),
@@ -362,14 +362,14 @@ return e = n === m.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.js
       path: R.Z5c.INVITE_PROXY(':channelId'),
       component: b
     }),
-    (0, r.jsx)(o.l_, {
+    (0, r.jsx)(s.l_, {
       from: R.Z5c.GIFT_CODE(''),
       to: R.Z5c.LOGIN
     }),
     (0, r.jsx)(f.Z, {
       path: R.Z5c.QUESTS(':questId'),
       component: Z,
-      impressionName: s.ImpressionNames.QUESTS_LANDING_PAGE,
+      impressionName: o.ImpressionNames.QUESTS_LANDING_PAGE,
       impressionProperties: e => {
         let {
           computedMatch: t
@@ -413,15 +413,15 @@ return e = n === m.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.js
         var e, t, n;
         let r = null === (e = S.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
           i = (0, a.parse)((null !== (n = window.location.search) && void 0 !== n ? n : '').substr(1)),
-          o = null === (t = i.referring_location) || void 0 === t ? void 0 : t.toString();
+          s = null === (t = i.referring_location) || void 0 === t ? void 0 : t.toString();
         return ('iOS' === r || 'Android' === r) && S.default.track(R.rMx.DOWNLOAD_APP, {
           platform: r,
           ptb: !1,
           released: !0,
           has_e_mail: 'true' === i.has_e_mail,
-          referring_location: o,
+          referring_location: s,
           qr_code: !0
-        }), window.location.href = (0, A.Gn)(null != o && '' !== o ? o : 'qr_code', r), null;
+        }), window.location.href = (0, A.Gn)(null != s && '' !== s ? s : 'qr_code', r), null;
       }
     }),
     (0, r.jsx)(f.Z, {
@@ -431,7 +431,7 @@ return e = n === m.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.js
         let n = null === (e = S.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
           i = (0, N.o)(null !== (t = window.location.search) && void 0 !== t ? t : '');
         if ('iOS' !== n && 'Android' !== n)
-          return (0, r.jsx)(o.l_, {
+          return (0, r.jsx)(s.l_, {
             to: null != i.desktop ? ''.concat(i.desktop.pathname).concat(i.desktop.search) : R.Z5c.APP
           });
         {
@@ -446,14 +446,14 @@ return e = n === m.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.js
         }
       }
     }),
-    (0, r.jsx)(o.l_, {
+    (0, r.jsx)(s.l_, {
       from: R.Z5c.CONNECT_AUTHORIZE,
       to: {
         ...location,
         pathname: R.Z5c.OAUTH2_AUTHORIZE
       }
     }),
-    (0, r.jsx)(o.AW, {
+    (0, r.jsx)(s.AW, {
       path: [
         R.Z5c.OAUTH2_AUTHORIZED,
         R.Z5c.OAUTH2_AUTHORIZE,
@@ -462,19 +462,19 @@ return e = n === m.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.js
       ],
       component: k
     }),
-    t ? null : (0, r.jsx)(o.AW, {
+    t ? null : (0, r.jsx)(s.AW, {
       path: [R.Z5c.ACCOUNT_STANDING],
       component: H
     }),
-    t ? null : (0, r.jsx)(o.AW, {
+    t ? null : (0, r.jsx)(s.AW, {
       path: R.Z5c.APPLICATION_DIRECTORY,
       component: j
     }),
-    (0, r.jsx)(o.AW, {
+    (0, r.jsx)(s.AW, {
       render: W
     })
   ]
-}) : (0, r.jsx)(o.rs, {
+}) : (0, r.jsx)(s.rs, {
   children: (0, r.jsx)(f.Z, {
     component: D
   })
@@ -499,8 +499,8 @@ t.Z = d.ZP.connectStores([
   let t = function() {
 let {
   pathname: e
-} = (0, o.TH)();
-return null != (0, o.LX)(e, {
+} = (0, s.TH)();
+return null != (0, s.LX)(e, {
   path: R.Z5c.APPLICATION_DIRECTORY
 });
   }();

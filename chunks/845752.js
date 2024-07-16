@@ -4,8 +4,8 @@ return o;
   }
 });
 var i = n(392711),
-  a = n.n(i),
-  s = n(243814),
+  s = n.n(i),
+  a = n(243814),
   r = n(186901),
   l = n(981631);
 
@@ -14,16 +14,16 @@ function o(e, t) {
 [l.zMe.VOICE_SETTINGS_UPDATE]: {
   scope: {
     [r.Gp.ANY]: [
-      s.x.RPC,
-      s.x.RPC_VOICE_READ
+      a.x.RPC,
+      a.x.RPC_VOICE_READ
     ]
   },
   handler: () => t => {
     let {
       prevState: n,
       dispatch: i
-    } = t, s = e();
-    return !a().isEqual(s, n) && i(s), s;
+    } = t, a = e();
+    return !s().isEqual(a, n) && i(a), a;
   }
 },
 [l.zMe.VOICE_SETTINGS_UPDATE_2]: {
@@ -35,12 +35,12 @@ function o(e, t) {
     return e => {
       let {
         prevState: i,
-        dispatch: s
+        dispatch: a
       } = e;
       if (null == n.application.id)
         return i;
       let r = t(n.application.id);
-      return !a().isEqual(r, i) && s(r), r;
+      return !s().isEqual(r, i) && a(r), r;
     };
   }
 }

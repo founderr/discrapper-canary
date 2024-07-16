@@ -6,8 +6,8 @@ return h;
 var r = n(735250),
   i = n(470079),
   a = n(338545),
-  o = n(442837),
-  s = n(607070),
+  s = n(442837),
+  o = n(607070),
   l = n(267642),
   u = n(198466),
   c = n(436444),
@@ -24,7 +24,7 @@ let f = [
 function h(e) {
   let {
 guild: t
-  } = e, n = (0, o.e7)([s.Z], () => s.Z.useReducedMotion), [h, p] = i.useState(!1), [m, I] = i.useState(0), T = i.useRef(null), g = Math.min(d.Eu4.TIER_3, t.premiumTier + 1), S = d.oCV[t.premiumTier], A = d.oCV[g], N = (t.premiumSubscriberCount - S) / (A - S), v = c.P[t.premiumTier], O = c.P[g], R = t.premiumTier === d.Eu4.TIER_3, {
+  } = e, n = (0, s.e7)([o.Z], () => o.Z.useReducedMotion), [h, p] = i.useState(!1), [m, I] = i.useState(0), T = i.useRef(null), g = Math.min(d.Eu4.TIER_3, t.premiumTier + 1), S = d.oCV[t.premiumTier], A = d.oCV[g], N = (t.premiumSubscriberCount - S) / (A - S), v = c.P[t.premiumTier], O = c.P[g], R = t.premiumTier === d.Eu4.TIER_3, {
 progressBarFillWidthFactor: C,
 isProgressBarAnimationComplete: y,
 setShouldFireConfetti: D,
@@ -35,23 +35,23 @@ let {
   fillFactor: t,
   guildBoostCount: n,
   premiumTier: r,
-  isRevealed: o,
-  useReducedMotion: s
-} = e, [l, u] = i.useState(s ? r : -1), [_, E] = i.useState(0 === n), [f, h] = i.useState(!1), p = i.useRef(!0), {
+  isRevealed: s,
+  useReducedMotion: o
+} = e, [l, u] = i.useState(o ? r : -1), [_, E] = i.useState(0 === n), [f, h] = i.useState(!1), p = i.useRef(!0), {
   widthFactor: m
 } = (0, a.useSpring)({
   from: {
     widthFactor: 0
   },
   to: {
-    widthFactor: o ? t : 0
+    widthFactor: s ? t : 0
   },
   config: {
     tension: 15,
     friction: 7,
     clamp: !0
   },
-  immediate: s,
+  immediate: o,
   onChange: function(e) {
     let {
       widthFactor: t

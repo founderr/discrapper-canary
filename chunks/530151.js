@@ -1,8 +1,8 @@
 n(411104), n(47120), n(724458), n(653041);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(392711),
   o = n.n(l),
   c = n(442837),
@@ -46,12 +46,12 @@ let G = e => {
 let {
   className: t,
   children: n,
-  onContextMenu: a,
-  item: s
+  onContextMenu: s,
+  item: a
 } = e;
 return (0, i.jsx)('div', {
   className: t,
-  onContextMenu: e => a(e, s),
+  onContextMenu: e => s(e, a),
   children: n
 });
   },
@@ -63,13 +63,13 @@ d.Z.colors.INTERACTIVE_NORMAL.css
 let {
   tooltip: t,
   onClick: n,
-  icon: a
+  icon: s
 } = e;
 return (0, i.jsx)(_.Tooltip, {
   text: t,
   children: e => {
     let {
-      onMouseEnter: s,
+      onMouseEnter: a,
       onMouseLeave: r
     } = e;
     return (0, i.jsx)(_.Button, {
@@ -79,9 +79,9 @@ return (0, i.jsx)(_.Tooltip, {
       color: _.Button.Colors.PRIMARY,
       size: _.Button.Sizes.ICON,
       onClick: n,
-      onMouseEnter: s,
+      onMouseEnter: a,
       onMouseLeave: r,
-      children: (0, i.jsx)(a, {
+      children: (0, i.jsx)(s, {
         className: j.actionIcon
       })
     });
@@ -180,16 +180,16 @@ let H = {
   }
 };
 
-function V(e, t, n, i, a) {
-  let s = H[t],
-r = null != s ? Object.keys(s) : [],
+function V(e, t, n, i, s) {
+  let a = H[t],
+r = null != a ? Object.keys(a) : [],
 {
   unit: l,
   time: o
 } = (0, C.CI)(null != e ? e / 60 : null, r);
-  if (null != s && null != l) {
-let e = s[l];
-return null != e ? e(n, i, a, o) : null;
+  if (null != a && null != l) {
+let e = a[l];
+return null != e ? e(n, i, s, o) : null;
   }
   return null;
 }
@@ -199,13 +199,13 @@ function F(e) {
 type: t,
 stage: n,
 percent: i,
-progress: a,
-total: s,
+progress: s,
+total: a,
 secondsRemaining: r
-  } = e, l = B(s, n), o = B(a, n);
+  } = e, l = B(a, n), o = B(s, n);
   switch (n) {
 case D.f07.QUEUED:
-  if (0 === a)
+  if (0 === s)
     return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_WAITING_FOR_ANOTHER_NO_TRANSITION;
   return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_WAITING_FOR_ANOTHER.format({
     percent: i,
@@ -258,7 +258,7 @@ case D.f07.REPAIRING:
 let Y = 'name',
   W = 'progress',
   z = 'actions';
-class K extends a.PureComponent {
+class K extends s.PureComponent {
   get isFocused() {
 let {
   cellProps: e
@@ -269,8 +269,8 @@ return null != e && e.isFocused;
 let {
   percent: t,
   foregroundColor: n,
-  foregroundGradientColor: a,
-  message: s
+  foregroundGradientColor: s,
+  message: a
 } = e;
 return (0, i.jsxs)(O.Z, {
   direction: O.Z.Direction.VERTICAL,
@@ -279,15 +279,15 @@ return (0, i.jsxs)(O.Z, {
       percent: t,
       size: _.Progress.Sizes.SMALL,
       foregroundColor: (0, S.Lq)(n),
-      foregroundGradientColor: null != a ? [
-        (0, S.Lq)(a[0]),
-        (0, S.Lq)(a[1])
+      foregroundGradientColor: null != s ? [
+        (0, S.Lq)(s[0]),
+        (0, S.Lq)(s[1])
       ] : void 0,
       animate: this.isFocused
     }),
     (0, i.jsx)('div', {
       className: j.progressCellText,
-      children: null != s ? s : ''
+      children: null != a ? a : ''
     })
   ]
 });
@@ -336,14 +336,14 @@ let {
 if (null != n) {
   let {
     progress: i,
-    total: a,
-    stage: s
+    total: s,
+    stage: a
   } = n;
-  if (null != i && null != a) {
-    let n = B(a, s),
-      r = B(i, s),
-      l = Math.floor(t = b.xI(i, a));
-    e = s === D.f07.PAUSING ? y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSING.format({
+  if (null != i && null != s) {
+    let n = B(s, a),
+      r = B(i, a),
+      l = Math.floor(t = b.xI(i, s));
+    e = a === D.f07.PAUSING ? y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSING.format({
       percent: l,
       progress: r,
       total: n
@@ -375,17 +375,17 @@ let {
 } = e;
 if (null == n || null == i)
   return null;
-let a = b.xI(n, i),
-  s = Math.floor(a),
+let s = b.xI(n, i),
+  a = Math.floor(s),
   r = 0 === n && 1 === i ? y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSED_NO_TRANSITION : y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSED.format({
-    percent: s,
+    percent: a,
     progress: (0, x.BU)(n),
     total: (0, x.BU)(i)
   });
 return this.renderBody({
   message: r,
   foregroundColor: (0, u.ap)(t) ? D.Ilk.PRIMARY_300 : D.Ilk.PRIMARY_500,
-  percent: a
+  percent: s
 });
   }
   renderProgressPatching() {
@@ -405,16 +405,16 @@ let {
   total: t,
   progress: n,
   stage: i,
-  type: a
+  type: s
 } = e;
 if (null == t || null == n || null == i)
   return null;
-let s = b.xI(n, t),
-  r = Math.floor(s);
+let a = b.xI(n, t),
+  r = Math.floor(a);
 return this.renderBody({
-  percent: s,
+  percent: a,
   message: F({
-    type: a,
+    type: s,
     stage: i,
     percent: r,
     progress: n,
@@ -459,23 +459,23 @@ super(...e), U(this, 'renderProgressPatchingBody', (e, t) => {
     return null;
   let {
     stage: i,
-    progress: a,
-    total: s,
+    progress: s,
+    total: a,
     type: r,
     readerProgress: l
   } = n;
-  if (null == a || null == s || null == i)
+  if (null == s || null == a || null == i)
     return null;
-  let o = b.xI(a, s),
-    c = b.xI(null != l ? l : 0, s),
+  let o = b.xI(s, a),
+    c = b.xI(null != l ? l : 0, a),
     d = e[e.length - 1] / t * 1000,
-    u = s - a,
+    u = a - s,
     _ = F({
       type: r,
       stage: i,
       percent: Math.floor(o),
-      progress: a,
-      total: s,
+      progress: s,
+      total: a,
       secondsRemaining: 0 !== d ? Math.max(1, u / d) : null
     });
   return this.renderStackedProgress({
@@ -550,7 +550,7 @@ return (0, i.jsx)(w, {
   key: z,
   cellClassName: j.actionsCell,
   render(e, t) {
-    let n, a;
+    let n, s;
     return e.finished ? n = null != e.libraryApplication ? (0, i.jsx)(m.Z, {
       libraryApplication: e.libraryApplication,
       size: _.Button.Sizes.SMALL,
@@ -560,21 +560,21 @@ return (0, i.jsx)(w, {
       item: e
     }) : null != t && t.paused ? (0, i.jsx)(q, {}) : (0, i.jsx)(Q, {
       item: e
-    }), a = (0, i.jsx)(J, {
+    }), s = (0, i.jsx)(J, {
       item: e
-    })) : a = (0, i.jsx)(J, {
+    })) : s = (0, i.jsx)(J, {
       item: e
     }), (0, i.jsxs)(O.Z, {
       justify: O.Z.Justify.END,
       children: [
         n,
-        a
+        s
       ]
     });
   }
 }
   ];
-class ee extends a.PureComponent {
+class ee extends s.PureComponent {
   componentDidMount() {
 window.addEventListener('resize', this.throttledUpdateHeight);
   }
@@ -595,8 +595,8 @@ e.forEach(e => {
 let {
   applications: e,
   paused: t,
-  isFocused: a,
-  theme: s,
+  isFocused: s,
+  theme: a,
   analyticsContext: l
 } = this.props;
 return 0 === e.length ? null : (0, i.jsxs)('div', {
@@ -610,14 +610,14 @@ return 0 === e.length ? null : (0, i.jsxs)('div', {
           title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
           getHistoricalTotalBytes: v.Z.getHistoricalTotalBytesDownloaded,
           color: D.Ilk.GREEN_360,
-          animate: a
+          animate: s
         }),
         (0, i.jsx)(M.Z, {
           className: r()(j.headerCell, j.diskProgress),
           title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
           getHistoricalTotalBytes: v.Z.getHistoricalTotalBytesWritten,
           color: D.Ilk.BLUE_345,
-          animate: a
+          animate: s
         })
       ]
     }),
@@ -630,20 +630,20 @@ return 0 === e.length ? null : (0, i.jsxs)('div', {
       rowComponent: G,
       cellProps: {
         paused: t,
-        isFocused: a,
-        theme: s
+        isFocused: s,
+        theme: a
       },
       rowProps: {
         onContextMenu: (e, t) => {
-          var a, s, r;
-          return a = e, s = t, r = l, void h.jW(a, async () => {
+          var s, a, r;
+          return s = e, a = t, r = l, void h.jW(s, async () => {
             let {
               default: e
             } = await n.e('98335').then(n.bind(n, 485292));
             return t => (0, i.jsx)(e, {
               ...t,
-              applicationId: s.applicationId,
-              branchId: s.branchId,
+              applicationId: a.applicationId,
+              branchId: a.branchId,
               analyticsContext: r
             });
           });
@@ -668,11 +668,11 @@ super(...e), U(this, 'isUnmounted', !1), U(this, 'isTallerThanHalfViewport', !1)
 }
 
 function et(e, t, n, i) {
-  return e.reduce((e, a, s) => {
+  return e.reduce((e, s, a) => {
 let {
   applicationId: r,
   branchId: l
-} = a, o = n.getApplication(r), c = i.getState(r, l);
+} = s, o = n.getApplication(r), c = i.getState(r, l);
 return null != o && e.push({
   key: ''.concat(r, ':').concat(l),
   applicationId: r,
@@ -681,7 +681,7 @@ return null != o && e.push({
   application: o,
   libraryApplication: A.Z.getLibraryApplication(r, l),
   finished: t,
-  index: s
+  index: a
 }), e;
   }, []);
 }

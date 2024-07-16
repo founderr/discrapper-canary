@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(285952),
   u = n(765082);
 class c extends i.PureComponent {
@@ -14,7 +14,7 @@ let {
   className: i
 } = this.props;
 return (0, r.jsx)('div', {
-  className: o()(u.wrapper, i),
+  className: s()(u.wrapper, i),
   children: (0, r.jsxs)(l.Z, {
     className: u.flexWrapper,
     direction: l.Z.Direction.VERTICAL,
@@ -29,7 +29,7 @@ return (0, r.jsx)('div', {
         grow: 0,
         className: u.text,
         children: [
-          (0, r.jsx)(s.H, {
+          (0, r.jsx)(o.H, {
             className: u.title,
             children: t
           }),

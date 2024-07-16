@@ -6,8 +6,8 @@ return u;
 var i = n(735250);
 n(470079);
 var a = n(399606),
-  l = n(481060),
-  s = n(125268),
+  s = n(481060),
+  l = n(125268),
   r = n(673125),
   o = n(871499),
   c = n(304388),
@@ -25,8 +25,8 @@ children: t => {
     ...n,
     label: d.Z.Messages.SHARED_CANVAS_HIDE_OVERLAY_DRAWINGS,
     isActive: e,
-    iconComponent: l.EyeIcon,
-    onClick: s.LT
+    iconComponent: s.EyeIcon,
+    onClick: l.LT
   });
 }
   });

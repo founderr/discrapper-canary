@@ -6,8 +6,8 @@ return u;
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(481060),
-  s = n(207055),
+  s = n(481060),
+  l = n(207055),
   r = n(938475),
   o = n(981631),
   c = n(689938),
@@ -20,16 +20,16 @@ channel: t
   return (0, i.jsxs)('div', {
 className: d.root,
 children: [
-  (0, i.jsx)(l.Text, {
+  (0, i.jsx)(s.Text, {
     variant: 'text-xs/bold',
     className: d.header,
     children: c.Z.Messages.CHANNEL_CALL_MEMBERS_POPOUT_HEADER.format({
       count: n.length
     })
   }),
-  (0, i.jsx)(l.Scroller, {
+  (0, i.jsx)(s.Scroller, {
     className: d.scroller,
-    children: (0, i.jsx)(s.Z, {
+    children: (0, i.jsx)(l.Z, {
       allowDragging: !1,
       allowPreviews: !1,
       className: d.voiceUsers,

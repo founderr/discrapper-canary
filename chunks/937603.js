@@ -2,8 +2,8 @@ n(47120);
 var r = n(570140),
   i = n(147913),
   a = n(703656),
-  o = n(654769),
-  s = n(768943),
+  s = n(654769),
+  o = n(768943),
   l = n(742989),
   u = n(981631);
 
@@ -23,9 +23,9 @@ function _() {
 }, {
   autoTrackExposure: !1
 }).showReminders) {
-s.Z.getMessageReminders().filter(e => null != e.saveData.dueAt && new Date() >= e.saveData.dueAt).filter(e => !s.Z.hasSentNotification(e.saveData.messageId)).forEach(e => {
+o.Z.getMessageReminders().filter(e => null != e.saveData.dueAt && new Date() >= e.saveData.dueAt).filter(e => !o.Z.hasSentNotification(e.saveData.messageId)).forEach(e => {
   var t, n;
-  o.Z.showNotification(null, 'Overdue reminder in '.concat(e.saveData.channelSummary), null !== (n = null !== (t = e.saveData.notes) && void 0 !== t ? t : e.saveData.messageSummary) && void 0 !== n ? n : '', {
+  s.Z.showNotification(null, 'Overdue reminder in '.concat(e.saveData.channelSummary), null !== (n = null !== (t = e.saveData.notes) && void 0 !== t ? t : e.saveData.messageSummary) && void 0 !== n ? n : '', {
     notif_type: 'OVERDUE_MESSAGE_REMINDER',
     notif_user_id: e.saveData.authorId,
     message_id: e.saveData.messageId,
@@ -42,7 +42,7 @@ s.Z.getMessageReminders().filter(e => null != e.saveData.dueAt && new Date() >= 
     messageId: e.saveData.messageId
   });
 });
-let e = s.Z.getMessageReminders().filter(e => null != e.saveData.dueAt && new Date() < e.saveData.dueAt).sort((e, t) => e.saveData.dueAt.getTime() - t.saveData.dueAt.getTime());
+let e = o.Z.getMessageReminders().filter(e => null != e.saveData.dueAt && new Date() < e.saveData.dueAt).sort((e, t) => e.saveData.dueAt.getTime() - t.saveData.dueAt.getTime());
 null != d && clearTimeout(d), e.length > 0 && (d = setTimeout(() => {
   _();
 }, e[0].saveData.dueAt.getTime() - new Date().getTime()));

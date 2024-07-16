@@ -15,8 +15,8 @@ var i = t(735250),
   E = t(285952),
   T = t(585483),
   h = t(63063),
-  p = t(919196),
-  g = t(731072),
+  g = t(919196),
+  p = t(731072),
   C = t(494118),
   f = t(351644),
   x = t(720764),
@@ -131,7 +131,7 @@ if ((null == s ? void 0 : s.id) != null)
   let Q = null;
   switch (n) {
 case O.b4C.TWITCH:
-  null != q[O.ABu.TWITCH] && (Q = (0, i.jsx)(g.Z, {
+  null != q[O.ABu.TWITCH] && (Q = (0, i.jsx)(p.Z, {
     guild: s,
     integrations: q[O.ABu.TWITCH],
     editedIntegration: v,
@@ -149,7 +149,7 @@ case O.b4C.TWITCH:
   }));
   break;
 case O.b4C.YOUTUBE:
-  null != q[O.ABu.YOUTUBE] && (Q = (0, i.jsx)(g.Z, {
+  null != q[O.ABu.YOUTUBE] && (Q = (0, i.jsx)(p.Z, {
     guild: s,
     integrations: q[O.ABu.YOUTUBE],
     editedIntegration: v,
@@ -168,7 +168,7 @@ case O.b4C.YOUTUBE:
 case O.b4C.APPLICATION:
   var $;
   let ee = null != w ? null !== ($ = Y[z[w]]) && void 0 !== $ ? $ : Y[w] : null;
-  null != ee && (Q = (0, i.jsx)(p.Z, {
+  null != ee && (Q = (0, i.jsx)(g.Z, {
     guild: s,
     applicationIntegration: ee,
     editedWebhook: L,

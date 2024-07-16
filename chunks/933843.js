@@ -12,8 +12,8 @@ return _;
 var r = n(594174),
   i = n(111361),
   a = n(736871),
-  o = n(114064),
-  s = n(1163),
+  s = n(114064),
+  o = n(1163),
   l = n(474936),
   u = n(37113);
 
@@ -30,12 +30,12 @@ let {
   autoTrackExposure: !1
 }), {
   enabled: t
-} = s.Z.getCurrentConfig({
+} = o.Z.getCurrentConfig({
   location: 'shouldFetchPerksDemos'
 }, {
   autoTrackExposure: !1
 });
-return c() && o.Z.shouldFetch() && e && t;
+return c() && s.Z.shouldFetch() && e && t;
   },
-  _ = e => c() && o.Z.shouldActivate(e),
+  _ = e => c() && s.Z.shouldActivate(e),
   E = (e, t) => e === u.LY.RESOLUTION_720 && t !== u.ws.FPS_60;

@@ -6,8 +6,8 @@ return V;
 var i = n(735250);
 n(470079);
 var a = n(120356),
-  l = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  l = n(442837),
   r = n(481060),
   o = n(99690),
   c = n(40851),
@@ -46,7 +46,7 @@ function B(e) {
   let {
 focusedParticipant: t,
 channel: n
-  } = e, a = (0, c.bp)(), l = (0, s.e7)([M.Z], () => M.Z.getLayout(n.id, a));
+  } = e, a = (0, c.bp)(), s = (0, l.e7)([M.Z], () => M.Z.getLayout(n.id, a));
   return (0, i.jsx)(Z.Z, {
 children: (0, i.jsx)(L.Z, {
   className: U.participants,
@@ -54,7 +54,7 @@ children: (0, i.jsx)(L.Z, {
   maxVisibleUsers: 5,
   guildId: n.getGuildId(),
   channelId: n.id,
-  disableInteraction: a === y.IlC.POPOUT || l === y.AEg.FULL_SCREEN
+  disableInteraction: a === y.IlC.POPOUT || s === y.AEg.FULL_SCREEN
 })
   });
 }
@@ -64,8 +64,8 @@ function H(e) {
 user: t,
 channel: n,
 stream: a,
-color: l
-  } = e, s = (0, S.Z)(n, t, a);
+color: s
+  } = e, l = (0, S.Z)(n, t, a);
   return null == t || null == a ? null : (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(o.Z, {
@@ -77,8 +77,8 @@ children: [
   (0, i.jsx)(r.Text, {
     className: U.playingText,
     variant: 'text-md/medium',
-    color: l,
-    children: s
+    color: s,
+    children: l
   })
 ]
   });
@@ -88,10 +88,10 @@ function G(e) {
   let t, {
   focusedApplication: n,
   focusedParticipant: a,
-  channel: l
+  channel: s
 } = e,
-s = (0, R.Z)(l, !0),
-o = (0, f.qY)(l.id),
+l = (0, R.Z)(s, !0),
+o = (0, f.qY)(s.id),
 c = null != o ? (0, E.DK)(o) : null,
 u = null != o;
   if ((null == a ? void 0 : a.type) === O.fO.ACTIVITY)
@@ -110,8 +110,8 @@ null != n && (t = (0, i.jsxs)(i.Fragment, {
       color: 'none',
       children: (0, d.Z)(n.name)
     }),
-    s && (0, i.jsx)(B, {
-      channel: l,
+    l && (0, i.jsx)(B, {
+      channel: s,
       focusedParticipant: a
     })
   ]
@@ -126,12 +126,12 @@ t = (0, i.jsxs)(i.Fragment, {
     }),
     (0, i.jsx)(H, {
       user: e,
-      channel: l,
+      channel: s,
       stream: n,
-      color: s ? 'header-primary' : 'none'
+      color: l ? 'header-primary' : 'none'
     }),
-    s && (0, i.jsx)(B, {
-      channel: l,
+    l && (0, i.jsx)(B, {
+      channel: s,
       focusedParticipant: a
     })
   ]
@@ -157,12 +157,12 @@ isChatOpen: d,
 exitFullScreen: _
   } = e, {
 focusedParticipant: f
-  } = (0, s.cj)([M.Z], () => ({
+  } = (0, l.cj)([M.Z], () => ({
 focusedParticipant: M.Z.getSelectedParticipant(t.id),
 participantsOpen: M.Z.getParticipantsOpen(t.id)
   }), [t.id]), E = (0, p.ZP)(t), C = (0, m.KS)(t), [S] = (0, u.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), Z = k.Z.Messages.VOICE_CHANNEL;
   t.isDM() ? Z = k.Z.Messages.DM : t.isGroupDM() && (Z = k.Z.Messages.GROUP_DM);
-  let R = (0, s.e7)([h.Z], () => h.Z.getChannelStatus(t)),
+  let R = (0, l.e7)([h.Z], () => h.Z.getChannelStatus(t)),
 L = t.isGuildVoice() && c && null != R && R.length > 0,
 B = (0, b.Z)(t),
 H = L ? (0, i.jsx)(r.Tooltip, {
@@ -172,14 +172,14 @@ H = L ? (0, i.jsx)(r.Tooltip, {
   shouldShow: B,
   children: e => (0, i.jsxs)(r.Clickable, {
     ...e,
-    className: l()(U.channelStatusClickable, {
+    className: s()(U.channelStatusClickable, {
       [U.hoverable]: B
     }),
     onClick: B ? V : void 0,
     children: [
       (0, i.jsx)(r.Text, {
         variant: 'text-xs/normal',
-        className: l()(U.channelStatus, w.markup, {
+        className: s()(U.channelStatus, w.markup, {
           [U.hoverable]: B
         }),
         children: T.Z.parseVoiceChannelStatus(R, !0, {
@@ -189,7 +189,7 @@ H = L ? (0, i.jsx)(r.Tooltip, {
       B && (0, i.jsx)(r.PencilIcon, {
         size: 'custom',
         color: 'currentColor',
-        className: l()(U.pencilIcon, U.hoverable),
+        className: s()(U.pencilIcon, U.hoverable),
         width: 14,
         height: 14
       })

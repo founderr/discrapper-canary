@@ -4,8 +4,8 @@ return S;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(481060),
+  s = n(470079),
+  a = n(481060),
   r = n(117496),
   l = n(766219),
   o = n(212476),
@@ -38,35 +38,35 @@ onSearchSubmit: L,
 onSearchTextChange: O
   } = (0, I.C)({
 categoryId: C
-  }), R = a.useRef((0, r.P)()), {
+  }), R = s.useRef((0, r.P)()), {
 onGuildCardSeen: x,
 onGuildCardClick: b
   } = (0, h.H)({
 categoryId: C,
 loadId: R.current
   }), P = N && t.id !== g.vf.HUBS && t.id !== g.vf.GUILDS;
-  a.useEffect(() => {
+  s.useEffect(() => {
 N && !P && Z();
   }, [
 N,
 P,
 Z
   ]);
-  let M = a.useMemo(() => P ? (0, i.jsx)(s.Clickable, {
+  let M = s.useMemo(() => P ? (0, i.jsx)(a.Clickable, {
   className: T.clickable,
   onClick: Z,
-  children: (0, i.jsx)(s.ArrowLargeLeftIcon, {
-    color: s.tokens.colors.HEADER_PRIMARY,
+  children: (0, i.jsx)(a.ArrowLargeLeftIcon, {
+    color: a.tokens.colors.HEADER_PRIMARY,
     size: 'md'
   })
-}) : (0, i.jsx)(s.ServerIcon, {
-  color: s.tokens.colors.HEADER_PRIMARY,
+}) : (0, i.jsx)(a.ServerIcon, {
+  color: a.tokens.colors.HEADER_PRIMARY,
   size: 'md'
 }), [
   P,
   Z
 ]),
-D = a.useMemo(() => {
+D = s.useMemo(() => {
   switch (t.id) {
     case g.vf.HUBS:
     case g.vf.GUILDS:

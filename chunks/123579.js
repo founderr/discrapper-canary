@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(410030),
@@ -51,7 +51,7 @@ t.Z = e => {
   var t;
   let {
 user: n,
-channel: l
+channel: s
   } = e, [Q, J] = a.useState(!1), $ = a.useRef(0), {
 analyticsLocations: ee
   } = (0, u.ZP)(d.Z.PROFILE_PANEL), et = null == n ? void 0 : n.isNonUserBot(), en = (0, Z.ZP)(n.id), ei = (0, r.e7)([
@@ -68,8 +68,8 @@ location: 'ActivityStatus'
   }, {
 autoTrackExposure: !1
   }), {
-activity: el,
-customStatusActivity: es,
+activity: es,
+customStatusActivity: el,
 isApplicationStreaming: er,
 isMobile: eo,
 status: ec,
@@ -103,7 +103,7 @@ return {
     return t === K.IIU.HANG_STATUS;
   }) : null
 };
-  }), eu = null != el || null != ed || er, eh = null !== (t = x.ZP.getNickname(null, l.id, n)) && void 0 !== t ? t : T.ZP.getName(n), ep = (0, r.e7)([g.Z], () => g.Z.hidePersonalInformation), {
+  }), eu = null != es || null != ed || er, eh = null !== (t = x.ZP.getNickname(null, s.id, n)) && void 0 !== t ? t : T.ZP.getName(n), ep = (0, r.e7)([g.Z], () => g.Z.hidePersonalInformation), {
 mutualFriends: em,
 isFetching: e_
   } = (0, M.Z)(n.id, !n.bot), {
@@ -120,15 +120,15 @@ null != en && (0, A.U)({
   displayProfile: en,
   isMobile: eo,
   loadDurationMs: Date.now() - $.current,
-  activity: el,
-  customStatusActivity: es,
+  activity: es,
+  customStatusActivity: el,
   status: ec
 });
   }, [
 en,
 eo,
-el,
 es,
+el,
 ec
   ]);
   let eT = null == ef ? void 0 : ef.map(e => {
@@ -156,7 +156,7 @@ eN = null == em ? void 0 : em.map(e => {
     onSelect: () => {
       (0, j.openUserProfileModal)({
         userId: n.id,
-        channelId: l.id,
+        channelId: s.id,
         sourceAnalyticsLocations: ee,
         analyticsLocation: {
           section: K.jXE.DM_PROFILE
@@ -182,7 +182,7 @@ value: ee,
 children: (0, i.jsx)(N.Mt, {
   layout: 'DM_PANEL',
   userId: n.id,
-  channelId: l.id,
+  channelId: s.id,
   children: (0, i.jsx)('aside', {
     className: X.profilePanel,
     onMouseEnter: ev,
@@ -205,7 +205,7 @@ children: (0, i.jsx)(N.Mt, {
             (0, i.jsx)(z.Z, {
               user: n,
               displayProfile: en,
-              channel: l,
+              channel: s,
               animateAssets: Q,
               forceShowPremiumBadge: Q
             }),
@@ -218,7 +218,7 @@ children: (0, i.jsx)(N.Mt, {
                   pronouns: null == en ? void 0 : en.pronouns
                 }),
                 (0, i.jsx)(B.Z, {
-                  customStatusActivity: es,
+                  customStatusActivity: el,
                   animate: Q
                 }),
                 (0, i.jsx)(k.Z, {}),
@@ -250,9 +250,9 @@ children: (0, i.jsx)(N.Mt, {
             eu ? (0, i.jsx)(R.Z.Overlay, {
               className: X.overlay,
               children: (0, i.jsx)(U.Z, {
-                activity: null != el || er ? el : ed,
+                activity: null != es || er ? es : ed,
                 user: n,
-                channelId: l.id,
+                channelId: s.id,
                 analyticsParams: {
                   location: {
                     page: K.ZY5.USER_PROFILE,
@@ -278,14 +278,14 @@ children: (0, i.jsx)(N.Mt, {
                       section: 'MUTUAL_GUILDS',
                       layout: 'DM_PANEL',
                       userId: n.id,
-                      channelId: l.id,
+                      channelId: s.id,
                       analyticsLocations: ee
                     });
                   },
                   children: eT
                 }) : null,
                 eC ? (0, i.jsx)(W.Z, {
-                  className: s()(X.mutualFriendsList, {
+                  className: l()(X.mutualFriendsList, {
                     [X.mutualFriendsDivider]: eg
                   }),
                   header: q.Z.Messages.MUTUAL_FRIENDS_COUNT.format({
@@ -300,7 +300,7 @@ children: (0, i.jsx)(N.Mt, {
                       section: 'MUTUAL_FRIENDS',
                       layout: 'DM_PANEL',
                       userId: n.id,
-                      channelId: l.id,
+                      channelId: s.id,
                       analyticsLocations: ee
                     });
                   },

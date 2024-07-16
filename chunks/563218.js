@@ -5,8 +5,8 @@ return f;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(570140),
+  s = n(442837),
+  l = n(570140),
   r = n(519938),
   o = n(928518),
   c = n(585483),
@@ -16,7 +16,7 @@ var i = n(735250),
   p = n(918559),
   m = n(981631);
 let _ = (e, t) => {
-  s.Z.wait(() => {
+  l.Z.wait(() => {
 (0, r.Cz)(e, t);
   });
 };
@@ -24,12 +24,12 @@ let _ = (e, t) => {
 function f(e) {
   let t, {
   embedId: n,
-  className: s,
+  className: l,
   style: r
 } = e,
-f = (0, l.e7)([o.Z], () => o.Z.getWindow(m.KJ3.CHANNEL_CALL_POPOUT)),
+f = (0, s.e7)([o.Z], () => o.Z.getWindow(m.KJ3.CHANNEL_CALL_POPOUT)),
 E = (0, h.Z)(),
-C = (0, l.e7)([d.ZP], () => d.ZP.getActivityPanelMode());
+C = (0, s.e7)([d.ZP], () => d.ZP.getActivityPanelMode());
   if (null != E && !(0, u.Z)(E.channelId) && C === p.Ez.PANEL)
 t = window;
   else {
@@ -72,6 +72,6 @@ x
   ]), (0, i.jsx)('div', {
 ref: I,
 style: r,
-className: s
+className: l
   });
 }

@@ -5,8 +5,8 @@ return R;
 }), n(47120), n(653041);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(954955),
   o = n.n(r),
   c = n(399606),
@@ -30,14 +30,14 @@ var i = n(735250),
   A = n(526231);
 
 function M(e) {
-  var t, n, l, r;
+  var t, n, s, r;
   let {
 permission: o,
 roleIds: f,
 guild: g,
 specMap: I,
 categoryTitle: x
-  } = e, T = (0, c.e7)([E.Z], () => E.Z.getRoles(g.id)), Z = v.Plq[o], M = null !== (l = null === (t = I[Z.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== l ? l : (0, _.wt)(Z), b = null !== (r = null === (n = I[Z.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : '', R = N._o.has(Z), j = N.Qn.includes(o), L = f.length, P = (0, c.e7)([C.Z], () => C.Z.can(v.Plq.MANAGE_ROLES, g), [g]), O = a.useCallback(async e => {
+  } = e, T = (0, c.e7)([E.Z], () => E.Z.getRoles(g.id)), Z = v.Plq[o], M = null !== (s = null === (t = I[Z.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, _.wt)(Z), b = null !== (r = null === (n = I[Z.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : '', R = N._o.has(Z), j = N.Qn.includes(o), L = f.length, P = (0, c.e7)([C.Z], () => C.Z.can(v.Plq.MANAGE_ROLES, g), [g]), O = a.useCallback(async e => {
 if (!!P)
   await m.Z.open(g.id, v.pNK.ROLES), await m.Z.selectRole(e);
   }, [
@@ -45,12 +45,12 @@ P,
 g.id
   ]);
   return (0, i.jsxs)('div', {
-className: s()(A.permissionItemContainer, {
+className: l()(A.permissionItemContainer, {
   [A.elevatedPermission]: R
 }),
 children: [
   (0, i.jsxs)('div', {
-    className: s()(A.permissionItemHeader),
+    className: l()(A.permissionItemHeader),
     children: [
       (0, i.jsxs)('div', {
         className: A.permissionTitle,
@@ -140,7 +140,7 @@ children: [
   (0, i.jsx)('div', {
     className: A.permissionItemRoleContainer,
     children: f.map(e => (0, i.jsx)(d.Clickable, {
-      className: s()(A.roleTooltipItem, {
+      className: l()(A.roleTooltipItem, {
         [A.editable]: P && !(0, u.pM)(g.id, e) && !(0, N.Ov)(e, g.id)
       }),
       onClick: () => O(e),
@@ -170,7 +170,7 @@ function R(e) {
   let {
 userId: t,
 guildId: n,
-location: l,
+location: s,
 className: r,
 onNavigate: u
   } = e, h = (0, c.e7)([g.default], () => g.default.getUser(t), [t]), p = (0, c.e7)([E.Z], () => E.Z.getGuild(n), [n]), m = (0, c.e7)([f.ZP], () => f.ZP.getMember(n, t), [
@@ -185,7 +185,7 @@ if (null == p || null == L || null == m)
   return null;
 if (0 === j)
   return (0, i.jsx)('div', {
-    className: s()(A.__invalid_permissionChiplet, A.__invalid_noModPerms),
+    className: l()(A.__invalid_permissionChiplet, A.__invalid_noModPerms),
     children: (0, i.jsx)(d.Text, {
       variant: 'text-sm/normal',
       color: 'text-positive',
@@ -196,19 +196,19 @@ let e = [];
 return null == P || P.forEach(t => {
   t.permissions.forEach(n => {
     let a = n.flag,
-      l = N.pd.find(e => v.Plq[e] === a);
-    if (null == l)
+      s = N.pd.find(e => v.Plq[e] === a);
+    if (null == s)
       return;
-    let s = R[l];
-    if (null != s) {
+    let l = R[s];
+    if (null != l) {
       if (D.length > 0) {
         var r, o, c, d, u;
         let e = null !== (d = null === (r = L[a.toString()]) || void 0 === r ? void 0 : r.title) && void 0 !== d ? d : (0, _.wt)(a),
           n = null !== (u = null === (c = L[a.toString()]) || void 0 === c ? void 0 : null === (o = c.description) || void 0 === o ? void 0 : o.toString()) && void 0 !== u ? u : '',
           i = t.title,
-          s = N._o.has(a),
-          h = N.Qn.includes(l),
-          p = s ? S.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : h ? S.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
+          l = N._o.has(a),
+          h = N.Qn.includes(s),
+          p = l ? S.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : h ? S.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
           m = b(D, e),
           f = b(D, n),
           E = b(D, i),
@@ -217,12 +217,12 @@ return null == P || P.forEach(t => {
           return;
       }
       e.push((0, i.jsx)(M, {
-        permission: l,
-        roleIds: s,
+        permission: s,
+        roleIds: l,
         guild: p,
         specMap: L,
         categoryTitle: t.title
-      }, l));
+      }, s));
     }
   });
 }), e;
@@ -236,7 +236,7 @@ R,
 D
   ]);
   return null == h || null == m ? null : (0, i.jsxs)('div', {
-className: s()(Z.container, r),
+className: l()(Z.container, r),
 style: {
   backgroundColor: C
 },

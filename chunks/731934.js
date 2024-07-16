@@ -13,8 +13,8 @@ var s = n(735250),
   I = n(895328),
   R = n(568671),
   C = n(419821),
-  p = n(367515),
-  g = n(250285),
+  g = n(367515),
+  p = n(250285),
   A = n(292352),
   m = n(689938),
   N = n(277421),
@@ -159,12 +159,12 @@ let {
   row: n,
   listIndex: a
 } = e, i = r[n], l = a === r.length;
-return null == i ? null : (0, s.jsx)(g.Z, {
+return null == i ? null : (0, s.jsx)(p.Z, {
   userId: i.id,
   isLast: l,
   children: () => t === A.ne.ACTIVE ? (0, s.jsx)(C.u, {
     user: i
-  }) : (0, s.jsx)(p.B, {
+  }) : (0, s.jsx)(g.B, {
     user: i
   })
 }, i.id);

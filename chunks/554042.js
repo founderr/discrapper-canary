@@ -1,26 +1,26 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return O;
   }
-}), s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(442837),
-  l = s(433517),
-  c = s(481060),
-  d = s(37234),
-  _ = s(153867),
-  E = s(425493),
-  u = s(607070),
-  T = s(304761),
-  I = s(865427),
-  S = s(358085),
-  N = s(210887),
-  C = s(981631),
-  m = s(689938),
-  A = s(452935);
+}), t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(442837),
+  l = t(433517),
+  c = t(481060),
+  d = t(37234),
+  _ = t(153867),
+  E = t(425493),
+  u = t(607070),
+  T = t(304761),
+  I = t(865427),
+  S = t(358085),
+  N = t(210887),
+  C = t(981631),
+  m = t(689938),
+  A = t(452935);
 let h = [{
 label: 'Latin alphabet',
 value: 'aBcDeFgHiJkLmNoPqRsTuVwXyZ'
@@ -51,25 +51,25 @@ value: 'custom'
   }
 ];
 
-function g(e, t) {
-  let [s, n] = a.useState(() => {
-let s = l.K.get(e);
-return null != s ? s : t;
+function g(e, s) {
+  let [t, n] = a.useState(() => {
+let t = l.K.get(e);
+return null != t ? t : s;
   });
   return a.useEffect(() => {
-l.K.set(e, s);
+l.K.set(e, t);
   }, [
 e,
-s
+t
   ]), [
-s,
+t,
 n
   ];
 }
 
 function O() {
-  let [e, t] = a.useState(Math.round(window.outerWidth / window.innerWidth * 100)), {
-platformZoom: s,
+  let [e, s] = a.useState(Math.round(window.outerWidth / window.innerWidth * 100)), {
+platformZoom: t,
 theme: i
   } = (0, o.cj)([
 N.Z,
@@ -107,24 +107,24 @@ platformZoom: u.Z.zoom
   ]);
   a.useEffect(() => {
 !S.isPlatformEmbedded && window.addEventListener('resize', () => {
-  t(Math.round(window.outerWidth / window.innerWidth * 100));
+  s(Math.round(window.outerWidth / window.innerWidth * 100));
 });
   }, []);
-  let x = S.isPlatformEmbedded ? s : e,
+  let x = S.isPlatformEmbedded ? t : e,
 M = (0, o.e7)([T.C], () => {
-  var e, t;
-  return (0, I.fD)() ? null === (t = T.C.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null;
+  var e, s;
+  return (0, I.fD)() ? null === (s = T.C.getCurrentBuildOverride()) || void 0 === s ? void 0 : null === (e = s.overrides) || void 0 === e ? void 0 : e.discord_web : null;
 }),
 [f, D] = g('playground-overrideText', null),
 [P, L] = g('playground-defaultText', h[0].value),
 Z = a.useCallback(e => {
-  let t = h.find(t => {
+  let s = h.find(s => {
     let {
-      value: s
-    } = t;
-    return s === e;
+      value: t
+    } = s;
+    return t === e;
   });
-  '' === e || null == e ? (L(h[0].value), D(null)) : null != t ? L(t.value) : (L('custom'), D(e));
+  '' === e || null == e ? (L(h[0].value), D(null)) : null != s ? L(s.value) : (L('custom'), D(e));
 }, [
   D,
   L
@@ -284,19 +284,19 @@ children: (0, n.jsxs)(c.FormSection, {
                 }) : null
               ]
             }, e),
-            p.map(t => {
-              var s;
-              let a = null !== (s = 'custom' === P ? f : P) && void 0 !== s ? s : '';
+            p.map(s => {
+              var t;
+              let a = null !== (t = 'custom' === P ? f : P) && void 0 !== t ? t : '';
               return (0, n.jsx)('div', {
                 className: A.textSample,
                 children: (0, n.jsxs)('div', {
-                  title: ''.concat(e, 'px at ').concat(t),
+                  title: ''.concat(e, 'px at ').concat(s),
                   className: r()(A.text, {
                     [A.breakAnywhere]: !a.includes(' ')
                   }),
                   style: {
                     fontSize: e,
-                    fontWeight: R.get(t)
+                    fontWeight: R.get(s)
                   },
                   children: [
                     (0, n.jsx)('p', {
@@ -316,7 +316,7 @@ children: (0, n.jsxs)(c.FormSection, {
                     })
                   ]
                 })
-              }, ''.concat(e, '-').concat(t));
+              }, ''.concat(e, '-').concat(s));
             })
           ]
         }, e))

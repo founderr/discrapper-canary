@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(512722),
   o = n.n(r),
   c = n(442837),
@@ -55,8 +55,8 @@ var i = n(735250),
   en = n(488785),
   ei = n(199902),
   ea = n(314897),
-  el = n(979696),
-  es = n(523746),
+  es = n(979696),
+  el = n(523746),
   er = n(430824),
   eo = n(496675),
   ec = n(306680),
@@ -129,10 +129,10 @@ let {
   inCall: n,
   mode: i,
   layout: a
-} = this.props, l = this.getRootNode();
-if (null != l && e.mode === eL.WtW.VIDEO && i === eL.WtW.VOICE && (0, eI.rB)(l, this.currentDocument) && (0, eI.Pr)(l, this.currentDocument), e.participantsOpen !== t || a !== e.layout) {
-  var s;
-  null === (s = this._contentRef.current) || void 0 === s || s.triggerResize();
+} = this.props, s = this.getRootNode();
+if (null != s && e.mode === eL.WtW.VIDEO && i === eL.WtW.VOICE && (0, eI.rB)(s, this.currentDocument) && (0, eI.Pr)(s, this.currentDocument), e.participantsOpen !== t || a !== e.layout) {
+  var l;
+  null === (l = this._contentRef.current) || void 0 === l || l.triggerResize();
 }
 e.inCall && !n && this.inPopout && p.Z.wait(() => this.handleClosePopout());
   }
@@ -171,15 +171,15 @@ let {
   mode: t,
   channel: n,
   inCall: i
-} = this.props, a = t === eL.WtW.VIDEO && i && !(this.popoutOpen && !this.inPopout), l = t === eL.WtW.VIDEO && i && this.popoutSupported, s = t !== eL.WtW.VOICE && n.isPrivate() && !this.inPopout && i, r = n.type === eL.d4z.GUILD_VOICE, o = e === eL.AEg.MINIMUM || e === eL.AEg.NORMAL, c = this.inPopout && this.nativePopoutSupported, d = {
+} = this.props, a = t === eL.WtW.VIDEO && i && !(this.popoutOpen && !this.inPopout), s = t === eL.WtW.VIDEO && i && this.popoutSupported, l = t !== eL.WtW.VOICE && n.isPrivate() && !this.inPopout && i, r = n.type === eL.d4z.GUILD_VOICE, o = e === eL.AEg.MINIMUM || e === eL.AEg.NORMAL, c = this.inPopout && this.nativePopoutSupported, d = {
   renderHeader: !0,
   useTheme: !1,
   useExternalHeader: o,
   canInvite: r,
-  canPopout: l,
+  canPopout: s,
   canFullscreen: a,
   canSelectRegion: n.isPrivate() && !n.isBroadcastChannel(),
-  canChangeLayout: s,
+  canChangeLayout: l,
   canStayOnTop: c
 };
 if (!i)
@@ -212,8 +212,8 @@ var t;
 let {
   selectedParticipant: n,
   inCall: a,
-  hasConnectPermission: l,
-  mode: s,
+  hasConnectPermission: s,
+  mode: l,
   popoutWindow: r,
   participantsOpen: o,
   participants: c,
@@ -225,7 +225,7 @@ let {
   forceShowControls: _,
   awaitingRemoteSessionInfo: f,
   currentChannelActivities: E
-} = this.props, C = m === eL.AEg.MINIMUM, g = C || m === eL.AEg.NORMAL, I = a && s === eL.WtW.VIDEO, x = (null !== (t = null == E ? void 0 : E.length) && void 0 !== t ? t : 0) > 0 && h.isPrivate();
+} = this.props, C = m === eL.AEg.MINIMUM, g = C || m === eL.AEg.NORMAL, I = a && l === eL.WtW.VIDEO, x = (null !== (t = null == E ? void 0 : E.length) && void 0 !== t ? t : 0) > 0 && h.isPrivate();
 return this._lastIdleProps = e, (0, i.jsx)(K.Z, {
   renderHeader: this.renderHeader,
   renderBottomLeft: this.renderBottomLeft,
@@ -243,7 +243,7 @@ return this._lastIdleProps = e, (0, i.jsx)(K.Z, {
     inCall: a,
     paused: this.paused,
     channel: h,
-    hasConnectPermission: l,
+    hasConnectPermission: s,
     guild: p,
     participants: c,
     filteredParticipants: d,
@@ -251,7 +251,7 @@ return this._lastIdleProps = e, (0, i.jsx)(K.Z, {
     selectedParticipant: I ? n : null,
     layout: m,
     idle: e.idle,
-    mode: s,
+    mode: l,
     onSelectParticipant: this.handleSelectParticipant,
     onContextMenuParticipant: this.handleContextMenu,
     showParticipants: o && (!g || x),
@@ -266,7 +266,7 @@ let {
   channel: t,
   guild: n,
   mode: a,
-  chatOpen: l,
+  chatOpen: s,
   appContext: r,
   maxSidebarWidth: o,
   maxHeight: c,
@@ -275,10 +275,10 @@ let {
   resizedHeight: u
 } = this.state, h = a === eL.WtW.VIDEO, p = e !== eL.AEg.NO_CHAT && e !== eL.AEg.FULL_SCREEN && null != c;
 return (0, i.jsxs)('div', {
-  className: s()(eO.wrapper, eD[e], ek[r], {
+  className: l()(eO.wrapper, eD[e], ek[r], {
     [eO.poppedOut]: this.popoutOpen && !this.inPopout && e !== eL.AEg.NO_CHAT && t.isPrivate(),
     [eO.video]: h,
-    [eO.chatSidebarOpen]: l
+    [eO.chatSidebarOpen]: s
   }),
   ref: e => {
     this._wrapperRef.current = e, this.props.wrapperRef.current = e;
@@ -290,7 +290,7 @@ return (0, i.jsxs)('div', {
   } : void 0,
   children: [
     (0, i.jsx)('div', {
-      className: s()(eO.callContainer, {
+      className: l()(eO.callContainer, {
         [(0, eC.Q)(eL.BRd.DARK)]: h
       }),
       ref: e => {
@@ -313,7 +313,7 @@ return (0, i.jsxs)('div', {
       ref: e => {
         this._channelChatRef.current = e, this.props.channelChatRef.current = e;
       },
-      children: l && (!d || !this.popoutOpen || this.inPopout) && (0, i.jsx)(eS.Z, {
+      children: s && (!d || !this.popoutOpen || this.inPopout) && (0, i.jsx)(eS.Z, {
         channel: t,
         guild: n,
         maxWidth: o
@@ -347,9 +347,9 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
 }), ey(this, 'handleDisconnect', () => {
   this.props.layout === eL.AEg.FULL_SCREEN && this.handleFullScreen();
 }), ey(this, 'handleContextMenu', (e, t) => {
-  var a, l;
+  var a, s;
   let {
-    channel: s,
+    channel: l,
     appContext: r,
     layout: c
   } = this.props, d = {
@@ -359,7 +359,7 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
     },
     context: r
   };
-  switch (null === (a = this._lastIdleProps) || void 0 === a || a.onPreventIdle('menu'), null === (l = this._lastIdleProps) || void 0 === l || l.onActive(), e.type) {
+  switch (null === (a = this._lastIdleProps) || void 0 === a || a.onPreventIdle('menu'), null === (s = this._lastIdleProps) || void 0 === s || s.onActive(), e.type) {
     case ej.fO.HIDDEN_STREAM:
     case ej.fO.STREAM:
       (0, _.jW)(t, async () => {
@@ -377,7 +377,7 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
     case ej.fO.USER:
       let u = eu.default.getUser(e.id);
       if (null != u)
-        switch (s.type) {
+        switch (l.type) {
           case eL.d4z.DM:
             return (0, _.jW)(t, async () => {
               let {
@@ -394,7 +394,7 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
                 showChannelCallItems: !0,
                 showMediaItems: !0,
                 user: u,
-                channel: s,
+                channel: l,
                 showModalItems: !0
               });
             }, d);
@@ -413,12 +413,12 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
                 showMediaItems: !0,
                 showChatItems: c === eL.AEg.MINIMUM || c === eL.AEg.NORMAL,
                 user: u,
-                channel: s,
+                channel: l,
                 showModalItems: !0
               });
             }, d);
           case eL.d4z.GUILD_VOICE:
-            let h = s.getGuildId();
+            let h = l.getGuildId();
             return o()(null != h, 'GuildID null for guild voice channel'), (0, _.jW)(t, async () => {
               let {
                 default: e
@@ -434,7 +434,7 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
                 showChannelCallItems: !0,
                 showChatItems: !1,
                 user: u,
-                channel: s,
+                channel: l,
                 guildId: h,
                 showModalItems: !0
               });
@@ -450,12 +450,12 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
     channel: n,
     selectedParticipant: i,
     allActiveStreams: a,
-    inCall: l,
-    mode: s
+    inCall: s,
+    mode: l
   } = this.props;
   (0, ej._5)(e) && (0, k.p9)(n, eh.Z, er.Z, eo.Z, P.Z)[0] && (f.default.selectVoiceChannel(n.id), 0 === a.filter(t => (0, D.V9)(t) === e.id && t.state !== eL.jm8.ENDED).length && (0, E.rn)((0, D.my)(e.id), {
     forceMultiple: t.shiftKey
-  })), l && s === eL.WtW.VIDEO && ((null == i ? void 0 : i.id) === e.id ? m.Z.selectParticipant(n.id, null) : m.Z.selectParticipant(n.id, e.id));
+  })), s && l === eL.WtW.VIDEO && ((null == i ? void 0 : i.id) === e.id ? m.Z.selectParticipant(n.id, null) : m.Z.selectParticipant(n.id, e.id));
 }), ey(this, 'handleOpenPopout', () => {
   let {
     channel: e,
@@ -506,7 +506,7 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
     mentionCount: t,
     channel: n,
     appContext: a,
-    useNewInviteButton: l,
+    useNewInviteButton: s,
     selectedParticipant: r,
     shouldUseVoiceEffectsActionBar: o,
     inCall: c,
@@ -527,7 +527,7 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
       canChangeLayout: f,
       canInvite: E
     } = this.viewProperties,
-    C = l ? (0, i.jsx)(F.Z, {
+    C = s ? (0, i.jsx)(F.Z, {
       channel: n,
       stream: (null == r ? void 0 : r.type) === ej.fO.STREAM ? (0, D.my)(r.id) : void 0,
       applicationId: (null == r ? void 0 : r.type) === ej.fO.ACTIVITY ? r.id : void 0,
@@ -564,7 +564,7 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
       }) : null,
       (null == r ? void 0 : r.type) !== ej.fO.STREAM && (null == r ? void 0 : r.type) !== ej.fO.ACTIVITY || o ? null : (0, i.jsx)(z.Z, {
         children: (0, i.jsx)(eA.Z, {
-          className: s()(eO.leftTrayIcon, eO.viewersButton),
+          className: l()(eO.leftTrayIcon, eO.viewersButton),
           participant: r,
           maxVisibleUsers: 4,
           guildId: n.getGuildId(),
@@ -592,8 +592,8 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
     currentUserId: n,
     selectedParticipant: a
   } = this.props, {
-    canFullscreen: l,
-    canStayOnTop: s,
+    canFullscreen: s,
+    canStayOnTop: l,
     canPopout: r,
     useTheme: o
   } = this.viewProperties;
@@ -606,7 +606,7 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
         sliderClassName: eO.volumeSlider,
         className: eO.rightTrayIcon
       }) : null,
-      s ? (0, i.jsx)(ee.Z, {
+      l ? (0, i.jsx)(ee.Z, {
         className: eO.rightTrayIcon,
         popoutWindowAlwaysOnTop: t,
         onToggleStayOnTop: this.handleStayOnTop
@@ -618,7 +618,7 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
         onOpenPopout: this.handleOpenPopout,
         onClosePopout: this.handleClosePopout
       }) : null,
-      l ? (0, i.jsx)(Q.Z, {
+      s ? (0, i.jsx)(Q.Z, {
         themeable: o,
         node: this.getRootNode(),
         guestWindow: e,
@@ -633,10 +633,10 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
     showingClassName: n
   } = e, {
     channel: a,
-    chatOpen: l,
-    inCall: s
+    chatOpen: s,
+    inCall: l
   } = this.props;
-  return l || this.popoutOpen && !this.inPopout && s ? null : (0, i.jsx)(X.T, {
+  return s || this.popoutOpen && !this.inPopout && l ? null : (0, i.jsx)(X.T, {
     channelId: a.id,
     className: t,
     showingClassName: n
@@ -671,8 +671,8 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
     channel: t,
     guild: n,
     appContext: a,
-    chatOpen: l,
-    inCall: s
+    chatOpen: s,
+    inCall: l
   } = this.props, {
     useExternalHeader: r,
     canSelectRegion: o,
@@ -686,8 +686,8 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
           channel: t,
           guild: n,
           appContext: a,
-          inCall: s,
-          isChatOpen: l || this.popoutOpen && !this.inPopout && s,
+          inCall: l,
+          isChatOpen: s || this.popoutOpen && !this.inPopout && l,
           exitFullScreen: this.maybeLeaveFullScreen
         })
       }),
@@ -701,8 +701,8 @@ t.Z = function(e) {
   var t;
   let {
 channel: n,
-renderExternalHeader: l,
-maxHeight: s
+renderExternalHeader: s,
+maxHeight: l
   } = e, {
 width: r = 0,
 ref: o
@@ -746,13 +746,13 @@ n.id
 selectedStream: z
   } = (0, c.cj)([ei.Z], () => ({
 selectedStream: null != F ? ei.Z.getActiveStreamForStreamKey(F.id) : null
-  }), [F]), Y = (0, c.e7)([er.Z], () => er.Z.getGuild(n.getGuildId())), K = (0, c.e7)([es.Z], () => es.Z.getCall(n.id), [n.id]), q = (0, c.e7)([ec.ZP], () => ec.ZP.getMentionCount(n.id), [n.id]), X = (0, c.e7)([ea.default], () => ea.default.getId()), {
+  }), [F]), Y = (0, c.e7)([er.Z], () => er.Z.getGuild(n.getGuildId())), K = (0, c.e7)([el.Z], () => el.Z.getCall(n.id), [n.id]), q = (0, c.e7)([ec.ZP], () => ec.ZP.getMentionCount(n.id), [n.id]), X = (0, c.e7)([ea.default], () => ea.default.getId()), {
 popoutWindow: Q,
 popoutWindowAlwaysOnTop: J
   } = (0, c.cj)([w.Z], () => ({
 popoutWindow: w.Z.getWindow(eL.KJ3.CHANNEL_CALL_POPOUT),
 popoutWindowAlwaysOnTop: w.Z.getIsAlwaysOnTop(eL.KJ3.CHANNEL_CALL_POPOUT)
-  })), $ = (0, c.e7)([eo.Z], () => eo.Z.can(eL.Plq.CONNECT, n)), ee = (0, c.e7)([el.Z], () => el.Z.getToastsEnabled(n.id)), et = (0, c.e7)([P.Z], () => P.Z.getAwaitingRemoteSessionInfo()), en = (0, c.e7)([H.ZP], () => H.ZP.callHeaderHeight), eu = a.useCallback(e => {
+  })), $ = (0, c.e7)([eo.Z], () => eo.Z.can(eL.Plq.CONNECT, n)), ee = (0, c.e7)([es.Z], () => es.Z.getToastsEnabled(n.id)), et = (0, c.e7)([P.Z], () => P.Z.getAwaitingRemoteSessionInfo()), en = (0, c.e7)([H.ZP], () => H.ZP.callHeaderHeight), eu = a.useCallback(e => {
 C.ZP.updatedUnsyncedSettings({
   callHeaderHeight: e
 });
@@ -803,7 +803,7 @@ children: (0, i.jsx)(I.Z, {
           guild: Y,
           hasConnectPermission: $,
           participantsOpen: G,
-          renderExternalHeader: l,
+          renderExternalHeader: s,
           appContext: E,
           call: K,
           popoutWindow: Q,
@@ -835,7 +835,7 @@ children: (0, i.jsx)(I.Z, {
           callContainerRef: _,
           channelChatRef: f,
           width: r,
-          maxHeight: s,
+          maxHeight: l,
           forceShowControls: eC,
           awaitingRemoteSessionInfo: et,
           currentChannelActivities: eT

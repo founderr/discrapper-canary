@@ -6,8 +6,8 @@ return p;
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(481060),
-  s = n(816782),
+  s = n(481060),
+  l = n(816782),
   r = n(367907),
   o = n(433355),
   c = n(914010),
@@ -21,13 +21,13 @@ channelId: t
   } = e, n = (0, a.e7)([o.ZP], () => o.ZP.getSection(t)), p = (0, a.e7)([c.Z], () => c.Z.getGuildId()), m = n === u.ULH.MEMBERS;
   return (0, i.jsx)(d.JO, {
 tooltip: m ? h.Z.Messages.MEMBER_LIST_SHOWN : h.Z.Messages.MEMBER_LIST_HIDDEN,
-icon: l.GroupIcon,
+icon: s.GroupIcon,
 onClick: () => {
   r.ZP.trackWithMetadata(u.rMx.MEMBER_LIST_TOGGLED, {
     channel_id: t,
     guild_id: p,
     member_list_open: !m
-  }), s.Z.toggleMembersSection();
+  }), l.Z.toggleMembersSection();
 },
 selected: m
   });

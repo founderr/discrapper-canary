@@ -1,28 +1,28 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return m;
   }
-}), s(47120);
-var n = s(735250);
-s(470079);
-var a = s(392711),
-  i = s.n(a),
-  r = s(442837),
-  o = s(780384),
-  l = s(481060),
-  c = s(846027),
-  d = s(463395),
-  _ = s(131951),
-  E = s(285952),
-  u = s(210887),
-  T = s(962100),
-  I = s(65154),
-  S = s(689938),
-  N = s(489130),
-  C = s(549856);
+}), t(47120);
+var n = t(735250);
+t(470079);
+var a = t(392711),
+  i = t.n(a),
+  r = t(442837),
+  o = t(780384),
+  l = t(481060),
+  c = t(846027),
+  d = t(463395),
+  _ = t(131951),
+  E = t(285952),
+  u = t(210887),
+  T = t(962100),
+  I = t(65154),
+  S = t(689938),
+  N = t(489130),
+  C = t(549856);
 
 function m() {
-  let e, t;
+  let e, s;
   let a = (0, r.e7)([u.Z], () => u.Z.theme),
 {
   canSetInputDevice: m,
@@ -43,7 +43,7 @@ className: C.marginTop8,
 children: S.Z.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
   onDownloadClick: () => (0, T.y)('Help Text Input Devices')
 })
-  })), !A && (t = (0, n.jsx)(l.FormText, {
+  })), !A && (s = (0, n.jsx)(l.FormText, {
 type: l.FormText.Types.DESCRIPTION,
 className: C.marginTop8,
 children: S.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
@@ -53,16 +53,16 @@ children: S.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
   let R = i()(O).values().first(),
 x = null != R ? R.disabled : null != e,
 M = i()(p).values().first(),
-f = null != M ? M.disabled : null != t;
+f = null != M ? M.disabled : null != s;
 
   function D(e) {
-let t, {
+let s, {
   label: i,
   value: r
 } = e;
 if (d.Z.isCertified(r)) {
-  let e = (0, o.ap)(a) ? s(561259) : s(887695);
-  t = (0, n.jsx)('img', {
+  let e = (0, o.ap)(a) ? t(561259) : t(887695);
+  s = (0, n.jsx)('img', {
     src: e,
     alt: 'Certified',
     className: N.deviceOptionCertified
@@ -75,7 +75,7 @@ return (0, n.jsxs)('span', {
       className: N.deviceOptionLabel,
       children: d.Z.getCertifiedDeviceName(r, i)
     }),
-    t
+    s
   ]
 }, r);
   }
@@ -99,12 +99,12 @@ children: [
         onChange: e => c.Z.setInputDevice(e, 'Settings'),
         options: i().map(O, e => {
           let {
-            id: t,
-            name: s
+            id: s,
+            name: t
           } = e;
           return {
-            value: t,
-            label: s
+            value: s,
+            label: t
           };
         }),
         isDisabled: x,
@@ -127,19 +127,19 @@ children: [
         onChange: e => c.Z.setOutputDevice(e, 'Settings'),
         options: i().map(p, e => {
           let {
-            id: t,
-            name: s
+            id: s,
+            name: t
           } = e;
           return {
-            value: t,
-            label: s
+            value: s,
+            label: t
           };
         }),
         isDisabled: f,
         renderOptionValue: P,
         renderOptionLabel: D
       }),
-      t
+      s
     ]
   })
 ]

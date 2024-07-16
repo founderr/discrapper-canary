@@ -4,8 +4,8 @@ return m;
   }
 });
 var l = t(735250),
-  r = t(470079),
-  a = t(481060),
+  a = t(470079),
+  r = t(481060),
   i = t(372900),
   s = t(238246),
   o = t(788983),
@@ -36,7 +36,7 @@ children: (0, l.jsx)(i.Z.Provider, {
 
 function m(e, n) {
   let t = (0, u.P)(n),
-i = r.useCallback(() => {
+i = a.useCallback(() => {
   o.bA(''.concat(d.KJ3.CHANNEL_POPOUT, '-').concat(e.id), n => (0, l.jsx)(x, {
     windowKey: n,
     channel: e
@@ -45,7 +45,7 @@ i = r.useCallback(() => {
     defaultHeight: 480
   });
 }, [e]);
-  return t ? (0, l.jsx)(a.MenuItem, {
+  return t ? (0, l.jsx)(r.MenuItem, {
 id: 'channel-pop-out',
 label: 'Open in Popout',
 action: () => i()

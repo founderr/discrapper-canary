@@ -1,7 +1,7 @@
 var i = n(470079),
   a = n(904245),
-  l = n(346610),
-  s = n(868643),
+  s = n(346610),
+  l = n(868643),
   r = n(912332),
   o = n(41776),
   c = n(280845),
@@ -89,11 +89,11 @@ switch (n.key.toLowerCase()) {
     (y || w) && (0, c.o)(H, B) && (n.preventDefault(), (0, A.HH)(H, B, n));
     break;
   case 'f':
-    (y || w) && l.w.getCurrentConfig({
+    (y || w) && s.w.getCurrentConfig({
       location: 'keyboard-shortcut'
     }, {
       autoTrackExposure: !1
-    }).canForwardMessages && (0, s.h)(B) && (n.preventDefault(), (0, r.l8)({
+    }).canForwardMessages && (0, l.h)(B) && (n.preventDefault(), (0, r.l8)({
       messageId: B.id,
       channelId: H.id,
       source: 'keyboard-shortcut'

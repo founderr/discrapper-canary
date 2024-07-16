@@ -1,14 +1,14 @@
 t.d(a, {
   cp: function() {
-return p;
+return m;
   },
   eI: function() {
 return _;
   }
 }), t(411104);
 var n = t(175145),
-  r = t(544891),
-  s = t(570140),
+  s = t(544891),
+  r = t(570140),
   l = t(355467),
   o = t(987032),
   i = t(559407),
@@ -16,7 +16,7 @@ var n = t(175145),
   u = t(439041),
   d = t(981631);
 async function E() {
-  return await r.tn.get({
+  return await s.tn.get({
 url: d.ANM.BILLING_ADYEN_PAYMENT_METHODS,
 oldFormErrors: !0
   });
@@ -41,7 +41,7 @@ let a = await E(),
     },
     paymentMethodsResponse: a.body
   });
-s.Z.dispatch({
+r.Z.dispatch({
     type: 'ADYEN_CREATE_CLIENT_SUCCESS',
     client: t
   }),
@@ -69,7 +69,7 @@ s.Z.dispatch({
           isValid: t
         } = e;
         if (t)
-          s.Z.dispatch({
+          r.Z.dispatch({
             type: 'ADYEN_CASH_APP_PAY_SUBMIT_SUCCESS',
             data: a
           });
@@ -83,19 +83,19 @@ s.Z.dispatch({
         }
       }
     }).mount('#'.concat(i.F));
-    s.Z.dispatch({
+    r.Z.dispatch({
       type: 'ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS',
       component: a
     });
   }(t);
   } catch (e) {
-(0, c.q2)(e), s.Z.dispatch({
+(0, c.q2)(e), r.Z.dispatch({
   type: 'ADYEN_CREATE_CLIENT_FAIL'
 });
   }
 }
 
-function p() {
+function m() {
   let e = u.Z.cashAppPayComponent;
   if (null == e)
 throw Error('Adyen CashAppPay component must be created before submitting.');

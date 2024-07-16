@@ -3,7 +3,7 @@ n.d(t, {
 return _;
   },
   Ps: function() {
-return s;
+return o;
   },
   Xo: function() {
 return c;
@@ -24,9 +24,9 @@ let a = Object.freeze({
 debugTrackedData: null,
 impressions: []
   }),
-  o = (0, r.Z)(e => a),
-  s = e => {
-o.setState(t => ({
+  s = (0, r.Z)(e => a),
+  o = e => {
+s.setState(t => ({
   impressions: [
     ...t.impressions,
     e
@@ -34,27 +34,27 @@ o.setState(t => ({
 }));
   },
   l = e => {
-o.setState(t => ({
+s.setState(t => ({
   impressions: t.impressions.filter(t => t.sequenceId !== e.sequenceId)
 }));
   },
   u = (e, t) => {
-o.setState(() => ({
+s.setState(() => ({
   debugTrackedData: {
     name: e,
     ...t
   }
 }));
   },
-  c = o;
+  c = s;
 
 function d() {
   let e = {};
-  return o.getState().impressions.forEach(t => {
+  return s.getState().impressions.forEach(t => {
 t.type === i.ImpressionTypes.PAGE ? e.page = t.name : e.section = t.name;
   }), e;
 }
 
 function _() {
-  return o.getState().impressions;
+  return s.getState().impressions;
 }

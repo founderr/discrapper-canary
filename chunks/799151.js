@@ -6,8 +6,8 @@ return E;
 var r = n(735250),
   i = n(470079),
   a = n(338545),
-  o = n(442837),
-  s = n(710593),
+  s = n(442837),
+  o = n(710593),
   l = n(481060),
   u = n(607070),
   c = n(79320),
@@ -34,7 +34,7 @@ function E() {
     name: d.Z.Messages.DND_OPERATION_LABEL_CANCEL
   }
 ],
-t = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+t = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
 n = (0, c.zP)();
   return (0, l.useTransition)(n, {
 enter: {
@@ -60,16 +60,16 @@ children: (0, r.jsx)(a.animated.div, {
   children: e.map((t, n) => {
     let {
       keybinds: a,
-      name: o
+      name: s
     } = t;
     return (0, r.jsxs)(i.Fragment, {
       children: [
         (0, r.jsx)(l.Text, {
           variant: 'text-md/semibold',
           className: _.bindName,
-          children: o
+          children: s
         }),
-        a.map(e => (0, r.jsx)(s.M, {
+        a.map(e => (0, r.jsx)(o.M, {
           shortcut: e,
           className: _.shortcut
         }, e)),
@@ -77,7 +77,7 @@ children: (0, r.jsx)(a.animated.div, {
           className: _.separator
         }) : null
       ]
-    }, o);
+    }, s);
   })
 })
   }) : null);

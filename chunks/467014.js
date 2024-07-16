@@ -5,8 +5,8 @@ return m;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(481060),
+  s = n(442837),
+  l = n(481060),
   r = n(433355),
   o = n(189432),
   c = n(356778),
@@ -19,7 +19,7 @@ function m(e) {
   let {
 userId: t,
 guildId: n
-  } = e, m = (0, l.e7)([r.ZP], () => r.ZP.getGuildSidebarState(n), [n]), {
+  } = e, m = (0, s.e7)([r.ZP], () => r.ZP.getGuildSidebarState(n), [n]), {
 messagesCount: _,
 linksCount: f,
 mediaCount: E
@@ -36,27 +36,27 @@ n,
 m,
 t
   ]);
-  return (0, i.jsx)(s.FormItem, {
+  return (0, i.jsx)(l.FormItem, {
 title: h.Z.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_MESSAGE_ACTIVITY_TITLE,
 titleClassName: p.infoTitle,
 children: (0, i.jsxs)(d.WM, {
   children: [
     (0, i.jsx)(d._2, {
-      icon: (0, i.jsx)(s.ChatIcon, {
+      icon: (0, i.jsx)(l.ChatIcon, {
         size: 'custom',
         color: 'currentColor',
         width: d.Mn,
         height: d.Mn
       }),
-      name: (0, i.jsx)(s.Text, {
+      name: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'text-normal',
         children: h.Z.Messages.MESSAGES
       }),
-      description: _ === c.II ? (0, i.jsx)(s.Spinner, {
-        type: s.SpinnerTypes.SPINNING_CIRCLE,
+      description: _ === c.II ? (0, i.jsx)(l.Spinner, {
+        type: l.SpinnerTypes.SPINNING_CIRCLE,
         className: p.loadingSpinner
-      }) : (0, i.jsx)(s.Text, {
+      }) : (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'interactive-normal',
         children: C
@@ -64,20 +64,20 @@ children: (0, i.jsxs)(d.WM, {
       onNavigate: _ > 0 ? () => x(c.mw.MESSAGES) : void 0
     }),
     (0, i.jsx)(d._2, {
-      icon: (0, i.jsx)(s.LinkIcon, {
+      icon: (0, i.jsx)(l.LinkIcon, {
         size: 'custom',
         width: d.Mn,
         height: d.Mn
       }),
-      name: (0, i.jsx)(s.Text, {
+      name: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'text-normal',
         children: h.Z.Messages.QUICKSEARCH_LINKS
       }),
-      description: f === c.II ? (0, i.jsx)(s.Spinner, {
-        type: s.SpinnerTypes.SPINNING_CIRCLE,
+      description: f === c.II ? (0, i.jsx)(l.Spinner, {
+        type: l.SpinnerTypes.SPINNING_CIRCLE,
         className: p.loadingSpinner
-      }) : (0, i.jsx)(s.Text, {
+      }) : (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'interactive-normal',
         children: g
@@ -85,20 +85,20 @@ children: (0, i.jsxs)(d.WM, {
       onNavigate: f > 0 ? () => x(c.mw.LINKS) : void 0
     }),
     (0, i.jsx)(d._2, {
-      icon: (0, i.jsx)(s.ImagesIcon, {
+      icon: (0, i.jsx)(l.ImagesIcon, {
         size: 'custom',
         width: d.Mn,
         height: d.Mn
       }),
-      name: (0, i.jsx)(s.Text, {
+      name: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'text-normal',
         children: h.Z.Messages.QUICKSEARCH_MEDIA
       }),
-      description: E === c.II ? (0, i.jsx)(s.Spinner, {
-        type: s.SpinnerTypes.SPINNING_CIRCLE,
+      description: E === c.II ? (0, i.jsx)(l.Spinner, {
+        type: l.SpinnerTypes.SPINNING_CIRCLE,
         className: p.loadingSpinner
-      }) : (0, i.jsx)(s.Text, {
+      }) : (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'interactive-normal',
         children: I

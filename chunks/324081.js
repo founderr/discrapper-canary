@@ -20,8 +20,8 @@ var a = n(120356),
   T = n(430824),
   h = n(158776),
   N = n(594174),
-  p = n(2093),
-  f = n(153124),
+  f = n(2093),
+  p = n(153124),
   C = n(689938),
   g = n(444771);
 let S = {
@@ -39,7 +39,7 @@ gotoChannel: a,
 mentionCount: s,
 channelState: l,
 toggleCollapsed: c
-  } = e, d = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, f.Dt)()));
+  } = e, d = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, p.Dt)()));
   return (0, i.jsx)(o.FocusRing, {
 offset: S,
 children: (0, i.jsxs)('div', {
@@ -148,7 +148,7 @@ children: [
           className: g.channelNameSpan,
           children: E
         }),
-        null != a && a > 0 ? (0, i.jsx)(p.Z, {
+        null != a && a > 0 ? (0, i.jsx)(f.Z, {
           value: a,
           className: g.badge
         }) : null

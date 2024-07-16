@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(695464),
-  o = n(28546),
-  s = n(98528),
+  s = n(28546),
+  o = n(98528),
   l = n(18467);
 let u = i.forwardRef(function(e, t) {
   let {
@@ -21,7 +21,7 @@ rowCountBySection: I,
 rowHeight: T,
 sectionHeaderHeight: g,
 sectionFooterHeight: S
-  } = e, A = i.useRef(!1), N = i.useRef(null), v = (0, o.Iu)(e => e.searchQuery), O = n.useStore(e => e.activeCategoryIndex), R = (0, s.Qs)({
+  } = e, A = i.useRef(!1), N = i.useRef(null), v = (0, s.Iu)(e => e.searchQuery), O = n.useStore(e => e.activeCategoryIndex), R = (0, o.Qs)({
 activeCategoryIndex: O,
 isScrolling: A,
 listRef: N,
@@ -29,7 +29,7 @@ onActiveCategoryIndexChange: n.setActiveCategoryIndex,
 scrollOffset: 20,
 searchQuery: v
   });
-  return (0, s.Xs)({
+  return (0, o.Xs)({
 searchQuery: v,
 activeCategoryIndex: O,
 listRef: N

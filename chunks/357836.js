@@ -6,8 +6,8 @@ return _;
 var r = n(735250),
   i = n(442837),
   a = n(481060),
-  o = n(970321),
-  s = n(621853),
+  s = n(970321),
+  o = n(621853),
   l = n(523034),
   u = n(475413),
   c = n(689938);
@@ -17,7 +17,7 @@ function d(e) {
 user: t,
 guildId: n,
 onClick: i,
-...o
+...s
   } = e;
   return (0, l.Z)({
 user: t,
@@ -27,7 +27,7 @@ action: 'PRESS_APP_STOREFRONT',
 icon: a.ShopIcon,
 text: c.Z.Messages.STOREFRONT,
 onClick: i,
-...o
+...s
   });
 }
 
@@ -37,10 +37,10 @@ function _(e) {
 user: l,
 guildId: u,
 ...c
-  } = e, _ = (0, i.e7)([s.Z], () => {
+  } = e, _ = (0, i.e7)([o.Z], () => {
 var e;
-return null === (e = s.Z.getUserProfile(l.id)) || void 0 === e ? void 0 : e.application;
-  }), E = (0, o.R)(null !== (t = null == _ ? void 0 : _.id) && void 0 !== t ? t : '');
+return null === (e = o.Z.getUserProfile(l.id)) || void 0 === e ? void 0 : e.application;
+  }), E = (0, s.R)(null !== (t = null == _ ? void 0 : _.id) && void 0 !== t ? t : '');
   return null != _ && E ? (0, r.jsx)(d, {
 user: l,
 guildId: u,

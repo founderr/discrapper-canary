@@ -1,5 +1,5 @@
-var n = s(570140);
-t.Z = {
+var n = t(570140);
+s.Z = {
   startSpeedTest() {
 n.Z.dispatch({
   type: 'RTC_SPEED_TEST_START_TEST'

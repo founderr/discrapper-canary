@@ -1,11 +1,11 @@
-var n = s(735250);
-s(470079);
-var a = s(481060),
-  i = s(689938),
-  r = s(315081);
-t.Z = function(e) {
+var n = t(735250);
+t(470079);
+var a = t(481060),
+  i = t(689938),
+  r = t(315081);
+s.Z = function(e) {
   let {
-hasGuildBoostSlots: t,
+hasGuildBoostSlots: s,
 hasAppliedGuildBoosts: o,
 isUserPremiumTier2: l,
 subscriptionIsPausedOrPausePending: c
@@ -18,7 +18,7 @@ children: [
     children: (0, n.jsx)('img', {
       alt: '',
       className: r.guildBoostGem,
-      src: s(908635)
+      src: t(908635)
     })
   }),
   (0, n.jsxs)('div', {
@@ -29,14 +29,14 @@ children: [
         className: r.heading,
         children: function(e) {
           let {
-            hasGuildBoostSlots: t,
-            hasAppliedGuildBoosts: s,
+            hasGuildBoostSlots: s,
+            hasAppliedGuildBoosts: t,
             isUserPremiumTier2: n,
             subscriptionIsPausedOrPausePending: a
           } = e;
-          return a ? i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : t ? n && !s ? i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_HAS_UNAPPLIED_FREE_GUILD_BOOSTS.format() : i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_NO_GUILD_BOOSTS;
+          return a ? i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : s ? n && !t ? i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_HAS_UNAPPLIED_FREE_GUILD_BOOSTS.format() : i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_NO_GUILD_BOOSTS;
         }({
-          hasGuildBoostSlots: t,
+          hasGuildBoostSlots: s,
           isUserPremiumTier2: l,
           hasAppliedGuildBoosts: o,
           subscriptionIsPausedOrPausePending: c

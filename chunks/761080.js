@@ -12,12 +12,12 @@ return r;
 return o;
   }
 }), n(47120);
-var i, a, s = n(981631);
+var i, s, a = n(981631);
 let r = 15,
   l = 3;
-(a = i || (i = {}))[a.MESSAGE = 0] = 'MESSAGE', a[a.SUMMARY = 1] = 'SUMMARY', a[a.ACTIVITY = 2] = 'ACTIVITY';
+(s = i || (i = {}))[s.MESSAGE = 0] = 'MESSAGE', s[s.SUMMARY = 1] = 'SUMMARY', s[s.ACTIVITY = 2] = 'ACTIVITY';
 let o = new Set([
   0,
   1
 ]);
-s.hBH.IMAGE, s.hBH.VIDEO, s.hBH.GIFV;
+a.hBH.IMAGE, a.hBH.VIDEO, a.hBH.GIFV;

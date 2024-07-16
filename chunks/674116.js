@@ -1,51 +1,51 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return B;
   }
-}), s(653041);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(442837),
-  l = s(481060),
-  c = s(846027),
-  d = s(230711),
-  _ = s(921801),
-  E = s(131951),
-  u = s(663389),
-  T = s(153124),
-  I = s(63063),
-  S = s(894939),
-  N = s(321499),
-  C = s(710808),
-  m = s(625205),
-  A = s(325808),
-  h = s(823087),
-  g = s(546997),
-  O = s(167540),
-  p = s(803567),
-  R = s(269876),
-  x = s(976758),
-  M = s(526761),
-  f = s(726985),
-  D = s(981631),
-  P = s(65154),
-  L = s(689938),
-  Z = s(549856);
+}), t(653041);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(442837),
+  l = t(481060),
+  c = t(846027),
+  d = t(230711),
+  _ = t(921801),
+  E = t(131951),
+  u = t(663389),
+  T = t(153124),
+  I = t(63063),
+  S = t(894939),
+  N = t(321499),
+  C = t(710808),
+  m = t(625205),
+  A = t(325808),
+  h = t(823087),
+  g = t(546997),
+  O = t(167540),
+  p = t(803567),
+  R = t(269876),
+  x = t(976758),
+  M = t(526761),
+  f = t(726985),
+  D = t(981631),
+  P = t(65154),
+  L = t(689938),
+  Z = t(549856);
 let b = (0, T.hQ)(),
   v = ''.concat(I.Z.getArticleURL(D.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 
-function j(e, t, s) {
+function j(e, s, t) {
   (0, l.openModal)(a => (0, n.jsx)(l.ConfirmModal, {
 header: e,
 confirmText: L.Z.Messages.OKAY,
 cancelText: L.Z.Messages.CANCEL,
-onConfirm: s,
+onConfirm: t,
 ...a,
 children: (0, n.jsx)(l.Text, {
   variant: 'text-md/normal',
-  children: t
+  children: s
 })
   }));
 }
@@ -53,8 +53,8 @@ children: (0, n.jsx)(l.Text, {
 function B() {
   let {
 inputMode: e,
-qosEnabled: t,
-attenuation: s,
+qosEnabled: s,
+attenuation: t,
 attenuateWhileSpeakingSelf: i,
 attenuateWhileSpeakingOthers: T,
 audioSubsystem: I,
@@ -160,7 +160,7 @@ children: [
             className: Z.marginBottom20,
             title: L.Z.Messages.FORM_LABEL_QOS,
             children: (0, n.jsx)(l.FormSwitch, {
-              value: t,
+              value: s,
               onChange: e => c.Z.setQoS(e),
               note: L.Z.Messages.FORM_HELP_QOS,
               children: L.Z.Messages.FORM_CHECKBOX_QOS
@@ -179,7 +179,7 @@ children: [
                 children: L.Z.Messages.FORM_LABEL_ATTENUATION
               }),
               (0, n.jsx)(l.Slider, {
-                initialValue: s,
+                initialValue: t,
                 onValueChange: e => {
                   c.Z.setAttenuation(e, i, T);
                 },
@@ -195,12 +195,12 @@ children: [
               }),
               (0, n.jsx)(l.FormSwitch, {
                 value: i,
-                onChange: e => c.Z.setAttenuation(s, e, T),
+                onChange: e => c.Z.setAttenuation(t, e, T),
                 children: L.Z.Messages.ATTENUATE_WHILE_SPEAKING_SELF
               }),
               (0, n.jsx)(l.FormSwitch, {
                 value: T,
-                onChange: e => c.Z.setAttenuation(s, i, e),
+                onChange: e => c.Z.setAttenuation(t, i, e),
                 children: L.Z.Messages.ATTENUATE_WHILE_SPEAKING_OTHERS
               })
             ]
@@ -215,18 +215,18 @@ children: [
               (0, n.jsx)(l.SingleSelect, {
                 className: Z.marginBottom20,
                 value: I,
-                options: function(e, t) {
-                  let s = [{
+                options: function(e, s) {
+                  let t = [{
                     value: P.iA.STANDARD,
                     label: 'Standard'
                   }];
-                  return e && s.push({
+                  return e && t.push({
                     value: P.iA.LEGACY,
                     label: 'Legacy'
-                  }), t && s.push({
+                  }), s && t.push({
                     value: P.iA.EXPERIMENTAL,
                     label: 'Experimental'
-                  }), s;
+                  }), t;
                 }(B, U),
                 onChange: e => {
                   j(L.Z.Messages.SWITCH_SUBSYSTEM, L.Z.Messages.SWITCH_SUBSYSTEM_BODY, () => c.Z.setAudioSubsystem(e));

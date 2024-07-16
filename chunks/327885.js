@@ -1,68 +1,68 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return f;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(512722),
-  i = s.n(a),
-  r = s(392711),
-  o = s.n(r),
-  l = s(442837),
-  c = s(481060),
-  d = s(660216),
-  _ = s(13245),
-  E = s(825209),
-  u = s(887278),
-  T = s(630699),
-  I = s(658785),
-  S = s(556296),
-  N = s(808506),
-  C = s(237997),
-  m = s(739563),
-  A = s(626135);
-s(63063);
-var h = s(13140),
-  g = s(981631),
-  O = s(689938),
-  p = s(766877);
+var n = t(735250);
+t(470079);
+var a = t(512722),
+  i = t.n(a),
+  r = t(392711),
+  o = t.n(r),
+  l = t(442837),
+  c = t(481060),
+  d = t(660216),
+  _ = t(13245),
+  E = t(825209),
+  u = t(887278),
+  T = t(630699),
+  I = t(658785),
+  S = t(556296),
+  N = t(808506),
+  C = t(237997),
+  m = t(739563),
+  A = t(626135);
+t(63063);
+var h = t(13140),
+  g = t(981631),
+  O = t(689938),
+  p = t(766877);
 let R = x(null);
 
 function x(e) {
-  var t;
-  let s = C.Z.getNotificationPositionMode(),
-n = s !== g._vf.DISABLED,
+  var s;
+  let t = C.Z.getNotificationPositionMode(),
+n = t !== g._vf.DISABLED,
 a = S.Z.getOverlayKeybind(),
 i = S.Z.getOverlayChatKeybind();
   return {
 enabled: N.Z.enabled,
 notifications_enabled: n,
-notifications_position: n ? s : null,
+notifications_position: n ? t : null,
 text_notifications_mode: C.Z.getTextChatNotificationMode(),
 hotkey: null != a ? (0, h.BB)(a.shortcut) : null,
 text_activation_hotkey: null != i ? (0, h.BB)(i.shortcut) : null,
 text_opacity_slider: C.Z.getTextWidgetOpacity(),
-old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : N.Z.enabled
+old_enabled: null !== (s = null == e ? void 0 : e.enabled) && void 0 !== s ? s : N.Z.enabled
   };
 }
 
 function M(e) {
   let {
-children: t,
-title: s
+children: s,
+title: t
   } = e;
   return (0, n.jsx)(c.FormItem, {
-title: s,
+title: t,
 className: p.userSettingsOverlayField,
-children: t
+children: s
   });
 }
 
 function f(e) {
   let {
-className: t,
-showHeader: s = !0
+className: s,
+showHeader: t = !0
   } = e, {
 enabled: a,
 legacyEnabled: r
@@ -108,9 +108,9 @@ let e = x(R);
   }(), (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)(c.FormSection, {
-    className: t,
+    className: s,
     tag: c.FormTitleTags.H1,
-    title: s ? O.Z.Messages.OVERLAY : null,
+    title: t ? O.Z.Messages.OVERLAY : null,
     children: [
       !1,
       (0, n.jsxs)('div', {
@@ -180,9 +180,9 @@ children: [
           ],
           onChange: e => {
             let {
-              value: t
+              value: s
             } = e;
-            return _.Z.setAvatarSizeMode(t);
+            return _.Z.setAvatarSizeMode(s);
           },
           value: h
         })
@@ -205,9 +205,9 @@ children: [
           ],
           onChange: e => {
             let {
-              value: t
+              value: s
             } = e;
-            return _.Z.setDisplayNameMode(t);
+            return _.Z.setDisplayNameMode(s);
           },
           value: f
         })
@@ -226,9 +226,9 @@ children: [
           ],
           onChange: e => {
             let {
-              value: t
+              value: s
             } = e;
-            return _.Z.setDisplayUserMode(t);
+            return _.Z.setDisplayUserMode(s);
           },
           value: D
         })
@@ -254,7 +254,7 @@ children: [
           className: p.notificationSettings,
           children: (0, n.jsx)(m.Z, {
             position: P,
-            onChange: (e, t) => _.Z.setNotificationPositionMode(t)
+            onChange: (e, s) => _.Z.setNotificationPositionMode(s)
           })
         })
       }),
@@ -265,9 +265,9 @@ children: [
           onChange: function() {
             let {
               ENABLED: e,
-              DISABLED: t
+              DISABLED: s
             } = g.Ypu;
-            _.Z.setTextChatNotificationMode(L === e ? t : e);
+            _.Z.setTextChatNotificationMode(L === e ? s : e);
           },
           hideBorder: !0,
           children: O.Z.Messages.FORM_LABEL_OVERLAY_TEXT_CHAT_NOTIFICATIONS

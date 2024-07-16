@@ -18,8 +18,8 @@ return p;
 var r = n(470079),
   i = n(913527),
   a = n.n(i),
-  o = n(442837),
-  s = n(544891),
+  s = n(442837),
+  o = n(544891),
   l = n(78839),
   u = n(775412),
   c = n(529537),
@@ -37,13 +37,13 @@ r = p();
 }
 let p = () => {
 var e;
-let t = (0, o.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
+let t = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
   n = null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_expires_at;
 return null != n && a()(Date.now()) <= a()(n);
   },
   m = () => {
 var e;
-let t = (0, o.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription());
+let t = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription());
 switch (null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_id) {
   case E.dT:
   case E.rB:
@@ -81,28 +81,28 @@ switch (null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 
 let e = null;
 try {
   var t;
-  let n = await s.tn.post({
+  let n = await o.tn.post({
     url: f.ANM.CHURN_USER_OFFER
   });
   e = null !== (t = n.body.offer) && void 0 !== t ? t : null;
 } catch (e) {}
 return e;
   }, T = e => {
-let [t, n] = r.useState(!1), [i, a] = r.useState(!1), [o, s] = r.useState(null);
+let [t, n] = r.useState(!1), [i, a] = r.useState(!1), [s, o] = r.useState(null);
 if (e)
   return {
-    churnUserDiscountOffer: o,
+    churnUserDiscountOffer: s,
     isFetchingChurnDiscountOffer: i
   };
 let l = () => {
   n(!0), a(!1);
 };
 return !i && !t && (a(!0), I().then(e => {
-  s(e), l();
+  o(e), l();
 }).catch(e => {
   l();
 })), {
-  churnUserDiscountOffer: o,
+  churnUserDiscountOffer: s,
   isFetchingChurnDiscountOffer: i
 };
   }, g = () => {
@@ -112,6 +112,6 @@ let {
   location: 'useShouldFetchChurnOffer'
 }, {
   autoTrackExposure: !1
-}), t = (0, o.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()), n = p(), r = null !== t && t.hasPremiumNitroMonthly, i = null != t && null != t.trialId;
+}), t = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()), n = p(), r = null !== t && t.hasPremiumNitroMonthly, i = null != t && null != t.trialId;
 return e && r && !i && !n;
   };

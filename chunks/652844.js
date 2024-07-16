@@ -5,8 +5,8 @@ return r;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(709014);
-let s = {
+  s = n(709014);
+let l = {
 mute: {
   name: 'mute',
   start: 0,
@@ -53,12 +53,12 @@ return {
     onMouseLeave: d
   },
   play: o,
-  Component: a.useCallback(e => (0, i.jsx)(l.L, {
+  Component: a.useCallback(e => (0, i.jsx)(s.L, {
     ...e,
     src: () => n.e('410').then(n.t.bind(n, 992285, 19)),
     ref: t,
     initialAnimation: r.current,
-    markers: s
+    markers: l
   }), [])
 };
   };

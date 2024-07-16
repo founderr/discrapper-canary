@@ -1,9 +1,9 @@
 n.d(t, {
   JZ: function() {
-return s;
+return a;
   },
   fS: function() {
-return a;
+return s;
   },
   wX: function() {
 return r;
@@ -11,7 +11,7 @@ return r;
 });
 var i = n(570140);
 
-function a(e, t) {
+function s(e, t) {
   i.Z.dispatch({
 type: 'LIBRARY_TABLE_SORT_UPDATE',
 key: e,
@@ -19,7 +19,7 @@ direction: t
   });
 }
 
-function s(e) {
+function a(e) {
   i.Z.dispatch({
 type: 'LIBRARY_APPLICATION_FILTER_UPDATE',
 query: e

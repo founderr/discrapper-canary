@@ -1,17 +1,17 @@
 n.d(t, {
   Z: function() {
-return a;
+return o;
   }
 });
 var s = n(626135),
-  o = n(981631);
+  a = n(981631);
 
-function a(e, t, n, a) {
-  s.default.track(o.rMx.USER_REPORT_SUBMITTED, {
+function o(e, t, n, o) {
+  s.default.track(a.rMx.USER_REPORT_SUBMITTED, {
 report_name: 'Guild Leave',
 guild_id: e,
 reason: t,
 feedback: n,
-skipped: a
+skipped: o
   });
 }

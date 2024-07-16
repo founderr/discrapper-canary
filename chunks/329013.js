@@ -1,4 +1,4 @@
-s.d(t, {
+t.d(s, {
   g: function() {
 return D;
   },
@@ -6,30 +6,30 @@ return D;
 return f;
   }
 });
-var n = s(735250),
-  a = s(470079),
-  i = s(442837),
-  r = s(704215),
-  o = s(481060),
-  l = s(37234),
-  c = s(100527),
-  d = s(906732),
-  _ = s(238302),
-  E = s(514361),
-  u = s(705262),
-  T = s(605236),
-  I = s(104494),
-  S = s(639119),
-  N = s(165583),
-  C = s(197115),
-  m = s(504983),
-  A = s(626135),
-  h = s(981631),
-  g = s(921944),
-  O = s(474936),
-  p = s(689938),
-  R = s(823749),
-  x = s(549856);
+var n = t(735250),
+  a = t(470079),
+  i = t(442837),
+  r = t(704215),
+  o = t(481060),
+  l = t(37234),
+  c = t(100527),
+  d = t(906732),
+  _ = t(238302),
+  E = t(514361),
+  u = t(705262),
+  T = t(605236),
+  I = t(104494),
+  S = t(639119),
+  N = t(165583),
+  C = t(197115),
+  m = t(504983),
+  A = t(626135),
+  h = t(981631),
+  g = t(921944),
+  O = t(474936),
+  p = t(689938),
+  R = t(823749),
+  x = t(549856);
 let M = () => {
 (0, T.EW)(r.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
   dismissAction: g.L.PRIMARY,
@@ -37,18 +37,18 @@ let M = () => {
 }), (0, _.bM)(), (0, l.xf)();
   },
   f = () => {
-var e, t;
+var e, s;
 let {
-  analyticsLocations: s
-} = (0, d.ZP)(c.Z.USER_SETTINGS), r = (0, i.e7)([E.Z], () => E.Z.isPreview), l = (null === (t = (0, S.N)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === O.Si.TIER_2, _ = (0, I.Ng)(), T = (0, I.Wp)(_, O.Si.TIER_2);
+  analyticsLocations: t
+} = (0, d.ZP)(c.Z.USER_SETTINGS), r = (0, i.e7)([E.Z], () => E.Z.isPreview), l = (null === (s = (0, S.N)()) || void 0 === s ? void 0 : null === (e = s.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === O.Si.TIER_2, _ = (0, I.Ng)(), T = (0, I.Wp)(_, O.Si.TIER_2);
 return a.useEffect(() => {
   r && A.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
     type: O.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-    location_stack: s
+    location_stack: t
   });
 }, [
   r,
-  s
+  t
 ]), (0, n.jsxs)('div', {
   children: [
     (0, n.jsxs)(u.ZP, {

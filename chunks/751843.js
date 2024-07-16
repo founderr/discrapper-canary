@@ -1,7 +1,7 @@
-var i, a, l = n(735250);
+var i, a, s = n(735250);
 n(470079);
-var s = n(120356),
-  r = n.n(s),
+var l = n(120356),
+  r = n.n(l),
   o = n(481060),
   c = n(871499),
   d = n(242460);
@@ -13,7 +13,7 @@ className: n,
 themeable: i,
 ...a
   } = e;
-  return (0, l.jsx)(c.Z, {
+  return (0, s.jsx)(c.Z, {
 className: r()(n, d.arrow, {
   [d.up]: 0 === t
 }),

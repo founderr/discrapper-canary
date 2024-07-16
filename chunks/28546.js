@@ -24,8 +24,8 @@ return h;
 var r = n(97613),
   i = n.n(r),
   a = n(652874),
-  o = n(868888),
-  s = n(957825);
+  s = n(868888),
+  o = n(957825);
 let l = Object.freeze({
 activeView: null,
 lastActiveView: null,
@@ -37,7 +37,7 @@ pickerId: function() {
   return i()(e);
 }()
   }),
-  u = (0, a.Z)((0, o.tJ)((e, t) => l, {
+  u = (0, a.Z)((0, s.tJ)((e, t) => l, {
 name: 'expression-picker-last-active-view',
 partialize: e => ({
   lastActiveView: e.lastActiveView
@@ -63,7 +63,7 @@ if ((void 0 === e || e === t.activeViewType) && null !== t.activeView)
 let t = u.getState();
 if (null == t.activeView) {
   var n;
-  c(null !== (n = t.lastActiveView) && void 0 !== n ? n : s.X1.EMOJI, e);
+  c(null !== (n = t.lastActiveView) && void 0 !== n ? n : o.X1.EMOJI, e);
 } else
   d();
   },

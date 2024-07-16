@@ -5,8 +5,8 @@ return Z;
 }), n(653041);
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(704215),
+  s = n(442837),
+  l = n(704215),
   r = n(481060),
   o = n(2052),
   c = n(40851),
@@ -30,7 +30,7 @@ var i = n(735250),
 function Z(e) {
   let {
 channel: t
-  } = e, n = (0, l.e7)([d.ZP], () => d.ZP.isLaunchingActivity()), Z = (0, p.KF)(t.id), A = (0, p.g5)(Z), M = Z !== p.jy.CAN_LAUNCH || n, {
+  } = e, n = (0, s.e7)([d.ZP], () => d.ZP.isLaunchingActivity()), Z = (0, p.KF)(t.id), A = (0, p.g5)(Z), M = Z !== p.jy.CAN_LAUNCH || n, {
 isHovered: b,
 setIsHovered: R,
 onMouseEnter: j,
@@ -63,7 +63,7 @@ autoTrackExposure: !0
   U
 ]),
 G = [];
-  return !M && G.push(s.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.Z)(t.id) && !M && G.push(s.z.ACTIVITY_GDM_ROCKET_SPARKLE), (0, i.jsx)(I.Z, {
+  return !M && G.push(l.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.Z)(t.id) && !M && G.push(l.z.ACTIVITY_GDM_ROCKET_SPARKLE), (0, i.jsx)(I.Z, {
 contentTypes: G,
 children: e => {
   let {
@@ -83,10 +83,10 @@ children: e => {
     renderPopout: e => {
       let {
         closePopout: n,
-        setPopoutRef: l
+        setPopoutRef: s
       } = e;
       return y ? (0, i.jsx)(_.m, {
-        ref: l,
+        ref: s,
         channel: t,
         closePopout: n,
         onMouseEnter: j,
@@ -104,7 +104,7 @@ children: e => {
           isActivityActive: O || b,
           className: S.controlButton,
           onClick: () => {
-            H(), (n === s.z.ACTIVITIES_MINI_SHELF_SPARKLES || n === s.z.ACTIVITY_GDM_ROCKET_SPARKLE || n === s.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === s.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(v.L.UNKNOWN);
+            H(), (n === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || n === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(v.L.UNKNOWN);
           },
           onMouseEnter: D,
           onMouseLeave: L

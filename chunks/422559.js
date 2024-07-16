@@ -1,9 +1,9 @@
 n.d(t, {
   VY: function() {
-return o;
+return s;
   },
   _$: function() {
-return s;
+return o;
   },
   wt: function() {
 return u;
@@ -12,7 +12,7 @@ return u;
 var r = n(149765),
   i = n(981631),
   a = n(689938);
-let o = [
+let s = [
   i.Plq.ADMINISTRATOR,
   i.Plq.MANAGE_GUILD,
   i.Plq.MANAGE_ROLES,
@@ -66,8 +66,8 @@ let o = [
   i.Plq.SET_VOICE_CHANNEL_STATUS
 ];
 
-function s(e) {
-  return Object.values(i.Plq).some(t => r.e$(e, t) && !o.includes(t));
+function o(e) {
+  return Object.values(i.Plq).some(t => r.e$(e, t) && !s.includes(t));
 }
 let l = {
   [i.Plq.ADMINISTRATOR.toString()]: () => a.Z.Messages.ADMINISTRATOR,

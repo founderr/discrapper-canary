@@ -1,22 +1,22 @@
 n.d(t, {
   Z: function() {
-return s;
+return a;
   }
 });
 var i = n(735250);
 n(470079);
-var a = n(325767);
+var s = n(325767);
 
-function s(e) {
+function a(e) {
   let {
 width: t = 24,
 height: n = 24,
-color: s = 'currentColor',
+color: a = 'currentColor',
 foreground: r,
 ...l
   } = e;
   return (0, i.jsxs)('svg', {
-...(0, a.Z)(l),
+...(0, s.Z)(l),
 width: t,
 height: n,
 viewBox: '0 0 24 24',
@@ -24,7 +24,7 @@ fill: 'none',
 children: [
   (0, i.jsxs)('g', {
     className: r,
-    fill: s,
+    fill: a,
     clipPath: 'url(#a)',
     children: [
       (0, i.jsx)('path', {

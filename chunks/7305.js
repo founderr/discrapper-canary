@@ -78,10 +78,10 @@ analyticsLocations: H
   let {
 step: U
   } = (0, p.usePaymentContext)(), {
-isGift: F,
-giftMessage: G,
+isGift: G,
+giftMessage: F,
 giftRecipient: w
-  } = (0, _.wD)(), W = F && (0, u.pO)(w) && U === f.h8.PLAN_SELECT;
+  } = (0, _.wD)(), W = G && (0, u.pO)(w) && U === f.h8.PLAN_SELECT;
   return (0, i.jsx)(x.PaymentModal, {
 analyticsLocations: H,
 analyticsLocation: t,
@@ -91,11 +91,11 @@ analyticsSubscriptionType: S.NYc.PREMIUM,
 onComplete: l,
 transitionState: C,
 initialPlanId: h,
-giftMessage: G,
+giftMessage: F,
 subscriptionTier: b,
 onClose: g,
 trialId: m,
-isGift: F,
+isGift: G,
 trialFooterMessageOverride: L,
 reviewWarningMessage: I,
 planGroup: j.Y1,

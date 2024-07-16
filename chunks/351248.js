@@ -5,8 +5,8 @@ return S;
 }), n(653041), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(748780),
   o = n(442837),
   c = n(215569),
@@ -79,9 +79,9 @@ let {
   widthAnimation: a
 } = this;
 i.setValue(1), n.setValue(0);
-let l = [];
+let s = [];
 for (let e = 0; e < I.STEPS; e++)
-  l.push(r.Z.timing(n, {
+  s.push(r.Z.timing(n, {
     toValue: -I.FRAME_SIZE * e,
     duration: I.FRAME_DURATION
   }));
@@ -91,7 +91,7 @@ r.Z.sequence([
     duration: x.DURATION_OUT,
     easing: x.EASING_OUT
   }),
-  r.Z.sequence(l),
+  r.Z.sequence(s),
   r.Z.timing(a, {
     toValue: 0,
     duration: N
@@ -147,18 +147,18 @@ let {
   theme: e,
   children: t,
   className: n
-} = this.props, a = (0, d.wj)(e), l = s()(f.sprite, {
+} = this.props, a = (0, d.wj)(e), s = l()(f.sprite, {
   [C.crossWhite]: a,
   [C.crossGrey]: !a
 });
 return (0, i.jsxs)(r.Z.div, {
-  className: s()(f.transition, n),
+  className: l()(f.transition, n),
   style: this.getWidthStyle(),
   children: [
     (0, i.jsx)('div', {
-      className: s()(f.spriteWrapper, E.horizontal, E.justifyCenter, E.alignCenter),
+      className: l()(f.spriteWrapper, E.horizontal, E.justifyCenter, E.alignCenter),
       children: (0, i.jsx)(r.Z.div, {
-        className: l,
+        className: s,
         style: this.getSpriteStyle()
       })
     }),
@@ -178,7 +178,7 @@ function S(e) {
   var t, n;
   let {
 participants: a,
-onContextMenu: l,
+onContextMenu: s,
 className: r,
 onClick: d,
 width: E,
@@ -192,7 +192,7 @@ T = a.map(e => {
     return null;
   let {
     user: a,
-    voiceState: s,
+    voiceState: l,
     speaking: r,
     ringing: o
   } = e;
@@ -203,18 +203,18 @@ T = a.map(e => {
     children: (0, i.jsx)(m.Z, {
       src: a.getAvatarURL(C, (0, u.getAvatarSize)(I), r && x),
       size: I,
-      muted: null !== (t = null == s ? void 0 : s.isVoiceMuted()) && void 0 !== t && t,
-      deafen: null !== (n = null == s ? void 0 : s.isVoiceDeafened()) && void 0 !== n && n,
+      muted: null !== (t = null == l ? void 0 : l.isVoiceMuted()) && void 0 !== t && t,
+      deafen: null !== (n = null == l ? void 0 : l.isVoiceDeafened()) && void 0 !== n && n,
       speaking: r,
       ringing: o,
       onClick: t => null == d ? void 0 : d(e, t),
-      onContextMenu: t => null == l ? void 0 : l(e, t)
+      onContextMenu: t => null == s ? void 0 : s(e, t)
     }, e.id)
   }, a.id);
 });
   return (0, i.jsx)(c.W, {
 component: 'div',
-className: s()(f.root, r),
+className: l()(f.root, r),
 children: T
   });
 }

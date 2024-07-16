@@ -1,5 +1,5 @@
 n(47120), n(724458), n(653041);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(314897),
   c = n(271383),
@@ -51,7 +51,7 @@ let {
 t = S(n).updateServerMembers(r) || t;
   }), t;
 }
-class C extends(r = s.ZP.Store) {
+class C extends(r = o.ZP.Store) {
   initialize() {
 this.waitFor(u.default, c.ZP, _.default);
   }
@@ -107,12 +107,12 @@ return S(e).lastRefreshTimestamp;
 return S(e).lastCursorTimestamp;
   }
 }
-o = 'MemberSafetyStore', (a = 'displayName') in(i = C) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'MemberSafetyStore', (a = 'displayName') in(i = C) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o;
+}) : i[a] = s;
 let y = new C(l.Z, {
   CONNECTION_OPEN: function(e) {
 return T ? T = !1 : ! function() {
@@ -305,8 +305,8 @@ let {
 return r && S(t).updateMembersByMemberIds(n.map(e => e.userId)), r;
   },
   MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: function(e) {
-var t, n, r, i, a, o;
-let s, l;
+var t, n, r, i, a, s;
+let o, l;
 let {
   guildId: u,
   members: c,
@@ -320,9 +320,9 @@ let {
     source_invite_code: r,
     join_source_type: i,
     inviter_id: a
-  } = t, o = n.user;
-  return e.memberIds.push(o.id), e.memberSupplementals.push({
-    userId: o.id,
+  } = t, s = n.user;
+  return e.memberIds.push(s.id), e.memberSupplementals.push({
+    userId: s.id,
     sourceInviteCode: r,
     joinSourceType: i,
     inviterId: a
@@ -333,17 +333,17 @@ let {
 }), T = (0, p.Qu)(u, f);
 (0, m.nf)(u, E);
 let g = _.updateSearchedMembersByMemberIds(E);
-c.length > 0 && (s = c[0], l = c[c.length - 1]);
+c.length > 0 && (o = c[0], l = c[c.length - 1]);
 let [A] = _.updatePaginationState({
   totalResultsCount: d,
   elasticSearchCursor: {
     before: (0, h.si)({
-      joinedAt: null == s ? void 0 : null === (t = s.member) || void 0 === t ? void 0 : t.joined_at,
-      userId: null !== (a = null == s ? void 0 : null === (n = s.member) || void 0 === n ? void 0 : n.user.id) && void 0 !== a ? a : I.lds
+      joinedAt: null == o ? void 0 : null === (t = o.member) || void 0 === t ? void 0 : t.joined_at,
+      userId: null !== (a = null == o ? void 0 : null === (n = o.member) || void 0 === n ? void 0 : n.user.id) && void 0 !== a ? a : I.lds
     }),
     after: (0, h.si)({
       joinedAt: null == l ? void 0 : null === (r = l.member) || void 0 === r ? void 0 : r.joined_at,
-      userId: null !== (o = null == l ? void 0 : null === (i = l.member) || void 0 === i ? void 0 : i.user.id) && void 0 !== o ? o : I.lds
+      userId: null !== (s = null == l ? void 0 : null === (i = l.member) || void 0 === i ? void 0 : i.user.id) && void 0 !== s ? s : I.lds
     })
   }
 }, !1);

@@ -1,8 +1,8 @@
 t(47120);
 var n = t(735250),
-  r = t(470079),
-  s = t(120356),
-  l = t.n(s),
+  s = t(470079),
+  r = t(120356),
+  l = t.n(r),
   o = t(481060),
   i = t(285952),
   c = t(761462);
@@ -15,7 +15,7 @@ configurable: !0,
 writable: !0
   }) : e[a] = t, e;
 }
-class d extends r.PureComponent {
+class d extends s.PureComponent {
   componentDidUpdate(e) {
 if (this.props.formError !== e.formError)
   this.setState({
@@ -62,8 +62,8 @@ super(...e), u(this, 'state', {
   let {
     values: a,
     onFieldChange: t,
-    onFieldFocus: r,
-    onFieldBlur: s,
+    onFieldFocus: s,
+    onFieldBlur: r,
     layout: i,
     ...c
   } = this.props, {
@@ -71,25 +71,25 @@ super(...e), u(this, 'state', {
     renderInput: d,
     title: E,
     name: _,
-    id: p,
-    placeholder: m,
+    id: m,
+    placeholder: p,
     ...A
   } = e, N = {
     ...A,
-    placeholder: null == m ? void 0 : m(),
+    placeholder: null == p ? void 0 : p(),
     layout: i,
     error: this.getError(_),
     value: a[_],
     name: _,
-    'aria-labelledby': p,
+    'aria-labelledby': m,
     onChange: t,
-    onFocus: r,
-    onBlur: s
+    onFocus: s,
+    onBlur: r
   };
   return (0, n.jsx)(o.FormSection, {
     className: l()(null == u ? void 0 : u(i)),
     title: E(),
-    titleId: p,
+    titleId: m,
     children: d(N, c)
   }, _);
 }), u(this, 'renderFormRow', e => {

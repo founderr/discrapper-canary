@@ -1,7 +1,7 @@
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(653603),
   o = n.n(r),
   c = n(442837),
@@ -24,12 +24,12 @@ let v = a.memo(function(e) {
 message: t,
 notice: n,
 compact: a = !1,
-onDismiss: l
+onDismiss: s
   } = e;
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsxs)('div', {
-    className: s()(x.blockedNoticeContainer, {
+    className: l()(x.blockedNoticeContainer, {
       [x.compact]: a
     }),
     children: [
@@ -52,12 +52,12 @@ children: [
     ]
   }),
   (0, i.jsx)('div', {
-    className: s()(x.ephemeralAccessories, {
+    className: l()(x.ephemeralAccessories, {
       [x.compact]: a
     }),
     children: (0, i.jsx)(_.Z, {
       message: t,
-      onDeleteMessage: l,
+      onDeleteMessage: s,
       children: (0, i.jsx)(d.Text, {
         variant: 'text-xs/normal',
         color: 'interactive-normal',
@@ -75,7 +75,7 @@ children: [
 t.Z = a.memo(function(e) {
   var t, n;
   let {
-className: l,
+className: s,
 compact: r,
 message: d,
 children: m,
@@ -97,7 +97,7 @@ S,
 m
   ]), (0, i.jsxs)('div', {
 id: (0, f.ut)(d),
-className: s()(l, N.markup, {
+className: l()(s, N.markup, {
   [T.messageContent]: !0,
   [T.markupRtl]: 'rtl' === o()(d.content),
   [x.blockedEdit]: null == A ? void 0 : A.isBlockedEdit,

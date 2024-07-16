@@ -1,31 +1,31 @@
-s(47120);
-var n = s(470079),
-  a = s(597688),
-  i = s(884697),
-  r = s(223143);
-t.Z = e => {
-  let [t, s] = n.useState(), {
+t(47120);
+var n = t(470079),
+  a = t(597688),
+  i = t(884697),
+  r = t(223143);
+s.Z = e => {
+  let [s, t] = n.useState(), {
 categories: o
   } = (0, r.Z)();
   return n.useEffect(() => {
-(null == t || 0 === t.size) && s(o);
+(null == s || 0 === s.size) && t(o);
   }, [
 o,
-t
+s
   ]), n.useMemo(() => {
 if (null != e)
   return e;
-if (null == t)
+if (null == s)
   return;
-let s = (0, i.XS)(t).filter(e => {
+let t = (0, i.XS)(s).filter(e => {
   let {
-    skuId: t
-  } = e, s = a.Z.getProduct(t);
-  return (0, i.G1)(s);
+    skuId: s
+  } = e, t = a.Z.getProduct(s);
+  return (0, i.G1)(t);
 }).map(e => e.id);
-return s[Math.floor(Math.random() * s.length)];
+return t[Math.floor(Math.random() * t.length)];
   }, [
-t,
+s,
 e
   ]);
 };

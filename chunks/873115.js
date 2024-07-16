@@ -9,7 +9,7 @@ return A;
 return N;
   },
   by: function() {
-return p;
+return m;
   },
   eI: function() {
 return u;
@@ -31,8 +31,8 @@ return I;
   }
 }), t(411104), t(47120);
 var n = t(544891),
-  r = t(570140),
-  s = t(618541),
+  s = t(570140),
+  r = t(618541),
   l = t(751767),
   o = t(358085),
   i = t(355467),
@@ -43,18 +43,18 @@ function u() {
 e.client.create({
   authorization: c.Ai1.BRAINTREE.KEY
 }).then(e => {
-  r.Z.dispatch({
+  s.Z.dispatch({
     type: 'BRAINTREE_CREATE_CLIENT_SUCCESS',
     client: e
   }), E(), d();
-}).catch(() => r.Z.dispatch({
+}).catch(() => s.Z.dispatch({
   type: 'BRAINTREE_CREATE_CLIENT_FAIL'
 }));
   });
 }
 
 function d() {
-  let e = s.Z.getClient();
+  let e = r.Z.getClient();
   if (null == e)
 throw Error('Braintree client must be initialized before creating Venmo client.');
   (0, l.S)().then(a => {
@@ -63,12 +63,12 @@ a.venmo.create({
   allowDesktop: !0,
   paymentMethodUsage: 'multi_use'
 }).then(e => {
-  r.Z.dispatch({
+  s.Z.dispatch({
     type: 'BRAINTREE_CREATE_VENMO_CLIENT_SUCCESS',
     venmoClient: e
   });
 }).catch(() => {
-  r.Z.dispatch({
+  s.Z.dispatch({
     type: 'BRAINTREE_CREATE_VENMO_CLIENT_FAIL'
   });
 });
@@ -76,7 +76,7 @@ a.venmo.create({
 }
 
 function E() {
-  let e = s.Z.getClient();
+  let e = r.Z.getClient();
   if (null == e)
 throw Error('braintree client must be initialized before calling this');
   (0, l.S)().then(a => {
@@ -105,21 +105,21 @@ a.paypal.create({
         return ''.concat(a, '/agreements/approve?nolegacy=1&ba_token=').concat(e);
       }(a));
     }).catch(e => (this._frameService.close(), this._authorizationInProgress = !1, Promise.reject(Error(e.body && e.body.message))));
-  }, r.Z.dispatch({
+  }, s.Z.dispatch({
     type: 'BRAINTREE_CREATE_PAYPAL_CLIENT_SUCCESS',
     paypalClient: e
   });
-}).catch(() => r.Z.dispatch({
+}).catch(() => s.Z.dispatch({
   type: 'BRAINTREE_CREATE_PAYPAL_CLIENT_FAIL'
 }));
   });
 }
 
 function _() {
-  let e = s.Z.getPayPalClient();
+  let e = r.Z.getPayPalClient();
   if (null == e)
 throw Error('braintree paypal client must be initialized before calling this');
-  r.Z.dispatch({
+  s.Z.dispatch({
 type: 'BRAINTREE_TOKENIZE_PAYPAL_START'
   });
   let a = Promise.resolve('');
@@ -130,20 +130,20 @@ let {
   email: a,
   firstName: t,
   lastName: n,
-  billingAddress: s
+  billingAddress: r
 } = e.details;
-r.Z.dispatch({
+s.Z.dispatch({
   type: 'BRAINTREE_TOKENIZE_PAYPAL_SUCCESS',
   nonce: e.nonce,
   email: a,
   billingAddress: {
     name: ''.concat(t, ' ').concat(n),
-    line1: s.line1,
-    line2: s.line2,
-    city: s.city,
-    state: s.state,
-    country: s.countryCode,
-    postalCode: s.postalCode
+    line1: r.line1,
+    line2: r.line2,
+    city: r.city,
+    state: r.state,
+    country: r.countryCode,
+    postalCode: r.postalCode
   }
 });
   }).catch(e => {
@@ -151,9 +151,9 @@ let {
   message: a,
   code: t
 } = e;
-t === c.U66.PAYPAL_POPUP_CLOSED || null == t ? r.Z.dispatch({
+t === c.U66.PAYPAL_POPUP_CLOSED || null == t ? s.Z.dispatch({
   type: 'BRAINTREE_TOKENIZE_PAYPAL_FAIL_WINDOW_CLOSED'
-}) : r.Z.dispatch({
+}) : s.Z.dispatch({
   type: 'BRAINTREE_TOKENIZE_PAYPAL_FAIL',
   message: a,
   code: t
@@ -161,17 +161,17 @@ t === c.U66.PAYPAL_POPUP_CLOSED || null == t ? r.Z.dispatch({
   });
 }
 
-function p() {
-  let e = s.Z.getVenmoClient();
+function m() {
+  let e = r.Z.getVenmoClient();
   if (null == e)
 throw Error('Braintree Venmo client must be initialized before calling tokenize.');
-  r.Z.dispatch({
+  s.Z.dispatch({
 type: 'BRAINTREE_TOKENIZE_VENMO_START'
   }), e.tokenize().then(e => {
 let {
   username: a
 } = e.details;
-r.Z.dispatch({
+s.Z.dispatch({
   type: 'BRAINTREE_TOKENIZE_VENMO_SUCCESS',
   nonce: e.nonce,
   username: a
@@ -181,9 +181,9 @@ let {
   message: a,
   code: t
 } = e;
-t === c.U66.VENMO_APP_CANCELED || t === c.U66.VENMO_CANCELED ? r.Z.dispatch({
+t === c.U66.VENMO_APP_CANCELED || t === c.U66.VENMO_CANCELED ? s.Z.dispatch({
   type: 'BRAINTREE_TOKENIZE_VENMO_FAIL_CANCELED'
-}) : r.Z.dispatch({
+}) : s.Z.dispatch({
   type: 'BRAINTREE_TOKENIZE_VENMO_FAIL',
   message: a,
   code: t
@@ -191,10 +191,10 @@ t === c.U66.VENMO_APP_CANCELED || t === c.U66.VENMO_CANCELED ? r.Z.dispatch({
   });
 }
 
-function m(e, a) {
+function p(e, a) {
   if (null == e)
 return Promise.resolve();
-  r.Z.dispatch(a);
+  s.Z.dispatch(a);
   try {
 return Promise.resolve(e.teardown());
   } catch (e) {
@@ -203,13 +203,13 @@ return Promise.resolve();
 }
 
 function A() {
-  return m(s.Z.getPayPalClient(), {
+  return p(r.Z.getPayPalClient(), {
 type: 'BRAINTREE_TEARDOWN_PAYPAL_CLIENT'
   });
 }
 
 function N() {
-  return m(s.Z.getVenmoClient(), {
+  return p(r.Z.getVenmoClient(), {
 type: 'BRAINTREE_TEARDOWN_VENMO_CLIENT'
   });
 }
@@ -222,12 +222,12 @@ N()
 }
 
 function T() {
-  let e = s.Z.getLastURL();
-  null == e ? _() : (r.Z.dispatch({
+  let e = r.Z.getLastURL();
+  null == e ? _() : (s.Z.dispatch({
 type: 'BRAINTREE_TOKENIZE_PAYPAL_START'
   }), window.open(e));
 }
 
 function I() {
-  p();
+  m();
 }

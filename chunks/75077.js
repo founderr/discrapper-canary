@@ -9,7 +9,7 @@ return M;
 return N;
   },
   k3: function() {
-return p;
+return g;
   },
   mN: function() {
 return x;
@@ -21,7 +21,7 @@ return h;
 return m;
   },
   vZ: function() {
-return g;
+return p;
   }
 }), n(653041), n(627341);
 var s = n(278074),
@@ -39,7 +39,7 @@ var s = n(278074),
   I = n(474936),
   R = n(735825),
   C = n(689938);
-let p = e => {
+let g = e => {
 switch (e) {
   case R.EB.PENDING:
     return C.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_TITLE;
@@ -51,7 +51,7 @@ switch (e) {
     return '';
 }
   },
-  g = (e, t) => {
+  p = (e, t) => {
 switch (e) {
   case R.EB.PENDING:
     return t === R.Ft.FREE_GUILD_BOOST_1_MONTH ? C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;

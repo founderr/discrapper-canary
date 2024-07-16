@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(749210),
@@ -55,7 +55,7 @@ return (0, i.jsx)(o.AdvancedScroller, {
   ref: this.scroller,
   className: _.scroller,
   children: (0, i.jsx)('div', {
-    className: s()(this.props.className, _.wrapper),
+    className: l()(this.props.className, _.wrapper),
     children: n
   })
 });

@@ -31,9 +31,9 @@ label: m.Z.Messages.COPY_ID_ROLE
   });
   null != T && N.push(T);
   let h = (null === (t = n.tags) || void 0 === t ? void 0 : t.guild_connections) === null,
-p = n.managed && !h,
-g = null != n && (0, r.pM)(e.id, n.id);
-  return !_ && !p && !g && N.push((0, i.jsx)(s.MenuGroup, {
+g = n.managed && !h,
+p = null != n && (0, r.pM)(e.id, n.id);
+  return !_ && !g && !p && N.push((0, i.jsx)(s.MenuGroup, {
 children: (0, i.jsx)(s.MenuItem, {
   id: 'delete-role',
   label: m.Z.Messages.DELETE,

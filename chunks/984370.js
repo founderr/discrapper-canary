@@ -20,8 +20,8 @@ var a = n(120356),
   T = n(665149),
   h = n(300986),
   N = n(314451),
-  p = n(35583),
-  f = n(981631),
+  f = n(35583),
+  p = n(981631),
   C = n(176505),
   g = n(139715);
 async function S() {
@@ -42,7 +42,7 @@ innerClassname: o,
 transparent: c = !1,
 toolbar: I,
 mobileToolbar: m,
-'aria-label': f,
+'aria-label': p,
 'aria-labelledby': C,
 scrollable: A,
 role: R,
@@ -63,7 +63,7 @@ toolbar: function() {
         className: g.search
       }, null != s ? s : a) : null,
       x && (0, i.jsx)(T.ZP.Divider, {}),
-      (0, i.jsx)(p.Z, {}),
+      (0, i.jsx)(f.Z, {}),
       (0, i.jsx)(d.Z, {
         canShowReminder: !0
       }),
@@ -74,7 +74,7 @@ toolbar: function() {
 }(),
 transparent: c,
 onDoubleClick: S,
-'aria-label': f,
+'aria-label': p,
 'aria-labelledby': C,
 role: R,
 scrollable: A,
@@ -107,7 +107,7 @@ isAuthenticated: t = !0,
   } = e, {
 analyticsLocations: a
   } = (0, c.ZP)(o.Z.HEADER_BAR), r = s()(n.className, {
-[g.forumOrHome]: null != n.channelType && f.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === C.oC.GUILD_HOME
+[g.forumOrHome]: null != n.channelType && p.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === C.oC.GUILD_HOME
   });
   return (0, i.jsx)(c.Gt, {
 value: a,

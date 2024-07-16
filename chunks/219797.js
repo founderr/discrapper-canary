@@ -37,8 +37,8 @@ var i = n(735250),
   T = n(850908),
   h = n(524444),
   N = n(981631),
-  p = n(689938),
-  f = n(736984);
+  f = n(689938),
+  p = n(736984);
 
 function C(e) {
   let t = e.item.originalItem;
@@ -64,8 +64,8 @@ function g(e) {
 n = a.useCallback(() => {
   var e;
   return (0, I.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, N.J0y.IS_CLIP) ? (0, i.jsxs)(l.DY, {
-    text: p.Z.Messages.CLIPS_BETA_TAG_HOVER,
-    className: f.clipPill,
+    text: f.Z.Messages.CLIPS_BETA_TAG_HOVER,
+    className: p.clipPill,
     children: [
       (0, i.jsx)(o.ClipsIcon, {
         size: 'xs',
@@ -74,7 +74,7 @@ n = a.useCallback(() => {
       (0, i.jsx)(r.x, {
         variant: 'text-xs/semibold',
         color: 'always-white',
-        children: p.Z.Messages.CLIP_TAG
+        children: f.Z.Messages.CLIP_TAG
       })
     ]
   }) : null;

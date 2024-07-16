@@ -6,8 +6,8 @@ return T;
 var l = s(735250),
   t = s(470079),
   i = s(120356),
-  r = s.n(i),
-  a = s(481060),
+  a = s.n(i),
+  r = s(481060),
   c = s(541716),
   o = s(752305),
   u = s(893718),
@@ -46,14 +46,14 @@ if (void 0 === _) {
 _,
 T
   ]), (0, l.jsx)('div', {
-className: r()(p.body, x),
+className: a()(p.body, x),
 children: (0, l.jsxs)(d.Z, {
   title: n,
   errors: s,
   disabled: h,
   children: [
     (0, l.jsx)(u.Z, {
-      innerClassName: r()(p.textArea, S),
+      innerClassName: a()(p.textArea, S),
       editorClassName: p.editorTextArea,
       maxCharacterCount: m.$n,
       onChange: function(e, n, s) {
@@ -81,7 +81,7 @@ children: (0, l.jsxs)(d.Z, {
       },
       disableThemedBackground: P
     }),
-    (0, l.jsx)(a.HiddenVisually, {
+    (0, l.jsx)(r.HiddenVisually, {
       children: I.Z.Messages.MAXIMUM_LENGTH.format({
         maxLength: m.$n
       })

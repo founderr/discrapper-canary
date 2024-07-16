@@ -10,8 +10,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(481060),
-  o = n(410575),
-  s = n(358221),
+  s = n(410575),
+  o = n(358221),
   l = n(418469),
   u = n(776031),
   c = n(803647),
@@ -25,7 +25,7 @@ var i = n(442837),
   I = n(689938);
 
 function T(e, t, n) {
-  let r = (0, i.e7)([s.Z], () => s.Z.getSelectedParticipantId(e.id)),
+  let r = (0, i.e7)([o.Z], () => o.Z.getSelectedParticipantId(e.id)),
 a = (0, i.e7)([d.Z], () => null != r ? d.Z.getActiveStreamForStreamKey(r) : null, [r]);
   return (0, i.Wu)([E.default], () => {
 let r = n.filter(e => e.ownerId !== (null == t ? void 0 : t.id)).map(t => ({
@@ -46,14 +46,14 @@ function g(e) {
   let {
 channel: n,
 currentUser: i,
-activeStreams: s,
+activeStreams: o,
 hideSelfOptions: d = !1,
 showReportOption: E = !1,
 handleGoLive: f,
 onClose: g,
 onSelect: S,
 appContext: A = p.IlC.APP
-  } = e, N = _.Z.supports(m.AN.DESKTOP_CAPTURE_APPLICATIONS), v = null !== (t = s.find(e => e.ownerId === (null == i ? void 0 : i.id))) && void 0 !== t ? t : null, O = T(n, i, s), R = (0, u.Z)(v, A), C = (0, l.Z)(v, A, p.VqG), y = null == v ? (0, r.jsx)(a.MenuItem, {
+  } = e, N = _.Z.supports(m.AN.DESKTOP_CAPTURE_APPLICATIONS), v = null !== (t = o.find(e => e.ownerId === (null == i ? void 0 : i.id))) && void 0 !== t ? t : null, O = T(n, i, o), R = (0, u.Z)(v, A), C = (0, l.Z)(v, A, p.VqG), y = null == v ? (0, r.jsx)(a.MenuItem, {
 id: 'share-your-screen',
 label: I.Z.Messages.SHARE_YOUR_SCREEN,
 icon: a.ScreenArrowIcon,
@@ -80,7 +80,7 @@ children: [
   })
 ]
   });
-  return (0, r.jsx)(o.Z, {
+  return (0, r.jsx)(s.Z, {
 section: p.jXE.CONTEXT_MENU,
 children: (0, r.jsxs)(a.Menu, {
   onSelect: S,

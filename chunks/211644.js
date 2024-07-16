@@ -27,7 +27,7 @@ return A;
 var r = n(652874),
   i = n(261376);
 let a = new(n(499303)).I(),
-  o = () => ({
+  s = () => ({
 candidates: new Map(),
 shownFatigableCandidate: null,
 prevFatigableCandidate: null,
@@ -36,7 +36,7 @@ currentlyShown: new Set(),
 currentlyShownGroup: new Set(),
 lastWinnerTime: 0
   }),
-  s = (0, r.Z)(o),
+  o = (0, r.Z)(s),
   l = e => ({
 ...e,
 candidates: new Map(e.candidates),
@@ -77,7 +77,7 @@ if (null != e.shownFatigableCandidate && !t || a.scheduled())
   return e;
 let n = new Date().getTime();
 return null == e.shownFatigableCandidate && n - e.lastWinnerTime < 3600000 ? e : (a.schedule(() => {
-  s.setState(e => {
+  o.setState(e => {
     let t = l(e);
     return E(t, h(t));
   });
@@ -85,31 +85,31 @@ return null == e.shownFatigableCandidate && n - e.lastWinnerTime < 3600000 ? e :
   },
   I = e => {
 let t = i.O.has(e.content);
-s.setState(n => {
+o.setState(n => {
   let r = l(n);
   return t ? c(r, e) : m(d(r, e));
 });
   },
   T = (e, t) => {
-s.setState(n => {
+o.setState(n => {
   let r = l(n);
   return t ? m(u(_(r, e), e)) : u(_(r, e), e);
 });
   },
-  g = e => s.getState().currentlyShown.has(e),
-  S = e => s(t => t.currentlyShown.has(e)),
-  A = e => s(t => e.some(e => t.currentlyShown.has(e))),
+  g = e => o.getState().currentlyShown.has(e),
+  S = e => o(t => t.currentlyShown.has(e)),
+  A = e => o(t => e.some(e => t.currentlyShown.has(e))),
   N = () => {
-let e = [...s.getState().currentlyShown].filter(e => !i.O.has(e)).length;
+let e = [...o.getState().currentlyShown].filter(e => !i.O.has(e)).length;
 return [
-  s.getState().currentlyShown.size,
+  o.getState().currentlyShown.size,
   e
 ];
   },
   v = () => {
-s.setState(o), a.unschedule();
+o.setState(s), a.unschedule();
   };
 
 function O(e) {
-  return s(e);
+  return o(e);
 }

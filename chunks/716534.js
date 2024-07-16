@@ -6,8 +6,8 @@ return k;
 var l = s(735250),
   t = s(470079),
   i = s(512722),
-  r = s.n(i),
-  a = s(742280),
+  a = s.n(i),
+  r = s(742280),
   c = s(442837),
   o = s(692547),
   u = s(481060),
@@ -60,8 +60,8 @@ function k(e) {
   trialId: el,
   trialFooterMessageOverride: et,
   reviewWarningMessage: ei,
-  metadata: er,
-  purchaseState: ea,
+  metadata: ea,
+  purchaseState: er,
   hideSubscriptionDetails: ec,
   referralTrialOfferId: eo,
   isTrial: eu = !1,
@@ -87,12 +87,12 @@ eA = (0, O.Ng)(),
 ev = null == eA ? void 0 : null === (n = eA.discount) || void 0 === n ? void 0 : n.plan_ids.some(e => U.GP[e].skuId === eI),
 eM = !eh && null != eA && null != eI && ev,
 eg = (0, c.e7)([f.Z], () => f.Z.get(V));
-  r()(null != eg, 'Missing plan');
+  a()(null != eg, 'Missing plan');
   let eC = [{
   planId: eg.id,
   quantity: 1
 }],
-eO = ea === T.A.PURCHASING || ea === T.A.COMPLETED,
+eO = er === T.A.PURCHASING || er === T.A.COMPLETED,
 eR = eh || eO,
 [ej, eL] = (0, C.ED)({
   items: eC,
@@ -102,7 +102,7 @@ eR = eh || eO,
   paymentSourceId: X.paymentSourceId,
   currency: X.currency,
   trialId: el,
-  metadata: er
+  metadata: ea
 }),
 [ey, eZ] = (0, C.ED)({
   items: eC,
@@ -111,7 +111,7 @@ eR = eh || eO,
   trialId: el,
   paymentSourceId: X.paymentSourceId,
   currency: X.currency,
-  metadata: er
+  metadata: ea
 }),
 [eb, eD] = (0, C.ED)({
   items: [{
@@ -123,7 +123,7 @@ eR = eh || eO,
   trialId: el,
   paymentSourceId: X.paymentSourceId,
   currency: X.currency,
-  metadata: er
+  metadata: ea
 }),
 [eG, eU] = (0, C.o5)({
   paymentSourceId: X.paymentSourceId,
@@ -259,7 +259,7 @@ eu && ej.subscriptionPeriodEnd !== ey.subscriptionPeriodEnd && (W = ej.subscript
   ]
 });
   }
-  let eQ = a.M.EEA_COUNTRIES.has(P.Z.ipCountryCodeWithFallback),
+  let eQ = r.M.EEA_COUNTRIES.has(P.Z.ipCountryCodeWithFallback),
 {
   checkboxLabel: e$,
   checkboxClassname: e0,
@@ -271,12 +271,12 @@ eu && ej.subscriptionPeriodEnd !== ey.subscriptionPeriodEnd && (W = ej.subscript
   if (e && null != n) {
     let {
       intervalType: e,
-      intervalCount: r
-    } = v.ZP.getIntervalForInvoice(n), a = (0, M.og)((0, M.T4)(n.total, n.currency), e, r), c = null != s ? s : n.subscriptionPeriodEnd;
+      intervalCount: a
+    } = v.ZP.getIntervalForInvoice(n), r = (0, M.og)((0, M.T4)(n.total, n.currency), e, a), c = null != s ? s : n.subscriptionPeriodEnd;
     l = w.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TRIAL_TERMS_LABEL.format({
       termsURL: F.EYA.TERMS,
       paidURL: F.EYA.PAID_TERMS,
-      rate: a,
+      rate: r,
       renewalDate: c
     }), t = H.trialCheckbox, i = H.trialCheckboxLabel;
   }

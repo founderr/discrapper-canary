@@ -1,7 +1,7 @@
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(112724),
   o = n(613611),
   c = n(351248),
@@ -19,7 +19,7 @@ t.Z = (0, r.Z)(e => {
   let {
 participants: t,
 filteredParticipants: n,
-selectedParticipant: l,
+selectedParticipant: s,
 participantsVersion: r,
 layout: I,
 onSelectParticipant: x,
@@ -66,9 +66,9 @@ return (0, i.jsx)(c.Z, {
   participants: t,
   onContextMenu: T
 });
-  if (n = A ? n : t, null == l)
+  if (n = A ? n : t, null == s)
 return 0 === n.length ? (0, i.jsx)(f.Z, {
-  className: s()(g.videoGrid, g.hiddenParticipants),
+  className: l()(g.videoGrid, g.hiddenParticipants),
   channelId: v.id,
   width: R
 }) : (0, i.jsx)(d.Z, {
@@ -91,7 +91,7 @@ return 0 === n.length ? (0, i.jsx)(f.Z, {
 onFullscreenParticipant: N,
 onContextMenuParticipant: T,
 onSelectParticipant: x,
-selectedParticipant: l,
+selectedParticipant: s,
 filteredParticipants: D,
 participants: t,
 popoutWindow: O,

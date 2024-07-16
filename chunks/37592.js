@@ -1,7 +1,7 @@
 t(47120);
 var n = t(735250),
-  r = t(470079),
-  s = t(481060),
+  s = t(470079),
+  r = t(481060),
   l = t(710845),
   o = t(219929),
   i = t(285952),
@@ -18,8 +18,8 @@ configurable: !0,
 writable: !0
   }) : e[a] = t, e;
 }
-let p = new l.Z('PaymentRequest');
-class m extends r.Component {
+let m = new l.Z('PaymentRequest');
+class p extends s.Component {
   componentDidMount() {
 (0, u.d2)().then(e => {
   this.initPaymentRequest(e);
@@ -30,24 +30,24 @@ let {
   canMakePayment: e
 } = this.state;
 if (null == e)
-  return (0, n.jsx)(s.Button, {
+  return (0, n.jsx)(r.Button, {
     submitting: !0,
-    look: s.Button.Looks.FILLED
+    look: r.Button.Looks.FILLED
   });
 if (!1 === e)
-  return (0, n.jsx)(s.Button, {
+  return (0, n.jsx)(r.Button, {
     disabled: !0,
-    look: s.Button.Looks.FILLED,
+    look: r.Button.Looks.FILLED,
     children: E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_UNSUPPORTED
   });
 let a = (0, c.isAndroidChrome)(),
   t = a ? E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GPAY : E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GENERIC,
-  r = a ? o.ZP.Types.G_PAY : o.ZP.Types.PAYMENT_REQUEST,
+  s = a ? o.ZP.Types.G_PAY : o.ZP.Types.PAYMENT_REQUEST,
   {
     className: l,
     iconClassName: u
   } = this.props;
-return (0, n.jsx)(s.Button, {
+return (0, n.jsx)(r.Button, {
   onClick: this.handleOnClick,
   className: l,
   children: (0, n.jsxs)(i.Z, {
@@ -55,7 +55,7 @@ return (0, n.jsx)(s.Button, {
     children: [
       (0, n.jsx)(o.ZP, {
         className: u,
-        type: r
+        type: s
       }),
       t
     ]
@@ -89,7 +89,7 @@ super(...e), _(this, 'state', {}), _(this, 'initPaymentRequest', async e => {
     t(null);
   });
   let n = await a.canMakePayment();
-  p.info('PaymentRequest availablity check', n), this.setState({
+  m.info('PaymentRequest availablity check', n), this.setState({
     canMakePayment: !!n,
     paymentRequest: a
   });
@@ -105,4 +105,4 @@ super(...e), _(this, 'state', {}), _(this, 'initPaymentRequest', async e => {
 });
   }
 }
-a.Z = m;
+a.Z = p;

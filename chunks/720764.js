@@ -23,8 +23,8 @@ function h(e) {
   let n, {
   guild: t,
   channel: h,
-  customWebhooks: p,
-  editedWebhook: g,
+  customWebhooks: g,
+  editedWebhook: p,
   selectableWebhookChannels: C,
   refToScroller: f,
   errors: x,
@@ -65,7 +65,7 @@ n,
 t
   ]);
   a.useEffect(() => {
-0 === p.length && v();
+0 === g.length && v();
   }, []);
   let M = null !== n;
   return (0, i.jsxs)(l.FormSection, {
@@ -80,7 +80,7 @@ children: [
   (0, i.jsx)(l.FormDivider, {
     className: N.headerDivider
   }),
-  p.length > 0 ? (0, i.jsxs)(i.Fragment, {
+  g.length > 0 ? (0, i.jsxs)(i.Fragment, {
     children: [
       (0, i.jsx)(l.Button, {
         className: N.createButton,
@@ -90,8 +90,8 @@ children: [
         children: _.Z.Messages.INTEGRATIONS_WEBHOOKS_CREATE
       }),
       (0, i.jsx)(I.Z, {
-        webhooks: p,
-        editedWebhook: g,
+        webhooks: g,
+        editedWebhook: p,
         selectableWebhookChannels: C,
         lastCreatedWebhookId: null == A ? void 0 : A.id,
         errors: x,

@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s = n(149765),
+var r, i, a, s, o = n(149765),
   l = n(442837),
   u = n(570140),
   c = n(223892),
@@ -51,7 +51,7 @@ if ((0, h.TG)(e, a))
   return !0;
   }
   let r = T.Z.getRole(t.id, t.getEveryoneRoleId()),
-i = null != r && !s.e$(r.permissions, S.Plq.VIEW_CHANNEL),
+i = null != r && !o.e$(r.permissions, S.Plq.VIEW_CHANNEL),
 a = (0, h.wB)(e, e.permissionOverwrites[t.id]);
   if (i && !a) {
 for (let e of Object.values(T.Z.getRoles(t.id)))
@@ -76,8 +76,8 @@ return !1;
   if (null == i)
 return !1;
   let a = n.has(t),
-o = O(r, i);
-  return a !== o && (o ? n.add(t) : n.delete(t), !0);
+s = O(r, i);
+  return a !== s && (s ? n.add(t) : n.delete(t), !0);
 }
 
 function C() {
@@ -132,12 +132,12 @@ return null == n && (! function(e) {
 return null != e && this.isChannelGated(e, t) && !N.has(e);
   }
 }
-o = 'GatedChannelStore', (a = 'displayName') in(i = b) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'GatedChannelStore', (a = 'displayName') in(i = b) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new b(u.Z, {
+}) : i[a] = s, t.Z = new b(u.Z, {
   CONNECTION_OPEN: C,
   OVERLAY_INITIALIZE: C,
   CACHE_LOADED_LAZY: C,

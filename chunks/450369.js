@@ -5,8 +5,8 @@ return R;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(512722),
-  s = n.n(l),
+  s = n(512722),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(475179),
@@ -35,8 +35,8 @@ let R = 16 / 9,
 let {
   stageParticipant: t,
   rtcParticipant: n,
-  channel: l,
-  guildId: s,
+  channel: s,
+  guildId: l,
   user: r,
   width: c,
   isModerator: d,
@@ -50,14 +50,14 @@ let {
 } = t;
 return (0, i.jsx)(o.Popout, {
   preload: null == n ? void 0 : () => (0, E.W)(n.user, {
-    guildId: l.guild_id,
-    channelId: l.id
+    guildId: s.guild_id,
+    channelId: s.id
   }),
   renderPopout: e => (0, i.jsx)(C.Z, {
     ...e,
     location: 'StageTile',
-    guildId: s,
-    channelId: l.id,
+    guildId: l,
+    channelId: s.id,
     userId: r.id
   }),
   position: 'right',
@@ -69,7 +69,7 @@ return (0, i.jsx)(o.Popout, {
       participant: n,
       aspectRatio: R,
       blocked: m,
-      channel: l,
+      channel: s,
       className: b.tile,
       inCall: !0,
       inPopout: h,
@@ -85,8 +85,8 @@ return (0, i.jsx)(o.Popout, {
 let {
   stageParticipant: t,
   rtcParticipant: n,
-  channel: l,
-  width: s,
+  channel: s,
+  width: l,
   isModerator: d,
   onContextMenu: h,
   inPopout: E
@@ -99,20 +99,20 @@ let {
   selectedParticipant: P,
   largeStream: O
 } = (0, r.cj)([p.Z], () => ({
-  selectedParticipant: null != l ? p.Z.getSelectedParticipant(l.id) : null,
-  largeStream: null != l && p.Z.getStageStreamSize(l.id)
+  selectedParticipant: null != s ? p.Z.getSelectedParticipant(s.id) : null,
+  largeStream: null != s && p.Z.getStageStreamSize(s.id)
 })), y = a.useCallback((e, t) => {
   if (e.type === M.fO.STREAM && 0 === L.filter(t => (0, _.V9)(t) === e.id && t.state !== A.jm8.ENDED).length) {
-    if (!(0, f.p9)(l, T.Z, I.Z, x.Z, m.Z)[0])
+    if (!(0, f.p9)(s, T.Z, I.Z, x.Z, m.Z)[0])
       return;
     (0, u.rn)((0, _.my)(e.id), {
       forceMultiple: t.shiftKey
     });
   }
-  (null == P ? void 0 : P.id) === e.id ? O ? (c.Z.selectParticipant(l.id, null), c.Z.updateStageStreamSize(l.id, !1)) : c.Z.updateStageStreamSize(l.id, !0) : (c.Z.updateStageStreamSize(l.id, !1), c.Z.selectParticipant(l.id, e.id));
+  (null == P ? void 0 : P.id) === e.id ? O ? (c.Z.selectParticipant(s.id, null), c.Z.updateStageStreamSize(s.id, !1)) : c.Z.updateStageStreamSize(s.id, !0) : (c.Z.updateStageStreamSize(s.id, !1), c.Z.selectParticipant(s.id, e.id));
 }, [
   L,
-  l,
+  s,
   P,
   O
 ]);
@@ -121,7 +121,7 @@ return (0, i.jsx)(S.Z, {
   aspectRatio: R,
   fit: n.type === M.fO.USER ? N.L.COVER : void 0,
   blocked: j,
-  channel: l,
+  channel: s,
   className: b.tile,
   inCall: !0,
   inPopout: E,
@@ -129,7 +129,7 @@ return (0, i.jsx)(S.Z, {
   onContextMenu: h,
   paused: !1,
   pulseSpeakingIndicator: !C.enabled,
-  width: s,
+  width: l,
   children: d && n.type === M.fO.USER && (0, i.jsx)(Z.Z, {})
 }, v);
   };
@@ -137,17 +137,17 @@ t.Z = a.memo(function(e) {
   var t;
   let {
 participant: a,
-channel: l,
+channel: s,
 width: o
-  } = e, c = (0, h.bp)(), u = l.getGuildId();
-  s()(null != u, 'Channel cannot be guildless');
+  } = e, c = (0, h.bp)(), u = s.getGuildId();
+  l()(null != u, 'Channel cannot be guildless');
   let {
 user: m
-  } = a, _ = (0, r.e7)([p.Z], () => p.Z.getParticipant(l.id, a.id), [
-l.id,
+  } = a, _ = (0, r.e7)([p.Z], () => p.Z.getParticipant(s.id, a.id), [
+s.id,
 a.id
-  ]), f = (0, r.e7)([v.ZP], () => v.ZP.isModerator(m.id, l.id), [
-l.id,
+  ]), f = (0, r.e7)([v.ZP], () => v.ZP.isModerator(m.id, s.id), [
+s.id,
 m.id
   ]);
   if (null == _ || _.type === M.fO.ACTIVITY)
@@ -185,7 +185,7 @@ return null;
           ...t,
           user: m,
           guildId: u,
-          channel: l,
+          channel: s,
           showMediaItems: !0,
           showStageChannelItems: !0,
           showChatItems: !1
@@ -200,7 +200,7 @@ C = _.type === M.fO.USER && !(null === (t = _.voiceState) || void 0 === t ? void
 children: C ? (0, i.jsx)(j, {
   stageParticipant: a,
   rtcParticipant: _,
-  channel: l,
+  channel: s,
   guildId: u,
   user: m,
   width: o,
@@ -210,7 +210,7 @@ children: C ? (0, i.jsx)(j, {
 }) : (0, i.jsx)(L, {
   stageParticipant: a,
   rtcParticipant: _,
-  channel: l,
+  channel: s,
   guildId: u,
   user: m,
   width: o,

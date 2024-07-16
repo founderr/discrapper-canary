@@ -6,8 +6,8 @@ return F;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(866442),
+  s = n.n(a),
+  o = n(866442),
   l = n(442837),
   u = n(692547),
   c = n(481060),
@@ -57,7 +57,7 @@ function k(e) {
   let {
 type: t,
 shown: a,
-onClick: s
+onClick: o
   } = e, u = (0, l.e7)([S.default], () => {
 let e = S.default.getCurrentUser();
 return O.ZP.canUsePremiumProfileCustomization(e);
@@ -108,9 +108,9 @@ children: e => (0, r.jsx)(c.Clickable, {
           ...a
         });
       };
-    }), null == s || s();
+    }), null == o || o();
   },
-  className: o()(w.premiumIconWrapper, {
+  className: s()(w.premiumIconWrapper, {
     [w.visible]: a,
     [w.clickable]: !u
   }),
@@ -132,10 +132,10 @@ darkenOnHover: t,
 profileType: n,
 profileLabel: i,
 icon: a,
-...o
-  } = e, s = x[n], l = 'pencil' === a ? c.PencilIcon : c.SettingsIcon;
+...s
+  } = e, o = x[n], l = 'pencil' === a ? c.PencilIcon : c.SettingsIcon;
   return (0, r.jsx)(c.Clickable, {
-...o,
+...s,
 'aria-label': i,
 className: t ? w.pencilContainerDark : w.pencilContainer,
 children: (0, r.jsx)(c.Tooltip, {
@@ -144,8 +144,8 @@ children: (0, r.jsx)(c.Tooltip, {
     ...e,
     color: 'currentColor',
     size: 'custom',
-    width: s,
-    height: s,
+    width: o,
+    height: o,
     className: w.editIcon
   })
 })
@@ -174,7 +174,7 @@ status: X
 displayProfile: d,
 size: (0, D.e7)(S),
 canAnimate: x || !q ? W : z
-  }), $ = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), J = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80), ee = (0, s._i)((0, f.ZP)(a.getAvatarURL(E, J), $, !1)), et = (0, h.Z)(null !== (t = null == d ? void 0 : d.primaryColor) && void 0 !== t ? t : ee).hsl, en = (0, m.Z)({
+  }), $ = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), J = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80), ee = (0, o._i)((0, f.ZP)(a.getAvatarURL(E, J), $, !1)), et = (0, h.Z)(null !== (t = null == d ? void 0 : d.primaryColor) && void 0 !== t ? t : ee).hsl, en = (0, m.Z)({
 analyticsLocation: {
   page: M.ZY5.USER_POPOUT,
   section: M.jXE.PROFILE_POPOUT
@@ -187,7 +187,7 @@ profileType: S,
 hasBanner: null != Q,
 hasProfileEffect: V,
 children: (0, r.jsxs)('div', {
-  className: o()(w.banner, (0, D.Ae)({
+  className: s()(w.banner, (0, D.Ae)({
     profileType: S,
     user: {
       hasBanner: null != Q,

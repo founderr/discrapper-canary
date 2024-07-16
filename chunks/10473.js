@@ -1,5 +1,5 @@
-var i, a = n(108131),
-  s = n.n(a),
+var i, s = n(108131),
+  a = n.n(s),
   r = n(442837),
   l = n(570140),
   o = n(70956);
@@ -21,7 +21,7 @@ status: 'unloaded'
   h = {};
 class I extends(i = r.ZP.Store) {
   getSearchResult(e) {
-let t = h[s().v3(JSON.stringify(e))];
+let t = h[a().v3(JSON.stringify(e))];
 return null == t || t.loadedAt < Date.now() - o.Z.Millis.HOUR ? E : t;
   }
   hasLoadedStaticClanDiscovery() {

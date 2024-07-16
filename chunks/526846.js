@@ -5,8 +5,8 @@ return w;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(613828),
   o = n(772848),
   c = n(442837),
@@ -42,7 +42,7 @@ let U = 'vc-activities-'.concat((0, o.Z)()),
   w = a.forwardRef(function(e, t) {
 let {
   channel: n,
-  isHovered: l,
+  isHovered: s,
   closePopout: o,
   onMouseEnter: w,
   onMouseLeave: B,
@@ -83,10 +83,10 @@ a.useEffect(() => {
   q,
   X
 ]), a.useEffect(() => {
-  !l && o();
+  !s && o();
 }, [
   o,
-  l
+  s
 ]);
 let Q = (0, h.bp)(),
   {
@@ -137,7 +137,7 @@ let ei = a.useCallback(() => {
     w,
     n
   ]),
-  el = V ? (0, i.jsxs)(r.rU, {
+  es = V ? (0, i.jsxs)(r.rU, {
     to: R.Z5c.ACTIVITIES,
     children: [
       (0, i.jsx)('img', {
@@ -150,7 +150,7 @@ let ei = a.useCallback(() => {
       })
     ]
   }) : W ? (0, i.jsxs)(d.Clickable, {
-    className: s()(L.clickableBanner),
+    className: l()(L.clickableBanner),
     onClick: () => {
       H(), o(), (0, f.uL)(R.Z5c.ACTIVITY_DETAILS(b.Fu), {
         sourceLocationStack: $
@@ -167,7 +167,7 @@ let ei = a.useCallback(() => {
       })
     ]
   }) : F ? (0, i.jsxs)(d.Clickable, {
-    className: s()(L.clickableBanner),
+    className: l()(L.clickableBanner),
     onClick: () => {
       H(), o(), (0, f.uL)(R.Z5c.ACTIVITY_DETAILS(b.NC), {
         sourceLocationStack: $
@@ -184,7 +184,7 @@ let ei = a.useCallback(() => {
       })
     ]
   }) : z ? (0, i.jsxs)(d.Clickable, {
-    className: s()(L.clickableBanner),
+    className: l()(L.clickableBanner),
     onClick: () => {
       H(), o(), (0, f.uL)(R.Z5c.ACTIVITY_DETAILS(b.Eq), {
         sourceLocationStack: $
@@ -261,7 +261,7 @@ return (0, i.jsx)(_.Gt, {
             }),
             (0, i.jsx)(_.Gt, {
               value: $,
-              children: el
+              children: es
             }),
             (0, i.jsxs)('div', {
               className: L.activityContainer,
@@ -276,7 +276,7 @@ return (0, i.jsx)(_.Gt, {
                   animatedDivClass: L.activitySuggestion
                 }, e.application.id)),
                 (0, i.jsx)('div', {
-                  className: s()(L.wumpusRocketOuterContainer, {
+                  className: l()(L.wumpusRocketOuterContainer, {
                     [L.wumpusReducedMotion]: K
                   }),
                   children: (0, i.jsx)('div', {

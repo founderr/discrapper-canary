@@ -5,8 +5,8 @@ return h;
 });
 var i = n(735250);
 n(470079);
-var a = n(990547),
-  s = n(481060),
+var s = n(990547),
+  a = n(481060),
   r = n(230711),
   l = n(960359),
   o = n(730417),
@@ -28,7 +28,7 @@ function h(e) {
 markAsDismissed: t,
 partnerGame: n
   } = e;
-  (0, o.hs)(n, a.ImpressionTypes.POPOUT, a.ImpressionNames.DROPS_QUEST_ENROLLMENT);
+  (0, o.hs)(n, s.ImpressionTypes.POPOUT, s.ImpressionNames.DROPS_QUEST_ENROLLMENT);
   let h = (0, o.au)(n);
   if (null == h)
 return null;
@@ -48,49 +48,49 @@ children: [
     alt: '',
     className: p
   }),
-  (0, i.jsx)(s.Clickable, {
+  (0, i.jsx)(a.Clickable, {
     className: _.__invalid_buttonClose,
     'aria-label': u.Z.Messages.CLOSE,
     onClick: T,
-    children: (0, i.jsx)(s.CloseSmallIcon, {
+    children: (0, i.jsx)(a.CloseSmallIcon, {
       size: 'xs',
       color: 'currentColor',
       className: _.closeIcon
     })
   }),
-  (0, i.jsx)(s.Heading, {
+  (0, i.jsx)(a.Heading, {
     className: _.title,
     variant: 'heading-md/extrabold',
     children: I
   }),
-  (0, i.jsx)(s.Text, {
+  (0, i.jsx)(a.Text, {
     variant: 'text-sm/medium',
     className: _.subTitle,
     children: m
   }),
-  h.config.autoEnrollment ? (0, i.jsx)(s.Button, {
-    color: s.Button.Colors.BRAND_INVERTED,
+  h.config.autoEnrollment ? (0, i.jsx)(a.Button, {
+    color: a.Button.Colors.BRAND_INVERTED,
     fullWidth: !0,
     onClick: () => {
       r.Z.open(c.oAB.INVENTORY), t(d.L.PRIMARY);
     },
     children: u.Z.Messages.LEARN_MORE
-  }) : (0, i.jsx)(s.Button, {
+  }) : (0, i.jsx)(a.Button, {
     innerClassName: _.button,
-    color: s.Button.Colors.BRAND_INVERTED,
+    color: a.Button.Colors.BRAND_INVERTED,
     fullWidth: !0,
     onClick: () => {
       (0, l.RJ)(h.drop.dropsQuestId), r.Z.open(c.oAB.INVENTORY), t(d.L.PRIMARY);
     },
     children: u.Z.Messages.DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA
   }),
-  (0, i.jsx)(s.Button, {
+  (0, i.jsx)(a.Button, {
     className: _.linkButtonContainer,
     innerClassName: _.linkButton,
     onClick: T,
-    look: s.Button.Looks.LINK,
+    look: a.Button.Looks.LINK,
     fullWidth: !0,
-    color: s.Button.Colors.WHITE,
+    color: a.Button.Colors.WHITE,
     children: u.Z.Messages.NOT_NOW
   }),
   (0, i.jsx)('div', {

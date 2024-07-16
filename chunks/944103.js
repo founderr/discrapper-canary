@@ -5,8 +5,8 @@ return h;
 });
 var i = n(470079),
   a = n(442837),
-  l = n(131704),
-  s = n(9156),
+  s = n(131704),
+  l = n(9156),
   r = n(423589),
   o = n(674190),
   c = n(624617),
@@ -27,16 +27,16 @@ function h(e) {
 n = (0, r.Mn)('useShouldRenderBanner'),
 h = (0, a.e7)([
   c.Z,
-  s.ZP
+  l.ZP
 ], () => {
   let {
     guild_id: t,
     id: n
   } = e;
-  if (!l.$N.has(e.type))
+  if (!s.$N.has(e.type))
     return !1;
-  let i = s.ZP.resolveUnreadSetting(e),
-    a = s.ZP.getChannelUnreadSetting(t, n),
+  let i = l.ZP.resolveUnreadSetting(e),
+    a = l.ZP.getChannelUnreadSetting(t, n),
     r = c.Z.getNumberOfRendersSince(u.NOTICE_RENDER.PER_SECONDS),
     o = c.Z.getNumberOfChannelVisitsSince(t, n, u.CHANNEL_VISTS.PER_SECONDS);
   return a === d.i.UNSET && i !== d.i.ALL_MESSAGES && r <= u.NOTICE_RENDER.MAX && o >= u.CHANNEL_VISTS.MIN;
@@ -49,7 +49,7 @@ h,
 e.guild_id,
 e.id
   ]), i.useEffect(() => {
-l.$N.has(e.type) && (0, o.a)(e.guild_id, e.id);
+s.$N.has(e.type) && (0, o.a)(e.guild_id, e.id);
   }, [
 e.guild_id,
 e.id,

@@ -6,24 +6,24 @@ return h;
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(481060),
-  s = n(430824),
+  s = n(481060),
+  l = n(430824),
   r = n(914010),
   o = n(689938),
   c = n(591574);
 let d = () => (0, i.jsx)(i.Fragment, {
 children: o.Z.Messages.TIP_INSTANT_INVITE_BODY3.format({
   shareIcon: o.Z.Messages.INSTANT_INVITE,
-  shareIconHook: () => (0, i.jsx)(l.GroupPlusIcon, {
+  shareIconHook: () => (0, i.jsx)(s.GroupPlusIcon, {
     className: c.icon
   }, 'icon')
 })
   }),
   u = () => {
 let e = (0, a.e7)([
-    s.Z,
+    l.Z,
     r.Z
-  ], () => s.Z.getGuild(r.Z.getGuildId()), []),
+  ], () => l.Z.getGuild(r.Z.getGuildId()), []),
   t = null == e ? void 0 : e.name;
 return (0, i.jsx)(i.Fragment, {
   children: o.Z.Messages.TIP_WRITING_MESSAGES_BODY3.format({
@@ -84,10 +84,10 @@ let a = {
       body: o.Z.Messages.TIP_FRIENDS_LIST_BODY3.format()
     }
   },
-  l = null !== (t = a[e.replace(/-/g, '_').toUpperCase()]) && void 0 !== t ? t : {};
+  s = null !== (t = a[e.replace(/-/g, '_').toUpperCase()]) && void 0 !== t ? t : {};
 return {
-  title: l.title,
-  body: l.body,
-  isLongText: null !== (n = l.isLongText) && void 0 !== n && n
+  title: s.title,
+  body: s.body,
+  isLongText: null !== (n = s.isLongText) && void 0 !== n && n
 };
   };

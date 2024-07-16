@@ -6,8 +6,8 @@ return C;
 var i = n(735250);
 n(470079);
 var a = n(410030),
-  l = n(906732),
-  s = n(769654),
+  s = n(906732),
+  l = n(769654),
   r = n(785717),
   o = n(726059),
   c = n(162267),
@@ -26,7 +26,7 @@ user: t,
 channelId: n
   } = e, {
 analyticsLocations: C
-  } = (0, l.ZP)(), {
+  } = (0, s.ZP)(), {
 trackUserProfileAction: g
   } = (0, r.KZ)(), I = (0, a.ZP)(), {
 mutualFriends: x,
@@ -60,7 +60,7 @@ children: [
         guild: n,
         nick: a,
         theme: I,
-        onSelect: () => (0, s.X)(n.id)
+        onSelect: () => (0, l.X)(n.id)
       }, n.id);
     })
   }),
@@ -83,11 +83,11 @@ children: [
       let {
         key: t,
         user: a,
-        status: l
+        status: s
       } = e;
       return (0, i.jsx)(p.T, {
         user: a,
-        status: l,
+        status: s,
         onSelect: () => {
           (0, h.openUserProfileModal)({
             sourceAnalyticsLocations: C,

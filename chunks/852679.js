@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(668781),
-  o = n(355467),
-  s = n(821849),
+  s = n(355467),
+  o = n(821849),
   l = n(78839),
   u = n(626135),
   c = n(74538),
@@ -42,8 +42,8 @@ null != m && m(), a.Z.show({
 return;
   }
   Promise.all([
-(0, o.tZ)(),
-(0, s.Y2)()
+(0, s.tZ)(),
+(0, o.Y2)()
   ]);
   await (0, i.openModalLazy)(async () => {
 let {

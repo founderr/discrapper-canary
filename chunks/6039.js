@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(442837),
+  s = n(470079),
+  a = n(442837),
   r = n(481060),
   l = n(568154),
   o = n(703656),
@@ -26,22 +26,22 @@ t.Z = e => {
   let {
 guildId: v,
 inviteCode: Z
-  } = e, [L, O] = a.useState(f.hO.INITIAL), R = (0, s.e7)([h.Z], () => h.Z.get(v)), x = (0, s.e7)([m.Z], () => m.Z.getRequest(v)), b = (0, s.e7)([c.Z], () => c.Z.getGuild(v)), {
+  } = e, [L, O] = s.useState(f.hO.INITIAL), R = (0, a.e7)([h.Z], () => h.Z.get(v)), x = (0, a.e7)([m.Z], () => m.Z.getRequest(v)), b = (0, a.e7)([c.Z], () => c.Z.getGuild(v)), {
 hasFetchedRequestToJoinGuilds: P,
 guildPreviewDisabled: M
-  } = (0, s.cj)([m.Z], () => ({
+  } = (0, a.cj)([m.Z], () => ({
 hasFetchedRequestToJoinGuilds: m.Z.hasFetchedRequestToJoinGuilds,
 guildPreviewDisabled: m.Z.getJoinRequestGuild(v)
   }));
-  a.useEffect(() => {
+  s.useEffect(() => {
 null != b && (0, o.uL)(S.Z5c.CHANNEL(v));
   }, [
 b,
 v
-  ]), a.useEffect(() => {
+  ]), s.useEffect(() => {
 !P && _.Z.fetchRequestToJoinGuilds();
   }, [P]);
-  let D = a.useCallback(e => {
+  let D = s.useCallback(e => {
   O(t => Math.max(t, e));
 }, []),
 y = async e => {

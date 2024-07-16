@@ -19,8 +19,8 @@ var i = n(735250),
   T = n(661824),
   h = n(430824),
   N = n(626135),
-  p = n(76535),
-  f = n(866104),
+  f = n(76535),
+  p = n(866104),
   C = n(886176),
   g = n(981631),
   S = n(689938),
@@ -33,7 +33,7 @@ guildId: n
   } = e, s = (0, c.e7)([h.Z], () => h.Z.getGuild(n)), {
 loading: R,
 subscriptionsSettings: O
-  } = (0, p.H)(n), {
+  } = (0, f.H)(n), {
 listingsLoaded: x
   } = (0, I.eD)(n), M = (0, I.ue)(n, {
 publishedOnly: !0
@@ -55,7 +55,7 @@ children: (0, i.jsx)(d.Spinner, {})
   }) : null == s || null == O ? null : (0, i.jsxs)('div', {
 className: A.guildShopEmbed,
 children: [
-  (0, i.jsx)(f.Z, {
+  (0, i.jsx)(p.Z, {
     coverImageAsset: null !== (t = O.cover_image_asset) && void 0 !== t ? t : null
   }),
   (0, i.jsx)(d.Spacer, {

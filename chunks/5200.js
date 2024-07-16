@@ -3,8 +3,8 @@ n.d(t, {
 return x;
   }
 }), n(47120);
-var i, a, l = n(735250),
-  s = n(470079),
+var i, a, s = n(735250),
+  l = n(470079),
   r = n(120356),
   o = n.n(r),
   c = n(338545),
@@ -44,15 +44,15 @@ locationObject: {},
 onActivityItemSelected: a,
 embeddedActivitiesManager: _.Z,
 assetNames: g
-  }), [Z, A] = s.useState(!1), M = s.useCallback(() => {
+  }), [Z, A] = l.useState(!1), M = l.useCallback(() => {
 A(!0);
-  }, [A]), b = s.useCallback(() => {
+  }, [A]), b = l.useCallback(() => {
 A(!1);
-  }, [A]), R = s.useMemo(() => (0, l.jsx)('div', {
+  }, [A]), R = l.useMemo(() => (0, s.jsx)('div', {
 className: C.overlayBadge,
-children: (0, l.jsx)('div', {
+children: (0, s.jsx)('div', {
   className: C.badgeContainer,
-  children: (0, l.jsx)(m.Z, {
+  children: (0, s.jsx)(m.Z, {
     name: i.application.name,
     labelType: S
   })
@@ -60,14 +60,14 @@ children: (0, l.jsx)('div', {
   }), [
 i.application.name,
 S
-  ]), j = s.useMemo(() => {
+  ]), j = l.useMemo(() => {
 switch (v) {
   case h.JS.JOIN:
-    return (0, l.jsx)('div', {
+    return (0, s.jsx)('div', {
       className: C.activityAction,
-      children: (0, l.jsx)('div', {
+      children: (0, s.jsx)('div', {
         className: C.activityActionButton,
-        children: (0, l.jsx)(d.Text, {
+        children: (0, s.jsx)(d.Text, {
           variant: 'text-sm/medium',
           color: 'always-white',
           children: E.Z.Messages.JOIN
@@ -75,11 +75,11 @@ switch (v) {
       })
     });
   case h.JS.LEAVE:
-    return (0, l.jsx)('div', {
+    return (0, s.jsx)('div', {
       className: C.activityAction,
-      children: (0, l.jsx)('div', {
+      children: (0, s.jsx)('div', {
         className: o()(C.activityActionButton, C.activityActionButtonDanger),
-        children: (0, l.jsx)(d.Text, {
+        children: (0, s.jsx)(d.Text, {
           variant: 'text-sm/medium',
           color: 'always-white',
           children: E.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE
@@ -88,10 +88,10 @@ switch (v) {
     });
   case h.JS.START:
   default:
-    return (0, l.jsx)(l.Fragment, {});
+    return (0, s.jsx)(s.Fragment, {});
 }
   }, [v]);
-  return (0, l.jsx)(d.Button, {
+  return (0, s.jsx)(d.Button, {
 onClick: T,
 color: 'transparent',
 look: d.Button.Looks.BLANK,
@@ -101,7 +101,7 @@ onBlur: b,
 onMouseEnter: M,
 onMouseLeave: b,
 innerClassName: C.activityItemButtonInnerClass,
-children: (0, l.jsx)(d.Spring, {
+children: (0, s.jsx)(d.Spring, {
   config: I,
   from: {
     value: 0
@@ -113,7 +113,7 @@ children: (0, l.jsx)(d.Spring, {
     let {
       value: t
     } = e;
-    return (0, l.jsx)(c.animated.div, {
+    return (0, s.jsx)(c.animated.div, {
       className: o()((0, u.Q)(f.BRd.DARK), C.activityItem, x, {
         [C.activityItem_13_11]: 0 === r,
         [C.activityItem_16_9]: 1 === r
@@ -127,9 +127,9 @@ children: (0, l.jsx)(d.Spring, {
           1.05
         ]).to(e => 'scale('.concat(e, ')'))
       },
-      children: (0, l.jsxs)(l.Fragment, {
+      children: (0, s.jsxs)(s.Fragment, {
         children: [
-          (0, l.jsx)(p.Z, {
+          (0, s.jsx)(p.Z, {
             imageBackground: N,
             applicationName: i.application.name,
             imageClassName: C.activitySuggestionImage,

@@ -46,7 +46,7 @@ onClose: s
 }
   ];
 
-  function p(e) {
+  function g(e) {
 _.includes(e) ? N(n => n.filter(n => n !== e)) : N(n => [
   ...n,
   e
@@ -101,14 +101,14 @@ children: [
           children: [
             (0, i.jsxs)(r.Clickable, {
               className: m.optionText,
-              onClick: () => p(t),
+              onClick: () => g(t),
               children: [
                 (0, i.jsx)('div', {
                   children: (0, i.jsx)(r.Checkbox, {
                     type: r.Checkbox.Types.INVERTED,
                     size: 20,
                     value: _.includes(t),
-                    onChange: () => p(t)
+                    onChange: () => g(t)
                   })
                 }),
                 (0, i.jsx)(r.Text, {

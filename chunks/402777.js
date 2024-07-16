@@ -5,8 +5,8 @@ return R;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(597312),
-  s = n(727637),
+  s = n(597312),
+  l = n(727637),
   r = n(410030),
   o = n(100527),
   c = n(906732),
@@ -41,7 +41,7 @@ analyticsLocations: j
 statusReactReplyEnabled: O
   } = (0, h.t)({
 location: 'SimplifiedProfilePanel'
-  }), y = a.useRef(null), D = (0, s.Z)(y), k = e => {
+  }), y = a.useRef(null), D = (0, l.Z)(y), k = e => {
 (0, N.openUserProfileModal)({
   sourceAnalyticsLocations: j,
   userId: t.id,
@@ -63,7 +63,7 @@ children: (0, i.jsx)(u.Mt, {
     themeOverride: P,
     className: b.container,
     children: [
-      (0, i.jsxs)(l.u2, {
+      (0, i.jsxs)(s.u2, {
         children: [
           (0, i.jsxs)(I.Z, {
             profileType: M.y0.PANEL,

@@ -1,8 +1,8 @@
 n(653041);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(392711),
   o = n.n(l),
   c = n(442837),
@@ -32,7 +32,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class O extends a.PureComponent {
+class O extends s.PureComponent {
   createSound() {
 let {
   soundpack: e
@@ -46,19 +46,19 @@ this.setProblemsTimeout();
 let {
   ready: n,
   hide: i,
-  problems: a
+  problems: s
 } = this.state, {
-  connected: s,
+  connected: a,
   soundpack: r
-} = this.props, l = s && n && !i && !a;
-e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== s || l ? (s && null != this.videoRef && d.K.get(A.wli) && this._connectedSound.play(), this.setState({
+} = this.props, l = a && n && !i && !s;
+e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== a || l ? (a && null != this.videoRef && d.K.get(A.wli) && this._connectedSound.play(), this.setState({
   problems: !1,
-  hide: s
+  hide: a
 })) : t.hide !== i ? (i ? this.clearProblemsTimeout() : this.setProblemsTimeout(), this.setState({
   shouldRender: !0
 }), setTimeout(() => this.setState({
   shouldRender: !i
-}), 200)) : t.problems !== a && a && _.Z.checkIncidents();
+}), 200)) : t.problems !== s && s && _.Z.checkIncidents();
   }
   componentWillUnmount() {
 this.clearProblemsTimeout();
@@ -73,9 +73,9 @@ let {
 if (!this.state.shouldRender)
   return null;
 {
-  let a = this._loadingText,
-    s = null;
-  return null != this._eventLoadingText && (a = this._eventLoadingText), null != t && (a = t.name, s = t.incident_updates[0].body), (0, i.jsxs)('div', {
+  let s = this._loadingText,
+    a = null;
+  return null != this._eventLoadingText && (s = this._eventLoadingText), null != t && (s = t.name, a = t.incident_updates[0].body), (0, i.jsxs)('div', {
     className: Z.container,
     'data-fade': n,
     style: {
@@ -102,11 +102,11 @@ if (!this.state.shouldRender)
               }),
               (0, i.jsx)('div', {
                 className: null != t ? Z.title : Z.tip,
-                children: a
+                children: s
               }),
               (0, i.jsx)('div', {
                 className: Z.body,
-                children: s
+                children: a
               })
             ]
           })
@@ -322,14 +322,14 @@ t.Z = c.ZP.connectStores([
   let {
 isTryingToConnect: t,
 connected: n,
-incident: a,
-soundpack: s,
+incident: s,
+soundpack: a,
 reducedMotion: r
   } = e;
   return t ? (0, i.jsx)(O, {
 reducedMotion: r,
-soundpack: s,
+soundpack: a,
 connected: n,
-incident: a
+incident: s
   }) : null;
 });

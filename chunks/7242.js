@@ -6,8 +6,8 @@ return T;
 var r = n(735250),
   i = n(120356),
   a = n.n(i),
-  o = n(442837),
-  s = n(481060),
+  s = n(442837),
+  o = n(481060),
   l = n(493683),
   u = n(447543),
   c = n(904245),
@@ -25,13 +25,13 @@ function T(e) {
 user: t,
 className: n,
 onClose: i
-  } = e, T = (0, o.e7)([d.default], () => d.default.getId()), g = (0, o.e7)([
+  } = e, T = (0, s.e7)([d.default], () => d.default.getId()), g = (0, s.e7)([
 _.Z,
 f.Z
   ], () => {
 var e;
 return _.Z.getChannel(null === (e = f.Z.getVoiceStateForUser(T)) || void 0 === e ? void 0 : e.channelId);
-  }), S = null == g ? void 0 : g.isPrivate(), A = (0, o.e7)([E.Z], () => E.Z.can(p.Plq.CREATE_INSTANT_INVITE, g));
+  }), S = null == g ? void 0 : g.isPrivate(), A = (0, s.e7)([E.Z], () => E.Z.can(p.Plq.CREATE_INSTANT_INVITE, g));
   if (null == g || S || !A || t.bot)
 return null;
   let N = async () => {
@@ -47,9 +47,9 @@ await u.Z.createInvite(null == g ? void 0 : g.id, {
   return (0, r.jsx)(h.tG, {
 action: 'PRESS_INVITE_TO_CALL',
 text: m.Z.Messages.USER_PROFILE_INVITE_TO_CALL,
-icon: s.GroupPlusIcon,
+icon: o.GroupPlusIcon,
 fullWidth: !0,
-color: a()(s.Button.Colors.BRAND, I.color),
+color: a()(o.Button.Colors.BRAND, I.color),
 className: n,
 onClick: N
   });

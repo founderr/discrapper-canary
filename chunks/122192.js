@@ -4,8 +4,8 @@ return u;
   }
 });
 var n = t(735250),
-  r = t(470079),
-  s = t(481060),
+  s = t(470079),
+  r = t(481060),
   l = t(462566);
 t(285952);
 var o = t(603421),
@@ -16,9 +16,9 @@ let u = e => {
 billingError: a,
 onCardInfoChange: t
   } = e, u = null != a && (null == a.code || (0, o.ly)(a) === o.Rg.CREDIT_CARD_INFORMATION);
-  return (0, n.jsxs)(r.Fragment, {
+  return (0, n.jsxs)(s.Fragment, {
 children: [
-  u ? (0, n.jsx)(s.FormErrorBlock, {
+  u ? (0, n.jsx)(r.FormErrorBlock, {
     className: c.errorBlock,
     children: i.Z.Messages.BILLING_ERROR_SECTION_CARD
   }) : null,

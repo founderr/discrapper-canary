@@ -19,8 +19,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(693789),
-  s = n(481060),
+  s = n(693789),
+  o = n(481060),
   l = n(785717),
   u = n(663054);
 
@@ -29,21 +29,21 @@ function c(e) {
 action: t,
 className: n,
 innerClassName: i,
-onClick: s,
+onClick: o,
 ...c
   } = e, {
 trackUserProfileAction: d
   } = (0, l.KZ)();
-  return (0, r.jsx)(o.zx, {
+  return (0, r.jsx)(s.zx, {
 className: a()(u.button, n),
 innerClassName: a()(u.buttonInner, i),
-color: a()(o.Tt.PRIMARY, u.color),
-look: o.zx.Looks.FILLED,
-size: o.zx.Sizes.SMALL,
+color: a()(s.Tt.PRIMARY, u.color),
+look: s.zx.Looks.FILLED,
+size: s.zx.Sizes.SMALL,
 onClick: e => {
   null != t && d({
     action: t
-  }), null == s || s(e);
+  }), null == o || o(e);
 },
 ...c
   });
@@ -79,7 +79,7 @@ className: _,
 innerClassName: E,
 ...f
   } = e;
-  return (0, r.jsx)(s.TooltipContainer, {
+  return (0, r.jsx)(o.TooltipContainer, {
 text: n,
 'aria-label': !1,
 delay: i,
@@ -88,8 +88,8 @@ tooltipClassName: l,
 children: (0, r.jsx)(c, {
   className: a()(u.icon, _),
   innerClassName: a()(u.icon, E),
-  look: o.zx.Looks.FILLED,
-  size: o.zx.Sizes.NONE,
+  look: s.zx.Looks.FILLED,
+  size: s.zx.Sizes.NONE,
   grow: !1,
   'aria-label': n,
   ...f,
@@ -120,7 +120,7 @@ function f(e) {
 isHovering: t,
 className: n,
 innerClassName: i,
-...s
+...o
   } = e;
   return (0, r.jsx)(_, {
 className: a()(u.hover, {
@@ -128,7 +128,7 @@ className: a()(u.hover, {
 }, n),
 innerClassName: a()(u.hover, i),
 color: u.hoverColor,
-look: o.zx.Looks.BLANK,
-...s
+look: s.zx.Looks.BLANK,
+...o
   });
 }

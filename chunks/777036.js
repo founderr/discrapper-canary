@@ -5,8 +5,8 @@ return i;
 });
 var r, i, a = n(735250);
 n(470079);
-var o = n(120356),
-  s = n.n(o),
+var s = n(120356),
+  o = n.n(s),
   l = n(481060),
   u = n(447836);
 (r = i || (i = {}))[r.WARNING = 0] = 'WARNING', r[r.INFO = 1] = 'INFO', r[r.ERROR = 2] = 'ERROR', r[r.POSITIVE = 3] = 'POSITIVE';
@@ -16,7 +16,7 @@ children: t,
 messageType: n,
 className: r,
 textColor: i = 'text-normal',
-textVariant: o = 'text-sm/medium'
+textVariant: s = 'text-sm/medium'
   } = e, c = function(e) {
 switch (e) {
   case 0:
@@ -41,7 +41,7 @@ switch (e) {
 }
   }(n);
   return (0, a.jsxs)('div', {
-className: s()(u.container, d, r),
+className: o()(u.container, d, r),
 children: [
   (0, a.jsx)('div', {
     className: u.iconDiv,
@@ -52,7 +52,7 @@ children: [
   (0, a.jsx)(l.Text, {
     className: u.text,
     color: i,
-    variant: o,
+    variant: s,
     children: t
   })
 ]

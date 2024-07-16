@@ -29,17 +29,17 @@ return null;
 I = n.toString(),
 R = n.getIconURL(40, !0),
 C = null,
-p = T[T.length - 1];
+g = T[T.length - 1];
   if (null == n.icon && null != I) {
-var g;
-p = null !== (g = T[(C = (0, i.Zg)(I)).length - 1]) && void 0 !== g ? g : T[T.length - 1];
+var p;
+g = null !== (p = T[(C = (0, i.Zg)(I)).length - 1]) && void 0 !== p ? p : T[T.length - 1];
   }
   return (0, s.jsxs)('div', {
 className: E.container,
 children: [
   (0, s.jsxs)('div', {
     style: {
-      fontSize: p
+      fontSize: g
     },
     children: [
       null != C ? (0, s.jsx)('div', {

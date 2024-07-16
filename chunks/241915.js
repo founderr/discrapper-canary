@@ -5,8 +5,8 @@ return m;
 }), n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(699581),
   u = n(689425),
   c = n(358085),
@@ -46,10 +46,10 @@ let {
   edgeOffsetLeft: r,
   edgeOffsetBottom: i,
   edgeOffsetRight: a,
-  maxX: o,
-  maxY: s,
+  maxX: s,
+  maxY: o,
   dockedRect: u
-} = this.props, _ = Math.round(n), E = Math.round(s - i - this._height), f = Math.round(r), h = Math.round(o - a - this._width), p = (0, c.getPlatform)() !== c.PlatformTypes.WEB && this.inPopout ? 22 : 0;
+} = this.props, _ = Math.round(n), E = Math.round(o - i - this._height), f = Math.round(r), h = Math.round(s - a - this._width), p = (0, c.getPlatform)() !== c.PlatformTypes.WEB && this.inPopout ? 22 : 0;
 if (null != u) {
   var m, I;
   return {
@@ -140,7 +140,7 @@ let {
   dockedRect: n,
   hidden: r,
   roundCorners: a,
-  className: o
+  className: s
 } = this.props, l = {};
 return null != n && (l = {
   transform: 'translate3d('.concat(n.x, ', ').concat(n.y, ', 0)'),
@@ -149,7 +149,7 @@ return null != n && (l = {
 }), (0, i.jsx)(u.Z, {
   dragAnywhere: !0,
   ref: this.handleSetDraggableRef,
-  className: s()(_.pictureInPictureWindow, o, {
+  className: o()(_.pictureInPictureWindow, s, {
     [_.hidden]: r,
     [_.borderRadius]: a
   }),
@@ -189,8 +189,8 @@ super(...e), E(this, '_draggable', void 0), E(this, '_innerDiv', void 0), E(this
   let {
     maxX: r,
     maxY: i
-  } = this.props, a = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY), o = !0, s = !0;
-  if (a.x > r / 2 && (s = !1), a.y > i / 2 && (o = !1), n = o && s ? d.VD2.TOP_LEFT : o && !s ? d.VD2.TOP_RIGHT : !o && s ? d.VD2.BOTTOM_LEFT : d.VD2.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
+  } = this.props, a = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY), s = !0, o = !0;
+  if (a.x > r / 2 && (o = !1), a.y > i / 2 && (s = !1), n = s && o ? d.VD2.TOP_LEFT : s && !o ? d.VD2.TOP_RIGHT : !s && o ? d.VD2.BOTTOM_LEFT : d.VD2.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
     let {
       id: e,
       onMove: t
@@ -210,8 +210,8 @@ selectedPIPWindow: t,
 pipWindows: n,
 maxX: r,
 maxY: a,
-onWindowMove: o,
-dockedRect: s,
+onWindowMove: s,
+dockedRect: o,
 pictureInPictureComponents: l,
 appContext: u,
 roundCorners: c
@@ -234,10 +234,10 @@ children: (() => {
     position: t.position,
     id: t.id,
     hidden: t.hidden,
-    onMove: o,
+    onMove: s,
     maxX: r,
     maxY: a,
-    dockedRect: s,
+    dockedRect: o,
     edgeOffsetTop: f,
     edgeOffsetBottom: h,
     edgeOffsetLeft: p,

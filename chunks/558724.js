@@ -30,8 +30,8 @@ lastFetched: null,
 lastSeen: null
   },
   N = h,
-  p = {},
-  f = null,
+  f = {},
+  p = null,
   C = 86400000;
 (s = i || (i = {})).IS_OWNER = 'is_owner', s.IS_ADMIN = 'is_admin', s.IS_COMMUNITY = 'is_community', s.GUILD_SIZE = 'guild_size', s.IS_HUB = 'is_hub', s.IS_VIEWING = 'is_viewing', s.GUILD_PERMISSIONS = 'guild_permissions', s.GUILD_SIZE_ALL = 'guild_size_all';
 let g = new Set(Object.values(i));
@@ -85,7 +85,7 @@ for (let l of Object.values(u.Z.getGuilds())) {
     u = _.Z.can(m.Plq.ADMINISTRATOR, l);
   if (t.includes('is_owner') && !c || t.includes('is_admin') && !u)
     continue;
-  null == (p = null != p ? p : {})[e.key] && (p[e.key] = e);
+  null == (f = null != f ? f : {})[e.key] && (f[e.key] = e);
   let T = E.Z.getGuildId(),
     h = null != T && T === l.id;
   if (!t.includes('is_viewing') || !!h) {
@@ -104,15 +104,15 @@ survey: t
   if (N.lastFetched = Date.now(), null == N.hiddenSurveys && (N.hiddenSurveys = {}), null != t && null == N.hiddenSurveys[t.key]) {
 if (!S(t))
   return;
-f = t;
+p = t;
   }
 }
 
 function R() {
-  if (null != f && (S(f) || (f = null, 0)))
+  if (null != p && (S(p) || (p = null, 0)))
 return !1;
   ! function() {
-let e = Object.values(p = null != p ? p : {})[0];
+let e = Object.values(f = null != f ? f : {})[0];
 if (null != e && S(e)) {
   A({
     type: 'SURVEY_FETCHED',
@@ -120,9 +120,9 @@ if (null != e && S(e)) {
   });
   return;
 }
-if (null == f)
+if (null == p)
   return;
-f = null;
+p = null;
   }();
 }
 class O extends(a = l.ZP.PersistedStore) {
@@ -133,7 +133,7 @@ N = null != e ? e : h, this.syncWith([E.Z], R);
 return N;
   }
   getCurrentSurvey() {
-return f;
+return p;
   }
   getSurveyOverride() {
 return N.surveyOverride;
@@ -174,7 +174,7 @@ if (!(null != N.lastFetched && Date.now() - (null !== (e = N.lastFetched) && voi
 let {
   key: t
 } = e;
-N.hiddenSurveys[t] = !0, f = null, p = null != p ? p : {}, delete p[t];
+N.hiddenSurveys[t] = !0, p = null, f = null != f ? f : {}, delete f[t];
   },
   SURVEY_OVERRIDE: function(e) {
 let {

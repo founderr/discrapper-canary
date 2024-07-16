@@ -1,38 +1,38 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return D;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(512722),
-  i = s.n(a),
-  r = s(442837),
-  o = s(481060),
-  l = s(295474),
-  c = s(150039),
-  d = s(126631),
-  _ = s(433411),
-  E = s(532432),
-  u = s(134795),
-  T = s(513901),
-  I = s(451392),
-  S = s(906364),
-  N = s(621853),
-  C = s(271383),
-  m = s(594174),
-  A = s(74538),
-  h = s(51144),
-  g = s(18438),
-  O = s(778825),
-  p = s(52597),
-  R = s(430131),
-  x = s(133484),
-  M = s(689938),
-  f = s(109254);
+var n = t(735250);
+t(470079);
+var a = t(512722),
+  i = t.n(a),
+  r = t(442837),
+  o = t(481060),
+  l = t(295474),
+  c = t(150039),
+  d = t(126631),
+  _ = t(433411),
+  E = t(532432),
+  u = t(134795),
+  T = t(513901),
+  I = t(451392),
+  S = t(906364),
+  N = t(621853),
+  C = t(271383),
+  m = t(594174),
+  A = t(74538),
+  h = t(51144),
+  g = t(18438),
+  O = t(778825),
+  p = t(52597),
+  R = t(430131),
+  x = t(133484),
+  M = t(689938),
+  f = t(109254);
 
 function D(e) {
-  var t, s, a, D;
+  var s, t, a, D;
   let {
 guild: P
   } = e, L = (0, r.e7)([m.default], () => {
@@ -50,17 +50,17 @@ guild: F
   } = (0, r.cj)([O.Z], () => {
 let {
   pendingAvatar: e,
-  pendingNickname: t,
-  pendingBio: s,
+  pendingNickname: s,
+  pendingBio: t,
   pendingPronouns: n,
   pendingBanner: a,
   pendingThemeColors: i
 } = O.Z.getAllPending();
 return {
   pendingAvatar: e,
-  pendingNickname: t,
+  pendingNickname: s,
   pendingBanner: a,
-  pendingBio: s,
+  pendingBio: t,
   pendingPronouns: n,
   pendingThemeColors: i,
   errors: O.Z.getErrors(),
@@ -75,10 +75,10 @@ k = A.ZP.canUsePremiumProfileCustomization(L),
 H = (0, c.gd)(Z, null == Y ? void 0 : Y.avatar),
 W = (0, c.f$)(v, null == w ? void 0 : w.banner),
 K = (0, p.p)(U, null == w ? void 0 : w.themeColors),
-z = null !== (t = null == w ? void 0 : w.bio) && void 0 !== t ? t : '',
-Q = null !== (s = null == w ? void 0 : w.pronouns) && void 0 !== s ? s : '',
-X = (e, t, s) => {
-  s(null != e ? e : null != t ? null : void 0);
+z = null !== (s = null == w ? void 0 : w.bio) && void 0 !== s ? s : '',
+Q = null !== (t = null == w ? void 0 : w.pronouns) && void 0 !== t ? t : '',
+X = (e, s, t) => {
+  t(null != e ? e : null != s ? null : void 0);
 };
   return (0, n.jsxs)('div', {
 className: f.sectionsContainer,

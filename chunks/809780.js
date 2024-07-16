@@ -24,8 +24,8 @@ var i, a, s, r, l = n(470079),
   T = n(607070),
   h = n(853856),
   N = n(181945),
-  p = n(220444),
-  f = n(601070),
+  f = n(220444),
+  p = n(601070),
   C = n(344185),
   g = n(569471),
   S = n(723170),
@@ -290,7 +290,7 @@ t = function(e) {
     if (null == n)
       return;
     let i = M.ZP.getSelectableChannelIds(n),
-      a = f.Z.getActiveJoinedUnreadThreadsForGuild(n);
+      a = p.Z.getActiveJoinedUnreadThreadsForGuild(n);
     i.forEach(i => {
       var s;
       W(e, t, n, i);
@@ -321,7 +321,7 @@ return;
   if (a.isPrivate()) {
 if (0 === b.ZP.getMentionCount(i))
   return;
-  } else if (!(0, p.d)(a) && 0 === b.ZP.getMentionCount(i))
+  } else if (!(0, f.d)(a) && 0 === b.ZP.getMentionCount(i))
 return;
   if (!a.isPrivate() && !P.Z.can(k.Plq.READ_MESSAGE_HISTORY, a))
 return;

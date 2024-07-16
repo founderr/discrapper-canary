@@ -5,8 +5,8 @@ return f;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(338545),
   o = n(393238),
   c = n(410030),
@@ -169,7 +169,7 @@ function f(e) {
   let {
 children: t,
 fullHeight: n = !1
-  } = e, [l, f] = a.useState(!1), {
+  } = e, [s, f] = a.useState(!1), {
 height: E,
 ref: C
   } = (0, o.Z)(), {
@@ -183,7 +183,7 @@ to: {
   height: x
 },
 config: h,
-delay: l ? 0 : 800,
+delay: s ? 0 : 800,
 onRest: () => f(!0)
   }), N = (0, r.useSpring)({
 from: {
@@ -202,7 +202,7 @@ children: (0, i.jsxs)(r.animated.div, {
   className: u.heightContainer,
   style: {
     ...T,
-    overflow: l ? 'initial' : 'hidden'
+    overflow: s ? 'initial' : 'hidden'
   },
   children: [
     (0, i.jsx)(m, {
@@ -211,15 +211,15 @@ children: (0, i.jsxs)(r.animated.div, {
       axleColor: A
     }),
     (0, i.jsx)('div', {
-      className: s()(u.content, n && u.fullHeight),
+      className: l()(u.content, n && u.fullHeight),
       ref: C,
       children: (0, i.jsx)('div', {
-        className: s()(u.innerContent, n && u.fullHeight),
+        className: l()(u.innerContent, n && u.fullHeight),
         style: {
           backgroundColor: S
         },
         children: (0, i.jsx)(r.animated.div, {
-          className: s()(u.contentAnimContainer, n && u.fullHeight),
+          className: l()(u.contentAnimContainer, n && u.fullHeight),
           style: N,
           children: t
         })

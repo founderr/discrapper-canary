@@ -6,10 +6,10 @@ return c;
 return i;
   }
 }), a(47120);
-var t = a(818083),
-  s = a(981631),
+var s = a(818083),
+  t = a(981631),
   r = a(689938);
-n.ZP = (0, t.B)({
+n.ZP = (0, s.B)({
   kind: 'user',
   id: '2021-08_regional_payment_methods',
   label: 'Regional Payment Methods',
@@ -22,7 +22,7 @@ validCountryCodes: []
   id: 1,
   label: 'Regional Payment Method for Germany',
   config: {
-    enabledPaymentTypes: [s.HeQ.SOFORT],
+    enabledPaymentTypes: [t.HeQ.SOFORT],
     forceCountryCode: 'DE',
     validCountryCodes: ['DE']
   }
@@ -32,8 +32,8 @@ validCountryCodes: []
   label: 'Regional Payment Method for US',
   config: {
     enabledPaymentTypes: [
-      s.HeQ.VENMO,
-      s.HeQ.CASH_APP
+      t.HeQ.VENMO,
+      t.HeQ.CASH_APP
     ],
     forceCountryCode: 'US',
     validCountryCodes: ['US']
@@ -61,7 +61,7 @@ validCountryCodes: []
   id: 5,
   label: 'Regional Payment Method for Poland',
   config: {
-    enabledPaymentTypes: [s.HeQ.PRZELEWY24],
+    enabledPaymentTypes: [t.HeQ.PRZELEWY24],
     forceCountryCode: 'PL',
     validCountryCodes: ['PL']
   }
@@ -70,7 +70,7 @@ validCountryCodes: []
   id: 6,
   label: 'Enable paysafecard',
   config: {
-    enabledPaymentTypes: [s.HeQ.PAYSAFE_CARD],
+    enabledPaymentTypes: [t.HeQ.PAYSAFE_CARD],
     forceCountryCode: 'DE',
     validCountryCodes: [
       'BG',
@@ -87,7 +87,7 @@ validCountryCodes: []
   id: 7,
   label: 'Regional Payment Method for Philippines',
   config: {
-    enabledPaymentTypes: [s.HeQ.GCASH],
+    enabledPaymentTypes: [t.HeQ.GCASH],
     forceCountryCode: 'PH',
     validCountryCodes: ['PH']
   }
@@ -96,7 +96,7 @@ validCountryCodes: []
   id: 8,
   label: 'Regional Payment Method for Malaysia',
   config: {
-    enabledPaymentTypes: [s.HeQ.GRABPAY_MY],
+    enabledPaymentTypes: [t.HeQ.GRABPAY_MY],
     forceCountryCode: 'MY',
     validCountryCodes: ['MY']
   }
@@ -105,7 +105,7 @@ validCountryCodes: []
   id: 9,
   label: 'Regional Payment Method for Vietnam',
   config: {
-    enabledPaymentTypes: [s.HeQ.MOMO_WALLET],
+    enabledPaymentTypes: [t.HeQ.MOMO_WALLET],
     forceCountryCode: 'VN',
     validCountryCodes: ['VN']
   }
@@ -114,7 +114,7 @@ validCountryCodes: []
   id: 10,
   label: 'Regional Payment Method for Indonesia',
   config: {
-    enabledPaymentTypes: [s.HeQ.GOPAY_WALLET],
+    enabledPaymentTypes: [t.HeQ.GOPAY_WALLET],
     forceCountryCode: 'ID',
     validCountryCodes: ['ID']
   }
@@ -123,7 +123,7 @@ validCountryCodes: []
   id: 11,
   label: 'Regional Payment Method for South Korea',
   config: {
-    enabledPaymentTypes: [s.HeQ.KAKAOPAY],
+    enabledPaymentTypes: [t.HeQ.KAKAOPAY],
     forceCountryCode: 'KR',
     validCountryCodes: ['KR']
   }
@@ -133,9 +133,9 @@ validCountryCodes: []
   label: 'Regional Payment Method for Belgium',
   config: {
     enabledPaymentTypes: [
-      s.HeQ.PAYSAFE_CARD,
-      s.HeQ.SOFORT,
-      s.HeQ.BANCONTACT
+      t.HeQ.PAYSAFE_CARD,
+      t.HeQ.SOFORT,
+      t.HeQ.BANCONTACT
     ],
     forceCountryCode: 'BE',
     validCountryCodes: ['BE']
@@ -146,9 +146,9 @@ validCountryCodes: []
   label: 'Regional Payment Method for Austria',
   config: {
     enabledPaymentTypes: [
-      s.HeQ.PAYSAFE_CARD,
-      s.HeQ.EPS,
-      s.HeQ.SOFORT
+      t.HeQ.PAYSAFE_CARD,
+      t.HeQ.EPS,
+      t.HeQ.SOFORT
     ],
     forceCountryCode: 'AT',
     validCountryCodes: ['AT']
@@ -159,9 +159,9 @@ validCountryCodes: []
   label: 'Regional Payment Method for Netherlands',
   config: {
     enabledPaymentTypes: [
-      s.HeQ.PAYSAFE_CARD,
-      s.HeQ.IDEAL,
-      s.HeQ.SOFORT
+      t.HeQ.PAYSAFE_CARD,
+      t.HeQ.IDEAL,
+      t.HeQ.SOFORT
     ],
     forceCountryCode: 'NL',
     validCountryCodes: ['NL']
@@ -172,8 +172,8 @@ validCountryCodes: []
   label: 'Launch Paysafecard and Sofort',
   config: {
     enabledPaymentTypes: [
-      s.HeQ.PAYSAFE_CARD,
-      s.HeQ.SOFORT
+      t.HeQ.PAYSAFE_CARD,
+      t.HeQ.SOFORT
     ],
     forceCountryCode: 'ES',
     validCountryCodes: [
@@ -186,7 +186,7 @@ validCountryCodes: []
   id: 16,
   label: 'Launch Cash App',
   config: {
-    enabledPaymentTypes: [s.HeQ.CASH_APP],
+    enabledPaymentTypes: [t.HeQ.CASH_APP],
     forceCountryCode: 'US',
     validCountryCodes: ['US']
   }

@@ -5,8 +5,8 @@ return g;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(338545),
-  s = n(442837),
+  s = n(338545),
+  l = n(442837),
   r = n(780384),
   o = n(481060),
   c = n(435064),
@@ -38,7 +38,7 @@ stream: t,
 inPopout: n
   } = e, {
 reducedMotion: g
-  } = a.useContext(r.Sf), I = (0, a.useRef)(null), x = u.n.getState().clipsButtonRef, T = (0, h.V9)(t), N = (0, s.e7)([c.Z], () => c.Z.getActiveAnimation()), v = (0, s.Wu)([c.Z], () => c.Z.getStreamClipAnimations(T)), S = (0, a.useRef)();
+  } = a.useContext(r.Sf), I = (0, a.useRef)(null), x = u.n.getState().clipsButtonRef, T = (0, h.V9)(t), N = (0, l.e7)([c.Z], () => c.Z.getActiveAnimation()), v = (0, l.Wu)([c.Z], () => c.Z.getStreamClipAnimations(T)), S = (0, a.useRef)();
   a.useEffect(() => () => {
 (0, d.Gh)(T);
   }, [T]);
@@ -113,7 +113,7 @@ j = (0, o.useTransition)(v, {
     null != t.item && null != v.find(e => e.timestamp === t.item.timestamp) && (0, d.Gh)(T, t.item.timestamp);
   }
 }, 'animate-always');
-  return (0, l.useChain)([
+  return (0, s.useChain)([
 M,
 R
   ], [
@@ -125,14 +125,14 @@ children: [
     className: m.hidden,
     ref: I
   }),
-  b((e, t) => null != t && (0, i.jsx)(l.animated.div, {
+  b((e, t) => null != t && (0, i.jsx)(s.animated.div, {
     className: m.whiteFlash,
     style: e
   })),
   (0, i.jsx)(p.ZP, {
     children: (0, i.jsx)('div', {
       className: m.hidden,
-      children: j((e, t, n, a) => (null == t ? void 0 : t.thumbnail) != null && (0, i.jsx)(l.animated.img, {
+      children: j((e, t, n, a) => (null == t ? void 0 : t.thumbnail) != null && (0, i.jsx)(s.animated.img, {
         src: t.thumbnail,
         className: m.movingImage,
         style: e

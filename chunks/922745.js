@@ -10,8 +10,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(442837),
-  s = n(692547),
+  s = n(442837),
+  o = n(692547),
   l = n(215569),
   u = n(481060),
   c = n(19780),
@@ -29,7 +29,7 @@ title: t,
 onJumpToChannel: n,
 idle: i,
 preventIdleComponent: a
-  } = e, l = (0, o.e7)([c.Z], () => c.Z.getChannelId()), d = null != l ? (0, r.jsx)(f.Z, {
+  } = e, l = (0, s.e7)([c.Z], () => c.Z.getChannelId()), d = null != l ? (0, r.jsx)(f.Z, {
 voiceChannelId: l,
 idle: i
   }) : null;
@@ -51,7 +51,7 @@ children: [
       (0, r.jsx)(E.Z, {
         className: m.headerText,
         size: E.Z.Sizes.SIZE_16,
-        color: s.Z.unsafe_rawColors.WHITE_500.css,
+        color: o.Z.unsafe_rawColors.WHITE_500.css,
         children: t
       })
     ]
@@ -66,8 +66,8 @@ function T(e) {
 children: t,
 idle: n,
 onJumpToChannel: i,
-backgroundKey: o,
-onActive: s,
+backgroundKey: s,
+onActive: o,
 onForceIdle: u,
 renderBottomLeftControls: c,
 renderBottomRightControls: E,
@@ -78,8 +78,8 @@ innerClassName: g,
 ...S
   } = e;
   return (0, r.jsxs)('div', {
-onMouseMove: s,
-onMouseDown: s,
+onMouseMove: o,
+onMouseDown: o,
 onMouseLeave: u,
 className: a()(m.pictureInPictureVideo, {
   [m.idle]: n
@@ -90,7 +90,7 @@ children: [
     children: (0, r.jsx)(_.B, {
       className: g,
       children: t
-    }, o)
+    }, s)
   }),
   null != f ? (0, r.jsx)(h.Z, {
     size: 'small',

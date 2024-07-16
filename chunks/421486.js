@@ -1,8 +1,8 @@
 n(47120);
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(442837),
   c = n(481060),
   d = n(906732),
@@ -20,13 +20,13 @@ var p = n(785717),
   A = n(689938),
   N = n(926708);
 (i = r || (r = {}))[i.NOT_CHECKED = 0] = 'NOT_CHECKED', i[i.NOT_OVERFLOWING = 1] = 'NOT_OVERFLOWING', i[i.OVERFLOWING_LARGE_ONLY = 2] = 'OVERFLOWING_LARGE_ONLY', i[i.OVERFLOWING_ALL = 3] = 'OVERFLOWING_ALL';
-let v = o.memo(function(e) {
+let v = s.memo(function(e) {
   let {
 user: t,
 mutualFriends: n,
 mutualGuilds: r,
 onClose: i,
-analyticsLocation: s,
+analyticsLocation: o,
 maxIcons: u = 3,
 underlineTextOnHover: h = !1,
 showTooltips: m = !0
@@ -37,7 +37,7 @@ guildId: T,
 channelId: v,
 messageId: O,
 roleId: R
-  } = (0, p.KZ)(), C = o.useMemo(() => {
+  } = (0, p.KZ)(), C = s.useMemo(() => {
 var e;
 return null !== (e = null == n ? void 0 : n.map(e => {
   let {
@@ -45,7 +45,7 @@ return null !== (e = null == n ? void 0 : n.map(e => {
   } = e;
   return t;
 })) && void 0 !== e ? e : [];
-  }, [n]), y = o.useMemo(() => {
+  }, [n]), y = s.useMemo(() => {
 var e;
 return null !== (e = null == r ? void 0 : r.map(e => {
   let {
@@ -53,16 +53,16 @@ return null !== (e = null == r ? void 0 : r.map(e => {
   } = e;
   return t;
 })) && void 0 !== e ? e : [];
-  }, [r]), D = o.useMemo(() => A.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
+  }, [r]), D = s.useMemo(() => A.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
 count: C.length
-  }), [C]), L = o.useMemo(() => A.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
+  }), [C]), L = s.useMemo(() => A.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
 count: y.length
-  }), [y]), b = o.useRef(null), [M, P] = o.useState(!1), [U, w] = o.useState(!1), x = o.useCallback(() => {
+  }), [y]), b = s.useRef(null), [M, P] = s.useState(!1), [U, w] = s.useState(!1), x = s.useCallback(() => {
 if (null != b.current) {
   var e;
   w((null === (e = b.current) || void 0 === e ? void 0 : e.clientHeight) > 19), P(!0);
 }
-  }, []), G = o.useCallback(e => () => {
+  }, []), G = s.useCallback(e => () => {
 (0, g.openUserProfileModal)({
   userId: t.id,
   sourceAnalyticsLocations: I,
@@ -71,10 +71,10 @@ if (null != b.current) {
   messageId: O,
   roleId: R,
   section: e,
-  analyticsLocation: s
+  analyticsLocation: o
 }), null == i || i();
   }, [
-s,
+o,
 I,
 i,
 t.id,
@@ -83,7 +83,7 @@ v,
 O,
 R
   ]);
-  o.useEffect(() => {
+  s.useEffect(() => {
 x();
   }, [
 x,
@@ -158,16 +158,16 @@ children: [
 ]
   });
 });
-t.ZP = o.memo(function(e) {
+t.ZP = s.memo(function(e) {
   var t, n;
   let {
 user: r,
 onClose: i,
-className: o,
-sourceAnaylticsLocations: s
+className: s,
+sourceAnaylticsLocations: o
   } = e, {
 analyticsLocations: _
-  } = (0, d.ZP)(), E = null !== (n = null !== (t = null == s ? void 0 : s[0]) && void 0 !== t ? t : null == _ ? void 0 : _[0]) && void 0 !== n ? n : null, f = (0, u.e7)([h.default], () => h.default.getId()), p = r.id === f, g = r.bot || p, {
+  } = (0, d.ZP)(), E = null !== (n = null !== (t = null == o ? void 0 : o[0]) && void 0 !== t ? t : null == _ ? void 0 : _[0]) && void 0 !== n ? n : null, f = (0, u.e7)([h.default], () => h.default.getId()), p = r.id === f, g = r.bot || p, {
 enabled: S
   } = (0, m.qI)({
 autoTrackExposure: !1,
@@ -179,7 +179,7 @@ mutualGuilds: O
 mutualFriends: R
   } = (0, I.Z)(r.id);
   return !S || g || (null == R || 0 === R.length) && (null == O || 0 === O.length) ? null : (0, a.jsxs)('div', {
-className: l()(N.mainContainer, o),
+className: l()(N.mainContainer, s),
 children: [
   (0, a.jsx)(c.Heading, {
     variant: 'eyebrow',

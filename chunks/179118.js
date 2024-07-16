@@ -1,41 +1,41 @@
-n.d(t, {
+s.d(t, {
   Z: function() {
 return k;
   }
-}), n(47120);
-var r = n(735250),
-  s = n(470079),
-  a = n(120356),
-  o = n.n(a),
-  i = n(392711),
-  l = n.n(i),
-  c = n(442837),
-  d = n(481060),
-  u = n(37234),
-  p = n(194359),
-  g = n(700582),
-  f = n(925329),
-  C = n(479446),
-  m = n(522489),
-  _ = n(93127),
-  h = n(814443),
-  b = n(590783),
-  x = n(699516),
-  I = n(246946),
-  E = n(594174),
-  L = n(572004),
-  S = n(669079),
-  v = n(74538),
-  T = n(51144),
-  N = n(981631),
-  O = n(474936),
-  j = n(689938),
-  Z = n(882284);
+}), s(47120);
+var n = s(735250),
+  r = s(470079),
+  a = s(120356),
+  o = s.n(a),
+  i = s(392711),
+  l = s.n(i),
+  c = s(442837),
+  d = s(481060),
+  u = s(37234),
+  p = s(194359),
+  g = s(700582),
+  f = s(925329),
+  C = s(479446),
+  m = s(522489),
+  _ = s(93127),
+  h = s(814443),
+  b = s(590783),
+  x = s(699516),
+  I = s(246946),
+  E = s(594174),
+  L = s(572004),
+  S = s(669079),
+  v = s(74538),
+  T = s(51144),
+  N = s(981631),
+  O = s(474936),
+  j = s(689938),
+  Z = s(882284);
 
 function k(e) {
   let {
 giftCode: t,
-application: n,
+application: s,
 sku: a,
 subscriptionPlan: i,
 selectedGiftStyle: l,
@@ -44,7 +44,7 @@ hasSentMessage: p,
 giftRecipient: C,
 giftMessageError: _,
 isSendingMessage: h
-  } = e, [x, E] = s.useState(d.CopyInput.Modes.DEFAULT), k = (0, c.e7)([I.Z], () => I.Z.enabled), A = p || null != l && null != C, P = (null == a ? void 0 : a.productLine) === N.POd.COLLECTIBLES, B = () => null != i ? i.skuId : null != a ? a.id : null, M = () => {
+  } = e, [x, E] = r.useState(d.CopyInput.Modes.DEFAULT), k = (0, c.e7)([I.Z], () => I.Z.enabled), A = p || null != l && null != C, P = (null == a ? void 0 : a.productLine) === N.POd.COLLECTIBLES, B = () => null != i ? i.skuId : null != a ? a.id : null, M = () => {
 let e;
 let t = null != l && O.V4.includes(l);
 return null != _ ? j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB : null == i ? null : (e = i.interval === O.rV.MONTH ? A ? t ? j.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY : A ? t ? j.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
@@ -78,13 +78,13 @@ switch (x) {
   default:
     e = j.Z.Messages.COPY;
 }
-return (0, r.jsxs)('div', {
+return (0, n.jsxs)('div', {
   className: Z.giftCodeSection,
   children: [
-    (0, r.jsx)(d.FormTitle, {
+    (0, n.jsx)(d.FormTitle, {
       children: j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_PRIVATE_LINK
     }),
-    null != t && (0, r.jsx)(d.CopyInput, {
+    null != t && (0, n.jsx)(d.CopyInput, {
       hideMessage: k ? j.Z.Messages.GIFT_INVENTORY_HIDDEN : null,
       value: (0, S.Nz)(t),
       mode: x,
@@ -95,36 +95,36 @@ return (0, r.jsxs)('div', {
       buttonColor: d.ButtonColors.LINK,
       buttonLook: d.ButtonLooks.LINK
     }),
-    (0, r.jsx)('div', {
+    (0, n.jsx)('div', {
       className: Z.subtext,
       children: j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRMATION_SUBTEXT_NO_FORMAT
     })
   ]
 });
   };
-  return h ? (0, r.jsxs)('div', {
+  return h ? (0, n.jsxs)('div', {
 className: Z.confirmation,
 children: [
-  null != n ? (0, r.jsx)(f.Z, {
-    game: n,
+  null != s ? (0, n.jsx)(f.Z, {
+    game: s,
     className: Z.__invalid_icon,
     size: f.Z.Sizes.LARGE,
     skuId: B()
   }) : null,
-  (0, r.jsx)(d.Spinner, {
+  (0, n.jsx)(d.Spinner, {
     type: d.SpinnerTypes.PULSING_ELLIPSIS
   })
 ]
-  }) : (0, r.jsxs)('div', {
+  }) : (0, n.jsxs)('div', {
 className: Z.confirmation,
 children: [
-  null != n ? (0, r.jsx)(f.Z, {
-    game: n,
+  null != s ? (0, n.jsx)(f.Z, {
+    game: s,
     className: Z.__invalid_icon,
     size: f.Z.Sizes.LARGE,
     skuId: B()
   }) : null,
-  (0, r.jsx)(d.Heading, {
+  (0, n.jsx)(d.Heading, {
     variant: 'heading-lg/semibold',
     className: o()({
       [Z.header]: null == l && !P,
@@ -132,26 +132,26 @@ children: [
     }),
     children: null != C || p && null == _ ? j.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != _ ? j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : j.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
   }),
-  p && null != C && null == _ || A ? (0, r.jsxs)(r.Fragment, {
+  p && null != C && null == _ || A ? (0, n.jsxs)(n.Fragment, {
     children: [
-      (0, r.jsx)(g.Z, {
+      (0, n.jsx)(g.Z, {
         user: C,
         className: Z.giftRecipient,
         size: d.AvatarSizes.SIZE_80
       }),
-      (0, r.jsx)(d.Heading, {
+      (0, n.jsx)(d.Heading, {
         className: Z.giftRecipientName,
         variant: 'heading-md/semibold',
         children: T.ZP.getName(C)
       }),
-      (0, r.jsxs)('div', {
+      (0, n.jsxs)('div', {
         className: Z.giftRecipientTag,
         children: [
           ' ',
           T.ZP.getUserTag(C)
         ]
       }),
-      (0, r.jsx)('div', {
+      (0, n.jsx)('div', {
         className: Z.giftSentMessage,
         children: M()
       })
@@ -159,24 +159,24 @@ children: [
   }) : (() => {
     let e = (0, S.MY)(C, P),
       {
-        removeGiftRecipientUI: n
+        removeGiftRecipientUI: s
       } = m.m.getCurrentConfig({
         location: 'GiftPurchaseConfirmation'
       }, {
         autoTrackExposure: !1,
         disable: __BILLING_STANDALONE__ || e !== S.xr.CUSTOM_STYLE
       });
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, n.jsxs)(n.Fragment, {
       children: [
-        (0, r.jsx)('div', {
+        (0, n.jsx)('div', {
           className: Z.blurb,
           children: M()
         }),
-        !n && null == _ && (0, r.jsx)(R, {
+        !s && null == _ && (0, n.jsx)(R, {
           giftCode: t,
           onClose: u
         }),
-        (0, r.jsx)('div', {
+        (0, n.jsx)('div', {
           className: Z.divider
         }),
         w()
@@ -189,12 +189,12 @@ children: [
 let R = e => {
   let {
 giftCode: t,
-onClose: n
+onClose: s
   } = e;
-  s.useEffect(() => {
+  r.useEffect(() => {
 p.Z.fetchRelationships(), (0, _.W)();
   }, []);
-  let [a, o] = s.useState(), [i, f] = s.useState(!1), [m, b] = s.useState(!1), {
+  let [a, o] = r.useState(), [i, f] = r.useState(!1), [m, b] = r.useState(!1), {
 userAffinities: I,
 isLoading: L
   } = (0, c.cj)([h.Z], () => ({
@@ -207,24 +207,24 @@ isLoading: h.Z.getFetching()
   if (null == k || 0 === k.length)
 return null;
   let R = l().sortBy(k, e => O.indexOf(e.id));
-  return (0, r.jsxs)('div', {
+  return (0, n.jsxs)('div', {
 className: Z.giftRecipientSection,
 children: [
-  (0, r.jsx)(d.FormTitle, {
+  (0, n.jsx)(d.FormTitle, {
     children: j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SECTION_LABEL
   }),
-  (0, r.jsxs)('div', {
+  (0, n.jsxs)('div', {
     className: Z.giftRecipient,
     children: [
-      (0, r.jsx)(d.SearchableSelect, {
+      (0, n.jsx)(d.SearchableSelect, {
         placeholder: j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SELECT_PLACEHOLDER,
         wrapperClassName: Z.giftRecipientInputWrapper,
         className: i ? Z.giftRecipientInputError : void 0,
-        renderOptionPrefix: e => (null == e ? void 0 : e.value) == null ? null : (0, r.jsx)(g.Z, {
+        renderOptionPrefix: e => (null == e ? void 0 : e.value) == null ? null : (0, n.jsx)(g.Z, {
           user: e.value,
           size: d.AvatarSizes.SIZE_20
         }),
-        renderLeading: () => L ? (0, r.jsx)(d.Spinner, {
+        renderLeading: () => L ? (0, n.jsx)(d.Spinner, {
           type: d.SpinnerTypes.PULSING_ELLIPSIS
         }) : null,
         value: a,
@@ -236,13 +236,13 @@ children: [
           label: ''.concat(T.ZP.getUserTag(e))
         }))
       }),
-      (0, r.jsx)(d.Button, {
+      (0, n.jsx)(d.Button, {
         disabled: null == a,
         submitting: m,
         className: Z.sendToRecipientButton,
         onClick: () => {
           b(!0), (0, C.Y)(a, t).then(() => {
-            n(), (0, u.Ou)();
+            s(), (0, u.Ou)();
           }).catch(() => {
             f(!0), b(!1);
           });
@@ -251,7 +251,7 @@ children: [
       })
     ]
   }),
-  (0, r.jsx)('div', {
+  (0, n.jsx)('div', {
     className: i ? Z.subtextError : Z.subtext,
     children: i ? j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_ERROR_SENDING_LINK : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SUBTEXT
   })

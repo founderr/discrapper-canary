@@ -1,6 +1,6 @@
 n.d(t, {
   DM: function() {
-return o;
+return s;
   },
   SF: function() {
 return l;
@@ -20,7 +20,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let o = Object.freeze({
+let s = Object.freeze({
   [i.Uc.AUTO]: {},
   [i.Uc.FULL]: {
 encode: {
@@ -29,7 +29,7 @@ encode: {
 }
   }
 });
-class s {
+class o {
   constructor(e) {
 if (a(this, 'capture', void 0), a(this, 'encode', void 0), a(this, 'bitrateMin', void 0), a(this, 'bitrateMax', void 0), a(this, 'bitrateTarget', void 0), a(this, 'localWant', void 0), null == e.capture && null == e.encode)
   throw Error('Invalid arguments.');
@@ -41,18 +41,18 @@ class l {
 return null == e && null == t || null != e && null != t && e.width === t.width && e.height === t.height && e.framerate === t.framerate;
   }
   static extend(e, t) {
-var n, r, i, a, o;
+var n, r, i, a, s;
 if (null == e)
   return t;
 if (null == t)
   return e;
-let s = null !== (r = null !== (n = null == t ? void 0 : t.width) && void 0 !== n ? n : null == e ? void 0 : e.width) && void 0 !== r ? r : 0,
+let o = null !== (r = null !== (n = null == t ? void 0 : t.width) && void 0 !== n ? n : null == e ? void 0 : e.width) && void 0 !== r ? r : 0,
   l = null !== (a = null !== (i = null == t ? void 0 : t.height) && void 0 !== i ? i : null == e ? void 0 : e.height) && void 0 !== a ? a : 0;
 return {
-  width: s,
+  width: o,
   height: l,
-  framerate: null !== (o = null == t ? void 0 : t.framerate) && void 0 !== o ? o : null == e ? void 0 : e.framerate,
-  pixelCount: s * l
+  framerate: null !== (s = null == t ? void 0 : t.framerate) && void 0 !== s ? s : null == e ? void 0 : e.framerate,
+  pixelCount: o * l
 };
   }
   constructor(e) {
@@ -65,7 +65,7 @@ let t = this.connection.getLocalWant(e),
   n = this.isStreamContext ? this.getGoliveQuality(t) : this.getVideoQuality(t);
 if (null != this.qualityOverwrite) {
   var r, i, a;
-  return new s({
+  return new o({
     encode: l.extend(n.encode, this.qualityOverwrite.encode),
     capture: l.extend(n.capture, this.qualityOverwrite.capture),
     bitrateMin: null !== (r = this.qualityOverwrite.bitrateMin) && void 0 !== r ? r : n.bitrateMin,
@@ -88,7 +88,7 @@ this.qualityOverwrite = e;
   }
   setGoliveQuality(e) {
 var t, n, r;
-this.goliveMaxQuality = new s({
+this.goliveMaxQuality = new o({
   capture: l.extend(this.goliveMaxQuality.capture, e.capture),
   encode: l.extend(this.goliveMaxQuality.encode, e.encode),
   bitrateMin: null !== (t = e.bitrateMin) && void 0 !== t ? t : this.goliveMaxQuality.bitrateMin,
@@ -105,7 +105,7 @@ let t = this.ladder.getResolution(e),
   n = this.options.videoBitrate.min * t.budgetPortion,
   r = this.options.videoBitrate.max * t.budgetPortion,
   i = this.isMuted ? t.mutedFramerate : t.framerate;
-return new s({
+return new o({
   encode: {
     ...t,
     framerate: i
@@ -123,7 +123,7 @@ return new s({
   getGoliveQuality(e) {
 if (this.goliveSimulcastEnabled && e < 100) {
   let e = this.getDefaultGoliveQuality();
-  return new s({
+  return new o({
     capture: e.capture,
     encode: e.encode,
     bitrateMin: 150000,
@@ -134,7 +134,7 @@ if (this.goliveSimulcastEnabled && e < 100) {
 return this.goliveMaxQuality;
   }
   getDefaultGoliveQuality() {
-return new s({
+return new o({
   capture: {
     width: 1280,
     height: 720,

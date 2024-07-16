@@ -1,30 +1,30 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return P;
   }
-}), s(653041);
-var n, a, i = s(735250);
-s(470079);
-var r = s(120356),
-  o = s.n(r),
-  l = s(442837),
-  c = s(780384),
-  d = s(481060),
-  _ = s(846027),
-  E = s(921801),
-  u = s(463395),
-  T = s(131951),
-  I = s(285952),
-  S = s(153124),
-  N = s(626135),
-  C = s(63063),
-  m = s(210887),
-  A = s(726985),
-  h = s(981631),
-  g = s(689938),
-  O = s(549856);
-let p = s(775322),
-  R = s(853453),
+}), t(653041);
+var n, a, i = t(735250);
+t(470079);
+var r = t(120356),
+  o = t.n(r),
+  l = t(442837),
+  c = t(780384),
+  d = t(481060),
+  _ = t(846027),
+  E = t(921801),
+  u = t(463395),
+  T = t(131951),
+  I = t(285952),
+  S = t(153124),
+  N = t(626135),
+  C = t(63063),
+  m = t(210887),
+  A = t(726985),
+  h = t(981631),
+  g = t(689938),
+  O = t(549856);
+let p = t(775322),
+  R = t(853453),
   x = (0, S.hQ)();
 (a = n || (n = {}))[a.NONE = 0] = 'NONE', a[a.STANDARD = 1] = 'STANDARD', a[a.KRISP = 2] = 'KRISP';
 let M = {
@@ -33,10 +33,10 @@ let M = {
 };
 
 function f(e) {
-  let t = e.currentTarget;
+  let s = e.currentTarget;
   N.default.track(h.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
-text: t.text,
-href: t.href,
+text: s.text,
+href: s.href,
 location: {
   page: h.ZY5.USER_SETTINGS,
   section: h.jXE.SETTINGS_VOICE_AND_VIDEO
@@ -47,8 +47,8 @@ location: {
 function D() {
   let e = (0, l.e7)([m.Z], () => m.Z.theme),
 {
-  noiseCancellation: t,
-  noiseSuppression: s,
+  noiseCancellation: s,
+  noiseSuppression: t,
   noiseSuppressionSupported: n,
   noiseCancellationSupported: a
 } = (0, l.cj)([T.Z], () => ({
@@ -88,7 +88,7 @@ children: [
     onChange: e => {
       _.Z.setNoiseCancellation(2 === e.value, M), _.Z.setNoiseSuppression(1 === e.value, M);
     },
-    value: t ? 2 : s ? 1 : 0
+    value: s ? 2 : t ? 1 : 0
   }),
   a && (0, i.jsx)(d.FormNotice, {
     className: O.marginBottom8,
@@ -113,8 +113,8 @@ children: [
 function P() {
   let {
 inputMode: e,
-inputDeviceId: t,
-echoCancellation: s,
+inputDeviceId: s,
+echoCancellation: t,
 automaticGainControl: n,
 vadAutoThreshold: a,
 vadUseKrisp: r
@@ -130,10 +130,10 @@ hasEchoCancellation: c,
 hasNoiseSuppression: I,
 hasAutomaticGainControl: S
   } = (0, l.cj)([u.Z], () => ({
-hasEchoCancellation: u.Z.hasEchoCancellation(t),
-hasNoiseSuppression: u.Z.hasNoiseSuppression(t),
-hasAutomaticGainControl: u.Z.hasAutomaticGainControl(t)
-  }), [t]), N = c || I || S, C = e === h.pM4.VOICE_ACTIVITY && a;
+hasEchoCancellation: u.Z.hasEchoCancellation(s),
+hasNoiseSuppression: u.Z.hasNoiseSuppression(s),
+hasAutomaticGainControl: u.Z.hasAutomaticGainControl(s)
+  }), [s]), N = c || I || S, C = e === h.pM4.VOICE_ACTIVITY && a;
   return (0, i.jsxs)(d.FormSection, {
 className: O.marginBottom20,
 title: g.Z.Messages.FORM_LABEL_VOICE_PROCESSING,
@@ -147,7 +147,7 @@ children: [
     setting: A.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
     children: (0, i.jsx)(d.FormSwitch, {
       className: o()(O.marginTop8, O.marginBottom20),
-      value: s,
+      value: t,
       onChange: e => _.Z.setEchoCancellation(e, {
         page: h.ZY5.USER_SETTINGS,
         section: h.jXE.SETTINGS_VOICE_AND_VIDEO
@@ -164,8 +164,8 @@ children: [
     setting: A.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
     children: (0, i.jsx)(d.FormSwitch, {
       value: r,
-      onChange: t => _.Z.setMode(e, {
-        vadUseKrisp: t
+      onChange: s => _.Z.setMode(e, {
+        vadUseKrisp: s
       }),
       note: g.Z.Messages.USER_SETTINGS_DISABLE_ADVANCED_VOICE_ACTIVITY,
       disabled: !C,

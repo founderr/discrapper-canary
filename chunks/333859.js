@@ -1,25 +1,25 @@
-s.d(t, {
+t.d(s, {
   c: function() {
 return h;
   }
 });
-var n = s(735250),
-  a = s(470079),
-  i = s(442837),
-  r = s(481060),
-  o = s(570140),
-  l = s(37234),
-  c = s(100527),
-  d = s(906732),
-  _ = s(327943),
-  E = s(539873),
-  u = s(197115),
-  T = s(626135),
-  I = s(981631),
-  S = s(474936),
-  N = s(689938),
-  C = s(245732),
-  m = s(549856);
+var n = t(735250),
+  a = t(470079),
+  i = t(442837),
+  r = t(481060),
+  o = t(570140),
+  l = t(37234),
+  c = t(100527),
+  d = t(906732),
+  _ = t(327943),
+  E = t(539873),
+  u = t(197115),
+  T = t(626135),
+  I = t(981631),
+  S = t(474936),
+  N = t(689938),
+  C = t(245732),
+  m = t(549856);
 let A = () => {
 o.Z.dispatch({
   type: 'APP_ICON_EDITOR_OPEN'
@@ -28,9 +28,9 @@ o.Z.dispatch({
   h = () => {
 let {
   analyticsLocations: e
-} = (0, d.ZP)(c.Z.USER_SETTINGS), t = (0, i.e7)([_.Z], () => _.Z.isUpsellPreview);
+} = (0, d.ZP)(c.Z.USER_SETTINGS), s = (0, i.e7)([_.Z], () => _.Z.isUpsellPreview);
 return a.useEffect(() => {
-  t && T.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
+  s && T.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
     type: S.cd.APP_ICON_UPSELL,
     location_stack: e
   });
@@ -38,16 +38,16 @@ return a.useEffect(() => {
   className: C.selectionGroup,
   children: [
     (0, n.jsx)(E.Z, {
-      disabled: t,
+      disabled: s,
       renderCTAButtons: () => (0, n.jsxs)('div', {
         className: C.tryItOutButtons,
         children: [
           (0, n.jsx)(r.Button, {
-            color: t ? r.Button.Colors.PRIMARY : r.Button.Colors.BRAND,
+            color: s ? r.Button.Colors.PRIMARY : r.Button.Colors.BRAND,
             onClick: () => A(),
             children: N.Z.Messages.APP_ICON_PREVIEW_TITLE
           }),
-          t ? (0, n.jsx)(u.Z, {
+          s ? (0, n.jsx)(u.Z, {
             subscriptionTier: S.Si.TIER_2,
             buttonText: N.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
           }) : null

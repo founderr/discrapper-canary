@@ -5,8 +5,8 @@ return H;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(442837),
   o = n(692547),
   c = n(481060),
@@ -45,7 +45,7 @@ function B(e) {
   let {
 inPopout: t,
 channel: n,
-toggleRequestToSpeakSidebar: l,
+toggleRequestToSpeakSidebar: s,
 showRequestToSpeakSidebar: o
   } = e, p = (0, u.bp)(), f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)), E = (0, R.B)(n.id), C = (0, M.Rk)(n.id, b.pV.REQUESTED_TO_SPEAK_ONLY), {
 preventIdle: v,
@@ -93,20 +93,20 @@ children: [
     className: w.button,
     children: (0, i.jsx)(P.Z, {
       toggleRequestToSpeakSidebar: () => {
-        f && d.Z.updateChatOpen(n.id, !1), l();
+        f && d.Z.updateChatOpen(n.id, !1), s();
       },
       showRequestToSpeakSidebar: o,
       numRequestToSpeak: C
     })
   }) : null,
   !f && (0, i.jsx)('div', {
-    className: s()(w.button, {
+    className: l()(w.button, {
       [w.sidebarOpen]: o
     }),
     children: (0, i.jsx)(T.T, {
       channelId: n.id,
       showRequestToSpeakSidebar: o,
-      toggleRequestToSpeakSidebar: l,
+      toggleRequestToSpeakSidebar: s,
       iconClassName: w.buttonIcon
     })
   })
@@ -117,7 +117,7 @@ children: [
 function H(e) {
   var t, n;
   let {
-inPopout: l,
+inPopout: s,
 channel: u,
 toggleRequestToSpeakSidebar: h,
 showRequestToSpeakSidebar: m
@@ -139,14 +139,14 @@ P && Z.default.track(D.rMx.BOOSTING_UPSELL_VIEWED, {
   }, [P]);
   let V = (0, i.jsxs)(E.ZP, {
 toolbar: (0, i.jsx)(B, {
-  inPopout: l,
+  inPopout: s,
   toggleRequestToSpeakSidebar: h,
   showRequestToSpeakSidebar: m,
   channel: u
 }),
 onDoubleClick: C.O,
 transparent: !0,
-className: s()((0, A.Q)(D.BRd.DARK), w.participants),
+className: l()((0, A.Q)(D.BRd.DARK), w.participants),
 children: [
   (0, i.jsx)(E.ZP.Icon, {
     icon: c.StageIcon,

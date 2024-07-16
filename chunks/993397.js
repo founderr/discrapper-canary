@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(481060),
   o = n(702346),
   c = n(492593),
@@ -18,14 +18,14 @@ function f(e) {
 expanded: t,
 onClick: n,
 count: a,
-compact: l,
-collapsedReason: s
+compact: s,
+collapsedReason: l
   } = e;
   return (0, i.jsx)(c.Z, {
-compact: l,
+compact: s,
 role: 'group',
 childrenMessageContent: (0, i.jsx)(o.Z, {
-  compact: l,
+  compact: s,
   className: m.blockedSystemMessage,
   iconNode: (0, i.jsx)(r.CloseSmallIcon, {
     size: 'md',
@@ -35,7 +35,7 @@ childrenMessageContent: (0, i.jsx)(o.Z, {
   children: (0, i.jsxs)('div', {
     className: m.blockedMessageText,
     children: [
-      s.format({
+      l.format({
         count: a
       }),
       ' \u2014',
@@ -59,7 +59,7 @@ t.Z = a.memo(function(e) {
   var t;
   let {
 messages: n,
-channel: l,
+channel: s,
 compact: r = !1,
 unreadId: o,
 collapsedReason: c
@@ -67,7 +67,7 @@ collapsedReason: c
 hasJumpTarget: p = !1
   } = n, [E, C] = a.useState(p), g = a.useCallback(() => C(e => !e), []), I = n.hasUnread ? n.content.length - 1 : n.content.length;
   return (0, i.jsxs)('div', {
-className: s()({
+className: l()({
   [_.groupStart]: !0,
   [m.expanded]: E
 }),
@@ -85,8 +85,8 @@ children: [
   }, 'collapsed-message-item'),
   E ? n.content.map((e, t) => {
     if (e.type === h.ys_.DIVIDER && t > 0) {
-      var a, s;
-      let e = null !== (s = null === (a = n.content[t + 1]) || void 0 === a ? void 0 : a.isGroupStart) && void 0 !== s && s;
+      var a, l;
+      let e = null !== (l = null === (a = n.content[t + 1]) || void 0 === a ? void 0 : a.isGroupStart) && void 0 !== l && l;
       return (0, i.jsx)(u.Z, {
         isUnread: !0,
         isBeforeGroup: e,
@@ -98,7 +98,7 @@ children: [
       return (0, i.jsx)(t, {
         className: m.__invalid_blocked,
         compact: r,
-        channel: l,
+        channel: s,
         message: e.content,
         groupId: e.groupId,
         flashKey: e.flashKey,

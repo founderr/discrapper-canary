@@ -1,6 +1,6 @@
 n.d(t, {
   O: function() {
-return a;
+return s;
   }
 });
 let i = (0, n(818083).B)({
@@ -30,7 +30,7 @@ enabled: !1
   ]
 });
 
-function a() {
+function s() {
   return i.useExperiment({
 location: '34e1bc_1'
   }, {

@@ -15,8 +15,8 @@ var i = n(735250),
   T = n(158776),
   h = n(594174),
   N = n(617136),
-  p = n(272008),
-  f = n(113434),
+  f = n(272008),
+  p = n(113434),
   C = n(569984),
   g = n(497505),
   S = n(918701),
@@ -95,8 +95,8 @@ J
   ]), ee = !0 === G || Q || $, et = (0, l.e7)([C.Z], () => null != q && C.Z.isEnrolling(q.id), [q]), en = (0, l.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [
 B,
 W
-  ]), ei = (0, f.B6)(null == q ? void 0 : q.config.expiresAt), ea = (0, f.B6)(null == X ? void 0 : X.rewardsExpireAt), es = a.useCallback(() => {
-null != q && (0, p.AH)(q.id, {
+  ]), ei = (0, p.B6)(null == q ? void 0 : q.config.expiresAt), ea = (0, p.B6)(null == X ? void 0 : X.rewardsExpireAt), es = a.useCallback(() => {
+null != q && (0, f.AH)(q.id, {
   questContent: g.jn.QUEST_LIVE_STREAM,
   questContentCTA: N.jZ.ACCEPT_QUEST
 });
@@ -118,7 +118,7 @@ location: g.jn.QUEST_LIVE_STREAM
   }), ec = a.useMemo(() => (0, A.T)({
 quest: q,
 location: b.dr.QUEST_CHANNEL_CALL_HEADER
-  }), [q]), ed = (0, f.tP)(q);
+  }), [q]), ed = (0, p.tP)(q);
   if (null == q || !(0, S.dl)(q))
 return null;
   let eu = (null === (t = q.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,

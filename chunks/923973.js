@@ -5,9 +5,9 @@ return p;
   }
 }), n(47120);
 var a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(846519),
   c = n(481060),
   d = n(626135),
@@ -20,7 +20,7 @@ function p(e) {
   var t;
   let {
 className: n,
-copyValue: s,
+copyValue: o,
 copyMetaData: p,
 copyTooltip: m,
 copyTooltipDelay: I = 500,
@@ -29,8 +29,8 @@ disableCopy: g,
 showCopyIcon: S,
 'aria-label': A,
 onCopy: N
-  } = e, [v, O] = o.useState(0), [R, C] = o.useState(!1), [y, D] = o.useState(!1);
-  if (o.useEffect(() => (r = new u.V7(), i = new u.V7(), function() {
+  } = e, [v, O] = s.useState(0), [R, C] = s.useState(!1), [y, D] = s.useState(!1);
+  if (s.useEffect(() => (r = new u.V7(), i = new u.V7(), function() {
   r.stop(), i.stop();
 }), []), !_.wS || g)
 return (0, a.jsx)(a.Fragment, {
@@ -58,7 +58,7 @@ x = () => {
   r.stop(), D(!1);
 },
 G = e => {
-  null == N || N(), (0, _.JG)(s), d.default.track(E.rMx.TEXT_COPIED, {
+  null == N || N(), (0, _.JG)(o), d.default.track(E.rMx.TEXT_COPIED, {
     type: p
   }), 'function' == typeof e && e(), !y && O(v + 1), D(!0), C(!0), r.start(1000, () => D(!1)), i.start(2000, () => O(0));
 };

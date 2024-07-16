@@ -6,8 +6,8 @@ return j;
 var i = n(735250);
 n(470079);
 var a = n(120356),
-  l = n.n(a),
-  s = n(399606),
+  s = n.n(a),
+  l = n(399606),
   r = n(481060),
   o = n(493683),
   c = n(906732),
@@ -35,8 +35,8 @@ function M(e) {
 user: t,
 backgroundColor: n,
 guildId: a,
-onClose: l
-  } = e, o = t.id, c = (0, s.e7)([
+onClose: s
+  } = e, o = t.id, c = (0, l.e7)([
 g.Z,
 C.Z,
 m.default
@@ -89,7 +89,7 @@ children: [
       color: 'text-normal',
       children: (0, i.jsx)(r.Clickable, {
         className: A.closeAction,
-        onClick: l,
+        onClick: s,
         children: (0, i.jsx)(r.CloseSmallIcon, {
           size: 'md',
           color: 'currentColor'
@@ -106,16 +106,16 @@ function b(e) {
 tag: t = 'div',
 disabled: n,
 children: a,
-onClick: s,
+onClick: l,
 ...o
   } = e;
   return (0, i.jsx)(r.Clickable, {
 ...o,
 tag: t,
-className: l()(A.bottomRowAction, {
+className: s()(A.bottomRowAction, {
   [A.bottomRowActionDisabled]: n
 }),
-onClick: n ? void 0 : s,
+onClick: n ? void 0 : l,
 children: (0, i.jsx)('div', {
   className: A.innerBottomRowAction,
   children: a
@@ -127,13 +127,13 @@ function R(e) {
   let {
 backgroundColor: t,
 user: a,
-member: l,
+member: s,
 guildId: m
-  } = e, _ = (0, s.e7)([f.Z], () => f.Z.getGuild(m)), {
+  } = e, _ = (0, l.e7)([f.Z], () => f.Z.getGuild(m)), {
 canKickUser: C,
 canBanUser: g,
 canModerateMembers: T
-  } = (0, s.cj)([
+  } = (0, l.cj)([
 E.Z,
 I.default,
 f.Z
@@ -148,7 +148,7 @@ canModerateMembers: null != _ && (0, h.F)(_.id, a.id, [
   }), [
 a,
 _
-  ]), N = (0, d.b)(l), {
+  ]), N = (0, d.b)(s), {
 analyticsLocations: v,
 newestAnalyticsLocation: M
   } = (0, c.ZP)(), R = (0, p.sE)(m, {
@@ -254,7 +254,7 @@ children: [
       backgroundColor: t
     },
     onClick: () => {
-      N ? (0, u.q)(l.guildId, l.userId, v) : (0, u.z)(l.guildId, l.userId, v);
+      N ? (0, u.q)(s.guildId, s.userId, v) : (0, u.z)(s.guildId, s.userId, v);
     },
     children: [
       (0, i.jsx)(r.ClockWarningIcon, {
@@ -302,21 +302,21 @@ function j(e) {
 userId: t,
 guildId: n,
 onClose: a
-  } = e, l = (0, s.e7)([I.default], () => I.default.getUser(t), [t]), o = (0, s.e7)([_.ZP], () => _.ZP.getMember(n, t), [
+  } = e, s = (0, l.e7)([I.default], () => I.default.getUser(t), [t]), o = (0, l.e7)([_.ZP], () => _.ZP.getMember(n, t), [
 n,
 t
   ]), c = (0, v.f)(t, n, 0.8, r.tokens.colors.BACKGROUND_SECONDARY);
-  return null == l || null == o ? null : (0, i.jsxs)('div', {
+  return null == s || null == o ? null : (0, i.jsxs)('div', {
 className: A.container,
 children: [
   (0, i.jsx)(M, {
-    user: l,
+    user: s,
     guildId: n,
     onClose: a,
     backgroundColor: c
   }),
   (0, i.jsx)(R, {
-    user: l,
+    user: s,
     member: o,
     guildId: n,
     backgroundColor: c

@@ -8,8 +8,8 @@ return _;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(317261),
-  s = n(561308),
+  s = n(317261),
+  l = n(561308),
   r = n(297781),
   o = n(443487),
   c = n(43205),
@@ -17,7 +17,7 @@ var i = n(735250),
   u = n(689938),
   h = n(827418);
 let p = [r.E6],
-  m = [l._.WEEK];
+  m = [s._.WEEK];
 
 function _(e) {
   return null != e && m.includes(e);
@@ -28,8 +28,8 @@ entry: t,
 channel: n,
 selected: a
   } = e, {
-iconUrl: l
-  } = (0, d.F)(t), m = (0, s.Nq)(t);
+iconUrl: s
+  } = (0, d.F)(t), m = (0, l.Nq)(t);
   return null != m && _(m) ? (0, i.jsxs)(o.Zb, {
 selected: a,
 children: [
@@ -56,7 +56,7 @@ children: [
     ]
   }),
   (0, i.jsx)(c.f, {
-    src: l,
+    src: s,
     size: 48,
     className: h.thumbnail
   })

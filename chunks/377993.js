@@ -5,8 +5,8 @@ return U;
 }), n(47120), n(653041);
 var i = n(735250),
   a = n(470079),
-  l = n(873546),
-  s = n(442837),
+  s = n(873546),
+  l = n(442837),
   r = n(481060),
   o = n(239091),
   c = n(144144),
@@ -42,7 +42,7 @@ user: t,
 channel: a,
 status: d,
 activities: u
-  } = e, h = (0, s.e7)([C.Z], () => null != C.Z.getTypingUsers(a.id)[t.id]), p = (0, s.e7)([g.default], () => g.default.getCurrentUser()), I = (0, s.e7)([f.Z], () => f.Z.isMobileOnline(t.id)), x = (0, s.e7)([E.Z], () => E.Z.getNickname(t.id)), T = e => {
+  } = e, h = (0, l.e7)([C.Z], () => null != C.Z.getTypingUsers(a.id)[t.id]), p = (0, l.e7)([g.default], () => g.default.getCurrentUser()), I = (0, l.e7)([f.Z], () => f.Z.isMobileOnline(t.id)), x = (0, l.e7)([E.Z], () => E.Z.getNickname(t.id)), T = e => {
 (0, o.jW)(e, async () => {
   let {
     default: e
@@ -68,7 +68,7 @@ renderPopout: e => (0, i.jsx)(_.Z, {
   userId: t.id,
   channelId: a.id
 }),
-position: l.tq ? 'window_center' : 'left',
+position: s.tq ? 'window_center' : 'left',
 spacing: 16,
 onShiftClick: () => {
   let e = '@'.concat(Z.ZP.getUserTag(t, {
@@ -101,7 +101,7 @@ children: e => (0, i.jsx)(M.Z, {
 function D(e) {
   var t;
   let {
-integration: s,
+integration: l,
 channel: c
   } = e, d = a.useCallback(e => {
 (0, o.jW)(e, async () => {
@@ -111,16 +111,16 @@ channel: c
   return t => (0, i.jsx)(e, {
     ...t,
     channel: c,
-    integration: s
+    integration: l
   });
 });
   }, [
-s,
+l,
 c
-  ]), u = s.application.bot, p = N.ZP.getApplicationIconURL({
-id: s.application.id,
-icon: s.application.icon,
-bot: null === (t = s.application) || void 0 === t ? void 0 : t.bot,
+  ]), u = l.application.bot, p = N.ZP.getApplicationIconURL({
+id: l.application.id,
+icon: l.application.icon,
+bot: null === (t = l.application) || void 0 === t ? void 0 : t.bot,
 botIconFirst: !0
   });
   return null != u ? (0, i.jsx)(r.Popout, {
@@ -133,26 +133,26 @@ renderPopout: e => (0, i.jsx)(_.Z, {
   userId: u.id,
   channelId: c.id
 }),
-position: l.tq ? 'window_center' : 'left',
+position: s.tq ? 'window_center' : 'left',
 spacing: 16,
 children: e => (0, i.jsx)(I.Z, {
   onContextMenu: d,
   className: j.member,
   name: (0, i.jsx)('span', {
     className: j.username,
-    children: s.application.name
+    children: l.application.name
   }),
   avatar: (0, i.jsx)(r.Avatar, {
     size: r.AvatarSizes.SIZE_32,
     src: p,
-    'aria-label': s.application.name,
+    'aria-label': l.application.name,
     statusTooltip: !0
   }),
   decorators: (0, i.jsx)(h.Z, {
     className: j.botTag,
     verified: null == u ? void 0 : u.isVerifiedBot()
   }),
-  id: s.application.id,
+  id: l.application.id,
   focusProps: {
     offset: {
       top: 4,
@@ -181,13 +181,13 @@ if (i.user !== a.user || i.status !== a.status || i.activities !== a.activities)
 function U(e) {
   var t;
   let {
-channel: l
+channel: s
   } = e, o = g.default.getCurrentUser(), c = null == o ? void 0 : o.isStaff(), {
 analyticsLocations: _
   } = (0, u.ZP)(d.Z.MEMBER_LIST);
   let {
 listItems: C
-  } = (t = l, (0, s.e7)([
+  } = (t = s, (0, l.e7)([
 E.Z,
 g.default,
 f.Z
@@ -195,26 +195,26 @@ f.Z
 let e = (0, S.T)(t.recipients, g.default),
   n = {};
 for (let t of e) {
-  var i, a, l;
+  var i, a, s;
   E.Z.isFriend(t.id) || t.id === (null === (i = g.default.getCurrentUser()) || void 0 === i ? void 0 : i.id) ? n[t.id] = {
     status: null !== (a = f.Z.getStatus(t.id)) && void 0 !== a ? a : b.Skl.OFFLINE,
-    activities: null !== (l = f.Z.getActivities(t.id)) && void 0 !== l ? l : P
+    activities: null !== (s = f.Z.getActivities(t.id)) && void 0 !== s ? s : P
   } : n[t.id] = {
     status: b.Skl.OFFLINE,
     activities: P
   };
 }
-let s = [];
+let l = [];
 for (let t of e) {
   let e = {
     user: t,
     status: n[t.id].status,
     activities: n[t.id].activities
   };
-  s.push(e);
+  l.push(e);
 }
 return {
-  listItems: s
+  listItems: l
 };
   }, [t], k)), {
 installedIntegrations: N,
@@ -223,29 +223,29 @@ fetched: Z,
 appsInGDMEnabled: A,
 availableApplications: M
   } = (0, p.j)({
-channelId: l.id
+channelId: s.id
   });
   a.useEffect(() => {
 if (c)
   for (let e of C)
     (0, m.W)(e.user, {
       dispatchWait: !0,
-      channelId: l.id
+      channelId: s.id
     });
   }, [
 c,
 C,
-l.id
+s.id
   ]), a.useEffect(() => {
 T.default.track(b.rMx.MEMBER_LIST_VIEWED, {
-  channel_id: l.id,
-  channel_type: l.type,
-  guild_id: l.guild_id
+  channel_id: s.id,
+  channel_type: s.type,
+  guild_id: s.guild_id
 });
   }, [
-l.guild_id,
-l.id,
-l.type
+s.guild_id,
+s.id,
+s.type
   ]);
   let O = c && C.every(e => e.user.isStaff());
   return (0, i.jsx)(u.Gt, {
@@ -270,7 +270,7 @@ children: (0, i.jsx)('div', {
         user: e.user,
         status: e.status,
         activities: e.activities,
-        channel: l
+        channel: s
       }, e.user.id)),
       A && (N.length > 0 || Z && v.length > 0) && (0, i.jsxs)(i.Fragment, {
         children: [
@@ -280,7 +280,7 @@ children: (0, i.jsx)('div', {
           }),
           N.map(e => (0, i.jsx)(D, {
             integration: e,
-            channel: l
+            channel: s
           }, e.application.id)),
           M.length > 0 && (0, i.jsx)(I.Z, {
             className: j.member,
@@ -291,7 +291,7 @@ children: (0, i.jsx)('div', {
                 } = await n.e('4536').then(n.bind(n, 422677));
                 return t => (0, i.jsx)(e, {
                   ...t,
-                  channelId: l.id
+                  channelId: s.id
                 });
               });
             },

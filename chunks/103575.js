@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(512722),
   a = n.n(i),
-  o = n(442837),
-  s = n(594174),
+  s = n(442837),
+  o = n(594174),
   l = n(380738),
   u = n(642113),
   c = n(103113),
@@ -30,9 +30,9 @@ location: t
 botProfilesEnabled: h
   } = (0, l.J)({
 location: t
-  }), p = (0, o.e7)([s.default], () => s.default.getUser(n), [n]), m = null != i ? i : p;
+  }), p = (0, s.e7)([o.default], () => o.default.getUser(n), [n]), m = null != i ? i : p;
   a()(null != m, 'UserPopoutExperimentWrapper: user cannot be undefined');
-  let I = (0, o.e7)([s.default], () => s.default.getCurrentUser());
+  let I = (0, s.e7)([o.default], () => o.default.getCurrentUser());
   return (a()(null != I, 'UserPopoutExperimentWrapper: currentUser cannot be undefined'), h && m.isNonUserBot()) ? (0, r.jsx)(c.Z, {
 ...f,
 user: m,

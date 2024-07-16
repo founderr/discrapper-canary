@@ -5,8 +5,8 @@ return m;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(481060),
-  s = n(665149),
+  s = n(481060),
+  l = n(665149),
   r = n(585483),
   o = n(723170),
   c = n(64247),
@@ -18,7 +18,7 @@ var i = n(735250),
 function m(e) {
   let {
 channel: t
-  } = e, n = (0, o.B)(t), [m, _] = a.useState(!1), f = (0, l.useRedesignIconContext)().enabled;
+  } = e, n = (0, o.B)(t), [m, _] = a.useState(!1), f = (0, s.useRedesignIconContext)().enabled;
   a.useEffect(() => {
 let e = () => _(!0);
 return r.S.subscribe(u.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
@@ -26,9 +26,9 @@ return r.S.subscribe(u.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
 };
   }, []);
   let E = h.Z.Messages.NOTIFICATION_SETTINGS;
-  return (0, i.jsx)(l.Popout, {
+  return (0, i.jsx)(s.Popout, {
 shouldShow: m,
-animation: l.Popout.Animation.NONE,
+animation: s.Popout.Animation.NONE,
 position: 'bottom',
 align: 'right',
 autoInvert: !1,
@@ -43,11 +43,11 @@ children: (e, t) => {
   let {
     isShown: a
   } = t;
-  return (0, i.jsx)(s.ZP.Icon, {
+  return (0, i.jsx)(l.ZP.Icon, {
     ...e,
     onClick: () => _(e => !e),
     tooltip: a ? null : E,
-    icon: n === d.iN.NO_MESSAGES ? l.BellSlashIcon : l.BellIcon,
+    icon: n === d.iN.NO_MESSAGES ? s.BellSlashIcon : s.BellIcon,
     foreground: n !== d.iN.NO_MESSAGES || f ? null : p.strikethrough,
     'aria-label': E,
     selected: a

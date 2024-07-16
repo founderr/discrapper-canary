@@ -1,6 +1,6 @@
 var n = t(735250),
-  r = t(470079),
-  s = t(442837),
+  s = t(470079),
+  r = t(442837),
   l = t(481060),
   o = t(219929),
   i = t(975060),
@@ -8,7 +8,7 @@ var n = t(735250),
   u = t(439041),
   d = t(689938),
   E = t(96524);
-class _ extends r.PureComponent {
+class _ extends s.PureComponent {
   componentDidMount() {
 null == this.props.adyenPaymentData && c.cp();
   }
@@ -16,8 +16,8 @@ null == this.props.adyenPaymentData && c.cp();
 var e, a;
 let {
   className: t,
-  cashAppPayComponent: r
-} = this.props, s = this.props.adyenPaymentData, i = null !== (a = null == s ? void 0 : null === (e = s.paymentMethod) || void 0 === e ? void 0 : e.cashtag) && void 0 !== a ? a : '', c = null != s && '' !== i;
+  cashAppPayComponent: s
+} = this.props, r = this.props.adyenPaymentData, i = null !== (a = null == r ? void 0 : null === (e = r.paymentMethod) || void 0 === e ? void 0 : e.cashtag) && void 0 !== a ? a : '', c = null != r && '' !== i;
 return (0, n.jsxs)('div', {
   className: t,
   children: [
@@ -44,13 +44,13 @@ return (0, n.jsxs)('div', {
     }) : (0, n.jsx)(l.Text, {
       variant: 'text-md/medium',
       className: E.connectionInstructions,
-      children: null == r ? d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_LOADING : d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTION_INSTRUCTIONS
+      children: null == s ? d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_LOADING : d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTION_INSTRUCTIONS
     })
   ]
 });
   }
 }
-a.Z = s.ZP.connectStores([
+a.Z = r.ZP.connectStores([
   u.Z,
   i.Z
 ], () => ({

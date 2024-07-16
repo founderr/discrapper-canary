@@ -8,8 +8,8 @@ return I;
 }), n(47120), n(724458);
 var i = n(470079),
   a = n(442837),
-  l = n(570140),
-  s = n(439170),
+  s = n(570140),
+  l = n(439170),
   r = n(592125),
   o = n(430824),
   c = n(451478),
@@ -49,15 +49,15 @@ if (null == Z || 0 === Z.length || null == S || !P)
 let i = N ? Z.length : 3,
   a = Z.slice(0, i);
 e = M ? [{
-  type: s.so.HIDDEN_CONTENT_INVENTORY
+  type: l.so.HIDDEN_CONTENT_INVENTORY
 }] : a.map(e => ({
-  type: s.so.CONTENT_INVENTORY,
+  type: l.so.CONTENT_INVENTORY,
   entry: e,
   requestId: S
 }));
-let l = {
+let s = {
   id: E.G,
-  type: s.so.CONTENT_INVENTORY_GROUP,
+  type: l.so.CONTENT_INVENTORY_GROUP,
   key: E.G,
   count: e.length,
   index: n.length,
@@ -78,12 +78,12 @@ let l = {
 };
 return [
   [
-    l,
+    s,
     ...t
   ],
   [
     ...n,
-    l,
+    s,
     ...e
   ],
   Math.random(),
@@ -130,7 +130,7 @@ if (!M && !!b && !!P)
     guild_id: T,
     all_item_ids: n,
     impression_capped_item_ids: [...H.current.impressionCappedEntryIds]
-  }), (0, u.wm)('useInjectContentInventoryFeed') && l.Z.dispatch({
+  }), (0, u.wm)('useInjectContentInventoryFeed') && s.Z.dispatch({
     type: 'CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS',
     itemIds: i
   });

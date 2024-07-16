@@ -17,8 +17,8 @@ t.Z = e => {
   title: I,
   titleClassName: R,
   buttonClassName: C,
-  perkImage: p,
-  isCarousel: g,
+  perkImage: g,
+  isCarousel: p,
   onCtaClick: A,
   perkComponent: m,
   subtitle: N = '',
@@ -55,12 +55,12 @@ children: [
     subtitle: N,
     subtitleClassName: h
   }),
-  null != p && (0, s.jsx)('img', {
-    src: p,
+  null != g && (0, s.jsx)('img', {
+    src: g,
     alt: '',
     className: r()({
-      [_.cardImage]: !g,
-      [_.carouselCardImage]: g
+      [_.cardImage]: !p,
+      [_.carouselCardImage]: p
     })
   }),
   null != m && (0, s.jsx)(s.Fragment, {

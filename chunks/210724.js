@@ -18,8 +18,8 @@ var s = n(735250),
   I = n(569984),
   R = n(497505),
   C = n(918701),
-  p = n(977156),
-  g = n(5881),
+  g = n(977156),
+  p = n(5881),
   A = n(602667),
   m = n(78826),
   N = n(693900),
@@ -32,10 +32,10 @@ function x(e) {
   var t, n, i;
   let {
 quest: I
-  } = e, x = (0, g.T)({
+  } = e, x = (0, p.T)({
 quest: I,
 location: S.dr.QUESTS_BAR
-  }), b = (0, p.Zy)({
+  }), b = (0, g.Zy)({
 location: S.dr.QUESTS_BAR
   }), O = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), P = (0, c.e7)([u.Z], () => u.Z.hasLayers()), L = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, v = (0, d.Z)(L), Z = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, D = (0, d.Z)(Z), B = (null === (i = I.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, j = null != I.userStatus && (0, C.zE)(I.userStatus, R.jn.QUEST_BAR), U = (0, T.tP)(I), {
 hasError: G,
@@ -129,7 +129,7 @@ H !== k.current && X(!1), k.current = H;
 })),
 [{
   height: eC
-}, ep] = (0, o.useSpring)(() => ({
+}, eg] = (0, o.useSpring)(() => ({
   from: {
     height: w.collapsedHeight
   },
@@ -139,18 +139,18 @@ H !== k.current && X(!1), k.current = H;
   a.useLayoutEffect(() => {
 eR({
   expansionSpring: Y ? 1 : 0
-}), ep({
+}), eg({
   height: Y ? $ : w.collapsedHeight
 });
   }, [
 Y,
 $,
 eR,
-ep,
+eg,
 w.collapsedHeight
   ]);
   let {
-visibilitySpring: eg
+visibilitySpring: ep
   } = (0, o.useSpring)({
 from: {
   visibilitySpring: 0
@@ -213,7 +213,7 @@ children: () => {
     }),
     style: {
       color: I.config.colors.secondary,
-      height: eg.to({
+      height: ep.to({
         range: [
           0,
           1
@@ -237,7 +237,7 @@ children: () => {
         backgroundColor: w.preEnrollmentBackgroundColor,
         backgroundImage: L ? w.postEnrollmentBackgroundImage : void 0,
         height: eC,
-        transform: eg.to({
+        transform: ep.to({
           range: [
             0,
             1

@@ -15,7 +15,7 @@ var i = n(735250),
   T = n(372178);
 let h = (e, t) => null == e && null == t || e === t,
   N = (e, t) => e.findIndex(e => h(e.emoji.id, null == t ? void 0 : t.id) && h(e.emoji.name, null == t ? void 0 : t.name)),
-  p = (e, t) => {
+  f = (e, t) => {
 if (null == t)
   return e;
 let n = N(e, t);
@@ -25,7 +25,7 @@ return n < 0 ? e : [
   ...e.slice(n + 1)
 ];
   };
-class f extends a.PureComponent {
+class p extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
 let n = e.message.reactions.length;
 return 0 === t.reactionsCount && n > 0 ? {
@@ -44,8 +44,8 @@ let {
   isGuest: s,
   isPendingMember: h,
   isForumToolbar: N,
-  channel: p,
-  className: f,
+  channel: f,
+  className: p,
   forceAddReactions: C,
   reactionClassName: g,
   useChatFontScaling: S,
@@ -58,7 +58,7 @@ let {
 } = this.state, v = S ? T : m, L = x > 0;
 return L || C ? (0, i.jsxs)(l.W, {
   component: 'div',
-  className: r()(v.reactions, f),
+  className: r()(v.reactions, p),
   transitionAppear: !M,
   role: 'group',
   transitionLeave: !1,
@@ -83,7 +83,7 @@ return L || C ? (0, i.jsxs)(l.W, {
     }),
     R > 0 && (0, i.jsx)(o.Clickable, {
       onClick: t => {
-        t.stopPropagation(), (0, E.op)(p, e);
+        t.stopPropagation(), (0, E.op)(f, e);
       },
       className: r()(v.reaction, g, v.remainingReactions),
       'aria-label': I.Z.Messages.ADD_REACTION,
@@ -99,7 +99,7 @@ return L || C ? (0, i.jsxs)(l.W, {
     !t && !A && (0, i.jsx)(d.X, {
       type: c.O.NORMAL,
       message: e,
-      channel: p,
+      channel: f,
       useChatFontScaling: S,
       isHovered: this.state.isHovered,
       className: r()({
@@ -135,7 +135,7 @@ remainingReactions: l,
 visibleReactionsCount: o
   } = a.useMemo(() => {
 let e = [],
-  i = p(t.reactions, s),
+  i = f(t.reactions, s),
   a = null != n && n < i.length ? i.slice(0, n) : i,
   r = i.length - a.length,
   l = i.length;
@@ -157,7 +157,7 @@ s,
 n,
 t.reactions
   ]);
-  return (0, i.jsx)(f, {
+  return (0, i.jsx)(p, {
 ...e,
 visibleReactionsCount: o,
 combinedReactions: r,

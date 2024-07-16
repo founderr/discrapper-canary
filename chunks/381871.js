@@ -5,8 +5,8 @@ return w;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(392711),
-  s = n(442837),
+  s = n(392711),
+  l = n(442837),
   r = n(704215),
   o = n(481060),
   c = n(570140),
@@ -56,7 +56,7 @@ function w(e) {
 channel: n,
 closePopout: _,
 onFocus: g
-  } = e, j = (0, s.e7)([u.Z], () => u.Z.useReducedMotion), w = (0, s.e7)([E.default], () => E.default.getCurrentUser()), B = I.ZP.canUseFancyVoiceChannelReactions(w), H = (0, s.e7)([T.Z], () => T.Z.getState().animationType), G = a.useRef(!1), V = (0, m.wC)(n.guild_id), F = (0, l.uniqBy)([
+  } = e, j = (0, l.e7)([u.Z], () => u.Z.useReducedMotion), w = (0, l.e7)([E.default], () => E.default.getCurrentUser()), B = I.ZP.canUseFancyVoiceChannelReactions(w), H = (0, l.e7)([T.Z], () => T.Z.getState().animationType), G = a.useRef(!1), V = (0, m.wC)(n.guild_id), F = (0, s.uniqBy)([
 ...V,
 ...U
   ], 'name').filter(e => !C.ZP.isEmojiFilteredOrLocked({
@@ -115,11 +115,11 @@ children: e => {
   let {
     visibleContent: t,
     markAsDismissed: a
-  } = e, l = j && t === r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
+  } = e, s = j && t === r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
   return (0, i.jsx)(o.Popout, {
     position: 'left',
     'aria-label': O.Z.Messages.VOICE_CHANNEL_EFFECTS_MORE,
-    shouldShow: l,
+    shouldShow: s,
     renderPopout: () => (0, i.jsx)('div', {
       onMouseEnter: g,
       children: (0, i.jsx)(f.ZP, {

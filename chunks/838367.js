@@ -1,4 +1,4 @@
-var a, i, n, t, c, d, r = s(442837),
+var a, i, t, n, c, d, r = s(442837),
   o = s(570140),
   u = s(314897),
   h = s(900849);
@@ -21,12 +21,12 @@ let l = m[e];
 return null != l && 'failed' === l.fetchState;
   }
 }
-t = 'GuildPopoutStore', (n = 'displayName') in(i = x) ? Object.defineProperty(i, n, {
-  value: t,
+n = 'GuildPopoutStore', (t = 'displayName') in(i = x) ? Object.defineProperty(i, t, {
+  value: n,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[n] = t, l.Z = new x(o.Z, {
+}) : i[t] = n, l.Z = new x(o.Z, {
   GUILD_POPOUT_FETCH_START: function(e) {
 let {
   guildId: l

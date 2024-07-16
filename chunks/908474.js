@@ -5,8 +5,8 @@ return m;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(399606),
-  s = n(481060),
+  s = n(399606),
+  l = n(481060),
   r = n(346486),
   o = n(69882),
   c = n(815790),
@@ -18,7 +18,7 @@ var i = n(735250),
 function m(e) {
   let {
 member: t
-  } = e, n = t.userId, m = t.guildId, _ = (0, l.e7)([d.Z], () => d.Z.getEnhancedMember(m, n), [
+  } = e, n = t.userId, m = t.guildId, _ = (0, s.e7)([d.Z], () => d.Z.getEnhancedMember(m, n), [
 n,
 m
   ]), f = (null != _ ? _ : t).unusualDMActivityUntil, E = a.useCallback(e => {
@@ -31,44 +31,44 @@ t,
 E,
 f
   ]), g = a.useMemo(() => (0, o.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), I = a.useMemo(() => null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]);
-  return null != f || g ? (0, i.jsx)(s.FormItem, {
+  return null != f || g ? (0, i.jsx)(l.FormItem, {
 title: h.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
 titleClassName: p.infoTitle,
 children: (0, i.jsxs)(u.WM, {
   children: [
     null != f && (0, i.jsx)(u._2, {
-      icon: (0, i.jsx)(s.ChatAlertIcon, {
+      icon: (0, i.jsx)(l.ChatAlertIcon, {
         size: 'custom',
         color: 'currentColor',
         width: u.Mn,
         height: u.Mn,
         className: p.__invalid_unusualDMLabelIcon
       }),
-      name: (0, i.jsx)(s.Text, {
+      name: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'text-normal',
         children: h.Z.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY
       }),
-      description: (0, i.jsx)(s.Text, {
+      description: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'text-normal',
         children: C
       })
     }),
     g && null != I && (0, i.jsx)(u._2, {
-      icon: (0, i.jsx)(s.ClockWarningIcon, {
+      icon: (0, i.jsx)(l.ClockWarningIcon, {
         size: 'custom',
         color: 'currentColor',
         width: u.Mn,
         height: u.Mn,
         className: p.__invalid_unusualDMLabelIcon
       }),
-      name: (0, i.jsx)(s.Text, {
+      name: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'text-normal',
         children: h.Z.Messages.GUILD_COMMUNICATION_DISABLED_ON_MEMBER
       }),
-      description: (0, i.jsx)(s.Text, {
+      description: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'text-normal',
         children: (0, i.jsx)(r.Z, {

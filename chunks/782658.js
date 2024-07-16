@@ -19,8 +19,8 @@ var i = n(735250),
   T = n(701190),
   h = n(610699),
   N = n(313876),
-  p = n(778333),
-  f = n(949981),
+  f = n(778333),
+  p = n(949981),
   C = n(680668),
   g = n(143708),
   S = n(358595),
@@ -102,7 +102,7 @@ case O.r2o.ERROR:
 default:
   switch ((0, u.VR)(L)) {
     case u.wx.GROUP_DM:
-      y = (0, i.jsx)(f.Z, {
+      y = (0, i.jsx)(p.Z, {
         onTransitionToInviteChannel: j,
         onAcceptInstantInvite: U,
         currentUserId: b,
@@ -111,7 +111,7 @@ default:
       });
       break;
     case u.wx.FRIEND:
-      y = (0, i.jsx)(p.Z, {
+      y = (0, i.jsx)(f.Z, {
         invite: L,
         author: n,
         getAcceptInviteContext: x

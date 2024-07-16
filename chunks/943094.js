@@ -4,15 +4,15 @@ return l;
   }
 });
 var i = n(481060),
-  a = n(812206),
-  s = n(710845),
+  s = n(812206),
+  a = n(710845),
   r = n(51025);
 
 function l(e, t, l) {
   ! function(e, t) {
-let r = a.Z.getApplication(e);
+let r = s.Z.getApplication(e);
 if (null == r) {
-  new s.Z('DispatchUninstallActionCreators').log('Application not found for game '.concat(e));
+  new a.Z('DispatchUninstallActionCreators').log('Application not found for game '.concat(e));
   return;
 }
 (0, i.openModalLazy)(async () => {

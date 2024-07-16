@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(481060),
-  o = n(300284),
-  s = n(314897),
+  s = n(300284),
+  o = n(314897),
   l = n(430824),
   u = n(642113),
   c = n(841040),
@@ -23,11 +23,11 @@ guildId: n,
 profileType: f,
 fullWidth: h,
 onClose: p
-  } = e, m = (0, i.e7)([s.default], () => s.default.getId() === t.id), I = (0, i.e7)([l.Z], () => null != n ? l.Z.getGuild(n) : null), {
+  } = e, m = (0, i.e7)([o.default], () => o.default.getId() === t.id), I = (0, i.e7)([l.Z], () => null != n ? l.Z.getGuild(n) : null), {
 originalFriendingEnabled: T
   } = (0, u.V)({
 location: 'UserProfileEditMenuButton'
-  }), g = (0, o.Z)(), S = T && f === _.y0.FULL_SIZE ? void 0 : a.PencilIcon;
+  }), g = (0, s.Z)(), S = T && f === _.y0.FULL_SIZE ? void 0 : a.PencilIcon;
   return m ? null == I ? (0, r.jsx)(d.tG, {
 action: 'EDIT_PROFILE',
 text: E.Z.Messages.EDIT_PROFILE,

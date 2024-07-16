@@ -28,7 +28,7 @@ channelId: n,
 hasReported: C,
 onReport: S,
 trackAnalyticsEvent: P
-  } = e, h = (0, a.e7)([u.Z], () => u.Z.isBlocked(t)), [f, M] = o.useState(h), p = (0, N.o)(), [g, b] = o.useState(!1), x = (0, T.q)(n), m = () => {
+  } = e, h = (0, a.e7)([u.Z], () => u.Z.isBlocked(t)), [f, M] = o.useState(h), g = (0, N.o)(), [p, b] = o.useState(!1), x = (0, T.q)(n), m = () => {
 M(!0), i.Z.addRelationship({
   userId: t,
   context: {
@@ -81,7 +81,7 @@ children: (0, s.jsxs)('div', {
       className: R.button,
       innerClassName: R.buttonInner,
       onClick: Z,
-      submitting: g,
+      submitting: p,
       disabled: C,
       children: [
         (0, s.jsx)(r.FlagIcon, {
@@ -100,7 +100,7 @@ children: (0, s.jsxs)('div', {
       className: R.button,
       innerClassName: R.buttonInner,
       onClick: () => {
-        p ? ((0, c.Z)(_.EI), P(I.NM.USER_TAKEOVER_MODAL_CTL)) : ((0, c.Z)(_.n4), P(I.NM.USER_TAKEOVER_MODAL_NO_FILTR));
+        g ? ((0, c.Z)(_.EI), P(I.NM.USER_TAKEOVER_MODAL_CTL)) : ((0, c.Z)(_.n4), P(I.NM.USER_TAKEOVER_MODAL_NO_FILTR));
       },
       children: [
         (0, s.jsx)(r.ChatIcon, {
@@ -110,7 +110,7 @@ children: (0, s.jsxs)('div', {
           color: r.tokens.colors.WHITE,
           className: R.buttonIcon
         }),
-        p ? d.Z.Messages.INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL : d.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_TITLE
+        g ? d.Z.Messages.INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL : d.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_TITLE
       ]
     })
   ]

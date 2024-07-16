@@ -5,8 +5,8 @@ return C;
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(442837),
   l = n(481060),
   o = n(547972),
@@ -81,7 +81,7 @@ buttonColor: l.Button.Colors.BRAND_INVERTED,
 bodyCopy: () => (0, i.jsx)(S, {}),
 buttonCopy: () => g.Z.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
 ctaOnClick: () => T(h.D5.Enabled),
-containerClass: s()(p.container, p.containerEnabled)
+containerClass: a()(p.container, p.containerEnabled)
   }
 };
 
@@ -94,26 +94,26 @@ clipsError: n
 decoupledClipsEnabled: _.Z.getSettings().decoupledClipsEnabled,
 clipsError: _.Z.getLastClipsError()
   }));
-  let a = (e = t, null != n ? h.D5.Error : e ? h.D5.Enabled : h.D5.Disabled),
+  let s = (e = t, null != n ? h.D5.Error : e ? h.D5.Enabled : h.D5.Disabled),
 {
-  bodyCopy: s,
+  bodyCopy: a,
   buttonCopy: o,
   ctaOnClick: c,
   textColor: d,
   buttonColor: u,
   buttonLook: I,
   containerClass: m
-} = f[a];
+} = f[s];
   return (0, i.jsxs)('div', {
 className: m,
 children: [
   (0, i.jsx)(l.Text, {
     color: d,
     variant: 'text-sm/medium',
-    children: s()
+    children: a()
   }),
   (0, i.jsx)(l.Button, {
-    onClick: () => (0, E.UW)(a),
+    onClick: () => (0, E.UW)(s),
     size: l.Button.Sizes.NONE,
     look: l.Button.Looks.BLANK,
     className: p.buttonClose,

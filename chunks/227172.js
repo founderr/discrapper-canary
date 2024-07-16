@@ -1,7 +1,7 @@
 var i = n(735250),
   a = n(470079),
-  l = n(758713),
-  s = n(442837),
+  s = n(758713),
+  l = n(442837),
   r = n(481060),
   o = n(620662),
   c = n(841784),
@@ -25,20 +25,20 @@ var i = n(735250),
   A = n(981631),
   M = n(689938);
 let b = {
-  [l.z.DESKTOP]: null,
-  [l.z.LINUX]: null,
-  [l.z.MACOS]: null,
-  [l.z.NINTENDO]: null,
-  [l.z.IOS]: null,
-  [l.z.ANDROID]: null,
-  [l.z.XBOX]: _.Z,
-  [l.z.PLAYSTATION]: m.Z
+  [s.z.DESKTOP]: null,
+  [s.z.LINUX]: null,
+  [s.z.MACOS]: null,
+  [s.z.NINTENDO]: null,
+  [s.z.IOS]: null,
+  [s.z.ANDROID]: null,
+  [s.z.XBOX]: _.Z,
+  [s.z.PLAYSTATION]: m.Z
 };
 t.Z = e => {
   let {
 channel: t,
 entry: n,
-requestId: l,
+requestId: s,
 closePopout: m
   } = e, {
 iconUrl: _,
@@ -50,7 +50,7 @@ activity: O
   } = (0, Z.F)(n), {
 primaryColor: y,
 secondaryColor: D
-  } = (0, T.Z)(_), k = (0, s.e7)([p.default], () => p.default.locale), {
+  } = (0, T.Z)(_), k = (0, l.e7)([p.default], () => p.default.locale), {
 streamPreviewUrl: U,
 stream: w
   } = (0, C.Z)(n), {
@@ -156,7 +156,7 @@ children: [
       generateReactionImage: W,
       reactionImageAltText: (0, x.IS)(n, j),
       entry: n,
-      requestId: l,
+      requestId: s,
       buttons: X
     })
   })

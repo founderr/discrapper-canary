@@ -1,30 +1,30 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return I;
   }
 });
-var n = s(735250),
-  a = s(470079),
-  i = s(442837),
-  r = s(692547),
-  o = s(481060),
-  l = s(768762),
-  c = s(823379),
-  d = s(882029),
-  _ = s(955204),
-  E = s(248998),
-  u = s(689938),
-  T = s(692197);
+var n = t(735250),
+  a = t(470079),
+  i = t(442837),
+  r = t(692547),
+  o = t(481060),
+  l = t(768762),
+  c = t(823379),
+  d = t(882029),
+  _ = t(955204),
+  E = t(248998),
+  u = t(689938),
+  T = t(692197);
 
 function I(e) {
   let {
-onBackClick: t
-  } = e, s = (0, i.e7)([d.Z], () => d.Z.getAllUnlockedAchievements()), I = a.useMemo(() => Object.values(s).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [s]), S = a.useMemo(() => Object.values(_.LG).filter(c.lm).filter(e => null == s[e.id]).sort((e, t) => e.rarity - t.rarity), [s]);
+onBackClick: s
+  } = e, t = (0, i.e7)([d.Z], () => d.Z.getAllUnlockedAchievements()), I = a.useMemo(() => Object.values(t).sort((e, s) => s.dateUnlocked - e.dateUnlocked), [t]), S = a.useMemo(() => Object.values(_.LG).filter(c.lm).filter(e => null == t[e.id]).sort((e, s) => e.rarity - s.rarity), [t]);
   return (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsx)(o.FormSection, {
     children: (0, n.jsxs)(o.Clickable, {
-      onClick: t,
+      onClick: s,
       className: T.backContainer,
       children: [
         (0, n.jsx)(l.Z, {
@@ -74,13 +74,13 @@ children: [
       className: T.achievementGrid,
       children: I.map(e => {
         let {
-          achievementId: t,
-          dateUnlocked: s
+          achievementId: s,
+          dateUnlocked: t
         } = e;
         return (0, n.jsx)(E.Z, {
-          achievementId: t,
-          dateUnlocked: s
-        }, t);
+          achievementId: s,
+          dateUnlocked: t
+        }, s);
       })
     })
   }),

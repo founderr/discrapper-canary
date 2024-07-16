@@ -1,6 +1,6 @@
 var i, a = n(442837),
-  l = n(570140),
-  s = n(592125),
+  s = n(570140),
+  l = n(592125),
   r = n(176505);
 
 function o(e, t, n) {
@@ -31,7 +31,7 @@ var t;
 return null == e ? null : null !== (t = c[e]) && void 0 !== t ? t : d[e];
   }
 }
-o(u, 'displayName', 'GuildOnboardingHomeNavigationStore'), o(u, 'persistKey', 'GuildOnboardingHomeNavigationStore'), t.Z = new u(l.Z, {
+o(u, 'displayName', 'GuildOnboardingHomeNavigationStore'), o(u, 'persistKey', 'GuildOnboardingHomeNavigationStore'), t.Z = new u(s.Z, {
   CHANNEL_SELECT: function(e) {
 let {
   channelId: t,
@@ -39,14 +39,14 @@ let {
 } = e;
 if (null == n || t === r.oC.GUILD_HOME)
   return;
-let i = s.Z.getChannel(t),
+let i = l.Z.getChannel(t),
   a = c[n],
-  l = d[n];
+  s = d[n];
 if (!((null == i ? void 0 : i.isThread()) && (null == i ? void 0 : i.parent_id) != null && [
-    l,
+    s,
     a
   ].includes(null == i ? void 0 : i.parent_id)))
-  t !== a && delete c[n], t !== l && delete d[n];
+  t !== a && delete c[n], t !== s && delete d[n];
   },
   SELECT_HOME_RESOURCE_CHANNEL: function(e) {
 let {

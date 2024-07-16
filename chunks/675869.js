@@ -7,8 +7,8 @@ var a = n(735250),
   i = n(470079),
   l = n(392711),
   r = n.n(l),
-  c = n(991637),
-  s = n.n(c),
+  s = n(991637),
+  c = n.n(s),
   o = n(266067),
   d = n(91192),
   u = n(209173),
@@ -40,13 +40,13 @@ function D() {
   let t;
   let n = (0, N.useApplicationDirectoryHistory)(e => e.guildId),
 l = (0, g.e7)([x.Z], () => x.Z.getCategories()),
-c = (0, o.TH)(),
+s = (0, o.TH)(),
 {
-  queryParam: s,
+  queryParam: c,
   pageParam: d,
   categoryIdParam: m
 } = i.useMemo(() => {
-  let e = new URLSearchParams(c.search);
+  let e = new URLSearchParams(s.search);
   return {
     queryParam: e.get('q'),
     pageParam: e.get('page'),
@@ -54,7 +54,7 @@ c = (0, o.TH)(),
   };
 }, []),
 [f, h] = i.useState(null != d ? Number(d) : 1),
-[b, D] = i.useState(null != s ? s : ''),
+[b, D] = i.useState(null != c ? c : ''),
 [L, k] = i.useState(null !== (e = Number(m)) && void 0 !== e ? e : R.MU),
 Y = i.useMemo(() => null == l ? void 0 : l.find(e => e.id === L), [
   l,
@@ -72,9 +72,9 @@ B = i.useCallback(e => {
     query: a,
     categoryId: i,
     page: l
-  } = e, r = new URLSearchParams(c.search);
+  } = e, r = new URLSearchParams(s.search);
   '' === a ? r.delete('q') : r.set('q', a), i === R.MU ? r.delete('category_id') : r.set('category_id', null !== (t = null == i ? void 0 : i.toString()) && void 0 !== t ? t : ''), 1 === l ? r.delete('page') : r.set('page', null !== (n = null == l ? void 0 : l.toString()) && void 0 !== n ? n : ''), (0, S.replaceAppDirectoryURLWith)(''.concat(y.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(r.toString()));
-}, [c.search]),
+}, [s.search]),
 G = i.useMemo(() => r().debounce(B, 400), [B]);
   i.useEffect(() => {
 G({
@@ -294,8 +294,8 @@ items: t,
 currentPage: n,
 pageCount: l,
 showPrimaryCategory: r,
-onItemClick: c,
-onChangePage: s
+onItemClick: s,
+onChangePage: c
   } = e, o = (0, f.Z)('application-directory-search');
   return (0, a.jsxs)(i.Fragment, {
 children: [
@@ -325,7 +325,7 @@ children: [
                     let {
                       mutualGuilds: t
                     } = e;
-                    return c({
+                    return s({
                       application: i,
                       mutualGuilds: t
                     });
@@ -351,10 +351,10 @@ children: [
     currentPage: n,
     totalCount: Math.min(7 * l, 700),
     pageSize: 7,
-    onPageChange: s,
+    onPageChange: c,
     disablePaginationGap: !0
   })
 ]
   });
 }
-s().shim();
+c().shim();

@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(481060),
-  o = n(367907),
-  s = n(565138),
+  s = n(367907),
+  o = n(565138),
   l = n(434404),
   u = n(430824),
   c = n(981631),
@@ -18,7 +18,7 @@ reportId: n
 f(!p);
   }, [p]);
   let m = i.useCallback(() => {
-f(!0), o.ZP.trackWithMetadata(c.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
+f(!0), s.ZP.trackWithMetadata(c.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
   guild_id: t,
   report_id: n
 }), l.Z.leaveGuild(t);
@@ -59,11 +59,11 @@ children: [
       (0, r.jsxs)('div', {
         className: _.guildInfo,
         children: [
-          (0, r.jsx)(s.Z, {
+          (0, r.jsx)(o.Z, {
             guild: h,
             showBadge: !1,
             animate: !1,
-            size: s.Z.Sizes.SMALL,
+            size: o.Z.Sizes.SMALL,
             'aria-label': h.name,
             className: _.icon,
             active: !0

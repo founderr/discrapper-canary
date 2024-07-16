@@ -7,9 +7,9 @@ return i;
   }
 });
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(873546),
   c = n(442837),
   d = n(481060),
@@ -43,7 +43,7 @@ function R(e) {
   let n, {
   author: r,
   message: i,
-  channel: s,
+  channel: o,
   userOverride: h,
   compact: R = !1,
   withMentionPrefix: C = !1,
@@ -56,8 +56,8 @@ function R(e) {
   renderRemixTag: U = !1,
   decorations: w
 } = e,
-x = o.useContext(m.Z),
-G = null !== (t = null == s ? void 0 : s.guild_id) && void 0 !== t ? t : x,
+x = s.useContext(m.Z),
+G = null !== (t = null == o ? void 0 : o.guild_id) && void 0 !== t ? t : x,
 {
   analyticsLocations: k
 } = (0, f.ZP)(E.Z.USERNAME),
@@ -69,7 +69,7 @@ G = null !== (t = null == s ? void 0 : s.guild_id) && void 0 !== t ? t : x,
 H = null != i.messageReference && null != i.webhookId && i.hasFlag(N.iLy.IS_CROSSPOST),
 Z = (0, c.e7)([_.Z], () => _.Z.roleStyle),
 Y = (0, I.X$)(),
-j = o.useMemo(() => ({
+j = s.useMemo(() => ({
   source: N.jXE.CHANNEL,
   messageId: i.id,
   tagUserId: i.author.id
@@ -88,7 +88,7 @@ W = {
     children: (C ? '@' : '') + B
   })
 },
-K = o.useMemo(() => R ? (0, a.jsx)(p.ZP, {
+K = s.useMemo(() => R ? (0, a.jsx)(p.ZP, {
   clan: r.primaryGuild,
   userId: i.author.id,
   contextGuildId: G,

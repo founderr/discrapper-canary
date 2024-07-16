@@ -6,8 +6,8 @@ return p;
 var r = n(812206),
   i = n(592125),
   a = n(944486),
-  o = n(594174),
-  s = n(595519),
+  s = n(594174),
+  o = n(595519),
   l = n(566620),
   u = n(882347),
   c = n(917107),
@@ -24,7 +24,7 @@ activityChannelId: p,
 locationObject: m,
 embeddedActivitiesManager: I,
 analyticsLocations: T
-  } = e, g = i.Z.getChannel(p), S = null == g ? void 0 : g.getGuildId(), A = null == S || '' === S, N = o.default.getCurrentUser();
+  } = e, g = i.Z.getChannel(p), S = null == g ? void 0 : g.getGuildId(), A = null == S || '' === S, N = s.default.getCurrentUser();
   if (null == g || A && !g.isPrivate() || null == p || null == N)
 return Promise.resolve(!1);
   if (a.Z.getVoiceChannelId() === p && (null == n ? void 0 : n.id) === t)
@@ -46,7 +46,7 @@ if (!await (0, d.Z)({
     bypassChangeModal: null != n
   }))
   return !1;
-  } else if (!(0, s.WS)(g, !1) || !O)
+  } else if (!(0, o.WS)(g, !1) || !O)
 return !1;
   return (0, E.Z)(S, p), (0, l.J$)(p, t, T), (0, _.Z)({
 type: h.q5t.JOIN,

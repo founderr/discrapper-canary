@@ -1,9 +1,9 @@
 n.d(t, {
   KR: function() {
-return s;
+return o;
   },
   p8: function() {
-return o;
+return s;
   },
   sJ: function() {
 return l;
@@ -15,14 +15,14 @@ let a = Object.freeze({
 id: null,
 activeDescendant: null
   }),
-  o = (0, i.Z)(() => a);
+  s = (0, i.Z)(() => a);
 
-function s(e, t, n) {
+function o(e, t, n) {
   (0, r.useEffect)(() => {
-t ? o.setState({
+t ? s.setState({
   id: e,
   activeDescendant: n
-}) : o.setState({
+}) : s.setState({
   id: null,
   activeDescendant: null
 });
@@ -34,5 +34,5 @@ n
 }
 
 function l() {
-  o.setState(() => a);
+  s.setState(() => a);
 }

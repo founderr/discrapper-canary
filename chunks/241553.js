@@ -6,8 +6,8 @@ return B;
 var r = n(735250),
   i = n(470079),
   a = n(338545),
-  o = n(442837),
-  s = n(704215),
+  s = n(442837),
+  o = n(704215),
   l = n(780384),
   u = n(481060),
   c = n(845538),
@@ -100,8 +100,8 @@ function B(e) {
   let {
 themeOverride: t,
 hovered: n,
-isContentDismissed: o,
-boxColors: s = {
+isContentDismissed: s,
+boxColors: o = {
   dark: M,
   light: P
 }
@@ -135,8 +135,8 @@ config: {
   tension: 800,
   friction: 24
 }
-  }), f = o ? _ : 0, h = (0, l.wj)(null != t ? t : u) ? s.dark[f] : s.light[f];
-  return !n && o ? (0, r.jsx)(k, {}) : o && c ? (0, r.jsx)(G, {
+  }), f = s ? _ : 0, h = (0, l.wj)(null != t ? t : u) ? o.dark[f] : o.light[f];
+  return !n && s ? (0, r.jsx)(k, {}) : s && c ? (0, r.jsx)(G, {
 isDark: (0, l.wj)(u),
 style: E
   }) : (0, r.jsx)(x, {
@@ -151,14 +151,14 @@ disabled: t,
 channel: n
   } = e, {
 analyticsLocations: a
-  } = (0, E.ZP)(_.Z.GIFT_BUTTON), [l, d] = i.useState(!1), g = (0, o.e7)([I.Z], () => !(null === I.Z || void 0 === I.Z ? void 0 : I.Z.hasLayers())), S = (0, o.e7)([T.default], () => T.default.getCurrentUser()), A = null != S ? N.default.age(S.id) : 0, M = !t && g && A >= w, {
+  } = (0, E.ZP)(_.Z.GIFT_BUTTON), [l, d] = i.useState(!1), g = (0, s.e7)([I.Z], () => !(null === I.Z || void 0 === I.Z ? void 0 : I.Z.hasLayers())), S = (0, s.e7)([T.default], () => T.default.getCurrentUser()), A = null != S ? N.default.age(S.id) : 0, M = !t && g && A >= w, {
 enabled: P
   } = m.RO.useExperiment({
 location: 'ChannelPremiumGiftButton'
   }, {
 autoTrackExposure: M
   }), U = [];
-  P && M && U.push(s.z.SEASONAL_GIFTING_COACHMARK_2023);
+  P && M && U.push(o.z.SEASONAL_GIFTING_COACHMARK_2023);
   let [x, G] = (0, h.U)(U), k = null != x, F = (0, v.Ft)(n), V = null != F;
   if (t)
 return null;
@@ -197,7 +197,7 @@ Z = (0, r.jsxs)('div', {
       'aria-label': D.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
       isActive: !1,
       onClick: () => {
-        d(!1), (0, f.EW)(s.z.SEASONAL_GIFTING_COACHMARK_2023, {
+        d(!1), (0, f.EW)(o.z.SEASONAL_GIFTING_COACHMARK_2023, {
           dismissAction: C.L.TAKE_ACTION
         }), H();
       },

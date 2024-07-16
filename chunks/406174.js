@@ -1,25 +1,25 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return I;
   }
 });
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(442837),
-  l = s(481060),
-  c = s(78839),
-  d = s(981631),
-  _ = s(689938),
-  E = s(141343),
-  u = s(727880),
-  T = s(834300);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(442837),
+  l = t(481060),
+  c = t(78839),
+  d = t(981631),
+  _ = t(689938),
+  E = t(141343),
+  u = t(727880),
+  T = t(834300);
 
 function I(e) {
   let {
-onClickManageSubscription: t
-  } = e, s = (0, o.e7)([c.ZP], () => c.ZP.getSubscriptions()), i = a.useMemo(() => Object.values(null != s ? s : {}).filter(e => e.type === d.NYc.GUILD).filter(e => e.status !== d.O0b.ENDED), [s]);
+onClickManageSubscription: s
+  } = e, t = (0, o.e7)([c.ZP], () => c.ZP.getSubscriptions()), i = a.useMemo(() => Object.values(null != t ? t : {}).filter(e => e.type === d.NYc.GUILD).filter(e => e.status !== d.O0b.ENDED), [t]);
   return 0 === i.length ? null : (0, n.jsxs)('div', {
 className: E.container,
 children: [
@@ -68,7 +68,7 @@ children: [
         color: l.Button.Colors.CUSTOM,
         size: l.Button.Sizes.SMALL,
         className: E.manageSubscriptionsButton,
-        onClick: t,
+        onClick: s,
         children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_SUBSCRIPTIONS_BUTTON
       })
     ]

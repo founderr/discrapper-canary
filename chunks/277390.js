@@ -1,4 +1,4 @@
-s.d(o, {
+o.d(s, {
   c2: function() {
 return m;
   },
@@ -6,45 +6,45 @@ return m;
 return t;
   }
 });
-var r, t, n, a, i = s(735250),
-  c = s(470079),
-  l = s(223972),
-  d = s(361846);
+var r, t, n, a, i = o(735250),
+  c = o(470079),
+  l = o(223972),
+  d = o(361846);
 
-function C(e, o, s) {
-  return o in e ? Object.defineProperty(e, o, {
-value: s,
+function C(e, s, o) {
+  return s in e ? Object.defineProperty(e, s, {
+value: o,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[o] = s, e;
+  }) : e[s] = o, e;
 }
 (r = t || (t = {})).SIZE_40 = 'SIZE_40', r.SIZE_60 = 'SIZE_60';
 let _ = Object.freeze({
 SIZE_40: 'size-40',
 SIZE_60: 'size-60'
   }),
-  u = s(515695);
+  u = o(515695);
 class f extends(n = c.PureComponent) {
   render() {
 let {
   className: e,
-  text: o,
-  ...s
+  text: s,
+  ...o
 } = this.props;
 return (0, i.jsx)('div', {
   style: {
     padding: 8,
     borderRadius: 4,
-    width: s.size,
-    height: s.size,
-    backgroundColor: s.bgColor
+    width: o.size,
+    height: o.size,
+    backgroundColor: o.bgColor
   },
   className: e,
   children: (0, i.jsx)(l.default, {
-    value: o,
+    value: s,
     level: 'M',
-    ...s
+    ...o
   })
 });
   }
@@ -58,7 +58,7 @@ class m extends(a = c.PureComponent) {
   render() {
 let {
   overlaySize: e
-} = this.props, o = _[null != e ? e : 'SIZE_40'];
+} = this.props, s = _[null != e ? e : 'SIZE_40'];
 return (0, i.jsxs)('div', {
   className: d.qrCodeContainer,
   children: [
@@ -68,7 +68,7 @@ return (0, i.jsxs)('div', {
     (0, i.jsx)('div', {
       className: d.qrCodeOverlay,
       children: (0, i.jsx)('img', {
-        className: d[o],
+        className: d[s],
         src: u,
         alt: ''
       })
@@ -81,4 +81,4 @@ C(m, 'defaultProps', {
   size: 144,
   bgColor: '#ffffff',
   fgColor: '#000000'
-}), o.ZP = f;
+}), s.ZP = f;

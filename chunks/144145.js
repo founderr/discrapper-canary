@@ -4,8 +4,8 @@ return Z;
   }
 }), n(653041), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(442837),
+  s = n(470079),
+  a = n(442837),
   r = n(481060),
   l = n(278323),
   o = n(287734),
@@ -33,13 +33,13 @@ currentActivities: t
   } = e, n = t.length > 1, Z = function(e) {
 let {
   currentActivities: t
-} = e, n = (0, s.e7)([m.Z], () => m.Z.getAccounts().some(e => e.type === d.Z.get(N.ABu.XBOX).type)), a = t.some(e => {
+} = e, n = (0, a.e7)([m.Z], () => m.Z.getAccounts().some(e => e.type === d.Z.get(N.ABu.XBOX).type)), s = t.some(e => {
   let {
     activity: t
   } = e;
   return (0, E.Z)(t);
 });
-return n || !a ? null : (0, i.jsx)(r.MenuItem, {
+return n || !s ? null : (0, i.jsx)(r.MenuItem, {
   id: 'xbox-connect',
   action: () => c.Z.open(N.oAB.CONNECTIONS),
   label: A.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
@@ -49,8 +49,8 @@ return n || !a ? null : (0, i.jsx)(r.MenuItem, {
   }(e), L = function(e) {
 let {
   currentActivities: t
-} = e, n = a.useContext(S.AnalyticsContext);
-return (0, s.Wu)([
+} = e, n = s.useContext(S.AnalyticsContext);
+return (0, a.Wu)([
   h.ZP,
   p.Z,
   I.Z,
@@ -60,10 +60,10 @@ return (0, s.Wu)([
   let {
     activity: t,
     game: i
-  } = e, a = p.Z.getActiveLibraryApplication(i.id);
+  } = e, s = p.Z.getActiveLibraryApplication(i.id);
   return {
     ...e,
-    libraryApplication: a,
+    libraryApplication: s,
     canJoin: null != t && (0, u.Z)(t, N.xjy.JOIN) && t.type === N.IIU.PLAYING,
     canPlay: (0, f.t)({
       LibraryApplicationStore: p.Z,
@@ -71,7 +71,7 @@ return (0, s.Wu)([
       DispatchApplicationStore: T.Z,
       ConnectedAppsStore: g.Z,
       applicationId: i.id,
-      branchId: null != a ? a.branchId : null
+      branchId: null != s ? s.branchId : null
     }),
     isLaunching: I.Z.launchingGames.has(i.id),
     isRunning: h.ZP.getRunningVerifiedApplicationIds().includes(i.id),
@@ -89,34 +89,34 @@ let {
 null != t && null != t.type && O.push(function(e, t) {
   let {
     canJoin: n,
-    activity: a,
-    activityUser: s
+    activity: s,
+    activityUser: a
   } = e;
-  if (!n || null == a)
+  if (!n || null == s)
     return null;
   async function c() {
-    if (null == a)
+    if (null == s)
       return;
     let e = await l.Z.sendActivityInviteUser({
       type: N.mFx.JOIN_REQUEST,
-      userId: s.id,
-      activity: a,
+      userId: a.id,
+      activity: s,
       location: N.Sbl.PROFILE_POPOUT
     });
     null != e && o.default.selectPrivateChannel(e.id);
   }
   return (0, i.jsx)(r.MenuItem, {
-    id: 'join-'.concat(a.session_id),
+    id: 'join-'.concat(s.session_id),
     label: t ? A.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN_USER.format({
-      name: s.toString()
+      name: a.toString()
     }) : A.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
     action: c
   });
 }(e, n), function(e, t) {
   let {
     activity: n,
-    game: a,
-    libraryApplication: s,
+    game: s,
+    libraryApplication: a,
     location: l,
     canPlay: o,
     isRunning: c,
@@ -125,14 +125,14 @@ null != t && null != t.type && O.push(function(e, t) {
   if (!o || null == n)
     return null;
   let u = c ? A.Z.Messages.ACTIVITY_FEED_POPOUT_APPLICATION_RUNNING.format({
-    name: a.name
+    name: s.name
   }) : d ? A.Z.Messages.ACTIVITY_FEED_POPOUT_APPLICATION_LAUNCHING.format({
-    name: a.name
+    name: s.name
   }) : void 0;
   return (0, i.jsx)(r.MenuItem, {
     id: 'play-'.concat(n.session_id),
     action: function() {
-      (0, C.playApplication)(a.id, s, {
+      (0, C.playApplication)(s.id, a, {
         analyticsParams: {
           location: {
             ...l,
@@ -142,7 +142,7 @@ null != t && null != t.type && O.push(function(e, t) {
       });
     },
     label: t ? A.Z.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_APPLICATION_NAME.format({
-      name: a.name
+      name: s.name
     }) : A.Z.Messages.APPLICATION_CONTEXT_MENU_LAUNCH,
     subtext: u
   });

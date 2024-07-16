@@ -6,8 +6,8 @@ return A;
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(570140),
+  s = n(481060),
+  o = n(570140),
   l = n(605236),
   u = n(837741),
   c = n(804545),
@@ -34,12 +34,12 @@ f.Z.isEditorOpen
   ]), O = i.useRef(null);
   (0, _.Z)(O, T.h1.CUSTOM_APP_ICONS);
   let R = (0, E.Dt)(),
-C = (0, o.useRadioGroup)({
+C = (0, s.useRadioGroup)({
   orientation: 'horizontal',
   labelledBy: R
 }),
 y = e => {
-  s.Z.dispatch({
+  o.Z.dispatch({
     type: 'APP_ICON_UPDATED',
     id: e
   });
@@ -99,7 +99,7 @@ children: (0, r.jsx)('div', {
               v ? null : (0, r.jsxs)('div', {
                 className: S.title,
                 children: [
-                  (0, r.jsx)(o.Heading, {
+                  (0, r.jsx)(s.Heading, {
                     variant: 'text-md/medium',
                     children: g.Z.Messages.APP_ICON_SETTINGS_TITLE
                   }),
@@ -108,7 +108,7 @@ children: (0, r.jsx)('div', {
                   })
                 ]
               }),
-              (0, r.jsx)(o.Heading, {
+              (0, r.jsx)(s.Heading, {
                 variant: 'text-sm/normal',
                 children: g.Z.Messages.APP_ICON_SETTINGS_DESCRIPTION
               })

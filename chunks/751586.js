@@ -9,8 +9,8 @@ return N;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(873546),
+  s = n.n(a),
+  o = n(873546),
   l = n(481060),
   u = n(425493),
   c = n(169525),
@@ -47,12 +47,12 @@ let S = e => {
 children: t,
 hasMediaControls: n,
 isObscured: a,
-src: s
-  } = e, [l, u] = i.useState(!1), _ = i.useRef(s);
+src: o
+  } = e, [l, u] = i.useState(!1), _ = i.useRef(o);
   return (i.useEffect(() => {
-s !== _.current && u(!a);
+o !== _.current && u(!a);
   }, [
-s,
+o,
 a
   ]), a) ? (0, r.jsx)(d.a.Provider, {
 value: l,
@@ -62,7 +62,7 @@ children: (0, r.jsx)(d.Z, {
   className: T.obscureContainer,
   obscured: !0,
   isSingleMosaicItem: !0,
-  obscurityControlClassName: o()({
+  obscurityControlClassName: s()({
     [T.controlsOffset]: n && l
   }),
   onToggleObscurity: e => {
@@ -70,13 +70,13 @@ children: (0, r.jsx)(d.Z, {
   },
   children: e => (0, r.jsx)(r.Fragment, {
     children: (0, r.jsx)('div', {
-      className: o()(T.obscureWrapper, {
+      className: s()(T.obscureWrapper, {
         [T.obscure]: e
       }),
       children: t(e)
     })
   })
-}, s)
+}, o)
   }) : (0, r.jsx)(r.Fragment, {
 children: t(!1)
   });
@@ -93,14 +93,14 @@ target: '_blank',
 rel: 'noreferrer noopener',
 className: T.downloadLink,
 children: I.Z.Messages.OPEN_IN_BROWSER
-  }), o = i({
+  }), s = i({
 className: T.forward
   });
-  return null == a && null == o ? null : (0, r.jsxs)('div', {
+  return null == a && null == s ? null : (0, r.jsxs)('div', {
 className: T.optionsContainer,
 children: [
   a,
-  o
+  s
 ]
   });
 }
@@ -110,7 +110,7 @@ function N(e) {
 src: t,
 original: n,
 placeholder: a,
-width: o,
+width: s,
 height: l,
 animated: u,
 children: c,
@@ -127,7 +127,7 @@ obscure: C = !1,
   } = e, {
 width: D,
 height: L
-  } = (0, E.zp)(o, l), b = s.tq && null != O;
+  } = (0, E.zp)(s, l), b = o.tq && null != O;
   i.useEffect(() => {
 if (null != O)
   return _.S.subscribe(m.CkL.MEDIA_MODAL_CLOSE, O), () => {
@@ -150,7 +150,7 @@ children: [
       src: t,
       placeholder: a,
       shouldLink: !1,
-      width: o,
+      width: s,
       height: l,
       maxWidth: D,
       maxHeight: L,
@@ -185,11 +185,11 @@ obscure: d = !1,
   } = e, {
 width: h,
 height: m
-  } = (0, E.zp)(n, i), I = s.tq && null != a, N = c ? e => {
+  } = (0, E.zp)(n, i), I = o.tq && null != a, N = c ? e => {
 e.stopPropagation(), e.preventDefault();
   } : _.onContextMenu;
   return (0, r.jsxs)('div', {
-className: o()(T.wrapper, T.videoWrapper),
+className: s()(T.wrapper, T.videoWrapper),
 children: [
   I ? (0, r.jsx)(g, {
     onClose: a

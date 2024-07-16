@@ -5,8 +5,8 @@ return F;
 }), n(653041);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(392711),
   o = n.n(r),
   c = n(848246),
@@ -48,12 +48,12 @@ function V(e) {
   let {
 channelId: t,
 guildId: n
-  } = e, a = Date.now(), l = (0, d.e7)([
+  } = e, a = Date.now(), s = (0, d.e7)([
 R.Z,
 y.Z
   ], () => o()(R.Z.getSpeakers()).map(e => y.Z.getParticipant(t, e)).filter(e => null != e && e.type === w.fO.USER && e.speaking && !(0, I.ZP)(e)).sortBy(e => -R.Z.getSpeakingDuration(e.user.id, a)).slice(0, 3).value());
-  return 0 === l.length ? null : (0, i.jsx)(i.Fragment, {
-children: l.map((e, t) => (0, i.jsx)(u.Tooltip, {
+  return 0 === s.length ? null : (0, i.jsx)(i.Fragment, {
+children: s.map((e, t) => (0, i.jsx)(u.Tooltip, {
   position: 'bottom',
   color: u.Tooltip.Colors.GREY,
   text: H.Z.Messages.CHANNEL_CALL_CURRENT_SPEAKER.format({
@@ -61,8 +61,8 @@ children: l.map((e, t) => (0, i.jsx)(u.Tooltip, {
   }),
   children: a => (0, i.jsx)(L.Z, {
     ...a,
-    className: s()(G.speaker, {
-      [G.last]: t === l.length - 1
+    className: l()(G.speaker, {
+      [G.last]: t === s.length - 1
     }),
     user: e.user,
     speaking: !0,
@@ -77,8 +77,8 @@ function F(e) {
   let {
 inPopout: t,
 channel: n,
-appContext: l,
-inCall: s,
+appContext: s,
+inCall: l,
 isChatOpen: r,
 exitFullScreen: o
   } = e, I = n.id, {
@@ -139,7 +139,7 @@ children: (e, t) => {
     className: G.button
   });
 }
-  }, 'call-members-popout')), s && Q.push(null != L ? (0, i.jsx)(Z.Z, {
+  }, 'call-members-popout')), l && Q.push(null != L ? (0, i.jsx)(Z.Z, {
 className: G.button,
 channelId: I
   }, 'deselect-participant') : (0, i.jsx)(b.Z, {
@@ -162,7 +162,7 @@ renderPopout: e => {
     children: (0, i.jsx)(k.Z, {
       channelId: I,
       onClose: t,
-      appContext: l,
+      appContext: s,
       exitFullScreen: o
     })
   });

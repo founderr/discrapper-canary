@@ -24,7 +24,7 @@ renderHeader: m,
 renderPurchaseConfirmation: T,
 planGroup: h,
 reviewWarningMessage: N,
-skuId: p
+skuId: f
   } = e;
   (0, a.openModalLazy)(async () => {
 let {
@@ -54,25 +54,25 @@ let {
 ]).then(n.bind(n, 7305));
 return n => {
   let {
-    onClose: f,
+    onClose: p,
     ...C
   } = n;
   return (0, i.jsx)(e, {
     activeSubscription: l,
     stepConfigs: r,
-    skuIDs: [p],
+    skuIDs: [f],
     children: (0, i.jsx)(s.KB, {
       children: (0, i.jsx)(a, {
         ...C,
         initialPlanId: t,
         onClose: e => {
-          f(), null == d || d(e);
+          p(), null == d || d(e);
         },
         analyticsLocations: E,
         analyticsObject: u,
         analyticsLocation: _,
         analyticsSubscriptionType: I,
-        skuId: p,
+        skuId: f,
         renderHeader: m,
         renderPurchaseConfirmation: T,
         planGroup: h,

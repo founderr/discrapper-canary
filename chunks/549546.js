@@ -5,8 +5,8 @@ return E;
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(481060),
   l = n(923973),
   o = n(572004),
@@ -20,10 +20,10 @@ function E(e) {
 user: t,
 isHovering: n
   } = e, {
-trackUserProfileAction: a
+trackUserProfileAction: s
   } = (0, d.KZ)();
   return o.wS ? (0, i.jsx)(l.o, {
-className: s()(_.copiable, {
+className: a()(_.copiable, {
   [_.visible]: n
 }),
 copyValue: c.ZP.getUserTag(t, {
@@ -35,7 +35,7 @@ copyTooltip: u.Z.Messages.COPY_USERNAME,
 copyTooltipDelay: 0,
 disableCopy: !1,
 showCopyIcon: !1,
-onCopy: () => a({
+onCopy: () => s({
   action: 'COPY_USERNAME'
 }),
 children: (0, i.jsx)(r.CopyIcon, {

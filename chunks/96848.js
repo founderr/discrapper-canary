@@ -6,13 +6,13 @@ return m;
 var l = s(735250),
   t = s(470079),
   i = s(481060),
-  r = s(907040),
-  a = s(981631),
+  a = s(907040),
+  r = s(981631),
   c = s(185923),
   o = s(689938),
   u = s(605099);
 let d = {
-section: a.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
+section: r.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
 openPopoutType: 'gift_effect_emoji_picker'
   },
   _ = c.Hz.GIFT;
@@ -21,7 +21,7 @@ function m(e) {
   let {
 setEmojiConfetti: n,
 emojiConfetti: s
-  } = e, [a, c] = t.useState(!1), m = e => (0, l.jsxs)('div', {
+  } = e, [r, c] = t.useState(!1), m = e => (0, l.jsxs)('div', {
 className: u.customGiftContent,
 children: [
   (0, l.jsxs)('div', {
@@ -43,7 +43,7 @@ children: [
 null != n && (n(e), c(!1));
   };
   return (0, l.jsx)(i.Popout, {
-shouldShow: a,
+shouldShow: r,
 position: 'bottom',
 align: 'left',
 autoInvert: !1,
@@ -53,7 +53,7 @@ renderPopout: e => {
     closePopout: n
   } = e;
   return (0, l.jsx)(i.Dialog, {
-    children: (0, l.jsx)(r.Z, {
+    children: (0, l.jsx)(a.Z, {
       analyticsOverride: d,
       closePopout: n,
       onSelectEmoji: E,

@@ -1,55 +1,55 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return q;
   }
-}), s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(442837),
-  l = s(704215),
-  c = s(780384),
-  d = s(481060),
-  _ = s(153867),
-  E = s(230711),
-  u = s(714338),
-  T = s(857595),
-  I = s(607070),
-  S = s(627845),
-  N = s(514361),
-  C = s(605236),
-  m = s(786761),
-  A = s(3148),
-  h = s(739566),
-  g = s(753206),
-  O = s(837741),
-  p = s(804545),
-  R = s(921801),
-  x = s(594174),
-  M = s(285952),
-  f = s(153124),
-  D = s(358085),
-  P = s(210887),
-  L = s(740492),
-  Z = s(695346),
-  b = s(329013),
-  v = s(333859),
-  j = s(726985),
-  B = s(981631),
-  U = s(921944),
-  G = s(959517),
-  F = s(689938),
-  y = s(704803),
-  V = s(549856);
+}), t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(442837),
+  l = t(704215),
+  c = t(780384),
+  d = t(481060),
+  _ = t(153867),
+  E = t(230711),
+  u = t(714338),
+  T = t(857595),
+  I = t(607070),
+  S = t(627845),
+  N = t(514361),
+  C = t(605236),
+  m = t(786761),
+  A = t(3148),
+  h = t(739566),
+  g = t(753206),
+  O = t(837741),
+  p = t(804545),
+  R = t(921801),
+  x = t(594174),
+  M = t(285952),
+  f = t(153124),
+  D = t(358085),
+  P = t(210887),
+  L = t(740492),
+  Z = t(695346),
+  b = t(329013),
+  v = t(333859),
+  j = t(726985),
+  B = t(981631),
+  U = t(921944),
+  G = t(959517),
+  F = t(689938),
+  y = t(704803),
+  V = t(549856);
 
-function Y(e, t, s) {
-  return t in e ? Object.defineProperty(e, t, {
-value: s,
+function Y(e, s, t) {
+  return s in e ? Object.defineProperty(e, s, {
+value: t,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[t] = s, e;
+  }) : e[s] = t, e;
 }
 let w = {
 COZY: 'cozy',
@@ -60,7 +60,7 @@ COMPACT: 'compact'
   W = (0, f.hQ)(),
   K = '1337',
   z = e => {
-let t = 0;
+let s = 0;
 return [
   (0, m.e5)({
     ...(0, A.ZP)({
@@ -68,7 +68,7 @@ return [
       content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
     }),
     state: B.yb.SENT,
-    id: ''.concat(t++)
+    id: ''.concat(s++)
   }),
   (0, m.e5)({
     ...(0, A.ZP)({
@@ -76,7 +76,7 @@ return [
       content: (0, c.wj)(e) ? F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
     }),
     state: B.yb.SENT,
-    id: ''.concat(t++)
+    id: ''.concat(s++)
   }),
   (0, m.e5)({
     ...(0, A.ZP)({
@@ -84,7 +84,7 @@ return [
       content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
     }),
     state: B.yb.SENT,
-    id: ''.concat(t++)
+    id: ''.concat(s++)
   }),
   (0, m.e5)({
     ...(0, A.ZP)({
@@ -92,7 +92,7 @@ return [
       content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
     }),
     state: B.yb.SENT,
-    id: ''.concat(t++)
+    id: ''.concat(s++)
   }),
   (0, m.e5)({
     ...(0, A.ZP)({
@@ -100,7 +100,7 @@ return [
       content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
     }),
     state: B.yb.SENT,
-    id: ''.concat(t)
+    id: ''.concat(s)
   })
 ];
   };
@@ -165,7 +165,7 @@ return (0, n.jsxs)(d.FormItem, {
   renderMessageGroupSpacingSlider() {
 let {
   messageDisplayCompact: e,
-  messageGroupSpacing: t
+  messageGroupSpacing: s
 } = this.props;
 return (0, n.jsxs)(d.FormItem, {
   className: V.marginTop20,
@@ -178,7 +178,7 @@ return (0, n.jsxs)(d.FormItem, {
     }),
     (0, n.jsx)(d.Slider, {
       className: r()(V.marginTop20, V.marginBottom4),
-      initialValue: t,
+      initialValue: s,
       defaultValue: e ? G.c8 : G.pq,
       markers: G.fP,
       stickToMarkers: !0,
@@ -194,34 +194,34 @@ return (0, n.jsxs)(d.FormItem, {
   renderPreview() {
 let {
   messageDisplayCompact: e,
-  theme: t,
-  messageGroupSpacing: s,
+  theme: s,
+  messageGroupSpacing: t,
   hideSimpleEmbedContent: a
-} = this.props, i = (0, c.wj)(t) ? this.darkMessages : this.lightMessages;
+} = this.props, i = (0, c.wj)(s) ? this.darkMessages : this.lightMessages;
 return (0, n.jsx)(d.FocusBlock, {
   children: (0, n.jsx)(d.Card, {
-    className: r()(y.preview, V.marginBottom40, e ? y.compactPreview : void 0, 'group-spacing-'.concat(null != s ? s : e ? G.c8 : G.pq)),
+    className: r()(y.preview, V.marginBottom40, e ? y.compactPreview : void 0, 'group-spacing-'.concat(null != t ? t : e ? G.c8 : G.pq)),
     outline: !0,
     'aria-hidden': !0,
-    children: i.map((t, s) => (0, n.jsx)(g.Z, {
-      author: (0, h.ZH)(t),
-      message: t,
+    children: i.map((s, t) => (0, n.jsx)(g.Z, {
+      author: (0, h.ZH)(s),
+      message: s,
       compact: e,
-      isGroupStart: s % 2 == 0,
-      className: 0 === s ? y.firstMessage : void 0,
+      isGroupStart: t % 2 == 0,
+      className: 0 === t ? y.firstMessage : void 0,
       hideSimpleEmbedContent: a
-    }, t.id))
+    }, s.id))
   })
 });
   }
   renderTheme() {
 let {
   theme: e,
-  useForcedColors: t,
-  darkSidebar: s,
+  useForcedColors: s,
+  darkSidebar: t,
   gradientPreset: a
 } = this.props;
-return t ? (0, n.jsx)(d.FormItem, {
+return s ? (0, n.jsx)(d.FormItem, {
   className: r()(V.marginTop8, V.marginBottom40),
   title: (0, n.jsx)('div', {
     className: y.themeTitle,
@@ -258,8 +258,8 @@ return t ? (0, n.jsx)(d.FormItem, {
       children: (0, n.jsx)(v.c, {})
     }),
     (0, n.jsx)(d.FormSwitch, {
-      value: s && (0, c.ap)(e) && !t,
-      disabled: e !== B.BRd.LIGHT || t || null != a,
+      value: t && (0, c.ap)(e) && !s,
+      disabled: e !== B.BRd.LIGHT || s || null != a,
       onChange: this.handleDarkSidebarChecked,
       className: V.marginTop20,
       children: F.Z.Messages.ACCESSIBILITY_DARK_SIDEBAR
@@ -376,9 +376,9 @@ super(...e), Y(this, 'darkMessages', z(B.BRd.DARK)), Y(this, 'lightMessages', z(
   });
 }), Y(this, 'handleMessageDisplayModeChange', e => {
   let {
-    value: t
+    value: s
   } = e;
-  Z.jU.updateSetting(t === w.COMPACT), (0, T.ZZ)();
+  Z.jU.updateSetting(s === w.COMPACT), (0, T.ZZ)();
 });
   }
 }
@@ -391,8 +391,8 @@ forceTrack: !0
 
 function q() {
   let e = Z.jU.useSetting(),
-t = Z.RS.useSetting(),
-s = Z.NA.useSetting(),
+s = Z.RS.useSetting(),
+t = Z.NA.useSetting(),
 i = Z.L1.useSetting(),
 r = 'UserSettingsAppearance',
 {
@@ -415,7 +415,7 @@ I.Z,
 x.default,
 N.Z
   ], () => {
-var e, t;
+var e, s;
 return {
   theme: P.Z.theme,
   useForcedColors: I.Z.useForcedColors,
@@ -425,13 +425,13 @@ return {
   zoom: I.Z.zoom,
   messageGroupSpacing: I.Z.messageGroupSpacing,
   displayCompactAvatars: L.ZP.displayCompactAvatars,
-  isStaff: null !== (t = null === (e = x.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
+  isStaff: null !== (s = null === (e = x.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== s && s,
   gradientPreset: N.Z.gradientPreset
 };
   });
   return (0, n.jsx)(Q, {
 messageDisplayCompact: e,
-hideSimpleEmbedContent: t && s,
+hideSimpleEmbedContent: s && t,
 clientTheme: i,
 ..._
   });

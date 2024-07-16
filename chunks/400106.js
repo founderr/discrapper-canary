@@ -5,8 +5,8 @@ return _;
 }), n(47120);
 var r, i = n(544891),
   a = n(81825),
-  o = n(601964),
-  s = n(768581),
+  s = n(601964),
+  o = n(768581),
   l = n(624138),
   u = n(981631);
 
@@ -38,7 +38,7 @@ let r = await i.tn.get({
 class _ extends a.Z {
   getIconURL(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-return s.ZP.getGuildIconURL({
+return o.ZP.getGuildIconURL({
   id: this.id,
   size: e,
   icon: this.icon,
@@ -47,7 +47,7 @@ return s.ZP.getGuildIconURL({
   }
   getIconSource(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-return s.ZP.getAnimatableSourceWithFallback(t, t => s.ZP.getGuildIconSource({
+return o.ZP.getAnimatableSourceWithFallback(t, t => o.ZP.getGuildIconSource({
   id: this.id,
   size: e,
   icon: this.icon,
@@ -108,7 +108,7 @@ return new _({
 });
   }
   static createFromGuildType(e) {
-return e instanceof _ ? e : e instanceof o.ZP ? _.createFromGuildRecord(e) : _.createFromDiscoverableGuild(e);
+return e instanceof _ ? e : e instanceof s.ZP ? _.createFromGuildRecord(e) : _.createFromDiscoverableGuild(e);
   }
   constructor(e) {
 super(), c(this, 'id', void 0), c(this, 'name', void 0), c(this, 'icon', void 0), c(this, 'description', void 0), c(this, 'features', void 0), c(this, 'premiumTier', void 0), c(this, 'premiumSubscriberCount', void 0), c(this, 'presenceCount', void 0), c(this, 'memberCount', void 0), c(this, 'emojis', void 0), this.id = e.id, this.name = e.name, this.icon = e.icon, this.description = e.description, this.features = e.features, this.premiumTier = e.premiumTier, this.premiumSubscriberCount = e.premiumSubscriberCount, this.presenceCount = e.presenceCount, this.memberCount = e.memberCount, this.emojis = e.emojis;

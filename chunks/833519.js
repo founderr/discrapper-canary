@@ -8,8 +8,8 @@ return H;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(475179),
@@ -50,10 +50,10 @@ function H(e) {
 participant: t,
 selected: n,
 focused: a,
-idle: l,
-width: s,
+idle: s,
+width: l,
 premiumIndicator: o
-  } = e, c = (0, r.e7)([g.Z], () => g.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)), d = (0, O.K)(s);
+  } = e, c = (0, r.e7)([g.Z], () => g.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)), d = (0, O.K)(l);
   return (0, i.jsxs)(i.Fragment, {
 children: [
   n ? null : (0, i.jsx)(P.Z, {
@@ -63,7 +63,7 @@ children: [
     size: S.ZP.Sizes.SMALL,
     className: w.liveIndicator,
     participant: t,
-    showQuality: !d && !l,
+    showQuality: !d && !s,
     isUpsellEnabled: !1,
     premiumIndicator: o
   })
@@ -75,7 +75,7 @@ function G(e) {
   let {
 participant: t,
 selected: n,
-onVideoResize: l,
+onVideoResize: s,
 paused: h,
 fit: f,
 inPopout: S,
@@ -134,7 +134,7 @@ return (0, i.jsxs)(i.Fragment, {
       stream: F
     }) : null,
     (0, i.jsx)(v.Z, {
-      onResize: l,
+      onResize: s,
       wrapperClassName: w.videoWrapper,
       className: w.content,
       streamId: z,
@@ -156,13 +156,13 @@ return (0, i.jsxs)(i.Fragment, {
 });
   else
 return (0, i.jsxs)('div', {
-  className: s()(w.content, w.streamPreview, {
+  className: l()(w.content, w.streamPreview, {
     [w.small]: ee
   }),
   children: [
     (0, i.jsx)(_.Z, {
       noText: !0,
-      className: s()(w.absoluteFill, {
+      className: l()(w.absoluteFill, {
         [w.streamPreviewOpacity]: null == K
       }),
       stream: t.stream

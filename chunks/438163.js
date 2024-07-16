@@ -6,8 +6,8 @@ return D;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(338545),
+  s = n.n(a),
+  o = n(338545),
   l = n(442837),
   u = n(846519),
   c = n(481060),
@@ -64,7 +64,7 @@ K,
 z,
 q
   ]);
-  let [eo, es] = (0, s.useSpring)(() => ({
+  let [es, eo] = (0, o.useSpring)(() => ({
 maxHeight: ''.concat(q, 'px'),
 config: {
   clamp: !0,
@@ -78,7 +78,7 @@ return null;
   if (!!en) {
     if (e) {
       let e = Math.min(null !== (t = G.current) && void 0 !== t ? t : z, z);
-      es({
+      eo({
         maxHeight: ''.concat(e, 'px'),
         delay: M ? 0 : 300,
         config: {
@@ -88,7 +88,7 @@ return null;
       });
     } else {
       let e = Math.min(null !== (n = B.current) && void 0 !== n ? n : q, q);
-      es({
+      eo({
         maxHeight: ''.concat(e, 'px'),
         delay: 0
       });
@@ -133,17 +133,17 @@ e_ = {
   [v.fullSize]: h === S.y0.FULL_SIZE,
   [v.panel]: h === S.y0.PANEL
 },
-eE = o()(v.background, {
+eE = s()(v.background, {
   [v.editable]: $
 }),
-ef = o()({
+ef = s()({
   [v.statusBubbleShape]: !Z && Y || !ee,
   [v.statusBubbleSingleLineWithTextShape]: ee && Z || X
 }),
-eh = o()(v.statusBubbleOuter, e_, ef, {
+eh = s()(v.statusBubbleOuter, e_, ef, {
   [v.statusBubbleOuterAddStatusCursor]: X
 }),
-ep = o()(v.statusBubble, ef, {
+ep = s()(v.statusBubble, ef, {
   [v.statusBubbleEmojiOnlyPadding]: j,
   [v.statusBubbleWithTextPadding]: Z || X,
   [v.statusBubbleWithTextMinWidth]: Z,
@@ -154,7 +154,7 @@ value: L,
 children: (0, r.jsxs)('div', {
   children: [
     (0, r.jsx)('div', {
-      className: o()(v.invisibleContainer, e_),
+      className: s()(v.invisibleContainer, e_),
       children: (0, r.jsx)('div', {
         className: eh,
         children: (0, r.jsxs)('span', {
@@ -162,7 +162,7 @@ children: (0, r.jsxs)('div', {
           children: [
             X && ed(),
             Q && (0, r.jsxs)('div', {
-              className: o()(v.content, v.clamp, v.placeholderWidth, {
+              className: s()(v.content, v.clamp, v.placeholderWidth, {
                 [v.panel]: h === S.y0.PANEL
               }),
               ref: k,
@@ -172,7 +172,7 @@ children: (0, r.jsxs)('div', {
               ]
             }),
             Q && (0, r.jsxs)('div', {
-              className: o()(v.content, v.unclamp, v.placeholderWidth, v.incorporeal, {
+              className: s()(v.content, v.unclamp, v.placeholderWidth, v.incorporeal, {
                 [v.panel]: h === S.y0.PANEL
               }),
               ref: x,
@@ -186,7 +186,7 @@ children: (0, r.jsxs)('div', {
       })
     }),
     (0, r.jsxs)(c.ClickableContainer, {
-      className: o()(v.visibleContainer, e_, eE),
+      className: s()(v.visibleContainer, e_, eE),
       'aria-label': X ? N.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL : N.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
         emoji: null !== (t = null == F ? void 0 : F.name) && void 0 !== t ? t : '',
         status: V
@@ -228,13 +228,13 @@ children: (0, r.jsxs)('div', {
             className: ep,
             children: [
               Q && (() => {
-                let e = o()(v.content, {
+                let e = s()(v.content, {
                   [v.clamp]: U,
                   [v.unclamp]: !U,
                   [v.singleLineAlign]: ee
                 });
-                return (0, r.jsxs)(s.animated.div, {
-                  style: eo,
+                return (0, r.jsxs)(o.animated.div, {
+                  style: es,
                   className: e,
                   children: [
                     eu(),
@@ -268,16 +268,16 @@ user: t,
 editEnabled: n,
 reactReplyEnabled: i,
 ...a
-  } = e, o = (0, l.e7)([p.default], () => p.default.getId() === t.id), s = (0, h.a)(), u = (0, l.e7)([m.Z], () => m.Z.findActivity(t.id, e => {
+  } = e, s = (0, l.e7)([p.default], () => p.default.getId() === t.id), o = (0, h.a)(), u = (0, l.e7)([m.Z], () => m.Z.findActivity(t.id, e => {
 let {
   type: t
 } = e;
 return t === A.IIU.CUSTOM_STATUS;
   }));
   return (0, r.jsx)(y, {
-reactReplyEnabled: i && !o,
-editEnabled: n && o,
-statusActivity: n && o ? s : u,
+reactReplyEnabled: i && !s,
+editEnabled: n && s,
+statusActivity: n && s ? o : u,
 ...a
   });
 }

@@ -8,8 +8,8 @@ return Z;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(392711),
   o = n(338545),
   c = n(481060),
@@ -41,13 +41,13 @@ function Z(e) {
   let {
 emoji: t,
 isDisabled: n = !1,
-onClick: l,
+onClick: s,
 className: r
   } = e, h = a.useRef(null), m = (0, u.Z)(h);
   return (0, i.jsx)('span', {
 ref: h,
 children: (0, i.jsx)(c.Button, {
-  onClick: l,
+  onClick: s,
   look: c.Button.Looks.BLANK,
   size: c.Button.Sizes.NONE,
   focusProps: {
@@ -76,7 +76,7 @@ children: (0, i.jsx)(c.Button, {
           ]).to(e => 'scale('.concat(e, ')'))
         },
         children: (0, i.jsx)(d.Z, {
-          className: s()(N.emoji, r, {
+          className: l()(N.emoji, r, {
             [N.emojiItemDisabled]: n
           }),
           emojiId: t.id,
@@ -95,7 +95,7 @@ function A(e) {
 otherAccessories: t,
 isEmojiPickerExpanded: n,
 onSetExpanded: a,
-onFocus: l
+onFocus: s
   } = e;
   return (0, i.jsxs)(i.Fragment, {
 children: [
@@ -103,12 +103,12 @@ children: [
   (0, i.jsx)(c.Clickable, {
     className: N.dropDownContainer,
     onClick: () => {
-      a(!n), l();
+      a(!n), s();
     },
     children: (0, i.jsx)(c.ChevronSmallDownIcon, {
       size: 'md',
       color: 'currentColor',
-      className: s()(N.dropDown, {
+      className: l()(N.dropDown, {
         [N.dropDownOpen]: n
       })
     })
@@ -121,7 +121,7 @@ function M(e) {
   let {
 channel: t,
 title: n,
-closePopout: l,
+closePopout: s,
 onFocus: o,
 onSelectEmoji: d,
 onSelectDisabledEmoji: u,
@@ -143,7 +143,7 @@ intention: v
 },
 y = (e, t) => {
   if (null == e && t) {
-    l();
+    s();
     return;
   }
   null != e && d(e);
@@ -167,13 +167,13 @@ children: [
       (0, i.jsx)(m.Z, {
         analyticsOverride: M,
         channel: t,
-        className: s()(N.animatedPicker, {
+        className: l()(N.animatedPicker, {
           [N.animatedPickerTall]: R
         }),
-        headerClassName: s()(N.emojiPickerHeader, {
+        headerClassName: l()(N.emojiPickerHeader, {
           [N.emojiPickerHeaderExpanded]: R
         }),
-        closePopout: l,
+        closePopout: s,
         onSelectEmoji: R ? y : () => {},
         shouldHidePickerActions: !R,
         wrapper: 'div',
@@ -194,7 +194,7 @@ children: [
       (0, i.jsx)('div', {
         className: N.slotsContainer,
         children: (0, i.jsx)('div', {
-          className: s()(N.slots, N.slotsWide),
+          className: l()(N.slots, N.slotsWide),
           children: P.map(e => {
             let n = C.ZP.isEmojiDisabled({
               emoji: e,

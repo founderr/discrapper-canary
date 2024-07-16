@@ -1,12 +1,12 @@
 n.d(t, {
   Bj: function() {
-return a;
+return s;
   },
   ZP: function() {
 return R;
   }
 }), n(47120);
-var i, a, s, r, l = n(735250),
+var i, s, a, r, l = n(735250),
   o = n(470079),
   c = n(338545),
   d = n(143927),
@@ -34,9 +34,9 @@ function R(e) {
 width: t,
 isAnimating: n,
 variant: i = 'default',
-onScroll: a
+onScroll: s
   } = e, {
-loaded: s,
+loaded: a,
 clans: r,
 searchResult: R,
 searchCriteria: x
@@ -58,11 +58,11 @@ if (null == e) {
 }
 D(e.getBoundingClientRect().y + 8 + 400 + 64);
   }, []), B = (0, E.y)(w), H = o.useCallback(e => {
-w(B.current), null != e && (null == a || a(e));
+w(B.current), null != e && (null == s || s(e));
   }, [
 w,
 B,
-a
+s
   ]), V = (0, h.h)(H, 10, [H], {
 leading: !0,
 trailing: !0
@@ -171,17 +171,17 @@ R
 ]),
 Y = o.useMemo(() => new Set(x.games), [x.games]),
 W = o.useCallback((e, t, n, i) => {
-  var a;
+  var s;
   let {
-    items: s,
+    items: a,
     section: r
   } = F[e];
   if ('upsell' === r || 'hero' === r)
     return null;
-  let o = s[t];
+  let o = a[t];
   return (0, l.jsx)(p.ZP, {
     clan: o,
-    affinity: null !== (a = o.affininty) && void 0 !== a ? a : (0, g.y)(o, x),
+    affinity: null !== (s = o.affininty) && void 0 !== s ? s : (0, g.y)(o, x),
     traitsToHighlight: b,
     className: L.card,
     style: n,
@@ -198,10 +198,10 @@ W = o.useCallback((e, t, n, i) => {
 z = o.useCallback((e, t) => {
   let {
     header: n,
-    subtitle: a,
-    section: s
+    subtitle: s,
+    section: a
   } = F[e];
-  switch (s) {
+  switch (a) {
     case 'upsell':
       return (0, l.jsx)(C.Z, {});
     case 'hero':
@@ -226,7 +226,7 @@ z = o.useCallback((e, t) => {
               position: 'absolute'
             },
             title: n,
-            subtitle: a
+            subtitle: s
           }),
           'global_discovery' === i ? (0, l.jsx)('div', {
             className: L.topPicksToolbar,
@@ -239,7 +239,7 @@ z = o.useCallback((e, t) => {
         return null;
       return (0, l.jsx)(N.Z, {
         title: n,
-        subtitle: a,
+        subtitle: s,
         style: {
           ...t,
           position: 'absolute'
@@ -251,7 +251,7 @@ z = o.useCallback((e, t) => {
   B,
   i
 ]);
-  return 0 !== r.length && s ? (0, l.jsx)(l.Fragment, {
+  return 0 !== r.length && a ? (0, l.jsx)(l.Fragment, {
 children: (0, l.jsxs)('div', {
   className: L.masonryListContainer,
   children: [
@@ -294,4 +294,4 @@ children: (0, l.jsxs)('div', {
 })
   }) : null;
 }
-(s = i || (i = {})).UPSELL = 'upsell', s.TOP_PICKS = 'top_picks', s.OTHER_GUILDS = 'other_guilds', s.HERO = 'hero', (r = a || (a = {})).DEFAULT = 'default', r.UPSELL = 'upsell', r.GLOBAL_DISCOVERY = 'global_discovery';
+(a = i || (i = {})).UPSELL = 'upsell', a.TOP_PICKS = 'top_picks', a.OTHER_GUILDS = 'other_guilds', a.HERO = 'hero', (r = s || (s = {})).DEFAULT = 'default', r.UPSELL = 'upsell', r.GLOBAL_DISCOVERY = 'global_discovery';

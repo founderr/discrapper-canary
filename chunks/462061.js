@@ -8,8 +8,8 @@ return j;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(475179),
@@ -57,7 +57,7 @@ function j(e) {
   let {
 participant: t,
 channel: n,
-inCall: l,
+inCall: s,
 width: o,
 paused: _,
 selected: R,
@@ -84,7 +84,7 @@ animateOnHover: !K
   }), J = (0, r.e7)([u.Z], () => u.Z.getSelectedParticipant(n.id));
   return (a.useEffect(() => {
 n.isGuildStageVoice() && !G && (null == J ? void 0 : J.id) === U.id && c.Z.selectParticipant(n.id, null);
-  }, [G]), l && !W && !O && G && !R && null != D && C.Z.supports(S.AN.VIDEO)) ? (0, i.jsx)(x.Z, {
+  }, [G]), s && !W && !O && G && !R && null != D && C.Z.supports(S.AN.VIDEO)) ? (0, i.jsx)(x.Z, {
 onResize: L,
 wrapperClassName: A.videoWrapper,
 className: A.content,
@@ -96,7 +96,7 @@ paused: _,
 videoSpinnerContext: U.id === k ? d.m.SELF_VIDEO : d.m.REMOTE_VIDEO,
 userId: U.id
   }, w) : (0, i.jsx)('div', {
-className: s()(A.content, {
+className: l()(A.content, {
   [A.blockedAvatar]: P
 }),
 children: (0, i.jsx)(I.Z, {

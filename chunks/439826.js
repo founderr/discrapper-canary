@@ -4,9 +4,9 @@ return S;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(186325),
   o = n(780384),
   c = n(481060),
@@ -25,19 +25,19 @@ function S(e) {
   var t;
   let {
 quest: n,
-isHovering: s,
+isHovering: a,
 onCtxMenuClose: S,
 onCtxMenuOpen: f,
 onCtxMenuSelect: C
-  } = e, N = (0, h.ph)(n), A = (0, d.ZP)(), v = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, Z = v === g.BRd.DARK, L = a.useMemo(() => (0, h.nP)(n.config.assets.questBarHero), [n]), O = a.useContext(l.S).reducedMotion.enabled, R = (0, h.Mi)(n, E.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = a.useRef(s), M = a.useRef(null);
-  return a.useEffect(() => {
+  } = e, N = (0, h.ph)(n), A = (0, d.ZP)(), v = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, Z = v === g.BRd.DARK, L = s.useMemo(() => (0, h.nP)(n.config.assets.questBarHero), [n]), O = s.useContext(l.S).reducedMotion.enabled, R = (0, h.Mi)(n, E.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = s.useRef(a), M = s.useRef(null);
+  return s.useEffect(() => {
 if (L && null != M.current)
-  return P.current !== s && (s ? M.current.play() : (M.current.pause(), M.current.currentTime = 0)), P.current = s, () => {
+  return P.current !== a && (a ? M.current.play() : (M.current.pause(), M.current.currentTime = 0)), P.current = a, () => {
     var e;
     null === (e = M.current) || void 0 === e || e.pause();
   };
   }, [
-s,
+a,
 L
   ]), (0, i.jsxs)('div', {
 className: T.container,
@@ -48,7 +48,7 @@ children: [
       id: 'QuestBarV2ContentExpanded_heroAnimated',
       children: e => (null != e.current && (M.current = e.current), (0, i.jsx)(u.Z, {
         ref: e,
-        autoPlay: !O && s,
+        autoPlay: !O && a,
         loop: !0,
         playsInline: !0,
         className: T.heroAsset,

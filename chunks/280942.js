@@ -1,29 +1,29 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return d;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(481060),
-  i = s(230711),
-  r = s(267642),
-  o = s(981631),
-  l = s(689938),
-  c = s(707817);
+var n = t(735250);
+t(470079);
+var a = t(481060),
+  i = t(230711),
+  r = t(267642),
+  o = t(981631),
+  l = t(689938),
+  c = t(707817);
 
 function d(e) {
   let {
-guildBoostSlot: t,
+guildBoostSlot: s,
 onClose: d,
 hasCancelableGuildBoostSlot: _,
 premiumSubscription: E,
 onSelect: u
   } = e, T = {
 transfer: {
-  label: null != t.premiumGuildSubscription ? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON : l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SELECT_SERVER_BUTTON,
-  subtext: t.isOnCooldown() ? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON_DISABLED_TOOLTIP : null,
-  disabled: t.isOnCooldown()
+  label: null != s.premiumGuildSubscription ? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON : l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SELECT_SERVER_BUTTON,
+  subtext: s.isOnCooldown() ? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON_DISABLED_TOOLTIP : null,
+  disabled: s.isOnCooldown()
 },
 cancel: {
   label: l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SLOT_CANCEL_BUTTON,
@@ -59,17 +59,17 @@ children: [
       (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.resolve().then(s.bind(s, 760558));
-        return s => (0, n.jsx)(e, {
-          ...s,
-          guildBoostSlots: [t],
+        } = await Promise.resolve().then(t.bind(t, 760558));
+        return t => (0, n.jsx)(e, {
+          ...t,
+          guildBoostSlots: [s],
           locationSection: o.jXE.SETTINGS_PREMIUM
         });
       });
     },
     disabled: T.transfer.disabled
   }),
-  (0, r.tl)(t) ? (0, n.jsx)(a.MenuItem, {
+  (0, r.tl)(s) ? (0, n.jsx)(a.MenuItem, {
     id: 'uncancel',
     label: T.uncancel.label,
     subtext: T.uncancel.subtext,
@@ -77,10 +77,10 @@ children: [
       (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.resolve().then(s.bind(s, 450468));
-        return s => (0, n.jsx)(e, {
-          ...s,
-          guildBoostSlotId: t.id
+        } = await Promise.resolve().then(t.bind(t, 450468));
+        return t => (0, n.jsx)(e, {
+          ...t,
+          guildBoostSlotId: s.id
         });
       });
     },
@@ -93,10 +93,10 @@ children: [
       (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.resolve().then(s.bind(s, 401786));
-        return s => (0, n.jsx)(e, {
-          ...s,
-          guildBoostSlot: t
+        } = await Promise.resolve().then(t.bind(t, 401786));
+        return t => (0, n.jsx)(e, {
+          ...t,
+          guildBoostSlot: s
         });
       });
     },

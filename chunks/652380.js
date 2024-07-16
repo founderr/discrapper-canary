@@ -1,31 +1,31 @@
-s(47120), s(627341);
-var n = s(735250),
-  a = s(470079),
-  i = s(278074),
-  r = s(481060),
-  o = s(70956),
-  l = s(497505),
-  c = s(210724),
-  d = s(130653),
-  _ = s(78826),
-  E = s(37303),
-  u = s(134483),
-  T = s(478977),
-  I = s(456799),
-  S = s(210851),
-  N = s(602683),
-  C = s(916028),
-  m = s(15033),
-  A = s(899457),
-  h = s(452693);
+t(47120), t(627341);
+var n = t(735250),
+  a = t(470079),
+  i = t(278074),
+  r = t(481060),
+  o = t(70956),
+  l = t(497505),
+  c = t(210724),
+  d = t(130653),
+  _ = t(78826),
+  E = t(37303),
+  u = t(134483),
+  T = t(478977),
+  I = t(456799),
+  S = t(210851),
+  N = t(602683),
+  C = t(916028),
+  m = t(15033),
+  A = t(899457),
+  h = t(452693);
 
-function g(e, t, s) {
-  return t in e ? Object.defineProperty(e, t, {
-value: s,
+function g(e, s, t) {
+  return s in e ? Object.defineProperty(e, s, {
+value: t,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[t] = s, e;
+  }) : e[s] = t, e;
 }
 let O = [
 'svg',
@@ -48,8 +48,8 @@ let O = [
 function x() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
 {
-  streamProgressSeconds: t = 0,
-  completedAt: s = null,
+  streamProgressSeconds: s = 0,
+  completedAt: t = null,
   enrolledAt: n = null,
   claimedAt: a = null
 } = e;
@@ -57,11 +57,11 @@ function x() {
 userId: '123',
 questId: '1193992107035983872',
 enrolledAt: n,
-completedAt: s,
+completedAt: t,
 claimedAt: a,
 claimedTier: null,
 lastStreamHeartbeatAt: null,
-streamProgressSeconds: t,
+streamProgressSeconds: s,
 dismissedQuestContent: 0,
 progress: {}
   };
@@ -123,9 +123,9 @@ supplementaryApplicationIds: []
 };
 
 function f() {
-  var e, t, s;
+  var e, s, t;
   let [g, f] = a.useState(M), [D, P] = a.useState(A.a.UNENROLLED), [L, Z] = a.useState([]), [b, v] = a.useState(!1), [j, B] = a.useState(null);
-  let U = (s = g.config, (0, i.EQ)(s).with({
+  let U = (t = g.config, (0, i.EQ)(t).with({
 configVersion: 1
   }, e => ({
 name: e.messages.rewardName,
@@ -135,10 +135,10 @@ rewardTile: e.assets.rewardTile
   })).with({
 configVersion: 2
   }, e => {
-let t = e.rewardsConfig.rewards[0];
+let s = e.rewardsConfig.rewards[0];
 return {
-  ...t.messages,
-  rewardTile: t.asset
+  ...s.messages,
+  rewardTile: s.asset
 };
   }).exhaustive());
   a.useEffect(() => {
@@ -150,14 +150,14 @@ Z((e = g.config, (0, i.EQ)(e).with({
 }, e => e.features).exhaustive()));
   }, [g]);
 
-  function G(e, t) {
-var s, n;
+  function G(e, s) {
+var t, n;
 if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e)
   f({
     ...g,
-    config: (s = g.config, n = {
-      [e]: t
-    }, (0, i.EQ)(s).with({
+    config: (t = g.config, n = {
+      [e]: s
+    }, (0, i.EQ)(t).with({
       configVersion: 1
     }, e => ({
       ...e,
@@ -177,14 +177,14 @@ if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e
   });
   }
 
-  function F(e, t) {
-var s, n;
+  function F(e, s) {
+var t, n;
 if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
   f({
     ...g,
-    config: (s = g.config, n = {
-      [e]: t
-    }, (0, i.EQ)(s).with({
+    config: (t = g.config, n = {
+      [e]: s
+    }, (0, i.EQ)(t).with({
       configVersion: 1
     }, e => ({
       ...e,
@@ -204,14 +204,14 @@ if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
   });
   }
 
-  function y(e, t) {
-var s, n;
+  function y(e, s) {
+var t, n;
 if ('rewardName' === e || 'rewardNameWithArticle' === e)
   f({
     ...g,
-    config: (s = g.config, n = {
-      [e]: t
-    }, (0, i.EQ)(s).with({
+    config: (t = g.config, n = {
+      [e]: s
+    }, (0, i.EQ)(t).with({
       configVersion: 1
     }, e => ({
       ...e,
@@ -225,7 +225,7 @@ if ('rewardName' === e || 'rewardNameWithArticle' === e)
       ...e,
       rewardsConfig: {
         ...e.rewardsConfig,
-        rewards: e.rewardsConfig.rewards.map((e, t) => 0 === t ? {
+        rewards: e.rewardsConfig.rewards.map((e, s) => 0 === s ? {
           ...e,
           messages: {
             ...e.messages,
@@ -237,14 +237,14 @@ if ('rewardName' === e || 'rewardNameWithArticle' === e)
   });
   }
 
-  function V(e, t) {
+  function V(e, s) {
 f({
   ...g,
   config: {
     ...g.config,
     colors: {
       ...g.config.colors,
-      [e]: t
+      [e]: s
     }
   }
 });
@@ -332,14 +332,14 @@ children: [
       (0, n.jsx)(S.Z, {
         title: 'Reward Tile Asset',
         assetKey: 'rewardTile',
-        onFileChange: function(e, t) {
-          var s, n;
+        onFileChange: function(e, s) {
+          var t, n;
           if ('rewardTile' === e)
             f({
               ...g,
-              config: (s = g.config, n = {
-                [e]: t
-              }, (0, i.EQ)(s).with({
+              config: (t = g.config, n = {
+                [e]: s
+              }, (0, i.EQ)(t).with({
                 configVersion: 1
               }, e => ({
                 ...e,
@@ -357,7 +357,7 @@ children: [
                 },
                 rewardsConfig: {
                   ...e.rewardsConfig,
-                  rewards: e.rewardsConfig.rewards.map((e, t) => 0 === t ? {
+                  rewards: e.rewardsConfig.rewards.map((e, s) => 0 === s ? {
                     ...e,
                     asset: n.rewardTile
                   } : e)
@@ -383,19 +383,19 @@ children: [
       className: h.fullWidthField,
       children: (0, n.jsx)(m.Z, {
         onChange: function(e) {
-          var t, s;
+          var s, t;
           f({
             ...g,
-            config: (t = g.config, s = e, (0, i.EQ)(t).with({
+            config: (s = g.config, t = e, (0, i.EQ)(s).with({
               configVersion: 1
             }, e => ({
               ...e,
-              variants: s
+              variants: t
             })).with({
               configVersion: 2
             }, e => ({
               ...e,
-              features: s
+              features: t
             })).exhaustive())
           }), Z(e);
         },
@@ -562,7 +562,7 @@ children: [
           (0, n.jsx)(r.FormTitle, {
             children: 'Channel Call Header'
           }),
-          (null === (t = g.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null && (0, n.jsx)(r.Text, {
+          (null === (s = g.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null && (0, n.jsx)(r.Text, {
             color: 'text-secondary',
             variant: 'text-sm/normal',
             children: 'The Quest Channel Call Header is hidden when the user has claimed the reward.'
@@ -612,7 +612,7 @@ this.setState({
   render() {
 let {
   error: e,
-  renderKey: t
+  renderKey: s
 } = this.state;
 return null != e ? (0, n.jsxs)('div', {
   className: h.errorBoundary,
@@ -637,7 +637,7 @@ return null != e ? (0, n.jsxs)('div', {
       })
     })
   ]
-}) : (0, n.jsx)(f, {}, t);
+}) : (0, n.jsx)(f, {}, s);
   }
   constructor(...e) {
 super(...e), g(this, 'state', {
@@ -651,4 +651,4 @@ super(...e), g(this, 'state', {
 });
   }
 }
-t.Z = D;
+s.Z = D;

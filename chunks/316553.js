@@ -4,8 +4,8 @@ return r;
   }
 });
 var i = n(470079),
-  a = n(207796),
-  s = n(308083);
+  s = n(207796),
+  a = n(308083);
 
 function r(e) {
   let {
@@ -13,10 +13,10 @@ selectedGame: t
   } = e;
   return i.useMemo(() => {
 switch (t) {
-  case a.hz.GENSHIN:
-    return s.xn;
-  case a.hz.VALORANT:
-    return s.nJ;
+  case s.hz.GENSHIN:
+    return a.xn;
+  case s.hz.VALORANT:
+    return a.nJ;
 }
   }, [t]);
 }

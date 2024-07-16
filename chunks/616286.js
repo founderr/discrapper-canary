@@ -5,8 +5,8 @@ return T;
 }), n(47120), n(653041);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(392711),
   o = n(442837),
   c = n(475179),
@@ -45,15 +45,15 @@ className: t,
 channelId: n
   } = e, {
 unreadCount: a,
-mentionCount: l,
-isTyping: s,
+mentionCount: s,
+isTyping: l,
 voiceChannelIsSelected: r
   } = I(n);
   return (0, i.jsx)(f.Z, {
 className: t,
 unreadCount: a,
-mentionCount: l,
-isTyping: s,
+mentionCount: s,
+isTyping: l,
 canBadge: r
   });
 }
@@ -61,7 +61,7 @@ canBadge: r
 function T(e) {
   let t, {
   channelId: n,
-  className: l,
+  className: s,
   showingClassName: r,
   onClick: u,
   inPopout: h,
@@ -83,17 +83,17 @@ S = (0, o.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
     unreadCount: t,
     mentionCount: n,
     isTyping: i
-  } = I(e), [l, s] = a.useState(!1);
+  } = I(e), [s, l] = a.useState(!1);
   return a.useEffect(() => {
-    s(t > 0);
+    l(t > 0);
     let e = setTimeout(() => {
-      s(!1);
+      l(!1);
     }, _.z);
     return () => {
-      clearTimeout(e), s(!1);
+      clearTimeout(e), l(!1);
     };
   }, [t]), {
-    isShowing: l || n > 0 || i,
+    isShowing: s || n > 0 || i,
     unreadCount: t,
     mentionCount: n
   };
@@ -148,7 +148,7 @@ label: t,
 'aria-label': y.join(', '),
 iconComponent: R,
 tooltipPosition: 'bottom',
-wrapperClassName: s()(l, null != r && {
+wrapperClassName: l()(s, null != r && {
   [r]: Z
 }),
 forceTooltipOpen: L,

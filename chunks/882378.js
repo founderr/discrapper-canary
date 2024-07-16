@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(952265),
+  s = n(442837),
+  l = n(952265),
   r = n(481060),
   o = n(378298),
   c = n(444957),
@@ -17,7 +17,7 @@ var i = n(735250),
 t.Z = a.memo(function(e) {
   let {
 channel: t
-  } = e, C = (0, c.h)(t.id), g = (0, d.o)(t.id), I = (0, u.M)(t.id), x = (0, s.f9)(), T = (0, l.e7)([p.Z], () => p.Z.hasLayers()), N = a.useCallback(() => g ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [
+  } = e, C = (0, c.h)(t.id), g = (0, d.o)(t.id), I = (0, u.M)(t.id), x = (0, l.f9)(), T = (0, s.e7)([p.Z], () => p.Z.hasLayers()), N = a.useCallback(() => g ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [
 g,
 I
   ]), v = a.useMemo(() => (g || null != I) && !x && !T, [
@@ -73,7 +73,7 @@ if (null != I && (0, o.T)(t.id, [I.id]), null != C)
     return n => {
       let {
         onClose: a,
-        transitionState: l
+        transitionState: s
       } = n;
       return (0, i.jsx)(e, {
         otherUserId: t.getRecipientId(),
@@ -81,7 +81,7 @@ if (null != I && (0, o.T)(t.id, [I.id]), null != C)
         warningId: C.id,
         warningType: C.type,
         onClose: a,
-        transitionState: l
+        transitionState: s
       });
     };
   }, {

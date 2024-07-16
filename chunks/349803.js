@@ -18,7 +18,7 @@ t.Z = function(e) {
 isVisible: a,
 isFullscreen: R,
 subscriptionTier: C
-  } = e, p = null === (t = (0, d.N)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, c.Ng)(), A = (0, c.Wp)(g, E.Si.TIER_2) ? E.Si.TIER_2 : void 0, m = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), N = (0, i.useSpring)({
+  } = e, g = null === (t = (0, d.N)()) || void 0 === t ? void 0 : t.subscription_trial, p = (0, c.Ng)(), A = (0, c.Wp)(p, E.Si.TIER_2) ? E.Si.TIER_2 : void 0, m = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), N = (0, i.useSpring)({
 transform: a ? 'translateY(-100%)' : 'translateY(0%)',
 opacity: a ? 1 : 0,
 config: {
@@ -40,7 +40,7 @@ children: (0, s.jsxs)('div', {
   children: [
     (0, s.jsx)(u.Z, {
       className: I.button,
-      subscriptionTier: null !== (n = null != C ? C : null == p ? void 0 : p.sku_id) && void 0 !== n ? n : A,
+      subscriptionTier: null !== (n = null != C ? C : null == g ? void 0 : g.sku_id) && void 0 !== n ? n : A,
       premiumModalAnalyticsLocation: f,
       isPersistentCTA: !0
     }),

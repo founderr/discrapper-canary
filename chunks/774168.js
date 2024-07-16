@@ -5,8 +5,8 @@ return p;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(772848),
   o = n(960259),
   c = n(481060),
@@ -17,8 +17,8 @@ function h(e) {
   let {
 width: t = 24,
 height: n = 24,
-isBadged: l = !1,
-isTyping: s = !1
+isBadged: s = !1,
+isTyping: l = !1
   } = e, [d] = a.useState(() => (0, r.Z)()), u = (0, o.bW)().enabled;
   return (0, i.jsxs)('svg', {
 width: t,
@@ -34,7 +34,7 @@ children: [
           width: '100%',
           height: '100%'
         }),
-        s && (0, i.jsx)('g', {
+        l && (0, i.jsx)('g', {
           fill: 'black',
           transform: 'translate(5.5, '.concat(u ? 10.5 : 8.5, ') scale(').concat(11 / 24, ')'),
           children: (0, i.jsx)(c.AnimatedDots, {
@@ -43,7 +43,7 @@ children: [
             fill: 'black'
           })
         }),
-        l && (0, i.jsx)('circle', {
+        s && (0, i.jsx)('circle', {
           cx: '20',
           cy: '19',
           r: '10',
@@ -74,12 +74,12 @@ function p(e) {
   let {
 className: n,
 unreadCount: a,
-mentionCount: l,
+mentionCount: s,
 isTyping: r,
 canBadge: o
-  } = e, c = null != l && l > 0, p = null !== (t = c ? l : a) && void 0 !== t ? t : 0, m = o && null != a && a > 0;
+  } = e, c = null != s && s > 0, p = null !== (t = c ? s : a) && void 0 !== t ? t : 0, m = o && null != a && a > 0;
   return (0, i.jsxs)('div', {
-className: s()(u.chatIcon, n),
+className: l()(u.chatIcon, n),
 children: [
   (0, i.jsx)(h, {
     isBadged: m,

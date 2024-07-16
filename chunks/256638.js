@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return ef;
+return ep;
   },
   c: function() {
 return eN;
@@ -22,8 +22,8 @@ var i = n(735250),
   T = n(287734),
   h = n(205355),
   N = n(558381),
-  p = n(223245),
-  f = n(491428),
+  f = n(223245),
+  p = n(491428),
   C = n(401430),
   g = n(230711),
   S = n(726542),
@@ -111,14 +111,14 @@ function eN(e) {
 untilAtLeast: r()(e)
   } : void 0);
 }
-let ep = 12633 == n.j ? a.memo(function() {
+let ef = 12633 == n.j ? a.memo(function() {
   var e, t, s;
   let I = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()),
 A = (0, o.e7)([$.Z], () => $.Z.getGuildId()),
 ec = (0, o.e7)([ei.Z], () => ei.Z.getNotice()),
-ep = (0, o.e7)([q.Z], () => q.Z.getGuild(A)),
+ef = (0, o.e7)([q.Z], () => q.Z.getGuild(A)),
 {
-  analyticsLocations: ef
+  analyticsLocations: ep
 } = (0, R.ZP)(),
 eC = null == ec ? void 0 : ec.type,
 eg = (0, U.J)(A);
@@ -139,7 +139,7 @@ if (null != ec && ec.type === ed.kVF.SURVEY && null != ec.metadata) {
   } = ec, t = Z.Z.getUserExperimentDescriptor(e.id);
   null != t && (0, L.W9)(e.id, t), (async () => {
     var e, t;
-    (null === (e = ec.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, f.g8)(null === (t = ec.metadata) || void 0 === t ? void 0 : t.id);
+    (null === (e = ec.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, p.g8)(null === (t = ec.metadata) || void 0 === t ? void 0 : t.id);
   })();
 }
   }, [ec]);
@@ -407,7 +407,7 @@ case ed.kVF.STREAMER_MODE:
       }),
       eI.Z.Messages.NOTICE_STREAMER_MODE_TEXT,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
-        onClick: () => p.Z.setEnabled(!1),
+        onClick: () => f.Z.setEnabled(!1),
         noticeType: ed.kVF.STREAMER_MODE,
         children: eI.Z.Messages.DISABLE
       })
@@ -468,11 +468,11 @@ case ed.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
             (0, w.Z)({
               initialPlanId: null,
               subscriptionTier: eu.Si.TIER_2,
-              analyticsLocations: ef,
+              analyticsLocations: ep,
               analyticsObject: eU
             });
           },
-          analyticsLocations: ef,
+          analyticsLocations: ep,
           analyticsLocationObject: eU,
           context: __OVERLAY__ ? ed.IlC.OVERLAY : ed.IlC.APP
         }).then(() => _.Z(eD.id)),
@@ -536,14 +536,14 @@ case ed.kVF.SURVEY: {
       (0, i.jsx)(c.NoticeCloseButton, {
         noticeType: ed.kVF.SURVEY,
         onClick: () => {
-          (0, f.hZ)(t, !0);
+          (0, p.hZ)(t, !0);
         }
       }),
       n,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: ed.kVF.SURVEY,
         onClick: () => {
-          window.open(s, '_blank'), (0, f.hZ)(t, !1);
+          window.open(s, '_blank'), (0, p.hZ)(t, !1);
         },
         children: a
       })
@@ -561,15 +561,15 @@ case ed.kVF.SERVER_USAGE_SURVEY:
         }
       }),
       eI.Z.Messages.SERVER_USAGE_SURVEY_BODY.format({
-        guildName: null !== (t = null == ep ? void 0 : ep.name) && void 0 !== t ? t : 'this server'
+        guildName: null !== (t = null == ef ? void 0 : ef.name) && void 0 !== t ? t : 'this server'
       }),
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: ed.kVF.SERVER_USAGE_SURVEY,
         onClick: () => {
-          window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == I ? void 0 : I.id, '&guild_id=').concat(null == ep ? void 0 : ep.id), '_blank'), eN();
+          window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == I ? void 0 : I.id, '&guild_id=').concat(null == ef ? void 0 : ef.id), '_blank'), eN();
         },
         additionalTrackingProps: {
-          guild_id: null == ep ? void 0 : ep.id
+          guild_id: null == ef ? void 0 : ef.id
         },
         children: eI.Z.Messages.SERVER_USAGE_SURVEY_CTA
       })
@@ -896,7 +896,7 @@ case ed.kVF.AUTOMOD_QUARANTINED_USER_PROFILE: {
   };
   return (0, i.jsx)(D.Z, {
     guildId: A,
-    analyticsLocations: ef,
+    analyticsLocations: ep,
     analyticsLocation: e
   });
 }
@@ -1030,12 +1030,12 @@ default:
   }
 }) : null;
 
-function ef() {
+function ep() {
   let {
 analyticsLocations: e
   } = (0, R.ZP)(A.Z.NOTICE);
   return (0, i.jsx)(R.Gt, {
 value: e,
-children: (0, i.jsx)(ep, {})
+children: (0, i.jsx)(ef, {})
   });
 }

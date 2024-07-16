@@ -9,9 +9,9 @@ return X;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(392711),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(477690),
   d = n(481060),
@@ -86,8 +86,8 @@ className: n
 function z(e) {
   var t, n, a;
   let {
-guild: s
-  } = e, c = s.id, {
+guild: o
+  } = e, c = o.id, {
 voiceUsersToShow: f,
 stageSpeakers: h,
 numStageListeners: p,
@@ -119,10 +119,10 @@ let t = e.id,
   }, [t]),
   r = (0, O.ZP)(t),
   a = i.useMemo(() => r.map(e => e.id), [r]),
-  o = (0, u.e7)([U.ZP], () => U.ZP.getVoiceStates(t), [t]),
-  s = l().flatMap(n, t => {
+  s = (0, u.e7)([U.ZP], () => U.ZP.getVoiceStates(t), [t]),
+  o = l().flatMap(n, t => {
     var n;
-    return t === e.afkChannelId ? [] : (null !== (n = o[t]) && void 0 !== n ? n : []).map(e => {
+    return t === e.afkChannelId ? [] : (null !== (n = s[t]) && void 0 !== n ? n : []).map(e => {
       let {
         user: t
       } = e;
@@ -145,13 +145,13 @@ let t = e.id,
   f = (0, u.Wu)([
     b.Z,
     y.Z
-  ], () => s.filter(e => b.Z.getActivities(e.id, t).some(e => (null == e ? void 0 : e.application_id) != null && null != y.Z.getDetectableGame(null == e ? void 0 : e.application_id)))),
+  ], () => o.filter(e => b.Z.getActivities(e.id, t).some(e => (null == e ? void 0 : e.application_id) != null && null != y.Z.getDetectableGame(null == e ? void 0 : e.application_id)))),
   h = (0, x.kM)('Guild Tooltip', !1),
   p = h ? f.map(e => e.id) : [],
   m = (0, u.Wu)([_.ZP], () => _.ZP.getEmbeddedActivitiesForGuild(t).flatMap(e => Array.from(e.userIds)), [t]),
   I = (0, u.Wu)([P.default], () => m.map(e => P.default.getUser(e)), [m]),
   T = (0, u.Wu)([P.default], () => E.map(e => P.default.getUser(e)), [E]),
-  g = s.filter(e => !E.includes(e.id) && !m.includes(e.id) && !p.includes(e.id)),
+  g = o.filter(e => !E.includes(e.id) && !m.includes(e.id) && !p.includes(e.id)),
   S = T.filter(e => null != e && !m.includes(e.id)),
   A = c.length > 0 || g.length > 0 || S.length > 0 || I.length > 0;
 return {
@@ -164,7 +164,7 @@ return {
   shouldShowGameBadge: h,
   hasActivity: A
 };
-  }(s), S = W(d.GameControllerIcon, T, c), A = W(d.VoiceNormalIcon, f, c);
+  }(o), S = W(d.GameControllerIcon, T, c), A = W(d.VoiceNormalIcon, f, c);
   let L = (t = c, n = h, a = p, 0 === n.length ? null : (0, r.jsxs)('div', {
   className: H.row,
   children: [
@@ -215,7 +215,7 @@ children: [
   G,
   k ? (0, r.jsx)(K, {
     muteConfig: B,
-    className: o()(H.muteText, {
+    className: s()(H.muteText, {
       [H.muteTextWithActivity]: null != A || null != w
     })
   }) : null
@@ -250,7 +250,7 @@ function Q(e) {
   let {
 guild: t,
 includeActivity: n = !0
-  } = e, i = (0, f.Z)(t), a = (0, I.E)(t.id), s = null != a ? (0, r.jsx)(q, {
+  } = e, i = (0, f.Z)(t), a = (0, I.E)(t.id), o = null != a ? (0, r.jsx)(q, {
 guildJoinRequestStatus: a
   }) : null, l = n ? (0, r.jsx)(z, {
 guild: t
@@ -258,7 +258,7 @@ guild: t
   return (0, r.jsxs)(r.Fragment, {
 children: [
   (0, r.jsxs)('div', {
-    className: o()(H.row, H.rowGuildName),
+    className: s()(H.row, H.rowGuildName),
     children: [
       i ? (0, r.jsx)(p.Z, {
         guild: t,
@@ -270,7 +270,7 @@ children: [
         className: H.rowIcon
       }),
       (0, r.jsx)('span', {
-        className: o()(H.guildNameText, {
+        className: s()(H.guildNameText, {
           [H.guildNameTextLimitedSize]: null != l
         }),
         children: t.toString()
@@ -288,7 +288,7 @@ children: [
     color: 'text-normal',
     variant: 'text-xs/normal',
     children: V.Z.Messages.VIEW_AS_ROLES_MENTIONS_WARNING
-  }) : null != s ? s : l
+  }) : null != o ? o : l
 ]
   });
 }
@@ -298,8 +298,8 @@ function X(e) {
 guild: t,
 disabled: n = !1,
 'aria-label': a = !1,
-children: o,
-includeActivity: s = !0,
+children: s,
+includeActivity: o = !0,
 isDragging: l
   } = e, c = (0, G.o)('guilds_bar', !1), [_, E] = i.useState(!1), f = (0, B.V1)(t), {
 isUserLurking: h,
@@ -313,10 +313,10 @@ return {
   isUserLurking: e,
   isUnverifiedAccount: !L.Z.getCheck(t.id).canChat
 };
-  }), m = i.useMemo(() => !h && !p && s && f.length > 0, [
+  }), m = i.useMemo(() => !h && !p && o && f.length > 0, [
 h,
 p,
-s,
+o,
 f.length
   ]), I = () => {
 m && G.Z.trackExposure({
@@ -345,7 +345,7 @@ children: (0, r.jsx)(d.Popout, {
   shouldShow: !l && _,
   children: e => (0, r.jsx)('div', {
     ...e,
-    children: o
+    children: s
   })
 })
   }) : (0, r.jsx)(d.Tooltip, {
@@ -354,7 +354,7 @@ spacing: 20,
 position: 'right',
 text: n ? null : (0, r.jsx)(Q, {
   guild: t,
-  includeActivity: s
+  includeActivity: o
 }),
 'aria-label': a,
 onTooltipShow: I,
@@ -368,7 +368,7 @@ children: e => {
   return (0, r.jsx)('div', {
     onFocus: t,
     onBlur: n,
-    children: i.cloneElement(i.Children.only(o), {
+    children: i.cloneElement(i.Children.only(s), {
       ...a
     })
   });

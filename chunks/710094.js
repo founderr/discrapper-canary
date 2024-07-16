@@ -6,8 +6,8 @@ return C;
 var l = s(735250),
   t = s(470079),
   i = s(512722),
-  r = s.n(i),
-  a = s(330726),
+  a = s.n(i),
+  r = s(330726),
   c = s(711459),
   o = s(104494),
   u = s(639119),
@@ -66,8 +66,8 @@ function C(e) {
   isPremium: el,
   setHasAcceptedTerms: et,
   purchaseType: ei,
-  setEntitlementsGranted: er,
-  startedPaymentFlowWithPaymentSourcesRef: ea,
+  setEntitlementsGranted: ea,
+  startedPaymentFlowWithPaymentSourcesRef: er,
   invoicePreview: ec
 } = (0, p.usePaymentContext)(),
 {
@@ -75,9 +75,9 @@ function C(e) {
   giftMessage: eu,
   giftRecipient: ed
 } = (0, I.wD)();
-  r()(null != en, 'Step should be set');
+  a()(null != en, 'Step should be set');
   let e_ = t.useRef(null),
-[em, eE] = (0, a.Z)(!1, 500);
+[em, eE] = (0, r.Z)(!1, 500);
   (0, m.t)();
   let eI = null !== (s = null != O ? O : D) && void 0 !== s ? s : null,
 ep = null != eI && (!el || v.nG[eI].skus.includes(J)) ? eI : null,
@@ -92,7 +92,7 @@ null != V && null != e_.current && e_.current.scrollIntoView({
 });
   }, [V]);
   let eS = t.useCallback((e, n) => {
-  w(e), null != n && er(n), C(N.h8.CONFIRM, {
+  w(e), null != n && ea(n), C(N.h8.CONFIRM, {
     fulfillment: {
       subscription: e,
       entitlements: n
@@ -101,7 +101,7 @@ null != V && null != e_.current && e_.current.scrollIntoView({
 }, [
   C,
   w,
-  er
+  ea
 ]),
 eh = null != W ? Y[W] : null,
 eP = null != X && v.o4.has(X.id) && null != eh && !(0, c.aQ)(eh) ? Error(g.Z.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE) : null,
@@ -116,7 +116,7 @@ ej = (0, S.Kp)({
   isTrial: eM,
   isGift: eo,
   selectedSkuId: J,
-  startedPaymentFlowWithPaymentSources: ea.current
+  startedPaymentFlowWithPaymentSources: er.current
 }),
 eL = eo && ei === M.GZ.ONE_TIME,
 ey = eL || (ej ? eR && el : el),
@@ -137,7 +137,7 @@ hasLegalTermsFlash: em,
 legalTermsNodeRef: ef,
 onPaymentSourceChange: e => Q(null != e ? e.id : null),
 handlePaymentSourceAdd: () => C(N.h8.ADD_PAYMENT_STEPS)
-  }) : (eb = eo ? null == ec : null != eh && ei === M.GZ.SUBSCRIPTION && eM && !eh.canRedeemTrial(), null == B || eo ? (r()(null != X, 'Expected plan to be selected'), i = (0, l.jsx)(d.Z, {
+  }) : (eb = eo ? null == ec : null != eh && ei === M.GZ.SUBSCRIPTION && eM && !eh.canRedeemTrial(), null == B || eo ? (a()(null != X, 'Expected plan to be selected'), i = (0, l.jsx)(d.Z, {
 selectedPlanId: X.id,
 paymentSources: Y,
 onPaymentSourceChange: e => Q(null != e ? e.id : null),
@@ -156,7 +156,7 @@ referralTrialOfferId: D,
 isTrial: eM || null != O && null != R,
 isDiscount: eC,
 handleClose: F
-  })) : (r()(null != X, 'Expected plan to be selected'), i = (0, l.jsx)(_.Z, {
+  })) : (a()(null != X, 'Expected plan to be selected'), i = (0, l.jsx)(_.Z, {
 premiumSubscription: B,
 paymentSources: Y,
 priceOptions: K,

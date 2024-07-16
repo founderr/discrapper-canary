@@ -12,8 +12,8 @@ var i, a, s = n(735250),
   T = n(617136),
   h = n(272008),
   N = n(113434),
-  p = n(569984),
-  f = n(497505),
+  f = n(569984),
+  p = n(497505),
   C = n(918701),
   g = n(796111),
   S = n(566078),
@@ -72,7 +72,7 @@ questId: t.id,
 beforeRequest: () => {
   (0, T._3)({
     questId: t.id,
-    questContent: f.jn.GIFT_INVENTORY_FOR_YOU,
+    questContent: p.jn.GIFT_INVENTORY_FOR_YOU,
     questContentCTA: T.jZ.DEFIBRILLATOR
   }), i.startAnimation();
 },
@@ -142,7 +142,7 @@ questContentPosition: l,
 inGiftInventory: o,
 hasConsoleTasks: u,
 hasConsoleConnection: E
-  } = e, I = n >= 1, m = n >= 3, f = (0, N.z)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([p.Z], () => p.Z.isEnrolling(t.id)), R = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), x = function(e) {
+  } = e, I = n >= 1, m = n >= 3, p = (0, N.z)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([f.Z], () => f.Z.isEnrolling(t.id)), R = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), x = function(e) {
 let {
   quest: t,
   progressState: n,
@@ -242,7 +242,7 @@ isCollectibleQuest: i,
 questContentPosition: l,
 inGiftInventory: o
   });
-  if (u && I && E && !f && !m && o)
+  if (u && I && E && !p && !m && o)
 return (0, s.jsx)(U, {
   quest: t,
   useReducedMotion: S
@@ -287,7 +287,7 @@ isQuestExpired: r,
 isExpanded: l,
 isAnimating: _,
 contentPosition: h
-  } = e, p = function(e) {
+  } = e, f = function(e) {
 var t, n, i;
 let a = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
   s = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
@@ -303,7 +303,7 @@ else if (a)
   return 1;
 else
   return 0;
-  }(t), g = p >= 1, O = p >= 3, b = p >= 4, U = (0, C.Xv)(t.config), B = (0, x.uq)(n), k = n === f.jn.QUESTS_EMBED, G = l || _, {
+  }(t), g = f >= 1, O = f >= 3, b = f >= 4, U = (0, C.Xv)(t.config), B = (0, x.uq)(n), k = n === p.jn.QUESTS_EMBED, G = l || _, {
 xboxAndPlaystationAccounts: F
   } = (0, N.z6)(), w = (0, C.$J)(t), V = g && !b && B, H = F.length > 0, Y = (0, N.t5)(t, v.dr.QUESTS_CARD, n), W = (0, c.e7)([E.default], () => E.default.locale), K = B && U, z = r && !O, Q = (0, s.jsx)(R.Z, {
 autoplay: a,
@@ -375,15 +375,15 @@ children: [
             year: 'numeric',
             month: 'long',
             day: 'numeric'
-          }), p = (0, C.oo)({
+          }), f = (0, C.oo)({
             quest: l
-          }), f = S.r.build(l.config).defaultReward.messages.nameWithArticle, g = (0, C.Kr)(l.config);
+          }), p = S.r.build(l.config).defaultReward.messages.nameWithArticle, g = (0, C.Kr)(l.config);
           if (u && E && T)
             return Z.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({
               date: h
             });
           if (_) {
-            let e = p ? (0, C.o9)({
+            let e = f ? (0, C.o9)({
                 quest: l,
                 idx: null === (a = l.userStatus) || void 0 === a ? void 0 : a.claimedTier
               }) : null,
@@ -392,32 +392,32 @@ children: [
               reward: t,
               date: h
             }) : Z.Z.Messages.QUEST_REWARD_COMPLETED.format({
-              reward: f,
+              reward: p,
               date: h
             });
           }
           if (u)
-            return p ? Z.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({
+            return f ? Z.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({
               date: h
             }) : Z.Z.Messages.QUEST_REWARD_COMPLETED.format({
-              reward: f,
+              reward: p,
               date: h
             });
-          let A = p ? (0, C.o9)({
+          let A = f ? (0, C.o9)({
             quest: l,
             idx: 0
           }) : null;
           return d ? Z.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({
-            reward: null !== (r = null == A ? void 0 : A.messages.nameWithArticle) && void 0 !== r ? r : f
+            reward: null !== (r = null == A ? void 0 : A.messages.nameWithArticle) && void 0 !== r ? r : p
           }) : null != A && null != A.approximateCount ? Z.Z.Messages.QUEST_REWARD_TIERED.format({
             maxReward: A.messages.nameWithArticle,
             maxRewardCount: (0, m.Bs)(A.approximateCount, c),
             helpCenterLink: I.Z.getArticleURL(L.BhN.QUESTS_LEARN_MORE)
           }) : null != g ? Z.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
-            reward: f,
+            reward: p,
             duration: g
           }) : Z.Z.Messages.QUEST_REWARD.format({
-            reward: f
+            reward: p
           });
         }({
           quest: t,
@@ -445,7 +445,7 @@ children: [
       }),
       r && !O ? null : (0, s.jsx)(y, {
         quest: t,
-        progressState: p,
+        progressState: f,
         isCollectibleQuest: U,
         location: n,
         inGiftInventory: B,

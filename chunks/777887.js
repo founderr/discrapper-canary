@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(481060),
-  o = n(592125),
-  s = n(944486),
+  s = n(592125),
+  o = n(944486),
   l = n(246946),
   u = n(5192),
   c = n(621853),
@@ -43,9 +43,9 @@ onClose: M
 var e;
 return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
   }), w = (0, i.e7)([
-o.Z,
-s.Z
-  ], () => o.Z.getChannel(s.Z.getChannelId())), x = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation);
+s.Z,
+o.Z
+  ], () => s.Z.getChannel(o.Z.getChannelId())), x = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation);
   return (0, r.jsxs)(a.Scroller, {
 fade: !0,
 className: O.body,

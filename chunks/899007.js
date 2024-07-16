@@ -6,8 +6,8 @@ return O;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(420660),
   c = n(100527),
@@ -47,7 +47,7 @@ p
   ]), {
 status: P,
 isMobileOnline: U
-  } = (0, s.cj)([
+  } = (0, o.cj)([
 E.Z,
 f.Z
   ], () => {
@@ -62,7 +62,7 @@ return {
   status: (0, u.Z)(n) ? S.Skl.STREAMING : f.Z.getStatus(t.id),
   isMobileOnline: f.Z.isMobileOnline(t.id)
 };
-  }), w = O === g.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, x = o()(N.avatar, {
+  }), w = O === g.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, x = s()(N.avatar, {
 [N.biteSize]: O === g.y0.BITE_SIZE,
 [N.fullSize]: O === g.y0.FULL_SIZE,
 [N.panel]: O === g.y0.PANEL
@@ -93,7 +93,7 @@ className: x,
 children: F
   }) : (0, r.jsx)(l.Clickable, {
 ...B,
-className: o()(x, N.clickable),
+className: s()(x, N.clickable),
 onClick: () => {
   L({
     action: 'PRESS_VIEW_PROFILE',

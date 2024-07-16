@@ -37,9 +37,9 @@ U.Plq.DEAFEN_MEMBERS
   f = !1,
   Z = !1,
   P = !0,
-  p = !1,
-  H = null,
-  h = U.rsA.ALL,
+  H = !1,
+  h = null,
+  p = U.rsA.ALL,
   m = null,
   F = {},
   v = 0;
@@ -150,19 +150,19 @@ return Z;
 return P;
   }
   get hasError() {
-return p;
+return H;
   }
   get userIds() {
 return R;
   }
   get userIdFilter() {
-return H;
+return h;
   }
   get targetIdFilter() {
 return m;
   }
   get actionFilter() {
-return h;
+return p;
   }
   get deletedTargets() {
 return F;
@@ -182,10 +182,10 @@ f = !0;
   },
   AUDIT_LOG_FETCH_SUCCESS: function(e) {
 var _;
-v = 0, d = !1, f = !1, P = !0, p = !1, i = V(e.logs), M = e.integrations, o = e.webhooks, u = e.guildScheduledEvents, c = null !== (_ = e.automodRules) && void 0 !== _ ? _ : [], C = e.threads, g = e.applicationCommands, e.logs.length < U.Rg9 && (P = !1);
+v = 0, d = !1, f = !1, P = !0, H = !1, i = V(e.logs), M = e.integrations, o = e.webhooks, u = e.guildScheduledEvents, c = null !== (_ = e.automodRules) && void 0 !== _ ? _ : [], C = e.threads, g = e.applicationCommands, e.logs.length < U.Rg9 && (P = !1);
   },
   AUDIT_LOG_FETCH_FAIL: function() {
-f = !1, p = !0, i = [];
+f = !1, H = !0, i = [];
   },
   AUDIT_LOG_FETCH_NEXT_PAGE_START: function(e) {
 let {
@@ -218,13 +218,13 @@ Z = !1;
 let {
   action: _
 } = e;
-h = _;
+p = _;
   },
   AUDIT_LOG_FILTER_BY_USER: function(e) {
 let {
   userId: _
 } = e;
-H = _;
+h = _;
   },
   AUDIT_LOG_FILTER_BY_TARGET: function(e) {
 let {
@@ -243,6 +243,6 @@ return O = _, m = null, B({
 });
   },
   GUILD_SETTINGS_CLOSE: function() {
-i = [], R = [], h = U.rsA.ALL, H = null, m = null, F = {}, v = 0, d = !0, M = [], o = [], u = [], c = [], C = [];
+i = [], R = [], p = U.rsA.ALL, h = null, m = null, F = {}, v = 0, d = !0, M = [], o = [], u = [], c = [], C = [];
   }
 });

@@ -4,17 +4,17 @@ return l;
   }
 });
 var i = n(442837),
-  a = n(314897),
-  s = n(944486),
+  s = n(314897),
+  a = n(944486),
   r = n(88751);
 
 function l(e) {
   return (0, i.e7)([
-a.default,
-s.Z,
+s.default,
+a.Z,
 r.ZP
   ], () => {
-let t = a.default.getId();
-return s.Z.getVoiceChannelId() === e ? r.ZP.getPermissionsForUser(t, e) : null;
+let t = s.default.getId();
+return a.Z.getVoiceChannelId() === e ? r.ZP.getPermissionsForUser(t, e) : null;
   }, [e]);
 }

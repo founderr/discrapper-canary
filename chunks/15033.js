@@ -1,12 +1,12 @@
-s(47120);
-var n = s(735250);
-s(470079);
-var a = s(481060),
-  i = s(46140);
-t.Z = function(e) {
+t(47120);
+var n = t(735250);
+t(470079);
+var a = t(481060),
+  i = t(46140);
+s.Z = function(e) {
   let {
-onChange: t,
-values: s
+onChange: s,
+values: t
   } = e, r = [{
   label: 'Playtime Task',
   value: i.S7.PLAYTIME_TASK
@@ -46,8 +46,8 @@ children: [
     children: (0, n.jsx)(a.SearchableSelect, {
       'aria-label': 'Variants',
       options: r,
-      onChange: t,
-      value: s,
+      onChange: s,
+      value: t,
       multi: !0
     })
   })

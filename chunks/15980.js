@@ -1,7 +1,7 @@
-s(47120);
-var n, a, i, r, o = s(442837),
-  l = s(570140),
-  c = s(911969);
+t(47120);
+var n, a, i, r, o = t(442837),
+  l = t(570140),
+  c = t(911969);
 let d = !1,
   _ = [];
 class E extends(n = o.ZP.Store) {
@@ -17,7 +17,7 @@ r = 'WebAuthnStore', (i = 'displayName') in(a = E) ? Object.defineProperty(a, i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[i] = r, t.Z = new E(l.Z, {
+}) : a[i] = r, s.Z = new E(l.Z, {
   LOGOUT: function() {
 _ = [], d = !1;
   },
@@ -26,23 +26,23 @@ _ = e.credentials, d = !0;
   },
   AUTHENTICATOR_CREATE(e) {
 let {
-  credential: t
+  credential: s
 } = e;
-t.type === c.Pi.WEBAUTHN && void 0 === _.find(e => e.id === t.id) && (_ = [
+s.type === c.Pi.WEBAUTHN && void 0 === _.find(e => e.id === s.id) && (_ = [
   ..._,
-  t
+  s
 ]);
   },
   AUTHENTICATOR_UPDATE(e) {
 let {
-  credential: t
+  credential: s
 } = e;
-t.type === c.Pi.WEBAUTHN && (_ = _.map(e => e.id === t.id ? t : e));
+s.type === c.Pi.WEBAUTHN && (_ = _.map(e => e.id === s.id ? s : e));
   },
   AUTHENTICATOR_DELETE(e) {
 let {
-  credential: t
+  credential: s
 } = e;
-t.type === c.Pi.WEBAUTHN && (_ = _.filter(e => e.id !== t.id));
+s.type === c.Pi.WEBAUTHN && (_ = _.filter(e => e.id !== s.id));
   }
 });

@@ -1,8 +1,8 @@
 n(47120);
 var i, a = n(735250),
-  l = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  l = n(120356),
+  r = n.n(l),
   o = n(512722),
   c = n.n(o),
   d = n(613828),
@@ -46,7 +46,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class V extends(i = l.Component) {
+class V extends(i = s.Component) {
   componentDidMount() {
 let {
   guestWindow: e
@@ -110,8 +110,8 @@ if (null != a) {
   a.textContent = e;
   return;
 }
-let l = n.createElement('style');
-l.setAttribute(x.PQ, 'true'), l.textContent = e, i.appendChild(l);
+let s = n.createElement('style');
+s.setAttribute(x.PQ, 'true'), s.textContent = e, i.appendChild(s);
   }
   updateForcedColors() {
 let {
@@ -127,8 +127,8 @@ let {
   forcedColors: t,
   focused: n,
   appFocused: i,
-  children: l,
-  windowKey: s,
+  children: s,
+  windowKey: l,
   mouseModeEnabled: o,
   keyboardModeEnabled: c,
   reducedMotionEnabled: u,
@@ -172,12 +172,12 @@ return (0, a.jsx)(d.VK, {
                             C && null != S ? (0, a.jsx)(v.Z, {
                               focused: n,
                               type: S,
-                              windowKey: s,
+                              windowKey: l,
                               macOSFrame: !0
                             }) : null,
                             (0, a.jsx)('div', {
                               className: r()(H.content, x),
-                              children: l
+                              children: s
                             })
                           ]
                         }),
@@ -198,7 +198,7 @@ return (0, a.jsx)(d.VK, {
 });
   }
   constructor(...e) {
-super(...e), G(this, 'rootRef', l.createRef()), G(this, '_cleanupWindowActionCreators', void 0), G(this, 'warnPopoutClose', e => {
+super(...e), G(this, 'rootRef', s.createRef()), G(this, '_cleanupWindowActionCreators', void 0), G(this, 'warnPopoutClose', e => {
   if (this.props.connectedToEmbeddedActivity && !R.ZP.disableEmbeddedActivityPopOutAlert) {
     if (e.returnValue = B.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, !!O.isPlatformEmbedded)
       (0, C.Z)(() => {
@@ -216,7 +216,7 @@ super(...e), G(this, 'rootRef', l.createRef()), G(this, '_cleanupWindowActionCre
 G(V, 'defaultProps', {
   withTitleBar: !0
 });
-let F = l.forwardRef(function(e, t) {
+let F = s.forwardRef(function(e, t) {
   let {
 guestWindow: n,
 focused: i
@@ -225,9 +225,9 @@ guestWindow: U.Z.getWindow(e.windowKey),
 focused: U.Z.getWindowFocused(e.windowKey)
   }));
   c()(null != n, 'Missing guestWindow reference');
-  let l = (0, u.e7)([j.Z], () => j.Z.isFocused()),
+  let s = (0, u.e7)([j.Z], () => j.Z.isFocused()),
 {
-  locale: s,
+  locale: l,
   theme: r
 } = (0, u.cj)([
   b.Z,
@@ -272,8 +272,8 @@ children: (0, a.jsx)(I.Gt, {
     ...e,
     guestWindow: n,
     focused: i,
-    appFocused: l,
-    locale: s,
+    appFocused: s,
+    locale: l,
     theme: r,
     forcedColors: o,
     useForcedColors: N,

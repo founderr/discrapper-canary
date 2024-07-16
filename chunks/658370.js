@@ -19,8 +19,8 @@ t.Z = e => {
   let {
 title: a,
 titleClassName: C = '',
-buttonClassName: p = '',
-subtitle: g = '',
+buttonClassName: g = '',
+subtitle: p = '',
 description: A = '',
 descriptionCta: m = '',
 isPremiumGetCta: N,
@@ -45,18 +45,18 @@ children: [
     title: a,
     cardVariantStyleInfo: P,
     titleClassName: C,
-    subtitle: g,
+    subtitle: p,
     description: A
   }),
   N && (0, s.jsx)(E.Z, {
-    className: p,
+    className: g,
     subscriptionTier: T.Si.TIER_2,
     buttonText: O,
     color: i.Button.Colors.GREEN,
     look: i.Button.Looks.FILLED
   }),
   0 !== m.length && (null == (n = null == P ? void 0 : P.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 && null != f && (0, s.jsx)(i.Button, {
-    className: p,
+    className: g,
     onClick: f,
     children: m
   })

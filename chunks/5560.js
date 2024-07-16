@@ -5,8 +5,8 @@ return T;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(512722),
   o = n.n(r),
   c = n(699581),
@@ -42,11 +42,11 @@ let {
     y: i
   },
   targetWidth: a,
-  targetHeight: l,
-  position: s,
+  targetHeight: s,
+  position: l,
   offset: r
 } = e;
-(this.props.tutorialId !== t || this.props.origin.x !== n || this.props.origin.y !== i || this.props.targetWidth !== a || this.props.targetHeight !== l || this.props.position !== s || this.props.offset.x !== r.x || this.props.offset.y !== r.y) && this.updateCache();
+(this.props.tutorialId !== t || this.props.origin.x !== n || this.props.origin.y !== i || this.props.targetWidth !== a || this.props.targetHeight !== s || this.props.position !== l || this.props.offset.x !== r.x || this.props.offset.y !== r.y) && this.updateCache();
   }
   updateCache() {
 var e, t;
@@ -56,24 +56,24 @@ if (null == n || !(0, d.k)(n, HTMLElement))
 let {
   offsetWidth: i,
   offsetHeight: a
-} = n, l = {
+} = n, s = {
   offsetX: (this.props.targetWidth - i) / 2,
   offsetY: (this.props.targetHeight - a) / 2
 };
 switch (this.props.position) {
   case 'left':
-    l.offsetX = -i;
+    s.offsetX = -i;
     break;
   case 'right':
-    l.offsetX = this.props.targetWidth;
+    s.offsetX = this.props.targetWidth;
     break;
   case 'bottom':
-    l.offsetY = this.props.targetHeight;
+    s.offsetY = this.props.targetHeight;
     break;
   default:
-    l.offsetY = -a;
+    s.offsetY = -a;
 }
-l.offsetX += null !== (e = this.props.offset.x) && void 0 !== e ? e : 0, l.offsetY += null !== (t = this.props.offset.y) && void 0 !== t ? t : 0, this.setState(l);
+s.offsetX += null !== (e = this.props.offset.x) && void 0 !== e ? e : 0, s.offsetY += null !== (t = this.props.offset.y) && void 0 !== t ? t : 0, this.setState(s);
   }
   handleSkipTips() {
 p.Z.suppressAll();
@@ -90,8 +90,8 @@ let {
   autoInvert: t,
   focused: n,
   origin: a
-} = this.props, l = (0, E.S)(e);
-if (null == l)
+} = this.props, s = (0, E.S)(e);
+if (null == s)
   return null;
 let {
   media: r,
@@ -101,7 +101,7 @@ let {
   spacing: u,
   arrowAlignment: p = f.cy.TOP,
   popoutPosition: m
-} = l, {
+} = s, {
   offsetX: _,
   offsetY: C
 } = this.state, g = {
@@ -112,13 +112,13 @@ let {
   return !0 !== d ? null : (0, i.jsxs)('div', {
     children: [
       (0, i.jsx)('div', {
-        className: s()(I.top, {
+        className: l()(I.top, {
           [I.animating]: t,
           [I.notAnimating]: !t
         })
       }),
       (0, i.jsx)('div', {
-        className: s()(I.bottom, {
+        className: l()(I.bottom, {
           [I.animating]: t,
           [I.notAnimating]: !t
         })
@@ -154,14 +154,14 @@ return (0, i.jsx)(f.ZP, {
       className: I.indicator,
       style: g,
       children: (0, i.jsxs)('div', {
-        className: s()(I.animationContainer, T(n)),
+        className: l()(I.animationContainer, T(n)),
         children: [
           x(n),
           (0, i.jsx)('div', {
-            className: s()(I.innerCircle, T(n))
+            className: l()(I.innerCircle, T(n))
           }),
           (0, i.jsx)('div', {
-            className: s()(I.outerCircle, T(n))
+            className: l()(I.outerCircle, T(n))
           })
         ]
       })
@@ -196,12 +196,12 @@ windowFocused: _.Z.isFocused()
   }));
   return a ? (0, i.jsx)(i.Fragment, {
 children: Object.entries(e).map(e => {
-  let [a, l] = e, s = t[a];
-  return o()(null != s, 'Missing tutorial definition for '.concat(a)), (0, i.jsx)(T, {
+  let [a, s] = e, l = t[a];
+  return o()(null != l, 'Missing tutorial definition for '.concat(a)), (0, i.jsx)(T, {
     tutorialId: a,
-    tutorialDefinition: s,
+    tutorialDefinition: l,
     focused: n,
-    ...l
+    ...s
   }, a);
 })
   }) : null;

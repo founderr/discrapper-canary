@@ -9,10 +9,10 @@ return f;
 return Z;
   },
   fU: function() {
-return p;
+return H;
   },
   qw: function() {
-return H;
+return h;
   },
   tn: function() {
 return P;
@@ -128,7 +128,7 @@ rowHeight: s
   }), n;
 }
 
-function p(e) {
+function H(e) {
   var _, E;
   let s = (0, t.e7)([O.Z], () => O.Z.getCategories(e)),
 T = s._categories.length,
@@ -139,7 +139,7 @@ return 0;
   return null == n ? 0 : 0 === n.length ? I.index + 2 - T : n[n.length - 1].index + 2 - T;
 }
 
-function H(e) {
+function h(e) {
   var _;
   return C.Z.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
 timeAgo: A()(M.default.extractTimestamp(null !== (_ = i.ZP.lastMessageId(e)) && void 0 !== _ ? _ : e)).fromNow()

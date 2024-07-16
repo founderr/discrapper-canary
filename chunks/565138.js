@@ -1,7 +1,7 @@
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(613828),
   u = n(442837),
   c = n(692547),
@@ -147,7 +147,7 @@ let {
   guild: n,
   className: r,
   showBadge: a,
-  active: o,
+  active: s,
   size: l,
   style: u = {},
   textScale: c,
@@ -163,9 +163,9 @@ let {
   ...v
 } = this.props, O = S[l], R = null != f ? d.Clickable : 'div';
 return (0, i.jsxs)(R, {
-  className: s()(m.icon, r, (0, p.l)(m, 'iconSize', l), {
-    [null !== (e = (0, p.l)(m, 'iconActive', l)) && void 0 !== e ? e : '']: o,
-    [m.iconInactive]: !o,
+  className: o()(m.icon, r, (0, p.l)(m, 'iconSize', l), {
+    [null !== (e = (0, p.l)(m, 'iconActive', l)) && void 0 !== e ? e : '']: s,
+    [m.iconInactive]: !s,
     [m.noIcon]: null == n.icon
   }),
   'aria-hidden': N,

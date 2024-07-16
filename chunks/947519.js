@@ -6,8 +6,8 @@ return _;
 var r = n(735250),
   i = n(470079),
   a = n(608787),
-  o = n(442837),
-  s = n(906467),
+  s = n(442837),
+  o = n(906467),
   l = n(358085),
   u = n(31336),
   c = n(19759);
@@ -78,7 +78,7 @@ n.e('15086')
 function _(e) {
   let {
 mobile: t
-  } = e, n = (0, o.e7)([s.Z], () => s.Z.isDeveloper), a = (0, o.e7)([c.Z], () => c.Z.displayTools), _ = i.useCallback(e => {
+  } = e, n = (0, s.e7)([o.Z], () => o.Z.isDeveloper), a = (0, s.e7)([c.Z], () => c.Z.displayTools), _ = i.useCallback(e => {
 ((0, l.isMac)() ? e.metaKey : e.ctrlKey) && e.altKey && 'KeyO' === e.code && (0, u.SO)();
   }, []);
   return (i.useLayoutEffect(() => (window.addEventListener('keydown', _), () => {

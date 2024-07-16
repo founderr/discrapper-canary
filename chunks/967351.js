@@ -1,8 +1,8 @@
 n(47120), n(411104);
 var i = n(413135),
-  a = n(836560),
-  s = n(392711),
-  r = n.n(s),
+  s = n(836560),
+  a = n(392711),
+  r = n.n(a),
   l = n(710845),
   o = n(998502),
   c = n(901077),
@@ -44,7 +44,7 @@ let i = () => {
       e.end(), e.destroy();
     } catch (e) {}
   },
-  a = Promise.race([
+  s = Promise.race([
     new Promise(t => e.on('error', () => t())),
     new Promise((t, n) => {
       e.on('pong', () => n(Error('socket responded with pong')));
@@ -57,16 +57,16 @@ let i = () => {
   }, e => {
     throw i(), e;
   });
-return e.write(T(I.PING, r().uniqueId())), a.then(t, n);
+return e.write(T(I.PING, r().uniqueId())), s.then(t, n);
   });
 }
 
 function T(e, t) {
   var n;
   t = JSON.stringify(t);
-  let a = i.Buffer.byteLength(t),
-s = i.Buffer.alloc(8 + a);
-  return s.writeInt32LE(e, 0), s.writeInt32LE(a, 4), s.write(t, 8, a), (n = s).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength);
+  let s = i.Buffer.byteLength(t),
+a = i.Buffer.alloc(8 + s);
+  return a.writeInt32LE(e, 0), a.writeInt32LE(s, 4), a.write(t, 8, s), (n = a).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength);
 }
 
 function S(e) {
@@ -74,14 +74,14 @@ function S(e) {
   if (null == t)
 return;
   let n = i.Buffer.from(t),
-a = n.readInt32LE(0),
-s = n.readInt32LE(4);
-  if (!Object.values(I).includes(a) || s < 0)
+s = n.readInt32LE(0),
+a = n.readInt32LE(4);
+  if (!Object.values(I).includes(s) || a < 0)
 throw Error('protocol error');
-  if (null == (t = e.read(s)))
+  if (null == (t = e.read(a)))
 throw Error('data size does not match what was received');
   let r = JSON.parse((n = i.Buffer.from(t)).toString());
-  switch (a) {
+  switch (s) {
 case I.PING:
   e.emit('ping', r), e.write(T(I.PONG, r));
   break;
@@ -114,16 +114,16 @@ this.socket.end(T(I.CLOSE, {
 })), this.socket.destroy();
   }
   constructor(e, t, n) {
-var i, a, s;
-super('ipc', t, n), i = this, s = void 0, (a = 'socket') in i ? Object.defineProperty(i, a, {
-  value: s,
+var i, s, a;
+super('ipc', t, n), i = this, a = void 0, (s = 'socket') in i ? Object.defineProperty(i, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, this.socket = e;
+}) : i[s] = a, this.socket = e;
   }
 }
-class C extends a.EventEmitter {
+class C extends s.EventEmitter {
   handleConnection(e) {
 m(e, !1), e.pause(), e.on('readable', () => {
   try {
@@ -137,9 +137,9 @@ m(e, !1), e.pause(), e.on('readable', () => {
 }), e.once('handshake', t => {
   let n;
   let i = t.client_id,
-    a = +t.v;
+    s = +t.v;
   try {
-    n = new f(e, a, 'json');
+    n = new f(e, s, 'json');
   } catch (t) {
     e.end(T(I.CLOSE, {
       code: t.code,

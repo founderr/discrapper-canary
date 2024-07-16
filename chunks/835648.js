@@ -6,8 +6,8 @@ return T;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(91192),
+  s = n.n(a),
+  o = n(91192),
   l = n(481060),
   u = n(880949),
   c = n(806966),
@@ -29,13 +29,13 @@ icon: t,
 isSelected: n,
 onClick: i,
 listItemProps: a,
-...s
+...o
   } = e;
   return (0, r.jsx)(l.Clickable, {
 ...a,
-...s,
+...o,
 onClick: i,
-className: o()(h.categoryIcon, {
+className: s()(h.categoryIcon, {
   [h.selected]: n
 }),
 children: (0, r.jsx)(t, {
@@ -51,7 +51,7 @@ category: t,
 categoryIndex: n,
 onClick: i,
 isSelected: a
-  } = e, o = (0, s.JA)('soundboard_guild_'.concat(n));
+  } = e, s = (0, o.JA)('soundboard_guild_'.concat(n));
   return (0, r.jsx)(l.Tooltip, {
 text: function(e) {
   switch (e.categoryInfo.type) {
@@ -133,7 +133,7 @@ children: e => function(e, t, n, i, a) {
     default:
       return null;
   }
-}(t, i, a, e, o)
+}(t, i, a, e, s)
   });
 }
 
@@ -142,7 +142,7 @@ function T(e) {
 soundboardListRef: t,
 categories: n,
 listPadding: a = p
-  } = e, o = i.useRef(null), s = i.useCallback((e, t, n, i) => (0, r.jsx)(I, {
+  } = e, s = i.useRef(null), o = i.useCallback((e, t, n, i) => (0, r.jsx)(I, {
 category: e,
 categoryIndex: t,
 onClick: n,
@@ -150,12 +150,12 @@ isSelected: i
   }), []);
   return (0, r.jsx)(d.Z, {
 className: h.categoryList,
-categoryListRef: o,
+categoryListRef: s,
 expressionsListRef: t,
 store: c.Wq,
 categories: n,
 listPadding: a,
-renderCategoryListItem: s,
+renderCategoryListItem: o,
 rowCount: n.length,
 categoryHeight: 40
   });

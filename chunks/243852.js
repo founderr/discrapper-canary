@@ -1,5 +1,5 @@
 n(47120);
-var i, a, s, r, l, o = n(442837),
+var i, s, a, r, l, o = n(442837),
   c = n(433517),
   d = n(846519),
   u = n(570140),
@@ -34,19 +34,19 @@ function b(e) {
 n = Date.now(),
 i = null != e.updatedAt ? n - e.updatedAt : 0;
   i > v + Z && (i = 0);
-  let a = (0, g.OT)(e.applicationId, S.Z),
-s = C.Z.getVoiceChannelId(),
+  let s = (0, g.OT)(e.applicationId, S.Z),
+a = C.Z.getVoiceChannelId(),
 r = p.default.getSessionId(),
 l = f.Z.getMediaSessionId();
   _.Z.updateActivity({
 applicationId: e.applicationId,
 distributor: e.isDiscordApplication ? N.GQo.DISCORD : e.distributor,
-shareActivity: a,
+shareActivity: s,
 token: e.token,
 duration: Math.floor(i / 1000),
 closed: t,
 exePath: e.exePath,
-voiceChannelId: s,
+voiceChannelId: a,
 sessionId: r,
 mediaSessionId: l
   }), e.updatedAt = n;
@@ -61,7 +61,7 @@ n = new Set();
   for (let {
   name: e,
   distributor: i,
-  exePath: a
+  exePath: s
 }
 of t) {
 let t = T.Z.getGameByName(e);
@@ -70,7 +70,7 @@ if (null != t)
     applicationId: t.id,
     updatedAt: Date.now(),
     distributor: i,
-    exePath: (0, E.N6)(null != a ? a : '')
+    exePath: (0, E.N6)(null != s ? s : '')
   });
   }
   for (let t of Object.keys(L))
@@ -82,7 +82,7 @@ function M() {
 x(L[e]);
   R = !1;
 }
-class D extends(a = o.ZP.Store) {
+class D extends(s = o.ZP.Store) {
   initialize() {
 this.waitFor(h.ZP, I.Z, S.Z), this.syncWith([I.Z], P);
   }
@@ -90,12 +90,12 @@ this.waitFor(h.ZP, I.Z, S.Z), this.syncWith([I.Z], P);
 return L;
   }
 }
-l = 'ActivityTrackingStore', (r = 'displayName') in(s = D) ? Object.defineProperty(s, r, {
+l = 'ActivityTrackingStore', (r = 'displayName') in(a = D) ? Object.defineProperty(a, r, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[r] = l, new D(u.Z, {
+}) : a[r] = l, new D(u.Z, {
   RUNNING_GAMES_CHANGE: () => P(),
   CONNECTION_OPEN: function() {
 if (R)

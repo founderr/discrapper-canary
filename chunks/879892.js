@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(355467),
-  o = n(179360),
-  s = n(821849),
+  s = n(179360),
+  o = n(821849),
   l = n(594174),
   u = n(314884),
   c = n(509545),
@@ -55,7 +55,7 @@ return;
 return;
   }
   let D = [];
-  !c.Z.isLoadedForPremiumSKUs() && D.push((0, s.Y2)()), !u.Z.hasFetched && (D.push(a.jg()), D.push((0, o.X8)())), D.length > 0 && await Promise.allSettled(D);
+  !c.Z.isLoadedForPremiumSKUs() && D.push((0, o.Y2)()), !u.Z.hasFetched && (D.push(a.jg()), D.push((0, s.X8)())), D.length > 0 && await Promise.allSettled(D);
   let L = (0, _.vx)(u.Z.boostSlots),
 b = L.length,
 M = e => {

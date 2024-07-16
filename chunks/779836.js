@@ -6,8 +6,8 @@ return g;
 var i = n(735250);
 n(470079);
 var a = n(120356),
-  l = n.n(a),
-  s = n(338545),
+  s = n.n(a),
+  l = n(338545),
   r = n(399606),
   o = n(481060),
   c = n(511010),
@@ -24,7 +24,7 @@ function C(e) {
   let {
 summary: t,
 channel: n
-  } = e, a = (0, r.e7)([h.Z], () => h.Z.summaryFeedback(t)), l = (e, i) => {
+  } = e, a = (0, r.e7)([h.Z], () => h.Z.summaryFeedback(t)), s = (e, i) => {
 e.stopPropagation(), (0, p.Z)({
   summary: t,
   channel: n,
@@ -52,7 +52,7 @@ config: {
   return (0, i.jsx)(i.Fragment, {
 children: c((e, t) => t ? (0, i.jsx)('div', {
   className: E.summaryFeedbackWrapper,
-  children: (0, i.jsxs)(s.animated.div, {
+  children: (0, i.jsxs)(l.animated.div, {
     style: e,
     className: E.summaryFeedback,
     children: [
@@ -62,7 +62,7 @@ children: c((e, t) => t ? (0, i.jsx)('div', {
         children: f.Z.Messages.SUMMARY_FEEDBACK
       }),
       (0, i.jsx)(o.Clickable, {
-        onClick: e => l(e, m.aZ.GOOD),
+        onClick: e => s(e, m.aZ.GOOD),
         children: (0, i.jsx)(u.Z, {
           className: E.thumbIcon,
           width: 12,
@@ -70,7 +70,7 @@ children: c((e, t) => t ? (0, i.jsx)('div', {
         })
       }),
       (0, i.jsx)(o.Clickable, {
-        onClick: e => l(e, m.aZ.BAD),
+        onClick: e => s(e, m.aZ.BAD),
         children: (0, i.jsx)(d.Z, {
           className: E.thumbIcon,
           width: 12,
@@ -86,15 +86,15 @@ children: c((e, t) => t ? (0, i.jsx)('div', {
 function g(e) {
   var t, n;
   let a, {
-  item: s,
+  item: l,
   channel: d,
   index: u
 } = e,
 p = (0, r.e7)([h.Z], () => h.Z.selectedSummary(d.id));
   if (null == p)
 return null;
-  let m = null != s.unreadId,
-f = null != s.content;
+  let m = null != l.unreadId,
+f = null != l.content;
   return a = f ? (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(o.TopicsIcon, {
@@ -102,7 +102,7 @@ children: [
     color: 'currentColor',
     className: E.summaryStartIcon
   }),
-  s.content
+  l.content
 ]
   }) : (0, i.jsxs)(i.Fragment, {
 children: [
@@ -117,10 +117,10 @@ children: [
   })
 ]
   }), (0, i.jsx)(c.Z, {
-className: l()(E.summaryDivider, f ? E.summaryDividerStart : E.summaryDividerEnd),
+className: s()(E.summaryDivider, f ? E.summaryDividerStart : E.summaryDividerEnd),
 contentClassName: f ? E.summaryStartContent : E.summaryEndContent,
 isUnread: m,
 id: m ? _.j1 : void 0,
 children: a
-  }, 'divider-'.concat(null !== (n = null !== (t = s.contentKey) && void 0 !== t ? t : s.unreadId) && void 0 !== n ? n : u));
+  }, 'divider-'.concat(null !== (n = null !== (t = l.contentKey) && void 0 !== t ? t : l.unreadId) && void 0 !== n ? n : u));
 }

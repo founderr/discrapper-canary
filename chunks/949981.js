@@ -26,8 +26,8 @@ function T(e) {
   onTransitionToInviteChannel: h,
   onAcceptInstantInvite: N
 } = e,
-p = T === a.id,
-f = n.state === E.r2o.ACCEPTING,
+f = T === a.id,
+p = n.state === E.r2o.ACCEPTING,
 C = (0, r.e7)([c.Z], () => null != n.channel ? c.Z.getChannel(n.channel.id) : null, [n]);
   s()(null == C || C.isPrivate(), 'must be a private channel');
   let g = null != C;
@@ -50,7 +50,7 @@ R = I.Z.Messages.JOIN_GUILD,
 O = l.Z.Button.Colors.GREEN;
   g && (R = I.Z.Messages.JOINED_GUILD, O = l.Z.Button.Colors.PRIMARY);
   let x = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
-  return p && (x = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, i.jsxs)(l.Z, {
+  return f && (x = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, i.jsxs)(l.Z, {
 children: [
   (0, i.jsx)(l.Z.Header, {
     text: x
@@ -75,7 +75,7 @@ children: [
       }),
       (0, i.jsx)(l.Z.Button, {
         onClick: A,
-        submitting: f,
+        submitting: p,
         isDisabled: g,
         color: O,
         children: R

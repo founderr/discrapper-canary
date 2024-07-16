@@ -1,6 +1,6 @@
 var i = n(735250),
-  a = n(470079),
-  s = n(704215),
+  s = n(470079),
+  a = n(704215),
   r = n(605236),
   l = n(150340),
   o = n(434404),
@@ -14,22 +14,22 @@ t.Z = e => {
 guild: t,
 markAsDismissed: n
   } = e;
-  a.useEffect(() => {
-(0, r.kk)(s.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE);
+  s.useEffect(() => {
+(0, r.kk)(a.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE);
   }, []);
-  let h = a.useCallback(() => {
+  let h = s.useCallback(() => {
   o.Z.open(t.id, u.pNK.ONBOARDING), c.default.track(u.rMx.UPSELL_CLICKED, {
-    type: s.z[s.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
+    type: a.z[a.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
     action: 'primary'
-  }), (0, r.EW)(s.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE, {
+  }), (0, r.EW)(a.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE, {
     dismissAction: _.L.PRIMARY
-  }), (0, l.G)(t.id, s.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE);
+  }), (0, l.G)(t.id, a.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE);
 }, [t.id]),
-I = a.useCallback(() => {
+I = s.useCallback(() => {
   c.default.track(u.rMx.UPSELL_CLICKED, {
-    type: s.z[s.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
+    type: a.z[a.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
     action: 'dismiss'
-  }), n(_.L.UNKNOWN), (0, l.G)(t.id, s.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE);
+  }), n(_.L.UNKNOWN), (0, l.G)(t.id, a.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE);
 }, [
   t.id,
   n

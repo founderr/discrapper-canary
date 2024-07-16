@@ -1,8 +1,8 @@
 n(411104);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(536249);
 
 function u(e, t, n) {
@@ -41,7 +41,7 @@ let {
   alt: n,
   width: r,
   height: a,
-  onLoad: o,
+  onLoad: s,
   style: u,
   imageClassName: c
 } = this.props, {
@@ -55,14 +55,14 @@ return (0, i.jsx)('div', {
     height: a
   },
   children: (0, i.jsx)('img', {
-    className: s()(l.image, c, {
+    className: o()(l.image, c, {
       [l.loaded]: d
     }),
     width: r,
     height: a,
     src: t,
     alt: n,
-    onLoad: o
+    onLoad: s
   })
 });
   }

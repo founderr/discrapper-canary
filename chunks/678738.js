@@ -6,8 +6,8 @@ return u;
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(607070),
+  s = n(481060),
+  o = n(607070),
   l = n(887699);
 
 function u(e) {
@@ -16,7 +16,7 @@ title: t,
 children: n,
 scrollIntoView: u = !1,
 headingColor: c = 'header-secondary'
-  } = e, d = (0, a.e7)([s.Z], () => s.Z.useReducedMotion), _ = i.useRef(null);
+  } = e, d = (0, a.e7)([o.Z], () => o.Z.useReducedMotion), _ = i.useRef(null);
   return i.useEffect(() => {
 let e = _.current;
 if (null == e)
@@ -31,7 +31,7 @@ return () => cancelAnimationFrame(t);
 ref: u ? _ : void 0,
 className: l.section,
 children: [
-  (0, r.jsx)(o.Heading, {
+  (0, r.jsx)(s.Heading, {
     variant: 'text-xs/semibold',
     color: c,
     className: l.heading,

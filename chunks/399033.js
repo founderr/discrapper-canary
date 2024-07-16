@@ -1,26 +1,26 @@
-n(47120);
-var r = n(735250),
-  s = n(470079),
-  a = n(120356),
-  o = n.n(a),
-  i = n(338545),
-  l = n(442837),
-  c = n(481060),
-  d = n(100527),
-  u = n(906732),
-  p = n(259580),
-  g = n(328347),
-  f = n(709999),
-  C = n(305271),
-  m = n(689938),
-  _ = n(994479);
+s(47120);
+var n = s(735250),
+  r = s(470079),
+  a = s(120356),
+  o = s.n(a),
+  i = s(338545),
+  l = s(442837),
+  c = s(481060),
+  d = s(100527),
+  u = s(906732),
+  p = s(259580),
+  g = s(328347),
+  f = s(709999),
+  C = s(305271),
+  m = s(689938),
+  _ = s(994479);
 t.Z = e => {
   let {
 className: t,
-products: n,
+products: s,
 user: a,
 productToCategoryMap: h
-  } = e, [b, x] = s.useState(0), I = n.length, {
+  } = e, [b, x] = r.useState(0), I = s.length, {
 analyticsLocations: E
   } = (0, l.cj)([g.Z], () => g.Z.getAnalytics()), {
 analyticsLocations: L
@@ -29,20 +29,20 @@ analyticsLocations: L
 d.Z.COLLECTIBLES_SHOP_POPULAR_PICKS_CAROUSEL
   ]), {
 trackPagination: S
-  } = (0, C.X)('collectibles_shop_popular_picks_carousel', L), v = s.useCallback(e => ({
+  } = (0, C.X)('collectibles_shop_popular_picks_carousel', L), v = r.useCallback(e => ({
 x: (e - b) * 100
-  }), [b]), [T, N] = (0, c.useSprings)(n.length, v);
-  return (s.useEffect(() => {
+  }), [b]), [T, N] = (0, c.useSprings)(s.length, v);
+  return (r.useEffect(() => {
 N(v);
   }, [
 N,
 v
-  ]), null == a || 0 === n.length) ? null : (0, r.jsx)('div', {
+  ]), null == a || 0 === s.length) ? null : (0, n.jsx)('div', {
 className: t,
-children: (0, r.jsxs)('div', {
+children: (0, n.jsxs)('div', {
   className: _.cardContainer,
   children: [
-    (0, r.jsx)(c.Button, {
+    (0, n.jsx)(c.Button, {
       look: c.Button.Looks.FILLED,
       color: c.Button.Colors.PRIMARY,
       className: o()(_.caretButton, _.leftCaret),
@@ -54,32 +54,32 @@ children: (0, r.jsxs)('div', {
       },
       disabled: b - 4 < 0,
       'aria-label': m.Z.Messages.PAGINATION_PREVIOUS,
-      children: (0, r.jsx)(p.Z, {
+      children: (0, n.jsx)(p.Z, {
         direction: p.Z.Directions.LEFT
       })
     }),
-    (0, r.jsx)('div', {
+    (0, n.jsx)('div', {
       className: _.cardInnerContainer,
       children: T.map((e, t) => {
         let {
-          x: s
-        } = e, o = h.get(n[t].skuId);
+          x: r
+        } = e, o = h.get(s[t].skuId);
         if (null != o)
-          return (0, r.jsx)(i.animated.div, {
+          return (0, n.jsx)(i.animated.div, {
             className: _.card,
             style: {
-              transform: null == s ? void 0 : s.to(e => 'translate3d('.concat(e, '%,0,0)'))
+              transform: null == r ? void 0 : r.to(e => 'translate3d('.concat(e, '%,0,0)'))
             },
-            children: (0, r.jsx)(f.Z, {
-              product: n[t],
+            children: (0, n.jsx)(f.Z, {
+              product: s[t],
               category: o,
               user: a,
               isPopularPicksRow: !0
-            }, ''.concat(n[t].name, '_').concat(t, '_perks_card'))
-          }, ''.concat(n[t].name, '_').concat(t, '_animated_div'));
+            }, ''.concat(s[t].name, '_').concat(t, '_perks_card'))
+          }, ''.concat(s[t].name, '_').concat(t, '_animated_div'));
       })
     }),
-    (0, r.jsx)(c.Button, {
+    (0, n.jsx)(c.Button, {
       look: c.Button.Looks.FILLED,
       color: c.Button.Colors.PRIMARY,
       className: o()(_.caretButton, _.rightCaret),
@@ -91,7 +91,7 @@ children: (0, r.jsxs)('div', {
       },
       disabled: b + 4 >= I,
       'aria-label': m.Z.Messages.PAGINATION_NEXT,
-      children: (0, r.jsx)(p.Z, {
+      children: (0, n.jsx)(p.Z, {
         direction: p.Z.Directions.RIGHT
       })
     })

@@ -1,5 +1,5 @@
 n(47120);
-var i, a, s = n(735250),
+var i, s, a = n(735250),
   r = n(470079),
   l = n(338545),
   o = n(143927),
@@ -19,7 +19,7 @@ var i, a, s = n(735250),
   C = n(895068),
   N = n(921944),
   A = n(540736);
-(a = i || (i = {})).TOP_PICKS = 'top_picks', a.OTHER_GUILDS = 'other_guilds';
+(s = i || (i = {})).TOP_PICKS = 'top_picks', s.OTHER_GUILDS = 'other_guilds';
 let v = {
 mass: 1,
 tension: 600,
@@ -28,7 +28,7 @@ friction: 60
   Z = r.memo(function(e) {
 let {
   width: t
-} = e, n = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), i = (0, S.GN)(e => e.mode, o.Z), [a, d] = r.useState(!0), _ = (0, l.useSpring)({
+} = e, n = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), i = (0, S.GN)(e => e.mode, o.Z), [s, d] = r.useState(!0), _ = (0, l.useSpring)({
   from: {
     opacity: 0
   },
@@ -75,17 +75,17 @@ switch (r.useEffect(() => {
     g
   ]), i) {
   case S.v0.ADMIN_UPSELL:
-    return (0, s.jsx)(f.$, {});
+    return (0, a.jsx)(f.$, {});
   case S.v0.GET_STARTED:
-    return (0, s.jsx)(f.J, {});
+    return (0, a.jsx)(f.J, {});
   case S.v0.DISCOVERY:
   case S.v0.GAMES:
   case S.v0.PLAYSTYLE:
   case S.v0.TRAITS:
-    return (0, s.jsxs)('div', {
+    return (0, a.jsxs)('div', {
       className: A.discoveryContainer,
       children: [
-        (0, s.jsx)(l.animated.div, {
+        (0, a.jsx)(l.animated.div, {
           className: A.toolbar,
           style: {
             opacity: _.opacity,
@@ -98,9 +98,9 @@ switch (r.useEffect(() => {
             ]).to(e => 'translateY('.concat(e, 'px)')),
             borderBottom: '1px solid var(--bg-mod-strong)'
           },
-          children: (0, s.jsx)(T.Z, {})
+          children: (0, a.jsx)(T.Z, {})
         }),
-        (0, s.jsx)(l.animated.div, {
+        (0, a.jsx)(l.animated.div, {
           className: A.content,
           style: {
             opacity: _.opacity,
@@ -112,14 +112,14 @@ switch (r.useEffect(() => {
               0
             ]).to(e => 'translateY('.concat(e, 'px)'))
           },
-          children: (0, s.jsx)(C.ZP, {
+          children: (0, a.jsx)(C.ZP, {
             width: t,
-            isAnimating: a
+            isAnimating: s
           })
         }),
-        (0, s.jsx)('div', {
+        (0, a.jsx)('div', {
           className: A.selectors,
-          children: (0, s.jsx)(p.Z, {
+          children: (0, a.jsx)(p.Z, {
             mode: i
           })
         })
@@ -134,17 +134,17 @@ loading: e
 ref: t,
 width: n
   } = (0, _.Z)();
-  return (0, s.jsxs)('main', {
+  return (0, a.jsxs)('main', {
 className: A.container,
 ref: t,
 children: [
-  (0, s.jsx)('div', {
+  (0, a.jsx)('div', {
     className: A.dragRegion
   }),
-  e ? (0, s.jsx)('div', {
+  e ? (0, a.jsx)('div', {
     className: A.loading,
-    children: (0, s.jsx)(d.Spinner, {})
-  }) : (0, s.jsx)(Z, {
+    children: (0, a.jsx)(d.Spinner, {})
+  }) : (0, a.jsx)(Z, {
     width: null != n ? n : 0
   })
 ]

@@ -5,8 +5,8 @@ return f;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(286379),
-  s = n(442837),
+  s = n(286379),
+  l = n(442837),
   r = n(481060),
   o = n(797614),
   c = n(699516),
@@ -27,7 +27,7 @@ senderId: E
   }, [
 t,
 f
-  ]), g = (0, s.e7)([c.Z], () => c.Z.isBlocked(E)), I = a.useMemo(() => ({
+  ]), g = (0, l.e7)([c.Z], () => c.Z.isBlocked(E)), I = a.useMemo(() => ({
 channelId: t,
 warningId: f,
 senderId: E,
@@ -42,7 +42,7 @@ E
   ...I,
   viewName: h.pb.SAFETY_WARNING_BANNER
 }), o.Z.increment({
-  name: l.V.SAFETY_WARNING_VIEW
+  name: s.V.SAFETY_WARNING_VIEW
 });
   }, [I]);
   let x = a.useCallback(e => {
@@ -62,7 +62,7 @@ T = a.useCallback(() => {
     return n => {
       let {
         transitionState: a,
-        onClose: l
+        onClose: s
       } = n;
       return (0, i.jsx)(e, {
         otherUserId: E,
@@ -70,7 +70,7 @@ T = a.useCallback(() => {
         warningId: f,
         warningType: u.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
         transitionState: a,
-        onClose: l
+        onClose: s
       });
     };
   }, {
@@ -102,16 +102,16 @@ S = a.useCallback(() => {
     return n => {
       let {
         transitionState: a,
-        onClose: l
+        onClose: s
       } = n;
       return (0, i.jsx)(e, {
         transitionState: a,
         onBlock: N,
         onBlockAndReport: v,
         onCancel: () => {
-          null == l || l(), x(h.NM.USER_BANNER_BLOCK_CANCEL);
+          null == s || s(), x(h.NM.USER_BANNER_BLOCK_CANCEL);
         },
-        onClose: l,
+        onClose: s,
         userId: E,
         channelId: t
       });

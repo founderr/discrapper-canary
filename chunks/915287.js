@@ -6,15 +6,15 @@ return _;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(952639),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(952639),
+  l = n.n(o),
   u = n(84735),
   c = n(562701),
   d = n(859726);
 
 function _(e, t, n, a) {
-  let s = (0, c.G6)(e),
+  let o = (0, c.G6)(e),
 _ = new Map(),
 E = new a(e => {
   e.forEach(e => {
@@ -67,7 +67,7 @@ let {
 (0, c.tT)({
   scrollerRef: X,
   className: h,
-  specs: s,
+  specs: o,
   orientation: 'vertical',
   dir: T
 });
@@ -78,7 +78,7 @@ let {
   isSidebarVisible: er,
   listComputer: ei,
   forceUpdateOnChunkChange: ea,
-  anchor: eo
+  anchor: es
 } = (0, c.aU)({
   sections: g,
   sectionHeight: S,
@@ -91,7 +91,7 @@ let {
   chunkSize: G,
   getScrollerState: J,
   getAnchorId: M
-}), es = (0, c.t2)(X), el = i.useRef(m), eu = i.useRef(I);
+}), eo = (0, c.t2)(X), el = i.useRef(m), eu = i.useRef(I);
 i.useLayoutEffect(() => {
   el.current = m, eu.current = I;
 });
@@ -153,14 +153,14 @@ i.useImperativeHandle(f, () => ({
   getScrollerState: J,
   getItems: e_,
   getSectionRowFromIndex: eE,
-  ...(0, c.rH)(X, J, ei, es)
+  ...(0, c.rH)(X, J, ei, eo)
 }), [
   X,
   J,
   eE,
   e_,
   ei,
-  es
+  eo
 ]);
 let ef = i.useCallback(e => {
   ec(1), null == K.current ? Q(!0) : clearTimeout(K.current), K.current = setTimeout(() => {
@@ -183,7 +183,7 @@ return i.useLayoutEffect(() => {
   $
 ]), (0, c.rS)({
   scrollerRef: X,
-  anchor: eo,
+  anchor: es,
   getScrollerState: J,
   listComputer: ei,
   getAnchorId: M,
@@ -191,7 +191,7 @@ return i.useLayoutEffect(() => {
 }), (0, r.jsxs)('div', {
   ref: X,
   onScroll: ef,
-  className: o()(h, {
+  className: s()(h, {
     [e]: !0,
     [t]: w,
     [n]: x,
@@ -209,7 +209,7 @@ return i.useLayoutEffect(() => {
       style: {
         height: et
       },
-      className: o()(d.content, Y),
+      className: s()(d.content, Y),
       ref: z,
       children: (0, r.jsx)(u.J, {
         containerRef: z,
@@ -219,8 +219,8 @@ return i.useLayoutEffect(() => {
             renderRow: n,
             renderFooter: i,
             renderListHeader: a,
-            wrapSection: o,
-            items: s,
+            wrapSection: s,
+            items: o,
             spacerTop: u
           } = e, c = [(0, r.jsx)('div', {
             'aria-hidden': !0,
@@ -228,9 +228,9 @@ return i.useLayoutEffect(() => {
               height: u
             }
           }, '---list-spacer-top')], d = [], _ = 0;
-          if (s.forEach(e => {
+          if (o.forEach(e => {
               var r;
-              switch (e.section !== _ && d.length > 0 && (c.push(null != o ? o(_, d) : d), d = []), _ = null !== (r = e.section) && void 0 !== r ? r : 0, e.type) {
+              switch (e.section !== _ && d.length > 0 && (c.push(null != s ? s(_, d) : d), d = []), _ = null !== (r = e.section) && void 0 !== r ? r : 0, e.type) {
                 case 'section':
                   null != t && d.push(t(e));
                   break;
@@ -245,7 +245,7 @@ return i.useLayoutEffect(() => {
               }
             }), d.length > 0) {
             var E;
-            c.push(null !== (E = null == o ? void 0 : o(_, d)) && void 0 !== E ? E : d);
+            c.push(null !== (E = null == s ? void 0 : s(_, d)) && void 0 !== E ? E : d);
           }
           return l()(c);
         }({

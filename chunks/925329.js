@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(481060),
-  s = n(829968),
+  s = n(481060),
+  o = n(829968),
   l = n(565138),
   u = n(474936),
   c = n(689938),
@@ -56,7 +56,7 @@ if (null != f && (t = function(e) {
       default:
         return 80;
     }
-  }(I))), null == (t = (0, s.Z)(h, t)) && null != E) {
+  }(I))), null == (t = (0, o.Z)(h, t)) && null != E) {
   let e = function(e) {
     switch (e) {
       case _.XSMALL:
@@ -77,7 +77,7 @@ if (null != f && (t = function(e) {
   });
 }
 if (null == t)
-  return (0, r.jsx)(o.UnknownGameIcon, {
+  return (0, r.jsx)(s.UnknownGameIcon, {
     size: 'md',
     color: 'currentColor',
     className: a()(d.gameIcon, I, p)

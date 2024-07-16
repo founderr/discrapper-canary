@@ -24,8 +24,8 @@ editedWebhook: t,
 channelOptions: E,
 isExpanded: T,
 errors: h,
-onToggleExpand: p
-  } = e, g = a.useMemo(() => {
+onToggleExpand: g
+  } = e, p = a.useMemo(() => {
 var e, t;
 return e = n, null != (t = n.avatar) && /^data:/.test(t) ? t : (0, u.ov)({
   id: e.id,
@@ -144,13 +144,13 @@ children: (0, i.jsxs)(d.Z, {
     (0, i.jsx)(s.Clickable, {
       className: N.header,
       'aria-expanded': T,
-      onClick: p,
+      onClick: g,
       children: (0, i.jsxs)(d.Z, {
         align: d.Z.Align.CENTER,
         children: [
           (0, i.jsx)(I.Z, {
             name: n.name,
-            imageSrc: g,
+            imageSrc: p,
             detailsClassName: N.__invalid_description,
             details: f
           }),

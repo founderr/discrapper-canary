@@ -14,8 +14,8 @@ var s = n(735250),
   I = n(342414),
   R = n(487980),
   C = n(391110),
-  p = n(71363),
-  g = n(781800),
+  g = n(71363),
+  p = n(781800),
   A = n(981631),
   m = n(391552),
   N = n(865215);
@@ -54,7 +54,7 @@ children: [
             className: m.perksDiscoverability,
             noBackground: !0,
             leftAlignHeaders: !0,
-            showAllPerksButton: (0, s.jsx)(g.Z, {
+            showAllPerksButton: (0, s.jsx)(p.Z, {
               setIsAllPerksVisible: n,
               previousComponent: C.MQ.HOME
             })
@@ -91,7 +91,7 @@ children: [
       })
     })
   }),
-  (0, s.jsx)(p.Z, {
+  (0, s.jsx)(g.Z, {
     isAllPerksVisible: t,
     setIsAllPerksVisible: n,
     previousComponent: C.MQ.HOME

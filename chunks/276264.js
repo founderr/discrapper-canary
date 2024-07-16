@@ -6,8 +6,8 @@ return L;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(477690),
+  s = n.n(a),
+  o = n(477690),
   l = n(481060),
   u = n(420660),
   c = n(385499),
@@ -30,13 +30,13 @@ var r = n(735250),
   C = n(524484),
   y = n(689938),
   D = n(952384);
-let L = (0, A.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
+let L = (0, A.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 t.Z = function(e) {
   var t;
   let {
 selected: n = !1,
 colorString: a,
-colorRoleName: s,
+colorRoleName: o,
 isOwner: A,
 ownerTooltipText: L,
 lostPermissionTooltipText: b,
@@ -66,7 +66,7 @@ onFocus: Q,
 id: et,
 tabIndex: en,
 itemProps: er
-  } = e, ei = null == U ? void 0 : U.id, ea = N.ZP.useName(U), eo = (null === (t = T.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === ei, es = i.useRef(null), [el, eu] = i.useState(!1), [ec, ed] = i.useState(null), {
+  } = e, ei = null == U ? void 0 : U.id, ea = N.ZP.useName(U), es = (null === (t = T.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === ei, eo = i.useRef(null), [el, eu] = i.useState(!1), [ec, ed] = i.useState(null), {
 avatarDecorationSrc: e_,
 avatarSrc: eE,
 eventHandlers: ef
@@ -83,7 +83,7 @@ tagUserId: ei
 n && em(!1);
   }, [n]);
   let eI = (0, h.Fr)(x),
-eT = null != eI && !eo && n && !ep && (0, p.dl)(eI),
+eT = null != eI && !es && n && !ep && (0, p.dl)(eI),
 eg = () => {
   eu(!0);
 },
@@ -174,7 +174,7 @@ ey = (e, t) => {
 eD = () => (0, r.jsxs)(r.Fragment, {
   children: [
     (0, r.jsx)(l.NameWithRole, {
-      roleName: s,
+      roleName: o,
       color: null != a ? a : void 0,
       name: null != P ? P : ea,
       className: D.name
@@ -196,7 +196,7 @@ className: D.placeholder
   }) : (0, r.jsx)(l.Popout, {
 renderPopout: e => (0, r.jsx)(m.Z, {
   quest: eI,
-  memberListItemRef: es,
+  memberListItemRef: eo,
   applicationStream: G,
   ...e,
   closePopout: () => em(!0)
@@ -208,9 +208,9 @@ useRawTargetDimensions: !0,
 animation: l.Popout.Animation.NONE,
 spacing: -3,
 children: () => (0, r.jsx)(S.Z, {
-  ref: es,
+  ref: eo,
   selected: n,
-  className: o()(D.member, Y, {
+  className: s()(D.member, Y, {
     [D.offline]: eL && !n
   }),
   innerClassName: D.memberInner,
@@ -227,7 +227,7 @@ children: () => (0, r.jsx)(S.Z, {
     text: b,
     children: e => (0, r.jsx)('span', {
       ...e,
-      className: o()(D.username, D.lostPermission),
+      className: s()(D.username, D.lostPermission),
       children: eD()
     })
   }),

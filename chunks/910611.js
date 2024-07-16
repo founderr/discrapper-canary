@@ -11,8 +11,8 @@ return M;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(385499),
@@ -37,7 +37,7 @@ function Z(e) {
   let {
 channel: t,
 channelName: n,
-parentChannel: l,
+parentChannel: s,
 guild: r,
 inSidebar: c = !1,
 handleClick: p,
@@ -176,8 +176,8 @@ case N.d4z.ANNOUNCEMENT_THREAD:
 case N.d4z.PUBLIC_THREAD:
 case N.d4z.PRIVATE_THREAD:
   let j = null;
-  if (!c && null != l) {
-    let e = (0, u.KS)(l, r);
+  if (!c && null != s) {
+    let e = (0, u.KS)(s, r);
     j = (0, i.jsxs)(a.Fragment, {
       children: [
         b(e, v.Z.Messages.TEXT_CHANNEL),
@@ -185,14 +185,14 @@ case N.d4z.PRIVATE_THREAD:
           level: M,
           onContextMenu: C,
           onClick: f,
-          className: s()(S.parentChannelName, S.cursorPointer),
-          children: (0, d.F6)(l, E.default, _.Z)
+          className: l()(S.parentChannelName, S.cursorPointer),
+          children: (0, d.F6)(s, E.default, _.Z)
         }),
         (0, i.jsx)(x.Z.Caret, {})
       ]
     });
   }
-  let L = (null == l ? void 0 : l.type) != null && N.TPd.GUILD_THREADS_ONLY.has(l.type);
+  let L = (null == s ? void 0 : s.type) != null && N.TPd.GUILD_THREADS_ONLY.has(s.type);
   return (0, i.jsxs)(a.Fragment, {
     children: [
       j,
@@ -201,7 +201,7 @@ case N.d4z.PRIVATE_THREAD:
         level: M,
         onContextMenu: m,
         onClick: p,
-        className: s()({
+        className: l()({
           [S.cursorPointer]: c,
           [S.forumPostTitle]: L
         }),
@@ -314,7 +314,7 @@ children: [
     onClick: () => {
       (0, m.XU)(t.id, n.id);
     },
-    className: s()(S.parentChannelName, S.cursorPointer),
+    className: l()(S.parentChannelName, S.cursorPointer),
     children: t.name
   }),
   'right' === a && (0, i.jsx)(x.Z.Caret, {

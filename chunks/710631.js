@@ -6,8 +6,8 @@ return S;
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(493683),
+  s = n(481060),
+  o = n(493683),
   l = n(447543),
   u = n(904245),
   c = n(159300),
@@ -22,7 +22,7 @@ var r = n(735250),
   T = n(689938);
 
 function g(e, t) {
-  s.Z.ensurePrivateChannel(e).then(e => {
+  o.Z.ensurePrivateChannel(e).then(e => {
 null != d.Z.getChannel(e) && u.Z.sendInvite(e, t, 'context_menu', null);
   });
 }
@@ -31,7 +31,7 @@ function S(e) {
   let {
 user: t,
 guildId: n,
-onAction: s
+onAction: o
   } = e, u = (0, a.e7)([m.default], () => m.default.getCurrentUser(), []), d = (0, a.Wu)([
 p.ZP,
 E.Z,
@@ -44,18 +44,18 @@ return e.forEach(e => {
   null != r && (0, c.b)(f.Z, r) && r.id !== n && t.push(r);
 }), t;
   }, [n]), [S, A] = i.useState({});
-  return (null == u ? void 0 : u.id) === t.id || t.bot || 0 === d.length || h.Z.isBlocked(t.id) ? null : (0, r.jsx)(o.MenuItem, {
+  return (null == u ? void 0 : u.id) === t.id || t.bot || 0 === d.length || h.Z.isBlocked(t.id) ? null : (0, r.jsx)(s.MenuItem, {
 id: 'invite-to-server',
 label: T.Z.Messages.INVITE_TO_SERVER,
-children: d.map(e => S[e.id] ? (0, r.jsx)(o.MenuItem, {
+children: d.map(e => S[e.id] ? (0, r.jsx)(s.MenuItem, {
   id: e.id,
   disabled: !0,
   label: T.Z.Messages.INVITE_SENT
-}, e.id) : (0, r.jsx)(o.MenuItem, {
+}, e.id) : (0, r.jsx)(s.MenuItem, {
   id: e.id,
   label: e.name,
   action: () => {
-    null == s || s(), ! function(e, t) {
+    null == o || o(), ! function(e, t) {
       let n = _.ZP.getDefaultChannel(e.id, !0, I.Plq.CREATE_INSTANT_INVITE);
       if (null != n) {
         if (A({

@@ -6,8 +6,8 @@ return m;
 var l = s(735250),
   t = s(470079),
   i = s(692547),
-  r = s(481060),
-  a = s(697426),
+  a = s(481060),
+  r = s(697426),
   c = s(603074),
   o = s(689938),
   u = s(290934);
@@ -33,11 +33,11 @@ children: [
   (0, l.jsxs)('div', {
     className: u.__invalid_customGiftHeaderText,
     children: [
-      (0, l.jsx)(r.Text, {
+      (0, l.jsx)(a.Text, {
         variant: 'text-md/bold',
         children: o.Z.Messages.GIFT_SELECT_SOUND
       }),
-      (0, l.jsx)(r.Text, {
+      (0, l.jsx)(a.Text, {
         variant: 'text-sm/normal',
         children: o.Z.Messages.GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION
       })
@@ -49,7 +49,7 @@ children: [
   })
 ]
   });
-  return (0, l.jsx)(r.Popout, {
+  return (0, l.jsx)(a.Popout, {
 shouldShow: _,
 position: 'bottom',
 align: 'left',
@@ -58,7 +58,7 @@ renderPopout: e => {
   let {
     closePopout: n
   } = e;
-  return (0, l.jsx)(r.Dialog, {
+  return (0, l.jsx)(a.Dialog, {
     children: (0, l.jsx)(c.Z, {
       suppressPlaySound: !0,
       shouldShowUpsell: !1,
@@ -67,26 +67,26 @@ renderPopout: e => {
       onClose: n,
       onSelect: E,
       analyticsSource: 'gift soundboard',
-      soundButtonOverlay: a.Pb.ADD,
+      soundButtonOverlay: r.Pb.ADD,
       listPadding: d,
       renderHeader: I,
       defaultSoundsOnly: !0
     })
   });
 },
-children: () => (0, l.jsx)(r.Clickable, {
+children: () => (0, l.jsx)(a.Clickable, {
   className: u.sound,
   onClick: () => m(!0),
   children: null == s ? (0, l.jsxs)(l.Fragment, {
     children: [
-      (0, l.jsx)(r.SoundboardIcon, {
+      (0, l.jsx)(a.SoundboardIcon, {
         size: 'custom',
         color: i.Z.colors.WHITE,
         className: u.soundIcon,
         width: 14,
         height: 14
       }),
-      (0, l.jsx)(r.Text, {
+      (0, l.jsx)(a.Text, {
         className: u.text,
         variant: 'text-sm/semibold',
         children: o.Z.Messages.GIFT_SELECT_SOUND
@@ -94,12 +94,12 @@ children: () => (0, l.jsx)(r.Clickable, {
     ]
   }) : (0, l.jsxs)(l.Fragment, {
     children: [
-      (0, l.jsx)(r.Text, {
+      (0, l.jsx)(a.Text, {
         className: u.textSelected,
         variant: 'text-sm/semibold',
         children: s.emojiName
       }),
-      (0, l.jsx)(r.Text, {
+      (0, l.jsx)(a.Text, {
         className: u.text,
         variant: 'text-sm/semibold',
         children: s.name

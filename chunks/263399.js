@@ -1,9 +1,9 @@
-s.d(t, {
+t.d(s, {
   H: function() {
 return a;
   }
 });
-let n = (0, s(818083).B)({
+let n = (0, t(818083).B)({
 kind: 'user',
 id: '2024-05_server_settings_in_user_settings',
 label: 'Server privacy settings in user settings menu',
@@ -20,9 +20,9 @@ treatments: [{
   }),
   a = e => {
 let {
-  location: t
+  location: s
 } = e;
 return n.useExperiment({
-  location: t
+  location: s
 }).enabled;
   };

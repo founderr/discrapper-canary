@@ -7,8 +7,8 @@ var l = s(735250);
 s(470079);
 var t = s(278074),
   i = s(979554),
-  r = s(481060),
-  a = s(1585),
+  a = s(481060),
+  r = s(1585),
   c = s(125988),
   o = s(583434),
   u = s(479446),
@@ -20,7 +20,7 @@ var t = s(278074),
   p = s(689938),
   N = s(578599),
   T = s(241822);
-let x = E.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
+let x = E.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function S(e) {
   let {
@@ -31,7 +31,7 @@ eventHandlers: t,
 avatarPlaceholderSrc: i
   } = (0, c.Z)({
 avatarDecorationOverride: n,
-size: (0, a.y9)(r.AvatarSizes.SIZE_152)
+size: (0, r.y9)(a.AvatarSizes.SIZE_152)
   });
   return (0, l.jsx)('div', {
 className: N.giftMainAnimationWrapper,
@@ -40,7 +40,7 @@ children: (0, l.jsx)(x, {
   avatarDecoration: s,
   src: i,
   className: N.avatar,
-  size: r.AvatarSizes.SIZE_152,
+  size: a.AvatarSizes.SIZE_152,
   'aria-label': p.Z.Messages.USER_SETTINGS_AVATAR
 })
   });
@@ -72,8 +72,8 @@ sku: n
   } = e, {
 selectedGiftStyle: s
   } = (0, I.wD)(), {
-product: r
-  } = (0, o.T)(null == n ? void 0 : n.id), a = null == r ? void 0 : r.items[0], c = (0, t.EQ)(a).with({
+product: a
+  } = (0, o.T)(null == n ? void 0 : n.id), r = null == a ? void 0 : a.items[0], c = (0, t.EQ)(r).with({
 type: i.Z.AVATAR_DECORATION
   }, e => (0, l.jsx)(S, {
 avatarDecoration: e

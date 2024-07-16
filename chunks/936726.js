@@ -19,8 +19,8 @@ var i = t(735250),
   E = t(259580),
   T = t(768581),
   h = t(572004),
-  p = t(709054),
-  g = t(51144),
+  g = t(709054),
+  p = t(51144),
   C = t(486199),
   f = t(981631),
   x = t(689938),
@@ -29,7 +29,7 @@ let S = e => {
   if (null == e)
 return null;
   let n = new _.Z(e);
-  return g.ZP.getUserTag(n);
+  return p.ZP.getUserTag(n);
 };
 
 function A(e, n) {
@@ -47,7 +47,7 @@ webhook: t,
 editedWebhook: s,
 channelOptions: _,
 isExpanded: T,
-isNew: g,
+isNew: p,
 errors: R,
 onToggleExpand: b
   } = e, [Z, v] = a.useState(!1), [M] = a.useState(new r.V7());
@@ -96,12 +96,12 @@ P = [];
 icon: d.ClockIcon,
 text: x.Z.Messages.INTEGRATION_CREATED_USER_DATE.format({
   user: S(t.user),
-  timestamp: p.default.extractTimestamp(t.id)
+  timestamp: g.default.extractTimestamp(t.id)
 })
   }) : P.push({
 icon: d.ClockIcon,
 text: x.Z.Messages.INTEGRATION_CREATED_DATE.format({
-  timestamp: p.default.extractTimestamp(t.id)
+  timestamp: g.default.extractTimestamp(t.id)
 })
   });
   let B = null;
@@ -229,7 +229,7 @@ children: [
   })), (0, i.jsx)(d.Card, {
 editable: !0,
 id: n,
-className: l()(O.card, g ? O.pulse : null),
+className: l()(O.card, p ? O.pulse : null),
 children: (0, i.jsxs)(N.Z, {
   direction: N.Z.Direction.VERTICAL,
   children: [

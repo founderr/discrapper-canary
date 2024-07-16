@@ -14,7 +14,7 @@ var s = n(735250),
   I = n(75077),
   R = n(320319),
   C = n(755878);
-let p = e => {
+let g = e => {
   let {
 showAllPerksButton: t,
 leftAlignHeaders: n,
@@ -48,7 +48,7 @@ t.Z = e => {
   let {
 className: n,
 variant: r = T.R0.PERKS_DISCOVERABILITY,
-noBackground: g = !1,
+noBackground: p = !1,
 leftAlignHeaders: A = !1,
 showAllPerksButton: m,
 headerClassname: N,
@@ -113,7 +113,7 @@ children: [
       [C.leftAlignSection]: A
     }, n),
     children: [
-      (0, s.jsx)(p, {
+      (0, s.jsx)(g, {
         showAllPerksButton: m,
         leftAlignHeaders: A,
         title: L.title,
@@ -144,7 +144,7 @@ children: [
         children: D.map((e, t) => (0, s.jsx)(R.Z, {
           confettiCanvas: e.name === E.u.FREE_BOOST ? j : void 0,
           ...e,
-          forceShadow: g
+          forceShadow: p
         }, ''.concat(e.name, '_').concat(t)))
       })
     ]

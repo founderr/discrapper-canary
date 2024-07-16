@@ -5,8 +5,8 @@ return L;
 }), n(653041), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(831209),
-  s = n(442837),
+  s = n(831209),
+  l = n(442837),
   r = n(704215),
   o = n(481060),
   c = n(538239),
@@ -30,17 +30,17 @@ var i = n(735250),
   A = n(689938),
   M = n(249741);
 
-function b(e, t, a, l) {
+function b(e, t, a, s) {
   (0, o.openModalLazy)(async () => {
 let {
-  default: s
+  default: l
 } = await Promise.resolve().then(n.bind(n, 538239));
-return n => (0, i.jsx)(s, {
+return n => (0, i.jsx)(l, {
   ...n,
   activity: e,
   channel: t,
   activityActionType: a,
-  analyticsLocations: l
+  analyticsLocations: s
 });
   }, {
 modalKey: c.activityInviteKey
@@ -49,7 +49,7 @@ modalKey: c.activityInviteKey
 let R = /(.*)```(\w+)\n(.*)```(.*)/s;
 
 function j() {
-  let e = (0, s.e7)([E.Z], () => E.Z.hasCurrentUserSentMessageSinceAppStart()),
+  let e = (0, l.e7)([E.Z], () => E.Z.hasCurrentUserSentMessageSinceAppStart()),
 t = [];
   e && t.push(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
   let [n] = (0, m.c)(t);
@@ -65,7 +65,7 @@ children: e => {
   } = e;
   return t === r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE ? (0, i.jsx)(o.TextBadge, {
     text: A.Z.Messages.NEW,
-    color: l.Z.BUTTON_DANGER_BACKGROUND
+    color: s.Z.BUTTON_DANGER_BACKGROUND
   }) : null;
 }
   });
@@ -74,7 +74,7 @@ children: e => {
 function L(e) {
   let {
 channel: t,
-options: s,
+options: l,
 onFileUpload: c,
 onClose: m,
 onSelect: _,
@@ -163,7 +163,7 @@ navId: 'channel-attach',
 onClose: m,
 'aria-label': A.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
 className: M.menu,
-children: s.map(function(e) {
+children: l.map(function(e) {
   var n;
   let a = (0, i.jsxs)('div', {
     className: M.optionLabel,
@@ -178,7 +178,7 @@ children: s.map(function(e) {
       }),
       null != e.badgeVal && e.badgeVal > 0 && (0, i.jsx)(o.NumberBadge, {
         className: M.badge,
-        color: null !== (n = e.badgeColor) && void 0 !== n ? n : l.Z.STATUS_DANGER,
+        color: null !== (n = e.badgeColor) && void 0 !== n ? n : s.Z.STATUS_DANGER,
         count: e.badgeVal
       })
     ]

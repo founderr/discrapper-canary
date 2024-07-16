@@ -45,8 +45,8 @@ return m;
 var r = n(990547),
   i = n(544891),
   a = n(570140),
-  o = n(479531),
-  s = n(573261),
+  s = n(479531),
+  o = n(573261),
   l = n(617136),
   u = n(705006),
   c = n(569984),
@@ -75,7 +75,7 @@ else if (null != n.error_hints && n.error_hints.length > 0)
   };
   } catch (t) {
 var n;
-let e = new o.Z(t);
+let e = new s.Z(t);
 if (429 === e.status)
   return {
     errorHints: [f.Z.Messages.RATE_LIMITED]
@@ -114,7 +114,7 @@ try {
 } catch (e) {
   a.Z.dispatch({
     type: 'QUESTS_FETCH_CURRENT_QUESTS_FAILURE',
-    error: new o.Z(e)
+    error: new s.Z(e)
   }), u.Z.recordQuestRequestApiResponse(E.ANM.QUESTS_CURRENT_QUESTS, {
     wasSuccessful: !1
   });
@@ -129,7 +129,7 @@ terminal: i = !1
   } = e;
   try {
 var l;
-let e = await s.Z.post({
+let e = await o.Z.post({
   url: E.ANM.QUESTS_HEARTBEAT(t),
   body: {
     stream_key: n,
@@ -155,7 +155,7 @@ a.Z.dispatch({
   } catch (e) {
 a.Z.dispatch({
   type: 'QUESTS_SEND_HEARTBEAT_FAILURE',
-  error: new o.Z(e),
+  error: new s.Z(e),
   questId: t,
   streamKey: n
 });
@@ -213,7 +213,7 @@ try {
 } catch (t) {
   throw a.Z.dispatch({
     type: 'QUESTS_CLAIM_REWARD_CODE_FAILURE',
-    error: new o.Z(t),
+    error: new s.Z(t),
     questId: e
   }), t;
 }
@@ -233,20 +233,20 @@ try {
         location: n
       }
     }),
-    o = (0, d.Xh)(r.body);
-  0 === o.errors.length ? a.Z.dispatch({
+    s = (0, d.Xh)(r.body);
+  0 === s.errors.length ? a.Z.dispatch({
     type: 'QUESTS_CLAIM_REWARD_SUCCESS',
     questId: e,
-    entitlements: o
+    entitlements: s
   }) : a.Z.dispatch({
     type: 'QUESTS_CLAIM_REWARD_FAILURE',
-    error: o.errors,
+    error: s.errors,
     questId: e
   });
 } catch (t) {
   throw a.Z.dispatch({
     type: 'QUESTS_CLAIM_REWARD_FAILURE',
-    error: new o.Z(t),
+    error: new s.Z(t),
     questId: e
   }), t;
 }
@@ -270,7 +270,7 @@ try {
 } catch (t) {
   throw a.Z.dispatch({
     type: 'QUESTS_FETCH_REWARD_CODE_FAILURE',
-    error: new o.Z(t),
+    error: new s.Z(t),
     questId: e
   }), t;
 }
@@ -297,7 +297,7 @@ try {
 } catch (t) {
   a.Z.dispatch({
     type: 'QUESTS_DISMISS_CONTENT_FAILURE',
-    error: new o.Z(t),
+    error: new s.Z(t),
     questId: e
   });
 }
@@ -323,7 +323,7 @@ a.Z.dispatch({
   } catch (t) {
 a.Z.dispatch({
   type: 'QUESTS_PREVIEW_UPDATE_FAILURE',
-  error: new o.Z(t),
+  error: new s.Z(t),
   questId: e
 });
   }
@@ -341,7 +341,7 @@ a.Z.dispatch({
   } catch (t) {
 a.Z.dispatch({
   type: 'QUESTS_PREVIEW_UPDATE_FAILURE',
-  error: new o.Z(t),
+  error: new s.Z(t),
   questId: e
 });
   }
@@ -359,7 +359,7 @@ a.Z.dispatch({
   } catch (t) {
 a.Z.dispatch({
   type: 'QUESTS_PREVIEW_UPDATE_FAILURE',
-  error: new o.Z(t),
+  error: new s.Z(t),
   questId: e
 });
   }

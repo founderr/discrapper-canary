@@ -5,8 +5,8 @@ return h;
 });
 var a = n(735250),
   l = n(470079),
-  i = n(120356),
-  s = n.n(i),
+  s = n(120356),
+  i = n.n(s),
   o = n(399606),
   r = n(481060),
   c = n(547972),
@@ -22,7 +22,7 @@ function h(e) {
   let {
 isEmptyBecauseQuery: t,
 closePopout: n
-  } = e, i = (0, o.e7)([d.Z], () => d.Z.getKeybindForAction(p.kg4.SAVE_CLIP)), h = (0, o.e7)([m.Z], () => m.Z.getSettings().clipsEnabled), x = t ? g.noSearchResultsImage : g.noClipsImage, E = l.useCallback(() => {
+  } = e, s = (0, o.e7)([d.Z], () => d.Z.getKeybindForAction(p.kg4.SAVE_CLIP)), h = (0, o.e7)([m.Z], () => m.Z.getSettings().clipsEnabled), x = t ? g.noSearchResultsImage : g.noClipsImage, E = l.useCallback(() => {
 n(), (0, c.Z)(C.Z.CLIPS);
   }, [n]), f = (() => {
 if (!h)
@@ -31,12 +31,12 @@ if (!h)
   });
 if (t)
   return v.Z.Messages.CLIPS_GALLERY_NO_CLIPS_MATCH_QUERY;
-if (null == i)
+if (null == s)
   return v.Z.Messages.CLIPS_GALLERY_NO_CLIPS_NO_KEYBIND_SET.format({
     onClick: E
   });
 {
-  let e = u.BB(i.shortcut, !0);
+  let e = u.BB(s.shortcut, !0);
   return v.Z.Messages.CLIPS_GALLERY_NO_CLIPS.format({
     keybind: e,
     keybindHook: () => (0, a.jsx)('span', {
@@ -59,7 +59,7 @@ children: (0, a.jsxs)('div', {
     }),
     (0, a.jsx)(r.Text, {
       variant: 'text-md/medium',
-      className: s()(g.noClipsText, {
+      className: i()(g.noClipsText, {
         [g.noSearchResultsText]: t
       }),
       children: f

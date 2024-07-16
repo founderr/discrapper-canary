@@ -7,7 +7,7 @@ var o = n(652874),
 let _ = 'UserFlowAnalyticsStore_current',
   u = 'UserFlowAnalyticsStore';
 
-function d(e) {
+function s(e) {
   if (e === c.MK.UNKNOWN)
 return null;
   let t = r.K.get(''.concat(u, '-').concat(e));
@@ -20,7 +20,7 @@ version: n,
   return 1 !== n ? null : o;
 }
 new i.Z('UserFlowAnalytics');
-let s = (0, o.Z)((e, t) => ({
+let d = (0, o.Z)((e, t) => ({
   flows: {},
   currentFlow: null,
   activeFlow: () => {
@@ -30,18 +30,18 @@ if (null == n)
   return null;
 let {
   [n]: o
-} = t().flows, i = null != o ? o : d(n);
+} = t().flows, i = null != o ? o : s(n);
 return (null == i ? void 0 : i.currentStep) != null ? n : null;
   }
 }));
 
-function p(e, t) {
+function f(e, t) {
   let {
 [e]: n,
 ...o
-  } = s.getState().flows, r = null != n ? n : d(e);
+  } = d.getState().flows, r = null != n ? n : s(e);
   if ((null == r ? void 0 : r.currentStep) == null || r.currentStep !== t)
-s.setState({
+d.setState({
   flows: {
     ...o,
     [e]: {
@@ -57,19 +57,19 @@ s.setState({
 });
 }
 
-function f(e, t) {
+function p(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
 o = e;
   if (e === c.MK.ANY) {
 var r;
-o = null !== (r = s.getState().activeFlow()) && void 0 !== r ? r : c.MK.UNKNOWN;
+o = null !== (r = d.getState().activeFlow()) && void 0 !== r ? r : c.MK.UNKNOWN;
   }
   let {
 [o]: i,
 ...a
-  } = s.getState().flows, l = null != i ? i : d(o);
+  } = d.getState().flows, l = null != i ? i : s(o);
   if (null != l && null != l.currentStep && l.currentStep !== t)
-s.setState({
+d.setState({
   flows: {
     ...a,
     [o]: {
@@ -84,7 +84,7 @@ s.setState({
   currentFlow: o
 });
 }
-s.subscribe(e => {
+d.subscribe(e => {
   var t;
   if (null != e) {
 if (! function(e) {
@@ -104,9 +104,9 @@ if (! function(e) {
     flush: !0
   }), e.ended) {
   let t = {
-    ...s.getState().flows
+    ...d.getState().flows
   };
-  delete t[e.type], s.setState({
+  delete t[e.type], d.setState({
     flows: t,
     currentFlow: null
   });
@@ -115,13 +115,13 @@ if (! function(e) {
 }, e => null != e.currentFlow ? e.flows[e.currentFlow] : void 0);
 
 function I() {
-  return null != s.getState().activeFlow();
+  return null != d.getState().activeFlow();
 }
 t.Z = {
-  flowStart: p,
+  flowStart: f,
   flowStepOrStart: function(e, t) {
-I() ? f(e, t) : p(e, t);
+I() ? p(e, t) : f(e, t);
   },
-  flowStep: f,
+  flowStep: p,
   hasActiveFlow: I
 };

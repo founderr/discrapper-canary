@@ -8,8 +8,8 @@ n(470079);
 var i = n(209173),
   l = n(782568),
   r = n(626135),
-  c = n(924489),
-  s = n(132871),
+  s = n(924489),
+  c = n(132871),
   o = n(147890),
   d = n(491576),
   u = n(112884),
@@ -42,15 +42,15 @@ function I(e) {
 result: i
   } = e, l = i.data, r = (0, d.Z)({
 application: l
-  }), s = C.get(i.data.id);
-  if (null == s)
+  }), c = C.get(i.data.id);
+  if (null == c)
 return null;
-  let u = r.length > 0 ? (0, a.jsx)(c.Z, {
+  let u = r.length > 0 ? (0, a.jsx)(s.Z, {
   application: i.data,
   textVariant: 'text-sm/semibold',
   mutualGuilds: r,
   mutualGuildShownMax: 3,
-  guildIconSize: c.x.SMALL,
+  guildIconSize: s.x.SMALL,
   compact: !0
 }) : null,
 _ = null !== (n = null === (t = l.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
@@ -58,7 +58,7 @@ m = _ > 0 ? f.Z.Messages.APP_DIRECTORY_SHORT_GUILD_COUNT.format({
   guildCount: _
 }) : void 0;
   return (0, a.jsx)(g.Z, {
-imageSrc: s.imageSrc,
+imageSrc: c.imageSrc,
 header: i.data.name,
 description: i.data.description,
 secondaryInfo: m,
@@ -84,13 +84,13 @@ secondaryInfo: f.Z.Messages.APP_DIRECTORY_ACTIVITY_LABEL
 
 function R(e) {
   let t, n, i, {
-  result: c,
+  result: s,
   guildId: o
 } = e,
-d = x.get(c.data.name);
-  return null == d ? null : (c.data.name === m.ABu.SPOTIFY && (t = f.Z.Messages.APP_DIRECTORY_SPOTIFY_TITLE, n = f.Z.Messages.APP_DIRECTORY_SPOTIFY_DESCRIPTION.format(), i = () => {
+d = x.get(s.data.name);
+  return null == d ? null : (s.data.name === m.ABu.SPOTIFY && (t = f.Z.Messages.APP_DIRECTORY_SPOTIFY_TITLE, n = f.Z.Messages.APP_DIRECTORY_SPOTIFY_DESCRIPTION.format(), i = () => {
 r.default.track(m.rMx.APP_DIRECTORY_CTA_CLICKED, {
-  current_page: s.ApplicationDirectoryViews.SEARCH,
+  current_page: c.ApplicationDirectoryViews.SEARCH,
   cta: 'spotify',
   guild_id: o
 }), (0, l.Z)('https://support.discord.com/hc/en-us/articles/360000167212-Discord-Spotify-Connection');

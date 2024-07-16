@@ -1,22 +1,22 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return C;
   }
-}), s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(442837),
-  l = s(481060),
-  c = s(921801),
-  d = s(131951),
-  _ = s(962100),
-  E = s(445817),
-  u = s(726985),
-  T = s(65154),
-  I = s(689938),
-  S = s(549856);
+}), t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(442837),
+  l = t(481060),
+  c = t(921801),
+  d = t(131951),
+  _ = t(962100),
+  E = t(445817),
+  u = t(726985),
+  T = t(65154),
+  I = t(689938),
+  S = t(549856);
 
 function N() {
   return (0, n.jsx)(l.FormNotice, {
@@ -34,7 +34,7 @@ button: (0, n.jsx)(l.Button, {
 
 function C() {
   let e = (0, o.e7)([d.Z], () => d.Z.supports(T.AN.VIDEO)),
-[t, s] = a.useState(!1);
+[s, t] = a.useState(!1);
   return (0, n.jsxs)('div', {
 children: [
   (0, n.jsxs)(l.HeadingLevel, {
@@ -47,8 +47,8 @@ children: [
       (0, n.jsx)(c.F, {
         setting: u.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
         children: (0, n.jsx)(E.Z, {
-          previewEnabled: t,
-          onEnablePreview: () => s(!0)
+          previewEnabled: s,
+          onEnablePreview: () => t(!0)
         })
       }),
       !e && (0, n.jsx)(N, {})

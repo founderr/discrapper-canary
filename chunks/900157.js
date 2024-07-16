@@ -5,8 +5,8 @@ return b;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(392711),
-  s = n.n(l),
+  s = n(392711),
+  l = n.n(s),
   r = n(442837),
   o = n(570140),
   c = n(239091),
@@ -33,11 +33,11 @@ var i = n(735250),
 function b(e) {
   let {
 channelId: t,
-baseChannelId: l,
+baseChannelId: s,
 channelViewSource: b = 'Split View'
   } = e, R = (0, r.e7)([I.Z], () => I.Z.getChannel(t)), j = (0, r.e7)([T.Z], () => T.Z.getGuild(null == R ? void 0 : R.getGuildId())), L = (0, m.ZP)(R);
   (function(e) {
-let t = (0, r.e7)([N.Z], () => null != e && !s().isEmpty(N.Z.getVoiceStatesForChannel(e.id)));
+let t = (0, r.e7)([N.Z], () => null != e && !l().isEmpty(N.Z.getVoiceStatesForChannel(e.id)));
 a.useEffect(() => {
   t && null != e && (o.Z.dispatch({
     type: 'SIDEBAR_CLOSE',
@@ -70,7 +70,7 @@ a.useEffect(() => {
 return null;
   let O = (0, i.jsx)(v.Z, {
 channel: R,
-baseChannelId: l
+baseChannelId: s
   });
   return (0, i.jsxs)(i.Fragment, {
 children: [

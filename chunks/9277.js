@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(143927),
+  s = n.n(a),
+  o = n(143927),
   l = n(442837),
   u = n(114101),
   c = n(481060),
@@ -26,7 +26,7 @@ return T && Object.values(null !== (t = null === (e = _.Z.frecencyWithoutFetchin
 e.activeView,
 e.activeViewType,
 e.pickerId
-  ], s.Z), O = i.useRef(0), R = i.useCallback(() => {
+  ], o.Z), O = i.useRef(0), R = i.useCallback(() => {
 g(!0), clearTimeout(O.current), O.current = setTimeout(() => {
   g(!1), O.current = 0;
 }, 2000);
@@ -51,7 +51,7 @@ text: S ? m.Z.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
 forceOpen: !0,
 children: e => (0, r.jsx)('div', {
   ref: t,
-  className: o()(p.CT, I.buttonContainer),
+  className: s()(p.CT, I.buttonContainer),
   ...e,
   children: (0, r.jsx)(f.Z, {
     innerClassName: I.button,

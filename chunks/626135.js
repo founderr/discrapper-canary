@@ -30,8 +30,8 @@ return D;
 var r = n(470079),
   i = n(990547),
   a = n(570140),
-  o = n(565384),
-  s = n(569611),
+  s = n(565384),
+  o = n(569611),
   l = n(97145),
   u = n(857192),
   c = n(747161),
@@ -301,24 +301,24 @@ function O(e) {
 
 function R(e) {
   var t, n, r, i, a;
-  let o = e;
-  if (!o && (o = {}), null != o.location) {
+  let s = e;
+  if (!s && (s = {}), null != s.location) {
 let {
   location: e,
   ...t
-} = o;
-o = {
+} = s;
+s = {
   ...t,
   ...A(e)
 };
   }
-  if (null != o.source) {
+  if (null != s.source) {
 ;
 let {
   source: e,
   ...t
-} = o;
-o = {
+} = s;
+s = {
   ...t,
   ...'string' == typeof(a = e) ? {
     source: a
@@ -331,21 +331,21 @@ o = {
   }
 };
   }
-  o.client_performance_cpu = d.Z.getCurrentCPUUsagePercent(), o.client_performance_memory = d.Z.getCurrentMemoryUsageKB(), o.cpu_core_count = d.Z.getCPUCoreCount(), o.accessibility_features = N(), o.rendered_locale = h.Z.getLocale(), o.uptime_app = Math.floor((performance.now() - I) / 1000);
-  let s = d.Z.getProcessUptime();
-  null != s && (o.uptime_process_renderer = Math.floor(s));
+  s.client_performance_cpu = d.Z.getCurrentCPUUsagePercent(), s.client_performance_memory = d.Z.getCurrentMemoryUsageKB(), s.cpu_core_count = d.Z.getCPUCoreCount(), s.accessibility_features = N(), s.rendered_locale = h.Z.getLocale(), s.uptime_app = Math.floor((performance.now() - I) / 1000);
+  let o = d.Z.getProcessUptime();
+  null != o && (s.uptime_process_renderer = Math.floor(o));
   let {
 utmSource: l,
 utmMedium: u,
 utmCampaign: c,
 utmContent: _
   } = m;
-  return o.utm_source = null !== (t = o.utm_source) && void 0 !== t ? t : l, o.utm_medium = null !== (n = o.utm_medium) && void 0 !== n ? n : u, o.utm_campaign = null !== (r = o.utm_campaign) && void 0 !== r ? r : c, o.utm_content = null !== (i = o.utm_content) && void 0 !== i ? i : _, T.forEach(e => e(o)), o;
+  return s.utm_source = null !== (t = s.utm_source) && void 0 !== t ? t : l, s.utm_medium = null !== (n = s.utm_medium) && void 0 !== n ? n : u, s.utm_campaign = null !== (r = s.utm_campaign) && void 0 !== r ? r : c, s.utm_content = null !== (i = s.utm_content) && void 0 !== i ? i : _, T.forEach(e => e(s)), s;
 }
 
 function C(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  u.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? s.Hj('Analytics', e, t) : s.Hj('Analytics', e);
+  u.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? o.Hj('Analytics', e, t) : o.Hj('Analytics', e);
 }
 let y = (0, i.trackMaker)({
   analyticEventConfigs: S,
@@ -355,10 +355,10 @@ let y = (0, i.trackMaker)({
 
 function D(e, t) {
   let n = R({
-location: (0, o.k$)(),
+location: (0, s.k$)(),
 ...t
   });
-  (0, o.dT)(e, {
+  (0, s.dT)(e, {
 type: 'action',
 ...t
   }), C(e, n), y(e, n);

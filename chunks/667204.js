@@ -9,8 +9,8 @@ return W;
 var r = n(512722),
   i = n.n(r),
   a = n(570140),
-  o = n(904245),
-  s = n(166459),
+  s = n(904245),
+  o = n(166459),
   l = n(232567),
   u = n(911969),
   c = n(673750),
@@ -55,8 +55,8 @@ if (e.name === (null === (r = n.autocomplete) || void 0 === r ? void 0 : r.name)
   return n.autocomplete.query;
 if ('' === t)
   return null;
-let o = b.Z.getAutocompleteLastChoices(n.channel.id, e.name);
-return null != o ? null !== (i = V(o, t)) && void 0 !== i ? i : a(t) : a(t);
+let s = b.Z.getAutocompleteLastChoices(n.channel.id, e.name);
+return null != s ? null !== (i = V(s, t)) && void 0 !== i ? i : a(t) : a(t);
   },
   Z = e => {
 let t = e.toLowerCase() === G.WO.toLowerCase(),
@@ -64,7 +64,7 @@ let t = e.toLowerCase() === G.WO.toLowerCase(),
 return t || n ? t : null;
   };
 async function Y(e) {
-  var t, n, r, o, l, c, d, f, h, p, m, I, T, A, N, O;
+  var t, n, r, s, l, c, d, f, h, p, m, I, T, A, N, O;
   let {
 command: R,
 optionValues: C,
@@ -87,7 +87,7 @@ W = (0, x.D7)(B);
 for (let e of R.options) {
   if (e.type === u.jw.SUB_COMMAND || e.type === u.jw.SUB_COMMAND_GROUP || !(e.name in C))
     continue;
-  let t = (null === (o = y.autocomplete) || void 0 === o ? void 0 : o.name) === e.name || void 0,
+  let t = (null === (s = y.autocomplete) || void 0 === s ? void 0 : s.name) === e.name || void 0,
     n = null;
   if (e.type === u.jw.STRING) {
     let r = null !== (c = null === (l = M.li(C, e.name)) || void 0 === l ? void 0 : l.trim()) && void 0 !== c ? c : '';
@@ -235,7 +235,7 @@ type: R.type,
 options: F,
 application_command: R.rootCommand
   };
-  null != D && (z.target_id = D), null != y.autocomplete ? (0, L.GV)(R, y, z) : (s.Z.clearAll(y.channel.id, W), await K({
+  null != D && (z.target_id = D), null != y.autocomplete ? (0, L.GV)(R, y, z) : (o.Z.clearAll(y.channel.id, W), await K({
 applicationId: R.applicationId,
 data: z,
 context: y,
@@ -279,7 +279,7 @@ let {
   applicationId: n,
   data: r,
   context: i,
-  attachments: s,
+  attachments: o,
   maxSizeCallback: c,
   onMessageSuccess: d,
   commandDisplayName: _,
@@ -319,11 +319,11 @@ let v = {
   },
   interaction_data: r
 };
-o.Z.receiveMessage(I, v, !0, {
+s.Z.receiveMessage(I, v, !0, {
   applicationId: n
 });
 let R = (e, t) => {
-    null == t && null != e && o.Z.sendClydeError(I, e), a.Z.dispatch({
+    null == t && null != e && s.Z.sendClydeError(I, e), a.Z.dispatch({
       type: 'MESSAGE_SEND_FAILED',
       messageId: v.id,
       channelId: I,
@@ -336,7 +336,7 @@ let R = (e, t) => {
     guildId: g,
     data: r,
     nonce: v.id,
-    attachments: s,
+    attachments: o,
     maxSizeCallback: c,
     analytics_location: E,
     sectionName: f
@@ -349,13 +349,13 @@ m.kz(C.nonce, {
   onFailure: (e, t) => R(e, t),
   onSuccess: () => {
     let e = N.Z.getMessage(v.channel_id, v.id);
-    null != e && e.isEmptyInteractionMessage() && o.Z.deleteMessage(I, e.id, !0);
+    null != e && e.isEmptyInteractionMessage() && s.Z.deleteMessage(I, e.id, !0);
   },
   data: {
     interactionType: u.B8.APPLICATION_COMMAND,
     channelId: I
   }
-}), null != s ? Q(s, C.nonce, g, c).then(e => {
+}), null != o ? Q(o, C.nonce, g, c).then(e => {
   if (!!e)
     z(C, d);
 }) : z(C, d);
@@ -391,12 +391,12 @@ a = e => {
   }));
 },
 {
-  totalSize: o,
-  largestUploadedFileSize: s
+  totalSize: s,
+  largestUploadedFileSize: o
 } = await q(e, !1),
 l = (0, y.Xv)() ? D.Ld : D.zz;
-  if (s > Math.max(i, B.Y1) || o > l)
-return a(s), !1;
+  if (o > Math.max(i, B.Y1) || s > l)
+return a(o), !1;
   try {
 await (0, d.$)(e);
   } catch {
@@ -405,7 +405,7 @@ m.yr(t, void 0, F.Z.Messages.UPLOADING_FILES_FAILED.format({
 }));
   }
   return {
-totalSize: o,
-largestUploadedFileSize: s
-  } = await q(e, !0), !e.some(e => e.error === k.evJ.ENTITY_TOO_LARGE) && !(o > l) || (a(s), !1);
+totalSize: s,
+largestUploadedFileSize: o
+  } = await q(e, !0), !e.some(e => e.error === k.evJ.ENTITY_TOO_LARGE) && !(s > l) || (a(o), !1);
 }

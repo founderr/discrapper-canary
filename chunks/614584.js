@@ -5,8 +5,8 @@ return v;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(25209),
+  s = n(442837),
+  l = n(25209),
   r = n(39154),
   o = n(35125),
   c = n(905405),
@@ -39,29 +39,29 @@ if (null == b)
 let e = (0, r.Z)(b);
 if (e.type === x.uaV.USER_JOIN) {
   let t = _.Z.getWelcomeMessageKind(v.guild_id);
-  return (0, s.Rp)(_.Z.getSystemMessageUserJoin(e.id, t).astFormat({
+  return (0, l.Rp)(_.Z.getSystemMessageUserJoin(e.id, t).astFormat({
     username: null != R ? R.nick : e.author.username,
     usernameHook: e => e
   }));
 }
 if (e.type === x.uaV.ROLE_SUBSCRIPTION_PURCHASE)
-  return (0, s.Rp)((0, o.PA)({
+  return (0, l.Rp)((0, o.PA)({
     username: null != R ? R.nick : e.author.username,
     guildId: null == v ? void 0 : v.guild_id,
     roleSubscriptionData: e.roleSubscriptionData
   }));
 if (e.type === x.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
-  return (0, s.Rp)((0, u.Y)({
+  return (0, l.Rp)((0, u.Y)({
     application: null == e ? void 0 : e.application,
     username: null == R ? void 0 : R.nick
   }));
 else if (e.type === x.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED)
-  return (0, s.Rp)((0, h.B2)({
+  return (0, l.Rp)((0, h.B2)({
     application: null == e ? void 0 : e.application,
     username: null == R ? void 0 : R.nick
   }));
 else if (e.type === x.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
-  return (0, s.Rp)((0, h.hj)({
+  return (0, l.Rp)((0, h.hj)({
     application: null == e ? void 0 : e.application,
     username: null == R ? void 0 : R.nick
   }));
@@ -93,7 +93,7 @@ R,
 v,
 L,
 j
-  ]), O = (0, l.e7)([m.Z], () => null != b && m.Z.isBlockedForMessage(b), [b]), y = (0, I.wq)(null == b ? void 0 : b.author.id, v.id), D = (0, I.$3)(n, b, O), k = (0, I.Wl)(b, v, Z, M), U = (0, I.rY)(A, M), w = a.useCallback(() => M({
+  ]), O = (0, s.e7)([m.Z], () => null != b && m.Z.isBlockedForMessage(b), [b]), y = (0, I.wq)(null == b ? void 0 : b.author.id, v.id), D = (0, I.$3)(n, b, O), k = (0, I.Wl)(b, v, Z, M), U = (0, I.rY)(A, M), w = a.useCallback(() => M({
 referencedUsernameProfile: !1,
 referencedAvatarProfile: !1
   }), [M]), B = (0, E.Uj)(n);
@@ -117,18 +117,18 @@ onPopoutRequestClose: w
   });
 });
 
-function v(e, t, n, a, l) {
+function v(e, t, n, a, s) {
   let {
-message: s,
+message: l,
 channel: r,
 compact: o
   } = e, {
 referencedUsernameProfile: c,
 referencedAvatarProfile: d
-  } = n, u = s.type === x.uaV.REPLY && null != a && (0, i.jsx)(N, {
-baseMessage: s,
+  } = n, u = l.type === x.uaV.REPLY && null != a && (0, i.jsx)(N, {
+baseMessage: l,
 replyReference: a,
-referencedMessage: l,
+referencedMessage: s,
 channel: r,
 compact: o,
 setPopout: t,

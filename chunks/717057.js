@@ -5,8 +5,8 @@ return R;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(913527),
   o = n.n(r),
   c = n(442837),
@@ -34,24 +34,24 @@ function b(e) {
   var t;
   let {
 guildId: n,
-clanInfo: l,
+clanInfo: s,
 onSignCharter: r
   } = e, c = a.useMemo(() => {
 let e = f.default.extractTimestamp(n);
 return o()(new Date(e)).format('MMMM YYYY');
-  }, [n]), u = a.useMemo(() => new Set(l.games), [l.games]);
+  }, [n]), u = a.useMemo(() => new Set(s.games), [s.games]);
   return (0, i.jsx)(I.Z, {
 guildId: n,
 signHintPosition: I.p.LEFT,
-primaryColor: null === (t = l.branding) || void 0 === t ? void 0 : t.primaryColor,
+primaryColor: null === (t = s.branding) || void 0 === t ? void 0 : t.primaryColor,
 onSignCharter: r,
 children: (0, i.jsxs)('div', {
   className: M.scrollContentsContainer,
   children: [
     (0, i.jsx)(T.aG, {
       guildId: n,
-      clanBadge: l.badge.imageHash,
-      clanTag: l.tag,
+      clanBadge: s.badge.imageHash,
+      clanTag: s.tag,
       textVariant: 'heading-lg/semibold',
       badgeSize: S.NC.SIZE_24,
       className: M.clanTagChiplet
@@ -68,7 +68,7 @@ children: (0, i.jsxs)('div', {
           variant: 'heading-xxl/bold',
           color: 'interactive-active',
           className: M.charterHeaderText,
-          children: l.name
+          children: s.name
         }),
         (0, i.jsx)(d.Text, {
           variant: 'text-md/normal',
@@ -82,8 +82,8 @@ children: (0, i.jsxs)('div', {
     }),
     (0, i.jsx)(N.p, {
       applicationIds: u,
-      playstyle: l.playstyle,
-      className: s()(M.charterBodyText, M.gameSection)
+      playstyle: s.playstyle,
+      className: l()(M.charterBodyText, M.gameSection)
     }),
     (0, i.jsx)(d.Text, {
       variant: 'text-sm/normal',
@@ -100,14 +100,14 @@ function R(e) {
   var t;
   let {
 guildId: n,
-onClose: l,
+onClose: s,
 onAccept: r,
 ...o
   } = e, f = (0, _.Dt)(), I = (0, C.Cc)(n), T = (0, C.E8)(n), [N, S] = a.useState(!0), [R, j] = a.useState(!1), L = a.useCallback(() => {
-r(), l();
+r(), s();
   }, [
 r,
-l
+s
   ]);
   a.useEffect(() => {
 null == I && !T && L();
@@ -191,7 +191,7 @@ children: (0, i.jsxs)(d.ModalContent, {
       color: d.Button.Colors.BRAND,
       themeColor: w,
       fullWidth: !1,
-      className: s()(M.ctaButton, R ? M.ctaButtonSigned : null),
+      className: l()(M.ctaButton, R ? M.ctaButtonSigned : null),
       children: (0, i.jsxs)('div', {
         className: M.ctaButtonInner,
         children: [

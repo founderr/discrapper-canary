@@ -12,7 +12,7 @@ return l;
 return i;
   },
   kJ: function() {
-return s;
+return o;
   }
 });
 var r = n(652874);
@@ -26,7 +26,7 @@ activeCategoryIndex: 0,
 searchPlaceholder: null
   });
 
-function o() {
+function s() {
   let e = (0, r.Z)(e => a);
   return {
 useStore: e,
@@ -55,7 +55,7 @@ resetStoreState: () => {
 }
   };
 }
-let s = o(),
-  l = o(),
-  u = o(),
-  c = o();
+let o = s(),
+  l = s(),
+  u = s(),
+  c = s();

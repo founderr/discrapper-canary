@@ -6,8 +6,8 @@ return h;
 var i = n(735250);
 n(470079);
 var a = n(399606),
-  l = n(481060),
-  s = n(125268),
+  s = n(481060),
+  l = n(125268),
   r = n(673125),
   o = n(292793),
   c = n(871499),
@@ -18,7 +18,7 @@ function h() {
   let e = (0, a.e7)([r.Z], () => r.Z.getDrawMode()),
 t = (null == e ? void 0 : e.type) === o.W.LINE,
 n = () => {
-  t ? (0, s.Bo)(null) : (0, s.Bo)({
+  t ? (0, l.Bo)(null) : (0, l.Bo)({
     type: o.W.LINE
   });
 };
@@ -32,7 +32,7 @@ children: e => {
     ...a,
     label: u.Z.Messages.SHARED_CANVAS_DRAW_MODE_LINE,
     isActive: t,
-    iconComponent: l.PencilIcon,
+    iconComponent: s.PencilIcon,
     onClick: n
   });
 }

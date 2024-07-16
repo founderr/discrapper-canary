@@ -5,8 +5,8 @@ return m;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(481060),
   o = n(367907),
   c = n(626135),
@@ -27,7 +27,7 @@ c.default.track(u.rMx.CHANNEL_BANNER_VIEWED, {
   banner_type: 'channel_opt_in'
 });
   }, [t]), (0, i.jsxs)('div', {
-className: s()(p.chatHeaderBar, {
+className: l()(p.chatHeaderBar, {
   [p.narrow]: n
 }),
 children: [

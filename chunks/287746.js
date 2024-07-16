@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(512722),
-  s = n.n(l),
+  s = n(512722),
+  l = n.n(s),
   r = n(873546),
   o = n(106351),
   c = n(442837),
@@ -55,8 +55,8 @@ var i = n(735250),
   en = n(807092),
   ei = n(268350),
   ea = n(557494),
-  el = n(314897),
-  es = n(433355),
+  es = n(314897),
+  el = n(433355),
   er = n(703558),
   eo = n(323873),
   ec = n(271383),
@@ -149,16 +149,16 @@ let {
   interactionOptions: i
 } = (0, b.XA)(e.interactionData), {
   command: a,
-  application: l
+  application: s
 } = Z.Xq(t, n);
 if (null != a) {
-  var s, r;
-  let e = null != l ? {
+  var l, r;
+  let e = null != s ? {
     type: M.Qi.APPLICATION,
-    id: l.id,
-    icon: null !== (r = null == l ? void 0 : null === (s = l.bot) || void 0 === s ? void 0 : s.username) && void 0 !== r ? r : l.icon,
-    name: l.name,
-    application: l
+    id: s.id,
+    icon: null !== (r = null == s ? void 0 : null === (l = s.bot) || void 0 === l ? void 0 : l.username) && void 0 !== r ? r : s.icon,
+    name: s.name,
+    application: s
   } : null;
   N.Po({
     channelId: t.id,
@@ -175,7 +175,7 @@ let {
   focused: t,
   onBlur: n,
   onFocus: a,
-  highlighted: l,
+  highlighted: s,
   pendingReply: r,
   chatInputType: o,
   placeholder: c,
@@ -203,7 +203,7 @@ let {
   renderAttachButton: this.renderAttachButton,
   renderApplicationCommandIcon: this.renderApplicationCommandIcon,
   promptToUpload: eT.d,
-  highlighted: l,
+  highlighted: s,
   setEditorRef: e => this.editorRef = e
 });
 return (0, i.jsx)(d.Popout, {
@@ -219,7 +219,7 @@ return (0, i.jsx)(d.Popout, {
     let {
       closePopout: t
     } = e;
-    return s()(null != m, 'ChannelTextAreaForm > Popout > renderPopout: contentWarningProps cannot be null'), (0, i.jsx)(C.Z, {
+    return l()(null != m, 'ChannelTextAreaForm > Popout > renderPopout: contentWarningProps cannot be null'), (0, i.jsx)(C.Z, {
       onClose: t,
       ...m
     });
@@ -256,14 +256,14 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
     keyboardModeEnabled: t,
     onKeyDown: n,
     channel: i
-  } = this.props, a = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey, l = 0 !== this.state.textValue.length;
+  } = this.props, a = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey, s = 0 !== this.state.textValue.length;
   switch (e.which) {
     case eR.yXg.DELETE:
     case eR.yXg.BACKSPACE:
       this.handleIncrementCombo('', 1);
       return;
     case eR.yXg.ARROW_UP:
-      if (a || l)
+      if (a || s)
         return;
       if (e.preventDefault(), t)
         ep.Z.getUploadCount(i.id, er.d.ChannelMessage) > 0 ? eC.S.dispatchToLastSubscribed(eR.CkL.FOCUS_ATTACHMENT_AREA) : eC.S.dispatchToLastSubscribed(eR.CkL.FOCUS_MESSAGES, {
@@ -288,19 +288,19 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
         return;
       }
   }
-  null == n || n(e, l);
+  null == n || n(e, s);
 }), eP(this, 'handleIncrementCombo', (e, t) => {
   var n;
   if (!this.props.poggermodeEnabled)
     return;
   let i = this.props.channel.id,
-    a = el.default.getId(),
-    l = Q.ZP.getUserCombo(a, i),
-    s = (null !== (n = null == l ? void 0 : l.value) && void 0 !== n ? n : 0) + 1;
+    a = es.default.getId(),
+    s = Q.ZP.getUserCombo(a, i),
+    l = (null !== (n = null == s ? void 0 : s.value) && void 0 !== n ? n : 0) + 1;
   (0, q.SE)({
     channelId: i,
     userId: a,
-    value: null != e ? e.length : s,
+    value: null != e ? e.length : l,
     multiplier: t
   });
 }), eP(this, 'handleTextareaChange', (e, t, n) => {
@@ -311,9 +311,9 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
     }
   } = this.props;
   u.Z.changeDraft(a, t, er.d.ChannelMessage);
-  let l = '' !== t && n !== this.state.richValue,
-    s = l && !ey.test(t) && !t.startsWith('/') && (!this.isFirstChange || t !== this.state.textValue);
-  this.isFirstChange = !1, s && this.state.textValue.length < t.length && this.handleIncrementCombo(), s ? p.Z.startTyping(a) : '' === t && p.Z.stopTyping(a), l && i && (0, g.rf)(), this.setState({
+  let s = '' !== t && n !== this.state.richValue,
+    l = s && !ey.test(t) && !t.startsWith('/') && (!this.isFirstChange || t !== this.state.textValue);
+  this.isFirstChange = !1, l && this.state.textValue.length < t.length && this.handleIncrementCombo(), l ? p.Z.startTyping(a) : '' === t && p.Z.stopTyping(a), s && i && (0, g.rf)(), this.setState({
     textValue: t,
     richValue: n
   });
@@ -323,8 +323,8 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
     uploads: n,
     stickers: i,
     command: a,
-    commandOptionValues: l,
-    isGif: s
+    commandOptionValues: s,
+    isGif: l
   } = e;
   if (0 === (t = t.trim()).length && (null == i || 0 === i.length) && (null == n || 0 === n.length))
     return Promise.resolve({
@@ -367,7 +367,7 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
     }
     let e = await (0, R.Z)({
       command: a,
-      optionValues: null != l ? l : {},
+      optionValues: null != s ? s : {},
       context: {
         guild: r,
         channel: o
@@ -392,10 +392,10 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
   }).then(e => {
     let {
       valid: a,
-      failureReason: l
+      failureReason: s
     } = e;
     if (!a)
-      return l === eR.zYc.SLOWMODE_COOLDOWN ? (eC.S.dispatch(eR.CkL.SHAKE_APP, {
+      return s === eR.zYc.SLOWMODE_COOLDOWN ? (eC.S.dispatch(eR.CkL.SHAKE_APP, {
         duration: 200,
         intensity: 2
       }), eC.S.dispatch(eR.CkL.EMPHASIZE_SLOWMODE_COOLDOWN), {
@@ -413,7 +413,7 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
     let f = Y.ZP.parse(o, t);
     f.tts = f.tts || u;
     let E = h.Z.getSendMessageOptionsForReply(c);
-    if (s)
+    if (l)
       return h.Z.sendMessage(o.id, f, void 0, E), (0, et.A6)(o.id), {
         shouldClear: !1,
         shouldRefocus: !0
@@ -494,8 +494,8 @@ let t;
 let {
   channel: n,
   guild: a,
-  keyboardModeEnabled: l,
-  hasModalOpen: s,
+  keyboardModeEnabled: s,
+  hasModalOpen: l,
   pendingReply: r,
   chatInputType: c,
   placeholder: u,
@@ -524,11 +524,11 @@ let S = (0, i.jsxs)('div', {
         highlighted: N,
         channel: n,
         guild: a,
-        keyboardModeEnabled: l,
+        keyboardModeEnabled: s,
         onFocus: this.handleInputFocus,
         onBlur: this.handleInputBlur,
         onKeyDown: this.handleInputKeyDown,
-        hasModalOpen: s,
+        hasModalOpen: l,
         pendingReply: r,
         chatInputType: c,
         placeholder: u,
@@ -697,7 +697,7 @@ super(...e), eP(this, 'inputFormRef', a.createRef()), eP(this, 'state', {
         return;
       case eR.yXg.ARROW_RIGHT:
         n === j.I.NORMAL && eC.S.dispatch(eR.CkL.FOCUS_CHANNEL_TEXT_AREA, {
-          channelId: es.ZP.getCurrentSidebarChannelId(i.id)
+          channelId: el.ZP.getCurrentSidebarChannelId(i.id)
         });
     }
 }), eP(this, 'handleOpenExpressionPicker', e => {
@@ -713,13 +713,13 @@ super(...e), eP(this, 'inputFormRef', a.createRef()), eP(this, 'state', {
     channel: t,
     showQuarantinedUserBanner: n,
     guild: a,
-    communicationDisabledUntil: l,
-    showAutomodUserProfileChatBlocker: s
+    communicationDisabledUntil: s,
+    showAutomodUserProfileChatBlocker: l
   } = e;
-  return t.type === eR.d4z.DM && n ? (0, i.jsx)(ee.Z, {}) : null != l && (0, H.J)(l) && null != a && !eu.Z.can(eR.Plq.ADMINISTRATOR, a) ? (0, i.jsx)(V.T, {
+  return t.type === eR.d4z.DM && n ? (0, i.jsx)(ee.Z, {}) : null != s && (0, H.J)(s) && null != a && !eu.Z.can(eR.Plq.ADMINISTRATOR, a) ? (0, i.jsx)(V.T, {
     guild: a,
-    disabledUntil: l
-  }) : s ? (0, i.jsx)(B.h, {
+    disabledUntil: s
+  }) : l ? (0, i.jsx)(B.h, {
     guild: a
   }) : null;
 });
@@ -730,9 +730,9 @@ t.Z = a.memo(function(e) {
 channel: t,
 guild: n,
 chatInputType: a,
-filterAfterTimestamp: l
+filterAfterTimestamp: s
   } = e, {
-placeholder: s,
+placeholder: l,
 accessibilityLabel: r
   } = (0, ev.Z)(t), o = (0, ee.S)(em.default.getCurrentUser(), t), [u] = (0, G.AB)(null == n ? void 0 : n.id), h = (0, w.Ux)(null == n ? void 0 : n.id), p = (0, c.e7)([em.default], () => em.default.getCurrentUser()), m = (0, c.e7)([ec.ZP], () => {
 var e, t, i;
@@ -746,9 +746,9 @@ guild: n,
 keyboardModeEnabled: (0, c.e7)([I.Z], () => I.Z.keyboardModeEnabled),
 pendingReply: (0, c.e7)([en.Z], () => en.Z.getPendingReply(t.id)),
 chatInputType: a,
-placeholder: s,
+placeholder: l,
 accessibilityLabel: r,
-filterAfterTimestamp: l,
+filterAfterTimestamp: s,
 showQuarantinedUserBanner: o,
 communicationDisabledUntil: u,
 shakeIntensity: f,

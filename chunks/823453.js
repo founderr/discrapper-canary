@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(470716),
+  s = n.n(a),
+  o = n(470716),
   l = n(266067),
   u = n(873546),
   c = n(442837),
@@ -40,7 +40,7 @@ clientThemesCSS: R
   } = (0, f.ZP)(), C = i.createElement('style', {
 [f.PQ]: !0
   }, R);
-  return (0, r.jsxs)(s.ql, {
+  return (0, r.jsxs)(o.ql, {
 children: [
   function(e) {
     let {
@@ -53,7 +53,7 @@ children: [
       locale: p.default.locale,
       theme: m.Z.theme
     })), a = (0, c.e7)([I.Z], () => I.Z.isFocused(), []), {
-      reducedMotion: s,
+      reducedMotion: o,
       alwaysShowLinkDecorations: d
     } = i.useContext(_.AccessibilityPreferencesContext), {
       fontScale: f,
@@ -71,7 +71,7 @@ children: [
         saturation: r,
         desaturateUserColors: i,
         useForcedColors: a,
-        systemForcedColors: o
+        systemForcedColors: s
       } = E.Z;
       return {
         fontScale: e,
@@ -80,7 +80,7 @@ children: [
         saturation: r,
         desaturateUserColors: i,
         useForcedColors: a,
-        systemForcedColors: o
+        systemForcedColors: s
       };
     }), L = (0, l.TH)(), b = i.useMemo(() => O.has(L.pathname), [L.pathname]);
     (0, A.Z)(window, b);
@@ -91,12 +91,12 @@ children: [
     return (0, r.jsx)('html', {
       lang: t,
       style: 'font-size: '.concat(f, '%; --saturation-factor: ').concat(R, '; --devtools-sidebar-width: ').concat(P, 'px;'),
-      className: o()(e, {
+      className: s()(e, {
         overlay: __OVERLAY__,
         'mouse-mode': M,
         'keyboard-mode': v,
-        'reduce-motion': s.enabled,
-        'full-motion': !s.enabled,
+        'reduce-motion': o.enabled,
+        'full-motion': !o.enabled,
         'is-mobile': u.tq,
         'app-focused': a,
         'low-saturation': R <= _.LOW_SATURATION_THRESHOLD,

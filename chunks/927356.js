@@ -7,15 +7,15 @@ var a = n(735250),
   i = n(470079),
   l = n(120356),
   r = n.n(l),
-  c = n(481060),
-  s = n(689938),
+  s = n(481060),
+  c = n(689938),
   o = n(250701),
   d = n(902294);
 
 function u(e) {
   let {
-heading: t = s.Z.Messages.APP_DIRECTORY_ERROR_HEADING,
-body: n = s.Z.Messages.APP_DIRECTORY_ERROR_BODY,
+heading: t = c.Z.Messages.APP_DIRECTORY_ERROR_HEADING,
+body: n = c.Z.Messages.APP_DIRECTORY_ERROR_BODY,
 className: l
   } = e;
   return (0, a.jsxs)('div', {
@@ -24,16 +24,16 @@ children: [
   (0, a.jsx)('img', {
     className: o.image,
     src: d,
-    alt: s.Z.Messages.APP_DIRECTORY_CONFUSED_CLYDE_IMAGE_ALT
+    alt: c.Z.Messages.APP_DIRECTORY_CONFUSED_CLYDE_IMAGE_ALT
   }),
   (0, a.jsxs)(i.Fragment, {
     children: [
-      (0, a.jsx)(c.Heading, {
+      (0, a.jsx)(s.Heading, {
         className: o.header,
         variant: 'heading-xl/semibold',
         children: t
       }),
-      (0, a.jsx)(c.Text, {
+      (0, a.jsx)(s.Text, {
         variant: 'text-md/normal',
         children: n
       })

@@ -3,7 +3,7 @@ n.d(t, {
 return i;
   },
   MD: function() {
-return o;
+return s;
   },
   ZJ: function() {
 return a;
@@ -22,4 +22,4 @@ r.setState({
   checked: e
 });
   },
-  o = r;
+  s = r;

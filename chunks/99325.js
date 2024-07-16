@@ -29,8 +29,8 @@ return _;
 });
 var i = n(954955),
   a = n.n(i),
-  l = n(990547),
-  s = n(544891),
+  s = n(990547),
+  l = n(544891),
   r = n(570140),
   o = n(573261),
   c = n(866112),
@@ -41,7 +41,7 @@ try {
   r.Z.dispatch({
     type: 'GUILD_DIRECTORY_FETCH_START'
   });
-  let n = await s.tn.get({
+  let n = await l.tn.get({
     url: u.ANM.DIRECTORY_CHANNEL_ENTRIES(e),
     query: {
       category_id: t
@@ -60,7 +60,7 @@ try {
   }, 200),
   p = a()(async e => {
 try {
-  let t = await s.tn.get({
+  let t = await l.tn.get({
     url: u.ANM.DIRECTORY_CHANNEL_CATEGORY_COUNTS(e)
   });
   r.Z.dispatch({
@@ -79,7 +79,7 @@ a = await o.Z.post({
     primary_category_id: i
   },
   trackedActionData: {
-    event: l.NetworkActionNames.DIRECTORY_GUILD_ENTRY_CREATE,
+    event: s.NetworkActionNames.DIRECTORY_GUILD_ENTRY_CREATE,
     properties: {
       directory_channel_id: e,
       guild_id: t,
@@ -98,7 +98,7 @@ function _(e, t) {
   o.Z.delete({
 url: u.ANM.DIRECTORY_CHANNEL_ENTRY(e, t),
 trackedActionData: {
-  event: l.NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
+  event: s.NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
   properties: {
     directory_channel_id: e,
     guild_id: t
@@ -125,7 +125,7 @@ try {
     channelId: e,
     query: t
   });
-  let n = await s.tn.get({
+  let n = await l.tn.get({
     url: u.ANM.DIRECTORY_ENTRIES_SEARCH(e),
     query: {
       query: t
@@ -151,7 +151,7 @@ r.Z.dispatch({
   },
   C = async function(e, t, n) {
 let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.AR.UNCATEGORIZED,
-  a = await s.tn.patch({
+  a = await l.tn.patch({
     url: u.ANM.DIRECTORY_CHANNEL_ENTRY(e, t),
     body: {
       description: n,
@@ -171,7 +171,7 @@ r.Z.dispatch({
 });
   }, I = async (e, t) => {
 try {
-  let n = await s.tn.get({
+  let n = await l.tn.get({
     url: u.ANM.DIRECTORY_CHANNEL_LIST_BY_ID(e),
     query: {
       entity_ids: t

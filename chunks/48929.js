@@ -1,5 +1,5 @@
 n(47120);
-var i, a, l, s = n(445346),
+var i, a, s, l = n(445346),
   r = n(570140),
   o = n(430198),
   c = n(314897),
@@ -7,17 +7,17 @@ var i, a, l, s = n(445346),
   u = n(709054),
   h = n(522579);
 let p = new Set();
-class m extends s.y {
+class m extends l.y {
   shouldDisplayPrompt(e) {
 return p.has(e);
   }
 }
-l = 'MediaPostSharePromptStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
-  value: l,
+s = 'MediaPostSharePromptStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = l, t.Z = new m(r.Z, {
+}) : i[a] = s, t.Z = new m(r.Z, {
   CONNECTION_OPEN: function() {
 p = new Set();
   },

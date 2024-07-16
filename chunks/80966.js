@@ -6,8 +6,8 @@ return c;
 var r = n(735250),
   i = n(470079),
   a = n(403182),
-  o = n(124347),
-  s = n(640108),
+  s = n(124347),
+  o = n(640108),
   l = n(981631),
   u = n(689938);
 class c extends i.Component {
@@ -42,37 +42,37 @@ let {
   alt: M = u.Z.Messages.VIDEO,
   ...P
 } = this.props;
-return (0, r.jsx)(o.Z, {
+return (0, r.jsx)(s.Z, {
   alt: M,
   className: n,
   src: c,
   ...P,
-  minWidth: s.ZP.minWidth,
-  minHeight: s.ZP.minHeight,
+  minWidth: o.ZP.minWidth,
+  minHeight: o.ZP.minHeight,
   shouldLink: !1,
   shouldAnimate: !1,
   mediaLayoutType: g,
   responsive: T,
   children: n => {
     let {
-      src: o,
+      src: s,
       size: {
         width: u,
         height: c
       }
     } = n, M = !(_ <= l.N_j && E <= l.XKF || _ <= l.XKF && E <= l.N_j);
-    return (0, r.jsx)(s.ZP, {
+    return (0, r.jsx)(o.ZP, {
       className: i,
       forceExternal: M,
       src: e,
-      poster: o,
+      poster: s,
       width: u,
       height: c,
       responsive: T,
       volume: p,
       autoPlay: null != m && m,
       autoMute: null != I && I,
-      type: s.ZP.Types.VIDEO,
+      type: o.ZP.Types.VIDEO,
       mediaLayoutType: g,
       fileName: d,
       fileSize: null == t ? void 0 : (0, a.Ng)(t),

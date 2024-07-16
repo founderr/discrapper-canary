@@ -6,8 +6,8 @@ return d;
 var i = n(735250);
 n(470079);
 var a = n(481060),
-  l = n(906732),
-  s = n(785717),
+  s = n(906732),
+  l = n(785717),
   r = n(171368),
   o = n(689938),
   c = n(475174);
@@ -18,9 +18,9 @@ user: t,
 channelId: n
   } = e, {
 analyticsLocations: d
-  } = (0, l.ZP)(), {
+  } = (0, s.ZP)(), {
 trackUserProfileAction: u
-  } = (0, s.KZ)();
+  } = (0, l.KZ)();
   return (0, i.jsx)('footer', {
 className: c.footer,
 children: (0, i.jsx)(a.Button, {

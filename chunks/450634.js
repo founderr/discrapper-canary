@@ -4,8 +4,8 @@ return m;
   }
 });
 var n = a(735250),
-  l = a(470079),
-  s = a(481060),
+  s = a(470079),
+  l = a(481060),
   i = a(332664),
   o = a(142497),
   r = a(626135),
@@ -30,7 +30,7 @@ onClose: A,
 transitionState: f,
 analyticsData: E
   } = e;
-  l.useEffect(() => {
+  s.useEffect(() => {
 r.default.track(_.rMx.OPEN_MODAL, {
   type: 'Activity Feedback Modal',
   application_id: C.id,
@@ -51,7 +51,7 @@ feedbackProblems: b,
 onSubmit: function(e) {
   let {
     rating: t,
-    problem: l,
+    problem: s,
     dontShowAgain: i,
     feedback: c
   } = e;
@@ -69,14 +69,14 @@ onSubmit: function(e) {
       applicationId: C.id
     }), null != t)
     (0, d.Z)({
-      problem: l,
+      problem: s,
       channel: m,
       feedback: c,
       activityApplication: C,
       analyticsData: E,
       location: 'Activity End',
       rating: t
-    }), null != l && (0, s.openModalLazy)(async () => {
+    }), null != s && (0, l.openModalLazy)(async () => {
       let {
         default: e
       } = await a.e('14466').then(a.bind(a, 729328));

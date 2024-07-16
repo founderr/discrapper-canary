@@ -1,27 +1,27 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return N;
   }
 });
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(481060),
-  l = s(906732),
-  c = s(864106),
-  d = s(1585),
-  _ = s(580747),
-  E = s(345861),
-  u = s(150039),
-  T = s(993413),
-  I = s(689938),
-  S = s(566091);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(481060),
+  l = t(906732),
+  c = t(864106),
+  d = t(1585),
+  _ = t(580747),
+  E = t(345861),
+  u = t(150039),
+  T = t(993413),
+  I = t(689938),
+  S = t(566091);
 
 function N(e) {
   let {
-user: t,
-guild: s,
+user: s,
+guild: t,
 className: i,
 sectionTitle: E,
 forcedDivider: N = !1,
@@ -29,19 +29,19 @@ withTutorial: m = !1,
 isTryItOutFlow: A = !1
   } = e, {
 analyticsLocations: h
-  } = (0, l.ZP)(), g = null != s, {
+  } = (0, l.ZP)(), g = null != t, {
 userAvatarDecoration: O,
 guildAvatarDecoration: p,
 pendingAvatarDecoration: R,
 pendingErrors: x
-  } = (0, u.$U)(t, s), M = (0, _.Z)('enable_avatar_decoration_uploads'), f = a.useCallback(() => (0, d.ps)({
+  } = (0, u.$U)(s, t), M = (0, _.Z)('enable_avatar_decoration_uploads'), f = a.useCallback(() => (0, d.ps)({
 analyticsLocations: h,
 isTryItOutFlow: A,
-guild: s
+guild: t
   }), [
 h,
 A,
-s
+t
   ]), D = A || void 0 !== R ? null != R : (g ? p : O) != null, P = m ? o.ShinyButton : o.Button;
   return (0, n.jsxs)(T.Z, {
 className: i,
@@ -67,21 +67,21 @@ children: [
         look: o.Button.Looks.LINK,
         size: o.Button.Sizes.SMALL,
         onClick: function() {
-          (0, u.PO)(null == s ? void 0 : s.id, null);
+          (0, u.PO)(null == t ? void 0 : t.id, null);
         },
-        children: (0, c.ad)(t, s) ? I.Z.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : I.Z.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
+        children: (0, c.ad)(s, t) ? I.Z.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : I.Z.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
       })
     ]
   }),
-  t.isStaff() && M && (0, n.jsx)(C, {
-    user: t
+  s.isStaff() && M && (0, n.jsx)(C, {
+    user: s
   })
 ]
   });
 }
 let C = e => {
   let {
-user: t
+user: s
   } = e;
   return (0, n.jsxs)('div', {
 className: S.overrideButtonsContainer,
@@ -92,7 +92,7 @@ children: [
   }),
   (0, n.jsx)(E.Z, {
     onChange: e => {
-      null != e && (t.avatarDecoration = {
+      null != e && (s.avatarDecoration = {
         asset: e,
         skuID: 'PALUE000000001'
       });

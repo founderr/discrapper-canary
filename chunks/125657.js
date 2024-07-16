@@ -19,8 +19,8 @@ var i = t(735250),
   E = t(285952),
   T = t(823379),
   h = t(700785),
-  p = t(689938),
-  g = t(988837);
+  g = t(689938),
+  p = t(988837);
 
 function C(e) {
   var n;
@@ -55,7 +55,7 @@ S
   ]);
   return null == O ? null : (0, i.jsx)(o.Card, {
 editable: !0,
-className: g.card,
+className: p.card,
 children: (0, i.jsxs)(E.Z, {
   direction: E.Z.Direction.VERTICAL,
   children: [
@@ -65,17 +65,17 @@ children: (0, i.jsxs)(E.Z, {
         (0, i.jsx)('img', {
           alt: '',
           src: O.getAvatarURL(t.id, 32),
-          className: g.iconWrapper
+          className: p.iconWrapper
         }),
         (0, i.jsx)(o.Text, {
           color: 'header-primary',
           variant: 'text-sm/normal',
-          children: p.Z.Messages.INTEGRATIONS_APPLICATION_BOT_NAME.format({
+          children: g.Z.Messages.INTEGRATIONS_APPLICATION_BOT_NAME.format({
             user: O
           })
         }),
         (0, i.jsx)(u.Z, {
-          className: g.tag,
+          className: p.tag,
           verified: O.isVerifiedBot()
         })
       ]
@@ -88,18 +88,18 @@ children: (0, i.jsxs)(E.Z, {
       return (0, i.jsxs)(i.Fragment, {
         children: [
           (0, i.jsx)(o.FormDivider, {
-            className: g.divider
+            className: p.divider
           }),
           t.length > 0 ? (0, i.jsxs)(i.Fragment, {
             children: [
               (0, i.jsx)(o.FormTitle, {
-                className: g.permissionHeader,
-                children: p.Z.Messages.ROLES_LIST.format({
+                className: p.permissionHeader,
+                children: g.Z.Messages.ROLES_LIST.format({
                   numRoles: t.length
                 })
               }),
               (0, i.jsx)(d.ZP, {
-                className: g.rolePills,
+                className: p.rolePills,
                 user: e,
                 guild: n,
                 userRoles: t,
@@ -109,11 +109,11 @@ children: (0, i.jsxs)(E.Z, {
             ]
           }) : null,
           l.length > 0 || r.length > 0 ? (0, i.jsx)(c.Z, {
-            className: g.permissionList,
+            className: p.permissionList,
             grantedPermissions: l,
-            grantedPermissionsHeader: p.Z.Messages.INTEGRATIONS_APPLICATION_GRANTED_PERMISSIONS,
+            grantedPermissionsHeader: g.Z.Messages.INTEGRATIONS_APPLICATION_GRANTED_PERMISSIONS,
             disabledPermissions: r,
-            disabledPermissionsHeader: p.Z.Messages.INTEGRATIONS_APPLICATION_DENIED_PERMISSIONS
+            disabledPermissionsHeader: g.Z.Messages.INTEGRATIONS_APPLICATION_DENIED_PERMISSIONS
           }) : null
         ]
       });

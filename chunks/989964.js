@@ -1,24 +1,24 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 });
 var r = n(735250);
 n(470079);
 var i = n(717881),
   a = n(27144),
-  o = n(151545);
+  s = n(151545);
 
-function s(e) {
+function o(e) {
   let {
 location: t,
 ...n
   } = e, {
-pastActivityEnabled: s
+pastActivityEnabled: o
   } = (0, a.z)({
 location: t
   });
-  return s ? (0, r.jsx)(o.Z, {
+  return o ? (0, r.jsx)(s.Z, {
 ...n
   }) : (0, r.jsx)(i.Z, {
 ...n

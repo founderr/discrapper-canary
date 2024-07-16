@@ -5,8 +5,8 @@ return S;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(748780),
   o = n(399606),
   c = n(481060),
@@ -47,14 +47,14 @@ function N(e) {
   let {
 channelId: n,
 emojiId: a,
-emojiName: l
-  } = e, s = (0, o.e7)([p.Z], () => p.Z.getChannel(n));
-  if (null == s)
+emojiName: s
+  } = e, l = (0, o.e7)([p.Z], () => p.Z.getChannel(n));
+  if (null == l)
 return null;
-  let r = null !== (t = (0, h.KS)(s)) && void 0 !== t ? t : c.TextIcon;
+  let r = null !== (t = (0, h.KS)(l)) && void 0 !== t ? t : c.TextIcon;
   return (0, i.jsx)(g.Z, {
 emojiId: a,
-emojiName: l,
+emojiName: s,
 size: g.R.MEDIUM,
 defaultComponent: (0, i.jsx)(r, {
   className: x.channelIcon
@@ -63,7 +63,7 @@ defaultComponent: (0, i.jsx)(r, {
 }
 
 function v(e) {
-  var t, n, l, u;
+  var t, n, s, u;
   let {
 guildId: h,
 channel: p,
@@ -109,7 +109,7 @@ h,
 v
   ]);
   return null == C || Z && !M ? null : (0, i.jsx)('div', {
-className: s()(x.container, m),
+className: l()(x.container, m),
 children: M && null != v ? (0, i.jsx)(r.Z.div, {
   style: {
     marginBottom: j.interpolate({
@@ -124,7 +124,7 @@ children: M && null != v ? (0, i.jsx)(r.Z.div, {
     })
   },
   children: (0, i.jsxs)(c.Clickable, {
-    className: s()(x.banner, x.clickable),
+    className: l()(x.banner, x.clickable),
     onClick: L,
     children: [
       (0, i.jsx)(N, {
@@ -174,7 +174,7 @@ children: M && null != v ? (0, i.jsx)(r.Z.div, {
   children: [
     (0, i.jsx)(N, {
       channelId: C.channelId,
-      emojiId: null === (l = C.emoji) || void 0 === l ? void 0 : l.id,
+      emojiId: null === (s = C.emoji) || void 0 === s ? void 0 : s.id,
       emojiName: null == C ? void 0 : null === (u = C.emoji) || void 0 === u ? void 0 : u.name
     }),
     (0, i.jsxs)('div', {
@@ -210,11 +210,11 @@ function S(e) {
 guildId: t,
 channel: n,
 className: a
-  } = e, l = (0, C.g)(t), s = (0, o.e7)([m.ZP], () => {
+  } = e, s = (0, C.g)(t), l = (0, o.e7)([m.ZP], () => {
 var e;
 return (null === (e = m.ZP.getSelfMember(t)) || void 0 === e ? void 0 : e.isPending) === !0;
   });
-  return (0, E.PE)(t) || s || !l ? null : (0, i.jsx)(v, {
+  return (0, E.PE)(t) || l || !s ? null : (0, i.jsx)(v, {
 guildId: t,
 channel: n,
 className: a

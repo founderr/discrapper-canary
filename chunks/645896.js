@@ -15,8 +15,8 @@ return _;
 var r = n(470079),
   i = n(652874),
   a = n(143927),
-  o = n(881052),
-  s = n(931240);
+  s = n(881052),
+  o = n(931240);
 let l = {},
   u = (0, i.Z)((e, t) => ({
 clans: {},
@@ -40,7 +40,7 @@ fetchClanInfo: async n => {
       return await r;
     {
       let r = (async () => {
-        let r = await (0, s.WJ)(n),
+        let r = await (0, o.WJ)(n),
           i = t().clans,
           a = t().fetchPromises;
         return null == a[n] ? r : (delete a[n], e({
@@ -60,7 +60,7 @@ fetchClanInfo: async n => {
       }), await r;
     }
   } catch (a) {
-    let r = new o.Hx(a),
+    let r = new s.Hx(a),
       i = t().fetchPromises;
     null != i[n] && delete i[n], e({
       error: r,
@@ -94,9 +94,9 @@ function E(e) {
   let [t, n] = u(e => [
 e.fetchClanInfo,
 e.isFetchingGuild
-  ], a.Z), i = null != e && n(e), o = c(e), s = r.useCallback(async () => {
+  ], a.Z), i = null != e && n(e), s = c(e), o = r.useCallback(async () => {
 if (i || null == e)
-  return o;
+  return s;
 try {
   return await t(e);
 } catch (e) {
@@ -105,11 +105,11 @@ try {
   }, [
 i,
 e,
-o,
+s,
 t
   ]);
   return [
 i,
-s
+o
   ];
 }

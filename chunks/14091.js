@@ -5,8 +5,8 @@ return R;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(392711),
   o = n.n(r),
   c = n(442837),
@@ -54,9 +54,9 @@ super(...e), t = this, Z(this, 'autoAnalytics', function() {
   let n = 0,
     i = 0,
     a = 0,
-    l = 0;
+    s = 0;
   null != t.props.searchResults && o()(t.props.searchResults).flatten().filter(e => e.isSearchHit).forEach(e => {
-    null != e.content && '' !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && l++), null != e.embeds && e.embeds.length > 0 && a++, null != e.attachments && e.attachments.length > 0 && i++;
+    null != e.content && '' !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && s++), null != e.embeds && e.embeds.length > 0 && a++, null != e.attachments && e.attachments.length > 0 && i++;
   }), p.ZP.trackWithMetadata(N.rMx.SEARCH_RESULT_VIEWED, {
     search_type: t.props.searchType,
     search_id: t.props.searchAnalyticsId,
@@ -69,7 +69,7 @@ super(...e), t = this, Z(this, 'autoAnalytics', function() {
     page_results: null != t.props.searchResults ? t.props.searchResults.length : null,
     is_indexing: t.props.searchIsIndexing,
     page_num_messages: n,
-    page_num_links: l,
+    page_num_links: s,
     page_num_embeds: a,
     page_num_attach: i
   });
@@ -121,8 +121,8 @@ let {
   searchResults: n
 } = this.props, {
   offset: a,
-  hasError: l,
-  totalResults: s,
+  hasError: s,
+  totalResults: l,
   isHistoricalIndexing: r
 } = this.props.search;
 return (0, i.jsxs)('section', {
@@ -141,8 +141,8 @@ return (0, i.jsxs)('section', {
       searchResults: n,
       searchOffset: a,
       searchLimit: N.vpv,
-      searchHasError: l,
-      searchTotalResults: s,
+      searchHasError: s,
+      searchTotalResults: l,
       searchIsIndexing: r
     })
   ]
@@ -215,7 +215,7 @@ super(...e), Z(this, 'state', {
     totalResults: t,
     isSearching: n,
     isHistoricalIndexing: a,
-    documentsIndexed: l
+    documentsIndexed: s
   } = this.props.search;
   return (0, i.jsx)(x.Z, {
     searchMode: e,
@@ -223,7 +223,7 @@ super(...e), Z(this, 'state', {
     totalResults: t,
     isSearching: n,
     isIndexing: a,
-    documentsIndexed: l
+    documentsIndexed: s
   });
 }), Z(this, 'renderIndexing', () => {
   let e = f.Z.getSearchType(this.props.searchId) === N.aib.GUILD ? v.Z.Messages.SEARCH_GUILD_STILL_INDEXING : v.Z.Messages.SEARCH_DM_STILL_INDEXING;
@@ -243,12 +243,12 @@ super(...e), Z(this, 'state', {
   return (0, i.jsxs)(M, {
     children: [
       (0, i.jsx)('div', {
-        className: s()(S.noResultsImage, {
+        className: l()(S.noResultsImage, {
           [S.alt]: e
         })
       }),
       (0, i.jsx)('div', {
-        className: s()(S.emptyResultsText, S.noResults, {
+        className: l()(S.emptyResultsText, S.noResults, {
           [S.alt]: e
         }),
         children: t
@@ -261,7 +261,7 @@ super(...e), Z(this, 'state', {
       className: S.errorImage
     }),
     (0, i.jsx)('div', {
-      className: s()(S.emptyResultsText, S.errorMessage),
+      className: l()(S.emptyResultsText, S.errorMessage),
       children: v.Z.Messages.SEARCH_ERROR
     })
   ]
@@ -272,10 +272,10 @@ super(...e), Z(this, 'state', {
   } = this.props, {
     totalResults: n,
     isSearching: a,
-    isIndexing: l,
-    hasError: s
+    isIndexing: s,
+    hasError: l
   } = this.props.search;
-  return s ? this.renderError() : l ? this.renderIndexing() : a ? null : n > 0 ? (0, i.jsx)(T.Z, {
+  return l ? this.renderError() : s ? this.renderIndexing() : a ? null : n > 0 ? (0, i.jsx)(T.Z, {
     search: this.props.search,
     searchResults: e,
     blockCount: t,

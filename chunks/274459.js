@@ -5,8 +5,8 @@ return g;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(338545),
   o = n(442837),
   c = n(481060),
@@ -24,7 +24,7 @@ function g(e) {
   let {
 userId: t,
 voiceChannelEffect: n,
-onComplete: l
+onComplete: s
   } = e, {
 emoji: h,
 sentAt: g
@@ -43,7 +43,7 @@ onRest: (e, t) => {
   let {
     phase: n
   } = t;
-  'leave' === n && l();
+  'leave' === n && s();
 }
   });
   return (a.useEffect(() => {
@@ -68,7 +68,7 @@ return t && (0, i.jsx)(r.animated.div, {
     transform: a.to(C)
   },
   children: (0, i.jsx)(d.Z, {
-    className: s()(m.voiceChannelEffectEmoji),
+    className: l()(m.voiceChannelEffectEmoji),
     emojiId: h.id,
     emojiName: h.name,
     animated: null !== (n = h.animated) && void 0 !== n && n

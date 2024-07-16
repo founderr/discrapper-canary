@@ -2,8 +2,8 @@ n(47120);
 var r = n(147913),
   i = n(282397),
   a = n(626135),
-  o = n(131595),
-  s = n(475774),
+  s = n(131595),
+  o = n(475774),
   l = n(981631);
 
 function u(e, t, n) {
@@ -40,7 +40,7 @@ super(...e), u(this, 'iframeModalOpenTimeMs', void 0), u(this, 'actions', {
   },
   INTERACTION_IFRAME_MODAL_CREATE: e => {
     var t;
-    this.iframeModalOpenTimeMs = Date.now(), t = e, (0, s.Z)(t), a.default.track(l.rMx.OPEN_MODAL, {
+    this.iframeModalOpenTimeMs = Date.now(), t = e, (0, o.Z)(t), a.default.track(l.rMx.OPEN_MODAL, {
       type: c,
       application_id: t.application.id
     });
@@ -60,7 +60,7 @@ super(...e), u(this, 'iframeModalOpenTimeMs', void 0), u(this, 'actions', {
       let {
         application: t
       } = e, n = i.Z.getIFrameModalApplicationId(), r = i.Z.getIFrameModalKey();
-      t.id === n && null != n && (0, o.Z)(n, r);
+      t.id === n && null != n && (0, s.Z)(n, r);
     }(e);
   }
 });

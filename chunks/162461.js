@@ -6,7 +6,7 @@ return f;
 return _;
   },
   sA: function() {
-return s;
+return o;
   },
   wh: function() {
 return p;
@@ -55,7 +55,7 @@ treatments: [{
   }
 ]
   }),
-  o = (0, r.B)({
+  s = (0, r.B)({
 kind: 'user',
 id: '2024-03_content_inventory_ranker_client_dummy',
 label: 'Tracks exposure for which ranker bucket the user is in. This is here to test an exposure bug',
@@ -67,7 +67,7 @@ treatments: [{
 }]
   });
 
-function s(e) {
+function o(e) {
   c.getCurrentConfig({
 location: e
   }, {
@@ -84,7 +84,7 @@ location: e
   }, {
 autoTrackExposure: !0
   });
-  t && o.getCurrentConfig({
+  t && s.getCurrentConfig({
 location: e
   }, {
 autoTrackExposure: !0

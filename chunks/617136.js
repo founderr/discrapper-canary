@@ -19,8 +19,8 @@ return f;
   }
 });
 var r, i, a = n(367907),
-  o = n(857192),
-  s = n(626135),
+  s = n(857192),
+  o = n(626135),
   l = n(569984),
   u = n(497505),
   c = n(566078),
@@ -62,7 +62,7 @@ properties: r,
 trackGuildAndChannelMetadata: i = !1
   } = e, u = l.Z.quests.get(t);
   if (null != u) {
-if (o.default.isLoggingAnalyticsEvents && console.info('[Quest] AnalyticsUtils.track', n, {
+if (s.default.isLoggingAnalyticsEvents && console.info('[Quest] AnalyticsUtils.track', n, {
     ...h(u),
     ...r
   }), u.preview)
@@ -72,7 +72,7 @@ if (i)
     ...h(u),
     ...r
   });
-s.default.track(n, {
+o.default.track(n, {
   ...h(u),
   ...r
 });

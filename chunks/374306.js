@@ -6,8 +6,8 @@ return _;
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(481060),
-  s = n(961675),
+  s = n(481060),
+  l = n(961675),
   r = n(883429),
   o = n(238349),
   c = n(109434),
@@ -21,7 +21,7 @@ function _(e) {
   var t, n;
   let {
 channel: _
-  } = e, f = (0, d.r_)(_), E = (0, a.e7)([s.Z], () => s.Z.hasHidden(_.id)), C = (0, u.c)(_.id), {
+  } = e, f = (0, d.r_)(_), E = (0, a.e7)([l.Z], () => l.Z.hasHidden(_.id)), C = (0, u.c)(_.id), {
 sortOrder: g,
 tagFilter: I
   } = (0, c.H)(_.id), x = (0, a.e7)([
@@ -37,7 +37,7 @@ return null;
   let N = (t = E, n = T, t ? n ? m.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : m.Z.Messages.FORUM_CHANNEL_ONBOARDING_SHOW : n ? m.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : m.Z.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
   return (0, i.jsx)(p.JO, {
 tooltip: N,
-icon: l.CircleInformationIcon,
+icon: s.CircleInformationIcon,
 onClick: () => r.Z.hideAdminOnboarding(_.id, !E),
 selected: !E
   });

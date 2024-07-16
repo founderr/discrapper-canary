@@ -22,8 +22,8 @@ var i = n(735250),
 function N(e) {
   let {
 code: t
-  } = e, [n, N, p] = t.split('-'), {
-guildScheduledEvent: f,
+  } = e, [n, N, f] = t.split('-'), {
+guildScheduledEvent: p,
 guild: C,
 channel: g,
 isMember: S
@@ -49,16 +49,16 @@ n,
 N
   ]);
   return a.useEffect(() => {
-(null == f ? void 0 : f.id) == null && m.Z.fetchGuildEvent(n, N), E.Z.getGuildEventUserCounts(n, N, null != p ? [p] : []), E.Z.getGuildEventsForCurrentUser(n);
+(null == p ? void 0 : p.id) == null && m.Z.fetchGuildEvent(n, N), E.Z.getGuildEventUserCounts(n, N, null != f ? [f] : []), E.Z.getGuildEventsForCurrentUser(n);
   }, [
 N,
 n,
-null == f ? void 0 : f.id,
-p
+null == p ? void 0 : p.id,
+f
   ]), (0, i.jsx)(T.ZP, {
 guild: C,
 channel: g,
-guildScheduledEvent: f,
+guildScheduledEvent: p,
 isMember: S,
 onAcceptInstantInvite: h.dG,
 onTransitionToInviteChannel: function() {
@@ -68,6 +68,6 @@ onTransitionToInviteChannel: function() {
   }
   (null == g ? void 0 : g.isGuildStageVoice()) ? (0, o.Cq)(g) : (null == g ? void 0 : g.isGuildVoice()) && m.Z.joinVoiceEvent(g.guild_id, g.id);
 },
-recurrenceId: p
+recurrenceId: f
   });
 }

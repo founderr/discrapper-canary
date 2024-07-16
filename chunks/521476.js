@@ -6,8 +6,8 @@ return h;
 var i = n(735250);
 n(470079);
 var a = n(481060),
-  l = n(100527),
-  s = n(906732),
+  s = n(100527),
+  l = n(906732),
   r = n(545594),
   o = n(295474),
   c = n(981631),
@@ -20,7 +20,7 @@ function h(e) {
 guild: h
   } = e, {
 analyticsLocations: p
-  } = (0, s.ZP)(l.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT), [m, _] = (0, o.ww)({
+  } = (0, l.ZP)(s.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT), [m, _] = (0, o.ww)({
 guildId: null !== (t = null == h ? void 0 : h.id) && void 0 !== t ? t : c.lds,
 analyticsLocations: p,
 openWithoutBackstack: !0

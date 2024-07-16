@@ -6,8 +6,8 @@ return j;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(780384),
+  s = n.n(a),
+  o = n(780384),
   l = n(481060),
   u = n(438139),
   c = n(410030),
@@ -60,7 +60,7 @@ getAssetImage: V
   H = (0, u.Z)(class extends i.PureComponent {
 render() {
   return (0, r.jsx)('div', {
-    className: o()(B.textXsNormal, B.textEllipsis),
+    className: s()(B.textXsNormal, B.textEllipsis),
     children: this.props.message
   });
 }
@@ -87,14 +87,14 @@ return null;
   let a = d.Z.get(i);
   return (0, r.jsx)('img', {
 alt: '',
-src: (0, s.ap)(n) ? a.icon.lightSVG : a.icon.darkSVG,
+src: (0, o.ap)(n) ? a.icon.lightSVG : a.icon.darkSVG,
 className: B.platformIcon
   });
 }
 
 function j(e) {
   var t, n, a;
-  let s, {
+  let o, {
   user: u,
   activity: c,
   application: j,
@@ -119,54 +119,54 @@ ea = {
   [B.fullSize]: ei === w.y0.FULL_SIZE,
   [B.panel]: ei === w.y0.PANEL
 },
-eo = null != W && (null == c ? void 0 : c.type) !== x.IIU.PLAYING && (null == c ? void 0 : c.type) !== x.IIU.WATCHING && (null == c ? void 0 : c.type) !== x.IIU.LISTENING && (null == c ? void 0 : c.type) !== x.IIU.HANG_STATUS ? {
+es = null != W && (null == c ? void 0 : c.type) !== x.IIU.PLAYING && (null == c ? void 0 : c.type) !== x.IIU.WATCHING && (null == c ? void 0 : c.type) !== x.IIU.LISTENING && (null == c ? void 0 : c.type) !== x.IIU.HANG_STATUS ? {
   type: x.IIU.PLAYING,
   name: k.Z.Messages.SHARING_SCREEN
 } : c,
-es = (0, S.Z)({
+eo = (0, S.Z)({
   location: 'UserProfileActivityCard',
-  applicationId: null !== (t = null == j ? void 0 : j.id) && void 0 !== t ? t : null == eo ? void 0 : eo.application_id,
+  applicationId: null !== (t = null == j ? void 0 : j.id) && void 0 !== t ? t : null == es ? void 0 : es.application_id,
   source: g.m1.UserProfile,
   sourceUserId: u.id,
   trackEntryPointImpression: !0
 });
-  if (null == eo || eo.type === x.IIU.CUSTOM_STATUS || ei !== w.y0.BITE_SIZE && ei !== w.y0.FULL_SIZE && ei !== w.y0.PANEL)
+  if (null == es || es.type === x.IIU.CUSTOM_STATUS || ei !== w.y0.BITE_SIZE && ei !== w.y0.FULL_SIZE && ei !== w.y0.PANEL)
 return null;
   let el = !1;
-  if ((0, p.Z)(eo))
-s = (0, r.jsx)('div', {
-  className: o()(B.assets, ea),
+  if ((0, p.Z)(es))
+o = (0, r.jsx)('div', {
+  className: s()(B.assets, ea),
   children: (0, r.jsx)('img', {
     alt: '',
     src: d.Z.get(x.ABu.XBOX).icon.customPNG,
-    className: o()(B.assetsLargeImage, ea, B.xbox)
+    className: s()(B.assetsLargeImage, ea, B.xbox)
   })
 }), el = !0;
-  else if (null == (s = (e => {
+  else if (null == (o = (e => {
   var t, n;
   let a;
   if (e.type === x.IIU.HANG_STATUS)
     return (0, r.jsx)('div', {
-      className: o()(B.assets, ea),
+      className: s()(B.assets, ea),
       children: (0, r.jsx)(v.Z, {
         hangStatusActivity: e,
-        className: o()(B.assetsSmallImage, B.withoutLargeImage, B.hangStatus, ea)
+        className: s()(B.assetsSmallImage, B.withoutLargeImage, B.hangStatus, ea)
       })
     });
   let {
-    assets: s,
+    assets: o,
     application_id: c
   } = e;
-  if (null == s || null == s.large_image && null == s.small_image)
+  if (null == o || null == o.large_image && null == o.small_image)
     return null;
   let d = (0, m.Z)(e),
     _ = (0, h.Z)(e),
-    E = null != s.large_image ? (0, r.jsx)('img', {
-      alt: null !== (t = s.large_text) && void 0 !== t ? t : '',
-      src: V(c, s.large_image, d ? F[ei] : [(G.Si.LARGE, G.Si.LARGE)]),
-      className: o()(B.assetsLargeImage, ea, {
+    E = null != o.large_image ? (0, r.jsx)('img', {
+      alt: null !== (t = o.large_text) && void 0 !== t ? t : '',
+      src: V(c, o.large_image, d ? F[ei] : [(G.Si.LARGE, G.Si.LARGE)]),
+      className: s()(B.assetsLargeImage, ea, {
         [B.spotify]: _,
-        [B.assetsLargeMask]: null != s.small_image
+        [B.assetsLargeMask]: null != o.small_image
       })
     }) : null;
   if (_)
@@ -185,39 +185,39 @@ s = (0, r.jsx)('div', {
       children: (0, r.jsx)('img', {
         src: null !== (n = M.ZP.getGuildIconURL({
           id: t.guildId,
-          icon: s.small_image,
+          icon: o.small_image,
           size: G.Si.SMALL
         })) && void 0 !== n ? n : void 0,
-        className: o()(B.assetsLargeImage, B.voiceChannel, ea),
+        className: s()(B.assetsLargeImage, B.voiceChannel, ea),
         alt: ''
       })
     });
   }
-  return (!(0, C.dS)(e) && null != s.small_image && (a = (0, r.jsx)(l.Tooltip, {
-    text: '' !== s.small_text ? s.small_text : null,
+  return (!(0, C.dS)(e) && null != o.small_image && (a = (0, r.jsx)(l.Tooltip, {
+    text: '' !== o.small_text ? o.small_text : null,
     position: 'top',
     children: e => {
       var t;
       return (0, r.jsx)('img', {
-        alt: null !== (t = s.small_text) && void 0 !== t ? t : '',
-        src: V(c, s.small_image, [
+        alt: null !== (t = o.small_text) && void 0 !== t ? t : '',
+        src: V(c, o.small_image, [
           G.Si.SMALL,
           G.Si.SMALL
         ]),
-        className: o()(B.assetsSmallImage, ea, {
+        className: s()(B.assetsSmallImage, ea, {
           [B.withoutLargeImage]: null == E
         }),
         ...e
       });
     }
   })), null == E) ? (0, r.jsx)('div', {
-    className: o()(B.assets, ea),
+    className: s()(B.assets, ea),
     children: a
   }) : (0, r.jsxs)('div', {
-    className: o()(B.assets, ea),
+    className: s()(B.assets, ea),
     children: [
       (0, r.jsx)(l.Tooltip, {
-        text: null != s.large_text ? s.large_text : null,
+        text: null != o.large_text ? o.large_text : null,
         position: 'top',
         children: e => {
           let {
@@ -233,10 +233,10 @@ s = (0, r.jsx)('div', {
       a
     ]
   });
-})(eo))) {
+})(es))) {
 ;
-el = null != (s = null != (n = eo).assets || (0, E.Z)(n) || n.type !== x.IIU.PLAYING || u.bot ? null : null == j && null != W ? (0, r.jsx)('div', {
-  className: o()(B.gameIcon, B.screenshareIcon)
+el = null != (o = null != (n = es).assets || (0, E.Z)(n) || n.type !== x.IIU.PLAYING || u.bot ? null : null == j && null != W ? (0, r.jsx)('div', {
+  className: s()(B.gameIcon, B.screenshareIcon)
 }) : (0, r.jsx)(T.Z, {
   className: B.gameIcon,
   game: j
@@ -260,16 +260,16 @@ el = null != (s = null != (n = eo).assets || (0, E.Z)(n) || n.type !== x.IIU.PLA
     variant: 'text-sm/semibold',
     className: null != Z({
       activity: e
-    }) ? o()(B.platformIconMargin, ea) : void 0,
+    }) ? s()(B.platformIconMargin, ea) : void 0,
     children: i
   });
-})(eo),
+})(es),
 ec = (e => {
   let t;
   let {
     details: n,
     state: i
-  } = e, a = n, s = n;
+  } = e, a = n, o = n;
   if (e.type === x.IIU.CUSTOM_STATUS)
     a = i;
   else if (e.type === x.IIU.HANG_STATUS)
@@ -279,9 +279,9 @@ ec = (e => {
       (0, R.X)(W.id);
     } : void 0;
   else if (!(0, f.Z)(e)) {
-    if (s = a = i, (0, h.Z)(e) && null != i)
+    if (o = a = i, (0, h.Z)(e) && null != i)
       a = k.Z.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
-        artists: s,
+        artists: o,
         artistsHook: (t, n) => (0, r.jsx)(L.Z, {
           artists: i,
           linkClassName: B.textLink,
@@ -298,25 +298,25 @@ ec = (e => {
     game: a
   })), null != t) ? (0, r.jsx)(l.Clickable, {
     onClick: t,
-    title: null != s ? s : void 0,
-    className: o()(B.textSmSemibold, B.textEllipsis, B.textLink),
+    title: null != o ? o : void 0,
+    className: s()(B.textSmSemibold, B.textEllipsis, B.textLink),
     children: a
   }) : (0, r.jsx)('div', {
-    title: null != s ? s : void 0,
-    className: o()(B.textXsNormal, {
+    title: null != o ? o : void 0,
+    className: s()(B.textXsNormal, {
       [B.textEllipsis]: !(0, m.Z)(e) && !(0, h.Z)(e)
     }),
     children: a
   });
-})(eo),
+})(es),
 ed = ((e, t) => {
   var n, i;
   let a;
   let {
-    state: s,
+    state: o,
     party: c,
     assets: d
-  } = e, _ = s, E = _;
+  } = e, _ = o, E = _;
   return (!(0, f.Z)(e) && (E = _ = null == d ? void 0 : d.large_text, (0, h.Z)(e) && null != _ && (_ = k.Z.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
     album: E,
     albumHook: (t, n) => null != e.sync_id && null != E ? (0, r.jsx)(l.Anchor, {
@@ -334,7 +334,7 @@ ed = ((e, t) => {
     count: c.size[0],
     max: c.size[1]
   })), (0, r.jsxs)('div', {
-    className: o()(B.textXsNormal, B.textEllipsis),
+    className: s()(B.textXsNormal, B.textEllipsis),
     children: [
       (0, r.jsx)('span', {
         title: E,
@@ -348,7 +348,7 @@ ed = ((e, t) => {
       }) : null
     ]
   })) : null;
-})(eo, j),
+})(es, j),
 e_ = (e => {
   if (!(0, f.Z)(e) || (0, h.Z)(e))
     return null;
@@ -360,19 +360,19 @@ e_ = (e => {
   }) : (0, r.jsx)(O.ZP, {
     start: t.start,
     location: O.ZP.Locations.USER_ACTIVITY,
-    className: o()(B.textXsNormal, B.textEllipsis),
+    className: s()(B.textXsNormal, B.textEllipsis),
     isApplicationStreaming: null != W
   });
-})(eo);
-  let eE = (a = eo, Q && null != W ? null == K ? (0, r.jsx)('div', {
-  className: o()(B.textXsNormal, {
+})(es);
+  let eE = (a = es, Q && null != W ? null == K ? (0, r.jsx)('div', {
+  className: s()(B.textXsNormal, {
     [B.textEllipsis]: !(0, m.Z)(a) && !(0, h.Z)(a)
   }),
   children: k.Z.Messages.USER_PROFILE_IN_GUILD_DETAILS.format({
     guildName: W.name
   })
 }) : (0, r.jsxs)('div', {
-  className: o()(B.guildDetails, B.textXsNormal, {
+  className: s()(B.guildDetails, B.textXsNormal, {
     [B.textEllipsis]: !(0, m.Z)(a) && !(0, h.Z)(a)
   }),
   children: [
@@ -416,12 +416,12 @@ eh = (e => {
   return null == n || null == i ? null : (0, r.jsx)(I.Z, {
     start: n,
     end: i,
-    className: o()(B.timeBar, ea),
+    className: s()(B.timeBar, ea),
     themed: !0
   });
-})(eo),
+})(es),
 ep = ![
-  s,
+  o,
   eu,
   ec,
   ed,
@@ -438,8 +438,8 @@ children: [
       return null;
     let {
       name: n
-    } = eo;
-    switch (eo.type) {
+    } = es;
+    switch (es.type) {
       case x.IIU.STREAMING:
         t = k.Z.Messages.USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM.format({
           platform: [
@@ -459,7 +459,7 @@ children: [
         });
         break;
       case x.IIU.PLAYING:
-        t = (0, _.Z)(eo);
+        t = (0, _.Z)(es);
         break;
       case x.IIU.COMPETING:
         t = k.Z.Messages.USER_ACTIVITY_HEADER_COMPETING.format({
@@ -468,7 +468,7 @@ children: [
     }
     if (null != W) {
       var i;
-      t = (0, P.yE)(null !== (i = null == eo ? void 0 : eo.flags) && void 0 !== i ? i : 0, x.xjy.EMBEDDED) ? eo.type === x.IIU.WATCHING ? k.Z.Messages.EMBEDDED_ACTIVITIES_WATCHING_IN_GUILD.format({
+      t = (0, P.yE)(null !== (i = null == es ? void 0 : es.flags) && void 0 !== i ? i : 0, x.xjy.EMBEDDED) ? es.type === x.IIU.WATCHING ? k.Z.Messages.EMBEDDED_ACTIVITIES_WATCHING_IN_GUILD.format({
         guildName: W.name
       }) : k.Z.Messages.EMBEDDED_ACTIVITIES_PLAYING_IN_GUILD.format({
         guildName: W.name
@@ -476,11 +476,11 @@ children: [
         server: W.name
       });
     }
-    return (null == eo ? void 0 : eo.type) === x.IIU.HANG_STATUS && (t = k.Z.Messages.STATUS_LEAD_IN_JUST), (0, r.jsxs)('div', {
+    return (null == es ? void 0 : es.type) === x.IIU.HANG_STATUS && (t = k.Z.Messages.STATUS_LEAD_IN_JUST), (0, r.jsxs)('div', {
       className: B.headerContainer,
       children: [
         (0, r.jsx)(l.Heading, {
-          className: o()(B.headerText, {
+          className: s()(B.headerText, {
             [B.textEllipsis]: !e
           }),
           variant: Q ? 'text-xs/semibold' : 'eyebrow',
@@ -497,17 +497,17 @@ children: [
     children: (0, r.jsxs)('div', {
       className: B.activityDetails,
       children: [
-        s,
+        o,
         (0, r.jsxs)(y.Z.Child, {
-          className: o()(B.content, ea, {
-            [B.noImages]: null == s && !el,
+          className: s()(B.content, ea, {
+            [B.noImages]: null == o && !el,
             [B.gameImage]: el
           }),
           children: [
             (0, r.jsxs)(l.Clickable, {
-              className: null != es ? B.openGameProfile : void 0,
-              onClick: null != es ? () => {
-                es(), null == er || er();
+              className: null != eo ? B.openGameProfile : void 0,
+              onClick: null != eo ? () => {
+                eo(), null == er || er();
               } : void 0,
               children: [
                 eu,
@@ -530,7 +530,7 @@ children: [
   ei !== w.y0.FULL_SIZE && eh,
   ei !== w.y0.FULL_SIZE && ef,
   (0, r.jsx)(Y, {
-    activity: eo
+    activity: es
   })
 ]
   });

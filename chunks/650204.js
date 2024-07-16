@@ -1,5 +1,5 @@
 n(610138), n(216116), n(78328), n(815648), n(47120), n(177593);
-var r, i, a, o, s, l, u, c = n(735250);
+var r, i, a, s, o, l, u, c = n(735250);
 n(92138), n(470079);
 var d = n(202226),
   _ = n(512722),
@@ -48,7 +48,7 @@ setImmediate(() => {
 });
   });
   let e = null === (i = (a = M.Z.remoteApp).getVersion) || void 0 === i ? void 0 : i.call(a),
-t = null === (o = (s = M.Z.remoteApp).getBuildNumber) || void 0 === o ? void 0 : o.call(s),
+t = null === (s = (o = M.Z.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(o),
 n = {};
   null != M.Z.remoteApp.getModuleVersions && (n = M.Z.remoteApp.getModuleVersions()), S.Z.setExtra({
 hostVersion: e,

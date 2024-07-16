@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(442837),
-  s = n(481060),
+  s = n(442837),
+  o = n(481060),
   l = n(607070),
   u = n(907040),
   c = n(404975),
@@ -24,7 +24,7 @@ isVisible: n,
 isExpandable: i
   } = e, {
 trackUserProfileAction: h
-  } = (0, d.KZ)(), [p, m] = (0, o.Wu)([l.Z], () => [
+  } = (0, d.KZ)(), [p, m] = (0, s.Wu)([l.Z], () => [
 l.Z.useReducedMotion,
 l.Z.keyboardModeEnabled
   ]), I = !i || p || m ? 0 : 300, T = () => {
@@ -38,12 +38,12 @@ className: a()(f.popover, {
   [f.expandable]: i
 }),
 children: [
-  (0, r.jsx)(s.TooltipContainer, {
+  (0, r.jsx)(o.TooltipContainer, {
     text: E.Z.Messages.USER_PROFILE_SEND_REACTION,
     shouldShow: n,
     delay: I,
     'aria-label': !1,
-    children: (0, r.jsx)(s.Popout, {
+    children: (0, r.jsx)(o.Popout, {
       renderPopout: e => {
         let {
           closePopout: n
@@ -59,20 +59,20 @@ children: [
         });
       },
       position: 'left',
-      animation: s.Popout.Animation.NONE,
+      animation: o.Popout.Animation.NONE,
       align: 'top',
       children: e => (0, r.jsx)(c.zx, {
         ...e,
         className: a()(f.button, f.left),
         'aria-label': E.Z.Messages.USER_PROFILE_SEND_REACTION,
-        children: (0, r.jsx)(s.ReactionIcon, {
+        children: (0, r.jsx)(o.ReactionIcon, {
           size: 'xs',
           className: f.icon
         })
       })
     })
   }),
-  (0, r.jsx)(s.TooltipContainer, {
+  (0, r.jsx)(o.TooltipContainer, {
     text: E.Z.Messages.USER_PROFILE_REPLY,
     shouldShow: n,
     delay: I,
@@ -85,7 +85,7 @@ children: [
           action: 'PRESS_REPLY'
         });
       },
-      children: (0, r.jsx)(s.ArrowAngleLeftUpIcon, {
+      children: (0, r.jsx)(o.ArrowAngleLeftUpIcon, {
         size: 'xs',
         className: f.icon
       })

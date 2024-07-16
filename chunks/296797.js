@@ -5,8 +5,8 @@ return u;
 });
 var i = n(470079),
   a = n(592125),
-  l = n(944486),
-  s = n(585483),
+  s = n(944486),
+  l = n(585483),
   r = n(917107),
   o = n(89425),
   c = n(197386),
@@ -23,17 +23,17 @@ async function e(e) {
   } = e;
   if (!(0, r.Z)(n))
     return;
-  l.Z.getVoiceChannelId() !== n && await (0, o.Z)({
+  s.Z.getVoiceChannelId() !== n && await (0, o.Z)({
     channelId: n
   });
   let i = a.Z.getChannel(n),
-    s = null == i ? void 0 : i.guild_id;
+    l = null == i ? void 0 : i.guild_id;
   setTimeout(() => {
-    (0, c.Z)(s, n), null == t || t();
+    (0, c.Z)(l, n), null == t || t();
   }, 0);
 }
-return s.S.subscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e), () => {
-  s.S.unsubscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e);
+return l.S.subscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e), () => {
+  l.S.unsubscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e);
 };
   }, [t]);
 }

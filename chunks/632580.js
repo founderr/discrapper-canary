@@ -6,8 +6,8 @@ return p;
 var l = s(512722),
   t = s.n(l),
   i = s(570140),
-  r = s(355467),
-  a = s(976255),
+  a = s(355467),
+  r = s(976255),
   c = s(366939),
   o = s(16084),
   u = s(255078),
@@ -47,7 +47,7 @@ loadId: U,
 giftInfoOptions: F,
 invoicePreview: B
   } = e;
-  n(m.A.PURCHASING), s(!0), l(!0), i.Z.wait(a.fw), p(null);
+  n(m.A.PURCHASING), s(!0), l(!0), i.Z.wait(r.fw), p(null);
   try {
 let e, s, l;
 if (d.default.track(E.rMx.PAYMENT_FLOW_COMPLETED, {
@@ -82,7 +82,7 @@ else if (t()(null != A, 'Missing subscriptionPlan'), x) {
     giftInfoOptions: F
   });
 } else if (O && null != R && null != C && null != j)
-  e = E.Uk1.has(C.type) ? await (0, r.G)(j, R, C, g.currency) : await (0, r.Mg)(j, {
+  e = E.Uk1.has(C.type) ? await (0, a.G)(j, R, C, g.currency) : await (0, a.Mg)(j, {
     paymentSource: C,
     currency: g.currency
   }, P, h, U);
@@ -92,7 +92,7 @@ else if (null != j) {
       paymentSource: C,
       currency: g.currency
     };
-  j.status === E.O0b.PAUSED ? s.status = E.O0b.ACTIVE : s.items = n, e = await (0, r.Mg)(j, s, P, h, U);
+  j.status === E.O0b.PAUSED ? s.status = E.O0b.ACTIVE : s.items = n, e = await (0, a.Mg)(j, s, P, h, U);
 } else
   e = await (0, c.Ld)({
     planId: A.id,

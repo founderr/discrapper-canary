@@ -21,8 +21,8 @@ return g;
 var r = n(442837),
   i = n(818083),
   a = n(430824),
-  o = n(496675),
-  s = n(308083),
+  s = n(496675),
+  o = n(308083),
   l = n(981631);
 let u = (0, i.B)({
 kind: 'user',
@@ -37,7 +37,7 @@ treatments: [{
   label: 'Enable creation of clan guilds - Valorant',
   config: {
     enableClanCreation: !0,
-    defaultGameId: s.nJ
+    defaultGameId: o.nJ
   }
 }]
   }),
@@ -54,7 +54,7 @@ treatments: [{
   label: 'Enable creation of clan guilds - Genshin',
   config: {
     enableClanCreation: !0,
-    defaultGameId: s.xn
+    defaultGameId: o.xn
   }
 }]
   }),
@@ -97,10 +97,10 @@ guilds: t,
 valorantConfig: n,
 genshinConfig: i,
 includeConverted: a
-  } = e, s = (0, r.Wu)([o.Z], () => t.filter(e => o.Z.can(l.Plq.ADMINISTRATOR, e))), u = s.filter(e => function(e) {
+  } = e, o = (0, r.Wu)([s.Z], () => t.filter(e => s.Z.can(l.Plq.ADMINISTRATOR, e))), u = o.filter(e => function(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 return null != e && e.hasFeature(l.oNc.CLAN_PILOT_GENSHIN) && (t || !e.hasFeature(l.oNc.CLAN));
-  }(e, a)), c = s.filter(e => function(e) {
+  }(e, a)), c = o.filter(e => function(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 return null != e && e.hasFeature(l.oNc.CLAN_PILOT_VALORANT) && (t || !e.hasFeature(l.oNc.CLAN));
   }(e, a)), d = u.length > 0 && i.enableClanCreation, _ = c.length > 0 && n.enableClanCreation, f = [];
@@ -119,14 +119,14 @@ function h(e) {
 location: t,
 includeConverted: n,
 autoTrackExposure: i = !0
-  } = e, o = (0, r.Wu)([a.Z], () => Object.values(a.Z.getGuilds())), s = u.useExperiment({
+  } = e, s = (0, r.Wu)([a.Z], () => Object.values(a.Z.getGuilds())), o = u.useExperiment({
 location: t
   }, {
 autoTrackExposure: i
   });
   return f({
-guilds: o,
-valorantConfig: s,
+guilds: s,
+valorantConfig: o,
 genshinConfig: c.useExperiment({
   location: t
 }, {
@@ -190,7 +190,7 @@ treatments: [{
   label: 'Show clan discovery (Valorant)',
   config: {
     clanDiscoveryEnabled: !0,
-    defaultGameId: s.nJ
+    defaultGameId: o.nJ
   }
 }]
   }),
@@ -207,7 +207,7 @@ treatments: [{
   label: 'Show clan discovery (Genshin Impact)',
   config: {
     clanDiscoveryEnabled: !0,
-    defaultGameId: s.xn
+    defaultGameId: o.xn
   }
 }]
   });

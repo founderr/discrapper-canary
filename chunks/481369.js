@@ -5,8 +5,8 @@ return u;
 });
 var i = n(399606),
   a = n(317381),
-  l = n(917107),
-  s = n(592125),
+  s = n(917107),
+  l = n(592125),
   r = n(226027),
   o = n(918559);
 let c = 'no_text_activity',
@@ -37,5 +37,5 @@ let c = 'no_text_activity',
 function u() {
   let e = (0, i.e7)([a.ZP], () => a.ZP.getCurrentEmbeddedActivity()),
 t = (0, i.e7)([a.ZP], () => a.ZP.getActivityPanelMode());
-  return void 0 === e || (0, l.Z)(null == e ? void 0 : e.channelId, s.Z) ? d[c] : d[t];
+  return void 0 === e || (0, s.Z)(null == e ? void 0 : e.channelId, l.Z) ? d[c] : d[t];
 }

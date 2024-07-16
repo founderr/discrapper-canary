@@ -7,9 +7,9 @@ return U;
   }
 }), n(47120);
 var i, a = n(735250),
-  l = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  l = n(120356),
+  r = n.n(l),
   o = n(149765),
   c = n(846519),
   d = n(481060),
@@ -93,7 +93,7 @@ children: [
 ]
   });
 }
-class w extends(i = l.PureComponent) {
+class w extends(i = s.PureComponent) {
   get canWatchStream() {
 let {
   channel: e,
@@ -108,17 +108,17 @@ let {
   connectUserDragSource: t,
   canDrag: n,
   isSelfOnOtherClient: i,
-  user: l,
-  channel: s
+  user: s,
+  channel: l
 } = this.props, r = (0, a.jsx)('div', {
   className: y.draggable,
-  'data-dnd-name': s.name,
+  'data-dnd-name': l.name,
   onMouseEnter: i ? void 0 : this.handleMouseEnter,
   onMouseLeave: i ? void 0 : this.handleHidePreview,
   children: (0, a.jsx)(d.Popout, {
-    preload: () => (0, v.W)(l.id, l.getAvatarURL(s.guild_id, 80), {
-      guildId: s.guild_id,
-      channelId: s.id
+    preload: () => (0, v.W)(s.id, s.getAvatarURL(l.guild_id, 80), {
+      guildId: l.guild_id,
+      channelId: l.id
     }),
     position: 'right',
     renderPopout: this.renderUserPopout,
@@ -130,7 +130,7 @@ let {
 return n ? t(r) : r;
   }
   constructor(...e) {
-super(...e), D(this, 'domElementRef', l.createRef()), D(this, 'state', {
+super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
   userPopoutOpen: !1,
   isHoveringHangStatus: !1
 }), D(this, 'setIsHoveringHangStatusDelayed', new c.sW(500, () => {
@@ -263,8 +263,8 @@ super(...e), D(this, 'domElementRef', l.createRef()), D(this, 'state', {
     isSelfOnOtherClient: t,
     otherClientSessionType: n,
     voicePlatform: i,
-    shouldShowPreview: l,
-    mute: s,
+    shouldShowPreview: s,
+    mute: l,
     localMute: o,
     localVideoDisabled: c,
     speaking: u,
@@ -293,7 +293,7 @@ super(...e), D(this, 'domElementRef', l.createRef()), D(this, 'state', {
     user: p,
     speaking: u,
     disconnected: h,
-    mute: s,
+    mute: l,
     localMute: o,
     localVideoDisabled: c,
     isStreaming: E,
@@ -345,7 +345,7 @@ super(...e), D(this, 'domElementRef', l.createRef()), D(this, 'state', {
   return (0, a.jsx)(d.Popout, {
     position: 'right',
     renderPopout: M && D || !E ? this.renderHangStatusPopout : this.renderStreamPopout,
-    shouldShow: l && !P,
+    shouldShow: s && !P,
     onRequestClose: this.handleHidePreview,
     spacing: 0,
     children: () => (0, a.jsx)(R.Z, {

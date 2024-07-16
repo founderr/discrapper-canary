@@ -13,7 +13,7 @@ function o(e) {
   let {
 onError: t,
 onSuccess: n
-  } = null != e ? e : {}, [o, c] = s.useState(!1), [d, _] = s.useState(!1), [u, E] = s.useState(!1), [T, I] = s.useState(!1), [R, C] = s.useState(!1), [p, g] = s.useState(!1), [A, m] = s.useState(!1), [N, f] = s.useState(!1), S = o || d || u || T || p || N, h = s.useCallback(async e => {
+  } = null != e ? e : {}, [o, c] = s.useState(!1), [d, _] = s.useState(!1), [u, E] = s.useState(!1), [T, I] = s.useState(!1), [R, C] = s.useState(!1), [g, p] = s.useState(!1), [A, m] = s.useState(!1), [N, f] = s.useState(!1), S = o || d || u || T || g || N, h = s.useCallback(async e => {
 if (!S) {
   c(!0);
   try {
@@ -110,19 +110,19 @@ A,
 t,
 n
   ]), L = s.useCallback(async (e, s) => {
-if (!p) {
-  g(!0);
+if (!g) {
+  p(!0);
   try {
     await r.ZP.requestLink(e, s), null == n || n();
   } catch (n) {
     let e = new a.Hx(n);
     null == t || t(e);
   } finally {
-    g(!1);
+    p(!1);
   }
 }
   }, [
-p,
+g,
 t,
 n
   ]);
@@ -160,7 +160,7 @@ isDisconnectLoading: u,
 isCancelLoading: T,
 isGetLinkCodeLoading: R,
 isSelectTeenUserLoading: A,
-isRequestingLink: p,
+isRequestingLink: g,
 isMoreLoading: N
   };
 }

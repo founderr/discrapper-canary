@@ -14,8 +14,8 @@ var i, a = n(735250),
   T = n(431583),
   h = n(592745),
   N = n(952164),
-  p = n(768419),
-  f = n(456432),
+  f = n(768419),
+  p = n(456432),
   C = n(103575),
   g = n(789407),
   S = n(598077),
@@ -168,7 +168,7 @@ super(...e), B(this, 'state', {
     channelId: t,
     guildId: n
   } = this.props;
-  return (0, a.jsx)(f.Z, {
+  return (0, a.jsx)(p.Z, {
     guildId: null != n ? n : void 0,
     channelId: t,
     source: 'Invite Embed',
@@ -246,7 +246,7 @@ super(...e), B(this, 'state', {
 B(G, 'defaultProps', {
   isPreview: !1
 }), t.Z = r.ZP.connectStores([
-  p.Z,
+  f.Z,
   R.Z,
   M.Z,
   x.Z,
@@ -281,8 +281,8 @@ id: l
     nick: n
   };
 }),
-_ = null != t && p.Z.canPlay(t),
-E = p.Z.getSyncingWith(),
+_ = null != t && f.Z.canPlay(t),
+E = f.Z.getSyncingWith(),
 I = null != E && null != s && E.userId === s;
   return {
 analyticsLocations: n,

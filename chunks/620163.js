@@ -1,111 +1,111 @@
-s.d(t, {
+t.d(s, {
   i: function() {
 return eU;
   }
-}), s(653041);
-var n = s(735250);
-s(470079);
-var a = s(990547),
-  i = s(704215),
-  r = s(692547),
-  o = s(481060),
-  l = s(570140),
-  c = s(893776),
-  d = s(809206),
-  _ = s(230711),
-  E = s(493544),
-  u = s(579806),
-  T = s(782568),
-  I = s(758182),
-  S = s(163379),
-  N = s(703288),
-  C = s(574755),
-  m = s(425799),
-  A = s(377171),
-  h = s(621628),
-  g = s(18438),
-  O = s(778825),
-  p = s(351780),
-  R = s(231765),
-  x = s(837741),
-  M = s(804545),
-  f = s(813732),
-  D = s(398140),
-  P = s(564344),
-  L = s(977156),
-  Z = s(652380),
-  b = s(171156),
-  v = s(906467),
-  j = s(131951),
-  B = s(25990),
-  U = s(626135),
-  G = s(572004),
-  F = s(49012),
-  y = s(358085),
-  V = s(998502),
-  Y = s(392735),
-  w = s(61160),
-  k = s(604227),
-  H = s(38915),
-  W = s(498639),
-  K = s(748717),
-  z = s(419636),
-  Q = s(35426),
-  X = s(799071),
-  q = s(601433),
-  J = s(154022),
-  $ = s(393681),
-  ee = s(309739),
-  et = s(64914),
-  es = s(501348),
-  en = s(795594),
-  ea = s(443702),
-  ei = s(920914),
-  er = s(177508),
-  eo = s(956699),
-  el = s(54942),
-  ec = s(15780),
-  ed = s(293389),
-  e_ = s(88624),
-  eE = s(387747),
-  eu = s(389650),
-  eT = s(649157),
-  eI = s(593648),
-  eS = s(327885),
-  eN = s(595242),
-  eC = s(301121),
-  em = s(463153),
-  eA = s(36192),
-  eh = s(338345),
-  eg = s(400287),
-  eO = s(554042),
-  ep = s(200645),
-  eR = s(287490),
-  ex = s(168308),
-  eM = s(277329),
-  ef = s(674116),
-  eD = s(726985),
-  eP = s(981631),
-  eL = s(46140),
-  eZ = s(65154),
-  eb = s(689938),
-  ev = s(82388);
+}), t(653041);
+var n = t(735250);
+t(470079);
+var a = t(990547),
+  i = t(704215),
+  r = t(692547),
+  o = t(481060),
+  l = t(570140),
+  c = t(893776),
+  d = t(809206),
+  _ = t(230711),
+  E = t(493544),
+  u = t(579806),
+  T = t(782568),
+  I = t(758182),
+  S = t(163379),
+  N = t(703288),
+  C = t(574755),
+  m = t(425799),
+  A = t(377171),
+  h = t(621628),
+  g = t(18438),
+  O = t(778825),
+  p = t(351780),
+  R = t(231765),
+  x = t(837741),
+  M = t(804545),
+  f = t(813732),
+  D = t(398140),
+  P = t(564344),
+  L = t(977156),
+  Z = t(652380),
+  b = t(171156),
+  v = t(906467),
+  j = t(131951),
+  B = t(25990),
+  U = t(626135),
+  G = t(572004),
+  F = t(49012),
+  y = t(358085),
+  V = t(998502),
+  Y = t(392735),
+  w = t(61160),
+  k = t(604227),
+  H = t(38915),
+  W = t(498639),
+  K = t(748717),
+  z = t(419636),
+  Q = t(35426),
+  X = t(799071),
+  q = t(601433),
+  J = t(154022),
+  $ = t(393681),
+  ee = t(309739),
+  es = t(64914),
+  et = t(501348),
+  en = t(795594),
+  ea = t(443702),
+  ei = t(920914),
+  er = t(177508),
+  eo = t(956699),
+  el = t(54942),
+  ec = t(15780),
+  ed = t(293389),
+  e_ = t(88624),
+  eE = t(387747),
+  eu = t(389650),
+  eT = t(649157),
+  eI = t(593648),
+  eS = t(327885),
+  eN = t(595242),
+  eC = t(301121),
+  em = t(463153),
+  eA = t(36192),
+  eh = t(338345),
+  eg = t(400287),
+  eO = t(554042),
+  ep = t(200645),
+  eR = t(287490),
+  ex = t(168308),
+  eM = t(277329),
+  ef = t(674116),
+  eD = t(726985),
+  eP = t(981631),
+  eL = t(46140),
+  eZ = t(65154),
+  eb = t(689938),
+  ev = t(82388);
 let ej = () => {
 let e = 'Settings list view',
-  t = [
+  s = [
     i.z.CLIENT_THEMES_SETTINGS_BADGE,
     i.z.DEKSTOP_CUSTOM_APP_ICON_BADGE
   ];
 return x.F.getCurrentConfig({
   location: e
-}).enabled && t.push(i.z.BRAND_REFRESH_NEW_BADGE), M.n.getCurrentConfig({
+}).enabled && s.push(i.z.BRAND_REFRESH_NEW_BADGE), M.n.getCurrentConfig({
   location: e
-}).enabled && t.push(i.z.PRIDE_ICONS_APPEARANCE_BADGE), t;
+}).enabled && s.push(i.z.PRIDE_ICONS_APPEARANCE_BADGE), s;
   },
   eB = ep.Z,
   eU = e => {
 let {
-  unseenGiftCount: t,
+  unseenGiftCount: s,
   showPrepaidPaymentPastDueWarning: x,
   impressionSource: M,
   numOfPendingFamilyRequests: eU,
@@ -559,7 +559,7 @@ return Object.freeze({
     label: eb.Z.Messages.GIFT_INVENTORY,
     element: eE.Z,
     ariaLabel: eb.Z.Messages.GIFT_INVENTORY,
-    badgeCount: t
+    badgeCount: s
   },
   [eD.s6.GIFT_NITRO]: {
     section: eP.oAB.INVENTORY,
@@ -613,7 +613,7 @@ return Object.freeze({
     searchableTitles: [eb.Z.Messages.APPEARANCE],
     label: eb.Z.Messages.APPEARANCE,
     ariaLabel: eb.Z.Messages.APPEARANCE,
-    element: es.Z,
+    element: et.Z,
     newIndicator: (0, n.jsx)(o.PremiumBadge, {
       text: eb.Z.Messages.NEW
     }),
@@ -905,7 +905,7 @@ return Object.freeze({
     predicate: () => p.Z.settingsVisible,
     icon: (0, n.jsx)('img', {
       alt: '',
-      src: s(348621),
+      src: t(348621),
       className: ev.poggermodeIcon
     })
   },
@@ -1191,8 +1191,8 @@ return Object.freeze({
     searchableTitles: [eb.Z.Messages.HIDE_WINDOW_FROM_STREAM_LABEL],
     parent: eD.s6.STREAMER_MODE,
     predicate: () => {
-      var e, t, s;
-      return null !== (s = null === u.Z || void 0 === u.Z ? void 0 : null === (t = u.Z.window) || void 0 === t ? void 0 : null === (e = t.supportsContentProtection) || void 0 === e ? void 0 : e.call(t)) && void 0 !== s && s;
+      var e, s, t;
+      return null !== (t = null === u.Z || void 0 === u.Z ? void 0 : null === (s = u.Z.window) || void 0 === s ? void 0 : null === (e = s.supportsContentProtection) || void 0 === e ? void 0 : e.call(s)) && void 0 !== t && t;
     }
   },
   [eD.s6.SPEED_TEST]: {
@@ -1209,7 +1209,7 @@ return Object.freeze({
     searchableTitles: [eb.Z.Messages.SETTINGS_ADVANCED],
     label: eb.Z.Messages.SETTINGS_ADVANCED,
     ariaLabel: eb.Z.Messages.SETTINGS_ADVANCED,
-    element: et.Z
+    element: es.Z
   },
   [eD.s6.SETTINGS_ADVANCED_DEVELOPER_MODE]: {
     section: eP.oAB.ADVANCED,

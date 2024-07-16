@@ -3,8 +3,8 @@ n.d(t, {
 return O;
   }
 }), n(47120);
-var i, a = n(735250),
-  s = n(470079),
+var i, s = n(735250),
+  a = n(470079),
   r = n(120356),
   l = n.n(r),
   o = n(392711),
@@ -41,22 +41,22 @@ let {
   isSelected: t,
   onCategoryChange: n,
   categoryId: i,
-  name: s,
+  name: a,
   count: r
 } = e;
-return (0, a.jsx)(u.Clickable, {
+return (0, s.jsx)(u.Clickable, {
   onClick: () => n(i),
   className: l()(N.categoryPill, {
     [N.selected]: t
   }),
-  children: (0, a.jsx)(u.Text, {
+  children: (0, s.jsx)(u.Text, {
     className: N.categoryLabel,
     variant: 'text-sm/normal',
-    children: null != r ? ''.concat(s, ' (').concat(r, ')') : s
+    children: null != r ? ''.concat(a, ' (').concat(r, ')') : a
   })
 });
   };
-class L extends(i = s.PureComponent) {
+class L extends(i = a.PureComponent) {
   componentDidMount() {
 let {
   loadId: e,
@@ -64,19 +64,19 @@ let {
   currentCategoryId: n
 } = this.props, {
   searchId: i,
-  query: a,
-  isHandlingTagSearch: s
+  query: s,
+  isHandlingTagSearch: a
 } = this.state, r = this.context;
-if (null == E.ZP.getSearchIndex() && _.Ue(), I.S.subscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.subscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput), a.length > 0) {
+if (null == E.ZP.getSearchIndex() && _.Ue(), I.S.subscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.subscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
   let l = n !== S.Hk ? n : null;
   v({
     loadId: e,
     searchId: i,
-    query: a,
+    query: s,
     guildResults: t.guilds,
     analyticsContext: r,
     categoryId: l,
-    isTagSearch: s
+    isTagSearch: a
   });
 }
   }
@@ -84,20 +84,20 @@ if (null == E.ZP.getSearchIndex() && _.Ue(), I.S.subscribe(f.CkL.GLOBAL_CLIPBOAR
 let {
   loadId: n,
   isFetchingSearch: i,
-  searchResults: a,
-  currentCategoryId: s,
+  searchResults: s,
+  currentCategoryId: a,
   mostRecentQuery: r
 } = this.props, {
   isSearching: l,
   searchId: o,
   query: c,
   isHandlingTagSearch: d
-} = this.state, u = this.context, _ = e.isFetchingSearch && !i, E = s !== S.Hk ? s : null;
+} = this.state, u = this.context, _ = e.isFetchingSearch && !i, E = a !== S.Hk ? a : null;
 (l || d) && _ && (v({
   loadId: n,
   searchId: o,
   query: c,
-  guildResults: a.guilds,
+  guildResults: s.guilds,
   analyticsContext: u,
   categoryId: E,
   isTagSearch: d
@@ -130,7 +130,7 @@ let i = t.map(e => {
     value: t
   };
 });
-return (0, a.jsx)(u.SingleSelect, {
+return (0, s.jsx)(u.SingleSelect, {
   className: N.languageSelector,
   options: i,
   value: null !== (e = null == n ? void 0 : n.name) && void 0 !== e ? e : '',
@@ -143,11 +143,11 @@ let {
   currentCategoryId: e,
   countsByCategory: t
 } = this.props;
-return (0, a.jsx)('div', {
+return (0, s.jsx)('div', {
   className: N.categories,
   children: null == t ? void 0 : t.map(t => {
     let [n, i] = t;
-    return (0, a.jsx)(Z, {
+    return (0, s.jsx)(Z, {
       categoryId: n,
       name: n === S.Hk ? C.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
       onCategoryChange: this.handleCategoryChange,
@@ -165,16 +165,16 @@ let {
   placeholder: n,
   isSearchPage: i
 } = this.props;
-return (0, a.jsxs)(a.Fragment, {
+return (0, s.jsxs)(s.Fragment, {
   children: [
-    (0, a.jsxs)('div', {
+    (0, s.jsxs)('div', {
       className: l()(N.container, {
         [N.searchPage]: i
       }),
       children: [
-        (0, a.jsx)('div', {
+        (0, s.jsx)('div', {
           className: N.search,
-          children: (0, a.jsx)(u.SearchBox, {
+          children: (0, s.jsx)(u.SearchBox, {
             ref: this._searchRef,
             searchTerm: e,
             className: i ? void 0 : N.searchBox,
@@ -200,10 +200,10 @@ return (0, a.jsxs)(a.Fragment, {
 });
   }
   constructor(e) {
-super(e), A(this, '_searchRef', s.createRef()), A(this, 'canSearch', e => e.trim().length >= 2 && !(0, g.x)(e)), A(this, 'doSearch', (e, t, n, i) => {
-  var a;
+super(e), A(this, '_searchRef', a.createRef()), A(this, 'canSearch', e => e.trim().length >= 2 && !(0, g.x)(e)), A(this, 'doSearch', (e, t, n, i) => {
+  var s;
   let {
-    defaultLanguage: s,
+    defaultLanguage: a,
     currentCategoryId: r
   } = this.props, {
     query: l,
@@ -217,7 +217,7 @@ super(e), A(this, '_searchRef', s.createRef()), A(this, 'canSearch', e => e.trim
     isSearching: !0
   }), _.bR(l, {
     categoryId: null == n ? r : n,
-    preferredLocale: null !== (a = null == o ? void 0 : o.code) && void 0 !== a ? a : s.code,
+    preferredLocale: null !== (s = null == o ? void 0 : o.code) && void 0 !== s ? s : a.code,
     offset: e,
     length: t,
     filters: c
@@ -235,9 +235,9 @@ super(e), A(this, '_searchRef', s.createRef()), A(this, 'canSearch', e => e.trim
     queryHasChanged: n
   } = this.state, {
     loadId: i,
-    currentCategoryId: a
-  } = this.props, s = a !== S.Hk ? a : null;
-  this.canSearch(t) && n && e.charCode === f.yXg.ENTER ? (m.tI(i, s), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === f.yXg.ENTER && this.setState({
+    currentCategoryId: s
+  } = this.props, a = s !== S.Hk ? s : null;
+  this.canSearch(t) && n && e.charCode === f.yXg.ENTER ? (m.tI(i, a), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === f.yXg.ENTER && this.setState({
     isSearching: !1
   });
 }), A(this, 'handleQueryChanged', e => {
@@ -291,7 +291,7 @@ super(e), A(this, '_searchRef', s.createRef()), A(this, 'canSearch', e => e.trim
 function O(e) {
   let t = (0, d.e7)([T.Z], () => T.Z.getDiscoveryCategories(), [], T.j),
 n = (0, d.e7)([E.ZP], () => E.ZP.getTopCategoryCounts(e.mostRecentQuery));
-  return (0, a.jsx)(L, {
+  return (0, s.jsx)(L, {
 ...e,
 categories: t,
 countsByCategory: n

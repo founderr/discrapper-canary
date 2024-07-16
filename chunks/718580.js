@@ -9,8 +9,8 @@ return m;
 var r = n(735250),
   i = n(470079),
   a = n(338545),
-  o = n(990547),
-  s = n(873546),
+  s = n(990547),
+  o = n(873546),
   l = n(186325),
   u = n(481060),
   c = n(393238),
@@ -70,7 +70,7 @@ b = {
   location_stack: v
 };
   D({
-type: o.ImpressionTypes.MODAL,
+type: s.ImpressionTypes.MODAL,
 name: L,
 properties: b,
 _stackContext: {
@@ -113,12 +113,12 @@ onRest: (e, t) => {
   }, null == R ? 'animate-never' : 'respect-motion-settings'), k = (0, f.Z)(C), {
 width: B,
 centered: F = !0
-  } = A, V = s.tq ? '100%' : x.width.to(e => Math.round(e)), H = s.tq ? '100%' : x.height.to(e => Math.round(e)), Z = s.tq ? {} : F ? {
+  } = A, V = o.tq ? '100%' : x.width.to(e => Math.round(e)), H = o.tq ? '100%' : x.height.to(e => Math.round(e)), Z = o.tq ? {} : F ? {
 transform: 'translate3d(0, -50%, 0) scale(1.0, 1.0)',
 top: '50%'
   } : {
 transform: 'scale(1.0, 1.0)'
-  }, Y = s.tq ? {} : {
+  }, Y = o.tq ? {} : {
 overflow: null !== (m = A.overflow) && void 0 !== m ? m : 'hidden'
   };
   return (0, r.jsx)(a.animated.div, {
@@ -131,7 +131,7 @@ style: {
 children: G((e, t, n) => {
   let {
     key: i
-  } = n, o = {
+  } = n, s = {
     opacity: e.value.to(e => 1 - Math.abs(e))
   };
   return (0, r.jsx)(a.animated.div, {
@@ -141,12 +141,12 @@ children: G((e, t, n) => {
       display: g,
       flexDirection: 'column',
       backfaceVisibility: 'hidden',
-      width: s.tq ? '100%' : B,
+      width: o.tq ? '100%' : B,
       ...Z,
-      ...y.enabled ? o : {
+      ...y.enabled ? s : {
         left: e.value.to(p('left', k)),
         right: e.value.to(p('right', k)),
-        ...S && o
+        ...S && s
       }
     },
     children: N[t].children

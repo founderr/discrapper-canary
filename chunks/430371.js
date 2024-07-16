@@ -5,8 +5,8 @@ return Z;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(338545),
   o = n(481060),
   c = n(110924),
@@ -30,7 +30,7 @@ let v = 16 / 9,
 function Z(e) {
   let t, {
   onSelectParticipant: n,
-  onContextMenuParticipant: l,
+  onContextMenuParticipant: s,
   onFullscreenParticipant: Z,
   participants: A,
   filteredParticipants: M,
@@ -63,7 +63,7 @@ en = !J && (!et || q),
 ei = (0, _.Z)(en, 100),
 ea = 0;
   (q || $) && (ea += 72), q && !$ && (en ? ea += 48 : ea += 8), $ && (ea += 0.5 * S + 8);
-  let el = a.useMemo(() => q && X ? D / (k - 2 * ea) : Q && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : v, [
+  let es = a.useMemo(() => q && X ? D / (k - 2 * ea) : Q && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : v, [
   Q,
   V,
   q,
@@ -72,10 +72,10 @@ ea = 0;
   ea,
   X
 ]),
-es = k - 2 * ea,
-er = q && X ? D : es * el,
-eo = Math.floor(Math.min(D, er) / el),
-ec = k > D / el + 72 + S + 8;
+el = k - 2 * ea,
+er = q && X ? D : el * es,
+eo = Math.floor(Math.min(D, er) / es),
+ec = k > D / es + 72 + S + 8;
   t = $ || q ? $ ? -16 : -8 : 40 + Math.max(0, 72 - (k - eo) / 2), a.useEffect(() => {
 let e = setTimeout(() => {
   z(!1);
@@ -145,7 +145,7 @@ ef = $ || y ? [] : (0, C.n3)(A, L, G),
   participantTileWidth: eC
 } = (0, g.ZB)(D, M);
   return (0, i.jsxs)('div', {
-className: s()(N.root, T.flexCenter, O),
+className: l()(N.root, T.flexCenter, O),
 children: [
   (0, i.jsxs)('div', {
     className: N.tileWrapper,
@@ -165,20 +165,20 @@ children: [
             },
             className: N.videoWrapper,
             children: (0, i.jsx)('div', {
-              className: s()(T.videoSizer),
+              className: l()(T.videoSizer),
               style: {
-                aspectRatio: el
+                aspectRatio: es
               },
               children: em((e, t, a) => {
                 let {
-                  key: s
+                  key: l
                 } = a;
                 return null != t ? (0, i.jsx)(r.animated.div, {
                   className: T.videoWrapperAnimated,
                   style: e,
                   children: (0, i.jsx)(f.ZP, {
                     focused: !0,
-                    noBorder: er >= D || es >= k,
+                    noBorder: er >= D || el >= k,
                     channel: j,
                     className: T.focusedVideo,
                     videoComponent: H,
@@ -187,17 +187,17 @@ children: [
                     participant: t,
                     onClick: n,
                     onDoubleClick: Z,
-                    onContextMenu: l,
+                    onContextMenu: s,
                     onVideoResize: e_,
                     inCall: R,
                     inPopout: B
                   })
-                }, s) : null;
+                }, l) : null;
               })
             })
           }),
           en ? (0, i.jsx)(r.animated.div, {
-            className: s()(N.actionRow, {
+            className: l()(N.actionRow, {
               [N.idle]: w
             }),
             style: {
@@ -221,7 +221,7 @@ children: [
         children: (0, i.jsx)(g.ZP, {
           channel: j,
           onClick: n,
-          onContextMenu: l,
+          onContextMenu: s,
           onDoubleClick: Z,
           participants: eE,
           participantTileWidth: eC,
@@ -234,7 +234,7 @@ children: [
     ]
   }),
   ef.length > 0 ? (0, i.jsx)(E.Z, {
-    onContextMenuParticipant: l,
+    onContextMenuParticipant: s,
     width: D,
     height: k,
     channel: j,

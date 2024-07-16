@@ -15,8 +15,8 @@ return I;
 var r = n(866442),
   i = n(726542),
   a = n(503438),
-  o = n(802856),
-  s = n(420660),
+  s = n(802856),
+  o = n(420660),
   l = n(168631),
   u = n(621853),
   c = n(981631),
@@ -44,19 +44,19 @@ return {
 let t = E(e);
 return t.hours > 0 ? ''.concat(t.hours, ' hours') : t.minutes > 0 ? ''.concat(t.minutes, ' minutes') : ''.concat(t.seconds, ' seconds');
   },
-  p = e => (0, a.Z)(e) ? i.Z.get(c.ABu.SPOTIFY) : (0, o.Z)(e) ? i.Z.get(c.ABu.XBOX) : null != e.platform && [
+  p = e => (0, a.Z)(e) ? i.Z.get(c.ABu.SPOTIFY) : (0, s.Z)(e) ? i.Z.get(c.ABu.XBOX) : null != e.platform && [
 c.M7m.PS4,
 c.M7m.PS5
   ].includes(e.platform) ? i.Z.get(c.ABu.PLAYSTATION) : e.name === i.Z.get(c.ABu.LEAGUE_OF_LEGENDS).name ? i.Z.get(c.ABu.LEAGUE_OF_LEGENDS) : void(e.type === c.IIU.PLAYING),
   m = (e, t) => {
 var n;
 let i = u.Z.getUserProfile(e.id),
-  [a, o] = null !== (n = null == i ? void 0 : i.themeColors) && void 0 !== n ? n : [],
-  s = (0, l.V3)(a),
-  c = null != o ? (0, r.Rf)(o) : t;
+  [a, s] = null !== (n = null == i ? void 0 : i.themeColors) && void 0 !== n ? n : [],
+  o = (0, l.V3)(a),
+  c = null != s ? (0, r.Rf)(s) : t;
 return {
   color: c,
-  theme: c === t ? 'dark' : s
+  theme: c === t ? 'dark' : o
 };
   },
   I = (e, t) => (0, a.Z)(t) ? d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
@@ -72,7 +72,7 @@ activity: t.name
   }) : t.type === c.IIU.LISTENING ? d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
 username: e.username,
 activity: t.name
-  }) : (0, s.Z)(t) || t.type === c.IIU.STREAMING ? d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING.format({
+  }) : (0, o.Z)(t) || t.type === c.IIU.STREAMING ? d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING.format({
 username: e.username,
 activity: t.name
   }) : d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE.format({

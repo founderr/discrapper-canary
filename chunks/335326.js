@@ -8,8 +8,8 @@ return _;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(835473),
+  s = n(442837),
+  l = n(835473),
   r = n(594174),
   o = n(81063),
   c = n(297781),
@@ -24,9 +24,9 @@ c.Rg
   ],
   f = e => {
 var t;
-let n = (0, s.q)(e.extra.application_id),
+let n = (0, l.q)(e.extra.application_id),
   i = null == n ? void 0 : n.getIconURL(128),
-  a = (0, l.e7)([r.default], () => r.default.getUser(e.author_id)),
+  a = (0, s.e7)([r.default], () => r.default.getUser(e.author_id)),
   c = (0, o.getAssetImage)(e.extra.application_id, e.extra.media_assets_large_image, [
     h.Si.LARGE,
     h.Si.LARGE
@@ -47,7 +47,7 @@ entry: t,
 channel: n,
 selected: a
   } = e, {
-mediaImageSrc: l
+mediaImageSrc: s
   } = f(t);
   return (0, i.jsxs)(d.Zb, {
 selected: a,
@@ -73,7 +73,7 @@ children: [
     ]
   }),
   (0, i.jsx)(u.f, {
-    src: l,
+    src: s,
     size: 48,
     className: m.thumbnail,
     alt: t.extra.media_title

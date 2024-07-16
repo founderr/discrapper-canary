@@ -4,9 +4,9 @@ return L;
   }
 }), n(47120);
 var s = n(735250),
-  o = n(470079),
-  a = n(392711),
-  l = n.n(a),
+  a = n(470079),
+  o = n(392711),
+  l = n.n(o),
   r = n(481060),
   i = n(110924),
   E = n(572539),
@@ -36,23 +36,23 @@ function L(e) {
   let {
 header: t,
 body: n,
-problems: a,
+problems: o,
 transitionState: I,
 feedbackProblems: L = [],
 otherKey: T,
 hasCloseButton: x,
 onSubmit: D,
 onClose: h,
-canDismissForever: p = !0,
-showHelpdeskLink: S = !0
-  } = e, Z = (0, i.Z)(a), [B, M] = o.useState(!1), [R, O] = o.useState(null), [j, g] = o.useState(l().shuffle(a)), [U, v] = o.useState(''), V = (0, d.Dt)(), F = (0, _.Z)(B), G = (0, _.Z)(R), k = (0, _.Z)(D), K = (0, _.Z)(U), y = null != R && L.includes(R);
-  return o.useEffect(() => {
-!l().isEqual(Z, a) && g((0, C.B)(a, T));
+canDismissForever: S = !0,
+showHelpdeskLink: Z = !0
+  } = e, p = (0, i.Z)(o), [B, M] = a.useState(!1), [R, O] = a.useState(null), [j, g] = a.useState(l().shuffle(o)), [U, v] = a.useState(''), V = (0, d.Dt)(), F = (0, _.Z)(B), G = (0, _.Z)(R), k = (0, _.Z)(D), K = (0, _.Z)(U), y = null != R && L.includes(R);
+  return a.useEffect(() => {
+!l().isEqual(p, o) && g((0, C.B)(o, T));
   }, [
-a,
-Z,
+o,
+p,
 T
-  ]), o.useEffect(() => () => {
+  ]), a.useEffect(() => () => {
 k.current({
   problem: G.current,
   dontShowAgain: F.current,
@@ -111,12 +111,12 @@ children: [
             maxLength: f.iF,
             onChange: v
           }),
-          S ? (0, s.jsx)(N, {}) : null
+          Z ? (0, s.jsx)(N, {}) : null
         ]
       }) : null
     ]
   }),
-  p || y ? (0, s.jsx)(r.ModalFooter, {
+  S || y ? (0, s.jsx)(r.ModalFooter, {
     className: A.footer,
     direction: c.Z.Direction.HORIZONTAL,
     children: y ? (0, s.jsxs)(s.Fragment, {
@@ -136,7 +136,7 @@ children: [
           children: m.Z.Messages.SUBMIT
         })
       ]
-    }) : p ? (0, s.jsx)(r.Checkbox, {
+    }) : S ? (0, s.jsx)(r.Checkbox, {
       size: 18,
       type: r.Checkbox.Types.INVERTED,
       value: B,

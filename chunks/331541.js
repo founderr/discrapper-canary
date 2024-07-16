@@ -4,9 +4,9 @@ return ei;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(722770),
   o = n(873546),
   c = n(442837),
@@ -80,19 +80,19 @@ label: () => X.Z.Messages.DURATION_FOREVER
   }
 ];
 
-function et(e, t, n, a) {
-  let s = (0, i.jsx)(i.Fragment, {
-children: ee.map(a => {
+function et(e, t, n, s) {
+  let a = (0, i.jsx)(i.Fragment, {
+children: ee.map(s => {
   let {
-    duration: s,
+    duration: a,
     label: r
-  } = a;
+  } = s;
   return (0, i.jsx)(d.MenuItem, {
-    id: ''.concat(e, '-').concat(s),
+    id: ''.concat(e, '-').concat(a),
     label: r(),
-    action: () => (0, W.Z)(e, t, n, s),
+    action: () => (0, W.Z)(e, t, n, a),
     dontCloseOnAction: !0
-  }, s);
+  }, a);
 })
   });
   return (0, i.jsx)(d.MenuItem, {
@@ -117,20 +117,20 @@ label: t => {
         className: J.status,
         children: (0, Y.u5)(e)
       }),
-      null != a && (0, i.jsx)('div', {
+      null != s && (0, i.jsx)('div', {
         className: J.description,
-        children: a
+        children: s
       })
     ]
   });
 },
 action: () => (0, W.Z)(e, t, n),
 dontCloseOnAction: !0,
-children: e !== q.Skl.ONLINE ? s : void 0
+children: e !== q.Skl.ONLINE ? a : void 0
   });
 }
 
-function en(e, t, n, a) {
+function en(e, t, n, s) {
   return (0, i.jsx)(d.MenuItem, {
 id: e,
 keepItemStyles: !0,
@@ -151,9 +151,9 @@ render: t => {
         className: J.status,
         children: (0, Y.u5)(e)
       }),
-      null != a && (0, i.jsx)('div', {
+      null != s && (0, i.jsx)('div', {
         className: J.description,
-        children: a
+        children: s
       })
     ]
   });
@@ -167,26 +167,26 @@ function ei(e) {
   let {
 currentUser: t,
 onClose: n,
-setPopoutRef: s
+setPopoutRef: a
   } = e, V = __OVERLAY__, W = (0, Z.ZP)(t.id), ei = (0, u.O)(), {
-analyticsLocations: ea
-  } = (0, I.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT), es = (0, A.Q1)({
+analyticsLocations: es
+  } = (0, I.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT), ea = (0, A.Q1)({
 layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
 userId: t.id
   }), er = (0, m.a)(), el = (0, c.e7)([B.Z], () => B.Z.getStatus(t.id)), eo = function(e, t) {
 let n = T.Y.useExperiment({
     location: 'account popout'
   }).expiringStatus,
-  a = w.Cr.useSetting(),
-  s = (0, S.p)(),
+  s = w.Cr.useSetting(),
+  a = (0, S.p)(),
   r = f.e.useExperiment({
     location: 'account popout'
-  }).allowQuietMode || s,
+  }).allowQuietMode || a,
   o = w.fv.useSetting(),
   c = e === q.Skl.DND,
   u = t => {
-    let n = null != a && '0' !== a ? X.Z.Messages.STATUS_UNTIL.format({
-      endTime: new Date(Number(a)).toLocaleString(X.Z.getLocale(), {
+    let n = null != s && '0' !== s ? X.Z.Messages.STATUS_UNTIL.format({
+      endTime: new Date(Number(s)).toLocaleString(X.Z.getLocale(), {
         month: 'numeric',
         day: 'numeric',
         hour: 'numeric',
@@ -208,11 +208,11 @@ let n = T.Y.useExperiment({
     children: ee.map(t => {
       let {
         duration: n,
-        label: a
+        label: s
       } = t;
       return (0, i.jsx)(d.MenuItem, {
         id: ''.concat(e, '-').concat(n),
-        label: a(),
+        label: s(),
         action: () => {
           (0, S.oW)(!0, n);
         },
@@ -228,7 +228,7 @@ return (0, i.jsxs)(i.Fragment, {
     n ? et(q.Skl.DND, e, t, u(q.Skl.DND)) : en(q.Skl.DND, e, t, u(q.Skl.DND)),
     n ? et(q.Skl.INVISIBLE, e, t, u(q.Skl.INVISIBLE)) : en(q.Skl.INVISIBLE, e, t, u(q.Skl.INVISIBLE)),
     (0, i.jsx)(d.MenuSeparator, {}, 'menu-separator-statuses'),
-    r || s ? (0, i.jsx)(d.MenuItem, {
+    r || a ? (0, i.jsx)(d.MenuItem, {
       id: 'quiet-mode',
       'aria-label': 'focus mode',
       className: J.expiringStatusMenuItem,
@@ -247,14 +247,14 @@ return (0, i.jsxs)(i.Fragment, {
             children: [
               X.Z.Messages.FOCUS_MODE_TITLE,
               (0, i.jsx)(d.TextBadge, {
-                text: s ? X.Z.Messages.FOCUS_MODE_BADGE_ON : c ? X.Z.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : X.Z.Messages.FOCUS_MODE_BADGE_OFF,
-                color: s ? l.Z.BRAND_500 : c ? l.Z.RED_400 : l.Z.PRIMARY_500
+                text: a ? X.Z.Messages.FOCUS_MODE_BADGE_ON : c ? X.Z.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : X.Z.Messages.FOCUS_MODE_BADGE_OFF,
+                color: a ? l.Z.BRAND_500 : c ? l.Z.RED_400 : l.Z.PRIMARY_500
               })
             ]
           }),
           (0, i.jsx)('div', {
             className: J.description,
-            children: s && null != o && '0' !== o ? X.Z.Messages.STATUS_UNTIL.format({
+            children: a && null != o && '0' !== o ? X.Z.Messages.STATUS_UNTIL.format({
               endTime: new Date(Number(o)).toLocaleString(X.Z.getLocale(), {
                 month: 'numeric',
                 day: 'numeric',
@@ -266,7 +266,7 @@ return (0, i.jsxs)(i.Fragment, {
         ]
       }),
       action: () => {
-        (0, S.oW)(!s);
+        (0, S.oW)(!a);
       },
       dontCloseOnAction: !0,
       children: _
@@ -276,15 +276,15 @@ return (0, i.jsxs)(i.Fragment, {
   }(el, ei), {
 ref: ec
   } = (0, _.Z)(), ed = (0, E.Z)(ec);
-  a.useEffect(() => {
-null == s || s(ec.current);
+  s.useEffect(() => {
+null == a || a(ec.current);
   }, [
 ec,
-s
+a
   ]);
   let eu = e => {
   null == n || n(), (0, U.openUserProfileModal)({
-    sourceAnalyticsLocations: ea,
+    sourceAnalyticsLocations: es,
     userId: t.id,
     ...e
   });
@@ -295,7 +295,7 @@ s
   location: 'AccountProfilePopout'
 }),
 eE = (0, C.Z)({
-  analyticsLocations: ea
+  analyticsLocations: es
 }),
 eh = (0, S.p)(),
 eI = el === q.Skl.DND,
@@ -303,8 +303,8 @@ em = (0, z.g)(),
 eg = (0, g.o)({
   focusedClassName: J.menuItemFocused,
   customStatus: er,
-  analyticsLocations: ea,
-  trackUserProfileAction: es
+  analyticsLocations: es,
+  trackUserProfileAction: ea
 }),
 ep = (0, p.Z)({
   id: t.id,
@@ -314,7 +314,7 @@ ep = (0, p.Z)({
 }),
 eT = (0, c.e7)([H.Z], () => H.Z.hidePersonalInformation);
   return (0, i.jsx)(I.Gt, {
-value: ea,
+value: es,
 children: (0, i.jsx)(A.Mt, {
   layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
   userId: t.id,
@@ -417,9 +417,9 @@ children: (0, i.jsx)(A.Mt, {
                           icon: d.PencilIcon,
                           label: X.Z.Messages.EDIT_PROFILE,
                           action: () => {
-                            es({
+                            ea({
                               action: 'EDIT_PROFILE',
-                              analyticsLocations: ea
+                              analyticsLocations: es
                             }), eE();
                           },
                           showIconFirst: !0,
@@ -446,9 +446,9 @@ children: (0, i.jsx)(A.Mt, {
                           focusedClassName: J.menuItemFocused,
                           subMenuIconClassName: J.subMenuIcon,
                           action: o.tq ? function() {
-                            es({
+                            ea({
                               action: 'PRESS_SET_STATUS',
-                              analyticsLocations: ea
+                              analyticsLocations: es
                             }), (0, d.openModalLazy)(() => new Promise(e => {
                               e(e => (0, i.jsx)(d.ModalRoot, {
                                 ...e,
@@ -509,9 +509,9 @@ children: (0, i.jsx)(A.Mt, {
                           icon: d.UserCircleIcon,
                           showIconFirst: !0,
                           action: () => {
-                            es({
+                            ea({
                               action: 'PRESS_SWITCH_ACCOUNTS',
-                              analyticsLocations: ea
+                              analyticsLocations: es
                             }), (0, K.Z)();
                           },
                           children: em

@@ -1,6 +1,6 @@
 let i;
 n(47120), n(724458), n(653041);
-var a, l, s, r, o = n(392711),
+var a, s, l, r, o = n(392711),
   c = n.n(o),
   d = n(442837),
   u = n(570140),
@@ -62,9 +62,9 @@ let e = x.Z.getFrequentlyWithoutFetchingLatest().filter(e => e instanceof E.mn &
 return e.forEach(e => {
   let i = x.Z.getScoreWithoutFetchingLatest(e.id),
     a = e.getRecipientId(),
-    l = T.Z.isFriend(a) ? 0.2 : 0,
-    s = null != I.Z.getDMFromUserId(a) ? 0.1 : 0;
-  n[a] = 1 + i / t + l + s;
+    s = T.Z.isFriend(a) ? 0.2 : 0,
+    l = null != I.Z.getDMFromUserId(a) ? 0.1 : 0;
+  n[a] = 1 + i / t + s + l;
 }), n;
   }()), !1;
 }
@@ -82,17 +82,17 @@ location: 'dm_store'
   }, {
 autoTrackExposure: !1
   }).useV2 ? function(e, t) {
-var n, i, a, l;
-let s = null !== (a = null === (n = f.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.dmProbability) && void 0 !== a ? a : 0;
-return (null !== (l = null === (i = f.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.dmProbability) && void 0 !== l ? l : 0) - s;
+var n, i, a, s;
+let l = null !== (a = null === (n = f.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.dmProbability) && void 0 !== a ? a : 0;
+return (null !== (s = null === (i = f.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.dmProbability) && void 0 !== s ? s : 0) - l;
   }(e, t) : m.Z.getCurrentConfig({
 location: 'dm_store'
   }, {
 autoTrackExposure: !1
   }).useV1 ? function(e, t) {
-var n, i, a, l;
-let s = null !== (a = null === (n = _.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== a ? a : 0;
-return (null !== (l = null === (i = _.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== l ? l : 0) - s;
+var n, i, a, s;
+let l = null !== (a = null === (n = _.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== a ? a : 0;
+return (null !== (s = null === (i = _.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== s ? s : 0) - l;
   }(e, t) : (0, C._I)(g.ZP.getName(e.user).toLocaleLowerCase()).localeCompare((0, C._I)(g.ZP.getName(t.user).toLocaleLowerCase()));
 }
 
@@ -159,12 +159,12 @@ return {
 };
   }
 }
-r = 'PrivateChannelRecipientsInviteStore', (s = 'displayName') in(l = G) ? Object.defineProperty(l, s, {
+r = 'PrivateChannelRecipientsInviteStore', (l = 'displayName') in(s = G) ? Object.defineProperty(s, l, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[s] = r;
+}) : s[l] = r;
 let V = new G(u.Z, {
   CONNECTION_OPEN: function() {
 L();

@@ -1,36 +1,36 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return S;
   }
-}), s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(442837),
-  r = s(481060),
-  o = s(401430),
-  l = s(921801),
-  c = s(695103),
-  d = s(998502),
-  _ = s(695346),
-  E = s(399970),
-  u = s(726985),
-  T = s(981631),
-  I = s(689938);
+}), t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(442837),
+  r = t(481060),
+  o = t(401430),
+  l = t(921801),
+  c = t(695103),
+  d = t(998502),
+  _ = t(695346),
+  E = t(399970),
+  u = t(726985),
+  T = t(981631),
+  I = t(689938);
 
 function S() {
-  let [e] = a.useState(() => d.ZP.getEnableHardwareAcceleration()), t = _.bm.useSetting(), s = _.Sb.useSetting(), S = (0, i.e7)([c.Z], () => c.Z.testModeApplicationId), N = a.useCallback(e => {
+  let [e] = a.useState(() => d.ZP.getEnableHardwareAcceleration()), s = _.bm.useSetting(), t = _.Sb.useSetting(), S = (0, i.e7)([c.Z], () => c.Z.testModeApplicationId), N = a.useCallback(e => {
 _.bm.updateSetting(!e);
   }, []), C = a.useCallback(e => {
 e ? (0, r.openModal)(e => (0, n.jsx)(E.Z, {
   ...e
 })) : o.mc();
   }, []), m = a.useCallback(e => {
-(0, r.openModal)(t => (0, n.jsx)(r.ConfirmModal, {
+(0, r.openModal)(s => (0, n.jsx)(r.ConfirmModal, {
   header: I.Z.Messages.SWITCH_HARDWARE_ACCELERATION,
   confirmText: I.Z.Messages.OKAY,
   cancelText: I.Z.Messages.CANCEL,
   onConfirm: () => d.ZP.setEnableHardwareAcceleration(e),
-  ...t,
+  ...s,
   children: (0, n.jsx)(r.Text, {
     variant: 'text-sm/normal',
     children: I.Z.Messages.SWITCH_HARDWARE_ACCELERATION_BODY
@@ -44,7 +44,7 @@ children: [
   (0, n.jsx)(l.F, {
     setting: u.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
     children: (0, n.jsx)(r.FormSwitch, {
-      value: s,
+      value: t,
       onChange: _.Sb.updateSetting,
       note: I.Z.Messages.DEVELOPER_MODE_HELP_TEXT.format({
         apiDocsUrl: T.EYA.API_DOCS
@@ -64,7 +64,7 @@ children: [
   (0, n.jsx)(l.F, {
     setting: u.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
     children: (0, n.jsx)(r.FormSwitch, {
-      value: !t,
+      value: !s,
       onChange: N,
       note: I.Z.Messages.USER_SETTINGS_SHOW_LIBRARY_NOTE,
       children: I.Z.Messages.USER_SETTINGS_SHOW_LIBRARY

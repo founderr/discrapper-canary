@@ -23,12 +23,12 @@ labelText: _,
 descriptionText: N,
 helpText: E,
 canNavigate: T
-  } = e, h = o.Z.get(m), p = a.useCallback(async e => {
+  } = e, h = o.Z.get(m), g = a.useCallback(async e => {
 T() && (await r.Z.enableIntegration(I.id, e.type, e.id), l.Z.startEditingIntegration(e.id));
   }, [
 T,
 I.id
-  ]), g = a.useCallback(e => {
+  ]), p = a.useCallback(e => {
 T() && (e.id === (null == t ? void 0 : t.id) && l.Z.stopEditingIntegration(), r.Z.disableIntegration(I.id, e.id));
   }, [
 T,
@@ -58,8 +58,8 @@ children: [
     editedIntegration: t,
     guild: I,
     isExpanded: (null == t ? void 0 : t.id) === e.id,
-    onEnable: p,
-    onDisable: g,
+    onEnable: g,
+    onDisable: p,
     onToggleExpand: () => C(e.id)
   }, e.id)),
   (0, i.jsx)(s.Text, {

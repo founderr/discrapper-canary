@@ -1,6 +1,6 @@
-o.d(e, {
+t.d(e, {
   Ii: function() {
-return c;
+return s;
   },
   pY: function() {
 return r;
@@ -9,11 +9,11 @@ return r;
 return i;
   }
 });
-var t = o(243814);
+var o = t(243814);
 let r = 'https://crunchyroll.com',
   i = '981509069309354054',
-  c = [
-t.x.ACTIVITIES_WRITE,
-t.x.EMAIL,
-t.x.IDENTIFY
+  s = [
+o.x.ACTIVITIES_WRITE,
+o.x.EMAIL,
+o.x.IDENTIFY
   ];

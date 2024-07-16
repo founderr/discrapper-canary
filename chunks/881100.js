@@ -18,8 +18,8 @@ var s = n(399606),
   I = n(323780),
   R = n(101732),
   C = n(450598),
-  p = n(633030),
-  g = n(97942),
+  g = n(633030),
+  p = n(97942),
   A = n(269987),
   m = n(548629),
   N = n(507084),
@@ -97,7 +97,7 @@ return {
         onTryItOutClick: t
       });
     },
-    imageSource: g,
+    imageSource: p,
     imageClassName: t.perGuildProfilesImage
   },
   longerMessages: {
@@ -109,7 +109,7 @@ return {
   moreGuilds: {
     title: T.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-    imageSource: H(n, p, j),
+    imageSource: H(n, g, j),
     imageClassName: t.moreGuildsImage
   },
   moreGuildsAlt: {

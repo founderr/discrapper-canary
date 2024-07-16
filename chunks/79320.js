@@ -1,6 +1,6 @@
 n.d(t, {
   Vb: function() {
-return o;
+return s;
   },
   Yk: function() {
 return i;
@@ -26,6 +26,6 @@ function a() {
   return r(e => e.inDndMode);
 }
 
-function o() {
+function s() {
   return r.getState().inDndMode;
 }

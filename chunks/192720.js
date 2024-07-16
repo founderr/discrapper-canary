@@ -12,8 +12,8 @@ return _;
 var r = n(544891),
   i = n(570140),
   a = n(786761),
-  o = n(70956),
-  s = n(768943),
+  s = n(70956),
+  o = n(768943),
   l = n(686478),
   u = n(981631);
 async function c(e) {
@@ -44,7 +44,7 @@ savedMessageData: e
   });
 }
 async function _() {
-  if (new Date().getTime() - s.Z.getLastFetched() < 1 * o.Z.Millis.MINUTE)
+  if (new Date().getTime() - o.Z.getLastFetched() < 1 * s.Z.Millis.MINUTE)
 return Promise.resolve();
   let e = (await r.tn.get({
 url: u.ANM.GET_SAVED_MESSAGES

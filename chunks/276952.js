@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(338545),
-  s = n(481060),
+  s = n(338545),
+  o = n(481060),
   l = n(845676);
 let u = Object.freeze({
 tension: 400,
@@ -34,7 +34,7 @@ className: _
   height: t ? 40 : n ? 20 : 8,
   x: 0
 },
-f = (0, s.useTransition)(t || n || i, {
+f = (0, o.useTransition)(t || n || i, {
   config: u,
   keys: e => e ? 'pill' : 'empty',
   initial: t || n || i ? E : null,
@@ -46,7 +46,7 @@ f = (0, s.useTransition)(t || n || i, {
   return (0, r.jsx)('div', {
 className: a()(_, l.wrapper),
 'aria-hidden': !0,
-children: f((e, t) => t && (0, r.jsx)(o.animated.span, {
+children: f((e, t) => t && (0, r.jsx)(s.animated.span, {
   className: l.item,
   style: e
 }))

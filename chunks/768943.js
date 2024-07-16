@@ -1,5 +1,5 @@
 n(47120), n(653041);
-var r, i, a, o, s = n(873011),
+var r, i, a, s, o = n(873011),
   l = n(442837),
   u = n(570140);
 let c = [],
@@ -36,17 +36,17 @@ return {
 };
   }
 }
-o = 'SavedMessagesStore', (a = 'displayName') in(i = f) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'SavedMessagesStore', (a = 'displayName') in(i = f) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new f(u.Z, {
+}) : i[a] = s, t.Z = new f(u.Z, {
   SAVED_MESSAGES_UPDATE: function(e) {
 let {
   savedMessages: t
 } = e;
-_ = new Date().getTime(), c = t.filter(e => e.saveData.type === s.J.BOOKMARK), (d = t.filter(e => e.saveData.type === s.J.REMINDER).map(e => ({
+_ = new Date().getTime(), c = t.filter(e => e.saveData.type === o.J.BOOKMARK), (d = t.filter(e => e.saveData.type === o.J.REMINDER).map(e => ({
   ...e,
   complete: !1
 }))).forEach(e => {
@@ -58,10 +58,10 @@ let {
   savedMessage: t
 } = e;
 switch (t.saveData.type) {
-  case s.J.BOOKMARK:
+  case o.J.BOOKMARK:
     (c = c.filter(e => e.saveData.messageId !== t.saveData.messageId)).push(t);
     break;
-  case s.J.REMINDER:
+  case o.J.REMINDER:
     (d = d.filter(e => e.saveData.messageId !== t.saveData.messageId)).push({
       ...t,
       complete: !1
@@ -73,10 +73,10 @@ let {
   savedMessageData: t
 } = e;
 switch (t.type) {
-  case s.J.BOOKMARK:
+  case o.J.BOOKMARK:
     c = c.filter(e => e.saveData.messageId !== t.messageId);
     break;
-  case s.J.REMINDER:
+  case o.J.REMINDER:
     d = d.filter(e => e.saveData.messageId !== t.messageId);
 }
   },

@@ -5,8 +5,8 @@ return v;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(913527),
   o = n.n(r),
   c = n(442837),
@@ -29,8 +29,8 @@ function N(e) {
 guildId: t,
 tag: n,
 badge: a,
-primaryColor: l,
-secondaryColor: s
+primaryColor: s,
+secondaryColor: l
   } = e;
   return null == n || 0 === n.length ? (0, i.jsx)('div', {
 className: T.placeholderIcon,
@@ -50,8 +50,8 @@ clanBadge: (0, i.jsx)(C.A, {
   badge: a,
   width: I.NC.SIZE_24,
   height: I.NC.SIZE_24,
-  primaryTintColor: l,
-  secondaryTintColor: s
+  primaryTintColor: s,
+  secondaryTintColor: l
 })
   });
 }
@@ -60,7 +60,7 @@ function v(e) {
   let {
 applicationIds: t,
 playstyle: n,
-className: l
+className: s
   } = e, r = a.useMemo(() => Array.from(t), [t]), o = (0, m.i)(r), c = a.useMemo(() => {
 if (null == o)
   return null;
@@ -78,18 +78,18 @@ n
   return (0, i.jsx)(d.Text, {
 variant: 'text-sm/normal',
 color: 'text-muted',
-className: s()(T.overviewText, l),
+className: l()(T.overviewText, s),
 children: null == c ? x.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_DEFAULT : c
   });
 }
 t.Z = 12633 == n.j ? e => {
   let {
 guildId: t
-  } = e, n = (0, h.Wg)(), l = (0, c.e7)([u.Z], () => {
+  } = e, n = (0, h.Wg)(), s = (0, c.e7)([u.Z], () => {
 var e, n;
 return null !== (n = null === (e = u.Z.getGuild(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : '';
   }), {
-gameApplicationIds: s,
+gameApplicationIds: l,
 playstyle: r,
 interests: m,
 tag: f,
@@ -120,7 +120,7 @@ children: [
     variant: 'heading-xl/bold',
     color: 'interactive-active',
     className: T.overviewGuildName,
-    children: l
+    children: s
   }),
   (0, i.jsx)(d.Text, {
     variant: 'text-sm/normal',
@@ -131,7 +131,7 @@ children: [
     })
   }),
   (0, i.jsx)(v, {
-    applicationIds: s,
+    applicationIds: l,
     playstyle: r
   }),
   null != Z ? (0, i.jsx)(d.Text, {

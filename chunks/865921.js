@@ -27,22 +27,22 @@ application: m,
 skusById: C,
 selectedSkuId: S
   } = (0, c.usePaymentContext)(), {
-isGift: T
-  } = (0, l.wD)(), [b, h] = r.useState(!0);
+isGift: b
+  } = (0, l.wD)(), [h, T] = r.useState(!0);
   return (r.useEffect(() => {
 let e = null != m;
 if (!!p && !!I && !!e)
-  h(!1);
+  T(!1);
   }, [
 p,
 I,
 m
   ]), r.useEffect(() => {
-if (b || o)
+if (h || o)
   return;
 a()(null != S, 'Expected selectedSkuId');
 let e = C[S];
-if (T && (null == e ? void 0 : e.productLine) === _.POd.COLLECTIBLES) {
+if (b && (null == e ? void 0 : e.productLine) === _.POd.COLLECTIBLES) {
   n(d.h8.GIFT_CUSTOMIZATION);
   return;
 }
@@ -52,14 +52,14 @@ if (0 === Object.keys(f).length) {
 }
 n(d.h8.REVIEW);
   }, [
-b,
+h,
 o,
 n,
 f,
-T,
+b,
 C,
 S
-  ]), b) ? (0, i.jsx)(u.Z, {}) : o ? (0, i.jsx)(s.Vq, {
+  ]), h) ? (0, i.jsx)(u.Z, {}) : o ? (0, i.jsx)(s.Vq, {
 onClose: t
   }) : null;
 }

@@ -6,8 +6,8 @@ return r;
 var i = n(735250);
 n(470079);
 var a = n(27457),
-  l = n(131951),
-  s = n(862978);
+  s = n(131951),
+  l = n(862978);
 
 function r(e) {
   let {
@@ -29,14 +29,14 @@ pulseSpeakingIndicator: g,
 participant: I,
 width: x,
 ...T
-  } = e, N = l.Z.getVideoComponent();
+  } = e, N = s.Z.getVideoComponent();
   return (0, i.jsx)('div', {
 style: {
   width: x
 },
-className: s.spaceBetweenTiles,
+className: l.spaceBetweenTiles,
 children: (0, i.jsxs)('div', {
-  className: s.tileSizer,
+  className: l.tileSizer,
   style: {
     aspectRatio: t
   },

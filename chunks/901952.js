@@ -6,8 +6,8 @@ return O;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(906732),
   u = n(541716),
   c = n(752305),
@@ -69,21 +69,21 @@ return C && null != e ? (0, r.jsxs)('div', {
     (0, r.jsx)(T.c, {
       userId: t.id,
       fullWidth: !0,
-      color: o()(s.Button.Colors.BRAND, A.color),
+      color: s()(o.Button.Colors.BRAND, A.color),
       className: N.biteSizeButton,
       onClose: _
     }),
     (0, r.jsx)(m.Z, {
       user: t,
       onClose: _,
-      className: o()(N.engagementExpButton, N.biteSizeIconButton)
+      className: s()(N.engagementExpButton, N.biteSizeIconButton)
     })
   ]
 }) : (0, r.jsx)(T.c, {
   userId: t.id,
   fullWidth: !0,
   className: N.biteSizeButton,
-  color: o()(s.Button.Colors.BRAND, A.color),
+  color: s()(o.Button.Colors.BRAND, A.color),
   onClose: _
 });
   }

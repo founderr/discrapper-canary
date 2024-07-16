@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(230711),
   c = n(607070),
@@ -20,7 +20,7 @@ className: t,
 quest: n,
 autoplay: a = !0,
 learnMoreStyle: T = null
-  } = e, g = (0, s.e7)([c.Z], () => c.Z.useReducedMotion), S = (0, E.gO)(n), A = i.useMemo(() => (0, E.nP)(S.name), [S.name]), N = i.useCallback(t => {
+  } = e, g = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), S = (0, E.gO)(n), A = i.useMemo(() => (0, E.nP)(S.name), [S.name]), N = i.useCallback(t => {
 var r;
 (0, _._3)({
   questId: n.id,
@@ -62,15 +62,15 @@ id: 'QuestRewardTile_rewardTileStatic',
 children: e => (0, r.jsx)('img', {
   ref: e,
   alt: f.r.build(n.config).defaultReward.messages.name,
-  className: o()(I.questRewardTileAsset, I.questRewardTileAssetStatic),
+  className: s()(I.questRewardTileAsset, I.questRewardTileAssetStatic),
   src: S.url
 })
   });
   return null == T ? (0, r.jsx)('div', {
-className: o()(I.questRewardTile, t),
+className: s()(I.questRewardTile, t),
 children: R
   }) : (0, r.jsxs)(l.Clickable, {
-className: o()(I.questRewardTile, I.questRewardTileInteractive, t),
+className: s()(I.questRewardTile, I.questRewardTileInteractive, t),
 onClick: N,
 children: [
   'text' === T && (0, r.jsx)(l.Text, {

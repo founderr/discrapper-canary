@@ -1,10 +1,10 @@
 t(47120), t(411104);
-var n, r, s, l, o, i, c, u = t(735250),
+var n, s, r, l, o, i, c, u = t(735250),
   d = t(470079),
   E = t(588391),
   _ = t(217986),
-  p = t(971809),
-  m = t(481060),
+  m = t(971809),
+  p = t(481060),
   A = t(153124),
   N = t(823379),
   h = t(754103),
@@ -101,9 +101,9 @@ label: e.name
   M = (0, A.hQ)(),
   g = (0, A.hQ)(),
   O = (0, A.hQ)();
-(o = n || (n = {})).NAME = 'name', o.COUNTRY = 'country', o.LINE1 = 'line1', o.LINE2 = 'line2', o.CITY = 'city', o.POSTAL_CODE = 'postalCode', o.STATE = 'state', (i = r || (r = {})).MODAL_US = 'modalUS', i.MODAL_INTL = 'modalInternational', i.MODAL_US_WITH_NAME = 'modalUSWithName', i.MODAL_INTL_WITH_NAME = 'modalInternationalWithName', i.SETTINGS_US = 'settingsUS', i.SETTINGS_INTL = 'settingsInternational', i.SETTINGS_INTL_NO_NAME = 'settingsInternationalWithoutName', i.SETTINGS_US_MOBILE = 'settingsUSMobile', i.SETTINGS_INTL_MOBILE = 'settingsInternationalMobile', i.SETTINGS_INTL_NO_NAME_MOBILE = 'settingsInternationalWithoutNameMobile', (c = s || (s = {})).EDIT = 'edit', c.CREATE = 'create';
+(o = n || (n = {})).NAME = 'name', o.COUNTRY = 'country', o.LINE1 = 'line1', o.LINE2 = 'line2', o.CITY = 'city', o.POSTAL_CODE = 'postalCode', o.STATE = 'state', (i = s || (s = {})).MODAL_US = 'modalUS', i.MODAL_INTL = 'modalInternational', i.MODAL_US_WITH_NAME = 'modalUSWithName', i.MODAL_INTL_WITH_NAME = 'modalInternationalWithName', i.SETTINGS_US = 'settingsUS', i.SETTINGS_INTL = 'settingsInternational', i.SETTINGS_INTL_NO_NAME = 'settingsInternationalWithoutName', i.SETTINGS_US_MOBILE = 'settingsUSMobile', i.SETTINGS_INTL_MOBILE = 'settingsInternationalMobile', i.SETTINGS_INTL_NO_NAME_MOBILE = 'settingsInternationalWithoutNameMobile', (c = r || (r = {})).EDIT = 'edit', c.CREATE = 'create';
 let L = {
-US: p.G,
+US: m.G,
 CA: E.X
   },
   v = e => ({
@@ -120,7 +120,7 @@ getClassNameForLayout: e => [
   'settingsInternationalMobile',
   'settingsInternationalWithoutNameMobile'
 ].includes(e) ? I.width100 : I.width60,
-renderInput: e => (0, u.jsx)(m.TextInput, {
+renderInput: e => (0, u.jsx)(p.TextInput, {
   ...e
 })
   }),
@@ -145,7 +145,7 @@ renderInput(e, a) {
     onChange: t,
     ...n
   } = e;
-  return (0, u.jsx)(m.SearchableSelect, {
+  return (0, u.jsx)(p.SearchableSelect, {
     ...n,
     autoFocus: !0,
     maxVisibleItems: 8,
@@ -172,7 +172,7 @@ getClassNameForLayout: e => [
   'settingsInternationalMobile',
   'settingsInternationalWithoutNameMobile'
 ].includes(e) ? I.width100 : I.width60,
-renderInput: e => (0, u.jsx)(m.TextInput, {
+renderInput: e => (0, u.jsx)(p.TextInput, {
   ...e
 })
   }),
@@ -191,7 +191,7 @@ getClassNameForLayout: e => [
   'settingsInternationalMobile',
   'settingsInternationalWithoutNameMobile'
 ].includes(e) ? I.width100 : I.width40,
-renderInput: e => (0, u.jsx)(m.TextInput, {
+renderInput: e => (0, u.jsx)(p.TextInput, {
   ...e
 })
   }),
@@ -217,7 +217,7 @@ getClassNameForLayout: e => {
       return I.width50;
   }
 },
-renderInput: e => (0, u.jsx)(m.TextInput, {
+renderInput: e => (0, u.jsx)(p.TextInput, {
   ...e
 })
   }),
@@ -256,7 +256,7 @@ return {
         return I.width25;
     }
   },
-  renderInput: e => (0, u.jsx)(m.TextInput, {
+  renderInput: e => (0, u.jsx)(p.TextInput, {
     ...e
   })
 };
@@ -304,24 +304,24 @@ return {
         return t === a.value;
       }),
       {
-        layout: r,
-        onChange: s,
+        layout: s,
+        onChange: r,
         ...l
       } = a;
     return [
       'US',
       'CA'
-    ].includes(e) && n ? (0, u.jsx)(m.SearchableSelect, {
+    ].includes(e) && n ? (0, u.jsx)(p.SearchableSelect, {
       ...l,
       popoutPosition: [
         'modalUS',
         'modalInternational'
-      ].includes(r) ? 'top' : void 0,
+      ].includes(s) ? 'top' : void 0,
       options: t,
       onChange: e => {
-        null != s && s(e, a.name);
+        null != r && r(e, a.name);
       }
-    }) : (0, u.jsx)(m.TextInput, {
+    }) : (0, u.jsx)(p.TextInput, {
       ...a
     });
   }
@@ -447,8 +447,8 @@ let {
   dirtyFields: t
 } = this.state, n = {};
 (!e || t.name) && !this.hasValue(a.name) && 'edit' === this.props.mode && (n.name = T.Z.Messages.BILLING_ADDRESS_NAME_ERROR_REQUIRED), (!e || t.country) && !this.hasValue(a.country) && (n.country = T.Z.Messages.BILLING_ADDRESS_COUNTRY_ERROR_REQUIRED), (!e || t.line1) && !this.hasValue(a.line1) && (n.line1 = T.Z.Messages.BILLING_ADDRESS_ADDRESS_ERROR_REQUIRED), (!e || t.city) && !this.hasValue(a.city) && (n.city = T.Z.Messages.BILLING_ADDRESS_CITY_ERROR_REQUIRED);
-let r = a.country;
-switch (r) {
+let s = a.country;
+switch (s) {
   case 'US':
     if (!e || t.postalCode) {
       let e = a.postalCode;
@@ -460,7 +460,7 @@ switch (r) {
     (!e || t.postalCode) && !this.hasValue(a.postalCode) && (n.postalCode = T.Z.Messages.BILLING_ADDRESS_POSTAL_CODE_ERROR_REQUIRED), (!e || t.state) && !this.hasValue(a.state) && (n.state = T.Z.Messages.BILLING_ADDRESS_PROVINCE_ERROR_REQUIRED);
     break;
   default:
-    (!e || t.postalCode) && !this.hasValue(a.postalCode) && !C.includes(null != r ? r : '') && (n.postalCode = T.Z.Messages.BILLING_ADDRESS_POSTAL_CODE_ERROR_REQUIRED);
+    (!e || t.postalCode) && !this.hasValue(a.postalCode) && !C.includes(null != s ? s : '') && (n.postalCode = T.Z.Messages.BILLING_ADDRESS_POSTAL_CODE_ERROR_REQUIRED);
 }
 return n;
   }
@@ -478,8 +478,8 @@ let {
 } = this.state, {
   layout: t,
   mode: n,
-  className: r,
-  error: s
+  className: s,
+  error: r
 } = this.props, l = B[t];
 if (null == l)
   throw Error('Provide a proper layout property.');
@@ -491,12 +491,12 @@ let o = a.country,
     } : null;
   }).filter(N.lm);
 return (0, u.jsx)(h.Z, {
-  className: r,
+  className: s,
   form: i,
   layout: t,
   values: a,
   errors: e,
-  formError: s,
+  formError: r,
   onFieldChange: this.handleFieldChange,
   onFieldBlur: this.handleFieldBlur,
   mode: n
@@ -525,7 +525,7 @@ super(...e), S(this, 'state', {
   let {
     values: t,
     errors: n,
-    dirtyFields: r
+    dirtyFields: s
   } = this.state;
   delete n[a], this.setState({
     values: {
@@ -533,7 +533,7 @@ super(...e), S(this, 'state', {
       [a]: e
     },
     dirtyFields: {
-      ...r,
+      ...s,
       [a]: !0
     },
     errors: n
@@ -541,7 +541,7 @@ super(...e), S(this, 'state', {
 });
   }
 }
-S(H, 'Layouts', r), S(H, 'Modes', s), S(H, 'defaultProps', {
+S(H, 'Layouts', s), S(H, 'Modes', r), S(H, 'defaultProps', {
   name: '',
   country: '',
   line1: '',

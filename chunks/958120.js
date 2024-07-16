@@ -6,8 +6,8 @@ return R;
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(954138),
+  s = n(481060),
+  o = n(954138),
   l = n(979264),
   u = n(699516),
   c = n(246946),
@@ -37,11 +37,11 @@ isHovering: y,
 onOpenProfile: D,
 channelId: L,
 onClose: b
-  } = e, M = d.ZP.getName(null == C ? void 0 : C.id, L, t), P = (0, a.e7)([u.Z], () => u.Z.getRelationshipType(t.id)), U = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation), w = (0, s.Z)('username'), x = i.useMemo(() => ({
+  } = e, M = d.ZP.getName(null == C ? void 0 : C.id, L, t), P = (0, a.e7)([u.Z], () => u.Z.getRelationshipType(t.id)), U = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation), w = (0, o.Z)('username'), x = i.useMemo(() => ({
 source: v.jXE.PROFILE_POPOUT,
 tagUserId: t.id
   }), [t.id]);
-  return (0, r.jsxs)(o.Scroller, {
+  return (0, r.jsxs)(s.Scroller, {
 fade: !0,
 className: O.body,
 children: [

@@ -1,8 +1,8 @@
 n(627494), n(757143);
 var i = n(735250),
   a = n(470079),
-  l = n(317261),
-  s = n(442837),
+  s = n(317261),
+  l = n(442837),
   r = n(18323),
   o = n(594174),
   c = n(823379),
@@ -18,14 +18,14 @@ var i = n(735250),
   g = n(689938);
 let I = (e, t, n, i) => {
 let a = function(e) {
-    if (e === l._.WEEK)
+    if (e === s._.WEEK)
       return g.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_WEEK_POPOUT;
   }(i),
-  s = d.ZP.getName(t.guild_id, t.id, n),
+  l = d.ZP.getName(t.guild_id, t.id, n),
   r = e.extra.artist.name;
 return a.plainFormat({
   artist: r,
-  userName: s
+  userName: l
 }).replaceAll('*', '');
   },
   x = (e, t) => g.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_TOP_ARTIST.format({
@@ -36,13 +36,13 @@ t.Z = e => {
   let {
 channel: t,
 entry: n,
-requestId: l,
+requestId: s,
 closePopout: d
   } = e, {
 parent_title: T,
 provider: N,
 image_url: v
-  } = n.extra.media, S = n.extra.artist.name, Z = (0, s.e7)([o.default], () => o.default.getUser(n.author_id)), {
+  } = n.extra.media, S = n.extra.artist.name, Z = (0, l.e7)([o.default], () => o.default.getUser(n.author_id)), {
 primaryColor: A,
 secondaryColor: M
   } = (0, p.Z)(v), b = (0, u.Nq)(n), R = a.useCallback(() => {
@@ -112,7 +112,7 @@ children: [
       generateReactionImage: R,
       reactionImageAltText: x(n, Z),
       entry: n,
-      requestId: l
+      requestId: s
     })
   })
 ]

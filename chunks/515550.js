@@ -5,8 +5,8 @@ return E;
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(230711),
+var s = n(481060),
+  a = n(230711),
   r = n(100527),
   l = n(906732),
   o = n(170671),
@@ -27,15 +27,15 @@ children: [
   (0, i.jsx)('div', {
     className: _.banner
   }),
-  (0, i.jsx)(a.Button, {
+  (0, i.jsx)(s.Button, {
     'aria-label': u.Z.Messages.CLOSE,
-    look: a.Button.Looks.BLANK,
-    size: a.Button.Sizes.NONE,
+    look: s.Button.Looks.BLANK,
+    size: s.Button.Sizes.NONE,
     onClick: () => {
       t(d.L.USER_DISMISS);
     },
     className: _.closeButton,
-    children: (0, i.jsx)(a.CloseSmallIcon, {
+    children: (0, i.jsx)(s.CloseSmallIcon, {
       size: 'xs',
       className: _.closeIcon,
       color: 'white'
@@ -44,7 +44,7 @@ children: [
   (0, i.jsxs)('div', {
     className: _.body,
     children: [
-      (0, i.jsx)(a.Heading, {
+      (0, i.jsx)(s.Heading, {
         variant: 'heading-md/extrabold',
         className: _.text,
         children: u.Z.Messages.APP_ICON_NEW_STYLES_HEADER
@@ -56,26 +56,26 @@ children: [
             className: _.icon,
             isSelected: !0
           }),
-          (0, i.jsx)(a.Text, {
+          (0, i.jsx)(s.Text, {
             variant: 'text-xxs/medium',
             className: _.text,
             children: u.Z.Messages.POWERED_BY_NITRO
           })
         ]
       }),
-      (0, i.jsx)(a.Text, {
+      (0, i.jsx)(s.Text, {
         variant: 'text-sm/medium',
         className: _.text,
         children: u.Z.Messages.APP_ICON_NEW_STYLES_BODY
       })
     ]
   }),
-  (0, i.jsx)(a.Button, {
+  (0, i.jsx)(s.Button, {
     className: _.cta,
-    look: a.Button.Looks.FILLED,
-    color: a.Button.Colors.CUSTOM,
+    look: s.Button.Looks.FILLED,
+    color: s.Button.Colors.CUSTOM,
     onClick: () => {
-      t(d.L.TAKE_ACTION), s.Z.open(c.oAB.APPEARANCE, null, {
+      t(d.L.TAKE_ACTION), a.Z.open(c.oAB.APPEARANCE, null, {
         openWithoutBackstack: !0,
         analyticsLocations: n
       });

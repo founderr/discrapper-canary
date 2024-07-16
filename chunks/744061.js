@@ -5,8 +5,8 @@ return _;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(692547),
-  s = n(780384),
+  s = n(692547),
+  l = n(780384),
   r = n(481060),
   o = n(367907),
   c = n(210887),
@@ -55,16 +55,16 @@ let t = c.Z.theme,
 return null != I && (async () => {
   let [{
     default: a
-  }, l] = await Promise.all([
+  }, s] = await Promise.all([
     Promise.resolve().then(n.t.bind(n, 500923, 23)),
-    (0, s.wj)(t) ? I.dark() : I.light()
+    (0, l.wj)(t) ? I.dark() : I.light()
   ]);
   !i && null != N.current && (e = a.loadAnimation({
     container: N.current,
     renderer: 'svg',
     loop: !0,
     autoplay: !0,
-    animationData: l
+    animationData: s
   }));
 })(), () => {
   i = !0, null != e && (e.destroy(), e = void 0);
@@ -142,7 +142,7 @@ children: (0, i.jsxs)('form', {
       children: [
         (0, i.jsx)(r.CircleInformationIcon, {
           size: 'xs',
-          color: l.Z.unsafe_rawColors.PRIMARY_400.css,
+          color: s.Z.unsafe_rawColors.PRIMARY_400.css,
           className: p.icon
         }),
         (0, i.jsx)(r.Text, {

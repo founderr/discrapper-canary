@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 }), n(411104);
 var r = n(836560),
@@ -14,7 +14,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class o extends r.EventEmitter {
+class s extends r.EventEmitter {
   static async get(e, t) {
 var n;
 let r = {
@@ -22,7 +22,7 @@ let r = {
   frameRate: 30
 };
 if ((null === (n = navigator.mediaDevices) || void 0 === n ? void 0 : n.getDisplayMedia) != null)
-  return new o(await navigator.mediaDevices.getDisplayMedia({
+  return new s(await navigator.mediaDevices.getDisplayMedia({
     audio: t,
     video: r
   }));

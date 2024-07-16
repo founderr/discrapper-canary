@@ -1,33 +1,33 @@
-n.d(t, {
+s.d(t, {
   F: function() {
 return u;
   }
-}), n(757143);
-var r = n(735250);
-n(470079);
-var s = n(120356),
-  a = n.n(s),
-  o = n(481060),
-  i = n(937615),
-  l = n(884697),
-  c = n(793024);
+}), s(757143);
+var n = s(735250);
+s(470079);
+var r = s(120356),
+  a = s.n(r),
+  o = s(481060),
+  i = s(937615),
+  l = s(884697),
+  c = s(793024);
 let d = e => e.length > 5 ? e.replace(/\.00$/, '') : e,
   u = e => {
 var t;
 let {
   price: {
-    amount: n,
-    currency: s
+    amount: s,
+    currency: r
   },
   renderPrice: u,
   icon: p,
   className: g,
   discount: f = l.f_,
   variant: C = 'heading-md/semibold'
-} = e, m = d((0, i.T4)(n, s)), _ = f !== l.f_ && f.discountPercentage >= 5 ? (0, r.jsxs)(r.Fragment, {
+} = e, m = d((0, i.T4)(s, r)), _ = f !== l.f_ && f.discountPercentage >= 5 ? (0, n.jsxs)(n.Fragment, {
   children: [
     m,
-    (0, r.jsx)(o.Heading, {
+    (0, n.jsx)(o.Heading, {
       variant: C,
       color: 'text-positive',
       className: c.discount,
@@ -35,8 +35,8 @@ let {
     })
   ]
 }) : m;
-return (0, r.jsx)(r.Fragment, {
-  children: (0, r.jsxs)(o.Heading, {
+return (0, n.jsx)(n.Fragment, {
+  children: (0, n.jsxs)(o.Heading, {
     variant: C,
     className: a()(c.container, g),
     children: [

@@ -5,8 +5,8 @@ return p;
 });
 var i = n(735250);
 n(470079);
-var a = n(685072),
-  s = n(287734),
+var s = n(685072),
+  a = n(287734),
   r = n(67212),
   l = n(158631),
   o = n(15274),
@@ -20,12 +20,12 @@ function h(e) {
   let {
 tooltipText: t,
 onClick: n
-  } = e, s = (0, a.K)();
+  } = e, a = (0, s.K)();
   return (0, i.jsx)(_.Z, {
 tooltipText: t,
 onClick: n,
-...s.events,
-icon: s.Component
+...a.events,
+icon: a.Component
   });
 }
 
@@ -33,7 +33,7 @@ function I() {
   return (0, i.jsx)(h, {
 tooltipText: E.Z.Messages.DISCONNECT_SELF,
 onClick: () => {
-  (0, r.b_)(), s.default.disconnect();
+  (0, r.b_)(), a.default.disconnect();
 }
   });
 }
@@ -49,7 +49,7 @@ onClick: () => {
     (0, d.Us)(t);
     return;
   }
-  s.default.disconnect();
+  a.default.disconnect();
 }
   });
 }
@@ -65,7 +65,7 @@ onClick: () => {
     (0, o.lC)(t);
     return;
   }
-  s.default.disconnect();
+  a.default.disconnect();
 }
   });
 }

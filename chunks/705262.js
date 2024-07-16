@@ -7,9 +7,9 @@ return r;
   }
 }), n(627341), n(47120);
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(278074),
   c = n(442837),
   d = n(524437),
@@ -47,7 +47,7 @@ let V = Object.freeze({
 EDITOR: G.fy.SLOW_USER_ACTION,
 SETTINGS: G.fy.INFREQUENT_USER_ACTION
   }),
-  H = o.createContext({}),
+  H = s.createContext({}),
   Z = e => {
 let {
   isPersisted: t,
@@ -97,14 +97,14 @@ var t, n;
 let {
   type: r,
   isPreview: i,
-  isCoachmark: o
+  isCoachmark: s
 } = e;
 if ((null === (n = (0, S.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === w.Si.TIER_2 && i)
   return null;
-let s = (0, u.EQ)({
+let o = (0, u.EQ)({
   type: r,
   isPreview: i,
-  isCoachmark: o
+  isCoachmark: s
 }).with({
   type: 'EDITOR',
   isPreview: !0
@@ -123,7 +123,7 @@ let s = (0, u.EQ)({
 })).otherwise(() => B.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
 return (0, a.jsx)(_.Heading, {
   variant: 'text-sm/normal',
-  children: s
+  children: o
 });
   },
   W = e => {
@@ -133,12 +133,12 @@ let {
 } = e, r = (0, C.Dt)(), i = (0, _.useRadioGroup)({
   orientation: 'horizontal',
   labelledBy: r
-}), s = o.useMemo(() => ({
+}), o = s.useMemo(() => ({
   type: t,
   delay: V[t]
 }), [t]);
 return (0, a.jsx)(H.Provider, {
-  value: s,
+  value: o,
   children: (0, a.jsx)('div', {
     ...i,
     className: F.__invalid_container,
@@ -151,9 +151,9 @@ W.Basic = e => {
 className: t
   } = e, {
 delay: n
-  } = o.useContext(H), {
+  } = s.useContext(H), {
 analyticsLocations: r
-  } = (0, p.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR), [i, s, u] = (0, c.Wu)([
+  } = (0, p.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR), [i, o, u] = (0, c.Wu)([
 O.Z,
 R.ZP,
 L.Z
@@ -175,31 +175,31 @@ className: l()(F.presets, t),
 children: [
   (0, a.jsx)(b.bD, {
     theme: k.BR.LIGHT,
-    isSelected: s && !u && i === k.BR.LIGHT,
+    isSelected: o && !u && i === k.BR.LIGHT,
     onSelect: () => d(k.BR.LIGHT)
   }),
   (0, a.jsx)(b.bD, {
     theme: k.BR.DARK,
-    isSelected: s && !u && i === k.BR.DARK,
+    isSelected: o && !u && i === k.BR.DARK,
     onSelect: () => d(k.BR.DARK)
   }),
   _ && (0, a.jsxs)(a.Fragment, {
     children: [
       (0, a.jsx)(b.bD, {
         theme: k.BR.DARKER,
-        isSelected: s && !u && i === k.BR.DARKER,
+        isSelected: o && !u && i === k.BR.DARKER,
         onSelect: () => d(k.BR.DARKER)
       }),
       (0, a.jsx)(b.bD, {
         theme: k.BR.MIDNIGHT,
-        isSelected: s && !u && i === k.BR.MIDNIGHT,
+        isSelected: o && !u && i === k.BR.MIDNIGHT,
         onSelect: () => d(k.BR.MIDNIGHT)
       })
     ]
   }),
   (0, a.jsx)(b.bD, {
     theme: 'system',
-    isSelected: s && u,
+    isSelected: o && u,
     onSelect: () => d('system')
   })
 ]
@@ -208,12 +208,12 @@ children: [
   var t, r;
   let {
 className: i,
-renderCTAButtons: s,
+renderCTAButtons: o,
 disabled: l = !1
   } = e, {
 type: u,
 delay: m
-  } = o.useContext(H), {
+  } = s.useContext(H), {
 analyticsLocations: N
   } = (0, p.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR), [O, R, C] = (0, c.Wu)([L.Z], () => {
 var e;
@@ -222,18 +222,18 @@ return [
   L.Z.isCoachmark,
   null === (e = L.Z.gradientPreset) || void 0 === e ? void 0 : e.id
 ];
-  }), [y, P] = o.useState(!1), [G, k] = o.useState(-1), V = (0, c.e7)([f.Z], () => f.Z.useReducedMotion), {
+  }), [y, P] = s.useState(!1), [G, k] = s.useState(-1), V = (0, c.e7)([f.Z], () => f.Z.useReducedMotion), {
 enabled: W
   } = (0, T.J)({
 location: 'GradientSelectors'
-  }), K = (null === (r = (0, S.N)()) || void 0 === r ? void 0 : null === (t = r.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === w.Si.TIER_2, z = o.useMemo(() => e => {
+  }), K = (null === (r = (0, S.N)()) || void 0 === r ? void 0 : null === (t = r.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === w.Si.TIER_2, z = s.useMemo(() => e => {
 let t = M.sJ.get(e.id),
   n = null != t && !(0, I.un)(t);
 return l && n && setTimeout(() => (0, I.EW)(t, {
   dismissAction: U.L.AUTO_DISMISS
 }), 5000), n;
   }, [l]);
-  o.useEffect(() => {
+  s.useEffect(() => {
 (G === M.XV.length - (W ? 2 : 3) && 'EDITOR' === u || C === d.Us.EASTER_EGG) && P(!0);
   }, [
 G,
@@ -292,7 +292,7 @@ children: [
           })
         ]
       }),
-      null == s ? void 0 : s()
+      null == o ? void 0 : o()
     ]
   }),
   (0, a.jsxs)('div', {

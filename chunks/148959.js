@@ -7,8 +7,8 @@ return r;
   }
 }), n(47120), n(653041);
 var r, i, a = n(392711),
-  o = n.n(a),
-  s = n(47770),
+  s = n.n(a),
+  o = n(47770),
   l = n(562319),
   u = n(70956),
   c = n(65154);
@@ -24,7 +24,7 @@ writable: !0
 let _ = 10 * u.Z.Millis.SECOND,
   E = 30 * u.Z.Millis.SECOND;
 (i = r || (r = {})).RequestedSSRCsUpdate = 'requested-ssrcs-update', i.RequestedStreamsUpdate = 'requested-streams-update';
-class f extends s.Z {
+class f extends o.Z {
   setUserID(e) {
 this.userId = e;
   }
@@ -68,8 +68,8 @@ if (this.senderSupportsSimulcast()) {
   let n = this.getQualityConfig();
   if (null === n)
     return;
-  let [r, i, a, o] = n;
-  e[r] = i, e[a] = 0, t.push(r), this.hasEverReceivedFrame() && this.supportsSeamless && l.Z.isIncomingVideoEnabled() && (-1 === this.pendingSSRC ? (this.pendingSSRC = r, t.push(a), e[a] = o) : this.pendingSSRC === r ? this.pendingSSRCReceived ? (this.pendingSSRC = -1, this.pendingSSRCReceived = !1) : (t.push(a), e[a] = o) : this.pendingSSRC === a && (this.pendingSSRC = -1));
+  let [r, i, a, s] = n;
+  e[r] = i, e[a] = 0, t.push(r), this.hasEverReceivedFrame() && this.supportsSeamless && l.Z.isIncomingVideoEnabled() && (-1 === this.pendingSSRC ? (this.pendingSSRC = r, t.push(a), e[a] = s) : this.pendingSSRC === r ? this.pendingSSRCReceived ? (this.pendingSSRC = -1, this.pendingSSRCReceived = !1) : (t.push(a), e[a] = s) : this.pendingSSRC === a && (this.pendingSSRC = -1));
 } else
   e[this.videoStreams[0].ssrc] = l.Z.isIncomingVideoEnabled() ? 100 : 0, t.push(this.videoStreams[0].ssrc);
 this.emit('requested-ssrcs-update', this.userId, this.audioSSRC, t), this.emit('requested-streams-update', e);
@@ -81,8 +81,8 @@ return !this.throttleDowngradeChanges || void 0 === this.lastDowngradeChangeTime
 return 1 === this.otherUsers.size;
   }
   getQualityConfig() {
-let e = o().minBy(this.videoStreams, e => e.quality),
-  t = o().maxBy(this.videoStreams, e => e.quality);
+let e = s().minBy(this.videoStreams, e => e.quality),
+  t = s().maxBy(this.videoStreams, e => e.quality);
 if (void 0 === e || void 0 === t)
   return null;
 if (!l.Z.isIncomingVideoEnabled())

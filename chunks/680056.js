@@ -1,7 +1,7 @@
 var a = n(470079),
   l = n(906732),
-  i = n(407316),
-  s = n(937784);
+  s = n(407316),
+  i = n(937784);
 t.Z = e => {
   let {
 channelId: t,
@@ -21,8 +21,8 @@ onShareClick: a.useCallback(async e => {
   n(a.id);
   try {
     var u, m, p, C, v, g, h, x, E, f;
-    let e = (0, i.W)(t);
-    await (0, s.e)(a, {
+    let e = (0, s.W)(t);
+    await (0, i.e)(a, {
       channelId: e ? t : void 0,
       analyticsLocations: o,
       editMetadata: {

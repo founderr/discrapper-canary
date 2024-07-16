@@ -1,4 +1,4 @@
-s.d(t, {
+t.d(s, {
   C: function() {
 return a;
   },
@@ -6,14 +6,14 @@ return a;
 return i;
   }
 });
-var n = s(570140);
-let a = (e, t) => {
+var n = t(570140);
+let a = (e, s) => {
 n.Z.dispatch({
   type: 'SET_PREMIUM_TYPE_OVERRIDE',
   premiumType: e
 }), n.Z.dispatch({
   type: 'UPDATE_CLIENT_PREMIUM_TYPE',
-  user: t
+  user: s
 });
   },
   i = e => {

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(374470),
   o = n(481060),
   c = n(239091),
@@ -28,7 +28,7 @@ function C(e) {
 channel: t,
 onClose: n,
 transitionState: a
-  } = e, l = (0, u.ZP)(t, !0);
+  } = e, s = (0, u.ZP)(t, !0);
   return (0, i.jsx)(o.ModalRoot, {
 transitionState: a,
 'aria-label': _.Z.Messages.FORM_LABEL_CHANNEL_TOPIC,
@@ -38,7 +38,7 @@ children: (0, i.jsx)(o.ModalContent, {
     onClose: n,
     renderHeader: () => (0, i.jsx)(o.Heading, {
       variant: 'heading-lg/semibold',
-      children: l
+      children: s
     }),
     children: (0, i.jsx)(o.Text, {
       selectable: !0,
@@ -65,7 +65,7 @@ return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length ? null : (0,
   children: [
     (0, i.jsx)(p.Z.Divider, {}),
     (0, i.jsxs)('div', {
-      className: s()(f.topic, f.expandable),
+      className: l()(f.topic, f.expandable),
       onMouseDown: this.onMouseDown,
       onMouseMove: this.onMouseMove,
       onMouseUp: this.onMouseUp,

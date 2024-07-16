@@ -44,8 +44,8 @@ function Z(e) {
 handleStepChange: Z,
 initialPlanId: H,
 subscriptionTier: U,
-trialId: F,
-referralTrialOfferId: G,
+trialId: G,
+referralTrialOfferId: F,
 handleClose: w
   } = e, {
 activeSubscription: W,
@@ -68,7 +68,7 @@ newPlans: ei
 location: 'd17fd6_3'
   }, {
 autoTrackExposure: !1
-  }), er = (0, s.e7)([g.default], () => g.default.getCurrentUser()), eo = !$ && null != V && V === v.Si.TIER_2 && null != er && er.hasHadPremium() && D && null == W && (0, c.aQ)(en), ea = (0, f.N)(G), es = !$ && null != ea && null != V && v.nG[ea.trial_id].skus.includes(V), el = (0, p.Ng)(), ed = null == el ? void 0 : null === (t = el.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => v.GP[e].skuId === V), ec = !$ && null != el && null != V && ed, eC = null !== (n = es || ec) && void 0 !== n && n, {
+  }), er = (0, s.e7)([g.default], () => g.default.getCurrentUser()), eo = !$ && null != V && V === v.Si.TIER_2 && null != er && er.hasHadPremium() && D && null == W && (0, c.aQ)(en), ea = (0, f.N)(F), es = !$ && null != ea && null != V && v.nG[ea.trial_id].skus.includes(V), el = (0, p.Ng)(), ed = null == el ? void 0 : null === (t = el.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => v.GP[e].skuId === V), ec = !$ && null != el && null != V && ed, eC = null !== (n = es || ec) && void 0 !== n && n, {
 defaultToMonthlyPlan: eu
   } = _.k.useExperiment({
 location: 'd17fd6_4'
@@ -101,7 +101,7 @@ items: ex,
 renewal: !1,
 preventFetch: !eC,
 applyEntitlements: !0,
-trialId: F,
+trialId: G,
 paymentSourceId: Q.paymentSourceId,
 currency: Q.currency
   });
@@ -152,7 +152,7 @@ children: [
       }) : (0, i.jsx)(b.O, {
         planOptions: e_,
         eligibleForMultiMonthPlans: eo,
-        referralTrialOfferId: G,
+        referralTrialOfferId: F,
         selectedPlanId: null == X ? void 0 : X.id,
         subscriptionPeriodEnd: null == eg ? void 0 : eg.subscriptionPeriodEnd,
         discountInvoiceItems: ec ? null == eg ? void 0 : eg.invoiceItems : void 0,

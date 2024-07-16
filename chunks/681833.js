@@ -1,26 +1,26 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return S;
   }
 });
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(442837),
-  l = s(481060),
-  c = s(987997),
-  d = s(78839),
-  _ = s(981631),
-  E = s(689938),
-  u = s(496065),
-  T = s(727880),
-  I = s(845904);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(442837),
+  l = t(481060),
+  c = t(987997),
+  d = t(78839),
+  _ = t(981631),
+  E = t(689938),
+  u = t(496065),
+  T = t(727880),
+  I = t(845904);
 
 function S(e) {
   let {
-onClickManageSubscription: t
-  } = e, s = (0, o.e7)([d.ZP], () => d.ZP.getSubscriptions()), i = a.useMemo(() => Object.values(null != s ? s : {}).filter(e => e.type === _.NYc.APPLICATION && e.status !== _.O0b.ENDED), [s]);
+onClickManageSubscription: s
+  } = e, t = (0, o.e7)([d.ZP], () => d.ZP.getSubscriptions()), i = a.useMemo(() => Object.values(null != t ? t : {}).filter(e => e.type === _.NYc.APPLICATION && e.status !== _.O0b.ENDED), [t]);
   return 0 === i.length ? null : (0, n.jsxs)('div', {
 className: u.container,
 children: [
@@ -67,7 +67,7 @@ children: [
       }),
       (0, n.jsx)(c.Z, {
         color: l.Button.Colors.BRAND,
-        onClick: t,
+        onClick: s,
         children: E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTIONS_BUTTON
       })
     ]

@@ -5,8 +5,8 @@ return O;
 }), n(47120), n(773603);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(848246),
   o = n(793030),
   c = n(442837),
@@ -58,10 +58,10 @@ let b = v.LY.RESOLUTION_1440,
 function j(e) {
   let {
 channel: t
-  } = e, n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), [l, s] = a.useState(!1), {
+  } = e, n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), [s, l] = a.useState(!1), {
 preset: o
   } = (0, c.cj)([m.Z], () => m.Z.getState()), C = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()), x = a.useCallback(() => {
-s(!0), (0, E.S)(r.q.STREAM_HIGH_QUALITY).then(e => {
+l(!0), (0, E.S)(r.q.STREAM_HIGH_QUALITY).then(e => {
   if (e) {
     if ((0, I.J1)(!(0, g.mc)(b, R)), f.default.track(N.rMx.PERK_DEMO_OFFER_ACCEPTED, {
         guild_id: t.guild_id,
@@ -88,7 +88,7 @@ s(!0), (0, E.S)(r.q.STREAM_HIGH_QUALITY).then(e => {
     }), h.Z.setGoLiveSource(e);
   }
 }).catch(() => {}).finally(() => {
-  s(!1);
+  l(!1);
 });
   }, [
 o,
@@ -102,7 +102,7 @@ color: u.Button.Colors.GREEN,
 size: u.Button.Sizes.SMALL,
 className: Z.optInButton,
 onClick: x,
-submitting: l,
+submitting: s,
 children: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_CTA
   });
 }
@@ -112,9 +112,9 @@ function L(e) {
 channel: t,
 hidden: n,
 onDismiss: a
-  } = e, l = (0, c.e7)([p.Z], () => p.Z.useReducedMotion);
+  } = e, s = (0, c.e7)([p.Z], () => p.Z.useReducedMotion);
   return (0, i.jsxs)('div', {
-className: s()(Z.optInPopout, {
+className: l()(Z.optInPopout, {
   [Z.hidden]: n
 }),
 children: [
@@ -126,7 +126,7 @@ children: [
         children: [
           (0, i.jsx)(u.LottieAnimation, {
             importData: A,
-            shouldAnimate: !l,
+            shouldAnimate: !s,
             className: Z.lottie,
             loop: !0
           }),
@@ -159,7 +159,7 @@ hidden: n,
 onDismiss: a
   } = e;
   return (0, i.jsxs)('div', {
-className: s()(Z.optInPopout, Z.variant2OptInPopout, {
+className: l()(Z.optInPopout, Z.variant2OptInPopout, {
   [Z.hidden]: n
 }),
 children: [
@@ -198,28 +198,28 @@ channel: t,
 ...n
   } = e, {
 hqStreamingState: {
-  hqStreamingOptOutPopoutShouldShow: l
+  hqStreamingOptOutPopoutShouldShow: s
 }
   } = (0, C.k)(r.q.STREAM_HIGH_QUALITY), {
-enabled: s,
+enabled: l,
 variant1: o
   } = x.Z.useExperiment({
 location: 'StreamButtonDemoOptInPopout'
   }, {
 autoTrackExposure: !1,
-disable: !l
+disable: !s
   }), c = a.useRef(!1);
   if (a.useEffect(() => {
-  l && s && !c.current && (c.current = !0, f.default.track(N.rMx.PERK_DEMO_OFFER_VIEWED, {
+  s && l && !c.current && (c.current = !0, f.default.track(N.rMx.PERK_DEMO_OFFER_VIEWED, {
     guild_id: t.guild_id,
     channel_id: t.id,
     perk_type: r.q.STREAM_HIGH_QUALITY
   }));
 }, [
-  l,
   s,
+  l,
   t
-]), !l || !s)
+]), !s || !l)
 return null;
   let d = o ? L : P;
   return (0, i.jsx)(T.h, {

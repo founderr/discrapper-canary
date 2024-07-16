@@ -5,8 +5,8 @@ return Z;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(512722),
-  s = n.n(l),
+  s = n(512722),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(904245),
@@ -72,7 +72,7 @@ let {
   textFocused: n,
   contentWarningProps: a
 } = this.state, {
-  activity: l,
+  activity: s,
   analyticsLocations: r,
   channel: c,
   activityActionType: h,
@@ -103,10 +103,10 @@ return (0, i.jsxs)(o.ModalRoot, {
         }),
         (0, i.jsx)(d.Z, {
           activityActionType: h,
-          activity: l,
+          activity: s,
           className: v.preview,
           application: m,
-          partyId: null != l.party ? l.party.id : null,
+          partyId: null != s.party ? s.party.id : null,
           isPreview: !0,
           analyticsLocations: r
         }),
@@ -127,7 +127,7 @@ return (0, i.jsxs)(o.ModalRoot, {
             let {
               closePopout: t
             } = e;
-            return s()(null != a, 'ActivityInvite.render - renderPopout: contentWarningProps cannot be null'), (0, i.jsx)(u.Z, {
+            return l()(null != a, 'ActivityInvite.render - renderPopout: contentWarningProps cannot be null'), (0, i.jsx)(u.Z, {
               onClose: t,
               ...a
             });
@@ -215,20 +215,20 @@ super(...e), S(this, 'state', {
     cooldown: i,
     onClose: a
   } = this.props, {
-    textValue: l,
-    contentWarningProps: s
+    textValue: s,
+    contentWarningProps: l
   } = this.state;
   if (i > 0)
     return Promise.resolve({
       shouldClear: !1,
       shouldRefocus: !0
     });
-  let r = C.ZP.parse(e, l),
+  let r = C.ZP.parse(e, s),
     o = {
       activity: t,
       type: n
     };
-  return null != s ? (this.setState({
+  return null != l ? (this.setState({
     contentWarningProps: null
   }), c.Z.sendMessage(e.id, r, !0, {
     activityAction: o
@@ -240,7 +240,7 @@ super(...e), S(this, 'state', {
       contentWarningProps: e
     }),
     type: _.I.FORM,
-    content: l,
+    content: s,
     channel: e
   }).then(t => {
     let {

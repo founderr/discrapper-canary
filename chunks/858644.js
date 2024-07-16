@@ -6,9 +6,9 @@ return f;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(112456),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(112456),
+  l = n.n(o),
   u = n(481060),
   c = n(403182),
   d = n(689938),
@@ -32,12 +32,12 @@ let {
   filename: n,
   size: i,
   progress: a,
-  onCancelUpload: s,
+  onCancelUpload: o,
   onClick: c,
   onContextMenu: f
 } = e, h = 100 === a, p = !h && i > 0;
 return (0, r.jsxs)('div', {
-  className: o()(_.attachment, t),
+  className: s()(_.attachment, t),
   children: [
     (0, r.jsx)(E, {
       filename: n
@@ -70,7 +70,7 @@ return (0, r.jsxs)('div', {
       ]
     }),
     h ? null : (0, r.jsx)(u.Clickable, {
-      onClick: s,
+      onClick: o,
       children: (0, r.jsx)(u.CloseSmallIcon, {
         size: 'md',
         color: 'currentColor',
@@ -85,7 +85,7 @@ t.Z = e => {
 className: t,
 url: n,
 fileName: a,
-fileSize: s,
+fileSize: o,
 onClick: c,
 onContextMenu: d,
 renderAdjacentContent: f
@@ -93,7 +93,7 @@ renderAdjacentContent: f
   return (0, r.jsxs)(i.Fragment, {
 children: [
   (0, r.jsxs)('div', {
-    className: o()(_.attachment, _.newMosaicStyle, t),
+    className: s()(_.attachment, _.newMosaicStyle, t),
     children: [
       (0, r.jsx)(E, {
         filename: a
@@ -113,7 +113,7 @@ children: [
           }),
           (0, r.jsx)('div', {
             className: _.metadata,
-            children: l().filesize(s)
+            children: l().filesize(o)
           })
         ]
       })

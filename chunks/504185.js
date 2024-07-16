@@ -5,8 +5,8 @@ return er;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(392711),
   o = n(442837),
   c = n(433517),
@@ -70,18 +70,18 @@ function ea(e) {
   let {
 channel: t,
 appContext: n,
-popoutOpen: l,
-popoutWindow: s,
+popoutOpen: s,
+popoutWindow: l,
 popoutWindowAlwaysOnTop: r,
 selectedParticipant: c
   } = e, d = t.getGuildId(), u = (0, o.e7)([P.Z], () => P.Z.getMostRecentSelectedTextChannelId(d), [d]), h = b.default.getId(), p = !(0, o.e7)([f.Z], () => f.Z.isFullscreenInContext(n)) && (!O.isPlatformEmbedded || O.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS)), m = null != c && c.type !== Q.fO.ACTIVITY && c.user.id !== h, _ = a.useMemo(() => {
 var e;
-return null !== (e = null == s ? void 0 : s.window) && void 0 !== e ? e : window;
-  }, [s]), C = (0, K.Z)({
+return null !== (e = null == l ? void 0 : l.window) && void 0 !== e ? e : window;
+  }, [l]), C = (0, K.Z)({
 channel: t,
 appContext: n,
-popoutOpen: l,
-popoutWindow: s,
+popoutOpen: s,
+popoutWindow: l,
 currentWindow: _
   }), g = n === X.IlC.POPOUT && O.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS);
   return (0, i.jsxs)(i.Fragment, {
@@ -99,7 +99,7 @@ children: [
   }) : null,
   p ? (0, i.jsx)(Z.Z, {
     className: $.rightTrayIcon,
-    popoutOpen: l,
+    popoutOpen: s,
     onOpenPopout: et(t, u),
     onClosePopout: en
   }) : null,
@@ -108,11 +108,11 @@ children: [
   });
 }
 
-function el(e) {
+function es(e) {
   let {
 channel: t
-  } = e, n = (0, p.bp)(), a = (0, o.e7)([L.Z], () => L.Z.can(X.Plq.CREATE_INSTANT_INVITE, t)), l = (0, o.e7)([j.Z], () => j.Z.getGuild(t.guild_id)), s = (0, o.e7)([B.Z], () => B.Z.getStageInstanceByChannel(t.id)), r = a || (null == s ? void 0 : s.invite_code) != null;
-  return null != l && r ? (0, i.jsx)(N.Z, {
+  } = e, n = (0, p.bp)(), a = (0, o.e7)([L.Z], () => L.Z.can(X.Plq.CREATE_INSTANT_INVITE, t)), s = (0, o.e7)([j.Z], () => j.Z.getGuild(t.guild_id)), l = (0, o.e7)([B.Z], () => B.Z.getStageInstanceByChannel(t.id)), r = a || (null == l ? void 0 : l.invite_code) != null;
+  return null != s && r ? (0, i.jsx)(N.Z, {
 channel: t,
 appContext: n,
 className: $.__invalid_leftTrayIcon,
@@ -120,10 +120,10 @@ analyticsLocation: X.ZY5.GUILD_CHANNEL
   }) : null;
 }
 
-function es(e) {
+function el(e) {
   let t, {
   channel: n,
-  toggleRequestToSpeakSidebar: l,
+  toggleRequestToSpeakSidebar: s,
   showRequestToSpeakSidebar: c,
   popoutWindow: d,
   popoutWindowAlwaysOnTop: u,
@@ -168,7 +168,7 @@ style: {
   paddingTop: b
 },
 disableGradients: 0 === N && S.e.TOP,
-renderBottomLeft: () => (0, i.jsx)(el, {
+renderBottomLeft: () => (0, i.jsx)(es, {
   channel: n
 }),
 renderBottomCenter: () => E ? (0, i.jsx)(z.Z, {
@@ -185,13 +185,13 @@ renderBottomRight: () => E ? (0, i.jsx)(ea, {
 }) : null,
 renderHeader: () => (0, i.jsx)(F.Z, {
   inPopout: _ === X.IlC.POPOUT,
-  toggleRequestToSpeakSidebar: l,
+  toggleRequestToSpeakSidebar: s,
   showRequestToSpeakSidebar: c,
   channel: n
 }),
 renderChatToasts: () => !M || m || T ? null : (0, i.jsx)(C.ZP, {
   children: (0, i.jsx)(v.Z, {
-    className: s()($.chatToasts, {
+    className: l()($.chatToasts, {
       [$.rtsSidebarOpen]: c
     }),
     channelId: n.id
@@ -212,10 +212,10 @@ children: !T && t
 function er(e) {
   let {
 channel: t
-  } = e, [l, r] = a.useState(!1), u = a.useCallback(() => {
-r(!l);
+  } = e, [s, r] = a.useState(!1), u = a.useCallback(() => {
+r(!s);
   }, [
-l,
+s,
 r
   ]), {
 popoutWindow: E,
@@ -249,21 +249,21 @@ children: (0, i.jsxs)(C.B2, {
       ref: M,
       children: [
         (0, i.jsx)('div', {
-          className: s()($.callContainer, (0, y.Q)(X.BRd.DARK), {
-            [$.sidebarVisible]: l,
-            [$.sidebarOrChatVisible]: l || S
+          className: l()($.callContainer, (0, y.Q)(X.BRd.DARK), {
+            [$.sidebarVisible]: s,
+            [$.sidebarOrChatVisible]: s || S
           }),
-          children: (0, i.jsx)(es, {
+          children: (0, i.jsx)(el, {
             channel: t,
             toggleRequestToSpeakSidebar: u,
-            showRequestToSpeakSidebar: l,
+            showRequestToSpeakSidebar: s,
             popoutWindow: E,
             popoutWindowAlwaysOnTop: I,
             popoutOpen: T,
             chatOpen: S
           })
         }),
-        l ? (0, i.jsx)(G.Z, {
+        s ? (0, i.jsx)(G.Z, {
           channel: t,
           toggleRequestToSpeakSidebar: u,
           chatOpen: S

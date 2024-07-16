@@ -5,8 +5,8 @@ return S;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(392711),
-  s = n.n(l),
+  s = n(392711),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(32750),
@@ -29,10 +29,10 @@ var i = n(735250),
 function S(e) {
   let {
 channel: t
-  } = e, [n, l] = a.useState(!1);
+  } = e, [n, s] = a.useState(!1);
 
-  function s() {
-l(e => !e);
+  function l() {
+s(e => !e);
   }
   let r = v.Z.Messages.MORE;
   return (0, i.jsx)(o.Popout, {
@@ -41,7 +41,7 @@ animation: o.Popout.Animation.NONE,
 position: 'bottom',
 align: 'right',
 autoInvert: !1,
-onRequestClose: () => l(!1),
+onRequestClose: () => s(!1),
 renderPopout: function(e) {
   return (0, i.jsx)(Z, {
     ...e,
@@ -54,7 +54,7 @@ children: (e, t) => {
   } = t;
   return (0, i.jsx)(I.ZP.Icon, {
     ...e,
-    onClick: s,
+    onClick: l,
     tooltip: n ? null : r,
     icon: o.MoreHorizontalIcon,
     'aria-label': r,
@@ -69,10 +69,10 @@ function Z(e) {
 channel: t,
 closePopout: n,
 onSelect: a
-  } = e, l = (0, c.Z)(t), I = (0, m.Z)(t), S = (0, E.Z)(t.id), Z = (0, f.Z)(t), A = (0, g.Z)({
+  } = e, s = (0, c.Z)(t), I = (0, m.Z)(t), S = (0, E.Z)(t.id), Z = (0, f.Z)(t), A = (0, g.Z)({
 id: t.id,
 label: v.Z.Messages.COPY_ID_THREAD
-  }), M = (0, d.Z)(t), b = (0, u.Z)(t), R = (0, h.Z)(t, 'Toolbar Overflow'), j = (0, _.Z)(t), L = (0, p.Z)(t), P = (0, C.Z)(t), O = x.vF.useSetting(), y = (0, r.e7)([T.Z], () => !s().isEmpty(T.Z.getVoiceStatesForChannel(t.id)));
+  }), M = (0, d.Z)(t), b = (0, u.Z)(t), R = (0, h.Z)(t, 'Toolbar Overflow'), j = (0, _.Z)(t), L = (0, p.Z)(t), P = (0, C.Z)(t), O = x.vF.useSetting(), y = (0, r.e7)([T.Z], () => !l().isEmpty(T.Z.getVoiceStatesForChannel(t.id)));
   return (0, i.jsxs)(o.Menu, {
 navId: 'thread-context',
 onClose: n,
@@ -102,7 +102,7 @@ children: [
   (0, i.jsxs)(o.MenuGroup, {
     children: [
       P,
-      l,
+      s,
       I,
       b
     ]

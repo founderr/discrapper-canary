@@ -6,8 +6,8 @@ return _;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(338545),
+  s = n.n(a),
+  o = n(338545),
   l = n(442837),
   u = n(393238),
   c = n(607070),
@@ -25,10 +25,10 @@ height: A = 0
   } = (0, u.Z)(), {
 ref: N,
 height: v = 0
-  } = (0, u.Z)(), O = (0, s.useSpring)({
+  } = (0, u.Z)(), O = (0, o.useSpring)({
 height: g ? A + v : v,
 immediate: p || h,
-config: s.config.stiff,
+config: o.config.stiff,
 onRest: () => T(!0)
   }), R = i.useCallback(() => {
 f(!E);
@@ -42,18 +42,18 @@ let e = setTimeout(() => {
 }, 100);
 return () => clearTimeout(e);
   }, []), (0, r.jsx)('div', {
-className: o()(d.collapseable, {
+className: s()(d.collapseable, {
   [d.toggled]: g
 }, n),
-children: (0, r.jsxs)(s.animated.div, {
-  className: o()(d.contentExpandContainer, {
+children: (0, r.jsxs)(o.animated.div, {
+  className: s()(d.contentExpandContainer, {
     [d.showOverflow]: g && I
   }),
   style: O,
   children: [
     (0, r.jsx)('div', {
       ref: N,
-      className: o()(d.header, {
+      className: s()(d.header, {
         [d.toggled]: g
       }),
       children: t({

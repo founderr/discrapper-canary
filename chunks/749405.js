@@ -4,8 +4,8 @@ return h;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(481060),
+  s = n(470079),
+  a = n(481060),
   r = n(359110),
   l = n(6025),
   o = n(433355),
@@ -20,11 +20,11 @@ function h(e) {
 active: t,
 user: n,
 channel: h
-  } = e, I = (0, c.K)(), m = a.useCallback(() => {
-(0, s.showToast)((0, s.createToast)(_.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, s.ToastType.FAILURE));
-  }, []), g = a.useCallback(() => {
+  } = e, I = (0, c.K)(), m = s.useCallback(() => {
+(0, a.showToast)((0, a.createToast)(_.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, a.ToastType.FAILURE));
+  }, []), g = s.useCallback(() => {
 l.Z.closeChannelSidebar(o.uZ);
-  }, []), p = a.useCallback(() => {
+  }, []), p = s.useCallback(() => {
 l.Z.closeChannelSidebar(o.uZ), I && (0, r.Kh)(h.id);
   }, [
 h.id,
@@ -54,10 +54,10 @@ children: [
   (0, i.jsxs)('div', {
     className: E.actions,
     children: [
-      (0, i.jsx)(s.Button, {
+      (0, i.jsx)(a.Button, {
         className: E.button,
-        color: s.ButtonColors.PRIMARY,
-        size: s.Button.Sizes.SMALL,
+        color: a.ButtonColors.PRIMARY,
+        size: a.Button.Sizes.SMALL,
         onClick: e => {
           e.stopPropagation(), S(h.id);
         },
@@ -65,10 +65,10 @@ children: [
         submitting: C || v,
         children: _.Z.Messages.MESSAGE_REQUEST_IGNORE
       }),
-      (0, i.jsx)(s.Button, {
+      (0, i.jsx)(a.Button, {
         className: E.button,
-        color: s.ButtonColors.BRAND,
-        size: s.Button.Sizes.SMALL,
+        color: a.ButtonColors.BRAND,
+        size: a.Button.Sizes.SMALL,
         onClick: e => {
           e.stopPropagation(), T(h.id);
         },

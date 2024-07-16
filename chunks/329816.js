@@ -2,8 +2,8 @@ n(47120), n(653041);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(802498),
+  s = n.n(a),
+  o = n(802498),
   l = n(266067),
   u = n(873546),
   c = n(442837),
@@ -92,8 +92,8 @@ pathname: a
   } = (0, l.TH)(), _ = (0, j.getPlatform)(), I = u.tq || u.Em, k = (0, c.e7)([w.Z], () => w.Z.darkSidebar ? $.BRd.DARK : void 0), K = (0, c.e7)([g.Z], () => g.Z.useForcedColors ? 'yes' : 'no'), [X, er] = (0, c.Wu)([y.Z], () => [
 y.Z.isEditorOpen,
 y.Z.isCoachmark
-  ]), ei = (0, c.e7)([v.Z], () => v.Z.isEditorOpen), ea = (0, c.e7)([x.Z], () => x.Z.getLayers().includes($.S9g.USER_SETTINGS)), eo = (0, c.e7)([G.default], () => W.ZP.canUseClientThemes(G.default.getCurrentUser())), es = X && !ea, el = [];
-  es && er && !eo && el.push(d.z.CLIENT_THEMES_COACHMARK);
+  ]), ei = (0, c.e7)([v.Z], () => v.Z.isEditorOpen), ea = (0, c.e7)([x.Z], () => x.Z.getLayers().includes($.S9g.USER_SETTINGS)), es = (0, c.e7)([G.default], () => W.ZP.canUseClientThemes(G.default.getCurrentUser())), eo = X && !ea, el = [];
+  eo && er && !es && el.push(d.z.CLIENT_THEMES_COACHMARK);
   let [eu, ec] = (0, M.U)(el, J.R.SIDEBAR, !0);
   el.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
   let ed = eu === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
@@ -130,7 +130,7 @@ children: (0, r.jsx)(S.Z, {
             children: [
               (0, r.jsx)(Y.Co, {}),
               (0, r.jsx)(B.ZP, {}),
-              (0, r.jsx)(s.OU, {}),
+              (0, r.jsx)(o.OU, {}),
               null != _ ? (0, r.jsx)(en, {
                 type: _,
                 themeOverride: k
@@ -141,7 +141,7 @@ children: (0, r.jsx)(S.Z, {
                 children: (0, r.jsxs)(V.yP, {
                   children: [
                     (0, r.jsxs)('div', {
-                      className: o()(ee.appAsidePanelWrapper, I && ee.mobileAppAsidePanelWrapper, {
+                      className: s()(ee.appAsidePanelWrapper, I && ee.mobileAppAsidePanelWrapper, {
                         [ee.allowsScrolling]: (() => {
                           let e = (0, l.LX)(a, {
                             path: $.Z5c.APPLICATION_DIRECTORY,
@@ -161,7 +161,7 @@ children: (0, r.jsx)(S.Z, {
                                 value: A.Z,
                                 children: [
                                   (0, r.jsx)('div', {
-                                    className: o()(I ? ee.mobileApp : ee.app),
+                                    className: s()(I ? ee.mobileApp : ee.app),
                                     children: t
                                   }),
                                   (0, r.jsx)(R.Z, {}),
@@ -182,7 +182,7 @@ children: (0, r.jsx)(S.Z, {
                         }),
                         (0, r.jsx)(C.Z, {}),
                         (0, r.jsx)(h.Z, {}),
-                        es && !er || e_ ? (0, r.jsx)(D.Z, {
+                        eo && !er || e_ ? (0, r.jsx)(D.Z, {
                           markAsDismissed: ec
                         }) : null,
                         !ei || ea || e_ ? null : (0, r.jsx)(O.Z, {
@@ -198,7 +198,7 @@ children: (0, r.jsx)(S.Z, {
                   ]
                 })
               }),
-              (0, r.jsx)(s.OU, {})
+              (0, r.jsx)(o.OU, {})
             ]
           })
         })

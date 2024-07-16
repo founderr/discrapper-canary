@@ -4,9 +4,9 @@ return M;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(392711),
-  r = n.n(s),
+  s = n(470079),
+  a = n(392711),
+  r = n.n(a),
   l = n(954955),
   o = n.n(l),
   c = n(442837),
@@ -35,21 +35,21 @@ let x = 15 * T.Z.Millis.MINUTE,
 let {
   party: t,
   onUserContextMenu: n,
-  onChannelContextMenu: s,
+  onChannelContextMenu: a,
   quest: r
 } = e, l = (0, i.jsx)(C.Z, {
   party: t,
   onUserContextMenu: n
 }), c = (0, i.jsx)(f.Z, {
   party: t,
-  onChannelContextMenu: s,
+  onChannelContextMenu: a,
   quest: r
 }), {
   partiedMembers: u,
   applicationStreams: _,
   currentActivities: E,
   voiceChannels: h
-} = t, I = u.length, m = _.length, g = E.length, T = h.length > 0, S = a.useCallback(() => {
+} = t, I = u.length, m = _.length, g = E.length, T = h.length > 0, S = s.useCallback(() => {
   let e = E.filter(e => {
     var t, n;
     return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.wW.GAME;
@@ -107,7 +107,7 @@ function M() {
 nowPlayingCards: e,
 loaded: t,
 needsRefresh: n,
-fetching: s,
+fetching: a,
 currentUser: r
   } = (0, c.cj)([
 g.Z,
@@ -120,22 +120,22 @@ needsRefresh: I.Z.needsRefresh(),
 fetching: I.Z.getFetching(),
 currentUser: m.default.getCurrentUser()
   })), l = (0, c.e7)([_.Z], () => _.Z.quests);
-  a.useEffect(() => (u.Z.wait(() => S.L()), () => u.Z.wait(() => S.v())), [null == r ? void 0 : r.id]), a.useEffect(() => {
-n && !s && P();
+  s.useEffect(() => (u.Z.wait(() => S.L()), () => u.Z.wait(() => S.v())), [null == r ? void 0 : r.id]), s.useEffect(() => {
+n && !a && P();
   }, [
 n,
-s
+a
   ]);
-  let o = a.useMemo(() => {
+  let o = s.useMemo(() => {
   let t = new Map(),
     n = new Set();
   for (let i of e)
     i.party.currentActivities.forEach(e => {
       let {
-        game: a
+        game: s
       } = e;
-      if (null != a) {
-        let e = (0, E.lQ)(l, a.id);
+      if (null != s) {
+        let e = (0, E.lQ)(l, s.id);
         null != e && !n.has(e.id) && (t.set(i.party.id, e), n.add(e.id));
       }
     });

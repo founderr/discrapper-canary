@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(570140),
+var s = n(481060),
+  a = n(570140),
   r = n(536442),
   l = n(810788),
   o = n(592125),
@@ -29,10 +29,10 @@ writable: !0
 }
 class C extends _.Z {
   _initialize() {
-super._initialize(), !__OVERLAY__ && s.Z.subscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
+super._initialize(), !__OVERLAY__ && a.Z.subscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
   }
   _terminate() {
-super._terminate(), !__OVERLAY__ && s.Z.unsubscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
+super._terminate(), !__OVERLAY__ && a.Z.unsubscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
   }
   constructor(...e) {
 var t;
@@ -45,17 +45,17 @@ super(...e), t = this, f(this, 'playingSoundsWeb', new Map()), f(this, '_stopAnd
 }), f(this, '_playSound', async function(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
     i = arguments.length > 2 ? arguments[2] : void 0,
-    a = arguments.length > 3 ? arguments[3] : void 0,
-    s = null != a && d.Z.getVoiceChannelId() === a;
-  if ((null == a || s) && !c.Z.isDeaf() && !h.Z.isLocalSoundboardMuted(i))
+    s = arguments.length > 3 ? arguments[3] : void 0,
+    a = null != s && d.Z.getVoiceChannelId() === s;
+  if ((null == s || a) && !c.Z.isDeaf() && !h.Z.isLocalSoundboardMuted(i))
     try {
-      let a = {
+      let s = {
         soundKey: ''.concat(i, '-').concat(e),
         soundURL: (0, m.Z)(e),
         soundVolume: (0, g.Z)(n),
         reportSoundStartedPlaying: () => (0, E.xR)(e, i)
       };
-      c.Z.supports(S.AN.SAMPLE_PLAYBACK) ? await (0, p.$)(a) : await (0, p.h)(a, t.playingSoundsWeb);
+      c.Z.supports(S.AN.SAMPLE_PLAYBACK) ? await (0, p.$)(s) : await (0, p.h)(s, t.playingSoundsWeb);
     } finally {
       (0, E.R)(e, i);
     }
@@ -64,9 +64,9 @@ super(...e), t = this, f(this, 'playingSoundsWeb', new Map()), f(this, '_stopAnd
 }), f(this, '_handleOpenEducationModal', (e, t) => {
   if (null == e)
     return;
-  let s = o.Z.getChannel(t),
+  let a = o.Z.getChannel(t),
     c = u.Z.getKeybindForAction(T.kg4.SOUNDBOARD_HOLD);
-  null != s && (0, I.Z)(s) && null != c && l.Z.hasHotspot(r.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) && (0, a.openModalLazy)(async () => {
+  null != a && (0, I.Z)(a) && null != c && l.Z.hasHotspot(r.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) && (0, s.openModalLazy)(async () => {
     let {
       default: t
     } = await n.e('69208').then(n.bind(n, 490166));
@@ -74,7 +74,7 @@ super(...e), t = this, f(this, 'playingSoundsWeb', new Map()), f(this, '_stopAnd
       ...n,
       guildId: e,
       keybind: c,
-      channel: s
+      channel: a
     });
   });
 });

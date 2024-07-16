@@ -5,8 +5,8 @@ return R;
 }), n(627494), n(757143), n(653041);
 var i = n(735250),
   a = n(470079),
-  l = n(423875),
-  s = n(442837),
+  s = n(423875),
+  l = n(442837),
   r = n(902704),
   o = n(481060),
   c = n(952164),
@@ -32,10 +32,10 @@ let M = (e, t, n) => {
   let {
 artist: i,
 media: a
-  } = e, l = S.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_LISTENING_TO_MEDIA_ARTIST, s = _.ZP.getName(t.guild_id, t.id, n);
-  return l.plainFormat({
+  } = e, s = S.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_LISTENING_TO_MEDIA_ARTIST, l = _.ZP.getName(t.guild_id, t.id, n);
+  return s.plainFormat({
 artist: i,
-userName: s,
+userName: l,
 media: a
   }).replaceAll('*', '');
 };
@@ -43,8 +43,8 @@ media: a
 function b(e) {
   let {
 activity: t
-  } = e, n = t.timestamps, l = (0, x.tS)(n), {
-durationTimestamp: s,
+  } = e, n = t.timestamps, s = (0, x.tS)(n), {
+durationTimestamp: l,
 seekBarStyles: r
   } = a.useMemo(() => {
 var e;
@@ -54,9 +54,9 @@ let {
 } = null !== (e = t.timestamps) && void 0 !== e ? e : {};
 if (null == n || null == i)
   return {};
-let a = Math.min(i, l),
-  s = i - n,
-  r = Math.floor((a - n) / s * 100);
+let a = Math.min(i, s),
+  l = i - n,
+  r = Math.floor((a - n) / l * 100);
 return {
   seekBarStyles: {
     width: ''.concat(r, '%')
@@ -67,7 +67,7 @@ return {
 };
   }, [
 t,
-l
+s
   ]);
   return null == r ? null : (0, i.jsxs)('div', {
 className: Z.listeningTimeline,
@@ -86,7 +86,7 @@ children: [
     variant: 'text-xs/normal',
     tabularNumbers: !0,
     color: void 0,
-    children: s
+    children: l
   })
 ]
   });
@@ -112,7 +112,7 @@ function R(e) {
   primaryColor: H,
   secondaryColor: G
 } = (0, C.Z)(U),
-V = (0, s.e7)([
+V = (0, l.e7)([
   d.Z,
   p.default
 ], () => (null == y ? void 0 : y.type) === N.IIU.LISTENING && null != B ? (0, u.Z)(d.Z, p.default, B, y) : void 0, [
@@ -159,7 +159,7 @@ F = a.useCallback(() => {
 return null;
   let W = k,
 z = [];
-  if (D.media.provider === l.p.SPOTIFY && (null == V ? void 0 : V.syncDisabled) === !1) {
+  if (D.media.provider === s.p.SPOTIFY && (null == V ? void 0 : V.syncDisabled) === !1) {
 x = () => {
   (0, c.aG)(y);
 }, z.push((0, i.jsx)(I.Ll, {

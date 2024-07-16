@@ -14,8 +14,8 @@ var s = n(735250),
   I = n(915296),
   R = n(103433),
   C = n(166021),
-  p = n(32173),
-  g = n(391110),
+  g = n(32173),
+  p = n(391110),
   A = n(75077),
   m = n(981631),
   N = n(689938),
@@ -29,12 +29,12 @@ t.Z = e => {
   isFullScreen: x
 } = e,
 b = a.useRef(null),
-O = Object.entries((0, p.Z)()).reduce((e, t) => {
+O = Object.entries((0, g.Z)()).reduce((e, t) => {
   let [n, s] = t;
   return !1 !== s.canReveal && 'upcomingDropUntimed' !== s.name && (e[n] = s), e;
 }, {}),
 P = (0, I.HI)({
-  location: g.MQ.SEE_ALL
+  location: p.MQ.SEE_ALL
 }),
 {
   analyticsLocations: L
@@ -58,7 +58,7 @@ children: (0, s.jsx)('div', {
         className: f.heroHeading,
         onBackClick: () => {
           h(!1), T.default.track(m.rMx.NITRO_HOME_NAVIGATION, {
-            current_component: g.MQ.SEE_ALL,
+            current_component: p.MQ.SEE_ALL,
             next_component: M,
             interaction_component: 'Back Button'
           });
@@ -77,13 +77,13 @@ children: (0, s.jsx)('div', {
             className: f.cardCarousel,
             cards: (0, A.sP)({
               perksCards: O,
-              variant: g.R0.CARD_CAROUSEL_FIRST_ROW,
+              variant: p.R0.CARD_CAROUSEL_FIRST_ROW,
               shopMarketingVariation: D,
               tileOrderVariant: P,
               isPremiumSubscriber: j,
               isFullScreen: x
             }),
-            cardType: g.R0.CARD_CAROUSEL_FIRST_ROW
+            cardType: p.R0.CARD_CAROUSEL_FIRST_ROW
           }),
           (0, s.jsx)(c.Heading, {
             variant: 'heading-xxl/extrabold',
@@ -95,13 +95,13 @@ children: (0, s.jsx)('div', {
             className: f.cardCarousel,
             cards: (0, A.sP)({
               perksCards: O,
-              variant: g.R0.CARD_CAROUSEL_SECOND_ROW,
+              variant: p.R0.CARD_CAROUSEL_SECOND_ROW,
               shopMarketingVariation: D,
               tileOrderVariant: P,
               isPremiumSubscriber: j,
               isFullScreen: x
             }),
-            cardType: g.R0.CARD_CAROUSEL_SECOND_ROW
+            cardType: p.R0.CARD_CAROUSEL_SECOND_ROW
           }),
           (0, s.jsx)(c.Heading, {
             variant: 'heading-xxl/extrabold',
@@ -113,13 +113,13 @@ children: (0, s.jsx)('div', {
             className: f.cardCarousel,
             cards: (0, A.sP)({
               perksCards: O,
-              variant: g.R0.CARD_CAROUSEL_THIRD_ROW,
+              variant: p.R0.CARD_CAROUSEL_THIRD_ROW,
               shopMarketingVariation: D,
               tileOrderVariant: P,
               isPremiumSubscriber: j,
               isFullScreen: x
             }),
-            cardType: g.R0.CARD_CAROUSEL_THIRD_ROW
+            cardType: p.R0.CARD_CAROUSEL_THIRD_ROW
           })
         ]
       }),

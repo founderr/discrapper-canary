@@ -1,7 +1,7 @@
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(481060),
+  s = n(442837),
+  l = n(481060),
   r = n(287734),
   o = n(358221),
   c = n(305325),
@@ -25,7 +25,7 @@ I ? (0, c.hk)(C.guild_id, () => r.default.selectVoiceChannel(C.id)) : r.default.
 C.id,
 C.guild_id,
 I
-  ]), T = p.filter(e => e.type === m.Ui.VOICE), N = 4 === T.length ? 2 : 3, v = (0, l.Wu)([o.Z], () => T.map(e => o.Z.getParticipant(C.id, e.id)).filter(h.lm), [
+  ]), T = p.filter(e => e.type === m.Ui.VOICE), N = 4 === T.length ? 2 : 3, v = (0, s.Wu)([o.Z], () => T.map(e => o.Z.getParticipant(C.id, e.id)).filter(h.lm), [
 C.id,
 T
   ]);
@@ -48,14 +48,14 @@ children: [
       width: 48
     }, e.id))
   }),
-  (0, i.jsx)(s.Heading, {
+  (0, i.jsx)(l.Heading, {
     className: f.channelName,
     variant: 'heading-xxl/semibold',
     children: C.name
   }),
   (0, i.jsx)('div', {
     className: f.participantsRow,
-    children: (0, i.jsx)(s.Text, {
+    children: (0, i.jsx)(l.Text, {
       color: 'header-secondary',
       variant: 'text-sm/normal',
       children: (t = C, 0 === (n = T).length ? _.Z.Messages.CURRENTLY_IN_STAGE_EMPTY : 1 === n.length ? _.Z.Messages.CURRENTLY_IN_STAGE_1.format({
@@ -70,12 +70,12 @@ children: [
       }) : void 0)
     })
   }),
-  (0, i.jsx)(s.Button, {
+  (0, i.jsx)(l.Button, {
     disabled: !g,
     className: f.joinButton,
-    color: g ? s.Button.Colors.GREEN : s.Button.Colors.PRIMARY,
+    color: g ? l.Button.Colors.GREEN : l.Button.Colors.PRIMARY,
     onClick: x,
-    size: s.Button.Sizes.MEDIUM,
+    size: l.Button.Sizes.MEDIUM,
     children: g ? _.Z.Messages.STAGE_CHANNEL_JOIN : _.Z.Messages.CHANNEL_LOCKED_SHORT
   })
 ]

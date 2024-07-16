@@ -4,9 +4,9 @@ return A;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(330711),
   o = n(442837),
   c = n(481060),
@@ -36,8 +36,8 @@ return (0, i.jsx)(c.TextBadge, {
 let {
   header: t,
   subHeader: n,
-  imageSrc: a,
-  tagText: s,
+  imageSrc: s,
+  tagText: a,
   wideStyle: l
 } = e;
 return (0, i.jsxs)('div', {
@@ -45,8 +45,8 @@ return (0, i.jsxs)('div', {
     [f.wideStyle]: l
   }),
   children: [
-    null != s ? (0, i.jsx)(C, {
-      tagText: s,
+    null != a ? (0, i.jsx)(C, {
+      tagText: a,
       className: f.featureCardTag
     }) : null,
     (0, i.jsx)('img', {
@@ -54,7 +54,7 @@ return (0, i.jsxs)('div', {
       className: r()(f.featureCardImg, {
         [f.wideStyle]: l
       }),
-      src: a
+      src: s
     }),
     (0, i.jsxs)('div', {
       className: f.featureCardTextGroup,
@@ -78,7 +78,7 @@ function A(e) {
   let {
 className: t,
 renderModalProps: n,
-heroArt: s,
+heroArt: a,
 heroArtClassName: C,
 modalDismissibleContent: A,
 modalTopExtra: v,
@@ -93,7 +93,7 @@ body: M
   } = e, {
 onClose: D,
 transitionState: y
-  } = n, j = (0, I.Dt)(), U = x.length % 2 == 0, G = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), [k, w] = a.useState(Date.now()), [B, H] = a.useState(0), [V, F] = a.useState(0), [Y, W] = a.useState(!1), [z, K] = a.useState(!0), q = a.useRef(k), Q = a.useRef(B), X = a.useRef(V), J = a.useRef(Y), $ = a.useRef(z);
+  } = n, j = (0, I.Dt)(), U = x.length % 2 == 0, G = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), [k, w] = s.useState(Date.now()), [B, H] = s.useState(0), [V, F] = s.useState(0), [Y, W] = s.useState(!1), [z, K] = s.useState(!0), q = s.useRef(k), Q = s.useRef(B), X = s.useRef(V), J = s.useRef(Y), $ = s.useRef(z);
 
   function ee() {
 let e = Date.now(),
@@ -105,7 +105,7 @@ return J.current && (H(n += t), !$.current && F(i += t)), w(e), [
   i
 ];
   }
-  return a.useEffect(() => {
+  return s.useEffect(() => {
 q.current = k, Q.current = B, X.current = V, J.current = Y, $.current = z;
   }, [
 k,
@@ -113,8 +113,8 @@ B,
 V,
 Y,
 z
-  ]), a.useEffect(() => () => {
-if ('video' === s.type || 'embed' === s.type) {
+  ]), s.useEffect(() => () => {
+if ('video' === a.type || 'embed' === a.type) {
   let [e, t] = ee();
   g.default.track(T.rMx.CHANGE_LOG_VIDEO_PLAYED, {
     change_log_id: b,
@@ -126,8 +126,8 @@ if ('video' === s.type || 'embed' === s.type) {
 }
   }, [
 b,
-s.type
-  ]), a.useEffect(() => {
+a.type
+  ]), s.useEffect(() => {
 null != A && (0, E.kk)(A);
 let e = Date.now();
 return g.default.track(T.rMx.CHANGE_LOG_OPENED, {
@@ -165,7 +165,7 @@ children: [
         children: Z
       }),
       (() => {
-        if ('video' === s.type) {
+        if ('video' === a.type) {
           var e;
           return (0, i.jsx)(m.Z, {
             className: r()(f.video, C),
@@ -174,8 +174,8 @@ children: [
             muted: !0,
             controls: !0,
             controlsList: 'nofullscreen nodownload noremoteplayback noplaybackrate',
-            src: s.src,
-            poster: s.poster,
+            src: a.src,
+            poster: a.poster,
             onPlay: e => {
               g.default.track(T.rMx.CHANGE_LOG_VIDEO_INTERACTED, {
                 change_log_id: b
@@ -191,7 +191,7 @@ children: [
               ee(), K(e.currentTarget.muted), W(!1);
             },
             disablePictureInPicture: !0,
-            children: null === (e = s.subtitles) || void 0 === e ? void 0 : e.map(e => {
+            children: null === (e = a.subtitles) || void 0 === e ? void 0 : e.map(e => {
               let t = l.Z.getLanguages().find(t => t.code === e.locale);
               return null == t ? null : (0, i.jsx)('track', {
                 label: t.englishName,
@@ -203,15 +203,15 @@ children: [
             })
           });
         }
-        return 'embed' === s.type ? (0, i.jsx)(u.BC, {
+        return 'embed' === a.type ? (0, i.jsx)(u.BC, {
           className: r()(f.video, C),
           allowFullScreen: !1,
-          href: s.href,
-          thumbnail: s.thumbnail,
-          video: s.embed,
+          href: a.href,
+          thumbnail: a.thumbnail,
+          video: a.embed,
           provider: _.pn.YOUTUBE,
-          maxWidth: s.embed.width,
-          maxHeight: s.embed.height,
+          maxWidth: a.embed.width,
+          maxHeight: a.embed.height,
           renderVideoComponent: h.lV,
           renderImageComponent: h.Yi,
           renderLinkComponent: h.iT,
@@ -221,10 +221,10 @@ children: [
               change_log_id: b
             });
           }
-        }) : 'image' === s.type ? (0, i.jsx)('img', {
+        }) : 'image' === a.type ? (0, i.jsx)('img', {
           alt: '',
           className: r()(f.video, C),
-          src: s.src
+          src: a.src
         }) : null;
       })(),
       (0, i.jsxs)(c.Heading, {

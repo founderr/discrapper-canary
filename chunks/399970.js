@@ -1,28 +1,28 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return m;
   }
-}), s(47120);
-var n, a, i = s(735250),
-  r = s(470079),
-  o = s(442837),
-  l = s(481060),
-  c = s(570140),
-  d = s(401430),
-  _ = s(155268),
-  E = s(695103),
-  u = s(285952),
-  T = s(153124),
-  I = s(689938),
-  S = s(873644),
-  N = s(549856);
+}), t(47120);
+var n, a, i = t(735250),
+  r = t(470079),
+  o = t(442837),
+  l = t(481060),
+  c = t(570140),
+  d = t(401430),
+  _ = t(155268),
+  E = t(695103),
+  u = t(285952),
+  T = t(153124),
+  I = t(689938),
+  S = t(873644),
+  N = t(549856);
 let C = /^\d+$|^$/;
 (a = n || (n = {})).LOCALHOST = 'localhost', a.PROXY = 'proxy';
 
 function m(e) {
   let {
-onClose: t,
-transitionState: s
+onClose: s,
+transitionState: t
   } = e, {
 authorizedApplicationId: n,
 authorizationError: a,
@@ -34,17 +34,17 @@ authorizing: E.Z.isFetchingAuthorization
   })), [A, h] = r.useState(null != n ? n : ''), [g, O] = r.useState('8080'), [p, R] = r.useState('localhost'), x = (0, T.Dt)(), M = C.test(A);
   async function f() {
 d.q$();
-let e = function(e, t, s) {
+let e = function(e, s, t) {
   if (null == e)
     return null;
   switch (e) {
     case 'localhost':
-      return 'https://localhost:'.concat(t);
+      return 'https://localhost:'.concat(s);
     case 'proxy':
-      return (0, _.Z)(s);
+      return (0, _.Z)(t);
   }
 }(p, g, A);
-null != await d.Wt(A, e) && t();
+null != await d.Wt(A, e) && s();
   }
   r.useEffect(() => () => c.Z.wait(() => d.q$()), []);
   let D = null != n && n === A,
@@ -53,7 +53,7 @@ P = D ? function() {
 } : f;
   return (0, i.jsxs)(l.ModalRoot, {
 'aria-labelledby': x,
-transitionState: s,
+transitionState: t,
 children: [
   (0, i.jsxs)(l.ModalHeader, {
     justify: u.Z.Justify.BETWEEN,
@@ -66,7 +66,7 @@ children: [
         children: I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
       }),
       (0, i.jsx)(l.ModalCloseButton, {
-        onClick: t
+        onClick: s
       })
     ]
   }),

@@ -9,8 +9,8 @@ return h;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(338545),
+  s = n.n(a),
+  o = n(338545),
   l = n(481060),
   u = n(219436);
 
@@ -56,10 +56,10 @@ let {
   dotRadius: t,
   dotPosition: n,
   fill: a = 'currentColor',
-  spacing: o = 2.5
+  spacing: s = 2.5
 } = e, l = i.useRef(c()), u = i.useRef(!0);
 i.useEffect(() => () => void(u.current = !1), []);
-let [d] = (0, s.useSpring)(() => ({
+let [d] = (0, o.useSpring)(() => ({
   ..._,
   to: async e => {
     let t = 2.8;
@@ -82,8 +82,8 @@ return (0, r.jsx)(r.Fragment, {
     2
   ].map(e => {
     let i = 0.25 * e,
-      u = t + t * o * e;
-    return (0, r.jsx)(s.animated.circle, {
+      u = t + t * s * e;
+    return (0, r.jsx)(o.animated.circle, {
       cx: n ? n.to([
         0,
         1
@@ -145,8 +145,8 @@ return (0, l.useTransition)(_, {
     y: a,
     width: 6 * n + n / 2 * 2,
     height: 2 * n,
-    className: o()(h, u.dots, E ? u.themed : null),
-    children: (0, r.jsx)(s.animated.g, {
+    className: s()(h, u.dots, E ? u.themed : null),
+    children: (0, r.jsx)(o.animated.g, {
       style: {
         opacity: d.to(e => Math.min(1, Math.max(e, 0)))
       },

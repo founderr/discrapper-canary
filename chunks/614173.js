@@ -5,14 +5,14 @@ return c;
 }), n(47120);
 var i = n(470079),
   a = n(442837),
-  l = n(592125),
-  s = n(700785),
+  s = n(592125),
+  l = n(700785),
   r = n(471253),
   o = n(981631);
 
 function c(e) {
-  let t = (0, a.e7)([l.Z], () => l.Z.getChannel(e), [e]),
-n = s.Uu(o.Plq.REQUEST_TO_SPEAK, t),
+  let t = (0, a.e7)([s.Z], () => s.Z.getChannel(e), [e]),
+n = l.Uu(o.Plq.REQUEST_TO_SPEAK, t),
 [c, d] = i.useState(n);
   return i.useEffect(() => {
 n !== c && d(n);

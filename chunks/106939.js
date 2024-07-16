@@ -21,8 +21,8 @@ var s = n(735250),
   I = n(906732),
   R = n(252618),
   C = n(605236),
-  p = n(984370),
-  g = n(797614),
+  g = n(984370),
+  p = n(797614),
   A = n(108427),
   m = n(210887),
   N = n(695346),
@@ -100,22 +100,22 @@ theme: t,
 section: n,
 handleItemSelect: a
   } = e, r = (0, S.Dt)(), o = (0, v.gU)();
-  return (0, s.jsxs)(p.Z, {
+  return (0, s.jsxs)(g.Z, {
 className: i()((0, M.Q)(t), k.sidebarTabBar),
 scrollable: l.tq,
 role: 'navigation',
 'aria-labelledby': r,
 toolbar: !0,
 children: [
-  (0, s.jsx)(p.Z.Icon, {
+  (0, s.jsx)(g.Z.Icon, {
     icon: _.GroupIcon,
     'aria-hidden': !0
   }),
-  (0, s.jsx)(p.Z.Title, {
+  (0, s.jsx)(g.Z.Title, {
     id: r,
     children: H.Z.Messages.FAMILY_CENTER_TITLE
   }),
-  (0, s.jsx)(p.Z.Divider, {}),
+  (0, s.jsx)(g.Z.Divider, {}),
   (0, s.jsxs)(_.TabBar, {
     'aria-label': H.Z.Messages.FAMILY_CENTER_TITLE,
     selectedItem: n,
@@ -157,9 +157,9 @@ l = (0, P.M)(),
   handleTabChange: T
 } = (0, O.Z)(),
 I = (0, S.Dt)(),
-p = f.default.getCurrentUser(),
+g = f.default.getCurrentUser(),
 m = null != e,
-N = r && null != p && !m;
+N = r && null != g && !m;
   return (a.useEffect(() => {
 (0, A.e)('family-center'), x.ZP.initialPageLoad(), !n && (0, C.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
   dismissAction: y.L.AUTO,
@@ -172,7 +172,7 @@ r && m && (h.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
   selected_teen_id: l,
   initial_page: j.QH[u],
   source: j._6[j.Mu.SIDENAV]
-}), g.Z.increment({
+}), p.Z.increment({
   name: o.V.FAMILY_CENTER_VIEW
 }));
   }, [
@@ -206,7 +206,7 @@ children: [
 function Y() {
   let {
 analyticsLocations: e
-  } = (0, I.ZP)(T.Z.FAMILY_CENTER), t = (0, L.Z)(), n = (0, v.M8)(), r = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), l = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), p = (0, P.M)(), M = (0, c.e7)([m.Z], () => m.Z.theme), {
+  } = (0, I.ZP)(T.Z.FAMILY_CENTER), t = (0, L.Z)(), n = (0, v.M8)(), r = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), l = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), g = (0, P.M)(), M = (0, c.e7)([m.Z], () => m.Z.theme), {
 selectedTab: Z,
 handleTabChange: D
   } = (0, O.Z)(), B = (0, S.Dt)(), w = f.default.getCurrentUser(), V = null != t, K = l && null != w && !V;
@@ -219,10 +219,10 @@ handleTabChange: D
   l && V && (h.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
     is_considered_adult: t,
     num_of_accepted_links: n,
-    selected_teen_id: p,
+    selected_teen_id: g,
     initial_page: j.QH[Z],
     source: j._6[j.Mu.SIDENAV]
-  }), g.Z.increment({
+  }), p.Z.increment({
     name: o.V.FAMILY_CENTER_VIEW
   }));
 }, [

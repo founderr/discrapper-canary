@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(925994),
   i = n(436660),
   a = n(887490);
 
-function o(e) {
+function s(e) {
   return e.setFragmentData = t => {
 if (null != e.selection) {
   let n = (0, r.sk)(a.bN.richValue(e), {

@@ -1,27 +1,27 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return c;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(481060),
-  i = s(921801),
-  r = s(726985),
-  o = s(689938),
-  l = s(124819);
+var n = t(735250);
+t(470079);
+var a = t(481060),
+  i = t(921801),
+  r = t(726985),
+  o = t(689938),
+  l = t(124819);
 
 function c(e) {
   let {
-className: t,
-currentUser: s,
+className: s,
+currentUser: t,
 handleDisableAccount: c,
 handleDeleteAccount: d
-  } = e, _ = s.isClaimed();
+  } = e, _ = t.isClaimed();
   return (0, n.jsx)(i.F, {
 setting: r.s6.ACCOUNT_DISABLE_ACCOUNT,
 children: (0, n.jsxs)(a.FormSection, {
-  className: t,
+  className: s,
   title: o.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_SECTION,
   children: [
     (0, n.jsx)(a.FormText, {

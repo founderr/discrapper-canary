@@ -1,8 +1,8 @@
 n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(481060),
   u = n(129861),
   c = n(730749),
@@ -29,7 +29,7 @@ let {
   analyticsContext: n,
   disablePopout: r,
   guildId: a
-} = this.props, o = {
+} = this.props, s = {
   location: {
     ...n.location,
     object: f.qAy.LIST_ITEM
@@ -44,7 +44,7 @@ return (0, i.jsx)(l.Popout, {
     location: 'UserListItem',
     guildId: a,
     userId: t.id,
-    analyticsParams: o
+    analyticsParams: s
   }),
   position: 'left',
   onRequestClose: this.handleUserPopoutClose,
@@ -75,14 +75,14 @@ super(...e), p(this, 'state', {
     disablePopout: n,
     onContextMenu: r,
     user: a,
-    status: o,
+    status: s,
     textClassName: c,
     nick: d,
     guildId: _
   } = this.props;
   return (0, i.jsxs)(E.Z, {
     align: E.Z.Align.CENTER,
-    className: s()(h.memberListItem, t, {
+    className: o()(h.memberListItem, t, {
       [h.popoutDisabled]: n
     }),
     onContextMenu: r,
@@ -95,10 +95,10 @@ super(...e), p(this, 'state', {
         className: h.avatar,
         'aria-label': a.username,
         size: l.AvatarSizes.SIZE_24,
-        status: o
+        status: s
       }),
       (0, i.jsx)(l.Text, {
-        className: s()(h.memberListItemTag, c),
+        className: o()(h.memberListItemTag, c),
         variant: 'text-sm/normal',
         children: (0, i.jsx)(u.Z, {
           user: a,

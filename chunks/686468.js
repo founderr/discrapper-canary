@@ -6,8 +6,8 @@ return T;
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(692547),
-  s = n(481060),
+  s = n(692547),
+  l = n(481060),
   r = n(884338),
   o = n(688641),
   c = n(596449),
@@ -28,14 +28,14 @@ onClick: t
   } = e;
   return (0, i.jsx)(o.Z, {
 iconContainerClassName: g.continueIconContainer,
-icon: (0, i.jsx)(s.StageIcon, {
+icon: (0, i.jsx)(l.StageIcon, {
   size: 'custom',
   color: 'currentColor',
   className: g.continueIcon,
   height: 20,
   width: 20
 }),
-color: l.Z.unsafe_rawColors.PRIMARY_700.css,
+color: s.Z.unsafe_rawColors.PRIMARY_700.css,
 title: C.Z.Messages.STAGE_CONTINUE_PROMPT_TITLE,
 description: C.Z.Messages.STAGE_CONTINUE_PROMPT_SUBTITLE,
 onClick: t
@@ -58,7 +58,7 @@ children: [
     users: a,
     size: r.u.SIZE_16
   }),
-  (0, i.jsx)(s.Text, {
+  (0, i.jsx)(l.Text, {
     variant: 'text-sm/normal',
     color: 'header-secondary',
     children: function(e) {
@@ -89,7 +89,7 @@ function T(e) {
   let {
 channel: t,
 onContinueClick: n
-  } = e, l = (0, a.e7)([p.Z], () => p.Z.can(m.yP, t), [t]), r = t.guild_id, {
+  } = e, s = (0, a.e7)([p.Z], () => p.Z.can(m.yP, t), [t]), r = t.guild_id, {
 canCreateGuildEvent: o
   } = (0, h.XJ)(t), T = (0, f.Z)(t.id), {
 usersInSummary: N
@@ -99,7 +99,7 @@ children: [
   (0, i.jsx)(E.Z, {
     children: (0, i.jsx)('div', {
       className: g.iconBackground,
-      children: (0, i.jsx)(s.StageIcon, {
+      children: (0, i.jsx)(l.StageIcon, {
         size: 'custom',
         color: 'currentColor',
         width: 40,
@@ -111,12 +111,12 @@ children: [
   (0, i.jsxs)('div', {
     className: g.headerContainer,
     children: [
-      (0, i.jsx)(s.Heading, {
+      (0, i.jsx)(l.Heading, {
         className: g.__invalid_title,
         variant: 'heading-xl/semibold',
         children: C.Z.Messages.STAGE_START_PROMPT_TITLE_MODERATOR
       }),
-      (0, i.jsx)(s.Text, {
+      (0, i.jsx)(l.Text, {
         className: g.subtitle,
         variant: 'text-sm/normal',
         children: C.Z.Messages.STAGE_START_PROMPT_SUBTITLE
@@ -126,7 +126,7 @@ children: [
   T ? null : (0, i.jsx)(d.Z, {
     channelId: t.id
   }),
-  l ? (0, i.jsx)(u.Z, {
+  s ? (0, i.jsx)(u.Z, {
     className: g.eventPrompt,
     channel: t
   }) : null,
@@ -134,10 +134,10 @@ children: [
     className: g.eventPrompt,
     guildId: r
   }) : null,
-  (l || N.length > 0) && (0, i.jsx)('hr', {
+  (s || N.length > 0) && (0, i.jsx)('hr', {
     className: g.separator
   }),
-  l ? (0, i.jsx)(I, {
+  s ? (0, i.jsx)(I, {
     onClick: n
   }) : null,
   (0, i.jsx)(x, {

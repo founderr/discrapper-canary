@@ -1,12 +1,12 @@
 n.d(t, {
   C: function() {
-return s;
+return o;
   },
   az: function() {
 return l;
   },
   hp: function() {
-return o;
+return s;
   }
 });
 var r = n(735250);
@@ -14,11 +14,11 @@ n(470079);
 var i = n(481060),
   a = n(617136);
 
-function o(e) {
+function s(e) {
   let {
 questId: t,
 location: a,
-questContentPosition: o
+questContentPosition: s
   } = e;
   (0, i.openModalLazy)(async () => {
 let {
@@ -31,13 +31,13 @@ let {
 return n => (0, r.jsx)(e, {
   ...n,
   questId: t,
-  questContentPosition: o,
+  questContentPosition: s,
   location: a
 });
   });
 }
 
-function s(e, t) {
+function o(e, t) {
   (0, i.openModalLazy)(async () => {
 let {
   default: i

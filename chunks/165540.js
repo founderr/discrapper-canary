@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(149765),
   o = n(442837),
   c = n(481060),
@@ -26,7 +26,7 @@ var i = n(735250),
 let A = a.forwardRef(function(e, t) {
   let {
 type: n
-  } = e, [l, r] = a.useState(!1), h = (0, o.e7)([p.Z], () => p.Z.shouldShowPopup()), _ = a.useCallback(() => {
+  } = e, [s, r] = a.useState(!1), h = (0, o.e7)([p.Z], () => p.Z.shouldShowPopup()), _ = a.useCallback(() => {
 (0, d.yw)(N.rMx.CHAT_INPUT_COMPONENT_VIEWED, {
   type: N.K98.APPS_BUTTON
 }), h ? u.y(m.ti.DISMISSED) : u._(m._b.TEXT, n);
@@ -50,7 +50,7 @@ null != t && (t.style.transform = null != e ? 'translateY(calc(100% - min('.conc
 text: S.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
 children: e => (0, i.jsx)('div', {
   ...e,
-  className: s()(Z.buttonContainer, v.t4),
+  className: l()(Z.buttonContainer, v.t4),
   ref: I,
   children: (0, i.jsx)(c.Button, {
     look: c.Button.Looks.BLANK,
@@ -74,7 +74,7 @@ children: e => (0, i.jsx)('div', {
     },
     innerClassName: Z.buttonContents,
     children: (0, i.jsx)(c.AppsIcon, {
-      className: s()(l ? Z.iconHovered : Z.iconUnhovered)
+      className: l()(s ? Z.iconHovered : Z.iconUnhovered)
     })
   })
 })
@@ -84,7 +84,7 @@ t.Z = a.memo(a.forwardRef(function(e) {
   let {
 channel: t,
 type: n
-  } = e, l = a.useRef(null), s = function(e, t) {
+  } = e, s = a.useRef(null), l = function(e, t) {
 let n = e.getGuildId(),
   i = (0, o.e7)([
     g.ZP,
@@ -98,13 +98,13 @@ let n = e.getGuildId(),
     messagesDisabled: a
   } = (0, o.cj)([I.Z], () => {
     var n, a;
-    let l = e.isPrivate(),
-      s = I.Z.computePermissions(e),
-      o = r.e$(s, N.Plq.CREATE_PUBLIC_THREADS) || r.e$(s, N.Plq.CREATE_PRIVATE_THREADS),
-      c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(s, N.Plq.SEND_MESSAGES)),
+    let s = e.isPrivate(),
+      l = I.Z.computePermissions(e),
+      o = r.e$(l, N.Plq.CREATE_PUBLIC_THREADS) || r.e$(l, N.Plq.CREATE_PRIVATE_THREADS),
+      c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(l, N.Plq.SEND_MESSAGES)),
       d = (0, C.xl)(e);
     return {
-      messagesDisabled: i || !l && !c || d
+      messagesDisabled: i || !s && !c || d
     };
   }, [
     e,
@@ -128,15 +128,15 @@ autoTrackExposure: !0
 let e = p.Z.activeViewType();
 return null != e && e === n && p.Z.shouldShowPopup();
   }, [n]);
-  return d && null == c && !s ? (0, i.jsxs)('div', {
+  return d && null == c && !l ? (0, i.jsxs)('div', {
 className: Z.channelAppLauncher,
 children: [
   (0, i.jsx)(A, {
     type: n,
-    ref: l
+    ref: s
   }),
   u ? (0, i.jsx)(_.Z, {
-    positionTargetRef: l,
+    positionTargetRef: s,
     channel: t
   }) : null
 ]

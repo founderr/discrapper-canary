@@ -1,37 +1,37 @@
-s.d(t, {
+t.d(s, {
   Dh: function() {
 return O;
   },
   Gd: function() {
 return R;
   }
-}), s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(442837),
-  l = s(481060),
-  c = s(100527);
-s(502762), s(659101);
-var d = s(594174),
-  _ = s(931240),
-  E = s(905362),
-  u = s(353093),
-  T = s(891728),
-  I = s(438365),
-  S = s(114487),
-  N = s(219039),
-  C = s(979264),
-  m = s(308083),
-  A = s(981631),
-  h = s(689938),
-  g = s(947020);
+}), t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(442837),
+  l = t(481060),
+  c = t(100527);
+t(502762), t(659101);
+var d = t(594174),
+  _ = t(931240),
+  E = t(905362),
+  u = t(353093),
+  T = t(891728),
+  I = t(438365),
+  S = t(114487),
+  N = t(219039),
+  C = t(979264),
+  m = t(308083),
+  A = t(981631),
+  h = t(689938),
+  g = t(947020);
 
 function O(e) {
   let {
-className: t,
-clanTag: s,
+className: s,
+clanTag: t,
 clanBadge: i,
 onTagClick: o,
 guildId: c,
@@ -44,7 +44,7 @@ memberCount: u
 let e = T.current;
 null != e && null != e.offsetWidth && null != e.scrollWidth && A(e.offsetWidth < e.scrollWidth);
   }, []), (0, n.jsxs)('div', {
-className: r()(g.container, t),
+className: r()(g.container, s),
 children: [
   (0, n.jsxs)('div', {
     className: g.guildPrefixContainer,
@@ -83,7 +83,7 @@ children: [
     children: (0, n.jsx)(C.aG, {
       guildId: c,
       className: g.tag,
-      clanTag: s,
+      clanTag: t,
       clanBadge: i,
       onClick: o,
       badgeSize: m.NC.SIZE_16,
@@ -98,8 +98,8 @@ children: [
 
 function p(e) {
   let {
-userClanTag: t,
-userClanBadge: s,
+userClanTag: s,
+userClanBadge: t,
 guildId: i,
 guildName: r,
 guildIcon: I,
@@ -155,8 +155,8 @@ children: [
   }),
   (0, n.jsx)(O, {
     className: g.profileContainer,
-    clanTag: t,
-    clanBadge: s,
+    clanTag: s,
+    clanBadge: t,
     onTagClick: p,
     guildName: r,
     guildId: i,
@@ -170,8 +170,8 @@ children: [
 
 function R(e) {
   let {
-userId: t,
-wrapChildren: s
+userId: s,
+wrapChildren: t
   } = e, {
 userClanTag: a,
 userClanBadge: i,
@@ -180,7 +180,7 @@ guildName: o,
 guildIcon: l,
 clan: c
   } = (0, I.r)({
-userId: t
+userId: s
   });
   if (null == a || null == r || null == o)
 return null;
@@ -191,9 +191,9 @@ guildId: r,
 guildName: o,
 guildIcon: l,
 clan: c,
-userId: t
+userId: s
   });
-  return null != s ? (0, n.jsx)(n.Fragment, {
-children: s(d)
+  return null != t ? (0, n.jsx)(n.Fragment, {
+children: t(d)
   }) : d;
 }

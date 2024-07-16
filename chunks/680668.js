@@ -21,7 +21,7 @@ var a = n(533800),
 
 function h(e) {
   var t, h;
-  let N, p, f, {
+  let N, f, p, {
   onTransitionToInviteChannel: C,
   onAcceptInstantInvite: g,
   guild: S,
@@ -59,7 +59,7 @@ G = (0, _.e)({
   isStage: U,
   isStream: !1
 });
-  return p = (0, i.jsxs)('span', {
+  return f = (0, i.jsxs)('span', {
 className: T.infoTitle,
 children: [
   (0, i.jsx)(l.Z.GuildName, {
@@ -74,7 +74,7 @@ children: [
     })
   })
 ]
-  }), y && (f = (0, i.jsx)(s.TooltipContainer, {
+  }), y && (p = (0, i.jsx)(s.TooltipContainer, {
 className: T.tooltipContainer,
 text: m.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
 children: (0, i.jsx)(s.CircleInformationIcon, {
@@ -82,7 +82,7 @@ children: (0, i.jsx)(s.CircleInformationIcon, {
   color: 'currentColor',
   className: T.infoIcon
 })
-  })), j ? (p = (0, i.jsx)(l.Z.Channel, {
+  })), j ? (f = (0, i.jsx)(l.Z.Channel, {
 channel: P
   }), N = (0, i.jsxs)('span', {
 className: T.infoTitle,
@@ -111,7 +111,7 @@ children: [
   }),
   (0, i.jsx)(l.Z.Header, {
     text: G,
-    extra: f
+    extra: p
   }),
   (0, i.jsxs)(l.Z.Body, {
     children: [
@@ -122,7 +122,7 @@ children: [
             guild: S
           }),
           (0, i.jsx)(l.Z.Info, {
-            title: p,
+            title: f,
             onClick: b ? k : null,
             children: N
           })

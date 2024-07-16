@@ -6,8 +6,8 @@ return m;
 var i = n(735250);
 n(470079);
 var a = n(481060),
-  l = n(43267),
-  s = n(933557),
+  s = n(43267),
+  l = n(933557),
   r = n(297700),
   o = n(534091),
   c = n(967128),
@@ -29,7 +29,7 @@ function m(e) {
   var t;
   let {
 channel: n
-  } = e, m = null !== (t = (0, s.ZP)(n)) && void 0 !== t ? t : '';
+  } = e, m = null !== (t = (0, l.ZP)(n)) && void 0 !== t ? t : '';
   return (0, i.jsxs)('div', {
 id: (0, o.p)(n.id, n.id),
 className: u.headerContainer,
@@ -49,7 +49,7 @@ children: [
           (0, i.jsx)(a.Avatar, {
             'aria-label': m,
             size: a.AvatarSizes.SIZE_80,
-            src: (0, l.x)(n, 80, !1)
+            src: (0, s.x)(n, 80, !1)
           }),
           (0, i.jsxs)(c.Ot, {
             className: u.emptyMessageHeader,

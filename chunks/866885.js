@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(570140),
   c = n(475179),
@@ -38,20 +38,20 @@ function x(e) {
   let {
 channel: a,
 isLoading: y
-  } = e, [x, G] = i.useState(!1), k = (0, s.e7)([N.ZP], () => N.ZP.getSelfEmbeddedActivityForChannel(a.id)), B = (0, s.e7)([N.ZP], () => N.ZP.getActivityPanelMode()), F = (0, E.q)(null == k ? void 0 : k.applicationId), V = null == k ? void 0 : k.launchId, H = (0, s.e7)([g.Z], () => g.Z.getChannelId() === a.id), {
+  } = e, [x, G] = i.useState(!1), k = (0, o.e7)([N.ZP], () => N.ZP.getSelfEmbeddedActivityForChannel(a.id)), B = (0, o.e7)([N.ZP], () => N.ZP.getActivityPanelMode()), F = (0, E.q)(null == k ? void 0 : k.applicationId), V = null == k ? void 0 : k.launchId, H = (0, o.e7)([g.Z], () => g.Z.getChannelId() === a.id), {
 dockedRect: Z,
 isHidden: Y
-  } = (0, s.cj)([T.Z], () => {
+  } = (0, o.cj)([T.Z], () => {
 let e = T.Z.pipWindow;
 return {
   dockedRect: null != e ? T.Z.getDockedRect(e.id) : null,
   isHidden: T.Z.isEmbeddedActivityHidden()
 };
-  }), j = (0, s.e7)([h.Z], () => h.Z.getWindow(b.KJ3.CHANNEL_CALL_POPOUT)), {
+  }), j = (0, o.e7)([h.Z], () => h.Z.getWindow(b.KJ3.CHANNEL_CALL_POPOUT)), {
 activityParticipant: W,
 selectedParticipant: K,
 participantsOpen: z
-  } = (0, s.cj)([f.Z], () => ({
+  } = (0, o.cj)([f.Z], () => ({
 activityParticipant: null != k ? f.Z.getParticipant(a.id, k.applicationId) : null,
 selectedParticipant: f.Z.getSelectedParticipant(a.id),
 participantsOpen: f.Z.getParticipantsOpen(a.id)
@@ -90,14 +90,14 @@ ei = {
   return null != a.guild_id && '' !== a.guild_id && (ei.guild_id = a.guild_id), (0, r.jsx)(I.ZP, {
 timeout: 2000,
 children: e => {
-  var t, n, i, s, u, c, d, _;
+  var t, n, i, o, u, c, d, _;
   let {
     idle: E,
     onActive: f,
     onForceIdle: h
   } = e;
   return (0, r.jsxs)(m.Z, {
-    className: o()(P.root, {
+    className: s()(P.root, {
       [P.pipMode]: J,
       [w.elevationHigh]: J,
       [U.idle]: E && !(null === (t = k.config) || void 0 === t ? void 0 : t.useInteractivePIP),
@@ -108,14 +108,14 @@ children: e => {
     }),
     noBorder: !J,
     children: [
-      (i = f, s = h, u = E, c = $, d = er, J && null != k && ((null == W ? void 0 : W.type) === M.fO.ACTIVITY || c) ? (null === (_ = k.config) || void 0 === _ ? void 0 : _.useInteractivePIP) ? (0, r.jsx)(C.of, {
+      (i = f, o = h, u = E, c = $, d = er, J && null != k && ((null == W ? void 0 : W.type) === M.fO.ACTIVITY || c) ? (null === (_ = k.config) || void 0 === _ ? void 0 : _.useInteractivePIP) ? (0, r.jsx)(C.of, {
         onJumpToChannel: et,
         applicationId: k.applicationId,
         channel: a,
         showControls: !u,
         onMouseDown: i,
         onMouseMove: i,
-        onMouseLeave: s,
+        onMouseLeave: o,
         onToggleHeight: en,
         isExpanded: x,
         hideExpandedButton: c
@@ -124,7 +124,7 @@ children: e => {
           idle: u,
           onMouseMove: i,
           onMouseDown: i,
-          onMouseLeave: s,
+          onMouseLeave: o,
           onJumpToChannel: () => {
             et(), (0, A.tg)(L.Ez.PANEL);
           },
@@ -137,7 +137,7 @@ children: e => {
           (0, r.jsx)('div', {
             onMouseMove: i,
             onMouseDown: i,
-            onMouseLeave: s,
+            onMouseLeave: o,
             className: P.clickShield,
             onDoubleClick: et
           }),
@@ -145,7 +145,7 @@ children: e => {
             idle: u,
             onMouseMove: i,
             onMouseDown: i,
-            onMouseLeave: s,
+            onMouseLeave: o,
             onJumpToChannel: et,
             channel: a,
             applicationId: k.applicationId,
@@ -154,7 +154,7 @@ children: e => {
         ]
       }) : null),
       y ? (0, r.jsx)(l.Spinner, {
-        className: o()(P.iframe, {
+        className: s()(P.iframe, {
           [P.pipModeShort]: J && !x,
           [P.pipModeTall]: J && x
         })
@@ -163,7 +163,7 @@ children: e => {
         referrerPolicy: D.um.has(k.applicationId) ? 'no-referrer' : 'origin',
         url: k.url,
         queryParams: ei,
-        className: o()(P.iframe, {
+        className: s()(P.iframe, {
           [P.pipModeShort]: J && !x,
           [P.pipModeTall]: J && x,
           [P.pipNonInteractive]: J && !(null === (n = k.config) || void 0 === n ? void 0 : n.useInteractivePIP)

@@ -3,8 +3,8 @@ a.d(n, {
 return M;
   }
 }), a(411104), a(47120);
-var t = a(735250),
-  s = a(470079),
+var s = a(735250),
+  t = a(470079),
   r = a(120356),
   l = a.n(r),
   i = a(692547),
@@ -28,8 +28,8 @@ function M(e) {
   var n, a;
   let r, {
   selectedPaymentSourceId: M,
-  paymentSources: p,
-  prependOption: R,
+  paymentSources: R,
+  prependOption: p,
   hidePersonalInformation: L,
   onChange: f,
   onPaymentSourceAdd: C,
@@ -39,10 +39,10 @@ function M(e) {
   optionClassName: v,
   dropdownLoading: g
 } = e,
-O = 0 === p.length,
+O = 0 === R.length,
 h = [
-  ...null != R ? [R] : [],
-  ...p,
+  ...null != p ? [p] : [],
+  ...R,
   P
 ].map((e, n) => {
   if (e instanceof d.ZP) {
@@ -143,13 +143,13 @@ h = [
     }(e, L);
     return {
       value: e.id,
-      label: (0, t.jsxs)('div', {
+      label: (0, s.jsxs)('div', {
         className: A.paymentSourceSelectedOption,
         children: [
-          null != n ? (0, t.jsx)(u.ZP, {
+          null != n ? (0, s.jsx)(u.ZP, {
             type: u.ZP.getType(n)
           }) : null,
-          (0, t.jsx)('div', {
+          (0, s.jsx)('div', {
             className: l()(A.paymentSourceLabel, {
               [A.error]: e.invalid
             }),
@@ -162,34 +162,34 @@ h = [
   return {
     key: n,
     value: e.value,
-    label: (0, t.jsx)('div', {
+    label: (0, s.jsx)('div', {
       className: A.paymentSourceLabel,
       children: e.label
     })
   };
 }),
-U = s.useMemo(() => p.find(e => e.id === M), [
-  p,
+U = t.useMemo(() => R.find(e => e.id === M), [
+  R,
   M
 ]);
   let y = (n = m, a = U, r = null, n && null != a && !a.canRedeemTrial() ? r = T.Z.Messages.PAYMENT_SOURCE_REDEMPTION_INVALID : n && null != a && a.hasFlag(E.Cw.NEW) && (r = T.Z.Messages.BILLING_PAYMENT_AUTHORIZATION_CHARGE.format({
 helpDeskArticle: _.Z.getArticleURL(I.BhN.PAYMENT_AUTHORIZATION_CHARGE)
   })), r);
-  return (0, t.jsxs)(t.Fragment, {
+  return (0, s.jsxs)(s.Fragment, {
 children: [
-  O ? (0, t.jsx)(o.Button, {
+  O ? (0, s.jsx)(o.Button, {
     color: o.ButtonColors.BRAND,
     fullWidth: !0,
     onClick: C,
     children: T.Z.Messages.PAYMENT_SOURCES_ADD
-  }) : (0, t.jsx)(o.SingleSelect, {
+  }) : (0, s.jsx)(o.SingleSelect, {
     options: h,
     value: M,
     onChange: e => {
       if (e === P.id)
         null != C && C();
       else {
-        let n = p.find(n => n.id === e);
+        let n = R.find(n => n.id === e);
         null != f && f(n);
       }
     },
@@ -201,22 +201,22 @@ children: [
     placeholder: T.Z.Messages.PAYMENT_SOURCE_TYPE_SELECT,
     renderOptionValue: e => {
       let [n] = e;
-      return g ? (0, t.jsx)(o.Spinner, {
+      return g ? (0, s.jsx)(o.Spinner, {
         type: o.SpinnerTypes.SPINNING_CIRCLE
       }) : n.label;
     }
   }),
-  null != y ? (0, t.jsxs)('div', {
+  null != y ? (0, s.jsxs)('div', {
     className: A.paymentSourceWarning,
     children: [
-      (0, t.jsx)(o.CircleExclamationPointIcon, {
+      (0, s.jsx)(o.CircleExclamationPointIcon, {
         size: 'custom',
         width: 20,
         height: 20,
         className: A.paymentSourceWarningIcon,
         color: i.Z.unsafe_rawColors.YELLOW_300.css
       }),
-      (0, t.jsx)(o.Text, {
+      (0, s.jsx)(o.Text, {
         variant: 'text-xs/normal',
         children: y
       })

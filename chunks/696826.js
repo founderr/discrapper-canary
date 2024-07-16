@@ -33,8 +33,8 @@ return h;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(338545),
+  s = n.n(a),
+  o = n(338545),
   l = n(780384),
   u = n(44315),
   c = n(806519),
@@ -91,23 +91,23 @@ status: n,
 isMobile: r,
 isTyping: i,
 topOffset: a = 0,
-leftOffset: o = 0
-  } = e, s = a / 8 * t, l = o / 8 * t;
+leftOffset: s = 0
+  } = e, o = a / 8 * t, l = s / 8 * t;
   if (i)
 return {
   bgRadius: 0.5 * t,
-  bgY: 0.25 * t + s,
+  bgY: 0.25 * t + o,
   bgX: 0,
   bgHeight: t,
   bgWidth: t * _.D6,
   cutoutX: 0.5 * t + l,
-  cutoutY: 0.75 * t + s,
+  cutoutY: 0.75 * t + o,
   cutoutWidth: 0,
   cutoutHeight: 0,
   cutoutRadius: 0,
-  polygonScale: I(t, 0, s, l),
-  polygonOrigin: T(t, s, l),
-  dotY: 0.75 * t + s,
+  polygonScale: I(t, 0, o, l),
+  polygonOrigin: T(t, o, l),
+  dotY: 0.75 * t + o,
   dotX: 0.5 * t + l,
   dotRadius: 0
 };
@@ -125,80 +125,80 @@ case d.Skl.ONLINE:
       cutoutWidth: 0.75 * t,
       cutoutHeight: 0.75 * t,
       cutoutRadius: 0,
-      polygonScale: I(t, 0, s, l),
-      polygonOrigin: T(t, s, l),
+      polygonScale: I(t, 0, o, l),
+      polygonOrigin: T(t, o, l),
       dotY: 1.25 * t,
       dotX: 0.5 * t + l,
       dotRadius: 0.125 * t
     };
   return {
     bgRadius: 0.5 * t,
-      bgY: 0.25 * t + s,
+      bgY: 0.25 * t + o,
       bgX: l,
       bgHeight: t,
       bgWidth: t,
       cutoutX: 0.5 * t + l,
-      cutoutY: 0.75 * t + s,
+      cutoutY: 0.75 * t + o,
       cutoutWidth: 0,
       cutoutHeight: 0,
       cutoutRadius: 0,
-      polygonScale: I(t, 0, s, l),
-      polygonOrigin: T(t, s, l),
-      dotY: 0.75 * t + s,
+      polygonScale: I(t, 0, o, l),
+      polygonOrigin: T(t, o, l),
+      dotY: 0.75 * t + o,
       dotX: 0.5 * t + l,
       dotRadius: 0
   };
 case d.Skl.IDLE:
   return {
     bgRadius: 0.5 * t,
-      bgY: 0.25 * t + s,
+      bgY: 0.25 * t + o,
       bgX: l,
       bgHeight: t,
       bgWidth: t,
       cutoutX: -(0.125 * t) + l,
-      cutoutY: 0.125 * t + s,
+      cutoutY: 0.125 * t + o,
       cutoutWidth: 0.75 * t,
       cutoutHeight: 0.75 * t,
       cutoutRadius: 0.375 * t,
-      polygonScale: I(t, 0, s, l),
-      polygonOrigin: T(t, s, l),
-      dotY: 0.75 * t + s,
+      polygonScale: I(t, 0, o, l),
+      polygonOrigin: T(t, o, l),
+      dotY: 0.75 * t + o,
       dotX: 0.5 * t + l,
       dotRadius: 0
   };
 case d.Skl.DND:
   return {
     bgRadius: 0.5 * t,
-      bgY: 0.25 * t + s,
+      bgY: 0.25 * t + o,
       bgX: l,
       bgHeight: t,
       bgWidth: t,
       cutoutX: 0.125 * t + l,
-      cutoutY: 0.625 * t + s,
+      cutoutY: 0.625 * t + o,
       cutoutWidth: 0.75 * t,
       cutoutHeight: 0.25 * t,
       cutoutRadius: 0.125 * t,
-      polygonScale: I(t, 0, s, l),
-      polygonOrigin: T(t, s, l),
-      dotY: 0.75 * t + s,
+      polygonScale: I(t, 0, o, l),
+      polygonOrigin: T(t, o, l),
+      dotY: 0.75 * t + o,
       dotX: 0.5 * t + l,
       dotRadius: 0
   };
 case d.Skl.STREAMING:
   return {
     bgRadius: 0.5 * t,
-      bgY: 0.25 * t + s,
+      bgY: 0.25 * t + o,
       bgX: l,
       bgHeight: t,
       bgWidth: t,
       cutoutX: 0.5 * t + l,
-      cutoutY: 0.75 * t + s,
+      cutoutY: 0.75 * t + o,
       cutoutWidth: 0,
       cutoutHeight: 0,
       cutoutRadius: 0.25 * t,
-      polygonScale: I(t, 1, s, l),
-      polygonOrigin: T(t, s, l),
-      dotY: 0.75 * t + s,
+      polygonScale: I(t, 1, o, l),
+      polygonOrigin: T(t, o, l),
+      dotY: 0.75 * t + o,
       dotX: 0.5 * t + l,
       dotRadius: 0
   };
@@ -208,18 +208,18 @@ case d.Skl.OFFLINE:
 default:
   return {
     bgRadius: 0.5 * t,
-      bgY: 0.25 * t + s,
+      bgY: 0.25 * t + o,
       bgX: l,
       bgHeight: t,
       bgWidth: t,
       cutoutX: 0.25 * t + l,
-      cutoutY: 0.5 * t + s,
+      cutoutY: 0.5 * t + o,
       cutoutWidth: 0.5 * t,
       cutoutHeight: 0.5 * t,
       cutoutRadius: 0.25 * t,
-      polygonScale: I(t, 0, s, l),
-      polygonOrigin: T(t, s, l),
-      dotY: 0.75 * t + s,
+      polygonScale: I(t, 0, o, l),
+      polygonOrigin: T(t, o, l),
+      dotY: 0.75 * t + o,
       dotX: 0.5 * t + l,
       dotRadius: 0
   };
@@ -230,7 +230,7 @@ function S(e, t, n) {
   var i;
   let {
 bgRadius: a,
-bgY: o,
+bgY: s,
 bgX: l,
 bgHeight: u,
 bgWidth: c,
@@ -248,16 +248,16 @@ dotRadius: g
   return (0, r.jsxs)('mask', {
 id: n,
 children: [
-  (0, r.jsx)(s.animated.rect, {
+  (0, r.jsx)(o.animated.rect, {
     x: l,
-    y: o,
+    y: s,
     width: c,
     height: u,
     rx: a,
     ry: a,
     fill: 'white'
   }),
-  (0, r.jsx)(s.animated.rect, {
+  (0, r.jsx)(o.animated.rect, {
     x: d,
     y: _,
     width: E,
@@ -266,7 +266,7 @@ children: [
     ry: h,
     fill: 'black'
   }),
-  (0, r.jsx)(s.animated.polygon, {
+  (0, r.jsx)(o.animated.polygon, {
     points: (i = t, '-'.concat(0.216506 * i, ',-').concat(0.25 * i, ' ').concat(0.216506 * i, ',0 -').concat(0.216506 * i, ',').concat(0.25 * i)),
     fill: 'black',
     transform: p,
@@ -274,7 +274,7 @@ children: [
       transformOrigin: m
     }
   }),
-  (0, r.jsx)(s.animated.circle, {
+  (0, r.jsx)(o.animated.circle, {
     fill: 'black',
     cx: T,
     cy: I,
@@ -300,12 +300,12 @@ isMobile: m
 a,
 t,
 m
-  ]), T = (0, s.useSpring)({
+  ]), T = (0, o.useSpring)({
 config: f,
 to: I
   }), A = h(t, l), [{
 fill: N
-  }] = (0, s.useSpring)({
+  }] = (0, o.useSpring)({
 config: f,
 fill: A
   }, [A]), v = Math.ceil(a * _.EW);
@@ -313,11 +313,11 @@ fill: A
 width: a,
 height: v,
 viewBox: '0 0 '.concat(a, ' ').concat(v),
-className: o()(E.mask, u),
+className: s()(E.mask, u),
 style: c,
 children: [
   S(T, a, p),
-  (0, r.jsx)(s.animated.rect, {
+  (0, r.jsx)(o.animated.rect, {
     x: 0,
     y: 0,
     width: a,
@@ -369,13 +369,13 @@ status: t,
 isMobile: n = !1,
 size: i = 8,
 className: a,
-style: s,
+style: o,
 color: l
   } = e, u = t === d.Skl.ONLINE && n, _ = h(t, l);
   return (0, r.jsx)(c.ZP, {
 mask: N(t, u),
-className: o()(E.mask, a),
-style: s,
+className: s()(E.mask, a),
+style: o,
 ...v(i, t, u),
 children: (0, r.jsx)('div', {
   style: {

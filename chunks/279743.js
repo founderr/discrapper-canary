@@ -1,24 +1,24 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return I;
   }
-}), s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(338545),
-  l = s(748780),
-  c = s(481060),
-  d = s(442837),
-  _ = s(607070),
-  E = s(663389),
-  u = s(600222);
+}), t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(338545),
+  l = t(748780),
+  c = t(481060),
+  d = t(442837),
+  _ = t(607070),
+  E = t(663389),
+  u = t(600222);
 
 function T(e) {
   let {
-children: t,
-className: s,
+children: s,
+className: t,
 onFlashEnd: i,
 animationDelay: E = 500
   } = e, T = c.tokens.colors.TEXT_LINK, I = (0, d.e7)([_.Z], () => _.Z.useReducedMotion), S = (0, c.useToken)(T).spring({
@@ -76,24 +76,24 @@ g({
 });
   }, [g]), (0, n.jsx)(o.animated.div, {
 style: h,
-className: r()(u.settingsItemHighlight, s),
-children: t
+className: r()(u.settingsItemHighlight, t),
+children: s
   });
 }
 
 function I(e) {
   let {
-children: t,
-scrollPosition: s,
+children: s,
+scrollPosition: t,
 animationDelay: i
-  } = e, r = (0, d.e7)([E.Z], () => E.Z.getScrollPosition() === s), [o, l] = a.useState(!1);
+  } = e, r = (0, d.e7)([E.Z], () => E.Z.getScrollPosition() === t), [o, l] = a.useState(!1);
   return (a.useEffect(() => {
 r && l(!0);
   }, [r]), o) ? (0, n.jsx)(T, {
 animationDelay: i,
 onFlashEnd: () => l(!1),
-children: t
+children: s
   }) : (0, n.jsx)(n.Fragment, {
-children: t
+children: s
   });
 }

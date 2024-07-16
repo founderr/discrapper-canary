@@ -7,8 +7,8 @@ t.Z = e => {
 profileEffectConfig: t,
 onReady: n
   } = e, {
-pendingRef: o,
-setPending: s
+pendingRef: s,
+setPending: o
   } = (0, i.Z)(t.effects, n);
   return (0, r.jsx)('div', {
 className: a.profileEffects,
@@ -23,7 +23,7 @@ children: (0, r.jsx)('div', {
       position: 'absolute'
     },
     onLoad: () => {
-      s(o.current - 1), o.current = o.current - 1;
+      o(s.current - 1), s.current = s.current - 1;
     }
   }, e.src))
 })

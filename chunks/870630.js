@@ -1,7 +1,7 @@
 t(47120), t(411104);
 var n = t(735250),
-  r = t(470079),
-  s = t(160612),
+  s = t(470079),
+  r = t(160612),
   l = t(780384),
   o = t(481060),
   i = t(410030),
@@ -10,15 +10,15 @@ var n = t(735250),
   d = t(790396),
   E = t(744481),
   _ = t(724641),
-  p = t(811974),
-  m = t(212545),
+  m = t(811974),
+  p = t(212545),
   A = t(184229),
   N = t(504309);
 a.Z = function(e) {
   let a = (0, i.ZP)(),
-t = r.useRef(null),
-[h, T] = r.useState({});
-  switch (r.useLayoutEffect(() => {
+t = s.useRef(null),
+[h, T] = s.useState({});
+  switch (s.useLayoutEffect(() => {
   let {
     current: e
   } = t;
@@ -26,14 +26,14 @@ t = r.useRef(null),
     return;
   let a = window.getComputedStyle(e),
     n = window.getComputedStyle(e, '::placeholder'),
-    r = a.getPropertyValue('font-family'),
-    s = a.getPropertyValue('font-weight'),
+    s = a.getPropertyValue('font-family'),
+    r = a.getPropertyValue('font-weight'),
     l = a.getPropertyValue('color'),
     o = a.getPropertyValue('font-size');
   T({
     base: {
-      fontFamily: r,
-      fontWeight: s,
+      fontFamily: s,
+      fontWeight: r,
       color: l,
       fontSize: o,
       backgroundColor: a.getPropertyValue('background-color'),
@@ -45,13 +45,13 @@ t = r.useRef(null),
   });
 }, [t]), e.type) {
 case c.He.PRZELEWY24: {
-  let r = (0, l.wj)(a) ? A : N,
+  let s = (0, l.wj)(a) ? A : N,
     {
       onNameChange: i,
       onEmailChange: c,
       onP24BankChange: E,
       p24BankValue: _,
-      billingAddressInfo: p
+      billingAddressInfo: m
     } = e;
   return (0, n.jsxs)('div', {
     className: d.body,
@@ -63,7 +63,7 @@ case c.He.PRZELEWY24: {
           name: u.Z.Messages.EMAIL,
           placeholder: u.Z.Messages.EMAIL,
           onChange: e => c(e),
-          value: p.email
+          value: m.email
         })
       }),
       (0, n.jsx)(o.FormSection, {
@@ -73,14 +73,14 @@ case c.He.PRZELEWY24: {
           name: u.Z.Messages.CREDIT_CARD_NAME,
           placeholder: u.Z.Messages.CREDIT_CARD_NAME,
           onChange: e => i(e),
-          value: p.name
+          value: m.name
         })
       }),
       (0, n.jsxs)(o.FormSection, {
         className: d.nonTopInputWrapper,
         title: u.Z.Messages.PAYMENT_SOURCE_PRZELEWY24_BANK_LABEL,
         children: [
-          (0, n.jsx)(s.P24BankElement, {
+          (0, n.jsx)(r.P24BankElement, {
             options: {
               value: _,
               style: h
@@ -90,7 +90,7 @@ case c.He.PRZELEWY24: {
           (0, n.jsx)('div', {
             className: d.bankSelectionStub,
             children: (0, n.jsx)('img', {
-              src: r,
+              src: s,
               alt: 'Przelewy24'
             })
           })
@@ -101,11 +101,11 @@ case c.He.PRZELEWY24: {
 }
 case c.He.EPS: {
   let {
-    onAccountHolderNameChange: r,
+    onAccountHolderNameChange: s,
     onEPSBankChange: i,
     epsBankValue: c,
-    billingAddressInfo: p
-  } = e, m = (0, l.wj)(a) ? E : _;
+    billingAddressInfo: m
+  } = e, p = (0, l.wj)(a) ? E : _;
   return (0, n.jsxs)('div', {
     className: d.body,
     children: [
@@ -115,15 +115,15 @@ case c.He.EPS: {
           inputRef: t,
           name: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
           placeholder: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
-          onChange: e => r(e),
-          value: p.name
+          onChange: e => s(e),
+          value: m.name
         })
       }),
       (0, n.jsxs)(o.FormSection, {
         className: d.nonTopInputWrapper,
         title: u.Z.Messages.PAYMENT_SOURCE_EPS_BANK_LABEL,
         children: [
-          (0, n.jsx)(s.EpsBankElement, {
+          (0, n.jsx)(r.EpsBankElement, {
             options: {
               value: c,
               style: h
@@ -133,7 +133,7 @@ case c.He.EPS: {
           (0, n.jsx)('div', {
             className: d.bankSelectionStub,
             children: (0, n.jsx)('img', {
-              src: m,
+              src: p,
               alt: 'EPS'
             })
           })
@@ -144,11 +144,11 @@ case c.He.EPS: {
 }
 case c.He.IDEAL: {
   let {
-    onAccountHolderNameChange: r,
+    onAccountHolderNameChange: s,
     onIdealBankChange: i,
     idealBankValue: c,
     billingAddressInfo: E
-  } = e, _ = (0, l.wj)(a) ? p : m;
+  } = e, _ = (0, l.wj)(a) ? m : p;
   return (0, n.jsxs)('div', {
     className: d.body,
     children: [
@@ -158,7 +158,7 @@ case c.He.IDEAL: {
           inputRef: t,
           name: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
           placeholder: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
-          onChange: e => r(e),
+          onChange: e => s(e),
           value: E.name
         })
       }),
@@ -166,7 +166,7 @@ case c.He.IDEAL: {
         className: d.nonTopInputWrapper,
         title: u.Z.Messages.PAYMENT_SOURCE_IDEAL_BANK_LABEL,
         children: [
-          (0, n.jsx)(s.IdealBankElement, {
+          (0, n.jsx)(r.IdealBankElement, {
             options: {
               value: c,
               style: h

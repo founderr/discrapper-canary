@@ -5,8 +5,8 @@ return h;
 }), n(47120), n(773603);
 var i = n(470079),
   a = n(442837),
-  l = n(693546),
-  s = n(826581),
+  s = n(693546),
+  l = n(826581),
   r = n(937111),
   o = n(430824),
   c = n(496675),
@@ -18,13 +18,13 @@ function h(e) {
 joinRequest: _,
 guild: f
   } = (0, a.cj)([
-s.Z,
+l.Z,
 r.Z,
 o.Z,
 c.Z
   ], () => {
 var e;
-let t = s.Z.getRequest(m);
+let t = l.Z.getRequest(m);
 if (null == t)
   return {
     joinRequest: null,
@@ -39,12 +39,12 @@ return {
 };
   });
   return i.useEffect(() => {
-null == f && !h && (p(!0), l.Z.fetchRequestToJoinGuilds());
+null == f && !h && (p(!0), s.Z.fetchRequestToJoinGuilds());
   }, [
 f,
 h
   ]), i.useEffect(() => {
-null == _ && (n(!0), l.Z.fetchGuildJoinRequest(m).finally(() => {
+null == _ && (n(!0), s.Z.fetchGuildJoinRequest(m).finally(() => {
   n(!1);
 }));
   }, [

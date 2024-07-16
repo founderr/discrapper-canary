@@ -15,8 +15,8 @@ var i = n(735250),
   T = n(572004),
   h = n(617136),
   N = n(113434),
-  p = n(497505),
-  f = n(918701),
+  f = n(497505),
+  p = n(918701),
   C = n(566078),
   g = n(685613),
   S = n(611855),
@@ -47,7 +47,7 @@ let _ = () => {
     questContent: n,
     questContentCTA: h.jZ.COPY_QUEST_URL,
     questContentPosition: s
-  }), (0, T.JG)((0, f.Rs)(t.id)), o(!0), c.current.start(1000, () => o(!1));
+  }), (0, T.JG)((0, p.Rs)(t.id)), o(!0), c.current.start(1000, () => o(!1));
 };
 return (0, i.jsx)(u.Tooltip, {
   forceOpen: l,
@@ -85,7 +85,7 @@ height: G
 ref: F,
 width: w,
 scrollWidth: V
-  } = (0, _.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = a.useMemo(() => (0, f.nP)(d.config.assets.hero), [d]), K = a.useRef(null), z = (0, O.uq)(m), Q = m === p.jn.QUESTS_EMBED, q = (0, N.t5)(d, x.dr.QUESTS_CARD, m), X = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(d.config.expiresAt, {
+  } = (0, _.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = a.useMemo(() => (0, p.nP)(d.config.assets.hero), [d]), K = a.useRef(null), z = (0, O.uq)(m), Q = m === f.jn.QUESTS_EMBED, q = (0, N.t5)(d, x.dr.QUESTS_CARD, m), X = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(d.config.expiresAt, {
 year: 'numeric',
 month: 'long',
 day: 'numeric'
@@ -107,7 +107,7 @@ W && null != K.current && (n ? K.current.play() : !n && (K.current.pause(), K.cu
 n,
 W
   ]);
-  let et = (0, f.j8)(d);
+  let et = (0, p.j8)(d);
   return (0, i.jsxs)('div', {
 className: r()(v.outerContainer, {
   [v.outerContainerGiftInventory]: z,
@@ -142,7 +142,7 @@ children: [
     ref: K,
     children: !Y && W && (0, i.jsx)('source', {
       src: et,
-      type: (0, f.mN)(et)
+      type: (0, p.mN)(et)
     })
   }),
   (0, i.jsxs)('div', {

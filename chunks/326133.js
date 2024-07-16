@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(91192),
+  s = n.n(a),
+  o = n(91192),
   l = n(442837),
   u = n(481060),
   c = n(595519),
@@ -87,12 +87,12 @@ j = 490;
   null != F && (j = (null === (v = y.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (O = U.query) || void 0 === O ? void 0 : O.type) === T.eq.EMOJIS_AND_STICKERS ? 490 : 245), j = Math.min(window.innerHeight - 175, j);
   let W = (0, r.jsx)(_.ZP, {
 id: b,
-className: o()(N.autocomplete, Y),
+className: s()(N.autocomplete, Y),
 innerClassName: N.autocompleteInner,
 onMouseDown: e => e.preventDefault(),
-children: (0, r.jsx)(s.bG, {
+children: (0, r.jsx)(o.bG, {
   navigator: x,
-  children: (0, r.jsx)(s.SJ, {
+  children: (0, r.jsx)(o.SJ, {
     children: e => {
       let {
         ref: t,

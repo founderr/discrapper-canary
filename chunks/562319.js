@@ -2,8 +2,8 @@ n(47120);
 var r = n(846519),
   i = n(570140),
   a = n(710845),
-  o = n(928518),
-  s = n(451478),
+  s = n(928518),
+  o = n(451478),
   l = n(70956),
   u = n(981631);
 
@@ -30,7 +30,7 @@ let t = this.incomingVideoEnabled !== e;
 this.incomingVideoEnabled = e, t && (this.logger.info('Window visibility incoming video changed, incomingVideoEnabled = '.concat(this.incomingVideoEnabled)), this.videoEnabledObservers.forEach(e => e(this.incomingVideoEnabled)));
   }
   anyDiscordWindowVisible() {
-return s.Z.isVisible() || o.Z.getWindowVisible(u.KJ3.CHANNEL_CALL_POPOUT);
+return o.Z.isVisible() || s.Z.getWindowVisible(u.KJ3.CHANNEL_CALL_POPOUT);
   }
   constructor() {
 c(this, 'hiddenWindowDisableVideoTimer', new r.V7()), c(this, 'incomingVideoEnabled', !0), c(this, 'videoEnabledObservers', new Set()), c(this, 'logger', new a.Z('WindowVisibilityVideoManager')), c(this, 'HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS', 30 * l.Z.Millis.SECOND), c(this, 'handleWindowVisibilityChange', () => {

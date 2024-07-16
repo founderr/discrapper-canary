@@ -1,4 +1,4 @@
-var n, r, s, l, o = t(442837),
+var n, s, r, l, o = t(442837),
   i = t(570140);
 let c = null,
   u = null;
@@ -10,12 +10,12 @@ return c;
 return u;
   }
 }
-s = 'AdyenStore', (r = 'displayName') in(n = d) ? Object.defineProperty(n, r, {
-  value: s,
+r = 'AdyenStore', (s = 'displayName') in(n = d) ? Object.defineProperty(n, s, {
+  value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[r] = s;
+}) : n[s] = r;
 let E = new d(i.Z, {
   ADYEN_CREATE_CLIENT_SUCCESS: function(e) {
 let {

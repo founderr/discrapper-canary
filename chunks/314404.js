@@ -9,8 +9,8 @@ return B;
 var l = s(735250),
   t = s(470079),
   i = s(512722),
-  r = s.n(i),
-  a = s(442837),
+  a = s.n(i),
+  r = s(442837),
   c = s(481060),
   o = s(490504),
   u = s(911969),
@@ -71,13 +71,13 @@ giftRecipient: en,
 selectedGiftStyle: es,
 customGiftMessage: el,
 setCustomGiftMessage: et
-  } = (0, m.wD)(), ei = (0, T.MY)(en), er = ee && (0, T.pO)(en), {
-confirmUpsellEnabled: ea
+  } = (0, m.wD)(), ei = (0, T.MY)(en), ea = ee && (0, T.pO)(en), {
+confirmUpsellEnabled: er
   } = (0, d.Z)({
 location: 'PremiumSwitchPlanSelectBody'
   });
-  j = null != j ? j : q, N = null != N ? N : X, r()(void 0 !== N, 'should not be undefined');
-  let [ec, eo] = (0, a.Wu)([p.Z], () => [
+  j = null != j ? j : q, N = null != N ? N : X, a()(void 0 !== N, 'should not be undefined');
+  let [ec, eo] = (0, r.Wu)([p.Z], () => [
 null != N ? p.Z.get(N.planId) : null,
 null != L ? p.Z.get(L) : null
   ]), eu = (0, v.N)(W), ed = null == eu ? void 0 : eu.subscription_trial, e_ = (0, A.Ng)(), em = null == e_ ? void 0 : null === (n = e_.discount) || void 0 === n ? void 0 : n.plan_ids, eE = null != eo ? eo : Q, eI = t.useCallback(e => {
@@ -86,7 +86,7 @@ null != B ? B(e) : J(e);
 B,
 J
   ]), ep = null != w ? w : $;
-  r()(null != ep, 'Price option has to be set');
+  a()(null != ep, 'Price option has to be set');
   let eN = null != eu && b.nG[eu.trial_id].skus.includes(j),
 eT = null != e_ && H.some(e => null == em ? void 0 : em.includes(e)) && null != e_.discount,
 ex = (0, S.aS)(b.Xh.PREMIUM_MONTH_TIER_2, !1, ee, ep);
@@ -112,7 +112,7 @@ H,
 ec,
 eI
   ]);
-  let eh = !er && (ee || !eN && !eT) && eS && K,
+  let eh = !ea && (ee || !eN && !eT) && eS && K,
 eP = (0, c.useRadioGroup)(),
 ef = (null == eE ? void 0 : eE.id) != null ? (0, S.aS)(eE.id, !1, ee, ep) : void 0,
 {
@@ -125,20 +125,20 @@ eC = !ee && (eT || null != ed && eN && null != Y),
 eO = null == V ? void 0 : null === (I = V.find(e => e.subscriptionPlanId === b.Xh.PREMIUM_MONTH_TIER_2)) || void 0 === I ? void 0 : null === (i = I.discounts) || void 0 === i ? void 0 : null === (s = i.find(e => e.type === u.eW.SUBSCRIPTION_PLAN)) || void 0 === s ? void 0 : s.amount;
   return (0, l.jsx)(l.Fragment, {
 children: (0, l.jsxs)('div', {
-  className: er ? F.stepBodyCustomGift : F.stepBody,
+  className: ea ? F.stepBodyCustomGift : F.stepBody,
   children: [
     (0, l.jsxs)('div', {
-      className: er ? F.bodyColumnMiddle : void 0,
+      className: ea ? F.bodyColumnMiddle : void 0,
       children: [
         (0, l.jsx)(M.Z, {
           fromBoostCancelModal: !1,
           className: F.legacyPricingNotice
         }),
-        er && null != es && (0, l.jsx)(R.q, {})
+        ea && null != es && (0, l.jsx)(R.q, {})
       ]
     }),
     (0, l.jsxs)('div', {
-      className: er ? F.bodyColumnRight : void 0,
+      className: ea ? F.bodyColumnRight : void 0,
       children: [
         (0, l.jsx)(Z.s, {
           giftRecipient: en
@@ -204,7 +204,7 @@ children: (0, l.jsxs)('div', {
           }(ec, j)
         }),
         ((e, n, s) => {
-          if (er)
+          if (ea)
             return (0, l.jsx)(c.FormTitle, {
               children: U.Z.Messages.GIFT_SUBSCRIPTION_SELECTION
             });
@@ -295,7 +295,7 @@ children: (0, l.jsxs)('div', {
             documentationLink: x.Z.getArticleURL(D.BhN.LOCALIZED_PRICING)
           })
         }),
-        ea && ee && (0, l.jsx)(_.Z, {
+        er && ee && (0, l.jsx)(_.Z, {
           onClose: z
         })
       ]
@@ -311,8 +311,8 @@ onStepChange: n,
 selectedPlanId: s,
 paymentSources: t,
 onBackClick: i,
-showBackButton: r,
-planOptions: a,
+showBackButton: a,
+planOptions: r,
 shouldRenderUpdatedPaymentModal: o = !1,
 isTrial: u
   } = e, {
@@ -323,7 +323,7 @@ isGift: I
   } = (0, m.wD)();
   return t = null != t ? t : d, s = null != s ? s : null == _ ? void 0 : _.id, (0, l.jsxs)(l.Fragment, {
 children: [
-  null != s && a.includes(s) ? (0, l.jsx)(H, {
+  null != s && r.includes(s) ? (0, l.jsx)(H, {
     paymentSources: t,
     onStepChange: n,
     selectedPlanId: s,
@@ -334,7 +334,7 @@ children: [
     disabled: !0,
     children: U.Z.Messages.SELECT
   }),
-  r ? (0, l.jsx)(j.Z, {
+  a ? (0, l.jsx)(j.Z, {
     onClick: i
   }) : null
 ]
@@ -347,12 +347,12 @@ onStepChange: n,
 selectedPlanId: s,
 isGift: t,
 paymentSources: i,
-shouldRenderUpdatedPaymentModal: r,
+shouldRenderUpdatedPaymentModal: a,
 isTrial: o
-  } = e, u = (0, a.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()), {
+  } = e, u = (0, r.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()), {
 hasEntitlements: d
   } = (0, L.H)(s, t), _ = null != u && null != u.paymentSourceId || Object.keys(i).length > 0 || d && !o;
-  var m = r ? U.Z.Messages.NEXT : U.Z.Messages.SELECT,
+  var m = a ? U.Z.Messages.NEXT : U.Z.Messages.SELECT,
 E = I.h8.ADD_PAYMENT_STEPS;
   return _ && (E = I.h8.REVIEW), (0, l.jsx)(c.Button, {
 onClick: () => n(E),

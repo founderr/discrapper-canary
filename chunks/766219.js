@@ -19,19 +19,19 @@ return o;
   }
 }), n(411104);
 var i = n(823379),
-  a = n(49898),
-  s = n(731455),
+  s = n(49898),
+  a = n(731455),
   r = n(689938);
 
 function l(e) {
   switch (e) {
-case a.F$.SERVERS:
+case s.F$.SERVERS:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TITLE;
-case a.F$.APPS:
+case s.F$.APPS:
   return r.Z.Messages.GLOBAL_DISCOVERY_APPS_TITLE;
-case a.F$.QUESTS:
+case s.F$.QUESTS:
   return r.Z.Messages.GLOBAL_DISCOVERY_QUESTS_TITLE;
-case a.F$.SHOP:
+case s.F$.SHOP:
   return r.Z.Messages.GLOBAL_DISCOVERY_SHOP_TITLE;
 default:
   (0, i.vE)(e);
@@ -40,40 +40,40 @@ default:
 
 function o(e) {
   switch (e) {
-case a.vf.FEATURED:
+case s.vf.FEATURED:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_FEATURED_CATEGORY;
-case a.vf.GUILDS:
+case s.vf.GUILDS:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_CATEGORY;
-case a.vf.GAMING:
+case s.vf.GAMING:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_CATEGORY;
-case a.vf.MUSIC:
+case s.vf.MUSIC:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_CATEGORY;
-case a.vf.ENTERTAINMENT:
+case s.vf.ENTERTAINMENT:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_CATEGORY;
-case a.vf.TECH:
+case s.vf.TECH:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_CATEGORY;
-case a.vf.EDUCATION:
+case s.vf.EDUCATION:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_CATEGORY;
-case a.vf.HUBS:
+case s.vf.HUBS:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUBS_CATEGORY;
   }
 }
 
 function c(e) {
   switch (e) {
-case a.vf.FEATURED:
+case s.vf.FEATURED:
   return r.Z.Messages.GUILD_DISCOVERY_HOME_TITLE;
-case a.vf.GAMING:
+case s.vf.GAMING:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_TITLE;
-case a.vf.MUSIC:
+case s.vf.MUSIC:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_TITLE;
-case a.vf.ENTERTAINMENT:
+case s.vf.ENTERTAINMENT:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_TITLE;
-case a.vf.TECH:
+case s.vf.TECH:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_TITLE;
-case a.vf.EDUCATION:
+case s.vf.EDUCATION:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_TITLE;
-case a.vf.HUBS:
+case s.vf.HUBS:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE;
 default:
   throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
@@ -82,19 +82,19 @@ default:
 
 function d(e) {
   switch (e) {
-case a.vf.FEATURED:
+case s.vf.FEATURED:
   return r.Z.Messages.GUILD_DISCOVERY_HOME_SUBTITLE;
-case a.vf.GAMING:
+case s.vf.GAMING:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_DESCRIPTION;
-case a.vf.MUSIC:
+case s.vf.MUSIC:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_DESCRIPTION;
-case a.vf.ENTERTAINMENT:
+case s.vf.ENTERTAINMENT:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_DESCRIPTION;
-case a.vf.TECH:
+case s.vf.TECH:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_DESCRIPTION;
-case a.vf.EDUCATION:
+case s.vf.EDUCATION:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_DESCRIPTION;
-case a.vf.HUBS:
+case s.vf.HUBS:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION;
 default:
   throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
@@ -103,17 +103,17 @@ default:
 
 function u(e) {
   switch (e) {
-case a.vf.FEATURED:
+case s.vf.FEATURED:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_FEATURED;
-case a.vf.GAMING:
+case s.vf.GAMING:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_GAMING;
-case a.vf.MUSIC:
+case s.vf.MUSIC:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_MUSIC;
-case a.vf.ENTERTAINMENT:
+case s.vf.ENTERTAINMENT:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_ENTERTAINMENT;
-case a.vf.TECH:
+case s.vf.TECH:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_TECH;
-case a.vf.EDUCATION:
+case s.vf.EDUCATION:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_EDUCATION;
 default:
   return null;
@@ -122,21 +122,21 @@ default:
 
 function _(e) {
   switch (e) {
-case a.vf.FEATURED:
-case a.vf.GUILDS:
-  return s.Hk;
-case a.vf.GAMING:
-  return s.Gj.Activity;
-case a.vf.MUSIC:
-  return s.Gj.Music;
-case a.vf.ENTERTAINMENT:
-  return s.Gj.Television;
-case a.vf.TECH:
-  return s.Gj.Science;
-case a.vf.EDUCATION:
-  return s.Gj.Education;
-case a.vf.HUBS:
-  return s.Hk;
+case s.vf.FEATURED:
+case s.vf.GUILDS:
+  return a.Hk;
+case s.vf.GAMING:
+  return a.Gj.Activity;
+case s.vf.MUSIC:
+  return a.Gj.Music;
+case s.vf.ENTERTAINMENT:
+  return a.Gj.Television;
+case s.vf.TECH:
+  return a.Gj.Science;
+case s.vf.EDUCATION:
+  return a.Gj.Education;
+case s.vf.HUBS:
+  return a.Hk;
 default:
   (0, i.vE)(e);
   }

@@ -19,8 +19,8 @@ var i = t(735250),
   E = t(129861),
   T = t(493544),
   h = t(700582),
-  p = t(410030),
-  g = t(933557),
+  g = t(410030),
+  p = t(933557),
   C = t(346486),
   f = t(154285),
   x = t(666657),
@@ -82,7 +82,7 @@ children: [
         (t = a.channel, s ? (0, i.jsx)(m.Text, {
           variant: 'text-xs/normal',
           color: 'header-secondary',
-          children: (0, g.F6)(t, b.default, R.Z, !0)
+          children: (0, p.F6)(t, b.default, R.Z, !0)
         }) : null)
       ]
     })
@@ -151,10 +151,10 @@ canCreateInvites: N = !1
   enableInvitesDisabled: h
 } = (0, v.FR)(s),
 {
-  showAlertMode: g
+  showAlertMode: p
 } = (0, f.sw)(s.id),
 C = (0, u.e7)([O.Z], () => O.Z.getGuildIncident(s.id)),
-R = s.hasFeature(L.oNc.INVITES_DISABLED) || g && (null == C ? void 0 : C.invitesDisabledUntil) != null && new Date(C.invitesDisabledUntil) > new Date(),
+R = s.hasFeature(L.oNc.INVITES_DISABLED) || p && (null == C ? void 0 : C.invitesDisabledUntil) != null && new Date(C.invitesDisabledUntil) > new Date(),
 [b, P] = a.useState(!1);
   a.useEffect(() => {
 E && v.WC.trackExposure({
@@ -166,7 +166,7 @@ E,
 h,
 s.id
   ]);
-  let k = (0, p.ZP)(),
+  let k = (0, g.ZP)(),
 U = a.useMemo(() => null == n || _ ? [] : c()(n).sortBy(e => {
   var n, t;
   return (null !== (t = null === (n = e.inviter) || void 0 === n ? void 0 : n.username) && void 0 !== t ? t : '').toLowerCase();
@@ -192,7 +192,7 @@ w = async e => {
     }
   }
 }, W = () => {
-  if (g) {
+  if (p) {
     let e = {
       source: x.Zu.GUILD_SETTINGS
     };
@@ -277,7 +277,7 @@ renderSection: () => {
             onCreateInvite: H
           }) : j.Z.Messages.SETTINGS_INVITE_TIP_WITHOUT_CREATE
         }),
-        (h || g || R) && (0, i.jsxs)('div', {
+        (h || p || R) && (0, i.jsxs)('div', {
           className: D.inviteDisabledContainer,
           children: [
             (0, i.jsx)(m.Button, {

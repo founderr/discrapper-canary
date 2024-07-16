@@ -6,9 +6,9 @@ return k;
 var r = n(735250),
   i = n(470079),
   a = n(512722),
-  o = n.n(a),
-  s = n(392711),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(692547),
   d = n(780384),
@@ -41,32 +41,32 @@ function w(e) {
 connectionType: n,
 connectionMetadataField: i,
 operator: a,
-value: o,
-description: s
+value: s,
+description: o
   } = e;
-  if (null != s)
+  if (null != o)
 switch (a) {
   case L.iO.LESS_THAN:
     t = P.Z.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
-      description: s,
-      count: Math.max(0, Number(o) - 1)
+      description: o,
+      count: Math.max(0, Number(s) - 1)
     });
     break;
   case L.iO.GREATER_THAN:
     t = P.Z.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
-      description: s,
-      count: Math.max(0, Number(o) + 1)
+      description: o,
+      count: Math.max(0, Number(s) + 1)
     });
     break;
   default:
-    t = s;
+    t = o;
 }
   else
 t = (0, v.n_)({
   connectionType: n,
   connectionMetadataField: i,
   operator: a,
-  value: o
+  value: s
 });
   return null == t ? null : (0, r.jsxs)('div', {
 className: U.popoutCheck,
@@ -91,7 +91,7 @@ eligibilityStates: t
   } = e, n = (0, h.ZP)(), i = (0, _.useToken)(c.Z.unsafe_rawColors.GREEN_330).hex(), a = l().groupBy(t, e => ''.concat(e.connection_type).concat(null != e.application_id ? ':'.concat(e.application_id) : ''));
   return (0, r.jsx)(r.Fragment, {
 children: Object.keys(a).map(e => {
-  var t, s;
+  var t, o;
   let l;
   let u = a[e],
     c = u.filter(e => null != e.operator),
@@ -125,7 +125,7 @@ children: Object.keys(a).map(e => {
           (0, r.jsx)(_.Text, {
             variant: 'text-sm/medium',
             color: 'interactive-active',
-            children: null !== (s = null == h ? void 0 : h.name) && void 0 !== s ? s : null == m ? void 0 : m.name
+            children: null !== (o = null == h ? void 0 : h.name) && void 0 !== o ? o : null == m ? void 0 : m.name
           }),
           l
         ]
@@ -136,14 +136,14 @@ children: Object.keys(a).map(e => {
           connection_metadata_field: n,
           operator: i,
           value: a,
-          description: s
+          description: o
         } = e;
-        return o()(null != n, 'connectionMetadataField is null'), o()(null != i, 'operator is null'), o()(null != a, 'value is null'), (0, r.jsx)(w, {
+        return s()(null != n, 'connectionMetadataField is null'), s()(null != i, 'operator is null'), s()(null != a, 'value is null'), (0, r.jsx)(w, {
           connectionType: t,
           connectionMetadataField: n,
           operator: i,
           value: a,
-          description: s
+          description: o
         }, ''.concat(t, ':').concat(n, ':').concat(i, ':').concat(a));
       })
     ]
@@ -156,21 +156,21 @@ function G(e) {
   let t, {
 onGetRolesClicked: n,
 onOpenProfile: a,
-eligibilityStates: o,
-userId: s,
+eligibilityStates: s,
+userId: o,
 roleId: l,
 channelId: c,
 guildId: d
   } = e;
   i.useEffect(() => {
 N.default.track(b.rMx.PASSPORT_ROLE_POPOUT_VIEWED, {
-  other_user_id: s,
+  other_user_id: o,
   role_id: l,
   ...(0, m.JS)(c),
   ...(0, m.hH)(d)
 });
   }, [
-s,
+o,
 l,
 c,
 d
@@ -182,7 +182,7 @@ return null !== (t = null === (e = A.ZP.getSelfMember(d)) || void 0 === e ? void
 d,
 l
   ]);
-  return t = 1 === o.length && 1 === o[0].length ? P.Z.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ONE : 1 === o.length ? P.Z.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ALL.format() : P.Z.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_OR.format(), (0, r.jsxs)('div', {
+  return t = 1 === s.length && 1 === s[0].length ? P.Z.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ONE : 1 === s.length ? P.Z.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ALL.format() : P.Z.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_OR.format(), (0, r.jsxs)('div', {
 className: U.popout,
 children: [
   (0, r.jsx)('div', {
@@ -197,7 +197,7 @@ children: [
   (0, r.jsx)('div', {
     className: U.popoutChecks,
     children: (0, r.jsx)(x, {
-      eligibilityStates: o.flat()
+      eligibilityStates: s.flat()
     })
   }),
   (0, r.jsxs)('div', {
@@ -225,14 +225,14 @@ function k(e) {
 userId: t,
 messageId: n,
 guild: a,
-channel: s
+channel: o
   } = e, {
 analyticsLocations: l
-  } = (0, I.ZP)(), c = (0, R.Z)(a, t, s.id, !0), d = (0, u.e7)([O.Z], () => O.Z.getGuildRoleConnectionEligibility(null == c ? void 0 : c.id)), [f, h] = i.useState(null == d);
+  } = (0, I.ZP)(), c = (0, R.Z)(a, t, o.id, !0), d = (0, u.e7)([O.Z], () => O.Z.getGuildRoleConnectionEligibility(null == c ? void 0 : c.id)), [f, h] = i.useState(null == d);
   if (null == c)
 return null;
   async function p() {
-if (o()(null != c, 'visibleConnectionsRole is null'), !!f && null == d)
+if (s()(null != c, 'visibleConnectionsRole is null'), !!f && null == d)
   await E.Z.fetchGuildRoleConnectionsEligibility(a.id, c.id), h(!1);
   }
   return (0, r.jsx)(_.LazyPopout, {
@@ -242,11 +242,11 @@ renderPopout: function() {
     let {
       closePopout: i
     } = e;
-    return null == d ? (0, r.jsx)(r.Fragment, {}) : (o()(null != c, 'visibleConnectionsRole is null'), (0, r.jsx)(G, {
+    return null == d ? (0, r.jsx)(r.Fragment, {}) : (s()(null != c, 'visibleConnectionsRole is null'), (0, r.jsx)(G, {
       eligibilityStates: d,
       userId: t,
       roleId: c.id,
-      channelId: s.id,
+      channelId: o.id,
       guildId: a.id,
       onGetRolesClicked: () => {
         (0, D.Am)(a.id);
@@ -256,7 +256,7 @@ renderPopout: function() {
           userId: t,
           messageId: n,
           guildId: a.id,
-          channelId: s.id,
+          channelId: o.id,
           roleId: c.id,
           section: M.oh.USER_INFO_CONNECTIONS,
           sourceAnalyticsLocations: l,

@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(996146),
-  o = n(481060),
-  s = n(100527),
+  s = n(481060),
+  o = n(100527),
   l = n(906732),
   u = n(963249),
   c = n(622069),
@@ -18,7 +18,7 @@ disabled: t,
 channel: n
   } = e, {
 analyticsLocations: i
-  } = (0, l.ZP)(s.Z.GIFT_BUTTON), m = (0, d.Ft)(n), {
+  } = (0, l.ZP)(o.Z.GIFT_BUTTON), m = (0, d.Ft)(n), {
 Component: I,
 events: T,
 play: g
@@ -47,7 +47,7 @@ let {
   }
 });
   };
-  return (0, r.jsx)(o.Tooltip, {
+  return (0, r.jsx)(s.Tooltip, {
 text: h.Z.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
 children: e => (0, r.jsx)(_.Z, {
   ...e,

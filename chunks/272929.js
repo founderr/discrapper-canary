@@ -6,8 +6,8 @@ return d;
 var i = n(735250);
 n(470079);
 var a = n(338545),
-  l = n(481060),
-  s = n(871499),
+  s = n(481060),
+  l = n(871499),
   r = n(689938),
   o = n(61197);
 let c = (0, a.animated)(e => {
@@ -53,7 +53,7 @@ config: {
 }
   }), g = E ? r.Z.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({
 seconds: n
-  }) : void 0, I = _ ? s.d : s.Z;
+  }) : void 0, I = _ ? l.d : l.Z;
   return (0, i.jsxs)('div', {
 className: o.container,
 children: [
@@ -64,7 +64,7 @@ children: [
     ...f,
     disabled: E,
     label: g,
-    iconComponent: l.ReactionIcon,
+    iconComponent: s.ReactionIcon,
     onClick: d,
     onKeyDown: u,
     onMouseEnter: h,

@@ -15,8 +15,8 @@ var i = n(735250),
   T = n(197115),
   h = n(430824),
   N = n(594174),
-  p = n(285952),
-  f = n(514342),
+  f = n(285952),
+  p = n(514342),
   C = n(626135),
   g = n(74538),
   S = n(453070),
@@ -57,22 +57,22 @@ function U(e) {
 sticker: t,
 description: n
   } = e;
-  return (0, i.jsxs)(p.Z, {
+  return (0, i.jsxs)(f.Z, {
 children: [
   (0, i.jsx)(O.ZP, {
     sticker: t,
     size: 48,
     isInteracting: !0
   }),
-  (0, i.jsxs)(p.Z, {
-    direction: p.Z.Direction.VERTICAL,
-    justify: p.Z.Justify.CENTER,
+  (0, i.jsxs)(f.Z, {
+    direction: f.Z.Direction.VERTICAL,
+    justify: f.Z.Justify.CENTER,
     className: P.truncatingText,
     children: [
       (0, i.jsx)(o.Text, {
         className: P.__invalid_emojiName,
         variant: 'text-md/semibold',
-        children: (0, i.jsx)(f.Z, {
+        children: (0, i.jsx)(p.Z, {
           children: t.name
         })
       }),
@@ -153,7 +153,7 @@ let t, {
     sticker: n,
     channel: s,
     closePopout: m,
-    refreshPositionKey: f
+    refreshPositionKey: p
   } = e,
   [S, A] = a.useState(null),
   [R, x] = a.useState(!1),
@@ -192,7 +192,7 @@ D ? t = B ? Y ? L.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : 
 }), z = 'Custom Sticker Popout (Soft Upsell)');
 let Q = !K && !B && W && D;
 return (a.useEffect(() => {
-  f();
+  p();
 }, [
   R,
   S
@@ -263,10 +263,10 @@ return (a.useEffect(() => {
             children: [
               (0, i.jsx)(o.Clickable, {
                 onClick: () => {
-                  f(), G(!k);
+                  p(), G(!k);
                 },
                 className: P.showMoreEmojis,
-                children: (0, i.jsxs)(p.Z, {
+                children: (0, i.jsxs)(f.Z, {
                   children: [
                     (0, i.jsx)(o.Text, {
                       className: P.__invalid_showMoreEmojisLabel,
@@ -284,10 +284,10 @@ return (a.useEffect(() => {
                   ]
                 })
               }),
-              k && (0, i.jsx)(p.Z, {
-                wrap: p.Z.Wrap.WRAP,
-                align: p.Z.Align.START,
-                justify: p.Z.Justify.START,
+              k && (0, i.jsx)(f.Z, {
+                wrap: f.Z.Wrap.WRAP,
+                align: f.Z.Align.START,
+                justify: f.Z.Justify.START,
                 className: P.otherEmojisContainer,
                 children: t.map(e => (0, i.jsx)(o.Tooltip, {
                   text: e.name,

@@ -19,9 +19,9 @@ var i = t(735250),
   m = t(456251),
   C = t(614277),
   S = t(698708),
-  T = t(43542),
-  b = t(689938),
-  h = t(736569);
+  b = t(43542),
+  h = t(689938),
+  T = t(736569);
 
 function g(e) {
   var n;
@@ -33,8 +33,8 @@ handleStepChange: E,
 trialFooterMessageOverride: N,
 reviewWarningMessage: P,
 planGroup: O,
-openInvoiceId: A,
-analyticsData: x,
+openInvoiceId: x,
+analyticsData: A,
 analyticsLocation: v,
 eligibleApplicationSubscriptionGuilds: R,
 handleClose: M
@@ -89,41 +89,41 @@ eo = r.useRef(null);
   return Y === p.A.PURCHASING ? (0, i.jsx)(m.Z, {}) : (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(f.Z, {
-    className: h.breadcrumbs
+    className: T.breadcrumbs
   }),
   (0, i.jsxs)(C.C3, {
     children: [
       (0, i.jsx)(S.Z, {}),
       et && (0, i.jsxs)('div', {
-        className: h.userSubscriptionDetailsContainer,
+        className: T.userSubscriptionDetailsContainer,
         children: [
           (0, i.jsx)(s.Text, {
             variant: 'eyebrow',
             color: 'header-secondary',
-            children: b.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_TITLE
+            children: h.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_TITLE
           }),
           (0, i.jsx)(s.Text, {
             variant: 'text-xs/medium',
             color: 'interactive-normal',
-            children: b.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_SUBTITLE.format({
+            children: h.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_SUBTITLE.format({
               applicationName: B.name
             })
           })
         ]
       }),
       g && !et && (0, i.jsxs)('div', {
-        className: h.guildPickerContainer,
+        className: T.guildPickerContainer,
         children: [
           (0, i.jsx)(s.FormTitle, {
             tag: s.FormTitleTags.H5,
-            children: b.Z.Messages.APPLICATION_SUBSCRIPTION_PAYMENT_CHOOSE_SERVER_TITLE
+            children: h.Z.Messages.APPLICATION_SUBSCRIPTION_PAYMENT_CHOOSE_SERVER_TITLE
           }),
           (0, i.jsx)(s.FormText, {
             type: s.FormText.Types.DESCRIPTION,
-            className: h.guildPickerDescription,
-            children: b.Z.Messages.APPLICATION_SUBSCRIPTION_PAYMENT_CHOOSE_SERVER_SUBTITLE
+            className: T.guildPickerDescription,
+            children: h.Z.Messages.APPLICATION_SUBSCRIPTION_PAYMENT_CHOOSE_SERVER_SUBTITLE
           }),
-          (0, i.jsx)(T.y, {
+          (0, i.jsx)(b.y, {
             selectedGuildId: ee,
             onGuildChange: er,
             eligibleApplicationSubscriptionGuilds: R
@@ -160,11 +160,11 @@ children: [
       legalTermsNodeRef: eo,
       flashLegalTerms: () => $(!0),
       analyticsLocation: v,
-      baseAnalyticsData: x,
+      baseAnalyticsData: A,
       flowStartTime: k.startTime,
       planGroup: O,
       purchaseTokenAuthState: H,
-      openInvoiceId: A,
+      openInvoiceId: x,
       metadata: et ? void 0 : z,
       backButtonEligible: t,
       invoiceError: null,

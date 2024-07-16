@@ -23,8 +23,8 @@ function N(e) {
   let {
 canShowReminder: t = !1,
 className: N
-  } = e, p = (0, E.Z)(d.Z), {
-showClipsHeaderEntrypoint: f
+  } = e, f = (0, E.Z)(d.Z), {
+showClipsHeaderEntrypoint: p
   } = u.NV.useExperiment({
 location: 'ClipsButton'
   }, {
@@ -65,7 +65,7 @@ allowIdle: Z
 R,
 L,
 Z
-  ]), f && p && C) ? (0, i.jsxs)(i.Fragment, {
+  ]), p && f && C) ? (0, i.jsxs)(i.Fragment, {
 children: [
   null != x && t && A && O && !(0, r.hasAnyModalOpen)() && !v && (0, i.jsx)(m.Z, {
     clipIconRef: x,

@@ -4,9 +4,9 @@ return O;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(392711),
   o = n(338545),
   c = n(442837),
@@ -38,27 +38,27 @@ function O(e) {
   let {
 guildId: t,
 onClose: n
-  } = e, s = (0, c.e7)([u.Z], () => u.Z.useReducedMotion), O = (0, g.Wg)(), {
+  } = e, a = (0, c.e7)([u.Z], () => u.Z.useReducedMotion), O = (0, g.Wg)(), {
 progress: R,
 errors: x,
 submitting: b
   } = (0, c.cj)([g.ZP], () => {
-var e, n, i, a;
+var e, n, i, s;
 return {
-  progress: null !== (a = null === (e = g.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== a ? a : O,
+  progress: null !== (s = null === (e = g.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== s ? s : O,
   errors: null === (n = g.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
   submitting: null === (i = g.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
 };
-  }), P = (0, p.N)(t, 'ClanSetupModal'), M = a.useMemo(() => (0, A.G)(x), [x]), [D, y] = a.useState(!1), [j, U] = a.useState(window.innerWidth), [G, k] = a.useState(1), [w, B] = a.useState(!0), H = (0, T.f)(), V = (0, o.useSpring)({
+  }), P = (0, p.N)(t, 'ClanSetupModal'), M = s.useMemo(() => (0, A.G)(x), [x]), [D, y] = s.useState(!1), [j, U] = s.useState(window.innerWidth), [G, k] = s.useState(1), [w, B] = s.useState(!0), H = (0, T.f)(), V = (0, o.useSpring)({
 opacity: G,
 config: L,
 onStart: () => B(!0),
 onRest: () => B(1 === G),
-immediate: s
+immediate: a
   }), F = (0, o.useSpring)({
 transform: 'translateX('.concat(1 === G ? 0 : -1 * (j - 380) / 2 + 190, 'px)'),
 config: L,
-immediate: s
+immediate: a
   }), Y = (0, d.useTransition)(0 === G, {
 from: {
   opacity: 0
@@ -79,7 +79,7 @@ leave: {
   opacity: 0
 },
 config: L
-  }), z = a.useCallback(e => {
+  }), z = s.useCallback(e => {
 if (e === M.length)
   k(0), (0, I.Lp)(t, 'signature');
 else if (0 === G)
@@ -97,18 +97,18 @@ t,
 R.furthestStep,
 M.length
   ]);
-  a.useEffect(() => {
+  s.useEffect(() => {
 (0, I.Lp)(t, (0, I.Qh)(R.currentStep));
   }, [
 t,
 R.currentStep
-  ]), a.useEffect(() => {
+  ]), s.useEffect(() => {
 let e = (0, E.pP)((0, l.debounce)(() => U(window.innerWidth), 250));
 return (0, E.YP)(e, document.body), () => (0, E.UC)(e, document.body);
   }, [
 G,
 w
-  ]), a.useEffect(() => {
+  ]), s.useEffect(() => {
 null != P && (0, h._9)(t, {
   requiredGameId: P
 });
@@ -116,9 +116,9 @@ null != P && (0, h._9)(t, {
 P,
 t
   ]);
-  let K = a.useMemo(() => null != x && Object.values(x).some(e => null != e), [x]),
-q = a.useMemo(() => null != x && Object.values(x).length > 0 ? (0, A.G)(x).find(e => e.hasError) : null, [x]),
-Q = a.useCallback(() => {
+  let K = s.useMemo(() => null != x && Object.values(x).some(e => null != e), [x]),
+q = s.useMemo(() => null != x && Object.values(x).length > 0 ? (0, A.G)(x).find(e => e.hasError) : null, [x]),
+Q = s.useCallback(() => {
   k(1), h._9(t, {
     currentStep: null == q ? void 0 : q.index
   });
@@ -135,14 +135,14 @@ Q = a.useCallback(() => {
 {
   enableApplication: J
 } = (0, m.Fg)('ClanDiscoveryAdminContainer'),
-$ = a.useCallback(() => {
+$ = s.useCallback(() => {
   0 === X.filter(e => e.id !== t).length && J ? (0, _.fH)(_.v0.GET_STARTED) : (0, _.fH)(_.v0.ADMIN_UPSELL);
 }, [
   X,
   t,
   J
 ]),
-ee = a.useCallback(() => {
+ee = s.useCallback(() => {
   (0, A.V)({
     guildId: t,
     onSuccess: () => {
@@ -156,7 +156,7 @@ ee = a.useCallback(() => {
   $,
   n
 ]),
-et = a.useRef(null),
+et = s.useRef(null),
 en = null != q ? (0, i.jsxs)('div', {
   className: Z.tooltipContents,
   children: [

@@ -9,8 +9,8 @@ return h;
 var r = n(524437),
   i = n(381499),
   a = n(570140),
-  o = n(514361),
-  s = n(238514),
+  s = n(514361),
+  o = n(238514),
   l = n(210887),
   u = n(695346),
   c = n(675478),
@@ -71,7 +71,7 @@ theme: n
       }
     }
   }
-}), s.Z.shouldSync('appearance'))
+}), o.Z.shouldSync('appearance'))
 return c.hW.updateAsync('appearance', e => {
   var r;
   e.theme = f(n), e.clientThemeSettings = {
@@ -125,7 +125,7 @@ a.Z.dispatch({
       settings: e ? {} : {
         theme: l.Z.theme,
         clientThemeSettings: {
-          backgroundGradientPresetId: null === (t = o.Z.gradientPreset) || void 0 === t ? void 0 : t.id
+          backgroundGradientPresetId: null === (t = s.Z.gradientPreset) || void 0 === t ? void 0 : t.id
         },
         developerMode: u.Sb.getSetting()
       }
@@ -162,7 +162,7 @@ a.Z.dispatch({
       }
     }
   }
-}), s.Z.shouldSync('appearance') && c.hW.updateAsync('appearance', t => {
+}), o.Z.shouldSync('appearance') && c.hW.updateAsync('appearance', t => {
   t.theme = f(e);
 }, c.fy.INFREQUENT_USER_ACTION);
   }

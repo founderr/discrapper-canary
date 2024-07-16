@@ -15,8 +15,8 @@ var i = n(735250),
   T = n(884697),
   h = n(479446),
   N = n(930114),
-  p = n(981632),
-  f = n(703656),
+  f = n(981632),
+  p = n(703656),
   C = n(314897),
   g = n(82142),
   S = n(283595),
@@ -310,7 +310,7 @@ super(...e), G(this, 'handleViewLibrary', e => {
   let {
     libraryApplication: t
   } = this.props;
-  e.preventDefault(), null != t && t.isHidden() ? (0, f.uL)(U.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, f.uL)(U.Z5c.APPLICATION_LIBRARY, {
+  e.preventDefault(), null != t && t.isHidden() ? (0, p.uL)(U.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, p.uL)(U.Z5c.APPLICATION_LIBRARY, {
     state: {
       applicationId: null != t ? t.id : void 0
     }
@@ -378,7 +378,7 @@ super(...e), G(this, 'handleViewLibrary', e => {
       a && (0, i.jsx)(M.Z, {
         className: k.headerIcon
       }),
-      null != e.giftStyle && (0, i.jsx)(p.Z, {
+      null != e.giftStyle && (0, i.jsx)(f.Z, {
         defaultAnimationState: e.redeemed ? h.S.LOOP : h.S.IDLE,
         giftStyle: e.giftStyle,
         className: l

@@ -1,32 +1,32 @@
-a.r(n), a.d(n, {
+n.r(a), n.d(a, {
   default: function() {
 return b;
   }
 });
-var t = a(735250),
-  l = a(470079),
-  s = a(481060),
-  r = a(332664),
-  o = a(538211),
-  i = a(698066),
-  c = a(142497),
-  u = a(626135),
-  _ = a(981631),
-  d = a(70722),
-  E = a(190378),
-  R = a(689938);
+var t = n(735250),
+  s = n(470079),
+  l = n(481060),
+  r = n(332664),
+  o = n(538211),
+  i = n(698066),
+  c = n(142497),
+  u = n(626135),
+  _ = n(981631),
+  d = n(70722),
+  E = n(190378),
+  R = n(689938);
 let m = [d.kr.OTHER];
 
 function b(e) {
   let {
-isStreamer: n,
+isStreamer: a,
 stream: b,
 streamApplication: T,
 onClose: S,
 transitionState: M,
 analyticsData: O
-  } = e, f = n ? R.Z.Messages.STREAM_REPORT_RATING_BODY_STREAMER : R.Z.Messages.STREAM_REPORT_RATING_BODY;
-  return l.useEffect(() => {
+  } = e, f = a ? R.Z.Messages.STREAM_REPORT_RATING_BODY_STREAMER : R.Z.Messages.STREAM_REPORT_RATING_BODY;
+  return s.useEffect(() => {
 u.default.track(_.rMx.OPEN_MODAL, {
   type: 'Stream Problem Report',
   other_user_id: b.ownerId,
@@ -42,31 +42,31 @@ T
 header: R.Z.Messages.STREAM_REPORT_A_PROBLEM_POST_STREAM,
 body: f,
 problemTitle: R.Z.Messages.STREAM_REPORT_LABEL,
-problems: (0, o.Z)(n, !0),
+problems: (0, o.Z)(a, !0),
 feedbackProblems: m,
 onSubmit: function(e) {
   let {
-    rating: n,
-    problem: l,
+    rating: a,
+    problem: s,
     dontShowAgain: r,
     feedback: o
   } = e;
-  if (r && (0, c.Kw)(E.v.REPORT_PROBLEM_POST_STREAM), null != n)
+  if (r && (0, c.Kw)(E.v.REPORT_PROBLEM_POST_STREAM), null != a)
     (0, i.Z)({
-      problem: l,
+      problem: s,
       stream: b,
       feedback: o,
       streamApplication: T,
       analyticsData: O,
       location: 'Stream End',
-      rating: n
-    }), null != l && (0, s.openModalLazy)(async () => {
+      rating: a
+    }), null != s && (0, l.openModalLazy)(async () => {
       let {
         default: e
-      } = await a.e('14466').then(a.bind(a, 729328));
-      return n => (0, t.jsx)(e, {
+      } = await n.e('14466').then(n.bind(n, 729328));
+      return a => (0, t.jsx)(e, {
         body: R.Z.Messages.STREAM_REPORTED_BODY,
-        ...n
+        ...a
       });
     });
 },

@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return g;
+return p;
   }
 }), t(653041), t(47120);
 var i = t(470079),
@@ -19,9 +19,9 @@ var i = t(470079),
   E = t(823379),
   T = t(905753),
   h = t(399860),
-  p = t(981631);
+  g = t(981631);
 
-function g(e, n, t) {
+function p(e, n, t) {
   let a = (0, r.e7)([T.Z], () => T.Z.getApplicationPermissions()),
 l = i.useMemo(() => function(e, n) {
   let t = {
@@ -43,7 +43,7 @@ l = i.useMemo(() => function(e, n) {
   a,
   e
 ]),
-g = (0, r.e7)([T.Z], () => {
+p = (0, r.e7)([T.Z], () => {
   var e;
   if (null == t)
     return;
@@ -55,7 +55,7 @@ C = (0, r.e7)([T.Z], () => {
   return null == t ? T.Z.getEditedApplication() : null === (e = T.Z.getEditedCommand()) || void 0 === e ? void 0 : e.permissions;
 }, [t]),
 f = null != t ? t : n,
-x = null != t ? g : l,
+x = null != t ? p : l,
 O = i.useMemo(() => null != C ? C : {
   ...null != x ? x : {}
 }, [
@@ -76,7 +76,7 @@ A,
 f
   ]), {
 originalApplicationPermissions: l,
-originalCommandPermissions: g,
+originalCommandPermissions: p,
 editedTargetPermissions: function(e, n) {
   let t = (0, r.e7)([m.Z], () => m.Z.getGuild(e), [e]);
   s()(null != t, 'guild must be present to be editing its integration settings');
@@ -103,7 +103,7 @@ editedTargetPermissions: function(e, n) {
         userIds: i
       };
     }, [n]),
-    g = (0, r.cj)([I.Z], () => Object.fromEntries(d.map(I.Z.getChannel).filter(E.lm).map(e => [
+    p = (0, r.cj)([I.Z], () => Object.fromEntries(d.map(I.Z.getChannel).filter(E.lm).map(e => [
       e.id,
       e
     ])), [d]),
@@ -127,15 +127,15 @@ editedTargetPermissions: function(e, n) {
         d = !1;
       if (r.type === c.Kw.CHANNEL) {
         let e = r.id === i,
-          t = g[r.id];
-        n = e || _.Z.can(p.Plq.VIEW_CHANNEL, t), d = !0;
+          t = p[r.id];
+        n = e || _.Z.can(g.Plq.VIEW_CHANNEL, t), d = !0;
       } else if (r.type === c.Kw.ROLE) {
         let i = r.id === e,
           s = C[r.id];
         n = i || null != s, d = o || i || _.Z.isRoleHigher(t, a, s);
       } else if (r.type === c.Kw.USER) {
         let e = f[r.id];
-        n = null != e, d = null != e && (o || _.Z.canManageUser(p.Plq.USE_APPLICATION_COMMANDS, e, t));
+        n = null != e, d = null != e && (o || _.Z.canManageUser(g.Plq.USE_APPLICATION_COMMANDS, e, t));
       }
       s[l] = {
         ...r,
@@ -145,7 +145,7 @@ editedTargetPermissions: function(e, n) {
     }
     return s;
   }, [
-    g,
+    p,
     t,
     a,
     o,

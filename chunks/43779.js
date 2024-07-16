@@ -4,8 +4,8 @@ return m;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(481060),
+  s = n(470079),
+  a = n(481060),
   r = n(113434),
   l = n(497505),
   o = n(585500),
@@ -32,25 +32,25 @@ location: E.dr.QUEST_HOME_DESKTOP,
 questContent: l.jn.QUEST_HOME_DESKTOP,
 useV2Variants: !0,
 expiryDate: f
-  }), N = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, A = (0, r.B6)(null === (n = m.userStatus) || void 0 === n ? void 0 : n.claimedAt), v = a.useCallback(() => (0, i.jsx)(s.Text, {
+  }), N = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, A = (0, r.B6)(null === (n = m.userStatus) || void 0 === n ? void 0 : n.claimedAt), v = s.useCallback(() => (0, i.jsx)(a.Text, {
 variant: 'text-md/semibold',
 color: 'text-brand',
 tag: 'span',
 className: I.header,
 children: p
-  }), [p]), Z = a.useMemo(() => N ? v() : h.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
+  }), [p]), Z = s.useMemo(() => N ? v() : h.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
 rewardHook: v
   }), [
 N,
 v
-  ]), L = a.useMemo(() => N ? (0, i.jsx)(s.Text, {
+  ]), L = s.useMemo(() => N ? (0, i.jsx)(a.Text, {
 variant: 'text-sm/medium',
 color: 'text-muted',
 className: I.description,
 children: h.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
   claimDate: A
 })
-  }) : null != C ? (0, i.jsx)(s.Text, {
+  }) : null != C ? (0, i.jsx)(a.Text, {
 variant: 'text-sm/medium',
 color: 'text-muted',
 className: I.description,
@@ -91,7 +91,7 @@ children: [
         children: [
           (0, i.jsx)('span', {
             className: I.headerSpan,
-            children: (0, i.jsx)(s.Text, {
+            children: (0, i.jsx)(a.Text, {
               variant: 'text-md/semibold',
               color: 'header-primary',
               className: I.header,

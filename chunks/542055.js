@@ -5,8 +5,8 @@ return _;
 }), n(47120);
 var a = n(735250),
   l = n(470079),
-  i = n(658722),
-  s = n.n(i),
+  s = n(658722),
+  i = n.n(s),
   o = n(392711),
   r = n.n(o),
   c = n(990547),
@@ -29,7 +29,7 @@ var a = n(735250),
 function _(e) {
   let {
 channelId: t,
-onClose: i,
+onClose: s,
 transitionState: o
   } = e, [_, N] = l.useState(''), [Z, T] = l.useState('descending'), [j, A] = l.useState(!0), [b, P] = l.useState(null), R = l.useDeferredValue(_), k = (0, d.e7)([h.Z], () => h.Z.getClips()), y = (0, d.e7)([h.Z], () => h.Z.getPendingClips()), B = (0, d.e7)([h.Z], () => h.Z.getSettings().storageLocation), D = (0, d.Wu)([h.Z], () => h.Z.getNewClipIds()), {
 analyticsLocations: H
@@ -58,7 +58,7 @@ j
 if ('' === R.trim())
   return !0;
 let t = R.toLowerCase();
-return null != e.name && '' !== e.name && s()(t, e.name.toLowerCase()) || s()(t, e.applicationName.toLowerCase());
+return null != e.name && '' !== e.name && i()(t, e.name.toLowerCase()) || i()(t, e.applicationName.toLowerCase());
   }).sort((e, t) => 'ascending' === Z ? g.default.compare(e.id, t.id) : 'descending' === Z ? g.default.compare(t.id, e.id) : 0).chunk(3).value(), [
 V,
 R,
@@ -148,7 +148,7 @@ F = j || 0 !== w.length ? j ? (0, a.jsx)('div', {
   renderRow: z
 }) : (0, a.jsx)(L.Z, {
   isEmptyBecauseQuery: V.length > 0,
-  closePopout: i
+  closePopout: s
 });
   return (0, a.jsx)(m.ModalRoot, {
 size: m.ModalSize.DYNAMIC,
@@ -158,7 +158,7 @@ children: (0, a.jsxs)(C.Gt, {
   value: H,
   children: [
     (0, a.jsx)(I.Z, {
-      onClose: i,
+      onClose: s,
       filterQuery: _,
       setFilterQuery: N,
       sortOrder: Z,

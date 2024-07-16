@@ -26,7 +26,7 @@ message: n,
 compact: a,
 usernameHook: h,
 channel: N
-  } = e, p = (0, r.e7)([c.Z], () => c.Z.getGuild(N.guild_id)), f = (0, u.ZP)(n), C = h(f), {
+  } = e, f = (0, r.e7)([c.Z], () => c.Z.getGuild(N.guild_id)), p = (0, u.ZP)(n), C = h(p), {
 avatarSrc: g,
 eventHandlers: {
   onMouseEnter: S,
@@ -80,9 +80,9 @@ children: (0, i.jsx)(d.Z, {
           [T.compact]: a
         }),
         children: m.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
-          username: f.nick,
+          username: p.nick,
           usernameHook: C,
-          guildName: null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : ''
+          guildName: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : ''
         })
       })
     ]

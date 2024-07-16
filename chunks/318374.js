@@ -6,9 +6,9 @@ return f;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(392711),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(392711),
+  l = n.n(o),
   u = n(481060),
   c = n(239091),
   d = n(321148),
@@ -19,7 +19,7 @@ function f(e) {
   let {
 className: t,
 avatarClassName: a,
-maxUsers: s,
+maxUsers: o,
 users: f,
 guildId: h,
 onFocus: p,
@@ -57,12 +57,12 @@ return (0, r.jsx)(u.Dialog, {
 });
   }
   return f.length <= 0 ? null : (0, r.jsx)('div', {
-className: o()(t, E.avatars),
+className: s()(t, E.avatars),
 children: function() {
-  let e = l()(f).take(s).map(e => {
+  let e = l()(f).take(o).map(e => {
       let t = _.ZP.getName(e);
       return T ? (0, r.jsx)('div', {
-        className: o()(E.avatar, a),
+        className: s()(E.avatar, a),
         children: (0, r.jsx)(u.Avatar, {
           src: e.getAvatarURL(h, 24),
           'aria-label': t,
@@ -70,7 +70,7 @@ children: function() {
         })
       }) : (0, r.jsx)(u.TooltipContainer, {
         text: t,
-        className: o()(E.avatar, a),
+        className: s()(E.avatar, a),
         children: (0, r.jsx)(u.Avatar, {
           src: e.getAvatarURL(h, 24),
           'aria-label': t,
@@ -78,14 +78,14 @@ children: function() {
         })
       }, e.id);
     }).value(),
-    t = f.length - s;
+    t = f.length - o;
   return t > 0 && !I && (e[e.length - 1] = (0, r.jsx)(u.Popout, {
     renderPopout: A,
     shouldShow: g,
     position: 'bottom',
     onRequestClose: () => S(!1),
     children: () => (0, r.jsxs)(u.Button, {
-      className: o()(E.avatar, E.overflow),
+      className: s()(E.avatar, E.overflow),
       onFocus: p,
       onClick: () => S(!0),
       look: u.Button.Looks.BLANK,

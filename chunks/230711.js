@@ -2,8 +2,8 @@ var r = n(544891),
   i = n(433517),
   a = n(570140);
 n(773399);
-var o = n(663389),
-  s = n(626135),
+var s = n(663389),
+  o = n(626135),
   l = n(768581),
   u = n(546796);
 n(960048);
@@ -37,7 +37,7 @@ a.Z.dispatch({
 });
   },
   close() {
-let e = o.Z.onClose;
+let e = s.Z.onClose;
 a.Z.dispatch({
   type: 'USER_SETTINGS_MODAL_CLOSE'
 }), null != e && e();
@@ -86,7 +86,7 @@ a.Z.dispatch({
 });
 let {
   username: n,
-  email: o,
+  email: s,
   emailToken: c,
   password: f,
   avatar: h,
@@ -98,7 +98,7 @@ let {
 return (0, u.Z)(e => {
   let t = {
       username: n,
-      email: o,
+      email: s,
       email_token: c,
       password: f,
       avatar: h,
@@ -107,8 +107,8 @@ return (0, u.Z)(e => {
       discriminator: null != m && '' !== m ? m : void 0
     },
     a = i.K.get(d.JkL),
-    s = (0, _.xJ)();
-  null != s && null != a && (t.push_provider = s, t.push_token = a);
+    o = (0, _.xJ)();
+  null != o && null != a && (t.push_provider = o, t.push_token = a);
   let l = i.K.get(d.scU);
   return null != _.mv && null != l && (t.push_voip_provider = _.mv, t.push_voip_token = l), r.tn.patch({
     url: d.ANM.ME,
@@ -129,7 +129,7 @@ return (0, u.Z)(e => {
 }).then(e => {
   let t = e.body,
     n = t.token;
-  return s.default.track(d.rMx.USER_AVATAR_UPDATED, {
+  return o.default.track(d.rMx.USER_AVATAR_UPDATED, {
     animated: (0, l.xR)(t.avatar)
   }), delete t.token, a.Z.dispatch({
     type: 'UPDATE_TOKEN',

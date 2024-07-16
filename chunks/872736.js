@@ -1,21 +1,21 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return o;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(481060),
-  i = s(695346),
-  r = s(689938);
+var n = t(735250);
+t(470079);
+var a = t(481060),
+  i = t(695346),
+  r = t(689938);
 
 function o(e) {
-  let t = i.R_.useSetting();
+  let s = i.R_.useSetting();
   return (0, n.jsx)(a.FormSwitch, {
 hideBorder: !0,
-value: !t,
-onChange: () => i.R_.updateSetting(!t),
-note: t ? null : r.Z.Messages.UNIQUE_USERNAME_TOGGLE_SUBTITLE.format({
+value: !s,
+onChange: () => i.R_.updateSetting(!s),
+note: s ? null : r.Z.Messages.UNIQUE_USERNAME_TOGGLE_SUBTITLE.format({
   username: e.legacyUsername
 }),
 children: r.Z.Messages.UNIQUE_USERNAME_TOGGLE_TITLE

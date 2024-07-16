@@ -4,8 +4,8 @@ return N;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(442837),
+  s = n(470079),
+  a = n(442837),
   r = n(481060),
   l = n(541716),
   o = n(665149),
@@ -28,7 +28,7 @@ function N(e) {
   let {
 channel: t,
 baseChannelId: n
-  } = e, N = (0, p.ZP)(t), A = (0, _.K)(), v = (0, _.V)(), Z = (0, s.e7)([d.Z], () => d.Z.isMessageRequest(t.id)), L = (0, s.e7)([u.Z], () => u.Z.isSpam(t.id)), O = (0, h.V)(t.id, t.getRecipientId()), R = a.useCallback(() => {
+  } = e, N = (0, p.ZP)(t), A = (0, _.K)(), v = (0, _.V)(), Z = (0, a.e7)([d.Z], () => d.Z.isMessageRequest(t.id)), L = (0, a.e7)([u.Z], () => u.Z.isSpam(t.id)), O = (0, h.V)(t.id, t.getRecipientId()), R = s.useCallback(() => {
 m.Z.closeChannelSidebar(g.uZ), Z && A && (0, I.Kh)(t.id), L && v && (0, I.Kh)(t.id);
   }, [
 t.id,
@@ -36,7 +36,7 @@ L,
 v,
 Z,
 A
-  ]), x = a.useCallback(() => {
+  ]), x = s.useCallback(() => {
 (0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
   }, []), {
 markAsNotSpam: b

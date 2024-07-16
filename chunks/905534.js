@@ -1,7 +1,7 @@
 n(177593);
 var i = n(626135),
-  a = n(189800),
-  s = n(996106),
+  s = n(189800),
+  a = n(996106),
   r = n(34954),
   l = n(986768),
   o = n(981631);
@@ -15,14 +15,14 @@ async handler(e) {
     args: d
   } = e, u = t.events[c];
   if (null == u)
-    throw new s.Z({
+    throw new a.Z({
       errorCode: o.lTL.INVALID_EVENT
     }, 'Invalid event: '.concat(c));
   if (!(0, r.Z)(n.authorization.scopes, u.scope))
-    throw new s.Z({
+    throw new a.Z({
       errorCode: o.lTL.INVALID_PERMISSIONS
     }, 'Not authenticated or invalid scope');
-  if (a.N.getCurrentConfig({
+  if (s.N.getCurrentConfig({
       location: 'RPCServer'
     }).enabled && i.default.track(o.rMx.RPC_SUBSCRIPTION_REQUESTED, {
       event: c,
@@ -34,7 +34,7 @@ async handler(e) {
     if (null != e.validate(d, u.validation(e), {
         convert: !1
       }).error)
-      throw new s.Z({
+      throw new a.Z({
         errorCode: o.lTL.INVALID_PAYLOAD
       }, 'Invalid subscription parameters provided');
   }
@@ -58,13 +58,13 @@ handler(e) {
     server: t,
     socket: n,
     evt: i,
-    args: a
+    args: s
   } = e;
   if (null == t.events[i])
-    throw new s.Z({
+    throw new a.Z({
       errorCode: o.lTL.INVALID_EVENT
     }, 'Invalid event: '.concat(i));
-  return t.removeSubscription(n, i, a), {
+  return t.removeSubscription(n, i, s), {
     evt: i
   };
 }

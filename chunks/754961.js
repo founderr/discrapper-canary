@@ -7,9 +7,9 @@ return g;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(338545),
   o = n(442837),
   c = n(481060),
@@ -23,12 +23,12 @@ function I(e) {
   let {
 index: t,
 onClick: n,
-name: s,
+name: a,
 isActive: _,
 animate: I,
 fillBackgroundColor: m,
 hasError: g
-  } = e, p = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), T = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY), S = a.useMemo(() => (0, u.j1)(m, T.hex()), [
+  } = e, p = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), T = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY), S = s.useMemo(() => (0, u.j1)(m, T.hex()), [
 m,
 T
   ]), f = null != S, C = (0, l.useSpring)({
@@ -54,8 +54,8 @@ children: [
   });
   return (0, i.jsx)(c.Tooltip, {
 color: g ? c.Tooltip.Colors.GREY : c.Tooltip.Colors.BRAND,
-text: g ? N : s,
-'aria-label': g ? E.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : s,
+text: g ? N : a,
+'aria-label': g ? E.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : a,
 shouldShow: null != n,
 tooltipStyle: S,
 tooltipClassName: r()(h.progressStepTooltip, {
@@ -96,8 +96,8 @@ function m(e) {
   let {
 steps: t,
 currentStepIndex: n,
-furthestStepIndex: a,
-onStepClick: s,
+furthestStepIndex: s,
+onStepClick: a,
 stepFillColor: o,
 animationStyle: c,
 className: d
@@ -113,7 +113,7 @@ children: t.map(e => {
   } = e;
   return (0, i.jsx)(I, {
     name: r,
-    onClick: t <= a ? () => s(t) : void 0,
+    onClick: t <= s ? () => a(t) : void 0,
     isActive: t <= n,
     hasError: l,
     index: t,
@@ -128,8 +128,8 @@ function g(e) {
   let {
 className: t,
 isBackDisabled: n,
-isNextDisabled: a,
-onNextClick: s,
+isNextDisabled: s,
+onNextClick: a,
 onBackClick: o,
 nextButtonBackgroundColor: d,
 nextButtonClassName: u,
@@ -154,8 +154,8 @@ children: [
       color: c.Button.Colors.BRAND,
       look: c.Button.Looks.FILLED,
       size: c.Button.Sizes.MEDIUM,
-      onClick: s,
-      disabled: a,
+      onClick: a,
+      disabled: s,
       children: E.Z.Messages.NEXT
     })
   })

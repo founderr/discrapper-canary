@@ -1,8 +1,8 @@
 var r = n(588468),
   i = n(496675),
   a = n(483360),
-  o = n(877565),
-  s = n(590921),
+  s = n(877565),
+  o = n(590921),
   l = n(665692),
   u = n(981631),
   c = n(185923),
@@ -10,12 +10,12 @@ var r = n(588468),
 let _ = {
   sentinel: l.a4,
   matches(e, t, n, r, a) {
-var o, s;
-return r && null !== (s = null === (o = a.chatInputType.autocomplete) || void 0 === o ? void 0 : o.addReactionShortcut) && void 0 !== s && s && (i.Z.can(u.Plq.ADD_REACTIONS, e) || e.isPrivate());
+var s, o;
+return r && null !== (o = null === (s = a.chatInputType.autocomplete) || void 0 === s ? void 0 : s.addReactionShortcut) && void 0 !== o && o && (i.Z.can(u.Plq.ADD_REACTIONS, e) || e.isPrivate());
   },
   queryResults(e, t, n, r, i) {
 let {
-  emojis: o
+  emojis: s
 } = a.ZP.queryEmojiResults({
   query: n,
   channel: e,
@@ -23,7 +23,7 @@ let {
 });
 return {
   results: {
-    emojis: o.unlocked
+    emojis: s.unlocked
   }
 };
   },
@@ -35,14 +35,14 @@ let {
   selectedIndex: n,
   query: i,
   onHover: a,
-  onClick: s
+  onClick: o
 } = e;
-return (0, o.HI)({
+return (0, s.HI)({
   query: i,
   selectedIndex: n,
   autocompletes: t,
   onHover: a,
-  onClick: s,
+  onClick: o,
   titleWithQuery: d.Z.Messages.REACTIONS_MATCHING,
   titleWithoutQuery: d.Z.Messages.EMOJI,
   Component: r.ZP.Emoji,
@@ -66,7 +66,7 @@ let {
 return r.sendMessage(function(e) {
   return ''.concat(l.a4).concat(e.name).concat(l.jp);
 }(i)), {
-  type: s.z2.REACTION
+  type: o.z2.REACTION
 };
   }
 };

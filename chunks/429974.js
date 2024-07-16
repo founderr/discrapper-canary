@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(570140),
+var s = n(481060),
+  a = n(570140),
   r = n(317770),
   l = n(603113),
   o = n(812206),
@@ -14,7 +14,7 @@ var a = n(481060),
   I = n(616922);
 let m = null;
 async function g(e) {
-  var t, s, r, g;
+  var t, a, r, g;
   let {
 userId: p,
 section: T,
@@ -39,7 +39,7 @@ x = c.Z.isMobileOnline(p),
 D = null != M ? o.Z.getApplication(M) : null,
 y = x ? h.j28.ONLINE_MOBILE : h.j28.ONLINE_DESKTOP,
 j = R === h.Skl.ONLINE ? y : R;
-  m = await (0, a.openModalLazy)(async () => {
+  m = await (0, s.openModalLazy)(async () => {
 let {
   default: e
 } = await n.e('824').then(n.bind(n, 304113));
@@ -59,7 +59,7 @@ type: 'Profile Modal',
 guild_id: f !== h.ME ? f : null,
 channel_id: C,
 other_user_id: p,
-application_id: null !== (s = null == O ? void 0 : O.application_id) && void 0 !== s ? s : null,
+application_id: null !== (a = null == O ? void 0 : O.application_id) && void 0 !== a ? a : null,
 application_name: null == O ? void 0 : O.name,
 sku_id: null !== (r = null == D ? void 0 : D.primarySkuId) && void 0 !== r ? r : null,
 is_friend: d.Z.isFriend(p),
@@ -76,14 +76,14 @@ profile_has_profile_effect: (null == L ? void 0 : L.profileEffectId) != null,
 }
 
 function p() {
-  null != m && (0, a.closeModal)(m), m = null;
+  null != m && (0, s.closeModal)(m), m = null;
 }
 class T extends r.Z {
   _initialize() {
-s.Z.subscribe('USER_PROFILE_MODAL_OPEN', g), s.Z.subscribe('USER_PROFILE_MODAL_CLOSE', p);
+a.Z.subscribe('USER_PROFILE_MODAL_OPEN', g), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', p);
   }
   _terminate() {
-s.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', g), s.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', p);
+a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', g), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', p);
   }
 }
 t.Z = new T();

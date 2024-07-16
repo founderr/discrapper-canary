@@ -5,8 +5,8 @@ return g;
 }), n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(374470),
-  s = n(481060),
+  s = n(374470),
+  o = n(481060),
   l = n(40851),
   u = n(124347),
   c = n(751586),
@@ -49,8 +49,8 @@ super(...e), I(this, 'onMouseEnter', (e, t) => {
     height: i
   } = this.props;
   n((0, _.zp)(r, i));
-}), I(this, 'modalContext', (0, s.modalContextFromAppContext)(this.props.appContext)), I(this, 'onCloseImage', () => {
-  (0, s.closeModal)(h.c, this.modalContext);
+}), I(this, 'modalContext', (0, o.modalContextFromAppContext)(this.props.appContext)), I(this, 'onCloseImage', () => {
+  (0, o.closeModal)(h.c, this.modalContext);
 }), I(this, 'onZoom', (e, t) => {
   let {
     zoomThumbnailPlaceholder: n,
@@ -85,12 +85,12 @@ super(...e), I(this, 'onMouseEnter', (e, t) => {
     } : void 0,
     trigger: r
   };
-  (0, o.k)(e.currentTarget) && e.currentTarget.blur(), d.default.track(f.rMx.OPEN_MODAL, {
+  (0, s.k)(e.currentTarget) && e.currentTarget.blur(), d.default.track(f.rMx.OPEN_MODAL, {
     type: 'Media Modal'
-  }), (0, s.openModal)(e => (0, i.jsx)(s.ModalRoot, {
+  }), (0, o.openModal)(e => (0, i.jsx)(o.ModalRoot, {
     className: m.modal,
     ...e,
-    size: s.ModalSize.DYNAMIC,
+    size: o.ModalSize.DYNAMIC,
     'aria-label': p.Z.Messages.IMAGE,
     children: (0, i.jsx)(c.y, {
       ...v,

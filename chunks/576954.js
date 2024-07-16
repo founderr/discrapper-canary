@@ -5,8 +5,8 @@ return f;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(286379),
-  s = n(481060),
+  s = n(286379),
+  l = n(481060),
   r = n(194359),
   o = n(797614),
   c = n(378298),
@@ -34,7 +34,7 @@ r.Z.addRelationship({
     location: p.zr
   },
   type: m.OGo.BLOCKED
-}), C(), (0, s.showToast)((0, s.createToast)(_.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, s.ToastType.SUCCESS)), (0, u.qc)({
+}), C(), (0, l.showToast)((0, l.createToast)(_.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, l.ToastType.SUCCESS)), (0, u.qc)({
   channelId: t,
   warningId: f,
   senderId: E,
@@ -54,7 +54,7 @@ E
   senderId: E,
   warningType: d.pj.STRANGER_DANGER
 }), o.Z.increment({
-  name: l.V.SAFETY_WARNING_VIEW
+  name: s.V.SAFETY_WARNING_VIEW
 });
   }, [
 t,
@@ -62,18 +62,18 @@ f,
 E
   ]);
   let I = () => {
-  (0, s.openModalLazy)(async () => {
+  (0, l.openModalLazy)(async () => {
     let {
       default: e
     } = await n.e('95226').then(n.bind(n, 816960));
     return n => {
       let {
         transitionState: a,
-        onClose: l
+        onClose: s
       } = n;
       return (0, i.jsx)(e, {
         transitionState: a,
-        onClose: l,
+        onClose: s,
         channelId: t,
         warningId: f,
         senderId: E,
@@ -84,17 +84,17 @@ E
     };
   });
 },
-x = (e, a, l) => {
-  (0, s.openModalLazy)(async () => {
+x = (e, a, s) => {
+  (0, l.openModalLazy)(async () => {
     let {
-      default: s
+      default: l
     } = await n.e('68747').then(n.bind(n, 744373));
-    return n => (0, i.jsx)(s, {
+    return n => (0, i.jsx)(l, {
       ...n,
       userId: E,
       confirmBlock: g(e),
       onCancel: () => {
-        null == l || l(), (0, u.qc)({
+        null == s || s(), (0, u.qc)({
           channelId: t,
           warningId: f,
           senderId: E,
@@ -115,7 +115,7 @@ description: _.Z.Messages.STRANGER_DANGER_BANNER_DESCRIPTION,
 onDismiss: C,
 buttons: [{
     text: _.Z.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,
-    color: s.Button.Colors.BRAND,
+    color: l.Button.Colors.BRAND,
     onclick: () => {
       I(), (0, u.qc)({
         channelId: t,
@@ -128,7 +128,7 @@ buttons: [{
   },
   {
     text: _.Z.Messages.STRANGER_DANGER_BANNER_BLOCK,
-    color: s.Button.Colors.RED,
+    color: l.Button.Colors.RED,
     onclick: () => x(u.NM.USER_BANNER_BLOCK_CONFIRM, u.NM.USER_BANNER_BLOCK_CANCEL)
   }
 ]

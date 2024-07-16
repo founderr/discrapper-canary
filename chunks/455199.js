@@ -11,8 +11,8 @@ var i, a, s, r, l = n(392711),
   T = n(814082),
   h = n(23750),
   N = n(314897),
-  p = n(592125),
-  f = n(375954),
+  f = n(592125),
+  p = n(375954),
   C = n(306680),
   g = n(699516),
   S = n(914010),
@@ -37,7 +37,7 @@ roleFilter: !0
 function y(e) {
   if (e instanceof h.ZP)
 return e;
-  let t = f.Z.getMessage(e.channel_id, e.id);
+  let t = p.Z.getMessage(e.channel_id, e.id);
   return null != t ? t : (0, E.e5)(e);
 }
 
@@ -46,7 +46,7 @@ function B(e) {
   if ((0, m.Z)(e) && !O.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type))
 return null;
   null == t && (t = e.channel_id);
-  let n = p.Z.getChannel(t);
+  let n = f.Z.getChannel(t);
   if (null == n || n.type === O.d4z.DM || P.guildFilter === O.NgX.THIS_SERVER && n.getGuildId() !== S.Z.getGuildId())
 return null;
   let i = N.default.getId();
@@ -121,7 +121,7 @@ channel: t
 }
 class Y extends(i = c.ZP.Store) {
   initialize() {
-this.waitFor(R.default, p.Z, f.Z, C.ZP);
+this.waitFor(R.default, f.Z, p.Z, C.ZP);
   }
   isOpen() {
 return j;
@@ -208,7 +208,7 @@ let {
   guild: t
 } = e;
 M = o().filter(M, e => {
-  let n = p.Z.getChannel(e.channel_id);
+  let n = f.Z.getChannel(e.channel_id);
   return null != n && n.getGuildId() !== t.id || (delete v[e.id], !1);
 });
   },

@@ -1,5 +1,5 @@
 n(47120);
-var i, a, l, s, r = n(873546),
+var i, a, s, l, r = n(873546),
   o = n(442837),
   c = n(570140),
   d = n(38618),
@@ -49,12 +49,12 @@ let t = this.getData();
 return null != t ? t[e] : null;
   }
 }
-s = 'TutorialIndicatorStore', (l = 'displayName') in(a = I) ? Object.defineProperty(a, l, {
-  value: s,
+l = 'TutorialIndicatorStore', (s = 'displayName') in(a = I) ? Object.defineProperty(a, s, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = s, t.Z = new I(c.Z, {
+}) : a[s] = l, t.Z = new I(c.Z, {
   CONNECTION_OPEN: function(e) {
 let {
   tutorial: t

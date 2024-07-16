@@ -5,8 +5,8 @@ return f;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(512722),
-  s = n.n(l),
+  s = n(512722),
+  l = n.n(s),
   r = n(442837),
   o = n(911367),
   c = n(594174),
@@ -21,7 +21,7 @@ function f(e) {
   let {
 location: t,
 channel: n,
-...l
+...s
   } = e, {
 botProfilesEnabled: f
   } = (0, d.J)({
@@ -29,7 +29,7 @@ location: t
   }), E = (0, h.Z)();
   (0, o.t)();
   let [C] = n.recipients, g = (0, r.e7)([c.default], () => c.default.getUser(C));
-  return (s()(null != g, 'ProfilePanelExperimentWrapper: user cannot be undefined'), a.useEffect(() => {
+  return (l()(null != g, 'ProfilePanelExperimentWrapper: user cannot be undefined'), a.useEffect(() => {
 (0, u.W)(g, {
   withMutualFriends: !g.bot,
   withMutualGuilds: !0,
@@ -41,14 +41,14 @@ n.id
   ]), E) ? null : f && g.isNonUserBot() ? (0, i.jsx)(p.Z, {
 user: g,
 channel: n,
-...l
+...s
   }) : f || !g.bot ? (0, i.jsx)(_.Z, {
 user: g,
 channel: n,
-...l
+...s
   }) : (0, i.jsx)(m.Z, {
 user: g,
 channel: n,
-...l
+...s
   });
 }

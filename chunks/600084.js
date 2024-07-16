@@ -5,8 +5,8 @@ return O;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(481060),
+  s = n(442837),
+  l = n(481060),
   r = n(570140),
   o = n(933557),
   c = n(605436),
@@ -38,7 +38,7 @@ function P(e) {
   let {
 canManageRoles: t,
 channel: n
-  } = e, a = t && (0, c.Yk)(n), s = (0, l.e7)([_.ZP], () => null != n.guild_id && n === _.ZP.getDefaultChannel(n.guild_id), [n]);
+  } = e, a = t && (0, c.Yk)(n), l = (0, s.e7)([_.ZP], () => null != n.guild_id && n === _.ZP.getDefaultChannel(n.guild_id), [n]);
   if ((0, d.Z)(n.id))
 return null;
   if (n.isForumPost())
@@ -49,7 +49,7 @@ return (0, i.jsx)(x.Z, {
 return (0, i.jsx)(A.Z, {
   channel: n
 });
-  else if (s)
+  else if (l)
 return (0, i.jsx)(M.Z, {
   channel: n
 });
@@ -69,13 +69,13 @@ channel: n,
 showingBanner: c
   } = e, d = (0, o.ZP)(n), {
 type: m
-  } = n, _ = (0, l.e7)([E.default], () => n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null), x = C.ZP.useUserTag(_), {
+  } = n, _ = (0, s.e7)([E.default], () => n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null), x = C.ZP.useUserTag(_), {
 canManageRoles: v,
 canReadMessageHistory: Z
-  } = (0, l.cj)([f.Z], () => ({
+  } = (0, s.cj)([f.Z], () => ({
 canManageRoles: f.Z.can(b.Plq.MANAGE_ROLES, n),
 canReadMessageHistory: f.Z.can(b.Plq.READ_MESSAGE_HISTORY, n)
-  })), A = (0, l.e7)([h.Z], () => m === b.d4z.DM ? h.Z.getMutualGuilds(n.getRecipientId()) : null, [
+  })), A = (0, s.e7)([h.Z], () => m === b.d4z.DM ? h.Z.getMutualGuilds(n.getRecipientId()) : null, [
 n,
 m
   ]), {
@@ -106,7 +106,7 @@ return (0, i.jsxs)(N.Z, {
   channel: n,
   user: _,
   children: [
-    null != _ && (0, i.jsx)(s.Heading, {
+    null != _ && (0, i.jsx)(l.Heading, {
       variant: 'heading-xl/medium',
       className: L.marginBottom20,
       children: x

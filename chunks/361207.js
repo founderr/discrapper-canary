@@ -1,4 +1,4 @@
-t.d(n, {
+n.d(t, {
   DW: function() {
 return u;
   },
@@ -12,23 +12,23 @@ return f;
 return c;
   }
 });
-var a = t(525654),
-  s = t.n(a),
-  o = t(271579),
-  r = t(314897),
-  l = t(981631);
+var s = n(525654),
+  a = n.n(s),
+  o = n(271579),
+  r = n(314897),
+  l = n(981631);
 let i = 'linux';
 
 function c(e) {
-  let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-t = arguments.length > 2 ? arguments[2] : void 0;
-  return ''.concat(l.fzT.DESKTOP).concat(n ? '/ptb' : '', '?platform=').concat(e).concat(null != t ? '&format='.concat(t) : '');
+  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+n = arguments.length > 2 ? arguments[2] : void 0;
+  return ''.concat(l.fzT.DESKTOP).concat(t ? '/ptb' : '', '?platform=').concat(e).concat(null != n ? '&format='.concat(n) : '');
 }
 
 function d() {
   var e;
-  let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = s().os) || void 0 === e ? void 0 : e.family;
-  return null == n ? 'win' : -1 !== n.indexOf('Ubuntu') || -1 !== n.indexOf('Debian') || -1 !== n.indexOf('Fedora') || -1 !== n.indexOf('Red Hat') || -1 !== n.indexOf('SuSE') || -1 !== n.indexOf('Linux') ? i : -1 !== n.indexOf('OS X') ? 'osx' : 'win';
+  let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = a().os) || void 0 === e ? void 0 : e.family;
+  return null == t ? 'win' : -1 !== t.indexOf('Ubuntu') || -1 !== t.indexOf('Debian') || -1 !== t.indexOf('Fedora') || -1 !== t.indexOf('Red Hat') || -1 !== t.indexOf('SuSE') || -1 !== t.indexOf('Linux') ? i : -1 !== t.indexOf('OS X') ? 'osx' : 'win';
 }
 
 function u(e) {
@@ -44,23 +44,23 @@ function f() {
   return c(e, !1, e === i ? 'tar.gz' : null);
 }
 
-function p(e, n, t) {
-  let a = null != t ? t.toString() : null;
-  switch (n) {
+function p(e, t, n) {
+  let s = null != n ? n.toString() : null;
+  switch (t) {
 case 'iOS':
-  return (0, o.ZP)(null != a ? a : 'https://itunes.apple.com/us/app/discord-chat-for-games/id985746746', {
+  return (0, o.ZP)(null != s ? s : 'https://itunes.apple.com/us/app/discord-chat-for-games/id985746746', {
     utmSource: e,
     fingerprint: r.default.getFingerprint(),
     attemptId: (0, o.WS)()
   });
 case 'Android':
-  return (0, o.ZP)(null != a ? a : 'https://play.google.com/store/apps/details', {
+  return (0, o.ZP)(null != s ? s : 'https://play.google.com/store/apps/details', {
     utmSource: e,
     id: 'com.discord',
     fingerprint: r.default.getFingerprint(),
     attemptId: (0, o.WS)()
   });
 default:
-  return null != a ? a : 'https://www.discord.com';
+  return null != s ? s : 'https://www.discord.com';
   }
 }

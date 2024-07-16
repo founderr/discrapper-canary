@@ -6,8 +6,8 @@ return p;
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(481060),
-  s = n(479313),
+  s = n(481060),
+  l = n(479313),
   r = n(765104),
   o = n(626135),
   c = n(665149),
@@ -20,7 +20,7 @@ function p(e) {
 channel: t
   } = e, n = (0, a.e7)([r.Z], () => r.Z.shouldShowTopicsBar());
   return (0, i.jsx)(c.ZP.Icon, {
-icon: l.TopicsIcon,
+icon: s.TopicsIcon,
 onClick: () => {
   o.default.track(d.rMx.SUMMARIES_SIDEBAR_TOGGLED, {
     summaries_sidebar_open: !n,
@@ -28,7 +28,7 @@ onClick: () => {
     guild_id: t.guild_id,
     channel_id: t.id,
     channel_type: t.type
-  }), (0, s.e7)();
+  }), (0, l.e7)();
 },
 tooltip: n ? h.Z.Messages.SUMMARIES_SHOWN : h.Z.Messages.SUMMARIES_HIDDEN,
 selected: n,

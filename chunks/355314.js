@@ -6,8 +6,8 @@ return O;
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(310752),
+  s = n(481060),
+  o = n(310752),
   l = n(174609),
   u = n(703656),
   c = n(210887),
@@ -41,7 +41,7 @@ disable: L
 className: v.updatedArt,
 alt: 'File Upload Nitro Perk',
 src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(M, '.png')
-  }) : (0, r.jsx)(s.Z, {
+  }) : (0, r.jsx)(o.Z, {
 icons: A.J6
   }), U = i.useMemo(() => {
 let e = h.ZP.getUserMaxFileSize(O);
@@ -73,7 +73,7 @@ useKibibytes: !0
 premiumMaxSize: G
   }), B = b ? (0, r.jsx)('div', {
 className: v.body,
-children: (0, r.jsx)(o.Text, {
+children: (0, r.jsx)(s.Text, {
   variant: 'text-sm/medium',
   children: k
 })
@@ -83,7 +83,7 @@ children: [
   (0, r.jsx)('span', {
     children: w
   }),
-  (0, r.jsx)(o.Text, {
+  (0, r.jsx)(s.Text, {
     variant: 'text-md/medium',
     children: k
   })

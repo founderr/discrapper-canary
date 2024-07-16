@@ -25,8 +25,8 @@ var i = n(735250),
   T = n(703656),
   h = n(210887),
   N = n(592125),
-  p = n(375954),
-  f = n(496675),
+  f = n(375954),
+  p = n(496675),
   C = n(933429),
   g = n(451478),
   S = n(387204),
@@ -153,12 +153,12 @@ super(...e), v(this, 'handleClickJump', e => {
 });
   }
 }
-let D = d.ZP.connectStores([f.Z], e => {
+let D = d.ZP.connectStores([p.Z], e => {
   let {
 channel: t
   } = e;
   return {
-canManageMessages: null != t && f.Z.can(O.Plq.MANAGE_MESSAGES, t)
+canManageMessages: null != t && p.Z.can(O.Plq.MANAGE_MESSAGES, t)
   };
 })(b);
 
@@ -173,8 +173,8 @@ renderHeader: E,
 renderEmptyState: m,
 renderItem: T,
 getProTip: N,
-scrollerClassName: p,
-className: f,
+scrollerClassName: f,
+className: p,
 listName: v
   } = e, Z = a.useRef(null), P = (0, I.Z)(v, Z), b = (0, d.e7)([C.Z], () => C.Z.hasNotice()), D = (0, d.e7)([g.Z], () => g.Z.windowSize());
   a.useEffect(() => {
@@ -253,7 +253,7 @@ F = {
   b && (F.maxHeight -= 40);
   let w = null != _ && s;
   return (0, i.jsx)('div', {
-className: r()(f, M.messagesPopoutWrap),
+className: r()(p, M.messagesPopoutWrap),
 style: F,
 onClick: L,
 onDoubleClick: L,
@@ -262,7 +262,7 @@ children: (0, i.jsxs)(u.HeadingLevel, {
   component: E(),
   children: [
     (0, i.jsxs)(u.AdvancedScroller, {
-      className: r()(M.messagesPopout, p),
+      className: r()(M.messagesPopout, f),
       onScroll: w ? j : void 0,
       ref: Z,
       children: [
@@ -303,15 +303,15 @@ loadMore: c,
 onJump: u,
 canCloseAllMessages: I = !1,
 renderHeader: h,
-renderEmptyState: f,
+renderEmptyState: p,
 renderMessage: C,
 getProTip: g,
 scrollerClassName: S,
 className: A,
 onCloseMessage: R,
 listName: v
-  } = e, L = (0, d.e7)([p.Z], () => {
-let e = null != s ? p.Z.getMessages(s.id) : null;
+  } = e, L = (0, d.e7)([f.Z], () => {
+let e = null != s ? f.Z.getMessages(s.id) : null;
 return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
   });
 
@@ -354,7 +354,7 @@ scrollerClassName: S,
 items: P,
 loading: o,
 analyticsName: t,
-renderEmptyState: f,
+renderEmptyState: p,
 renderHeader: h,
 hasMore: l,
 loadMore: c,

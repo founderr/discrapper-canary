@@ -5,8 +5,8 @@ return x;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(399606),
-  s = n(704215),
+  s = n(399606),
+  l = n(704215),
   r = n(481060),
   o = n(239091),
   c = n(706140),
@@ -29,7 +29,7 @@ themeable: x
   } = e, T = t.getGuildId(), {
 mute: N,
 suppress: v
-  } = (0, p.Z)(t), S = (0, l.e7)([f.Z], () => f.Z.isDeaf()), Z = N || v || S, A = (0, d.sR)({
+  } = (0, p.Z)(t), S = (0, s.e7)([f.Z], () => f.Z.isDeaf()), Z = N || v || S, A = (0, d.sR)({
 isSoundboardButtonDisabled: Z
   }), [M, b] = (0, c.c)(A);
 
@@ -63,7 +63,7 @@ renderPopout: e => {
       guildId: T,
       channel: t,
       onClose: n,
-      gridNotice: M === s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, i.jsx)(u.o, {
+      gridNotice: M === l.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, i.jsx)(u.o, {
         onClose: n,
         markAsDismissed: b
       }),

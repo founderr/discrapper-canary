@@ -3,8 +3,8 @@ n.d(t, {
 return I;
   }
 });
-var i, a, l = n(735250),
-  s = n(470079),
+var i, a, s = n(735250),
+  l = n(470079),
   r = n(500923),
   o = n.n(r),
   c = n(442837),
@@ -18,8 +18,8 @@ var i, a, l = n(735250),
 
 function E(e) {
   let t = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
-n = s.useRef(null);
-  return s.useEffect(() => {
+n = l.useRef(null);
+  return l.useEffect(() => {
 let i;
 return null != n.current && (i = o().loadAnimation({
   container: n.current,
@@ -38,14 +38,14 @@ e
 }
 
 function C() {
-  return (0, l.jsx)('div', {
+  return (0, s.jsx)('div', {
 ref: E(i || (i = n.t(p, 2))),
 className: f.glow
   });
 }
 
 function g() {
-  return (0, l.jsx)('div', {
+  return (0, s.jsx)('div', {
 ref: E(a || (a = n.t(m, 2))),
 className: f.trinkets
   });
@@ -54,22 +54,22 @@ let I = e => {
   let {
 children: t
   } = e;
-  return s.useEffect(() => {
+  return l.useEffect(() => {
 setTimeout(() => (0, h.EW)(d.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
   dismissAction: _.L.AUTO_DISMISS
 }), 10000);
-  }, []), (0, l.jsxs)('div', {
+  }, []), (0, s.jsxs)('div', {
 className: f.animation,
 children: [
-  (0, l.jsx)(C, {}),
-  (0, l.jsx)('div', {
+  (0, s.jsx)(C, {}),
+  (0, s.jsx)('div', {
     className: f.circleLayer
   }),
-  (0, l.jsx)('div', {
+  (0, s.jsx)('div', {
     className: f.omniButton,
     children: t
   }),
-  (0, l.jsx)(g, {})
+  (0, s.jsx)(g, {})
 ]
   });
 };

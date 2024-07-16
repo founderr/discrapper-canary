@@ -1,42 +1,42 @@
-n.d(t, {
+s.d(t, {
   I: function() {
 return h;
   }
 });
-var r = n(735250),
-  s = n(470079),
-  a = n(120356),
-  o = n.n(a),
-  i = n(425493),
-  l = n(410030),
-  c = n(984370),
-  d = n(471731),
-  u = n(486620),
-  p = n(792125),
-  g = n(335131),
-  f = n(994896),
-  C = n(689938),
-  m = n(807926);
+var n = s(735250),
+  r = s(470079),
+  a = s(120356),
+  o = s.n(a),
+  i = s(425493),
+  l = s(410030),
+  c = s(984370),
+  d = s(471731),
+  u = s(486620),
+  p = s(792125),
+  g = s(335131),
+  f = s(994896),
+  C = s(689938),
+  m = s(807926);
 
 function _(e) {
   let {
 isLayer: t,
-onClose: n,
+onClose: s,
 isFullScreen: a = !1
   } = e;
-  return (0, r.jsxs)(c.Z, {
+  return (0, n.jsxs)(c.Z, {
 className: o()(m.headerBar, {
   [m.fullscreenHeaderBar]: a
 }),
 innerClassname: m.shopLogoContainer,
-toolbar: a ? null : (0, r.jsx)(s.Fragment, {}),
+toolbar: a ? null : (0, n.jsx)(r.Fragment, {}),
 children: [
-  (0, r.jsx)(u.Z, {
+  (0, n.jsx)(u.Z, {
     className: m.shopLogo
   }),
-  a && (0, r.jsx)(i.Z, {
+  a && (0, n.jsx)(i.Z, {
     className: m.closeIcon,
-    closeAction: t ? g.DR : n,
+    closeAction: t ? g.DR : s,
     keybind: 'ESC'
   })
 ]
@@ -46,32 +46,32 @@ children: [
 function h(e) {
   let {
 isFullScreen: t,
-isLayer: n,
+isLayer: s,
 onClose: a
   } = e, {
 newShopLogoEnabled: u
   } = (0, f.O)({
 location: 'CollectiblesShop'
   }), h = (0, l.ZP)();
-  return u ? (0, r.jsx)(_, {
-isLayer: n,
+  return u ? (0, n.jsx)(_, {
+isLayer: s,
 onClose: a,
 isFullScreen: t
-  }) : (0, r.jsxs)(c.Z, {
+  }) : (0, n.jsxs)(c.Z, {
 className: o()((0, p.Q)(h), m.headerBar, {
   [m.fullscreenHeaderBar]: t
 }),
-toolbar: t ? null : (0, r.jsx)(s.Fragment, {}),
+toolbar: t ? null : (0, n.jsx)(r.Fragment, {}),
 children: [
-  (0, r.jsx)(d.Z, {
+  (0, n.jsx)(d.Z, {
     className: m.discordLogo
   }),
-  (0, r.jsx)(c.Z.Title, {
+  (0, n.jsx)(c.Z.Title, {
     children: C.Z.Messages.COLLECTIBLES_SHOP
   }),
-  t && (0, r.jsx)(i.Z, {
+  t && (0, n.jsx)(i.Z, {
     className: m.closeIcon,
-    closeAction: n ? g.DR : a,
+    closeAction: s ? g.DR : a,
     keybind: 'ESC'
   })
 ]

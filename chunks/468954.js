@@ -6,8 +6,8 @@ return c;
 var r = n(735250),
   i = n(470079),
   a = n(28546),
-  o = n(98528),
-  s = n(429155),
+  s = n(98528),
+  o = n(429155),
   l = n(810462),
   u = n(560532);
 
@@ -41,7 +41,7 @@ listPadding: M,
 gridNavigatorId: P,
 gridNotice: U,
 renderHeader: w
-  } = e, x = i.useRef(null), G = i.useRef(null), k = i.useRef(null), B = 0 === t.length, F = (0, a.Iu)(e => e.searchQuery), V = d.useStore(e => e.inspectedExpressionPosition), H = (0, o.ep)({
+  } = e, x = i.useRef(null), G = i.useRef(null), k = i.useRef(null), B = 0 === t.length, F = (0, a.Iu)(e => e.searchQuery), V = d.useStore(e => e.inspectedExpressionPosition), H = (0, s.ep)({
 gridWrapperRef: x,
 containerWidth: c,
 showingEmptyState: B
@@ -51,7 +51,7 @@ rowCount: Y,
 rowCountBySection: j,
 columnCounts: W,
 gutterWidth: K
-  } = (0, o.yi)({
+  } = (0, s.yi)({
 categories: t,
 collapsedCategories: n,
 gridWidth: H,
@@ -64,7 +64,7 @@ getRowProps: q,
 gridContainerProps: Q,
 handleGridContainerKeyDown: X,
 isUsingKeyboardNavigation: $
-  } = (0, o.t$)({
+  } = (0, s.t$)({
 columnCounts: W,
 expressionsListRef: G,
 expressionsGrid: Z,
@@ -147,7 +147,7 @@ children: [
         className: u.listWrapper,
         id: P,
         ...Q,
-        children: null != H ? (0, r.jsx)(s.Z, {
+        children: null != H ? (0, r.jsx)(o.Z, {
           ref: G,
           store: d,
           hasSearchResults: f,

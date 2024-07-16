@@ -21,10 +21,10 @@ return I;
 return r;
   }
 });
-var i, a, s, r, l, o, c = n(652874),
+var i, s, a, r, l, o, c = n(652874),
   d = n(868888),
   u = n(433517);
-(i = r || (r = {})).ADMIN_UPSELL = 'admin_upsell', i.GET_STARTED = 'get_started', i.DISCOVERY = 'discovery', i.PLAYSTYLE = 'playstyle', i.TRAITS = 'traits', i.GAMES = 'games', (a = l || (l = {})).VALORANT = 'valorant', a.GENSHIN = 'genshin', (s = o || (o = {})).USER_UPSELL = 'user_upsell', s.USER_ONBOARDING = 'user_onboarding';
+(i = r || (r = {})).ADMIN_UPSELL = 'admin_upsell', i.GET_STARTED = 'get_started', i.DISCOVERY = 'discovery', i.PLAYSTYLE = 'playstyle', i.TRAITS = 'traits', i.GAMES = 'games', (s = l || (l = {})).VALORANT = 'valorant', s.GENSHIN = 'genshin', (a = o || (o = {})).USER_UPSELL = 'user_upsell', a.USER_ONBOARDING = 'user_onboarding';
 let _ = (0, c.Z)((0, d.tJ)(e => ({
   mode: 'admin_upsell',
   previousMode: 'admin_upsell',

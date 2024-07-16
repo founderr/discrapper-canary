@@ -1,23 +1,23 @@
-o.d(e, {
+t.d(e, {
   Z: function() {
 return d;
   }
 });
-var t = o(735250);
-o(470079);
-var r = o(481060),
-  i = o(63063),
-  c = o(921869),
-  s = o(514161),
-  l = o(981631),
-  a = o(689938),
-  C = o(233820);
+var o = t(735250);
+t(470079);
+var r = t(481060),
+  i = t(63063),
+  s = t(921869),
+  c = t(514161),
+  l = t(981631),
+  a = t(689938),
+  C = t(233820);
 
 function u() {
-  return (0, t.jsx)(s.yC, {
-children: (0, t.jsx)(s.Ux, {
+  return (0, o.jsx)(c.yC, {
+children: (0, o.jsx)(c.Ux, {
   text: a.Z.Messages.CONNECT_CRUNCHYROLL_DISPLAY_SHOW_VALUE_PROP,
-  children: (0, t.jsx)(r.TvIcon, {
+  children: (0, o.jsx)(r.TvIcon, {
     size: 'md',
     color: 'currentColor'
   })
@@ -28,21 +28,21 @@ children: (0, t.jsx)(s.Ux, {
 function d(n) {
   let {
 onContinue: e,
-onClose: o
+onClose: t
   } = n, r = i.Z.getArticleURL(l.BhN.CRUNCHYROLL_CONNECTION);
-  return (0, t.jsx)(c.m, {
+  return (0, o.jsx)(s.m, {
 platformType: l.ABu.CRUNCHYROLL,
 headerConnect: a.Z.Messages.CONNECT_CRUNCHYROLL_LANDING_TITLE,
 body: a.Z.Messages.CONNECT_CRUNCHYROLL_LANDING_BODY,
 learnMoreLink: r,
-onClose: o,
+onClose: t,
 onContinue: e,
-img: (0, t.jsx)('img', {
+img: (0, o.jsx)('img', {
   src: C,
   width: 234,
   height: 152,
   alt: ''
 }),
-valueProps: (0, t.jsx)(u, {})
+valueProps: (0, o.jsx)(u, {})
   });
 }

@@ -22,8 +22,8 @@ var i = n(735250),
   T = n(626135),
   h = n(585483),
   N = n(143316),
-  p = n(240126),
-  f = n(791914),
+  f = n(240126),
+  p = n(791914),
   C = n(147522),
   g = n(809780),
   S = n(981631),
@@ -98,13 +98,13 @@ var B;
 return (0, i.jsxs)('div', {
   className: R.container,
   children: [
-    (0, i.jsx)(f.Z, {
+    (0, i.jsx)(p.Z, {
       tab: u.X.UNREADS,
       setTab: t,
       badgeState: M,
       closePopout: O
     }),
-    (0, i.jsx)(p.Z, {
+    (0, i.jsx)(f.Z, {
       Icon: _.InboxIcon,
       header: A.Z.Messages.UNREADS_EMPTY_STATE_HEADER,
       tip: (null === (B = o().os) || void 0 === B ? void 0 : B.family) === 'OS X' ? A.Z.Messages.UNREADS_EMPTY_STATE_TIP_MAC : A.Z.Messages.UNREADS_EMPTY_STATE_TIP
@@ -116,7 +116,7 @@ return (0, i.jsxs)('div', {
 className: r()(R.container, 'group-spacing-'.concat(U)),
 'aria-label': A.Z.Messages.UNREADS_TAB_LABEL,
 children: [
-  (0, i.jsx)(f.Z, {
+  (0, i.jsx)(p.Z, {
     tab: u.X.UNREADS,
     setTab: t,
     badgeState: M,
@@ -206,13 +206,13 @@ closePopout: a
   return (0, i.jsxs)('div', {
 className: R.container,
 children: [
-  (0, i.jsx)(f.Z, {
+  (0, i.jsx)(p.Z, {
     tab: u.X.UNREADS,
     setTab: t,
     badgeState: n,
     closePopout: a
   }),
-  (0, i.jsx)(p.Z, {
+  (0, i.jsx)(f.Z, {
     Icon: _.InboxIcon,
     disableStars: !0,
     header: A.Z.Messages.UNREADS_EMPTY_STATE_ERROR_HEADER,

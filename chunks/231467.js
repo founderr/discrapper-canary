@@ -9,8 +9,8 @@ return w;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(442837),
   u = n(239091),
   c = n(835473),
@@ -39,7 +39,7 @@ function b(e) {
   let {
 wildcardDescriptors: t,
 primaryColor: n
-  } = e, a = t.filter(e => e !== y.U6).join(', '), o = (0, s.useToken)(s.tokens.colors.BACKGROUND_FLOATING), l = (0, E.pX)(n, o.hex()), u = i.useRef(null), [c, d] = i.useState(!1);
+  } = e, a = t.filter(e => e !== y.U6).join(', '), s = (0, o.useToken)(o.tokens.colors.BACKGROUND_FLOATING), l = (0, E.pX)(n, s.hex()), u = i.useRef(null), [c, d] = i.useState(!1);
   if (i.useEffect(() => {
   let e = u.current;
   null != e && null != e.offsetWidth && null != e.scrollWidth && d(e.offsetWidth < e.scrollWidth);
@@ -50,15 +50,15 @@ color: l.css()
   } : void 0;
   return (0, r.jsxs)(r.Fragment, {
 children: [
-  (0, r.jsx)(s.Text, {
+  (0, r.jsx)(o.Text, {
     variant: 'text-xs/normal',
     color: 'text-secondary',
     className: L.clanInfoItem,
     children: '\xB7'
   }),
-  (0, r.jsx)(s.Tooltip, {
+  (0, r.jsx)(o.Tooltip, {
     text: a,
-    color: s.Tooltip.Colors.PRIMARY,
+    color: o.Tooltip.Colors.PRIMARY,
     shouldShow: c,
     children: e => (0, r.jsx)('span', {
       ...e,
@@ -79,14 +79,14 @@ expanded: n
   } = e;
   return null == t ? null : n ? (0, r.jsx)('div', {
 className: L.cardContentDescriptionSection,
-children: (0, r.jsx)(s.Text, {
+children: (0, r.jsx)(o.Text, {
   variant: 'text-xs/normal',
   color: 'text-muted',
   children: t
 })
   }) : (0, r.jsx)('div', {
 className: L.cardContentDescriptionSection,
-children: (0, r.jsx)(s.Text, {
+children: (0, r.jsx)(o.Text, {
   className: L.cardContentDescriptionCollapsed,
   variant: 'text-xs/normal',
   color: 'text-muted',
@@ -100,8 +100,8 @@ function P(e) {
   let {
 traits: t,
 traitsToHighlight: n
-  } = e, a = i.useMemo(() => null == n ? new Set() : new Set(n), [n]), s = i.useCallback(e => (0, r.jsx)(m.Z, {
-className: o()(L.thinTrait, {
+  } = e, a = i.useMemo(() => null == n ? new Set() : new Set(n), [n]), o = i.useCallback(e => (0, r.jsx)(m.Z, {
+className: s()(L.thinTrait, {
   [L.selectedTrait]: a.has(e)
 }),
 text: e,
@@ -110,7 +110,7 @@ selected: a.has(e)
   return (0, r.jsx)(R.Z, {
 className: L.traitsContainer,
 items: t,
-renderItem: s,
+renderItem: o,
 maxLines: 2,
 itemGapPx: 4
   });
@@ -126,10 +126,10 @@ isGuildMember: i
 return (0, r.jsxs)('div', {
   className: L.headerBadge,
   children: [
-    (0, r.jsx)(s.HourglassIcon, {
+    (0, r.jsx)(o.HourglassIcon, {
       size: 'xxs'
     }),
-    (0, r.jsx)(s.Text, {
+    (0, r.jsx)(o.Text, {
       variant: 'text-xs/medium',
       color: 'text-normal',
       children: D.Z.Messages.CLAN_CARD_BADGE_APPLIED
@@ -140,11 +140,11 @@ return (0, r.jsxs)('div', {
 return (0, r.jsxs)('div', {
   className: L.headerBadge,
   children: [
-    (0, r.jsx)(s.CircleCheckIcon, {
+    (0, r.jsx)(o.CircleCheckIcon, {
       size: 'xxs',
-      color: s.tokens.colors.STATUS_POSITIVE
+      color: o.tokens.colors.STATUS_POSITIVE
     }),
-    (0, r.jsx)(s.Text, {
+    (0, r.jsx)(o.Text, {
       variant: 'text-xs/medium',
       color: 'text-normal',
       children: D.Z.Messages.JOINED_GUILD
@@ -155,10 +155,10 @@ return (0, r.jsxs)('div', {
 return (0, r.jsxs)('div', {
   className: L.headerBadge,
   children: [
-    (0, r.jsx)(s.LockIcon, {
+    (0, r.jsx)(o.LockIcon, {
       size: 'xxs'
     }),
-    (0, r.jsx)(s.Text, {
+    (0, r.jsx)(o.Text, {
       variant: 'text-xs/medium',
       color: 'text-normal',
       children: D.Z.Messages.FULL
@@ -211,7 +211,7 @@ d
 let e = V.current;
 null != e && null != e.offsetWidth && null != e.scrollWidth && Z(e.offsetWidth < e.scrollWidth);
   }, []), (0, r.jsxs)('div', {
-className: o()(L.card, E, {
+className: s()(L.card, E, {
   [L.cardStaticHeight]: !l
 }),
 onMouseEnter: Y,
@@ -256,7 +256,7 @@ children: [
               }),
               (0, r.jsx)('div', {
                 className: L.clanTagChipletWrapper,
-                children: (0, r.jsx)(s.Tooltip, {
+                children: (0, r.jsx)(o.Tooltip, {
                   text: D.Z.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
                   position: 'top',
                   shouldShow: !u && k,
@@ -271,7 +271,7 @@ children: [
                         primaryTintColor: R.primaryColor,
                         secondaryTintColor: R.secondaryColor
                       }),
-                      (0, r.jsx)(s.Text, {
+                      (0, r.jsx)(o.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-primary',
                         children: N
@@ -282,13 +282,13 @@ children: [
               })
             ]
           }),
-          (0, r.jsx)(s.Heading, {
+          (0, r.jsx)(o.Heading, {
             variant: 'heading-md/medium',
             color: 'header-primary',
             lineClamp: 1,
-            children: (0, r.jsx)(s.Tooltip, {
+            children: (0, r.jsx)(o.Tooltip, {
               text: n.name,
-              color: s.Tooltip.Colors.PRIMARY,
+              color: o.Tooltip.Colors.PRIMARY,
               shouldShow: H,
               children: e => (0, r.jsx)('span', {
                 ...e,
@@ -301,7 +301,7 @@ children: [
           (0, r.jsxs)('div', {
             className: L.clanInfoRow,
             children: [
-              (0, r.jsx)(s.Text, {
+              (0, r.jsx)(o.Text, {
                 variant: 'text-xxs/normal',
                 className: L.clanInfoItem,
                 children: (0, r.jsx)('span', {
@@ -310,7 +310,7 @@ children: [
                   children: '\uD83C\uDFAE'
                 })
               }),
-              (0, r.jsx)(s.Text, {
+              (0, r.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
                 className: L.clanInfoItem,
@@ -341,7 +341,7 @@ children: [
         className: L.cardFooterInfo,
         children: (0, r.jsx)('div', {
           className: L.cardFooterMembers,
-          children: (0, r.jsx)(s.Text, {
+          children: (0, r.jsx)(o.Text, {
             variant: 'text-xs/normal',
             color: 'text-muted',
             children: W
@@ -370,13 +370,13 @@ t.ZP = function(e) {
   let {
 style: t,
 prioritizedGameIds: a,
-...o
+...s
   } = e, {
 clan: c,
 affinity: E,
 index: f,
 source: h
-  } = o, p = (0, l.e7)([N.default], () => N.default.getCurrentUser()), m = (0, l.e7)([A.ZP], () => A.ZP.isMember(c.id, null == p ? void 0 : p.id), [
+  } = s, p = (0, l.e7)([N.default], () => N.default.getCurrentUser()), m = (0, l.e7)([A.ZP], () => A.ZP.isMember(c.id, null == p ? void 0 : p.id), [
 c,
 p
   ]), I = (0, l.e7)([g.Z], () => {
@@ -420,13 +420,13 @@ a
   });
 });
   }, [c.id]);
-  return (0, r.jsx)(s.Clickable, {
+  return (0, r.jsx)(o.Clickable, {
 onClick: O,
 className: L.clickableCard,
 style: t,
 onContextMenu: R,
 children: (0, r.jsx)(w, {
-  ...o,
+  ...s,
   isMember: m,
   prioritizedGameIds: a,
   showBrandingFooter: !0,

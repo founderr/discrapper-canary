@@ -1,11 +1,11 @@
 var i = n(735250),
-  a = n(470079),
-  s = n(481060),
+  s = n(470079),
+  a = n(481060),
   r = n(239091),
   l = n(129861),
   o = n(285952),
   c = n(145075);
-class d extends a.PureComponent {
+class d extends s.PureComponent {
   handleContextMenu(e, t) {
 (0, r.jW)(e, async () => {
   let {
@@ -29,10 +29,10 @@ return null == e ? null : (0, i.jsxs)(o.Z, {
     null != e && this.handleContextMenu(t, e);
   },
   children: [
-    (0, i.jsx)(s.Avatar, {
+    (0, i.jsx)(a.Avatar, {
       src: e.getAvatarURL(void 0, 24),
       'aria-label': e.username,
-      size: s.AvatarSizes.SIZE_24,
+      size: a.AvatarSizes.SIZE_24,
       className: c.avatar
     }),
     (0, i.jsx)(l.Z, {
@@ -56,7 +56,7 @@ return (0, i.jsxs)('div', {
       className: c.header,
       children: t
     }),
-    (0, i.jsx)(s.ScrollerThin, {
+    (0, i.jsx)(a.ScrollerThin, {
       className: c.content,
       fade: !0,
       children: n

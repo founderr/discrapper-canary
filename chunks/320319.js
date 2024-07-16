@@ -14,8 +14,8 @@ var s = n(735250),
   I = n(706140),
   R = n(626135),
   C = n(314684),
-  p = n(715627),
-  g = n(176782),
+  g = n(715627),
+  p = n(176782),
   A = n(238108),
   m = n(32173),
   N = n(391110),
@@ -37,7 +37,7 @@ let {
   name: t,
   canReveal: n = !0,
   dismissibleContentType: r,
-  forceShadow: g,
+  forceShadow: p,
   cardType: f,
   confettiCanvas: S
 } = e, Z = null == e ? void 0 : e.onCtaClick, D = (0, c.e7)([u.Z], () => u.Z.useReducedMotion), [B, j] = a.useState(!1), [U, G] = a.useState(!1), y = (0, C.yQ)(), H = (0, C.IB)(), [k, w] = a.useState(!1), [F, V] = a.useState(t === m.u.FREE_BOOST && H && (null == y ? void 0 : y.nitroTenureStatus) === h.EB.REDEEMABLE);
@@ -120,7 +120,7 @@ return (a.useEffect(() => {
   }
 }), n) ? t === m.u.UPCOMING_DROP_UNTIMED ? (0, s.jsx)('div', {
   className: i()(O.flipCardContainer, {
-    [O.forceShadow]: g
+    [O.forceShadow]: p
   }),
   onMouseEnter: X,
   onFocus: X,
@@ -155,7 +155,7 @@ return (a.useEffect(() => {
     className: i()({
       [O.noFlipCardContainer]: !K,
       [O.noFlipCardContainerCarousel]: K,
-      [O.forceShadow]: g,
+      [O.forceShadow]: p,
       [O.reducedMotion]: D
     }),
     children: [
@@ -163,7 +163,7 @@ return (a.useEffect(() => {
         ...e,
         ref: t === m.u.FREE_BOOST ? en : void 0
       }),
-      F && (0, s.jsx)(p.Z, {
+      F && (0, s.jsx)(g.Z, {
         speedValues: P,
         numBursts: 3,
         particlesPerBurst: 15,
@@ -180,7 +180,7 @@ return (a.useEffect(() => {
   })
 }) : (0, s.jsx)('div', {
   className: i()(O.flipCardContainer, {
-    [O.forceShadow]: g
+    [O.forceShadow]: p
   }),
   children: (0, s.jsxs)(_.Clickable, {
     onClick: () => j(!0),
@@ -228,7 +228,7 @@ return (a.useEffect(() => {
   })
 }) : (0, s.jsx)(L, {
   ...Y.upcomingDropUntimed,
-  forceShadow: g
+  forceShadow: p
 });
   });
 L.displayName = 'PerkDiscoverabilityCard';
@@ -245,17 +245,17 @@ onCtaClick: E,
 onMouseEnter: T,
 className: I,
 perkComponent: R,
-cardVariant: p,
+cardVariant: g,
 cardType: A,
 onClick: m,
 backgroundImage: h,
 pillText: M,
 perkImage: x
-  } = e, b = A === N.R0.CARD_CAROUSEL_FIRST_ROW || A === N.R0.CARD_CAROUSEL_SECOND_ROW || A === N.R0.CARD_CAROUSEL_THIRD_ROW, P = 0 !== c.length || 0 !== d.length || 0 !== o.length && p === N.zW.REWARD, L = (0, C.IB)(), [v, Z] = a.useState(L);
+  } = e, b = A === N.R0.CARD_CAROUSEL_FIRST_ROW || A === N.R0.CARD_CAROUSEL_SECOND_ROW || A === N.R0.CARD_CAROUSEL_THIRD_ROW, P = 0 !== c.length || 0 !== d.length || 0 !== o.length && g === N.zW.REWARD, L = (0, C.IB)(), [v, Z] = a.useState(L);
   a.useEffect(() => {
 L && Z(!0);
   }, [L]);
-  let D = (0, g._)(p);
+  let D = (0, p._)(g);
   return (0, s.jsxs)(_.Clickable, {
 className: i()(O.card, I, !0 === v ? null === (n = D.cardContainer) || void 0 === n ? void 0 : n.className : void 0, {
   [O.clickable]: null != m,
@@ -285,7 +285,7 @@ children: [
     onCtaClick: E,
     perkComponent: R,
     subtitleClassName: O.cardSubtitle,
-    cardVariant: p
+    cardVariant: g
   }),
   P && (0, s.jsx)(S.Z, {
     title: r,
@@ -295,7 +295,7 @@ children: [
     descriptionCta: d,
     isPremiumGetCta: u,
     onCtaClick: E,
-    cardVariant: p,
+    cardVariant: g,
     perkComponent: R
   }),
   (0, s.jsx)('div', {

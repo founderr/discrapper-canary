@@ -1,4 +1,4 @@
-s.d(t, {
+t.d(s, {
   c3: function() {
 return i;
   },
@@ -6,7 +6,7 @@ return i;
 return a;
   }
 });
-let n = (0, s(818083).B)({
+let n = (0, t(818083).B)({
   kind: 'user',
   id: '2024-05_desktop_user_settings_search',
   label: 'Desktop User Settings Search',
@@ -35,10 +35,10 @@ showSearchCount: !1
 
 function a(e) {
   let {
-location: t
+location: s
   } = e;
   return n.useExperiment({
-location: t
+location: s
   }, {
 autoTrackExposure: !0
   }).enabled;
@@ -46,14 +46,14 @@ autoTrackExposure: !0
 
 function i(e) {
   let {
-location: t
+location: s
   } = e, {
-enabled: s,
+enabled: t,
 showSearchCount: a
   } = n.useExperiment({
-location: t
+location: s
   }, {
 autoTrackExposure: !0
   });
-  return s && a;
+  return t && a;
 }

@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(355467),
   c = n(37234),
@@ -41,7 +41,7 @@ emojiDescriptor: k,
 pickerIntention: B,
 analyticsLocation: F,
 containerContextClassName: V
-  } = e, H = (0, s.e7)([v.Z], () => v.Z.theme) === L.BRd.LIGHT ? 'light' : 'dark', [Z, Y] = i.useState(!1), j = () => {
+  } = e, H = (0, o.e7)([v.Z], () => v.Z.theme) === L.BRd.LIGHT ? 'light' : 'dark', [Z, Y] = i.useState(!1), j = () => {
 (0, y.A3)(G), (0, p.z)(), w();
   }, W = n(577391)('./img_premium_emoji_'.concat(H, '.svg')), K = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(H, '.png'), z = (0, I.N)(), q = (0, m.Ng)(), Q = null != z || null != q, X = (0, E.Iu)(e => e.searchQuery), {
 analyticsLocations: $
@@ -87,8 +87,8 @@ X
     location_object: L.qAy.NAVIGATION_LINK
   }), (0, c.xf)(), (0, N.uL)(L.Z5c.APPLICATION_STORE);
 },
-en = (0, s.e7)([h.Z], () => h.Z.affinities),
-er = (0, s.e7)([h.Z], () => h.Z.hasFetched);
+en = (0, o.e7)([h.Z], () => h.Z.affinities),
+er = (0, o.e7)([h.Z], () => h.Z.hasFetched);
   i.useEffect(() => {
 !er && u.MH();
   }, [er]);
@@ -113,7 +113,7 @@ children: [
     isVisible: !0
   }),
   (0, r.jsxs)('div', {
-    className: o()(U.container, V),
+    className: s()(U.container, V),
     children: [
       (0, r.jsx)(l.ModalCloseButton, {
         onClick: x,
@@ -128,7 +128,7 @@ children: [
             src: K
           }),
           (0, r.jsx)(l.Heading, {
-            className: o()(U.upsellTitle, {
+            className: s()(U.upsellTitle, {
               [U.upsellTitleNoSocialProof]: !ei
             }),
             variant: 'heading-xl/bold',
@@ -162,7 +162,7 @@ children: [
   })
 ]
   }) : (0, r.jsxs)('div', {
-className: o()(U.premiumPromo, {
+className: s()(U.premiumPromo, {
   [U.unifyTrialUpsell]: Q
 }),
 children: [

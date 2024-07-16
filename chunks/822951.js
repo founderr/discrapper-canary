@@ -1,8 +1,8 @@
 n(47120);
 var i, a = n(735250),
-  l = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  l = n(120356),
+  r = n.n(l),
   o = n(481060),
   c = n(285952),
   d = n(976388);
@@ -15,22 +15,22 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class h extends(i = l.PureComponent) {
+class h extends(i = s.PureComponent) {
   render() {
 let e;
 let {
   renderFooter: t,
   selectable: n,
   renderHeader: i,
-  className: l,
-  onClose: s,
+  className: s,
+  onClose: l,
   children: u
 } = this.props;
 return null != t && (e = (0, a.jsx)(o.ModalFooter, {
   direction: c.Z.Direction.HORIZONTAL,
   children: t()
 })), (0, a.jsx)(o.Modal, {
-  onCloseRequest: s,
+  onCloseRequest: l,
   renderModal: t => {
     let {
       onClose: h,
@@ -49,14 +49,14 @@ return null != t && (e = (0, a.jsx)(o.ModalFooter, {
               grow: 0,
               children: (0, a.jsx)(o.ModalCloseButton, {
                 onClick: () => {
-                  null != s && s(), h();
+                  null != l && l(), h();
                 }
               })
             })
           ]
         }),
         (0, a.jsx)(o.ModalContent, {
-          className: r()(l, d.content, {
+          className: r()(s, d.content, {
             selectable: n
           }),
           scrollerRef: this.scrollerRef,
@@ -70,7 +70,7 @@ return null != t && (e = (0, a.jsx)(o.ModalFooter, {
 });
   }
   constructor(...e) {
-super(...e), u(this, 'scrollerRef', l.createRef()), u(this, 'handleScroll', () => {
+super(...e), u(this, 'scrollerRef', s.createRef()), u(this, 'handleScroll', () => {
   let {
     current: e
   } = this.scrollerRef;

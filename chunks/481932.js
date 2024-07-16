@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(481060),
-  o = n(194359),
-  s = n(906732),
+  s = n(194359),
+  o = n(906732),
   l = n(822972),
   u = n(314897),
   c = n(699516),
@@ -36,7 +36,7 @@ improvedPanelFriendingEnabled: S
 location: 'UserProfileFriendRequestBannerButtons'
   }), {
 newestAnalyticsLocation: A
-  } = (0, s.ZP)(), {
+  } = (0, o.ZP)(), {
 trackUserProfileAction: N
   } = (0, d.KZ)(), v = (0, i.e7)([u.default], () => u.default.getId() === (null == t ? void 0 : t.id)), O = (0, i.e7)([c.Z], () => null != t ? c.Z.getRelationshipType(t.id) : p.OGo.NONE), R = (0, l.Z)({
 user: t,
@@ -78,7 +78,7 @@ children: [
     }),
     tooltipText: m.Z.Messages.ACCEPT_FRIEND_REQUEST,
     onClick: () => {
-      o.Z.addRelationship({
+      s.Z.addRelationship({
         userId: t.id,
         friendToken: n,
         context: {
@@ -91,7 +91,7 @@ children: [
     action: 'IGNORE_FRIEND_REQUEST',
     icon: a.CloseSmallIcon,
     tooltipText: m.Z.Messages.IGNORE_FRIEND_REQUEST,
-    onClick: () => o.Z.cancelFriendRequest(t.id, {
+    onClick: () => s.Z.cancelFriendRequest(t.id, {
       location: A
     })
   })
@@ -105,7 +105,7 @@ action: 'SEND_FRIEND_REQUEST',
 icon: a.UserPlusIcon,
 tooltipText: m.Z.Messages.ADD_FRIEND,
 onClick: () => {
-  o.Z.addRelationship({
+  s.Z.addRelationship({
     userId: t.id,
     friendToken: n,
     context: {

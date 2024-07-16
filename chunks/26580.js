@@ -7,9 +7,9 @@ return g;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(481060),
   o = n(393238),
   c = n(626135),
@@ -41,12 +41,12 @@ let _ = [
 let {
   text: t,
   onClick: n,
-  className: a,
-  hide: s
+  className: s,
+  hide: a
 } = e;
 return (0, i.jsx)('li', {
-  className: r()(u.tag, a, {
-    [u.hide]: s
+  className: r()(u.tag, s, {
+    [u.hide]: a
   }),
   children: (0, i.jsx)(l.Clickable, {
     className: u.tagText,
@@ -61,20 +61,20 @@ return (0, i.jsx)('li', {
 let {
   tags: t,
   onTagClick: n,
-  guildId: s,
+  guildId: a,
   section: r
 } = e;
-return a.useEffect(() => {
+return s.useEffect(() => {
   c.default.track(d.rMx.OPEN_POPOUT, {
     type: 'Discovery Tags Overflow',
-    guild_id: s,
+    guild_id: a,
     location: {
       page: d.ZY5.GUILD_DISCOVERY,
       section: r
     }
   });
 }, [
-  s,
+  a,
   r
 ]), (0, i.jsx)(l.Dialog, {
   className: u.overflowTagsPopout,
@@ -115,7 +115,7 @@ ALT: u.tagAlt
 let {
   tags: t,
   onTagClick: n,
-  className: s,
+  className: a,
   discoveryTagStyle: l = m.DEFAULT,
   hideOverflow: c = !1,
   guildId: d,
@@ -123,8 +123,8 @@ let {
 } = e, {
   ref: g,
   width: p
-} = (0, o.Z)(), [T, S] = a.useState(null), f = t.filter(e => !_.includes(e.toLowerCase()));
-return a.useLayoutEffect(() => {
+} = (0, o.Z)(), [T, S] = s.useState(null), f = t.filter(e => !_.includes(e.toLowerCase()));
+return s.useLayoutEffect(() => {
   if (null == g.current || null == p || 0 === p)
     return;
   let e = 0,
@@ -141,7 +141,7 @@ return a.useLayoutEffect(() => {
   f
 ]), (0, i.jsxs)('ul', {
   ref: g,
-  className: r()(u.tagContainer, s, {
+  className: r()(u.tagContainer, a, {
     [u.invisible]: null == T
   }),
   children: [

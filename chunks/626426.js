@@ -1,15 +1,15 @@
 n.d(t, {
   z: function() {
-return s;
+return a;
   }
 });
 var i = n(735250);
 n(470079);
-var a = n(481060);
+var s = n(481060);
 
-function s() {
+function a() {
   return (0, i.jsx)('div', {
-children: (0, i.jsx)(a.Heading, {
+children: (0, i.jsx)(s.Heading, {
   variant: 'heading-lg/normal',
   children: 'Apps'
 })

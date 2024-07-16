@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(338545),
   a = n(399606),
-  o = n(481060),
-  s = n(607070),
+  s = n(481060),
+  o = n(607070),
   l = n(565138),
   u = n(678558),
   c = n(981631),
@@ -13,7 +13,7 @@ t.Z = function(e) {
 closeLayer: t,
 guild: n,
 isVisible: _
-  } = e, E = (0, a.e7)([s.Z], () => s.Z.useReducedMotion), f = (0, i.useSpring)({
+  } = e, E = (0, a.e7)([o.Z], () => o.Z.useReducedMotion), f = (0, i.useSpring)({
 transform: _ ? 'translateY(-100%)' : 'translateY(0%)',
 opacity: _ ? 1 : 0,
 config: {
@@ -36,7 +36,7 @@ children: (0, r.jsxs)('div', {
           guild: n,
           size: l.Z.Sizes.LARGER
         }),
-        (0, r.jsx)(o.Heading, {
+        (0, r.jsx)(s.Heading, {
           className: d.guildName,
           variant: 'text-lg/bold',
           children: n.name
@@ -54,7 +54,7 @@ children: (0, r.jsxs)('div', {
       },
       closeLayer: t,
       pauseAnimation: !_,
-      size: o.Button.Sizes.LARGE
+      size: s.Button.Sizes.LARGE
     })
   ]
 })

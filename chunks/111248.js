@@ -5,8 +5,8 @@ return m;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(433517),
   o = n(241915),
   c = n(27457),
@@ -19,7 +19,7 @@ function m(e) {
   let {
 width: t,
 onContextMenuParticipant: n,
-height: l,
+height: s,
 channel: m,
 participants: _
   } = e, [f, E] = function() {
@@ -42,7 +42,7 @@ children: (0, i.jsx)(o._, {
   ref: C,
   onMove: (e, t) => E(t),
   maxX: t,
-  maxY: l,
+  maxY: s,
   edgeOffsetTop: g,
   edgeOffsetBottom: 70,
   edgeOffsetLeft: 16,
@@ -53,7 +53,7 @@ children: (0, i.jsx)(o._, {
       participant: e,
       channel: m,
       onContextMenu: n,
-      className: s()(u.tile, h.elevationHigh),
+      className: l()(u.tile, h.elevationHigh),
       fit: c.BP.COVER,
       inCall: !0,
       inPopout: !1,

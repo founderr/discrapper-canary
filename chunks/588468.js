@@ -8,8 +8,8 @@ return P;
 }), n(411104), n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(392711),
   u = n.n(l),
   c = n(91192),
@@ -65,12 +65,12 @@ let {
   props: {
     className: r,
     index: a,
-    selected: o
+    selected: s
   }
 } = this, l = this.isSelectable();
 return (0, i.jsx)(d.Clickable, {
   ...e,
-  className: s()(L.clickable, r, n),
+  className: o()(L.clickable, r, n),
   id: null !== (t = M(a)) && void 0 !== t ? t : void 0,
   onClick: l ? this.handleClick : void 0,
   onMouseMove: l ? () => {
@@ -83,7 +83,7 @@ return (0, i.jsx)(d.Clickable, {
   }) : void 0,
   role: 'option',
   'aria-disabled': !l,
-  'aria-selected': l && o,
+  'aria-selected': l && s,
   children: (0, i.jsx)('div', {
     className: L.base,
     children: this.renderContent()
@@ -125,17 +125,17 @@ let {
   className: t,
   innerClassName: n,
   id: r,
-  ...o
+  ...s
 } = this.props;
 return a.Children.count(e) > 0 ? (0, i.jsx)(U.Provider, {
   value: {
     id: null != r ? r : ''
   },
   children: (0, i.jsx)('div', {
-    className: s()(L.autocomplete, t),
+    className: o()(L.autocomplete, t),
     children: (0, i.jsx)('div', {
-      className: s()(L.autocompleteInner, n),
-      ...o,
+      className: o()(L.autocompleteInner, n),
+      ...s,
       children: e
     })
   })
@@ -184,12 +184,12 @@ children: (0, i.jsx)(R.RX, {
 title: t,
 className: n,
 children: r
-  } = e, o = a.useContext(U);
+  } = e, s = a.useContext(U);
   return (0, i.jsx)('div', {
 className: L.base,
 children: (0, i.jsxs)(d.Heading, {
-  id: P(o.id),
-  className: s()(L.contentTitle, n),
+  id: P(s.id),
+  className: o()(L.contentTitle, n),
   variant: 'heading-deprecated-12/semibold',
   children: [
     t,
@@ -203,7 +203,7 @@ let {
   className: e
 } = this.props;
 return (0, i.jsx)('div', {
-  className: s()(e, L.divider)
+  className: o()(e, L.divider)
 });
   }
   constructor(...e) {
@@ -352,15 +352,15 @@ let {
   section: r,
   selected: a
 } = this.props, {
-  hovered: o
-} = this.state, s = this.isSelectable();
+  hovered: s
+} = this.state, o = this.isSelectable();
 return e.inputType === E.iw.PLACEHOLDER ? (0, i.jsx)(h.Z, {}) : (0, i.jsx)(f.Z, {
   command: e,
   channel: t,
   showImage: n,
-  showOptions: o || s && a,
+  showOptions: s || o && a,
   section: r,
-  isSelectable: s
+  isSelectable: o
 });
   }
 }), b(x, 'Emoji', class e extends w {
@@ -402,7 +402,7 @@ return (0, i.jsxs)(R.RX, {
 });
   }
   constructor(...e) {
-super(...e), b(this, 'layoutClass', s()(L.autocompleteRowVertical, L.autocompleteRowVerticalSmall));
+super(...e), b(this, 'layoutClass', o()(L.autocompleteRowVertical, L.autocompleteRowVerticalSmall));
   }
 }), b(x, 'GIFIntegration', class e extends w {
   renderContent() {
@@ -428,21 +428,21 @@ let n;
 let {
   queryMatch: r,
   renderSticker: a,
-  selected: o,
-  sticker: s
+  selected: s,
+  sticker: o
 } = this.props, {
   hovered: l
 } = this.state;
-return (0, g.jl)(s) ? n = null === (e = T.Z.getStickerPack(s.pack_id)) || void 0 === e ? void 0 : e.name : (0, g.J8)(s) && (n = null === (t = S.Z.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name), (0, i.jsxs)(R.RX, {
+return (0, g.jl)(o) ? n = null === (e = T.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name : (0, g.J8)(o) && (n = null === (t = S.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name), (0, i.jsxs)(R.RX, {
   children: [
     (0, i.jsx)(R.Tw, {
-      children: a(s, l || !0 === o)
+      children: a(o, l || !0 === s)
     }),
     (0, i.jsxs)(R.z5, {
       children: [
         (0, i.jsx)(R.BR, {
           className: L.__invalid_stickerName,
-          children: s.name
+          children: o.name
         }),
         null != r && (0, i.jsx)(R.wL, {
           children: D.Z.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({
@@ -458,7 +458,7 @@ return (0, g.jl)(s) ? n = null === (e = T.Z.getStickerPack(s.pack_id)) || void 0
 });
   }
   constructor(...e) {
-super(...e), b(this, 'layoutClass', s()(L.autocompleteRowVertical, L.autocompleteRowVerticalSmall));
+super(...e), b(this, 'layoutClass', o()(L.autocompleteRowVertical, L.autocompleteRowVerticalSmall));
   }
 }), b(x, 'EmojiUpsell', class e extends w {
   renderContent() {

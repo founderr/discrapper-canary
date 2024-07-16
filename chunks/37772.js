@@ -15,8 +15,8 @@ var i = n(735250),
   T = n(592125),
   h = n(699516),
   N = n(702346),
-  p = n(630388),
-  f = n(709054),
+  f = n(630388),
+  p = n(709054),
   C = n(493892),
   g = n(901461),
   S = n(739566),
@@ -87,7 +87,7 @@ allowList: X,
 allowHeading: X,
 allowLinks: !0,
 previewLinkTarget: !0
-  }), en = (0, S.ZP)(o), ei = (0, l.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(f.default.castMessageIdAsChannelId(o.id))), ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W, es = !ea && void 0 === a, er = (0, M.Z)({
+  }), en = (0, S.ZP)(o), ei = (0, l.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(p.default.castMessageIdAsChannelId(o.id))), ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W, es = !ea && void 0 === a, er = (0, M.Z)({
 message: o,
 channel: s,
 enabled: es
@@ -105,7 +105,7 @@ collapsedReason: a
   }) : (0, i.jsx)(R.Z, {
 compact: N,
 className: r()(U, {
-  [y.ephemeral]: (0, p.yE)(o.flags, D.iLy.EPHEMERAL),
+  [y.ephemeral]: (0, f.yE)(o.flags, D.iLy.EPHEMERAL),
   [y.disableInteraction]: F,
   [y.groupStart]: t.isGroupStart
 }),

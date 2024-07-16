@@ -12,8 +12,8 @@ return p;
 var r = n(735250),
   i = n(470079),
   a = n(338545),
-  o = n(442837),
-  s = n(481060),
+  s = n(442837),
+  o = n(481060),
   l = n(594190),
   u = n(594174),
   c = n(617136),
@@ -27,7 +27,7 @@ function h(e) {
 quest: t,
 location: n,
 questContentPosition: r
-  } = e, a = (0, o.e7)([u.default], () => {
+  } = e, a = (0, s.e7)([u.default], () => {
 var e;
 return null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.verified;
   });
@@ -52,7 +52,7 @@ a
 
 function p(e) {
   var t;
-  let n = (0, o.Wu)([l.ZP], () => l.ZP.getGamesSeen(!1)).find(t => (null == t ? void 0 : t.id) === e);
+  let n = (0, s.Wu)([l.ZP], () => l.ZP.getGamesSeen(!1)).find(t => (null == t ? void 0 : t.id) === e);
   if (null == n)
 return !1;
   let r = Date.now() - 25920000000;
@@ -62,11 +62,11 @@ let m = e => {
   let {
 useReducedMotion: t,
 className: n
-  } = e, [o, l] = (0, a.useSpring)(() => ({})), u = i.useRef(!1), c = (0, a.animated)(s.RefreshIcon);
+  } = e, [s, l] = (0, a.useSpring)(() => ({})), u = i.useRef(!1), c = (0, a.animated)(o.RefreshIcon);
   return {
 render: () => (0, r.jsx)(c, {
   className: n,
-  style: t ? void 0 : o,
+  style: t ? void 0 : s,
   color: 'currentColor',
   size: 'xs'
 }),

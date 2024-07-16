@@ -5,8 +5,8 @@ return Z;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(392711),
   o = n.n(r),
   c = n(442837),
@@ -30,22 +30,22 @@ let {
   style: t,
   className: n,
   name: a,
-  icon: l
+  icon: s
 } = e;
 return (0, i.jsx)(u.Tooltip, {
   text: a,
   children: e => (0, i.jsx)('div', {
-    className: s()(n, v.iconWidget),
+    className: l()(n, v.iconWidget),
     style: t,
     ...e,
-    children: null != l && l
+    children: null != s && s
   })
 });
   },
   Z = e => {
 let {
   currentStatus: t,
-  channel: l
+  channel: s
 } = e, r = a.useRef(E.Z.getRecentCustomStatuses()), Z = a.useRef((0, p.un)(d.z.HANG_STATUS_NEW_BADGE)).current, A = (0, C.V)(), [M, b] = a.useState(null != t ? t : null), R = (0, c.e7)([m.default], () => m.default.getCurrentUser()), j = () => {
   !Z && (0, p.EW)(d.z.HANG_STATUS_NEW_BADGE);
 }, L = (e, t) => {
@@ -150,7 +150,7 @@ return (0, i.jsxs)('div', {
                 onMouseEnter: () => D(n),
                 onClick: e => L(e, n),
                 children: (0, i.jsx)(S, {
-                  className: s()(v.iconWidget, {
+                  className: l()(v.iconWidget, {
                     [v.selectedWidget]: n === (null == t ? void 0 : t.state)
                   }),
                   name: a.title,
@@ -190,7 +190,7 @@ return (0, i.jsxs)('div', {
           children: [
             r.current.map((e, n) => {
               let a = e.status === (null == t ? void 0 : t.details) && o().isEqual(e.emoji, null == t ? void 0 : t.emoji),
-                r = null != e.emoji && !(0, g.K)(e.emoji, l);
+                r = null != e.emoji && !(0, g.K)(e.emoji, s);
               return (0, i.jsxs)(u.Clickable, {
                 'aria-label': e.status,
                 onMouseEnter: () => k(e),
@@ -198,7 +198,7 @@ return (0, i.jsxs)('div', {
                 className: v.statusOptionContainer,
                 children: [
                   (0, i.jsx)(S, {
-                    className: s()(v.iconWidget, {
+                    className: l()(v.iconWidget, {
                       [v.selectedWidget]: a
                     }),
                     name: e.status,

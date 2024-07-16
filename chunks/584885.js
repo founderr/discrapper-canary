@@ -1,7 +1,7 @@
 n(653041);
 var i = n(735250),
-  a = n(470079),
-  s = n(481060),
+  s = n(470079),
+  a = n(481060),
   r = n(570140),
   l = n(906732),
   o = n(451603),
@@ -61,7 +61,7 @@ loadId: A,
 onTagClick: v,
 showMoreCards: Z = !1
   } = e;
-  a.useEffect(() => {
+  s.useEffect(() => {
 r.Z.wait(() => f());
   }, [N]);
   let L = (0, u.Z)(Z ? I : h),
@@ -109,14 +109,14 @@ t = R.slice(0, L).map(e => (0, i.jsx)(d.Z, {
 }, e.id));
   return (0, i.jsx)('section', {
 className: E.guildListSection,
-children: (0, i.jsxs)(s.HeadingLevel, {
-  component: (0, i.jsx)(s.Heading, {
+children: (0, i.jsxs)(a.HeadingLevel, {
+  component: (0, i.jsx)(a.Heading, {
     className: E.__invalid_title,
     variant: 'heading-lg/semibold',
     children: n
   }),
   children: [
-    null != m && (0, i.jsx)(s.Text, {
+    null != m && (0, i.jsx)(a.Text, {
       className: E.subtitle,
       variant: 'text-sm/normal',
       color: 'header-secondary',

@@ -23,7 +23,7 @@ function N(e) {
 a = (0, o.Wu)([r.ZP], () => r.ZP.getMembers(e), [e]),
 N = (0, o.cj)([u.default], () => u.default.getUsers()),
 h = (0, o.Wu)([d.Z], () => Object.values(d.Z.getRoles(e)), [e]),
-p = i.useMemo(() => {
+g = i.useMemo(() => {
   let e = [];
   for (let t of a) {
     let i = N[t.userId];
@@ -47,14 +47,14 @@ p = i.useMemo(() => {
   a,
   N
 ]),
-g = e => {
+p = e => {
   var n;
   return e.managed && (null === (n = e.tags) || void 0 === n ? void 0 : n.bot_id) != null;
 },
 C = i.useMemo(() => {
   let i = [];
   for (let a of h) {
-    if (g(a))
+    if (p(a))
       continue;
     let s = !l.e$(a.permissions, _.Plq.ADMINISTRATOR) && c.Z.isRoleHigher(n, t, a),
       o = {
@@ -77,14 +77,14 @@ O = i.useMemo(() => {
       return e.startsWith('@') ? e.substr(1) : e;
     }(f),
     t = f.startsWith('@') ? C.filter(n => n.id === e) : C,
-    i = (0, m.B)(p, E, n);
+    i = (0, m.B)(g, E, n);
   return {
     members: i,
     roles: (0, m.B)(t, T, n)
   };
 }, [
   e,
-  p,
+  g,
   f,
   C
 ]);

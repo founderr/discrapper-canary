@@ -9,8 +9,8 @@ return S;
 var r = n(470079),
   i = n(442837),
   a = n(889161),
-  o = n(675478),
-  s = n(430824),
+  s = n(675478),
+  o = n(430824),
   l = n(496675),
   u = n(594174),
   c = n(74538),
@@ -38,22 +38,22 @@ guildIds: n,
 allSounds: r,
 potentialSoundIdsForSection: i,
 sectionType: a,
-sortById: o
-  } = e, s = {};
+sortById: s
+  } = e, o = {};
   for (let e of [
   ...n,
   m.X8
 ]) {
 var l;
 for (let t of null !== (l = r.get(e)) && void 0 !== l ? l : [])
-  null != i.find(e => e === t.soundId) && (s[t.soundId] = t);
+  null != i.find(e => e === t.soundId) && (o[t.soundId] = t);
   }
   let u = [];
   for (let e of i) {
-let t = s[e];
+let t = o[e];
 null != t && u.push(t);
   }
-  let c = I(u, o);
+  let c = I(u, s);
   c.length > 0 && t.push({
 key: a,
 categoryInfo: {
@@ -82,13 +82,13 @@ filterOutEmptyCurrentGuild: t = !1
 f.Z.getSounds(),
 f.Z.getFavorites(),
 f.Z.isFetching()
-  ]), N = (0, p.h)(e, !1), v = (0, i.Wu)([s.Z], () => {
+  ]), N = (0, p.h)(e, !1), v = (0, i.Wu)([o.Z], () => {
 let e = [];
 return N.forEach(t => {
-  let n = s.Z.getGuild(t);
+  let n = o.Z.getGuild(t);
   null != n && e.push(n);
 }), e;
-  }), O = c.ZP.canUseSoundboardEverywhere(d), R = (0, i.e7)([s.Z], () => s.Z.getGuild(null == e ? void 0 : e.guild_id)), C = (0, i.e7)([l.Z], () => {
+  }), O = c.ZP.canUseSoundboardEverywhere(d), R = (0, i.e7)([o.Z], () => o.Z.getGuild(null == e ? void 0 : e.guild_id)), C = (0, i.e7)([l.Z], () => {
 let {
   canCreateExpressions: e
 } = (0, a.Gw)(R);
@@ -101,7 +101,7 @@ location: 'soundboard-useSoundGrid',
 autoTrackExposure: !0
   }), L = function() {
 return r.useEffect(() => {
-  o.DZ.loadIfNecessary();
+  s.DZ.loadIfNecessary();
 }, []), (0, i.e7)([E.Z], () => E.Z.frecentlyPlayedSounds);
   }(), b = (0, i.Wu)([E.Z], () => E.Z.recentlyHeardSoundIds);
   return r.useMemo(() => {
@@ -134,11 +134,11 @@ return n ? (g(e, m), {
   var a;
   if (null == t)
     return;
-  let o = null !== (a = r.get(t.id)) && void 0 !== a ? a : [],
-    s = I(o),
-    l = o.length < t.getMaxSoundboardSlots() && n,
-    u = 0 === s.length;
-  (l || u) && !i && s.push({
+  let s = null !== (a = r.get(t.id)) && void 0 !== a ? a : [],
+    o = I(s),
+    l = s.length < t.getMaxSoundboardSlots() && n,
+    u = 0 === o.length;
+  (l || u) && !i && o.push({
     type: h.vB.ADD_SOUND,
     guild: t
   });
@@ -148,7 +148,7 @@ return n ? (g(e, m), {
       guild: t
     },
     key: t.id,
-    items: s
+    items: o
   });
 }(e, R, C, m, t), !O && g(e, m), ! function(e, t, n, r) {
   for (let a of t) {

@@ -3,8 +3,8 @@ var a = n(735250),
   i = n(470079),
   l = n(120356),
   r = n.n(l),
-  c = n(481060),
-  s = n(981631),
+  s = n(481060),
+  c = n(981631),
   o = n(689938),
   d = n(466628);
 t.Z = i.forwardRef(function(e, t) {
@@ -15,7 +15,7 @@ onChange: u,
 onSubmit: _,
 className: g
   } = e, [m, f] = i.useState(!1);
-  return (0, a.jsx)(c.SearchBox, {
+  return (0, a.jsx)(s.SearchBox, {
 ref: t,
 className: r()(d.search, g),
 label: o.Z.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER,
@@ -27,7 +27,7 @@ onClear: () => u(''),
 onFocus: () => f(!0),
 onBlur: () => f(!1),
 onKeyPress: e => {
-  e.charCode === s.yXg.ENTER && (null == _ || _());
+  e.charCode === c.yXg.ENTER && (null == _ || _());
 },
 autoFocus: !0
   });

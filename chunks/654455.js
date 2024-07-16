@@ -5,8 +5,8 @@ return p;
 }), n(47120), n(653041);
 var r, i = n(392711),
   a = n.n(i),
-  o = n(442837),
-  s = n(570140),
+  s = n(442837),
+  o = n(570140),
   l = n(911969),
   u = n(704907),
   c = n(581883);
@@ -53,7 +53,7 @@ function I() {
 recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), f.pendingUsages);
 }
-class T extends(r = o.ZP.PersistedStore) {
+class T extends(r = s.ZP.PersistedStore) {
   initialize(e) {
 null != e && (f = e), this.syncWith([c.Z], I);
   }
@@ -74,7 +74,7 @@ return null !== (n = h.getScore(m(e, t))) && void 0 !== n ? n : 0;
 return h.frequently;
   }
 }
-E(T, 'displayName', 'ApplicationCommandFrecencyStore'), E(T, 'persistKey', 'ApplicationCommandFrecencyV2'), t.ZP = new T(s.Z, {
+E(T, 'displayName', 'ApplicationCommandFrecencyStore'), E(T, 'persistKey', 'ApplicationCommandFrecencyV2'), t.ZP = new T(o.Z, {
   APPLICATION_COMMAND_USED: function(e) {
 let {
   command: t,

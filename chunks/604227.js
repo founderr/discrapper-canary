@@ -1,36 +1,36 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return E;
   }
-}), s(47120), s(757143), s(653041);
-var n = s(735250);
-s(470079);
-var a = s(525654),
-  i = s.n(a),
-  r = s(481060),
-  o = s(579806),
-  l = s(304761),
-  c = s(923973),
-  d = s(689938),
-  _ = s(283181);
+}), t(47120), t(757143), t(653041);
+var n = t(735250);
+t(470079);
+var a = t(525654),
+  i = t.n(a),
+  r = t(481060),
+  o = t(579806),
+  l = t(304761),
+  c = t(923973),
+  d = t(689938),
+  _ = t(283181);
 
 function E() {
-  var e, t, s, a, E, u;
+  var e, s, t, a, E, u;
   let T = window.GLOBAL_ENV.RELEASE_CHANNEL,
-I = '310231',
-S = (e = '0fe1e35154f284b75ad5e1b8b70c8fa74ce0fde4', e.substring(0, 7)),
+I = '310268',
+S = (e = '79cabf4977e076748c1e07a391ade7bf284ba5e5', e.substring(0, 7)),
 N = null === o.Z || void 0 === o.Z ? void 0 : o.Z.remoteApp.getVersion(),
-C = null === o.Z || void 0 === o.Z ? void 0 : null === (t = (s = o.Z.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
+C = null === o.Z || void 0 === o.Z ? void 0 : null === (s = (t = o.Z.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(t),
 m = null === o.Z || void 0 === o.Z ? void 0 : null === (a = (E = o.Z.remoteApp).getAppArch) || void 0 === a ? void 0 : a.call(E),
 A = null === (u = l.C.getCurrentBuildOverride().overrides) || void 0 === u ? void 0 : u.discord_web,
 h = function() {
   var e;
-  let t = null === i() || void 0 === i() ? void 0 : null === (e = i().os) || void 0 === e ? void 0 : e.toString();
-  if (null == t || null == o.Z)
+  let s = null === i() || void 0 === i() ? void 0 : null === (e = i().os) || void 0 === e ? void 0 : e.toString();
+  if (null == s || null == o.Z)
     return null;
-  let s = o.Z.os.release,
-    [n, a, r] = s.split('.').map(e => parseInt(e, 10));
-  return t.includes('Windows 10') && void 0 !== r && r >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== n && n >= 20 && (t = 'macOS '.concat(n - 9)), ''.concat(t, ' (').concat(s, ')');
+  let t = o.Z.os.release,
+    [n, a, r] = t.split('.').map(e => parseInt(e, 10));
+  return s.includes('Windows 10') && void 0 !== r && r >= 22000 && (s = s.replace('Windows 10', 'Windows 11')), s.includes('OS X 10.15.7') && void 0 !== n && n >= 20 && (s = 'macOS '.concat(n - 9)), ''.concat(s, ' (').concat(t, ')');
 }(),
 g = [
   T,

@@ -12,8 +12,8 @@ return d;
 return c;
   }
 });
-var i, a, l = n(539573),
-  s = n(689938);
+var i, a, s = n(539573),
+  l = n(689938);
 
 function r(e, t) {
   return {
@@ -27,15 +27,15 @@ function o(e) {
 }
 
 function c() {
-  return r(0, s.Z.Messages.FORM_THREAD_NAME_REQUIRED_ERROR);
+  return r(0, l.Z.Messages.FORM_THREAD_NAME_REQUIRED_ERROR);
 }
 
 function d() {
-  return r(0, s.Z.Messages.FORM_THREAD_STARTER_MESSAGE_REQUIRED_ERROR);
+  return r(0, l.Z.Messages.FORM_THREAD_STARTER_MESSAGE_REQUIRED_ERROR);
 }
 
 function u(e, t) {
-  return r(1, (0, l.$q)(e, null == t ? void 0 : t.id));
+  return r(1, (0, s.$q)(e, null == t ? void 0 : t.id));
 }
 
 function h(e, t) {

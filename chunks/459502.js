@@ -6,8 +6,8 @@ return f;
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(692547),
-  s = n(481060),
+  s = n(692547),
+  l = n(481060),
   r = n(889161),
   o = n(592125),
   c = n(15274),
@@ -26,13 +26,13 @@ canManageGuildEvent: g
   } = (0, r.XJ)(f), I = (0, a.cj)([d.ZP], () => E.reduce((e, t) => (e[t.id] = d.ZP.getUserCount(t.id, (0, h.DK)(t)), e), {}));
   return E.length < 1 || C ? null : (0, i.jsx)(i.Fragment, {
 children: E.map(e => (0, i.jsx)(p.Z, {
-  icon: (0, i.jsx)(s.CalendarIcon, {
+  icon: (0, i.jsx)(l.CalendarIcon, {
     size: 'custom',
     color: 'currentColor',
     height: 20,
     width: 20
   }),
-  color: l.Z.unsafe_rawColors.GREEN_360.css,
+  color: s.Z.unsafe_rawColors.GREEN_360.css,
   title: (g(e) ? m.Z.Messages.GUILD_EVENT_START_PROMPT : m.Z.Messages.GUILD_EVENT_UPCOMING_PROMPT).format({
     eventName: e.name
   }),
@@ -41,7 +41,7 @@ children: E.map(e => (0, i.jsx)(p.Z, {
   }),
   onClick: () => {
     var t;
-    g(t = e) ? (0, s.openModalLazy)(async () => {
+    g(t = e) ? (0, l.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([

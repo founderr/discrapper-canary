@@ -1,8 +1,8 @@
 var i = n(735250);
 n(470079);
 var a = n(481060),
-  l = n(671533),
-  s = n(400251),
+  s = n(671533),
+  l = n(400251),
   r = n(689938),
   o = n(476375),
   c = n(905899),
@@ -59,7 +59,7 @@ t = (0, i.jsxs)('div', {
   } else
 t = (0, i.jsx)('div', {
   className: o.cardsContainer,
-  children: f.map(e => (0, i.jsx)(s.Z, {
+  children: f.map(e => (0, i.jsx)(l.Z, {
     entry: e
   }, e.guildId))
 });
@@ -77,8 +77,8 @@ children: (0, i.jsxs)(a.ScrollerAuto, {
             (0, i.jsx)(a.Clickable, {
               onClick: p,
               className: c.arrow,
-              children: (0, i.jsx)(l.Z, {
-                direction: l.Z.Directions.LEFT
+              children: (0, i.jsx)(s.Z, {
+                direction: s.Z.Directions.LEFT
               })
             }),
             (0, i.jsx)(a.Heading, {

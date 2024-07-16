@@ -39,8 +39,8 @@ return I;
 var r = n(367907),
   i = n(427679),
   a = n(23750),
-  o = n(598077),
-  s = n(91156),
+  s = n(598077),
+  o = n(91156),
   l = n(82554),
   u = n(185625),
   c = n(443599),
@@ -70,7 +70,7 @@ function f(e, t, n) {
 message_id: e.id,
 channel_id: e.channel_id
   });
-  let r = (0, s.p)(t);
+  let r = (0, o.p)(t);
   (0, c.m)({
 name: l.b.MESSAGE,
 record: e
@@ -135,7 +135,7 @@ contextualGuildId: t
 }
 
 function g(e, t) {
-  let n = new o.Z({});
+  let n = new s.Z({});
   v(l.B.USER, {
 reported_user_id: n.id
   }), (0, c.m)({

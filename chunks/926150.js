@@ -6,8 +6,8 @@ return A;
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(699516),
-  s = n(246946),
+  s = n(699516),
+  l = n(246946),
   r = n(5192),
   o = n(621853),
   c = n(910128),
@@ -44,7 +44,7 @@ location: 'SimplifiedProfilePanelBody'
 activeInviteToCallCtaEnabled: j
   } = (0, c.l)({
 location: 'SimplifiedProfilePanelBody'
-  }), L = (0, a.e7)([l.Z], () => l.Z.getRelationshipType(t.id)), P = (0, a.e7)([s.Z], () => s.Z.hidePersonalInformation), O = (0, a.e7)([o.Z], () => {
+  }), L = (0, a.e7)([s.Z], () => s.Z.getRelationshipType(t.id)), P = (0, a.e7)([l.Z], () => l.Z.hidePersonalInformation), O = (0, a.e7)([o.Z], () => {
 var e;
 return null === (e = o.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
   });

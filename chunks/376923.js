@@ -18,9 +18,9 @@ return i;
 return g;
   }
 }), n(789020), n(47120);
-var i, a, l = n(470079),
-  s = n(913527),
-  r = n.n(s),
+var i, a, s = n(470079),
+  l = n(913527),
+  r = n.n(l),
   o = n(399606),
   c = n(271383),
   d = n(430824),
@@ -33,12 +33,12 @@ var m = n(372897);
 function _(e, t) {
   var n, i;
   let a = (0, o.e7)([u.default], () => u.default.getUser(e), [e]),
-l = (0, o.e7)([c.ZP], () => c.ZP.getMember(t, e), [
+s = (0, o.e7)([c.ZP], () => c.ZP.getMember(t, e), [
   t,
   e
 ]),
-s = (0, o.e7)([d.Z], () => d.Z.getGuild(t), [t]);
-  return (null == s ? void 0 : s.hasVerificationGate()) ? null == a || null == l || null == s ? 1 : (0, h.yE)(null !== (n = l.flags) && void 0 !== n ? n : 0, m.q.BYPASSES_VERIFICATION) || (0, h.yE)(null !== (i = l.flags) && void 0 !== i ? i : 0, m.q.COMPLETED_ONBOARDING) ? 2 : 1 : 0;
+l = (0, o.e7)([d.Z], () => d.Z.getGuild(t), [t]);
+  return (null == l ? void 0 : l.hasVerificationGate()) ? null == a || null == s || null == l ? 1 : (0, h.yE)(null !== (n = s.flags) && void 0 !== n ? n : 0, m.q.BYPASSES_VERIFICATION) || (0, h.yE)(null !== (i = s.flags) && void 0 !== i ? i : 0, m.q.COMPLETED_ONBOARDING) ? 2 : 1 : 0;
 }
 
 function f(e, t) {
@@ -50,21 +50,21 @@ a = (0, o.e7)([c.ZP], () => c.ZP.getMember(t, e), [
 ]);
   if (null == i || null == a)
 return !1;
-  let l = (0, h.yE)(null !== (n = a.flags) && void 0 !== n ? n : 0, m.q.BYPASSES_VERIFICATION),
-s = (null == i ? void 0 : i.isPhoneVerified()) || (null == i ? void 0 : i.isStaff()),
+  let s = (0, h.yE)(null !== (n = a.flags) && void 0 !== n ? n : 0, m.q.BYPASSES_VERIFICATION),
+l = (null == i ? void 0 : i.isPhoneVerified()) || (null == i ? void 0 : i.isStaff()),
 r = (null == a ? void 0 : a.joinedAt) != null;
-  return i.verified || s || r || l;
+  return i.verified || l || r || s;
 }
 
 function E(e) {
-  return l.useMemo(() => {
+  return s.useMemo(() => {
 let t = p.default.extractTimestamp(e);
 return r()(new Date(t)).format('MMM DD, YYYY');
   }, [e]);
 }
 
 function C(e) {
-  return l.useMemo(() => {
+  return s.useMemo(() => {
 let t = p.default.extractTimestamp(e);
 return r()(new Date(t)).format('MM/DD/YYYY');
   }, [e]);
@@ -76,6 +76,6 @@ function g(e, t) {
   e
 ]),
 i = null == n ? void 0 : n.joinedAt;
-  return l.useMemo(() => null == i ? '' : r()(new Date(i)).format('MMM DD, YYYY'), [i]);
+  return s.useMemo(() => null == i ? '' : r()(new Date(i)).format('MMM DD, YYYY'), [i]);
 }
 (a = i || (i = {}))[a.NO_GATE = 0] = 'NO_GATE', a[a.NO_AGREEMENT = 1] = 'NO_AGREEMENT', a[a.AGREED = 2] = 'AGREED';

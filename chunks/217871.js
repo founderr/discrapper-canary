@@ -1,8 +1,8 @@
 n(47120), n(177593);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(338545),
   o = n(442837),
   c = n(481060),
@@ -23,34 +23,34 @@ let N = a.memo(function(e) {
 let {
   channelId: t,
   width: n
-} = e, l = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), s = (0, o.e7)([C.ZP], () => C.ZP.getMostRecentMessageCombo(t), [t]), [d, h] = a.useState(!1);
+} = e, s = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), l = (0, o.e7)([C.ZP], () => C.ZP.getMostRecentMessageCombo(t), [t]), [d, h] = a.useState(!1);
 a.useEffect(() => {
-  if (null == s ? void 0 : s.displayed)
+  if (null == l ? void 0 : l.displayed)
     return;
   h(!1), setImmediate(() => {
-    h((null != s ? (0, g.Eo)(s.combo) : 0) > 0);
+    h((null != l ? (0, g.Eo)(l.combo) : 0) > 0);
   });
   let e = setTimeout(() => {
-    h(!1), null != s && (0, f.ew)(s);
+    h(!1), null != l && (0, f.ew)(l);
   }, 2000);
   return () => clearTimeout(e);
-}, [s]);
-let p = null != s ? '100%' : '200%',
+}, [l]);
+let p = null != l ? '100%' : '200%',
   m = (0, r.useSpring)({
     opacity: d ? 1 : 0,
     translateY: d ? '0' : p,
     pointerEvents: 'none',
     width: n,
-    config: l ? r.config.stiff : r.config.slow
+    config: s ? r.config.stiff : r.config.slow
   });
 return (0, i.jsx)(i.Fragment, {
-  children: null != s && (0, i.jsx)(r.animated.div, {
+  children: null != l && (0, i.jsx)(r.animated.div, {
     className: T.messageComboScore,
     style: m,
     children: (0, i.jsx)(c.Text, {
       className: T.comboScore,
       variant: 'text-sm/bold',
-      children: (0, g.Eo)(s.combo)
+      children: (0, g.Eo)(l.combo)
     })
   })
 });
@@ -60,10 +60,10 @@ let {
   value: t,
   multiplier: n
 } = e, {
-  color: l,
+  color: s,
   square: r,
   flair: o
-} = a.useMemo(() => (0, g.yz)(n), [n]), d = (0, h.Lq)(l);
+} = a.useMemo(() => (0, g.yz)(n), [n]), d = (0, h.Lq)(s);
 return (0, i.jsxs)(i.Fragment, {
   children: [
     (0, i.jsx)(c.Text, {
@@ -90,13 +90,13 @@ return (0, i.jsxs)(i.Fragment, {
         r && (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)('div', {
-              className: s()(T.comboSquare, T.left),
+              className: l()(T.comboSquare, T.left),
               style: {
                 backgroundColor: d
               }
             }),
             (0, i.jsx)('div', {
-              className: s()(T.comboSquare, T.right),
+              className: l()(T.comboSquare, T.right),
               style: {
                 backgroundColor: d
               }
@@ -106,14 +106,14 @@ return (0, i.jsxs)(i.Fragment, {
         o && (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)('div', {
-              className: s()(T.confettiIcon, T.left),
+              className: l()(T.confettiIcon, T.left),
               children: (0, i.jsx)(_.Z, {
                 width: 24,
                 height: 24
               })
             }),
             (0, i.jsx)('div', {
-              className: s()(T.confettiIcon, T.right),
+              className: l()(T.confettiIcon, T.right),
               children: (0, i.jsx)(_.Z, {
                 width: 24,
                 height: 24
@@ -134,16 +134,16 @@ return (0, i.jsxs)(i.Fragment, {
 t.Z = a.memo(function(e) {
   let {
 channelId: t
-  } = e, n = (0, o.e7)([p.default], () => p.default.getId()), l = (0, o.e7)([m.Z], () => m.Z.isTyping(t, n), [
+  } = e, n = (0, o.e7)([p.default], () => p.default.getId()), s = (0, o.e7)([m.Z], () => m.Z.isTyping(t, n), [
 t,
 n
-  ]), s = (0, o.e7)([E.Z], () => E.Z.isEnabled()), c = (0, o.e7)([C.ZP], () => C.ZP.isComboing(n, t), [
+  ]), l = (0, o.e7)([E.Z], () => E.Z.isEnabled()), c = (0, o.e7)([C.ZP], () => C.ZP.isComboing(n, t), [
 t,
 n
   ]), {
 ref: h,
 width: _ = 0
-  } = (0, d.Z)(), f = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), [g, x] = a.useState(!1), S = (0, I.Z)(t), Z = s && c && l;
+  } = (0, d.Z)(), f = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), [g, x] = a.useState(!1), S = (0, I.Z)(t), Z = l && c && s;
   a.useEffect(() => {
 Z && x(!0);
 let e = setTimeout(() => x(Z), 1000);

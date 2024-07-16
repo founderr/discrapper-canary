@@ -14,8 +14,8 @@ var a = n(120356),
   I = n(105759),
   R = n(248042),
   C = n(422034),
-  p = n(206127),
-  g = n(710220),
+  g = n(206127),
+  p = n(710220),
   A = n(318747),
   m = n(409100),
   N = n(474936),
@@ -83,7 +83,7 @@ function x(e) {
   let {
 variant: t = 'text-lg/normal',
 withBottomMargin: n = !0
-  } = e, a = (0, p.$)();
+  } = e, a = (0, g.$)();
   return (0, s.jsx)(l.Text, {
 variant: t,
 color: 'always-white',
@@ -101,7 +101,7 @@ isFullscreen: t,
 className: n,
 buttonClassName: a,
 subscriptionTier: d,
-hideSparkles: p,
+hideSparkles: g,
 hideSubscribeAndGiftButton: m,
 entrypoint: b
   } = e, {
@@ -130,7 +130,7 @@ children: (0, s.jsxs)('div', {
           color: 'always-white',
           children: f.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V2
         }),
-        j ? (0, s.jsx)(g.Z, {
+        j ? (0, s.jsx)(p.Z, {
           referrer: D
         }) : U ? (0, s.jsx)('div', {
           className: r()(S.affinityDescription),
@@ -157,7 +157,7 @@ children: (0, s.jsxs)('div', {
         })
       ]
     }),
-    !(L || p) && (0, s.jsx)(M, {
+    !(L || g) && (0, s.jsx)(M, {
       isFullscreen: t
     })
   ]

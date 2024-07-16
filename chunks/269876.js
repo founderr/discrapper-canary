@@ -1,29 +1,29 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return h;
   }
-}), s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(442837),
-  l = s(46973),
-  c = s(846519),
-  d = s(692547),
-  _ = s(481060),
-  E = s(846027),
-  u = s(131951),
-  T = s(153124),
-  I = s(65154),
-  S = s(689938),
-  N = s(414976),
-  C = s(483085),
-  m = s(549856);
+}), t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(442837),
+  l = t(46973),
+  c = t(846519),
+  d = t(692547),
+  _ = t(481060),
+  E = t(846027),
+  u = t(131951),
+  T = t(153124),
+  I = t(65154),
+  S = t(689938),
+  N = t(414976),
+  C = t(483085),
+  m = t(549856);
 let A = (0, T.hQ)();
 
 function h() {
-  let [e, t] = a.useState(-100), [s, i] = a.useState(!1), {
+  let [e, s] = a.useState(-100), [t, i] = a.useState(!1), {
 threshold: h,
 autoThreshold: g
   } = (0, o.cj)([u.Z], () => u.Z.getModeOptions()), {
@@ -36,14 +36,14 @@ automaticVADSupported: u.Z.supports(I.AN.AUTOMATIC_VAD),
 isEnabled: u.Z.isEnabled()
   }));
 
-  function x(e, s) {
-t(e), i((s & I.Dg.VOICE) === I.Dg.VOICE);
+  function x(e, t) {
+s(e), i((t & I.Dg.VOICE) === I.Dg.VOICE);
   }
 
-  function M(e, t) {
+  function M(e, s) {
 E.Z.setMode(O, {
   threshold: e,
-  autoThreshold: t
+  autoThreshold: s
 });
   }
   a.useEffect(() => {
@@ -90,7 +90,7 @@ children: [
     className: N.inputSensitivitySlider,
     children: (0, n.jsx)('div', {
       className: r()(N.inputSensitivityBar, N.sliderBar, {
-        [N.speaking]: s
+        [N.speaking]: t
       })
     })
   }),

@@ -1,8 +1,8 @@
 n(627494), n(757143);
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(692547),
+  s = n(442837),
+  l = n(692547),
   r = n(481060),
   o = n(706454),
   c = n(49012),
@@ -18,9 +18,9 @@ var i = n(735250),
 let g = (e, t, n) => {
 let i = C.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
   a = d.ZP.getName(t.guild_id, t.id, n),
-  l = e.extra.media_title;
+  s = e.extra.media_title;
 return i.plainFormat({
-  mediaTitle: l,
+  mediaTitle: s,
   userName: a,
   episodeDescription: e.extra.media_subtitle
 }).replaceAll('*', '');
@@ -42,7 +42,7 @@ episodeDescription: v
   } = (0, _.Bj)(n), {
 primaryColor: S,
 secondaryColor: Z
-  } = (0, m.Z)(N), A = (0, l.e7)([o.default], () => o.default.locale), M = a.useCallback(e => {
+  } = (0, m.Z)(N), A = (0, s.e7)([o.default], () => o.default.locale), M = a.useCallback(e => {
 if (null != T && null != N)
   return (0, p.B)({
     entry: n,
@@ -87,7 +87,7 @@ children: [
     subtitle: n.extra.media_subtitle,
     headerIcons: (0, i.jsx)(r.CrunchyrollNeutralIcon, {
       size: 'xs',
-      color: s.Z.colors.CONTENT_INVENTORY_OVERLAY_UI_MOD
+      color: l.Z.colors.CONTENT_INVENTORY_OVERLAY_UI_MOD
     }),
     badges: (0, i.jsx)(f.Gk, {
       location: f.Gt.POPOUT,

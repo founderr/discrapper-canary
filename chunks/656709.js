@@ -1,20 +1,20 @@
 n.d(t, {
   p: function() {
-return l;
+return s;
   }
 });
 var i = n(904245),
   a = n(957730);
 
-function l(e) {
+function s(e) {
   let {
 channel: t,
 content: n,
-entry: l
-  } = e, s = a.ZP.parse(t, n);
-  return i.Z.sendMessage(t.id, s, void 0, {
+entry: s
+  } = e, l = a.ZP.parse(t, n);
+  return i.Z.sendMessage(t.id, l, void 0, {
 contentInventoryEntry: {
-  content: l
+  content: s
 }
   });
 }

@@ -1,29 +1,29 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return C;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(120356),
-  i = s.n(a),
-  r = s(442837),
-  o = s(481060),
-  l = s(223245),
-  c = s(230711),
-  d = s(921801),
-  _ = s(246946),
-  E = s(358085),
-  u = s(726985),
-  T = s(981631),
-  I = s(689938),
-  S = s(824868),
-  N = s(549856);
+var n = t(735250);
+t(470079);
+var a = t(120356),
+  i = t.n(a),
+  r = t(442837),
+  o = t(481060),
+  l = t(223245),
+  c = t(230711),
+  d = t(921801),
+  _ = t(246946),
+  E = t(358085),
+  u = t(726985),
+  T = t(981631),
+  I = t(689938),
+  S = t(824868),
+  N = t(549856);
 
 function C() {
   let {
 enabled: e,
-autoToggle: t,
+autoToggle: s,
 hideInstantInvites: a,
 hidePersonalInformation: C,
 disableSounds: m,
@@ -31,9 +31,9 @@ disableNotifications: A,
 enableContentProtection: h
   } = (0, r.cj)([_.Z], () => ({
 ..._.Z.getSettings()
-  })), g = (e, t) => {
+  })), g = (e, s) => {
 l.Z.update({
-  [e]: t
+  [e]: s
 });
   };
   return (0, n.jsxs)(o.FormSection, {
@@ -48,7 +48,7 @@ children: [
       iconClassName: S.noticeIcon,
       type: o.FormNoticeTypes.PRIMARY,
       imageData: {
-        src: s(560264),
+        src: t(560264),
         width: 184,
         height: 110,
         position: o.FormNoticeImagePositions.RIGHT
@@ -75,7 +75,7 @@ children: [
       (() => {
         if (E.isPlatformEmbedded)
           return (0, n.jsx)(o.FormSwitch, {
-            value: t,
+            value: s,
             onChange: e => g('autoToggle', e),
             note: I.Z.Messages.AUTO_TOGGLE_STREAMER_MODE_DESCRIPTION,
             children: I.Z.Messages.AUTO_TOGGLE_STREAMER_MODE_LABEL

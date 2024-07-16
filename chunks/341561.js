@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(952265),
   a = n(588468),
-  o = n(285651),
-  s = n(268350),
+  s = n(285651),
+  o = n(268350),
   l = n(926491),
   u = n(373228),
   c = n(419922),
@@ -46,10 +46,10 @@ let a = r.allowStickers ? 0 : 40,
 }));
 let c = [];
 if (r.allowStickers) {
-  (0, s.$p)();
+  (0, o.$p)();
   let t = _.ZP.queryStickers([n], !0, [
       e,
-      (e, t) => t === o.eb.SENDABLE
+      (e, t) => t === s.eb.SENDABLE
     ]),
     r = Math.max(4, 8 - u.length);
   c = t.slice(0, r), '-' === n[0] && (c = t.filter(e => e.sticker.name === n));
@@ -72,8 +72,8 @@ return {
 let {
   results: {
     emojis: t,
-    stickers: o,
-    emojisLocked: s
+    stickers: s,
+    emojisLocked: o
   },
   selectedIndex: l,
   query: u,
@@ -100,10 +100,10 @@ return (0, r.jsxs)(r.Fragment, {
       getQuery: e => ''.concat(h.Iv).concat(e),
       key: 'emoji'
     }),
-    s.length > 0 ? (0, E.HI)({
+    o.length > 0 ? (0, E.HI)({
       query: u,
       selectedIndex: l,
-      autocompletes: s,
+      autocompletes: o,
       onHover: c,
       onClick: () => {
         (0, i.ZD)(async () => {
@@ -131,13 +131,13 @@ return (0, r.jsxs)(r.Fragment, {
       key: 'emoji-upsell',
       indexOffset: t.length
     }) : null,
-    (t.length > 0 || s.length > 0) && o.length > 0 && (0, r.jsx)(a.ZP.Divider, {
+    (t.length > 0 || o.length > 0) && s.length > 0 && (0, r.jsx)(a.ZP.Divider, {
       className: I.emojiStickersDivider
     }),
     (0, E.HI)({
       query: u,
       selectedIndex: l,
-      autocompletes: o,
+      autocompletes: s,
       onHover: c,
       onClick: _,
       titleWithQuery: m.Z.Messages.STICKERS_MATCHING,
@@ -157,7 +157,7 @@ return (0, r.jsxs)(r.Fragment, {
       },
       getQuery: e => e,
       key: 'stickers',
-      indexOffset: t.length + s.length,
+      indexOffset: t.length + o.length,
       headerClassName: t.length > 0 ? I.stickersHeaderWithEmojiResults : void 0
     })
   ]

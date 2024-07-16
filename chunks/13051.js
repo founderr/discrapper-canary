@@ -19,8 +19,8 @@ var i = t(735250),
   E = t(430824),
   T = t(246946),
   h = t(285952),
-  p = t(259580),
-  g = t(531087),
+  g = t(259580),
+  p = t(531087),
   C = t(768581),
   f = t(709054),
   x = t(486199),
@@ -190,7 +190,7 @@ n = [{
     s.enabled ? (0, i.jsx)(h.Z.Child, {
       shrink: 0,
       grow: 0,
-      children: (0, i.jsx)(p.Z, {
+      children: (0, i.jsx)(g.Z, {
         className: A.expandIcon,
         expanded: b && !j,
         'aria-hidden': !0
@@ -203,7 +203,7 @@ n = [{
         color: c.Button.Colors.PRIMARY,
         onClick: B,
         disabled: j,
-        children: j ? (0, i.jsx)(g.Z, {
+        children: j ? (0, i.jsx)(p.Z, {
           width: 24,
           height: 24
         }) : (0, i.jsx)(i.Fragment, {
@@ -278,7 +278,7 @@ children: [
                   color: c.Button.Colors.PRIMARY,
                   disabled: n.syncing || n.revoked,
                   onClick: o,
-                  children: n.syncing ? (0, i.jsx)(g.Z, {
+                  children: n.syncing ? (0, i.jsx)(p.Z, {
                     width: 24,
                     height: 24
                   }) : (0, i.jsx)(i.Fragment, {

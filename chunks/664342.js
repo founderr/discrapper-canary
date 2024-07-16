@@ -5,8 +5,8 @@ return A;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(481060),
-  s = n(32750),
+  s = n(481060),
+  l = n(32750),
   r = n(323597),
   o = n(438536),
   c = n(193987),
@@ -29,19 +29,19 @@ var i = n(735250),
 function S(e) {
   let {
 channel: t
-  } = e, [n, s] = a.useState(!1);
+  } = e, [n, l] = a.useState(!1);
 
   function r() {
-s(e => !e);
+l(e => !e);
   }
   let o = v.Z.Messages.MORE;
-  return (0, i.jsx)(l.Popout, {
+  return (0, i.jsx)(s.Popout, {
 shouldShow: n,
-animation: l.Popout.Animation.NONE,
+animation: s.Popout.Animation.NONE,
 position: 'bottom',
 align: 'right',
 autoInvert: !1,
-onRequestClose: () => s(!1),
+onRequestClose: () => l(!1),
 renderPopout: function(e) {
   return (0, i.jsx)(Z, {
     ...e,
@@ -56,7 +56,7 @@ children: (e, t) => {
     ...e,
     onClick: r,
     tooltip: n ? null : o,
-    icon: l.MoreHorizontalIcon,
+    icon: s.MoreHorizontalIcon,
     'aria-label': o,
     selected: n
   });
@@ -69,7 +69,7 @@ function Z(e) {
 channel: t,
 closePopout: n,
 onSelect: a
-  } = e, E = (0, o.Z)(t, 'Sidebar Overflow'), C = (0, d.Z)(t), x = (0, p.Z)(t), T = (0, m.Z)(t), S = (0, s.Z)(t), Z = (0, c.Z)(t), A = (0, h.Z)(t.id), M = (0, u.Z)(t), b = (0, r.Z)(t), R = (0, f.Z)({
+  } = e, E = (0, o.Z)(t, 'Sidebar Overflow'), C = (0, d.Z)(t), x = (0, p.Z)(t), T = (0, m.Z)(t), S = (0, l.Z)(t), Z = (0, c.Z)(t), A = (0, h.Z)(t.id), M = (0, u.Z)(t), b = (0, r.Z)(t), R = (0, f.Z)({
 id: t.id,
 label: v.Z.Messages.COPY_ID_THREAD
   }), j = (0, _.Z)(t);
@@ -77,41 +77,41 @@ label: v.Z.Messages.COPY_ID_THREAD
   function L() {
 (0, g.Kh)(t.id);
   }
-  return (0, i.jsxs)(l.Menu, {
+  return (0, i.jsxs)(s.Menu, {
 navId: 'thread-context',
 onClose: n,
 'aria-label': v.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
 onSelect: a,
 children: [
-  (0, i.jsxs)(l.MenuGroup, {
+  (0, i.jsxs)(s.MenuGroup, {
     children: [
       E,
-      (0, i.jsx)(l.MenuItem, {
+      (0, i.jsx)(s.MenuItem, {
         id: 'open',
         label: v.Z.Messages.OPEN_IN_FULL_VIEW,
         action: L
       })
     ]
   }),
-  (0, i.jsxs)(l.MenuGroup, {
+  (0, i.jsxs)(s.MenuGroup, {
     children: [
       x,
       T
     ]
   }),
-  (0, i.jsxs)(l.MenuGroup, {
+  (0, i.jsxs)(s.MenuGroup, {
     children: [
       M,
       C,
       A
     ]
   }),
-  (0, i.jsxs)(l.MenuGroup, {
+  (0, i.jsxs)(s.MenuGroup, {
     children: [
-      (0, i.jsx)(l.MenuItem, {
+      (0, i.jsx)(s.MenuItem, {
         id: 'search',
         label: v.Z.Messages.SEARCH,
-        icon: l.WindowLaunchIcon,
+        icon: s.WindowLaunchIcon,
         action: function() {
           L(), setTimeout(() => {
             I.S.dispatch(N.CkL.FOCUS_SEARCH, {
@@ -120,17 +120,17 @@ children: [
           }, 2000);
         }
       }),
-      (0, i.jsx)(l.MenuItem, {
+      (0, i.jsx)(s.MenuItem, {
         id: 'pins',
         label: v.Z.Messages.PINS,
-        icon: l.WindowLaunchIcon,
+        icon: s.WindowLaunchIcon,
         action: function() {
           L(), I.S.dispatch(N.CkL.TOGGLE_CHANNEL_PINS);
         }
       })
     ]
   }),
-  (0, i.jsxs)(l.MenuGroup, {
+  (0, i.jsxs)(s.MenuGroup, {
     children: [
       j,
       S,
@@ -138,7 +138,7 @@ children: [
       b
     ]
   }),
-  (0, i.jsx)(l.MenuGroup, {
+  (0, i.jsx)(s.MenuGroup, {
     children: R
   })
 ]
@@ -159,7 +159,7 @@ children: [
     channel: t
   }),
   (0, i.jsx)(C.ZP.Icon, {
-    icon: l.CloseSmallIcon,
+    icon: s.CloseSmallIcon,
     tooltip: v.Z.Messages.CLOSE,
     onClick: () => (0, T.vN)((0, E.e)(t), null != n ? n : t.parent_id)
   })

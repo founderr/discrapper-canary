@@ -5,8 +5,8 @@ return E;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(481060),
+  s = n(442837),
+  l = n(481060),
   r = n(239091),
   o = n(151827),
   c = n(485267),
@@ -28,7 +28,7 @@ t.Z = a.memo(function(e) {
   expanded: C,
   expandedCount: g
 } = e,
-I = (0, l.e7)([d.Z], () => d.Z.hidden),
+I = (0, s.e7)([d.Z], () => d.Z.hidden),
 x = a.useCallback(e => {
   (0, r.jW)(e, async () => {
     let {
@@ -42,13 +42,13 @@ x = a.useCallback(e => {
   return (0, i.jsxs)(o.Z, {
 className: f.membersGroup,
 children: [
-  (0, i.jsx)(s.HiddenVisually, {
+  (0, i.jsx)(l.HiddenVisually, {
     children: m.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
       title: h,
       count: g
     })
   }),
-  (0, i.jsxs)(s.Clickable, {
+  (0, i.jsxs)(l.Clickable, {
     onClick: e => {
       if (e.currentTarget === e.target || e.currentTarget.contains(e.target))
         return I ? (0, c.l)() : g > 3 ? E() : (0, p.dG4)();
@@ -71,13 +71,13 @@ children: [
           (0, i.jsx)(u.default, {})
         ]
       }),
-      g <= 3 && !I ? null : (t = I ? (0, i.jsx)(s.ChevronSmallUpIcon, {
+      g <= 3 && !I ? null : (t = I ? (0, i.jsx)(l.ChevronSmallUpIcon, {
         className: _.toggleExpandIcon
-      }) : C ? (0, i.jsx)(s.ChevronSmallDownIcon, {
+      }) : C ? (0, i.jsx)(l.ChevronSmallDownIcon, {
         className: _.toggleExpandIcon
-      }) : (0, i.jsx)(s.ChevronSmallRightIcon, {
+      }) : (0, i.jsx)(l.ChevronSmallRightIcon, {
         className: _.toggleExpandIcon
-      }), (0, i.jsx)(s.FocusRing, {
+      }), (0, i.jsx)(l.FocusRing, {
         children: (0, i.jsx)('div', {
           tabIndex: 0,
           className: _.toggleExpandIcon,

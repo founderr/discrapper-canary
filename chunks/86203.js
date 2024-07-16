@@ -6,8 +6,8 @@ return d;
 var i = n(735250);
 n(470079);
 var a = n(481060),
-  l = n(493683),
-  s = n(726521),
+  s = n(493683),
+  l = n(726521),
   r = n(718538),
   o = n(868807),
   c = n(689938);
@@ -28,7 +28,7 @@ loaded: f
   if (null == C && (f || _))
 return null;
   let g = () => {
-null == h || h(), l.Z.closePrivateChannel(t.id);
+null == h || h(), s.Z.closePrivateChannel(t.id);
   };
   return (0, i.jsx)(a.Button, {
 className: d,
@@ -36,7 +36,7 @@ size: n,
 color: a.Button.Colors.RED,
 disabled: null == C,
 onClick: e => {
-  e.stopPropagation(), null == u || u(), null != C && (0, s.WL)(C, g);
+  e.stopPropagation(), null == u || u(), null != C && (0, l.WL)(C, g);
 },
 onMouseEnter: p,
 onMouseLeave: m,

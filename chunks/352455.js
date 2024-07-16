@@ -5,8 +5,8 @@ return h;
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(481060),
   l = n(409700),
   o = n(230711),
@@ -22,7 +22,7 @@ className: t,
 markAsDismissed: n
   } = e;
   return (0, i.jsxs)(c.Z, {
-className: s()(E.card, t),
+className: a()(E.card, t),
 children: [
   (0, i.jsx)(r.Heading, {
     variant: 'heading-md/semibold',

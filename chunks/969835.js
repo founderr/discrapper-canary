@@ -6,8 +6,8 @@ return b;
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(727637),
+  s = n(481060),
+  o = n(727637),
   l = n(100527),
   u = n(906732),
   c = n(680295),
@@ -64,7 +64,7 @@ location: 'BiteSizeProfilePopout'
 statusReactReplyEnabled: Y
   } = (0, h.t)({
 location: 'BiteSizeProfilePopout'
-  }), j = i.useRef(null), W = (0, p.ZP)(t.id, b), K = (0, s.Z)(j);
+  }), j = i.useRef(null), W = (0, p.ZP)(t.id, b), K = (0, o.Z)(j);
   i.useEffect(() => {
 null == x || x(null == j ? void 0 : j.current);
   }, [
@@ -92,7 +92,7 @@ children: (0, r.jsx)(E.Mt, {
   messageId: P,
   roleId: U,
   shouldTrackViewOnMount: null == H || null != H.fullProfileLoadedTimestamp,
-  children: (0, r.jsxs)(o.Dialog, {
+  children: (0, r.jsxs)(s.Dialog, {
     ref: j,
     'aria-label': t.username,
     children: [
@@ -117,7 +117,7 @@ children: (0, r.jsx)(E.Mt, {
               t.id !== n.id && (0, r.jsx)(v.Z, {
                 user: t,
                 guildId: b,
-                viewProfileItem: G ? null : (0, r.jsx)(o.MenuItem, {
+                viewProfileItem: G ? null : (0, r.jsx)(s.MenuItem, {
                   id: 'view-profile',
                   label: D.Z.Messages.VIEW_FULL_PROFILE,
                   action: () => {

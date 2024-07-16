@@ -1,5 +1,5 @@
-var i, a = n(442837),
-  s = n(570140),
+var i, s = n(442837),
+  a = n(570140),
   r = n(288219);
 
 function l(e, t, n) {
@@ -11,7 +11,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let o = {};
-class c extends(i = a.ZP.DeviceSettingsStore) {
+class c extends(i = s.ZP.DeviceSettingsStore) {
   getUserAgnosticState() {
 return {
   toggleStates: o
@@ -31,7 +31,7 @@ return null !== (t = o[e]) && void 0 !== t && t;
 return o[e] = t, t;
   }
 }
-l(c, 'displayName', 'LabFeatureStore'), l(c, 'persistKey', 'LabFeatureStore'), t.Z = new c(s.Z, {
+l(c, 'displayName', 'LabFeatureStore'), l(c, 'persistKey', 'LabFeatureStore'), t.Z = new c(a.Z, {
   LAB_FEATURE_TOGGLE: function(e) {
 let {
   labFeature: t,

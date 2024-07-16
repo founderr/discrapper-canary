@@ -9,8 +9,8 @@ return _;
 var i = n(735250);
 n(470079);
 var a = n(481060),
-  l = n(174609),
-  s = n(98278),
+  s = n(174609),
+  l = n(98278),
   r = n(790527),
   o = n(810090),
   c = n(626135),
@@ -26,10 +26,10 @@ analytics: n,
 ...a
   } = e, m = u.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_BODY_2.format({
 onPressMore: function() {
-  (0, l.Z)(), t(), c.default.track(d.rMx.PREMIUM_PROMOTION_OPENED, {
+  (0, s.Z)(), t(), c.default.track(d.rMx.PREMIUM_PROMOTION_OPENED, {
     location_section: d.jXE.VOICE_CHANNEL_EFFECTS_UPSELL_MODAL,
     location_object: d.qAy.NAVIGATION_LINK
-  }), (0, s.z)();
+  }), (0, l.z)();
 }
   });
   return (0, i.jsx)(r.Z, {
@@ -48,7 +48,7 @@ analyticsSource: {
   section: n.section
 },
 onClose: t,
-onSubscribeClick: l.Z,
+onSubscribeClick: s.Z,
 artElement: (0, i.jsx)(o.Z, {
   className: h.video,
   src: p,

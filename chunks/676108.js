@@ -6,8 +6,8 @@ return _;
 var r = n(735250),
   i = n(470079),
   a = n(481060),
-  o = n(318766),
-  s = n(907040),
+  s = n(318766),
+  o = n(907040),
   l = n(28546),
   u = n(872635),
   c = n(185923),
@@ -41,7 +41,7 @@ children: [
       let {
         closePopout: t
       } = e;
-      return (0, r.jsx)(s.Z, {
+      return (0, r.jsx)(o.Z, {
         persistSearch: !0,
         channel: E,
         closePopout: t,
@@ -58,7 +58,7 @@ children: [
       let {
         isShown: n
       } = t;
-      return (0, r.jsx)(o.Z, {
+      return (0, r.jsx)(s.Z, {
         ...e,
         active: n,
         className: d.emojiButton,

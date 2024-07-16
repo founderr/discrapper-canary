@@ -108,7 +108,7 @@ return M;
 return B;
   },
   m2: function() {
-return s;
+return o;
   },
   mI: function() {
 return P;
@@ -123,16 +123,16 @@ return y;
 return ei;
   },
   wP: function() {
-return es;
+return eo;
   },
   wT: function() {
-return eo;
+return es;
   },
   xK: function() {
 return l;
   }
 }), n(47120);
-var r, i, a, o, s, l, u, c, d, _, E, f, h, p, m, I, T, g, S, A, N = n(911969),
+var r, i, a, s, o, l, u, c, d, _, E, f, h, p, m, I, T, g, S, A, N = n(911969),
   v = n(981631);
 let O = 160,
   R = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
@@ -194,7 +194,7 @@ w,
 '1222080278672179220',
 '1227719606223765687'
   ];
-(E = r || (r = {})).ADS = 'ADS', E.FAILED_LOAD = 'FAILED_LOAD', E.LAGGING = 'LAGGING', E.CONFUSING = 'CONFUSING', E.NOT_FUN = 'NOT_FUN', E.OTHER = 'OTHER', (f = i || (i = {}))[f.PLAY = 0] = 'PLAY', f[f.SPECTATE = 1] = 'SPECTATE', (h = a || (a = {})).DESKTOP = 'desktop', h.MOBILE = 'mobile', (p = o || (o = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP', p.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP', p.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP', p.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP', (m = s || (s = {}))[m.NO_UPDATE = 0] = 'NO_UPDATE', m[m.ACTIVITY_STATE_UPDATE = 1] = 'ACTIVITY_STATE_UPDATE', m[m.ACTIVITY_STARTED = 2] = 'ACTIVITY_STARTED', m[m.ACTIVITY_ENDED = 3] = 'ACTIVITY_ENDED', m[m.USER_JOINED = 4] = 'USER_JOINED', m[m.USER_LEFT = 5] = 'USER_LEFT', m[m.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = 'ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST', (I = l || (l = {}))[I.UNLOCKED = 1] = 'UNLOCKED', I[I.PORTRAIT = 2] = 'PORTRAIT', I[I.LANDSCAPE = 3] = 'LANDSCAPE', (T = u || (u = {}))[T.DIRECTORY = 0] = 'DIRECTORY', T[T.SELECT_CHANNEL = 1] = 'SELECT_CHANNEL', T[T.DETAIL_PAGE = 2] = 'DETAIL_PAGE';
+(E = r || (r = {})).ADS = 'ADS', E.FAILED_LOAD = 'FAILED_LOAD', E.LAGGING = 'LAGGING', E.CONFUSING = 'CONFUSING', E.NOT_FUN = 'NOT_FUN', E.OTHER = 'OTHER', (f = i || (i = {}))[f.PLAY = 0] = 'PLAY', f[f.SPECTATE = 1] = 'SPECTATE', (h = a || (a = {})).DESKTOP = 'desktop', h.MOBILE = 'mobile', (p = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP', p.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP', p.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP', p.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP', (m = o || (o = {}))[m.NO_UPDATE = 0] = 'NO_UPDATE', m[m.ACTIVITY_STATE_UPDATE = 1] = 'ACTIVITY_STATE_UPDATE', m[m.ACTIVITY_STARTED = 2] = 'ACTIVITY_STARTED', m[m.ACTIVITY_ENDED = 3] = 'ACTIVITY_ENDED', m[m.USER_JOINED = 4] = 'USER_JOINED', m[m.USER_LEFT = 5] = 'USER_LEFT', m[m.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = 'ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST', (I = l || (l = {}))[I.UNLOCKED = 1] = 'UNLOCKED', I[I.PORTRAIT = 2] = 'PORTRAIT', I[I.LANDSCAPE = 3] = 'LANDSCAPE', (T = u || (u = {}))[T.DIRECTORY = 0] = 'DIRECTORY', T[T.SELECT_CHANNEL = 1] = 'SELECT_CHANNEL', T[T.DETAIL_PAGE = 2] = 'DETAIL_PAGE';
 let en = 'activity-shelf',
   er = new Set([
 '755600276941176913',
@@ -213,7 +213,7 @@ label_type: N.ww.NONE,
 release_phase: '',
 label_until: null
   },
-  eo = {
+  es = {
 application_id: '',
 requires_age_gate: !1,
 default_orientation_lock_state: 1,
@@ -227,7 +227,7 @@ client_platform_config: {
 has_csp_exception: !1,
 displays_advertisements: !1
   },
-  es = [
+  eo = [
 v.d4z.GUILD_TEXT,
 v.d4z.DM,
 v.d4z.GROUP_DM

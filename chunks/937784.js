@@ -6,8 +6,8 @@ return C;
 var a = n(735250);
 n(470079);
 var l = n(481060),
-  i = n(592125),
-  s = n(703558),
+  s = n(592125),
+  i = n(703558),
   o = n(626135),
   r = n(709054),
   c = n(127654),
@@ -20,7 +20,7 @@ async function C(e, t) {
 channelId: C,
 editMetadata: v,
 analyticsLocations: g
-  } = t, h = i.Z.getChannel(C);
+  } = t, h = s.Z.getChannel(C);
   if (null != h)
 try {
   var x;
@@ -29,7 +29,7 @@ try {
     a = (0, d.Z)(n);
   (0, c.d)([new File([t], ''.concat('' !== a ? a : 'clip', '.mp4'), {
     type: 'video/mp4'
-  })], h, s.d.ChannelMessage, {
+  })], h, i.d.ChannelMessage, {
     filesMetadata: [{
       clip: e
     }]

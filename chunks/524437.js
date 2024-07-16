@@ -21,7 +21,7 @@ return et;
 return u;
   },
   Q4: function() {
-return o;
+return s;
   },
   Us: function() {
 return c;
@@ -30,7 +30,7 @@ return c;
 return r;
   },
   Xr: function() {
-return s;
+return o;
   },
   aV: function() {
 return eD;
@@ -60,7 +60,7 @@ return B;
 return er;
   },
   tA: function() {
-return es;
+return eo;
   },
   v_: function() {
 return q;
@@ -69,14 +69,14 @@ return q;
 return eO;
   }
 }), n(47120), n(411104), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(653041);
-var r, i, a, o, s, l, u, c, d, _, E, f, h, p, m, I, T, g, S = n(230367),
+var r, i, a, s, o, l, u, c, d, _, E, f, h, p, m, I, T, g, S = n(230367),
   A = n(320215),
   N = n(240773),
   v = n(495852),
   O = n(381499),
   R = n(835913),
   C = n(397696);
-(_ = r || (r = {}))[_.UNSPECIFIED = 0] = 'UNSPECIFIED', _[_.MENTIONS = 1] = 'MENTIONS', _[_.UNREADS = 2] = 'UNREADS', _[_.TODOS = 3] = 'TODOS', _[_.FOR_YOU = 4] = 'FOR_YOU', _[_.GAME_INVITES = 5] = 'GAME_INVITES', _[_.BOOKMARKS = 6] = 'BOOKMARKS', (E = i || (i = {}))[E.NO_PROGRESS = 0] = 'NO_PROGRESS', E[E.JOIN_GUILD = 1] = 'JOIN_GUILD', E[E.INVITE_USER = 2] = 'INVITE_USER', E[E.CONTACT_SYNC = 4] = 'CONTACT_SYNC', (f = a || (a = {}))[f.NO_GUILD_ONBOARDING = 0] = 'NO_GUILD_ONBOARDING', f[f.GUILD_NOTICE_SHOWN = 1] = 'GUILD_NOTICE_SHOWN', f[f.GUILD_NOTICE_CLEARED = 2] = 'GUILD_NOTICE_CLEARED', (h = o || (o = {}))[h.UNSET_EXPLICIT_CONTENT_REDACTION = 0] = 'UNSET_EXPLICIT_CONTENT_REDACTION', h[h.SHOW = 1] = 'SHOW', h[h.BLUR = 2] = 'BLUR', h[h.BLOCK = 3] = 'BLOCK', (p = s || (s = {}))[p.DEFAULT_UNSET = 0] = 'DEFAULT_UNSET', p[p.DISABLED = 1] = 'DISABLED', p[p.NON_FRIENDS = 2] = 'NON_FRIENDS', p[p.FRIENDS_AND_NON_FRIENDS = 3] = 'FRIENDS_AND_NON_FRIENDS', (m = l || (l = {}))[m.OFF = 0] = 'OFF', m[m.ON_FOR_LARGE_GUILDS = 1] = 'ON_FOR_LARGE_GUILDS', (I = u || (u = {}))[I.UNSET = 0] = 'UNSET', I[I.DARK = 1] = 'DARK', I[I.LIGHT = 2] = 'LIGHT', I[I.DARKER = 3] = 'DARKER', I[I.MIDNIGHT = 4] = 'MIDNIGHT', (T = c || (c = {}))[T.MINT_APPLE = 0] = 'MINT_APPLE', T[T.CITRUS_SHERBERT = 1] = 'CITRUS_SHERBERT', T[T.RETRO_RAINCLOUD = 2] = 'RETRO_RAINCLOUD', T[T.HANAMI = 3] = 'HANAMI', T[T.SUNRISE = 4] = 'SUNRISE', T[T.COTTON_CANDY = 5] = 'COTTON_CANDY', T[T.LOFI_VIBES = 6] = 'LOFI_VIBES', T[T.DESERT_KHAKI = 7] = 'DESERT_KHAKI', T[T.SUNSET = 8] = 'SUNSET', T[T.CHROMA_GLOW = 9] = 'CHROMA_GLOW', T[T.FOREST = 10] = 'FOREST', T[T.CRIMSON_MOON = 11] = 'CRIMSON_MOON', T[T.MIDNIGHT_BLURPLE = 12] = 'MIDNIGHT_BLURPLE', T[T.MARS = 13] = 'MARS', T[T.DUSK = 14] = 'DUSK', T[T.UNDER_THE_SEA = 15] = 'UNDER_THE_SEA', T[T.EASTER_EGG = 16] = 'EASTER_EGG', T[T.RETRO_STORM = 17] = 'RETRO_STORM', T[T.NEON_NIGHTS = 18] = 'NEON_NIGHTS', T[T.SEPIA = 19] = 'SEPIA', T[T.STRAWBERRY_LEMONADE = 20] = 'STRAWBERRY_LEMONADE', T[T.AURORA = 21] = 'AURORA', T[T.BLURPLE_TWILIGHT = 22] = 'BLURPLE_TWILIGHT', (g = d || (d = {}))[g.UNSET_FAVORITE_CHANNEL_TYPE = 0] = 'UNSET_FAVORITE_CHANNEL_TYPE', g[g.REFERENCE_ORIGINAL = 1] = 'REFERENCE_ORIGINAL', g[g.CATEGORY = 2] = 'CATEGORY';
+(_ = r || (r = {}))[_.UNSPECIFIED = 0] = 'UNSPECIFIED', _[_.MENTIONS = 1] = 'MENTIONS', _[_.UNREADS = 2] = 'UNREADS', _[_.TODOS = 3] = 'TODOS', _[_.FOR_YOU = 4] = 'FOR_YOU', _[_.GAME_INVITES = 5] = 'GAME_INVITES', _[_.BOOKMARKS = 6] = 'BOOKMARKS', (E = i || (i = {}))[E.NO_PROGRESS = 0] = 'NO_PROGRESS', E[E.JOIN_GUILD = 1] = 'JOIN_GUILD', E[E.INVITE_USER = 2] = 'INVITE_USER', E[E.CONTACT_SYNC = 4] = 'CONTACT_SYNC', (f = a || (a = {}))[f.NO_GUILD_ONBOARDING = 0] = 'NO_GUILD_ONBOARDING', f[f.GUILD_NOTICE_SHOWN = 1] = 'GUILD_NOTICE_SHOWN', f[f.GUILD_NOTICE_CLEARED = 2] = 'GUILD_NOTICE_CLEARED', (h = s || (s = {}))[h.UNSET_EXPLICIT_CONTENT_REDACTION = 0] = 'UNSET_EXPLICIT_CONTENT_REDACTION', h[h.SHOW = 1] = 'SHOW', h[h.BLUR = 2] = 'BLUR', h[h.BLOCK = 3] = 'BLOCK', (p = o || (o = {}))[p.DEFAULT_UNSET = 0] = 'DEFAULT_UNSET', p[p.DISABLED = 1] = 'DISABLED', p[p.NON_FRIENDS = 2] = 'NON_FRIENDS', p[p.FRIENDS_AND_NON_FRIENDS = 3] = 'FRIENDS_AND_NON_FRIENDS', (m = l || (l = {}))[m.OFF = 0] = 'OFF', m[m.ON_FOR_LARGE_GUILDS = 1] = 'ON_FOR_LARGE_GUILDS', (I = u || (u = {}))[I.UNSET = 0] = 'UNSET', I[I.DARK = 1] = 'DARK', I[I.LIGHT = 2] = 'LIGHT', I[I.DARKER = 3] = 'DARKER', I[I.MIDNIGHT = 4] = 'MIDNIGHT', (T = c || (c = {}))[T.MINT_APPLE = 0] = 'MINT_APPLE', T[T.CITRUS_SHERBERT = 1] = 'CITRUS_SHERBERT', T[T.RETRO_RAINCLOUD = 2] = 'RETRO_RAINCLOUD', T[T.HANAMI = 3] = 'HANAMI', T[T.SUNRISE = 4] = 'SUNRISE', T[T.COTTON_CANDY = 5] = 'COTTON_CANDY', T[T.LOFI_VIBES = 6] = 'LOFI_VIBES', T[T.DESERT_KHAKI = 7] = 'DESERT_KHAKI', T[T.SUNSET = 8] = 'SUNSET', T[T.CHROMA_GLOW = 9] = 'CHROMA_GLOW', T[T.FOREST = 10] = 'FOREST', T[T.CRIMSON_MOON = 11] = 'CRIMSON_MOON', T[T.MIDNIGHT_BLURPLE = 12] = 'MIDNIGHT_BLURPLE', T[T.MARS = 13] = 'MARS', T[T.DUSK = 14] = 'DUSK', T[T.UNDER_THE_SEA = 15] = 'UNDER_THE_SEA', T[T.EASTER_EGG = 16] = 'EASTER_EGG', T[T.RETRO_STORM = 17] = 'RETRO_STORM', T[T.NEON_NIGHTS = 18] = 'NEON_NIGHTS', T[T.SEPIA = 19] = 'SEPIA', T[T.STRAWBERRY_LEMONADE = 20] = 'STRAWBERRY_LEMONADE', T[T.AURORA = 21] = 'AURORA', T[T.BLURPLE_TWILIGHT = 22] = 'BLURPLE_TWILIGHT', (g = d || (d = {}))[g.UNSET_FAVORITE_CHANNEL_TYPE = 0] = 'UNSET_FAVORITE_CHANNEL_TYPE', g[g.REFERENCE_ORIGINAL = 1] = 'REFERENCE_ORIGINAL', g[g.CATEGORY = 2] = 'CATEGORY';
 class y extends v.C {
   create(e) {
 let t = {};
@@ -116,7 +116,7 @@ for (; e.pos < a;) {
       i.privacy = ea.internalBinaryRead(e, e.uint32(), n, i.privacy);
       break;
     case 9:
-      i.debug = es.internalBinaryRead(e, e.uint32(), n, i.debug);
+      i.debug = eo.internalBinaryRead(e, e.uint32(), n, i.debug);
       break;
     case 10:
       i.gameLibrary = eu.internalBinaryRead(e, e.uint32(), n, i.gameLibrary);
@@ -152,14 +152,14 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
   }
   internalBinaryWrite(e, t, n) {
-e.versions && C.L.internalBinaryWrite(e.versions, t.tag(1, S.TD.LengthDelimited).fork(), n).join(), e.inbox && b.internalBinaryWrite(e.inbox, t.tag(2, S.TD.LengthDelimited).fork(), n).join(), e.guilds && P.internalBinaryWrite(e.guilds, t.tag(3, S.TD.LengthDelimited).fork(), n).join(), e.userContent && Z.internalBinaryWrite(e.userContent, t.tag(4, S.TD.LengthDelimited).fork(), n).join(), e.voiceAndVideo && q.internalBinaryWrite(e.voiceAndVideo, t.tag(5, S.TD.LengthDelimited).fork(), n).join(), e.textAndImages && et.internalBinaryWrite(e.textAndImages, t.tag(6, S.TD.LengthDelimited).fork(), n).join(), e.notifications && er.internalBinaryWrite(e.notifications, t.tag(7, S.TD.LengthDelimited).fork(), n).join(), e.privacy && ea.internalBinaryWrite(e.privacy, t.tag(8, S.TD.LengthDelimited).fork(), n).join(), e.debug && es.internalBinaryWrite(e.debug, t.tag(9, S.TD.LengthDelimited).fork(), n).join(), e.gameLibrary && eu.internalBinaryWrite(e.gameLibrary, t.tag(10, S.TD.LengthDelimited).fork(), n).join(), e.status && ed.internalBinaryWrite(e.status, t.tag(11, S.TD.LengthDelimited).fork(), n).join(), e.localization && eh.internalBinaryWrite(e.localization, t.tag(12, S.TD.LengthDelimited).fork(), n).join(), e.appearance && eT.internalBinaryWrite(e.appearance, t.tag(13, S.TD.LengthDelimited).fork(), n).join(), e.guildFolders && eN.internalBinaryWrite(e.guildFolders, t.tag(14, S.TD.LengthDelimited).fork(), n).join(), e.favorites && eC.internalBinaryWrite(e.favorites, t.tag(15, S.TD.LengthDelimited).fork(), n).join(), e.audioContextSettings && eP.internalBinaryWrite(e.audioContextSettings, t.tag(16, S.TD.LengthDelimited).fork(), n).join(), e.communities && ew.internalBinaryWrite(e.communities, t.tag(17, S.TD.LengthDelimited).fork(), n).join(), e.broadcast && eV.internalBinaryWrite(e.broadcast, t.tag(18, S.TD.LengthDelimited).fork(), n).join(), e.clips && eZ.internalBinaryWrite(e.clips, t.tag(19, S.TD.LengthDelimited).fork(), n).join();
+e.versions && C.L.internalBinaryWrite(e.versions, t.tag(1, S.TD.LengthDelimited).fork(), n).join(), e.inbox && b.internalBinaryWrite(e.inbox, t.tag(2, S.TD.LengthDelimited).fork(), n).join(), e.guilds && P.internalBinaryWrite(e.guilds, t.tag(3, S.TD.LengthDelimited).fork(), n).join(), e.userContent && Z.internalBinaryWrite(e.userContent, t.tag(4, S.TD.LengthDelimited).fork(), n).join(), e.voiceAndVideo && q.internalBinaryWrite(e.voiceAndVideo, t.tag(5, S.TD.LengthDelimited).fork(), n).join(), e.textAndImages && et.internalBinaryWrite(e.textAndImages, t.tag(6, S.TD.LengthDelimited).fork(), n).join(), e.notifications && er.internalBinaryWrite(e.notifications, t.tag(7, S.TD.LengthDelimited).fork(), n).join(), e.privacy && ea.internalBinaryWrite(e.privacy, t.tag(8, S.TD.LengthDelimited).fork(), n).join(), e.debug && eo.internalBinaryWrite(e.debug, t.tag(9, S.TD.LengthDelimited).fork(), n).join(), e.gameLibrary && eu.internalBinaryWrite(e.gameLibrary, t.tag(10, S.TD.LengthDelimited).fork(), n).join(), e.status && ed.internalBinaryWrite(e.status, t.tag(11, S.TD.LengthDelimited).fork(), n).join(), e.localization && eh.internalBinaryWrite(e.localization, t.tag(12, S.TD.LengthDelimited).fork(), n).join(), e.appearance && eT.internalBinaryWrite(e.appearance, t.tag(13, S.TD.LengthDelimited).fork(), n).join(), e.guildFolders && eN.internalBinaryWrite(e.guildFolders, t.tag(14, S.TD.LengthDelimited).fork(), n).join(), e.favorites && eC.internalBinaryWrite(e.favorites, t.tag(15, S.TD.LengthDelimited).fork(), n).join(), e.audioContextSettings && eP.internalBinaryWrite(e.audioContextSettings, t.tag(16, S.TD.LengthDelimited).fork(), n).join(), e.communities && ew.internalBinaryWrite(e.communities, t.tag(17, S.TD.LengthDelimited).fork(), n).join(), e.broadcast && eV.internalBinaryWrite(e.broadcast, t.tag(18, S.TD.LengthDelimited).fork(), n).join(), e.clips && eZ.internalBinaryWrite(e.clips, t.tag(19, S.TD.LengthDelimited).fork(), n).join();
 let r = n.writeUnknownFields;
 return !1 !== r && (!0 == r ? S.z.onWrite : r)(this.typeName, e, t), t;
   }
@@ -216,7 +216,7 @@ super('discord_protos.discord_users.v1.PreloadedUserSettings', [{
     no: 9,
     name: 'debug',
     kind: 'message',
-    T: () => es
+    T: () => eo
   },
   {
     no: 10,
@@ -309,8 +309,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -362,8 +362,8 @@ for (; e.pos < a;) {
     let a = n.readUnknownField;
     if ('throw' === a)
       throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-    let o = e.skip(r);
-    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+    let s = e.skip(r);
+    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -371,7 +371,7 @@ return i;
   binaryReadMap1(e, t, n) {
 let r = t.uint32(),
   i = t.pos + r,
-  a, o;
+  a, s;
 for (; t.pos < i;) {
   let [e, r] = t.tag();
   switch (e) {
@@ -379,13 +379,13 @@ for (; t.pos < i;) {
       a = t.fixed64().toString();
       break;
     case 2:
-      o = w.internalBinaryRead(t, t.uint32(), n);
+      s = w.internalBinaryRead(t, t.uint32(), n);
       break;
     default:
       throw new globalThis.Error('unknown map entry field for field discord_protos.discord_users.v1.AllGuildSettings.guilds');
   }
 }
-e[null != a ? a : '0'] = null != o ? o : w.create();
+e[null != a ? a : '0'] = null != s ? s : w.create();
   }
   internalBinaryWrite(e, t, n) {
 for (let r of Object.keys(e.guilds))
@@ -462,8 +462,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -471,7 +471,7 @@ return i;
   binaryReadMap1(e, t, n) {
 let r = t.uint32(),
   i = t.pos + r,
-  a, o;
+  a, s;
 for (; t.pos < i;) {
   let [e, r] = t.tag();
   switch (e) {
@@ -479,13 +479,13 @@ for (; t.pos < i;) {
       a = t.fixed64().toString();
       break;
     case 2:
-      o = B.internalBinaryRead(t, t.uint32(), n);
+      s = B.internalBinaryRead(t, t.uint32(), n);
       break;
     default:
       throw new globalThis.Error('unknown map entry field for field discord_protos.discord_users.v1.GuildSettings.channels');
   }
 }
-e[null != a ? a : '0'] = null != o ? o : B.create();
+e[null != a ? a : '0'] = null != s ? s : B.create();
   }
   internalBinaryWrite(e, t, n) {
 for (let r of Object.keys(e.channels))
@@ -590,8 +590,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -653,8 +653,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -706,8 +706,8 @@ for (; e.pos < a;) {
     let a = n.readUnknownField;
     if ('throw' === a)
       throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-    let o = e.skip(r);
-    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+    let s = e.skip(r);
+    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -766,8 +766,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -845,8 +845,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -894,8 +894,8 @@ for (; e.pos < a;) {
     let a = n.readUnknownField;
     if ('throw' === a)
       throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-    let o = e.skip(r);
-    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+    let s = e.skip(r);
+    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -970,8 +970,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -1068,8 +1068,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -1086,7 +1086,7 @@ super('discord_protos.discord_users.v1.ExplicitContentSettings', [{
     kind: 'enum',
     T: () => [
       'discord_protos.discord_users.v1.ExplicitContentRedaction',
-      o
+      s
     ]
   },
   {
@@ -1095,7 +1095,7 @@ super('discord_protos.discord_users.v1.ExplicitContentSettings', [{
     kind: 'enum',
     T: () => [
       'discord_protos.discord_users.v1.ExplicitContentRedaction',
-      o
+      s
     ]
   },
   {
@@ -1104,7 +1104,7 @@ super('discord_protos.discord_users.v1.ExplicitContentSettings', [{
     kind: 'enum',
     T: () => [
       'discord_protos.discord_users.v1.ExplicitContentRedaction',
-      o
+      s
     ]
   }
 ]);
@@ -1138,8 +1138,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -1282,8 +1282,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -1461,7 +1461,7 @@ super('discord_protos.discord_users.v1.TextAndImagesSettings', [{
     kind: 'enum',
     T: () => [
       'discord_protos.discord_users.v1.DmSpamFilterV2',
-      s
+      o
     ]
   },
   {
@@ -1525,8 +1525,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -1685,8 +1685,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -1864,7 +1864,7 @@ super('discord_protos.discord_users.v1.PrivacySettings', [{
   }
 }
 let ea = new ei();
-class eo extends v.C {
+class es extends v.C {
   create(e) {
 let t = {};
 return globalThis.Object.defineProperty(t, N.C, {
@@ -1883,8 +1883,8 @@ for (; e.pos < a;) {
     let a = n.readUnknownField;
     if ('throw' === a)
       throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-    let o = e.skip(r);
-    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+    let s = e.skip(r);
+    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -1903,7 +1903,7 @@ super('discord_protos.discord_users.v1.DebugSettings', [{
 }]);
   }
 }
-let es = new eo();
+let eo = new es();
 class el extends v.C {
   create(e) {
 let t = {};
@@ -1931,8 +1931,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -1997,8 +1997,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -2076,8 +2076,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -2146,8 +2146,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -2198,8 +2198,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -2269,8 +2269,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -2349,8 +2349,8 @@ for (; e.pos < a;) {
     let a = n.readUnknownField;
     if ('throw' === a)
       throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-    let o = e.skip(r);
-    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+    let s = e.skip(r);
+    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -2401,8 +2401,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -2474,8 +2474,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -2548,8 +2548,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -2557,7 +2557,7 @@ return i;
   binaryReadMap1(e, t, n) {
 let r = t.uint32(),
   i = t.pos + r,
-  a, o;
+  a, s;
 for (; t.pos < i;) {
   let [e, r] = t.tag();
   switch (e) {
@@ -2565,13 +2565,13 @@ for (; t.pos < i;) {
       a = t.fixed64().toString();
       break;
     case 2:
-      o = eD.internalBinaryRead(t, t.uint32(), n);
+      s = eD.internalBinaryRead(t, t.uint32(), n);
       break;
     default:
       throw new globalThis.Error('unknown map entry field for field discord_protos.discord_users.v1.Favorites.favorite_channels');
   }
 }
-e[null != a ? a : '0'] = null != o ? o : eD.create();
+e[null != a ? a : '0'] = null != s ? s : eD.create();
   }
   internalBinaryWrite(e, t, n) {
 for (let r of Object.keys(e.favoriteChannels))
@@ -2636,8 +2636,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -2714,8 +2714,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -2781,8 +2781,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -2790,7 +2790,7 @@ return i;
   binaryReadMap1(e, t, n) {
 let r = t.uint32(),
   i = t.pos + r,
-  a, o;
+  a, s;
 for (; t.pos < i;) {
   let [e, r] = t.tag();
   switch (e) {
@@ -2798,18 +2798,18 @@ for (; t.pos < i;) {
       a = t.fixed64().toString();
       break;
     case 2:
-      o = eb.internalBinaryRead(t, t.uint32(), n);
+      s = eb.internalBinaryRead(t, t.uint32(), n);
       break;
     default:
       throw new globalThis.Error('unknown map entry field for field discord_protos.discord_users.v1.AudioSettings.user');
   }
 }
-e[null != a ? a : '0'] = null != o ? o : eb.create();
+e[null != a ? a : '0'] = null != s ? s : eb.create();
   }
   binaryReadMap2(e, t, n) {
 let r = t.uint32(),
   i = t.pos + r,
-  a, o;
+  a, s;
 for (; t.pos < i;) {
   let [e, r] = t.tag();
   switch (e) {
@@ -2817,13 +2817,13 @@ for (; t.pos < i;) {
       a = t.fixed64().toString();
       break;
     case 2:
-      o = eb.internalBinaryRead(t, t.uint32(), n);
+      s = eb.internalBinaryRead(t, t.uint32(), n);
       break;
     default:
       throw new globalThis.Error('unknown map entry field for field discord_protos.discord_users.v1.AudioSettings.stream');
   }
 }
-e[null != a ? a : '0'] = null != o ? o : eb.create();
+e[null != a ? a : '0'] = null != s ? s : eb.create();
   }
   internalBinaryWrite(e, t, n) {
 for (let r of Object.keys(e.user))
@@ -2877,8 +2877,8 @@ for (; e.pos < a;) {
     let a = n.readUnknownField;
     if ('throw' === a)
       throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-    let o = e.skip(r);
-    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+    let s = e.skip(r);
+    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -2919,8 +2919,8 @@ for (; e.pos < a;) {
     let a = n.readUnknownField;
     if ('throw' === a)
       throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-    let o = e.skip(r);
-    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+    let s = e.skip(r);
+    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -2967,8 +2967,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -3036,8 +3036,8 @@ for (; e.pos < a;) {
       let a = n.readUnknownField;
       if ('throw' === a)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let o = e.skip(r);
-      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+      let s = e.skip(r);
+      !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;
@@ -3109,8 +3109,8 @@ for (; e.pos < a;) {
     let a = n.readUnknownField;
     if ('throw' === a)
       throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-    let o = e.skip(r);
-    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, o);
+    let s = e.skip(r);
+    !1 !== a && (!0 === a ? S.z.onRead : a)(this.typeName, i, t, r, s);
   }
 }
 return i;

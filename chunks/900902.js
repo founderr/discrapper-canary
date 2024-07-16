@@ -5,8 +5,8 @@ return m;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(901461),
-  s = n(453687),
+  s = n(901461),
+  l = n(453687),
   r = n(464891),
   o = n(318713),
   c = n(507418),
@@ -16,8 +16,8 @@ let h = a.memo(function(e) {
 let {
   message: t,
   channel: n,
-  compact: l = !1,
-  groupId: s,
+  compact: s = !1,
+  groupId: l,
   isGroupStart: o,
   usernameProfile: h,
   avatarProfile: p,
@@ -36,9 +36,9 @@ return (0, i.jsx)(r.ZP, {
   channel: n,
   repliedMessage: f,
   author: _,
-  compact: l,
-  subscribeToGroupId: s,
-  showTimestampOnHover: !o && l && t.type !== u.uaV.REPLY,
+  compact: s,
+  subscribeToGroupId: l,
+  showTimestampOnHover: !o && s && t.type !== u.uaV.REPLY,
   renderPopout: c.Z,
   showAvatarPopout: p,
   showUsernamePopout: h,
@@ -69,7 +69,7 @@ groupId: f
 usernameProfile: E,
 avatarProfile: C
   } = a;
-  if ((0, l.Z)(u))
+  if ((0, s.Z)(u))
 return null;
   let g = u.id === f;
   return g || m || null != r ? (0, i.jsx)(h, {
@@ -89,7 +89,7 @@ roleIcon: d
 compact: !0,
 timestamp: u.timestamp,
 isInline: !1,
-id: (0, s.Dv)(u),
+id: (0, l.Dv)(u),
 isVisibleOnlyOnHover: !0,
 cozyAlt: !0
   });

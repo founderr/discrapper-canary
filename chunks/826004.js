@@ -1,6 +1,6 @@
 n.d(t, {
   h: function() {
-return a;
+return s;
   }
 });
 let i = (0, n(818083).B)({
@@ -21,7 +21,7 @@ config: {
   }]
 });
 
-function a() {
+function s() {
   return i.useExperiment({
 location: '183c74_1'
   }, {

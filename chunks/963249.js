@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(97613),
   a = n.n(i),
-  o = n(772848),
-  s = n(481060),
+  s = n(772848),
+  o = n(481060),
   l = n(976255),
   u = n(667),
   c = n(138464),
@@ -44,8 +44,8 @@ returnRef: U,
 subscription: w,
 skipConfirm: x,
 repeatPurchase: G
-  } = null != e ? e : {}, k = !1, B = (0, o.Z)(), F = d.default.getCurrentUser(), V = (0, f.M5)(F, p.p9.TIER_2), H = a()('payment-modal');
-  return (0, s.openModalLazy)(async () => {
+  } = null != e ? e : {}, k = !1, B = (0, s.Z)(), F = d.default.getCurrentUser(), V = (0, f.M5)(F, p.p9.TIER_2), H = a()('payment-modal');
+  return (0, o.openModalLazy)(async () => {
 let {
   default: e
 } = await Promise.all([
@@ -69,10 +69,10 @@ let {
 return n => {
   let {
     onClose: a,
-    ...o
+    ...s
   } = n;
   return (0, r.jsx)(e, {
-    ...o,
+    ...s,
     loadId: B,
     subscriptionTier: C,
     skuId: (0, f.Wz)(C),

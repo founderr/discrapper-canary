@@ -1,7 +1,7 @@
 var i = n(735250),
   a = n(470079),
-  l = n(873546),
-  s = n(442837),
+  s = n(873546),
+  l = n(442837),
   r = n(481060),
   o = n(194359),
   c = n(333984),
@@ -26,7 +26,7 @@ let A = e => {
 let {
   userId: t,
   channelId: n
-} = e, l = (0, s.e7)([m.Z], () => m.Z.getMutualGuilds(t), [t]), o = a.useMemo(() => null != l ? l.slice(0, 3).map((e, t) => {
+} = e, s = (0, l.e7)([m.Z], () => m.Z.getMutualGuilds(t), [t]), o = a.useMemo(() => null != s ? s.slice(0, 3).map((e, t) => {
   let {
     guild: n
   } = e, a = null != n ? I.ZP.getGuildIconURL({
@@ -36,21 +36,21 @@ let {
   }) : null;
   if (null == a)
     return null;
-  let s = t === (l.length > 3 ? 3 : l.length) - 1,
+  let l = t === (s.length > 3 ? 3 : s.length) - 1,
     r = (0, i.jsx)('img', {
       src: a,
       alt: '',
       className: Z.avatar
     }, t);
-  return s ? r : (0, i.jsx)(g.ZP, {
+  return l ? r : (0, i.jsx)(g.ZP, {
     className: Z.avatarMask,
     mask: g.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
     width: 24,
     height: 24,
     children: r
   }, t);
-}).filter(e => null != e) : [], [l]);
-return null == l || 0 === l.length ? (0, i.jsx)(r.Text, {
+}).filter(e => null != e) : [], [s]);
+return null == s || 0 === s.length ? (0, i.jsx)(r.Text, {
   color: 'header-secondary',
   variant: 'text-sm/normal',
   children: S.Z.Messages.NO_MUTUAL_GUILDS
@@ -75,7 +75,7 @@ return null == l || 0 === l.length ? (0, i.jsx)(r.Text, {
         className: Z.mutualGuilds,
         variant: 'text-sm/normal',
         children: S.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
-          count: l.length
+          count: s.length
         })
       })
     })
@@ -87,8 +87,8 @@ var t;
 let {
   relationshipType: n,
   userId: a,
-  showingBanner: l
-} = e, s = null === (t = C.default.getUser(a)) || void 0 === t ? void 0 : t.bot, c = () => {
+  showingBanner: s
+} = e, l = null === (t = C.default.getUser(a)) || void 0 === t ? void 0 : t.bot, c = () => {
   o.Z.addRelationship({
     userId: a,
     context: {
@@ -114,7 +114,7 @@ switch (n) {
   case T.OGo.NONE:
     return (0, i.jsxs)(i.Fragment, {
       children: [
-        !s && !l && (0, i.jsx)(r.Button, {
+        !l && !s && (0, i.jsx)(r.Button, {
           className: Z.action,
           size: r.Button.Sizes.TINY,
           onClick: c,
@@ -201,9 +201,9 @@ switch (n) {
 let {
   channelId: t,
   otherUserId: n
-} = e, l = a.useCallback(() => {
+} = e, s = a.useCallback(() => {
   (0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
-}, []), s = a.useCallback(() => {
+}, []), l = a.useCallback(() => {
   p.Z.closeChannelSidebar(f.uZ);
 }, []), o = a.useCallback(() => {
   p.Z.closeChannelSidebar(f.uZ);
@@ -216,9 +216,9 @@ let {
   isOptimisticRejected: E
 } = (0, d.m)({
   user: C.default.getUser(n),
-  onError: l,
+  onError: s,
   onAcceptSuccess: o,
-  onRejectSuccess: s
+  onRejectSuccess: l
 }), g = h || m || _ || E;
 return (0, i.jsxs)(i.Fragment, {
   children: [
@@ -249,7 +249,7 @@ channel: n,
 showingBanner: a
   } = e, {
 channelId: r
-  } = (0, u._)(), o = (0, s.e7)([c.Z], () => null != r && c.Z.isSpam(r), [r]), d = (0, s.e7)([E.Z], () => E.Z.getRelationshipType(t), [t]), p = n.id === r;
+  } = (0, u._)(), o = (0, l.e7)([c.Z], () => null != r && c.Z.isSpam(r), [r]), d = (0, l.e7)([E.Z], () => E.Z.getRelationshipType(t), [t]), p = n.id === r;
   return t === N.fL ? null : o || p ? (0, i.jsxs)('div', {
 className: Z.mobileContainer,
 children: [
@@ -273,7 +273,7 @@ children: [
     ]
   })
 ]
-  }) : !0 === l.tq || p ? (0, i.jsxs)('div', {
+  }) : !0 === s.tq || p ? (0, i.jsxs)('div', {
 className: Z.mobileContainer,
 children: [
   (0, i.jsx)('div', {

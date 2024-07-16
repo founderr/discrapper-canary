@@ -8,8 +8,8 @@ n(470079);
 var i = n(481060),
   r = n(287734),
   u = n(939863),
-  c = n(153124),
-  s = n(482241),
+  s = n(153124),
+  c = n(482241),
   a = n(554747),
   o = n(689938),
   d = n(14068);
@@ -19,7 +19,7 @@ function E(e) {
 channel: t,
 transitionState: n,
 onClose: E
-  } = e, N = (0, c.Dt)(), _ = (0, a.qY)(t.id);
+  } = e, N = (0, s.Dt)(), _ = (0, a.qY)(t.id);
   if (null == _)
 return null;
   let f = () => {
@@ -65,7 +65,7 @@ children: [
       (0, l.jsx)(i.Button, {
         color: i.Button.Colors.RED,
         onClick: () => {
-          s.Z.endEvent(_.id, _.guild_id), f();
+          c.Z.endEvent(_.id, _.guild_id), f();
         },
         children: o.Z.Messages.GUILD_EVENT_END_PROMPT_CONFIRM
       }),

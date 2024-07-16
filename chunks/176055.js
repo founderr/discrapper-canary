@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(593473),
   o = n(442837),
   c = n(481060),
@@ -30,7 +30,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class Z extends a.PureComponent {
+class Z extends s.PureComponent {
   renderMemberInfo() {
 let {
   approximateMemberCount: e,
@@ -66,8 +66,8 @@ let {
   guild: e,
   inChannel: t,
   isInGuild: n,
-  isLurking: a,
-  isAuthenticated: s,
+  isLurking: s,
+  isAuthenticated: a,
   className: l,
   pageSize: o
 } = this.props;
@@ -78,7 +78,7 @@ let d = new g.ZP(e),
   _ = this.handleJoinOrView,
   h = c.Button.Looks.FILLED,
   I = c.Button.Colors.PRIMARY;
-return s ? n ? (h = c.Button.Looks.OUTLINED, I = A.buttonColorInGuild, u = (0, i.jsxs)(S.Z, {
+return a ? n ? (h = c.Button.Looks.OUTLINED, I = A.buttonColorInGuild, u = (0, i.jsxs)(S.Z, {
   align: S.Z.Align.CENTER,
   children: [
     (0, i.jsx)('div', {
@@ -90,7 +90,7 @@ return s ? n ? (h = c.Button.Looks.OUTLINED, I = A.buttonColorInGuild, u = (0, i
       className: A.joinedCheckmark
     })
   ]
-})) : a && t && (u = N.Z.Messages.JOIN_GUILD) : (u = N.Z.Messages._LOGIN, _ = this.handleLogin), (0, i.jsxs)('div', {
+})) : s && t && (u = N.Z.Messages.JOIN_GUILD) : (u = N.Z.Messages._LOGIN, _ = this.handleLogin), (0, i.jsxs)('div', {
   className: r()(l, o === f.b.SMALL ? A.inviteSmall : A.inviteLarge),
   children: [
     (0, i.jsx)(T.Z, {
@@ -141,17 +141,17 @@ super(...e), v(this, 'handleJoinOrView', async () => {
     skuId: t,
     isInGuild: n,
     isLurking: i
-  } = this.props, a = () => (0, m.X)(e.id);
+  } = this.props, s = () => (0, m.X)(e.id);
   if (i)
-    (0, u.Oj)(t).then(a);
+    (0, u.Oj)(t).then(s);
   else if (n)
-    a();
+    s();
   else
     try {
       await d.Z.joinGuild(e.id, {
         lurker: !0,
         source: C.vtS.APPLICATION_STORE
-      }), a();
+      }), s();
     } catch {}
 }), v(this, 'handleLogin', () => {
   let e = {

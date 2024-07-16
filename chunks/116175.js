@@ -4,7 +4,7 @@ n.d(t, {
 return u;
   },
   Nh: function() {
-return o;
+return s;
   },
   ZD: function() {
 return r;
@@ -16,7 +16,7 @@ return c;
 return a;
   },
   vY: function() {
-return s;
+return o;
   },
   yf: function() {
 return l;
@@ -75,8 +75,8 @@ let a = [{
   secondary: '#555555'
 }
   ],
-  o = a[0].primary,
-  s = a[0].secondary;
+  s = a[0].primary,
+  o = a[0].secondary;
 
 function l() {
   return a[Math.floor(Math.random() * a.length)];

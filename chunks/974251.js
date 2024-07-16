@@ -1,8 +1,8 @@
 n(47120), n(411104);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(442837),
   o = n(704215),
   c = n(481060),
@@ -39,7 +39,7 @@ var i = n(735250),
   B = n(689938),
   H = n(72704);
 t.Z = a.memo(function(e) {
-  var t, l;
+  var t, s;
   let G, {
   className: V,
   channel: F,
@@ -70,15 +70,15 @@ et = (0, r.e7)([v.ZP], () => null == v.ZP.getCurrentSidebarChannelId(F.id)),
   autoTrackExposure: !1
 }),
 ea = (0, r.e7)([I.qc], () => I.qc.hasHotspot(I.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
-el = (0, c.useModalsStore)(e => (0, c.hasModalOpenSelector)(e, U.Qr)),
-es = (0, r.e7)([S.Z], () => S.Z.hasLayers()),
+es = (0, c.useModalsStore)(e => (0, c.hasModalOpenSelector)(e, U.Qr)),
+el = (0, r.e7)([S.Z], () => S.Z.hasLayers()),
 er = (0, r.e7)([E.Z], () => E.Z.hasClips()),
 [eo, ec] = a.useState(null),
 ed = (0, f.Go)() && (J || er),
 eu = F.isPrivate(),
 eh = (0, r.e7)([A.Z], () => eu || A.Z.can(k.Plq.ATTACH_FILES, F) && A.Z.can(k.Plq.SEND_MESSAGES, F)),
 ep = (0, u.Z)($);
-  (null == ep ? void 0 : ep.newClipIds.length) !== (null == $ ? void 0 : $.newClipIds.length) && (null !== (t = null == $ ? void 0 : $.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == eo && ea && et && !el && !en && !es && ec('recentClips');
+  (null == ep ? void 0 : ep.newClipIds.length) !== (null == $ ? void 0 : $.newClipIds.length) && (null !== (t = null == $ ? void 0 : $.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == eo && ea && et && !es && !en && !el && ec('recentClips');
   let em = (e, t, n) => {
   null != t && 'ETOOLARGE' === t.code ? (0, P.G)(F, []) : (0, P.d)(e, F, W, {
     requireConfirm: !0,
@@ -118,7 +118,7 @@ eg = !N.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserv
 eI = (0, x.UI)(null != F ? F : void 0),
 ex = (0, c.useRedesignIconContext)().enabled,
 eT = (0, p.qB)(F.id, 'ChannelAttachButton'),
-eN = null !== (l = null == ee ? void 0 : ee.length) && void 0 !== l ? l : 0,
+eN = null !== (s = null == ee ? void 0 : ee.length) && void 0 !== s ? s : 0,
 ev = (0, D.Z)({
   canAttachFiles: eh,
   canStartThreads: eE || eC,
@@ -203,7 +203,7 @@ renderPopout: e => {
 children: e => (0, i.jsx)(c.Button, {
   look: c.Button.Looks.BLANK,
   size: c.Button.Sizes.NONE,
-  className: s()(H.attachButton, V),
+  className: l()(H.attachButton, V),
   innerClassName: H.attachButtonInner,
   'aria-label': B.Z.Messages.CHAT_ATTACH_UPLOAD_OR_INVITE,
   onDoubleClick: eh ? () => {

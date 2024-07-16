@@ -8,8 +8,8 @@ return R;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(392711),
   o = n(338545),
   c = n(442837),
@@ -39,7 +39,7 @@ function j(e) {
   var t;
   let {
 message: n
-  } = e, l = (0, c.e7)([T.Z], () => T.Z.isBlockedForMessage(n)), r = (0, E.Uj)(n), o = a.useContext(m.Z), [u, x] = a.useState(!1), v = (0, _.p)(), S = a.useCallback(e => {
+  } = e, s = (0, c.e7)([T.Z], () => T.Z.isBlockedForMessage(n)), r = (0, E.Uj)(n), o = a.useContext(m.Z), [u, x] = a.useState(!1), v = (0, _.p)(), S = a.useCallback(e => {
 if ('A' !== e.target.nodeName)
   h.Z.updateChatOpen(n.channel_id, !0), p.Z.jumpToMessage({
     channelId: n.channel_id,
@@ -57,7 +57,7 @@ contentPlaceholder: A,
 renderedContent: R,
 trailingIcon: j,
 leadingIcon: L
-  } = (0, C.f)(n, Z, l, b.messageContent, {
+  } = (0, C.f)(n, Z, s, b.messageContent, {
 trailingIconClass: b.messageContentTrailingIcon,
 leadingIconClass: b.messageContentLeadingIcon,
 iconSize: M.WW
@@ -78,7 +78,7 @@ onMouseLeave: () => {
 onClick: S,
 children: [
   (0, i.jsxs)('div', {
-    className: s()(b.messageContentWrapper, {
+    className: l()(b.messageContentWrapper, {
       [b.mentioned]: n.mentioned
     }),
     children: [
@@ -106,7 +106,7 @@ function L(e) {
   let {
 channelId: t,
 className: n
-  } = e, [l, h] = a.useState(!1), {
+  } = e, [s, h] = a.useState(!1), {
 toastsHidden: p,
 toastMessages: m
   } = function(e) {
@@ -114,8 +114,8 @@ var t;
 let {
   channelId: n,
   isFrozen: i,
-  count: l,
-  lingerMs: s
+  count: s,
+  lingerMs: l
 } = e, [r, o] = a.useState([]), [d, h] = a.useState(!1), p = a.useRef(null), m = a.useRef(), _ = a.useCallback(() => {
   o([]), h(!0);
 }, []);
@@ -126,7 +126,7 @@ a.useEffect(() => {
       message: i
     } = e;
     if (t === n && i.type !== A.uaV.STAGE_START && i.type !== A.uaV.STAGE_END && i.type !== A.uaV.STAGE_TOPIC && i.type !== A.uaV.STAGE_SPEAKER && i.type !== A.uaV.STAGE_RAISE_HAND)
-      clearTimeout(m.current), m.current = setTimeout(_, s), o(e => [
+      clearTimeout(m.current), m.current = setTimeout(_, l), o(e => [
         ...e,
         i.id
       ]);
@@ -137,8 +137,8 @@ a.useEffect(() => {
 }, [
   n,
   _,
-  l,
-  s
+  s,
+  l
 ]), a.useEffect(() => () => {
   clearTimeout(m.current);
 }, []), a.useEffect(() => {
@@ -157,7 +157,7 @@ return {
 };
   }({
 channelId: t,
-isFrozen: l,
+isFrozen: s,
 count: 3,
 lingerMs: R
   }), _ = a.useRef({}), [f, E] = a.useState({}), C = a.useCallback((e, t) => {
@@ -212,7 +212,7 @@ I = (0, d.useTransition)(g, {
   }
 });
   return (0, i.jsx)('div', {
-className: s()(n, (0, Z.Q)(A.BRd.DARK)),
+className: l()(n, (0, Z.Q)(A.BRd.DARK)),
 onMouseEnter: () => {
   h(!0);
 },

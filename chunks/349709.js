@@ -28,17 +28,17 @@ error: i,
 emojiId: T,
 emojiName: v,
 isRequiredField: D = !0,
-shouldUpdateBothEmojiFields: p = !1,
-setEmojiId: x,
+shouldUpdateBothEmojiFields: x = !1,
+setEmojiId: p,
 setEmojiName: C
   } = e, R = (0, E.Z)({
 emojiId: T,
 emojiName: v
   }), S = (0, o.e7)([_.ZP], () => null != s ? _.ZP.getDefaultChannel(s) : null), j = n.createRef(), h = (0, c.Z)(j), N = () => {
-C(void 0), x(void 0);
+C(void 0), p(void 0);
   }, U = e => (l, s) => {
 let t = (null == l ? void 0 : l.id) == null;
-N(), t ? C(null == l ? void 0 : l.optionallyDiverseSequence) : (p && C(null == l ? void 0 : l.name), x(null == l ? void 0 : l.id)), s && e();
+N(), t ? C(null == l ? void 0 : l.optionallyDiverseSequence) : (x && C(null == l ? void 0 : l.name), p(null == l ? void 0 : l.id)), s && e();
   }, Z = e => {
 e.stopPropagation(), N();
   };

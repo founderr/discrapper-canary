@@ -7,9 +7,9 @@ return v;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(338545),
   o = n(143927),
   c = n(597312),
@@ -41,10 +41,10 @@ function v() {
 t = (0, m.GN)(e => e.userUpsellScreen, o.Z),
 n = (0, m.GN)(e => e.setUserUpsellScreen, o.Z),
 {
-  ref: s,
+  ref: a,
   width: c
 } = (0, u.Z)(),
-[E, h] = a.useState(0),
+[E, h] = s.useState(0),
 g = (0, l.useSpring)({
   from: {
     scrollHeight: 0
@@ -54,14 +54,14 @@ g = (0, l.useSpring)({
   }
 }),
 S = (0, _.ZP)(),
-C = a.useMemo(() => A(e, S), [
+C = s.useMemo(() => A(e, S), [
   e,
   S
 ]),
-v = a.useCallback(e => {
+v = s.useCallback(e => {
   h(e.currentTarget.scrollTop);
 }, [h]),
-Z = a.useMemo(() => {
+Z = s.useMemo(() => {
   switch (e) {
     case m.hz.GENSHIN:
       return S === f.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
@@ -76,7 +76,7 @@ L = (0, d.useToken)(d.tokens.colors.BG_MOD_STRONG);
   switch (t) {
 case m.o2.USER_UPSELL:
   return (0, i.jsxs)('div', {
-    ref: s,
+    ref: a,
     className: N.container,
     children: [
       (0, i.jsxs)('div', {
@@ -175,19 +175,19 @@ t = (0, m.GN)(e => e.game, o.Z),
   enableApplication: n
 } = (0, E.Fg)('ClanDiscoveryAdminContainer'),
 {
-  guilds: s
+  guilds: a
 } = (0, E.C3)({
   location: 'ClanDiscoveryAdminContainer',
   includeConverted: !0
 }),
-l = a.useMemo(() => s.filter(e => !(0, h.EJ)(e)), [s]),
+l = s.useMemo(() => a.filter(e => !(0, h.EJ)(e)), [a]),
 d = (0, _.ZP)(),
-u = a.useMemo(() => A(t, d), [
+u = s.useMemo(() => A(t, d), [
   t,
   d
 ]),
 I = !e && n;
-  return 0 === s.length ? null : (0, i.jsx)('div', {
+  return 0 === a.length ? null : (0, i.jsx)('div', {
 className: N.container,
 children: (0, i.jsxs)(c.u2, {
   className: N.upsellScroller,
@@ -205,7 +205,7 @@ children: (0, i.jsxs)(c.u2, {
             isBrowseButtonVisible: I,
             selectedGame: t,
             eligibleGuilds: l,
-            eligibleGuildsIncludingConverted: s
+            eligibleGuildsIncludingConverted: a
           })
         })
       ]

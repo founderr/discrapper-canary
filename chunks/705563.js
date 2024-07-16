@@ -6,8 +6,8 @@ return C;
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(481060),
-  s = n(665149),
+  s = n(481060),
+  l = n(665149),
   r = n(171368),
   o = n(650774),
   c = n(430824),
@@ -51,28 +51,28 @@ submitting: M
   return null != I && I.applicationStatus === p.wB.SUBMITTED && x ? (0, i.jsxs)('div', {
 className: E.buttons,
 children: [
-  (0, i.jsx)(l.Tooltip, {
+  (0, i.jsx)(s.Tooltip, {
     text: f.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
     shouldShow: S,
-    children: e => (0, i.jsx)(l.Button, {
+    children: e => (0, i.jsx)(s.Button, {
       ...e,
-      color: l.Button.Colors.GREEN,
+      color: s.Button.Colors.GREEN,
       submitting: M,
       onClick: Z,
-      size: l.ButtonSizes.SMALL,
+      size: s.ButtonSizes.SMALL,
       disabled: S,
       children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
     })
   }),
-  (0, i.jsx)(l.Button, {
-    color: l.Button.Colors.RED,
+  (0, i.jsx)(s.Button, {
+    color: s.Button.Colors.RED,
     onClick: A,
-    size: l.ButtonSizes.SMALL,
+    size: s.ButtonSizes.SMALL,
     disabled: M || I.applicationStatus !== p.wB.SUBMITTED,
     children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
   }),
-  n && (0, i.jsx)(l.Button, {
-    color: l.Button.Colors.TRANSPARENT,
+  n && (0, i.jsx)(s.Button, {
+    color: s.Button.Colors.TRANSPARENT,
     onClick: () => {
       (0, r.openUserProfileModal)({
         userId: I.userId,
@@ -83,10 +83,10 @@ children: [
         }
       });
     },
-    size: l.ButtonSizes.SMALL,
+    size: s.ButtonSizes.SMALL,
     children: f.Z.Messages.VIEW_PROFILE
   }),
-  C && (0, i.jsx)(s.ZP.Divider, {})
+  C && (0, i.jsx)(l.ZP.Divider, {})
 ]
   }) : null;
 }

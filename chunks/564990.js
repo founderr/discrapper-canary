@@ -1,6 +1,6 @@
 n.d(t, {
   m: function() {
-return s;
+return o;
   },
   y: function() {
 return l;
@@ -9,15 +9,15 @@ return l;
 var r = n(544891),
   i = n(881052),
   a = n(206583),
-  o = n(981631);
-let s = async e => {
+  s = n(981631);
+let o = async e => {
   let {
 token: t,
 feedId: n
   } = e;
   try {
 let e = (await r.tn.get({
-    url: o.ANM.MY_CONTENT_INVENTORY(t),
+    url: s.ANM.MY_CONTENT_INVENTORY(t),
     ...n === a.YN.GAME_PROFILE_FEED && {
       query: {
         for_game_profile: !0
@@ -37,7 +37,7 @@ throw new i.Hx(e);
 async function l(e, t) {
   try {
 await r.tn.post({
-  url: o.ANM.MY_SPOTIFY_CONTENT_INVENTORY,
+  url: s.ANM.MY_SPOTIFY_CONTENT_INVENTORY,
   body: {
     connection_id: e,
     tracks: [t]

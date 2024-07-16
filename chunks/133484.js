@@ -1,41 +1,41 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return C;
   }
 });
-var n = s(735250),
-  a = s(470079),
-  i = s(481060),
-  r = s(410030),
-  o = s(100527),
-  l = s(906732),
-  c = s(197115),
-  d = s(626135),
-  _ = s(74538),
-  E = s(981631),
-  u = s(474936),
-  T = s(689938),
-  I = s(468105),
-  S = s(699623),
-  N = s(820350);
+var n = t(735250),
+  a = t(470079),
+  i = t(481060),
+  r = t(410030),
+  o = t(100527),
+  l = t(906732),
+  c = t(197115),
+  d = t(626135),
+  _ = t(74538),
+  E = t(981631),
+  u = t(474936),
+  T = t(689938),
+  I = t(468105),
+  S = t(699623),
+  N = t(820350);
 
 function C(e) {
   let {
-user: t,
-showOverlay: s,
+user: s,
+showOverlay: t,
 children: C
   } = e, m = (0, r.ZP)(), {
 analyticsLocations: A
   } = (0, l.ZP)(o.Z.PREMIUM_UPSELL_OVERLAY);
   return (a.useEffect(() => {
-s && d.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
+t && d.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
   location_stack: A,
   type: u.cd.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE
 });
   }, [
-s,
+t,
 A
-  ]), s) ? (0, n.jsxs)('div', {
+  ]), t) ? (0, n.jsxs)('div', {
 className: I.upsellOverlayContainer,
 children: [
   (0, n.jsx)('div', {
@@ -74,7 +74,7 @@ children: [
       (0, n.jsx)(c.Z, {
         size: i.Button.Sizes.LARGE,
         color: i.Button.Colors.GREEN,
-        buttonText: _.ZP.isPremium(t) ? T.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : T.Z.Messages.CHANGE_IDENTITY_UPSELL,
+        buttonText: _.ZP.isPremium(s) ? T.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : T.Z.Messages.CHANGE_IDENTITY_UPSELL,
         subscriptionTier: u.Si.TIER_2
       })
     ]

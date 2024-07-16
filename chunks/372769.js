@@ -1,8 +1,8 @@
 n(47120);
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(481060),
   c = n(297700),
   d = n(665786),
@@ -11,13 +11,13 @@ var r, i, a = n(735250),
   f = n(689938),
   h = n(346483);
 (i = r || (r = {}))[i.PARTNERED = 0] = 'PARTNERED', i[i.STAFF = 1] = 'STAFF', i[i.VERIFIED = 2] = 'VERIFIED', i[i.VERIFIED_AND_PARTNERED = 3] = 'VERIFIED_AND_PARTNERED', i[i.VERIFIED_AND_HUB = 4] = 'VERIFIED_AND_HUB', i[i.HUB = 5] = 'HUB', i[i.NONE = 6] = 'NONE';
-class p extends o.PureComponent {
+class p extends s.PureComponent {
   renderBadge(e, t, n) {
 let {
   className: r,
   badgeStrokeColor: i,
-  tooltipColor: o = u.Tooltip.Colors.BRAND,
-  tooltipPosition: s,
+  tooltipColor: s = u.Tooltip.Colors.BRAND,
+  tooltipPosition: o,
   tooltipDelay: d,
   size: E = 16,
   badgeColor: p,
@@ -44,12 +44,12 @@ let {
   }
 }(e);
 return (0, a.jsx)(u.Tooltip, {
-  color: o,
-  position: s,
+  color: s,
+  position: o,
   delay: d,
   text: T,
-  children: o => 5 === e || 4 === e ? (0, a.jsx)('div', {
-    ...o,
+  children: s => 5 === e || 4 === e ? (0, a.jsx)('div', {
+    ...s,
     className: l()(n, r),
     style: {
       width: E,
@@ -60,7 +60,7 @@ return (0, a.jsx)(u.Tooltip, {
       color: 'currentColor'
     })
   }) : (0, a.jsx)(c.Z, {
-    ...o,
+    ...s,
     className: l()(n, r),
     flowerStarClassName: I,
     color: p,

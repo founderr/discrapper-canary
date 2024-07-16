@@ -32,7 +32,7 @@ tunnel: '/error-reporting-proxy/web',
 dsn: 'https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984',
 autoSessionTracking: !1,
 environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-release: 'discord_web-0fe1e35154f284b75ad5e1b8b70c8fa74ce0fde4',
+release: 'discord_web-79cabf4977e076748c1e07a391ade7bf284ba5e5',
 beforeSend: t => {
   var e, r;
   return !(null != (e = t).exception && null != e.exception.values && e.exception.values.every(t => null == t.stacktrace || null != t.stacktrace.frames && 1 === t.stacktrace.frames.length) && 'canary' !== window.GLOBAL_ENV.RELEASE_CHANNEL || o.some(t => window.navigator.appVersion.toLowerCase().indexOf(t) >= 0)) && !E() && !('Aborted' === (r = t).message || 'cancel captcha' === r.message) && s() ? t : null;
@@ -85,8 +85,8 @@ denyUrls: [
   /mobilediscord\.com/,
   /betterdiscord:\/\//
 ]
-  }), a.YA('buildNumber', (t = '310231', '310231'));
-  a.YA('builtAt', String('1721166068414'));
+  }), a.YA('buildNumber', (t = '310268', '310268'));
+  a.YA('builtAt', String('1721168623117'));
   let e = window.GLOBAL_ENV.SENTRY_TAGS;
   if (null != e && 'object' == typeof e)
 for (let t in e)

@@ -7,9 +7,9 @@ return i;
   }
 });
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(442837),
   c = n(481060),
   d = n(355467),
@@ -31,21 +31,21 @@ containerContext: t,
 image: n,
 title: r,
 description: i,
-enableSocialProof: s,
+enableSocialProof: o,
 analyticsLocationSection: N,
 onClose: v,
 onDisplay: O,
 onLearnMore: R
   } = e, C = (0, u.e7)([p.Z], () => p.Z.affinities), y = (0, u.e7)([p.Z], () => p.Z.hasFetched);
-  o.useEffect(() => {
-!y && s && d.MH();
+  s.useEffect(() => {
+!y && o && d.MH();
   }, [
 y,
-s
-  ]), o.useEffect(() => {
+o
+  ]), s.useEffect(() => {
 null == O || O();
   }, [O]);
-  let D = C.length > 1 && s;
+  let D = C.length > 1 && o;
   return (0, a.jsxs)(a.Fragment, {
 children: [
   (0, a.jsx)(c.Backdrop, {

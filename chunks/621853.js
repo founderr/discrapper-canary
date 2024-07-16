@@ -2,8 +2,8 @@ n(47120), n(789020);
 var r = n(392711),
   i = n.n(r),
   a = n(726542),
-  o = n(706454),
-  s = n(598077),
+  s = n(706454),
+  o = n(598077),
   l = n(314897),
   u = n(430824),
   c = n(158776),
@@ -48,7 +48,7 @@ userId: t
 function O(e) {
   return i()(e).map(e => ({
 key: e.id,
-user: new s.Z(e),
+user: new o.Z(e),
 status: c.Z.getStatus(e.id)
   })).sortBy(e => {
 let {
@@ -75,7 +75,7 @@ return !1;
 }
 
 function D(e) {
-  var t, n, r, i, o, s, l, c, d, E, h, S, A, N, v, R, C;
+  var t, n, r, i, s, o, l, c, d, E, h, S, A, N, v, R, C;
   if (f.delete(e.user.id), null != e.mutual_guilds) {
 let t = {};
 e.mutual_guilds.forEach(e => {
@@ -105,8 +105,8 @@ D = e.application;
   accentColor: null === (n = e.user_profile) || void 0 === n ? void 0 : n.accent_color,
   themeColors: null === (r = e.user_profile) || void 0 === r ? void 0 : r.theme_colors,
   popoutAnimationParticleType: null === (i = e.user_profile) || void 0 === i ? void 0 : i.popout_animation_particle_type,
-  bio: null !== (E = null === (o = e.user_profile) || void 0 === o ? void 0 : o.bio) && void 0 !== E ? E : '',
-  profileEffectId: null === (l = e.user_profile) || void 0 === l ? void 0 : null === (s = l.profile_effect) || void 0 === s ? void 0 : s.id,
+  bio: null !== (E = null === (s = e.user_profile) || void 0 === s ? void 0 : s.bio) && void 0 !== E ? E : '',
+  profileEffectId: null === (l = e.user_profile) || void 0 === l ? void 0 : null === (o = l.profile_effect) || void 0 === o ? void 0 : o.id,
   pronouns: null !== (h = null === (c = e.user_profile) || void 0 === c ? void 0 : c.pronouns) && void 0 !== h ? h : '',
   connectedAccounts: null !== (S = e.connected_accounts.filter(e => a.Z.isSupported(e.type))) && void 0 !== S ? S : [],
   applicationRoleConnections: null !== (A = e.application_role_connections) && void 0 !== A ? A : [],
@@ -187,8 +187,8 @@ let {
   accent_color: r,
   banner: i,
   bio: a,
-  pronouns: o,
-  popout_animation_particle_type: s,
+  pronouns: s,
+  popout_animation_particle_type: o,
   theme_colors: l,
   profileEffectId: u
 } = e;
@@ -202,8 +202,8 @@ m[t][n] = {
   accentColor: r,
   banner: i,
   bio: a,
-  pronouns: o,
-  popoutAnimationParticleType: s,
+  pronouns: s,
+  popoutAnimationParticleType: o,
   themeColors: l,
   profileEffectId: u
 };
@@ -214,8 +214,8 @@ let {
   banner: r,
   bio: i,
   pronouns: a,
-  popout_animation_particle_type: o,
-  theme_colors: s,
+  popout_animation_particle_type: s,
+  theme_colors: o,
   profileEffectId: l
 } = e, u = p[t];
 if (null == u)
@@ -226,8 +226,8 @@ p[t] = {
   banner: r,
   bio: i,
   pronouns: a,
-  popoutAnimationParticleType: o,
-  themeColors: s,
+  popoutAnimationParticleType: s,
+  themeColors: o,
   profileEffectId: l
 };
   }(e);
@@ -251,7 +251,7 @@ function x() {
 }
 class G extends d.Z {
   initialize() {
-this.waitFor(_.ZP), this.syncWith([o.default], x);
+this.waitFor(_.ZP), this.syncWith([s.default], x);
   }
   isFetchingProfile(e) {
 return f.has(e);

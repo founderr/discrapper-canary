@@ -1,6 +1,6 @@
 n(47120);
-var i, a, l = n(735250),
-  s = n(470079),
+var i, a, s = n(735250),
+  l = n(470079),
   r = n(442837),
   o = n(112724),
   c = n(358221),
@@ -58,15 +58,15 @@ U[2]
   ], {
 speakerTileWidth: H,
 speakerTileHeight: G
-  } = v(a, y), V = T ? a - 32 : Math.min(a - 64, 3 * H + 8), F = e => e === U.length - 1 || 0 === b && 1 === e, [W, z] = s.useState(!1), [Y, K] = s.useState(!1);
-  return (0, l.jsx)(_.Z, {
+  } = v(a, y), V = T ? a - 32 : Math.min(a - 64, 3 * H + 8), F = e => e === U.length - 1 || 0 === b && 1 === e, [W, z] = l.useState(!1), [Y, K] = l.useState(!1);
+  return (0, s.jsx)(_.Z, {
 sections: B,
 renderSection: e => {
   let {
     section: t
   } = e;
   if (1 === t)
-    return 0 === M ? null : (0, l.jsx)(E.Z, {
+    return 0 === M ? null : (0, s.jsx)(E.Z, {
       participantCount: M,
       label: g.Z.Messages.SPEAKER_LABEL,
       className: I.header,
@@ -77,7 +77,7 @@ renderSection: e => {
       isStreamLive: P
     }, 'speaker-header-'.concat(t));
   if (2 === t)
-    return 0 === b ? null : (0, l.jsx)(E.Z, {
+    return 0 === b ? null : (0, s.jsx)(E.Z, {
       participantCount: b,
       label: g.Z.Messages.AUDIENCE_LABEL,
       className: I.header,
@@ -99,9 +99,9 @@ renderRow: e => {
     case 0:
       if (0 === a.length || null == a[0])
         return null;
-      return (0, l.jsx)('div', {
+      return (0, s.jsx)('div', {
         className: I.focusedRow,
-        children: (0, l.jsx)(C.Z, {
+        children: (0, s.jsx)(C.Z, {
           channel: i,
           participant: a[0],
           width: V
@@ -110,8 +110,8 @@ renderRow: e => {
     case 1:
       if (W)
         return null;
-      return (0, l.jsx)(s.Fragment, {
-        children: (0, l.jsx)(f.Z, {
+      return (0, s.jsx)(l.Fragment, {
+        children: (0, s.jsx)(f.Z, {
           tileWidth: H,
           channel: i,
           participants: a,
@@ -121,7 +121,7 @@ renderRow: e => {
     case 2:
       if (Y)
         return null;
-      return (0, l.jsx)(m.Z, {
+      return (0, s.jsx)(m.Z, {
         channel: i,
         participants: a,
         maxTiles: O
@@ -135,7 +135,7 @@ renderFooter: e => {
   let {
     section: t
   } = e;
-  return F(t) ? (0, l.jsx)('div', {
+  return F(t) ? (0, s.jsx)('div', {
     className: I.spacer
   }, 'bottom-spacer') : null;
 },

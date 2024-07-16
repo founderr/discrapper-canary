@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(735250);
@@ -8,7 +8,7 @@ n(470079);
 var i = n(481060),
   a = n(596401);
 
-function o() {
+function s() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   !(!e && (0, i.hasAnyModalOpen)()) && (0, i.openModalLazy)(async () => {
 let {

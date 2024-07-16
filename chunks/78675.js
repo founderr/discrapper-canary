@@ -6,8 +6,8 @@ return S;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(866442),
+  s = n.n(a),
+  o = n(866442),
   l = n(442837),
   u = n(692547),
   c = n(481060),
@@ -42,7 +42,7 @@ displayProfile: a,
 pendingBanner: N,
 size: (0, T.e7)(A),
 canAnimate: O || !M ? D : b
-  }), w = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), x = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80), G = (0, s._i)((0, d.ZP)(n.getAvatarURL(S, x), w, !1)), k = (0, _.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : G).hsl;
+  }), w = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), x = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80), G = (0, o._i)((0, d.ZP)(n.getAvatarURL(S, x), w, !1)), k = (0, _.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : G).hsl;
   return (0, r.jsx)(I.Z, {
 isPremium: y,
 hasThemeColors: y,
@@ -50,7 +50,7 @@ profileType: A,
 hasBanner: null != P,
 hasProfileEffect: R,
 children: (0, r.jsxs)('div', {
-  className: o()(g.banner, g.divider, (0, T.Ae)({
+  className: s()(g.banner, g.divider, (0, T.Ae)({
     profileType: A,
     user: {
       hasBanner: null != P,

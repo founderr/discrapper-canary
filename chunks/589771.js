@@ -25,9 +25,9 @@ setStep: I,
 hasFetchedSubscriptions: m,
 hasFetchedSubscriptionPlans: C,
 currencyLoading: S,
-selectedSkuId: T,
-setSelectedSkuId: b,
-setSelectedPlanId: h,
+selectedSkuId: b,
+setSelectedSkuId: h,
+setSelectedPlanId: T,
 priceOptions: g,
 setSubscriptionMetadataRequest: E
   } = (0, c.usePaymentContext)(), {
@@ -47,7 +47,7 @@ null != u && E({
 u,
 E
   ]), r.useEffect(() => {
-h(t);
+T(t);
 let e = null != t ? a.Z.get(t) : null;
 if (!P && !f)
   _(n => {
@@ -59,17 +59,17 @@ if (!P && !f)
       regular_price: null == e ? void 0 : e.price,
       currency: g.currency
     };
-  }), null != e && (b(null == e ? void 0 : e.skuId), I(n));
+  }), null != e && (h(null == e ? void 0 : e.skuId), I(n));
   }, [
 f,
 t,
 N,
 P,
 g,
-T,
-_,
-h,
 b,
+_,
+T,
+h,
 I,
 n
   ]), P) ? (0, i.jsx)(d.Z, {}) : f ? (0, i.jsx)(o.Vq, {

@@ -1,27 +1,27 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return O;
   }
 });
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(442837),
-  l = s(780384),
-  c = s(481060),
-  d = s(846027),
-  _ = s(921801),
-  E = s(131951),
-  u = s(285952),
-  T = s(210887),
-  I = s(996073),
-  S = s(526761),
-  N = s(726985),
-  C = s(689938),
-  m = s(549856);
-let A = s(651714),
-  h = s(297166);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(442837),
+  l = t(780384),
+  c = t(481060),
+  d = t(846027),
+  _ = t(921801),
+  E = t(131951),
+  u = t(285952),
+  T = t(210887),
+  I = t(996073),
+  S = t(526761),
+  N = t(726985),
+  C = t(689938),
+  m = t(549856);
+let A = t(651714),
+  h = t(297166);
 
 function g() {
   let {
@@ -44,8 +44,8 @@ children: (0, n.jsx)(c.FormSwitch, {
 function O() {
   let e = (0, o.e7)([T.Z], () => T.Z.theme),
 {
-  openH264: t,
-  hardwareEncoding: s
+  openH264: s,
+  hardwareEncoding: t
 } = (0, o.cj)([E.Z], () => ({
   openH264: E.Z.getOpenH264(),
   hardwareEncoding: E.Z.getHardwareEncoding()
@@ -81,7 +81,7 @@ children: [
           setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
           children: (0, n.jsx)(c.FormSwitch, {
             className: r()(m.marginTop8, m.marginBottom20),
-            value: t,
+            value: s,
             onChange: e => d.Z.setOpenH264(e),
             disabled: !1,
             children: C.Z.Messages.USER_SETTINGS_VOICE_OPEN_H264
@@ -97,7 +97,7 @@ children: [
           setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,
           children: (0, n.jsx)(c.FormSwitch, {
             className: r()(m.marginTop8, m.marginBottom20),
-            value: s,
+            value: t,
             onChange: e => d.Z.setHardwareEncoding(e),
             note: C.Z.Messages.FORM_HELP_HARDWARE_ENCODING,
             children: C.Z.Messages.USER_SETTINGS_VOICE_HARDWARE_ENCODING

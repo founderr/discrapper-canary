@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(481060),
+  s = n(442837),
+  l = n(481060),
   r = n(23536),
   o = n(40851),
   c = n(762914),
@@ -16,13 +16,13 @@ var i = n(735250),
 t.Z = function(e) {
   let {
 channel: t
-  } = e, n = (0, l.e7)([
+  } = e, n = (0, s.e7)([
 d.Z,
 h.default
   ], () => {
 let e = h.default.getCurrentUser();
 return null == e || t.isNSFW() && (!e.nsfwAllowed || !d.Z.didAgree(t.getGuildId()));
-  }, [t]), [E, C] = a.useState(!1), g = (0, l.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id), [t]), I = (0, o.Aq)(), x = (0, c.Dd)(t.id), T = a.useCallback(() => {
+  }, [t]), [E, C] = a.useState(!1), g = (0, s.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id), [t]), I = (0, o.Aq)(), x = (0, c.Dd)(t.id), T = a.useCallback(() => {
 !n && C(e => !e);
   }, [n]);
 
@@ -31,9 +31,9 @@ return null == e || t.isNSFW() && (!e.nsfwAllowed || !d.Z.didAgree(t.getGuildId(
   }
   return (a.useEffect(() => (p.S.subscribe(_.CkL.TOGGLE_CHANNEL_PINS, T), () => {
 p.S.unsubscribe(_.CkL.TOGGLE_CHANNEL_PINS, T);
-  }), [T]), x) ? null : (0, i.jsx)(s.Popout, {
+  }), [T]), x) ? null : (0, i.jsx)(l.Popout, {
 shouldShow: E,
-animation: s.Popout.Animation.NONE,
+animation: l.Popout.Animation.NONE,
 position: 'bottom',
 align: 'right',
 autoInvert: !1,
@@ -54,7 +54,7 @@ children: (e, t) => {
     ...e,
     onClick: T,
     tooltip: a ? null : f.Z.Messages.PINNED_MESSAGES,
-    icon: s.PinIcon,
+    icon: l.PinIcon,
     'aria-label': f.Z.Messages.PINNED_MESSAGES,
     disabled: n,
     showBadge: g,

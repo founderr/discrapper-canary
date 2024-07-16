@@ -1,7 +1,7 @@
 a(411104);
-var t = a(735250);
+var s = a(735250);
 a(470079);
-var s = a(858987),
+var t = a(858987),
   r = a(122289),
   l = a(63063),
   i = a(74538),
@@ -19,13 +19,13 @@ isGift: A,
 isEmbeddedIAP: N,
 renewalInvoice: P,
 paymentSourceType: M,
-hide: p,
-purchaseType: R,
+hide: R,
+purchaseType: p,
 productLine: L,
 basePrice: f,
 currentSubscription: C
   } = e;
-  if (p)
+  if (R)
 return null;
   let m = null == e.planGroup ? [] : e.planGroup;
   if (null != P) {
@@ -33,8 +33,8 @@ let e = i.ZP.getIntervalForInvoice(P);
 n = e.intervalType, a = e.intervalCount, E = (0, o.og)((0, o.T4)(P.total, P.currency), n, a);
   } else
 null != T && (n = T.interval, a = T.intervalCount);
-  let S = (0, s.K)({
-  purchaseType: R || u.GZQ.SUBSCRIPTION,
+  let S = (0, t.K)({
+  purchaseType: p || u.GZQ.SUBSCRIPTION,
   plan: T,
   premiumSubscription: null == C ? null : C,
   isGift: !!A,
@@ -68,7 +68,7 @@ else
     default:
       throw Error('Unexpected interval: '.concat(n));
   }
-  } else if (R === u.GZQ.ONE_TIME)
+  } else if (p === u.GZQ.ONE_TIME)
 v = _.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
   primaryText: S,
   paidURL: u.EYA.PAID_TERMS
@@ -94,7 +94,7 @@ switch (A && (v = _.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
 }
   else {
 let e;
-let t = (0, s.K)({
+let s = (0, t.K)({
   purchaseType: u.GZQ.SUBSCRIPTION,
   plan: T,
   premiumSubscription: null == C ? null : C,
@@ -111,45 +111,45 @@ if (null != f && null != n && null != a && (e = (0, o.og)((0, o.T4)(f.amount, f.
   });
 }
 b = (null == C ? void 0 : C.isPaused) ? _.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_RESUME.format({
-  primaryText: t,
+  primaryText: s,
   rate: e,
   paidURL: u.EYA.PAID_TERMS,
   contactLink: u.EYA.CONTACT,
   helpdeskArticle: l.Z.getArticleURL(u.BhN.BILLING)
 }) : null != C && (0, c.GY)(C, T.id, m) ? _.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2.format({
-  primaryText: t,
+  primaryText: s,
   rate: e,
   paidURL: u.EYA.PAID_TERMS,
   contactLink: u.EYA.CONTACT,
   helpdeskArticle: l.Z.getArticleURL(u.BhN.BILLING)
 }) : _.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_V2.format({
-  primaryText: t,
+  primaryText: s,
   rate: e,
   paidURL: u.EYA.PAID_TERMS,
   contactLink: u.EYA.CONTACT,
   helpdeskArticle: l.Z.getArticleURL(u.BhN.BILLING)
 });
   }
-  return (0, t.jsxs)(t.Fragment, {
+  return (0, s.jsxs)(s.Fragment, {
 children: [
-  '' !== v && (0, t.jsxs)('div', {
+  '' !== v && (0, s.jsxs)('div', {
     children: [
-      (0, t.jsx)('div', {
+      (0, s.jsx)('div', {
         children: v
       }),
-      (0, t.jsx)('div', {
+      (0, s.jsx)('div', {
         className: I.divider
       })
     ]
   }),
-  '' !== b && (0, t.jsx)('div', {
+  '' !== b && (0, s.jsx)('div', {
     children: b
   }),
-  M === u.HeQ.PAYSAFE_CARD && (0, t.jsx)('div', {
+  M === u.HeQ.PAYSAFE_CARD && (0, s.jsx)('div', {
     className: I.paymentSourceNoticeCopy,
     children: _.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD
   }),
-  M === u.HeQ.SOFORT && (0, t.jsxs)('div', {
+  M === u.HeQ.SOFORT && (0, s.jsxs)('div', {
     className: I.paymentSourceNoticeCopy,
     children: [
       _.Z.Messages.SOFORT_MANDATE_AGREEMENT,

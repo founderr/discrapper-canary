@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(505737),
   a = n(705556),
-  o = n(901952),
-  s = n(228168),
+  s = n(901952),
+  o = n(228168),
   l = n(335182);
 
 function u(e) {
@@ -21,7 +21,7 @@ onClose: c
   return (0, r.jsxs)('footer', {
 className: l.footer,
 children: [
-  d && (0, r.jsx)(o.Z, {
+  d && (0, r.jsx)(s.Z, {
     user: t,
     guildId: n,
     channelId: u,
@@ -31,7 +31,7 @@ children: [
     user: t,
     guildId: n,
     onClose: c,
-    profileType: s.y0.BITE_SIZE,
+    profileType: o.y0.BITE_SIZE,
     fullWidth: !0
   })
 ]

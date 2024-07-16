@@ -1,9 +1,9 @@
 n.d(t, {
   P: function() {
-return p;
+return f;
   },
   e: function() {
-return f;
+return p;
   }
 });
 var i = n(735250),
@@ -33,7 +33,7 @@ let T = E.ZP.getApplicationIconURL({
   }),
   h = u.default.getUser(null === (_ = a.bot) || void 0 === _ ? void 0 : _.id),
   N = m.Z.getIntegration(e.id, a.id),
-  p = e.isPrivate() && null != N ? t => {
+  f = e.isPrivate() && null != N ? t => {
     (0, r.jW)(t, async () => {
       let {
         default: t
@@ -46,25 +46,25 @@ let T = E.ZP.getApplicationIconURL({
     });
   } : null != h ? t => (0, I.Pv)(t, h, e) : void 0,
   {
-    bot: f
+    bot: p
   } = a;
-return null == f ? l : (0, i.jsx)(s.Popout, {
+return null == p ? l : (0, i.jsx)(s.Popout, {
   position: 'right',
-  preload: () => (0, c.W)(f.id, T, {
+  preload: () => (0, c.W)(p.id, T, {
     guildId: e.guild_id,
     channelId: e.id
   }),
   renderPopout: n => (0, i.jsx)(d.Z, {
     ...n,
     location: 'PrivateChannelIntegrationSystemMessage',
-    userId: f.id,
+    userId: p.id,
     guildId: e.guild_id,
     channelId: e.id,
     messageId: t.id
   }),
   children: e => (0, i.jsx)(s.Anchor, {
     ...e,
-    onContextMenu: p,
+    onContextMenu: f,
     children: l
   })
 }, o);
@@ -74,7 +74,7 @@ t.id
   ]);
 }
 
-function p(e) {
+function f(e) {
   let {
 message: t,
 channel: a,
@@ -98,7 +98,7 @@ children: (0, T.DS)({
   });
 }
 
-function f(e) {
+function p(e) {
   let {
 message: t,
 channel: a,

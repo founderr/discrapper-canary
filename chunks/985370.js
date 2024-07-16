@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(774078),
@@ -17,7 +17,7 @@ t.Z = e => {
 channel: t,
 className: n
   } = e, {
-isHovered: l,
+isHovered: s,
 setIsHovered: f,
 onMouseEnter: E,
 onMouseLeave: C,
@@ -37,12 +37,12 @@ E
 C,
 I
   ]), M = a.useCallback((e, t) => {
-g(), x(!I), (!l || I) && (null == t || t(e));
+g(), x(!I), (!s || I) && (null == t || t(e));
   }, [
 g,
 I,
-l
-  ]), b = l || I;
+s
+  ]), b = s || I;
   return (0, i.jsx)(o.Popout, {
 shouldShow: b,
 animationPosition: 'bottom',
@@ -74,7 +74,7 @@ children: e => {
     isCenterButton: !0,
     totalCooldownSeconds: N,
     remainingCooldownSeconds: v,
-    className: s()(_.controlButton, n),
+    className: l()(_.controlButton, n),
     onKeyDown: e => {
       var t, n;
       return t = e, n = a, void(t.keyCode === m.yXg.ENTER && t.keyCode === m.yXg.SPACE && M(t, n));

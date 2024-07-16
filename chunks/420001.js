@@ -2,8 +2,8 @@ n(757143);
 var r = n(911969),
   i = n(10718),
   a = n(367790),
-  o = n(895924),
-  s = n(826298),
+  s = n(895924),
+  o = n(826298),
   l = n(588468),
   u = n(695346),
   c = n(594174),
@@ -37,13 +37,13 @@ if (i.commands === f.L8.DISABLED || i.commands === f.L8.OLD_BUILT_INS || n.lengt
 let a = m(n);
 return null != a && a.cleanedQuery.length > 0;
   },
-  queryResults(e, t, n, o, l) {
+  queryResults(e, t, n, s, l) {
 if (!u.Xk.getSetting())
   return h.K;
 let c = m(n);
 if (null == c)
   return h.K;
-let d = (0, s.hV)(e, c.cleanedQuery),
+let d = (0, o.hV)(e, c.cleanedQuery),
   {
     commands: _,
     sections: E
@@ -82,19 +82,19 @@ let {
   guild: r,
   channel: i,
   query: a,
-  options: o,
-  onHover: s,
+  options: s,
+  onHover: o,
   onClick: u
 } = e;
 return (0, E.HI)({
   query: a,
   selectedIndex: n,
   autocompletes: t,
-  onHover: s,
+  onHover: o,
   onClick: u,
   titleWithQuery: p.Z.Messages.COMMANDS_MATCHING,
   titleWithoutQuery: p.Z.Messages.COMMANDS,
-  Component: o.commands === f.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
+  Component: s.commands === f.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
   getProps: e => {
     let {
       command: t,
@@ -126,16 +126,16 @@ let {
   type: r,
   options: i,
   channel: a
-} = e, s = h.Z.onSelect({
+} = e, o = h.Z.onSelect({
   results: t,
   index: n,
   type: r,
   options: i,
   channel: a,
-  location: o.Vh.SUGGESTION
+  location: s.Vh.SUGGESTION
 });
-return null == s ? null : {
-  ...s,
+return null == o ? null : {
+  ...o,
   type: f.z2.COMMAND_SUGGESTION
 };
   }

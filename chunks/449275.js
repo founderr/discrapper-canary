@@ -1,9 +1,9 @@
 var i = n(735250),
-  a = n(470079),
-  s = n(378720),
+  s = n(470079),
+  a = n(378720),
   r = n(689938),
   l = n(550808);
-class o extends a.PureComponent {
+class o extends s.PureComponent {
   render() {
 let {
   className: e,
@@ -12,7 +12,7 @@ let {
 return null == t.legalNotice ? null : (0, i.jsxs)('div', {
   className: e,
   children: [
-    (0, i.jsx)(s.Z, {
+    (0, i.jsx)(a.Z, {
       children: r.Z.Messages.APPLICATION_STORE_SECTION_TITLE_COPYRIGHT
     }),
     (0, i.jsx)('div', {

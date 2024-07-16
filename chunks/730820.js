@@ -1,57 +1,57 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return j;
   }
-}), s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(512722),
-  r = s.n(i),
-  o = s(442837),
-  l = s(481060),
-  c = s(816814),
-  d = s(240872),
-  _ = s(23645),
-  E = s(712364),
-  u = s(279837),
-  T = s(144114),
-  I = s(921801),
-  S = s(607018),
-  N = s(778764),
-  C = s(314897),
-  m = s(325067),
-  A = s(594174),
-  h = s(285952),
-  g = s(572004),
-  O = s(287880),
-  p = s(714565),
-  R = s(202858),
-  x = s(726985),
-  M = s(981631),
-  f = s(815660),
-  D = s(689938),
-  P = s(363210),
-  L = s(549856);
+}), t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(512722),
+  r = t.n(i),
+  o = t(442837),
+  l = t(481060),
+  c = t(816814),
+  d = t(240872),
+  _ = t(23645),
+  E = t(712364),
+  u = t(279837),
+  T = t(144114),
+  I = t(921801),
+  S = t(607018),
+  N = t(778764),
+  C = t(314897),
+  m = t(325067),
+  A = t(594174),
+  h = t(285952),
+  g = t(572004),
+  O = t(287880),
+  p = t(714565),
+  R = t(202858),
+  x = t(726985),
+  M = t(981631),
+  f = t(815660),
+  D = t(689938),
+  P = t(363210),
+  L = t(549856);
 
-function Z(e, t, s) {
-  return t in e ? Object.defineProperty(e, t, {
-value: s,
+function Z(e, s, t) {
+  return s in e ? Object.defineProperty(e, s, {
+value: t,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[t] = s, e;
+  }) : e[s] = t, e;
 }
 
 function b(e) {
   let {
 code: {
-  code: t,
-  consumed: s
+  code: s,
+  consumed: t
 }
-  } = e, i = ''.concat(t.substr(0, 4), '-').concat(t.substr(4)), r = a.useRef(null), o = a.useCallback(e => {
+  } = e, i = ''.concat(s.substr(0, 4), '-').concat(s.substr(4)), r = a.useRef(null), o = a.useCallback(e => {
 if ('c' === e.key && e.metaKey && g.wS) {
-  var t;
-  e.preventDefault(), e.stopPropagation(), (0, g.JG)(i), null == r || null === (t = r.current) || void 0 === t || t.focus();
+  var s;
+  e.preventDefault(), e.stopPropagation(), (0, g.JG)(i), null == r || null === (s = r.current) || void 0 === s || s.focus();
 }
   }, [i]);
   return (0, n.jsx)('li', {
@@ -64,7 +64,7 @@ children: (0, n.jsx)(l.Clickable, {
     displayOnly: !0,
     readOnly: !0,
     className: P.codeCheckbox,
-    value: s,
+    value: t,
     children: (0, n.jsx)('span', {
       className: P.code,
       children: i
@@ -78,16 +78,16 @@ class v extends a.PureComponent {
 return null == e ? '' : ''.concat('*'.repeat(e.length - 4)).concat(e.slice(-4));
   }
   renderMFASMS() {
-let e, t;
+let e, s;
 let {
-  revealed: s
+  revealed: t
 } = this.state, {
   currentUser: a,
   togglingSMS: i
 } = this.props, r = null != a.phone, o = a.hasFlag(M.xW$.MFA_SMS);
 if (r || o) {
-  let e = s ? a.phone : this.maskPhoneNumber(a.phone);
-  t = (0, n.jsxs)(l.FormText, {
+  let e = t ? a.phone : this.maskPhoneNumber(a.phone);
+  s = (0, n.jsxs)(l.FormText, {
     type: l.FormText.Types.DESCRIPTION,
     className: L.marginBottom8,
     children: [
@@ -97,7 +97,7 @@ if (r || o) {
       (0, n.jsx)(l.Anchor, {
         onClick: this.togglePhoneNumberVisibility,
         className: P.phoneRevealer,
-        children: s ? D.Z.Messages.MFA_SMS_PHONE_NUMBER_HIDE : D.Z.Messages.MFA_SMS_PHONE_NUMBER_REVEAL
+        children: t ? D.Z.Messages.MFA_SMS_PHONE_NUMBER_HIDE : D.Z.Messages.MFA_SMS_PHONE_NUMBER_REVEAL
       })
     ]
   });
@@ -115,7 +115,7 @@ if (o)
     })
   });
 else {
-  let t = (0, p.c)(a);
+  let s = (0, p.c)(a);
   e = (0, n.jsxs)(h.Z, {
     className: r ? '' : L.marginTop8,
     children: [
@@ -123,8 +123,8 @@ else {
         onClick: this.handleEnableSMS,
         size: l.Button.Sizes.SMALL,
         submitting: i,
-        disabled: null != t,
-        children: null != t ? t : D.Z.Messages.MFA_SMS_ENABLE
+        disabled: null != s,
+        children: null != s ? s : D.Z.Messages.MFA_SMS_ENABLE
       }),
       r ? (0, n.jsx)(l.Button, {
         onClick: this.handleChangePhoneNumber,
@@ -146,7 +146,7 @@ return (0, n.jsx)(I.F, {
         type: l.FormText.Types.DESCRIPTION,
         children: D.Z.Messages.MFA_SMS_AUTH_SALES_PITCH
       }),
-      t,
+      s,
       e
     ]
   })
@@ -155,8 +155,8 @@ return (0, n.jsx)(I.F, {
   renderEnabled() {
 let e;
 let {
-  backupCodes: t
-} = this.props, s = (0, n.jsx)(I.F, {
+  backupCodes: s
+} = this.props, t = (0, n.jsx)(I.F, {
   setting: x.s6.ACCOUNT_VIEW_BACKUP_CODES,
   children: (0, n.jsx)(l.Button, {
     onClick: this.sendMFABackupCodesVerificationKeyEmail,
@@ -164,8 +164,8 @@ let {
     children: D.Z.Messages.TWO_FA_VIEW_BACKUP_CODES
   })
 });
-if (t.length > 0) {
-  s = (0, n.jsx)(_.Z, {
+if (s.length > 0) {
+  t = (0, n.jsx)(_.Z, {
     fileContents: this.getDownloadFileContents,
     contentType: 'text/plain',
     fileName: 'discord_backup_codes.txt',
@@ -190,13 +190,13 @@ if (t.length > 0) {
           (0, n.jsx)(h.Z.Child, {
             children: (0, n.jsx)('ul', {
               className: P.checkboxGroup,
-              children: a(t.slice(0, t.length / 2))
+              children: a(s.slice(0, s.length / 2))
             })
           }),
           (0, n.jsx)(h.Z.Child, {
             children: (0, n.jsx)('ul', {
               className: P.checkboxGroup,
-              children: a(t.slice(t.length / 2))
+              children: a(s.slice(s.length / 2))
             })
           })
         ]
@@ -232,7 +232,7 @@ return (0, n.jsxs)(l.FormSection, {
         (0, n.jsx)(h.Z.Child, {
           wrap: !0,
           grow: 0,
-          children: s
+          children: t
         }),
         (0, n.jsxs)(h.Z.Child, {
           wrap: !0,
@@ -308,9 +308,9 @@ return O.uZ ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisa
   }
   openPhoneVerificationModal() {
 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-(0, l.openModal)(t => (0, n.jsx)(S.default, {
+(0, l.openModal)(s => (0, n.jsx)(S.default, {
   reason: T.L.USER_SETTINGS_UPDATE,
-  ...t,
+  ...s,
   ...e
 }), {
   modalKey: f.M
@@ -344,9 +344,9 @@ super(...e), Z(this, 'state', {
     actionText: D.Z.Messages.TWO_FA_BACKUP_CODES_NEXT_ACTION
   }));
 }), Z(this, 'viewBackupCodes', e => {
-  (0, l.openModal)(t => (0, n.jsx)(E.Z, {
-    ...t,
-    handleSubmit: e => c.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
+  (0, l.openModal)(s => (0, n.jsx)(E.Z, {
+    ...s,
+    handleSubmit: e => c.Z.confirmViewBackupCodes(e, !1).then(() => s.onClose()),
     maxLength: 8,
     title: D.Z.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_LABEL,
     label: D.Z.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_INPUT_LABEL,
@@ -360,21 +360,21 @@ super(...e), Z(this, 'state', {
 }), Z(this, 'getDownloadFileContents', () => {
   let e = this.props.backupCodes.map(e => {
       let {
-        consumed: t,
-        code: s
+        consumed: s,
+        code: t
       } = e;
-      return '* '.concat(s.substr(0, 4), '-').concat(s.substr(4), ' ').concat(t ? '(used)' : '');
+      return '* '.concat(t.substr(0, 4), '-').concat(t.substr(4), ' ').concat(s ? '(used)' : '');
     }).join('\r\n'),
-    t = D.Z.Messages.TWO_FA_DISCORD_BACKUP_CODES.format({
+    s = D.Z.Messages.TWO_FA_DISCORD_BACKUP_CODES.format({
       email: this.props.currentUser.email
     });
-  return ''.concat(t, '\r\n\r\n').concat(e);
+  return ''.concat(s, '\r\n\r\n').concat(e);
 }), Z(this, 'handleChangePhoneNumber', () => {
   this.openPhoneVerificationModal();
 }), Z(this, 'handleEnableSMS', () => {
   let {
     currentUser: e
-  } = this.props, t = () => {
+  } = this.props, s = () => {
     (0, l.openModal)(e => (0, n.jsx)(u.default, {
       ...e,
       handleSubmit: c.Z.enableSMS,
@@ -382,8 +382,8 @@ super(...e), Z(this, 'state', {
     }));
   };
   null == e.phone ? this.openPhoneVerificationModal({
-    onAddedPhone: t
-  }) : t();
+    onAddedPhone: s
+  }) : s();
 }), Z(this, 'handleDisableSMS', () => {
   (0, l.openModal)(e => (0, n.jsx)(u.default, {
     ...e,
@@ -396,9 +396,9 @@ super(...e), Z(this, 'state', {
 }
 
 function j(e) {
-  let t = (0, o.e7)([A.default], () => A.default.getCurrentUser());
-  r()(null != t, 'TwoFactorAuth: currentUser cannot be undefined');
-  let s = (0, o.cj)([
+  let s = (0, o.e7)([A.default], () => A.default.getCurrentUser());
+  r()(null != s, 'TwoFactorAuth: currentUser cannot be undefined');
+  let t = (0, o.cj)([
 m.Z,
 C.default
   ], () => ({
@@ -406,8 +406,8 @@ togglingSMS: m.Z.togglingSMS,
 hasTOTPEnabled: C.default.hasTOTPEnabled()
   }));
   return (0, n.jsx)(v, {
-currentUser: t,
-...s,
+currentUser: s,
+...t,
 ...e
   });
 }

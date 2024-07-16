@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(338545),
-  o = n(91192),
-  s = n(442837),
+  s = n(91192),
+  o = n(442837),
   l = n(780384),
   u = n(481060),
   c = n(287734),
@@ -44,16 +44,16 @@ applicationStream: A,
 position: x,
 closePopout: G,
 updatePosition: k
-  } = e, B = (0, s.e7)([T.Z], () => {
+  } = e, B = (0, o.e7)([T.Z], () => {
 var e;
 return null !== (e = T.Z.getChannel(null == A ? void 0 : A.channelId)) && void 0 !== e ? e : null;
   }), F = (0, D.hf)({
 quest: g,
 location: O.jn.MEMBERS_LIST
-  }), V = (0, v.tP)(g), H = (null == g ? void 0 : null === (t = g.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, Z = (null == g ? void 0 : null === (p = g.userStatus) || void 0 === p ? void 0 : p.enrolledAt) != null, Y = (null == g ? void 0 : null === (m = g.userStatus) || void 0 === m ? void 0 : m.completedAt) != null, j = (0, s.e7)([I.Z], () => I.Z.getState().theme), W = (0, l.wj)(j) ? b.BR.DARK : b.BR.LIGHT, K = (0, s.e7)([h.Z], () => h.Z.useReducedMotion), {
+  }), V = (0, v.tP)(g), H = (null == g ? void 0 : null === (t = g.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, Z = (null == g ? void 0 : null === (p = g.userStatus) || void 0 === p ? void 0 : p.enrolledAt) != null, Y = (null == g ? void 0 : null === (m = g.userStatus) || void 0 === m ? void 0 : m.completedAt) != null, j = (0, o.e7)([I.Z], () => I.Z.getState().theme), W = (0, l.wj)(j) ? b.BR.DARK : b.BR.LIGHT, K = (0, o.e7)([h.Z], () => h.Z.useReducedMotion), {
 ref: z,
 height: q
-  } = (0, E.Z)(), [Q, X] = i.useState(K), $ = (0, f.Aq)(), J = (0, o.eg)();
+  } = (0, E.Z)(), [Q, X] = i.useState(K), $ = (0, f.Aq)(), J = (0, s.eg)();
   i.useEffect(() => {
 let e = J.current;
 return null == e || e.addEventListener('scroll', G), () => {
@@ -132,10 +132,10 @@ ea = () => {
     trackGuildAndChannelMetadata: !0
   }), _.Z.open(L.oAB.INVENTORY);
 },
-eo = e => {
+es = e => {
   e.stopPropagation(), ei();
 },
-es = () => {
+eo = () => {
   if (w(A, B) && null != B)
     return (0, N._3)({
       questId: g.id,
@@ -158,7 +158,7 @@ el = Y && !H ? {
 } : w(A, B) ? {
   headerText: M.Z.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
   ctaText: M.Z.Messages.QUESTS_JOIN_ME,
-  handleClickCta: es,
+  handleClickCta: eo,
   tileAssetType: 'game'
 } : {
   headerText: M.Z.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
@@ -206,7 +206,7 @@ children: e => {
                 (0, r.jsxs)(u.Clickable, {
                   className: P.help,
                   onClick: e => {
-                    en(), eo(e);
+                    en(), es(e);
                   },
                   children: [
                     (0, r.jsx)(u.Text, {

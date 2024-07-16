@@ -1,7 +1,7 @@
 t(733860);
 var l = t(735250),
-  r = t(470079),
-  a = t(780384),
+  a = t(470079),
+  r = t(780384),
   i = t(481060),
   s = t(197344),
   o = t(526167),
@@ -20,15 +20,15 @@ function j(e) {
   let {
 movDark: n = u,
 movLight: t = c,
-mp4Dark: r = x,
-mp4Light: a = f,
+mp4Dark: a = x,
+mp4Light: r = f,
 pngDark: i = m,
 pngLight: s = N,
 webmDark: d = h,
 webmLight: j = g
   } = e, Z = (0, o.vu)(), v = [
 (0, l.jsx)('source', {
-  src: r,
+  src: a,
   type: 'video/mp4'
 }, 'mp4'),
 (0, l.jsx)('img', {
@@ -37,7 +37,7 @@ webmLight: j = g
 }, 'png')
   ], I = [
 (0, l.jsx)('source', {
-  src: a,
+  src: r,
   type: 'video/mp4'
 }, 'mp4'),
 (0, l.jsx)('img', {
@@ -77,9 +77,9 @@ onReady: c
 theme: x
   } = (0, i.useThemeContext)(), {
 reducedMotion: m
-  } = r.useContext(i.AccessibilityPreferencesContext), h = I;
+  } = a.useContext(i.AccessibilityPreferencesContext), h = I;
   null != v && (h = v);
-  let f = null !== (n = h[(0, a.wj)(x) ? p.BRd.DARK : p.BRd.LIGHT]) && void 0 !== n ? n : h[p.BRd.DARK];
+  let f = null !== (n = h[(0, r.wj)(x) ? p.BRd.DARK : p.BRd.LIGHT]) && void 0 !== n ? n : h[p.BRd.DARK];
   return (0, l.jsx)(d.Z, {
 ref: o,
 onLoadedData: c,

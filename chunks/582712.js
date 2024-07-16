@@ -4,8 +4,8 @@ return g;
   }
 }), a(47120);
 var n = a(735250),
-  l = a(470079),
-  s = a(286379),
+  s = a(470079),
+  l = a(286379),
   i = a(442837),
   r = a(481060),
   o = a(565138),
@@ -26,9 +26,9 @@ transitionState: t,
 guildId: g,
 onClose: m
   } = e, M = (0, i.e7)([S.Z], () => S.Z.getGuild(g));
-  return (l.useEffect(() => {
+  return (s.useEffect(() => {
 (0, c.Y)(g), (0, N.L)(N.Q.MODAL_VIEWED, g), u.Z.increment({
-  name: s.V.DM_SETTINGS_UPSELL_VIEW
+  name: l.V.DM_SETTINGS_UPSELL_VIEW
 });
   }, [g]), null == M) ? null : (0, n.jsx)(r.ModalRoot, {
 transitionState: t,

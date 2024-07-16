@@ -1,6 +1,6 @@
 let r, i;
 n(47120);
-var a, o, s, l, u = n(442837),
+var a, s, o, l, u = n(442837),
   c = n(433517),
   d = n(570140),
   _ = n(981631);
@@ -35,29 +35,29 @@ return p[e];
 return null != e && f.has(e);
   }
 }
-l = 'PictureInPictureStore', (s = 'displayName') in(o = m) ? Object.defineProperty(o, s, {
+l = 'PictureInPictureStore', (o = 'displayName') in(s = m) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.Z = new m(d.Z, {
+}) : s[o] = l, t.Z = new m(d.Z, {
   PICTURE_IN_PICTURE_OPEN: function(e) {
 var t, n;
 let {
   id: a,
-  component: o,
-  props: s
+  component: s,
+  props: o
 } = e;
 if (null != f.get(a))
   return;
 let l = {
   id: a,
-  component: o,
-  position: null !== (t = s.position) && void 0 !== t ? t : h,
-  props: s,
-  docked: null !== (n = s.docked) && void 0 !== n && n
+  component: s,
+  position: null !== (t = o.position) && void 0 !== t ? t : h,
+  props: o,
+  docked: null !== (n = o.docked) && void 0 !== n && n
 };
-f.set(a, l), o === _.NYg.VIDEO ? null == r && (r = a) : o === _.NYg.EMBED_IFRAME && null == i && (i = a);
+f.set(a, l), s === _.NYg.VIDEO ? null == r && (r = a) : s === _.NYg.EMBED_IFRAME && null == i && (i = a);
   },
   PICTURE_IN_PICTURE_CLOSE: function(e) {
 let {

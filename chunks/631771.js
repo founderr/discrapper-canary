@@ -3,10 +3,10 @@ n.d(t, {
 return a;
   },
   MP: function() {
-return s;
+return o;
   },
   PC: function() {
-return o;
+return s;
   },
   Qs: function() {
 return l;
@@ -43,7 +43,7 @@ treatments: [{
   }
 ]
   }),
-  o = (0, r.B)({
+  s = (0, r.B)({
 id: '2024-06_hd_streaming_desktop_upsell',
 label: 'HD Streaming Desktop Upsell',
 kind: 'user',
@@ -69,7 +69,7 @@ treatments: [{
   }
 ]
   }),
-  s = (0, r.B)({
+  o = (0, r.B)({
 id: '2024-05_file_upload_desktop_upsell',
 label: 'File Upload Desktop Upsell',
 kind: 'user',
@@ -137,13 +137,13 @@ treatments: [{
 function u(e) {
   switch (e) {
 case i.cd.UPLOAD_ERROR_UPSELL:
-  return s.getCurrentConfig({
+  return o.getCurrentConfig({
     location: 'File Upload Roadblock'
   }, {
     autoTrackExposure: !1
   }).addSocialProof;
 case i.cd.STREAM_QUALITY_UPSELL:
-  return o.getCurrentConfig({
+  return s.getCurrentConfig({
     location: 'HD Streaming Roadblock'
   }, {
     autoTrackExposure: !1

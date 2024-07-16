@@ -6,8 +6,8 @@ return u;
 var i = n(735250);
 n(470079);
 var a = n(120356),
-  l = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  l = n(442837),
   r = n(963838),
   o = n(37091),
   c = n(689938),
@@ -18,7 +18,7 @@ function u(e) {
   channelId: n,
   userId: a
 } = e,
-[u, h] = (0, s.Wu)([o.Z], () => [
+[u, h] = (0, l.Wu)([o.Z], () => [
   o.Z.getWaitingHighFive(n, a),
   o.Z.getCompletedHighFive(n, a)
 ]);
@@ -32,7 +32,7 @@ t = (0, i.jsxs)(i.Fragment, {
         id: null,
         animated: !1
       }),
-      className: l()(d.completeLeft, d.highFive)
+      className: s()(d.completeLeft, d.highFive)
     }),
     (0, i.jsx)('img', {
       alt: c.Z.Messages.CALL_HIGH_FIVE_EXCLAMATION,
@@ -41,7 +41,7 @@ t = (0, i.jsxs)(i.Fragment, {
         id: null,
         animated: !1
       }),
-      className: l()(d.completeRight, d.highFive)
+      className: s()(d.completeRight, d.highFive)
     })
   ]
 });
@@ -55,7 +55,7 @@ t = (0, i.jsx)('img', {
     id: null,
     animated: !1
   }),
-  className: l()(d.waiting, d.highFive)
+  className: s()(d.waiting, d.highFive)
 });
   }
   return (0, i.jsx)('div', {

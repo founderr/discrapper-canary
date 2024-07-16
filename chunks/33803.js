@@ -19,8 +19,8 @@ var i = n(735250),
   T = n(825829),
   h = n(226192),
   N = n(36459),
-  p = n(336197),
-  f = n(103575),
+  f = n(336197),
+  p = n(103575),
   C = n(496675),
   g = n(594174),
   S = n(702346),
@@ -71,7 +71,7 @@ showUsernamePopout: r
 function w(e, t) {
   return a.useMemo(() => {
 if (null != t)
-  return n => (0, i.jsx)(f.Z, {
+  return n => (0, i.jsx)(p.Z, {
     ...n,
     location: 'AutomodFlagToChannel',
     userId: t.id,
@@ -257,7 +257,7 @@ channel: l
   } = e, {
 avatarSrc: o,
 eventHandlers: {
-  onMouseEnter: f,
+  onMouseEnter: p,
   onMouseLeave: g
 }
   } = (0, D.m)(!0), {
@@ -296,7 +296,7 @@ W,
 l
   ]), eo = a.useCallback(e => {
 if (null != J && null != Y)
-  e.stopPropagation(), e.preventDefault(), (0, p.Z)(U.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, J));
+  e.stopPropagation(), e.preventDefault(), (0, f.Z)(U.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, J));
   }, [
 Y,
 J
@@ -307,7 +307,7 @@ l,
 s.id
   ]), ed = (0, B.L9)(Number($)), eu = null != ee, e_ = j && null != J && (null == et || !et.actions.hasOwnProperty(m.d.DELETE_USER_MESSAGE));
   return (0, i.jsx)('div', {
-onMouseEnter: f,
+onMouseEnter: p,
 onMouseLeave: g,
 children: (0, i.jsx)(S.Z, {
   className: r()(G.mainContainer, {

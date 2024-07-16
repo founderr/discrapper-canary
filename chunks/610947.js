@@ -5,8 +5,8 @@ return E;
 }), n(653041);
 var i = n(470079),
   a = n(846519),
-  l = n(692547),
-  s = n(481060),
+  s = n(692547),
+  l = n(481060),
   r = n(220082),
   o = n(979651),
   c = n(125268),
@@ -19,9 +19,9 @@ var i = n(470079),
 let f = 1000 / 60;
 
 function E(e, t, n, E) {
-  let C = (0, s.useToken)(l.Z.unsafe_rawColors.BRAND_500).hex(),
-g = (0, s.useToken)(l.Z.unsafe_rawColors.BLACK_500).hex(),
-I = (0, s.useToken)(l.Z.unsafe_rawColors.WHITE_500).hex(),
+  let C = (0, l.useToken)(s.Z.unsafe_rawColors.BRAND_500).hex(),
+g = (0, l.useToken)(s.Z.unsafe_rawColors.BLACK_500).hex(),
+I = (0, l.useToken)(s.Z.unsafe_rawColors.WHITE_500).hex(),
 x = i.useRef({}),
 T = i.useRef(new a.Xp()),
 N = i.useCallback(t => {
@@ -32,8 +32,8 @@ N = i.useCallback(t => {
       drawables: n,
       fallbackColor: i,
       linesDrawnAt: a,
-      streamerId: l,
-      channelId: s,
+      streamerId: s,
+      channelId: l,
       outlineColorDark: r,
       outlineColorLight: d
     } = e;
@@ -50,7 +50,7 @@ N = i.useCallback(t => {
       height: E
     } = h.getBoundingClientRect(), C = [];
     n.forEach(e => {
-      if (!(null != o.Z.getVoiceStateForChannel(s, e.userId))) {
+      if (!(null != o.Z.getVoiceStateForChannel(l, e.userId))) {
         C.push(e);
         return;
       }! function(e) {
@@ -59,8 +59,8 @@ N = i.useCallback(t => {
           context: n,
           canvasWidth: i,
           canvasHeight: a,
-          fallbackColor: l,
-          outlineColorDark: s,
+          fallbackColor: s,
+          outlineColorDark: l,
           outlineColorLight: r,
           linesDrawnAt: o,
           streamerId: c,
@@ -73,8 +73,8 @@ N = i.useCallback(t => {
               context: n,
               canvasWidth: i,
               canvasHeight: a,
-              fallbackColor: l,
-              outlineColorDark: s,
+              fallbackColor: s,
+              outlineColorDark: l,
               outlineColorLight: r,
               linesDrawnAt: o,
               deadDrawables: d
@@ -85,8 +85,8 @@ N = i.useCallback(t => {
               context: n,
               canvasWidth: i,
               canvasHeight: a,
-              fallbackColor: l,
-              outlineColorDark: s,
+              fallbackColor: s,
+              outlineColorDark: l,
               outlineColorLight: r,
               streamerId: c,
               deadDrawables: d
@@ -102,9 +102,9 @@ N = i.useCallback(t => {
         outlineColorLight: d,
         linesDrawnAt: a,
         deadDrawables: C,
-        streamerId: l
+        streamerId: s
       });
-    }), C.length > 0 && (0, c.fW)(C, l);
+    }), C.length > 0 && (0, c.fW)(C, s);
   }({
     canvasRef: e,
     drawables: n,

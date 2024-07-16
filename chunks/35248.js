@@ -7,8 +7,8 @@ return S;
   }
 }), t(315314), t(610138), t(216116), t(78328), t(815648), t(47120);
 var n = t(735250),
-  r = t(470079),
-  s = t(772848),
+  s = t(470079),
+  r = t(772848),
   l = t(544891),
   o = t(481060),
   i = t(355467),
@@ -17,8 +17,8 @@ var n = t(735250),
   d = t(591759),
   E = t(987209),
   _ = t(598),
-  p = t(189877),
-  m = t(362755),
+  m = t(189877),
+  p = t(362755),
   A = t(981631),
   N = t(474936),
   h = t(689938),
@@ -34,16 +34,16 @@ let {
   contextMetadata: S
 } = (0, _.usePaymentContext)(), {
   isGift: C
-} = (0, E.wD)(), [P, R] = r.useState(!1);
-return r.useEffect(() => {
+} = (0, E.wD)(), [P, R] = s.useState(!1);
+return s.useEffect(() => {
   let e = setTimeout(() => {
     var e;
     if (!P)
       R(!0), (0, i.r5)(S.loadId), ! function(e, a, t, n) {
-        let r = A.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, a, t),
+        let s = A.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, a, t),
           o = new URL(d.Z.makeUrl(A.Z5c.BILLING_LOGIN_HANDOFF)),
-          i = (0, s.Z)();
-        o.searchParams.append('handoff_key', i), o.searchParams.append('redirect_to', r), l.tn.post({
+          i = (0, r.Z)();
+        o.searchParams.append('handoff_key', i), o.searchParams.append('redirect_to', s), l.tn.post({
           url: A.ANM.HANDOFF,
           body: {
             key: i
@@ -55,7 +55,7 @@ return r.useEffect(() => {
           n();
         });
       }(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : N.Xh.PREMIUM_MONTH_TIER_2, C, S.loadId, t);
-  }, (0, p.q1)().delay ? 1000 : 0);
+  }, (0, m.q1)().delay ? 1000 : 0);
   return () => clearTimeout(e);
 }, [
   c,
@@ -64,8 +64,8 @@ return r.useEffect(() => {
   t,
   R,
   P
-]), r.useEffect(() => {
-  I === S.loadId && u === m.Y.DONE && a();
+]), s.useEffect(() => {
+  I === S.loadId && u === p.Y.DONE && a();
 }, [
   u,
   I,

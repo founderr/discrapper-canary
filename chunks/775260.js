@@ -4,16 +4,16 @@ return c;
   }
 }), n(733860);
 var i = n(470079),
-  a = n(143927),
-  s = n(169559),
+  s = n(143927),
+  a = n(169559),
   r = n(836768),
   l = n(766219),
   o = n(49898);
 
 function c() {
   var e;
-  let t = (0, s.Z)('global_discovery'),
-n = (0, r.d)(e => e.selectedServerTab, a.Z),
+  let t = (0, a.Z)('global_discovery'),
+n = (0, r.d)(e => e.selectedServerTab, s.Z),
 c = i.useMemo(() => {
   let e = [
     o.vf.GAMING,

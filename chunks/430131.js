@@ -1,30 +1,30 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return E;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(442837),
-  i = s(481060),
-  r = s(993413),
-  o = s(496675),
-  l = s(52597),
-  c = s(981631),
-  d = s(689938),
-  _ = s(981897);
+var n = t(735250);
+t(470079);
+var a = t(442837),
+  i = t(481060),
+  r = t(993413),
+  o = t(496675),
+  l = t(52597),
+  c = t(981631),
+  d = t(689938),
+  _ = t(981897);
 
 function E(e) {
   let {
-errors: t,
-pendingNick: s,
+errors: s,
+pendingNick: t,
 currentNick: E,
 username: u,
 guild: T
-  } = e, I = null != s ? s : E, S = (0, a.e7)([o.Z], () => o.Z.can(c.Plq.CHANGE_NICKNAME, T) || o.Z.can(c.Plq.MANAGE_NICKNAMES, T));
+  } = e, I = null != t ? t : E, S = (0, a.e7)([o.Z], () => o.Z.can(c.Plq.CHANGE_NICKNAME, T) || o.Z.can(c.Plq.MANAGE_NICKNAMES, T));
   return (0, n.jsxs)(r.Z, {
 title: d.Z.Messages.SERVER_NICKNAME,
-errors: t,
+errors: s,
 children: [
   (0, n.jsx)(i.TextInput, {
     value: null != I ? I : '',

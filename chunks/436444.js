@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(338545),
-  s = n(399606),
+  s = n(338545),
+  o = n(399606),
   l = n(481060),
   u = n(607070),
   c = n(906732),
@@ -35,11 +35,11 @@ setConfettiCount: g,
 setShouldFireConfetti: S,
 tier: A,
 tierMarkerAnimationPosition: N
-  } = e, v = (0, s.e7)([u.Z], () => u.Z.useReducedMotion), {
+  } = e, v = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), {
 analyticsLocations: O
   } = (0, c.ZP)(), R = h.oCV[A] - i.premiumSubscriberCount, C = A <= N || T, y = C && A <= i.premiumTier, D = C && A < i.premiumTier, L = C && A === i.premiumTier, {
 scaleFactor: b
-  } = (0, o.useSpring)({
+  } = (0, s.useSpring)({
 from: {
   scaleFactor: 0
 },
@@ -53,7 +53,7 @@ config: {
 immediate: v
   }), M = (0, r.jsxs)(r.Fragment, {
 children: [
-  (0, r.jsx)(o.animated.div, {
+  (0, r.jsx)(s.animated.div, {
     className: m.progressBarMarkerIndicator,
     style: {
       transform: b.to(e => 'translate(-50%, -50%) scale('.concat(e, ')'))

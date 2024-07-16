@@ -5,8 +5,8 @@ return N;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(392711),
-  s = n.n(l),
+  s = n(392711),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(904245),
@@ -28,19 +28,19 @@ function N(e) {
   var t;
   let {
 channel: n
-  } = e, [l, N] = a.useState('');
+  } = e, [s, N] = a.useState('');
   a.useEffect(() => {
 (0, d.FQ)('847199849233514549', !0);
   }, []);
   let v = (0, r.e7)([
   m.Z,
   p.default
-], () => !!s()(m.Z.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== p.default.getId() && e.state === g.yb.SENT && !(0, C.Z)(e))),
+], () => !!l()(m.Z.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== p.default.getId() && e.state === g.yb.SENT && !(0, C.Z)(e))),
 S = (0, r.e7)([_.default], () => _.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
 Z = null !== (t = E.ZP.useName(S)) && void 0 !== t ? t : I.Z.Messages.WAVE_DEFAULT_RECIPIENT,
 A = (0, r.e7)([u.Z], () => u.Z.getStickerById(T)),
 M = a.useCallback(async () => {
-  if (null == l || '' === l)
+  if (null == s || '' === s)
     try {
       await c.Z.sendGreetMessage(n.id, T), f.default.track(g.rMx.DM_EMPTY_ACTION, {
         channel_id: n.id,
@@ -54,22 +54,22 @@ M = a.useCallback(async () => {
 }, [
   n.id,
   n.type,
-  l
+  s
 ]),
 b = I.Z.Messages.WAVE_TO.format({
   username: Z
 }),
-R = null != l && '' !== l ? (0, i.jsx)(o.Text, {
+R = null != s && '' !== s ? (0, i.jsx)(o.Text, {
   className: x.error,
   color: 'text-danger',
   variant: 'text-sm/normal',
-  children: l
+  children: s
 }) : null;
   return v ? (0, i.jsxs)('div', {
 className: x.containerCompact,
 children: [
   (0, i.jsxs)(o.Clickable, {
-    className: null != l && '' !== l ? x.compactButtonDisabled : x.compactButton,
+    className: null != s && '' !== s ? x.compactButtonDisabled : x.compactButton,
     'aria-label': I.Z.Messages.SEND_WAVE,
     onClick: M,
     children: [
@@ -96,7 +96,7 @@ children: [
   (0, i.jsx)(o.Button, {
     className: x.button,
     onClick: M,
-    disabled: !!l,
+    disabled: !!s,
     children: b
   }),
   R

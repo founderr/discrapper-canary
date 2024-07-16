@@ -20,8 +20,8 @@ var r = n(470079),
 let a = {
 base: n(358085).isPlatformEmbedded ? void 0 : 'Discord'
   },
-  o = 0,
-  s = {
+  s = 0,
+  o = {
 count: 3,
 onlyWhenBlurred: !1,
 interval: 1000
@@ -40,9 +40,9 @@ notificationCount: e
 
 function c(e) {
   let t = {
-...s,
+...o,
 ...e,
-id: o++
+id: s++
   };
   return t.count = Math.max(t.count, t.messages.length), l.setState(e => ({
 flashQueue: [
@@ -120,7 +120,7 @@ let [e, t] = l(e => {
     ''.concat(r).concat(n),
     t[0]
   ];
-}), [n, i] = r.useState(!1), a = r.useRef(0), o = null == t ? void 0 : t.messages[a.current % t.messages.length];
+}), [n, i] = r.useState(!1), a = r.useRef(0), s = null == t ? void 0 : t.messages[a.current % t.messages.length];
 return r.useEffect(() => {
   if (null == t) {
     a.current = 0, i(!1);
@@ -138,7 +138,7 @@ return r.useEffect(() => {
     i(e => !e || (a.current += 1, !1));
   }, t.interval);
   return () => clearInterval(e);
-}, [t]), n ? o : e;
+}, [t]), n ? s : e;
   }();
   r.useEffect(() => {
 let n = t === a.base;

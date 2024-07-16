@@ -1,27 +1,27 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return N;
   }
-}), s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(772848),
-  l = s(866442),
-  c = s(692547),
-  d = s(481060),
-  _ = s(699682),
-  E = s(44315),
-  u = s(654904),
-  T = s(981631),
-  I = s(689938),
-  S = s(519829);
+}), t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(772848),
+  l = t(866442),
+  c = t(692547),
+  d = t(481060),
+  _ = t(699682),
+  E = t(44315),
+  u = t(654904),
+  T = t(981631),
+  I = t(689938),
+  S = t(519829);
 
 function N(e) {
   let {
-onChange: t,
-onClose: s,
+onChange: s,
+onClose: t,
 color: i,
 suggestedColors: N,
 disabled: C,
@@ -42,17 +42,17 @@ positionKey: Z,
 renderPopout: e => (0, n.jsx)(d.CustomColorPicker, {
   ...e,
   value: i,
-  onChange: t,
+  onChange: s,
   suggestedColors: N,
   middle: A,
   footer: h,
   showEyeDropper: g
 }),
-onRequestClose: s,
+onRequestClose: t,
 children: e => {
   let {
-    onClick: t,
-    ...s
+    onClick: s,
+    ...t
   } = e;
   return (0, n.jsxs)('div', {
     ref: O,
@@ -61,9 +61,9 @@ children: e => {
     }),
     children: [
       (0, n.jsx)(d.Clickable, {
-        ...s,
+        ...t,
         tabIndex: C ? -1 : 0,
-        onClick: C ? T.dG4 : t,
+        onClick: C ? T.dG4 : s,
         style: {
           backgroundColor: M,
           borderColor: f

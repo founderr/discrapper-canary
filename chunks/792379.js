@@ -5,8 +5,8 @@ return L;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(597312),
-  s = n(727637),
+  s = n(597312),
+  l = n(727637),
   r = n(410030),
   o = n(100527),
   c = n(906732),
@@ -39,7 +39,7 @@ user: t,
 channel: n
   } = e, L = __OVERLAY__ || !(0, d.Z)(t.id), {
 analyticsLocations: P
-  } = (0, c.ZP)(o.Z.PROFILE_PANEL), O = (0, m.ZP)(t.id), y = (0, r.ZP)(), D = a.useRef(null), k = (0, s.Z)(D), U = e => {
+  } = (0, c.ZP)(o.Z.PROFILE_PANEL), O = (0, m.ZP)(t.id), y = (0, r.ZP)(), D = a.useRef(null), k = (0, l.Z)(D), U = e => {
 (0, Z.openUserProfileModal)({
   sourceAnalyticsLocations: P,
   userId: t.id,
@@ -61,7 +61,7 @@ children: (0, i.jsx)(p.Mt, {
     themeOverride: y,
     className: R.container,
     children: [
-      (0, i.jsxs)(l.u2, {
+      (0, i.jsxs)(s.u2, {
         children: [
           (0, i.jsx)(S.Z, {
             profileType: M.y0.PANEL,

@@ -4,9 +4,9 @@ return h;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(481060),
   o = n(55935),
   c = n(981631),
@@ -29,11 +29,11 @@ return (0, i.jsx)('div', {
 let {
   circle: t,
   smallHeader: n,
-  text: a,
-  className: s
+  text: s,
+  className: a
 } = e;
 return (0, i.jsxs)('div', {
-  className: r()(u.recommendationReason, s),
+  className: r()(u.recommendationReason, a),
   children: [
     t,
     (0, i.jsxs)('div', {
@@ -45,14 +45,14 @@ return (0, i.jsxs)('div', {
         }) : null,
         (0, i.jsx)('div', {
           className: u.text,
-          children: a
+          children: s
         })
       ]
     })
   ]
 });
   };
-class h extends a.Component {
+class h extends s.Component {
   render() {
 let {
   reason: e,

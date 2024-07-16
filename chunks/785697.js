@@ -7,10 +7,10 @@ return c;
   }
 });
 var i = n(442837),
-  a = n(818083),
-  s = n(496675),
+  s = n(818083),
+  a = n(496675),
   r = n(981631);
-let l = (0, a.B)({
+let l = (0, s.B)({
   kind: 'guild',
   id: '2022-11_default_disable_mass_mention',
   label: 'Disable mass mentions for communities by default',
@@ -37,9 +37,9 @@ autoTrackExposure: !0
 
 function c(e) {
   var t;
-  let n = (0, i.e7)([s.Z], () => s.Z.can(r.Plq.MANAGE_GUILD, e)),
+  let n = (0, i.e7)([a.Z], () => a.Z.can(r.Plq.MANAGE_GUILD, e)),
 {
-  enabled: a
+  enabled: s
 } = l.useExperiment({
   guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : r.lds,
   location: 'dd4beb_3'
@@ -49,5 +49,5 @@ function c(e) {
   if (null == e)
 return !1;
   let o = e.hasFeature(r.oNc.COMMUNITY);
-  return n && o && a;
+  return n && o && s;
 }

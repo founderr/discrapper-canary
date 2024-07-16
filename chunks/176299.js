@@ -4,9 +4,9 @@ return eF;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(266067),
   o = n(990547),
   c = n(608787),
@@ -58,8 +58,8 @@ var i = n(735250),
   et = n(271383),
   en = n(430824),
   ei = n(944486),
-  ea = n(933429),
-  es = n(823379),
+  es = n(933429),
+  ea = n(823379),
   er = n(709054),
   el = n(792125),
   eo = n(409292),
@@ -139,13 +139,13 @@ let {
   let e = ei.Z.getChannelId();
   return ee.Z.getChannel(e);
 }), {
-  guildId: a,
-  channelId: s,
+  guildId: s,
+  channelId: a,
   messageId: r
-} = t.params, l = (0, u.e7)([en.Z], () => en.Z.getGuild(a)), o = (0, u.e7)([et.ZP], () => null == a ? null : et.ZP.getSelfMember(a)), c = (0, u.e7)([G.Z], () => {
-  if (null == a)
+} = t.params, l = (0, u.e7)([en.Z], () => en.Z.getGuild(s)), o = (0, u.e7)([et.ZP], () => null == s ? null : et.ZP.getSelfMember(s)), c = (0, u.e7)([G.Z], () => {
+  if (null == s)
     return;
-  let e = G.Z.getData(a);
+  let e = G.Z.getData(s);
   if ((null == e ? void 0 : e.type) === k.z.SERVER_SHOP)
     switch (e.initialTab) {
       case 'role_subscriptions':
@@ -155,55 +155,55 @@ let {
       default:
         return;
     }
-}), d = (0, N.C4)(a, 'channel_renderer');
-if (null != a && null != s && (0, em.AB)(s))
-  switch (s) {
+}), d = (0, N.C4)(s, 'channel_renderer');
+if (null != s && null != a && (0, em.AB)(a))
+  switch (a) {
     case em.oC.ROLE_SUBSCRIPTIONS:
       return d ? (0, i.jsx)(ef, {
-        guildId: a,
+        guildId: s,
         initialTab: A.y.GUILD_ROLE_SUBSCRIPTIONS
       }) : (0, i.jsx)(D.Z, {
-        guildId: a
+        guildId: s
       });
     case em.oC.GUILD_SHOP:
       return (0, i.jsx)(ef, {
-        guildId: a,
+        guildId: s,
         productId: r,
         initialTab: c
       });
     case em.oC.MEMBER_APPLICATIONS:
       return (0, i.jsx)(eC, {
-        guildId: a
+        guildId: s
       });
     case em.oC.GUILD_HOME:
       return (0, i.jsx)(eN, {
-        guildId: a
+        guildId: s
       });
     case em.oC.CHANNEL_BROWSER:
       return (0, i.jsx)(ev, {
-        guildId: a,
+        guildId: s,
         selectedSection: eg.l7.BROWSE
       });
     case em.oC.GUILD_ONBOARDING:
       return (0, i.jsx)(eZ, {
-        guildId: a
+        guildId: s
       });
     case em.oC.CUSTOMIZE_COMMUNITY:
       return (0, i.jsx)(ev, {
-        guildId: a,
+        guildId: s,
         selectedSection: eg.l7.CUSTOMIZE
       });
     case em.oC.MEMBER_SAFETY:
       return (0, i.jsx)(eA, {
-        guildId: a
+        guildId: s
       });
     default:
-      (0, es.vE)(s);
+      (0, ea.vE)(a);
   }
 if ((0, P.p3)(l, o))
   return (0, i.jsx)(M.Z, {
-    guildId: a,
-    channelId: s
+    guildId: s,
+    channelId: a
   });
 if ((null == n ? void 0 : n.type) === eI.d4z.GUILD_STORE) {
   let e = er.default.cast(t.params.messageId);
@@ -214,17 +214,17 @@ if ((null == n ? void 0 : n.type) === eI.d4z.GUILD_STORE) {
 }
 return (0, i.jsx)(S.Z, {});
   },
-  eO = a.memo(function() {
+  eO = s.memo(function() {
 let {
   guildId: e,
   channelId: t
-} = (0, X.Z)(), n = (0, u.e7)([ei.Z], () => null != t ? t : ei.Z.getChannelId(e)), a = (0, L.Y$)('sidebar');
+} = (0, X.Z)(), n = (0, u.e7)([ei.Z], () => null != t ? t : ei.Z.getChannelId(e)), s = (0, L.Y$)('sidebar');
 if (function() {
     return window.location.pathname.startsWith(eI.Z5c.GLOBAL_DISCOVERY);
   }() || function() {
     return window.location.pathname.startsWith(eI.Z5c.GUILD_DISCOVERY) || (0, q.OG)();
   }())
-  return a ? (0, i.jsx)(R._, {}) : (0, i.jsx)(Z.Z, {});
+  return s ? (0, i.jsx)(R._, {}) : (0, i.jsx)(Z.Z, {});
 return null != e ? (0, i.jsx)(y.Z, {
   selectedChannelId: n,
   guildId: e
@@ -339,19 +339,19 @@ function eV(e) {
   let {
 hasNotice: t,
 sidebarTheme: n,
-hideSidebar: a
+hideSidebar: s
   } = e;
   (0, h.t)(!0);
-  let s = 'app view user trigger debugging';
+  let a = 'app view user trigger debugging';
   E.R6.useExperiment({
-location: s
+location: a
   }, {
 autoTrackExposure: !1
   }), E.R6.trackExposure({
-location: s
+location: a
   });
   let l = (0, u.e7)([T.Z], () => T.Z.isFullscreenInContext());
-  return a ? null : (0, i.jsxs)('div', {
+  return s ? null : (0, i.jsxs)('div', {
 className: r()(eT.sidebar, (0, el.Q)(n), {
   [eT.hasNotice]: t,
   [eT.fullWidth]: d.tq,
@@ -388,17 +388,17 @@ children: [
 
 function eF() {
   var e;
-  let t = (0, u.e7)([ea.Z], () => ea.Z.hasNotice()),
+  let t = (0, u.e7)([es.Z], () => es.Z.hasNotice()),
 n = (0, u.e7)([$.Z], () => $.Z.darkSidebar ? eI.BRd.DARK : void 0),
-s = function() {
-  let [e, t] = a.useState(() => window.location.pathname.startsWith(eI.Z5c.GUILD_MEMBER_VERIFICATION('')));
-  return a.useEffect(() => J.Z.addRouteChangeListener(e => {
+a = function() {
+  let [e, t] = s.useState(() => window.location.pathname.startsWith(eI.Z5c.GUILD_MEMBER_VERIFICATION('')));
+  return s.useEffect(() => J.Z.addRouteChangeListener(e => {
     t(e.pathname.startsWith(eI.Z5c.GUILD_MEMBER_VERIFICATION('')));
   }), []), e;
 }(),
 r = function() {
-  let [e, t] = a.useState(() => window.location.pathname.startsWith(eI.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB('')));
-  return a.useEffect(() => J.Z.addRouteChangeListener(e => {
+  let [e, t] = s.useState(() => window.location.pathname.startsWith(eI.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB('')));
+  return s.useEffect(() => J.Z.addRouteChangeListener(e => {
     t(e.pathname.startsWith(eI.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB('')));
   }), []), e;
 }(),
@@ -418,7 +418,7 @@ h = (0, l.$B)([
   eI.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')
 ]),
 m = (null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === em.oC.GUILD_ONBOARDING,
-g = a.useCallback(() => B.Z.openSidebar(), []);
+g = s.useCallback(() => B.Z.openSidebar(), []);
   return (0, i.jsx)(i.Fragment, {
 children: (0, i.jsxs)('div', {
   className: eT.container,
@@ -440,7 +440,7 @@ children: (0, i.jsxs)('div', {
               (0, i.jsx)(eV, {
                 hasNotice: t,
                 sidebarTheme: n,
-                hideSidebar: s || r || c || _ || m || !E
+                hideSidebar: a || r || c || _ || m || !E
               }),
               (0, i.jsx)(I.Z.Provider, {
                 value: g,

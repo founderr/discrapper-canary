@@ -5,8 +5,8 @@ return p;
 });
 var i = n(470079),
   a = n(442837),
-  l = n(661111),
-  s = n(706454),
+  s = n(661111),
+  l = n(706454),
   r = n(306680),
   o = n(626135),
   c = n(802098),
@@ -16,7 +16,7 @@ var i = n(470079),
 
 function p(e) {
   let t = (0, d.Z)(e),
-n = (0, a.e7)([s.default], () => s.default.locale),
+n = (0, a.e7)([l.default], () => l.default.locale),
 p = (0, a.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : '', n), [
   t,
   n
@@ -27,7 +27,7 @@ f = (0, a.e7)([r.ZP], () => r.ZP.getUnreadCount(e), [e]);
   i.useEffect(() => {
 _.current = Date.now();
   }, [m]), i.useEffect(() => {
-m && null != t && l.Z.fetchChangelog(t, n, !0);
+m && null != t && s.Z.fetchChangelog(t, n, !0);
   }, [
 t,
 n,

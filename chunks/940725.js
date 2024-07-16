@@ -5,8 +5,8 @@ return h;
 }), n(47120);
 var i = n(704215),
   a = n(442837),
-  l = n(645041),
-  s = n(271383),
+  s = n(645041),
+  l = n(271383),
   r = n(430824),
   o = n(594174),
   c = n(353093),
@@ -18,36 +18,36 @@ function h(e, t) {
 h = (0, a.e7)([
   o.default,
   r.Z,
-  s.ZP
+  l.ZP
 ], () => function(e) {
   let [t, n, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [
     o.default,
     r.Z,
-    s.ZP
+    l.ZP
   ];
   if (null == e)
     return !1;
   let a = n.getGuild(e);
   if (null == a || !(0, c.EJ)(a) || null == a.clan)
     return !1;
-  let l = t.getCurrentUser();
-  if (null == l)
+  let s = t.getCurrentUser();
+  if (null == s)
     return !1;
-  let d = i.getMember(e, l.id);
-  if (null == l.primaryGuild)
+  let d = i.getMember(e, s.id);
+  if (null == s.primaryGuild)
     return !0;
   let u = (null == d ? void 0 : d.joinedAt) != null ? new Date(d.joinedAt) : null,
     h = null != u && Date.now() - u.getTime() > 259200000,
     {
       identityGuildId: p,
       identityEnabled: m
-    } = l.primaryGuild;
+    } = s.primaryGuild;
   return null != p && null == m ? e === p : null == p && null == m ? h : (p !== e || !1 !== m) && null != p && !1 === m && h;
 }(e, [
   o.default,
   r.Z,
-  s.ZP
+  l.ZP
 ]), [e]),
-p = (0, l.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : u.lds);
+p = (0, s.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : u.lds);
   return n && h && !p;
 }

@@ -1,6 +1,6 @@
 n(47120);
-var i, a = n(735250),
-  s = n(470079),
+var i, s = n(735250),
+  a = n(470079),
   r = n(120356),
   l = n.n(r),
   o = n(622535),
@@ -31,7 +31,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class O extends(i = s.PureComponent) {
+class O extends(i = a.PureComponent) {
   getDefaultSplashURL(e, t) {
 if (t)
   return Z;
@@ -48,7 +48,7 @@ let {
   guild: t,
   className: n,
   theme: i,
-  onTagClick: s
+  onTagClick: a
 } = this.props, {
   loaded: r,
   hasBeenSeen: d,
@@ -89,25 +89,25 @@ g.N.trackExposure({
   location: 'de1ef6_4'
 });
 let U = E.Sb.getSetting();
-return (0, a.jsx)(o.$, {
+return (0, s.jsx)(o.$, {
   active: !A,
   onChange: this.setIsVisible,
   threshold: 0.1,
-  children: A ? (0, a.jsx)(o.$, {
+  children: A ? (0, s.jsx)(o.$, {
     onChange: this.handleVisibilityChange,
     active: !d,
     threshold: 0.55,
-    children: (0, a.jsxs)('div', {
+    children: (0, s.jsxs)('div', {
       className: l()(n, {
         [N.loaded]: r,
         [N.loading]: !r
       }),
       children: [
-        v ? (0, a.jsx)(c.Spinner, {
+        v ? (0, s.jsx)(c.Spinner, {
           type: c.Spinner.Type.PULSING_ELLIPSIS,
           className: N.spinner
         }) : null,
-        (0, a.jsxs)(c.Clickable, {
+        (0, s.jsxs)(c.Clickable, {
           onClick: this.handleClickView,
           className: l()(N.card, {
             [N.submitting]: v,
@@ -115,12 +115,12 @@ return (0, a.jsx)(o.$, {
           }),
           onContextMenu: this.handleContextMenu,
           children: [
-            (0, a.jsxs)('div', {
+            (0, s.jsxs)('div', {
               className: N.cardHeader,
               children: [
-                (0, a.jsx)('div', {
+                (0, s.jsx)('div', {
                   className: N.splash,
-                  children: (0, a.jsx)('img', {
+                  children: (0, s.jsx)('img', {
                     src: M,
                     alt: '',
                     className: l()(N.splashImage, {
@@ -131,25 +131,25 @@ return (0, a.jsx)(o.$, {
                     })
                   })
                 }),
-                U || j ? (0, a.jsx)('div', {
+                U || j ? (0, s.jsx)('div', {
                   className: N.actionButtons,
-                  children: (0, a.jsx)(S.Z, {
+                  children: (0, s.jsx)(S.Z, {
                     guild: t
                   })
                 }) : null,
-                (0, a.jsx)('div', {
+                (0, s.jsx)('div', {
                   className: N.guildIcon,
-                  children: (0, a.jsx)(h.ZP, {
+                  children: (0, s.jsx)(h.ZP, {
                     mask: h.ZP.Masks.SQUIRCLE,
                     width: 48,
                     height: 48,
-                    children: (0, a.jsx)('div', {
+                    children: (0, s.jsx)('div', {
                       className: N.iconMask,
-                      children: (0, a.jsx)(h.ZP, {
+                      children: (0, s.jsx)(h.ZP, {
                         mask: h.ZP.Masks.SQUIRCLE,
                         width: 40,
                         height: 40,
-                        children: (0, a.jsx)('img', {
+                        children: (0, s.jsx)('img', {
                           src: D,
                           alt: '',
                           className: N.avatar
@@ -160,46 +160,46 @@ return (0, a.jsx)(o.$, {
                 })
               ]
             }),
-            (0, a.jsxs)('div', {
+            (0, s.jsxs)('div', {
               className: N.guildInfo,
               children: [
-                (0, a.jsxs)('div', {
+                (0, s.jsxs)('div', {
                   className: N.title,
                   children: [
-                    (0, a.jsx)(u.Z, {
+                    (0, s.jsx)(u.Z, {
                       className: N.guildBadge,
                       guild: t,
                       tooltipColor: c.Tooltip.Colors.PRIMARY
                     }),
-                    (0, a.jsx)(c.Heading, {
+                    (0, s.jsx)(c.Heading, {
                       variant: 'heading-md/semibold',
                       className: N.guildName,
                       children: Z
                     })
                   ]
                 }),
-                (0, a.jsx)(c.Text, {
+                (0, s.jsx)(c.Text, {
                   className: N.description,
                   variant: 'text-sm/normal',
                   color: 'header-secondary',
                   children: L
                 }),
-                y && null != x && null != s && (0, a.jsx)(T.F, {
+                y && null != x && null != a && (0, s.jsx)(T.F, {
                   tags: x,
-                  onTagClick: e => s(e, t.id),
+                  onTagClick: e => a(e, t.id),
                   guildId: t.id,
                   section: m.P1.POPULAR
                 }),
-                (0, a.jsxs)('div', {
+                (0, s.jsxs)('div', {
                   className: N.memberInfo,
                   children: [
-                    null != O && (0, a.jsxs)('div', {
+                    null != O && (0, s.jsxs)('div', {
                       className: N.memberCount,
                       children: [
-                        (0, a.jsx)('div', {
+                        (0, s.jsx)('div', {
                           className: N.dotOnline
                         }),
-                        (0, a.jsx)(c.Text, {
+                        (0, s.jsx)(c.Text, {
                           variant: 'text-xs/normal',
                           color: 'header-secondary',
                           children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
@@ -208,13 +208,13 @@ return (0, a.jsx)(o.$, {
                         })
                       ]
                     }),
-                    null != R && (0, a.jsxs)('div', {
+                    null != R && (0, s.jsxs)('div', {
                       className: N.memberCount,
                       children: [
-                        (0, a.jsx)('div', {
+                        (0, s.jsx)('div', {
                           className: N.dotOffline
                         }),
-                        (0, a.jsx)(c.Text, {
+                        (0, s.jsx)(c.Text, {
                           variant: 'text-xs/normal',
                           color: 'header-secondary',
                           children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
@@ -231,7 +231,7 @@ return (0, a.jsx)(o.$, {
         })
       ]
     })
-  }) : (0, a.jsx)('div', {
+  }) : (0, s.jsx)('div', {
     className: l()(N.card, {
       [N.cardWithTags]: y
     })
@@ -277,7 +277,7 @@ super(...e), L(this, 'state', {
     let {
       default: e
     } = await Promise.resolve().then(n.bind(n, 455839));
-    return t => (0, a.jsx)(e, {
+    return t => (0, s.jsx)(e, {
       ...t,
       guild: this.props.guild
     });
@@ -289,6 +289,6 @@ super(...e), L(this, 'state', {
 });
   }
 }
-L(O, 'Placeholder', e => (0, a.jsx)('div', {
+L(O, 'Placeholder', e => (0, s.jsx)('div', {
   className: l()(e.className, N.cardPlaceholder)
 })), t.Z = O;

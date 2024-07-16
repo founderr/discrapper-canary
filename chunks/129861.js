@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(442837),
-  s = n(481060),
+  s = n(442837),
+  o = n(481060),
   l = n(385499),
   u = n(813549),
   c = n(246946),
@@ -15,7 +15,7 @@ let f = e => {
 primary: t,
 secondary: n,
 botType: i,
-botVerified: o,
+botVerified: s,
 discriminatorClass: u,
 className: c,
 usernameClass: d,
@@ -26,7 +26,7 @@ showStreamerModeTooltip: p
   return (0, r.jsxs)('div', {
 className: a()(E.info, c),
 children: [
-  (0, r.jsx)(s.Tooltip, {
+  (0, r.jsx)(o.Tooltip, {
     text: _.Z.Messages.STREAMER_MODE_ENABLED,
     shouldShow: p,
     'aria-label': !!p && void 0,
@@ -46,7 +46,7 @@ children: [
   null != i && (0, r.jsx)(l.Z, {
     type: i,
     className: a()(E.infoSpacing, h),
-    verified: o
+    verified: s
   })
 ]
   });
@@ -57,12 +57,12 @@ user: t,
 nick: n,
 forceUsername: i,
 showAccountIdentifier: a,
-overrideDiscriminator: s,
+overrideDiscriminator: o,
 forcePomelo: l,
 hideBotTag: _ = !1,
 hideDiscriminator: E = !1,
 ...h
-  } = e, p = (0, o.e7)([c.Z], () => c.Z.hidePersonalInformation), m = p || E || t.isNonUserBot(), I = t.toString(), T = _ ? null : function(e) {
+  } = e, p = (0, s.e7)([c.Z], () => c.Z.hidePersonalInformation), m = p || E || t.isNonUserBot(), I = t.toString(), T = _ ? null : function(e) {
 if (e.isSystemUser())
   return u.J.SYSTEM_DM;
 if (e.isClyde())
@@ -89,7 +89,7 @@ return (0, r.jsx)(f, {
 name: A,
 botType: T,
 botVerified: g,
-discriminator: m || A !== I ? null : null != s ? s : t.discriminator,
+discriminator: m || A !== I ? null : null != o ? o : t.discriminator,
 ...h
   });
 };

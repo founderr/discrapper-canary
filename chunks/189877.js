@@ -7,8 +7,8 @@ return i;
   }
 });
 var n = t(818083),
-  r = t(358085),
-  s = t(474936);
+  s = t(358085),
+  r = t(474936);
 let l = (0, n.B)({
   id: '2023-07_checkout_optimization_browser_autofill',
   label: 'Checkout Optimization Browser Autofill',
@@ -45,8 +45,8 @@ autoTrackExposure: !0
 }
 
 function i(e, a, t) {
-  return (0, r.isDesktop)() && null != e && [
-s.Si.TIER_0,
-s.Si.TIER_2
+  return (0, s.isDesktop)() && null != e && [
+r.Si.TIER_0,
+r.Si.TIER_2
   ].includes(e) && !a && null == t;
 }

@@ -11,8 +11,8 @@ return p;
 }), n(47120), n(653041);
 var i = n(735250),
   a = n(470079),
-  l = n(392711),
-  s = n(933546),
+  s = n(392711),
+  l = n(933546),
   r = n(314897),
   o = n(70956),
   c = n(823379),
@@ -45,24 +45,24 @@ return () => {
   participantTileWidth: d
 } = a.useMemo(() => {
   let n = Date.now(),
-    i = (0, l.sortBy)(t, e => function(e) {
+    i = (0, s.sortBy)(t, e => function(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
       switch (e.type) {
         case u.fO.ACTIVITY:
           return '\0'.concat(e.sortKey);
         case u.fO.HIDDEN_STREAM:
         case u.fO.STREAM:
-          return '\x01'.concat((0, s.Z)(e.userNick, e.user));
+          return '\x01'.concat((0, l.Z)(e.userNick, e.user));
         case u.fO.USER:
           var n;
           let i = '\x05';
           return e.speaking ? i = '\x02' : t - e.lastSpoke < _ ? i = '\x03' : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfVideo) && (i = '\x04'), ''.concat(i).concat(function(e) {
             let t = String(8640000000000000).length;
             return String(8640000000000000 - e).padStart(t, '0');
-          }(e.lastSpoke)).concat((0, s.Z)(e.userNick, e.user));
+          }(e.lastSpoke)).concat((0, l.Z)(e.userNick, e.user));
       }
     }(e, n)),
-    [a, o] = (0, l.partition)(i, u.Io),
+    [a, o] = (0, s.partition)(i, u.Io),
     d = a.findIndex(f),
     h = null; -
   1 !== d && (h = a[d], a.splice(d, 1));
@@ -89,7 +89,7 @@ return () => {
     }
   }
   let N = T.filter(c.lm),
-    v = (0, l.keyBy)((0, l.range)(N.length), e => N[e].id);
+    v = (0, s.keyBy)((0, s.range)(N.length), e => N[e].id);
   r.current = v;
   let S = [
     ...I,
@@ -115,8 +115,8 @@ function C(e) {
 participants: t,
 participantTileWidth: n,
 selectedParticipantId: a,
-onDoubleClick: l,
-onContextMenu: s,
+onDoubleClick: s,
+onContextMenu: l,
 onClick: r,
 channel: o,
 inCall: c,
@@ -141,8 +141,8 @@ children: t.map(e => {
       className: h.tile,
       fit: d.BP.COVER,
       onClick: r,
-      onDoubleClick: l,
-      onContextMenu: s,
+      onDoubleClick: s,
+      onContextMenu: l,
       width: t ? m : n,
       inCall: c,
       paused: p,

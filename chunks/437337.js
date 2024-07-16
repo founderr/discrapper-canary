@@ -6,8 +6,8 @@ return h;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(338545),
+  s = n.n(a),
+  o = n(338545),
   l = n(692547),
   u = n(186325),
   c = n(84735),
@@ -45,7 +45,7 @@ let {
 } = i.useContext(u.S), g = i.useRef(null), [S, A] = i.useState(!1), N = (0, d.d)(l.Z.unsafe_rawColors.PRIMARY_400).spring(), v = (0, d.d)(l.Z.unsafe_rawColors.GREEN_360).spring(), {
   state: O,
   opacity: R
-} = (0, s.useSpring)({
+} = (0, o.useSpring)({
   config: E,
   opacity: h ? 0.3 : 1,
   state: S ? a ? 0.7 : 0.3 : a ? 1 : 0
@@ -54,8 +54,8 @@ return (0, r.jsx)(c.t, {
   ...m,
   within: !0,
   offset: -2,
-  children: (0, r.jsxs)(s.animated.div, {
-    className: o()(_.container, p, {
+  children: (0, r.jsxs)(o.animated.div, {
+    className: s()(_.container, p, {
       [_.checked]: a,
       [_.disabled]: h
     }),
@@ -72,7 +72,7 @@ return (0, r.jsx)(c.t, {
       })
     },
     children: [
-      (0, r.jsxs)(s.animated.svg, {
+      (0, r.jsxs)(o.animated.svg, {
         className: _.slider,
         viewBox: '0 0 28 20',
         preserveAspectRatio: 'xMinYMid meet',
@@ -94,7 +94,7 @@ return (0, r.jsx)(c.t, {
         },
         'aria-hidden': !0,
         children: [
-          (0, r.jsx)(s.animated.rect, {
+          (0, r.jsx)(o.animated.rect, {
             fill: 'white',
             x: O.to({
               range: [
@@ -161,7 +161,7 @@ return (0, r.jsx)(c.t, {
                   n
                 ]
               }),
-              o = i ? [
+              s = i ? [
                 f.X.TOP,
                 f.X.TOP,
                 f.CHECK.TOP,
@@ -187,7 +187,7 @@ return (0, r.jsx)(c.t, {
               viewBox: '0 0 20 20',
               fill: 'none',
               children: [
-                (0, r.jsx)(s.animated.path, {
+                (0, r.jsx)(o.animated.path, {
                   fill: a,
                   d: e.to({
                     range: [
@@ -196,10 +196,10 @@ return (0, r.jsx)(c.t, {
                       0.7,
                       1
                     ],
-                    output: o
+                    output: s
                   })
                 }),
-                (0, r.jsx)(s.animated.path, {
+                (0, r.jsx)(o.animated.path, {
                   fill: a,
                   d: e.to({
                     range: [

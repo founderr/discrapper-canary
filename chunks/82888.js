@@ -5,8 +5,8 @@ return p;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(399606),
-  s = n(110924),
+  s = n(399606),
+  l = n(110924),
   r = n(595519),
   o = n(566620),
   c = n(317381),
@@ -22,7 +22,7 @@ renderExternalHeader: n
 connectedChannelId: p,
 connectedActivity: m,
 activityPanelMode: _
-  } = (0, l.cj)([c.ZP], () => {
+  } = (0, s.cj)([c.ZP], () => {
 var e;
 let t = c.ZP.getConnectedActivityChannelId();
 return {
@@ -30,7 +30,7 @@ return {
   connectedActivity: null != t && null !== (e = c.ZP.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0,
   activityPanelMode: c.ZP.getActivityPanelMode()
 };
-  }), f = (0, r.NX)(p, !1), E = (0, s.Z)(p);
+  }), f = (0, r.NX)(p, !1), E = (0, l.Z)(p);
   if (a.useEffect(() => {
   null != p && null == E && (0, o.gC)(h.MI.RESIZABLE);
 }, [

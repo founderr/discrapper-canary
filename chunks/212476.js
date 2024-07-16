@@ -1,13 +1,13 @@
 n.d(t, {
   c: function() {
-return s;
+return a;
   }
 });
 var i = n(470079),
-  a = n(444317);
+  s = n(444317);
 
-function s() {
-  let e = i.useRef(new a.Z()),
+function a() {
+  let e = i.useRef(new s.Z()),
 t = i.useCallback(t => {
   e.current.handleScroll(t);
 }, []);

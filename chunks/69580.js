@@ -9,10 +9,10 @@ return et;
 return ee;
   },
   getOAuth2AuthorizeProps: function() {
-return es;
+return eo;
   },
   openOAuth2Modal: function() {
-return eo;
+return es;
   },
   openOAuth2ModalWithCreateGuildModal: function() {
 return ea;
@@ -22,9 +22,9 @@ return er;
   }
 }), n(47120), n(411104);
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(266067),
   c = n(729594),
   d = n(373793),
@@ -73,7 +73,7 @@ let J = 'oauth2-authorize-header-id';
 
 function ee() {
   let e = (0, u.TH)(),
-t = o.useMemo(() => (0, w.y)(e.search), [e.search]);
+t = s.useMemo(() => (0, w.y)(e.search), [e.search]);
   return (0, N.Z)(), (0, a.jsx)(K.G, {
 children: (0, a.jsx)(en, {
   ...t,
@@ -89,8 +89,8 @@ transitionState: t,
   } = e, {
 header: r,
 body: i,
-footer: o,
-nextStep: s,
+footer: s,
+nextStep: o,
 appDetails: u
   } = er({
 ...n,
@@ -100,13 +100,13 @@ className: $.content,
 children: [
   r,
   i,
-  null == s ? u : null
+  null == o ? u : null
 ]
   });
   return (0, a.jsx)(K.j, {
 transitionState: t,
 'aria-labelledby': J,
-footer: o,
+footer: s,
 children: (0, a.jsx)('div', {
   className: l()($.authorize, {
     [$.inApp]: n.inApp
@@ -126,8 +126,8 @@ scrollable: t,
   } = e, {
 header: r,
 body: i,
-footer: o,
-nextStep: s,
+footer: s,
+nextStep: o,
 appDetails: u
   } = er(n), c = (0, a.jsxs)(a.Fragment, {
 children: [
@@ -136,10 +136,10 @@ children: [
     children: [
       r,
       i,
-      null == s ? u : null
+      null == o ? u : null
     ]
   }),
-  o
+  s
 ]
   });
   return t ? (0, a.jsxs)('div', {
@@ -153,7 +153,7 @@ children: [
       children: c
     })
   }),
-  o
+  s
 ]
   }) : (0, a.jsx)('div', {
 className: l()($.authorize, {
@@ -166,7 +166,7 @@ children: (0, a.jsx)('div', {
 }
 
 function er(e) {
-  var t, n, r, i, s;
+  var t, n, r, i, o;
   let l, p, m, N, R, y, {
   clientId: K,
   responseType: ee,
@@ -175,8 +175,8 @@ function er(e) {
   codeChallengeMethod: er,
   state: ei,
   nonce: ea,
-  prompt: eo,
-  authorizations: es,
+  prompt: es,
+  authorizations: eo,
   scopes: el,
   permissions: eu,
   guildId: ec,
@@ -194,16 +194,16 @@ function er(e) {
   onClose: eA,
   disclosures: eN
 } = e,
-ev = null != e_ ? null == es ? void 0 : es.get(e_) : void 0,
+ev = null != e_ ? null == eo ? void 0 : eo.get(e_) : void 0,
 eO = (0, u.TH)(),
 eR = (0, f.e7)([C.Z], () => C.Z.hasLoadedExperiments);
-  o.useEffect(() => {
+  s.useEffect(() => {
 M.default.isAuthenticated() && !eR && g.Z.getExperiments();
   }, [eR]);
-  let [eC, ey] = o.useState(null), [eD, eL] = o.useState(null), [eb, eM] = o.useState(null), [eP, eU] = o.useState(!1), [ew, ex] = o.useState(!ef), eG = null == eC ? void 0 : eC.guilds, [ek, eB] = o.useState(null != ec ? ec : null), [eF, eV] = o.useState(null != ed ? ed : null), [eH, eZ] = o.useState(P.Hn), eY = o.useMemo(() => (null == eC ? void 0 : eC.user) != null ? new b.Z(eC.user) : null, [null == eC ? void 0 : eC.user]), ej = o.useMemo(() => null == eG ? void 0 : eG.find(e => e.id === ek), [
+  let [eC, ey] = s.useState(null), [eD, eL] = s.useState(null), [eb, eM] = s.useState(null), [eP, eU] = s.useState(!1), [ew, ex] = s.useState(!ef), eG = null == eC ? void 0 : eC.guilds, [ek, eB] = s.useState(null != ec ? ec : null), [eF, eV] = s.useState(null != ed ? ed : null), [eH, eZ] = s.useState(P.Hn), eY = s.useMemo(() => (null == eC ? void 0 : eC.user) != null ? new b.Z(eC.user) : null, [null == eC ? void 0 : eC.user]), ej = s.useMemo(() => null == eG ? void 0 : eG.find(e => e.id === ek), [
 eG,
 ek
-  ]), [eW, eK] = o.useState(null), ez = o.useMemo(() => {
+  ]), [eW, eK] = s.useState(null), ez = s.useMemo(() => {
 var e;
 return null == ev && null == e_ && (null !== (e = null == el ? void 0 : el.length) && void 0 !== e ? e : 0) === 0 && null == et;
   }, [
@@ -211,14 +211,14 @@ ev,
 null == el ? void 0 : el.length,
 et,
 e_
-  ]), [eq, eQ] = o.useState(null);
-  o.useEffect(() => {
+  ]), [eq, eQ] = s.useState(null);
+  s.useEffect(() => {
 ez && v.Z.fetchApplication(K).then(e => eQ(L.Z.createFromServer(e)));
   }, [
 K,
 ez
   ]);
-  let eX = o.useMemo(() => {
+  let eX = s.useMemo(() => {
   var e, t;
   return null == eW ? null : null == eq ? void 0 : null === (t = eq.integrationTypesConfig) || void 0 === t ? void 0 : null === (e = t[eW]) || void 0 === e ? void 0 : e.oauth2InstallParams;
 }, [
@@ -228,7 +228,7 @@ ez
 {
   requestedScopes: e$,
   accountScopes: eJ
-} = o.useMemo(() => {
+} = s.useMemo(() => {
   let e = ez ? null == eX ? void 0 : eX.scopes : el,
     t = (0, w.K)(null != e ? e : []),
     n = B.Qe.filter(e => t.includes(e));
@@ -241,7 +241,7 @@ ez
   el,
   ez
 ]),
-e0 = o.useMemo(() => {
+e0 = s.useMemo(() => {
   var e;
   let t = ez ? E.vB(null !== (e = null == eX ? void 0 : eX.permissions) && void 0 !== e ? e : 0) : eu;
   return null != t ? t : P.Hn;
@@ -250,10 +250,10 @@ e0 = o.useMemo(() => {
   eu,
   ez
 ]),
-e1 = o.useRef(!1),
-[e2, e3] = o.useState(null != eN ? eN : []),
-[e4, e5] = o.useState(null != eN && eN.length > 0);
-  o.useEffect(() => {
+e1 = s.useRef(!1),
+[e2, e3] = s.useState(null != eN ? eN : []),
+[e4, e5] = s.useState(null != eN && eN.length > 0);
+  s.useEffect(() => {
 if (e1.current)
   return;
 let e = async () => {
@@ -294,7 +294,7 @@ eM,
 e5,
 eL
   ]);
-  let e6 = o.useCallback(async e => {
+  let e6 = s.useCallback(async e => {
   if (null != eS) {
     eS(e);
     return;
@@ -372,8 +372,8 @@ eL
   eF,
   e2
 ]),
-e7 = o.useRef(!1),
-e8 = o.useCallback(async () => {
+e7 = s.useRef(!1),
+e8 = s.useCallback(async () => {
   if (!M.default.isAuthenticated()) {
     (0, x.c$)(eO);
     return;
@@ -393,7 +393,7 @@ e8 = o.useCallback(async () => {
           nonce: ea,
           integrationType: null != eW ? eW : void 0
         });
-        ey((0, G.d)(e)), eo === F.s.NONE && e.authorized && !e4 && e6(!0), (0, A.yw)(Q.rMx.OAUTH2_AUTHORIZE_VIEWED, {
+        ey((0, G.d)(e)), es === F.s.NONE && e.authorized && !e4 && e6(!0), (0, A.yw)(Q.rMx.OAUTH2_AUTHORIZE_VIEWED, {
           application_id: e.application.id
         });
       } catch (n) {
@@ -423,11 +423,11 @@ e8 = o.useCallback(async () => {
   ei,
   ea,
   eW,
-  eo,
+  es,
   e6,
   e4
 ]),
-e9 = o.useMemo(() => {
+e9 = s.useMemo(() => {
   var e;
   return null != eq && ez ? Object.entries(null !== (e = eq.integrationTypesConfig) && void 0 !== e ? e : {}).filter(e => {
     let [t, n] = e;
@@ -440,7 +440,7 @@ e9 = o.useMemo(() => {
   eq,
   ez
 ]);
-  o.useEffect(() => {
+  s.useEffect(() => {
 if (null == eD && (!ez || null != eq) && !!eR)
   if (null != ev) {
     var e;
@@ -455,7 +455,7 @@ ez,
 e_,
 eD,
 eR
-  ]), o.useEffect(() => {
+  ]), s.useEffect(() => {
 if (null == eW || null != eC || null != eb)
   return;
 eW === d.Y.USER_INSTALL && (eB(null), eV(null));
@@ -470,7 +470,7 @@ eW,
 eC,
 eb
   ]);
-  let te = o.useCallback(e => {
+  let te = s.useCallback(e => {
   e && ex(!0);
 }, []),
 tt = (0, S.O)(te);
@@ -507,8 +507,8 @@ case 1:
     return {
       body: (0, a.jsx)(I.$, {})
     };
-  let to = null == eb || eb instanceof Error ? {} : eb,
-    ts = null == eG ? void 0 : eG.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
+  let ts = null == eb || eb instanceof Error ? {} : eb,
+    to = null == eG ? void 0 : eG.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
     tl = eW === d.Y.GUILD_INSTALL && e$.includes(_.x.WEBHOOK_INCOMING),
     tu = tl || eW === d.Y.GUILD_INSTALL && (e$.includes(_.x.BOT) || e$.includes(_.x.APPLICATIONS_COMMANDS));
   l = (0, a.jsxs)(a.Fragment, {
@@ -518,18 +518,18 @@ case 1:
         accountScopes: eJ,
         requestedScopes: e$,
         integrationType: eW,
-        errors: to,
+        errors: ts,
         isTrustedName: em
       }),
       tu ? (0, a.jsx)(Y.Z, {
-        error: (null !== (n = null !== (t = to[_.x.BOT]) && void 0 !== t ? t : to[_.x.APPLICATIONS_COMMANDS]) && void 0 !== n ? n : [])[0],
+        error: (null !== (n = null !== (t = ts[_.x.BOT]) && void 0 !== t ? t : ts[_.x.APPLICATIONS_COMMANDS]) && void 0 !== n ? n : [])[0],
         selectedGuildId: ek,
         onGuildChange: eB,
-        guilds: null != ts ? ts : [],
+        guilds: null != to ? to : [],
         disabled: '' !== ek && null != ek && !0 === eE
       }) : null,
       tl ? (0, a.jsx)(q.Z, {
-        error: (null !== (r = to[_.x.WEBHOOK_INCOMING]) && void 0 !== r ? r : [])[0],
+        error: (null !== (r = ts[_.x.WEBHOOK_INCOMING]) && void 0 !== r ? r : [])[0],
         selectedChannelId: eF,
         selectedGuildId: ek,
         onChannelChange: eV
@@ -560,7 +560,7 @@ N = (0, a.jsxs)(a.Fragment, {
       application: eC.application,
       scopes: e$,
       disclosures: e2,
-      redirectUri: null !== (s = eC.redirect_uri) && void 0 !== s ? s : null,
+      redirectUri: null !== (o = eC.redirect_uri) && void 0 !== o ? o : null,
       approximateGuildCount: void 0 !== e ? e : null,
       isEmbeddedFlow: eI
     }),
@@ -634,8 +634,8 @@ return;
 host: n,
 path: r,
 query: i
-  } = c.parse(t.location, !0), o = U.Z.isDiscordHostname(n) || window.location.host === n;
-  if (o && r === Q.Z5c.OAUTH2_AUTHORIZED)
+  } = c.parse(t.location, !0), s = U.Z.isDiscordHostname(n) || window.location.host === n;
+  if (s && r === Q.Z5c.OAUTH2_AUTHORIZED)
 (0, p.h7)(e => (0, a.jsx)(K.j, {
   ...e,
   'aria-labelledby': J,
@@ -645,7 +645,7 @@ query: i
     onClose: e.onClose
   })
 }));
-  else if (o && (null == r ? void 0 : r.startsWith(Q.Z5c.OAUTH2_ERROR)))
+  else if (s && (null == r ? void 0 : r.startsWith(Q.Z5c.OAUTH2_ERROR)))
 (0, p.h7)(e => {
   let t = i.error_description || i.error || X.Z.Messages.OAUTH2_UNKNOWN_ERROR;
   return Array.isArray(t) && (t = t[0]), (0, a.jsx)(K.j, {
@@ -658,25 +658,25 @@ query: i
   });
 });
   else {
-var s;
-null === (s = window.open(t.location, '_blank')) || void 0 === s || s.focus();
+var o;
+null === (o = window.open(t.location, '_blank')) || void 0 === o || o.focus();
   }
 }
 
 function ea(e, t) {
   if ((0, y.g)('create-guild-and-oauth2-modal')) {
 R.Z.openCreateGuildModal({
-  onSuccess: n => eo({
+  onSuccess: n => es({
     ...e,
     guildId: n
   }, t)
 });
 return;
   }
-  eo(e, t);
+  es(e, t);
 }
 
-function eo(e, t) {
+function es(e, t) {
   (0, p.h7)(t => (0, a.jsx)(et, {
 ...t,
 ...e,
@@ -687,7 +687,7 @@ onCloseCallback: t
   });
 }
 
-function es(e) {
+function eo(e) {
   let {
 hostname: t = '',
 host: n,

@@ -6,8 +6,8 @@ return f;
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(481060),
-  s = n(787014),
+  s = n(481060),
+  l = n(787014),
   r = n(933557),
   o = n(454585),
   c = n(131704),
@@ -46,9 +46,9 @@ children: [
     children: (0, i.jsx)(u.Z, {
       label: m.Z.Messages.EDIT_CHANNEL,
       onClick: () => {
-        s.ZP.open(t.id);
+        l.ZP.open(t.id);
       },
-      icon: (0, i.jsx)(l.PencilIcon, {
+      icon: (0, i.jsx)(s.PencilIcon, {
         size: 'xs',
         color: 'currentColor'
       })

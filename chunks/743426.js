@@ -6,8 +6,8 @@ return I;
 var r = n(264344),
   i = n.n(r),
   a = n(259443),
-  o = n(47770),
-  s = n(46973),
+  s = n(47770),
+  o = n(46973),
   l = n(734298),
   u = n(997545),
   c = n(501950),
@@ -29,9 +29,9 @@ writable: !0
 function m(e) {
   return (null != e ? e : h.Qx) / h.Qx;
 }
-class I extends o.Z {
+class I extends s.Z {
   destroy() {
-this.eachConnection(e => e.destroy()), this.emit(s.aB.Destroy), this.removeAllListeners();
+this.eachConnection(e => e.destroy()), this.emit(o.aB.Destroy), this.removeAllListeners();
   }
   interact() {}
   static supported() {
@@ -136,13 +136,13 @@ switch (e) {
   connect(e, t, n) {
 !(0, _.eJ)(h.eR.EXPERIMENT_CONFIG) && (n.experiments = void 0);
 let r = u.Z.create(e, t, n);
-return r.on(s.Sh.Destroy, e => {
+return r.on(o.Sh.Destroy, e => {
   this.connections.delete(e), this.connectionsEmpty() && (0, _.p8)(h.uJ.NORMAL);
-}), r.on(s.Sh.Connected, () => {
+}), r.on(o.Sh.Connected, () => {
   r.setVideoBroadcast(this.shouldConnectionBroadcastVideo(r));
-}), r.on(s.Sh.Silence, e => {
-  this.emit(s.aB.Silence, e);
-}), this.connections.add(r), (0, _.p8)(h.uJ.HIGH), this.emit(s.aB.Connection, r), r;
+}), r.on(o.Sh.Silence, e => {
+  this.emit(o.aB.Silence, e);
+}), this.connections.add(r), (0, _.p8)(h.uJ.HIGH), this.emit(o.aB.Connection, r), r;
   }
   shouldConnectionBroadcastVideo(e) {
 return e.context === h.Yn.DEFAULT && this.videoInputDeviceId !== h.Av || e.hasDesktopSource();
@@ -231,16 +231,16 @@ let {
   id: r,
   soundshareId: i,
   useLoopback: a,
-  useVideoHook: o,
+  useVideoHook: s,
   useGraphicsCapture: l,
   useQuartzCapturer: u,
   allowScreenCaptureKit: c,
   hdrCaptureMode: d
 } = e.desktopDescription;
 (0, _.zS)().setOnClipsRecordingEvent(t => {
-  this.logger.info('Clips recording event: '.concat(h.Pf[t], ' received for stream ').concat(r, ' and sound ').concat(i, '.')), t === h.Pf.GoLiveEnded ? this.emit(s.aB.ClipsRecordingRestartNeeded) : t === h.Pf.Error ? this.emit(s.aB.ClipsInitFailure, 'Failed to set clips source in media engine', e.applicationName) : (t === h.Pf.Ended || t === h.Pf.StoppedByGoLive) && this.emit(s.aB.ClipsRecordingEnded, r, i);
+  this.logger.info('Clips recording event: '.concat(h.Pf[t], ' received for stream ').concat(r, ' and sound ').concat(i, '.')), t === h.Pf.GoLiveEnded ? this.emit(o.aB.ClipsRecordingRestartNeeded) : t === h.Pf.Error ? this.emit(o.aB.ClipsInitFailure, 'Failed to set clips source in media engine', e.applicationName) : (t === h.Pf.Ended || t === h.Pf.StoppedByGoLive) && this.emit(o.aB.ClipsRecordingEnded, r, i);
 }), (0, _.zS)().applyClipsSettings({
-  useVideoHook: o,
+  useVideoHook: s,
   useGraphicsCapture: l,
   useQuartzCapturer: u,
   allowScreenCaptureKit: c,
@@ -358,7 +358,7 @@ null != (0, _.zS)().setLoopback && (0, _.zS)().setLoopback(e, {
   noiseSuppression: t.noiseSuppression,
   automaticGainControl: t.automaticGainControl,
   noiseCancellation: t.noiseCancellation
-}), null != (0, _.zS)().setEmitVADLevel2 ? (0, _.zS)().setEmitVADLevel2(e || this.listenerCount(s.aB.VoiceActivity) > 0) : (0, _.zS)().setEmitVADLevel(e || this.listenerCount(s.aB.VoiceActivity) > 0, e, {
+}), null != (0, _.zS)().setEmitVADLevel2 ? (0, _.zS)().setEmitVADLevel2(e || this.listenerCount(o.aB.VoiceActivity) > 0) : (0, _.zS)().setEmitVADLevel(e || this.listenerCount(o.aB.VoiceActivity) > 0, e, {
   echoCancellation: t.echoCancellation,
   noiseSuppression: t.noiseSuppression,
   automaticGainControl: t.automaticGainControl,
@@ -415,9 +415,9 @@ return new Promise((t, n) => {
   }
   createReplayConnection(e, t) {
 let n = u.Z.createReplay(e, t);
-return null == n ? null : (n.on(s.Sh.Destroy, e => {
+return null == n ? null : (n.on(o.Sh.Destroy, e => {
   this.connections.delete(e), this.connectionsEmpty() && (0, _.p8)(h.uJ.NORMAL);
-}), this.connections.add(n), (0, _.p8)(h.uJ.HIGH), this.emit(s.aB.Connection, n), n);
+}), this.connections.add(n), (0, _.p8)(h.uJ.HIGH), this.emit(o.aB.Connection, n), n);
   }
   setUseDirectVideo(e) {
 f.Z.useDirectVideo = e;
@@ -451,13 +451,13 @@ return new Promise((t, n) => {
 var t, n;
 null === (t = (n = (0, _.zS)()).stopLocalAudioRecording) || void 0 === t || t.call(n, (t, n) => {
   e(t, n);
-}), this.listenerCount(s.aB.VoiceActivity) > 0 && null != (0, _.zS)().setEmitVADLevel2 && (0, _.zS)().setEmitVADLevel2(!0);
+}), this.listenerCount(o.aB.VoiceActivity) > 0 && null != (0, _.zS)().setEmitVADLevel2 && (0, _.zS)().setEmitVADLevel2(!0);
   }
   speedTester(e, t) {
 if (!this.supports(h.AN.SPEED_TEST))
   throw Error('speedTester is not supported.');
 let n = d.Z.create(e, t);
-return n.on(s.aj.Destroy, e => {
+return n.on(o.aj.Destroy, e => {
   this.speedTesters.delete(e), this.connectionsEmpty() && (0, _.p8)(h.uJ.NORMAL);
 }), this.speedTesters.add(n), (0, _.p8)(h.uJ.HIGH), n;
   }
@@ -481,7 +481,7 @@ let e = !1;
 (0, _.zS)().pingVoiceThread(() => {
   e = !0, this.consecutiveWatchdogFailures = 0;
 }), setTimeout(() => {
-  !e && ++this.consecutiveWatchdogFailures > 1 ? this.emit(s.aB.WatchdogTimeout) : this.watchdogTick();
+  !e && ++this.consecutiveWatchdogFailures > 1 ? this.emit(o.aB.WatchdogTimeout) : this.watchdogTick();
 }, h.H0);
   }
   connectionsEmpty() {
@@ -493,20 +493,20 @@ super(), e = this, p(this, 'Video', f.Z), p(this, 'Camera', E.Z), p(this, 'video
   let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
     r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-  e.deviceChangeGeneration++, e.emit(s.aB.DeviceChange, (0, c.C1)(h.h7.AUDIO_INPUT, t), (0, c.C1)(h.h7.AUDIO_OUTPUT, n), (0, c.C1)(h.h7.VIDEO_INPUT, r));
+  e.deviceChangeGeneration++, e.emit(o.aB.DeviceChange, (0, c.C1)(h.h7.AUDIO_INPUT, t), (0, c.C1)(h.h7.AUDIO_OUTPUT, n), (0, c.C1)(h.h7.VIDEO_INPUT, r));
 }), p(this, 'handleVolumeChange', (e, t) => {
-  this.emit(s.aB.VolumeChange, e * h.Qx, t * h.Qx);
+  this.emit(o.aB.VolumeChange, e * h.Qx, t * h.Qx);
 }), p(this, 'handleVoiceActivity', (e, t) => {
   let n = Date.now();
-  this.listenerCount(s.aB.VoiceActivity) > 0 && (-1 === this.lastVoiceActivity || Date.now() - this.lastVoiceActivity > 20) && (this.lastVoiceActivity = n, this.emit(s.aB.VoiceActivity, e, t));
+  this.listenerCount(o.aB.VoiceActivity) > 0 && (-1 === this.lastVoiceActivity || Date.now() - this.lastVoiceActivity > 20) && (this.lastVoiceActivity = n, this.emit(o.aB.VoiceActivity, e, t));
 }), p(this, 'handleActiveSinksChange', (e, t) => {
   this.connections.forEach(n => n.setHasActiveVideoOutputSink(e, t));
 }), p(this, 'handleNewListener', e => {
   switch (e) {
-    case s.aB.VoiceActivity:
+    case o.aB.VoiceActivity:
       null != (0, _.zS)().setEmitVADLevel2 ? (0, _.zS)().setEmitVADLevel2(!0) : (0, _.zS)().setEmitVADLevel(!0, !1, {});
       break;
-    case s.aB.DeviceChange:
+    case o.aB.DeviceChange:
       let t = this.deviceChangeGeneration;
       Promise.all([
         this.getAudioInputDevices(),
@@ -514,13 +514,13 @@ super(), e = this, p(this, 'Video', f.Z), p(this, 'Camera', E.Z), p(this, 'video
         this.getVideoInputDevices()
       ]).then(e => {
         let [n, r, i] = e;
-        t === this.deviceChangeGeneration && this.emit(s.aB.DeviceChange, n, r, i);
+        t === this.deviceChangeGeneration && this.emit(o.aB.DeviceChange, n, r, i);
       });
   }
 }), p(this, 'handleRemoveListener', e => {
-  e === s.aB.VoiceActivity && (null != (0, _.zS)().setEmitVADLevel2 ? (0, _.zS)().setEmitVADLevel2(this.listenerCount(s.aB.VoiceActivity) > 0) : (0, _.zS)().setEmitVADLevel(this.listenerCount(s.aB.VoiceActivity) > 0, !1, {}));
+  e === o.aB.VoiceActivity && (null != (0, _.zS)().setEmitVADLevel2 ? (0, _.zS)().setEmitVADLevel2(this.listenerCount(o.aB.VoiceActivity) > 0) : (0, _.zS)().setEmitVADLevel(this.listenerCount(o.aB.VoiceActivity) > 0, !1, {}));
 }), p(this, 'handleVideoInputInitialization', e => {
-  this.emit(s.aB.VideoInputInitialized, e);
+  this.emit(o.aB.VideoInputInitialized, e);
 });
 let n = (0, _.zS)();
 if (n.setDeviceChangeCallback(this.handleDeviceChange), n.setVolumeChangeCallback(this.handleVolumeChange), n.setOnVoiceCallback(this.handleVoiceActivity), null === (t = n.setVideoInputInitializationCallback) || void 0 === t || t.call(n, this.handleVideoInputInitialization), n.setTransportOptions({

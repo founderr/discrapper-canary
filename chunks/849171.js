@@ -6,8 +6,8 @@ return k;
 return w;
   }
 }), n(47120);
-var i, a, l = n(735250),
-  s = n(470079),
+var i, a, s = n(735250),
+  l = n(470079),
   r = n(120356),
   o = n.n(r),
   c = n(442837),
@@ -46,8 +46,8 @@ avatarSize: t,
 guildId: n,
 channelId: i,
 users: a
-  } = e, s = null != t ? t : d.AvatarSizes.SIZE_32, r = (0, d.getAvatarSize)(s);
-  return (0, l.jsx)(T.Z, {
+  } = e, l = null != t ? t : d.AvatarSizes.SIZE_32, r = (0, d.getAvatarSize)(l);
+  return (0, s.jsx)(T.Z, {
 size: r,
 guildId: n,
 users: a,
@@ -56,10 +56,10 @@ renderUser: e => {
   if (null == e)
     return null;
   let t = P.ZP.getName(n, i, e);
-  return (0, l.jsx)(d.TooltipContainer, {
+  return (0, s.jsx)(d.TooltipContainer, {
     text: t,
     color: d.TooltipColors.GREY,
-    children: (0, l.jsx)('img', {
+    children: (0, s.jsx)('img', {
       src: e.getAvatarURL(n, r),
       alt: t,
       className: y.avatar
@@ -72,7 +72,7 @@ renderUser: e => {
 function U(e) {
   var t, n, i, a;
   let {
-participants: s,
+participants: l,
 application: r,
 currentEmbeddedApplication: f,
 channel: E,
@@ -91,23 +91,23 @@ d.AvatarSizes.SIZE_24,
   ], T = (0, c.Wu)([
 j.default,
 b.default
-  ], () => Array.from(s).map(e => (0, m.J)(e, b.default) ? null : j.default.getUser(e.userId)).filter(L.lm)), N = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === r.id)), {
+  ], () => Array.from(l).map(e => (0, m.J)(e, b.default) ? null : j.default.getUser(e.userId)).filter(L.lm)), N = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === r.id)), {
 analyticsLocations: v
   } = (0, Z.ZP)(), S = (0, u.O)(), A = P.ZP.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), M = (0, _.s5)({
 userId: null === (t = j.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
 channelId: E.id,
 application: r
   }) === _.Fw.CAN_JOIN, R = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0;
-  return (0, l.jsxs)('div', {
+  return (0, s.jsxs)('div', {
 className: y.splash,
 children: [
-  (0, l.jsx)(k, {
+  (0, s.jsx)(k, {
     avatarSize: x,
     guildId: R,
     channelId: E.id,
     users: T
   }),
-  (0, l.jsx)(d.Text, {
+  (0, s.jsx)(d.Text, {
     className: o()(y.subheader, {
       [y.small]: 0 === g,
       [y.medium]: 1 === g
@@ -120,7 +120,7 @@ children: [
       username: A
     })
   }),
-  (0, l.jsx)(d.Text, {
+  (0, s.jsx)(d.Text, {
     className: o()(y.header, {
       [y.small]: 0 === g,
       [y.medium]: 1 === g
@@ -128,9 +128,9 @@ children: [
     variant: 'text-sm/normal',
     children: r.name
   }),
-  (0, l.jsx)('div', {
+  (0, s.jsx)('div', {
     className: y.buttons,
-    children: M ? (0, l.jsx)(d.Button, {
+    children: M ? (0, s.jsx)(d.Button, {
       onClick: function(e) {
         if (e.stopPropagation(), null != N)
           (0, p.Z)({
@@ -185,7 +185,7 @@ M.Z
 LayerStore: R.Z,
 PopoutWindowStore: M.Z
   }));
-  return s.useEffect(() => {
+  return l.useEffect(() => {
 if (I && null != u && !j) {
   let e = (0, N.Z)(u.channelId, u.applicationId);
   (0, x.jy)(e);
@@ -194,29 +194,29 @@ if (I && null != u && !j) {
 I,
 u,
 j
-  ]), (0, l.jsx)(Z.Gt, {
+  ]), (0, s.jsx)(Z.Gt, {
 value: o,
-children: (0, l.jsx)('div', {
+children: (0, s.jsx)('div', {
   className: y.container,
-  children: (0, l.jsxs)(l.Fragment, {
+  children: (0, s.jsxs)(s.Fragment, {
     children: [
-      I && (0, l.jsx)(g.Z, {
+      I && (0, s.jsx)(g.Z, {
         className: y.iframe,
         embedId: (0, N.Z)(r.id, d)
       }),
-      T && null != m && null != _ && '' !== _ ? (0, l.jsx)('img', {
+      T && null != m && null != _ && '' !== _ ? (0, s.jsx)('img', {
         className: y.splashImage,
         alt: m.name,
         src: _
       }) : null,
-      b && null != m && (0, l.jsx)(U, {
+      b && null != m && (0, s.jsx)(U, {
         width: n,
         channel: r,
         participants: t.participants,
         application: m,
         currentEmbeddedApplication: p
       }),
-      a || T ? null : (0, l.jsx)('div', {
+      a || T ? null : (0, s.jsx)('div', {
         className: y.clickShield
       })
     ]

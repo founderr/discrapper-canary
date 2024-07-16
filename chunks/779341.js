@@ -1,28 +1,28 @@
-o.d(e, {
+t.d(e, {
   Z: function() {
-return s;
+return c;
   }
 });
-var t = o(735250);
-o(470079);
-var r = o(585183),
-  i = o(728151),
-  c = o(981631);
+var o = t(735250);
+t(470079);
+var r = t(585183),
+  i = t(728151),
+  s = t(981631);
 
-function s(n) {
+function c(n) {
   let {
 authToken: e,
-onContinue: o,
-onError: s,
+onContinue: t,
+onError: c,
 onClose: l
   } = n;
-  return (0, t.jsx)(r.h, {
-platformType: c.ABu.CRUNCHYROLL,
+  return (0, o.jsx)(r.h, {
+platformType: s.ABu.CRUNCHYROLL,
 clientId: i.sp,
 scopes: i.Ii,
 authToken: e,
-onContinue: o,
-onError: s,
+onContinue: t,
+onError: c,
 onClose: l
   });
 }

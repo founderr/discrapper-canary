@@ -1,42 +1,42 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return L;
   }
 });
-var n = s(735250),
-  a = s(470079),
-  i = s(512722),
-  r = s.n(i),
-  o = s(442837),
-  l = s(481060),
-  c = s(660216),
-  d = s(230711),
-  _ = s(825209),
-  E = s(836157),
-  u = s(706454),
-  T = s(494620),
-  I = s(131951),
-  S = s(556296),
-  N = s(924557),
-  C = s(435064),
-  m = s(894694),
-  A = s(779618),
-  h = s(39604),
-  g = s(442334),
-  O = s(356659),
-  p = s(981631),
-  R = s(37113),
-  x = s(526761),
-  M = s(689938),
-  f = s(96118),
-  D = s(885582),
-  P = s(549856);
+var n = t(735250),
+  a = t(470079),
+  i = t(512722),
+  r = t.n(i),
+  o = t(442837),
+  l = t(481060),
+  c = t(660216),
+  d = t(230711),
+  _ = t(825209),
+  E = t(836157),
+  u = t(706454),
+  T = t(494620),
+  I = t(131951),
+  S = t(556296),
+  N = t(924557),
+  C = t(435064),
+  m = t(894694),
+  A = t(779618),
+  h = t(39604),
+  g = t(442334),
+  O = t(356659),
+  p = t(981631),
+  R = t(37113),
+  x = t(526761),
+  M = t(689938),
+  f = t(96118),
+  D = t(885582),
+  P = t(549856);
 
 function L() {
   let e = (0, o.e7)([I.Z], () => I.Z.getHardwareEncoding()),
 {
-  clipsEnabled: t,
-  remindersEnabled: s,
+  clipsEnabled: s,
+  remindersEnabled: t,
   decoupledClipsEnabled: i,
   clipsLength: L,
   clipsQuality: Z
@@ -156,7 +156,7 @@ children: [
         hideBorder: !0,
         disabled: !e,
         className: D.formItem,
-        value: t,
+        value: s,
         note: M.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
         onChange: e => h.em({
           clipsEnabled: e,
@@ -199,7 +199,7 @@ children: [
         children: (0, n.jsx)(l.FormSwitch, {
           hideBorder: !0,
           className: D.formItem,
-          value: s,
+          value: t,
           note: M.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
           onChange: e => h.N0(e),
           children: M.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS

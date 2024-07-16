@@ -1,8 +1,8 @@
 n(757143), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(771340),
@@ -41,7 +41,7 @@ let {
 } = this.props;
 return (0, i.jsxs)(u.Z, {
   align: u.Z.Align.CENTER,
-  className: s()({
+  className: l()({
     selected: t
   }),
   children: [

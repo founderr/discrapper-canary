@@ -118,7 +118,7 @@ return W;
 return ei;
   },
   vR: function() {
-return eo;
+return es;
   },
   xn: function() {
 return et;
@@ -127,7 +127,7 @@ return et;
 return B;
   },
   ys: function() {
-return es;
+return eo;
   },
   zE: function() {
 return ee;
@@ -141,8 +141,8 @@ return w;
 }), n(627341), n(47120), n(411104);
 var i = n(164369),
   a = n(392711),
-  o = n(278074),
-  s = n(754700),
+  s = n(278074),
+  o = n(754700),
   l = n(551910),
   u = n(887003),
   c = n(742635),
@@ -170,7 +170,7 @@ let L = 'https://cdn.discordapp.com/assets/quests/';
 
 function b(e) {
   try {
-return (0, o.EQ)(e.config).with({
+return (0, s.EQ)(e.config).with({
   config_version: 1
 }, () => !0).with({
   config_version: 2
@@ -250,7 +250,7 @@ function k(e) {
   return {
 id: e.id,
 preview: e.preview,
-config: (t = e.config, (0, o.EQ)(t).with({
+config: (t = e.config, (0, s.EQ)(t).with({
   config_version: 1
 }, e => {
   var t, n, r;
@@ -432,7 +432,7 @@ return !1;
 }
 
 function et(e) {
-  return (0, o.EQ)(e).with({
+  return (0, s.EQ)(e).with({
 configVersion: 1
   }, e => {
 let t = e.rewardsConfig.rewards.find(e => e.tag === u.w.COLLECTIBLE);
@@ -475,7 +475,7 @@ function er(e) {
 }
 
 function ei(e) {
-  return (0, o.EQ)(e).with({
+  return (0, s.EQ)(e).with({
 configVersion: 1
   }, e => !1).with({
 configVersion: 2
@@ -483,7 +483,7 @@ configVersion: 2
 }
 
 function ea(e) {
-  return (0, o.EQ)(e).with({
+  return (0, s.EQ)(e).with({
 configVersion: 1
   }, e => null).with({
 configVersion: 2
@@ -493,11 +493,11 @@ return null !== (t = e.rewardsConfig.rewards.find(e => e.type === u.w.IN_GAME)) 
   }).exhaustive();
 }
 
-function eo(e, t) {
+function es(e, t) {
   return e.targetedContent.includes(t);
 }
 
-function es(e, t) {
+function eo(e, t) {
   g.Z.captureException(e, {
 ...t,
 tags: {
@@ -544,7 +544,7 @@ quest: {
   config: t
 }
   } = e;
-  return (0, o.EQ)(t).with({
+  return (0, s.EQ)(t).with({
 configVersion: 1
   }, e => {
 let t = e.rewardsConfig;
@@ -556,15 +556,15 @@ let t = e.rewardsConfig;
 return t.assignmentMethod === l.j.TIERED && t.rewards.length > 0 && t.rewards.every(e => e.type === u.w.REWARD_CODE);
   }).exhaustive();
 }
-let ef = e => (0, o.EQ)(e.taskConfig).with({
+let ef = e => (0, s.EQ)(e.taskConfig).with({
   type: c.L.FIRST_PARTY
-}, e => null != e.tasks[s.X.PLAY_ON_DESKTOP]).otherwise(() => !1);
+}, e => null != e.tasks[o.X.PLAY_ON_DESKTOP]).otherwise(() => !1);
 
 function eh(e) {
   let {
 quest: t
   } = e;
-  return (0, o.EQ)(t.config).with({
+  return (0, s.EQ)(t.config).with({
 configVersion: 1
   }, e => eI(t, C.S7.PLAYTIME_TASK)).with({
 configVersion: 2
@@ -593,7 +593,7 @@ idx: n
   if (null == n)
 return null;
   let r = t.config.rewardsConfig.rewards[n];
-  return (0, o.EQ)(r).with({
+  return (0, s.EQ)(r).with({
 tag: u.w.REWARD_CODE
   }, e => e).with({
 type: u.w.REWARD_CODE
@@ -625,23 +625,23 @@ let eS = (e, t) => {
   eA = (e, t) => e > 0 ? (0, a.floor)(Math.min(t / e, 1), 4) : 0,
   eN = e => ew(e) || N.Z.isProgressingOnDesktop(e.id),
   ev = (e, t) => {
-var n, r, i, o;
-let s = null === (o = e.userStatus) || void 0 === o ? void 0 : null === (i = o.progress) || void 0 === i ? void 0 : null === (r = i[t.eventName]) || void 0 === r ? void 0 : null === (n = r.heartbeat) || void 0 === n ? void 0 : n.lastBeatAt;
-if (null == s || !eN(e))
+var n, r, i, s;
+let o = null === (s = e.userStatus) || void 0 === s ? void 0 : null === (i = s.progress) || void 0 === i ? void 0 : null === (r = i[t.eventName]) || void 0 === r ? void 0 : null === (n = r.heartbeat) || void 0 === n ? void 0 : n.lastBeatAt;
+if (null == o || !eN(e))
   return 0;
-let l = Date.now() - new Date(s).valueOf();
+let l = Date.now() - new Date(o).valueOf();
 return (0, a.floor)(l / p.Z.Millis.SECOND, 2);
   },
   eO = (e, t) => {
 var n, r, i;
-let o = t.target,
-  s = e.userStatus;
-if ((null == s ? void 0 : s.completedAt) != null)
-  return o;
-let l = null == s ? void 0 : null === (n = s.progress) || void 0 === n ? void 0 : n[t.eventName],
-  u = null !== (i = null !== (r = null == l ? void 0 : l.value) && void 0 !== r ? r : null == s ? void 0 : s.streamProgressSeconds) && void 0 !== i ? i : 0,
+let s = t.target,
+  o = e.userStatus;
+if ((null == o ? void 0 : o.completedAt) != null)
+  return s;
+let l = null == o ? void 0 : null === (n = o.progress) || void 0 === n ? void 0 : n[t.eventName],
+  u = null !== (i = null !== (r = null == l ? void 0 : l.value) && void 0 !== r ? r : null == o ? void 0 : o.streamProgressSeconds) && void 0 !== i ? i : 0,
   c = ev(e, t),
-  d = Math.min(0.99 * o, u + c);
+  d = Math.min(0.99 * s, u + c);
 return (0, a.floor)(d, 2);
   },
   eR = e => {
@@ -649,12 +649,12 @@ var t, n;
 let {
   quest: r,
   taskType: i,
-  includeTaskTypes: a = s.T.ALL
-} = e, o = r.config.taskConfig;
-if (o.type !== c.L.FIRST_PARTY)
-  throw Error('Cannot retrieve task details for task config with type '.concat(o.type, '!'));
-let l = null != i ? i : null === (t = Object.values(o.tasks).filter(e => a.has(e.eventName))[0]) || void 0 === t ? void 0 : t.eventName,
-  u = null !== (n = o.tasks[l]) && void 0 !== n ? n : o.tasks[s.X.STREAM_ON_DESKTOP];
+  includeTaskTypes: a = o.T.ALL
+} = e, s = r.config.taskConfig;
+if (s.type !== c.L.FIRST_PARTY)
+  throw Error('Cannot retrieve task details for task config with type '.concat(s.type, '!'));
+let l = null != i ? i : null === (t = Object.values(s.tasks).filter(e => a.has(e.eventName))[0]) || void 0 === t ? void 0 : t.eventName,
+  u = null !== (n = s.tasks[l]) && void 0 !== n ? n : s.tasks[o.X.STREAM_ON_DESKTOP];
 if (null == u)
   throw Error('No task with type '.concat(i, ' found for quest ').concat(r.id, '!'));
 let d = u.target,
@@ -667,12 +667,12 @@ return {
   taskType: l
 };
   },
-  eC = e => s.T.ALL.has(e) ? e : null,
+  eC = e => o.T.ALL.has(e) ? e : null,
   ey = e => {
 var t, n;
 let {
   quest: r,
-  includeTaskTypes: i = s.T.ALL
+  includeTaskTypes: i = o.T.ALL
 } = e;
 for (let e of Object.values(null !== (n = null === (t = r.userStatus) || void 0 === t ? void 0 : t.progress) && void 0 !== n ? n : {}).sort((e, t) => {
     var n, r;
@@ -711,10 +711,10 @@ return {
   targetSeconds: i,
   targetMinutes: e.config.streamDurationRequirementMinutes,
   percentComplete: eA(i, r),
-  taskType: s.X.STREAM_ON_DESKTOP
+  taskType: o.X.STREAM_ON_DESKTOP
 };
   },
-  eL = (e, t) => (0, o.EQ)(e).with({
+  eL = (e, t) => (0, s.EQ)(e).with({
 config: {
   configVersion: 1
 }
@@ -727,20 +727,20 @@ progressSeconds: 0,
 targetSeconds: 1,
 targetMinutes: 1,
 percentComplete: 0,
-taskType: s.X.STREAM_ON_DESKTOP
+taskType: o.X.STREAM_ON_DESKTOP
   } : eM(e) ? ey({
 quest: e,
-includeTaskTypes: null != t ? t : ew(e) ? s.T.CONSOLE : s.T.ALL
+includeTaskTypes: null != t ? t : ew(e) ? o.T.CONSOLE : o.T.ALL
   }) : ep(e) ? eR({
 quest: e,
-taskType: s.X.PLAY_ON_DESKTOP
+taskType: o.X.PLAY_ON_DESKTOP
   }) : eR({
 quest: e,
-taskType: s.X.STREAM_ON_DESKTOP
+taskType: o.X.STREAM_ON_DESKTOP
   })).exhaustive();
 
 function eb(e) {
-  return (0, o.EQ)(e.config).with({
+  return (0, s.EQ)(e.config).with({
 configVersion: 1
   }, e => null).with({
 configVersion: 2
@@ -748,24 +748,24 @@ configVersion: 2
 var n, r, i, a;
 if (t.taskConfig.type !== c.L.THIRD_PARTY || 0 === Object.keys(t.taskConfig.tasks).length)
   return null;
-let o = Object.keys(t.taskConfig.tasks)[0],
-  s = t.taskConfig.tasks[o],
-  l = null !== (a = null === (i = e.userStatus) || void 0 === i ? void 0 : null === (r = i.progress) || void 0 === r ? void 0 : null === (n = r[o]) || void 0 === n ? void 0 : n.value) && void 0 !== a ? a : 0,
-  u = eA(s.target, l);
+let s = Object.keys(t.taskConfig.tasks)[0],
+  o = t.taskConfig.tasks[s],
+  l = null !== (a = null === (i = e.userStatus) || void 0 === i ? void 0 : null === (r = i.progress) || void 0 === r ? void 0 : null === (n = r[s]) || void 0 === n ? void 0 : n.value) && void 0 !== a ? a : 0,
+  u = eA(o.target, l);
 return {
-  title: s.title,
-  description: s.description,
-  target: s.target,
+  title: o.title,
+  description: o.description,
+  target: o.target,
   progress: l,
   completedRatio: u
 };
   }).exhaustive();
 }
 let eM = (r = [
-s.X.PLAY_ON_XBOX,
-s.X.PLAY_ON_PLAYSTATION
+o.X.PLAY_ON_XBOX,
+o.X.PLAY_ON_PLAYSTATION
   ], e => r.some(t => null != e.config.taskConfig.tasks[t])),
-  eP = e => (0, o.EQ)(e).with({
+  eP = e => (0, s.EQ)(e).with({
 config: {
   configVersion: 1
 }
@@ -782,7 +782,7 @@ if (null == i)
 let a = new Date(i).valueOf();
 return !isNaN(a) && a > Date.now();
   },
-  ew = e => (0, o.EQ)(e).with({
+  ew = e => (0, s.EQ)(e).with({
 config: {
   configVersion: 1
 }
@@ -790,7 +790,7 @@ config: {
 config: {
   configVersion: 2
 }
-  }, e => null != e.userStatus && (eU(e.userStatus, s.X.PLAY_ON_XBOX) || eU(e.userStatus, s.X.PLAY_ON_PLAYSTATION))).exhaustive();
+  }, e => null != e.userStatus && (eU(e.userStatus, o.X.PLAY_ON_XBOX) || eU(e.userStatus, o.X.PLAY_ON_PLAYSTATION))).exhaustive();
 
 function ex() {
   _.Z.open(y.oAB.CONNECTIONS);

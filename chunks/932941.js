@@ -3,7 +3,7 @@ n.d(t, {
 return i;
   },
   Bk: function() {
-return o;
+return s;
   },
   pF: function() {
 return r;
@@ -910,4 +910,4 @@ let r = [
 'wigger',
 'zipperhead'
   ],
-  o = ['hunter2'];
+  s = ['hunter2'];

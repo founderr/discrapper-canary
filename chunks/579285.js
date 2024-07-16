@@ -6,8 +6,8 @@ return y;
 var r = n(735250),
   i = n(470079),
   a = n(512722),
-  o = n.n(a),
-  s = n(772848),
+  s = n.n(a),
+  o = n(772848),
   l = n(924826),
   u = n(91192),
   c = n(442837),
@@ -41,7 +41,7 @@ onAddRole: p,
 onRemoveRole: m,
 onOpenProfile: C
   } = e;
-  o()(null != h, 'Unexpected null width');
+  s()(null != h, 'Unexpected null width');
   let y = i.useRef({}),
 D = (e, t) => {
   null != t ? y.current[e] = t : delete y.current[e];
@@ -59,7 +59,7 @@ k = f && null != c,
 B = i.useRef(null),
 F = i.useRef(null);
   i.useLayoutEffect(() => {
-var e, t, n, r, i, a, o, s;
+var e, t, n, r, i, a, s, o;
 let l = null !== (i = null === (t = B.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.width) && void 0 !== i ? i : 0,
   u = null !== (a = null === (r = F.current) || void 0 === r ? void 0 : null === (n = r.getBoundingClientRect()) || void 0 === n ? void 0 : n.width) && void 0 !== a ? a : 0,
   c = h - (l > 0 ? l + 4 : 0) - (u > 0 ? u + 4 : 0),
@@ -72,7 +72,7 @@ for (let e = 0; e < 2; e++) {
       i = y.current[r.id];
     if (null == i)
       continue;
-    let a = null !== (s = null === (o = i.getBoundingClientRect()) || void 0 === o ? void 0 : o.width) && void 0 !== s ? s : 0;
+    let a = null !== (o = null === (s = i.getBoundingClientRect()) || void 0 === s ? void 0 : s.width) && void 0 !== o ? o : 0;
     if (n > 0 && !t && n + a > h || n > 0 && t && n + a > c)
       break;
     n += a + 4, d++;
@@ -84,7 +84,7 @@ h,
 _,
 U
   ]);
-  let V = i.useMemo(() => 'roles-'.concat((0, s.Z)()), []),
+  let V = i.useMemo(() => 'roles-'.concat((0, o.Z)()), []),
 H = (0, l.ZP)({
   id: V,
   isEnabled: !0,
@@ -97,7 +97,7 @@ Y = 0 === Z ? O.Z.Messages.ROLE_LIST_EMPTY : O.Z.Messages.ROLES_LIST.format({
   numRoles: Z
 }),
 j = U.map((e, i) => {
-  var o;
+  var s;
   return (0, r.jsx)(A.Z, {
     role: e,
     guildId: a.id,
@@ -107,7 +107,7 @@ j = U.map((e, i) => {
     disableBorderColor: !0,
     ref: t => D(e.id, t),
     onRemove: () => m(e),
-    canRemove: f ? T.r6(a, n.id, E, e) : (null === (o = e.tags) || void 0 === o ? void 0 : o.guild_connections) === null && t.id === n.id
+    canRemove: f ? T.r6(a, n.id, E, e) : (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) === null && t.id === n.id
   }, e.id);
 }),
 {
@@ -187,9 +187,9 @@ function y(e) {
 user: t,
 currentUser: n,
 guild: a,
-onOpenProfile: o
+onOpenProfile: s
   } = e, {
-trackUserProfileAction: s
+trackUserProfileAction: o
   } = (0, g.KZ)(), l = (0, c.e7)([h.ZP], () => h.ZP.getMember(a.id, t.id)), u = (0, c.e7)([p.Z], () => p.Z.getRoles(a.id)), d = null == l ? void 0 : l.roles, E = i.useMemo(() => null == d || 0 === d.length ? [] : Object.values(u).filter(e => d.includes(e.id)).sort((e, t) => {
 var n, r;
 let i = (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) !== null,
@@ -203,7 +203,7 @@ m.Z.can(v.Plq.MANAGE_ROLES, a),
 null != a ? m.Z.getGuildVersion(a.id) : null
   ]), A = i.useCallback(e => {
 var n, r;
-s({
+o({
   action: 'REMOVE_ROLE'
 });
 let i = null !== (r = null == d ? void 0 : d.filter(t => t !== e.id)) && void 0 !== r ? r : [];
@@ -212,9 +212,9 @@ let i = null !== (r = null == d ? void 0 : d.filter(t => t !== e.id)) && void 0 
 d,
 a.id,
 t.id,
-s
+o
   ]), N = i.useCallback(e => {
-s({
+o({
   action: 'ADD_ROLE'
 });
 let n = null != d ? d : []; -
@@ -223,7 +223,7 @@ let n = null != d ? d : []; -
 d,
 a.id,
 t.id,
-s
+o
   ]), O = S && null != l;
   return 0 !== E.length || O ? (0, r.jsx)('div', {
 children: (0, r.jsx)(C, {
@@ -236,7 +236,7 @@ children: (0, r.jsx)(C, {
   canManageRoles: S,
   onAddRole: N,
   onRemoveRole: A,
-  onOpenProfile: o
+  onOpenProfile: s
 })
   }) : null;
 }

@@ -25,16 +25,16 @@ handleClose: t
   } = e, {
 subscriptionMetadataRequest: C,
 selectedSku: S,
-selectedStoreListing: T,
-application: b
-  } = (0, u.usePaymentContext)(), h = (0, a.Z)(I.i), g = (0, o.e7)([d.Z], () => d.Z.getGuild(null == C ? void 0 : C.guild_id)), E = r.useCallback(() => n(_.h8.REVIEW), [n]);
+selectedStoreListing: b,
+application: h
+  } = (0, u.usePaymentContext)(), T = (0, a.Z)(I.i), g = (0, o.e7)([d.Z], () => d.Z.getGuild(null == C ? void 0 : C.guild_id)), E = r.useCallback(() => n(_.h8.REVIEW), [n]);
   if (null == S)
 return null;
   let N = (0, s.KW)(S.flags);
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(f.C3, {
-    children: h ? (0, i.jsx)(c.h, {
+    children: T ? (0, i.jsx)(c.h, {
       confirmCta: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_CONTINUE_BUTTON,
       onConfirm: E,
       onCancel: t,
@@ -46,19 +46,19 @@ children: [
       }),
       showOpenDiscord: !1
     }) : (0, i.jsx)(l.Oc, {
-      icon: null == T ? void 0 : T.thumbnail,
-      storeListingBenefits: null == T ? void 0 : T.benefits,
-      application: null != b ? b : void 0,
+      icon: null == b ? void 0 : b.thumbnail,
+      storeListingBenefits: null == b ? void 0 : b.benefits,
+      application: null != h ? h : void 0,
       title: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_TITLE_V2.format({
         tier: S.name
       }),
       subtitle: N ? m.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_HEADER : m.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_HEADER,
       description: N ? m.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_DETAILS.format({
-        applicationName: null == b ? void 0 : b.name
+        applicationName: null == h ? void 0 : h.name
       }) : m.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_DETAILS
     })
   }),
-  !h && (0, i.jsx)(f.O3, {
+  !T && (0, i.jsx)(f.O3, {
     children: (0, i.jsx)(p.Z, {
       onBack: t,
       backText: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CANCEL_BUTTON,

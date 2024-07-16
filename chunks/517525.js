@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(338545),
   o = n(468194),
   c = n(442837),
@@ -50,7 +50,7 @@ friction: 18,
 clamp: !0
   },
   O = e => {
-let t, l, {
+let t, s, {
     participant: r,
     isUpsellEnabled: o,
     shape: u,
@@ -71,11 +71,11 @@ try {
   t = !1;
 }
 try {
-  l = (0, I.tR)(R);
+  s = (0, I.tR)(R);
 } catch (e) {
-  l = !1;
+  s = !1;
 }
-let P = t || l,
+let P = t || s,
   {
     location: O
   } = (0, p.O)(),
@@ -100,12 +100,12 @@ if (a.useEffect(() => {
     !Z && P && (C.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
       type: N.cd.STREAM_QUALITY_INDICATOR,
       has_premium_stream_fps: t,
-      has_premium_stream_resolution: l,
+      has_premium_stream_resolution: s,
       location_stack: j
     }), A(!0));
   }, [
     t,
-    l,
+    s,
     P,
     Z,
     A,
@@ -119,7 +119,7 @@ let U = (0, i.jsx)(h.Tooltip, {
   children: e => (0, i.jsxs)(h.Clickable, {
     ...e,
     onClick: k,
-    className: s()(S.qualityIndicator, _, E.eE[u], L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, {
+    className: l()(S.qualityIndicator, _, E.eE[u], L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, {
       [S.clickable]: D && P
     }),
     children: [
@@ -140,7 +140,7 @@ let U = (0, i.jsx)(h.Tooltip, {
 });
 return (0, i.jsx)(h.TextBadge, {
   text: U,
-  className: s()(M, S.qualityIndicatorBadge, {
+  className: l()(M, S.qualityIndicatorBadge, {
     [S.qualityIndicatorBadgePremium]: b
   }),
   color: d.Z.unsafe_rawColors.PRIMARY_500.css,
@@ -151,7 +151,7 @@ t.Z = e => {
   let {
 participant: t,
 showQuality: n,
-isUpsellEnabled: l = !0,
+isUpsellEnabled: s = !0,
 size: o,
 className: c,
 premiumIndicator: d
@@ -181,7 +181,7 @@ let {
   popoutProps: a
 } = e;
 return (0, i.jsxs)('div', {
-  className: s()(S.streamQualityIndicator, n),
+  className: l()(S.streamQualityIndicator, n),
   ...a,
   children: [
     g((e, n) => n ? (0, i.jsx)(r.animated.div, {
@@ -191,7 +191,7 @@ return (0, i.jsxs)('div', {
         participant: t,
         size: o,
         shape: h.BadgeShapes.ROUND_LEFT,
-        isUpsellEnabled: l,
+        isUpsellEnabled: s,
         didTrackUpsellViewed: u,
         setDidTrackUpsellViewed: p,
         premiumIndicator: d

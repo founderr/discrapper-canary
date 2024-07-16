@@ -9,8 +9,8 @@ return N;
 var i = n(735250);
 n(470079);
 var a = n(120356),
-  l = n.n(a),
-  s = n(780384),
+  s = n.n(a),
+  l = n(780384),
   r = n(481060),
   o = n(239091),
   c = n(37234),
@@ -74,8 +74,8 @@ children: [
     tabIndex: -1,
     guild: a,
     showBadge: !0,
-    className: l()(g.listAvatar, null == a.icon ? I.guildAvatarWithoutIcon : null),
-    badgeStrokeColor: (0, u.Lq)((0, s.wj)(d) ? E.Ilk.PRIMARY_600 : E.Ilk.WHITE_500),
+    className: s()(g.listAvatar, null == a.icon ? I.guildAvatarWithoutIcon : null),
+    badgeStrokeColor: (0, u.Lq)((0, l.wj)(d) ? E.Ilk.PRIMARY_600 : E.Ilk.WHITE_500),
     badgeTooltipColor: r.TooltipColors.PRIMARY,
     badgeTooltipDelay: f.vB,
     size: h.Z.Sizes.MEDIUM,
@@ -112,7 +112,7 @@ user: t,
 onClose: n
   } = e, {
 mutualGuilds: a
-  } = (0, _.Z)(t.id), l = (0, d.ZP)(), s = e => {
+  } = (0, _.Z)(t.id), s = (0, d.ZP)(), l = e => {
 (0, p.X)(e), n(), (0, c.xf)();
   };
   return (0, i.jsx)(r.ScrollerThin, {
@@ -141,8 +141,8 @@ children: null == a ? (0, i.jsx)('div', {
     user: t,
     guild: n,
     nick: a,
-    theme: l,
-    onSelect: () => s(n.id)
+    theme: s,
+    onSelect: () => l(n.id)
   }, n.id);
 })
   });

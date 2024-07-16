@@ -1,5 +1,5 @@
 n(47120);
-var i, a, s, r, l = n(392711),
+var i, s, a, r, l = n(392711),
   o = n.n(l),
   c = n(442837),
   d = n(570140),
@@ -39,12 +39,12 @@ return Object.entries(h).map(e => {
 return h[e];
   }
 }
-r = 'FriendSuggestionStore', (s = 'displayName') in(a = T) ? Object.defineProperty(a, s, {
+r = 'FriendSuggestionStore', (a = 'displayName') in(s = T) ? Object.defineProperty(s, a, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = r, t.Z = new T(d.Z, {
+}) : s[a] = r, t.Z = new T(d.Z, {
   CONNECTION_OPEN: function(e) {
 h = {}, (I = e.friendSuggestionCount) > 0 && (g = !0, m || !g || (m = !0, g = !1, E.Z.fetch()));
   },

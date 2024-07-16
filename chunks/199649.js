@@ -6,8 +6,8 @@ return E;
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(481060),
-  s = n(194359),
+  s = n(481060),
+  l = n(194359),
   r = n(631937),
   o = n(702321),
   c = n(377171),
@@ -33,7 +33,7 @@ T = {};
 let e = g ? (0, i.jsxs)(i.Fragment, {
   children: [
     f.Z.Messages.SYSTEM_DM_OPEN_BLOG,
-    (0, i.jsx)(l.WindowLaunchIcon, {
+    (0, i.jsx)(s.WindowLaunchIcon, {
       size: 'xs',
       color: c.Z.HEADER_PRIMARY
     })
@@ -51,7 +51,7 @@ T.message = f.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION, T.subtitle = f.Z.Message
 }, T.imageSrc = n(780961);
   } else
 x && (T.message = f.Z.Messages.DM_VERIFICATION_TEXT_BLOCKED, T.buttonText = f.Z.Messages.UNBLOCK, T.onButtonClick = () => {
-  s.Z.unblockUser(t.getRecipientId());
+  l.Z.unblockUser(t.getRecipientId());
 });
   return (0, i.jsx)(p.Z, {
 ...T,

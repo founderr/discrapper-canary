@@ -1,4 +1,4 @@
-n.d(t, {
+s.d(t, {
   T: function() {
 return o;
   },
@@ -6,9 +6,9 @@ return o;
 return i;
   }
 });
-var r = n(735250);
-n(470079);
-var s = n(481060);
+var n = s(735250);
+s(470079);
+var r = s(481060);
 let a = 'collectibles shop product details modal',
   o = e => {
 let {
@@ -18,12 +18,12 @@ let {
   analyticsLocations: l,
   returnRef: c
 } = e;
-(0, s.openModalLazy)(async () => {
+(0, r.openModalLazy)(async () => {
   let {
     default: e
-  } = await n.e('2026').then(n.bind(n, 702370));
-  return n => (0, r.jsx)(e, {
-    ...n,
+  } = await s.e('2026').then(s.bind(s, 702370));
+  return s => (0, n.jsx)(e, {
+    ...s,
     product: t,
     category: o,
     analyticsSource: i,
@@ -35,5 +35,5 @@ let {
 });
   },
   i = () => {
-(0, s.closeModal)(a);
+(0, r.closeModal)(a);
   };

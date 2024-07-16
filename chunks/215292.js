@@ -1,29 +1,29 @@
-n.d(s, {
+a.d(s, {
   F: function() {
 return A;
   },
   Z: function() {
 return I;
   }
-}), n(47120);
-var a = n(735250),
-  E = n(470079),
-  t = n(442837),
-  _ = n(481060),
-  l = n(493683),
-  i = n(881052),
-  d = n(565138),
-  T = n(984933),
-  M = n(430824),
-  L = n(285952),
-  r = n(153124),
-  o = n(689938),
-  C = n(966610);
+}), a(47120);
+var n = a(735250),
+  E = a(470079),
+  t = a(442837),
+  _ = a(481060),
+  l = a(493683),
+  i = a(881052),
+  d = a(565138),
+  T = a(984933),
+  M = a(430824),
+  L = a(285952),
+  r = a(153124),
+  o = a(689938),
+  C = a(966610);
 
 function A(e) {
   let {
 createdGuildId: s,
-hasFooter: n = !0,
+hasFooter: a = !0,
 onClose: A,
 onChannelPromptCompleted: I,
 isSlideReady: c
@@ -51,16 +51,16 @@ c && (null === (e = g.current) || void 0 === e || e.focus());
   N,
   I
 ]),
-Z = (0, a.jsxs)(a.Fragment, {
+Z = (0, n.jsxs)(n.Fragment, {
   children: [
-    (0, a.jsx)(_.Button, {
+    (0, n.jsx)(_.Button, {
       color: _.Button.Colors.BRAND,
       onClick: R,
       disabled: 0 === N.length,
       submitting: m,
       children: o.Z.Messages.DONE
     }),
-    (0, a.jsx)(_.Button, {
+    (0, n.jsx)(_.Button, {
       className: C.skipButton,
       look: _.Button.Looks.BLANK,
       size: _.Button.Sizes.MIN,
@@ -70,50 +70,50 @@ Z = (0, a.jsxs)(a.Fragment, {
   ]
 });
   return {
-content: (0, a.jsxs)(a.Fragment, {
+content: (0, n.jsxs)(n.Fragment, {
   children: [
-    (0, a.jsxs)(_.ModalHeader, {
+    (0, n.jsxs)(_.ModalHeader, {
       className: C.header,
       direction: L.Z.Direction.VERTICAL,
       separator: !1,
       children: [
-        null != p && (0, a.jsx)(d.Z, {
+        null != p && (0, n.jsx)(d.Z, {
           guild: p
         }),
-        (0, a.jsx)(_.Text, {
+        (0, n.jsx)(_.Text, {
           className: C.guildName,
           color: 'header-primary',
           variant: 'text-sm/semibold',
           children: null == p ? void 0 : p.name
         }),
-        (0, a.jsx)(_.Heading, {
+        (0, n.jsx)(_.Heading, {
           className: C.title,
           variant: 'heading-sm/semibold',
           children: o.Z.Messages.NUF_CHANNEL_PROMPT_TITLE
         }),
-        (0, a.jsx)(_.Text, {
+        (0, n.jsx)(_.Text, {
           className: C.subtitle,
           color: 'header-secondary',
           variant: 'text-md/normal',
           children: o.Z.Messages.NUF_CHANNEL_PROMPT_SUBTITLE
         }),
-        null != A && (0, a.jsx)(_.ModalCloseButton, {
+        null != A && (0, n.jsx)(_.ModalCloseButton, {
           className: C.closeButton,
           onClick: A
         })
       ]
     }),
-    (0, a.jsxs)(_.ModalContent, {
+    (0, n.jsxs)(_.ModalContent, {
       className: C.channelPrompt,
       children: [
-        (0, a.jsx)('form', {
+        (0, n.jsx)('form', {
           onSubmit: R,
-          children: (0, a.jsx)(_.FormItem, {
+          children: (0, n.jsx)(_.FormItem, {
             title: o.Z.Messages.NUF_CHANNEL_PROMPT_TOPIC,
             tag: 'label',
             htmlFor: D,
             error: null == u ? void 0 : u.getFieldMessage('name'),
-            children: (0, a.jsx)(_.TextInput, {
+            children: (0, n.jsx)(_.TextInput, {
               type: 'text',
               value: N,
               id: D,
@@ -123,14 +123,14 @@ content: (0, a.jsxs)(a.Fragment, {
             })
           })
         }),
-        null != u && 0 === Object.keys(u.fields).length && (0, a.jsx)(_.Text, {
+        null != u && 0 === Object.keys(u.fields).length && (0, n.jsx)(_.Text, {
           variant: 'text-xs/normal',
           color: 'text-danger',
           children: u.message
         })
       ]
     }),
-    n && (0, a.jsx)(_.ModalFooter, {
+    a && (0, n.jsx)(_.ModalFooter, {
       children: Z
     })
   ]

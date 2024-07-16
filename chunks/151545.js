@@ -6,8 +6,8 @@ return P;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(620662),
   c = n(841784),
@@ -39,8 +39,8 @@ type: t,
 source: n,
 activity: i,
 applicationStream: a,
-user: o,
-guildId: s,
+user: s,
+guildId: o,
 channelId: u,
 onAction: _,
 isEmbedded: E = (0, c.Z)(i),
@@ -52,8 +52,8 @@ type: t,
 source: n,
 activity: i,
 applicationStream: a,
-user: o,
-guildId: s,
+user: s,
+guildId: o,
 look: l.Button.Looks.FILLED,
 color: null != f ? f : l.Button.Colors.PRIMARY,
 channelId: u,
@@ -72,7 +72,7 @@ hideHeader: c = !1,
 showChannelDetails: d = !1,
 analyticsParams: C,
 ...P
-  } = e, U = (0, s.e7)([
+  } = e, U = (0, o.e7)([
 O.Z,
 A.Z
   ], () => {
@@ -85,14 +85,14 @@ guildId: null == U ? void 0 : U.guild_id,
 location: 'UserProfileActivityCardWrapper'
   }, {
 autoTrackExposure: !1
-  }), x = (0, s.e7)([S.Z], () => a ? S.Z.getAnyStreamForUser(n.id) : null), G = w && v.Z.can(D.Plq.CONNECT, U), k = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && G ? U : null, B = (0, s.e7)([
+  }), x = (0, o.e7)([S.Z], () => a ? S.Z.getAnyStreamForUser(n.id) : null), G = w && v.Z.can(D.Plq.CONNECT, U), k = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && G ? U : null, B = (0, o.e7)([
 N.Z,
 O.Z,
 A.Z
   ], () => {
 var e, r;
 return (0, u.Z)(t, D.xjy.EMBEDDED) ? N.Z.getGuild(null === (e = A.Z.getChannel(null === (r = O.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? N.Z.getGuild(k.getGuildId()) : null;
-  }), F = (0, s.e7)([N.Z], () => null != x ? N.Z.getGuild(x.guildId) : null), V = (0, s.e7)([_.Z], () => {
+  }), F = (0, o.e7)([N.Z], () => null != x ? N.Z.getGuild(x.guildId) : null), V = (0, o.e7)([_.Z], () => {
 if (null != t)
   return null != t.application_id ? _.Z.getApplication(t.application_id) : _.Z.getApplicationByName(t.name);
 return null;
@@ -117,7 +117,7 @@ activityGuild: null != B ? B : F,
 showChannelDetails: d,
 channel: d ? U : void 0,
 renderActions: l ? () => (0, r.jsxs)('div', {
-  className: o()(Y && b.actionsWrapper),
+  className: s()(Y && b.actionsWrapper),
   children: [
     (0, r.jsx)(M, {
       ...P,

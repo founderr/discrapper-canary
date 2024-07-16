@@ -20,7 +20,7 @@ var i = n(735250),
   h = n(981631),
   N = n(609727);
 
-function p(e) {
+function f(e) {
   let {
 assets: t,
 currentUser: n,
@@ -29,7 +29,7 @@ message: i
   return t[a];
 }
 
-function f(e) {
+function p(e) {
   let {
 currentUser: t,
 channel: n,
@@ -38,7 +38,7 @@ buttonLabels: d,
 stickers: u,
 event: _,
 eventProperties: E
-  } = e, [m, h] = a.useState(!1), f = a.useMemo(() => p({
+  } = e, [m, h] = a.useState(!1), p = a.useMemo(() => f({
 assets: u,
 currentUser: t,
 message: s
@@ -46,7 +46,7 @@ message: s
 u,
 t,
 s
-  ]), C = a.useMemo(() => p({
+  ]), C = a.useMemo(() => f({
 assets: d,
 currentUser: t,
 message: s
@@ -77,7 +77,7 @@ e && (! function(e) {
 }({
   channel: n,
   message: s,
-  sticker: f
+  sticker: p
 }), ! function(e) {
   let {
     sticker: t,
@@ -89,14 +89,14 @@ e && (! function(e) {
     sticker_id: t.id
   });
 }({
-  sticker: f,
+  sticker: p,
   event: _,
   eventProperties: E
 }));
   }, [
 n,
 s,
-f,
+p,
 _,
 E
   ]);
@@ -111,7 +111,7 @@ children: [
   (0, i.jsx)(c.ZP, {
     className: N.CTAMessageSticker,
     isInteracting: m,
-    sticker: f,
+    sticker: p,
     size: 28
   }),
   C
@@ -154,7 +154,7 @@ currentUser: c
   });
   return null != c && I ? (0, i.jsx)('div', {
 className: N.CTAMessage,
-children: (0, i.jsx)(f, {
+children: (0, i.jsx)(p, {
   currentUser: c,
   channel: t,
   message: n,

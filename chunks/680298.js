@@ -53,7 +53,7 @@ _
     label: d.Z.Messages.COPY_ID_COMMAND
   });
 });
-  }, [m]), h = m.type === o.yU.CHAT ? s.SlashBoxIcon : s.PaperIcon, p = (0, r.gw)(m.type, m.displayName);
+  }, [m]), h = m.type === o.yU.CHAT ? s.SlashBoxIcon : s.PaperIcon, g = (0, r.gw)(m.type, m.displayName);
   return (0, i.jsxs)(s.Clickable, {
 onClick: E,
 className: c.item,
@@ -69,7 +69,7 @@ children: [
       }),
       (0, i.jsx)(s.Text, {
         variant: 'text-md/normal',
-        children: p
+        children: g
       })
     ]
   }),

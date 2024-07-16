@@ -1,21 +1,21 @@
 n.d(t, {
   J: function() {
-return s.Hb;
+return o.Hb;
   }
 });
 var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(385499),
-  s = n(674563),
+  s = n(385499),
+  o = n(674563),
   l = n(68479);
 t.Z = e => {
   let {
 name: t,
 discriminator: n,
 invertBotTagColor: i,
-nameColor: s,
+nameColor: o,
 className: u,
 botType: c,
 usernameClass: d,
@@ -32,8 +32,8 @@ style: h,
 children: [
   (0, r.jsxs)('span', {
     className: a()(l.username, d),
-    style: null != s ? {
-      color: s
+    style: null != o ? {
+      color: o
     } : void 0,
     children: [
       m,
@@ -47,7 +47,7 @@ children: [
       n
     ]
   }) : null,
-  null != c ? (0, r.jsx)(o.Z, {
+  null != c ? (0, r.jsx)(s.Z, {
     type: c,
     invertColor: i,
     className: a()(E, l.bot),

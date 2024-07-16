@@ -1,4 +1,4 @@
-let r, i, a, o, s, l, u, c, d, _, E, f, h;
+let r, i, a, s, o, l, u, c, d, _, E, f, h;
 n(47120);
 var p, m, I, T, g = n(392711),
   S = n(754700),
@@ -11,7 +11,7 @@ var p, m, I, T, g = n(392711),
   y = n(46140);
 
 function D() {
-  r = !1, i = new Map(), a = 0, o = new Set(), s = new Set(), l = new Set(), u = new Set(), c = new Set(), _ = new Map(), E = new Map(), f = new Map(), h = null, d = new Set();
+  r = !1, i = new Map(), a = 0, s = new Set(), o = new Set(), l = new Set(), u = new Set(), c = new Set(), _ = new Map(), E = new Map(), f = new Map(), h = null, d = new Set();
 }
 D();
 
@@ -53,8 +53,8 @@ function P(e) {
 }
 
 function U(e) {
-  let t = new Set(o);
-  t.delete(e), o = t;
+  let t = new Set(s);
+  t.delete(e), s = t;
 }
 
 function w(e) {
@@ -75,10 +75,10 @@ return a;
 return i.get(null != h ? h : '');
   }
   isEnrolling(e) {
-return o.has(e);
+return s.has(e);
   }
   isClaimingRewardCode(e) {
-return s.has(e);
+return o.has(e);
   }
   isClaimingReward(e) {
 return l.has(e);
@@ -153,8 +153,8 @@ null == f.get(n) && (f = new Map(f)).set(n, {
   QUESTS_ENROLL_BEGIN: function(e) {
 let {
   questId: t
-} = e, n = new Set(o);
-n.add(t), o = n;
+} = e, n = new Set(s);
+n.add(t), s = n;
   },
   QUESTS_ENROLL_SUCCESS: function(e) {
 let {
@@ -192,21 +192,21 @@ n.delete(t), u = n;
   QUESTS_CLAIM_REWARD_CODE_BEGIN: function(e) {
 let {
   questId: t
-} = e, n = new Set(s);
-n.add(t), s = n;
+} = e, n = new Set(o);
+n.add(t), o = n;
   },
   QUESTS_CLAIM_REWARD_CODE_SUCCESS: function(e) {
 let {
   questId: t,
   rewardCode: n
-} = e, r = new Set(s);
-r.delete(t), s = r, M(t, n);
+} = e, r = new Set(o);
+r.delete(t), o = r, M(t, n);
   },
   QUESTS_CLAIM_REWARD_CODE_FAILURE: function(e) {
 let {
   questId: t
-} = e, n = new Set(s);
-n.delete(t), s = n;
+} = e, n = new Set(o);
+n.delete(t), o = n;
   },
   QUESTS_CLAIM_REWARD_BEGIN: function(e) {
 let {
@@ -225,7 +225,7 @@ r.delete(t), l = r, ! function(e, t) {
   let r = i.get(e),
     a = null == r ? void 0 : r.userStatus;
   if (null != a && null == a.claimedAt) {
-    var o;
+    var s;
     let n = function(e) {
       var t;
       let {
@@ -239,7 +239,7 @@ r.delete(t), l = r, ! function(e, t) {
       userStatus: {
         ...a,
         claimedAt: t.claimedAt,
-        claimedTier: null !== (o = null == n ? void 0 : n.tier) && void 0 !== o ? o : null
+        claimedTier: null !== (s = null == n ? void 0 : n.tier) && void 0 !== s ? s : null
       }
     });
   }

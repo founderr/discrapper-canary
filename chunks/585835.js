@@ -19,8 +19,8 @@ var i = t(735250),
   E = t(626135),
   T = t(486199),
   h = t(929507),
-  p = t(981631),
-  g = t(689938),
+  g = t(981631),
+  p = t(689938),
   C = t(19140);
 
 function f(e) {
@@ -66,7 +66,7 @@ canShowMigrationTooltip: k
 })),
 V = k && !G && !w && void 0 !== y && null != L;
   a.useEffect(() => {
-V && E.default.track(p.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
+V && E.default.track(g.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
   ...(0, c.hH)(y),
   application_id: null == L ? void 0 : L.application.id,
   location: 'overview'
@@ -82,7 +82,7 @@ V
       e.stopPropagation(), W(!0), h.Z.dismissOverviewTooltip(y, L.integration);
     },
     children: (0, i.jsx)(m.ZP, {
-      content: g.Z.Messages.COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP,
+      content: p.Z.Messages.COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP,
       onClick: () => {}
     })
   }),
@@ -128,7 +128,7 @@ J = (0, i.jsxs)(N.Z, {
               } = e;
             return null != l.bot && s.push((0, i.jsx)(d.TooltipContainer, {
               forceOpen: n,
-              text: new _.Z(l.bot).isVerifiedBot() ? g.Z.Messages.INTEGRATIONS_APPLICATION_VERIFIED_BOT : g.Z.Messages.INTEGRATIONS_APPLICATION_BOT,
+              text: new _.Z(l.bot).isVerifiedBot() ? p.Z.Messages.INTEGRATIONS_APPLICATION_VERIFIED_BOT : p.Z.Messages.INTEGRATIONS_APPLICATION_BOT,
               className: C.feature,
               children: (0, i.jsx)(d.RobotIcon, {
                 size: 'md',
@@ -137,7 +137,7 @@ J = (0, i.jsxs)(N.Z, {
               })
             }, 'bot')), c.length > 0 && s.push((0, i.jsx)(d.TooltipContainer, {
               forceOpen: n,
-              text: g.Z.Messages.INTEGRATIONS_WEBHOOKS_SUMMARY.format({
+              text: p.Z.Messages.INTEGRATIONS_WEBHOOKS_SUMMARY.format({
                 count: c.length
               }),
               className: C.feature,

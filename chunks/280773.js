@@ -1,9 +1,9 @@
-n.d(t, {
+s.d(t, {
   n: function() {
-return s;
+return r;
   }
 });
-let r = (0, n(818083).B)({
+let n = (0, s(818083).B)({
 kind: 'user',
 id: '2024-04_collectibles_unified_product_catalog',
 label: 'Collectibles Unified Product Catalog',
@@ -18,6 +18,6 @@ treatments: [{
   }
 }]
   }),
-  s = e => r.useExperiment({
+  r = e => n.useExperiment({
 location: e
   });

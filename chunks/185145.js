@@ -6,8 +6,8 @@ return f;
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(481060),
-  s = n(346486),
+  s = n(481060),
+  l = n(346486),
   r = n(545594),
   o = n(314897),
   c = n(271383),
@@ -33,7 +33,7 @@ children: [
     guildName: t.name
   }) : null,
   (0, i.jsx)(r.i, {
-    bannerIcon: (0, i.jsx)(l.ClockWarningIcon, {
+    bannerIcon: (0, i.jsx)(s.ClockWarningIcon, {
       size: 'md',
       color: 'currentColor',
       className: _.bannerIcon
@@ -44,9 +44,9 @@ children: [
     }),
     containerStyles: _.bannerContainer,
     headerStyles: _.bannerHeader,
-    children: (0, i.jsx)(l.Text, {
+    children: (0, i.jsx)(s.Text, {
       variant: 'text-sm/semibold',
-      children: (0, i.jsx)(s.Z, {
+      children: (0, i.jsx)(l.Z, {
         deadline: new Date(n),
         showUnits: !0,
         stopAtOneSec: !0

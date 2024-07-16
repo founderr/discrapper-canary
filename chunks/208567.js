@@ -48,8 +48,8 @@ let {
   name: d,
   makeURL: E,
   disabled: h,
-  onChange: p,
-  showIcon: g,
+  onChange: g,
+  showIcon: p,
   showIconDisabled: C,
   className: f,
   imageClassName: x,
@@ -102,7 +102,7 @@ return (0, a.jsxs)('div', {
     (0, a.jsx)(c.FocusRing, {
       within: !0,
       children: (0, a.jsxs)('div', {
-        className: g ? o()(N.imageUploaderIconWrapper, S) : void 0,
+        className: p ? o()(N.imageUploaderIconWrapper, S) : void 0,
         children: [
           (0, a.jsxs)('div', {
             className: o()(N.imageUploaderInner, x),
@@ -121,7 +121,7 @@ return (0, a.jsxs)('div', {
                 onClick: L
               }) : (0, a.jsx)(I.ZP, {
                 ref: this.inputRef,
-                onChange: p,
+                onChange: g,
                 className: N.imageUploaderFileInput,
                 'aria-label': D,
                 tabIndex: 0,
@@ -135,7 +135,7 @@ return (0, a.jsxs)('div', {
             'aria-hidden': 'true',
             children: r
           }),
-          g && (0, a.jsx)(T, {
+          p && (0, a.jsx)(T, {
             className: O,
             icon: A
           })

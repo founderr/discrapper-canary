@@ -8,8 +8,8 @@ return j;
 }), n(47120), n(653041);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(77866),
   o = n(748780),
   c = n(442837),
@@ -39,7 +39,7 @@ function j(e) {
   let {
 className: t,
 iconUrl: n,
-icon: l,
+icon: s,
 header: r,
 completed: o,
 onClick: c
@@ -50,12 +50,12 @@ null != m && o !== m && (p(!0), setTimeout(() => p(!1), 1000));
 o,
 m
   ]), (0, i.jsxs)(u.Clickable, {
-className: s()(t, R.card, {
+className: l()(t, R.card, {
   [R.completed]: o
 }),
 onClick: c,
 children: [
-  null != l ? l : (0, i.jsx)('div', {
+  null != s ? s : (0, i.jsx)('div', {
     className: R.icon,
     style: {
       backgroundImage: 'url(\''.concat(n, '\')')
@@ -63,14 +63,14 @@ children: [
   }),
   (0, i.jsx)(u.Text, {
     color: 'header-primary',
-    className: s()(R.cardTextContainer, R.cardHeader),
+    className: l()(R.cardTextContainer, R.cardHeader),
     variant: 'text-sm/normal',
     children: r
   }),
   o ? (0, i.jsx)(u.CheckmarkLargeIcon, {
     size: 'md',
     color: 'currentColor',
-    className: s()(R.checkmark, {
+    className: l()(R.checkmark, {
       [R.animate]: d
     })
   }) : (0, i.jsx)(x.Z, {
@@ -84,18 +84,18 @@ children: [
 function L(e) {
   let {
 channel: t
-  } = e, l = (0, c.e7)([g.Z], () => null != t ? g.Z.getGuild(t.getGuildId()) : null, [t]), h = null != l && S.default.extractTimestamp(l.id) < Date.now() - A._8R, x = (0, c.e7)([C.default], () => (null == l ? void 0 : l.ownerId) === C.default.getId(), [l]), {
+  } = e, s = (0, c.e7)([g.Z], () => null != t ? g.Z.getGuild(t.getGuildId()) : null, [t]), h = null != s && S.default.extractTimestamp(s.id) < Date.now() - A._8R, x = (0, c.e7)([C.default], () => (null == s ? void 0 : s.ownerId) === C.default.getId(), [s]), {
 canInvite: L,
 canManageGuild: P,
 canMessage: O
-  } = (0, _.TE)(t, l), y = (0, c.e7)([I.default], () => {
+  } = (0, _.TE)(t, s), y = (0, c.e7)([I.default], () => {
 var e, t;
 return (null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
   }), {
 guildPopulated: D,
 guildMessaged: k,
 guildPersonalized: U
-  } = (0, _.h_)(l), {
+  } = (0, _.h_)(s), {
 handleInvite: w,
 handleMessage: B,
 handlePersonalize: H,
@@ -123,7 +123,7 @@ let t = a.useCallback(() => {
       });
     });
   }, [e]),
-  l = a.useCallback(() => {
+  s = a.useCallback(() => {
     p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
       setup_type: M.Ft.CHANNEL_WELCOME,
       action: M.j7.SEND_MESSAGE
@@ -132,7 +132,7 @@ let t = a.useCallback(() => {
       channelId: A.lds
     });
   }, []),
-  s = a.useCallback(() => {
+  l = a.useCallback(() => {
     p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
       setup_type: M.Ft.CHANNEL_WELCOME,
       action: M.j7.PERSONALIZE_SERVER
@@ -156,8 +156,8 @@ let t = a.useCallback(() => {
   }, []);
 return {
   handleInvite: t,
-  handleMessage: l,
-  handlePersonalize: s,
+  handleMessage: s,
+  handlePersonalize: l,
   handleDownload: r,
   handleAddApplication: a.useCallback(() => {
     null != e && (p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
@@ -178,7 +178,7 @@ return {
     }));
   }, [e])
 };
-  }(l), F = !(y || D || k || U), {
+  }(s), F = !(y || D || k || U), {
 titleAnimatedStyle: W,
 opacities: z
   } = function(e) {
@@ -238,11 +238,11 @@ return i.push((0, r.Z)(() => new o.Z.Value(0))), i.push((0, r.Z)(() => new o.Z.V
   } : {},
   opacities: i
 };
-  }(F), Y = (0, c.e7)([m.Z], () => m.Z.getGuildApplicationIds(null == l ? void 0 : l.id)).length > 0;
+  }(F), Y = (0, c.e7)([m.Z], () => m.Z.getGuildApplicationIds(null == s ? void 0 : s.id)).length > 0;
   if (a.useEffect(() => {
   var e;
-  (0, E.i)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : A.lds);
-}, [l]), null == l)
+  (0, E.i)(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : A.lds);
+}, [s]), null == s)
 return null;
   let K = [];
   !h && (L && K.push((0, i.jsx)(o.Z.div, {
@@ -318,12 +318,12 @@ children: (0, i.jsx)('div', {
             className: R.titleName,
             variant: 'heading-xxl/semibold',
             children: b.Z.Messages.WELCOME_CTA_TITLE.format({
-              guildName: l.name
+              guildName: s.name
             })
           }),
           (0, i.jsxs)(u.Text, {
             color: 'header-secondary',
-            className: s()({
+            className: l()({
               [R.subtitle]: !0,
               [R.noChildren]: 0 === K.length
             }),

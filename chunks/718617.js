@@ -5,8 +5,8 @@ return I;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(338545),
-  s = n(442837),
+  s = n(338545),
+  l = n(442837),
   r = n(186325),
   o = n(481060),
   c = n(110924),
@@ -26,8 +26,8 @@ if (0 === n)
   return 'auto';
 let i = 'forwards' === t.current,
   a = n > 0,
-  l = !1;
-return a && i && 'left' === e && (l = !0), a && !i && 'right' === e && (l = !0), !a && i && 'right' === e && (l = !0), !a && !i && 'left' === e && (l = !0), l ? 'calc('.concat(100 * Math.abs(n), '% + ').concat(Math.round(12 * Math.abs(n)), 'px)') : 'auto';
+  s = !1;
+return a && i && 'left' === e && (s = !0), a && !i && 'right' === e && (s = !0), !a && i && 'right' === e && (s = !0), !a && !i && 'left' === e && (s = !0), s ? 'calc('.concat(100 * Math.abs(n), '% + ').concat(Math.round(12 * Math.abs(n)), 'px)') : 'auto';
   };
 }
 
@@ -39,7 +39,7 @@ guildId: x,
 onClose: T,
 analyticsLocation: N,
 className: v
-  } = e, S = (0, s.e7)([u.ZP], () => u.ZP.getGuildSidebarState(x), [x]), Z = null !== (t = null == S ? void 0 : S.details.modViewPanel) && void 0 !== t ? t : E.k.INFO, A = (0, c.Z)(I);
+  } = e, S = (0, l.e7)([u.ZP], () => u.ZP.getGuildSidebarState(x), [x]), Z = null !== (t = null == S ? void 0 : S.details.modViewPanel) && void 0 !== t ? t : E.k.INFO, A = (0, c.Z)(I);
   let M = null == (n = Z) ? null : n === E.k.INFO ? 'backwards' : 'forwards',
 b = (0, h.Z)(M),
 {
@@ -82,7 +82,7 @@ leave: {
   value: -1
 }
   }, A !== I ? 'animate-never' : 'animate-always');
-  return (0, i.jsx)(l.animated.div, {
+  return (0, i.jsx)(s.animated.div, {
 style: {
   position: 'relative',
   height: '100%',
@@ -90,11 +90,11 @@ style: {
   overflow: 'hidden'
 },
 children: P((e, t, n) => {
-  var a, s, r;
+  var a, l, r;
   let {
     key: o
   } = n;
-  return (0, i.jsx)(l.animated.div, {
+  return (0, i.jsx)(s.animated.div, {
     style: {
       position: 'absolute',
       display: 'flex',
@@ -105,7 +105,7 @@ children: P((e, t, n) => {
       ...R.enabled ? {
         opacity: null === (a = e.value) || void 0 === a ? void 0 : a.to(e => 1 - Math.abs(e))
       } : {
-        left: null === (s = e.value) || void 0 === s ? void 0 : s.to(g('left', b)),
+        left: null === (l = e.value) || void 0 === l ? void 0 : l.to(g('left', b)),
         right: null === (r = e.value) || void 0 === r ? void 0 : r.to(g('right', b))
       }
     },

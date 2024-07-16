@@ -1,6 +1,6 @@
 n.d(t, {
   H: function() {
-return p;
+return f;
   }
 });
 var i = n(735250);
@@ -21,12 +21,12 @@ var a = n(399606),
   h = n(226060),
   N = n(981631);
 
-function p(e) {
+function f(e) {
   let {
 guildProductListing: t,
 guildId: n,
-location: p,
-shouldShowFullDescriptionButton: f = !0,
+location: f,
+shouldShowFullDescriptionButton: p = !0,
 hideRoleTag: C = !1,
 lineClamp: g = 1,
 cardWidth: S,
@@ -45,7 +45,7 @@ return null;
   let j = () => (0, T.e)({
   guildId: n,
   guildProductListingId: t.id,
-  analyticsLocation: p
+  analyticsLocation: f
 }),
 U = (0, i.jsx)(m.m, {
   product: t,
@@ -80,10 +80,10 @@ role: v,
 ctaComponent: (0, i.jsx)(h.Z, {
   guildId: n,
   guildProductListingId: t.id,
-  sourceAnalyticsLocations: p
+  sourceAnalyticsLocations: f
 }),
 productType: Z,
-shouldShowFullDescriptionButton: f,
+shouldShowFullDescriptionButton: p,
 onShowFullDescription: j,
 onTapCard: j,
 actionMenu: U,

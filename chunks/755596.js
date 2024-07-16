@@ -1,15 +1,15 @@
-var n = s(735250);
-s(470079);
-var a = s(481060),
-  i = s(532395);
-t.Z = e => {
+var n = t(735250);
+t(470079);
+var a = t(481060),
+  i = t(532395);
+s.Z = e => {
   let {
-label: t,
-onClick: s,
+label: s,
+onClick: t,
 submitting: r
   } = e;
   return (0, n.jsx)(a.Clickable, {
-onClick: r ? void 0 : s,
+onClick: r ? void 0 : t,
 className: i.button,
 children: (0, n.jsxs)('div', {
   className: i.contentContainer,
@@ -20,7 +20,7 @@ children: (0, n.jsxs)('div', {
     }) : (0, n.jsx)(a.Text, {
       variant: 'text-md/medium',
       className: i.label,
-      children: t
+      children: s
     }),
     (0, n.jsx)(a.ChevronSmallDownIcon, {
       size: 'md',
