@@ -23,8 +23,8 @@ var i, l, a = t(735250),
   p = t(182906),
   _ = t(367907),
   E = t(220082),
-  A = t(318661),
-  f = t(810090),
+  A = t(810090),
+  f = t(768581),
   h = t(792125),
   N = t(541099),
   C = t(783097),
@@ -34,9 +34,9 @@ var i, l, a = t(735250),
   x = t(753972),
   T = t(981631),
   R = t(217702),
-  S = t(231338),
-  g = t(689938),
-  L = t(126152),
+  L = t(231338),
+  S = t(689938),
+  g = t(126152),
   M = t(413097);
 
 function O(e) {
@@ -68,23 +68,23 @@ sectionPosition: p
   }, [u]), j = r.useCallback(() => R(!1), []);
   return 'icon' === t ? (0, a.jsx)(c.Clickable, {
 innerRef: _ ? e => I.current = e : void 0,
-className: o()(L.container, L.iconCard),
+className: o()(g.container, g.iconCard),
 onClick: l,
-'aria-label': g.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
+'aria-label': S.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
   applicationName: f,
   applicationDescription: N
 }),
 children: (0, a.jsx)(x.Z, {
   src: A,
-  className: L.iconCard,
+  className: g.iconCard,
   'aria-hidden': !0,
   rendersPlaceholder: !0
 })
   }) : (0, a.jsxs)(c.Clickable, {
 innerRef: _ ? e => I.current = e : void 0,
-className: L.container,
+className: g.container,
 onClick: l,
-'aria-label': g.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
+'aria-label': S.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
   applicationName: f,
   applicationDescription: N
 }),
@@ -94,9 +94,9 @@ children: [
     onFocus: O,
     onMouseLeave: j,
     onBlur: j,
-    className: o()(L.bannerImageContainer, {
-      [L.mediumBanner]: 'medium_banner' === t,
-      [L.largeBanner]: 'large_banner' === t
+    className: o()(g.bannerImageContainer, {
+      [g.mediumBanner]: 'medium_banner' === t,
+      [g.largeBanner]: 'large_banner' === t
     }),
     children: [
       (0, a.jsx)('span', {
@@ -108,31 +108,31 @@ children: [
         })
       }),
       i && (0, a.jsx)('div', {
-        className: L.partnerLabelWrapper,
+        className: g.partnerLabelWrapper,
         children: (0, a.jsx)(c.Text, {
-          className: (0, h.Q)(S.BR.DARK),
+          className: (0, h.Q)(L.BR.DARK),
           variant: 'text-sm/medium',
           color: 'text-normal',
-          children: g.Z.Messages.APP_DIRECTORY_PARTNER
+          children: S.Z.Messages.APP_DIRECTORY_PARTNER
         })
       }),
       'large_banner' === t || 'medium_banner' === t ? (0, a.jsx)('div', {
-        className: L.bannerImageChildContainer,
+        className: g.bannerImageChildContainer,
         children: d
       }) : null
     ]
   }),
   (0, a.jsxs)('div', {
-    className: L.appDetailsContainer,
+    className: g.appDetailsContainer,
     children: [
       (0, a.jsx)(x.Z, {
         src: A,
-        className: L.icon,
+        className: g.icon,
         'aria-hidden': !0,
         rendersPlaceholder: !0
       }),
       (0, a.jsxs)('div', {
-        className: L.appDetails,
+        className: g.appDetails,
         children: [
           (0, a.jsx)(c.Heading, {
             variant: 'heading-md/semibold',
@@ -196,13 +196,13 @@ t && c(!0);
   }, [t]), (0, a.jsxs)(a.Fragment, {
 children: [
   null != l && s ? (0, a.jsx)('div', {
-    className: L.activityVideoContainer,
+    className: g.activityVideoContainer,
     children: (0, a.jsx)('div', {
-      className: o()(L.activityVideo, {
-        [L.videoFadeOut]: !t
+      className: o()(g.activityVideo, {
+        [g.videoFadeOut]: !t
       }),
       onAnimationEnd: () => t ? null : c(!1),
-      children: (0, a.jsx)(f.Z, {
+      children: (0, a.jsx)(A.Z, {
         src: l,
         mediaLayoutType: R.hV.MOSAIC,
         loop: !0,
@@ -214,8 +214,8 @@ children: [
   (0, a.jsx)(p.Z, {
     imageBackground: i,
     applicationName: n.name,
-    imageClassName: L.bannerImage,
-    imageNotFoundClassName: L.bannerImage
+    imageClassName: g.bannerImage,
+    imageNotFoundClassName: g.bannerImage
   })
 ]
   });
@@ -225,16 +225,18 @@ function b(e) {
   let {
 bot: n,
 fallbackColor: t
-  } = e, i = (0, A.ZP)(n.id), l = r.useMemo(() => null == i ? void 0 : i.getBannerURL({
+  } = e, i = (0, f.aN)({
+id: n.id,
+banner: n.banner,
 canAnimate: !1,
 size: 600
-  }), [i]);
-  return null == l ? (0, a.jsx)(Z, {
+  });
+  return null == i ? (0, a.jsx)(Z, {
 fallbackColor: t
   }) : (0, a.jsx)('img', {
-src: l,
+src: i,
 alt: '',
-className: L.bannerImage
+className: g.bannerImage
   });
 }
 
@@ -243,7 +245,7 @@ function Z(e) {
 fallbackColor: n
   } = e;
   return (0, a.jsx)('div', {
-className: L.bannerImage,
+className: g.bannerImage,
 style: {
   backgroundColor: n
 }
@@ -331,12 +333,12 @@ application: t,
 onClick: e => {
   e.stopPropagation();
 },
-bannerImageStyle: L.darkenBannerImage,
+bannerImageStyle: g.darkenBannerImage,
 enableVideoBanner: !1,
 children: (0, a.jsx)('div', {
-  className: L.voiceLauncherAppCardContainer,
+  className: g.voiceLauncherAppCardContainer,
   children: (0, a.jsx)(c.Button, {
-    className: L.voiceLauncherAppCardButton,
+    className: g.voiceLauncherAppCardButton,
     type: 'submit',
     size: c.Button.Sizes.LARGE,
     color: m,
