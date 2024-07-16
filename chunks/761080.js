@@ -18,7 +18,6 @@ let r = 15,
 (a = i || (i = {}))[a.MESSAGE = 0] = 'MESSAGE', a[a.SUMMARY = 1] = 'SUMMARY', a[a.ACTIVITY = 2] = 'ACTIVITY';
 let o = new Set([
   0,
-  1,
-  2
+  1
 ]);
 s.hBH.IMAGE, s.hBH.VIDEO, s.hBH.GIFV;
