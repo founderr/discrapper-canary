@@ -103,6 +103,7 @@ let k = {},
 'QUICKSWITCHER_SHOW',
 'SEARCH_MODAL_OPEN',
 'IFE_EXPERIMENT_SEARCH_MODAL_OPEN',
+'SHOW_KEYBOARD_SHORTCUTS',
 'INTERACTION_MODAL_CREATE',
 'INTERACTION_IFRAME_MODAL_CREATE',
 'GUILD_SETTINGS_CLOSE',
@@ -114,6 +115,7 @@ let k = {},
 'QUICKSWITCHER_HIDE',
 'SEARCH_MODAL_CLOSE',
 'IFE_EXPERIMENT_SEARCH_MODAL_CLOSE',
+'HIDE_KEYBOARD_SHORTCUTS',
 'QUICKSWITCHER_SHOW',
 'QUICKSWITCHER_HIDE',
 'QUICKSWITCHER_SWITCH_TO',
@@ -672,7 +674,7 @@ let {
 } = e;
 K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
 let n = new URLSearchParams();
-n.append('build_id', '05651e9fa0bf85b4d35bd378cee0803d028be8d1'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString());
+n.append('build_id', 'eaef06e49eac0fffb83efba8f9e7c4717fc5fad7'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString());
   },
   OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
 let {
