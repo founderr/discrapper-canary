@@ -4,6 +4,7 @@ var i, l, a, r, s = t(442837),
 let u = {
   show: !1,
   entrypoint: c._b.NONE,
+  lastShownEntrypoint: c._b.NONE,
   activeViewType: null,
   closeReason: c.ti.DISMISSED
 };
@@ -24,6 +25,9 @@ return u.show && u.entrypoint === c._b.VOICE;
   }
   entrypoint() {
 return u.entrypoint;
+  }
+  lastShownEntrypoint() {
+return u.lastShownEntrypoint;
   }
   activeViewType() {
 return u.activeViewType;
@@ -55,7 +59,7 @@ let {
   entrypoint: n,
   activeViewType: t
 } = e;
-return u.show = !0, u.entrypoint = n, u.closeReason = c.ti.DISMISSED, u.activeViewType = t, !0;
+return u.show = !0, u.entrypoint = n, u.lastShownEntrypoint = n, u.closeReason = c.ti.DISMISSED, u.activeViewType = t, !0;
   },
   APP_LAUNCHER_DISMISS: d,
   CONNECTION_OPEN: p,
