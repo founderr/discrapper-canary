@@ -13,6 +13,6 @@ t = i.useCallback(t => {
 }, []);
   return {
 scrollPosition: e.current.scrollPosition,
-handleScroll: t
+onScroll: t
   };
 }

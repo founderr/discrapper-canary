@@ -25,7 +25,7 @@ tabs: n,
 selectedTab: N,
 onSelectTab: A
   } = (0, T.z)(), {
-handleScroll: v,
+onScroll: v,
 scrollPosition: Z
   } = (0, u.c)(), L = (0, _.Z)({
 scrollPosition: Z

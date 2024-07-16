@@ -16,4 +16,4 @@ let l = [
   'quests',
   'shop'
 ];
-(r = a || (a = {})).GUILDS = 'guilds', r.GAMING = 'gaming', r.MUSIC = 'music', r.ENTERTAINMENT = 'entertainment', r.TECH = 'tech', r.EDUCATION = 'education', r.HUBS = 'hubs';
+(r = a || (a = {})).GUILDS = 'guilds', r.FEATURED = 'featured', r.GAMING = 'gaming', r.MUSIC = 'music', r.ENTERTAINMENT = 'entertainment', r.TECH = 'tech', r.EDUCATION = 'education', r.HUBS = 'hubs';

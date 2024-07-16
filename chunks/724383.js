@@ -10,8 +10,8 @@ var a = n(252618),
   r = n(823379),
   l = n(976076),
   o = n(626426),
-  c = n(91630),
-  d = n(754420),
+  c = n(754420),
+  d = n(545114),
   u = n(49898),
   _ = n(689938),
   E = n(143731);
@@ -21,13 +21,13 @@ function h() {
 t = function(e) {
   switch (e) {
     case u.F$.SERVERS:
-      return (0, i.jsx)(c.U, {});
+      return (0, i.jsx)(d.Z, {});
     case u.F$.APPS:
       return (0, i.jsx)(o.z, {});
     case u.F$.QUESTS:
       return (0, i.jsx)(s.Z, {});
     case u.F$.SHOP:
-      return (0, i.jsx)(d.t, {});
+      return (0, i.jsx)(c.t, {});
     default:
       (0, r.vE)(e);
   }

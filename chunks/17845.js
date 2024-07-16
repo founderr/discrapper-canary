@@ -34,7 +34,7 @@ children: [
       className: d.textContainer,
       children: [
         (0, i.jsx)(o.Heading, {
-          variant: 'heading-lg/medium',
+          variant: 'heading-xl/bold',
           color: 'always-white',
           children: t
         }),

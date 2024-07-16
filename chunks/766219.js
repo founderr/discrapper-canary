@@ -40,6 +40,8 @@ default:
 
 function o(e) {
   switch (e) {
+case a.vf.FEATURED:
+  return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_FEATURED_CATEGORY;
 case a.vf.GUILDS:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_CATEGORY;
 case a.vf.GAMING:
@@ -59,6 +61,8 @@ case a.vf.HUBS:
 
 function c(e) {
   switch (e) {
+case a.vf.FEATURED:
+  return r.Z.Messages.GUILD_DISCOVERY_HOME_TITLE;
 case a.vf.GAMING:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_TITLE;
 case a.vf.MUSIC:
@@ -78,6 +82,8 @@ default:
 
 function d(e) {
   switch (e) {
+case a.vf.FEATURED:
+  return r.Z.Messages.GUILD_DISCOVERY_HOME_SUBTITLE;
 case a.vf.GAMING:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_DESCRIPTION;
 case a.vf.MUSIC:
@@ -97,6 +103,8 @@ default:
 
 function u(e) {
   switch (e) {
+case a.vf.FEATURED:
+  return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_FEATURED;
 case a.vf.GAMING:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_GAMING;
 case a.vf.MUSIC:
@@ -114,6 +122,7 @@ default:
 
 function _(e) {
   switch (e) {
+case a.vf.FEATURED:
 case a.vf.GUILDS:
   return s.Hk;
 case a.vf.GAMING:
