@@ -60,6 +60,13 @@ treatments: [{
     config: {
       coachtipEdition: a.LM.DARK_FANTASY
     }
+  },
+  {
+    id: 8,
+    label: 'Robert',
+    config: {
+      coachtipEdition: a.LM.ROBERT
+    }
   }
 ]
   }),

@@ -80,7 +80,7 @@ children: [
     environment: Z.current
   }),
   null != L && (0, i.jsx)('img', {
-    src: L.confettiAssetSrc,
+    src: L.imageSrc,
     className: o()(T.customConfetti, {
       [T.hidden]: !R
     }),

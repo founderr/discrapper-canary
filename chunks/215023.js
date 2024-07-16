@@ -11,7 +11,7 @@ return d;
   yf: function() {
 return h;
   }
-}), n(47120);
+}), n(47120), n(470079);
 var r = n(463570),
   i = n.n(r),
   a = n(961238),
@@ -48,6 +48,15 @@ let c = {
 [u.T.DARK_FANTASY]: {
   addGradient: !1,
   hideLogoOnBanner: !0
+},
+[u.T.ROBERT]: {
+  addGradient: !1,
+  hideLogoOnBanner: !0,
+  hideAttributionLogos: !0,
+  showDarkBannerText: !0,
+  pdpLogoStyle: {
+    maxHeight: '60px'
+  }
 }
   },
   d = '1225876188074082374',

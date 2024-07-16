@@ -41,32 +41,33 @@ return (0, i.jsx)(d.TextBadge, {
 let {
   selected: t,
   locationState: n,
-  onMouseEnter: s,
-  onMouseLeave: r,
-  children: o,
-  ...c
-} = e, u = (0, l.JA)('shop'), E = I.Z.HOME_PAGE_SHOP_TAB, {
-  analyticsLocations: h
-} = (0, m.ZP)(E), g = a.useCallback(() => (0, S.mK)({
+  icon: s,
+  onMouseEnter: r,
+  onMouseLeave: o,
+  children: c,
+  ...u
+} = e, E = (0, l.JA)('shop'), h = I.Z.HOME_PAGE_SHOP_TAB, {
+  analyticsLocations: g
+} = (0, m.ZP)(h), p = a.useCallback(() => (0, S.mK)({
   openInLayer: !1,
-  analyticsSource: E,
-  analyticsLocations: h
+  analyticsSource: h,
+  analyticsLocations: g
 }), [
-  E,
-  h
+  h,
+  g
 ]);
 return (0, i.jsx)(_.Qj, {
   selected: t,
   route: A.Z5c.COLLECTIBLES_SHOP,
-  icon: d.ShopIcon,
+  icon: null != s ? s : d.ShopIcon,
   text: v.Z.Messages.COLLECTIBLES_SHOP,
   locationState: n,
+  ...E,
   ...u,
-  ...c,
-  onMouseEnter: s,
-  onMouseLeave: r,
-  onClick: g,
-  children: o
+  onMouseEnter: r,
+  onMouseLeave: o,
+  onClick: p,
+  children: c
 });
   },
   R = e => {
@@ -83,8 +84,9 @@ return (0, i.jsx)(O, {
   x = a.memo(function(e) {
 let {
   displayOptions: t,
-  assetId: n
-} = e, a = (0, o.e7)([h.Z], () => h.Z.useReducedMotion), s = null != n ? (0, g.Z)(n, d.AvatarSizes.SIZE_80, !a) : void 0, r = t.title(), l = t.type === N.k2.COACHTIP_HEADLINE_ONLY;
+  assetId: n,
+  reducedMotion: a = !1
+} = e, s = null != n ? (0, g.Z)(n, d.AvatarSizes.SIZE_80, !a) : void 0, r = t.title(), l = t.type === N.k2.COACHTIP_HEADLINE_ONLY;
 return (0, i.jsxs)('div', {
   className: Z.shopMarketingTooltipContent,
   children: [
@@ -120,34 +122,42 @@ let {
   selected: t,
   locationState: n,
   displayOptions: s
-} = e, [l, o] = a.useState(0), [u, _] = a.useState(!1), h = (0, E.ZP)(), I = s.entrypointDecorationAssets, m = a.useCallback(e => {
-  o(e => (e + 1) % s.assetIds.length), _(!0), null == e || e();
-}, [s.assetIds]), g = a.useCallback(e => {
-  _(!1), null == e || e();
-}, []), p = s.title();
+} = e, l = (0, o.e7)([h.Z], () => h.Z.useReducedMotion), [u, _] = a.useState(0), [I, m] = a.useState(!1), g = (0, E.ZP)(), p = s.entrypointDecorationAssets, T = s.entryPointBackgroundAssets, S = a.useCallback(e => {
+  _(e => (e + 1) % s.assetIds.length), m(!0), null == e || e();
+}, [s.assetIds]), C = a.useCallback(e => {
+  m(!1), null == e || e();
+}, []), N = s.title();
 return (0, i.jsx)(d.Tooltip, {
   text: (0, i.jsx)(x, {
     displayOptions: s,
-    assetId: s.assetIds[l]
+    assetId: s.assetIds[u],
+    reducedMotion: l
   }),
   tooltipClassName: Z.marketingBadgeTooltip,
   position: 'right',
   delay: 100,
   allowOverflow: !0,
   hideOnClick: !1,
-  'aria-label': 'string' == typeof p ? p : v.Z.Messages.COLLECTIBLES_SEE_WHATS_NEW,
+  'aria-label': 'string' == typeof N ? N : v.Z.Messages.COLLECTIBLES_SEE_WHATS_NEW,
   children: e => (0, i.jsxs)(O, {
     className: null != s.entryPointClassName ? (0, f.l)(Z, s.entryPointClassName) : void 0,
     selected: t,
     locationState: n,
+    icon: s.entryPointIcon,
     ...e,
-    onMouseEnter: () => m(e.onMouseEnter),
-    onMouseLeave: () => g(e.onMouseLeave),
+    onMouseEnter: () => S(e.onMouseEnter),
+    onMouseLeave: () => C(e.onMouseLeave),
     children: [
-      null != I && (0, i.jsx)('img', {
-        src: (0, c.wj)(h) ? I.srcDark : I.srcLight,
+      null != T && (0, i.jsx)('img', {
+        src: (0, c.wj)(g) ? T.srcDark : T.srcLight,
+        className: Z.marketingButtonBackgroundImage,
+        alt: '',
+        'aria-hidden': !0
+      }),
+      null != p && !l && (0, i.jsx)('img', {
+        src: (0, c.wj)(g) ? p.srcDark : p.srcLight,
         className: r()(Z.marketingButtonImage, {
-          [Z.marketingButtonImageHovered]: u
+          [Z.marketingButtonImageHovered]: I
         }),
         alt: '',
         'aria-hidden': !0

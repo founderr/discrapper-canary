@@ -20,8 +20,8 @@ var r = n(735250),
   f = n(74538),
   C = n(884697),
   m = n(624377),
-  h = n(141011),
-  _ = n(813083),
+  _ = n(141011),
+  h = n(813083),
   b = n(67938),
   x = n(372654),
   I = n(994896),
@@ -151,11 +151,11 @@ hideLimitedTimeBadge: d = !1
 size: x.yV,
 format: 'jpg'
   }), g = u ? null === (t = a.leftOverflow) || void 0 === t ? void 0 : t.call(a) : null === (n = a.rightOverflow) || void 0 === n ? void 0 : n.call(a), f = u ? a.rightLogo() : a.leftLogo(), {
-backgroundColors: h
+backgroundColors: _
   } = (0, m.Z)(l.styles), b = {
 objectPosition: u ? 'left' : 'right',
-background: null != h ? ''.concat((0, x.nH)(h), ' border-box border-box') : void 0,
-outlineColor: null != h ? h.border.toHslString() : void 0
+background: null != _ ? ''.concat((0, x.nH)(_), ' border-box border-box') : void 0,
+outlineColor: null != _ ? _.border.toHslString() : void 0
   };
   return (0, r.jsxs)('div', {
 className: o()(v.condensedBannerContainer),
@@ -181,7 +181,7 @@ children: [
     src: f,
     alt: l.name
   }),
-  !d && (0, r.jsx)(_.Z, {
+  !d && (0, r.jsx)(h.Z, {
     category: l,
     className: o()(v.limitedTimeBadge, {
       [v.limitedTimeBadgeLeft]: u
@@ -193,40 +193,42 @@ children: [
 }
 
 function Z(e) {
-  var t, n, s;
+  var t, n, s, a;
   let {
-category: a,
-className: l,
-hideLimitedTimeBadge: d = !1,
-index: u = 0
+category: l,
+className: d,
+hideLimitedTimeBadge: u = !1,
+index: p = 0
   } = e, {
-backgroundColors: p
-  } = (0, m.Z)(a.styles), f = !!(null === (t = E.Ve[a.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
-condensedBannersEnabled: L
+backgroundColors: f
+  } = (0, m.Z)(l.styles), L = !!(null === (t = E.Ve[l.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
+condensedBannersEnabled: S
   } = (0, I.O)({
 location: 'Collectibles Shop Banner'
   });
-  if (L) {
-let e = N[a.skuId];
+  if (S) {
+let e = N[l.skuId];
 if (null != e)
   return (0, r.jsx)(j, {
     config: e,
-    category: a,
-    index: u,
-    hideLimitedTimeBadge: d
+    category: l,
+    index: p,
+    hideLimitedTimeBadge: u
   });
   }
-  return a.skuId === i.T.TIDE ? (0, r.jsx)(b.G, {
-category: a
-  }) : (0, r.jsxs)(h.Z, {
-asset: a.banner,
-className: o()(v.shopBanner, l),
-style: null != p ? {
-  background: ''.concat((0, x.nH)(p), ' border-box border-box'),
-  outlineColor: p.border.toHslString()
+  return l.skuId === i.T.TIDE ? (0, r.jsx)(b.G, {
+category: l
+  }) : (0, r.jsxs)(_.Z, {
+asset: l.banner,
+className: o()(v.shopBanner, d),
+style: null != f ? {
+  background: ''.concat((0, x.nH)(f), ' border-box border-box'),
+  outlineColor: f.border.toHslString()
 } : void 0,
 children: [
-  (0, r.jsxs)('div', {
+  (null === (n = E.Ve[l.skuId]) || void 0 === n ? void 0 : n.hideAttributionLogos) === !0 ? (0, r.jsx)(c.Spacer, {
+    size: 28
+  }) : (0, r.jsxs)('div', {
     className: v.discordLogo,
     children: [
       (0, r.jsx)(c.ClydeIcon, {
@@ -241,31 +243,29 @@ children: [
       })
     ]
   }),
-  (null === (n = E.Ve[a.skuId]) || void 0 === n ? void 0 : n.hideLogoOnBanner) === !0 ? (0, r.jsx)('div', {
-    style: {
-      height: 96
-    }
+  (null === (s = E.Ve[l.skuId]) || void 0 === s ? void 0 : s.hideLogoOnBanner) === !0 ? (0, r.jsx)(c.Spacer, {
+    size: 96
   }) : (0, r.jsx)('img', {
     className: v.categoryLogo,
-    src: (0, C.uV)(a.logo, {
+    src: (0, C.uV)(l.logo, {
       size: T
     }),
-    alt: a.name,
+    alt: l.name,
     style: {
-      maxWidth: null === (s = E.Ve[a.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
+      maxWidth: null === (a = E.Ve[l.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
     }
   }),
   (0, r.jsx)(c.Text, {
     className: o()(v.summary, {
-      [v.blackSummary]: f
+      [v.blackSummary]: L
     }),
     variant: 'text-md/normal',
-    children: a.skuId === i.T.DISXCORE ? (0, r.jsx)(O, {
-      category: a
-    }) : a.summary
+    children: l.skuId === i.T.DISXCORE ? (0, r.jsx)(O, {
+      category: l
+    }) : l.summary
   }),
-  !d && (0, r.jsx)(_.Z, {
-    category: a,
+  !u && (0, r.jsx)(h.Z, {
+    category: l,
     className: v.limitedTimeBadge,
     display: 'banner'
   })

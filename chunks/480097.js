@@ -1,0 +1,1 @@
+e.exports = t.p + 'cffb2bd6e6e6fdac74f9.png';
