@@ -16,19 +16,21 @@ var i = n(735250),
 function _(e) {
   var t;
   let {
-quest: n
-  } = e, s = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, _ = !(0, o.zi)(n) || (0, o.iQ)(n) && s, [E, h] = a.useState(!1);
+quest: n,
+className: s
+  } = e, _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, E = !(0, o.zi)(n) || (0, o.iQ)(n) && _, [h, I] = a.useState(!1);
   return (0, i.jsxs)('div', {
+id: 'quest-tile-'.concat(n.id),
 className: r()(u.container, {
-  [u.noCta]: !_,
-  [u.cta]: _
-}),
-onMouseEnter: () => h(!0),
-onMouseLeave: () => h(!1),
+  [u.noCta]: !E,
+  [u.cta]: E
+}, s),
+onMouseEnter: () => I(!0),
+onMouseLeave: () => I(!1),
 children: [
   (0, i.jsx)(c.Z, {
     quest: n,
-    isHovering: E
+    isHovering: h
   }),
   (0, i.jsx)(d.Z, {
     quest: n,

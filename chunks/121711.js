@@ -1,3 +1,4 @@
+n(47120);
 var i = n(735250),
   a = n(470079),
   s = n(948789),
@@ -30,11 +31,19 @@ scrollPosition: Z
 scrollPosition: Z
   }), O = (0, r.wj)((0, o.ZP)()), {
 quests: R
-  } = (0, m.bA)(N.id), x = a.useMemo(() => O ? 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-dark-mode.png' : 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-light-mode.png', [O]);
+  } = (0, m.bA)(N.id), x = a.useMemo(() => O ? 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-dark-mode.png' : 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-light-mode.png', [O]), b = null;
+  if (window.location.hash.length > 0) {
+let e = window.location.hash.slice(1);
+for (let t of R)
+  if (t.id === e) {
+    b = e;
+    break;
+  }
+  }
   a.useEffect(() => {
 !t && (0, s.uL)(f.Z5c.FRIENDS);
   }, [t]), a.useEffect(() => {}, []);
-  let b = a.useCallback(() => {
+  let P = a.useCallback(() => {
 window.open(I.Z.getArticleURL(f.BhN.QUESTS_LEARN_MORE));
   }, []);
   return ((0, d.Tt)({
@@ -63,7 +72,7 @@ children: [
       size: 'medium',
       color: O ? l.ButtonColors.TRANSPARENT : l.ButtonColors.WHITE,
       className: C.button,
-      onClick: b,
+      onClick: P,
       innerClassName: C.innerButton,
       children: [
         (0, i.jsx)(l.Text, {
@@ -81,7 +90,8 @@ children: [
     children: (0, i.jsx)('div', {
       className: C.gridContainer,
       children: (0, i.jsx)(p.Z, {
-        quests: R
+        quests: R,
+        selectedQuestId: b
       })
     })
   })
