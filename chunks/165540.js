@@ -45,7 +45,7 @@ let {
 return t;
   }, e => {
 let t = g.current;
-null != t && (t.style.transform = null != e ? 'translateY(calc(100% - '.concat(e, 'px)') : '');
+null != t && (t.style.transform = null != e ? 'translateY(calc(100% - min('.concat(e, 'px, var(--custom-channel-textarea-text-area-max-height)))') : '');
   }), []), (0, i.jsx)(c.Tooltip, {
 text: S.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
 children: e => (0, i.jsx)('div', {
