@@ -19,8 +19,8 @@ var i, a = n(735250),
   g = n(878727),
   p = n(117496),
   T = n(150192),
-  f = n(731455),
-  S = n(981631),
+  S = n(731455),
+  f = n(981631),
   C = n(689938),
   N = n(920052);
 
@@ -67,8 +67,8 @@ let {
   query: a,
   isHandlingTagSearch: s
 } = this.state, r = this.context;
-if (null == E.ZP.getSearchIndex() && _.Ue(), I.S.subscribe(S.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.subscribe(S.CkL.TEXTAREA_FOCUS, this.focusInput), a.length > 0) {
-  let l = n !== f.Hk ? n : null;
+if (null == E.ZP.getSearchIndex() && _.Ue(), I.S.subscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.subscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput), a.length > 0) {
+  let l = n !== S.Hk ? n : null;
   v({
     loadId: e,
     searchId: i,
@@ -92,7 +92,7 @@ let {
   searchId: o,
   query: c,
   isHandlingTagSearch: d
-} = this.state, u = this.context, _ = e.isFetchingSearch && !i, E = s !== f.Hk ? s : null;
+} = this.state, u = this.context, _ = e.isFetchingSearch && !i, E = s !== S.Hk ? s : null;
 (l || d) && _ && (v({
   loadId: n,
   searchId: o,
@@ -110,7 +110,7 @@ let {
 });
   }
   componentWillUnmount() {
-I.S.unsubscribe(S.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.unsubscribe(S.CkL.TEXTAREA_FOCUS, this.focusInput);
+I.S.unsubscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.unsubscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput);
   }
   renderSearchOptions() {
 var e;
@@ -149,7 +149,7 @@ return (0, a.jsx)('div', {
     let [n, i] = t;
     return (0, a.jsx)(Z, {
       categoryId: n,
-      name: n === f.Hk ? C.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
+      name: n === S.Hk ? C.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
       onCategoryChange: this.handleCategoryChange,
       isSelected: e === n,
       count: i
@@ -236,8 +236,8 @@ super(e), A(this, '_searchRef', s.createRef()), A(this, 'canSearch', e => e.trim
   } = this.state, {
     loadId: i,
     currentCategoryId: a
-  } = this.props, s = a !== f.Hk ? a : null;
-  this.canSearch(t) && n && e.charCode === S.yXg.ENTER ? (m.tI(i, s), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === S.yXg.ENTER && this.setState({
+  } = this.props, s = a !== S.Hk ? a : null;
+  this.canSearch(t) && n && e.charCode === f.yXg.ENTER ? (m.tI(i, s), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === f.yXg.ENTER && this.setState({
     isSearching: !1
   });
 }), A(this, 'handleQueryChanged', e => {

@@ -15,8 +15,8 @@ var r, s, a = n(735250),
   f = n(442837),
   C = n(481060),
   m = n(451478),
-  h = n(259580),
-  _ = n(305271),
+  _ = n(259580),
+  h = n(305271),
   b = n(689938),
   x = n(692123);
 let I = {
@@ -47,8 +47,8 @@ return (0, a.jsxs)('div', {
       className: d,
       onClick: s,
       'aria-label': b.Z.Messages.PAGINATION_PREVIOUS,
-      children: (0, a.jsx)(h.Z, {
-        direction: h.Z.Directions.LEFT
+      children: (0, a.jsx)(_.Z, {
+        direction: _.Z.Directions.LEFT
       })
     }),
     (0, a.jsx)('div', {
@@ -76,8 +76,8 @@ return (0, a.jsxs)('div', {
       className: d,
       onClick: r,
       'aria-label': b.Z.Messages.PAGINATION_NEXT,
-      children: (0, a.jsx)(h.Z, {
-        direction: h.Z.Directions.RIGHT
+      children: (0, a.jsx)(_.Z, {
+        direction: _.Z.Directions.RIGHT
       })
     })
   ]
@@ -94,7 +94,7 @@ let {
   className: u,
   controlsClassName: p,
   paginationButtonClassName: g,
-  springConfig: h,
+  springConfig: _,
   delay: b,
   initialPaused: L = !1,
   unidirectional: S = !1,
@@ -102,7 +102,7 @@ let {
 } = e, {
   trackSlideView: T,
   trackPagination: N
-} = (0, _.X)(t, v), [O, j] = (0, o.useState)(0), [Z, k] = (0, o.useState)(!1), [R, A] = (0, o.useState)(!1), P = o.useCallback(() => A(!0), []), B = o.useCallback(() => A(!1), []), M = (0, f.e7)([m.Z], () => m.Z.isFocused()), y = null != b && !L && !R && M, w = o.useCallback(e => (n.length + O + e) % n.length, [
+} = (0, h.X)(t, v), [O, j] = (0, o.useState)(0), [Z, k] = (0, o.useState)(!1), [R, A] = (0, o.useState)(!1), P = o.useCallback(() => A(!0), []), B = o.useCallback(() => A(!1), []), M = (0, f.e7)([m.Z], () => m.Z.isFocused()), y = null != b && !L && !R && M, w = o.useCallback(e => (n.length + O + e) % n.length, [
   n,
   O
 ]), F = o.useCallback(d()((e, t, r) => {
@@ -137,7 +137,7 @@ return (0, o.useEffect)(() => {
   children: [
     (0, a.jsx)(C.Slides, {
       activeSlide: String(O),
-      springConfig: null != h ? h : I,
+      springConfig: null != _ ? _ : I,
       directionOverride: S && !Z ? 'forwards' : void 0,
       fadeInOut: !0,
       children: n.map((e, t) => (0, a.jsx)(C.Slide, {

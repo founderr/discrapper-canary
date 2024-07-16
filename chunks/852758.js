@@ -26,8 +26,8 @@ var i = n(735250),
   g = n(23434),
   p = n(610001),
   T = n(78415),
-  f = n(1964),
-  S = n(981631),
+  S = n(1964),
+  f = n(981631),
   C = n(815660),
   N = n(689938);
 let A = 'Email Verification',
@@ -43,7 +43,7 @@ m.Z
   ], () => ({
 action: g.Z.getAction(),
 theme: m.Z.theme
-  })), Z = f.Z.getVerificationTypes(e), [L, O] = a.useState(0), R = (0, _.Z)(Z);
+  })), Z = S.Z.getVerificationTypes(e), [L, O] = a.useState(0), R = (0, _.Z)(Z);
   (0, h.Z)({
 type: s.ImpressionTypes.MODAL,
 name: s.ImpressionNames.USER_ACTION_REQUIRED,
@@ -71,7 +71,7 @@ b = () => {
       default: e
     } = await Promise.all([
       n.e('76540'),
-      n.e('27817')
+      n.e('87931')
     ]).then(n.bind(n, 607018));
     return t => (0, i.jsx)(e, {
       reason: I.L.USER_ACTION_REQUIRED,
@@ -85,7 +85,7 @@ b = () => {
   return a.useEffect(() => (E.Z.disable(), () => {
 E.Z.enable();
   }), []), a.useEffect(() => {
-(null == R ? void 0 : R[0]) === S.PUi.PHONE && (null == Z ? void 0 : Z[0]) === S.PUi.EMAIL && (0, o.openModalLazy)(async () => {
+(null == R ? void 0 : R[0]) === f.PUi.PHONE && (null == Z ? void 0 : Z[0]) === f.PUi.EMAIL && (0, o.openModalLazy)(async () => {
   let {
     default: e
   } = await Promise.resolve().then(n.bind(n, 468026));
@@ -108,7 +108,7 @@ types: Z,
 captchaKey: L,
 onCaptchaVerify: e => {
   l.tn.post({
-    url: S.ANM.CAPTCHA,
+    url: f.ANM.CAPTCHA,
     body: {
       captcha_key: e
     },
@@ -119,7 +119,7 @@ onCaptchaVerify: e => {
 },
 theme: t,
 onClick: e => {
-  e === S.PUi.EMAIL_OR_PHONE || e === S.PUi.EMAIL || e === S.PUi.REVERIFY_EMAIL ? x() : b();
+  e === f.PUi.EMAIL_OR_PHONE || e === f.PUi.EMAIL || e === f.PUi.REVERIFY_EMAIL ? x() : b();
 },
 onLogout: () => {
   (0, o.openModalLazy)(async () => {

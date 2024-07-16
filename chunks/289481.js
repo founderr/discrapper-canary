@@ -15,8 +15,8 @@ var i = n(735250),
   T = n(259580),
   h = n(617379),
   N = n(324081),
-  f = n(305248),
-  p = n(520116),
+  p = n(305248),
+  f = n(520116),
   C = n(981631),
   g = n(689938),
   S = n(540895);
@@ -111,11 +111,11 @@ children: (0, i.jsx)(c.HeadingLevel, {
       })
     ]
   }),
-  children: t.collapsed ? null : 'messages' === t.type ? (0, i.jsx)(p.Z, {
+  children: t.collapsed ? null : 'messages' === t.type ? (0, i.jsx)(f.Z, {
     channel: t,
     channelRecord: l,
     gotoChannel: E
-  }) : 'forum' === t.type ? (0, i.jsx)(f.Z, {
+  }) : 'forum' === t.type ? (0, i.jsx)(p.Z, {
     channel: t,
     channelRecord: l,
     deleteChannel: s

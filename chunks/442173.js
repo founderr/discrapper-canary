@@ -13,8 +13,8 @@ var a = n(735250),
   u = n(626135),
   d = n(798733),
   _ = n(559187),
-  f = n(981631),
-  b = n(190378),
+  b = n(981631),
+  f = n(190378),
   m = n(689938);
 let E = [r().CALL_FEEDBACK_OPTION_OTHER];
 
@@ -25,7 +25,7 @@ reportType: s,
 ...h
   } = e;
   return o.useEffect(() => {
-u.default.track(f.rMx.IAR_FEEDBACK_MODAL_VIEWED, {
+u.default.track(b.rMx.IAR_FEEDBACK_MODAL_VIEWED, {
   report_id: t,
   report_type: s
 });
@@ -45,7 +45,7 @@ onSubmit: function(e) {
     dontShowAgain: i,
     feedback: u
   } = e;
-  if (i && (0, c.Kw)(b.v.IN_APP_REPORTS_FEEDBACK), (0, _.Z)({
+  if (i && (0, c.Kw)(f.v.IN_APP_REPORTS_FEEDBACK), (0, _.Z)({
       rating: o,
       problem: r,
       feedback: u,

@@ -128,7 +128,7 @@ children: (0, i.jsx)(f.Spinner, {})
   }),
   name: 'ForumChannel'
 });
-class e9 extends a.PureComponent {
+class e8 extends a.PureComponent {
   componentDidMount() {
 (0, ev.e)('guild_channel');
   }
@@ -791,7 +791,7 @@ super(...e), e5(this, 'state', {
 });
   }
 }
-let e8 = (0, T.Z)(e9);
+let e9 = (0, T.Z)(e8);
 t.Z = a.memo(function(e) {
   var t;
   let {
@@ -858,7 +858,7 @@ en,
 ei
   ]);
   let ed = (0, _.f9)();
-  return (0, i.jsx)(e8, {
+  return (0, i.jsx)(e9, {
 guildId: null == c ? void 0 : c.guild_id,
 channelId: r,
 channel: c,

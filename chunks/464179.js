@@ -90,12 +90,12 @@ let C = [
 'ZA',
 'ZW'
   ],
-  b = _.Z.map(e => ({
+  P = _.Z.map(e => ({
 value: e.alpha2,
 label: e.name
   })).filter(e => 'KP' !== e.value && 'SY' !== e.value),
-  P = (0, A.hQ)(),
   R = (0, A.hQ)(),
+  b = (0, A.hQ)(),
   f = (0, A.hQ)(),
   y = (0, A.hQ)(),
   M = (0, A.hQ)(),
@@ -108,7 +108,7 @@ CA: E.X
   },
   v = e => ({
 name: 'name',
-id: P,
+id: R,
 title: () => T.Z.Messages.BILLING_ADDRESS_NAME,
 autoComplete: 'name',
 getClassNameForLayout: e => [
@@ -126,7 +126,7 @@ renderInput: e => (0, u.jsx)(m.TextInput, {
   }),
   D = e => ({
 name: 'country',
-id: R,
+id: b,
 title: () => T.Z.Messages.BILLING_ADDRESS_COUNTRY,
 autoComplete: 'country',
 getClassNameForLayout: e => {
@@ -150,7 +150,7 @@ renderInput(e, a) {
     autoFocus: !0,
     maxVisibleItems: 8,
     isDisabled: 'edit' === a.mode,
-    options: b,
+    options: P,
     onChange: a => {
       null != t && t(a, e.name);
     }

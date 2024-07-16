@@ -80,7 +80,7 @@ key: I.Z.Messages.APPLICATION_STORE_SPECS_NOTES,
 value: e.notes
   }
 ];
-class f extends a.PureComponent {
+class S extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
 let {
   systemRequirements: n
@@ -199,4 +199,4 @@ this.state = {
 };
   }
 }
-t.Z = f;
+t.Z = S;

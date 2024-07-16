@@ -26,13 +26,13 @@ var s = n(735250),
   x = n(921944),
   b = n(689938),
   O = n(972272);
-let L = {
+let P = {
 xMin: -80,
 xMax: 80,
 yMin: -150,
 yMax: -20
   },
-  P = a.memo(e => {
+  L = a.memo(e => {
 let {
   name: t,
   canReveal: n = !0,
@@ -164,7 +164,7 @@ return (a.useEffect(() => {
         ref: t === m.u.FREE_BOOST ? en : void 0
       }),
       F && (0, s.jsx)(p.Z, {
-        speedValues: L,
+        speedValues: P,
         numBursts: 3,
         particlesPerBurst: 15,
         confettiTarget: en.current,
@@ -226,12 +226,12 @@ return (a.useEffect(() => {
       })
     ]
   })
-}) : (0, s.jsx)(P, {
+}) : (0, s.jsx)(L, {
   ...Y.upcomingDropUntimed,
   forceShadow: g
 });
   });
-P.displayName = 'PerkDiscoverabilityCard';
+L.displayName = 'PerkDiscoverabilityCard';
 let v = a.forwardRef((e, t) => {
   var n;
   let {
@@ -251,10 +251,10 @@ onClick: m,
 backgroundImage: h,
 pillText: M,
 perkImage: x
-  } = e, b = A === N.R0.CARD_CAROUSEL_FIRST_ROW || A === N.R0.CARD_CAROUSEL_SECOND_ROW || A === N.R0.CARD_CAROUSEL_THIRD_ROW, L = 0 !== c.length || 0 !== d.length || 0 !== o.length && p === N.zW.REWARD, P = (0, C.IB)(), [v, Z] = a.useState(P);
+  } = e, b = A === N.R0.CARD_CAROUSEL_FIRST_ROW || A === N.R0.CARD_CAROUSEL_SECOND_ROW || A === N.R0.CARD_CAROUSEL_THIRD_ROW, P = 0 !== c.length || 0 !== d.length || 0 !== o.length && p === N.zW.REWARD, L = (0, C.IB)(), [v, Z] = a.useState(L);
   a.useEffect(() => {
-P && Z(!0);
-  }, [P]);
+L && Z(!0);
+  }, [L]);
   let D = (0, g._)(p);
   return (0, s.jsxs)(_.Clickable, {
 className: i()(O.card, I, !0 === v ? null === (n = D.cardContainer) || void 0 === n ? void 0 : n.className : void 0, {
@@ -287,7 +287,7 @@ children: [
     subtitleClassName: O.cardSubtitle,
     cardVariant: p
   }),
-  L && (0, s.jsx)(S.Z, {
+  P && (0, s.jsx)(S.Z, {
     title: r,
     titleClassName: l,
     subtitle: o,
@@ -305,4 +305,4 @@ children: [
 ]
   });
 });
-v.displayName = 'PerkCardContent', t.Z = P;
+v.displayName = 'PerkCardContent', t.Z = L;

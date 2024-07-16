@@ -9,8 +9,8 @@ var i = t(735250),
   l = t(481060),
   o = t(668781),
   r = t(308063),
-  c = t(410030),
-  d = t(285952),
+  d = t(410030),
+  c = t(285952),
   u = t(63063),
   I = t(725875),
   m = t(981631),
@@ -30,7 +30,7 @@ function h(e) {
   errors: x,
   canNavigate: O
 } = e,
-S = (0, c.ZP)(),
+S = (0, d.ZP)(),
 [A, R] = a.useState(null),
 [b, Z] = a.useState(null);
   if (null != h)
@@ -100,9 +100,9 @@ children: [
     ]
   }) : function(e, n, t) {
     let a = (0, s.wj)(e) ? E : T;
-    return (0, i.jsxs)(d.Z, {
-      direction: d.Z.Direction.VERTICAL,
-      align: d.Z.Align.CENTER,
+    return (0, i.jsxs)(c.Z, {
+      direction: c.Z.Direction.VERTICAL,
+      align: c.Z.Align.CENTER,
       children: [
         (0, i.jsx)('img', {
           alt: '',

@@ -19,8 +19,8 @@ var i = n(735250),
   T = n(591759),
   h = n(833592),
   N = n(497089),
-  f = n(178480),
-  p = n(418316),
+  p = n(178480),
+  f = n(418316),
   C = n(526146),
   g = n(400565),
   S = n(148789),
@@ -156,7 +156,7 @@ r.type === N.O7.INCOMING_FRIEND_REQUESTS && null != r.other_user && (M = (0, i.j
   userId: r.other_user.id
 }));
 let v = null != r.local_id,
-  b = (0, p.Z)(r);
+  b = (0, f.Z)(r);
 return (0, i.jsxs)('div', {
   className: x.row,
   children: [
@@ -194,7 +194,7 @@ return (0, i.jsxs)('div', {
             (0, i.jsx)(s.Text, {
               variant: 'text-xs/medium',
               color: E ? 'text-muted' : 'header-secondary',
-              children: (0, f.a3)(m.default.extractTimestamp(r.id))
+              children: (0, p.a3)(m.default.extractTimestamp(r.id))
             }),
             M
           ]

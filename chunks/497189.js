@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(650461),
   p = n(353093),
   T = n(603839),
-  f = n(430824),
-  S = n(725568),
+  S = n(430824),
+  f = n(725568),
   C = n(231467),
   N = n(207796),
   A = n(316553),
@@ -217,7 +217,7 @@ return o ? n[0].id : t[0].id;
 o,
 x
   ]);
-  let D = (0, c.e7)([f.Z], () => f.Z.getGuild(x)),
+  let D = (0, c.e7)([S.Z], () => S.Z.getGuild(x)),
 j = (0, c.e7)([g.ZP], () => null != x ? g.ZP.getStateForGuild(x).progress : null),
 U = (0, A.J)({
   selectedGame: s
@@ -240,7 +240,7 @@ U
   !o && ((0, I._9)({
     guildId: x,
     location: E.Z.CLAN_DISCOVERY
-  }), (0, S.q4)(e => {
+  }), (0, f.q4)(e => {
     let {
       closeLayer: t
     } = e;

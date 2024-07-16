@@ -12,15 +12,15 @@ var n = l(735250),
   m = l(700582),
   _ = l(745735),
   E = l(906732),
-  h = l(715903),
-  M = l(69882),
-  x = l(189357),
-  b = l(493892),
-  T = l(433355),
-  L = l(430824),
-  g = l(496675),
-  I = l(594174),
-  p = l(373791),
+  h = l(346486),
+  M = l(715903),
+  x = l(69882),
+  b = l(189357),
+  T = l(493892),
+  L = l(433355),
+  g = l(430824),
+  I = l(496675),
+  p = l(594174),
   H = l(203893),
   f = l(777288),
   N = l(5192),
@@ -41,7 +41,7 @@ var n = l(735250),
 let y = a.memo(function(e) {
   let {
 member: t
-  } = e, l = a.useMemo(() => (0, M.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), o = a.useMemo(() => null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]);
+  } = e, l = a.useMemo(() => (0, x.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), o = a.useMemo(() => null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]);
   return (0, n.jsxs)('div', {
 className: s()(F.flagContainer),
 children: [
@@ -71,7 +71,7 @@ children: [
         (0, n.jsx)('div', {
           children: k.Z.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP
         }),
-        (0, n.jsx)(p.Z, {
+        (0, n.jsx)(h.Z, {
           deadline: o,
           showUnits: !0,
           stopAtOneSec: !0
@@ -93,7 +93,7 @@ children: [
       });
     }
   }),
-  (0, b.He)(t.userId) && (0, n.jsx)(u.Tooltip, {
+  (0, T.He)(t.userId) && (0, n.jsx)(u.Tooltip, {
     text: k.Z.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY_TOOLTIP,
     children: e => {
       let {
@@ -109,7 +109,7 @@ children: [
       });
     }
   }),
-  (0, h.EY)(t) && (0, n.jsx)(u.Tooltip, {
+  (0, M.EY)(t) && (0, n.jsx)(u.Tooltip, {
     text: k.Z.Messages.MEMBER_SAFETY_QUARANTINED_USER_TOOLTIP,
     children: e => {
       let {
@@ -133,7 +133,7 @@ children: [
 function P(e) {
   let {
 member: t
-  } = e, l = (0, c.e7)([L.Z], () => L.Z.getRoles(t.guildId)), o = a.useMemo(() => null == t.highestRoleId ? t.roles : t.roles.filter(e => null != e && e !== t.highestRoleId).sort((e, t) => {
+  } = e, l = (0, c.e7)([g.Z], () => g.Z.getRoles(t.guildId)), o = a.useMemo(() => null == t.highestRoleId ? t.roles : t.roles.filter(e => null != e && e !== t.highestRoleId).sort((e, t) => {
 var n, a, o, s;
 return null !== (s = null !== (o = null === (n = l[t]) || void 0 === n ? void 0 : n.position) && void 0 !== o ? o : 0 - (null === (a = l[e]) || void 0 === a ? void 0 : a.position)) && void 0 !== s ? s : 0;
   }), [
@@ -154,7 +154,7 @@ let Y = a.memo(function(e) {
 let {
   member: t,
   highestRole: l
-} = e, o = (0, c.e7)([L.Z], () => L.Z.getGuild(t.guildId), [t.guildId]), [i, r] = a.useState(!1), C = t.roles.length - 1, d = a.useMemo(() => new Intl.NumberFormat(k.Z.getLocale()).format(C), [C]), m = (0, V.qr)(t), _ = (0, c.e7)([g.Z], () => g.Z.can(w.Plq.MANAGE_ROLES, o), [o]), E = a.useCallback(e => () => {
+} = e, o = (0, c.e7)([g.Z], () => g.Z.getGuild(t.guildId), [t.guildId]), [i, r] = a.useState(!1), C = t.roles.length - 1, d = a.useMemo(() => new Intl.NumberFormat(k.Z.getLocale()).format(C), [C]), m = (0, V.qr)(t), _ = (0, c.e7)([I.Z], () => I.Z.can(w.Plq.MANAGE_ROLES, o), [o]), E = a.useCallback(e => () => {
   r(!0), null == e || e();
 }, []), h = a.useCallback(e => () => {
   r(!1), null == e || e();
@@ -359,13 +359,13 @@ let {
   onOpenProfileMenu: d,
   compact: m
 } = e, _ = (0, c.e7)([
-  g.Z,
-  L.Z
-], () => g.Z.can(w.Plq.MANAGE_GUILD, L.Z.getGuild(t.guildId)), [t.guildId]), {
+  I.Z,
+  g.Z
+], () => I.Z.can(w.Plq.MANAGE_GUILD, g.Z.getGuild(t.guildId)), [t.guildId]), {
   selectedUserIds: E,
   addUsers: h,
   removeUser: M
-} = (0, B.Z)(t.guildId), b = (0, j.xC)(t.guildId), T = (0, j.hB)(t.guildId, b, t.userId), I = (0, x.ms)(t.guildId), p = (0, c.e7)([v.Z], () => {
+} = (0, B.Z)(t.guildId), x = (0, j.xC)(t.guildId), T = (0, j.hB)(t.guildId, x, t.userId), L = (0, b.ms)(t.guildId), p = (0, c.e7)([v.Z], () => {
   var e;
   return null !== (e = v.Z.getSearchStateByGuildId(t.guildId).selectedSort) && void 0 !== e ? e : Z.d$.ORDER_BY_UNSPECIFIED;
 }, [t.guildId], C()), H = a.useCallback(e => {
@@ -380,7 +380,7 @@ let {
 ]), N = p === Z.d$.ORDER_BY_GUILD_JOINED_AT_ASC, A = p === Z.d$.ORDER_BY_USER_ID_ASC || p === Z.d$.ORDER_BY_USER_ID_DESC;
 return (0, n.jsxs)(n.Fragment, {
   children: [
-    b && (0, n.jsx)(u.Tooltip, {
+    x && (0, n.jsx)(u.Tooltip, {
       tooltipClassName: F.disabledActionTooltip,
       shouldShow: !T,
       text: k.Z.Messages.MEMBER_SAFETY_ACTION_PERMISSIONS_MISSING,
@@ -462,7 +462,7 @@ return (0, n.jsxs)(n.Fragment, {
         className: s()(F.actionCell),
         children: [
           (0, n.jsx)(u.Tooltip, {
-            text: I ? k.Z.Messages.MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP : k.Z.Messages.MEMBER_SAFETY_TABLE_PROFILE_TOOLTIP,
+            text: L ? k.Z.Messages.MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP : k.Z.Messages.MEMBER_SAFETY_TABLE_PROFILE_TOOLTIP,
             children: e => {
               let {
                 onMouseEnter: t,
@@ -473,7 +473,7 @@ return (0, n.jsxs)(n.Fragment, {
                 onMouseLeave: l,
                 onClick: d,
                 className: s()(F.button),
-                children: I ? (0, n.jsx)(f.Z, {
+                children: L ? (0, n.jsx)(f.Z, {
                   width: K,
                   height: K
                 }) : (0, n.jsx)(u.UserIcon, {
@@ -531,12 +531,12 @@ rowSelected: d,
 isLoading: u = !1,
 isHoldingAdvancedInfoKey: m = !1,
 compact: _ = !1
-  } = e, E = (0, c.e7)([T.ZP], () => T.ZP.getGuildSidebarState(l), [l]), h = (null == E ? void 0 : E.details.userId) === t, M = (0, c.e7)([v.Z], () => v.Z.getEnhancedMember(l, t), [
+  } = e, E = (0, c.e7)([L.ZP], () => L.ZP.getGuildSidebarState(l), [l]), h = (null == E ? void 0 : E.details.userId) === t, M = (0, c.e7)([v.Z], () => v.Z.getEnhancedMember(l, t), [
 l,
 t
-  ]), x = (0, V.zq)(M), b = (0, c.e7)([I.default], () => I.default.getUser(t), [t]), L = (0, V.RN)(null != M ? M : void 0), g = a.useCallback(e => {
-e.stopPropagation(), e.preventDefault(), L(e);
-  }, [L]), p = a.useCallback(e => {
+  ]), x = (0, V.zq)(M), b = (0, c.e7)([p.default], () => p.default.getUser(t), [t]), T = (0, V.RN)(null != M ? M : void 0), g = a.useCallback(e => {
+e.stopPropagation(), e.preventDefault(), T(e);
+  }, [T]), I = a.useCallback(e => {
 if (e.stopPropagation(), e.preventDefault(), null != M)
   null == r || r(M);
   }, [
@@ -555,7 +555,7 @@ value: M,
 style: o,
 className: s()(F.roundedRow, F.memberRowContainer, d && F.selected, h && F.memberSelected, u && F.loading),
 equalityFn: f,
-onClick: p,
+onClick: I,
 onContextMenu: g,
 children: (0, n.jsx)(J, {
   member: M,

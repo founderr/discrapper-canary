@@ -11,12 +11,12 @@ var s = n(735250),
   o = n(481060),
   u = n(447543),
   c = n(287734),
-  d = n(922482),
-  m = n(601964),
-  N = n(592125),
-  v = n(430824),
-  h = n(940627),
-  C = n(197409),
+  d = n(372769),
+  m = n(955415),
+  N = n(922482),
+  v = n(601964),
+  h = n(592125),
+  C = n(430824),
   p = n(15274),
   x = n(924301),
   g = n(725436),
@@ -35,8 +35,8 @@ let T = (e, l) => n => {
 n.stopPropagation(), c.default.selectVoiceChannel(e.channel_id, !1), null == l || l(n);
   },
   A = (e, l) => n => {
-let s = N.Z.getChannel(e.channel_id);
-null != s && (n.stopPropagation(), (0, d.Cq)(s), null == l || l(n));
+let s = h.Z.getChannel(e.channel_id);
+null != s && (n.stopPropagation(), (0, N.Cq)(s), null == l || l(n));
   },
   M = (e, l) => {
 switch (null == e ? void 0 : e.entity_type) {
@@ -58,10 +58,10 @@ let {
   guildScheduledEvent: a,
   channel: i,
   isMember: c
-} = e, d = (0, r.e7)([v.Z], () => {
+} = e, N = (0, r.e7)([C.Z], () => {
   var e;
-  return null == n ? null : null !== (e = v.Z.getGuild(n.id)) && void 0 !== e ? e : new m.ZP(n);
-}, [n]), N = (0, k.u)(a, i), p = t.useCallback(e => {
+  return null == n ? null : null !== (e = C.Z.getGuild(n.id)) && void 0 !== e ? e : new v.ZP(n);
+}, [n]), h = (0, k.u)(a, i), p = t.useCallback(e => {
   c && null != a && (e.stopPropagation(), (0, u.B)(a));
 }, [
   c,
@@ -69,9 +69,9 @@ let {
 ]), x = t.useCallback(e => {
   M(a)(e);
 }, [a]);
-if (null == d)
+if (null == N)
   return null;
-let I = null == N ? void 0 : N.IconComponent,
+let I = null == h ? void 0 : h.IconComponent,
   j = (0, s.jsxs)(s.Fragment, {
     children: [
       null != I && (0, s.jsx)(I, {
@@ -82,15 +82,15 @@ let I = null == N ? void 0 : N.IconComponent,
       (0, s.jsx)(o.Text, {
         className: b.channelDescription,
         variant: 'text-xs/normal',
-        children: (0, g.m)(null !== (l = null == N ? void 0 : N.locationName) && void 0 !== l ? l : '', !0)
+        children: (0, g.m)(null !== (l = null == h ? void 0 : h.locationName) && void 0 !== l ? l : '', !0)
       })
     ]
   });
 return (0, s.jsxs)('div', {
   className: b.inviteDetailsContainer,
   children: [
-    (0, s.jsx)(C.Z.Icon, {
-      guild: d,
+    (0, s.jsx)(m.Z.Icon, {
+      guild: N,
       onClick: p
     }),
     (0, s.jsxs)('div', {
@@ -99,8 +99,8 @@ return (0, s.jsxs)('div', {
         (0, s.jsxs)('div', {
           className: b.guildChannelInfoContainer,
           children: [
-            (0, s.jsx)(h.Z, {
-              guild: d,
+            (0, s.jsx)(d.Z, {
+              guild: N,
               tooltipPosition: 'top',
               tooltipColor: o.Tooltip.Colors.PRIMARY,
               size: 16,
@@ -112,7 +112,7 @@ return (0, s.jsxs)('div', {
               children: (0, s.jsx)(o.Heading, {
                 className: c ? b.guildNameLinkable : b.guildName,
                 variant: 'text-sm/medium',
-                children: d.name
+                children: N.name
               })
             })
           ]
@@ -200,23 +200,23 @@ let {
   isMember: u,
   recurrenceId: c,
   onAcceptInstantInvite: d,
-  onTransitionToInviteChannel: m
-} = e, N = null != c ? c : null != n ? (0, E.DK)(n) : null, v = (null == n ? void 0 : n.recurrence_rule) == null || null == N || (0, E.Rp)((0, j.KV)(null == n ? void 0 : n.recurrence_rule), N), h = (0, I.Z)(n), g = t.useCallback(() => {
+  onTransitionToInviteChannel: N
+} = e, v = null != c ? c : null != n ? (0, E.DK)(n) : null, h = (null == n ? void 0 : n.recurrence_rule) == null || null == v || (0, E.Rp)((0, j.KV)(null == n ? void 0 : n.recurrence_rule), v), C = (0, I.Z)(n), g = t.useCallback(() => {
   u && null != n && (0, p.bO)({
     eventId: n.id,
-    recurrenceId: N
+    recurrenceId: v
   });
 }, [
   u,
   n,
-  N
+  v
 ]);
-if (null == n || !v)
+if (null == n || !h)
   return null;
 let k = (0, x.xt)(n),
   Z = (0, x.Z2)(n),
   S = n.entity_type === _.WX.EXTERNAL;
-return (0, s.jsx)(C.Z, {
+return (0, s.jsx)(m.Z, {
   className: i()({
     [b.clickable]: u
   }),
@@ -232,10 +232,10 @@ return (0, s.jsx)(C.Z, {
         description: null !== (l = n.description) && void 0 !== l ? l : void 0,
         descriptionClassName: b.eventDescription,
         guildId: n.guild_id,
-        creator: h,
+        creator: C,
         guildEvent: n,
         eventPreview: n,
-        recurrenceId: N
+        recurrenceId: v
       }),
       (0, s.jsxs)('div', {
         className: b.footerContainer,
@@ -252,9 +252,9 @@ return (0, s.jsx)(C.Z, {
             isMember: u,
             guildId: n.guild_id,
             guildScheduledEventId: n.id,
-            recurrenceId: N,
+            recurrenceId: v,
             onAcceptInstantInvite: d,
-            onTransitionToInviteChannel: m,
+            onTransitionToInviteChannel: N,
             isExternal: S
           })
         ]

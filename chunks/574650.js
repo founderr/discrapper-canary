@@ -16,15 +16,15 @@ var a = n(120356),
   T = n(176505),
   h = n(689938),
   N = n(103809),
-  f = n(581611);
+  p = n(581611);
 t.Z = () => {
   var e, t;
   let a = (0, l.e7)([d.Z], () => d.Z.getGuildId(), []),
-p = (0, l.e7)([c.Z], () => c.Z.getGuild(a), [a]),
+f = (0, l.e7)([c.Z], () => c.Z.getGuild(a), [a]),
 C = (0, l.e7)([I.Z], () => null != a ? I.Z.getRequest(a) : null, [a]),
 g = (0, r.TH)(),
-S = (null === (e = (0, r.LX)(g.pathname, m.Z5c.CHANNEL(null == p ? void 0 : p.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
-  if (null == p || !p.hasVerificationGate() || S)
+S = (null === (e = (0, r.LX)(g.pathname, m.Z5c.CHANNEL(null == f ? void 0 : f.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+  if (null == f || !f.hasVerificationGate() || S)
 return null;
   let A = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,
 R = null,
@@ -32,7 +32,7 @@ O = null,
 x = null,
 M = [
   N.notice,
-  f.notice
+  p.notice
 ];
   switch (A) {
 case E.wB.SUBMITTED:
@@ -41,7 +41,7 @@ case E.wB.SUBMITTED:
       header: h.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
       confirmText: h.Z.Messages.CONFIRM,
       cancelText: h.Z.Messages.CANCEL,
-      onConfirm: () => u.Z.removeGuildJoinRequest(p.id),
+      onConfirm: () => u.Z.removeGuildJoinRequest(f.id),
       confirmButtonColor: o.Button.Colors.BRAND,
       ...e,
       children: (0, i.jsx)(o.Text, {
@@ -58,7 +58,7 @@ case E.wB.REJECTED:
         default: e
       } = await n.e('3378').then(n.bind(n, 76075));
       return t => (0, i.jsx)(e, {
-        guildId: p.id,
+        guildId: f.id,
         ...t
       });
     });
@@ -66,7 +66,7 @@ case E.wB.REJECTED:
   break;
 default:
   R = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, O = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA, x = () => {
-    (0, _.hk)(p.id);
+    (0, _.hk)(f.id);
   };
   }
   return (0, i.jsxs)('div', {

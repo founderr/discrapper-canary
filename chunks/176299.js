@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(279240),
   p = n(765717),
   T = n(358221),
-  f = n(823748),
-  S = n(626421),
+  S = n(823748),
+  f = n(626421),
   C = n(118379),
   N = n(652515),
   A = n(544978),
@@ -74,27 +74,27 @@ var i = n(735250),
   eg = n(290511),
   ep = n(689938),
   eT = n(171200);
-let ef = () => (0, i.jsx)('div', {
+let eS = () => (0, i.jsx)('div', {
 className: eT.loader,
 children: (0, i.jsx)(_.Spinner, {})
   }),
-  eS = (0, c.Un)({
+  ef = (0, c.Un)({
 createPromise: () => n.e('68614').then(n.bind(n, 650788)),
 webpackId: 650788,
 name: 'GuildShopPage',
-renderLoader: ef
+renderLoader: eS
   }),
   eC = (0, c.Un)({
 createPromise: () => n.e('44798').then(n.bind(n, 998420)),
 webpackId: 998420,
 name: 'GuildMemberApplicationReview',
-renderLoader: ef
+renderLoader: eS
   }),
   eN = (0, c.Un)({
 createPromise: () => n.e('60493').then(n.bind(n, 231588)),
 webpackId: 231588,
 name: 'GuildHomePage',
-renderLoader: ef
+renderLoader: eS
   }),
   eA = (0, c.Un)({
 createPromise: () => Promise.all([
@@ -103,7 +103,7 @@ createPromise: () => Promise.all([
 ]).then(n.bind(n, 545918)),
 webpackId: 545918,
 name: 'MemberSafetyPage',
-renderLoader: ef
+renderLoader: eS
   }),
   ev = (0, c.Un)({
 createPromise: () => Promise.all([
@@ -115,7 +115,7 @@ createPromise: () => Promise.all([
 ]).then(n.bind(n, 603072)),
 webpackId: 603072,
 name: 'ChannelsAndRolesPage',
-renderLoader: ef
+renderLoader: eS
   }),
   eZ = (0, c.Un)({
 createPromise: () => Promise.all([
@@ -127,7 +127,7 @@ createPromise: () => Promise.all([
 ]).then(n.bind(n, 599263)),
 webpackId: 599263,
 name: 'GuildOnboardingPage',
-renderLoader: ef
+renderLoader: eS
   }),
   eL = e => {
 let {
@@ -159,14 +159,14 @@ let {
 if (null != a && null != s && (0, em.AB)(s))
   switch (s) {
     case em.oC.ROLE_SUBSCRIPTIONS:
-      return d ? (0, i.jsx)(eS, {
+      return d ? (0, i.jsx)(ef, {
         guildId: a,
         initialTab: A.y.GUILD_ROLE_SUBSCRIPTIONS
       }) : (0, i.jsx)(D.Z, {
         guildId: a
       });
     case em.oC.GUILD_SHOP:
-      return (0, i.jsx)(eS, {
+      return (0, i.jsx)(ef, {
         guildId: a,
         productId: r,
         initialTab: c
@@ -212,7 +212,7 @@ if ((null == n ? void 0 : n.type) === eI.d4z.GUILD_STORE) {
     inputSkuId: e
   }, n.id);
 }
-return (0, i.jsx)(f.Z, {});
+return (0, i.jsx)(S.Z, {});
   },
   eO = a.memo(function() {
 let {
@@ -436,7 +436,7 @@ children: (0, i.jsxs)('div', {
           (0, i.jsxs)('div', {
             className: eT.content,
             children: [
-              (0, i.jsx)(S.Z, {}),
+              (0, i.jsx)(f.Z, {}),
               (0, i.jsx)(eV, {
                 hasNotice: t,
                 sidebarTheme: n,

@@ -6,8 +6,8 @@ var r = n(735250),
   l = n(906732),
   u = n(963249),
   c = n(622069),
-  d = n(147915),
-  _ = n(51144),
+  d = n(51144),
+  _ = n(443603),
   E = n(981631),
   f = n(474936),
   h = n(689938),
@@ -18,7 +18,7 @@ disabled: t,
 channel: n
   } = e, {
 analyticsLocations: i
-  } = (0, l.ZP)(s.Z.GIFT_BUTTON), m = (0, _.Ft)(n), {
+  } = (0, l.ZP)(s.Z.GIFT_BUTTON), m = (0, d.Ft)(n), {
 Component: I,
 events: T,
 play: g
@@ -49,7 +49,7 @@ let {
   };
   return (0, r.jsx)(o.Tooltip, {
 text: h.Z.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
-children: e => (0, r.jsx)(d.Z, {
+children: e => (0, r.jsx)(_.Z, {
   ...e,
   innerClassName: p.button,
   isActive: !1,

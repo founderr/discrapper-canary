@@ -4,9 +4,9 @@ var r = n(911969),
   a = n(367790),
   o = n(895924),
   s = n(826298),
-  l = n(695346),
-  u = n(594174),
-  c = n(156361),
+  l = n(588468),
+  u = n(695346),
+  c = n(594174),
   d = n(5192),
   _ = n(417574),
   E = n(877565),
@@ -18,7 +18,7 @@ function m(e) {
   let t = _.X.exec(e);
   if (null != t) {
 let n = t[1],
-  r = u.default.getUser(n);
+  r = c.default.getUser(n);
 return null == r || !r.bot || r.isClyde() ? null : {
   type: 'mention',
   cleanedQuery: e.substring(t[0].length).trim(),
@@ -32,13 +32,13 @@ let I = {
   sentinel: void 0,
   focusMode: f.QZ.MANUAL,
   matches(e, t, n, r, i) {
-if (i.commands === f.L8.DISABLED || i.commands === f.L8.OLD_BUILT_INS || n.length < 2 || !l.Xk.getSetting())
+if (i.commands === f.L8.DISABLED || i.commands === f.L8.OLD_BUILT_INS || n.length < 2 || !u.Xk.getSetting())
   return !1;
 let a = m(n);
 return null != a && a.cleanedQuery.length > 0;
   },
-  queryResults(e, t, n, o, u) {
-if (!l.Xk.getSetting())
+  queryResults(e, t, n, o, l) {
+if (!u.Xk.getSetting())
   return h.K;
 let c = m(n);
 if (null == c)
@@ -54,7 +54,7 @@ let d = (0, s.hV)(e, c.cleanedQuery),
     limit: f.AQ,
     placeholderCount: f.YP,
     scoreMethod: a.p.COMMAND_OR_APPLICATION,
-    allowFetch: u
+    allowFetch: l
   });
 if (null == _)
   return h.K;
@@ -84,17 +84,17 @@ let {
   query: a,
   options: o,
   onHover: s,
-  onClick: l
+  onClick: u
 } = e;
 return (0, E.HI)({
   query: a,
   selectedIndex: n,
   autocompletes: t,
   onHover: s,
-  onClick: l,
+  onClick: u,
   titleWithQuery: p.Z.Messages.COMMANDS_MATCHING,
   titleWithoutQuery: p.Z.Messages.COMMANDS,
-  Component: o.commands === f.L8.OLD_BUILT_INS ? c.ZP.Command : c.ZP.NewCommand,
+  Component: o.commands === f.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
   getProps: e => {
     let {
       command: t,

@@ -19,8 +19,8 @@ var i = n(735250),
   T = n(585483),
   h = n(153209),
   N = n(349643),
-  f = n(881591),
-  p = n(903672),
+  p = n(881591),
+  f = n(903672),
   C = n(946443),
   g = n(264233),
   S = n(981631),
@@ -125,7 +125,7 @@ children: (0, i.jsx)(o.Popout, {
         setTab: b,
         badgeState: O,
         closePopout: U
-      }) : P === l.X.MENTIONS ? (0, i.jsx)(p.Z, {
+      }) : P === l.X.MENTIONS ? (0, i.jsx)(f.Z, {
         setTab: b,
         onJump: w,
         badgeState: O,
@@ -138,7 +138,7 @@ children: (0, i.jsx)(o.Popout, {
         setTab: b,
         onJump: w,
         closePopout: U
-      }) : k && P === l.X.TODOS ? (0, i.jsx)(f.Z, {
+      }) : k && P === l.X.TODOS ? (0, i.jsx)(p.Z, {
         setTab: b,
         onJump: w,
         closePopout: U

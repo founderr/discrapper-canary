@@ -19,8 +19,8 @@ var i = n(735250),
   T = n(748770),
   h = n(474936),
   N = n(981631),
-  f = n(689938),
-  p = n(345478);
+  p = n(689938),
+  f = n(345478);
 
 function C() {
   let e = (0, r.e7)([_.default], () => I.ZP.isPremium(_.default.getCurrentUser())),
@@ -75,23 +75,23 @@ children: [
   (0, i.jsx)(l.NitroWheelIcon, {
     size: 'md',
     color: 'currentColor',
-    className: p.premiumIcon
+    className: f.premiumIcon
   }),
   t ? n ? (0, i.jsxs)(s.x, {
     variant: 'text-sm/normal',
-    className: p.text,
+    className: f.text,
     children: [
-      f.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE_V2,
+      p.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE_V2,
       ' ',
-      f.Z.Messages.LEARN_MORE_CLICK.format({
+      p.Z.Messages.LEARN_MORE_CLICK.format({
         onClick: A
       })
     ]
-  }) : f.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE : f.Z.Messages.OUTBOUND_PROMOTION_NOTICE,
+  }) : p.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE : p.Z.Messages.OUTBOUND_PROMOTION_NOTICE,
   (0, i.jsx)(l.PrimaryCTANoticeButton, {
     noticeType: N.kVF.OUTBOUND_PROMOTION,
     onClick: R,
-    children: n ? f.Z.Messages.PREMIUM_UPSELL_GET_NITRO : f.Z.Messages.TAKE_ME_THERE
+    children: n ? p.Z.Messages.PREMIUM_UPSELL_GET_NITRO : p.Z.Messages.TAKE_ME_THERE
   })
 ]
   });

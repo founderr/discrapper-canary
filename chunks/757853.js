@@ -17,15 +17,15 @@ var l = n(735250),
   E = n(212819),
   h = n(933557),
   S = n(266076),
-  g = n(448486),
-  I = n(987509),
-  A = n(592125),
-  p = n(430824),
-  m = n(158776),
-  C = n(306680),
+  g = n(810123),
+  I = n(448486),
+  A = n(987509),
+  p = n(592125),
+  m = n(430824),
+  C = n(158776),
+  L = n(306680),
   b = n(699516),
-  L = n(594174),
-  N = n(104175),
+  N = n(594174),
   T = n(55935),
   Z = n(823379),
   y = n(51144),
@@ -105,7 +105,7 @@ subLabel: n,
 ...a
   } = e, i = y.ZP.useName(t), s = y.ZP.useUserTag(t, {
 decoration: 'never'
-  }), r = (0, u.e7)([b.Z], () => b.Z.getNickname(t.id)), c = (0, u.e7)([m.Z], () => m.Z.getStatus(t.id));
+  }), r = (0, u.e7)([b.Z], () => b.Z.getNickname(t.id)), c = (0, u.e7)([C.Z], () => C.Z.getStatus(t.id));
   return (0, l.jsx)(M, {
 ...a,
 icon: (0, l.jsx)(_.Z, {
@@ -124,7 +124,7 @@ function D(e) {
 channel: t,
 subLabel: n,
 ...a
-  } = e, i = (0, h.ZP)(t), s = (0, g._)(t);
+  } = e, i = (0, h.ZP)(t), s = (0, I._)(t);
   return (0, l.jsx)(M, {
 ...a,
 icon: (0, l.jsx)(S.Z, {
@@ -143,14 +143,14 @@ function O(e) {
 channel: t,
 subLabel: n,
 ...a
-  } = e, i = (0, u.e7)([p.Z], () => p.Z.getGuild(null == t ? void 0 : t.guild_id)), s = (0, h.ZP)(t), r = (0, u.e7)([
-A.Z,
-L.default,
+  } = e, i = (0, u.e7)([m.Z], () => m.Z.getGuild(null == t ? void 0 : t.guild_id)), s = (0, h.ZP)(t), r = (0, u.e7)([
+p.Z,
+N.default,
 b.Z
   ], () => {
-let e = A.Z.getChannel(t.parent_id);
-return null == e ? null : (0, h.F6)(e, L.default, b.Z, !1);
-  }), o = (0, u.e7)([C.ZP], () => C.ZP.lastMessageTimestamp(t.id, v.W.CHANNEL)), _ = null == i ? void 0 : i.name;
+let e = p.Z.getChannel(t.parent_id);
+return null == e ? null : (0, h.F6)(e, N.default, b.Z, !1);
+  }), o = (0, u.e7)([L.ZP], () => L.ZP.lastMessageTimestamp(t.id, v.W.CHANNEL)), _ = null == i ? void 0 : i.name;
   if (t.isThread() || t.isForumPost()) {
 let e = t.isForumPost() ? d.ForumIcon : d.TextIcon;
 _ = (0, l.jsxs)('div', {
@@ -186,8 +186,8 @@ _ = (0, l.jsxs)('div', {
   }
   return (0, l.jsx)(M, {
 ...a,
-icon: (0, l.jsx)(N.Z, {
-  size: N.E.SMALL_32,
+icon: (0, l.jsx)(g.Z, {
+  size: g.E.SMALL_32,
   guild: i,
   channel: t
 }),
@@ -207,7 +207,7 @@ disableSelection: c,
 ...u
   } = e, _ = a.useMemo(() => [t.length], [t.length]), h = a.useCallback(() => 48, []), S = a.useMemo(() => {
 var e;
-return null !== (e = null == s ? void 0 : s.map(I.hC)) && void 0 !== e ? e : [];
+return null !== (e = null == s ? void 0 : s.map(A.hC)) && void 0 !== e ? e : [];
   }, [s]), g = a.useCallback(e => {
 let {
   section: a,
@@ -228,7 +228,7 @@ let d = o === E.h8.USER ? {
     type: 'channel',
     id: u.id
   },
-  _ = (0, I.hC)(d),
+  _ = (0, A.hC)(d),
   f = (0, x.H)(n, i, u),
   h = S.includes(_),
   g = {
@@ -265,7 +265,7 @@ n,
 i,
 t,
 S
-  ]), A = a.useRef(null), p = (0, f.Z)('forward-modal', A);
+  ]), I = a.useRef(null), p = (0, f.Z)('forward-modal', I);
   return (0, l.jsx)(o.bG, {
 navigator: p,
 children: (0, l.jsx)(o.SJ, {
@@ -277,7 +277,7 @@ children: (0, l.jsx)(o.SJ, {
     return (0, l.jsx)(d.ModalListContent, {
       scrollerRef: e => {
         var n;
-        A.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null;
+        I.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null;
       },
       ...n,
       ...u,

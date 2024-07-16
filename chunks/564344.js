@@ -40,8 +40,8 @@ s = (0, i.e7)([
 x = null != e ? e : t,
 M = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
 {
-  subsection: D,
-  setSubsection: f
+  subsection: f,
+  setSubsection: D
 } = (0, A.Z)(),
 {
   analyticsLocations: P
@@ -52,7 +52,7 @@ M = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
 } = (0, I.E)();
 
   function b(t) {
-if (D !== t) {
+if (f !== t) {
   if (s) {
     C.S.dispatch(h.CkL.SHAKE_APP, {
       duration: 300,
@@ -60,7 +60,7 @@ if (D !== t) {
     }), C.S.dispatch(h.CkL.EMPHASIZE_NOTICE);
     return;
   }
-  t === g.NB.GUILD && null == e && null != x && (0, d.Fq)(x, P), f(t);
+  t === g.NB.GUILD && null == e && null != x && (0, d.Fq)(x, P), D(t);
 }
   }
   a.useEffect(() => {
@@ -85,7 +85,7 @@ children: (0, n.jsxs)(r.HeadingLevel, {
       className: R.tabBar,
       type: 'top',
       look: 'brand',
-      selectedItem: D,
+      selectedItem: f,
       onItemSelect: b,
       children: [
         j ? (0, n.jsx)(r.TabBar.Item, {
@@ -100,7 +100,7 @@ children: (0, n.jsxs)(r.HeadingLevel, {
         }, g.NB.GUILD) : null
       ]
     }),
-    D === g.NB.GUILD ? (0, n.jsx)(E.Z, {
+    f === g.NB.GUILD ? (0, n.jsx)(E.Z, {
       selectedGuild: x
     }) : (0, n.jsx)(T.Z, {})
   ]

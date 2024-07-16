@@ -8,11 +8,11 @@ var n = a(735250),
   s = a(286379),
   i = a(442837),
   r = a(481060),
-  o = a(797614),
-  u = a(769654),
-  _ = a(695346),
-  d = a(430824),
-  S = a(346656),
+  o = a(565138),
+  u = a(797614),
+  _ = a(769654),
+  d = a(695346),
+  S = a(430824),
   T = a(88658),
   c = a(401416),
   N = a(920133),
@@ -25,9 +25,9 @@ function g(e) {
 transitionState: t,
 guildId: g,
 onClose: m
-  } = e, M = (0, i.e7)([d.Z], () => d.Z.getGuild(g));
+  } = e, M = (0, i.e7)([S.Z], () => S.Z.getGuild(g));
   return (l.useEffect(() => {
-(0, c.Y)(g), (0, N.L)(N.Q.MODAL_VIEWED, g), o.Z.increment({
+(0, c.Y)(g), (0, N.L)(N.Q.MODAL_VIEWED, g), u.Z.increment({
   name: s.V.DM_SETTINGS_UPSELL_VIEW
 });
   }, [g]), null == M) ? null : (0, n.jsx)(r.ModalRoot, {
@@ -37,7 +37,7 @@ children: (0, n.jsxs)('form', {
   onSubmit: e => {
     e.preventDefault();
     let t = new Set((0, T.YK)());
-    t.add(g), _.h2.updateSetting(Array.from(t)).then(() => (0, r.showToast)((0, r.createToast)(E.Z.Messages.DM_SETTINGS_UPSELL_SUCCESS_TOAST, r.ToastType.SUCCESS))), m(), (0, N.L)(N.Q.MODAL_DISABLED_DMS, g);
+    t.add(g), d.h2.updateSetting(Array.from(t)).then(() => (0, r.showToast)((0, r.createToast)(E.Z.Messages.DM_SETTINGS_UPSELL_SUCCESS_TOAST, r.ToastType.SUCCESS))), m(), (0, N.L)(N.Q.MODAL_DISABLED_DMS, g);
   },
   children: [
     (0, n.jsx)('img', {
@@ -77,9 +77,9 @@ children: (0, n.jsxs)('form', {
           children: (0, n.jsxs)('div', {
             className: I.guildInfo,
             children: [
-              (0, n.jsx)(S.Z, {
+              (0, n.jsx)(o.Z, {
                 guild: M,
-                size: S.Z.Sizes.SMALL
+                size: o.Z.Sizes.SMALL
               }),
               (0, n.jsx)(r.Text, {
                 className: I.guildName,
@@ -113,7 +113,7 @@ children: (0, n.jsxs)('form', {
               className: I.footer,
               children: E.Z.Messages.DM_SETTINGS_UPSELL_FOOTER.format({
                 onClick: () => {
-                  m(), (0, u.X)(g), (0, r.openModalLazy)(async () => {
+                  m(), (0, _.X)(g), (0, r.openModalLazy)(async () => {
                     let {
                       default: e
                     } = await Promise.all([
@@ -127,7 +127,7 @@ children: (0, n.jsxs)('form', {
                       a.e('15972'),
                       a.e('12013'),
                       a.e('47006'),
-                      a.e('29609'),
+                      a.e('60623'),
                       a.e('29549'),
                       a.e('32776'),
                       a.e('95900'),
@@ -151,9 +151,9 @@ children: (0, n.jsxs)('form', {
                       a.e('95854'),
                       a.e('95393'),
                       a.e('86977'),
-                      a.e('48870'),
-                      a.e('73331'),
-                      a.e('81539'),
+                      a.e('51395'),
+                      a.e('67847'),
+                      a.e('53937'),
                       a.e('25788'),
                       a.e('90508'),
                       a.e('49508'),
@@ -166,10 +166,10 @@ children: (0, n.jsxs)('form', {
                       a.e('89043'),
                       a.e('68241'),
                       a.e('52190'),
-                      a.e('10615'),
-                      a.e('97802'),
-                      a.e('58002'),
-                      a.e('46213')
+                      a.e('58059'),
+                      a.e('39092'),
+                      a.e('16027'),
+                      a.e('42278')
                     ]).then(a.bind(a, 241420));
                     return t => (0, n.jsx)(e, {
                       ...t,

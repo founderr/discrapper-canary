@@ -13,14 +13,14 @@ var i = n(735250),
   d = n(481060),
   u = n(367907),
   _ = n(213609),
-  E = n(267101),
-  I = n(336197),
-  m = n(661824),
-  T = n(430824),
-  h = n(346656),
+  E = n(565138),
+  I = n(267101),
+  m = n(336197),
+  T = n(661824),
+  h = n(430824),
   N = n(626135),
-  f = n(76535),
-  p = n(866104),
+  p = n(76535),
+  f = n(866104),
   C = n(886176),
   g = n(981631),
   S = n(689938),
@@ -30,17 +30,17 @@ function R(e) {
   var t;
   let {
 guildId: n
-  } = e, s = (0, c.e7)([T.Z], () => T.Z.getGuild(n)), {
+  } = e, s = (0, c.e7)([h.Z], () => h.Z.getGuild(n)), {
 loading: R,
 subscriptionsSettings: O
-  } = (0, f.H)(n), {
+  } = (0, p.H)(n), {
 listingsLoaded: x
-  } = (0, E.eD)(n), M = (0, E.ue)(n, {
+  } = (0, I.eD)(n), M = (0, I.ue)(n, {
 publishedOnly: !0
   }), v = a.useCallback(async () => {
 N.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, {
   ...(0, u.hH)(n)
-}), await (0, I.Z)(g.Z5c.SERVER_SHOP(n));
+}), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
   }, [n]);
   (0, _.Z)({
 type: l.ImpressionTypes.VIEW,
@@ -55,7 +55,7 @@ children: (0, i.jsx)(d.Spinner, {})
   }) : null == s || null == O ? null : (0, i.jsxs)('div', {
 className: A.guildShopEmbed,
 children: [
-  (0, i.jsx)(p.Z, {
+  (0, i.jsx)(f.Z, {
     coverImageAsset: null !== (t = O.cover_image_asset) && void 0 !== t ? t : null
   }),
   (0, i.jsx)(d.Spacer, {
@@ -99,14 +99,14 @@ children: [
   (0, i.jsx)(d.Spacer, {
     size: 16
   }),
-  (0, i.jsx)(m.Z, {}),
+  (0, i.jsx)(T.Z, {}),
   (0, i.jsx)(d.Spacer, {
     size: 16
   }),
   (0, i.jsxs)('div', {
     className: A.guildShopEmbedFooter,
     children: [
-      (0, i.jsx)(h.Z, {
+      (0, i.jsx)(E.Z, {
         guild: s
       }),
       (0, i.jsxs)('ul', {

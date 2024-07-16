@@ -8,8 +8,8 @@ var n = a(735250),
   c = a(481060),
   d = a(231239),
   N = a(881052),
-  u = a(601964),
-  _ = a(346656),
+  u = a(565138),
+  _ = a(601964),
   m = a(806519),
   E = a(768581),
   I = a(888592),
@@ -36,11 +36,11 @@ children: [
     mask: m.ZP.Masks.AVATAR_DEFAULT,
     width: 40,
     height: 40,
-    children: (0, n.jsx)(_.Z, {
+    children: (0, n.jsx)(u.Z, {
       className: h.guildIcon,
       iconSrc: i,
-      guild: new u.ZP(a),
-      size: _.Z.Sizes.MEDIUM
+      guild: new _.ZP(a),
+      size: u.Z.Sizes.MEDIUM
     })
   }),
   (0, n.jsx)(c.Text, {

@@ -11,10 +11,10 @@ var r, i, a = n(735250),
   c = n.n(u),
   d = n(748780),
   _ = n(481060),
-  E = n(818083),
-  f = n(268353),
-  h = n(866960),
-  p = n(196050),
+  E = n(167080),
+  f = n(818083),
+  h = n(268353),
+  p = n(866960),
   m = n(181058),
   I = n(810090),
   T = n(626135),
@@ -253,7 +253,7 @@ children: [
   (0, a.jsxs)('div', {
     className: L.metadataContent,
     children: [
-      i ? t : (0, a.jsx)(p.Z, {
+      i ? t : (0, a.jsx)(E.Z, {
         href: r,
         className: L.metadataDownload,
         iconClassName: L.metadataIcon,
@@ -266,7 +266,7 @@ children: [
       })
     ]
   }),
-  !s && (0, a.jsx)(p.Z, {
+  !s && (0, a.jsx)(E.Z, {
     href: r,
     className: L.metadataDownload,
     iconClassName: L.metadataIcon,
@@ -357,7 +357,7 @@ super(...e), M(this, 'state', {
 });
   }
 }
-let H = (0, E.B)({
+let H = (0, f.B)({
   kind: 'user',
   id: '2024-03_media_play_metrics',
   label: 'Media play metrics User Experiment',
@@ -395,9 +395,9 @@ this.analyticsEnabled && T.default.track(C.rMx.MEDIA_PLAY_FINISHED, {
   mime_type: this.metadata.mimeType,
   file_size: this.metadata.fileSize,
   file_duration_sec: this.metadata.fileDurationSec,
-  connection_type: h.Z.getType(),
-  effective_connection_speed: h.Z.getEffectiveConnectionSpeed(),
-  service_provider: h.Z.getServiceProvider()
+  connection_type: p.Z.getType(),
+  effective_connection_speed: p.Z.getEffectiveConnectionSpeed(),
+  service_provider: p.Z.getServiceProvider()
 }), this.playTimeSec = 0, this.playWallTimeMs = 0, this.firstPlayWaitingMs = 0, this.stallCount = 0, this.stallMs = 0, this.seekCount = 0, this.seekWaitingMs = 0, this.playbackStartTime = void 0, this.lastPlayingTime = void 0, this.moveToState('not_started');
   }
   updatePlayTime(e) {
@@ -720,7 +720,7 @@ let {
     duration: d,
     hasClickedPlay: _,
     hideControls: E,
-    muted: h,
+    muted: f,
     playing: p,
     fullscreen: m,
     volume: I,
@@ -733,7 +733,7 @@ return _ || n || t === w.AUDIO ? (0, a.jsx)(B, {
   duration: d,
   volume: (0, S.P)(I, 1),
   hide: t === w.VIDEO && E,
-  muted: h,
+  muted: f,
   autoPlay: n,
   onDrag: this.handleDrag,
   onDragEnd: this.handleDragEnd,
@@ -751,7 +751,7 @@ return _ || n || t === w.AUDIO ? (0, a.jsx)(B, {
   ref: this.controlsRef,
   width: m ? window.screen.width : g,
   disabled: !r,
-  children: t === w.VIDEO ? (0, a.jsx)(f.Z, {
+  children: t === w.VIDEO ? (0, a.jsx)(h.Z, {
     'aria-label': D.Z.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
     className: L.videoButton,
     iconClassName: L.controlIcon,

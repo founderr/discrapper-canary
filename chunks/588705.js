@@ -8,14 +8,14 @@ var t = n(735250),
   l = n(442837),
   r = n(481060),
   i = n(388905),
-  u = n(726745),
-  o = n(973616),
-  c = n(131704),
-  m = n(601964),
-  d = n(598077),
-  I = n(594174),
-  N = n(366695),
-  _ = n(940627),
+  u = n(925329),
+  o = n(372769),
+  c = n(726745),
+  m = n(973616),
+  d = n(131704),
+  I = n(601964),
+  N = n(598077),
+  _ = n(594174),
   p = n(806519),
   E = n(51144),
   x = n(981631),
@@ -47,7 +47,7 @@ let {
   compact: l
 } = e;
 if (null != a)
-  return (0, t.jsx)(N.Z, {
+  return (0, t.jsx)(u.Z, {
     className: A.appIcon,
     game: a,
     size: A.appIconSize
@@ -75,7 +75,7 @@ else
   };
 s.Z = e => {
   var s;
-  let n, a, N, {
+  let n, a, u, {
   invite: p,
   disableUser: S = !1,
   error: f,
@@ -86,18 +86,18 @@ s.Z = e => {
   currentUser: R,
   multiAccounts: O
 } = (0, l.cj)([
-  u.Z,
-  I.default
+  c.Z,
+  _.default
 ], () => ({
-  currentUser: I.default.getCurrentUser(),
-  multiAccounts: u.Z.getUsers()
+  currentUser: _.default.getCurrentUser(),
+  multiAccounts: c.Z.getUsers()
 }));
   if (null == p)
 return null;
-  let D = null != p.guild ? new m.ZP(p.guild) : null,
-L = null != p.channel ? (0, c.jD)(p.channel) : null,
-Z = null != p.target_application ? new o.Z(p.target_application) : null,
-C = S || null == p.inviter ? null : new d.Z(p.inviter),
+  let D = null != p.guild ? new I.ZP(p.guild) : null,
+L = null != p.channel ? (0, d.jD)(p.channel) : null,
+Z = null != p.target_application ? new m.Z(p.target_application) : null,
+C = S || null == p.inviter ? null : new N.Z(p.inviter),
 b = !(null != p.approximate_member_count && p.approximate_member_count > 100 || null != D && D.hasFeature(x.oNc.COMMUNITY)) && null != C,
 V = null,
 B = !1;
@@ -112,7 +112,7 @@ V = null == C ? j.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : j.Z.
   className: A.icon,
   guild: D,
   size: i.Vj.Sizes.SMALL
-})), a = D.name, null != Z && (a = Z.name, N = (0, t.jsxs)('div', {
+})), a = D.name, null != Z && (a = Z.name, u = (0, t.jsxs)('div', {
   children: [
     (0, t.jsx)(i.DK, {
       className: A.appIn,
@@ -150,7 +150,7 @@ null != L.name && '' !== L.name ? (V = j.Z.Messages.AUTH_MESSAGE_INVITED_BY.form
 let e = E.ZP.getFormattedName(C, !0);
 a = j.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_CHAT.format({
   username: e
-}), B = !0, N = null != f ? null : (0, t.jsx)(i.DK, {
+}), B = !0, u = null != f ? null : (0, t.jsx)(i.DK, {
   className: A.directInviteSubTitle,
   children: M ? j.Z.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION_REGISTER.format({
     username: e
@@ -185,7 +185,7 @@ children: [
       (0, t.jsxs)(i.Dx, {
         className: A.title,
         children: [
-          null != D ? (0, t.jsx)(_.Z, {
+          null != D ? (0, t.jsx)(o.Z, {
             guild: D,
             className: A.guildBadge,
             tooltipPosition: 'left'
@@ -196,7 +196,7 @@ children: [
       })
     ]
   }),
-  N,
+  u,
   null != Z || B || (null == p ? void 0 : null === (s = p.guild) || void 0 === s ? void 0 : s.id) === T.fQ ? null : (0, t.jsx)(i.EJ, {
     className: A.activityCount,
     online: p.approximate_presence_count,

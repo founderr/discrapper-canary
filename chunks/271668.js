@@ -8,11 +8,11 @@ var r = n(735250),
   u = n(788911),
   c = n(911969),
   d = n(367907),
-  _ = n(30465),
-  E = n(806966),
-  f = n(98528),
-  h = n(551058),
-  p = n(156361),
+  _ = n(588468),
+  E = n(30465),
+  f = n(806966),
+  h = n(98528),
+  p = n(551058),
   m = n(695464),
   I = n(153124),
   T = n(555573),
@@ -45,7 +45,7 @@ t.Z = i.forwardRef(function(e, t) {
   let {
 channel: n,
 canOnlyUseTextCommands: a
-  } = e, s = i.useRef(!1), l = i.useRef(0), [w, x] = i.useState(0), G = i.useRef(null), [k, B] = i.useState(!1), F = E.Xn.useStore(e => e.activeCategoryIndex);
+  } = e, s = i.useRef(!1), l = i.useRef(0), [w, x] = i.useState(0), G = i.useRef(null), [k, B] = i.useState(!1), F = f.Xn.useStore(e => e.activeCategoryIndex);
   i.useEffect(() => {
 (0, d.yw)(y.rMx.APPLICATION_COMMAND_BROWSER_OPENED);
   }, []);
@@ -66,7 +66,7 @@ applicationCommands: !a
 placeholderCount: 7,
 limit: C.tn,
 includeFrecency: !0
-  }), q = (0, f.Qs)({
+  }), q = (0, h.Qs)({
 activeCategoryIndex: F,
 isScrolling: s,
 listRef: G,
@@ -74,7 +74,7 @@ onActiveCategoryIndexChange: e => {
   let t = H[e];
   if (null != t) {
     let e = V.findIndex(e => e.id === t.id);
-    E.Xn.setActiveCategoryIndex(e);
+    f.Xn.setActiveCategoryIndex(e);
   }
 },
 scrollOffset: 20,
@@ -170,7 +170,7 @@ w
       height: 16,
       padding: 0
     });
-  return (0, r.jsx)(h.Z, {
+  return (0, r.jsx)(p.Z, {
     className: L.categoryHeader,
     icon: a,
     children: t.name
@@ -214,7 +214,7 @@ er = i.useCallback((e, t) => {
   if (null == o || a.section.id !== o.applicationId && a.section.id !== C.bi.FRECENCY || o.inputType === A.iw.PLACEHOLDER)
     return (0, r.jsx)(O.Z, {}, s);
   let l = V.find(e => e.id === o.applicationId);
-  return (0, r.jsx)(p.ZP.NewCommand, {
+  return (0, r.jsx)(_.ZP.NewCommand, {
     index: e,
     command: o,
     channel: n,
@@ -235,9 +235,9 @@ er = i.useCallback((e, t) => {
   w
 ]),
 ei = (0, I.Dt)();
-  return (0, _.KR)(ei, !0, (0, p.DJ)(w)), i.useEffect(() => () => {
-(0, _.sJ)();
-  }, []), (0, r.jsxs)(p.ZP, {
+  return (0, E.KR)(ei, !0, (0, _.DJ)(w)), i.useEffect(() => () => {
+(0, E.sJ)();
+  }, []), (0, r.jsxs)(_.ZP, {
 id: ei,
 className: L.outerWrapper,
 innerClassName: L.wrapper,

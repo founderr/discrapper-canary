@@ -1,6 +1,6 @@
 s.d(t, {
   Z: function() {
-return D;
+return f;
   }
 });
 var n = s(735250);
@@ -59,7 +59,7 @@ children: t
   });
 }
 
-function D(e) {
+function f(e) {
   let {
 className: t,
 showHeader: s = !0
@@ -71,8 +71,8 @@ enabled: N.Z.enabled,
 legacyEnabled: N.Z.legacyEnabled
   })), {
 avatarSizeMode: h,
-displayNameMode: D,
-displayUserMode: f,
+displayNameMode: f,
+displayUserMode: D,
 notificationPositionMode: P,
 textChatNotificationMode: L,
 shouldShowKeybindIndicators: Z
@@ -209,7 +209,7 @@ children: [
             } = e;
             return _.Z.setDisplayNameMode(t);
           },
-          value: D
+          value: f
         })
       }),
       (0, n.jsx)(M, {
@@ -230,7 +230,7 @@ children: [
             } = e;
             return _.Z.setDisplayUserMode(t);
           },
-          value: f
+          value: D
         })
       }),
       v && (0, n.jsx)(M, {

@@ -32,12 +32,12 @@ label: E.Z.Messages.COPY_ID_GUILD,
 shiftId: n,
 onSuccess: I
   }), p = (0, a.e7)([c.Z], () => c.Z.getGuild(t.id), [t.id]), T = (0, a.e7)([d.Z], () => d.Z.can(_.Plq.ADMINISTRATOR, p)), {
-canSeeInAppReportingButtons: f
+canSeeInAppReportingButtons: S
   } = u.N.useExperiment({
 location: '0e35b9_1'
   }, {
 autoTrackExposure: !1
-  }), S = () => {
+  }), f = () => {
 (0, r.Zy)(), null == I || I();
   };
   return (0, i.jsxs)(s.Menu, {
@@ -47,11 +47,11 @@ navId: 'guild-discovery-context-menu',
 onClose: r.Zy,
 children: [
   (0, i.jsx)(s.MenuGroup, {
-    children: !T && f ? (0, i.jsx)(s.MenuItem, {
+    children: !T && S ? (0, i.jsx)(s.MenuItem, {
       id: 'report-guild-discovery-listing',
       label: E.Z.Messages.REPORT_SERVER_NO_NAME,
       action: () => {
-        (0, o.lt)(t), S();
+        (0, o.lt)(t), f();
       },
       icon: s.FlagIcon,
       color: 'danger'

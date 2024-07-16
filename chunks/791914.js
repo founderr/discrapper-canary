@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return f;
+return p;
   }
 });
 var i = n(735250);
@@ -21,13 +21,13 @@ var a = n(120356),
   h = n(689938),
   N = n(39767);
 
-function f(e) {
+function p(e) {
   let {
 tab: t,
 setTab: n,
 children: a,
-badgeState: f,
-closePopout: p
+badgeState: p,
+closePopout: f
   } = e, {
 showReminders: C
   } = m.Z.useExperiment({
@@ -62,7 +62,7 @@ children: [
         children: h.Z.Messages.INBOX
       }),
       (0, i.jsx)(T.Z, {
-        closePopout: p
+        closePopout: f
       })
     ]
   }),
@@ -82,7 +82,7 @@ children: [
             }),
             children: [
               h.Z.Messages.FOR_YOU,
-              (null == f ? void 0 : f.badgeForYou) ? (0, i.jsx)(o.CircleBadge, {
+              (null == p ? void 0 : p.badgeForYou) ? (0, i.jsx)(o.CircleBadge, {
                 color: d.Z.STATUS_DANGER,
                 className: s()(N.iconBadge)
               }) : null

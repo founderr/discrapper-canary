@@ -13,13 +13,13 @@ var l, t, i = n(735250),
   I = n(809206),
   E = n(607070),
   M = n(339085),
-  m = n(601964),
-  _ = n(650774),
-  N = n(271383),
-  x = n(430824),
-  R = n(594174),
-  f = n(285952),
-  g = n(346656),
+  m = n(565138),
+  _ = n(601964),
+  N = n(650774),
+  x = n(271383),
+  R = n(430824),
+  f = n(594174),
+  g = n(285952),
   h = n(626135),
   C = n(768581),
   T = n(863249),
@@ -220,13 +220,13 @@ onClose: a,
 onComplete: c,
 inviteCode: j,
 isPreview: V = !1
-  } = e, S = (0, F.rb)(e => e.hasUnsubmittedChanges), b = (0, d.e7)([x.Z], () => x.Z.getGuild(t)), P = (0, d.e7)([v.Z], () => v.Z.get(t)), D = null == P ? void 0 : P.formFields.some(e => e.field_type !== A.QJ.TERMS), k = (0, d.e7)([R.default], () => R.default.getCurrentUser()), G = !(null == k ? void 0 : k.isClaimed()), H = null == k ? void 0 : k.verified, Y = null == k ? void 0 : k.isPhoneVerified(), z = (0, d.e7)([M.Z], () => M.Z.getGuildEmoji(t)), {
+  } = e, S = (0, F.rb)(e => e.hasUnsubmittedChanges), b = (0, d.e7)([R.Z], () => R.Z.getGuild(t)), P = (0, d.e7)([v.Z], () => v.Z.get(t)), D = null == P ? void 0 : P.formFields.some(e => e.field_type !== A.QJ.TERMS), k = (0, d.e7)([f.default], () => f.default.getCurrentUser()), G = !(null == k ? void 0 : k.isClaimed()), H = null == k ? void 0 : k.verified, Y = null == k ? void 0 : k.isPhoneVerified(), z = (0, d.e7)([M.Z], () => M.Z.getGuildEmoji(t)), {
 storeMemberCount: J,
 storeOnlineCount: Q
-  } = (0, d.cj)([_.Z], () => ({
-storeMemberCount: _.Z.getMemberCount(t),
-storeOnlineCount: _.Z.getOnlineCount(t)
-  })), [q, W] = r.useState(null !== (s = null == P ? void 0 : P.formFields) && void 0 !== s ? s : []), [X, K] = r.useState(!1), [$, ee] = r.useState(null), [es, en] = r.useState(G ? 0 : 2), [el, et] = r.useState(''), [ei, er] = r.useState(''), [ea, eo] = r.useState(null), [ed, eu] = r.useState(null), ec = null == P ? void 0 : P.guild, eI = r.useMemo(() => null != b ? b : null != ec ? new m.ZP(ec) : null, [
+  } = (0, d.cj)([N.Z], () => ({
+storeMemberCount: N.Z.getMemberCount(t),
+storeOnlineCount: N.Z.getOnlineCount(t)
+  })), [q, W] = r.useState(null !== (s = null == P ? void 0 : P.formFields) && void 0 !== s ? s : []), [X, K] = r.useState(!1), [$, ee] = r.useState(null), [es, en] = r.useState(G ? 0 : 2), [el, et] = r.useState(''), [ei, er] = r.useState(''), [ea, eo] = r.useState(null), [ed, eu] = r.useState(null), ec = null == P ? void 0 : P.guild, eI = r.useMemo(() => null != b ? b : null != ec ? new _.ZP(ec) : null, [
 b,
 ec
   ]), eE = null !== (n = null == eI ? void 0 : eI.hasFeature(L.oNc.CLAN)) && void 0 !== n && n, {
@@ -300,7 +300,7 @@ try {
 }
   }, eh = async () => {
 K(!0), ee(null);
-let e = null != k ? N.ZP.getMember(t, k.id) : null;
+let e = null != k ? x.ZP.getMember(t, k.id) : null;
 if (null != e && !e.isPending) {
   null == a || a(!0);
   return;
@@ -320,15 +320,15 @@ try {
   };
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsxs)(f.Z, {
-    direction: f.Z.Direction.VERTICAL,
-    justify: f.Z.Justify.BETWEEN,
+  (0, i.jsxs)(g.Z, {
+    direction: g.Z.Direction.VERTICAL,
+    justify: g.Z.Justify.BETWEEN,
     className: B.guildSidebar,
     shrink: 0,
     children: [
       (0, i.jsxs)('div', {
         children: [
-          (0, i.jsx)(g.Z, {
+          (0, i.jsx)(m.Z, {
             guild: eI,
             active: !0,
             className: o()(B.guildIcon, {
@@ -391,8 +391,8 @@ children: [
       }),
       (0, i.jsxs)('div', {
         children: [
-          null != ex && (0, i.jsxs)(f.Z, {
-            align: f.Z.Align.CENTER,
+          null != ex && (0, i.jsxs)(g.Z, {
+            align: g.Z.Align.CENTER,
             className: B.onlineCount,
             children: [
               (0, i.jsx)('div', {
@@ -406,8 +406,8 @@ children: [
               })
             ]
           }),
-          null != eN && (0, i.jsxs)(f.Z, {
-            align: f.Z.Align.CENTER,
+          null != eN && (0, i.jsxs)(g.Z, {
+            align: g.Z.Align.CENTER,
             children: [
               (0, i.jsx)('div', {
                 className: B.dotMembers

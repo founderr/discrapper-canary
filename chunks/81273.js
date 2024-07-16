@@ -14,8 +14,8 @@ var i = n(735250),
   T = n(937111),
   h = n(281956),
   N = n(41776),
-  f = n(738737),
-  p = n(509545),
+  p = n(738737),
+  f = n(509545),
   C = n(63063),
   g = n(817460),
   S = n(584825),
@@ -37,7 +37,7 @@ U = null == e ? void 0 : e.subscription_plans[0],
 y = null == U ? void 0 : U.id,
 B = (null == e ? void 0 : e.published) === !0,
 k = null == U ? void 0 : U.sku_id,
-G = (0, c.e7)([p.Z], () => null != y ? p.Z.get(y) : null),
+G = (0, c.e7)([f.Z], () => null != y ? f.Z.get(y) : null),
 {
   activeSubscription: F,
   activeSubscriptionPlanFromStore: w
@@ -80,7 +80,7 @@ k
     } else
       a = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER;
   }
-  (0, f.Z)({
+  (0, p.Z)({
     activeSubscription: F,
     analyticsSubscriptionType: L.NYc.GUILD,
     trialId: n,

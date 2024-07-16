@@ -20,10 +20,10 @@ var i = t(735250),
   o = t(120356),
   l = t.n(o),
   r = t(481060),
-  a = t(163268),
-  u = t(25610),
-  d = t(976853),
-  m = t(196050),
+  a = t(167080),
+  u = t(163268),
+  d = t(25610),
+  m = t(976853),
   c = t(68588),
   h = t(941797),
   I = t(630388),
@@ -89,12 +89,12 @@ let A = e => {
   let n, t, {
 downloadURL: s,
 downloadMimeType: o,
-onRemoveItem: a,
-isVisualMediaType: u
+onRemoveItem: u,
+isVisualMediaType: d
   } = e;
   return (null != s && null != o && (n = (0, i.jsx)(r.Tooltip, {
 text: T.Z.Messages.DOWNLOAD,
-children: e => (0, i.jsx)(m.Z, {
+children: e => (0, i.jsx)(a.Z, {
   ...e,
   target: '_blank',
   rel: 'noreferrer noopener',
@@ -106,7 +106,7 @@ children: e => (0, i.jsx)(m.Z, {
   href: s,
   mimeType: o
 })
-  })), null != a && (t = (0, i.jsx)(r.Tooltip, {
+  })), null != u && (t = (0, i.jsx)(r.Tooltip, {
 text: T.Z.Messages.REMOVE_ATTACHMENT_TOOLTIP_TEXT,
 children: e => (0, i.jsx)(r.Clickable, {
   ...e,
@@ -114,7 +114,7 @@ children: e => (0, i.jsx)(r.Clickable, {
   focusProps: {
     offset: 2
   },
-  onClick: a,
+  onClick: u,
   'aria-label': T.Z.Messages.REMOVE_MESSAGE_ATTACHMENT,
   children: (0, i.jsx)(r.TrashIcon, {
     size: 'custom',
@@ -125,7 +125,7 @@ children: e => (0, i.jsx)(r.Clickable, {
 })
   })), null == t && null == n) ? null : (0, i.jsxs)('div', {
 className: l()(y.hoverButtonGroup, {
-  [y.nonMediaMosaicItem]: !u
+  [y.nonMediaMosaicItem]: !d
 }),
 children: [
   n,
@@ -141,7 +141,7 @@ item: t,
 autoPlayGif: o,
 canRemoveItem: a,
 onRemoveItem: u,
-onClick: m,
+onClick: d,
 onContextMenu: c,
 onPlay: I,
 renderImageComponent: p,
@@ -168,7 +168,7 @@ height: G,
 spoiler: b,
 type: k,
 contentType: W
-  } = t, [R, Z] = s.useState(!1), U = (0, d.Z)(n.getChannelId()), q = s.useMemo(() => null != W && -1 !== W.indexOf('/') ? W.split('/') : [
+  } = t, [R, Z] = s.useState(!1), U = (0, m.Z)(n.getChannelId()), q = s.useMemo(() => null != W && -1 !== W.indexOf('/') ? W.split('/') : [
 'unknown',
 'unknown'
   ], [W]), z = s.useCallback(() => {
@@ -241,7 +241,7 @@ case 'IMAGE':
       width: B,
       height: G,
       autoPlay: o && !w,
-      onClick: m,
+      onClick: d,
       onContextMenu: c,
       shouldHideMediaOptions: U,
       renderAccessory: e,
@@ -265,7 +265,7 @@ case 'CLIP':
     message: n,
     width: B,
     height: G,
-    onClick: m,
+    onClick: d,
     onContextMenu: c,
     renderAdjacentContent: X,
     naturalWidth: B,
@@ -302,7 +302,7 @@ case 'PLAINTEXT_PREVIEW':
     item: t,
     message: n,
     className: v,
-    onClick: m,
+    onClick: d,
     onContextMenu: c,
     renderAdjacentContent: X
   });
@@ -311,7 +311,7 @@ case 'OTHER':
     item: t,
     message: n,
     className: v,
-    onClick: m,
+    onClick: d,
     onContextMenu: c,
     renderAdjacentContent: X
   });
@@ -325,7 +325,7 @@ n.ZP = function(e) {
 className: t,
 item: o,
 message: r,
-getObscureReason: d,
+getObscureReason: a,
 useFullWidth: m,
 mediaLayoutType: h,
 isSingleMosaicItem: I,
@@ -335,10 +335,10 @@ footer: p,
 width: j,
 height: T,
 type: M
-  } = o, N = d(o, (0, u.V)(r.channel_id, r.author.id)), [E, O] = s.useState(null != N), w = h === f.hV.MOSAIC, A = !w && (null != j && j < 200 || null != T && T < 50);
+  } = o, N = a(o, (0, d.V)(r.channel_id, r.author.id)), [E, O] = s.useState(null != N), w = h === f.hV.MOSAIC, A = !w && (null != j && j < 200 || null != T && T < 50);
   let V = 'IMAGE' === (n = M) || 'VIDEO' === n,
 S = v(M),
-F = I && null != N && (0, a.bR)(j, T),
+F = I && null != N && (0, u.bR)(j, T),
 [P, _] = s.useState(!1),
 H = () => {
   _(!0);
@@ -352,7 +352,7 @@ B = function() {
     ...g,
     item: o,
     message: r,
-    getObscureReason: d,
+    getObscureReason: a,
     hiddenSpoilers: e,
     className: l()(t, y.mosaicItemContent, {
       [y.obscured]: E && !A,

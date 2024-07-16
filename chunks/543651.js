@@ -8,8 +8,8 @@ var i = n(120356),
   u = n(481060),
   c = n(835473),
   d = n(318374),
-  _ = n(594174),
-  E = n(366695),
+  _ = n(925329),
+  E = n(594174),
   f = n(823379),
   h = n(689938),
   p = n(730525);
@@ -21,14 +21,14 @@ applicationId: i,
 title: o,
 guildId: m,
 className: I
-  } = e, T = (0, c.q)(i), g = (0, l.Wu)([_.default], () => {
+  } = e, T = (0, c.q)(i), g = (0, l.Wu)([E.default], () => {
 var e;
-return null !== (e = n.map(e => _.default.getUser(e)).filter(f.lm)) && void 0 !== e ? e : [];
+return null !== (e = n.map(e => E.default.getUser(e)).filter(f.lm)) && void 0 !== e ? e : [];
   }), S = null == T ? void 0 : T.name, A = s()(t).fromNow();
   return null == t ? null : (0, r.jsxs)('div', {
 className: a()(I, p.container),
 children: [
-  (0, r.jsx)(E.Z, {
+  (0, r.jsx)(_.Z, {
     game: T
   }),
   (0, r.jsxs)('div', {

@@ -9,20 +9,20 @@ var i = t(470079),
   l = t(149765),
   o = t(442837),
   r = t(271383),
-  c = t(430824),
-  d = t(496675),
+  d = t(430824),
+  c = t(496675),
   u = t(594174),
   I = t(700785),
   m = t(282923),
   _ = t(981631);
 
 function N(e) {
-  let n = (0, o.e7)([c.Z], () => c.Z.getGuild(e));
+  let n = (0, o.e7)([d.Z], () => d.Z.getGuild(e));
   s()(null != n, 'guild must be present to be editing its integration settings');
-  let t = (0, o.e7)([d.Z], () => d.Z.getHighestRole(n)),
+  let t = (0, o.e7)([c.Z], () => c.Z.getHighestRole(n)),
 a = (0, o.Wu)([r.ZP], () => r.ZP.getMembers(e), [e]),
 N = (0, o.cj)([u.default], () => u.default.getUsers()),
-h = (0, o.Wu)([c.Z], () => Object.values(c.Z.getRoles(e)), [e]),
+h = (0, o.Wu)([d.Z], () => Object.values(d.Z.getRoles(e)), [e]),
 p = i.useMemo(() => {
   let e = [];
   for (let t of a) {
@@ -33,7 +33,7 @@ p = i.useMemo(() => {
       permission: _.Plq.ADMINISTRATOR,
       user: i,
       context: n
-    }) && d.Z.canManageUser(_.Plq.USE_APPLICATION_COMMANDS, i, n);
+    }) && c.Z.canManageUser(_.Plq.USE_APPLICATION_COMMANDS, i, n);
     e.push({
       id: i.id,
       canManage: a,
@@ -56,7 +56,7 @@ C = i.useMemo(() => {
   for (let a of h) {
     if (g(a))
       continue;
-    let s = !l.e$(a.permissions, _.Plq.ADMINISTRATOR) && d.Z.isRoleHigher(n, t, a),
+    let s = !l.e$(a.permissions, _.Plq.ADMINISTRATOR) && c.Z.isRoleHigher(n, t, a),
       o = {
         id: a.id,
         name: a.name,

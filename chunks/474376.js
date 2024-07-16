@@ -35,7 +35,7 @@ T = t => {
       }
     }), _.yD(t);
 },
-f = n.map(n => {
+S = n.map(n => {
   let a = new l.Z(n),
     o = a.id === (null == e ? void 0 : e.id),
     c = n.tokenStatus === E.q.INVALID,
@@ -93,7 +93,7 @@ f = n.map(n => {
     }
   }, a.id);
 });
-  return f.push((0, i.jsxs)(i.Fragment, {
+  return S.push((0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(s.MenuSeparator, {}),
   (0, i.jsx)(s.MenuItem, {
@@ -102,5 +102,5 @@ children: [
     action: I.Z
   })
 ]
-  })), f;
+  })), S;
 }

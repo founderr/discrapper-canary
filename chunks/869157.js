@@ -9,8 +9,8 @@ var i = t(735250),
   l = t.n(s),
   o = t(392711),
   r = t.n(o),
-  c = t(442837),
-  d = t(481060),
+  d = t(442837),
+  c = t(481060),
   u = t(749210),
   I = t(367907),
   m = t(895924),
@@ -41,9 +41,9 @@ guildId: s,
 noneSelectedText: o,
 overwrites: I,
 hasAccessToMutatePermissions: N
-  } = e, T = (0, c.e7)([p.Z], () => p.Z.getGuild(s));
+  } = e, T = (0, d.e7)([p.Z], () => p.Z.getGuild(s));
   l()(null != T, '');
-  let h = (0, c.e7)([p.Z], () => p.Z.getRoles(s)),
+  let h = (0, d.e7)([p.Z], () => p.Z.getRoles(s)),
 [C, R] = a.useState(new Set()),
 b = a.useMemo(() => {
   var e;
@@ -122,12 +122,12 @@ I,
 C,
 R
   ]);
-  let L = (0, c.e7)([S.Z], () => S.Z.getApplicationId()),
-D = (0, c.e7)([O.Z], () => null == L ? void 0 : O.Z.integrations.find(e => {
+  let L = (0, d.e7)([S.Z], () => S.Z.getApplicationId()),
+D = (0, d.e7)([O.Z], () => null == L ? void 0 : O.Z.integrations.find(e => {
   var n;
   return (null === (n = e.application) || void 0 === n ? void 0 : n.id) === L;
 })),
-P = (0, c.e7)([E.Z], () => void 0 !== D && E.Z.canShowToggleTooltip(D.id));
+P = (0, d.e7)([E.Z], () => void 0 !== D && E.Z.canShowToggleTooltip(D.id));
   return (0, i.jsx)(a.Fragment, {
 children: b.length > 0 ? b.map(e => (0, i.jsx)(j, {
   guild: T,
@@ -140,7 +140,7 @@ children: b.length > 0 ? b.map(e => (0, i.jsx)(j, {
   hasAccessToMutatePermissions: N
 }, e.id)) : (0, i.jsx)('div', {
   className: M.noItemsSelected,
-  children: (0, i.jsx)(d.Text, {
+  children: (0, i.jsx)(c.Text, {
     color: 'text-muted',
     variant: 'text-sm/normal',
     children: o
@@ -154,7 +154,7 @@ function j(e) {
   let l, {
   guild: o,
   commandId: r,
-  onChange: c,
+  onChange: d,
   onRemove: u,
   overwrite: E,
   integration: p,
@@ -181,7 +181,7 @@ o.id,
 null == p ? void 0 : null === (s = p.application) || void 0 === s ? void 0 : s.id,
 L
   ]);
-  let j = (0, i.jsx)(d.Tooltip, {
+  let j = (0, i.jsx)(c.Tooltip, {
   tooltipClassName: M.tooltip,
   text: l,
   shouldShow: S,
@@ -193,13 +193,13 @@ L
       isDisabled: S,
       currentValue: E.permission,
       onChange: L ? e => {
-        N.Z.dismissToggleTooltip(o.id, p), c(e);
-      } : c
+        N.Z.dismissToggleTooltip(o.id, p), d(e);
+      } : d
     })
   })
 }),
-P = (0, i.jsx)(d.Popout, {
-  renderPopout: () => (0, i.jsx)(d.Clickable, {
+P = (0, i.jsx)(c.Popout, {
+  renderPopout: () => (0, i.jsx)(c.Clickable, {
     onClick: e => {
       e.stopPropagation(), N.Z.dismissToggleTooltip(o.id, p);
     },
@@ -214,7 +214,7 @@ P = (0, i.jsx)(d.Popout, {
   }),
   position: 'bottom',
   align: 'center',
-  animation: d.Popout.Animation.TRANSLATE,
+  animation: c.Popout.Animation.TRANSLATE,
   onRequestClose: () => N.Z.dismissToggleTooltip(o.id, p),
   shouldShow: L,
   closeOnScroll: !0,
@@ -258,11 +258,11 @@ onRemove: s
   } = e;
   return a ? null : null != n || !t ? (0, i.jsx)('div', {
 className: M.removeActions,
-children: (0, i.jsx)(d.Clickable, {
+children: (0, i.jsx)(c.Clickable, {
   className: M.removeContainer,
   'aria-label': v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSION_ENTRY_REMOVE_ARIA_LABEL,
   onClick: s,
-  children: (0, i.jsx)(d.TrashIcon, {
+  children: (0, i.jsx)(c.TrashIcon, {
     size: 'md',
     color: 'currentColor',
     className: M.removeIcon

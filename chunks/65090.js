@@ -1,7 +1,7 @@
 var r = n(735250),
   i = n(470079),
-  a = n(271383),
-  o = n(156361),
+  a = n(588468),
+  o = n(271383),
   s = n(483360),
   l = n(51144),
   u = n(877565),
@@ -10,7 +10,7 @@ var r = n(735250),
   _ = n(689938);
 let E = {
   sentinel: d.ME,
-  stores: [a.ZP],
+  stores: [o.ZP],
   matches: (e, t, n, r, i) => (i.mentions.user !== c.h3.DENY || i.mentions.role !== c.Fw.DENY || i.mentions.global !== c.VV.DENY) && !0,
   queryResults(e, t, n, r, i) {
 let a = r.mentions.global === c.VV.ALLOW_EVERYONE || r.mentions.global === c.VV.ALLOW_EVERYONE_OR_HERE,
@@ -36,7 +36,7 @@ return {
   renderResults(e) {
 let t, n, {
     results: {
-      users: a,
+      users: o,
       globals: s,
       roles: l
     },
@@ -47,7 +47,7 @@ let t, n, {
     onHover: m,
     onClick: I
   } = e,
-  T = a.map((e, t) => (0, r.jsx)(o.ZP.User, {
+  T = o.map((e, t) => (0, r.jsx)(a.ZP.User, {
     guildId: f.guild_id,
     onClick: I,
     onHover: m,
@@ -58,20 +58,20 @@ let t, n, {
     status: e.status,
     hidePersonalInformation: p.hidePersonalInformation
   }, e.user.id)),
-  g = s.map((e, t) => (0, r.jsx)(o.ZP.Generic, {
+  g = s.map((e, t) => (0, r.jsx)(a.ZP.Generic, {
     onClick: I,
     onHover: m,
-    selected: E === t + a.length,
-    index: a.length + t,
+    selected: E === t + o.length,
+    index: o.length + t,
     text: e.text,
     description: p.hideMentionDescription ? null : e.description,
     'aria-label': e.text
   }, e.text)),
-  S = l.map((e, t) => (0, r.jsx)(o.ZP.Role, {
+  S = l.map((e, t) => (0, r.jsx)(a.ZP.Role, {
     onClick: I,
     onHover: m,
-    selected: E === t + a.length + s.length,
-    index: a.length + s.length + t,
+    selected: E === t + o.length + s.length,
+    index: o.length + s.length + t,
     role: e,
     hideDescription: p.hideMentionDescription
   }, e.id));
@@ -84,9 +84,9 @@ return p.mentions.user === c.h3.DENY ? (t = _.Z.Messages.ROLES_MATCHING, n = _.Z
       getQuery: e => ''.concat(d.ME).concat(e)
     }),
     T,
-    a.length > 0 && s.length > 0 ? (0, r.jsx)(o.ZP.Divider, {}) : null,
+    o.length > 0 && s.length > 0 ? (0, r.jsx)(a.ZP.Divider, {}) : null,
     g,
-    a.length > 0 && l.length > 0 || s.length > 0 && l.length > 0 ? (0, r.jsx)(o.ZP.Divider, {}) : null,
+    o.length > 0 && l.length > 0 || s.length > 0 && l.length > 0 ? (0, r.jsx)(a.ZP.Divider, {}) : null,
     S
   ]
 }, 'mentions');

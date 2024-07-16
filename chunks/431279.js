@@ -8,8 +8,8 @@ var r, i = n(735250),
   o = n(374470),
   s = n(481060),
   l = n(40851),
-  u = n(751586),
-  c = n(261922),
+  u = n(124347),
+  c = n(751586),
   d = n(626135),
   _ = n(956664),
   E = n(506071),
@@ -33,7 +33,7 @@ let {
   isWindowFocused: t,
   ...n
 } = this.props;
-return (0, i.jsx)(c.Z, {
+return (0, i.jsx)(u.Z, {
   ...n,
   onZoom: this.onZoom,
   onMouseEnter: this.onMouseEnter,
@@ -60,7 +60,7 @@ super(...e), I(this, 'onMouseEnter', (e, t) => {
   let {
     alt: a,
     src: l,
-    original: c,
+    original: u,
     width: _,
     height: E,
     animated: I,
@@ -72,7 +72,7 @@ super(...e), I(this, 'onMouseEnter', (e, t) => {
   } = this.props, v = {
     alt: a,
     src: l,
-    original: null != c ? c : l,
+    original: null != u ? u : l,
     width: _,
     height: E,
     animated: I,
@@ -92,7 +92,7 @@ super(...e), I(this, 'onMouseEnter', (e, t) => {
     ...e,
     size: s.ModalSize.DYNAMIC,
     'aria-label': p.Z.Messages.IMAGE,
-    children: (0, i.jsx)(u.y, {
+    children: (0, i.jsx)(c.y, {
       ...v,
       className: m.image,
       shouldAnimate: A,

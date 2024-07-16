@@ -246,7 +246,7 @@ return (0, s.jsx)(s.Fragment, {
   })
 });
   },
-  L = () => {
+  P = () => {
 let e = (0, T.VM)(),
   t = (0, E.Z)() ? A.AG : A.i0,
   n = (0, _.o)(m.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({
@@ -263,7 +263,7 @@ return e ? (0, s.jsx)('div', {
   })
 }) : null;
   },
-  P = () => (0, u.o)() ? (0, s.jsxs)('div', {
+  L = () => (0, u.o)() ? (0, s.jsxs)('div', {
 className: i()(N.__invalid_helpLineInfo, f.marginTop20),
 children: [
   (0, s.jsx)(o.Heading, {
@@ -303,8 +303,8 @@ children: [
   e ? (0, s.jsx)(M, {}) : (0, s.jsx)(x, {}),
   (0, s.jsx)(O, {}),
   (0, s.jsx)(v, {}),
-  (0, s.jsx)(L, {}),
-  (0, s.jsx)(P, {})
+  (0, s.jsx)(P, {}),
+  (0, s.jsx)(L, {})
 ]
   });
 };

@@ -16,15 +16,15 @@ var i = n(735250),
   g = n(730749),
   p = n(112724),
   T = n(812206),
-  f = n(44315),
-  S = n(210887),
-  C = n(283595),
-  N = n(417363),
-  A = n(941128),
-  v = n(451478),
-  Z = n(285952),
-  L = n(366695),
-  O = n(366966),
+  S = n(44315),
+  f = n(925329),
+  C = n(707409),
+  N = n(210887),
+  A = n(283595),
+  v = n(417363),
+  Z = n(941128),
+  L = n(451478),
+  O = n(285952),
   R = n(151011),
   x = n(424218),
   b = n(780570),
@@ -104,24 +104,24 @@ default:
 }
 let H = {
   [D.vxO.INSTALLING]: {
-[O.J6.NONE]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+[C.J6.NONE]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
   percent: e,
   progress: t,
   total: n
 }),
-[O.J6.SECONDS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+[C.J6.SECONDS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
   percent: e,
   progress: t,
   total: n,
   timeRemaining: i
 }),
-[O.J6.MINUTES]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+[C.J6.MINUTES]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
   percent: e,
   progress: t,
   total: n,
   timeRemaining: i
 }),
-[O.J6.HOURS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+[C.J6.HOURS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
   percent: e,
   progress: t,
   total: n,
@@ -129,24 +129,24 @@ let H = {
 })
   },
   [D.vxO.UPDATING]: {
-[O.J6.NONE]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING.format({
+[C.J6.NONE]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING.format({
   percent: e,
   progress: t,
   total: n
 }),
-[O.J6.SECONDS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_SECONDS.format({
+[C.J6.SECONDS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_SECONDS.format({
   percent: e,
   progress: t,
   total: n,
   timeRemaining: i
 }),
-[O.J6.MINUTES]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_MINUTES.format({
+[C.J6.MINUTES]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_MINUTES.format({
   percent: e,
   progress: t,
   total: n,
   timeRemaining: i
 }),
-[O.J6.HOURS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_HOURS.format({
+[C.J6.HOURS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_HOURS.format({
   percent: e,
   progress: t,
   total: n,
@@ -154,24 +154,24 @@ let H = {
 })
   },
   [D.vxO.REPAIRING]: {
-[O.J6.NONE]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+[C.J6.NONE]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
   percent: e,
   progress: t,
   total: n
 }),
-[O.J6.SECONDS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+[C.J6.SECONDS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
   percent: e,
   progress: t,
   total: n,
   timeRemaining: i
 }),
-[O.J6.MINUTES]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+[C.J6.MINUTES]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
   percent: e,
   progress: t,
   total: n,
   timeRemaining: i
 }),
-[O.J6.HOURS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+[C.J6.HOURS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
   percent: e,
   progress: t,
   total: n,
@@ -186,7 +186,7 @@ r = null != s ? Object.keys(s) : [],
 {
   unit: l,
   time: o
-} = (0, O.CI)(null != e ? e / 60 : null, r);
+} = (0, C.CI)(null != e ? e / 60 : null, r);
   if (null != s && null != l) {
 let e = s[l];
 return null != e ? e(n, i, a, o) : null;
@@ -272,16 +272,16 @@ let {
   foregroundGradientColor: a,
   message: s
 } = e;
-return (0, i.jsxs)(Z.Z, {
-  direction: Z.Z.Direction.VERTICAL,
+return (0, i.jsxs)(O.Z, {
+  direction: O.Z.Direction.VERTICAL,
   children: [
     (0, i.jsx)(_.Progress, {
       percent: t,
       size: _.Progress.Sizes.SMALL,
-      foregroundColor: (0, f.Lq)(n),
+      foregroundColor: (0, S.Lq)(n),
       foregroundGradientColor: null != a ? [
-        (0, f.Lq)(a[0]),
-        (0, f.Lq)(a[1])
+        (0, S.Lq)(a[0]),
+        (0, S.Lq)(a[1])
       ] : void 0,
       animate: this.isFocused
     }),
@@ -297,8 +297,8 @@ let {
   percents: t,
   message: n
 } = e;
-return (0, i.jsxs)(Z.Z, {
-  direction: Z.Z.Direction.VERTICAL,
+return (0, i.jsxs)(O.Z, {
+  direction: O.Z.Direction.VERTICAL,
   children: [
     (0, i.jsx)(_.StackedProgress, {
       percents: t,
@@ -390,7 +390,7 @@ return this.renderBody({
   }
   renderProgressPatching() {
 return (0, i.jsx)(P.Z, {
-  getHistoricalTotalBytes: N.Z.getHistoricalTotalBytesWritten,
+  getHistoricalTotalBytes: v.Z.getHistoricalTotalBytesWritten,
   updateInterval: 5000,
   children: this.renderProgressPatchingBody
 });
@@ -521,13 +521,13 @@ return (0, i.jsx)(w, {
   $ = [{
   key: Y,
   cellClassName: j.nameCell,
-  render: e => (0, i.jsxs)(Z.Z, {
-    align: Z.Z.Align.CENTER,
+  render: e => (0, i.jsxs)(O.Z, {
+    align: O.Z.Align.CENTER,
     children: [
-      (0, i.jsx)(L.Z, {
+      (0, i.jsx)(f.Z, {
         game: e.application,
         className: j.__invalid_gameIcon,
-        size: L.Z.Sizes.SMALL
+        size: f.Z.Sizes.SMALL
       }),
       (0, i.jsx)('div', {
         className: j.nameCellText,
@@ -564,8 +564,8 @@ return (0, i.jsx)(w, {
       item: e
     })) : a = (0, i.jsx)(J, {
       item: e
-    }), (0, i.jsxs)(Z.Z, {
-      justify: Z.Z.Justify.END,
+    }), (0, i.jsxs)(O.Z, {
+      justify: O.Z.Justify.END,
       children: [
         n,
         a
@@ -608,14 +608,14 @@ return 0 === e.length ? null : (0, i.jsxs)('div', {
         (0, i.jsx)(M.Z, {
           className: r()(j.headerCell, j.networkProgress),
           title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
-          getHistoricalTotalBytes: N.Z.getHistoricalTotalBytesDownloaded,
+          getHistoricalTotalBytes: v.Z.getHistoricalTotalBytesDownloaded,
           color: D.Ilk.GREEN_360,
           animate: a
         }),
         (0, i.jsx)(M.Z, {
           className: r()(j.headerCell, j.diskProgress),
           title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
-          getHistoricalTotalBytes: N.Z.getHistoricalTotalBytesWritten,
+          getHistoricalTotalBytes: v.Z.getHistoricalTotalBytesWritten,
           color: D.Ilk.BLUE_345,
           animate: a
         })
@@ -679,7 +679,7 @@ return null != o && e.push({
   branchId: l,
   state: c,
   application: o,
-  libraryApplication: C.Z.getLibraryApplication(r, l),
+  libraryApplication: A.Z.getLibraryApplication(r, l),
   finished: t,
   index: s
 }), e;
@@ -687,19 +687,19 @@ return null != o && e.push({
 }
 t.Z = (0, p.Z)(c.ZP.connectStores([
   T.Z,
+  v.Z,
+  Z.Z,
   N.Z,
-  A.Z,
-  S.Z,
-  v.Z
+  L.Z
 ], () => {
-  let e = et(A.Z.activeItems, !1, T.Z, N.Z);
+  let e = et(Z.Z.activeItems, !1, T.Z, v.Z);
   return {
 applications: [
   ...e,
-  ...et(A.Z.finishedItems, !0, T.Z, N.Z)
+  ...et(Z.Z.finishedItems, !0, T.Z, v.Z)
 ],
-paused: A.Z.paused,
-isFocused: v.Z.isFocused(),
-theme: S.Z.theme
+paused: Z.Z.paused,
+isFocused: L.Z.isFocused(),
+theme: N.Z.theme
   };
 })((0, g.Z)(ee)));

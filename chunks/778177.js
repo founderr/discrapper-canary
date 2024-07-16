@@ -15,8 +15,8 @@ var i = n(735250),
   T = n(603263),
   h = n(542051),
   N = n(349033),
-  f = n(999650),
-  p = n(933557),
+  p = n(999650),
+  f = n(933557),
   C = n(471445),
   g = n(592125),
   S = n(271383),
@@ -99,11 +99,11 @@ return (0, i.jsxs)('div', {
       className: y.searchResultChannelIcon
     }) : null,
     (0, i.jsx)('strong', {
-      children: (0, p.F6)(a, v.default, A.Z)
+      children: (0, f.F6)(a, v.default, A.Z)
     }),
     null != r ? (0, i.jsx)('span', {
       className: y.searchResultChannelCategory,
-      children: (0, p.F6)(r, v.default, A.Z)
+      children: (0, f.F6)(r, v.default, A.Z)
     }) : null
   ]
 });
@@ -124,10 +124,10 @@ let t, n, {
   renderResult: h
 } = e;
 if (T) {
-  var N, p;
+  var N, f;
   t = (0, i.jsx)('span', {
     className: y.filter,
-    children: null !== (p = null === (N = f.ZP[o]) || void 0 === N ? void 0 : N.key) && void 0 !== p ? p : 'addme:'
+    children: null !== (f = null === (N = p.ZP[o]) || void 0 === N ? void 0 : N.key) && void 0 !== f ? f : 'addme:'
   });
 }
 return n = null != h ? h(s, o, l) : (0, i.jsx)('strong', {
@@ -358,7 +358,7 @@ return (0, i.jsx)(h.Z, {
   constructor(...e) {
 var t;
 super(...e), t = this, B(this, 'state', {
-  dateHint: (0, f.Pr)(),
+  dateHint: (0, p.Pr)(),
   selectedIndex: -1
 }), B(this, 'handleDateChange', e => {
   this.setSearchQuery(e.format(j.b2L) + ' ', !0);
@@ -417,7 +417,7 @@ super(...e), t = this, B(this, 'state', {
     r = function(e) {
       let t = !0,
         n = e.trim();
-      return d()(f.ZP).forOwn(e => {
+      return d()(p.ZP).forOwn(e => {
         '' !== e.key && null != e.key && n === e.key && (t = !1);
       }), t;
     }(s);

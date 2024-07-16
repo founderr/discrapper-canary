@@ -9,8 +9,8 @@ var i = t(735250),
   l = t.n(s),
   o = t(658722),
   r = t.n(o),
-  c = t(442837),
-  d = t(780384),
+  d = t(442837),
+  c = t(780384),
   u = t(481060),
   I = t(37234),
   m = t(410030),
@@ -76,13 +76,13 @@ onManageApplication: W
   } = e, F = (0, m.ZP)(), [V, K] = a.useState(''), {
 isFetchingConnections: Y,
 accounts: z
-  } = (0, c.cj)([h.Z], () => ({
+  } = (0, d.cj)([h.Z], () => ({
 isFetchingConnections: h.Z.isFetching(),
 accounts: h.Z.getAccounts()
   }), []), {
 canManageWebhooks: q,
 canManageGuild: J
-  } = (0, c.cj)([p.Z], () => ({
+  } = (0, d.cj)([p.Z], () => ({
 canManageWebhooks: null != n && p.Z.can(b.Plq.MANAGE_WEBHOOKS, n) || null != t && p.Z.can(b.Plq.MANAGE_WEBHOOKS, t),
 canManageGuild: null != n && null == t && p.Z.can(b.Plq.MANAGE_GUILD, n)
   }), [
@@ -140,7 +140,7 @@ return Object.values(s).filter(n => {
 s,
 ei,
 V
-  ]), es = (0, c.e7)([R.Z], () => {
+  ]), es = (0, d.e7)([R.Z], () => {
 if (null != n)
   return ea.find(e => R.Z.canShowOverviewTooltip(n.id, e.integration.id));
   }, [
@@ -152,9 +152,9 @@ es,
   ] : ea, [
 ea,
 es
-  ]), eo = (0, u.useModalsStore)(u.hasAnyModalOpenSelector), [er, ec] = a.useState(!1), ed = a.useRef(0), eu = () => {
-ec(!0), clearTimeout(ed.current), ed.current = setTimeout(() => {
-  ec(!1);
+  ]), eo = (0, u.useModalsStore)(u.hasAnyModalOpenSelector), [er, ed] = a.useState(!1), ec = a.useRef(0), eu = () => {
+ed(!0), clearTimeout(ec.current), ec.current = setTimeout(() => {
+  ed(!1);
 }, 200);
   };
   a.useEffect(() => (window.addEventListener('scroll', eu, !0), () => window.removeEventListener('scroll', eu)));
@@ -165,14 +165,14 @@ ec(!0), clearTimeout(ed.current), ed.current = setTimeout(() => {
     let {
       application: o,
       integration: r
-    } = n, c = [];
-    return null != r.user ? c.push({
+    } = n, d = [];
+    return null != r.user ? d.push({
       icon: u.ClockIcon,
       text: Z.Z.Messages.INTEGRATION_ADDED_USER_DATE.format({
         timestamp: O.default.extractTimestamp(r.id),
         user: S.ZP.getUserTag(r.user)
       })
-    }) : c.push({
+    }) : d.push({
       icon: u.ClockIcon,
       text: Z.Z.Messages.INTEGRATION_ADDED_DATE.format({
         timestamp: O.default.extractTimestamp(r.id)
@@ -190,7 +190,7 @@ ec(!0), clearTimeout(ed.current), ed.current = setTimeout(() => {
           is_admin: null != e ? p.Z.can(b.Plq.ADMINISTRATOR, e) : void 0
         });
       },
-      details: c,
+      details: d,
       guildId: null == e ? void 0 : e.id,
       isScrolling: a,
       canShowMigrationTooltip: s
@@ -201,7 +201,7 @@ em = (0, i.jsx)('div', {
   className: v.footerImage
 });
   0 === eI.length && J && (eI = function(e, n, t) {
-let a = (0, d.wj)(e) ? L : j,
+let a = (0, c.wj)(e) ? L : j,
   s = (0, i.jsxs)(g.Z, {
     direction: g.Z.Direction.VERTICAL,
     align: g.Z.Align.CENTER,

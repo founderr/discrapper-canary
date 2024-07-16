@@ -1,6 +1,6 @@
 n.d(t, {
   $_: function() {
-return P;
+return L;
   },
   FM: function() {
 return B;
@@ -21,7 +21,7 @@ return O;
 return x;
   },
   rM: function() {
-return L;
+return P;
   },
   yQ: function() {
 return M;
@@ -144,7 +144,7 @@ return (0, N.MR)([
   S.Ft.FREE_GUILD_BOOST_3_MONTHS
 ], e);
 }
-let L = e => {
+let P = e => {
 if (null == e || (null == e ? void 0 : e.showNotification) === !1)
   return [];
 switch (e.nitroTenureStatus) {
@@ -156,15 +156,15 @@ switch (e.nitroTenureStatus) {
     return [];
 }
   },
-  P = () => {
+  L = () => {
 let e = M(),
-  [t, n] = s.useState(L(e)),
+  [t, n] = s.useState(P(e)),
   a = (0, g.c)({
     location: 'Home'
   });
 s.useEffect(() => {
   if (!1 !== a)
-    n(L(e));
+    n(P(e));
 }, [
   e,
   a
@@ -183,7 +183,7 @@ return !!n && s === l.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
   },
   Z = () => {
 let e = M(),
-  t = s.useMemo(() => L(e), [e]),
+  t = s.useMemo(() => P(e), [e]),
   [n] = (0, _.c)(t),
   a = s.useRef(!1);
 return s.useCallback(() => {

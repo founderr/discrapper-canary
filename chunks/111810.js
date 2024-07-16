@@ -4,13 +4,13 @@ return r;
   }
 });
 var s = n(470079),
-  a = n(252618),
-  o = n(358085),
+  o = n(252618),
+  a = n(358085),
   l = n(689938);
 
 function r() {
   return s.useEffect(() => {
-!o.isPlatformEmbedded && (0, a.EM)({
+!a.isPlatformEmbedded && (0, o.EM)({
   messages: [
     l.Z.Messages.GO_LIVE_HEY,
     l.Z.Messages.GO_LIVE_LOOK,

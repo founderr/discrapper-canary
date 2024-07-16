@@ -9,9 +9,9 @@ var a = t(373793),
   l = t(481060),
   r = t(700582),
   o = t(592180),
-  s = t(430824),
-  u = t(594174),
-  d = t(346656),
+  s = t(565138),
+  u = t(430824),
+  d = t(594174),
   c = t(689938),
   E = t(938639);
 
@@ -21,16 +21,16 @@ function M(e) {
 return null;
   let I = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[a.Y.USER_INSTALL],
 m = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[a.Y.GUILD_INSTALL],
-_ = u.default.getUser(I),
-g = s.Z.getGuild(m),
-f = u.default.getUser(null === (M = e.interactionMetadata) || void 0 === M ? void 0 : M.user.id),
+_ = d.default.getUser(I),
+g = u.Z.getGuild(m),
+f = d.default.getUser(null === (M = e.interactionMetadata) || void 0 === M ? void 0 : M.user.id),
 Z = null;
   return null != g ? Z = (0, i.jsx)(l.MenuItem, {
 className: E.interactionInfoMenuItem,
 disabled: !0,
-icon: () => (0, i.jsx)(d.Z, {
+icon: () => (0, i.jsx)(s.Z, {
   guild: g,
-  size: d.Z.Sizes.MINI
+  size: s.Z.Sizes.MINI
 }),
 id: 'integration-owner',
 label: g.name,

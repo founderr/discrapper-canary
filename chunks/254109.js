@@ -1,12 +1,12 @@
 n.d(t, {
   VO: function() {
-return s;
+return d;
   },
   f0: function() {
 return u;
   },
   fS: function() {
-return d;
+return s;
   }
 });
 var l = n(652874),
@@ -23,7 +23,7 @@ numMediaItems: 0
   },
   o = (0, l.Z)(() => a);
 
-function d(e, t, n, l) {
+function s(e, t, n, l) {
   o.setState({
 ...a,
 guildId: e,
@@ -33,7 +33,7 @@ numMediaItems: l
   });
 }
 
-function s() {
+function d() {
   let e = o.getState();
   r.default.track(i.rMx.MEDIA_VIEWER_SESSION_COMPLETED, {
 guild_id: e.guildId,

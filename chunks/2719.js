@@ -28,8 +28,8 @@ var n = s(735250),
   R = s(735336),
   x = s(204197),
   M = s(25990),
-  D = s(594174),
-  f = s(572004),
+  f = s(594174),
+  D = s(572004),
   P = s(51144),
   L = s(998502),
   Z = s(695346),
@@ -424,7 +424,7 @@ user: t
 id: t.id,
 label: F.Z.Messages.COPY_ID_USER
   });
-  return Z.Sb.useSetting() && f.wS ? (0, n.jsx)(_.Popout, {
+  return Z.Sb.useSetting() && D.wS ? (0, n.jsx)(_.Popout, {
 renderPopout: e => {
   let {
     closePopout: t
@@ -456,8 +456,8 @@ function z() {
 
 function Q() {
   var e;
-  let t = (0, c.e7)([D.default], () => {
-  let e = D.default.getCurrentUser();
+  let t = (0, c.e7)([f.default], () => {
+  let e = f.default.getCurrentUser();
   return l()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e;
 }),
 s = (0, O.ZP)(t.id),

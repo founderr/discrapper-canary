@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(749210),
-  d = n(594174),
-  u = n(499371),
+  d = n(986035),
+  u = n(594174),
   h = n(63063),
   p = n(981631),
   m = n(689938),
@@ -35,7 +35,7 @@ let {
 t = e ? m.Z.Messages.AGE_GATE_NSFW_UNDERAGE_BODY.format({
   helpURL: h.Z.getArticleURL(p.BhN.NSFW_AGE_GATING)
 }) : m.Z.Messages.AGE_GATE_NSFW_DESCRIPTION;
-let n = e ? (0, i.jsx)(u.Z, {
+let n = e ? (0, i.jsx)(d.Z, {
   onAgree: this.handleAgree,
   onDisagree: this.handleDisagree,
   title: m.Z.Messages.AGE_GATE_NSFW_UNDERAGE_HEADER,
@@ -43,7 +43,7 @@ let n = e ? (0, i.jsx)(u.Z, {
   agreement: null,
   disagreement: m.Z.Messages.BACK,
   imageClassName: _.ageGatedImage
-}) : (0, i.jsx)(u.Z, {
+}) : (0, i.jsx)(d.Z, {
   onAgree: this.handleAgree,
   onDisagree: this.handleDisagree,
   title: m.Z.Messages.NSFW_TITLE,
@@ -74,9 +74,9 @@ super(...e), f(this, 'scroller', a.createRef()), f(this, 'handleDisagree', () =>
 });
   }
 }
-t.Z = r.ZP.connectStores([d.default], () => {
+t.Z = r.ZP.connectStores([u.default], () => {
   var e;
   return {
-nsfwDisallowed: (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1
+nsfwDisallowed: (null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1
   };
 })(E);

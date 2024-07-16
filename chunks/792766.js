@@ -8,9 +8,9 @@ var i = n(735250),
   r = n(120356),
   l = n.n(r),
   o = n(481060),
-  a = n(601964),
-  u = n(598077),
-  d = n(346656),
+  a = n(565138),
+  u = n(601964),
+  d = n(598077),
   c = n(727218),
   _ = n(154921),
   E = n(806519),
@@ -22,7 +22,7 @@ let {
   speaker: n,
   guildId: s,
   isEmbed: r
-} = e, l = new u.Z(n.user);
+} = e, l = new d.Z(n.user);
 return (0, i.jsxs)('div', {
   className: h.speaker,
   children: [
@@ -48,7 +48,7 @@ let {
 } = e;
 if (null == t)
   return null;
-let s = new a.ZP(t),
+let s = new u.ZP(t),
   {
     name: r,
     description: l
@@ -68,9 +68,9 @@ return (0, i.jsxs)('div', {
           mask: E.ZP.Masks.SQUIRCLE,
           width: 40,
           height: 40,
-          children: (0, i.jsx)(d.Z, {
+          children: (0, i.jsx)(a.Z, {
             guild: s,
-            size: d.Z.Sizes.MEDIUM,
+            size: a.Z.Sizes.MEDIUM,
             active: !0
           })
         }),
@@ -113,10 +113,10 @@ t.Z = e => {
   let {
 stageInstance: n,
 guild: r,
-isCard: u = !1,
+isCard: d = !1,
 isEmbed: S = !1,
 onClick: m
-  } = e, I = s.useMemo(() => null == r ? null : r instanceof a.ZP ? r : new a.ZP(r), [r]);
+  } = e, I = s.useMemo(() => null == r ? null : r instanceof u.ZP ? r : new u.ZP(r), [r]);
   if (null == n || null == I)
 return null;
   let {
@@ -174,9 +174,9 @@ children: [
         mask: E.ZP.Masks.SQUIRCLE,
         width: 20,
         height: 20,
-        children: (0, i.jsx)(d.Z, {
+        children: (0, i.jsx)(a.Z, {
           guild: I,
-          size: d.Z.Sizes.MINI,
+          size: a.Z.Sizes.MINI,
           active: !0
         })
       }),
@@ -189,7 +189,7 @@ children: [
     ]
   }),
   (0, i.jsx)(c.Z, {
-    size: u || S ? c.Z.Sizes.SIZE_16 : c.Z.Sizes.SIZE_20,
+    size: d || S ? c.Z.Sizes.SIZE_16 : c.Z.Sizes.SIZE_20,
     className: l()(h.header, {
       [h.embed]: S
     }),

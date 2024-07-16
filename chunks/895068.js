@@ -19,8 +19,8 @@ var i, a, s, r, l = n(735250),
   g = n(945124),
   p = n(231467),
   T = n(931515),
-  f = n(702646),
-  S = n(207796),
+  S = n(702646),
+  f = n(207796),
   C = n(526282),
   N = n(777734),
   A = n(976757),
@@ -40,7 +40,7 @@ loaded: s,
 clans: r,
 searchResult: R,
 searchCriteria: x
-  } = (0, T.Qc)(), b = (0, S.GN)(e => e.selectedTraits, d.Z), P = (0, _.Z)(R), [M, D] = o.useState(0), y = o.useMemo(() => ({
+  } = (0, T.Qc)(), b = (0, f.GN)(e => e.selectedTraits, d.Z), P = (0, _.Z)(R), [M, D] = o.useState(0), y = o.useMemo(() => ({
 height: M
   }), [M]), j = (0, c.useSpring)({
 opacity: M > 0 ? 1 : 0,
@@ -230,7 +230,7 @@ z = o.useCallback((e, t) => {
           }),
           'global_discovery' === i ? (0, l.jsx)('div', {
             className: L.topPicksToolbar,
-            children: (0, l.jsx)(f.Z, {})
+            children: (0, l.jsx)(S.Z, {})
           }) : null
         ]
       });

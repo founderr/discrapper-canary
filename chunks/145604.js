@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(594190),
   p = n(38618),
   T = n(501640),
-  f = n(924301),
-  S = n(734307),
+  S = n(924301),
+  f = n(734307),
   C = n(355298),
   N = n(427679),
   A = n(695346),
@@ -89,7 +89,7 @@ if (e.voiceChannelId !== a && null != e.voiceChannelId) {
   let t = g.ZP.getCurrentGameForAnalytics(),
     n = null != t ? t.name : '',
     i = N.Z.getStageInstanceByChannel(e.voiceChannelId),
-    a = f.ZP.getActiveEventByChannel(e.voiceChannelId);
+    a = S.ZP.getActiveEventByChannel(e.voiceChannelId);
   w.default.track(F.rMx.LEAVE_VOICE_CHANNEL, {
     channel_id: e.voiceChannelId,
     channel_type: e.voiceChannelType,
@@ -112,7 +112,7 @@ if (e.voiceChannelId !== a && null != a) {
   let e = g.ZP.getCurrentGameForAnalytics(),
     t = null != e ? e.name : '',
     n = N.Z.getStageInstanceByChannel(a),
-    i = f.ZP.getActiveEventByChannel(a);
+    i = S.ZP.getActiveEventByChannel(a);
   (0, c.yw)(F.rMx.CHANNEL_OPENED, {
     ...(0, c.$H)(a)
   }), (0, u.a)(F.rMx.CHANNEL_OPENED_CLICKSTREAM, {
@@ -204,7 +204,7 @@ if (U && null != j && (j !== e.selectedGuildId || !e.connected || K && !e.isMemb
     postable_channels: Q,
     premium_progress_bar_enabled: null !== (n = null === (t = O.Z.getGuild(M.Z.getGuildId())) || void 0 === t ? void 0 : t.premiumProgressBarEnabled) && void 0 !== n && n,
     viewing_all_channels: !y.ZP.isOptInEnabled(j),
-    num_recent_channels: S.Z.recentsChannelCount(j)
+    num_recent_channels: f.Z.recentsChannelCount(j)
   };
   (0, c.yw)(F.rMx.GUILD_VIEWED, e), (0, u.a)(F.rMx.GUILD_VIEWED_CLICKSTREAM, {
     guildId: j
@@ -276,7 +276,7 @@ return null != u && null != c && null !== (t = null === (e = L.ZP.getMember(c, u
   }, [
 u,
 c
-  ]), E = (0, s.e7)([G.ZP], () => G.ZP.getState().section, []), I = (0, s.e7)([U.Z], () => U.Z.getHomeLink(), []), m = (0, s.e7)([p.Z], () => p.Z.isConnected(), []), [f, S] = (0, s.Wu)([R.Z], () => [
+  ]), E = (0, s.e7)([G.ZP], () => G.ZP.getState().section, []), I = (0, s.e7)([U.Z], () => U.Z.getHomeLink(), []), m = (0, s.e7)([p.Z], () => p.Z.isConnected(), []), [S, f] = (0, s.Wu)([R.Z], () => [
 R.Z.isVideoEnabled(),
 R.Z.isScreenSharing()
   ], []), N = (0, s.e7)([D.Z], () => D.Z.getPrimaryActivity(), []), A = (0, s.e7)([g.ZP], () => g.ZP.getCurrentGameForAnalytics(), []), Z = (0, T.Z)(c), x = (0, s.e7)([C.Z], () => C.Z.getMessageRequestsCount(), []), b = {
@@ -286,8 +286,8 @@ selectedGuildId: c,
 friendsTabSection: E,
 homeLink: I,
 connected: m,
-videoEnabled: f,
-isScreenSharing: S,
+videoEnabled: S,
+isScreenSharing: f,
 voiceChannelId: null == l ? void 0 : l.id,
 voiceChannelGuildId: null == l ? void 0 : l.getGuildId(),
 voiceChannelType: null == l ? void 0 : l.type,

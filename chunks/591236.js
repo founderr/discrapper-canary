@@ -1,5 +1,5 @@
-var r = n(496675),
-  i = n(156361),
+var r = n(588468),
+  i = n(496675),
   a = n(483360),
   o = n(877565),
   s = n(590921),
@@ -9,9 +9,9 @@ var r = n(496675),
   d = n(689938);
 let _ = {
   sentinel: l.a4,
-  matches(e, t, n, i, a) {
+  matches(e, t, n, r, a) {
 var o, s;
-return i && null !== (s = null === (o = a.chatInputType.autocomplete) || void 0 === o ? void 0 : o.addReactionShortcut) && void 0 !== s && s && (r.Z.can(u.Plq.ADD_REACTIONS, e) || e.isPrivate());
+return r && null !== (s = null === (o = a.chatInputType.autocomplete) || void 0 === o ? void 0 : o.addReactionShortcut) && void 0 !== s && s && (i.Z.can(u.Plq.ADD_REACTIONS, e) || e.isPrivate());
   },
   queryResults(e, t, n, r, i) {
 let {
@@ -33,19 +33,19 @@ let {
     emojis: t
   },
   selectedIndex: n,
-  query: r,
+  query: i,
   onHover: a,
   onClick: s
 } = e;
 return (0, o.HI)({
-  query: r,
+  query: i,
   selectedIndex: n,
   autocompletes: t,
   onHover: a,
   onClick: s,
   titleWithQuery: d.Z.Messages.REACTIONS_MATCHING,
   titleWithoutQuery: d.Z.Messages.EMOJI,
-  Component: i.ZP.Emoji,
+  Component: r.ZP.Emoji,
   getProps: e => ({
     emoji: e,
     key: e.id || e.uniqueName || e.name,

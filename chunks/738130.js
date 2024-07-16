@@ -17,8 +17,8 @@ var i = n(735250),
   h = n(782568),
   f = n(252618),
   _ = n(434404),
-  m = n(703656),
-  E = n(292665),
+  m = n(677726),
+  E = n(703656),
   v = n(671533),
   A = n(626135),
   g = n(63063),
@@ -62,7 +62,7 @@ guildId: r,
 children: a
   } = e, s = (0, i.jsxs)(l.Fragment, {
 children: [
-  (0, i.jsx)(E.Z, {
+  (0, i.jsx)(m.Z, {
     title: x.Z.Messages.APP_DIRECTORY
   }),
   n && (0, i.jsx)(u.Anchor, {
@@ -153,11 +153,11 @@ directory_session_id: o
 function V(e) {
   let {
 children: t
-  } = e, n = l.useRef(null), r = (0, M.Z)(), a = (0, N.useApplicationDirectoryHistory)(e => e.guildId), d = (0, N.useApplicationDirectoryHistory)(e => e.entrypoint), h = (0, N.useApplicationDirectoryHistory)(e => e.trackedOpenedFromExternalEntrypoint), E = (0, N.getCurrentView)(), v = (0, N.getPreviousView)(), g = l.useRef(), L = (null == E ? void 0 : E.type) !== N.ApplicationDirectoryViews.HOME, P = (null == E ? void 0 : E.type) === N.ApplicationDirectoryViews.APPLICATION ? null == E ? void 0 : E.applicationId : void 0;
+  } = e, n = l.useRef(null), r = (0, M.Z)(), a = (0, N.useApplicationDirectoryHistory)(e => e.guildId), d = (0, N.useApplicationDirectoryHistory)(e => e.entrypoint), h = (0, N.useApplicationDirectoryHistory)(e => e.trackedOpenedFromExternalEntrypoint), m = (0, N.getCurrentView)(), v = (0, N.getPreviousView)(), g = l.useRef(), L = (null == m ? void 0 : m.type) !== N.ApplicationDirectoryViews.HOME, P = (null == m ? void 0 : m.type) === N.ApplicationDirectoryViews.APPLICATION ? null == m ? void 0 : m.applicationId : void 0;
   (0, f.Tt)({
 location: x.Z.Messages.APP_DIRECTORY
   });
-  let V = (null == E ? void 0 : E.type) !== N.ApplicationDirectoryViews.HOME && null != v;
+  let V = (null == m ? void 0 : m.type) !== N.ApplicationDirectoryViews.HOME && null != v;
   l.useEffect(() => {
 !h && null == d && (A.default.track(S.rMx.APP_DIRECTORY_OPENED, {
   source: N.ApplicationDirectoryEntrypointNames.EXTERNAL
@@ -175,12 +175,12 @@ r && Z.g5();
   }, [r]), l.useEffect(() => {
 g.current = (0, s.Z)();
   }, [
-null == E ? void 0 : E.type,
+null == m ? void 0 : m.type,
 P
   ]);
   let U = l.useCallback(() => {
 var e, t;
-(0, m.uL)(null !== (e = null == d ? void 0 : d.pathname) && void 0 !== e ? e : ''), null != d && d.name === N.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS && null != a && _.Z.open(a, null !== (t = d.guildSettingsSection) && void 0 !== t ? t : void 0);
+(0, E.uL)(null !== (e = null == d ? void 0 : d.pathname) && void 0 !== e ? e : ''), null != d && d.name === N.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS && null != a && _.Z.open(a, null !== (t = d.guildSettingsSection) && void 0 !== t ? t : void 0);
   }, [
 d,
 a
@@ -205,7 +205,7 @@ children: (0, i.jsx)(u.AdvancedScroller, {
       scrollTop: null === (e = n.current) || void 0 === e ? void 0 : e.getScrollerState().scrollTop,
       scrollOffset: null === (t = n.current) || void 0 === t ? void 0 : t.getScrollerState().offsetHeight,
       scrollHeight: null === (i = n.current) || void 0 === i ? void 0 : i.getScrollerState().scrollHeight,
-      location: null == E ? void 0 : E.type,
+      location: null == m ? void 0 : m.type,
       guildId: a,
       sessionId: g.current
     });
@@ -215,7 +215,7 @@ children: (0, i.jsx)(u.AdvancedScroller, {
     children: [
       (0, i.jsx)(R, {
         onTitleClick: L ? I.goHome : void 0,
-        showsLearnMoreCta: (null == E ? void 0 : E.type) === N.ApplicationDirectoryViews.HOME,
+        showsLearnMoreCta: (null == m ? void 0 : m.type) === N.ApplicationDirectoryViews.HOME,
         guildId: a,
         children: r ? (0, i.jsx)(O, {
           onClose: U
@@ -224,7 +224,7 @@ children: (0, i.jsx)(u.AdvancedScroller, {
       V && (0, i.jsx)(j, {
         view: v,
         onClick: () => {
-          (0, m.op)();
+          (0, E.op)();
         }
       }),
       t

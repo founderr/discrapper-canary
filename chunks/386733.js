@@ -127,10 +127,10 @@ r.forEach(e => {
   (0, c.PR)(e);
 });
   }, [r]);
-  let L = r.length,
-P = 3 === L,
+  let P = r.length,
+L = 3 === P,
 v = R.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM),
-Z = P ? N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : N.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
+Z = L ? N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : N.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
 {
   analyticsLocations: D
 } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
@@ -150,7 +150,7 @@ window.removeEventListener('resize', G);
   let y = (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsx)(A.Z, {
-    percentage: L / 3 * 100,
+    percentage: P / 3 * 100,
     progressCircleVariation: A.Q.NITRO_LOGO,
     iconClassName: i()({
       [f.referralProgressBarIcon]: !t,
@@ -170,7 +170,7 @@ children: [
       }),
       (0, s.jsx)(o.Text, {
         variant: t ? 'text-sm/normal' : 'text-lg/medium',
-        children: b(P, L > 0, r.length, v)
+        children: b(L, P > 0, r.length, v)
       }),
       (0, s.jsxs)('div', {
         className: i()(f.expandedProgressBarButtonContainer, {
@@ -213,7 +213,7 @@ children: [
                   alt: '',
                   className: f.expandedProgressBarSelectFriendsIcon
                 }),
-                P ? N.Z.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : N.Z.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
+                L ? N.Z.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : N.Z.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
               ]
             })
           })

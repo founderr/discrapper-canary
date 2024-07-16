@@ -55,7 +55,7 @@ enabled: b
 location: 'SubscribeButton'
   }, {
 autoTrackExposure: !1
-  }), O = b && (null == f ? void 0 : f.trial_id) === u.a7, L = C ? E.Z.Messages.BOGO_CLAIM_OFFER : null != M ? R(n, g, p, M.discount.amount) : I({
+  }), O = b && (null == f ? void 0 : f.trial_id) === u.a7, P = C ? E.Z.Messages.BOGO_CLAIM_OFFER : null != M ? R(n, g, p, M.discount.amount) : I({
 showTrialCTA: x,
 subscriptionTier: n,
 shouldShowUpsells: !1,
@@ -68,7 +68,7 @@ subscriptionTrial: S
 color: N ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,
 buttonShineClassName: 'buttonShineClassName' in A ? A.buttonShineClassName : N ? T.brandShine : void 0,
 trialId: null == S ? void 0 : S.id,
-buttonText: L,
+buttonText: P,
 buttonTextClassName: x ? T.freeTrialText : void 0,
 onlyShineOnHover: !0,
 subscriptionTier: n,

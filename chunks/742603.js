@@ -16,18 +16,18 @@ var a = n(120356),
   h = n(12498),
   p = n(933557),
   m = n(471445),
-  _ = n(554747),
-  f = n(854698),
-  E = n(897669),
-  C = n(665149),
-  g = n(984370),
-  I = n(910611),
-  x = n(454585),
-  T = n(134483),
-  N = n(210975),
-  v = n(809244),
-  S = n(618158),
-  Z = n(366695),
+  _ = n(925329),
+  f = n(554747),
+  E = n(854698),
+  C = n(897669),
+  g = n(665149),
+  I = n(984370),
+  x = n(910611),
+  T = n(454585),
+  N = n(134483),
+  v = n(210975),
+  S = n(809244),
+  Z = n(618158),
   A = n(792125),
   M = n(358221),
   b = n(362721),
@@ -47,7 +47,7 @@ function B(e) {
 focusedParticipant: t,
 channel: n
   } = e, a = (0, c.bp)(), l = (0, s.e7)([M.Z], () => M.Z.getLayout(n.id, a));
-  return (0, i.jsx)(S.Z, {
+  return (0, i.jsx)(Z.Z, {
 children: (0, i.jsx)(L.Z, {
   className: U.participants,
   participant: t,
@@ -65,7 +65,7 @@ user: t,
 channel: n,
 stream: a,
 color: l
-  } = e, s = (0, v.Z)(n, t, a);
+  } = e, s = (0, S.Z)(n, t, a);
   return null == t || null == a ? null : (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(o.Z, {
@@ -91,16 +91,16 @@ function G(e) {
   channel: l
 } = e,
 s = (0, R.Z)(l, !0),
-o = (0, _.qY)(l.id),
-c = null != o ? (0, f.DK)(o) : null,
+o = (0, f.qY)(l.id),
+c = null != o ? (0, E.DK)(o) : null,
 u = null != o;
   if ((null == a ? void 0 : a.type) === O.fO.ACTIVITY)
 null != n && (t = (0, i.jsxs)(i.Fragment, {
   children: [
-    (0, i.jsx)(C.ZP.Divider, {
+    (0, i.jsx)(g.ZP.Divider, {
       className: U.divider
     }),
-    (0, i.jsx)(Z.Z, {
+    (0, i.jsx)(_.Z, {
       game: n,
       className: U.activityIcon
     }),
@@ -121,7 +121,7 @@ let e = a.user,
   n = a.stream;
 t = (0, i.jsxs)(i.Fragment, {
   children: [
-    (0, i.jsx)(C.ZP.Divider, {
+    (0, i.jsx)(g.ZP.Divider, {
       className: U.divider
     }),
     (0, i.jsx)(H, {
@@ -137,7 +137,7 @@ t = (0, i.jsxs)(i.Fragment, {
   ]
 });
   } else
-u && (t = (0, i.jsx)(E.Z, {
+u && (t = (0, i.jsx)(C.Z, {
   guildEvent: o,
   recurrenceId: c
 }));
@@ -160,7 +160,7 @@ focusedParticipant: f
   } = (0, s.cj)([M.Z], () => ({
 focusedParticipant: M.Z.getSelectedParticipant(t.id),
 participantsOpen: M.Z.getParticipantsOpen(t.id)
-  }), [t.id]), E = (0, p.ZP)(t), v = (0, m.KS)(t), [S] = (0, u.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), Z = k.Z.Messages.VOICE_CHANNEL;
+  }), [t.id]), E = (0, p.ZP)(t), C = (0, m.KS)(t), [S] = (0, u.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), Z = k.Z.Messages.VOICE_CHANNEL;
   t.isDM() ? Z = k.Z.Messages.DM : t.isGroupDM() && (Z = k.Z.Messages.GROUP_DM);
   let R = (0, s.e7)([h.Z], () => h.Z.getChannelStatus(t)),
 L = t.isGuildVoice() && c && null != R && R.length > 0,
@@ -182,7 +182,7 @@ H = L ? (0, i.jsx)(r.Tooltip, {
         className: l()(U.channelStatus, w.markup, {
           [U.hoverable]: B
         }),
-        children: x.Z.parseVoiceChannelStatus(R, !0, {
+        children: T.Z.parseVoiceChannelStatus(R, !0, {
           channelId: t.id
         })
       }),
@@ -210,15 +210,15 @@ H = L ? (0, i.jsx)(r.Tooltip, {
   modalKey: P.VOICE_CHANNEL_STATUS_MODAL_KEY
 });
   }
-  let F = (0, N.m$)({
+  let F = (0, v.m$)({
 channelId: t.id,
 location: 'ChannelCallHeader'
   });
   return (0, i.jsxs)('div', {
 className: U.subtitleContainer,
 children: [
-  (0, i.jsxs)(C.ZP, {
-    onDoubleClick: g.O,
+  (0, i.jsxs)(g.ZP, {
+    onDoubleClick: I.O,
     transparent: !0,
     className: (0, A.Q)(D.BR.DARK),
     childrenBottom: H,
@@ -231,12 +231,12 @@ children: [
       exitFullScreen: _
     }),
     children: [
-      null != v ? (0, i.jsx)(C.ZP.Icon, {
-        icon: v,
+      null != C ? (0, i.jsx)(g.ZP.Icon, {
+        icon: C,
         disabled: !0,
         'aria-label': Z
       }) : null,
-      (0, i.jsx)(C.ZP.Title, {
+      (0, i.jsx)(g.ZP.Title, {
         children: (0, i.jsxs)(i.Fragment, {
           children: [
             E,
@@ -249,7 +249,7 @@ children: [
           ]
         })
       }),
-      (0, i.jsx)(I.TS, {
+      (0, i.jsx)(x.TS, {
         channel: t,
         guild: a
       }),
@@ -260,7 +260,7 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(T.Z, {
+  (0, i.jsx)(N.Z, {
     channelId: t.id
   })
 ]

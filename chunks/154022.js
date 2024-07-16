@@ -28,8 +28,8 @@ var n = s(735250),
   R = s(153124),
   x = s(626135),
   M = s(63063),
-  D = s(695346),
-  f = s(263937),
+  f = s(695346),
+  D = s(263937),
   P = s(996073),
   L = s(526761),
   Z = s(726985),
@@ -122,7 +122,7 @@ children: [
 }
 
 function W() {
-  let e = D.jU.useSetting(),
+  let e = f.jU.useSetting(),
 [t] = a.useState(() => {
   let e = (0, S.e5)({
     ...(0, N.ZP)({
@@ -347,8 +347,8 @@ children: (0, n.jsx)(d.FormSwitch, {
 }
 
 function $() {
-  let e = D.QK.useSetting(),
-t = D.Yk.useSetting(),
+  let e = f.QK.useSetting(),
+t = f.Yk.useSetting(),
 {
   useReducedMotion: s,
   rawPrefersReducedMotion: i,
@@ -357,13 +357,13 @@ t = D.Yk.useSetting(),
   animateEmojiOverrideReason: _
 } = (0, c.cj)([
   T.Z,
-  f.Z
+  D.Z
 ], () => ({
   systemPrefersReducedMotion: T.Z.systemPrefersReducedMotion,
   rawPrefersReducedMotion: T.Z.rawPrefersReducedMotion,
   useReducedMotion: T.Z.useReducedMotion,
-  gifAutoPlayOverrideReason: f.Z.getAppliedOverrideReasonKey('gifAutoPlay'),
-  animateEmojiOverrideReason: f.Z.getAppliedOverrideReasonKey('animateEmoji')
+  gifAutoPlayOverrideReason: D.Z.getAppliedOverrideReasonKey('gifAutoPlay'),
+  animateEmojiOverrideReason: D.Z.getAppliedOverrideReasonKey('animateEmoji')
 })),
 E = a.useRef(null);
   (0, P.Z)(E, L.rP.REDUCED_MOTION);
@@ -406,14 +406,14 @@ children: [
     className: G.marginBottom40,
     value: e,
     note: null != l ? (0, A.Z)(l) : void 0,
-    onChange: D.QK.updateSetting,
+    onChange: f.QK.updateSetting,
     children: B.Z.Messages.GIF_AUTO_PLAY_LABEL
   }),
   (0, n.jsx)(d.FormSwitch, {
     className: r()(G.marginTop8, G.marginBottom20),
     value: t,
     note: null != _ ? (0, A.Z)(_) : void 0,
-    onChange: D.Yk.updateSetting,
+    onChange: f.Yk.updateSetting,
     children: B.Z.Messages.ANIMATE_EMOJI
   })
 ]
@@ -421,10 +421,10 @@ children: [
 }
 
 function ee() {
-  let e = D.Wp.useSetting(),
-t = (0, c.e7)([f.Z], () => f.Z.getAppliedOverrideReasonKey('animateStickers')),
+  let e = f.Wp.useSetting(),
+t = (0, c.e7)([D.Z], () => D.Z.getAppliedOverrideReasonKey('animateStickers')),
 s = a.useCallback(e => {
-  D.Wp.updateSetting(e.value);
+  f.Wp.updateSetting(e.value);
 }, []);
   return (0, n.jsxs)(d.FormItem, {
 className: G.marginBottom40,
@@ -459,7 +459,7 @@ children: [
 
 function et() {
   let e = (0, c.e7)([T.Z], () => T.Z.isSubmitButtonEnabled),
-t = D.dN.useSetting(),
+t = f.dN.useSetting(),
 s = a.useRef(null);
   return (0, P.Z)(s, L.rP.LEGACY_CHAT_INPUT), (0, n.jsxs)(d.FormItem, {
 ref: s,
@@ -484,7 +484,7 @@ children: [
         location: {
           section: b.jXE.SETTINGS_ACCESSIBILITY
         }
-      }), D.dN.updateSetting(e);
+      }), f.dN.updateSetting(e);
     },
     children: B.Z.Messages.LEGACY_CHAT_INPUT
   })
@@ -493,7 +493,7 @@ children: [
 }
 
 function es() {
-  let e = D.OW.useSetting(),
+  let e = f.OW.useSetting(),
 t = (0, c.e7)([O.Z], () => O.Z.speechRate),
 [s, i] = a.useState(!1);
   return E.Zh ? (0, n.jsxs)(n.Fragment, {
@@ -507,7 +507,7 @@ children: [
       (0, n.jsx)(d.FormSwitch, {
         className: G.marginTop20,
         value: e,
-        onChange: D.OW.updateSetting,
+        onChange: f.OW.updateSetting,
         children: B.Z.Messages.ALLOW_TTS_COMMAND
       })
     ]

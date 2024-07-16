@@ -10,7 +10,7 @@ let o = e => {
   let {
 analyticsLocations: t,
 initialSelectedEffectId: o,
-guild: l
+guild: i
   } = e;
   (0, a.openModalLazy)(async () => {
 let {
@@ -18,7 +18,7 @@ let {
 } = await n.e('55183').then(n.bind(n, 191564));
 return n => (0, r.jsx)(e, {
   ...n,
-  guild: l,
+  guild: i,
   initialSelectedEffectId: o,
   analyticsLocations: t
 });

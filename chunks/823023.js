@@ -43,12 +43,12 @@ function E(e) {
   let {
 readyState: t,
 placeholderImg: n,
-placeholderStyle: o
-  } = e, s = t === l.zo9.LOADING, [_] = i.useState(() => Date.now()), E = t === l.zo9.READY && Date.now() - _ < 200, f = (0, a.useTransition)(s && null != n, E ? d : c);
+placeholderStyle: s
+  } = e, _ = t === l.zo9.LOADING, [E] = i.useState(() => Date.now()), f = t === l.zo9.READY && Date.now() - E < 200, h = (0, o.useTransition)(_ && null != n, f ? d : c);
   return (0, r.jsx)(r.Fragment, {
-children: f((e, t) => t && (0, r.jsx)(a.animated.img, {
+children: h((e, t) => t && (0, r.jsx)(a.animated.img, {
   style: {
-    ...o,
+    ...s,
     ...e
   },
   className: u.imagePlaceholder,
@@ -75,7 +75,7 @@ return () => {
   clearTimeout(e);
 };
   }, [m]);
-  let S = (0, a.useTransition)(p && I, _);
+  let S = (0, o.useTransition)(p && I, _);
   return (0, r.jsxs)('div', {
 className: u.loadingOverlay,
 style: {

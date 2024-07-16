@@ -28,14 +28,14 @@ var t, r = s(735250),
   c = s(933557),
   o = s(471445),
   d = s(16206),
-  u = s(754688),
-  h = s(430824),
-  E = s(699516),
-  p = s(594174),
-  m = s(51144),
-  C = s(2093),
-  N = s(366695),
-  _ = s(346656),
+  u = s(925329),
+  h = s(565138),
+  E = s(754688),
+  p = s(430824),
+  m = s(699516),
+  C = s(594174),
+  N = s(51144),
+  _ = s(2093),
   x = s(409216),
   f = s(689938),
   I = s(66479);
@@ -127,10 +127,10 @@ let {
 } = this.props;
 return (0, r.jsx)('div', {
   className: I.guildIconContainer,
-  children: (0, r.jsx)(_.Z, {
+  children: (0, r.jsx)(h.Z, {
     tabIndex: -1,
     guild: e,
-    size: _.Z.Sizes.MINI,
+    size: h.Z.Sizes.MINI,
     className: I.guildIcon
   })
 });
@@ -222,18 +222,18 @@ let {
   category: t,
   channel: a
 } = this.props;
-return null != s && s > 0 && (e = (0, r.jsx)(C.Z, {
+return null != s && s > 0 && (e = (0, r.jsx)(_.Z, {
   className: I.badge,
   value: s
 })), null != t && (n = (0, r.jsx)('span', {
   className: I.note,
-  children: (0, c.F6)(t, p.default, E.Z)
+  children: (0, c.F6)(t, C.default, m.Z)
 })), (0, r.jsxs)('div', {
   className: I.name,
   children: [
     (0, r.jsx)('span', {
       className: I.match,
-      children: (0, c.F6)(a, p.default, E.Z)
+      children: (0, c.F6)(a, C.default, m.Z)
     }),
     e,
     this.renderVoiceStates(),
@@ -283,7 +283,7 @@ return (0, r.jsxs)('div', {
 var e;
 let {
   channel: n
-} = this.props, s = null === (e = h.Z.getGuild(this.props.channel.guild_id)) || void 0 === e ? void 0 : e.name, t = (0, c.F6)(n, p.default, E.Z), r = (0, d.Z)(n);
+} = this.props, s = null === (e = p.Z.getGuild(this.props.channel.guild_id)) || void 0 === e ? void 0 : e.name, t = (0, c.F6)(n, C.default, m.Z), r = (0, d.Z)(n);
 return f.Z.Messages.QUICK_SWITCHER_RESULTS_CHANNEL_LABEL.format({
   name: t,
   type: r,
@@ -336,7 +336,7 @@ let {
   mentions: n,
   channel: s
 } = this.props;
-return null != n && n > 0 && (e = (0, r.jsx)(C.Z, {
+return null != n && n > 0 && (e = (0, r.jsx)(_.Z, {
   className: I.badge,
   value: n
 })), (0, r.jsxs)('div', {
@@ -344,7 +344,7 @@ return null != n && n > 0 && (e = (0, r.jsx)(C.Z, {
   children: [
     (0, r.jsx)('span', {
       className: I.match,
-      children: (0, c.F6)(s, p.default, E.Z)
+      children: (0, c.F6)(s, C.default, m.Z)
     }),
     e
   ]
@@ -371,7 +371,7 @@ return (0, r.jsxs)('div', {
 let {
   channel: e,
   mentions: n
-} = this.props, s = (0, c.F6)(e, p.default, E.Z);
+} = this.props, s = (0, c.F6)(e, C.default, m.Z);
 return null != n && n > 0 ? f.Z.Messages.QUICK_SWITCHER_RESULTS_GROUP_DM_UNREAD_LABEL.format({
   name: s,
   mentions: n
@@ -421,8 +421,8 @@ let e;
 let {
   user: n,
   comparator: s
-} = this.props, t = E.Z.getNickname(n.id);
-return ((e = s === n.tag || null == s || '' === s ? n.username : s) === n.username || e === n.id) && (e = null != t ? t : m.ZP.getName(n)), e;
+} = this.props, t = m.Z.getNickname(n.id);
+return ((e = s === n.tag || null == s || '' === s ? n.username : s) === n.username || e === n.id) && (e = null != t ? t : N.ZP.getName(n)), e;
   }
   renderName() {
 let e;
@@ -430,7 +430,7 @@ let {
   user: n,
   mentions: s
 } = this.props, t = this.getDisplayNickname();
-return null != s && s > 0 && (e = (0, r.jsx)(C.Z, {
+return null != s && s > 0 && (e = (0, r.jsx)(_.Z, {
   className: I.badge,
   value: s
 })), (0, r.jsxs)('div', {
@@ -443,7 +443,7 @@ return null != s && s > 0 && (e = (0, r.jsx)(C.Z, {
     e,
     (0, r.jsx)('span', {
       className: I.username,
-      children: m.ZP.getUserTag(n)
+      children: N.ZP.getUserTag(n)
     })
   ]
 });
@@ -469,7 +469,7 @@ return (0, r.jsxs)('div', {
 let {
   mentions: e,
   user: n
-} = this.props, s = this.getDisplayNickname(), t = m.ZP.getUserTag(n);
+} = this.props, s = this.getDisplayNickname(), t = N.ZP.getUserTag(n);
 return null != e && e > 0 ? f.Z.Messages.QUICK_SWITCHER_RESULTS_USER_UNREAD_LABEL.format({
   name: s,
   id: t,
@@ -513,7 +513,7 @@ return (0, r.jsxs)('div', {
   children: [
     (0, r.jsx)('div', {
       className: I.iconContainer,
-      children: (0, r.jsx)(N.Z, {
+      children: (0, r.jsx)(u.Z, {
         tabIndex: -1,
         className: I.gameIcon,
         game: n,
@@ -566,11 +566,11 @@ let e, n;
 let {
   link: s,
   children: t
-} = this.props, a = (0, u.Qj)(s.path);
+} = this.props, a = (0, E.Qj)(s.path);
 return null == a || void 0 === a.messageId ? (e = f.Z.Messages.QUICKSWITCHER_LINK_UNKNOWN, n = (0, r.jsx)(i.LinkIcon, {
   size: 'xs',
   color: 'currentColor'
-})) : (0, u.VO)(a) ? (e = f.Z.Messages.QUICKSWITCHER_LINK_MESSAGE, n = (0, r.jsx)(i.ChatArrowRightIcon, {
+})) : (0, E.VO)(a) ? (e = f.Z.Messages.QUICKSWITCHER_LINK_MESSAGE, n = (0, r.jsx)(i.ChatArrowRightIcon, {
   size: 'xs',
   color: 'currentColor'
 })) : (e = f.Z.Messages.QUICKSWITCHER_LINK_NO_ACCESS, n = (0, r.jsx)(i.LockIcon, {

@@ -1,6 +1,6 @@
 s.d(t, {
   Z: function() {
-return D;
+return f;
   }
 }), s(47120);
 var n = s(735250),
@@ -17,7 +17,7 @@ var n = s(735250),
   T = s(242291),
   I = s(893663),
   S = s(331642),
-  N = s(474333),
+  N = s(777036),
   C = s(63063),
   m = s(581883),
   A = s(918257),
@@ -40,10 +40,10 @@ return u.Z.getSound(t === O.hY ? O.X8 : t, s);
   });
 }
 
-function D() {
+function f() {
   let {
 analyticsLocations: e
-  } = (0, l.ZP)(), [t, s] = a.useState(O.hY), o = (0, I.tT)(t), m = M(o), D = (0, i.e7)([u.Z], () => u.Z.hasFetchedAllSounds()), P = (null == o ? void 0 : o.type) === I.zx.GLOBAL, L = D && null != o && null == m;
+  } = (0, l.ZP)(), [t, s] = a.useState(O.hY), o = (0, I.tT)(t), m = M(o), f = (0, i.e7)([u.Z], () => u.Z.hasFetchedAllSounds()), P = (null == o ? void 0 : o.type) === I.zx.GLOBAL, L = f && null != o && null == m;
   a.useEffect(() => {
 L && (0, T.tt)({
   location: e
@@ -58,7 +58,7 @@ e
 let {
   inDropdown: s
 } = t;
-return null == e ? null : s ? (0, n.jsx)(f, {
+return null == e ? null : s ? (0, n.jsx)(D, {
   guildId: e.value
 }) : null;
   }, []);
@@ -133,7 +133,7 @@ children: [
   });
 }
 
-function f(e) {
+function D(e) {
   let {
 guildId: t
   } = e, s = (0, i.e7)([m.Z], () => {

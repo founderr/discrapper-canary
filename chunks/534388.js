@@ -12,13 +12,13 @@ var i = n(442837),
   l = n(67212),
   u = n(493355),
   c = n(134598),
-  d = n(885110),
-  _ = n(366695),
+  d = n(925329),
+  _ = n(885110),
   E = n(689938),
   f = n(140579);
 
 function h() {
-  let e = (0, i.e7)([d.Z], () => d.Z.getBroadcast()),
+  let e = (0, i.e7)([_.Z], () => _.Z.getBroadcast()),
 t = (0, s.q)(null == e ? void 0 : e.applicationId);
   if (null == e)
 return null;
@@ -31,9 +31,9 @@ h = () => {
   return (0, r.jsxs)('div', {
 className: f.container,
 children: [
-  null != t && (0, r.jsx)(_.Z, {
+  null != t && (0, r.jsx)(d.Z, {
     game: t,
-    size: _.Z.Sizes.LARGE
+    size: d.Z.Sizes.LARGE
   }),
   (0, r.jsxs)('div', {
     className: f.content,

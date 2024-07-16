@@ -19,8 +19,8 @@ var i = n(735250),
   T = n(962796),
   h = n(695346),
   N = n(592125),
-  f = n(655354),
-  p = n(324081),
+  p = n(655354),
+  f = n(324081),
   C = n(240126),
   g = n(791914),
   S = n(981631),
@@ -102,7 +102,7 @@ children: 'The message isn\'t accessible. We will deal with this later.'
   }) : (0, i.jsxs)('div', {
 className: O.container,
 children: [
-  (0, i.jsx)(p.Z, {
+  (0, i.jsx)(f.Z, {
     channel: m,
     gotoChannel: C,
     children: (0, i.jsxs)('div', {
@@ -162,7 +162,7 @@ children: [
       [R.disabledMessage]: s
     }),
     children: [
-      (0, i.jsx)(f.Z, {
+      (0, i.jsx)(p.Z, {
         className: O.jumpMessageButton,
         onJump: C
       }),

@@ -11,10 +11,10 @@ t(470079);
 var i = t(120356),
   r = t.n(i),
   o = t(481060),
-  c = t(857395),
-  d = t(131154),
-  u = t(940627),
-  _ = t(346656),
+  c = t(565138),
+  d = t(372769),
+  u = t(857395),
+  _ = t(131154),
   E = t(38981),
   h = t(54359);
 
@@ -39,7 +39,7 @@ children: (0, s.jsxs)('div', {
     (0, s.jsxs)('div', {
       className: h.guildInfoContainer,
       children: [
-        (0, s.jsx)(c.Z, {
+        (0, s.jsx)(u.Z, {
           guildId: f,
           shouldShow: a,
           onRequestClose: () => l(!1),
@@ -47,9 +47,9 @@ children: (0, s.jsxs)('div', {
             className: h.flexContainerRow,
             onClick: i,
             children: [
-              (0, s.jsx)(_.Z, {
+              (0, s.jsx)(c.Z, {
                 guild: n,
-                size: _.Z.Sizes.MINI,
+                size: c.Z.Sizes.MINI,
                 className: h.guildIcon
               }),
               (0, s.jsxs)('div', {
@@ -63,7 +63,7 @@ children: (0, s.jsxs)('div', {
                     }),
                     children: n.name
                   }),
-                  (0, s.jsx)(u.Z, {
+                  (0, s.jsx)(d.Z, {
                     guild: n
                   })
                 ]
@@ -102,7 +102,7 @@ children: (0, s.jsxs)('div', {
       variant: 'text-sm/normal',
       children: t.description
     }),
-    (0, s.jsx)(d.Z, {
+    (0, s.jsx)(_.Z, {
       guild: n,
       speakers: m,
       speakerCount: I,

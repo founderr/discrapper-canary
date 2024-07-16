@@ -1,6 +1,6 @@
 a.r(t), a.d(t, {
   default: function() {
-return b;
+return m;
   }
 });
 var n = a(735250),
@@ -15,16 +15,16 @@ var n = a(735250),
   _ = a(981631),
   T = a(190378),
   I = a(689938);
-let m = [
+let b = [
   u.K8.OTHER,
   u.K8.ADS,
   u.K8.NOT_FUN
 ];
 
-function b(e) {
+function m(e) {
   var t;
   let {
-channel: b,
+channel: m,
 activityApplication: C,
 onClose: A,
 transitionState: f,
@@ -47,7 +47,7 @@ header: I.Z.Messages.ACTIVITY_REPORT_POST_ACTIVITY_HEADER.format({
 body: I.Z.Messages.ACTIVITY_REPORT_ACTIVITY_BODY,
 problemTitle: I.Z.Messages.ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE,
 problems: (0, c.Z)(!0, p),
-feedbackProblems: m,
+feedbackProblems: b,
 onSubmit: function(e) {
   let {
     rating: t,
@@ -70,7 +70,7 @@ onSubmit: function(e) {
     }), null != t)
     (0, d.Z)({
       problem: l,
-      channel: b,
+      channel: m,
       feedback: c,
       activityApplication: C,
       analyticsData: E,

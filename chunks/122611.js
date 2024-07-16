@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(819792),
   p = n(919285),
   T = n(118470),
-  f = n(413307),
-  S = n(849688),
+  S = n(413307),
+  f = n(849688),
   C = n(374023),
   N = n(661599),
   A = n(923608),
@@ -46,7 +46,7 @@ enableClanCreation: T
 guild: n,
 location: 'ChannelNoticesGuard',
 includeConverted: !1
-  }), f = (0, s.Wu)(R.HG, () => R.XN.filter(e => {
+  }), S = (0, s.Wu)(R.HG, () => R.XN.filter(e => {
 let {
   type: t,
   store: i
@@ -56,7 +56,7 @@ if (t === x.vID.CLAN_ADMIN_UPSELL)
 return null == i ? void 0 : i.channelNoticePredicate(n, _);
   }).map(e => e.dismissibleContentType));
   return (0, i.jsx)(u.Z, {
-contentTypes: f,
+contentTypes: S,
 groupName: b.R.CHANNEL_NOTICES,
 children: e => {
   let {
@@ -124,7 +124,7 @@ guild: t
   } = e;
   switch ((0, O.Z)(t)) {
 case O.R.ENABLE_PUBLIC_GUILD:
-  return (0, i.jsx)(f.Z, {
+  return (0, i.jsx)(S.Z, {
     guild: t
   });
 case O.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
@@ -156,7 +156,7 @@ case O.R.HUB_STUDY_ROOM:
     guild: t
   });
 case O.R.SIGNUP:
-  return (0, i.jsx)(S.Z, {
+  return (0, i.jsx)(f.Z, {
     guild: t
   });
   }

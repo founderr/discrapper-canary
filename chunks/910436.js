@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return f;
+return S;
   }
 }), n(653041), n(47120);
 var i = n(735250);
@@ -22,12 +22,12 @@ var a = n(287734),
   p = n(817915),
   T = n(981631);
 
-function f(e) {
+function S(e) {
   let {
 party: t,
 onChannelContextMenu: n,
-quest: f
-  } = e, S = (0, g.L)(), {
+quest: S
+  } = e, f = (0, g.L)(), {
 voiceChannels: C,
 currentActivities: N,
 partiedMembers: A,
@@ -87,7 +87,7 @@ if (null != e) {
     break;
   }
 }
-  return v.length > 0 && S && v.forEach(e => {
+  return v.length > 0 && f && v.forEach(e => {
 let {
   stream: t,
   streamUser: n,
@@ -103,7 +103,7 @@ O((0, i.jsx)(m.Z.ApplicationStreamingSection, {
   }
 }, 'application-stream-'.concat(t.ownerId)));
   }), N.forEach((e, t) => {
-var n, a, s, E, I, g, S, v, L;
+var n, a, s, E, I, g, f, v, L;
 let {
   activity: R,
   game: x,
@@ -160,12 +160,12 @@ else if ((0, d.Z)(R)) {
   }, 'spotify-'.concat(null !== (g = R.session_id) && void 0 !== g ? g : t, '-').concat(P.id))) : (null != R.assets || (0, r.Z)(R)) && R.type === T.IIU.LISTENING ? O((0, i.jsx)(m.Z.RichPresenceSection, {
     activity: R,
     getAssetImage: h.getAssetImage
-  }, 'rich-presence-'.concat(null !== (S = R.session_id) && void 0 !== S ? S : t, '-').concat(P.id))) : (0, c.Z)(R) && O((0, i.jsx)(m.Z.XboxSection, {
+  }, 'rich-presence-'.concat(null !== (f = R.session_id) && void 0 !== f ? f : t, '-').concat(P.id))) : (0, c.Z)(R) && O((0, i.jsx)(m.Z.XboxSection, {
     title: x.name
   }, 'xbox-'.concat(null !== (v = R.session_id) && void 0 !== v ? v : t)));
-null != f && null != x && x.id === u.r.build(f.config).application.id && O((0, i.jsx)(_.Z, {
-  quest: f
-}, 'quest-'.concat(f.id, '-').concat(null !== (L = R.session_id) && void 0 !== L ? L : t)));
+null != S && null != x && x.id === u.r.build(S.config).application.id && O((0, i.jsx)(_.Z, {
+  quest: S
+}, 'quest-'.concat(S.id, '-').concat(null !== (L = R.session_id) && void 0 !== L ? L : t)));
   }), L.length > 0 ? (0, i.jsx)(m.Z.Body, {
 children: L
   }) : null;

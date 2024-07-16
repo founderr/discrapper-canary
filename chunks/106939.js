@@ -33,8 +33,8 @@ var s = n(735250),
   x = n(280570),
   b = n(914788),
   O = n(841409),
-  L = n(652262),
-  P = n(880257),
+  P = n(652262),
+  L = n(880257),
   v = n(631885),
   Z = n(830746),
   D = n(731934),
@@ -59,7 +59,7 @@ function V(e) {
   let {
 section: t,
 handleItemSelect: n
-  } = e, a = (0, v.gU)(), r = (0, P.Z)();
+  } = e, a = (0, v.gU)(), r = (0, L.Z)();
   return (0, s.jsxs)(_.TabBar, {
 className: k.settingsTabBar,
 'aria-label': H.Z.Messages.FAMILY_CENTER_TITLE,
@@ -147,11 +147,11 @@ children: [
 }
 
 function K() {
-  let e = (0, P.Z)(),
+  let e = (0, L.Z)(),
 t = (0, v.M8)(),
 n = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
 r = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()),
-l = (0, L.M)(),
+l = (0, P.M)(),
 {
   selectedTab: u,
   handleTabChange: T
@@ -206,7 +206,7 @@ children: [
 function Y() {
   let {
 analyticsLocations: e
-  } = (0, I.ZP)(T.Z.FAMILY_CENTER), t = (0, P.Z)(), n = (0, v.M8)(), r = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), l = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), p = (0, L.M)(), M = (0, c.e7)([m.Z], () => m.Z.theme), {
+  } = (0, I.ZP)(T.Z.FAMILY_CENTER), t = (0, L.Z)(), n = (0, v.M8)(), r = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), l = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), p = (0, P.M)(), M = (0, c.e7)([m.Z], () => m.Z.theme), {
 selectedTab: Z,
 handleTabChange: D
   } = (0, O.Z)(), B = (0, S.Dt)(), w = f.default.getCurrentUser(), V = null != t, K = l && null != w && !V;

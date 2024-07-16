@@ -86,14 +86,14 @@ children: [
   }, t.id);
 }
 
-function D(e) {
+function f(e) {
   (0, l.openModalLazy)(async () => t => (0, n.jsx)(E.default, {
 ...t,
 guildBoostSlot: e
   }));
 }
 
-function f(e) {
+function D(e) {
   (0, l.openModalLazy)(async () => t => (0, n.jsx)(u.default, {
 ...t,
 guildBoostSlotId: e.id
@@ -245,8 +245,8 @@ children: [
         children: Z.map(e => (0, n.jsx)(M, {
           guildBoostSlot: e,
           isCancellable: G,
-          onCancel: D,
-          onUncancel: f,
+          onCancel: f,
+          onUncancel: D,
           premiumSubscription: E,
           useReducedMotion: h
         }, e.id))

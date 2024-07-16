@@ -27,18 +27,18 @@ var n = s(735250),
   I = s(100527),
   S = s(906732),
   N = s(17894),
-  C = s(963249),
-  m = s(301766),
-  A = s(594174),
-  h = s(285952),
-  g = s(366695),
+  C = s(925329),
+  m = s(963249),
+  A = s(301766),
+  h = s(594174),
+  g = s(285952),
   O = s(626135),
   p = s(63063),
   R = s(74538),
   x = s(212895),
   M = s(374649),
-  D = s(160913),
-  f = s(987997),
+  f = s(160913),
+  D = s(987997),
   P = s(393411),
   L = s(908951),
   Z = s(592889),
@@ -53,8 +53,8 @@ function B(e) {
   fromStandaloneBillingPage: i = !0,
   className: o
 } = e,
-c = (0, _.e7)([A.default], () => {
-  let e = A.default.getCurrentUser();
+c = (0, _.e7)([h.default], () => {
+  let e = h.default.getCurrentUser();
   return l()(null != e, 'GuildBoostingHeader: currentUser cannot be undefined'), e;
 });
   if (0 === (0, R.uV)(s.additionalPlans))
@@ -106,7 +106,7 @@ children: [
           })
         ]
       }),
-      i && (0, n.jsx)(f.Z, {
+      i && (0, n.jsx)(D.Z, {
         color: u.Button.Colors.BRAND,
         onClick: () => T.Z.open(b.oAB.GUILD_BOOSTING),
         children: v.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_MANAGE_YOUR_SUBSCRIPTIONS
@@ -200,7 +200,7 @@ children: [
     children: v.Z.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT.format({
       daysPastDue: t,
       paymentModalRedirect: () => {
-        (0, C.Z)({
+        (0, m.Z)({
           initialPlanId: s.planIdFromItems,
           openInvoiceId: i,
           analyticsLocations: r
@@ -252,12 +252,12 @@ children: [
   (0, n.jsx)(u.Card, {
     className: j.noItemsCard,
     type: u.Card.Types.CUSTOM,
-    children: (0, n.jsxs)(h.Z, {
-      align: h.Z.Align.CENTER,
+    children: (0, n.jsxs)(g.Z, {
+      align: g.Z.Align.CENTER,
       children: [
-        (0, n.jsx)(g.Z, {
+        (0, n.jsx)(C.Z, {
           game: null,
-          size: g.Z.Sizes.SMALL,
+          size: C.Z.Sizes.SMALL,
           className: j.noItemsIcon
         }),
         (0, n.jsx)('span', {
@@ -414,20 +414,20 @@ subscriptionId: a.id,
 renewal: !0,
 analyticsLocations: T,
 analyticsLocation: E
-  }), [h] = (0, M.ED)({
+  }), [m] = (0, M.ED)({
 subscriptionId: a.id,
 renewal: !0,
 applyEntitlements: !0,
 analyticsLocations: T,
 analyticsLocation: E
-  }), g = (0, _.e7)([A.default], () => {
+  }), g = (0, _.e7)([h.default], () => {
 var e;
-return null === (e = A.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasFreePremium();
-  }), O = d()(a.currentPeriodEnd), p = null != a.paymentSourceId, R = null !== (t = null == h ? void 0 : h.total) && void 0 !== t ? t : 0, x = null == r ? void 0 : r.invalid, f = !p && R > 0 && (7 >= O.diff(d()(), 'days') || a.status === b.O0b.PAST_DUE) && !g && !a.isPurchasedExternally, P = x && a.status === b.O0b.PAST_DUE && !g && !a.isPurchasedExternally, L = (0, D.U)(), B = !g && L, y = (null == a ? void 0 : a.status) === b.O0b.PAST_DUE ? d()().diff(d()(a.currentPeriodStart), 'days') : 0, [V] = (0, M.Ox)({
+return null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasFreePremium();
+  }), O = d()(a.currentPeriodEnd), p = null != a.paymentSourceId, R = null !== (t = null == m ? void 0 : m.total) && void 0 !== t ? t : 0, x = null == r ? void 0 : r.invalid, D = !p && R > 0 && (7 >= O.diff(d()(), 'days') || a.status === b.O0b.PAST_DUE) && !g && !a.isPurchasedExternally, P = x && a.status === b.O0b.PAST_DUE && !g && !a.isPurchasedExternally, L = (0, f.U)(), B = !g && L, y = (null == a ? void 0 : a.status) === b.O0b.PAST_DUE ? d()().diff(d()(a.currentPeriodStart), 'days') : 0, [V] = (0, M.Ox)({
 subscriptionId: a.id,
 preventFetch: !B
   });
-  return null == C || null == h ? (0, n.jsx)(u.Spinner, {}) : (null != a.renewalMutations && (a.renewalMutations.planId !== a.planId && !(0, m.Q0)(a.renewalMutations.planId) || a.hasExternalPlanChange) && (s = (0, n.jsx)(Z.Z, {
+  return null == C || null == m ? (0, n.jsx)(u.Spinner, {}) : (null != a.renewalMutations && (a.renewalMutations.planId !== a.planId && !(0, A.Q0)(a.renewalMutations.planId) || a.hasExternalPlanChange) && (s = (0, n.jsx)(Z.Z, {
 subscription: a,
 renewalMutations: a.renewalMutations,
 className: j.renewalMutationNotice,
@@ -441,7 +441,7 @@ children: (0, n.jsxs)(u.HeadingLevel, {
     children: v.Z.Messages.USER_SETTINGS_SUBSCRIPTIONS_HEADER
   }),
   children: [
-    f ? (0, n.jsx)(U, {}) : null,
+    D ? (0, n.jsx)(U, {}) : null,
     P ? (0, n.jsx)(G, {}) : null,
     B && null != V ? (0, n.jsx)(F, {
       daysPastDue: y,
@@ -465,10 +465,10 @@ children: (0, n.jsxs)(u.HeadingLevel, {
             paymentSource: r,
             busy: o,
             fromStandaloneBillingPage: c,
-            showNoPaymentMethod: f,
+            showNoPaymentMethod: D,
             showInvalidPaymentMethod: P,
             fetchedCurrentInvoicePreview: C,
-            fetchedRenewalInvoicePreview: h
+            fetchedRenewalInvoicePreview: m
           })
         }),
         N.map((e, t) => (0, n.jsxs)('div', {
@@ -485,7 +485,7 @@ children: (0, n.jsxs)(u.HeadingLevel, {
               paymentSource: r,
               busy: o,
               fromStandaloneBillingPage: c,
-              showNoPaymentMethod: f,
+              showNoPaymentMethod: D,
               showInvalidPaymentMethod: P,
               fetchedCurrentInvoicePreview: null,
               fetchedRenewalInvoicePreview: null

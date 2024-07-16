@@ -19,18 +19,18 @@ var t = n(735250),
   A = n(44315),
   S = n(543241),
   L = n(906411),
-  x = n(822179),
-  R = n(419922),
-  M = n(484459),
-  f = n(318661),
-  g = n(735336),
-  O = n(502762),
-  h = n(652853),
-  P = n(430824),
-  j = n(594174),
-  U = n(314884),
-  Z = n(346656),
-  v = n(180828),
+  x = n(565138),
+  R = n(822179),
+  M = n(419922),
+  f = n(484459),
+  g = n(318661),
+  O = n(813549),
+  h = n(735336),
+  P = n(502762),
+  j = n(652853),
+  U = n(430824),
+  Z = n(594174),
+  v = n(314884),
   b = n(709586),
   F = n(154921),
   G = n(626135),
@@ -121,7 +121,7 @@ function ed(e) {
 ...s
   } = e, {
 theme: n
-  } = (0, h.z)(), a = (0, A.O0)(V.tPk.INTERACTIVE_ACTIVE, n);
+  } = (0, j.z)(), a = (0, A.O0)(V.tPk.INTERACTIVE_ACTIVE, n);
   return (0, t.jsx)(m.NitroWheelIcon, {
 size: 'md',
 ...s,
@@ -134,7 +134,7 @@ function eI(e) {
 currentUser: s,
 premiumType: n,
 onClose: a
-  } = e, i = (0, f.ZP)(s.id), r = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), l = n === Y.p9.TIER_1, o = (0, _.EQ)(null == i ? void 0 : i.premiumType).with(Y.p9.TIER_2, () => (0, t.jsxs)(O.Z, {
+  } = e, i = (0, g.ZP)(s.id), r = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), l = n === Y.p9.TIER_1, o = (0, _.EQ)(null == i ? void 0 : i.premiumType).with(Y.p9.TIER_2, () => (0, t.jsxs)(P.Z, {
 user: s,
 displayProfile: i,
 forceShowPremium: !0,
@@ -143,7 +143,7 @@ className: J.profileCard,
 children: [
   (0, t.jsx)('div', {
     className: J.profileBanner,
-    children: (0, t.jsx)(g.Z, {
+    children: (0, t.jsx)(h.Z, {
       displayProfile: i,
       user: s,
       allowEdit: !1,
@@ -156,12 +156,12 @@ children: [
     size: m.AvatarSizes.SIZE_56,
     'aria-label': s.username
   }),
-  (0, t.jsx)(O.Z.Overlay, {
+  (0, t.jsx)(P.Z.Overlay, {
     className: J.profileInner,
     children: (0, t.jsxs)('div', {
       className: J.profileUserInfo,
       children: [
-        (0, t.jsx)(v.Z, {
+        (0, t.jsx)(O.Z, {
           className: J.profileNameTag,
           usernameClass: J.profileNameTagUsername,
           name: s.toString()
@@ -185,7 +185,7 @@ children: [
   (0, t.jsxs)('div', {
     className: J.profileUserInfoTier1,
     children: [
-      (0, t.jsx)(v.Z, {
+      (0, t.jsx)(O.Z, {
         className: J.profileNameTag,
         usernameClass: J.profileNameTagUsername,
         name: s.toString()
@@ -213,7 +213,7 @@ renderVisual: () => o
 function em(e) {
   let {
 premiumType: s
-  } = e, n = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), a = (0, S.wC)(null).filter(e => e.type === L.B.GUILD && (e.animated || null != e.guildId)).slice(0, 3), i = (0, d.Wu)([x.Z], () => x.Z.stickerFrecencyWithoutFetchingLatest.frequently.slice(0, 3 - a.length)), r = eu().emojiStickersVisual, l = s === Y.p9.TIER_1;
+  } = e, n = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), a = (0, S.wC)(null).filter(e => e.type === L.B.GUILD && (e.animated || null != e.guildId)).slice(0, 3), i = (0, d.Wu)([R.Z], () => R.Z.stickerFrecencyWithoutFetchingLatest.frequently.slice(0, 3 - a.length)), r = eu().emojiStickersVisual, l = s === Y.p9.TIER_1;
   return (0, t.jsx)(e_, {
 description: l ? K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_EMOJI_STICKERS_TIER_1.format() : K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_EMOJI_STICKERS.format(),
 onLearnMore: () => {
@@ -233,7 +233,7 @@ renderVisual: () => null != a && a.length > 0 || !l && null != i && i.length > 0
       alt: '',
       src: e
     }) : null),
-    l ? null : i.map(e => (0, t.jsx)(R.ZP, {
+    l ? null : i.map(e => (0, t.jsx)(M.ZP, {
       disableAnimation: n,
       sticker: e,
       size: 58,
@@ -256,13 +256,13 @@ onClose: n
   a.useEffect(() => C.Z.wait(() => (0, E.X8)()), []);
   let i = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
 [l, o] = (0, d.Wu)([
-  U.Z,
-  P.Z
+  v.Z,
+  U.Z
 ], () => {
-  let e = U.Z.boostSlots,
+  let e = v.Z.boostSlots,
     s = new Map();
   u()(e).map('premiumGuildSubscription').map('guildId').forEach(e => {
-    if (null != P.Z.getGuild(e)) {
+    if (null != U.Z.getGuild(e)) {
       var n;
       let t = null !== (n = s.get(e)) && void 0 !== n ? n : 0;
       s.set(e, t + 1);
@@ -271,7 +271,7 @@ onClose: n
   let n = null,
     t = 0;
   return s.size > 0 && ([n, t] = Array.from(s.entries()).reduce((e, s) => s[1] > e[1] ? s : e)), [
-    P.Z.getGuild(n),
+    U.Z.getGuild(n),
     t
   ];
 }),
@@ -289,9 +289,9 @@ renderVisual: () => c ? (0, t.jsx)('div', {
   children: (0, t.jsxs)('div', {
     className: J.boostCard,
     children: [
-      (0, t.jsx)(Z.Z, {
+      (0, t.jsx)(x.Z, {
         guild: l,
-        size: Z.Z.Sizes.MEDIUM,
+        size: x.Z.Sizes.MEDIUM,
         animate: !i,
         className: J.boostCardIcon
       }),
@@ -468,12 +468,12 @@ churnUserDiscountOffer: C = null,
 isDowngrade: E = !1,
 subtitleIcon: N,
 subtitleClassName: T
-  } = e, p = (0, d.e7)([j.default], () => {
-let e = j.default.getCurrentUser();
+  } = e, p = (0, d.e7)([Z.default], () => {
+let e = Z.default.getCurrentUser();
 return o()(null != e, 'ProfileItem: currentUser cannot be undefined'), e;
   });
   a.useEffect(() => {
-(0, M.Z)(p.id, p.getAvatarURL(null, 80));
+(0, f.Z)(p.id, p.getAvatarURL(null, 80));
   }, [p]);
   let A = null != C && !I;
   return (a.useEffect(() => {

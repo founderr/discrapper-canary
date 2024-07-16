@@ -20,8 +20,8 @@ var n = a(442837),
   m = a(290347),
   N = a(474936),
   E = a(981631),
-  C = a(689938),
-  p = a(903538),
+  p = a(689938),
+  C = a(903538),
   O = a(913907),
   A = a(82341),
   x = a(309539),
@@ -56,33 +56,33 @@ heroArt: {
   href: 'https://youtu.be/'.concat(b)
 },
 modalDismissibleContent: s.z.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL,
-header: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_HEADER,
-subHeader: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_SUBHEADER,
+header: p.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_HEADER,
+subHeader: p.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_SUBHEADER,
 subHeaderExtra: () => (0, r.jsx)(o.Anchor, {
-  className: p.termsApplyAnchor,
+  className: C.termsApplyAnchor,
   href: h.Z.getArticleURL(E.BhN.SUMMER_2023_BOGO),
   children: (0, r.jsx)(o.Heading, {
     variant: 'heading-md/normal',
-    className: p.termsApplyBodyText,
-    children: C.Z.Messages.BOGO_TERMS_APPLY
+    className: C.termsApplyBodyText,
+    children: p.Z.Messages.BOGO_TERMS_APPLY
   })
 }),
 featureCards: [{
-    header: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_HEADER,
-    subHeader: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_BODY_FORMATTED.format({
+    header: p.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_HEADER,
+    subHeader: p.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_BODY_FORMATTED.format({
       helpCenterLink: h.Z.getArticleURL(E.BhN.REMIXING)
     }),
     imageSrc: O,
-    tagText: C.Z.Messages.EARLY_ACCESS
+    tagText: p.Z.Messages.EARLY_ACCESS
   },
   {
-    header: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_THEMES_CARD_HEADER,
-    subHeader: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_THEMES_CARD_BODY,
+    header: p.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_THEMES_CARD_HEADER,
+    subHeader: p.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_THEMES_CARD_BODY,
     imageSrc: x
   },
   {
-    header: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_SOUNDBOARD_CARD_HEADER,
-    subHeader: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_SOUNDBOARD_CARD_BODY_FORMATTED,
+    header: p.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_SOUNDBOARD_CARD_HEADER,
+    subHeader: p.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_SOUNDBOARD_CARD_BODY_FORMATTED,
     imageSrc: A
   }
 ],
@@ -91,8 +91,8 @@ button: () => {
   let e = L ? 'upgrade_plan_button' : 'get_nitro_button',
     t = Date.now();
   return (0, r.jsxs)(o.ShinyButton, {
-    className: p.buttonWide,
-    innerClassName: p.innerButton,
+    className: C.buttonWide,
+    innerClassName: C.innerButton,
     color: o.Button.Colors.GREEN,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
@@ -117,10 +117,10 @@ button: () => {
     children: [
       (0, r.jsx)('img', {
         alt: '',
-        className: p.nitroIconSubHeader,
+        className: C.nitroIconSubHeader,
         src: M
       }),
-      C.Z.Messages.BOGO_CLAIM_OFFER
+      p.Z.Messages.BOGO_CLAIM_OFFER
     ]
   });
 }

@@ -18,8 +18,8 @@ var i, a, s = n(735250),
   g = n(504160),
   p = n(151864),
   T = n(725436),
-  f = n(497656),
-  S = n(554747),
+  S = n(497656),
+  f = n(554747),
   C = n(230900),
   N = n(854698),
   A = n(703656),
@@ -43,7 +43,7 @@ function k(e) {
   let {
 guild: t,
 isStudyRoomNotice: n = !1
-  } = e, i = (0, f.y)(t.id), a = (0, S.k5)(t.id), l = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
+  } = e, i = (0, S.y)(t.id), a = (0, f.k5)(t.id), l = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
 isStageNoticeHidden: k,
 isEventNoticeHidden: w
   } = (0, c.cj)([p.Z], () => ({

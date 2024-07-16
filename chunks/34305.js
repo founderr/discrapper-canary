@@ -4,10 +4,10 @@ var i = n(735250),
   s = n(442837),
   r = n(481060),
   l = n(325432),
-  o = n(391690),
-  c = n(714759),
-  d = n(285952),
-  u = n(546591),
+  o = n(570928),
+  c = n(391690),
+  d = n(714759),
+  u = n(285952),
   _ = n(424218),
   E = n(358085),
   h = n(998502),
@@ -28,7 +28,7 @@ class T extends a.PureComponent {
 let {
   metadata: e
 } = this.props;
-return null != e && null != e.availableKB && null != e.totalKB ? (0, i.jsx)(c.Z, {
+return null != e && null != e.availableKB && null != e.totalKB ? (0, i.jsx)(d.Z, {
   total: e.totalKB,
   used: e.totalKB - e.availableKB
 }) : null;
@@ -40,28 +40,28 @@ let {
   label: a,
   editingPath: s,
   isDefault: l,
-  metadata: c
+  metadata: d
 } = this.props;
-return null != c && (e = null != c.availableKB ? (0, _.BU)(c.availableKB, {
+return null != d && (e = null != d.availableKB ? (0, _.BU)(d.availableKB, {
   useKibibytes: !0
-}) : null, t = null != c.totalKB ? (0, _.BU)(c.totalKB, {
+}) : null, t = null != d.totalKB ? (0, _.BU)(d.totalKB, {
   useKibibytes: !0
-}) : null), (0, i.jsxs)(d.Z, {
+}) : null), (0, i.jsxs)(u.Z, {
   className: m.installationPath,
-  align: d.Z.Align.CENTER,
+  align: u.Z.Align.CENTER,
   children: [
     this.renderDiskUsageCircle(),
-    (0, i.jsxs)(d.Z, {
-      direction: d.Z.Direction.VERTICAL,
+    (0, i.jsxs)(u.Z, {
+      direction: u.Z.Direction.VERTICAL,
       className: m.__invalid_descriptionWrapper,
       children: [
-        (0, i.jsxs)(d.Z, {
-          align: d.Z.Align.CENTER,
+        (0, i.jsxs)(u.Z, {
+          align: u.Z.Align.CENTER,
           children: [
             (0, i.jsx)(r.Heading, {
               className: m.rowTitle,
               variant: 'heading-md/semibold',
-              children: null != a ? a : o.Z.getLabelFromPath(n)
+              children: null != a ? a : c.Z.getLabelFromPath(n)
             }),
             l ? (0, i.jsx)('span', {
               className: m.defaultIndicator,
@@ -69,7 +69,7 @@ return null != c && (e = null != c.availableKB ? (0, _.BU)(c.availableKB, {
             }) : null
           ]
         }),
-        null != c && null != e && null != t ? (0, i.jsx)(u.Z, {
+        null != d && null != e && null != t ? (0, i.jsx)(o.Z, {
           className: m.rowBody,
           hoverText: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_SPACE.format({
             available: e,
@@ -104,16 +104,16 @@ let {
 return (0, i.jsx)(r.Card, {
   editable: !0,
   className: m.installationPathEditing,
-  children: (0, i.jsxs)(d.Z, {
+  children: (0, i.jsxs)(u.Z, {
     children: [
       this.renderDiskUsageCircle(),
-      (0, i.jsxs)(d.Z.Child, {
+      (0, i.jsxs)(u.Z.Child, {
         children: [
           (0, i.jsx)(r.FormItem, {
             title: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_NAME,
             children: (0, i.jsx)(r.TextInput, {
               value: n,
-              placeholder: o.Z.getLabelFromPath(e),
+              placeholder: c.Z.getLabelFromPath(e),
               onChange: this.handleLabelChange
             })
           }),
@@ -136,7 +136,7 @@ return (0, i.jsx)(r.Card, {
           (0, i.jsx)(r.FormDivider, {
             className: m.separator
           }),
-          (0, i.jsxs)(d.Z, {
+          (0, i.jsxs)(u.Z, {
             children: [
               (0, i.jsx)(r.Button, {
                 disabled: t || this.props.isDefault,
@@ -146,8 +146,8 @@ return (0, i.jsx)(r.Card, {
                 onClick: this.handleRemoveLocation,
                 children: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE
               }),
-              (0, i.jsxs)(d.Z, {
-                justify: d.Z.Justify.END,
+              (0, i.jsxs)(u.Z, {
+                justify: u.Z.Justify.END,
                 children: [
                   (0, i.jsx)(r.Button, {
                     size: r.Button.Sizes.SMALL,
@@ -229,7 +229,7 @@ super(...e), p(this, 'state', {
 });
   }
 }
-class f extends a.PureComponent {
+class S extends a.PureComponent {
   componentDidMount() {
 (0, l.ec)(this.props.installationPaths.map(e => {
   let {
@@ -261,7 +261,7 @@ return (0, i.jsxs)(r.FormSection, {
         metadata: t[s],
         isDefault: n === s,
         editingPath: a,
-        hasGamesInstalledInPath: o.Z.hasGamesInstalledInPath(s),
+        hasGamesInstalledInPath: c.Z.hasGamesInstalledInPath(s),
         onToggleEditing: this.handleToggleEditing
       }, s);
     }),
@@ -292,8 +292,8 @@ super(...e), p(this, 'state', {
 });
   }
 }
-t.Z = s.ZP.connectStores([o.Z], () => ({
-  installationPaths: o.Z.installationPaths,
-  installationPathsMetadata: o.Z.installationPathsMetadata,
-  defaultInstallationPath: o.Z.defaultInstallationPath
-}))(f);
+t.Z = s.ZP.connectStores([c.Z], () => ({
+  installationPaths: c.Z.installationPaths,
+  installationPathsMetadata: c.Z.installationPathsMetadata,
+  defaultInstallationPath: c.Z.defaultInstallationPath
+}))(S);

@@ -1,37 +1,37 @@
-i.d(n, {
+n.d(t, {
   Lb: function() {
-return a;
+return s;
   },
   gP: function() {
-return r;
+return l;
   },
   sF: function() {
-return c;
+return r;
   }
 });
-var t = i(626135),
-  o = i(981631);
+var i = n(626135),
+  a = n(981631);
 
-function a(e, n, i) {
-  t.default.track(o.rMx.FORWARD_MESSAGE_STARTED, {
+function s(e, t, n) {
+  i.default.track(a.rMx.FORWARD_MESSAGE_STARTED, {
 channel_id: e,
-message_id: n,
-source: i
+message_id: t,
+source: n
   });
 }
 
-function c(e, n) {
-  t.default.track(o.rMx.FORWARD_MESSAGE_CANCELLED, {
+function r(e, t) {
+  i.default.track(a.rMx.FORWARD_MESSAGE_CANCELLED, {
 channel_id: e,
-message_id: n
+message_id: t
   });
 }
 
-function r(e, n, i, a) {
-  t.default.track(o.rMx.FORWARD_MESSAGE_SENT, {
+function l(e, t, n, s) {
+  i.default.track(a.rMx.FORWARD_MESSAGE_SENT, {
 channel_id: e,
-message_id: n,
-has_error: i,
-num_destinations: a
+message_id: t,
+has_error: n,
+num_destinations: s
   });
 }

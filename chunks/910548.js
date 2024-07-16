@@ -15,8 +15,8 @@ var i, a, s, r, l = n(735250),
   T = n(230711),
   h = n(745510),
   N = n(64078),
-  f = n(29270),
-  p = n(709586),
+  p = n(29270),
+  f = n(709586),
   C = n(482207),
   g = n(702346),
   S = n(267642),
@@ -152,7 +152,7 @@ switch (Math.floor(Math.random() * Object.keys(a).length)) {
   }()), {
 createMultipleConfettiAt: T,
 confettiCanvas: N
-  } = o.useContext(h.h), [f, p] = o.useState(null), C = (0, u.uR)(N, f), g = function(e, t) {
+  } = o.useContext(h.h), [p, f] = o.useState(null), C = (0, u.uR)(N, p), g = function(e, t) {
 if (null == e)
   return 'enter';
 switch (e) {
@@ -276,7 +276,7 @@ c
   ]), (0, l.jsxs)(l.Fragment, {
 children: [
   (0, l.jsx)(u.Ji, {
-    ref: p,
+    ref: f,
     sprites: y,
     colors: D,
     spriteWidth: 45,
@@ -326,7 +326,7 @@ c = function(e) {
   }
   return null;
 }(n),
-d = (0, f.Z)(n),
+d = (0, p.Z)(n),
 {
   createMultipleConfettiAt: u,
   addClickListener: _
@@ -389,7 +389,7 @@ y = o.useCallback((e, t) => {
 className: x.iconWrapper,
 innerRef: M,
 onClick: r,
-children: (0, l.jsx)(p.Z, {
+children: (0, l.jsx)(f.Z, {
   className: x.icon,
   onMouseEnter: D
 })

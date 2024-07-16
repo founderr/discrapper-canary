@@ -9,8 +9,8 @@ var i = t(735250),
   l = t.n(s),
   o = t(544891),
   r = t(846519),
-  c = t(481060),
-  d = t(668781),
+  d = t(481060),
+  c = t(668781),
   u = t(139387),
   I = t(308063),
   m = t(208567),
@@ -58,7 +58,7 @@ j = a.useCallback(() => {
   (0, h.JG)(e);
 }, [t]),
 D = a.useCallback(() => {
-  (0, c.openModal)(e => (0, i.jsx)(c.ConfirmModal, {
+  (0, d.openModal)(e => (0, i.jsx)(d.ConfirmModal, {
     ...e,
     header: x.Z.Messages.WEBHOOK_DELETE_TITLE.format({
       name: t.name
@@ -70,16 +70,16 @@ D = a.useCallback(() => {
         let {
           status: n
         } = e;
-        429 === n ? d.Z.show({
+        429 === n ? c.Z.show({
           title: x.Z.Messages.WEBHOOK_ERROR_DELETING_WEBHOOK,
           body: x.Z.Messages.WEBHOOK_ERROR_DELETING_WEBHOOK_RATE_LIMIT
-        }) : d.Z.show({
+        }) : c.Z.show({
           title: x.Z.Messages.WEBHOOK_ERROR_DELETING_WEBHOOK,
           body: x.Z.Messages.WEBHOOK_ERROR_INTERNAL_SERVER_ERROR
         });
       });
     },
-    children: (0, i.jsx)(c.Text, {
+    children: (0, i.jsx)(d.Text, {
       variant: 'text-md/normal',
       children: x.Z.Messages.WEBHOOK_DELETE_BODY.format({
         name: t.name
@@ -93,13 +93,13 @@ D = a.useCallback(() => {
 ]),
 P = [];
   null != t.user ? P.push({
-icon: c.ClockIcon,
+icon: d.ClockIcon,
 text: x.Z.Messages.INTEGRATION_CREATED_USER_DATE.format({
   user: S(t.user),
   timestamp: p.default.extractTimestamp(t.id)
 })
   }) : P.push({
-icon: c.ClockIcon,
+icon: d.ClockIcon,
 text: x.Z.Messages.INTEGRATION_CREATED_DATE.format({
   timestamp: p.default.extractTimestamp(t.id)
 })
@@ -108,7 +108,7 @@ text: x.Z.Messages.INTEGRATION_CREATED_DATE.format({
   return T && null != s && (B = (0, i.jsxs)('div', {
 className: O.body,
 children: [
-  (0, i.jsx)(c.FormDivider, {
+  (0, i.jsx)(d.FormDivider, {
     className: O.topDivider
   }),
   (0, i.jsxs)(N.Z, {
@@ -131,7 +131,7 @@ children: [
               imageClassName: O.avatarUploaderInner,
               showIcon: !0
             }),
-            null != R.avatar && '' !== R.avatar ? (0, i.jsx)(c.Text, {
+            null != R.avatar && '' !== R.avatar ? (0, i.jsx)(d.Text, {
               color: 'text-danger',
               variant: 'text-sm/normal',
               children: R.avatar
@@ -146,9 +146,9 @@ children: [
             children: [
               (0, i.jsx)(N.Z.Child, {
                 basis: '50%',
-                children: (0, i.jsx)(c.FormItem, {
+                children: (0, i.jsx)(d.FormItem, {
                   title: x.Z.Messages.WEBHOOK_FORM_NAME,
-                  children: (0, i.jsx)(c.TextInput, {
+                  children: (0, i.jsx)(d.TextInput, {
                     value: s.name,
                     onChange: e => {
                       u.Z.updateWebhook({
@@ -162,9 +162,9 @@ children: [
               }),
               (0, i.jsx)(N.Z.Child, {
                 basis: '50%',
-                children: (0, i.jsx)(c.FormItem, {
+                children: (0, i.jsx)(d.FormItem, {
                   title: x.Z.Messages.CHANNEL,
-                  children: (0, i.jsx)(c.SearchableSelect, {
+                  children: (0, i.jsx)(d.SearchableSelect, {
                     value: s.channel_id,
                     options: _,
                     onChange: e => {
@@ -178,15 +178,15 @@ children: [
               })
             ]
           }),
-          (0, i.jsx)(c.FormDivider, {
+          (0, i.jsx)(d.FormDivider, {
             className: O.bottomDivider
           }),
           (0, i.jsxs)(N.Z, {
             children: [
-              (0, i.jsx)(c.Tooltip, {
+              (0, i.jsx)(d.Tooltip, {
                 text: x.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL,
                 forceOpen: Z,
-                color: c.TooltipColors.GREEN,
+                color: d.TooltipColors.GREEN,
                 disableTooltipPointerEvents: !0,
                 children: e => {
                   let {
@@ -197,26 +197,26 @@ children: [
                     onFocus: o,
                     ...r
                   } = e;
-                  return (0, i.jsx)(c.Button, {
+                  return (0, i.jsx)(d.Button, {
                     ...r,
                     'aria-label': '',
                     onClick: () => {
-                      null == n || n(), v(!0), c.AccessibilityAnnouncer.announce(x.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL), M.start(1000, () => v(!1)), j();
+                      null == n || n(), v(!0), d.AccessibilityAnnouncer.announce(x.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL), M.start(1000, () => v(!1)), j();
                     },
-                    size: c.Button.Sizes.SMALL,
-                    color: c.Button.Colors.PRIMARY,
-                    look: c.Button.Looks.FILLED,
+                    size: d.Button.Sizes.SMALL,
+                    color: d.Button.Colors.PRIMARY,
+                    look: d.Button.Looks.FILLED,
                     className: O.copyButton,
                     disabled: null == t.token || '' === t.token,
                     children: x.Z.Messages.INTEGRATIONS_WEBHOOK_COPY_URL
                   });
                 }
               }),
-              (0, i.jsx)(c.Button, {
+              (0, i.jsx)(d.Button, {
                 onClick: D,
-                size: c.Button.Sizes.SMALL,
-                color: c.Button.Colors.RED,
-                look: c.Button.Looks.LINK,
+                size: d.Button.Sizes.SMALL,
+                color: d.Button.Colors.RED,
+                look: d.Button.Looks.LINK,
                 children: x.Z.Messages.INTEGRATIONS_WEBHOOK_DELETE
               })
             ]
@@ -226,14 +226,14 @@ children: [
     ]
   })
 ]
-  })), (0, i.jsx)(c.Card, {
+  })), (0, i.jsx)(d.Card, {
 editable: !0,
 id: n,
 className: l()(O.card, g ? O.pulse : null),
 children: (0, i.jsxs)(N.Z, {
   direction: N.Z.Direction.VERTICAL,
   children: [
-    (0, i.jsx)(c.Clickable, {
+    (0, i.jsx)(d.Clickable, {
       className: O.header,
       'aria-expanded': T,
       onClick: b,

@@ -15,8 +15,8 @@ var i = n(735250),
   g = n(868807),
   p = n(981631),
   T = n(217702),
-  f = n(689938),
-  S = n(958633),
+  S = n(689938),
+  f = n(958633),
   C = n(153521);
 let N = a.memo(function(e) {
   let {
@@ -39,53 +39,53 @@ A
   ]), R = null;
   if (s)
 R = (0, i.jsx)(o.Text, {
-  className: S.messageReplacement,
+  className: f.messageReplacement,
   variant: 'text-sm/normal',
   color: 'text-muted',
-  children: f.Z.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
+  children: S.Z.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
 });
   else if (n) {
 if (null != N && v)
   R = (0, i.jsx)(o.Text, {
-    className: S.messageReplacement,
+    className: f.messageReplacement,
     variant: 'text-sm/normal',
     color: 'text-muted',
-    children: f.Z.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
+    children: S.Z.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
   });
 else if (null != N) {
   let {
     contentPlaceholder: e,
     renderedContent: t
-  } = (0, _.f)(N, O, v, r()(S.messageContent, C.inlineFormat), {
-    leadingIconClass: S.messageContentIcon,
-    trailingIconClass: S.messageContentIcon,
+  } = (0, _.f)(N, O, v, r()(f.messageContent, C.inlineFormat), {
+    leadingIconClass: f.messageContentIcon,
+    trailingIconClass: f.messageContentIcon,
     iconSize: T.WW
   });
   R = null != t ? (0, i.jsx)(o.Text, {
     variant: 'text-sm/normal',
     color: 'text-muted',
-    className: S.messageContent,
+    className: f.messageContent,
     children: t
   }) : (0, i.jsx)(o.Text, {
     tag: 'span',
     variant: 'text-sm/normal',
     color: 'text-muted',
-    className: S.messageReplacement,
+    className: f.messageReplacement,
     children: e
   });
 } else
   R = (0, i.jsx)(o.Text, {
-    className: S.messageReplacement,
+    className: f.messageReplacement,
     variant: 'text-sm/normal',
     color: 'text-muted',
-    children: f.Z.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
+    children: S.Z.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
   });
   } else
 R = null;
   return (0, i.jsx)(m.a.Provider, {
 value: (0, d.Z)(L, Z),
 children: (0, i.jsx)(o.FocusBlock, {
-  className: S.messageFocusBlock,
+  className: f.messageFocusBlock,
   children: R
 })
   });

@@ -9,13 +9,13 @@ var i = t(735250),
   l = t(442837),
   o = t(481060),
   r = t(749210),
-  c = t(412899),
-  d = t(995648),
-  u = t(422559),
-  I = t(598077),
-  m = t(271383),
-  _ = t(430824),
-  N = t(467679),
+  d = t(412899),
+  c = t(995648),
+  u = t(385499),
+  I = t(422559),
+  m = t(598077),
+  _ = t(271383),
+  N = t(430824),
   E = t(285952),
   T = t(823379),
   h = t(700785),
@@ -27,9 +27,9 @@ function C(e) {
   let {
 guild: t,
 applicationIntegration: C
-  } = e, f = (0, l.e7)([_.Z], () => _.Z.getRoles(t.id)), {
+  } = e, f = (0, l.e7)([N.Z], () => N.Z.getRoles(t.id)), {
 application: x
-  } = C, O = null != x.bot ? new I.Z(x.bot) : null, S = (0, l.e7)([m.ZP], () => null != O ? m.ZP.getMember(t.id, O.id) : null, [
+  } = C, O = null != x.bot ? new m.Z(x.bot) : null, S = (0, l.e7)([_.ZP], () => null != O ? _.ZP.getMember(t.id, O.id) : null, [
 O,
 t
   ]), A = null == O ? void 0 : O.id;
@@ -74,7 +74,7 @@ children: (0, i.jsxs)(E.Z, {
             user: O
           })
         }),
-        (0, i.jsx)(N.Z, {
+        (0, i.jsx)(u.Z, {
           className: g.tag,
           verified: O.isVerifiedBot()
         })
@@ -83,7 +83,7 @@ children: (0, i.jsxs)(E.Z, {
     function(e, n, t, a) {
       let l = [],
         r = [];
-      for (let e of u.VY)
+      for (let e of I.VY)
         s.e$(a, e) ? l.push(e) : r.push(e);
       return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -98,7 +98,7 @@ children: (0, i.jsxs)(E.Z, {
                   numRoles: t.length
                 })
               }),
-              (0, i.jsx)(c.ZP, {
+              (0, i.jsx)(d.ZP, {
                 className: g.rolePills,
                 user: e,
                 guild: n,
@@ -108,7 +108,7 @@ children: (0, i.jsxs)(E.Z, {
               })
             ]
           }) : null,
-          l.length > 0 || r.length > 0 ? (0, i.jsx)(d.Z, {
+          l.length > 0 || r.length > 0 ? (0, i.jsx)(c.Z, {
             className: g.permissionList,
             grantedPermissions: l,
             grantedPermissionsHeader: p.Z.Messages.INTEGRATIONS_APPLICATION_GRANTED_PERMISSIONS,

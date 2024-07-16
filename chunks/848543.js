@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(459273),
   p = n(242291),
   T = n(792165),
-  f = n(603074),
-  S = n(981631),
+  S = n(603074),
+  f = n(981631),
   C = n(921944),
   N = n(689938),
   A = n(902569);
@@ -69,7 +69,7 @@ renderPopout: e => {
   let {
     closePopout: n
   } = e;
-  return (0, i.jsx)(f.Z, {
+  return (0, i.jsx)(S.Z, {
     guildId: D,
     channel: t,
     onClose: n,
@@ -121,7 +121,7 @@ b,
 P
   ]);
   return (0, g.yp)({
-event: S.CkL.TOGGLE_SOUNDBOARD,
+event: f.CkL.TOGGLE_SOUNDBOARD,
 handler: Y
   }), (0, i.jsx)(E.Gt, {
 value: G,

@@ -10,18 +10,18 @@ var i = n(735250),
   l = n(481060),
   o = n(239091),
   c = n(906732),
-  d = n(134432),
-  u = n(451603),
-  _ = n(885714),
-  E = n(940627),
+  d = n(372769),
+  u = n(134432),
+  _ = n(451603),
+  E = n(885714),
   h = n(806519),
   I = n(768581),
   m = n(900849),
   g = n(556017),
   p = n(879484),
   T = n(26580),
-  f = n(206887),
-  S = n(981631),
+  S = n(206887),
+  f = n(981631),
   C = n(689938),
   N = n(465423),
   A = n(129512),
@@ -50,12 +50,12 @@ analyticsLocations: B
   } = (0, c.ZP)(), H = I.ZP.getGuildDiscoverySplashURL({
 id: R,
 splash: x,
-size: 240 * (0, d.x_)()
+size: 240 * (0, u.x_)()
   }), V = null != H ? H : function(e) {
 switch (e) {
-  case S.BRd.DARK:
+  case f.BRd.DARK:
     return A;
-  case S.BRd.LIGHT:
+  case f.BRd.LIGHT:
     return v;
 }
   }(Z), F = null !== (t = I.ZP.getGuildIconURL({
@@ -67,14 +67,14 @@ let {
   className: t
 } = e.target;
 if (!t.includes('Menu')) {
-  if ((0, u.yU)()) {
-    (0, _.Z)({
+  if ((0, _.yU)()) {
+    (0, E.Z)({
       analyticsSource: {
-        page: S.ZY5.GUILD_DISCOVERY
+        page: f.ZY5.GUILD_DISCOVERY
       },
       analyticsLocation: {
-        page: S.ZY5.GUILD_DISCOVERY,
-        section: S.jXE.GUILD_CAP_UPSELL_MODAL
+        page: f.ZY5.GUILD_DISCOVERY,
+        section: f.jXE.GUILD_CAP_UPSELL_MODAL
       },
       analyticsLocations: B
     });
@@ -160,7 +160,7 @@ children: [
                     className: N.headerName,
                     children: [
                       (0, i.jsx)('div', {
-                        children: (0, i.jsx)(E.Z, {
+                        children: (0, i.jsx)(d.Z, {
                           guild: s,
                           className: N.guildBadge,
                           size: 16
@@ -223,7 +223,7 @@ children: [
           }),
           z ? (0, i.jsx)('div', {
             className: N.actionButtons,
-            children: (0, i.jsx)(f.Z, {
+            children: (0, i.jsx)(S.Z, {
               guild: s
             })
           }) : null

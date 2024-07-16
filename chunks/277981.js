@@ -7,8 +7,8 @@ var r = n(735250),
   u = n(367907),
   c = n(998698),
   d = n(895924),
-  _ = n(718745),
-  E = n(156361),
+  _ = n(588468),
+  E = n(718745),
   f = n(285952),
   h = n(590921),
   p = n(665692),
@@ -34,7 +34,7 @@ query: t.trim()
 let A = {
   stores: [
 c.Z,
-_.Z
+E.Z
   ],
   matches(e, t, n, r, i) {
 var a;
@@ -49,7 +49,7 @@ if (null == a)
   return g;
 let u = o().findKey(m.nkL, e => e.command === a);
 i && null != u && s.length > 0 && l.Z.search(u, s);
-let c = _.Z.getResults(u, s);
+let c = E.Z.getResults(u, s);
 return null == c ? g : {
   results: {
     command: a,
@@ -69,7 +69,7 @@ let {
   query: l,
   options: u,
   onHover: d,
-  onClick: _
+  onClick: E
 } = e, {
   command: p,
   query: g
@@ -87,9 +87,9 @@ if (null != t) {
     n = t.map((t, n) => {
       if (t.type === m.q9n.GIF) {
         var i, o, s;
-        return e = !0, (0, r.jsx)(E.ZP.GIFIntegration, {
+        return e = !0, (0, r.jsx)(_.ZP.GIFIntegration, {
           className: T.horizontalAutocomplete,
-          onClick: _,
+          onClick: E,
           onHover: d,
           selected: a === n,
           index: n,
@@ -107,7 +107,7 @@ if (null != t) {
     }) : null != s ? s : p;
   return (0, r.jsxs)(i.Fragment, {
     children: [
-      (0, r.jsx)(E.ZP.Title, {
+      (0, r.jsx)(_.ZP.Title, {
         title: l
       }),
       e ? (0, r.jsx)(f.Z, {

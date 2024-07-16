@@ -24,7 +24,7 @@ renderHeader: m,
 renderPurchaseConfirmation: T,
 planGroup: h,
 reviewWarningMessage: N,
-skuId: f
+skuId: p
   } = e;
   (0, a.openModalLazy)(async () => {
 let {
@@ -45,7 +45,7 @@ let {
   n.e('15972'),
   n.e('12013'),
   n.e('47006'),
-  n.e('29609'),
+  n.e('60623'),
   n.e('32776'),
   n.e('95900'),
   n.e('8016'),
@@ -54,25 +54,25 @@ let {
 ]).then(n.bind(n, 7305));
 return n => {
   let {
-    onClose: p,
+    onClose: f,
     ...C
   } = n;
   return (0, i.jsx)(e, {
     activeSubscription: l,
     stepConfigs: r,
-    skuIDs: [f],
+    skuIDs: [p],
     children: (0, i.jsx)(s.KB, {
       children: (0, i.jsx)(a, {
         ...C,
         initialPlanId: t,
         onClose: e => {
-          p(), null == d || d(e);
+          f(), null == d || d(e);
         },
         analyticsLocations: E,
         analyticsObject: u,
         analyticsLocation: _,
         analyticsSubscriptionType: I,
-        skuId: f,
+        skuId: p,
         renderHeader: m,
         renderPurchaseConfirmation: T,
         planGroup: h,

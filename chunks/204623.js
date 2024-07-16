@@ -12,8 +12,8 @@ var r = n(735250),
   u = n(946188),
   c = n(481060),
   d = n(596454),
-  _ = n(451478),
-  E = n(586576),
+  _ = n(406128),
+  E = n(451478),
   f = n(176354),
   h = n(63063),
   p = n(358085),
@@ -22,8 +22,8 @@ var r = n(735250),
   T = n(151851),
   g = n(981631),
   S = n(689938);
-let A = l.ZP.connectStores([_.Z], () => ({
-  focused: _.Z.isFocused()
+let A = l.ZP.connectStores([E.Z], () => ({
+  focused: E.Z.isFocused()
 }))(T.Z);
 class N extends i.PureComponent {
   getPlatform() {
@@ -68,7 +68,7 @@ return (0, r.jsxs)(i.Fragment, {
     (0, r.jsx)(A, {
       type: this.getPlatform()
     }),
-    (0, r.jsx)(E.Z, {
+    (0, r.jsx)(_.Z, {
       title: S.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
       note: e,
       action: t

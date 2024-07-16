@@ -20,12 +20,12 @@ var n = s(735250),
   h = s(231757),
   g = s(323588),
   O = s(605236),
-  p = s(553795),
-  R = s(430824),
-  x = s(771845),
-  M = s(246946),
-  D = s(797717),
-  f = s(346656),
+  p = s(565138),
+  R = s(297700),
+  x = s(553795),
+  M = s(430824),
+  f = s(771845),
+  D = s(246946),
   P = s(626135),
   L = s(63063),
   Z = s(706454),
@@ -48,12 +48,12 @@ let w = e => {
   isJoining: r,
   joinErrorMessage: l,
   showJoinErrorMessage: c
-} = (0, o.cj)([p.Z], () => ({
-  isJoining: p.Z.isJoining(i.id),
-  joinErrorMessage: '' === p.Z.joinErrorMessage(i.id) ? y.Z.Messages.ERROR : p.Z.joinErrorMessage(i.id),
-  showJoinErrorMessage: void 0 !== p.Z.joinErrorMessage(i.id)
+} = (0, o.cj)([x.Z], () => ({
+  isJoining: x.Z.isJoining(i.id),
+  joinErrorMessage: '' === x.Z.joinErrorMessage(i.id) ? y.Z.Messages.ERROR : x.Z.joinErrorMessage(i.id),
+  showJoinErrorMessage: void 0 !== x.Z.joinErrorMessage(i.id)
 }), [i.id]),
-d = null != (0, o.e7)([R.Z], () => R.Z.getGuild(i.guild.id), [i.guild.id]);
+d = null != (0, o.e7)([M.Z], () => M.Z.getGuild(i.guild.id), [i.guild.id]);
   return !d && (a = (0, n.jsx)(_.Button, {
 size: _.ButtonSizes.SMALL,
 onClick: function() {
@@ -69,8 +69,8 @@ children: [
   (0, n.jsxs)('div', {
     className: V.integration,
     children: [
-      (0, n.jsx)(f.Z, {
-        size: f.Z.Sizes.SMALL,
+      (0, n.jsx)(p.Z, {
+        size: p.Z.Sizes.SMALL,
         guild: i.guild,
         className: V.guildIcon
       }),
@@ -114,8 +114,8 @@ function k(e) {
   locale: N
 } = e,
 [O, p] = a.useState(T.friendSync),
-[R, x] = a.useState(T.visibility),
-[M, f] = a.useState(T.metadataVisibility),
+[x, M] = a.useState(T.visibility),
+[f, D] = a.useState(T.metadataVisibility),
 [P, Z] = a.useState(T.showActivity),
 [F, Y] = a.useState(null),
 [k, H] = a.useState(null),
@@ -124,10 +124,10 @@ function k(e) {
 X = (0, m.rR)(T.type),
 q = C.Z.get(X);
   a.useEffect(() => {
-p(T.friendSync), x(T.visibility), f(T.metadataVisibility), Z(T.showActivity);
+p(T.friendSync), M(T.visibility), D(T.metadataVisibility), Z(T.showActivity);
   }, [T]), a.useEffect(() => {
 if (!1 !== T.verified)
-  null != F && (x(F), u.Z.setVisibility(T.type, T.id, F), Y(null)), null != k && (f(k), u.Z.setMetadataVisibility(T.type, T.id, k), H(null));
+  null != F && (M(F), u.Z.setVisibility(T.type, T.id, F), Y(null)), null != k && (D(k), u.Z.setMetadataVisibility(T.type, T.id, k), H(null));
   }, [T]);
 
   function J() {
@@ -173,7 +173,7 @@ if (e && !t) {
   });
   return;
 }
-x(s), u.Z.setVisibility(T.type, T.id, s);
+M(s), u.Z.setVisibility(T.type, T.id, s);
   }
 
   function et(e) {
@@ -187,7 +187,7 @@ if (e && !t) {
   });
   return;
 }
-f(s), u.Z.setMetadataVisibility(T.type, T.id, s);
+D(s), u.Z.setMetadataVisibility(T.type, T.id, s);
   }
 
   function es(e) {
@@ -208,7 +208,7 @@ children: [
       r = null;
     return s.type === U.ABu.TWITTER && i && (r = (0, n.jsx)(_.Tooltip, {
       text: y.Z.Messages.CONNECTION_VERIFIED_ON_TWITTER,
-      children: e => (0, n.jsx)(D.Z, {
+      children: e => (0, n.jsx)(R.Z, {
         ...e,
         className: V.connectionAccountLabelVerified,
         color: c.Z.unsafe_rawColors.TWITTER.css,
@@ -366,9 +366,9 @@ children: [
   })), (null === (i = C.Z.get(T.type)) || void 0 === i ? void 0 : i.hasMetadata) === !0 && (l = (0, n.jsx)(_.FormSwitch, {
     className: V.connectionOptionSwitch,
     hideBorder: !0,
-    value: 1 === M,
+    value: 1 === f,
     onChange: et,
-    disabled: 1 !== R || null == T.metadata,
+    disabled: 1 !== x || null == T.metadata,
     children: (0, n.jsx)(_.Text, {
       variant: 'text-sm/semibold',
       children: y.Z.Messages.DISPLAY_DETAILS_ON_PROFILE
@@ -381,7 +381,7 @@ children: [
         (0, n.jsx)(_.FormSwitch, {
           className: V.connectionOptionSwitch,
           hideBorder: !0,
-          value: 1 === R,
+          value: 1 === x,
           onChange: ee,
           children: (0, n.jsx)(_.Text, {
             variant: 'text-sm/semibold',
@@ -558,11 +558,11 @@ children: t
   });
 }
 t.Z = () => {
-  let e = (0, o.e7)([M.Z], () => M.Z.hidePersonalInformation),
-t = (0, o.e7)([p.Z], () => p.Z.isFetching()),
-s = (0, o.e7)([p.Z], () => p.Z.getAccounts()),
+  let e = (0, o.e7)([D.Z], () => D.Z.hidePersonalInformation),
+t = (0, o.e7)([x.Z], () => x.Z.isFetching()),
+s = (0, o.e7)([x.Z], () => x.Z.getAccounts()),
 i = (0, N.ZP)();
-  (0, o.e7)([x.ZP], () => x.ZP.getFlattenedGuildIds());
+  (0, o.e7)([f.ZP], () => f.ZP.getFlattenedGuildIds());
   let r = (0, o.e7)([Z.default], () => Z.default.locale);
   return (a.useEffect(() => {
 u.Z.fetch();

@@ -1,6 +1,6 @@
 n.d(t, {
   U: function() {
-return S;
+return f;
   }
 });
 var i = n(735250),
@@ -20,15 +20,15 @@ var i = n(735250),
   g = n(982345),
   p = n(49898),
   T = n(689938),
-  f = n(65050);
+  S = n(65050);
 
-function S() {
+function f() {
   let {
 tabs: e,
 selectedTab: t,
 onSelectTab: n
   } = (0, g.Y)(), {
-handleScroll: S,
+handleScroll: f,
 scrollPosition: C
   } = (0, o.c)(), N = (0, l.lg)(t.id), {
 isSearchActive: A,
@@ -61,29 +61,29 @@ L
       return (0, i.jsx)(_.Z, {
         categoryId: N,
         tab: t.id,
-        onScroll: S
+        onScroll: f
       });
     case p.vf.HUBS:
       return (0, i.jsx)(h.X, {
-        onScroll: S
+        onScroll: f
       });
     case p.vf.GUILDS:
       return (0, i.jsx)(E.U, {
-        onScroll: S
+        onScroll: f
       });
     default:
       (0, r.vE)(t.id);
   }
 }, [
   N,
-  S,
+  f,
   x,
   L,
   Z,
   t.id
 ]),
 P = a.useMemo(() => x ? (0, i.jsx)(s.Clickable, {
-  className: f.clickable,
+  className: S.clickable,
   onClick: L,
   children: (0, i.jsx)(s.ArrowLargeLeftIcon, {
     color: s.tokens.colors.HEADER_PRIMARY,
@@ -128,7 +128,7 @@ y = (0, c.Z)({
   scrollPosition: C
 });
   return (0, i.jsxs)('div', {
-className: f.container,
+className: S.container,
 children: [
   (0, i.jsx)(u.Z, {
     tabs: e,

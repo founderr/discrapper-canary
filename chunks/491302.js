@@ -9,8 +9,8 @@ var i = t(735250),
   l = t(668781),
   o = t(139387),
   r = t(308063),
-  c = t(285952),
-  d = t(259580),
+  d = t(285952),
+  c = t(259580),
   u = t(768581),
   I = t(486199),
   m = t(981631),
@@ -79,13 +79,13 @@ children: [
   (0, i.jsx)(s.FormDivider, {
     className: N.topDivider
   }),
-  (0, i.jsx)(c.Z, {
-    children: (0, i.jsxs)(c.Z, {
-      direction: c.Z.Direction.VERTICAL,
+  (0, i.jsx)(d.Z, {
+    children: (0, i.jsxs)(d.Z, {
+      direction: d.Z.Direction.VERTICAL,
       children: [
-        (0, i.jsxs)(c.Z, {
+        (0, i.jsxs)(d.Z, {
           children: [
-            (0, i.jsx)(c.Z.Child, {
+            (0, i.jsx)(d.Z.Child, {
               basis: '50%',
               children: (0, i.jsx)(s.FormItem, {
                 title: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_NAME,
@@ -101,7 +101,7 @@ children: [
                 })
               })
             }),
-            (0, i.jsx)(c.Z.Child, {
+            (0, i.jsx)(d.Z.Child, {
               basis: '50%',
               children: (0, i.jsx)(s.FormItem, {
                 title: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DEST_CHANNEL,
@@ -121,7 +121,7 @@ children: [
         (0, i.jsx)(s.FormDivider, {
           className: N.bottomDivider
         }),
-        (0, i.jsx)(c.Z, {
+        (0, i.jsx)(d.Z, {
           children: (0, i.jsx)(s.Button, {
             onClick: C,
             size: s.Button.Sizes.SMALL,
@@ -138,15 +138,15 @@ children: [
   })), (0, i.jsx)(s.Card, {
 editable: !0,
 className: N.card,
-children: (0, i.jsxs)(c.Z, {
-  direction: c.Z.Direction.VERTICAL,
+children: (0, i.jsxs)(d.Z, {
+  direction: d.Z.Direction.VERTICAL,
   children: [
     (0, i.jsx)(s.Clickable, {
       className: N.header,
       'aria-expanded': T,
       onClick: p,
-      children: (0, i.jsxs)(c.Z, {
-        align: c.Z.Align.CENTER,
+      children: (0, i.jsxs)(d.Z, {
+        align: d.Z.Align.CENTER,
         children: [
           (0, i.jsx)(I.Z, {
             name: n.name,
@@ -154,7 +154,7 @@ children: (0, i.jsxs)(c.Z, {
             detailsClassName: N.__invalid_description,
             details: f
           }),
-          (0, i.jsx)(d.Z, {
+          (0, i.jsx)(c.Z, {
             className: N.expandIcon,
             expanded: T,
             'aria-hidden': !0

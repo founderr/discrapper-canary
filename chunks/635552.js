@@ -6,8 +6,8 @@ return d;
 var r = n(470079),
   a = n(979554),
   o = n(809206),
-  l = n(350327),
-  i = n(884697),
+  i = n(350327),
+  l = n(884697),
   s = n(328456),
   c = n(689938);
 let d = e => {
@@ -15,21 +15,21 @@ let d = e => {
 product: t,
 onSuccess: d,
 onError: u
-  } = e, [f, p] = r.useState(!1), {
-firstAvatarDecoration: g,
+  } = e, [f, g] = r.useState(!1), {
+firstAvatarDecoration: p,
 firstProfileEffect: C
-  } = (0, s.R)(t), v = (0, i.x6)(t) ? c.Z.Messages.COLLECTIBLES_PROFILE_UPDATE_NOTIFICATION : t.type === a.Z.AVATAR_DECORATION ? c.Z.Messages.COLLECTIBLES_AVATAR_DECO_UPDATED_NOTIFICATION : c.Z.Messages.COLLECTIBLES_PFX_UPDATED_NOTIFICATION;
+  } = (0, s.R)(t), m = (0, l.x6)(t) ? c.Z.Messages.COLLECTIBLES_PROFILE_UPDATE_NOTIFICATION : t.type === a.Z.AVATAR_DECORATION ? c.Z.Messages.COLLECTIBLES_AVATAR_DECO_UPDATED_NOTIFICATION : c.Z.Messages.COLLECTIBLES_PFX_UPDATED_NOTIFICATION;
   return {
 handleUseNow: r.useCallback(async () => {
-  p(!0);
+  g(!0);
   try {
-    if (null != g && await (0, o.Mn)({
-        avatarDecoration: g
+    if (null != p && await (0, o.Mn)({
+        avatarDecoration: p
       }), null != C) {
       let e = {
         profile_effect_id: C.id
       };
-      await (0, l.Z)(e);
+      await (0, i.Z)(e);
     } {
       let {
         ToastPosition: e,
@@ -38,7 +38,7 @@ handleUseNow: r.useCallback(async () => {
         popToast: a,
         showToast: o
       } = await Promise.resolve().then(n.bind(n, 481060));
-      a(), o(r(v, t.MESSAGE, {
+      a(), o(r(m, t.MESSAGE, {
         duration: 6000,
         position: e.TOP
       }));
@@ -47,13 +47,13 @@ handleUseNow: r.useCallback(async () => {
   } catch (e) {
     null == u || u(e);
   } finally {
-    p(!1);
+    g(!1);
   }
 }, [
-  g,
+  p,
   C,
   d,
-  v,
+  m,
   u
 ]),
 isApplying: f

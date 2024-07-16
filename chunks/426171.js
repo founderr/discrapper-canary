@@ -1,12 +1,12 @@
 n.d(t, {
   Kp: function() {
-return h;
+return _;
   },
   u9: function() {
 return C;
   },
   xV: function() {
-return _;
+return h;
   }
 }), n(757143), n(47120), n(653041);
 var r = n(470079),
@@ -66,19 +66,19 @@ for (let e of t.values()) {
 }
 return () => {};
   },
-  h = e => {
+  _ = e => {
 let {
   categories: t,
   isFetchingCategories: n,
   isLayer: d,
   initialItemCardRef: p
-} = e, f = (0, a.e7)([o.Z], () => o.Z.useReducedMotion), C = r.useRef(null), h = (0, s.TH)(), _ = h.pathname === u.Z5c.COLLECTIBLES_SHOP ? i.Z.HOME_PAGE_SHOP_TAB : h.pathname === u.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? i.Z.COLLECTIBLES_SHOP_FULLSCREEN : i.Z.COLLECTIBLES_SHOP, {
+} = e, f = (0, a.e7)([o.Z], () => o.Z.useReducedMotion), C = r.useRef(null), _ = (0, s.TH)(), h = _.pathname === u.Z5c.COLLECTIBLES_SHOP ? i.Z.HOME_PAGE_SHOP_TAB : _.pathname === u.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? i.Z.COLLECTIBLES_SHOP_FULLSCREEN : i.Z.COLLECTIBLES_SHOP, {
   analyticsLocations: b
-} = (0, l.ZP)(_);
+} = (0, l.ZP)(h);
 r.useEffect(() => {
   if (d)
     return;
-  let e = g.exec(h.hash);
+  let e = g.exec(_.hash);
   if (null != e) {
     let t = e[1];
     C.current = t;
@@ -96,7 +96,7 @@ r.useEffect(() => {
           categories: t,
           productSkuId: e,
           analyticsLocations: b,
-          analyticsSource: _,
+          analyticsSource: h,
           initialItemCardRef: p,
           reducedMotion: f
         });
@@ -109,7 +109,7 @@ r.useEffect(() => {
 }, [
   d,
   b,
-  _,
+  h,
   t,
   n,
   x,
@@ -117,7 +117,7 @@ r.useEffect(() => {
   f
 ]);
   },
-  _ = e => {
+  h = e => {
 let t = r.useRef({}),
   n = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
   s = r.useCallback((e, n) => {

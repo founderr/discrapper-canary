@@ -12,9 +12,9 @@ var i, a = n(735250),
   d = n(657305),
   u = n(367907),
   h = n(282256),
-  p = n(833858),
-  m = n(223135),
-  _ = n(366695),
+  p = n(925329),
+  m = n(833858),
+  _ = n(223135),
   f = n(374129),
   E = n(639351),
   C = n(368666),
@@ -60,8 +60,8 @@ return i && null == t ? (0, a.jsx)(o.TooltipContainer, {
   })
 }, 'add-status') : (0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
-  text: (0, p.O8)(t),
-  children: (0, a.jsx)(m.Z, {
+  text: (0, m.O8)(t),
+  children: (0, a.jsx)(_.Z, {
     hangStatusActivity: t,
     className: r()(S.hangStatusIcon, n)
   })
@@ -372,7 +372,7 @@ iconClassName: n,
 guildId: i,
 channelId: s,
 userId: d
-  } = e, [h, p] = l.useState(!1), m = (0, c.O)(e => p(e));
+  } = e, [h, m] = l.useState(!1), _ = (0, c.O)(e => m(e));
   return l.useEffect(() => {
 h && u.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
   channel_id: s,
@@ -394,11 +394,11 @@ text: v.Z.Messages.UNFORMATTED_PLAYING_GAME.format({
 }),
 className: S.iconSpacing,
 children: (0, a.jsx)('div', {
-  ref: m,
-  children: (0, a.jsx)(_.Z, {
+  ref: _,
+  children: (0, a.jsx)(p.Z, {
     className: r()(S.icon, n),
     game: t,
-    size: _.Z.Sizes.XSMALL,
+    size: p.Z.Sizes.XSMALL,
     onMouseEnter: () => {
       u.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
         channel_id: s,

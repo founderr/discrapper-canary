@@ -26,8 +26,8 @@ var s = n(735250),
   x = n(498765),
   b = n(635921),
   O = n(177839),
-  L = n(794484),
-  P = n(392521),
+  P = n(794484),
+  L = n(392521),
   v = n(349803),
   Z = n(179984),
   D = n(409100),
@@ -67,24 +67,24 @@ let {
 return t ? (0, s.jsxs)('div', {
   className: i()(H.whatsNewSectionBackground),
   children: [
-    (0, s.jsx)(L.Z, {
+    (0, s.jsx)(P.Z, {
       variant: B.R0.WHATS_NEW,
       isFullScreen: t
     }),
-    (0, s.jsx)(L.Z, {
+    (0, s.jsx)(P.Z, {
       isFullScreen: t,
       showAllPerksButton: t ? (0, s.jsx)(U.Z, {
         setIsAllPerksVisible: a,
         previousComponent: B.MQ.MARKETING
       }) : void 0
     }),
-    n ? (0, s.jsx)(P.ZP, {
+    n ? (0, s.jsx)(L.ZP, {
       className: H.pdSparklesTop,
-      variant: P.u0.TOP
+      variant: L.u0.TOP
     }) : null,
-    n ? (0, s.jsx)(P.ZP, {
+    n ? (0, s.jsx)(L.ZP, {
       className: H.pdSparklesBottom,
-      variant: P.u0.BOTTOM
+      variant: L.u0.BOTTOM
     }) : null
   ]
 }) : null;
@@ -96,7 +96,7 @@ isFullscreen: n,
 entrypoint: r
   } = e, {
 bucket: x
-  } = (0, C.wj)('PremiumMarketingHome'), O = x > 0, L = a.useRef(null), [P, U] = a.useState(!1), [Y, z] = a.useState(!1), [Q, q] = a.useState(!1), [J, X] = a.useState(!1), $ = (0, l.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()), ee = null != $ ? (0, I.Af)($) : null, et = null != ee ? I.ZP.getSkuIdForPlan(ee.planId) : null, en = null !== et && et !== G.Si.TIER_2 ? G.Si.TIER_2 : null, es = (0, p.n)(), ea = null != es, [er, ei] = a.useState(!1), el = (0, g.Ng)(), eo = (0, A.N)(), ec = null == eo ? void 0 : null === (t = eo.subscription_trial) || void 0 === t ? void 0 : t.sku_id, ed = (0, R.Nx)(), e_ = (0, S.Vi)(), {
+  } = (0, C.wj)('PremiumMarketingHome'), O = x > 0, P = a.useRef(null), [L, U] = a.useState(!1), [Y, z] = a.useState(!1), [Q, q] = a.useState(!1), [J, X] = a.useState(!1), $ = (0, l.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()), ee = null != $ ? (0, I.Af)($) : null, et = null != ee ? I.ZP.getSkuIdForPlan(ee.planId) : null, en = null !== et && et !== G.Si.TIER_2 ? G.Si.TIER_2 : null, es = (0, p.n)(), ea = null != es, [er, ei] = a.useState(!1), el = (0, g.Ng)(), eo = (0, A.N)(), ec = null == eo ? void 0 : null === (t = eo.subscription_trial) || void 0 === t ? void 0 : t.sku_id, ed = (0, R.Nx)(), e_ = (0, S.Vi)(), {
 analyticsLocations: eu
   } = (0, u.ZP)(_.Z.PREMIUM_MARKETING), eE = 'PremiumMarketingHome';
   (0, d.j)({
@@ -243,7 +243,7 @@ eI = (0, s.jsxs)('div', {
       className: n ? H.footerSpacingFullscreen : H.footerSpacing
     }),
     (0, s.jsx)(v.Z, {
-      isVisible: !P && !Y && J,
+      isVisible: !L && !Y && J,
       isFullscreen: n,
       subscriptionTier: en
     }),
@@ -270,7 +270,7 @@ eI = (0, s.jsxs)('div', {
 children: [
   (0, s.jsx)(c.AdvancedScrollerAuto, {
     className: H.scroller,
-    ref: L,
+    ref: P,
     children: eI
   }),
   (0, s.jsx)(j.Z, {

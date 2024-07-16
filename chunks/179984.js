@@ -26,8 +26,8 @@ var s = n(735250),
   x = n(474936),
   b = n(689938),
   O = n(471587),
-  L = n(102655),
-  P = n(768236),
+  P = n(102655),
+  L = n(768236),
   v = n(314907),
   Z = n(826701);
 let D = e => {
@@ -53,7 +53,7 @@ let t, {
     premiumType: n
   } = e,
   a = (0, _.ZP)();
-t = n === x.p9.TIER_0 ? (0, o.wj)(a) ? L : P : (0, o.wj)(a) ? v : Z;
+t = n === x.p9.TIER_0 ? (0, o.wj)(a) ? P : L : (0, o.wj)(a) ? v : Z;
 let r = (0, C.Px)(n);
 return (0, s.jsx)('img', {
   src: t,
@@ -134,8 +134,8 @@ t.Z = e => {
   var t;
   let n, {
   className: r,
-  hideCTAs: L = !1,
-  headingOverride: P,
+  hideCTAs: P = !1,
+  headingOverride: L,
   hidePill: v = !1,
   selectedPlanColumnClassName: Z,
   selectedPlanTier: y = x.p9.TIER_2
@@ -183,7 +183,7 @@ column2: (0, s.jsx)(j, {
   premiumType: x.p9.TIER_2
 })
   };
-  L ? es.push({
+  P ? es.push({
 label: null,
 column1: null,
 column2: null,
@@ -254,7 +254,7 @@ children: (0, s.jsxs)('div', {
     (0, s.jsx)(c.Heading, {
       className: i()(O.titleText, O.__invalid_textColor),
       variant: 'heading-xxl/extrabold',
-      children: null != P ? P : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
+      children: null != L ? L : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
     }),
     (0, s.jsxs)('div', {
       className: O.tableWrapper,

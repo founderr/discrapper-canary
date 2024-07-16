@@ -1,6 +1,6 @@
 n.d(t, {
   o: function() {
-return p;
+return f;
   }
 });
 var i = n(735250);
@@ -20,39 +20,39 @@ var a = n(442837),
   T = n(474936),
   h = n(526761),
   N = n(689938),
-  f = n(541311);
+  p = n(541311);
 
-function p(e) {
+function f(e) {
   var t;
   let {
 onClose: n,
-markAsDismissed: p
+markAsDismissed: f
   } = e, C = (0, a.e7)([_.default], () => _.default.getCurrentUser());
   let g = (t = null == C ? void 0 : C.premiumType) === T.p9.TIER_2 ? N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
 S = E.ZP.canUseCustomCallSounds(C);
   return (0, i.jsxs)(u.Z, {
 isShown: !0,
 type: u.Y.PREMIUM,
-className: f.upsellOuter,
-backgroundClassName: f.upsellInner,
+className: p.upsellOuter,
+backgroundClassName: p.upsellInner,
 children: [
-  null != p ? (0, i.jsx)(o.Clickable, {
-    className: f.close,
-    onClick: () => null == p ? void 0 : p(m.L.DISMISS),
+  null != f ? (0, i.jsx)(o.Clickable, {
+    className: p.close,
+    onClick: () => null == f ? void 0 : f(m.L.DISMISS),
     'aria-label': N.Z.Messages.CLOSE,
     children: (0, i.jsx)(o.CloseSmallIcon, {
       size: 'xs',
       color: 'currentColor',
-      className: f.closeIcon
+      className: p.closeIcon
     })
   }) : null,
   (0, i.jsxs)('div', {
-    className: f.upsellTitle,
+    className: p.upsellTitle,
     children: [
       (0, i.jsx)(o.NitroWheelIcon, {
         size: 'sm',
         color: 'currentColor',
-        className: f.nitroWheel
+        className: p.nitroWheel
       }),
       (0, i.jsx)(r.X, {
         variant: 'heading-sm/bold',
@@ -66,7 +66,7 @@ children: [
   }),
   S ? (0, i.jsx)(s.zx, {
     onClick: function() {
-      c.Z.open(I.oAB.VOICE, h.GA), null == n || n(), null == p || p(m.L.PRIMARY);
+      c.Z.open(I.oAB.VOICE, h.GA), null == n || n(), null == f || f(m.L.PRIMARY);
     },
     children: N.Z.Messages.CHECK_IT_OUT
   }) : (0, i.jsx)(d.Z, {
@@ -77,7 +77,7 @@ children: [
       object: I.qAy.BUTTON_CTA
     },
     color: s.zx.Colors.GREEN,
-    onSubscribeModalClose: () => null == p ? void 0 : p(m.L.PRIMARY)
+    onSubscribeModalClose: () => null == f ? void 0 : f(m.L.PRIMARY)
   })
 ]
   });

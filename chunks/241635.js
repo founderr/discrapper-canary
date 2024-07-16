@@ -10,8 +10,8 @@ var a = t(442837),
   l = t(749210),
   o = t(240872),
   r = t(605436),
-  c = t(228643),
-  d = t(299206),
+  d = t(228643),
+  c = t(299206),
   u = t(496675),
   I = t(867108),
   m = t(689938);
@@ -25,7 +25,7 @@ function _(e, n) {
 N = [],
 E = (0, I.Z)(e, n);
   null != E && N.push(E);
-  let T = (0, d.Z)({
+  let T = (0, c.Z)({
 id: n.id,
 label: m.Z.Messages.COPY_ID_ROLE
   });
@@ -47,7 +47,7 @@ children: (0, i.jsx)(s.MenuItem, {
       }),
       cancelText: m.Z.Messages.CANCEL,
       onConfirm: async () => {
-        h && await (0, c.L_)(e.id, n.id, []), l.Z.deleteRole(e.id, n.id);
+        h && await (0, d.L_)(e.id, n.id, []), l.Z.deleteRole(e.id, n.id);
       }
     });
   }

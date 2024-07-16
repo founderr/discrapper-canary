@@ -18,11 +18,11 @@ var a = s(735250),
   r = s(780384),
   o = s(481060),
   u = s(410030),
-  h = s(134432),
-  m = s(703656),
-  x = s(314897),
-  g = s(271383),
-  j = s(940627),
+  h = s(372769),
+  m = s(134432),
+  x = s(703656),
+  g = s(314897),
+  j = s(271383),
   N = s(806519),
   P = s(768581),
   f = s(900849),
@@ -122,12 +122,12 @@ description: U,
 presenceCount: L,
 memberCount: Z,
 emojis: C
-  } = n, S = (0, c.e7)([x.default], () => x.default.getId()), O = (0, c.e7)([g.ZP], () => g.ZP.isMember(p, S), [
+  } = n, S = (0, c.e7)([g.default], () => g.default.getId()), O = (0, c.e7)([j.ZP], () => j.ZP.isMember(p, S), [
 p,
 S
   ]), [A, D] = i.useState(!1), F = e => {
 if (e.stopPropagation(), O)
-  (0, m.XU)(p, r, u);
+  (0, x.XU)(p, r, u);
 else {
   let e = {
     page: I.ZY5.GUILD_CHANNEL,
@@ -140,7 +140,7 @@ D(!0);
   }, G = P.ZP.getGuildDiscoverySplashURL({
 id: p,
 splash: b,
-size: 250 * (0, h.x_)()
+size: 250 * (0, m.x_)()
   }), R = null !== (l = P.ZP.getGuildIconURL({
 id: p,
 icon: T,
@@ -189,7 +189,7 @@ children: [
       null != v ? (0, a.jsxs)('div', {
         className: E.guildNameWrapper,
         children: [
-          (0, a.jsx)(j.Z, {
+          (0, a.jsx)(h.Z, {
             className: E.badge,
             guild: n,
             tooltipPosition: 'top',

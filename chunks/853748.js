@@ -1,6 +1,6 @@
 n.d(t, {
   $: function() {
-return _;
+return h;
   }
 }), n(653041);
 var r = n(735250),
@@ -18,7 +18,7 @@ var r = n(735250),
   C = n(493978),
   m = n(932135);
 
-function h(e) {
+function _(e) {
   let {
 endDate: t
   } = e, {
@@ -42,7 +42,7 @@ children: (0, r.jsx)('div', {
 })
   });
 }
-let _ = s.memo(function(e) {
+let h = s.memo(function(e) {
   let {
 unpublishedAt: t,
 isVisible: n,
@@ -80,7 +80,7 @@ children: [
     alt: '',
     'aria-hidden': !0
   }),
-  (0, r.jsx)(h, {
+  (0, r.jsx)(_, {
     endDate: t
   }),
   (0, r.jsx)('img', {

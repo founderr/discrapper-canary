@@ -1,57 +1,57 @@
 n.d(t, {
   Z: function() {
-return u;
+return _;
   }
 }), n(47120), n(411104);
-var s = n(735250),
-  r = n(470079),
-  i = n(442837),
-  a = n(481060),
+var r = n(735250),
+  a = n(470079),
+  s = n(442837),
+  u = n(481060),
   l = n(607070),
-  o = n(409302),
-  c = n(474936);
+  i = n(409302),
+  E = n(474936);
 
-function u(e) {
+function _(e) {
   let {
 giftStyle: t,
 className: n,
-shouldAnimate: u = !0,
-defaultAnimationState: d,
-idleAnimationState: h
-  } = e, _ = (0, i.e7)([l.Z], () => l.Z.useReducedMotion), [E, g] = r.useState(d), p = r.useRef((0, o._)(t, E)), [f, I] = r.useState(null == h), [m, N] = r.useState(!1), [T, x] = r.useState(-1), A = () => {
-p.current = (0, o._)(t, E), x(e => e + 1);
-  }, C = () => {
-I(!1), N(!0), x(-1), g(d);
+shouldAnimate: _ = !0,
+defaultAnimationState: c,
+idleAnimationState: O
+  } = e, C = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), [A, d] = a.useState(c), o = a.useRef((0, i._)(t, A)), [N, I] = a.useState(null == O), [f, R] = a.useState(!1), [L, P] = a.useState(-1), h = () => {
+o.current = (0, i._)(t, A), P(e => e + 1);
+  }, S = () => {
+I(!1), R(!0), P(-1), d(c);
   };
-  r.useEffect(() => {
-null == h && g(d);
+  a.useEffect(() => {
+null == O && d(c);
   }, [
-h,
-d
-  ]), r.useEffect(() => {
-if (null != h && T >= 0) {
-  C();
+O,
+c
+  ]), a.useEffect(() => {
+if (null != O && L >= 0) {
+  S();
   return;
 }
-A();
+h();
   }, [
 t,
-h
-  ]), r.useEffect(() => {
-(!m || null == h) && A();
-  }, [E]), r.useEffect(() => {
-m && (I(null == h), N(!1), A());
-  }, [m]);
-  if (!c.Cj.hasOwnProperty(t))
+O
+  ]), a.useEffect(() => {
+(!f || null == O) && h();
+  }, [A]), a.useEffect(() => {
+f && (I(null == O), R(!1), h());
+  }, [f]);
+  if (!E.Cj.hasOwnProperty(t))
 throw Error('Unexpected giftStyle '.concat(t));
-  return (0, s.jsx)(a.LottieAnimation, {
-importData: p.current,
-shouldAnimate: !_ && u,
+  return (0, r.jsx)(u.LottieAnimation, {
+importData: o.current,
+shouldAnimate: !C && _,
 className: n,
-versionKey: T,
-onComplete: null != h ? () => {
-  null != h && (g(h), I(!0));
+versionKey: L,
+onComplete: null != O ? () => {
+  null != O && (d(O), I(!0));
 } : void 0,
-loop: f
+loop: N
   });
 }

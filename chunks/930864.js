@@ -1,6 +1,6 @@
 n.r(t), n.d(t, {
   ForwardModal: function() {
-return L;
+return b;
   }
 }), n(47120);
 var l = n(735250),
@@ -23,41 +23,41 @@ var l = n(735250),
   p = n(819727),
   m = n(689938),
   C = n(803519),
-  b = n(621054);
+  L = n(621054);
 
-function L(e) {
+function b(e) {
   let {
 channelId: t,
-messageId: L,
+messageId: b,
 initialSelectedDestinations: N,
 forwardOptions: T,
 onClose: Z,
 onRequestSent: y,
 ...x
-  } = e, [v, R] = a.useState(''), M = a.useMemo(() => (0, c.dL)(t), [t]), [P, D] = a.useState(N), [O, F] = a.useState(!1), G = P.length, U = G >= p.G, j = (0, i.e7)([d.Z], () => d.Z.getMessage(t, L), [
+  } = e, [v, R] = a.useState(''), M = a.useMemo(() => (0, c.dL)(t), [t]), [P, D] = a.useState(N), [O, F] = a.useState(!1), G = P.length, U = G >= p.G, j = (0, i.e7)([d.Z], () => d.Z.getMessage(t, b), [
 t,
-L
+b
   ]), k = (0, i.e7)([u.Z], () => u.Z.getChannel(t), [t]), H = (0, o.s)({
 searchText: v,
 selectedDestinations: P,
 originDestination: M,
 includeMissingDMs: !0
   }), Q = a.useCallback(() => {
-(0, S.sF)(t, L), Z();
+(0, S.sF)(t, b), Z();
   }, [
 t,
-L,
+b,
 Z
   ]), w = a.useCallback(() => {
 var e;
 let n = null === (e = u.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
 if (null == n)
   return;
-let l = (0, _.wR)(n, t, L);
+let l = (0, _.wR)(n, t, b);
 (0, s.showToast)((0, s.createToast)(m.Z.Messages.COPIED_LINK, s.ToastType.LINK)), (0, f.JG)(l);
   }, [
 t,
-L
+b
   ]), z = a.useCallback(() => {
 R('');
   }, [R]), W = a.useRef(null);
@@ -86,7 +86,7 @@ if ('' === v) {
   });
 }, [U]),
 K = a.useCallback(async () => {
-  let e = d.Z.getMessage(t, L);
+  let e = d.Z.getMessage(t, b);
   if (null == e) {
     (0, s.showToast)((0, s.createToast)(m.Z.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE));
     return;
@@ -116,13 +116,13 @@ K = a.useCallback(async () => {
       } = e;
       return 'fulfilled' === t;
     })) {
-    (0, S.gP)(t, L, !1, a.length), (0, s.showToast)((0, s.createToast)(m.Z.Messages.MESSAGE_FORWARD_SUCCESS, s.ToastType.FORWARD));
+    (0, S.gP)(t, b, !1, a.length), (0, s.showToast)((0, s.createToast)(m.Z.Messages.MESSAGE_FORWARD_SUCCESS, s.ToastType.FORWARD));
     return;
   }
-  (0, S.gP)(t, L, !0, a.length);
+  (0, S.gP)(t, b, !0, a.length);
   let o = P.filter((e, t) => 'rejected' === i[t].status);
   (0, A.Np)({
-    messageId: L,
+    messageId: b,
     channelId: t,
     failedDestinations: o,
     forwardOptions: T
@@ -130,7 +130,7 @@ K = a.useCallback(async () => {
 }, [
   t,
   T,
-  L,
+  b,
   P,
   y
 ]);
@@ -150,7 +150,7 @@ return null;
   children: [
     (0, l.jsx)('img', {
       className: C.noResultsImg,
-      src: b,
+      src: L,
       alt: ''
     }),
     (0, l.jsx)(s.Text, {

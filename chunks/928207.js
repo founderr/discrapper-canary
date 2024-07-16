@@ -16,7 +16,7 @@ var a = n(266067),
   g = n(474936),
   p = n(689938),
   T = n(314974);
-let f = s.ZP.connectStores([h.default], () => ({
+let S = s.ZP.connectStores([h.default], () => ({
   user: h.default.getCurrentUser()
 }))((0, c.Z)((0, o.Z)(e => {
   let {
@@ -61,4 +61,4 @@ children: [
 to: m.Z5c.LOGIN
   });
 })));
-t.Z = f;
+t.Z = S;

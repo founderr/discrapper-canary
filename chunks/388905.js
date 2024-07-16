@@ -48,8 +48,8 @@ var r = t(120356),
   a = t.n(r),
   i = t(481060),
   s = t(43267),
-  o = t(285952),
-  u = t(346656),
+  o = t(565138),
+  u = t(285952),
   c = t(153124),
   d = t(838949),
   p = t(361207),
@@ -133,7 +133,7 @@ let {
   animate: r = !1,
   className: a
 } = e;
-return (0, l.jsx)(u.Z, {
+return (0, l.jsx)(o.Z, {
   active: !0,
   guild: n,
   size: t,
@@ -141,7 +141,7 @@ return (0, l.jsx)(u.Z, {
   className: a
 });
   };
-b.Sizes = u.Z.Sizes;
+b.Sizes = o.Z.Sizes;
 let E = e => {
   let {
 className: n,
@@ -238,9 +238,9 @@ return (0, l.jsx)(i.Text, {
 let {
   className: n
 } = e;
-return (0, l.jsx)(o.Z, {
-  direction: o.Z.Direction.VERTICAL,
-  align: o.Z.Align.CENTER,
+return (0, l.jsx)(u.Z, {
+  direction: u.Z.Direction.VERTICAL,
+  align: u.Z.Align.CENTER,
   className: n,
   children: (0, l.jsx)(d.Z, {
     className: N.spinnerVideo
@@ -252,11 +252,11 @@ let n, {
   online: t,
   total: r,
   className: s,
-  flat: u,
+  flat: o,
   textClassName: c
 } = e;
 return null == r ? null : (null != t && t > 0 && (n = (0, l.jsxs)('div', {
-  className: a()(N.pill, N.pillOnline, u && N.pillFlat),
+  className: a()(N.pill, N.pillOnline, o && N.pillFlat),
   children: [
     (0, l.jsx)('i', {
       className: N.pillIconOnline
@@ -270,13 +270,13 @@ return null == r ? null : (null != t && t > 0 && (n = (0, l.jsxs)('div', {
       })
     })
   ]
-})), (0, l.jsxs)(o.Z, {
-  justify: o.Z.Justify.CENTER,
+})), (0, l.jsxs)(u.Z, {
+  justify: u.Z.Justify.CENTER,
   className: s,
   children: [
     n,
     (0, l.jsxs)('div', {
-      className: a()(N.pill, u && N.pillFlat),
+      className: a()(N.pill, o && N.pillFlat),
       children: [
         (0, l.jsx)('i', {
           className: N.pillIconTotal

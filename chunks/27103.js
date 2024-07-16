@@ -8,7 +8,7 @@ n(470079);
 var a = n(120356),
   s = n.n(a),
   r = n(481060),
-  l = n(467679),
+  l = n(385499),
   o = n(702346),
   c = n(739566),
   d = n(464891),
@@ -26,12 +26,12 @@ usernameHook: a
 avatarSrc: h,
 eventHandlers: {
   onMouseEnter: N,
-  onMouseLeave: f
+  onMouseLeave: p
 }
   } = (0, u.m)(!0);
   return (0, i.jsx)('div', {
 onMouseEnter: N,
-onMouseLeave: f,
+onMouseLeave: p,
 children: (0, i.jsx)(o.Z, {
   className: s()(I.mainContainer, {
     [I.compact]: n

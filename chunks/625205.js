@@ -53,9 +53,9 @@ children: S.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
   let R = i()(O).values().first(),
 x = null != R ? R.disabled : null != e,
 M = i()(p).values().first(),
-D = null != M ? M.disabled : null != t;
+f = null != M ? M.disabled : null != t;
 
-  function f(e) {
+  function D(e) {
 let t, {
   label: i,
   value: r
@@ -81,7 +81,7 @@ return (0, n.jsxs)('span', {
   }
 
   function P(e) {
-return f(e[0]);
+return D(e[0]);
   }
   return (0, n.jsxs)(E.Z, {
 className: C.marginBottom20,
@@ -109,7 +109,7 @@ children: [
         }),
         isDisabled: x,
         renderOptionValue: P,
-        renderOptionLabel: f
+        renderOptionLabel: D
       }),
       e
     ]
@@ -135,9 +135,9 @@ children: [
             label: s
           };
         }),
-        isDisabled: D,
+        isDisabled: f,
         renderOptionValue: P,
-        renderOptionLabel: f
+        renderOptionLabel: D
       }),
       t
     ]

@@ -9,8 +9,8 @@ var a = n(120356),
   s = n.n(a),
   r = n(442837),
   l = n(481060),
-  o = n(430824),
-  c = n(467679),
+  o = n(385499),
+  c = n(430824),
   d = n(702346),
   u = n(739566),
   _ = n(464891),
@@ -26,7 +26,7 @@ message: n,
 compact: a,
 usernameHook: h,
 channel: N
-  } = e, f = (0, r.e7)([o.Z], () => o.Z.getGuild(N.guild_id)), p = (0, u.ZP)(n), C = h(p), {
+  } = e, p = (0, r.e7)([c.Z], () => c.Z.getGuild(N.guild_id)), f = (0, u.ZP)(n), C = h(f), {
 avatarSrc: g,
 eventHandlers: {
   onMouseEnter: S,
@@ -66,7 +66,7 @@ children: (0, i.jsx)(d.Z, {
               className: T.username,
               children: m.Z.Messages.GUILD_AUTOMOD_USERNAME
             }),
-            (0, i.jsx)(c.Z, {
+            (0, i.jsx)(o.Z, {
               type: I.Hb.SYSTEM_DM,
               className: T.systemTag
             })
@@ -80,9 +80,9 @@ children: (0, i.jsx)(d.Z, {
           [T.compact]: a
         }),
         children: m.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
-          username: p.nick,
+          username: f.nick,
           usernameHook: C,
-          guildName: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : ''
+          guildName: null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : ''
         })
       })
     ]

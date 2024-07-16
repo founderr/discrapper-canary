@@ -6,10 +6,10 @@ var r = n(735250),
   l = n(622535),
   u = n(481060),
   c = n(906732),
-  d = n(963249),
-  _ = n(594174),
-  E = n(314884),
-  f = n(346656),
+  d = n(565138),
+  _ = n(963249),
+  E = n(594174),
+  f = n(314884),
   h = n(709586),
   p = n(74538),
   m = n(678558),
@@ -22,7 +22,7 @@ t.Z = function(e) {
 closeLayer: t,
 guild: n,
 onCtaVisibilityChange: a
-  } = e, A = (0, s.e7)([_.default], () => _.default.getCurrentUser()), N = (0, s.e7)([E.Z], () => E.Z.boostSlots), {
+  } = e, A = (0, s.e7)([E.default], () => E.default.getCurrentUser()), N = (0, s.e7)([f.Z], () => f.Z.boostSlots), {
 analyticsLocations: v
   } = (0, c.ZP)(), O = i.useMemo(() => Object.keys(N).filter(e => {
 let t = N[e];
@@ -34,10 +34,10 @@ n.id
   return (0, r.jsxs)('div', {
 className: S.guildStatus,
 children: [
-  (0, r.jsx)(f.Z, {
+  (0, r.jsx)(d.Z, {
     className: S.guildIcon,
     guild: n,
-    size: f.Z.Sizes.LARGER
+    size: d.Z.Sizes.LARGER
   }),
   (0, r.jsx)(u.Heading, {
     className: S.guildName,
@@ -106,7 +106,7 @@ children: [
         look: u.Button.Looks.OUTLINED,
         color: u.Button.Colors.WHITE,
         onClick: function() {
-          (0, d.Z)({
+          (0, _.Z)({
             initialPlanId: null,
             subscriptionTier: T.Si.TIER_2,
             isGift: !0,
@@ -135,7 +135,7 @@ children: [
         look: u.Button.Looks.OUTLINED,
         color: u.Button.Colors.WHITE,
         onClick: function() {
-          (0, d.Z)({
+          (0, _.Z)({
             initialPlanId: null,
             subscriptionTier: T.Si.TIER_2,
             analyticsLocations: v,

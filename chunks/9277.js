@@ -9,8 +9,8 @@ var r = n(735250),
   c = n(481060),
   d = n(28546),
   _ = n(581883),
-  E = n(147915),
-  f = n(459273),
+  E = n(459273),
+  f = n(443603),
   h = n(981631),
   p = n(957825),
   m = n(689938),
@@ -31,7 +31,7 @@ g(!0), clearTimeout(O.current), O.current = setTimeout(() => {
   g(!1), O.current = 0;
 }, 2000);
   }, []);
-  (0, f.yp)({
+  (0, E.yp)({
 event: h.CkL.FAVORITE_GIF,
 handler: R
   });
@@ -53,7 +53,7 @@ children: e => (0, r.jsx)('div', {
   ref: t,
   className: o()(p.CT, I.buttonContainer),
   ...e,
-  children: (0, r.jsx)(E.Z, {
+  children: (0, r.jsx)(f.Z, {
     innerClassName: I.button,
     onMouseEnter: D.onMouseEnter,
     onMouseLeave: D.onMouseLeave,

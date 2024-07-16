@@ -75,11 +75,11 @@ product: t,
 returnRef: n,
 onSuccess: C,
 tooltipDelay: m,
-isGiftEasterEggEnabled: h,
-disableCustomColor: _ = !1
+isGiftEasterEggEnabled: _,
+disableCustomColor: h = !1
   } = e, {
 analyticsLocations: b
-  } = (0, i.ZP)(), x = s.useRef(null), I = (0, o.Z)(x), E = _ ? u.BR.DARK : u.BR.LIGHT;
+  } = (0, i.ZP)(), x = s.useRef(null), I = (0, o.Z)(x), E = h ? u.BR.DARK : u.BR.LIGHT;
   return (0, d.x6)(t) ? null : (0, r.jsx)(a.Tooltip, {
 text: p.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
 delay: m,
@@ -87,7 +87,7 @@ children: e => (0, r.jsx)(a.Button, {
   ...e,
   buttonRef: x,
   className: g.giftButton,
-  color: _ ? a.ButtonColors.BRAND : a.ButtonColors.CUSTOM,
+  color: h ? a.ButtonColors.BRAND : a.ButtonColors.CUSTOM,
   look: a.Button.Looks.FILLED,
   size: a.ButtonSizes.ICON,
   innerClassName: g.giftButtonInner,
@@ -103,7 +103,7 @@ children: e => (0, r.jsx)(a.Button, {
       } : void 0
     });
   },
-  children: h ? (0, r.jsx)(l.e, {
+  children: _ ? (0, r.jsx)(l.e, {
     hovered: I,
     isContentDismissed: !0,
     themeOverride: E,

@@ -22,7 +22,7 @@ function m(e) {
   let {
 quest: m,
 questContent: g
-  } = e, p = c.r.build(m.config).defaultReward.messages.name, T = (0, r.Rf)(m), f = T.percentComplete > 0, S = (0, r.B6)(m.config.expiresAt, {
+  } = e, p = c.r.build(m.config).defaultReward.messages.name, T = (0, r.Rf)(m), S = T.percentComplete > 0, f = (0, r.B6)(m.config.expiresAt, {
 month: '2-digit',
 day: '2-digit'
   }), C = (0, o.D)({
@@ -31,7 +31,7 @@ taskDetails: T,
 location: E.dr.QUEST_HOME_DESKTOP,
 questContent: l.jn.QUEST_HOME_DESKTOP,
 useV2Variants: !0,
-expiryDate: S
+expiryDate: f
   }), N = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, A = (0, r.B6)(null === (n = m.userStatus) || void 0 === n ? void 0 : n.claimedAt), v = a.useCallback(() => (0, i.jsx)(s.Text, {
 variant: 'text-md/semibold',
 color: 'text-brand',
@@ -66,7 +66,7 @@ children: [
   (0, i.jsxs)('div', {
     className: I.rewardDescriptionContainer,
     children: [
-      f && !N ? (0, i.jsx)('div', {
+      S && !N ? (0, i.jsx)('div', {
         className: I.progressWrapper,
         children: (0, i.jsx)(d.Z, {
           quest: m,

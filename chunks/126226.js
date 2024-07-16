@@ -17,8 +17,8 @@ var i = n(693789),
   E = n(895924),
   f = n(581364),
   h = n(826298),
-  p = n(496675),
-  m = n(156361),
+  p = n(588468),
+  m = n(496675),
   I = n(226951),
   T = n(877565),
   g = n(590921),
@@ -47,7 +47,7 @@ let C = {
   stores: [
 _.Z,
 u.ZP,
-p.Z
+m.Z
   ],
   matches: (e, t, n, r, i) => i.commands !== g.L8.DISABLED && null == _.Z.getActiveCommand(e.id) && (r || i.commands !== g.L8.OLD_BUILT_INS),
   queryResults(e, t, n, r, i) {
@@ -121,7 +121,7 @@ return (0, T.HI)({
   titleWithQuery: N.Z.Messages.COMMANDS_MATCHING,
   titleWithoutQuery: N.Z.Messages.COMMANDS,
   getQuery: e => ''.concat(S.GI).concat(e),
-  Component: d ? m.ZP.Command : m.ZP.NewCommand,
+  Component: d ? p.ZP.Command : p.ZP.NewCommand,
   getProps: e => {
     let {
       command: t,

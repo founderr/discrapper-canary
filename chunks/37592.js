@@ -3,8 +3,8 @@ var n = t(735250),
   r = t(470079),
   s = t(481060),
   l = t(710845),
-  o = t(285952),
-  i = t(912454),
+  o = t(219929),
+  i = t(285952),
   c = t(358085),
   u = t(622999),
   d = t(981631),
@@ -42,7 +42,7 @@ if (!1 === e)
   });
 let a = (0, c.isAndroidChrome)(),
   t = a ? E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GPAY : E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GENERIC,
-  r = a ? i.ZP.Types.G_PAY : i.ZP.Types.PAYMENT_REQUEST,
+  r = a ? o.ZP.Types.G_PAY : o.ZP.Types.PAYMENT_REQUEST,
   {
     className: l,
     iconClassName: u
@@ -50,10 +50,10 @@ let a = (0, c.isAndroidChrome)(),
 return (0, n.jsx)(s.Button, {
   onClick: this.handleOnClick,
   className: l,
-  children: (0, n.jsxs)(o.Z, {
-    align: o.Z.Align.CENTER,
+  children: (0, n.jsxs)(i.Z, {
+    align: i.Z.Align.CENTER,
     children: [
-      (0, n.jsx)(i.ZP, {
+      (0, n.jsx)(o.ZP, {
         className: u,
         type: r
       }),

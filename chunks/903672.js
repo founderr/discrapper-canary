@@ -19,8 +19,8 @@ var i = n(735250),
   T = n(731290),
   h = n(944486),
   N = n(455199),
-  f = n(655354),
-  p = n(999671),
+  p = n(655354),
+  f = n(999671),
   C = n(324081),
   g = n(240126),
   S = n(791914),
@@ -53,7 +53,7 @@ m.Z,
 h.Z
   ], () => m.Z.getChannel(h.Z.getChannelId())), {
 messages: T,
-hasMore: f,
+hasMore: p,
 loading: C,
 guildFilter: g,
 roleFilter: x,
@@ -94,7 +94,7 @@ tab: r.X.MENTIONS,
 setTab: t,
 badgeState: l,
 closePopout: E,
-children: (0, i.jsx)(p.Z, {})
+children: (0, i.jsx)(f.Z, {})
   }), [
 !0,
 t,
@@ -113,7 +113,7 @@ children: (0, i.jsx)(c.ZP, {
   channel: I,
   messages: T,
   loading: C,
-  hasMore: f,
+  hasMore: p,
   analyticsName: 'Recent Mentions',
   loadMore: function() {
     M(I, !0, null != T && T.length > 0 ? T[T.length - 1].id : null);
@@ -176,7 +176,7 @@ children: [
   (0, i.jsxs)('div', {
     className: O.messageContainer,
     children: [
-      (0, i.jsx)(f.Z, {
+      (0, i.jsx)(p.Z, {
         className: O.jumpMessageButton,
         onJump: n
       }),

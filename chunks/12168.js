@@ -16,10 +16,10 @@ var i = n(735250),
   d = n(596454),
   u = n(727637),
   h = n(543241),
-  p = n(907040),
-  m = n(633302),
-  _ = n(806966),
-  f = n(401227),
+  p = n(318766),
+  m = n(907040),
+  _ = n(633302),
+  f = n(806966),
   E = n(153124),
   C = n(176354),
   g = n(823379),
@@ -29,12 +29,12 @@ var i = n(735250),
   N = n(419477);
 let v = x.Hz.CHAT,
   S = [
-m.ZP.getByName('thumbsup'),
-m.ZP.getByName('eyes'),
-m.ZP.getByName('laughing'),
-m.ZP.getByName('watermelon'),
-m.ZP.getByName('fork_and_knife'),
-m.ZP.getByName('yum')
+_.ZP.getByName('thumbsup'),
+_.ZP.getByName('eyes'),
+_.ZP.getByName('laughing'),
+_.ZP.getByName('watermelon'),
+_.ZP.getByName('fork_and_knife'),
+_.ZP.getByName('yum')
   ].filter(g.lm);
 
 function Z(e) {
@@ -43,7 +43,7 @@ emoji: t,
 isDisabled: n = !1,
 onClick: l,
 className: r
-  } = e, h = a.useRef(null), p = (0, u.Z)(h);
+  } = e, h = a.useRef(null), m = (0, u.Z)(h);
   return (0, i.jsx)('span', {
 ref: h,
 children: (0, i.jsx)(c.Button, {
@@ -54,12 +54,12 @@ children: (0, i.jsx)(c.Button, {
     enabled: !n
   },
   children: (0, i.jsx)(c.Spring, {
-    config: f.u,
+    config: p.u,
     from: {
       value: 0
     },
     to: {
-      value: p ? 1 : 0
+      value: m ? 1 : 0
     },
     children: e => {
       let {
@@ -125,8 +125,8 @@ closePopout: l,
 onFocus: o,
 onSelectEmoji: d,
 onSelectDisabledEmoji: u,
-onExpandedToggle: m,
-emojiSearchProps: f,
+onExpandedToggle: p,
+emojiSearchProps: _,
 recentlyUsedEmojis: g,
 analyticsOverride: M
   } = e, b = (0, E.Dt)(), [R, j] = a.useState(!1), L = (0, h.wC)(t.guild_id), P = (0, r.uniqBy)([
@@ -139,7 +139,7 @@ intention: v
   })).slice(0, I.e5);
   null != g && g.length > 0 && P.splice(P.length - 1, 1, g[0]);
   let O = e => {
-  j(e), null == m || m(e);
+  j(e), null == p || p(e);
 },
 y = (e, t) => {
   if (null == e && t) {
@@ -147,7 +147,7 @@ y = (e, t) => {
     return;
   }
   null != e && d(e);
-  O(!t), t && _.kJ.setSearchPlaceholder(null);
+  O(!t), t && f.kJ.setSearchPlaceholder(null);
 };
   return (0, i.jsxs)(c.Dialog, {
 'aria-labelledby': b,
@@ -164,7 +164,7 @@ children: [
   (0, i.jsxs)('div', {
     className: N.container,
     children: [
-      (0, i.jsx)(p.Z, {
+      (0, i.jsx)(m.Z, {
         analyticsOverride: M,
         channel: t,
         className: s()(N.animatedPicker, {
@@ -179,9 +179,9 @@ children: [
         wrapper: 'div',
         pickerIntention: v,
         searchProps: {
-          ...f,
+          ..._,
           accessory: (0, i.jsx)(A, {
-            otherAccessories: null == f ? void 0 : f.accessory,
+            otherAccessories: null == _ ? void 0 : _.accessory,
             isEmojiPickerExpanded: R,
             onSetExpanded: O,
             onFocus: o

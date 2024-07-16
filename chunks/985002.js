@@ -93,7 +93,7 @@ if (!R) {
 R,
 t,
 n
-  ]), L = s.useCallback(async e => {
+  ]), P = s.useCallback(async e => {
 if (!A) {
   m(!0);
   try {
@@ -109,7 +109,7 @@ if (!A) {
 A,
 t,
 n
-  ]), P = s.useCallback(async (e, s) => {
+  ]), L = s.useCallback(async (e, s) => {
 if (!p) {
   g(!0);
   try {
@@ -131,9 +131,9 @@ acceptLinkRequest: h,
 declineLinkRequest: M,
 disconnectLinkRequest: x,
 cancelLinkRequest: b,
-selectTeenUser: L,
+selectTeenUser: P,
 getLinkCode: O,
-requestLink: P,
+requestLink: L,
 loadMore: s.useCallback(async e => {
   let n = i.Z.getActionsForDisplayType(e),
     s = n[n.length - 1],

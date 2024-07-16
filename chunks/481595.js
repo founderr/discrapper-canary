@@ -15,14 +15,14 @@ var l = s(735250),
   _ = s(275850),
   m = s(672971),
   E = s(115130),
-  I = s(653798),
-  p = s(314182),
-  N = s(251660),
-  T = s(246946),
-  x = s(351402),
-  S = s(855775),
-  h = s(695103),
-  P = s(366695),
+  I = s(925329),
+  p = s(653798),
+  N = s(314182),
+  T = s(251660),
+  x = s(246946),
+  S = s(351402),
+  h = s(855775),
+  P = s(695103),
   f = s(4912),
   A = s(669079),
   v = s(937615),
@@ -41,29 +41,29 @@ skuPricePreview: s
   } = e;
   r()(null != s.amount, 'SKU must have a price set.');
   let t = s.amount - s.tax;
-  return !s.tax_inclusive && s.tax > 0 ? (0, l.jsxs)(I.PO, {
+  return !s.tax_inclusive && s.tax > 0 ? (0, l.jsxs)(p.PO, {
 className: L.invoice,
 children: [
-  (0, l.jsx)(I.R$, {
+  (0, l.jsx)(p.R$, {
     label: n.name,
     value: (0, v.T4)(t, s.currency),
     className: L.subscriptionCostRow
   }),
-  (0, l.jsx)(I.R$, {
+  (0, l.jsx)(p.R$, {
     label: j.Z.Messages.PURCHASE_REVIEW_TAX_LABEL,
     value: (0, v.T4)(s.tax, s.currency),
     className: L.subscriptionCostRow
   }),
-  (0, l.jsx)(I.KU, {}),
-  (0, l.jsx)(I.Ji, {
+  (0, l.jsx)(p.KU, {}),
+  (0, l.jsx)(p.Ji, {
     label: j.Z.Messages.BILLING_INVOICE_TOTAL.format(),
     value: (0, v.T4)(s.amount, s.currency),
     className: L.subscriptionCostRow
   })
 ]
-  }) : (0, l.jsx)(I.PO, {
+  }) : (0, l.jsx)(p.PO, {
 className: L.invoice,
-children: (0, l.jsx)(I.R$, {
+children: (0, l.jsx)(p.R$, {
   label: n.name,
   value: (0, v.T4)(s.amount, s.currency),
   className: L.subscriptionCostRow
@@ -80,7 +80,7 @@ isEmbeddedIAP: t
   return !0 !== t ? null : (0, l.jsxs)('div', {
 className: L.skuHeading,
 children: [
-  (0, l.jsx)(P.Z, {
+  (0, l.jsx)(I.Z, {
     game: n
   }),
   (0, l.jsx)(o.Heading, {
@@ -97,7 +97,7 @@ function b(e) {
 hasLegalTermsFlash: n,
 legalTermsNodeRef: s,
 onPaymentSourceChange: i,
-handlePaymentSourceAdd: P
+handlePaymentSourceAdd: I
   } = e, {
 application: v,
 purchaseState: b,
@@ -117,15 +117,15 @@ giftRecipient: K
   r()(null != w, 'Expected selectedSkuId');
   let z = F[w],
 X = B[w],
-J = null != G ? G : S.c,
+J = null != G ? G : h.c,
 q = null != X ? X[J] : null;
   r()(null != z, 'SKU must exist and be fetched.'), r()(null != v, 'Application must exist.');
   let Q = (0, c.e7)([
   E.Z,
-  h.Z
-], () => h.Z.inTestModeForApplication(v.id) || E.Z.inDevModeForApplication(v.id), [v.id]),
-$ = (0, c.e7)([T.Z], () => T.Z.enabled),
-ee = a.M.EEA_COUNTRIES.has(x.Z.ipCountryCodeWithFallback),
+  P.Z
+], () => P.Z.inTestModeForApplication(v.id) || E.Z.inDevModeForApplication(v.id), [v.id]),
+$ = (0, c.e7)([x.Z], () => x.Z.enabled),
+ee = a.M.EEA_COUNTRIES.has(S.Z.ipCountryCodeWithFallback),
 en = b === C.A.PURCHASING || b === C.A.COMPLETED,
 es = null != G ? D[G].type : null,
 el = t.useMemo(() => null != q ? (0, l.jsx)(y, {
@@ -134,9 +134,9 @@ el = t.useMemo(() => null != q ? (0, l.jsx)(y, {
 }) : null == W ? (0, l.jsx)(o.Spinner, {
   type: o.Spinner.Type.WANDERING_CUBES,
   className: L.invoiceSpinner
-}) : (0, l.jsx)(I.PO, {
+}) : (0, l.jsx)(p.PO, {
   className: L.invoice,
-  children: (0, l.jsx)(I.R$, {
+  children: (0, l.jsx)(p.R$, {
     label: z.name,
     value: null,
     className: L.subscriptionCostRow
@@ -164,7 +164,7 @@ children: [
   V && (0, l.jsx)(O.Z, {
     sku: z
   }),
-  null != K ? (0, l.jsx)(N.s, {
+  null != K ? (0, l.jsx)(T.s, {
     giftRecipient: K
   }) : null,
   (0, l.jsx)(o.FormTitle, {
@@ -183,12 +183,12 @@ children: [
         paymentSources: Object.values(D),
         selectedPaymentSourceId: G,
         onChange: i,
-        onPaymentSourceAdd: P,
+        onPaymentSourceAdd: I,
         hidePersonalInformation: $
       })
     ]
   }),
-  (0, l.jsx)(p.Z, {
+  (0, l.jsx)(N.Z, {
     isActive: n,
     ref: s,
     children: (0, l.jsx)(m.Z, {

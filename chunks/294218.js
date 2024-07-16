@@ -15,8 +15,8 @@ var i = n(735250),
   T = n(900164),
   h = n(739566),
   N = n(492593),
-  f = n(453687),
-  p = n(25015),
+  p = n(453687),
+  f = n(25015),
   C = n(689674),
   g = n(438075),
   S = n(963550),
@@ -45,7 +45,7 @@ trackAnnouncementViews: k = !1,
   } = e, F = a.type === M.uaV.POLL_RESULT || null !== (t = e.disableInteraction) && void 0 !== t && t, w = a.isFirstMessageInForumPost(D), V = (0, d.A)((null !== (n = a.editedTimestamp) && void 0 !== n ? n : a.timestamp).valueOf()), {
 content: H,
 hasSpoilerEmbeds: Y
-  } = (0, p.Z)(a, {
+  } = (0, f.Z)(a, {
 hideSimpleEmbedContent: b,
 allowList: w || V,
 allowHeading: w || V,
@@ -61,8 +61,8 @@ enabled: k
   });
   if ((0, T.Z)(a, J))
 return null;
-  let ee = (0, f.iG)(a),
-et = (0, f.Gx)(a);
+  let ee = (0, p.iG)(a),
+et = (0, p.Gx)(a);
   return (0, i.jsx)(N.Z, {
 compact: s,
 className: r()(L, {

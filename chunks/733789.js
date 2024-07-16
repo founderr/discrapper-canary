@@ -5,9 +5,9 @@ var i = n(735250),
   r = n.n(s),
   l = n(481060),
   o = n(100527),
-  c = n(484459),
-  d = n(103575),
-  u = n(366966),
+  c = n(707409),
+  d = n(484459),
+  u = n(103575),
   _ = n(409216),
   E = n(51144),
   h = n(981631),
@@ -76,8 +76,8 @@ return 1 === t.length ? n.single(t[0].user, e => this.renderActivityDiscordTag(e
   }
   renderActivityDiscordTag(e) {
 return (0, i.jsx)(l.Popout, {
-  preload: () => (0, c.W)(e),
-  renderPopout: t => (0, i.jsx)(d.Z, {
+  preload: () => (0, d.W)(e),
+  renderPopout: t => (0, i.jsx)(u.Z, {
     ...t,
     location: 'ApplicationRecommendationActivity',
     userId: e.id,
@@ -128,11 +128,11 @@ super(...e), g(this, 'renderUserTooltip', (e, t, n) => (0, i.jsxs)('div', {
     (0, i.jsx)('div', {
       children: E.ZP.getUserTag(e)
     }),
-    (0, i.jsx)(u.ZP, {
+    (0, i.jsx)(c.ZP, {
       className: m.tooltipTimestamp,
       start: t,
       end: n,
-      location: u.ZP.Locations.ACTIVITY_FEED
+      location: c.ZP.Locations.ACTIVITY_FEED
     })
   ]
 })), g(this, 'renderPlayer', (e, t, n, a) => {
@@ -140,8 +140,8 @@ super(...e), g(this, 'renderUserTooltip', (e, t, n) => (0, i.jsxs)('div', {
     return null;
   let s = this.props.reason.userInfo.find(t => t.user === e);
   return null == s ? null : (0, i.jsx)(l.Popout, {
-    preload: () => (0, c.W)(e),
-    renderPopout: t => (0, i.jsx)(d.Z, {
+    preload: () => (0, d.W)(e),
+    renderPopout: t => (0, i.jsx)(u.Z, {
       ...t,
       location: 'ApplicationRecommendationActivity',
       userId: e.id,

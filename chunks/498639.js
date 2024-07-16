@@ -25,7 +25,7 @@ var n = s(735250),
   x = s(474936),
   M = s(184796);
 
-function D(e) {
+function f(e) {
   let {
 selectedGuildForGuildSub: t
   } = e, s = (0, S.GG)(null == t ? void 0 : t.id)[0];
@@ -41,7 +41,7 @@ children: null != t && null != s ? (0, n.jsx)('div', {
   });
 }
 t.Z = function() {
-  let [e, t] = a.useState(x.Si.TIER_2), [s, S] = a.useState(null), [N] = (0, r.Wu)([O.Z], () => [O.Z.getGuilds()]), [f] = (0, r.Wu)([p.ZP], () => [p.ZP.getPremiumSubscription()]);
+  let [e, t] = a.useState(x.Si.TIER_2), [s, S] = a.useState(null), [N] = (0, r.Wu)([O.Z], () => [O.Z.getGuilds()]), [D] = (0, r.Wu)([p.ZP], () => [p.ZP.getPremiumSubscription()]);
   (0, g.t)();
   let P = Object.values(N).map(e => ({
   value: e,
@@ -53,7 +53,7 @@ t.Z = function() {
   plan_id: x.Xh.PREMIUM_MONTH_TIER_2,
   gift: 'true'
 }),
-U = 'true' !== j.gift && null != f,
+U = 'true' !== j.gift && null != D,
 [G, F] = a.useState(P.length > 0 ? P[0].value : null),
 {
   analyticsLocations: y
@@ -298,7 +298,7 @@ children: (0, n.jsxs)(o.FormSection, {
     }),
     (0, n.jsx)(I.l, {
       guildId: null == G ? void 0 : G.id,
-      children: (0, n.jsx)(D, {
+      children: (0, n.jsx)(f, {
         selectedGuildForGuildSub: G
       })
     }),

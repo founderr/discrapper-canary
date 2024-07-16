@@ -14,15 +14,15 @@ var r = n(735250),
   u = n(37234),
   p = n(194359),
   g = n(700582),
-  f = n(479446),
-  C = n(522489),
-  m = n(93127),
+  f = n(925329),
+  C = n(479446),
+  m = n(522489),
+  _ = n(93127),
   h = n(814443),
-  _ = n(590783),
-  b = n(699516),
-  x = n(246946),
-  I = n(594174),
-  E = n(366695),
+  b = n(590783),
+  x = n(699516),
+  I = n(246946),
+  E = n(594174),
   L = n(572004),
   S = n(669079),
   v = n(74538),
@@ -41,34 +41,34 @@ subscriptionPlan: i,
 selectedGiftStyle: l,
 onClose: u,
 hasSentMessage: p,
-giftRecipient: f,
-giftMessageError: m,
+giftRecipient: C,
+giftMessageError: _,
 isSendingMessage: h
-  } = e, [b, I] = s.useState(d.CopyInput.Modes.DEFAULT), k = (0, c.e7)([x.Z], () => x.Z.enabled), A = p || null != l && null != f, P = (null == a ? void 0 : a.productLine) === N.POd.COLLECTIBLES, B = () => null != i ? i.skuId : null != a ? a.id : null, M = () => {
+  } = e, [x, E] = s.useState(d.CopyInput.Modes.DEFAULT), k = (0, c.e7)([I.Z], () => I.Z.enabled), A = p || null != l && null != C, P = (null == a ? void 0 : a.productLine) === N.POd.COLLECTIBLES, B = () => null != i ? i.skuId : null != a ? a.id : null, M = () => {
 let e;
 let t = null != l && O.V4.includes(l);
-return null != m ? j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB : null == i ? null : (e = i.interval === O.rV.MONTH ? A ? t ? j.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY : A ? t ? j.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
+return null != _ ? j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB : null == i ? null : (e = i.interval === O.rV.MONTH ? A ? t ? j.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY : A ? t ? j.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
   skuName: (0, v.aq)(i.id),
   intervalCount: i.intervalCount
 });
   }, y = (e, t) => {
-null != a && (0, S.dM)(new _.Z({
+null != a && (0, S.dM)(new b.Z({
   code: t,
   maxUses: 1
 }), a);
 try {
-  (0, L.JG)(e), I(d.CopyInput.Modes.SUCCESS);
+  (0, L.JG)(e), E(d.CopyInput.Modes.SUCCESS);
 } catch (e) {
-  I(d.CopyInput.Modes.ERROR);
+  E(d.CopyInput.Modes.ERROR);
 }
 setTimeout(() => {
-  I(d.CopyInput.Modes.DEFAULT);
+  E(d.CopyInput.Modes.DEFAULT);
 }, 1500);
   }, w = () => {
 let e;
 if (null == t)
   return null;
-switch (b) {
+switch (x) {
   case d.CopyInput.Modes.SUCCESS:
     e = j.Z.Messages.BILLING_GIFT_COPIED;
     break;
@@ -87,7 +87,7 @@ return (0, r.jsxs)('div', {
     null != t && (0, r.jsx)(d.CopyInput, {
       hideMessage: k ? j.Z.Messages.GIFT_INVENTORY_HIDDEN : null,
       value: (0, S.Nz)(t),
-      mode: b,
+      mode: x,
       text: e,
       onCopy: e => y(e, t),
       supportsCopy: L.wS,
@@ -105,10 +105,10 @@ return (0, r.jsxs)('div', {
   return h ? (0, r.jsxs)('div', {
 className: Z.confirmation,
 children: [
-  null != n ? (0, r.jsx)(E.Z, {
+  null != n ? (0, r.jsx)(f.Z, {
     game: n,
     className: Z.__invalid_icon,
-    size: E.Z.Sizes.LARGE,
+    size: f.Z.Sizes.LARGE,
     skuId: B()
   }) : null,
   (0, r.jsx)(d.Spinner, {
@@ -118,10 +118,10 @@ children: [
   }) : (0, r.jsxs)('div', {
 className: Z.confirmation,
 children: [
-  null != n ? (0, r.jsx)(E.Z, {
+  null != n ? (0, r.jsx)(f.Z, {
     game: n,
     className: Z.__invalid_icon,
-    size: E.Z.Sizes.LARGE,
+    size: f.Z.Sizes.LARGE,
     skuId: B()
   }) : null,
   (0, r.jsx)(d.Heading, {
@@ -130,25 +130,25 @@ children: [
       [Z.header]: null == l && !P,
       [Z.headerCustomGifting]: null != l && !P
     }),
-    children: null != f || p && null == m ? j.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != m ? j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : j.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
+    children: null != C || p && null == _ ? j.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != _ ? j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : j.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
   }),
-  p && null != f && null == m || A ? (0, r.jsxs)(r.Fragment, {
+  p && null != C && null == _ || A ? (0, r.jsxs)(r.Fragment, {
     children: [
       (0, r.jsx)(g.Z, {
-        user: f,
+        user: C,
         className: Z.giftRecipient,
         size: d.AvatarSizes.SIZE_80
       }),
       (0, r.jsx)(d.Heading, {
         className: Z.giftRecipientName,
         variant: 'heading-md/semibold',
-        children: T.ZP.getName(f)
+        children: T.ZP.getName(C)
       }),
       (0, r.jsxs)('div', {
         className: Z.giftRecipientTag,
         children: [
           ' ',
-          T.ZP.getUserTag(f)
+          T.ZP.getUserTag(C)
         ]
       }),
       (0, r.jsx)('div', {
@@ -157,10 +157,10 @@ children: [
       })
     ]
   }) : (() => {
-    let e = (0, S.MY)(f, P),
+    let e = (0, S.MY)(C, P),
       {
         removeGiftRecipientUI: n
-      } = C.m.getCurrentConfig({
+      } = m.m.getCurrentConfig({
         location: 'GiftPurchaseConfirmation'
       }, {
         autoTrackExposure: !1,
@@ -172,7 +172,7 @@ children: [
           className: Z.blurb,
           children: M()
         }),
-        !n && null == m && (0, r.jsx)(R, {
+        !n && null == _ && (0, r.jsx)(R, {
           giftCode: t,
           onClose: u
         }),
@@ -192,18 +192,18 @@ giftCode: t,
 onClose: n
   } = e;
   s.useEffect(() => {
-p.Z.fetchRelationships(), (0, m.W)();
+p.Z.fetchRelationships(), (0, _.W)();
   }, []);
-  let [a, o] = s.useState(), [i, C] = s.useState(!1), [_, x] = s.useState(!1), {
-userAffinities: E,
+  let [a, o] = s.useState(), [i, f] = s.useState(!1), [m, b] = s.useState(!1), {
+userAffinities: I,
 isLoading: L
   } = (0, c.cj)([h.Z], () => ({
 userAffinities: h.Z.getUserAffinitiesUserIds(),
 isLoading: h.Z.getFetching()
-  })), S = Array.from(E.values()), v = (0, c.e7)([b.Z], () => b.Z.getFriendIDs()), N = l().difference(v, S), O = [
+  })), S = Array.from(I.values()), v = (0, c.e7)([x.Z], () => x.Z.getFriendIDs()), N = l().difference(v, S), O = [
 ...S,
 ...N
-  ], k = (0, c.e7)([I.default], () => I.default.filter(e => O.includes(e.id) && !e.bot), [O]);
+  ], k = (0, c.e7)([E.default], () => E.default.filter(e => O.includes(e.id) && !e.bot), [O]);
   if (null == k || 0 === k.length)
 return null;
   let R = l().sortBy(k, e => O.indexOf(e.id));
@@ -229,7 +229,7 @@ children: [
         }) : null,
         value: a,
         onChange: e => {
-          o(e), C(!1);
+          o(e), f(!1);
         },
         options: R.map(e => ({
           value: e,
@@ -238,13 +238,13 @@ children: [
       }),
       (0, r.jsx)(d.Button, {
         disabled: null == a,
-        submitting: _,
+        submitting: m,
         className: Z.sendToRecipientButton,
         onClick: () => {
-          x(!0), (0, f.Y)(a, t).then(() => {
+          b(!0), (0, C.Y)(a, t).then(() => {
             n(), (0, u.Ou)();
           }).catch(() => {
-            C(!0), x(!1);
+            f(!0), b(!1);
           });
         },
         children: j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_SEND_NOW_BUTTON

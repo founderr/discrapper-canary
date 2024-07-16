@@ -9,14 +9,14 @@ var l = t(735250),
   c = t(528963),
   h = t(933557),
   u = t(471445),
-  g = t(592125),
-  m = t(984933),
-  p = t(430824),
-  M = t(496675),
-  _ = t(699516),
-  O = t(944486),
-  x = t(594174),
-  L = t(346656),
+  g = t(565138),
+  m = t(592125),
+  p = t(984933),
+  M = t(430824),
+  _ = t(496675),
+  O = t(699516),
+  x = t(944486),
+  L = t(594174),
   b = t(153124),
   C = t(626135),
   N = t(709054),
@@ -45,7 +45,7 @@ let n = e.find(e => {
     let {
       channel: n
     } = e;
-    return 'general' === (0, h.F6)(n, x.default, _.Z);
+    return 'general' === (0, h.F6)(n, L.default, O.Z);
   }),
   t = null != n ? n : e[0];
 return null != t ? t.channel.id : null;
@@ -99,11 +99,11 @@ let {
   } = e;
   return {
     value: n.id,
-    label: (0, h.F6)(n, x.default, _.Z),
+    label: (0, h.F6)(n, L.default, O.Z),
     channel: n,
     category: t
   };
-}), c = 0 === i.length, g = c ? Z.Z.Messages.FOLLOW_MODAL_HINT_NO_PERMS : Z.Z.Messages.FOLLOW_MODAL_HINT;
+}), c = 0 === i.length, m = c ? Z.Z.Messages.FOLLOW_MODAL_HINT_NO_PERMS : Z.Z.Messages.FOLLOW_MODAL_HINT;
 return (0, l.jsxs)(a.Fragment, {
   children: [
     (0, l.jsx)(o.FormItem, {
@@ -120,9 +120,9 @@ return (0, l.jsxs)(a.Fragment, {
           let {
             guild: n
           } = e;
-          return (0, l.jsx)(L.Z, {
+          return (0, l.jsx)(g.Z, {
             guild: n,
-            size: L.Z.Sizes.MINI
+            size: g.Z.Sizes.MINI
           });
         }(e)
       })
@@ -153,7 +153,7 @@ return (0, l.jsxs)(a.Fragment, {
       variant: 'text-sm/normal',
       color: c || null != r ? 'text-danger' : 'text-muted',
       className: f.bottomMargin,
-      children: null != r ? r : g
+      children: null != r ? r : m
     })
   ]
 });
@@ -199,9 +199,9 @@ let {
 return (0, l.jsxs)(o.ModalHeader, {
   className: f.header,
   children: [
-    (0, l.jsx)(L.Z, {
+    (0, l.jsx)(g.Z, {
       guild: n,
-      size: L.Z.Sizes.LARGE
+      size: g.Z.Sizes.LARGE
     }),
     (0, l.jsx)('div', {
       className: f.channelContainer,
@@ -315,17 +315,17 @@ this.state = {
   }
 }
 n.default = i.ZP.connectStores([
-  p.Z,
-  g.Z,
-  m.ZP,
   M.Z,
-  O.Z
+  m.Z,
+  p.ZP,
+  _.Z,
+  x.Z
 ], e => {
   let {
 channel: n
-  } = e, t = p.Z.getGuild(n.guild_id), l = Object.values(p.Z.getGuilds()).reduce((e, n) => {
-let t = m.ZP.getChannels(n.id).SELECTABLE.map(e => e.channel).filter(e => e.type === F.d4z.GUILD_TEXT && M.Z.can(F.Plq.MANAGE_WEBHOOKS, e)).map(e => {
-  let n = g.Z.getChannel(e.parent_id);
+  } = e, t = M.Z.getGuild(n.guild_id), l = Object.values(M.Z.getGuilds()).reduce((e, n) => {
+let t = p.ZP.getChannels(n.id).SELECTABLE.map(e => e.channel).filter(e => e.type === F.d4z.GUILD_TEXT && _.Z.can(F.Plq.MANAGE_WEBHOOKS, e)).map(e => {
+  let n = m.Z.getChannel(e.parent_id);
   return {
     channel: e,
     category: null != n ? n.name : null
@@ -335,7 +335,7 @@ return t.length > 0 && (e[n.id] = {
   guild: n,
   channels: t
 }), e;
-  }, {}), a = O.Z.getLastChannelFollowingDestination();
+  }, {}), a = x.Z.getLastChannelFollowingDestination();
   return {
 guildToFollow: t,
 channelNameToFollow: n.name,

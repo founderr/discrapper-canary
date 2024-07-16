@@ -29,15 +29,15 @@ var a = s(512722),
   R = s(621853),
   x = s(318661),
   M = s(25990),
-  D = s(594174),
-  f = s(74538),
+  f = s(594174),
+  D = s(74538),
   P = s(689938),
   L = s(121223);
 
 function Z() {
   var e, t, s, a, Z, b, v, j;
-  let B = (0, r.e7)([D.default], () => {
-  let e = D.default.getCurrentUser();
+  let B = (0, r.e7)([f.default], () => {
+  let e = f.default.getCurrentUser();
   return i()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
 }),
 U = (0, r.e7)([R.Z], () => R.Z.getUserProfile(B.id)),
@@ -59,7 +59,7 @@ U = (0, r.e7)([R.Z], () => R.Z.getUserProfile(B.id)),
   };
 }),
 W = (0, E.gS)(),
-K = f.ZP.canUsePremiumProfileCustomization(B),
+K = D.ZP.canUsePremiumProfileCustomization(B),
 z = (0, u.gd)(G, B.avatar),
 Q = (0, u.f$)(y, null == U ? void 0 : U.banner),
 X = 'DefaultCustomizationSections';

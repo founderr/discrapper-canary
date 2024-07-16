@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(521868),
   p = n(299206),
   T = n(440051),
-  f = n(734934),
-  S = n(158238),
+  S = n(734934),
+  f = n(158238),
   C = n(300284),
   N = n(680295),
   A = n(785717),
@@ -178,8 +178,8 @@ let n = T.Y.useExperiment({
     location: 'account popout'
   }).expiringStatus,
   a = w.Cr.useSetting(),
-  s = (0, f.p)(),
-  r = S.e.useExperiment({
+  s = (0, S.p)(),
+  r = f.e.useExperiment({
     location: 'account popout'
   }).allowQuietMode || s,
   o = w.fv.useSetting(),
@@ -214,7 +214,7 @@ let n = T.Y.useExperiment({
         id: ''.concat(e, '-').concat(n),
         label: a(),
         action: () => {
-          (0, f.oW)(!0, n);
+          (0, S.oW)(!0, n);
         },
         dontCloseOnAction: !0
       }, n);
@@ -266,7 +266,7 @@ return (0, i.jsxs)(i.Fragment, {
         ]
       }),
       action: () => {
-        (0, f.oW)(!s);
+        (0, S.oW)(!s);
       },
       dontCloseOnAction: !0,
       children: _
@@ -297,7 +297,7 @@ s
 eE = (0, C.Z)({
   analyticsLocations: ea
 }),
-eh = (0, f.p)(),
+eh = (0, S.p)(),
 eI = el === q.Skl.DND,
 em = (0, z.g)(),
 eg = (0, g.o)({

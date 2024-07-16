@@ -27,7 +27,7 @@ var s = n(735250),
   b = n(689938),
   O = n(661624);
 
-function L() {
+function P() {
   let e = a.useCallback(() => {
 (0, o.openModalLazy)(async () => {
   let {
@@ -51,7 +51,7 @@ children: (0, s.jsx)(o.CircleInformationIcon, {
   });
 }
 
-function P(e) {
+function L(e) {
   let {
 displayType: t
   } = e, n = a.useCallback(() => {
@@ -86,7 +86,7 @@ x = a.useCallback(e => {
   l,
   C.timestampFormatter
 ]),
-L = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
+P = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
   children: [
     (0, s.jsx)(o.Text, {
       className: O.sectionHeader,
@@ -109,21 +109,21 @@ L = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
 ]);
   if (0 === l.length)
 return null;
-  let P = l.slice(0, g);
+  let L = l.slice(0, g);
   return (0, s.jsxs)('div', {
 className: O.actionSection,
 children: [
-  L(),
+  P(),
   (0, s.jsx)('div', {
     className: O.actions,
     style: {
-      maxHeight: 65 * P.length
+      maxHeight: 65 * L.length
     },
-    children: P.map((e, t) => x({
+    children: L.map((e, t) => x({
       row: t
     }))
   }),
-  P.length !== c ? (0, s.jsx)(o.Clickable, {
+  L.length !== c ? (0, s.jsx)(o.Clickable, {
     className: O.loadMoreBar,
     onClick: S,
     role: 'button',
@@ -134,7 +134,7 @@ children: [
       className: O.loadMore,
       variant: 'text-sm/bold',
       children: b.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
-        pageSize: Math.min(c - P.length, M.iB)
+        pageSize: Math.min(c - L.length, M.iB)
       })
     })
   }) : null
@@ -246,7 +246,7 @@ children: [
     className: O.connectedCounter,
     children: [
       (0, s.jsx)(v, {}),
-      (0, s.jsx)(L, {})
+      (0, s.jsx)(P, {})
     ]
   }),
   (0, s.jsxs)('div', {
@@ -275,7 +275,7 @@ children: [
             className: O.activityOverview,
             children: a ? n.map(e => {
               let [t] = e;
-              return (0, s.jsx)(P, {
+              return (0, s.jsx)(L, {
                 displayType: t
               }, ''.concat(t, '-list'));
             }) : (0, s.jsx)(h.Z, {

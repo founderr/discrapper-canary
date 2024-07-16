@@ -1,19 +1,19 @@
 n.d(t, {
   l: function() {
-return a;
+return r;
   },
   y: function() {
-return c;
+return l;
   }
 });
-var o = n(652874);
-let r = Object.freeze({
+var i = n(652874);
+let a = Object.freeze({
 isPopoutOpen: !1
   }),
-  s = (0, o.Z)(e => r),
-  a = e => {
+  s = (0, i.Z)(e => a),
+  r = e => {
 s.setState(() => ({
   isPopoutOpen: e
 }));
   },
-  c = s;
+  l = s;

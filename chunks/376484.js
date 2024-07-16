@@ -8,8 +8,8 @@ n(470079);
 var a = n(120356),
   s = n.n(a),
   r = n(481060),
-  l = n(454585),
-  o = n(529815),
+  l = n(446411),
+  o = n(454585),
   c = n(702346),
   d = n(553385),
   u = n(981631),
@@ -69,13 +69,13 @@ function m(e) {
   let {
 message: n
   } = e, [a] = null !== (t = n.embeds) && void 0 !== t ? t : [];
-  return null == a ? null : (0, i.jsx)(o.ZP, {
+  return null == a ? null : (0, i.jsx)(l.ZP, {
 className: E.embed,
 embed: a,
-renderTitle: (e, t) => l.Z.parseEmbedTitle(t, !0, {
+renderTitle: (e, t) => o.Z.parseEmbedTitle(t, !0, {
   channelId: n.channel_id
 }),
-renderDescription: (e, t, i) => l.Z.parse(t, !0, {
+renderDescription: (e, t, i) => o.Z.parse(t, !0, {
   channelId: n.channel_id
 }),
 autoPlayGif: !1,

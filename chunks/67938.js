@@ -1,6 +1,6 @@
 n.d(t, {
   G: function() {
-return _;
+return h;
   }
 });
 var r = n(735250);
@@ -19,7 +19,7 @@ var s = n(120356),
   C = n(830487),
   m = n(602476);
 
-function h() {
+function _() {
   return (0, r.jsxs)('div', {
 className: d.attributionLogos,
 'aria-label': 'Discord x Pocketpair',
@@ -44,7 +44,7 @@ children: [
   });
 }
 
-function _(e) {
+function h(e) {
   let {
 category: t
   } = e, n = (0, o.e7)([l.Z], () => l.Z.useReducedMotion), {
@@ -67,7 +67,7 @@ children: [
         alt: t.name,
         'aria-hidden': !0
       }),
-      (0, r.jsx)(h, {}),
+      (0, r.jsx)(_, {}),
       (0, r.jsx)('img', {
         src: f,
         className: d.categoryLogo,

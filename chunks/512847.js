@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(430824),
   p = n(131951),
   T = n(292959),
-  f = n(19780),
-  S = n(944486),
+  S = n(19780),
+  f = n(944486),
   C = n(606304),
   N = n(979651),
   A = n(938475),
@@ -44,9 +44,9 @@ return s.attach('useSound'), () => s.detach();
 function R() {
   return O([
 p.Z,
-S.Z
+f.Z
   ], () => ({
-inVoiceChannel: null != S.Z.getVoiceChannelId(),
+inVoiceChannel: null != f.Z.getVoiceChannelId(),
 selfMute: p.Z.isSelfMute(),
 selfDeaf: p.Z.isSelfDeaf(),
 audioPermissionReady: p.Z.isNativeAudioPermissionReady(),
@@ -76,15 +76,15 @@ if (!!s && (!!n || !!e.audioPermissionReady)) {
 function x() {
   return O([
 m.Z,
-f.Z,
 S.Z,
+f.Z,
 c.Z
   ], () => {
-let e = m.Z.getChannel(S.Z.getVoiceChannelId()),
+let e = m.Z.getChannel(f.Z.getVoiceChannelId()),
   t = null == e ? void 0 : e.type,
   n = null == e ? void 0 : e.getGuildId(),
-  i = f.Z.getWasEverRtcConnected(),
-  a = f.Z.getState();
+  i = S.Z.getWasEverRtcConnected(),
+  a = S.Z.getState();
 return {
   channelType: t,
   guildId: n,
@@ -143,10 +143,10 @@ if (e !== t)
 
 function D() {
   return O([
-S.Z,
+f.Z,
 N.Z
   ], () => {
-let e = S.Z.getVoiceChannelId();
+let e = f.Z.getVoiceChannelId();
 if (null == e)
   return _.xO.NONE;
 let t = N.Z.getVoiceStateForChannel(e);
@@ -159,14 +159,14 @@ if (e !== t && t === _.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK)
 
 function y() {
   return O([
-S.Z,
+f.Z,
 h.Z,
 I.default,
 N.Z,
 m.Z
   ], () => {
 let e, t;
-let n = S.Z.getVoiceChannelId(),
+let n = f.Z.getVoiceChannelId(),
   i = I.default.getId();
 let a = [],
   s = null,
@@ -229,12 +229,12 @@ else if (e.singleActiveStreamViewerCount <= 25 && c && l < e.singleActiveStreamV
 
 function j() {
   return O([
-S.Z,
+f.Z,
 o.ZP,
 I.default
   ], () => {
-let e = S.Z.getVoiceChannelId(),
-  t = S.Z.getChannelId(),
+let e = f.Z.getVoiceChannelId(),
+  t = f.Z.getChannelId(),
   n = o.ZP.getConnectedActivityChannelId(),
   i = I.default.getId(),
   a = (0, v.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
@@ -275,11 +275,11 @@ return n;
 function U() {
   return O([
 u.Z,
-S.Z
+f.Z
   ], () => ({
 hangStatus: u.Z.getCurrentHangStatus(),
 customHangStatus: u.Z.getCustomHangStatus(),
-inVoice: null != S.Z.getVoiceChannelId()
+inVoice: null != f.Z.getVoiceChannelId()
   }), (e, t) => {
 var n, i;
 let {

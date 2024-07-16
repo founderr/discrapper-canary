@@ -25,8 +25,8 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let f = 'PremiumServerDriveAnnouncementModal';
-class S extends l.Z {
+let S = 'PremiumServerDriveAnnouncementModal';
+class f extends l.Z {
   _initialize() {
 r.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), r.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
   }
@@ -40,7 +40,7 @@ super(...e), T(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
     isPreview: t
   });
   if (null != a)
-    return !!(!1 !== t || (null == a ? void 0 : a.contentIdentifier) !== 'summer_bogo_content' || await (0, m.k)()) && ((0, s.closeModal)(f), (0, s.openModalLazy)(async () => {
+    return !!(!1 !== t || (null == a ? void 0 : a.contentIdentifier) !== 'summer_bogo_content' || await (0, m.k)()) && ((0, s.closeModal)(S), (0, s.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.resolve().then(n.bind(n, 318199));
@@ -49,7 +49,7 @@ super(...e), T(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
         properties: a
       });
     }, {
-      modalKey: f
+      modalKey: S
     }), !0);
   return !1;
 }), T(this, 'handlePreview', e => {
@@ -97,4 +97,4 @@ super(...e), T(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
 });
   }
 }
-t.Z = new S();
+t.Z = new f();

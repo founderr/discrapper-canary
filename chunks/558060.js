@@ -33,8 +33,8 @@ return (0, r.jsx)('div', {
   })
 });
   let m = (0, i.ql)(t, d.tuJ.PREMIUM_TIER_2),
-h = !n && !(0, i.x6)(t),
-_ = (0, i.x6)(t) && n ? {
+_ = !n && !(0, i.x6)(t),
+h = (0, i.x6)(t) && n ? {
   ...C,
   amount: s.original
 } : C;
@@ -42,12 +42,12 @@ _ = (0, i.x6)(t) && n ? {
 className: a()(p.priceTagsContainer, g),
 children: [
   (0, r.jsx)(l.F, {
-    price: _,
+    price: h,
     discount: n ? i.f_ : s,
     className: a()(p.price, {
       [p.striked]: n,
       [p.dimmed]: n,
-      [p.fullPrice]: h
+      [p.fullPrice]: _
     })
   }),
   null != m && (0, r.jsx)(l.F, {
@@ -61,12 +61,12 @@ children: [
           text: e
         })
       })
-    }) : h ? e => u.Z.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
+    }) : _ ? e => u.Z.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
       price: e
     }) : void 0,
     className: a()(p.price, {
       [p.dimmed]: !n,
-      [p.fullPrice]: h
+      [p.fullPrice]: _
     }),
     variant: n ? void 0 : 'text-xs/semibold',
     icon: (0, r.jsx)(o.Tooltip, {
@@ -81,7 +81,7 @@ children: [
           color: 'currentColor',
           ...t,
           className: a()(p.premiumIcon, {
-            [p.fullPrice]: h
+            [p.fullPrice]: _
           })
         });
       }

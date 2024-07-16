@@ -19,8 +19,8 @@ var i, a = n(735250),
   g = n(819640),
   p = n(725568),
   T = n(585483),
-  f = n(792125),
-  S = n(981631),
+  S = n(792125),
+  f = n(981631),
   C = n(821636);
 
 function N(e, t, n) {
@@ -40,7 +40,7 @@ createPromise: () => Promise.all([
   n.e('15972'),
   n.e('12013'),
   n.e('47006'),
-  n.e('29609'),
+  n.e('60623'),
   n.e('32776'),
   n.e('95900'),
   n.e('33053'),
@@ -54,7 +54,7 @@ createPromise: () => Promise.all([
   n.e('23831'),
   n.e('30419'),
   n.e('18824'),
-  n.e('48870'),
+  n.e('51395'),
   n.e('59579')
 ]).then(n.bind(n, 989804)),
 webpackId: 989804,
@@ -78,7 +78,7 @@ createPromise: () => Promise.all([
   n.e('15972'),
   n.e('12013'),
   n.e('47006'),
-  n.e('29609'),
+  n.e('60623'),
   n.e('32776'),
   n.e('95900'),
   n.e('87624'),
@@ -104,10 +104,10 @@ webpackId: 994763,
 name: 'GuildSettings'
   }),
   O = {
-[S.S9g.USER_SETTINGS]: () => (0, a.jsx)(A, {}),
-[S.S9g.CHANNEL_SETTINGS]: () => (0, a.jsx)(v, {}),
-[S.S9g.GUILD_SETTINGS]: () => (0, a.jsx)(L, {}),
-[S.S9g.COLLECTIBLES_SHOP]: () => (0, a.jsx)(Z, {})
+[f.S9g.USER_SETTINGS]: () => (0, a.jsx)(A, {}),
+[f.S9g.CHANNEL_SETTINGS]: () => (0, a.jsx)(v, {}),
+[f.S9g.GUILD_SETTINGS]: () => (0, a.jsx)(L, {}),
+[f.S9g.COLLECTIBLES_SHOP]: () => (0, a.jsx)(Z, {})
   },
   R = 'SHOWN',
   x = 'HIDDEN',
@@ -171,7 +171,7 @@ let {
   opacity: t,
   scale: n
 } = this.state;
-T.S.dispatch(S.CkL.LAYER_POP_START), o.Z.parallel([
+T.S.dispatch(f.CkL.LAYER_POP_START), o.Z.parallel([
   o.Z.spring(t, {
     toValue: 0,
     ...b
@@ -181,7 +181,7 @@ T.S.dispatch(S.CkL.LAYER_POP_START), o.Z.parallel([
     ...b
   })
 ]).start(() => {
-  e(), T.S.dispatch(S.CkL.LAYER_POP_COMPLETE);
+  e(), T.S.dispatch(f.CkL.LAYER_POP_COMPLETE);
 });
   }
   animateUnder() {
@@ -266,10 +266,10 @@ N(M, 'defaultProps', {
 }), N(M, 'contextType', u.AccessibilityPreferencesContext);
 class D extends s.PureComponent {
   componentDidMount() {
-T.S.subscribe(S.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
+T.S.subscribe(f.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
   }
   componentWillUnmount() {
-T.S.unsubscribe(S.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
+T.S.unsubscribe(f.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
   }
   renderLayers() {
 let {
@@ -297,7 +297,7 @@ return i = 'string' == typeof e ? O[e]() : (0, a.jsx)(e, {}), (0, a.jsxs)(M, {
   }
   renderArtisanalHack() {
 return (0, a.jsx)('div', {
-  className: l()(C.bg, (0, f.Q)(this.props.sidebarTheme))
+  className: l()(C.bg, (0, S.Q)(this.props.sidebarTheme))
 });
   }
   render() {
@@ -315,7 +315,7 @@ return (0, a.jsxs)(a.Fragment, {
 }
 
 function y(e) {
-  let t = (0, c.e7)([m.Z], () => m.Z.darkSidebar) ? S.BRd.DARK : void 0,
+  let t = (0, c.e7)([m.Z], () => m.Z.darkSidebar) ? f.BRd.DARK : void 0,
 n = (0, c.e7)([g.Z], () => g.Z.getLayers()),
 i = (0, p.QP)(e => e.fullScreenLayers.length > 0);
   return (0, a.jsx)(D, {

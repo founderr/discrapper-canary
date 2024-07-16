@@ -106,9 +106,9 @@ function L(e) {
   let {
 channelId: t,
 className: n
-  } = e, [l, d] = a.useState(!1), {
-toastsHidden: h,
-toastMessages: p
+  } = e, [l, h] = a.useState(!1), {
+toastsHidden: p,
+toastMessages: m
   } = function(e) {
 var t;
 let {
@@ -160,24 +160,24 @@ channelId: t,
 isFrozen: l,
 count: 3,
 lingerMs: R
-  }), m = a.useRef({}), [_, f] = a.useState({}), E = a.useCallback((e, t) => {
-null == t ? delete m.current[e] : m.current[e] = t;
+  }), _ = a.useRef({}), [f, E] = a.useState({}), C = a.useCallback((e, t) => {
+null == t ? delete _.current[e] : _.current[e] = t;
   }, []);
   a.useLayoutEffect(() => {
 let e = {},
   t = 0;
-for (let i of p) {
+for (let i of m) {
   var n;
-  let a = null !== (n = m.current[i.id]) && void 0 !== n ? n : 0;
+  let a = null !== (n = _.current[i.id]) && void 0 !== n ? n : 0;
   e[i.id] = t, t += a + 8;
-}!(0, r.isEqual)(e, _) && f(e);
-  }, [p]);
-  let C = p.map(e => ({
+}!(0, r.isEqual)(e, f) && E(e);
+  }, [m]);
+  let g = m.map(e => ({
   message: e,
-  height: m.current[e.id],
-  y: _[e.id]
+  height: _.current[e.id],
+  y: f[e.id]
 })),
-g = (0, o.useTransition)(C, {
+I = (0, d.useTransition)(g, {
   keys: e => e.message.id,
   from: () => ({
     opacity: 0
@@ -206,7 +206,7 @@ g = (0, o.useTransition)(C, {
     } = e;
     return {
       opacity: 0,
-      translateY: h ? n : -(null != t ? t : 0) - 8,
+      translateY: p ? n : -(null != t ? t : 0) - 8,
       pointerEvents: 'none'
     };
   }
@@ -214,13 +214,13 @@ g = (0, o.useTransition)(C, {
   return (0, i.jsx)('div', {
 className: s()(n, (0, Z.Q)(A.BRd.DARK)),
 onMouseEnter: () => {
-  d(!0);
+  h(!0);
 },
 onMouseLeave: () => {
-  d(!1);
+  h(!1);
 },
-children: g((e, t) => (0, i.jsx)(o.animated.div, {
-  ref: e => E(t.message.id, null != e ? e.offsetHeight : null),
+children: I((e, t) => (0, i.jsx)(o.animated.div, {
+  ref: e => C(t.message.id, null != e ? e.offsetHeight : null),
   className: b.toastWrapper,
   style: e,
   children: (0, i.jsx)(j, {

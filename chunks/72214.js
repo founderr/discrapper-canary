@@ -43,7 +43,7 @@ return null != n && _.M.includes(n) && (l = [n], a = n), {
 };
   }(t), [t]), {
 queryMode: C
-  } = m, [b, L] = l.useState(null != f ? f : []);
+  } = m, [L, b] = l.useState(null != f ? f : []);
   l.useLayoutEffect(() => {
 let {
   query: e,
@@ -52,7 +52,7 @@ let {
 I({
   query: e,
   resultTypes: t
-}), L(null != f ? f : []);
+}), b(null != f ? f : []);
   }, [
 I,
 m
@@ -67,7 +67,7 @@ queryMode: C,
 targetDestination: n,
 frequentChannels: N,
 selectedDestinations: f,
-pinnedDestinations: b,
+pinnedDestinations: L,
 originDestination: E,
 includeMissingDMs: h,
 isConnected: T
@@ -78,7 +78,7 @@ C,
 n,
 N,
 f,
-b,
+L,
 E,
 h,
 T

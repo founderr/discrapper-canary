@@ -9,8 +9,8 @@ var i = t(735250),
   l = t(139387),
   o = t(726542),
   r = t(434404),
-  c = t(486199),
-  d = t(13051),
+  d = t(486199),
+  c = t(13051),
   u = t(541762);
 
 function I(e) {
@@ -42,7 +42,7 @@ t
   ]);
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsx)(c.Z, {
+  (0, i.jsx)(d.Z, {
     name: _,
     icon: null == h ? void 0 : h.icon.whiteSVG,
     iconBackgroundColor: null == h ? void 0 : h.color,
@@ -53,7 +53,7 @@ children: [
   (0, i.jsx)(s.FormDivider, {
     className: u.headerDivider
   }),
-  n.map(e => (0, i.jsx)(d.Z, {
+  n.map(e => (0, i.jsx)(c.Z, {
     integration: e,
     editedIntegration: t,
     guild: I,

@@ -25,7 +25,7 @@ onContextMenuThread: m
   } = e, T = (0, o.ZP)(n), h = _(T), N = (0, a.e7)([r.Z], () => {
 var e;
 return r.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
-  }), f = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
+  }), p = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
 actorName: T.nick,
 actorHook: h,
 threadName: null !== (t = null == N ? void 0 : N.name) && void 0 !== t ? t : n.content,
@@ -43,6 +43,6 @@ iconNode: (0, i.jsx)(s.ThreadIcon, {
 }),
 timestamp: n.timestamp,
 compact: u,
-children: f
+children: p
   });
 }

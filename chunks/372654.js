@@ -1,9 +1,9 @@
 n.d(t, {
   ML: function() {
-return l;
+return i;
   },
   nH: function() {
-return i;
+return l;
   },
   vK: function() {
 return d;
@@ -15,8 +15,8 @@ return o;
 var r = n(180650),
   a = n(921948);
 let o = 1060,
-  l = e => e * (0, a.Z)(),
-  i = function(e) {
+  i = e => e * (0, a.Z)(),
+  l = function(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 180,
   {
     primary: n,

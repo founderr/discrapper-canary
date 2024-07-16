@@ -106,7 +106,7 @@ hideSubscribeAndGiftButton: m,
 entrypoint: b
   } = e, {
 analyticsLocations: O
-  } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA), L = (0, E._O)(), P = (0, u.Nx)(), v = (0, R.Vi)(), Z = (0, i.e7)([_.Z], () => _.Z.affinities), D = (0, I.Z)(), {
+  } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA), P = (0, E._O)(), L = (0, u.Nx)(), v = (0, R.Vi)(), Z = (0, i.e7)([_.Z], () => _.Z.affinities), D = (0, I.Z)(), {
 enabled: B
   } = T._.useExperiment({
 location: 'HeroHeading'
@@ -147,8 +147,8 @@ children: (0, s.jsxs)('div', {
           })
         }) : m ? null : (0, s.jsx)(h, {
           subscriptionTier: d,
-          inOfferExperience: P,
-          inTrial: L,
+          inOfferExperience: L,
+          inTrial: P,
           buttonClassName: a
         }),
         U && !j && (0, s.jsx)(x, {
@@ -157,7 +157,7 @@ children: (0, s.jsxs)('div', {
         })
       ]
     }),
-    !(P || p) && (0, s.jsx)(M, {
+    !(L || p) && (0, s.jsx)(M, {
       isFullscreen: t
     })
   ]

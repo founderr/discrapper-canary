@@ -27,8 +27,8 @@ childrenClassName: x,
 showAdd: I,
 showMutualGuilds: T,
 showPrimaryCategory: R,
-children: A,
-onView: b,
+children: b,
+onView: A,
 guildCountPosition: v = 'top',
 subheaderTextVariant: E = 'text-sm/normal',
 mutualGuildShownMax: P,
@@ -130,9 +130,9 @@ children: [
       }) : null
     ]
   }),
-  null != A || null != x ? (0, a.jsx)('div', {
+  null != b || null != x ? (0, a.jsx)('div', {
     className: r()(x, p.__invalid_children),
-    children: A
+    children: b
   }) : null,
   G ? (0, a.jsx)('div', {
     className: p.bottomGuildCountContainer,
@@ -140,9 +140,9 @@ children: [
   }) : null
 ]
   });
-  return null != b ? (0, a.jsx)(s.Clickable, {
+  return null != A ? (0, a.jsx)(s.Clickable, {
 tag: 'li',
-onClick: () => b({
+onClick: () => A({
   mutualGuilds: Z
 }),
 className: r()(h, p.listing, p.clickable),

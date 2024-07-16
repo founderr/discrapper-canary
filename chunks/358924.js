@@ -14,22 +14,22 @@ var i, a, s = n(735250),
   g = n(122810),
   p = n(833664),
   T = n(503438),
-  f = n(420660),
-  S = n(74433),
+  S = n(420660),
+  f = n(74433),
   C = n(952561),
   N = n(513202),
   A = n(906732),
   v = n(812206),
   Z = n(933557),
-  L = n(382182),
-  O = n(871118),
-  R = n(849171),
-  x = n(314897),
-  b = n(592125),
-  P = n(594174),
-  M = n(368874),
-  D = n(366695),
-  y = n(366966),
+  L = n(925329),
+  O = n(382182),
+  R = n(871118),
+  x = n(707409),
+  b = n(849171),
+  P = n(314897),
+  M = n(592125),
+  D = n(594174),
+  y = n(368874),
   j = n(446753),
   U = n(395361),
   G = n(639351),
@@ -98,10 +98,10 @@ renderTimePlayed() {
   } = t;
   return null == n || !(0, p.Z)(t) || (0, T.Z)(t) ? null : Q(e = (0, g.Z)(t) ? (0, s.jsx)(X, {
     timestamps: n
-  }) : (0, s.jsx)(y.ZP, {
+  }) : (0, s.jsx)(x.ZP, {
     start: n.start,
     end: n.end,
-    location: y.ZP.Locations.USER_ACTIVITY,
+    location: x.ZP.Locations.USER_ACTIVITY,
     className: W.__invalid_playTime
   }));
 }
@@ -468,9 +468,9 @@ children: (0, s.jsxs)('div', {
   assets: _,
   application_id: E
 } = i;
-  if (null != _ && (0, f.Z)(i)) {
+  if (null != _ && (0, S.Z)(i)) {
 var I;
-t = (0, s.jsx)(M.Z, {
+t = (0, s.jsx)(y.Z, {
   className: W.twitchSectionPreviewWrapper,
   aspectRatio: 16 / 9,
   children: (0, s.jsxs)(u.Clickable, {
@@ -533,11 +533,11 @@ user: a,
 applicationStream: r,
 onPreviewClick: l,
 guildId: o
-  } = e, d = (0, c.e7)([b.Z], () => b.Z.getChannel(r.channelId)), [_, E] = (0, L.wq)(d), h = (0, s.jsxs)(u.Clickable, {
+  } = e, d = (0, c.e7)([M.Z], () => M.Z.getChannel(r.channelId)), [_, E] = (0, O.wq)(d), h = (0, s.jsxs)(u.Clickable, {
 onClick: _ ? l : void 0,
 className: W.applicationStreamingPreviewWrapper,
 children: [
-  (0, s.jsx)(O.Z, {
+  (0, s.jsx)(R.Z, {
     stream: r,
     className: W.applicationStreamingPreviewSize
   }),
@@ -545,11 +545,11 @@ children: [
     className: W.applicationStreamingHoverWrapper,
     children: (0, s.jsx)('div', {
       className: W.applicationStreamingHoverText,
-      children: (0, L.P9)(E)
+      children: (0, O.P9)(E)
     })
   })
 ]
-  }), I = null !== (n = null === (t = (0, S.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : Y.Z.Messages.SHARING_SCREEN;
+  }), I = null !== (n = null === (t = (0, f.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : Y.Z.Messages.SHARING_SCREEN;
   return (0, s.jsxs)(J, {
 children: [
   (0, s.jsxs)('div', {
@@ -590,9 +590,9 @@ if (null != _)
   });
   }, [_]);
   let h = (0, c.Wu)([
-  P.default,
-  x.default
-], () => Array.from(a).map(e => x.default.getId() === e ? null : P.default.getUser(e)).filter(B.lm)),
+  D.default,
+  P.default
+], () => Array.from(a).map(e => P.default.getId() === e ? null : D.default.getUser(e)).filter(B.lm)),
 m = (0, E.O)(),
 {
   analyticsLocations: g
@@ -605,15 +605,15 @@ return null;
   let T = null != t.created_at && t.created_at > 0 ? {
   start: t.created_at
 } : void 0,
-f = (0, w.getAssetImage)(p.id, o, 300);
+S = (0, w.getAssetImage)(p.id, o, 300);
   return (0, s.jsxs)(J, {
 children: [
   (0, s.jsxs)('div', {
     className: W.embeddedActivityTopRow,
     children: [
-      (0, s.jsx)(D.Z, {
+      (0, s.jsx)(L.Z, {
         game: p,
-        size: D.Z.Sizes.XSMALL,
+        size: L.Z.Sizes.XSMALL,
         className: W.embeddedActivityIcon
       }),
       (0, s.jsx)('div', {
@@ -638,15 +638,15 @@ children: [
   (0, s.jsxs)('div', {
     className: W.embeddedActivityPlayerContainer,
     children: [
-      null != f ? (0, s.jsx)('img', {
-        src: f,
+      null != S ? (0, s.jsx)('img', {
+        src: S,
         alt: p.name,
         className: W.embeddedActivityImage
       }) : null,
       (0, s.jsxs)('div', {
         className: W.embeddedActivityImageOverlay,
         children: [
-          (0, s.jsx)(R.OV, {
+          (0, s.jsx)(b.OV, {
             users: h,
             guildId: i,
             channelId: n.id

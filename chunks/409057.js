@@ -19,17 +19,17 @@ var r = n(735250),
   p = n(802856),
   m = n(420660),
   I = n(39628),
-  T = n(810568),
-  g = n(168524),
-  S = n(833858),
-  A = n(223135),
-  N = n(769654),
-  v = n(750154),
-  O = n(285952),
-  R = n(366695),
-  C = n(346656),
-  y = n(514342),
-  D = n(366966),
+  T = n(925329),
+  g = n(810568),
+  S = n(168524),
+  A = n(565138),
+  N = n(833858),
+  v = n(223135),
+  O = n(707409),
+  R = n(769654),
+  C = n(750154),
+  y = n(285952),
+  D = n(514342),
   L = n(936195),
   b = n(806519),
   M = n(768581),
@@ -123,10 +123,10 @@ eo = null != W && (null == c ? void 0 : c.type) !== x.IIU.PLAYING && (null == c 
   type: x.IIU.PLAYING,
   name: k.Z.Messages.SHARING_SCREEN
 } : c,
-es = (0, g.Z)({
+es = (0, S.Z)({
   location: 'UserProfileActivityCard',
   applicationId: null !== (t = null == j ? void 0 : j.id) && void 0 !== t ? t : null == eo ? void 0 : eo.application_id,
-  source: T.m1.UserProfile,
+  source: g.m1.UserProfile,
   sourceUserId: u.id,
   trackEntryPointImpression: !0
 });
@@ -148,7 +148,7 @@ s = (0, r.jsx)('div', {
   if (e.type === x.IIU.HANG_STATUS)
     return (0, r.jsx)('div', {
       className: o()(B.assets, ea),
-      children: (0, r.jsx)(A.Z, {
+      children: (0, r.jsx)(v.Z, {
         hangStatusActivity: e,
         className: o()(B.assetsSmallImage, B.withoutLargeImage, B.hangStatus, ea)
       })
@@ -174,8 +174,8 @@ s = (0, r.jsx)('div', {
       onClick: () => en(e, u.id),
       children: E
     });
-  else if ((0, v.dS)(e)) {
-    let t = (0, v.rq)(e);
+  else if ((0, C.dS)(e)) {
+    let t = (0, C.rq)(e);
     if (null == t)
       return null;
     E = (0, r.jsx)(b.ZP, {
@@ -193,7 +193,7 @@ s = (0, r.jsx)('div', {
       })
     });
   }
-  return (!(0, v.dS)(e) && null != s.small_image && (a = (0, r.jsx)(l.Tooltip, {
+  return (!(0, C.dS)(e) && null != s.small_image && (a = (0, r.jsx)(l.Tooltip, {
     text: '' !== s.small_text ? s.small_text : null,
     position: 'top',
     children: e => {
@@ -237,7 +237,7 @@ s = (0, r.jsx)('div', {
 ;
 el = null != (s = null != (n = eo).assets || (0, E.Z)(n) || n.type !== x.IIU.PLAYING || u.bot ? null : null == j && null != W ? (0, r.jsx)('div', {
   className: o()(B.gameIcon, B.screenshareIcon)
-}) : (0, r.jsx)(R.Z, {
+}) : (0, r.jsx)(T.Z, {
   className: B.gameIcon,
   game: j
 }));
@@ -248,14 +248,14 @@ el = null != (s = null != (n = eo).assets || (0, E.Z)(n) || n.type !== x.IIU.PLA
   let t = (0, f.Z)(e),
     n = e.name,
     i = n;
-  return (e.type === x.IIU.HANG_STATUS ? i = (0, S.O8)(e) : t && null != j ? i = (0, r.jsx)('span', {
+  return (e.type === x.IIU.HANG_STATUS ? i = (0, N.O8)(e) : t && null != j ? i = (0, r.jsx)('span', {
     className: B.textSmSemibold,
     children: i
   }) : !t && (n = e.details, i = e.details, (0, h.Z)(e) && null != e.sync_id && null != e.details ? i = (0, r.jsx)(l.Anchor, {
     className: B.textLink,
     onClick: () => ee(e),
     children: e.details
-  }) : (0, v.dS)(e) && (i = e.name)), null == i) ? null : (0, r.jsx)(l.Text, {
+  }) : (0, C.dS)(e) && (i = e.name)), null == i) ? null : (0, r.jsx)(l.Text, {
     title: n,
     variant: 'text-sm/semibold',
     className: null != Z({
@@ -276,7 +276,7 @@ ec = (e => {
     a = null != W ? k.Z.Messages.HANG_STATUS_LOCATION.format({
       guildName: W.name
     }) : null, t = null != W ? () => {
-      (0, N.X)(W.id);
+      (0, R.X)(W.id);
     } : void 0;
   else if (!(0, f.Z)(e)) {
     if (s = a = i, (0, h.Z)(e) && null != i)
@@ -289,7 +289,7 @@ ec = (e => {
           onOpenSpotifyArtist: t => et(e, u.id, t)
         }, n)
       });
-    else if ((0, v.dS)(e)) {
+    else if ((0, C.dS)(e)) {
       var c;
       a = null === (c = e.assets) || void 0 === c ? void 0 : c.small_text;
     }
@@ -324,10 +324,10 @@ ed = ((e, t) => {
       onClick: () => en(e, u.id),
       children: E
     }, n) : E
-  }))), null != _ && 0 !== _.length && e.type !== x.IIU.CUSTOM_STATUS || (0, v.dS)(e)) ? ((null == c ? void 0 : c.size) == null && [G.Zc].includes(null !== (n = e.application_id) && void 0 !== n ? n : '') ? a = k.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
+  }))), null != _ && 0 !== _.length && e.type !== x.IIU.CUSTOM_STATUS || (0, C.dS)(e)) ? ((null == c ? void 0 : c.size) == null && [G.Zc].includes(null !== (n = e.application_id) && void 0 !== n ? n : '') ? a = k.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
     count: '0',
     max: null !== (i = null == t ? void 0 : t.getMaxParticipants()) && void 0 !== i ? i : 0
-  }) : (0, v.dS)(e) && (null == c ? void 0 : c.size) != null ? a = k.Z.Messages.USER_ACTIVITY_STAGE_STATE_SIZE.format({
+  }) : (0, C.dS)(e) && (null == c ? void 0 : c.size) != null ? a = k.Z.Messages.USER_ACTIVITY_STAGE_STATE_SIZE.format({
     numSpeakers: c.size[0],
     numListeners: c.size[1] - c.size[0]
   }) : (null == c ? void 0 : c.size) != null && c.size.length >= 2 && (a = k.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
@@ -357,9 +357,9 @@ e_ = (e => {
   } = e;
   return null == t ? null : (0, E.Z)(e) ? (0, r.jsx)(H, {
     timestamps: t
-  }) : (0, r.jsx)(D.ZP, {
+  }) : (0, r.jsx)(O.ZP, {
     start: t.start,
-    location: D.ZP.Locations.USER_ACTIVITY,
+    location: O.ZP.Locations.USER_ACTIVITY,
     className: o()(B.textXsNormal, B.textEllipsis),
     isApplicationStreaming: null != W
   });
@@ -376,9 +376,9 @@ e_ = (e => {
     [B.textEllipsis]: !(0, m.Z)(a) && !(0, h.Z)(a)
   }),
   children: [
-    (0, r.jsx)(C.Z, {
+    (0, r.jsx)(A.Z, {
       guild: W,
-      size: C.Z.Sizes.SMOL,
+      size: A.Z.Sizes.SMOL,
       className: B.guildIcon
     }),
     (0, r.jsx)(l.ChevronSmallRightIcon, {
@@ -484,7 +484,7 @@ children: [
             [B.textEllipsis]: !e
           }),
           variant: Q ? 'text-xs/semibold' : 'eyebrow',
-          children: (0, r.jsx)(y.Z, {
+          children: (0, r.jsx)(D.Z, {
             children: t
           })
         }),
@@ -498,7 +498,7 @@ children: [
       className: B.activityDetails,
       children: [
         s,
-        (0, r.jsxs)(O.Z.Child, {
+        (0, r.jsxs)(y.Z.Child, {
           className: o()(B.content, ea, {
             [B.noImages]: null == s && !el,
             [B.gameImage]: el

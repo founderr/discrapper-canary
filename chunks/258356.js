@@ -9,11 +9,11 @@ return g;
 var s = n(735250);
 n(470079);
 var r = n(481060),
-  i = n(742593),
-  a = n(390072),
-  l = n(601964),
-  o = n(940627),
-  c = n(346656),
+  i = n(565138),
+  a = n(372769),
+  l = n(742593),
+  o = n(390072),
+  c = n(601964),
   u = n(230224),
   d = n(689938),
   h = n(649928);
@@ -22,14 +22,14 @@ function _(e) {
   var t;
   let {
 guildScheduledEvent: n,
-channel: l,
-onAcceptInvite: o,
+channel: i,
+onAcceptInvite: a,
 isSubmitting: c
   } = e;
   return (0, s.jsxs)('div', {
 className: h.guildEventCard,
 children: [
-  (0, s.jsx)(i.ZP, {
+  (0, s.jsx)(l.ZP, {
     name: n.name,
     description: null !== (t = n.description) && void 0 !== t ? t : void 0,
     headerVariant: 'heading-md/medium',
@@ -38,17 +38,17 @@ children: [
     guildEvent: n,
     eventPreview: n
   }),
-  null != l && (0, s.jsx)('div', {
+  null != i && (0, s.jsx)('div', {
     className: h.channelInfo,
-    children: (0, s.jsx)(a.Z, {
+    children: (0, s.jsx)(o.Z, {
       guildScheduledEvent: n,
-      channel: l
+      channel: i
     })
   }),
   (0, s.jsx)(r.Button, {
     className: h.acceptButton,
     color: r.Button.Colors.GREEN,
-    onClick: o,
+    onClick: a,
     submitting: c,
     children: d.Z.Messages.GUILD_PROFILE_JOIN_SERVER_BUTTON
   })
@@ -60,10 +60,10 @@ function E(e) {
   var t;
   let {
 invite: n
-  } = e, i = null != n.guild ? new l.ZP(n.guild) : null;
-  if (null == i)
+  } = e, l = null != n.guild ? new c.ZP(n.guild) : null;
+  if (null == l)
 return null;
-  let a = null !== (t = i.description) && void 0 !== t ? t : '';
+  let o = null !== (t = l.description) && void 0 !== t ? t : '';
   return (0, s.jsxs)('div', {
 className: h.guildInfoCard,
 children: [
@@ -75,10 +75,10 @@ children: [
   (0, s.jsxs)('div', {
     className: h.guildContainer,
     children: [
-      (0, s.jsx)(c.Z, {
-        guild: i,
+      (0, s.jsx)(i.Z, {
+        guild: l,
         active: !0,
-        size: c.Z.Sizes.MEDIUM
+        size: i.Z.Sizes.MEDIUM
       }),
       (0, s.jsxs)('div', {
         className: h.guildDetailsContanier,
@@ -89,9 +89,9 @@ children: [
             variant: 'text-sm/medium',
             tag: 'span',
             children: [
-              i.name,
-              (0, s.jsx)(o.Z, {
-                guild: i,
+              l.name,
+              (0, s.jsx)(a.Z, {
+                guild: l,
                 className: h.guildBadge,
                 tooltipPosition: 'left'
               })
@@ -106,12 +106,12 @@ children: [
       })
     ]
   }),
-  a.length > 0 && (0, s.jsx)('details', {
+  o.length > 0 && (0, s.jsx)('details', {
     className: h.guildDescriptionContainer,
     children: (0, s.jsx)(r.Text, {
       color: 'header-secondary',
       variant: 'text-sm/normal',
-      children: a
+      children: o
     })
   })
 ]

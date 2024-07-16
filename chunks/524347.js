@@ -10,8 +10,8 @@ var i, a, s, r, l = n(913527),
   T = n(960359),
   h = n(853197),
   N = n(702512);
-let f = null,
-  p = null,
+let p = null,
+  f = null,
   C = {},
   g = {},
   S = N._e.LOADING_INITIAL_PROGRESS,
@@ -52,19 +52,19 @@ return S;
   getIsPartnerGameQuestComplete(e) {
 var t;
 let n = (0, h.BS)(e);
-if (null == n || null == p)
+if (null == n || null == f)
   return !1;
-let i = !!(null === (t = p[n.dropsQuestId]) || void 0 === t ? void 0 : t.completed_at);
+let i = !!(null === (t = f[n.dropsQuestId]) || void 0 === t ? void 0 : t.completed_at);
 return R.completed && R.gameTitle === n.title || i;
   }
   get serverEligibleByQuestIds() {
 return C;
   }
   get platformAvailability() {
-return f;
+return p;
   }
   get userStatus() {
-return p;
+return f;
   }
   get activityPanelTooltipAction() {
 return S;
@@ -102,14 +102,14 @@ s = 'DropsStore', (a = 'displayName') in(i = v) ? Object.defineProperty(i, a, {
 C[e.dropsQuestId] = e.isEligible;
   },
   DROPS_PLATFORM_AVAILABILITY_SUCCESS: e => {
-f = e.availablePlatforms.filter(e => N.El.includes(e));
+p = e.availablePlatforms.filter(e => N.El.includes(e));
   },
   DROPS_USER_STATUS_FETCH_SUCCESS: e => {
 var t;
-p = null !== (t = e.codes) && void 0 !== t ? t : {};
+f = null !== (t = e.codes) && void 0 !== t ? t : {};
   },
   DROPS_USER_STATUS_FETCH_FAILURE: e => {
-p = {};
+f = {};
   },
   DROPS_ENROLLED_USER_FETCH_SUCCESS: e => {
 g[e.dropsQuestId] = {
@@ -137,7 +137,7 @@ if (R.completed = !1, R.initialProgressFetched = !0, R.lastCheckedAt = o().now()
 S = N._e.STREAM_CTA, 403 === n ? C[t] = !1 : R.interrupted = !0;
   },
   DROPS_UNENROLL_USER: e => {
-p = null, C = {
+f = null, C = {
   ...C
 }, delete C[e.dropsQuestId], g = {
   ...g
@@ -189,6 +189,6 @@ null != g[o.dropsQuestId] && g[o.dropsQuestId].isEnrolled || d ? M(o, l, r) : u.
 });
   },
   LOGOUT: function() {
-C = {}, g = {}, p = {}, A.stop();
+C = {}, g = {}, f = {}, A.stop();
   }
 });

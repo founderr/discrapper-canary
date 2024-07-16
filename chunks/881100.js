@@ -30,8 +30,8 @@ var s = n(399606),
   x = n(1549),
   b = n(13327),
   O = n(59137),
-  L = n(405991),
-  P = n(24615),
+  P = n(405991),
+  L = n(24615),
   v = n(193943),
   Z = n(334347),
   D = n(943734),
@@ -67,7 +67,7 @@ return {
     title: T.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION,
     className: t.clientThemesCard,
-    imageSource: P,
+    imageSource: L,
     imageClassName: t.clientThemesImage
   },
   customAppIcons: {
@@ -174,7 +174,7 @@ return {
   videoBackground: {
     title: T.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
-    imageSource: H(n, O, L),
+    imageSource: H(n, O, P),
     imageClassName: t.videoBackgroundImage
   }
 };

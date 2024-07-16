@@ -1,6 +1,6 @@
 n.d(t, {
   I: function() {
-return _;
+return h;
   }
 });
 var r = n(735250),
@@ -18,7 +18,7 @@ var r = n(735250),
   C = n(689938),
   m = n(807926);
 
-function h(e) {
+function _(e) {
   let {
 isLayer: t,
 onClose: n,
@@ -43,7 +43,7 @@ children: [
   });
 }
 
-function _(e) {
+function h(e) {
   let {
 isFullScreen: t,
 isLayer: n,
@@ -52,13 +52,13 @@ onClose: a
 newShopLogoEnabled: u
   } = (0, f.O)({
 location: 'CollectiblesShop'
-  }), _ = (0, l.ZP)();
-  return u ? (0, r.jsx)(h, {
+  }), h = (0, l.ZP)();
+  return u ? (0, r.jsx)(_, {
 isLayer: n,
 onClose: a,
 isFullScreen: t
   }) : (0, r.jsxs)(c.Z, {
-className: o()((0, p.Q)(_), m.headerBar, {
+className: o()((0, p.Q)(h), m.headerBar, {
   [m.fullscreenHeaderBar]: t
 }),
 toolbar: t ? null : (0, r.jsx)(s.Fragment, {}),

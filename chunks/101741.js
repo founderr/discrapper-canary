@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return A;
+return b;
   }
 }), n(47120);
 var a = n(735250);
@@ -104,7 +104,7 @@ secondaryInfo: f.Z.Messages.APP_DIRECTORY_CONNECTION_LABEL
   });
 }
 
-function A(e) {
+function b(e) {
   let {
 results: t,
 guildId: n

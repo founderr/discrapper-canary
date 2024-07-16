@@ -59,11 +59,11 @@ isFullScreen: f = !0
   location: T.R0.PERKS_DISCOVERABILITY
 }),
 O = r === T.R0.WHATS_NEW,
-L = (0, _.IY)();
+P = (0, _.IY)();
   a.useEffect(() => {
-O && !M && L();
+O && !M && P();
   }, [
-L,
+P,
 O,
 M
   ]), a.useEffect(() => {
@@ -73,18 +73,18 @@ if (null == e || !M || !O)
 let t = requestAnimationFrame(() => {
   e.scrollIntoView({
     behavior: 'smooth'
-  }), O && L();
+  }), O && P();
 });
 return () => {
-  cancelAnimationFrame(t), O && L();
+  cancelAnimationFrame(t), O && P();
 };
   }, [
 S,
 M,
 O,
-L
+P
   ]);
-  let P = (0, I.Op)(O),
+  let L = (0, I.Op)(O),
 v = (0, E.Z)(),
 Z = (0, I.mN)(),
 D = (0, I.sP)({
@@ -116,7 +116,7 @@ children: [
       (0, s.jsx)(p, {
         showAllPerksButton: m,
         leftAlignHeaders: A,
-        title: P.title,
+        title: L.title,
         headerClassname: N
       }),
       (0, s.jsx)(o.Text, {
@@ -130,7 +130,7 @@ children: [
           [C.leftAlignSubtitle]: A,
           [C.centerAlignSubtitle]: !A
         }),
-        children: P.subtitle
+        children: L.subtitle
       }),
       !A && null != m && (0, s.jsx)('div', {
         className: i()(C.showAllPerksButtonCenter),

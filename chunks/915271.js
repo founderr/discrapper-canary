@@ -3,9 +3,9 @@ var n = t(735250),
   s = t(442837),
   l = t(481060),
   o = t(873115),
-  i = t(618541),
-  c = t(975060),
-  u = t(912454),
+  i = t(219929),
+  c = t(618541),
+  u = t(975060),
   d = t(689938),
   E = t(373044);
 class _ extends r.PureComponent {
@@ -24,9 +24,9 @@ let {
 return (0, n.jsxs)('div', {
   className: a,
   children: [
-    (0, n.jsx)(u.ZP, {
-      type: u.ZP.Types.VENMO,
-      size: u.Uy.MEDIUM,
+    (0, n.jsx)(i.ZP, {
+      type: i.ZP.Types.VENMO,
+      size: i.Uy.MEDIUM,
       className: E.venmoIcon
     }),
     r ? (0, n.jsxs)(n.Fragment, {
@@ -54,9 +54,9 @@ return (0, n.jsxs)('div', {
   }
 }
 a.Z = s.ZP.connectStores([
-  i.Z,
-  c.Z
+  c.Z,
+  u.Z
 ], () => ({
-  venmoUsername: c.Z.venmoUsername,
-  venmoClient: i.Z.getVenmoClient()
+  venmoUsername: u.Z.venmoUsername,
+  venmoClient: c.Z.getVenmoClient()
 }))(_);

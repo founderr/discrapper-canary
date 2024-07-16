@@ -32,7 +32,7 @@ let M = {
   section: h.jXE.SETTINGS_VOICE_AND_VIDEO
 };
 
-function D(e) {
+function f(e) {
   let t = e.currentTarget;
   N.default.track(h.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
 text: t.text,
@@ -44,7 +44,7 @@ location: {
   });
 }
 
-function f() {
+function D() {
   let e = (0, l.e7)([m.Z], () => m.Z.theme),
 {
   noiseCancellation: t,
@@ -101,7 +101,7 @@ children: [
     align: I.Z.Align.CENTER,
     body: (0, i.jsx)(d.Anchor, {
       href: C.Z.getArticleURL(h.BhN.NOISE_SUPPRESSION),
-      onClick: D,
+      onClick: f,
       children: g.Z.Messages.LEARN_MORE
     })
   }),
@@ -158,7 +158,7 @@ children: [
   }),
   (0, i.jsx)(E.F, {
     setting: A.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
-    children: (0, i.jsx)(f, {})
+    children: (0, i.jsx)(D, {})
   }),
   (0, i.jsx)(E.F, {
     setting: A.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,

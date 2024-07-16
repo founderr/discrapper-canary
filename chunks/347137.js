@@ -15,8 +15,8 @@ var i = n(735250),
   g = n(360048),
   p = n(296386),
   T = n(150192),
-  f = n(889010),
-  S = n(488905),
+  S = n(889010),
+  f = n(488905),
   C = n(731455),
   N = n(981631),
   A = n(689938),
@@ -54,7 +54,7 @@ icon: Z(e.categoryId)
 (0, p.le)(!1, !0);
   }, [e]), (0, i.jsxs)(r.Scroller, {
 children: [
-  (0, i.jsx)(S.V, {
+  (0, i.jsx)(f.V, {
     text: A.Z.Messages.DISCOVER
   }),
   (0, i.jsx)(g.Z, {
@@ -74,7 +74,7 @@ children: [
     selectedClassName: v.selectedCategoryItem,
     innerClassName: v.itemInner
   }, 'clan-discovery-home'),
-  (0, i.jsx)(f.Z, {
+  (0, i.jsx)(S.Z, {
     categories: O,
     handleCategorySelect: R,
     currentCategoryId: e,

@@ -10,19 +10,19 @@ var r = n(735250),
   s = n(367907),
   l = n(372900),
   u = n(666188),
-  c = n(549817),
-  d = n(819553),
-  _ = n(17181),
-  E = n(303737),
-  f = n(965638),
-  h = n(434404),
-  p = n(962086),
-  m = n(160404),
-  I = n(703656),
-  T = n(814443),
-  g = n(592125),
-  S = n(940627),
-  A = n(705600),
+  c = n(372769),
+  d = n(523751),
+  _ = n(549817),
+  E = n(819553),
+  f = n(17181),
+  h = n(303737),
+  p = n(965638),
+  m = n(434404),
+  I = n(962086),
+  T = n(160404),
+  g = n(703656),
+  S = n(814443),
+  A = n(592125),
   N = n(626135),
   v = n(912787),
   O = n(272709),
@@ -66,9 +66,9 @@ for (let s of a) {
   let a = null !== (E = (0, v.i)(s)) && void 0 !== E ? E : '',
     p = (0, R.bA)(a, t.id),
     m = e.length;
-  e.push(s.category), r.push(p.length), i.push(p.length > 0 ? p[0].id : '0'), o.push(p.length > 0 && null !== (f = null === (d = T.Z.getUserAffinity(p[0].id)) || void 0 === d ? void 0 : d.affinity) && void 0 !== f ? f : 0), n.push(Math.min(p.length, 6)), l.push(a), u.push(null !== (h = null === (_ = g.Z.getChannel(a)) || void 0 === _ ? void 0 : _.type) && void 0 !== h ? h : y.d4z.UNKNOWN), c['position_'.concat(m + 1, '_affinity_user_ids')] = p.slice(0, 6).map(e => e.id), c['position_'.concat(m + 1, '_user_affinity_scores')] = p.slice(0, 6).map(e => {
+  e.push(s.category), r.push(p.length), i.push(p.length > 0 ? p[0].id : '0'), o.push(p.length > 0 && null !== (f = null === (d = S.Z.getUserAffinity(p[0].id)) || void 0 === d ? void 0 : d.affinity) && void 0 !== f ? f : 0), n.push(Math.min(p.length, 6)), l.push(a), u.push(null !== (h = null === (_ = A.Z.getChannel(a)) || void 0 === _ ? void 0 : _.type) && void 0 !== h ? h : y.d4z.UNKNOWN), c['position_'.concat(m + 1, '_affinity_user_ids')] = p.slice(0, 6).map(e => e.id), c['position_'.concat(m + 1, '_user_affinity_scores')] = p.slice(0, 6).map(e => {
     var t, n;
-    return null !== (n = null === (t = T.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
+    return null !== (n = null === (t = S.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
   });
 }
 0 !== e.length && (c.card_types = e, c.affinity_users_counts = n, c.total_users_counts = r, c.max_affinity_user_ids = i, c.max_affinity_user_scores = o, c.channel_ids = l, c.channel_types = u, c.guild_id = t.id, N.default.track(y.rMx.GUILD_TOOLTIP_SHOWN, {
@@ -86,21 +86,21 @@ function M(e) {
   let {
 guild: n,
 closePopout: s,
-nudge: T
-  } = e, g = i.useRef(null), N = (0, u.Z)(n), v = (0, f.Ij)(n), {
+nudge: S
+  } = e, A = i.useRef(null), N = (0, u.Z)(n), v = (0, p.Ij)(n), {
 isViewingRoles: O,
 backNavigationSection: R
-  } = (0, a.cj)([m.Z], () => ({
-isViewingRoles: m.Z.isViewingRoles(n.id),
-backNavigationSection: m.Z.getBackNavigationSection(n.id)
+  } = (0, a.cj)([T.Z], () => ({
+isViewingRoles: T.Z.isViewingRoles(n.id),
+backNavigationSection: T.Z.getBackNavigationSection(n.id)
   })), C = () => {
-m.Z.isFullServerPreview(n.id) && (0, I.uL)(y.Z5c.CHANNEL(n.id)), d.ZP.shouldShowOnboarding(n.id) && (c.Z.finishOnboarding(n.id), (0, _.discardOnboardingPromise)(n.id)), (0, p.mL)(n.id), h.Z.open(n.id, R), R === y.pNK.ROLE_SUBSCRIPTIONS && (0, E.GN)(n.id);
-  }, M = null === (t = g.current) || void 0 === t ? void 0 : t.clientHeight, P = T + 14;
+T.Z.isFullServerPreview(n.id) && (0, g.uL)(y.Z5c.CHANNEL(n.id)), E.ZP.shouldShowOnboarding(n.id) && (_.Z.finishOnboarding(n.id), (0, f.discardOnboardingPromise)(n.id)), (0, I.mL)(n.id), m.Z.open(n.id, R), R === y.pNK.ROLE_SUBSCRIPTIONS && (0, h.GN)(n.id);
+  }, M = null === (t = A.current) || void 0 === t ? void 0 : t.clientHeight, P = S + 14;
   return (0, r.jsx)(l.Z.Provider, {
 value: n.id,
 children: (0, r.jsxs)('div', {
   className: L.container,
-  ref: g,
+  ref: A,
   children: [
     (0, r.jsx)('div', {
       className: L.tooltipPointer,
@@ -111,12 +111,12 @@ children: (0, r.jsxs)('div', {
     (0, r.jsxs)('div', {
       className: L.header,
       children: [
-        N ? (0, r.jsx)(A.Z, {
+        N ? (0, r.jsx)(d.Z, {
           guild: n,
           size: 16,
           className: L.rowIconV2,
           tooltipColor: o.Tooltip.Colors.PRIMARY
-        }) : (0, r.jsx)(S.Z, {
+        }) : (0, r.jsx)(c.Z, {
           guild: n,
           size: 20,
           className: L.rowIcon
@@ -146,7 +146,7 @@ children: (0, r.jsxs)('div', {
           variant: 'text-xs/medium',
           children: D.Z.Messages.GUILD_POPOUT_INVITES_PAUSED.format({
             onClick: () => {
-              s(), h.Z.open(n.id, y.pNK.INSTANT_INVITES);
+              s(), m.Z.open(n.id, y.pNK.INSTANT_INVITES);
             }
           })
         })

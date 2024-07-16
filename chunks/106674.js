@@ -13,15 +13,15 @@ var i = n(735250),
   d = n(884338),
   u = n(367907),
   _ = n(835473),
-  E = n(871118),
-  h = n(543882),
-  I = n(314897),
-  m = n(944486),
-  g = n(594174),
-  p = n(366695),
+  E = n(925329),
+  h = n(871118),
+  I = n(543882),
+  m = n(314897),
+  g = n(944486),
+  p = n(594174),
   T = n(51144),
-  f = n(498058),
-  S = n(158631),
+  S = n(498058),
+  f = n(158631),
   C = n(143614),
   N = n(981631),
   A = n(70722),
@@ -61,7 +61,7 @@ userId: r,
 applicationId: d,
 channelId: O,
 streamKey: R
-  } = n, [x, b] = a.useState(!1), P = (0, s.e7)([g.default], () => g.default.getUser(r)), [M] = (0, _.Z)([d]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, C.Z)(), j = (0, s.e7)([h.Z], () => h.Z.getPreviewURL(null, O, r)), U = (0, s.e7)([m.Z], () => m.Z.getVoiceChannelId()), G = (0, S.ZP)(), k = (0, f.Z)(O);
+  } = n, [x, b] = a.useState(!1), P = (0, s.e7)([p.default], () => p.default.getUser(r)), [M] = (0, _.Z)([d]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, C.Z)(), j = (0, s.e7)([I.Z], () => I.Z.getPreviewURL(null, O, r)), U = (0, s.e7)([g.Z], () => g.Z.getVoiceChannelId()), G = (0, f.ZP)(), k = (0, S.Z)(O);
   if (a.useEffect(() => {
   x && U === O && b(!1);
 }, [
@@ -75,7 +75,7 @@ buttonColor: w,
 buttonCTA: B,
 disabled: H
   } = function(e, t) {
-let n = I.default.getId(),
+let n = m.default.getId(),
   i = t.some(e => e.id === n) || e === n,
   a = t.length >= N.keq;
 return {
@@ -144,16 +144,16 @@ children: [
       })
     ]
   }),
-  null != j ? (0, i.jsx)(E.Z, {
+  null != j ? (0, i.jsx)(h.Z, {
     className: Z.stream,
     stream: {
       streamType: A.lo.CALL,
       ownerId: r,
       channelId: O
     }
-  }) : (0, i.jsx)(p.Z, {
+  }) : (0, i.jsx)(E.Z, {
     game: M,
-    size: p.Z.Sizes.LARGE,
+    size: E.Z.Sizes.LARGE,
     className: Z.gameIcon
   })
 ]

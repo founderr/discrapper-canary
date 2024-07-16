@@ -8,7 +8,7 @@ n(470079);
 var a = n(120356),
   s = n.n(a),
   r = n(481060),
-  l = n(467679),
+  l = n(385499),
   o = n(702346),
   c = n(739566),
   d = n(464891),
@@ -26,8 +26,8 @@ usernameHook: a
   } = e, T = (0, c.ZP)(t), h = a(T), {
 avatarSrc: N,
 eventHandlers: {
-  onMouseEnter: f,
-  onMouseLeave: p
+  onMouseEnter: p,
+  onMouseLeave: f
 }
   } = (0, u.m)(!0), C = '' !== t.content ? new Date(t.content).toLocaleString(I.Z.getLocale(), {
 hour: 'numeric',
@@ -37,8 +37,8 @@ day: '2-digit',
 year: 'numeric'
   }) : '';
   return (0, i.jsx)('div', {
-onMouseEnter: f,
-onMouseLeave: p,
+onMouseEnter: p,
+onMouseLeave: f,
 children: (0, i.jsx)(o.Z, {
   className: s()(m.mainContainer, {
     [m.compact]: n

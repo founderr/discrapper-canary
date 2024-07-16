@@ -3,9 +3,9 @@ var n = t(735250),
   s = t(442837),
   l = t(481060),
   o = t(873115),
-  i = t(618541),
-  c = t(975060),
-  u = t(912454),
+  i = t(219929),
+  c = t(618541),
+  u = t(975060),
   d = t(689938),
   E = t(647728);
 class _ extends r.PureComponent {
@@ -27,8 +27,8 @@ return (0, n.jsx)(l.FormSection, {
   children: (0, n.jsxs)('div', {
     className: E.inputWrapper,
     children: [
-      (0, n.jsx)(u.ZP, {
-        type: u.ZP.Types.PAYPAL,
+      (0, n.jsx)(i.ZP, {
+        type: i.ZP.Types.PAYPAL,
         className: E.paypalIcon
       }),
       (0, n.jsx)(l.TextInput, {
@@ -44,9 +44,9 @@ return (0, n.jsx)(l.FormSection, {
   }
 }
 a.Z = s.ZP.connectStores([
-  i.Z,
-  c.Z
+  c.Z,
+  u.Z
 ], () => ({
-  braintreeEmail: c.Z.braintreeEmail,
-  paypalClient: i.Z.getPayPalClient()
+  braintreeEmail: u.Z.braintreeEmail,
+  paypalClient: c.Z.getPayPalClient()
 }))(_);

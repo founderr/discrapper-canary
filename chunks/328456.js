@@ -1,6 +1,6 @@
 n.d(t, {
   R: function() {
-return l;
+return i;
   },
   b: function() {
 return o;
@@ -37,7 +37,7 @@ t = this, r = void 0, (n = 'itemsByTypes') in t ? Object.defineProperty(t, n, {
 }) : t[n] = r, this.itemsByTypes = this.sortByTypes(e);
   }
 }
-let l = e => {
+let i = e => {
   let {
 firstProfileEffect: t,
 firstAvatarDecoration: n

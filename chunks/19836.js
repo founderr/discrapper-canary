@@ -11,8 +11,8 @@ var i = n(120356),
   s = n(481060),
   l = n(2052),
   u = n(580552),
-  c = n(594174),
-  d = n(346656),
+  c = n(565138),
+  d = n(594174),
   _ = n(74538),
   E = n(588822),
   f = n(659101),
@@ -53,7 +53,7 @@ lineClamp: O,
 userId: R
   } = e, {
 location: C
-  } = (0, l.O)(), y = (0, o.e7)([c.default], () => c.default.getCurrentUser()), D = _.ZP.canUsePremiumGuildMemberProfile(y), L = (0, u.Z)(R);
+  } = (0, l.O)(), y = (0, o.e7)([d.default], () => d.default.getCurrentUser()), D = _.ZP.canUsePremiumGuildMemberProfile(y), L = (0, u.Z)(R);
   return (g || null == i || '' === i) && !L ? null : (0, r.jsxs)(f.Z, {
 lastSection: A,
 children: [
@@ -71,7 +71,7 @@ children: [
         text: (0, r.jsx)(T, {
           guildName: t.name
         }),
-        children: e => (0, r.jsx)(d.Z, {
+        children: e => (0, r.jsx)(c.Z, {
           ...e,
           onClick: () => {
             var t;
@@ -89,7 +89,7 @@ children: [
             });
           },
           guild: t,
-          size: d.Z.Sizes.SMOL,
+          size: c.Z.Sizes.SMOL,
           className: a()(m.aboutMeGuildIcon, {
             [m.nonPremiumHoverState]: !D
           })

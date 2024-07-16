@@ -13,11 +13,11 @@ var s = n(735250),
   c = n(749210),
   u = n(830064),
   m = n(393238),
-  p = n(480608),
-  h = n(160404),
-  g = n(703656),
-  x = n(430824),
-  f = n(257915),
+  p = n(877604),
+  h = n(480608),
+  g = n(160404),
+  x = n(703656),
+  f = n(430824),
   _ = n(768581),
   N = n(302221),
   I = n(956664),
@@ -59,7 +59,7 @@ b.Z.completeOnboarding(t, P);
   }, [
 t,
 P
-  ]), A = (0, a.e7)([x.Z], () => x.Z.getGuild(t)), w = r.useMemo(() => null == A ? null : _.ZP.getGuildSplashURL({
+  ]), A = (0, a.e7)([f.Z], () => f.Z.getGuild(t)), w = r.useMemo(() => null == A ? null : _.ZP.getGuildSplashURL({
 id: A.id,
 splash: A.splash
   }), [A]), F = (0, a.e7)([E.ZP], () => E.ZP.getCurrentOnboardingStep(t)), [U, G] = r.useState(null != w ? null : 'cover');
@@ -72,7 +72,7 @@ M(e[0]);
   t,
   F
 ]),
-y = (0, a.e7)([h.Z], () => h.Z.isFullServerPreview(t)),
+y = (0, a.e7)([g.Z], () => g.Z.isFullServerPreview(t)),
 q = (0, a.e7)([E.ZP], () => E.ZP.getOnboardingStatus(t)),
 V = null != P && P.length > 0,
 z = r.useCallback(() => {
@@ -87,7 +87,7 @@ z = r.useCallback(() => {
   r.useEffect(() => {
 if (!E.ZP.shouldShowOnboarding(t))
   return c.Z.escapeToDefaultChannel(t);
-(0, p.E)(t);
+(0, h.E)(t);
   }, [t]);
   let Y = (0, d.useTransition)(F, {
   config: i.config.default,
@@ -105,7 +105,7 @@ W = null == A;
   if (r.useEffect(() => {
   if (!Q || W) {
     let e = setTimeout(() => {
-      (0, g.uL)(Z.Z5c.CHANNEL(t));
+      (0, x.uL)(Z.Z5c.CHANNEL(t));
     }, 1000);
     return () => clearTimeout(e);
   }
@@ -151,7 +151,7 @@ switch (F) {
 className: R.main,
 ref: n,
 children: [
-  null != w ? (0, s.jsx)(f.Z, {
+  null != w ? (0, s.jsx)(p.Z, {
     className: l()(R.artwork),
     src: w,
     width: o,

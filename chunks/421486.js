@@ -8,8 +8,8 @@ var r, i, a = n(735250),
   d = n(906732),
   _ = n(318374),
   E = n(522289),
-  f = n(314897),
-  h = n(346656);
+  f = n(565138),
+  h = n(314897);
 n(5192);
 var p = n(785717),
   m = n(310427),
@@ -28,7 +28,7 @@ mutualGuilds: r,
 onClose: i,
 analyticsLocation: s,
 maxIcons: u = 3,
-underlineTextOnHover: f = !1,
+underlineTextOnHover: h = !1,
 showTooltips: m = !0
   } = e, {
 analyticsLocations: I
@@ -111,7 +111,7 @@ children: [
           })
         }),
         (0, a.jsx)(c.Text, {
-          className: l()(N.itemizedListText, f && N.underlineOnHover),
+          className: l()(N.itemizedListText, h && N.underlineOnHover),
           variant: 'text-sm/normal',
           color: 'interactive-normal',
           children: D
@@ -137,13 +137,13 @@ children: [
           children: (0, a.jsx)(E.Z, {
             maxGuilds: u,
             guilds: y,
-            size: h.Z.Sizes.SMOL,
+            size: f.Z.Sizes.SMOL,
             hideOverflowCount: !0,
             disableGuildNameTooltip: !0
           })
         }),
         (0, a.jsx)(c.Text, {
-          className: l()(N.itemizedListText, f && N.underlineOnHover),
+          className: l()(N.itemizedListText, h && N.underlineOnHover),
           variant: 'text-sm/normal',
           color: 'interactive-normal',
           children: L
@@ -167,7 +167,7 @@ className: o,
 sourceAnaylticsLocations: s
   } = e, {
 analyticsLocations: _
-  } = (0, d.ZP)(), E = null !== (n = null !== (t = null == s ? void 0 : s[0]) && void 0 !== t ? t : null == _ ? void 0 : _[0]) && void 0 !== n ? n : null, h = (0, u.e7)([f.default], () => f.default.getId()), p = r.id === h, g = r.bot || p, {
+  } = (0, d.ZP)(), E = null !== (n = null !== (t = null == s ? void 0 : s[0]) && void 0 !== t ? t : null == _ ? void 0 : _[0]) && void 0 !== n ? n : null, f = (0, u.e7)([h.default], () => h.default.getId()), p = r.id === f, g = r.bot || p, {
 enabled: S
   } = (0, m.qI)({
 autoTrackExposure: !1,

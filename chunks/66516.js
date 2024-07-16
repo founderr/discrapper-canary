@@ -1,6 +1,6 @@
 s.d(t, {
   Z: function() {
-return f;
+return D;
   }
 });
 var n = s(735250),
@@ -29,7 +29,7 @@ var n = s(735250),
   x = s(981631),
   M = s(689938);
 
-function D(e) {
+function f(e) {
   (0, l.openModalLazy)(async () => {
 let {
   default: t
@@ -44,7 +44,7 @@ return s => (0, n.jsx)(t, {
   });
 }
 
-function f(e) {
+function D(e) {
   let {
 selectedGuild: t
   } = e, {
@@ -52,7 +52,7 @@ analyticsLocations: s
   } = (0, u.ZP)(_.Z.GUILD_PROFILE), i = (0, o.e7)([C.default], () => {
 let e = C.default.getCurrentUser();
 return r()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
-  }), f = (0, o.e7)([S.Z], () => !S.Z.isFetchingProfile(i.id)), P = (0, o.e7)([N.Z], () => N.Z.hidePersonalInformation), {
+  }), D = (0, o.e7)([S.Z], () => !S.Z.isFetchingProfile(i.id)), P = (0, o.e7)([N.Z], () => N.Z.hidePersonalInformation), {
 source: L,
 ...Z
   } = (0, o.cj)([g.Z], () => ({
@@ -65,7 +65,7 @@ null != L && E.ZP.trackWithMetadata(x.rMx.SETTINGS_PANE_VIEWED, {
   destination_pane: x.jXE.SETTINGS_CUSTOMIZE_PROFILE,
   source: L
 });
-  }, [L]), P) ? (0, n.jsx)(d.Z, {}) : f ? (0, n.jsxs)(u.Gt, {
+  }, [L]), P) ? (0, n.jsx)(d.Z, {}) : D ? (0, n.jsxs)(u.Gt, {
 value: s,
 children: [
   (0, n.jsx)(l.Text, {
@@ -90,7 +90,7 @@ children: [
           user: i,
           guild: t,
           canUsePremiumCustomization: A.ZP.canUsePremiumProfileCustomization(i),
-          onUpsellClick: D,
+          onUpsellClick: f,
           ...Z
         }),
         children: (0, n.jsx)(p.Z, {})

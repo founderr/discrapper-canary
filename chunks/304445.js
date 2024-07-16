@@ -7,8 +7,8 @@ var i = n(934951),
   l = n(272423),
   u = n(378788),
   c = n(700615),
-  d = n(905423),
-  h = n(703656),
+  h = n(905423),
+  d = n(703656),
   f = n(981631);
 
 function g(e, t, n) {
@@ -21,11 +21,11 @@ writable: !0
 }
 t.Z = new class e {
   initialize() {
-this.cleanup(), this.unlistenHistory = (0, h.s1)().listen(this.handleRouteChange);
+this.cleanup(), this.unlistenHistory = (0, d.s1)().listen(this.handleRouteChange);
 let {
   pathname: e
-} = (0, h.s1)().location;
-d.Z.getState().resetPath(e), this.unlistenKeyboardChange = d.Z.subscribe(this.handleKeybindRouteChange), a.Z.addChangeListener(this.handleConnectionChange);
+} = (0, d.s1)().location;
+h.Z.getState().resetPath(e), this.unlistenKeyboardChange = h.Z.subscribe(this.handleKeybindRouteChange), a.Z.addChangeListener(this.handleConnectionChange);
   }
   convertRouteToNavigation(e, t) {
 var n;
@@ -34,12 +34,12 @@ let {
 } = e, a = (0, o.D)();
 if (null == a || !a.isReady())
   return;
-let d = e.navigationReplace,
-  h = null !== (n = e.useScreen) && void 0 !== n && n;
+let h = e.navigationReplace,
+  d = null !== (n = e.useScreen) && void 0 !== n && n;
 if (i === f.Z5c.NOTIFICATIONS) {
   (0, l.vp)({
     screen: 'notifications',
-    resetRoot: d
+    resetRoot: h
   });
   return;
 }
@@ -57,8 +57,8 @@ if (i.startsWith('/channels/')) {
       channelId: n,
       guildId: e,
       messageId: i,
-      replaceChannelAndFixRoot: d,
-      useScreen: h
+      replaceChannelAndFixRoot: h,
+      useScreen: d
     });
     return;
   }
@@ -73,28 +73,28 @@ if (i.startsWith('/channels/')) {
     } = n.params, [o, c] = (0, s.Z)(a.getCurrentRoute());
     if (o === i && c === t)
       return;
-    (0, u.z)() ? (!1 !== d && (0, l.vp)({
+    (0, u.z)() ? (!1 !== h && (0, l.vp)({
       screen: 'guilds',
       guildId: i,
       channelId: t,
-      resetRoot: d
-    }), null != t && (!0 !== d || e.openChannel) && (0, l.k4)({
+      resetRoot: h
+    }), null != t && (!0 !== h || e.openChannel) && (0, l.k4)({
       channelId: t,
       guildId: i,
       messageId: r,
       replaceChannelAndFixRoot: void 0,
-      useScreen: h
-    })) : null == t || !1 !== d ? (0, l.vp)({
+      useScreen: d
+    })) : null == t || !1 !== h ? (0, l.vp)({
       screen: 'guilds',
       guildId: i,
       channelId: t,
-      resetRoot: d
+      resetRoot: h
     }) : null != i && (0, l.k4)({
       channelId: t,
       guildId: i,
       messageId: r,
-      replaceChannelAndFixRoot: d,
-      useScreen: h
+      replaceChannelAndFixRoot: h,
+      useScreen: d
     });
   }
   return;
@@ -119,13 +119,13 @@ if (i.startsWith('/account-standing')) {
 }
 (0, l.vp)({
   screen: 'messages',
-  resetRoot: d
+  resetRoot: h
 });
   }
   executeRouteRewrites(e, t) {
 if (this.routeChangeCount += 1, this.routeChangeCount < 10)
   for (let n of this.rewrites) {
-    let r = (0, h.s1)().location.pathname,
+    let r = (0, d.s1)().location.pathname,
       a = n(e, t);
     if (null != a)
       return (0, i.n_)({
@@ -134,7 +134,7 @@ if (this.routeChangeCount += 1, this.routeChangeCount < 10)
           replacePath: a.path,
           previousPath: r
         }
-      }), (0, h.dL)(a.path, a.state), !0;
+      }), (0, d.dL)(a.path, a.state), !0;
   }
 else
   throw Error('RouteManager: Something has gone horribly wrong with rewrites');
@@ -145,12 +145,12 @@ var e, t;
 null === (e = this.unlistenHistory) || void 0 === e || e.call(this), this.unlistenHistory = void 0, null === (t = this.unlistenKeyboardChange) || void 0 === t || t.call(this), this.unlistenKeyboardChange = void 0, a.Z.removeChangeListener(this.handleConnectionChange);
   }
   addRouteChangeListener(e) {
-return null != this.unlistenHistory && e((0, h.s1)().location, 'REPLACE'), this.listeners.add(e), () => this.removeRouteChangeListener(e);
+return null != this.unlistenHistory && e((0, d.s1)().location, 'REPLACE'), this.listeners.add(e), () => this.removeRouteChangeListener(e);
   }
   addRouteRewriter(e) {
 if (null != this.unlistenHistory) {
-  let t = e((0, h.s1)().location, (0, h.s1)().action);
-  null != t && (0, h.dL)(t.path, t.state);
+  let t = e((0, d.s1)().location, (0, d.s1)().action);
+  null != t && (0, d.dL)(t.path, t.state);
 }
 return this.rewrites.add(e), () => this.removeRouteRewriter(e);
   }
@@ -161,17 +161,17 @@ this.listeners.delete(e);
 this.rewrites.delete(e);
   }
   getHistory() {
-return (0, h.s1)();
+return (0, d.s1)();
   }
   constructor() {
 g(this, 'unlistenHistory', void 0), g(this, 'unlistenKeyboardChange', void 0), g(this, 'rewrites', new Set()), g(this, 'listeners', new Set()), g(this, 'routeChangeCount', 0), g(this, 'timer', -1), g(this, 'connected', !1), g(this, 'handleConnectionChange', () => {
   let e = a.Z.isConnected(),
     t = e && !this.connected;
-  this.connected = e, t && (this.routeChangeCount = 0, this.executeRouteRewrites((0, h.s1)().location, 'REPLACE'));
+  this.connected = e, t && (this.routeChangeCount = 0, this.executeRouteRewrites((0, d.s1)().location, 'REPLACE'));
 }), g(this, 'handleRouteChange', (e, t) => {
   if (this.executeRouteRewrites(e, t))
     return;
-  let n = d.Z.getState();
+  let n = h.Z.getState();
   for (let i of (n.basePath !== e.pathname && n.resetPath(e.pathname), this.listeners))
     try {
       i(e, t);
@@ -186,8 +186,8 @@ g(this, 'unlistenHistory', void 0), g(this, 'unlistenKeyboardChange', void 0), g
   null != t ? (clearTimeout(this.timer), this.timer = setTimeout(this.flushRoute, 200)) : null == t && clearTimeout(this.timer);
 }), g(this, 'flushRoute', () => {
   clearTimeout(this.timer);
-  let e = d.Z.getState();
-  null != e.path && (0, h.uL)(e.path);
+  let e = h.Z.getState();
+  null != e.path && (0, d.uL)(e.path);
 });
   }
 }();

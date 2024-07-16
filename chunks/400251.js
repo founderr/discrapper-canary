@@ -11,12 +11,12 @@ var i = n(735250),
   o = n(481060),
   c = n(239091),
   d = n(749210),
-  u = n(134432),
-  h = n(769654),
-  p = n(601964),
-  m = n(430824),
-  _ = n(940627),
-  f = n(346656),
+  u = n(565138),
+  h = n(372769),
+  p = n(134432),
+  m = n(769654),
+  _ = n(601964),
+  f = n(430824),
   E = n(806519),
   C = n(404975),
   g = n(768581),
@@ -133,10 +133,10 @@ t.Z = e => {
   var t;
   let {
 entry: l
-  } = e, [s, C] = a.useState(!1), I = null != (0, r.e7)([m.Z], () => m.Z.getGuild(l.guildId)), x = async () => {
+  } = e, [s, C] = a.useState(!1), I = null != (0, r.e7)([f.Z], () => f.Z.getGuild(l.guildId)), x = async () => {
 C(!0);
 try {
-  I ? (0, h.X)(l.guildId) : await d.Z.joinGuild(l.guildId, {
+  I ? (0, m.X)(l.guildId) : await d.Z.joinGuild(l.guildId, {
     source: T.vtS.DIRECTORY_ENTRY
   });
 } finally {
@@ -145,7 +145,7 @@ try {
   }, S = g.ZP.getGuildSplashURL({
 id: l.guildId,
 splash: l.splash,
-size: 300 * (0, u.x_)()
+size: 300 * (0, p.x_)()
   }), Z = null !== (t = g.ZP.getGuildIconURL({
 id: l.guildId,
 icon: l.icon,
@@ -184,11 +184,11 @@ children: [
           height: 48,
           children: (0, i.jsx)('div', {
             className: v.iconMask,
-            children: (0, i.jsx)(f.Z, {
+            children: (0, i.jsx)(u.Z, {
               className: v.icon,
               iconSrc: Z,
-              guild: new p.ZP(l),
-              size: f.Z.Sizes.MEDIUM,
+              guild: new _.ZP(l),
+              size: u.Z.Sizes.MEDIUM,
               active: !0
             })
           })
@@ -202,7 +202,7 @@ children: [
       (0, i.jsxs)('div', {
         className: v.title,
         children: [
-          (0, i.jsx)(_.Z, {
+          (0, i.jsx)(h.Z, {
             className: v.guildBadge,
             guild: l,
             tooltipColor: o.Tooltip.Colors.PRIMARY

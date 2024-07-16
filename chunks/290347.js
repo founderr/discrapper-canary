@@ -11,24 +11,24 @@ var i = n(735250),
   o = n(442837),
   c = n(481060),
   d = n(607070),
-  u = n(605236),
-  _ = n(524444),
-  E = n(529815),
-  h = n(250496),
+  u = n(446411),
+  _ = n(468846),
+  E = n(605236),
+  h = n(524444),
   I = n(153124),
   m = n(810090),
   g = n(626135),
   p = n(565216),
   T = n(981631),
-  f = n(921944),
-  S = n(757601);
+  S = n(921944),
+  f = n(757601);
 let C = e => {
 let {
   tagText: t,
   className: n
 } = e;
 return (0, i.jsx)(c.TextBadge, {
-  className: r()(S.tag, n),
+  className: r()(f.tag, n),
   text: t
 });
   },
@@ -41,27 +41,27 @@ let {
   wideStyle: l
 } = e;
 return (0, i.jsxs)('div', {
-  className: r()(S.featureCard, {
-    [S.wideStyle]: l
+  className: r()(f.featureCard, {
+    [f.wideStyle]: l
   }),
   children: [
     null != s ? (0, i.jsx)(C, {
       tagText: s,
-      className: S.featureCardTag
+      className: f.featureCardTag
     }) : null,
     (0, i.jsx)('img', {
       alt: '',
-      className: r()(S.featureCardImg, {
-        [S.wideStyle]: l
+      className: r()(f.featureCardImg, {
+        [f.wideStyle]: l
       }),
       src: a
     }),
     (0, i.jsxs)('div', {
-      className: S.featureCardTextGroup,
+      className: f.featureCardTextGroup,
       children: [
         (0, i.jsx)(c.Heading, {
           variant: 'heading-md/extrabold',
-          className: S.featureCardTextHeader,
+          className: f.featureCardTextHeader,
           children: t
         }),
         (0, i.jsx)(c.Text, {
@@ -128,7 +128,7 @@ if ('video' === s.type || 'embed' === s.type) {
 b,
 s.type
   ]), a.useEffect(() => {
-null != A && (0, u.kk)(A);
+null != A && (0, E.kk)(A);
 let e = Date.now();
 return g.default.track(T.rMx.CHANGE_LOG_OPENED, {
   change_log_id: b
@@ -136,39 +136,39 @@ return g.default.track(T.rMx.CHANGE_LOG_OPENED, {
   g.default.track(T.rMx.CHANGE_LOG_CLOSED, {
     change_log_id: b,
     seconds_open: Math.round((Date.now() - e) / 1000)
-  }), null != A && (0, u.EW)(A, {
-    dismissAction: f.L.DISMISS
+  }), null != A && (0, E.EW)(A, {
+    dismissAction: S.L.DISMISS
   });
 };
   }, [
 A,
 b
   ]), (0, i.jsxs)(c.ModalRoot, {
-className: r()(S.root, t),
+className: r()(f.root, t),
 transitionState: y,
 'aria-labelledby': j,
 children: [
   (0, i.jsx)(c.ModalCloseButton, {
-    className: S.closeButton,
+    className: f.closeButton,
     onClick: D
   }),
   (0, i.jsx)(p.Z, {
-    className: S.splash
+    className: f.splash
   }),
   null == v ? void 0 : v(),
   (0, i.jsxs)(c.ModalContent, {
-    className: S.content,
+    className: f.content,
     children: [
       (0, i.jsx)(c.Heading, {
         variant: 'display-md',
-        className: r()(S.headerText, L),
+        className: r()(f.headerText, L),
         children: Z
       }),
       (() => {
         if ('video' === s.type) {
           var e;
           return (0, i.jsx)(m.Z, {
-            className: r()(S.video, C),
+            className: r()(f.video, C),
             autoPlay: !G,
             loop: !0,
             muted: !0,
@@ -203,18 +203,18 @@ children: [
             })
           });
         }
-        return 'embed' === s.type ? (0, i.jsx)(E.BC, {
-          className: r()(S.video, C),
+        return 'embed' === s.type ? (0, i.jsx)(u.BC, {
+          className: r()(f.video, C),
           allowFullScreen: !1,
           href: s.href,
           thumbnail: s.thumbnail,
           video: s.embed,
-          provider: h.pn.YOUTUBE,
+          provider: _.pn.YOUTUBE,
           maxWidth: s.embed.width,
           maxHeight: s.embed.height,
-          renderVideoComponent: _.lV,
-          renderImageComponent: _.Yi,
-          renderLinkComponent: _.iT,
+          renderVideoComponent: h.lV,
+          renderImageComponent: h.Yi,
+          renderLinkComponent: h.iT,
           renderForwardComponent: T.VqG,
           onPlay: () => {
             g.default.track(T.rMx.CHANGE_LOG_VIDEO_INTERACTED, {
@@ -223,13 +223,13 @@ children: [
           }
         }) : 'image' === s.type ? (0, i.jsx)('img', {
           alt: '',
-          className: r()(S.video, C),
+          className: r()(f.video, C),
           src: s.src
         }) : null;
       })(),
       (0, i.jsxs)(c.Heading, {
         variant: 'heading-lg/semibold',
-        className: S.subHeader,
+        className: f.subHeader,
         children: [
           O,
           null == R ? void 0 : R()
@@ -237,12 +237,12 @@ children: [
       }),
       null != M && (0, i.jsx)(c.Heading, {
         variant: 'heading-md/medium',
-        className: S.bodyText,
+        className: f.bodyText,
         children: M
       }),
       (0, i.jsx)('div', {
-        className: r()(S.featureCardGroup, {
-          [S.wideStyle]: U
+        className: r()(f.featureCardGroup, {
+          [f.wideStyle]: U
         }),
         children: x.map((e, t) => (0, i.jsx)(N, {
           ...e,

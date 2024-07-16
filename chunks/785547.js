@@ -16,8 +16,8 @@ var i, a, s, r = n(735250),
   T = n(7956),
   h = n(293245),
   N = n(417363),
-  f = n(941128),
-  p = n(780570),
+  p = n(941128),
+  f = n(780570),
   C = n(358085),
   g = n(814225),
   S = n(346329),
@@ -168,10 +168,10 @@ let {
 } = this.props;
 if (e)
   return null;
-let n = p.KJ(t);
+let n = f.KJ(t);
 if (null == n)
   return null;
-let i = n.type === R.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : p.xI(Number(n.progress), Number(n.total));
+let i = n.type === R.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : f.xI(Number(n.progress), Number(n.total));
 return (0, r.jsx)(d.Progress, {
   percent: i,
   size: d.Progress.Sizes.XSMALL,
@@ -263,9 +263,9 @@ function P(e) {
 libraryApplication: t
   } = e, n = (0, _.O)(), [i, a] = (0, o.Wu)([
 N.Z,
-f.Z
+p.Z
   ], () => [
-(0, T.i)(t, N.Z, f.Z),
+(0, T.i)(t, N.Z, p.Z),
 N.Z.getState(t.id, t.branchId)
   ], [t]), s = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]), l = (0, o.e7)([m.Z], () => m.Z.hasNoBuild(t.id, t.branchId), [t]);
   return (0, r.jsx)(Z, {

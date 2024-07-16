@@ -17,9 +17,9 @@ var i, a, s = n(735250),
   T = n(139256),
   h = n(489887),
   N = n(689938),
-  f = n(619260);
+  p = n(619260);
 
-function p() {
+function f() {
   return (0, s.jsx)('svg', {
 width: '24',
 height: '24',
@@ -41,7 +41,7 @@ hasNoVotes: n,
 victorEmoji: i
   } = e;
   if (n)
-t = (0, s.jsx)(p, {});
+t = (0, s.jsx)(f, {});
   else if (null != i) {
 let e = '' !== i.name ? i.name : i.displayName;
 t = (0, s.jsx)(_.Z, {
@@ -51,7 +51,7 @@ t = (0, s.jsx)(_.Z, {
 });
   }
   return null != t ? (0, s.jsx)('div', {
-className: f.imageContainer,
+className: p.imageContainer,
 children: t
   }) : null;
 }
@@ -79,18 +79,18 @@ case 'VICTOR':
   t = (0, s.jsxs)(s.Fragment, {
     children: [
       (0, s.jsxs)('div', {
-        className: f.victorAnswer,
+        className: p.victorAnswer,
         children: [
           (0, s.jsx)(d.Text, {
             variant: 'text-sm/semibold',
             color: 'text-normal',
-            className: f.victorAnswerText,
+            className: p.victorAnswerText,
             scaleFontToUserSetting: !0,
             children: a
           }),
           (0, s.jsx)(T.ZY, {
             size: 16,
-            className: f.victorIcon,
+            className: p.victorIcon,
             isVictor: !0,
             isExpired: !0
           })
@@ -135,7 +135,7 @@ case 'TIE':
   });
   }
   return (0, s.jsx)('div', {
-className: f.description,
+className: p.description,
 children: t
   });
 }
@@ -162,7 +162,7 @@ return t ? {
 };
   }(n), [n]);
   return (0, s.jsxs)('div', {
-className: o()(f.container, t),
+className: o()(p.container, t),
 children: [
   (0, s.jsx)(C, {
     hasNoVotes: 'NO_VOTES' === a.type,
@@ -172,7 +172,7 @@ children: [
     ...a
   }),
   null != i && (0, s.jsx)(d.Button, {
-    className: f.button,
+    className: p.button,
     size: d.Button.Sizes.TINY,
     onClick: i,
     color: d.Button.Colors.PRIMARY,
@@ -218,7 +218,7 @@ children: [
     })
   }),
   (0, s.jsx)(S, {
-    className: f.embed,
+    className: p.embed,
     data: o,
     onClickPollLink: a ? void 0 : T
   })

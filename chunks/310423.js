@@ -15,8 +15,8 @@ var i = n(735250),
   T = n(430824),
   h = n(594174),
   N = n(739566),
-  f = n(981631),
-  p = n(665692),
+  p = n(981631),
+  f = n(665692),
   C = n(689938),
   g = n(69038);
 let S = {
@@ -125,11 +125,11 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
                 messageId: v,
                 sourceAnalyticsLocations: P,
                 analyticsLocation: {
-                  section: f.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE
+                  section: p.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE
                 }
               }),
               children: [
-                p.ME,
+                f.ME,
                 e.nick
               ]
             });
@@ -142,7 +142,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           null != t && (g = (0, i.jsxs)(E.Z, {
             ...A,
             children: [
-              p.zy,
+              f.zy,
               t.name
             ]
           }));
@@ -154,7 +154,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           null != t && (g = (0, i.jsxs)(E.Z, {
             ...A,
             children: [
-              p.ME,
+              f.ME,
               t.name
             ]
           }));
@@ -166,7 +166,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           if (null != t)
             g = (0, i.jsxs)(E.Z, {
               children: [
-                p.ME,
+                f.ME,
                 t.name
               ]
             });
@@ -180,11 +180,11 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
                   userId: t.id,
                   guildId: x.guild_id,
                   analyticsLocation: {
-                    section: f.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE
+                    section: p.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE
                   }
                 }),
                 children: [
-                  p.ME,
+                  f.ME,
                   e.nick
                 ]
               });

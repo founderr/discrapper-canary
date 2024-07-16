@@ -15,8 +15,8 @@ var i = n(735250),
   T = n(981631),
   h = n(474936),
   N = n(467481);
-let f = (0, u.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
-  p = e => {
+let p = (0, u.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+  f = e => {
 if (null != e)
   o.ZP.trackWithMetadata(T.rMx.EXPRESSION_TOOLTIP_VIEWED, {
     type: h.cd.STICKER_IN_MESSAGE_HOVER,
@@ -69,7 +69,7 @@ children: (0, i.jsx)(r.Popout, {
       text: (0, d.Y)(g),
       'aria-label': !1,
       onTooltipShow: () => {
-        p(h);
+        f(h);
       },
       children: e => (0, i.jsx)(r.Clickable, {
         ...e,
@@ -80,7 +80,7 @@ children: (0, i.jsx)(r.Popout, {
         tag: 'span',
         children: (0, i.jsx)(I.ZP, {
           isInteracting: s,
-          size: f,
+          size: p,
           sticker: null != h ? h : t
         })
       })

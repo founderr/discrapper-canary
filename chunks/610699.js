@@ -19,14 +19,14 @@ var i = n(735250),
   T = n(884338),
   h = n(100527),
   N = n(906732),
-  f = n(835473),
-  p = n(471445),
-  C = n(601964),
-  g = n(592125),
-  S = n(430824),
-  A = n(496675),
-  R = n(594174),
-  O = n(197409),
+  p = n(835473),
+  f = n(471445),
+  C = n(955415),
+  g = n(601964),
+  S = n(592125),
+  A = n(430824),
+  R = n(496675),
+  O = n(594174),
   x = n(514342),
   M = n(624138),
   v = n(358595),
@@ -90,7 +90,7 @@ isStacked: a,
 hasEnded: s
   } = e;
   if (null != t && null != n) {
-let e = (0, p.KS)(t, n);
+let e = (0, f.KS)(t, n);
 return (0, i.jsxs)('div', {
   className: r()(b.channel, {
     [b.stacked]: a,
@@ -134,7 +134,7 @@ function k(e) {
   var t, n;
   let s, l, {
   invite: d,
-  getAcceptInviteContext: p
+  getAcceptInviteContext: f
 } = e,
 {
   approximate_member_count: x,
@@ -161,8 +161,8 @@ F,
 V,
 Y
   ]);
-  let W = (0, c.e7)([S.Z], () => null != d.guild ? S.Z.getGuild(d.guild.id) : null, [d]),
-K = (0, f.Z)([G.id])[0],
+  let W = (0, c.e7)([A.Z], () => null != d.guild ? A.Z.getGuild(d.guild.id) : null, [d]),
+K = (0, p.Z)([G.id])[0],
 z = (0, c.e7)([E.ZP], () => {
   var e;
   return (null == d ? void 0 : d.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === G.id;
@@ -176,8 +176,8 @@ Q = (0, c.e7)([E.ZP], () => {
     return G.id === t;
   });
 }),
-q = g.Z.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
-X = (0, c.e7)([A.Z], () => null != q && A.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]),
+q = S.Z.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
+X = (0, c.e7)([R.Z], () => null != q && R.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]),
 {
   analyticsLocations: J
 } = (0, N.ZP)(h.Z.INVITE_EMBED),
@@ -190,19 +190,19 @@ ee = (0, c.Wu)([E.ZP], () => null != q ? E.ZP.getEmbeddedActivitiesForChannel(q.
   q,
   G.id
 ]),
-et = (0, c.Wu)([R.default], () => ee.map(e => R.default.getUser(e)), [ee]),
+et = (0, c.Wu)([O.default], () => ee.map(e => O.default.getUser(e)), [ee]),
 en = d.state === L.r2o.ACCEPTING,
 ei = null != W;
   if (null == W) {
 if (null == d.guild)
   return (0, i.jsx)(v.Z, {});
-W = new C.ZP(d.guild);
+W = new g.ZP(d.guild);
   }
   let ea = ei && !X || ei && z,
 es = () => {
   _.Z.acceptInviteAndTransitionToInviteChannel({
     inviteKey: d.code,
-    context: p('Invite Button Embed'),
+    context: f('Invite Button Embed'),
     analyticsLocations: J
   });
 };
@@ -228,7 +228,7 @@ children: [
       })
     })
   }),
-  (0, i.jsxs)(O.Z, {
+  (0, i.jsxs)(C.Z, {
     className: r()(b.content, {
       [b.large]: w,
       [b.stacked]: H

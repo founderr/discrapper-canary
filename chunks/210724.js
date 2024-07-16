@@ -37,7 +37,7 @@ quest: I,
 location: S.dr.QUESTS_BAR
   }), b = (0, p.Zy)({
 location: S.dr.QUESTS_BAR
-  }), O = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), L = (0, c.e7)([u.Z], () => u.Z.hasLayers()), P = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, v = (0, d.Z)(P), Z = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, D = (0, d.Z)(Z), B = (null === (i = I.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, j = null != I.userStatus && (0, C.zE)(I.userStatus, R.jn.QUEST_BAR), U = (0, T.tP)(I), {
+  }), O = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), P = (0, c.e7)([u.Z], () => u.Z.hasLayers()), L = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, v = (0, d.Z)(L), Z = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, D = (0, d.Z)(Z), B = (null === (i = I.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, j = null != I.userStatus && (0, C.zE)(I.userStatus, R.jn.QUEST_BAR), U = (0, T.tP)(I), {
 hasError: G,
 isLoading: y
   } = (0, m.d7)(), H = b && !j && !B && !U && !y, k = a.useRef(H), w = (0, f.B)(I, H && !G), F = a.useRef(-1), V = a.useRef(!1), [W, K] = a.useState(!1), [Y, z] = a.useState(!1), [Q, q] = a.useState(!0), [J, X] = a.useState(!0), [$, ee] = a.useState(w.preEnrollmentExpandedHeight), et = a.useRef(null), en = a.useCallback(() => {
@@ -97,21 +97,21 @@ ea,
 Z,
 w.shouldExpandOnQuestComplete
   ]), a.useLayoutEffect(() => {
-P && !v && V.current && ea();
+L && !v && V.current && ea();
   }, [
 ea,
-P,
+L,
 v
   ]), a.useLayoutEffect(() => {
-!Z && P && !v && !V.current && z(!1);
+!Z && L && !v && !V.current && z(!1);
   }, [
-P,
+L,
 Z,
 v
   ]), a.useLayoutEffect(() => {
 H !== k.current && X(!1), k.current = H;
   }, [H]);
-  let eT = P ? S.XZ : S.R4,
+  let eT = L ? S.XZ : S.R4,
 [{
   expansionSpring: eI
 }, eR] = (0, o.useSpring)(() => ({
@@ -202,7 +202,7 @@ I.id
   ]), b && (H || !J || y) && !G) ? (0, s.jsx)(A.A, {
 questOrQuests: I,
 questContent: w.trackingCtx.content,
-overrideVisibility: !L && H,
+overrideVisibility: !P && H,
 children: () => {
   let e = w.component;
   return (0, s.jsx)(o.animated.div, {
@@ -231,11 +231,11 @@ children: () => {
       onBlur: ed,
       className: l()(M.contentWrapper, {
         [M.contentWrapperExpanded]: Y,
-        [M.contentWrapperAccepted]: P
+        [M.contentWrapperAccepted]: L
       }),
       style: {
         backgroundColor: w.preEnrollmentBackgroundColor,
-        backgroundImage: P ? w.postEnrollmentBackgroundImage : void 0,
+        backgroundImage: L ? w.postEnrollmentBackgroundImage : void 0,
         height: eC,
         transform: eg.to({
           range: [

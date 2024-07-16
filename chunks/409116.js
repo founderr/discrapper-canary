@@ -24,7 +24,7 @@ let {
   className: g,
   discount: f = l.f_,
   variant: C = 'heading-md/semibold'
-} = e, m = d((0, i.T4)(n, s)), h = f !== l.f_ && f.discountPercentage >= 5 ? (0, r.jsxs)(r.Fragment, {
+} = e, m = d((0, i.T4)(n, s)), _ = f !== l.f_ && f.discountPercentage >= 5 ? (0, r.jsxs)(r.Fragment, {
   children: [
     m,
     (0, r.jsx)(o.Heading, {
@@ -41,7 +41,7 @@ return (0, r.jsx)(r.Fragment, {
     className: a()(c.container, g),
     children: [
       p,
-      null !== (t = null == u ? void 0 : u(h)) && void 0 !== t ? t : h
+      null !== (t = null == u ? void 0 : u(_)) && void 0 !== t ? t : _
     ]
   })
 });

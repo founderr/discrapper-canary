@@ -19,8 +19,8 @@ var i = n(735250),
   T = n(906732),
   h = n(973616),
   N = n(314897),
-  f = n(592125),
-  p = n(158776),
+  p = n(592125),
+  f = n(158776),
   C = n(594174),
   g = n(823379),
   S = n(226378),
@@ -36,7 +36,7 @@ channelId: x,
 guildId: M
   } = e, [v, L] = a.useState(!1), {
 analyticsLocations: Z
-  } = (0, T.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED), P = (0, l.O)(), b = (0, _.Z)(), D = (0, s.e7)([f.Z], () => f.Z.getChannel(x)), j = (null == D ? void 0 : null === (t = D.isThread) || void 0 === t ? void 0 : t.call(D)) ? null == D ? void 0 : D.parent_id : x, U = (0, s.e7)([N.default], () => N.default.getId()), {
+  } = (0, T.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED), P = (0, l.O)(), b = (0, _.Z)(), D = (0, s.e7)([p.Z], () => p.Z.getChannel(x)), j = (null == D ? void 0 : null === (t = D.isThread) || void 0 === t ? void 0 : t.call(D)) ? null == D ? void 0 : D.parent_id : x, U = (0, s.e7)([N.default], () => N.default.getId()), {
 embeddedActivity: y,
 currentEmbeddedActivity: B
   } = (0, s.cj)([o.ZP], () => ({
@@ -45,10 +45,10 @@ currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity()
   })), k = (0, s.Wu)([C.default], () => {
 var e;
 return Array.from(null !== (e = null == y ? void 0 : y.userIds) && void 0 !== e ? e : []).map(e => C.default.getUser(e)).filter(g.lm);
-  }), G = (0, s.e7)([p.Z], () => {
+  }), G = (0, s.e7)([f.Z], () => {
 var e;
 let t = null == y ? void 0 : y.userIds.values().next().value;
-return null == t ? null : null === (e = p.Z.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
+return null == t ? null : null === (e = f.Z.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
   }), F = a.useMemo(() => {
 let e = new h.Z(n);
 return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.wT), e;

@@ -22,7 +22,7 @@ function m(e) {
 party: t,
 close: n,
 onSelect: m
-  } = e, g = (0, c.Z)(t), p = (0, _.Z)(t), T = (0, u.Z)(t), f = (0, d.Z)(t), S = (0, l.Z)(t), C = (0, o.Z)(t);
+  } = e, g = (0, c.Z)(t), p = (0, _.Z)(t), T = (0, u.Z)(t), S = (0, d.Z)(t), f = (0, l.Z)(t), C = (0, o.Z)(t);
   return a.useEffect(() => {
 let e = t.currentActivities.filter(e => {
   var t, n;
@@ -46,10 +46,10 @@ children: [
     ]
   }),
   (0, i.jsx)(s.MenuGroup, {
-    children: f
+    children: S
   }),
   (0, i.jsx)(s.MenuGroup, {
-    children: S
+    children: f
   }),
   C
 ]

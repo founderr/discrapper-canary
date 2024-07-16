@@ -27,9 +27,9 @@ channel: g
 (0, r.showToast)((0, r.createToast)(I.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE)), l.Z.increment({
   name: s.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW
 });
-  }, []), f = a.useCallback(() => {
-c.Z.closeChannelSidebar(d.uZ);
   }, []), S = a.useCallback(() => {
+c.Z.closeChannelSidebar(d.uZ);
+  }, []), f = a.useCallback(() => {
 c.Z.closeChannelSidebar(d.uZ), p && (0, o.Kh)(g.id);
   }, [
 g.id,
@@ -41,8 +41,8 @@ isUserProfileLoading: A,
 isOptimisticAccepted: v
   } = (0, _.m)({
 user: n,
-onAcceptSuccess: S,
-onRejectSuccess: f,
+onAcceptSuccess: f,
+onRejectSuccess: S,
 onError: T
   }), Z = N || A, L = Z || v;
   return (0, i.jsxs)('div', {

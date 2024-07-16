@@ -34,12 +34,12 @@ let {
   contextMetadata: S
 } = (0, _.usePaymentContext)(), {
   isGift: C
-} = (0, E.wD)(), [b, P] = r.useState(!1);
+} = (0, E.wD)(), [P, R] = r.useState(!1);
 return r.useEffect(() => {
   let e = setTimeout(() => {
     var e;
-    if (!b)
-      P(!0), (0, i.r5)(S.loadId), ! function(e, a, t, n) {
+    if (!P)
+      R(!0), (0, i.r5)(S.loadId), ! function(e, a, t, n) {
         let r = A.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, a, t),
           o = new URL(d.Z.makeUrl(A.Z5c.BILLING_LOGIN_HANDOFF)),
           i = (0, s.Z)();
@@ -62,8 +62,8 @@ return r.useEffect(() => {
   C,
   S,
   t,
-  P,
-  b
+  R,
+  P
 ]), r.useEffect(() => {
   I === S.loadId && u === m.Y.DONE && a();
 }, [

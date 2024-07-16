@@ -24,7 +24,7 @@ function N(e) {
 onOpen: t,
 onClose: n,
 className: N
-  } = e, f = (0, s.e7)([u.default], () => u.default.getCurrentUser()), p = a.useRef(null), C = (0, s.e7)([d.ZP], () => (null == f ? void 0 : f.id) != null && d.ZP.getMentionCount(f.id, m.W.NOTIFICATION_CENTER) > 0), {
+  } = e, p = (0, s.e7)([u.default], () => u.default.getCurrentUser()), f = a.useRef(null), C = (0, s.e7)([d.ZP], () => (null == p ? void 0 : p.id) != null && d.ZP.getMentionCount(p.id, m.W.NOTIFICATION_CENTER) > 0), {
 enabled: g
   } = o.Z.useExperiment({
 location: 'RecentsButton'
@@ -40,11 +40,11 @@ badgeState: {
 popoutPosition: 'bottom',
 popoutAlign: 'right',
 children: (e, t, n) => (0, i.jsxs)('div', {
-  ref: p,
+  ref: f,
   className: h.recentsIcon,
   children: [
     g && (0, i.jsx)(I.Z, {
-      inboxIconRef: p,
+      inboxIconRef: f,
       recentsPopoutShown: t
     }),
     (0, i.jsx)(c.JO, {

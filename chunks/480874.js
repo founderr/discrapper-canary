@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(922409),
   p = n(727813),
   T = n(355350),
-  f = n(307947),
-  S = n(125855),
+  S = n(307947),
+  f = n(125855),
   C = n(687683),
   N = n(981631),
   A = n(689938),
@@ -63,7 +63,7 @@ h.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, {
   let {
     row: l
   } = e, o = t[l], c = null === (a = t[l + 1]) || void 0 === a ? void 0 : null === (n = a.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
-  return (0, i.jsx)(S.Z, {
+  return (0, i.jsx)(f.Z, {
     index: l,
     className: r()({
       [v.selected]: null != O && O === d,
@@ -110,7 +110,7 @@ M = a.useCallback(() => (0, i.jsxs)(E.Z, {
   b,
   Z
 ]);
-  return 0 === t.length ? (0, i.jsx)(f.Z, {
+  return 0 === t.length ? (0, i.jsx)(S.Z, {
 section: C.pS.SPAM
   }) : (0, i.jsx)(l.bG, {
 navigator: L,

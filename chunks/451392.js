@@ -40,7 +40,7 @@ user: t,
 displayProfile: p,
 pendingThemeColors: a,
 isPreview: !0
-  }), M = u.ZP.canUsePremiumProfileCustomization(t), D = null != s ? s : t.getAvatarURL(m, 80), f = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(), P = (0, d.Cf)(D, f, !1);
+  }), M = u.ZP.canUsePremiumProfileCustomization(t), f = null != s ? s : t.getAvatarURL(m, 80), D = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(), P = (0, d.Cf)(f, D, !1);
   if (null == R || null == x)
 return null;
   let L = e => {

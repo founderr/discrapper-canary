@@ -39,20 +39,20 @@ var l = n(570140),
   m = n(176505);
 let C = () => Promise.resolve();
 C = n(346329).playApplication;
-let b = Object.freeze({
+let L = Object.freeze({
 [c.xQ.USER]: c.h8.USER,
 [c.xQ.TEXT_CHANNEL]: c.h8.TEXT_CHANNEL,
 [c.xQ.VOICE_CHANNEL]: c.h8.VOICE_CHANNEL,
 [c.xQ.GUILD]: c.h8.GUILD,
 [c.xQ.APPLICATION]: c.h8.APPLICATION
   }),
-  L = new RegExp('^'.concat(c.xQ.USER, '|').concat(c.xQ.TEXT_CHANNEL, '|').concat(c.xQ.VOICE_CHANNEL, '|\\').concat(c.xQ.GUILD, '|\\').concat(c.xQ.APPLICATION));
+  b = new RegExp('^'.concat(c.xQ.USER, '|').concat(c.xQ.TEXT_CHANNEL, '|').concat(c.xQ.VOICE_CHANNEL, '|\\').concat(c.xQ.GUILD, '|\\').concat(c.xQ.APPLICATION));
 
 function N(e) {
   var t, n;
   let l;
-  let [a, i] = (l = null !== (n = b[(t = e).charAt(0)]) && void 0 !== n ? n : null, [
-t.replace(L, ''),
+  let [a, i] = (l = null !== (n = L[(t = e).charAt(0)]) && void 0 !== n ? n : null, [
+t.replace(b, ''),
 l
   ]);
   return {

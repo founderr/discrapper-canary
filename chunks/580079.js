@@ -36,13 +36,13 @@ userId: i
   });
 }
 
-function f(e) {
+function S(e) {
   let {
 channel: t
   } = e;
   delete I[t.id], delete m[t.id];
 }
-class S extends(i = c.ZP.Store) {
+class f extends(i = c.ZP.Store) {
   getActiveChannelsFetchStatus(e) {
 return g[e];
   }
@@ -57,12 +57,12 @@ var t;
 return null == h[e] && !(null === (t = g[e]) || void 0 === t ? void 0 : t.loading);
   }
 }
-r = 'ActiveChannelsStore', (s = 'displayName') in(a = S) ? Object.defineProperty(a, s, {
+r = 'ActiveChannelsStore', (s = 'displayName') in(a = f) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = r, new S(d.Z, {
+}) : a[s] = r, new f(d.Z, {
   CHANNEL_SELECT: function(e) {
 let {
   channelId: t,
@@ -107,8 +107,8 @@ let {
 } = e;
 delete h[t.id];
   },
-  CHANNEL_DELETE: f,
-  THREAD_DELETE: f,
+  CHANNEL_DELETE: S,
+  THREAD_DELETE: S,
   ACTIVE_CHANNELS_FETCH_START: function(e) {
 let {
   guildId: t

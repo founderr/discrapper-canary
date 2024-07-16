@@ -21,7 +21,7 @@ function I(e) {
   let {
 searchResultsQuery: I,
 categoryId: m
-  } = e, g = (0, a.e7)([o.ZP], () => o.ZP.isFetchingSearch()), p = (0, a.e7)([o.ZP], () => o.ZP.getDiscoverableGuilds().search), T = (0, a.e7)([o.ZP], () => o.ZP.getLoadId()), f = null !== (n = null === (t = p[I]) || void 0 === t ? void 0 : t[m]) && void 0 !== n ? n : h, S = (0, r.ZP)(), {
+  } = e, g = (0, a.e7)([o.ZP], () => o.ZP.isFetchingSearch()), p = (0, a.e7)([o.ZP], () => o.ZP.getDiscoverableGuilds().search), T = (0, a.e7)([o.ZP], () => o.ZP.getLoadId()), S = null !== (n = null === (t = p[I]) || void 0 === t ? void 0 : t[m]) && void 0 !== n ? n : h, f = (0, r.ZP)(), {
 handleViewGuild: C,
 onGuildCardSeen: N
   } = (0, u.g)(m, T);
@@ -35,12 +35,12 @@ children: [
     })
   }),
   (0, i.jsx)(l.Z, {
-    guilds: f.guilds,
+    guilds: S.guilds,
     loading: g,
     loadingPlaceholderCount: 12,
     onViewGuild: C,
     loadingGuildId: null,
-    theme: S,
+    theme: f,
     analyticsContext: c.P1.SEARCH,
     onGuildCardSeen: N
   })

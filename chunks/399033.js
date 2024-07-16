@@ -13,13 +13,13 @@ var r = n(735250),
   f = n(709999),
   C = n(305271),
   m = n(689938),
-  h = n(994479);
+  _ = n(994479);
 t.Z = e => {
   let {
 className: t,
 products: n,
 user: a,
-productToCategoryMap: _
+productToCategoryMap: h
   } = e, [b, x] = s.useState(0), I = n.length, {
 analyticsLocations: E
   } = (0, l.cj)([g.Z], () => g.Z.getAnalytics()), {
@@ -40,12 +40,12 @@ v
   ]), null == a || 0 === n.length) ? null : (0, r.jsx)('div', {
 className: t,
 children: (0, r.jsxs)('div', {
-  className: h.cardContainer,
+  className: _.cardContainer,
   children: [
     (0, r.jsx)(c.Button, {
       look: c.Button.Looks.FILLED,
       color: c.Button.Colors.PRIMARY,
-      className: o()(h.caretButton, h.leftCaret),
+      className: o()(_.caretButton, _.leftCaret),
       onClick: () => {
         x(e => {
           let t = e - 4;
@@ -59,14 +59,14 @@ children: (0, r.jsxs)('div', {
       })
     }),
     (0, r.jsx)('div', {
-      className: h.cardInnerContainer,
+      className: _.cardInnerContainer,
       children: T.map((e, t) => {
         let {
           x: s
-        } = e, o = _.get(n[t].skuId);
+        } = e, o = h.get(n[t].skuId);
         if (null != o)
           return (0, r.jsx)(i.animated.div, {
-            className: h.card,
+            className: _.card,
             style: {
               transform: null == s ? void 0 : s.to(e => 'translate3d('.concat(e, '%,0,0)'))
             },
@@ -82,7 +82,7 @@ children: (0, r.jsxs)('div', {
     (0, r.jsx)(c.Button, {
       look: c.Button.Looks.FILLED,
       color: c.Button.Colors.PRIMARY,
-      className: o()(h.caretButton, h.rightCaret),
+      className: o()(_.caretButton, _.rightCaret),
       onClick: () => {
         x(e => {
           let t = e + 4;

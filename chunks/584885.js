@@ -6,7 +6,7 @@ var i = n(735250),
   l = n(906732),
   o = n(451603),
   c = n(885714),
-  d = n(514611),
+  d = n(225784),
   u = n(127541),
   _ = n(981631),
   E = n(378042);
@@ -53,8 +53,8 @@ subtitle: m,
 guildsData: g,
 analyticsContext: p,
 theme: T,
-onViewGuild: f,
-fetchGuilds: S,
+onViewGuild: S,
+fetchGuilds: f,
 onGuildCardSeen: C,
 currentCategoryId: N,
 loadId: A,
@@ -62,7 +62,7 @@ onTagClick: v,
 showMoreCards: Z = !1
   } = e;
   a.useEffect(() => {
-r.Z.wait(() => S());
+r.Z.wait(() => f());
   }, [N]);
   let L = (0, u.Z)(Z ? I : h),
 {
@@ -90,7 +90,7 @@ if ((0, o.yU)())
   });
 else {
   let t = R.findIndex(t => t.id === e);
-  await f(e, t, p, A);
+  await S(e, t, p, A);
 }
   };
   if (x || null == R) {

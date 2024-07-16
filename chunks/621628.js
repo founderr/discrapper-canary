@@ -98,7 +98,7 @@ R = e => {
 },
 x = t.map(e => l.z[e]),
 M = O.filter(e => e.toLowerCase().includes(T.toLowerCase())).filter(e => !x.includes(e)),
-D = Object.keys(l.z).filter(e => !x.includes(e)).filter(e => !O.includes(e)).filter(e => e.toLowerCase().includes(T.toLowerCase())).sort((e, t) => e.localeCompare(t));
+f = Object.keys(l.z).filter(e => !x.includes(e)).filter(e => !O.includes(e)).filter(e => e.toLowerCase().includes(T.toLowerCase())).sort((e, t) => e.localeCompare(t));
   return (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)(d.FormSection, {
@@ -196,7 +196,7 @@ children: [
         })
       }),
       (0, n.jsx)(g, {
-        items: D,
+        items: f,
         dismissedContents: h,
         handleChange: R
       })

@@ -8,8 +8,8 @@ n(470079);
 var a = n(481060),
   l = n(43267),
   s = n(933557),
-  r = n(534091),
-  o = n(797717),
+  r = n(297700),
+  o = n(534091),
   c = n(967128),
   d = n(689938),
   u = n(942939),
@@ -31,7 +31,7 @@ function m(e) {
 channel: n
   } = e, m = null !== (t = (0, s.ZP)(n)) && void 0 !== t ? t : '';
   return (0, i.jsxs)('div', {
-id: (0, r.p)(n.id, n.id),
+id: (0, o.p)(n.id, n.id),
 className: u.headerContainer,
 children: [
   (0, i.jsx)('img', {
@@ -55,7 +55,7 @@ children: [
             className: u.emptyMessageHeader,
             children: [
               m,
-              (0, i.jsx)(o.Z, {
+              (0, i.jsx)(r.Z, {
                 className: u.flowerStar,
                 size: 24,
                 children: (0, i.jsx)(a.CheckmarkSmallIcon, {

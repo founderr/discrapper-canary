@@ -15,8 +15,8 @@ var i = n(735250),
   T = n(857595),
   h = n(607070),
   N = n(367907),
-  f = n(592125),
-  p = n(984933),
+  p = n(592125),
+  f = n(984933),
   C = n(768119),
   g = n(944486),
   S = n(153124),
@@ -228,12 +228,12 @@ super(e), b(this, 'state', {
     return;
   }
   let n = g.Z.getChannelId(),
-    i = f.Z.getChannel(n);
-  if ((null == i ? void 0 : i.isThread()) && (i = f.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate()) {
+    i = p.Z.getChannel(n);
+  if ((null == i ? void 0 : i.isThread()) && (i = p.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate()) {
     this.focusEditor();
     return;
   }
-  let a = p.ZP.getTextChannelNameDisambiguations(i.getGuildId())[i.id],
+  let a = f.ZP.getTextChannelNameDisambiguations(i.getGuildId())[i.id],
     s = null != a ? a.name : i.name;
   this.handleSetSearchQuery({
     query: m.ZP[L.dCx.FILTER_IN].key + '#'.concat(s, ' '),

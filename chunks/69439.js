@@ -33,7 +33,7 @@ function h(e) {
   var t, n, h, I;
   let {
 quest: m
-  } = e, g = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (h = m.userStatus) || void 0 === h ? void 0 : h.claimedAt) == null, T = (0, c.iQ)(m), f = !(0, c.zi)(m), S = (null === (I = m.userStatus) || void 0 === I ? void 0 : I.claimedAt) != null, C = (0, d.hf)({
+  } = e, g = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (h = m.userStatus) || void 0 === h ? void 0 : h.claimedAt) == null, T = (0, c.iQ)(m), S = !(0, c.zi)(m), f = (null === (I = m.userStatus) || void 0 === I ? void 0 : I.claimedAt) != null, C = (0, d.hf)({
 quest: m,
 location: o.jn.QUEST_BAR
   }), N = a.useCallback(() => {
@@ -42,9 +42,9 @@ location: o.jn.QUEST_BAR
   questContentCTA: r.jZ.ACCEPT_QUEST
 });
   }, [m]);
-  return T && p || f && p ? (0, i.jsx)(E, {
+  return T && p || S && p ? (0, i.jsx)(E, {
 onClick: C
-  }) : f && g && !S ? (0, i.jsx)('div', {
+  }) : S && g && !f ? (0, i.jsx)('div', {
 className: _.container,
 children: (0, i.jsx)(s.Button, {
   color: s.ButtonColors.PRIMARY,
@@ -52,7 +52,7 @@ children: (0, i.jsx)(s.Button, {
   className: _.button,
   children: u.Z.Messages.QUEST_ACCEPTED
 })
-  }) : f && !g ? (0, i.jsx)('div', {
+  }) : S && !g ? (0, i.jsx)('div', {
 className: _.container,
 children: (0, i.jsx)(s.Button, {
   color: s.ButtonColors.BRAND,

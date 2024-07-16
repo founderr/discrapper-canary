@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return p;
+return f;
   }
 });
 var i = n(735250);
@@ -20,9 +20,9 @@ var a = n(120356),
   T = n(488131),
   h = n(981631),
   N = n(689938),
-  f = n(265940);
+  p = n(265940);
 
-function p(e) {
+function f(e) {
   let {
 message: t,
 compact: n
@@ -50,7 +50,7 @@ return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived) ?
       children: N.Z.Messages.NO_RECENT_THREAD_MESSAGES
     }),
     (0, i.jsx)('span', {
-      className: f.timestamp,
+      className: p.timestamp,
       children: (0, I.Ye)(s)
     })
   ]
@@ -61,18 +61,18 @@ return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived) ?
       channel: e
     }),
     (0, i.jsx)('span', {
-      className: f.timestamp,
+      className: p.timestamp,
       children: (0, I.Ye)(s)
     })
   ]
 });
-  }(t), p = null != d && d > 0;
+  }(t), f = null != d && d > 0;
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)('div', {
-    className: s()(f.spine, {
-      [f.cozy]: !a,
-      [f.systemMessageSpine]: c
+    className: s()(p.spine, {
+      [p.cozy]: !a,
+      [p.systemMessageSpine]: c
     })
   }),
   (0, i.jsx)(l.Clickable, {
@@ -101,31 +101,31 @@ children: [
       });
     },
     'aria-roledescription': N.Z.Messages.THREAD_MESSAGE_ROLE_DESCRIPTION,
-    className: s()(f.container, {
-      [f.systemMessageContainer]: c
+    className: s()(p.container, {
+      [p.systemMessageContainer]: c
     }),
     children: (0, i.jsxs)(l.BlockInteractions, {
       children: [
         (0, i.jsxs)('div', {
-          className: f.topLine,
+          className: p.topLine,
           children: [
             (0, i.jsx)(l.HiddenVisually, {
               children: N.Z.Messages.THREAD
             }),
             (0, i.jsx)('span', {
-              className: f.name,
+              className: p.name,
               children: t.name
             }),
             (0, i.jsx)('span', {
-              className: f.cta,
-              'aria-hidden': !p,
+              className: p.cta,
+              'aria-hidden': !f,
               children: (0, _.WE)(d, t.id)
             })
           ]
         }),
         (0, i.jsx)('span', {
           'aria-hidden': !0,
-          className: s()(f.bottomLine),
+          className: s()(p.bottomLine),
           children: u
         })
       ]

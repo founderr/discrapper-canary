@@ -20,16 +20,16 @@ var n = s(735250),
   N = s(714338),
   C = s(924557),
   m = s(74299),
-  A = s(131951),
-  h = s(556296),
-  g = s(808506),
-  O = s(285952),
-  p = s(474333),
+  A = s(777036),
+  h = s(131951),
+  g = s(556296),
+  O = s(808506),
+  p = s(285952),
   R = s(63063),
   x = s(358085),
   M = s(13140),
-  D = s(210887),
-  f = s(659947),
+  f = s(210887),
+  D = s(659947),
   P = s(981631),
   L = s(420212),
   Z = s(689938),
@@ -60,8 +60,8 @@ S.Q2.MISCELLANEOUS
   ]);
 }
 let G = l()((0, S.Rv)()).filter(e => e.description !== Z.Z.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(),
-  F = c.ZP.connectStores([D.Z], () => ({
-theme: D.Z.theme
+  F = c.ZP.connectStores([f.Z], () => ({
+theme: f.Z.theme
   }))(_.EmptyState);
 class y extends a.PureComponent {
   renderMessage() {
@@ -95,8 +95,8 @@ let {
   managed: e,
   enabled: t
 } = this.props.keybind;
-return (0, n.jsxs)(O.Z, {
-  direction: O.Z.Direction.VERTICAL,
+return (0, n.jsxs)(p.Z, {
+  direction: p.Z.Direction.VERTICAL,
   className: r()(b.keybindGroup, v.card),
   children: [
     !e && (0, n.jsx)(u.Z, {
@@ -105,10 +105,10 @@ return (0, n.jsxs)(O.Z, {
       onClick: this.handleDeleteKeybind,
       look: u.Z.Looks.FILLED
     }),
-    (0, n.jsxs)(O.Z, {
+    (0, n.jsxs)(p.Z, {
       className: j.marginBottom8,
       children: [
-        (0, n.jsx)(O.Z.Child, {
+        (0, n.jsx)(p.Z.Child, {
           basis: '45%',
           children: (0, n.jsx)(_.FormItem, {
             title: Z.Z.Messages.USER_SETTINGS_KEYBINDS_ACTION,
@@ -121,7 +121,7 @@ return (0, n.jsxs)(O.Z, {
             })
           })
         }),
-        (0, n.jsx)(O.Z.Child, {
+        (0, n.jsx)(p.Z.Child, {
           basis: '45%',
           children: (0, n.jsx)(_.FormItem, {
             title: Z.Z.Messages.USER_SETTINGS_KEYBINDS_KEYBIND,
@@ -132,7 +132,7 @@ return (0, n.jsxs)(O.Z, {
             })
           })
         }),
-        (0, n.jsx)(O.Z.Child, {
+        (0, n.jsx)(p.Z.Child, {
           grow: 0,
           shrink: 0,
           children: (0, n.jsx)(_.FormItem, {
@@ -151,7 +151,7 @@ return (0, n.jsxs)(O.Z, {
         })
       ]
     }),
-    (0, n.jsx)(O.Z.Child, {
+    (0, n.jsx)(p.Z.Child, {
       children: this.renderMessage()
     }),
     this.renderExtraSettings()
@@ -163,7 +163,7 @@ let {
   action: e
 } = this.props.keybind;
 if (e === P.kg4.SWITCH_TO_VOICE_CHANNEL)
-  return (0, n.jsx)(f.Z, {
+  return (0, n.jsx)(D.Z, {
     keybind: this.props.keybind
   });
   }
@@ -324,18 +324,18 @@ return (0, n.jsxs)(n.Fragment, {
       title: Z.Z.Messages.KEYBINDS,
       children: x.isPlatformEmbedded ? (0, n.jsxs)(n.Fragment, {
         children: [
-          (0, n.jsxs)(O.Z, {
-            justify: O.Z.Justify.BETWEEN,
+          (0, n.jsxs)(p.Z, {
+            justify: p.Z.Justify.BETWEEN,
             className: j.marginBottom20,
             children: [
-              (0, n.jsx)(O.Z.Child, {
+              (0, n.jsx)(p.Z.Child, {
                 grow: 0,
-                children: (0, n.jsx)(p.Z, {
-                  messageType: p.Q.WARNING,
+                children: (0, n.jsx)(A.Z, {
+                  messageType: A.Q.WARNING,
                   children: Z.Z.Messages.ADD_KEYBIND_WARNING
                 })
               }),
-              (0, n.jsx)(O.Z.Child, {
+              (0, n.jsx)(p.Z.Child, {
                 wrap: !0,
                 grow: 0,
                 children: (0, n.jsx)(_.Button, {
@@ -354,8 +354,8 @@ return (0, n.jsxs)(n.Fragment, {
             ]
           })
         ]
-      }) : (0, n.jsx)(p.Z, {
-        messageType: p.Q.INFO,
+      }) : (0, n.jsx)(A.Z, {
+        messageType: A.Q.INFO,
         textVariant: 'text-lg/medium',
         className: b.browserNotice,
         children: Z.Z.Messages.KEYBIND_IN_BROSWER_NOTICE.format({
@@ -447,9 +447,9 @@ super(...e), B(this, 'handleAddKeybind', () => {
 }
 
 function Y() {
-  let e = (0, c.e7)([h.Z], () => h.Z.getState()),
-t = (0, c.e7)([A.Z], () => (0, m.Z)(A.Z)),
-s = (0, c.e7)([g.Z], () => g.Z.isSupported()),
+  let e = (0, c.e7)([g.Z], () => g.Z.getState()),
+t = (0, c.e7)([h.Z], () => (0, m.Z)(h.Z)),
+s = (0, c.e7)([O.Z], () => O.Z.isSupported()),
 a = (0, C.Go)();
   return (0, n.jsx)(V, {
 keybinds: e,

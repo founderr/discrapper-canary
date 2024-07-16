@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(709158),
   p = n(710914),
   T = n(452081),
-  f = n(981631),
-  S = n(689938),
+  S = n(981631),
+  f = n(689938),
   C = n(852595);
 t.Z = function(e) {
   let {} = e, t = (0, g.Z)(c.Z.QUEST_HOME_PAGE), {
@@ -41,13 +41,13 @@ for (let t of R)
   }
   }
   a.useEffect(() => {
-!t && (0, s.uL)(f.Z5c.FRIENDS);
+!t && (0, s.uL)(S.Z5c.FRIENDS);
   }, [t]), a.useEffect(() => {}, []);
   let P = a.useCallback(() => {
-window.open(I.Z.getArticleURL(f.BhN.QUESTS_LEARN_MORE));
+window.open(I.Z.getArticleURL(S.BhN.QUESTS_LEARN_MORE));
   }, []);
   return ((0, d.Tt)({
-location: S.Z.Messages.QUESTS
+location: f.Z.Messages.QUESTS
   }), t) ? (0, i.jsxs)('div', {
 className: C.container,
 children: [
@@ -63,8 +63,8 @@ children: [
     backgroundStyle: L
   }),
   (0, i.jsx)(E.Z, {
-    title: S.Z.Messages.QUESTS_HOME_HERO_TITLE,
-    description: S.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
+    title: f.Z.Messages.QUESTS_HOME_HERO_TITLE,
+    description: f.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
     backgroundImageUrl: x,
     onScroll: v,
     bannerContainerClassName: C.hero,
@@ -79,7 +79,7 @@ children: [
           variant: 'text-md/semibold',
           color: O ? 'always-white' : 'text-normal',
           className: C.externalLinkText,
-          children: S.Z.Messages.LEARN_MORE
+          children: f.Z.Messages.LEARN_MORE
         }),
         (0, i.jsx)(l.LinkExternalSmallIcon, {
           className: C.icon,

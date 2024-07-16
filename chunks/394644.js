@@ -40,8 +40,8 @@ var n = s(470079),
   R = s(695346),
   x = s(620163),
   M = s(295545),
-  D = s(168308),
-  f = s(839469),
+  f = s(168308),
+  D = s(839469),
   P = s(726985),
   L = s(46140),
   Z = s(689938);
@@ -139,8 +139,8 @@ function v() {
   let s = (0, N.YO)().length,
 n = (0, S.U)(),
 r = (0, a.e7)([g.Z], () => g.Z.getProps().impressionSource),
-f = (0, T.gU)(),
-P = (0, D.bC)(),
+D = (0, T.gU)(),
+P = (0, f.bC)(),
 Z = (0, d.Go)(),
 [b] = (0, _.c)(Z ? [i.z.CLIPS_SETTINGS_BETA_TAG] : []),
 v = 'useGenerateUserSettingsSections';
@@ -180,7 +180,7 @@ autoTrackExposure: !0
 unseenGiftCount: s,
 showPrepaidPaymentPastDueWarning: n,
 impressionSource: r,
-numOfPendingFamilyRequests: f,
+numOfPendingFamilyRequests: D,
 isOverlaySupported: P,
 isClipsBetaTagShowing: b === i.z.CLIPS_SETTINGS_BETA_TAG,
 shouldMergeGameSettings: j,
@@ -202,7 +202,7 @@ developerMode: W
 function j(e) {
   let {
 searchResults: t
-  } = (0, f.E)(), s = v();
+  } = (0, D.E)(), s = v();
   if (!(0, M.eA)({
   location: 'settings'
 }))

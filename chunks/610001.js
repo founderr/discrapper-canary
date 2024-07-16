@@ -23,7 +23,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let T = u.Z.getArticleURL(h.BhN.VERIFICATION_FAQ);
-class f extends(i = s.PureComponent) {
+class S extends(i = s.PureComponent) {
   renderFields() {
 let {
   types: e,
@@ -115,8 +115,8 @@ super(...e), p(this, 'handleClick', e => {
 });
   }
 }
-p(f, 'defaultProps', {
+p(S, 'defaultProps', {
   types: [h.PUi.CAPTCHA],
   onCaptchaVerify: h.dG4,
   onLogout: h.dG4
-}), t.Z = f;
+}), t.Z = S;

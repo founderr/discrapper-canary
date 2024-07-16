@@ -6,7 +6,7 @@ return d;
 return T;
   },
   QY: function() {
-return p;
+return f;
   },
   Vj: function() {
 return c;
@@ -27,7 +27,7 @@ return E;
 return N;
   },
   u$: function() {
-return f;
+return p;
   },
   yC: function() {
 return o;
@@ -145,7 +145,7 @@ searchId: e
   }));
 }
 
-function f(e, t, n) {
+function p(e, t, n) {
   null != e && i.Z.dispatch({
 type: 'SEARCH_AUTOCOMPLETE_QUERY_UPDATE',
 searchId: e,
@@ -154,7 +154,7 @@ cursorScope: n
   });
 }
 
-function p(e, t) {
+function f(e, t) {
   i.Z.dispatch({
 type: 'SEARCH_SET_SHOW_BLOCKED_RESULTS',
 searchId: e,

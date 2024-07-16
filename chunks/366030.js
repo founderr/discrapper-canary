@@ -19,10 +19,10 @@ var r = n(735250),
   p = n(726542),
   m = n(367907),
   I = n(906732),
-  T = n(171368),
-  g = n(598077),
-  S = n(271383),
-  A = n(467679),
+  T = n(385499),
+  g = n(171368),
+  S = n(598077),
+  A = n(271383),
   N = n(626135),
   v = n(275759),
   O = n(107484),
@@ -98,12 +98,12 @@ children: Object.keys(a).map(e => {
     E = u.find(e => null != e.application),
     h = p.Z.get(e),
     m = null == E ? void 0 : E.application,
-    I = (null == m ? void 0 : m.bot) != null ? new g.Z(m.bot) : null;
+    I = (null == m ? void 0 : m.bot) != null ? new S.Z(m.bot) : null;
   return v.SJ.includes(null !== (t = null == m ? void 0 : m.id) && void 0 !== t ? t : '') ? l = (0, r.jsx)(y.Z, {
     className: U.botTag,
     color: i,
     size: 16
-  }) : null != I && (l = (0, r.jsx)(A.Z, {
+  }) : null != I && (l = (0, r.jsx)(T.Z, {
     className: U.botTag,
     verified: I.isVerifiedBot()
   })), (0, r.jsxs)('div', {
@@ -175,9 +175,9 @@ l,
 c,
 d
   ]);
-  let E = (0, u.e7)([S.ZP], () => {
+  let E = (0, u.e7)([A.ZP], () => {
 var e, t;
-return null !== (t = null === (e = S.ZP.getSelfMember(d)) || void 0 === e ? void 0 : e.roles.includes(l)) && void 0 !== t && t;
+return null !== (t = null === (e = A.ZP.getSelfMember(d)) || void 0 === e ? void 0 : e.roles.includes(l)) && void 0 !== t && t;
   }, [
 d,
 l
@@ -252,7 +252,7 @@ renderPopout: function() {
         (0, D.Am)(a.id);
       },
       onOpenProfile: () => {
-        (0, T.openUserProfileModal)({
+        (0, g.openUserProfileModal)({
           userId: t,
           messageId: n,
           guildId: a.id,
