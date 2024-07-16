@@ -1,85 +1,42 @@
 n.d(i, {
   Z: function() {
-return u;
+return r;
   }
 });
 var s = n(735250);
 n(470079);
-var l = n(481060),
-  o = n(239091),
-  t = n(785717),
-  r = n(705556),
-  a = n(225714),
-  d = n(228168),
-  c = n(984904);
+var l = n(705556),
+  o = n(225714),
+  t = n(984904);
 
-function u(e) {
+function r(e) {
   let {
 user: i,
-isCurrentUser: u,
-guildId: I,
-friendToken: f,
-relationshipType: _,
-originalFriendingEnabled: E = !1,
-improvedFriendingEnabled: m = !1,
-persistentCallCtaEnabled: S = !1,
-activeInviteToCallCtaEnabled: Z = !1,
-viewProfileItem: x,
-onClose: v
-  } = e, {
-trackUserProfileAction: h
-  } = (0, t.KZ)();
+isCurrentUser: n,
+guildId: r,
+friendToken: a,
+relationshipType: d,
+persistentCallCtaEnabled: c = !1,
+activeInviteToCallCtaEnabled: u = !1,
+onClose: I
+  } = e;
   return (0, s.jsxs)('div', {
-className: c.buttons,
+className: t.buttons,
 children: [
-  (0, s.jsx)(a.Z, {
+  (0, s.jsx)(o.Z, {
     user: i,
-    isCurrentUser: u,
-    relationshipType: _,
-    improvedFriendingEnabled: m,
-    persistentCallCtaEnabled: S,
-    activeInviteToCallCtaEnabled: Z,
-    friendToken: f,
-    onClose: v
+    isCurrentUser: n,
+    relationshipType: d,
+    persistentCallCtaEnabled: c,
+    activeInviteToCallCtaEnabled: u,
+    friendToken: a,
+    onClose: I
   }),
-  (0, s.jsx)(r.Z, {
+  (0, s.jsx)(l.Z, {
     user: i,
-    guildId: I,
-    profileType: d.y0.FULL_SIZE,
-    onClose: v
-  }),
-  !i.isNonUserBot() && E ? (0, s.jsx)(l.Clickable, {
-    focusProps: {
-      offset: {
-        left: 8
-      }
-    },
-    onClick: function(e) {
-      h({
-        action: 'PRESS_OPTIONS'
-      }), (0, o.jW)(e, async () => {
-        let {
-          default: e
-        } = await n.e('29136').then(n.bind(n, 193646));
-        return n => (0, s.jsx)(e, {
-          ...n,
-          originalFriendingEnabled: E,
-          relationshipType: _,
-          viewProfileItem: x,
-          user: i,
-          isCurrentUser: u,
-          guildId: I,
-          trackUserProfileAction: h,
-          onClose: v
-        });
-      });
-    },
-    children: (0, s.jsx)(l.MoreVerticalIcon, {
-      size: 'md',
-      color: 'currentColor',
-      className: c.additionalActionsIcon
-    })
-  }) : null
+    guildId: r,
+    onClose: I
+  })
 ]
   });
 }

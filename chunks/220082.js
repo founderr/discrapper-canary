@@ -25,7 +25,9 @@ let d = (0, s.Z)(() => ({
   fetching: {}
 }));
 async function _(e) {
-  null == d.getState().palette[e] && await E(e);
+  var t;
+  if (t = e, null == d.getState().palette[t])
+await E(e);
 }
 async function E(e) {
   if (!d.getState().fetching[e]) {
