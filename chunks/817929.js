@@ -15,7 +15,7 @@ var r = n(120356),
   d = n(45209);
 let s = [
 'sessionshare.sp-int.playstation.com',
-'sessionshare.playstation.com'
+'session-share.playstation.com'
   ],
   u = (e, t, n) => 'https://'.concat(e, '/embed/').concat(t, '?locale=').concat(n),
   m = ['PlayStation'],
