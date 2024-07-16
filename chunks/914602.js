@@ -5,7 +5,7 @@ var i, a = n(735250),
   l = n.n(r),
   o = n(86357),
   c = n(54936),
-  d = n(55008),
+  d = n(351465),
   u = n(592771),
   _ = n(305177),
   E = n(73346),
@@ -22,7 +22,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class f extends(i = s.PureComponent) {
+class p extends(i = s.PureComponent) {
   render() {
 let {
   sku: e,
@@ -110,10 +110,10 @@ super(...e), N(this, 'renderActions', () => {
 });
   }
 }
-N(f, 'defaultProps', {
+N(p, 'defaultProps', {
   showMediaPlaceholder: !1,
   isMouseOver: !1,
   showBuyInline: !1,
   isHorizontal: !1,
   isEmbed: !1
-}), t.Z = f;
+}), t.Z = p;

@@ -31,32 +31,32 @@ var i = n(735250),
   O = n(616360),
   y = n(858064),
   P = n(594190),
-  j = n(569545),
-  D = n(382182),
-  U = n(74299),
-  w = n(914923),
-  G = n(165393),
-  k = n(989941),
-  B = n(803647),
-  V = n(231664),
-  H = n(759198),
-  F = n(131704),
-  W = n(199902),
-  Y = n(314897),
-  z = n(592125),
-  K = n(984933),
-  q = n(430824),
-  Q = n(131951),
-  J = n(496675),
-  X = n(158776),
-  $ = n(699516),
-  ee = n(944486),
-  et = n(885110),
-  en = n(594174),
-  ei = n(449224),
-  el = n(366695),
-  er = n(672752),
-  ea = n(499150),
+  j = n(925329),
+  D = n(569545),
+  U = n(382182),
+  w = n(74299),
+  G = n(914923),
+  k = n(165393),
+  B = n(989941),
+  V = n(803647),
+  H = n(690221),
+  F = n(231664),
+  W = n(759198),
+  Y = n(131704),
+  z = n(199902),
+  K = n(314897),
+  q = n(592125),
+  Q = n(984933),
+  J = n(430824),
+  X = n(131951),
+  $ = n(496675),
+  ee = n(158776),
+  et = n(699516),
+  en = n(944486),
+  ei = n(885110),
+  el = n(594174),
+  er = n(449224),
+  ea = n(672752),
   es = n(976401),
   eo = n(333454),
   ec = n(864441),
@@ -114,7 +114,7 @@ let {
 } = this.props;
 return (null != u || null == d) && (s || r && null != u) ? (s ? (e = !1, t = this.handleClickStopStreamingButton, n = h.ScreenXIcon, l = eC.Z.Messages.STOP_STREAMING) : c ? (e = !1, t = this.handleClickGoLiveButton, n = h.ScreenArrowIcon, l = null != u ? eC.Z.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({
   game: u.name
-}) : eC.Z.Messages.ACTIVITY_PANEL_GO_LIVE) : (e = !0, t = null, n = h.ScreenArrowIcon, l = null != o && (0, F.vd)(o.type) ? eC.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != a ? eC.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : eC.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD), (0, i.jsx)('div', {
+}) : eC.Z.Messages.ACTIVITY_PANEL_GO_LIVE) : (e = !0, t = null, n = h.ScreenArrowIcon, l = null != o && (0, Y.vd)(o.type) ? eC.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != a ? eC.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : eC.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD), (0, i.jsx)('div', {
   className: eI.panelButtonContainer,
   children: (0, i.jsx)(es.Z, {
     tooltipText: l,
@@ -185,7 +185,7 @@ return null == e || null == t ? null : (0, i.jsx)(es.Z, {
 let {
   channel: e
 } = this.props;
-return null != e && (0, F.vd)(e.type) ? null : (0, i.jsx)(ep.Z, {});
+return null != e && (0, Y.vd)(e.type) ? null : (0, i.jsx)(ep.Z, {});
   }
   renderBroadcastSettingsButton() {
 let {
@@ -254,7 +254,7 @@ return (0, i.jsxs)('div', {
     (0, i.jsxs)('div', {
       className: eI.gameIconWrapper,
       children: [
-        (0, i.jsx)(el.Z, {
+        (0, i.jsx)(j.Z, {
           className: eI.gameIcon,
           game: n,
           pid: null == l ? void 0 : l.pid
@@ -298,11 +298,11 @@ let {
 } = this.props, {
   title: r,
   sanitizedTitle: s
-} = (0, w.Z)(n);
+} = (0, G.Z)(n);
 return (0, i.jsxs)('div', {
   className: eI.gameWrapper,
   children: [
-    e ? (0, i.jsx)(G.Z, {
+    e ? (0, i.jsx)(k.Z, {
       title: s
     }) : (0, i.jsx)(eu.ZP, {
       look: eu.ZP.Looks.GRAY,
@@ -322,9 +322,9 @@ return (0, i.jsxs)('div', {
           children: [
             (0, i.jsx)(h.NitroWheelIcon, {
               size: 'xxs',
-              color: er.JX.PREMIUM_TIER_2
+              color: ea.JX.PREMIUM_TIER_2
             }),
-            (0, i.jsx)(H.Z, {
+            (0, i.jsx)(W.Z, {
               className: eI.perksDemoText,
               variant: 'text-xxs/semibold',
               children: l
@@ -360,7 +360,7 @@ let s = {
   },
   o = r;
 null != a ? (e = ef.Z5c.CHANNEL(a.id, l.id), o = ''.concat(o, ' / ').concat(a.name)) : e = ef.Z5c.CHANNEL(ef.ME, l.id);
-let c = (0, i.jsx)(ea.Z, {
+let c = (0, i.jsx)(H.Z, {
   href: e,
   onClick: this.handleApplicationLinkClick,
   children: (0, i.jsx)(eo.Z, {
@@ -371,15 +371,15 @@ let c = (0, i.jsx)(ea.Z, {
 return (0, i.jsxs)('div', {
   className: eI.gameWrapper,
   children: [
-    (0, i.jsx)(el.Z, {
+    (0, i.jsx)(j.Z, {
       className: eI.gameIcon,
       game: t,
-      size: el.Z.Sizes.SMALL
+      size: j.Z.Sizes.SMALL
     }),
     (0, i.jsxs)('div', {
       className: eI.info,
       children: [
-        (0, i.jsx)(ea.Z, {
+        (0, i.jsx)(H.Z, {
           href: e,
           onClick: this.handleApplicationLinkClick,
           children: (0, i.jsx)(ec.Z, {
@@ -387,7 +387,7 @@ return (0, i.jsxs)('div', {
             children: t.name
           })
         }),
-        (0, F.Qm)(l.type) ? c : (0, i.jsx)(eN, {
+        (0, Y.Qm)(l.type) ? c : (0, i.jsx)(eN, {
           timestamps: s
         })
       ]
@@ -424,17 +424,17 @@ super(...e), eE(this, 'modalKey', void 0), eE(this, 'state', {
     stream: e,
     channel: t,
     runningGame: n
-  } = this.props, i = null != t && (0, F.vd)(t.type) ? t : null;
+  } = this.props, i = null != t && (0, Y.vd)(t.type) ? t : null;
   null != i && null != n && (null == e ? (0, m.tE)({
     channelId: i.id,
     pid: n.pid
-  }) : (0, v.v$)((0, j.V9)(e), n.pid));
+  }) : (0, v.v$)((0, D.V9)(e), n.pid));
 }), eE(this, 'handleClickGoLiveButton', () => {
   let {
     guildId: e,
     channel: t,
     canStartBroadcast: l
-  } = this.props, r = null != t && (0, F.vd)(t.type) ? t : null, a = null != r ? r.getGuildId() : e;
+  } = this.props, r = null != t && (0, Y.vd)(t.type) ? t : null, a = null != r ? r.getGuildId() : e;
   if ((null == r ? void 0 : r.isBroadcastChannel()) && l) {
     (0, T.D)(this.startBroadcast);
     return;
@@ -460,12 +460,12 @@ super(...e), eE(this, 'modalKey', void 0), eE(this, 'state', {
     stream: e,
     channel: t,
     userId: n
-  } = this.props, i = null != t && (0, F.vd)(t.type) ? t : null;
+  } = this.props, i = null != t && (0, Y.vd)(t.type) ? t : null;
   if ((null == i ? void 0 : i.isBroadcastChannel()) && (null == i ? void 0 : i.isOwner(n))) {
-    (0, T.Z)(() => (0, B.Z)(e));
+    (0, T.Z)(() => (0, V.Z)(e));
     return;
   }
-  (0, B.Z)(e);
+  (0, V.Z)(e);
 }), eE(this, 'handleClickInviteButton', () => {
   let {
     activity: e,
@@ -512,7 +512,7 @@ super(...e), eE(this, 'modalKey', void 0), eE(this, 'state', {
     channel: t,
     embeddedActivity: n
   } = this.props;
-  o()(null != t, 'Channel is null during navigation click'), o()(null != n, 'Activity null during navigation click'), (0, F.vd)(t.type) && _.Z.selectParticipant(t.id, n.applicationId), f.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : ef.ME, t.id), (0, F.Qm)(t.type) && (0, E.tg)(em.Ez.PANEL);
+  o()(null != t, 'Channel is null during navigation click'), o()(null != n, 'Activity null during navigation click'), (0, Y.vd)(t.type) && _.Z.selectParticipant(t.id, n.applicationId), f.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : ef.ME, t.id), (0, Y.Qm)(t.type) && (0, E.tg)(em.Ez.PANEL);
 });
   }
 }
@@ -521,34 +521,34 @@ t.Z = (0, C.Z)(function(e) {
   let {
 guildId: n,
 ...l
-  } = e, r = (0, c.e7)([Y.default], () => Y.default.getId()), a = (0, c.e7)([
+  } = e, r = (0, c.e7)([K.default], () => K.default.getId()), a = (0, c.e7)([
 P.ZP,
-ei.Z
-  ], () => (0, k.Z)(P.ZP, ei.Z)), s = (0, c.e7)([
-ee.Z,
-z.Z
-  ], () => z.Z.getChannel(ee.Z.getVoiceChannelId())), o = (0, c.e7)([N.ZP], () => N.ZP.getConnectedActivityChannelId()), d = (0, c.e7)([z.Z], () => z.Z.getChannel(o)), h = (0, c.e7)([q.Z], () => q.Z.getGuild(null == d ? void 0 : d.guild_id)), [p, _] = (0, c.Wu)([W.Z], () => [
-W.Z.getCurrentUserActiveStream(),
-W.Z.getStreamerActiveStreamMetadata()
+er.Z
+  ], () => (0, B.Z)(P.ZP, er.Z)), s = (0, c.e7)([
+en.Z,
+q.Z
+  ], () => q.Z.getChannel(en.Z.getVoiceChannelId())), o = (0, c.e7)([N.ZP], () => N.ZP.getConnectedActivityChannelId()), d = (0, c.e7)([q.Z], () => q.Z.getChannel(o)), h = (0, c.e7)([J.Z], () => J.Z.getGuild(null == d ? void 0 : d.guild_id)), [p, _] = (0, c.Wu)([z.Z], () => [
+z.Z.getCurrentUserActiveStream(),
+z.Z.getStreamerActiveStreamMetadata()
   ]), f = (0, c.e7)([I.Z], () => I.Z.useReducedMotion), m = (0, c.e7)([M.Z], () => M.Z.getActivityPanelTooltipAction()), {
 partnerGame: g,
 dropsActivityPanelExperienceBlocked: C,
 showDropsSparkles: E
   } = (0, b.c)(eg.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP), x = (0, c.e7)([N.ZP], () => null != d ? N.ZP.getSelfEmbeddedActivityForChannel(d.id) : null), v = (0, c.e7)([
-q.Z,
 J.Z,
-K.ZP
-  ], () => null != s ? D.JL(s, q.Z, J.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, J.Z).length > 0), [T] = (0, S.Z)([null !== (t = function() {
+$.Z,
+Q.ZP
+  ], () => null != s ? U.JL(s, J.Z, $.Z, !1) : null != n && U.h_(Q.ZP.getChannels(n), J.Z, $.Z).length > 0), [T] = (0, S.Z)([null !== (t = function() {
 if (null != _ && null != _.id)
   return _.id;
 if (null != a && null != a.id)
   return a.id;
 if (null != x)
   return x.applicationId;
-  }()) && void 0 !== t ? t : '']), A = (0, c.e7)([Q.Z], () => (0, U.Z)(Q.Z) && (0, eh.isWindows)()), R = (0, c.e7)([X.Z], () => null != r ? X.Z.findActivity(r, e => e.type === ef.IIU.PLAYING) : null), O = null != p && p.ownerId === r && p.state !== ef.jm8.ENDED, y = (0, c.e7)([et.Z], () => et.Z.getBroadcast()), j = (0, Z.Z)() && null != a, w = (0, c.e7)([
-en.default,
-$.Z
-  ], () => null != d ? (0, L.F6)(d, en.default, $.Z) : void 0), G = (0, V.Z)(null == s ? void 0 : s.id, r);
+  }()) && void 0 !== t ? t : '']), A = (0, c.e7)([X.Z], () => (0, w.Z)(X.Z) && (0, eh.isWindows)()), R = (0, c.e7)([ee.Z], () => null != r ? ee.Z.findActivity(r, e => e.type === ef.IIU.PLAYING) : null), O = null != p && p.ownerId === r && p.state !== ef.jm8.ENDED, y = (0, c.e7)([ei.Z], () => ei.Z.getBroadcast()), j = (0, Z.Z)() && null != a, D = (0, c.e7)([
+el.default,
+et.Z
+  ], () => null != d ? (0, L.F6)(d, el.default, et.Z) : void 0), G = (0, F.Z)(null == s ? void 0 : s.id, r);
   return (0, i.jsx)(ex, {
 ...l,
 guildId: n,
@@ -570,7 +570,7 @@ stream: p,
 streamMetadata: _,
 broadcast: y,
 canStartBroadcast: j,
-channelName: w,
+channelName: D,
 guildForConnectedChannel: h,
 streamQualityIndicator: G
   });
