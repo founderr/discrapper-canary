@@ -4,8 +4,8 @@ var i = n(934951),
   a = n(38618),
   o = n(777639),
   s = n(311163),
-  u = n(272423),
-  l = n(378788),
+  l = n(272423),
+  u = n(378788),
   c = n(700615),
   d = n(905423),
   h = n(703656),
@@ -37,62 +37,62 @@ if (null == a || !a.isReady())
 let d = e.navigationReplace,
   h = null !== (n = e.useScreen) && void 0 !== n && n;
 if (i === f.Z5c.NOTIFICATIONS) {
-  (0, u.vp)({
+  (0, l.vp)({
     screen: 'notifications',
     resetRoot: d
   });
   return;
 }
 if (i.startsWith('/channels/')) {
-  let e = (0, r.LX)(i, {
+  let t = (0, r.LX)(i, {
     path: ''.concat(f.Z5c.CHANNEL(':guildId', ':channelId?')).concat(f.Z5c.VOICE_CHAT_CHANNEL_PARTIAL(':voiceGuildId', ':voiceChannelId', ':voiceMessageId?'))
   });
-  if (null != e) {
+  if (null != t) {
     let {
-      voiceGuildId: t,
+      voiceGuildId: e,
       voiceChannelId: n,
       voiceMessageId: i
-    } = e.params;
-    !(0, c.ur)() && (0, u.k4)({
+    } = t.params;
+    !(0, c.ur)() && (0, l.k4)({
       channelId: n,
-      guildId: t,
+      guildId: e,
       messageId: i,
       replaceChannelAndFixRoot: d,
       useScreen: h
     });
     return;
   }
-  let t = (0, r.LX)(i, {
+  let n = (0, r.LX)(i, {
     path: f.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')
   });
-  if (null != t) {
+  if (null != n) {
     let {
-      channelId: e,
-      guildId: n,
-      messageId: i
-    } = t.params, [r, o] = (0, s.Z)(a.getCurrentRoute());
-    if (r === n && o === e)
+      channelId: t,
+      guildId: i,
+      messageId: r
+    } = n.params, [o, c] = (0, s.Z)(a.getCurrentRoute());
+    if (o === i && c === t)
       return;
-    (0, l.z)() ? (!1 !== d && (0, u.vp)({
+    (0, u.z)() ? (!1 !== d && (0, l.vp)({
       screen: 'guilds',
-      guildId: n,
-      channelId: e,
+      guildId: i,
+      channelId: t,
       resetRoot: d
-    }), null != e && (0, u.k4)({
-      channelId: e,
-      guildId: n,
-      messageId: i,
-      replaceChannelAndFixRoot: d,
+    }), null != t && (!0 !== d || e.openChannel) && (0, l.k4)({
+      channelId: t,
+      guildId: i,
+      messageId: r,
+      replaceChannelAndFixRoot: void 0,
       useScreen: h
-    })) : null == e || !1 !== d ? (0, u.vp)({
+    })) : null == t || !1 !== d ? (0, l.vp)({
       screen: 'guilds',
-      guildId: n,
-      channelId: e,
+      guildId: i,
+      channelId: t,
       resetRoot: d
-    }) : null != n && (0, u.k4)({
-      channelId: e,
-      guildId: n,
-      messageId: i,
+    }) : null != i && (0, l.k4)({
+      channelId: t,
+      guildId: i,
+      messageId: r,
       replaceChannelAndFixRoot: d,
       useScreen: h
     });
@@ -103,11 +103,11 @@ if (i.startsWith('/member-verification/')) {
   let e = (0, r.LX)(i, {
     path: f.Z5c.GUILD_MEMBER_VERIFICATION(':guildId', ':inviteCode?')
   });
-  null != e && (0, u.fA)(e.params.guildId, e.params.inviteCode);
+  null != e && (0, l.fA)(e.params.guildId, e.params.inviteCode);
   return;
 }
 if (i.startsWith('/login') || i.startsWith('/register')) {
-  (0, u.Bj)();
+  (0, l.Bj)();
   return;
 }
 if (i.startsWith('/account-standing')) {
@@ -117,7 +117,7 @@ if (i.startsWith('/account-standing')) {
   });
   return;
 }
-(0, u.vp)({
+(0, l.vp)({
   screen: 'messages',
   resetRoot: d
 });
