@@ -29,7 +29,7 @@ T
   let g = a.useCallback(e => ({
   x: (e - u) * 100
 }), [u]),
-[A, m] = (0, l.useSprings)(t.length, g);
+[A, m] = (0, o.useSprings)(t.length, g);
   return a.useEffect(() => {
 m(g);
   }, [

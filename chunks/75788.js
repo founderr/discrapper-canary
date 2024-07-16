@@ -1,100 +1,100 @@
 t.d(s, {
   Z: function() {
-return _;
+return u;
   }
 }), t(47120);
 var n = t(735250),
-  a = t(470079),
-  o = t(442837),
+  o = t(470079),
+  a = t(442837),
   l = t(481060),
-  r = t(479531),
-  i = t(393869),
-  d = t(25990),
-  c = t(689938),
-  u = t(660817);
+  i = t(479531),
+  r = t(393869),
+  E = t(25990),
+  _ = t(689938),
+  d = t(660817);
 
-function _(e) {
+function u(e) {
   var s;
   let {
 isSlideReady: t,
-error: _,
-setEmailToken: E,
+error: u,
+setEmailToken: c,
 setError: N,
 onNext: C,
 onClose: A
-  } = e, [m, S] = a.useState(!1), [T, M] = a.useState(''), [x, I] = a.useState(!1), R = (0, o.e7)([d.Z], () => d.Z.getErrors()), h = a.useRef(null);
-  a.useEffect(() => {
+  } = e, [S, M] = o.useState(!1), [m, I] = o.useState(''), [T, x] = o.useState(!1), O = (0, a.e7)([E.Z], () => E.Z.getErrors()), R = o.useRef(null);
+  o.useEffect(() => {
 if (t) {
   var e;
-  null === (e = h.current) || void 0 === e || e.focus();
+  null === (e = R.current) || void 0 === e || e.focus();
 }
   }, [t]);
-  let v = async e => {
-e.preventDefault(), N(null), S(!0);
+  let h = async e => {
+e.preventDefault(), N(null), M(!0);
 try {
   let {
     token: e
-  } = await (0, i.w)(T);
-  E(e), C();
+  } = await (0, r.w)(m);
+  c(e), C();
 } catch (e) {
-  N(new r.Z(e).getAnyErrorMessage());
+  N(new i.Z(e).getAnyErrorMessage());
 } finally {
-  S(!1);
+  M(!1);
 }
-  }, O = async () => {
-if (!x) {
-  I(!0);
+  }, f = async () => {
+if (!T) {
+  x(!0);
   try {
-    await (0, i.i)(!0), (0, l.showToast)((0, l.createToast)(c.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT, l.ToastType.SUCCESS));
+    await (0, r.i)(!0), (0, l.showToast)((0, l.createToast)(_.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT, l.ToastType.SUCCESS));
   } catch (s) {
-    let e = new r.Z(s).getAnyErrorMessage();
+    let e = new i.Z(s).getAnyErrorMessage();
     null != e && (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));
   } finally {
-    I(!1);
+    x(!1);
   }
 }
   };
   return (0, n.jsxs)('form', {
-onSubmit: v,
+onSubmit: h,
 children: [
   (0, n.jsxs)(l.ModalHeader, {
     separator: !1,
-    className: u.header,
+    className: d.header,
     children: [
       (0, n.jsx)(l.Heading, {
-        className: u.title,
+        className: d.title,
         variant: 'heading-xl/extrabold',
-        children: c.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_TITLE_DESKTOP
+        children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_TITLE_DESKTOP
       }),
       (0, n.jsx)(l.Text, {
         color: 'header-secondary',
         variant: 'text-md/normal',
-        className: u.subtitle,
-        children: c.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_SUBTITLE
+        className: d.subtitle,
+        children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_SUBTITLE
       }),
       (0, n.jsx)(l.ModalCloseButton, {
         onClick: A,
-        className: u.modalCloseButton
+        className: d.modalCloseButton
       })
     ]
   }),
   (0, n.jsxs)(l.ModalContent, {
-    className: u.content,
+    className: d.content,
     children: [
       (0, n.jsx)(l.FormItem, {
-        title: c.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_PROMPT,
-        error: null != _ ? _ : null == R ? void 0 : null === (s = R.email_token) || void 0 === s ? void 0 : s[0],
+        title: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_PROMPT,
+        error: null != u ? u : null == O ? void 0 : null === (s = O.email_token) || void 0 === s ? void 0 : s[0],
         children: (0, n.jsx)(l.TextInput, {
-          value: T,
-          onChange: M,
-          inputRef: h
+          value: m,
+          onChange: I,
+          inputRef: R
         })
       }),
       (0, n.jsx)(l.Text, {
-        className: u.help,
+        className: d.help,
         variant: 'text-sm/normal',
-        children: c.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_RESEND.format({
-          onResend: O
+        children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_RESEND.format({
+          onResend: f
         })
       })
     ]
@@ -104,8 +104,8 @@ children: [
       type: 'submit',
       color: l.Button.Colors.BRAND,
       size: l.Button.Sizes.MEDIUM,
-      submitting: m,
-      children: c.Z.Messages.NEXT
+      submitting: S,
+      children: _.Z.Messages.NEXT
     })
   })
 ]

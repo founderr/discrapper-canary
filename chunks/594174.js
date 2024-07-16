@@ -24,8 +24,8 @@ var r = n(348327),
   _ = n(823379),
   E = n(314897),
   f = n(412788),
-  p = n(981631),
-  h = n(308083),
+  h = n(981631),
+  p = n(308083),
   m = n(474936);
 
 function I(e, t, n) {
@@ -51,7 +51,7 @@ function N(e, t) {
   var n;
   let r = null !== (n = t.primary_guild) && void 0 !== n ? n : t.clan,
 a = e.primaryGuild;
-  return !i()(a, r) && (null == a || null != r) && (e.primaryGuild = (0, h.hW)(r), T[e.id] = e, !0);
+  return !i()(a, r) && (null == a || null != r) && (e.primaryGuild = (0, p.hW)(r), T[e.id] = e, !0);
 }
 
 function v(e) {
@@ -73,7 +73,7 @@ function v(e) {
   let d = e.global_name;
   void 0 !== d && (e.globalName = d, delete e.global_name);
   let _ = null !== (t = e.primary_guild) && void 0 !== t ? t : e.clan;
-  return void 0 !== _ && (e.clan = (0, h.hW)(_), e.primary_guild = (0, h.hW)(_)), e;
+  return void 0 !== _ && (e.clan = (0, p.hW)(_), e.primary_guild = (0, p.hW)(_)), e;
 }
 
 function O(e) {
@@ -106,7 +106,7 @@ void 0 !== (t = null !== (o = n.premium_type) && void 0 !== o ? o : n.premiumTyp
       t.primary_guild = a;
       break;
     default:
-      t.primary_guild = (0, h.hW)(r);
+      t.primary_guild = (0, p.hW)(r);
   }
   return t;
 }(r, n), r = r.merge(n);
@@ -313,9 +313,9 @@ function W(e) {
   let {
 message: t
   } = e;
-  if (y(t, !0), null != t.flags && d.yE(t.flags, p.iLy.URGENT)) {
+  if (y(t, !0), null != t.flags && d.yE(t.flags, h.iLy.URGENT)) {
 let e = T[E.default.getId()];
-return null != e && (T[E.default.getId()] = e.set('flags', d.mB(e.flags, p.xW$.HAS_UNREAD_URGENT_MESSAGES, !0)), !0);
+return null != e && (T[E.default.getId()] = e.set('flags', d.mB(e.flags, h.xW$.HAS_UNREAD_URGENT_MESSAGES, !0)), !0);
   }
   return !1;
 }
@@ -536,7 +536,7 @@ giftCode: t
   return null != t.user && R(t.user);
 }
 
-function ep(e) {
+function eh(e) {
   let {
 appliedBoosts: t
   } = e;
@@ -549,7 +549,7 @@ if (null != t)
   });
 }
 
-function eh(e) {
+function ep(e) {
   let {
 request: t
   } = e, {
@@ -728,8 +728,8 @@ super({
   GUILD_BAN_REMOVE: J,
   CHANNEL_RECIPIENT_ADD: ee,
   CHANNEL_RECIPIENT_REMOVE: ee,
-  GUILD_JOIN_REQUEST_CREATE: eh,
-  GUILD_JOIN_REQUEST_UPDATE: eh,
+  GUILD_JOIN_REQUEST_CREATE: ep,
+  GUILD_JOIN_REQUEST_UPDATE: ep,
   GUILD_MEMBER_ADD: et,
   GUILD_MEMBER_UPDATE: et,
   GUILD_MEMBERS_CHUNK_BATCH: er,
@@ -745,7 +745,7 @@ super({
   AUDIT_LOG_FETCH_SUCCESS: eE,
   AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: eE,
   GIFT_CODE_RESOLVE_SUCCESS: ef,
-  GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: ep,
+  GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: eh,
   LOAD_THREADS_SUCCESS: F,
   LOAD_ARCHIVED_THREADS_SUCCESS: F,
   LOAD_FORUM_POSTS: V,

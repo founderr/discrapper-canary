@@ -28,12 +28,12 @@ var s = n(735250),
   O = n(658590),
   I = n(46140),
   U = n(689938),
-  M = n(689065);
-let y = o.forwardRef(function(e, t) {
+  y = n(689065);
+let M = o.forwardRef(function(e, t) {
   var n;
   let {
 className: r,
-isExpanded: y,
+isExpanded: M,
 isExpansionAnimationComplete: q,
 expansionSpring: Z,
 onCtxMenuOpen: k,
@@ -53,7 +53,7 @@ primaryVariant: F
 location: I.dr.QUESTS_BAR
   }, {
 autoTrackExposure: !1
-  }), X = (null === (n = L.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = y && q, {
+  }), X = (null === (n = L.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = M && q, {
 questSupportsConsole: K,
 isProgressingOnConsole: J
   } = o.useMemo(() => ({
@@ -68,20 +68,20 @@ useV2Variants: F === _.P.V2 || (0, O.a)(L)
   });
   return (0, s.jsx)('div', {
 'aria-hidden': !Y,
-className: a()(r, M.contentExpanded, {
-  [M.contentInteractable]: Y,
-  [M.contentExpandedAccepted]: X
+className: a()(r, y.contentExpanded, {
+  [y.contentInteractable]: Y,
+  [y.contentExpandedAccepted]: X
 }),
 children: X ? (0, s.jsxs)('div', {
-  className: M.questAcceptedContent,
+  className: y.questAcceptedContent,
   ref: t,
   children: [
     (0, s.jsxs)('div', {
-      className: M.questAcceptedHeader,
+      className: y.questAcceptedHeader,
       children: [
         (0, s.jsx)(d.Text, {
           variant: 'text-xxs/medium',
-          className: a()(M.flex, M.headerText),
+          className: a()(y.flex, y.headerText),
           children: U.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
             expirationDate: V
           })
@@ -96,24 +96,24 @@ children: X ? (0, s.jsxs)('div', {
           showShareLink: !0,
           children: e => (0, s.jsx)(d.Clickable, {
             ...e,
-            className: M.submenuWrapper,
+            className: y.submenuWrapper,
             'aria-label': U.Z.Messages.ACTIONS,
             children: (0, s.jsx)(d.MoreHorizontalIcon, {
               size: 'md',
               color: 'currentColor',
-              className: a()(M.submenuIcon, M.interactiveNormal)
+              className: a()(y.submenuIcon, y.interactiveNormal)
             })
           })
         })
       ]
     }),
     (0, s.jsx)('div', {
-      className: M.divider
+      className: y.divider
     }),
     (0, s.jsx)(B.Z, {
       progressBarRef: D,
       quest: L,
-      isExpanded: y
+      isExpanded: M
     }),
     (0, s.jsx)(b.Z, {
       quest: L,
@@ -136,7 +136,7 @@ children: X ? (0, s.jsxs)('div', {
       children: (0, s.jsx)(j.y, {
         quest: L,
         useReducedMotion: w,
-        isExpanded: y,
+        isExpanded: M,
         hasMadeProgress: ee
       })
     })
@@ -144,34 +144,34 @@ children: X ? (0, s.jsxs)('div', {
 }) : (0, s.jsxs)('div', {
   children: [
     (0, s.jsxs)('div', {
-      className: M.questPromoContent,
+      className: y.questPromoContent,
       ref: t,
       children: [
         (0, s.jsxs)('div', {
-          className: M.details,
+          className: y.details,
           children: [
             (0, s.jsx)(E.Z, {
-              className: M.rewardTile,
+              className: y.rewardTile,
               learnMoreStyle: 'text',
               quest: L,
               questContent: C.jn.QUEST_BAR_V2
             }),
             (0, s.jsx)(d.Heading, {
-              className: M.title,
+              className: y.title,
               variant: 'heading-md/medium',
               children: U.Z.Messages.QUESTS_TITLE.format({
                 questName: L.config.messages.questName
               })
             }),
             (0, s.jsx)(d.Text, {
-              className: M.description,
+              className: y.description,
               variant: 'text-xs/normal',
               children: es
             })
           ]
         }),
         (0, s.jsx)(d.Button, {
-          className: M.cta,
+          className: y.cta,
           color: d.Button.Colors.BRAND,
           fullWidth: !0,
           onClick: Y ? G : void 0,
@@ -182,7 +182,7 @@ children: X ? (0, s.jsxs)('div', {
       ]
     }),
     (0, s.jsxs)(i.animated.div, {
-      className: M.heroAssetWrapper,
+      className: y.heroAssetWrapper,
       style: {
         backdropFilter: Z.to([
           0,
@@ -201,7 +201,7 @@ children: X ? (0, s.jsxs)('div', {
       },
       children: [
         (0, s.jsx)(i.animated.div, {
-          className: M.heroAssetDarken,
+          className: y.heroAssetDarken,
           style: {
             opacity: Z.to([
               0,
@@ -213,7 +213,7 @@ children: X ? (0, s.jsxs)('div', {
           }
         }),
         (0, s.jsx)(i.animated.div, {
-          className: M.heroAssetTint,
+          className: y.heroAssetTint,
           style: {
             backgroundColor: L.config.colors.primary,
             opacity: Z.to([
@@ -233,7 +233,7 @@ children: X ? (0, s.jsxs)('div', {
             loop: !0,
             muted: !0,
             playsInline: !0,
-            className: M.heroAsset,
+            className: y.heroAsset,
             controls: !1,
             children: (0, s.jsx)('source', {
               src: en,
@@ -245,12 +245,12 @@ children: X ? (0, s.jsxs)('div', {
           children: e => (0, s.jsx)('img', {
             ref: e,
             alt: '',
-            className: M.heroAsset,
+            className: y.heroAsset,
             src: en
           })
         }),
         (0, s.jsx)(i.animated.div, {
-          className: M.legibilityGradient,
+          className: y.legibilityGradient,
           style: {
             opacity: Z.to({
               range: [
@@ -270,4 +270,4 @@ children: X ? (0, s.jsxs)('div', {
 })
   });
 });
-t.Z = y;
+t.Z = M;

@@ -1,31 +1,31 @@
-i.d(n, {
+n.d(i, {
   Z: function() {
 return v;
   }
 });
-var s = i(735250);
-i(470079);
-var l = i(442837),
-  o = i(481060),
-  t = i(666520),
-  r = i(592125),
-  a = i(430824),
-  d = i(944486),
-  c = i(785717),
-  u = i(621853),
-  I = i(588822),
-  _ = i(940730),
-  f = i(900927),
-  E = i(678738),
-  m = i(351707),
-  S = i(228168),
-  Z = i(689938),
-  x = i(247321);
+var s = n(735250);
+n(470079);
+var l = n(442837),
+  o = n(481060),
+  t = n(666520),
+  r = n(592125),
+  a = n(430824),
+  d = n(944486),
+  c = n(785717),
+  u = n(621853),
+  I = n(588822),
+  f = n(940730),
+  _ = n(900927),
+  E = n(678738),
+  m = n(351707),
+  S = n(228168),
+  Z = n(689938),
+  x = n(247321);
 
 function v(e) {
-  var n;
+  var i;
   let {
-user: i,
+user: n,
 currentUser: v,
 displayProfile: h,
 subsection: p,
@@ -34,7 +34,7 @@ onClose: T
 trackUserProfileAction: g
   } = (0, c.KZ)(), N = (0, l.e7)([a.Z], () => (null == h ? void 0 : h.guildId) != null ? a.Z.getGuild(h.guildId) : null), C = (0, l.e7)([u.Z], () => {
 var e;
-return null === (e = u.Z.getUserProfile(i.id)) || void 0 === e ? void 0 : e.application;
+return null === (e = u.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
   }), j = (0, l.e7)([
 r.Z,
 d.Z
@@ -47,23 +47,23 @@ children: [
     userBio: h.bio,
     setLineClamp: !1
   }),
-  (null == C ? void 0 : C.popularApplicationCommandIds) != null && null != j && (0, s.jsx)(_.Z, {
+  (null == C ? void 0 : C.popularApplicationCommandIds) != null && null != j && (0, s.jsx)(f.Z, {
     applicationId: C.id,
     commandIds: C.popularApplicationCommandIds,
     channel: j,
-    guildId: null !== (n = null == h ? void 0 : h.guildId) && void 0 !== n ? n : void 0,
+    guildId: null !== (i = null == h ? void 0 : h.guildId) && void 0 !== i ? i : void 0,
     onClick: T
   }),
   null != N && (0, s.jsx)(m.Z, {
-    user: i,
+    user: n,
     currentUser: v,
     guild: N,
     scrollIntoView: p === S.Tb.ROLES
   }),
   (0, s.jsx)(E.Z, {
     title: Z.Z.Messages.USER_PROFILE_MEMBER_SINCE,
-    children: (0, s.jsx)(f.Z, {
-      userId: i.id,
+    children: (0, s.jsx)(_.Z, {
+      userId: n.id,
       guildId: null == h ? void 0 : h.guildId,
       tooltipDelay: S.vB
     })
@@ -72,7 +72,7 @@ children: [
     title: Z.Z.Messages.NOTE,
     scrollIntoView: p === S.Tb.NOTE,
     children: (0, s.jsx)(t.Z, {
-      userId: i.id,
+      userId: n.id,
       className: x.note,
       autoFocus: p === S.Tb.NOTE,
       onUpdate: () => g({

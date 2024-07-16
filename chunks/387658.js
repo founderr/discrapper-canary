@@ -27,9 +27,9 @@ var i = t(735250),
   x = t(981631),
   T = t(689079),
   R = t(689938),
-  S = t(763963);
+  L = t(763963);
 
-function g(e) {
+function S(e) {
   var n, t;
   let {
 channel: r,
@@ -59,7 +59,7 @@ o,
 u,
 d
   ]), N = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0, C = l.useMemo(() => (0, i.jsxs)('div', {
-className: S.commandTextContainer,
+className: L.commandTextContainer,
 children: [
   (0, i.jsx)(s.Text, {
     variant: 'text-sm/semibold',
@@ -78,11 +78,11 @@ o.displayDescription,
 o.displayName
   ]);
   return (0, i.jsxs)(s.Clickable, {
-className: S.command,
+className: L.command,
 onClick: h,
 children: [
   C,
-  N ? (0, i.jsx)(a.F, {}) : (0, i.jsx)(L, {
+  N ? (0, i.jsx)(a.F, {}) : (0, i.jsx)(g, {
     channel: r,
     command: o,
     sectionName: d
@@ -91,7 +91,7 @@ children: [
   });
 }
 
-function L(e) {
+function g(e) {
   let {
 channel: n,
 command: t,
@@ -127,8 +127,8 @@ onClick: A,
 disabled: p,
 size: s.ButtonSizes.ICON,
 color: s.Button.Colors.PRIMARY,
-className: S.commandSentCTAButton,
-innerClassName: S.commandSentCTAButtonInner,
+className: L.commandSentCTAButton,
+innerClassName: L.commandSentCTAButtonInner,
 'aria-label': R.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({
   commandName: t.name
 }),
@@ -158,7 +158,7 @@ children: o
   return 0 === t.length ? null : (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsxs)('div', {
-    className: S.commandListHeader,
+    className: L.commandListHeader,
     children: [
       (0, i.jsx)(s.Heading, {
         variant: 'heading-sm/semibold',
@@ -168,9 +168,9 @@ children: [
     ]
   }),
   (0, i.jsx)('ul', {
-    className: S.commandContainer,
+    className: L.commandContainer,
     'aria-label': a,
-    children: t.map(e => (0, i.jsx)(g, {
+    children: t.map(e => (0, i.jsx)(S, {
       channel: n,
       command: e,
       section: l,
@@ -221,7 +221,7 @@ commands: A,
 limit: 5
   });
   return (0, i.jsxs)('ul', {
-className: S.contentContainer,
+className: L.contentContainer,
 children: [
   (0, i.jsx)(M, {
     channel: t,

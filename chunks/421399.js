@@ -16,8 +16,8 @@ var r, i, a = n(735250),
   _ = n(607070),
   E = n(100527),
   f = n(906732),
-  p = n(979264),
-  h = n(372900),
+  h = n(979264),
+  p = n(372900),
   m = n(477734),
   I = n(484459),
   T = n(467679),
@@ -56,7 +56,7 @@ function R(e) {
   renderRemixTag: U = !1,
   decorations: w
 } = e,
-x = o.useContext(h.Z),
+x = o.useContext(p.Z),
 G = null !== (t = null == s ? void 0 : s.guild_id) && void 0 !== t ? t : x,
 {
   analyticsLocations: k
@@ -88,7 +88,7 @@ W = {
     children: (C ? '@' : '') + B
   })
 },
-K = o.useMemo(() => R ? (0, a.jsx)(p.ZP, {
+K = o.useMemo(() => R ? (0, a.jsx)(h.ZP, {
   clan: r.primaryGuild,
   userId: i.author.id,
   contextGuildId: G,
@@ -164,7 +164,7 @@ children: [
   n,
   !R && (0, a.jsxs)(a.Fragment, {
     children: [
-      (0, a.jsx)(p.ZP, {
+      (0, a.jsx)(h.ZP, {
         clan: r.primaryGuild,
         userId: i.author.id,
         contextGuildId: G,

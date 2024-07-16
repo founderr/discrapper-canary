@@ -63,7 +63,7 @@ onClick: m,
 'aria-expanded': p,
 'aria-haspopup': 'dialog',
 focusProps: T,
-children: null != h ? h() : (0, r.jsx)(s.Spring, {
+children: null != h ? h() : (0, r.jsx)(l.Spring, {
   config: f,
   to: {
     value: v ? 1 : 0

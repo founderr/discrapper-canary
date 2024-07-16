@@ -1,25 +1,25 @@
-i.d(n, {
+n.d(i, {
   Z: function() {
 return u;
   }
 });
-var s = i(735250);
-i(470079);
-var l = i(481060),
-  o = i(239091),
-  t = i(785717),
-  r = i(705556),
-  a = i(225714),
-  d = i(228168),
-  c = i(984904);
+var s = n(735250);
+n(470079);
+var l = n(481060),
+  o = n(239091),
+  t = n(785717),
+  r = n(705556),
+  a = n(225714),
+  d = n(228168),
+  c = n(984904);
 
 function u(e) {
   let {
-user: n,
+user: i,
 isCurrentUser: u,
 guildId: I,
-friendToken: _,
-relationshipType: f,
+friendToken: f,
+relationshipType: _,
 originalFriendingEnabled: E = !1,
 improvedFriendingEnabled: m = !1,
 persistentCallCtaEnabled: S = !1,
@@ -33,22 +33,22 @@ trackUserProfileAction: h
 className: c.buttons,
 children: [
   (0, s.jsx)(a.Z, {
-    user: n,
+    user: i,
     isCurrentUser: u,
-    relationshipType: f,
+    relationshipType: _,
     improvedFriendingEnabled: m,
     persistentCallCtaEnabled: S,
     activeInviteToCallCtaEnabled: Z,
-    friendToken: _,
+    friendToken: f,
     onClose: v
   }),
   (0, s.jsx)(r.Z, {
-    user: n,
+    user: i,
     guildId: I,
     profileType: d.y0.FULL_SIZE,
     onClose: v
   }),
-  !n.isNonUserBot() && E ? (0, s.jsx)(l.Clickable, {
+  !i.isNonUserBot() && E ? (0, s.jsx)(l.Clickable, {
     focusProps: {
       offset: {
         left: 8
@@ -60,13 +60,13 @@ children: [
       }), (0, o.jW)(e, async () => {
         let {
           default: e
-        } = await i.e('29136').then(i.bind(i, 193646));
-        return i => (0, s.jsx)(e, {
-          ...i,
+        } = await n.e('29136').then(n.bind(n, 193646));
+        return n => (0, s.jsx)(e, {
+          ...n,
           originalFriendingEnabled: E,
-          relationshipType: f,
+          relationshipType: _,
           viewProfileItem: x,
-          user: n,
+          user: i,
           isCurrentUser: u,
           guildId: I,
           trackUserProfileAction: h,

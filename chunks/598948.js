@@ -26,11 +26,11 @@ let f = {
 transform: 'translate3d(15%, 0, 0)',
 opacity: 0.3
   },
-  A = {
+  N = {
 transform: 'translate3d(5%, 0, 0)',
 opacity: 0.5
   },
-  N = {
+  A = {
 transform: 'translate3d(0, 0, 0)',
 opacity: 1
   },
@@ -82,9 +82,9 @@ let U = t.length > 30,
         n = M.Z.getLastRefreshTimestamp(l.id),
         a = null == t || 0 === n,
         o = null != t && t.refreshTimestamp === n;
-      return a || !o ? N : U ? A : f;
+      return a || !o ? A : U ? N : f;
     },
-    enter: N,
+    enter: A,
     config: R
   }),
   k = !h && i === T.po.LOADING;

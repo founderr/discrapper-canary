@@ -27,9 +27,9 @@ var i = t(735250),
   x = t(79984),
   T = t(314734),
   R = t(981631),
-  S = t(689938),
-  g = t(933693);
-let L = Array(6).fill(0).map((e, n) => n),
+  L = t(689938),
+  S = t(933693);
+let g = Array(6).fill(0).map((e, n) => n),
   M = [, , , ].fill(0).map((e, n) => n);
 
 function O(e) {
@@ -93,7 +93,7 @@ N
   return p ? (0, i.jsx)(D, {}) : R ? (0, i.jsx)(v.A, {
 type: A.LG.SEARCH_EMPTY,
 searchQuery: t,
-textContent: a === A._b.TEXT ? S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
+textContent: a === A._b.TEXT ? L.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : L.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
   }) : (0, i.jsxs)('div', {
 children: [
   h && (0, i.jsx)(b, {
@@ -138,7 +138,7 @@ installOnDemand: !1
   return u ? (0, i.jsx)(D, {}) : d ? (0, i.jsx)(v.A, {
 type: A.LG.SEARCH_EMPTY,
 searchQuery: t,
-textContent: a === A._b.TEXT ? S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
+textContent: a === A._b.TEXT ? L.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : L.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
   }) : (0, i.jsxs)('div', {
 children: [
   p && (0, i.jsx)(b, {
@@ -167,7 +167,7 @@ s
   ]), [f, h] = l.useState(!1), C = l.useCallback(() => h(e => !e), []), v = (null !== (n = (0, o.Z)(r)) && void 0 !== n ? n : r)[0] !== r[0], x = f && !v;
   l.useLayoutEffect(() => h(!1), [v]);
   let {
-ref: L,
+ref: g,
 isTransitioning: M,
 onTransitionEnd: O
   } = (0, N.Z)({
@@ -179,13 +179,13 @@ maxAnimationHeight: T.lv
   return (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(I.Z, {
-    title: S.Z.Messages.COMMANDS,
+    title: L.Z.Messages.COMMANDS,
     buttonType: j,
     onClickViewButton: s ? C : void 0
   }),
   (0, i.jsx)('div', {
-    className: g.sectionContentContainer,
-    ref: L,
+    className: S.sectionContentContainer,
+    ref: g,
     onTransitionEnd: O,
     children: b.map((e, n) => {
       let {
@@ -235,7 +235,7 @@ query: e.query,
 searchResultsPosition: e.resultsPosition
   });
   return (0, i.jsx)('div', {
-className: g.searchOpenAppDetailAppCard,
+className: S.searchOpenAppDetailAppCard,
 ref: e => n.current = e,
 children: (0, i.jsx)(h.kA, {
   ...e,
@@ -255,10 +255,10 @@ searchesBots: a
   return a ? (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(I.Z, {
-    title: S.Z.Messages.APPS
+    title: L.Z.Messages.APPS
   }),
   (0, i.jsxs)('div', {
-    className: g.sectionContentContainer,
+    className: S.sectionContentContainer,
     children: [
       n.map((e, n) => {
         let {
@@ -281,10 +281,10 @@ children: [
   }) : (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(I.Z, {
-    title: S.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE
+    title: L.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE
   }),
   (0, i.jsxs)('div', {
-    className: g.sectionActivitiesContentContainer,
+    className: S.sectionActivitiesContentContainer,
     children: [
       n.map((e, n) => {
         let {
@@ -322,17 +322,17 @@ function D() {
   return (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(I.Z, {
-    title: S.Z.Messages.COMMANDS
+    title: L.Z.Messages.COMMANDS
   }),
   (0, i.jsx)('div', {
-    className: g.sectionContentContainer,
-    children: L.map(e => (0, i.jsx)(x.Z, {}, e))
+    className: S.sectionContentContainer,
+    children: g.map(e => (0, i.jsx)(x.Z, {}, e))
   }),
   (0, i.jsx)(I.Z, {
-    title: S.Z.Messages.APPS
+    title: L.Z.Messages.APPS
   }),
   (0, i.jsx)('div', {
-    className: g.sectionContentContainer,
+    className: S.sectionContentContainer,
     children: M.map(e => (0, i.jsx)(x.Z, {}, e))
   })
 ]

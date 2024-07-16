@@ -1,91 +1,91 @@
 t.d(s, {
   Z: function() {
-return _;
+return u;
   }
 }), t(47120);
 var n = t(735250),
-  a = t(470079),
-  o = t(442837),
+  o = t(470079),
+  a = t(442837),
   l = t(481060),
-  r = t(809206),
-  i = t(25990),
-  d = t(155433),
-  c = t(689938),
-  u = t(660817);
+  i = t(809206),
+  r = t(25990),
+  E = t(155433),
+  _ = t(689938),
+  d = t(660817);
 
-function _(e) {
+function u(e) {
   var s, t;
   let {
-emailToken: _,
-isSlideReady: E,
+emailToken: u,
+isSlideReady: c,
 onClose: N,
 onBack: C,
 onNext: A
-  } = e, [m, S] = a.useState(''), [T, M] = a.useState(''), [x, I] = a.useState(!1), R = (0, o.e7)([i.Z], () => i.Z.getErrors()), h = a.useRef(null);
-  async function v(e) {
-e.preventDefault(), I(!0);
-let s = await (0, r.Mn)({
-  email: m,
-  emailToken: _,
-  password: T
+  } = e, [S, M] = o.useState(''), [m, I] = o.useState(''), [T, x] = o.useState(!1), O = (0, a.e7)([r.Z], () => r.Z.getErrors()), R = o.useRef(null);
+  async function h(e) {
+e.preventDefault(), x(!0);
+let s = await (0, i.Mn)({
+  email: S,
+  emailToken: u,
+  password: m
 });
-if (I(!1), null == s ? void 0 : s.ok)
-  A(m);
+if (x(!1), null == s ? void 0 : s.ok)
+  A(S);
 else {
   var t, n;
-  (null == s ? void 0 : null === (t = s.body) || void 0 === t ? void 0 : t.username) != null ? (0, d.P)() : (null == s ? void 0 : null === (n = s.body) || void 0 === n ? void 0 : n.email_token) != null && (null == C || C());
+  (null == s ? void 0 : null === (t = s.body) || void 0 === t ? void 0 : t.username) != null ? (0, E.P)() : (null == s ? void 0 : null === (n = s.body) || void 0 === n ? void 0 : n.email_token) != null && (null == C || C());
 }
   }
-  return a.useEffect(() => {
-if (E) {
+  return o.useEffect(() => {
+if (c) {
   var e;
-  null === (e = h.current) || void 0 === e || e.focus();
+  null === (e = R.current) || void 0 === e || e.focus();
 }
-  }, [E]), (0, n.jsxs)('form', {
-onSubmit: v,
+  }, [c]), (0, n.jsxs)('form', {
+onSubmit: h,
 children: [
   (0, n.jsxs)(l.ModalHeader, {
     separator: !1,
-    className: u.header,
+    className: d.header,
     children: [
       (0, n.jsx)(l.Heading, {
-        className: u.title,
+        className: d.title,
         variant: 'heading-xl/extrabold',
-        children: c.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_TITLE_DESKTOP
+        children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_TITLE_DESKTOP
       }),
       (0, n.jsx)(l.Text, {
         color: 'header-secondary',
         variant: 'text-md/normal',
-        className: u.subtitle,
-        children: c.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_PROMPT_DESKTOP
+        className: d.subtitle,
+        children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_PROMPT_DESKTOP
       }),
       (0, n.jsx)(l.ModalCloseButton, {
         onClick: N,
-        className: u.modalCloseButton
+        className: d.modalCloseButton
       })
     ]
   }),
   (0, n.jsxs)(l.ModalContent, {
-    className: u.content,
+    className: d.content,
     children: [
       (0, n.jsx)(l.FormItem, {
-        title: c.Z.Messages.EMAIL,
-        error: null == R ? void 0 : null === (s = R.email) || void 0 === s ? void 0 : s[0],
+        title: _.Z.Messages.EMAIL,
+        error: null == O ? void 0 : null === (s = O.email) || void 0 === s ? void 0 : s[0],
         children: (0, n.jsx)(l.TextInput, {
           type: 'email',
-          value: m,
-          onChange: S,
-          inputRef: h
+          value: S,
+          onChange: M,
+          inputRef: R
         })
       }),
       (0, n.jsx)(l.FormItem, {
-        className: u.password,
-        title: c.Z.Messages.USER_SETTINGS_LABEL_CURRENT_PASSWORD,
-        error: null == R ? void 0 : null === (t = R.password) || void 0 === t ? void 0 : t[0],
+        className: d.password,
+        title: _.Z.Messages.USER_SETTINGS_LABEL_CURRENT_PASSWORD,
+        error: null == O ? void 0 : null === (t = O.password) || void 0 === t ? void 0 : t[0],
         children: (0, n.jsx)(l.TextInput, {
           type: 'password',
-          value: T,
-          onChange: M
+          value: m,
+          onChange: I
         })
       })
     ]
@@ -96,21 +96,21 @@ children: [
         type: 'submit',
         color: l.Button.Colors.BRAND,
         size: l.Button.Sizes.MEDIUM,
-        submitting: x,
-        children: c.Z.Messages.DONE
+        submitting: T,
+        children: _.Z.Messages.DONE
       }),
       null != C ? (0, n.jsx)(l.Button, {
-        className: u.__invalid_cancel,
+        className: d.__invalid_cancel,
         look: l.Button.Looks.LINK,
         color: l.Button.Colors.PRIMARY,
         onClick: C,
-        children: c.Z.Messages.BACK
+        children: _.Z.Messages.BACK
       }) : (0, n.jsx)(l.Button, {
-        className: u.__invalid_cancel,
+        className: d.__invalid_cancel,
         look: l.Button.Looks.LINK,
         color: l.Button.Colors.PRIMARY,
         onClick: N,
-        children: c.Z.Messages.CANCEL
+        children: _.Z.Messages.CANCEL
       })
     ]
   })

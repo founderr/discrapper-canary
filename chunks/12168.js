@@ -53,7 +53,7 @@ children: (0, i.jsx)(c.Button, {
   focusProps: {
     enabled: !n
   },
-  children: (0, i.jsx)(o.Spring, {
+  children: (0, i.jsx)(c.Spring, {
     config: f.u,
     from: {
       value: 0

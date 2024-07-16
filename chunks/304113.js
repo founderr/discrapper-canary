@@ -1,50 +1,50 @@
-i.r(n), i.d(n, {
+n.r(i), n.d(i, {
   default: function() {
-return f;
+return _;
   }
 });
-var s = i(735250);
-i(470079);
-var l = i(512722),
-  o = i.n(l),
-  t = i(442837),
-  r = i(594174),
-  a = i(380738),
-  d = i(642113),
-  c = i(910364),
-  u = i(853825),
-  I = i(41527),
-  _ = i(107889);
+var s = n(735250);
+n(470079);
+var l = n(512722),
+  o = n.n(l),
+  t = n(442837),
+  r = n(594174),
+  a = n(380738),
+  d = n(642113),
+  c = n(910364),
+  u = n(853825),
+  I = n(41527),
+  f = n(107889);
 
-function f(e) {
+function _(e) {
   let {
-location: n,
-user: i,
+location: i,
+user: n,
 ...l
   } = e;
   (0, d.V)({
-location: n
+location: i
   });
   let {
-botProfilesEnabled: f
+botProfilesEnabled: _
   } = (0, a.J)({
-location: n
+location: i
   }), E = (0, t.e7)([r.default], () => r.default.getCurrentUser());
-  return (o()(null != E, 'UserProfileModalExperimentWrapper: currentUser cannot be undefined'), f && i.isNonUserBot()) ? (0, s.jsx)(u.Z, {
+  return (o()(null != E, 'UserProfileModalExperimentWrapper: currentUser cannot be undefined'), _ && n.isNonUserBot()) ? (0, s.jsx)(u.Z, {
 ...l,
-user: i,
+user: n,
 currentUser: E
-  }) : f && i.bot ? (0, s.jsx)(I.Z, {
+  }) : _ && n.bot ? (0, s.jsx)(I.Z, {
 ...l,
-user: i,
+user: n,
 currentUser: E
-  }) : i.bot ? (0, s.jsx)(c.Z, {
+  }) : n.bot ? (0, s.jsx)(c.Z, {
 ...l,
-user: i,
+user: n,
 currentUser: E
-  }) : (0, s.jsx)(_.Z, {
+  }) : (0, s.jsx)(f.Z, {
 ...l,
-user: i,
+user: n,
 currentUser: E
   });
 }

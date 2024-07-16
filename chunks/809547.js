@@ -23,10 +23,10 @@ source: l = d.F.APP_DIRECTORY
   return 'query:\''.concat(t, '\' guildId:').concat(n, ' page:').concat(r, ' categoryId:').concat(i, ' integrationType:').concat(a, ' minUserInstallCommandCount:').concat(o, ' excludeAppsWithCustomInstallUrl:').concat(s, ' source:').concat(l);
 }
 (r = s || (s = {}))[r.FETCHING = 0] = 'FETCHING', r[r.FETCHED = 1] = 'FETCHED', r[r.ERROR = 2] = 'ERROR';
-let p = new(c())({
+let h = new(c())({
 max: 20
   }),
-  h = {};
+  p = {};
 class m extends(l = _.ZP.Store) {
   getSearchResults(e) {
 let {
@@ -48,7 +48,7 @@ let {
   excludeAppsWithCustomInstallUrl: s,
   source: l
 });
-return p.get(u);
+return h.get(u);
   }
   getFetchState(e) {
 let {
@@ -61,7 +61,7 @@ let {
   excludeAppsWithCustomInstallUrl: s,
   source: l
 } = e;
-return h[f({
+return p[f({
   query: t,
   guildId: n,
   page: r,
@@ -99,8 +99,8 @@ let {
   excludeAppsWithCustomInstallUrl: s,
   source: l
 });
-h = {
-  ...h,
+p = {
+  ...p,
   [u]: 0
 };
   },
@@ -125,11 +125,11 @@ let {
   excludeAppsWithCustomInstallUrl: l,
   source: u
 });
-p.set(c, {
+h.set(c, {
   lastFetchTimeMs: Date.now(),
   ...a
-}), h = {
-  ...h,
+}), p = {
+  ...p,
   [c]: 1
 };
   },
@@ -153,8 +153,8 @@ let {
   excludeAppsWithCustomInstallUrl: s,
   source: l
 });
-h = {
-  ...h,
+p = {
+  ...p,
   [u]: 2
 };
   }

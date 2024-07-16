@@ -83,15 +83,15 @@ C,
 N,
 I,
 S
-  ]), M = (0, l.Z)(f);
+  ]), y = (0, l.Z)(f);
   return (o.useEffect(() => {
-E && f && !M && (h(), U());
+E && f && !y && (h(), U());
   }, [
 f,
 E,
 h,
 U,
-M
+y
   ]), o.useEffect(() => {
 E && !A && v && setTimeout(() => {
   h(), U();

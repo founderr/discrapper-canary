@@ -16,8 +16,8 @@ var i = n(120356),
   _ = n(785717),
   E = n(221292),
   f = n(910128),
-  p = n(989964),
-  h = n(981631),
+  h = n(989964),
+  p = n(981631),
   m = n(755380);
 
 function I(e) {
@@ -50,16 +50,16 @@ return {
     let {
       type: t
     } = e;
-    return t === h.IIU.PLAYING;
+    return t === p.IIU.PLAYING;
   }) : c.Z.findActivity(t.id, e => {
     let {
       type: t
     } = e;
-    return t !== h.IIU.CUSTOM_STATUS;
+    return t !== p.IIU.CUSTOM_STATUS;
   })
 };
   });
-  return (0, r.jsx)(p.Z, {
+  return (0, r.jsx)(h.Z, {
 location: 'BiteSizeProfileActivitySection',
 type: s.P.BITE_SIZE_POPOUT,
 activity: R,
@@ -73,7 +73,7 @@ onAction: () => {
   S({
     action: 'JOIN_ACTIVITY'
   }), (0, E.Ac)({
-    activityType: O ? h.IIU.STREAMING : null == R ? void 0 : R.type,
+    activityType: O ? p.IIU.STREAMING : null == R ? void 0 : R.type,
     activityName: null == R ? void 0 : R.name,
     activityPlatform: null == R ? void 0 : R.platform,
     activitySessionId: null == R ? void 0 : R.session_id,

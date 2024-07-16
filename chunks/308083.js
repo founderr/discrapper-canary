@@ -77,6 +77,9 @@ return J;
   gh: function() {
 return F;
   },
+  hW: function() {
+return Q;
+  },
   hm: function() {
 return w;
   },
@@ -112,9 +115,6 @@ return R;
   },
   xn: function() {
 return P;
-  },
-  yi: function() {
-return Q;
   },
   ym: function() {
 return j;

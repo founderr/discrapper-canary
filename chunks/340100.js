@@ -16,13 +16,13 @@ t.Z = function(e) {
 className: t,
 color: n = o.Z.colors.WHITE,
 quest: a,
-isInventory: d
-  } = e, R = (0, i.e7)([_.default], () => _.default.locale), {
+isInventory: R
+  } = e, d = (0, i.e7)([_.default], () => _.default.locale), {
 percentComplete: m
-  } = (0, T.Rf)(a), S = (0, T.Jf)(a), g = null != S ? S.completedRatio : m, N = null != S ? ''.concat(null == S ? void 0 : S.progress, '/').concat(null == S ? void 0 : S.target) : (0, l.T3)(R, g, {
+  } = (0, T.Rf)(a), S = (0, T.Jf)(a), g = null != S ? S.completedRatio : m, N = null != S ? ''.concat(null == S ? void 0 : S.progress, '/').concat(null == S ? void 0 : S.target) : (0, l.T3)(d, g, {
 roundingMode: 'floor'
   }), C = 100 * g, A = (0, E.r)(a);
-  return A && !d ? (0, s.jsx)(I.Z, {}) : (0, s.jsxs)('div', {
+  return A && !R ? (0, s.jsx)(I.Z, {}) : (0, s.jsxs)('div', {
 className: r()(c.wrapper, t),
 style: {
   color: n.css
@@ -57,7 +57,7 @@ children: [
     })
   }),
   A && (0, s.jsx)(I.Z, {
-    isInventory: d
+    isInventory: R
   })
 ]
   });

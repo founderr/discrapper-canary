@@ -15,12 +15,12 @@ asset: t,
 size: n = f.yV,
 addGradient: o = !1,
 className: g,
-style: v,
-children: C,
+style: C,
+children: v,
 blur: E = !1
   } = e, b = (0, i.e7)([c.Z], () => c.Z.saturation), h = a.useMemo(() => {
 if (null == t)
-  return v;
+  return C;
 let e = (0, u.uV)(t, {
     size: n,
     format: 'jpg'
@@ -31,7 +31,7 @@ let e = (0, u.uV)(t, {
   } : {};
 if (1 === b)
   return {
-    ...v,
+    ...C,
     backgroundImage: o ? 'url('.concat(e, '), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)') : 'url('.concat(e, ')'),
     backgroundBlendMode: 'multiply',
     backgroundSize: 'cover',
@@ -40,7 +40,7 @@ if (1 === b)
   };
 let a = (0, d.aD)(s.ZP.unsafe_rawColors.BLACK_500, 1 - b);
 return {
-  ...v,
+  ...C,
   backgroundImage: 'linear-gradient('.concat(a, ', ').concat(a, '), url(').concat(e, ')'),
   backgroundBlendMode: 'saturation',
   backgroundSize: 'cover',
@@ -51,13 +51,13 @@ return {
 t,
 n,
 b,
-v,
+C,
 E,
 o
   ]);
   return (0, r.jsx)('div', {
 className: l()(p.banner, g),
 style: h,
-children: C
+children: v
   });
 };

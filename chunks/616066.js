@@ -1,6 +1,6 @@
 n.d(t, {
   R: function() {
-return v;
+return C;
   }
 });
 var r = n(735250);
@@ -16,18 +16,18 @@ var a = n(120356),
   f = n(689938),
   p = n(949727);
 let g = d.ZP.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar,
-  v = e => {
+  C = e => {
 let {
   item: t,
   user: n,
   isHighlighted: a = !1,
   isPurchased: d = !1,
-  avatarSize: v = i.AvatarSizes.SIZE_152,
-  avatarPlaceholderSrc: C
-} = e, E = (0, s.y9)(v), b = (0, u.c)('AvatarDecorationPreview'), {
+  avatarSize: C = i.AvatarSizes.SIZE_152,
+  avatarPlaceholderSrc: v
+} = e, E = (0, s.y9)(C), b = (0, u.c)('AvatarDecorationPreview'), {
   avatarDecorationSrc: h,
   eventHandlers: m,
-  avatarPlaceholderSrc: y
+  avatarPlaceholderSrc: A
 } = (0, c.Z)({
   user: n,
   avatarDecorationOverride: (null == t ? void 0 : t.type) === l.Z.AVATAR_DECORATION ? t : void 0,
@@ -37,12 +37,12 @@ let {
 return (0, r.jsx)(g, {
   ...m,
   avatarDecoration: h,
-  src: b && a ? null == n ? void 0 : n.getAvatarURL(void 0, 152, !0) : null != C ? C : y,
+  src: b && a ? null == n ? void 0 : n.getAvatarURL(void 0, 152, !0) : null != v ? v : A,
   imageClassName: b && a ? p.fadeInAvatarImg : void 0,
   className: o()(p.avatar, {
     [p.avatarPurchased]: d
   }),
-  size: v,
+  size: C,
   'aria-label': f.Z.Messages.USER_SETTINGS_AVATAR
 });
   };

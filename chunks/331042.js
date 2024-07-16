@@ -15,23 +15,23 @@ var r = n(735250),
   f = n(37234),
   p = n(607070),
   g = n(100527),
-  v = n(906732),
-  C = n(1585),
+  C = n(906732),
+  v = n(1585),
   E = n(125988),
   b = n(300284),
   h = n(876917),
   m = n(642619),
-  y = n(594174),
-  A = n(884697),
-  T = n(890249),
+  A = n(594174),
+  T = n(884697),
+  y = n(890249),
   x = n(318028),
   L = n(635552),
-  N = n(328456),
+  I = n(328456),
   _ = n(624377),
-  I = n(530618),
-  Z = n(141011),
-  S = n(372654),
-  O = n(216541),
+  N = n(530618),
+  O = n(141011),
+  Z = n(372654),
+  S = n(216541),
   R = n(302800),
   k = n(215023),
   w = n(689938),
@@ -48,25 +48,25 @@ hideConfetti: j = !1,
 analyticsLocations: D
   } = e, {
 confettiColors: F
-  } = (0, _.Z)(o.styles), U = (0, d.e7)([y.default], () => {
-let e = y.default.getCurrentUser();
+  } = (0, _.Z)(o.styles), U = (0, d.e7)([A.default], () => {
+let e = A.default.getCurrentUser();
 return i()(null != e, 'User cannot be undefined'), e;
-  }), H = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), z = (0, T.m)('CollectiblesCollectedModal'), [V] = o.items, {
+  }), H = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), z = (0, y.m)('CollectiblesCollectedModal'), [V] = o.items, {
 avatarDecorationSrc: W
   } = (0, E.Z)({
 user: U,
 avatarDecorationOverride: (null == V ? void 0 : V.type) === c.Z.AVATAR_DECORATION ? V : null,
-size: (0, C.y9)(u.AvatarSizes.SIZE_120)
+size: (0, v.y9)(u.AvatarSizes.SIZE_120)
   }), G = a.useRef(null), {
 analyticsLocations: K
-  } = (0, v.ZP)([
+  } = (0, C.ZP)([
 ...D,
 g.Z.COLLECTIBLES_COLLECTED_MODAL
   ]), Y = (0, b.Z)({
 analyticsLocations: K
   }), Q = a.useCallback(() => {
 if (l(), (0, f.xf)(), Y(), o.type === c.Z.AVATAR_DECORATION) {
-  i()(V.type === c.Z.AVATAR_DECORATION, 'product type and item type are the same'), (0, C.ps)({
+  i()(V.type === c.Z.AVATAR_DECORATION, 'product type and item type are the same'), (0, v.ps)({
     initialSelectedDecoration: V,
     analyticsLocations: K
   });
@@ -92,11 +92,11 @@ onError: l
   }), {
 firstAvatarDecoration: X,
 firstProfileEffect: $
-  } = (0, N.R)(o), ee = (0, A.x6)(o) ? null != X && null != $ : null != X || null != $, et = (0, A.x6)(o) || z, {
+  } = (0, I.R)(o), ee = (0, T.x6)(o) ? null != X && null != $ : null != X || null != $, et = (0, T.x6)(o) || z, {
 category: en,
 isFetching: er
   } = (0, x.l)(o.skuId), ea = null !== (n = null == en ? void 0 : en.successModalBg) && void 0 !== n ? n : o.banner;
-  return (0, r.jsxs)(v.Gt, {
+  return (0, r.jsxs)(C.Gt, {
 value: K,
 children: [
   (0, r.jsxs)('div', {
@@ -106,10 +106,10 @@ children: [
       (0, r.jsxs)('div', {
         className: B.bannerContainer,
         children: [
-          (0, r.jsx)(Z.Z, {
+          (0, r.jsx)(O.Z, {
             asset: er ? void 0 : ea,
             addGradient: null === (t = k.Ve[o.categorySkuId]) || void 0 === t ? void 0 : t.addGradient,
-            size: (0, S.ML)(880),
+            size: (0, Z.ML)(880),
             className: B.decorationBanner,
             blur: !0
           }),
@@ -127,7 +127,7 @@ children: [
             'aria-label': o.name
           }))).with(c.Z.BUNDLE, () => (0, r.jsx)('div', {
             className: B.bundlePreview,
-            children: (0, r.jsx)(O.d, {
+            children: (0, r.jsx)(S.d, {
               product: o,
               user: U,
               isPurchased: !1,
@@ -182,10 +182,10 @@ children: [
       })
     ]
   }),
-  !j && !H && (0, r.jsx)(I.Z, {
+  !j && !H && (0, r.jsx)(N.Z, {
     confettiTarget: null != R ? R : G.current,
     confettiCanvas: P,
-    sprites: (0, S.vK)(o.categorySkuId),
+    sprites: (0, Z.vK)(o.categorySkuId),
     colors: null == F ? void 0 : F.map(e => e.toHexString())
   })
 ]

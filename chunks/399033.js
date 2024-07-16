@@ -31,7 +31,7 @@ d.Z.COLLECTIBLES_SHOP_POPULAR_PICKS_CAROUSEL
 trackPagination: S
   } = (0, C.X)('collectibles_shop_popular_picks_carousel', L), v = s.useCallback(e => ({
 x: (e - b) * 100
-  }), [b]), [T, N] = (0, i.useSprings)(n.length, v);
+  }), [b]), [T, N] = (0, c.useSprings)(n.length, v);
   return (s.useEffect(() => {
 N(v);
   }, [

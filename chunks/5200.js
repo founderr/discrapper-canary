@@ -101,7 +101,7 @@ onBlur: b,
 onMouseEnter: M,
 onMouseLeave: b,
 innerClassName: C.activityItemButtonInnerClass,
-children: (0, l.jsx)(c.Spring, {
+children: (0, l.jsx)(d.Spring, {
   config: I,
   from: {
     value: 0

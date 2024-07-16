@@ -10,8 +10,8 @@ var r = n(735250),
   _ = n(937111),
   E = n(741606),
   f = n(703656),
-  p = n(314897),
-  h = n(271383),
+  h = n(314897),
+  p = n(271383),
   m = n(594174),
   I = n(63063),
   T = n(970606),
@@ -36,7 +36,7 @@ clan: n,
 isLoading: b,
 onClose: M,
 profileViewedAnalytics: P
-  } = e, U = null == n ? void 0 : n.identityGuildId, w = (0, g.Cc)(null != U ? U : null), x = null == n ? void 0 : n.tag, G = (0, v.Z)('clan_guild_profile'), k = (0, N.Z)('base_clan_tag_chiplet'), B = (0, s.e7)([p.default], () => p.default.getId()), F = (0, s.e7)([h.ZP], () => null != U ? h.ZP.getMember(U, B) : null, [
+  } = e, U = null == n ? void 0 : n.identityGuildId, w = (0, g.Cc)(null != U ? U : null), x = null == n ? void 0 : n.tag, G = (0, v.Z)('clan_guild_profile'), k = (0, N.Z)('base_clan_tag_chiplet'), B = (0, s.e7)([h.default], () => h.default.getId()), F = (0, s.e7)([p.ZP], () => null != U ? p.ZP.getMember(U, B) : null, [
 U,
 B
   ]), V = (0, s.e7)([_.Z], () => {

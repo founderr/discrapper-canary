@@ -23,8 +23,8 @@ var n = l(735250),
   p = l(373791),
   H = l(203893),
   f = l(777288),
-  A = l(5192),
-  N = l(709054),
+  N = l(5192),
+  A = l(709054),
   R = l(51144),
   S = l(815790),
   Z = l(588215),
@@ -253,7 +253,7 @@ return null == o || null == l ? null : (0, n.jsxs)('div', {
         children: (0, n.jsx)(u.Clickable, {
           onClick: r,
           children: (0, n.jsx)(u.NameWithRole, {
-            name: A.ZP.getName(l.guildId, null, o),
+            name: N.ZP.getName(l.guildId, null, o),
             color: null !== (t = l.colorString) && void 0 !== t ? t : void 0,
             className: s()(F.memberNameText)
           })
@@ -327,7 +327,7 @@ let {
   accountCreationDateShort: s,
   accountCreationDateLong: i
 } = a.useMemo(() => {
-  let e = N.default.extractTimestamp(t.userId),
+  let e = A.default.extractTimestamp(t.userId),
     l = (0, S.fv)(e, S.jq.ACCOUNT_AGE);
   return {
     accountCreationDateShort: l,
@@ -377,7 +377,7 @@ let {
   t,
   M,
   E
-]), A = p === Z.d$.ORDER_BY_GUILD_JOINED_AT_ASC, N = p === Z.d$.ORDER_BY_USER_ID_ASC || p === Z.d$.ORDER_BY_USER_ID_DESC;
+]), N = p === Z.d$.ORDER_BY_GUILD_JOINED_AT_ASC, A = p === Z.d$.ORDER_BY_USER_ID_ASC || p === Z.d$.ORDER_BY_USER_ID_DESC;
 return (0, n.jsxs)(n.Fragment, {
   children: [
     b && (0, n.jsx)(u.Tooltip, {
@@ -415,7 +415,7 @@ return (0, n.jsxs)(n.Fragment, {
       children: (0, n.jsx)(q, {
         showLongDate: i,
         member: t,
-        isSortedBy: A
+        isSortedBy: N
       })
     }),
     (0, n.jsx)('td', {
@@ -425,7 +425,7 @@ return (0, n.jsxs)(n.Fragment, {
       children: (0, n.jsx)(W, {
         showLongDate: i,
         member: t,
-        isSortedBy: N
+        isSortedBy: A
       })
     }),
     _ && (0, n.jsx)('td', {
