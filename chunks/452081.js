@@ -8,8 +8,7 @@ var i = n(470079),
   a = n(689938);
 
 function r() {
-  var e;
-  let [t, n] = i.useState(s.e5.UNCLAIMED), r = i.useMemo(() => [{
+  let [e, t] = i.useState(s.e5.UNCLAIMED), n = i.useMemo(() => [{
   id: s.e5.UNCLAIMED,
   label: a.Z.Messages.QUESTS_ALL
 },
@@ -17,12 +16,12 @@ function r() {
   id: s.e5.CLAIMED,
   label: a.Z.Messages.QUESTS_CLAIMED
 }
-  ], []), l = null !== (e = r.find(e => e.id === t)) && void 0 !== e ? e : r[0];
+  ], []);
   return {
-tabs: r,
-selectedTab: l,
+tabs: n,
+selectedTab: e,
 onSelectTab: i.useCallback(e => {
-  n(e.id);
+  t(e);
 }, [])
   };
 }

@@ -11,11 +11,10 @@ var i = n(470079),
   o = n(49898);
 
 function c() {
-  var e;
-  let t = (0, a.Z)('global_discovery'),
-n = (0, r.d)(e => e.selectedServerTab, s.Z),
-c = i.useMemo(() => {
-  let e = [
+  let e = (0, a.Z)('global_discovery'),
+t = (0, r.d)(e => e.selectedServerTab, s.Z),
+n = i.useMemo(() => {
+  let t = [
     o.vf.GAMING,
     o.vf.MUSIC,
     o.vf.ENTERTAINMENT,
@@ -23,18 +22,17 @@ c = i.useMemo(() => {
     o.vf.EDUCATION,
     o.vf.HUBS
   ];
-  return t ? e.unshift(o.vf.GUILDS) : e.unshift(o.vf.FEATURED), e.map(e => ({
+  return e ? t.unshift(o.vf.GUILDS) : t.unshift(o.vf.FEATURED), t.map(e => ({
     id: e,
     label: (0, l.vb)(e)
   }));
-}, [t]),
-d = null !== (e = c.find(e => e.id === n)) && void 0 !== e ? e : c[0];
+}, [e]);
   return {
-tabs: c,
-selectedTab: d,
+tabs: n,
+selectedTab: t,
 onSelectTab: i.useCallback(e => {
   r.d.setState({
-    selectedServerTab: e.id
+    selectedServerTab: e
   });
 }, [])
   };

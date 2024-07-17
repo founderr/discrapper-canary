@@ -46,7 +46,7 @@ T
 h(''), I.current = '', d(!1), r.IZ(n);
   }, [n]);
   return {
-isSearchActive: c,
+isSearchVisible: c,
 searchQuery: E,
 searchResultsQuery: u,
 onSearchTextChange: i.useCallback(e => {

@@ -31,7 +31,7 @@ scrollPosition: Z
 scrollPosition: Z
   }), O = (0, r.wj)((0, o.ZP)()), {
 quests: R
-  } = (0, m.bA)(N.id), x = s.useMemo(() => O ? 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-dark-mode.png' : 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-light-mode.png', [O]), b = null;
+  } = (0, m.bA)(N), x = s.useMemo(() => O ? 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-dark-mode.png' : 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-light-mode.png', [O]), b = null;
   if (window.location.hash.length > 0) {
 let e = window.location.hash.slice(1);
 for (let t of R)

@@ -124,6 +124,7 @@ function _(e) {
   switch (e) {
 case s.vf.FEATURED:
 case s.vf.GUILDS:
+case s.vf.HUBS:
   return a.Hk;
 case s.vf.GAMING:
   return a.Gj.Activity;
@@ -135,8 +136,6 @@ case s.vf.TECH:
   return a.Gj.Science;
 case s.vf.EDUCATION:
   return a.Gj.Education;
-case s.vf.HUBS:
-  return a.Hk;
 default:
   (0, i.vE)(e);
   }
