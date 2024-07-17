@@ -12,8 +12,8 @@ var s = n(735250),
   m = n(497505),
   g = n(918701),
   C = n(566078),
-  f = n(667105),
-  _ = n(585857),
+  _ = n(667105),
+  f = n(585857),
   h = n(46140),
   E = n(981631),
   T = n(689938),
@@ -60,7 +60,7 @@ function A(e) {
 quest: t,
 useReducedMotion: n,
 connectedAccounts: r
-  } = e, c = (0, i.e7)([d.default], () => d.default.locale), _ = (0, f.g2)({
+  } = e, c = (0, i.e7)([d.default], () => d.default.locale), f = (0, _.g2)({
 useReducedMotion: n
   }), {
 errorHints: N,
@@ -73,9 +73,9 @@ beforeRequest: () => {
     questId: t.id,
     questContent: m.jn.QUEST_BAR_V2,
     questContentCTA: p.jZ.DEFIBRILLATOR
-  }), _.startAnimation();
+  }), f.startAnimation();
 },
-afterRequest: _.stopAnimation
+afterRequest: f.stopAnimation
   }), {
 header: j,
 renderBody: B
@@ -141,30 +141,37 @@ children: [
           [S.disabled]: A
         }),
         onClick: () => v(),
-        children: _.render()
+        children: f.render()
       })
     ]
   }),
-  B(),
-  0 === N.length ? null : (0, s.jsx)(l.Text, {
-    className: S.microphoneUnitBodyText,
-    color: 'text-muted',
-    variant: 'text-xxs/normal',
-    children: function() {
-      let e = r.playstationAccounts.length > 0,
-        t = r.xboxAccounts.length > 0;
-      return e && !t || !e && t ? 'en-US' === c ? T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_HELP_ARTICLE_SINGLE.format({
-        helpdeskArticle: u.Z.getArticleURL(e ? E.BhN.QUEST_HOW_TO_PLAYSTATION : E.BhN.QUEST_HOW_TO_XBOX)
-      }) : T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_SINGLE_CONSOLE.format({
-        helpdeskArticle: u.Z.getArticleURL(e ? E.BhN.PS_CONNECTION : E.BhN.XBOX_CONNECTION)
-      }) : 'en-US' === c ? T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_HELP_ARTICLE_MULTI.format({
-        psHelpdeskArticle: u.Z.getArticleURL(E.BhN.QUEST_HOW_TO_PLAYSTATION),
-        xboxHelpdeskArticle: u.Z.getArticleURL(E.BhN.QUEST_HOW_TO_XBOX)
-      }) : T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_PLAYSTATION_OR_XBOX.format({
-        psHelpdeskArticle: u.Z.getArticleURL(E.BhN.PS_CONNECTION),
-        xboxHelpdeskArticle: u.Z.getArticleURL(E.BhN.XBOX_CONNECTION)
-      });
-    }()
+  (0, s.jsxs)('div', {
+    className: a()({
+      [S.opacity_50]: A
+    }),
+    children: [
+      B(),
+      0 === N.length ? null : (0, s.jsx)(l.Text, {
+        className: S.microphoneUnitBodyText,
+        color: 'text-muted',
+        variant: 'text-xxs/normal',
+        children: function() {
+          let e = r.playstationAccounts.length > 0,
+            t = r.xboxAccounts.length > 0;
+          return e && !t || !e && t ? 'en-US' === c ? T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_HELP_ARTICLE_SINGLE.format({
+            helpdeskArticle: u.Z.getArticleURL(e ? E.BhN.QUEST_HOW_TO_PLAYSTATION : E.BhN.QUEST_HOW_TO_XBOX)
+          }) : T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_SINGLE_CONSOLE.format({
+            helpdeskArticle: u.Z.getArticleURL(e ? E.BhN.PS_CONNECTION : E.BhN.XBOX_CONNECTION)
+          }) : 'en-US' === c ? T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_HELP_ARTICLE_MULTI.format({
+            psHelpdeskArticle: u.Z.getArticleURL(E.BhN.QUEST_HOW_TO_PLAYSTATION),
+            xboxHelpdeskArticle: u.Z.getArticleURL(E.BhN.QUEST_HOW_TO_XBOX)
+          }) : T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_PLAYSTATION_OR_XBOX.format({
+            psHelpdeskArticle: u.Z.getArticleURL(E.BhN.PS_CONNECTION),
+            xboxHelpdeskArticle: u.Z.getArticleURL(E.BhN.XBOX_CONNECTION)
+          });
+        }()
+      })
+    ]
   })
 ]
   });
@@ -198,7 +205,7 @@ let o = a.xboxAndPlaystationAccounts.length > 0,
   c = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
 return {
   steps: [{
-      renderContent: () => (0, s.jsx)(_.Q, {
+      renderContent: () => (0, s.jsx)(f.Q, {
         ...a,
         quest: t
       }),
