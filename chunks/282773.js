@@ -1,28 +1,37 @@
 n.d(t, {
   H: function() {
-return r;
+return a;
   }
 });
 var i = n(470079),
-  s = n(900849),
-  a = n(231338);
+  s = n(900849);
 
-function r(e) {
+function a(e) {
   let {
 categoryId: t,
-loadId: n
-  } = e, r = i.useCallback((e, i) => s.Lq({
-loadId: n,
+guildDiscoveryCardSeenManager: n,
+loadId: a
+  } = e, r = i.useCallback(e => {
+n.markAsSeen(t, e, a);
+  }, [
+t,
+n,
+a
+  ]), l = i.useCallback((e, n) => s.Lq({
+loadId: a,
 guildId: e,
-index: i,
+index: n,
 analyticsContext: s.P1.GLOBAL_DISCOVERY,
 categoryId: t
   }), [
 t,
-n
+a
   ]);
   return i.useMemo(() => ({
-onGuildCardSeen: a.dG,
-onGuildCardClick: r
-  }), [r]);
+onGuildCardSeen: r,
+onGuildCardClick: l
+  }), [
+l,
+r
+  ]);
 }

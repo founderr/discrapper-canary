@@ -1,48 +1,79 @@
 n.d(t, {
   Z: function() {
-return I;
+return f;
   }
-});
-var i = n(735250);
-n(470079);
-var s = n(399606),
-  a = n(260034),
-  r = n(410030),
-  l = n(650394),
-  o = n(683301),
-  c = n(900849),
-  d = n(766219),
-  u = n(864677),
-  _ = n(689938),
-  E = n(856059);
-let h = [];
+}), n(47120);
+var i = n(735250),
+  s = n(470079),
+  a = n(392711),
+  r = n.n(a),
+  l = n(399606),
+  o = n(260034),
+  c = n(410030),
+  d = n(117496),
+  u = n(650394),
+  _ = n(683301),
+  E = n(626135),
+  h = n(900849),
+  I = n(766219),
+  m = n(864677),
+  g = n(689938),
+  p = n(856059);
+let T = [],
+  S = r().throttle(h.c6, 1000, {
+leading: !1,
+trailing: !0
+  });
 
-function I(e) {
+function f(e) {
   var t, n;
   let {
-selectedTab: I,
-searchResultsQuery: m,
-onGuildCardSeen: g,
-onGuildCardClick: p
-  } = e, T = (0, r.ZP)(), S = (0, s.e7)([o.ZP], () => o.ZP.isFetchingSearch()), f = (0, s.e7)([o.ZP], () => o.ZP.getDiscoverableGuilds().search), C = (0, d.lg)(I), N = null !== (n = null === (t = f[m]) || void 0 === t ? void 0 : t[C]) && void 0 !== n ? n : h;
-  return (0, i.jsxs)(u.Z, {
+loadId: a,
+selectedTab: r,
+searchResultsQuery: f,
+onGuildCardSeen: C,
+onGuildCardClick: N
+  } = e, A = (0, c.ZP)(), v = s.useContext(E.AnalyticsContext), [Z, L] = s.useState((0, d.P)()), O = (0, l.e7)([_.ZP], () => _.ZP.isFetchingSearch()), R = (0, l.e7)([_.ZP], () => _.ZP.getDiscoverableGuilds().search), x = (0, I.lg)(r), b = null !== (n = null === (t = R[f]) || void 0 === t ? void 0 : t[x]) && void 0 !== n ? n : T;
+  s.useEffect(() => {
+L((0, d.P)());
+  }, [f]);
+  let P = s.useCallback(e => {
+S({
+  loadId: a,
+  searchId: Z,
+  query: f,
+  guildResults: b.guilds,
+  analyticsContext: v,
+  categoryId: x,
+  isTagSearch: !1
+}), C(e);
+  }, [
+v,
+x,
+a,
+C,
+Z,
+b.guilds,
+f
+  ]);
+  return (0, i.jsxs)(m.Z, {
 children: [
-  (0, i.jsx)(a.X, {
+  (0, i.jsx)(o.X, {
     variant: 'heading-xl/bold',
-    className: E.heading,
-    children: _.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({
-      query: m
+    className: p.heading,
+    children: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({
+      query: f
     })
   }),
-  (0, i.jsx)(l.Z, {
-    guilds: N.guilds,
-    loading: S,
+  (0, i.jsx)(u.Z, {
+    guilds: b.guilds,
+    loading: O,
     loadingPlaceholderCount: 12,
-    onViewGuild: p,
+    onViewGuild: N,
     loadingGuildId: null,
-    theme: T,
-    analyticsContext: c.P1.SEARCH,
-    onGuildCardSeen: g
+    theme: A,
+    analyticsContext: h.P1.SEARCH,
+    onGuildCardSeen: P
   })
 ]
   });

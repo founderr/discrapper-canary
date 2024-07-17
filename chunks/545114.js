@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return S;
+return f;
   }
 });
 var i = n(735250),
@@ -8,53 +8,60 @@ var i = n(735250),
   a = n(481060),
   r = n(117496),
   l = n(766219),
-  o = n(212476),
-  c = n(207986),
-  d = n(680180),
-  u = n(791734),
-  _ = n(341789),
-  E = n(591433),
-  h = n(282773),
-  I = n(143021),
-  m = n(775260),
-  g = n(49898),
-  p = n(689938),
-  T = n(679199);
+  o = n(801543),
+  c = n(212476),
+  d = n(207986),
+  u = n(680180),
+  _ = n(791734),
+  E = n(341789),
+  h = n(591433),
+  I = n(282773),
+  m = n(143021),
+  g = n(775260),
+  p = n(49898),
+  T = n(689938),
+  S = n(679199);
 
-function S() {
+function f() {
   let {
 tabs: e,
 selectedTab: t,
 onSelectTab: n
-  } = (0, m.Y)(), {
-onScroll: S,
-scrollPosition: f
-  } = (0, o.c)(), C = (0, l.lg)(t.id), {
-isSearchActive: N,
-searchQuery: A,
-searchResultsQuery: v,
-resetSearch: Z,
-onSearchSubmit: L,
-onSearchTextChange: O
-  } = (0, I.C)({
-categoryId: C
-  }), R = s.useRef((0, r.P)()), {
-onGuildCardSeen: x,
-onGuildCardClick: b
-  } = (0, h.H)({
-categoryId: C,
-loadId: R.current
-  }), P = N && t.id !== g.vf.HUBS && t.id !== g.vf.GUILDS;
+  } = (0, g.Y)(), {
+onScroll: f,
+scrollPosition: C
+  } = (0, c.c)(), N = (0, l.lg)(t.id), A = s.useRef((0, r.P)()), {
+isSearchActive: v,
+searchQuery: Z,
+searchResultsQuery: L,
+resetSearch: O,
+onSearchSubmit: R,
+onSearchTextChange: x
+  } = (0, m.C)({
+categoryId: N,
+loadId: A.current
+  }), b = s.useRef(new o.Z(N)), {
+onGuildCardSeen: P,
+onGuildCardClick: M
+  } = (0, I.H)({
+categoryId: N,
+guildDiscoveryCardSeenManager: b.current,
+loadId: A.current
+  });
   s.useEffect(() => {
-N && !P && Z();
+b.current.flushSeenGuilds(A.current);
+  }, [N]);
+  let D = v && t.id !== p.vf.HUBS && t.id !== p.vf.GUILDS;
+  s.useEffect(() => {
+v && !D && O();
   }, [
-N,
-P,
-Z
+v,
+D,
+O
   ]);
-  let M = s.useMemo(() => P ? (0, i.jsx)(a.Clickable, {
-  className: T.clickable,
-  onClick: Z,
+  let y = s.useMemo(() => D ? (0, i.jsx)(a.Clickable, {
+  className: S.clickable,
+  onClick: O,
   children: (0, i.jsx)(a.ArrowLargeLeftIcon, {
     color: a.tokens.colors.HEADER_PRIMARY,
     size: 'md'
@@ -63,59 +70,59 @@ Z
   color: a.tokens.colors.HEADER_PRIMARY,
   size: 'md'
 }), [
-  P,
-  Z
+  D,
+  O
 ]),
-D = s.useMemo(() => {
+j = s.useMemo(() => {
   switch (t.id) {
-    case g.vf.HUBS:
-    case g.vf.GUILDS:
+    case p.vf.HUBS:
+    case p.vf.GUILDS:
       return null;
     default:
       let e = (0, l.vb)(t.id);
-      return (0, i.jsx)(d.Z, {
-        query: A,
-        placeholder: p.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({
+      return (0, i.jsx)(u.Z, {
+        query: Z,
+        placeholder: T.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({
           title: e
         }),
-        onTextChange: O,
-        onClear: Z,
-        onSubmit: L
+        onTextChange: x,
+        onClear: O,
+        onSubmit: R
       });
   }
 }, [
-  L,
+  R,
+  x,
   O,
   Z,
-  A,
   t.id
 ]),
-y = (0, c.Z)({
-  scrollPosition: f
+U = (0, d.Z)({
+  scrollPosition: C
 });
   return (0, i.jsxs)('div', {
-className: T.container,
+className: S.container,
 children: [
-  (0, i.jsx)(u.Z, {
+  (0, i.jsx)(_.Z, {
     tabs: e,
     selectedTab: t,
     onTabSelect: n,
-    backgroundStyle: y,
-    leading: M,
-    trailing: D
+    backgroundStyle: U,
+    leading: y,
+    trailing: j
   }),
-  P ? (0, i.jsx)(E.Z, {
-    loadId: R.current,
+  D ? (0, i.jsx)(h.Z, {
+    loadId: A.current,
     selectedTab: t.id,
-    searchResultsQuery: v,
-    onGuildCardClick: b,
-    onGuildCardSeen: x
-  }) : (0, i.jsx)(_.Z, {
-    loadId: R.current,
+    searchResultsQuery: L,
+    onGuildCardClick: M,
+    onGuildCardSeen: P
+  }) : (0, i.jsx)(E.Z, {
+    loadId: A.current,
     selectedTab: t.id,
-    onScroll: S,
-    onGuildCardClick: b,
-    onGuildCardSeen: x
+    onScroll: f,
+    onGuildCardClick: M,
+    onGuildCardSeen: P
   })
 ]
   });
