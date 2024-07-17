@@ -174,10 +174,12 @@ return (0, a.jsxs)('div', {
   constructor(...e) {
 super(...e), m(this, 'state', {
   editingPayment: null
-}), m(this, 'handleEditClick', e => {
-  this.setState({
-    editingPayment: e
-  });
+}), m(this, 'handleEditClick', async e => {
+  try {
+    await c.lO(e), this.setState({
+      editingPayment: e
+    });
+  } catch (e) {}
 }), m(this, 'handleCancel', () => {
   this.setState({
     editingPayment: null

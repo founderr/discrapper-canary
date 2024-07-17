@@ -47,6 +47,7 @@ s = 'PaymentSourceStore', (a = 'displayName') in(i = f) ? Object.defineProperty(
 }) : i[a] = s, t.Z = new f(l.Z, {
   BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: E,
   BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: E,
+  BILLING_PAYMENT_SOURCE_FETCH_SUCCESS: E,
   BILLING_PAYMENT_SOURCES_FETCH_SUCCESS: function(e) {
 let {
   paymentSources: t
