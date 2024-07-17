@@ -68,64 +68,62 @@ activity: t,
 user: n,
 useStoreStream: a = !0,
 showActions: l = !0,
-hideHeader: c = !1,
-showChannelDetails: d = !1,
-analyticsParams: C,
-...P
-  } = e, U = (0, o.e7)([
+showChannelDetails: c = !1,
+analyticsParams: d,
+...C
+  } = e, P = (0, o.e7)([
 O.Z,
 A.Z
   ], () => {
 var e;
 return A.Z.getChannel(null === (e = O.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
   }), {
-enableHangStatus: w
+enableHangStatus: U
   } = T.n.useExperiment({
-guildId: null == U ? void 0 : U.guild_id,
+guildId: null == P ? void 0 : P.guild_id,
 location: 'UserProfileActivityCardWrapper'
   }, {
 autoTrackExposure: !1
-  }), x = (0, o.e7)([S.Z], () => a ? S.Z.getAnyStreamForUser(n.id) : null), G = w && v.Z.can(D.Plq.CONNECT, U), k = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && G ? U : null, B = (0, o.e7)([
+  }), w = (0, o.e7)([S.Z], () => a ? S.Z.getAnyStreamForUser(n.id) : null), x = U && v.Z.can(D.Plq.CONNECT, P), G = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && x ? P : null, k = (0, o.e7)([
 N.Z,
 O.Z,
 A.Z
   ], () => {
 var e, r;
-return (0, u.Z)(t, D.xjy.EMBEDDED) ? N.Z.getGuild(null === (e = A.Z.getChannel(null === (r = O.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? N.Z.getGuild(k.getGuildId()) : null;
-  }), F = (0, o.e7)([N.Z], () => null != x ? N.Z.getGuild(x.guildId) : null), V = (0, o.e7)([_.Z], () => {
+return (0, u.Z)(t, D.xjy.EMBEDDED) ? N.Z.getGuild(null === (e = A.Z.getChannel(null === (r = O.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != G ? N.Z.getGuild(G.getGuildId()) : null;
+  }), B = (0, o.e7)([N.Z], () => null != w ? N.Z.getGuild(w.guildId) : null), F = (0, o.e7)([_.Z], () => {
 if (null != t)
   return null != t.application_id ? _.Z.getApplication(t.application_id) : _.Z.getApplicationByName(t.name);
 return null;
-  }), H = (0, E.Z)(), Z = (0, I.Z)(n), Y = H && null != t && Z;
+  }), V = (0, E.Z)(), H = (0, I.Z)(n), Z = V && null != t && H;
   return (i.useEffect(() => {
-(null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && G && R.default.track(D.rMx.VIEW_HANG_STATUS, {
+(null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && x && R.default.track(D.rMx.VIEW_HANG_STATUS, {
   source: 'UserProfilePopout',
-  guild_id: null == k ? void 0 : k.guild_id,
-  channel_id: null == k ? void 0 : k.id
+  guild_id: null == G ? void 0 : G.guild_id,
+  channel_id: null == G ? void 0 : G.id
 });
   }, [
 null == t ? void 0 : t.type,
-G,
-k
-  ]), (null == t ? void 0 : t.type) !== D.IIU.HANG_STATUS || G) ? (0, r.jsx)(y.Z, {
-...P,
+x,
+G
+  ]), (null == t ? void 0 : t.type) !== D.IIU.HANG_STATUS || x) ? (0, r.jsx)(y.Z, {
+...C,
 activity: t,
 user: n,
-application: V,
-hideHeader: c,
-activityGuild: null != B ? B : F,
-showChannelDetails: d,
-channel: d ? U : void 0,
+application: F,
+activityGuild: null != k ? k : B,
+showChannelDetails: c,
+channel: c ? P : void 0,
 renderActions: l ? () => (0, r.jsxs)('div', {
-  className: s()(Y && b.actionsWrapper),
+  className: s()(Z && b.actionsWrapper),
   children: [
     (0, r.jsx)(M, {
-      ...P,
-      applicationStream: x,
+      ...C,
+      applicationStream: w,
       activity: t,
       user: n
     }),
-    Y && (0, r.jsx)(f.ZP, {
+    Z && (0, r.jsx)(f.ZP, {
       showReact: !0,
       showReply: !0,
       popoutProps: {
@@ -145,21 +143,21 @@ renderActions: l ? () => (0, r.jsxs)('div', {
         R.default.track(D.rMx.ACTIVITY_REACTOR_INTERACTED, {
           application_id: t.application_id,
           interaction_type: r,
-          ...C
+          ...d
         }), r === h.L.ReactSubmit && null != i && (0, p.sendReactionToActivity)({
           reaction: i,
           user: n,
           activity: t,
-          application: V,
+          application: F,
           altText: (0, m.xC)(n, t),
-          stream: x
+          stream: w
         }), r === h.L.ReplySubmit && null != a && (0, p.sendReplyToActivity)({
           reply: a,
           user: n,
           activity: t,
-          application: V,
+          application: F,
           altText: (0, m.xC)(n, t),
-          stream: x
+          stream: w
         });
       }
     })
