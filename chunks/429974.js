@@ -23,9 +23,9 @@ guildId: f = h.ME,
 channelId: C,
 friendToken: N,
 analyticsLocation: A,
-...v
-  } = e, Z = u.default.getUser(p);
-  if (null == Z)
+...Z
+  } = e, v = u.default.getUser(p);
+  if (null == v)
 return;
   let L = E.Z.getUserProfile(p),
 O = c.Z.getPrimaryActivity(p),
@@ -45,14 +45,14 @@ let {
 } = await n.e('824').then(n.bind(n, 304113));
 return t => (0, i.jsx)(e, {
   location: 'handleOpenUserProfileModal',
-  user: Z,
+  user: v,
   guildId: f,
   friendToken: N,
   initialSection: T,
   initialSubsection: S,
   channelId: C,
   ...t,
-  ...v
+  ...Z
 });
   }), _.default.track(h.rMx.OPEN_MODAL, {
 type: 'Profile Modal',

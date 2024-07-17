@@ -25,10 +25,10 @@ tabs: n,
 selectedTab: N,
 onSelectTab: A
   } = (0, T.z)(), {
-onScroll: v,
-scrollPosition: Z
+onScroll: Z,
+scrollPosition: v
   } = (0, u.c)(), L = (0, _.Z)({
-scrollPosition: Z
+scrollPosition: v
   }), O = (0, r.wj)((0, o.ZP)()), {
 quests: R
   } = (0, m.bA)(N), x = s.useMemo(() => O ? 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-dark-mode.png' : 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-light-mode.png', [O]), b = null;
@@ -61,14 +61,14 @@ children: [
     tabColor: 'header-primary',
     selectedTabColor: O ? 'text-muted' : 'header-primary',
     onTabSelect: A,
-    scrollPosition: Z,
+    scrollPosition: v,
     backgroundStyle: L
   }),
   (0, i.jsx)(E.Z, {
     title: f.Z.Messages.QUESTS_HOME_HERO_TITLE,
     description: f.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
     backgroundImageUrl: x,
-    onScroll: v,
+    onScroll: Z,
     bannerContainerClassName: C.bannerContainer,
     bannerImageClassName: C.bannerImage,
     headerTextColor: 'header-primary',

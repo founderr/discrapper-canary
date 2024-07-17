@@ -32,11 +32,11 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let v = c().throttle(m.c6, 1000, {
+let Z = c().throttle(m.c6, 1000, {
 leading: !1,
 trailing: !0
   }),
-  Z = e => {
+  v = e => {
 let {
   isSelected: t,
   onCategoryChange: n,
@@ -69,7 +69,7 @@ let {
 } = this.state, r = this.context;
 if (null == E.ZP.getSearchIndex() && _.Ue(), I.S.subscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.subscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
   let l = n !== S.Hk ? n : null;
-  v({
+  Z({
     loadId: e,
     searchId: i,
     query: s,
@@ -93,7 +93,7 @@ let {
   query: c,
   isHandlingTagSearch: d
 } = this.state, u = this.context, _ = e.isFetchingSearch && !i, E = a !== S.Hk ? a : null;
-(l || d) && _ && (v({
+(l || d) && _ && (Z({
   loadId: n,
   searchId: o,
   query: c,
@@ -147,7 +147,7 @@ return (0, s.jsx)('div', {
   className: N.categories,
   children: null == t ? void 0 : t.map(t => {
     let [n, i] = t;
-    return (0, s.jsx)(Z, {
+    return (0, s.jsx)(v, {
       categoryId: n,
       name: n === S.Hk ? C.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
       onCategoryChange: this.handleCategoryChange,

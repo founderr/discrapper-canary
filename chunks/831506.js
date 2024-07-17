@@ -45,7 +45,7 @@ T[n] = s, s.add(e);
   }(t, e, s);
 }
 
-function p(e) {
+function C(e) {
   let {
 guild: t
   } = e, n = !1;
@@ -59,7 +59,7 @@ of t.presences)
   return n;
 }
 
-function C(e, t) {
+function p(e, t) {
   let n = !1;
   return t.forEach(t => {
 null != t && f(e, t.user.id, t.activities, t.status) && (n = !0);
@@ -104,7 +104,7 @@ for (let {
   of n)
   null != e && !1 !== f(I.ME, e.id, a, t) && (i = !0);
 for (let e of t)
-  !1 !== p({
+  !1 !== C({
     guild: e
   }) && (i = !0);
 return i;
@@ -118,7 +118,7 @@ T = {}, m = {
   ...n
 }, Object.keys(t).forEach(e => T[e] = new Set(t[e]));
   },
-  GUILD_CREATE: p,
+  GUILD_CREATE: C,
   PRESENCES_REPLACE: function(e) {
 let {
   presences: t
@@ -150,14 +150,14 @@ let {
   guildId: t,
   members: n
 } = e;
-return C(t, n.map(e => e.presence));
+return p(t, n.map(e => e.presence));
   },
   THREAD_MEMBERS_UPDATE: function(e) {
 let {
   guildId: t,
   addedMembers: n
 } = e;
-return null != n && C(t, n.map(e => e.presence));
+return null != n && p(t, n.map(e => e.presence));
   },
   RELATIONSHIP_ADD: function(e) {
 let {

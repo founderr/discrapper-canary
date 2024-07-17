@@ -60,8 +60,8 @@ function A(e) {
 channel: n,
 otherUser: c,
 active: E
-  } = e, m = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), p = (0, s.e7)([h.Z], () => null == c ? null : h.Z.getNickname(c.id)), A = !m && E, v = (0, g.c)(n), {
-avatarDecorationSrc: Z
+  } = e, m = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), p = (0, s.e7)([h.Z], () => null == c ? null : h.Z.getNickname(c.id)), A = !m && E, Z = (0, g.c)(n), {
+avatarDecorationSrc: v
   } = (0, u.Z)({
 user: c,
 size: (0, d.y9)(a.AvatarSizes.SIZE_40),
@@ -72,7 +72,7 @@ children: [
   (0, i.jsx)(N, {
     className: f.avatar,
     src: (0, _.x)(n, 40, A),
-    avatarDecoration: Z,
+    avatarDecoration: v,
     size: a.AvatarSizes.SIZE_40,
     'aria-label': null !== (t = null == c ? void 0 : c.username) && void 0 !== t ? t : S.Z.Messages.UNKNOWN_USER
   }),
@@ -94,7 +94,7 @@ children: [
             className: f.timestampWithPreview,
             color: 'text-muted',
             variant: 'text-xs/normal',
-            children: v
+            children: Z
           })
         ]
       }),

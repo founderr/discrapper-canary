@@ -16,7 +16,7 @@ var i = n(735250),
   h = n(474936),
   N = n(467481);
 let f = (0, u.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
-  p = e => {
+  C = e => {
 if (null != e)
   o.ZP.trackWithMetadata(T.rMx.EXPRESSION_TOOLTIP_VIEWED, {
     type: h.cd.STICKER_IN_MESSAGE_HOVER,
@@ -32,7 +32,7 @@ renderableSticker: t,
 channel: n,
 isInteracting: s
   } = e, [o, u] = a.useState(!0), [E, T] = a.useState(String(Date.now())), [h] = (0, _.XW)(t, s), {
-analyticsLocations: C
+analyticsLocations: p
   } = (0, c.ZP)(l.Z.STICKER_MESSAGE), g = (0, i.jsxs)('span', {
 className: N.stickerName,
 children: [
@@ -45,7 +45,7 @@ children: [
 ]
   });
   return (0, i.jsx)(c.Gt, {
-value: C,
+value: p,
 children: (0, i.jsx)(r.Popout, {
   align: 'center',
   animation: r.Popout.Animation.TRANSLATE,
@@ -69,7 +69,7 @@ children: (0, i.jsx)(r.Popout, {
       text: (0, d.Y)(g),
       'aria-label': !1,
       onTooltipShow: () => {
-        p(h);
+        C(h);
       },
       children: e => (0, i.jsx)(r.Clickable, {
         ...e,

@@ -59,8 +59,8 @@ user: h,
 nick: C,
 mute: N,
 deaf: A,
-serverMute: v,
-serverDeaf: Z
+serverMute: Z,
+serverDeaf: v
   } = e, L = (0, l.e7)([I.Z], () => I.Z.isLocalMute(h.id)), O = (0, d.Z)({
 userId: h.id,
 checkSoundSharing: !0
@@ -87,9 +87,9 @@ else if (a)
 else if (s)
   return f.mute;
   }({
-serverDeaf: Z,
+serverDeaf: v,
 deaf: A,
-serverMute: v,
+serverMute: Z,
 mute: N,
 localMute: L
   })) && void 0 !== s ? s : {}, y = null != D ? p.Z.Messages.VOICE_PANEL_USER_TOOLTIP.format({

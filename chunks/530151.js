@@ -21,8 +21,8 @@ var i = n(735250),
   C = n(707409),
   N = n(210887),
   A = n(283595),
-  v = n(417363),
-  Z = n(941128),
+  Z = n(417363),
+  v = n(941128),
   L = n(451478),
   O = n(285952),
   R = n(151011),
@@ -390,7 +390,7 @@ return this.renderBody({
   }
   renderProgressPatching() {
 return (0, i.jsx)(P.Z, {
-  getHistoricalTotalBytes: v.Z.getHistoricalTotalBytesWritten,
+  getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesWritten,
   updateInterval: 5000,
   children: this.renderProgressPatchingBody
 });
@@ -608,14 +608,14 @@ return 0 === e.length ? null : (0, i.jsxs)('div', {
         (0, i.jsx)(M.Z, {
           className: r()(j.headerCell, j.networkProgress),
           title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
-          getHistoricalTotalBytes: v.Z.getHistoricalTotalBytesDownloaded,
+          getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesDownloaded,
           color: D.Ilk.GREEN_360,
           animate: s
         }),
         (0, i.jsx)(M.Z, {
           className: r()(j.headerCell, j.diskProgress),
           title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
-          getHistoricalTotalBytes: v.Z.getHistoricalTotalBytesWritten,
+          getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesWritten,
           color: D.Ilk.BLUE_345,
           animate: s
         })
@@ -687,18 +687,18 @@ return null != o && e.push({
 }
 t.Z = (0, p.Z)(c.ZP.connectStores([
   T.Z,
-  v.Z,
   Z.Z,
+  v.Z,
   N.Z,
   L.Z
 ], () => {
-  let e = et(Z.Z.activeItems, !1, T.Z, v.Z);
+  let e = et(v.Z.activeItems, !1, T.Z, Z.Z);
   return {
 applications: [
   ...e,
-  ...et(Z.Z.finishedItems, !0, T.Z, v.Z)
+  ...et(v.Z.finishedItems, !0, T.Z, Z.Z)
 ],
-paused: Z.Z.paused,
+paused: v.Z.paused,
 isFocused: L.Z.isFocused(),
 theme: N.Z.theme
   };

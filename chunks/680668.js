@@ -21,8 +21,8 @@ var a = n(533800),
 
 function h(e) {
   var t, h;
-  let N, f, p, {
-  onTransitionToInviteChannel: C,
+  let N, f, C, {
+  onTransitionToInviteChannel: p,
   onAcceptInstantInvite: g,
   guild: S,
   invite: A,
@@ -50,7 +50,7 @@ S = u.Qs(A.guild);
 let e = (0, d.rF)(A.guild.premium_subscription_count, A.guild.id);
 S.premiumTier = e;
   }
-  let k = b ? C : g,
+  let k = b ? p : g,
 G = (0, _.e)({
   isVoiceChannel: j,
   isOwnInvite: x,
@@ -74,7 +74,7 @@ children: [
     })
   })
 ]
-  }), y && (p = (0, i.jsx)(s.TooltipContainer, {
+  }), y && (C = (0, i.jsx)(s.TooltipContainer, {
 className: T.tooltipContainer,
 text: m.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
 children: (0, i.jsx)(s.CircleInformationIcon, {
@@ -111,7 +111,7 @@ children: [
   }),
   (0, i.jsx)(l.Z.Header, {
     text: G,
-    extra: p
+    extra: C
   }),
   (0, i.jsxs)(l.Z.Body, {
     children: [

@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(973616),
   N = n(314897),
   f = n(592125),
-  p = n(158776),
-  C = n(594174),
+  C = n(158776),
+  p = n(594174),
   g = n(823379),
   S = n(226378),
   A = n(701488),
@@ -42,13 +42,13 @@ currentEmbeddedActivity: B
   } = (0, s.cj)([o.ZP], () => ({
 embeddedActivity: o.ZP.getEmbeddedActivitiesForChannel(null != j ? j : '').find(e => e.applicationId === n.id),
 currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity()
-  })), k = (0, s.Wu)([C.default], () => {
+  })), k = (0, s.Wu)([p.default], () => {
 var e;
-return Array.from(null !== (e = null == y ? void 0 : y.userIds) && void 0 !== e ? e : []).map(e => C.default.getUser(e)).filter(g.lm);
-  }), G = (0, s.e7)([p.Z], () => {
+return Array.from(null !== (e = null == y ? void 0 : y.userIds) && void 0 !== e ? e : []).map(e => p.default.getUser(e)).filter(g.lm);
+  }), G = (0, s.e7)([C.Z], () => {
 var e;
 let t = null == y ? void 0 : y.userIds.values().next().value;
-return null == t ? null : null === (e = p.Z.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
+return null == t ? null : null === (e = C.Z.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
   }), F = a.useMemo(() => {
 let e = new h.Z(n);
 return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.wT), e;

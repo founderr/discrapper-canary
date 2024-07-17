@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return C;
+return p;
   }
 });
 var i = n(735250),
@@ -20,9 +20,9 @@ var i = n(735250),
   h = n(474936),
   N = n(981631),
   f = n(689938),
-  p = n(345478);
+  C = n(345478);
 
-function C() {
+function p() {
   let e = (0, r.e7)([_.default], () => I.ZP.isPremium(_.default.getCurrentUser())),
 {
   enabled: t,
@@ -34,7 +34,7 @@ function C() {
   disable: e
 }),
 {
-  location: C
+  location: p
 } = (0, c.O)(),
 {
   analyticsLocations: g
@@ -44,14 +44,14 @@ S = a.useCallback(() => {
     subscriptionTier: I.ZP.getSkuIdForPremiumType(h.p9.TIER_2),
     analyticsLocations: g,
     analyticsObject: {
-      ...C,
+      ...p,
       object: N.qAy.BUTTON_CTA,
       objectType: N.Qqv.TIER_2
     }
   });
 }, [
   g,
-  C
+  p
 ]),
 A = a.useCallback(() => {
   o.Z.open(N.oAB.INVENTORY), T.ZP.dismissOutboundPromotionNotice();
@@ -75,11 +75,11 @@ children: [
   (0, i.jsx)(l.NitroWheelIcon, {
     size: 'md',
     color: 'currentColor',
-    className: p.premiumIcon
+    className: C.premiumIcon
   }),
   t ? n ? (0, i.jsxs)(s.x, {
     variant: 'text-sm/normal',
-    className: p.text,
+    className: C.text,
     children: [
       f.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE_V2,
       ' ',

@@ -25,8 +25,8 @@ var i = n(735250),
   C = n(570928),
   N = n(515550),
   A = n(1585),
-  v = n(304761),
-  Z = n(865427),
+  Z = n(304761),
+  v = n(865427),
   L = n(571250),
   O = n(628581),
   R = n(55311),
@@ -79,8 +79,8 @@ var i = n(735250),
   eC = n(626135),
   eN = n(768581),
   eA = n(572004),
-  ev = n(70956),
-  eZ = n(374023),
+  eZ = n(70956),
+  ev = n(374023),
   eL = n(51144),
   eO = n(998502),
   eR = n(981631),
@@ -98,7 +98,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let ey = eO.ZP.getEnableHardwareAcceleration() ? E.AnimatedAvatar : E.Avatar,
-  ej = 30 * ev.Z.Millis.DAY;
+  ej = 30 * eZ.Z.Millis.DAY;
 class eU extends s.PureComponent {
   get isCopiedStreakGodlike() {
 let {
@@ -627,14 +627,14 @@ g = (0, l.e7)([
   selfDeaf: L,
   deaf: O
 } = (0, el.Z)(g),
-R = (0, l.e7)([v.C], () => {
+R = (0, l.e7)([Z.C], () => {
   var e;
-  return (0, Z.fD)() ? null === (e = v.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null;
+  return (0, v.fD)() ? null === (e = Z.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null;
 }),
 x = (0, l.e7)([eg.ZP], () => eg.ZP.getPremiumTypeSubscription()),
 b = (0, l.e7)([e_.Z], () => e_.Z.getEverSpeakingWhileMuted()),
 P = (0, l.e7)([eu.Z], () => eu.Z.hasLayers()),
-D = (0, E.useModalsStore)(E.hasAnyModalOpenSelector) || P || eZ.s.isDisallowPopupsSet(),
+D = (0, E.useModalsStore)(E.hasAnyModalOpenSelector) || P || ev.s.isDisallowPopupsSet(),
 j = (0, Y.b)(),
 w = (0, l.e7)([H.Z], () => null != H.Z.getAwaitingRemoteSessionInfo()),
 B = (0, l.e7)([G.Z], () => G.Z.isCurrentQuestCompleted),

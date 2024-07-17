@@ -36,14 +36,14 @@ let f = _.ZP.requireModule('discord_rpc').RPCWebSocket,
   N = new d.Z('RPCServer:WSS'),
   A = [];
 
-function v(e) {
+function Z(e) {
   return 'function' == typeof e ? e() : e;
 }
 
-function Z() {
+function v() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
 t = e > 0 ? void 0 : () => {
-  if (!v(s.listening))
+  if (!Z(s.listening))
     return;
   let e = s.address().port;
   N.info('Starting on '.concat(e)), c.Z.dispatch({
@@ -57,8 +57,8 @@ t = e > 0 ? void 0 : () => {
 function L(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
 s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-a = null != v(e.headers).origin ? {
-  'Access-Control-Allow-Origin': v(e.headers).origin,
+a = null != Z(e.headers).origin ? {
+  'Access-Control-Allow-Origin': Z(e.headers).origin,
   'Access-Control-Allow-Credentials': 'true',
   'Access-Control-Allow-Methods': 'POST, GET, PUT, PATCH, DELETE',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization'
@@ -117,7 +117,7 @@ this._sendCallback = e, this._closeCallback = t;
 }
 class b extends a.EventEmitter {
   handleRequest(e, t) {
-let [n, i] = v(e.url).split('?'), s = v(e.method);
+let [n, i] = Z(e.url).split('?'), s = Z(e.method);
 if ('/rpc' === n && 'OPTIONS' === s) {
   L(e, t, {
     body: ''
@@ -127,7 +127,7 @@ if ('/rpc' === n && 'OPTIONS' === s) {
 let a = 'POST' === s;
 if ('/rpc' === n && ('GET' === s || a)) {
   let n = new URLSearchParams(i),
-    s = a ? v(e.headers)['content-type'].split('/')[1] : 'json',
+    s = a ? Z(e.headers)['content-type'].split('/')[1] : 'json',
     l = function() {
       var e;
       let {
@@ -138,7 +138,7 @@ if ('/rpc' === n && ('GET' === s || a)) {
     },
     c = new x(a ? L.bind(null, e, t) : l, a ? O.bind(null, e, t, 400) : l, Number(n.get('v')), s);
   if (a)
-    (0, m.em)(c, v(e.headers).origin, n.get('client_id')).then(() => {
+    (0, m.em)(c, Z(e.headers).origin, n.get('client_id')).then(() => {
       let n = '';
       e.on('data', e => n += e), e.on('error', () => O(e, t, 500, 'Internal Server Error')), e.on('end', () => this.handleMessage(c, n));
     }).catch(e => {
@@ -159,8 +159,8 @@ O(e, t, 404, 'Not Found');
   handleConnection(e) {
 var t, n;
 let i;
-let s = new URLSearchParams(v(e.upgradeReq).url.split('?')[1]),
-  a = null !== (t = v(e.upgradeReq).headers.origin) && void 0 !== t ? t : '';
+let s = new URLSearchParams(Z(e.upgradeReq).url.split('?')[1]),
+  a = null !== (t = Z(e.upgradeReq).headers.origin) && void 0 !== t ? t : '';
 try {
   i = new R(e, Number(s.get('v')), null !== (n = s.get('encoding')) && void 0 !== n ? n : 'json');
 } catch (t) {
@@ -199,8 +199,8 @@ var e;
 super();
 let t = 0;
 (s = f.http.createServer()).on('error', e => {
-  N.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => Z(++t), 1000);
-}), s.on('request', this.handleRequest.bind(this)), Z(t);
+  N.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => v(++t), 1000);
+}), s.on('request', this.handleRequest.bind(this)), v(t);
 let n = {
   instanceId: null !== (e = s.instanceId) && void 0 !== e ? e : 0,
   server: s

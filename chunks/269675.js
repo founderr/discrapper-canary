@@ -25,8 +25,8 @@ var i = n(735250),
   C = n(20967),
   N = n(504762),
   A = n(807152),
-  v = n(176505),
-  Z = n(689938),
+  Z = n(176505),
+  v = n(689938),
   L = n(83939);
 
 function O(e) {
@@ -37,14 +37,14 @@ shouldHideGuildPurchaseEntryPoints: M,
 restrictionsLoading: D
   } = (0, E.uP)(t), y = null == n || !P || b || D;
   (0, d.Tt)({
-subsection: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
+subsection: v.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
 location: null == n ? void 0 : n.name
   }), (0, c.Z)(a.tq ? 'role-subscriptions-overview' : void 0);
   let j = O && (null == n || !(R || x) || M && !D);
   if (s.useEffect(() => {
   o.jg();
 }, []), s.useEffect(() => {
-  j && !a.tq && (0, u.M)(t, v.oC.ROLE_SUBSCRIPTIONS);
+  j && !a.tq && (0, u.M)(t, Z.oC.ROLE_SUBSCRIPTIONS);
 }, [
   t,
   j
@@ -66,7 +66,7 @@ children: [
         'aria-hidden': !0
       }),
       (0, i.jsx)(I.Z.Title, {
-        children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+        children: v.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
       })
     ]
   }),

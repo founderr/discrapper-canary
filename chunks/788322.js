@@ -1,6 +1,6 @@
 n.d(t, {
   Y: function() {
-return Z;
+return v;
   }
 }), n(47120);
 var i = n(735250),
@@ -25,15 +25,15 @@ var i = n(735250),
   C = n(689938),
   N = n(465423),
   A = n(129512),
-  v = n(330065);
-let Z = () => (0, i.jsx)('div', {
+  Z = n(330065);
+let v = () => (0, i.jsx)('div', {
   className: N.placeholder
 });
 t.Z = e => {
   var t;
   let {
 guild: a,
-theme: Z,
+theme: v,
 onView: L,
 onTagClick: O
   } = e, {
@@ -56,9 +56,9 @@ switch (e) {
   case f.BRd.DARK:
     return A;
   case f.BRd.LIGHT:
-    return v;
+    return Z;
 }
-  }(Z), F = null !== (t = I.ZP.getGuildIconURL({
+  }(v), F = null !== (t = I.ZP.getGuildIconURL({
 id: R,
 icon: b,
 size: 32

@@ -60,7 +60,7 @@ createPromise: () => Promise.all([
 webpackId: 989804,
 name: 'UserSettings'
   }),
-  v = (0, I.Un)({
+  Z = (0, I.Un)({
 createPromise: () => Promise.all([
   n.e('33053'),
   n.e('7654'),
@@ -70,7 +70,7 @@ createPromise: () => Promise.all([
 webpackId: 869779,
 name: 'ChannelSettings'
   }),
-  Z = (0, I.Un)({
+  v = (0, I.Un)({
 createPromise: () => Promise.all([
   n.e('96427'),
   n.e('77298'),
@@ -105,9 +105,9 @@ name: 'GuildSettings'
   }),
   O = {
 [f.S9g.USER_SETTINGS]: () => (0, s.jsx)(A, {}),
-[f.S9g.CHANNEL_SETTINGS]: () => (0, s.jsx)(v, {}),
+[f.S9g.CHANNEL_SETTINGS]: () => (0, s.jsx)(Z, {}),
 [f.S9g.GUILD_SETTINGS]: () => (0, s.jsx)(L, {}),
-[f.S9g.COLLECTIBLES_SHOP]: () => (0, s.jsx)(Z, {})
+[f.S9g.COLLECTIBLES_SHOP]: () => (0, s.jsx)(v, {})
   },
   R = 'SHOWN',
   x = 'HIDDEN',

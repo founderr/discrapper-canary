@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(607070),
   N = n(367907),
   f = n(592125),
-  p = n(984933),
-  C = n(768119),
+  C = n(984933),
+  p = n(768119),
   g = n(944486),
   S = n(153124),
   A = n(585483),
@@ -233,7 +233,7 @@ super(e), b(this, 'state', {
     this.focusEditor();
     return;
   }
-  let a = p.ZP.getTextChannelNameDisambiguations(i.getGuildId())[i.id],
+  let a = C.ZP.getTextChannelNameDisambiguations(i.getGuildId())[i.id],
     s = null != a ? a.name : i.name;
   this.handleSetSearchQuery({
     query: m.ZP[L.dCx.FILTER_IN].key + '#'.concat(s, ' '),
@@ -377,20 +377,20 @@ super(e), b(this, 'state', {
 }
 t.Z = d.ZP.connectStores([
   h.Z,
-  C.Z
+  p.Z
 ], () => {
   var e;
-  let t = C.Z.getCurrentSearchId(),
-n = C.Z.getSearchType(),
-i = null != t && C.Z.isSearching(t),
-a = null != t && null !== (e = C.Z.getEditorState(t)) && void 0 !== e ? e : R.nR(x.Jl(m.ZP)),
+  let t = p.Z.getCurrentSearchId(),
+n = p.Z.getSearchType(),
+i = null != t && p.Z.isSearching(t),
+a = null != t && null !== (e = p.Z.getEditorState(t)) && void 0 !== e ? e : R.nR(x.Jl(m.ZP)),
 s = h.Z.keyboardModeEnabled;
   return {
 searchId: t,
 searchType: n,
 isSearching: i,
 editorState: a,
-hasResults: C.Z.hasResults(t),
+hasResults: p.Z.hasResults(t),
 keyboardModeEnabled: s
   };
 })(U);

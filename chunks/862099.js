@@ -29,8 +29,8 @@ var i, s, a = n(735250),
   C = n(496675),
   N = n(938475),
   A = n(626135),
-  v = n(823379),
-  Z = n(15274),
+  Z = n(823379),
+  v = n(15274),
   L = n(924301),
   O = n(504160),
   R = n(151864),
@@ -231,7 +231,7 @@ children: [
     className: B.textBlock,
     children: [
       (0, a.jsx)(d.Clickable, {
-        onClick: () => (0, Z.bO)({
+        onClick: () => (0, v.bO)({
           eventId: n.id
         }),
         className: B.eventNameClickable,
@@ -334,7 +334,7 @@ function z(e) {
   let {
 guildEvent: t
   } = e, n = r.useCallback(() => {
-(0, Z.bO)({
+(0, v.bO)({
   eventId: t.id
 });
   }, [t]);
@@ -419,7 +419,7 @@ case 3:
   h = w.Z.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA;
   break;
 default:
-  (0, v.vE)(i);
+  (0, Z.vE)(i);
   }
   return null == s ? null : (0, a.jsxs)(a.Fragment, {
 children: [

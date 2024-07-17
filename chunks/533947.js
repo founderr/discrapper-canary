@@ -15,18 +15,18 @@ let S = [],
   C = !1,
   N = T.QZA.CLOSED,
   A = {},
-  v = !1,
-  Z = null;
+  Z = !1,
+  v = null;
 
 function L() {
   if (i = null != (s = I.Z.getChannel()) ? m.Z.getGuild(s.guild_id) : null, S = null != s && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, s) ? p.Z.getWebhooksForChannel(i.id, s.id) : [], null != f) {
 let e = R(f.id);
 null != e && (f = e);
   }
-  N = T.QZA.OPEN, A = {}, v = !1;
+  N = T.QZA.OPEN, A = {}, Z = !1;
 }
 let O = u().debounce(() => {
-  v && ((null == f || u().isEqual(f, R(f.id))) && (v = !1), !v && b.emitChange());
+  Z && ((null == f || u().isEqual(f, R(f.id))) && (Z = !1), !Z && b.emitChange());
 }, 500);
 
 function R(e) {
@@ -42,7 +42,7 @@ class x extends(r = _.ZP.Store) {
 this.waitFor(I.Z, m.Z, p.Z, g.Z);
   }
   hasChanges() {
-return v;
+return Z;
   }
   get webhooks() {
 return S;
@@ -65,7 +65,7 @@ return {
   webhooks: S,
   editedWebhook: f,
   section: a,
-  sectionId: Z,
+  sectionId: v,
   hasChanges: this.hasChanges(),
   isFetching: C,
   errors: A
@@ -98,7 +98,7 @@ let {
   section: t,
   sectionId: n
 } = e;
-a = t, Z = n;
+a = t, v = n;
   },
   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function(e) {
 let {
@@ -106,10 +106,10 @@ let {
 } = e, n = R(t);
 if (null == n)
   return !1;
-f = n, A = {}, v = !1;
+f = n, A = {}, Z = !1;
   },
   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function() {
-f = null, A = {}, v = !1;
+f = null, A = {}, Z = !1;
   },
   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function(e) {
 let {
@@ -119,7 +119,7 @@ if (null == f)
   return !1;
 f = {
   ...f
-}, null != t.name && f.name !== t.name && (f.name = t.name, v = !0), void 0 !== t.avatar && f.avatar !== t.avatar && (f.avatar = t.avatar, v = !0), null != t.channelId && f.channel_id !== t.channelId && (f.channel_id = t.channelId, v = !0), v && O();
+}, null != t.name && f.name !== t.name && (f.name = t.name, Z = !0), void 0 !== t.avatar && f.avatar !== t.avatar && (f.avatar = t.avatar, Z = !0), null != t.channelId && f.channel_id !== t.channelId && (f.channel_id = t.channelId, Z = !0), Z && O();
   },
   CHANNEL_SETTINGS_CLOSE: function() {
 s = null, i = null, S = [], f = null, N = T.QZA.CLOSED;
@@ -149,7 +149,7 @@ for (let e = S.length - 1; e >= 0; e--) {
       ...t,
       ...i
     };
-    S[e] = n, !v && (null == f ? void 0 : f.id) === n.id && (f = n);
+    S[e] = n, !Z && (null == f ? void 0 : f.id) === n.id && (f = n);
   } else
     (null == f ? void 0 : f.id) === t.id && (f = null), S.splice(e, 1);
 }

@@ -28,8 +28,8 @@ writable: !0
   }) : e[t] = n, e;
 }
 let A = [],
-  v = null,
-  Z = [],
+  Z = null,
+  v = [],
   L = {},
   O = {},
   R = {},
@@ -78,18 +78,18 @@ R[a.id] = a, (n + 1) * 5 < e.length ? e.splice((n + 1) * 5, 0, a) : e.push(a);
 
 function z() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  if (Z.length > 0 && (A = Z, Z = []), j++, e) {
+  if (v.length > 0 && (A = v, v = []), j++, e) {
 let [e, t] = K(A);
 V = e, F = t;
   }
-  if (null != L.load_id && v !== L.load_id) {
+  if (null != L.load_id && Z !== L.load_id) {
 var t;
 I.default.track(f.rMx.FEED_LOADED, {
   ...L,
   unread_feed_item_ids: V.map(e => e.id),
   read_feed_item_ids: F.map(e => e.id),
   home_session_id: 'gravity'
-}), v = null !== (t = L.load_id) && void 0 !== t ? t : null, L = {};
+}), Z = null !== (t = L.load_id) && void 0 !== t ? t : null, L = {};
   }
   Y = 0, (0, S.em)([
 ...V,
@@ -116,7 +116,7 @@ t.sort((e, t) => T.Z.compare(e.id, t.id))
 function q() {
   let e = 0,
 t = new Set(A.map(e => e.id));
-  return Z.forEach(n => {
+  return v.forEach(n => {
 if (!(e >= p.Lb))
   !t.has(n.id) && e++;
   }), e >= p.Lb;
@@ -165,7 +165,7 @@ return j;
 return A;
   }
   getNewDehydratedItems() {
-return Z;
+return v;
   }
   getDehydratedItem(e) {
 var t;
@@ -219,7 +219,7 @@ return null == w || w.channelId !== e ? null : w;
 return null != B && B === e;
   }
   getLoadId() {
-return v;
+return Z;
   }
   hasOpenedEnoughTimes() {
 return 5 === H;
@@ -274,7 +274,7 @@ let E = {
     has_mention: o
   }
 };
-o && (null == D[a] && (D[a] = 0), D[a]++, y.add(s)), null == (Z = 0 === Z.length ? [...A] : [...Z]).find(e => e.id === i.id) && (Z.unshift(E), O[i.id] = E), q() && j > 0 && (G = !0), R[i.id] = E, x[i.id] = {
+o && (null == D[a] && (D[a] = 0), D[a]++, y.add(s)), null == (v = 0 === v.length ? [...A] : [...v]).find(e => e.id === i.id) && (v.unshift(E), O[i.id] = E), q() && j > 0 && (G = !0), R[i.id] = E, x[i.id] = {
   ...E,
   message: l
 };
@@ -285,25 +285,25 @@ let {
   loadId: n,
   startTime: i
 } = e;
-Z = t.filter(e => p.zd.has(e.type)), ! function() {
+v = t.filter(e => p.zd.has(e.type)), ! function() {
   let e = new Set();
-  Z.forEach(t => {
+  v.forEach(t => {
     e.add(t.id);
   }), Object.values(O).forEach(t => {
-    e.has(t.id) || g.default.age(t.id) > m.Z.Millis.DAY || t.type === p.Rr.MESSAGE && h.ZP.isChannelMuted(t.data.guild_id, t.data.channel_id) ? delete O[t.id] : !e.has(t.id) && (Z.unshift(t), e.add(t.id));
-  }), Z.forEach(e => {
+    e.has(t.id) || g.default.age(t.id) > m.Z.Millis.DAY || t.type === p.Rr.MESSAGE && h.ZP.isChannelMuted(t.data.guild_id, t.data.channel_id) ? delete O[t.id] : !e.has(t.id) && (v.unshift(t), e.add(t.id));
+  }), v.forEach(e => {
     R[e.id] = e;
   });
-}(), Z = W(Z), L = {
+}(), v = W(v), L = {
   load_id: n,
   load_time_millis: Date.now() - i,
-  feed_item_ids: Z.map(e => e.id)
+  feed_item_ids: v.map(e => e.id)
 };
 let s = q();
 if (0 === j)
   s && !k && (G = !0, U = !0), z();
 else if (G = s, s) {
-  let [e, t] = K(Z);
+  let [e, t] = K(v);
   (0, S.em)([
     ...e,
     ...t
@@ -391,7 +391,7 @@ let {
   guildId: n,
   guildScore: i
 } = e;
-null != i && (P[n] = i, i < 0 && (A = A.filter(e => e.type === p.Rr.MESSAGE && e.data.guild_id !== n), V = V.filter(e => e.type === p.Rr.MESSAGE && e.data.guild_id !== n), F = F.filter(e => e.type === p.Rr.MESSAGE && e.data.guild_id !== n), Z = Z.filter(e => e.type === p.Rr.MESSAGE && e.data.guild_id !== n))), null == t || t.forEach(e => {
+null != i && (P[n] = i, i < 0 && (A = A.filter(e => e.type === p.Rr.MESSAGE && e.data.guild_id !== n), V = V.filter(e => e.type === p.Rr.MESSAGE && e.data.guild_id !== n), F = F.filter(e => e.type === p.Rr.MESSAGE && e.data.guild_id !== n), v = v.filter(e => e.type === p.Rr.MESSAGE && e.data.guild_id !== n))), null == t || t.forEach(e => {
   let {
     channelId: t,
     score: i
@@ -400,7 +400,7 @@ null != i && (P[n] = i, i < 0 && (A = A.filter(e => e.type === p.Rr.MESSAGE && e
 });
   },
   RELOAD_GRAVITY: function() {
-if (0 === Z.length)
+if (0 === v.length)
   return !1;
 z(), G = !1;
   },
@@ -466,6 +466,6 @@ if (!k) {
   let [e, t] = K(A = W(A));
   V = e, F = t;
 }
-Z = W(Z = 0 === Z.length ? [...A] : Z), q() && j > 0 && (G = !0);
+v = W(v = 0 === v.length ? [...A] : v), q() && j > 0 && (G = !0);
   }
 });

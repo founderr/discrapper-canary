@@ -19,8 +19,8 @@ var i, s, a = n(735250),
   C = n(952561),
   N = n(513202),
   A = n(906732),
-  v = n(812206),
-  Z = n(933557),
+  Z = n(812206),
+  v = n(933557),
   L = n(925329),
   O = n(382182),
   R = n(871118),
@@ -292,7 +292,7 @@ onGuildClick: l,
 partySize: c,
 members: d,
 onChannelContextMenu: _
-  } = e, E = r.useRef(null), h = (0, Z.ZP)(s, !0);
+  } = e, E = r.useRef(null), h = (0, v.ZP)(s, !0);
   return (0, a.jsx)(J, {
 children: (0, a.jsxs)('div', {
   className: W.voiceSection,
@@ -599,7 +599,7 @@ m = (0, E.O)(),
 } = (0, A.ZP)();
   if (null == _)
 return null;
-  let p = v.Z.getApplication(_);
+  let p = Z.Z.getApplication(_);
   if (null == p)
 return null;
   let T = null != t.created_at && t.created_at > 0 ? {

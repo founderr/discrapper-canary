@@ -25,8 +25,8 @@ var i = n(735250),
   C = n(300284),
   N = n(680295),
   A = n(785717),
-  v = n(481046),
-  Z = n(318661),
+  Z = n(481046),
+  v = n(318661),
   L = n(78675),
   O = n(741308),
   R = n(899007),
@@ -168,7 +168,7 @@ function ei(e) {
 currentUser: t,
 onClose: n,
 setPopoutRef: a
-  } = e, V = __OVERLAY__, W = (0, Z.ZP)(t.id), ei = (0, u.O)(), {
+  } = e, V = __OVERLAY__, W = (0, v.ZP)(t.id), ei = (0, u.O)(), {
 analyticsLocations: es
   } = (0, I.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT), ea = (0, A.Q1)({
 layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
@@ -291,7 +291,7 @@ a
 },
 {
   accountPopoutStatusEditEnabled: e_
-} = (0, v.K)({
+} = (0, Z.K)({
   location: 'AccountProfilePopout'
 }),
 eE = (0, C.Z)({

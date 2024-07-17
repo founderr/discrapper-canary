@@ -20,8 +20,8 @@ var i = n(735250),
   C = n(731455),
   N = n(981631),
   A = n(689938),
-  v = n(885181);
-let Z = e => {
+  Z = n(885181);
+let v = e => {
   switch (e) {
 case C.Gj.Activity:
   return C.fW.Activity;
@@ -46,7 +46,7 @@ currentCategoryId: m.ZP.getCurrentCategoryId(),
 isViewingSearchResults: m.ZP.getMostRecentQuery().length > 0
   })), n = (0, I.Z)(c.Z.QUEST_HOME_PAGE), L = (0, l.e7)([T.Z], () => T.Z.getClanDiscoveryCategories(), [], T.j), O = null == L ? void 0 : L.map(e => ({
 ...e,
-icon: Z(e.categoryId)
+icon: v(e.categoryId)
   })), R = e => {
 (0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, E.OG)() && e !== C.Gj.Quests && (0, a.uL)(N.Z5c.GUILD_DISCOVERY), !(0, E.OG)() && e === C.Gj.Quests && (0, a.uL)(N.Z5c.QUEST_HOME);
   };
@@ -70,9 +70,9 @@ children: [
     onClick: () => R(C.Gj.Clans),
     wrapContent: !0,
     selected: e === C.Gj.Clans,
-    className: v.categoryItem,
-    selectedClassName: v.selectedCategoryItem,
-    innerClassName: v.itemInner
+    className: Z.categoryItem,
+    selectedClassName: Z.selectedCategoryItem,
+    innerClassName: Z.itemInner
   }, 'clan-discovery-home'),
   (0, i.jsx)(S.Z, {
     categories: O,

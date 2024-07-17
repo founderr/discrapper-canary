@@ -34,8 +34,8 @@ let {
   analyticsLocation: s,
   analyticsType: N,
   ctaText: A,
-  dismissText: v,
-  description: Z,
+  dismissText: Z,
+  description: v,
   learnMore: L,
   title: O,
   videoPosterUrl: R,
@@ -147,7 +147,7 @@ return (0, a.jsx)(E.Gt, {
             variant: 'text-xs/normal',
             color: 'always-white',
             children: [
-              Z,
+              v,
               L ? (0, a.jsxs)(a.Fragment, {
                 children: [
                   ' ',
@@ -168,7 +168,7 @@ return (0, a.jsx)(E.Gt, {
                 onClick: () => {
                   n(p.L.UNKNOWN);
                 },
-                children: v
+                children: Z
               }),
               (0, a.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND_INVERTED,

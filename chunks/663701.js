@@ -25,8 +25,8 @@ var i = n(735250),
   C = n(377171),
   N = n(243778),
   A = n(922409),
-  v = n(899740),
-  Z = n(28476),
+  Z = n(899740),
+  v = n(28476),
   L = n(880257),
   O = n(631885),
   R = n(457396),
@@ -139,8 +139,8 @@ return (0, i.jsx)(V.Qj, {
 });
   },
   J = () => {
-let e = (0, v.q)(),
-  t = (0, v.T)();
+let e = (0, Z.q)(),
+  t = (0, Z.T)();
 return e > 0 ? (0, i.jsx)(E.NumberBadge, {
   count: e,
   color: 0 === t ? C.Z.ICON_MUTED : void 0
@@ -152,7 +152,7 @@ let {
 } = e, n = (0, o.JA)('messageRequests'), {
   channelId: s
 } = (0, A._)();
-if (!(0, Z.a)())
+if (!(0, v.a)())
   return null;
 let a = null == s ? void 0 : () => h.Z.preload(W.ME, s);
 return (0, i.jsx)(V.Qj, {

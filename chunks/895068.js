@@ -24,8 +24,8 @@ var i, s, a, r, l = n(735250),
   C = n(526282),
   N = n(777734),
   A = n(976757),
-  v = n(981631),
-  Z = n(689938),
+  Z = n(981631),
+  v = n(689938),
   L = n(477975);
 let O = 40;
 
@@ -102,8 +102,8 @@ R
           props: {
             className: L.glassBackgroundTop
           },
-          header: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-          subtitle: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+          header: v.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+          subtitle: v.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
         },
         {
           section: 'other_guilds',
@@ -113,7 +113,7 @@ R
             className: L.glassBackground
           },
           itemHeight: 400,
-          header: Z.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
+          header: v.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
         }
       ];
     case 'upsell':
@@ -131,8 +131,8 @@ R
           props: {
             className: L.glassBackgroundTop
           },
-          header: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-          subtitle: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+          header: v.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+          subtitle: v.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
         },
         {
           section: 'other_guilds',
@@ -150,15 +150,15 @@ R
           items: e.slice(0, t),
           sectionHeight: O,
           itemHeight: 400,
-          header: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-          subtitle: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+          header: v.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+          subtitle: v.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
         },
         {
           section: 'other_guilds',
           items: e.slice(t),
           sectionHeight: O,
           itemHeight: 400,
-          header: Z.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
+          header: v.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
         }
       ];
     default:
@@ -185,7 +185,7 @@ W = o.useCallback((e, t, n, i) => {
     traitsToHighlight: b,
     className: L.card,
     style: n,
-    source: v.jXE.DISCOVER_SEARCH,
+    source: Z.jXE.DISCOVER_SEARCH,
     prioritizedGameIds: Y,
     onlyAnimateIconOnHover: !0
   }, i);
@@ -206,8 +206,8 @@ z = o.useCallback((e, t) => {
       return (0, l.jsx)(C.Z, {});
     case 'hero':
       return (0, l.jsx)(m.Z, {
-        title: Z.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,
-        description: Z.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
+        title: v.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,
+        description: v.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
         backgroundImageUrl: 'https://cdn.discordapp.com/assets/discovery/guilds-hero-background.png',
         className: L.hero
       });

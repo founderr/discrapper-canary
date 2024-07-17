@@ -69,9 +69,9 @@ t.Z = s.memo(function(e) {
   let {
 selectedGame: t,
 setScreen: n
-  } = e, c = s.useRef(null), d = s.useRef(null), E = s.useRef(null), I = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), [N, A] = s.useState(0), [v, Z] = s.useState(0), L = (0, h.GN)(e => e.selectedPlaystyle, r.Z), O = (0, h.GN)(e => e.previousMode, r.Z), R = s.useCallback(e => {
-A(e), v < e && Z(e);
-  }, [v]), x = s.useCallback(() => {
+  } = e, c = s.useRef(null), d = s.useRef(null), E = s.useRef(null), I = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), [N, A] = s.useState(0), [Z, v] = s.useState(0), L = (0, h.GN)(e => e.selectedPlaystyle, r.Z), O = (0, h.GN)(e => e.previousMode, r.Z), R = s.useCallback(e => {
+A(e), Z < e && v(e);
+  }, [Z]), x = s.useCallback(() => {
 0 === N ? (n(h.o2.USER_UPSELL), (0, h.fH)(O)) : R(N - 1);
   }, [
 N,
@@ -175,7 +175,7 @@ children: [
       (0, i.jsx)(u.T, {
         currentStepIndex: N,
         steps: M,
-        furthestStepIndex: v,
+        furthestStepIndex: Z,
         onStepClick: R
       }),
       (0, i.jsx)(u.i, {

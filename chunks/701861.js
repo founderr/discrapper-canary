@@ -30,7 +30,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 
-function v(e) {
+function Z(e) {
   let {
 user: t,
 onSelect: n
@@ -84,7 +84,7 @@ children: [
 ]
   });
 }
-class Z extends s.PureComponent {
+class v extends s.PureComponent {
   componentWillLeave(e) {
 null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e);
   }
@@ -161,7 +161,7 @@ super(...e), A(this, 'peopleListItemRef', s.createRef()), A(this, 'state', {
   let {
     user: t
   } = this.props;
-  (0, d.vq)(e, e => (0, i.jsx)(v, {
+  (0, d.vq)(e, e => (0, i.jsx)(Z, {
     ...e,
     user: t
   }), {
@@ -176,4 +176,4 @@ super(...e), A(this, 'peopleListItemRef', s.createRef()), A(this, 'state', {
 });
   }
 }
-t.Z = Z;
+t.Z = v;

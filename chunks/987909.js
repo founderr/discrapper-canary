@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return C;
+return p;
   }
 }), n(47120);
 var i = n(735250),
@@ -29,7 +29,7 @@ message: i
   return t[a];
 }
 
-function p(e) {
+function C(e) {
   let {
 currentUser: t,
 channel: n,
@@ -38,7 +38,7 @@ buttonLabels: d,
 stickers: u,
 event: _,
 eventProperties: E
-  } = e, [m, h] = a.useState(!1), p = a.useMemo(() => f({
+  } = e, [m, h] = a.useState(!1), C = a.useMemo(() => f({
 assets: u,
 currentUser: t,
 message: s
@@ -46,7 +46,7 @@ message: s
 u,
 t,
 s
-  ]), C = a.useMemo(() => f({
+  ]), p = a.useMemo(() => f({
 assets: d,
 currentUser: t,
 message: s
@@ -77,7 +77,7 @@ e && (! function(e) {
 }({
   channel: n,
   message: s,
-  sticker: p
+  sticker: C
 }), ! function(e) {
   let {
     sticker: t,
@@ -89,14 +89,14 @@ e && (! function(e) {
     sticker_id: t.id
   });
 }({
-  sticker: p,
+  sticker: C,
   event: _,
   eventProperties: E
 }));
   }, [
 n,
 s,
-p,
+C,
 _,
 E
   ]);
@@ -111,15 +111,15 @@ children: [
   (0, i.jsx)(c.ZP, {
     className: N.CTAMessageSticker,
     isInteracting: m,
-    sticker: p,
+    sticker: C,
     size: 28
   }),
-  C
+  p
 ]
   });
 }
 
-function C(e) {
+function p(e) {
   let {
 channel: t,
 message: n,
@@ -154,7 +154,7 @@ currentUser: c
   });
   return null != c && I ? (0, i.jsx)('div', {
 className: N.CTAMessage,
-children: (0, i.jsx)(p, {
+children: (0, i.jsx)(C, {
   currentUser: c,
   channel: t,
   message: n,

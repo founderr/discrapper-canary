@@ -20,12 +20,12 @@ var i, s, a = n(735250),
   N = n(921944),
   A = n(540736);
 (s = i || (i = {})).TOP_PICKS = 'top_picks', s.OTHER_GUILDS = 'other_guilds';
-let v = {
+let Z = {
 mass: 1,
 tension: 600,
 friction: 60
   },
-  Z = r.memo(function(e) {
+  v = r.memo(function(e) {
 let {
   width: t
 } = e, n = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), i = (0, S.GN)(e => e.mode, o.Z), [s, d] = r.useState(!0), _ = (0, l.useSpring)({
@@ -35,11 +35,11 @@ let {
   to: {
     opacity: i === S.v0.GET_STARTED ? 0 : 1
   },
-  config: v,
+  config: Z,
   delay: 500,
   immediate: n,
   onRest: () => d(!1)
-}), g = (0, S.GN)(e => e.userUpsellScreen, o.Z), Z = (0, S.GN)(e => e.started, o.Z), {
+}), g = (0, S.GN)(e => e.userUpsellScreen, o.Z), v = (0, S.GN)(e => e.started, o.Z), {
   guilds: L
 } = (0, h.C3)({
   location: 'ClanDiscoveryAdminContainer',
@@ -58,7 +58,7 @@ switch (r.useEffect(() => {
       (0, S.fH)(S.v0.ADMIN_UPSELL);
       return;
     }
-    if (!e && R && !Z) {
+    if (!e && R && !v) {
       (0, S.fH)(S.v0.GET_STARTED);
       return;
     }
@@ -69,7 +69,7 @@ switch (r.useEffect(() => {
   }, [
     O.length,
     L.length,
-    Z,
+    v,
     R,
     i,
     g
@@ -144,7 +144,7 @@ children: [
   e ? (0, a.jsx)('div', {
     className: A.loading,
     children: (0, a.jsx)(d.Spinner, {})
-  }) : (0, a.jsx)(Z, {
+  }) : (0, a.jsx)(v, {
     width: null != n ? n : 0
   })
 ]

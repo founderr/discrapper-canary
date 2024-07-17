@@ -47,7 +47,7 @@ if (null != t)
   return e.name;
 }
 
-function v(e, t, n) {
+function Z(e, t, n) {
   return null == e || e.displayName !== t ? {
 displayName: t,
 type: n
@@ -56,7 +56,7 @@ displayName: t,
 type: _.QyF.INPUT_AND_OUTPUT
   } : e;
 }
-class Z extends(i = r.ZP.DeviceSettingsStore) {
+class v extends(i = r.ZP.DeviceSettingsStore) {
   initialize(e) {
 this.waitFor(u.Z, c.Z), m = null != e ? e : I;
   }
@@ -82,7 +82,7 @@ return T;
 return C;
   }
 }
-h(Z, 'displayName', 'ConnectedDeviceStore'), h(Z, 'persistKey', 'ConnectedDeviceStore'), t.Z = new Z(l.Z, {
+h(v, 'displayName', 'ConnectedDeviceStore'), h(v, 'persistKey', 'ConnectedDeviceStore'), t.Z = new v(l.Z, {
   MEDIA_ENGINE_DEVICES: function(e) {
 let {
   inputDevices: t,
@@ -113,9 +113,9 @@ let r = Object.keys(p),
   d = a().difference(r, l),
   u = a().difference(o, c);
 return d.length > 0 || u.length > 0 ? S = {} : (a().difference(l, r).forEach(e => {
-  S[e] = v(S[e], e, _.QyF.INPUT);
+  S[e] = Z(S[e], e, _.QyF.INPUT);
 }), a().difference(c, o).forEach(e => {
-  S[e] = v(S[e], e, _.QyF.OUTPUT);
+  S[e] = Z(S[e], e, _.QyF.OUTPUT);
 })), !(a().isEqual(r, l) && a().isEqual(o, c)) && (p = i, T = s, !0);
   },
   CONNECTED_DEVICE_SET: function(e) {

@@ -21,8 +21,8 @@ var i = n(735250),
   C = n(252618),
   N = n(100159),
   A = n(646288),
-  v = n(984370),
-  Z = n(706454),
+  Z = n(984370),
+  v = n(706454),
   L = n(210887),
   O = n(430824),
   R = n(496675),
@@ -156,22 +156,22 @@ let {
   channel: n,
   isAuthenticated: a
 } = this.props;
-return (0, i.jsx)(v.Z, {
+return (0, i.jsx)(Z.Z, {
   isAuthenticated: a,
   toolbar: this.renderHeaderToolbar(e, t),
   children: null != n ? (0, i.jsxs)(s.Fragment, {
     children: [
-      (0, i.jsx)(v.Z.Icon, {
+      (0, i.jsx)(Z.Z.Icon, {
         icon: d.TagIcon,
         'aria-label': er.Z.Messages.STORE_CHANNEL
       }),
-      (0, i.jsx)(v.Z.Title, {
+      (0, i.jsx)(Z.Z.Title, {
         children: n.name
       })
     ]
   }) : null != t && t.premium ? (0, i.jsxs)(s.Fragment, {
     children: [
-      (0, i.jsx)(v.Z.Icon, {
+      (0, i.jsx)(Z.Z.Icon, {
         icon: d.NitroWheelIcon,
         'aria-label': er.Z.Messages.PREMIUM
       }),
@@ -181,11 +181,11 @@ return (0, i.jsx)(v.Z, {
     ]
   }) : null != t ? (0, i.jsxs)(s.Fragment, {
     children: [
-      (0, i.jsx)(v.Z.Icon, {
+      (0, i.jsx)(Z.Z.Icon, {
         icon: d.TagIcon,
         'aria-label': er.Z.Messages.STORE_CHANNEL
       }),
-      (0, i.jsx)(v.Z.Title, {
+      (0, i.jsx)(Z.Z.Title, {
         children: t.name
       })
     ]
@@ -660,7 +660,7 @@ super(...e), eo(this, 'showCopyLinkTextTimeout', new o.V7()), eo(this, '_tracked
 t.Z = (0, g.Z)((0, p.Z)(l.ZP.connectStores([
   b.Z,
   L.Z,
-  Z.default,
+  v.default,
   j.Z,
   D.Z,
   M.Z,
@@ -706,7 +706,7 @@ storeListing: D.Z.getStoreListing({
 isInTestMode: null != a && c,
 matureAgree: b.Z.didMatureAgree,
 theme: L.Z.theme,
-locale: Z.default.locale,
+locale: v.default.locale,
 guild: null != o ? O.Z.getGuild(o.getGuildId()) : null
   };
 })(ec)));

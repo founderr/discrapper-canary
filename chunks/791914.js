@@ -27,9 +27,9 @@ tab: t,
 setTab: n,
 children: a,
 badgeState: f,
-closePopout: p
+closePopout: C
   } = e, {
-showReminders: C
+showReminders: p
   } = m.Z.useExperiment({
 location: 'RecentsHeader'
   }, {
@@ -62,7 +62,7 @@ children: [
         children: h.Z.Messages.INBOX
       }),
       (0, i.jsx)(T.Z, {
-        closePopout: p
+        closePopout: C
       })
     ]
   }),
@@ -125,7 +125,7 @@ children: [
             }),
             children: h.Z.Messages.MESSAGE_BOOKMARKS_HEADER
           }) : null,
-          C ? (0, i.jsxs)(o.TabBar.Item, {
+          p ? (0, i.jsxs)(o.TabBar.Item, {
             'aria-label': 'todos',
             id: l.X.TODOS,
             className: s()(N.tab, N.expanded, {

@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(944486),
   N = n(455199),
   f = n(655354),
-  p = n(999671),
-  C = n(324081),
+  C = n(999671),
+  p = n(324081),
   g = n(240126),
   S = n(791914),
   A = n(981631),
@@ -54,7 +54,7 @@ h.Z
   ], () => m.Z.getChannel(h.Z.getChannelId())), {
 messages: T,
 hasMore: f,
-loading: C,
+loading: p,
 guildFilter: g,
 roleFilter: x,
 everyoneFilter: v
@@ -94,7 +94,7 @@ tab: r.X.MENTIONS,
 setTab: t,
 badgeState: l,
 closePopout: E,
-children: (0, i.jsx)(p.Z, {})
+children: (0, i.jsx)(C.Z, {})
   }), [
 !0,
 t,
@@ -112,7 +112,7 @@ children: (0, i.jsx)(c.ZP, {
   },
   channel: I,
   messages: T,
-  loading: C,
+  loading: p,
   hasMore: f,
   analyticsName: 'Recent Mentions',
   loadMore: function() {
@@ -159,7 +159,7 @@ c = !!s.isNSFW() && !r;
   return (0, i.jsxs)('div', {
 className: O.container,
 children: [
-  (0, i.jsx)(C.Z, {
+  (0, i.jsx)(p.Z, {
     channel: s,
     gotoChannel: n,
     children: null != a ? (0, i.jsx)(l.CircleIconButton, {

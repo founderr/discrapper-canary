@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return v;
+return Z;
   }
 }), n(789020), n(47120);
 var i = n(664751),
@@ -31,8 +31,8 @@ client_id: S,
 response_type: C = 'code',
 redirect_uri: N,
 code_challenge: A,
-code_challenge_method: v,
-state: Z,
+code_challenge_method: Z,
+state: v,
 nonce: L,
 scope: O,
 permissions: R,
@@ -65,8 +65,8 @@ o = await (0, _.Ww)({
   responseType: C,
   redirectUri: N,
   codeChallenge: A,
-  codeChallengeMethod: v,
-  state: Z,
+  codeChallengeMethod: Z,
+  state: v,
   integrationType: l
 });
   } catch (t) {
@@ -99,8 +99,8 @@ try {
     responseType: C,
     redirectUri: N,
     codeChallenge: A,
-    codeChallengeMethod: v,
-    state: Z,
+    codeChallengeMethod: Z,
+    state: v,
     nonce: L,
     integrationType: l
   })).location;
@@ -125,8 +125,8 @@ parsedPermissions: G,
 responseType: C,
 redirectUri: N,
 codeChallenge: A,
-codeChallengeMethod: v,
-state: Z,
+codeChallengeMethod: Z,
+state: v,
 guildId: x,
 channelId: b,
 prompt: P,
@@ -189,7 +189,7 @@ throw e.authorization.authing = !1, t;
   });
 }
 
-function v(e, t) {
+function Z(e, t) {
   return {
 [f.Etm.AUTHENTICATE]: (0, o.S)(f.Etm.AUTHENTICATE, {
   handler(n) {

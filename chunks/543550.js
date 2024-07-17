@@ -1,9 +1,9 @@
 n.d(t, {
   $: function() {
-return Z;
+return v;
   },
   J: function() {
-return v;
+return Z;
   }
 }), n(47120);
 var i = n(735250),
@@ -36,7 +36,7 @@ case m.hz.VALORANT:
   }
 };
 
-function v() {
+function Z() {
   let e = (0, m.GN)(e => e.game, o.Z),
 t = (0, m.GN)(e => e.userUpsellScreen, o.Z),
 n = (0, m.GN)(e => e.setUserUpsellScreen, o.Z),
@@ -58,10 +58,10 @@ C = s.useMemo(() => A(e, S), [
   e,
   S
 ]),
-v = s.useCallback(e => {
+Z = s.useCallback(e => {
   h(e.currentTarget.scrollTop);
 }, [h]),
-Z = s.useMemo(() => {
+v = s.useMemo(() => {
   switch (e) {
     case m.hz.GENSHIN:
       return S === f.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
@@ -136,7 +136,7 @@ case m.o2.USER_UPSELL:
           (0, i.jsx)('div', {
             className: r()(N.backgroundImageContent, N.userUpsell),
             children: (0, i.jsx)(T.ZP, {
-              onScroll: v,
+              onScroll: Z,
               width: null != c ? c : 0,
               isAnimating: !1,
               variant: T.Bj.UPSELL
@@ -150,7 +150,7 @@ case m.o2.USER_ONBOARDING:
   return (0, i.jsx)('div', {
     className: N.container,
     children: (0, i.jsxs)('div', {
-      className: r()(Z, N.userOnboarding),
+      className: r()(v, N.userOnboarding),
       children: [
         (0, i.jsx)('div', {
           className: N.backgroundImageBlur
@@ -168,7 +168,7 @@ case m.o2.USER_ONBOARDING:
   }
 }
 
-function Z() {
+function v() {
   let e = (0, m.GN)(e => e.started, o.Z),
 t = (0, m.GN)(e => e.game, o.Z),
 {

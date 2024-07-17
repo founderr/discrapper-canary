@@ -21,8 +21,8 @@ var i = n(735250),
   C = n(153124),
   N = n(792125),
   A = n(666286),
-  v = n(596957),
-  Z = n(981631),
+  Z = n(596957),
+  v = n(981631),
   L = n(723359),
   O = n(689938),
   R = n(721636);
@@ -47,13 +47,13 @@ initialSection: t
   type: 'AGE_GATE_MODAL_OPEN',
   source: L.L0.DEEP_LINK_PROMPT
 }).then(() => {
-  a.replace(Z.Z5c.ME);
+  a.replace(v.Z5c.ME);
 });
   }, [
 a,
 n
   ]), s.useEffect(() => {
-_.Y(Z.Z5c.FRIENDS), (0, T.e)('friends');
+_.Y(v.Z5c.FRIENDS), (0, T.e)('friends');
   }, []), s.useEffect(() => {
 null != t && E.Z.setInitialSection(t);
   }, [t]);
@@ -98,17 +98,17 @@ children: [
         className: R.tabBar,
         children: [
           (0, i.jsx)(d.TabBar.Item, {
-            id: Z.pJs.ONLINE,
+            id: v.pJs.ONLINE,
             className: R.item,
             children: O.Z.Messages.FRIENDS_SECTION_ONLINE
           }),
           (0, i.jsx)(d.TabBar.Item, {
-            id: Z.pJs.ALL,
+            id: v.pJs.ALL,
             className: R.item,
             children: O.Z.Messages.FRIENDS_SECTION_ALL
           }),
           (0, i.jsxs)(d.TabBar.Item, {
-            id: Z.pJs.PENDING,
+            id: v.pJs.PENDING,
             className: R.item,
             'aria-label': O.Z.Messages.FRIENDS_SECTION_PENDING,
             children: [
@@ -123,7 +123,7 @@ children: [
             ]
           }),
           M > 0 ? (0, i.jsxs)(d.TabBar.Item, {
-            id: Z.pJs.SUGGESTIONS,
+            id: v.pJs.SUGGESTIONS,
             className: R.item,
             'aria-label': O.Z.Messages.FRIENDS_SECTION_SUGGESTIONS,
             children: [
@@ -138,14 +138,14 @@ children: [
             ]
           }) : null,
           (0, i.jsx)(d.TabBar.Item, {
-            id: Z.pJs.BLOCKED,
+            id: v.pJs.BLOCKED,
             className: R.item,
             children: O.Z.Messages.BLOCKED
           }),
           (0, i.jsx)(d.TabBar.Item, {
             'aria-label': O.Z.Messages.FRIENDS_SECTION_ADD_FRIEND,
             className: r()(R.item, R.addFriend),
-            id: Z.pJs.ADD_FRIEND,
+            id: v.pJs.ADD_FRIEND,
             children: (0, i.jsx)('span', {
               children: O.Z.Messages.FRIENDS_SECTION_ADD_FRIEND
             })
@@ -161,7 +161,7 @@ children: [
         id: b,
         className: R.peopleColumn,
         'aria-labelledby': y,
-        children: b === Z.pJs.ADD_FRIEND ? (0, i.jsx)(A.Z, {}) : (0, i.jsx)(v.Z, {
+        children: b === v.pJs.ADD_FRIEND ? (0, i.jsx)(A.Z, {}) : (0, i.jsx)(Z.Z, {
           titleId: y,
           sectionFilter: b
         })

@@ -29,7 +29,7 @@ isHovering: a,
 onCtxMenuClose: S,
 onCtxMenuOpen: f,
 onCtxMenuSelect: C
-  } = e, N = (0, h.ph)(n), A = (0, d.ZP)(), v = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, Z = v === g.BRd.DARK, L = s.useMemo(() => (0, h.nP)(n.config.assets.questBarHero), [n]), O = s.useContext(l.S).reducedMotion.enabled, R = (0, h.Mi)(n, E.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = s.useRef(a), M = s.useRef(null);
+  } = e, N = (0, h.ph)(n), A = (0, d.ZP)(), Z = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, v = Z === g.BRd.DARK, L = s.useMemo(() => (0, h.nP)(n.config.assets.questBarHero), [n]), O = s.useContext(l.S).reducedMotion.enabled, R = (0, h.Mi)(n, E.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = s.useRef(a), M = s.useRef(null);
   return s.useEffect(() => {
 if (L && null != M.current)
   return P.current !== a && (a ? M.current.play() : (M.current.pause(), M.current.currentTime = 0)), P.current = a, () => {
@@ -70,8 +70,8 @@ children: [
   }),
   (0, i.jsx)('div', {
     className: r()(T.overlay, {
-      [T.darkThemeGradient]: Z,
-      [T.lightThemeGradient]: !Z
+      [T.darkThemeGradient]: v,
+      [T.lightThemeGradient]: !v
     })
   }),
   (0, i.jsx)('div', {
@@ -119,7 +119,7 @@ children: [
             ref: e,
             className: T.partnerBranding,
             alt: n.config.messages.gameTitle,
-            src: (0, h.Gs)(n, v)
+            src: (0, h.Gs)(n, Z)
           })
         }),
         (0, i.jsx)('div', {

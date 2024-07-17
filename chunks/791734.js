@@ -38,10 +38,10 @@ children: [
     onItemSelect: s,
     className: d.tabs,
     children: n.map(e => {
-      let n = t.id === e.id,
+      let n = t === e.id,
         s = n ? g : null != h ? h : 'header-primary';
       return (0, i.jsx)(o.TabBar.Item, {
-        id: e,
+        id: e.id,
         color: h,
         'aria-label': e.label,
         className: a()(d.tab, {

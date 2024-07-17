@@ -36,13 +36,13 @@ isAcceptLoading: f,
 isRejectLoading: C,
 isUserProfileLoading: N,
 isOptimisticAccepted: A,
-isOptimisticRejected: v
+isOptimisticRejected: Z
   } = (0, d.m)({
 user: n,
 onAcceptSuccess: p,
 onRejectSuccess: g,
 onError: m
-  }), Z = f || C || N || A || v;
+  }), v = f || C || N || A || Z;
   return (0, i.jsxs)('div', {
 className: E.container,
 children: [
@@ -61,8 +61,8 @@ children: [
         onClick: e => {
           e.stopPropagation(), S(h.id);
         },
-        disabled: Z,
-        submitting: C || v,
+        disabled: v,
+        submitting: C || Z,
         children: _.Z.Messages.MESSAGE_REQUEST_IGNORE
       }),
       (0, i.jsx)(a.Button, {
@@ -72,7 +72,7 @@ children: [
         onClick: e => {
           e.stopPropagation(), T(h.id);
         },
-        disabled: Z,
+        disabled: v,
         submitting: f || N || A,
         children: _.Z.Messages.MESSAGE_REQUEST_ACCEPT
       })

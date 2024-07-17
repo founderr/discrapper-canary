@@ -22,8 +22,8 @@ var a = n(481060),
   C = n(179645),
   N = n(701476),
   A = n(785997),
-  v = n(981631),
-  Z = n(188785),
+  Z = n(981631),
+  v = n(188785),
   L = n(630724);
 
 function O() {
@@ -104,24 +104,24 @@ e = [{
           onSlideChange: t
         });
       }, {
-        onCloseRequest: v.dG4,
+        onCloseRequest: Z.dG4,
         onCloseCallback: e,
         modalKey: i
       });
     },
-    predicate: () => R() && !Z.a
+    predicate: () => R() && !v.a
   },
   {
     key: 'New User Age Gate',
     open: c.i,
-    predicate: () => x && !R() && !Z.a
+    predicate: () => x && !R() && !v.a
   },
   {
     key: 'Claim Account Modal',
     open: e => c.j(S.isPlatformEmbedded, e),
     predicate: () => {
       var e;
-      return !l && null != p.default.getCurrentUser() && !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !Z.a && !(0, u.g)('new_user_manager');
+      return !l && null != p.default.getCurrentUser() && !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !v.a && !(0, u.g)('new_user_manager');
     }
   },
   {
@@ -129,7 +129,7 @@ e = [{
     open: e => (0, d.hk)(O, null != e ? e : void 0),
     predicate: () => {
       var e;
-      return l && !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !Z.a;
+      return l && !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !v.a;
     }
   },
   {

@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(594174),
   N = n(630388),
   f = n(74538),
-  p = n(566006),
-  C = n(981631),
+  C = n(566006),
+  p = n(981631),
   g = n(185923),
   S = n(474936),
   A = n(689938),
@@ -46,8 +46,8 @@ let {
   useChatFontScaling: s
 } = this.props, {
   isReactionPickerActive: l
-} = this.state, o = t.state === C.yb.SENDING, c = e === p.O.BURST;
-if (o || (0, N.yE)(t.flags, C.iLy.EPHEMERAL))
+} = this.state, o = t.state === p.yb.SENDING, c = e === C.O.BURST;
+if (o || (0, N.yE)(t.flags, p.iLy.EPHEMERAL))
   return null;
 let E = h.default.getCurrentUser(),
   I = (0, f.I5)(E),
@@ -126,12 +126,12 @@ super(...e), x(this, 'state', {
   } = this.props;
   e.stopPropagation();
   let i = h.default.getCurrentUser();
-  t === p.O.BURST && !(0, f.I5)(i) && (0, E.openBurstReactionsUpsellModal)({
+  t === C.O.BURST && !(0, f.I5)(i) && (0, E.openBurstReactionsUpsellModal)({
     analytics: {
       type: S.cd.BURST_REACTION_UPSELL,
-      page: null != n.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
+      page: null != n.getGuildId() ? p.ZY5.GUILD_CHANNEL : p.ZY5.DM_CHANNEL,
       section: (0, m.s4)(n),
-      object: C.qAy.INLINE_REACTION_PICKER_UPSELL
+      object: p.qAy.INLINE_REACTION_PICKER_UPSELL
     }
   }), this.handleReactionPickerToggle();
 }), x(this, 'renderReactionPopout', e => {
@@ -143,11 +143,11 @@ super(...e), x(this, 'state', {
     message: s
   } = this.props, r = {
     openPopoutType: 'message_reaction_emoji_picker',
-    ...n === p.O.BURST && {
+    ...n === C.O.BURST && {
       openPopoutType: 'message_super_reaction_emoji_picker',
-      page: null != a.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
+      page: null != a.getGuildId() ? p.ZY5.GUILD_CHANNEL : p.ZY5.DM_CHANNEL,
       section: (0, m.s4)(a),
-      object: C.qAy.REACTION_RAIL
+      object: p.qAy.REACTION_RAIL
     }
   }, l = (0, i.jsx)(T.$, {
     closePopout: t,

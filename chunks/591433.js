@@ -33,26 +33,26 @@ selectedTab: r,
 searchResultsQuery: f,
 onGuildCardSeen: C,
 onGuildCardClick: N
-  } = e, A = (0, c.ZP)(), v = s.useContext(E.AnalyticsContext), [Z, L] = s.useState((0, d.P)()), O = (0, l.e7)([_.ZP], () => _.ZP.isFetchingSearch()), R = (0, l.e7)([_.ZP], () => _.ZP.getDiscoverableGuilds().search), x = (0, I.lg)(r), b = null !== (n = null === (t = R[f]) || void 0 === t ? void 0 : t[x]) && void 0 !== n ? n : T;
+  } = e, A = (0, c.ZP)(), Z = s.useContext(E.AnalyticsContext), [v, L] = s.useState((0, d.P)()), O = (0, l.e7)([_.ZP], () => _.ZP.isFetchingSearch()), R = (0, l.e7)([_.ZP], () => _.ZP.getDiscoverableGuilds().search), x = (0, I.lg)(r), b = null !== (n = null === (t = R[f]) || void 0 === t ? void 0 : t[x]) && void 0 !== n ? n : T;
   s.useEffect(() => {
 L((0, d.P)());
   }, [f]);
   let P = s.useCallback(e => {
 S({
   loadId: a,
-  searchId: Z,
+  searchId: v,
   query: f,
   guildResults: b.guilds,
-  analyticsContext: v,
+  analyticsContext: Z,
   categoryId: x,
   isTagSearch: !1
 }), C(e);
   }, [
-v,
+Z,
 x,
 a,
 C,
-Z,
+v,
 b.guilds,
 f
   ]);

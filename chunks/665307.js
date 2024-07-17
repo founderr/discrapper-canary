@@ -24,8 +24,8 @@ var i, s = n(735250),
   C = n(151011),
   N = n(626135),
   A = n(780570),
-  v = n(624138),
-  Z = n(645818),
+  Z = n(624138),
+  v = n(645818),
   L = n(981631),
   O = n(689938),
   R = n(895220);
@@ -38,8 +38,8 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let b = (0, v.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
-  P = (0, v.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let b = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
+  P = (0, Z.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
   M = Object.freeze({
 [L.iEv.PLATFORM]: 'Platform',
 [L.iEv.LAST_PLAYED]: 'Last Played',
@@ -157,7 +157,7 @@ return (0, s.jsx)(_.Tooltip, {
               icon: _.ScreenSlashIcon,
               tooltip: O.Z.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
             }),
-            (0, s.jsx)(Z.Z, {
+            (0, s.jsx)(v.Z, {
               className: l()(R.settingIcon, {
                 [R.hidden]: !e.supportsCloudSync
               }),

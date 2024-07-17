@@ -38,13 +38,13 @@ p
 acceptMessageRequest: C,
 isAcceptLoading: N,
 isUserProfileLoading: A,
-isOptimisticAccepted: v
+isOptimisticAccepted: Z
   } = (0, _.m)({
 user: n,
 onAcceptSuccess: f,
 onRejectSuccess: S,
 onError: T
-  }), Z = N || A, L = Z || v;
+  }), v = N || A, L = v || Z;
   return (0, i.jsxs)('div', {
 className: m.container,
 children: [
@@ -64,7 +64,7 @@ children: [
           C(g.id), e.stopPropagation();
         },
         disabled: L,
-        submitting: Z,
+        submitting: v,
         children: I.Z.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
       }),
       (0, i.jsx)(h.Z, {

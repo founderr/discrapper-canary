@@ -21,8 +21,8 @@ var i = n(735250),
   C = n(374023),
   N = n(661599),
   A = n(923608),
-  v = n(617899),
-  Z = n(8521),
+  Z = n(617899),
+  v = n(8521),
   L = n(760326),
   O = n(536687),
   R = n(652785),
@@ -72,7 +72,7 @@ children: e => {
           markAsDismissed: a
         });
       case r.z.CHANNEL_NOTICE_INVITE:
-        return (0, i.jsx)(v.Z, {
+        return (0, i.jsx)(Z.Z, {
           guild: n,
           markAsDismissed: a
         });
@@ -132,7 +132,7 @@ case O.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
     guild: t
   });
 case O.R.MAX_MEMBER_COUNT:
-  return (0, i.jsx)(Z.Z, {
+  return (0, i.jsx)(v.Z, {
     guild: t
   });
 case O.R.GUILD_LIVE_CHANNEL:

@@ -21,8 +21,8 @@ var i = n(735250),
   C = n(40851),
   N = n(317381),
   A = n(596040),
-  v = n(588580),
-  Z = n(374065),
+  Z = n(588580),
+  v = n(374065),
   L = n(451576),
   O = n(938655),
   R = n(403404),
@@ -75,8 +75,8 @@ var i = n(735250),
   eC = n(285952),
   eN = n(976401),
   eA = n(333454),
-  ev = n(626135),
-  eZ = n(63063),
+  eZ = n(626135),
+  ev = n(63063),
   eL = n(51144),
   eO = n(594117),
   eR = n(226323),
@@ -97,7 +97,7 @@ writable: !0
 
 function ej(e) {
   let t = e.currentTarget;
-  ev.default.track(ex.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
+  eZ.default.track(ex.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
 text: t.text,
 href: t.href,
 location: {
@@ -109,7 +109,7 @@ location: {
 function eU() {
   let e = s.useRef(null);
   (0, I.useFocusLock)(e), s.useEffect(() => {
-ev.default.track(ex.rMx.OPEN_POPOUT, {
+eZ.default.track(ex.rMx.OPEN_POPOUT, {
   type: ex.jXE.NOISE_CANCELLATION_POPOUT
 });
   }, []);
@@ -156,7 +156,7 @@ children: [
         })
       }),
       (0, i.jsx)(I.Anchor, {
-        href: eZ.Z.getArticleURL(ex.BhN.NOISE_SUPPRESSION),
+        href: ev.Z.getArticleURL(ex.BhN.NOISE_SUPPRESSION),
         className: eM.krispLink,
         onClick: e => ej(e),
         children: eP.Z.Messages.LEARN_MORE
@@ -202,7 +202,7 @@ p
   ]), S = c || n || u, {
 Component: f,
 play: A,
-events: v
+events: Z
   } = (0, E.o)(l.enabled ? 'disable' : 'enable');
   return s.useEffect(() => () => A(), [
 l.enabled,
@@ -262,11 +262,11 @@ children: e => {
           },
           onMouseEnter: () => {
             var t, n;
-            null === (t = e.onMouseEnter) || void 0 === t || t.call(e), null === (n = d.onMouseEnter) || void 0 === n || n.call(d), v.onMouseEnter();
+            null === (t = e.onMouseEnter) || void 0 === t || t.call(e), null === (n = d.onMouseEnter) || void 0 === n || n.call(d), Z.onMouseEnter();
           },
           onMouseLeave: () => {
             var t;
-            null === (t = e.onMouseLeave) || void 0 === t || t.call(e), v.onMouseLeave();
+            null === (t = e.onMouseLeave) || void 0 === t || t.call(e), Z.onMouseLeave();
           },
           onContextMenu: t => {
             var n;
@@ -302,11 +302,11 @@ channel: t,
 enableActivities: n
   } = e, s = (0, C.bp)(), {
 analyticsLocations: a
-  } = (0, b.ZP)(), l = s === ex.IlC.POPOUT, o = (0, Z.KF)(t.id), c = (0, Z.g5)(o), [_] = (0, d.e7)([N.ZP], () => null != t.id && '' !== t.id ? N.ZP.getEmbeddedActivitiesForChannel(t.id) : N.i6), {
+  } = (0, b.ZP)(), l = s === ex.IlC.POPOUT, o = (0, v.KF)(t.id), c = (0, v.g5)(o), [_] = (0, d.e7)([N.ZP], () => null != t.id && '' !== t.id ? N.ZP.getEmbeddedActivitiesForChannel(t.id) : N.i6), {
 userInActivity: E
   } = (0, d.cj)([N.ZP], () => ({
 userInActivity: null != N.ZP.getSelfEmbeddedActivityForChannel(t.id)
-  })), h = (0, f.O)(), m = (0, v.a)(), g = o !== Z.jy.CAN_LAUNCH, {
+  })), h = (0, f.O)(), m = (0, Z.a)(), g = o !== v.jy.CAN_LAUNCH, {
 Component: p,
 events: T
   } = (0, u.s)();
@@ -383,17 +383,17 @@ S = (0, es.E)(n, c, u);
   let f = null != T || S.length > 0,
 C = E ? eP.Z.Messages.SHARE_YOUR_SCREEN : eP.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
 A = m || l || g,
-v = null != T,
+Z = null != T,
 {
-  Component: Z,
+  Component: v,
   events: L,
   play: O
-} = (0, _.P)(v ? 'disable' : 'enable');
+} = (0, _.P)(Z ? 'disable' : 'enable');
   s.useEffect(() => () => O(), [
 O,
-v
+Z
   ]);
-  let R = (0, i.jsx)(Z, {
+  let R = (0, i.jsx)(v, {
 color: 'currentColor',
 className: r()(eM.buttonIcon, {
   [eM.withText]: !A
@@ -787,7 +787,7 @@ S = ee.Fg.useSetting(),
   null,
   null != o ? ef.ZP.getVoiceStatesForChannel(o) : null
 ], [o]),
-v = s.useMemo(() => {
+Z = s.useMemo(() => {
   var e, t;
   return null !== (t = null !== (e = null == f ? void 0 : f.map(e => {
     let {
@@ -806,7 +806,7 @@ v = s.useMemo(() => {
   C,
   N
 ]),
-[Z, O] = s.useState(!1);
+[v, O] = s.useState(!1);
   s.useEffect(() => {
 (p || T) && O(!1);
   }, [
@@ -837,13 +837,13 @@ children: (0, i.jsxs)('div', {
       hasVideo: h,
       selfStream: m,
       hasLayers: g,
-      voiceStates: v,
+      voiceStates: Z,
       showVoiceStates: S,
       shouldShowVoicePanelIntroduction: E,
       isPrivateChannelWithEnabledActivities: D,
       isBroadcasting: k
     }),
-    !Z && p && null != c ? (0, i.jsxs)('div', {
+    !v && p && null != c ? (0, i.jsxs)('div', {
       className: eM.viewAsRolesWarning,
       children: [
         (0, i.jsx)(I.Text, {

@@ -1,6 +1,6 @@
 n.d(t, {
   DL: function() {
-return Z;
+return v;
   }
 }), n(411104);
 var i = n(433517),
@@ -83,7 +83,7 @@ null != e && (s.client_heartbeat_current_game_id = e.id, s.client_heartbeat_curr
 let N = null,
   A = !0;
 
-function v() {
+function Z() {
   if (A || null != N && N !== h.hes.DISCONNECTED && N !== h.hes.RTC_DISCONNECTED)
 try {
   S();
@@ -99,10 +99,10 @@ try {
 }();
 }
 
-function Z() {
+function v() {
   _.Z.addBreadcrumb({
 message: 'Initializing SessionHeartbeatScheduler'
-  }), o.Z.addChangeListener(O), s.Z.subscribe('WINDOW_FOCUS', R), s.Z.subscribe('APP_STATE_UPDATE', x), s.Z.subscribe('LOGIN_SUCCESS', L), v();
+  }), o.Z.addChangeListener(O), s.Z.subscribe('WINDOW_FOCUS', R), s.Z.subscribe('APP_STATE_UPDATE', x), s.Z.subscribe('LOGIN_SUCCESS', L), Z();
 }
 
 function L() {
@@ -111,19 +111,19 @@ function L() {
 
 function O() {
   let e = o.Z.getState();
-  N !== e && (N = e, v());
+  N !== e && (N = e, Z());
 }
 
 function R(e) {
   let {
 focused: t
   } = e;
-  A = t, v();
+  A = t, Z();
 }
 
 function x(e) {
   let {
 state: t
   } = e;
-  A = t === h.$7l.ACTIVE, v();
+  A = t === h.$7l.ACTIVE, Z();
 }

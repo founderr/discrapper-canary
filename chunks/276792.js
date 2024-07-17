@@ -29,7 +29,7 @@ analyticsLocation: S,
 isLightTheme: f
   } = e, C = 'AnnouncementModalVariant1_'.concat(s.z[Number(g.dismissKey)]), {
 onClose: N
-  } = p, A = null != g.button && '' !== g.button.copy ? g.button.copy : h.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN, v = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button', Z = (null === (n = g.button) || void 0 === n ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? () => {
+  } = p, A = null != g.button && '' !== g.button.copy ? g.button.copy : h.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN, Z = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button', v = (null === (n = g.button) || void 0 === n ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? () => {
 (0, o.uL)(E.Z5c.APPLICATION_STORE), N();
   } : () => (0, l.Z)({
 subscriptionTier: _.Si.TIER_2,
@@ -92,10 +92,10 @@ button: () => {
     onClick: () => {
       c.default.track(E.rMx.CHANGE_LOG_CTA_CLICKED, {
         change_log_id: C,
-        cta_type: v,
+        cta_type: Z,
         seconds_open: Math.round((Date.now() - e) / 1000),
         target: C
-      }), Z();
+      }), v();
     },
     children: [
       (0, i.jsx)('img', {

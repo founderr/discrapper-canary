@@ -22,7 +22,7 @@ n = (0, l.e7)([I.Z], () => I.Z.getHistorySnapshot(), []),
 [s, f] = a.useState(!1);
   if (null == t)
 return null;
-  let p = async () => {
+  let C = async () => {
 f(!0);
 try {
   E.mT(t.id), await c.Z.joinGuild(t.id, {
@@ -67,7 +67,7 @@ children: [
     color: o.Button.Colors.WHITE,
     size: o.Button.Sizes.NONE,
     submitting: s,
-    onClick: p,
+    onClick: C,
     children: T.Z.Messages.LURKER_MODE_NAG_BAR_BUTTON.format({
       guild: t.name
     })

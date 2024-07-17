@@ -25,15 +25,15 @@ var i = n(735250),
   C = n(143614),
   N = n(981631),
   A = n(70722),
-  v = n(689938),
-  Z = n(106963);
+  Z = n(689938),
+  v = n(106963);
 
 function L(e) {
   let {
 users: t
   } = e;
   return (0, i.jsxs)('div', {
-className: Z.viewers,
+className: v.viewers,
 children: [
   (0, i.jsx)(l.VoiceNormalIcon, {
     size: 'custom',
@@ -80,12 +80,12 @@ let n = m.default.getId(),
   s = t.length >= N.keq;
 return {
   buttonColor: s ? l.ButtonColors.RED : l.ButtonColors.GREEN,
-  buttonCTA: s ? v.Z.Messages.BROADCAST_FULL : i ? v.Z.Messages.VIEW_BROADCAST : v.Z.Messages.JOIN_BROADCAST,
+  buttonCTA: s ? Z.Z.Messages.BROADCAST_FULL : i ? Z.Z.Messages.VIEW_BROADCAST : Z.Z.Messages.JOIN_BROADCAST,
   disabled: s
 };
   }(r, k);
   return (0, i.jsxs)('div', {
-className: Z.container,
+className: v.container,
 children: [
   (0, i.jsx)(l.Avatar, {
     size: l.AvatarSizes.SIZE_32,
@@ -93,7 +93,7 @@ children: [
     'aria-label': D
   }),
   (0, i.jsxs)('div', {
-    className: Z.details,
+    className: v.details,
     children: [
       (0, i.jsx)(l.Text, {
         variant: 'text-md/semibold',
@@ -102,12 +102,12 @@ children: [
       (0, i.jsx)(l.Text, {
         variant: 'text-sm/medium',
         color: 'header-secondary',
-        children: null != M ? v.Z.Messages.STREAMING.format({
+        children: null != M ? Z.Z.Messages.STREAMING.format({
           name: M.name
-        }) : v.Z.Messages.STREAMING_A_GAME
+        }) : Z.Z.Messages.STREAMING_A_GAME
       }),
       (0, i.jsxs)('div', {
-        className: Z.activity,
+        className: v.activity,
         children: [
           k.length > 0 && (0, i.jsx)(L, {
             users: k
@@ -127,9 +127,9 @@ children: [
             },
             color: w,
             size: l.ButtonSizes.SMALL,
-            className: Z.button,
+            className: v.button,
             disabled: H,
-            innerClassName: Z.innerButton,
+            innerClassName: v.innerButton,
             children: [
               (0, i.jsx)(l.MicrophoneArrowRightIcon, {
                 size: 'custom',
@@ -145,7 +145,7 @@ children: [
     ]
   }),
   null != j ? (0, i.jsx)(h.Z, {
-    className: Z.stream,
+    className: v.stream,
     stream: {
       streamType: A.lo.CALL,
       ownerId: r,
@@ -154,7 +154,7 @@ children: [
   }) : (0, i.jsx)(E.Z, {
     game: M,
     size: E.Z.Sizes.LARGE,
-    className: Z.gameIcon
+    className: v.gameIcon
   })
 ]
   });

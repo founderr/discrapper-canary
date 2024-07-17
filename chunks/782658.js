@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(610699),
   N = n(313876),
   f = n(778333),
-  p = n(949981),
-  C = n(680668),
+  C = n(949981),
+  p = n(680668),
   g = n(143708),
   S = n(358595),
   A = n(563917),
@@ -74,7 +74,7 @@ U = () => {
     context: x('Invite Button Embed')
   });
 },
-y = (0, i.jsx)(C.Z, {
+y = (0, i.jsx)(p.Z, {
   onTransitionToInviteChannel: j,
   onAcceptInstantInvite: U,
   currentUserId: b,
@@ -102,7 +102,7 @@ case O.r2o.ERROR:
 default:
   switch ((0, u.VR)(L)) {
     case u.wx.GROUP_DM:
-      y = (0, i.jsx)(p.Z, {
+      y = (0, i.jsx)(C.Z, {
         onTransitionToInviteChannel: j,
         onAcceptInstantInvite: U,
         currentUserId: b,

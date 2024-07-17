@@ -25,8 +25,8 @@ var i = n(735250),
   C = n(606304),
   N = n(979651),
   A = n(938475),
-  v = n(823379),
-  Z = n(557177),
+  Z = n(823379),
+  v = n(557177),
   L = n(981631);
 
 function O(e, t, n, i) {
@@ -35,7 +35,7 @@ let s = t(),
   a = new l.Fh(e, () => {
     let e = t(),
       a = n(s, e);
-    null != a && !T.Z.isSoundDisabled(a) && (0, Z.GN)(a, null != i ? i : 0.4), s = e;
+    null != a && !T.Z.isSoundDisabled(a) && (0, v.GN)(a, null != i ? i : 0.4), s = e;
   });
 return a.attach('useSound'), () => a.detach();
   });
@@ -237,15 +237,15 @@ let e = f.Z.getVoiceChannelId(),
   t = f.Z.getChannelId(),
   n = o.ZP.getConnectedActivityChannelId(),
   i = I.default.getId(),
-  s = (0, v.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
-  a = (0, v.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
-  r = (0, v.lm)(n) ? o.ZP.getEmbeddedActivitiesForChannel(n) : o.i6;
+  s = (0, Z.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
+  a = (0, Z.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
+  r = (0, Z.lm)(n) ? o.ZP.getEmbeddedActivitiesForChannel(n) : o.i6;
 return {
   voiceChannelId: e,
   currentUserId: i,
   channelActivities: s,
   connectedChannelActivities: r,
-  userConnectedActivity: (0, v.lm)(n) ? o.ZP.getSelfEmbeddedActivityForChannel(n) : null,
+  userConnectedActivity: (0, Z.lm)(n) ? o.ZP.getSelfEmbeddedActivityForChannel(n) : null,
   voiceChannelActivities: a
 };
   }, (e, t) => {
@@ -258,15 +258,15 @@ let n, {
   voiceChannelActivities: o
 } = t;
 let c = o.some(e => e.applicationId === (null == l ? void 0 : l.applicationId) && e.launchId === l.launchId);
-if ((0, v.lm)(i)) {
+if ((0, Z.lm)(i)) {
   let t = e.voiceChannelActivities.find(e => e.userIds.has(s)),
     i = o.find(e => e.userIds.has(s));
-  e.voiceChannelActivities.length < o.length && (0, v.lm)(e.voiceChannelId) && (n = 'activity_launch'), void 0 === i && (0, v.lm)(t) && (n = 'activity_end'), void 0 === t && (0, v.lm)(i) && i.userIds.size > 1 && (n = 'activity_user_join'), (0, v.lm)(i) && (0, v.lm)(t) && (i.userIds.size > t.userIds.size && (n = 'activity_user_join'), i.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+  e.voiceChannelActivities.length < o.length && (0, Z.lm)(e.voiceChannelId) && (n = 'activity_launch'), void 0 === i && (0, Z.lm)(t) && (n = 'activity_end'), void 0 === t && (0, Z.lm)(i) && i.userIds.size > 1 && (n = 'activity_user_join'), (0, Z.lm)(i) && (0, Z.lm)(t) && (i.userIds.size > t.userIds.size && (n = 'activity_user_join'), i.userIds.size < t.userIds.size && (n = 'activity_user_left'));
 }
 if (!c) {
   e.connectedChannelActivities.length < r.length && e.channelActivities.length < a.length && (n = 'activity_launch');
   let t = e.userConnectedActivity;
-  null == l && (0, v.lm)(t) && (n = 'activity_end'), (0, v.lm)(l) && (0, v.lm)(t) && (l.userIds.size > t.userIds.size && (n = 'activity_user_join'), l.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+  null == l && (0, Z.lm)(t) && (n = 'activity_end'), (0, Z.lm)(l) && (0, Z.lm)(t) && (l.userIds.size > t.userIds.size && (n = 'activity_user_join'), l.userIds.size < t.userIds.size && (n = 'activity_user_left'));
 }
 return n;
   }), null;

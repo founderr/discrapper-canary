@@ -25,8 +25,8 @@ var i = n(735250),
   C = n(118379),
   N = n(652515),
   A = n(544978),
-  v = n(194729),
-  Z = n(668940),
+  Z = n(194729),
+  v = n(668940),
   L = n(831565),
   O = n(724383),
   R = n(705334),
@@ -105,7 +105,7 @@ webpackId: 545918,
 name: 'MemberSafetyPage',
 renderLoader: eS
   }),
-  ev = (0, c.Un)({
+  eZ = (0, c.Un)({
 createPromise: () => Promise.all([
   n.e('96427'),
   n.e('44156'),
@@ -117,7 +117,7 @@ webpackId: 603072,
 name: 'ChannelsAndRolesPage',
 renderLoader: eS
   }),
-  eZ = (0, c.Un)({
+  ev = (0, c.Un)({
 createPromise: () => Promise.all([
   n.e('96427'),
   n.e('44156'),
@@ -180,16 +180,16 @@ if (null != s && null != a && (0, em.AB)(a))
         guildId: s
       });
     case em.oC.CHANNEL_BROWSER:
-      return (0, i.jsx)(ev, {
+      return (0, i.jsx)(eZ, {
         guildId: s,
         selectedSection: eg.l7.BROWSE
       });
     case em.oC.GUILD_ONBOARDING:
-      return (0, i.jsx)(eZ, {
+      return (0, i.jsx)(ev, {
         guildId: s
       });
     case em.oC.CUSTOMIZE_COMMUNITY:
-      return (0, i.jsx)(ev, {
+      return (0, i.jsx)(eZ, {
         guildId: s,
         selectedSection: eg.l7.CUSTOMIZE
       });
@@ -224,7 +224,7 @@ if (function() {
   }() || function() {
     return window.location.pathname.startsWith(eI.Z5c.GUILD_DISCOVERY) || (0, q.OG)();
   }())
-  return s ? (0, i.jsx)(R._, {}) : (0, i.jsx)(Z.Z, {});
+  return s ? (0, i.jsx)(R._, {}) : (0, i.jsx)(v.Z, {});
 return null != e ? (0, i.jsx)(y.Z, {
   selectedChannelId: n,
   guildId: e
@@ -248,7 +248,7 @@ let ex = e => (0, i.jsx)(eL, {
   }),
   eb = e => {
 let t = null != e && e.length > 0 && e.startsWith('?') ? e.split('?')[1] : null;
-return (0, L.Sv)('sidebar') ? (0, i.jsx)(O.A, {}) : (0, i.jsx)(v.Z, {
+return (0, L.Sv)('sidebar') ? (0, i.jsx)(O.A, {}) : (0, i.jsx)(Z.Z, {
   searchRoute: t
 });
   },

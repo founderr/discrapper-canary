@@ -36,7 +36,7 @@ switch (e) {
     return S.fW.Discover;
 }
   },
-  v = () => {
+  Z = () => {
 let {
   currentCategoryId: e,
   isViewingSearchResults: t
@@ -46,7 +46,7 @@ let {
 })), n = (0, h.Z)(o.Z.QUEST_HOME_PAGE), c = (0, a.e7)([m.Z], () => m.Z.getDiscoveryCategories(), [], m.j), T = null == c ? void 0 : c.map(e => ({
   ...e,
   icon: A(e.categoryId)
-})), v = e => {
+})), Z = e => {
   (0, l.uY)(e, !0), u.Z.closeSidebar(), t && (0, l.AQ)(), (0, _.OG)() && e !== S.Gj.Quests && (0, s.uL)(f.Z5c.GUILD_DISCOVERY), !(0, _.OG)() && e === S.Gj.Quests && (0, s.uL)(f.Z5c.QUEST_HOME);
 };
 return (0, i.jsxs)(r.Scroller, {
@@ -57,17 +57,17 @@ return (0, i.jsxs)(r.Scroller, {
     }),
     (0, i.jsx)(g.Z, {
       categories: T,
-      handleCategorySelect: v,
+      handleCategorySelect: Z,
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t
     }),
     (0, i.jsx)(d.Z, {
-      handleCategorySelect: v,
+      handleCategorySelect: Z,
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t
     }),
     n && (0, i.jsx)(E.Z, {
-      onClick: () => v(S.Gj.Quests),
+      onClick: () => Z(S.Gj.Quests),
       isSelected: e === S.Gj.Quests
     })
   ]
@@ -82,5 +82,5 @@ includeConverted: !0
   }), t = e.length > 0, {
 clanDiscoveryEnabled: n
   } = (0, c.nk)('guild_discovery_sidebar');
-  return t || n ? (0, i.jsx)(T.Z, {}) : (0, i.jsx)(v, {});
+  return t || n ? (0, i.jsx)(T.Z, {}) : (0, i.jsx)(Z, {});
 };

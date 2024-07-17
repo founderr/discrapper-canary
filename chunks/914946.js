@@ -72,8 +72,8 @@ var i, s = n(729594),
   C = n(979651),
   N = n(70956),
   A = n(5192),
-  v = n(226951),
-  Z = n(996106),
+  Z = n(226951),
+  v = n(996106),
   L = n(863141),
   O = n(186901),
   R = n(981631);
@@ -86,7 +86,7 @@ let t = e.split('.'),
   n = t[t.length - 1];
 return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
   }(),
-  P = new RegExp('^'.concat(v.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(v.Z.escape(b), '|discordapp.com|discord.com)$')),
+  P = new RegExp('^'.concat(Z.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(Z.Z.escape(b), '|discordapp.com|discord.com)$')),
   M = 1 * N.Z.Millis.MINUTE,
   D = {};
 
@@ -268,11 +268,11 @@ if ('string' == typeof n) {
   if (e.transport === O.He.POST_MESSAGE) {
     let e = (0, d.Z)(t);
     if (null == e || !U(n, [e]))
-      throw new Z.Z({
+      throw new v.Z({
         closeCode: R.$VG.INVALID_ORIGIN
       }, 'Invalid Origin');
   } else if (!U(n, s))
-    throw new Z.Z({
+    throw new v.Z({
       closeCode: R.$VG.INVALID_ORIGIN
     }, 'Invalid Origin');
 }
@@ -284,7 +284,7 @@ e.application = {
   flags: c
 };
   }, () => {
-throw new Z.Z({
+throw new v.Z({
   closeCode: R.$VG.INVALID_CLIENTID
 }, 'Invalid Client ID');
   });
@@ -350,14 +350,14 @@ self_deaf: n.deaf
 
 function J(e) {
   if (e !== O.He.POST_MESSAGE)
-throw new Z.Z({
+throw new v.Z({
   errorCode: R.lTL.INVALID_COMMAND
 }, 'command not available from "'.concat(e, ' transport'));
 }
 
 function $(e) {
   if (null == e.id)
-throw new Z.Z({
+throw new v.Z({
   errorCode: R.lTL.INVALID_COMMAND
 }, 'Invalid application');
   return e.id;

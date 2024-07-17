@@ -22,7 +22,7 @@ var i = n(735250),
   N = n(689938),
   A = n(81772);
 
-function v(e, t, n) {
+function Z(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -30,7 +30,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class Z extends s.PureComponent {
+class v extends s.PureComponent {
   renderMemberInfo() {
 let {
   approximateMemberCount: e,
@@ -135,7 +135,7 @@ return a ? n ? (h = c.Button.Looks.OUTLINED, I = A.buttonColorInGuild, u = (0, i
 });
   }
   constructor(...e) {
-super(...e), v(this, 'handleJoinOrView', async () => {
+super(...e), Z(this, 'handleJoinOrView', async () => {
   let {
     guild: e,
     skuId: t,
@@ -153,7 +153,7 @@ super(...e), v(this, 'handleJoinOrView', async () => {
         source: C.vtS.APPLICATION_STORE
       }), s();
     } catch {}
-}), v(this, 'handleLogin', () => {
+}), Z(this, 'handleLogin', () => {
   let e = {
     redirect_to: C.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId)
   };
@@ -174,4 +174,4 @@ guild: t
 isInGuild: null != p.Z.getGuild(t.id) && !n,
 isLurking: n
   };
-})(Z));
+})(v));

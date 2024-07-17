@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(100527),
   N = n(906732),
   f = n(835473),
-  p = n(471445),
-  C = n(955415),
+  C = n(471445),
+  p = n(955415),
   g = n(601964),
   S = n(592125),
   A = n(430824),
@@ -90,7 +90,7 @@ isStacked: a,
 hasEnded: s
   } = e;
   if (null != t && null != n) {
-let e = (0, p.KS)(t, n);
+let e = (0, C.KS)(t, n);
 return (0, i.jsxs)('div', {
   className: r()(b.channel, {
     [b.stacked]: a,
@@ -134,7 +134,7 @@ function k(e) {
   var t, n;
   let s, l, {
   invite: d,
-  getAcceptInviteContext: p
+  getAcceptInviteContext: C
 } = e,
 {
   approximate_member_count: x,
@@ -202,7 +202,7 @@ W = new g.ZP(d.guild);
 es = () => {
   _.Z.acceptInviteAndTransitionToInviteChannel({
     inviteKey: d.code,
-    context: p('Invite Button Embed'),
+    context: C('Invite Button Embed'),
     analyticsLocations: J
   });
 };
@@ -228,7 +228,7 @@ children: [
       })
     })
   }),
-  (0, i.jsxs)(C.Z, {
+  (0, i.jsxs)(p.Z, {
     className: r()(b.content, {
       [b.large]: w,
       [b.stacked]: H

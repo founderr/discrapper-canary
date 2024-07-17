@@ -38,7 +38,7 @@ e.stopPropagation(), l.Z.addRelationship({
     location: 'Friends'
   }
 });
-  }, A = p === I.Skl.OFFLINE ? I.Skl.UNKNOWN : p, v = n === I.OGo.PENDING_INCOMING ? m.Z.Messages.INCOMING_FRIEND_REQUEST : m.Z.Messages.OUTGOING_FRIEND_REQUEST;
+  }, A = p === I.Skl.OFFLINE ? I.Skl.UNKNOWN : p, Z = n === I.OGo.PENDING_INCOMING ? m.Z.Messages.INCOMING_FRIEND_REQUEST : m.Z.Messages.OUTGOING_FRIEND_REQUEST;
   return (0, i.jsx)(E.Z, {
 isFocused: T,
 user: t,
@@ -88,7 +88,7 @@ children: e => {
         hovered: e,
         showAccountIdentifier: !0,
         status: A,
-        subText: v,
+        subText: Z,
         className: g.userInfo
       }),
       (0, i.jsx)('div', {

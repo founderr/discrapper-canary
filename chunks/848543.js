@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return v;
+return Z;
   }
 }), n(47120);
 var i = n(735250),
@@ -26,12 +26,12 @@ var i = n(735250),
   N = n(689938),
   A = n(902569);
 
-function v(e) {
+function Z(e) {
   let {
 channel: t,
 iconClassName: a,
-className: v,
-innerClassName: Z,
+className: Z,
+innerClassName: v,
 ...L
   } = e, {
 mute: O,
@@ -84,12 +84,12 @@ children: t => (0, i.jsx)('div', {
   children: (0, i.jsx)(d.Button, {
     ...e,
     ...t,
-    className: r()(v, {
+    className: r()(Z, {
       [A.buttonActive]: P,
       [A.disabled]: b
     }),
-    wrapperClassName: v,
-    innerClassName: Z,
+    wrapperClassName: Z,
+    innerClassName: v,
     disabled: b,
     onClick: () => {
       var t, n;

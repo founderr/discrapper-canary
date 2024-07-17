@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(841762),
   N = n(336197),
   f = n(406432),
-  p = n(348238),
-  C = n(38267),
+  C = n(348238),
+  p = n(38267),
   g = n(484459),
   S = n(103575),
   A = n(695346),
@@ -46,7 +46,7 @@ message: y,
 channel: B
   } = e, k = (0, Z.J)(l, y), {
 setPopout: G
-  } = (0, C.Z)(y.id, b.d$), F = (0, p.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = a.useState(!1), [W, K] = a.useState((null == k ? void 0 : k.coverImage) == null), z = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, u.e7)([
+  } = (0, p.Z)(y.id, b.d$), F = (0, C.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = a.useState(!1), [W, K] = a.useState((null == k ? void 0 : k.coverImage) == null), z = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, u.e7)([
 R.ZP,
 O.default
   ], () => {

@@ -20,7 +20,7 @@ var r = n(756647),
   N = n(186901),
   A = n(981631);
 
-function v(e, t) {
+function Z(e, t) {
   if (null != e)
 p.default.track(A.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
   invite_code: null,
@@ -139,31 +139,31 @@ handler(e) {
   } = e;
   switch (f.ZP.focus(), t) {
     case N.jE.USER_SETTINGS:
-      null != n && ((0, I.dL)(A.Z5c.SETTINGS(n.section, n.subsection)), v(n.fingerprint, 'settings'));
+      null != n && ((0, I.dL)(A.Z5c.SETTINGS(n.section, n.subsection)), Z(n.fingerprint, 'settings'));
       break;
     case N.jE.CHANGELOG:
-      null != n && ((0, I.dL)(S.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)), v(n.fingerprint, 'changelog'));
+      null != n && ((0, I.dL)(S.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, 'changelog'));
       break;
     case N.jE.LIBRARY:
-      (0, I.dL)(A.Z5c.APPLICATION_LIBRARY), null != n && v(n.fingerprint, 'library');
+      (0, I.dL)(A.Z5c.APPLICATION_LIBRARY), null != n && Z(n.fingerprint, 'library');
       break;
     case N.jE.STORE_HOME:
-      (0, I.dL)(A.Z5c.APPLICATION_STORE), null != n && v(n.fingerprint, 'store');
+      (0, I.dL)(A.Z5c.APPLICATION_STORE), null != n && Z(n.fingerprint, 'store');
       break;
     case N.jE.STORE_LISTING:
-      null != n && ((0, I.dL)(A.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), v(n.fingerprint, 'store'));
+      null != n && ((0, I.dL)(A.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), Z(n.fingerprint, 'store'));
       break;
     case N.jE.PICK_GUILD_SETTINGS:
       null != n && ((0, I.dL)({
         pathname: A.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
         search: n.search
-      }), v(n.fingerprint, 'guild_settings'));
+      }), Z(n.fingerprint, 'guild_settings'));
       break;
     case N.jE.CHANNEL:
       null != n && ((0, I.dL)({
         pathname: A.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
         search: n.search
-      }), v(n.fingerprint, 'channel'));
+      }), Z(n.fingerprint, 'channel'));
   }
 }
   },

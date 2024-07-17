@@ -16,8 +16,8 @@ var i, s, a, r, l, o = n(442837),
   C = n(944486),
   N = n(981631);
 let A = 'ActivityTrackingStore',
-  v = 30 * m.Z.Millis.MINUTE,
-  Z = 5 * m.Z.Millis.MINUTE,
+  Z = 30 * m.Z.Millis.MINUTE,
+  v = 5 * m.Z.Millis.MINUTE,
   L = null !== (i = c.K.get(A)) && void 0 !== i ? i : {},
   O = {},
   R = !1;
@@ -33,7 +33,7 @@ function b(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
 n = Date.now(),
 i = null != e.updatedAt ? n - e.updatedAt : 0;
-  i > v + Z && (i = 0);
+  i > Z + v && (i = 0);
   let s = (0, g.OT)(e.applicationId, S.Z),
 a = C.Z.getVoiceChannelId(),
 r = p.default.getSessionId(),
@@ -51,7 +51,7 @@ sessionId: r,
 mediaSessionId: l
   }), e.updatedAt = n;
   let o = O[e.applicationId];
-  null == o && (o = O[e.applicationId] = new d.Xp()).start(v, () => b(e)), !t && (L[e.applicationId] = e, c.K.set(A, L));
+  null == o && (o = O[e.applicationId] = new d.Xp()).start(Z, () => b(e)), !t && (L[e.applicationId] = e, c.K.set(A, L));
 }
 
 function P() {

@@ -9,7 +9,7 @@ return O;
 return R;
   },
   dS: function() {
-return C;
+return p;
   },
   jY: function() {
 return A;
@@ -38,9 +38,9 @@ var i = n(735250),
   h = n(524444),
   N = n(981631),
   f = n(689938),
-  p = n(736984);
+  C = n(736984);
 
-function C(e) {
+function p(e) {
   let t = e.item.originalItem;
   return (0, h.Yi)({
 ...e,
@@ -65,7 +65,7 @@ n = a.useCallback(() => {
   var e;
   return (0, I.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, N.J0y.IS_CLIP) ? (0, i.jsxs)(l.DY, {
     text: f.Z.Messages.CLIPS_BETA_TAG_HOVER,
-    className: p.clipPill,
+    className: C.clipPill,
     children: [
       (0, i.jsx)(o.ClipsIcon, {
         size: 'xs',

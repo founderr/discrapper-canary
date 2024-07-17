@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return Z;
+return v;
   }
 });
 var i = n(735250),
@@ -25,14 +25,14 @@ var i = n(735250),
   C = n(687683),
   N = n(981631),
   A = n(689938),
-  v = n(553437);
+  Z = n(553437);
 
-function Z() {
+function v() {
   let e = s.useRef(null),
 t = (0, p.Z)(),
 n = (0, T.w)(),
 a = (0, I.V)(),
-Z = (0, d.N)(),
+v = (0, d.N)(),
 L = (0, u.Z)('message-requests-spam-list'),
 {
   channelId: O
@@ -66,8 +66,8 @@ h.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, {
   return (0, i.jsx)(f.Z, {
     index: l,
     className: r()({
-      [v.selected]: null != O && O === d,
-      [v.siblingSelected]: null != O && O === c
+      [Z.selected]: null != O && O === d,
+      [Z.siblingSelected]: null != O && O === c
     }),
     channel: o.channel,
     user: o.user,
@@ -79,15 +79,15 @@ h.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, {
   O
 ]),
 M = s.useCallback(() => (0, i.jsxs)(E.Z, {
-  className: v.sectionTitle,
+  className: Z.sectionTitle,
   children: [
     A.Z.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
       count: n
     }),
-    Z && n > 0 ? (0, i.jsxs)(i.Fragment, {
+    v && n > 0 ? (0, i.jsxs)(i.Fragment, {
       children: [
         (0, i.jsx)(c.Text, {
-          className: v.titleDivider,
+          className: Z.titleDivider,
           variant: 'eyebrow',
           color: 'header-secondary',
           tag: 'span',
@@ -98,7 +98,7 @@ M = s.useCallback(() => (0, i.jsxs)(E.Z, {
           look: c.ButtonLooks.LINK,
           color: c.ButtonColors.LINK,
           size: c.ButtonSizes.SMALL,
-          className: v.clearAllButton,
+          className: Z.clearAllButton,
           'aria-label': A.Z.Messages.MESSAGE_REQUESTS_CLEAR_ALL,
           children: A.Z.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })
@@ -108,7 +108,7 @@ M = s.useCallback(() => (0, i.jsxs)(E.Z, {
 }, 'message-requests-spam-title'), [
   n,
   b,
-  Z
+  v
 ]);
   return 0 === t.length ? (0, i.jsx)(S.Z, {
 section: C.pS.SPAM
@@ -122,7 +122,7 @@ children: (0, i.jsx)(l.SJ, {
       ...r
     } = n;
     return (0, i.jsx)(c.List, {
-      className: v.list,
+      className: Z.list,
       innerRole: a,
       innerAriaLabel: A.Z.Messages.MESSAGE_REQUESTS,
       ref: t => {

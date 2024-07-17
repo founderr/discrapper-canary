@@ -13,8 +13,8 @@ var i, a, s = n(735250),
   h = n(272008),
   N = n(113434),
   f = n(569984),
-  p = n(497505),
-  C = n(918701),
+  C = n(497505),
+  p = n(918701),
   g = n(796111),
   S = n(566078),
   A = n(340100),
@@ -72,7 +72,7 @@ questId: t.id,
 beforeRequest: () => {
   (0, T._3)({
     questId: t.id,
-    questContent: p.jn.GIFT_INVENTORY_FOR_YOU,
+    questContent: C.jn.GIFT_INVENTORY_FOR_YOU,
     questContentCTA: T.jZ.DEFIBRILLATOR
   }), i.startAnimation();
 },
@@ -83,7 +83,7 @@ renderTooltipText: u,
 buttonText: _
   } = r.useMemo(() => {
 let e = S.r.build(t.config).application.name,
-  n = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST),
+  n = (0, p.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST),
   i = a.join('\n'),
   r = () => (0, s.jsx)(s.Fragment, {
     children: a.map((e, t) => (0, s.jsx)(d.Text, {
@@ -142,7 +142,7 @@ questContentPosition: l,
 inGiftInventory: o,
 hasConsoleTasks: u,
 hasConsoleConnection: E
-  } = e, I = n >= 1, m = n >= 3, p = (0, N.z)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([f.Z], () => f.Z.isEnrolling(t.id)), R = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), x = function(e) {
+  } = e, I = n >= 1, m = n >= 3, C = (0, N.z)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([f.Z], () => f.Z.isEnrolling(t.id)), R = (0, p.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), x = function(e) {
 let {
   quest: t,
   progressState: n,
@@ -176,7 +176,7 @@ return r.useMemo(() => {
         return {
           text: Z.Z.Messages.QUESTS_CONNECT_CONSOLE,
           tooltipText: null,
-          onClick: () => (0, C.gI)({
+          onClick: () => (0, p.gI)({
             quest: t,
             showInline: (0, g.i)({
               location: v.dr.QUESTS_CARD
@@ -212,7 +212,7 @@ return r.useMemo(() => {
           ...e,
           text: Z.Z.Messages.COLLECTIBLES_USE_NOW
         };
-      else if ((0, C.vQ)(t.config))
+      else if ((0, p.vQ)(t.config))
         return {
           ...e,
           text: Z.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
@@ -242,7 +242,7 @@ isCollectibleQuest: i,
 questContentPosition: l,
 inGiftInventory: o
   });
-  if (u && I && E && !p && !m && o)
+  if (u && I && E && !C && !m && o)
 return (0, s.jsx)(U, {
   quest: t,
   useReducedMotion: S
@@ -303,9 +303,9 @@ else if (a)
   return 1;
 else
   return 0;
-  }(t), g = f >= 1, O = f >= 3, b = f >= 4, U = (0, C.Xv)(t.config), B = (0, x.uq)(n), k = n === p.jn.QUESTS_EMBED, G = l || _, {
+  }(t), g = f >= 1, O = f >= 3, b = f >= 4, U = (0, p.Xv)(t.config), B = (0, x.uq)(n), k = n === C.jn.QUESTS_EMBED, G = l || _, {
 xboxAndPlaystationAccounts: F
-  } = (0, N.z6)(), w = (0, C.$J)(t), V = g && !b && B, H = F.length > 0, Y = (0, N.t5)(t, v.dr.QUESTS_CARD, n), W = (0, c.e7)([E.default], () => E.default.locale), K = B && U, z = r && !O, Q = (0, s.jsx)(R.Z, {
+  } = (0, N.z6)(), w = (0, p.$J)(t), V = g && !b && B, H = F.length > 0, Y = (0, N.t5)(t, v.dr.QUESTS_CARD, n), W = (0, c.e7)([E.default], () => E.default.locale), K = B && U, z = r && !O, Q = (0, s.jsx)(R.Z, {
 autoplay: a,
 className: o()(P.gridImg, {
   [P.questRewardGiftInventory]: B && 'lg' === i,
@@ -371,19 +371,19 @@ children: [
             location: o,
             locale: c,
             isQuestExpired: d
-          } = e, u = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, _ = u && (null === (n = l.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, E = (0, C.zK)(l, v.S7.IN_HOUSE_CONSOLE_QUEST), T = (0, x.uq)(o), h = (0, N.B6)(null === (i = l.userStatus) || void 0 === i ? void 0 : i.completedAt, {
+          } = e, u = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, _ = u && (null === (n = l.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, E = (0, p.zK)(l, v.S7.IN_HOUSE_CONSOLE_QUEST), T = (0, x.uq)(o), h = (0, N.B6)(null === (i = l.userStatus) || void 0 === i ? void 0 : i.completedAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
-          }), f = (0, C.oo)({
+          }), f = (0, p.oo)({
             quest: l
-          }), p = S.r.build(l.config).defaultReward.messages.nameWithArticle, g = (0, C.Kr)(l.config);
+          }), C = S.r.build(l.config).defaultReward.messages.nameWithArticle, g = (0, p.Kr)(l.config);
           if (u && E && T)
             return Z.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({
               date: h
             });
           if (_) {
-            let e = f ? (0, C.o9)({
+            let e = f ? (0, p.o9)({
                 quest: l,
                 idx: null === (a = l.userStatus) || void 0 === a ? void 0 : a.claimedTier
               }) : null,
@@ -392,7 +392,7 @@ children: [
               reward: t,
               date: h
             }) : Z.Z.Messages.QUEST_REWARD_COMPLETED.format({
-              reward: p,
+              reward: C,
               date: h
             });
           }
@@ -400,24 +400,24 @@ children: [
             return f ? Z.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({
               date: h
             }) : Z.Z.Messages.QUEST_REWARD_COMPLETED.format({
-              reward: p,
+              reward: C,
               date: h
             });
-          let A = f ? (0, C.o9)({
+          let A = f ? (0, p.o9)({
             quest: l,
             idx: 0
           }) : null;
           return d ? Z.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({
-            reward: null !== (r = null == A ? void 0 : A.messages.nameWithArticle) && void 0 !== r ? r : p
+            reward: null !== (r = null == A ? void 0 : A.messages.nameWithArticle) && void 0 !== r ? r : C
           }) : null != A && null != A.approximateCount ? Z.Z.Messages.QUEST_REWARD_TIERED.format({
             maxReward: A.messages.nameWithArticle,
             maxRewardCount: (0, m.Bs)(A.approximateCount, c),
             helpCenterLink: I.Z.getArticleURL(L.BhN.QUESTS_LEARN_MORE)
           }) : null != g ? Z.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
-            reward: p,
+            reward: C,
             duration: g
           }) : Z.Z.Messages.QUEST_REWARD.format({
-            reward: p
+            reward: C
           });
         }({
           quest: t,

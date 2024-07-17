@@ -3,10 +3,10 @@ n.d(t, {
 return A;
   },
   HR: function() {
-return v;
+return Z;
   },
   ZP: function() {
-return Z;
+return v;
   }
 }), n(47120);
 var i = n(735250),
@@ -31,9 +31,9 @@ var i = n(735250),
   C = n(815660),
   N = n(689938);
 let A = 'Email Verification',
-  v = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
+  Z = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
 
-function Z() {
+function v() {
   let {
 action: e,
 theme: t
@@ -43,15 +43,15 @@ m.Z
   ], () => ({
 action: g.Z.getAction(),
 theme: m.Z.theme
-  })), Z = S.Z.getVerificationTypes(e), [L, O] = s.useState(0), R = (0, _.Z)(Z);
+  })), v = S.Z.getVerificationTypes(e), [L, O] = s.useState(0), R = (0, _.Z)(v);
   (0, h.Z)({
 type: a.ImpressionTypes.MODAL,
 name: a.ImpressionNames.USER_ACTION_REQUIRED,
 properties: {
-  verification_type: Z[0],
-  verification_types: Z
+  verification_type: v[0],
+  verification_types: v
 }
-  }, {}, [Z.toString()]);
+  }, {}, [v.toString()]);
   let x = () => {
   (0, u.FD)(), (0, o.openModalLazy)(async () => {
     let {
@@ -85,7 +85,7 @@ b = () => {
   return s.useEffect(() => (E.Z.disable(), () => {
 E.Z.enable();
   }), []), s.useEffect(() => {
-(null == R ? void 0 : R[0]) === f.PUi.PHONE && (null == Z ? void 0 : Z[0]) === f.PUi.EMAIL && (0, o.openModalLazy)(async () => {
+(null == R ? void 0 : R[0]) === f.PUi.PHONE && (null == v ? void 0 : v[0]) === f.PUi.EMAIL && (0, o.openModalLazy)(async () => {
   let {
     default: e
   } = await Promise.resolve().then(n.bind(n, 468026));
@@ -96,15 +96,15 @@ E.Z.enable();
     confirmText: N.Z.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_CONFIRM
   });
 }, {
-  modalKey: v,
+  modalKey: Z,
   Layer: T.ZP,
   onCloseCallback: x
 });
   }, [
-Z,
+v,
 R
   ]), (0, i.jsx)(p.Z, {
-types: Z,
+types: v,
 captchaKey: L,
 onCaptchaVerify: e => {
   l.tn.post({

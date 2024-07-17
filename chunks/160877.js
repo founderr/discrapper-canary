@@ -3,7 +3,7 @@ n.d(t, {
 return g;
   },
   s: function() {
-return C;
+return p;
   }
 });
 var i = n(735250),
@@ -28,7 +28,7 @@ let {
   url: n,
   description: a
 } = t;
-return null == n ? null : (0, i.jsx)(p, {
+return null == n ? null : (0, i.jsx)(C, {
   url: n,
   description: a
 });
@@ -41,11 +41,11 @@ let {
 if (!m.n2.has(s.type))
   return null;
 let r = void 0 !== s.video && s.type !== l.h.GIFV ? s.video.url : null !== (a = null === (t = s.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== a ? a : null === (n = s.image) || void 0 === n ? void 0 : n.url;
-return null == r ? null : (0, i.jsx)(p, {
+return null == r ? null : (0, i.jsx)(C, {
   url: r
 });
   },
-  p = e => {
+  C = e => {
 let {
   url: t,
   description: n
@@ -64,7 +64,7 @@ return (0, i.jsx)('div', {
 });
   };
 
-function C(e) {
+function p(e) {
   c.Z.pop(), (0, u.t)({
 id: 'explicit-media-false-positive-modal',
 text: T.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS
@@ -82,7 +82,7 @@ embedPreview: c,
 onConfirmPress: d,
 transitionState: u,
 onClose: E
-  } = e, m = (0, _.Dt)(), p = a.useCallback(() => {
+  } = e, m = (0, _.Dt)(), C = a.useCallback(() => {
 (0, I.aP)({
   action: I.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
   channelId: t,
@@ -94,7 +94,7 @@ t,
 n,
 r,
 E
-  ]), C = a.useCallback(() => {
+  ]), p = a.useCallback(() => {
 null == d || d(), (0, I.aP)({
   action: I.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
   channelId: t,
@@ -126,7 +126,7 @@ children: [
   (0, i.jsxs)(o.ModalContent, {
     children: [
       (0, i.jsx)(o.ModalCloseButton, {
-        onClick: p,
+        onClick: C,
         className: h.closeButton
       }),
       (0, i.jsx)(o.Heading, {
@@ -158,7 +158,7 @@ children: [
         submitting: s,
         size: o.Button.Sizes.MEDIUM,
         color: o.Button.Colors.BRAND,
-        onClick: C,
+        onClick: p,
         children: T.Z.Messages.CONFIRM
       }),
       (0, i.jsx)(o.Button, {
@@ -166,7 +166,7 @@ children: [
         disabled: s,
         color: o.Button.Colors.TRANSPARENT,
         size: o.Button.Sizes.MEDIUM,
-        onClick: p,
+        onClick: C,
         children: T.Z.Messages.CANCEL
       })
     ]

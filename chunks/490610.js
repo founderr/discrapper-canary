@@ -39,17 +39,17 @@ return (0, i.jsx)(u.ZP, {
 f,
 C,
 N
-  ]), v = s.useMemo(() => null != S && (0, I.Pw)(S) ? T : [], [
+  ]), Z = s.useMemo(() => null != S && (0, I.Pw)(S) ? T : [], [
 T,
 S
-  ]), Z = s.useCallback(e => {
-e && v.length > 0 && (0, c.Oe)(v.map(e => e.id), 'top_picks', f);
+  ]), v = s.useCallback(e => {
+e && Z.length > 0 && (0, c.Oe)(Z.map(e => e.id), 'top_picks', f);
   }, [
-v,
+Z,
 f
   ]);
   return 0 !== T.length && p ? (0, i.jsx)(o.$, {
-onChange: Z,
+onChange: v,
 threshold: 0.25,
 children: (0, i.jsxs)('div', {
   className: r()(g.previewListContainer, a),
@@ -63,7 +63,7 @@ children: (0, i.jsxs)('div', {
     }),
     (0, i.jsx)('div', {
       className: g.previewList,
-      children: v.map(e => A(e))
+      children: Z.map(e => A(e))
     })
   ]
 })

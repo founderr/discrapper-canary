@@ -31,8 +31,8 @@ onSelectTab: n
 onScroll: f,
 scrollPosition: C
   } = (0, c.c)(), N = (0, l.lg)(t), A = s.useRef((0, r.P)()), {
-isSearchVisible: v,
-searchQuery: Z,
+isSearchVisible: Z,
+searchQuery: v,
 searchResultsQuery: L,
 resetSearch: O,
 onSearchSubmit: R,
@@ -40,14 +40,14 @@ onSearchTextChange: x
   } = (0, m.C)({
 categoryId: N,
 loadId: A.current
-  }), b = s.useMemo(() => v ? e.filter(e => {
+  }), b = s.useMemo(() => Z ? e.filter(e => {
 let {
   id: t
 } = e;
 return !p.MU.has(t);
   }) : e, [
 e,
-v
+Z
   ]), P = s.useRef(new o.Z(N)), {
 onGuildCardSeen: M,
 onGuildCardClick: D
@@ -59,7 +59,7 @@ loadId: A.current
   s.useEffect(() => {
 P.current.flushSeenGuilds(A.current);
   }, [N]);
-  let y = s.useMemo(() => v ? (0, i.jsx)(a.Clickable, {
+  let y = s.useMemo(() => Z ? (0, i.jsx)(a.Clickable, {
   className: S.clickable,
   onClick: O,
   children: (0, i.jsx)(a.ArrowLargeLeftIcon, {
@@ -70,7 +70,7 @@ P.current.flushSeenGuilds(A.current);
   color: a.tokens.colors.HEADER_PRIMARY,
   size: 'md'
 }), [
-  v,
+  Z,
   O
 ]),
 j = s.useMemo(() => {
@@ -81,7 +81,7 @@ j = s.useMemo(() => {
     default:
       let e = (0, l.vb)(t);
       return (0, i.jsx)(u.Z, {
-        query: Z,
+        query: v,
         placeholder: T.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({
           title: e
         }),
@@ -94,7 +94,7 @@ j = s.useMemo(() => {
   R,
   x,
   O,
-  Z,
+  v,
   t
 ]),
 U = (0, d.Z)({
@@ -111,7 +111,7 @@ children: [
     leading: y,
     trailing: j
   }),
-  v ? (0, i.jsx)(h.Z, {
+  Z ? (0, i.jsx)(h.Z, {
     loadId: A.current,
     selectedTab: t,
     searchResultsQuery: L,

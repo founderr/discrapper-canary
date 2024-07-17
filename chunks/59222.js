@@ -76,8 +76,8 @@ searchResults: n,
 mostRecentQuery: a,
 defaultLanguage: l,
 availableLanguages: u,
-isFetchingSearch: v,
-scroller: Z,
+isFetchingSearch: Z,
+scroller: v,
 loadingGuildId: L,
 theme: O,
 currentCategoryId: R,
@@ -103,7 +103,7 @@ d.bR(a, {
   }
 }), w(!1);
   }, W = () => {
-null == Z || Z.scrollTo({
+null == v || v.scrollTo({
   to: 0
 });
   };
@@ -149,7 +149,7 @@ children: [
     loadId: t,
     searchResults: n,
     mostRecentQuery: a,
-    isFetchingSearch: v,
+    isFetchingSearch: Z,
     defaultLanguage: l,
     placeholder: M,
     availableLanguages: u,

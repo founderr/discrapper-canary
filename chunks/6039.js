@@ -24,20 +24,20 @@ t.Z = e => {
   var t;
   let n, A;
   let {
-guildId: v,
-inviteCode: Z
-  } = e, [L, O] = s.useState(f.hO.INITIAL), R = (0, a.e7)([h.Z], () => h.Z.get(v)), x = (0, a.e7)([m.Z], () => m.Z.getRequest(v)), b = (0, a.e7)([c.Z], () => c.Z.getGuild(v)), {
+guildId: Z,
+inviteCode: v
+  } = e, [L, O] = s.useState(f.hO.INITIAL), R = (0, a.e7)([h.Z], () => h.Z.get(Z)), x = (0, a.e7)([m.Z], () => m.Z.getRequest(Z)), b = (0, a.e7)([c.Z], () => c.Z.getGuild(Z)), {
 hasFetchedRequestToJoinGuilds: P,
 guildPreviewDisabled: M
   } = (0, a.cj)([m.Z], () => ({
 hasFetchedRequestToJoinGuilds: m.Z.hasFetchedRequestToJoinGuilds,
-guildPreviewDisabled: m.Z.getJoinRequestGuild(v)
+guildPreviewDisabled: m.Z.getJoinRequestGuild(Z)
   }));
   s.useEffect(() => {
-null != b && (0, o.uL)(S.Z5c.CHANNEL(v));
+null != b && (0, o.uL)(S.Z5c.CHANNEL(Z));
   }, [
 b,
-v
+Z
   ]), s.useEffect(() => {
 !P && _.Z.fetchRequestToJoinGuilds();
   }, [P]);
@@ -45,14 +45,14 @@ v
   O(t => Math.max(t, e));
 }, []),
 y = async e => {
-  await E.Z.submitVerificationForm(v, e);
+  await E.Z.submitVerificationForm(Z, e);
 }, j = () => {
-  _.Z.resetGuildJoinRequest(v);
+  _.Z.resetGuildJoinRequest(Z);
 };
   let U = (n = C.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
   name: null == M ? void 0 : M.toString()
 }), A = () => {
-  O(Math.max(L, f.hO.FILLING)), _.Z.removeGuildJoinRequest(v), (0, o.uL)(S.Z5c.ME);
+  O(Math.max(L, f.hO.FILLING)), _.Z.removeGuildJoinRequest(Z), (0, o.uL)(S.Z5c.ME);
 }, () => {
   (0, r.openModal)(e => (0, i.jsx)(r.ConfirmModal, {
     header: C.Z.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
@@ -104,8 +104,8 @@ children: (0, i.jsxs)(l.Z, {
             });
           default:
             return (0, i.jsx)(T.Z, {
-              guildId: v,
-              inviteCode: Z,
+              guildId: Z,
+              inviteCode: v,
               onComplete: y
             });
         }

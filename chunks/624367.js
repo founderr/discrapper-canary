@@ -21,8 +21,8 @@ var a = n(613828),
   h = n(630388),
   N = n(823379),
   f = n(624138),
-  p = n(317381),
-  C = n(638880),
+  C = n(317381),
+  p = n(638880),
   g = n(146936),
   S = n(147865),
   A = n(778569),
@@ -42,10 +42,10 @@ applicationId: b,
 message: D
   } = e, {
 analyticsLocations: j
-  } = (0, u.ZP)(d.Z.ACTIVITY_BOOKMARK), U = (0, c.O)(), y = D.channel_id, B = (0, s.e7)([m.Z], () => m.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, s.e7)([p.ZP], () => p.ZP.getSelfEmbeddedActivityForChannel(y)), w = (null == F ? void 0 : F.applicationId) === b, [V, H] = (0, _.Z)([
+  } = (0, u.ZP)(d.Z.ACTIVITY_BOOKMARK), U = (0, c.O)(), y = D.channel_id, B = (0, s.e7)([m.Z], () => m.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, s.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivityForChannel(y)), w = (null == F ? void 0 : F.applicationId) === b, [V, H] = (0, _.Z)([
 b,
 null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : ''
-  ]), Y = (0, S.Z)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0), [W] = (0, s.Wu)([p.ZP], () => G ? p.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === b) : [], [
+  ]), Y = (0, S.Z)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0), [W] = (0, s.Wu)([C.ZP], () => G ? C.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === b) : [], [
 b,
 y,
 G
@@ -56,7 +56,7 @@ names: ['embedded_cover']
   }), q = E.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), X = z.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START, J = async () => {
 if (G) {
   if (null != W && z.length > 0)
-    await (0, C.Z)({
+    await (0, p.Z)({
       applicationId: W.applicationId,
       currentEmbeddedApplication: H,
       activityChannelId: y,

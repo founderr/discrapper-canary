@@ -81,8 +81,8 @@ renderModalProps: n,
 heroArt: a,
 heroArtClassName: C,
 modalDismissibleContent: A,
-modalTopExtra: v,
-header: Z,
+modalTopExtra: Z,
+header: v,
 headerClassName: L,
 subHeader: O,
 subHeaderExtra: R,
@@ -155,14 +155,14 @@ children: [
   (0, i.jsx)(p.Z, {
     className: f.splash
   }),
-  null == v ? void 0 : v(),
+  null == Z ? void 0 : Z(),
   (0, i.jsxs)(c.ModalContent, {
     className: f.content,
     children: [
       (0, i.jsx)(c.Heading, {
         variant: 'display-md',
         className: r()(f.headerText, L),
-        children: Z
+        children: v
       }),
       (() => {
         if ('video' === a.type) {

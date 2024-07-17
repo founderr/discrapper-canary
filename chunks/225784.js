@@ -20,8 +20,8 @@ var i, s = n(735250),
   C = n(689938),
   N = n(806315),
   A = n(129512),
-  v = n(330065),
-  Z = n(755386);
+  Z = n(330065),
+  v = n(755386);
 
 function L(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -34,12 +34,12 @@ writable: !0
 class O extends(i = a.PureComponent) {
   getDefaultSplashURL(e, t) {
 if (t)
-  return Z;
+  return v;
 switch (e) {
   case f.BRd.DARK:
     return A;
   case f.BRd.LIGHT:
-    return v;
+    return Z;
 }
   }
   render() {
@@ -53,9 +53,9 @@ let {
   loaded: r,
   hasBeenSeen: d,
   isVisible: A,
-  submitting: v
+  submitting: Z
 } = this.state, {
-  name: Z,
+  name: v,
   description: L,
   presenceCount: O,
   memberCount: R,
@@ -103,14 +103,14 @@ return (0, s.jsx)(o.$, {
         [N.loading]: !r
       }),
       children: [
-        v ? (0, s.jsx)(c.Spinner, {
+        Z ? (0, s.jsx)(c.Spinner, {
           type: c.Spinner.Type.PULSING_ELLIPSIS,
           className: N.spinner
         }) : null,
         (0, s.jsxs)(c.Clickable, {
           onClick: this.handleClickView,
           className: l()(N.card, {
-            [N.submitting]: v,
+            [N.submitting]: Z,
             [N.cardWithTags]: y
           }),
           onContextMenu: this.handleContextMenu,
@@ -174,7 +174,7 @@ return (0, s.jsx)(o.$, {
                     (0, s.jsx)(c.Heading, {
                       variant: 'heading-md/semibold',
                       className: N.guildName,
-                      children: Z
+                      children: v
                     })
                   ]
                 }),

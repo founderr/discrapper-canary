@@ -21,8 +21,8 @@ var i = n(735250),
   C = n(605236),
   N = n(243778),
   A = n(984370),
-  v = n(797614),
-  Z = n(359110),
+  Z = n(797614),
+  v = n(359110),
   L = n(6025),
   O = n(897473),
   R = n(108427),
@@ -142,7 +142,7 @@ C = s.useCallback(() => (0, i.jsxs)(y.Z, {
   S,
   c
 ]);
-  return (n.length !== t && v.Z.increment({
+  return (n.length !== t && Z.Z.increment({
 name: o.V.MESSAGE_REQUEST_COUNT_DRIFT
   }), 0 === n.length) ? (0, i.jsx)(K.Z, {
 section: X.pS.REQUESTS
@@ -269,7 +269,7 @@ width: t
   s.useEffect(() => {
 _.Y(J.Z5c.MESSAGE_REQUESTS), (0, R.e)('message-requests'), j.default.track(J.rMx.MESSAGE_REQUESTS_VIEWED, {
   num_message_requests: n
-}), v.Z.increment({
+}), Z.Z.increment({
   name: o.V.MESSAGE_REQUEST_VIEW
 });
   }, []);
@@ -285,7 +285,7 @@ m = null != h,
 g = (0, w.T)(I),
 p = (0, k.J)(I);
   s.useEffect(() => {
-null != I && !g && p && m && ((0, Z.Kh)(I), L.Z.closeChannelSidebar(P.uZ));
+null != I && !g && p && m && ((0, v.Kh)(I), L.Z.closeChannelSidebar(P.uZ));
   }, [
 I,
 p,

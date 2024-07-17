@@ -21,8 +21,8 @@ var i = n(735250),
   C = n(437314),
   N = n(696577),
   A = n(163417),
-  v = n(492347),
-  Z = n(42575),
+  Z = n(492347),
+  v = n(42575),
   L = n(617015),
   O = n(981631),
   R = n(689938),
@@ -91,7 +91,7 @@ children: (0, i.jsxs)(u.Z, {
     (0, i.jsxs)('div', {
       className: x.sectionTitle,
       children: [
-        (0, i.jsx)(v.Z, {
+        (0, i.jsx)(Z.Z, {
           id: n,
           title: function(e, t) {
             switch (e) {
@@ -152,7 +152,7 @@ children: (0, i.jsxs)(u.Z, {
               isFocused: M
             });
           case O.pJs.SUGGESTIONS:
-            return (0, i.jsx)(Z.Z, {
+            return (0, i.jsx)(v.Z, {
               ...e,
               isFocused: M
             });

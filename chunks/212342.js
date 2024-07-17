@@ -12,7 +12,7 @@ var i, a, s, r, l = n(442837),
 let h = 'ChannelFollowingBumpChannels',
   N = new Set(),
   f = new Set();
-class p extends(i = l.ZP.Store) {
+class C extends(i = l.ZP.Store) {
   initialize() {
 this.waitFor(d.default), N = new Set(o.K.get(h));
   }
@@ -20,12 +20,12 @@ this.waitFor(d.default), N = new Set(o.K.get(h));
 return f.has(e);
   }
 }
-r = 'ChannelFollowingPublishBumpStore', (s = 'displayName') in(a = p) ? Object.defineProperty(a, s, {
+r = 'ChannelFollowingPublishBumpStore', (s = 'displayName') in(a = C) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = r, t.Z = new p(c.Z, {
+}) : a[s] = r, t.Z = new C(c.Z, {
   MESSAGE_CREATE: function(e) {
 var t;
 let {

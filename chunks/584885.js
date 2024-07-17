@@ -58,13 +58,13 @@ fetchGuilds: f,
 onGuildCardSeen: C,
 currentCategoryId: N,
 loadId: A,
-onTagClick: v,
-showMoreCards: Z = !1
+onTagClick: Z,
+showMoreCards: v = !1
   } = e;
   s.useEffect(() => {
 r.Z.wait(() => f());
   }, [N]);
-  let L = (0, u.Z)(Z ? I : h),
+  let L = (0, u.Z)(v ? I : h),
 {
   analyticsLocations: O
 } = (0, l.ZP)();
@@ -105,7 +105,7 @@ t = R.slice(0, L).map(e => (0, i.jsx)(d.Z, {
   onView: P,
   theme: T,
   onGuildCardSeen: C,
-  onTagClick: v
+  onTagClick: Z
 }, e.id));
   return (0, i.jsx)('section', {
 className: E.guildListSection,

@@ -32,17 +32,17 @@ location: E.dr.QUEST_HOME_DESKTOP,
 questContent: l.jn.QUEST_HOME_DESKTOP,
 useV2Variants: !0,
 expiryDate: f
-  }), N = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, A = (0, r.B6)(null === (n = m.userStatus) || void 0 === n ? void 0 : n.claimedAt), v = s.useCallback(() => (0, i.jsx)(a.Text, {
+  }), N = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, A = (0, r.B6)(null === (n = m.userStatus) || void 0 === n ? void 0 : n.claimedAt), Z = s.useCallback(() => (0, i.jsx)(a.Text, {
 variant: 'text-md/semibold',
 color: 'text-brand',
 tag: 'span',
 className: I.header,
 children: p
-  }), [p]), Z = s.useMemo(() => N ? v() : h.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
-rewardHook: v
+  }), [p]), v = s.useMemo(() => N ? Z() : h.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
+rewardHook: Z
   }), [
 N,
-v
+Z
   ]), L = s.useMemo(() => N ? (0, i.jsx)(a.Text, {
 variant: 'text-sm/medium',
 color: 'text-muted',
@@ -95,7 +95,7 @@ children: [
               variant: 'text-md/semibold',
               color: 'header-primary',
               className: I.header,
-              children: Z
+              children: v
             })
           }),
           L

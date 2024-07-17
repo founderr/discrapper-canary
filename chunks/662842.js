@@ -23,8 +23,8 @@ var i, s, a = n(735250),
   C = n(230900),
   N = n(854698),
   A = n(703656),
-  v = n(922482),
-  Z = n(565799),
+  Z = n(922482),
+  v = n(565799),
   L = n(501655),
   O = n(427679),
   R = n(448206),
@@ -56,7 +56,7 @@ isEventNoticeHidden: p.Z.isLiveChannelNoticeHidden({
   }), [
 l,
 s
-  ]), B = null == i ? void 0 : i.id, H = (0, c.Wu)([Z.Z], () => [...new Set(Z.Z.getMutableParticipants(B, L.pV.SPEAKER).map(e => e.user))], [B]), V = (0, c.e7)([Z.Z], () => null != B ? Z.Z.getParticipantCount(B, L.pV.AUDIENCE) : 0, [B]), F = (0, c.e7)([P.Z], () => P.Z.can(y.Plq.CONNECT, i)), Y = (0, R.Z)(null == i ? void 0 : i.id), W = null == s ? void 0 : s.creator_id, z = (0, c.e7)([M.default], () => M.default.getUser(W), [W]);
+  ]), B = null == i ? void 0 : i.id, H = (0, c.Wu)([v.Z], () => [...new Set(v.Z.getMutableParticipants(B, L.pV.SPEAKER).map(e => e.user))], [B]), V = (0, c.e7)([v.Z], () => null != B ? v.Z.getParticipantCount(B, L.pV.AUDIENCE) : 0, [B]), F = (0, c.e7)([P.Z], () => P.Z.can(y.Plq.CONNECT, i)), Y = (0, R.Z)(null == i ? void 0 : i.id), W = null == s ? void 0 : s.creator_id, z = (0, c.e7)([M.default], () => M.default.getUser(W), [W]);
   r.useEffect(() => {
 null != W && (0, _.PR)(W);
   }, [W]);
@@ -368,7 +368,7 @@ children: [
     color: u.Button.Colors.GREEN,
     onClick: () => {
       if (J)
-        null != i && null != i.getGuildId() && ((0, v.Cq)(i), (0, A.XU)(i.getGuildId(), i.id));
+        null != i && null != i.getGuildId() && ((0, Z.Cq)(i), (0, A.XU)(i.getGuildId(), i.id));
       else {
         if (null == s)
           return;
