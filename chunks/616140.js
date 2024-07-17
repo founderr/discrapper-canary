@@ -13,15 +13,15 @@ var s = n(735250),
   c = n(785717),
   u = n(100849),
   I = n(944546),
-  f = n(470900),
-  _ = n(988246),
+  _ = n(470900),
+  f = n(988246),
   E = n(970041),
   m = n(715388),
   S = n(834534),
   Z = n(228168),
-  x = n(47460);
+  v = n(47460);
 
-function v(e) {
+function x(e) {
   let {
 section: i,
 subsection: n,
@@ -38,7 +38,7 @@ onClose: r
   }) : i === Z.oh.MUTUAL_FRIENDS ? (0, s.jsx)(I.Z, {
 user: l,
 onClose: r
-  }) : i === Z.oh.MUTUAL_GUILDS ? (0, s.jsx)(f.Z, {
+  }) : i === Z.oh.MUTUAL_GUILDS ? (0, s.jsx)(_.Z, {
 user: l,
 onClose: r
   }) : i === Z.oh.BOT_DATA_ACCESS ? (0, s.jsx)(E.Z, {
@@ -63,7 +63,7 @@ function h(e) {
   let {
 user: u,
 currentUser: I,
-displayProfile: f,
+displayProfile: _,
 items: E,
 initialSection: m = Z.oh.USER_INFO,
 initialSubsection: S,
@@ -94,13 +94,13 @@ p,
 C
   ]);
   return T ? (0, s.jsx)('div', {
-className: x.container,
-children: (0, s.jsx)(_.Z, {})
+className: v.container,
+children: (0, s.jsx)(f.Z, {})
   }) : (0, s.jsxs)('div', {
-className: x.container,
+className: v.container,
 children: [
   (0, s.jsx)(t.n, {
-    className: x.tabBar,
+    className: v.tabBar,
     type: 'top',
     selectedItem: g,
     onItemSelect: j,
@@ -110,7 +110,7 @@ children: [
         text: n
       } = e;
       return (0, s.jsx)(t.n.Item, {
-        className: x.tabBarItem,
+        className: v.tabBarItem,
         id: i,
         'aria-label': n,
         children: (0, s.jsx)(r.Text, {
@@ -120,13 +120,13 @@ children: [
       }, i);
     })
   }),
-  (0, s.jsx)(v, {
+  (0, s.jsx)(x, {
     items: E,
     section: g,
     subsection: N,
     user: u,
     currentUser: I,
-    displayProfile: f,
+    displayProfile: _,
     onClose: h
   })
 ]

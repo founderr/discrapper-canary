@@ -1,6 +1,6 @@
 n.d(i, {
   Z: function() {
-return v;
+return x;
   }
 });
 var s = n(735250);
@@ -14,19 +14,19 @@ var l = n(442837),
   c = n(785717),
   u = n(621853),
   I = n(588822),
-  f = n(940730),
-  _ = n(900927),
+  _ = n(940730),
+  f = n(900927),
   E = n(678738),
   m = n(351707),
   S = n(228168),
   Z = n(689938),
-  x = n(247321);
+  v = n(247321);
 
-function v(e) {
+function x(e) {
   var i;
   let {
 user: n,
-currentUser: v,
+currentUser: x,
 displayProfile: h,
 subsection: p,
 onClose: T
@@ -41,13 +41,13 @@ d.Z
   ], () => r.Z.getChannel(d.Z.getChannelId()));
   return (0, s.jsxs)(o.ScrollerThin, {
 fade: !0,
-className: x.scroller,
+className: v.scroller,
 children: [
   (null == h ? void 0 : h.bio) != null && (null == h ? void 0 : h.bio) !== '' && (0, s.jsx)(I.Z, {
     userBio: h.bio,
     setLineClamp: !1
   }),
-  (null == C ? void 0 : C.popularApplicationCommandIds) != null && null != j && (0, s.jsx)(f.Z, {
+  (null == C ? void 0 : C.popularApplicationCommandIds) != null && null != j && (0, s.jsx)(_.Z, {
     applicationId: C.id,
     commandIds: C.popularApplicationCommandIds,
     channel: j,
@@ -56,13 +56,13 @@ children: [
   }),
   null != N && (0, s.jsx)(m.Z, {
     user: n,
-    currentUser: v,
+    currentUser: x,
     guild: N,
     scrollIntoView: p === S.Tb.ROLES
   }),
   (0, s.jsx)(E.Z, {
     title: Z.Z.Messages.USER_PROFILE_MEMBER_SINCE,
-    children: (0, s.jsx)(_.Z, {
+    children: (0, s.jsx)(f.Z, {
       userId: n.id,
       guildId: null == h ? void 0 : h.guildId,
       tooltipDelay: S.vB
@@ -73,7 +73,7 @@ children: [
     scrollIntoView: p === S.Tb.NOTE,
     children: (0, s.jsx)(t.Z, {
       userId: n.id,
-      className: x.note,
+      className: v.note,
       autoFocus: p === S.Tb.NOTE,
       onUpdate: () => g({
         action: 'SET_NOTE'

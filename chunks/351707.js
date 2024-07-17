@@ -13,14 +13,14 @@ var s = n(735250),
   c = n(434404),
   u = n(271383),
   I = n(430824),
-  f = n(496675),
-  _ = n(700785),
+  _ = n(496675),
+  f = n(700785),
   E = n(785717),
   m = n(256226),
   S = n(678738),
   Z = n(314172),
-  x = n(981631),
-  v = n(689938),
+  v = n(981631),
+  x = n(689938),
   h = n(700763);
 
 function p(e) {
@@ -32,15 +32,15 @@ guildMember: d,
 roles: c,
 highestRole: u,
 canManageRoles: I,
-onAddRole: f,
+onAddRole: _,
 onRemoveRole: E
   } = e, S = I && null != d, p = l.useMemo(() => 'roles-'.concat((0, o.Z)()), []), T = (0, t.ZP)({
 id: p,
 isEnabled: !0,
-scrollToStart: x.Cyb,
-scrollToEnd: x.Cyb,
+scrollToStart: v.Cyb,
+scrollToEnd: v.Cyb,
 wrap: !0
-  }), g = c.length, N = 0 === g ? v.Z.Messages.ROLE_LIST_EMPTY : v.Z.Messages.ROLES_LIST.format({
+  }), g = c.length, N = 0 === g ? x.Z.Messages.ROLE_LIST_EMPTY : x.Z.Messages.ROLES_LIST.format({
 numRoles: g
   }), C = c.map(e => {
 var l;
@@ -49,7 +49,7 @@ return (0, s.jsx)(m.Z, {
   guildId: a.id,
   disableBorderColor: !0,
   onRemove: () => E(e),
-  canRemove: I ? _.r6(a, n.id, u, e) : (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) === null && i.id === n.id
+  canRemove: I ? f.r6(a, n.id, u, e) : (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) === null && i.id === n.id
 }, e.id);
   });
   return (0, s.jsx)(r.bG, {
@@ -72,7 +72,7 @@ children: (0, s.jsx)(r.SJ, {
           guildMember: d,
           numRoles: g,
           highestRole: u,
-          onAddRole: f
+          onAddRole: _
         })
       ]
     });
@@ -97,9 +97,9 @@ return l && !o ? 1 : !l && o ? -1 : 0;
   }), [
 Z,
 h
-  ]), g = _.e9(o, n.id), [N] = (0, a.Wu)([f.Z], () => [
-f.Z.can(x.Plq.MANAGE_ROLES, o),
-null != o ? f.Z.getGuildVersion(o.id) : null
+  ]), g = f.e9(o, n.id), [N] = (0, a.Wu)([_.Z], () => [
+_.Z.can(v.Plq.MANAGE_ROLES, o),
+null != o ? _.Z.getGuildVersion(o.id) : null
   ]), C = l.useCallback(e => {
 var n, s;
 r({
@@ -125,7 +125,7 @@ i.id,
 r
   ]), A = N && null != m;
   return 0 !== T.length || A ? (0, s.jsx)(S.Z, {
-title: v.Z.Messages.ROLES,
+title: x.Z.Messages.ROLES,
 scrollIntoView: t,
 children: (0, s.jsx)(p, {
   user: i,

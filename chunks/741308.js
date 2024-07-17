@@ -12,7 +12,7 @@ var i = n(392711),
 let l = {
   [o.y0.BITE_SIZE]: 12,
   [o.y0.FULL_SIZE]: 26,
-  [o.y0.PANEL]: 14
+  [o.y0.PANEL]: 13
 };
 
 function u(e) {

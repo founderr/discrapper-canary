@@ -13,14 +13,14 @@ var s = n(735250),
   c = n(369077),
   u = n(706454),
   I = n(246946),
-  f = n(785717),
-  _ = n(648067),
+  _ = n(785717),
+  f = n(648067),
   E = n(588822),
   m = n(900927),
   S = n(652853),
   Z = n(335191),
-  x = n(988246),
-  v = n(689938),
+  v = n(988246),
+  x = n(689938),
   h = n(678108);
 
 function p(e) {
@@ -32,27 +32,27 @@ autoFocusNote: T = !1,
 scrollToConnections: g = !1
   } = e, {
 trackUserProfileAction: N
-  } = (0, f.KZ)(), C = (0, o.e7)([I.Z], () => I.Z.hidePersonalInformation), {
+  } = (0, _.KZ)(), C = (0, o.e7)([I.Z], () => I.Z.hidePersonalInformation), {
 theme: j
-  } = (0, S.z)(), A = (0, o.e7)([u.default], () => u.default.locale), U = (0, d.Z)('user_profile'), R = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, a.Z)(n.id), O = (0, _.Z)(n.id), M = l.useRef(null);
+  } = (0, S.z)(), A = (0, o.e7)([u.default], () => u.default.locale), M = (0, d.Z)('user_profile'), L = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, a.Z)(n.id), R = (0, f.Z)(n.id), U = l.useRef(null);
   return (l.useLayoutEffect(() => {
 if (g) {
   var e;
-  null == M || null === (e = M.current) || void 0 === e || e.scrollIntoView();
+  null == U || null === (e = U.current) || void 0 === e || e.scrollIntoView();
 }
-  }, [g]), C) ? (0, s.jsx)(x.Z, {}) : (0, s.jsxs)(t.ScrollerThin, {
+  }, [g]), C) ? (0, s.jsx)(v.Z, {}) : (0, s.jsxs)(t.ScrollerThin, {
 fade: !0,
 className: h.infoScroller,
 children: [
   (0, s.jsxs)('div', {
     className: h.userInfoSection,
     children: [
-      R && (0, s.jsxs)(s.Fragment, {
+      L && (0, s.jsxs)(s.Fragment, {
         children: [
           (0, s.jsx)(t.Heading, {
             variant: 'eyebrow',
             className: h.userInfoSectionHeader,
-            children: v.Z.Messages.USER_PROFILE_ABOUT_ME
+            children: x.Z.Messages.USER_PROFILE_ABOUT_ME
           }),
           (0, s.jsx)(E.Z, {
             className: h.userInfoText,
@@ -66,7 +66,7 @@ children: [
           (0, s.jsx)(t.Heading, {
             variant: 'eyebrow',
             className: h.userInfoSectionHeader,
-            children: v.Z.Messages.USER_PROFILE_MEMBER_SINCE
+            children: x.Z.Messages.USER_PROFILE_MEMBER_SINCE
           }),
           (0, s.jsx)(m.Z, {
             userId: n.id,
@@ -74,7 +74,7 @@ children: [
           })
         ]
       }),
-      U && (0, s.jsx)('div', {
+      M && (0, s.jsx)('div', {
         className: h.clans,
         children: (0, s.jsx)('div', {
           className: h.userInfoText,
@@ -88,7 +88,7 @@ children: [
           (0, s.jsx)(t.Heading, {
             variant: 'eyebrow',
             className: h.userInfoSectionHeader,
-            children: v.Z.Messages.NOTE
+            children: x.Z.Messages.NOTE
           }),
           (0, s.jsx)(r.Z, {
             userId: n.id,
@@ -103,8 +103,8 @@ children: [
     ]
   }),
   (0, s.jsx)(Z.OA, {
-    ref: M,
-    connectedAccounts: O,
+    ref: U,
+    connectedAccounts: R,
     theme: j,
     locale: A,
     className: h.userInfoSection,

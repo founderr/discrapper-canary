@@ -1,6 +1,6 @@
 n.d(i, {
   Z: function() {
-return U;
+return M;
   }
 }), n(47120);
 var s = n(735250),
@@ -13,14 +13,14 @@ var s = n(735250),
   c = n(5192),
   u = n(785717),
   I = n(318661),
-  f = n(78675),
-  _ = n(741308),
+  _ = n(78675),
+  f = n(741308),
   E = n(588822),
   m = n(899007),
   S = n(900927),
   Z = n(678738),
-  x = n(502762),
-  v = n(530),
+  v = n(502762),
+  x = n(530),
   h = n(679332),
   p = n(544989),
   T = n(228168),
@@ -30,15 +30,15 @@ var s = n(735250),
   j = n(247321),
   A = n(47460);
 
-function U(e) {
+function M(e) {
   let {
 user: i,
 guildId: n,
-channelId: U,
-messageId: R,
-roleId: O,
-transitionState: M,
-onClose: L,
+channelId: M,
+messageId: L,
+roleId: R,
+transitionState: U,
+onClose: O,
 sourceAnalyticsLocations: P = []
   } = e, {
 analyticsLocations: b
@@ -52,17 +52,17 @@ children: (0, s.jsx)(u.Mt, {
   layout: 'SIMPLIFIED_MODAL',
   userId: i.id,
   guildId: y,
-  channelId: U,
-  messageId: R,
-  roleId: O,
+  channelId: M,
+  messageId: L,
+  roleId: R,
   showGuildProfile: !0,
   children: (0, s.jsxs)(o.ModalRoot, {
-    transitionState: M,
+    transitionState: U,
     className: C.root,
     hideShadow: !0,
     'aria-label': N.Z.Messages.USER_PROFILE_MODAL,
     children: [
-      (0, s.jsxs)(x.Z, {
+      (0, s.jsxs)(v.Z, {
         user: i,
         displayProfile: D,
         profileType: T.y0.FULL_SIZE,
@@ -76,7 +76,7 @@ children: (0, s.jsx)(u.Mt, {
           }),
           (0, s.jsxs)('header', {
             children: [
-              (0, s.jsx)(f.Z, {
+              (0, s.jsx)(_.Z, {
                 user: i,
                 displayProfile: D,
                 profileType: T.y0.FULL_SIZE,
@@ -88,7 +88,7 @@ children: (0, s.jsx)(u.Mt, {
                   user: i,
                   displayProfile: D,
                   guildId: y,
-                  channelId: U,
+                  channelId: M,
                   profileType: T.y0.FULL_SIZE
                 })
               })
@@ -97,19 +97,19 @@ children: (0, s.jsx)(u.Mt, {
           (0, s.jsxs)('div', {
             className: C.body,
             children: [
-              (0, s.jsx)(v.Z, {
+              (0, s.jsx)(x.Z, {
                 user: i,
                 profileType: T.y0.FULL_SIZE,
-                nickname: c.ZP.getName(y, U, i),
+                nickname: c.ZP.getName(y, M, i),
                 pronouns: null == D ? void 0 : D.pronouns,
                 nicknameVariant: 'heading-xl/bold',
-                tags: (0, s.jsx)(_.Z, {
+                tags: (0, s.jsx)(f.Z, {
                   displayProfile: D,
                   profileType: T.y0.FULL_SIZE,
-                  onClose: L
+                  onClose: O
                 })
               }),
-              (0, s.jsx)(x.Z.Overlay, {
+              (0, s.jsx)(v.Z.Overlay, {
                 className: C.overlay,
                 children: (0, s.jsxs)('div', {
                   className: A.container,
