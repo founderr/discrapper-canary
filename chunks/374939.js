@@ -19,7 +19,10 @@ onScroll: s,
 backgroundImageUrl: c,
 button: d,
 children: u,
-bannerContainerClassName: _
+bannerContainerClassName: _,
+bannerImageClassName: E,
+headerTextColor: h,
+descriptionTextColor: I
   } = e;
   return (0, i.jsxs)(r.AdvancedScroller, {
 onScroll: s,
@@ -30,7 +33,10 @@ children: [
     description: n,
     backgroundImageUrl: c,
     button: d,
-    className: _
+    className: _,
+    headerTextColor: h,
+    descriptionTextColor: I,
+    bannerImageClassName: E
   }),
   (0, i.jsx)('section', {
     className: a()(o.contentContainer, o.gradient),

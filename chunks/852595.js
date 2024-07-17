@@ -5,5 +5,6 @@ e.exports = {
   externalLinkText: 'externalLinkText_fc867b',
   icon: 'icon_fc867b',
   gridContainer: 'gridContainer_fc867b',
-  hero: 'hero_fc867b'
+  bannerContainer: 'bannerContainer_fc867b',
+  bannerImage: 'bannerImage_fc867b'
 };

@@ -18,13 +18,16 @@ title: t,
 description: n,
 button: a,
 backgroundImageUrl: u,
-className: _
-  } = e, E = (0, l.wj)((0, c.ZP)()), h = s.useMemo(() => null != u ? u : E ? 'https://cdn.discordapp.com/assets/discovery/generic-hero-background.png' : 'https://cdn.discordapp.com/assets/discovery/generic-hero-background-light-mode.png', [
-E,
+className: _,
+bannerImageClassName: E,
+headerTextColor: h,
+descriptionTextColor: I
+  } = e, m = (0, l.wj)((0, c.ZP)()), g = s.useMemo(() => null != u ? u : m ? 'https://cdn.discordapp.com/assets/discovery/generic-hero-background.png' : 'https://cdn.discordapp.com/assets/discovery/generic-banner-background-light-mode.png', [
+m,
 u
-  ]), I = s.useMemo(() => ({
-backgroundImage: 'url('.concat(h, ')')
-  }), [h]);
+  ]), p = s.useMemo(() => ({
+backgroundImage: 'url('.concat(g, ')')
+  }), [g]), T = null != h ? h : m ? 'always-white' : 'header-primary', S = null != I ? I : m ? 'text-muted' : 'header-primary';
   return (0, i.jsxs)('div', {
 className: r()(d.imageContainer, _),
 children: [
@@ -35,12 +38,12 @@ children: [
       children: [
         (0, i.jsx)(o.Heading, {
           variant: 'heading-xl/bold',
-          color: 'always-white',
+          color: T,
           children: t
         }),
         (0, i.jsx)(o.Text, {
           variant: 'text-md/medium',
-          color: 'text-muted',
+          color: S,
           children: n
         }),
         a
@@ -48,8 +51,8 @@ children: [
     })
   }),
   (0, i.jsx)('div', {
-    className: d.imageBackground,
-    style: I,
+    className: r()(d.imageBackground, E),
+    style: p,
     children: (0, i.jsx)('div', {
       className: d.imageBackgroundOverlay
     })

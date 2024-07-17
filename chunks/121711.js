@@ -58,6 +58,8 @@ children: [
     }),
     tabs: n,
     selectedTab: N,
+    tabColor: 'header-primary',
+    selectedTabColor: O ? 'text-muted' : 'header-primary',
     onTabSelect: A,
     scrollPosition: Z,
     backgroundStyle: L
@@ -67,7 +69,10 @@ children: [
     description: f.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
     backgroundImageUrl: x,
     onScroll: v,
-    bannerContainerClassName: C.hero,
+    bannerContainerClassName: C.bannerContainer,
+    bannerImageClassName: C.bannerImage,
+    headerTextColor: 'header-primary',
+    descriptionTextColor: O ? 'text-muted' : 'currentColor',
     button: (0, i.jsxs)(l.Button, {
       size: 'medium',
       color: O ? l.ButtonColors.TRANSPARENT : l.ButtonColors.WHITE,
