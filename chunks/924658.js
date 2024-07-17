@@ -594,7 +594,7 @@ e.exports = Object.freeze({
   ICYMI_ITEM_HEADER_SUBTITLE_ANNOUNCEMENT: ' posted an announcement',
   ICYMI_ITEM_HEADER_SUBTITLE_FILE: ' uploaded a file',
   ICYMI_ITEM_HEADER_SUBTITLE_SUMMARY: '**TL;DR** \u2014 A conversation about:',
-  ICYMI_CUSTOM_SCORING_OPTIONS: 'Custom Sorting Options',
+  ICYMI_CUSTOM_CHANNEL_OPTIONS: 'Channel Settings',
   ICYMI_CUSTOM_SCORING_MORE_FROM_CHANNEL: 'Show me more from this channel',
   ICYMI_CUSTOM_SCORING_LESS_FROM_CHANNEL: 'Show me less from this channel',
   ICYMI_CUSTOM_SCORING_NONE_CHANNEL: 'No custom scoring for this channel',

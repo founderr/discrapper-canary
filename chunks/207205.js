@@ -1,51 +1,62 @@
 n.d(t, {
   $U: function() {
+return h;
+  },
+  Jb: function() {
+return i;
+  },
+  cn: function() {
 return u;
   },
   em: function() {
-return c;
-  },
-  rK: function() {
 return _;
   },
+  rK: function() {
+return I;
+  },
   wV: function() {
-return d;
+return E;
   }
 }), n(47120), n(724458), n(653041), n(873546), n(442837), n(638395);
-var i = n(786761);
+var i, s, a = n(786761);
 n(375954);
-var s = n(306680),
-  a = n(709054),
-  r = n(505369);
+var r = n(306680),
+  l = n(709054),
+  o = n(505369);
 n(109911);
-var l = n(265164),
-  o = n(761080);
-async function c(e, t, n) {
-  let i = l.Z.getHydratedItems(),
-s = e.slice(t, n);
-  if (0 === s.length)
-return;
-  let a = s.filter(e => null == i[e.id]),
-c = a.filter(e => e.type === o.Rr.MESSAGE).map(e => ({
-  channel_id: e.data.channel_id,
-  message_id: e.data.message_id
-})),
-d = a.filter(e => e.type === o.Rr.SUMMARY).map(e => ({
-  guild_id: e.data.guild_id,
-  channel_id: e.data.channel_id,
-  summary_id: e.data.summary_id
-})),
-u = a.filter(e => e.type === o.Rr.ACTIVITY).map(e => ({
-  user_id: e.data.user_id,
-  content_id: e.data.content_id
-}));
-  await r.Z.fetchHydrated(c, d, u, t, n);
-}
+var c = n(265164),
+  d = n(761080);
 
-function d(e, t) {
+function u(e) {
+  return e < -0.9 ? 3 : e < 0 ? 2 : e > 0 ? 1 : 0;
+}
+async function _(e, t, n) {
+let i = c.Z.getHydratedItems(),
+  s = e.slice(t, n);
+if (0 === s.length)
+  return;
+let a = s.filter(e => null == i[e.id]),
+  r = a.filter(e => e.type === d.Rr.MESSAGE).map(e => ({
+    channel_id: e.data.channel_id,
+    message_id: e.data.message_id
+  })),
+  l = a.filter(e => e.type === d.Rr.SUMMARY).map(e => ({
+    guild_id: e.data.guild_id,
+    channel_id: e.data.channel_id,
+    summary_id: e.data.summary_id
+  })),
+  u = a.filter(e => e.type === d.Rr.ACTIVITY).map(e => ({
+    user_id: e.data.user_id,
+    content_id: e.data.content_id
+  }));
+await o.Z.fetchHydrated(r, l, u, t, n);
+  }
+  (s = i || (i = {}))[s.DEFAULT = 0] = 'DEFAULT', s[s.MORE_FROM_GUILD = 1] = 'MORE_FROM_GUILD', s[s.LESS_FROM_GUILD = 2] = 'LESS_FROM_GUILD', s[s.MUTED_GUILD = 3] = 'MUTED_GUILD';
+
+function E(e, t) {
   let n = [],
-s = [],
-a = 0;
+i = [],
+s = 0;
   for (let t of e.messages)
 if (null != t.reactions) {
   if (n.length < 5)
@@ -53,7 +64,7 @@ if (null != t.reactions) {
       var r, l;
       (null == e.count_details || (null !== (r = e.count_details.burst) && void 0 !== r ? r : 0) > 0 || (null !== (l = e.count_details.normal) && void 0 !== l ? l : 0) > 0) && n.push(e);
     }
-  a += function(e) {
+  s += function(e) {
     let t = 0;
     if (null != e.reactions) {
       let n = (null != e.reactions ? e.reactions : []).map(e => {
@@ -67,7 +78,7 @@ if (null != t.reactions) {
 }
   let o = null;
   for (let t of e.messages)
-if (null != t.author && o !== t.author.id && (s.push((0, i.e5)(t)), o = t.author.id, s.length >= 3))
+if (null != t.author && o !== t.author.id && (i.push((0, a.e5)(t)), o = t.author.id, i.length >= 3))
   break;
   return {
 id: e.id,
@@ -79,21 +90,21 @@ endId: e.end_id,
 count: e.count,
 channelId: e.channel_id,
 type: e.type,
-messages: s,
+messages: i,
 reactions: n,
 messageIds: e.messages.map(e => e.id),
 guildId: t,
-reactionCount: a,
+reactionCount: s,
 numTotalMessages: e.messages.length,
 source: e.source
   };
 }
 
-function u(e, t) {
-  let n = s.ZP.ackMessageId(e);
-  return null != n && a.default.extractTimestamp(t) > a.default.extractTimestamp(n);
+function h(e, t) {
+  let n = r.ZP.ackMessageId(e);
+  return null != n && l.default.extractTimestamp(t) > l.default.extractTimestamp(n);
 }
 
-function _(e) {
+function I(e) {
   return !1;
 }

@@ -122,7 +122,12 @@ if (!(e >= p.Lb))
   }), e >= p.Lb;
 }
 
-function Q(e) {
+function Q(e, t) {
+  if ((0, S.cn)(t) === S.Jb.MUTED_GUILD)
+A = A.filter(t => t.type === p.Rr.MESSAGE && t.data.guild_id !== e), V = V.filter(t => t.type === p.Rr.MESSAGE && t.data.guild_id !== e), F = F.filter(t => t.type === p.Rr.MESSAGE && t.data.guild_id !== e), v = v.filter(t => t.type === p.Rr.MESSAGE && t.data.guild_id !== e);
+}
+
+function X(e) {
   let {
 type: t,
 messageId: n,
@@ -136,7 +141,7 @@ return !1;
   'MESSAGE_REACTION_ADD' === t ? r.message = r.message.addReaction(s, l, e.colors, a) : r.message = r.message.removeReaction(s, l, a);
 }
 
-function X(e) {
+function J(e) {
   let {
 channelId: t
   } = e, n = [], i = [];
@@ -149,13 +154,13 @@ return !1;
 ...n
   ];
 }
-class J extends(i = a.ZP.PersistedStore) {
+class $ extends(i = a.ZP.PersistedStore) {
   initialize(e) {
 if (this.waitFor(_.Z, u.Z, E.ZP, o.Z, h.ZP, d.default, T.Z, l.Z), null != e) {
-  var t, n, i;
+  var t, n, i, s, a;
   A = null !== (t = e.dehydratedItems) && void 0 !== t ? t : [], O = null !== (n = e.locallyAddedItems) && void 0 !== n ? n : {}, e.dehydratedItems.forEach(e => {
     R[e.id] = e;
-  }), H = null !== (i = e.numOpens) && void 0 !== i ? i : 0;
+  }), P = null !== (i = e.customGuildScores) && void 0 !== i ? i : {}, M = null !== (s = e.customChannelScoresByGuild) && void 0 !== s ? s : {}, H = null !== (a = e.numOpens) && void 0 !== a ? a : 0;
 }
   }
   getVersion() {
@@ -228,11 +233,13 @@ return 5 === H;
 return {
   dehydratedItems: A,
   locallyAddedItems: O,
-  numOpens: H
+  numOpens: H,
+  customGuildScores: P,
+  customChannelScoresByGuild: M
 };
   }
 }
-N(J, 'displayName', 'GravityStore'), N(J, 'persistKey', 'GravityStore'), t.Z = new J(r.Z, {
+N($, 'displayName', 'GravityStore'), N($, 'persistKey', 'GravityStore'), t.Z = new $(r.Z, {
   POST_CONNECTION_OPEN: function() {
 if (A.length > 0) {
   let [e, t] = K(A);
@@ -246,37 +253,37 @@ if (A.length > 0) {
 return !1;
   },
   MESSAGE_CREATE: function(e) {
-var t, n;
+var t;
 let {
-  message: i,
-  guildId: s,
-  channelId: a
+  message: n,
+  guildId: i,
+  channelId: s
 } = e;
-if (!(0, S.rK)('GravityStore-handleMessageCreate') || null == s || (null === (t = i.author) || void 0 === t ? void 0 : t.id) === d.default.getId() || (null !== (n = P[s]) && void 0 !== n ? n : 0) < 0)
+if (!(0, S.rK)('GravityStore-handleMessageCreate') || null == i || (null === (t = n.author) || void 0 === t ? void 0 : t.id) === d.default.getId() || i in P && P[i] < 0 || null != M[i] && s in M[i] && null != M[i][s] && M[i][s] < 0)
   return !1;
-let r = u.Z.getChannel(a);
-if (null == r || r.type !== f.d4z.GUILD_ANNOUNCEMENT || h.ZP.isChannelMuted(s, a) || s in P && P[s] < 0 || null != M[s] && a in M[s] && null != M[s][a] && M[s][a] < 0)
+let a = u.Z.getChannel(s);
+if (null == a || a.type !== f.d4z.GUILD_ANNOUNCEMENT || h.ZP.isChannelMuted(i, s))
   return !1;
-let l = _.Z.getMessage(i.channel_id, i.id);
-null == l && (l = (0, c.e5)(i));
-let o = l.mentionEveryone;
-if (i.id in R)
+let r = _.Z.getMessage(n.channel_id, n.id);
+null == r && (r = (0, c.e5)(n));
+let l = r.mentionEveryone;
+if (n.id in R)
   return !1;
-let E = {
+let o = {
   type: p.Rr.MESSAGE,
-  id: i.id,
+  id: n.id,
   score: Date.now(),
   data: {
-    channel_id: i.channel_id,
-    guild_id: s,
-    message_id: i.id,
+    channel_id: n.channel_id,
+    guild_id: i,
+    message_id: n.id,
     channel_type: f.d4z.GUILD_ANNOUNCEMENT,
-    has_mention: o
+    has_mention: l
   }
 };
-o && (null == D[a] && (D[a] = 0), D[a]++, y.add(s)), null == (v = 0 === v.length ? [...A] : [...v]).find(e => e.id === i.id) && (v.unshift(E), O[i.id] = E), q() && j > 0 && (G = !0), R[i.id] = E, x[i.id] = {
-  ...E,
-  message: l
+l && (null == D[s] && (D[s] = 0), D[s]++, y.add(i)), null == (v = 0 === v.length ? [...A] : [...v]).find(e => e.id === n.id) && (v.unshift(o), O[n.id] = o), q() && j > 0 && (G = !0), R[n.id] = o, x[n.id] = {
+  ...o,
+  message: r
 };
   },
   LOAD_GRAVITY_DEHYDRATED: function(e) {
@@ -382,7 +389,7 @@ let {
   scores: t
 } = e;
 for (let e of t)
-  for (let t of (P[e.guild_id] = e.guild_score, Object.keys(e.custom_channel_scores)))
+  for (let t of (P[e.guild_id] = e.guild_score, Q(e.guild_id, e.guild_score), Object.keys(e.custom_channel_scores)))
     null == M[e.guild_id] && (M[e.guild_id] = {}), M[e.guild_id][t] = e.custom_channel_scores[t];
   },
   GRAVITY_CUSTOM_SCORES_UPDATED: function(e) {
@@ -391,7 +398,7 @@ let {
   guildId: n,
   guildScore: i
 } = e;
-null != i && (P[n] = i, i < 0 && (A = A.filter(e => e.type === p.Rr.MESSAGE && e.data.guild_id !== n), V = V.filter(e => e.type === p.Rr.MESSAGE && e.data.guild_id !== n), F = F.filter(e => e.type === p.Rr.MESSAGE && e.data.guild_id !== n), v = v.filter(e => e.type === p.Rr.MESSAGE && e.data.guild_id !== n))), null == t || t.forEach(e => {
+null != i && (P[n] = i, Q(n, i)), null == t || t.forEach(e => {
   let {
     channelId: t,
     score: i
@@ -425,7 +432,7 @@ w = t.summary;
   SET_GRAVITY_SELECTED_CHANNEL: function(e) {
 B = e.channelId;
   },
-  MESSAGE_REACTION_ADD: Q,
+  MESSAGE_REACTION_ADD: X,
   MESSAGE_REACTION_ADD_MANY: function(e) {
 let {
   messageId: t,
@@ -436,7 +443,7 @@ if (null == i || i.type !== p.Rr.MESSAGE)
 let s = d.default.getId();
 i.message = i.message.addReactionBatch(n, s);
   },
-  MESSAGE_REACTION_REMOVE: Q,
+  MESSAGE_REACTION_REMOVE: X,
   MESSAGE_REACTION_REMOVE_ALL: function(e) {
 let {
   messageId: t
@@ -454,8 +461,8 @@ if (null == i || i.type !== p.Rr.MESSAGE)
   return !1;
 i.message = i.message.removeReactionsForEmoji(n);
   },
-  CHANNEL_ACK: X,
-  MESSAGE_ACK: X,
+  CHANNEL_ACK: J,
+  MESSAGE_ACK: J,
   CONTENT_INVENTORY_SET_FEED: function(e) {
 let {
   feedId: t
