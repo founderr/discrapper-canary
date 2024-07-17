@@ -1,64 +1,76 @@
 n.d(t, {
   Z: function() {
-return h;
+return m;
   }
 });
 var i = n(735250),
   s = n(470079),
-  a = n(481060),
-  r = n(617136),
-  l = n(272008),
-  o = n(497505),
-  c = n(918701),
-  d = n(667105),
-  u = n(689938),
-  _ = n(207637);
+  a = n(442837),
+  r = n(481060),
+  l = n(617136),
+  o = n(272008),
+  c = n(569984),
+  d = n(497505),
+  u = n(918701),
+  _ = n(667105),
+  E = n(689938),
+  h = n(207637);
 
-function E(e) {
+function I(e) {
   let {
-onClick: t
+onClick: t,
+submitting: n
   } = e;
   return (0, i.jsx)('div', {
-className: _.container,
-children: (0, i.jsx)(a.Button, {
-  color: a.ButtonColors.BRAND,
+className: h.container,
+children: (0, i.jsx)(r.Button, {
+  color: r.ButtonColors.BRAND,
   onClick: t,
-  className: _.button,
-  children: u.Z.Messages.QUESTS_CLAIM_REWARD
+  submitting: n,
+  className: h.button,
+  children: E.Z.Messages.QUESTS_CLAIM_REWARD
 })
   });
 }
 
-function h(e) {
-  var t, n, h, I;
+function m(e) {
+  var t, n, m, g;
   let {
-quest: m
-  } = e, g = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (h = m.userStatus) || void 0 === h ? void 0 : h.claimedAt) == null, T = (0, c.iQ)(m), S = !(0, c.zi)(m), f = (null === (I = m.userStatus) || void 0 === I ? void 0 : I.claimedAt) != null, C = (0, d.hf)({
-quest: m,
-location: o.jn.QUEST_BAR
-  }), N = s.useCallback(() => {
-(0, l.AH)(m.id, {
-  questContent: o.jn.QUEST_HOME_DESKTOP,
-  questContentCTA: r.jZ.ACCEPT_QUEST
+quest: p
+  } = e, {
+isClaiming: T,
+isEnrolling: S
+  } = (0, a.cj)([c.Z], () => ({
+isClaiming: c.Z.isClaimingRewardCode(p.id) || c.Z.isClaimingReward(p.id) || c.Z.isFetchingRewardCode(p.id),
+isEnrolling: c.Z.isEnrolling(p.id)
+  })), f = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, C = (null === (n = p.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (m = p.userStatus) || void 0 === m ? void 0 : m.claimedAt) == null, N = (0, u.iQ)(p), A = !(0, u.zi)(p), Z = (null === (g = p.userStatus) || void 0 === g ? void 0 : g.claimedAt) != null, v = (0, _.hf)({
+quest: p,
+location: d.jn.QUEST_BAR
+  }), L = s.useCallback(() => {
+(0, o.AH)(p.id, {
+  questContent: d.jn.QUEST_HOME_DESKTOP,
+  questContentCTA: l.jZ.ACCEPT_QUEST
 });
-  }, [m]);
-  return T && p || S && p ? (0, i.jsx)(E, {
-onClick: C
-  }) : S && g && !f ? (0, i.jsx)('div', {
-className: _.container,
-children: (0, i.jsx)(a.Button, {
-  color: a.ButtonColors.PRIMARY,
+  }, [p]);
+  return N && C || A && C ? (0, i.jsx)(I, {
+submitting: T,
+onClick: v
+  }) : A && f && !Z ? (0, i.jsx)('div', {
+className: h.container,
+children: (0, i.jsx)(r.Button, {
+  color: r.ButtonColors.PRIMARY,
   disabled: !0,
-  className: _.button,
-  children: u.Z.Messages.QUEST_ACCEPTED
+  className: h.button,
+  children: E.Z.Messages.QUEST_ACCEPTED
 })
-  }) : S && !g ? (0, i.jsx)('div', {
-className: _.container,
-children: (0, i.jsx)(a.Button, {
-  color: a.ButtonColors.BRAND,
-  onClick: N,
-  className: _.button,
-  children: u.Z.Messages.QUESTS_ACCEPT
+  }) : A && !f ? (0, i.jsx)('div', {
+className: h.container,
+children: (0, i.jsx)(r.Button, {
+  submitting: S,
+  color: r.ButtonColors.BRAND,
+  onClick: L,
+  className: h.button,
+  children: E.Z.Messages.QUESTS_ACCEPT
 })
   }) : null;
 }
