@@ -16,7 +16,8 @@ function I(e, t) {
   let n = !1;
   return null == e.userContent && (e.userContent = {
 dismissedContents: new Uint8Array(),
-lastReceivedChangelogId: '0'
+lastReceivedChangelogId: '0',
+recurringDismissibleContentStates: {}
   }), null == e.userContent.dismissedContents && (e.userContent.dismissedContents = new Uint8Array()), !(0, u.jl)(e.userContent.dismissedContents, t) && (e.userContent.dismissedContents = (0, u.GV)(e.userContent.dismissedContents, t), n = !0), n;
 }
 
