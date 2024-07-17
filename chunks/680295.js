@@ -43,7 +43,7 @@ let [v, O] = i.useState(0), [R, C] = i.useState(0), {
   L(t => t + e);
 });
 i.useEffect(() => {
-  L(-g), N((0, E.H)(I.effects));
+  L(-g), N((0, E.Hd)(I.effects));
 }, [I]), i.useEffect(() => {
   let e = 0,
     t = 1 / 0;
@@ -77,7 +77,8 @@ return i.useEffect(() => {
   children: (0, r.jsx)('div', {
     className: T ? m.innerNoRadius : m.inner,
     children: A.map((e, i) => {
-      var a, s, o, l, _, E, f, h;
+      var a, s, o, l, _, f, h, T;
+      let g = (0, E.Gn)(e.src);
       if (!P.current) {
         if (I.animationType === d.Q.PERSISTENT && null != I.staticFrameSrc && 0 === i && !0 === u) {
           let {
@@ -87,9 +88,9 @@ return i.useEffect(() => {
             className: m.effect,
             style: {
               top: null !== (_ = null === (o = e.position) || void 0 === o ? void 0 : o.y) && void 0 !== _ ? _ : 0 - t,
-              left: null !== (E = null === (l = e.position) || void 0 === l ? void 0 : l.x) && void 0 !== E ? E : 0
+              left: null !== (f = null === (l = e.position) || void 0 === l ? void 0 : l.x) && void 0 !== f ? f : 0
             },
-            src: n,
+            src: (0, E.Gn)(n),
             alt: y
           }, e.src + i);
         }
@@ -113,11 +114,11 @@ return i.useEffect(() => {
           }, e.src + i);
       }
       return (0, r.jsx)('img', {
-        src: null != p ? ''.concat(e.src, '?query=').concat(p) : e.src,
+        src: null != p ? ''.concat(g, '?query=').concat(p) : g,
         className: m.effect,
         style: {
-          top: (null !== (f = null === (a = e.position) || void 0 === a ? void 0 : a.y) && void 0 !== f ? f : 0) - t,
-          left: null !== (h = null === (s = e.position) || void 0 === s ? void 0 : s.x) && void 0 !== h ? h : 0
+          top: (null !== (h = null === (a = e.position) || void 0 === a ? void 0 : a.y) && void 0 !== h ? h : 0) - t,
+          left: null !== (T = null === (s = e.position) || void 0 === s ? void 0 : s.x) && void 0 !== T ? T : 0
         },
         alt: y
       }, e.src + i);
@@ -145,7 +146,7 @@ return (0, r.jsx)('div', {
   children: (0, r.jsx)('div', {
     className: a ? m.innerNoRadius : m.inner,
     children: (0, r.jsx)('img', {
-      src: n && !o ? c : u,
+      src: n && !o ? (0, E.Gn)(c) : (0, E.Gn)(u),
       className: m.effect,
       style: {
         top: 0 - i

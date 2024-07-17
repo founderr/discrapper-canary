@@ -14,7 +14,7 @@ let T = 0,
 p = (0, u.cloneDeep)(e);
 let t = {};
 p.forEach(e => {
-  t[e.id] = (0, _.isAndroid)() ? (0, E.Q)(e) : e;
+  t[e.id] = (0, _.isAndroid)() ? (0, E.QE)(e) : e;
 }), m = t;
   },
   S = () => {
