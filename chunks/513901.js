@@ -34,8 +34,8 @@ initialSelectedEffectId: p
   } = e, R = (0, E.Kg)(s, t), x = _.ZP.canUsePremiumProfileCustomization(s), {
 analyticsLocations: M
   } = (0, l.ZP)(), {
-pendingProfileEffectId: f,
-errors: D
+pendingProfileEffectId: D,
+errors: f
   } = (0, E.bd)(t), P = a.useCallback(() => (0, c.H)({
 analyticsLocations: M,
 initialSelectedEffectId: p,
@@ -55,7 +55,7 @@ x,
 M
   ]);
   let L = null != t,
-Z = O || void 0 !== f ? null != f : null != R,
+Z = O || void 0 !== D ? null != D : null != R,
 b = h ? o.ShinyButton : o.Button;
   return (0, n.jsx)(u.Z, {
 forcedDivider: A,
@@ -63,7 +63,7 @@ borderType: T.Y.PREMIUM,
 hasBackground: !0,
 title: m,
 showBorder: g,
-errors: D,
+errors: f,
 className: i,
 children: (0, n.jsxs)('div', {
   className: C.buttonsContainer,

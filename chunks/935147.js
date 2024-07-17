@@ -28,8 +28,8 @@ var n = t(735250),
   R = t(532432),
   x = t(504983),
   M = t(134795),
-  f = t(513901),
-  D = t(451392),
+  D = t(513901),
+  f = t(451392),
   P = t(981631),
   L = t(474936),
   Z = t(526761),
@@ -141,7 +141,7 @@ children: (0, n.jsxs)(x.Z, {
               })
             ]
           }),
-          (0, n.jsx)(D.Z, {
+          (0, n.jsx)(f.Z, {
             className: v.customizationSection,
             user: U,
             pendingAvatar: null != W ? W : y,
@@ -171,7 +171,7 @@ children: (0, n.jsxs)(x.Z, {
             user: U,
             sectionTitle: b.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
           }, 'decoration'),
-          (0, n.jsx)(f.Z, {
+          (0, n.jsx)(D.Z, {
             className: v.customizationSection,
             isTryItOutFlow: !0,
             initialSelectedEffectId: q,

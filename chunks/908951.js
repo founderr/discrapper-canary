@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-return D;
+return f;
   }
 }), t(47120), t(411104);
 var n = t(735250),
@@ -28,15 +28,15 @@ var n = t(735250),
   R = t(981631),
   x = t(689938),
   M = t(332580),
-  f = t(483085);
+  D = t(483085);
 
-function D(e) {
+function f(e) {
   let {
 subscription: s,
 onPaymentSourceAdded: t,
 highlightAddPaymentMethodButton: i,
 dropdownClassName: o,
-analyticsLocation: D,
+analyticsLocation: f,
 currentInvoicePreview: L,
 disabled: Z = !1
   } = e, b = (0, c.e7)([C.Z], () => C.Z.hidePersonalInformation), [v, j] = (0, c.Wu)([m.Z], () => [
@@ -47,7 +47,7 @@ analyticsLocations: U
   } = (0, S.ZP)(), G = a.useMemo(() => Object.values(v).filter(e => !e.invalid), [v]), [F, y] = a.useState(!1), [V, Y] = a.useState(s.currency), w = async (e, t) => {
 if (null == s)
   throw Error('missing subscription and paymentSource');
-null == e ? await E.fG(s, t, U, D) : await E.tq(s, e, t, U, D), y(!1), Y(t);
+null == e ? await E.fG(s, t, U, f) : await E.tq(s, e, t, U, f), y(!1), Y(t);
   }, k = async (e, t, n) => {
 y(!0);
 let a = await (0, p.hz)({
@@ -56,7 +56,7 @@ let a = await (0, p.hz)({
   renewal: !0,
   currency: t,
   analyticsLocations: U,
-  analyticsLocation: D
+  analyticsLocation: f
 });
 L.currency !== a.currency || L.currency === a.currency && L.total !== a.total ? await P(a, () => {
   n(e, t);
@@ -78,7 +78,7 @@ null != e && k(e, H(e), w);
 (0, d.openModalLazy)(async () => e => (0, n.jsx)(u.default, {
   ...e,
   onAddPaymentSource: K,
-  analyticsLocation: D
+  analyticsLocation: f
 }), {
   onCloseCallback: () => {
     (0, _.fw)();
@@ -138,7 +138,7 @@ return (0, n.jsxs)(n.Fragment, {
     null != s.paymentSourceId ? (0, n.jsx)(T.b, {
       currencies: t,
       children: (0, n.jsxs)('div', {
-        className: r()(M.currency, f.flex, f.alignCenter),
+        className: r()(M.currency, D.flex, D.alignCenter),
         children: [
           (0, n.jsx)('div', {
             children: x.Z.Messages.PAYMENT_CURRENCY_PAYING_IN

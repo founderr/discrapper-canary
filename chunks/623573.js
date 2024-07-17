@@ -29,8 +29,8 @@ var n, a, i = t(735250),
   R = t(358085),
   x = t(622999),
   M = t(462566),
-  f = t(801937),
-  D = t(282164),
+  D = t(801937),
+  f = t(282164),
   P = t(738342),
   L = t(228666),
   Z = t(581813),
@@ -340,7 +340,7 @@ super(...e), U(this, 'state', {
     }
   },
   payment_type: {
-    renderBody: () => (0, i.jsx)(f.Z, {
+    renderBody: () => (0, i.jsx)(D.Z, {
       allowStripeRequestPayments: !R.isPlatformEmbedded,
       onChooseType: this.handleChooseType,
       onStripePaymentMethodReceived: this.handleStripePaymentMethod
@@ -441,7 +441,7 @@ super(...e), U(this, 'state', {
     }
   },
   paypal: {
-    renderBody: () => (0, i.jsx)(D.Z, {}),
+    renderBody: () => (0, i.jsx)(f.Z, {}),
     renderNextButton: () => {
       let {
         submitting: e,

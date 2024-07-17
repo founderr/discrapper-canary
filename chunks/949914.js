@@ -24,8 +24,8 @@ var n = t(735250),
   R = t(245950),
   x = t(404203),
   M = t(330181),
-  f = t(954821),
-  D = t(980864),
+  D = t(954821),
+  f = t(980864),
   P = t(981631),
   L = t(176505),
   Z = t(526761),
@@ -144,7 +144,7 @@ return null;
   null != l && ((0, h.uL)(P.Z5c.CHANNEL(l.id, L.oC.ROLE_SUBSCRIPTIONS)), (0, _.xf)(), E.Z.show(P.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, b.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => u.Z.open(P.oAB.SUBSCRIPTIONS, Z.cP)));
 },
 w = () => {
-  null != l && (0, f.h)({
+  null != l && (0, D.h)({
     guildId: l.id,
     groupListing: i,
     listing: t,
@@ -153,7 +153,7 @@ w = () => {
 },
 k = async () => {
   try {
-    O(!0), await d.pl(s, F), (0, D.h)();
+    O(!0), await d.pl(s, F), (0, f.h)();
   } finally {
     O(!1);
   }

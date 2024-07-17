@@ -29,7 +29,7 @@ label: m,
 colorPickerMiddle: A,
 colorPickerFooter: h,
 showEyeDropper: g
-  } = e, O = a.useRef(null), p = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(), R = c.Z.colors.BACKGROUND_ACCENT.css, x = (0, u.DP)(i), M = (0, l.Rf)(i), f = M === p ? R : M, D = (0, E.Lq)(x ? T.Ilk.WHITE_500 : T.Ilk.PRIMARY_530), P = (0, _.Z)(A), L = (0, _.Z)(h), [Z, b] = a.useState((0, o.Z)());
+  } = e, O = a.useRef(null), p = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(), R = c.Z.colors.BACKGROUND_ACCENT.css, x = (0, u.DP)(i), M = (0, l.Rf)(i), D = M === p ? R : M, f = (0, E.Lq)(x ? T.Ilk.WHITE_500 : T.Ilk.PRIMARY_530), P = (0, _.Z)(A), L = (0, _.Z)(h), [Z, b] = a.useState((0, o.Z)());
   return a.useEffect(() => {
 (P !== A || L !== h) && b((0, o.Z)());
   }, [
@@ -66,7 +66,7 @@ children: e => {
         onClick: C ? T.dG4 : s,
         style: {
           backgroundColor: M,
-          borderColor: f
+          borderColor: D
         },
         className: S.swatch,
         'aria-label': I.Z.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
@@ -78,7 +78,7 @@ children: e => {
           className: S.editPencilIcon,
           width: 14,
           height: 14,
-          color: D
+          color: f
         })
       }),
       m

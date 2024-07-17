@@ -24,8 +24,8 @@ var n = t(735250),
   R = t(430824),
   x = t(325067),
   M = t(246946),
-  f = t(594174),
-  D = t(285952),
+  D = t(594174),
+  f = t(285952),
   P = t(709054),
   L = t(706454),
   Z = t(210887),
@@ -180,17 +180,17 @@ return (0, n.jsxs)(_.FormSection, {
     }),
     (0, n.jsx)(g.F, {
       setting: G.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-      children: (0, n.jsxs)(D.Z, {
-        align: D.Z.Align.STRETCH,
+      children: (0, n.jsxs)(f.Z, {
+        align: f.Z.Align.STRETCH,
         children: [
-          (0, n.jsx)(D.Z.Child, {
+          (0, n.jsx)(f.Z.Child, {
             wrap: !0,
             children: (0, n.jsx)(v.Z, {
               backupCodes: e
             })
           }),
-          s.mfaEnabled ? null : (0, n.jsx)(D.Z, {
-            align: D.Z.Align.CENTER,
+          s.mfaEnabled ? null : (0, n.jsx)(f.Z, {
+            align: f.Z.Align.CENTER,
             basis: '323px',
             grow: 0,
             children: (0, n.jsx)('img', {
@@ -339,8 +339,8 @@ super(e), this.state = {
   }
 }
 s.Z = () => {
-  let e = (0, c.e7)([f.default], () => {
-  let e = f.default.getCurrentUser();
+  let e = (0, c.e7)([D.default], () => {
+  let e = D.default.getCurrentUser();
   return l()(null != e, 'ConnectedUserAccountSettings: currentUser cannot be undefined'), e;
 }),
 s = (0, c.e7)([x.Z], () => x.Z.getBackupCodes()),

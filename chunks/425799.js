@@ -28,7 +28,7 @@ h = a.useRef(null),
 [g, O] = a.useState(!1),
 [p, R] = a.useState(!1),
 [x, M] = a.useState(!1),
-f = (0, o.wj)((0, d.ZP)());
+D = (0, o.wj)((0, d.ZP)());
   return null == e ? (0, n.jsx)('div', {}) : (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)('div', {
@@ -159,7 +159,7 @@ children: [
   m.map((e, s) => (0, n.jsxs)('div', {
     style: {
       marginBottom: 8,
-      color: f ? 'white' : 'black'
+      color: D ? 'white' : 'black'
     },
     children: [
       (0, n.jsxs)('div', {

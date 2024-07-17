@@ -42,9 +42,9 @@ return r()(null != e, 'UserSettingsProfileCustomization: user cannot be undefine
   ...i
 } = (0, o.cj)([h.Z], () => h.Z.getAllPending()),
 M = p.dN.useSetting() && null != t ? S.ZP.parse(void 0, t).content : t,
-f = O.ZP.canUsePremiumProfileCustomization(e),
+D = O.ZP.canUsePremiumProfileCustomization(e),
 {
-  analyticsLocations: D
+  analyticsLocations: f
 } = (0, T.ZP)(u.Z.PROFILE);
   a.useEffect(() => () => l.Z.wait(d.W3), []);
   let P = 'UserSettingsProfileCustomization';
@@ -55,20 +55,20 @@ autoTrackExposure: !0
 location: P + ' auto off',
 autoTrackExposure: !1
   }), s) ? (0, n.jsx)(_.Z, {}) : (0, n.jsxs)(T.Gt, {
-value: D,
+value: f,
 children: [
   (0, n.jsx)(I.Z, {}),
   (0, n.jsx)(N.Z, {
     profilePreview: (0, n.jsx)(C.Z, {
       user: e,
-      canUsePremiumCustomization: f,
+      canUsePremiumCustomization: D,
       onUpsellClick: R.Z,
       pendingBio: M,
       ...i
     }),
     children: (0, n.jsx)(x.Z, {})
   }),
-  !f && (0, n.jsx)(m.Z, {
+  !D && (0, n.jsx)(m.Z, {
     user: e
   })
 ]

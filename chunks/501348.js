@@ -28,8 +28,8 @@ var n = t(735250),
   R = t(921801),
   x = t(594174),
   M = t(285952),
-  f = t(153124),
-  D = t(358085),
+  D = t(153124),
+  f = t(358085),
   P = t(210887),
   L = t(740492),
   Z = t(695346),
@@ -55,9 +55,9 @@ let w = {
 COZY: 'cozy',
 COMPACT: 'compact'
   },
-  k = (0, f.hQ)(),
-  H = (0, f.hQ)(),
-  W = (0, f.hQ)(),
+  k = (0, D.hQ)(),
+  H = (0, D.hQ)(),
+  W = (0, D.hQ)(),
   K = '1337',
   z = e => {
 let s = 0;
@@ -106,7 +106,7 @@ return [
   };
 class Q extends a.Component {
   renderZoomSlider() {
-return D.isPlatformEmbedded ? (0, n.jsxs)(d.FormItem, {
+return f.isPlatformEmbedded ? (0, n.jsxs)(d.FormItem, {
   className: V.marginTop20,
   children: [
     (0, n.jsx)(d.FormTitle, {

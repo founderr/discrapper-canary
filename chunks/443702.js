@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-return f;
+return D;
   }
 });
 var n = t(735250),
@@ -94,7 +94,7 @@ return s ? (0, n.jsx)(E.Z, {}) : (0, n.jsxs)('div', {
   }
 }
 
-function f() {
+function D() {
   let e = (0, o.cj)([
 g.default,
 m.Z,

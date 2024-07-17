@@ -25,8 +25,8 @@ var n, a, i, r = t(735250),
   R = t(942833),
   x = t(400916),
   M = t(916001),
-  f = t(539290),
-  D = t(336197),
+  D = t(539290),
+  f = t(336197),
   P = t(690221),
   L = t(219929),
   Z = t(307643),
@@ -157,7 +157,7 @@ guildProductListingId: t
   } = e, n = (0, O.hO)(s, t, {
 requireCurrentGuild: !1
   }), a = (0, R.C)(n), i = (0, S.e7)([B.Z], () => B.Z.getGuild(s)), l = (null == n ? void 0 : n.role_id) != null && (null == n ? void 0 : n.attachments_count) === 0 ? $.Z.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : a, c = o.useCallback(async () => {
-(null == i ? void 0 : i.hasFeature(X.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, D.Z)(X.Z5c.GUILD_PRODUCT(s, t)) : await (0, D.Z)(X.Z5c.CHANNEL(s)), (0, C.xf)();
+(null == i ? void 0 : i.hasFeature(X.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, f.Z)(X.Z5c.GUILD_PRODUCT(s, t)) : await (0, f.Z)(X.Z5c.CHANNEL(s)), (0, C.xf)();
   }, [
 i,
 s,
@@ -675,9 +675,9 @@ return e.isGuildProductPurchase ? (0, r.jsxs)(r.Fragment, {
     (0, r.jsx)('div', {
       className: ee.sectionDivider
     }),
-    e.isSoftDeletedProduct ? (0, r.jsx)(f.Z, {
+    e.isSoftDeletedProduct ? (0, r.jsx)(D.Z, {
       className: ee.warningBlock,
-      buttonPosition: f.E.RIGHT,
+      buttonPosition: D.E.RIGHT,
       notice: $.Z.Messages.GUILD_PRODUCT_BILLING_PRODUCT_UNAVAILABLE,
       ctaLabel: $.Z.Messages.GUILD_PRODUCT_BILLING_CONTACT_SUPPORT,
       onClick: () => (0, m.Z)(et(t))

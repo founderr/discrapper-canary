@@ -28,8 +28,8 @@ var n = t(735250),
   R = t(202858),
   x = t(726985),
   M = t(981631),
-  f = t(815660),
-  D = t(689938),
+  D = t(815660),
+  f = t(689938),
   P = t(363210),
   L = t(549856);
 
@@ -91,13 +91,13 @@ if (r || o) {
     type: l.FormText.Types.DESCRIPTION,
     className: L.marginBottom8,
     children: [
-      D.Z.Messages.MFA_SMS_AUTH_CURRENT_PHONE.format({
+      f.Z.Messages.MFA_SMS_AUTH_CURRENT_PHONE.format({
         phoneNumber: e
       }),
       (0, n.jsx)(l.Anchor, {
         onClick: this.togglePhoneNumberVisibility,
         className: P.phoneRevealer,
-        children: t ? D.Z.Messages.MFA_SMS_PHONE_NUMBER_HIDE : D.Z.Messages.MFA_SMS_PHONE_NUMBER_REVEAL
+        children: t ? f.Z.Messages.MFA_SMS_PHONE_NUMBER_HIDE : f.Z.Messages.MFA_SMS_PHONE_NUMBER_REVEAL
       })
     ]
   });
@@ -111,7 +111,7 @@ if (o)
       size: l.Button.Sizes.SMALL,
       submitting: i,
       onClick: this.handleDisableSMS,
-      children: D.Z.Messages.MFA_SMS_REMOVE
+      children: f.Z.Messages.MFA_SMS_REMOVE
     })
   });
 else {
@@ -124,14 +124,14 @@ else {
         size: l.Button.Sizes.SMALL,
         submitting: i,
         disabled: null != s,
-        children: null != s ? s : D.Z.Messages.MFA_SMS_ENABLE
+        children: null != s ? s : f.Z.Messages.MFA_SMS_ENABLE
       }),
       r ? (0, n.jsx)(l.Button, {
         onClick: this.handleChangePhoneNumber,
         color: l.Button.Colors.PRIMARY,
         size: l.Button.Sizes.SMALL,
         look: l.Button.Looks.LINK,
-        children: D.Z.Messages.CHANGE_PHONE_NUMBER
+        children: f.Z.Messages.CHANGE_PHONE_NUMBER
       }) : null
     ]
   });
@@ -140,11 +140,11 @@ return (0, n.jsx)(I.F, {
   setting: x.s6.ACCOUNT_SMS_BACKUP,
   children: (0, n.jsxs)(l.FormSection, {
     className: L.marginTop40,
-    title: D.Z.Messages.MFA_SMS_AUTH,
+    title: f.Z.Messages.MFA_SMS_AUTH,
     children: [
       (0, n.jsx)(l.FormText, {
         type: l.FormText.Types.DESCRIPTION,
-        children: D.Z.Messages.MFA_SMS_AUTH_SALES_PITCH
+        children: f.Z.Messages.MFA_SMS_AUTH_SALES_PITCH
       }),
       s,
       e
@@ -161,7 +161,7 @@ let {
   children: (0, n.jsx)(l.Button, {
     onClick: this.sendMFABackupCodesVerificationKeyEmail,
     size: l.Button.Sizes.SMALL,
-    children: D.Z.Messages.TWO_FA_VIEW_BACKUP_CODES
+    children: f.Z.Messages.TWO_FA_VIEW_BACKUP_CODES
   })
 });
 if (s.length > 0) {
@@ -171,19 +171,19 @@ if (s.length > 0) {
     fileName: 'discord_backup_codes.txt',
     children: (0, n.jsx)(l.Button, {
       size: l.Button.Sizes.SMALL,
-      children: D.Z.Messages.TWO_FA_DOWNLOAD_CODES
+      children: f.Z.Messages.TWO_FA_DOWNLOAD_CODES
     })
   });
   let a = e => e.map(e => (0, n.jsx)(b, {
     code: e
   }, e.code));
   e = (0, n.jsxs)(l.FormSection, {
-    title: D.Z.Messages.TWO_FA_BACKUP_CODES_LABEL,
+    title: f.Z.Messages.TWO_FA_BACKUP_CODES_LABEL,
     children: [
       (0, n.jsx)(l.FormText, {
         type: l.FormText.Types.DESCRIPTION,
         className: L.marginBottom20,
-        children: D.Z.Messages.TWO_FA_BACKUP_CODES_BODY.format()
+        children: f.Z.Messages.TWO_FA_BACKUP_CODES_BODY.format()
       }),
       (0, n.jsxs)(h.Z, {
         children: [
@@ -206,7 +206,7 @@ if (s.length > 0) {
           onClick: this.generateBackupCodes,
           look: l.ButtonLooks.LINK,
           size: l.ButtonSizes.MIN,
-          children: D.Z.Messages.TWO_FA_GENERATE_CODES
+          children: f.Z.Messages.TWO_FA_GENERATE_CODES
         })
       }),
       (0, n.jsx)(l.FormDivider, {
@@ -218,12 +218,12 @@ if (s.length > 0) {
 return (0, n.jsxs)(l.FormSection, {
   children: [
     (0, n.jsx)(l.FormTitle, {
-      children: D.Z.Messages.TWO_FA
+      children: f.Z.Messages.TWO_FA
     }),
     (0, n.jsx)(l.FormText, {
       type: l.FormText.Types.DESCRIPTION,
       className: L.marginBottom20,
-      children: D.Z.Messages.TWO_FA_DESCRIPTION
+      children: f.Z.Messages.TWO_FA_DESCRIPTION
     }),
     (0, n.jsxs)(h.Z, {
       justify: h.Z.Justify.START,
@@ -244,7 +244,7 @@ return (0, n.jsxs)(l.FormSection, {
                 size: l.Button.Sizes.SMALL,
                 color: l.ButtonColors.RED,
                 look: l.ButtonLooks.OUTLINED,
-                children: D.Z.Messages.TWO_FA_REMOVE
+                children: f.Z.Messages.TWO_FA_REMOVE
               })
             }),
             (0, n.jsx)(I.F, {
@@ -252,7 +252,7 @@ return (0, n.jsxs)(l.FormSection, {
               children: (0, n.jsx)(l.Button, {
                 onClick: R.ZP.enableMFA,
                 size: l.ButtonSizes.SMALL,
-                children: D.Z.Messages.TWO_FA_ENABLE
+                children: f.Z.Messages.TWO_FA_ENABLE
               })
             })
           ]
@@ -270,18 +270,18 @@ return (0, n.jsxs)(l.FormSection, {
   }
   renderDisabled() {
 return (0, n.jsxs)(l.FormSection, {
-  title: D.Z.Messages.TWO_FA,
+  title: f.Z.Messages.TWO_FA,
   children: [
     (0, n.jsx)(l.FormText, {
       type: l.FormText.Types.DESCRIPTION,
       className: L.marginBottom20,
-      children: D.Z.Messages.TWO_FA_SALES_PITCH
+      children: f.Z.Messages.TWO_FA_SALES_PITCH
     }),
     (0, n.jsx)(l.FormItem, {
       children: (0, n.jsx)(l.Button, {
         onClick: R.ZP.enableMFA,
         size: l.ButtonSizes.SMALL,
-        children: D.Z.Messages.TWO_FA_ENABLE
+        children: f.Z.Messages.TWO_FA_ENABLE
       })
     }),
     (0, n.jsx)(N.Z, {})
@@ -293,16 +293,16 @@ let {
   currentUser: e
 } = this.props;
 return O.uZ ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisabled() : (0, n.jsx)(l.FormSection, {
-  title: D.Z.Messages.TWO_FA,
+  title: f.Z.Messages.TWO_FA,
   children: (0, n.jsx)(l.FormText, {
     type: l.FormText.Types.DESCRIPTION,
-    children: D.Z.Messages.TWO_FA_NOT_VERIFIED
+    children: f.Z.Messages.TWO_FA_NOT_VERIFIED
   })
 }) : (0, n.jsx)(l.FormSection, {
-  title: D.Z.Messages.TWO_FA,
+  title: f.Z.Messages.TWO_FA,
   children: (0, n.jsx)(l.FormText, {
     type: l.FormText.Types.DESCRIPTION,
-    children: D.Z.Messages.TWO_FA_USE_DESKTOP_APP
+    children: f.Z.Messages.TWO_FA_USE_DESKTOP_APP
   })
 });
   }
@@ -313,7 +313,7 @@ let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   ...s,
   ...e
 }), {
-  modalKey: f.M
+  modalKey: D.M
 });
   }
   constructor(...e) {
@@ -326,9 +326,9 @@ super(...e), Z(this, 'state', {
   });
 }), Z(this, 'handleDisableMFA', () => {
   d.Z.show({
-    title: D.Z.Messages.TWO_FA_REMOVE,
-    body: D.Z.Messages.TWO_FA_REMOVE_CONFIRMATION,
-    cancelText: D.Z.Messages.CANCEL,
+    title: f.Z.Messages.TWO_FA_REMOVE,
+    body: f.Z.Messages.TWO_FA_REMOVE_CONFIRMATION,
+    cancelText: f.Z.Messages.CANCEL,
     onConfirm: () => c.Z.disable()
   });
 }), Z(this, 'generateBackupCodes', async () => {
@@ -340,22 +340,22 @@ super(...e), Z(this, 'state', {
     handleSubmit: e => c.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
       this.viewBackupCodes(e);
     }),
-    title: D.Z.Messages.TWO_FA_VIEW_BACKUP_CODES_ENTER_PASSWORD,
-    actionText: D.Z.Messages.TWO_FA_BACKUP_CODES_NEXT_ACTION
+    title: f.Z.Messages.TWO_FA_VIEW_BACKUP_CODES_ENTER_PASSWORD,
+    actionText: f.Z.Messages.TWO_FA_BACKUP_CODES_NEXT_ACTION
   }));
 }), Z(this, 'viewBackupCodes', e => {
   (0, l.openModal)(s => (0, n.jsx)(E.Z, {
     ...s,
     handleSubmit: e => c.Z.confirmViewBackupCodes(e, !1).then(() => s.onClose()),
     maxLength: 8,
-    title: D.Z.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_LABEL,
-    label: D.Z.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_INPUT_LABEL,
+    title: f.Z.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_LABEL,
+    label: f.Z.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_INPUT_LABEL,
     forceNoPlaceholder: !0,
-    retryPrompt: D.Z.Messages.TWO_FA_CONFIRM_VIEW_RESEND_EMAIL_PROMPT,
-    retrySuccessMessage: D.Z.Messages.TWO_FA_CONFIRM_VIEW_RESEND_EMAIL_SUCCESS,
+    retryPrompt: f.Z.Messages.TWO_FA_CONFIRM_VIEW_RESEND_EMAIL_PROMPT,
+    retrySuccessMessage: f.Z.Messages.TWO_FA_CONFIRM_VIEW_RESEND_EMAIL_SUCCESS,
     onRetry: () => c.Z.sendMFABackupCodesVerificationKeyEmail(e),
-    actionText: D.Z.Messages.TWO_FA_VIEW_CODES_SUBMIT,
-    helpMessage: D.Z.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_BODY
+    actionText: f.Z.Messages.TWO_FA_VIEW_CODES_SUBMIT,
+    helpMessage: f.Z.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_BODY
   }));
 }), Z(this, 'getDownloadFileContents', () => {
   let e = this.props.backupCodes.map(e => {
@@ -365,7 +365,7 @@ super(...e), Z(this, 'state', {
       } = e;
       return '* '.concat(t.substr(0, 4), '-').concat(t.substr(4), ' ').concat(s ? '(used)' : '');
     }).join('\r\n'),
-    s = D.Z.Messages.TWO_FA_DISCORD_BACKUP_CODES.format({
+    s = f.Z.Messages.TWO_FA_DISCORD_BACKUP_CODES.format({
       email: this.props.currentUser.email
     });
   return ''.concat(s, '\r\n\r\n').concat(e);
@@ -378,7 +378,7 @@ super(...e), Z(this, 'state', {
     (0, l.openModal)(e => (0, n.jsx)(u.default, {
       ...e,
       handleSubmit: c.Z.enableSMS,
-      title: D.Z.Messages.MFA_SMS_ENABLE
+      title: f.Z.Messages.MFA_SMS_ENABLE
     }));
   };
   null == e.phone ? this.openPhoneVerificationModal({
@@ -388,8 +388,8 @@ super(...e), Z(this, 'state', {
   (0, l.openModal)(e => (0, n.jsx)(u.default, {
     ...e,
     handleSubmit: c.Z.disableSMS,
-    title: D.Z.Messages.MFA_SMS_REMOVE,
-    children: D.Z.Messages._MFA_SMS_CONFIRM_REMOVE_BODY
+    title: f.Z.Messages.MFA_SMS_REMOVE,
+    children: f.Z.Messages._MFA_SMS_CONFIRM_REMOVE_BODY
   }));
 });
   }

@@ -15,8 +15,8 @@ _.default = E => {
 transitionState: _,
 onClose: I,
 classificationId: i,
-source: n
-  } = E, P = (0, S.Z)(), t = () => {
+source: P
+  } = E, n = (0, S.Z)(), t = () => {
 I(), T.Z.open(N.oAB.PRIVACY_AND_SAFETY, D.s6.PRIVACY_ACCOUNT_STANDING);
   };
   return (0, A.jsxs)(O.ModalRoot, {
@@ -39,9 +39,9 @@ children: [
   }),
   (0, A.jsx)(O.ModalContent, {
     className: e.modalContent,
-    children: P ? (0, A.jsx)(O.Spinner, {}) : (0, A.jsx)(C.Z, {
+    children: n ? (0, A.jsx)(O.Spinner, {}) : (0, A.jsx)(C.Z, {
       classificationId: i,
-      source: n,
+      source: P,
       onError: t
     })
   }),

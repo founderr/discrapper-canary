@@ -24,8 +24,8 @@ var n = t(735250),
   R = t(759823),
   x = t(483085),
   M = t(735194),
-  f = t(549856);
-let D = o.ZP.connectStores([h.Z], () => ({
+  D = t(549856);
+let f = o.ZP.connectStores([h.Z], () => ({
 theme: h.Z.theme
   }))(c.EmptyState),
   P = (0, A.isWindows)();
@@ -51,7 +51,7 @@ children: [
     }
   }),
   (0, n.jsx)(c.FormDivider, {
-    className: r()(f.marginTop8, f.marginBottom8)
+    className: r()(D.marginTop8, D.marginBottom8)
   }),
   (0, n.jsxs)('div', {
     className: r()(p.actions, x.horizontal),
@@ -87,7 +87,7 @@ isOverride: T
 S.Z,
 u.ZP,
 N.Z
-  ], () => (0, u.FZ)(t)), [A, h] = a.useState(!1), [R, f] = a.useState(null !== (s = m.name) && void 0 !== s ? s : '???'), D = r()(x.flexCenter, {
+  ], () => (0, u.FZ)(t)), [A, h] = a.useState(!1), [R, D] = a.useState(null !== (s = m.name) && void 0 !== s ? s : '???'), f = r()(x.flexCenter, {
 [p.game]: !i,
 [p.activeGame]: i,
 [M.card]: !i,
@@ -122,7 +122,7 @@ C.default.track(g.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
 }), c.ToastType.SUCCESS)), h(!0);
   }
   return (0, n.jsxs)('div', {
-className: D,
+className: f,
 children: [
   (0, n.jsxs)('div', {
     className: r()(p.gameNameLastPlayed, x.vertical),
@@ -157,7 +157,7 @@ children: [
         value: R,
         onBlur: Z,
         onKeyDown: b,
-        onChange: e => f(e.target.value)
+        onChange: e => D(e.target.value)
       }),
       function() {
         let e;
@@ -318,8 +318,8 @@ function v(e) {
   let {
 children: s
   } = e;
-  return (0, n.jsxs)(D, {
-className: f.marginTop40,
+  return (0, n.jsxs)(f, {
+className: D.marginTop40,
 children: [
   (0, n.jsx)(c.EmptyStateImage, {
     darkSrc: t(879601),
@@ -358,7 +358,7 @@ children: [
     nowPlaying: !0
   }, (0, u.rH)(l)) : (0, n.jsx)(b, {}),
   (0, n.jsxs)('div', {
-    className: r()(p.nowPlayingAdd, f.marginReset, f.marginTop8, f.marginBottom20),
+    className: r()(p.nowPlayingAdd, D.marginReset, D.marginTop8, D.marginBottom20),
     children: [
       (0, n.jsx)('span', {
         children: O.Z.Messages.SETTINGS_GAMES_NOT_SEEING_GAME
@@ -389,10 +389,10 @@ children: [
       children: O.Z.Messages.SETTINGS_GAMES_NO_GAMES_HEADER
     })
   }) : (0, n.jsxs)(c.FormSection, {
-    className: f.marginTop40,
+    className: D.marginTop40,
     children: [
       (0, n.jsx)(c.FormTitle, {
-        className: f.marginBottom4,
+        className: D.marginBottom4,
         children: O.Z.Messages.SETTINGS_GAMES_ADDED_GAMES_LABEL
       }),
       (0, n.jsx)(c.FormText, {

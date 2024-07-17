@@ -24,13 +24,13 @@ var n, a, i, r, o = t(735250),
   R = t(981631),
   x = t(689938),
   M = t(370599);
-let f = {
+let D = {
 enabled: !0,
 combosEnabled: !0,
 screenshakeEnabled: !1,
 confettiEnabled: !1
   },
-  D = (0, c.range)(0, 11),
+  f = (0, c.range)(0, 11),
   P = (0, c.range)(0, 2.25, 0.25),
   L = (0, c.range)(1, 11),
   Z = (0, c.range)(1, 26);
@@ -127,7 +127,7 @@ onChange: e => {
     header: a ? x.Z.Messages.POGGERMODE_WARNING_TITLE_REDUCED_MOTION : x.Z.Messages.POGGERMODE_WARNING_TITLE,
     confirmText: x.Z.Messages.ENABLE,
     cancelText: x.Z.Messages.CANCEL,
-    onConfirm: () => n(a ? f : {
+    onConfirm: () => n(a ? D : {
       enabled: !0,
       warningSeen: !0
     }),
@@ -266,10 +266,10 @@ children: [
       }),
       (0, o.jsx)(E.Slider, {
         disabled: r,
-        markers: D,
+        markers: f,
         stickToMarkers: !0,
-        minValue: D[0],
-        maxValue: D[D.length - 1],
+        minValue: f[0],
+        maxValue: f[f.length - 1],
         initialValue: a,
         onValueChange: e => i({
           combosRequiredCount: e

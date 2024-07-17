@@ -9,8 +9,8 @@ var A = I(735250),
   e = I(626135),
   V = I(219230),
   i = I(531441),
-  n = I(788080),
-  P = I(451284),
+  P = I(788080),
+  n = I(451284),
   t = I(613734),
   a = I(846488),
   L = I(384725),
@@ -19,7 +19,7 @@ var A = I(735250),
   o = I(981631),
   M = I(689938),
   r = I(32068);
-let c = E => {
+let U = E => {
 let {
   classificationTypeText: _,
   guildMetadata: I
@@ -50,7 +50,7 @@ return (0, A.jsx)('div', {
   })
 });
   },
-  Y = E => {
+  c = E => {
 let {
   actions: _,
   classificationExpiration: I
@@ -66,7 +66,7 @@ return 0 === _.filter(E => E.descriptions.length > 0).length && null == I ? null
     (0, A.jsxs)('ul', {
       className: r.classificationActionsTakenList,
       children: [
-        _.map(E => (0, A.jsx)(U, {
+        _.map(E => (0, A.jsx)(Y, {
           action: E
         }, E.id)),
         null != I ? (0, A.jsx)('li', {
@@ -87,7 +87,7 @@ return 0 === _.filter(E => E.descriptions.length > 0).length && null == I ? null
   ]
 });
   },
-  U = E => {
+  Y = E => {
 let {
   action: _
 } = E;
@@ -206,8 +206,8 @@ classification: N,
 classificationRequestState: R,
 isAppealEligible: V,
 isDsaEligible: M,
-violationType: U
-  } = (0, t.YG)(I), d = (0, P.P)(), G = null != N && null != N.flagged_content && N.flagged_content.length > 0, F = (0, a.e)();
+violationType: Y
+  } = (0, t.YG)(I), d = (0, n.P)(), G = null != N && null != N.flagged_content && N.flagged_content.length > 0, F = (0, a.e)();
   return (O.useEffect(() => {
 F && e.default.track(o.rMx.SAFETY_HUB_ACTION, {
   action: s.n0.ViewViolationDetail,
@@ -216,21 +216,21 @@ F && e.default.track(o.rMx.SAFETY_HUB_ACTION, {
   source: S,
   is_violative_content_shown: G,
   is_dsa_eligible: M,
-  violation_type: U
+  violation_type: Y
 });
   }, [F]), null == N && R === i.OY.FAILED) ? (C(), null) : null == N ? null : (0, A.jsxs)('div', {
 className: r.classificationContainer,
 children: [
-  (0, A.jsx)(c, {
+  (0, A.jsx)(U, {
     classificationTypeText: N.description,
     guildMetadata: null == N ? void 0 : N.guild_metadata
   }),
   (0, A.jsx)(l.s, {
     flaggedContent: null !== (_ = N.flagged_content) && void 0 !== _ ? _ : []
   }),
-  (0, A.jsx)(Y, {
+  (0, A.jsx)(c, {
     actions: N.actions,
-    classificationExpiration: (0, n.Pu)(N)
+    classificationExpiration: (0, P.Pu)(N)
   }),
   (0, A.jsx)(m, {
     classificationTypeText: N.description,
@@ -247,7 +247,7 @@ children: [
           source: S,
           is_violative_content_shown: G,
           is_dsa_eligible: M,
-          violation_type: U
+          violation_type: Y
         }), V && (D.Z.increment({
           name: T.V.APPEAL_INGESTION_VIEW
         }), L.Z.open(I));

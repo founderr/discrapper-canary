@@ -24,8 +24,8 @@ var n = t(735250),
   R = t(768581),
   x = t(49012),
   M = t(210887),
-  f = t(436267),
-  D = t(494620),
+  D = t(436267),
+  f = t(494620),
   P = t(981631),
   L = t(689938),
   Z = t(756576),
@@ -88,10 +88,10 @@ let {
   disclosures: i
 } = e, o = () => {
   let e = L.Z.Messages.DELETE_APP_CONFIRM_MSG;
-  return (0, f.Z)(t.id) && (e = (0, n.jsxs)(n.Fragment, {
+  return (0, D.Z)(t.id) && (e = (0, n.jsxs)(n.Fragment, {
     children: [
       e,
-      (0, n.jsx)(D.Z, {
+      (0, n.jsx)(f.Z, {
         className: Z.infoBox,
         children: L.Z.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT_DISCONNECT_WARNING.format({
           applicationName: t.name
@@ -116,7 +116,7 @@ let {
     href: t.privacy_policy_url,
     shouldConfirm: !0
   });
-}, _ = (0, f.O)(t.id);
+}, _ = (0, D.O)(t.id);
 return (0, n.jsx)(u.Card, {
   className: r()(Z.authedApp, b.marginBottom8),
   outline: !0,

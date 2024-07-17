@@ -28,8 +28,8 @@ var n = t(735250),
   R = t(921801),
   x = t(657254),
   M = t(470647),
-  f = t(292959),
-  D = t(9156),
+  D = t(292959),
+  f = t(9156),
   P = t(626135),
   L = t(912101),
   Z = t(358085),
@@ -533,7 +533,7 @@ function X() {
 }, {
   autoTrackExposure: !1
 }).enabled,
-s = (0, c.e7)([D.ZP], () => D.ZP.mentionOnAllMessages);
+s = (0, c.e7)([f.ZP], () => f.ZP.mentionOnAllMessages);
   return e ? (0, n.jsx)(R.F, {
 setting: G.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
 children: (0, n.jsx)(d.FormSwitch, {
@@ -561,7 +561,7 @@ function q() {
 }, {
   autoTrackExposure: !1
 }),
-t = (0, c.e7)([D.ZP], () => D.ZP.useNewNotifications),
+t = (0, c.e7)([f.ZP], () => f.ZP.useNewNotifications),
 [i, o] = a.useState(!1);
   return e && (t || s) ? (0, n.jsxs)(n.Fragment, {
 children: [
@@ -661,14 +661,14 @@ focusMode: s
 }
 
 function ee() {
-  let e = (0, c.cj)([f.Z], () => ({
-disableUnreadBadge: f.Z.getDisableUnreadBadge(),
-taskbarFlash: f.Z.taskbarFlash,
-disabledSounds: f.Z.getDisabledSounds(),
-disableAllSounds: f.Z.getDisableAllSounds(),
-desktopType: f.Z.getDesktopType(),
-ttsType: f.Z.getTTSType(),
-notifyMessagesInSelectedChannel: f.Z.getNotifyMessagesInSelectedChannel()
+  let e = (0, c.cj)([D.Z], () => ({
+disableUnreadBadge: D.Z.getDisableUnreadBadge(),
+taskbarFlash: D.Z.taskbarFlash,
+disabledSounds: D.Z.getDisabledSounds(),
+disableAllSounds: D.Z.getDisableAllSounds(),
+desktopType: D.Z.getDesktopType(),
+ttsType: D.Z.getTTSType(),
+notifyMessagesInSelectedChannel: D.Z.getNotifyMessagesInSelectedChannel()
   }));
   return (0, n.jsx)($, {
 ...e,

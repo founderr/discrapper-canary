@@ -17,9 +17,9 @@ t.Z = e => {
   let {
 quest: n,
 progressBarRef: C,
-isExpanded: f
+isExpanded: _
   } = e, {
-completionSpring: _,
+completionSpring: f,
 startCompletionAnimation: h
   } = (0, u.GX)(), E = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, T = o.useRef(!1), S = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), N = o.useRef(null), A = (0, i.e7)([d.Z], () => d.Z.hasLayers()), v = (0, l.Z)(A), [j, B] = o.useState(null), [R, b] = o.useState(null), O = o.useRef(new r.qA({
 gravity: 0,
@@ -83,11 +83,11 @@ C,
 N,
 I,
 S
-  ]), y = (0, l.Z)(f);
+  ]), y = (0, l.Z)(_);
   return (o.useEffect(() => {
-E && f && !y && (h(), U());
+E && _ && !y && (h(), U());
   }, [
-f,
+_,
 E,
 h,
 U,
@@ -119,7 +119,7 @@ children: [
   (0, s.jsx)(a.animated.div, {
     className: x.background,
     style: {
-      opacity: _
+      opacity: f
     }
   }),
   (0, s.jsx)(r.O_, {

@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-return D;
+return f;
   }
 });
 var n = t(735250);
@@ -29,10 +29,10 @@ var a = t(512722),
   R = t(430131),
   x = t(133484),
   M = t(689938),
-  f = t(109254);
+  D = t(109254);
 
-function D(e) {
-  var s, t, a, D;
+function f(e) {
+  var s, t, a, f;
   let {
 guild: P
   } = e, L = (0, r.e7)([m.default], () => {
@@ -81,7 +81,7 @@ X = (e, s, t) => {
   t(null != e ? e : null != s ? null : void 0);
 };
   return (0, n.jsxs)('div', {
-className: f.sectionsContainer,
+className: D.sectionsContainer,
 children: [
   (0, n.jsx)(R.Z, {
     errors: null !== (a = null == G ? void 0 : G.nick) && void 0 !== a ? a : null == V ? void 0 : V.nick,
@@ -113,7 +113,7 @@ children: [
                 size: 'md',
                 color: 'currentColor',
                 ...e,
-                className: f.nitroWheel
+                className: D.nitroWheel
               })
             })
           ]
@@ -134,7 +134,7 @@ children: [
                 size: 'md',
                 color: 'currentColor',
                 ...e,
-                className: f.nitroWheel
+                className: D.nitroWheel
               })
             })
           ]
@@ -152,7 +152,7 @@ children: [
                 size: 'md',
                 color: 'currentColor',
                 ...e,
-                className: f.nitroWheel
+                className: D.nitroWheel
               })
             })
           ]
@@ -188,13 +188,13 @@ children: [
                 size: 'md',
                 color: 'currentColor',
                 ...e,
-                className: f.nitroWheel
+                className: D.nitroWheel
               })
             })
           ]
         }),
         onBioChange: e => (0, p.qN)(e, z),
-        errors: null !== (D = null == G ? void 0 : G.bio) && void 0 !== D ? D : null == V ? void 0 : V.bio,
+        errors: null !== (f = null == G ? void 0 : G.bio) && void 0 !== f ? f : null == V ? void 0 : V.bio,
         pendingBio: j,
         currentBio: z,
         disabled: !k

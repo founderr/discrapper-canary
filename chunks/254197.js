@@ -12,8 +12,8 @@ var s = n(735250),
   m = n(113434),
   g = n(569984),
   C = n(497505),
-  f = n(918701),
-  _ = n(988303),
+  _ = n(918701),
+  f = n(988303),
   h = n(585500),
   E = n(644646),
   T = n(78826),
@@ -42,14 +42,14 @@ onCtxMenuSelect: Q,
 quest: L,
 useReducedMotion: w,
 taskDetails: W
-  } = e, D = o.useRef(null), H = (0, c.e7)([g.Z], () => g.Z.isEnrolling(L.id), [L]), V = (0, m.B6)(L.config.expiresAt), z = o.useMemo(() => (0, f.nP)(L.config.assets.questBarHero), [L]), G = o.useCallback(() => {
+  } = e, D = o.useRef(null), H = (0, c.e7)([g.Z], () => g.Z.isEnrolling(L.id), [L]), V = (0, m.B6)(L.config.expiresAt), z = o.useMemo(() => (0, _.nP)(L.config.assets.questBarHero), [L]), G = o.useCallback(() => {
 (0, x.AH)(L.id, {
   questContent: C.jn.QUEST_BAR_V2,
   questContentCTA: p.jZ.ACCEPT_QUEST
 });
   }, [L]), {
 primaryVariant: F
-  } = _.u.useExperiment({
+  } = f.u.useExperiment({
 location: I.dr.QUESTS_BAR
   }, {
 autoTrackExposure: !1
@@ -57,14 +57,14 @@ autoTrackExposure: !1
 questSupportsConsole: K,
 isProgressingOnConsole: J
   } = o.useMemo(() => ({
-questSupportsConsole: (0, f.$J)(L),
-isProgressingOnConsole: (0, f.Bz)(L)
-  }), [L]), $ = (0, m.pe)(L), ee = W.percentComplete > 0, et = !J && !l.T.CONSOLE.has(W.taskType) && ($ || l.T.DESKTOP.has(W.taskType)), en = (0, f.ph)(L), es = (0, h.D)({
+questSupportsConsole: (0, _.$J)(L),
+isProgressingOnConsole: (0, _.Bz)(L)
+  }), [L]), $ = (0, m.pe)(L), ee = W.percentComplete > 0, et = !J && !l.T.CONSOLE.has(W.taskType) && ($ || l.T.DESKTOP.has(W.taskType)), en = (0, _.ph)(L), es = (0, h.D)({
 quest: L,
 location: I.dr.QUESTS_BAR,
 questContent: C.jn.QUEST_BAR_V2,
 taskDetails: W,
-useV2Variants: F === _.P.V2 || (0, O.a)(L)
+useV2Variants: F === f.P.V2 || (0, O.a)(L)
   });
   return (0, s.jsx)('div', {
 'aria-hidden': !Y,
@@ -237,7 +237,7 @@ children: X ? (0, s.jsxs)('div', {
             controls: !1,
             children: (0, s.jsx)('source', {
               src: en,
-              type: (0, f.mN)(en)
+              type: (0, _.mN)(en)
             })
           })
         }) : (0, s.jsx)(T.Fl, {

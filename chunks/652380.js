@@ -122,9 +122,9 @@ supplementaryApplicationIds: []
   targetedContent: []
 };
 
-function f() {
+function D() {
   var e, s, t;
-  let [g, f] = a.useState(M), [D, P] = a.useState(A.a.UNENROLLED), [L, Z] = a.useState([]), [b, v] = a.useState(!1), [j, B] = a.useState(null);
+  let [g, D] = a.useState(M), [f, P] = a.useState(A.a.UNENROLLED), [L, Z] = a.useState([]), [b, v] = a.useState(!1), [j, B] = a.useState(null);
   let U = (t = g.config, (0, i.EQ)(t).with({
 configVersion: 1
   }, e => ({
@@ -153,7 +153,7 @@ Z((e = g.config, (0, i.EQ)(e).with({
   function G(e, s) {
 var t, n;
 if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e)
-  f({
+  D({
     ...g,
     config: (t = g.config, n = {
       [e]: s
@@ -180,7 +180,7 @@ if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e
   function F(e, s) {
 var t, n;
 if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
-  f({
+  D({
     ...g,
     config: (t = g.config, n = {
       [e]: s
@@ -207,7 +207,7 @@ if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
   function y(e, s) {
 var t, n;
 if ('rewardName' === e || 'rewardNameWithArticle' === e)
-  f({
+  D({
     ...g,
     config: (t = g.config, n = {
       [e]: s
@@ -238,7 +238,7 @@ if ('rewardName' === e || 'rewardNameWithArticle' === e)
   }
 
   function V(e, s) {
-f({
+D({
   ...g,
   config: {
     ...g.config,
@@ -261,7 +261,7 @@ children: [
     children: (0, n.jsx)(C.Z, {
       onSelect: function(e) {
         if (B(e), null != e)
-          f(e);
+          D(e);
       },
       quest: j
     })
@@ -335,7 +335,7 @@ children: [
         onFileChange: function(e, s) {
           var t, n;
           if ('rewardTile' === e)
-            f({
+            D({
               ...g,
               config: (t = g.config, n = {
                 [e]: s
@@ -384,7 +384,7 @@ children: [
       children: (0, n.jsx)(m.Z, {
         onChange: function(e) {
           var s, t;
-          f({
+          D({
             ...g,
             config: (s = g.config, t = e, (0, i.EQ)(s).with({
               configVersion: 1
@@ -435,13 +435,13 @@ children: [
         onChange: function(e) {
           switch (P(e), e) {
             case A.a.UNENROLLED:
-              f({
+              D({
                 ...g,
                 userStatus: null
               });
               break;
             case A.a.ENROLLED:
-              f({
+              D({
                 ...g,
                 userStatus: x({
                   enrolledAt: new Date().toISOString()
@@ -449,7 +449,7 @@ children: [
               });
               break;
             case A.a.COMPLETED_25:
-              f({
+              D({
                 ...g,
                 userStatus: x({
                   enrolledAt: new Date().toISOString(),
@@ -458,7 +458,7 @@ children: [
               });
               break;
             case A.a.COMPLETED_50:
-              f({
+              D({
                 ...g,
                 userStatus: x({
                   enrolledAt: new Date().toISOString(),
@@ -467,7 +467,7 @@ children: [
               });
               break;
             case A.a.COMPLETED_75:
-              f({
+              D({
                 ...g,
                 userStatus: x({
                   enrolledAt: new Date().toISOString(),
@@ -476,7 +476,7 @@ children: [
               });
               break;
             case A.a.COMPLETED_100:
-              f({
+              D({
                 ...g,
                 userStatus: x({
                   completedAt: new Date().toISOString(),
@@ -486,7 +486,7 @@ children: [
               });
               break;
             case A.a.CLAIMED:
-              f({
+              D({
                 ...g,
                 userStatus: x({
                   claimedAt: new Date().toISOString(),
@@ -497,7 +497,7 @@ children: [
               });
           }
         },
-        value: D
+        value: f
       })
     ]
   }),
@@ -603,7 +603,7 @@ children: [
 ]
   });
 }
-class D extends a.Component {
+class f extends a.Component {
   componentDidCatch(e) {
 this.setState({
   error: e
@@ -637,7 +637,7 @@ return null != e ? (0, n.jsxs)('div', {
       })
     })
   ]
-}) : (0, n.jsx)(f, {}, s);
+}) : (0, n.jsx)(D, {}, s);
   }
   constructor(...e) {
 super(...e), g(this, 'state', {
@@ -651,4 +651,4 @@ super(...e), g(this, 'state', {
 });
   }
 }
-s.Z = D;
+s.Z = f;

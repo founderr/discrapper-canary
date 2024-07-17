@@ -1,6 +1,6 @@
 n.d(t, {
   y: function() {
-return f;
+return _;
   }
 });
 var s = n(735250);
@@ -73,7 +73,7 @@ return (0, s.jsx)('div', {
   })
 });
   },
-  f = e => {
+  _ = e => {
 var t;
 let {
   quest: n,
@@ -84,7 +84,7 @@ let {
   quest: n
 }), x = (0, c.P)({
   location: u.dr.QUESTS_BAR
-}), f = (0, a.z)(n);
+}), _ = (0, a.z)(n);
 if (d)
   return (0, s.jsx)(C, {
     quest: n,
@@ -95,7 +95,7 @@ if (p && !x)
   return (0, s.jsx)(g, {
     quest: n
   });
-if (!i && !f && !(0, l.zK)(n, u.S7.IN_HOUSE_CONSOLE_QUEST))
+if (!i && !_ && !(0, l.zK)(n, u.S7.IN_HOUSE_CONSOLE_QUEST))
   return (0, s.jsx)(m, {
     quest: n
   });

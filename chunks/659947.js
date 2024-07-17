@@ -131,8 +131,8 @@ return {
 };
   }(), {
 query: M,
-updateQuery: f,
-queryResults: D
+updateQuery: D,
+queryResults: f
   } = (0, l.Z)({
 visible: !0,
 autocompleterResultTypes: m,
@@ -174,13 +174,13 @@ let {
   row: L
 });
   }, [L]);
-  let b = null != P ? P.length : D.length,
+  let b = null != P ? P.length : f.length,
 v = (() => {
   if (null != P) {
     var e;
     return null === (e = P[L]) || void 0 === e ? void 0 : e.id;
   }
-  let s = D[L];
+  let s = f[L];
   if ((null == s ? void 0 : s.type) === I.h8.VOICE_CHANNEL)
     return s.record.id;
 })();
@@ -196,7 +196,7 @@ children: (0, n.jsxs)(r.ModalRoot, {
       className: N.inputWrapper,
       children: (0, n.jsx)(r.TextInput, {
         value: M,
-        onChange: f,
+        onChange: D,
         onKeyDown: function(e) {
           x();
           let s = e.key.toLowerCase();
@@ -209,7 +209,7 @@ children: (0, n.jsxs)(r.ModalRoot, {
                 let e = (() => {
                   if (null != P)
                     return P[L];
-                  let e = D[L];
+                  let e = f[L];
                   if ((null == e ? void 0 : e.type) === I.h8.VOICE_CHANNEL)
                     return e.record;
                 })();
@@ -245,7 +245,7 @@ children: (0, n.jsxs)(r.ModalRoot, {
         } = e, a = (() => {
           if (null != P)
             return P[s];
-          let e = D[s];
+          let e = f[s];
           if ((null == e ? void 0 : e.type) === I.h8.VOICE_CHANNEL)
             return e.record;
         })();

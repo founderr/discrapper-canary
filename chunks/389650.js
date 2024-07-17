@@ -28,8 +28,8 @@ var n = t(735250),
   R = t(63063),
   x = t(358085),
   M = t(13140),
-  f = t(210887),
-  D = t(659947),
+  D = t(210887),
+  f = t(659947),
   P = t(981631),
   L = t(420212),
   Z = t(689938),
@@ -60,8 +60,8 @@ S.Q2.MISCELLANEOUS
   ]);
 }
 let G = l()((0, S.Rv)()).filter(e => e.description !== Z.Z.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(),
-  F = c.ZP.connectStores([f.Z], () => ({
-theme: f.Z.theme
+  F = c.ZP.connectStores([D.Z], () => ({
+theme: D.Z.theme
   }))(_.EmptyState);
 class y extends a.PureComponent {
   renderMessage() {
@@ -163,7 +163,7 @@ let {
   action: e
 } = this.props.keybind;
 if (e === P.kg4.SWITCH_TO_VOICE_CHANNEL)
-  return (0, n.jsx)(D.Z, {
+  return (0, n.jsx)(f.Z, {
     keybind: this.props.keybind
   });
   }

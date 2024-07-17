@@ -3,13 +3,13 @@ n.d(t, {
 return h;
   },
   GX: function() {
-return _;
+return f;
   },
   eQ: function() {
 return C;
   },
   vf: function() {
-return f;
+return _;
   }
 }), n(47120);
 var s = n(470079),
@@ -45,7 +45,7 @@ return g.Z.Messages.QUESTS_COMPLETION_PROGRESS_STARTED_V2.format({
   return (0, u.$J)(e) ? g.Z.Messages.QUEST_BAR_TITLE_START_PLAYING : g.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED;
 }
 
-function f(e, t) {
+function _(e, t) {
   var n;
   let s = (0, c.B6)(x.r.build(e.config).rewardsExpireAt),
 o = (0, c.Rf)(e),
@@ -72,7 +72,7 @@ return a ? (0, u.AV)({
   return g.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE;
 }
 
-function _() {
+function f() {
   let [{
 spring: e
   }, t] = (0, o.useSpring)(() => ({

@@ -46,8 +46,8 @@ onHeightChange: x
   } = o.useContext(d), m = (0, a.e7)([c.Z], () => c.Z.useReducedMotion), {
 ref: g,
 height: C = null
-  } = (0, i.Z)(), f = null !== (t = (0, l.Z)(C)) && void 0 !== t ? t : null, [{
-height: _
+  } = (0, i.Z)(), _ = null !== (t = (0, l.Z)(C)) && void 0 !== t ? t : null, [{
+height: f
   }, h] = (0, r.useSpring)(() => ({
 from: {
   height: 0
@@ -56,29 +56,29 @@ config: u,
 immediate: m
   }));
   return o.useLayoutEffect(() => {
-if (null === f || null === C)
+if (null === _ || null === C)
   return;
-let e = C - f;
+let e = C - _;
 0 !== e && x(e);
   }, [
 C,
-f,
+_,
 x,
 p
   ]), o.useLayoutEffect(() => {
 null !== C && h({
   height: C,
-  immediate: !p || m || null === f
+  immediate: !p || m || null === _
 });
   }, [
 C,
 h,
 p,
 m,
-f
+_
   ]), (0, s.jsx)(r.animated.div, {
 style: {
-  height: null === f ? 'auto' : _,
+  height: null === _ ? 'auto' : f,
   overflow: 'hidden'
 },
 children: (0, s.jsx)('div', {

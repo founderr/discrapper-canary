@@ -1,9 +1,9 @@
 t.d(s, {
   g: function() {
-return D;
+return f;
   },
   i: function() {
-return f;
+return D;
   }
 });
 var n = t(735250),
@@ -36,7 +36,7 @@ let M = () => {
   forceTrack: !0
 }), (0, _.bM)(), (0, l.xf)();
   },
-  f = () => {
+  D = () => {
 var e, s;
 let {
   analyticsLocations: t
@@ -109,7 +109,7 @@ return a.useEffect(() => {
   ]
 });
   },
-  D = () => (0, i.e7)([E.Z], () => E.Z.isPreview) ? null : (0, n.jsx)(o.Button, {
+  f = () => (0, i.e7)([E.Z], () => E.Z.isPreview) ? null : (0, n.jsx)(o.Button, {
 size: o.ButtonSizes.SMALL,
 onClick: () => M(),
 children: p.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEMES_TITLE

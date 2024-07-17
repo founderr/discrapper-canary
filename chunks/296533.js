@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-return f;
+return D;
   },
   r: function() {
 return M;
@@ -271,7 +271,7 @@ children: [
   });
 }
 
-function f(e) {
+function D(e) {
   let {
 guildBoostSlots: s,
 premiumSubscription: t

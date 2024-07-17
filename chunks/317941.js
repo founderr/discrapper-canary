@@ -25,7 +25,7 @@ var n = t(735250),
   x = t(689938),
   M = t(105953);
 
-function f(e, s, t) {
+function D(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
 value: t,
 enumerable: !0,
@@ -33,7 +33,7 @@ configurable: !0,
 writable: !0
   }) : e[s] = t, e;
 }
-class D extends a.PureComponent {
+class f extends a.PureComponent {
   componentWillUnmount() {
 this._copyModeTimeout.stop();
   }
@@ -95,9 +95,9 @@ return (0, n.jsxs)(A.Z, {
 });
   }
   constructor(...e) {
-super(...e), f(this, '_copyModeTimeout', new l.V7()), f(this, 'state', {
+super(...e), D(this, '_copyModeTimeout', new l.V7()), D(this, 'state', {
   copyMode: c.CopyInputModes.DEFAULT
-}), f(this, 'handleCopy', e => {
+}), D(this, 'handleCopy', e => {
   let {
     giftCode: s,
     sku: t
@@ -233,7 +233,7 @@ return (0, n.jsxs)(_.Z, {
       }) : (0, n.jsxs)(a.Fragment, {
         children: [
           t.length < e.length ? this.renderGenerateGiftCodeRow() : null,
-          t.map(e => (0, n.jsx)(D, {
+          t.map(e => (0, n.jsx)(f, {
             giftCode: e,
             sku: r,
             hideCode: l
@@ -245,11 +245,11 @@ return (0, n.jsxs)(_.Z, {
 });
   }
   constructor(...e) {
-super(...e), f(this, '_loadedAt', null), f(this, 'state', {
+super(...e), D(this, '_loadedAt', null), D(this, 'state', {
   isOpen: !1,
   isCreating: !1,
   isHovered: !1
-}), f(this, 'handleGenerateGiftCode', async e => {
+}), D(this, 'handleGenerateGiftCode', async e => {
   e.stopPropagation();
   let {
     skuId: s,
@@ -262,7 +262,7 @@ super(...e), f(this, '_loadedAt', null), f(this, 'state', {
     isCreating: !1,
     isOpen: !0
   });
-}), f(this, 'handleToggleOpen', () => {
+}), D(this, 'handleToggleOpen', () => {
   let {
     skuId: e,
     subscriptionPlanId: s,

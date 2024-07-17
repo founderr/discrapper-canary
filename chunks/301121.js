@@ -26,8 +26,8 @@ var n, a, i = t(735250),
   R = t(778825),
   x = t(856768),
   M = t(592204),
-  f = t(712950),
-  D = t(880257),
+  D = t(712950),
+  f = t(880257),
   P = t(16703),
   L = t(977059),
   Z = t(236289),
@@ -109,7 +109,7 @@ children: [
 
 function eE() {
   var e;
-  let s = null === (e = (0, D.Z)()) || void 0 === e || e,
+  let s = null === (e = (0, f.Z)()) || void 0 === e || e,
 t = (0, v.y0)({
   location: 'user_settings_web'
 }),
@@ -211,7 +211,7 @@ children: [
 
 function eI() {
   var e;
-  let s = null === (e = (0, D.Z)()) || void 0 === e || e,
+  let s = null === (e = (0, f.Z)()) || void 0 === e || e,
 {
   explicitContentGuilds: t,
   explicitContentFriendDm: n,
@@ -1021,8 +1021,8 @@ r = (0, M.Xo)({
   hasSearchResults: o,
   searchResults: l
 } = (0, ee.E)(),
-c = (0, f.p)(),
-_ = (0, D.Z)(),
+c = (0, D.p)(),
+_ = (0, f.Z)(),
 E = (0, z.H)({
   location: 'user_settings_privacy_safety'
 }),

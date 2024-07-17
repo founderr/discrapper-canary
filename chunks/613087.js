@@ -38,11 +38,11 @@ let {
   registerComponent: m,
   unregisterComponent: g,
   expansionSpring: C
-} = o.useContext(c), f = o.useRef(null), _ = o.useRef(null), h = o.useContext(i.T);
+} = o.useContext(c), _ = o.useRef(null), f = o.useRef(null), h = o.useContext(i.T);
 o.useEffect(() => {
   x();
 }, [x]), o.useEffect(() => {
-  let e = f.current;
+  let e = _.current;
   return null != e && m(e, l, d), () => {
     null != e && g(l, d);
   };
@@ -70,7 +70,7 @@ return null == E ? T = null : u && null != C ? T = (0, s.jsxs)(s.Fragment, {
           ]
         })
       },
-      children: n(_)
+      children: n(f)
     }), E),
     'expanded' === d && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
       style: {
@@ -86,16 +86,16 @@ return null == E ? T = null : u && null != C ? T = (0, s.jsxs)(s.Fragment, {
           ]
         })
       },
-      children: n(_)
+      children: n(f)
     }), E)
   ]
-}) : 'collapsed' === d && (T = (0, r.createPortal)(n(_), E)), (0, s.jsxs)('div', {
+}) : 'collapsed' === d && (T = (0, r.createPortal)(n(f), E)), (0, s.jsxs)('div', {
   style: {
     opacity: null == E || p ? 1 : 0
   },
   ref: t,
   children: [
-    n(f),
+    n(_),
     !p && T
   ]
 });

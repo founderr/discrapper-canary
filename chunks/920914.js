@@ -24,8 +24,8 @@ var n = t(735250),
   R = t(297700),
   x = t(553795),
   M = t(430824),
-  f = t(771845),
-  D = t(246946),
+  D = t(771845),
+  f = t(246946),
   P = t(626135),
   L = t(63063),
   Z = t(706454),
@@ -115,7 +115,7 @@ function k(e) {
 } = e,
 [O, p] = a.useState(T.friendSync),
 [x, M] = a.useState(T.visibility),
-[f, D] = a.useState(T.metadataVisibility),
+[D, f] = a.useState(T.metadataVisibility),
 [P, Z] = a.useState(T.showActivity),
 [F, Y] = a.useState(null),
 [k, H] = a.useState(null),
@@ -124,10 +124,10 @@ function k(e) {
 X = (0, m.rR)(T.type),
 q = C.Z.get(X);
   a.useEffect(() => {
-p(T.friendSync), M(T.visibility), D(T.metadataVisibility), Z(T.showActivity);
+p(T.friendSync), M(T.visibility), f(T.metadataVisibility), Z(T.showActivity);
   }, [T]), a.useEffect(() => {
 if (!1 !== T.verified)
-  null != F && (M(F), u.Z.setVisibility(T.type, T.id, F), Y(null)), null != k && (D(k), u.Z.setMetadataVisibility(T.type, T.id, k), H(null));
+  null != F && (M(F), u.Z.setVisibility(T.type, T.id, F), Y(null)), null != k && (f(k), u.Z.setMetadataVisibility(T.type, T.id, k), H(null));
   }, [T]);
 
   function J() {
@@ -187,7 +187,7 @@ if (e && !s) {
   });
   return;
 }
-D(t), u.Z.setMetadataVisibility(T.type, T.id, t);
+f(t), u.Z.setMetadataVisibility(T.type, T.id, t);
   }
 
   function et(e) {
@@ -366,7 +366,7 @@ children: [
   })), (null === (i = C.Z.get(T.type)) || void 0 === i ? void 0 : i.hasMetadata) === !0 && (l = (0, n.jsx)(_.FormSwitch, {
     className: V.connectionOptionSwitch,
     hideBorder: !0,
-    value: 1 === f,
+    value: 1 === D,
     onChange: es,
     disabled: 1 !== x || null == T.metadata,
     children: (0, n.jsx)(_.Text, {
@@ -558,11 +558,11 @@ children: s
   });
 }
 s.Z = () => {
-  let e = (0, o.e7)([D.Z], () => D.Z.hidePersonalInformation),
+  let e = (0, o.e7)([f.Z], () => f.Z.hidePersonalInformation),
 s = (0, o.e7)([x.Z], () => x.Z.isFetching()),
 t = (0, o.e7)([x.Z], () => x.Z.getAccounts()),
 i = (0, N.ZP)();
-  (0, o.e7)([f.ZP], () => f.ZP.getFlattenedGuildIds());
+  (0, o.e7)([D.ZP], () => D.ZP.getFlattenedGuildIds());
   let r = (0, o.e7)([Z.default], () => Z.default.locale);
   return (a.useEffect(() => {
 u.Z.fetch();

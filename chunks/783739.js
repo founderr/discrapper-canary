@@ -28,7 +28,7 @@ var n = t(735250),
 function p(e) {
   let {
 premiumSubscription: s
-  } = e, t = (0, i.e7)([T.Z], () => T.Z.boostSlots), p = a.useMemo(() => Object.values(t), [t]), R = (0, i.e7)([u.default], () => u.default.getCurrentUser()), x = I.ZP.isPremium(R, g.p9.TIER_2), M = (0, i.e7)([_.Z], () => _.Z.affinities), f = (0, i.e7)([E.ZP], () => E.ZP.getFlattenedGuildIds()), D = M.length > 0 || f.length > 0, P = p.length > 0, L = a.useMemo(() => p.some(e => null != e.premiumGuildSubscription), [p]), Z = (0, i.e7)([d.Z], () => d.Z.getCurrentUserAppliedBoosts()), b = (null == s ? void 0 : s.isPausedOrPausePending) === !0;
+  } = e, t = (0, i.e7)([T.Z], () => T.Z.boostSlots), p = a.useMemo(() => Object.values(t), [t]), R = (0, i.e7)([u.default], () => u.default.getCurrentUser()), x = I.ZP.isPremium(R, g.p9.TIER_2), M = (0, i.e7)([_.Z], () => _.Z.affinities), D = (0, i.e7)([E.ZP], () => E.ZP.getFlattenedGuildIds()), f = M.length > 0 || D.length > 0, P = p.length > 0, L = a.useMemo(() => p.some(e => null != e.premiumGuildSubscription), [p]), Z = (0, i.e7)([d.Z], () => d.Z.getCurrentUserAppliedBoosts()), b = (null == s ? void 0 : s.isPausedOrPausePending) === !0;
   return (0, n.jsxs)('div', {
 children: [
   (0, n.jsx)(r.oQ, {
@@ -43,10 +43,10 @@ children: [
   (0, n.jsx)(A.Z, {
     hasAppliedGuildBoosts: L,
     isUserPremiumTier2: x,
-    hasGuildAffinitiesOrInGuild: D,
+    hasGuildAffinitiesOrInGuild: f,
     subscriptionIsPausedOrPausePending: b
   }),
-  !D && (0, n.jsx)(C.Z, {}),
+  !f && (0, n.jsx)(C.Z, {}),
   (null == s ? void 0 : s.isPaused) ? (0, n.jsx)(S.r, {
     appliedGuildBoosts: Z,
     premiumSubscription: s
