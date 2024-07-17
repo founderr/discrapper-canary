@@ -4,29 +4,29 @@ var n = s(735250),
   r = s(120356),
   l = s.n(r),
   i = s(512722),
-  E = s.n(i),
-  c = s(758713),
+  c = s.n(i),
+  E = s(758713),
   o = s(442837),
   _ = s(433517),
   I = s(481060),
-  A = s(224706),
-  d = s(812206),
-  u = s(168551),
+  d = s(224706),
+  u = s(812206),
+  A = s(168551),
   O = s(485267),
   R = s(26033),
   N = s(561308),
   T = s(669764),
   m = s(962250),
-  P = s(706454),
-  g = s(768581),
+  g = s(706454),
+  P = s(768581),
   L = s(814225),
   M = s(810568),
   S = s(998058),
   G = s(839392),
-  C = s(567409),
-  p = s(774073),
+  h = s(567409),
+  C = s(774073),
   f = s(383895),
-  h = s(183391),
+  p = s(183391),
   x = s(689938),
   v = s(421377);
 let Z = 'GameProfileModal',
@@ -35,9 +35,9 @@ let {
   game: a,
   onClose: s,
   trackClick: t
-} = e, r = (0, o.e7)([d.Z], () => {
+} = e, r = (0, o.e7)([u.Z], () => {
   var e;
-  return d.Z.getApplication(null !== (e = null == a ? void 0 : a.applicationId) && void 0 !== e ? e : '');
+  return u.Z.getApplication(null !== (e = null == a ? void 0 : a.applicationId) && void 0 !== e ? e : '');
 });
 if (null == a)
   return null;
@@ -68,25 +68,25 @@ return (0, n.jsx)(I.Tooltip, {
 });
   },
   D = [
-c.z.DESKTOP,
-c.z.XBOX,
-c.z.PLAYSTATION,
-c.z.NINTENDO
+E.z.DESKTOP,
+E.z.XBOX,
+E.z.PLAYSTATION,
+E.z.NINTENDO
   ],
   j = e => {
 let {
   platforms: a
 } = e, s = [...new Set(a)];
-!s.includes(c.z.DESKTOP) && (s.includes(c.z.MACOS) || s.includes(c.z.LINUX)) && s.push(c.z.DESKTOP);
+!s.includes(E.z.DESKTOP) && (s.includes(E.z.MACOS) || s.includes(E.z.LINUX)) && s.push(E.z.DESKTOP);
 let t = (s = s.filter(e => D.includes(e))).map(e => {
   switch (e) {
-    case c.z.DESKTOP:
+    case E.z.DESKTOP:
       return (0, n.jsx)(I.ScreenIcon, {}, e);
-    case c.z.XBOX:
+    case E.z.XBOX:
       return (0, n.jsx)(I.XboxIcon, {}, e);
-    case c.z.PLAYSTATION:
+    case E.z.PLAYSTATION:
       return (0, n.jsx)(I.PlaystationIcon, {}, e);
-    case c.z.NINTENDO:
+    case E.z.NINTENDO:
       return (0, n.jsx)(I.NintendoSwitchNeutralIcon, {}, e);
     default:
       return null;
@@ -97,21 +97,21 @@ return (0, n.jsx)('div', {
   children: t
 });
   },
-  U = e => e.filter(p.z6).slice(0, 5),
+  U = e => e.filter(C.z6).slice(0, 5),
   F = e => {
 var a, r, i;
 let {
-  applicationId: c,
+  applicationId: E,
   source: D,
   sourceUserId: F,
-  transitionState: B,
-  onClose: b
+  transitionState: b,
+  onClose: w
 } = e, {
-  clientThemesClassName: w
-} = (0, u.ZP)(), {
+  clientThemesClassName: B
+} = (0, A.ZP)(), {
   width: Q,
   height: H
-} = (0, m.b)(), [y, Y] = t.useState(null !== (a = _.K.get(Z)) && void 0 !== a ? a : {}), k = (0, o.e7)([P.default], () => P.default.locale), [W, V] = t.useState(!0), [z, X] = t.useState(!1), J = t.useRef(null), q = t.useMemo(() => (0, M.fP)(), []);
+} = (0, m.b)(), [y, Y] = t.useState(null !== (a = _.K.get(Z)) && void 0 !== a ? a : {}), W = (0, o.e7)([g.default], () => g.default.locale), [k, V] = t.useState(!0), [z, X] = t.useState(!1), J = t.useRef(null), q = t.useMemo(() => (0, M.fP)(), []);
 t.useEffect(() => {
   let e = J.current;
   null != e && X(e.scrollHeight - e.clientHeight > 1);
@@ -124,35 +124,35 @@ t.useEffect(() => {
 }, []);
 let $ = (0, o.Wu)([G.Z], () => {
     var e;
-    return (null !== (e = G.Z.getSimilarGames(c)) && void 0 !== e ? e : []).slice(0, 25);
+    return (null !== (e = G.Z.getSimilarGames(E)) && void 0 !== e ? e : []).slice(0, 25);
   }),
-  ee = (0, o.Wu)([T.Z], () => $.map(e => T.Z.getGame(e)).filter(p.W1).slice(0, 5)),
+  ee = (0, o.Wu)([T.Z], () => $.map(e => T.Z.getGame(e)).filter(C.W1).slice(0, 5)),
   ea = t.useRef([]);
 t.useEffect(() => {
   ea.current = $;
 }, [$]);
 let {
   entries: es
-} = (0, C.Z)(), en = t.useMemo(() => {
+} = (0, h.Z)(), en = t.useMemo(() => {
   var e;
-  return null !== (e = null == es ? void 0 : es.filter(e => (0, R.d)(e) && e.extra.application_id === c)) && void 0 !== e ? e : [];
+  return null !== (e = null == es ? void 0 : es.filter(e => (0, R.d)(e) && e.extra.application_id === E)) && void 0 !== e ? e : [];
 }, [
   es,
-  c
+  E
 ]);
 t.useEffect(() => {
   var e, a;
   return (0, M.IS)({
     source: D,
     viewId: q,
-    applicationId: c,
+    applicationId: E,
     gameName: null !== (a = null !== (e = null == er ? void 0 : er.name) && void 0 !== e ? e : null == et ? void 0 : et.name) && void 0 !== a ? a : '',
     authorId: F
   }), () => {
     var e, a;
     let s = Date.now(),
       n = en.map(e => {
-        let a = (0, N.kr)(e) ? (0, N.T_)(e, s) : (0, N.GL)(e, k);
+        let a = (0, N.kr)(e) ? (0, N.T_)(e, s) : (0, N.GL)(e, W);
         return JSON.stringify({
           item_id: e.id,
           trait: e.traits,
@@ -161,7 +161,7 @@ t.useEffect(() => {
       });
     (0, M.wz)({
       viewId: q,
-      applicationId: c,
+      applicationId: E,
       gameName: null !== (a = null !== (e = null == er ? void 0 : er.name) && void 0 !== e ? e : null == et ? void 0 : et.name) && void 0 !== a ? a : '',
       playedFriendIds: en.map(e => e.author_id),
       playedFriendsData: n,
@@ -169,21 +169,21 @@ t.useEffect(() => {
     });
   };
 }, []), t.useEffect(() => {
-  0 === $.length && (0, S.i)(c);
+  0 === $.length && (0, S.i)(E);
 }, [
-  c,
+  E,
   $
 ]), t.useEffect(() => {
-  A.Z.getDetectableGamesSupplemental([
-    c,
+  d.Z.getDetectableGamesSupplemental([
+    E,
     ...$
   ]);
 }, [
-  c,
+  E,
   $
 ]);
-let et = d.Z.getApplication(c),
-  er = (0, o.e7)([T.Z], () => T.Z.getGame(c)),
+let et = u.Z.getApplication(E),
+  er = (0, o.e7)([T.Z], () => T.Z.getGame(E)),
   el = t.useMemo(() => null == er ? void 0 : er.genres.map(L.P3).join(', '), [er]),
   ei = t.useMemo(() => {
     if (null == er)
@@ -202,7 +202,7 @@ let et = d.Z.getApplication(c),
     }
     return '';
   }, [er]),
-  eE = t.useMemo(() => {
+  ec = t.useMemo(() => {
     var e, a;
     let s = (null !== (e = null == er ? void 0 : er.artwork) && void 0 !== e ? e : []).map(e => ({
       src: e
@@ -217,10 +217,10 @@ let et = d.Z.getApplication(c),
     null == er ? void 0 : er.artwork,
     null == er ? void 0 : er.screenshots
   ]),
-  ec = (e, a) => {
+  eE = (e, a) => {
     (0, M.UE)({
       gameName: null != e_ ? e_ : '',
-      applicationId: c,
+      applicationId: E,
       action: e,
       similarGameId: a,
       viewId: q
@@ -228,27 +228,27 @@ let et = d.Z.getApplication(c),
   },
   {
     shouldOpenGameProfile: eo
-  } = (0, p.ZP)({
+  } = (0, C.ZP)({
     location: 'GameProfileModal',
-    applicationId: c,
+    applicationId: E,
     trackEntryPointImpression: !1
   });
-if (E()(eo, 'Game Profile was opened when it thinks it shouldn\'t have been.  Make sure to use `useShouldOpenGameProfileModal` before calling `openGameProfileModal`'), null == er)
+if (c()(eo, 'Game Profile was opened when it thinks it shouldn\'t have been.  Make sure to use `useShouldOpenGameProfileModal` before calling `openGameProfileModal`'), null == er)
   return null;
 let e_ = null !== (r = er.name) && void 0 !== r ? r : null == et ? void 0 : et.name,
-  eI = null == et ? void 0 : et.getIconURL(160, g.$k ? 'webp' : 'png'),
-  eA = null !== (i = er.coverImageUrl) && void 0 !== i ? i : eI,
+  eI = null == et ? void 0 : et.getIconURL(160, P.$k ? 'webp' : 'png'),
+  ed = null !== (i = er.coverImageUrl) && void 0 !== i ? i : eI,
   {
-    summary: ed,
-    websites: eu,
+    summary: eu,
+    websites: eA,
     publishers: eO,
     platforms: eR
   } = er,
-  eN = y[c];
+  eN = y[E];
 return (0, n.jsxs)(I.ModalRoot, {
-  transitionState: B,
+  transitionState: b,
   size: I.ModalSize.DYNAMIC,
-  className: l()(w, v.gameProfileModal),
+  className: l()(B, v.gameProfileModal),
   children: [
     (0, n.jsxs)('div', {
       className: v.gameArtHero,
@@ -269,9 +269,9 @@ return (0, n.jsxs)(I.ModalRoot, {
       children: [
         (0, n.jsx)('div', {
           className: v.logoWrapper,
-          children: null != eA && (0, n.jsx)('img', {
+          children: null != ed && (0, n.jsx)('img', {
             className: v.logo,
-            src: eA,
+            src: ed,
             alt: x.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({
               game: e_
             })
@@ -324,7 +324,7 @@ return (0, n.jsxs)(I.ModalRoot, {
                     let e = {
                       ...y
                     };
-                    e[c] = !e[c], Y(e), _.K.set(Z, e), ec(e[c] ? M.as.FollowGame : M.as.UnfollowGame);
+                    e[E] = !e[E], Y(e), _.K.set(Z, e), eE(e[E] ? M.as.FollowGame : M.as.UnfollowGame);
                   },
                   children: [
                     eN ? (0, n.jsx)(I.BellSlashIcon, {
@@ -367,12 +367,12 @@ return (0, n.jsxs)(I.ModalRoot, {
                     children: null == en ? void 0 : en.map(e => (0, n.jsx)(f.Z, {
                       entry: e,
                       viewId: q,
-                      onClose: b
+                      onClose: w
                     }, e.id))
                   })
                 ]
               }),
-              eE.length > 0 && (0, n.jsxs)(n.Fragment, {
+              ec.length > 0 && (0, n.jsxs)(n.Fragment, {
                 children: [
                   (0, n.jsx)(I.Heading, {
                     variant: 'heading-md/bold',
@@ -384,10 +384,10 @@ return (0, n.jsxs)(I.ModalRoot, {
                     },
                     className: l()(v.row, v.imageScroller),
                     orientation: 'horizontal',
-                    children: eE.map((e, a) => (0, n.jsx)(I.Clickable, {
+                    children: ec.map((e, a) => (0, n.jsx)(I.Clickable, {
                       className: v.clickable,
                       onClick: () => {
-                        ec(M.as.ClickImage), (0, I.openModalLazy)(async () => {
+                        eE(M.as.ClickImage), (0, I.openModalLazy)(async () => {
                           let {
                             default: e
                           } = await s.e('99857').then(s.bind(s, 895023));
@@ -398,7 +398,7 @@ return (0, n.jsxs)(I.ModalRoot, {
                             return (0, n.jsx)(e, {
                               className: v.mediaModal,
                               ...t,
-                              items: eE,
+                              items: ec,
                               startingIndex: a
                             });
                           };
@@ -426,8 +426,8 @@ return (0, n.jsxs)(I.ModalRoot, {
                     style: {},
                     children: ee.map(e => (0, n.jsx)(K, {
                       game: e,
-                      onClose: b,
-                      trackClick: ec
+                      onClose: w,
+                      trackClick: eE
                     }, null == e ? void 0 : e.applicationId))
                   })
                 ]
@@ -441,30 +441,30 @@ return (0, n.jsxs)(I.ModalRoot, {
                 variant: 'heading-md/bold',
                 children: x.Z.Messages.ABOUT
               }),
-              null != ed && (0, n.jsxs)('div', {
+              null != eu && (0, n.jsxs)('div', {
                 className: l()(v.column, v.gapSm),
                 children: [
                   (0, n.jsx)(I.Text, {
                     ref: J,
-                    lineClamp: W ? 8 : void 0,
+                    lineClamp: k ? 8 : void 0,
                     variant: 'text-sm/normal',
-                    children: ed
+                    children: eu
                   }),
-                  (z || !W) && (0, n.jsx)(I.Clickable, {
+                  (z || !k) && (0, n.jsx)(I.Clickable, {
                     className: v.clickable,
                     onClick: () => {
-                      ec(W ? M.as.ShowMore : M.as.ShowLess), V(!W);
+                      eE(k ? M.as.ShowMore : M.as.ShowLess), V(!k);
                     },
                     children: (0, n.jsx)(I.Text, {
                       variant: 'text-sm/semibold',
-                      children: W ? x.Z.Messages.EXPANDABLE_TEXT_SHOW_MORE : x.Z.Messages.EXPANDABLE_TEXT_SHOW_LESS
+                      children: k ? x.Z.Messages.EXPANDABLE_TEXT_SHOW_MORE : x.Z.Messages.EXPANDABLE_TEXT_SHOW_LESS
                     })
                   })
                 ]
               }),
-              (0, n.jsx)(h.Z, {
-                websites: eu,
-                trackClick: ec
+              (0, n.jsx)(p.Z, {
+                websites: eA,
+                trackClick: eE
               }),
               (eO.length > 0 || eR.length > 0) && (0, n.jsxs)('div', {
                 className: l()(v.column),

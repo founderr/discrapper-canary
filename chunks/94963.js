@@ -9,8 +9,8 @@ var a = t(735250),
   d = t(442837),
   u = t(481060),
   m = t(231467),
-  f = t(650774),
-  C = t(430824),
+  C = t(650774),
+  f = t(430824),
   _ = t(175557),
   h = t(688298),
   x = t(995119),
@@ -103,7 +103,7 @@ brandPrimaryColor: M,
 brandSecondaryColor: j,
 badgePrimaryColor: R,
 badgeSecondaryColor: L
-  } = y, O = (0, d.e7)([C.Z], () => C.Z.getGuild(S)), Z = null !== (n = (0, d.e7)([f.Z], () => f.Z.getMemberCount(S))) && void 0 !== n ? n : 0, k = r.useMemo(() => ({
+  } = y, O = (0, d.e7)([f.Z], () => f.Z.getGuild(S)), Z = null !== (n = (0, d.e7)([C.Z], () => C.Z.getMemberCount(S))) && void 0 !== n ? n : 0, k = r.useMemo(() => ({
 primary: null != M ? M : p.OH,
 secondary: null != j ? j : p.K_
   }), [

@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(360048),
   x = n(151827),
   T = n(626135),
-  N = n(768581),
-  v = n(585483),
+  v = n(768581),
+  N = n(585483),
   S = n(233870),
   Z = n(51144),
   A = n(998502),
@@ -75,7 +75,7 @@ onShiftClick: () => {
       decoration: 'never'
     })),
     n = '<@'.concat(t.id, '>');
-  v.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
+  N.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
     plainText: e,
     rawText: n
   }), c.Z.startTyping(a.id);
@@ -117,7 +117,7 @@ channel: c
   }, [
 l,
 c
-  ]), u = l.application.bot, p = N.ZP.getApplicationIconURL({
+  ]), u = l.application.bot, p = v.ZP.getApplicationIconURL({
 id: l.application.id,
 icon: l.application.icon,
 bot: null === (t = l.application) || void 0 === t ? void 0 : t.bot,
@@ -217,8 +217,8 @@ return {
   listItems: l
 };
   }, [t], k)), {
-installedIntegrations: N,
-applicationsShelf: v,
+installedIntegrations: v,
+applicationsShelf: N,
 fetched: Z,
 appsInGDMEnabled: A,
 availableApplications: M
@@ -272,13 +272,13 @@ children: (0, i.jsx)('div', {
         activities: e.activities,
         channel: s
       }, e.user.id)),
-      A && (N.length > 0 || Z && v.length > 0) && (0, i.jsxs)(i.Fragment, {
+      A && (v.length > 0 || Z && N.length > 0) && (0, i.jsxs)(i.Fragment, {
         children: [
           (0, i.jsx)(x.Z, {
             className: L.membersGroup,
-            children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(N.length)
+            children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(v.length)
           }),
-          N.map(e => (0, i.jsx)(D, {
+          v.map(e => (0, i.jsx)(D, {
             integration: e,
             channel: s
           }, e.application.id)),

@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(246364),
   x = n(937111),
   T = n(270801),
-  N = n(652730),
-  v = n(41776),
+  v = n(652730),
+  N = n(41776),
   S = n(657352),
   Z = n(33154),
   A = n(144114),
@@ -96,8 +96,8 @@ let {
   isStaff: x,
   guildJoinRequest: T
 } = this.props, {
-  shouldShowLurkerModeUpsellPopout: N,
-  shouldShowLurkerModeSuccessPopout: v
+  shouldShowLurkerModeUpsellPopout: v,
+  shouldShowLurkerModeSuccessPopout: N
 } = this.state, S = {
   theme: p,
   useReducedMotion: g
@@ -138,7 +138,7 @@ else
 return (0, i.jsx)(o.Popout, {
   position: 'top',
   align: 'left',
-  shouldShow: v,
+  shouldShow: N,
   onRequestClose: () => this.setState({
     shouldShowLurkerModeSuccessPopout: !1
   }),
@@ -150,7 +150,7 @@ return (0, i.jsx)(o.Popout, {
         this.renderMemberVerificationSuccessModal(),
         E ? (0, i.jsx)(o.Popout, {
           renderPopout: this.renderLurkerModeUpsellPopout,
-          shouldShow: N,
+          shouldShow: v,
           position: 'top',
           children: e => (0, i.jsx)(o.Clickable, {
             ...e,
@@ -333,10 +333,10 @@ function F(e) {
   let {
 channel: s,
 children: l
-  } = e, o = s.getGuildId(), c = (0, r.e7)([L.Z], () => L.Z.getGuild(o)), d = (0, r.e7)([P.Z], () => P.Z.getCheck(o)), u = s.type === U.d4z.GUILD_ANNOUNCEMENT && null != c && c.hasFeature(U.oNc.NEWS), p = (0, r.e7)([R.Z], () => u ? R.Z.getFollowerStatsForChannel(s.id) : null), f = (0, r.e7)([v.Z], () => v.Z.isLurking(o)), E = (0, r.e7)([y.default], () => y.default.getCurrentUser()), g = null !== (t = null == E ? void 0 : E.isStaff()) && void 0 !== t && t, T = (0, r.e7)([j.ZP], () => {
+  } = e, o = s.getGuildId(), c = (0, r.e7)([L.Z], () => L.Z.getGuild(o)), d = (0, r.e7)([P.Z], () => P.Z.getCheck(o)), u = s.type === U.d4z.GUILD_ANNOUNCEMENT && null != c && c.hasFeature(U.oNc.NEWS), p = (0, r.e7)([R.Z], () => u ? R.Z.getFollowerStatsForChannel(s.id) : null), f = (0, r.e7)([N.Z], () => N.Z.isLurking(o)), E = (0, r.e7)([y.default], () => y.default.getCurrentUser()), g = null !== (t = null == E ? void 0 : E.isStaff()) && void 0 !== t && t, T = (0, r.e7)([j.ZP], () => {
 var e, t;
 return null != E && null !== (t = null === (e = j.ZP.getMember(o, E.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t;
-  }), S = !!(null == c ? void 0 : c.hasVerificationGate()), Z = (T || d.notClaimed) && S, A = (0, r.e7)([N.Z], () => N.Z.shouldShowPopout(o)), M = (0, r.e7)([O.Z], () => O.Z.can(U.Plq.SEND_MESSAGES, s)), k = (0, r.e7)([x.Z], () => x.Z.getRequest(o)), [w, B] = (0, m.L_)(o), H = (0, m.Cc)(o), G = (null == k ? void 0 : k.applicationStatus) === I.wB.APPROVED;
+  }), S = !!(null == c ? void 0 : c.hasVerificationGate()), Z = (T || d.notClaimed) && S, A = (0, r.e7)([v.Z], () => v.Z.shouldShowPopout(o)), M = (0, r.e7)([O.Z], () => O.Z.can(U.Plq.SEND_MESSAGES, s)), k = (0, r.e7)([x.Z], () => x.Z.getRequest(o)), [w, B] = (0, m.L_)(o), H = (0, m.Cc)(o), G = (null == k ? void 0 : k.applicationStatus) === I.wB.APPROVED;
   a.useEffect(() => {
 if (!(!(0, _.EJ)(c) || !G || (0, C.d3)(k)) && null == H)
   B();

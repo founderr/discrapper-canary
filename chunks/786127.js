@@ -13,8 +13,8 @@ isDropHovered: c,
 onDrop: d,
 onEdit: u,
 onRemove: m,
-canRemove: f,
-actionsLocation: C
+canRemove: C,
+actionsLocation: f
   } = e, {
 label: _,
 placeholder: h
@@ -28,8 +28,8 @@ onDrop: d,
 onEdit: u,
 onRemove: m,
 title: _,
-canRemove: f,
-actionsLocation: C,
+canRemove: C,
+actionsLocation: f,
 children: (0, a.jsx)(r.Gi, {
   className: o.fieldBackground,
   placeholder: null != h ? h : s.Z.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,

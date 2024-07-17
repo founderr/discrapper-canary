@@ -5,8 +5,8 @@ var a, r, i, s, o = t(392711),
   d = t.n(c),
   u = t(442837),
   m = t(570140),
-  f = t(944163),
-  C = t(116175),
+  C = t(944163),
+  f = t(116175),
   _ = t(308083);
 let h = () => ({
 gameApplicationIds: new Set(),
@@ -20,11 +20,11 @@ wildcardDescriptors: [
 ],
 tag: '',
 verificationForm: {
-  ...f.t
+  ...C.t
 },
-badgeKind: C.ZD.SWORD,
-badgePrimaryColor: C.sg['0'].primary,
-badgeSecondaryColor: C.sg['0'].secondary,
+badgeKind: f.ZD.SWORD,
+badgePrimaryColor: f.sg['0'].primary,
+badgeSecondaryColor: f.sg['0'].secondary,
 banner: _.qC.NIGHT_SKY,
 brandPrimaryColor: _.ym['0'].primary,
 brandSecondaryColor: _.ym['0'].secondary

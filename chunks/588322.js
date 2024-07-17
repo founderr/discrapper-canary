@@ -25,10 +25,10 @@ var i = n(735250),
 function x(e) {
   let {
 channelId: t
-  } = e, x = (0, s.e7)([_.Z], () => _.Z.getChannel(t)), T = (0, s.e7)([_.Z], () => _.Z.getChannel(null == x ? void 0 : x.parent_id)), N = (0, s.e7)([E.Z], () => E.Z.getGuild(null == x ? void 0 : x.getGuildId())), v = (0, o.ZP)(x), S = a.useRef(!1);
+  } = e, x = (0, s.e7)([_.Z], () => _.Z.getChannel(t)), T = (0, s.e7)([_.Z], () => _.Z.getChannel(null == x ? void 0 : x.parent_id)), v = (0, s.e7)([E.Z], () => E.Z.getGuild(null == x ? void 0 : x.getGuildId())), N = (0, o.ZP)(x), S = a.useRef(!1);
   if (a.useEffect(() => {
   null != x && !S.current && (S.current = !0, (0, C.lN)(x));
-}, [x]), null == x || null == N)
+}, [x]), null == x || null == v)
 return null;
   let Z = (0, i.jsx)(m.Z, {
 channel: x
@@ -45,8 +45,8 @@ children: [
     children: (0, h.ud)({
       channel: x,
       parentChannel: T,
-      channelName: v,
-      guild: N,
+      channelName: N,
+      guild: v,
       inSidebar: !0,
       handleContextMenu: function(e) {
         (0, l.jW)(e, async () => {
@@ -68,7 +68,7 @@ children: [
     className: I.chat,
     children: (0, i.jsx)(c.Z, {
       channel: x,
-      guild: N,
+      guild: v,
       chatInputType: d.I.SIDEBAR
     }, t)
   })

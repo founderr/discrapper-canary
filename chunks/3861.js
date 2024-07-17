@@ -24,8 +24,8 @@ participantsVersion: r,
 layout: I,
 onSelectParticipant: x,
 onContextMenuParticipant: T,
-onFullscreenParticipant: N,
-channel: v,
+onFullscreenParticipant: v,
+channel: N,
 hasConnectPermission: S,
 className: Z,
 inCall: A,
@@ -48,19 +48,19 @@ j
 n,
 r
   ]);
-  if ((null == y ? void 0 : y.channelId) === v.id)
+  if ((null == y ? void 0 : y.channelId) === N.id)
 return (0, i.jsx)(p.Z, {
   height: j
 });
-  if ((null == v ? void 0 : v.isGuildVocal()) && !A)
+  if ((null == N ? void 0 : N.isGuildVocal()) && !A)
 return (0, i.jsx)(h.Z, {
-  channel: v,
+  channel: N,
   participants: t,
   hasConnectPermission: S
 });
   if (P === E.WtW.VOICE)
 return (0, i.jsx)(c.Z, {
-  guildId: v.guild_id,
+  guildId: N.guild_id,
   width: R,
   className: g.voiceCallWrapper,
   participants: t,
@@ -69,26 +69,26 @@ return (0, i.jsx)(c.Z, {
   if (n = A ? n : t, null == s)
 return 0 === n.length ? (0, i.jsx)(f.Z, {
   className: l()(g.videoGrid, g.hiddenParticipants),
-  channelId: v.id,
+  channelId: N.id,
   width: R
 }) : (0, i.jsx)(d.Z, {
   className: g.videoGridWrapper,
   justify: d.Z.Justify.CENTER,
   align: d.Z.Align.CENTER,
   children: (0, i.jsx)(m.Z, {
-    channel: v,
+    channel: N,
     className: g.videoGrid,
     participants: D,
     totalNumberOfParticipants: t.length,
     onClick: x,
-    onDoubleClick: N,
+    onDoubleClick: v,
     onContextMenu: T,
     paused: b,
     inCall: A
   })
 });
   return (0, i.jsx)(_.Z, {
-onFullscreenParticipant: N,
+onFullscreenParticipant: v,
 onContextMenuParticipant: T,
 onSelectParticipant: x,
 selectedParticipant: s,
@@ -101,7 +101,7 @@ height: j,
 width: R,
 layout: I,
 inCall: A,
-channel: v,
+channel: N,
 showParticipants: M
   });
 });

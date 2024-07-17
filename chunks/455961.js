@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(485731),
   x = n(1163),
   T = n(738672),
-  N = n(981631),
-  v = n(37113),
+  v = n(981631),
+  N = n(37113),
   S = n(689938),
   Z = n(782783);
 let A = async () => {
@@ -52,8 +52,8 @@ children: (0, i.jsx)(u.CloseSmallIcon, {
 })
   });
 }
-let b = v.LY.RESOLUTION_1440,
-  R = v.ws.FPS_60;
+let b = N.LY.RESOLUTION_1440,
+  R = N.ws.FPS_60;
 
 function j(e) {
   let {
@@ -63,7 +63,7 @@ preset: o
   } = (0, c.cj)([m.Z], () => m.Z.getState()), C = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()), x = a.useCallback(() => {
 l(!0), (0, E.S)(r.q.STREAM_HIGH_QUALITY).then(e => {
   if (e) {
-    if ((0, I.J1)(!(0, g.mc)(b, R)), f.default.track(N.rMx.PERK_DEMO_OFFER_ACCEPTED, {
+    if ((0, I.J1)(!(0, g.mc)(b, R)), f.default.track(v.rMx.PERK_DEMO_OFFER_ACCEPTED, {
         guild_id: t.guild_id,
         channel_id: t.id,
         perk_type: r.q.STREAM_HIGH_QUALITY,
@@ -210,7 +210,7 @@ autoTrackExposure: !1,
 disable: !s
   }), c = a.useRef(!1);
   if (a.useEffect(() => {
-  s && l && !c.current && (c.current = !0, f.default.track(N.rMx.PERK_DEMO_OFFER_VIEWED, {
+  s && l && !c.current && (c.current = !0, f.default.track(v.rMx.PERK_DEMO_OFFER_VIEWED, {
     guild_id: t.guild_id,
     channel_id: t.id,
     perk_type: r.q.STREAM_HIGH_QUALITY

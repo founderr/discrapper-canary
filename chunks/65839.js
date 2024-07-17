@@ -146,8 +146,8 @@ handleClearSearch: u,
 handleSearchKeyPress: h,
 currentCategoryId: g,
 handleSelectCategory: I,
-categoryCounts: N,
-allEntriesCount: v,
+categoryCounts: v,
+allEntriesCount: N,
 isLoading: S
   } = e, Z = (0, r.e7)([d.Z], () => d.Z.getGuild(t.getGuildId()));
   return null != Z && Z.hasFeature(_.oNc.SHARD) ? (0, i.jsx)(T, {
@@ -180,7 +180,7 @@ children: (0, i.jsxs)(o.AdvancedScrollerAuto, {
           (0, i.jsx)(o.TabBar.Item, {
             className: C.tabBarItem,
             id: m.AR.ALL,
-            children: ''.concat(f.Z.Messages.DIRECTORY_CATEGORY_ALL, ' (').concat(v, ')')
+            children: ''.concat(f.Z.Messages.DIRECTORY_CATEGORY_ALL, ' (').concat(N, ')')
           }, m.AR.ALL),
           (0, m.b7)(t.id).map(e => {
             let {
@@ -190,7 +190,7 @@ children: (0, i.jsxs)(o.AdvancedScrollerAuto, {
             return (0, i.jsx)(o.TabBar.Item, {
               className: C.tabBarItem,
               id: t,
-              children: ''.concat(n, ' ').concat(null != N[t] ? '('.concat(N[t], ')') : '')
+              children: ''.concat(n, ' ').concat(null != v[t] ? '('.concat(v[t], ')') : '')
             }, t);
           })
         ]

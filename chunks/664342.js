@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(585483),
   x = n(739830),
   T = n(488131),
-  N = n(981631),
-  v = n(689938);
+  v = n(981631),
+  N = n(689938);
 
 function S(e) {
   let {
@@ -34,7 +34,7 @@ channel: t
   function r() {
 l(e => !e);
   }
-  let o = v.Z.Messages.MORE;
+  let o = N.Z.Messages.MORE;
   return (0, i.jsx)(s.Popout, {
 shouldShow: n,
 animation: s.Popout.Animation.NONE,
@@ -71,7 +71,7 @@ closePopout: n,
 onSelect: a
   } = e, E = (0, o.Z)(t, 'Sidebar Overflow'), C = (0, d.Z)(t), x = (0, p.Z)(t), T = (0, m.Z)(t), S = (0, l.Z)(t), Z = (0, c.Z)(t), A = (0, h.Z)(t.id), M = (0, u.Z)(t), b = (0, r.Z)(t), R = (0, f.Z)({
 id: t.id,
-label: v.Z.Messages.COPY_ID_THREAD
+label: N.Z.Messages.COPY_ID_THREAD
   }), j = (0, _.Z)(t);
 
   function L() {
@@ -80,7 +80,7 @@ label: v.Z.Messages.COPY_ID_THREAD
   return (0, i.jsxs)(s.Menu, {
 navId: 'thread-context',
 onClose: n,
-'aria-label': v.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
+'aria-label': N.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
 onSelect: a,
 children: [
   (0, i.jsxs)(s.MenuGroup, {
@@ -88,7 +88,7 @@ children: [
       E,
       (0, i.jsx)(s.MenuItem, {
         id: 'open',
-        label: v.Z.Messages.OPEN_IN_FULL_VIEW,
+        label: N.Z.Messages.OPEN_IN_FULL_VIEW,
         action: L
       })
     ]
@@ -110,11 +110,11 @@ children: [
     children: [
       (0, i.jsx)(s.MenuItem, {
         id: 'search',
-        label: v.Z.Messages.SEARCH,
+        label: N.Z.Messages.SEARCH,
         icon: s.WindowLaunchIcon,
         action: function() {
           L(), setTimeout(() => {
-            I.S.dispatch(N.CkL.FOCUS_SEARCH, {
+            I.S.dispatch(v.CkL.FOCUS_SEARCH, {
               prefillCurrentChannel: !1
             });
           }, 2000);
@@ -122,10 +122,10 @@ children: [
       }),
       (0, i.jsx)(s.MenuItem, {
         id: 'pins',
-        label: v.Z.Messages.PINS,
+        label: N.Z.Messages.PINS,
         icon: s.WindowLaunchIcon,
         action: function() {
-          L(), I.S.dispatch(N.CkL.TOGGLE_CHANNEL_PINS);
+          L(), I.S.dispatch(v.CkL.TOGGLE_CHANNEL_PINS);
         }
       })
     ]
@@ -160,7 +160,7 @@ children: [
   }),
   (0, i.jsx)(C.ZP.Icon, {
     icon: s.CloseSmallIcon,
-    tooltip: v.Z.Messages.CLOSE,
+    tooltip: N.Z.Messages.CLOSE,
     onClick: () => (0, T.vN)((0, E.e)(t), null != n ? n : t.parent_id)
   })
 ]

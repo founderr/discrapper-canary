@@ -26,8 +26,8 @@ var i = n(735250),
   I = n(678869),
   x = n(278399),
   T = n(886217),
-  N = n(555672),
-  v = n(644548),
+  v = n(555672),
+  N = n(644548),
   S = n(335326),
   Z = n(268010),
   A = n(206583);
@@ -59,7 +59,7 @@ switch (t.content_type) {
       entry: t
     });
   case o.s.TOP_GAME:
-    return (0, i.jsx)(N.ZP, {
+    return (0, i.jsx)(v.ZP, {
       ...n,
       entry: t
     });
@@ -94,7 +94,7 @@ switch (t.content_type) {
       entry: t
     });
   case o.s.TOP_GAME:
-    return (0, i.jsx)(v.Z, {
+    return (0, i.jsx)(N.Z, {
       ...n,
       entry: t
     });
@@ -126,7 +126,7 @@ requestId: l.requestId
 openOnHover: I
   } = (0, _.C)({
 location: 'MemberListContentRow'
-  }), x = a.useRef(!1), [T, N] = a.useState(!1), [v, S] = a.useState(!1), [Z, M] = a.useState(!1), b = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
+  }), x = a.useRef(!1), [T, v] = a.useState(!1), [N, S] = a.useState(!1), [Z, M] = a.useState(!1), b = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
   a.useEffect(() => {
 T && b && M(!0);
   }, [
@@ -153,13 +153,13 @@ O = a.useCallback(() => {
 }, []),
 y = () => {
   x.current = !1, setTimeout(() => {
-    !x.current && (N(!1), M(b));
+    !x.current && (v(!1), M(b));
   }, 100);
 };
   return (0, i.jsx)('div', {
 onMouseEnter: () => {
   x.current = !0, setTimeout(() => {
-    x.current && N(!0), I && (0, f.L)(A.xP.CARD_CLICK, g);
+    x.current && v(!0), I && (0, f.L)(A.xP.CARD_CLICK, g);
   }, 100);
 },
 onMouseLeave: y,
@@ -175,11 +175,11 @@ children: (0, i.jsx)(d.Popout, {
     });
   },
   position: 'left',
-  shouldShow: I ? T : v,
+  shouldShow: I ? T : N,
   positionKey: o,
   onRequestOpen: () => (0, f.L)(A.xP.CARD_CLICK, g),
   onRequestClose: () => {
-    Z && y(), !I && (N(!1), S(!1));
+    Z && y(), !I && (v(!1), S(!1));
   },
   spacing: 8,
   children: (e, t) => {
@@ -188,7 +188,7 @@ children: (0, i.jsx)(d.Popout, {
     } = t;
     return (0, i.jsx)(d.Clickable, {
       onClick: () => {
-        I && !T && N(!0), !I && S(e => !e);
+        I && !T && v(!0), !I && S(e => !e);
       },
       children: (0, i.jsx)(d.FocusRing, {
         offset: {

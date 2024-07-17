@@ -19,8 +19,8 @@ var i = n(735250),
   I = n(607744),
   x = n(375954),
   T = n(496675),
-  N = n(306680),
-  v = n(62817),
+  v = n(306680),
+  N = n(62817),
   S = n(594174),
   Z = n(68588),
   A = n(459273),
@@ -46,8 +46,8 @@ showNewMessagesBar: C,
 messageDisplayCompact: g,
 channelStream: I,
 uploads: x,
-hasUnreads: N,
-editingMessageId: v,
+hasUnreads: v,
+editingMessageId: N,
 fontSize: S,
 keyboardModeEnabled: Z,
 filterAfterTimestamp: M,
@@ -75,15 +75,15 @@ u
 messages: f,
 channel: m,
 compact: g,
-hasUnreads: N,
-focusId: v,
+hasUnreads: v,
+focusId: N,
 placeholderHeight: B.totalHeight,
 canLoadMore: null == M,
 handleScrollToBottom: a.useCallback(() => w(!0), [w]),
 handleScrollFromBottom: a.useCallback(() => w(!1), [w])
   }), G = (0, j.Z)({
 scrollerRef: H.ref,
-isEditing: null != v,
+isEditing: null != N,
 keyboardModeEnabled: Z,
 hasMoreAfter: f.hasMoreAfter
   });
@@ -279,9 +279,9 @@ editingMessageId: B
   } = function(e) {
 var t, n;
 let i = (0, o.e7)([x.Z], () => x.Z.getMessages(e.id), [e.id]),
-  s = (0, o.e7)([N.ZP], () => {
+  s = (0, o.e7)([v.ZP], () => {
     var t;
-    return null !== (t = N.ZP.getOldestUnreadMessageId(e.id)) && void 0 !== t ? t : null;
+    return null !== (t = v.ZP.getOldestUnreadMessageId(e.id)) && void 0 !== t ? t : null;
   }, [e.id]),
   {
     enabled: l
@@ -341,8 +341,8 @@ children: (0, i.jsx)(k, {
   messages: D,
   channelStream: U,
   permissionVersion: _,
-  uploads: (0, o.e7)([v.Z], () => v.Z.getFiles(t.id), [t]),
-  unreadCount: (0, o.e7)([N.ZP], () => N.ZP.getUnreadCount(t.id), [t]),
+  uploads: (0, o.e7)([N.Z], () => N.Z.getFiles(t.id), [t]),
+  unreadCount: (0, o.e7)([v.ZP], () => v.ZP.getUnreadCount(t.id), [t]),
   hasUnreads: null != w,
   canChat: A,
   editingMessageId: B,

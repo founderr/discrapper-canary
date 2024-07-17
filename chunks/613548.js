@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(44136),
   x = n(651183),
   T = n(618158),
-  N = n(390322),
-  v = n(616286),
+  v = n(390322),
+  N = n(616286),
   S = n(961048),
   Z = n(179424),
   A = n(786915),
@@ -122,7 +122,7 @@ showQuality: !0,
 premiumIndicator: z || K.enabled
   }, 'live-indicator'))), R && Q.push((0, i.jsx)(u.Popout, {
 position: 'bottom',
-renderPopout: () => (0, i.jsx)(N.Z, {
+renderPopout: () => (0, i.jsx)(v.Z, {
   children: (0, i.jsx)(U.Z, {
     channel: n
   })
@@ -158,7 +158,7 @@ renderPopout: e => {
   let {
     closePopout: t
   } = e;
-  return (0, i.jsx)(N.Z, {
+  return (0, i.jsx)(v.Z, {
     children: (0, i.jsx)(k.Z, {
       channelId: I,
       onClose: t,
@@ -180,7 +180,7 @@ children: (e, t) => {
 }
   }, 'more-options-popout')), !r && (Q.push((0, i.jsx)(f.ZP.Divider, {
 className: G.divider
-  }, 'divider')), Q.push((0, i.jsx)(v.T, {
+  }, 'divider')), Q.push((0, i.jsx)(N.T, {
 channelId: n.id,
 className: G.chatButtonSpacer,
 disabled: !0

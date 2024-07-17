@@ -19,8 +19,8 @@ var i = n(735250),
   I = n(979651),
   x = n(5192),
   T = n(51144),
-  N = n(785717),
-  v = n(221292),
+  v = n(785717),
+  N = n(221292),
   S = n(310427),
   Z = n(318661),
   A = n(57048),
@@ -144,7 +144,7 @@ ec
     onSelect: () => (0, p.X)(t.id)
   }, t.id);
 }),
-eN = null == em ? void 0 : em.map(e => {
+ev = null == em ? void 0 : em.map(e => {
   let {
     key: t,
     user: n,
@@ -165,7 +165,7 @@ eN = null == em ? void 0 : em.map(e => {
     }
   }, t);
 }),
-ev = a.useCallback(() => J(!0), []),
+eN = a.useCallback(() => J(!0), []),
 eS = a.useCallback(() => J(!1), []),
 eZ = (0, r.e7)([_.default], () => _.default.getId()),
 eA = n.id === eZ,
@@ -179,13 +179,13 @@ eM = n.bot || eA,
 });
   return (0, i.jsx)(u.Gt, {
 value: ee,
-children: (0, i.jsx)(N.Mt, {
+children: (0, i.jsx)(v.Mt, {
   layout: 'DM_PANEL',
   userId: n.id,
   channelId: s.id,
   children: (0, i.jsx)('aside', {
     className: X.profilePanel,
-    onMouseEnter: ev,
+    onMouseEnter: eN,
     onMouseLeave: eS,
     children: (0, i.jsxs)(R.Z, {
       user: n,
@@ -273,7 +273,7 @@ children: (0, i.jsx)(N.Mt, {
                   loadingContentsCount: ef.length,
                   itemType: W.R.MutualGuildList,
                   onExpand: () => {
-                    (0, v.pQ)({
+                    (0, N.pQ)({
                       action: 'PRESS_SECTION',
                       section: 'MUTUAL_GUILDS',
                       layout: 'DM_PANEL',
@@ -295,7 +295,7 @@ children: (0, i.jsx)(N.Mt, {
                   loadingContentsCount: em.length,
                   itemType: W.R.MutualFriendsList,
                   onExpand: () => {
-                    (0, v.pQ)({
+                    (0, N.pQ)({
                       action: 'PRESS_SECTION',
                       section: 'MUTUAL_FRIENDS',
                       layout: 'DM_PANEL',
@@ -304,7 +304,7 @@ children: (0, i.jsx)(N.Mt, {
                       analyticsLocations: ee
                     });
                   },
-                  children: eN
+                  children: ev
                 }) : null
               ]
             })

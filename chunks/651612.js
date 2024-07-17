@@ -29,8 +29,8 @@ className: n,
 let e = x ? _.MI.NO_CHAT : _.MI.RESIZABLE;
 (0, p.gC)(e);
   }, [x]), {
-unreadCount: N,
-mentionCount: v
+unreadCount: v,
+mentionCount: N
   } = function(e) {
 let t = (0, l.e7)([u.Z], () => !(0, s.isEmpty)(u.Z.getTypingUsers(e)), [e]),
   {
@@ -55,11 +55,11 @@ handler: S
   });
   let Z = x ? E.Z.Messages.HIDE_CHAT : E.Z.Messages.SHOW_CHAT,
 A = [Z];
-  v > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
-mentionCount: v
-  })), N > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
+  N > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+mentionCount: N
+  })), v > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
   let M = (0, l.e7)([m.ZP], () => m.ZP.getFocusedLayout()),
-b = v > 0 ? v : N,
+b = N > 0 ? N : v,
 R = b > 0;
   return (0, i.jsxs)('div', {
 className: C.wrapper,
@@ -76,7 +76,7 @@ children: [
     ...g
   }),
   R ? (0, i.jsx)(o.Z, {
-    hasMentions: v > 0,
+    hasMentions: N > 0,
     truncatedCount: b > 99 ? '99+' : b,
     className: C.badge
   }) : null

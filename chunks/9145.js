@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(594174),
   x = n(585483),
   T = n(792125),
-  N = n(51144),
-  v = n(566620),
+  v = n(51144),
+  N = n(566620),
   S = n(317381),
   Z = n(619915),
   A = n(988980),
@@ -50,7 +50,7 @@ maxHeight: s,
 connectedChannelId: w,
 renderExternalHeader: B
   } = e, H = (0, M.Z)(), G = (0, r.Wu)([S.ZP], () => null != w ? S.ZP.getEmbeddedActivitiesForChannel(w) : [], [w]), V = (0, r.e7)([E.Z], () => E.Z.getChannel(w)), F = (0, Z.gb)(G), W = (0, Z.uF)(F), z = a.useCallback(() => {
-(0, v.tg)(P.Ez.PIP);
+(0, N.tg)(P.Ez.PIP);
   }, []), Y = a.useRef(null), K = (0, r.e7)([S.ZP], () => S.ZP.getFocusedLayout()), q = K !== P.MI.NO_CHAT, [X, Q] = a.useState(null !== (t = m.ZP.activityPanelHeight) && void 0 !== t ? t : s), J = a.useCallback(e => {
 d.ZP.updatedUnsyncedSettings({
   activityPanelHeight: e
@@ -133,7 +133,7 @@ var n;
 if (null == e || void 0 === e || void 0 === t)
   return null;
 let a = ec.get(e.id),
-  s = null !== (n = null == a ? void 0 : a.nick) && void 0 !== n ? n : N.ZP.getName(e);
+  s = null !== (n = null == a ? void 0 : a.nick) && void 0 !== n ? n : v.ZP.getName(e);
 return (0, i.jsx)(c.TooltipContainer, {
   text: s,
   position: 'bottom',

@@ -19,8 +19,8 @@ var i = n(735250),
   I = n(410575),
   x = n(393238),
   T = n(110924),
-  N = n(40851),
-  v = n(115130),
+  v = n(40851),
+  N = n(115130),
   S = n(317381),
   Z = n(596040),
   A = n(296797),
@@ -73,8 +73,8 @@ var i = n(735250),
   eI = n(228488),
   ex = n(358221),
   eT = n(414910),
-  eN = n(887012),
-  ev = n(909820),
+  ev = n(887012),
+  eN = n(909820),
   eS = n(493010),
   eZ = n(742603),
   eA = n(221888),
@@ -648,7 +648,7 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
     channel: n,
     inCall: a
   } = this.props;
-  return !e || t || this.popoutOpen && !this.inPopout && a ? null : (0, i.jsx)(ev.ZP, {
+  return !e || t || this.popoutOpen && !this.inPopout && a ? null : (0, i.jsx)(eN.ZP, {
     children: (0, i.jsx)(Y.Z, {
       className: eO.chatToasts,
       channelId: n.id
@@ -712,7 +712,7 @@ height: p = 0,
 ref: _
   } = (0, x.Z)(), {
 ref: f
-  } = (0, x.Z)(), E = (0, N.bp)(), g = (0, O.Z)(), M = (0, c.e7)([ed.Z], () => {
+  } = (0, x.Z)(), E = (0, v.bp)(), g = (0, O.Z)(), M = (0, c.e7)([ed.Z], () => {
 var e;
 return (null !== (e = null == g ? void 0 : g.channelId) && void 0 !== e ? e : ed.Z.getVoiceChannelId()) === n.id;
   }), R = (0, T.Z)(M), {
@@ -756,7 +756,7 @@ popoutWindowAlwaysOnTop: w.Z.getIsAlwaysOnTop(eL.KJ3.CHANNEL_CALL_POPOUT)
 C.ZP.updatedUnsyncedSettings({
   callHeaderHeight: e
 });
-  }, []), eh = null !== (t = null == Y ? void 0 : Y.id) && void 0 !== t ? t : null, ep = (0, Z.Z)(eh, n.id), em = (0, c.e7)([v.Z], () => v.Z.getFetchState(), []), e_ = (0, T.Z)(em);
+  }, []), eh = null !== (t = null == Y ? void 0 : Y.id) && void 0 !== t ? t : null, ep = (0, Z.Z)(eh, n.id), em = (0, c.e7)([N.Z], () => N.Z.getFetchState(), []), e_ = (0, T.Z)(em);
   a.useEffect(() => {
 'errored' === em && 'errored' !== e_ && (0, h.showToast)((0, h.createToast)(eP.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FETCH_ERROR, h.ToastType.FAILURE));
   }, [
@@ -785,7 +785,7 @@ U
   ]), (0, A.Z)({
 onTransition: void 0
   });
-  let eE = (0, eN.Z)(n, !0),
+  let eE = (0, ev.Z)(n, !0),
 eC = (0, L.bn)(d.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
 {
   analyticsLocations: eI
@@ -795,7 +795,7 @@ eT = S.ZP.getEmbeddedActivitiesForChannel(n.id);
 value: eI,
 children: (0, i.jsx)(I.Z, {
   page: eL.ZY5.CHANNEL_CALL,
-  children: (0, i.jsx)(ev.B2, {
+  children: (0, i.jsx)(eN.B2, {
     children: (0, i.jsxs)(eb._A, {
       children: [
         (0, i.jsx)(eU, {
@@ -841,7 +841,7 @@ children: (0, i.jsx)(I.Z, {
           currentChannelActivities: eT
         }),
         !n.isPrivate() && (0, i.jsx)(eb.YR, {}),
-        (0, i.jsx)(ev.H_, {})
+        (0, i.jsx)(eN.H_, {})
       ]
     })
   })

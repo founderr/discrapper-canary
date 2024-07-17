@@ -21,7 +21,7 @@ n.delete(e), d(n);
   }, [
 d,
 l
-  ]), f = r.useCallback(e => {
+  ]), C = r.useCallback(e => {
 if (l.size === c.c4)
   return;
 let n = new Set(l);
@@ -48,7 +48,7 @@ children: [
         icon: t,
         text: e,
         selected: n,
-        onClick: n ? m : f
+        onClick: n ? m : C
       }, e);
     })
   })
@@ -60,8 +60,8 @@ n.Z = e => {
 guildId: n,
 title: t,
 description: o,
-handleUpdate: f,
-progress: C,
+handleUpdate: C,
+progress: f,
 interests: _,
 requiredGameId: h,
 optional: x = !1,
@@ -74,23 +74,23 @@ return c.gh.forEach(n => e.push({
 })), e;
   }, []), T = r.useMemo(() => {
 var e;
-return null !== (e = null != _ ? _ : null == C ? void 0 : C.interests) && void 0 !== e ? e : new Set();
+return null !== (e = null != _ ? _ : null == f ? void 0 : f.interests) && void 0 !== e ? e : new Set();
   }, [
 _,
-null == C ? void 0 : C.interests
+null == f ? void 0 : f.interests
   ]), I = r.useMemo(() => Array.from(T), [T]), E = r.useMemo(() => I.filter(e => c.gh.has(e)), [I]), b = r.useCallback(e => {
-f(new Set([
+C(new Set([
   ...I.filter(e => !c.gh.has(e)),
   ...e
 ]));
   }, [
-f,
+C,
 I
   ]), N = r.useMemo(() => I.filter(e => c.WZ.has(e) || c.gh.has(e)), [I]), v = r.useCallback(e => {
 let n = new Set(T);
-n.delete(e), f(n);
+n.delete(e), C(n);
   }, [
-f,
+C,
 T
   ]);
   return (0, a.jsxs)('div', {
@@ -124,28 +124,28 @@ children: [
             icon: (0, i.makeIconCompat)(s.Z),
             traits: c.k3,
             interests: T,
-            handleUpdate: f
+            handleUpdate: C
           }),
           h === c.xn && (0, a.jsx)(m, {
             title: d.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_GENSHIN,
             icon: i.SparklesIcon,
             traits: c.hm,
             interests: T,
-            handleUpdate: f
+            handleUpdate: C
           }),
           (0, a.jsx)(m, {
             title: d.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
             icon: i.HourglassIcon,
             traits: c.jK,
             interests: T,
-            handleUpdate: f
+            handleUpdate: C
           }),
           (0, a.jsx)(m, {
             title: d.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
             icon: i.UserIcon,
             traits: c.CT,
             interests: T,
-            handleUpdate: f
+            handleUpdate: C
           }),
           (0, a.jsx)(i.Text, {
             className: u.interestsCategoryTitle,
@@ -168,9 +168,9 @@ children: [
       }),
       (0, a.jsx)('div', {
         className: u.fixedWidthSidebar,
-        children: null != C && I.length > 0 && !g && (0, a.jsx)(l.Z, {
+        children: null != f && I.length > 0 && !g && (0, a.jsx)(l.Z, {
           guildId: n,
-          progress: C,
+          progress: f,
           traitsToHighlight: N,
           maskDescription: !0,
           onTraitClick: v

@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(788983),
   x = n(928518),
   T = n(703656),
-  N = n(493754),
-  v = n(880831),
+  v = n(493754),
+  N = n(880831),
   S = n(73563),
   Z = n(800965),
   A = n(107169),
@@ -112,7 +112,7 @@ function es(e) {
   let {
 channel: t
   } = e, n = (0, p.bp)(), a = (0, o.e7)([L.Z], () => L.Z.can(X.Plq.CREATE_INSTANT_INVITE, t)), s = (0, o.e7)([j.Z], () => j.Z.getGuild(t.guild_id)), l = (0, o.e7)([B.Z], () => B.Z.getStageInstanceByChannel(t.id)), r = a || (null == l ? void 0 : l.invite_code) != null;
-  return null != s && r ? (0, i.jsx)(N.Z, {
+  return null != s && r ? (0, i.jsx)(v.Z, {
 channel: t,
 appContext: n,
 className: $.__invalid_leftTrayIcon,
@@ -136,7 +136,7 @@ g = (0, o.e7)([L.Z], () => L.Z.can(X.Plq.CONNECT, n)),
 I = (0, U.w8)(n.id, w.pV.SPEAKER),
 x = (0, o.e7)([f.Z], () => f.Z.getSelectedParticipant(n.id)),
 T = h && _ !== X.IlC.POPOUT,
-[N, Z] = a.useState(0),
+[v, Z] = a.useState(0),
 {
   isOnStartStageScreen: A
 } = (0, H.ZP)();
@@ -167,7 +167,7 @@ style: {
   height: 'calc(100% - '.concat(b, ')'),
   paddingTop: b
 },
-disableGradients: 0 === N && S.e.TOP,
+disableGradients: 0 === v && S.e.TOP,
 renderBottomLeft: () => (0, i.jsx)(es, {
   channel: n
 }),
@@ -190,7 +190,7 @@ renderHeader: () => (0, i.jsx)(F.Z, {
   channel: n
 }),
 renderChatToasts: () => !M || m || T ? null : (0, i.jsx)(C.ZP, {
-  children: (0, i.jsx)(v.Z, {
+  children: (0, i.jsx)(N.Z, {
     className: l()($.chatToasts, {
       [$.rtsSidebarOpen]: c
     }),
@@ -224,8 +224,8 @@ popoutWindowAlwaysOnTop: I
 popoutWindow: x.Z.getWindow(X.KJ3.CHANNEL_CALL_POPOUT),
 popoutWindowAlwaysOnTop: x.Z.getIsAlwaysOnTop(X.KJ3.CHANNEL_CALL_POPOUT)
   })), T = null != E && !E.closed, {
-analyticsLocations: N
-  } = (0, _.ZP)(m.Z.STAGE_CHANNEL_CALL), v = (0, p.bp)(), S = (0, o.e7)([f.Z], () => f.Z.getChatOpen(t.id), [t.id]), Z = (0, o.e7)([j.Z], () => j.Z.getGuild(t.guild_id), [t.guild_id]);
+analyticsLocations: v
+  } = (0, _.ZP)(m.Z.STAGE_CHANNEL_CALL), N = (0, p.bp)(), S = (0, o.e7)([f.Z], () => f.Z.getChatOpen(t.id), [t.id]), Z = (0, o.e7)([j.Z], () => j.Z.getGuild(t.guild_id), [t.guild_id]);
   a.useEffect(() => {
 null == c.K.get(ee) && ((0, d.openModalLazy)(async () => {
   let {
@@ -241,7 +241,7 @@ width: A = 0,
 ref: M
   } = (0, h.Z)();
   return (0, i.jsx)(_.Gt, {
-value: N,
+value: v,
 children: (0, i.jsxs)(C.B2, {
   children: [
     (0, i.jsxs)('div', {
@@ -270,7 +270,7 @@ children: (0, i.jsxs)(C.B2, {
         }) : null,
         (0, i.jsx)('div', {
           className: $.channelChatWrapper,
-          children: S && (!T || T && v === X.IlC.POPOUT) && (0, i.jsx)(g.Z, {
+          children: S && (!T || T && N === X.IlC.POPOUT) && (0, i.jsx)(g.Z, {
             channel: t,
             guild: Z,
             maxWidth: A - 550

@@ -4,14 +4,14 @@ var n = s(735250),
   r = s(120356),
   l = s.n(r),
   i = s(643872),
-  E = s(481060),
-  c = s(570140),
+  c = s(481060),
+  E = s(570140),
   o = s(652898),
   _ = s(93093),
   I = s(768581),
-  A = s(810568),
-  d = s(981631),
-  u = s(689938),
+  d = s(810568),
+  u = s(981631),
+  A = s(689938),
   O = s(421377);
 let R = [
 i.p.OFFICIAL,
@@ -39,9 +39,9 @@ let o = I.ZP.getGuildIconURL({
 return (0, n.jsxs)('div', {
   className: l()(O.column),
   children: [
-    (0, n.jsx)(E.Text, {
+    (0, n.jsx)(c.Text, {
       variant: 'text-xs/semibold',
-      children: u.Z.Messages.GAME_PROFILE_OFFICIAL_GUILD
+      children: A.Z.Messages.GAME_PROFILE_OFFICIAL_GUILD
     }),
     (0, n.jsxs)('div', {
       className: l()(O.row, O.gapMd),
@@ -49,20 +49,20 @@ return (0, n.jsxs)('div', {
         (0, n.jsx)('img', {
           className: O.icon,
           src: o,
-          alt: u.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({
+          alt: A.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({
             guildName: r.name
           })
         }),
         (0, n.jsxs)('div', {
           className: l()(O.gapNone),
           children: [
-            (0, n.jsx)(E.Text, {
+            (0, n.jsx)(c.Text, {
               variant: 'text-sm/normal',
               children: r.name
             }),
-            null != t && (0, n.jsx)(E.Text, {
+            null != t && (0, n.jsx)(c.Text, {
               variant: 'text-xxs/normal',
-              children: u.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+              children: A.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                 count: t
               })
             })
@@ -70,17 +70,17 @@ return (0, n.jsxs)('div', {
         })
       ]
     }),
-    (0, n.jsx)(E.Button, {
-      color: E.ButtonColors.PRIMARY,
+    (0, n.jsx)(c.Button, {
+      color: c.ButtonColors.PRIMARY,
       onClick: () => {
-        s(A.as.JoinOfficialServer), c.Z.dispatch({
+        s(d.as.JoinOfficialServer), E.Z.dispatch({
           type: 'INVITE_MODAL_OPEN',
           invite: a,
           code: a.code,
-          context: d.IlC.APP
+          context: u.IlC.APP
         });
       },
-      children: i ? u.Z.Messages.JOINED_GUILD : u.Z.Messages.JOIN_GUILD
+      children: i ? A.Z.Messages.JOINED_GUILD : A.Z.Messages.JOIN_GUILD
     })
   ]
 });
@@ -94,7 +94,7 @@ let {
   category: a
 } = e;
 return a === i.p.DISCORD;
-  }), [c, _] = t.useState();
+  }), [E, _] = t.useState();
   if (t.useEffect(() => {
   let e = async e => {
     let a = e.split('/').pop();
@@ -115,16 +115,16 @@ return R.includes(a);
   return (0, n.jsxs)('div', {
 className: l()(O.column),
 children: [
-  null != c && (0, n.jsx)(N, {
-    invite: c,
+  null != E && (0, n.jsx)(N, {
+    invite: E,
     trackClick: s
   }),
   (0, n.jsxs)('div', {
     className: l()(O.column, O.gapSm),
     children: [
-      (0, n.jsx)(E.Text, {
+      (0, n.jsx)(c.Text, {
         variant: 'text-xs/semibold',
-        children: u.Z.Messages.GAME_PROFILE_LINKS
+        children: A.Z.Messages.GAME_PROFILE_LINKS
       }),
       (0, n.jsx)('div', {
         className: O.row,
@@ -136,15 +136,15 @@ children: [
             l = null;
           switch (t) {
             case i.p.OFFICIAL:
-              l = (0, n.jsx)(E.GlobeEarthIcon, {}), a = A.as.WebsiteLink;
+              l = (0, n.jsx)(c.GlobeEarthIcon, {}), a = d.as.WebsiteLink;
               break;
             case i.p.TWITTER:
-              l = (0, n.jsx)(E.XNeutralIcon, {}), a = A.as.XLink;
+              l = (0, n.jsx)(c.XNeutralIcon, {}), a = d.as.XLink;
               break;
             case i.p.YOUTUBE:
-              a = A.as.YouTubeLink, l = (0, n.jsx)(E.YouTubeIcon, {});
+              a = d.as.YouTubeLink, l = (0, n.jsx)(c.YouTubeIcon, {});
           }
-          return null != l ? (0, n.jsx)(E.Anchor, {
+          return null != l ? (0, n.jsx)(c.Anchor, {
             href: r,
             onClick: () => {
               s(a);

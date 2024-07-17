@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(603368),
   x = n(353093),
   T = n(940725),
-  N = n(114487),
-  v = n(979264),
+  v = n(114487),
+  N = n(979264),
   S = n(981631),
   Z = n(921944),
   A = n(689938),
@@ -118,14 +118,14 @@ return t && (0, i.jsx)(r.animated.div, {
         (0, i.jsxs)('div', {
           className: M.guildIconContainer,
           children: [
-            (0, i.jsx)(N.Z, {
+            (0, i.jsx)(v.Z, {
               guild: n,
               iconSize: 64,
               className: M.icon
             }),
             (0, i.jsx)('div', {
               className: M.guildTagContainer,
-              children: (0, i.jsx)(v.aG, {
+              children: (0, i.jsx)(N.aG, {
                 guildId: n.id,
                 clanTag: null === (a = n.clan) || void 0 === a ? void 0 : a.tag,
                 clanBadge: null === (s = n.clan) || void 0 === s ? void 0 : s.badge,

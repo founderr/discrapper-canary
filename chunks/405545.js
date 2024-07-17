@@ -14,8 +14,8 @@ isDropHovered: c,
 onDrop: d,
 onEdit: u,
 onRemove: m,
-canRemove: f,
-actionsLocation: C
+canRemove: C,
+actionsLocation: f
   } = e, {
 label: _
   } = n;
@@ -28,8 +28,8 @@ onDrop: d,
 onEdit: u,
 onRemove: m,
 title: _,
-canRemove: f,
-actionsLocation: C,
+canRemove: C,
+actionsLocation: f,
 children: (0, a.jsx)(s.BO, {
   field: n,
   value: void 0,

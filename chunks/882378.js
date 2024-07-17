@@ -17,15 +17,15 @@ var i = n(735250),
 t.Z = a.memo(function(e) {
   let {
 channel: t
-  } = e, C = (0, c.h)(t.id), g = (0, d.o)(t.id), I = (0, u.M)(t.id), x = (0, l.f9)(), T = (0, s.e7)([p.Z], () => p.Z.hasLayers()), N = a.useCallback(() => g ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [
+  } = e, C = (0, c.h)(t.id), g = (0, d.o)(t.id), I = (0, u.M)(t.id), x = (0, l.f9)(), T = (0, s.e7)([p.Z], () => p.Z.hasLayers()), v = a.useCallback(() => g ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [
 g,
 I
-  ]), v = a.useMemo(() => (g || null != I) && !x && !T, [
+  ]), N = a.useMemo(() => (g || null != I) && !x && !T, [
 g,
 I,
 x,
 T
-  ]), [S, Z] = a.useState(N());
+  ]), [S, Z] = a.useState(v());
   a.useEffect(() => {
 null != I && null != C && (r.AccessibilityAnnouncer.announce(f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
   (0, o.T)(t.id, [I.id]);
@@ -54,12 +54,12 @@ null != C && (0, h.KQ)({
   viewName: h.pb.SAFETY_TOOLS_BUTTON
 });
   }, []), a.useEffect(() => {
-let e = N();
+let e = v();
 null != e && Z(e);
   }, [
 g,
 I,
-N
+v
   ]);
   let A = a.useCallback(() => {
 if (null != I && (0, o.T)(t.id, [I.id]), null != C)
@@ -100,7 +100,7 @@ C,
 t
   ]);
   return null == C ? null : (0, i.jsx)(r.Tooltip, {
-forceOpen: v,
+forceOpen: N,
 text: S,
 color: r.TooltipColors.BRAND,
 position: 'bottom',

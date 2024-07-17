@@ -9,13 +9,13 @@ var a = t(735250),
   d = t(393238),
   u = t(607070),
   m = t(689938),
-  f = t(193981);
+  C = t(193981);
 n.Z = r.memo(function(e) {
   let {
 renderHeader: n,
 children: t,
 isExpanded: i,
-isStuck: C,
+isStuck: f,
 onExpand: _,
 disableAnimation: h,
 disableBackground: x
@@ -47,21 +47,21 @@ let e = setTimeout(() => {
 }, 100);
 return () => clearTimeout(e);
   }, []), (0, a.jsx)(c.Clickable, {
-className: s()(f.editCard, {
-  [f.toggled]: i,
-  [f.noBackground]: x
+className: s()(C.editCard, {
+  [C.toggled]: i,
+  [C.noBackground]: x
 }),
 children: (0, a.jsxs)(o.animated.div, {
-  className: s()(f.contentExpandContainer, {
-    [f.showOverflow]: i && I
+  className: s()(C.contentExpandContainer, {
+    [C.showOverflow]: i && I
   }),
   style: M,
   children: [
     (0, a.jsx)(c.Clickable, {
       innerRef: b,
-      onClick: C ? void 0 : _,
-      className: s()(f.innerHeader, {
-        [f.toggled]: i && C
+      onClick: f ? void 0 : _,
+      className: s()(C.innerHeader, {
+        [C.toggled]: i && f
       }),
       'aria-label': m.Z.Messages.EXPAND,
       children: n

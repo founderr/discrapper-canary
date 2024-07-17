@@ -9,8 +9,8 @@ var a = t(735250),
   d = t(353093),
   u = t(214715),
   m = t(18100),
-  f = t(308083),
-  C = t(689938),
+  C = t(308083),
+  f = t(689938),
   _ = t(363778);
 n.Z = e => {
   let {
@@ -20,19 +20,19 @@ progress: i,
 error: h
   } = e, {
 interests: x
-  } = i, [g, p] = r.useState(''), T = (0, l.e7)([c.default], () => c.default.getId()), I = r.useMemo(() => (0, d.SS)(f.i6, T), [T]), E = r.useMemo(() => Array.from(x), [x]), b = r.useMemo(() => E.filter(f.O6), [E]), N = r.useMemo(() => [
+  } = i, [g, p] = r.useState(''), T = (0, l.e7)([c.default], () => c.default.getId()), I = r.useMemo(() => (0, d.SS)(C.i6, T), [T]), E = r.useMemo(() => Array.from(x), [x]), b = r.useMemo(() => E.filter(C.O6), [E]), N = r.useMemo(() => [
 ...I,
 ...b
   ], [
 b,
 I
-  ]), v = r.useMemo(() => E.filter(e => !f.WZ.has(e) && !f.gh.has(e)), [E]), y = e => {
+  ]), v = r.useMemo(() => E.filter(e => !C.WZ.has(e) && !C.gh.has(e)), [E]), y = e => {
 let n = new Set(x);
 n.delete(e), t({
   interests: n
 });
   }, S = r.useCallback(e => {
-if (x.size === f.c4)
+if (x.size === C.c4)
   return;
 let n = null != e ? e : g.trim();
 if (0 === n.length)
@@ -58,13 +58,13 @@ children: [
   (0, a.jsx)(o.Heading, {
     variant: 'heading-xxl/medium',
     className: _.title,
-    children: C.Z.Messages.CLAN_SETUP_INTERESTS_TITLE
+    children: f.Z.Messages.CLAN_SETUP_INTERESTS_TITLE
   }),
   (0, a.jsx)(o.Text, {
     variant: 'text-md/normal',
     color: 'header-secondary',
     className: _.subtitle,
-    children: C.Z.Messages.CLAN_SETUP_INTERESTS_SUBTITLE.format()
+    children: f.Z.Messages.CLAN_SETUP_INTERESTS_SUBTITLE.format()
   }),
   null != h && (0, a.jsx)(o.Text, {
     variant: 'text-sm/normal',
@@ -85,7 +85,7 @@ children: [
                 variant: 'text-xs/semibold',
                 color: 'text-muted',
                 className: _.contentLabel,
-                children: C.Z.Messages.CLAN_SETUP_INTERESTS_LABEL
+                children: f.Z.Messages.CLAN_SETUP_INTERESTS_LABEL
               }),
               (0, a.jsx)(o.TextInput, {
                 autoFocus: !0,
@@ -93,9 +93,9 @@ children: [
                 value: g,
                 onKeyDown: A,
                 onChange: p,
-                placeholder: C.Z.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
-                maxLength: f.Sq,
-                disabled: x.size === f.c4
+                placeholder: f.Z.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
+                maxLength: C.Sq,
+                disabled: x.size === C.c4
               }),
               g.length > 0 && (0, a.jsx)(o.Clickable, {
                 onClick: () => S(g.trim()),
@@ -110,7 +110,7 @@ children: [
                 color: 'text-muted',
                 variant: 'text-xs/normal',
                 className: _.enterToSearchText,
-                children: C.Z.Messages.CLAN_SETUP_INTERESTS_HELP
+                children: f.Z.Messages.CLAN_SETUP_INTERESTS_HELP
               })
             ]
           }),
@@ -118,7 +118,7 @@ children: [
             className: _.interestsCategoryTitle,
             variant: 'text-xs/semibold',
             color: 'text-muted',
-            children: C.Z.Messages.CLAN_SETUP_SUGGESTED_INTERESTS
+            children: f.Z.Messages.CLAN_SETUP_SUGGESTED_INTERESTS
           }),
           (0, a.jsx)('div', {
             className: _.interestsCategory,

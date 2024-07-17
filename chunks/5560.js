@@ -132,7 +132,7 @@ let {
     [I.notAnimating]: !t,
     [I.highPriority]: d
   };
-}, N = this.getTutorialPopoutText();
+}, v = this.getTutorialPopoutText();
 return (0, i.jsx)(f.ZP, {
   position: m,
   renderMedia: r,
@@ -144,7 +144,7 @@ return (0, i.jsx)(f.ZP, {
   arrowAlignment: p,
   onSkipAll: this.handleSkipTips,
   onComplete: this.handleDismiss,
-  ...N,
+  ...v,
   children: (e, t) => {
     let {
       isShown: n

@@ -9,34 +9,34 @@ var a = t(735250),
   d = t(481060),
   u = t(550271),
   m = t(688298),
-  f = t(995119),
-  C = t(116175),
+  C = t(995119),
+  f = t(116175),
   _ = t(308083),
   h = t(689938),
   x = t(885837),
   g = t(363778);
 let p = [
-  C.ZD.SWORD,
-  C.ZD.WATER_DROP,
-  C.ZD.SKULL,
-  C.ZD.TOADSTOOL,
-  C.ZD.MOON,
-  C.ZD.LIGHTNING,
-  C.ZD.LEAF,
-  C.ZD.HEART,
-  C.ZD.FIRE,
-  C.ZD.COMPASS,
-  C.ZD.CROSSHAIRS,
-  C.ZD.FLOWER,
-  C.ZD.FORCE,
-  C.ZD.GEM,
-  C.ZD.LAVA,
-  C.ZD.PSYCHIC,
-  C.ZD.SMOKE,
-  C.ZD.SNOW,
-  C.ZD.SOUND,
-  C.ZD.SUN,
-  C.ZD.WIND
+  f.ZD.SWORD,
+  f.ZD.WATER_DROP,
+  f.ZD.SKULL,
+  f.ZD.TOADSTOOL,
+  f.ZD.MOON,
+  f.ZD.LIGHTNING,
+  f.ZD.LEAF,
+  f.ZD.HEART,
+  f.ZD.FIRE,
+  f.ZD.COMPASS,
+  f.ZD.CROSSHAIRS,
+  f.ZD.FLOWER,
+  f.ZD.FORCE,
+  f.ZD.GEM,
+  f.ZD.LAVA,
+  f.ZD.PSYCHIC,
+  f.ZD.SMOKE,
+  f.ZD.SNOW,
+  f.ZD.SOUND,
+  f.ZD.SUN,
+  f.ZD.WIND
 ];
 n.Z = e => {
   let {
@@ -49,7 +49,7 @@ error: I,
 furthestStep: E,
 inSettings: b
   } = e, N = r.useMemo(() => {
-let e = (0, C.yf)();
+let e = (0, f.yf)();
 return {
   primary: null != i ? i : e.primary,
   secondary: null != o ? o : e.secondary
@@ -71,8 +71,8 @@ i,
 o
   ]);
   let v = r.useMemo(() => {
-  for (let e = 0; e < C.sg.length; e++)
-    if (C.sg[e].primary === N.primary && C.sg[e].secondary === N.secondary)
+  for (let e = 0; e < f.sg.length; e++)
+    if (f.sg[e].primary === N.primary && f.sg[e].secondary === N.secondary)
       return 1 + e;
   return 0;
 }, [
@@ -116,7 +116,7 @@ children: [
     className: g.subtitle,
     children: h.Z.Messages.CLAN_SETUP_CUSTOMIZE_SUBTITLE
   }),
-  (0, a.jsx)(f.Z, {
+  (0, a.jsx)(C.Z, {
     onClick: A
   }),
   (0, a.jsxs)('div', {
@@ -163,7 +163,7 @@ children: [
                 className: x.pickerGrid,
                 children: [
                   (0, a.jsx)(m.Z, {
-                    showSecondaryColor: C.ME[t] >= 2,
+                    showSecondaryColor: f.ME[t] >= 2,
                     palette: N,
                     onPrimaryColorChange: e => {
                       n({
@@ -192,11 +192,11 @@ children: [
                       })
                     })
                   }),
-                  C.sg.map((e, r) => (0, a.jsx)(d.Clickable, {
+                  f.sg.map((e, r) => (0, a.jsx)(d.Clickable, {
                     onClick: () => {
                       n({
-                        badgePrimaryColor: C.sg[r].primary,
-                        badgeSecondaryColor: C.sg[r].secondary
+                        badgePrimaryColor: f.sg[r].primary,
+                        badgeSecondaryColor: f.sg[r].secondary
                       });
                     },
                     className: l()(x.badgeAssetContainer, {

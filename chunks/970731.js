@@ -3,7 +3,7 @@ E.d(_, {
 return I;
   },
   ZP: function() {
-return S;
+return D;
   }
 });
 var s, T, I, n, A = E(735250),
@@ -12,9 +12,9 @@ var s, T, I, n, A = E(735250),
   r = E.n(a),
   N = E(481060),
   L = E(921944),
-  D = E(735233);
+  S = E(735233);
 
-function S(e) {
+function D(e) {
   let {
 className: _,
 header: E,
@@ -23,7 +23,7 @@ content: T,
 contentClassName: I,
 buttonCTA: n,
 secondaryButtonCTA: a,
-onClick: S,
+onClick: D,
 onSecondaryClick: l,
 buttonProps: U = {
   color: N.Button.Colors.BRAND,
@@ -36,34 +36,34 @@ onComponentMount: O,
 asset: i,
 markAsDismissed: M,
 caretPosition: R = 'caretTopCenter',
-buttonLayout: o = 0
+buttonLayout: u = 0
   } = e;
   t.useEffect(() => {
 null == O || O();
   }, []);
-  let u = null != a;
+  let o = null != a;
   return (0, A.jsxs)('div', {
-className: r()(_, D.upsellTooltipWrapper, D[R]),
+className: r()(_, S.upsellTooltipWrapper, S[R]),
 children: [
   i,
   null == E ? null : (0, A.jsx)(N.Heading, {
-    className: r()(s, D.upsellTooltipHeader),
+    className: r()(s, S.upsellTooltipHeader),
     variant: 'heading-md/semibold',
     children: E
   }),
   (0, A.jsx)(N.Text, {
     color: 'always-white',
-    className: r()(I, D.content),
+    className: r()(I, S.content),
     variant: 'text-sm/normal',
     children: T
   }),
-  null != n || u ? (0, A.jsxs)('div', {
-    className: r()(D.upsellButtonsContainer, {
-      [D.upsellButtonsAdjacent]: 0 === o,
-      [D.upsellButtonsStacked]: 1 === o
+  null != n || o ? (0, A.jsxs)('div', {
+    className: r()(S.upsellButtonsContainer, {
+      [S.upsellButtonsAdjacent]: 0 === u,
+      [S.upsellButtonsStacked]: 1 === u
     }),
     children: [
-      u ? (0, A.jsx)(N.Button, {
+      o ? (0, A.jsx)(N.Button, {
         ...G,
         onClick: () => {
           null == l || l(), null == M || M(L.L.SECONDARY);
@@ -72,13 +72,13 @@ children: [
       }) : null,
       null == n ? null : (0, A.jsx)(N.Button, {
         className: r()({
-          [D.fullWidth]: !u
+          [S.fullWidth]: !o
         }, U.className),
         color: U.color,
         look: U.look,
         innerClassName: U.innerClassName,
         onClick: e => {
-          S(e), null == M || M(L.L.PRIMARY);
+          D(e), null == M || M(L.L.PRIMARY);
         },
         children: n
       })
@@ -87,4 +87,4 @@ children: [
 ]
   });
 }
-(s = I || (I = {})).TOP_CENTER = 'caretTopCenter', s.TOP_RIGHT = 'caretTopRight', s.TOP_LEFT = 'caretTopLeft', s.BOTTOM_CENTER = 'caretBottomCenter', s.BOTTOM_LEFT = 'caretBottomLeft', s.LEFT_CENTER = 'caretLeftCenter', s.LEFT_TOP = 'caretLeftTop', s.RIGHT_CENTER = 'caretRightCenter', (T = n || (n = {}))[T.ADJACENT = 0] = 'ADJACENT', T[T.STACKED = 1] = 'STACKED', S.CaretPosition = I, S.ButtonLayout = n;
+(s = I || (I = {})).TOP_CENTER = 'caretTopCenter', s.TOP_RIGHT = 'caretTopRight', s.TOP_LEFT = 'caretTopLeft', s.BOTTOM_CENTER = 'caretBottomCenter', s.BOTTOM_LEFT = 'caretBottomLeft', s.LEFT_CENTER = 'caretLeftCenter', s.LEFT_TOP = 'caretLeftTop', s.RIGHT_CENTER = 'caretRightCenter', (T = n || (n = {}))[T.ADJACENT = 0] = 'ADJACENT', T[T.STACKED = 1] = 'STACKED', D.CaretPosition = I, D.ButtonLayout = n;

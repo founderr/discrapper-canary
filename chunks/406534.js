@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(88101),
   x = n(576954),
   T = n(280006),
-  N = n(347102),
-  v = n(765104),
+  v = n(347102),
+  N = n(765104),
   S = n(122707),
   Z = n(779836),
   A = n(23750),
@@ -109,7 +109,7 @@ eu = () => es.isInitialized() || u.ready,
 eh = (0, w.$)(r),
 ep = u.length > 0 && (null === (t = u.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(r)),
 em = (0, o.ts)(r),
-e_ = (0, s.e7)([v.Z], () => v.Z.shouldShowTopicsBar() && !ec),
+e_ = (0, s.e7)([N.Z], () => N.Z.shouldShowTopicsBar() && !ec),
 ef = (0, I.P)(r.id, Q.zr),
 eE = (0, C.z)(r.id, Q.zr),
 eC = (0, U.Z)(),
@@ -124,7 +124,7 @@ eg = function(e, t) {
     senderId: e.getRecipientId()
   }) : e.isGroupDM() && (0, T.f)({
     location: 'blocked_user_banner'
-  }) ? (0, i.jsx)(N.e, {
+  }) ? (0, i.jsx)(v.e, {
     channel: e
   }) : null;
 }(r, null != ef ? ef : eE),
@@ -134,8 +134,8 @@ eI = r.isForumPost() && !ep ? (0, i.jsx)(p.Z, {
 ex = (0, _.Z)(r.id);
   (0, Y.Z)();
   let eT = null,
-eN = [],
-ev = ei.map((e, t) => {
+ev = [],
+eN = ei.map((e, t) => {
   if (e.type === X.ys_.DIVIDER) {
     var n, a;
     let s = null != e.unreadId;
@@ -187,21 +187,21 @@ ev = ei.map((e, t) => {
     renderContentOnly: ex
   }, e.content.id);
 });
-  eN.push(...ev);
+  ev.push(...eN);
   let eS = ei[ei.length - 1];
   if (null != ed && ea.forEach((e, t) => {
   let n = 0 === t && (0, k.J)(r, eS, new A.ZP({
     type: X.uaV.DEFAULT,
     author: ed
   }));
-  eN.push((0, i.jsx)(ee, {
+  ev.push((0, i.jsx)(ee, {
     file: e,
     channel: r,
     user: ed,
     isGroupStart: n
   }, 'upload-'.concat(e.id)));
 }), u.hasMoreBefore && null == er) {
-u.length > 0 && eN.unshift((0, i.jsx)('div', {
+u.length > 0 && ev.unshift((0, i.jsx)('div', {
   style: {
     height: q.D4,
     flex: '0 0 auto'
@@ -210,18 +210,18 @@ u.length > 0 && eN.unshift((0, i.jsx)('div', {
 let {
   useReducedMotion: e
 } = c.Z;
-(e && eu() || !e) && eN.unshift((0, i.jsx)(W.ZP, {
+(e && eu() || !e) && ev.unshift((0, i.jsx)(W.ZP, {
   compact: en,
   ...el
 }, 'has-more'));
   }
-  if ((!u.hasMoreBefore || null != er) && eN.unshift((0, i.jsx)(h.Z, {
+  if ((!u.hasMoreBefore || null != er) && ev.unshift((0, i.jsx)(h.Z, {
   channel: r,
   showingBanner: eo
-}, 'empty-message')), u.hasMoreAfter && eN.push((0, i.jsx)(W.ZP, {
+}, 'empty-message')), u.hasMoreAfter && ev.push((0, i.jsx)(W.ZP, {
   compact: en,
   ...el
-}, 'has-more-after')), !eo && eh && eu() && eN.push((0, i.jsx)(z.Z, {
+}, 'has-more-after')), !eo && eh && eu() && ev.push((0, i.jsx)(z.Z, {
   channel: r
 })), B > 0 && et && eu()) {
 let e, t;
@@ -365,7 +365,7 @@ a = u.loadingMore && u.jumpedToPresent ? (0, i.jsx)(F.DR, {}) : null != e ? (0, 
 });
   }
   return {
-channelStreamMarkup: eN,
+channelStreamMarkup: ev,
 newMessagesBar: n,
 jumpToPresentBar: a,
 forumPostActionBar: eI,

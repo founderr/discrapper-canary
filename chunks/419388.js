@@ -1,6 +1,6 @@
 n.d(t, {
   ZP: function() {
-return v;
+return N;
   }
 }), n(47120), n(653041);
 var i = n(470079),
@@ -62,7 +62,7 @@ let T = {
   scrollHeight: 0,
   offsetHeight: 0
 };
-class N {
+class v {
   isReady() {
 return this.props.messages.ready;
   }
@@ -602,7 +602,7 @@ null != e.messages.jumpTargetId ? this.pinned = !1 : (this.initialScrollTop = nu
   }
 }
 
-function v(e) {
+function N(e) {
   let {
 messages: t,
 channel: n,
@@ -615,7 +615,7 @@ handleScrollToBottom: c,
 handleScrollFromBottom: u
   } = e, {
 windowId: h
-  } = i.useContext(d.ZP), [p] = i.useState(() => new N({
+  } = i.useContext(d.ZP), [p] = i.useState(() => new v({
 messages: t,
 channel: n,
 compact: a,

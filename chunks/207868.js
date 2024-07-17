@@ -19,7 +19,7 @@ t.Z = a.memo(function(e) {
 channel: t
   } = e, n = (0, d.Z)(), s = (0, r.e7)([m.Z], () => m.Z.isInChannel(t.id)), g = (0, r.e7)([m.Z], () => !l().isEmpty(m.Z.getVoiceStatesForChannel(t.id))), I = (0, r.e7)([p.Z], () => p.Z.can(E.Plq.CONNECT, t)), {
 needSubscriptionToAccess: x
-  } = (0, u.Z)(t.id), T = (0, h.$R)(t), N = a.useCallback(() => {
+  } = (0, u.Z)(t.id), T = (0, h.$R)(t), v = a.useCallback(() => {
 c.Z.handleVoiceConnect({
   channel: t,
   connected: s,
@@ -31,16 +31,16 @@ t,
 s,
 x
   ]);
-  return (a.useEffect(() => (_.S.subscribe(E.CkL.CALL_START, N), () => {
-_.S.unsubscribe(E.CkL.CALL_START, N);
-  }), [N]), h.tM.useExperiment({
+  return (a.useEffect(() => (_.S.subscribe(E.CkL.CALL_START, v), () => {
+_.S.unsubscribe(E.CkL.CALL_START, v);
+  }), [v]), h.tM.useExperiment({
 guildId: t.guild_id,
 location: '63250c_1'
   }, {
 autoTrackExposure: !1
   }).enabled && !n && !s && I && T && t.isVocalThread()) ? (0, i.jsx)(f.ZP.Icon, {
 icon: o.PhoneCallIcon,
-onClick: N,
+onClick: v,
 tooltip: g ? C.Z.Messages.JOIN_VOICE_CALL : C.Z.Messages.START_VOICE_CALL
   }) : null;
 });

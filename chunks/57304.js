@@ -26,7 +26,7 @@ return null == e || t.isNSFW() && (!e.nsfwAllowed || !d.Z.didAgree(t.getGuildId(
 !n && C(e => !e);
   }, [n]);
 
-  function N(e) {
+  function v(e) {
 !(null == e ? void 0 : e.shiftKey) && I.dispatch(_.CkL.POPOUT_CLOSE);
   }
   return (a.useEffect(() => (p.S.subscribe(_.CkL.TOGGLE_CHANNEL_PINS, T), () => {
@@ -42,7 +42,7 @@ onRequestClose: () => C(!1),
 renderPopout: function(e) {
   return (0, i.jsx)(r.Z, {
     ...e,
-    onJump: N,
+    onJump: v,
     channel: t
   });
 },

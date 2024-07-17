@@ -1,6 +1,6 @@
 n.d(t, {
   p: function() {
-return v;
+return N;
   }
 });
 var i = n(735250),
@@ -24,7 +24,7 @@ var i = n(735250),
   x = n(689938),
   T = n(322591);
 
-function N(e) {
+function v(e) {
   let {
 guildId: t,
 tag: n,
@@ -56,7 +56,7 @@ clanBadge: (0, i.jsx)(C.A, {
   });
 }
 
-function v(e) {
+function N(e) {
   let {
 applicationIds: t,
 playstyle: n,
@@ -103,7 +103,7 @@ return null !== (e = h.ZP.getStateForGuild(t).progress) && void 0 !== e ? e : n;
   return (0, i.jsxs)(_.Z, {
 ...e,
 children: [
-  (0, i.jsx)(N, {
+  (0, i.jsx)(v, {
     guildId: t,
     tag: f,
     badge: E,
@@ -130,7 +130,7 @@ children: [
       date: o()().format('MMMM YYYY')
     })
   }),
-  (0, i.jsx)(v, {
+  (0, i.jsx)(N, {
     applicationIds: l,
     playstyle: r
   }),

@@ -82,13 +82,13 @@ T = a.useCallback(() => {
   f,
   x
 ]),
-N = a.useCallback(() => {
+v = a.useCallback(() => {
   C(), x(h.NM.USER_BANNER_BLOCK_CONFIRM);
 }, [
   C,
   x
 ]),
-v = a.useCallback(() => {
+N = a.useCallback(() => {
   C(), x(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
 }, [
   C,
@@ -106,8 +106,8 @@ S = a.useCallback(() => {
       } = n;
       return (0, i.jsx)(e, {
         transitionState: a,
-        onBlock: N,
-        onBlockAndReport: v,
+        onBlock: v,
+        onBlockAndReport: N,
         onCancel: () => {
           null == s || s(), x(h.NM.USER_BANNER_BLOCK_CANCEL);
         },
@@ -118,8 +118,8 @@ S = a.useCallback(() => {
     };
   });
 }, [
-  N,
   v,
+  N,
   E,
   t,
   x

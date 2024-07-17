@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return C;
+return f;
   }
 });
 var a = t(735250);
@@ -14,47 +14,47 @@ var r = t(108930),
   d = t(206851),
   u = t(246933),
   m = t(995414),
-  f = t(308083);
+  C = t(308083);
 
-function C(e) {
+function f(e) {
   let {
 banner: n,
 ...t
   } = e;
   switch (n) {
-case f.qC.NIGHT_SKY:
+case C.qC.NIGHT_SKY:
   return (0, a.jsx)(l.Z, {
     ...t
   });
-case f.qC.CASTLE:
+case C.qC.CASTLE:
   return (0, a.jsx)(r.Z, {
     ...t
   });
-case f.qC.WORLD_MAP:
+case C.qC.WORLD_MAP:
   return (0, a.jsx)(m.Z, {
     ...t
   });
-case f.qC.SEA_FOAM:
+case C.qC.SEA_FOAM:
   return (0, a.jsx)(c.Z, {
     ...t
   });
-case f.qC.WARP_TUNNEL:
+case C.qC.WARP_TUNNEL:
   return (0, a.jsx)(u.Z, {
     ...t
   });
-case f.qC.HOUSE:
+case C.qC.HOUSE:
   return (0, a.jsx)(s.Z, {
     ...t
   });
-case f.qC.HEIGHTMAP:
+case C.qC.HEIGHTMAP:
   return (0, a.jsx)(i.Z, {
     ...t
   });
-case f.qC.MESH:
+case C.qC.MESH:
   return (0, a.jsx)(o.Z, {
     ...t
   });
-case f.qC.SPATTER:
+case C.qC.SPATTER:
   return (0, a.jsx)(d.Z, {
     ...t
   });

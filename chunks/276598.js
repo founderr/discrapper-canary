@@ -23,9 +23,9 @@ var i = n(735250),
   I = n(981631),
   x = n(921944),
   T = n(689938),
-  N = n(646897);
+  v = n(646897);
 
-function v(e) {
+function N(e) {
   let {
 onClose: t,
 channel: n
@@ -68,7 +68,7 @@ children: e => {
   return (0, i.jsxs)(i.Fragment, {
     children: [
       n ? (0, i.jsx)('div', {
-        className: N.leftDivider
+        className: v.leftDivider
       }) : null,
       (0, i.jsx)(r.Popout, {
         position: y,
@@ -88,7 +88,7 @@ children: e => {
                 s(x.L.UNKNOWN), O(!0);
               },
               gameConsoleAccounts: L
-            }) : (0, i.jsx)(v, {
+            }) : (0, i.jsx)(N, {
               onClose: () => {
                 n();
               },

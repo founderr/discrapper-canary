@@ -47,7 +47,7 @@ T = a.useCallback(() => {
   f,
   t
 ]),
-N = a.useRef(null);
+v = a.useRef(null);
   return a.useEffect(() => {
 let e;
 let t = c.Z.theme,
@@ -59,8 +59,8 @@ return null != I && (async () => {
     Promise.resolve().then(n.t.bind(n, 500923, 23)),
     (0, l.wj)(t) ? I.dark() : I.light()
   ]);
-  !i && null != N.current && (e = a.loadAnimation({
-    container: N.current,
+  !i && null != v.current && (e = a.loadAnimation({
+    container: v.current,
     renderer: 'svg',
     loop: !0,
     autoplay: !0,
@@ -80,7 +80,7 @@ children: (0, i.jsxs)('form', {
       children: [
         null != I && (0, i.jsx)('div', {
           className: p.animation,
-          ref: N
+          ref: v
         }),
         (0, i.jsxs)('div', {
           className: p.content,

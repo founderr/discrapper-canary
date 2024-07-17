@@ -24,8 +24,8 @@ var a = n(120356),
   I = n(984370),
   x = n(910611),
   T = n(454585),
-  N = n(134483),
-  v = n(210975),
+  v = n(134483),
+  N = n(210975),
   S = n(809244),
   Z = n(618158),
   A = n(792125),
@@ -210,7 +210,7 @@ H = L ? (0, i.jsx)(r.Tooltip, {
   modalKey: P.VOICE_CHANNEL_STATUS_MODAL_KEY
 });
   }
-  let F = (0, v.m$)({
+  let F = (0, N.m$)({
 channelId: t.id,
 location: 'ChannelCallHeader'
   });
@@ -260,7 +260,7 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(N.Z, {
+  (0, i.jsx)(v.Z, {
     channelId: t.id
   })
 ]

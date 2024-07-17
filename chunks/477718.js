@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(274730),
   x = n(5192),
   T = n(776767),
-  N = n(689938),
-  v = n(490346),
+  v = n(689938),
+  N = n(490346),
   S = n(347099),
   Z = n(749348);
 
@@ -41,7 +41,7 @@ t.userId
   ]), A = a.useCallback(e => t => {
 t.preventDefault(), t.stopPropagation(), null != e && (0, _.RE)(e, r);
   }, [r]), M = a.useCallback(() => null == t.user ? null : (0, i.jsx)(d.Tooltip, {
-text: N.Z.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
+text: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
 children: e => {
   var a;
   let {
@@ -50,7 +50,7 @@ children: e => {
   } = e;
   return (0, i.jsx)(d.Clickable, {
     tag: 'span',
-    className: v.username,
+    className: N.username,
     onClick: A(Z),
     onMouseEnter: s,
     onMouseLeave: r,
@@ -62,7 +62,7 @@ children: e => {
         (0, i.jsx)(d.NameWithRole, {
           name: x.ZP.getName(n.guildId, null, t.user),
           color: null !== (a = null == Z ? void 0 : Z.colorString) && void 0 !== a ? a : void 0,
-          className: l()(v.__invalid_memberNameText)
+          className: l()(N.__invalid_memberNameText)
         })
       ]
     })
@@ -75,13 +75,13 @@ n.guildId,
 Z
   ])();
   return (0, i.jsxs)('div', {
-className: l()(S.modInfoItem, v.auditLogItem),
+className: l()(S.modInfoItem, N.auditLogItem),
 children: [
   (0, i.jsxs)('div', {
-    className: v.auditLogItemTitleContainer,
+    className: N.auditLogItemTitleContainer,
     children: [
       (0, i.jsxs)('div', {
-        className: v.auditLogItemTitle,
+        className: N.auditLogItemTitle,
         children: [
           null != u && (0, i.jsx)(d.Text, {
             variant: 'text-sm/semibold',
@@ -100,7 +100,7 @@ children: [
         ]
       }),
       (0, i.jsx)('div', {
-        className: v.auditLogItemDate,
+        className: N.auditLogItemDate,
         children: (0, i.jsx)(d.Text, {
           variant: 'text-sm/medium',
           color: 'header-primary',
@@ -110,9 +110,9 @@ children: [
     ]
   }),
   null != g && (0, i.jsx)('div', {
-    className: v.auditLogSecondaryContainer,
+    className: N.auditLogSecondaryContainer,
     children: (0, i.jsxs)('div', {
-      className: v.auditLogReason,
+      className: N.auditLogReason,
       children: [
         M,
         (0, i.jsx)(d.Text, {
@@ -125,9 +125,9 @@ children: [
     })
   }),
   null == g && null != I && (0, i.jsx)('div', {
-    className: v.auditLogSecondaryContainer,
+    className: N.auditLogSecondaryContainer,
     children: (0, i.jsxs)('div', {
-      className: v.auditLogSecondary,
+      className: N.auditLogSecondary,
       children: [
         M,
         (0, i.jsx)(d.Text, {
@@ -140,9 +140,9 @@ children: [
     })
   }),
   null == g && null == I && (0, i.jsx)('div', {
-    className: v.auditLogSecondaryContainer,
+    className: N.auditLogSecondaryContainer,
     children: (0, i.jsx)('div', {
-      className: v.auditLogSecondary,
+      className: N.auditLogSecondary,
       children: (0, i.jsx)(d.Text, {
         variant: 'text-sm/normal',
         color: 'text-muted',
@@ -151,7 +151,7 @@ children: [
           log: t,
           guild: s,
           onContentClick: () => {},
-          className: v.auditLogExpandedChangeDetails
+          className: N.auditLogExpandedChangeDetails
         })
       })
     })
@@ -177,7 +177,7 @@ t.userId
   ]), null == n || 0 === s.length) ? null : (0, i.jsx)('div', {
 className: l()(Z.__invalid_safetySignalsMainContainer),
 children: (0, i.jsx)(d.FormItem, {
-  title: N.Z.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
+  title: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
   titleClassName: Z.infoTitle,
   children: s.length > 0 ? (0, i.jsx)(T.WM, {
     children: s.map(e => (0, i.jsx)(A, {

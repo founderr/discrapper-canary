@@ -4,40 +4,40 @@ var n = s(735250),
   r = s(120356),
   l = s.n(r),
   i = s(512722),
-  E = s.n(i),
-  c = s(442837),
+  c = s.n(i),
+  E = s(442837),
   o = s(481060),
   _ = s(493683),
   I = s(220779),
-  A = s(142550),
-  d = s(201133),
-  u = s(693824),
+  d = s(142550),
+  u = s(201133),
+  A = s(693824),
   O = s(919394),
   R = s(91140),
   N = s(297781),
   T = s(359110),
   m = s(592125),
-  P = s(944486),
-  g = s(594174),
+  g = s(944486),
+  P = s(594174),
   L = s(5192),
   M = s(810568),
   S = s(689938),
   G = s(340672),
-  C = s(421377);
-let p = e => {
+  h = s(421377);
+let C = e => {
   let {
 entry: a,
 setGeneratedImage: s,
 nickName: r
-  } = e, [i, c] = t.useState();
+  } = e, [i, E] = t.useState();
   return t.useEffect(() => {
 (async () => {
   let e = await _.Z.getOrEnsurePrivateChannel(a.author_id),
     n = m.Z.getChannel(e);
-  E()(null != n, 'DM channel cannot be null');
-  let t = await (0, O.QC)(a, n, u.kH.Base64),
-    r = await (0, O.QC)(a, n, u.kH.CloudUpload);
-  c(t), s(r);
+  c()(null != n, 'DM channel cannot be null');
+  let t = await (0, O.QC)(a, n, A.kH.Base64),
+    r = await (0, O.QC)(a, n, A.kH.CloudUpload);
+  E(t), s(r);
 })();
   }, [
 a,
@@ -65,33 +65,33 @@ entry: a,
 viewId: s,
 style: r = {},
 onClose: i
-  } = e, u = (0, c.e7)([
-P.Z,
+  } = e, A = (0, E.e7)([
+g.Z,
 m.Z
-  ], () => m.Z.getChannel(P.Z.getChannelId())), O = (0, c.e7)([g.default], () => g.default.getUser(a.author_id)), {
+  ], () => m.Z.getChannel(g.Z.getChannelId())), O = (0, E.e7)([P.default], () => P.default.getUser(a.author_id)), {
 nick: f,
-avatar: h
+avatar: p
   } = t.useMemo(() => {
-let e = L.ZP.getName(null == u ? void 0 : u.guild_id, null == u ? void 0 : u.id, O);
+let e = L.ZP.getName(null == A ? void 0 : A.guild_id, null == A ? void 0 : A.id, O);
 return {
   nick: e,
-  avatar: null == O ? void 0 : O.getAvatarURL(null == u ? void 0 : u.guild_id, 48, !1)
+  avatar: null == O ? void 0 : O.getAvatarURL(null == A ? void 0 : A.guild_id, 48, !1)
 };
   }, [
 O,
-u
+A
   ]), [x, v] = t.useState();
   return null == O ? null : (0, n.jsxs)('div', {
 className: G.profileEntryCard,
 style: r,
 children: [
   (0, n.jsxs)('div', {
-    className: l()(C.row, C.gapSm),
+    className: l()(h.row, h.gapSm),
     style: r,
     children: [
       (0, n.jsx)('img', {
         className: G.avatar,
-        src: h,
+        src: p,
         alt: S.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({
           userName: f
         })
@@ -99,7 +99,7 @@ children: [
       (0, n.jsx)('div', {
         className: l()(G.playerInfo),
         children: (0, n.jsxs)('div', {
-          className: l()(C.column, C.gapNone),
+          className: l()(h.column, h.gapNone),
           children: [
             (0, n.jsxs)(o.Text, {
               variant: 'text-sm/bold',
@@ -132,13 +132,13 @@ children: [
           interactionType: n,
           reply: t
         } = e;
-        if (n === A.L.ReplyBegin && (0, M.UE)({
+        if (n === d.L.ReplyBegin && (0, M.UE)({
             action: M.as.ClickMessageUser,
             applicationId: a.extra.application_id,
             gameName: a.extra.game_name,
             recipientUserId: a.author_id,
             viewId: s
-          }), n === A.L.ReplySubmit) {
+          }), n === d.L.ReplySubmit) {
           (0, M.UE)({
             action: M.as.SendMessageUser,
             applicationId: a.extra.application_id,
@@ -148,7 +148,7 @@ children: [
           });
           let e = await _.Z.getOrEnsurePrivateChannel(a.author_id),
             n = m.Z.getChannel(e);
-          E()(null != n, 'GameProfile ReactReply - DM channel cannot be null'), E()(null != x, 'GameProfile ReactReply - Reaction Image cannot be null'), (0, d.B)({
+          c()(null != n, 'GameProfile ReactReply - DM channel cannot be null'), c()(null != x, 'GameProfile ReactReply - Reaction Image cannot be null'), (0, u.B)({
             file: x,
             channel: n,
             altText: '',
@@ -157,7 +157,7 @@ children: [
         }
       },
       popoutProps: {
-        popoutBody: (0, n.jsx)(p, {
+        popoutBody: (0, n.jsx)(C, {
           entry: a,
           setGeneratedImage: v,
           nickName: f

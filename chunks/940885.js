@@ -32,25 +32,25 @@ trackUserProfileAction: g
 mutualFriends: x,
 isFetching: T
   } = (0, o.Z)(t.id, !t.bot), {
-mutualGuilds: N,
-isFetching: v
-  } = (0, c.Z)(t.id, !0), S = !t.bot && null != x && x.length > 0, Z = null != N && N.length > 0;
+mutualGuilds: v,
+isFetching: N
+  } = (0, c.Z)(t.id, !0), S = !t.bot && null != x && x.length > 0, Z = null != v && v.length > 0;
   return S || Z ? (0, i.jsxs)(u.Z.Overlay, {
 className: E.overlay,
 children: [
   Z && (0, i.jsx)(_.Z, {
     className: E.list,
     header: f.Z.Messages.MUTUAL_GUILDS_COUNT.format({
-      count: N.length
+      count: v.length
     }),
-    isLoadingHeader: v,
-    loadingContentsCount: N.length,
+    isLoadingHeader: N,
+    loadingContentsCount: v.length,
     itemType: _.R.MutualGuildList,
     onExpand: () => g({
       action: 'PRESS_SECTION',
       section: 'MUTUAL_GUILDS'
     }),
-    children: N.map(e => {
+    children: v.map(e => {
       let {
         guild: n,
         nick: a

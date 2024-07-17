@@ -1,6 +1,6 @@
 n.d(t, {
   y: function() {
-return N;
+return v;
   }
 });
 var i = n(735250),
@@ -94,7 +94,7 @@ return (0, i.jsxs)(i.Fragment, {
   ]
 });
   }),
-  N = () => (0, i.jsx)('div', {
+  v = () => (0, i.jsx)('div', {
 className: I.tileBaseContainer
   });
 t.Z = a.memo(function(e) {
@@ -140,7 +140,7 @@ r.id
   s,
   C
 ]),
-N = a.useCallback(e => (0, i.jsx)(_.Z, {
+v = a.useCallback(e => (0, i.jsx)(_.Z, {
   ...e,
   location: 'AudienceTile',
   guildId: E,
@@ -156,7 +156,7 @@ preload: () => (0, m.W)(r, {
   guildId: s.guild_id,
   channelId: s.id
 }),
-renderPopout: N,
+renderPopout: v,
 position: 'right',
 spacing: 8,
 children: e => (0, i.jsx)(u.Clickable, {

@@ -28,12 +28,12 @@ return null;
 return (0, i.jsx)(i.Fragment, {
   children: a.Children.only(I)
 });
-  let N = null;
-  return null != f ? N = (0, i.jsx)('img', {
+  let v = null;
+  return null != f ? v = (0, i.jsx)('img', {
 alt: '',
 src: f,
 className: d.image
-  }) : null != E && (N = (0, i.jsx)(r.LottieAnimation, {
+  }) : null != E && (v = (0, i.jsx)(r.LottieAnimation, {
 importData: E,
 shouldAnimate: !x,
 className: d.animation
@@ -43,7 +43,7 @@ children: [
   (0, i.jsxs)('div', {
     className: d.content,
     children: [
-      N,
+      v,
       (0, i.jsxs)('div', {
         className: d.text,
         children: [

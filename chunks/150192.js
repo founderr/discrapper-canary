@@ -1,6 +1,6 @@
 t.d(n, {
   j: function() {
-return C;
+return f;
   }
 }), t(653041), t(47120);
 var a, r, i, s, o = t(392711),
@@ -9,9 +9,9 @@ var a, r, i, s, o = t(392711),
   d = t(570140),
   u = t(823379),
   m = t(731455),
-  f = t(689938);
+  C = t(689938);
 
-function C(e, n) {
+function f(e, n) {
   return l().isEqual(e.map(e => [
 e.categoryId,
 e.name
@@ -32,7 +32,7 @@ return h;
 let e = m.L3.map(e => x.find(n => n.categoryId === e)).filter(u.lm);
 return [{
     categoryId: m.Hk,
-    name: f.Z.Messages.HOME
+    name: C.Z.Messages.HOME
   },
   ...e
 ];
@@ -41,7 +41,7 @@ return [{
 let e = m.L3.map(e => x.find(n => n.categoryId === e)).filter(u.lm);
 return [{
     categoryId: m.Hk,
-    name: f.Z.Messages.COMMUNITIES
+    name: C.Z.Messages.COMMUNITIES
   },
   ...e
 ];
@@ -53,7 +53,7 @@ return x;
 return _;
   }
   getCategoryName(e) {
-return e === m.Hk ? f.Z.Messages.HOME : g[e];
+return e === m.Hk ? C.Z.Messages.HOME : g[e];
   }
 }
 s = 'GuildDiscoveryCategoryStore', (i = 'displayName') in(r = p) ? Object.defineProperty(r, i, {

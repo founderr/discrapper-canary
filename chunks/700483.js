@@ -19,8 +19,8 @@ var i = n(735250),
   I = n(889161),
   x = n(738436),
   T = n(829750),
-  N = n(189771),
-  v = n(294629),
+  v = n(189771),
+  N = n(294629),
   S = n(793319),
   Z = n(560688),
   A = n(390322),
@@ -138,7 +138,7 @@ onSelect: n
 canManageGuildEvent: s
   } = (0, I.XJ)(t), c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]), u = (0, r.e7)([E.ZP], () => E.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)), h = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]), {
 suppress: p
-  } = (0, v.Z)(t), m = j.default.getId(), [_] = (0, X.Z)(t), f = H.ZP.isModerator(m, t.id), C = (0, w.B)(t.id), g = s(u);
+  } = (0, N.Z)(t), m = j.default.getId(), [_] = (0, X.Z)(t), f = H.ZP.isModerator(m, t.id), C = (0, w.B)(t.id), g = s(u);
   return h ? (f || g) && null != c ? (0, i.jsx)(o.Popout, {
 renderPopout: e => {
   let {
@@ -310,10 +310,10 @@ channel: t
 suppress: n,
 selfMute: a,
 mute: s
-  } = (0, v.Z)(t), c = (0, w.B)(t.id), d = (0, r.e7)([_.Z], () => null != _.Z.getAwaitingRemoteSessionInfo()), {
+  } = (0, N.Z)(t), c = (0, w.B)(t.id), d = (0, r.e7)([_.Z], () => null != _.Z.getAwaitingRemoteSessionInfo()), {
 cameraUnavailable: E,
 enabled: C
-  } = (0, x.Z)(), g = (0, N.Z)(t), {
+  } = (0, x.Z)(), g = (0, v.Z)(t), {
 limit: I,
 reachedLimit: M
   } = (0, T.Z)(t), j = (0, r.e7)([y.default], () => y.default.getCurrentUser()), P = (0, r.e7)([L.Z], () => (0, f.Z)(L.Z)), D = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]), U = (0, r.e7)([u.Z], () => u.Z.getStreamParticipants(t.id)[0], [t.id]), B = (0, V.PK)(t.id), H = I > 0, G = M && !B || null != U && U.user.id !== (null == j ? void 0 : j.id);

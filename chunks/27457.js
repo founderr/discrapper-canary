@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(833858),
   x = n(223135),
   T = n(37091),
-  N = n(6572),
-  v = n(535400),
+  v = n(6572),
+  N = n(535400),
   S = n(512384),
   Z = n(6242),
   A = n(757692),
@@ -81,7 +81,7 @@ blocked: ef = !1,
 fit: eE = B.L.CONTAIN,
 paused: eC = !1,
 pulseSpeakingIndicator: eg = !1
-  } = e, eI = a.useContext(j.h9), [ex, eT] = a.useState(!1), eN = (0, o.e7)([O.default], () => O.default.getId()), ev = (0, o.e7)([U.default], () => U.default.getCurrentUser()), eS = I.type === J.fO.ACTIVITY ? null : null === (t = I.user) || void 0 === t ? void 0 : t.id, [eZ] = (0, m.Z)(I.type === J.fO.ACTIVITY ? [I.id] : []), eA = (0, o.e7)([T.Z], () => T.Z.getEnabled()), eM = (0, o.e7)([D.Z], () => null != eS && D.Z.isLocalVideoDisabled(eS, (0, _.Z)(I.type)), [
+  } = e, eI = a.useContext(j.h9), [ex, eT] = a.useState(!1), ev = (0, o.e7)([O.default], () => O.default.getId()), eN = (0, o.e7)([U.default], () => U.default.getCurrentUser()), eS = I.type === J.fO.ACTIVITY ? null : null === (t = I.user) || void 0 === t ? void 0 : t.id, [eZ] = (0, m.Z)(I.type === J.fO.ACTIVITY ? [I.id] : []), eA = (0, o.e7)([T.Z], () => T.Z.getEnabled()), eM = (0, o.e7)([D.Z], () => null != eS && D.Z.isLocalVideoDisabled(eS, (0, _.Z)(I.type)), [
 eS,
 I.type
   ]), eb = (0, o.e7)([D.Z], () => null != eS ? D.Z.getVideoToggleState(eS, (0, _.Z)(I.type)) : Q.ZUi.NONE, [
@@ -91,7 +91,7 @@ I.type
 speaking: ej,
 ringing: eL,
 hasVideo: eP
-  } = (0, X.Z)(I, eN), eO = function(e, t, n) {
+  } = (0, X.Z)(I, ev), eO = function(e, t, n) {
 var i, a, s, l;
 let r = (0, o.cj)([w.Z], () => {
     var e, i, a;
@@ -126,7 +126,7 @@ return {
   muted: null !== (s = t.type === J.fO.USER && (null === (i = t.voiceState) || void 0 === i ? void 0 : i.isVoiceMuted())) && void 0 !== s && s,
   deafened: null !== (l = t.type === J.fO.USER && (null === (a = t.voiceState) || void 0 === a ? void 0 : a.isVoiceDeafened())) && void 0 !== l && l
 };
-  }(eN, I, er.getGuildId()), ey = I.type === J.fO.STREAM && eS === eN, eD = (0, V.So)(r.q.STREAM_HIGH_QUALITY), ek = (0, M.j$)(), eU = eD && ey, ew = (0, A.o)(I, ev), eB = (0, Z.lL)('CallTile', !0, ev, ew), eH = eB.persistentQualityIndicator && eB.enabled, eG = (0, o.e7)([L.Z], () => null != eS ? L.Z.getEffectForUserId(eS) : null), eV = (0, o.e7)([w.Z], () => w.Z.getVoicePlatformForChannel(er.id, null != eS ? eS : Q.lds)), {
+  }(ev, I, er.getGuildId()), ey = I.type === J.fO.STREAM && eS === ev, eD = (0, V.So)(r.q.STREAM_HIGH_QUALITY), ek = (0, M.j$)(), eU = eD && ey, ew = (0, A.o)(I, eN), eB = (0, Z.lL)('CallTile', !0, eN, ew), eH = eB.persistentQualityIndicator && eB.enabled, eG = (0, o.e7)([L.Z], () => null != eS ? L.Z.getEffectForUserId(eS) : null), eV = (0, o.e7)([w.Z], () => w.Z.getVoicePlatformForChannel(er.id, null != eS ? eS : Q.lds)), {
 enableHangStatus: eF
   } = g.n.useExperiment({
 guildId: er.guild_id,
@@ -340,7 +340,7 @@ children: (0, i.jsx)('div', {
               speaking: ej,
               secureFramesVerified: eQ
             }) : null,
-            I.type === J.fO.USER && eA ? (0, i.jsx)(N.Z, {
+            I.type === J.fO.USER && eA ? (0, i.jsx)(v.Z, {
               userId: I.id,
               channelId: er.id
             }) : null,
@@ -353,7 +353,7 @@ children: (0, i.jsx)('div', {
           ]
         })
       }),
-      (0, i.jsx)(v.Z, {
+      (0, i.jsx)(N.Z, {
         isFiring: ex,
         callTileRef: e6.current
       })
@@ -412,8 +412,8 @@ inCall: f,
 localVideoDisabled: C,
 videoToggleState: g,
 focused: T,
-blocked: N,
-hideAudioIcon: v,
+blocked: v,
+hideAudioIcon: N,
 participantType: S,
 participantUserId: Z,
 onContextMenu: A,
@@ -427,7 +427,7 @@ secureFramesVerified: P
 Z,
 S
   ]), G = (0, d.useRedesignIconContext)().enabled;
-  if (!v) {
+  if (!N) {
 if (a && S === J.fO.STREAM && m && !T)
   O = (0, i.jsx)(d.Tooltip, {
     text: et.Z.Messages.UNMUTE,
@@ -580,7 +580,7 @@ children: [
         color: 'none',
         variant: 'text-md/normal',
         children: [
-          N ? (0, i.jsx)('div', {
+          v ? (0, i.jsx)('div', {
             className: en.blocked,
             children: (0, i.jsx)(d.DenyIcon, {
               size: 'lg',

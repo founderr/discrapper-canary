@@ -18,8 +18,8 @@ var i, a = n(735250),
   I = n(906732),
   x = n(168551),
   T = n(597952),
-  N = n(628123),
-  v = n(151851),
+  v = n(628123),
+  N = n(151851),
   S = n(587061),
   Z = n(392358),
   A = n(892254),
@@ -158,7 +158,7 @@ return (0, a.jsx)(d.VK, {
           children: (0, a.jsx)(h.FocusRingScope, {
             containerRef: this.rootRef,
             children: (0, a.jsx)(f.Z, {
-              children: (0, a.jsxs)(N.Z, {
+              children: (0, a.jsxs)(v.Z, {
                 children: [
                   (0, a.jsx)(P.Co, {}),
                   (0, a.jsx)(m.Wu, {
@@ -169,7 +169,7 @@ return (0, a.jsx)(d.VK, {
                         (0, a.jsxs)('div', {
                           className: H.popout,
                           children: [
-                            C && null != S ? (0, a.jsx)(v.Z, {
+                            C && null != S ? (0, a.jsx)(N.Z, {
                               focused: n,
                               type: S,
                               windowKey: l,
@@ -244,7 +244,7 @@ o = (0, u.e7)([_.Z], () => _.Z.useForcedColors ? 'yes' : 'no'),
   fontScaleClass: f,
   saturation: C,
   systemForcedColors: T,
-  useForcedColors: N
+  useForcedColors: v
 } = (0, u.cj)([_.Z], () => ({
   fontScale: _.Z.fontScale,
   keyboardModeEnabled: _.Z.keyboardModeEnabled,
@@ -254,7 +254,7 @@ o = (0, u.e7)([_.Z], () => _.Z.useForcedColors ? 'yes' : 'no'),
   systemForcedColors: _.Z.systemForcedColors,
   useForcedColors: _.Z.useForcedColors
 })),
-v = (0, u.e7)([E.ZP], () => null != e.channelId && null !== E.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
+N = (0, u.e7)([E.ZP], () => null != e.channelId && null !== E.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
   (0, S.Z)(n, !1);
   let A = (0, Z.Z)(n, i),
 {
@@ -276,13 +276,13 @@ children: (0, a.jsx)(I.Gt, {
     locale: l,
     theme: r,
     forcedColors: o,
-    useForcedColors: N,
+    useForcedColors: v,
     systemForcedColors: T,
     fontScale: d,
     keyboardModeEnabled: p,
     mouseModeEnabled: A,
     reducedMotionEnabled: m,
-    connectedToEmbeddedActivity: v,
+    connectedToEmbeddedActivity: N,
     fontScaleClass: f,
     saturation: C,
     clientThemesClassName: L,

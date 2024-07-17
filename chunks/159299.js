@@ -150,10 +150,10 @@ g(this, 'guildId', void 0), g(this, 'parentId', void 0), g(this, 'threadId', voi
 }
 
 function T(e) {
-  return N(e.user.id);
+  return v(e.user.id);
 }
 
-function N(e) {
+function v(e) {
   if (null == e)
 return !1;
   let t = !1;
@@ -162,7 +162,7 @@ I[n].updateUserId(e) && (t = !0);
   return t;
 }
 
-function v(e) {
+function N(e) {
   let {
 guildId: t
   } = e, n = !1;
@@ -180,7 +180,7 @@ this.waitFor(o.Z, c.ZP, d.Z, u.Z, h.Z, p.default), this.syncWith([d.Z], () => {
   return t;
 }), this.syncWith([h.Z], () => {
   var e;
-  return N(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
+  return v(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
 });
   }
   getMemberListVersion(e) {
@@ -257,7 +257,7 @@ return t.map(e => {
   let {
     user: t
   } = e;
-  return N(t.id);
+  return v(t.id);
 }).some(e => e);
   },
   GUILD_MEMBER_ADD: T,
@@ -289,9 +289,9 @@ for (let {
 }
 return n;
   },
-  GUILD_ROLE_UPDATE: v,
-  GUILD_ROLE_DELETE: v,
+  GUILD_ROLE_UPDATE: N,
+  GUILD_ROLE_DELETE: N,
   PASSIVE_UPDATE_V2: function(e) {
-return e.members.reduce((e, t) => N(t.user.id) || e, !1);
+return e.members.reduce((e, t) => v(t.user.id) || e, !1);
   }
 });

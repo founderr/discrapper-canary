@@ -1,6 +1,6 @@
 t.d(n, {
   F9: function() {
-return x;
+return N;
   },
   Zb: function() {
 return v;
@@ -9,7 +9,7 @@ return v;
 return m;
   },
   ll: function() {
-return I;
+return h;
   }
 });
 var l = t(735250);
@@ -67,7 +67,7 @@ children: n
   });
 }
 
-function N(e) {
+function x(e) {
   let {
 users: n,
 guildId: t
@@ -94,7 +94,7 @@ children: n.map((e, r) => {
   });
 }
 
-function x(e) {
+function N(e) {
   let {
 guildId: n,
 channelId: t,
@@ -103,28 +103,28 @@ maxAvatars: a = 3
   } = e, d = r.author_id, f = (0, o.e7)([c.default], () => c.default.getUser(d)), {
 displayParticipants: v,
 numOtherParticipants: m
-  } = (0, _.Z)(r, a), x = (0, o.e7)([u.ZP], () => u.ZP.getMember(n, d)), I = (0, o.e7)([s.Z], () => {
+  } = (0, _.Z)(r, a), N = (0, o.e7)([u.ZP], () => u.ZP.getMember(n, d)), h = (0, o.e7)([s.Z], () => {
 var e;
-return (null == x ? void 0 : x.colorRoleId) != null ? null === (e = s.Z.getRole(n, x.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
+return (null == N ? void 0 : N.colorRoleId) != null ? null === (e = s.Z.getRole(n, N.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
   }, [
 n,
-x
+N
   ]);
   if (null == f)
 return null;
-  let g = null == x ? void 0 : x.colorString,
-h = E.ZP.getName(n, t, f);
+  let I = null == N ? void 0 : N.colorString,
+g = E.ZP.getName(n, t, f);
   return (0, l.jsxs)('div', {
 className: T.userSection,
 children: [
-  (0, l.jsx)(N, {
+  (0, l.jsx)(x, {
     users: v,
     guildId: n
   }),
   (0, l.jsx)(i.NameWithRole, {
-    color: null != g ? g : void 0,
-    roleName: I,
-    name: h,
+    color: null != I ? I : void 0,
+    roleName: h,
+    name: g,
     className: T.userName
   }),
   m > 0 ? (0, l.jsx)('div', {
@@ -143,12 +143,12 @@ children: [
   });
 }
 
-function I(e) {
+function h(e) {
   let {
 children: n
   } = e;
   return (0, l.jsx)(i.Heading, {
-variant: 'heading-sm/normal',
+variant: 'heading-sm/medium',
 className: T.contentDescription,
 lineClamp: 1,
 children: n

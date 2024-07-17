@@ -42,8 +42,8 @@ EASING_IN: r.Z.Easing.inOut(r.Z.Easing.back()),
 EASING_OUT: r.Z.Easing.quad
   },
   T = 200,
-  N = 125;
-class v extends a.PureComponent {
+  v = 125;
+class N extends a.PureComponent {
   componentDidMount() {
 this.componentDidAppear();
   }
@@ -94,7 +94,7 @@ r.Z.sequence([
   r.Z.sequence(s),
   r.Z.timing(a, {
     toValue: 0,
-    duration: N
+    duration: v
   })
 ]).start(e);
   }
@@ -196,7 +196,7 @@ T = a.map(e => {
     speaking: r,
     ringing: o
   } = e;
-  return (0, i.jsx)(v, {
+  return (0, i.jsx)(N, {
     className: f.participant,
     width: (0, u.getAvatarSize)(I),
     theme: g,

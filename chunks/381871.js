@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(74538),
   x = n(401062),
   T = n(696900),
-  N = n(456631),
-  v = n(963838),
+  v = n(456631),
+  N = n(963838),
   S = n(535879),
   Z = n(310892),
   A = n(12168),
@@ -63,9 +63,9 @@ onFocus: g
 emoji: e,
 channel: n,
 intention: D
-  })).slice(0, R.e5), W = (null !== (t = N.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter(e => !F.slice(0, R.e5 - 1).some(t => t.name === e.name));
+  })).slice(0, R.e5), W = (null !== (t = v.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter(e => !F.slice(0, R.e5 - 1).some(t => t.name === e.name));
   W.length > 0 && F.splice(F.length - 1, 1, W[0]);
-  let z = (0, v.Iu)(H),
+  let z = (0, N.Iu)(H),
 Y = e => {
   c.Z.dispatch({
     type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',

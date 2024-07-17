@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(592125),
   x = n(703558),
   T = n(430824),
-  N = n(979651),
-  v = n(664342),
+  v = n(979651),
+  N = n(664342),
   S = n(124368),
   Z = n(981631),
   A = n(689938),
@@ -37,7 +37,7 @@ baseChannelId: s,
 channelViewSource: b = 'Split View'
   } = e, R = (0, r.e7)([I.Z], () => I.Z.getChannel(t)), j = (0, r.e7)([T.Z], () => T.Z.getGuild(null == R ? void 0 : R.getGuildId())), L = (0, m.ZP)(R);
   (function(e) {
-let t = (0, r.e7)([N.Z], () => null != e && !l().isEmpty(N.Z.getVoiceStatesForChannel(e.id)));
+let t = (0, r.e7)([v.Z], () => null != e && !l().isEmpty(v.Z.getVoiceStatesForChannel(e.id)));
 a.useEffect(() => {
   t && null != e && (o.Z.dispatch({
     type: 'SIDEBAR_CLOSE',
@@ -68,7 +68,7 @@ a.useEffect(() => {
   b
 ]), null == R || null == j)
 return null;
-  let O = (0, i.jsx)(v.Z, {
+  let O = (0, i.jsx)(N.Z, {
 channel: R,
 baseChannelId: s
   });

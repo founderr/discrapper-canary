@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return v;
+return N;
   }
 }), n(789020), n(47120);
 var i = n(735250),
@@ -44,7 +44,7 @@ message: n
 id: o
   } = t, {
 id: c
-  } = n, m = t.getGuildId(), f = (0, s.e7)([h.Z], () => h.Z.getGuild(m), [m]), E = t.type === g.d4z.GUILD_ANNOUNCEMENT, T = null != f && f.hasFeature(g.oNc.NEWS), v = E && T, {
+  } = n, m = t.getGuildId(), f = (0, s.e7)([h.Z], () => h.Z.getGuild(m), [m]), E = t.type === g.d4z.GUILD_ANNOUNCEMENT, T = null != f && f.hasFeature(g.oNc.NEWS), N = E && T, {
 editingMessage: S,
 editingTextValue: Z,
 editingRichValue: A
@@ -56,15 +56,15 @@ editingRichValue: u.Z.getEditingRichValue(o)
 let {
   content: a
 } = i, s = p.Z.can(g.Plq.MANAGE_MESSAGES, t), o = null != S && null != S.author ? S.author.id : null;
-return v && (o === M || s) && null != S && (0, _.yE)(S.flags, g.iLy.CROSSPOSTED) ? r.Z.confirmEdit(e, n, a) : l.Z.editMessage(e, n, {
+return N && (o === M || s) && null != S && (0, _.yE)(S.flags, g.iLy.CROSSPOSTED) ? r.Z.confirmEdit(e, n, a) : l.Z.editMessage(e, n, {
   content: a
 }), Promise.resolve();
   }, [
 S,
-v,
+N,
 M,
 t
-  ]), R = a.useCallback(e => (0, a.createElement)(N, {
+  ]), R = a.useCallback(e => (0, a.createElement)(v, {
 ...e,
 className: I.channelTextArea,
 key: c
@@ -84,7 +84,7 @@ children: R
   }) : null;
 }
 
-function N(e) {
+function v(e) {
   let {
 textValue: t,
 richValue: n,
@@ -119,7 +119,7 @@ onBlur: f
   }, s.id);
 }
 
-function v(e, t, n) {
+function N(e, t, n) {
   let {
 message: a,
 channel: s

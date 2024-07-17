@@ -1,6 +1,6 @@
 t.d(n, {
   J9: function() {
-return C;
+return f;
   },
   K0: function() {
 return I;
@@ -36,7 +36,7 @@ return h;
 return g;
   },
   zH: function() {
-return f;
+return C;
   }
 });
 var a = t(544891),
@@ -79,11 +79,11 @@ let {
   is_published: d,
   reasons_to_join: u,
   social_links: m,
-  about: f
+  about: C
 } = (await a.tn.get({
   url: l.ANM.GUILD_DISCOVERY_METADATA(e),
   oldFormErrors: !0
-})).body, C = {
+})).body, f = {
   primaryCategoryId: n,
   secondaryCategoryIds: t,
   keywords: i,
@@ -93,13 +93,13 @@ let {
   isPublished: d,
   reasonsToJoin: u,
   socialLinks: m,
-  about: f
+  about: C
 };
 return r.Z.dispatch({
   type: 'GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER',
   guildId: e,
-  metadata: C
-}), C;
+  metadata: f
+}), f;
   } catch (e) {
 r.Z.dispatch({
   type: 'GUILD_DISCOVERY_METADATA_FETCH_FAIL'
@@ -131,7 +131,7 @@ primaryCategoryId: n
   });
 }
 
-function f(e, n) {
+function C(e, n) {
   r.Z.dispatch({
 type: 'GUILD_UPDATE_DISCOVERY_METADATA',
 guildId: e,
@@ -139,7 +139,7 @@ keywords: n
   });
 }
 
-function C(e, n) {
+function f(e, n) {
   r.Z.dispatch({
 type: 'GUILD_UPDATE_DISCOVERY_METADATA',
 guildId: e,
@@ -189,12 +189,12 @@ partnerApplicationTimestamp: c,
 isPublished: d,
 reasonsToJoin: u,
 socialLinks: m,
-about: f
+about: C
   } = e;
   try {
 let {
   primary_category_id: e,
-  category_ids: C,
+  category_ids: f,
   keywords: _,
   emoji_discoverability_enabled: h,
   partner_actioned_timestamp: x,
@@ -214,7 +214,7 @@ let {
     is_published: d,
     reasons_to_join: u,
     social_links: m,
-    about: f
+    about: C
   },
   oldFormErrors: !0
 })).body;
@@ -223,7 +223,7 @@ r.Z.dispatch({
   guildId: n,
   metadata: {
     primaryCategoryId: e,
-    secondaryCategoryIds: C,
+    secondaryCategoryIds: f,
     keywords: _,
     emojiDiscoverabilityEnabled: h,
     partnerActionedTimestamp: x,

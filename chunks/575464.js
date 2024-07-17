@@ -29,7 +29,7 @@ onClick: C,
 onMouseEnter: g,
 'aria-setsize': I,
 'aria-posinset': x
-  } = e, T = (0, r.e7)([u.Z], () => u.Z.getStatus(t.id)), N = (0, l.JA)(String(t.id));
+  } = e, T = (0, r.e7)([u.Z], () => u.Z.getStatus(t.id)), v = (0, l.JA)(String(t.id));
   return (0, i.jsx)(o.Clickable, {
 id: 'user-row-'.concat(n),
 className: m.friendWrapper,
@@ -39,7 +39,7 @@ onClick: () => {
 onMouseEnter: () => {
   null != g && g(n);
 },
-...N,
+...v,
 role: 'option',
 'aria-selected': E,
 'aria-setsize': I,

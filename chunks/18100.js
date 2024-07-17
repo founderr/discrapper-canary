@@ -13,8 +13,8 @@ var a = t(735250),
   d = t(430824),
   u = t(214715),
   m = t(308083),
-  f = t(689938),
-  C = t(120713);
+  C = t(689938),
+  f = t(120713);
 
 function _(e) {
   let {
@@ -25,8 +25,8 @@ onClick: i
   return (0, a.jsx)(u.Z, {
 variant: 'text-xs/semibold',
 color: o ? 'text-muted' : 'interactive-active',
-className: s()(C.trait, {
-  [C.strikethrough]: o
+className: s()(f.trait, {
+  [f.strikethrough]: o
 }),
 text: n,
 selected: t,
@@ -55,10 +55,10 @@ brandPrimaryColor: N
   return (0, a.jsxs)('div', {
 children: [
   (0, a.jsxs)('div', {
-    className: s()(C.description, h ? C.descriptionBorderMask : void 0),
+    className: s()(f.description, h ? f.descriptionBorderMask : void 0),
     children: [
       (0, a.jsx)('div', {
-        className: h ? C.descriptionMask : void 0
+        className: h ? f.descriptionMask : void 0
       }),
       (0, a.jsx)(l.Heading, {
         variant: 'heading-md/medium',
@@ -67,22 +67,22 @@ children: [
         children: null == p ? void 0 : p.name
       }),
       (0, a.jsxs)('div', {
-        className: C.clanInfoRow,
+        className: f.clanInfoRow,
         children: [
           (0, a.jsx)(l.Text, {
             variant: 'text-xxs/normal',
-            className: C.clanInfoItem,
+            className: f.clanInfoItem,
             children: (0, a.jsx)('span', {
               role: 'img',
-              'aria-label': f.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
+              'aria-label': C.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
               children: '\uD83C\uDFAE'
             })
           }),
           (0, a.jsx)(l.Text, {
             variant: 'text-xs/normal',
             color: 'text-secondary',
-            className: C.clanInfoItem,
-            children: null !== (n = (0, m.mv)(E)) && void 0 !== n ? n : f.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
+            className: f.clanInfoItem,
+            children: null !== (n = (0, m.mv)(E)) && void 0 !== n ? n : C.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
           }),
           null != p && (0, a.jsx)(c.cS, {
             wildcardDescriptors: b,
@@ -93,35 +93,35 @@ children: [
       (0, a.jsx)(l.Text, {
         variant: 'text-xs/medium',
         color: 'header-secondary',
-        className: C.descriptionText,
-        children: (null == I ? void 0 : I.length) > 0 ? I : f.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
+        className: f.descriptionText,
+        children: (null == I ? void 0 : I.length) > 0 ? I : C.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
       })
     ]
   }),
   (0, a.jsxs)('div', {
-    className: s()(C.tagsContainer, x ? C.traitsBorderMask : void 0),
+    className: s()(f.tagsContainer, x ? f.traitsBorderMask : void 0),
     children: [
       (0, a.jsx)('div', {
-        className: x ? C.traitsMask : void 0
+        className: x ? f.traitsMask : void 0
       }),
       (0, a.jsxs)('div', {
-        className: C.tagsCount,
+        className: f.tagsCount,
         children: [
           (0, a.jsx)(l.TagsIcon, {
             size: 'xxs',
-            className: C.tags
+            className: f.tags
           }),
           (0, a.jsx)(l.Text, {
             variant: 'text-xs/semibold',
             color: 'text-muted',
-            children: f.Z.Messages.CLAN_SETUP_NUM_TRAITS.format({
+            children: C.Z.Messages.CLAN_SETUP_NUM_TRAITS.format({
               n: y.length
             })
           })
         ]
       }),
       (0, a.jsx)('div', {
-        className: C.traits,
+        className: f.traits,
         children: y.map(e => (0, a.jsx)(_, {
           trait: e,
           selected: S.has(e),

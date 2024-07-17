@@ -58,7 +58,7 @@ if (!!p && null != f)
 g,
 f,
 p
-  ]), N = i.useCallback(e => {
+  ]), v = i.useCallback(e => {
 if (!!_.current && null != f)
   g('handleMouseEnter', f, e);
   }, [
@@ -82,7 +82,7 @@ handleClick: i.useCallback(e => {
   p
 ]),
 handleMouseDown: I,
-handleMouseEnter: N,
+handleMouseEnter: v,
 handleMouseMove: x,
 handleMouseUp: T
   };

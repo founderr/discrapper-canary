@@ -22,9 +22,9 @@ setIsHovered: f,
 onMouseEnter: E,
 onMouseLeave: C,
 cancelTimers: g
-  } = (0, d.Z)(200, 300), [I, x] = a.useState(!1), T = (0, r.e7)([h.Z], () => h.Z.effectCooldownEndTime), N = a.useMemo(() => null != T ? (T.getTime() - Date.now()) / 1000 : 0, [T]), {
-seconds: v
-  } = (0, c.Z)(null != T ? T : new Date()), S = v > 0, Z = a.useCallback(e => {
+  } = (0, d.Z)(200, 300), [I, x] = a.useState(!1), T = (0, r.e7)([h.Z], () => h.Z.effectCooldownEndTime), v = a.useMemo(() => null != T ? (T.getTime() - Date.now()) / 1000 : 0, [T]), {
+seconds: N
+  } = (0, c.Z)(null != T ? T : new Date()), S = N > 0, Z = a.useCallback(e => {
 if ('focus' !== e.type)
   !I && !S && E();
   }, [
@@ -72,8 +72,8 @@ children: e => {
   } = e;
   return (0, i.jsx)(u.Z, {
     isCenterButton: !0,
-    totalCooldownSeconds: N,
-    remainingCooldownSeconds: v,
+    totalCooldownSeconds: v,
+    remainingCooldownSeconds: N,
     className: l()(_.controlButton, n),
     onKeyDown: e => {
       var t, n;

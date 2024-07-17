@@ -29,7 +29,7 @@ showTrailingDivider: C = !1
 joinRequest: I,
 isModmin: x,
 guildId: T,
-maxMembers: N
+maxMembers: v
   } = (0, a.cj)([
 h.Z,
 c.Z,
@@ -43,7 +43,7 @@ return {
   guildId: null == t ? void 0 : t.id,
   maxMembers: null == t ? void 0 : t.maxMembers
 };
-  }), v = (0, a.e7)([o.Z], () => null != T ? o.Z.getMemberCount(T) : 0), S = null != N && (null != v ? v : 0) >= N, {
+  }), N = (0, a.e7)([o.Z], () => null != T ? o.Z.getMemberCount(T) : 0), S = null != v && (null != N ? N : 0) >= v, {
 approveRequest: Z,
 rejectRequest: A,
 submitting: M

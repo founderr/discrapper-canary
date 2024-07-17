@@ -46,8 +46,8 @@ return null != g && g(e, n, t), n;
 focusedIndex: u,
 itemCount: n
   }), {
-itemCount: N,
-focusedIndex: v
+itemCount: v,
+focusedIndex: N
   } = x, [S] = i.useState(() => (0, l.P2)(T, 16));
   return i.useEffect(() => {
   T({
@@ -70,14 +70,14 @@ function(e) {
     enabled: g,
     makeId: I = l.qR,
     getIndexFromId: x
-  } = e, T = i.useRef(n), N = i.useRef(x);
-  N.current = x, T.current = n;
-  let v = i.useRef();
+  } = e, T = i.useRef(n), v = i.useRef(x);
+  v.current = x, T.current = n;
+  let N = i.useRef();
   i.useEffect(() => {
-    v.current = g;
+    N.current = g;
   }, [g]);
   let [S, Z] = i.useState(!1), [A] = i.useState(() => new l.$o(e => () => {
-    let t = null != N.current && 'string' == typeof e ? N.current(e) : e;
+    let t = null != v.current && 'string' == typeof e ? v.current(e) : e;
     'number' == typeof t && !(t < 0) && _({
       type: a.G.SET_FOCUSED_INDEX,
       index: t
@@ -85,7 +85,7 @@ function(e) {
   }));
   i.useEffect(() => () => A.clean(), [A]);
   let M = i.useCallback((e, t) => {
-      v.current && p(e, t);
+      N.current && p(e, t);
     }, [p]),
     [b, R] = i.useState(!0);
   i.useEffect(() => {
@@ -111,7 +111,7 @@ function(e) {
       M
     ]),
     L = i.useCallback(e => {
-      if (!v.current)
+      if (!N.current)
         return;
       if (r.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
         e.preventDefault(), e.stopPropagation(), j();
@@ -226,7 +226,7 @@ function(e) {
         'aria-posinset': E ? n + 1 : void 0,
         id: I(t, n),
         tabIndex: f && n === u ? 0 : -1,
-        onFocus: A.get(null != N.current ? I(t, n) : n)
+        onFocus: A.get(null != v.current ? I(t, n) : n)
       };
     }, [
       I,
@@ -247,8 +247,8 @@ function(e) {
   ]);
 }({
   navId: t,
-  itemCount: N,
-  focusedIndex: v,
+  itemCount: v,
+  focusedIndex: N,
   dispatch: S,
   onSelect: h,
   setFocus: p,

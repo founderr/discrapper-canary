@@ -34,7 +34,7 @@ memberStoreProps: {
 },
 channelId: x,
 guildId: T
-  } = e, [N, v] = i.useState(!1), {
+  } = e, [v, N] = i.useState(!1), {
 requestId: S,
 entries: Z,
 impressionCappedEntryIds: A
@@ -46,7 +46,7 @@ if (null == Z || 0 === Z.length || null == S || !P)
     n,
     I
   ];
-let i = N ? Z.length : 3,
+let i = v ? Z.length : 3,
   a = Z.slice(0, i);
 e = M ? [{
   type: l.so.HIDDEN_CONTENT_INVENTORY
@@ -63,7 +63,7 @@ let s = {
   index: n.length,
   title: g.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
   onToggleExpand: () => {
-    v(e => {
+    N(e => {
       let t = !e;
       return d.default.track(C.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
         channel_id: x,
@@ -72,7 +72,7 @@ let s = {
       }), t;
     });
   },
-  expanded: N,
+  expanded: v,
   expandedCount: Z.length,
   feedHeight: e.map(_.iZ).reduce((e, t) => e + t, 0)
 };
@@ -92,7 +92,7 @@ return [
   }, [
 x,
 Z,
-N,
+v,
 t,
 T,
 S,
