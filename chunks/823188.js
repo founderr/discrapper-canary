@@ -685,10 +685,12 @@ children: [
               [W.tier2Title]: !r
             })
           }),
-          !l && S !== Z.Si.TIER_2 && L && (0, d.jsx)(T.Text, {
-            variant: 'text-xs/bold',
-            className: W.freeTrialPillInline,
-            children: M
+          !l && S !== Z.Si.TIER_2 && L && (0, d.jsx)('div', {
+            children: (0, d.jsx)(T.Text, {
+              variant: 'text-xs/bold',
+              className: W.freeTrialPillInline,
+              children: M
+            })
           }),
           r && (0, d.jsx)(T.Text, {
             variant: 'display-md',

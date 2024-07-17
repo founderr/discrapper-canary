@@ -48,7 +48,7 @@ return z;
 return eN;
   },
   So: function() {
-return ex;
+return eG;
   },
   T4: function() {
 return Y;
@@ -66,7 +66,7 @@ return er;
 return eg;
   },
   Wz: function() {
-return eG;
+return ek;
   },
   XK: function() {
 return eL;
@@ -106,6 +106,9 @@ return $;
   },
   gy: function() {
 return eh;
+  },
+  he: function() {
+return ex;
   },
   if: function() {
 return ev;
@@ -862,7 +865,7 @@ function ea(e) {
 }
 
 function es(e) {
-  let t = A.Z.getPlanIdsForSkus([eG(U.Si.GUILD)]);
+  let t = A.Z.getPlanIdsForSkus([ek(U.Si.GUILD)]);
   l()(null != t, 'Missing guildSubscriptionPlanIds');
   let n = e.find(e => {
 let {
@@ -1056,7 +1059,7 @@ throw (0, v.q2)(t, {
   }
 }), t;
   }
-  let s = A.Z.getForSkuAndInterval(eG(U.Si.GUILD), a.interval, a.intervalCount);
+  let s = A.Z.getForSkuAndInterval(ek(U.Si.GUILD), a.interval, a.intervalCount);
   if (null == s) {
 let t = Error('Unsupported plan');
 throw (0, v.q2)(t, {
@@ -1332,6 +1335,14 @@ function ew(e) {
 }
 
 function ex(e) {
+  if (null != e) {
+let t = V(e);
+if (null != t)
+  return z(t.planId);
+  }
+}
+
+function eG(e) {
   let {
 available: t,
 activated: n,
@@ -1342,7 +1353,7 @@ hqStreamingState: {
   return t && n && r;
 }
 
-function eG(e) {
+function ek(e) {
   return e;
 }
 t.ZP = Object.freeze({
@@ -1536,13 +1547,7 @@ return null != e && 0 !== e.size && Array.from(e).some(e => {
 return null != e && null == V(e) && null != eU(e);
   },
   getPremiumSkuIdForSubscription: ew,
-  getPremiumTypeFromSubscription: function(e) {
-if (null != e) {
-  let t = V(e);
-  if (null != t)
-    return z(t.planId);
-}
-  },
+  getPremiumTypeFromSubscription: ex,
   getPremiumTypeFromSubscriptionRenewalMutations: function(e) {
 if (null != e && null != e.renewalMutations) {
   let t = V(e.renewalMutations);
@@ -1560,7 +1565,7 @@ switch (e) {
     return P.Rj.PREMIUM_TIER_2;
 }
   },
-  castPremiumSubscriptionAsSkuId: eG,
+  castPremiumSubscriptionAsSkuId: ek,
   canUseAnimatedEmojis: function(e) {
 return (0, p.ks)(p.g_, e);
   },
