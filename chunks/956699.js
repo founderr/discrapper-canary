@@ -24,8 +24,8 @@ var n = t(735250),
   R = t(857192),
   x = t(558724),
   M = t(808506),
-  f = t(285952),
-  D = t(154921),
+  D = t(285952),
+  f = t(154921),
   P = t(998502),
   L = t(210887),
   Z = t(601948),
@@ -74,8 +74,8 @@ let {
   disabled: a,
   error: i
 } = this.props;
-return (0, n.jsxs)(f.Z, {
-  direction: f.Z.Direction.VERTICAL,
+return (0, n.jsxs)(D.Z, {
+  direction: D.Z.Direction.VERTICAL,
   className: r()(B.buildOverrideGroup, G.marginBottom20, U.card, B.row),
   children: [
     (0, n.jsx)(N.Z, {
@@ -84,10 +84,10 @@ return (0, n.jsxs)(f.Z, {
       }),
       onClick: a ? void 0 : this.handleRemoveBuildOverride
     }),
-    (0, n.jsxs)(f.Z, {
+    (0, n.jsxs)(D.Z, {
       className: G.marginBottom8,
       children: [
-        (0, n.jsx)(f.Z.Child, {
+        (0, n.jsx)(D.Z.Child, {
           basis: '50%',
           children: (0, n.jsx)(E.FormItem, {
             title: 'Override Type',
@@ -100,7 +100,7 @@ return (0, n.jsxs)(f.Z, {
             })
           })
         }),
-        (0, n.jsx)(f.Z.Child, {
+        (0, n.jsx)(D.Z.Child, {
           basis: '50%',
           children: (0, n.jsx)(E.FormItem, {
             title: 'branch' === s ? 'Branch Name' : 'Build ID',
@@ -114,7 +114,7 @@ return (0, n.jsxs)(f.Z, {
         })
       ]
     }),
-    (0, n.jsxs)(f.Z.Child, {
+    (0, n.jsxs)(D.Z.Child, {
       children: [
         null != i && '' !== i && (0, n.jsx)(E.FormText, {
           className: B.item,
@@ -221,10 +221,10 @@ return null == e ? null : l().map(e, (e, a) => (0, n.jsx)(k, {
 }, a));
   }
   renderRefreshButton() {
-return !this.state.didSave || this.isDirty() ? null : (0, n.jsx)(f.Z, {
+return !this.state.didSave || this.isDirty() ? null : (0, n.jsx)(D.Z, {
   grow: 0,
-  direction: f.Z.Direction.HORIZONTAL_REVERSE,
-  children: (0, n.jsx)(f.Z.Child, {
+  direction: D.Z.Direction.HORIZONTAL_REVERSE,
+  children: (0, n.jsx)(D.Z.Child, {
     grow: 0,
     children: (0, n.jsx)(E.Button, {
       onClick: () => location.reload(),
@@ -238,10 +238,10 @@ return !this.state.didSave || this.isDirty() ? null : (0, n.jsx)(f.Z, {
 let {
   buildOverrides: e
 } = this.state;
-return null == e || 0 === Object.keys(e).length ? null : (0, n.jsx)(f.Z, {
+return null == e || 0 === Object.keys(e).length ? null : (0, n.jsx)(D.Z, {
   grow: 0,
-  direction: f.Z.Direction.HORIZONTAL_REVERSE,
-  children: (0, n.jsx)(f.Z.Child, {
+  direction: D.Z.Direction.HORIZONTAL_REVERSE,
+  children: (0, n.jsx)(D.Z.Child, {
     grow: 0,
     children: (0, n.jsx)(E.Button, {
       onClick: this.handleLinkGeneration,
@@ -258,11 +258,11 @@ let {
   saving: e,
   buildOverrides: s
 } = this.state;
-return (0, n.jsxs)(f.Z, {
+return (0, n.jsxs)(D.Z, {
   grow: 0,
-  direction: f.Z.Direction.HORIZONTAL_REVERSE,
+  direction: D.Z.Direction.HORIZONTAL_REVERSE,
   children: [
-    (0, n.jsx)(f.Z.Child, {
+    (0, n.jsx)(D.Z.Child, {
       grow: 0,
       children: (0, n.jsx)(E.Button, {
         disabled: w(null != s ? s : {}),
@@ -272,7 +272,7 @@ return (0, n.jsxs)(f.Z, {
         children: 'Save Build Overrides'
       })
     }),
-    (0, n.jsx)(f.Z.Child, {
+    (0, n.jsx)(D.Z.Child, {
       grow: 0,
       children: (0, n.jsx)(E.Button, {
         onClick: this.handleDiscardChanges,
@@ -305,16 +305,16 @@ return (0, n.jsx)(p.F, {
   children: (0, n.jsxs)(E.FormSection, {
     className: G.marginTop60,
     children: [
-      (0, n.jsxs)(f.Z, {
+      (0, n.jsxs)(D.Z, {
         className: G.marginBottom20,
         children: [
-          (0, n.jsx)(f.Z.Child, {
+          (0, n.jsx)(D.Z.Child, {
             children: (0, n.jsx)(E.FormTitle, {
               tag: E.FormTitleTags.H1,
               children: 'Build Overrides'
             })
           }),
-          (0, n.jsx)(f.Z.Child, {
+          (0, n.jsx)(D.Z.Child, {
             grow: 0,
             children: (0, n.jsx)(E.Button, {
               size: E.ButtonSizes.SMALL,
@@ -326,14 +326,14 @@ return (0, n.jsx)(p.F, {
         ]
       }),
       (0, n.jsx)(E.FormDivider, {}),
-      (0, n.jsxs)(f.Z, {
-        direction: f.Z.Direction.VERTICAL,
+      (0, n.jsxs)(D.Z, {
+        direction: D.Z.Direction.VERTICAL,
         children: [
           r,
           e,
-          (0, n.jsxs)(f.Z, {
+          (0, n.jsxs)(D.Z, {
             grow: 0,
-            direction: f.Z.Direction.HORIZONTAL_REVERSE,
+            direction: D.Z.Direction.HORIZONTAL_REVERSE,
             children: [
               this.renderRefreshButton(),
               this.renderSaveButton(),
@@ -496,7 +496,7 @@ let {
   label: e,
   value: e
 }));
-return (0, n.jsxs)(f.Z.Child, {
+return (0, n.jsxs)(D.Z.Child, {
   basis: '70%',
   children: [
     (0, n.jsx)(E.FormItem, {
@@ -522,10 +522,10 @@ return (0, n.jsxs)(f.Z.Child, {
         (0, n.jsx)(E.FormItem, {
           title: 'Add allowed app version (required)',
           className: G.marginBottom20,
-          children: (0, n.jsxs)(f.Z, {
-            direction: f.Z.Direction.HORIZONTAL,
+          children: (0, n.jsxs)(D.Z, {
+            direction: D.Z.Direction.HORIZONTAL,
             children: [
-              (0, n.jsx)(f.Z.Child, {
+              (0, n.jsx)(D.Z.Child, {
                 wrap: !0,
                 basis: '90%',
                 children: (0, n.jsx)(E.TextInput, {
@@ -561,9 +561,9 @@ return (0, n.jsxs)(f.Z.Child, {
         title: 'Limit to User IDs (optional)',
         className: G.marginBottom20,
         children: [
-          (0, n.jsx)(f.Z, {
-            direction: f.Z.Direction.HORIZONTAL,
-            children: (0, n.jsx)(f.Z.Child, {
+          (0, n.jsx)(D.Z, {
+            direction: D.Z.Direction.HORIZONTAL,
+            children: (0, n.jsx)(D.Z.Child, {
               wrap: !0,
               basis: '90%',
               children: (0, n.jsx)(E.TextArea, {
@@ -587,9 +587,9 @@ return (0, n.jsxs)(f.Z.Child, {
       title: 'Client Experiment Override',
       className: G.marginBottom20,
       children: [
-        (0, n.jsx)(f.Z, {
-          direction: f.Z.Direction.HORIZONTAL,
-          children: (0, n.jsx)(f.Z.Child, {
+        (0, n.jsx)(D.Z, {
+          direction: D.Z.Direction.HORIZONTAL,
+          children: (0, n.jsx)(D.Z.Child, {
             wrap: !0,
             basis: '90%',
             children: (0, n.jsx)(E.TextArea, {
@@ -633,7 +633,7 @@ let e = JSON.stringify(this.generatePayload(), null, 2),
       });
     }
   });
-return (0, n.jsx)(f.Z.Child, {
+return (0, n.jsx)(D.Z.Child, {
   children: (0, n.jsx)(E.Card, {
     children: (0, n.jsx)('pre', {
       children: a
@@ -651,9 +651,9 @@ return (0, n.jsxs)('div', {
   children: [
     (0, n.jsx)(E.FormItem, {
       title: 'Signed Link',
-      children: (0, n.jsxs)(f.Z, {
+      children: (0, n.jsxs)(D.Z, {
         children: [
-          (0, n.jsx)(f.Z.Child, {
+          (0, n.jsx)(D.Z.Child, {
             wrap: !0,
             basis: '75%',
             children: (0, n.jsx)(C.Z, {
@@ -667,7 +667,7 @@ return (0, n.jsxs)('div', {
         ]
       })
     }),
-    (0, n.jsx)(D.Z, {
+    (0, n.jsx)(f.Z, {
       color: e,
       className: ''.concat(G.marginBottom8, ' ').concat(G.marginTop8),
       children: s
@@ -686,7 +686,7 @@ return (0, n.jsxs)(E.ModalRoot, {
   'aria-label': 'Generate Public Build Override Link',
   children: [
     (0, n.jsxs)(E.ModalHeader, {
-      justify: f.Z.Justify.BETWEEN,
+      justify: D.Z.Justify.BETWEEN,
       separator: !1,
       children: [
         (0, n.jsx)(E.Heading, {
@@ -700,7 +700,7 @@ return (0, n.jsxs)(E.ModalRoot, {
     }),
     (0, n.jsxs)(E.ModalContent, {
       children: [
-        (0, n.jsxs)(f.Z, {
+        (0, n.jsxs)(D.Z, {
           children: [
             this.renderSettingsForm(),
             this.renderPayloadBlock()
@@ -724,7 +724,7 @@ super(...e), y(this, 'state', {
   allowedVersionEntryError: null,
   publicLink: ' ',
   statusText: null,
-  statusTextColor: D.Z.Colors.STATUS_RED,
+  statusTextColor: f.Z.Colors.STATUS_RED,
   allowLoggedOut: !1
 }), y(this, 'setUserEntryError', e => {
   this.setState({
@@ -733,7 +733,7 @@ super(...e), y(this, 'state', {
 }), y(this, 'setStatusMessage', (e, s) => {
   this.setState({
     statusText: e,
-    statusTextColor: null != s ? s : D.Z.Colors.STATUS_RED
+    statusTextColor: null != s ? s : f.Z.Colors.STATUS_RED
   });
 }), y(this, 'handleUserIDEntry', e => {
   if (!/^[\d\s,]*$/.test(e))
@@ -836,9 +836,9 @@ super(...e), y(this, 'state', {
   this.setStatusMessage(null);
   let e = this.generatePayload(),
     s = await (0, m.M3)(e);
-  !1 !== s.error ? this.setStatusMessage(JSON.stringify(s.error), D.Z.Colors.STATUS_RED) : (this.setState({
+  !1 !== s.error ? this.setStatusMessage(JSON.stringify(s.error), f.Z.Colors.STATUS_RED) : (this.setState({
     publicLink: s.url.toString()
-  }), 0 === e.meta.user_ids.length && this.setStatusMessage('Warning! No users added to the whitelist! This link could be used by anyone to override their build.', D.Z.Colors.STATUS_YELLOW));
+  }), 0 === e.meta.user_ids.length && this.setStatusMessage('Warning! No users added to the whitelist! This link could be used by anyone to override their build.', f.Z.Colors.STATUS_YELLOW));
 });
   }
 }
@@ -977,6 +977,7 @@ let Q = d.ZP.connectStores([R.default], () => ({
   isLoggingOverlayEvents: R.default.isLoggingOverlayEvents,
   isLoggingAnalyticsEvents: R.default.isLoggingAnalyticsEvents,
   isAxeEnabled: R.default.isAxeEnabled,
+  cssDebuggingEnabled: R.default.cssDebuggingEnabled,
   isSourceMapsEnabled: R.default.sourceMapsEnabled,
   isAnalyticsDebuggerEnabled: R.default.isAnalyticsDebuggerEnabled,
   isIdleStatusIndicatorEnabled: R.default.isIdleStatusIndicatorEnabled,
@@ -989,10 +990,11 @@ isLoggingGatewayEvents: a,
 isLoggingOverlayEvents: i,
 isLoggingAnalyticsEvents: r,
 isAxeEnabled: o,
-isSourceMapsEnabled: l,
-isAnalyticsDebuggerEnabled: c,
-isIdleStatusIndicatorEnabled: d,
-appDirectoryIncludesInactiveCollections: _
+cssDebuggingEnabled: l,
+isSourceMapsEnabled: c,
+isAnalyticsDebuggerEnabled: d,
+isIdleStatusIndicatorEnabled: _,
+appDirectoryIncludesInactiveCollections: u
   } = e;
   return (0, n.jsx)(p.F, {
 setting: b.s6.DEVELOPER_OPTIONS_FLAGS,
@@ -1058,7 +1060,7 @@ children: (0, n.jsxs)(E.FormSection, {
     (0, n.jsx)(p.F, {
       setting: b.s6.DEVELOPER_OPTIONS_SOURCE_MAPS,
       children: (0, n.jsx)(E.FormSwitch, {
-        value: l,
+        value: c,
         note: 'Only enable on devices you trust.',
         onChange: e => (0, I.y)({
           sourceMapsEnabled: e
@@ -1069,7 +1071,7 @@ children: (0, n.jsxs)(E.FormSection, {
     (0, n.jsx)(p.F, {
       setting: b.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
       children: (0, n.jsx)(E.FormSwitch, {
-        value: c,
+        value: d,
         note: 'Displays a floating debugger with viewed impressions',
         onChange: e => (0, I.y)({
           analyticsDebuggerEnabled: e
@@ -1080,7 +1082,7 @@ children: (0, n.jsxs)(E.FormSection, {
     (0, n.jsx)(p.F, {
       setting: b.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
       children: (0, n.jsx)(E.FormSwitch, {
-        value: d,
+        value: _,
         note: 'Displays a floating idle status indicator',
         onChange: e => (0, I.y)({
           idleStatusIndicatorEnabled: e
@@ -1100,9 +1102,22 @@ children: (0, n.jsxs)(E.FormSection, {
       })
     }),
     (0, n.jsx)(p.F, {
+      setting: b.s6.DEVELOPER_OPTIONS_CSS_DEBUGGING,
+      children: (0, n.jsx)(E.FormSwitch, {
+        value: l,
+        note: 'Display raw colors as pink. Toggling this will refresh the browser.',
+        onChange: e => {
+          (0, I.y)({
+            cssDebuggingEnabled: e
+          }), setTimeout(() => location.reload(), 500);
+        },
+        children: 'Enable CSS Debugging'
+      })
+    }),
+    (0, n.jsx)(p.F, {
       setting: b.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
       children: (0, n.jsx)(E.FormSwitch, {
-        value: _,
+        value: u,
         note: 'In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.',
         onChange: e => (0, I.y)({
           appDirectoryIncludesInactiveCollections: e

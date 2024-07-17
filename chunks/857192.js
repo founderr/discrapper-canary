@@ -50,6 +50,7 @@ logOverlayEvents: !1,
 logAnalyticsEvents: !1,
 sourceMapsEnabled: !1,
 axeEnabled: !1,
+cssDebuggingEnabled: !1,
 analyticsDebuggerEnabled: !1,
 bugReporterEnabled: !0,
 idleStatusIndicatorEnabled: !1,
@@ -91,6 +92,9 @@ return g.logAnalyticsEvents;
   }
   get isAxeEnabled() {
 return g.axeEnabled;
+  }
+  get cssDebuggingEnabled() {
+return g.cssDebuggingEnabled;
   }
   get sourceMapsEnabled() {
 return g.sourceMapsEnabled;
