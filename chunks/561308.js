@@ -3,7 +3,7 @@ e.d(t, {
 return h;
   },
   GE: function() {
-return p;
+return C;
   },
   GL: function() {
 return N;
@@ -30,7 +30,7 @@ return S;
 return Z;
   },
   dw: function() {
-return C;
+return p;
   },
   ig: function() {
 return L;
@@ -182,12 +182,12 @@ function Z(n) {
   return null === (t = A(n, o.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
 }
 
-function C(n) {
+function p(n) {
   let t = A(n, o.N.RESURRECTED);
   return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0;
 }
 
-function p(n) {
+function C(n) {
   let {
 months: t = 0,
 weeks: e = 0,
@@ -251,7 +251,7 @@ function F(n) {
   let t = (0, E.e7)([c.Z], () => c.Z.getMatchingActivity(n)),
 [e, r] = (0, a.Z)([
   null == t ? void 0 : t.application_id,
-  n.extra.application_id
+  'application_id' in n.extra ? n.extra.application_id : void 0
 ]);
   return {
 activity: t,

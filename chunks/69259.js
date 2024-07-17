@@ -15,6 +15,7 @@ channel_id: t.channelId,
 guild_id: t.guildId,
 interaction_type: e,
 destination_channel_id: t.destinationChannelId,
-destination_guild_id: t.destinationGuildId
+destination_guild_id: t.destinationGuildId,
+rich_presence_name: t.richPresenceName
   });
 };

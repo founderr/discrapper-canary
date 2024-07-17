@@ -12,7 +12,7 @@ var i = n(735250),
   p = n(297781),
   m = n(591853),
   _ = n(410441),
-  f = n(265048),
+  f = n(797342),
   E = n(689938);
 let C = (e, t, n, i) => {
 let a = function(e) {
@@ -41,9 +41,9 @@ iconUrl: I,
 iconTitle: x,
 user: T,
 details: v,
-gameTitle: N,
+appName: N,
 coverImageUrl: S
-  } = (0, f.F)(n), {
+  } = (0, f.n)(n), {
 primaryColor: Z,
 secondaryColor: A
   } = (0, d.Z)(I), M = (0, o.yA)(n), b = (0, o.Nq)(n), R = a.useCallback(e => {

@@ -27,7 +27,7 @@ var i = n(735250),
   N = n(297781),
   S = n(591853),
   Z = n(410441),
-  A = n(265048),
+  A = n(797342),
   M = n(981631),
   b = n(689938);
 let R = {
@@ -52,11 +52,11 @@ iconUrl: j,
 iconTitle: L,
 user: P,
 details: O,
-gameTitle: y,
+appName: y,
 activity: D,
 coverImageUrl: k,
 richIcon: U
-  } = (0, A.F)(s), {
+  } = (0, A.n)(s), {
 primaryColor: w,
 secondaryColor: B
   } = (0, T.Z)(j), H = (0, l.e7)([p.default], () => p.default.locale), {
