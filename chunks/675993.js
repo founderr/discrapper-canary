@@ -88,7 +88,7 @@ return (0, m.BQ)(t) ? {
 } : {
   name: null !== (e = (0, m.$d)(t)) && void 0 !== e ? e : ''
 };
-  }, [t]), c = n.isThread(), u = (0, d.Z)({
+  }, [t]), c = (0, d.Z)({
 applicationId: t.id,
 channel: n
   });
@@ -104,9 +104,8 @@ children: (0, i.jsxs)('div', {
     null != s ? (0, i.jsx)(_.Z, {
       channel: n,
       application: s,
-      disabled: c,
       sectionName: a,
-      commandName: u
+      commandName: c
     }) : null
   ]
 })

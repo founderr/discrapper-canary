@@ -1,37 +1,54 @@
 t.d(n, {
   Z: function() {
-return o;
+return d;
   }
 });
 var i = t(735250);
 t(470079);
 var l = t(481060),
-  a = t(895924),
-  r = t(176412),
-  s = t(689938);
+  a = t(595519),
+  r = t(542094),
+  s = t(895924),
+  o = t(176412),
+  c = t(689938),
+  u = t(539932);
 
-function o(e) {
+function d(e) {
   let {
 channel: n,
 application: t,
-sectionName: o,
-disabled: c,
-commandName: u
+sectionName: d,
+commandName: m
   } = e, {
-onActivityItemSelected: d,
-buttonColor: m,
-buttonText: p
-  } = (0, r.P7)(n, t, a.Vh.APP_LAUNCHER_APPLICATION_VIEW, o);
+onActivityItemSelected: p,
+activityAction: _,
+buttonColor: E,
+buttonText: A
+  } = (0, o.P7)(n, t, s.Vh.APP_LAUNCHER_APPLICATION_VIEW, d), h = !(0, a.WS)(n, _ === r.JS.START);
+  return (0, i.jsx)(l.Tooltip, {
+shouldShow: h,
+tooltipContentClassName: u.tooltipContent,
+text: c.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START,
+children: e => {
+  let {
+    onClick: n,
+    ...a
+  } = e;
   return (0, i.jsx)(l.Button, {
-type: 'submit',
-size: l.ButtonSizes.MEDIUM,
-color: m,
-disabled: c,
-onClick: d,
-'aria-label': s.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
-  buttonText: null != u ? u : p,
-  applicationName: t.name
-}),
-children: null != u ? u : p
+    ...a,
+    type: 'submit',
+    size: l.ButtonSizes.MEDIUM,
+    color: E,
+    disabled: h,
+    onClick: () => {
+      p(), null == n || n();
+    },
+    'aria-label': c.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
+      buttonText: null != m ? m : A,
+      applicationName: t.name
+    }),
+    children: null != m ? m : A
+  });
+}
   });
 }

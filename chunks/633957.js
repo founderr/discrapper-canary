@@ -109,6 +109,7 @@ children: (0, i.jsxs)('div', {
       children: [
         (0, i.jsx)(r.Tooltip, {
           text: H.tooltip,
+          tooltipContentClassName: O.tooltipContent,
           children: e => {
             let {
               onClick: t,
