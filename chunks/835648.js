@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return T;
+return N;
   }
 });
 var r = n(735250),
@@ -8,22 +8,26 @@ var r = n(735250),
   a = n(120356),
   s = n.n(a),
   o = n(91192),
-  l = n(481060),
-  u = n(880949),
-  c = n(806966),
-  d = n(254494),
-  _ = n(593618),
-  E = n(697426),
-  f = n(689938),
-  h = n(789009);
-let p = [
+  l = n(442837),
+  u = n(481060),
+  c = n(880949),
+  d = n(806966),
+  _ = n(254494),
+  E = n(593618),
+  f = n(631771),
+  h = n(594174),
+  p = n(697426),
+  m = n(526617),
+  I = n(689938),
+  T = n(789009);
+let g = [
   8,
   8,
   8,
   8
 ];
 
-function m(e) {
+function S(e) {
   let {
 icon: t,
 isSelected: n,
@@ -31,101 +35,103 @@ onClick: i,
 listItemProps: a,
 ...o
   } = e;
-  return (0, r.jsx)(l.Clickable, {
+  return (0, r.jsx)(u.Clickable, {
 ...a,
 ...o,
 onClick: i,
-className: s()(h.categoryIcon, {
-  [h.selected]: n
+className: s()(T.categoryIcon, {
+  [T.selected]: n
 }),
 children: (0, r.jsx)(t, {
-  className: h.categoryIconIcon,
+  className: T.categoryIconIcon,
   color: 'currentColor'
 })
   });
 }
 
-function I(e) {
+function A(e) {
   let {
 category: t,
 categoryIndex: n,
 onClick: i,
-isSelected: a
-  } = e, s = (0, o.JA)('soundboard_guild_'.concat(n));
-  return (0, r.jsx)(l.Tooltip, {
+isSelected: a,
+isNitroLocked: s
+  } = e, l = (0, o.JA)('soundboard_guild_'.concat(n));
+  return (0, r.jsx)(u.Tooltip, {
 text: function(e) {
   switch (e.categoryInfo.type) {
-    case E.bg.FAVORITES:
-      return f.Z.Messages.FAVORITES;
-    case E.bg.RECENTLY_HEARD:
-      return f.Z.Messages.RECENTLY_HEARD;
-    case E.bg.FREQUENTLY_USED:
-      return f.Z.Messages.FREQUENTLY_USED;
-    case E.bg.GUILD:
-      return (0, r.jsx)(_.K, {
+    case p.bg.FAVORITES:
+      return I.Z.Messages.FAVORITES;
+    case p.bg.RECENTLY_HEARD:
+      return I.Z.Messages.RECENTLY_HEARD;
+    case p.bg.FREQUENTLY_USED:
+      return I.Z.Messages.FREQUENTLY_USED;
+    case p.bg.GUILD:
+      return (0, r.jsx)(E.K, {
         guild: e.categoryInfo.guild,
         includeActivity: !1
       });
-    case E.bg.DEFAULTS:
-      return f.Z.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
+    case p.bg.DEFAULTS:
+      return I.Z.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
   }
 }(t),
 'aria-label': function(e) {
   switch (e.categoryInfo.type) {
-    case E.bg.FAVORITES:
-      return f.Z.Messages.FAVORITES;
-    case E.bg.RECENTLY_HEARD:
-      return f.Z.Messages.RECENTLY_HEARD;
-    case E.bg.FREQUENTLY_USED:
-      return f.Z.Messages.FREQUENTLY_USED;
-    case E.bg.GUILD:
+    case p.bg.FAVORITES:
+      return I.Z.Messages.FAVORITES;
+    case p.bg.RECENTLY_HEARD:
+      return I.Z.Messages.RECENTLY_HEARD;
+    case p.bg.FREQUENTLY_USED:
+      return I.Z.Messages.FREQUENTLY_USED;
+    case p.bg.GUILD:
       return e.categoryInfo.guild.name;
-    case E.bg.DEFAULTS:
-      return f.Z.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
+    case p.bg.DEFAULTS:
+      return I.Z.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
   }
 }(t),
 position: 'right',
-children: e => function(e, t, n, i, a) {
+children: e => function(e, t, n, i, a, s) {
   switch (e.categoryInfo.type) {
-    case E.bg.FAVORITES:
-      return (0, r.jsx)(m, {
+    case p.bg.FAVORITES:
+      return (0, r.jsx)(S, {
         ...i,
-        icon: l.StarIcon,
+        icon: u.StarIcon,
         onClick: t,
         isSelected: n,
         listItemProps: a
       }, e.key);
-    case E.bg.RECENTLY_HEARD:
-      return (0, r.jsx)(m, {
+    case p.bg.RECENTLY_HEARD:
+      return (0, r.jsx)(S, {
         ...i,
-        icon: l.ClockIcon,
+        icon: u.ClockIcon,
         onClick: t,
         isSelected: n,
         listItemProps: a
       }, e.key);
-    case E.bg.FREQUENTLY_USED:
-      return (0, r.jsx)(m, {
+    case p.bg.FREQUENTLY_USED:
+      return (0, r.jsx)(S, {
         ...i,
-        icon: l.AnalyticsIcon,
+        icon: u.AnalyticsIcon,
         onClick: t,
         isSelected: n,
         listItemProps: a
       }, e.key);
-    case E.bg.GUILD:
-      return (0, r.jsx)(l.Clickable, {
+    case p.bg.GUILD:
+      return (0, r.jsx)(u.Clickable, {
         ...a,
         ...i,
-        className: h.category,
+        className: T.category,
         onClick: t,
-        children: (0, r.jsx)(u.Z, {
+        children: (0, r.jsx)(c.Z, {
           guild: e.categoryInfo.guild,
-          isSelected: n
+          isSelected: n,
+          isLocked: s
         })
       }, e.key);
-    case E.bg.DEFAULTS:
-      return (0, r.jsx)(m, {
+    case p.bg.DEFAULTS:
+      return (0, r.jsx)(S, {
         ...i,
-        icon: l.ClydeIcon,
+        icon: u.ClydeIcon,
         onClick: t,
         isSelected: n,
         listItemProps: a
@@ -133,29 +139,47 @@ children: e => function(e, t, n, i, a) {
     default:
       return null;
   }
-}(t, i, a, e, s)
+}(t, i, a, e, l, s)
   });
 }
 
-function T(e) {
+function N(e) {
   let {
 soundboardListRef: t,
 categories: n,
-listPadding: a = p
-  } = e, s = i.useRef(null), o = i.useCallback((e, t, n, i) => (0, r.jsx)(I, {
-category: e,
-categoryIndex: t,
-onClick: n,
-isSelected: i
-  }), []);
-  return (0, r.jsx)(d.Z, {
-className: h.categoryList,
-categoryListRef: s,
+shouldUpsellLockedCategories: a,
+listPadding: s = g,
+guildId: o
+  } = e, u = i.useRef(null), c = (0, l.e7)([h.default], () => h.default.getCurrentUser()), E = i.useCallback((e, t, n, i) => {
+let s = a && (0, m.O)(e.categoryInfo, o, c),
+  {
+    enableInlineUpsell: l
+  } = f.Qs.getCurrentConfig({
+    location: 'Soundboard Picker Category List'
+  }, {
+    autoTrackExposure: s,
+    disable: !s
+  });
+return (0, r.jsx)(A, {
+  category: e,
+  categoryIndex: t,
+  onClick: n,
+  isSelected: i,
+  isNitroLocked: l
+});
+  }, [
+c,
+o,
+a
+  ]);
+  return (0, r.jsx)(_.Z, {
+className: T.categoryList,
+categoryListRef: u,
 expressionsListRef: t,
-store: c.Wq,
+store: d.Wq,
 categories: n,
-listPadding: a,
-renderCategoryListItem: o,
+listPadding: s,
+renderCategoryListItem: E,
 rowCount: n.length,
 categoryHeight: 40
   });

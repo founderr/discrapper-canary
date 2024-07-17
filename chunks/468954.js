@@ -71,10 +71,12 @@ expressionsGrid: Z,
 onSelectItem: _,
 store: d,
 gridNavigatorId: P
-  }), J = i.useCallback(e => I(Z[e], q(e), {
+  }), J = i.useCallback((e, t) => I(Z[e], q(e), {
 isUsingKeyboardNavigation: $.current,
 gutterWidth: K,
-rowIndex: e
+rowIndex: e,
+totalRowCount: Y,
+sectionIndex: t.sectionIndex
   }, t => z(e, t), t => d.setInspectedExpressionPosition(t, e)), [
 Z,
 z,
@@ -82,7 +84,8 @@ q,
 K,
 $,
 I,
-d
+d,
+Y
   ]), ee = i.useCallback(e => null == T ? void 0 : T(t[e]), [
 t,
 T
