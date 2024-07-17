@@ -61,8 +61,11 @@ function C(e) {
   let {
 channel: n,
 entrypoint: t
-  } = e, [r, s] = l.useState(''), o = function(e) {
-let [n, t] = l.useState(null), i = l.useRef(0);
+  } = e, [r, s] = l.useState(''), {
+setScroller: o,
+isCloseToBottom: c
+  } = function(e) {
+let [n, t] = l.useState(null), [i, a] = l.useState(!1), r = l.useRef(0);
 return l.useEffect(() => {
   null == n || n.scrollTo(0, 0);
 }, [
@@ -70,25 +73,28 @@ return l.useEffect(() => {
   e
 ]), l.useEffect(() => {
   if (null != n)
-    return n.scrollTo(0, i.current), n.addEventListener('scroll', e), () => {
+    return n.scrollTo(0, r.current), n.addEventListener('scroll', e), () => {
       n.removeEventListener('scroll', e, !1);
     };
 
   function e() {
     if (null != n)
-      i.current = n.scrollTop;
+      r.current = n.scrollTop, a(n.scrollHeight - (n.scrollTop + n.clientHeight) < 0.5 * _.lv);
   }
-}, [n]), t;
+}, [n]), {
+  setScroller: t,
+  isCloseToBottom: i
+};
   }(r), {
-currentView: c,
-getMostRecentHistoryItemByType: E
+currentView: E,
+getMostRecentHistoryItemByType: h
   } = (0, u.hH)();
-  if (null == c)
+  if (null == E)
 return null;
-  let h = E(u.gc.LIST),
-N = E(u.gc.APPLICATION);
+  let N = h(u.gc.LIST),
+C = h(u.gc.APPLICATION);
   return (0, i.jsxs)(a.Slides, {
-activeSlide: c.type,
+activeSlide: E.type,
 width: _.Gy,
 children: [
   (0, i.jsx)(a.Slide, {
@@ -97,6 +103,7 @@ children: [
       className: A.slideContent,
       style: f,
       children: (0, i.jsx)(m.Z, {
+        isScrollCloseToBottom: c,
         setScroller: o,
         channel: n,
         entrypoint: t,
@@ -110,13 +117,13 @@ children: [
     children: (0, i.jsx)('div', {
       className: A.slideContent,
       style: f,
-      children: null != h && (0, i.jsx)(p.Z, {
+      children: null != N && (0, i.jsx)(p.Z, {
         channel: n,
         entrypoint: t,
-        title: h.title,
-        look: h.look,
-        items: h.items,
-        sectionName: h.sectionName
+        title: N.title,
+        look: N.look,
+        items: N.items,
+        sectionName: N.sectionName
       })
     })
   }),
@@ -125,11 +132,11 @@ children: [
     children: (0, i.jsx)('div', {
       className: A.slideContent,
       style: f,
-      children: null != N && (0, i.jsx)(d.Z, {
+      children: null != C && (0, i.jsx)(d.Z, {
         channel: n,
-        application: N.application,
-        sectionName: N.sectionName,
-        installOnDemand: N.installOnDemand
+        application: C.application,
+        sectionName: C.sectionName,
+        installOnDemand: C.installOnDemand
       })
     })
   })

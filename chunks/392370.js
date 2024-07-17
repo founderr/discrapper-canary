@@ -1,9 +1,9 @@
 t.d(n, {
   Q2: function() {
-return R;
+return x;
   },
   pe: function() {
-return T;
+return S;
   }
 }), t(47120), t(653041), t(536091);
 var i = t(470079),
@@ -37,11 +37,11 @@ i = (0, N.$d)(n);
   return (0, m.un)(t, i);
 }
 
-function x(e, n) {
+function T(e, n) {
   return (0, m.un)(e.displayName, n.displayName);
 }
 
-function T(e) {
+function S(e) {
   let {
 channel: n,
 query: t,
@@ -55,7 +55,7 @@ searchesActivities: E = !0
   let {
 commands: A,
 commandSectionMap: h,
-loading: T
+loading: S
   } = function(e) {
 var n, t;
 let {
@@ -98,7 +98,7 @@ return i.useMemo(() => {
 channel: n,
 includeBuiltIn: !0
   }), {
-apps: R
+apps: x
   } = function(e) {
 let {
   channel: n,
@@ -124,7 +124,7 @@ return i && o.push(N.Wx), {
 channel: n,
 onlyWithCommands: !0,
 includeBuiltIn: !0
-  }), S = (0, u.Z)({
+  }), R = (0, u.Z)({
 guildId: n.getGuildId(),
 channel: n
   }), L = i.useMemo(() => {
@@ -234,7 +234,7 @@ return (0, f.N)(A, {
     }({
       channel: n
     }),
-    x
+    T
   ]
 });
   }, [
@@ -246,7 +246,7 @@ t
   ]), g = i.useMemo(() => {
 if (0 === L.length)
   return [];
-let e = new Map(R.map(e => [
+let e = new Map(x.map(e => [
   e.id,
   e
 ]));
@@ -263,7 +263,7 @@ return a().compact(L.map(n => {
   };
 }));
   }, [
-R,
+x,
 L,
 h
   ]), M = i.useMemo(() => {
@@ -272,13 +272,13 @@ if (!o && !E)
   return [];
 let i = [];
 if (o && E) {
-  let e = new Set(R.map(e => {
+  let e = new Set(x.map(e => {
     let {
       id: n
     } = e;
     return n;
   }));
-  i.push(...R), i.push(...S.filter(n => {
+  i.push(...x), i.push(...R.filter(n => {
     let {
       application: {
         id: t
@@ -292,7 +292,7 @@ if (o && E) {
     return n;
   }));
 } else
-  i = o ? R : S.map(e => {
+  i = o ? x : R.map(e => {
     let {
       application: n
     } = e;
@@ -356,8 +356,8 @@ E,
 r,
 n,
 t,
-R,
-S
+x,
+R
   ]), y = g.length > 0, O = M.length > 0;
   return {
 commandResults: g,
@@ -365,29 +365,30 @@ hasCommandResults: y,
 applicationResults: M,
 hasApplicationResults: O,
 isEmptyState: !y && !O,
-loading: T && s
+loading: S && s
   };
 }
 
-function R(e) {
+function x(e) {
   let {
 channel: n,
 query: t,
-fetches: l = !0
+fetches: l = !0,
+pageLimit: a = 1 / 0
   } = e;
   t.startsWith(''.concat(v.GI)) && (t = t.substring(1));
-  let [a, c] = i.useState(1), u = i.useRef(a);
-  u.current = a;
+  let [c, u] = i.useState(1), d = i.useRef(c);
+  d.current = c;
   let {
-fetchState: d,
-totalPages: m
+fetchState: m,
+totalPages: p
   } = (0, o.cj)([A.Z], () => {
 var e, i;
 return {
   fetchState: A.Z.getFetchState({
     query: t,
     guildId: n.guild_id,
-    page: a,
+    page: c,
     integrationType: r.Y.USER_INSTALL,
     minUserInstallCommandCount: 1,
     excludeAppsWithCustomInstallUrl: !0,
@@ -396,7 +397,7 @@ return {
   totalPages: null !== (i = null === (e = A.Z.getSearchResults({
     query: t,
     guildId: n.guild_id,
-    page: a,
+    page: c,
     integrationType: r.Y.USER_INSTALL,
     minUserInstallCommandCount: 1,
     excludeAppsWithCustomInstallUrl: !0,
@@ -405,10 +406,10 @@ return {
 };
   }, [
 n.guild_id,
-a,
+c,
 t
-  ]), p = i.useMemo(() => Array.from({
-length: d === A.M.FETCHED || d === A.M.ERROR ? a : a - 1
+  ]), _ = i.useMemo(() => Array.from({
+length: m === A.M.FETCHED || m === A.M.ERROR ? c : c - 1
   }, (e, i) => {
 var l, a;
 return null !== (a = null === (l = A.Z.getSearchResults({
@@ -421,18 +422,19 @@ return null !== (a = null === (l = A.Z.getSearchResults({
   source: s.F.APP_LAUNCHER
 })) || void 0 === l ? void 0 : l.results) && void 0 !== a ? a : [];
   }), [
-d,
+m,
 n.guild_id,
 t,
-a
-  ]), _ = i.useCallback(() => {
-d === A.M.FETCHED && p.length === u.current && p.length > 0 && p[p.length - 1].length > 0 && p.length < m && (u.current++, c(e => e + 1));
+c
+  ]), h = i.useCallback(() => {
+let e = _.length;
+m === A.M.FETCHED && e === d.current && e > 0 && e < p && e < a && _[e - 1].length > 0 && (d.current++, u(e => e + 1));
   }, [
-d,
-u,
-p,
-m
-  ]), h = i.useCallback(e => {
+m,
+a,
+_,
+p
+  ]), f = i.useCallback(e => {
 let {
   query: n,
   page: t,
@@ -452,25 +454,25 @@ E.yC({
   }, []);
   return i.useEffect(() => {
 if (!!l)
-  h({
+  f({
     query: t,
-    page: a,
+    page: c,
     guildId: n.guild_id
   });
   }, [
 t,
 n.guild_id,
-h,
-a,
+f,
+c,
 l
   ]), i.useEffect(() => {
-c(1);
+u(1);
   }, [
 n.guild_id,
 t
   ]), {
-fetchState: d,
-applicationResults: p.flat(),
-fetchNextPage: _
+fetchState: m,
+applicationResults: _.flat(),
+fetchNextPage: h
   };
 }

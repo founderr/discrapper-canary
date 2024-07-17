@@ -24,10 +24,10 @@ var i = t(735250),
   v = t(254711),
   I = t(213459),
   P = t(10718),
-  x = t(895924),
-  T = t(148958),
-  R = t(424602),
-  S = t(541099),
+  T = t(895924),
+  S = t(148958),
+  x = t(424602),
+  R = t(541099),
   L = t(827498),
   g = t(87005),
   M = t(783097),
@@ -39,8 +39,8 @@ var i = t(735250),
   H = t(41558),
   U = t(105862),
   D = t(28147),
-  k = t(981631),
-  B = t(689079),
+  B = t(981631),
+  k = t(689079),
   w = t(689938),
   V = t(678313);
 let W = [],
@@ -65,63 +65,65 @@ channel: n,
 entrypoint: t,
 searchQuery: a,
 setSearchQuery: r,
-setScroller: s
-  } = e, o = (0, m.NX)(n.id, !0), d = (0, c.e7)([p.Z], () => p.Z.getIsEnabled(), []), E = t === L._b.TEXT, A = t === L._b.TEXT, h = t === L._b.TEXT, f = t === L._b.VOICE, N = t === L._b.TEXT, [C, v] = ee(E), [I, P] = ee(A), [x, T] = ee(h), [R, S] = ee(f), g = C && I && x && R, M = (h || A) && !g, y = f && d;
+setScroller: s,
+isScrollCloseToBottom: o
+  } = e, d = (0, m.NX)(n.id, !0), E = (0, c.e7)([p.Z], () => p.Z.getIsEnabled(), []), A = t === L._b.TEXT, h = t === L._b.TEXT, f = t === L._b.TEXT, N = t === L._b.VOICE, C = t === L._b.TEXT, [v, I] = ee(A), [P, T] = ee(h), [S, x] = ee(f), [R, g] = ee(N), M = v && P && S && R, y = (f || h) && !M, O = N && E;
   l.useEffect(() => {
-o && (0, _.w1)({
+d && (0, _.w1)({
   guildId: n.getGuildId(),
   force: !0
 });
   }, [
-o,
+d,
 n
   ]);
-  let O = a.length > 0;
+  let j = a.length > 0;
   return (0, i.jsxs)('div', {
 className: V.container,
 children: [
-  y ? (0, i.jsx)(z, {}) : null,
+  O ? (0, i.jsx)(z, {}) : null,
   (0, i.jsx)(X, {
     searchQuery: a,
     setSearchQuery: r,
-    placeholder: N ? w.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : w.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
+    placeholder: C ? w.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : w.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
   }),
   (0, i.jsx)(u.Scroller, {
     ref: s,
     className: V.scrollableContent,
     fade: !0,
-    children: O ? (0, i.jsx)('div', {
+    children: j ? (0, i.jsx)('div', {
       children: (0, i.jsx)(D.Z, {
         channel: n,
         query: a,
         entrypoint: t,
         enableGlobalSearch: t === L._b.TEXT,
-        enableActivitiesSearch: o
+        enableActivitiesSearch: d,
+        isScrollCloseToBottom: o
       })
     }) : (0, i.jsxs)('div', {
       children: [
-        E && (0, i.jsx)(q, {
+        A && (0, i.jsx)(q, {
           channel: n,
           entrypoint: t,
-          onEmptyState: v
+          onEmptyState: I
         }),
-        A && (0, i.jsx)(J, {
-          channel: n,
-          onEmptyState: P
-        }),
-        h && (0, i.jsx)($, {
+        h && (0, i.jsx)(J, {
           channel: n,
           onEmptyState: T
         }),
-        f && (0, i.jsx)(Q, {
+        f && (0, i.jsx)($, {
           channel: n,
-          onEmptyState: S
+          onEmptyState: x
         }),
-        g && (0, i.jsx)(Z.A, {
+        N && (0, i.jsx)(Q, {
+          channel: n,
+          onEmptyState: g
+        }),
+        M && (0, i.jsx)(Z.A, {
           type: L.LG.HOME_EMPTY,
           textContent: t === L._b.TEXT ? w.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : w.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
         }),
-        M && (0, i.jsx)(U.Z, {})
+        y && (0, i.jsx)(U.Z, {})
       ]
     })
   })
@@ -151,18 +153,18 @@ searchQuery: n,
 setSearchQuery: t,
 placeholder: a
   } = e, [s, o] = l.useState(!0), [c, d] = l.useState(!1), m = l.useMemo(() => r().debounce(e => {
-(0, f.yw)(k.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
+(0, f.yw)(B.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
   query: e,
-  source: S.Z.entrypoint(),
-  location: x.Vh.APP_LAUNCHER_HOME
+  source: R.Z.entrypoint(),
+  location: T.Vh.APP_LAUNCHER_HOME
 });
   }, 400, {
 leading: !1,
 trailing: !0
   }), []), p = l.useCallback(() => t(''), [t]), _ = l.useCallback(() => {
-d(!0), (0, f.yw)(k.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
-  source: S.Z.entrypoint(),
-  location: x.Vh.APP_LAUNCHER_HOME
+d(!0), (0, f.yw)(B.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
+  source: R.Z.entrypoint(),
+  location: T.Vh.APP_LAUNCHER_HOME
 });
   }, []), E = l.useCallback(() => {
 if (s) {
@@ -217,7 +219,7 @@ handleViewMore: d
   } = en(c, t === L._b.VOICE ? O.U4.LARGE_BANNER : O.U4.NO_BANNER, o, 8, L.L3.RECENT_APPS);
   l.useEffect(() => {
 if (!0 !== s.current)
-  0 !== u.length && (0, f.yw)(k.rMx.APP_LAUNCHER_FRECENTS_SEEN, {
+  0 !== u.length && (0, f.yw)(B.rMx.APP_LAUNCHER_FRECENTS_SEEN, {
     num: u.length,
     section_name: L.L3.RECENT_APPS,
     location: L.G0.HOME,
@@ -286,7 +288,7 @@ r = O.U4.LARGE_BANNER,
 }),
 {
   clickOnHomeActivityOpensAppDetail: o
-} = R.m1.getCurrentConfig({
+} = x.m1.getCurrentConfig({
   location: 'ActivitiesShelfSection'
 }, {
   autoTrackExposure: !1
@@ -315,7 +317,7 @@ children: [
         channel: n,
         application: l,
         look: r,
-        location: x.Vh.APP_LAUNCHER_HOME,
+        location: T.Vh.APP_LAUNCHER_HOME,
         sectionName: L.L3.ACTIVITIES,
         resultsPosition: t,
         isOneClickCTA: !o
@@ -338,7 +340,7 @@ loading: c
 commandType: d.yU.CHAT
   }, {
 placeholderCount: 0,
-limit: B.tn,
+limit: k.tn,
 includeFrecency: !0
   }), u = l.useMemo(() => o.reduce((e, n) => {
 let {
@@ -357,7 +359,7 @@ return Object.values(null !== (n = null === (e = s.result) || void 0 === e ? voi
   }, [
 null === (n = s.result) || void 0 === n ? void 0 : n.sections,
 u
-  ]), p = (0, T.h)(m), _ = L.L3.APPS_IN_THIS_SERVER, E = l.useMemo(() => r().compact(p.map(e => {
+  ]), p = (0, S.h)(m), _ = L.L3.APPS_IN_THIS_SERVER, E = l.useMemo(() => r().compact(p.map(e => {
 let {
   application: n
 } = e;
@@ -404,7 +406,7 @@ children: [
         look: O.U4.NO_BANNER,
         sectionName: _,
         resultsPosition: n,
-        location: x.Vh.APP_LAUNCHER_HOME
+        location: T.Vh.APP_LAUNCHER_HOME
       }, t.id) : null;
     })
   })
@@ -440,7 +442,7 @@ let {
   commandType: d.yU.CHAT
 }, {
   placeholderCount: 0,
-  limit: B.tn,
+  limit: k.tn,
   includeFrecency: !0
 }), r = l.useCallback(e => !(0, M.ye)({
   application: e
@@ -611,7 +613,7 @@ children: [
         isPartner: a,
         sectionName: d,
         resultsPosition: t,
-        location: x.Vh.APP_LAUNCHER_HOME,
+        location: T.Vh.APP_LAUNCHER_HOME,
         installOnDemand: r,
         enableVideoBanner: E
       }, l.id);
@@ -642,9 +644,9 @@ handleViewMore: void 0
   } : {
 items: t.slice(0, i),
 handleViewMore: () => {
-  (0, f.yw)(k.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
+  (0, f.yw)(B.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
     section_name: a,
-    source: S.Z.entrypoint()
+    source: R.Z.entrypoint()
   }), r({
     type: y.gc.LIST,
     title: e,
