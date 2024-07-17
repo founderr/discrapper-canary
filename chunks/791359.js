@@ -25,13 +25,13 @@ var i = n(735250),
   C = n(203028),
   N = n(358924),
   A = n(292140),
-  v = n(525296),
-  Z = n(981631),
+  Z = n(525296),
+  v = n(981631),
   L = n(674563),
   O = n(689938),
   R = n(584201);
 let x = 15 * T.Z.Millis.MINUTE,
-  b = (0, v.Z)(function(e) {
+  b = (0, Z.Z)(function(e) {
 let {
   party: t,
   onUserContextMenu: n,
@@ -54,7 +54,7 @@ let {
     var t, n;
     return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.wW.GAME;
   }).map(e => e.game.name);
-  p.default.track(Z.rMx.NOW_PLAYING_CARD_HOVERED, {
+  p.default.track(v.rMx.NOW_PLAYING_CARD_HOVERED, {
     num_users: I,
     num_streams: m,
     num_activities: g,
@@ -67,7 +67,7 @@ let {
   g,
   T,
   E
-]), v = o()(S, x);
+]), Z = o()(S, x);
 return null != l || null != c ? (0, i.jsx)(d.Popout, {
   position: 'left',
   renderPopout: e => {
@@ -86,7 +86,7 @@ return null != l || null != c ? (0, i.jsx)(d.Popout, {
     } = t;
     return (0, i.jsx)(N.Z, {
       ...e,
-      onMouseEnter: v,
+      onMouseEnter: Z,
       'aria-haspopup': 'menu',
       className: R.itemCard,
       active: n,
@@ -132,10 +132,10 @@ a
   for (let i of e)
     i.party.currentActivities.forEach(e => {
       let {
-        game: s
+        activity: s
       } = e;
       if (null != s) {
-        let e = (0, E.lQ)(l, s.id);
+        let e = (0, E.ZZ)(l, s);
         null != e && !n.has(e.id) && (t.set(i.party.id, e), n.add(e.id));
       }
     });

@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(594174),
   N = n(617136),
   f = n(272008),
-  p = n(113434),
-  C = n(569984),
+  C = n(113434),
+  p = n(569984),
   g = n(497505),
   S = n(918701),
   A = n(5881),
@@ -46,56 +46,64 @@ quest: q
   } = (0, l.cj)([
 T.Z,
 u.Z,
-C.Z
+p.Z
   ], () => {
-let e = u.Z.getParticipants(B),
-  t = null != k ? k : function(e, t, n) {
-    for (let s of e) {
-      var i, a;
-      if (s.type === j.fO.STREAM) {
-        let e = (0, E.L2)(s.stream, n),
-          a = (null == e ? void 0 : e.id) != null ? (0, S.lQ)(t, e.id) : null;
-        if (null != a && (null === (i = a.userStatus) || void 0 === i ? void 0 : i.claimedAt) == null)
-          return a;
+var e, t, n, i;
+let a = u.Z.getParticipants(B),
+  s = null != k ? k : function(e, t, n) {
+    for (let r of e) {
+      var i, a, s;
+      if (r.type === j.fO.STREAM) {
+        let e = null !== (a = (0, E.Um)(r.stream, n)) && void 0 !== a ? a : null,
+          s = (0, S.ZZ)(t, e);
+        if (null != s && (null === (i = s.userStatus) || void 0 === i ? void 0 : i.claimedAt) == null)
+          return s;
       }
       for (let i of e) {
         if (!(0, j.I)(i))
           for (let e of n.getActivities(i.user.id)) {
-            if (null == e.application_id)
-              continue;
-            let n = (0, S.CE)(t, e.application_id);
-            if (null != n && (null === (a = n.userStatus) || void 0 === a ? void 0 : a.claimedAt) == null)
+            let n = (0, S.ZZ)(t, e);
+            if (null != n && (null === (s = n.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null && ((0, S.Nj)({
+                quest: n
+              }) || (0, S.$J)(n)))
               return n;
           }
       }
     }
     return null;
-  }(e, C.Z.quests, T.Z);
+  }(a, p.Z.quests, T.Z);
 return {
-  isCurrentUserStreamingQuestApplication: null != t && null != W && function(e, t, n, i) {
-    for (let s of e) {
-      var a;
-      if (s.type === j.fO.STREAM && s.user.id === n.id && R.r.build(t.config).application.id === (null === (a = (0, E.L2)(s.stream, i)) || void 0 === a ? void 0 : a.id))
-        return !0;
-    }
-    return !1;
-  }(e, t, W, T.Z),
-  quest: t
+  isCurrentUserStreamingQuestApplication: null != s && null != W && (e = a, t = s, n = W, i = T.Z, e.some(e => {
+    if (e.type !== j.fO.STREAM || e.user.id !== n.id)
+      return !1;
+    let a = (0, E.Um)(e.stream, i);
+    return null != a && (0, S._D)(a, t);
+  })),
+  quest: s
 };
   }, [
 B,
 W,
 k
-  ]), X = null != q ? R.r.build(q.config) : null, J = null == X ? void 0 : X.application.id, $ = (0, l.cj)([_.ZP], () => {
+  ]), X = null != q ? R.r.build(q.config) : null, J = null == X ? void 0 : X.application.id, $ = (0, l.e7)([
+_.ZP,
+T.Z
+  ], () => {
+if (null == q)
+  return !1;
 let e = _.ZP.getRunningGames().map(e => e.id);
-return (0, S.$H)(q) && e.includes(J);
+if ((0, S.$H)(q) && e.includes(J))
+  return !0;
+let t = null != W ? T.Z.findActivity(W.id, e => e.type !== D.IIU.CUSTOM_STATUS) : null;
+return !!(null != t && (0, S.$J)(q) && (0, S._D)(t, q)) || !1;
   }, [
 q,
-J
-  ]), ee = !0 === G || Q || $, et = (0, l.e7)([C.Z], () => null != q && C.Z.isEnrolling(q.id), [q]), en = (0, l.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [
+J,
+W
+  ]), ee = !0 === G || Q || $, et = (0, l.e7)([p.Z], () => null != q && p.Z.isEnrolling(q.id), [q]), en = (0, l.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [
 B,
 W
-  ]), ei = (0, p.B6)(null == q ? void 0 : q.config.expiresAt), ea = (0, p.B6)(null == X ? void 0 : X.rewardsExpireAt), es = a.useCallback(() => {
+  ]), ei = (0, C.B6)(null == q ? void 0 : q.config.expiresAt), ea = (0, C.B6)(null == X ? void 0 : X.rewardsExpireAt), es = a.useCallback(() => {
 null != q && (0, f.AH)(q.id, {
   questContent: g.jn.QUEST_LIVE_STREAM,
   questContentCTA: N.jZ.ACCEPT_QUEST
@@ -118,7 +126,7 @@ location: g.jn.QUEST_LIVE_STREAM
   }), ec = a.useMemo(() => (0, A.T)({
 quest: q,
 location: b.dr.QUEST_CHANNEL_CALL_HEADER
-  }), [q]), ed = (0, p.tP)(q);
+  }), [q]), ed = (0, C.tP)(q);
   if (null == q || !(0, S.dl)(q))
 return null;
   let eu = (null === (t = q.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,

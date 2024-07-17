@@ -12,7 +12,7 @@ var s = n(287734),
   o = n(503438),
   c = n(802856),
   d = n(420660),
-  u = n(566078),
+  u = n(918701),
   _ = n(23404),
   E = n(769654),
   h = n(81063),
@@ -31,8 +31,8 @@ quest: S
 voiceChannels: C,
 currentActivities: N,
 partiedMembers: A,
-applicationStreams: v,
-guildContext: Z
+applicationStreams: Z,
+guildContext: v
   } = t, L = [], O = e => {
 var t, n;
 let {
@@ -87,14 +87,14 @@ if (null != e) {
     break;
   }
 }
-  return v.length > 0 && f && v.forEach(e => {
+  return Z.length > 0 && f && Z.forEach(e => {
 let {
   stream: t,
   streamUser: n,
   activity: r
 } = e;
 O((0, i.jsx)(m.Z.ApplicationStreamingSection, {
-  guildId: null == Z ? void 0 : Z.id,
+  guildId: null == v ? void 0 : v.id,
   user: n,
   activity: r,
   applicationStream: t,
@@ -103,7 +103,7 @@ O((0, i.jsx)(m.Z.ApplicationStreamingSection, {
   }
 }, 'application-stream-'.concat(t.ownerId)));
   }), N.forEach((e, t) => {
-var n, s, a, E, I, g, f, v, L;
+var n, s, a, E, I, g, f, Z, L;
 let {
   activity: R,
   game: x,
@@ -141,7 +141,7 @@ else if ((0, d.Z)(R)) {
   let e = C.length > 0 && C[0].members.length > 1,
     n = b.length > 1;
   O((0, i.jsx)(m.Z.TwitchSection, {
-    guildId: null == Z ? void 0 : Z.id,
+    guildId: null == v ? void 0 : v.id,
     activity: R,
     user: e || n ? P : null,
     getAssetImage: h.getAssetImage
@@ -162,8 +162,8 @@ else if ((0, d.Z)(R)) {
     getAssetImage: h.getAssetImage
   }, 'rich-presence-'.concat(null !== (f = R.session_id) && void 0 !== f ? f : t, '-').concat(P.id))) : (0, c.Z)(R) && O((0, i.jsx)(m.Z.XboxSection, {
     title: x.name
-  }, 'xbox-'.concat(null !== (v = R.session_id) && void 0 !== v ? v : t)));
-null != S && null != x && x.id === u.r.build(S.config).application.id && O((0, i.jsx)(_.Z, {
+  }, 'xbox-'.concat(null !== (Z = R.session_id) && void 0 !== Z ? Z : t)));
+null != S && null != x && (0, u._D)(R, S) && O((0, i.jsx)(_.Z, {
   quest: S
 }, 'quest-'.concat(S.id, '-').concat(null !== (L = R.session_id) && void 0 !== L ? L : t)));
   }), L.length > 0 ? (0, i.jsx)(m.Z.Body, {
