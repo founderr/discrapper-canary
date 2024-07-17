@@ -89,7 +89,7 @@ children: [
             delay: c.vB,
             children: (0, r.jsx)(s.Text, {
               variant: S,
-              className: _.pronouns,
+              className: _.pronounsText,
               color: 'header-primary',
               children: p
             })
