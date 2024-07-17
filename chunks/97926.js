@@ -131,72 +131,75 @@ let {
 } = e;
 return s.length > 0;
   });
-  return h ? (0, n.jsx)(E.Z, {}) : s || 'sorted' !== D ? (0, n.jsx)(i.Spinner, {
+  return s || 'sorted' !== D ? (0, n.jsx)(i.Spinner, {
 className: C.spinner
-  }) : 0 === p.length ? null : (0, n.jsx)(i.FormSection, {
+  }) : 0 === p.length ? null : (0, n.jsxs)(i.FormSection, {
 className: C.questsContainer,
-children: (0, n.jsxs)(i.HeadingLevel, {
-  component: (0, n.jsxs)('div', {
-    className: C.questsHeading,
-    children: [
-      A && (0, n.jsx)(i.QuestsIcon, {
-        className: C.questsIcon
-      }),
-      (0, n.jsx)(i.Heading, {
-        variant: 'heading-md/semibold',
-        className: C.questsHeading,
-        children: N.Z.Messages.QUESTS
-      }),
-      (0, n.jsx)(i.Text, {
-        variant: 'text-xs/normal',
-        className: C.questsHeadingLearnMore,
-        children: N.Z.Messages.QUESTS_LEARN_MORE_LINK.format({
-          questsLearnMoreLink: o.Z.getArticleURL(S.BhN.QUESTS_LEARN_MORE)
+children: [
+  h ? (0, n.jsx)(E.Z, {}) : null,
+  (0, n.jsxs)(i.HeadingLevel, {
+    component: (0, n.jsxs)('div', {
+      className: C.questsHeading,
+      children: [
+        A && (0, n.jsx)(i.QuestsIcon, {
+          className: C.questsIcon
+        }),
+        (0, n.jsx)(i.Heading, {
+          variant: 'heading-md/semibold',
+          className: C.questsHeading,
+          children: N.Z.Messages.QUESTS
+        }),
+        (0, n.jsx)(i.Text, {
+          variant: 'text-xs/normal',
+          className: C.questsHeadingLearnMore,
+          children: N.Z.Messages.QUESTS_LEARN_MORE_LINK.format({
+            questsLearnMoreLink: o.Z.getArticleURL(S.BhN.QUESTS_LEARN_MORE)
+          })
         })
-      })
-    ]
-  }),
-  children: [
-    (0, n.jsx)(i.FormDivider, {
-      className: C.divider
+      ]
     }),
-    A ? x.map((e, s, t) => {
-      let {
-        location: a,
-        questIds: r,
-        title: o
-      } = e;
-      if (0 === r.length)
-        return null;
-      let l = 0 === s ? 0 : t.slice(0, s).reduce((e, s) => {
+    children: [
+      (0, n.jsx)(i.FormDivider, {
+        className: C.divider
+      }),
+      A ? x.map((e, s, t) => {
         let {
-          questIds: t
-        } = s;
-        return e + t.length;
-      }, 0);
-      return (0, n.jsxs)('section', {
-        className: C.questsListContainer,
-        children: [
-          f && (0, n.jsx)(i.Text, {
-            variant: 'text-xs/semibold',
-            color: 'header-secondary',
-            className: C.sectionHeader,
-            children: o
-          }),
-          r.map((e, s) => (0, n.jsx)(u.D, {
-            questId: e,
-            location: a,
-            contentPosition: s + l,
-            initiallyExpanded: !f
-          }, e))
-        ]
-      }, a);
-    }) : p.map((e, s) => (0, n.jsx)(u.D, {
-      questId: e,
-      location: d.jn.GIFT_INVENTORY_FOR_YOU,
-      contentPosition: s
-    }, e))
-  ]
-})
+          location: a,
+          questIds: r,
+          title: o
+        } = e;
+        if (0 === r.length)
+          return null;
+        let l = 0 === s ? 0 : t.slice(0, s).reduce((e, s) => {
+          let {
+            questIds: t
+          } = s;
+          return e + t.length;
+        }, 0);
+        return (0, n.jsxs)('section', {
+          className: C.questsListContainer,
+          children: [
+            f && (0, n.jsx)(i.Text, {
+              variant: 'text-xs/semibold',
+              color: 'header-secondary',
+              className: C.sectionHeader,
+              children: o
+            }),
+            r.map((e, s) => (0, n.jsx)(u.D, {
+              questId: e,
+              location: a,
+              contentPosition: s + l,
+              initiallyExpanded: !f
+            }, e))
+          ]
+        }, a);
+      }) : p.map((e, s) => (0, n.jsx)(u.D, {
+        questId: e,
+        location: d.jn.GIFT_INVENTORY_FOR_YOU,
+        contentPosition: s
+      }, e))
+    ]
+  })
+]
   });
 };
