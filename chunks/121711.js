@@ -15,41 +15,42 @@ var i = n(735250),
   m = n(113434),
   g = n(709158),
   p = n(710914),
-  T = n(452081),
-  S = n(981631),
-  f = n(689938),
-  C = n(852595);
+  T = n(906739),
+  S = n(452081),
+  f = n(981631),
+  C = n(689938),
+  N = n(852595);
 t.Z = function(e) {
   let {} = e, t = (0, g.Z)(c.Z.QUEST_HOME_PAGE), {
 tabs: n,
-selectedTab: N,
-onSelectTab: A
-  } = (0, T.z)(), {
-onScroll: Z,
-scrollPosition: v
-  } = (0, u.c)(), L = (0, _.Z)({
-scrollPosition: v
-  }), O = (0, r.wj)((0, o.ZP)()), {
-quests: R
-  } = (0, m.bA)(N), x = s.useMemo(() => O ? 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-dark-mode.png' : 'https://cdn.discordapp.com/assets/discovery/quest-mountain-background-light-mode.png', [O]), b = null;
+selectedTab: A,
+onSelectTab: Z
+  } = (0, S.z)(), {
+onScroll: v,
+scrollPosition: L
+  } = (0, u.c)(), O = (0, _.Z)({
+scrollPosition: L
+  }), R = (0, r.wj)((0, o.ZP)()), {
+quests: x
+  } = (0, m.bA)(A), b = (0, T.Z)(), P = null;
   if (window.location.hash.length > 0) {
 let e = window.location.hash.slice(1);
-for (let t of R)
+for (let t of x)
   if (t.id === e) {
-    b = e;
+    P = e;
     break;
   }
   }
   s.useEffect(() => {
-!t && (0, a.uL)(S.Z5c.FRIENDS);
+!t && (0, a.uL)(f.Z5c.FRIENDS);
   }, [t]), s.useEffect(() => {}, []);
-  let P = s.useCallback(() => {
-window.open(I.Z.getArticleURL(S.BhN.QUESTS_LEARN_MORE));
+  let M = s.useCallback(() => {
+window.open(I.Z.getArticleURL(f.BhN.QUESTS_LEARN_MORE));
   }, []);
   return ((0, d.Tt)({
-location: f.Z.Messages.QUESTS
+location: C.Z.Messages.QUESTS
   }), t) ? (0, i.jsxs)('div', {
-className: C.container,
+className: N.container,
 children: [
   (0, i.jsx)(h.Z, {
     leading: (0, i.jsx)(l.QuestsIcon, {
@@ -57,46 +58,46 @@ children: [
       size: 'md'
     }),
     tabs: n,
-    selectedTab: N,
+    selectedTab: A,
     tabColor: 'header-primary',
-    selectedTabColor: O ? 'text-muted' : 'header-primary',
-    onTabSelect: A,
-    scrollPosition: v,
-    backgroundStyle: L
+    selectedTabColor: R ? 'text-muted' : 'header-primary',
+    onTabSelect: Z,
+    scrollPosition: L,
+    backgroundStyle: O
   }),
   (0, i.jsx)(E.Z, {
-    title: f.Z.Messages.QUESTS_HOME_HERO_TITLE,
-    description: f.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-    backgroundImageUrl: x,
-    onScroll: Z,
-    bannerContainerClassName: C.bannerContainer,
-    bannerImageClassName: C.bannerImage,
+    title: C.Z.Messages.QUESTS_HOME_HERO_TITLE,
+    description: C.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
+    backgroundImageUrl: b,
+    onScroll: v,
+    bannerContainerClassName: N.bannerContainer,
+    bannerImageClassName: N.bannerImage,
     headerTextColor: 'header-primary',
-    descriptionTextColor: O ? 'text-muted' : 'currentColor',
+    descriptionTextColor: R ? 'text-muted' : 'currentColor',
     button: (0, i.jsxs)(l.Button, {
       size: 'medium',
-      color: O ? l.ButtonColors.TRANSPARENT : l.ButtonColors.WHITE,
-      className: C.button,
-      onClick: P,
-      innerClassName: C.innerButton,
+      color: R ? l.ButtonColors.TRANSPARENT : l.ButtonColors.WHITE,
+      className: N.button,
+      onClick: M,
+      innerClassName: N.innerButton,
       children: [
         (0, i.jsx)(l.Text, {
           variant: 'text-md/semibold',
-          color: O ? 'always-white' : 'text-normal',
-          className: C.externalLinkText,
-          children: f.Z.Messages.LEARN_MORE
+          color: R ? 'always-white' : 'text-normal',
+          className: N.externalLinkText,
+          children: C.Z.Messages.LEARN_MORE
         }),
         (0, i.jsx)(l.LinkExternalSmallIcon, {
-          className: C.icon,
-          color: O ? 'var(--white-500)' : 'var(--redesign-button-secondary-text'
+          className: N.icon,
+          color: R ? 'var(--white-500)' : 'var(--redesign-button-secondary-text'
         })
       ]
     }),
     children: (0, i.jsx)('div', {
-      className: C.gridContainer,
+      className: N.gridContainer,
       children: (0, i.jsx)(p.Z, {
-        quests: R,
-        selectedQuestId: b
+        quests: x,
+        selectedQuestId: P
       })
     })
   })
