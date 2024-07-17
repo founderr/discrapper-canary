@@ -46,36 +46,32 @@ return t;
   }, e => {
 let t = g.current;
 null != t && (t.style.transform = null != e ? 'translateY(calc(100% - min('.concat(e, 'px, var(--custom-channel-textarea-text-area-max-height)))') : '');
-  }), []), (0, i.jsx)(c.Tooltip, {
-text: S.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
-children: e => (0, i.jsx)('div', {
-  ...e,
-  className: l()(Z.buttonContainer, N.t4),
-  ref: I,
-  children: (0, i.jsx)(c.Button, {
-    look: c.Button.Looks.BLANK,
-    size: c.Button.Sizes.NONE,
-    tabIndex: 0,
-    className: Z.button,
-    onClick: _,
-    onMouseEnter: f,
-    onMouseOver: f,
-    onMouseLeave: C,
-    onFocus: f,
-    onBlur: C,
-    'aria-label': S.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
-    focusProps: {
-      offset: {
-        top: 4,
-        bottom: 4,
-        left: -4,
-        right: -4
-      }
-    },
-    innerClassName: Z.buttonContents,
-    children: (0, i.jsx)(c.AppsIcon, {
-      className: l()(s ? Z.iconHovered : Z.iconUnhovered)
-    })
+  }), []), (0, i.jsx)('div', {
+className: l()(Z.buttonContainer, N.t4),
+ref: I,
+children: (0, i.jsx)(c.Button, {
+  look: c.Button.Looks.BLANK,
+  size: c.Button.Sizes.NONE,
+  tabIndex: 0,
+  className: Z.button,
+  onClick: _,
+  onMouseEnter: f,
+  onMouseOver: f,
+  onMouseLeave: C,
+  onFocus: f,
+  onBlur: C,
+  'aria-label': S.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
+  focusProps: {
+    offset: {
+      top: 4,
+      bottom: 4,
+      left: -4,
+      right: -4
+    }
+  },
+  innerClassName: Z.buttonContents,
+  children: (0, i.jsx)(c.AppsIcon, {
+    className: l()(s ? Z.iconHovered : Z.iconUnhovered)
   })
 })
   });

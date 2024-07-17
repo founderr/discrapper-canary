@@ -68,13 +68,13 @@ let {
   quality: t,
   constraints: n
 } = this.applyQualityConstraints({}, this.videoStreamParameters[0].ssrc), r = i()(this.videoStreamParameters);
-null != t && (r[0].maxBitrate = t.bitrateMax, null != t.encode && (r[0].maxPixelCount = t.encode.pixelCount, r[0].maxFrameRate = t.encode.framerate)), this.videoStreamParameters = r;
+null != t && (r[0].maxBitrate = t.bitrateMax, r[0].minBitrate = t.bitrateMin, null != t.encode && (r[0].maxPixelCount = t.encode.pixelCount, r[0].maxFrameRate = t.encode.framerate)), this.videoStreamParameters = r;
 for (let e = 1; e < this.videoStreamParameters.length; e++) {
   let {
     quality: r,
     constraints: i
   } = this.applyQualityConstraints({}, this.videoStreamParameters[e].ssrc);
-  null != r && (this.videoStreamParameters[e].maxBitrate = r.bitrateMax, null != r.encode && (this.videoStreamParameters[e].maxPixelCount = r.encode.pixelCount, this.videoStreamParameters[e].maxFrameRate = r.encode.framerate)), 100 === this.videoStreamParameters[e].quality && (n = i, t = r);
+  null != r && (this.videoStreamParameters[e].maxBitrate = r.bitrateMax, this.videoStreamParameters[e].minBitrate = r.bitrateMin, null != r.encode && (this.videoStreamParameters[e].maxPixelCount = r.encode.pixelCount, this.videoStreamParameters[e].maxFrameRate = r.encode.framerate)), 100 === this.videoStreamParameters[e].quality && (n = i, t = r);
 }
 n.streamParameters = i()(this.videoStreamParameters), n.remoteSinkWantsPixelCount = Math.max(...this.videoStreamParameters.map(e => {
   var t;
