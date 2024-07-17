@@ -13,7 +13,7 @@ var i = n(735250),
   r = n(297781),
   o = n(443487),
   c = n(43205),
-  d = n(265048),
+  d = n(797342),
   u = n(827418);
 let h = [r.E6],
   p = [s._.WEEK];
@@ -28,7 +28,7 @@ channel: n,
 selected: a
   } = e, {
 iconUrl: s
-  } = (0, d.F)(t), p = (0, l.Nq)(t);
+  } = (0, d.n)(t), p = (0, l.Nq)(t);
   return null != p && m(p) ? (0, i.jsxs)(o.Zb, {
 selected: a,
 children: [

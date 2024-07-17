@@ -3,10 +3,10 @@ t.d(n, {
 return N;
   },
   Zb: function() {
-return v;
+return T;
   },
   e$: function() {
-return m;
+return x;
   },
   ll: function() {
 return h;
@@ -25,9 +25,9 @@ var r = t(120356),
   E = t(5192),
   _ = t(192918),
   f = t(687694),
-  T = t(827418);
+  v = t(827418);
 
-function v(e) {
+function T(e) {
   let {
 children: n,
 selected: t
@@ -38,42 +38,42 @@ openOnHover: o
 location: 'ContentCard'
   });
   return (0, l.jsxs)('div', {
-className: a()(T.container, {
-  [T.selected]: t
+className: a()(v.container, {
+  [v.selected]: t
 }, {
-  [T.openOnHover]: o
+  [v.openOnHover]: o
 }),
 children: [
   n,
   r && (0, l.jsx)('div', {
-    className: T.reply,
+    className: v.reply,
     children: (0, l.jsx)(i.ArrowAngleLeftUpIcon, {
       size: 'md',
       color: 'currentColor',
-      className: T.icon
+      className: v.icon
     })
   })
 ]
   });
 }
 
-function m(e) {
+function x(e) {
   let {
 children: n
   } = e;
   return (0, l.jsx)('div', {
-className: T.infoSection,
+className: v.infoSection,
 children: n
   });
 }
 
-function x(e) {
+function m(e) {
   let {
 users: n,
 guildId: t
   } = e;
   return (0, l.jsx)('div', {
-className: T.facePile,
+className: v.facePile,
 children: n.map((e, r) => {
   let a = (0, l.jsx)(i.Avatar, {
     src: e.getAvatarURL(t, 80),
@@ -81,12 +81,12 @@ children: n.map((e, r) => {
     'aria-label': 'avatar'
   });
   return r === n.length - 1 ? (0, l.jsx)('div', {
-    className: T.facePileItem,
+    className: v.facePileItem,
     children: a
   }, e.id) : (0, l.jsx)(d.ZP, {
     width: 16,
     height: 16,
-    className: T.facePileItem,
+    className: v.facePileItem,
     mask: d.ZP.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
     children: a
   }, e.id);
@@ -101,8 +101,8 @@ channelId: t,
 entry: r,
 maxAvatars: a = 3
   } = e, d = r.author_id, f = (0, o.e7)([c.default], () => c.default.getUser(d)), {
-displayParticipants: v,
-numOtherParticipants: m
+displayParticipants: T,
+numOtherParticipants: x
   } = (0, _.Z)(r, a), N = (0, o.e7)([u.ZP], () => u.ZP.getMember(n, d)), h = (0, o.e7)([s.Z], () => {
 var e;
 return (null == N ? void 0 : N.colorRoleId) != null ? null === (e = s.Z.getRole(n, N.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
@@ -115,27 +115,27 @@ return null;
   let I = null == N ? void 0 : N.colorString,
 g = E.ZP.getName(n, t, f);
   return (0, l.jsxs)('div', {
-className: T.userSection,
+className: v.userSection,
 children: [
-  (0, l.jsx)(x, {
-    users: v,
+  (0, l.jsx)(m, {
+    users: T,
     guildId: n
   }),
   (0, l.jsx)(i.NameWithRole, {
     color: null != I ? I : void 0,
     roleName: h,
     name: g,
-    className: T.userName
+    className: v.userName
   }),
-  m > 0 ? (0, l.jsx)('div', {
-    className: T.additionalParticipantBadge,
+  x > 0 ? (0, l.jsx)('div', {
+    className: v.additionalParticipantBadge,
     children: (0, l.jsxs)(i.Text, {
       variant: 'text-xxs/medium',
       color: 'text-normal',
-      className: T.additionalParticipantBadgeText,
+      className: v.additionalParticipantBadgeText,
       children: [
         '+',
-        m
+        x
       ]
     })
   }) : null
@@ -149,7 +149,7 @@ children: n
   } = e;
   return (0, l.jsx)(i.Heading, {
 variant: 'heading-sm/medium',
-className: T.contentDescription,
+className: v.contentDescription,
 lineClamp: 1,
 children: n
   });

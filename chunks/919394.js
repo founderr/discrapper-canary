@@ -1,6 +1,6 @@
 t.d(n, {
   QC: function() {
-return Z;
+return S;
   },
   SO: function() {
 return R;
@@ -18,10 +18,10 @@ var l = t(512722),
   E = t(690725),
   _ = t(706454),
   f = t(594174),
-  T = t(70956),
-  v = t(709054),
-  m = t(561308),
-  x = t(206295),
+  v = t(70956),
+  T = t(709054),
+  x = t(561308),
+  m = t(206295),
   N = t(737583),
   h = t(438226),
   I = t(169040),
@@ -43,15 +43,15 @@ let t = [{
     iconPath: I.NM,
     text: n
   }],
-  l = v.default.extractTimestamp(e.extra.application_id);
+  l = T.default.extractTimestamp(e.extra.application_id);
 if (7 >= o()().diff(o()(l), 'days') && t.push({
     iconPath: I.As,
     text: g.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
-  }), (0, m.Ol)(e) && t.push({
+  }), (0, x.Ol)(e) && t.push({
     iconPath: I.fO,
     text: g.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
-  }), (0, m.q_)(e)) {
-  let n = (0, m.vU)(e);
+  }), (0, x.q_)(e)) {
+  let n = (0, x.vU)(e);
   t.push({
     iconPath: I.t1,
     text: g.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
@@ -59,22 +59,22 @@ if (7 >= o()().diff(o()(l), 'days') && t.push({
     })
   });
 }
-(0, m.ig)(e) === i.o.GLOBAL && t.push({
+(0, x.ig)(e) === i.o.GLOBAL && t.push({
   iconPath: I.Op,
   text: g.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
 });
-let r = (0, m.dw)(e);
+let r = (0, x.dw)(e);
 if (null != r && t.push({
     iconPath: I.Z,
-    text: (0, m.GE)(r)
-  }), (0, m.V5)(e) && t.push({
+    text: (0, x.GE)(r)
+  }), (0, x.V5)(e) && t.push({
     iconPath: I.Md,
-    text: (0, m.kr)(e) ? (0, m.z5)(e) : (0, m.nB)(e)
-  }), (0, m.Jd)(e)) {
-  let n = (0, m.yA)(e);
+    text: (0, x.kr)(e) ? (0, x.z5)(e) : (0, x.nB)(e)
+  }), (0, x.Jd)(e)) {
+  let n = (0, x.yA)(e);
   if (null != n) {
     let e = g.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({
-      hours: Math.round(n / T.Z.Seconds.HOUR)
+      hours: Math.round(n / v.Z.Seconds.HOUR)
     });
     return [{
       iconPath: I.eF,
@@ -193,20 +193,20 @@ return await (0, E.f)({
   }
 });
   };
-async function Z(e, n, t) {
+async function S(e, n, t) {
   let l = e.extra.game_name,
 a = u.Z.getApplication(e.extra.application_id),
 o = null == a ? void 0 : a.getIconURL(128),
 i = f.default.getUser(e.author_id);
   r()(null != i, 'Author must not be null'), await (0, c.vM)(null != o ? o : '');
   let s = [null == i ? void 0 : i.getAvatarURL(n.guild_id, 128)],
-T = M(s, o),
-v = _.default.locale,
-N = (0, m.yh)(e, v),
+v = M(s, o),
+T = _.default.locale,
+N = (0, x.yh)(e, T),
 {
   primaryColor: I,
   secondaryColor: g
-} = (0, x.w)(null != o ? o : ''),
+} = (0, m.w)(null != o ? o : ''),
 A = (0, h.HV)(e, n, i),
 R = {
   format: t,
@@ -215,11 +215,11 @@ R = {
   fileType: 'png'
 };
   if (t === d.kH.CloudUpload) {
-var Z;
-R.channelId = null !== (Z = n.id) && void 0 !== Z ? Z : '';
+var S;
+R.channelId = null !== (S = n.id) && void 0 !== S ? S : '';
   }
   return await (0, E.f)({
-assetsToLoad: T,
+assetsToLoad: v,
 drawImage: n => C(n, {
   timestamp: N,
   colors: [

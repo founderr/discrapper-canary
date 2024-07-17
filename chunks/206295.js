@@ -42,38 +42,38 @@ var n, l, r, o, i, u;
 let d;
 d = t(481060).tokens;
 let f = c.Z.saturation,
-  [T, v] = _(e, null !== (u = null == d ? void 0 : null === (i = d.colors) || void 0 === i ? void 0 : null === (o = i.BACKGROUND_FLOATING) || void 0 === o ? void 0 : null === (r = o.resolve) || void 0 === r ? void 0 : null === (l = r.call(o, {
+  [v, T] = _(e, null !== (u = null == d ? void 0 : null === (i = d.colors) || void 0 === i ? void 0 : null === (o = i.BACKGROUND_FLOATING) || void 0 === o ? void 0 : null === (r = o.resolve) || void 0 === r ? void 0 : null === (l = r.call(o, {
     theme: E.BRd.DARK,
     saturation: f
   })) || void 0 === l ? void 0 : null === (n = l.hex) || void 0 === n ? void 0 : n.call(l)) && void 0 !== u ? u : '#000'),
-  m = (0, s._i)(T),
-  x = (0, s._i)(v);
-for (let e = 1; e < 8 && !((0, s.Bd)(m) >= 0.725); e++) {
-  ;
-  m = a()(m).darken(0.5).num();
-}
+  x = (0, s._i)(v),
+  m = (0, s._i)(T);
 for (let e = 1; e < 8 && !((0, s.Bd)(x) >= 0.725); e++) {
   ;
   x = a()(x).darken(0.5).num();
 }
-let N = (0, s.Rf)(m);
+for (let e = 1; e < 8 && !((0, s.Bd)(m) >= 0.725); e++) {
+  ;
+  m = a()(m).darken(0.5).num();
+}
+let N = (0, s.Rf)(x);
 return {
   primaryColor: N,
-  secondaryColor: (0, s.Rf)(x)
+  secondaryColor: (0, s.Rf)(m)
 };
   };
 n.Z = e => {
   var n, r, o, i, _, f;
-  let T;
-  T = t(481060).tokens;
-  let v = (0, u.e7)([c.Z], () => c.Z.saturation),
-[m, x] = (0, d.Cf)(e, null !== (f = null == T ? void 0 : null === (_ = T.colors) || void 0 === _ ? void 0 : null === (i = _.BACKGROUND_FLOATING) || void 0 === i ? void 0 : null === (o = i.resolve) || void 0 === o ? void 0 : null === (r = o.call(i, {
+  let v;
+  v = t(481060).tokens;
+  let T = (0, u.e7)([c.Z], () => c.Z.saturation),
+[x, m] = (0, d.Cf)(e, null !== (f = null == v ? void 0 : null === (_ = v.colors) || void 0 === _ ? void 0 : null === (i = _.BACKGROUND_FLOATING) || void 0 === i ? void 0 : null === (o = i.resolve) || void 0 === o ? void 0 : null === (r = o.call(i, {
   theme: E.BRd.DARK,
-  saturation: v
+  saturation: T
 })) || void 0 === r ? void 0 : null === (n = r.hex) || void 0 === n ? void 0 : n.call(r)) && void 0 !== f ? f : '#000');
   return l.useMemo(() => {
-let e = (0, s._i)(m),
-  n = (0, s._i)(x);
+let e = (0, s._i)(x),
+  n = (0, s._i)(m);
 for (let n = 1; n < 8 && !((0, s.Bd)(e) >= 0.725); n++) {
   ;
   e = a()(e).darken(0.5).num();
@@ -88,7 +88,7 @@ return {
   secondaryColor: (0, s.Rf)(n)
 };
   }, [
-m,
-x
+x,
+m
   ]);
 };

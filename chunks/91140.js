@@ -8,7 +8,7 @@ var l = t(735250),
   a = t(297781),
   o = t(443487),
   i = t(43205),
-  u = t(265048),
+  u = t(797342),
   s = t(827418);
 let c = [
   a.OV,
@@ -30,7 +30,7 @@ hovered: d
   } = e, {
 iconUrl: E,
 iconTitle: _
-  } = (0, u.F)(n);
+  } = (0, u.n)(n);
   return (0, l.jsxs)(o.Zb, {
 selected: r,
 children: [

@@ -1,10 +1,10 @@
 t(47120);
 var i = t(735250),
-  s = t(470079),
-  o = t(120356),
-  l = t.n(o),
-  r = t(512722),
-  a = t.n(r),
+  o = t(470079),
+  s = t(120356),
+  l = t.n(s),
+  a = t(512722),
+  r = t.n(a),
   u = t(392711),
   d = t.n(u),
   m = t(941797),
@@ -13,48 +13,48 @@ var i = t(735250),
   I = t(4925);
 let x = Math.round((h.mT - 8) / 3),
   p = Math.round((h.mT - 4) / 2),
-  C = Math.round((h.Jj - 4) / 2),
-  g = Math.round(2 * (h.mT - 4) / 3),
-  f = g / 2;
+  g = Math.round((h.Jj - 4) / 2),
+  C = Math.round(2 * (h.mT - 4) / 3),
+  f = C / 2;
 
 function j(e) {
   let {
 visualMediaItems: n,
 footer: t
   } = e;
-  null != t && a()(1 === n.length, 'footer only gets applied to single items');
-  let s = n.length;
-  if (1 === s)
+  null != t && r()(1 === n.length, 'footer only gets applied to single items');
+  let o = n.length;
+  if (1 === o)
 return (0, i.jsx)(T, {
   itemsForLayout: n,
   isSingleImage: !0,
   footer: t
 });
-  if (2 === s)
-return (0, i.jsx)(y, {
-  itemsForLayout: n
-});
-  if (3 === s)
+  if (2 === o)
 return (0, i.jsx)(M, {
   itemsForLayout: n
 });
-  if (4 === s)
-return (0, i.jsx)(v, {
+  if (3 === o)
+return (0, i.jsx)(E, {
   itemsForLayout: n
 });
-  let o = s % 3;
+  if (4 === o)
+return (0, i.jsx)(y, {
+  itemsForLayout: n
+});
+  let s = o % 3;
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  1 === o && (0, i.jsx)(T, {
-    itemsForLayout: n.slice(0, o)
+  1 === s && (0, i.jsx)(T, {
+    itemsForLayout: n.slice(0, s)
   }),
-  2 === o && (0, i.jsx)(y, {
-    itemsForLayout: n.slice(0, o)
+  2 === s && (0, i.jsx)(M, {
+    itemsForLayout: n.slice(0, s)
   }),
-  0 === o ? (0, i.jsx)(N, {
+  0 === s ? (0, i.jsx)(v, {
     itemsForLayout: n
-  }) : (0, i.jsx)(N, {
-    itemsForLayout: n.slice(o)
+  }) : (0, i.jsx)(v, {
+    itemsForLayout: n.slice(s)
   })
 ]
   });
@@ -64,24 +64,24 @@ function T(e) {
   let {
 itemsForLayout: n,
 isSingleImage: t,
-footer: s
-  } = e, o = n[0];
+footer: o
+  } = e, s = n[0];
   return (0, i.jsx)('div', {
 className: l()(I.oneByOneGrid, {
   [I.oneByOneGridSingle]: t,
   [I.oneByOneGridMosaic]: !t,
-  [I.hasFooter]: null != s
+  [I.hasFooter]: null != o
 }),
-children: (0, i.jsx)(w, {
-  props: o,
+children: (0, i.jsx)(A, {
+  props: s,
   useFullWidth: !t,
   isSingleItem: !0,
-  footer: s
+  footer: o
 })
   });
 }
 
-function y(e) {
+function M(e) {
   let {
 itemsForLayout: n
   } = e;
@@ -89,7 +89,7 @@ itemsForLayout: n
 className: I.oneByTwoGrid,
 children: n.map(e => (0, i.jsx)('div', {
   className: I.oneByTwoGridItem,
-  children: (0, i.jsx)(w, {
+  children: (0, i.jsx)(A, {
     props: e,
     maxWidth: p,
     maxHeight: p
@@ -98,7 +98,7 @@ children: n.map(e => (0, i.jsx)('div', {
   });
 }
 
-function M(e) {
+function E(e) {
   let {
 itemsForLayout: n
   } = e;
@@ -107,9 +107,9 @@ className: l()(I.oneByTwoGrid, I.oneByTwoLayoutThreeGrid),
 children: [
   (0, i.jsx)('div', {
     className: I.oneByTwoSoloItem,
-    children: (0, i.jsx)(w, {
+    children: (0, i.jsx)(A, {
       props: n[0],
-      maxWidth: g
+      maxWidth: C
     })
   }),
   (0, i.jsx)('div', {
@@ -118,10 +118,10 @@ children: [
       className: I.twoByOneGrid,
       children: n.splice(1).map(e => (0, i.jsx)('div', {
         className: I.twoByOneGridItem,
-        children: (0, i.jsx)(w, {
+        children: (0, i.jsx)(A, {
           props: e,
           maxWidth: f,
-          maxHeight: C
+          maxHeight: g
         })
       }, e.item.uniqueId))
     })
@@ -130,34 +130,34 @@ children: [
   });
 }
 
-function v(e) {
+function y(e) {
   let {
 itemsForLayout: n
   } = e;
   return (0, i.jsx)('div', {
 className: I.twoByTwoGrid,
-children: n.map(e => (0, i.jsx)(w, {
+children: n.map(e => (0, i.jsx)(A, {
   props: e,
   maxWidth: p,
-  maxHeight: C
+  maxHeight: g
 }, e.item.uniqueId))
   });
 }
 
-function N(e) {
+function v(e) {
   let {
 itemsForLayout: n
   } = e;
   return (0, i.jsx)('div', {
 className: I.threeByThreeGrid,
-children: n.map(e => (0, i.jsx)(w, {
+children: n.map(e => (0, i.jsx)(A, {
   props: e,
   maxWidth: x,
   maxHeight: x
 }, e.item.uniqueId))
   });
 }
-let E = e => ({
+let N = e => ({
 className: l()(e, I.itemContentContainer),
 imgContainerClassName: I.lazyImgContainer,
 imgClassName: I.lazyImg
@@ -166,29 +166,29 @@ imgClassName: I.lazyImg
 className: l()(e, I.lazyImg)
   });
 
-function w(e) {
+function A(e) {
   let {
 props: n,
 maxWidth: t = h.mT,
-maxHeight: s = h.Jj,
-useFullWidth: o = !0,
+maxHeight: o = h.Jj,
+useFullWidth: s = !0,
 isSingleItem: l = !1,
-footer: r
-  } = e, a = n.item.type, u = {
+footer: a
+  } = e, r = n.item.type, u = {
 ...n,
-...'IMAGE' === a && E(n.className),
-...'VIDEO' === a && O(n.className),
+...'IMAGE' === r && N(n.className),
+...'VIDEO' === r && O(n.className),
 mediaLayoutType: h.hV.MOSAIC,
 maxWidth: t,
-maxHeight: s,
-useFullWidth: o,
+maxHeight: o,
+useFullWidth: s,
 isSingleMosaicItem: l
   };
   return (0, i.jsx)(m.h.Provider, {
 value: n.gifFavoriteButton,
 children: (0, i.jsx)(c.ZP, {
   ...u,
-  footer: r
+  footer: a
 })
   });
 }
@@ -197,28 +197,28 @@ n.Z = function(e) {
 items: n,
 inlineForwardButton: t
   } = e, {
-groupableVisualMediaItems: o,
+groupableVisualMediaItems: s,
 nonGroupableVisualMediaItems: l,
-nonVisualMediaItems: r
+nonVisualMediaItems: a
   } = function(e) {
-return s.useMemo(() => {
-  let [n, t] = d().partition(e, e => (0, c.R_)(e.item.type)), [i, s] = d().partition(n, e => (0, c.Ld)(e.item.type));
+return o.useMemo(() => {
+  let [n, t] = d().partition(e, e => (0, c.R_)(e.item.type)), [i, o] = d().partition(n, e => (0, c.Ld)(e.item.type));
   return {
     groupableVisualMediaItems: i,
-    nonGroupableVisualMediaItems: s,
+    nonGroupableVisualMediaItems: o,
     nonVisualMediaItems: t
   };
 }, [e]);
   }(n);
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  o.length > 0 && (null != t ? (0, i.jsxs)('div', {
+  s.length > 0 && (null != t ? (0, i.jsxs)('div', {
     className: I.mosaicContainer,
     children: [
       (0, i.jsx)('div', {
         className: I.visualMediaItemContainer,
         children: (0, i.jsx)(j, {
-          visualMediaItems: o
+          visualMediaItems: s
         })
       }),
       t
@@ -226,7 +226,7 @@ children: [
   }) : (0, i.jsx)('div', {
     className: I.visualMediaItemContainer,
     children: (0, i.jsx)(j, {
-      visualMediaItems: o
+      visualMediaItems: s
     })
   })),
   l.length > 0 && l.map(e => {
@@ -242,11 +242,11 @@ children: [
       })
     }, e.item.uniqueId);
   }),
-  r.length > 0 && (0, i.jsx)('div', {
+  a.length > 0 && (0, i.jsx)('div', {
     className: I.nonVisualMediaItemContainer,
-    children: r.map(e => (0, i.jsx)('div', {
+    children: a.map(e => (0, i.jsx)('div', {
       className: I.nonVisualMediaItem,
-      children: (0, i.jsx)(w, {
+      children: (0, i.jsx)(A, {
         props: e
       })
     }, e.item.uniqueId))
