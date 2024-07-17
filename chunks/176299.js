@@ -123,7 +123,7 @@ createPromise: () => Promise.all([
   n.e('44156'),
   n.e('19878'),
   n.e('38359'),
-  n.e('91553')
+  n.e('52190')
 ]).then(n.bind(n, 599263)),
 webpackId: 599263,
 name: 'GuildOnboardingPage',

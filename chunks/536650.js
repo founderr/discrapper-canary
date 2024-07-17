@@ -45,13 +45,13 @@ return null !== (n = null === (e = (0, d.k8)({
   }, [
 v,
 A
-  ]), P = E(h), x = E(f), T = l.useCallback(() => {
+  ]), P = E(h), T = E(f), S = l.useCallback(() => {
 var e, n, t, i, l, r, s, o, c;
 let u = _.current,
   d = h.current,
   m = N.current,
   p = parseInt(null !== (e = null == P ? void 0 : P.height) && void 0 !== e ? e : ''),
-  E = parseInt(null !== (n = null == x ? void 0 : x.height) && void 0 !== n ? n : '');
+  E = parseInt(null !== (n = null == T ? void 0 : T.height) && void 0 !== n ? n : '');
 if (null != u && null != d && null != m && !isNaN(p) && !isNaN(E)) {
   ;
   let e = null !== (t = u.scrollTop) && void 0 !== t ? t : 0,
@@ -65,27 +65,27 @@ if (null != u && null != d && null != m && !isNaN(p) && !isNaN(E)) {
   }, [
 I,
 v,
-null == x ? void 0 : x.height,
+null == T ? void 0 : T.height,
 A,
 _,
 null == P ? void 0 : P.height
   ]);
   return l.useEffect(() => {
-T();
+S();
   }, [
-T,
+S,
 A
   ]), l.useEffect(() => {
 let e = _.current,
   n = () => {
-    T();
+    S();
   };
 return null == e || e.addEventListener('scroll', n), () => {
   null == e || e.removeEventListener('scroll', n);
 };
   }, [
 _,
-T
+S
   ]), (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsxs)('div', {

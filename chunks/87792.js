@@ -20,8 +20,8 @@ var s = n(735250),
   m = n(792258),
   N = n(657825),
   f = n(198952),
-  S = n(329242),
-  h = n(895328),
+  h = n(329242),
+  S = n(895328),
   M = n(292352),
   x = n(981631),
   b = n(689938),
@@ -63,14 +63,14 @@ isMoreLoading: T
 onError: n
   }), C = M.tx.get(t), [p, A] = a.useState(M.iB), f = (0, E.Xi)({
 location: 'family_center_activity_section_web'
-  }), S = a.useCallback(() => {
+  }), h = a.useCallback(() => {
 A(e => e + M.iB), _(t);
   }, [
 t,
 _
   ]);
   i()(C, 'No text for action type');
-  let h = C.sectionHeader(c),
+  let S = C.sectionHeader(c),
 x = a.useCallback(e => {
   let {
     row: t
@@ -92,7 +92,7 @@ P = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
       className: O.sectionHeader,
       variant: 'eyebrow',
       color: 'header-secondary',
-      children: h
+      children: S
     }),
     void 0 !== C.sectionDescription ? (0, s.jsx)(o.Text, {
       className: O.sectionDescription,
@@ -102,7 +102,7 @@ P = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
     }) : null
   ]
 }), [
-  h,
+  S,
   C,
   r,
   f
@@ -125,7 +125,7 @@ children: [
   }),
   L.length !== c ? (0, s.jsx)(o.Clickable, {
     className: O.loadMoreBar,
-    onClick: S,
+    onClick: h,
     role: 'button',
     children: T ? (0, s.jsx)(o.Spinner, {
       type: o.Spinner.Type.PULSING_ELLIPSIS,
@@ -182,7 +182,7 @@ return void 0 === r ? null : (0, s.jsxs)('div', {
     (0, s.jsxs)('div', {
       className: O.headerText,
       children: [
-        (0, s.jsx)(S.Z, {
+        (0, s.jsx)(h.Z, {
           user: r
         }),
         void 0 !== n ? (0, s.jsx)(o.Text, {
@@ -278,7 +278,7 @@ children: [
               return (0, s.jsx)(L, {
                 displayType: t
               }, ''.concat(t, '-list'));
-            }) : (0, s.jsx)(h.Z, {
+            }) : (0, s.jsx)(S.Z, {
               className: O.emptyActivity,
               text: null != i ? i : ''
             })

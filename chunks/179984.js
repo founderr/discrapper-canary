@@ -20,8 +20,8 @@ var s = n(735250),
   m = n(230916),
   N = n(248042),
   f = n(823188),
-  S = n(21023),
-  h = n(318747),
+  h = n(21023),
+  S = n(318747),
   M = n(409100),
   x = n(474936),
   b = n(689938),
@@ -166,7 +166,7 @@ $ = (0, m.A)(x.Xh.PREMIUM_MONTH_TIER_2),
 ee = ''.concat($, '/').concat((0, C.eP)(x.rV.MONTH)),
 et = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_0),
 en = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_2),
-es = (0, S.n)(et, en, X, ee),
+es = (0, h.n)(et, en, X, ee),
 ea = (0, N.Vi)();
   if (!k || !w)
 return null;
@@ -207,7 +207,7 @@ column1: (0, s.jsxs)(s.Fragment, {
       subscriptionTier: x.Si.TIER_0,
       showIcon: !1
     }),
-    q === x.p9.TIER_2 || null != Q ? null : (0, s.jsx)(h.Z, {
+    q === x.p9.TIER_2 || null != Q ? null : (0, s.jsx)(S.Z, {
       className: O.button,
       subscriptionTier: x.Si.TIER_0
     })
@@ -228,7 +228,7 @@ column2: (0, s.jsxs)(s.Fragment, {
       showIcon: !1,
       isEligibleForBogoPromotion: ea
     }),
-    q === x.p9.TIER_0 || null != Q ? null : (0, s.jsx)(h.Z, {
+    q === x.p9.TIER_0 || null != Q ? null : (0, s.jsx)(S.Z, {
       className: O.button,
       subscriptionTier: x.Si.TIER_2
     })

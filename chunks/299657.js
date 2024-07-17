@@ -20,8 +20,8 @@ var s = n(735250),
   m = n(78839),
   N = n(626135),
   f = n(111361),
-  S = n(357355),
-  h = n(937579),
+  h = n(357355),
+  S = n(937579),
   M = n(91802),
   x = n(104494),
   b = n(639119),
@@ -36,7 +36,7 @@ entrypoint: t = L.EZ.UserSettings
   } = e, n = (0, R.Q)(), {
 sourceAnalyticsLocations: r,
 analyticsLocations: D
-  } = (0, I.ZP)(T.Z.PREMIUM_MARKETING), B = (0, l.e7)([m.ZP], () => m.ZP.hasFetchedSubscriptions()), j = (0, l.e7)([A.default], () => A.default.getCurrentUser()), U = (0, b.N)(), G = (0, x.Ng)(), y = (0, C.V)(), [H, k] = a.useState(!0), w = a.useRef(0), F = (0, f.M5)(j, L.p9.TIER_2), V = (0, M.n)(), W = null == V ? void 0 : V.countryCode, K = (0, l.e7)([S.Z], () => S.Z.hasFetched);
+  } = (0, I.ZP)(T.Z.PREMIUM_MARKETING), B = (0, l.e7)([m.ZP], () => m.ZP.hasFetchedSubscriptions()), j = (0, l.e7)([A.default], () => A.default.getCurrentUser()), U = (0, b.N)(), G = (0, x.Ng)(), y = (0, C.V)(), [H, k] = a.useState(!0), w = a.useRef(0), F = (0, f.M5)(j, L.p9.TIER_2), V = (0, M.n)(), W = null == V ? void 0 : V.countryCode, K = (0, l.e7)([h.Z], () => h.Z.hasFetched);
   return (a.useEffect(() => {
 !K && d.MH();
   }, [K]), a.useEffect(() => {
@@ -50,7 +50,7 @@ c.Z.wait(async () => {
   ]), w.current = Date.now() - e, k(!1);
 });
   }, [W]), a.useEffect(() => {
-n && (null != U || null != G) && (0, h.a)(U, G);
+n && (null != U || null != G) && (0, S.a)(U, G);
   }, [
 n,
 U,

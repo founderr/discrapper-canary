@@ -31,10 +31,10 @@ var i, l, a = t(735250),
   v = t(695676),
   I = t(176412),
   P = t(226026),
-  x = t(753972),
-  T = t(981631),
-  R = t(217702),
-  S = t(231338),
+  T = t(753972),
+  S = t(981631),
+  x = t(217702),
+  R = t(231338),
   L = t(689938),
   g = t(126152),
   M = t(413097);
@@ -63,9 +63,9 @@ trackItemImpressionRef: I
 applicationId: n.id,
 sectionName: m,
 sectionPosition: p
-  }), [T, R] = r.useState(!1), y = r.useCallback(() => {
-!0 === u && R(!0);
-  }, [u]), j = r.useCallback(() => R(!1), []);
+  }), [S, x] = r.useState(!1), y = r.useCallback(() => {
+!0 === u && x(!0);
+  }, [u]), j = r.useCallback(() => x(!1), []);
   return 'icon' === t ? (0, a.jsx)(c.Clickable, {
 innerRef: _ ? e => I.current = e : void 0,
 className: o()(g.container, g.iconCard),
@@ -74,7 +74,7 @@ onClick: l,
   applicationName: h,
   applicationDescription: N
 }),
-children: (0, a.jsx)(x.Z, {
+children: (0, a.jsx)(T.Z, {
   src: A,
   className: g.iconCard,
   'aria-hidden': !0,
@@ -104,13 +104,13 @@ children: [
         children: (0, a.jsx)(O, {
           application: n,
           fallbackColor: v,
-          showVideo: T
+          showVideo: S
         })
       }),
       i && (0, a.jsx)('div', {
         className: g.partnerLabelWrapper,
         children: (0, a.jsx)(c.Text, {
-          className: (0, f.Q)(S.BR.DARK),
+          className: (0, f.Q)(R.BR.DARK),
           variant: 'text-sm/medium',
           color: 'text-normal',
           children: L.Z.Messages.APP_DIRECTORY_PARTNER
@@ -125,7 +125,7 @@ children: [
   (0, a.jsxs)('div', {
     className: g.appDetailsContainer,
     children: [
-      (0, a.jsx)(x.Z, {
+      (0, a.jsx)(T.Z, {
         src: A,
         className: g.icon,
         'aria-hidden': !0,
@@ -204,7 +204,7 @@ children: [
       onAnimationEnd: () => t ? null : c(!1),
       children: (0, a.jsx)(A.Z, {
         src: l,
-        mediaLayoutType: R.hV.MOSAIC,
+        mediaLayoutType: x.hV.MOSAIC,
         loop: !0,
         autoPlay: !0,
         muted: !0
@@ -264,7 +264,7 @@ location: s
 pushHistory: o
   } = (0, v.hH)();
   return r.useCallback(e => {
-e.stopPropagation(), (0, _.yw)(T.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+e.stopPropagation(), (0, _.yw)(S.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
   application_id: n.id,
   section_name: t,
   search_results_position: i,

@@ -23,8 +23,8 @@ var i = n(399606),
   m = n(74538),
   N = n(494127),
   f = n(314684),
-  S = n(687362),
-  h = n(119269),
+  h = n(687362),
+  S = n(119269),
   M = n(391110),
   x = n(75077),
   b = n(474936),
@@ -72,7 +72,7 @@ flipped: ed
 flipped: e_
   } = (0, N.as)(), eu = (0, f.nY)({
 showAnimations: !0
-  }), eE = null != eu ? eu.initialPercentage : void 0, eT = null != eu ? eu.percentage : void 0, eI = (0, u.Z)(R.Z), eR = (0, S.Z)(), eC = (0, E.Z)({
+  }), eE = null != eu ? eu.initialPercentage : void 0, eT = null != eu ? eu.percentage : void 0, eI = (0, u.Z)(R.Z), eR = (0, h.Z)(), eC = (0, E.Z)({
 scrollPosition: P.Y_.TRY_IT_OUT,
 analyticsLocations: e
   }), eg = () => {
@@ -436,7 +436,7 @@ let {
   pillText: a,
   ctaDescription: i,
   dismissibleContentType: l
-} = eR, c = (0, r.jsx)(h.Z, {
+} = eR, c = (0, r.jsx)(S.Z, {
   showAnimations: !0,
   percentage: eT,
   initialPercentage: eE

@@ -36,7 +36,7 @@ let {
 } = await Promise.all([
   n.e('64714'),
   n.e('23919'),
-  n.e('79058')
+  n.e('52934')
 ]).then(n.bind(n, 743161));
 return n => (0, i.jsx)(e, {
   channel: t,

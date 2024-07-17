@@ -250,7 +250,7 @@ case J.fO.HIDDEN_STREAM:
   });
   }
   let e6 = a.useRef(null),
-e8 = I.type === J.fO.STREAM ? d.ScreenIcon : d.VideoIcon;
+e9 = I.type === J.fO.STREAM ? d.ScreenIcon : d.VideoIcon;
   return (0, i.jsx)(h.Z, {
 section: Q.jXE.VOICE_CHANNEL_TILE,
 children: (0, i.jsx)('div', {
@@ -312,7 +312,7 @@ children: (0, i.jsx)('div', {
             }),
             eh ? (0, i.jsx)('div', {
               className: en.selectedScreen,
-              children: (0, i.jsx)(e8, {
+              children: (0, i.jsx)(e9, {
                 size: 'md',
                 color: 'currentColor',
                 className: en.selectedIcon

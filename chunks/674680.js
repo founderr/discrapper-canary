@@ -44,13 +44,13 @@ return null;
 m = (0, a.wj)(I) ? u : E,
 N = (C.size - C.offset - 2 * C.stroke) * 0.8,
 f = C.size - C.stroke,
-S = {
+h = {
   width: 0.4 * N,
   height: 0.4 * N
 },
-h = {
-  width: S.width + 1,
-  height: S.height + 1,
+S = {
+  width: h.width + 1,
+  height: h.height + 1,
   right: C.stroke + 1,
   bottom: C.stroke + 1,
   padding: 0
@@ -75,19 +75,19 @@ children: [
   }),
   !d && (0, s.jsx)('div', {
     className: _.lockContainer,
-    style: h,
+    style: S,
     children: (0, s.jsx)(r.LockIcon, {
       size: 'custom',
       color: (0, l.Lq)(m.locked),
-      ...S
+      ...h
     })
   }),
   d && p === c.EP.LEGENDARY && (0, s.jsx)('div', {
     className: _.lockContainer,
-    style: h,
+    style: S,
     children: (0, s.jsx)(o.Z, {
       className: _.confettiIcon,
-      ...S
+      ...h
     })
   })
 ]

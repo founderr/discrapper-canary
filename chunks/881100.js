@@ -24,8 +24,8 @@ var s = n(399606),
   m = n(548629),
   N = n(507084),
   f = n(680313),
-  S = n(926433),
-  h = n(302036),
+  h = n(926433),
+  S = n(302036),
   M = n(994554),
   x = n(1549),
   b = n(13327),
@@ -128,7 +128,7 @@ return {
   soundboard: {
     title: T.Z.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
     description: T.Z.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-    imageSource: H(n, S, h),
+    imageSource: H(n, h, S),
     imageClassName: t.soundboardImage
   },
   stickers: {

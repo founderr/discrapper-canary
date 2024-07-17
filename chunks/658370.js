@@ -25,8 +25,8 @@ description: A = '',
 descriptionCta: m = '',
 isPremiumGetCta: N,
 onCtaClick: f,
-cardVariant: S
-  } = e, h = (0, d.N)(), M = null == h ? void 0 : h.subscription_trial, x = (0, c.Ng)(), b = (0, l.Rt)({
+cardVariant: h
+  } = e, S = (0, d.N)(), M = null == S ? void 0 : S.subscription_trial, x = (0, c.Ng)(), b = (0, l.Rt)({
 intervalType: null == M ? void 0 : M.interval,
 intervalCount: null == M ? void 0 : M.interval_count
   }), O = (0, o._)({
@@ -37,7 +37,7 @@ onTier0TrialOffer: b,
 onDiscountOffer: I.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
   percent: null == x ? void 0 : x.discount.amount
 })
-  }), P = (0, _._)(S);
+  }), P = (0, _._)(h);
   return (0, s.jsxs)('div', {
 className: r()(R.cardDescription, null == P ? void 0 : null === (t = P.description) || void 0 === t ? void 0 : t.className),
 children: [

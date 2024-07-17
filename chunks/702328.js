@@ -20,8 +20,8 @@ var s = n(735250),
   m = n(8647),
   N = n(568126),
   f = n(605289),
-  S = n(248042),
-  h = n(823188),
+  h = n(248042),
+  S = n(823188),
   M = n(135785),
   x = n(498765),
   b = n(635921),
@@ -96,7 +96,7 @@ isFullscreen: n,
 entrypoint: r
   } = e, {
 bucket: x
-  } = (0, C.wj)('PremiumMarketingHome'), O = x > 0, P = a.useRef(null), [L, U] = a.useState(!1), [Y, z] = a.useState(!1), [Q, q] = a.useState(!1), [J, X] = a.useState(!1), $ = (0, l.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()), ee = null != $ ? (0, I.Af)($) : null, et = null != ee ? I.ZP.getSkuIdForPlan(ee.planId) : null, en = null !== et && et !== G.Si.TIER_2 ? G.Si.TIER_2 : null, es = (0, g.n)(), ea = null != es, [er, ei] = a.useState(!1), el = (0, p.Ng)(), eo = (0, A.N)(), ec = null == eo ? void 0 : null === (t = eo.subscription_trial) || void 0 === t ? void 0 : t.sku_id, ed = (0, R.Nx)(), e_ = (0, S.Vi)(), {
+  } = (0, C.wj)('PremiumMarketingHome'), O = x > 0, P = a.useRef(null), [L, U] = a.useState(!1), [Y, z] = a.useState(!1), [Q, q] = a.useState(!1), [J, X] = a.useState(!1), $ = (0, l.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()), ee = null != $ ? (0, I.Af)($) : null, et = null != ee ? I.ZP.getSkuIdForPlan(ee.planId) : null, en = null !== et && et !== G.Si.TIER_2 ? G.Si.TIER_2 : null, es = (0, g.n)(), ea = null != es, [er, ei] = a.useState(!1), el = (0, p.Ng)(), eo = (0, A.N)(), ec = null == eo ? void 0 : null === (t = eo.subscription_trial) || void 0 === t ? void 0 : t.sku_id, ed = (0, R.Nx)(), e_ = (0, h.Vi)(), {
 analyticsLocations: eu
   } = (0, u.ZP)(_.Z.PREMIUM_MARKETING), eE = 'PremiumMarketingHome';
   (0, d.j)({
@@ -117,8 +117,8 @@ X(!0);
     onChange: e => z(e),
     threshold: 0.1,
     active: !0,
-    children: (0, s.jsx)(h.ZP, {
-      variant: O ? n ? h.NN.MODIFIED_COPY_STORE_HOME : h.NN.MODIFIED_COPY_SETTINGS : h.NN.DEFAULT,
+    children: (0, s.jsx)(S.ZP, {
+      variant: O ? n ? S.NN.MODIFIED_COPY_STORE_HOME : S.NN.MODIFIED_COPY_SETTINGS : S.NN.DEFAULT,
       showWumpus: !O,
       tier0CTAButton: ec === G.Si.TIER_2 || e_ || null != el ? (0, s.jsx)(D.Z, {
         forceInverted: !0,

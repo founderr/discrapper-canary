@@ -30,9 +30,9 @@ sectionName: o,
 installOnDemand: C
   } = e, I = null !== (n = (0, u.q)(s.id === A.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, P = (0, d.ye)({
 application: I
-  }) ? v : E.Z, x = l.useRef(null), {
-iconURL: T,
-name: R
+  }) ? v : E.Z, T = l.useRef(null), {
+iconURL: S,
+name: x
   } = l.useMemo(() => (0, d.sl)(I, {
 fakeAppIconURL: N,
 size: 84
@@ -46,19 +46,19 @@ C
   ]), (0, i.jsxs)(r.ScrollerNone, {
 className: f.container,
 fade: !0,
-ref: x,
+ref: T,
 role: 'region',
 'aria-label': h.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({
-  applicationName: R
+  applicationName: x
 }),
 children: [
   (0, i.jsx)(_.Z, {
-    name: R,
-    iconURL: T,
-    scrollerRef: x
+    name: x,
+    iconURL: S,
+    scrollerRef: T
   }),
-  null != T && (0, i.jsx)(m.Z, {
-    src: T,
+  null != S && (0, i.jsx)(m.Z, {
+    src: S,
     className: f.appIcon
   }),
   (0, i.jsx)(a.Z, {

@@ -23,10 +23,10 @@ t.Z = e => {
   perkComponent: m,
   subtitle: N = '',
   descriptionCta: f = '',
-  cardVariant: S,
-  subtitleClassName: h
+  cardVariant: h,
+  subtitleClassName: S
 } = e,
-M = (0, o._)(S),
+M = (0, o._)(h),
 x = (0, l.yQ)(),
 b = (null == x ? void 0 : x.nitroTenureStatus) === d.EB.REDEEMABLE;
   switch (null == x ? void 0 : x.nitroTenureStatus) {
@@ -53,7 +53,7 @@ children: [
     cardVariantStyleInfo: M,
     titleClassName: R,
     subtitle: N,
-    subtitleClassName: h
+    subtitleClassName: S
   }),
   null != g && (0, s.jsx)('img', {
     src: g,

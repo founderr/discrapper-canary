@@ -37,7 +37,7 @@ let [e, t] = C[C.length - 1];
   f = () => {
 C.pop(), R = !1, N();
   },
-  S = function(e) {
+  h = function(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
   n = l.Z.isConnected();
 C.push([
@@ -45,7 +45,7 @@ C.push([
   t * (n ? 0.1 : 1)
 ]), N();
   };
-class h extends a.Z {
+class S extends a.Z {
   _initialize() {
 u.ZP.addChangeListener(this.startAudio), s.Z.subscribe('RTC_CONNECTION_STATE', this.setVolume), s.Z.subscribe('TYPING_STOP', this.stopAudio), s.Z.subscribe('TYPING_STOP_LOCAL', this.stopAudio), s.Z.subscribe('CHANNEL_SELECT', this.stopAudio), s.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio);
   }
@@ -82,7 +82,7 @@ s && r >= 7 ? p() : A();
   }
   playAchievementUnlockSound() {
 if (!!m())
-  S('poggermode_achievement_unlock');
+  h('poggermode_achievement_unlock');
   }
 }
-t.Z = new h();
+t.Z = new S();
