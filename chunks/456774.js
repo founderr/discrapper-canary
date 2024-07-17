@@ -57,22 +57,21 @@ let e = [],
   i = [],
   s = [],
   l = [],
-  u = [],
-  c = {};
+  u = {};
 for (let o of a) {
-  var d, _, E, f, h;
+  var c, d, _, E, f;
   if (3 === e.length)
     break;
-  let a = null !== (E = (0, v.i)(o)) && void 0 !== E ? E : '',
-    p = (0, R.bA)(a, t.id),
-    m = e.length;
-  e.push(o.category), r.push(p.length), i.push(p.length > 0 ? p[0].id : '0'), s.push(p.length > 0 && null !== (f = null === (d = S.Z.getUserAffinity(p[0].id)) || void 0 === d ? void 0 : d.affinity) && void 0 !== f ? f : 0), n.push(Math.min(p.length, 6)), l.push(a), u.push(null !== (h = null === (_ = A.Z.getChannel(a)) || void 0 === _ ? void 0 : _.type) && void 0 !== h ? h : y.d4z.UNKNOWN), c['position_'.concat(m + 1, '_affinity_user_ids')] = p.slice(0, 6).map(e => e.id), c['position_'.concat(m + 1, '_user_affinity_scores')] = p.slice(0, 6).map(e => {
+  let a = null !== (_ = (0, v.i)(o)) && void 0 !== _ ? _ : '',
+    h = (0, R.bA)(a, t.id),
+    p = e.length;
+  e.push(o.category), r.push(h.length), i.push(h.length > 0 ? h[0].id : '0'), s.push(h.length > 0 && null !== (E = null === (c = S.Z.getUserAffinity(h[0].id)) || void 0 === c ? void 0 : c.affinity) && void 0 !== E ? E : 0), n.push(Math.min(h.length, 6)), l.push(null !== (f = null === (d = A.Z.getChannel(a)) || void 0 === d ? void 0 : d.type) && void 0 !== f ? f : y.d4z.UNKNOWN), u['position_'.concat(p + 1, '_affinity_user_ids')] = h.slice(0, 6).map(e => e.id), u['position_'.concat(p + 1, '_user_affinity_scores')] = h.slice(0, 6).map(e => {
     var t, n;
     return null !== (n = null === (t = S.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
   });
 }
-0 !== e.length && (c.card_types = e, c.affinity_users_counts = n, c.total_users_counts = r, c.max_affinity_user_ids = i, c.max_affinity_user_scores = s, c.channel_ids = l, c.channel_types = u, c.guild_id = t.id, N.default.track(y.rMx.GUILD_TOOLTIP_SHOWN, {
-  ...c,
+0 !== e.length && (u.card_types = e, u.affinity_users_counts = n, u.total_users_counts = r, u.max_affinity_user_ids = i, u.max_affinity_user_scores = s, u.channel_types = l, u.guild_id = t.id, N.default.track(y.rMx.GUILD_TOOLTIP_SHOWN, {
+  ...u,
   ...(0, o.hH)(t.id)
 }));
   }, []), 0 === a.length) ? null : (0, r.jsx)('div', {
