@@ -1,6 +1,6 @@
 n.d(t, {
   pi: function() {
-return E;
+return f;
   }
 }), n(47120);
 var i = n(735250),
@@ -14,11 +14,10 @@ var i = n(735250),
   u = n(297781),
   h = n(443487),
   p = n(43205),
-  m = n(689938),
-  _ = n(827418);
-let f = [u.XF];
+  m = n(827418);
+let _ = [u.XF];
 
-function E(e) {
+function f(e) {
   var t, n, i, a, s, l, u;
   let h = (0, r.e7)([d.Z], () => d.Z.getMatchingActivity(e)),
 p = (0, r.e7)([c.default], () => c.default.getUser(e.author_id));
@@ -46,7 +45,7 @@ selected: a
 activity: s,
 artist: r,
 imageUrl: o
-  } = E(t);
+  } = f(t);
   return l()(null != s, 'There must be a matching live Activity for LISTENED_SESSION'), (0, i.jsxs)(h.Zb, {
 selected: a,
 children: [
@@ -58,15 +57,11 @@ children: [
         guildId: n.guild_id
       }),
       (0, i.jsx)(h.ll, {
-        children: function(e) {
-          return m.Z.Messages.MEMBER_LIST_CONTENT_FEED_LISTENING_TO_MEDIA.format({
-            media: e
-          });
-        }(r)
+        children: r
       }),
       (0, i.jsx)(u.Gk, {
         location: u.Gt.CARD,
-        children: f.map((e, n) => (0, i.jsx)(e, {
+        children: _.map((e, n) => (0, i.jsx)(e, {
           entry: t
         }, n))
       })
@@ -75,7 +70,7 @@ children: [
   (0, i.jsx)(p.f, {
     src: o,
     size: 48,
-    className: _.thumbnail
+    className: m.thumbnail
   })
 ]
   });

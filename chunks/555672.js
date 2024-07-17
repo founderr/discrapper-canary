@@ -1,9 +1,9 @@
 n.d(t, {
   Hs: function() {
-return p;
+return h;
   },
   qy: function() {
-return _;
+return m;
   }
 });
 var i = n(735250),
@@ -14,13 +14,12 @@ var i = n(735250),
   o = n(443487),
   c = n(43205),
   d = n(265048),
-  u = n(689938),
-  h = n(827418);
-let p = [r.E6],
-  m = [s._.WEEK];
+  u = n(827418);
+let h = [r.E6],
+  p = [s._.WEEK];
 
-function _(e) {
-  return null != e && m.includes(e);
+function m(e) {
+  return null != e && p.includes(e);
 }
 t.ZP = a.memo(e => {
   let {
@@ -29,8 +28,8 @@ channel: n,
 selected: a
   } = e, {
 iconUrl: s
-  } = (0, d.F)(t), m = (0, l.Nq)(t);
-  return null != m && _(m) ? (0, i.jsxs)(o.Zb, {
+  } = (0, d.F)(t), p = (0, l.Nq)(t);
+  return null != p && m(p) ? (0, i.jsxs)(o.Zb, {
 selected: a,
 children: [
   (0, i.jsxs)(o.e$, {
@@ -41,15 +40,11 @@ children: [
         guildId: n.guild_id
       }),
       (0, i.jsx)(o.ll, {
-        children: function(e) {
-          return u.Z.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_GAME.format({
-            gameName: e.extra.game_name
-          });
-        }(t)
+        children: t.extra.game_name
       }),
       (0, i.jsx)(r.Gk, {
         location: r.Gt.CARD,
-        children: p.map((e, n) => (0, i.jsx)(e, {
+        children: h.map((e, n) => (0, i.jsx)(e, {
           entry: t
         }, n))
       })
@@ -58,7 +53,7 @@ children: [
   (0, i.jsx)(c.f, {
     src: s,
     size: 48,
-    className: h.thumbnail
+    className: u.thumbnail
   })
 ]
   }) : null;

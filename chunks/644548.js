@@ -7,15 +7,17 @@ var i = n(735250),
   o = n(561308),
   c = n(919394),
   d = n(206295),
-  u = n(555672),
-  h = n(297781),
-  p = n(591853),
-  m = n(265048),
-  _ = n(689938);
-let f = (e, t, n, i) => {
+  u = n(227172),
+  h = n(555672),
+  p = n(297781),
+  m = n(591853),
+  _ = n(410441),
+  f = n(265048),
+  E = n(689938);
+let C = (e, t, n, i) => {
 let a = function(e) {
     if (e === s._.WEEK)
-      return _.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
+      return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
   }(i),
   l = r.ZP.getName(t.guild_id, t.id, n),
   o = e.extra.game_name;
@@ -24,7 +26,7 @@ return a.plainFormat({
   userName: l
 }).replaceAll('*', '');
   },
-  E = (e, t) => _.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+  g = (e, t) => E.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
 username: t.username,
 activity: e.extra.game_name
   });
@@ -35,68 +37,76 @@ entry: n,
 requestId: s,
 closePopout: r
   } = e, {
-iconUrl: C,
-iconTitle: g,
-user: I,
-details: x,
-gameTitle: T
-  } = (0, m.F)(n), {
-primaryColor: N,
-secondaryColor: v
-  } = (0, d.Z)(C), S = (0, o.yA)(n), Z = (0, o.Nq)(n), A = a.useCallback(e => {
-if (null != I && null != S && null != Z && !!(0, u.qy)(Z))
+iconUrl: I,
+iconTitle: x,
+user: T,
+details: v,
+gameTitle: N,
+coverImageUrl: S
+  } = (0, f.F)(n), {
+primaryColor: Z,
+secondaryColor: A
+  } = (0, d.Z)(I), M = (0, o.yA)(n), b = (0, o.Nq)(n), R = a.useCallback(e => {
+if (null != T && null != M && null != b && !!(0, h.qy)(b))
   return (0, c.SO)({
     entry: n,
-    applicationImageSrc: C,
-    avatarSrcs: [I.getAvatarURL(t.guild_id, 128)],
-    description: f(n, t, I, Z),
-    timestamp: _.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
-      hours: Math.round(S / l.Z.Seconds.HOUR)
+    applicationImageSrc: I,
+    avatarSrcs: [T.getAvatarURL(t.guild_id, 128)],
+    description: C(n, t, T, b),
+    timestamp: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
+      hours: Math.round(M / l.Z.Seconds.HOUR)
     }),
     colors: [
-      N,
-      v
+      Z,
+      A
     ],
     channelId: e
   });
   }, [
-C,
+I,
 t,
-S,
+M,
 n,
-N,
 Z,
-v,
-I
+b,
+A,
+T
   ]);
-  return null != I && null != S && null != Z && (0, u.qy)(Z) ? (0, i.jsxs)(p.yR, {
+  if (null == T || null == M || null == b || !(0, h.qy)(b))
+return null;
+  let j = null != n.extra.platform ? u.v[n.extra.platform] : null;
+  return (0, i.jsxs)(m.yR, {
 children: [
-  (0, i.jsx)(p.wG, {
-    thumbnailSrc: C,
-    thumbnailTitle: g,
+  (0, i.jsx)(m.wG, {
+    thumbnailSrc: null != S ? S : I,
+    thumbnailTitle: x,
     channel: t,
+    headerIcons: null == j ? null : (0, i.jsx)(_.Z, {
+      Icon: j,
+      'aria-label': E.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
+    }),
     entry: n,
-    userDescription: _.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
-    title: T,
-    subtitle: x,
-    badges: (0, i.jsx)(h.Gk, {
-      location: h.Gt.POPOUT,
-      children: u.Hs.map((e, t) => (0, i.jsx)(e, {
+    userDescription: E.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+    title: N,
+    subtitle: v,
+    badges: (0, i.jsx)(p.Gk, {
+      location: p.Gt.POPOUT,
+      children: h.Hs.map((e, t) => (0, i.jsx)(e, {
         entry: n
       }, t))
     })
   }),
-  (0, i.jsx)(p.St, {
-    children: (0, i.jsx)(p.WT, {
+  (0, i.jsx)(m.St, {
+    children: (0, i.jsx)(m.WT, {
       closePopout: r,
-      user: I,
+      user: T,
       channel: t,
-      generateReactionImage: A,
-      reactionImageAltText: E(n, I),
+      generateReactionImage: R,
+      reactionImageAltText: g(n, T),
       entry: n,
       requestId: s
     })
   })
 ]
-  }) : null;
+  });
 };

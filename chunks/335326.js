@@ -60,9 +60,7 @@ children: [
         guildId: n.guild_id
       }),
       (0, i.jsx)(d.ll, {
-        children: p.Z.Messages.MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA.format({
-          mediaTitle: t.extra.media_title
-        })
+        children: t.extra.media_title
       }),
       (0, i.jsx)(c.Gk, {
         location: c.Gt.CARD,

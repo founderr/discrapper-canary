@@ -1,53 +1,58 @@
-t.d(n, {
+E.d(_, {
   $: function() {
-return m;
+return L;
   }
-}), t(653041), t(47120);
-var a = t(470079),
-  r = t(392711),
-  i = t.n(r),
-  s = t(442837),
-  o = t(846519),
-  l = t(224706),
-  c = t(669764);
+}), E(653041), E(47120);
+var s = E(470079),
+  T = E(392711),
+  I = E.n(T),
+  n = E(442837),
+  A = E(846519),
+  t = E(224706),
+  a = E(669764);
 
-function d(e, n, t) {
-  return n in e ? Object.defineProperty(e, n, {
-value: t,
+function r(e, _, E) {
+  return _ in e ? Object.defineProperty(e, _, {
+value: E,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[n] = t, e;
+  }) : e[_] = E, e;
 }
-let u = new class e {
+let N = new class e {
   request(e) {
 !(this._pending.has(e) || this._fetched.has(e)) && (this._pending.add(e), this._flushHandler.delay(!1));
   }
   _flush() {
 let e = [];
-this._pending.forEach(n => {
-  this._fetched.add(n), e.push(n);
-}), i().chunk(e, 20).forEach(e => {
-  l.Z.getDetectableGamesSupplemental(e);
+this._pending.forEach(_ => {
+  this._fetched.add(_), e.push(_);
+}), I().chunk(e, 20).forEach(e => {
+  t.Z.getDetectableGamesSupplemental(e);
 });
   }
   constructor() {
-d(this, '_fetched', new Set()), d(this, '_pending', new Set()), d(this, '_flushHandler', new o.sW(0, () => this._flush()));
+r(this, '_fetched', new Set()), r(this, '_pending', new Set()), r(this, '_flushHandler', new A.sW(0, () => this._flush()));
   }
 }();
 
-function m(e, n) {
-  a.useEffect(() => {
-u.request(e);
+function L(e, _) {
+  s.useEffect(() => {
+null != e && N.request(e);
   }, [e]);
-  let t = a.useMemo(() => null != n ? {
-width: n.coverImageWidth,
-height: n.coverImageHeight
-  } : void 0, [n]);
-  return (0, s.cj)([c.Z], () => ({
-isFetching: c.Z.isFetching(e),
-localizedName: c.Z.getLocalizedName(e),
-themes: c.Z.getThemes(e),
-coverImageUrl: c.Z.getCoverImageUrl(e, t)
-  }));
+  let E = s.useMemo(() => null != _ ? {
+width: _.coverImageWidth,
+height: _.coverImageHeight
+  } : void 0, [_]);
+  return (0, n.cj)([a.Z], () => null == e ? {
+isFetching: !1,
+localizedName: void 0,
+themes: void 0,
+coverImageUrl: void 0
+  } : {
+isFetching: a.Z.isFetching(e),
+localizedName: a.Z.getLocalizedName(e),
+themes: a.Z.getThemes(e),
+coverImageUrl: a.Z.getCoverImageUrl(e, E)
+  });
 }

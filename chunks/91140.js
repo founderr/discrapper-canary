@@ -1,71 +1,63 @@
 t.d(n, {
   W: function() {
-return E;
+return c;
   }
 });
 var l = t(735250),
   r = t(470079),
-  a = t(561308),
-  o = t(297781),
-  i = t(443487),
-  u = t(43205),
-  s = t(265048),
-  c = t(689938),
-  d = t(827418);
-let E = [
-  o.OV,
-  o.EE,
-  o.Af,
-  o.U9,
-  o.gj,
-  o.f,
-  o.n8,
-  o.v1,
-  o.pQ
+  a = t(297781),
+  o = t(443487),
+  i = t(43205),
+  u = t(265048),
+  s = t(827418);
+let c = [
+  a.OV,
+  a.EE,
+  a.Af,
+  a.U9,
+  a.gj,
+  a.f,
+  a.n8,
+  a.v1,
+  a.pQ
 ];
 n.Z = r.memo(e => {
   let {
 entry: n,
 channel: t,
 selected: r,
-hovered: _
+hovered: d
   } = e, {
-iconUrl: f,
-iconTitle: T
-  } = (0, s.F)(n);
-  return (0, l.jsxs)(i.Zb, {
+iconUrl: E,
+iconTitle: _
+  } = (0, u.F)(n);
+  return (0, l.jsxs)(o.Zb, {
 selected: r,
 children: [
-  (0, l.jsxs)(i.e$, {
+  (0, l.jsxs)(o.e$, {
     children: [
-      (0, l.jsx)(i.F9, {
+      (0, l.jsx)(o.F9, {
         entry: n,
         channelId: t.id,
         guildId: t.guild_id
       }),
-      (0, l.jsx)(i.ll, {
-        children: function(e) {
-          return (0, a.kr)(e) ? c.Z.Messages.MEMBER_LIST_CONTENT_FEED_PLAYING_GAME.format({
-            gameName: e.extra.game_name
-          }) : c.Z.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_GAME.format({
-            gameName: e.extra.game_name
-          });
-        }(n)
+      (0, l.jsx)(o.ll, {
+        children: n.extra.game_name
       }),
-      (0, l.jsx)(o.Gk, {
-        location: o.Gt.CARD,
-        children: E.map((e, t) => (0, l.jsx)(e, {
+      (0, l.jsx)(a.Gk, {
+        location: a.Gt.CARD,
+        children: c.map((e, t) => (0, l.jsx)(e, {
           entry: n,
-          hovered: _
+          hovered: d
         }, t))
       })
     ]
   }),
-  (0, l.jsx)(u.f, {
-    alt: T,
-    src: f,
+  (0, l.jsx)(i.f, {
+    alt: _,
+    src: E,
     size: 48,
-    className: d.thumbnail
+    className: s.thumbnail
   })
 ]
   });

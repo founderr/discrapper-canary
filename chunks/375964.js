@@ -4377,6 +4377,7 @@ e.exports = Object.freeze({
   FACEBOOK: 'Facebook',
   INSTAGRAM: 'Instagram',
   SPOTIFY: 'Spotify',
+  CRUNCHYROLL: 'Crunchyroll',
   VIEW_SPECTATORS: 'View spectators',
   OPEN: 'Open',
   SELECT_PICTURE: 'Select picture',
