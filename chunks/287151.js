@@ -31,7 +31,7 @@ var i, s = n(735250),
   b = n(339085),
   E = n(906411),
   I = n(56314),
-  x = n(400106),
+  x = n(231053),
   C = n(944386),
   R = n(305325),
   S = n(33154),
@@ -567,7 +567,7 @@ let {
   nonce: c
 });
 let u = null !== (t = null == i ? void 0 : i.isDiscoverable()) && void 0 !== t && t,
-  d = null !== i && u;
+  d = null != i && u;
 return (0, s.jsx)(s.Fragment, {
   children: d ? null == i ? null : (0, s.jsxs)(s.Fragment, {
     children: [
@@ -612,50 +612,64 @@ let {
   return {
     joinedEmojiSourceGuild: (null == e ? void 0 : e.type) === E.B.GUILD ? P.Z.getGuild(null == e ? void 0 : e.guildId) : void 0
   };
-}), [u, h] = o.useState(void 0), [p, g] = o.useState(!1), [f, T] = o.useState(!1), [_, v] = o.useState(!1), I = null != c, C = null !== (t = null == u ? void 0 : u.isDiscoverable()) && void 0 !== t && t, R = w.Z.getGuildId(), S = null != R && (R === (null == u ? void 0 : u.id) || R === (null == c ? void 0 : c.id)), N = U.default.getCurrentUser(), O = (0, G.a)({
-  isPremium: F.ZP.isPremium(N),
-  hasJoinedEmojiSourceGuild: I,
-  isDiscoverable: C,
-  emojiComesFromCurrentGuild: S,
+}), [u, h] = o.useState(void 0), [p, g] = o.useState(void 0), [f, T] = o.useState(null), [_, v] = o.useState(!1), [I, C] = o.useState(!1), [R, S] = o.useState(!1), N = null != c, O = null !== (t = null == u ? void 0 : u.isDiscoverable()) && void 0 !== t && t, Z = w.Z.getGuildId(), j = null != Z && (Z === (null == u ? void 0 : u.id) || Z === (null == c ? void 0 : c.id)), M = U.default.getCurrentUser(), A = (0, G.a)({
+  sourceType: f,
+  expressionSourceApplication: null != p ? p : null,
+  isPremium: F.ZP.isPremium(M),
+  hasJoinedEmojiSourceGuild: N,
+  isDiscoverable: O,
+  emojiComesFromCurrentGuild: j,
   isUnusableRoleSubscriptionEmoji: !1,
   userIsRoleSubscriber: !1,
   isRoleSubscriptionEmoji: !1,
   shouldHideRoleSubscriptionCTA: !1
 });
 o.useEffect(() => {
-  if (!!p && !_)
+  if (!!_ && !R)
     (async () => {
-      i(), T(!0), h(await x.Z.getGuildFromEmojiId(n)), T(!1), v(!0), i();
+      i(), C(!0);
+      let e = null != n ? await (0, x.Fi)(n) : null;
+      if (null != e)
+        switch (T(e.type), e.type) {
+          case x.w6.APPLICATION:
+            g(e.application);
+            break;
+          case x.w6.GUILD:
+            h(e.guild);
+        }
+      else
+        h(null);
+      C(!1), S(!0), i();
     })();
 }, [
   n,
-  p,
   _,
+  R,
   i
 ]);
-if (I)
+if (N)
   return null;
-let Z = () => {
-    g(!p);
+let y = () => {
+    v(!_);
   },
-  j = p && void 0 !== u;
+  L = _ && (void 0 !== u || void 0 !== p);
 return (0, s.jsxs)('div', {
   children: [
-    j ? (0, s.jsxs)(s.Fragment, {
+    L ? (0, s.jsxs)(s.Fragment, {
       children: [
         (0, s.jsx)('div', {
           className: $.reactionEmojiDetailsDivider
         }),
-        null != O.emojiDescription && O.type !== G.$.UNAVAILABLE && (0, s.jsx)(m.Text, {
+        null != A.emojiDescription && A.type !== G.$.UNAVAILABLE && (0, s.jsx)(m.Text, {
           variant: 'text-sm/normal',
-          'aria-label': O.type,
-          children: O.emojiDescription
+          'aria-label': A.type,
+          children: A.emojiDescription
         })
       ]
     }) : (() => {
       let e = X.Z.Messages.INVENTORY_EMOJI_DETAILS_V2;
       return (0, s.jsxs)(m.Clickable, {
-        onClick: Z,
+        onClick: y,
         className: $.reactionEmojiDetailsClickable,
         children: [
           (0, s.jsx)(m.Text, {
@@ -668,21 +682,21 @@ return (0, s.jsxs)('div', {
             size: 'xs',
             color: 'currentColor',
             className: l()($.reactionEmojiDetailsArrow, {
-              [$.reactionEmojiDetailsArrowCollapsed]: !p
+              [$.reactionEmojiDetailsArrowCollapsed]: !_
             })
           })
         ]
       });
     })(),
-    f ? (0, s.jsx)(z.SE, {
+    I ? (0, s.jsx)(z.SE, {
       className: $.emojiDetailsLoader
-    }) : j && (0, s.jsx)(er, {
+    }) : L && (0, s.jsx)(er, {
       emojiId: n,
       expressionSourceGuild: u,
-      hasJoinedExpressionSourceGuild: I,
+      hasJoinedExpressionSourceGuild: N,
       onClose: a,
-      popoutData: O,
-      currentGuildId: R,
+      popoutData: A,
+      currentGuildId: Z,
       nonce: r
     })
   ]

@@ -7,7 +7,7 @@ var i = n(735250),
   o = n(481060),
   c = n(749210),
   d = n(367907),
-  u = n(400106),
+  u = n(231053),
   _ = n(697568),
   E = n(183023),
   I = n(524444),
@@ -246,7 +246,7 @@ return (a.useEffect(() => {
       if (!W && !B)
         return;
       let t = (null !== (e = null == S ? void 0 : S.stickers) && void 0 !== e ? e : []).slice(0, 13).filter(e => e.id !== n.id).slice(0, 12),
-        a = null != S ? u.Z.createFromDiscoverableGuild(S) : u.Z.createFromGuildRecord(y);
+        a = null != S ? u.JO.createFromDiscoverableGuild(S) : u.JO.createFromGuildRecord(y);
       return (0, i.jsxs)('div', {
         className: P.guildSection,
         children: [
