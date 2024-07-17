@@ -1,22 +1,21 @@
 var r = n(735250);
 n(470079);
 var i = n(293335),
-  a = n(729436),
-  s = n(453925);
+  a = n(453925);
 t.Z = e => {
   let {
 profileEffectConfig: t,
 onReady: n
   } = e, {
-pendingRef: o,
-setPending: l
+pendingRef: s,
+setPending: o
   } = (0, i.Z)(t.effects, n);
   return (0, r.jsx)('div', {
-className: s.profileEffects,
+className: a.profileEffects,
 children: (0, r.jsx)('div', {
-  className: s.inner,
+  className: a.inner,
   children: t.effects.map(e => (0, r.jsx)('img', {
-    src: (0, a.Gn)(e.src),
+    src: e.src,
     alt: 'Preload Profile Effect Asset',
     'aria-hidden': !0,
     style: {
@@ -24,7 +23,7 @@ children: (0, r.jsx)('div', {
       position: 'absolute'
     },
     onLoad: () => {
-      l(o.current - 1), o.current = o.current - 1;
+      o(s.current - 1), s.current = s.current - 1;
     }
   }, e.src))
 })

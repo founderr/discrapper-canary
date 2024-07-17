@@ -1,12 +1,12 @@
 n.d(t, {
-  Gn: function() {
-return s;
-  },
   Hd: function() {
 return i;
   },
   QE: function() {
 return a;
+  },
+  qB: function() {
+return o;
   }
 });
 var r = n(366040);
@@ -21,6 +21,8 @@ if ('1228233381897179137' === e.id || '1228234629429985300' === e.id) {
 }
 return e;
   },
-  s = e => r._.getCurrentConfig({
-location: 'Profile Effect Component'
-  }).enabled ? e.slice(0, e.lastIndexOf('.png')) + '.webp' : e;
+  s = e => '.png' === e.slice(e.length - 4, e.length) ? e.slice(0, e.lastIndexOf('.png')) + '.webp' : e,
+  o = e => {
+let t = (0, r.i)('Profile Effect Component');
+void 0 !== e && t && (e.effects = e.effects.map(e => (e.src = s(e.src), e)));
+  };
