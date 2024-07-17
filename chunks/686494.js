@@ -1,40 +1,40 @@
-t.d(e, {
+o.d(n, {
   Z: function() {
 return C;
   }
 });
-var o = t(735250);
-t(470079);
-var r = t(212598),
-  i = t(728151),
-  s = t(981631),
-  c = t(689938),
-  l = t(344595),
-  a = t(322539);
+var t = o(735250);
+o(470079);
+var i = o(212598),
+  r = o(728151),
+  s = o(981631),
+  c = o(689938),
+  l = o(344595),
+  a = o(322539);
 
-function C(n) {
+function C(e) {
   let {
-isWaitingForConnection: e,
-onWaitingForConnection: t,
+isWaitingForConnection: n,
+onWaitingForConnection: o,
 expectedCallbackState: C,
 onAuthToken: u,
 onError: d,
 onClose: _
-  } = n, N = e ? (0, o.jsx)('img', {
+  } = e, N = n ? (0, t.jsx)('img', {
 src: a,
 width: '168',
 height: '124',
 alt: ''
-  }) : (0, o.jsx)('img', {
+  }) : (0, t.jsx)('img', {
 src: l,
 width: '152',
 height: '123',
 alt: ''
-  }), L = e ? c.Z.Messages.CRUNCHYROLL_DETAILS_TITLE_WAITING : c.Z.Messages.CRUNCHYROLL_DETAILS_TITLE, R = e ? c.Z.Messages.CRUNCHYROLL_DETAILS_BODY_WAITING : c.Z.Messages.CRUNCHYROLL_DETAILS_BODY;
-  return (0, o.jsx)(r.t, {
+  }), L = n ? c.Z.Messages.CRUNCHYROLL_DETAILS_TITLE_WAITING : c.Z.Messages.CRUNCHYROLL_DETAILS_TITLE, R = n ? c.Z.Messages.CRUNCHYROLL_DETAILS_BODY_WAITING : c.Z.Messages.CRUNCHYROLL_DETAILS_BODY;
+  return (0, t.jsx)(i.t, {
 platformType: s.ABu.CRUNCHYROLL,
-isWaitingForConnection: e,
-onWaitingForConnection: t,
+isWaitingForConnection: n,
+onWaitingForConnection: o,
 expectedCallbackState: C,
 onAuthToken: u,
 onError: d,
@@ -42,6 +42,6 @@ onClose: _,
 img: N,
 title: L,
 body: R,
-redirectDestination: i.pY
+redirectDestination: r.pY
   });
 }

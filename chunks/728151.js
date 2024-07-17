@@ -1,19 +1,19 @@
-t.d(e, {
+n.d(t, {
   Ii: function() {
 return s;
   },
   pY: function() {
-return r;
+return i;
   },
   sp: function() {
-return i;
+return a;
   }
 });
-var o = t(243814);
-let r = 'https://crunchyroll.com',
-  i = '981509069309354054',
+var r = n(243814);
+let i = 'https://crunchyroll.com',
+  a = '981509069309354054',
   s = [
-o.x.ACTIVITIES_WRITE,
-o.x.EMAIL,
-o.x.IDENTIFY
+r.x.ACTIVITIES_WRITE,
+r.x.EMAIL,
+r.x.IDENTIFY
   ];

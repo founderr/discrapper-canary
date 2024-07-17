@@ -1,28 +1,28 @@
-t.d(e, {
+o.d(n, {
   Z: function() {
 return d;
   }
 });
-var o = t(735250);
-t(470079);
-var r = t(481060),
-  i = t(63063),
-  s = t(376340),
-  c = t(981631),
-  l = t(689938),
-  a = t(80069),
-  C = t(38920);
+var t = o(735250);
+o(470079);
+var i = o(481060),
+  r = o(63063),
+  s = o(376340),
+  c = o(981631),
+  l = o(689938),
+  a = o(80069),
+  C = o(38920);
 
 function u() {
-  return (0, o.jsx)('div', {
+  return (0, t.jsx)('div', {
 className: a.__invalid_getCrunchyrollApp,
-children: (0, o.jsx)('div', {
+children: (0, t.jsx)('div', {
   className: a.__invalid_getCrunchyrollAppBody,
-  children: (0, o.jsx)(r.Text, {
+  children: (0, t.jsx)(i.Text, {
     variant: 'text-sm/medium',
     color: 'header-secondary',
-    children: (0, o.jsx)(r.Anchor, {
-      href: i.Z.getArticleURL(c.BhN.CRUNCHYROLL_CONNECTION),
+    children: (0, t.jsx)(i.Anchor, {
+      href: r.Z.getArticleURL(c.BhN.CRUNCHYROLL_CONNECTION),
       children: l.Z.Messages.LEARN_MORE
     })
   })
@@ -30,12 +30,12 @@ children: (0, o.jsx)('div', {
   });
 }
 
-function d(n) {
+function d(e) {
   let {
-onClose: e
-  } = n;
-  return (0, o.jsx)(s.L, {
-img: (0, o.jsx)('img', {
+onClose: n
+  } = e;
+  return (0, t.jsx)(s.L, {
+img: (0, t.jsx)('img', {
   src: C,
   width: '224',
   height: '104',
@@ -43,7 +43,7 @@ img: (0, o.jsx)('img', {
 }),
 title: l.Z.Messages.CONNECT_CRUNCHYROLL_SUCCESS_TITLE,
 body: l.Z.Messages.CONNECT_CRUNCHYROLL_SUCCESS_BODY,
-content: (0, o.jsx)(u, {}),
-onClose: e
+content: (0, t.jsx)(u, {}),
+onClose: n
   });
 }
