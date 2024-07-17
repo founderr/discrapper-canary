@@ -1,17 +1,19 @@
 n.d(t, {
   d: function() {
-return s;
+return o;
   }
 });
-var r = n(91641),
-  i = n(598984),
-  a = n(987338);
-let s = new r.E([
-  i.NR,
-  i.ZI,
-  i.Ob,
-  i.uc,
-  i.m1
-], a.$P.POST_CONNECTION_OPEN, {
+var r = n(539746),
+  i = n(91641),
+  a = n(598984),
+  s = n(987338);
+let o = new i.E([
+  a.NR,
+  a.ZI,
+  a.Ob,
+  a.uc,
+  a.m1,
+  r.J
+], s.$P.POST_CONNECTION_OPEN, {
   location: 'app open'
 });
