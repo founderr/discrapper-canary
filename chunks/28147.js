@@ -45,24 +45,23 @@ function O(e) {
 channel: n,
 query: t,
 entrypoint: a,
-enableActivitiesSearch: o,
-isScrollCloseToBottom: c
-  } = e, u = a === A._b.VOICE || o, m = a === A._b.TEXT, p = a === A._b.TEXT, {
-loading: _,
-isEmptyState: E,
-commandResults: f,
-hasCommandResults: N,
-applicationResults: C
+isScrollCloseToBottom: o
+  } = e, c = a === A._b.TEXT, u = a === A._b.TEXT, {
+loading: m,
+isEmptyState: p,
+commandResults: _,
+hasCommandResults: E,
+applicationResults: f
   } = (0, h.pe)({
 channel: n,
 query: t,
-searchesActivities: u,
-searchesCommands: m,
-searchesBots: p
+searchesActivities: !0,
+searchesCommands: c,
+searchesBots: u
   }), {
-fetchState: I,
-applicationResults: P,
-fetchNextPage: T
+fetchState: N,
+applicationResults: C,
+fetchNextPage: I
   } = (0, h.Q2)({
 query: t,
 channel: n,
@@ -70,21 +69,21 @@ fetches: a !== A._b.VOICE,
 pageLimit: 5
   });
   l.useEffect(() => {
-c && I === d.M.FETCHED && T();
+o && N === d.M.FETCHED && I();
   }, [
-T,
 I,
-c
+N,
+o
   ]);
-  let S = null == I || I === d.M.FETCHING,
-x = l.useMemo(() => {
-  let e = C.map(e => ({
+  let P = null == N || N === d.M.FETCHING,
+T = l.useMemo(() => {
+  let e = f.map(e => ({
     application: e,
     installOnDemand: !1
   }));
   if (a === A._b.VOICE)
     return e;
-  let n = new Set(C.map(e => {
+  let n = new Set(f.map(e => {
     let {
       id: n
     } = e;
@@ -92,34 +91,34 @@ x = l.useMemo(() => {
   }));
   return [
     ...e,
-    ...r().compact(P.map(e => e.type === s.s.CONNECTION || n.has(e.data.id) ? null : {
+    ...r().compact(C.map(e => e.type === s.s.CONNECTION || n.has(e.data.id) ? null : {
       application: e.data,
       installOnDemand: !0
     }))
   ];
 }, [
   a,
-  P,
-  C
+  C,
+  f
 ]),
-L = x.length > 0,
-g = E && !L && !S;
-  return _ ? (0, i.jsx)(D, {}) : g ? (0, i.jsx)(v.A, {
+S = T.length > 0,
+x = p && !S && !P;
+  return m ? (0, i.jsx)(D, {}) : x ? (0, i.jsx)(v.A, {
 type: A.LG.SEARCH_EMPTY,
 searchQuery: t,
 textContent: a === A._b.TEXT ? R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
   }) : (0, i.jsxs)('div', {
 children: [
-  N && (0, i.jsx)(b, {
+  E && (0, i.jsx)(b, {
     channel: n,
-    commandResults: f,
+    commandResults: _,
     query: t
   }),
-  (L || S) && (0, i.jsx)(H, {
-    applicationResults: x,
-    includePlaceholder: S,
+  (S || P) && (0, i.jsx)(H, {
+    applicationResults: T,
+    includePlaceholder: P,
     query: t,
-    searchesBots: p
+    searchesBots: u
   })
 ]
   });
@@ -129,41 +128,40 @@ function j(e) {
   let {
 channel: n,
 query: t,
-entrypoint: a,
-enableActivitiesSearch: r
-  } = e, s = a === A._b.VOICE || r, o = a === A._b.TEXT, c = a === A._b.TEXT, {
-loading: u,
-isEmptyState: d,
-commandResults: m,
-hasCommandResults: p,
-applicationResults: _,
-hasApplicationResults: E
+entrypoint: a
+  } = e, r = a === A._b.TEXT, s = a === A._b.TEXT, {
+loading: o,
+isEmptyState: c,
+commandResults: u,
+hasCommandResults: d,
+applicationResults: m,
+hasApplicationResults: p
   } = (0, h.pe)({
 channel: n,
 query: t,
 commandLimit: 10,
-searchesCommands: o,
-searchesBots: c,
-searchesActivities: s
-  }), f = l.useMemo(() => _.map(e => ({
+searchesCommands: r,
+searchesBots: s,
+searchesActivities: !0
+  }), _ = l.useMemo(() => m.map(e => ({
 application: e,
 installOnDemand: !1
-  })), [_]);
-  return u ? (0, i.jsx)(D, {}) : d ? (0, i.jsx)(v.A, {
+  })), [m]);
+  return o ? (0, i.jsx)(D, {}) : c ? (0, i.jsx)(v.A, {
 type: A.LG.SEARCH_EMPTY,
 searchQuery: t,
 textContent: a === A._b.TEXT ? R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
   }) : (0, i.jsxs)('div', {
 children: [
-  p && (0, i.jsx)(b, {
+  d && (0, i.jsx)(b, {
     channel: n,
-    commandResults: m,
+    commandResults: u,
     query: t
   }),
-  E && (0, i.jsx)(H, {
-    applicationResults: f,
+  p && (0, i.jsx)(H, {
+    applicationResults: _,
     query: t,
-    searchesBots: c
+    searchesBots: s
   })
 ]
   });
