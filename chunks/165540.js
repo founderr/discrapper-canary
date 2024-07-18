@@ -71,7 +71,7 @@ children: (0, i.jsx)(c.Button, {
   },
   innerClassName: Z.buttonContents,
   children: (0, i.jsx)(c.AppsIcon, {
-    className: l()(s ? Z.iconHovered : Z.iconUnhovered)
+    className: l()(s || h ? Z.iconActive : Z.iconInactive)
   })
 })
   });
