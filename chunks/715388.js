@@ -61,7 +61,7 @@ children: [
     scrollIntoView: p === S.Tb.ROLES
   }),
   (0, s.jsx)(E.Z, {
-    title: Z.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+    title: Z.Z.Messages.BOT_PROFILE_CREATED_ON,
     children: (0, s.jsx)(f.Z, {
       userId: n.id,
       guildId: null == h ? void 0 : h.guildId,

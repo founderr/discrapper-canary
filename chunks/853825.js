@@ -1,6 +1,6 @@
 n.d(i, {
   Z: function() {
-return M;
+return O;
   }
 }), n(47120);
 var s = n(735250),
@@ -30,15 +30,15 @@ var s = n(735250),
   j = n(247321),
   A = n(47460);
 
-function M(e) {
+function O(e) {
   let {
 user: i,
 guildId: n,
-channelId: M,
+channelId: O,
 messageId: L,
 roleId: R,
 transitionState: U,
-onClose: O,
+onClose: M,
 sourceAnalyticsLocations: P = []
   } = e, {
 analyticsLocations: b
@@ -52,7 +52,7 @@ children: (0, s.jsx)(u.Mt, {
   layout: 'SIMPLIFIED_MODAL',
   userId: i.id,
   guildId: y,
-  channelId: M,
+  channelId: O,
   messageId: L,
   roleId: R,
   showGuildProfile: !0,
@@ -88,7 +88,7 @@ children: (0, s.jsx)(u.Mt, {
                   user: i,
                   displayProfile: D,
                   guildId: y,
-                  channelId: M,
+                  channelId: O,
                   profileType: T.y0.FULL_SIZE
                 })
               })
@@ -100,13 +100,13 @@ children: (0, s.jsx)(u.Mt, {
               (0, s.jsx)(x.Z, {
                 user: i,
                 profileType: T.y0.FULL_SIZE,
-                nickname: c.ZP.getName(y, M, i),
+                nickname: c.ZP.getName(y, O, i),
                 pronouns: null == D ? void 0 : D.pronouns,
                 nicknameVariant: 'heading-xl/bold',
                 tags: (0, s.jsx)(f.Z, {
                   displayProfile: D,
                   profileType: T.y0.FULL_SIZE,
-                  onClose: O
+                  onClose: M
                 })
               }),
               (0, s.jsx)(v.Z.Overlay, {
@@ -139,7 +139,7 @@ children: (0, s.jsx)(u.Mt, {
                           setLineClamp: !1
                         }),
                         (0, s.jsx)(Z.Z, {
-                          title: N.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+                          title: N.Z.Messages.BOT_PROFILE_CREATED_ON,
                           children: (0, s.jsx)(S.Z, {
                             userId: i.id,
                             guildId: y,

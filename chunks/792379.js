@@ -118,7 +118,7 @@ children: (0, i.jsx)(p.Mt, {
                     })
                   }),
                   (0, i.jsx)(I.Z, {
-                    title: b.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+                    title: b.Z.Messages.BOT_PROFILE_CREATED_ON,
                     headingColor: 'header-primary',
                     children: (0, i.jsx)(g.Z, {
                       userId: t.id
