@@ -53,7 +53,7 @@ position: 'top',
 children: e => (0, r.jsx)(o.CheckmarkSmallBoldIcon, {
   ...e,
   className: c.botTagVerified,
-  color: o.tokens.unsafe_rawColors.WHITE_500
+  color: o.tokens.colors.WHITE
 })
   })), t = i === l.Hb.AI ? c.botTagAI : n ? c.botTagInvert : c.botTagRegular;
   let S = e => (0, r.jsxs)('span', {

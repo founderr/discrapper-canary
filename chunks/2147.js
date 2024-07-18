@@ -598,8 +598,7 @@ let {
       ee.Z.Messages.CHANNEL_SETTINGS_SUMMARIES_TOGGLE,
       (0, n.jsx)(h.TextBadge, {
         text: ee.Z.Messages.BETA,
-        color: c.Z.unsafe_rawColors.BRAND_500.css,
-        className: et.__invalid_betaTag
+        color: c.Z.colors.BG_BRAND.css
       })
     ]
   })

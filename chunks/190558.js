@@ -622,6 +622,44 @@ category: 'background',
   opacity: 1
 }
   },
+  BADGE_BRAND_BG: {
+category: 'background',
+[n.DARK]: {
+  raw: 'BRAND_260',
+  opacity: 1
+},
+[n.LIGHT]: {
+  raw: 'BRAND_260',
+  opacity: 1
+},
+[n.MIDNIGHT]: {
+  raw: 'BRAND_260',
+  opacity: 1
+},
+[n.DARKER]: {
+  raw: 'BRAND_260',
+  opacity: 1
+}
+  },
+  BADGE_BRAND_TEXT: {
+category: 'text',
+[n.DARK]: {
+  raw: 'BRAND_500',
+  opacity: 1
+},
+[n.LIGHT]: {
+  raw: 'BRAND_500',
+  opacity: 1
+},
+[n.MIDNIGHT]: {
+  raw: 'BRAND_500',
+  opacity: 1
+},
+[n.DARKER]: {
+  raw: 'BRAND_500',
+  opacity: 1
+}
+  },
   BG_BACKDROP: {
 category: 'background',
 [n.DARK]: {
@@ -3862,6 +3900,82 @@ category: 'generic',
 },
 [n.DARKER]: {
   raw: 'BRAND_230',
+  opacity: 1
+}
+  },
+  MENU_ITEM_DANGER_ACTIVE_BG: {
+category: 'background',
+[n.DARK]: {
+  raw: 'RED_530',
+  opacity: 1
+},
+[n.LIGHT]: {
+  raw: 'RED_530',
+  opacity: 1
+},
+[n.MIDNIGHT]: {
+  raw: 'RED_530',
+  opacity: 1
+},
+[n.DARKER]: {
+  raw: 'RED_530',
+  opacity: 1
+}
+  },
+  MENU_ITEM_DANGER_HOVER_BG: {
+category: 'background',
+[n.DARK]: {
+  raw: 'RED_430',
+  opacity: 1
+},
+[n.LIGHT]: {
+  raw: 'RED_430',
+  opacity: 1
+},
+[n.MIDNIGHT]: {
+  raw: 'RED_430',
+  opacity: 1
+},
+[n.DARKER]: {
+  raw: 'RED_430',
+  opacity: 1
+}
+  },
+  MENU_ITEM_DEFAULT_ACTIVE_BG: {
+category: 'background',
+[n.DARK]: {
+  raw: 'BRAND_560',
+  opacity: 1
+},
+[n.LIGHT]: {
+  raw: 'BRAND_560',
+  opacity: 1
+},
+[n.MIDNIGHT]: {
+  raw: 'BRAND_560',
+  opacity: 1
+},
+[n.DARKER]: {
+  raw: 'BRAND_560',
+  opacity: 1
+}
+  },
+  MENU_ITEM_DEFAULT_HOVER_BG: {
+category: 'background',
+[n.DARK]: {
+  raw: 'BRAND_500',
+  opacity: 1
+},
+[n.LIGHT]: {
+  raw: 'BRAND_500',
+  opacity: 1
+},
+[n.MIDNIGHT]: {
+  raw: 'BRAND_500',
+  opacity: 1
+},
+[n.DARKER]: {
+  raw: 'BRAND_500',
   opacity: 1
 }
   },
