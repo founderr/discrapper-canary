@@ -24,7 +24,7 @@ onActivityItemSelected: p,
 activityAction: _,
 buttonColor: E,
 buttonText: A
-  } = (0, o.P7)(n, t, s.Vh.APP_LAUNCHER_APPLICATION_VIEW, d), h = !(0, a.WS)(n, _ === r.JS.START);
+  } = (0, o.P7)(n, t, s.Vh.APP_LAUNCHER_APPLICATION_VIEW, d), h = _ !== r.JS.LEAVE && !n.isGuildVoice() && !(0, a.WS)(n, _ === r.JS.START);
   return (0, i.jsx)(l.Tooltip, {
 shouldShow: h,
 tooltipContentClassName: u.tooltipContent,
