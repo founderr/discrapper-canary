@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return p;
+return m;
   }
 }), n(47120);
 var i = n(735250),
@@ -12,62 +12,62 @@ var i = n(735250),
   c = n(168524),
   d = n(725119),
   u = n(26033),
-  h = n(689938);
+  h = n(689938),
+  p = n(910331);
 
-function p(e) {
+function m(e) {
   var t;
   let {
 user: n,
-guildId: p,
-channel: m,
-entry: _,
-onSelect: f
-  } = e, E = (0, d.Z)(n.id, p, m.id), C = (0, r.Z)({
+guildId: m,
+channel: _,
+entry: f,
+onSelect: E
+  } = e, C = (0, d.Z)(n.id, m, _.id), g = (0, r.Z)({
 id: n.id,
 label: h.Z.Messages.COPY_ID_USER
-  }), g = (0, u.d)(_), I = (0, c.Z)({
+  }), I = (0, u.d)(f), x = (0, c.Z)({
 location: 'ContentPopoutContextMenu',
-applicationId: g ? null === (t = _.extra) || void 0 === t ? void 0 : t.application_id : void 0,
+applicationId: I ? null === (t = f.extra) || void 0 === t ? void 0 : t.application_id : void 0,
 source: o.m1.ActivityCardContextMenu,
 trackEntryPointImpression: !0,
-sourceUserId: _.author_id
-  }), [x, T] = a.useState(!1);
+sourceUserId: f.author_id
+  }), [T, v] = a.useState(!1);
   return (0, i.jsx)(s.Popout, {
 align: 'top',
 position: 'right',
-shouldShow: x,
+shouldShow: T,
 disablePointerEvents: !1,
 renderPopout: () => (0, i.jsx)(s.Menu, {
   navId: 'content-inventory-context',
   onClose: l.Zy,
   'aria-label': h.Z.Messages.USER_ACTIONS_MENU_LABEL,
-  onSelect: f,
+  onSelect: E,
   children: (0, i.jsxs)(i.Fragment, {
     children: [
       (0, i.jsxs)(s.MenuGroup, {
         children: [
-          E,
-          null != I && (0, i.jsx)(s.MenuItem, {
+          C,
+          null != x && (0, i.jsx)(s.MenuItem, {
             id: 'game-profile',
             label: h.Z.Messages.GAME_PROFILE,
-            action: I
+            action: x
           })
         ]
       }),
       (0, i.jsx)(s.MenuGroup, {
-        children: C
+        children: g
       })
     ]
   })
 }),
 children: () => (0, i.jsx)(s.Clickable, {
-  style: {
-    cursor: 'pointer'
-  },
+  className: p.menuIcon,
   onClick: () => {
-    T(!0);
+    v(!0);
   },
   children: (0, i.jsx)(s.MoreHorizontalIcon, {
+    color: 'currentColor',
     size: 'custom',
     width: 16,
     height: 16

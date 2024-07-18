@@ -127,9 +127,12 @@ Q = null == G ? (0, i.jsx)(S.wG, {
   badges: X,
   entry: s
 }) : (0, i.jsx)(S.jL, {
+  thumbnailSrc: U,
+  thumbnailTitle: L,
   channel: n,
   streamPreviewSrc: G,
   title: s.extra.game_name,
+  subtitle: O,
   badges: X,
   userDescription: b.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
   entry: s,
