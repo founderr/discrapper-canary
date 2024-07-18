@@ -22,29 +22,29 @@ var i = n(735250),
   N = n(852595);
 t.Z = function(e) {
   let {} = e, t = (0, g.Z)(c.Z.QUEST_HOME_PAGE), {
-tabs: n,
-selectedTab: A,
-onSelectTab: Z
+tabs: A,
+selectedTab: Z,
+onSelectTab: v
   } = (0, S.z)(), {
-onScroll: v,
-scrollPosition: L
-  } = (0, u.c)(), O = (0, _.Z)({
-scrollPosition: L
-  }), R = (0, r.wj)((0, o.ZP)()), {
-quests: x
-  } = (0, m.bA)(A), b = (0, T.Z)(), P = null;
+onScroll: L,
+scrollPosition: O
+  } = (0, u.c)(), R = (0, _.Z)({
+scrollPosition: O
+  }), x = (0, r.wj)((0, o.ZP)()), {
+quests: b
+  } = (0, m.bA)(Z), P = (0, T.Z)(), M = null;
   if (window.location.hash.length > 0) {
 let e = window.location.hash.slice(1);
-for (let t of x)
+for (let t of b)
   if (t.id === e) {
-    P = e;
+    M = e;
     break;
   }
   }
   s.useEffect(() => {
 !t && (0, a.uL)(f.Z5c.FRIENDS);
   }, [t]), s.useEffect(() => {}, []);
-  let M = s.useCallback(() => {
+  let D = s.useCallback(() => {
 window.open(I.Z.getArticleURL(f.BhN.QUESTS_LEARN_MORE));
   }, []);
   return ((0, d.Tt)({
@@ -57,47 +57,64 @@ children: [
       color: l.tokens.colors.HEADER_PRIMARY,
       size: 'md'
     }),
-    tabs: n,
-    selectedTab: A,
+    tabs: A,
+    selectedTab: Z,
     tabColor: 'header-primary',
-    selectedTabColor: R ? 'text-muted' : 'header-primary',
-    onTabSelect: Z,
-    scrollPosition: L,
-    backgroundStyle: O
+    selectedTabColor: x ? 'text-muted' : 'header-primary',
+    onTabSelect: v,
+    scrollPosition: O,
+    backgroundStyle: R
   }),
   (0, i.jsx)(E.Z, {
     title: C.Z.Messages.QUESTS_HOME_HERO_TITLE,
     description: C.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-    backgroundImageUrl: b,
-    onScroll: v,
+    backgroundImageUrl: P,
+    onScroll: L,
     bannerContainerClassName: N.bannerContainer,
     bannerImageClassName: N.bannerImage,
     headerTextColor: 'header-primary',
-    descriptionTextColor: R ? 'text-muted' : 'currentColor',
+    descriptionTextColor: x ? 'text-muted' : 'currentColor',
     button: (0, i.jsxs)(l.Button, {
       size: 'medium',
-      color: R ? l.ButtonColors.TRANSPARENT : l.ButtonColors.WHITE,
+      color: x ? l.ButtonColors.TRANSPARENT : l.ButtonColors.WHITE,
       className: N.button,
-      onClick: M,
+      onClick: D,
       innerClassName: N.innerButton,
       children: [
         (0, i.jsx)(l.Text, {
           variant: 'text-md/semibold',
-          color: R ? 'always-white' : 'text-normal',
+          color: x ? 'always-white' : 'text-normal',
           className: N.externalLinkText,
           children: C.Z.Messages.LEARN_MORE
         }),
         (0, i.jsx)(l.LinkExternalSmallIcon, {
           className: N.icon,
-          color: R ? 'var(--white-500)' : 'var(--redesign-button-secondary-text'
+          color: x ? 'var(--white-500)' : 'var(--redesign-button-secondary-text'
         })
       ]
     }),
-    children: (0, i.jsx)('div', {
+    children: 0 === b.length && Z === m.e5.CLAIMED ? (0, i.jsxs)('div', {
+      className: N.emptyState,
+      children: [
+        (0, i.jsx)(l.EmptyStateImage, {
+          darkSrc: n(625065),
+          lightSrc: n(875184),
+          width: 272,
+          height: 222
+        }),
+        (0, i.jsx)(l.Text, {
+          variant: 'text-md/normal',
+          color: 'header-secondary',
+          children: C.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({
+            onClick: () => v(m.e5.UNCLAIMED)
+          })
+        })
+      ]
+    }) : (0, i.jsx)('div', {
       className: N.gridContainer,
       children: (0, i.jsx)(p.Z, {
-        quests: x,
-        selectedQuestId: P
+        quests: b,
+        selectedQuestId: M
       })
     })
   })
