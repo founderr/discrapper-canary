@@ -44,11 +44,11 @@ m.Z.paymentSources,
 m.Z.hasFetchedPaymentSources
   ]), B = (0, N.V)((0, O.yb)(s)), {
 analyticsLocations: U
-  } = (0, S.ZP)(), G = a.useMemo(() => Object.values(v).filter(e => !e.invalid), [v]), [F, y] = a.useState(!1), [V, Y] = a.useState(s.currency), w = async (e, t) => {
+  } = (0, S.ZP)(), G = a.useMemo(() => Object.values(v).filter(e => !e.invalid), [v]), [F, y] = a.useState(!1), [V, Y] = a.useState(s.currency), k = async (e, t) => {
 if (null == s)
   throw Error('missing subscription and paymentSource');
 null == e ? await E.fG(s, t, U, f) : await E.tq(s, e, t, U, f), y(!1), Y(t);
-  }, k = async (e, t, n) => {
+  }, w = async (e, t, n) => {
 y(!0);
 let a = await (0, p.hz)({
   subscriptionId: s.id,
@@ -69,10 +69,10 @@ l()(null != e, 'paymentSource not specified for change'), l()(null != t, 'Unable
 let n = (0, g.DE)(t.id, e.id, !1);
 return n.length > 0 ? n[0] : R.pKx.USD;
   }, W = e => {
-null != e && k(e, H(e), w);
+null != e && w(e, H(e), k);
   }, K = e => {
 (0, g.i1)(e.id, (0, O.yb)(s)).then(() => {
-  k(e, H(e), w);
+  w(e, H(e), k);
 }), 'function' == typeof t && t(e.id);
   }, z = () => {
 (0, d.openModalLazy)(async () => e => (0, n.jsx)(u.default, {
@@ -148,7 +148,7 @@ return (0, n.jsxs)(n.Fragment, {
             selectedCurrency: V,
             currencies: t,
             onChange: e => {
-              k(void 0, e, w);
+              w(void 0, e, k);
             }
           })
         ]

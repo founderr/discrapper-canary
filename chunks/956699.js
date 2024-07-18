@@ -62,10 +62,10 @@ let V = [
 }
   ];
 
-function w(e) {
+function k(e) {
   return 'discord_ios' in e || 'discord_android' in e;
 }
-class k extends a.Component {
+class w extends a.Component {
   render() {
 let {
   project: e,
@@ -210,7 +210,7 @@ let {
   saving: s,
   errors: t
 } = this.state;
-return null == e ? null : l().map(e, (e, a) => (0, n.jsx)(k, {
+return null == e ? null : l().map(e, (e, a) => (0, n.jsx)(w, {
   project: a,
   overrideType: e.type,
   overrideId: e.id,
@@ -265,7 +265,7 @@ return (0, n.jsxs)(D.Z, {
     (0, n.jsx)(D.Z.Child, {
       grow: 0,
       children: (0, n.jsx)(E.Button, {
-        disabled: w(null != s ? s : {}),
+        disabled: k(null != s ? s : {}),
         onClick: this.handleSaveChanges,
         submitting: e,
         color: E.Button.Colors.GREEN,
@@ -295,7 +295,7 @@ e = s ? (0, n.jsx)(E.Spinner, {
   className: G.marginTop20
 }) : null != a && 0 === Object.keys(a).length ? this.renderEmpty() : this.renderItems();
 let i = !t && !s && this.getAvailableProjects().length > 0,
-  r = w(null != a ? a : {}) && 'stable' !== window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, n.jsx)(E.Text, {
+  r = k(null != a ? a : {}) && 'stable' !== window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, n.jsx)(E.Text, {
     color: 'text-danger',
     variant: 'text-md/normal',
     children: 'Mobile build overrides must be generated using the desktop/web stable client for now!'
@@ -478,7 +478,7 @@ super(...e), y(this, 'state', {
 class W extends a.Component {
   isMobile() {
 var e;
-return w(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
+return k(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
   }
   renderSettingsForm() {
 let {

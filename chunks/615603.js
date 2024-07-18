@@ -135,16 +135,16 @@ return e;
   }, [
 y,
 h
-  ]), Y = null != P, w = a.useMemo(() => Z.find(e => e.isAvailable()), [Z]);
+  ]), Y = null != P, k = a.useMemo(() => Z.find(e => e.isAvailable()), [Z]);
   if (0 === Z.length)
 return null;
-  let k = Z.length;
-  if (s = F ? 1 === k && Y ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION).format({
-  numUnappliedGuildBoostSlots: k
+  let w = Z.length;
+  if (s = F ? 1 === w && Y ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION).format({
+  numUnappliedGuildBoostSlots: w
 }) : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2).format({
-  numUnappliedGuildBoostSlots: k
+  numUnappliedGuildBoostSlots: w
 }), m.ZP.isPremium(g)) {
-if (F && 1 === k && Y)
+if (F && 1 === w && Y)
   t = P.skuId === p.Ft.FREE_GUILD_BOOST_1_MONTH ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT;
 else {
   let e = (e, s) => (0, n.jsx)(l.Clickable, {
@@ -158,13 +158,13 @@ else {
   t = j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_ALL_COOLDOWN.format({
     learnMoreHook: e
   }) : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
-    numUnappliedGuildBoostSlots: k,
+    numUnappliedGuildBoostSlots: w,
     learnMoreHook: e
   });
 }
   } else
 t = j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING.format({
-  numUnappliedGuildBoostSlots: k
+  numUnappliedGuildBoostSlots: w
 });
   return (0, n.jsxs)('div', {
 className: x.wrapper,
@@ -221,14 +221,14 @@ children: [
           (0, n.jsx)('div', {
             className: x.headerContentSecondary,
             children: (0, n.jsx)(l.Tooltip, {
-              shouldShow: null == w || u,
+              shouldShow: null == k || u,
               text: u ? R.Z.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_NO_AVAILABLE_GUILD_BOOST_SLOTS,
               children: e => (0, n.jsx)(l.Button, {
                 ...e,
-                disabled: null == w || u,
-                onClick: null != w ? () => {
+                disabled: null == k || u,
+                onClick: null != k ? () => {
                   var e;
-                  return e = w, void(0, l.openModalLazy)(async () => s => (0, n.jsx)(_.default, {
+                  return e = k, void(0, l.openModalLazy)(async () => s => (0, n.jsx)(_.default, {
                     ...s,
                     guildBoostSlots: [e],
                     locationSection: O.jXE.SETTINGS_PREMIUM

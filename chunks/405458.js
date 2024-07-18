@@ -1,15 +1,15 @@
-var a = r(489161),
-  n = Array.prototype.concat,
-  s = Array.prototype.slice,
-  o = e.exports = function(e) {
-for (var t = [], r = 0, o = e.length; r < o; r++) {
+var n = r(489161),
+  a = Array.prototype.concat,
+  o = Array.prototype.slice,
+  s = e.exports = function(e) {
+for (var t = [], r = 0, s = e.length; r < s; r++) {
   var i = e[r];
-  a(i) ? t = n.call(t, s.call(i)) : t.push(i);
+  n(i) ? t = a.call(t, o.call(i)) : t.push(i);
 }
 return t;
   };
-o.wrap = function(e) {
+s.wrap = function(e) {
   return function() {
-return e(o(arguments));
+return e(s(arguments));
   };
 };

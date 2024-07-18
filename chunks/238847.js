@@ -170,8 +170,8 @@ F = async () => {
   isCancelled: y,
   isDeleted: V,
   isPastDue: Y,
-  subscriptionPlanPrice: w,
-  subscribedSinceDate: k,
+  subscriptionPlanPrice: k,
+  subscribedSinceDate: w,
   currentPeriodEndDate: H,
   currentPeriodEndLabel: W
 } = A, K = (0, x.KW)(i.sku_flags), z = (0, x.KK)(i.sku_flags), Q = i.soft_deleted || null == O || (!z || null == d) && !K, X = () => y || V ? (0, n.jsx)(_.TextBadge, {
@@ -292,12 +292,12 @@ children: [
           }),
           (0, n.jsx)(Z, {
             label: P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_PRICE,
-            value: w
+            value: k
           }),
           (0, n.jsx)(Z, {
             label: P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIBED_SINCE,
             value: P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIBED_SINCE_DATE.format({
-              timestamp: k.getTime()
+              timestamp: w.getTime()
             })
           })
         ]

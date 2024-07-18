@@ -4,13 +4,13 @@ return g;
   }
 });
 var t = l(735250),
-  i = l(470079),
-  r = l(442837),
+  r = l(470079),
+  i = l(442837),
   a = l(481060),
   s = l(58540),
   u = l(438536),
-  o = l(346479),
-  d = l(665906),
+  d = l(346479),
+  o = l(665906),
   c = l(592125),
   Z = l(430824),
   E = l(496675),
@@ -19,25 +19,25 @@ var t = l(735250),
   f = l(689938);
 
 function g(e, n, g) {
-  let m = i.useMemo(() => ({
+  let m = r.useMemo(() => ({
 [n]: [e.id]
   }), [
 n,
 e.id
   ]);
-  (0, s.$)(m), (0, r.e7)([E.Z], () => E.Z.getGuildVersion(n), [n]);
-  let R = (0, r.e7)([c.Z], () => c.Z.getChannel(g)),
-I = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
-N = (0, r.e7)([M.default], () => M.default.getCurrentUser()),
-C = (0, u.Z)(R, 'Context Menu'),
-O = (0, d.Xb)(R);
+  (0, s.$)(m), (0, i.e7)([E.Z], () => E.Z.getGuildVersion(n), [n]);
+  let R = (0, i.e7)([c.Z], () => c.Z.getChannel(g)),
+I = (0, i.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
+N = (0, i.e7)([M.default], () => M.default.getCurrentUser()),
+A = (0, u.Z)(R, 'Context Menu'),
+C = (0, o.Xb)(R);
   if ((null == N ? void 0 : N.id) === e.id)
-return [C];
+return [A];
   if (null == I || null == R || null == N)
 return [];
-  let A = O || R.ownerId === N.id && R.type === _.d4z.PRIVATE_THREAD;
+  let O = C || R.ownerId === N.id && R.type === _.d4z.PRIVATE_THREAD;
   return [
-A ? (0, t.jsx)(a.MenuItem, {
+O ? (0, t.jsx)(a.MenuItem, {
   id: 'remove',
   label: R.isForumPost() ? f.Z.Messages.REMOVE_USER_FROM_FORUM_POST.format({
     user: e.username
@@ -45,11 +45,11 @@ A ? (0, t.jsx)(a.MenuItem, {
     user: e.username
   }),
   color: 'danger',
-  action: () => o.Z.removeMember(R, e.id, 'Context Menu')
+  action: () => d.Z.removeMember(R, e.id, 'Context Menu')
 }) : null,
 E.Z.canManageUser(_.Plq.KICK_MEMBERS, e, I) ? (0, t.jsx)(a.MenuItem, {
   id: 'kick',
-  label: A ? f.Z.Messages.KICK_USER_FROM_SERVER.format({
+  label: O ? f.Z.Messages.KICK_USER_FROM_SERVER.format({
     user: e.username
   }) : f.Z.Messages.KICK_USER.format({
     user: e.username
@@ -68,7 +68,7 @@ E.Z.canManageUser(_.Plq.KICK_MEMBERS, e, I) ? (0, t.jsx)(a.MenuItem, {
 }) : null,
 E.Z.canManageUser(_.Plq.BAN_MEMBERS, e, I) ? (0, t.jsx)(a.MenuItem, {
   id: 'ban',
-  label: A ? f.Z.Messages.BAN_USER_FROM_SERVER.format({
+  label: O ? f.Z.Messages.BAN_USER_FROM_SERVER.format({
     user: e.username
   }) : f.Z.Messages.BAN_USER.format({
     user: e.username

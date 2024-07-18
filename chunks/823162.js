@@ -1,21 +1,21 @@
 n.d(t, {
   Xy: function() {
-return N;
+return E;
   },
   e4: function() {
 return c;
   },
   gN: function() {
-return u;
+return N;
   },
   hi: function() {
 return T;
   },
   qR: function() {
-return E;
+return u;
   },
   r_: function() {
-return I;
+return l;
   }
 });
 var s = n(544891),
@@ -35,7 +35,7 @@ channelId: e
   });
 }
 
-function E(e) {
+function u(e) {
   return s.tn.put({
 url: i.ANM.CHANNEL_RECIPIENT_CONSENT(e),
 body: {
@@ -44,7 +44,7 @@ body: {
   });
 }
 
-function N(e) {
+function E(e) {
   return s.tn.put({
 url: i.ANM.CHANNEL_RECIPIENT_CONSENT(e),
 body: {
@@ -53,13 +53,13 @@ body: {
   });
 }
 
-function u(e) {
+function N(e) {
   return s.tn.del({
 url: i.ANM.CHANNEL_RECIPIENT_CONSENT(e)
   });
 }
 
-function I(e) {
+function l(e) {
   return s.tn.put({
 url: i.ANM.CHANNEL_RECIPIENT_REJECT_BATCH(),
 body: {

@@ -10,7 +10,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let l = {
+let s = {
 disable_alpha_voice_panel: 'Disable new Voice Panel UI: Currently the new voice ui is defaulted ON for staff.  It\'s not feature complete so if there\'s something you are missing, or you find a problem, you can disable it here.',
 enable_recently_active: 'Enable recently active channels',
 happening_main_tab: 'Enable Happening tab containing summaries',
@@ -30,43 +30,43 @@ disable_channel_list: 'Disable channel list -- for performance testing. You prob
 show_icymi_debug_scores: 'Show ICYMI debug scores',
 only_channel_screen: 'Down with PanelsView, rely on only ChannelScreen!'
   },
-  s = {};
-class c extends(i = o.ZP.DeviceSettingsStore) {
+  c = {};
+class l extends(i = o.ZP.DeviceSettingsStore) {
   getUserAgnosticState() {
 return {
-  toggleStates: s
+  toggleStates: c
 };
   }
   initialize(e) {
-for (var t in l) {
+for (var t in s) {
   var n, i;
   let o = null !== (i = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== i && i;
-  s[t] = o;
+  c[t] = o;
 }
   }
   get(e) {
 var t;
-return null !== (t = s[e]) && void 0 !== t && t;
+return null !== (t = c[e]) && void 0 !== t && t;
   }
   set(e, t) {
-return s[e] = t, t;
+return c[e] = t, t;
   }
   all() {
-return s;
+return c;
   }
   allWithDescriptions() {
-return Object.entries(s).map(e => {
+return Object.entries(c).map(e => {
   let [t, n] = e;
   return [
     t,
     n,
-    l[t]
+    s[t]
   ];
 });
   }
 }
-a(c, 'displayName', 'DevToolsDesignTogglesStore'), a(c, 'persistKey', 'DevToolsDesignTogglesStore'), t.Z = new c(r.Z, {
+a(l, 'displayName', 'DevToolsDesignTogglesStore'), a(l, 'persistKey', 'DevToolsDesignTogglesStore'), t.Z = new l(r.Z, {
   DEV_TOOLS_DESIGN_TOGGLE_SET: function(e) {
-s[e.toggle] = e.value;
+c[e.toggle] = e.value;
   }
 });

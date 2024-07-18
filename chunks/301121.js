@@ -41,8 +41,8 @@ var n, a, i = t(735250),
   y = t(663389),
   V = t(594174),
   Y = t(285952),
-  w = t(626135),
-  k = t(63063),
+  k = t(626135),
+  w = t(63063),
   H = t(78451),
   W = t(709054),
   K = t(88658),
@@ -77,7 +77,7 @@ function e_() {
 s = (0, P.Z)(),
 t = null != e ? e : s;
   r.useEffect(() => {
-w.default.track(ei.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+k.default.track(ei.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
   action: et.Y.VIEW_SETTINGS_PAGE
 });
   }, []);
@@ -85,7 +85,7 @@ w.default.track(ei.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
 null != e && S.Z.dispatch({
   type: 'GUILD_IDENTITY_SETTINGS_SET_GUILD',
   guild: e
-}), w.default.track(ei.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+}), k.default.track(ei.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
   action: et.Y.SELECT_GUILD,
   guild_id: null == e ? void 0 : e.id
 });
@@ -132,7 +132,7 @@ children: [
         (0, i.jsx)(I.FormSwitch, {
           value: n,
           note: eo.Z.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({
-            learnMoreLink: k.Z.getArticleURL(ei.BhN.SAFETY_ALERTS)
+            learnMoreLink: w.Z.getArticleURL(ei.BhN.SAFETY_ALERTS)
           }),
           onChange: B.Q,
           hideBorder: !0,
@@ -153,7 +153,7 @@ children: [
 }
 
 function eu(e, s) {
-  w.default.track(ei.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+  k.default.track(ei.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
 default_guilds_restricted: e,
 applied_to_existing_guilds: s
   });
@@ -173,7 +173,7 @@ children: [
         children: (0, i.jsx)(I.FormSwitch, {
           value: !s,
           note: eo.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_CAPTION.format({
-            helpdeskArticle: k.Z.getArticleURL(ei.BhN.MESSAGE_REQUESTS)
+            helpdeskArticle: w.Z.getArticleURL(ei.BhN.MESSAGE_REQUESTS)
           }),
           disabled: e,
           onChange: () => {
@@ -250,7 +250,7 @@ children: [
         type: I.FormTextTypes.DESCRIPTION,
         className: ec.marginBottom8,
         children: eo.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({
-          learnMoreLink: k.Z.getArticleURL(ei.BhN.EXPLICIT_MEDIA_REDACTION)
+          learnMoreLink: w.Z.getArticleURL(ei.BhN.EXPLICIT_MEDIA_REDACTION)
         })
       }),
       (0, i.jsx)(I.FormItem, {
@@ -449,7 +449,7 @@ eN({
 });
   }
   trackDefaultDmsUpdated(e, s) {
-w.default.track(ei.rMx.GUILD_DEFAULT_DMS_UPDATED, {
+k.default.track(ei.rMx.GUILD_DEFAULT_DMS_UPDATED, {
   default_guilds_restricted: e,
   applied_to_existing_guilds: s
 });
@@ -470,7 +470,7 @@ eN({
 });
   }
   trackDefaultMessageRequestUpdated(e, s) {
-w.default.track(ei.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+k.default.track(ei.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
   default_guilds_restricted: e,
   applied_to_existing_guilds: s
 });
@@ -486,7 +486,7 @@ return (0, i.jsx)(i.Fragment, {
         type: I.FormTextTypes.DESCRIPTION,
         className: ec.marginBottom8,
         children: eo.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_HELP_V3.format({
-          appealLink: k.Z.getArticleURL(ei.BhN.SAFE_DIRECT_MESSAGING)
+          appealLink: w.Z.getArticleURL(ei.BhN.SAFE_DIRECT_MESSAGING)
         })
       }),
       (0, i.jsx)(I.RadioGroup, {
@@ -530,7 +530,7 @@ return this.props.mediaRedactionIsEnabled ? (0, i.jsxs)(i.Fragment, {
                   type: I.FormTextTypes.DESCRIPTION,
                   className: ec.marginBottom8,
                   children: eo.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({
-                    appealLink: k.Z.getArticleURL(ei.BhN.SAFE_DIRECT_MESSAGING)
+                    appealLink: w.Z.getArticleURL(ei.BhN.SAFE_DIRECT_MESSAGING)
                   })
                 }),
                 (0, i.jsx)(I.RadioGroup, {
@@ -571,7 +571,7 @@ return this.props.mediaRedactionIsEnabled ? (0, i.jsxs)(i.Fragment, {
               type: I.FormTextTypes.DESCRIPTION,
               className: ec.marginBottom8,
               children: eo.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({
-                appealLink: k.Z.getArticleURL(ei.BhN.SAFE_DIRECT_MESSAGING)
+                appealLink: w.Z.getArticleURL(ei.BhN.SAFE_DIRECT_MESSAGING)
               })
             }),
             (0, i.jsx)(I.RadioGroup, {
@@ -610,7 +610,7 @@ return (0, i.jsxs)(I.FormSection, {
       children: (0, i.jsx)(I.FormSwitch, {
         value: this.props.keywordFilter,
         note: eo.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_V2.format({
-          learnMoreLink: k.Z.getArticleURL(ei.BhN.KEYWORD_FILTERS)
+          learnMoreLink: w.Z.getArticleURL(ei.BhN.KEYWORD_FILTERS)
         }),
         onChange: e => Q.gw.updateSetting({
           profanity: e,
@@ -694,7 +694,7 @@ return (0, i.jsxs)(I.FormSection, {
       children: (0, i.jsx)(I.FormSwitch, {
         value: e,
         note: eo.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE.format({
-          helpdeskArticle: k.Z.getArticleURL(ei.BhN.DATA_USED_TO_IMPROVE_DISCORD)
+          helpdeskArticle: w.Z.getArticleURL(ei.BhN.DATA_USED_TO_IMPROVE_DISCORD)
         }),
         onChange: this.handleUsageStatisticsChange,
         children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE
@@ -705,7 +705,7 @@ return (0, i.jsxs)(I.FormSection, {
       children: (0, i.jsx)(I.FormSwitch, {
         value: s,
         note: eo.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE.format({
-          helpdeskArticle: k.Z.getArticleURL(ei.BhN.DATA_USED_FOR_RECOMMENDED)
+          helpdeskArticle: w.Z.getArticleURL(ei.BhN.DATA_USED_FOR_RECOMMENDED)
         }),
         onChange: this.handlePersonalizationChange,
         children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE
@@ -716,7 +716,7 @@ return (0, i.jsxs)(I.FormSection, {
       children: (0, i.jsx)(I.FormSwitch, {
         value: !t,
         note: eo.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED.format({
-          helpdeskArticle: k.Z.getArticleURL(ei.BhN.DATA_PRIVACY_CONTROLS)
+          helpdeskArticle: w.Z.getArticleURL(ei.BhN.DATA_PRIVACY_CONTROLS)
         }),
         onChange: this.handleChangeDropsOptedOut,
         children: (0, i.jsx)('div', {
@@ -799,7 +799,7 @@ return a && null != n && (e = (0, i.jsx)(I.Card, {
       type: I.FormTextTypes.DESCRIPTION,
       className: ec.marginBottom20,
       children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_NOTE.format({
-        helpdeskArticle: k.Z.getArticleURL(ei.BhN.GDPR_REQUEST_DATA)
+        helpdeskArticle: w.Z.getArticleURL(ei.BhN.GDPR_REQUEST_DATA)
       })
     }),
     e,
@@ -957,7 +957,7 @@ super(e), ed(this, 'handleChangeDefaultGuildsRestricted', e => {
   e = {
     header: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
     body: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_WEB_NOTE.format({
-      helpdeskArticle: k.Z.getArticleURL(ei.BhN.GDPR_PACKAGE_CONTENTS)
+      helpdeskArticle: w.Z.getArticleURL(ei.BhN.GDPR_PACKAGE_CONTENTS)
     }),
     confirmText: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CONFIRM,
     cancelText: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CANCEL,

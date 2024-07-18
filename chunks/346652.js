@@ -3,22 +3,22 @@ r.d(t, {
 return E;
   }
 });
-var a = r(599295),
-  n = r(383237),
-  s = r(521464),
-  o = r(157680),
+var n = r(599295),
+  a = r(383237),
+  o = r(521464),
+  s = r(157680),
   i = r(337309),
   c = r(774375),
   u = r(748024),
   l = r(692378),
   b = r(922474),
   f = r(470079),
-  d = r(639519),
-  h = r.n(d),
+  h = r(639519),
+  d = r.n(h),
   p = r(852153),
-  g = r(140201),
+  v = r(140201),
   y = r(667929),
-  v = [
+  g = [
 'data',
 'keyPath',
 'postprocessValue',
@@ -30,15 +30,15 @@ var a = r(599295),
 function m(e, t) {
   var r = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
-var a = Object.getOwnPropertySymbols(e);
-t && (a = a.filter(function(t) {
+var n = Object.getOwnPropertySymbols(e);
+t && (n = n.filter(function(t) {
   return Object.getOwnPropertyDescriptor(e, t).enumerable;
-})), r.push.apply(r, a);
+})), r.push.apply(r, n);
   }
   return r;
 }
 
-function O(e) {
+function w(e) {
   for (var t = 1; t < arguments.length; t++) {
 var r = null != arguments[t] ? arguments[t] : {};
 t % 2 ? m(Object(r), !0).forEach(function(t) {
@@ -49,12 +49,12 @@ t % 2 ? m(Object(r), !0).forEach(function(t) {
   }
   return e;
 }
-var w = function(e) {
+var O = function(e) {
   return e;
 };
 
 function k(e) {
-  var t, r, a, n, s = (t = e.theme, r = e, (n = Object.keys(a = {
+  var t, r, n, a, o = (t = e.theme, r = e, (a = Object.keys(n = {
 getArrowStyle: 'arrow',
 getListStyle: 'nestedNodeChildren',
 getItemStringStyle: 'nestedNodeItemString',
@@ -64,17 +64,17 @@ getValueStyle: 'valueText'
 return r[e];
   })).length > 0 && (t = 'string' == typeof t ? {
 extend: t
-  } : O({}, t), n.forEach(function(e) {
-console.error('Styling method "'.concat(e, '" is deprecated, use "theme" property instead')), t[a[e]] = function(t) {
-  for (var a = t.style, n = arguments.length, s = Array(n > 1 ? n - 1 : 0), o = 1; o < n; o++)
-    s[o - 1] = arguments[o];
+  } : w({}, t), a.forEach(function(e) {
+console.error('Styling method "'.concat(e, '" is deprecated, use "theme" property instead')), t[n[e]] = function(t) {
+  for (var n = t.style, a = arguments.length, o = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++)
+    o[s - 1] = arguments[s];
   return {
-    style: O(O({}, a), r[e].apply(r, s))
+    style: w(w({}, n), r[e].apply(r, o))
   };
 };
   })), t);
-  return e.invertTheme && (s = (0, y.y7)(s)), {
-styling: (0, g.Z)(s)
+  return e.invertTheme && (o = (0, y.y7)(o)), {
+styling: (0, v.Z)(o)
   };
 }
 var E = function(e) {
@@ -90,15 +90,15 @@ try {
   return !1;
 }
   }(), function() {
-var e, a = (0, u.Z)(t);
-return e = r ? Reflect.construct(a, arguments, (0, u.Z)(this).constructor) : a.apply(this, arguments), (0, c.Z)(this, e);
+var e, n = (0, u.Z)(t);
+return e = r ? Reflect.construct(n, arguments, (0, u.Z)(this).constructor) : n.apply(this, arguments), (0, c.Z)(this, e);
   });
 
   function b(e) {
 var t;
-return (0, s.Z)(this, b), (t = l.call(this, e)).state = k(e), t;
+return (0, o.Z)(this, b), (t = l.call(this, e)).state = k(e), t;
   }
-  return (0, o.Z)(b, [{
+  return (0, s.Z)(b, [{
   key: 'UNSAFE_componentWillReceiveProps',
   value: function(e) {
     var t = this;
@@ -125,38 +125,38 @@ return (0, s.Z)(this, b), (t = l.call(this, e)).state = k(e), t;
     var e = this.props,
       t = e.data,
       r = e.keyPath,
-      s = e.postprocessValue,
-      o = e.hideRoot,
-      i = (e.theme, e.invertTheme, (0, n.Z)(e, v)),
+      o = e.postprocessValue,
+      s = e.hideRoot,
+      i = (e.theme, e.invertTheme, (0, a.Z)(e, g)),
       c = this.state.styling;
-    return f.createElement('ul', c('tree'), f.createElement(p.Z, (0, a.Z)({}, O({
-      postprocessValue: s,
-      hideRoot: o,
+    return f.createElement('ul', c('tree'), f.createElement(p.Z, (0, n.Z)({}, w({
+      postprocessValue: o,
+      hideRoot: s,
       styling: c
     }, i), {
-      keyPath: o ? [] : r,
-      value: s(t)
+      keyPath: s ? [] : r,
+      value: o(t)
     })));
   }
 }
   ]), b;
 }(f.Component);
 (0, l.Z)(E, 'propTypes', {
-  data: h().any,
-  hideRoot: h().bool,
-  theme: h().oneOfType([
-h().object,
-h().string
+  data: d().any,
+  hideRoot: d().bool,
+  theme: d().oneOfType([
+d().object,
+d().string
   ]),
-  invertTheme: h().bool,
-  keyPath: h().arrayOf(h().oneOfType([
-h().string,
-h().number
+  invertTheme: d().bool,
+  keyPath: d().arrayOf(d().oneOfType([
+d().string,
+d().number
   ])),
-  postprocessValue: h().func,
-  sortObjectKeys: h().oneOfType([
-h().func,
-h().bool
+  postprocessValue: d().func,
+  sortObjectKeys: d().oneOfType([
+d().func,
+d().bool
   ])
 }), (0, l.Z)(E, 'defaultProps', {
   shouldExpandNode: function(e, t, r) {
@@ -164,15 +164,15 @@ return 0 === r;
   },
   hideRoot: !1,
   keyPath: ['root'],
-  getItemString: function(e, t, r, a) {
-return f.createElement('span', null, r, ' ', a);
+  getItemString: function(e, t, r, n) {
+return f.createElement('span', null, r, ' ', n);
   },
   labelRenderer: function(e) {
 var t = (0, b.Z)(e, 1)[0];
 return f.createElement('span', null, t, ':');
   },
-  valueRenderer: w,
-  postprocessValue: w,
+  valueRenderer: O,
+  postprocessValue: O,
   isCustomNode: function() {
 return !1;
   },

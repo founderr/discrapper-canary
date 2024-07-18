@@ -14,53 +14,53 @@ var i = t(481060),
   M = t(185457),
   _ = t(389052),
   f = t(24311),
-  g = t(710631),
-  N = t(88966),
+  N = t(710631),
+  g = t(88966),
   A = t(991307),
   I = t(725119),
   m = t(700994),
   T = t(332031),
-  C = t(981631),
-  O = t(689938);
+  S = t(981631),
+  C = t(689938);
 n.default = (0, o.Z)((0, a.Z)(function(e) {
   let {
 user: n,
 showMediaItems: t = !1,
 mediaEngineContext: a,
 onSelect: o
-  } = e, d = (0, I.Z)(n.id), C = (0, N.Z)(n.id), x = (0, f.Z)({
+  } = e, d = (0, I.Z)(n.id), S = (0, g.Z)(n.id), O = (0, f.Z)({
 user: n
-  }), S = (0, M.Z)({
+  }), v = (0, M.Z)({
 user: n
-  }), U = (0, E.Z)({
+  }), x = (0, E.Z)({
 user: n
-  }), v = (0, T.Z)(n.id), D = (0, m.Z)(n.id), L = (0, A.Z)(n.id, a), b = (0, g.Z)({
+  }), U = (0, T.Z)(n.id), D = (0, m.Z)(n.id), b = (0, A.Z)(n.id, a), L = (0, N.Z)({
 user: n
   }), h = (0, u.Z)(null, n), R = (0, Z.Z)(n), j = (0, _.Z)({
 user: n
   }), p = (0, r.Z)({
 id: n.id,
-label: O.Z.Messages.COPY_ID_USER
-  }), P = (0, c.Z)(n), k = n.isNonUserBot();
+label: C.Z.Messages.COPY_ID_USER
+  }), V = (0, c.Z)(n), k = n.isNonUserBot();
   return (0, s.jsxs)(i.Menu, {
 navId: 'user-context',
 onClose: l.Zy,
-'aria-label': O.Z.Messages.USER_ACTIONS_MENU_LABEL,
+'aria-label': C.Z.Messages.USER_ACTIONS_MENU_LABEL,
 onSelect: o,
 children: [
   !k && (0, s.jsxs)(s.Fragment, {
     children: [
       (0, s.jsx)(i.MenuGroup, {
-        children: P
+        children: V
       }),
       (0, s.jsxs)(i.MenuGroup, {
         children: [
           d,
-          C,
-          x,
           S,
-          U,
-          v
+          O,
+          v,
+          x,
+          U
         ]
       }),
       t && (0, s.jsx)(i.MenuGroup, {
@@ -71,8 +71,8 @@ children: [
       }),
       (0, s.jsxs)(i.MenuGroup, {
         children: [
-          t && L,
-          b,
+          t && b,
+          L,
           R,
           j
         ]
@@ -85,7 +85,7 @@ children: [
 ]
   });
 }, {
-  object: C.qAy.CONTEXT_MENU
+  object: S.qAy.CONTEXT_MENU
 }), [
   d.Z.CONTEXT_MENU,
   d.Z.USER_GENERIC_MENU

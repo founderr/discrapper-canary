@@ -171,7 +171,7 @@ o()(null != a, 'Missing user in Channel.openDMContextMenu'), (0, E.jW)(e, async 
     default: e
   } = await Promise.all([
     n.e('79695'),
-    n.e('45984'),
+    n.e('70474'),
     n.e('22036'),
     n.e('56826'),
     n.e('79598')

@@ -43,9 +43,9 @@ var n = t(735250),
   y = t(468788),
   V = t(689938),
   Y = t(847508),
-  w = t(549856);
+  k = t(549856);
 
-function k(e, s, t) {
+function w(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
 value: t,
 enumerable: !0,
@@ -229,11 +229,11 @@ children: (0, n.jsxs)(d.FormSection, {
     o ? (0, n.jsxs)(n.Fragment, {
       children: [
         (0, n.jsx)(d.FormTitle, {
-          className: w.marginBottom20,
+          className: k.marginBottom20,
           children: V.Z.Messages.SOUNDPACK_LABEL
         }),
         (0, n.jsx)(M.Z, {
-          className: r()(Y.soundpackSelect, w.marginBottom40)
+          className: r()(Y.soundpackSelect, k.marginBottom40)
         })
       ]
     }) : null,
@@ -285,7 +285,7 @@ setting: G.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
 children: [
   (0, n.jsxs)(d.Heading, {
     variant: 'heading-lg/semibold',
-    className: r()(Y.titleWithBeta, w.marginBottom20),
+    className: r()(Y.titleWithBeta, k.marginBottom20),
     children: [
       V.Z.Messages.GUILD_COMMUNITY_ALERTS_HEADER,
       (0, n.jsx)(S.Z, {})
@@ -293,14 +293,14 @@ children: [
   }),
   (0, n.jsx)(d.FormText, {
     type: d.FormTextTypes.DESCRIPTION,
-    className: w.marginBottom20,
+    className: k.marginBottom20,
     children: V.Z.Messages.GUILD_COMMUNITY_ALERTS_DESCRIPTION
   }),
   (0, n.jsxs)(d.FormItem, {
     title: V.Z.Messages.GUILD_COMMUNITY_ALERTS_CHOOSE_SERVER,
     children: [
       (0, n.jsx)(d.SingleSelect, {
-        className: null != s ? w.marginBottom20 : w.marginBottom40,
+        className: null != s ? k.marginBottom20 : k.marginBottom40,
         value: s,
         onChange: e => {
           t(e);
@@ -308,13 +308,13 @@ children: [
         options: i
       }),
       null != s ? (0, n.jsxs)('div', {
-        className: w.marginTop20,
+        className: k.marginTop20,
         children: [
           (0, n.jsxs)(R.F, {
             setting: G.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
             children: [
               (0, n.jsx)(d.FormSwitch, {
-                className: r()(w.marginBottom20),
+                className: r()(k.marginBottom20),
                 note: V.Z.Messages.GUILD_COMMUNITY_ALERTS_NAG_DESCRIPTION,
                 value: !e[s].disableRaidAlertNag,
                 onChange: () => {
@@ -326,7 +326,7 @@ children: [
                 children: V.Z.Messages.GUILD_COMMUNITY_ALERTS_NAG_HEADER
               }),
               (0, n.jsx)(d.FormDivider, {
-                className: r()(w.marginTop20, w.marginBottom40)
+                className: r()(k.marginTop20, k.marginBottom40)
               })
             ]
           }),
@@ -334,7 +334,7 @@ children: [
             setting: G.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
             children: [
               (0, n.jsx)(d.FormSwitch, {
-                className: w.marginBottom20,
+                className: k.marginBottom20,
                 note: V.Z.Messages.GUILD_COMMUNITY_ALERTS_PUSH_DESCRIPTION,
                 value: !e[s].disableRaidAlertPush,
                 onChange: () => {
@@ -346,14 +346,14 @@ children: [
                 children: V.Z.Messages.GUILD_COMMUNITY_ALERTS_PUSH_HEADER
               }),
               (0, n.jsx)(d.FormDivider, {
-                className: r()(w.marginTop20, w.marginBottom40)
+                className: r()(k.marginTop20, k.marginBottom40)
               })
             ]
           })
         ]
       }) : null,
       null != s ? null : (0, n.jsx)(d.FormDivider, {
-        className: r()(w.marginTop20, w.marginBottom40)
+        className: r()(k.marginTop20, k.marginBottom40)
       })
     ]
   })
@@ -399,7 +399,7 @@ return (0, n.jsxs)(d.FormSection, {
     (0, n.jsx)(R.F, {
       setting: G.s6.NOTIFICATIONS_ENABLE_DESKTOP,
       children: (0, n.jsx)(d.FormSwitch, {
-        className: w.marginBottom20,
+        className: k.marginBottom20,
         value: e !== F.qrD.NEVER && !_,
         onChange: this.handleDesktopChange,
         note: V.Z.Messages.DESKTOP_NOTIFICATIONS_ENABLE_BODY,
@@ -412,7 +412,7 @@ return (0, n.jsxs)(d.FormSection, {
     (0, n.jsx)(R.F, {
       setting: G.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
       children: (0, n.jsx)(d.FormSwitch, {
-        className: E ? w.marginBottom20 : w.marginBottom40,
+        className: E ? k.marginBottom20 : k.marginBottom40,
         value: !t,
         note: V.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_BODY,
         onChange: this.handleToggleShowUnreadBadge,
@@ -422,7 +422,7 @@ return (0, n.jsxs)(d.FormSection, {
     (0, n.jsx)(R.F, {
       setting: G.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
       children: (0, n.jsx)(d.FormSwitch, {
-        className: w.marginBottom40,
+        className: k.marginBottom40,
         value: a,
         note: V.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_BODY,
         onChange: this.handleToggleShowFlash,
@@ -442,11 +442,11 @@ return (0, n.jsxs)(d.FormSection, {
           }),
           (0, n.jsx)(d.FormText, {
             type: d.FormTextTypes.DESCRIPTION,
-            className: w.marginTop8,
+            className: k.marginTop8,
             children: V.Z.Messages.FORM_DESCRIPTION_PUSH_AFK_TIMEOUT
           }),
           (0, n.jsx)(d.FormDivider, {
-            className: r()(w.marginTop40, w.marginBottom40)
+            className: r()(k.marginTop40, k.marginBottom40)
           })
         ]
       })
@@ -465,11 +465,11 @@ return (0, n.jsxs)(d.FormSection, {
 });
   }
   constructor(...e) {
-super(...e), k(this, 'handleToggleShowUnreadBadge', () => {
+super(...e), w(this, 'handleToggleShowUnreadBadge', () => {
   E.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
-}), k(this, 'handleToggleShowFlash', () => {
+}), w(this, 'handleToggleShowFlash', () => {
   E.default.setTaskbarFlash(!this.props.taskbarFlash);
-}), k(this, 'renderTTS', () => {
+}), w(this, 'renderTTS', () => {
   if (!T.Zh)
     return null;
   let e = [{
@@ -493,7 +493,7 @@ super(...e), k(this, 'handleToggleShowUnreadBadge', () => {
         children: [
           (0, n.jsx)(d.FormText, {
             type: d.FormTextTypes.DESCRIPTION,
-            className: w.marginBottom8,
+            className: k.marginBottom8,
             children: V.Z.Messages.FORM_DESCRIPTION_TTS
           }),
           (0, n.jsx)(d.RadioGroup, {
@@ -504,7 +504,7 @@ super(...e), k(this, 'handleToggleShowUnreadBadge', () => {
         ]
       }),
       (0, n.jsx)(d.FormDivider, {
-        className: r()(w.marginTop40, w.marginBottom40)
+        className: r()(k.marginTop40, k.marginBottom40)
       })
     ]
   });
@@ -537,7 +537,7 @@ s = (0, c.e7)([f.ZP], () => f.ZP.mentionOnAllMessages);
   return e ? (0, n.jsx)(R.F, {
 setting: G.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
 children: (0, n.jsx)(d.FormSwitch, {
-  className: w.marginBottom20,
+  className: k.marginBottom20,
   value: s,
   onChange: e => {
     u.Z.setAccountFlag(y.c.MENTION_ON_ALL_MESSAGES, e);
@@ -568,7 +568,7 @@ children: [
   t ? (0, n.jsx)(R.F, {
     setting: G.s6.NOTIFICATIONS_UNREAD_SETTINGS,
     children: (0, n.jsx)(d.FormSwitch, {
-      className: w.marginBottom40,
+      className: k.marginBottom40,
       style: {
         marginTop: -20
       },
@@ -581,7 +581,7 @@ children: [
   }) : s ? (0, n.jsx)(R.F, {
     setting: G.s6.NOTIFICATIONS_UNREAD_SETTINGS,
     children: (0, n.jsx)(d.FormSwitch, {
-      className: w.marginBottom40,
+      className: k.marginBottom40,
       value: t,
       disabled: i || t,
       note: 'Turns on the new notification system',
@@ -631,7 +631,7 @@ children: [
         })
       }),
       (0, n.jsx)(d.FormDivider, {
-        className: r()(w.marginTop40, w.marginBottom40)
+        className: r()(k.marginTop40, k.marginBottom40)
       })
     ]
   })

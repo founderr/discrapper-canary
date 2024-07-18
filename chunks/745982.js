@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return N;
+return E;
   }
 });
 var s = n(735250);
@@ -10,12 +10,12 @@ var o = n(353672),
   a = n(134612),
   i = n(689938),
   c = n(927838),
-  E = n(190113);
+  u = n(190113);
 
-function N(e) {
+function E(e) {
   let {} = e, t = (0, a.Nn)();
   return (0, s.jsx)(r.Z, {
-heroImageSrc: E,
+heroImageSrc: u,
 heroImageAlt: i.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TIPS_ALT,
 header: i.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TIPS_HEADER,
 children: (0, s.jsx)('div', {

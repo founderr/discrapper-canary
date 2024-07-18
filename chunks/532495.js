@@ -47,8 +47,8 @@ U = (0, r.e7)([R.Z], () => R.Z.getUserProfile(B.id)),
   pendingBanner: y,
   pendingBio: V,
   pendingPronouns: Y,
-  pendingAccentColor: w,
-  pendingThemeColors: k,
+  pendingAccentColor: k,
+  pendingThemeColors: w,
   errors: H
 } = (0, r.cj)([M.Z], () => {
   let e = M.Z.getAllPending(),
@@ -119,7 +119,7 @@ children: [
       (0, n.jsx)(g.Z, {
         user: B,
         pendingAvatar: G,
-        pendingColors: k,
+        pendingColors: w,
         onThemeColorsChange: p.z5,
         forcedDivider: !0
       })
@@ -127,7 +127,7 @@ children: [
   }) : (0, n.jsx)(A.Z, {
     user: B,
     savedUserColor: null == U ? void 0 : U.accentColor,
-    pendingColor: w,
+    pendingColor: k,
     setPendingAccentColor: p.CM
   }, 'color'),
   (0, n.jsx)(T.Z, {

@@ -1,6 +1,6 @@
 var t = 'Invariant failed';
 e.exports = function(e, n) {
-  var r;
+  var i;
   if (!e)
 throw Error(t);
 };

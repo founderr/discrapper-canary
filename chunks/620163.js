@@ -44,8 +44,8 @@ var a = t(990547),
   y = t(358085),
   V = t(998502),
   Y = t(392735),
-  w = t(61160),
-  k = t(604227),
+  k = t(61160),
+  w = t(604227),
   H = t(38915),
   W = t(498639),
   K = t(748717),
@@ -114,8 +114,8 @@ let {
   shouldMergeGameSettings: ey,
   isUserSettingsSearchEnabled: eV,
   isKeywordFilteringEnabled: eY,
-  isStaff: ew,
-  isInappropriateConversationWarningEnabled: ek,
+  isStaff: ek,
+  isInappropriateConversationWarningEnabled: ew,
   paymentsBlocked: eH,
   isEligibleForQuests: eW,
   showGiftNitro: eK,
@@ -413,7 +413,7 @@ return Object.freeze({
     section: eP.oAB.PRIVACY_AND_SAFETY,
     searchableTitles: [eb.Z.Messages.PRIVACY_SETTINGS_STAFF_ONLY_HEADER],
     parent: ef.s6.PRIVACY_USER_SETTINGS,
-    predicate: () => ew
+    predicate: () => ek
   },
   [ef.s6.PRIVACY_KEYWORD_FILTER]: {
     section: eP.oAB.PRIVACY_AND_SAFETY,
@@ -433,7 +433,7 @@ return Object.freeze({
     section: eP.oAB.PRIVACY_AND_SAFETY,
     searchableTitles: [eb.Z.Messages.SAFETY_ALERTS_SETTING_TITLE],
     parent: ef.s6.PRIVACY_USER_SETTINGS,
-    predicate: () => ek
+    predicate: () => ew
   },
   [ef.s6.PRIVACY_ACCOUNT_STANDING]: {
     section: eP.oAB.PRIVACY_AND_SAFETY,
@@ -884,7 +884,7 @@ return Object.freeze({
     section: eP.oAB.VOICE,
     searchableTitles: [eb.Z.Messages.FORM_CHECKBOX_CONNECTION_LOG],
     parent: ef.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-    predicate: () => ('canary' === V.ZP.releaseChannel || 'development' === V.ZP.releaseChannel) && ew && j.Z.supports(eZ.AN.CONNECTION_REPLAY)
+    predicate: () => ('canary' === V.ZP.releaseChannel || 'development' === V.ZP.releaseChannel) && ek && j.Z.supports(eZ.AN.CONNECTION_REPLAY)
   },
   [ef.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING]: {
     section: eP.oAB.VOICE,
@@ -1200,7 +1200,7 @@ return Object.freeze({
     searchableTitles: ['Speed Test'],
     label: 'Speed Test',
     element: Q.Z,
-    predicate: () => b.Z.isSupported() && w.Z.getCurrentConfig({
+    predicate: () => b.Z.isSupported() && k.Z.getCurrentConfig({
       location: '9f7d84_2'
     }).showSettings
   },
@@ -1373,7 +1373,7 @@ return Object.freeze({
     section: eP.oAB.DEVELOPER_OPTIONS,
     searchableTitles: ['Idle Status Indicator'],
     parent: ef.s6.DEVELOPER_OPTIONS_FLAGS,
-    predicate: () => ew && v.Z.isDeveloper
+    predicate: () => ek && v.Z.isDeveloper
   },
   [ef.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING]: {
     section: eP.oAB.DEVELOPER_OPTIONS,
@@ -1385,13 +1385,13 @@ return Object.freeze({
     section: eP.oAB.DEVELOPER_OPTIONS,
     searchableTitles: ['CSS Debugging'],
     parent: ef.s6.DEVELOPER_OPTIONS_FLAGS,
-    predicate: () => ew && v.Z.isDeveloper
+    predicate: () => ek && v.Z.isDeveloper
   },
   [ef.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS]: {
     section: eP.oAB.DEVELOPER_OPTIONS,
     searchableTitles: ['Preview Unpublished Collections'],
     parent: ef.s6.DEVELOPER_OPTIONS_FLAGS,
-    predicate: () => ew && v.Z.isDeveloper
+    predicate: () => ek && v.Z.isDeveloper
   },
   [ef.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE]: {
     section: eP.oAB.DEVELOPER_OPTIONS,
@@ -1540,7 +1540,7 @@ return Object.freeze({
   },
   [ef.s6.CLIENT_DEBUG_INFO]: {
     section: E.ID.CUSTOM,
-    element: k.Z
+    element: w.Z
   }
 });
   };

@@ -179,7 +179,7 @@ y = O.some(e => {
 V = F || y ? G.total - B.total : -B.total,
 {
   interval: Y,
-  intervalCount: w
+  intervalCount: k
 } = P;
   return (0, i.jsxs)(i.Fragment, {
 children: [
@@ -204,7 +204,7 @@ children: [
             label: L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_INVOICE_SUBSCRIPTION_CANCELLED.format({
               subscriptionCount: 1
             }),
-            value: (0, M.og)((0, M.T4)(V, a.currency), Y, w),
+            value: (0, M.og)((0, M.T4)(V, a.currency), Y, k),
             className: Z.invoiceCancelRow
           }),
           null != U && U.length > 0 ? (0, i.jsxs)('div', {

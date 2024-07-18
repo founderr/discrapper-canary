@@ -169,7 +169,7 @@ enabled: Y
 location: 'UserSettingsInventory'
   }, {
 autoTrackExposure: !0
-  }), w = (0, a.e7)([h.Z], () => h.Z.hasLibraryApplication()), k = (0, a.e7)([A.default], () => A.default.hasTOTPEnabled()), {
+  }), k = (0, a.e7)([h.Z], () => h.Z.hasLibraryApplication()), w = (0, a.e7)([A.default], () => A.default.hasTOTPEnabled()), {
 canBroadcast: H
   } = c.Z.useExperiment({
 location: 'user_settings_activity_privacy'
@@ -192,8 +192,8 @@ paymentsBlocked: y,
 isEligibleForQuests: V,
 showGiftNitro: Y,
 isStricterMessageRequestsEnabled: K,
-hasLibraryApplication: w,
-hasTOTPEnabled: k,
+hasLibraryApplication: k,
+hasTOTPEnabled: w,
 canBroadcastActivity: H,
 developerMode: W
   });

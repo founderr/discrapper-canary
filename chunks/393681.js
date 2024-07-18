@@ -39,8 +39,8 @@ var n = t(735250),
   y = t(801461),
   V = t(689938),
   Y = t(363210),
-  w = t(549856);
-class k extends a.PureComponent {
+  k = t(549856);
+class w extends a.PureComponent {
   componentDidMount() {
 let {
   currentUser: e
@@ -72,7 +72,7 @@ if (!e.isClaimed()) {
   });
   return (0, n.jsx)(_.FormNotice, {
     type: _.FormNotice.Types.DANGER,
-    className: w.marginBottom20,
+    className: k.marginBottom20,
     imageData: {
       src: t(418558),
       width: 60,
@@ -99,7 +99,7 @@ if (!e.verified) {
   });
   return (0, n.jsx)(_.FormNotice, {
     type: _.FormNotice.Types.PRIMARY,
-    className: w.marginBottom20,
+    className: k.marginBottom20,
     imageData: {
       src: t(449125),
       width: 60,
@@ -147,13 +147,13 @@ let {
   theme: a
 } = this.props, i = (0, d.wj)(a) ? t(555702) : t(610802);
 return (0, n.jsxs)(_.FormSection, {
-  className: r()(Y.userSettingsSecurity, w.marginTop40),
+  className: r()(Y.userSettingsSecurity, k.marginTop40),
   title: V.Z.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION,
   tag: 'h1',
   children: [
     s.mfaEnabled ? (0, n.jsx)(_.FormSection, {
       children: (0, n.jsxs)(_.FormTitle, {
-        className: r()(Y.isEnabled, w.marginBottom20),
+        className: r()(Y.isEnabled, k.marginBottom20),
         children: [
           (0, n.jsx)('img', {
             alt: '',
@@ -271,7 +271,7 @@ let {
   currentUser: e
 } = this.props;
 return (0, n.jsx)(j.Z, {
-  className: w.marginTop40,
+  className: k.marginTop40,
   currentUser: e,
   handleDisableAccount: () => this.handleDisableAccount(!1),
   handleDeleteAccount: () => this.handleDisableAccount(!0)
@@ -349,7 +349,7 @@ a = (0, c.e7)([Z.Z], () => Z.Z.theme),
 i = (0, A.b)(),
 r = (0, m.CC)(),
 o = (0, c.e7)([L.default], () => L.default.locale);
-  return (0, n.jsx)(k, {
+  return (0, n.jsx)(w, {
 theme: a,
 currentUser: e,
 backupCodes: s,

@@ -1,21 +1,21 @@
-var a = r(364510),
-  n = r(114170),
-  s = [].slice,
-  o = [
+var n = r(364510),
+  a = r(114170),
+  o = [].slice,
+  s = [
 'keyword',
 'gray',
 'hex'
   ],
   i = {};
-Object.keys(n).forEach(function(e) {
-  i[s.call(n[e].labels).sort().join('')] = e;
+Object.keys(a).forEach(function(e) {
+  i[o.call(a[e].labels).sort().join('')] = e;
 });
 var c = {};
 
 function u(e, t) {
   if (!(this instanceof u))
 return new u(e, t);
-  if (t && t in o && (t = null), t && !(t in n))
+  if (t && t in s && (t = null), t && !(t in a))
 throw Error('Unknown model: ' + t);
   if (null == e)
 this.model = 'rgb', this.color = [
@@ -26,14 +26,14 @@ this.model = 'rgb', this.color = [
   else if (e instanceof u)
 this.model = e.model, this.color = e.color.slice(), this.valpha = e.valpha;
   else if ('string' == typeof e) {
-var r, l, b = a.get(e);
+var r, l, b = n.get(e);
 if (null === b)
   throw Error('Unable to parse color from string: ' + e);
-this.model = b.model, l = n[this.model].channels, this.color = b.value.slice(0, l), this.valpha = 'number' == typeof b.value[l] ? b.value[l] : 1;
+this.model = b.model, l = a[this.model].channels, this.color = b.value.slice(0, l), this.valpha = 'number' == typeof b.value[l] ? b.value[l] : 1;
   } else if (e.length) {
-this.model = t || 'rgb', l = n[this.model].channels;
-var d = s.call(e, 0, l);
-this.color = f(d, l), this.valpha = 'number' == typeof e[l] ? e[l] : 1;
+this.model = t || 'rgb', l = a[this.model].channels;
+var h = o.call(e, 0, l);
+this.color = f(h, l), this.valpha = 'number' == typeof e[l] ? e[l] : 1;
   } else if ('number' == typeof e)
 e &= 16777215, this.model = 'rgb', this.color = [
   e >> 16 & 255,
@@ -42,22 +42,22 @@ e &= 16777215, this.model = 'rgb', this.color = [
 ], this.valpha = 1;
   else {
 this.valpha = 1;
-var h = Object.keys(e);
-'alpha' in e && (h.splice(h.indexOf('alpha'), 1), this.valpha = 'number' == typeof e.alpha ? e.alpha : 0);
-var p = h.sort().join('');
+var d = Object.keys(e);
+'alpha' in e && (d.splice(d.indexOf('alpha'), 1), this.valpha = 'number' == typeof e.alpha ? e.alpha : 0);
+var p = d.sort().join('');
 if (!(p in i))
   throw Error('Unable to parse color from object: ' + JSON.stringify(e));
 this.model = i[p];
-var g = n[this.model].labels,
+var v = a[this.model].labels,
   y = [];
-for (r = 0; r < g.length; r++)
-  y.push(e[g[r]]);
+for (r = 0; r < v.length; r++)
+  y.push(e[v[r]]);
 this.color = f(y);
   }
   if (c[this.model])
-for (r = 0, l = n[this.model].channels; r < l; r++) {
-  var v = c[this.model][r];
-  v && (this.color[r] = v(this.color[r]));
+for (r = 0, l = a[this.model].channels; r < l; r++) {
+  var g = c[this.model][r];
+  g && (this.color[r] = g(this.color[r]));
 }
   this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this);
 }
@@ -69,21 +69,21 @@ return this.string();
 return this[this.model]();
   },
   string: function(e) {
-var t = this.model in a.to ? this : this.rgb(),
+var t = this.model in n.to ? this : this.rgb(),
   r = 1 === (t = t.round('number' == typeof e ? e : 1)).valpha ? t.color : t.color.concat(this.valpha);
-return a.to[t.model](r);
+return n.to[t.model](r);
   },
   percentString: function(e) {
 var t = this.rgb().round('number' == typeof e ? e : 1),
   r = 1 === t.valpha ? t.color : t.color.concat(this.valpha);
-return a.to.rgb.percent(r);
+return n.to.rgb.percent(r);
   },
   array: function() {
 return 1 === this.valpha ? this.color.slice() : this.color.concat(this.valpha);
   },
   object: function() {
-for (var e = {}, t = n[this.model].channels, r = n[this.model].labels, a = 0; a < t; a++)
-  e[r[a]] = this.color[a];
+for (var e = {}, t = a[this.model].channels, r = a[this.model].labels, n = 0; n < t; n++)
+  e[r[n]] = this.color[n];
 return 1 !== this.valpha && (e.alpha = this.valpha), e;
   },
   unitArray: function() {
@@ -97,8 +97,8 @@ return e.r /= 255, e.g /= 255, e.b /= 255, 1 !== this.valpha && (e.alpha = this.
   round: function(e) {
 return e = Math.max(e || 0, 0), new u(this.color.map(function(e) {
   return function(t) {
-    var r, a;
-    return r = t, a = e, Number(r.toFixed(a));
+    var r, n;
+    return r = t, n = e, Number(r.toFixed(n));
   };
 }(e)).concat(this.valpha), this.model);
   },
@@ -136,10 +136,10 @@ return (e % 360 + 360) % 360;
   a: l('lab', 1),
   b: l('lab', 2),
   keyword: function(e) {
-return arguments.length ? new u(e) : n[this.model].keyword(this.color);
+return arguments.length ? new u(e) : a[this.model].keyword(this.color);
   },
   hex: function(e) {
-return arguments.length ? new u(e) : a.to.hex(this.rgb().round().color);
+return arguments.length ? new u(e) : n.to.hex(this.rgb().round().color);
   },
   rgbNumber: function() {
 var e = this.rgb().color;
@@ -147,8 +147,8 @@ return (255 & e[0]) << 16 | (255 & e[1]) << 8 | 255 & e[2];
   },
   luminosity: function() {
 for (var e = this.rgb().color, t = [], r = 0; r < e.length; r++) {
-  var a = e[r] / 255;
-  t[r] = a <= 0.03928 ? a / 12.92 : Math.pow((a + 0.055) / 1.055, 2.4);
+  var n = e[r] / 255;
+  t[r] = n <= 0.03928 ? n / 12.92 : Math.pow((n + 0.055) / 1.055, 2.4);
 }
 return 0.2126 * t[0] + 0.7152 * t[1] + 0.0722 * t[2];
   },
@@ -217,17 +217,17 @@ return r = (r = (r + e) % 360) < 0 ? 360 + r : r, t.color[0] = r, t;
 if (!e || !e.rgb)
   throw Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof e);
 var r = e.rgb(),
-  a = this.rgb(),
-  n = void 0 === t ? 0.5 : t,
-  s = 2 * n - 1,
-  o = r.alpha() - a.alpha(),
-  i = ((s * o == -1 ? s : (s + o) / (1 + s * o)) + 1) / 2,
+  n = this.rgb(),
+  a = void 0 === t ? 0.5 : t,
+  o = 2 * a - 1,
+  s = r.alpha() - n.alpha(),
+  i = ((o * s == -1 ? o : (o + s) / (1 + o * s)) + 1) / 2,
   c = 1 - i;
-return u.rgb(i * r.red() + c * a.red(), i * r.green() + c * a.green(), i * r.blue() + c * a.blue(), r.alpha() * n + a.alpha() * (1 - n));
+return u.rgb(i * r.red() + c * n.red(), i * r.green() + c * n.green(), i * r.blue() + c * n.blue(), r.alpha() * a + n.alpha() * (1 - a));
   }
-}, Object.keys(n).forEach(function(e) {
-  if (-1 === o.indexOf(e)) {
-var t = n[e].channels;
+}, Object.keys(a).forEach(function(e) {
+  if (-1 === s.indexOf(e)) {
+var t = a[e].channels;
 u.prototype[e] = function() {
   if (this.model === e)
     return new u(this);
@@ -236,9 +236,9 @@ u.prototype[e] = function() {
   var r = 'number' == typeof arguments[t] ? t : this.valpha;
   return new u(function(e) {
     return Array.isArray(e) ? e : [e];
-  }(n[this.model][e].raw(this.color)).concat(r), e);
+  }(a[this.model][e].raw(this.color)).concat(r), e);
 }, u[e] = function(r) {
-  return 'number' == typeof r && (r = f(s.call(arguments), t)), new u(r, e);
+  return 'number' == typeof r && (r = f(o.call(arguments), t)), new u(r, e);
 };
   }
 });
@@ -247,9 +247,9 @@ function l(e, t, r) {
   return (e = Array.isArray(e) ? e : [e]).forEach(function(e) {
   (c[e] || (c[e] = []))[t] = r;
 }), e = e[0],
-function(a) {
-  var n;
-  return arguments.length ? (r && (a = r(a)), (n = this[e]()).color[t] = a, n) : (n = this[e]().color[t], r && (n = r(n)), n);
+function(n) {
+  var a;
+  return arguments.length ? (r && (n = r(n)), (a = this[e]()).color[t] = n, a) : (a = this[e]().color[t], r && (a = r(a)), a);
 };
 }
 

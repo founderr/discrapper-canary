@@ -204,8 +204,8 @@ location: 'subscription_header'
   });
   (!D.pj.has(r.planId) || !f.JwP.ALL_PAUSEABLE.has(r.status)) && (V = !1);
   let Y = (0, p.Ng)(),
-w = null == Y ? void 0 : null === (s = Y.discount) || void 0 === s ? void 0 : s.amount,
-k = (0, g.t7)(),
+k = null == Y ? void 0 : null === (s = Y.discount) || void 0 === s ? void 0 : s.amount,
+w = (0, g.t7)(),
 H = (0, g.lr)(),
 W = () => {
   if (r.status === f.O0b.ACTIVE || r.status === f.O0b.PAST_DUE || r.status === f.O0b.PAUSED)
@@ -327,7 +327,7 @@ subscriptionInfo: (a = ee, o()(null != E, 'Expected renewalInvoicePreview'), (0,
     planId: a,
     subscription: r,
     renewalInvoicePreview: E,
-    hasDiscountApplied: k,
+    hasDiscountApplied: w,
     activeDiscountInfo: H
   })
 })),
@@ -472,7 +472,7 @@ buttons: (() => {
   }
 })(),
 statusClasses: en,
-shouldUseDiscountMarketing: k,
-discountAmount: w
+shouldUseDiscountMarketing: w,
+discountAmount: k
   });
 };

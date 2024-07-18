@@ -34,14 +34,14 @@ m = (0, _.Z)({
 {
   commands: R,
   sectionDescriptors: g,
-  loading: v
+  loading: C
 } = u.wi(f, {
   commandType: t
 }, {
   limit: N.lr
 }),
 {
-  sections: C
+  sections: v
 } = r.useMemo(() => {
   let e = {};
   return g.forEach(n => {
@@ -50,16 +50,16 @@ m = (0, _.Z)({
     sections: e
   };
 }, [g]),
-G = r.useRef(v.current);
+G = r.useRef(C.current);
   r.useEffect(() => {
-v.current !== G.current && (G.current = v.current, null == O || O());
+C.current !== G.current && (G.current = C.current, null == O || O());
   }, [
-v,
+C,
 O
   ]);
   let y = r.useCallback(e => {
 s()(null != f, 'menu item should not show if channel is null');
-let n = C[e.applicationId],
+let n = v[e.applicationId],
   t = null != n ? (0, c.ky)(n) : void 0;
 return (0, i.jsx)(l.MenuItem, {
   id: e.id,
@@ -88,9 +88,9 @@ return (0, i.jsx)(l.MenuItem, {
 f,
 M,
 a,
-C
+v
   ]);
-  return v.current ? n = (0, i.jsx)(l.MenuItem, {
+  return C.current ? n = (0, i.jsx)(l.MenuItem, {
 id: 'menu-commands-placeholder',
 render: () => (0, i.jsx)(E.Z, {}),
 disabled: !0

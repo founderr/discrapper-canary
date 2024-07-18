@@ -143,7 +143,7 @@ return null;
   let Y = () => {
   null != l && ((0, h.uL)(P.Z5c.CHANNEL(l.id, L.oC.ROLE_SUBSCRIPTIONS)), (0, _.xf)(), E.Z.show(P.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, b.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => u.Z.open(P.oAB.SUBSCRIPTIONS, Z.cP)));
 },
-w = () => {
+k = () => {
   null != l && (0, D.h)({
     guildId: l.id,
     groupListing: i,
@@ -151,7 +151,7 @@ w = () => {
     subscription: s
   });
 },
-k = async () => {
+w = async () => {
   try {
     O(!0), await d.pl(s, F), (0, f.h)();
   } finally {
@@ -307,9 +307,9 @@ children: [
         isCancelled: H,
         isResubscribing: g,
         shouldHideRoleSubscriptionEntryPoints: y,
-        onCancelSubscriptionClick: w,
+        onCancelSubscriptionClick: k,
         onChangePlanClick: Y,
-        onResubscribeClick: k
+        onResubscribeClick: w
       })
     ]
   }) : null

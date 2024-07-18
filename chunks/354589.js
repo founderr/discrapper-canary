@@ -25,12 +25,12 @@ var r = t(481060),
   m = t(710631),
   R = t(297047),
   g = t(88966),
-  v = t(397616),
-  C = t(558924),
+  C = t(397616),
+  v = t(558924),
   G = t(991307),
   y = t(725119),
-  D = t(700994),
-  P = t(332031),
+  P = t(700994),
+  D = t(332031),
   b = t(981631),
   U = t(689938);
 n.default = (0, o.Z)((0, s.Z)(function(e) {
@@ -43,9 +43,9 @@ showChatItems: d = !0,
 showMediaItems: b = !1,
 showChannelCallItems: x = !1,
 showModalItems: H = !0,
-onSelect: j,
-onHeightUpdate: L
-  } = e, w = (0, y.Z)(t.id, null), F = (0, R.Z)(t, null, o), k = (0, C.Z)(t.id, s.id), B = (0, g.Z)(t.id, o), V = (0, h.Z)({
+onSelect: L,
+onHeightUpdate: j
+  } = e, w = (0, y.Z)(t.id, null), F = (0, R.Z)(t, null, o), k = (0, v.Z)(t.id, s.id), B = (0, g.Z)(t.id, o), V = (0, h.Z)({
 user: t,
 context: o
   }), W = (0, f.Z)({
@@ -53,7 +53,7 @@ user: t,
 context: o
   }), K = (0, p.Z)({
 user: t
-  }), Y = (0, D.Z)(t.id), z = (0, v.Z)(t.id, s.id), q = (0, G.Z)(t.id), Q = (0, I.P)({
+  }), Y = (0, P.Z)(t.id), q = (0, C.Z)(t.id, s.id), z = (0, G.Z)(t.id), Q = (0, I.P)({
 userId: t.id,
 channelId: s.id,
 location: 'GroupDMUserContextMenu'
@@ -64,18 +64,18 @@ user: t
   }), et = (0, T.Z)({
 id: t.id,
 label: U.Z.Messages.COPY_ID_USER
-  }), ei = (0, P.Z)(t.id), er = (0, E.Z)(t.id), ea = (0, c.Z)(s.id), es = (0, N.Z)(t), eo = (0, _.Z)(t.id), el = (0, A.Z)({
+  }), ei = (0, D.Z)(t.id), er = (0, E.Z)(t.id), ea = (0, c.Z)(s.id), es = (0, N.Z)(t), eo = (0, _.Z)(t.id), el = (0, A.Z)({
 commandType: l.yU.USER,
 commandTargetId: t.id,
 channel: s,
 guildId: void 0,
-onHeightUpdate: L
+onHeightUpdate: j
   }), eu = (0, M.Z)(t, s), ed = t.isNonUserBot(), ec = s.isManaged(), eE = null === (n = s.recipients) || void 0 === n ? void 0 : n.includes(t.id);
   return (0, i.jsxs)(r.Menu, {
 navId: 'user-context',
 onClose: a.Zy,
 'aria-label': U.Z.Messages.USER_ACTIONS_MENU_LABEL,
-onSelect: j,
+onSelect: L,
 children: [
   !ed && (0, i.jsxs)(i.Fragment, {
     children: [
@@ -99,7 +99,7 @@ children: [
       }),
       eE && (0, i.jsxs)(r.MenuGroup, {
         children: [
-          !ec && z,
+          !ec && q,
           eu
         ]
       }),
@@ -108,7 +108,7 @@ children: [
       }),
       (0, i.jsxs)(r.MenuGroup, {
         children: [
-          b && q,
+          b && z,
           b && Q,
           b && $,
           el,

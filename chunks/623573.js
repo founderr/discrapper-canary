@@ -71,12 +71,12 @@ let G = [
 'payment_type',
 'billing_address'
   ],
-  w = [
+  k = [
 'payment_type',
 'przelewy24_info',
 'billing_address'
   ],
-  k = [
+  w = [
 'payment_type',
 'billing_address'
   ];
@@ -130,14 +130,14 @@ switch (null != e ? e : this.state.type) {
   case b.HeQ.GIROPAY:
     return Y;
   case b.HeQ.PRZELEWY24:
-    return w;
+    return k;
   case b.HeQ.PAYSAFE_CARD:
   case b.HeQ.GCASH:
   case b.HeQ.GRABPAY_MY:
   case b.HeQ.MOMO_WALLET:
   case b.HeQ.KAKAOPAY:
   case b.HeQ.GOPAY_WALLET:
-    return k;
+    return w;
   default:
     return G;
 }

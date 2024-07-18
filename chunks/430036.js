@@ -431,7 +431,7 @@ super(...e), et(this, 'handlePin', () => {
       default: e
     } = await Promise.all([
       n.e('79695'),
-      n.e('45984'),
+      n.e('70474'),
       n.e('56826'),
       n.e('80991')
     ]).then(n.bind(n, 131404));

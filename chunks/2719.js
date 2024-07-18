@@ -159,7 +159,7 @@ children: [
   });
 }
 
-function w(e) {
+function k(e) {
   var s, t;
   let {
 user: i,
@@ -218,7 +218,7 @@ children: [
   });
 }
 
-function k(e) {
+function w(e) {
   let {
 text: s,
 censor: t,
@@ -272,7 +272,7 @@ else {
     buttonText: F.Z.Messages.EDIT,
     buttonAriaLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_EDIT_EMAIL_A11Y_LABEL,
     buttonColor: _.Button.Colors.PRIMARY,
-    valueMessage: (0, n.jsx)(k, {
+    valueMessage: (0, n.jsx)(w, {
       text: e,
       censor: b.E,
       revealLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_REVEAL_EMAIL_A11Y_LABEL,
@@ -344,7 +344,7 @@ return null;
 phone: o,
 email: l
   } = i, c = null != o;
-  return s = c ? (0, n.jsx)(k, {
+  return s = c ? (0, n.jsx)(w, {
 text: o,
 censor: b.n,
 revealLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_REVEAL_PHONE_A11Y_LABEL,
@@ -536,7 +536,7 @@ children: [
         children: [
           (0, n.jsx)(h.F, {
             setting: v.s6.ACCOUNT_DISPLAY_NAME,
-            children: (0, n.jsx)(w, {
+            children: (0, n.jsx)(k, {
               className: y.fieldSpacerBottom,
               user: s
             })

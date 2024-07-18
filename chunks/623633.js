@@ -1,22 +1,22 @@
-t.d(e, {
+t.d(n, {
   Z: function() {
-return r;
+return s;
   }
 });
 var i = t(442837),
-  u = t(592125),
-  l = t(944486);
+  r = t(592125),
+  a = t(944486);
 
-function r() {
+function s() {
   return (0, i.e7)([
-l.Z,
-u.Z
+a.Z,
+r.Z
   ], () => {
-let n = l.Z.getVoiceChannelId();
-if (null != n) {
-  let e = u.Z.getChannel(n);
-  if (null == e ? void 0 : e.isGuildStageVoice())
-    return e;
+let e = a.Z.getVoiceChannelId();
+if (null != e) {
+  let n = r.Z.getChannel(e);
+  if (null == n ? void 0 : n.isGuildStageVoice())
+    return n;
 }
 return null;
   });

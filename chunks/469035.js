@@ -1,13 +1,13 @@
-var r = [],
-  a = new MessageChannel(),
-  n = function() {
+var n = [],
+  i = new MessageChannel(),
+  o = function() {
 this.postMessage(void 0);
-  }.bind(a.port2);
-a.port1.onmessage = function() {
-  var e = r;
-  r = [];
-  for (var t = performance.now(), a = 0; a < e.length; a++)
-e[a](t);
-}, a = null, t.Z = function(e) {
-  1 === r.push(e) && requestAnimationFrame(n);
+  }.bind(i.port2);
+i.port1.onmessage = function() {
+  var e = n;
+  n = [];
+  for (var t = performance.now(), i = 0; i < e.length; i++)
+e[i](t);
+}, i = null, t.Z = function(e) {
+  1 === n.push(e) && requestAnimationFrame(o);
 };

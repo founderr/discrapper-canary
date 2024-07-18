@@ -39,8 +39,8 @@ var n = t(735250),
   y = t(504865),
   V = t(179984),
   Y = t(386733),
-  w = t(487980),
-  k = t(474936),
+  k = t(487980),
+  w = t(474936),
   H = t(981631),
   W = t(689938),
   K = t(536273),
@@ -61,10 +61,10 @@ T = (0, A.ZP)();
   if (null == a || null == a.planIdFromItems)
 return null;
   let S = null != a.trialId,
-C = a.planIdFromItems === k.Xh.PREMIUM_YEAR_TIER_2,
+C = a.planIdFromItems === w.Xh.PREMIUM_YEAR_TIER_2,
 m = d || S,
 h = null != a.trialEndsAt ? l()(a.trialEndsAt).diff(l()(), 'd') : 0,
-g = k.GP[a.planIdFromItems],
+g = w.GP[a.planIdFromItems],
 O = Z.ZP.formatPriceString(Z.ZP.getDefaultPrice(g.id), g.interval);
   return (0, n.jsxs)('div', {
 className: r()(K.tierCard, {
@@ -107,18 +107,18 @@ children: [
               remainingTime: h,
               price: O
             }) : C ? W.Z.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
-              percent: null !== (e = null == u ? void 0 : u.percentage) && void 0 !== e ? e : k.Bo,
+              percent: null !== (e = null == u ? void 0 : u.percentage) && void 0 !== e ? e : w.Bo,
               regularPrice: O
             }) : W.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
-              percent: null !== (s = null == u ? void 0 : u.percentage) && void 0 !== s ? s : k.M_,
+              percent: null !== (s = null == u ? void 0 : u.percentage) && void 0 !== s ? s : w.M_,
               regularPrice: O,
-              numMonths: null !== (t = null == u ? void 0 : u.duration) && void 0 !== t ? t : k.rt
+              numMonths: null !== (t = null == u ? void 0 : u.duration) && void 0 !== t ? t : w.rt
             })
           })
         ]
       }) : (0, n.jsx)(y.Z, {
         variant: o ? 'heading-lg/normal' : void 0,
-        subscriptionTier: k.Si.TIER_2,
+        subscriptionTier: w.Si.TIER_2,
         interval: g.interval,
         shouldUseModifiedCopy: o
       }),
@@ -255,7 +255,7 @@ autoTrackExposure: !0
 location: A + ' auto off',
 autoTrackExposure: !1
   }), (0, U.B)('PremiumManagementSettings');
-  let M = (0, w.b)('PremiumManagementSettings');
+  let M = (0, k.b)('PremiumManagementSettings');
   a.useEffect(() => {
 u.Z.wait(async () => {
   !N && !e && await Promise.all([
@@ -300,7 +300,7 @@ children: (0, n.jsxs)(n.Fragment, {
           headingOverride: W.Z.Messages.PREMIUM_COMPARISON_TABLE_WHAT_YOU_HAVE_GOT_TITLE,
           hidePill: !b,
           selectedPlanColumnClassName: K.tier2PlanComparisonTableBackground,
-          selectedPlanTier: k.p9.TIER_2
+          selectedPlanTier: w.p9.TIER_2
         })
       ]
     }),

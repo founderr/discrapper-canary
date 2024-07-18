@@ -59,7 +59,7 @@ U = 'true' !== j.gift && null != f,
   analyticsLocations: y
 } = (0, E.ZP)(_.Z.PAYMENT_FLOW_TEST_PAGE),
 [V, Y] = a.useState(''),
-[w, k] = a.useState(R.lds),
+[k, w] = a.useState(R.lds),
 [H, W] = a.useState(''),
 [K, z] = a.useState(R.lds),
 [Q, X] = a.useState(R.lds);
@@ -318,13 +318,13 @@ children: (0, n.jsxs)(o.FormSection, {
         }),
         (0, n.jsx)(o.TextInput, {
           placeholder: 'Sku Id',
-          value: w,
-          onChange: e => k(e)
+          value: k,
+          onChange: e => w(e)
         }),
         (0, n.jsx)(o.Button, {
           onClick: () => (0, d.S)({
             applicationId: V,
-            skuId: w,
+            skuId: k,
             openPremiumPaymentModal: () => !0,
             analyticsLocations: [],
             analyticsLocationObject: {

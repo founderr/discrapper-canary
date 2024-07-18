@@ -39,7 +39,7 @@ var n = t(735250),
   y = t(689938),
   V = t(374265),
   Y = t(549856);
-let w = e => {
+let k = e => {
   var s, t;
   let a, {
   integration: i
@@ -105,7 +105,7 @@ children: [
   });
 };
 
-function k(e) {
+function w(e) {
   var s, t, i;
   let r, o, l, {
   onDisconnect: E,
@@ -118,7 +118,7 @@ function k(e) {
 [D, f] = a.useState(T.metadataVisibility),
 [P, Z] = a.useState(T.showActivity),
 [F, Y] = a.useState(null),
-[k, H] = a.useState(null),
+[w, H] = a.useState(null),
 [W, K] = a.useState(!1),
 [z, Q] = a.useState([]),
 X = (0, m.rR)(T.type),
@@ -127,7 +127,7 @@ q = C.Z.get(X);
 p(T.friendSync), M(T.visibility), f(T.metadataVisibility), Z(T.showActivity);
   }, [T]), a.useEffect(() => {
 if (!1 !== T.verified)
-  null != F && (M(F), u.Z.setVisibility(T.type, T.id, F), Y(null)), null != k && (f(k), u.Z.setMetadataVisibility(T.type, T.id, k), H(null));
+  null != F && (M(F), u.Z.setVisibility(T.type, T.id, F), Y(null)), null != w && (f(w), u.Z.setMetadataVisibility(T.type, T.id, w), H(null));
   }, [T]);
 
   function J() {
@@ -419,7 +419,7 @@ children: [
         })
       }),
       (0, n.jsx)('div', {
-        children: T.integrations.map(e => (0, n.jsx)(w, {
+        children: T.integrations.map(e => (0, n.jsx)(k, {
           integration: e
         }, e.id))
       })
@@ -541,7 +541,7 @@ children: [
     children: y.Z.Messages.CONNECTED_ACCOUNTS_NONE_TITLE
   })
 ]
-  }) : i.filter(e => C.Z.isSupported(e.type)).map((e, s) => (0, n.jsx)(k, {
+  }) : i.filter(e => C.Z.isSupported(e.type)).map((e, s) => (0, n.jsx)(w, {
 theme: r,
 account: e,
 locale: o,

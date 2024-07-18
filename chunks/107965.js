@@ -70,7 +70,7 @@ _(this, 'updateAvailable', !1), _(this, 'hasNativeUpdate', !1), _(this, '_checkI
     },
     oldFormErrors: !0
   }).then(e => {
-    if (null == e.body || 'fcaaf14617d25989f97363de6e37166e2c331dae' === e.body.hash)
+    if (null == e.body || '2c8e8f0d305a12cfcd7ebf126c597368c786a6f3' === e.body.hash)
       return this._handleUpdateNotAvailable();
     if (e.body.required || (0, r.fD)())
       return this._handleUpdateDownloaded(!1);

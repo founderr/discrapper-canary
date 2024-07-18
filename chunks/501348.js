@@ -51,11 +51,11 @@ configurable: !0,
 writable: !0
   }) : e[s] = t, e;
 }
-let w = {
+let k = {
 COZY: 'cozy',
 COMPACT: 'compact'
   },
-  k = (0, D.hQ)(),
+  w = (0, D.hQ)(),
   H = (0, D.hQ)(),
   W = (0, D.hQ)(),
   K = '1337',
@@ -110,7 +110,7 @@ return f.isPlatformEmbedded ? (0, n.jsxs)(d.FormItem, {
   className: V.marginTop20,
   children: [
     (0, n.jsx)(d.FormTitle, {
-      id: k,
+      id: w,
       tag: d.FormTitleTags.H5,
       className: V.marginBottom8,
       children: F.Z.Messages.ACCESSIBILITY_ZOOM_LEVEL_LABEL
@@ -123,7 +123,7 @@ return f.isPlatformEmbedded ? (0, n.jsxs)(d.FormItem, {
       stickToMarkers: !0,
       onValueChange: this.handleZoomChange,
       onValueRender: this.handleSliderRender,
-      'aria-labelledby': k
+      'aria-labelledby': w
     }),
     (0, n.jsx)(d.FormText, {
       type: d.FormText.Types.DESCRIPTION,
@@ -275,15 +275,15 @@ return (0, n.jsxs)(d.FormItem, {
     (0, n.jsx)(d.RadioGroup, {
       options: [{
           name: F.Z.Messages.COZY_MODE,
-          value: w.COZY
+          value: k.COZY
         },
         {
           name: F.Z.Messages.COMPACT_MODE,
-          value: w.COMPACT
+          value: k.COMPACT
         }
       ],
       onChange: this.handleMessageDisplayModeChange,
-      value: this.props.messageDisplayCompact ? w.COMPACT : w.COZY
+      value: this.props.messageDisplayCompact ? k.COMPACT : k.COZY
     }),
     (0, n.jsx)(d.FormSwitch, {
       value: this.props.messageDisplayCompact && this.props.displayCompactAvatars,
@@ -378,7 +378,7 @@ super(...e), Y(this, 'darkMessages', z(B.BRd.DARK)), Y(this, 'lightMessages', z(
   let {
     value: s
   } = e;
-  Z.jU.updateSetting(s === w.COMPACT), (0, T.ZZ)();
+  Z.jU.updateSetting(s === k.COMPACT), (0, T.ZZ)();
 });
   }
 }

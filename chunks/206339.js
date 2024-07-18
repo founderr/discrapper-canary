@@ -165,11 +165,11 @@ y = null != h || !g,
 {
   promotionsLoaded: V,
   activeOutboundPromotions: Y,
-  claimedEndedOutboundPromotions: w,
-  claimedOutboundPromotionCodeMap: k,
+  claimedEndedOutboundPromotions: k,
+  claimedOutboundPromotionCodeMap: w,
   addClaimedOutboundPromotionCode: H
 } = (0, O.lG)(),
-W = Y.length + w.length > 0,
+W = Y.length + k.length > 0,
 K = A.g.useExperiment({
   location: 'EntitlementGifts'
 }, {
@@ -241,7 +241,7 @@ children: [
           W ? (0, n.jsx)(d.FormDivider, {
             className: G.divider
           }) : null,
-          w.map(e => {
+          k.map(e => {
             let {
               code: s,
               promotion: t
@@ -255,7 +255,7 @@ children: [
           }),
           Y.map(e => (0, n.jsx)(F, {
             outboundPromotion: e,
-            code: k[e.id],
+            code: w[e.id],
             addClaimedOutboundPromotionCode: H,
             disabled: !i
           }, e.id)),

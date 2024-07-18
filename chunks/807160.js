@@ -40,8 +40,8 @@ var n, a, i, r = t(735250),
   y = t(285952),
   V = t(259580),
   Y = t(572004),
-  w = t(55935),
-  k = t(630388),
+  k = t(55935),
+  w = t(630388),
   H = t(74538),
   W = t(937615),
   K = t(244526),
@@ -625,7 +625,7 @@ if (null != E && 0 !== E.items.length) {
   }), s = n.description;
 let S = (0, r.jsx)('div', {
     className: ee.date,
-    children: (0, w.vc)(u()(n.createdAt), 'MM/DD/YYYY')
+    children: (0, k.vc)(u()(n.createdAt), 'MM/DD/YYYY')
   }),
   C = n.isGift ? (0, r.jsx)(N.Tooltip, {
     text: $.Z.Messages.BILLING_GIFT_PURCHASE_TOOLTIP,
@@ -803,7 +803,7 @@ super(...e), es(this, 'state', {
       let {
         payment: e
       } = this.props;
-      return null == e.sku || !(0, k.yE)(e.sku.flags, X.l4R.STICKER_PACK);
+      return null == e.sku || !(0, w.yE)(e.sku.flags, X.l4R.STICKER_PACK);
     }
   },
   {
@@ -822,7 +822,7 @@ super(...e), es(this, 'state', {
       let {
         payment: e
       } = this.props;
-      return null == e.sku || !(0, k.yE)(e.sku.flags, I.l.GUILD_PRODUCT);
+      return null == e.sku || !(0, w.yE)(e.sku.flags, I.l.GUILD_PRODUCT);
     }
   },
   {

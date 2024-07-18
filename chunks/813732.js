@@ -59,7 +59,7 @@ children: (0, n.jsxs)(P.Z, {
   });
 }
 
-function w() {
+function k() {
   let e = (0, o.e7)([f.Z], () => f.Z.getForApplication(B.RQ));
   return a.useEffect(() => {
 (0, E.yD)(B.RQ);
@@ -126,7 +126,7 @@ children: (0, n.jsxs)('div', {
     }),
     (0, n.jsx)(O.F, {
       setting: F.s6.SUBSCRIPTIONS_CREDITS,
-      children: (0, n.jsx)(w, {})
+      children: (0, n.jsx)(k, {})
     }),
     null != e ? (0, n.jsx)(v.Z, {
       subscription: e,

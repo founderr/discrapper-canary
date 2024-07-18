@@ -1,15 +1,15 @@
-var a = r(599295),
-  n = r(692378),
-  s = r(383237),
-  o = r(470079),
+var n = r(599295),
+  a = r(692378),
+  o = r(383237),
+  s = r(470079),
   i = r(639519),
   c = r.n(i),
   u = r(456519),
   l = r(3339),
   b = r(652621),
   f = r(398420),
-  d = r(893361),
-  h = [
+  h = r(893361),
+  d = [
 'getItemString',
 'keyPath',
 'labelRenderer',
@@ -22,19 +22,19 @@ var a = r(599295),
 function p(e, t) {
   var r = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
-var a = Object.getOwnPropertySymbols(e);
-t && (a = a.filter(function(t) {
+var n = Object.getOwnPropertySymbols(e);
+t && (n = n.filter(function(t) {
   return Object.getOwnPropertyDescriptor(e, t).enumerable;
-})), r.push.apply(r, a);
+})), r.push.apply(r, n);
   }
   return r;
 }
 
-function g(e) {
+function v(e) {
   for (var t = 1; t < arguments.length; t++) {
 var r = null != arguments[t] ? arguments[t] : {};
 t % 2 ? p(Object(r), !0).forEach(function(t) {
-  (0, n.Z)(e, t, r[t]);
+  (0, a.Z)(e, t, r[t]);
 }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : p(Object(r)).forEach(function(t) {
   Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
 });
@@ -44,24 +44,24 @@ t % 2 ? p(Object(r), !0).forEach(function(t) {
 var y = function(e) {
   var t = e.getItemString,
 r = e.keyPath,
-n = e.labelRenderer,
+a = e.labelRenderer,
 i = e.styling,
 c = e.value,
 p = e.valueRenderer,
 y = e.isCustomNode,
-v = (0, s.Z)(e, h),
+g = (0, o.Z)(e, d),
 m = y(c) ? 'Custom' : (0, u.Z)(c),
-O = {
+w = {
   getItemString: t,
   key: r[0],
   keyPath: r,
-  labelRenderer: n,
+  labelRenderer: a,
   nodeType: m,
   styling: i,
   value: c,
   valueRenderer: p
 },
-w = g(g(g({}, v), O), {}, {
+O = v(v(v({}, g), w), {}, {
   data: c,
   isCustomNode: y
 });
@@ -70,55 +70,55 @@ case 'Object':
 case 'Error':
 case 'WeakMap':
 case 'WeakSet':
-  return o.createElement(l.Z, w);
+  return s.createElement(l.Z, O);
 case 'Array':
-  return o.createElement(b.Z, w);
+  return s.createElement(b.Z, O);
 case 'Iterable':
 case 'Map':
 case 'Set':
-  return o.createElement(f.Z, w);
+  return s.createElement(f.Z, O);
 case 'String':
-  return o.createElement(d.Z, (0, a.Z)({}, O, {
+  return s.createElement(h.Z, (0, n.Z)({}, w, {
     valueGetter: function(e) {
       return '"'.concat(e, '"');
     }
   }));
 case 'Number':
 case 'Custom':
-  return o.createElement(d.Z, O);
+  return s.createElement(h.Z, w);
 case 'Boolean':
-  return o.createElement(d.Z, (0, a.Z)({}, O, {
+  return s.createElement(h.Z, (0, n.Z)({}, w, {
     valueGetter: function(e) {
       return e ? 'true' : 'false';
     }
   }));
 case 'Date':
-  return o.createElement(d.Z, (0, a.Z)({}, O, {
+  return s.createElement(h.Z, (0, n.Z)({}, w, {
     valueGetter: function(e) {
       return e.toISOString();
     }
   }));
 case 'Null':
-  return o.createElement(d.Z, (0, a.Z)({}, O, {
+  return s.createElement(h.Z, (0, n.Z)({}, w, {
     valueGetter: function() {
       return 'null';
     }
   }));
 case 'Undefined':
-  return o.createElement(d.Z, (0, a.Z)({}, O, {
+  return s.createElement(h.Z, (0, n.Z)({}, w, {
     valueGetter: function() {
       return 'undefined';
     }
   }));
 case 'Function':
 case 'Symbol':
-  return o.createElement(d.Z, (0, a.Z)({}, O, {
+  return s.createElement(h.Z, (0, n.Z)({}, w, {
     valueGetter: function(e) {
       return e.toString();
     }
   }));
 default:
-  return o.createElement(d.Z, (0, a.Z)({}, O, {
+  return s.createElement(h.Z, (0, n.Z)({}, w, {
     valueGetter: function() {
       return '<'.concat(m, '>');
     }
