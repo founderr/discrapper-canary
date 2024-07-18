@@ -54,15 +54,15 @@ let {
   channel: n,
   mediaImageSrc: i,
   artist: r,
-  description: u,
-  colors: h,
-  badges: m
-} = e, _ = p({
+  description: d,
+  colors: u,
+  badges: h
+} = e, m = p({
   avatarSrc: t.getAvatarURL(n.guild_id, 128),
   mediaImageSrc: i
-}), f = r.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
+}), _ = r.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
 return await (0, l.f)({
-  assetsToLoad: _,
+  assetsToLoad: m,
   drawImage: e => {
     (function(e, t) {
       let n = t.map((e, t) => ({
@@ -84,25 +84,7 @@ return await (0, l.f)({
         h: c.bg,
         w: c.nx
       }, 8);
-    }(e, h), function(e) {
-      e.setColor('rgba(108, 111, 124, 0.24)'), e.drawRoundedRect({
-        x: c.nx - c.sB - c.if,
-        y: c.sB,
-        w: c.if,
-        h: c.wI
-      }, 4, !0), e.setColor('rgba(255, 255, 255, 0.5)'), e.setFont({
-        size: 12,
-        family: [
-          'gg sans',
-          'sans-serif'
-        ],
-        weight: 500,
-        truncate: s.GX.None
-      }), e.drawText(d.Z.Messages.BETA, {
-        x: c.nx - c.sB - 29,
-        y: 26
-      }, !0);
-    }(e), function(e) {
+    }(e, u), function(e) {
       e.drawRoundedImage('MediaImage', {
         x: c.sB,
         y: c.sB
@@ -126,6 +108,8 @@ return await (0, l.f)({
     }(e), function(e, t) {
       e.setColor('white'), e.setFont({
         size: 16,
+        family: c.I8,
+        weight: c.Ue,
         truncate: s.GX.Wrap
       }), e.drawText(t, {
         x: c.Iq,
@@ -133,9 +117,9 @@ return await (0, l.f)({
         h: 32,
         w: c.kC
       }, !0);
-    }(e, u), (0, o.J)({
+    }(e, d), (0, o.J)({
       canvas: e,
-      badges: m,
+      badges: h,
       startPosition: c.Iq,
       maxWidth: c.kC
     }));
@@ -143,7 +127,7 @@ return await (0, l.f)({
   exportConfigs: {
     format: s.kH.CloudUpload,
     quality: 1,
-    fileName: 'user-reacting-to-'.concat(f, '.png').toLowerCase(),
+    fileName: 'user-reacting-to-'.concat(_, '.png').toLowerCase(),
     fileType: 'png',
     channelId: n.id
   }

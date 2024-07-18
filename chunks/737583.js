@@ -22,6 +22,8 @@ maxWidth: i
 }
 of(t.setFont({
   size: 12,
+  family: r.I8,
+  weight: r.Ue,
   truncate: l.GX.None
 }), a)) {
 let l = null != n ? n.w + n.x + r.PW : o,

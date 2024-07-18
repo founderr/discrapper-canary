@@ -1,15 +1,14 @@
 n.d(t, {
   B: function() {
-return u;
+return d;
   }
 }), n(653041);
 var i = n(55000),
   a = n(693824),
   s = n(690725),
   l = n(737583),
-  r = n(169040),
-  o = n(689938);
-let c = (e, t, n) => ({
+  r = n(169040);
+let o = (e, t, n) => ({
 AvatarImage: e,
 ...null != t && {
   MediaImage: t
@@ -18,7 +17,7 @@ AvatarImage: e,
   ApplicationImage: n
 }
   }),
-  d = (e, t) => {
+  c = (e, t) => {
 let n = [{
   iconPath: r.i6,
   text: e
@@ -28,21 +27,21 @@ return null != t && n.push({
   text: t
 }), n;
   },
-  u = async e => {
+  d = async e => {
 let {
   mediaImageSrc: t,
   entry: n,
-  avatarSrc: u,
-  description: h,
-  timestamp: p,
-  episodeDescription: m,
-  colors: _,
-  channelId: f
-} = e, E = n.extra.media_title, C = c(u, t);
+  avatarSrc: d,
+  description: u,
+  timestamp: h,
+  episodeDescription: p,
+  colors: m,
+  channelId: _
+} = e, f = n.extra.media_title, E = o(d, t);
 return await (0, s.f)({
-  assetsToLoad: C,
+  assetsToLoad: E,
   drawImage: e => {
-    let t = _.map((e, t) => ({
+    let t = m.map((e, t) => ({
       color: e,
       stop: t
     }));
@@ -60,23 +59,7 @@ return await (0, s.f)({
       y: 0,
       h: r.bg,
       w: r.nx
-    }, 8), e.setColor('rgba(108, 111, 124, 0.24)'), e.drawRoundedRect({
-      x: r.nx - r.sB - r.if,
-      y: r.sB,
-      w: r.if,
-      h: r.wI
-    }, 4, !0), e.setColor('rgba(255, 255, 255, 0.5)'), e.setFont({
-      size: 12,
-      family: [
-        'gg sans',
-        'sans-serif'
-      ],
-      weight: 500,
-      truncate: a.GX.None
-    }), e.drawText(o.Z.Messages.BETA, {
-      x: r.nx - r.sB - 29,
-      y: 26
-    }, !0), e.setColor('white');
+    }, 8), e.setColor('white');
     let n = e.drawRoundedImage('MediaImage', {
       x: r.sB,
       y: r.sB
@@ -103,14 +86,16 @@ return await (0, s.f)({
       h: r.$S
     }, 50), e.setFont({
       size: 16,
+      family: r.I8,
+      weight: r.Ue,
       truncate: a.GX.Wrap
-    }), e.drawText(h, {
+    }), e.drawText(u, {
       x: r.Iq,
       y: 64,
       h: 32,
       w: r.kC
     }, !0);
-    let s = d(p, m);
+    let s = c(h, p);
     (0, l.J)({
       canvas: e,
       badges: s,
@@ -121,9 +106,9 @@ return await (0, s.f)({
   exportConfigs: {
     format: a.kH.CloudUpload,
     quality: 1,
-    fileName: 'user-reacting-to-'.concat(E, '.png').toLowerCase(),
+    fileName: 'user-reacting-to-'.concat(f, '.png').toLowerCase(),
     fileType: 'png',
-    channelId: f
+    channelId: _
   }
 });
   };
