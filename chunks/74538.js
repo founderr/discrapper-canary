@@ -77,6 +77,9 @@ return eu;
   Zx: function() {
 return eb;
   },
+  _O: function() {
+return eB;
+  },
   a5: function() {
 return eA;
   },
@@ -1355,6 +1358,10 @@ hqStreamingState: {
 
 function ek(e) {
   return e;
+}
+
+function eB(e) {
+  return 'isNitroLocked' in e;
 }
 t.ZP = Object.freeze({
   isNewUser: e => null != e && Date.now() - e.createdAt.getTime() < 2592000000,

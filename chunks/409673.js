@@ -132,23 +132,23 @@ el = (0, o.JA)(eo),
 eu = null != W || null != K,
 ec = !(0, g.Nq)(z, D, L),
 ed = P || w && !ec,
+e_ = ec && V,
 {
-  enableInlineUpsell: e_
+  enableInlineUpsell: eE
 } = h.Qs.useExperiment({
   location: 'Soundboard Sound Button'
 }, {
-  autoTrackExposure: ec,
-  disable: !ec
+  autoTrackExposure: e_
 });
 
-  function eE(e) {
+  function ef(e) {
 e.stopPropagation(), e.currentTarget.blur(), es ? (0, m.hs)(Y) : (0, m.TB)(Y);
   }
 
-  function ef() {
+  function eh() {
 return (0, r.jsx)(R, {
   disabled: !U && !P,
-  onClick: eE,
+  onClick: ef,
   text: v.Z.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND.format({
     emojiName: D.emojiName,
     soundName: D.name
@@ -164,12 +164,12 @@ return (0, r.jsx)(R, {
   })
 });
   }
-  let eh = C({
+  let ep = C({
   sound: D,
   previewSound: X,
   disabled: ec && !P
 }),
-ep = e => x || ec ? ec && V && e_ ? (0, r.jsx)(d.LockIcon, {
+em = e => x || ec ? ec && V && eE ? (0, r.jsx)(d.LockIcon, {
   size: 'xs',
   color: 'currentColor',
   className: s()(O.primaryIcon, e)
@@ -178,19 +178,19 @@ ep = e => x || ec ? ec && V && e_ ? (0, r.jsx)(d.LockIcon, {
   color: 'currentColor',
   className: s()(O.primaryIcon, e)
 }),
-em = () => e_ && ec && V && !H ? (0, r.jsxs)(r.Fragment, {
+eI = () => eE && ec && V && !H ? (0, r.jsxs)(r.Fragment, {
   children: [
     (0, r.jsx)('div', {
       className: O.buttonOverlayBackground
     }),
-    ep(O.primaryIconTopLevel),
+    em(O.primaryIconTopLevel),
     (0, r.jsx)('div', {
       className: O.buttonOverlay,
       children: (0, r.jsxs)('div', {
         className: O.buttonOverlayActions,
         children: [
-          ed && eh,
-          ed && ef()
+          ed && ep,
+          ed && eh()
         ]
       })
     })
@@ -206,9 +206,9 @@ em = () => e_ && ec && V && !H ? (0, r.jsxs)(r.Fragment, {
     (0, r.jsxs)('div', {
       className: O.buttonOverlayActions,
       children: [
-        ed && eh,
-        ep(),
-        ed && ef()
+        ed && ep,
+        em(),
+        ed && eh()
       ]
     })
   ]
@@ -286,7 +286,7 @@ children: [
                 (0, r.jsxs)('div', {
                   className: O.buttonOverlayActions,
                   children: [
-                    eh,
+                    ep,
                     (0, r.jsxs)('div', {
                       className: O.addButton,
                       children: [
@@ -302,14 +302,14 @@ children: [
                         })
                       ]
                     }),
-                    ed && ef()
+                    ed && eh()
                   ]
                 })
               ]
             });
           case T.Pb.PLAY:
           default:
-            return em();
+            return eI();
         }
       }()
     ]

@@ -5,6 +5,7 @@ e.exports = {
   sectionTitle: 'sectionTitle_ca5acd',
   sectionHeaderContent: 'sectionHeaderContent_ca5acd',
   notFirstSectionHeader: 'notFirstSectionHeader_ca5acd',
+  sectionFooter: 'sectionFooter_ca5acd',
   headerIcon: 'headerIcon_ca5acd',
   soundRow: 'soundRow_ca5acd',
   soundRowNitroLocked: 'soundRowNitroLocked_ca5acd',

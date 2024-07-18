@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return N;
+return v;
   }
 });
 var r = n(735250),
@@ -14,20 +14,21 @@ var r = n(735250),
   d = n(806966),
   _ = n(254494),
   E = n(593618),
-  f = n(631771),
-  h = n(594174),
+  f = n(594174),
+  h = n(74538),
   p = n(697426),
   m = n(526617),
-  I = n(689938),
-  T = n(789009);
-let g = [
+  I = n(474936),
+  T = n(689938),
+  g = n(789009);
+let S = [
   8,
   8,
   8,
   8
 ];
 
-function S(e) {
+function A(e) {
   let {
 icon: t,
 isSelected: n,
@@ -39,17 +40,17 @@ listItemProps: a,
 ...a,
 ...o,
 onClick: i,
-className: s()(T.categoryIcon, {
-  [T.selected]: n
+className: s()(g.categoryIcon, {
+  [g.selected]: n
 }),
 children: (0, r.jsx)(t, {
-  className: T.categoryIconIcon,
+  className: g.categoryIconIcon,
   color: 'currentColor'
 })
   });
 }
 
-function A(e) {
+function N(e) {
   let {
 category: t,
 categoryIndex: n,
@@ -61,39 +62,39 @@ isNitroLocked: s
 text: function(e) {
   switch (e.categoryInfo.type) {
     case p.bg.FAVORITES:
-      return I.Z.Messages.FAVORITES;
+      return T.Z.Messages.FAVORITES;
     case p.bg.RECENTLY_HEARD:
-      return I.Z.Messages.RECENTLY_HEARD;
+      return T.Z.Messages.RECENTLY_HEARD;
     case p.bg.FREQUENTLY_USED:
-      return I.Z.Messages.FREQUENTLY_USED;
+      return T.Z.Messages.FREQUENTLY_USED;
     case p.bg.GUILD:
       return (0, r.jsx)(E.K, {
         guild: e.categoryInfo.guild,
         includeActivity: !1
       });
     case p.bg.DEFAULTS:
-      return I.Z.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
+      return T.Z.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
   }
 }(t),
 'aria-label': function(e) {
   switch (e.categoryInfo.type) {
     case p.bg.FAVORITES:
-      return I.Z.Messages.FAVORITES;
+      return T.Z.Messages.FAVORITES;
     case p.bg.RECENTLY_HEARD:
-      return I.Z.Messages.RECENTLY_HEARD;
+      return T.Z.Messages.RECENTLY_HEARD;
     case p.bg.FREQUENTLY_USED:
-      return I.Z.Messages.FREQUENTLY_USED;
+      return T.Z.Messages.FREQUENTLY_USED;
     case p.bg.GUILD:
       return e.categoryInfo.guild.name;
     case p.bg.DEFAULTS:
-      return I.Z.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
+      return T.Z.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
   }
 }(t),
 position: 'right',
 children: e => function(e, t, n, i, a, s) {
   switch (e.categoryInfo.type) {
     case p.bg.FAVORITES:
-      return (0, r.jsx)(S, {
+      return (0, r.jsx)(A, {
         ...i,
         icon: u.StarIcon,
         onClick: t,
@@ -101,7 +102,7 @@ children: e => function(e, t, n, i, a, s) {
         listItemProps: a
       }, e.key);
     case p.bg.RECENTLY_HEARD:
-      return (0, r.jsx)(S, {
+      return (0, r.jsx)(A, {
         ...i,
         icon: u.ClockIcon,
         onClick: t,
@@ -109,7 +110,7 @@ children: e => function(e, t, n, i, a, s) {
         listItemProps: a
       }, e.key);
     case p.bg.FREQUENTLY_USED:
-      return (0, r.jsx)(S, {
+      return (0, r.jsx)(A, {
         ...i,
         icon: u.AnalyticsIcon,
         onClick: t,
@@ -120,7 +121,7 @@ children: e => function(e, t, n, i, a, s) {
       return (0, r.jsx)(u.Clickable, {
         ...a,
         ...i,
-        className: T.category,
+        className: g.category,
         onClick: t,
         children: (0, r.jsx)(c.Z, {
           guild: e.categoryInfo.guild,
@@ -129,7 +130,7 @@ children: e => function(e, t, n, i, a, s) {
         })
       }, e.key);
     case p.bg.DEFAULTS:
-      return (0, r.jsx)(S, {
+      return (0, r.jsx)(A, {
         ...i,
         icon: u.ClydeIcon,
         onClick: t,
@@ -143,43 +144,35 @@ children: e => function(e, t, n, i, a, s) {
   });
 }
 
-function N(e) {
+function v(e) {
   let {
 soundboardListRef: t,
 categories: n,
 shouldUpsellLockedCategories: a,
-listPadding: s = g,
+listPadding: s = S,
 guildId: o
-  } = e, u = i.useRef(null), c = (0, l.e7)([h.default], () => h.default.getCurrentUser()), E = i.useCallback((e, t, n, i) => {
-let s = a && (0, m.O)(e.categoryInfo, o, c),
-  {
-    enableInlineUpsell: l
-  } = f.Qs.getCurrentConfig({
-    location: 'Soundboard Picker Category List'
-  }, {
-    autoTrackExposure: s,
-    disable: !s
-  });
-return (0, r.jsx)(A, {
+  } = e, u = i.useRef(null), c = (0, l.e7)([f.default], () => f.default.getCurrentUser()), E = (0, h.I5)(c, I.p9.TIER_2), p = i.useCallback((e, t, n, i) => {
+let s = a && (0, m.O)(e.categoryInfo, E, o);
+return (0, r.jsx)(N, {
   category: e,
   categoryIndex: t,
   onClick: n,
   isSelected: i,
-  isNitroLocked: l
+  isNitroLocked: s
 });
   }, [
-c,
 o,
-a
+a,
+E
   ]);
   return (0, r.jsx)(_.Z, {
-className: T.categoryList,
+className: g.categoryList,
 categoryListRef: u,
 expressionsListRef: t,
 store: d.Wq,
 categories: n,
 listPadding: s,
-renderCategoryListItem: E,
+renderCategoryListItem: p,
 rowCount: n.length,
 categoryHeight: 40
   });

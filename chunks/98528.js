@@ -91,58 +91,59 @@ r.useLayoutEffect(() => {
 let {
   listRef: t,
   searchQuery: n,
-  setShowUpsell: i,
-  setUpsellGlowOpacity: a,
-  emojiSectionDescriptors: s
+  nitroLockedSectionStates: i,
+  setShowUpsell: a,
+  setUpsellGlowOpacity: s
 } = e, o = r.useCallback(e => {
   if ('' !== n) {
-    a(0);
+    null == s || s(0);
     return;
   }
   if (null == t.current)
     return;
-  let r = s.findIndex(e => e.isNitroLocked);
+  let r = i.findIndex(e => e.isNitroLocked);
   if (-1 === r) {
-    a(0);
+    null == s || s(0);
     return;
   }
-  let i = t.current.getSectionDescriptors();
-  if (null == i || 0 === i.length || i.length !== s.length)
+  let a = t.current.getSectionDescriptors();
+  if (null == a || 0 === a.length || a.length !== i.length)
     return;
-  let o = i[r],
-    l = e + t.current.getListDimensions().height;
-  a(Math.min(Math.max((o.offset.top - (l - 250)) / 250, 0), 1));
+  let o = a[r],
+    l = e + t.current.getListDimensions().height,
+    u = Math.min(Math.max((o.offset.top - (l - 250)) / 250, 0), 1);
+  null == s || s(u);
 }, [
   n,
   t,
-  s,
-  a
+  i,
+  s
 ]), l = r.useCallback(e => {
   if ('' !== n) {
-    i(!1);
+    null == a || a(!1);
     return;
   }
   if (null == t.current)
     return;
   let r = t.current.getSectionDescriptors();
-  if (null == r || 0 === r.length || r.length !== s.length)
+  if (null == r || 0 === r.length || r.length !== i.length)
     return;
-  let a = t.current.getListDimensions().height,
-    o = e + 0.7 * a,
-    l = e + 0.85 * a,
+  let s = t.current.getListDimensions().height,
+    o = e + 0.7 * s,
+    l = e + 0.85 * s,
     u = !1,
     c = !1;
-  s.forEach((e, t) => {
+  i.forEach((e, t) => {
     if (!e.isNitroLocked)
       return;
     let n = r[t];
     n.offset.top <= l && n.offset.bottom >= l && (c = !0), n.offset.top <= o && n.offset.bottom >= o && (u = !0);
-  }), i(c && u);
+  }), null == a || a(c && u);
 }, [
   n,
   t,
-  s,
-  i
+  i,
+  a
 ]);
 return r.useCallback(e => {
   l(e), o(e);
