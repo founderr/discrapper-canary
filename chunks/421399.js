@@ -89,7 +89,7 @@ W = {
   })
 },
 K = s.useMemo(() => R ? (0, a.jsx)(p.ZP, {
-  clan: r.primaryGuild,
+  clan: r.clan,
   userId: i.author.id,
   contextGuildId: G,
   className: v.clanTagChiplet,
@@ -97,7 +97,7 @@ K = s.useMemo(() => R ? (0, a.jsx)(p.ZP, {
 }) : null, [
   R,
   j,
-  r.primaryGuild,
+  r.clan,
   G,
   i.author.id
 ]);
@@ -165,7 +165,7 @@ children: [
   !R && (0, a.jsxs)(a.Fragment, {
     children: [
       (0, a.jsx)(p.ZP, {
-        clan: r.primaryGuild,
+        clan: r.clan,
         userId: i.author.id,
         contextGuildId: G,
         className: v.clanTagChiplet,

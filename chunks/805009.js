@@ -133,7 +133,7 @@ let {
     }) : ''
   ]
 }), m = {
-  clan: t.primaryGuild,
+  clan: t.clan,
   userId: t.id,
   contextGuildId: u,
   isOverlay: d,

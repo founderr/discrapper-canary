@@ -48,32 +48,28 @@ function A(e, t, n) {
 }
 
 function N(e, t) {
-  var n;
-  let r = null !== (n = t.primary_guild) && void 0 !== n ? n : t.clan,
-a = e.primaryGuild;
-  return !i()(a, r) && (null == a || null != r) && (e.primaryGuild = (0, p.hW)(r), T[e.id] = e, !0);
+  return !i()(e.clan, t.clan) && (null == e.clan || null != t.clan) && (e.clan = (0, p.yi)(t.clan), T[e.id] = e, !0);
 }
 
 function v(e) {
-  var t;
-  let n = e.mfa_enabled;
-  null != n && (e.mfaEnabled = n, delete e.mfa_enabled);
-  let r = (0, u.G)(e.premium_type);
-  void 0 !== r && (e.premiumType = r, delete e.premium_type);
-  let i = e.nsfw_allowed;
-  null != i && (e.nsfwAllowed = i, delete e.nsfw_allowed);
-  let a = e.public_flags;
-  null != a && (e.publicFlags = a, delete e.public_flags);
-  let o = e.purchased_flags;
-  void 0 !== o && (e.purchasedFlags = o, delete e.purchased_flags);
-  let l = e.premium_usage_flags;
-  void 0 !== l && (e.premiumUsageFlags = l, delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color;
-  let c = e.avatar_decoration_data;
-  void 0 !== c && (e.avatarDecorationData = (0, s.FG)(c), delete e.avatar_decoration_data);
-  let d = e.global_name;
-  void 0 !== d && (e.globalName = d, delete e.global_name);
-  let _ = null !== (t = e.primary_guild) && void 0 !== t ? t : e.clan;
-  return void 0 !== _ && (e.clan = (0, p.hW)(_), e.primary_guild = (0, p.hW)(_)), e;
+  let t = e.mfa_enabled;
+  null != t && (e.mfaEnabled = t, delete e.mfa_enabled);
+  let n = (0, u.G)(e.premium_type);
+  void 0 !== n && (e.premiumType = n, delete e.premium_type);
+  let r = e.nsfw_allowed;
+  null != r && (e.nsfwAllowed = r, delete e.nsfw_allowed);
+  let i = e.public_flags;
+  null != i && (e.publicFlags = i, delete e.public_flags);
+  let a = e.purchased_flags;
+  void 0 !== a && (e.purchasedFlags = a, delete e.purchased_flags);
+  let o = e.premium_usage_flags;
+  void 0 !== o && (e.premiumUsageFlags = o, delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color;
+  let l = e.avatar_decoration_data;
+  void 0 !== l && (e.avatarDecorationData = (0, s.FG)(l), delete e.avatar_decoration_data);
+  let c = e.global_name;
+  void 0 !== c && (e.globalName = c, delete e.global_name);
+  let d = e.clan;
+  return void 0 !== d && (e.clan = (0, p.yi)(d)), e;
 }
 
 function O(e) {
@@ -95,18 +91,15 @@ void 0 !== (t = null !== (s = n.premium_type) && void 0 !== s ? s : n.premiumTyp
     r = C((0, u.VR)(e), n);
   return void 0 !== e.premiumType ? e.premiumType = r : void 0 !== e.premium_type && (e.premium_type = r), e;
 }(n)), n = function(e, t) {
-  var n;
-  let r = null !== (n = t.primary_guild) && void 0 !== n ? n : t.clan,
-    a = e.primaryGuild;
   switch (!0) {
-    case null == a && null == r:
+    case null == e.clan && null == t.clan:
       break;
-    case null != a && null == r:
-    case i()(a, r):
-      t.primary_guild = a;
+    case null != e.clan && null == t.clan:
+    case i()(e.clan, t.clan):
+      t.clan = e.clan;
       break;
     default:
-      t.primary_guild = (0, p.hW)(r);
+      t.clan = (0, p.yi)(t.clan);
   }
   return t;
 }(r, n), r = r.merge(n);

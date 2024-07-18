@@ -45,7 +45,7 @@ theme: T,
 saturation: 1
   }).hex(), R = (0, I.nj)(Z, b, 'top left', 0.3, '30%'), j = (0, d.e7)([f.default], () => {
 var e;
-return null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.primaryGuild;
+return null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan;
   }, []);
   a.useLayoutEffect(() => {
 var e;

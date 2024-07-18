@@ -23,7 +23,7 @@ return N;
   pY: function() {
 return A;
   },
-  qd: function() {
+  vh: function() {
 return h;
   }
 }), n(47120);
@@ -142,7 +142,7 @@ i = (0, a.e7)([l.ZP], () => {
 {
   tag: d,
   guildId: _
-} = h(null == r ? void 0 : r.primaryGuild),
+} = h(null == r ? void 0 : r.clan),
 E = (0, c.Z)('clan_tag_chiplet');
   return !n && !!E && null != _ && null != d && !i && !0;
 }

@@ -34,14 +34,14 @@ h = (0, a.e7)([
   if (null == s)
     return !1;
   let d = i.getMember(e, s.id);
-  if (null == s.primaryGuild)
+  if (null == s.clan)
     return !0;
   let u = (null == d ? void 0 : d.joinedAt) != null ? new Date(d.joinedAt) : null,
     h = null != u && Date.now() - u.getTime() > 259200000,
     {
       identityGuildId: p,
       identityEnabled: m
-    } = s.primaryGuild;
+    } = s.clan;
   return null != p && null == m ? e === p : null == p && null == m ? h : (p !== e || !1 !== m) && null != p && !1 === m && h;
 }(e, [
   o.default,

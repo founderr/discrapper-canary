@@ -85,7 +85,7 @@ let {
   userId: s,
   children: d,
   profileViewedAnalytics: _
-} = e, f = (0, o.e7)([u.default], () => u.default.getUser(s), [s]), h = null !== (t = null == f ? void 0 : f.primaryGuild) && void 0 !== t ? t : a, [m, I] = (0, c.L_)(null !== (n = null == h ? void 0 : h.identityGuildId) && void 0 !== n ? n : null), T = i.useCallback(() => {
+} = e, f = (0, o.e7)([u.default], () => u.default.getUser(s), [s]), h = null !== (t = null == f ? void 0 : f.clan) && void 0 !== t ? t : a, [m, I] = (0, c.L_)(null !== (n = null == h ? void 0 : h.identityGuildId) && void 0 !== n ? n : null), T = i.useCallback(() => {
   I();
 }, [I]);
 return (0, r.jsx)(l.Popout, {
@@ -132,11 +132,11 @@ badgeSize: E,
 disableGuildProfile: f = !1,
 inline: h = !0,
 profileViewedAnalytics: m
-  } = e, g = (0, o.e7)([u.default], () => u.default.getUser(i), [i]), S = null !== (t = null == g ? void 0 : g.primaryGuild) && void 0 !== t ? t : n, {
+  } = e, g = (0, o.e7)([u.default], () => u.default.getUser(i), [i]), S = null !== (t = null == g ? void 0 : g.clan) && void 0 !== t ? t : n, {
 tag: A,
 badge: N,
 guildId: v
-  } = (0, d.qd)(S);
+  } = (0, d.vh)(S);
   return (0, d.p0)(i, a) && null != v ? f ? (0, r.jsx)(I, {
 guildId: v,
 clanTag: A,

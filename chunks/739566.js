@@ -139,6 +139,6 @@ colorRoleId: u.colorRoleId,
 iconRoleId: u.iconRoleId,
 guildMemberAvatar: u.avatar,
 guildMemberAvatarDecoration: u.avatarDecoration,
-primaryGuild: null !== (i = a.primaryGuild) && void 0 !== i ? i : void 0
+clan: null !== (i = a.clan) && void 0 !== i ? i : void 0
   };
 }
