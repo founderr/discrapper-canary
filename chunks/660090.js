@@ -67,7 +67,7 @@ alphabeticalSortedCommands: c
 l.i6(n, {
   dontRefetchMs: a.Z.Millis.DAY
 });
-  }, [n]), i.useEffect(() => {
+  }, [n]), i.useLayoutEffect(() => {
 if (!!d)
   o(r.bS.POPULAR);
   }, [d]);

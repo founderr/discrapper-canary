@@ -1,6 +1,7 @@
 e.exports = {
-  container: 'container_f8c206',
+  loadingAnimation: 'loadingAnimation_f8c206',
   noAnimation: 'noAnimation_f8c206',
+  container: 'container_f8c206',
   bannerImage: 'bannerImage_f8c206',
   mediumBanner: 'mediumBanner_f8c206',
   largeBanner: 'largeBanner_f8c206',

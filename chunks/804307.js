@@ -28,7 +28,7 @@ styleSmall: {
 }
   }), []);
   return (0, i.jsxs)('div', {
-className: r()(d.container, {
+className: r()(d.container, d.loadingAnimation, {
   [d.noAnimation]: t
 }),
 children: [
