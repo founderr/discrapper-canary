@@ -51,12 +51,12 @@ if (c !== m.current) {
   }, [
 t,
 r
-  ]), y = n.useRef(null);
-  n.useEffect(() => (y.current = new ResizeObserver(() => f()), null != o.current && y.current.observe(o.current), () => {
+  ]), x = n.useRef(null);
+  n.useEffect(() => (x.current = new ResizeObserver(() => f()), null != o.current && x.current.observe(o.current), () => {
 var e;
-null === (e = y.current) || void 0 === e || e.disconnect();
+null === (e = x.current) || void 0 === e || e.disconnect();
   }), [f]);
-  let x = n.useCallback(e => {
+  let y = n.useCallback(e => {
 let {
   closePopout: n
 } = e;
@@ -112,7 +112,7 @@ children: [
   p.length > 0 && (0, a.jsx)(a.Fragment, {
     children: (0, a.jsx)(l.Popout, {
       layerContext: d.O$,
-      renderPopout: x,
+      renderPopout: y,
       position: 'bottom',
       align: 'right',
       spacing: 0,

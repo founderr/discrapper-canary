@@ -18,8 +18,8 @@ var a = r(735250),
   p = r(120816),
   b = r(31336),
   f = r(257785),
-  y = r(484036),
-  x = r(681619),
+  x = r(484036),
+  y = r(681619),
   k = r(621060),
   v = r(689938),
   _ = r(813064),
@@ -238,14 +238,14 @@ children: [
   }),
   (0, a.jsx)(d.ScrollerThin, {
     className: _.tableContainer,
-    children: (0, a.jsx)(x.Z, {
+    children: (0, a.jsx)(y.Z, {
       columns: C,
       data: l,
       selectedRowKey: c,
       onClickRow: u
     })
   }),
-  null != h && (0, a.jsxs)(y.Z, {
+  null != h && (0, a.jsxs)(x.Z, {
     className: _.subPanel,
     minHeight: 100,
     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,

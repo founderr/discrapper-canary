@@ -18,8 +18,8 @@ var a = r(735250),
   p = r(257785),
   b = r(484036),
   f = r(681619),
-  y = r(621060),
-  x = r(159138),
+  x = r(621060),
+  y = r(159138),
   k = r(979756);
 
 function v(e) {
@@ -27,7 +27,7 @@ function v(e) {
 }
 let _ = [{
 key: 'store',
-cellClassName: x.actionColumn,
+cellClassName: y.actionColumn,
 render(e) {
   let {
     trace: t
@@ -37,7 +37,7 @@ render(e) {
   },
   {
 key: 'time',
-cellClassName: x.totalTimeColumn,
+cellClassName: y.totalTimeColumn,
 render(e) {
   let {
     trace: t
@@ -72,7 +72,7 @@ render(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [
       (0, a.jsxs)(p.E, {
-        className: x.actionProperties,
+        className: y.actionProperties,
         children: [
           (0, a.jsx)(p.Z9, {
             name: 'Created at',
@@ -92,7 +92,7 @@ render(e) {
         ]
       }),
       (0, a.jsx)(s.ScrollerThin, {
-        className: x.inspectorContainer,
+        className: y.inspectorContainer,
         children: (0, a.jsx)(g.Z, {
           data: r.action
         })
@@ -126,7 +126,7 @@ initialHeight: r
   name: (0, a.jsxs)(a.Fragment, {
     children: [
       (0, a.jsx)(h.Z, {
-        className: x.errorIcon
+        className: y.errorIcon
       }),
       'Error'
     ]
@@ -138,7 +138,7 @@ initialHeight: r
     return (0, a.jsxs)(a.Fragment, {
       children: [
         (0, a.jsx)('div', {
-          className: o()(x.errorToolbar, k.toolbar),
+          className: o()(y.errorToolbar, k.toolbar),
           children: (0, a.jsx)('div', {
             className: k.toolbarGroup,
             children: (0, a.jsx)(s.Button, {
@@ -150,7 +150,7 @@ initialHeight: r
           })
         }),
         (0, a.jsx)(s.ScrollerThin, {
-          className: x.inspectorContainer,
+          className: y.inspectorContainer,
           children: (0, a.jsx)(g.Z, {
             data: t.error
           })
@@ -162,17 +162,17 @@ initialHeight: r
   ] : C, [t]), {
 TabBar: l,
 renderSelectedTab: c
-  } = (0, y.Z)({
+  } = (0, x.Z)({
 tabs: i
   }, [i]);
   return (0, a.jsxs)(b.Z, {
-className: x.subPanel,
+className: y.subPanel,
 minHeight: 100,
 initialHeight: r,
 children: [
   (0, a.jsx)(l, {}),
   (0, a.jsxs)(u.ZP, {
-    className: o()(k.headerBar, x.subPanelHeaderBar),
+    className: o()(k.headerBar, y.subPanelHeaderBar),
     children: [
       (0, a.jsx)(u.ZP.Icon, {
         icon: s.ReceiptIcon,
@@ -191,7 +191,7 @@ children: [
 }
 let N = [{
 key: 'action',
-cellClassName: x.actionColumn,
+cellClassName: y.actionColumn,
 render(e) {
   let {
     actionLog: t
@@ -199,7 +199,7 @@ render(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [
       t.error && (0, a.jsx)(h.Z, {
-        className: x.errorIcon
+        className: y.errorIcon
       }),
       t.name
     ]
@@ -208,7 +208,7 @@ render(e) {
   },
   {
 key: 'total time',
-cellClassName: x.totalTimeColumn,
+cellClassName: y.totalTimeColumn,
 render(e) {
   let {
     actionLog: t
@@ -237,10 +237,10 @@ r = n.useMemo(() => t.map(e => ({
 c = t.find(e => e.id === i);
   return (0, a.jsxs)('div', {
 ref: e,
-className: o()(k.panel, x.panel),
+className: o()(k.panel, y.panel),
 children: [
   (0, a.jsx)(s.ScrollerThin, {
-    className: x.tableContainer,
+    className: y.tableContainer,
     children: (0, a.jsx)(f.Z, {
       columns: N,
       data: r,

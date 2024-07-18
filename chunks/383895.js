@@ -13,9 +13,9 @@ var n = s(735250),
   u = s(201133),
   A = s(693824),
   O = s(919394),
-  R = s(91140),
-  N = s(297781),
-  T = s(359110),
+  N = s(91140),
+  T = s(297781),
+  R = s(359110),
   m = s(592125),
   g = s(944486),
   P = s(594174),
@@ -111,9 +111,9 @@ children: [
                 f.length > 18 ? '...' : ''
               ]
             }),
-            (0, n.jsx)(N.Gk, {
-              location: N.Gt.GAME_PROFILE,
-              children: R.W.map((e, s) => (0, n.jsx)(e, {
+            (0, n.jsx)(T.Gk, {
+              location: T.Gt.GAME_PROFILE,
+              children: N.W.map((e, s) => (0, n.jsx)(e, {
                 entry: a
               }, s))
             })
@@ -153,7 +153,7 @@ children: [
             channel: n,
             altText: '',
             reply: null != t ? t : ''
-          }), i(), (0, T.Kh)(n.id);
+          }), i(), (0, R.Kh)(n.id);
         }
       },
       popoutProps: {

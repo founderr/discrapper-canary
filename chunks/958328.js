@@ -19,9 +19,9 @@ var n = r(120356),
   p = r(233608),
   b = r(71080),
   f = r(650679),
-  y = r(979756);
+  x = r(979756);
 
-function x(e) {
+function y(e) {
   let {
 title: t,
 can: r
@@ -61,7 +61,7 @@ j = Object.values(null != w ? w : {}).map(e => {
     title: t,
     flag: r
   } = e, n = o.e$(k, r);
-  return (0, a.jsx)(x, {
+  return (0, a.jsx)(y, {
     title: t,
     can: n
   }, t);
@@ -71,13 +71,13 @@ N = Object.values(null != C ? C : {}).map(e => {
     title: t,
     flag: r
   } = e, n = o.e$(v, r);
-  return (0, a.jsx)(x, {
+  return (0, a.jsx)(y, {
     title: t,
     can: n
   }, t);
 });
   return (0, a.jsx)('div', {
-className: i()(y.panel, f.panel),
+className: i()(x.panel, f.panel),
 children: (0, a.jsxs)('div', {
   className: f.panelInner,
   children: [

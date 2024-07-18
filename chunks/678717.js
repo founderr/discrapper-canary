@@ -18,9 +18,9 @@ var a = r(735250),
   p = r(259580),
   b = r(31336),
   f = r(19759),
-  y = r(432877);
+  x = r(432877);
 r(381996);
-var x = r(392750),
+var y = r(392750),
   k = r(926976),
   v = r(592197),
   _ = r(860337),
@@ -37,8 +37,8 @@ var x = r(392750),
   O = r(514866),
   B = r(678639),
   P = r(351930),
-  A = r(771751),
-  L = r(596768),
+  L = r(771751),
+  A = r(596768),
   D = r(621060),
   M = r(689938),
   G = r(683597),
@@ -73,7 +73,7 @@ function F() {
     {
       id: 'triggers',
       name: 'Triggers',
-      render: () => (0, a.jsx)(L.Z, {})
+      render: () => (0, a.jsx)(A.Z, {})
     },
     {
       id: 'stores',
@@ -114,13 +114,13 @@ function F() {
     id: 'overlays',
     name: 'Dev Overlays',
     render: () => (0, a.jsx)(N.Z, {
-      devSettingsCategory: y.zU.OVERLAYS
+      devSettingsCategory: x.zU.OVERLAYS
     })
   }), e.push({
     id: 'messaging',
     name: 'Messaging',
     render: () => (0, a.jsx)(N.Z, {
-      devSettingsCategory: y.zU.MESSAGING
+      devSettingsCategory: x.zU.MESSAGING
     })
   }), e.push({
     id: 'permissions',
@@ -133,7 +133,7 @@ function F() {
   }), e.push({
     id: 'affinity',
     name: 'Affinity',
-    render: () => (0, a.jsx)(x.Z, {})
+    render: () => (0, a.jsx)(y.Z, {})
   }), g.Z.isDeveloper && e.push({
     id: 'content_inventory',
     name: 'Content Inventory',
@@ -141,7 +141,7 @@ function F() {
   }), window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') && (e.push({
     id: 'trials',
     name: 'Trials',
-    render: () => (0, a.jsx)(A.Z, {})
+    render: () => (0, a.jsx)(L.Z, {})
   }), e.push({
     id: 'payments',
     name: 'Payments',

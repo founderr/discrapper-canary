@@ -13,12 +13,12 @@ var n = s(735250),
   u = s(981631),
   A = s(689938),
   O = s(421377);
-let R = [
+let N = [
 i.p.OFFICIAL,
 i.p.TWITTER,
 i.p.YOUTUBE
   ],
-  N = e => {
+  T = e => {
 let {
   invite: a,
   trackClick: s
@@ -110,12 +110,12 @@ return null;
 let {
   category: a
 } = e;
-return R.includes(a);
+return N.includes(a);
   }).sort((e, a) => e.category - a.category);
   return (0, n.jsxs)('div', {
 className: l()(O.column),
 children: [
-  null != E && (0, n.jsx)(N, {
+  null != E && (0, n.jsx)(T, {
     invite: E,
     trackClick: s
   }),

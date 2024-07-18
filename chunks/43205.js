@@ -19,8 +19,8 @@ constrain: a = 'height',
 className: c,
 alt: d = 'icon',
 fallbackSrc: E
-  } = e, _ = (0, u.ZP)(), [f, v] = r.useState(!1), [T, x] = r.useState(!1), m = null == E || T;
-  if (null == n || f && m)
+  } = e, _ = (0, u.ZP)(), [f, v] = r.useState(!1), [T, m] = r.useState(!1), h = null == E || T;
+  if (null == n || f && h)
 return (0, l.jsx)(i.UnknownGameIcon, {
   size: 'custom',
   width: t,
@@ -28,7 +28,7 @@ return (0, l.jsx)(i.UnknownGameIcon, {
   color: 'dark' === _ ? 'white' : 'black',
   className: o()(s.contentImage, c)
 });
-  let N = 'height' === a ? {
+  let I = 'height' === a ? {
 maxWidth: ''.concat(t, 'px'),
 height: ''.concat(t, 'px')
   } : {
@@ -36,10 +36,10 @@ maxWidth: ''.concat(t, 'px'),
 minHeight: ''.concat(t, 'px')
   };
   return (0, l.jsx)('img', {
-style: N,
+style: I,
 className: o()(s.contentImage, c),
 src: f && null != E ? E : n,
 alt: d,
-onError: e => f ? x(!0) : v(!0)
+onError: e => f ? m(!0) : v(!0)
   });
 }

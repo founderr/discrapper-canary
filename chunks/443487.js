@@ -1,15 +1,15 @@
 t.d(n, {
   F9: function() {
-return N;
+return I;
   },
   Zb: function() {
 return T;
   },
   e$: function() {
-return x;
+return m;
   },
   ll: function() {
-return h;
+return N;
   }
 });
 var l = t(735250);
@@ -57,7 +57,7 @@ children: [
   });
 }
 
-function x(e) {
+function m(e) {
   let {
 children: n
   } = e;
@@ -67,7 +67,7 @@ children: n
   });
 }
 
-function m(e) {
+function h(e) {
   let {
 users: n,
 guildId: t
@@ -94,7 +94,7 @@ children: n.map((e, r) => {
   });
 }
 
-function N(e) {
+function I(e) {
   let {
 guildId: n,
 channelId: t,
@@ -102,32 +102,32 @@ entry: r,
 maxAvatars: a = 3
   } = e, d = r.author_id, f = (0, o.e7)([c.default], () => c.default.getUser(d)), {
 displayParticipants: T,
-numOtherParticipants: x
-  } = (0, _.Z)(r, a), N = (0, o.e7)([u.ZP], () => u.ZP.getMember(n, d)), h = (0, o.e7)([s.Z], () => {
+numOtherParticipants: m
+  } = (0, _.Z)(r, a), I = (0, o.e7)([u.ZP], () => u.ZP.getMember(n, d)), N = (0, o.e7)([s.Z], () => {
 var e;
-return (null == N ? void 0 : N.colorRoleId) != null ? null === (e = s.Z.getRole(n, N.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
+return (null == I ? void 0 : I.colorRoleId) != null ? null === (e = s.Z.getRole(n, I.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
   }, [
 n,
-N
+I
   ]);
   if (null == f)
 return null;
-  let I = null == N ? void 0 : N.colorString,
+  let x = null == I ? void 0 : I.colorString,
 g = E.ZP.getName(n, t, f);
   return (0, l.jsxs)('div', {
 className: v.userSection,
 children: [
-  (0, l.jsx)(m, {
+  (0, l.jsx)(h, {
     users: T,
     guildId: n
   }),
   (0, l.jsx)(i.NameWithRole, {
-    color: null != I ? I : void 0,
-    roleName: h,
+    color: null != x ? x : void 0,
+    roleName: N,
     name: g,
     className: v.userName
   }),
-  x > 0 ? (0, l.jsx)('div', {
+  m > 0 ? (0, l.jsx)('div', {
     className: v.additionalParticipantBadge,
     children: (0, l.jsxs)(i.Text, {
       variant: 'text-xxs/medium',
@@ -135,7 +135,7 @@ children: [
       className: v.additionalParticipantBadgeText,
       children: [
         '+',
-        x
+        m
       ]
     })
   }) : null
@@ -143,7 +143,7 @@ children: [
   });
 }
 
-function h(e) {
+function N(e) {
   let {
 children: n
   } = e;

@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return Y;
+return G;
   }
 }), t(47120), t(653041), t(724458);
 var i = t(735250),
@@ -58,7 +58,7 @@ let V = [],
 }
   ];
 
-function Y(e) {
+function G(e) {
   let {
 channel: n,
 entrypoint: t,
@@ -77,7 +77,7 @@ isScrollCloseToBottom: o
   return (0, i.jsxs)('div', {
 className: w.container,
 children: [
-  M ? (0, i.jsx)(G, {}) : null,
+  M ? (0, i.jsx)(Y, {}) : null,
   (0, i.jsx)(z, {
     searchQuery: a,
     setSearchQuery: r,
@@ -124,7 +124,7 @@ children: [
   });
 }
 
-function G() {
+function Y() {
   return (0, i.jsxs)('div', {
 className: w.developerShelfControlsContainer,
 children: [

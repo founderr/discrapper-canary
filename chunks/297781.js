@@ -6,7 +6,7 @@ return p;
 return F;
   },
   E6: function() {
-return B;
+return w;
   },
   EE: function() {
 return P;
@@ -24,7 +24,7 @@ return O;
 return b;
   },
   U9: function() {
-return G;
+return B;
   },
   XF: function() {
 return L;
@@ -33,19 +33,19 @@ return L;
 return H;
   },
   f: function() {
-return j;
+return U;
   },
   gj: function() {
 return y;
   },
   n8: function() {
-return U;
+return G;
   },
   pQ: function() {
 return D;
   },
   v1: function() {
-return w;
+return j;
   }
 });
 var l, r, a = t(735250),
@@ -60,11 +60,11 @@ var l, r, a = t(735250),
   f = t(481060),
   v = t(70956),
   T = t(823379),
-  x = t(709054),
-  m = t(719247),
-  N = t(22211),
-  h = t(561308),
-  I = t(797342),
+  m = t(709054),
+  h = t(719247),
+  I = t(22211),
+  N = t(561308),
+  x = t(797342),
   g = t(371991),
   M = t(206583),
   A = t(689938),
@@ -114,7 +114,7 @@ function p(e) {
 entry: n
   } = e, {
 channel: t
-  } = (0, N.Z)(n), {
+  } = (0, I.Z)(n), {
 location: l
   } = S();
   return null == t || (0, T.Hi)(l, [
@@ -134,9 +134,9 @@ hovered: t
 defaultTextColor: l,
 defaultIconColor: r,
 location: o
-  } = S(), i = 0 === o, u = (0, h.kr)(n), s = i && u ? f.tokens.colors.STATUS_POSITIVE : r, c = i && u ? 'text-positive' : l, {
+  } = S(), i = 0 === o, u = (0, N.kr)(n), s = i && u ? f.tokens.colors.STATUS_POSITIVE : r, c = i && u ? 'text-positive' : l, {
 streamPreviewUrl: d
-  } = (0, N.Z)(n);
+  } = (0, I.Z)(n);
   return (0, a.jsxs)('div', {
 className: C.badgeContainer,
 children: [
@@ -168,7 +168,7 @@ defaultIconColor: u
 state: s,
 party: c,
 inExperiment: d
-  } = (0, I.n)(o);
+  } = (0, x.n)(o);
   if (!d)
 return null;
   let E = null !== (l = null == c ? void 0 : null === (n = c.size) || void 0 === n ? void 0 : n[0]) && void 0 !== l ? l : void 0,
@@ -204,7 +204,7 @@ hovered: l
 defaultTextColor: r,
 defaultIconColor: o,
 location: i
-  } = S(), u = 0 === i, s = (0, _.e7)([m.Z], () => m.Z.getMatchingActivity(t));
+  } = S(), u = 0 === i, s = (0, _.e7)([h.Z], () => h.Z.getMatchingActivity(t));
   if ((null == s ? void 0 : s.timestamps) == null)
 return null;
   let c = u ? f.tokens.colors.STATUS_POSITIVE : o,
@@ -234,7 +234,7 @@ entry: n
   } = e, {
 location: t
   } = S(), l = 0 === t ? f.tokens.colors.STATUS_POSITIVE : void 0;
-  return (0, h.Ol)(n) ? (0, a.jsx)(Z, {
+  return (0, N.Ol)(n) ? (0, a.jsx)(Z, {
 Icon: f.NewUserSmallIcon,
 text: A.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
 iconColor: l
@@ -247,33 +247,16 @@ entry: n
   } = e, {
 location: t
   } = S();
-  if (!(0, h.V5)(n))
+  if (!(0, N.V5)(n))
 return null;
-  let l = (0, h.kr)(n),
+  let l = (0, N.kr)(n),
 r = 0 === t,
-o = r || l ? (0, h.z5)(n) : (0, h.nB)(n);
+o = r || l ? (0, N.z5)(n) : (0, N.nB)(n);
   return (0, a.jsx)(Z, {
 Icon: f.TimerIcon,
 text: o,
-tooltipText: (0, h.EX)(n),
+tooltipText: (0, N.EX)(n),
 showTooltip: r && !l
-  });
-}
-
-function w(e) {
-  let {
-entry: n
-  } = e, {
-location: t
-  } = S(), l = 0 !== t, r = (0, h.dw)(n);
-  if (null == r)
-return null;
-  let o = (0, h.GE)(r);
-  return (0, a.jsx)(Z, {
-Icon: f.RetryIcon,
-showTooltip: !l,
-tooltipText: o,
-text: l ? o : A.Z.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
   });
 }
 
@@ -282,8 +265,25 @@ function j(e) {
 entry: n
   } = e, {
 location: t
-  } = S(), l = (0, h.vU)(n);
-  return (0, h.q_)(n) ? (0, a.jsx)(Z, {
+  } = S(), l = 0 !== t, r = (0, N.dw)(n);
+  if (null == r)
+return null;
+  let o = (0, N.GE)(r);
+  return (0, a.jsx)(Z, {
+Icon: f.RetryIcon,
+showTooltip: !l,
+tooltipText: o,
+text: l ? o : A.Z.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
+  });
+}
+
+function U(e) {
+  let {
+entry: n
+  } = e, {
+location: t
+  } = S(), l = (0, N.vU)(n);
+  return (0, N.q_)(n) ? (0, a.jsx)(Z, {
 Icon: f.FlashIcon,
 showTooltip: 0 === t,
 text: A.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
@@ -295,12 +295,12 @@ tooltipText: A.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_TOOLTIP.format({
   }) : null;
 }
 
-function B(e) {
+function w(e) {
   let {
 entry: n
   } = e, {
 location: t
-  } = S(), l = 0 !== t, r = (0, h.yA)(n);
+  } = S(), l = 0 !== t, r = (0, N.yA)(n);
   if (null == r)
 return null;
   let o = l ? A.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : A.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
@@ -324,7 +324,7 @@ function F(e) {
 entry: t
   } = e, {
 location: l
-  } = S(), r = null === (n = (0, h.PJ)(t, d.N.AGGREGATE_COUNT)) || void 0 === n ? void 0 : n.count;
+  } = S(), r = null === (n = (0, N.PJ)(t, d.N.AGGREGATE_COUNT)) || void 0 === n ? void 0 : n.count;
   if (null == r)
 return null;
   let o = 1 === l ? A.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({
@@ -338,21 +338,6 @@ text: o
   });
 }
 
-function U(e) {
-  let {
-entry: n
-  } = e, {
-location: t
-  } = S();
-  if (2 === t)
-return null;
-  let l = (0, h.ig)(n);
-  return null == l || l === E.o.TRENDING_TYPE_UNSPECIFIED ? null : (0, a.jsx)(Z, {
-Icon: f.FireIcon,
-text: A.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
-  });
-}
-
 function G(e) {
   let {
 entry: n
@@ -361,7 +346,22 @@ location: t
   } = S();
   if (2 === t)
 return null;
-  let l = x.default.extractTimestamp(n.extra.application_id);
+  let l = (0, N.ig)(n);
+  return null == l || l === E.o.TRENDING_TYPE_UNSPECIFIED ? null : (0, a.jsx)(Z, {
+Icon: f.FireIcon,
+text: A.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+  });
+}
+
+function B(e) {
+  let {
+entry: n
+  } = e, {
+location: t
+  } = S();
+  if (2 === t)
+return null;
+  let l = m.default.extractTimestamp(n.extra.application_id);
   return c()().diff(c()(l), 'days') > M.G ? null : (0, a.jsx)(Z, {
 Icon: f.StarShootingIcon,
 text: A.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
