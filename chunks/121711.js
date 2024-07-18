@@ -2,119 +2,124 @@ n(47120);
 var i = n(735250),
   s = n(470079),
   a = n(948789),
-  r = n(780384),
-  l = n(481060),
-  o = n(410030),
-  c = n(100527),
-  d = n(252618),
-  u = n(212476),
-  _ = n(207986),
-  E = n(374939),
-  h = n(791734),
-  I = n(63063),
-  m = n(113434),
-  g = n(709158),
-  p = n(710914),
-  T = n(906739),
-  S = n(452081),
-  f = n(981631),
-  C = n(689938),
-  N = n(852595);
+  r = n(442837),
+  l = n(780384),
+  o = n(481060),
+  c = n(410030),
+  d = n(100527),
+  u = n(252618),
+  _ = n(353926),
+  E = n(212476),
+  h = n(207986),
+  I = n(374939),
+  m = n(791734),
+  g = n(63063),
+  p = n(113434),
+  T = n(709158),
+  S = n(710914),
+  f = n(906739),
+  C = n(452081),
+  N = n(981631),
+  A = n(689938),
+  Z = n(852595);
 t.Z = function(e) {
-  let {} = e, t = (0, g.Z)(c.Z.QUEST_HOME_PAGE), {
-tabs: A,
-selectedTab: Z,
-onSelectTab: v
-  } = (0, S.z)(), {
-onScroll: L,
-scrollPosition: O
-  } = (0, u.c)(), R = (0, _.Z)({
-scrollPosition: O
-  }), x = (0, r.wj)((0, o.ZP)()), {
-quests: b
-  } = (0, m.bA)(Z), P = (0, T.Z)(), M = null;
+  let {} = e, t = (0, T.Z)(d.Z.QUEST_HOME_PAGE), {
+tabs: v,
+selectedTab: L,
+onSelectTab: O
+  } = (0, C.z)(), {
+onScroll: R,
+scrollPosition: x
+  } = (0, E.c)(), b = (0, h.Z)({
+scrollPosition: x
+  }), P = (0, l.wj)((0, c.ZP)()), M = (0, r.e7)([_.Z], () => _.Z.hasLoadedExperiments), {
+quests: D
+  } = (0, p.bA)(L), y = (0, f.Z)(), j = null;
   if (window.location.hash.length > 0) {
 let e = window.location.hash.slice(1);
-for (let t of b)
+for (let t of D)
   if (t.id === e) {
-    M = e;
+    j = e;
     break;
   }
   }
   s.useEffect(() => {
-!t && (0, a.uL)(f.Z5c.FRIENDS);
-  }, [t]), s.useEffect(() => {}, []);
-  let D = s.useCallback(() => {
-window.open(I.Z.getArticleURL(f.BhN.QUESTS_LEARN_MORE));
+M && !t && (0, a.uL)(N.Z5c.FRIENDS);
+  }, [
+M,
+t
+  ]), s.useEffect(() => {}, []);
+  let U = s.useCallback(() => {
+window.open(g.Z.getArticleURL(N.BhN.QUESTS_LEARN_MORE));
   }, []);
-  return ((0, d.Tt)({
-location: C.Z.Messages.QUESTS
-  }), t) ? (0, i.jsxs)('div', {
-className: N.container,
+  return ((0, u.Tt)({
+location: A.Z.Messages.QUESTS
+  }), t && M) ? (0, i.jsxs)('div', {
+className: Z.container,
 children: [
-  (0, i.jsx)(h.Z, {
-    leading: (0, i.jsx)(l.QuestsIcon, {
-      color: l.tokens.colors.HEADER_PRIMARY,
+  (0, i.jsx)(m.Z, {
+    leading: (0, i.jsx)(o.QuestsIcon, {
+      color: o.tokens.colors.HEADER_PRIMARY,
       size: 'md'
     }),
-    tabs: A,
-    selectedTab: Z,
+    tabs: v,
+    selectedTab: L,
     tabColor: 'header-primary',
-    selectedTabColor: x ? 'text-muted' : 'header-primary',
-    onTabSelect: v,
-    scrollPosition: O,
-    backgroundStyle: R
+    selectedTabColor: P ? 'text-muted' : 'header-primary',
+    onTabSelect: O,
+    scrollPosition: x,
+    backgroundStyle: b
   }),
-  (0, i.jsx)(E.Z, {
-    title: C.Z.Messages.QUESTS_HOME_HERO_TITLE,
-    description: C.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-    backgroundImageUrl: P,
-    onScroll: L,
-    bannerContainerClassName: N.bannerContainer,
-    bannerImageClassName: N.bannerImage,
+  (0, i.jsx)(I.Z, {
+    title: A.Z.Messages.QUESTS_HOME_HERO_TITLE,
+    description: A.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
+    backgroundImageUrl: y,
+    onScroll: R,
+    bannerContainerClassName: Z.bannerContainer,
+    bannerImageClassName: Z.bannerImage,
     headerTextColor: 'header-primary',
-    descriptionTextColor: x ? 'text-muted' : 'currentColor',
-    button: (0, i.jsxs)(l.Button, {
+    descriptionTextColor: P ? 'text-muted' : 'currentColor',
+    button: (0, i.jsxs)(o.Button, {
       size: 'medium',
-      color: x ? l.ButtonColors.TRANSPARENT : l.ButtonColors.WHITE,
-      className: N.button,
-      onClick: D,
-      innerClassName: N.innerButton,
+      color: P ? o.ButtonColors.TRANSPARENT : o.ButtonColors.WHITE,
+      className: Z.button,
+      onClick: U,
+      innerClassName: Z.innerButton,
       children: [
-        (0, i.jsx)(l.Text, {
+        (0, i.jsx)(o.Text, {
           variant: 'text-md/semibold',
-          color: x ? 'always-white' : 'text-normal',
-          className: N.externalLinkText,
-          children: C.Z.Messages.LEARN_MORE
+          color: P ? 'always-white' : 'text-normal',
+          className: Z.externalLinkText,
+          children: A.Z.Messages.LEARN_MORE
         }),
-        (0, i.jsx)(l.LinkExternalSmallIcon, {
-          className: N.icon,
-          color: x ? 'var(--white-500)' : 'var(--redesign-button-secondary-text'
+        (0, i.jsx)(o.LinkExternalSmallIcon, {
+          className: Z.icon,
+          color: P ? 'var(--white-500)' : 'var(--redesign-button-secondary-text'
         })
       ]
     }),
-    children: 0 === b.length && Z === m.e5.CLAIMED ? (0, i.jsxs)('div', {
-      className: N.emptyState,
+    children: 0 === D.length && L === p.e5.CLAIMED ? (0, i.jsxs)('div', {
+      className: Z.emptyState,
       children: [
-        (0, i.jsx)(l.EmptyStateImage, {
+        (0, i.jsx)(o.EmptyStateImage, {
           darkSrc: n(625065),
           lightSrc: n(875184),
           width: 272,
           height: 222
         }),
-        (0, i.jsx)(l.Text, {
+        (0, i.jsx)(o.Text, {
           variant: 'text-md/normal',
           color: 'header-secondary',
-          children: C.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({
-            onClick: () => v(m.e5.UNCLAIMED)
+          children: A.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({
+            onClick: () => O(p.e5.UNCLAIMED)
           })
         })
       ]
     }) : (0, i.jsx)('div', {
-      className: N.gridContainer,
-      children: (0, i.jsx)(p.Z, {
-        quests: b,
-        selectedQuestId: M
+      className: Z.gridContainer,
+      children: (0, i.jsx)(S.Z, {
+        quests: D,
+        selectedQuestId: j
       })
     })
   })
