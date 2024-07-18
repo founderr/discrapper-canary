@@ -8,8 +8,8 @@ t(470079);
 var o = t(481060),
   a = t(488889),
   l = t(259076),
-  i = t(689938),
-  r = t(103877),
+  r = t(689938),
+  i = t(103877),
   E = t(660817);
 
 function _(e) {
@@ -18,7 +18,7 @@ onNext: s,
 onClose: t,
 reason: _,
 onReasonChange: d
-  } = e, u = l.z.map(e => ({
+  } = e, c = l.zf.map(e => ({
 value: e,
 name: (0, a.S)(e)
   }));
@@ -31,7 +31,7 @@ children: [
     children: [
       (0, n.jsx)(o.Heading, {
         variant: 'heading-xl/extrabold',
-        children: i.Z.Messages.EMAIL_CHANGE_REASONING_HEADER
+        children: r.Z.Messages.EMAIL_CHANGE_REASONING_HEADER
       }),
       (0, n.jsx)(o.ModalCloseButton, {
         onClick: t,
@@ -40,13 +40,13 @@ children: [
     ]
   }),
   (0, n.jsx)(o.ModalContent, {
-    className: r.content,
+    className: i.content,
     children: (0, n.jsx)(o.RadioGroup, {
       radioPosition: 'right',
-      radioItemClassName: r.radioItem,
+      radioItemClassName: i.radioItem,
       size: o.RadioGroup.Sizes.NOT_SET,
       value: _,
-      options: u,
+      options: c,
       onChange: e => {
         let {
           value: s
@@ -63,13 +63,13 @@ children: [
         disabled: null == _,
         size: o.Button.Sizes.MEDIUM,
         onClick: s,
-        children: i.Z.Messages.CONTINUE
+        children: r.Z.Messages.CONTINUE
       }),
       (0, n.jsx)(o.Button, {
         look: o.Button.Looks.LINK,
         color: o.Button.Colors.PRIMARY,
         onClick: t,
-        children: i.Z.Messages.CANCEL
+        children: r.Z.Messages.CANCEL
       })
     ]
   })
