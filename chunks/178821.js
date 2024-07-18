@@ -1,6 +1,6 @@
 r.d(t, {
   Z: function() {
-return g;
+return p;
   }
 }), r(47120);
 var a = r(735250),
@@ -8,48 +8,53 @@ var a = r(735250),
   i = r(120356),
   o = r.n(i),
   l = r(481060),
-  c = r(855954),
-  s = r(979756);
-let d = 1000 / 60,
-  u = 1000 / 60 * 3,
-  h = Math.ceil(3000 / d);
+  c = r(38618),
+  s = r(855954),
+  d = r(979756);
+let u = 1000 / 60,
+  h = 1000 / 60 * 3,
+  m = Math.ceil(3000 / u);
 
-function m() {
-  let e = n.useRef(Array(h).fill(0)),
+function g() {
+  let e = n.useRef(Array(m).fill(0)),
 t = n.useRef(performance.now()),
 r = n.useRef(0),
 i = n.useRef(0),
 o = n.useRef(0),
-c = n.useRef(0),
-[, s] = n.useState({}),
-m = n.useRef(null),
-[g, p] = n.useState(!0);
+s = n.useRef(0),
+[, d] = n.useState({}),
+g = n.useRef(null),
+[p, b] = n.useState(!1),
+[f, x] = n.useState(!1),
+[y, k] = n.useState(!1);
   n.useEffect(() => {
-let a = () => {
-    let n = performance.now(),
-      l = n - t.current;
-    if (t.current = n, i.current -= e.current[c.current], e.current[c.current] = l, i.current += l, o.current < h && (o.current += 1), c.current = (c.current + 1) % h, l > u) {
-      let e = 0 === o.current ? d : i.current / o.current,
-        t = Math.min(2 * d, e),
-        a = Math.floor(l / (g ? t : d));
-      r.current += a;
-    }
-    m.current = setTimeout(() => requestAnimationFrame(a), 12);
-  },
-  n = requestAnimationFrame(a);
+let a = requestAnimationFrame(function n() {
+  let l = performance.now(),
+    c = l - t.current;
+  if (t.current = l, i.current -= e.current[s.current], e.current[s.current] = c, i.current += c, o.current < m && (o.current += 1), s.current = (s.current + 1) % m, c > h) {
+    let e = 0 === o.current ? u : i.current / o.current,
+      t = Math.min(2 * u, e),
+      a = Math.floor(c / (p ? t : u));
+    r.current += a;
+  }
+  g.current = setTimeout(() => a = requestAnimationFrame(n), 12);
+});
 return () => {
-  cancelAnimationFrame(n), e.current.fill(0), r.current = 0, i.current = 0, o.current = 0, c.current = 0, null != m.current && clearTimeout(m.current);
+  cancelAnimationFrame(a), e.current.fill(0), r.current = 0, i.current = 0, o.current = 0, s.current = 0, null != g.current && clearTimeout(g.current);
 };
-  }, [g]), n.useEffect(() => {
+  }, [p]), n.useEffect(() => {
 let e = setInterval(() => {
-  s({});
-}, d);
+  d({});
+}, u);
 return () => {
   clearInterval(e);
 };
   }, []);
-  let b = 0 === o.current ? 0 : i.current / o.current,
-f = 0 === b ? 0 : d / b * 60;
+  let v = 0 === o.current ? 0 : i.current / o.current,
+_ = c.Z.getSocket(),
+w = _.dispatcher.getDispatchTimings(),
+C = _.dispatcher.getSchedulerTelemetry(),
+j = 0 === v ? 0 : u / v * 60;
   return (0, a.jsxs)('div', {
 children: [
   (0, a.jsxs)(l.Text, {
@@ -71,8 +76,8 @@ children: [
     children: e => (0, a.jsx)('div', {
       ...e,
       children: (0, a.jsx)(l.Checkbox, {
-        value: g,
-        onChange: () => p(e => !e),
+        value: p,
+        onChange: () => b(e => !e),
         size: 12,
         type: l.Checkbox.Types.INVERTED,
         children: (0, a.jsx)(l.Text, {
@@ -95,7 +100,7 @@ children: [
         variant: 'text-md/bold',
         color: 'text-primary',
         children: [
-          b.toFixed(2),
+          v.toFixed(2),
           'ms'
         ]
       })
@@ -111,25 +116,140 @@ children: [
         tag: 'span',
         variant: 'text-md/bold',
         color: 'text-primary',
-        children: f.toFixed(2)
+        children: j.toFixed(2)
       })
     ]
   }),
-  (0, a.jsx)('hr', {}),
   (0, a.jsx)(l.Button, {
     size: l.Button.Sizes.SMALL,
     onClick: () => {
-      e.current.fill(0), r.current = 0, i.current = 0, o.current = 0, c.current = 0, t.current = performance.now();
+      e.current.fill(0), r.current = 0, i.current = 0, o.current = 0, s.current = 0, t.current = performance.now();
     },
     children: 'Reset Frame Data'
-  })
+  }),
+  (0, a.jsx)('hr', {}),
+  (0, a.jsx)(l.Checkbox, {
+    value: f,
+    onChange: () => x(e => !e),
+    size: 12,
+    type: l.Checkbox.Types.INVERTED,
+    children: (0, a.jsx)(l.Text, {
+      tag: 'span',
+      variant: 'text-xs/normal',
+      color: 'text-muted',
+      children: 'Show Dispatch Timings'
+    })
+  }),
+  f ? (0, a.jsxs)(a.Fragment, {
+    children: [
+      (0, a.jsx)(l.Text, {
+        variant: 'text-md/medium',
+        color: 'text-muted',
+        children: 'Gateway Dispatch Timings:'
+      }),
+      (0, a.jsx)('table', {
+        cellPadding: 4,
+        children: Object.entries(w).map(e => {
+          let [t, [r, n]] = e;
+          return (0, a.jsxs)('tr', {
+            children: [
+              (0, a.jsx)('td', {
+                children: (0, a.jsx)(l.Text, {
+                  variant: 'text-xs/normal',
+                  color: 'text-normal',
+                  children: t
+                })
+              }),
+              (0, a.jsx)('td', {
+                children: (0, a.jsxs)(l.Text, {
+                  tag: 'span',
+                  variant: 'text-xs/bold',
+                  color: 'text-normal',
+                  children: [
+                    r.toFixed(2),
+                    'ms'
+                  ]
+                })
+              }),
+              (0, a.jsx)('td', {
+                children: (0, a.jsxs)(l.Text, {
+                  tag: 'span',
+                  variant: 'text-xs/normal',
+                  color: 'text-muted',
+                  children: [
+                    '(count: ',
+                    n,
+                    ')'
+                  ]
+                })
+              })
+            ]
+          }, t);
+        })
+      })
+    ]
+  }) : null,
+  (0, a.jsx)('hr', {}),
+  (0, a.jsx)(l.Checkbox, {
+    value: y,
+    onChange: () => k(e => !e),
+    size: 12,
+    type: l.Checkbox.Types.INVERTED,
+    children: (0, a.jsx)(l.Text, {
+      tag: 'span',
+      variant: 'text-xs/normal',
+      color: 'text-muted',
+      children: 'Show Dispatch Scheduler Telemetry'
+    })
+  }),
+  y ? (0, a.jsxs)(a.Fragment, {
+    children: [
+      (0, a.jsx)(l.Text, {
+        variant: 'text-md/medium',
+        color: 'text-muted',
+        children: 'Dispatch Scheduler Telemetry:'
+      }),
+      (0, a.jsx)('table', {
+        cellPadding: 4,
+        children: Object.entries(C.generateTelemetry()).map(e => {
+          let [t, r] = e;
+          return (0, a.jsxs)('tr', {
+            children: [
+              (0, a.jsx)('td', {
+                children: (0, a.jsx)(l.Text, {
+                  variant: 'text-xs/normal',
+                  color: 'text-normal',
+                  children: t
+                })
+              }),
+              (0, a.jsx)('td', {
+                children: (0, a.jsx)(l.Text, {
+                  tag: 'span',
+                  variant: 'text-xs/bold',
+                  color: 'text-normal',
+                  children: r
+                })
+              })
+            ]
+          }, t);
+        })
+      }),
+      (0, a.jsx)(l.Button, {
+        size: l.Button.Sizes.SMALL,
+        onClick: () => {
+          C.reset();
+        },
+        children: 'Reset Scheduler Telemetry'
+      })
+    ]
+  }) : null
 ]
   });
 }
 
-function g() {
+function p() {
   return (0, a.jsx)('div', {
-className: o()(s.panel, c.panel),
-children: (0, a.jsx)(m, {})
+className: o()(d.panel, s.panel),
+children: (0, a.jsx)(g, {})
   });
 }
