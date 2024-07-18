@@ -1,74 +1,73 @@
-
-function r(e) {
+function i(e) {
   return e && 'object' == typeof e && 'default' in e ? e.default : e;
 }
-var o, i = r(n(634450)),
-  a = r(n(115953));
+var o, r = i(n(634450)),
+  a = i(n(115953));
 n(368040);
-var c = r(n(765490));
+var s = i(n(765490));
 
-function s() {
-  return (s = Object.assign || function(e) {
+function c() {
+  return (c = Object.assign || function(e) {
 for (var t = 1; t < arguments.length; t++) {
   var n = arguments[t];
-  for (var r in n)
-    Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+  for (var i in n)
+    Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
 }
 return e;
   }).apply(this, arguments);
 }
 
-function u(e) {
+function l(e) {
   return '/' === e.charAt(0) ? e : '/' + e;
 }
 
-function h(e) {
+function u(e) {
   return '/' === e.charAt(0) ? e.substr(1) : e;
 }
 
-function f(e, t) {
-  var n, r;
-  return (n = e, r = t, 0 === n.toLowerCase().indexOf(r.toLowerCase()) && -1 !== '/?#'.indexOf(n.charAt(r.length))) ? e.substr(t.length) : e;
+function d(e, t) {
+  var n, i;
+  return (n = e, i = t, 0 === n.toLowerCase().indexOf(i.toLowerCase()) && -1 !== '/?#'.indexOf(n.charAt(i.length))) ? e.substr(t.length) : e;
 }
 
-function d(e) {
+function h(e) {
   return '/' === e.charAt(e.length - 1) ? e.slice(0, -1) : e;
 }
 
-function l(e) {
+function f(e) {
   var t = e || '/',
 n = '',
-r = '',
+i = '',
 o = t.indexOf('#'); -
-  1 !== o && (r = t.substr(o), t = t.substr(0, o));
-  var i = t.indexOf('?');
-  return -1 !== i && (n = t.substr(i), t = t.substr(0, i)), {
+  1 !== o && (i = t.substr(o), t = t.substr(0, o));
+  var r = t.indexOf('?');
+  return -1 !== r && (n = t.substr(r), t = t.substr(0, r)), {
 pathname: t,
 search: '?' === n ? '' : n,
-hash: '#' === r ? '' : r
+hash: '#' === i ? '' : i
   };
 }
 
-function p(e) {
+function g(e) {
   var t = e.pathname,
 n = e.search,
-r = e.hash,
+i = e.hash,
 o = t || '/';
-  return n && '?' !== n && (o += '?' === n.charAt(0) ? n : '?' + n), r && '#' !== r && (o += '#' === r.charAt(0) ? r : '#' + r), o;
+  return n && '?' !== n && (o += '?' === n.charAt(0) ? n : '?' + n), i && '#' !== i && (o += '#' === i.charAt(0) ? i : '#' + i), o;
 }
 
-function y(e, t, n, r) {
+function m(e, t, n, i) {
   var o;
-  'string' == typeof e ? (o = l(e)).state = t : (void 0 === (o = s({}, e)).pathname && (o.pathname = ''), o.search ? '?' !== o.search.charAt(0) && (o.search = '?' + o.search) : o.search = '', o.hash ? '#' !== o.hash.charAt(0) && (o.hash = '#' + o.hash) : o.hash = '', void 0 !== t && void 0 === o.state && (o.state = t));
+  'string' == typeof e ? (o = f(e)).state = t : (void 0 === (o = c({}, e)).pathname && (o.pathname = ''), o.search ? '?' !== o.search.charAt(0) && (o.search = '?' + o.search) : o.search = '', o.hash ? '#' !== o.hash.charAt(0) && (o.hash = '#' + o.hash) : o.hash = '', void 0 !== t && void 0 === o.state && (o.state = t));
   try {
 o.pathname = decodeURI(o.pathname);
   } catch (e) {
 throw e instanceof URIError ? URIError('Pathname "' + o.pathname + '" could not be decoded. This is likely caused by an invalid percent-encoding.') : e;
   }
-  return n && (o.key = n), r ? o.pathname ? '/' !== o.pathname.charAt(0) && (o.pathname = i(o.pathname, r.pathname)) : o.pathname = r.pathname : o.pathname || (o.pathname = '/'), o;
+  return n && (o.key = n), i ? o.pathname ? '/' !== o.pathname.charAt(0) && (o.pathname = r(o.pathname, i.pathname)) : o.pathname = i.pathname : o.pathname || (o.pathname = '/'), o;
 }
 
-function w() {
+function p() {
   var e = null,
 t = [];
   return {
@@ -78,176 +77,176 @@ setPrompt: function(t) {
       e === t && (e = null);
     };
 },
-confirmTransitionTo: function(t, n, r, o) {
+confirmTransitionTo: function(t, n, i, o) {
   if (null != e) {
-    var i = 'function' == typeof e ? e(t, n) : e;
-    'string' == typeof i ? 'function' == typeof r ? r(i, o) : o(!0) : o(!1 !== i);
+    var r = 'function' == typeof e ? e(t, n) : e;
+    'string' == typeof r ? 'function' == typeof i ? i(r, o) : o(!0) : o(!1 !== r);
   } else
     o(!0);
 },
 appendListener: function(e) {
   var n = !0;
 
-  function r() {
+  function i() {
     n && e.apply(void 0, arguments);
   }
-  return t.push(r),
+  return t.push(i),
     function() {
       n = !1, t = t.filter(function(e) {
-        return e !== r;
+        return e !== i;
       });
     };
 },
 notifyListeners: function() {
-  for (var e = arguments.length, n = Array(e), r = 0; r < e; r++)
-    n[r] = arguments[r];
+  for (var e = arguments.length, n = Array(e), i = 0; i < e; i++)
+    n[i] = arguments[i];
   t.forEach(function(e) {
     return e.apply(void 0, n);
   });
 }
   };
 }
-var m = !('undefined' == typeof window || !window.document || !window.document.createElement);
+var b = !('undefined' == typeof window || !window.document || !window.document.createElement);
 
-function g(e, t) {
+function _(e, t) {
   t(window.confirm(e));
 }
 var v = 'popstate',
-  x = 'hashchange';
+  w = 'hashchange';
 
-function b() {
+function C() {
   try {
 return window.history.state || {};
   } catch (e) {
 return {};
   }
 }
-var E = 'hashchange',
-  A = {
+var y = 'hashchange',
+  x = {
 hashbang: {
   encodePath: function(e) {
-    return '!' === e.charAt(0) ? e : '!/' + h(e);
+    return '!' === e.charAt(0) ? e : '!/' + u(e);
   },
   decodePath: function(e) {
     return '!' === e.charAt(0) ? e.substr(1) : e;
   }
 },
 noslash: {
-  encodePath: h,
-  decodePath: u
+  encodePath: u,
+  decodePath: l
 },
 slash: {
-  encodePath: u,
-  decodePath: u
+  encodePath: l,
+  decodePath: l
 }
   };
 
-function C(e) {
+function S(e) {
   var t = e.indexOf('#');
   return -1 === t ? e : e.slice(0, t);
 }
 
-function T() {
+function I() {
   var e = window.location.href,
 t = e.indexOf('#');
   return -1 === t ? '' : e.substring(t + 1);
 }
 
-function O(e) {
-  window.location.replace(C(window.location.href) + '#' + e);
+function R(e) {
+  window.location.replace(S(window.location.href) + '#' + e);
 }
 
-function R(e, t, n) {
+function B(e, t, n) {
   return Math.min(Math.max(e, t), n);
 }
 t.createBrowserHistory = function(e) {
-  void 0 === e && (e = {}), m || c(!1);
+  void 0 === e && (e = {}), b || s(!1);
   var t, n = window.history,
-r = (-1 === (t = window.navigator.userAgent).indexOf('Android 2.') && -1 === t.indexOf('Android 4.0') || -1 === t.indexOf('Mobile Safari') || -1 !== t.indexOf('Chrome') || -1 !== t.indexOf('Windows Phone')) && window.history && 'pushState' in window.history,
+i = (-1 === (t = window.navigator.userAgent).indexOf('Android 2.') && -1 === t.indexOf('Android 4.0') || -1 === t.indexOf('Mobile Safari') || -1 !== t.indexOf('Chrome') || -1 !== t.indexOf('Windows Phone')) && window.history && 'pushState' in window.history,
 o = -1 !== window.navigator.userAgent.indexOf('Trident'),
-i = e,
-a = i.forceRefresh,
-h = void 0 !== a && a,
-l = i.getUserConfirmation,
-E = void 0 === l ? g : l,
-A = i.keyLength,
-C = void 0 === A ? 6 : A,
-T = e.basename ? d(u(e.basename)) : '';
+r = e,
+a = r.forceRefresh,
+u = void 0 !== a && a,
+f = r.getUserConfirmation,
+y = void 0 === f ? _ : f,
+x = r.keyLength,
+S = void 0 === x ? 6 : x,
+I = e.basename ? h(l(e.basename)) : '';
 
-  function O(e) {
+  function R(e) {
 var t = e || {},
   n = t.key,
-  r = t.state,
+  i = t.state,
   o = window.location,
-  i = o.pathname + o.search + o.hash;
-return T && (i = f(i, T)), y(i, r, n);
+  r = o.pathname + o.search + o.hash;
+return I && (r = d(r, I)), m(r, i, n);
   }
 
-  function R() {
-return Math.random().toString(36).substr(2, C);
+  function B() {
+return Math.random().toString(36).substr(2, S);
   }
-  var k = w();
+  var k = p();
 
-  function P(e) {
-s(z, e), z.length = n.length, k.notifyListeners(z.location, z.action);
-  }
-
-  function I(e) {
-void 0 === e.state && -1 === navigator.userAgent.indexOf('CriOS') || U(O(e.state));
+  function E(e) {
+c(N, e), N.length = n.length, k.notifyListeners(N.location, N.action);
   }
 
-  function M() {
-U(O(b()));
+  function T(e) {
+void 0 === e.state && -1 === navigator.userAgent.indexOf('CriOS') || A(R(e.state));
   }
-  var _ = !1;
 
-  function U(e) {
-_ ? (_ = !1, P()) : k.confirmTransitionTo(e, 'POP', E, function(t) {
-  var n, r, o, i, a;
-  t ? P({
+  function O() {
+A(R(C()));
+  }
+  var P = !1;
+
+  function A(e) {
+P ? (P = !1, E()) : k.confirmTransitionTo(e, 'POP', y, function(t) {
+  var n, i, o, r, a;
+  t ? E({
     action: 'POP',
     location: e
-  }) : (n = e, r = z.location, -1 === (o = S.indexOf(r.key)) && (o = 0), -1 === (i = S.indexOf(n.key)) && (i = 0), (a = o - i) && (_ = !0, B(a)));
+  }) : (n = e, i = N.location, -1 === (o = M.indexOf(i.key)) && (o = 0), -1 === (r = M.indexOf(n.key)) && (r = 0), (a = o - r) && (P = !0, W(a)));
 });
   }
-  var L = O(b()),
-S = [L.key];
-
-  function j(e) {
-return T + p(e);
-  }
-
-  function B(e) {
-n.go(e);
-  }
-  var F = 0;
+  var L = R(C()),
+M = [L.key];
 
   function H(e) {
-1 === (F += e) && 1 === e ? (window.addEventListener(v, I), o && window.addEventListener(x, M)) : 0 === F && (window.removeEventListener(v, I), o && window.removeEventListener(x, M));
+return I + g(e);
   }
-  var q = !1,
-z = {
+
+  function W(e) {
+n.go(e);
+  }
+  var Z = 0;
+
+  function D(e) {
+1 === (Z += e) && 1 === e ? (window.addEventListener(v, T), o && window.addEventListener(w, O)) : 0 === Z && (window.removeEventListener(v, T), o && window.removeEventListener(w, O));
+  }
+  var z = !1,
+N = {
   length: n.length,
   action: 'POP',
   location: L,
-  createHref: j,
+  createHref: H,
   push: function(e, t) {
-    var o = y(e, t, R(), z.location);
-    k.confirmTransitionTo(o, 'PUSH', E, function(e) {
+    var o = m(e, t, B(), N.location);
+    k.confirmTransitionTo(o, 'PUSH', y, function(e) {
       if (e) {
-        var t = j(o),
-          i = o.key,
+        var t = H(o),
+          r = o.key,
           a = o.state;
-        if (r) {
+        if (i) {
           if (n.pushState({
-              key: i,
+              key: r,
               state: a
-            }, null, t), h)
+            }, null, t), u)
             window.location.href = t;
           else {
-            var c = S.indexOf(z.location.key),
-              s = S.slice(0, c + 1);
-            s.push(o.key), S = s, P({
+            var s = M.indexOf(N.location.key),
+              c = M.slice(0, s + 1);
+            c.push(o.key), M = c, E({
               action: 'PUSH',
               location: o
             });
@@ -259,23 +258,23 @@ z = {
   },
   replace: function(e, t) {
     var o = 'REPLACE',
-      i = y(e, t, R(), z.location);
-    k.confirmTransitionTo(i, o, E, function(e) {
+      r = m(e, t, B(), N.location);
+    k.confirmTransitionTo(r, o, y, function(e) {
       if (e) {
-        var t = j(i),
-          a = i.key,
-          c = i.state;
-        if (r) {
+        var t = H(r),
+          a = r.key,
+          s = r.state;
+        if (i) {
           if (n.replaceState({
               key: a,
-              state: c
-            }, null, t), h)
+              state: s
+            }, null, t), u)
             window.location.replace(t);
           else {
-            var s = S.indexOf(z.location.key); -
-            1 !== s && (S[s] = i.key), P({
+            var c = M.indexOf(N.location.key); -
+            1 !== c && (M[c] = r.key), E({
               action: o,
-              location: i
+              location: r
             });
           }
         } else
@@ -283,28 +282,28 @@ z = {
       }
     });
   },
-  go: B,
+  go: W,
   goBack: function() {
-    B(-1);
+    W(-1);
   },
   goForward: function() {
-    B(1);
+    W(1);
   },
   block: function(e) {
     void 0 === e && (e = !1);
     var t = k.setPrompt(e);
-    return q || (H(1), q = !0),
+    return z || (D(1), z = !0),
       function() {
-        return q && (q = !1, H(-1)), t();
+        return z && (z = !1, D(-1)), t();
       };
   },
   listen: function(e) {
     var t = k.appendListener(e);
-    return H(1),
+    return D(1),
       function() {
-        H(-1), t();
+        D(-1), t();
       };
   }
 };
-  return z;
+  return N;
 };

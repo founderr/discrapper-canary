@@ -473,7 +473,10 @@ null != (0, _.zS)().getSupportedBandwidthEstimationExperiments && (0, _.zS)().ge
   }
   getMLSSigningKey(e, t) {
 return new Promise((n, r) => {
-  null != (0, _.zS)().getMLSSigningKey ? (0, _.zS)().getMLSSigningKey(e, t, e => n(e)) : r(Error('NOT_IMPLEMENTED'));
+  null != (0, _.zS)().getMLSSigningKey ? (0, _.zS)().getMLSSigningKey(e, t, (e, t) => n({
+    key: e,
+    signature: t
+  })) : r(Error('NOT_IMPLEMENTED'));
 });
   }
   watchdogTick() {
