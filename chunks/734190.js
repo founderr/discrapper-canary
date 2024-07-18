@@ -61,12 +61,12 @@ unread: f.ZP.hasUnread(t.id),
 mentionCount: f.ZP.getMentionCount(t.id)
   })), D = (0, o.e7)([h.Z], () => h.Z.isMuted(t.id)), U = l.useCallback(e => {
 (0, p.ok)(t, !e.shiftKey, v.on.CHANNEL_LIST);
-  }, [t]), w = l.useCallback(() => {
+  }, [t]), G = l.useCallback(() => {
 u.Z.preload(t.guild_id, t.id);
   }, [
 t.guild_id,
 t.id
-  ]), G = l.useCallback(e => {
+  ]), w = l.useCallback(e => {
 let l = _.Z.getChannel(t.id);
 null != l && (0, d.jW)(e, async () => {
   let {
@@ -118,8 +118,8 @@ children: [
         [L.modeUnreadImportant]: !D && !r && P,
         [L.withGuildIcon]: R
       }),
-      onMouseDown: w,
-      onContextMenu: G,
+      onMouseDown: G,
+      onContextMenu: w,
       children: [
         !P || D || r ? null : (0, i.jsx)('div', {
           className: a()(L.unread, L.unreadImportant)

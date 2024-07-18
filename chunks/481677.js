@@ -1719,7 +1719,7 @@ a.I.PLUM_21
 a.I.PRIMARY_630,
 a.I.PRIMARY_160,
 a.I.PLUM_25,
-a.I.PLUM_17
+a.I.PLUM_19
   ],
   'scrollbar-thin-thumb': [
 a.I.PRIMARY_730,

@@ -3,7 +3,7 @@ t.d(s, {
 return l;
   },
   w: function() {
-return i;
+return r;
   }
 });
 var n = t(990547),
@@ -22,7 +22,7 @@ trackedActionData: {
 }
   });
 }
-async function i(e) {
+async function r(e) {
   return (await o.Z.post({
 url: a.ANM.USER_EMAIL_VERIFY_CODE,
 body: {

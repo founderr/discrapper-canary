@@ -85,11 +85,11 @@ u
   ]);
   let U = ''.concat(Math.min(100, u / (0, E.vn)(t.id)[O] * 100), '%'),
 {
-  current: w
+  current: G
 } = l.useRef(U),
-G = {
+w = {
   from: {
-    width: P === u ? w : '0%'
+    width: P === u ? G : '0%'
   },
   to: {
     width: U
@@ -97,7 +97,7 @@ G = {
   config: y,
   immediate: j
 },
-[k, B] = (0, s.useSpring)(() => G),
+[k, B] = (0, s.useSpring)(() => w),
 V = () => {
   (0, f.yw)(T.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
     location: {
@@ -151,7 +151,7 @@ children: (0, i.jsx)(d.Tooltip, {
     onClick: V,
     onMouseEnter: () => {
       var t;
-      null === (t = e.onMouseEnter) || void 0 === t || t.call(e), B(G);
+      null === (t = e.onMouseEnter) || void 0 === t || t.call(e), B(w);
     },
     className: a()(A.container, {
       [A.containerWithMargin]: n

@@ -1011,7 +1011,7 @@ if (i === J.Yn.DEFAULT) {
     null === (r = this._connection) || void 0 === r || r.createUser(e, t, n);
   });
 } else
-  i === J.Yn.STREAM && (this._goLiveQualityManager = new A.Z(!1), this._goLiveQualityManager.on(A.y.RequestedSSRCsUpdate, (e, t, n) => {
+  i === J.Yn.STREAM && (this._goLiveQualityManager = new A.Z(!0), this._goLiveQualityManager.on(A.y.RequestedSSRCsUpdate, (e, t, n) => {
     var r;
     null === (r = this._connection) || void 0 === r || r.createUser(e, t, n);
   }), this._goLiveQualityManager.on(A.y.RequestedStreamsUpdate, e => {

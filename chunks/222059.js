@@ -38,8 +38,8 @@ var i = n(735250),
   j = n(674552),
   D = n(981631),
   U = n(474936),
-  w = n(871465),
-  G = n(689938),
+  G = n(871465),
+  w = n(689938),
   k = n(297627);
 let B = {
   origin: {
@@ -75,8 +75,8 @@ Y = () => {
 };
   if (null == n)
 return null;
-  let z = G.Z.Messages.DIRECT_MESSAGES;
-  S && (z = s.K.get(D.wli) ? G.Z.Messages.DISCODO_ENABLED : G.Z.Messages.DISCODO_DISABLED), H.length > 0 && p.Z.trackExposure({
+  let z = w.Z.Messages.DIRECT_MESSAGES;
+  S && (z = s.K.get(D.wli) ? w.Z.Messages.DISCODO_ENABLED : w.Z.Messages.DISCODO_DISABLED), H.length > 0 && p.Z.trackExposure({
 location: 'home_button'
   });
   let K = null;
@@ -102,13 +102,13 @@ Q = (0, i.jsx)(o.BlobMask, {
       if (!__OVERLAY__ && (null != Z && clearTimeout(Z), T(setTimeout(Y, 500)), b(L + 1), 15 === L)) {
         Y();
         let e = !s.K.get(D.wli);
-        s.K.set(D.wli, e), e && s.K.set(w.O5, !0), e ? (0, M.GN)('discodo') : (0, M.GN)('user_leave'), v(!0), setTimeout(() => {
+        s.K.set(D.wli, e), e && s.K.set(G.O5, !0), e ? (0, M.GN)('discodo') : (0, M.GN)('user_leave'), v(!0), setTimeout(() => {
           v(!1);
         }, 1000);
       }
     },
     selected: q,
-    ariaLabel: G.Z.Messages.DIRECT_MESSAGES,
+    ariaLabel: w.Z.Messages.DIRECT_MESSAGES,
     ...W,
     to: {
       pathname: _,

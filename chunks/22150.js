@@ -1,35 +1,35 @@
 t.d(s, {
   Z: function() {
-return u;
+return c;
   }
 }), t(47120);
 var n = t(735250),
   o = t(470079),
   a = t(442837),
   l = t(481060),
-  i = t(479531),
-  r = t(393869),
+  r = t(479531),
+  i = t(393869),
   E = t(594174),
   _ = t(689938),
   d = t(660817);
 
-function u(e) {
+function c(e) {
   let {
 onNext: s,
 onClose: t
-  } = e, [u, c] = o.useState(!1), N = (0, a.e7)([E.default], () => E.default.getCurrentUser()), C = async e => {
-e.preventDefault(), c(!0);
+  } = e, [c, N] = o.useState(!1), u = (0, a.e7)([E.default], () => E.default.getCurrentUser()), A = async e => {
+e.preventDefault(), N(!0);
 try {
-  await (0, r.i)(), s();
+  await (0, i.i)(), s();
 } catch (s) {
-  let e = new i.Z(s).getAnyErrorMessage();
+  let e = new r.Z(s).getAnyErrorMessage();
   null != e && (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));
 } finally {
-  c(!1);
+  N(!1);
 }
   };
   return (0, n.jsxs)('form', {
-onSubmit: C,
+onSubmit: A,
 children: [
   (0, n.jsxs)(l.ModalHeader, {
     separator: !1,
@@ -52,7 +52,7 @@ children: [
       className: d.description,
       variant: 'text-md/normal',
       children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_DESCRIPTION_NO_LINK.format({
-        oldEmail: null == N ? void 0 : N.email
+        oldEmail: null == u ? void 0 : u.email
       })
     })
   }),
@@ -63,7 +63,7 @@ children: [
         type: 'submit',
         color: l.Button.Colors.BRAND,
         size: l.Button.Sizes.MEDIUM,
-        submitting: u,
+        submitting: c,
         className: d.__invalid_submit,
         children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_BUTTON
       }),

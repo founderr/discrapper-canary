@@ -30,8 +30,8 @@ var i, l, r, a, s = n(392711),
   j = n(699516),
   D = n(594174),
   U = n(979651),
-  w = n(823379),
-  G = n(981631);
+  G = n(823379),
+  w = n(981631);
 let k = !1,
   B = !1,
   V = [],
@@ -43,14 +43,14 @@ let k = !1,
 
 function K() {
   let e = j.Z.getFriendIDs();
-  return b.Z.hasConsented(G.pjP.PERSONALIZATION) ? new Set([
+  return b.Z.hasConsented(w.pjP.PERSONALIZATION) ? new Set([
 ...S.Z.getUserAffinitiesUserIds(),
 ...e
   ]) : new Set(e);
 }
 
 function q(e) {
-  return P.Z.findActivity(e, e => e.type !== G.IIU.CUSTOM_STATUS);
+  return P.Z.findActivity(e, e => e.type !== w.IIU.CUSTOM_STATUS);
 }
 
 function Q(e) {
@@ -84,7 +84,7 @@ return v.r9;
 
 function ee(e) {
   let t = U.Z.getVoiceStateForUser(e);
-  return (null == t ? void 0 : t.channelId) != null && y.Z.canWithPartialContext(G.Plq.VIEW_CHANNEL, {
+  return (null == t ? void 0 : t.channelId) != null && y.Z.canWithPartialContext(w.Plq.VIEW_CHANNEL, {
 channelId: t.channelId
   }) ? t.channelId : null;
 }
@@ -104,14 +104,14 @@ E = !1,
 S = [],
 b = new Set(),
 j = !1,
-G = [];
+w = [];
   for (let e of t) {
 let n = L.Z.getAnyStreamForUser(e.id),
   i = A.Z.getChannel(null == n ? void 0 : n.channelId);
 if ((null == i ? void 0 : i.isNSFW()) && (!f || !R.Z.didAgree(null == i ? void 0 : i.getGuildId())))
   continue;
 let s = q(e.id);
-if (null != n && G.push({
+if (null != n && w.push({
     stream: n,
     streamUser: e,
     activity: s
@@ -184,7 +184,7 @@ else {
       userId: t
     } = e;
     return D.default.getUser(t);
-  }).filter(w.lm).orderBy([et], ['desc']).value();
+  }).filter(G.lm).orderBy([et], ['desc']).value();
   e.filter(e => !m.includes(e.id)).forEach(e => t.push(e)), k ? !H.has(l) && (u = null) : (u = r, k = !0), H.add(l), V.add(n), B.push({
     channel: i,
     guild: r,
@@ -213,7 +213,7 @@ currentActivities: (s = S, c = e => {
   'desc',
   'asc'
 ])).value(),
-applicationStreams: G
+applicationStreams: w
   };
 }
 
@@ -252,7 +252,7 @@ Y.clear(), H = (V = function(e) {
   'asc',
   'asc'
 ]).value().filter(e => e.voiceChannels.length >= 1 || e.currentActivities.length > 0 || e.applicationStreams.length > 0)).map(e => ({
-  type: G.GOo.USER,
+  type: w.GOo.USER,
   party: e
 })), ! function() {
   if (Y.size > 0) {

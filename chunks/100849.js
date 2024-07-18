@@ -1,32 +1,32 @@
-n.d(i, {
+i.d(n, {
   Z: function() {
 return v;
   }
 });
-var s = n(735250),
-  l = n(470079),
-  o = n(120356),
-  t = n.n(o),
-  r = n(442837),
-  a = n(481060),
-  d = n(387903),
-  c = n(906732),
-  u = n(199902),
-  I = n(158776),
-  _ = n(785717),
-  f = n(221292),
-  E = n(989964),
-  m = n(981631),
-  S = n(501649),
-  Z = n(735393);
+var s = i(735250),
+  l = i(470079),
+  o = i(120356),
+  t = i.n(o),
+  r = i(442837),
+  a = i(481060),
+  d = i(387903),
+  c = i(906732),
+  u = i(199902),
+  I = i(158776),
+  _ = i(785717),
+  f = i(221292),
+  E = i(989964),
+  m = i(981631),
+  S = i(501649),
+  Z = i(735393);
 
 function v(e) {
   let {
-user: i,
-type: n,
+user: n,
+type: i,
 showActions: o,
 onClose: v
-  } = e, x = (0, r.e7)([u.Z], () => null != u.Z.getAnyStreamForUser(i.id)), h = (0, r.e7)([I.Z], () => I.Z.getActivities(i.id)), p = l.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), T = l.useMemo(() => x ? p.find(e => e.type === m.IIU.PLAYING) : null, [
+  } = e, x = (0, r.e7)([u.Z], () => null != u.Z.getAnyStreamForUser(n.id)), h = (0, r.e7)([I.Z], () => I.Z.getActivities(n.id)), p = l.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), T = l.useMemo(() => x ? p.find(e => e.type === m.IIU.PLAYING) : null, [
 p,
 x
   ]), g = l.useMemo(() => p.filter(e => e !== T), [
@@ -38,7 +38,7 @@ newestAnalyticsLocation: C
   } = (0, c.ZP)(), {
 trackUserProfileAction: j,
 ...A
-  } = (0, _.KZ)(), M = {
+  } = (0, _.KZ)(), O = {
 location: {
   page: m.ZY5.USER_PROFILE,
   section: m.jXE.PROFILE_MODAL
@@ -50,14 +50,14 @@ fade: !0,
 children: [
   x ? (0, s.jsx)(E.Z, {
     location: 'UserProfileActivity',
-    type: n,
-    user: i,
+    type: i,
+    user: n,
     source: C,
     className: S.userProfileActivity,
-    showChannelDetails: n === d.Y.SIMPLIFIED_PROFILE,
+    showChannelDetails: i === d.Y.SIMPLIFIED_PROFILE,
     activity: T,
     actionColor: S.actionColor,
-    analyticsParams: M,
+    analyticsParams: O,
     showActions: o,
     onGameProfileOpened: v,
     onAction: () => {
@@ -76,15 +76,15 @@ children: [
   }) : null,
   g.map(e => (0, s.jsx)(E.Z, {
     location: 'UserProfileActivity',
-    type: n,
+    type: i,
     activity: e,
-    user: i,
+    user: n,
     useStoreStream: !1,
     source: C,
-    className: t()(S.userProfileActivity, n === d.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
-    showChannelDetails: n === d.Y.SIMPLIFIED_PROFILE,
+    className: t()(S.userProfileActivity, i === d.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
+    showChannelDetails: i === d.Y.SIMPLIFIED_PROFILE,
     actionColor: S.actionColor,
-    analyticsParams: M,
+    analyticsParams: O,
     showActions: o,
     onGameProfileOpened: v,
     onAction: () => {

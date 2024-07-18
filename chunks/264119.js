@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-return i;
+return r;
   }
 });
 var n = t(735250);
@@ -9,7 +9,7 @@ var o = t(481060),
   a = t(689938),
   l = t(660817);
 
-function i(e) {
+function r(e) {
   let {
 email: s,
 onClose: t

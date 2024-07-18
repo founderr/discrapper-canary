@@ -117,7 +117,7 @@ for (let {
       if (this._bandwidthSamples.push(e), this._bandwidthSamples.length > 15 && this._bandwidthSamples.shift(), 15 === this._bandwidthSamples.length) {
         let e = i().mean(this._bandwidthSamples),
           t = null !== (a = null === (r = this._goLiveQualityManager) || void 0 === r ? void 0 : r.isDowngraded()) && void 0 !== a && a;
-        t && e > 2000000 ? null === (s = this._goLiveQualityManager) || void 0 === s || s.setGoLiveStreamDowngraded(!1) : !t && e < 1000000 && (null === (o = this._goLiveQualityManager) || void 0 === o || o.setGoLiveStreamDowngraded(!0));
+        t && e > 1500000 ? null === (s = this._goLiveQualityManager) || void 0 === s || s.setGoLiveStreamDowngraded(!1) : !t && e < 1000000 && (null === (o = this._goLiveQualityManager) || void 0 === o || o.setGoLiveStreamDowngraded(!0));
       }
       break;
     }

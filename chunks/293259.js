@@ -1,44 +1,44 @@
-n.d(i, {
+i.d(n, {
   Z: function() {
 return A;
   }
 });
-var s = n(735250),
-  l = n(470079),
-  o = n(442837),
-  t = n(692547),
-  r = n(481060),
-  a = n(239091),
-  d = n(233440),
-  c = n(314897),
-  u = n(158776),
-  I = n(699516),
-  _ = n(998502),
-  f = n(785717),
-  E = n(621853),
-  m = n(204197),
-  S = n(735336),
-  Z = n(520978),
-  v = n(184325),
-  x = n(652853),
-  h = n(225714),
-  p = n(228168),
-  T = n(231338),
-  g = n(689938),
-  N = n(520067);
+var s = i(735250),
+  l = i(470079),
+  o = i(442837),
+  t = i(692547),
+  r = i(481060),
+  a = i(239091),
+  d = i(233440),
+  c = i(314897),
+  u = i(158776),
+  I = i(699516),
+  _ = i(998502),
+  f = i(785717),
+  E = i(621853),
+  m = i(204197),
+  S = i(735336),
+  Z = i(520978),
+  v = i(184325),
+  x = i(652853),
+  h = i(225714),
+  p = i(228168),
+  T = i(231338),
+  g = i(689938),
+  N = i(520067);
 let C = r.AvatarSizes.SIZE_120,
   j = _.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
 function A(e) {
   let {
-displayProfile: i,
+displayProfile: n,
 user: _,
 guildId: A,
-channelId: M,
+channelId: O,
 friendToken: L,
 className: R,
 isStreaming: U,
-hasProfileEffect: O,
+hasProfileEffect: M,
 onClose: P
   } = e, b = (0, o.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), y = (0, o.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, o.e7)([u.Z], () => u.Z.getStatus(_.id)), F = (0, o.e7)([E.Z], () => E.Z.getUserProfile(_.id)), B = (0, o.e7)([c.default], () => c.default.getId() === _.id), {
 theme: G
@@ -51,19 +51,19 @@ avatarDecorationSrc: Y
   } = (0, m.Z)({
 user: _,
 size: C
-  }), H = l.useMemo(() => (0, d.W)(_, M), [
+  }), H = l.useMemo(() => (0, d.W)(_, O), [
 _,
-M
+O
   ]);
   return (0, s.jsxs)('header', {
 className: R,
 children: [
   (0, s.jsx)(S.Z, {
-    displayProfile: i,
+    displayProfile: n,
     onClose: P,
     user: _,
     profileType: p.y0.MODAL,
-    hasProfileEffect: O
+    hasProfileEffect: M
   }),
   (0, s.jsxs)('div', {
     className: N.header,
@@ -131,9 +131,9 @@ children: [
                   }), (0, a.jW)(e, async () => {
                     let {
                       default: e
-                    } = await n.e('29136').then(n.bind(n, 193646));
-                    return i => (0, s.jsx)(e, {
-                      ...i,
+                    } = await i.e('29136').then(i.bind(i, 193646));
+                    return n => (0, s.jsx)(e, {
+                      ...n,
                       user: _,
                       isCurrentUser: B,
                       guildId: A,

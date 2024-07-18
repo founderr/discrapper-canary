@@ -1,27 +1,27 @@
-n.d(i, {
+i.d(n, {
   Z: function() {
 return m;
   }
 });
-var s = n(735250);
-n(470079);
-var l = n(120356),
-  o = n.n(l),
-  t = n(481060),
-  r = n(194359),
-  a = n(906732),
-  d = n(475413),
-  c = n(261253),
-  u = n(7242),
-  I = n(934861),
-  _ = n(981631),
-  f = n(689938),
-  E = n(682731);
+var s = i(735250);
+i(470079);
+var l = i(120356),
+  o = i.n(l),
+  t = i(481060),
+  r = i(194359),
+  a = i(906732),
+  d = i(475413),
+  c = i(261253),
+  u = i(7242),
+  I = i(934861),
+  _ = i(981631),
+  f = i(689938),
+  E = i(682731);
 
 function m(e) {
   let {
-isCurrentUser: i,
-user: n,
+isCurrentUser: n,
+user: i,
 relationshipType: l,
 friendToken: m,
 persistentCallCtaEnabled: S = !1,
@@ -30,14 +30,14 @@ onClose: v
   } = e, {
 newestAnalyticsLocation: x
   } = (0, a.ZP)();
-  if (i || l === _.OGo.BLOCKED)
+  if (n || l === _.OGo.BLOCKED)
 return null;
   let h = S ? (0, s.jsx)(c.Z, {
-  user: n,
+  user: i,
   onClose: v
 }) : null,
 p = (0, s.jsx)(u.Z, {
-  user: n,
+  user: i,
   onClose: v
 });
   if (l === _.OGo.FRIEND && Z && null != p)
@@ -45,19 +45,19 @@ return (0, s.jsxs)('div', {
   className: E.multipleButtons,
   children: [
     (0, s.jsx)(I.v, {
-      userId: n.id,
+      userId: i.id,
       onClose: v
     }),
     p
   ]
 });
-  if (l === _.OGo.FRIEND || n.bot)
+  if (l === _.OGo.FRIEND || i.bot)
 return (0, s.jsxs)('div', {
   className: E.multipleButtons,
   children: [
     h,
     (0, s.jsx)(I.c, {
-      userId: n.id,
+      userId: i.id,
       onClose: v
     })
   ]
@@ -72,7 +72,7 @@ return Z && null != p ? (0, s.jsxs)('div', {
       disabled: !0
     }),
     (0, s.jsx)(I.v, {
-      userId: n.id,
+      userId: i.id,
       onClose: v
     }),
     p
@@ -87,7 +87,7 @@ return Z && null != p ? (0, s.jsxs)('div', {
     }),
     h,
     (0, s.jsx)(I.c, {
-      userId: n.id,
+      userId: i.id,
       onClose: v
     })
   ]
@@ -101,7 +101,7 @@ children: [
     tooltipText: f.Z.Messages.USER_PROFILE_ADD_FRIEND,
     onClick: () => {
       r.Z.addRelationship({
-        userId: n.id,
+        userId: i.id,
         context: {
           location: x
         },
@@ -110,7 +110,7 @@ children: [
     }
   }),
   (0, s.jsx)(I.v, {
-    userId: n.id,
+    userId: i.id,
     onClose: v
   }),
   p
@@ -120,7 +120,7 @@ className: E.multipleButtons,
 children: [
   h,
   (0, s.jsx)(I.v, {
-    userId: n.id,
+    userId: i.id,
     onClose: v
   }),
   (0, s.jsx)(d.tG, {
@@ -130,7 +130,7 @@ children: [
     color: o()(t.Button.Colors.BRAND, E.color),
     onClick: () => {
       r.Z.addRelationship({
-        userId: n.id,
+        userId: i.id,
         context: {
           location: x
         },

@@ -34,8 +34,8 @@ var i = n(735250),
   j = n(925329),
   D = n(569545),
   U = n(382182),
-  w = n(74299),
-  G = n(914923),
+  G = n(74299),
+  w = n(914923),
   k = n(165393),
   B = n(989941),
   V = n(803647),
@@ -298,7 +298,7 @@ let {
 } = this.props, {
   title: r,
   sanitizedTitle: s
-} = (0, G.Z)(n);
+} = (0, w.Z)(n);
 return (0, i.jsxs)('div', {
   className: eI.gameWrapper,
   children: [
@@ -545,10 +545,10 @@ if (null != a && null != a.id)
   return a.id;
 if (null != x)
   return x.applicationId;
-  }()) && void 0 !== t ? t : '']), A = (0, c.e7)([X.Z], () => (0, w.Z)(X.Z) && (0, eh.isWindows)()), R = (0, c.e7)([ee.Z], () => null != r ? ee.Z.findActivity(r, e => e.type === ef.IIU.PLAYING) : null), O = null != p && p.ownerId === r && p.state !== ef.jm8.ENDED, y = (0, c.e7)([ei.Z], () => ei.Z.getBroadcast()), j = (0, Z.Z)() && null != a, D = (0, c.e7)([
+  }()) && void 0 !== t ? t : '']), A = (0, c.e7)([X.Z], () => (0, G.Z)(X.Z) && (0, eh.isWindows)()), R = (0, c.e7)([ee.Z], () => null != r ? ee.Z.findActivity(r, e => e.type === ef.IIU.PLAYING) : null), O = null != p && p.ownerId === r && p.state !== ef.jm8.ENDED, y = (0, c.e7)([ei.Z], () => ei.Z.getBroadcast()), j = (0, Z.Z)() && null != a, D = (0, c.e7)([
 el.default,
 et.Z
-  ], () => null != d ? (0, L.F6)(d, el.default, et.Z) : void 0), G = (0, F.Z)(null == s ? void 0 : s.id, r);
+  ], () => null != d ? (0, L.F6)(d, el.default, et.Z) : void 0), w = (0, F.Z)(null == s ? void 0 : s.id, r);
   return (0, i.jsx)(ex, {
 ...l,
 guildId: n,
@@ -572,6 +572,6 @@ broadcast: y,
 canStartBroadcast: j,
 channelName: D,
 guildForConnectedChannel: h,
-streamQualityIndicator: G
+streamQualityIndicator: w
   });
 });

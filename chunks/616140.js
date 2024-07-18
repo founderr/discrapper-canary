@@ -1,65 +1,65 @@
-n.d(i, {
+i.d(n, {
   Z: function() {
 return h;
   }
-}), n(47120);
-var s = n(735250),
-  l = n(470079),
-  o = n(442837),
-  t = n(706898),
-  r = n(481060),
-  a = n(387903),
-  d = n(246946),
-  c = n(785717),
-  u = n(100849),
-  I = n(944546),
-  _ = n(470900),
-  f = n(988246),
-  E = n(970041),
-  m = n(715388),
-  S = n(834534),
-  Z = n(228168),
-  v = n(47460);
+}), i(47120);
+var s = i(735250),
+  l = i(470079),
+  o = i(442837),
+  t = i(706898),
+  r = i(481060),
+  a = i(387903),
+  d = i(246946),
+  c = i(785717),
+  u = i(100849),
+  I = i(944546),
+  _ = i(470900),
+  f = i(988246),
+  E = i(970041),
+  m = i(715388),
+  S = i(834534),
+  Z = i(228168),
+  v = i(47460);
 
 function x(e) {
   let {
-section: i,
-subsection: n,
+section: n,
+subsection: i,
 user: l,
 currentUser: o,
 displayProfile: t,
 onClose: r
   } = e;
-  return i === Z.oh.ACTIVITY ? (0, s.jsx)(u.Z, {
+  return n === Z.oh.ACTIVITY ? (0, s.jsx)(u.Z, {
 showActions: (null == o ? void 0 : o.id) !== l.id,
 user: l,
 type: a.Y.SIMPLIFIED_PROFILE,
 onClose: r
-  }) : i === Z.oh.MUTUAL_FRIENDS ? (0, s.jsx)(I.Z, {
+  }) : n === Z.oh.MUTUAL_FRIENDS ? (0, s.jsx)(I.Z, {
 user: l,
 onClose: r
-  }) : i === Z.oh.MUTUAL_GUILDS ? (0, s.jsx)(_.Z, {
+  }) : n === Z.oh.MUTUAL_GUILDS ? (0, s.jsx)(_.Z, {
 user: l,
 onClose: r
-  }) : i === Z.oh.BOT_DATA_ACCESS ? (0, s.jsx)(E.Z, {
+  }) : n === Z.oh.BOT_DATA_ACCESS ? (0, s.jsx)(E.Z, {
 user: l
-  }) : i === Z.oh.BOT_INFO ? (0, s.jsx)(m.Z, {
+  }) : n === Z.oh.BOT_INFO ? (0, s.jsx)(m.Z, {
 user: l,
 currentUser: o,
 displayProfile: t,
-subsection: n,
+subsection: i,
 onClose: r
   }) : (0, s.jsx)(S.Z, {
 user: l,
 currentUser: o,
 displayProfile: t,
-subsection: n,
+subsection: i,
 onClose: r
   });
 }
 
 function h(e) {
-  var i, n, a;
+  var n, i, a;
   let {
 user: u,
 currentUser: I,
@@ -74,12 +74,12 @@ trackUserProfileAction: p
 section: g,
 subsection: N
   }, C] = l.useState({
-section: null !== (a = null === (i = E.find(e => {
+section: null !== (a = null === (n = E.find(e => {
   let {
-    section: i
+    section: n
   } = e;
-  return i === m;
-})) || void 0 === i ? void 0 : i.section) && void 0 !== a ? a : null === (n = E[0]) || void 0 === n ? void 0 : n.section,
+  return n === m;
+})) || void 0 === n ? void 0 : n.section) && void 0 !== a ? a : null === (i = E[0]) || void 0 === i ? void 0 : i.section,
 subsection: S
   }), j = l.useCallback(e => {
 p({
@@ -106,18 +106,18 @@ children: [
     onItemSelect: j,
     children: E.map(e => {
       let {
-        section: i,
-        text: n
+        section: n,
+        text: i
       } = e;
       return (0, s.jsx)(t.n.Item, {
         className: v.tabBarItem,
-        id: i,
-        'aria-label': n,
+        id: n,
+        'aria-label': i,
         children: (0, s.jsx)(r.Text, {
           variant: 'text-sm/normal',
-          children: n
+          children: i
         })
-      }, i);
+      }, n);
     })
   }),
   (0, s.jsx)(x, {

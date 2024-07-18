@@ -5794,7 +5794,7 @@ category: 'generic',
   opacity: 1
 },
 [n.DARKER]: {
-  raw: 'PLUM_17',
+  raw: 'PLUM_19',
   opacity: 1
 }
   },

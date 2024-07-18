@@ -40,8 +40,8 @@ var i, l = n(735250),
   j = n(854444),
   D = n(688265),
   U = n(896053),
-  w = n(301342),
-  G = n(906817),
+  G = n(301342),
+  w = n(906817),
   k = n(429122),
   B = n(285573),
   V = n(519358),
@@ -402,7 +402,7 @@ super(...e), eo(this, '_list', null), eo(this, 'unreadTopRef', r.createRef()), e
     guild: t,
     guildChannels: n
   } = this.props;
-  return (0, G.EM)(e, t, n);
+  return (0, w.EM)(e, t, n);
 }), eo(this, 'getSectionFooterHeight', e => {
   let {
     guildChannels: t,
@@ -495,14 +495,14 @@ super(...e), eo(this, '_list', null), eo(this, 'unreadTopRef', r.createRef()), e
     selectedChannelId: a,
     disableManageChannels: s
   } = this.props;
-  return (0, l.jsx)(G.ZP, {
+  return (0, l.jsx)(w.ZP, {
     sectionIndex: t,
     guild: r,
     guildChannels: n,
     guildChannelsVersion: i,
     selectedChannelId: a,
     disableManageChannels: s
-  }, (0, G.WW)(t, n));
+  }, (0, w.WW)(t, n));
 }), eo(this, 'renderRow', e => {
   let {
     section: t,
@@ -664,7 +664,7 @@ super(...e), eo(this, '_list', null), eo(this, 'unreadTopRef', r.createRef()), e
     case el.d4z.GUILD_CATEGORY:
       if (t !== u.voiceChannelsSectionNumber)
         return null;
-      return (0, l.jsx)(w.kw, {
+      return (0, l.jsx)(G.kw, {
         channel: S
       }, 'readonly-'.concat(S.id));
     case el.d4z.PUBLIC_THREAD:

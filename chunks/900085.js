@@ -86,7 +86,7 @@ return {
   category: m.Z.getChannel(t.parent_id)
 };
   })(D),
-  w = c.ZP.connectStores([N.ZP], e => {
+  G = c.ZP.connectStores([N.ZP], e => {
 let {
   channel: t
 } = e;
@@ -96,7 +96,7 @@ return {
   voiceStates: N.ZP.getVoiceStates(t.guild_id)[t.id]
 };
   })(D),
-  G = c.ZP.connectStores([g.default], e => {
+  w = c.ZP.connectStores([g.default], e => {
 let {
   guild: t
 } = e;
@@ -511,7 +511,7 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
         score: r ? n.score : void 0
       }, ''.concat(n.type, '-').concat(n.record.id));
     case _.h8.VOICE_CHANNEL:
-      return (0, l.jsx)(w, {
+      return (0, l.jsx)(G, {
         id: this.getRowId(t),
         focused: i >= 0 && t === i,
         onClick: () => this.selectResult(n),
@@ -522,7 +522,7 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
         score: r ? n.score : void 0
       }, ''.concat(n.type, '-').concat(n.record.id));
     case _.h8.GUILD:
-      return (0, l.jsx)(G, {
+      return (0, l.jsx)(w, {
         id: this.getRowId(t),
         focused: i >= 0 && t === i,
         onClick: () => this.selectResult(n),
