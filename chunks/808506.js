@@ -239,12 +239,12 @@ async function er(e) {
 if (B.size > 0) {
   J = 'reconcile.getOverlayURL';
   let t = await el();
-  J = 'reconcile.createHostProcess', e.createHostProcess(t, eI, ep);
+  J = 'reconcile.createHostProcess', e.createHostProcess(t, eT, ep);
 } else
   J = 'reconcile.destroyHostProcess', e.destroyHostProcess();
   } else if (H) {
 let t = await el();
-e.createHostProcess(t, eI, ep);
+e.createHostProcess(t, eT, ep);
   } else
 e.destroyHostProcess();
 }
@@ -333,7 +333,7 @@ let eo = et('updateIntendedOverlayPIDs', e => es(e));
 
 function el() {
   return new Promise(e => {
-eL.addConditionalChangeListener(() => {
+eb.addConditionalChangeListener(() => {
   if (null != r)
     return e(r), !1;
 });
@@ -388,11 +388,11 @@ let eE = (() => {
 if (!G.iP || !(0, w.VS)())
   throw $.error('Attempted to load out of process overlay on an unsupported platform.'), Error('Out of Process Overlay is not supported on this platform.');
 try {
-  var e, t;
+  var e, t, n;
   let {
-    OutOfProcess: n
+    OutOfProcess: r
   } = await eu();
-  return null == n || null === (e = n.init) || void 0 === e || e.call(n), n.setClickZoneCallback(eN), n.setHostWindowCallbacks(ec, ed, e_), n.setFocusCallback(ep), null === (t = n.setSuccessfullyShownCallback) || void 0 === t || t.call(n, em), n;
+  return null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setClickZoneCallback(ev), r.setHostWindowCallbacks(ec, ed, e_), r.setFocusCallback(ep), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, em), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, eI), r;
 } catch (e) {
   throw $.error('failed loading out of process overlay', e), e;
 }
@@ -412,7 +412,7 @@ return;
   H = e, Z = t, v.v.update({
 enabled: e,
 legacyEnabled: t
-  }), eL.emitChange();
+  }), eb.emitChange();
   let n = await eu(),
 {
   OutOfProcess: r
@@ -430,10 +430,14 @@ if ((null !== (n = null === (t = k[null != j ? j : 0]) || void 0 === t ? void 0 
 }
 
 function em(e) {
+  j = null;
+}
+
+function eI(e) {
   m.Z.successfullyShown(e);
 }
 
-function eI(e, t, n) {
+function eT(e, t, n) {
   var r;
   let i = null === (r = N.ZP.getGameForPID(e)) || void 0 === r ? void 0 : r.name,
 a = y.Z.getGameByName(i),
@@ -449,7 +453,7 @@ height: n.graphics_height
   }), b.default.track(x.rMx.OVERLAY_HOOK_RESULT, s), $.info('Overlay connection to '.concat(e, ' ').concat(t ? 'succeeded' : 'failed'), s), t ? en(e, 'CONNECTED', 'CONNECTING') : en(e, 'CONNECT_FAILED', 'CONNECTING');
 }
 
-function eT() {
+function eg() {
   let e = C.default.getToken(),
 t = C.default.getId();
   if (null != e)
@@ -464,7 +468,7 @@ S.lW({
   }]
 });
 }
-async function eg(e) {
+async function eS(e) {
   let t = await eu();
   null != j && j !== w.Js && t.sendCommand(j, {
 message: 'intercept_input',
@@ -472,20 +476,20 @@ intercept: !e
   }), (0, w.VS)() && (await eE()).setInteractionEnabled(!e);
 }
 
-function eS(e) {
+function eA(e) {
   if (e) {
 let t = N.ZP.getVisibleGame(),
   n = null == t ? null : N.ZP.getGameOverlayStatus(t);
-(null == n ? void 0 : n.overlayMethod) === G.gl.OutOfProcess ? eg(e) : setTimeout(() => eg(e), 200);
+(null == n ? void 0 : n.overlayMethod) === G.gl.OutOfProcess ? eS(e) : setTimeout(() => eS(e), 200);
   } else
-eg(e);
+eS(e);
 }
-let eA = null;
+let eN = null;
 
-function eN(e, t, n) {
+function ev(e, t, n) {
   m.Z.relayClickZoneClicked(e, t, n);
 }
-async function ev(e) {
+async function eO(e) {
   if (!!(0, w.VS)())
 (await eE()).setClickZones(e.map(e => ({
   name: e.name,
@@ -496,17 +500,17 @@ async function ev(e) {
 })));
 }
 
-function eO(e) {
+function eR(e) {
   return !(q || !F || Q.has(e.type)) && ('USER_SETTINGS_PROTO_UPDATE' === e.type && (e = {
 ...e,
 settings: {
   type: e.settings.type,
   proto: (0, R.cv)(e.settings.type, e.settings.proto)
 }
-  }), V.add(e), null == i && (i = setTimeout(eR, 1)), !1);
+  }), V.add(e), null == i && (i = setTimeout(eC, 1)), !1);
 }
 
-function eR() {
+function eC() {
   if (null != i && (clearTimeout(i), i = null), !F) {
 V.clear();
 return;
@@ -519,11 +523,11 @@ payloads: Array.from(V)
   }), V.clear());
 }
 
-function eC(e) {
+function ey(e) {
   return null != e && (0, M.y)(e, K);
 }
 
-function ey(e) {
+function eD(e) {
   switch (0, e.type) {
 case x.BmY.CONNECT:
   let t = C.default.getToken();
@@ -560,10 +564,10 @@ case x.BmY.LOG_MESSAGES:
   $.info('[overlay data received]', e.payload);
   }
 }
-class eD extends(s = _.ZP.Store) {
+class eL extends(s = _.ZP.Store) {
   initialize() {
 if (!(!G.iP || __OVERLAY__))
-  this.waitFor(N.ZP, C.default), S.sr(ey, eC), C.default.addChangeListener(eT), eh(v.v.enabled, v.v.legacyEnabled), E.Z.addInterceptor(eO);
+  this.waitFor(N.ZP, C.default), S.sr(eD, ey), C.default.addChangeListener(eg), eh(v.v.enabled, v.v.legacyEnabled), E.Z.addInterceptor(eR);
   }
   isInputLocked(e) {
 return !z.has(e);
@@ -587,13 +591,13 @@ return 'READY' === B.get(e);
 return 'CRASHED' === B.get(e);
   }
 }
-c = 'OverlayBridgeStore', (u = 'displayName') in(l = eD) ? Object.defineProperty(l, u, {
+c = 'OverlayBridgeStore', (u = 'displayName') in(l = eL) ? Object.defineProperty(l, u, {
   value: c,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : l[u] = c;
-let eL = new eD(E.Z, __OVERLAY__ ? {
+let eb = new eL(E.Z, __OVERLAY__ ? {
   OVERLAY_RELAY_CLICK_ZONE_CLICKED: function(e) {
 let {
   normalizedMouseX: t,
@@ -654,19 +658,19 @@ let {
 } = e, r = B.get(n);
 if (!t && !('READY' === r || 'CRASHED' === r))
   return;
-if (t ? z.delete(n) : z.add(n), X.clear(), null == eA || (clearTimeout(eA), eA = null, !t))
-  t ? eS(t) : eA = setTimeout(() => {
-    eS(t), eA = null;
+if (t ? z.delete(n) : z.add(n), X.clear(), null == eN || (clearTimeout(eN), eN = null, !t))
+  t ? eA(t) : eN = setTimeout(() => {
+    eA(t), eN = null;
   }, 100);
   },
   OVERLAY_ACTIVATE_REGION: function(e) {
 let {
   region: t
 } = e;
-X.add(t), eS(!1);
+X.add(t), eA(!1);
   },
   OVERLAY_DEACTIVATE_ALL_REGIONS: function() {
-X.clear(), eS(!0);
+X.clear(), eA(!0);
   },
   RPC_SERVER_READY: function(e) {
 let {
@@ -674,7 +678,7 @@ let {
 } = e;
 K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
 let n = new URLSearchParams();
-n.append('build_id', 'a619f514050f56ca7121b78e63f89a43f57f8e4c'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString());
+n.append('build_id', '997ae0adec7d0a4fd0fb2d271d165ca2d39cbabf'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString());
   },
   OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
 let {
@@ -724,7 +728,7 @@ eo({
 let {
   zones: t
 } = e;
-ev(t);
+eO(t);
   },
   OVERLAY_SET_ASSOCIATED_GAME: function(e) {
 var t, n;
@@ -739,4 +743,4 @@ eE().then(t => {
 });
   }
 });
-t.Z = eL;
+t.Z = eb;
