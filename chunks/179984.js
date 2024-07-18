@@ -30,14 +30,12 @@ var s = n(735250),
   L = n(768236),
   v = n(314907),
   Z = n(826701);
-let D = e => {
-let {
-  isLightTheme: t
-} = e, n = (0, N.W1)();
+let D = () => {
+let e = (0, N.W1)();
 return (0, s.jsx)(f.Cy, {
-  text: n,
+  text: e,
   className: O.bogoPillWithSparkles,
-  colorOptions: t ? f.VE.PREMIUM_TIER_2_WHITE_FILL : f.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+  colorOptions: f.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
 });
   },
   B = () => (0, s.jsx)('div', {
@@ -241,9 +239,7 @@ buttonsRow: null == Q
 text: null != Q ? b.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
 className: O.freeTrialPillWithSparkles,
 colorOptions: Q === x.Si.TIER_0 ? W ? f.VE.PREMIUM_TIER_0_GRADIENT_FILL : f.VE.PREMIUM_TIER_0_WHITE_FILL : W ? Y ? f.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : f.VE.PREMIUM_TIER_2_WHITE_FILL
-  }) : ea ? (0, s.jsx)(D, {
-isLightTheme: W
-  }) : (0, s.jsx)(B, {});
+  }) : ea ? (0, s.jsx)(D, {}) : (0, s.jsx)(B, {});
   let ei = Q === x.Si.TIER_0 || q === x.p9.TIER_0 || y === x.p9.TIER_0;
   return (0, s.jsx)(E.Gt, {
 value: H,

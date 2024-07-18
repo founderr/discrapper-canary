@@ -49,7 +49,7 @@ children: (0, s.jsxs)('div', {
           children: [
             (0, s.jsx)(l.Heading, {
               variant: 'display-sm',
-              color: 'header-primary',
+              color: 'always-white',
               children: null == N || null == (0, u.he)(N) ? p.Z.Messages.BOGO_MARKETING_PAGE_BANNER_HEADER_2024 : p.Z.Messages.BOGO_MARKETING_PAGE_BANNER_NON_NITRO_HEADER_2024
             }),
             (0, s.jsx)(l.Text, {
@@ -61,7 +61,7 @@ children: (0, s.jsxs)('div', {
             }),
             (0, s.jsx)(l.Text, {
               variant: 'text-sm/medium',
-              color: 'header-primary',
+              color: 'always-white',
               children: p.Z.Messages.BOGO_MARKETING_PAGE_BANNER_SUBHEADER_2024.format({
                 helpCenterLink: _.Z.getArticleURL(g.BhN.SUMMER_BOGO_2024)
               })
