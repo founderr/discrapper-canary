@@ -18,6 +18,8 @@ e.exports = {
   icon: 'icon_e881fc',
   followButton: 'followButton_e881fc',
   gameDetails: 'gameDetails_e881fc',
+  gameBadge: 'gameBadge_e881fc',
+  newBadge: 'newBadge_e881fc',
   mainContent: 'mainContent_e881fc',
   sidebar: 'sidebar_e881fc',
   emptyFriendsWhoPlay: 'emptyFriendsWhoPlay_e881fc',
