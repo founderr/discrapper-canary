@@ -1,9 +1,12 @@
 n.d(t, {
+  $l: function() {
+return i;
+  },
   C2: function() {
 return E;
   },
   DL: function() {
-return i;
+return c;
   },
   EI: function() {
 return r;
@@ -12,7 +15,7 @@ return r;
 return N;
   },
   X_: function() {
-return c;
+return u;
   },
   n4: function() {
 return a;
@@ -25,8 +28,9 @@ var s = n(689938);
 let o = 'SAFETY_WARNING_BANNER_WEB',
   r = 'https://www.crisistextline.org/',
   a = 'https://nofiltr.org/resources-hub/',
-  i = 'InappropriateConversationModal-web',
-  c = 'PRIVATE_DM_SAFETY_TOOLS_MODAL',
+  i = 'https://discord.findahelpline.com/',
+  c = 'InappropriateConversationModal-web',
+  u = 'PRIVATE_DM_SAFETY_TOOLS_MODAL',
   E = () => [
 s.Z.Messages.STRANGER_DANGER_TIPS_1,
 s.Z.Messages.STRANGER_DANGER_TIPS_2,
