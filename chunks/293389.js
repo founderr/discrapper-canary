@@ -48,7 +48,13 @@ children: [
     options: _,
     onChange: function(e) {
       l(e);
-    }
+    },
+    renderOptionLabel: e => (0, n.jsx)(c.Text, {
+      variant: 'text-md/medium',
+      color: 'text-normal',
+      lineClamp: 1,
+      children: e.label
+    })
   }),
   (0, n.jsx)(c.FormDivider, {
     className: r()(D.marginTop8, D.marginBottom8)
