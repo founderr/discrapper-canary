@@ -49,7 +49,16 @@ l
   ]);
   let _ = (0, u.e7)([d.Z], () => d.Z.getGame(n)),
 f = a.useMemo(() => null != _ && m(_), [_]);
-  return l && s && !1 === d.Z.isFetching(n) && (o()(null != i, 'Cannot track a Game Profile Entry Point Impressions without a source.'), h(f, n, p(_), i)), {
+  return a.useEffect(() => {
+l && s && !1 === d.Z.isFetching(n) && (o()(null != i, 'Cannot track a Game Profile Entry Point Impressions without a source.'), h(f, n, p(_), i));
+  }, [
+f,
+n,
+l,
+_,
+i,
+s
+  ]), {
 shouldOpenGameProfile: l && f,
 applicationId: n
   };
