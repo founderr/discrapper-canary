@@ -219,10 +219,7 @@ updateElement(e, t) {
 markdown(e, t, n) {
   var r;
   let i = 'line' === e.type && (null === (r = e.codeBlockState) || void 0 === r ? void 0 : r.wasInCodeBlock) === !0,
-    a = e.children.map(e => {
-      var t;
-      return E.isText(e) ? e.text : '((element:'.concat(null !== (t = e.type) && void 0 !== t ? t : 'unknown', '))');
-    }),
+    a = e.children.map(e => E.isText(e) ? e.text : '?'),
     s = a.join('');
   return {
     entries: o.Q(s, null != t ? t : null, i, n),
