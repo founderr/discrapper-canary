@@ -32,7 +32,7 @@ this.userId = e;
 this.audioSSRC = e, this.videoStreams = t, this.lastDowngradeChangeTime = void 0, this.update();
   }
   setGoLiveStreamDowngraded(e) {
-if (!!this.senderSupportsSimulcast() && e !== this.downgraded)
+if (!(!this.senderSupportsSimulcast() || this.isOneToOneCall()) && e !== this.downgraded)
   this.isDowngradeChangeAllowed(e) && (this.downgraded = e, this.lastDowngradeChangeTime = Date.now(), this.update());
   }
   isDowngraded() {
@@ -54,10 +54,10 @@ return this.everReceivedFrame;
 return this.videoStreams.length > 1;
   }
   onClientConnect(e) {
-e.forEach(e => this.otherUsers.add(e)), this.update();
+e.forEach(e => this.otherUsers.add(e));
   }
   onClientDisconnect(e) {
-this.otherUsers.delete(e), this.update();
+this.otherUsers.delete(e), 1 === this.otherUsers.size && this.downgraded && this.update();
   }
   update() {
 if (void 0 === this.userId || null === this.userId)
