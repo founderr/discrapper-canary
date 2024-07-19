@@ -17,10 +17,10 @@ maxHeightOverride: o,
 maxAnimationHeight: c
   } = e, u = (0, l.e7)([a.Z], () => a.Z.useReducedMotion), [d, m] = i.useState(null), p = i.useCallback(() => {}, []), _ = i.useRef(), E = i.useRef(), A = i.useRef(n), h = i.useRef(r);
   h.current = r;
-  let N = i.useRef(s);
-  N.current = s;
-  let f = i.useRef(o);
-  f.current = o;
+  let f = i.useRef(s);
+  f.current = s;
+  let N = i.useRef(o);
+  N.current = o;
   let C = i.useRef(c);
   C.current = c;
   let [v, I] = i.useState(!1), P = i.useCallback(() => I(!1), []);
@@ -34,8 +34,8 @@ let {
   height: a
 } = d.getBoundingClientRect();
 !t && (null == _.current || a < _.current) && (_.current = a), t && (null == E.current || a > E.current) && (E.current = a);
-let r = null !== (e = N.current) && void 0 !== e ? e : _.current,
-  s = null !== (i = f.current) && void 0 !== i ? i : E.current,
+let r = null !== (e = f.current) && void 0 !== e ? e : _.current,
+  s = null !== (i = N.current) && void 0 !== i ? i : E.current,
   o = A.current !== n;
 if (A.current = n, null == r || null == s || o)
   return;

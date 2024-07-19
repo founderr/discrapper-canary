@@ -6,7 +6,7 @@ return C;
 return v;
   },
   P7: function() {
-return f;
+return N;
   }
 });
 var i = t(470079),
@@ -24,9 +24,9 @@ var i = t(470079),
   E = t(827498),
   A = t(981631),
   h = t(689079),
-  N = t(689938);
+  f = t(689938);
 
-function f(e, n, t, i) {
+function N(e, n, t, i) {
   var l;
   let a = (0, s.O)(),
 d = (0, o.Qv)({
@@ -53,12 +53,12 @@ m = (0, o.w1)({
   }
 }),
 h = r.ButtonColors.BRAND,
-f = N.Z.Messages.LAUNCH;
-  return d === o.JS.JOIN ? (h = r.ButtonColors.GREEN, f = N.Z.Messages.JOIN_ACTIVITY) : d === o.JS.LEAVE && (h = r.ButtonColors.RED, f = N.Z.Messages.LEAVE), {
+N = f.Z.Messages.LAUNCH;
+  return d === o.JS.JOIN ? (h = r.ButtonColors.GREEN, N = f.Z.Messages.JOIN_ACTIVITY) : d === o.JS.LEAVE && (h = r.ButtonColors.RED, N = f.Z.Messages.LEAVE), {
 onActivityItemSelected: m,
 activityAction: d,
 buttonColor: h,
-buttonText: f
+buttonText: N
   };
 }
 
@@ -94,16 +94,16 @@ location: E
   } = e;
   if (s === h.bi.BUILT_IN || (null === (n = o.result) || void 0 === n ? void 0 : n.sections[s]) != null || (null === (t = c.result) || void 0 === t ? void 0 : t.sections[s]) != null)
 return Promise.resolve(!0);
-  let N = _.Z.lastShownEntrypoint();
+  let f = _.Z.lastShownEntrypoint();
   (0, u.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
 location: E,
 application_id: s,
 section_name: p,
-source: N
+source: f
   });
-  let f = d.Z.getApplication(s),
+  let N = d.Z.getApplication(s),
 C = a.Y.USER_INSTALL,
-v = null == f ? void 0 : null === (r = f.integrationTypesConfig) || void 0 === r ? void 0 : null === (l = r[C]) || void 0 === l ? void 0 : null === (i = l.oauth2InstallParams) || void 0 === i ? void 0 : i.scopes;
+v = null == N ? void 0 : null === (r = N.integrationTypesConfig) || void 0 === r ? void 0 : null === (l = r[C]) || void 0 === l ? void 0 : null === (i = l.oauth2InstallParams) || void 0 === i ? void 0 : i.scopes;
   return new Promise(e => {
 (0, m.openOAuth2Modal)({
   clientId: s,
@@ -117,7 +117,7 @@ v = null == f ? void 0 : null === (r = f.integrationTypesConfig) || void 0 === r
       location: E,
       application_id: s,
       section_name: p,
-      source: N
+      source: f
     }), e(!0));
   }
 }, () => {

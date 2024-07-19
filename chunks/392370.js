@@ -21,8 +21,8 @@ var i = t(470079),
   E = t(674588),
   A = t(809547),
   h = t(822245),
-  N = t(631827),
-  f = t(783097),
+  f = t(631827),
+  N = t(783097),
   C = t(689079),
   v = t(665692);
 
@@ -32,8 +32,8 @@ function I(e, n) {
 }
 
 function P(e, n) {
-  let t = (0, f.$d)(e),
-i = (0, f.$d)(n);
+  let t = (0, N.$d)(e),
+i = (0, N.$d)(n);
   return (0, m.un)(t, i);
 }
 
@@ -116,7 +116,7 @@ if (null != s.result)
     let n = e.descriptor.application;
     null != n && !u.has(n.id) && (Object.keys(e.commands).length > 0 || !t) && o.push(n);
   }
-return i && o.push(f.Wx), {
+return i && o.push(N.Wx), {
   apps: o,
   loading: (null == r ? void 0 : r.fetchState.fetching) === !0 || (null == s ? void 0 : s.fetchState.fetching) === !0
 };
@@ -131,7 +131,7 @@ channel: n
 var e;
 if (!s)
   return [];
-return (0, N.N)(A, {
+return (0, f.N)(A, {
   limit: l,
   filterPredicates: [function(e) {
     let n = (0, p.k)(e, c.yU.CHAT),
@@ -298,7 +298,7 @@ if (o && E) {
     } = e;
     return n;
   });
-return (0, N.N)(i, {
+return (0, f.N)(i, {
   limit: r,
   filterPredicates: [function(e) {
     let n = (0, p.k)(e, c.yU.CHAT);
@@ -325,22 +325,22 @@ return (0, N.N)(i, {
   }(n)],
   bucketPredicates: [
     function(e) {
-      return n => (0, f.$d)(n).toLocaleLowerCase().startsWith(e.toLocaleLowerCase());
+      return n => (0, N.$d)(n).toLocaleLowerCase().startsWith(e.toLocaleLowerCase());
     }(e = t),
     function(e) {
-      return n => (0, f.$d)(n).toLocaleLowerCase().includes(e.toLocaleLowerCase());
+      return n => (0, N.$d)(n).toLocaleLowerCase().includes(e.toLocaleLowerCase());
     }(e),
     function(e) {
       return n => {
         var t, i;
-        let l = null === (t = (0, f.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
+        let l = null === (t = (0, N.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
         return null !== (i = null == l ? void 0 : l.startsWith(e.toLocaleLowerCase())) && void 0 !== i && i;
       };
     }(e),
     function(e) {
       return n => {
         var t, i;
-        let l = null === (t = (0, f.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
+        let l = null === (t = (0, N.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
         return null !== (i = null == l ? void 0 : l.includes(e.toLocaleLowerCase())) && void 0 !== i && i;
       };
     }(e)
@@ -434,7 +434,7 @@ m,
 a,
 _,
 p
-  ]), N = i.useCallback(e => {
+  ]), f = i.useCallback(e => {
 let {
   query: n,
   page: t,
@@ -454,7 +454,7 @@ E.yC({
   }, []);
   return i.useEffect(() => {
 if (!!l)
-  N({
+  f({
     query: t,
     page: c,
     guildId: n.guild_id
@@ -462,7 +462,7 @@ if (!!l)
   }, [
 t,
 n.guild_id,
-N,
+f,
 c,
 l
   ]), i.useEffect(() => {

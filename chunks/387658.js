@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return B;
+return k;
   }
 }), t(47120);
 var i = t(735250),
@@ -18,8 +18,8 @@ var i = t(735250),
   E = t(10718),
   A = t(895924),
   h = t(583027),
-  N = t(585483),
-  f = t(499254),
+  f = t(585483),
+  N = t(499254),
   C = t(541099),
   v = t(827498),
   I = t(496158),
@@ -45,7 +45,7 @@ section: o,
 sectionName: c
   } = e, d = l.useCallback(() => {
 let e = C.Z.entrypoint();
-f.y(v.ti.COMMAND), (0, h.Mo)({
+N.y(v.ti.COMMAND), (0, h.Mo)({
   command: r,
   location: A.Vh.APP_LAUNCHER_APPLICATION_VIEW,
   sectionName: c
@@ -57,7 +57,7 @@ f.y(v.ti.COMMAND), (0, h.Mo)({
   sectionName: c,
   source: e,
   commandOrigin: A.bB.APPLICATION_LAUNCHER
-}), N.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, {
+}), f.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, {
   channelId: a.id
 });
   }, [
@@ -170,7 +170,7 @@ try {
     optionValues: {},
     context: c,
     sectionName: a
-  }), f.y(v.ti.COMMAND));
+  }), N.y(v.ti.COMMAND));
 } finally {
   m(!1);
 }
@@ -241,7 +241,7 @@ children: [
   });
 }
 
-function B(e) {
+function k(e) {
   var n;
   let {
 channel: t,
@@ -265,7 +265,7 @@ applicationId: a.id
 sortOrder: _,
 setSortOrder: A,
 commands: h,
-canSort: N
+canSort: f
   } = (0, x.Z)({
 sectionId: a.id,
 commandsByActiveSection: c
@@ -276,7 +276,7 @@ o(a.id);
 a.id,
 o
   ]);
-  let f = (0, P.Z)({
+  let N = (0, P.Z)({
 channel: t,
 commands: h,
 limit: 5
@@ -287,7 +287,7 @@ children: [
   (0, i.jsx)(D, {
     channel: t,
     section: p,
-    commands: f,
+    commands: N,
     headerName: M.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
     sectionName: r
   }),
@@ -297,7 +297,7 @@ children: [
     commands: m.current ? b : h,
     headerName: M.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
     sectionName: r,
-    children: N && (0, i.jsx)(L.Z, {
+    children: f && (0, i.jsx)(L.Z, {
       sortOrder: _,
       onSortOptionClick: A
     })

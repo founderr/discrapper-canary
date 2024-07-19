@@ -18,8 +18,8 @@ var i = t(735250),
   E = t(541099),
   A = t(827498),
   h = t(392370),
-  N = t(98880),
-  f = t(520315),
+  f = t(98880),
+  N = t(520315),
   C = t(532309),
   v = t(561160),
   I = t(41558),
@@ -51,7 +51,7 @@ loading: m,
 isEmptyState: p,
 commandResults: _,
 hasCommandResults: E,
-applicationResults: N
+applicationResults: f
   } = (0, h.pe)({
 channel: n,
 query: t,
@@ -59,7 +59,7 @@ searchesActivities: !0,
 searchesCommands: c,
 searchesBots: u
   }), {
-fetchState: f,
+fetchState: N,
 applicationResults: C,
 fetchNextPage: I
   } = (0, h.Q2)({
@@ -69,21 +69,21 @@ fetches: a !== A._b.VOICE,
 pageLimit: 5
   });
   l.useEffect(() => {
-o && f === d.M.FETCHED && I();
+o && N === d.M.FETCHED && I();
   }, [
 I,
-f,
+N,
 o
   ]);
-  let P = null == f || f === d.M.FETCHING,
+  let P = null == N || N === d.M.FETCHING,
 x = l.useMemo(() => {
-  let e = N.map(e => ({
+  let e = f.map(e => ({
     application: e,
     installOnDemand: !1
   }));
   if (a === A._b.VOICE)
     return e;
-  let n = new Set(N.map(e => {
+  let n = new Set(f.map(e => {
     let {
       id: n
     } = e;
@@ -99,7 +99,7 @@ x = l.useMemo(() => {
 }, [
   a,
   C,
-  N
+  f
 ]),
 T = x.length > 0,
 S = p && !T && !P;
@@ -176,13 +176,13 @@ query: r
   } = e, s = a.length > 4, d = l.useMemo(() => s ? a.slice(0, 4) : a, [
 a,
 s
-  ]), [h, N] = l.useState(!1), C = l.useCallback(() => N(e => !e), []), v = (null !== (n = (0, o.Z)(r)) && void 0 !== n ? n : r)[0] !== r[0], x = h && !v;
-  l.useLayoutEffect(() => N(!1), [v]);
+  ]), [h, f] = l.useState(!1), C = l.useCallback(() => f(e => !e), []), v = (null !== (n = (0, o.Z)(r)) && void 0 !== n ? n : r)[0] !== r[0], x = h && !v;
+  l.useLayoutEffect(() => f(!1), [v]);
   let {
 ref: g,
 isTransitioning: M,
 onTransitionEnd: y
-  } = (0, f.Z)({
+  } = (0, N.Z)({
 key: r,
 isExpanded: x,
 durationMs: 200,
@@ -249,7 +249,7 @@ searchResultsPosition: e.resultsPosition
   return (0, i.jsx)('div', {
 className: R.searchOpenAppDetailAppCard,
 ref: e => n.current = e,
-children: (0, i.jsx)(N.kA, {
+children: (0, i.jsx)(f.kA, {
   ...e,
   tracksImpression: !1,
   enableVideoBanner: !0
@@ -305,7 +305,7 @@ children: [
         } = e;
         return (0, i.jsx)(Z, {
           application: t,
-          look: N.U4.LARGE_BANNER,
+          look: f.U4.LARGE_BANNER,
           location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
           sectionName: A.L3.SEARCH,
           resultsPosition: n,
@@ -321,7 +321,7 @@ children: [
 }
 
 function U(e) {
-  let n = (0, N.cG)(e);
+  let n = (0, f.cG)(e);
   return (0, i.jsx)(P.Z, {
 application: e.application,
 onClick: n,

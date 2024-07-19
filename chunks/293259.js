@@ -1,31 +1,31 @@
-i.d(n, {
+s.d(n, {
   Z: function() {
 return A;
   }
 });
-var s = i(735250),
-  l = i(470079),
-  o = i(442837),
-  t = i(692547),
-  r = i(481060),
-  a = i(239091),
-  d = i(233440),
-  c = i(314897),
-  u = i(158776),
-  I = i(699516),
-  _ = i(998502),
-  f = i(785717),
-  E = i(621853),
-  m = i(204197),
-  S = i(735336),
-  Z = i(520978),
-  v = i(184325),
-  x = i(652853),
-  h = i(225714),
-  p = i(228168),
-  T = i(231338),
-  g = i(689938),
-  N = i(520067);
+var i = s(735250),
+  l = s(470079),
+  o = s(442837),
+  t = s(692547),
+  r = s(481060),
+  a = s(239091),
+  d = s(233440),
+  c = s(314897),
+  u = s(158776),
+  I = s(699516),
+  _ = s(998502),
+  f = s(785717),
+  E = s(621853),
+  m = s(204197),
+  S = s(735336),
+  Z = s(520978),
+  v = s(184325),
+  x = s(652853),
+  h = s(225714),
+  p = s(228168),
+  T = s(231338),
+  g = s(689938),
+  N = s(520067);
 let C = r.AvatarSizes.SIZE_120,
   j = _.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
@@ -55,22 +55,22 @@ size: C
 _,
 O
   ]);
-  return (0, s.jsxs)('header', {
+  return (0, i.jsxs)('header', {
 className: R,
 children: [
-  (0, s.jsx)(S.Z, {
+  (0, i.jsx)(S.Z, {
     displayProfile: n,
     onClose: P,
     user: _,
     profileType: p.y0.MODAL,
     hasProfileEffect: M
   }),
-  (0, s.jsxs)('div', {
+  (0, i.jsxs)('div', {
     className: N.header,
     children: [
-      (0, s.jsx)('div', {
+      (0, i.jsx)('div', {
         ...V,
-        children: (0, s.jsx)(j, {
+        children: (0, i.jsx)(j, {
           src: k,
           avatarDecoration: Y,
           size: C,
@@ -82,13 +82,13 @@ children: [
           'aria-label': _.username
         })
       }),
-      (0, s.jsxs)('div', {
+      (0, i.jsxs)('div', {
         className: N.headerTop,
         children: [
-          (null == B ? void 0 : B.profileFetchFailed) && !_.isClyde() ? (0, s.jsx)(r.Tooltip, {
+          (null == B ? void 0 : B.profileFetchFailed) && !_.isClyde() ? (0, i.jsx)(r.Tooltip, {
             text: g.Z.Messages.USER_PROFILE_LOAD_ERROR,
             spacing: 20,
-            children: e => (0, s.jsx)(r.CircleExclamationPointIcon, {
+            children: e => (0, i.jsx)(r.CircleExclamationPointIcon, {
               size: 'custom',
               width: 20,
               height: 20,
@@ -96,7 +96,7 @@ children: [
               className: N.warningCircleIcon,
               color: t.Z.unsafe_rawColors.YELLOW_300.css
             })
-          }) : (0, s.jsx)(v.Z, {
+          }) : (0, i.jsx)(v.Z, {
             user: _,
             className: N.badgeList,
             guildId: A,
@@ -105,21 +105,21 @@ children: [
             shrinkToSize: v.V.SIZE_18,
             onBadgeClick: P
           }),
-          (0, s.jsxs)('div', {
+          (0, i.jsxs)('div', {
             className: N.relationshipButtons,
             children: [
-              (null == B ? void 0 : B.application) != null && (0, s.jsx)(Z.Z, {
+              (null == B ? void 0 : B.application) != null && (0, i.jsx)(Z.Z, {
                 className: N.applicationInstallButton,
                 application: B.application
               }),
-              (0, s.jsx)(h.Z, {
+              (0, i.jsx)(h.Z, {
                 user: _,
                 isCurrentUser: F,
                 relationshipType: b,
                 friendToken: L,
                 onClose: P
               }),
-              F || _.isNonUserBot() ? null : (0, s.jsx)(r.Clickable, {
+              F || _.isNonUserBot() ? null : (0, i.jsx)(r.Clickable, {
                 focusProps: {
                   offset: {
                     left: 8
@@ -131,8 +131,8 @@ children: [
                   }), (0, a.jW)(e, async () => {
                     let {
                       default: e
-                    } = await i.e('29136').then(i.bind(i, 193646));
-                    return n => (0, s.jsx)(e, {
+                    } = await s.e('29136').then(s.bind(s, 193646));
+                    return n => (0, i.jsx)(e, {
                       ...n,
                       user: _,
                       isCurrentUser: F,
@@ -143,7 +143,7 @@ children: [
                     });
                   });
                 },
-                children: (0, s.jsx)(r.MoreVerticalIcon, {
+                children: (0, i.jsx)(r.MoreVerticalIcon, {
                   size: 'md',
                   color: 'currentColor',
                   className: N.additionalActionsIcon

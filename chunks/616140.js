@@ -1,65 +1,65 @@
-i.d(n, {
+s.d(n, {
   Z: function() {
 return h;
   }
-}), i(47120);
-var s = i(735250),
-  l = i(470079),
-  o = i(442837),
-  t = i(706898),
-  r = i(481060),
-  a = i(387903),
-  d = i(246946),
-  c = i(785717),
-  u = i(100849),
-  I = i(944546),
-  _ = i(470900),
-  f = i(988246),
-  E = i(970041),
-  m = i(715388),
-  S = i(834534),
-  Z = i(228168),
-  v = i(47460);
+}), s(47120);
+var i = s(735250),
+  l = s(470079),
+  o = s(442837),
+  t = s(706898),
+  r = s(481060),
+  a = s(387903),
+  d = s(246946),
+  c = s(785717),
+  u = s(100849),
+  I = s(944546),
+  _ = s(470900),
+  f = s(988246),
+  E = s(970041),
+  m = s(715388),
+  S = s(834534),
+  Z = s(228168),
+  v = s(47460);
 
 function x(e) {
   let {
 section: n,
-subsection: i,
+subsection: s,
 user: l,
 currentUser: o,
 displayProfile: t,
 onClose: r
   } = e;
-  return n === Z.oh.ACTIVITY ? (0, s.jsx)(u.Z, {
+  return n === Z.oh.ACTIVITY ? (0, i.jsx)(u.Z, {
 showActions: (null == o ? void 0 : o.id) !== l.id,
 user: l,
 type: a.Y.SIMPLIFIED_PROFILE,
 onClose: r
-  }) : n === Z.oh.MUTUAL_FRIENDS ? (0, s.jsx)(I.Z, {
+  }) : n === Z.oh.MUTUAL_FRIENDS ? (0, i.jsx)(I.Z, {
 user: l,
 onClose: r
-  }) : n === Z.oh.MUTUAL_GUILDS ? (0, s.jsx)(_.Z, {
+  }) : n === Z.oh.MUTUAL_GUILDS ? (0, i.jsx)(_.Z, {
 user: l,
 onClose: r
-  }) : n === Z.oh.BOT_DATA_ACCESS ? (0, s.jsx)(E.Z, {
+  }) : n === Z.oh.BOT_DATA_ACCESS ? (0, i.jsx)(E.Z, {
 user: l
-  }) : n === Z.oh.BOT_INFO ? (0, s.jsx)(m.Z, {
+  }) : n === Z.oh.BOT_INFO ? (0, i.jsx)(m.Z, {
 user: l,
 currentUser: o,
 displayProfile: t,
-subsection: i,
+subsection: s,
 onClose: r
-  }) : (0, s.jsx)(S.Z, {
+  }) : (0, i.jsx)(S.Z, {
 user: l,
 currentUser: o,
 displayProfile: t,
-subsection: i,
+subsection: s,
 onClose: r
   });
 }
 
 function h(e) {
-  var n, i, a;
+  var n, s, a;
   let {
 user: u,
 currentUser: I,
@@ -79,7 +79,7 @@ section: null !== (a = null === (n = E.find(e => {
     section: n
   } = e;
   return n === m;
-})) || void 0 === n ? void 0 : n.section) && void 0 !== a ? a : null === (i = E[0]) || void 0 === i ? void 0 : i.section,
+})) || void 0 === n ? void 0 : n.section) && void 0 !== a ? a : null === (s = E[0]) || void 0 === s ? void 0 : s.section,
 subsection: S
   }), j = l.useCallback(e => {
 p({
@@ -93,13 +93,13 @@ p({
 p,
 C
   ]);
-  return T ? (0, s.jsx)('div', {
+  return T ? (0, i.jsx)('div', {
 className: v.container,
-children: (0, s.jsx)(f.Z, {})
-  }) : (0, s.jsxs)('div', {
+children: (0, i.jsx)(f.Z, {})
+  }) : (0, i.jsxs)('div', {
 className: v.container,
 children: [
-  (0, s.jsx)(t.n, {
+  (0, i.jsx)(t.n, {
     className: v.tabBar,
     type: 'top',
     selectedItem: g,
@@ -107,20 +107,20 @@ children: [
     children: E.map(e => {
       let {
         section: n,
-        text: i
+        text: s
       } = e;
-      return (0, s.jsx)(t.n.Item, {
+      return (0, i.jsx)(t.n.Item, {
         className: v.tabBarItem,
         id: n,
-        'aria-label': i,
-        children: (0, s.jsx)(r.Text, {
+        'aria-label': s,
+        children: (0, i.jsx)(r.Text, {
           variant: 'text-sm/normal',
-          children: i
+          children: s
         })
       }, n);
     })
   }),
-  (0, s.jsx)(x, {
+  (0, i.jsx)(x, {
     items: E,
     section: g,
     subsection: N,

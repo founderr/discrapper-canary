@@ -25,8 +25,8 @@ sectionName: E,
 commandName: A
   } = e, {
 onActivityItemSelected: h,
-activityAction: N,
-buttonColor: f,
+activityAction: f,
+buttonColor: N,
 buttonText: C
   } = (0, d.P7)(n, t, c.Vh.APP_LAUNCHER_APPLICATION_VIEW, E), v = function(e) {
 let {
@@ -46,7 +46,7 @@ switch (t) {
 return c;
   }({
 channel: n,
-activityAction: N
+activityAction: f
   });
   return (0, i.jsx)(a.Tooltip, {
 shouldShow: v,
@@ -61,7 +61,7 @@ children: e => {
     ...l,
     type: 'submit',
     size: a.ButtonSizes.MEDIUM,
-    color: f,
+    color: N,
     disabled: v,
     onClick: () => {
       h(), null == n || n();

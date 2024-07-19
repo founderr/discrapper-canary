@@ -1,29 +1,29 @@
-i.d(n, {
+s.d(n, {
   Z: function() {
 return d;
   }
-}), i(789020), i(653041);
-var s = i(735250);
-i(470079);
-var l = i(481060),
-  o = i(860719),
-  t = i(689938),
-  r = i(744224);
+}), s(789020), s(653041);
+var i = s(735250);
+s(470079);
+var l = s(481060),
+  o = s(860719),
+  t = s(689938),
+  r = s(744224);
 
 function a(e) {
   let {
 content: n,
-heading: i
+heading: s
   } = e;
-  return (0, s.jsxs)('div', {
+  return (0, i.jsxs)('div', {
 className: r.row,
 children: [
-  null != i ? (0, s.jsx)(l.Heading, {
+  null != s ? (0, i.jsx)(l.Heading, {
     className: r.heading,
     variant: 'text-sm/normal',
-    children: i
+    children: s
   }) : null,
-  (0, s.jsx)(l.Text, {
+  (0, i.jsx)(l.Text, {
     variant: 'text-sm/normal',
     color: 'header-secondary',
     children: n
@@ -35,7 +35,7 @@ children: [
 function d(e) {
   let {
 flags: n,
-listScrollerStyle: i
+listScrollerStyle: s
   } = e, {
 hasMessageContent: d,
 hasGuildPresences: c,
@@ -46,24 +46,24 @@ flags: n
   if (null == n)
 return null;
   let I = [];
-  return d && I.push((0, s.jsx)(a, {
+  return d && I.push((0, i.jsx)(a, {
 heading: t.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
 content: t.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
-  })), c && I.push((0, s.jsx)(a, {
+  })), c && I.push((0, i.jsx)(a, {
 heading: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
 content: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
-  })), u && I.push((0, s.jsx)(a, {
+  })), u && I.push((0, i.jsx)(a, {
 heading: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
 content: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
-  })), I.length > 0 && I.push((0, s.jsx)('div', {
+  })), I.length > 0 && I.push((0, i.jsx)('div', {
 className: r.divider,
-children: (0, s.jsx)(l.FormDivider, {})
-  })), I.push((0, s.jsx)(a, {
+children: (0, i.jsx)(l.FormDivider, {})
+  })), I.push((0, i.jsx)(a, {
 content: t.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({
   helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975'
 })
-  })), (0, s.jsx)(l.ScrollerThin, {
-className: i,
+  })), (0, i.jsx)(l.ScrollerThin, {
+className: s,
 children: I
   });
 }

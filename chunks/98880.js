@@ -25,8 +25,8 @@ var i, l, a = t(735250),
   E = t(220082),
   A = t(810090),
   h = t(768581),
-  N = t(792125),
-  f = t(541099),
+  f = t(792125),
+  N = t(541099),
   C = t(783097),
   v = t(695676),
   I = t(176412),
@@ -54,7 +54,7 @@ tracksImpression: _ = !0
   } = e, {
 iconURL: A,
 name: h,
-description: f
+description: N
   } = r.useMemo(() => (0, C.sl)(n, {
 fakeAppIconURL: M
   }), [n]), v = (0, E.ZP)(A, ''), {
@@ -72,7 +72,7 @@ className: o()(g.container, g.iconCard),
 onClick: l,
 'aria-label': R.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
   applicationName: h,
-  applicationDescription: f
+  applicationDescription: N
 }),
 children: (0, a.jsx)(x.Z, {
   src: A,
@@ -86,7 +86,7 @@ className: g.container,
 onClick: l,
 'aria-label': R.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
   applicationName: h,
-  applicationDescription: f
+  applicationDescription: N
 }),
 children: [
   (0, a.jsxs)('div', {
@@ -110,7 +110,7 @@ children: [
       i && (0, a.jsx)('div', {
         className: g.partnerLabelWrapper,
         children: (0, a.jsx)(c.Text, {
-          className: (0, N.Q)(L.BR.DARK),
+          className: (0, f.Q)(L.BR.DARK),
           variant: 'text-sm/medium',
           color: 'text-normal',
           children: R.Z.Messages.APP_DIRECTORY_PARTNER
@@ -144,7 +144,7 @@ children: [
             variant: 'text-sm/normal',
             color: 'text-secondary',
             lineClamp: 1,
-            children: f
+            children: N
           })
         ]
       })
@@ -268,7 +268,7 @@ e.stopPropagation(), (0, _.yw)(T.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
   application_id: n.id,
   section_name: t,
   search_results_position: i,
-  source: f.Z.entrypoint(),
+  source: N.Z.entrypoint(),
   location: s,
   query: l
 }), o({

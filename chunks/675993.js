@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return N;
+return f;
   }
 }), t(47120);
 var i = t(735250),
@@ -19,7 +19,7 @@ var i = t(735250),
   A = t(970311),
   h = t(153521);
 
-function N(e) {
+function f(e) {
   let {
 channel: n,
 application: t,
@@ -33,7 +33,7 @@ return null !== (e = (0, m.jD)(t)) && void 0 !== e ? e : '';
   return (0, i.jsxs)('div', {
 className: A.container,
 children: [
-  (0, i.jsx)(f, {
+  (0, i.jsx)(N, {
     channel: n,
     application: t,
     sectionName: o
@@ -70,7 +70,7 @@ children: [
   });
 }
 
-function f(e) {
+function N(e) {
   let {
 channel: n,
 application: t,
@@ -121,7 +121,7 @@ description: n
 {
   ref: m,
   lineHeight: _,
-  lineCount: N
+  lineCount: f
 } = function() {
   let e = l.useRef(null),
     [n, t] = l.useState(null),
@@ -139,19 +139,19 @@ description: n
     lineCount: i
   };
 }(),
-f = l.useMemo(() => {
-  if (null == _ || null == N)
+N = l.useMemo(() => {
+  if (null == _ || null == f)
     return {
       key: 0
     };
-  let e = _ * N;
+  let e = _ * f;
   return {
     key: 1,
     minHeightOverride: Math.min(e, 3 * _),
     maxHeightOverride: e
   };
 }, [
-  N,
+  f,
   _
 ]),
 {
@@ -160,7 +160,7 @@ f = l.useMemo(() => {
   onTransitionEnd: I
 } = (0, p.Z)({
   isExpanded: t,
-  ...f
+  ...N
 }),
 P = t || v;
   return (0, i.jsxs)(i.Fragment, {
@@ -175,12 +175,12 @@ children: [
       variant: 'text-sm/medium',
       lineClamp: P ? void 0 : 3,
       style: {
-        maxHeight: P ? void 0 : f.minHeightOverride
+        maxHeight: P ? void 0 : N.minHeightOverride
       },
       children: d
     })
   }),
-  null != N && N > 3 ? (0, i.jsxs)(o.Clickable, {
+  null != f && f > 3 ? (0, i.jsxs)(o.Clickable, {
     className: A.expandableDescriptionClickable,
     onClick: () => u(e => !e),
     children: [

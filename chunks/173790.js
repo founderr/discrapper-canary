@@ -18,8 +18,8 @@ var i = t(735250),
   E = t(675993),
   A = t(689079),
   h = t(689938),
-  N = t(132439),
-  f = t(413097);
+  f = t(132439),
+  N = t(413097);
 
 function C(e) {
   var n;
@@ -34,7 +34,7 @@ application: I
 iconURL: T,
 name: S
   } = l.useMemo(() => (0, d.sl)(I, {
-fakeAppIconURL: f,
+fakeAppIconURL: N,
 size: 84
   }), [I]);
   return l.useEffect(() => {
@@ -44,7 +44,7 @@ I.id,
 t.id,
 C
   ]), (0, i.jsxs)(r.ScrollerNone, {
-className: N.container,
+className: f.container,
 fade: !0,
 ref: x,
 role: 'region',
@@ -59,7 +59,7 @@ children: [
   }),
   null != T && (0, i.jsx)(m.Z, {
     src: T,
-    className: N.appIcon
+    className: f.appIcon
   }),
   (0, i.jsx)(a.Z, {
     size: 54
