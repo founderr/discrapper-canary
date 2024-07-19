@@ -49,7 +49,7 @@ children: [
           className: a()(m.banner, {
             [m.hasTrialOffer]: A
           }),
-          src: 'https://cdn.discordapp.com/attachments/955557117622886410/1085270553759322153/super-reactions-launch.mp4',
+          src: 'https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4',
           loop: !0,
           autoPlay: !I,
           muted: !0,
