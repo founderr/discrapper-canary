@@ -689,8 +689,8 @@ super(...e), el(this, 'state', {
     entry_point_type: this._getAnalyticsEntryPoint().entryPointType,
     entry_point_source: this._getAnalyticsEntryPoint().entryPointSource,
     recipient_ids: e,
-    affinity_rank: this._getUserAffinities(e).affinities,
-    num_searches: t
+    num_searches: t,
+    affinity_score: this._getUserAffinities(e).affinities
   }), E.Z.openPrivateChannel(e, !1, !1, 'New Group DM');
 }), el(this, 'pushToExistingDM', (e, t) => {
   let n = this._searchCounter,
@@ -710,8 +710,8 @@ super(...e), el(this, 'state', {
     entry_point_type: this._getAnalyticsEntryPoint().entryPointType,
     entry_point_source: this._getAnalyticsEntryPoint().entryPointSource,
     recipient_ids: t,
-    affinity_rank: this._getUserAffinities(t).affinities,
-    num_searches: n
+    num_searches: n,
+    affinity_score: this._getUserAffinities(t).affinities
   });
 }), el(this, 'handleInviteUsers', () => {
   let {

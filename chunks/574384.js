@@ -59,14 +59,13 @@ children: [
     color: 'text-danger',
     children: E
   }) : null,
-  (0, r.jsx)(o.Select, {
-    className: c.select,
+  (0, r.jsx)(o.SearchableSelect, {
+    wrapperClassName: c.select,
     maxVisibleItems: 5,
-    select: _,
+    onChange: _,
     placeholder: u.Z.Messages.SCOPE_WEBHOOK_INCOMING_CHANNEL_PLACEHOLDER,
     options: m,
-    isSelected: e => e === d,
-    serialize: e => e,
+    value: d,
     renderOptionLabel: e => (0, r.jsx)(s.x, {
       variant: 'text-md/normal',
       children: e.label

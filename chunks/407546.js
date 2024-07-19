@@ -37,15 +37,14 @@ children: [
     color: 'text-danger',
     children: t
   }) : null,
-  (0, r.jsx)(o.Select, {
-    className: c.select,
+  (0, r.jsx)(o.SearchableSelect, {
+    wrapperClassName: c.select,
     maxVisibleItems: 5,
     placeholder: u.Z.Messages.OAUTH2_ADD_TO_GUILD_PLACEHOLDER,
     options: f,
-    select: d,
+    onChange: d,
     isDisabled: E,
-    isSelected: e => e === n,
-    serialize: e => e
+    value: n
   }),
   (0, r.jsx)(s.x, {
     variant: 'text-xs/medium',
