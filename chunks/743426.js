@@ -480,7 +480,7 @@ return new Promise((n, r) => {
 });
   }
   setSidechainCompression(e) {
-(0, _.zS)().setSidechainCompression(e);
+null != (0, _.zS)().setSidechainCompression && (0, _.zS)().setSidechainCompression(e);
   }
   watchdogTick() {
 let e = !1;
