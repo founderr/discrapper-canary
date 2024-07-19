@@ -53,10 +53,10 @@ location: u.jn.QUEST_BAR
   questContentCTA: l.jZ.ACCEPT_QUEST
 });
   }, [T]), x = null;
-  return (Z && A && (x = (0, i.jsx)(m, {
+  return (Z && A ? x = (0, i.jsx)(m, {
 submitting: f,
 onClick: O
-  })), v ? v && A ? x = (0, i.jsx)(m, {
+  }) : v ? v && A ? x = (0, i.jsx)(m, {
 submitting: f,
 onClick: O
   }) : v && N && !L ? x = (0, i.jsx)(r.Button, {
