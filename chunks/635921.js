@@ -128,7 +128,7 @@ children: (0, s.jsxs)('div', {
         (0, s.jsx)(l.Heading, {
           variant: t ? 'display-lg' : 'display-md',
           color: 'always-white',
-          children: f.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V2
+          children: f.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V3
         }),
         j ? (0, s.jsx)(p.Z, {
           referrer: D
