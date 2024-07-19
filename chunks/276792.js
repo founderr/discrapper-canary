@@ -50,14 +50,11 @@ children: h.Z.Messages.BOGO_TERMS_APPLY
 type: 'video',
 src: f ? g.heroArtVideoLinkLightTheme : g.videoLink
   };
-  null != g.heroArtVideoSubtitles && (O.subtitles = g.heroArtVideoSubtitles.map(e => {
-var t;
-return {
-  locale: e.locale,
-  src: e.link,
-  isDefault: null !== (t = e.isDefault) && void 0 !== t && t
-};
-  })), ('' !== g.heroArtImageLinkDarkTheme || '' !== g.heroArtImageLinkLightTheme) && (O = {
+  null != g.heroArtVideoSubtitles && (O.subtitles = g.heroArtVideoSubtitles.map(e => ({
+locale: e.locale,
+src: e.link,
+isDefault: !1
+  }))), ('' !== g.heroArtImageLinkDarkTheme || '' !== g.heroArtImageLinkLightTheme) && (O = {
 type: 'image',
 src: f ? g.heroArtImageLinkLightTheme : g.heroArtImageLinkDarkTheme
   });
