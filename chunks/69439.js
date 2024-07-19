@@ -52,14 +52,11 @@ location: u.jn.QUEST_BAR
   questContent: u.jn.QUEST_HOME_DESKTOP,
   questContentCTA: l.jZ.ACCEPT_QUEST
 });
-  }, [T]);
-  if (Z && A)
-return (0, i.jsx)(m, {
-  submitting: f,
-  onClick: O
-});
-  let x = null;
-  return (v ? v && A ? x = (0, i.jsx)(m, {
+  }, [T]), x = null;
+  return (Z && A && (x = (0, i.jsx)(m, {
+submitting: f,
+onClick: O
+  })), v ? v && A ? x = (0, i.jsx)(m, {
 submitting: f,
 onClick: O
   }) : v && N && !L ? x = (0, i.jsx)(r.Button, {

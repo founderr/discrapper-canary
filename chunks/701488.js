@@ -164,8 +164,6 @@ LARGE: 160
 'employee_release'
   ],
   J = [
-B,
-W,
 G,
 '1050941609774166066',
 j,
@@ -208,6 +206,7 @@ label_until: null
   ei = {
 application_id: '',
 requires_age_gate: !1,
+legacy_responsive_aspect_ratio: !1,
 default_orientation_lock_state: 1,
 tablet_default_orientation_lock_state: 1,
 supported_platforms: [N.C3.WEB],
