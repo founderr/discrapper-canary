@@ -20,20 +20,20 @@ var r = n(735250),
   m = n(802856),
   I = n(420660),
   T = n(39628),
-  g = n(925329),
-  S = n(810568),
-  A = n(168524),
-  N = n(565138),
-  v = n(833858),
-  O = n(223135),
-  R = n(707409),
-  C = n(769654),
-  y = n(750154),
+  g = n(314091),
+  S = n(925329),
+  A = n(810568),
+  N = n(168524),
+  v = n(565138),
+  O = n(833858),
+  R = n(223135),
+  C = n(707409),
+  y = n(769654),
   D = n(936195),
   L = n(652853),
   b = n(979038),
   M = n(60241),
-  P = n(623847),
+  P = n(373826),
   U = n(228168),
   w = n(981631),
   x = n(701488),
@@ -53,176 +53,168 @@ return (0, r.jsx)('div', {
 function V(e) {
   let {
 activity: t
-  } = e, n = (0, d.ZP)(), i = function(e) {
-let {
-  activity: t
-} = e, n = null;
-return (0, p.Z)(t) && (n = w.ABu.SPOTIFY), null != t.platform && [
-  w.M7m.PS4,
-  w.M7m.PS5
-].includes(t.platform) && (n = w.ABu.PLAYSTATION), n;
-  }({
-activity: t
-  });
-  if (null == i)
-return null;
-  let a = _.Z.get(i);
-  return (0, r.jsx)('img', {
+  } = e, n = (0, d.ZP)(), i = (0, g.ZH)(t);
+  return null == i ? null : (0, r.jsx)('img', {
 alt: '',
-src: (0, l.ap)(n) ? a.icon.lightSVG : a.icon.darkSVG,
+src: (0, l.ap)(n) ? i.icon.lightSVG : i.icon.darkSVG,
 className: k.platformIcon
   });
 }
 
 function H(e) {
-  var t, i;
+  var t;
   let {
-user: a,
+user: i,
+currentUser: a,
 activity: l,
 application: c,
 activityGuild: d,
-channel: H,
-showChannelDetails: Z,
-currentUser: Y,
-onAction: j,
-className: W,
-onOpenSpotifyTrack: K,
-onOpenSpotifyArtist: z,
-onOpenSpotifyAlbum: q,
-onGameProfileOpened: Q
+channel: g,
+onAction: H,
+className: Z,
+onOpenSpotifyTrack: Y,
+onOpenSpotifyArtist: j,
+onOpenSpotifyAlbum: W,
+onGameProfileOpened: K
   } = e, {
-profileType: X
-  } = (0, L.z)(), $ = {
-[k.biteSize]: X === U.y0.BITE_SIZE,
-[k.fullSize]: X === U.y0.FULL_SIZE,
-[k.panel]: X === U.y0.PANEL
-  }, J = null != d && (null == l ? void 0 : l.type) !== w.IIU.PLAYING && (null == l ? void 0 : l.type) !== w.IIU.WATCHING && (null == l ? void 0 : l.type) !== w.IIU.LISTENING && (null == l ? void 0 : l.type) !== w.IIU.HANG_STATUS, ee = J ? {
+profileType: z
+  } = (0, L.z)(), q = {
+[k.biteSize]: z === U.y0.BITE_SIZE,
+[k.fullSize]: z === U.y0.FULL_SIZE,
+[k.panel]: z === U.y0.PANEL
+  }, Q = null != d && (null == l ? void 0 : l.type) !== w.IIU.PLAYING && (null == l ? void 0 : l.type) !== w.IIU.WATCHING && (null == l ? void 0 : l.type) !== w.IIU.LISTENING && (null == l ? void 0 : l.type) !== w.IIU.HANG_STATUS, X = Q ? {
 type: w.IIU.PLAYING,
 name: G.Z.Messages.SHARING_SCREEN
-  } : l, et = (0, A.Z)({
+  } : l, $ = (0, N.Z)({
 location: 'UserProfileActivityCard',
-applicationId: null !== (t = null == c ? void 0 : c.id) && void 0 !== t ? t : null == ee ? void 0 : ee.application_id,
-source: S.m1.UserProfile,
-sourceUserId: a.id,
+applicationId: null !== (t = null == c ? void 0 : c.id) && void 0 !== t ? t : null == X ? void 0 : X.application_id,
+source: A.m1.UserProfile,
+sourceUserId: i.id,
 trackEntryPointImpression: !0
   });
-  if (null == ee || ee.type === w.IIU.CUSTOM_STATUS || X !== U.y0.BITE_SIZE && X !== U.y0.FULL_SIZE && X !== U.y0.PANEL)
+  if (null == X || X.type === w.IIU.CUSTOM_STATUS || z !== U.y0.BITE_SIZE && z !== U.y0.FULL_SIZE && z !== U.y0.PANEL)
 return null;
-  let en = (e => {
-  let t;
-  let {
-    details: n,
-    state: i
-  } = e, o = n, l = n;
-  if (e.type === w.IIU.CUSTOM_STATUS)
-    o = i;
-  else if (e.type === w.IIU.HANG_STATUS)
-    o = null != d ? G.Z.Messages.HANG_STATUS_LOCATION.format({
-      guildName: d.name
-    }) : null, t = null != d ? () => {
-      (0, C.X)(d.id);
-    } : void 0;
-  else if (!(0, h.Z)(e)) {
-    if (l = o = i, (0, p.Z)(e) && null != i)
-      o = G.Z.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
-        artists: l,
-        artistsHook: (t, n) => (0, r.jsx)(D.Z, {
-          artists: i,
-          linkClassName: k.textLink,
-          canOpen: null != e.sync_id,
-          onOpenSpotifyArtist: t => z(e, a.id, t)
-        }, n)
-      });
-    else if ((0, y.dS)(e)) {
-      var c;
-      o = null === (c = e.assets) || void 0 === c ? void 0 : c.small_text;
+  let J = () => X.type === w.IIU.HANG_STATUS ? (0, r.jsx)(P.Z, {
+  variant: 'heading-sm/semibold',
+  text: (0, O.O8)(X)
+}) : (0, p.Z)(X) && null != X.sync_id && null != X.details ? (0, r.jsx)(P.Z, {
+  variant: 'heading-sm/semibold',
+  text: X.details,
+  onClick: () => Y(X)
+}) : (0, h.Z)(X) ? (0, r.jsx)(P.Z, {
+  variant: 'heading-sm/semibold',
+  text: X.name
+}) : (0, r.jsx)(P.Z, {
+  variant: 'heading-sm/semibold',
+  text: X.details
+}),
+ee = () => X.type === w.IIU.HANG_STATUS && null != d ? (0, r.jsx)(P.Z, {
+  variant: 'text-xs/normal',
+  text: G.Z.Messages.HANG_STATUS_LOCATION.format({
+    guildName: d.name
+  }),
+  onClick: () => (0, y.X)(d.id)
+}) : (0, p.Z)(X) ? (0, r.jsx)(P.Z, {
+  variant: 'text-xs/normal',
+  title: X.state,
+  text: G.Z.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
+    artists: X.state,
+    artistsHook: (e, t) => {
+      var n;
+      return (0, r.jsx)(D.Z, {
+        artists: null !== (n = X.state) && void 0 !== n ? n : '',
+        linkClassName: k.link,
+        canOpen: null != X.sync_id,
+        onOpenSpotifyArtist: e => j(X, i.id, e)
+      }, t);
     }
+  })
+}) : (0, I.Z)(X) ? (0, r.jsx)(P.Z, {
+  variant: 'text-xs/normal',
+  text: G.Z.Messages.STREAMER_PLAYING.format({
+    game: X.state
+  })
+}) : (0, h.Z)(X) ? (0, r.jsx)(P.Z, {
+  variant: 'text-xs/normal',
+  text: X.details
+}) : (0, r.jsx)(P.Z, {
+  text: X.state,
+  variant: 'text-xs/normal'
+}),
+et = () => {
+  var e, t;
+  if ((0, p.Z)(X) && (null === (e = X.assets) || void 0 === e ? void 0 : e.large_text) != null) {
+    let e = X.assets.large_text,
+      t = null == X.sync_id ? () => e : (t, n) => (0, r.jsx)(u.Clickable, {
+        className: k.link,
+        onClick: () => W(X, i.id),
+        children: e
+      }, n);
+    return (0, r.jsx)(P.Z, {
+      title: e,
+      variant: 'text-xs/normal',
+      text: G.Z.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
+        album: e,
+        albumHook: t
+      })
+    });
   }
-  return null == o || 0 === o.length ? null : ((0, I.Z)(e) && (o = G.Z.Messages.STREAMER_PLAYING.format({
-    game: o
-  })), null != t) ? (0, r.jsx)(u.Clickable, {
-    onClick: t,
-    title: null != l ? l : void 0,
-    className: s()(k.textSmSemibold, k.textEllipsis, k.textLink),
-    children: o
-  }) : (0, r.jsx)('div', {
-    title: null != l ? l : void 0,
-    className: s()(k.textXsNormal, {
-      [k.textEllipsis]: !(0, I.Z)(e) && !(0, p.Z)(e)
-    }),
-    children: o
-  });
-})(ee),
-er = ((e, t) => {
-  var n, i;
-  let o;
-  let {
-    state: l,
-    party: c,
-    assets: d
-  } = e, _ = l, E = _;
-  return (!(0, h.Z)(e) && (E = _ = null == d ? void 0 : d.large_text, (0, p.Z)(e) && null != _ && (_ = G.Z.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
-    album: E,
-    albumHook: (t, n) => null != e.sync_id && null != E ? (0, r.jsx)(u.Anchor, {
-      className: k.textLink,
-      onClick: () => q(e, a.id),
-      children: E
-    }, n) : E
-  }))), null != _ && 0 !== _.length && e.type !== w.IIU.CUSTOM_STATUS || (0, y.dS)(e)) ? ((null == c ? void 0 : c.size) == null && [x.Zc].includes(null !== (n = e.application_id) && void 0 !== n ? n : '') ? o = G.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
-    count: '0',
-    max: null !== (i = null == t ? void 0 : t.getMaxParticipants()) && void 0 !== i ? i : 0
-  }) : (0, y.dS)(e) && (null == c ? void 0 : c.size) != null ? o = G.Z.Messages.USER_ACTIVITY_STAGE_STATE_SIZE.format({
-    numSpeakers: c.size[0],
-    numListeners: c.size[1] - c.size[0]
-  }) : (null == c ? void 0 : c.size) != null && c.size.length >= 2 && (o = G.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
-    count: c.size[0],
-    max: c.size[1]
-  })), (0, r.jsxs)('div', {
-    className: s()(k.textXsNormal, k.textEllipsis),
+  return (0, h.Z)(X) ? (0, r.jsxs)('div', {
+    className: k.gameState,
     children: [
-      (0, r.jsx)('span', {
-        title: E,
-        children: _
+      (0, r.jsx)(P.Z, {
+        variant: 'text-xs/normal',
+        text: X.state
       }),
-      null != o ? (0, r.jsxs)('span', {
-        children: [
-          ' ',
-          o
-        ]
-      }) : null
+      en()
     ]
-  })) : null;
-})(ee, c),
-ei = (e => {
-  if (!(0, h.Z)(e) || (0, p.Z)(e))
+  }) : (0, r.jsx)(P.Z, {
+    text: null === (t = X.assets) || void 0 === t ? void 0 : t.large_text,
+    variant: 'text-xs/normal'
+  });
+},
+en = () => {
+  var e, t, n, i;
+  return (0, h.Z)(X) ? (null === (e = X.party) || void 0 === e ? void 0 : e.size) == null && X.application_id === x.Zc ? (0, r.jsx)(P.Z, {
+    variant: 'text-xs/normal',
+    text: G.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
+      count: '0',
+      max: null !== (i = null == c ? void 0 : c.getMaxParticipants()) && void 0 !== i ? i : 0
+    })
+  }) : (null === (t = X.party) || void 0 === t ? void 0 : t.size) != null && (null === (n = X.party) || void 0 === n ? void 0 : n.size.length) >= 2 ? (0, r.jsx)(P.Z, {
+    variant: 'text-xs/normal',
+    text: G.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
+      count: X.party.size[0],
+      max: X.party.size[1]
+    })
+  }) : null : null;
+},
+er = () => {
+  if (!(0, h.Z)(X) || (0, p.Z)(X))
     return null;
   let {
-    timestamps: t
-  } = e;
-  return null == t ? null : (0, E.Z)(e) ? (0, r.jsx)(F, {
-    timestamps: t
-  }) : (0, r.jsx)(R.ZP, {
-    start: t.start,
-    location: R.ZP.Locations.USER_ACTIVITY,
+    timestamps: e
+  } = X;
+  return null == e ? null : (0, E.Z)(X) ? (0, r.jsx)(F, {
+    timestamps: e
+  }) : (0, r.jsx)(C.ZP, {
+    start: e.start,
+    location: C.ZP.Locations.USER_ACTIVITY,
     className: s()(k.textXsNormal, k.textEllipsis),
     isApplicationStreaming: null != d
   });
-})(ee);
-  let ea = (i = ee, Z && null != d ? null == H ? (0, r.jsx)('div', {
-  className: s()(k.textXsNormal, {
-    [k.textEllipsis]: !(0, I.Z)(i) && !(0, p.Z)(i)
-  }),
-  children: G.Z.Messages.USER_PROFILE_IN_GUILD_DETAILS.format({
+},
+ei = () => null == d ? null : null == g ? (0, r.jsx)(P.Z, {
+  variant: 'text-xs/normal',
+  text: G.Z.Messages.USER_PROFILE_IN_GUILD_DETAILS.format({
     guildName: d.name
   })
 }) : (0, r.jsxs)('div', {
-  className: s()(k.guildDetails, k.textXsNormal, {
-    [k.textEllipsis]: !(0, I.Z)(i) && !(0, p.Z)(i)
-  }),
+  className: k.guildDetails,
   children: [
-    (0, r.jsx)(N.Z, {
+    (0, r.jsx)(v.Z, {
       guild: d,
-      size: N.Z.Sizes.SMOL,
+      size: v.Z.Sizes.SMOL,
       className: k.guildIcon
     }),
     (0, r.jsx)(u.ChevronSmallRightIcon, {
@@ -236,178 +228,171 @@ ei = (e => {
           size: 'xxs',
           color: 'currentColor'
         }),
-        (0, r.jsx)(u.Text, {
+        (0, r.jsx)(P.Z, {
           variant: 'text-xs/normal',
-          children: null == H ? void 0 : H.name
+          text: g.name
         })
       ]
     })
   ]
-}) : null),
-es = (e => {
-  if (!(0, p.Z)(e))
+}),
+ea = () => {
+  if (!(0, p.Z)(X))
     return null;
   let {
-    timestamps: t
+    timestamps: e
+  } = X;
+  if (null == e)
+    return null;
+  let {
+    start: t,
+    end: n
   } = e;
-  if (null == t)
-    return null;
-  let {
-    start: n,
-    end: i
-  } = t;
-  return null == n || null == i ? null : (0, r.jsx)(T.Z, {
-    start: n,
-    end: i,
-    className: s()(k.timeBar, $),
+  return null == t || null == n ? null : (0, r.jsx)(T.Z, {
+    start: t,
+    end: n,
+    className: s()(k.timeBar, q),
     themed: !0
   });
-})(ee),
-eo = a.id !== Y.id ? (0, r.jsx)(b.Z, {
-  activity: ee,
-  user: a,
-  currentUser: Y,
-  onAction: j
-}) : null;
+};
   return (0, r.jsxs)('div', {
-className: s()(k.card, W),
+className: s()(k.card, Z),
 children: [
-  (0, r.jsxs)(u.HeadingLevel, {
+  (() => {
+    let e = Q ? G.Z.Messages.USER_ACTIVITY_STREAMING : (0, o.EQ)(X.type).with(w.IIU.PLAYING, () => G.Z.Messages.USER_ACTIVITY_PLAYING).with(w.IIU.STREAMING, () => G.Z.Messages.USER_ACTIVITY_STREAMING).with(w.IIU.LISTENING, () => G.Z.Messages.USER_ACTIVITY_LISTENING_TO).with(w.IIU.WATCHING, () => G.Z.Messages.USER_ACTIVITY_WATCHING).with(w.IIU.HANG_STATUS, () => G.Z.Messages.USER_ACTIVITY_CURRENTLY).with(w.IIU.COMPETING, () => G.Z.Messages.USER_ACTIVITY_PLAYING).otherwise(() => null);
+    return null == e ? null : (0, r.jsx)(u.Heading, {
+      variant: 'text-xs/medium',
+      color: 'header-primary',
+      children: e
+    });
+  })(),
+  (0, r.jsxs)('div', {
+    className: s()(k.body, q),
     children: [
-      (() => {
-        let e = J ? G.Z.Messages.USER_ACTIVITY_STREAMING : (0, o.EQ)(ee.type).with(w.IIU.PLAYING, () => G.Z.Messages.USER_ACTIVITY_PLAYING).with(w.IIU.STREAMING, () => G.Z.Messages.USER_ACTIVITY_STREAMING).with(w.IIU.LISTENING, () => G.Z.Messages.USER_ACTIVITY_LISTENING_TO).with(w.IIU.WATCHING, () => G.Z.Messages.USER_ACTIVITY_WATCHING).with(w.IIU.HANG_STATUS, () => G.Z.Messages.USER_ACTIVITY_CURRENTLY).with(w.IIU.COMPETING, () => G.Z.Messages.USER_ACTIVITY_PLAYING).otherwise(() => null);
-        return null == e ? null : (0, r.jsx)(u.Heading, {
-          variant: 'text-xs/medium',
-          color: 'header-primary',
-          children: e
-        });
-      })(),
       (0, r.jsxs)('div', {
-        className: s()(k.body, $),
+        className: s()(k.content, q),
         children: [
-          (0, r.jsxs)('div', {
-            className: k.content,
+          (() => {
+            var e, t, a, o, l, u, d, h, I, T;
+            let g = s()(k.imageSize, {
+              [k.fullSize]: z === U.y0.FULL_SIZE
+            });
+            if (X.type === w.IIU.HANG_STATUS)
+              return (0, r.jsx)('div', {
+                className: s()(k.hangStatusIconBackground, g),
+                children: (0, r.jsx)(R.Z, {
+                  hangStatusActivity: X,
+                  className: k.hangStatusIcon
+                })
+              });
+            if (Q)
+              return (0, r.jsx)(M.Z, {
+                src: n(132399),
+                alt: G.Z.Messages.FORM_LABEL_SCREENSHARE,
+                className: g
+              });
+            if ((0, m.Z)(X))
+              return (0, r.jsx)(M.Z, {
+                src: _.Z.get(w.ABu.XBOX).icon.customPNG,
+                alt: G.Z.Messages.XBOX,
+                className: g
+              });
+            if (!(0, E.Z)(X) && X.type === w.IIU.PLAYING && !i.bot)
+              return (0, r.jsx)(S.Z, {
+                game: c,
+                className: g
+              });
+            if ((null === (e = X.assets) || void 0 === e ? void 0 : e.large_image) == null && (null === (t = X.assets) || void 0 === t ? void 0 : t.small_image) == null)
+              return null;
+            let A = z === U.y0.FULL_SIZE ? 64 : 48,
+              N = z === U.y0.FULL_SIZE ? 30 : 20;
+            return (null === (a = X.assets) || void 0 === a ? void 0 : a.large_image) == null ? (0, r.jsx)(M.Z, {
+              text: X.assets.small_text,
+              alt: null !== (l = X.assets.small_text) && void 0 !== l ? l : '',
+              src: B(X.application_id, X.assets.small_image, A),
+              className: s()(k.largeImage, g)
+            }) : (0, p.Z)(X) ? (0, r.jsx)(M.Z, {
+              text: X.assets.large_text,
+              alt: null !== (u = X.assets.large_text) && void 0 !== u ? u : '',
+              src: B(X.application_id, X.assets.large_image, A),
+              className: s()(k.largeImage, g),
+              onClick: () => W(X, i.id)
+            }) : (0, f.Z)(X) ? (0, r.jsx)(M.Z, {
+              text: X.assets.large_text,
+              alt: null !== (d = X.assets.large_text) && void 0 !== d ? d : '',
+              src: B(X.application_id, X.assets.large_image, z === U.y0.FULL_SIZE ? 86 : 64),
+              className: s()(k.largeImage, g, k.crunchyroll)
+            }) : (null === (o = X.assets) || void 0 === o ? void 0 : o.small_image) == null || X.type !== w.IIU.PLAYING ? (0, r.jsx)(M.Z, {
+              text: X.assets.large_text,
+              alt: null !== (h = X.assets.large_text) && void 0 !== h ? h : '',
+              src: B(X.application_id, X.assets.large_image, A),
+              className: s()(k.largeImage, g)
+            }) : (0, r.jsxs)('div', {
+              className: s()(k.imageContainer, g),
+              children: [
+                (0, r.jsx)(M.Z, {
+                  text: X.assets.large_text,
+                  alt: null !== (I = X.assets.large_text) && void 0 !== I ? I : '',
+                  src: B(X.application_id, X.assets.large_image, A),
+                  className: s()(k.largeImage, g)
+                }),
+                (0, r.jsx)(M.Z, {
+                  text: X.assets.small_text,
+                  alt: null !== (T = X.assets.small_text) && void 0 !== T ? T : '',
+                  src: B(X.application_id, X.assets.small_image, N),
+                  className: s()(k.smallImage, q)
+                })
+              ]
+            });
+          })(),
+          null == $ ? (0, r.jsxs)('div', {
+            className: k.details,
             children: [
-              (() => {
-                var e, t, i, o, l, u, d, h, I, T;
-                let S = s()(k.imageSize, {
-                  [k.fullSize]: X === U.y0.FULL_SIZE
-                });
-                if (ee.type === w.IIU.HANG_STATUS)
-                  return (0, r.jsx)('div', {
-                    className: s()(k.hangStatusIconBackground, S),
-                    children: (0, r.jsx)(O.Z, {
-                      hangStatusActivity: ee,
-                      className: k.hangStatusIcon
-                    })
-                  });
-                if (J)
-                  return (0, r.jsx)(M.Z, {
-                    src: n(132399),
-                    alt: G.Z.Messages.FORM_LABEL_SCREENSHARE,
-                    className: S
-                  });
-                if ((0, m.Z)(ee))
-                  return (0, r.jsx)(M.Z, {
-                    src: _.Z.get(w.ABu.XBOX).icon.customPNG,
-                    alt: G.Z.Messages.XBOX,
-                    className: S
-                  });
-                if (!(0, E.Z)(ee) && ee.type === w.IIU.PLAYING && !a.bot)
-                  return (0, r.jsx)(g.Z, {
-                    game: c,
-                    className: S
-                  });
-                if ((null === (e = ee.assets) || void 0 === e ? void 0 : e.large_image) == null && (null === (t = ee.assets) || void 0 === t ? void 0 : t.small_image) == null)
-                  return null;
-                let A = X === U.y0.FULL_SIZE ? 64 : 48,
-                  N = X === U.y0.FULL_SIZE ? 30 : 20;
-                return (null === (i = ee.assets) || void 0 === i ? void 0 : i.large_image) == null ? (0, r.jsx)(M.Z, {
-                  text: ee.assets.small_text,
-                  alt: null !== (l = ee.assets.small_text) && void 0 !== l ? l : '',
-                  src: B(ee.application_id, ee.assets.small_image, A),
-                  className: s()(k.largeImage, S)
-                }) : (0, p.Z)(ee) ? (0, r.jsx)(M.Z, {
-                  text: ee.assets.large_text,
-                  alt: null !== (u = ee.assets.large_text) && void 0 !== u ? u : '',
-                  src: B(ee.application_id, ee.assets.large_image, A),
-                  className: s()(k.largeImage, S),
-                  onClick: () => q(ee, a.id)
-                }) : (0, f.Z)(ee) ? (0, r.jsx)(M.Z, {
-                  text: ee.assets.large_text,
-                  alt: null !== (d = ee.assets.large_text) && void 0 !== d ? d : '',
-                  src: B(ee.application_id, ee.assets.large_image, X === U.y0.FULL_SIZE ? 86 : 64),
-                  className: s()(k.largeImage, S, k.crunchyroll)
-                }) : (null === (o = ee.assets) || void 0 === o ? void 0 : o.small_image) == null || ee.type !== w.IIU.PLAYING ? (0, r.jsx)(M.Z, {
-                  text: ee.assets.large_text,
-                  alt: null !== (h = ee.assets.large_text) && void 0 !== h ? h : '',
-                  src: B(ee.application_id, ee.assets.large_image, A),
-                  className: s()(k.largeImage, S)
-                }) : (0, r.jsxs)('div', {
-                  className: s()(k.imageContainer, S),
-                  children: [
-                    (0, r.jsx)(M.Z, {
-                      text: ee.assets.large_text,
-                      alt: null !== (I = ee.assets.large_text) && void 0 !== I ? I : '',
-                      src: B(ee.application_id, ee.assets.large_image, A),
-                      className: s()(k.largeImage, S)
-                    }),
-                    (0, r.jsx)(M.Z, {
-                      text: ee.assets.small_text,
-                      alt: null !== (T = ee.assets.small_text) && void 0 !== T ? T : '',
-                      src: B(ee.application_id, ee.assets.small_image, N),
-                      className: s()(k.smallImage, S)
-                    })
-                  ]
-                });
-              })(),
               (0, r.jsxs)('div', {
-                className: k.details,
                 children: [
-                  (0, r.jsxs)(u.Clickable, {
-                    className: null != et ? k.clickable : void 0,
-                    onClick: null != et ? () => {
-                      et(), null == Q || Q();
-                    } : void 0,
-                    children: [
-                      (() => {
-                        let e = X === U.y0.FULL_SIZE ? void 0 : 1;
-                        return ee.type === w.IIU.HANG_STATUS ? (0, r.jsx)(P.Z, {
-                          name: (0, v.O8)(ee),
-                          lineClamp: e
-                        }) : (0, p.Z)(ee) && null != ee.sync_id && null != ee.details ? (0, r.jsx)(P.Z, {
-                          name: ee.details,
-                          lineClamp: e,
-                          onClick: () => K(ee)
-                        }) : ee.type !== w.IIU.PLAYING ? (0, r.jsx)(P.Z, {
-                          name: ee.details,
-                          lineClamp: e
-                        }) : (0, r.jsx)(P.Z, {
-                          name: ee.name,
-                          lineClamp: e
-                        });
-                      })(),
-                      en,
-                      er,
-                      ei
-                    ]
-                  }),
-                  es,
-                  ea
+                  J(),
+                  ee(),
+                  et(),
+                  er(),
+                  ei()
                 ]
-              })
+              }),
+              ea()
             ]
-          }),
-          (0, r.jsx)('div', {
-            className: k.actions,
-            children: eo
+          }) : (0, r.jsxs)('div', {
+            className: k.details,
+            children: [
+              (0, r.jsxs)(u.Clickable, {
+                className: k.clickable,
+                onClick: () => {
+                  $(), null == K || K();
+                },
+                children: [
+                  J(),
+                  ee(),
+                  et(),
+                  er(),
+                  ei()
+                ]
+              }),
+              ea()
+            ]
           })
         ]
+      }),
+      i.id !== a.id && (0, r.jsx)('div', {
+        className: k.actions,
+        children: (0, r.jsx)(b.Z, {
+          activity: X,
+          user: i,
+          currentUser: a,
+          onAction: H
+        })
       })
     ]
   }),
   (0, r.jsx)(V, {
-    activity: ee
+    activity: X
   })
 ]
   });
