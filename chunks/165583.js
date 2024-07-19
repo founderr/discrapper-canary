@@ -494,7 +494,7 @@ case L.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT:
     discountOffer: R,
     children: M.Z.Messages.CLIENT_THEMES_EDITOR_UPSELL.format({
       onClick: () => {
-        (0, I.uL)(b.Z5c.APPLICATION_STORE), (0, m.my)();
+        (0, I.uL)(b.Z5c.APPLICATION_STORE), (0, m.Mo)();
       }
     })
   });

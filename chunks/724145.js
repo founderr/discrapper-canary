@@ -58,7 +58,7 @@ return (0, r.jsxs)('div', {
     (0, r.jsx)(c.Clickable, {
       className: b.closeCircleButton,
       onClick: () => {
-        null != t && t(y.L.DISMISS), n(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, N.my)();
+        null != t && t(y.L.DISMISS), n(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, N.Mo)();
       },
       children: (0, r.jsx)(c.CircleXIcon, {
         size: 'md',
@@ -141,7 +141,7 @@ return (0, r.jsxs)('div', {
     (0, r.jsx)(c.Button, {
       className: b.footerButton,
       onClick: () => {
-        null != t && t(y.L.DISMISS), d(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, N.my)(), !a && _.Z.open();
+        null != t && t(y.L.DISMISS), d(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, N.Mo)(), !a && _.Z.open();
       },
       color: c.Button.Colors.PRIMARY,
       size: c.Button.Sizes.MEDIUM,
