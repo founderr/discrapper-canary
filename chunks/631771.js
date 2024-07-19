@@ -1,20 +1,21 @@
 n.d(t, {
   Gi: function() {
-return a;
-  },
-  MP: function() {
 return s;
   },
-  Qs: function() {
+  MP: function() {
 return o;
   },
-  YN: function() {
+  Qs: function() {
 return l;
+  },
+  YN: function() {
+return u;
   }
 });
 var r = n(818083),
-  i = n(474936);
-let a = (0, r.B)({
+  i = n(311476),
+  a = n(474936);
+let s = (0, r.B)({
 id: '2024-06_premium_emoji_desktop_upsell',
 label: 'Premium Emoji Desktop Upsell',
 kind: 'user',
@@ -40,7 +41,7 @@ treatments: [{
   }
 ]
   }),
-  s = (0, r.B)({
+  o = (0, r.B)({
 id: '2024-05_file_upload_desktop_upsell',
 label: 'File Upload Desktop Upsell',
 kind: 'user',
@@ -66,7 +67,7 @@ treatments: [{
   }
 ]
   }),
-  o = (0, r.B)({
+  l = (0, r.B)({
 id: '2024-06_premium_soundboard_desktop_upsell',
 label: 'Premium Soundboard Desktop Upsell',
 kind: 'user',
@@ -105,12 +106,21 @@ treatments: [{
 ]
   });
 
-function l(e) {
-  if (e === i.cd.UPLOAD_ERROR_UPSELL)
-return s.getCurrentConfig({
-  location: 'File Upload Roadblock'
-}, {
-  autoTrackExposure: !1
-}).addSocialProof;
+function u(e) {
+  switch (e) {
+case a.cd.UPLOAD_ERROR_UPSELL:
+  return o.getCurrentConfig({
+    location: 'File Upload Roadblock'
+  }, {
+    autoTrackExposure: !1
+  }).addSocialProof;
+case a.cd.CLIENT_THEMES_UPSELL:
+  return i.Z.getCurrentConfig({
+    location: 'shouldShowSocialProof'
+  }, {
+    autoTrackExposure: !1
+  }).addSocialProof;
+default:
   return !1;
+  }
 }

@@ -47,8 +47,9 @@ onSelect: s,
 isSelected: o = !1,
 tabIndex: l,
 children: u,
-showBadge: d
-  } = e, _ = (0, c.useRadioItem)({
+showBadge: d,
+showLockedBadge: _
+  } = e, E = (0, c.useRadioItem)({
 label: t,
 isSelected: o
   });
@@ -59,8 +60,8 @@ children: e => (0, r.jsxs)('div', {
   children: [
     (0, r.jsx)(c.Clickable, {
       ...e,
-      ..._,
-      tabIndex: null != l ? l : _.tabIndex,
+      ...E,
+      tabIndex: null != l ? l : E.tabIndex,
       className: a()(p.themeSelection, {
         [p.selected]: o
       }, n),
@@ -71,6 +72,13 @@ children: e => (0, r.jsxs)('div', {
     o && (0, r.jsx)(m, {}),
     !o && d && (0, r.jsx)('div', {
       className: p.redCircle
+    }),
+    _ && (0, r.jsx)('div', {
+      className: p.lockedBadgeContainer,
+      children: (0, r.jsx)(c.LockIcon, {
+        className: p.lockedBadge,
+        color: 'currentColor'
+      })
     })
   ]
 })
@@ -120,14 +128,15 @@ isSelected: n,
 disabled: i,
 tabIndex: s,
 onSelect: o,
-showBadge: l
+showBadge: l,
+showLockedBadge: c
   } = e, {
-colors: c,
-angle: d,
-theme: E
-  } = t, f = (0, _.VK)({
-colors: c,
-angle: d
+colors: d,
+angle: E,
+theme: f
+  } = t, h = (0, _.VK)({
+colors: d,
+angle: E
   });
   return (0, r.jsx)(I, {
 onSelect: i ? void 0 : o,
@@ -135,12 +144,13 @@ isSelected: n,
 name: t.getName(),
 className: a()([
   i ? p.disabled : null,
-  (0, u.wj)(E) ? p.darkOverlay : p.lightOverlay
+  (0, u.wj)(f) ? p.darkOverlay : p.lightOverlay
 ]),
 style: {
-  background: 'var(--bg-overlay), '.concat(f)
+  background: 'var(--bg-overlay), '.concat(h)
 },
 tabIndex: s,
-showBadge: l
+showBadge: l,
+showLockedBadge: c
   });
 }
