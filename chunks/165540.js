@@ -27,9 +27,7 @@ let A = a.forwardRef(function(e, t) {
   let {
 type: n
   } = e, [s, r] = a.useState(!1), h = (0, o.e7)([p.Z], () => p.Z.shouldShowPopup()), _ = a.useCallback(() => {
-(0, d.yw)(v.rMx.CHAT_INPUT_COMPONENT_VIEWED, {
-  type: v.K98.APPS_BUTTON
-}), h ? u.y(m.ti.DISMISSED) : u._(m._b.TEXT, n);
+(0, d.yw)(v.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), h ? u.y(m.ti.DISMISSED) : u._(m._b.TEXT, n);
   }, [
 h,
 n
