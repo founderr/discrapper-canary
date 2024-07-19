@@ -25,17 +25,17 @@ var i, l, a = t(735250),
   E = t(220082),
   A = t(810090),
   h = t(768581),
-  f = t(792125),
-  N = t(541099),
+  N = t(792125),
+  f = t(541099),
   C = t(783097),
   v = t(695676),
   I = t(176412),
   P = t(226026),
-  T = t(753972),
-  S = t(981631),
-  x = t(217702),
-  R = t(231338),
-  L = t(689938),
+  x = t(753972),
+  T = t(981631),
+  S = t(217702),
+  L = t(231338),
+  R = t(689938),
   g = t(126152),
   M = t(413097);
 
@@ -54,7 +54,7 @@ tracksImpression: _ = !0
   } = e, {
 iconURL: A,
 name: h,
-description: N
+description: f
   } = r.useMemo(() => (0, C.sl)(n, {
 fakeAppIconURL: M
   }), [n]), v = (0, E.ZP)(A, ''), {
@@ -63,18 +63,18 @@ trackItemImpressionRef: I
 applicationId: n.id,
 sectionName: m,
 sectionPosition: p
-  }), [S, x] = r.useState(!1), y = r.useCallback(() => {
-!0 === u && x(!0);
-  }, [u]), j = r.useCallback(() => x(!1), []);
+  }), [T, S] = r.useState(!1), y = r.useCallback(() => {
+!0 === u && S(!0);
+  }, [u]), j = r.useCallback(() => S(!1), []);
   return 'icon' === t ? (0, a.jsx)(c.Clickable, {
 innerRef: _ ? e => I.current = e : void 0,
 className: o()(g.container, g.iconCard),
 onClick: l,
-'aria-label': L.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
+'aria-label': R.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
   applicationName: h,
-  applicationDescription: N
+  applicationDescription: f
 }),
-children: (0, a.jsx)(T.Z, {
+children: (0, a.jsx)(x.Z, {
   src: A,
   className: g.iconCard,
   'aria-hidden': !0,
@@ -84,9 +84,9 @@ children: (0, a.jsx)(T.Z, {
 innerRef: _ ? e => I.current = e : void 0,
 className: g.container,
 onClick: l,
-'aria-label': L.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
+'aria-label': R.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
   applicationName: h,
-  applicationDescription: N
+  applicationDescription: f
 }),
 children: [
   (0, a.jsxs)('div', {
@@ -104,16 +104,16 @@ children: [
         children: (0, a.jsx)(O, {
           application: n,
           fallbackColor: v,
-          showVideo: S
+          showVideo: T
         })
       }),
       i && (0, a.jsx)('div', {
         className: g.partnerLabelWrapper,
         children: (0, a.jsx)(c.Text, {
-          className: (0, f.Q)(R.BR.DARK),
+          className: (0, N.Q)(L.BR.DARK),
           variant: 'text-sm/medium',
           color: 'text-normal',
-          children: L.Z.Messages.APP_DIRECTORY_PARTNER
+          children: R.Z.Messages.APP_DIRECTORY_PARTNER
         })
       }),
       'large_banner' === t || 'medium_banner' === t ? (0, a.jsx)('div', {
@@ -125,7 +125,7 @@ children: [
   (0, a.jsxs)('div', {
     className: g.appDetailsContainer,
     children: [
-      (0, a.jsx)(T.Z, {
+      (0, a.jsx)(x.Z, {
         src: A,
         className: g.icon,
         'aria-hidden': !0,
@@ -144,7 +144,7 @@ children: [
             variant: 'text-sm/normal',
             color: 'text-secondary',
             lineClamp: 1,
-            children: N
+            children: f
           })
         ]
       })
@@ -204,7 +204,7 @@ children: [
       onAnimationEnd: () => t ? null : c(!1),
       children: (0, a.jsx)(A.Z, {
         src: l,
-        mediaLayoutType: x.hV.MOSAIC,
+        mediaLayoutType: S.hV.MOSAIC,
         loop: !0,
         autoPlay: !0,
         muted: !0
@@ -264,11 +264,11 @@ location: s
 pushHistory: o
   } = (0, v.hH)();
   return r.useCallback(e => {
-e.stopPropagation(), (0, _.yw)(S.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+e.stopPropagation(), (0, _.yw)(T.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
   application_id: n.id,
   section_name: t,
   search_results_position: i,
-  source: N.Z.entrypoint(),
+  source: f.Z.entrypoint(),
   location: s,
   query: l
 }), o({

@@ -17,11 +17,11 @@ let h = {
 width: _.Gy,
 height: _.lv
   },
-  f = {
+  N = {
 height: _.lv
   };
 
-function N(e) {
+function f(e) {
   let {
 children: n
   } = e, [t, a] = l.useState([{
@@ -91,7 +91,7 @@ getMostRecentHistoryItemByType: h
   } = (0, u.hH)();
   if (null == E)
 return null;
-  let N = h(u.gc.LIST),
+  let f = h(u.gc.LIST),
 C = h(u.gc.APPLICATION);
   return (0, i.jsxs)(a.Slides, {
 activeSlide: E.type,
@@ -101,7 +101,7 @@ children: [
     id: u.gc.HOME,
     children: (0, i.jsx)('div', {
       className: A.slideContent,
-      style: f,
+      style: N,
       children: (0, i.jsx)(m.Z, {
         isScrollCloseToBottom: c,
         setScroller: o,
@@ -116,14 +116,14 @@ children: [
     id: u.gc.LIST,
     children: (0, i.jsx)('div', {
       className: A.slideContent,
-      style: f,
-      children: null != N && (0, i.jsx)(p.Z, {
+      style: N,
+      children: null != f && (0, i.jsx)(p.Z, {
         channel: n,
         entrypoint: t,
-        title: N.title,
-        look: N.look,
-        items: N.items,
-        sectionName: N.sectionName
+        title: f.title,
+        look: f.look,
+        items: f.items,
+        sectionName: f.sectionName
       })
     })
   }),
@@ -131,7 +131,7 @@ children: [
     id: u.gc.APPLICATION,
     children: (0, i.jsx)('div', {
       className: A.slideContent,
-      style: f,
+      style: N,
       children: null != C && (0, i.jsx)(d.Z, {
         channel: n,
         application: C.application,
@@ -172,7 +172,7 @@ children: (0, i.jsx)('div', {
   className: A.contentWrapper,
   children: (0, i.jsx)(o.Gt, {
     value: u,
-    children: (0, i.jsx)(N, {
+    children: (0, i.jsx)(f, {
       children: (0, i.jsx)(C, {
         channel: t,
         entrypoint: a

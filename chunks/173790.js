@@ -18,8 +18,8 @@ var i = t(735250),
   E = t(675993),
   A = t(689079),
   h = t(689938),
-  f = t(132439),
-  N = t(413097);
+  N = t(132439),
+  f = t(413097);
 
 function C(e) {
   var n;
@@ -30,11 +30,11 @@ sectionName: o,
 installOnDemand: C
   } = e, I = null !== (n = (0, u.q)(s.id === A.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, P = (0, d.ye)({
 application: I
-  }) ? v : E.Z, T = l.useRef(null), {
-iconURL: S,
-name: x
+  }) ? v : E.Z, x = l.useRef(null), {
+iconURL: T,
+name: S
   } = l.useMemo(() => (0, d.sl)(I, {
-fakeAppIconURL: N,
+fakeAppIconURL: f,
 size: 84
   }), [I]);
   return l.useEffect(() => {
@@ -44,22 +44,22 @@ I.id,
 t.id,
 C
   ]), (0, i.jsxs)(r.ScrollerNone, {
-className: f.container,
+className: N.container,
 fade: !0,
-ref: T,
+ref: x,
 role: 'region',
 'aria-label': h.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({
-  applicationName: x
+  applicationName: S
 }),
 children: [
   (0, i.jsx)(_.Z, {
-    name: x,
-    iconURL: S,
-    scrollerRef: T
+    name: S,
+    iconURL: T,
+    scrollerRef: x
   }),
-  null != S && (0, i.jsx)(m.Z, {
-    src: S,
-    className: f.appIcon
+  null != T && (0, i.jsx)(m.Z, {
+    src: T,
+    className: N.appIcon
   }),
   (0, i.jsx)(a.Z, {
     size: 54

@@ -27,7 +27,7 @@ description: h
   } = l.useMemo(() => (0, r.sl)(d, {
 fakeAppIconURL: u
   }), [d]), {
-trackSearchResultsItemImpressionRef: f
+trackSearchResultsItemImpressionRef: N
   } = (0, o.Z)({
 applicationId: d.id,
 commandId: null == t ? void 0 : t.id,
@@ -35,7 +35,7 @@ query: p,
 searchResultsPosition: _
   });
   return (0, i.jsxs)(a.Clickable, {
-innerRef: e => f.current = e,
+innerRef: e => N.current = e,
 className: c.container,
 onClick: m,
 children: [

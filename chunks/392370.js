@@ -1,9 +1,9 @@
 t.d(n, {
   Q2: function() {
-return x;
+return S;
   },
   pe: function() {
-return S;
+return T;
   }
 }), t(47120), t(653041), t(536091);
 var i = t(470079),
@@ -21,8 +21,8 @@ var i = t(470079),
   E = t(674588),
   A = t(809547),
   h = t(822245),
-  f = t(631827),
-  N = t(783097),
+  N = t(631827),
+  f = t(783097),
   C = t(689079),
   v = t(665692);
 
@@ -32,16 +32,16 @@ function I(e, n) {
 }
 
 function P(e, n) {
-  let t = (0, N.$d)(e),
-i = (0, N.$d)(n);
+  let t = (0, f.$d)(e),
+i = (0, f.$d)(n);
   return (0, m.un)(t, i);
 }
 
-function T(e, n) {
+function x(e, n) {
   return (0, m.un)(e.displayName, n.displayName);
 }
 
-function S(e) {
+function T(e) {
   let {
 channel: n,
 query: t,
@@ -55,7 +55,7 @@ searchesActivities: E = !0
   let {
 commands: A,
 commandSectionMap: h,
-loading: S
+loading: T
   } = function(e) {
 var n, t;
 let {
@@ -98,7 +98,7 @@ return i.useMemo(() => {
 channel: n,
 includeBuiltIn: !0
   }), {
-apps: x
+apps: S
   } = function(e) {
 let {
   channel: n,
@@ -116,7 +116,7 @@ if (null != s.result)
     let n = e.descriptor.application;
     null != n && !u.has(n.id) && (Object.keys(e.commands).length > 0 || !t) && o.push(n);
   }
-return i && o.push(N.Wx), {
+return i && o.push(f.Wx), {
   apps: o,
   loading: (null == r ? void 0 : r.fetchState.fetching) === !0 || (null == s ? void 0 : s.fetchState.fetching) === !0
 };
@@ -124,14 +124,14 @@ return i && o.push(N.Wx), {
 channel: n,
 onlyWithCommands: !0,
 includeBuiltIn: !0
-  }), R = (0, u.Z)({
+  }), L = (0, u.Z)({
 guildId: n.getGuildId(),
 channel: n
-  }), L = i.useMemo(() => {
+  }), R = i.useMemo(() => {
 var e;
 if (!s)
   return [];
-return (0, f.N)(A, {
+return (0, N.N)(A, {
   limit: l,
   filterPredicates: [function(e) {
     let n = (0, p.k)(e, c.yU.CHAT),
@@ -234,7 +234,7 @@ return (0, f.N)(A, {
     }({
       channel: n
     }),
-    T
+    x
   ]
 });
   }, [
@@ -244,13 +244,13 @@ l,
 n,
 t
   ]), g = i.useMemo(() => {
-if (0 === L.length)
+if (0 === R.length)
   return [];
-let e = new Map(x.map(e => [
+let e = new Map(S.map(e => [
   e.id,
   e
 ]));
-return a().compact(L.map(n => {
+return a().compact(R.map(n => {
   var t;
   let i = e.get(n.applicationId);
   if (null == i)
@@ -263,8 +263,8 @@ return a().compact(L.map(n => {
   };
 }));
   }, [
-x,
-L,
+S,
+R,
 h
   ]), M = i.useMemo(() => {
 var e;
@@ -272,13 +272,13 @@ if (!o && !E)
   return [];
 let i = [];
 if (o && E) {
-  let e = new Set(x.map(e => {
+  let e = new Set(S.map(e => {
     let {
       id: n
     } = e;
     return n;
   }));
-  i.push(...x), i.push(...R.filter(n => {
+  i.push(...S), i.push(...L.filter(n => {
     let {
       application: {
         id: t
@@ -292,13 +292,13 @@ if (o && E) {
     return n;
   }));
 } else
-  i = o ? x : R.map(e => {
+  i = o ? S : L.map(e => {
     let {
       application: n
     } = e;
     return n;
   });
-return (0, f.N)(i, {
+return (0, N.N)(i, {
   limit: r,
   filterPredicates: [function(e) {
     let n = (0, p.k)(e, c.yU.CHAT);
@@ -325,22 +325,22 @@ return (0, f.N)(i, {
   }(n)],
   bucketPredicates: [
     function(e) {
-      return n => (0, N.$d)(n).toLocaleLowerCase().startsWith(e.toLocaleLowerCase());
+      return n => (0, f.$d)(n).toLocaleLowerCase().startsWith(e.toLocaleLowerCase());
     }(e = t),
     function(e) {
-      return n => (0, N.$d)(n).toLocaleLowerCase().includes(e.toLocaleLowerCase());
+      return n => (0, f.$d)(n).toLocaleLowerCase().includes(e.toLocaleLowerCase());
     }(e),
     function(e) {
       return n => {
         var t, i;
-        let l = null === (t = (0, N.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
+        let l = null === (t = (0, f.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
         return null !== (i = null == l ? void 0 : l.startsWith(e.toLocaleLowerCase())) && void 0 !== i && i;
       };
     }(e),
     function(e) {
       return n => {
         var t, i;
-        let l = null === (t = (0, N.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
+        let l = null === (t = (0, f.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
         return null !== (i = null == l ? void 0 : l.includes(e.toLocaleLowerCase())) && void 0 !== i && i;
       };
     }(e)
@@ -356,8 +356,8 @@ E,
 r,
 n,
 t,
-x,
-R
+S,
+L
   ]), y = g.length > 0, O = M.length > 0;
   return {
 commandResults: g,
@@ -365,11 +365,11 @@ hasCommandResults: y,
 applicationResults: M,
 hasApplicationResults: O,
 isEmptyState: !y && !O,
-loading: S && s
+loading: T && s
   };
 }
 
-function x(e) {
+function S(e) {
   let {
 channel: n,
 query: t,
@@ -434,7 +434,7 @@ m,
 a,
 _,
 p
-  ]), f = i.useCallback(e => {
+  ]), N = i.useCallback(e => {
 let {
   query: n,
   page: t,
@@ -454,7 +454,7 @@ E.yC({
   }, []);
   return i.useEffect(() => {
 if (!!l)
-  f({
+  N({
     query: t,
     page: c,
     guildId: n.guild_id
@@ -462,7 +462,7 @@ if (!!l)
   }, [
 t,
 n.guild_id,
-f,
+N,
 c,
 l
   ]), i.useEffect(() => {

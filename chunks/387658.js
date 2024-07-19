@@ -27,8 +27,8 @@ var i = t(735250),
   x = t(660090),
   T = t(783097),
   S = t(176412),
-  R = t(870205),
-  L = t(981631),
+  L = t(870205),
+  R = t(981631),
   g = t(689079),
   M = t(689938),
   y = t(627542),
@@ -57,7 +57,7 @@ f.y(v.ti.COMMAND), (0, h.Mo)({
   sectionName: c,
   source: e,
   commandOrigin: A.bB.APPLICATION_LAUNCHER
-}), N.S.dispatch(L.CkL.FOCUS_CHANNEL_TEXT_AREA, {
+}), N.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, {
   channelId: a.id
 });
   }, [
@@ -297,7 +297,7 @@ children: [
     commands: m.current ? b : h,
     headerName: M.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
     sectionName: r,
-    children: N && (0, i.jsx)(R.Z, {
+    children: N && (0, i.jsx)(L.Z, {
       sortOrder: _,
       onSortOptionClick: A
     })

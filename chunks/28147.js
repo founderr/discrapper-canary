@@ -18,17 +18,17 @@ var i = t(735250),
   E = t(541099),
   A = t(827498),
   h = t(392370),
-  f = t(98880),
-  N = t(520315),
+  N = t(98880),
+  f = t(520315),
   C = t(532309),
   v = t(561160),
   I = t(41558),
   P = t(106771),
-  T = t(79984),
-  S = t(314734),
-  x = t(981631),
-  R = t(689938),
-  L = t(933693);
+  x = t(79984),
+  T = t(314734),
+  S = t(981631),
+  L = t(689938),
+  R = t(933693);
 let g = Array(6).fill(0).map((e, n) => n),
   M = [, , , ].fill(0).map((e, n) => n);
 
@@ -51,7 +51,7 @@ loading: m,
 isEmptyState: p,
 commandResults: _,
 hasCommandResults: E,
-applicationResults: f
+applicationResults: N
   } = (0, h.pe)({
 channel: n,
 query: t,
@@ -59,7 +59,7 @@ searchesActivities: !0,
 searchesCommands: c,
 searchesBots: u
   }), {
-fetchState: N,
+fetchState: f,
 applicationResults: C,
 fetchNextPage: I
   } = (0, h.Q2)({
@@ -69,21 +69,21 @@ fetches: a !== A._b.VOICE,
 pageLimit: 5
   });
   l.useEffect(() => {
-o && N === d.M.FETCHED && I();
+o && f === d.M.FETCHED && I();
   }, [
 I,
-N,
+f,
 o
   ]);
-  let P = null == N || N === d.M.FETCHING,
-T = l.useMemo(() => {
-  let e = f.map(e => ({
+  let P = null == f || f === d.M.FETCHING,
+x = l.useMemo(() => {
+  let e = N.map(e => ({
     application: e,
     installOnDemand: !1
   }));
   if (a === A._b.VOICE)
     return e;
-  let n = new Set(f.map(e => {
+  let n = new Set(N.map(e => {
     let {
       id: n
     } = e;
@@ -99,14 +99,14 @@ T = l.useMemo(() => {
 }, [
   a,
   C,
-  f
+  N
 ]),
-S = T.length > 0,
-x = p && !S && !P;
-  return m ? (0, i.jsx)(D, {}) : x ? (0, i.jsx)(v.A, {
+T = x.length > 0,
+S = p && !T && !P;
+  return m ? (0, i.jsx)(D, {}) : S ? (0, i.jsx)(v.A, {
 type: A.LG.SEARCH_EMPTY,
 searchQuery: t,
-textContent: a === A._b.TEXT ? R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
+textContent: a === A._b.TEXT ? L.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : L.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
   }) : (0, i.jsxs)('div', {
 children: [
   E && (0, i.jsx)(b, {
@@ -114,8 +114,8 @@ children: [
     commandResults: _,
     query: t
   }),
-  (S || P) && (0, i.jsx)(H, {
-    applicationResults: T,
+  (T || P) && (0, i.jsx)(H, {
+    applicationResults: x,
     includePlaceholder: P,
     query: t,
     searchesBots: u
@@ -150,7 +150,7 @@ installOnDemand: !1
   return o ? (0, i.jsx)(D, {}) : c ? (0, i.jsx)(v.A, {
 type: A.LG.SEARCH_EMPTY,
 searchQuery: t,
-textContent: a === A._b.TEXT ? R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
+textContent: a === A._b.TEXT ? L.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : L.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
   }) : (0, i.jsxs)('div', {
 children: [
   d && (0, i.jsx)(b, {
@@ -176,27 +176,27 @@ query: r
   } = e, s = a.length > 4, d = l.useMemo(() => s ? a.slice(0, 4) : a, [
 a,
 s
-  ]), [h, f] = l.useState(!1), C = l.useCallback(() => f(e => !e), []), v = (null !== (n = (0, o.Z)(r)) && void 0 !== n ? n : r)[0] !== r[0], T = h && !v;
-  l.useLayoutEffect(() => f(!1), [v]);
+  ]), [h, N] = l.useState(!1), C = l.useCallback(() => N(e => !e), []), v = (null !== (n = (0, o.Z)(r)) && void 0 !== n ? n : r)[0] !== r[0], x = h && !v;
+  l.useLayoutEffect(() => N(!1), [v]);
   let {
 ref: g,
 isTransitioning: M,
 onTransitionEnd: y
-  } = (0, N.Z)({
+  } = (0, f.Z)({
 key: r,
-isExpanded: T,
+isExpanded: x,
 durationMs: 200,
-maxAnimationHeight: S.lv
-  }), O = T || M, j = T ? I.Z.buttonTypes.VIEW_LESS : I.Z.buttonTypes.VIEW_MORE, b = O ? a : d;
+maxAnimationHeight: T.lv
+  }), O = x || M, j = x ? I.Z.buttonTypes.VIEW_LESS : I.Z.buttonTypes.VIEW_MORE, b = O ? a : d;
   return (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(I.Z, {
-    title: R.Z.Messages.COMMANDS,
+    title: L.Z.Messages.COMMANDS,
     buttonType: j,
     onClickViewButton: s ? C : void 0
   }),
   (0, i.jsx)('div', {
-    className: L.sectionContentContainer,
+    className: R.sectionContentContainer,
     ref: g,
     onTransitionEnd: y,
     children: b.map((e, n) => {
@@ -227,7 +227,7 @@ children: [
             query: r,
             searchResultsPosition: n,
             source: e
-          }), p.S.dispatch(x.CkL.FOCUS_CHANNEL_TEXT_AREA, {
+          }), p.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, {
             channelId: t.id
           });
         }
@@ -247,9 +247,9 @@ query: e.query,
 searchResultsPosition: e.resultsPosition
   });
   return (0, i.jsx)('div', {
-className: L.searchOpenAppDetailAppCard,
+className: R.searchOpenAppDetailAppCard,
 ref: e => n.current = e,
-children: (0, i.jsx)(f.kA, {
+children: (0, i.jsx)(N.kA, {
   ...e,
   tracksImpression: !1,
   enableVideoBanner: !0
@@ -267,10 +267,10 @@ searchesBots: a
   return a ? (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(I.Z, {
-    title: R.Z.Messages.APPS
+    title: L.Z.Messages.APPS
   }),
   (0, i.jsxs)('div', {
-    className: L.sectionContentContainer,
+    className: R.sectionContentContainer,
     children: [
       n.map((e, n) => {
         let {
@@ -286,17 +286,17 @@ children: [
           query: l
         }, t.id);
       }),
-      t && M.map(e => (0, i.jsx)(T.Z, {}, e))
+      t && M.map(e => (0, i.jsx)(x.Z, {}, e))
     ]
   })
 ]
   }) : (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(I.Z, {
-    title: R.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE
+    title: L.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE
   }),
   (0, i.jsxs)('div', {
-    className: L.sectionActivitiesContentContainer,
+    className: R.sectionActivitiesContentContainer,
     children: [
       n.map((e, n) => {
         let {
@@ -305,7 +305,7 @@ children: [
         } = e;
         return (0, i.jsx)(Z, {
           application: t,
-          look: f.U4.LARGE_BANNER,
+          look: N.U4.LARGE_BANNER,
           location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
           sectionName: A.L3.SEARCH,
           resultsPosition: n,
@@ -313,7 +313,7 @@ children: [
           query: l
         }, t.id);
       }),
-      t && M.map(e => (0, i.jsx)(T.Z, {}, e))
+      t && M.map(e => (0, i.jsx)(x.Z, {}, e))
     ]
   })
 ]
@@ -321,7 +321,7 @@ children: [
 }
 
 function U(e) {
-  let n = (0, f.cG)(e);
+  let n = (0, N.cG)(e);
   return (0, i.jsx)(P.Z, {
 application: e.application,
 onClick: n,
@@ -334,18 +334,18 @@ function D() {
   return (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(I.Z, {
-    title: R.Z.Messages.COMMANDS
+    title: L.Z.Messages.COMMANDS
   }),
   (0, i.jsx)('div', {
-    className: L.sectionContentContainer,
-    children: g.map(e => (0, i.jsx)(T.Z, {}, e))
+    className: R.sectionContentContainer,
+    children: g.map(e => (0, i.jsx)(x.Z, {}, e))
   }),
   (0, i.jsx)(I.Z, {
-    title: R.Z.Messages.APPS
+    title: L.Z.Messages.APPS
   }),
   (0, i.jsx)('div', {
-    className: L.sectionContentContainer,
-    children: M.map(e => (0, i.jsx)(T.Z, {}, e))
+    className: R.sectionContentContainer,
+    children: M.map(e => (0, i.jsx)(x.Z, {}, e))
   })
 ]
   });
