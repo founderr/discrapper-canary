@@ -124,7 +124,7 @@ if (!(e >= p.Lb))
 
 function Q(e, t) {
   if ((0, S.cn)(t) === S.Jb.MUTED_GUILD)
-A = A.filter(t => t.type === p.Rr.MESSAGE && t.data.guild_id !== e), V = V.filter(t => t.type === p.Rr.MESSAGE && t.data.guild_id !== e), F = F.filter(t => t.type === p.Rr.MESSAGE && t.data.guild_id !== e), v = v.filter(t => t.type === p.Rr.MESSAGE && t.data.guild_id !== e);
+A = A.filter(t => t.type !== p.Rr.MESSAGE && t.type !== p.Rr.SUMMARY || t.data.guild_id !== e), V = V.filter(t => t.type !== p.Rr.MESSAGE && t.type !== p.Rr.SUMMARY || t.data.guild_id !== e), F = F.filter(t => t.type !== p.Rr.MESSAGE && t.type !== p.Rr.SUMMARY || t.data.guild_id !== e), v = v.filter(t => t.type !== p.Rr.MESSAGE && t.type !== p.Rr.SUMMARY || t.data.guild_id !== e);
 }
 
 function X(e) {
