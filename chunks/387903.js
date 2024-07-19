@@ -561,7 +561,7 @@ let {
   className: r,
   application: i,
   showReactions: a,
-  onGameProfileOpened: o,
+  onClose: o,
   onOpenGameProfileModal: l
 } = this.props, c = this.activity;
 if (null == c || c.type === V.IIU.CUSTOM_STATUS)

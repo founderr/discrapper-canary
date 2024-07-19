@@ -27,11 +27,10 @@ function S(e) {
 activity: t,
 user: n,
 useStoreStream: a = !0,
-showChannelDetails: S = !1,
-...A
-  } = e, N = (0, o.e7)([p.default], () => p.default.getCurrentUser());
-  s()(null != N, 'BiteSizeActivitySection current user null');
-  let v = (0, o.e7)([
+...S
+  } = e, A = (0, o.e7)([p.default], () => p.default.getCurrentUser());
+  s()(null != A, 'BiteSizeActivitySection current user null');
+  let N = (0, o.e7)([
   m.Z,
   E.Z
 ], () => {
@@ -39,48 +38,48 @@ showChannelDetails: S = !1,
   return E.Z.getChannel(null === (e = m.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
 }),
 {
-  enableHangStatus: O
+  enableHangStatus: v
 } = c.n.useExperiment({
-  guildId: null == v ? void 0 : v.guild_id,
+  guildId: null == N ? void 0 : N.guild_id,
   location: 'UserProfileActivityCardWrapper'
 }, {
   autoTrackExposure: !1
 }),
-R = (0, o.e7)([_.Z], () => a ? _.Z.getAnyStreamForUser(n.id) : null),
-C = O && h.Z.can(g.Plq.CONNECT, v),
-y = (null == t ? void 0 : t.type) === g.IIU.HANG_STATUS && C ? v : null,
-D = (0, o.e7)([
+O = (0, o.e7)([_.Z], () => a ? _.Z.getAnyStreamForUser(n.id) : null),
+R = v && h.Z.can(g.Plq.CONNECT, N),
+C = (null == t ? void 0 : t.type) === g.IIU.HANG_STATUS && R ? N : null,
+y = (0, o.e7)([
   f.Z,
   m.Z,
   E.Z
 ], () => {
   var e, r;
-  return (0, l.Z)(t, g.xjy.EMBEDDED) ? f.Z.getGuild(null === (e = E.Z.getChannel(null === (r = m.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != y ? f.Z.getGuild(y.getGuildId()) : null;
+  return (0, l.Z)(t, g.xjy.EMBEDDED) ? f.Z.getGuild(null === (e = E.Z.getChannel(null === (r = m.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != C ? f.Z.getGuild(C.getGuildId()) : null;
 }),
-L = (0, o.e7)([f.Z], () => null != R ? f.Z.getGuild(R.guildId) : null),
-b = (0, o.e7)([u.Z], () => {
+D = (0, o.e7)([f.Z], () => null != O ? f.Z.getGuild(O.guildId) : null),
+L = (0, o.e7)([u.Z], () => {
   if (null != t)
     return null != t.application_id ? u.Z.getApplication(t.application_id) : u.Z.getApplicationByName(t.name);
   return null;
 });
   return (i.useEffect(() => {
-(null == t ? void 0 : t.type) === g.IIU.HANG_STATUS && C && I.default.track(g.rMx.VIEW_HANG_STATUS, {
+(null == t ? void 0 : t.type) === g.IIU.HANG_STATUS && R && I.default.track(g.rMx.VIEW_HANG_STATUS, {
   source: 'UserProfilePopout',
-  guild_id: null == y ? void 0 : y.guild_id,
-  channel_id: null == y ? void 0 : y.id
+  guild_id: null == C ? void 0 : C.guild_id,
+  channel_id: null == C ? void 0 : C.id
 });
   }, [
 null == t ? void 0 : t.type,
-C,
-y
-  ]), (null == t ? void 0 : t.type) !== g.IIU.HANG_STATUS || C) ? (0, r.jsx)(T.Z, {
-...A,
+R,
+C
+  ]), (null == t ? void 0 : t.type) !== g.IIU.HANG_STATUS || R) ? (0, r.jsx)(T.Z, {
+...S,
 activity: t,
 user: n,
-currentUser: N,
-application: b,
-activityGuild: null != D ? D : L,
-channel: S ? v : void 0,
+currentUser: A,
+application: L,
+activityGuild: null != y ? y : D,
+channel: N,
 onOpenSpotifyTrack: d.aG,
 onOpenSpotifyArtist: d.d$,
 onOpenSpotifyAlbum: d.Z5

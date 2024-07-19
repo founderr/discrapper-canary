@@ -1,29 +1,29 @@
-i.d(n, {
+s.d(n, {
   Z: function() {
 return v;
   }
 });
-var s = i(735250),
-  l = i(470079),
-  o = i(120356),
-  t = i.n(o),
-  r = i(442837),
-  a = i(481060),
-  d = i(387903),
-  c = i(906732),
-  u = i(199902),
-  I = i(158776),
-  _ = i(785717),
-  f = i(221292),
-  E = i(989964),
-  m = i(981631),
-  S = i(501649),
-  Z = i(735393);
+var i = s(735250),
+  l = s(470079),
+  o = s(120356),
+  t = s.n(o),
+  r = s(442837),
+  a = s(481060),
+  d = s(387903),
+  c = s(906732),
+  u = s(199902),
+  I = s(158776),
+  _ = s(785717),
+  f = s(221292),
+  E = s(989964),
+  m = s(981631),
+  S = s(501649),
+  Z = s(735393);
 
 function v(e) {
   let {
 user: n,
-type: i,
+type: s,
 showActions: o,
 onClose: v
   } = e, x = (0, r.e7)([u.Z], () => null != u.Z.getAnyStreamForUser(n.id)), h = (0, r.e7)([I.Z], () => I.Z.getActivities(n.id)), p = l.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), T = l.useMemo(() => x ? p.find(e => e.type === m.IIU.PLAYING) : null, [
@@ -44,22 +44,22 @@ location: {
   section: m.jXE.PROFILE_MODAL
 }
   };
-  return (0, s.jsxs)(a.ScrollerThin, {
+  return (0, i.jsxs)(a.ScrollerThin, {
 className: Z.listScroller,
 fade: !0,
 children: [
-  x ? (0, s.jsx)(E.Z, {
+  x ? (0, i.jsx)(E.Z, {
     location: 'UserProfileActivity',
-    type: i,
+    type: s,
     user: n,
     source: C,
     className: S.userProfileActivity,
-    showChannelDetails: i === d.Y.SIMPLIFIED_PROFILE,
+    showChannelDetails: s === d.Y.SIMPLIFIED_PROFILE,
     activity: T,
     actionColor: S.actionColor,
     analyticsParams: O,
     showActions: o,
-    onGameProfileOpened: v,
+    onClose: v,
     onAction: () => {
       j({
         action: 'JOIN_ACTIVITY'
@@ -74,19 +74,19 @@ children: [
       });
     }
   }) : null,
-  g.map(e => (0, s.jsx)(E.Z, {
+  g.map(e => (0, i.jsx)(E.Z, {
     location: 'UserProfileActivity',
-    type: i,
+    type: s,
     activity: e,
     user: n,
     useStoreStream: !1,
     source: C,
-    className: t()(S.userProfileActivity, i === d.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
-    showChannelDetails: i === d.Y.SIMPLIFIED_PROFILE,
+    className: t()(S.userProfileActivity, s === d.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
+    showChannelDetails: s === d.Y.SIMPLIFIED_PROFILE,
     actionColor: S.actionColor,
     analyticsParams: O,
     showActions: o,
-    onGameProfileOpened: v,
+    onClose: v,
     onAction: () => {
       j({
         action: 'JOIN_ACTIVITY'

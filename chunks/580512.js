@@ -67,7 +67,7 @@ source: T,
 user: t,
 guildId: null == n ? void 0 : n.id,
 channelId: i,
-onGameProfileOpened: m,
+onClose: m,
 onAction: () => {
   g({
     action: 'JOIN_ACTIVITY'

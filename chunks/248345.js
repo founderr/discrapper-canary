@@ -38,7 +38,7 @@ children: (0, r.jsx)(a.Z, {
   guildId: null == E ? void 0 : E.id,
   channelId: f,
   source: d.Sbl.PROFILE_POPOUT,
-  onGameProfileOpened: h,
+  onClose: h,
   onAction: () => {
     I({
       action: 'JOIN_ACTIVITY'
