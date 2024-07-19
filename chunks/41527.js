@@ -44,7 +44,7 @@ initialSubsection: P,
 transitionState: b,
 onClose: y,
 sourceAnalyticsLocations: D = []
-  } = e, F = O === N.ME ? void 0 : O, B = (0, d.ZP)(n.id, F), {
+  } = e, B = O === N.ME ? void 0 : O, F = (0, d.ZP)(n.id, B), {
 analyticsLocations: G
   } = (0, t.ZP)([
 ...D,
@@ -55,7 +55,7 @@ value: G,
 children: (0, s.jsx)(a.Mt, {
   layout: 'SIMPLIFIED_MODAL',
   userId: n.id,
-  guildId: F,
+  guildId: B,
   channelId: L,
   messageId: R,
   roleId: U,
@@ -67,44 +67,50 @@ children: (0, s.jsx)(a.Mt, {
     'aria-label': C.Z.Messages.USER_PROFILE_MODAL,
     children: (0, s.jsxs)(E.Z, {
       user: n,
-      displayProfile: B,
+      displayProfile: F,
       profileType: g.y0.FULL_SIZE,
       children: [
         (0, s.jsx)(x.Z, {
           profileType: g.y0.FULL_SIZE,
           children: (0, s.jsx)(Z.Z, {
             user: n,
-            guildId: F
+            guildId: B
           })
         }),
         (0, s.jsxs)('header', {
           children: [
             (0, s.jsx)(c.Z, {
               user: n,
-              displayProfile: B,
+              displayProfile: F,
               profileType: g.y0.FULL_SIZE,
-              hasProfileEffect: (null == B ? void 0 : B.profileEffectId) != null
+              hasProfileEffect: (null == F ? void 0 : F.profileEffectId) != null
             }),
             (0, s.jsxs)('div', {
               className: A.headerInner,
               children: [
                 (0, s.jsx)(I.Z, {
                   user: n,
-                  displayProfile: B,
-                  guildId: F,
+                  displayProfile: F,
+                  guildId: B,
                   channelId: L,
                   profileType: g.y0.FULL_SIZE
                 }),
                 (0, s.jsxs)('div', {
                   className: j.buttons,
                   children: [
+                    (0, s.jsx)(h.c, {
+                      userId: n.id,
+                      onClose: y,
+                      className: j.messageTextButton
+                    }),
                     (0, s.jsx)(h.v, {
                       userId: n.id,
-                      onClose: y
+                      onClose: y,
+                      tooltipContainerClassName: j.messageIconButton
                     }),
                     (0, s.jsx)(v.Z, {
                       user: n,
-                      guildId: F
+                      guildId: B
                     }),
                     (0, s.jsx)(S.Z, {
                       user: n
@@ -127,14 +133,14 @@ children: (0, s.jsx)(a.Mt, {
             (0, s.jsx)(m.Z, {
               user: n,
               profileType: g.y0.FULL_SIZE,
-              nickname: r.ZP.getName(F, L, n),
-              pronouns: null == B ? void 0 : B.pronouns,
+              nickname: r.ZP.getName(B, L, n),
+              pronouns: null == F ? void 0 : F.pronouns,
               nicknameVariant: 'heading-xl/bold',
               nicknameIcons: (0, s.jsx)(f.Z, {
                 userId: n.id
               }),
               tags: (0, s.jsx)(u.Z, {
-                displayProfile: B,
+                displayProfile: F,
                 profileType: g.y0.FULL_SIZE,
                 onClose: y
               })
@@ -144,7 +150,7 @@ children: (0, s.jsx)(a.Mt, {
               children: (0, s.jsx)(p.Z, {
                 user: n,
                 currentUser: i,
-                displayProfile: B,
+                displayProfile: F,
                 items: w,
                 initialSection: null != M ? M : g.oh.BOT_INFO,
                 initialSubsection: P,
