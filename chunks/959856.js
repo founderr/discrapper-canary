@@ -263,6 +263,7 @@ e([]);
   getMLSSigningKey(e, t) {
 return Promise.reject(Error('getMLSSigningKey is not supported.'));
   }
+  setSidechainCompression(e) {}
   constructor() {
 super(), O(this, 'Video', A.Z), O(this, 'Camera', S.Z), O(this, '_audioContext', null), O(this, 'outputVolume', N.Qx), O(this, 'sourceId', N.w5), O(this, 'sinkId', N.w5), O(this, 'enabled', !1), O(this, 'connections', new Set()), O(this, 'interacted', !1), O(this, 'loopback', null), O(this, 'voiceActivityInput', null), O(this, 'pendingDesktopInputs', {}), O(this, 'enablePromise', null), O(this, 'handleActiveSinksChange', (e, t) => {
   this.connections.forEach(n => n.setHasActiveVideoOutputSink(e, t));

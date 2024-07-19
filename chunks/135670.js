@@ -154,6 +154,7 @@ e([]);
   getMLSSigningKey(e, t) {
 return Promise.reject(Error('NOT_IMPLEMENTED'));
   }
+  setSidechainCompression(e) {}
   constructor(...e) {
 super(...e), s(this, 'Video', o), s(this, 'Camera', l);
   }

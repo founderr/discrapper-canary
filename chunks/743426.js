@@ -479,6 +479,9 @@ return new Promise((n, r) => {
   })) : r(Error('NOT_IMPLEMENTED'));
 });
   }
+  setSidechainCompression(e) {
+(0, _.zS)().setSidechainCompression(e);
+  }
   watchdogTick() {
 let e = !1;
 (0, _.zS)().pingVoiceThread(() => {
