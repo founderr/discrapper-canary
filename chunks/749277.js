@@ -21,8 +21,8 @@ var a = n(442837),
   h = n(346585),
   N = n(303172),
   f = n(463230),
-  C = n(246965),
-  p = n(703656),
+  p = n(246965),
+  C = n(703656),
   g = n(706454),
   S = n(933429),
   A = n(395361),
@@ -180,12 +180,12 @@ children: e => {
         ]
       });
     case s.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
-      return (0, i.jsx)(C.Z, {
+      return (0, i.jsx)(p.Z, {
         dismissCurrentNotice: () => S(x.L.UNKNOWN),
         subscriptionTier: L.Si.TIER_2
       });
     case s.z.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
-      return (0, i.jsx)(C.Z, {
+      return (0, i.jsx)(p.Z, {
         dismissCurrentNotice: () => S(x.L.UNKNOWN),
         subscriptionTier: L.Si.TIER_0
       });
@@ -239,7 +239,7 @@ children: e => {
           (0, i.jsx)(r.PrimaryCTANoticeButton, {
             noticeType: b,
             onClick: () => {
-              (0, p.uL)(M.Z5c.SETTINGS('account'));
+              (0, C.uL)(M.Z5c.SETTINGS('account'));
             },
             children: Z.Z.Messages.CHANGE_EMAIL_SHORT
           })
@@ -258,7 +258,7 @@ children: e => {
           (0, i.jsx)(r.PrimaryCTANoticeButton, {
             noticeType: b,
             onClick: () => {
-              S(x.L.PRIMARY), (0, p.uL)(1 === y.length ? M.Z5c.GUILD_SETTINGS(y[0], 'role-subscriptions') : M.Z5c.PICK_GUILD_SETTINGS('role-subscriptions', void 0, 'server-subscriptions-finish-setting-up'));
+              S(x.L.PRIMARY), (0, C.uL)(1 === y.length ? M.Z5c.GUILD_SETTINGS(y[0], 'role-subscriptions') : M.Z5c.PICK_GUILD_SETTINGS('role-subscriptions', void 0, 'server-subscriptions-finish-setting-up'));
             },
             children: Z.Z.Messages.LETS_GO
           })

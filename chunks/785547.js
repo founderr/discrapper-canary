@@ -17,8 +17,8 @@ var i, a, s, r = n(735250),
   h = n(293245),
   N = n(417363),
   f = n(941128),
-  C = n(780570),
-  p = n(358085),
+  p = n(780570),
+  C = n(358085),
   g = n(814225),
   S = n(346329),
   A = n(701560),
@@ -99,7 +99,7 @@ if (e.isHidden())
 if (e.isPreorder())
   return 'preorder_wait';
 let i = null != n ? v[n] : null;
-return null != i ? i : null != t && t.type === R.vxO.UNINSTALLING ? 'uninstalling' : (0, p.isWeb)() ? 'play' : 'unsupported_os';
+return null != i ? i : null != t && t.type === R.vxO.UNINSTALLING ? 'uninstalling' : (0, C.isWeb)() ? 'play' : 'unsupported_os';
   }
   renderPlayButton() {
 let {
@@ -168,10 +168,10 @@ let {
 } = this.props;
 if (e)
   return null;
-let n = C.KJ(t);
+let n = p.KJ(t);
 if (null == n)
   return null;
-let i = n.type === R.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : C.xI(Number(n.progress), Number(n.total));
+let i = n.type === R.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : p.xI(Number(n.progress), Number(n.total));
 return (0, r.jsx)(d.Progress, {
   percent: i,
   size: d.Progress.Sizes.XSMALL,

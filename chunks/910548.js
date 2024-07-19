@@ -16,8 +16,8 @@ var i, a, s, r, l = n(735250),
   h = n(745510),
   N = n(64078),
   f = n(29270),
-  C = n(709586),
-  p = n(482207),
+  p = n(709586),
+  C = n(482207),
   g = n(702346),
   S = n(267642),
   A = n(739566),
@@ -152,7 +152,7 @@ switch (Math.floor(Math.random() * Object.keys(a).length)) {
   }()), {
 createMultipleConfettiAt: T,
 confettiCanvas: N
-  } = o.useContext(h.h), [f, C] = o.useState(null), p = (0, u.uR)(N, f), g = function(e, t) {
+  } = o.useContext(h.h), [f, p] = o.useState(null), C = (0, u.uR)(N, f), g = function(e, t) {
 if (null == e)
   return 'enter';
 switch (e) {
@@ -219,7 +219,7 @@ s
   ]), o.useEffect(() => {
 if (S && 'leaf_fall' === c) {
   let e = P[I].leafRotationDirection;
-  p.createConfetti({
+  C.createConfetti({
     id: ''.concat(b, '-').concat((0, _.Z)()),
     position: {
       type: 'static',
@@ -270,13 +270,13 @@ if (S && 'leaf_fall' === c) {
 }
   }, [
 S,
-p,
+C,
 I,
 c
   ]), (0, l.jsxs)(l.Fragment, {
 children: [
   (0, l.jsx)(u.Ji, {
-    ref: C,
+    ref: p,
     sprites: y,
     colors: D,
     spriteWidth: 45,
@@ -389,7 +389,7 @@ y = o.useCallback((e, t) => {
 className: x.iconWrapper,
 innerRef: M,
 onClick: r,
-children: (0, l.jsx)(C.Z, {
+children: (0, l.jsx)(p.Z, {
   className: x.icon,
   onMouseEnter: D
 })
@@ -404,7 +404,7 @@ children: [
     className: x.message,
     children: t
   }),
-  E ? (0, l.jsx)(p.ZP, {
+  E ? (0, l.jsx)(C.ZP, {
     children: (0, l.jsx)('div', {
       className: x.cannonWrapper,
       children: (0, l.jsx)(k, {

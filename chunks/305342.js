@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(934826),
   N = n(768318),
   f = n(570533),
-  C = n(971792),
-  p = n(629262),
+  p = n(971792),
+  C = n(629262),
   g = n(761966),
   S = n(893729),
   A = n(838940),
@@ -123,7 +123,7 @@ let {
   listingId: t,
   guildId: n,
   className: a
-} = e, s = (0, C.Z)(n, t), [l] = T.UE(t), c = (0, p.Z)(l), [d] = T.R7(t), u = T.qs(t, n), [_] = T.XZ(t, n);
+} = e, s = (0, p.Z)(n, t), [l] = T.UE(t), c = (0, C.Z)(l), [d] = T.R7(t), u = T.qs(t, n), [_] = T.XZ(t, n);
 return null == s && 0 === c.length && 0 === d.length && 0 === _.size ? null : (0, i.jsxs)('div', {
   className: r()(Z.subscriptionPerks, a),
   children: [
@@ -203,8 +203,8 @@ guildId: s,
 groupListingId: _,
 analyticsLocation: E
   } = e, f = (0, m.jO)(n), {
-openModal: C,
-canOpenModal: p,
+openModal: p,
+canOpenModal: C,
 cannotOpenReason: S,
 isCheckingTrialEligibility: A
   } = (0, x.Z)(f, s, _, E), P = (0, l.e7)([u.Z], () => u.Z.isSyncing), {
@@ -213,7 +213,7 @@ activeSubscriptionListing: U
   } = (0, h.Z)(_), y = (null == U ? void 0 : U.id) === n, B = (null == b ? void 0 : b.status) === v.O0b.CANCELED, [k, G] = a.useState(!1), [F, w] = a.useState(!1), V = a.useCallback(e => {
 let t = !1;
 null != e && (t = e.scrollHeight - e.clientHeight > 1), w(t);
-  }, []), [H] = T._T(n), [Y] = T.PK(n), [W] = T.TT(n), [K] = T.F2(n), z = (0, N.Z)(s, n), Q = null != W && null == b && z, q = (0, c.Z)(M.iP), [X, J] = a.useState(!1), $ = X || !q, ee = (0, l.e7)([d.Z], () => d.Z.isViewingServerShop(s)), et = (null == f ? void 0 : f.published) === !0, en = (null == f ? void 0 : f.soft_deleted) === !0, ei = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
+  }, []), [H] = T._T(n), [Y] = T.PK(n), [W] = T.TT(n), [z] = T.F2(n), K = (0, N.Z)(s, n), Q = null != W && null == b && K, q = (0, c.Z)(M.iP), [X, J] = a.useState(!1), $ = X || !q, ee = (0, l.e7)([d.Z], () => d.Z.isViewingServerShop(s)), et = (null == f ? void 0 : f.published) === !0, en = (null == f ? void 0 : f.soft_deleted) === !0, ei = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
   return (et || ee) && !en ? (0, i.jsxs)('article', {
 className: Z.container,
 'aria-label': H,
@@ -230,7 +230,7 @@ children: [
       (0, i.jsx)(o.Tooltip, {
         clickableOnMobile: !0,
         text: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({
-          activeTrialUserLimit: null != K ? K : 0
+          activeTrialUserLimit: null != z ? z : 0
         }),
         children: e => (0, i.jsx)(o.CircleInformationIcon, {
           size: 'xs',
@@ -268,14 +268,14 @@ children: [
                 disabled: !0,
                 children: B ? L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
               }) : (0, i.jsx)(o.Tooltip, {
-                text: p ? null : S,
-                'aria-label': null !== (t = p && S) && void 0 !== t && t,
+                text: C ? null : S,
+                'aria-label': null !== (t = C && S) && void 0 !== t && t,
                 children: e => (0, i.jsx)(g.Z, {
                   ...e,
                   fullWidth: !0,
-                  disabled: !p || P,
+                  disabled: !C || P,
                   submitting: A,
-                  onClick: C,
+                  onClick: p,
                   onlyShineOnHover: !0,
                   children: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
                 })

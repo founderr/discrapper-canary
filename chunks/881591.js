@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(695346),
   N = n(592125),
   f = n(655354),
-  C = n(324081),
-  p = n(240126),
+  p = n(324081),
+  C = n(240126),
   g = n(791914),
   S = n(981631),
   A = n(689938),
@@ -89,7 +89,7 @@ s = a.complete,
 l = a.saveData,
 d = a.message,
 m = (0, c.e7)([N.Z], () => N.Z.getChannel(l.channelId)),
-p = () => {
+C = () => {
   (0, I.uL)(S.Z5c.CHANNEL(null == m ? void 0 : m.getGuildId(), l.channelId, l.messageId));
 },
 g = null;
@@ -102,9 +102,9 @@ children: 'The message isn\'t accessible. We will deal with this later.'
   }) : (0, i.jsxs)('div', {
 className: O.container,
 children: [
-  (0, i.jsx)(C.Z, {
+  (0, i.jsx)(p.Z, {
     channel: m,
-    gotoChannel: p,
+    gotoChannel: C,
     children: (0, i.jsxs)('div', {
       className: R.reminderActions,
       children: [
@@ -164,7 +164,7 @@ children: [
     children: [
       (0, i.jsx)(f.Z, {
         className: O.jumpMessageButton,
-        onJump: p
+        onJump: C
       }),
       (0, i.jsx)(E.Z, {
         message: d,
@@ -182,7 +182,7 @@ children: [
 }
 
 function L() {
-  return (0, i.jsx)(p.Z, {
+  return (0, i.jsx)(C.Z, {
 Icon: u.DoubleCheckmarkLargeIcon,
 header: A.Z.Messages.MESSAGE_REMINDERS_EMPTY,
 tip: A.Z.Messages.MESSAGE_REMINDERS_EMPTY_TIP

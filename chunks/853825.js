@@ -45,7 +45,7 @@ analyticsLocations: b
   } = (0, a.ZP)([
 ...P,
 r.Z.SIMPLIFIED_PROFILE_MODAL
-  ]), y = i === g.ME ? void 0 : i, D = (0, I.ZP)(n.id, y), F = l.createRef(), B = (0, t.Z)(F);
+  ]), y = i === g.ME ? void 0 : i, D = (0, I.ZP)(n.id, y), B = l.createRef(), F = (0, t.Z)(B);
   return (0, s.jsx)(a.Gt, {
 value: b,
 children: (0, s.jsx)(u.Mt, {
@@ -66,7 +66,7 @@ children: (0, s.jsx)(u.Mt, {
         user: n,
         displayProfile: D,
         profileType: T.y0.FULL_SIZE,
-        ref: F,
+        ref: B,
         children: [
           (0, s.jsx)(p.Z, {
             profileType: T.y0.FULL_SIZE,
@@ -157,7 +157,7 @@ children: (0, s.jsx)(u.Mt, {
       }),
       (null == D ? void 0 : D.profileEffectId) != null && (0, s.jsx)(d.Z, {
         profileEffectId: null == D ? void 0 : D.profileEffectId,
-        isHovering: B
+        isHovering: F
       })
     ]
   })

@@ -6,7 +6,7 @@ return d;
 return T;
   },
   QY: function() {
-return C;
+return p;
   },
   Vj: function() {
 return c;
@@ -154,7 +154,7 @@ cursorScope: n
   });
 }
 
-function C(e, t) {
+function p(e, t) {
   i.Z.dispatch({
 type: 'SEARCH_SET_SHOW_BLOCKED_RESULTS',
 searchId: e,

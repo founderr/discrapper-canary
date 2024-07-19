@@ -18,14 +18,14 @@ t.Z = function(e) {
 className: n,
 expansionSpring: o,
 isExpanded: C,
-isExpansionAnimationComplete: _,
-quest: f,
+isExpansionAnimationComplete: f,
+quest: _,
 useReducedMotion: h
-  } = e, E = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {
-percentComplete: T
-  } = (0, l.Rf)(f), S = (0, l.Jf)(f), N = null != S ? S.completedRatio > 0 : T > 0;
+  } = e, E = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {
+percentComplete: S
+  } = (0, l.Rf)(_), T = (0, l.Jf)(_), A = null != T ? T.completedRatio > 0 : S > 0;
   return (0, s.jsxs)(a.animated.div, {
-'aria-hidden': C && _,
+'aria-hidden': C && f,
 className: r()(n, g.contentCollapsed, {
   [g.contentCollapsedExpanded]: C,
   [g.contentCollapsedAccepted]: E
@@ -44,7 +44,7 @@ style: {
 },
 children: [
   (0, s.jsx)(x.Z, {
-    quest: f,
+    quest: _,
     useReducedMotion: h
   }),
   (0, s.jsx)('div', {
@@ -54,13 +54,13 @@ children: [
       children: [
         (0, s.jsx)(p.Z, {
           className: g.questProgressRewardTile,
-          quest: f,
+          quest: _,
           questContent: c.jn.QUEST_BAR,
           autoplay: !1
         }),
-        N ? (0, s.jsx)(u.Z, {
+        A ? (0, s.jsx)(u.Z, {
           className: g.questProgressBar,
-          quest: f
+          quest: _
         }) : (0, s.jsx)(i.Text, {
           className: g.questProgressHint,
           color: 'always-white',
@@ -73,14 +73,14 @@ children: [
       children: [
         (0, s.jsx)(d.Z, {
           className: g.partnerBranding,
-          quest: f
+          quest: _
         }),
         (0, s.jsx)(i.Heading, {
           color: 'always-white',
           variant: 'heading-sm/medium',
           className: g.questName,
           children: m.Z.Messages.QUEST.format({
-            questName: f.config.messages.questName
+            questName: _.config.messages.questName
           })
         })
       ]

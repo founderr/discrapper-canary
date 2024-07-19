@@ -38,11 +38,11 @@ let {
   registerComponent: m,
   unregisterComponent: g,
   expansionSpring: C
-} = o.useContext(c), _ = o.useRef(null), f = o.useRef(null), h = o.useContext(i.T);
+} = o.useContext(c), f = o.useRef(null), _ = o.useRef(null), h = o.useContext(i.T);
 o.useEffect(() => {
   x();
 }, [x]), o.useEffect(() => {
-  let e = _.current;
+  let e = f.current;
   return null != e && m(e, l, d), () => {
     null != e && g(l, d);
   };
@@ -53,8 +53,8 @@ o.useEffect(() => {
   g
 ]);
 let E = document.getElementById(h ? 'quest-bar-v2-preview-' + l : 'quest-bar-v2-' + l),
-  T = null;
-return null == E ? T = null : u && null != C ? T = (0, s.jsxs)(s.Fragment, {
+  S = null;
+return null == E ? S = null : u && null != C ? S = (0, s.jsxs)(s.Fragment, {
   children: [
     'collapsed' === d && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
       style: {
@@ -70,7 +70,7 @@ return null == E ? T = null : u && null != C ? T = (0, s.jsxs)(s.Fragment, {
           ]
         })
       },
-      children: n(f)
+      children: n(_)
     }), E),
     'expanded' === d && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
       style: {
@@ -86,17 +86,17 @@ return null == E ? T = null : u && null != C ? T = (0, s.jsxs)(s.Fragment, {
           ]
         })
       },
-      children: n(f)
+      children: n(_)
     }), E)
   ]
-}) : 'collapsed' === d && (T = (0, r.createPortal)(n(f), E)), (0, s.jsxs)('div', {
+}) : 'collapsed' === d && (S = (0, r.createPortal)(n(_), E)), (0, s.jsxs)('div', {
   style: {
     opacity: null == E || p ? 1 : 0
   },
   ref: t,
   children: [
-    n(_),
-    !p && T
+    n(f),
+    !p && S
   ]
 });
   }),

@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(226192),
   N = n(36459),
   f = n(336197),
-  C = n(103575),
-  p = n(496675),
+  p = n(103575),
+  C = n(496675),
   g = n(594174),
   S = n(702346),
   A = n(5192),
@@ -71,7 +71,7 @@ showUsernamePopout: r
 function w(e, t) {
   return a.useMemo(() => {
 if (null != t)
-  return n => (0, i.jsx)(C.Z, {
+  return n => (0, i.jsx)(p.Z, {
     ...n,
     location: 'AutomodFlagToChannel',
     userId: t.id,
@@ -185,7 +185,7 @@ return null;
   }
 }
 
-function K(e) {
+function z(e) {
   let {
 alertActionsExecution: t,
 guildId: n
@@ -198,7 +198,7 @@ children: a.map(e => (0, i.jsx)(W, {
 }, e.actionType))
   });
 }
-let z = a.memo(function(e) {
+let K = a.memo(function(e) {
   let t, {
   message: n,
   channel: a,
@@ -257,7 +257,7 @@ channel: l
   } = e, {
 avatarSrc: o,
 eventHandlers: {
-  onMouseEnter: C,
+  onMouseEnter: p,
   onMouseLeave: g
 }
   } = (0, D.m)(!0), {
@@ -267,7 +267,7 @@ onFocus: A,
 isFocused: x,
 handleFocus: M,
 handleBlur: Z
-  } = (0, P.bb)(A), b = (0, u.e7)([E.Z], () => E.Z.keyboardModeEnabled), j = (0, u.e7)([p.Z], () => p.Z.can(U.Plq.MANAGE_MESSAGES, l), [l]), {
+  } = (0, P.bb)(A), b = (0, u.e7)([E.Z], () => E.Z.keyboardModeEnabled), j = (0, u.e7)([C.Z], () => C.Z.can(U.Plq.MANAGE_MESSAGES, l), [l]), {
 ruleName: w,
 embedChannel: Y,
 decisionId: W,
@@ -307,7 +307,7 @@ l,
 s.id
   ]), ed = (0, B.L9)(Number($)), eu = null != ee, e_ = j && null != J && (null == et || !et.actions.hasOwnProperty(m.d.DELETE_USER_MESSAGE));
   return (0, i.jsx)('div', {
-onMouseEnter: C,
+onMouseEnter: p,
 onMouseLeave: g,
 children: (0, i.jsx)(S.Z, {
   className: r()(G.mainContainer, {
@@ -343,7 +343,7 @@ children: (0, i.jsx)(S.Z, {
               type: y.Hb.SYSTEM_DM,
               className: G.systemTag
             }),
-            (0, i.jsx)(z, {
+            (0, i.jsx)(K, {
               message: s,
               channel: l,
               embedChannel: Y,
@@ -523,7 +523,7 @@ children: (0, i.jsx)(S.Z, {
                 })
               ]
             }) : null,
-            null != et ? (0, i.jsx)(K, {
+            null != et ? (0, i.jsx)(z, {
               alertActionsExecution: et,
               guildId: l.guild_id
             }) : null

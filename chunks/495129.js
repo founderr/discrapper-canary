@@ -21,8 +21,8 @@ var a = n(120356),
   h = n(594174),
   N = n(938475),
   f = n(5192),
-  C = n(981631),
-  p = n(689938),
+  p = n(981631),
+  C = n(689938),
   g = n(373841);
 
 function S(e) {
@@ -45,21 +45,21 @@ let {
   rawName: t
 } = e;
 return 'voice_user_ids' === t;
-  })) || void 0 === x ? void 0 : x.rawValue, Y = null != H ? H.split(',') : [], W = (0, r.Wu)([h.default], () => Y.map(e => h.default.getUser(e)).filter(Boolean)), K = y && null != k ? p.Z.Messages.WAVED_AT_USER.format({
+  })) || void 0 === x ? void 0 : x.rawValue, Y = null != H ? H.split(',') : [], W = (0, r.Wu)([h.default], () => Y.map(e => h.default.getUser(e)).filter(Boolean)), z = y && null != k ? C.Z.Messages.WAVED_AT_USER.format({
 username: F
-  }) : p.Z.Messages.WAVED_AT_YOU.format({
+  }) : C.Z.Messages.WAVED_AT_YOU.format({
 username: G.nick
-  }), z = null != D && null != j, Q = null;
-  Q = z ? y || V ? p.Z.Messages.YOU_ARE_IN_CHANNEL.format({
+  }), K = null != D && null != j, Q = null;
+  Q = K ? y || V ? C.Z.Messages.YOU_ARE_IN_CHANNEL.format({
 channelHook: (e, t) => (0, i.jsx)(_.Z, {
   channel: null != j ? j : void 0
 }, t)
-  }) : p.Z.Messages.THEY_ARE_IN_CHANNEL.format({
+  }) : C.Z.Messages.THEY_ARE_IN_CHANNEL.format({
 channelHook: (e, t) => (0, i.jsx)(_.Z, {
   channel: null != j ? j : void 0
 }, t)
-  }) : p.Z.Messages.CANNOT_ACCESS_HANGOUT, 0 === w.length && (Q = y ? p.Z.Messages.HANGOUT_OVER_SENDER : p.Z.Messages.HANGOUT_OVER_RECEIVER);
-  let q = y ? p.Z.Messages.WAVE_AGAIN : p.Z.Messages.WAVE_BACK;
+  }) : C.Z.Messages.CANNOT_ACCESS_HANGOUT, 0 === w.length && (Q = y ? C.Z.Messages.HANGOUT_OVER_SENDER : C.Z.Messages.HANGOUT_OVER_RECEIVER);
+  let q = y ? C.Z.Messages.WAVE_AGAIN : C.Z.Messages.WAVE_BACK;
   return (0, i.jsxs)('div', {
 children: [
   (0, i.jsxs)('div', {
@@ -68,7 +68,7 @@ children: [
       (0, i.jsx)(l.Text, {
         variant: 'text-md/semibold',
         color: 'header-primary',
-        children: K
+        children: z
       }),
       (0, i.jsx)(l.Text, {
         variant: 'text-sm/normal',
@@ -108,17 +108,17 @@ children: [
       (0, i.jsxs)(l.Button, {
         color: l.Button.Colors.BRAND,
         onClick: () => {
-          null != b && null != P && ((0, I.uL)(C.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
+          null != b && null != P && ((0, I.uL)(p.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
         },
         className: g.button,
         innerClassName: g.buttonInner,
-        disabled: V || !z,
+        disabled: V || !K,
         children: [
           (0, i.jsx)(l.VoiceNormalIcon, {
             size: 'md',
             color: 'currentColor'
           }),
-          p.Z.Messages.JOIN_HANGOUT
+          C.Z.Messages.JOIN_HANGOUT
         ]
       }),
       (0, i.jsx)(l.Button, {

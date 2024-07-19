@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(479446),
   N = n(930114),
   f = n(981632),
-  C = n(703656),
-  p = n(314897),
+  p = n(703656),
+  C = n(314897),
   g = n(82142),
   S = n(283595),
   A = n(594174),
@@ -310,7 +310,7 @@ super(...e), G(this, 'handleViewLibrary', e => {
   let {
     libraryApplication: t
   } = this.props;
-  e.preventDefault(), null != t && t.isHidden() ? (0, C.uL)(U.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, C.uL)(U.Z5c.APPLICATION_LIBRARY, {
+  e.preventDefault(), null != t && t.isHidden() ? (0, p.uL)(U.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, p.uL)(U.Z5c.APPLICATION_LIBRARY, {
     state: {
       applicationId: null != t ? t.id : void 0
     }
@@ -395,7 +395,7 @@ t.Z = c.ZP.connectStores([
   A.default,
   S.Z,
   R.Z,
-  p.default,
+  C.default,
   m.Z
 ], e => {
   let {
@@ -409,7 +409,7 @@ giftCode: a,
 gifter: r,
 currentUser: i,
 subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, b.oE)(a.subscriptionPlanId) : null,
-isSelfGift: null != a ? p.default.getId() === a.userId : p.default.getId() === n.id,
+isSelfGift: null != a ? C.default.getId() === a.userId : C.default.getId() === n.id,
 resolved: g.Z.getIsResolved(t),
 libraryApplication: null != s && (null == a ? void 0 : a.entitlementBranches) != null ? Z.z2(a.entitlementBranches, s, S.Z) : null,
 useReducedMotion: l

@@ -21,8 +21,8 @@ let {
   initialPageSize: I
 } = e, m = (0, a.e7)([d.Z], () => d.Z.shouldReload()), T = i.useRef(!1), [h, N] = i.useState(!1), {
   initialized: f,
-  loading: C,
-  items: p,
+  loading: p,
+  items: C,
   hasMore: g,
   cursor: S,
   errored: A
@@ -48,10 +48,10 @@ i.useEffect(() => ((0, o.Vk)(!0), () => (0, o.Vk)(!1)), []), i.useEffect(() => {
 ]);
 let x = (0, r.Z)();
 i.useEffect(() => () => {
-  _ ? !x() && (A || p.length > 100) && (0, o.jF)() : n && p.length > 100 && (0, o.jF)();
+  _ ? !x() && (A || C.length > 100) && (0, o.jF)() : n && C.length > 100 && (0, o.jF)();
 }, [
   n,
-  p,
+  C,
   _,
   x,
   A
@@ -93,8 +93,8 @@ let M = i.useCallback(async e => {
 ]);
 return {
   initialized: f,
-  loading: C,
-  items: p,
+  loading: p,
+  items: C,
   hasMore: g,
   loadMore: M,
   loadingMore: h,

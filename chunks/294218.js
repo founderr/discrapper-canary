@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(739566),
   N = n(492593),
   f = n(453687),
-  C = n(25015),
-  p = n(689674),
+  p = n(25015),
+  C = n(689674),
   g = n(438075),
   S = n(963550),
   A = n(845080),
@@ -45,16 +45,16 @@ trackAnnouncementViews: k = !1,
   } = e, F = a.type === M.uaV.POLL_RESULT || null !== (t = e.disableInteraction) && void 0 !== t && t, w = a.isFirstMessageInForumPost(D), V = (0, d.A)((null !== (n = a.editedTimestamp) && void 0 !== n ? n : a.timestamp).valueOf()), {
 content: H,
 hasSpoilerEmbeds: Y
-  } = (0, C.Z)(a, {
+  } = (0, p.Z)(a, {
 hideSimpleEmbedContent: b,
 allowList: w || V,
 allowHeading: w || V,
 allowLinks: !0,
 previewLinkTarget: !0
-  }), W = a.type === M.uaV.REPLY ? a.messageReference : void 0, K = (0, o.e7)([u.Z], () => u.Z.getMessageByReference(W)), z = (0, l.JA)(a.id), Q = (0, h.ZP)(a), q = (0, o.e7)([_.Z], () => a.hasFlag(M.iLy.HAS_THREAD) && _.Z.getChannel(m.default.castMessageIdAsChannelId(a.id))), X = (0, c.p9)({
+  }), W = a.type === M.uaV.REPLY ? a.messageReference : void 0, z = (0, o.e7)([u.Z], () => u.Z.getMessageByReference(W)), K = (0, l.JA)(a.id), Q = (0, h.ZP)(a), q = (0, o.e7)([_.Z], () => a.hasFlag(M.iLy.HAS_THREAD) && _.Z.getChannel(m.default.castMessageIdAsChannelId(a.id))), X = (0, c.p9)({
 guildId: D.guild_id,
 roleId: Q.iconRoleId
-  }), J = (0, o.e7)([E.Z], () => E.Z.can(M.Plq.CREATE_INSTANT_INVITE, D)), $ = (0, p.Z)({
+  }), J = (0, o.e7)([E.Z], () => E.Z.can(M.Plq.CREATE_INSTANT_INVITE, D)), $ = (0, C.Z)({
 message: a,
 channel: D,
 enabled: k
@@ -70,7 +70,7 @@ className: r()(L, {
   [v.disableInteraction]: F
 }),
 disableInteraction: F,
-childrenRepliedMessage: (0, x.Z)(a, D, W, K, s),
+childrenRepliedMessage: (0, x.Z)(a, D, W, z, s),
 childrenExecutedCommand: (0, O.Z)(a, D, s),
 childrenHeader: (0, A.Z)({
   ...e,
@@ -91,7 +91,7 @@ hasReply: a.type === M.uaV.REPLY,
 'aria-labelledby': ee,
 'aria-describedby': et,
 messageRef: $,
-...z,
+...K,
 ...G
   });
 });

@@ -1,6 +1,6 @@
 n.d(t, {
   Q: function() {
-return S;
+return T;
   }
 });
 var s = n(735250);
@@ -18,16 +18,16 @@ var o = n(120356),
   m = n(46140),
   g = n(981631),
   C = n(689938),
-  _ = n(276458);
+  f = n(276458);
 
-function f(e) {
+function _(e) {
   let {
 quest: t,
 isConnected: n,
 consoleType: o
   } = e;
   return (0, s.jsx)(l.Clickable, {
-className: _.connectConsoleButtonWrapper,
+className: f.connectConsoleButtonWrapper,
 onClick: () => {
   (0, u._3)({
     questId: t.id,
@@ -38,10 +38,10 @@ onClick: () => {
   });
 },
 children: o === g.ABu.PLAYSTATION ? (0, s.jsx)(a.K, {
-  colorClass: r()(_.connectConsoleButton, n ? _.playstationButtonConnected : _.connectConsoleButtonUnconnected),
+  colorClass: r()(f.connectConsoleButton, n ? f.playstationButtonConnected : f.connectConsoleButtonUnconnected),
   size: 'sm'
 }) : (0, s.jsx)(i.a, {
-  colorClass: r()(_.connectConsoleButton, n ? _.xboxButtonConnected : _.connectConsoleButtonUnconnected),
+  colorClass: r()(f.connectConsoleButton, n ? f.xboxButtonConnected : f.connectConsoleButtonUnconnected),
   size: 'sm'
 })
   });
@@ -53,7 +53,7 @@ text: t,
 quest: n
   } = e;
   return (0, s.jsx)(l.Clickable, {
-className: _.showConnectionsButton,
+className: f.showConnectionsButton,
 onClick: () => {
   (0, u._3)({
     questId: n.id,
@@ -78,10 +78,10 @@ playstationAccounts: o,
 xboxAndPlaystationAccounts: a
   } = e, i = a.slice(0, 2), c = a.length > 0, d = n.length > 0, u = o.length > 0;
   return (0, s.jsxs)('div', {
-className: _.inlineConsoleConnectionDetails,
+className: f.inlineConsoleConnectionDetails,
 children: [
   (0, s.jsxs)('div', {
-    className: _.inlineConsoleConnectionDetailsUpper,
+    className: f.inlineConsoleConnectionDetailsUpper,
     children: [
       (0, s.jsx)(l.Text, {
         color: 'header-secondary',
@@ -89,17 +89,17 @@ children: [
         children: c ? C.Z.Messages.QUESTS_CONNECTED : C.Z.Messages.QUESTS_SELECT_TO_START
       }),
       (0, s.jsxs)('div', {
-        className: _.inlineConsoleConnectionDetailsIcons,
+        className: f.inlineConsoleConnectionDetailsIcons,
         children: [
-          (0, s.jsx)(f, {
+          (0, s.jsx)(_, {
             consoleType: g.ABu.PLAYSTATION,
             isConnected: u,
             quest: t
           }),
           (0, s.jsx)('div', {
-            className: _.consoleIconDivider
+            className: f.consoleIconDivider
           }),
-          (0, s.jsx)(f, {
+          (0, s.jsx)(_, {
             consoleType: g.ABu.XBOX,
             isConnected: d,
             quest: t
@@ -109,10 +109,10 @@ children: [
     ]
   }),
   c && (0, s.jsxs)('div', {
-    className: _.inlineConsoleConnectionDetailsLower,
+    className: f.inlineConsoleConnectionDetailsLower,
     children: [
       i.map((e, t) => (0, s.jsxs)('div', {
-        className: r()(_.inlineConsoleConnectionDetailsLowerItem, t > 0 ? _.marginTop4px : void 0),
+        className: r()(f.inlineConsoleConnectionDetailsLowerItem, t > 0 ? f.marginTop4px : void 0),
         children: [
           (0, s.jsx)(l.Text, {
             color: 'header-secondary',
@@ -136,7 +136,7 @@ children: [
   });
 }
 
-function T(e) {
+function S(e) {
   let {
 xboxAndPlaystationAccounts: t,
 quest: n
@@ -147,7 +147,7 @@ quest: n
   }) : null;
 }
 
-function S(e) {
+function T(e) {
   let t = (0, x.P)({
 location: m.dr.QUESTS_BAR
   });
@@ -160,7 +160,7 @@ children: [
   }),
   t ? (0, s.jsx)(E, {
     ...e
-  }) : (0, s.jsx)(T, {
+  }) : (0, s.jsx)(S, {
     ...e
   })
 ]

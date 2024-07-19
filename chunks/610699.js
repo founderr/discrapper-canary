@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(100527),
   N = n(906732),
   f = n(835473),
-  C = n(471445),
-  p = n(955415),
+  p = n(471445),
+  C = n(955415),
   g = n(601964),
   S = n(592125),
   A = n(430824),
@@ -90,7 +90,7 @@ isStacked: a,
 hasEnded: s
   } = e;
   if (null != t && null != n) {
-let e = (0, C.KS)(t, n);
+let e = (0, p.KS)(t, n);
 return (0, i.jsxs)('div', {
   className: r()(b.channel, {
     [b.stacked]: a,
@@ -134,7 +134,7 @@ function k(e) {
   var t, n;
   let s, l, {
   invite: d,
-  getAcceptInviteContext: C
+  getAcceptInviteContext: p
 } = e,
 {
   approximate_member_count: x,
@@ -162,8 +162,8 @@ V,
 Y
   ]);
   let W = (0, c.e7)([A.Z], () => null != d.guild ? A.Z.getGuild(d.guild.id) : null, [d]),
-K = (0, f.Z)([G.id])[0],
-z = (0, c.e7)([E.ZP], () => {
+z = (0, f.Z)([G.id])[0],
+K = (0, c.e7)([E.ZP], () => {
   var e;
   return (null == d ? void 0 : d.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === G.id;
 }),
@@ -198,15 +198,15 @@ if (null == d.guild)
   return (0, i.jsx)(v.Z, {});
 W = new g.ZP(d.guild);
   }
-  let ea = ei && !X || ei && z,
+  let ea = ei && !X || ei && K,
 es = () => {
   _.Z.acceptInviteAndTransitionToInviteChannel({
     inviteKey: d.code,
-    context: C('Invite Button Embed'),
+    context: p('Invite Button Embed'),
     analyticsLocations: J
   });
 };
-  return (ei && z && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), l = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START, null == d.code || '' === d.code) ? null : (0, i.jsxs)('div', {
+  return (ei && K && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), l = K ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START, null == d.code || '' === d.code) ? null : (0, i.jsxs)('div', {
 className: b.container,
 ref: F,
 children: [
@@ -217,7 +217,7 @@ children: [
     }),
     children: (0, i.jsx)(m.Z, {
       imageBackground: $,
-      applicationName: null !== (n = null == K ? void 0 : K.name) && void 0 !== n ? n : '',
+      applicationName: null !== (n = null == z ? void 0 : z.name) && void 0 !== n ? n : '',
       imageClassName: r()(b.img, {
         [b.large]: w,
         [b.stacked]: H
@@ -228,7 +228,7 @@ children: [
       })
     })
   }),
-  (0, i.jsxs)(p.Z, {
+  (0, i.jsxs)(C.Z, {
     className: r()(b.content, {
       [b.large]: w,
       [b.stacked]: H
@@ -243,7 +243,7 @@ children: [
           (0, i.jsx)(u.Heading, {
             className: b.heading,
             variant: 'heading-xl/semibold',
-            children: null == K ? void 0 : K.name
+            children: null == z ? void 0 : z.name
           }),
           (0, i.jsx)(B, {
             channel: q,

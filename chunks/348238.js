@@ -62,8 +62,8 @@ var i = n(735250),
   h = n(358085),
   N = n(51144),
   f = n(91047),
-  C = n(901461),
-  p = n(50284),
+  p = n(901461),
+  C = n(50284),
   g = n(981631),
   S = n(689938);
 
@@ -142,7 +142,7 @@ id: o
   } = t, {
 id: E,
 flags: I
-  } = e, m = (0, T.yE)(I, g.iLy.EPHEMERAL), N = (0, C.Z)(e), f = (0, c.bp)();
+  } = e, m = (0, T.yE)(I, g.iLy.EPHEMERAL), N = (0, p.Z)(e), f = (0, c.bp)();
   return a.useCallback((e, t) => {
 if (m)
   return;
@@ -253,7 +253,7 @@ id: n
 id: i
   } = t;
   return a.useCallback(e => {
-e.altKey && (e.preventDefault(), (0, p.Z)(i, n));
+e.altKey && (e.preventDefault(), (0, C.Z)(i, n));
   }, [
 i,
 n

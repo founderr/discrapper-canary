@@ -21,8 +21,8 @@ var a = n(120356),
   h = n(158776),
   N = n(594174),
   f = n(2093),
-  C = n(153124),
-  p = n(689938),
+  p = n(153124),
+  C = n(689938),
   g = n(444771);
 let S = {
   top: 8,
@@ -39,7 +39,7 @@ gotoChannel: a,
 mentionCount: s,
 channelState: l,
 toggleCollapsed: c
-  } = e, d = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, C.Dt)()));
+  } = e, d = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, p.Dt)()));
   return (0, i.jsx)(o.FocusRing, {
 offset: S,
 children: (0, i.jsxs)('div', {
@@ -118,7 +118,7 @@ function M(e) {
 channel: t,
 gotoChannel: n,
 mentionCount: a
-  } = e, r = (0, l.e7)([T.Z], () => T.Z.getGuild(t.guild_id)), c = (0, l.e7)([m.Z], () => m.Z.getChannel(t.parent_id)), d = (0, _.KS)(t, r), E = (0, u.ZP)(t, !1), I = null == c ? null == r ? void 0 : r.name : ''.concat(null == r ? void 0 : r.name, ' \u203A ').concat(c.name), h = t.isMultiUserDM() ? p.Z.Messages.MEMBERS_HEADER.format({
+  } = e, r = (0, l.e7)([T.Z], () => T.Z.getGuild(t.guild_id)), c = (0, l.e7)([m.Z], () => m.Z.getChannel(t.parent_id)), d = (0, _.KS)(t, r), E = (0, u.ZP)(t, !1), I = null == c ? null == r ? void 0 : r.name : ''.concat(null == r ? void 0 : r.name, ' \u203A ').concat(c.name), h = t.isMultiUserDM() ? C.Z.Messages.MEMBERS_HEADER.format({
 members: t.recipients.length + 1
   }) : t.isPrivate() ? (0, i.jsx)(v, {
 channel: t

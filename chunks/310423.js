@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(594174),
   N = n(739566),
   f = n(981631),
-  C = n(665692),
-  p = n(689938),
+  p = n(665692),
+  C = n(689938),
   g = n(69038);
 let S = {
 tag: 'span',
@@ -129,7 +129,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
                 }
               }),
               children: [
-                C.ME,
+                p.ME,
                 e.nick
               ]
             });
@@ -142,7 +142,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           null != t && (g = (0, i.jsxs)(E.Z, {
             ...A,
             children: [
-              C.zy,
+              p.zy,
               t.name
             ]
           }));
@@ -154,7 +154,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           null != t && (g = (0, i.jsxs)(E.Z, {
             ...A,
             children: [
-              C.ME,
+              p.ME,
               t.name
             ]
           }));
@@ -166,7 +166,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           if (null != t)
             g = (0, i.jsxs)(E.Z, {
               children: [
-                C.ME,
+                p.ME,
                 t.name
               ]
             });
@@ -184,7 +184,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
                   }
                 }),
                 children: [
-                  C.ME,
+                  p.ME,
                   e.nick
                 ]
               });
@@ -193,7 +193,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           break;
         }
         case c.jw.ATTACHMENT:
-          g = R(p.Z.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
+          g = R(C.Z.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
           break;
         default: {
           let e = null == Z ? void 0 : null === (d = Z.choices) || void 0 === d ? void 0 : d.find(e => e.value === O.value);

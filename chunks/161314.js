@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(430824),
   N = n(626135),
   f = n(76535),
-  C = n(866104),
-  p = n(886176),
+  p = n(866104),
+  C = n(886176),
   g = n(981631),
   S = n(689938),
   A = n(638948);
@@ -55,7 +55,7 @@ children: (0, i.jsx)(d.Spinner, {})
   }) : null == s || null == O ? null : (0, i.jsxs)('div', {
 className: A.guildShopEmbed,
 children: [
-  (0, i.jsx)(C.Z, {
+  (0, i.jsx)(p.Z, {
     coverImageAsset: null !== (t = O.cover_image_asset) && void 0 !== t ? t : null
   }),
   (0, i.jsx)(d.Spacer, {
@@ -64,7 +64,7 @@ children: [
   (0, i.jsxs)('div', {
     className: A.serverShopLabel,
     children: [
-      (0, i.jsx)(p.Z, {
+      (0, i.jsx)(C.Z, {
         height: '16px',
         width: '16px',
         color: o.Z.INTERACTIVE_NORMAL
@@ -138,7 +138,7 @@ children: [
         children: (0, i.jsxs)('div', {
           className: A.guildShopEmbedCtaContent,
           children: [
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(C.Z, {
               height: '18px',
               width: '18px'
             }),

@@ -26,8 +26,8 @@ var i = n(735250),
   h = n(210887),
   N = n(592125),
   f = n(375954),
-  C = n(496675),
-  p = n(933429),
+  p = n(496675),
+  C = n(933429),
   g = n(451478),
   S = n(387204),
   A = n(626135),
@@ -153,12 +153,12 @@ super(...e), v(this, 'handleClickJump', e => {
 });
   }
 }
-let D = d.ZP.connectStores([C.Z], e => {
+let D = d.ZP.connectStores([p.Z], e => {
   let {
 channel: t
   } = e;
   return {
-canManageMessages: null != t && C.Z.can(O.Plq.MANAGE_MESSAGES, t)
+canManageMessages: null != t && p.Z.can(O.Plq.MANAGE_MESSAGES, t)
   };
 })(b);
 
@@ -174,9 +174,9 @@ renderEmptyState: m,
 renderItem: T,
 getProTip: N,
 scrollerClassName: f,
-className: C,
+className: p,
 listName: v
-  } = e, Z = a.useRef(null), P = (0, I.Z)(v, Z), b = (0, d.e7)([p.Z], () => p.Z.hasNotice()), D = (0, d.e7)([g.Z], () => g.Z.windowSize());
+  } = e, Z = a.useRef(null), P = (0, I.Z)(v, Z), b = (0, d.e7)([C.Z], () => C.Z.hasNotice()), D = (0, d.e7)([g.Z], () => g.Z.windowSize());
   a.useEffect(() => {
 A.default.track(O.rMx.OPEN_POPOUT, {
   type: t
@@ -253,7 +253,7 @@ F = {
   b && (F.maxHeight -= 40);
   let w = null != _ && s;
   return (0, i.jsx)('div', {
-className: r()(C, M.messagesPopoutWrap),
+className: r()(p, M.messagesPopoutWrap),
 style: F,
 onClick: L,
 onDoubleClick: L,
@@ -303,8 +303,8 @@ loadMore: c,
 onJump: u,
 canCloseAllMessages: I = !1,
 renderHeader: h,
-renderEmptyState: C,
-renderMessage: p,
+renderEmptyState: p,
+renderMessage: C,
 getProTip: g,
 scrollerClassName: S,
 className: A,
@@ -354,7 +354,7 @@ scrollerClassName: S,
 items: P,
 loading: o,
 analyticsName: t,
-renderEmptyState: C,
+renderEmptyState: p,
 renderHeader: h,
 hasMore: l,
 loadMore: c,
@@ -366,8 +366,8 @@ renderItem: function(e) {
   } = e;
   if (null == t)
     return [];
-  if (null != p)
-    return p(t, e => Z(t, e));
+  if (null != C)
+    return C(t, e => Z(t, e));
   let a = [];
   return null == n ? [] : (a.push((0, i.jsxs)('div', {
     className: M.messageGroupWrapper,

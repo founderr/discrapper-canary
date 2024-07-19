@@ -33,8 +33,8 @@ var i, a, s = n(735250),
   h = n(553826),
   N = n(506071),
   f = n(203143),
-  C = n(79390),
-  p = n(839963),
+  p = n(79390),
+  C = n(839963),
   g = n(294608),
   S = n(65145),
   A = n(981631),
@@ -142,18 +142,18 @@ answerElementType: E
 canTapAnswers: a,
 answersInteraction: n
   }).with({
-answersInteraction: p.Y7.RADIO_BUTTONS
+answersInteraction: C.Y7.RADIO_BUTTONS
   }, () => ({
 ContainerComponent: v,
 answerElementType: 1
   })).with({
-answersInteraction: p.Y7.CHECKBOXES
+answersInteraction: C.Y7.CHECKBOXES
   }, () => ({
 ContainerComponent: M,
 answerElementType: 2
   })).with({
 canTapAnswers: !0,
-answersInteraction: p.Y7.LIST
+answersInteraction: C.Y7.LIST
   }, () => ({
 ContainerComponent: x,
 answerElementType: 3
@@ -234,7 +234,7 @@ className: i
 className: i,
 imageClassName: O.attachmentImage,
 src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,
-alt: null !== (t = n.description) && void 0 !== t ? t : (0, C.fw)(n.filename),
+alt: null !== (t = n.description) && void 0 !== t ? t : (0, p.fw)(n.filename),
 responsive: !0,
 width: 212,
 height: 212,

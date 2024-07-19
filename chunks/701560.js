@@ -19,9 +19,9 @@ var i, a = n(735250),
   h = n(346329),
   N = n(981631),
   f = n(689938),
-  C = n(376296);
+  p = n(376296);
 
-function p(e, t, n) {
+function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -42,16 +42,16 @@ let {
 } = this.props;
 return null != e && null != e.launchOptions && Object.keys(e.launchOptions).length > 1 ? (0, a.jsxs)(c.Clickable, {
   'aria-label': f.Z.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
-  className: C.dropdownArrowHitbox,
+  className: p.dropdownArrowHitbox,
   onClick: this.handleDropdownClick,
   children: [
     (0, a.jsx)('div', {
-      className: C.arrowSeparator
+      className: p.arrowSeparator
     }),
     (0, a.jsx)(c.ChevronSmallDownIcon, {
       size: 'md',
       color: 'currentColor',
-      className: C.dropdownArrow
+      className: p.dropdownArrow
     })
   ]
 }) : null;
@@ -65,13 +65,13 @@ let {
   tooltipPosition: l
 } = this.props;
 return (0, a.jsxs)('div', {
-  className: C.disabledButtonWrapper,
+  className: p.disabledButtonWrapper,
   children: [
     (0, a.jsx)(c.Button, {
       className: n,
       fullWidth: i,
       size: s,
-      color: null != r ? r : C.disabledButtonColor,
+      color: null != r ? r : p.disabledButtonColor,
       disabled: !0,
       children: e
     }),
@@ -79,7 +79,7 @@ return (0, a.jsxs)('div', {
       text: t,
       position: l,
       children: e => (0, a.jsx)('div', {
-        className: C.disabledButtonOverlay,
+        className: p.disabledButtonOverlay,
         ...e
       })
     })
@@ -104,8 +104,8 @@ if (o)
   return this.renderDisabledButton(f.Z.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
 let _ = d ? c.ShinyButton : c.Button;
 return (0, a.jsxs)(_, {
-  className: l()(C.playButton, e),
-  innerClassName: C.playButtonContents,
+  className: l()(p.playButton, e),
+  innerClassName: p.playButtonContents,
   fullWidth: t,
   size: n,
   color: null != i ? i : c.Button.Colors.GREEN,
@@ -113,7 +113,7 @@ return (0, a.jsxs)(_, {
   onClick: this.handleClick,
   children: [
     (0, a.jsx)('div', {
-      className: C.buttonText,
+      className: p.buttonText,
       children: f.Z.Messages.GAME_ACTION_BUTTON_PLAY
     }),
     this.renderDropdown()
@@ -121,7 +121,7 @@ return (0, a.jsxs)(_, {
 });
   }
   constructor(...e) {
-super(...e), p(this, 'handleDropdownClick', e => {
+super(...e), C(this, 'handleDropdownClick', e => {
   e.stopPropagation();
   let {
     libraryApplication: t,
@@ -142,7 +142,7 @@ super(...e), p(this, 'handleDropdownClick', e => {
   }, {
     onClose: s
   });
-}), p(this, 'handleClick', () => {
+}), C(this, 'handleClick', () => {
   let {
     applicationId: e,
     libraryApplication: t,
@@ -184,7 +184,7 @@ isRunning: l,
 dispatchState: c
   });
 }
-p(g, 'defaultProps', {
+C(g, 'defaultProps', {
   fullWidth: !1,
   size: c.Button.Sizes.LARGE,
   tooltipPosition: 'top',

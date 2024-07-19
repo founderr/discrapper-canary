@@ -12,131 +12,131 @@ var s = n(735250),
   m = n(113434),
   g = n(569984),
   C = n(497505),
-  _ = n(918701),
-  f = n(988303),
+  f = n(918701),
+  _ = n(988303),
   h = n(585500),
   E = n(644646),
-  T = n(78826),
-  S = n(670638),
-  N = n(330039),
-  A = n(693900),
-  v = n(524824),
+  S = n(78826),
+  T = n(670638),
+  A = n(330039),
+  v = n(693900),
+  N = n(524824),
   j = n(164495),
   B = n(759853),
-  R = n(205511),
-  b = n(95985),
-  O = n(658590),
+  b = n(205511),
+  R = n(95985),
+  y = n(658590),
   I = n(46140),
-  U = n(689938),
-  y = n(689065);
-let M = o.forwardRef(function(e, t) {
+  M = n(689938),
+  O = n(689065);
+let q = o.forwardRef(function(e, t) {
   var n;
   let {
 className: r,
-isExpanded: M,
-isExpansionAnimationComplete: q,
-expansionSpring: Z,
-onCtxMenuOpen: k,
+isExpanded: q,
+isExpansionAnimationComplete: U,
+expansionSpring: k,
+onCtxMenuOpen: Z,
 onCtxMenuClose: P,
 onCtxMenuSelect: Q,
-quest: L,
-useReducedMotion: w,
+quest: w,
+useReducedMotion: L,
 taskDetails: W
-  } = e, D = o.useRef(null), H = (0, c.e7)([g.Z], () => g.Z.isEnrolling(L.id), [L]), V = (0, m.B6)(L.config.expiresAt), z = o.useMemo(() => (0, _.nP)(L.config.assets.questBarHero), [L]), G = o.useCallback(() => {
-(0, x.AH)(L.id, {
+  } = e, D = o.useRef(null), H = (0, c.e7)([g.Z], () => g.Z.isEnrolling(w.id), [w]), V = (0, m.B6)(w.config.expiresAt), z = o.useMemo(() => (0, f.nP)(w.config.assets.questBarHero), [w]), G = o.useCallback(() => {
+(0, x.AH)(w.id, {
   questContent: C.jn.QUEST_BAR_V2,
   questContentCTA: p.jZ.ACCEPT_QUEST
 });
-  }, [L]), {
+  }, [w]), {
 primaryVariant: F
-  } = f.u.useExperiment({
+  } = _.u.useExperiment({
 location: I.dr.QUESTS_BAR
   }, {
 autoTrackExposure: !1
-  }), X = (null === (n = L.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = M && q, {
-questSupportsConsole: K,
+  }), K = (null === (n = w.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = q && U, {
+questSupportsConsole: X,
 isProgressingOnConsole: J
   } = o.useMemo(() => ({
-questSupportsConsole: (0, _.$J)(L),
-isProgressingOnConsole: (0, _.Bz)(L)
-  }), [L]), $ = (0, m.pe)(L), ee = W.percentComplete > 0, et = !J && !l.T.CONSOLE.has(W.taskType) && ($ || l.T.DESKTOP.has(W.taskType)), en = (0, _.ph)(L), es = (0, h.D)({
-quest: L,
+questSupportsConsole: (0, f.$J)(w),
+isProgressingOnConsole: (0, f.Bz)(w)
+  }), [w]), $ = (0, m.pe)(w), ee = W.percentComplete > 0, et = !J && !l.T.CONSOLE.has(W.taskType) && ($ || l.T.DESKTOP.has(W.taskType)), en = (0, f.ph)(w), es = (0, h.D)({
+quest: w,
 location: I.dr.QUESTS_BAR,
 questContent: C.jn.QUEST_BAR_V2,
 taskDetails: W,
-useV2Variants: F === f.P.V2 || (0, O.a)(L)
+useV2Variants: F === _.P.V2 || (0, y.a)(w)
   });
   return (0, s.jsx)('div', {
 'aria-hidden': !Y,
-className: a()(r, y.contentExpanded, {
-  [y.contentInteractable]: Y,
-  [y.contentExpandedAccepted]: X
+className: a()(r, O.contentExpanded, {
+  [O.contentInteractable]: Y,
+  [O.contentExpandedAccepted]: K
 }),
-children: X ? (0, s.jsxs)('div', {
-  className: y.questAcceptedContent,
+children: K ? (0, s.jsxs)('div', {
+  className: O.questAcceptedContent,
   ref: t,
   children: [
     (0, s.jsxs)('div', {
-      className: y.questAcceptedHeader,
+      className: O.questAcceptedHeader,
       children: [
         (0, s.jsx)(d.Text, {
           variant: 'text-xxs/medium',
-          className: a()(y.flex, y.headerText),
-          children: U.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
+          className: a()(O.flex, O.headerText),
+          children: M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
             expirationDate: V
           })
         }),
-        (0, s.jsx)(S.r, {
-          onOpen: k,
+        (0, s.jsx)(T.r, {
+          onOpen: Z,
           onClose: P,
           onSelect: Q,
           questContent: C.jn.QUEST_BAR_V2,
-          quest: L,
+          quest: w,
           shouldShowDisclosure: !1,
           showShareLink: !0,
           children: e => (0, s.jsx)(d.Clickable, {
             ...e,
-            className: y.submenuWrapper,
-            'aria-label': U.Z.Messages.ACTIONS,
+            className: O.submenuWrapper,
+            'aria-label': M.Z.Messages.ACTIONS,
             children: (0, s.jsx)(d.MoreHorizontalIcon, {
               size: 'md',
               color: 'currentColor',
-              className: a()(y.submenuIcon, y.interactiveNormal)
+              className: a()(O.submenuIcon, O.interactiveNormal)
             })
           })
         })
       ]
     }),
     (0, s.jsx)('div', {
-      className: y.divider
+      className: O.divider
     }),
     (0, s.jsx)(B.Z, {
       progressBarRef: D,
-      quest: L,
-      isExpanded: M
+      quest: w,
+      isExpanded: q
     }),
-    (0, s.jsx)(b.Z, {
-      quest: L,
+    (0, s.jsx)(R.Z, {
+      quest: w,
       progressBarRef: D,
       isExpanded: !0,
       taskDetails: W
     }),
-    (0, v.r)(L) && (0, s.jsx)(N.Z, {
+    (0, N.r)(w) && (0, s.jsx)(A.Z, {
       style: {
         marginTop: 8
       }
     }),
-    (0, s.jsx)(A.n, {
-      children: K && !et && (0, s.jsx)(R.Z, {
-        quest: L,
+    (0, s.jsx)(v.n, {
+      children: X && !et && (0, s.jsx)(b.Z, {
+        quest: w,
         taskDetails: W
       })
     }),
-    (0, s.jsx)(A.n, {
+    (0, s.jsx)(v.n, {
       children: (0, s.jsx)(j.y, {
-        quest: L,
-        useReducedMotion: w,
-        isExpanded: M,
+        quest: w,
+        useReducedMotion: L,
+        isExpanded: q,
         hasMadeProgress: ee
       })
     })
@@ -144,54 +144,54 @@ children: X ? (0, s.jsxs)('div', {
 }) : (0, s.jsxs)('div', {
   children: [
     (0, s.jsxs)('div', {
-      className: y.questPromoContent,
+      className: O.questPromoContent,
       ref: t,
       children: [
         (0, s.jsxs)('div', {
-          className: y.details,
+          className: O.details,
           children: [
             (0, s.jsx)(E.Z, {
-              className: y.rewardTile,
+              className: O.rewardTile,
               learnMoreStyle: 'text',
-              quest: L,
+              quest: w,
               questContent: C.jn.QUEST_BAR_V2
             }),
             (0, s.jsx)(d.Heading, {
-              className: y.title,
+              className: O.title,
               variant: 'heading-md/medium',
-              children: U.Z.Messages.QUESTS_TITLE.format({
-                questName: L.config.messages.questName
+              children: M.Z.Messages.QUESTS_TITLE.format({
+                questName: w.config.messages.questName
               })
             }),
             (0, s.jsx)(d.Text, {
-              className: y.description,
+              className: O.description,
               variant: 'text-xs/normal',
               children: es
             })
           ]
         }),
         (0, s.jsx)(d.Button, {
-          className: y.cta,
+          className: O.cta,
           color: d.Button.Colors.BRAND,
           fullWidth: !0,
           onClick: Y ? G : void 0,
           size: d.Button.Sizes.SMALL,
           submitting: H,
-          children: U.Z.Messages.QUESTS_ACCEPT_QUEST
+          children: M.Z.Messages.QUESTS_ACCEPT_QUEST
         })
       ]
     }),
     (0, s.jsxs)(i.animated.div, {
-      className: y.heroAssetWrapper,
+      className: O.heroAssetWrapper,
       style: {
-        backdropFilter: Z.to([
+        backdropFilter: k.to([
           0,
           1
         ], [
           5,
           0
         ]).to(e => 'blur('.concat(e, 'px)')),
-        filter: Z.to([
+        filter: k.to([
           0,
           1
         ], [
@@ -201,9 +201,9 @@ children: X ? (0, s.jsxs)('div', {
       },
       children: [
         (0, s.jsx)(i.animated.div, {
-          className: y.heroAssetDarken,
+          className: O.heroAssetDarken,
           style: {
-            opacity: Z.to([
+            opacity: k.to([
               0,
               1
             ], [
@@ -213,10 +213,10 @@ children: X ? (0, s.jsxs)('div', {
           }
         }),
         (0, s.jsx)(i.animated.div, {
-          className: y.heroAssetTint,
+          className: O.heroAssetTint,
           style: {
-            backgroundColor: L.config.colors.primary,
-            opacity: Z.to([
+            backgroundColor: w.config.colors.primary,
+            opacity: k.to([
               0,
               1
             ], [
@@ -225,34 +225,34 @@ children: X ? (0, s.jsxs)('div', {
             ])
           }
         }),
-        z ? (0, s.jsx)(T.Fl, {
+        z ? (0, s.jsx)(S.Fl, {
           id: 'QuestBarV2ContentExpanded_heroAnimated',
           children: e => (0, s.jsx)(u.Z, {
             ref: e,
-            autoPlay: !w,
+            autoPlay: !L,
             loop: !0,
             muted: !0,
             playsInline: !0,
-            className: y.heroAsset,
+            className: O.heroAsset,
             controls: !1,
             children: (0, s.jsx)('source', {
               src: en,
-              type: (0, _.mN)(en)
+              type: (0, f.mN)(en)
             })
           })
-        }) : (0, s.jsx)(T.Fl, {
+        }) : (0, s.jsx)(S.Fl, {
           id: 'QuestBarV2ContentExpanded_heroStatic',
           children: e => (0, s.jsx)('img', {
             ref: e,
             alt: '',
-            className: y.heroAsset,
+            className: O.heroAsset,
             src: en
           })
         }),
         (0, s.jsx)(i.animated.div, {
-          className: y.legibilityGradient,
+          className: O.legibilityGradient,
           style: {
-            opacity: Z.to({
+            opacity: k.to({
               range: [
                 0,
                 1
@@ -270,4 +270,4 @@ children: X ? (0, s.jsxs)('div', {
 })
   });
 });
-t.Z = M;
+t.Z = q;

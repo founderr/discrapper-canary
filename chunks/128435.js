@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return p;
+return C;
   }
 }), n(627341);
 var i = n(735250),
@@ -136,7 +136,7 @@ className: o
   });
 }
 
-function C(e) {
+function p(e) {
   let {
 message: t,
 poll: n,
@@ -206,7 +206,7 @@ children: (0, i.jsxs)(c.HeadingLevel, {
   });
 }
 
-function p(e) {
+function C(e) {
   let {
 message: t,
 poll: n,
@@ -216,7 +216,7 @@ className: a
 message: t,
 poll: n,
 children: (0, i.jsx)(E.Pk, {
-  children: (0, i.jsx)(C, {
+  children: (0, i.jsx)(p, {
     message: t,
     poll: n,
     className: a

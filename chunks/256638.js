@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return eC;
+return ep;
   },
   c: function() {
 return eN;
@@ -23,8 +23,8 @@ var i = n(735250),
   h = n(205355),
   N = n(558381),
   f = n(223245),
-  C = n(491428),
-  p = n(401430),
+  p = n(491428),
+  C = n(401430),
   g = n(230711),
   S = n(726542),
   A = n(100527),
@@ -50,8 +50,8 @@ var i = n(735250),
   H = n(14335),
   Y = n(246965),
   W = n(272008),
-  K = n(523255),
-  z = n(852923),
+  z = n(523255),
+  K = n(852923),
   Q = n(592125),
   q = n(430824),
   X = n(131951),
@@ -118,19 +118,19 @@ A = (0, o.e7)([$.Z], () => $.Z.getGuildId()),
 ec = (0, o.e7)([ei.Z], () => ei.Z.getNotice()),
 ef = (0, o.e7)([q.Z], () => q.Z.getGuild(A)),
 {
-  analyticsLocations: eC
+  analyticsLocations: ep
 } = (0, R.ZP)(),
-ep = null == ec ? void 0 : ec.type,
+eC = null == ec ? void 0 : ec.type,
 eg = (0, U.J)(A);
   a.useEffect(() => {
-null != ep && ! function(e, t) {
+null != eC && ! function(e, t) {
   let n = {
     notice_type: e
   };
   null != t && (n.guild_id = t), es.default.track(ed.rMx.APP_NOTICE_VIEWED, n);
-}(ep, A);
+}(eC, A);
   }, [
-ep,
+eC,
 A
   ]), a.useEffect(() => {
 if (null != ec && ec.type === ed.kVF.SURVEY && null != ec.metadata) {
@@ -139,7 +139,7 @@ if (null != ec && ec.type === ed.kVF.SURVEY && null != ec.metadata) {
   } = ec, t = Z.Z.getUserExperimentDescriptor(e.id);
   null != t && (0, L.W9)(e.id, t), (async () => {
     var e, t;
-    (null === (e = ec.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, C.g8)(null === (t = ec.metadata) || void 0 === t ? void 0 : t.id);
+    (null === (e = ec.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, p.g8)(null === (t = ec.metadata) || void 0 === t ? void 0 : t.id);
   })();
 }
   }, [ec]);
@@ -148,7 +148,7 @@ let {
   enabled: t
 } = (0, V.ZP)(!0, e !== ed.kVF.PREMIUM_TIER_2_TRIAL_ENDING);
 return t || null == e ? null : ei.m[e];
-  }(ep);
+  }(eC);
   if (null == ec)
 return null;
   if (null != eS)
@@ -163,7 +163,7 @@ case ed.kVF.LURKING_GUILD:
 case ed.kVF.PENDING_MEMBER:
   return (0, i.jsx)(y.Z, {});
 case ed.kVF.INVITED_TO_SPEAK:
-  return (0, i.jsx)(z.Z, {});
+  return (0, i.jsx)(K.Z, {});
 case ed.kVF.GUILD_RAID_NOTIFICATION:
   let {
     dismissUntil: eR
@@ -468,11 +468,11 @@ case ed.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
             (0, w.Z)({
               initialPlanId: null,
               subscriptionTier: eu.Si.TIER_2,
-              analyticsLocations: eC,
+              analyticsLocations: ep,
               analyticsObject: eU
             });
           },
-          analyticsLocations: eC,
+          analyticsLocations: ep,
           analyticsLocationObject: eU,
           context: __OVERLAY__ ? ed.IlC.OVERLAY : ed.IlC.APP
         }).then(() => _.Z(eD.id)),
@@ -536,14 +536,14 @@ case ed.kVF.SURVEY: {
       (0, i.jsx)(c.NoticeCloseButton, {
         noticeType: ed.kVF.SURVEY,
         onClick: () => {
-          (0, C.hZ)(t, !0);
+          (0, p.hZ)(t, !0);
         }
       }),
       n,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: ed.kVF.SURVEY,
         onClick: () => {
-          window.open(s, '_blank'), (0, C.hZ)(t, !1);
+          window.open(s, '_blank'), (0, p.hZ)(t, !1);
         },
         children: a
       })
@@ -691,7 +691,7 @@ case ed.kVF.APPLICATION_TEST_MODE:
             })
           }),
           (0, i.jsx)(c.NoticeCloseButton, {
-            onClick: p.mc,
+            onClick: C.mc,
             noticeType: ed.kVF.APPLICATION_TEST_MODE
           })
         ]
@@ -725,7 +725,7 @@ case ed.kVF.APPLICATION_TEST_MODE:
           children: eI.Z.Messages.NOTICE_APPLICATION_TEST_MODE_GO_TO_LISTING
         }),
         (0, i.jsx)(c.NoticeCloseButton, {
-          onClick: p.mc,
+          onClick: C.mc,
           noticeType: ed.kVF.APPLICATION_TEST_MODE
         })
       ]
@@ -794,7 +794,7 @@ case ed.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
     color: c.NoticeColors.WARNING,
     children: [
       (0, i.jsx)(c.NoticeCloseButton, {
-        noticeType: ep,
+        noticeType: eC,
         onClick: () => {
           eN(ew);
         }
@@ -896,7 +896,7 @@ case ed.kVF.AUTOMOD_QUARANTINED_USER_PROFILE: {
   };
   return (0, i.jsx)(D.Z, {
     guildId: A,
-    analyticsLocations: eC,
+    analyticsLocations: ep,
     analyticsLocation: e
   });
 }
@@ -983,7 +983,7 @@ case ed.kVF.SAFETY_USER_SENTIMENT_NAGBAR:
       (0, i.jsx)(c.NoticeCloseButton, {
         noticeType: ed.kVF.SAFETY_USER_SENTIMENT_NAGBAR,
         onClick: () => {
-          K.hZ(), eN();
+          z.hZ(), eN();
         }
       }),
       eI.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE,
@@ -997,7 +997,7 @@ case ed.kVF.SAFETY_USER_SENTIMENT_NAGBAR:
             return t => (0, i.jsx)(e, {
               ...t
             });
-          }), K.hZ(), eN();
+          }), z.hZ(), eN();
         },
         children: eI.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE_CTA
       })
@@ -1030,7 +1030,7 @@ default:
   }
 }) : null;
 
-function eC() {
+function ep() {
   let {
 analyticsLocations: e
   } = (0, R.ZP)(A.Z.NOTICE);

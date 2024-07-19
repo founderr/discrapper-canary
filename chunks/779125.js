@@ -26,8 +26,8 @@ function f(e) {
 channel: t,
 onClick: n,
 beforeTransition: f,
-className: C,
-openChatWithoutConnecting: p
+className: p,
+openChatWithoutConnecting: C
   } = e, g = (0, a.e7)([
 m.default,
 I.Z
@@ -42,7 +42,7 @@ children: e => {
   } = e;
   return (0, i.jsx)(c.Z, {
     role: 'link',
-    className: C,
+    className: p,
     onClick: e => {
       e.stopPropagation(), null != n ? n() : (null != f && f(), (0, s.closeAllModals)(), ! function(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -65,7 +65,7 @@ children: e => {
           return;
         }
         (0, d.uL)(N.Z5c.CHANNEL(e, t));
-      }(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, p));
+      }(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, C));
     },
     onMouseEnter: a,
     onMouseLeave: o,

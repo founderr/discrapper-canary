@@ -1,6 +1,6 @@
 n.d(t, {
   J: function() {
-return p;
+return C;
   }
 }), n(47120), n(913527);
 var i, a, s, r = n(149765),
@@ -31,8 +31,8 @@ lastSeen: null
   },
   N = h,
   f = {},
-  C = null,
-  p = 86400000;
+  p = null,
+  C = 86400000;
 (s = i || (i = {})).IS_OWNER = 'is_owner', s.IS_ADMIN = 'is_admin', s.IS_COMMUNITY = 'is_community', s.GUILD_SIZE = 'guild_size', s.IS_HUB = 'is_hub', s.IS_VIEWING = 'is_viewing', s.GUILD_PERMISSIONS = 'guild_permissions', s.GUILD_SIZE_ALL = 'guild_size_all';
 let g = new Set(Object.values(i));
 
@@ -104,12 +104,12 @@ survey: t
   if (N.lastFetched = Date.now(), null == N.hiddenSurveys && (N.hiddenSurveys = {}), null != t && null == N.hiddenSurveys[t.key]) {
 if (!S(t))
   return;
-C = t;
+p = t;
   }
 }
 
 function R() {
-  if (null != C && (S(C) || (C = null, 0)))
+  if (null != p && (S(p) || (p = null, 0)))
 return !1;
   ! function() {
 let e = Object.values(f = null != f ? f : {})[0];
@@ -120,9 +120,9 @@ if (null != e && S(e)) {
   });
   return;
 }
-if (null == C)
+if (null == p)
   return;
-C = null;
+p = null;
   }();
 }
 class O extends(a = l.ZP.PersistedStore) {
@@ -133,7 +133,7 @@ N = null != e ? e : h, this.syncWith([E.Z], R);
 return N;
   }
   getCurrentSurvey() {
-return C;
+return p;
   }
   getSurveyOverride() {
 return N.surveyOverride;
@@ -166,7 +166,7 @@ return {
 ]), t.Z = new O(o.Z, {
   CONNECTION_OPEN: function() {
 var e;
-if (!(null != N.lastFetched && Date.now() - (null !== (e = N.lastFetched) && void 0 !== e ? e : 0) < p) || null != N.surveyOverride)
+if (!(null != N.lastFetched && Date.now() - (null !== (e = N.lastFetched) && void 0 !== e ? e : 0) < C) || null != N.surveyOverride)
   (0, c.wk)(N.surveyOverride, !0);
   },
   SURVEY_FETCHED: A,
@@ -174,7 +174,7 @@ if (!(null != N.lastFetched && Date.now() - (null !== (e = N.lastFetched) && voi
 let {
   key: t
 } = e;
-N.hiddenSurveys[t] = !0, C = null, f = null != f ? f : {}, delete f[t];
+N.hiddenSurveys[t] = !0, p = null, f = null != f ? f : {}, delete f[t];
   },
   SURVEY_OVERRIDE: function(e) {
 let {

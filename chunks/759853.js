@@ -17,18 +17,18 @@ t.Z = e => {
   let {
 quest: n,
 progressBarRef: C,
-isExpanded: _
+isExpanded: f
   } = e, {
-completionSpring: f,
+completionSpring: _,
 startCompletionAnimation: h
-  } = (0, u.GX)(), E = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, T = o.useRef(!1), S = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), N = o.useRef(null), A = (0, i.e7)([d.Z], () => d.Z.hasLayers()), v = (0, l.Z)(A), [j, B] = o.useState(null), [R, b] = o.useState(null), O = o.useRef(new r.qA({
+  } = (0, u.GX)(), E = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = o.useRef(!1), T = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), A = o.useRef(null), v = (0, i.e7)([d.Z], () => d.Z.hasLayers()), N = (0, l.Z)(v), [j, B] = o.useState(null), [b, R] = o.useState(null), y = o.useRef(new r.qA({
 gravity: 0,
 wind: 0
-  })), I = (0, r.uR)(j, R), U = o.useCallback(() => {
-if (S)
+  })), I = (0, r.uR)(j, b), M = o.useCallback(() => {
+if (T)
   return;
 let e = C.current,
-  t = N.current;
+  t = A.current;
 if (null != t && null != e && I.isReady) {
   var n, s, o, r;
   let {
@@ -80,55 +80,55 @@ if (null != t && null != e && I.isReady) {
 }
   }, [
 C,
-N,
+A,
 I,
-S
-  ]), y = (0, l.Z)(_);
+T
+  ]), O = (0, l.Z)(f);
   return (o.useEffect(() => {
-E && _ && !y && (h(), U());
+E && f && !O && (h(), M());
   }, [
-_,
+f,
 E,
 h,
-U,
-y
+M,
+O
   ]), o.useEffect(() => {
-E && !A && v && setTimeout(() => {
-  h(), U();
+E && !v && N && setTimeout(() => {
+  h(), M();
 }, 200);
   }, [
 E,
+N,
 v,
-A,
 h,
-U
+M
   ]), o.useEffect(() => {
 if (!!I.isReady)
-  !T.current && E && (h(), U()), T.current = E;
+  !S.current && E && (h(), M()), S.current = E;
   }, [
 E,
-T,
-U,
+S,
+M,
 h,
 I
-  ]), S) ? null : (0, s.jsxs)('div', {
+  ]), T) ? null : (0, s.jsxs)('div', {
 className: x.wrapper,
 'aria-hidden': 'true',
-ref: N,
+ref: A,
 children: [
   (0, s.jsx)(a.animated.div, {
     className: x.background,
     style: {
-      opacity: f
+      opacity: _
     }
   }),
   (0, s.jsx)(r.O_, {
     ref: B,
     className: x.confetti,
-    environment: O.current
+    environment: y.current
   }),
   (0, s.jsx)(r.Ji, {
-    ref: b,
+    ref: R,
     sprites: [m],
     colors: g,
     spriteWidth: p.Ko,

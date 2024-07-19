@@ -24,13 +24,13 @@ function N(e) {
 canShowReminder: t = !1,
 className: N
   } = e, f = (0, E.Z)(d.Z), {
-showClipsHeaderEntrypoint: C
+showClipsHeaderEntrypoint: p
   } = u.NV.useExperiment({
 location: 'ClipsButton'
   }, {
 autoTrackExposure: !1
   }), {
-hasClips: p,
+hasClips: C,
 hasNewClips: g,
 lastClipsSession: S,
 remindersEnabled: A,
@@ -65,7 +65,7 @@ allowIdle: Z
 R,
 L,
 Z
-  ]), C && f && p) ? (0, i.jsxs)(i.Fragment, {
+  ]), p && f && C) ? (0, i.jsxs)(i.Fragment, {
 children: [
   null != x && t && A && O && !(0, r.hasAnyModalOpen)() && !v && (0, i.jsx)(m.Z, {
     clipIconRef: x,

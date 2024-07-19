@@ -13,10 +13,10 @@ children: d
   } = e, u = (0, r.EK)(n, o > 0), p = i / 2, x = i / 2 - l / 2, m = 2 * Math.PI * x, g = m - o * m, C = {
 strokeDasharray: ''.concat(m, ' ').concat(m),
 strokeDashoffset: g
-  }, _ = {
+  }, f = {
 strokeDasharray: ''.concat(m, ' ').concat(m),
 strokeDashoffset: -o * m
-  }, f = {
+  }, _ = {
 boxShadow: '0 0 30px 0px '.concat(u.glow)
   };
   return (0, s.jsxs)('div', {
@@ -25,7 +25,7 @@ ref: t,
 children: [
   (0, s.jsx)('div', {
     className: a.inner,
-    style: f,
+    style: _,
     children: d
   }),
   (0, s.jsxs)('svg', {
@@ -87,7 +87,7 @@ children: [
         cx: p,
         cy: p,
         stroke: 'url(#linear)',
-        style: _
+        style: f
       }),
       (0, s.jsx)('circle', {
         className: a.progress,

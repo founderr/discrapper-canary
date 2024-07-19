@@ -23,8 +23,8 @@ function N(e) {
   let {
 code: t
   } = e, [n, N, f] = t.split('-'), {
-guildScheduledEvent: C,
-guild: p,
+guildScheduledEvent: p,
+guild: C,
 channel: g,
 isMember: S
   } = (0, s.cj)([
@@ -49,16 +49,16 @@ n,
 N
   ]);
   return a.useEffect(() => {
-(null == C ? void 0 : C.id) == null && m.Z.fetchGuildEvent(n, N), E.Z.getGuildEventUserCounts(n, N, null != f ? [f] : []), E.Z.getGuildEventsForCurrentUser(n);
+(null == p ? void 0 : p.id) == null && m.Z.fetchGuildEvent(n, N), E.Z.getGuildEventUserCounts(n, N, null != f ? [f] : []), E.Z.getGuildEventsForCurrentUser(n);
   }, [
 N,
 n,
-null == C ? void 0 : C.id,
+null == p ? void 0 : p.id,
 f
   ]), (0, i.jsx)(T.ZP, {
-guild: p,
+guild: C,
 channel: g,
-guildScheduledEvent: C,
+guildScheduledEvent: p,
 isMember: S,
 onAcceptInstantInvite: h.dG,
 onTransitionToInviteChannel: function() {

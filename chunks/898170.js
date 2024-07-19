@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return _;
+return f;
   }
 }), n(47120), n(724458);
 var s = n(735250),
@@ -65,14 +65,14 @@ for (let s in t) {
   }(s, g, t), s;
 }
 
-function _(e) {
+function f(e) {
   var t;
   let {
 animationClassName: n,
 className: r,
 quest: i,
 useReducedMotion: l
-  } = e, g = (0, c.e7)([u.Z], () => u.Z.isFocused()), _ = o.useRef(null), [f, h] = o.useState(!1), E = o.useMemo(() => {
+  } = e, g = (0, c.e7)([u.Z], () => u.Z.isFocused()), f = o.useRef(null), [_, h] = o.useState(!1), E = o.useMemo(() => {
 if (null == i)
   return null;
 let e = (0, p.oo)(i.config.colors.primary),
@@ -89,18 +89,18 @@ let e = (0, p.oo)(i.config.colors.primary),
     t.b
   ], []);
 return C(i.id, n);
-  }, [i]), T = (null === (t = i.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, S = !l && g;
+  }, [i]), S = (null === (t = i.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = !l && g;
   o.useEffect(() => {
 var e, t, n, s;
-g ? S && (null === (s = _.current) || void 0 === s || null === (n = s.animation) || void 0 === n || n.play()) : null === (t = _.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
+g ? T && (null === (s = f.current) || void 0 === s || null === (n = s.animation) || void 0 === n || n.play()) : null === (t = f.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
   }, [
-S,
+T,
 g
   ]);
-  let N = o.useCallback(() => {
+  let A = o.useCallback(() => {
 h(!0);
   }, []);
-  return null == E || T ? (0, s.jsx)('div', {
+  return null == E || S ? (0, s.jsx)('div', {
 className: x.backgroundFallback,
 style: {
   backgroundImage: 'linear-gradient(90deg, '.concat(i.config.colors.primary, ', ').concat(i.config.colors.secondary, ')')
@@ -108,10 +108,10 @@ style: {
   }) : (0, s.jsx)('div', {
 className: a()(x.lottieAnimationBackgroundWrapper, r),
 children: (0, s.jsx)(d.LottieAnimation, {
-  ref: _,
-  onComplete: N,
+  ref: f,
+  onComplete: A,
   importData: () => E,
-  shouldAnimate: !f && S,
+  shouldAnimate: !_ && T,
   className: a()(x.lottieAnimation, x.lottieAnimationBackground, n),
   loop: 0,
   rendererSettings: {

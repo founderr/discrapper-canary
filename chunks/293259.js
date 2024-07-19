@@ -40,7 +40,7 @@ className: R,
 isStreaming: U,
 hasProfileEffect: M,
 onClose: P
-  } = e, b = (0, o.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), y = (0, o.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, o.e7)([u.Z], () => u.Z.getStatus(_.id)), F = (0, o.e7)([E.Z], () => E.Z.getUserProfile(_.id)), B = (0, o.e7)([c.default], () => c.default.getId() === _.id), {
+  } = e, b = (0, o.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), y = (0, o.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, o.e7)([u.Z], () => u.Z.getStatus(_.id)), B = (0, o.e7)([E.Z], () => E.Z.getUserProfile(_.id)), F = (0, o.e7)([c.default], () => c.default.getId() === _.id), {
 theme: G
   } = (0, x.z)(), {
 trackUserProfileAction: w
@@ -85,7 +85,7 @@ children: [
       (0, s.jsxs)('div', {
         className: N.headerTop,
         children: [
-          (null == F ? void 0 : F.profileFetchFailed) && !_.isClyde() ? (0, s.jsx)(r.Tooltip, {
+          (null == B ? void 0 : B.profileFetchFailed) && !_.isClyde() ? (0, s.jsx)(r.Tooltip, {
             text: g.Z.Messages.USER_PROFILE_LOAD_ERROR,
             spacing: 20,
             children: e => (0, s.jsx)(r.CircleExclamationPointIcon, {
@@ -108,18 +108,18 @@ children: [
           (0, s.jsxs)('div', {
             className: N.relationshipButtons,
             children: [
-              (null == F ? void 0 : F.application) != null && (0, s.jsx)(Z.Z, {
+              (null == B ? void 0 : B.application) != null && (0, s.jsx)(Z.Z, {
                 className: N.applicationInstallButton,
-                application: F.application
+                application: B.application
               }),
               (0, s.jsx)(h.Z, {
                 user: _,
-                isCurrentUser: B,
+                isCurrentUser: F,
                 relationshipType: b,
                 friendToken: L,
                 onClose: P
               }),
-              B || _.isNonUserBot() ? null : (0, s.jsx)(r.Clickable, {
+              F || _.isNonUserBot() ? null : (0, s.jsx)(r.Clickable, {
                 focusProps: {
                   offset: {
                     left: 8
@@ -135,7 +135,7 @@ children: [
                     return n => (0, s.jsx)(e, {
                       ...n,
                       user: _,
-                      isCurrentUser: B,
+                      isCurrentUser: F,
                       guildId: A,
                       relationshipType: b,
                       trackUserProfileAction: w,

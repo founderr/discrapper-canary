@@ -19,7 +19,7 @@ var i, a, s = n(735250),
   N = n(689938),
   f = n(619260);
 
-function C() {
+function p() {
   return (0, s.jsx)('svg', {
 width: '24',
 height: '24',
@@ -35,13 +35,13 @@ children: (0, s.jsx)('path', {
   });
 }
 
-function p(e) {
+function C(e) {
   let t, {
 hasNoVotes: n,
 victorEmoji: i
   } = e;
   if (n)
-t = (0, s.jsx)(C, {});
+t = (0, s.jsx)(p, {});
   else if (null != i) {
 let e = '' !== i.name ? i.name : i.displayName;
 t = (0, s.jsx)(_.Z, {
@@ -164,7 +164,7 @@ return t ? {
   return (0, s.jsxs)('div', {
 className: o()(f.container, t),
 children: [
-  (0, s.jsx)(p, {
+  (0, s.jsx)(C, {
     hasNoVotes: 'NO_VOTES' === a.type,
     victorEmoji: n.victorEmoji
   }),

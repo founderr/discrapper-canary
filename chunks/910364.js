@@ -98,13 +98,13 @@ roleId: P,
 friendToken: b,
 initialSection: y = A.oh.USER_INFO,
 initialSubsection: D,
-transitionState: F,
-sourceAnalyticsLocations: B = [],
+transitionState: B,
+sourceAnalyticsLocations: F = [],
 onClose: G
   } = e, w = null !== (n = (0, o.e7)([Z.default], () => Z.default.getUser(x.id))) && void 0 !== n ? n : x, k = (0, h.ZP)(null !== (i = w.id) && void 0 !== i ? i : ''), {
 analyticsLocations: V
   } = (0, I.ZP)([
-...B,
+...F,
 u.Z.PROFILE_MODAL
   ]), Y = (0, v.Q1)({
 layout: 'MODAL',
@@ -151,7 +151,7 @@ children: (0, s.jsx)(v.Mt, {
   children: (0, s.jsx)(r.Z, {
     section: O.jXE.PROFILE_MODAL,
     children: (0, s.jsxs)(t.ModalRoot, {
-      transitionState: F,
+      transitionState: B,
       className: R.root,
       hideShadow: !0,
       'aria-label': L.Z.Messages.USER_PROFILE_MODAL,

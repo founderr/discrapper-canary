@@ -12,59 +12,59 @@ var s = n(735250),
   m = n(617136),
   g = n(272008),
   C = n(113434),
-  _ = n(569984),
-  f = n(497505),
+  f = n(569984),
+  _ = n(497505),
   h = n(918701),
   E = n(865364),
-  T = n(585500),
-  S = n(566078),
-  N = n(340100),
-  A = n(611855),
-  v = n(644646),
+  S = n(585500),
+  T = n(566078),
+  A = n(340100),
+  v = n(611855),
+  N = n(644646),
   j = n(78826),
   B = n(670638),
-  R = n(667105),
-  b = n(46140),
-  O = n(981631),
+  b = n(667105),
+  R = n(46140),
+  y = n(981631),
   I = n(701488),
-  U = n(689938),
-  y = n(47067);
-let M = o.forwardRef(function(e, t) {
+  M = n(689938),
+  O = n(47067);
+let q = o.forwardRef(function(e, t) {
   var n, r;
   let {
 className: E,
-isExpanded: M,
-isExpansionAnimationComplete: Z,
-onCtxMenuOpen: k,
+isExpanded: q,
+isExpansionAnimationComplete: k,
+onCtxMenuOpen: Z,
 onCtxMenuClose: P,
 onCtxMenuSelect: Q,
-quest: L,
-useReducedMotion: w
-  } = e, W = (0, i.e7)([_.Z], () => _.Z.isEnrolling(L.id), [L]), D = (0, C.B6)(L.config.expiresAt), H = S.r.build(L.config), V = (0, C.B6)(H.rewardsExpireAt), z = o.useMemo(() => (0, h.nP)(L.config.assets.questBarHero), [L]), G = (0, R.tP)(H.application.id), F = H.features.has(b.S7.START_QUEST_CTA) ? m.jZ.START_QUEST : m.jZ.ACCEPT_QUEST, X = H.features.has(b.S7.START_QUEST_CTA) ? U.Z.Messages.QUESTS_START_QUEST : U.Z.Messages.QUESTS_ACCEPT_QUEST, Y = o.useCallback(() => {
-(0, g.AH)(L.id, {
-  questContent: f.jn.QUEST_BAR,
+quest: w,
+useReducedMotion: L
+  } = e, W = (0, i.e7)([f.Z], () => f.Z.isEnrolling(w.id), [w]), D = (0, C.B6)(w.config.expiresAt), H = T.r.build(w.config), V = (0, C.B6)(H.rewardsExpireAt), z = o.useMemo(() => (0, h.nP)(w.config.assets.questBarHero), [w]), G = (0, b.tP)(H.application.id), F = H.features.has(R.S7.START_QUEST_CTA) ? m.jZ.START_QUEST : m.jZ.ACCEPT_QUEST, K = H.features.has(R.S7.START_QUEST_CTA) ? M.Z.Messages.QUESTS_START_QUEST : M.Z.Messages.QUESTS_ACCEPT_QUEST, Y = o.useCallback(() => {
+(0, g.AH)(w.id, {
+  questContent: _.jn.QUEST_BAR,
   questContentCTA: F
-}), H.features.has(b.S7.START_QUEST_CTA) && (0, u.uL)(O.Z5c.ACTIVITY_DETAILS(I.In), void 0);
+}), H.features.has(R.S7.START_QUEST_CTA) && (0, u.uL)(y.Z5c.ACTIVITY_DETAILS(I.In), void 0);
   }, [
-L,
+w,
 F,
 H.features
-  ]), K = (0, R.hf)({
-quest: L,
-location: f.jn.QUEST_BAR
+  ]), X = (0, b.hf)({
+quest: w,
+location: _.jn.QUEST_BAR
   }), J = o.useCallback(() => {
-(0, h.FE)(L, {
-  content: f.jn.QUEST_BAR,
+(0, h.FE)(w, {
+  content: _.jn.QUEST_BAR,
   ctaContent: m.jZ.OPEN_GAME_LINK
 });
-  }, [L]), $ = H.features.has(b.S7.POST_ENROLLMENT_CTA), ee = (0, C.Rf)(L), et = (0, C.Jf)(L), en = null != et ? et.progress > 0 : ee.progressSeconds > 0, es = (null === (n = L.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, eo = (null === (r = L.userStatus) || void 0 === r ? void 0 : r.completedAt) != null, er = o.useMemo(() => (0, h.Xv)(L.config), [L.config]), ea = M && Z, ei = (0, h.ph)(L), el = (0, T.D)({
-quest: L,
+  }, [w]), $ = H.features.has(R.S7.POST_ENROLLMENT_CTA), ee = (0, C.Rf)(w), et = (0, C.Jf)(w), en = null != et ? et.progress > 0 : ee.progressSeconds > 0, es = (null === (n = w.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, eo = (null === (r = w.userStatus) || void 0 === r ? void 0 : r.completedAt) != null, er = o.useMemo(() => (0, h.Xv)(w.config), [w.config]), ea = q && k, ei = (0, h.ph)(w), el = (0, S.D)({
+quest: w,
 taskDetails: ee,
-location: b.dr.QUESTS_BAR,
-questContent: f.jn.QUEST_BAR,
+location: R.dr.QUESTS_BAR,
+questContent: _.jn.QUEST_BAR,
 thirdPartyTaskDetails: null != et ? et : void 0
   }), ec = (0, x.isWeb)(), ed = o.useMemo(() => {
-let e = (0, c.Qg)(L.config.colors.primary, {
+let e = (0, c.Qg)(w.config.colors.primary, {
   base: '#ffffff',
   contrastRatio: c.S3.Text
 });
@@ -73,30 +73,30 @@ return {
   '--custom-cta-color-hover': (0, l.r5)(e, 0.3),
   '--custom-cta-color-active': (0, l.r5)(e, 0.35)
 };
-  }, [L.config.colors.primary]);
+  }, [w.config.colors.primary]);
   return (0, s.jsx)('div', {
 style: {
-  backgroundColor: L.config.colors.secondary
+  backgroundColor: w.config.colors.secondary
 },
 'aria-hidden': !ea,
-className: a()(E, y.contentExpanded, {
-  [y.contentInteractable]: ea
+className: a()(E, O.contentExpanded, {
+  [O.contentInteractable]: ea
 }),
 children: es ? (0, s.jsxs)('div', {
-  className: y.questAcceptedContent,
+  className: O.questAcceptedContent,
   ref: t,
   children: [
     (0, s.jsxs)('div', {
-      className: y.utils,
+      className: O.utils,
       children: [
         (0, s.jsxs)('div', {
-          className: y.questAcceptedContentHeading,
+          className: O.questAcceptedContentHeading,
           children: [
-            (0, s.jsx)(v.Z, {
-              className: y.questProgressRewardTile,
+            (0, s.jsx)(N.Z, {
+              className: O.questProgressRewardTile,
               learnMoreStyle: 'icon',
-              quest: L,
-              questContent: f.jn.QUEST_BAR
+              quest: w,
+              questContent: _.jn.QUEST_BAR
             }),
             (0, s.jsxs)('div', {
               children: [
@@ -104,18 +104,18 @@ children: es ? (0, s.jsxs)('div', {
                   color: 'always-white',
                   variant: 'heading-sm/semibold',
                   children: (0, h.AV)({
-                    quest: L,
+                    quest: w,
                     taskDetails: ee,
                     thirdPartyTaskDetails: null != et ? et : void 0
                   })
                 }),
                 (0, s.jsx)(d.Text, {
-                  className: y.questAcceptedContentCopySubheading,
+                  className: O.questAcceptedContentCopySubheading,
                   color: 'always-white',
                   variant: 'text-xxs/normal',
-                  children: eo ? U.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
+                  children: eo ? M.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
                     expirationDate: V
-                  }) : U.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
+                  }) : M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
                     expirationDate: D
                   })
                 })
@@ -124,99 +124,99 @@ children: es ? (0, s.jsxs)('div', {
           ]
         }),
         (0, s.jsx)(B.r, {
-          onOpen: k,
+          onOpen: Z,
           onClose: P,
           onSelect: Q,
-          questContent: f.jn.QUEST_BAR,
-          quest: L,
+          questContent: _.jn.QUEST_BAR,
+          quest: w,
           shouldShowDisclosure: !1,
           showShareLink: !0,
           children: e => (0, s.jsx)(d.Clickable, {
             ...e,
-            className: y.submenuWrapper,
-            'aria-label': U.Z.Messages.ACTIONS,
+            className: O.submenuWrapper,
+            'aria-label': M.Z.Messages.ACTIONS,
             children: (0, s.jsx)(d.MoreHorizontalIcon, {
               size: 'md',
               color: 'currentColor',
-              className: y.submenuIcon
+              className: O.submenuIcon
             })
           })
         })
       ]
     }),
     eo ? (0, s.jsx)(d.Button, {
-      className: a()(y.cta, y.ctaClaimReward),
+      className: a()(O.cta, O.ctaClaimReward),
       style: er ? ed : void 0,
       color: d.Button.Colors.CUSTOM,
       fullWidth: !0,
-      onClick: K,
+      onClick: X,
       size: d.Button.Sizes.NONE,
-      children: U.Z.Messages.QUESTS_CLAIM_REWARD
+      children: M.Z.Messages.QUESTS_CLAIM_REWARD
     }) : (0, s.jsx)(d.Text, {
-      className: y.description,
+      className: O.description,
       color: 'always-white',
       variant: 'text-xs/normal',
       children: el
     }),
-    (0, s.jsx)(N.Z, {
-      quest: L
+    (0, s.jsx)(A.Z, {
+      quest: w
     }),
-    !ec && !en && !G && $ && (0, s.jsx)(q, {
+    !ec && !en && !G && $ && (0, s.jsx)(U, {
       onClick: ea ? J : void 0
     })
   ]
 }) : (0, s.jsxs)('div', {
   children: [
     (0, s.jsxs)('div', {
-      className: y.questPromoContent,
+      className: O.questPromoContent,
       ref: t,
       children: [
         (0, s.jsxs)('div', {
-          className: y.utils,
+          className: O.utils,
           children: [
-            (0, s.jsx)(A.Z, {
+            (0, s.jsx)(v.Z, {
               color: 'always-white'
             }),
             (0, s.jsx)(B.r, {
-              onOpen: k,
+              onOpen: Z,
               onClose: P,
               onSelect: Q,
-              questContent: f.jn.QUEST_BAR,
-              quest: L,
+              questContent: _.jn.QUEST_BAR,
+              quest: w,
               shouldShowDisclosure: !0,
               showShareLink: !0,
               children: e => (0, s.jsx)(d.Clickable, {
                 ...e,
-                className: y.submenuWrapper,
-                'aria-label': U.Z.Messages.ACTIONS,
+                className: O.submenuWrapper,
+                'aria-label': M.Z.Messages.ACTIONS,
                 children: (0, s.jsx)(d.MoreHorizontalIcon, {
                   size: 'md',
                   color: 'currentColor',
-                  className: y.submenuIcon
+                  className: O.submenuIcon
                 })
               })
             })
           ]
         }),
         (0, s.jsxs)('div', {
-          className: y.details,
+          className: O.details,
           children: [
-            (0, s.jsx)(v.Z, {
-              className: y.rewardTile,
+            (0, s.jsx)(N.Z, {
+              className: O.rewardTile,
               learnMoreStyle: 'text',
-              quest: L,
-              questContent: f.jn.QUEST_BAR
+              quest: w,
+              questContent: _.jn.QUEST_BAR
             }),
             (0, s.jsx)(d.Heading, {
-              className: y.title,
+              className: O.title,
               color: 'always-white',
               variant: 'heading-md/medium',
-              children: U.Z.Messages.QUESTS_TITLE.format({
-                questName: L.config.messages.questName
+              children: M.Z.Messages.QUESTS_TITLE.format({
+                questName: w.config.messages.questName
               })
             }),
             (0, s.jsx)(d.Text, {
-              className: y.description,
+              className: O.description,
               color: 'always-white',
               variant: 'text-sm/normal',
               children: el
@@ -224,31 +224,31 @@ children: es ? (0, s.jsxs)('div', {
           ]
         }),
         (0, s.jsx)(d.Button, {
-          className: y.cta,
-          style: '1232852290197655573' !== L.id ? ed : void 0,
+          className: O.cta,
+          style: '1232852290197655573' !== w.id ? ed : void 0,
           color: d.Button.Colors.CUSTOM,
           fullWidth: !0,
           onClick: ea ? Y : void 0,
           size: d.Button.Sizes.NONE,
           submitting: W,
-          children: X
+          children: K
         })
       ]
     }),
     (0, s.jsx)('div', {
-      className: y.heroAssetWrapper,
+      className: O.heroAssetWrapper,
       style: {
-        color: L.config.colors.secondary
+        color: w.config.colors.secondary
       },
       children: z ? (0, s.jsx)(j.Fl, {
         id: 'QuestBarContentExpanded_heroAnimated',
         children: e => (0, s.jsx)(p.Z, {
           ref: e,
-          autoPlay: !w,
+          autoPlay: !L,
           loop: !0,
           muted: !0,
           playsInline: !0,
-          className: y.heroAsset,
+          className: O.heroAsset,
           controls: !1,
           children: (0, s.jsx)('source', {
             src: ei,
@@ -260,7 +260,7 @@ children: es ? (0, s.jsxs)('div', {
         children: e => (0, s.jsx)('img', {
           ref: e,
           alt: '',
-          className: y.heroAsset,
+          className: O.heroAsset,
           src: ei
         })
       })
@@ -270,22 +270,22 @@ children: es ? (0, s.jsxs)('div', {
   });
 });
 
-function q(e) {
+function U(e) {
   let {
 style: t,
 onClick: n
   } = e;
   return (0, E.O)({
-location: b.dr.QUESTS_BAR,
+location: R.dr.QUESTS_BAR,
 autoTrackExposure: !0
   }) ? (0, s.jsx)(d.Button, {
-className: y.cta,
+className: O.cta,
 style: t,
 color: d.Button.Colors.CUSTOM,
 fullWidth: !0,
 onClick: n,
 size: d.Button.Sizes.NONE,
-children: U.Z.Messages.QUESTS_GET_THIS_GAME
+children: M.Z.Messages.QUESTS_GET_THIS_GAME
   }) : null;
 }
-t.Z = M;
+t.Z = q;

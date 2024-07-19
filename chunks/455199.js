@@ -12,8 +12,8 @@ var i, a, s, r, l = n(392711),
   h = n(23750),
   N = n(314897),
   f = n(592125),
-  C = n(375954),
-  p = n(306680),
+  p = n(375954),
+  C = n(306680),
   g = n(699516),
   S = n(914010),
   A = n(9156),
@@ -37,7 +37,7 @@ roleFilter: !0
 function y(e) {
   if (e instanceof h.ZP)
 return e;
-  let t = C.Z.getMessage(e.channel_id, e.id);
+  let t = p.Z.getMessage(e.channel_id, e.id);
   return null != t ? t : (0, E.e5)(e);
 }
 
@@ -60,7 +60,7 @@ message: e,
 userId: i,
 suppressEveryone: a,
 suppressRoles: s
-  }) ? (U && p.ZP.ackMessageId(n.id) !== e.id && (0, I.ZP)({
+  }) ? (U && C.ZP.ackMessageId(n.id) !== e.id && (0, I.ZP)({
 message: e,
 userId: i,
 suppressEveryone: A.ZP.isSuppressEveryoneEnabled(n.getGuildId()),
@@ -121,7 +121,7 @@ channel: t
 }
 class Y extends(i = c.ZP.Store) {
   initialize() {
-this.waitFor(R.default, f.Z, C.Z, p.ZP);
+this.waitFor(R.default, f.Z, p.Z, C.ZP);
   }
   isOpen() {
 return j;

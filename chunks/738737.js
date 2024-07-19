@@ -54,8 +54,8 @@ let {
 ]).then(n.bind(n, 7305));
 return n => {
   let {
-    onClose: C,
-    ...p
+    onClose: p,
+    ...C
   } = n;
   return (0, i.jsx)(e, {
     activeSubscription: l,
@@ -63,10 +63,10 @@ return n => {
     skuIDs: [f],
     children: (0, i.jsx)(s.KB, {
       children: (0, i.jsx)(a, {
-        ...p,
+        ...C,
         initialPlanId: t,
         onClose: e => {
-          C(), null == d || d(e);
+          p(), null == d || d(e);
         },
         analyticsLocations: E,
         analyticsObject: u,

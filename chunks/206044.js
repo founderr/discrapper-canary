@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(617136),
   N = n(113434),
   f = n(497505),
-  C = n(918701),
-  p = n(566078),
+  p = n(918701),
+  C = n(566078),
   g = n(685613),
   S = n(611855),
   A = n(644646),
@@ -47,7 +47,7 @@ let _ = () => {
     questContent: n,
     questContentCTA: h.jZ.COPY_QUEST_URL,
     questContentPosition: s
-  }), (0, T.JG)((0, C.Rs)(t.id)), o(!0), c.current.start(1000, () => o(!1));
+  }), (0, T.JG)((0, p.Rs)(t.id)), o(!0), c.current.start(1000, () => o(!1));
 };
 return (0, i.jsx)(u.Tooltip, {
   forceOpen: l,
@@ -85,11 +85,11 @@ height: G
 ref: F,
 width: w,
 scrollWidth: V
-  } = (0, _.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = a.useMemo(() => (0, C.nP)(d.config.assets.hero), [d]), K = a.useRef(null), z = (0, O.uq)(m), Q = m === f.jn.QUESTS_EMBED, q = (0, N.t5)(d, x.dr.QUESTS_CARD, m), X = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(d.config.expiresAt, {
+  } = (0, _.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = a.useMemo(() => (0, p.nP)(d.config.assets.hero), [d]), z = a.useRef(null), K = (0, O.uq)(m), Q = m === f.jn.QUESTS_EMBED, q = (0, N.t5)(d, x.dr.QUESTS_CARD, m), X = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(d.config.expiresAt, {
 year: 'numeric',
 month: 'long',
 day: 'numeric'
-  }), $ = (0, N.B6)(p.r.build(d.config).rewardsExpireAt, {
+  }), $ = (0, N.B6)(C.r.build(d.config).rewardsExpireAt, {
 year: 'numeric',
 month: 'long',
 day: 'numeric'
@@ -102,21 +102,21 @@ e.stopPropagation(), e.currentTarget.blur(), B(), (0, h._3)({
 });
   };
   a.useEffect(() => {
-W && null != K.current && (n ? K.current.play() : !n && (K.current.pause(), K.current.currentTime = 0));
+W && null != z.current && (n ? z.current.play() : !n && (z.current.pause(), z.current.currentTime = 0));
   }, [
 n,
 W
   ]);
-  let et = (0, C.j8)(d);
+  let et = (0, p.j8)(d);
   return (0, i.jsxs)('div', {
 className: r()(v.outerContainer, {
-  [v.outerContainerGiftInventory]: z,
+  [v.outerContainerGiftInventory]: K,
   [v.outerContainerEmbed]: Q,
   [v.outerContainerXs]: 'xs' === T
 }),
 'aria-label': M.Z.Messages.EXPAND,
 style: {
-  height: z ? G : void 0
+  height: K ? G : void 0
 },
 children: [
   (0, i.jsx)(Z, {
@@ -139,10 +139,10 @@ children: [
     className: v.questSplash,
     controls: !1,
     poster: et,
-    ref: K,
+    ref: z,
     children: !Y && W && (0, i.jsx)('source', {
       src: et,
-      type: (0, C.mN)(et)
+      type: (0, p.mN)(et)
     })
   }),
   (0, i.jsxs)('div', {
@@ -154,7 +154,7 @@ children: [
           [v.headerContentEmbed]: Q
         }),
         style: {
-          y: z ? b.to({
+          y: K ? b.to({
             range: [
               0,
               1
@@ -166,7 +166,7 @@ children: [
           }) : void 0
         },
         children: [
-          z && (0, i.jsx)(l.animated.div, {
+          K && (0, i.jsx)(l.animated.div, {
             className: v.headerCollapsedContent,
             style: {
               opacity: b.to({
@@ -226,7 +226,7 @@ children: [
               k.current = e;
             },
             className: r()(v.headerExpandedContent, {
-              [v.outerContainerGiftInventory]: z,
+              [v.outerContainerGiftInventory]: K,
               [v.outerContainerEmbed]: Q
             }),
             style: {
@@ -291,7 +291,7 @@ children: [
                   })
                 ]
               }),
-              !s && z && (0, i.jsx)(P, {
+              !s && K && (0, i.jsx)(P, {
                 quest: d,
                 location: m,
                 questContentPosition: y
@@ -303,7 +303,7 @@ children: [
       (0, i.jsxs)(l.animated.div, {
         className: v.iconsContainer,
         style: {
-          top: z ? b.to({
+          top: K ? b.to({
             range: [
               0,
               1
@@ -320,7 +320,7 @@ children: [
             quest: d,
             questContentPosition: y,
             shouldShowDisclosure: !0,
-            hideLearnMore: z,
+            hideLearnMore: K,
             showShareLink: !s && Q,
             children: e => (0, i.jsx)(l.animated.div, {
               style: {

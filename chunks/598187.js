@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(528011),
   N = n(666657),
   f = n(533244),
-  C = n(825829),
-  p = n(226192),
+  p = n(825829),
+  C = n(226192),
   g = n(36459),
   S = n(434404),
   A = n(103575),
@@ -50,9 +50,9 @@ message: t,
 compact: n
   } = e, {
 notificationType: a
-  } = (0, C.FL)(t);
+  } = (0, p.FL)(t);
   switch (a) {
-case C.nj:
+case p.nj:
 case d.p.RAID:
   return (0, i.jsx)(w, {
     message: t,
@@ -138,7 +138,7 @@ function F(e) {
   let {
 message: n,
 compact: s
-  } = e, r = M.default.getUser((0, C.Sw)(n)), l = null === (t = O.Z.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, c = null != l && null != r ? x.ZP.getMember(l, r.id) : null, {
+  } = e, r = M.default.getUser((0, p.Sw)(n)), l = null === (t = O.Z.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, c = null != l && null != r ? x.ZP.getMember(l, r.id) : null, {
 avatarSrc: d,
 avatarDecorationSrc: u,
 eventHandlers: _
@@ -243,12 +243,12 @@ raidDatetime: d,
 dmsSent: m,
 raidType: T,
 resolvedReason: g
-  } = (0, C.FL)(s), S = (0, _.e7)([O.Z], () => O.Z.getChannel(s.channel_id), [s.channel_id]), A = null !== (t = null == S ? void 0 : S.guild_id) && void 0 !== t ? t : null, {
+  } = (0, p.FL)(s), S = (0, _.e7)([O.Z], () => O.Z.getChannel(s.channel_id), [s.channel_id]), A = null !== (t = null == S ? void 0 : S.guild_id) && void 0 !== t ? t : null, {
 incidentData: R,
 shouldShowIncidentActions: x
   } = (0, h.mI)(A), M = (0, Z.sR)(s.author.id, s.channel_id), v = a.useCallback(() => {
 let e = null == S ? void 0 : S.guild_id;
-null != e && (0, p.kW)(s.id, e);
+null != e && (0, C.kW)(s.id, e);
   }, [
 s.id,
 S
@@ -375,7 +375,7 @@ footerButtons: (0, i.jsxs)('div', {
         children: (0, i.jsx)(I.Text, {
           variant: 'text-xs/medium',
           color: 'text-link',
-          children: (0, C.ge)(g)
+          children: (0, p.ge)(g)
         })
       })
     })
@@ -393,7 +393,7 @@ compact: s
 raidDatetime: l,
 decisionId: c,
 suspiciousMentionActivityUntil: d
-  } = (0, C.FL)(n);
+  } = (0, p.FL)(n);
   return (0, i.jsx)(H, {
 compact: s,
 header: (0, i.jsxs)(a.Fragment, {
@@ -525,7 +525,7 @@ eventHandlers: {
 }
   } = (0, P.m)(!0), {
 notificationType: u
-  } = (0, C.FL)(a), _ = null == u || u === d.p.RAID;
+  } = (0, p.FL)(a), _ = null == u || u === d.p.RAID;
   return (0, i.jsx)('div', {
 onMouseEnter: o,
 onMouseLeave: c,

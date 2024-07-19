@@ -29,8 +29,8 @@ var i = n(278074),
   h = n(798628),
   N = n(79390),
   f = n(839963),
-  C = n(897325),
-  p = n(57101),
+  p = n(897325),
+  C = n(57101),
   g = n(562293),
   S = n(981631),
   A = n(689938);
@@ -93,18 +93,18 @@ m = null == I && E,
   selectedAnswerIds: T,
   submitting: N,
   editing: f,
-  showResults: C
+  showResults: p
 } = null !== (a = null != t ? t : (0, h.fU)(e.getChannelId(), e.id)) && void 0 !== a ? a : R,
-p = e.reactions,
+C = e.reactions,
 A = !0;
   if (!M(e)) {
 let t = _.Z.getMessage(e.channel_id, e.id);
-A = !e.isSearchHit && null != t, p = null !== (s = null == t ? void 0 : t.reactions) && void 0 !== s ? s : p;
+A = !e.isSearchHit && null != t, C = null !== (s = null == t ? void 0 : t.reactions) && void 0 !== s ? s : C;
   }
   let O = T.size > 0,
-x = p.some(e => !0 === e.me_vote),
+x = C.some(e => !0 === e.me_vote),
 v = !f && x,
-L = v || m || C,
+L = v || m || p,
 Z = E && A && (!x || f || L),
 P = null === (i = d.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
 b = null != P ? u.ZP.getSelfMember(P) : null,
@@ -124,11 +124,11 @@ isEditingVote: f,
 isExpired: m,
 isInteractive: A,
 isSent: E,
-reactions: p,
+reactions: C,
 selectedAnswerIds: T,
 submitting: N,
 tapShouldOpenVotersModal: L,
-showResults: C
+showResults: p
   };
 }
 
@@ -148,7 +148,7 @@ return;
 return;
   let S = s.Z.useReducedMotion,
 R = null === (o = d.Z.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
-M = (0, C.E)(g, R),
+M = (0, p.E)(g, R),
 L = h.answers,
 Z = h.layout_type,
 P = v(e, t, {
@@ -171,9 +171,9 @@ reactions: V,
 selectedAnswerIds: H,
 submitting: Y,
 tapShouldOpenVotersModal: W,
-showResults: K
-  } = P, z = (0, N.cZ)(V), Q = A.Z.Messages.POLL_VOTES_COUNT.format({
-count: z.toLocaleString()
+showResults: z
+  } = P, K = (0, N.cZ)(V), Q = A.Z.Messages.POLL_VOTES_COUNT.format({
+count: K.toLocaleString()
   }), q = Math.max(...L.map(e => {
 var t, n;
 let i = O(V, ''.concat(e.answer_id));
@@ -183,7 +183,7 @@ var t, n, s;
 let o = ''.concat(e.answer_id),
   d = O(V, o),
   u = null !== (n = null == d ? void 0 : null === (t = d.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
-  _ = 0 === z ? 0 : u / z,
+  _ = 0 === K ? 0 : u / K,
   E = H.has(o),
   T = u >= q && 0 !== u,
   h = k && null !== (s = null == d ? void 0 : d.me_vote) && void 0 !== s && s,
@@ -193,7 +193,7 @@ let o = ''.concat(e.answer_id),
     isExpired: F,
     isSelected: E,
     isLeader: T,
-    showResults: K
+    showResults: z
   });
 return {
   answerId: o,
@@ -246,7 +246,7 @@ hasVoted: k,
 isEditingVote: G,
 canRemoveVote: D,
 isInteractive: w,
-showResults: K
+showResults: z
   }).with({
 isInteractive: !1
   }, () => void 0).with({
@@ -303,7 +303,7 @@ accessibilityHint: $,
 presentation: 'text',
 enabled: !0,
 type: 'showVoterDetails'
-  })), et = !w || F || k || K ? void 0 : {
+  })), et = !w || F || k || z ? void 0 : {
 label: A.Z.Messages.POLL_SHOW_VOTES,
 presentation: 'textButton',
 enabled: !0,
@@ -338,7 +338,7 @@ answersInteraction: (0, i.EQ)({
 }, () => f.Y7.CHECKBOXES).exhaustive(),
 answerTapAccessibilityLabel: W ? $ : void 0,
 layoutType: Z,
-resources: (0, p.Z)({
+resources: (0, C.Z)({
   theme: u,
   layoutType: Z
 }),

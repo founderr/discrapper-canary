@@ -25,8 +25,8 @@ let t, n, {
     count: h,
     me: N,
     me_burst: f,
-    burst_count: C,
-    burst_colors: p,
+    burst_count: p,
+    burst_colors: C,
     readOnly: g,
     isLurking: S,
     isGuest: A,
@@ -35,9 +35,9 @@ let t, n, {
   } = e,
   x = O === _.O.BURST,
   M = (0, E.y4)(N, f, O),
-  v = (0, u.v)(x && null != p ? p : []),
+  v = (0, u.v)(x && null != C ? C : []),
   L = a ? m : I,
-  Z = x ? C : h,
+  Z = x ? p : h,
   P = (0, d.y)(Z, E.aO),
   b = {};
 if (x && null != v) {

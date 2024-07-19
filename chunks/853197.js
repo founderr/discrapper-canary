@@ -9,7 +9,7 @@ return g;
 return S;
   },
   FL: function() {
-return C;
+return p;
   },
   R9: function() {
 return m;
@@ -27,7 +27,7 @@ return h;
 return T;
   },
   hM: function() {
-return p;
+return C;
   },
   j7: function() {
 return E;
@@ -112,7 +112,7 @@ a = N(n, !0);
   return !i && a;
 }
 
-function C(e) {
+function p(e) {
   var t, n;
   let i = g(e);
   if (null == i || !(null === (n = _(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({
@@ -123,10 +123,10 @@ function C(e) {
 return !1;
   let a = r.bh.getSetting(),
 s = N(i, !1);
-  return p(i) && !a && s;
+  return C(i) && !a && s;
 }
 
-function p(e) {
+function C(e) {
   let {
 endDate: t
   } = e, n = a()(t, 'YYYY-MM-DD HH:mm');
