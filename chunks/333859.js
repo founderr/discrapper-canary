@@ -7,10 +7,10 @@ var n = t(735250),
   a = t(470079),
   i = t(442837),
   r = t(481060),
-  o = t(570140),
-  l = t(37234),
-  c = t(100527),
-  d = t(906732),
+  o = t(37234),
+  l = t(100527),
+  c = t(906732),
+  d = t(94795),
   _ = t(327943),
   E = t(539873),
   u = t(197115),
@@ -21,14 +21,12 @@ var n = t(735250),
   C = t(245732),
   m = t(549856);
 let A = () => {
-o.Z.dispatch({
-  type: 'APP_ICON_EDITOR_OPEN'
-}), (0, l.xf)();
+(0, d.nJ)(), (0, o.xf)();
   },
   h = () => {
 let {
   analyticsLocations: e
-} = (0, d.ZP)(c.Z.USER_SETTINGS), s = (0, i.e7)([_.Z], () => _.Z.isUpsellPreview);
+} = (0, c.ZP)(l.Z.USER_SETTINGS), s = (0, i.e7)([_.Z], () => _.Z.isUpsellPreview);
 return a.useEffect(() => {
   s && T.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
     type: S.cd.APP_ICON_UPSELL,
