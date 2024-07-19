@@ -46,11 +46,11 @@ quest: t,
 location: n,
 initiallyExpanded: r,
 contentPosition: c
-  } = e, [N, f] = a.useState(!1), C = a.useCallback(() => f(!0), []), p = a.useCallback(() => f(!1), []), g = (0, o.tP)(t), {
+  } = e, [N, f] = a.useState(!1), p = a.useCallback(() => f(!0), []), C = a.useCallback(() => f(!1), []), g = (0, o.tP)(t), {
 containerRef: S,
 size: A,
 height: R
-  } = (0, m.h)([t]), O = (0, l.q)({
+  } = (0, m.h)(), O = (0, l.q)({
 location: T.dr.QUESTS_CARD
   }), {
 expansionSpring: x,
@@ -69,7 +69,7 @@ questContent: n,
 questContentPosition: c,
 trackGuildAndChannelMetadata: n === d.jn.QUESTS_EMBED,
 children: e => (0, i.jsx)(i.Fragment, {
-  children: (0, i.jsxs)(s.animated.div, {
+  children: (0, i.jsx)(s.animated.div, {
     style: {
       maxHeight: n === d.jn.QUESTS_EMBED ? void 0 : x.to({
         range: [
@@ -82,39 +82,41 @@ children: e => (0, i.jsx)(i.Fragment, {
         ]
       })
     },
-    ref: t => {
-      e.current = t, S.current = t;
-    },
     className: h.questsCard,
-    onFocus: C,
-    onMouseEnter: C,
-    onBlur: p,
-    onMouseLeave: p,
-    children: [
-      (0, i.jsx)(I.Z, {
-        isFocused: N,
-        isQuestExpired: g,
-        location: n,
-        quest: t,
-        size: A,
-        expansionSpring: x,
-        isAnimating: M,
-        isExpanded: v,
-        isInConcurrentQuestExperiment: O,
-        contentPosition: c,
-        toggleExpanded: L
-      }),
-      (0, i.jsx)(E.Z, {
-        quest: t,
-        isQuestExpired: g,
-        location: n,
-        size: A,
-        isFocused: N,
-        isExpanded: v,
-        isAnimating: M,
-        contentPosition: c
-      })
-    ]
+    onFocus: p,
+    onMouseEnter: p,
+    onBlur: C,
+    onMouseLeave: C,
+    children: (0, i.jsxs)('div', {
+      ref: t => {
+        e.current = t, S.current = t;
+      },
+      children: [
+        (0, i.jsx)(I.Z, {
+          isFocused: N,
+          isQuestExpired: g,
+          location: n,
+          quest: t,
+          size: A,
+          expansionSpring: x,
+          isAnimating: M,
+          isExpanded: v,
+          isInConcurrentQuestExperiment: O,
+          contentPosition: c,
+          toggleExpanded: L
+        }),
+        (0, i.jsx)(E.Z, {
+          quest: t,
+          isQuestExpired: g,
+          location: n,
+          size: A,
+          isFocused: N,
+          isExpanded: v,
+          isAnimating: M,
+          contentPosition: c
+        })
+      ]
+    })
   })
 })
   });

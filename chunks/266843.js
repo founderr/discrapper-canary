@@ -13,20 +13,20 @@ var i = n(470079),
   l = n(607070),
   o = n(87894);
 
-function c(e) {
-  let t = i.useRef(null),
-[n, a] = i.useState('lg'),
-[s, l] = i.useState(void 0);
-  return (0, r.P)(t, e => {
+function c() {
+  let e = i.useRef(null),
+[t, n] = i.useState('lg'),
+[a, s] = i.useState(void 0);
+  return (0, r.P)(e, e => {
 let {
   width: t,
-  scrollHeight: n
+  scrollHeight: i
 } = e;
-return (l(n), null == t || t > o.j2) ? a('lg') : t > o.Z0 ? a('sm') : a('xs');
-  }, null != e ? e : []), {
-containerRef: t,
-size: n,
-height: s
+return (s(i), null == t || t > o.j2) ? n('lg') : t > o.Z0 ? n('sm') : n('xs');
+  }), {
+containerRef: e,
+size: t,
+height: a
   };
 }
 

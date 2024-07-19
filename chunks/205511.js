@@ -5,171 +5,153 @@ var s = n(735250),
   i = n(442837),
   l = n(481060),
   c = n(607070),
-  d = n(706454),
-  u = n(63063),
-  p = n(617136),
-  x = n(113434),
-  m = n(497505),
-  g = n(918701),
-  C = n(566078),
-  _ = n(667105),
-  f = n(585857),
-  h = n(46140),
-  E = n(981631),
-  T = n(689938),
-  S = n(778239);
+  d = n(617136),
+  u = n(113434),
+  p = n(497505),
+  x = n(918701),
+  m = n(566078),
+  g = n(667105),
+  C = n(585857),
+  f = n(46140),
+  _ = n(689938),
+  h = n(778239);
 
-function N(e) {
+function E(e) {
   let {
 children: t,
 isComplete: n,
 hasNextStep: o
   } = e;
   return (0, s.jsxs)('li', {
-className: a()(S.stepWrapper, {
-  [S.stepWrapperComplete]: n
+className: a()(h.stepWrapper, {
+  [h.stepWrapperComplete]: n
 }, {
-  [S.stepWrapperWithNextStep]: o
+  [h.stepWrapperWithNextStep]: o
 }),
 children: [
   (0, s.jsxs)('div', {
-    className: S.stepIndicator,
+    className: h.stepIndicator,
     children: [
       (0, s.jsx)('div', {
-        className: S.stepIconWrapper,
+        className: h.stepIconWrapper,
         children: n && (0, s.jsx)(l.CheckmarkBoldIcon, {
-          className: S.stepIcon,
+          className: h.stepIcon,
           color: l.tokens.colors.WHITE
         })
       }),
       o && (0, s.jsx)('div', {
-        className: S.stepConnector
+        className: h.stepConnector
       })
     ]
   }),
   (0, s.jsx)('div', {
-    className: S.stepContent,
+    className: h.stepContent,
     children: t
   })
 ]
   });
 }
 
-function A(e) {
+function S(e) {
   let {
 quest: t,
-useReducedMotion: n,
-connectedAccounts: r
-  } = e, c = (0, i.e7)([d.default], () => d.default.locale), f = (0, _.g2)({
+useReducedMotion: n
+  } = e, r = (0, g.k3)(t.id, p.jn.QUEST_BAR_V2), i = (0, g.g2)({
 useReducedMotion: n
   }), {
-errorHints: N,
-startingConsoleQuest: A,
-startConsoleQuest: v
-  } = (0, x.GI)({
+errorHints: c,
+startingConsoleQuest: C,
+startConsoleQuest: E
+  } = (0, u.GI)({
 questId: t.id,
 beforeRequest: () => {
-  (0, p._3)({
+  (0, d._3)({
     questId: t.id,
-    questContent: m.jn.QUEST_BAR_V2,
-    questContentCTA: p.jZ.DEFIBRILLATOR
-  }), f.startAnimation();
+    questContent: p.jn.QUEST_BAR_V2,
+    questContentCTA: d.jZ.DEFIBRILLATOR
+  }), i.startAnimation();
 },
-afterRequest: f.stopAnimation
+afterRequest: i.stopAnimation
   }), {
-header: j,
-renderBody: B
+header: S,
+renderBody: T
   } = o.useMemo(() => {
-let e = N.length > 0,
+let e = c.length > 0,
   n = () => (0, s.jsx)('div', {
-    children: N.map((e, t) => (0, s.jsx)(l.Text, {
-      className: S.microphoneUnitBodyText,
+    children: c.map((e, t) => (0, s.jsx)(l.Text, {
+      className: h.microphoneUnitBodyText,
       color: 'text-muted',
       variant: 'text-xxs/normal',
       children: e
     }, t))
   });
-if ((0, g.zK)(t, h.S7.IN_HOUSE_CONSOLE_QUEST))
+if ((0, x.zK)(t, f.S7.IN_HOUSE_CONSOLE_QUEST))
   return {
-    header: e ? T.Z.Messages.QUESTS_ANY_GAME_NOT_DETECTED : T.Z.Messages.QUESTS_MICROPHONE_UNIT_HEADER,
+    header: e ? _.Z.Messages.QUESTS_ANY_GAME_NOT_DETECTED : _.Z.Messages.QUESTS_MICROPHONE_UNIT_HEADER,
     renderBody: e ? n : () => (0, s.jsx)(l.Text, {
-      className: S.microphoneUnitBodyText,
+      className: h.microphoneUnitBodyText,
       color: 'text-muted',
       variant: 'text-xxs/normal',
-      children: T.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY_ANY_GAME
+      children: _.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY_ANY_GAME
     })
   };
-let o = C.r.build(t.config).application.name;
+let o = m.r.build(t.config).application.name;
 return {
-  header: e ? T.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({
+  header: e ? _.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({
     gameTitle: o
-  }) : T.Z.Messages.QUESTS_LAUNCHED_GAME.format({
+  }) : _.Z.Messages.QUESTS_LAUNCHED_GAME.format({
     gameTitle: o
   }),
   renderBody: e ? n : () => (0, s.jsx)(l.Text, {
-    className: S.microphoneUnitBodyText,
+    className: h.microphoneUnitBodyText,
     color: 'text-muted',
     variant: 'text-xxs/normal',
-    children: T.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({
+    children: _.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({
       gameTitle: o
     })
   })
 };
   }, [
 t,
-N
+c
   ]);
   return (0, s.jsxs)('div', {
-className: S.microphoneUnit,
+className: h.microphoneUnit,
 children: [
   (0, s.jsxs)('div', {
-    className: S.microphoneUnitHeader,
+    className: h.microphoneUnitHeader,
     children: [
       (0, s.jsx)(l.CircleExclamationPointIcon, {
         size: 'custom',
         color: 'currentColor',
-        className: 0 === N.length ? S.warningCircle : S.errorCircle,
+        className: 0 === c.length ? h.warningCircle : h.errorCircle,
         width: 16,
         height: 16
       }),
       (0, s.jsx)(l.Text, {
         variant: 'text-xs/medium',
-        children: j
+        children: S
       }),
       (0, s.jsx)(l.Clickable, {
-        className: a()(S.microphoneUnitRefreshIconWrapper, {
-          [S.disabled]: A
+        className: a()(h.microphoneUnitRefreshIconWrapper, {
+          [h.disabled]: C
         }),
-        onClick: () => v(),
-        children: f.render()
+        onClick: () => E(),
+        children: i.render()
       })
     ]
   }),
   (0, s.jsxs)('div', {
     className: a()({
-      [S.opacity_50]: A
+      [h.opacity_50]: C
     }),
     children: [
-      B(),
-      0 === N.length ? null : (0, s.jsx)(l.Text, {
-        className: S.microphoneUnitBodyText,
+      T(),
+      0 === c.length ? null : (0, s.jsx)(l.Text, {
+        className: h.microphoneUnitBodyText,
         color: 'text-muted',
         variant: 'text-xxs/normal',
-        children: function() {
-          let e = r.playstationAccounts.length > 0,
-            t = r.xboxAccounts.length > 0;
-          return e && !t || !e && t ? 'en-US' === c ? T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_HELP_ARTICLE_SINGLE.format({
-            helpdeskArticle: u.Z.getArticleURL(e ? E.BhN.QUEST_HOW_TO_PLAYSTATION : E.BhN.QUEST_HOW_TO_XBOX)
-          }) : T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_SINGLE_CONSOLE.format({
-            helpdeskArticle: u.Z.getArticleURL(e ? E.BhN.PS_CONNECTION : E.BhN.XBOX_CONNECTION)
-          }) : 'en-US' === c ? T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_HELP_ARTICLE_MULTI.format({
-            psHelpdeskArticle: u.Z.getArticleURL(E.BhN.QUEST_HOW_TO_PLAYSTATION),
-            xboxHelpdeskArticle: u.Z.getArticleURL(E.BhN.QUEST_HOW_TO_XBOX)
-          }) : T.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_PLAYSTATION_OR_XBOX.format({
-            psHelpdeskArticle: u.Z.getArticleURL(E.BhN.PS_CONNECTION),
-            xboxHelpdeskArticle: u.Z.getArticleURL(E.BhN.XBOX_CONNECTION)
-          });
-        }()
+        children: r
       })
     ]
   })
@@ -177,7 +159,7 @@ children: [
   });
 }
 
-function v(e) {
+function T(e) {
   let {
 text: t
   } = e;
@@ -191,37 +173,37 @@ t.Z = function(e) {
   let {
 quest: t,
 taskDetails: n
-  } = e, r = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), a = (0, x.z6)(), {
+  } = e, r = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), a = (0, u.z6)(), {
 steps: d,
-hasConnectedAccounts: u,
-isProgressingQuestForLaunchedGame: p,
-isQuestComplete: m
+hasConnectedAccounts: p,
+isProgressingQuestForLaunchedGame: g,
+isQuestComplete: A
   } = o.useMemo(() => {
 var e;
 let o = a.xboxAndPlaystationAccounts.length > 0,
-  r = o && (0, g.Bz)(t),
-  i = (0, g.zK)(t, h.S7.IN_HOUSE_CONSOLE_QUEST),
-  l = C.r.build(t.config).application.name,
+  r = o && (0, x.Bz)(t),
+  i = (0, x.zK)(t, f.S7.IN_HOUSE_CONSOLE_QUEST),
+  l = m.r.build(t.config).application.name,
   c = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
 return {
   steps: [{
-      renderContent: () => (0, s.jsx)(f.Q, {
+      renderContent: () => (0, s.jsx)(C.Q, {
         ...a,
         quest: t
       }),
       isComplete: o || r || c
     },
     {
-      renderContent: () => (0, s.jsx)(v, {
-        text: i ? T.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_ANY_GAME : T.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME.format({
+      renderContent: () => (0, s.jsx)(T, {
+        text: i ? _.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_ANY_GAME : _.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME.format({
           gameTitle: l
         })
       }),
       isComplete: r || c
     },
     {
-      renderContent: () => (0, s.jsx)(v, {
-        text: T.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({
+      renderContent: () => (0, s.jsx)(T, {
+        text: _.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({
           numMinutes: n.targetMinutes
         })
       }),
@@ -238,28 +220,27 @@ t,
 n
   ]);
   return (0, s.jsxs)('div', {
-className: S.wrapper,
+className: h.wrapper,
 children: [
   (0, s.jsx)('div', {
-    className: S.headingWrapper,
+    className: h.headingWrapper,
     children: (0, s.jsx)(l.Heading, {
-      className: S.heading,
+      className: h.heading,
       variant: 'text-xs/medium',
-      children: T.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_HEADING
+      children: _.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_HEADING
     })
   }),
   (0, s.jsxs)('div', {
-    className: S.stepsWrapper,
+    className: h.stepsWrapper,
     children: [
       (0, s.jsx)('ul', {
-        children: d.map((e, t) => (0, s.jsx)(N, {
+        children: d.map((e, t) => (0, s.jsx)(E, {
           isComplete: e.isComplete,
           hasNextStep: t < d.length - 1,
           children: e.renderContent()
         }, t))
       }),
-      u && !p && !m && (0, s.jsx)(A, {
-        connectedAccounts: a,
+      p && !g && !A && (0, s.jsx)(S, {
         useReducedMotion: r,
         quest: t
       })
