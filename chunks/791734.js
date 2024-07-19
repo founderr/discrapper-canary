@@ -21,9 +21,9 @@ onTabSelect: s,
 backgroundStyle: u,
 leading: _,
 trailing: E,
-tabColor: h,
-selectedTabColor: I
-  } = e, m = (0, l.wj)((0, c.ZP)()), g = null != I ? I : m ? 'text-muted' : 'header-primary';
+selectedTabColor: h,
+tabColor: I = 'header-primary'
+  } = e, m = (0, l.wj)((0, c.ZP)()), g = null != h ? h : m ? 'text-muted' : 'header-primary';
   return (0, i.jsxs)('div', {
 className: d.container,
 children: [
@@ -39,10 +39,10 @@ children: [
     className: d.tabs,
     children: n.map(e => {
       let n = t === e.id,
-        s = n ? g : null != h ? h : 'header-primary';
+        s = n ? g : I;
       return (0, i.jsx)(o.TabBar.Item, {
         id: e.id,
-        color: h,
+        color: I,
         'aria-label': e.label,
         className: a()(d.tab, {
           [d.selected]: n

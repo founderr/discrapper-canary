@@ -64,8 +64,8 @@ children: [
     }),
     tabs: v,
     selectedTab: L,
-    tabColor: 'header-primary',
-    selectedTabColor: P ? 'text-muted' : 'header-primary',
+    tabColor: P ? 'text-muted' : 'currentColor',
+    selectedTabColor: P ? 'header-primary' : 'currentColor',
     onTabSelect: O,
     scrollPosition: x,
     backgroundStyle: b
