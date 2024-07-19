@@ -40,7 +40,9 @@ if (L && null != M.current)
 a,
 L
   ]), (0, i.jsxs)('div', {
-className: T.container,
+className: r()(T.container, {
+  [T.hoveredHeight]: a
+}),
 children: [
   (0, i.jsx)('div', {
     className: T.heroAssetWrapper,
@@ -75,7 +77,9 @@ children: [
     })
   }),
   (0, i.jsx)('div', {
-    className: T.positionContentOverBackground,
+    className: r()(T.positionContentOverBackground, {
+      [T.hoveredHeight]: a
+    }),
     children: (0, i.jsxs)('div', {
       className: T.contents,
       children: [

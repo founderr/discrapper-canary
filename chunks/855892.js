@@ -1,5 +1,7 @@
 e.exports = {
   container: 'container_c2d7e2',
+  height: 'height_c2d7e2',
+  hoveredHeight: 'hoveredHeight_c2d7e2',
   rewardDescriptionContainer: 'rewardDescriptionContainer_c2d7e2',
   progressWrapper: 'progressWrapper_c2d7e2',
   circularRewardTileWrapper: 'circularRewardTileWrapper_c2d7e2',
@@ -8,5 +10,7 @@ e.exports = {
   textContainer: 'textContainer_c2d7e2',
   headerSpan: 'headerSpan_c2d7e2',
   header: 'header_c2d7e2',
-  description: 'description_c2d7e2'
+  description: 'description_c2d7e2',
+  truncateTextTwoLines: 'truncateTextTwoLines_c2d7e2',
+  truncateTextThreeLines: 'truncateTextThreeLines_c2d7e2'
 };
