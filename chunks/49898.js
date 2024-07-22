@@ -12,12 +12,10 @@ return l;
   vf: function() {
 return s;
   }
-}), n(47120), (a = i || (i = {})).SERVERS = 'servers', a.APPS = 'apps', a.QUESTS = 'quests', a.SHOP = 'shop';
+}), n(47120), (a = i || (i = {})).SERVERS = 'servers', a.QUESTS = 'quests';
 let l = [
   'servers',
-  'apps',
-  'quests',
-  'shop'
+  'quests'
 ];
 (r = s || (s = {})).GUILDS = 'guilds', r.FEATURED = 'featured', r.GAMING = 'gaming', r.MUSIC = 'music', r.ENTERTAINMENT = 'entertainment', r.TECH = 'tech', r.EDUCATION = 'education', r.HUBS = 'hubs';
 let o = new Set([

@@ -12,13 +12,9 @@ function l() {
   let e = (0, a.d)(e => e.selectedPage, s.Z);
   return i.useEffect(() => {
 let e = function(e) {
-  switch (e) {
-    case '/discovery':
-    default:
-      return r.F$.SERVERS;
-    case '/discovery/quests':
-      return r.F$.QUESTS;
-  }
+  if ('/discovery/quests' === e)
+    return r.F$.QUESTS;
+  return r.F$.SERVERS;
 }(new URL(window.location.href).pathname);
 a.d.setState({
   selectedPage: e

@@ -27,12 +27,8 @@ function l(e) {
   switch (e) {
 case s.F$.SERVERS:
   return r.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TITLE;
-case s.F$.APPS:
-  return r.Z.Messages.GLOBAL_DISCOVERY_APPS_TITLE;
 case s.F$.QUESTS:
   return r.Z.Messages.GLOBAL_DISCOVERY_QUESTS_TITLE;
-case s.F$.SHOP:
-  return r.Z.Messages.GLOBAL_DISCOVERY_SHOP_TITLE;
 default:
   (0, i.vE)(e);
   }

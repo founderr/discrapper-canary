@@ -24,16 +24,8 @@ switch (e) {
     return (0, i.jsx)(o.ServerIcon, {
       color: 'currentColor'
     });
-  case u.F$.APPS:
-    return (0, i.jsx)(o.AppsIcon, {
-      color: 'currentColor'
-    });
   case u.F$.QUESTS:
     return (0, i.jsx)(o.QuestsIcon, {
-      color: 'currentColor'
-    });
-  case u.F$.SHOP:
-    return (0, i.jsx)(o.ShopSparkleIcon, {
       color: 'currentColor'
     });
 }
