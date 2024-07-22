@@ -36,7 +36,7 @@ function g(e) {
   let {
 quest: T
   } = e, f = (0, c.B6)(T.config.expiresAt, {
-month: '2-digit',
+month: 'numeric',
 day: '2-digit'
   }), {
 isClaiming: S,

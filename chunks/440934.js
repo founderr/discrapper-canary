@@ -12,8 +12,8 @@ var i = o(481060),
   a = o(777036),
   r = o(154921),
   l = o(970184),
-  d = o(471073),
-  c = o(293979),
+  c = o(471073),
+  d = o(293979),
   s = o(954654),
   u = o(689938),
   f = o(137953);
@@ -31,7 +31,7 @@ submissionState: h,
 error: b,
 validators: C,
 onSubmit: g
-  } = (0, c.X9)(e, o);
+  } = (0, d.X9)(e, o);
   return (0, t.jsx)('form', {
 onSubmit: e => {
   e.preventDefault(), g();
@@ -88,7 +88,7 @@ children: (0, t.jsxs)(i.ModalRoot, {
           type: 'submit',
           color: i.Button.Colors.BRAND,
           size: i.Button.Sizes.MEDIUM,
-          submitting: h === d.i.IN_FLIGHT,
+          submitting: h === c.i.IN_FLIGHT,
           children: u.Z.Messages.SUBMIT
         }),
         (0, t.jsx)(i.Button, {
