@@ -37,14 +37,15 @@ onSelect: a,
 isSelected: o = !1,
 tabIndex: l,
 children: _,
-isNew: h = !1
-  } = e, [m, T] = i.useState(E.QA[t].name), g = t === d.Ru.PIRATE, S = (0, u.useRadioItem)({
-label: m,
+isNew: h = !1,
+locked: m = !1
+  } = e, [T, g] = i.useState(E.QA[t].name), S = t === d.Ru.PIRATE, A = (0, u.useRadioItem)({
+label: T,
 isSelected: o
   });
   return (0, r.jsx)(u.Tooltip, {
-text: m,
-onTooltipShow: () => g && T(I()),
+text: T,
+onTooltipShow: () => S && g(I()),
 children: e => (0, r.jsxs)('div', {
   className: p.appIconSelectionContainer,
   children: [
@@ -53,15 +54,22 @@ children: e => (0, r.jsxs)('div', {
     }),
     (0, r.jsx)(u.Clickable, {
       ...e,
-      ...S,
-      tabIndex: null != l ? l : S.tabIndex,
+      ...A,
+      tabIndex: null != l ? l : A.tabIndex,
       className: s()(p.appIconSelection, {
         [p.selected]: o
       }, n),
       onClick: o ? f.dG4 : () => null == a ? void 0 : a(t),
       children: _
     }),
-    o && (0, r.jsx)(c.oK, {})
+    o && (0, r.jsx)(c.oK, {}),
+    m && (0, r.jsx)('div', {
+      className: p.lockedBadgeContainer,
+      children: (0, r.jsx)(u.LockIcon, {
+        className: p.lockedBadge,
+        color: 'currentColor'
+      })
+    })
   ]
 })
   });
@@ -74,7 +82,8 @@ isSelected: n,
 disabled: i,
 tabIndex: a,
 onSelect: s,
-isNew: o
+isNew: o,
+locked: l
   } = e;
   return (0, r.jsx)(T, {
 onSelect: i ? void 0 : s,
@@ -83,6 +92,7 @@ id: t.id,
 className: i ? p.disabled : void 0,
 tabIndex: a,
 isNew: o,
+locked: l,
 children: (0, r.jsx)(_.Z, {
   id: t.id,
   width: E.M9

@@ -41,13 +41,14 @@ onClick: t,
 icon: n
   } = e;
   return null != t ? (0, i.jsx)(l.Clickable, {
-className: o.clickable,
+className: a()(o.clickable, o.icon),
 onClick: t,
 children: (0, i.jsx)(n, {
   color: l.tokens.colors.HEADER_PRIMARY,
   size: 'md'
 })
   }) : (0, i.jsx)(n, {
+className: o.icon,
 color: l.tokens.colors.HEADER_PRIMARY,
 size: 'md'
   });

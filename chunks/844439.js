@@ -13,41 +13,48 @@ let d = {},
 function _(e) {
   let {
 location: n,
-channelId: t
+channelId: t,
+withCommands: i
   } = e;
-  return 'location:'.concat(n, ' channelId:').concat('0');
+  return 'location:'.concat(n, ' channelId:').concat('0', ' withCommands:').concat(i);
 }
 let E = Object.freeze([]);
 class A extends(o = c.ZP.Store) {
   getLastFetchTimeMs(e) {
 let {
   location: n,
-  channelId: t
+  channelId: t,
+  withCommands: i
 } = e;
 return p[_({
   location: n,
-  channelId: t
+  channelId: t,
+  withCommands: i
 })];
   }
   getFetchState(e) {
 let {
   location: n,
-  channelId: t
+  channelId: t,
+  withCommands: i
 } = e;
 return m[_({
   location: n,
-  channelId: t
+  channelId: t,
+  withCommands: i
 })];
   }
   getRecommendations(e) {
 var n;
 let {
   location: t,
-  channelId: i
+  channelId: i,
+  withCommands: l
 } = e;
 return null !== (n = d[_({
   location: t,
-  channelId: i
+  channelId: i,
+  withCommands: l
 })]) && void 0 !== n ? n : E;
   }
 }
@@ -60,13 +67,15 @@ r = void 0, (a = 'displayName') in(l = A) ? Object.defineProperty(l, a, {
   APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function(e) {
 let {
   location: n,
-  channelId: t
+  channelId: t,
+  withCommands: i
 } = e;
 m = {
   ...m,
   [_({
     location: n,
-    channelId: t
+    channelId: t,
+    withCommands: i
   })]: 0
 };
   },
@@ -74,34 +83,38 @@ m = {
 let {
   recommendations: n,
   location: t,
-  channelId: i
-} = e, l = _({
+  channelId: i,
+  withCommands: l
+} = e, a = _({
   location: t,
-  channelId: i
+  channelId: i,
+  withCommands: l
 });
 d = {
   ...d,
-  [l]: n
+  [a]: n
 }, m = {
   ...m,
-  [l]: 1
+  [a]: 1
 };
-let a = Date.now();
+let r = Date.now();
 p = {
   ...p,
-  [l]: a
+  [a]: r
 };
   },
   APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_FAILURE: function(e) {
 let {
   location: n,
-  channelId: t
+  channelId: t,
+  withCommands: i
 } = e;
 m = {
   ...m,
   [_({
     location: n,
-    channelId: t
+    channelId: t,
+    withCommands: i
   })]: 2
 };
   }

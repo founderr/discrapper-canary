@@ -115,6 +115,7 @@ case a.cd.UPLOAD_ERROR_UPSELL:
     autoTrackExposure: !1
   }).addSocialProof;
 case a.cd.CLIENT_THEMES_UPSELL:
+case a.cd.APP_ICONS_UPSELL:
   return i.Z.getCurrentConfig({
     location: 'shouldShowSocialProof'
   }, {

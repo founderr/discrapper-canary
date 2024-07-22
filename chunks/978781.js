@@ -40,7 +40,9 @@ children: [
 function N() {
   return s.useEffect(() => {
 (0, c.nJ)();
-  }, []), (0, a.jsx)(_.Z, {});
+  }, []), (0, a.jsx)(_.Z, {
+isEditor: !0
+  });
 }
 
 function v(e) {

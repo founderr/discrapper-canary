@@ -549,16 +549,20 @@ this.props.onClose(), x.Z.sendRequest({
 return {
   affinities: e.map(e => {
     var t, n;
-    if (L.Z.getCurrentConfig({
-        location: 'desktop_dm_list'
-      }, {
-        autoTrackExposure: !1
-      }).useV1) {
+    let i = L.Z.getCurrentConfig({
+      location: 'desktop_dm_list'
+    }, {
+      autoTrackExposure: !1
+    });
+    if (i.useV1) {
       let n = P.Z.getUserAffinity(e);
-      return null !== (t = null == n ? void 0 : n.affinity) && void 0 !== t ? t : 0;
-    } {
+      return null !== (t = null == n ? void 0 : n.affinity) && void 0 !== t ? t : -1;
+    }
+    if (!i.useV2)
+      return -1;
+    {
       let t = O.Z.getUserAffinity(e);
-      return null !== (n = null == t ? void 0 : t.dmProbability) && void 0 !== n ? n : 0;
+      return null !== (n = null == t ? void 0 : t.dmProbability) && void 0 !== n ? n : -1;
     }
   })
 };

@@ -145,7 +145,8 @@ children: (0, r.jsx)('div', {
       (0, r.jsx)(l.Scroller, {
         className: C.editorBody,
         children: (0, r.jsx)(A.Z, {
-          className: C.selectionGroup
+          className: C.selectionGroup,
+          isEditor: !0
         })
       }),
       (0, r.jsx)(L, {

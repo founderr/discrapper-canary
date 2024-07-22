@@ -74,8 +74,8 @@ showNitroDivider: u
   return (0, r.jsxs)(r.Fragment, {
 children: [
   u && (0, r.jsx)(T.Z, {
-    colorOpacity: 0.4,
-    glowOpacity: 0.4
+    colorOpacity: 0.35,
+    glowOpacity: 0.35
   }),
   (0, r.jsx)('div', {
     className: s()(W.sectionContainer, {

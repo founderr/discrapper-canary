@@ -433,7 +433,8 @@ let {
 l.useEffect(() => {
   (0, f.$)({
     channelId: i,
-    location: t
+    location: t,
+    withCommands: !1
   });
 }, [
   i,
@@ -455,11 +456,13 @@ let {
 } = (0, c.cj)([N.ZP], () => ({
   fetchState: N.ZP.getFetchState({
     channelId: i,
-    location: t
+    location: t,
+    withCommands: !1
   }),
   recommendationsSections: N.ZP.getRecommendations({
     channelId: i,
-    location: t
+    location: t,
+    withCommands: !1
   })
 }));
 return {
@@ -649,7 +652,8 @@ items: t.slice(0, i),
 handleViewMore: () => {
   (0, h.yw)(D.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
     section_name: a,
-    source: S.Z.entrypoint()
+    source: S.Z.entrypoint(),
+    num: t.length
   }), r({
     type: M.gc.LIST,
     title: e,

@@ -138,7 +138,7 @@ let t = o.useMemo(() => e.filter(e => {
 return o.useMemo(() => {
   if (0 === t.length)
     return [];
-  if (n.current.length > 0)
+  if (n.current.length > 0 && n.current.length === t.length)
     return n.current;
   let e = t.sort((e, t) => {
     var n, r, i, a, s, o;
@@ -165,7 +165,7 @@ let t = o.useMemo(() => e.filter(e => {
 return o.useMemo(() => {
   if (0 === t.length)
     return [];
-  if (n.current.length > 0)
+  if (n.current.length > 0 && n.current.length === t.length)
     return n.current;
   let e = t.sort((e, t) => {
     var n, r;

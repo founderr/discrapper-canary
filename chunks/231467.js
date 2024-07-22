@@ -107,7 +107,7 @@ className: s()(L.thinTrait, {
 text: e,
 selected: a.has(e)
   }, e), [a]);
-  return (0, r.jsx)(R.Z, {
+  return (0, r.jsx)(R.ZP, {
 className: L.traitsContainer,
 items: t,
 renderItem: o,
