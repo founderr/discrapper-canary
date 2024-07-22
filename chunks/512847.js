@@ -20,13 +20,13 @@ var i = n(735250),
   g = n(430824),
   p = n(131951),
   T = n(292959),
-  S = n(19780),
-  f = n(944486),
+  f = n(19780),
+  S = n(944486),
   C = n(606304),
   N = n(979651),
   A = n(938475),
-  Z = n(823379),
-  v = n(557177),
+  v = n(823379),
+  Z = n(557177),
   L = n(981631);
 
 function O(e, t, n, i) {
@@ -35,7 +35,7 @@ let s = t(),
   a = new l.Fh(e, () => {
     let e = t(),
       a = n(s, e);
-    null != a && !T.Z.isSoundDisabled(a) && (0, v.GN)(a, null != i ? i : 0.4), s = e;
+    null != a && !T.Z.isSoundDisabled(a) && (0, Z.GN)(a, null != i ? i : 0.4), s = e;
   });
 return a.attach('useSound'), () => a.detach();
   });
@@ -44,9 +44,9 @@ return a.attach('useSound'), () => a.detach();
 function R() {
   return O([
 p.Z,
-f.Z
+S.Z
   ], () => ({
-inVoiceChannel: null != f.Z.getVoiceChannelId(),
+inVoiceChannel: null != S.Z.getVoiceChannelId(),
 selfMute: p.Z.isSelfMute(),
 selfDeaf: p.Z.isSelfDeaf(),
 audioPermissionReady: p.Z.isNativeAudioPermissionReady(),
@@ -76,15 +76,15 @@ if (!!a && (!!n || !!e.audioPermissionReady)) {
 function x() {
   return O([
 m.Z,
-S.Z,
 f.Z,
+S.Z,
 c.Z
   ], () => {
-let e = m.Z.getChannel(f.Z.getVoiceChannelId()),
+let e = m.Z.getChannel(S.Z.getVoiceChannelId()),
   t = null == e ? void 0 : e.type,
   n = null == e ? void 0 : e.getGuildId(),
-  i = S.Z.getWasEverRtcConnected(),
-  s = S.Z.getState();
+  i = f.Z.getWasEverRtcConnected(),
+  s = f.Z.getState();
 return {
   channelType: t,
   guildId: n,
@@ -143,10 +143,10 @@ if (e !== t)
 
 function D() {
   return O([
-f.Z,
+S.Z,
 N.Z
   ], () => {
-let e = f.Z.getVoiceChannelId();
+let e = S.Z.getVoiceChannelId();
 if (null == e)
   return _.xO.NONE;
 let t = N.Z.getVoiceStateForChannel(e);
@@ -159,14 +159,14 @@ if (e !== t && t === _.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK)
 
 function y() {
   return O([
-f.Z,
+S.Z,
 h.Z,
 I.default,
 N.Z,
 m.Z
   ], () => {
 let e, t;
-let n = f.Z.getVoiceChannelId(),
+let n = S.Z.getVoiceChannelId(),
   i = I.default.getId();
 let s = [],
   a = null,
@@ -229,23 +229,23 @@ else if (e.singleActiveStreamViewerCount <= 25 && c && l < e.singleActiveStreamV
 
 function j() {
   return O([
-f.Z,
+S.Z,
 o.ZP,
 I.default
   ], () => {
-let e = f.Z.getVoiceChannelId(),
-  t = f.Z.getChannelId(),
+let e = S.Z.getVoiceChannelId(),
+  t = S.Z.getChannelId(),
   n = o.ZP.getConnectedActivityChannelId(),
   i = I.default.getId(),
-  s = (0, Z.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
-  a = (0, Z.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
-  r = (0, Z.lm)(n) ? o.ZP.getEmbeddedActivitiesForChannel(n) : o.i6;
+  s = (0, v.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
+  a = (0, v.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
+  r = (0, v.lm)(n) ? o.ZP.getEmbeddedActivitiesForChannel(n) : o.i6;
 return {
   voiceChannelId: e,
   currentUserId: i,
   channelActivities: s,
   connectedChannelActivities: r,
-  userConnectedActivity: (0, Z.lm)(n) ? o.ZP.getSelfEmbeddedActivityForChannel(n) : null,
+  userConnectedActivity: (0, v.lm)(n) ? o.ZP.getSelfEmbeddedActivityForChannel(n) : null,
   voiceChannelActivities: a
 };
   }, (e, t) => {
@@ -258,15 +258,15 @@ let n, {
   voiceChannelActivities: o
 } = t;
 let c = o.some(e => e.applicationId === (null == l ? void 0 : l.applicationId) && e.launchId === l.launchId);
-if ((0, Z.lm)(i)) {
+if ((0, v.lm)(i)) {
   let t = e.voiceChannelActivities.find(e => e.userIds.has(s)),
     i = o.find(e => e.userIds.has(s));
-  e.voiceChannelActivities.length < o.length && (0, Z.lm)(e.voiceChannelId) && (n = 'activity_launch'), void 0 === i && (0, Z.lm)(t) && (n = 'activity_end'), void 0 === t && (0, Z.lm)(i) && i.userIds.size > 1 && (n = 'activity_user_join'), (0, Z.lm)(i) && (0, Z.lm)(t) && (i.userIds.size > t.userIds.size && (n = 'activity_user_join'), i.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+  e.voiceChannelActivities.length < o.length && (0, v.lm)(e.voiceChannelId) && (n = 'activity_launch'), void 0 === i && (0, v.lm)(t) && (n = 'activity_end'), void 0 === t && (0, v.lm)(i) && i.userIds.size > 1 && (n = 'activity_user_join'), (0, v.lm)(i) && (0, v.lm)(t) && (i.userIds.size > t.userIds.size && (n = 'activity_user_join'), i.userIds.size < t.userIds.size && (n = 'activity_user_left'));
 }
 if (!c) {
   e.connectedChannelActivities.length < r.length && e.channelActivities.length < a.length && (n = 'activity_launch');
   let t = e.userConnectedActivity;
-  null == l && (0, Z.lm)(t) && (n = 'activity_end'), (0, Z.lm)(l) && (0, Z.lm)(t) && (l.userIds.size > t.userIds.size && (n = 'activity_user_join'), l.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+  null == l && (0, v.lm)(t) && (n = 'activity_end'), (0, v.lm)(l) && (0, v.lm)(t) && (l.userIds.size > t.userIds.size && (n = 'activity_user_join'), l.userIds.size < t.userIds.size && (n = 'activity_user_left'));
 }
 return n;
   }), null;
@@ -275,11 +275,11 @@ return n;
 function U() {
   return O([
 u.Z,
-f.Z
+S.Z
   ], () => ({
 hangStatus: u.Z.getCurrentHangStatus(),
 customHangStatus: u.Z.getCustomHangStatus(),
-inVoice: null != f.Z.getVoiceChannelId()
+inVoice: null != S.Z.getVoiceChannelId()
   }), (e, t) => {
 var n, i;
 let {

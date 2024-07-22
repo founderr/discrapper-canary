@@ -15,13 +15,13 @@ var i, s = n(735250),
   g = n(556017),
   p = n(879484),
   T = n(26580),
-  S = n(206887),
-  f = n(981631),
+  f = n(206887),
+  S = n(981631),
   C = n(689938),
   N = n(806315),
   A = n(129512),
-  Z = n(330065),
-  v = n(755386);
+  v = n(330065),
+  Z = n(755386);
 
 function L(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -34,12 +34,12 @@ writable: !0
 class O extends(i = a.PureComponent) {
   getDefaultSplashURL(e, t) {
 if (t)
-  return v;
+  return Z;
 switch (e) {
-  case f.BRd.DARK:
+  case S.BRd.DARK:
     return A;
-  case f.BRd.LIGHT:
-    return Z;
+  case S.BRd.LIGHT:
+    return v;
 }
   }
   render() {
@@ -53,14 +53,14 @@ let {
   loaded: r,
   hasBeenSeen: d,
   isVisible: A,
-  submitting: Z
+  submitting: v
 } = this.state, {
-  name: v,
+  name: Z,
   description: L,
   presenceCount: O,
   memberCount: R,
   keywords: x
-} = t, b = null === (e = t.features) || void 0 === e ? void 0 : e.has(f.oNc.HUB), P = I.ZP.getGuildDiscoverySplashURL({
+} = t, b = null === (e = t.features) || void 0 === e ? void 0 : e.has(S.oNc.HUB), P = I.ZP.getGuildDiscoverySplashURL({
   id: t.id,
   splash: t.discoverySplash,
   size: 300 * (0, _.x_)()
@@ -103,14 +103,14 @@ return (0, s.jsx)(o.$, {
         [N.loading]: !r
       }),
       children: [
-        Z ? (0, s.jsx)(c.Spinner, {
+        v ? (0, s.jsx)(c.Spinner, {
           type: c.Spinner.Type.PULSING_ELLIPSIS,
           className: N.spinner
         }) : null,
         (0, s.jsxs)(c.Clickable, {
           onClick: this.handleClickView,
           className: l()(N.card, {
-            [N.submitting]: Z,
+            [N.submitting]: v,
             [N.cardWithTags]: y
           }),
           onContextMenu: this.handleContextMenu,
@@ -133,7 +133,7 @@ return (0, s.jsx)(o.$, {
                 }),
                 U || j ? (0, s.jsx)('div', {
                   className: N.actionButtons,
-                  children: (0, s.jsx)(S.Z, {
+                  children: (0, s.jsx)(f.Z, {
                     guild: t
                   })
                 }) : null,
@@ -174,7 +174,7 @@ return (0, s.jsx)(o.$, {
                     (0, s.jsx)(c.Heading, {
                       variant: 'heading-md/semibold',
                       className: N.guildName,
-                      children: v
+                      children: Z
                     })
                   ]
                 }),

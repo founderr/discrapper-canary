@@ -15,13 +15,13 @@ var i = n(735250),
   g = n(360048),
   p = n(296386),
   T = n(150192),
-  S = n(889010),
-  f = n(488905),
+  f = n(889010),
+  S = n(488905),
   C = n(731455),
   N = n(981631),
   A = n(689938),
-  Z = n(885181);
-let v = e => {
+  v = n(885181);
+let Z = e => {
   switch (e) {
 case C.Gj.Activity:
   return C.fW.Activity;
@@ -46,7 +46,7 @@ currentCategoryId: m.ZP.getCurrentCategoryId(),
 isViewingSearchResults: m.ZP.getMostRecentQuery().length > 0
   })), n = (0, I.Z)(c.Z.QUEST_HOME_PAGE), L = (0, l.e7)([T.Z], () => T.Z.getClanDiscoveryCategories(), [], T.j), O = null == L ? void 0 : L.map(e => ({
 ...e,
-icon: v(e.categoryId)
+icon: Z(e.categoryId)
   })), R = e => {
 (0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, E.OG)() && e !== C.Gj.Quests && (0, a.uL)(N.Z5c.GUILD_DISCOVERY), !(0, E.OG)() && e === C.Gj.Quests && (0, a.uL)(N.Z5c.QUEST_HOME);
   };
@@ -54,7 +54,7 @@ icon: v(e.categoryId)
 (0, p.le)(!1, !0);
   }, [e]), (0, i.jsxs)(r.Scroller, {
 children: [
-  (0, i.jsx)(f.V, {
+  (0, i.jsx)(S.V, {
     text: A.Z.Messages.DISCOVER
   }),
   (0, i.jsx)(g.Z, {
@@ -70,11 +70,11 @@ children: [
     onClick: () => R(C.Gj.Clans),
     wrapContent: !0,
     selected: e === C.Gj.Clans,
-    className: Z.categoryItem,
-    selectedClassName: Z.selectedCategoryItem,
-    innerClassName: Z.itemInner
+    className: v.categoryItem,
+    selectedClassName: v.selectedCategoryItem,
+    innerClassName: v.itemInner
   }, 'clan-discovery-home'),
-  (0, i.jsx)(S.Z, {
+  (0, i.jsx)(f.Z, {
     categories: O,
     handleCategorySelect: R,
     currentCategoryId: e,

@@ -20,13 +20,13 @@ var i = n(735250),
   g = n(351402),
   p = n(730647),
   T = n(772021),
-  S = n(396828),
-  f = n(293423),
+  f = n(396828),
+  S = n(293423),
   C = n(20967),
   N = n(504762),
   A = n(807152),
-  Z = n(176505),
-  v = n(689938),
+  v = n(176505),
+  Z = n(689938),
   L = n(83939);
 
 function O(e) {
@@ -37,14 +37,14 @@ shouldHideGuildPurchaseEntryPoints: M,
 restrictionsLoading: D
   } = (0, E.uP)(t), y = null == n || !P || b || D;
   (0, d.Tt)({
-subsection: v.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
+subsection: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
 location: null == n ? void 0 : n.name
   }), (0, c.Z)(a.tq ? 'role-subscriptions-overview' : void 0);
   let j = O && (null == n || !(R || x) || M && !D);
   if (s.useEffect(() => {
   o.jg();
 }, []), s.useEffect(() => {
-  j && !a.tq && (0, u.M)(t, Z.oC.ROLE_SUBSCRIPTIONS);
+  j && !a.tq && (0, u.M)(t, v.oC.ROLE_SUBSCRIPTIONS);
 }, [
   t,
   j
@@ -62,11 +62,11 @@ children: [
     className: L.headerBar,
     children: [
       (0, i.jsx)(I.Z.Icon, {
-        icon: (0, l.makeIconCompat)(S.Z),
+        icon: (0, l.makeIconCompat)(f.Z),
         'aria-hidden': !0
       }),
       (0, i.jsx)(I.Z.Title, {
-        children: v.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+        children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
       })
     ]
   }),
@@ -79,7 +79,7 @@ children: [
       className: L.scroller,
       children: (0, i.jsx)('div', {
         className: L.scrollerContent,
-        children: y ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(f.Z, {
+        children: y ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(S.Z, {
           guild: n
         })
       })

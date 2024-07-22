@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return v;
+return Z;
   }
 }), n(653041), n(47120);
 var i = n(735250),
@@ -20,17 +20,17 @@ var i = n(735250),
   g = n(757266),
   p = n(283595),
   T = n(417363),
-  S = n(626135),
-  f = n(804739),
+  f = n(626135),
+  S = n(804739),
   C = n(346329),
   N = n(981631),
   A = n(689938);
-let Z = d.Z.get(N.ABu.XBOX).name;
+let v = d.Z.get(N.ABu.XBOX).name;
 
-function v(e) {
+function Z(e) {
   let {
 currentActivities: t
-  } = e, n = t.length > 1, v = function(e) {
+  } = e, n = t.length > 1, Z = function(e) {
 let {
   currentActivities: t
 } = e, n = (0, a.e7)([m.Z], () => m.Z.getAccounts().some(e => e.type === d.Z.get(N.ABu.XBOX).type)), s = t.some(e => {
@@ -43,13 +43,13 @@ return n || !s ? null : (0, i.jsx)(r.MenuItem, {
   id: 'xbox-connect',
   action: () => c.Z.open(N.oAB.CONNECTIONS),
   label: A.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
-    platform: Z
+    platform: v
   })
 });
   }(e), L = function(e) {
 let {
   currentActivities: t
-} = e, n = s.useContext(S.AnalyticsContext);
+} = e, n = s.useContext(f.AnalyticsContext);
 return (0, a.Wu)([
   h.ZP,
   p.Z,
@@ -65,7 +65,7 @@ return (0, a.Wu)([
     ...e,
     libraryApplication: s,
     canJoin: null != t && (0, u.Z)(t, N.xjy.JOIN) && t.type === N.IIU.PLAYING,
-    canPlay: (0, f.t)({
+    canPlay: (0, S.t)({
       LibraryApplicationStore: p.Z,
       LaunchableGameStore: I.Z,
       DispatchApplicationStore: T.Z,
@@ -149,7 +149,7 @@ null != t && null != t.type && O.push(function(e, t) {
 }(e, n));
   }
   return [
-v,
+Z,
 ...O
   ];
 }

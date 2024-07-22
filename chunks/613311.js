@@ -16,13 +16,13 @@ var i = n(735250),
   g = n(730749),
   p = n(666743),
   T = n(115130),
-  S = n(812206),
-  f = n(811066),
+  f = n(812206),
+  S = n(811066),
   C = n(252618),
   N = n(100159),
   A = n(646288),
-  Z = n(984370),
-  v = n(706454),
+  v = n(984370),
+  Z = n(706454),
   L = n(210887),
   O = n(430824),
   R = n(496675),
@@ -156,22 +156,22 @@ let {
   channel: n,
   isAuthenticated: a
 } = this.props;
-return (0, i.jsx)(Z.Z, {
+return (0, i.jsx)(v.Z, {
   isAuthenticated: a,
   toolbar: this.renderHeaderToolbar(e, t),
   children: null != n ? (0, i.jsxs)(s.Fragment, {
     children: [
-      (0, i.jsx)(Z.Z.Icon, {
+      (0, i.jsx)(v.Z.Icon, {
         icon: d.TagIcon,
         'aria-label': er.Z.Messages.STORE_CHANNEL
       }),
-      (0, i.jsx)(Z.Z.Title, {
+      (0, i.jsx)(v.Z.Title, {
         children: n.name
       })
     ]
   }) : null != t && t.premium ? (0, i.jsxs)(s.Fragment, {
     children: [
-      (0, i.jsx)(Z.Z.Icon, {
+      (0, i.jsx)(v.Z.Icon, {
         icon: d.NitroWheelIcon,
         'aria-label': er.Z.Messages.PREMIUM
       }),
@@ -181,11 +181,11 @@ return (0, i.jsx)(Z.Z, {
     ]
   }) : null != t ? (0, i.jsxs)(s.Fragment, {
     children: [
-      (0, i.jsx)(Z.Z.Icon, {
+      (0, i.jsx)(v.Z.Icon, {
         icon: d.TagIcon,
         'aria-label': er.Z.Messages.STORE_CHANNEL
       }),
-      (0, i.jsx)(Z.Z.Title, {
+      (0, i.jsx)(v.Z.Title, {
         children: t.name
       })
     ]
@@ -332,10 +332,10 @@ if (null == e || null == t || null == n)
 let s = [],
   a = n.getSplashURL(1024);
 null != a && s.push(a), null != t.headerLogoLightTheme && s.unshift((0, V._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
-let r = f.Z.Product({
+let r = S.Z.Product({
     name: e.name,
     description: null != e.summary && '' !== e.summary ? e.summary : t.tagline,
-    image: f.Z.Product.Image(s),
+    image: S.Z.Product.Image(s),
     sku: e.id
   }),
   l = e.getPrice();
@@ -344,17 +344,17 @@ if (null != l) {
     amount: e,
     currency: t
   } = l;
-  r.offers = f.Z.Offer({
+  r.offers = S.Z.Offer({
     priceCurrency: t.toUpperCase(),
     price: (0, H.T4)(e, t, {
       style: 'decimal'
     })
   });
 }
-let o = f.Z.ItemPage({
+let o = S.Z.ItemPage({
   mainEntity: r
 });
-return (0, i.jsx)(f.Z, {
+return (0, i.jsx)(S.Z, {
   data: o
 });
   }
@@ -660,13 +660,13 @@ super(...e), eo(this, 'showCopyLinkTextTimeout', new o.V7()), eo(this, '_tracked
 t.Z = (0, g.Z)((0, p.Z)(l.ZP.connectStores([
   b.Z,
   L.Z,
-  v.default,
+  Z.default,
   j.Z,
   D.Z,
   M.Z,
   y.Z,
   T.Z,
-  S.Z,
+  f.Z,
   x.Z,
   O.Z,
   P.Z
@@ -681,17 +681,17 @@ channel: o
   if (null == a) {
 if (null == s)
   throw Error('Needs applicationId or skuId');
-t = s, null != (a = null != (n = M.Z.get(s)) ? n.applicationId : null) && (i = S.Z.getApplication(a));
+t = s, null != (a = null != (n = M.Z.get(s)) ? n.applicationId : null) && (i = f.Z.getApplication(a));
   } else if (null == s) {
 if (null == a)
   throw Error('Needs applicationId or skuId');
-null != (i = S.Z.getApplication(a)) && (t = i.destinationSkuId), n = null != t ? M.Z.get(t) : null;
+null != (i = f.Z.getApplication(a)) && (t = i.destinationSkuId), n = null != t ? M.Z.get(t) : null;
   }
   (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, es.l4R.STICKER_PACK) && (n = null);
   let c = null != a && (y.Z.inTestModeForApplication(a) || T.Z.inDevModeForApplication(a));
   return {
 skuId: t,
-application: null != a ? S.Z.getApplication(a) : null,
+application: null != a ? f.Z.getApplication(a) : null,
 isFetchingEntitlements: null != a && P.Z.applicationIdsFetching.has(a),
 didFetchEntitlements: null != a && P.Z.applicationIdsFetched.has(a),
 shouldFetchStatistics: l && null != a && x.Z.shouldFetchStatisticsForApplication(a),
@@ -706,7 +706,7 @@ storeListing: D.Z.getStoreListing({
 isInTestMode: null != a && c,
 matureAgree: b.Z.didMatureAgree,
 theme: L.Z.theme,
-locale: v.default.locale,
+locale: Z.default.locale,
 guild: null != o ? O.Z.getGuild(o.getGuildId()) : null
   };
 })(ec)));

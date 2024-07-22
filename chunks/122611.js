@@ -16,13 +16,13 @@ var i = n(735250),
   g = n(819792),
   p = n(919285),
   T = n(118470),
-  S = n(413307),
-  f = n(849688),
+  f = n(413307),
+  S = n(849688),
   C = n(374023),
   N = n(661599),
   A = n(923608),
-  Z = n(617899),
-  v = n(8521),
+  v = n(617899),
+  Z = n(8521),
   L = n(760326),
   O = n(536687),
   R = n(652785),
@@ -46,7 +46,7 @@ enableClanCreation: T
 guild: n,
 location: 'ChannelNoticesGuard',
 includeConverted: !1
-  }), S = (0, a.Wu)(R.HG, () => R.XN.filter(e => {
+  }), f = (0, a.Wu)(R.HG, () => R.XN.filter(e => {
 let {
   type: t,
   store: i
@@ -56,7 +56,7 @@ if (t === x.vID.CLAN_ADMIN_UPSELL)
 return null == i ? void 0 : i.channelNoticePredicate(n, _);
   }).map(e => e.dismissibleContentType));
   return (0, i.jsx)(u.Z, {
-contentTypes: S,
+contentTypes: f,
 groupName: b.R.CHANNEL_NOTICES,
 children: e => {
   let {
@@ -72,7 +72,7 @@ children: e => {
           markAsDismissed: a
         });
       case r.z.CHANNEL_NOTICE_INVITE:
-        return (0, i.jsx)(Z.Z, {
+        return (0, i.jsx)(v.Z, {
           guild: n,
           markAsDismissed: a
         });
@@ -124,7 +124,7 @@ guild: t
   } = e;
   switch ((0, O.Z)(t)) {
 case O.R.ENABLE_PUBLIC_GUILD:
-  return (0, i.jsx)(S.Z, {
+  return (0, i.jsx)(f.Z, {
     guild: t
   });
 case O.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
@@ -132,7 +132,7 @@ case O.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
     guild: t
   });
 case O.R.MAX_MEMBER_COUNT:
-  return (0, i.jsx)(v.Z, {
+  return (0, i.jsx)(Z.Z, {
     guild: t
   });
 case O.R.GUILD_LIVE_CHANNEL:
@@ -156,7 +156,7 @@ case O.R.HUB_STUDY_ROOM:
     guild: t
   });
 case O.R.SIGNUP:
-  return (0, i.jsx)(f.Z, {
+  return (0, i.jsx)(S.Z, {
     guild: t
   });
   }

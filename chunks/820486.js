@@ -27,8 +27,8 @@ let I = {},
   g = !1,
   p = {},
   T = {},
-  S = {},
-  f = {
+  f = {},
+  S = {
 id: null,
 justChanged: !1
   },
@@ -47,7 +47,7 @@ if (null != t)
   return e.name;
 }
 
-function Z(e, t, n) {
+function v(e, t, n) {
   return null == e || e.displayName !== t ? {
 displayName: t,
 type: n
@@ -56,7 +56,7 @@ displayName: t,
 type: _.QyF.INPUT_AND_OUTPUT
   } : e;
 }
-class v extends(i = r.ZP.DeviceSettingsStore) {
+class Z extends(i = r.ZP.DeviceSettingsStore) {
   initialize(e) {
 this.waitFor(u.Z, c.Z), m = null != e ? e : I;
   }
@@ -67,13 +67,13 @@ return m;
 return g;
   }
   get lastDeviceConnected() {
-return S;
+return f;
   }
   get inputDevices() {
 return p;
   }
   get lastInputSystemDevice() {
-return f;
+return S;
   }
   get outputDevices() {
 return T;
@@ -82,17 +82,17 @@ return T;
 return C;
   }
 }
-h(v, 'displayName', 'ConnectedDeviceStore'), h(v, 'persistKey', 'ConnectedDeviceStore'), t.Z = new v(l.Z, {
+h(Z, 'displayName', 'ConnectedDeviceStore'), h(Z, 'persistKey', 'ConnectedDeviceStore'), t.Z = new Z(l.Z, {
   MEDIA_ENGINE_DEVICES: function(e) {
 let {
   inputDevices: t,
   outputDevices: n
 } = e, i = {};
-f.justChanged = !1, t.forEach(e => {
+S.justChanged = !1, t.forEach(e => {
   if (i[A(e)] = e.id, e.id === E.w5) {
     var t;
     let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-    n !== f.id && (f.justChanged = !0), f.id = n;
+    n !== S.id && (S.justChanged = !0), S.id = n;
   }
 });
 let s = {};
@@ -112,10 +112,10 @@ let r = Object.keys(p),
   c = Object.keys(s),
   d = a().difference(r, l),
   u = a().difference(o, c);
-return d.length > 0 || u.length > 0 ? S = {} : (a().difference(l, r).forEach(e => {
-  S[e] = Z(S[e], e, _.QyF.INPUT);
+return d.length > 0 || u.length > 0 ? f = {} : (a().difference(l, r).forEach(e => {
+  f[e] = v(f[e], e, _.QyF.INPUT);
 }), a().difference(c, o).forEach(e => {
-  S[e] = Z(S[e], e, _.QyF.OUTPUT);
+  f[e] = v(f[e], e, _.QyF.OUTPUT);
 })), !(a().isEqual(r, l) && a().isEqual(o, c)) && (p = i, T = s, !0);
   },
   CONNECTED_DEVICE_SET: function(e) {
@@ -133,16 +133,16 @@ let {
     let t = T[e];
     l.Z.wait(() => o.Z.setOutputDevice(t, n));
   }
-}(t, n, i), delete S[t];
+}(t, n, i), delete f[t];
   },
   CONNECTED_DEVICE_IGNORE: function(e) {
 let {
   displayName: t
 } = e;
-delete S[t];
+delete f[t];
   },
   CONNECTED_DEVICE_NEVER_SHOW_MODAL: function() {
-S = {}, m = {
+f = {}, m = {
   neverShowModal: !0
 };
   }

@@ -20,13 +20,13 @@ var i = n(735250),
   g = n(367907),
   p = n(770471),
   T = n(158631),
-  S = n(143614),
-  f = n(463119),
+  f = n(143614),
+  S = n(463119),
   C = n(377171),
   N = n(243778),
   A = n(922409),
-  Z = n(899740),
-  v = n(28476),
+  v = n(899740),
+  Z = n(28476),
   L = n(880257),
   O = n(631885),
   R = n(457396),
@@ -53,7 +53,7 @@ let q = e => {
 let {
   selected: t,
   ...n
-} = e, s = (0, o.JA)('friends'), a = (0, d.e7)([j.Z], () => j.Z.getPendingCount()), r = (0, S.Z)(), {
+} = e, s = (0, o.JA)('friends'), a = (0, d.e7)([j.Z], () => j.Z.getPendingCount()), r = (0, f.Z)(), {
   canViewBroadcasts: l
 } = p.Z.useExperiment({
   location: 'friends_tab_no_track'
@@ -139,8 +139,8 @@ return (0, i.jsx)(V.Qj, {
 });
   },
   J = () => {
-let e = (0, Z.q)(),
-  t = (0, Z.T)();
+let e = (0, v.q)(),
+  t = (0, v.T)();
 return e > 0 ? (0, i.jsx)(E.NumberBadge, {
   count: e,
   color: 0 === t ? C.Z.ICON_MUTED : void 0
@@ -152,7 +152,7 @@ let {
 } = e, n = (0, o.JA)('messageRequests'), {
   channelId: s
 } = (0, A._)();
-if (!(0, v.a)())
+if (!(0, Z.a)())
   return null;
 let a = null == s ? void 0 : () => h.Z.preload(W.ME, s);
 return (0, i.jsx)(V.Qj, {
@@ -319,7 +319,7 @@ children: [
       (0, i.jsx)($, {
         selected: null == u ? null != s && s.startsWith(W.Z5c.MESSAGE_REQUESTS) : u === W.Z5c.MESSAGE_REQUESTS
       }, 'message-requests'),
-      (0, i.jsx)(f.i, {
+      (0, i.jsx)(S.i, {
         selected: u === W.Z5c.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(W.Z5c.COLLECTIBLES_SHOP)),
         locationState: {
           analyticsSource: {

@@ -1,6 +1,6 @@
 n.d(t, {
   D: function() {
-return f;
+return S;
   }
 }), n(47120);
 var i = n(735250),
@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(650394),
   p = n(731455),
   T = n(689938),
-  S = n(178698);
-let f = 12,
+  f = n(178698);
+let S = 12,
   C = () => {
 let e = (0, u.s1)().location.search;
 return null != e && e.length > 0 && e.startsWith('?') ? l.parse(e) : {};
@@ -37,14 +37,14 @@ let {
   onClick: s
 });
 return (0, i.jsxs)('div', {
-  className: S.emptyContainer,
+  className: f.emptyContainer,
   children: [
     (0, i.jsx)('div', {
-      className: S.emptyImage
+      className: f.emptyImage
     }),
     (0, i.jsx)(c.Heading, {
       variant: 'heading-xl/semibold',
-      className: S.emptyHeader,
+      className: f.emptyHeader,
       children: r
     }),
     (0, i.jsx)(c.Text, {
@@ -56,15 +56,15 @@ return (0, i.jsxs)('div', {
 });
   },
   A = () => (0, i.jsxs)('div', {
-className: S.emptyContainer,
+className: f.emptyContainer,
 children: [
   (0, i.jsx)('div', {
-    className: S.errorImage
+    className: f.errorImage
   }),
   (0, i.jsx)(c.Text, {
     variant: 'text-md/normal',
     color: 'header-secondary',
-    className: S.emptyHeader,
+    className: f.emptyHeader,
     children: T.Z.Messages.GUILD_DISCOVERY_SEARCH_ERROR
   })
 ]
@@ -76,8 +76,8 @@ searchResults: n,
 mostRecentQuery: a,
 defaultLanguage: l,
 availableLanguages: u,
-isFetchingSearch: Z,
-scroller: v,
+isFetchingSearch: v,
+scroller: Z,
 loadingGuildId: L,
 theme: O,
 currentCategoryId: R,
@@ -103,7 +103,7 @@ d.bR(a, {
   }
 }), w(!1);
   }, W = () => {
-null == v || v.scrollTo({
+null == Z || Z.scrollTo({
   to: 0
 });
   };
@@ -111,7 +111,7 @@ null == v || v.scrollTo({
 let {
   offset: e,
   tag: t
-} = C(), n = null != e ? Math.floor(parseInt(e, 10) / f) + 1 : 1;
+} = C(), n = null != e ? Math.floor(parseInt(e, 10) / S) + 1 : 1;
 V(!!t), 1 === n && w(!0);
   }, [a]);
   let z = R === p.Hk ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
@@ -123,16 +123,16 @@ query: a,
 category: x
   });
   return (0, i.jsxs)('div', {
-className: S.container,
+className: f.container,
 children: [
   (0, i.jsxs)('div', {
-    className: S.searchHeader,
+    className: f.searchHeader,
     children: [
       (0, i.jsx)(c.Clickable, {
         onClick: () => {
           d.AQ(), h.IZ(t);
         },
-        className: S.arrow,
+        className: f.arrow,
         'aria-label': T.Z.Messages.BACK,
         children: (0, i.jsx)(E.Z, {
           direction: E.Z.Directions.LEFT
@@ -140,7 +140,7 @@ children: [
       }),
       (0, i.jsx)(c.Heading, {
         variant: 'heading-xl/semibold',
-        className: S.header,
+        className: f.header,
         children: z
       })
     ]
@@ -149,7 +149,7 @@ children: [
     loadId: t,
     searchResults: n,
     mostRecentQuery: a,
-    isFetchingSearch: Z,
+    isFetchingSearch: v,
     defaultLanguage: l,
     placeholder: M,
     availableLanguages: u,
@@ -161,16 +161,16 @@ children: [
     categoryId: R,
     categoryName: x,
     onClick: () => {
-      d.uY(p.Hk), Y(0, f, !0);
+      d.uY(p.Hk), Y(0, S, !0);
     }
   }) : (0, i.jsx)('div', {
-    className: S.results,
+    className: f.results,
     children: (0, i.jsx)(I.Z, {
-      pageSize: f,
+      pageSize: S,
       totalCount: G,
       resetCurrentPage: k,
       onPageChange: e => {
-        Y((e - 1) * f, f), W();
+        Y((e - 1) * S, S), W();
       },
       children: e => {
         let {
@@ -182,7 +182,7 @@ children: [
             (0, i.jsx)(g.Z, {
               guilds: j,
               loading: U,
-              loadingPlaceholderCount: f,
+              loadingPlaceholderCount: S,
               onViewGuild: b,
               loadingGuildId: L,
               theme: O,

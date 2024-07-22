@@ -14,13 +14,13 @@ var r = n(756647),
   g = n(594174),
   p = n(626135),
   T = n(585483),
-  S = n(591759),
-  f = n(998502),
+  f = n(591759),
+  S = n(998502),
   C = n(996106),
   N = n(186901),
   A = n(981631);
 
-function Z(e, t) {
+function v(e, t) {
   if (null != e)
 p.default.track(A.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
   invite_code: null,
@@ -73,7 +73,7 @@ async handler(e) {
     throw new C.Z({
       errorCode: A.lTL.INVALID_GUILD_TEMPLATE
     }, 'Invalid guild template id: '.concat(t));
-  return f.ZP.focus(), (0, l.openModalLazy)(async () => {
+  return S.ZP.focus(), (0, l.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([
@@ -104,7 +104,7 @@ handler(e) {
         let {
           giftCode: s
         } = i;
-        f.ZP.focus(), p.default.track(A.rMx.OPEN_MODAL, {
+        S.ZP.focus(), p.default.track(A.rMx.OPEN_MODAL, {
           type: 'gift_accept',
           location: A.SaU
         }), (0, l.openModalLazy)(async () => {
@@ -137,33 +137,33 @@ handler(e) {
       params: n
     }
   } = e;
-  switch (f.ZP.focus(), t) {
+  switch (S.ZP.focus(), t) {
     case N.jE.USER_SETTINGS:
-      null != n && ((0, I.dL)(A.Z5c.SETTINGS(n.section, n.subsection)), Z(n.fingerprint, 'settings'));
+      null != n && ((0, I.dL)(A.Z5c.SETTINGS(n.section, n.subsection)), v(n.fingerprint, 'settings'));
       break;
     case N.jE.CHANGELOG:
-      null != n && ((0, I.dL)(S.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, 'changelog'));
+      null != n && ((0, I.dL)(f.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)), v(n.fingerprint, 'changelog'));
       break;
     case N.jE.LIBRARY:
-      (0, I.dL)(A.Z5c.APPLICATION_LIBRARY), null != n && Z(n.fingerprint, 'library');
+      (0, I.dL)(A.Z5c.APPLICATION_LIBRARY), null != n && v(n.fingerprint, 'library');
       break;
     case N.jE.STORE_HOME:
-      (0, I.dL)(A.Z5c.APPLICATION_STORE), null != n && Z(n.fingerprint, 'store');
+      (0, I.dL)(A.Z5c.APPLICATION_STORE), null != n && v(n.fingerprint, 'store');
       break;
     case N.jE.STORE_LISTING:
-      null != n && ((0, I.dL)(A.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), Z(n.fingerprint, 'store'));
+      null != n && ((0, I.dL)(A.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), v(n.fingerprint, 'store'));
       break;
     case N.jE.PICK_GUILD_SETTINGS:
       null != n && ((0, I.dL)({
         pathname: A.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
         search: n.search
-      }), Z(n.fingerprint, 'guild_settings'));
+      }), v(n.fingerprint, 'guild_settings'));
       break;
     case N.jE.CHANNEL:
       null != n && ((0, I.dL)({
         pathname: A.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
         search: n.search
-      }), Z(n.fingerprint, 'channel'));
+      }), v(n.fingerprint, 'channel'));
   }
 }
   },
@@ -176,7 +176,7 @@ handler(e) {
       fingerprint: n
     }
   } = e;
-  f.ZP.focus(null, !0), (0, d.lx)(t, n);
+  S.ZP.focus(null, !0), (0, d.lx)(t, n);
 }
   },
   [A.Etm.CONNECTIONS_CALLBACK]: {

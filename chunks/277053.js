@@ -11,13 +11,13 @@ var a, r, l, o, c = n(392711),
   g = n(981631),
   p = n(71080);
 let T = new Set(),
-  S = g.QZA.CLOSED,
-  f = !1,
+  f = g.QZA.CLOSED,
+  S = !1,
   C = null,
   N = null,
   A = null,
-  Z = null,
   v = null,
+  Z = null,
   L = null,
   O = _.K.get(p.kf) || !1;
 
@@ -30,17 +30,17 @@ n = {
 }
 
 function x() {
-  if (A = I.Z.getChannel(), Z = I.Z.getCategory(), null == A)
+  if (A = I.Z.getChannel(), v = I.Z.getCategory(), null == A)
 return !1;
   let e = A.getGuildId();
-  N = C = R(A), null == C[v] && (v = e), s = null != Z, i = h.o4(A, Z), L = null, f = !1, S = g.QZA.CLOSED, T.clear();
+  N = C = R(A), null == C[Z] && (Z = e), s = null != v, i = h.o4(A, v), L = null, S = !1, f = g.QZA.CLOSED, T.clear();
 }
 class b extends(a = u.ZP.Store) {
   initialize() {
 this.waitFor(I.Z, m.Z);
   }
   hasChanges() {
-return f;
+return S;
   }
   showNotice() {
 return this.hasChanges();
@@ -55,10 +55,10 @@ return Array.from(T);
 return C;
   }
   get selectedOverwriteId() {
-return v;
+return Z;
   }
   get formState() {
-return S;
+return f;
   }
   get isLockable() {
 return s;
@@ -70,7 +70,7 @@ return i;
 return A;
   }
   get category() {
-return Z;
+return v;
   }
   get advancedMode() {
 return O;
@@ -106,14 +106,14 @@ a = {
 }, C = {
   ...C,
   [t]: a
-}, T.add(t), S = g.QZA.OPEN, f = !d().isEqual(C, N), i = h.o4(A, Z);
+}, T.add(t), f = g.QZA.OPEN, S = !d().isEqual(C, N), i = h.o4(A, v);
   },
   CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function(e) {
 let {
   id: t
 } = e;
 if (null != C && null != C[t])
-  v = t;
+  Z = t;
 else {
   if (null == A)
     return !1;
@@ -121,7 +121,7 @@ else {
 }
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-S = g.QZA.CLOSED, C = null, N = null, A = null, Z = null, f = !1, T.clear(), v = null, L = null;
+f = g.QZA.CLOSED, C = null, N = null, A = null, v = null, S = !1, T.clear(), Z = null, L = null;
   },
   CHANNEL_UPDATES: function(e) {
 let {
@@ -134,7 +134,7 @@ for (let e of t)
   !1 !== function(e) {
     if (null == A || A.id !== e || null == (A = m.Z.getChannel(e)))
       return !1;
-    Z = I.Z.getCategory();
+    v = I.Z.getCategory();
     let t = A.getGuildId();
     if (null == t)
       return !1;
@@ -145,18 +145,18 @@ for (let e of t)
     }), null == n[t] && null == A.permissionOverwrites[t] && (n[t] = h.we(t)), null == (C = {
       ...A.permissionOverwrites,
       ...n
-    })[v] ? v = t : null != L && null != C[L] && (v = L, L = null), i = h.o4(A, Z), !0;
+    })[Z] ? Z = t : null != L && null != C[L] && (Z = L, L = null), i = h.o4(A, v), !0;
   }(e.id) && (n = !0);
 return n;
   },
   CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING: function() {
-S = g.QZA.SUBMITTING;
+f = g.QZA.SUBMITTING;
   },
   CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function(e) {
 let {
   silent: t
 } = e;
-t ? S = g.QZA.OPEN : (S = g.QZA.CLOSED, x());
+t ? f = g.QZA.OPEN : (f = g.QZA.CLOSED, x());
   },
   CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function(e) {
 let {

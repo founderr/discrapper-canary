@@ -17,13 +17,13 @@ var a = n(481060),
   g = n(914010),
   p = n(594174),
   T = n(823379),
-  S = n(358085),
-  f = n(929809),
+  f = n(358085),
+  S = n(929809),
   C = n(179645),
   N = n(701476),
   A = n(785997),
-  Z = n(981631),
-  v = n(188785),
+  v = n(981631),
+  Z = n(188785),
   L = n(630724);
 
 function O() {
@@ -57,7 +57,7 @@ if (r === N.M5.INVITE_UNCLAIMED) {
   let e = m.Z.getGuild(O);
   (null == e ? void 0 : e.hasVerificationGate()) && (l = !0, (0, E.RM)(e.id));
 }
-let R = () => 0 === I.Z.totalGuilds && !S.isPlatformEmbedded,
+let R = () => 0 === I.Z.totalGuilds && !f.isPlatformEmbedded,
   x = o.b();
 e = [{
     key: 'Unified NUF Modal',
@@ -104,24 +104,24 @@ e = [{
           onSlideChange: t
         });
       }, {
-        onCloseRequest: Z.dG4,
+        onCloseRequest: v.dG4,
         onCloseCallback: e,
         modalKey: i
       });
     },
-    predicate: () => R() && !v.a
+    predicate: () => R() && !Z.a
   },
   {
     key: 'New User Age Gate',
     open: c.i,
-    predicate: () => x && !R() && !v.a
+    predicate: () => x && !R() && !Z.a
   },
   {
     key: 'Claim Account Modal',
-    open: e => c.j(S.isPlatformEmbedded, e),
+    open: e => c.j(f.isPlatformEmbedded, e),
     predicate: () => {
       var e;
-      return !l && null != p.default.getCurrentUser() && !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !v.a && !(0, u.g)('new_user_manager');
+      return !l && null != p.default.getCurrentUser() && !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !Z.a && !(0, u.g)('new_user_manager');
     }
   },
   {
@@ -129,7 +129,7 @@ e = [{
     open: e => (0, d.hk)(O, null != e ? e : void 0),
     predicate: () => {
       var e;
-      return l && !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !v.a;
+      return l && !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !Z.a;
     }
   },
   {
@@ -148,7 +148,7 @@ e = [{
     predicate: () => null != O && null != h.Z.get(O) && h.Z.get(O) !== h.a
   }
 ], t = () => {
-  f.H(), _.Z.flowStep(L.MK.ANY, L.EW.NUF_COMPLETE, !0);
+  S.H(), _.Z.flowStep(L.MK.ANY, L.EW.NUF_COMPLETE, !0);
 }, [...e].reverse().forEach(e => {
   let n = t;
   t = () => {

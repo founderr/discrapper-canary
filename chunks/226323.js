@@ -20,10 +20,10 @@ var i = n(735250),
   g = n(524484),
   p = n(689938),
   T = n(372844);
-let S = {
+let f = {
 offset: 2
   },
-  f = {
+  S = {
 serverDeaf: {
   icon: o.HeadphonesDenyIcon,
   colorize: !0,
@@ -59,8 +59,8 @@ user: h,
 nick: C,
 mute: N,
 deaf: A,
-serverMute: Z,
-serverDeaf: v
+serverMute: v,
+serverDeaf: Z
   } = e, L = (0, l.e7)([I.Z], () => I.Z.isLocalMute(h.id)), O = (0, d.Z)({
 userId: h.id,
 checkSoundSharing: !0
@@ -77,19 +77,19 @@ let {
   localMute: a
 } = e;
 if (t)
-  return f.serverDeaf;
+  return S.serverDeaf;
 if (n)
-  return f.deaf;
+  return S.deaf;
 if (i)
-  return f.serverMute;
+  return S.serverMute;
 else if (a)
-  return f.localMute;
+  return S.localMute;
 else if (s)
-  return f.mute;
+  return S.mute;
   }({
-serverDeaf: v,
+serverDeaf: Z,
 deaf: A,
-serverMute: Z,
+serverMute: v,
 mute: N,
 localMute: L
   })) && void 0 !== s ? s : {}, y = null != D ? p.Z.Messages.VOICE_PANEL_USER_TOOLTIP.format({
@@ -149,7 +149,7 @@ children: e => (0, i.jsx)(o.Tooltip, {
     ...e,
     className: T.avatarContainer,
     onContextMenu: j,
-    focusProps: S,
+    focusProps: f,
     children: (0, i.jsx)(u.Z, {
       shakeLocation: g.oZ.VOICE_USER,
       isShaking: O,
@@ -189,7 +189,7 @@ icon: (0, i.jsx)(u, {
   size: 'xs',
   color: 'currentColor'
 }),
-focusProps: S
+focusProps: f
   }), E = (0, l.e7)([h.default], () => h.default.getId(), []), [I, m] = function(e, t) {
 let n = [];
 for (let i of e) {

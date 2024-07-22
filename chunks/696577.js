@@ -25,8 +25,8 @@ user: t,
 type: n,
 status: p,
 isFocused: T
-  } = e, S = s.useContext(u.AnalyticsContext), {
-analyticsLocations: f
+  } = e, f = s.useContext(u.AnalyticsContext), {
+analyticsLocations: S
   } = (0, o.ZP)(), C = e => {
 e.stopPropagation(), l.Z.cancelFriendRequest(t.id, {
   location: 'Friends'
@@ -38,14 +38,14 @@ e.stopPropagation(), l.Z.addRelationship({
     location: 'Friends'
   }
 });
-  }, A = p === I.Skl.OFFLINE ? I.Skl.UNKNOWN : p, Z = n === I.OGo.PENDING_INCOMING ? m.Z.Messages.INCOMING_FRIEND_REQUEST : m.Z.Messages.OUTGOING_FRIEND_REQUEST;
+  }, A = p === I.Skl.OFFLINE ? I.Skl.UNKNOWN : p, v = n === I.OGo.PENDING_INCOMING ? m.Z.Messages.INCOMING_FRIEND_REQUEST : m.Z.Messages.OUTGOING_FRIEND_REQUEST;
   return (0, i.jsx)(E.Z, {
 isFocused: T,
 user: t,
 onClick: () => (0, c.openUserProfileModal)({
   userId: t.id,
-  sourceAnalyticsLocations: f,
-  analyticsLocation: S.location
+  sourceAnalyticsLocations: S,
+  analyticsLocation: f.location
 }),
 children: e => {
   var s;
@@ -88,7 +88,7 @@ children: e => {
         hovered: e,
         showAccountIdentifier: !0,
         status: A,
-        subText: Z,
+        subText: v,
         className: g.userInfo
       }),
       (0, i.jsx)('div', {

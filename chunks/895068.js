@@ -19,13 +19,13 @@ var i, s, a, r, l = n(735250),
   g = n(945124),
   p = n(231467),
   T = n(931515),
-  S = n(702646),
-  f = n(207796),
+  f = n(702646),
+  S = n(207796),
   C = n(526282),
   N = n(777734),
   A = n(976757),
-  Z = n(981631),
-  v = n(689938),
+  v = n(981631),
+  Z = n(689938),
   L = n(477975);
 let O = 40;
 
@@ -40,7 +40,7 @@ loaded: a,
 clans: r,
 searchResult: R,
 searchCriteria: x
-  } = (0, T.Qc)(), b = (0, f.GN)(e => e.selectedTraits, d.Z), P = (0, _.Z)(R), [M, D] = o.useState(0), y = o.useMemo(() => ({
+  } = (0, T.Qc)(), b = (0, S.GN)(e => e.selectedTraits, d.Z), P = (0, _.Z)(R), [M, D] = o.useState(0), y = o.useMemo(() => ({
 height: M
   }), [M]), j = (0, c.useSpring)({
 opacity: M > 0 ? 1 : 0,
@@ -102,8 +102,8 @@ R
           props: {
             className: L.glassBackgroundTop
           },
-          header: v.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-          subtitle: v.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+          header: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+          subtitle: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
         },
         {
           section: 'other_guilds',
@@ -113,7 +113,7 @@ R
             className: L.glassBackground
           },
           itemHeight: 400,
-          header: v.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
+          header: Z.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
         }
       ];
     case 'upsell':
@@ -131,8 +131,8 @@ R
           props: {
             className: L.glassBackgroundTop
           },
-          header: v.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-          subtitle: v.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+          header: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+          subtitle: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
         },
         {
           section: 'other_guilds',
@@ -150,15 +150,15 @@ R
           items: e.slice(0, t),
           sectionHeight: O,
           itemHeight: 400,
-          header: v.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-          subtitle: v.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+          header: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+          subtitle: Z.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
         },
         {
           section: 'other_guilds',
           items: e.slice(t),
           sectionHeight: O,
           itemHeight: 400,
-          header: v.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
+          header: Z.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
         }
       ];
     default:
@@ -185,7 +185,7 @@ W = o.useCallback((e, t, n, i) => {
     traitsToHighlight: b,
     className: L.card,
     style: n,
-    source: Z.jXE.DISCOVER_SEARCH,
+    source: v.jXE.DISCOVER_SEARCH,
     prioritizedGameIds: Y,
     onlyAnimateIconOnHover: !0
   }, i);
@@ -206,8 +206,8 @@ z = o.useCallback((e, t) => {
       return (0, l.jsx)(C.Z, {});
     case 'hero':
       return (0, l.jsx)(m.Z, {
-        title: v.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,
-        description: v.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
+        title: Z.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,
+        description: Z.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
         backgroundImageUrl: 'https://cdn.discordapp.com/assets/discovery/guilds-hero-background.png',
         className: L.hero
       });
@@ -230,7 +230,7 @@ z = o.useCallback((e, t) => {
           }),
           'global_discovery' === i ? (0, l.jsx)('div', {
             className: L.topPicksToolbar,
-            children: (0, l.jsx)(S.Z, {})
+            children: (0, l.jsx)(f.Z, {})
           }) : null
         ]
       });

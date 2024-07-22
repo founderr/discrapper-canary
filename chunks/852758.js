@@ -3,10 +3,10 @@ n.d(t, {
 return A;
   },
   HR: function() {
-return Z;
+return v;
   },
   ZP: function() {
-return v;
+return Z;
   }
 }), n(47120);
 var i = n(735250),
@@ -26,14 +26,14 @@ var i = n(735250),
   g = n(23434),
   p = n(610001),
   T = n(78415),
-  S = n(1964),
-  f = n(981631),
+  f = n(1964),
+  S = n(981631),
   C = n(815660),
   N = n(689938);
 let A = 'Email Verification',
-  Z = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
+  v = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
 
-function v() {
+function Z() {
   let {
 action: e,
 theme: t
@@ -43,15 +43,15 @@ m.Z
   ], () => ({
 action: g.Z.getAction(),
 theme: m.Z.theme
-  })), v = S.Z.getVerificationTypes(e), [L, O] = s.useState(0), R = (0, _.Z)(v);
+  })), Z = f.Z.getVerificationTypes(e), [L, O] = s.useState(0), R = (0, _.Z)(Z);
   (0, h.Z)({
 type: a.ImpressionTypes.MODAL,
 name: a.ImpressionNames.USER_ACTION_REQUIRED,
 properties: {
-  verification_type: v[0],
-  verification_types: v
+  verification_type: Z[0],
+  verification_types: Z
 }
-  }, {}, [v.toString()]);
+  }, {}, [Z.toString()]);
   let x = () => {
   (0, u.FD)(), (0, o.openModalLazy)(async () => {
     let {
@@ -85,7 +85,7 @@ b = () => {
   return s.useEffect(() => (E.Z.disable(), () => {
 E.Z.enable();
   }), []), s.useEffect(() => {
-(null == R ? void 0 : R[0]) === f.PUi.PHONE && (null == v ? void 0 : v[0]) === f.PUi.EMAIL && (0, o.openModalLazy)(async () => {
+(null == R ? void 0 : R[0]) === S.PUi.PHONE && (null == Z ? void 0 : Z[0]) === S.PUi.EMAIL && (0, o.openModalLazy)(async () => {
   let {
     default: e
   } = await Promise.resolve().then(n.bind(n, 468026));
@@ -96,19 +96,19 @@ E.Z.enable();
     confirmText: N.Z.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_CONFIRM
   });
 }, {
-  modalKey: Z,
+  modalKey: v,
   Layer: T.ZP,
   onCloseCallback: x
 });
   }, [
-v,
+Z,
 R
   ]), (0, i.jsx)(p.Z, {
-types: v,
+types: Z,
 captchaKey: L,
 onCaptchaVerify: e => {
   l.tn.post({
-    url: f.ANM.CAPTCHA,
+    url: S.ANM.CAPTCHA,
     body: {
       captcha_key: e
     },
@@ -119,7 +119,7 @@ onCaptchaVerify: e => {
 },
 theme: t,
 onClick: e => {
-  e === f.PUi.EMAIL_OR_PHONE || e === f.PUi.EMAIL || e === f.PUi.REVERIFY_EMAIL ? x() : b();
+  e === S.PUi.EMAIL_OR_PHONE || e === S.PUi.EMAIL || e === S.PUi.REVERIFY_EMAIL ? x() : b();
 },
 onLogout: () => {
   (0, o.openModalLazy)(async () => {

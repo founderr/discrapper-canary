@@ -1,6 +1,6 @@
 n.d(t, {
   Y: function() {
-return v;
+return Z;
   }
 }), n(47120);
 var i = n(735250),
@@ -20,20 +20,20 @@ var i = n(735250),
   g = n(556017),
   p = n(879484),
   T = n(26580),
-  S = n(206887),
-  f = n(981631),
+  f = n(206887),
+  S = n(981631),
   C = n(689938),
   N = n(465423),
   A = n(129512),
-  Z = n(330065);
-let v = () => (0, i.jsx)('div', {
+  v = n(330065);
+let Z = () => (0, i.jsx)('div', {
   className: N.placeholder
 });
 t.Z = e => {
   var t;
   let {
 guild: a,
-theme: v,
+theme: Z,
 onView: L,
 onTagClick: O
   } = e, {
@@ -53,12 +53,12 @@ splash: x,
 size: 240 * (0, u.x_)()
   }), V = null != H ? H : function(e) {
 switch (e) {
-  case f.BRd.DARK:
+  case S.BRd.DARK:
     return A;
-  case f.BRd.LIGHT:
-    return Z;
+  case S.BRd.LIGHT:
+    return v;
 }
-  }(v), F = null !== (t = I.ZP.getGuildIconURL({
+  }(Z), F = null !== (t = I.ZP.getGuildIconURL({
 id: R,
 icon: b,
 size: 32
@@ -70,11 +70,11 @@ if (!t.includes('Menu')) {
   if ((0, _.yU)()) {
     (0, E.Z)({
       analyticsSource: {
-        page: f.ZY5.GUILD_DISCOVERY
+        page: S.ZY5.GUILD_DISCOVERY
       },
       analyticsLocation: {
-        page: f.ZY5.GUILD_DISCOVERY,
-        section: f.jXE.GUILD_CAP_UPSELL_MODAL
+        page: S.ZY5.GUILD_DISCOVERY,
+        section: S.jXE.GUILD_CAP_UPSELL_MODAL
       },
       analyticsLocations: B
     });
@@ -223,7 +223,7 @@ children: [
           }),
           z ? (0, i.jsx)('div', {
             className: N.actionButtons,
-            children: (0, i.jsx)(S.Z, {
+            children: (0, i.jsx)(f.Z, {
               guild: a
             })
           }) : null

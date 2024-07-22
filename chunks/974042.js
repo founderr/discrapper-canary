@@ -31,7 +31,7 @@ usernameLower: null != t ? t.username.toLowerCase() : null
   };
 }
 
-function S(e) {
+function f(e) {
   return {
 status: h.Z.getStatus(e),
 isMobile: h.Z.isMobileOnline(e),
@@ -40,7 +40,7 @@ applicationStream: u.Z.getAnyStreamForUser(e)
   };
 }
 
-function f(e) {
+function S(e) {
   let t = [];
   return a()(_.ZP.memberOf(e)).map(E.Z.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
 null != e && t.push(e);
@@ -68,16 +68,16 @@ let e = a().map(I.Z.getRelationships(), (e, t) => new C({
     type: e,
     nickname: I.Z.getNickname(t),
     ...T(t),
-    ...S(t),
-    ...f(t)
+    ...f(t),
+    ...S(t)
   })),
   t = a().map(d.Z.getSuggestions(), e => new C({
     key: e.key,
     type: 99,
     nickname: e.name,
     ...T(e.key),
-    ...S(e.key),
-    ...f(e.key)
+    ...f(e.key),
+    ...S(e.key)
   }));
 return new N(a().concat(e, t));
   }
@@ -139,22 +139,22 @@ p(this, '_rows', void 0), this._rows = e;
   }
 }
 let A = !0,
-  Z = !1,
-  v = g.pJs.ONLINE,
+  v = !1,
+  Z = g.pJs.ONLINE,
   L = new N(),
   O = !0,
   R = !1;
 
 function x() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  A && (e || v !== g.pJs.ONLINE && v !== g.pJs.ADD_FRIEND) && !Z && (A = !1, Z = !0, o.Z.fetchRelationships());
+  A && (e || Z !== g.pJs.ONLINE && Z !== g.pJs.ADD_FRIEND) && !v && (A = !1, v = !0, o.Z.fetchRelationships());
 }
 
 function b() {
-  if (A = !0, O ? Z = !1 : x(), L = L.reset(), R)
+  if (A = !0, O ? v = !1 : x(), L = L.reset(), R)
 return;
   let e = L.getRelationshipCounts();
-  v = 0 === e[g.OGo.FRIEND] ? 0 !== e[g.OGo.PENDING_INCOMING] ? g.pJs.PENDING : g.pJs.ADD_FRIEND : g.pJs.ONLINE;
+  Z = 0 === e[g.OGo.FRIEND] ? 0 !== e[g.OGo.PENDING_INCOMING] ? g.pJs.PENDING : g.pJs.ADD_FRIEND : g.pJs.ONLINE;
 }
 
 function P() {
@@ -171,12 +171,12 @@ class D extends(i = r.ZP.Store) {
 this.waitFor(I.Z, h.Z, m.default, E.Z, _.ZP, u.Z, d.Z), this.syncWith([I.Z], P), this.syncWith([d.Z], P), this.syncWith([m.default], M(T)), this.syncWith([
   h.Z,
   u.Z
-], M(S)), b();
+], M(f)), b();
   }
   getState() {
 return {
-  fetching: Z,
-  section: v,
+  fetching: v,
+  section: Z,
   pendingCount: I.Z.getPendingCount(),
   rows: L
 };
@@ -187,7 +187,7 @@ p(D, 'displayName', 'FriendsStore'), t.ZP = new D(l.Z, {
 b();
   },
   FRIENDS_SET_SECTION: function(e) {
-v = e.section, x();
+Z = e.section, x();
   },
   CHANNEL_SELECT: function(e) {
 let {
@@ -196,10 +196,10 @@ let {
 return O = null != t, P(), !O;
   },
   LOAD_RELATIONSHIPS_SUCCESS: function() {
-Z = !1;
+v = !1;
   },
   LOAD_RELATIONSHIPS_FAILURE: function() {
-A = !0, Z = !0;
+A = !0, v = !0;
   },
   DRAWER_SELECT_TAB: function(e) {
 let {
@@ -208,6 +208,6 @@ let {
 return O = t !== g.cII.FRIENDS, P(), !O;
   },
   FRIENDS_SET_INITIAL_SECTION: function(e) {
-v = e.section, R = !0;
+Z = e.section, R = !0;
   }
 });

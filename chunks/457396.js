@@ -19,13 +19,13 @@ var r = n(91192),
   g = n(502087),
   p = n(647265),
   T = n(650032),
-  S = n(104494),
-  f = n(639119),
+  f = n(104494),
+  S = n(639119),
   C = n(655525),
   N = n(314684),
   A = n(52188),
-  Z = n(248042),
-  v = n(924540),
+  v = n(248042),
+  Z = n(924540),
   L = n(649765),
   O = n(565626),
   R = n(701910),
@@ -48,10 +48,10 @@ w = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
 B = (0, l.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
 H = (0, m.Qo)(w, B),
 V = (0, r.JA)('nitro'),
-F = (0, f.N)(),
-Y = (0, S.Ng)(),
+F = (0, S.N)(),
+Y = (0, f.Ng)(),
 W = (0, l.e7)([E.Z], () => E.Z.isLocalizedPromoEnabled) && null == F,
-z = (0, Z.Vi)(),
+z = (0, v.Vi)(),
 K = (0, O.ZP)(),
 q = (0, N.$_)(),
 Q = (0, x.K)(j),
@@ -74,7 +74,7 @@ en = (0, p.N9)({
 return null;
   z ? (n = (0, a.jsx)(C.Z, {}), i = 0) : null != q ? (n = (0, a.jsx)(R.Z, {
 copy: q
-  }), i = 1) : K ? (n = (0, a.jsx)(R.Z, {}), i = 2) : null != Y ? (n = (0, a.jsx)(v.GN, {
+  }), i = 1) : K ? (n = (0, a.jsx)(R.Z, {}), i = 2) : null != Y ? (n = (0, a.jsx)(Z.GN, {
 userDiscount: Y,
 isTabSelected: s,
 includesAmountOff: !1
@@ -85,7 +85,7 @@ onSelect: () => (0, u.EW)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
 })
   }), i = 6) : W && (n = (0, a.jsx)(A.k, {
 entryPoint: A.U.PrivateMessages
-  }), !s && (t = y.localizeBadge), i = 5) : (n = (0, a.jsx)(v.$H, {
+  }), !s && (t = y.localizeBadge), i = 5) : (n = (0, a.jsx)(Z.$H, {
 trialOffer: F,
 isTabSelected: s
   }), i = 4);

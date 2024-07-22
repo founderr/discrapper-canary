@@ -20,20 +20,20 @@ var i = n(735250),
   g = n(944486),
   p = n(594174),
   T = n(51144),
-  S = n(498058),
-  f = n(158631),
+  f = n(498058),
+  S = n(158631),
   C = n(143614),
   N = n(981631),
   A = n(70722),
-  Z = n(689938),
-  v = n(106963);
+  v = n(689938),
+  Z = n(106963);
 
 function L(e) {
   let {
 users: t
   } = e;
   return (0, i.jsxs)('div', {
-className: v.viewers,
+className: Z.viewers,
 children: [
   (0, i.jsx)(l.VoiceNormalIcon, {
     size: 'custom',
@@ -61,7 +61,7 @@ userId: r,
 applicationId: d,
 channelId: O,
 streamKey: R
-  } = n, [x, b] = s.useState(!1), P = (0, a.e7)([p.default], () => p.default.getUser(r)), [M] = (0, _.Z)([d]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, C.Z)(), j = (0, a.e7)([I.Z], () => I.Z.getPreviewURL(null, O, r)), U = (0, a.e7)([g.Z], () => g.Z.getVoiceChannelId()), G = (0, f.ZP)(), k = (0, S.Z)(O);
+  } = n, [x, b] = s.useState(!1), P = (0, a.e7)([p.default], () => p.default.getUser(r)), [M] = (0, _.Z)([d]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, C.Z)(), j = (0, a.e7)([I.Z], () => I.Z.getPreviewURL(null, O, r)), U = (0, a.e7)([g.Z], () => g.Z.getVoiceChannelId()), G = (0, S.ZP)(), k = (0, f.Z)(O);
   if (s.useEffect(() => {
   x && U === O && b(!1);
 }, [
@@ -80,12 +80,12 @@ let n = m.default.getId(),
   s = t.length >= N.keq;
 return {
   buttonColor: s ? l.ButtonColors.RED : l.ButtonColors.GREEN,
-  buttonCTA: s ? Z.Z.Messages.BROADCAST_FULL : i ? Z.Z.Messages.VIEW_BROADCAST : Z.Z.Messages.JOIN_BROADCAST,
+  buttonCTA: s ? v.Z.Messages.BROADCAST_FULL : i ? v.Z.Messages.VIEW_BROADCAST : v.Z.Messages.JOIN_BROADCAST,
   disabled: s
 };
   }(r, k);
   return (0, i.jsxs)('div', {
-className: v.container,
+className: Z.container,
 children: [
   (0, i.jsx)(l.Avatar, {
     size: l.AvatarSizes.SIZE_32,
@@ -93,7 +93,7 @@ children: [
     'aria-label': D
   }),
   (0, i.jsxs)('div', {
-    className: v.details,
+    className: Z.details,
     children: [
       (0, i.jsx)(l.Text, {
         variant: 'text-md/semibold',
@@ -102,12 +102,12 @@ children: [
       (0, i.jsx)(l.Text, {
         variant: 'text-sm/medium',
         color: 'header-secondary',
-        children: null != M ? Z.Z.Messages.STREAMING.format({
+        children: null != M ? v.Z.Messages.STREAMING.format({
           name: M.name
-        }) : Z.Z.Messages.STREAMING_A_GAME
+        }) : v.Z.Messages.STREAMING_A_GAME
       }),
       (0, i.jsxs)('div', {
-        className: v.activity,
+        className: Z.activity,
         children: [
           k.length > 0 && (0, i.jsx)(L, {
             users: k
@@ -127,9 +127,9 @@ children: [
             },
             color: w,
             size: l.ButtonSizes.SMALL,
-            className: v.button,
+            className: Z.button,
             disabled: H,
-            innerClassName: v.innerButton,
+            innerClassName: Z.innerButton,
             children: [
               (0, i.jsx)(l.MicrophoneArrowRightIcon, {
                 size: 'custom',
@@ -145,7 +145,7 @@ children: [
     ]
   }),
   null != j ? (0, i.jsx)(h.Z, {
-    className: v.stream,
+    className: Z.stream,
     stream: {
       streamType: A.lo.CALL,
       ownerId: r,
@@ -154,7 +154,7 @@ children: [
   }) : (0, i.jsx)(E.Z, {
     game: M,
     size: E.Z.Sizes.LARGE,
-    className: v.gameIcon
+    className: Z.gameIcon
   })
 ]
   });

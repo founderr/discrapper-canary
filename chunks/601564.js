@@ -20,14 +20,14 @@ var i = n(735250),
   g = n(628123),
   p = n(703656),
   T = n(108427),
-  S = n(911314),
-  f = n(429899),
+  f = n(911314),
+  S = n(429899),
   C = n(843445),
   N = n(981631),
   A = n(689938),
-  Z = n(256964);
+  v = n(256964);
 
-function v(e, t, n) {
+function Z(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -73,10 +73,10 @@ let {
   isAuthenticated: e,
   location: t
 } = this.props, n = e ? (0, i.jsx)('div', {
-  className: Z.applicationStore,
+  className: v.applicationStore,
   children: this.renderContent()
 }) : (0, i.jsx)(L, {
-  className: Z.applicationStore,
+  className: v.applicationStore,
   location: t,
   render: this.renderContent
 });
@@ -86,7 +86,7 @@ return (0, i.jsx)(g.Z, {
 });
   }
   constructor(...e) {
-super(...e), v(this, 'stopListeningToHistory', void 0), v(this, 'renderStoreListing', e => {
+super(...e), Z(this, 'stopListeningToHistory', void 0), Z(this, 'renderStoreListing', e => {
   let {
     match: {
       params: {
@@ -102,7 +102,7 @@ super(...e), v(this, 'stopListeningToHistory', void 0), v(this, 'renderStoreList
   return (0, i.jsx)(d.Z, {
     page: N.ZY5.STORE_LISTING,
     root: !0,
-    children: (0, i.jsx)(f.Z, {
+    children: (0, i.jsx)(S.Z, {
       skuId: t,
       applicationId: n,
       slug: s,
@@ -111,7 +111,7 @@ super(...e), v(this, 'stopListeningToHistory', void 0), v(this, 'renderStoreList
       pageSize: O(l)
     })
   });
-}), v(this, 'renderContent', () => (0, i.jsxs)(r.rs, {
+}), Z(this, 'renderContent', () => (0, i.jsxs)(r.rs, {
   children: [
     (0, i.jsx)(r.AW, {
       path: N.Z5c.APPLICATION_STORE,
@@ -119,7 +119,7 @@ super(...e), v(this, 'stopListeningToHistory', void 0), v(this, 'renderStoreList
       render: () => (0, i.jsx)(d.Z, {
         page: N.ZY5.STORE_DIRECTORY_HOME,
         root: !0,
-        children: (0, i.jsx)(S.Z, {})
+        children: (0, i.jsx)(f.Z, {})
       })
     }),
     (0, i.jsx)(r.AW, {

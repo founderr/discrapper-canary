@@ -15,8 +15,8 @@ var i, s = n(876215),
   g = n(709054),
   p = n(761080),
   T = n(584925),
-  S = n(207205),
-  f = n(981631),
+  f = n(207205),
+  S = n(981631),
   C = n(206583);
 
 function N(e, t, n) {
@@ -28,8 +28,8 @@ writable: !0
   }) : e[t] = n, e;
 }
 let A = [],
-  Z = null,
-  v = [],
+  v = null,
+  Z = [],
   L = {},
   O = {},
   R = {},
@@ -78,20 +78,20 @@ R[a.id] = a, (n + 1) * 5 < e.length ? e.splice((n + 1) * 5, 0, a) : e.push(a);
 
 function z() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  if (v.length > 0 && (A = v, v = []), j++, e) {
+  if (Z.length > 0 && (A = Z, Z = []), j++, e) {
 let [e, t] = K(A);
 V = e, F = t;
   }
-  if (null != L.load_id && Z !== L.load_id) {
+  if (null != L.load_id && v !== L.load_id) {
 var t;
-I.default.track(f.rMx.FEED_LOADED, {
+I.default.track(S.rMx.FEED_LOADED, {
   ...L,
   unread_feed_item_ids: V.map(e => e.id),
   read_feed_item_ids: F.map(e => e.id),
   home_session_id: 'gravity'
-}), Z = null !== (t = L.load_id) && void 0 !== t ? t : null, L = {};
+}), v = null !== (t = L.load_id) && void 0 !== t ? t : null, L = {};
   }
-  Y = 0, (0, S.em)([
+  Y = 0, (0, f.em)([
 ...V,
 ...F
   ], 0, p.xy);
@@ -103,7 +103,7 @@ n = [],
 i = [];
   return e.forEach(e => {
 let s = null != T.Z.getReadTimestamp(e.id);
-e.type === p.Rr.MESSAGE ? s = s || !(0, S.$U)(e.data.channel_id, e.data.message_id) : e.type === p.Rr.SUMMARY && (s = s || !(0, S.$U)(e.data.channel_id, e.data.summary_id)), s ? t.push(e) : e.type === p.Rr.MESSAGE && e.data.has_mention ? i.push(e) : n.push(e);
+e.type === p.Rr.MESSAGE ? s = s || !(0, f.$U)(e.data.channel_id, e.data.message_id) : e.type === p.Rr.SUMMARY && (s = s || !(0, f.$U)(e.data.channel_id, e.data.summary_id)), s ? t.push(e) : e.type === p.Rr.MESSAGE && e.data.has_mention ? i.push(e) : n.push(e);
   }), [
 [
   ...i,
@@ -116,15 +116,15 @@ t.sort((e, t) => T.Z.compare(e.id, t.id))
 function q() {
   let e = 0,
 t = new Set(A.map(e => e.id));
-  return v.forEach(n => {
+  return Z.forEach(n => {
 if (!(e >= p.Lb))
   !t.has(n.id) && e++;
   }), e >= p.Lb;
 }
 
 function Q(e, t) {
-  if ((0, S.cn)(t) === S.Jb.MUTED_GUILD)
-A = A.filter(t => t.type !== p.Rr.MESSAGE && t.type !== p.Rr.SUMMARY || t.data.guild_id !== e), V = V.filter(t => t.type !== p.Rr.MESSAGE && t.type !== p.Rr.SUMMARY || t.data.guild_id !== e), F = F.filter(t => t.type !== p.Rr.MESSAGE && t.type !== p.Rr.SUMMARY || t.data.guild_id !== e), v = v.filter(t => t.type !== p.Rr.MESSAGE && t.type !== p.Rr.SUMMARY || t.data.guild_id !== e);
+  if ((0, f.cn)(t) === f.Jb.MUTED_GUILD)
+A = A.filter(t => t.type !== p.Rr.MESSAGE && t.type !== p.Rr.SUMMARY || t.data.guild_id !== e), V = V.filter(t => t.type !== p.Rr.MESSAGE && t.type !== p.Rr.SUMMARY || t.data.guild_id !== e), F = F.filter(t => t.type !== p.Rr.MESSAGE && t.type !== p.Rr.SUMMARY || t.data.guild_id !== e), Z = Z.filter(t => t.type !== p.Rr.MESSAGE && t.type !== p.Rr.SUMMARY || t.data.guild_id !== e);
 }
 
 function X(e) {
@@ -170,7 +170,7 @@ return j;
 return A;
   }
   getNewDehydratedItems() {
-return v;
+return Z;
   }
   getDehydratedItem(e) {
 var t;
@@ -224,7 +224,7 @@ return null == w || w.channelId !== e ? null : w;
 return null != B && B === e;
   }
   getLoadId() {
-return Z;
+return v;
   }
   hasOpenedEnoughTimes() {
 return 5 === H;
@@ -243,7 +243,7 @@ N($, 'displayName', 'GravityStore'), N($, 'persistKey', 'GravityStore'), t.Z = n
   POST_CONNECTION_OPEN: function() {
 if (A.length > 0) {
   let [e, t] = K(A);
-  V = e, F = t, Y = 0, (0, S.em)([
+  V = e, F = t, Y = 0, (0, f.em)([
     ...V,
     ...F
   ], 0, p.xy);
@@ -259,10 +259,10 @@ let {
   guildId: i,
   channelId: s
 } = e;
-if (!(0, S.rK)('GravityStore-handleMessageCreate') || null == i || (null === (t = n.author) || void 0 === t ? void 0 : t.id) === d.default.getId() || i in P && P[i] < 0 || null != M[i] && s in M[i] && null != M[i][s] && M[i][s] < 0)
+if (!(0, f.rK)('GravityStore-handleMessageCreate') || null == i || (null === (t = n.author) || void 0 === t ? void 0 : t.id) === d.default.getId() || i in P && P[i] < 0 || null != M[i] && s in M[i] && null != M[i][s] && M[i][s] < 0)
   return !1;
 let a = u.Z.getChannel(s);
-if (null == a || a.type !== f.d4z.GUILD_ANNOUNCEMENT || h.ZP.isChannelMuted(i, s))
+if (null == a || a.type !== S.d4z.GUILD_ANNOUNCEMENT || h.ZP.isChannelMuted(i, s))
   return !1;
 let r = _.Z.getMessage(n.channel_id, n.id);
 null == r && (r = (0, c.e5)(n));
@@ -277,11 +277,11 @@ let o = {
     channel_id: n.channel_id,
     guild_id: i,
     message_id: n.id,
-    channel_type: f.d4z.GUILD_ANNOUNCEMENT,
+    channel_type: S.d4z.GUILD_ANNOUNCEMENT,
     has_mention: l
   }
 };
-l && (null == D[s] && (D[s] = 0), D[s]++, y.add(i)), null == (v = 0 === v.length ? [...A] : [...v]).find(e => e.id === n.id) && (v.unshift(o), O[n.id] = o), q() && j > 0 && (G = !0), R[n.id] = o, x[n.id] = {
+l && (null == D[s] && (D[s] = 0), D[s]++, y.add(i)), null == (Z = 0 === Z.length ? [...A] : [...Z]).find(e => e.id === n.id) && (Z.unshift(o), O[n.id] = o), q() && j > 0 && (G = !0), R[n.id] = o, x[n.id] = {
   ...o,
   message: r
 };
@@ -292,26 +292,26 @@ let {
   loadId: n,
   startTime: i
 } = e;
-v = t.filter(e => p.zd.has(e.type)), ! function() {
+Z = t.filter(e => p.zd.has(e.type)), ! function() {
   let e = new Set();
-  v.forEach(t => {
+  Z.forEach(t => {
     e.add(t.id);
   }), Object.values(O).forEach(t => {
-    e.has(t.id) || g.default.age(t.id) > m.Z.Millis.DAY || t.type === p.Rr.MESSAGE && h.ZP.isChannelMuted(t.data.guild_id, t.data.channel_id) ? delete O[t.id] : !e.has(t.id) && (v.unshift(t), e.add(t.id));
-  }), v.forEach(e => {
+    e.has(t.id) || g.default.age(t.id) > m.Z.Millis.DAY || t.type === p.Rr.MESSAGE && h.ZP.isChannelMuted(t.data.guild_id, t.data.channel_id) ? delete O[t.id] : !e.has(t.id) && (Z.unshift(t), e.add(t.id));
+  }), Z.forEach(e => {
     R[e.id] = e;
   });
-}(), v = W(v), L = {
+}(), Z = W(Z), L = {
   load_id: n,
   load_time_millis: Date.now() - i,
-  feed_item_ids: v.map(e => e.id)
+  feed_item_ids: Z.map(e => e.id)
 };
 let s = q();
 if (0 === j)
   s && !k && (G = !0, U = !0), z();
 else if (G = s, s) {
-  let [e, t] = K(v);
-  (0, S.em)([
+  let [e, t] = K(Z);
+  (0, f.em)([
     ...e,
     ...t
   ], 0, p.xy);
@@ -365,7 +365,7 @@ s.forEach(e => {
   }
   x[t.id] = {
     ...n,
-    summary: (0, S.wV)(t, n.data.guild_id)
+    summary: (0, f.wV)(t, n.data.guild_id)
   };
 }), r.forEach(e => {
   let t = E[e.content_id];
@@ -407,7 +407,7 @@ null != i && (P[n] = i, Q(n, i)), null == t || t.forEach(e => {
 });
   },
   RELOAD_GRAVITY: function() {
-if (0 === v.length)
+if (0 === Z.length)
   return !1;
 z(), G = !1;
   },
@@ -473,6 +473,6 @@ if (!k) {
   let [e, t] = K(A = W(A));
   V = e, F = t;
 }
-v = W(v = 0 === v.length ? [...A] : v), q() && j > 0 && (G = !0);
+Z = W(Z = 0 === Z.length ? [...A] : Z), q() && j > 0 && (G = !0);
   }
 });

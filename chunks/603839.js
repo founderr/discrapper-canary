@@ -20,13 +20,13 @@ var i = n(735250),
   g = n(650461),
   p = n(432632),
   T = n(35313),
-  S = n(284019),
-  f = n(672775),
+  f = n(284019),
+  S = n(672775),
   C = n(601463),
   N = n(192565),
   A = n(641037),
-  Z = n(689938),
-  v = n(433369);
+  v = n(689938),
+  Z = n(433369);
 let L = {
   mass: 1,
   tension: 600,
@@ -158,26 +158,26 @@ ee = s.useCallback(() => {
 ]),
 et = s.useRef(null),
 en = null != q ? (0, i.jsxs)('div', {
-  className: v.tooltipContents,
+  className: Z.tooltipContents,
   children: [
     (0, i.jsx)(d.WarningIcon, {
       size: 'xs',
       color: 'currentColor',
-      className: v.errorIcon
+      className: Z.errorIcon
     }),
     (0, i.jsxs)('div', {
       children: [
         (0, i.jsx)(d.Text, {
           variant: 'text-sm/medium',
           color: 'header-primary',
-          children: Z.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
+          children: v.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
         }),
         (0, i.jsx)(d.Text, {
           variant: 'text-xs/normal',
           color: 'text-muted',
-          children: Z.Z.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
+          children: v.Z.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
             backHook: (e, t) => (0, i.jsx)(d.Anchor, {
-              className: v.errorLink,
+              className: Z.errorLink,
               onClick: Q,
               children: e
             }, t)
@@ -190,44 +190,44 @@ en = null != q ? (0, i.jsxs)('div', {
   return (0, i.jsx)(o.animated.div, {
 ref: et,
 style: H,
-className: v.modal,
+className: Z.modal,
 children: (0, i.jsxs)(d.FocusRingScope, {
   containerRef: et,
   children: [
     (0, i.jsx)(d.Button, {
-      className: v.close,
+      className: Z.close,
       look: d.Button.Looks.OUTLINED,
       size: d.Button.Sizes.MEDIUM,
       color: d.Button.Colors.PRIMARY,
       onClick: n,
-      children: Z.Z.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
+      children: v.Z.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }),
     (0, i.jsxs)('div', {
-      className: v.content,
+      className: Z.content,
       children: [
         (0, i.jsxs)('div', {
-          className: v.panel,
+          className: Z.panel,
           children: [
             (0, i.jsx)(o.animated.div, {
               style: V,
-              className: r()(v.stepsContainer, {
-                [v.hidden]: !w
+              className: r()(Z.stepsContainer, {
+                [Z.hidden]: !w
               }),
               children: (0, i.jsx)(N.Z, {
                 guildId: t
               })
             }),
             (0, i.jsx)('div', {
-              className: r()(v.navigationContainer, {
-                [v.elevatedNavigationContainer]: !w
+              className: r()(Z.navigationContainer, {
+                [Z.elevatedNavigationContainer]: !w
               }),
-              children: (0, i.jsx)(f.Z, {
+              children: (0, i.jsx)(S.Z, {
                 steps: M,
                 progress: R,
                 updateCurrentStep: z,
                 animationStyle: V,
                 animationClassName: r()({
-                  [v.hidden]: !w
+                  [Z.hidden]: !w
                 })
               })
             })
@@ -235,15 +235,15 @@ children: (0, i.jsxs)(d.FocusRingScope, {
         }),
         (0, i.jsx)(o.animated.div, {
           style: V,
-          className: r()(v.divider, {
-            [v.hidden]: !w,
-            [v.dividerResponsive]: w
+          className: r()(Z.divider, {
+            [Z.hidden]: !w,
+            [Z.dividerResponsive]: w
           })
         }),
         (0, i.jsx)(o.animated.div, {
           style: F,
-          className: r()(v.sidebar, {
-            [v.sidebarResponsive]: w
+          className: r()(Z.sidebar, {
+            [Z.sidebarResponsive]: w
           }),
           children: (0, i.jsx)(C.Z, {
             guildId: t,
@@ -259,15 +259,15 @@ children: (0, i.jsxs)(d.FocusRingScope, {
     }),
     W((e, t) => t && (0, i.jsx)(o.animated.div, {
       style: e,
-      className: v.submit,
+      className: Z.submit,
       children: (0, i.jsx)(d.Tooltip, {
         color: d.Tooltip.Colors.GREY,
-        tooltipClassName: v.tooltip,
+        tooltipClassName: Z.tooltip,
         text: en,
-        'aria-label': null != q ? Z.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
+        'aria-label': null != q ? v.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
         shouldShow: null != q,
         forceOpen: null != q,
-        children: e => (0, i.jsx)(S.Z, {
+        children: e => (0, i.jsx)(f.Z, {
           ...e,
           themeColor: R.brandPrimaryColor,
           disabled: !D || K,
@@ -276,7 +276,7 @@ children: (0, i.jsxs)(d.FocusRingScope, {
           size: d.Button.Sizes.MEDIUM,
           color: d.Button.Colors.BRAND,
           onClick: ee,
-          children: Z.Z.Messages.FINISH
+          children: v.Z.Messages.FINISH
         })
       })
     }))

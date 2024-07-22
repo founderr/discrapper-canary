@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(417183),
   p = n(825682),
   T = n(170245),
-  S = n(981631),
-  f = n(65154),
+  f = n(981631),
+  S = n(65154),
   C = n(689938),
   N = n(920175);
 
@@ -30,7 +30,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 
-function Z(e) {
+function v(e) {
   let {
 user: t,
 onSelect: n
@@ -38,7 +38,7 @@ onSelect: n
 u.Z.removeFriend(t.id, {
   location: 'Friends'
 });
-  }, a = (0, l.e7)([h.Z], () => h.Z.supports(f.AN.VIDEO));
+  }, a = (0, l.e7)([h.Z], () => h.Z.supports(S.AN.VIDEO));
   return (0, i.jsxs)(o.Menu, {
 navId: 'friend-row',
 'aria-label': C.Z.Messages.USER_ACTIONS_MENU_LABEL,
@@ -84,7 +84,7 @@ children: [
 ]
   });
 }
-class v extends s.PureComponent {
+class Z extends s.PureComponent {
   componentWillLeave(e) {
 null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e);
   }
@@ -155,13 +155,13 @@ super(...e), A(this, 'peopleListItemRef', s.createRef()), A(this, 'state', {
     user: t
   } = this.props;
   e.stopPropagation();
-  let n = r().find(E.Z.getMutablePrivateChannels(), e => e.type === S.d4z.DM && e.getRecipientId() === t.id);
-  null != n ? (0, _.uL)(S.Z5c.CHANNEL(S.ME, n.id)) : c.Z.openPrivateChannel(t.id);
+  let n = r().find(E.Z.getMutablePrivateChannels(), e => e.type === f.d4z.DM && e.getRecipientId() === t.id);
+  null != n ? (0, _.uL)(f.Z5c.CHANNEL(f.ME, n.id)) : c.Z.openPrivateChannel(t.id);
 }), A(this, 'handleOpenActionsMenu', e => {
   let {
     user: t
   } = this.props;
-  (0, d.vq)(e, e => (0, i.jsx)(Z, {
+  (0, d.vq)(e, e => (0, i.jsx)(v, {
     ...e,
     user: t
   }), {
@@ -176,4 +176,4 @@ super(...e), A(this, 'peopleListItemRef', s.createRef()), A(this, 'state', {
 });
   }
 }
-t.Z = v;
+t.Z = Z;

@@ -19,13 +19,13 @@ var i, s = n(735250),
   g = n(925329),
   p = n(707409),
   T = n(490983),
-  S = n(799777),
-  f = n(285952),
+  f = n(799777),
+  S = n(285952),
   C = n(151011),
   N = n(626135),
   A = n(780570),
-  Z = n(624138),
-  v = n(645818),
+  v = n(624138),
+  Z = n(645818),
   L = n(981631),
   O = n(689938),
   R = n(895220);
@@ -38,8 +38,8 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let b = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
-  P = (0, Z.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let b = (0, v.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
+  P = (0, v.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
   M = Object.freeze({
 [L.iEv.PLATFORM]: 'Platform',
 [L.iEv.LAST_PLAYED]: 'Last Played',
@@ -68,8 +68,8 @@ return (0, s.jsx)(_.Tooltip, {
   sort: !0,
   cellClassName: R.nameCell,
   bodyCellClassName: R.nameBodyCell,
-  render: e => (0, s.jsxs)(f.Z, {
-    align: f.Z.Align.CENTER,
+  render: e => (0, s.jsxs)(S.Z, {
+    align: S.Z.Align.CENTER,
     children: [
       (0, s.jsx)(g.Z, {
         game: e.application,
@@ -105,8 +105,8 @@ return (0, s.jsx)(_.Tooltip, {
   bodyCellClassName: R.textCell,
   render(e) {
     let t = e.libraryApplication.getDistributor();
-    return (0, s.jsx)(f.Z, {
-      align: f.Z.Align.CENTER,
+    return (0, s.jsx)(S.Z, {
+      align: S.Z.Align.CENTER,
       children: null != t ? L.EOG[t] : O.Z.Messages.GAME_LIBRARY_NOT_APPLICABLE
     });
   }
@@ -122,8 +122,8 @@ return (0, s.jsx)(_.Tooltip, {
     return t = e.isRunning ? O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? O.Z.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(p.ZP, {
       end: e.lastPlayed,
       location: p.ZP.Locations.GAME_LIBRARY_LAST_PLAYED
-    }) : O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(f.Z, {
-      align: f.Z.Align.CENTER,
+    }) : O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(S.Z, {
+      align: S.Z.Align.CENTER,
       className: l()({
         [R.lastPlayedCellNew]: e.isNew
       }),
@@ -157,7 +157,7 @@ return (0, s.jsx)(_.Tooltip, {
               icon: _.ScreenSlashIcon,
               tooltip: O.Z.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
             }),
-            (0, s.jsx)(v.Z, {
+            (0, s.jsx)(Z.Z, {
               className: l()(R.settingIcon, {
                 [R.hidden]: !e.supportsCloudSync
               }),
@@ -305,10 +305,10 @@ return i ? null : (e = '' !== n ? O.Z.Messages.APPLICATION_LIBRARY_EMPTY_SEARCH_
     (0, s.jsx)('div', {
       className: R.emptyWumpus
     }),
-    (0, s.jsx)(f.Z, {
+    (0, s.jsx)(S.Z, {
       grow: 0,
       shrink: i ? 1 : 0,
-      direction: f.Z.Direction.VERTICAL,
+      direction: S.Z.Direction.VERTICAL,
       children: (0, s.jsxs)('div', {
         className: R.emptyStateText,
         children: [
@@ -432,11 +432,11 @@ n = (0, o.TH)(),
   sortDirection: u,
   activeRowKey: _,
   isNavigatingByKeyboard: E
-} = (0, c.cj)([S.Z], () => ({
-  sortKey: S.Z.sortKey,
-  sortDirection: S.Z.sortDirection,
-  activeRowKey: S.Z.activeRowKey,
-  isNavigatingByKeyboard: S.Z.isNavigatingByKeyboard
+} = (0, c.cj)([f.Z], () => ({
+  sortKey: f.Z.sortKey,
+  sortDirection: f.Z.sortDirection,
+  activeRowKey: f.Z.activeRowKey,
+  isNavigatingByKeyboard: f.Z.isNavigatingByKeyboard
 }));
   return (0, s.jsx)(U, {
 ...e,

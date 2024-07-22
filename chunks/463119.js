@@ -20,21 +20,21 @@ var i = n(735250),
   g = n(821982),
   p = n(377171),
   T = n(633302),
-  S = n(153066),
-  f = n(335131),
+  f = n(153066),
+  S = n(335131),
   C = n(141594),
   N = n(302800),
   A = n(981631),
-  Z = n(689938),
-  v = n(383980);
+  v = n(689938),
+  Z = n(383980);
 let L = e => {
 let {
   color: t
 } = e;
 return (0, i.jsx)(d.TextBadge, {
-  className: v.newBadge,
+  className: Z.newBadge,
   color: null != t ? t : p.Z.STATUS_DANGER_BACKGROUND,
-  text: Z.Z.Messages.NEW
+  text: v.Z.Messages.NEW
 });
   },
   O = e => {
@@ -48,7 +48,7 @@ let {
   ...u
 } = e, E = (0, l.JA)('shop'), h = I.Z.HOME_PAGE_SHOP_TAB, {
   analyticsLocations: g
-} = (0, m.ZP)(h), p = s.useCallback(() => (0, f.mK)({
+} = (0, m.ZP)(h), p = s.useCallback(() => (0, S.mK)({
   openInLayer: !1,
   analyticsSource: h,
   analyticsLocations: g
@@ -60,7 +60,7 @@ return (0, i.jsx)(_.Qj, {
   selected: t,
   route: A.Z5c.COLLECTIBLES_SHOP,
   icon: null != a ? a : d.ShopIcon,
-  text: Z.Z.Messages.COLLECTIBLES_SHOP,
+  text: v.Z.Messages.COLLECTIBLES_SHOP,
   locationState: n,
   ...E,
   ...u,
@@ -88,12 +88,12 @@ let {
   reducedMotion: s = !1
 } = e, a = null != n ? (0, g.Z)(n, d.AvatarSizes.SIZE_80, !s) : void 0, r = t.title(), l = t.type === N.k2.COACHTIP_HEADLINE_ONLY;
 return (0, i.jsxs)('div', {
-  className: v.shopMarketingTooltipContent,
+  className: Z.shopMarketingTooltipContent,
   children: [
     (0, i.jsx)('div', {
-      className: v.avatarContainer,
+      className: Z.avatarContainer,
       children: (0, i.jsx)(d.Avatar, {
-        className: v.avatar,
+        className: Z.avatar,
         src: t.imageSrc,
         avatarDecoration: a,
         size: d.AvatarSizes.SIZE_80,
@@ -101,7 +101,7 @@ return (0, i.jsxs)('div', {
       })
     }),
     (0, i.jsxs)('div', {
-      className: v.shopMarketingTooltipText,
+      className: Z.shopMarketingTooltipText,
       children: [
         (0, i.jsx)(d.Heading, {
           variant: l ? 'heading-sm/medium' : 'heading-sm/bold',
@@ -109,7 +109,7 @@ return (0, i.jsxs)('div', {
         }),
         null != t.body && (0, i.jsx)(d.Text, {
           variant: 'text-xs/normal',
-          className: v.marketingBadgeTooltipContent,
+          className: Z.marketingBadgeTooltipContent,
           children: t.body()
         })
       ]
@@ -122,7 +122,7 @@ let {
   selected: t,
   locationState: n,
   displayOptions: a
-} = e, l = (0, o.e7)([h.Z], () => h.Z.useReducedMotion), [u, _] = s.useState(0), [I, m] = s.useState(!1), g = (0, E.ZP)(), p = a.entrypointDecorationAssets, T = a.entryPointBackgroundAssets, f = s.useCallback(e => {
+} = e, l = (0, o.e7)([h.Z], () => h.Z.useReducedMotion), [u, _] = s.useState(0), [I, m] = s.useState(!1), g = (0, E.ZP)(), p = a.entrypointDecorationAssets, T = a.entryPointBackgroundAssets, S = s.useCallback(e => {
   _(e => (e + 1) % a.assetIds.length), m(!0), null == e || e();
 }, [a.assetIds]), C = s.useCallback(e => {
   m(!1), null == e || e();
@@ -133,31 +133,31 @@ return (0, i.jsx)(d.Tooltip, {
     assetId: a.assetIds[u],
     reducedMotion: l
   }),
-  tooltipClassName: v.marketingBadgeTooltip,
+  tooltipClassName: Z.marketingBadgeTooltip,
   position: 'right',
   delay: 100,
   allowOverflow: !0,
   hideOnClick: !1,
-  'aria-label': 'string' == typeof N ? N : Z.Z.Messages.COLLECTIBLES_SEE_WHATS_NEW,
+  'aria-label': 'string' == typeof N ? N : v.Z.Messages.COLLECTIBLES_SEE_WHATS_NEW,
   children: e => (0, i.jsxs)(O, {
-    className: null != a.entryPointClassName ? (0, S.l)(v, a.entryPointClassName) : void 0,
+    className: null != a.entryPointClassName ? (0, f.l)(Z, a.entryPointClassName) : void 0,
     selected: t,
     locationState: n,
     icon: a.entryPointIcon,
     ...e,
-    onMouseEnter: () => f(e.onMouseEnter),
+    onMouseEnter: () => S(e.onMouseEnter),
     onMouseLeave: () => C(e.onMouseLeave),
     children: [
       null != T && (0, i.jsx)('img', {
         src: (0, c.wj)(g) ? T.srcDark : T.srcLight,
-        className: v.marketingButtonBackgroundImage,
+        className: Z.marketingButtonBackgroundImage,
         alt: '',
         'aria-hidden': !0
       }),
       null != p && !l && (0, i.jsx)('img', {
         src: (0, c.wj)(g) ? p.srcDark : p.srcLight,
-        className: r()(v.marketingButtonImage, {
-          [v.marketingButtonImageHovered]: I
+        className: r()(Z.marketingButtonImage, {
+          [Z.marketingButtonImageHovered]: I
         }),
         alt: '',
         'aria-hidden': !0
@@ -179,7 +179,7 @@ let {
   let t = null != a.emojiName ? null === (e = T.ZP.getByName(a.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
   return (0, i.jsxs)(d.Text, {
     variant: 'text-sm/medium',
-    className: v.marketingBadgeTooltipContent,
+    className: Z.marketingBadgeTooltipContent,
     children: [
       null != t && (0, i.jsx)(u.Z, {
         emojiName: t
@@ -190,7 +190,7 @@ let {
 }, [a]);
 return (0, i.jsx)(d.Tooltip, {
   text: r,
-  tooltipClassName: v.marketingBadgeTooltip,
+  tooltipClassName: Z.marketingBadgeTooltip,
   position: 'right',
   delay: 100,
   hideOnClick: !1,

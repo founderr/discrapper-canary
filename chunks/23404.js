@@ -16,13 +16,13 @@ var i = n(735250),
   g = n(918701),
   p = n(585500),
   T = n(566078),
-  S = n(602667),
-  f = n(611855),
+  f = n(602667),
+  S = n(611855),
   C = n(670638),
   N = n(667105),
   A = n(860151),
-  Z = n(46140),
-  v = n(981631),
+  v = n(46140),
+  Z = n(981631),
   L = n(689938),
   O = n(921430);
 
@@ -30,7 +30,7 @@ function R(e) {
   var t;
   let {
 quest: n
-  } = e, s = (0, h.B6)(n.config.expiresAt), a = (0, h.B6)(T.r.build(n.config).rewardsExpireAt), r = (0, l.e7)([u.Z], () => u.Z.getState().theme), d = (0, o.w)(r) ? v.BRd.DARK : v.BRd.LIGHT, _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
+  } = e, s = (0, h.B6)(n.config.expiresAt), a = (0, h.B6)(T.r.build(n.config).rewardsExpireAt), r = (0, l.e7)([u.Z], () => u.Z.getState().theme), d = (0, o.w)(r) ? Z.BRd.DARK : Z.BRd.LIGHT, _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, i.jsxs)('div', {
 className: O.heading,
 children: [
@@ -79,23 +79,23 @@ null != o && ((0, _._3)({
   questId: o.id,
   questContent: m.jn.ACTIVITY_PANEL,
   questContentCTA: _.jZ.TRACK_PROGRESS
-}), d.Z.open(v.oAB.INVENTORY));
+}), d.Z.open(Z.oAB.INVENTORY));
   }, [o]), j = s.useCallback(() => {
 (0, _._3)({
   questId: o.id,
   questContent: m.jn.ACTIVITY_PANEL,
   questContentCTA: _.jZ.LEARN_MORE
-}), d.Z.open(v.oAB.INVENTORY);
+}), d.Z.open(Z.oAB.INVENTORY);
   }, [o]), U = (0, N.hf)({
 quest: o,
 location: m.jn.ACTIVITY_PANEL
   }), G = (0, h.tP)(o), k = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, w = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, B = (null === (a = o.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, H = (null == o ? void 0 : o.userStatus) == null || (0, g.zE)(o.userStatus, m.jn.ACTIVITY_PANEL), V = (0, h.Rf)(o), F = (0, p.D)({
 quest: o,
 taskDetails: V,
-location: Z.dr.ACTIVITY_PANEL,
+location: v.dr.ACTIVITY_PANEL,
 questContent: m.jn.ACTIVITY_PANEL
   });
-  return H || G || B || !(0, g.dl)(o) ? null : (0, i.jsx)(S.A, {
+  return H || G || B || !(0, g.dl)(o) ? null : (0, i.jsx)(f.A, {
 questOrQuests: o,
 questContent: m.jn.ACTIVITY_PANEL,
 children: e => {
@@ -119,7 +119,7 @@ children: e => {
         children: [
           k ? (0, i.jsx)(R, {
             quest: o
-          }) : (0, i.jsx)(f.Z, {
+          }) : (0, i.jsx)(S.Z, {
             textOpacity: 0.5
           }),
           (0, i.jsx)(C.r, {
@@ -157,7 +157,7 @@ children: e => {
         className: O.rewardTileWithInstructions,
         quest: o,
         questContent: m.jn.ACTIVITY_PANEL,
-        location: Z.dr.ACTIVITY_PANEL,
+        location: v.dr.ACTIVITY_PANEL,
         taskDetails: V
       }),
       (0, i.jsxs)('div', {

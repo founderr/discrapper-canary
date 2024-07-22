@@ -16,13 +16,13 @@ var i = n(735250),
   g = n(785570),
   p = n(100527),
   T = n(963202),
-  S = n(252618),
-  f = n(440190),
+  f = n(252618),
+  S = n(440190),
   C = n(665149),
   N = n(5955),
   A = n(121711),
-  Z = n(709158),
-  v = n(703656),
+  v = n(709158),
+  Z = n(703656),
   L = n(108427),
   O = n(706454),
   R = n(210887),
@@ -94,7 +94,7 @@ if ((0, m.N)(), (0, U.le)(), null == b.ZP.getSearchIndex() && (0, I.Ue)(), h.Z.w
   });
 } else
   null != l && l !== F.Hk && h.Z.wait(() => (0, I.uY)(l));
-let d = null !== (t = null === (e = (0, v.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
+let d = null !== (t = null === (e = (0, Z.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
 d > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({
   to: d
 })), (0, L.e)('guild_discovery');
@@ -301,7 +301,7 @@ let I = l === F.Hk ? W.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : W.Z.Messages.GUIL
 return (0, i.jsxs)('div', {
   className: z.pageWrapper,
   children: [
-    (0, i.jsx)(S.yY, {
+    (0, i.jsx)(f.yY, {
       subsection: d ? a : void 0,
       location: I
     }),
@@ -421,8 +421,8 @@ super(...e), Q(this, '_scroller', s.createRef()), Q(this, '_guildIdsSeen', new S
   let o = null !== (a = null === (s = this._scroller.current) || void 0 === s ? void 0 : s.getScrollerState().scrollTop) && void 0 !== a ? a : 0,
     {
       location: c
-    } = (0, v.s1)();
-  (0, v.dL)({
+    } = (0, Z.s1)();
+  (0, Z.dL)({
     ...c,
     state: o
   }), this.setState({
@@ -508,10 +508,10 @@ searchRoute: t
 fetching: n,
 loadId: s,
 recommendedGuilds: a
-  } = (0, _.cj)([f.Z], () => ({
-recommendedGuilds: f.Z.getRecommendedGuilds(),
-loadId: f.Z.getLoadId(),
-fetching: f.Z.isFetching()
+  } = (0, _.cj)([S.Z], () => ({
+recommendedGuilds: S.Z.getRecommendedGuilds(),
+loadId: S.Z.getLoadId(),
+fetching: S.Z.isFetching()
   }));
   return (0, i.jsx)(J, {
 searchRoute: t,
@@ -531,7 +531,7 @@ location: 'guild_discovery',
 includeConverted: !0
   }), s = n.length > 0, {
 clanDiscoveryEnabled: a
-  } = (0, T.nk)('guild_discovery'), r = (0, _.e7)([b.ZP], () => b.ZP.getCurrentCategoryId()), l = (0, _.e7)([b.ZP], () => b.ZP.getIsReady()), o = (0, Z.Z)(p.Z.QUEST_HOME_PAGE);
+  } = (0, T.nk)('guild_discovery'), r = (0, _.e7)([b.ZP], () => b.ZP.getCurrentCategoryId()), l = (0, _.e7)([b.ZP], () => b.ZP.getIsReady()), o = (0, v.Z)(p.Z.QUEST_HOME_PAGE);
   return (s || a) && (!l || r === F.Gj.Clans) ? (0, i.jsx)(k.Z, {}) : o && r === F.Gj.Quests ? (0, i.jsx)(A.Z, {}) : (0, i.jsx)($, {
 searchRoute: t
   });

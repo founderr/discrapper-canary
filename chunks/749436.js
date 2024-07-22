@@ -19,8 +19,8 @@ var i, s = n(735250),
   g = n(878727),
   p = n(117496),
   T = n(150192),
-  S = n(731455),
-  f = n(981631),
+  f = n(731455),
+  S = n(981631),
   C = n(689938),
   N = n(920052);
 
@@ -32,11 +32,11 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let Z = c().throttle(m.c6, 1000, {
+let v = c().throttle(m.c6, 1000, {
 leading: !1,
 trailing: !0
   }),
-  v = e => {
+  Z = e => {
 let {
   isSelected: t,
   onCategoryChange: n,
@@ -67,9 +67,9 @@ let {
   query: s,
   isHandlingTagSearch: a
 } = this.state, r = this.context;
-if (null == E.ZP.getSearchIndex() && _.Ue(), I.S.subscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.subscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
-  let l = n !== S.Hk ? n : null;
-  Z({
+if (null == E.ZP.getSearchIndex() && _.Ue(), I.S.subscribe(S.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.subscribe(S.CkL.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
+  let l = n !== f.Hk ? n : null;
+  v({
     loadId: e,
     searchId: i,
     query: s,
@@ -92,8 +92,8 @@ let {
   searchId: o,
   query: c,
   isHandlingTagSearch: d
-} = this.state, u = this.context, _ = e.isFetchingSearch && !i, E = a !== S.Hk ? a : null;
-(l || d) && _ && (Z({
+} = this.state, u = this.context, _ = e.isFetchingSearch && !i, E = a !== f.Hk ? a : null;
+(l || d) && _ && (v({
   loadId: n,
   searchId: o,
   query: c,
@@ -110,7 +110,7 @@ let {
 });
   }
   componentWillUnmount() {
-I.S.unsubscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.unsubscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput);
+I.S.unsubscribe(S.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.unsubscribe(S.CkL.TEXTAREA_FOCUS, this.focusInput);
   }
   renderSearchOptions() {
 var e;
@@ -147,9 +147,9 @@ return (0, s.jsx)('div', {
   className: N.categories,
   children: null == t ? void 0 : t.map(t => {
     let [n, i] = t;
-    return (0, s.jsx)(v, {
+    return (0, s.jsx)(Z, {
       categoryId: n,
-      name: n === S.Hk ? C.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
+      name: n === f.Hk ? C.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
       onCategoryChange: this.handleCategoryChange,
       isSelected: e === n,
       count: i
@@ -236,8 +236,8 @@ super(e), A(this, '_searchRef', a.createRef()), A(this, 'canSearch', e => e.trim
   } = this.state, {
     loadId: i,
     currentCategoryId: s
-  } = this.props, a = s !== S.Hk ? s : null;
-  this.canSearch(t) && n && e.charCode === f.yXg.ENTER ? (m.tI(i, a), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === f.yXg.ENTER && this.setState({
+  } = this.props, a = s !== f.Hk ? s : null;
+  this.canSearch(t) && n && e.charCode === S.yXg.ENTER ? (m.tI(i, a), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === S.yXg.ENTER && this.setState({
     isSearching: !1
   });
 }), A(this, 'handleQueryChanged', e => {

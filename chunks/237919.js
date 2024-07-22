@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return f;
+return S;
   }
 }), n(47120);
 var i = n(735250),
@@ -28,7 +28,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class S extends s.Component {
+class f extends s.Component {
   componentDidMount() {
 document.addEventListener('keydown', this.handleKeyDown);
   }
@@ -136,10 +136,10 @@ super(...e), T(this, 'searchBarRef', null), T(this, 'state', {
   }
 }
 
-function f() {
+function S() {
   let e = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
 t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
-  return (0, i.jsx)(S, {
+  return (0, i.jsx)(f, {
 activeRowKey: (0, l.e7)([E.Z], () => E.Z.activeRowKey),
 hasModalOpen: t || e,
 filterQuery: (0, l.e7)([_.Z], () => _.Z.applicationFilterQuery),

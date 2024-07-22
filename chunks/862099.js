@@ -24,13 +24,13 @@ var i, s, a = n(735250),
   g = n(565799),
   p = n(501655),
   T = n(192079),
-  S = n(427679),
-  f = n(448206),
+  f = n(427679),
+  S = n(448206),
   C = n(496675),
   N = n(938475),
   A = n(626135),
-  Z = n(823379),
-  v = n(15274),
+  v = n(823379),
+  Z = n(15274),
   L = n(924301),
   O = n(504160),
   R = n(151864),
@@ -231,7 +231,7 @@ children: [
     className: B.textBlock,
     children: [
       (0, a.jsx)(d.Clickable, {
-        onClick: () => (0, v.bO)({
+        onClick: () => (0, Z.bO)({
           eventId: n.id
         }),
         className: B.eventNameClickable,
@@ -334,7 +334,7 @@ function z(e) {
   let {
 guildEvent: t
   } = e, n = r.useCallback(() => {
-(0, v.bO)({
+(0, Z.bO)({
   eventId: t.id
 });
   }, [t]);
@@ -407,7 +407,7 @@ function Q(e) {
 channel: t,
 speakers: n,
 voiceType: i
-  } = e, s = t.getGuildId(), l = r.useMemo(() => n.slice(0, 3), [n]), _ = (0, c.e7)([C.Z], () => C.Z.can(k.Plq.CONNECT, t)), E = (0, f.Z)(t.id), h = w.Z.Messages.JOIN;
+  } = e, s = t.getGuildId(), l = r.useMemo(() => n.slice(0, 3), [n]), _ = (0, c.e7)([C.Z], () => C.Z.can(k.Plq.CONNECT, t)), E = (0, S.Z)(t.id), h = w.Z.Messages.JOIN;
   switch (i) {
 case 1:
   h = w.Z.Messages.JOIN;
@@ -419,7 +419,7 @@ case 3:
   h = w.Z.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA;
   break;
 default:
-  (0, Z.vE)(i);
+  (0, v.vE)(i);
   }
   return null == s ? null : (0, a.jsxs)(a.Fragment, {
 children: [
@@ -452,7 +452,7 @@ children: [
 guild: t
   } = e, {
 showRedesignedLiveChannelNotice: n
-  } = (0, E.o)(!0), i = (0, P.y)(t.id), s = (0, D.k5)(t.id), r = (0, D.Vm)(t.id), l = (0, c.e7)([S.Z], () => S.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
+  } = (0, E.o)(!0), i = (0, P.y)(t.id), s = (0, D.k5)(t.id), r = (0, D.Vm)(t.id), l = (0, c.e7)([f.Z], () => f.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
 isStageNoticeHidden: o,
 isEventNoticeHidden: d
   } = (0, c.cj)([R.Z], () => ({

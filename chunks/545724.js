@@ -20,11 +20,11 @@ isFocused: m,
 isActive: g,
 onOtherHover: p,
 className: T
-  } = e, [S, f] = s.useState(!1), [C, N] = s.useState(!1), A = () => {
-f(!0), m && !g && !C && (null == p || p());
-  }, Z = () => {
-f(!1);
-  }, v = (e, t) => {
+  } = e, [f, S] = s.useState(!1), [C, N] = s.useState(!1), A = () => {
+S(!0), m && !g && !C && (null == p || p());
+  }, v = () => {
+S(!1);
+  }, Z = (e, t) => {
 if (null != t)
   N(!0), (0, d.jW)(e, async () => {
     let {
@@ -56,16 +56,16 @@ children: e => (0, i.jsx)(c.FocusRing, {
       [_.active]: g || C,
       [_.firstItem]: 0 === t
     }),
-    onContextMenu: e => v(e, E),
+    onContextMenu: e => Z(e, E),
     onMouseEnter: A,
-    onMouseLeave: Z,
+    onMouseLeave: v,
     onClick: null != I ? I : void 0,
     style: {
       LIST_ROW_HEIGHT: u.WN,
       opacity: 1
     },
     ...e,
-    children: a(S || g || C)
+    children: a(f || g || C)
   })
 })
   });

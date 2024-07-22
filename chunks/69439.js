@@ -35,16 +35,16 @@ function g(e) {
   var t, n, g, p;
   let {
 quest: T
-  } = e, S = (0, c.B6)(T.config.expiresAt, {
+  } = e, f = (0, c.B6)(T.config.expiresAt, {
 month: '2-digit',
 day: '2-digit'
   }), {
-isClaiming: f,
+isClaiming: S,
 isEnrolling: C
   } = (0, a.cj)([d.Z], () => ({
 isClaiming: d.Z.isClaimingRewardCode(T.id) || d.Z.isClaimingReward(T.id) || d.Z.isFetchingRewardCode(T.id),
 isEnrolling: d.Z.isEnrolling(T.id)
-  })), N = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, A = (null === (n = T.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (g = T.userStatus) || void 0 === g ? void 0 : g.claimedAt) == null, Z = (0, _.iQ)(T), v = !(0, _.zi)(T), L = (null === (p = T.userStatus) || void 0 === p ? void 0 : p.claimedAt) != null, O = (0, E.hf)({
+  })), N = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, A = (null === (n = T.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (g = T.userStatus) || void 0 === g ? void 0 : g.claimedAt) == null, v = (0, _.iQ)(T), Z = !(0, _.zi)(T), L = (null === (p = T.userStatus) || void 0 === p ? void 0 : p.claimedAt) != null, O = (0, E.hf)({
 quest: T,
 location: u.jn.QUEST_BAR
   }), R = s.useCallback(() => {
@@ -53,18 +53,18 @@ location: u.jn.QUEST_BAR
   questContentCTA: l.jZ.ACCEPT_QUEST
 });
   }, [T]), x = null;
-  return (Z && A ? x = (0, i.jsx)(m, {
-submitting: f,
+  return (v && A ? x = (0, i.jsx)(m, {
+submitting: S,
 onClick: O
-  }) : v ? v && A ? x = (0, i.jsx)(m, {
-submitting: f,
+  }) : Z ? Z && A ? x = (0, i.jsx)(m, {
+submitting: S,
 onClick: O
-  }) : v && N && !L ? x = (0, i.jsx)(r.Button, {
+  }) : Z && N && !L ? x = (0, i.jsx)(r.Button, {
 color: r.ButtonColors.PRIMARY,
 disabled: !0,
 className: I.button,
 children: h.Z.Messages.QUEST_ACCEPTED
-  }) : v && !N && (x = (0, i.jsx)(r.Button, {
+  }) : Z && !N && (x = (0, i.jsx)(r.Button, {
 submitting: C,
 color: r.ButtonColors.BRAND,
 onClick: R,
@@ -75,7 +75,7 @@ color: r.ButtonColors.PRIMARY,
 disabled: !0,
 className: I.button,
 children: h.Z.Messages.QUESTS_ENDED_ON_DATE.format({
-  expiryDate: S
+  expiryDate: f
 })
   }), null == x) ? null : (0, i.jsx)('div', {
 className: I.container,

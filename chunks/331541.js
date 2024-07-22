@@ -20,13 +20,13 @@ var i = n(735250),
   g = n(521868),
   p = n(299206),
   T = n(440051),
-  S = n(734934),
-  f = n(158238),
+  f = n(734934),
+  S = n(158238),
   C = n(300284),
   N = n(680295),
   A = n(785717),
-  Z = n(481046),
-  v = n(318661),
+  v = n(481046),
+  Z = n(318661),
   L = n(78675),
   O = n(741308),
   R = n(899007),
@@ -168,7 +168,7 @@ function ei(e) {
 currentUser: t,
 onClose: n,
 setPopoutRef: a
-  } = e, V = __OVERLAY__, W = (0, v.ZP)(t.id), ei = (0, u.O)(), {
+  } = e, V = __OVERLAY__, W = (0, Z.ZP)(t.id), ei = (0, u.O)(), {
 analyticsLocations: es
   } = (0, I.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT), ea = (0, A.Q1)({
 layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
@@ -178,8 +178,8 @@ let n = T.Y.useExperiment({
     location: 'account popout'
   }).expiringStatus,
   s = w.Cr.useSetting(),
-  a = (0, S.p)(),
-  r = f.e.useExperiment({
+  a = (0, f.p)(),
+  r = S.e.useExperiment({
     location: 'account popout'
   }).allowQuietMode || a,
   o = w.fv.useSetting(),
@@ -214,7 +214,7 @@ let n = T.Y.useExperiment({
         id: ''.concat(e, '-').concat(n),
         label: s(),
         action: () => {
-          (0, S.oW)(!0, n);
+          (0, f.oW)(!0, n);
         },
         dontCloseOnAction: !0
       }, n);
@@ -266,7 +266,7 @@ return (0, i.jsxs)(i.Fragment, {
         ]
       }),
       action: () => {
-        (0, S.oW)(!a);
+        (0, f.oW)(!a);
       },
       dontCloseOnAction: !0,
       children: _
@@ -291,13 +291,13 @@ a
 },
 {
   accountPopoutStatusEditEnabled: e_
-} = (0, Z.K)({
+} = (0, v.K)({
   location: 'AccountProfilePopout'
 }),
 eE = (0, C.Z)({
   analyticsLocations: es
 }),
-eh = (0, S.p)(),
+eh = (0, f.p)(),
 eI = el === q.Skl.DND,
 em = (0, z.g)(),
 eg = (0, g.o)({

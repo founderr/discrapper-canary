@@ -16,13 +16,13 @@ var i = n(735250),
   g = n(607070),
   p = n(209613),
   T = n(325708),
-  S = n(320149),
-  f = n(252618),
+  f = n(320149),
+  S = n(252618),
   C = n(605236),
   N = n(243778),
   A = n(984370),
-  Z = n(797614),
-  v = n(359110),
+  v = n(797614),
+  Z = n(359110),
   L = n(6025),
   O = n(897473),
   R = n(108427),
@@ -84,13 +84,13 @@ g = (0, p.Z)('message-requests-list'),
 {
   channelId: T
 } = (0, F._)(),
-S = s.useCallback(() => {
+f = s.useCallback(() => {
   I(n.map(e => e.channel.id));
 }, [
   n,
   I
 ]),
-f = s.useCallback(e => {
+S = s.useCallback(e => {
   var t, s;
   let {
     row: l
@@ -126,7 +126,7 @@ C = s.useCallback(() => (0, i.jsxs)(y.Z, {
           children: '\u2022'
         }),
         (0, i.jsx)(u.Button, {
-          onClick: S,
+          onClick: f,
           look: u.ButtonLooks.LINK,
           color: u.ButtonColors.LINK,
           size: u.ButtonSizes.SMALL,
@@ -139,10 +139,10 @@ C = s.useCallback(() => (0, i.jsxs)(y.Z, {
   ]
 }, 'title'), [
   t,
-  S,
+  f,
   c
 ]);
-  return (n.length !== t && Z.Z.increment({
+  return (n.length !== t && v.Z.increment({
 name: o.V.MESSAGE_REQUEST_COUNT_DRIFT
   }), 0 === n.length) ? (0, i.jsx)(K.Z, {
 section: X.pS.REQUESTS
@@ -168,7 +168,7 @@ children: (0, i.jsx)(l.SJ, {
       sectionHeight: X.oi,
       rowHeight: X.WN,
       renderSection: C,
-      renderRow: f,
+      renderRow: S,
       sections: [n.length],
       chunkSize: 30,
       fade: !0,
@@ -191,7 +191,7 @@ return null;
 sidebarType: T.y.MessageRequestSidebar,
 maxWidth: r,
 onWidthChange: n,
-children: (0, i.jsx)(S.Z, {
+children: (0, i.jsx)(f.Z, {
   channel: a,
   baseChannelId: P.uZ
 })
@@ -269,7 +269,7 @@ width: t
   s.useEffect(() => {
 _.Y(J.Z5c.MESSAGE_REQUESTS), (0, R.e)('message-requests'), j.default.track(J.rMx.MESSAGE_REQUESTS_VIEWED, {
   num_message_requests: n
-}), Z.Z.increment({
+}), v.Z.increment({
   name: o.V.MESSAGE_REQUEST_VIEW
 });
   }, []);
@@ -285,15 +285,15 @@ m = null != h,
 g = (0, w.T)(I),
 p = (0, k.J)(I);
   s.useEffect(() => {
-null != I && !g && p && m && ((0, v.Kh)(I), L.Z.closeChannelSidebar(P.uZ));
+null != I && !g && p && m && ((0, Z.Kh)(I), L.Z.closeChannelSidebar(P.uZ));
   }, [
 I,
 p,
 m,
 g
   ]);
-  let [T, S] = s.useState(X.pS.REQUESTS);
-  return (0, f.Tt)({
+  let [T, f] = s.useState(X.pS.REQUESTS);
+  return (0, S.Tt)({
 location: et.Z.Messages.MESSAGE_REQUESTS
   }), (0, i.jsxs)(i.Fragment, {
 children: [
@@ -322,7 +322,7 @@ children: [
             selectedItem: T,
             type: 'top-pill',
             onItemSelect: e => {
-              S(e);
+              f(e);
             },
             className: en.__invalid_tabBar,
             children: [

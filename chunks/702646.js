@@ -26,8 +26,8 @@ autoWidth: u = !1
   s.useEffect(() => {
 T && (h(!1), g(!1));
   }, [T]);
-  let S = d && (m || E),
-f = s.useMemo(() => (0, i.jsxs)(o.Clickable, {
+  let f = d && (m || E),
+S = s.useMemo(() => (0, i.jsxs)(o.Clickable, {
   className: I.tooltipContentWrapper,
   onClick: c,
   onMouseEnter: () => {
@@ -48,11 +48,11 @@ f = s.useMemo(() => (0, i.jsxs)(o.Clickable, {
   T
 ]);
   return (0, i.jsx)(o.Tooltip, {
-text: f,
+text: S,
 position: 'bottom',
 'aria-label': a,
-shouldShow: S,
-forceOpen: S,
+shouldShow: f,
+forceOpen: f,
 allowOverflow: !0,
 disableTooltipPointerEvents: !1,
 tooltipClassName: r()(I.filterTooltip, {
@@ -203,7 +203,7 @@ autoWidth: !0
   });
 }
 
-function S() {
+function f() {
   let {
 enableClanCreation: e
   } = (0, c.C3)({
@@ -238,7 +238,7 @@ className: r()(I.toolbar, t),
 children: [
   (0, i.jsx)('div', {
     className: I.addClan,
-    children: (0, i.jsx)(S, {})
+    children: (0, i.jsx)(f, {})
   }),
   (0, i.jsxs)('div', {
     className: I.preferences,

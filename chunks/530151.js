@@ -16,13 +16,13 @@ var i = n(735250),
   g = n(730749),
   p = n(112724),
   T = n(812206),
-  S = n(44315),
-  f = n(925329),
+  f = n(44315),
+  S = n(925329),
   C = n(707409),
   N = n(210887),
   A = n(283595),
-  Z = n(417363),
-  v = n(941128),
+  v = n(417363),
+  Z = n(941128),
   L = n(451478),
   O = n(285952),
   R = n(151011),
@@ -278,10 +278,10 @@ return (0, i.jsxs)(O.Z, {
     (0, i.jsx)(_.Progress, {
       percent: t,
       size: _.Progress.Sizes.SMALL,
-      foregroundColor: (0, S.Lq)(n),
+      foregroundColor: (0, f.Lq)(n),
       foregroundGradientColor: null != s ? [
-        (0, S.Lq)(s[0]),
-        (0, S.Lq)(s[1])
+        (0, f.Lq)(s[0]),
+        (0, f.Lq)(s[1])
       ] : void 0,
       animate: this.isFocused
     }),
@@ -390,7 +390,7 @@ return this.renderBody({
   }
   renderProgressPatching() {
 return (0, i.jsx)(P.Z, {
-  getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesWritten,
+  getHistoricalTotalBytes: v.Z.getHistoricalTotalBytesWritten,
   updateInterval: 5000,
   children: this.renderProgressPatchingBody
 });
@@ -524,10 +524,10 @@ return (0, i.jsx)(w, {
   render: e => (0, i.jsxs)(O.Z, {
     align: O.Z.Align.CENTER,
     children: [
-      (0, i.jsx)(f.Z, {
+      (0, i.jsx)(S.Z, {
         game: e.application,
         className: j.__invalid_gameIcon,
-        size: f.Z.Sizes.SMALL
+        size: S.Z.Sizes.SMALL
       }),
       (0, i.jsx)('div', {
         className: j.nameCellText,
@@ -608,14 +608,14 @@ return 0 === e.length ? null : (0, i.jsxs)('div', {
         (0, i.jsx)(M.Z, {
           className: r()(j.headerCell, j.networkProgress),
           title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
-          getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesDownloaded,
+          getHistoricalTotalBytes: v.Z.getHistoricalTotalBytesDownloaded,
           color: D.Ilk.GREEN_360,
           animate: s
         }),
         (0, i.jsx)(M.Z, {
           className: r()(j.headerCell, j.diskProgress),
           title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
-          getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesWritten,
+          getHistoricalTotalBytes: v.Z.getHistoricalTotalBytesWritten,
           color: D.Ilk.BLUE_345,
           animate: s
         })
@@ -687,18 +687,18 @@ return null != o && e.push({
 }
 t.Z = (0, p.Z)(c.ZP.connectStores([
   T.Z,
-  Z.Z,
   v.Z,
+  Z.Z,
   N.Z,
   L.Z
 ], () => {
-  let e = et(v.Z.activeItems, !1, T.Z, Z.Z);
+  let e = et(Z.Z.activeItems, !1, T.Z, v.Z);
   return {
 applications: [
   ...e,
-  ...et(v.Z.finishedItems, !0, T.Z, Z.Z)
+  ...et(Z.Z.finishedItems, !0, T.Z, v.Z)
 ],
-paused: v.Z.paused,
+paused: Z.Z.paused,
 isFocused: L.Z.isFocused(),
 theme: N.Z.theme
   };

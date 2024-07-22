@@ -16,13 +16,13 @@ var i = n(735250),
   g = n(650461),
   p = n(353093),
   T = n(603839),
-  S = n(430824),
-  f = n(725568),
+  f = n(430824),
+  S = n(725568),
   C = n(231467),
   N = n(207796),
   A = n(316553),
-  Z = n(273254),
-  v = n(559469),
+  v = n(273254),
+  Z = n(559469),
   L = n(308083),
   O = n(689938),
   R = n(330468),
@@ -217,7 +217,7 @@ return o ? n[0].id : t[0].id;
 o,
 x
   ]);
-  let D = (0, c.e7)([S.Z], () => S.Z.getGuild(x)),
+  let D = (0, c.e7)([f.Z], () => f.Z.getGuild(x)),
 j = (0, c.e7)([g.ZP], () => null != x ? g.ZP.getStateForGuild(x).progress : null),
 U = (0, A.J)({
   selectedGame: a
@@ -240,7 +240,7 @@ U
   !o && ((0, I._9)({
     guildId: x,
     location: E.Z.CLAN_DISCOVERY
-  }), (0, f.q4)(e => {
+  }), (0, S.q4)(e => {
     let {
       closeLayer: t
     } = e;
@@ -256,11 +256,11 @@ U
   x
 ]),
 w = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
-B = (0, Z.L)({
+B = (0, v.L)({
   guild: D,
   selectedGame: a
 }),
-H = (0, v.n)(U),
+H = (0, Z.n)(U),
 [V, F] = s.useState(!0),
 Y = (0, l.useSpring)({
   from: {

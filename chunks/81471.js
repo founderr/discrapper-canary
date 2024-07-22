@@ -15,8 +15,8 @@ var i = n(735250),
   g = n(868807),
   p = n(981631),
   T = n(217702),
-  S = n(689938),
-  f = n(958633),
+  f = n(689938),
+  S = n(958633),
   C = n(153521);
 let N = s.memo(function(e) {
   let {
@@ -25,7 +25,7 @@ channel: t
 loaded: n,
 error: a,
 message: N
-  } = (0, g.a)(t), A = (0, c.p)(), Z = (0, l.e7)([I.Z], () => null != N && I.Z.isBlockedForMessage(N), [N]), v = (0, l.e7)([h.Z], () => h.Z.can(p.Plq.MANAGE_MESSAGES, t)), L = E.cC.useSetting(), {
+  } = (0, g.a)(t), A = (0, c.p)(), v = (0, l.e7)([I.Z], () => null != N && I.Z.isBlockedForMessage(N), [N]), Z = (0, l.e7)([h.Z], () => h.Z.can(p.Plq.MANAGE_MESSAGES, t)), L = E.cC.useSetting(), {
 content: O
   } = s.useMemo(() => (null == N ? void 0 : N.content) != null && '' !== N.content ? (0, u.ZP)(N, {
 formatInline: !0,
@@ -39,53 +39,53 @@ A
   ]), R = null;
   if (a)
 R = (0, i.jsx)(o.Text, {
-  className: f.messageReplacement,
+  className: S.messageReplacement,
   variant: 'text-sm/normal',
   color: 'text-muted',
-  children: S.Z.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
+  children: f.Z.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
 });
   else if (n) {
-if (null != N && Z)
+if (null != N && v)
   R = (0, i.jsx)(o.Text, {
-    className: f.messageReplacement,
+    className: S.messageReplacement,
     variant: 'text-sm/normal',
     color: 'text-muted',
-    children: S.Z.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
+    children: f.Z.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
   });
 else if (null != N) {
   let {
     contentPlaceholder: e,
     renderedContent: t
-  } = (0, _.f)(N, O, Z, r()(f.messageContent, C.inlineFormat), {
-    leadingIconClass: f.messageContentIcon,
-    trailingIconClass: f.messageContentIcon,
+  } = (0, _.f)(N, O, v, r()(S.messageContent, C.inlineFormat), {
+    leadingIconClass: S.messageContentIcon,
+    trailingIconClass: S.messageContentIcon,
     iconSize: T.WW
   });
   R = null != t ? (0, i.jsx)(o.Text, {
     variant: 'text-sm/normal',
     color: 'text-muted',
-    className: f.messageContent,
+    className: S.messageContent,
     children: t
   }) : (0, i.jsx)(o.Text, {
     tag: 'span',
     variant: 'text-sm/normal',
     color: 'text-muted',
-    className: f.messageReplacement,
+    className: S.messageReplacement,
     children: e
   });
 } else
   R = (0, i.jsx)(o.Text, {
-    className: f.messageReplacement,
+    className: S.messageReplacement,
     variant: 'text-sm/normal',
     color: 'text-muted',
-    children: S.Z.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
+    children: f.Z.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
   });
   } else
 R = null;
   return (0, i.jsx)(m.a.Provider, {
-value: (0, d.Z)(L, v),
+value: (0, d.Z)(L, Z),
 children: (0, i.jsx)(o.FocusBlock, {
-  className: f.messageFocusBlock,
+  className: S.messageFocusBlock,
   children: R
 })
   });

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return v;
+return Z;
   }
 }), n(47120), n(411104), n(315314), n(610138), n(216116), n(78328), n(815648);
 var i = n(735250),
@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(626135),
   p = n(960048),
   T = n(565216),
-  S = n(981631),
-  f = n(921944),
+  f = n(981631),
+  S = n(921944),
   C = n(757601);
 let N = [],
   A = e => {
@@ -34,7 +34,7 @@ return (0, i.jsx)(c.TextBadge, {
   text: t
 });
   },
-  Z = e => {
+  v = e => {
 let {
   header: t,
   subHeader: n,
@@ -76,13 +76,13 @@ return (0, i.jsxs)('div', {
 });
   };
 
-function v(e) {
+function Z(e) {
   let {
 className: t,
 renderModalProps: n,
 heroArt: a,
 heroArtClassName: A,
-modalDismissibleContent: v,
+modalDismissibleContent: Z,
 modalTopExtra: L,
 header: O,
 headerClassName: R,
@@ -151,10 +151,10 @@ q
   ]), s.useEffect(() => () => {
 if ('video' === a.type || 'embed' === a.type) {
   let [e, t] = ea();
-  g.default.track(S.rMx.CHANGE_LOG_VIDEO_PLAYED, {
+  g.default.track(f.rMx.CHANGE_LOG_VIDEO_PLAYED, {
     change_log_id: M,
     seconds_played: Math.round(e / 1000)
-  }), g.default.track(S.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
+  }), g.default.track(f.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
     change_log_id: M,
     seconds_unmuted: Math.round(t / 1000)
   });
@@ -163,20 +163,20 @@ if ('video' === a.type || 'embed' === a.type) {
 M,
 a.type
   ]), s.useEffect(() => {
-null != v && (0, E.kk)(v);
+null != Z && (0, E.kk)(Z);
 let e = Date.now();
-return g.default.track(S.rMx.CHANGE_LOG_OPENED, {
+return g.default.track(f.rMx.CHANGE_LOG_OPENED, {
   change_log_id: M
 }), () => {
-  g.default.track(S.rMx.CHANGE_LOG_CLOSED, {
+  g.default.track(f.rMx.CHANGE_LOG_CLOSED, {
     change_log_id: M,
     seconds_open: Math.round((Date.now() - e) / 1000)
-  }), null != v && (0, E.EW)(v, {
-    dismissAction: f.L.DISMISS
+  }), null != Z && (0, E.EW)(Z, {
+    dismissAction: S.L.DISMISS
   });
 };
   }, [
-v,
+Z,
 M
   ]), (0, i.jsxs)(c.ModalRoot, {
 className: r()(C.root, t),
@@ -209,7 +209,7 @@ children: [
         src: a.src,
         poster: a.poster,
         onPlay: e => {
-          g.default.track(S.rMx.CHANGE_LOG_VIDEO_INTERACTED, {
+          g.default.track(f.rMx.CHANGE_LOG_VIDEO_INTERACTED, {
             change_log_id: M
           }), H(Date.now()), K(!0), Q(e.currentTarget.muted);
         },
@@ -245,9 +245,9 @@ children: [
         renderVideoComponent: h.lV,
         renderImageComponent: h.Yi,
         renderLinkComponent: h.iT,
-        renderForwardComponent: S.VqG,
+        renderForwardComponent: f.VqG,
         onPlay: () => {
-          g.default.track(S.rMx.CHANGE_LOG_VIDEO_INTERACTED, {
+          g.default.track(f.rMx.CHANGE_LOG_VIDEO_INTERACTED, {
             change_log_id: M
           });
         }
@@ -273,7 +273,7 @@ children: [
         className: r()(C.featureCardGroup, {
           [C.wideStyle]: k
         }),
-        children: P.map((e, t) => (0, i.jsx)(Z, {
+        children: P.map((e, t) => (0, i.jsx)(v, {
           ...e,
           wideStyle: k
         }, ''.concat(e.header, '_').concat(t)))

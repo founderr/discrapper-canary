@@ -18,13 +18,13 @@ var i, s, a = n(735250),
   g = n(504160),
   p = n(151864),
   T = n(725436),
-  S = n(497656),
-  f = n(554747),
+  f = n(497656),
+  S = n(554747),
   C = n(230900),
   N = n(854698),
   A = n(703656),
-  Z = n(922482),
-  v = n(565799),
+  v = n(922482),
+  Z = n(565799),
   L = n(501655),
   O = n(427679),
   R = n(448206),
@@ -43,7 +43,7 @@ function k(e) {
   let {
 guild: t,
 isStudyRoomNotice: n = !1
-  } = e, i = (0, S.y)(t.id), s = (0, f.k5)(t.id), l = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
+  } = e, i = (0, f.y)(t.id), s = (0, S.k5)(t.id), l = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
 isStageNoticeHidden: k,
 isEventNoticeHidden: w
   } = (0, c.cj)([p.Z], () => ({
@@ -56,7 +56,7 @@ isEventNoticeHidden: p.Z.isLiveChannelNoticeHidden({
   }), [
 l,
 s
-  ]), B = null == i ? void 0 : i.id, H = (0, c.Wu)([v.Z], () => [...new Set(v.Z.getMutableParticipants(B, L.pV.SPEAKER).map(e => e.user))], [B]), V = (0, c.e7)([v.Z], () => null != B ? v.Z.getParticipantCount(B, L.pV.AUDIENCE) : 0, [B]), F = (0, c.e7)([P.Z], () => P.Z.can(y.Plq.CONNECT, i)), Y = (0, R.Z)(null == i ? void 0 : i.id), W = null == s ? void 0 : s.creator_id, z = (0, c.e7)([M.default], () => M.default.getUser(W), [W]);
+  ]), B = null == i ? void 0 : i.id, H = (0, c.Wu)([Z.Z], () => [...new Set(Z.Z.getMutableParticipants(B, L.pV.SPEAKER).map(e => e.user))], [B]), V = (0, c.e7)([Z.Z], () => null != B ? Z.Z.getParticipantCount(B, L.pV.AUDIENCE) : 0, [B]), F = (0, c.e7)([P.Z], () => P.Z.can(y.Plq.CONNECT, i)), Y = (0, R.Z)(null == i ? void 0 : i.id), W = null == s ? void 0 : s.creator_id, z = (0, c.e7)([M.default], () => M.default.getUser(W), [W]);
   r.useEffect(() => {
 null != W && (0, _.PR)(W);
   }, [W]);
@@ -368,7 +368,7 @@ children: [
     color: u.Button.Colors.GREEN,
     onClick: () => {
       if (J)
-        null != i && null != i.getGuildId() && ((0, Z.Cq)(i), (0, A.XU)(i.getGuildId(), i.id));
+        null != i && null != i.getGuildId() && ((0, v.Cq)(i), (0, A.XU)(i.getGuildId(), i.id));
       else {
         if (null == s)
           return;

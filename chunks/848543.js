@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return Z;
+return v;
   }
 }), n(47120);
 var i = n(735250),
@@ -20,18 +20,18 @@ var i = n(735250),
   g = n(459273),
   p = n(242291),
   T = n(792165),
-  S = n(603074),
-  f = n(981631),
+  f = n(603074),
+  S = n(981631),
   C = n(921944),
   N = n(689938),
   A = n(902569);
 
-function Z(e) {
+function v(e) {
   let {
 channel: t,
 iconClassName: a,
-className: Z,
-innerClassName: v,
+className: v,
+innerClassName: Z,
 ...L
   } = e, {
 mute: O,
@@ -69,7 +69,7 @@ renderPopout: e => {
   let {
     closePopout: n
   } = e;
-  return (0, i.jsx)(S.Z, {
+  return (0, i.jsx)(f.Z, {
     guildId: D,
     channel: t,
     onClose: n,
@@ -84,12 +84,12 @@ children: t => (0, i.jsx)('div', {
   children: (0, i.jsx)(d.Button, {
     ...e,
     ...t,
-    className: r()(Z, {
+    className: r()(v, {
       [A.buttonActive]: P,
       [A.disabled]: b
     }),
-    wrapperClassName: Z,
-    innerClassName: v,
+    wrapperClassName: v,
+    innerClassName: Z,
     disabled: b,
     onClick: () => {
       var t, n;
@@ -121,7 +121,7 @@ b,
 P
   ]);
   return (0, g.yp)({
-event: f.CkL.TOGGLE_SOUNDBOARD,
+event: S.CkL.TOGGLE_SOUNDBOARD,
 handler: Y
   }), (0, i.jsx)(E.Gt, {
 value: G,

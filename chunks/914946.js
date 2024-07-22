@@ -67,13 +67,13 @@ var i, s = n(729594),
   g = n(430824),
   p = n(131951),
   T = n(375954),
-  S = n(158776),
-  f = n(594174),
+  f = n(158776),
+  S = n(594174),
   C = n(979651),
   N = n(70956),
   A = n(5192),
-  Z = n(226951),
-  v = n(996106),
+  v = n(226951),
+  Z = n(996106),
   L = n(863141),
   O = n(186901),
   R = n(981631);
@@ -86,7 +86,7 @@ let t = e.split('.'),
   n = t[t.length - 1];
 return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
   }(),
-  P = new RegExp('^'.concat(Z.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(Z.Z.escape(b), '|discordapp.com|discord.com)$')),
+  P = new RegExp('^'.concat(v.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(v.Z.escape(b), '|discordapp.com|discord.com)$')),
   M = 1 * N.Z.Millis.MINUTE,
   D = {};
 
@@ -116,7 +116,7 @@ T.Z.whenReady(e.id, () => t()), c.Z.fetchMessages({
 });
   })), Promise.all(n).then(() => {
 var n;
-let s = (!e.isNSFW() || (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(k) : [],
+let s = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(k) : [],
   a = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map(t => w(i, e.id, t));
 return {
   id: e.id,
@@ -169,7 +169,7 @@ selfMute: a,
 selfDeaf: r,
 suppress: l,
 userId: o
-  } = n, c = f.default.getUser(o);
+  } = n, c = S.default.getUser(o);
   if (null == c)
 throw Error('Invalid user id: '.concat(o));
   return {
@@ -189,13 +189,13 @@ user: (0, L.Z)(c)
 }
 
 function B(e, t, n) {
-  let i = f.default.getUser(t);
+  let i = S.default.getUser(t);
   return {
 type: e,
 user: null != i ? (0, L.Z)(i) : null,
 presence: {
-  status: S.Z.getStatus(t),
-  activity: null != n ? S.Z.getApplicationActivity(t, n) : S.Z.getPrimaryActivity(t)
+  status: f.Z.getStatus(t),
+  activity: null != n ? f.Z.getApplicationActivity(t, n) : f.Z.getPrimaryActivity(t)
 }
   };
 }
@@ -268,11 +268,11 @@ if ('string' == typeof n) {
   if (e.transport === O.He.POST_MESSAGE) {
     let e = (0, d.Z)(t);
     if (null == e || !U(n, [e]))
-      throw new v.Z({
+      throw new Z.Z({
         closeCode: R.$VG.INVALID_ORIGIN
       }, 'Invalid Origin');
   } else if (!U(n, s))
-    throw new v.Z({
+    throw new Z.Z({
       closeCode: R.$VG.INVALID_ORIGIN
     }, 'Invalid Origin');
 }
@@ -284,7 +284,7 @@ e.application = {
   flags: c
 };
   }, () => {
-throw new v.Z({
+throw new Z.Z({
   closeCode: R.$VG.INVALID_CLIENTID
 }, 'Invalid Client ID');
   });
@@ -350,14 +350,14 @@ self_deaf: n.deaf
 
 function J(e) {
   if (e !== O.He.POST_MESSAGE)
-throw new v.Z({
+throw new Z.Z({
   errorCode: R.lTL.INVALID_COMMAND
 }, 'command not available from "'.concat(e, ' transport'));
 }
 
 function $(e) {
   if (null == e.id)
-throw new v.Z({
+throw new Z.Z({
   errorCode: R.lTL.INVALID_COMMAND
 }, 'Invalid application');
   return e.id;

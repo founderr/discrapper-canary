@@ -20,13 +20,13 @@ var i = n(735250),
   g = n(279240),
   p = n(765717),
   T = n(358221),
-  S = n(823748),
-  f = n(626421),
+  f = n(823748),
+  S = n(626421),
   C = n(118379),
   N = n(652515),
   A = n(544978),
-  Z = n(194729),
-  v = n(668940),
+  v = n(194729),
+  Z = n(668940),
   L = n(831565),
   O = n(724383),
   R = n(705334),
@@ -111,7 +111,7 @@ webpackId: 603072,
 name: 'ChannelsAndRolesPage',
 renderLoader: eh
   }),
-  eS = (0, c.Un)({
+  ef = (0, c.Un)({
 createPromise: () => Promise.all([
   n.e('96427'),
   n.e('44156'),
@@ -123,7 +123,7 @@ webpackId: 599263,
 name: 'GuildOnboardingPage',
 renderLoader: eh
   }),
-  ef = e => {
+  eS = e => {
 let {
   match: t
 } = e, n = (0, u.e7)([
@@ -179,7 +179,7 @@ if (null != s && null != a && (0, eu.AB)(a))
         selectedSection: e_.l7.BROWSE
       });
     case eu.oC.GUILD_ONBOARDING:
-      return (0, i.jsx)(eS, {
+      return (0, i.jsx)(ef, {
         guildId: s
       });
     case eu.oC.CUSTOMIZE_COMMUNITY:
@@ -206,7 +206,7 @@ if ((null == n ? void 0 : n.type) === ed.d4z.GUILD_STORE) {
     inputSkuId: e
   }, n.id);
 }
-return (0, i.jsx)(S.Z, {});
+return (0, i.jsx)(f.Z, {});
   },
   eC = s.memo(function() {
 let {
@@ -218,22 +218,22 @@ if (function() {
   }() || function() {
     return window.location.pathname.startsWith(ed.Z5c.GUILD_DISCOVERY) || (0, Y.OG)();
   }())
-  return s ? (0, i.jsx)(R._, {}) : (0, i.jsx)(v.Z, {});
+  return s ? (0, i.jsx)(R._, {}) : (0, i.jsx)(Z.Z, {});
 return null != e ? (0, i.jsx)(y.Z, {
   selectedChannelId: n,
   guildId: e
 }, e) : (0, i.jsx)(el.Z, {});
   }),
-  eN = e => (0, i.jsx)(ef, {
+  eN = e => (0, i.jsx)(eS, {
 ...e
   }),
   eA = e => {
 let t = null != e && e.length > 0 && e.startsWith('?') ? e.split('?')[1] : null;
-return (0, L.Sv)('sidebar') ? (0, i.jsx)(O.A, {}) : (0, i.jsx)(Z.Z, {
+return (0, L.Sv)('sidebar') ? (0, i.jsx)(O.A, {}) : (0, i.jsx)(v.Z, {
   searchRoute: t
 });
   },
-  eZ = e => {
+  ev = e => {
 let {
   match: t
 } = e;
@@ -242,7 +242,7 @@ return null != t.params.guildId ? (0, i.jsx)(b.Z, {
   inviteCode: t.params.inviteCode
 }) : null;
   },
-  ev = e => {
+  eZ = e => {
 let {
   match: t
 } = e;
@@ -396,7 +396,7 @@ children: (0, i.jsxs)('div', {
           (0, i.jsxs)('div', {
             className: eE.content,
             children: [
-              (0, i.jsx)(f.Z, {}),
+              (0, i.jsx)(S.Z, {}),
               (0, i.jsx)(ej, {
                 hasNotice: t,
                 sidebarTheme: n,
@@ -525,13 +525,13 @@ children: (0, i.jsxs)('div', {
                     }),
                     (0, i.jsx)(p.Z, {
                       path: ed.Z5c.GUILD_MEMBER_VERIFICATION(':guildId', ':inviteCode?'),
-                      render: eZ,
+                      render: ev,
                       impressionName: o.ImpressionNames.GUILD_MEMBER_VERIFICATION,
                       disableTrack: !0
                     }),
                     (0, i.jsx)(p.Z, {
                       path: ed.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(':guildId', ':inviteCode?'),
-                      render: ev,
+                      render: eZ,
                       impressionName: o.ImpressionNames.HUB_EMAIL_SIGNUP,
                       impressionProperties: e => {
                         let {

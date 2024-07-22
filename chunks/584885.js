@@ -53,18 +53,18 @@ subtitle: m,
 guildsData: g,
 analyticsContext: p,
 theme: T,
-onViewGuild: S,
-fetchGuilds: f,
+onViewGuild: f,
+fetchGuilds: S,
 onGuildCardSeen: C,
 currentCategoryId: N,
 loadId: A,
-onTagClick: Z,
-showMoreCards: v = !1
+onTagClick: v,
+showMoreCards: Z = !1
   } = e;
   s.useEffect(() => {
-r.Z.wait(() => f());
+r.Z.wait(() => S());
   }, [N]);
-  let L = (0, u.Z)(v ? I : h),
+  let L = (0, u.Z)(Z ? I : h),
 {
   analyticsLocations: O
 } = (0, l.ZP)();
@@ -90,7 +90,7 @@ if ((0, o.yU)())
   });
 else {
   let t = R.findIndex(t => t.id === e);
-  await S(e, t, p, A);
+  await f(e, t, p, A);
 }
   };
   if (x || null == R) {
@@ -105,7 +105,7 @@ t = R.slice(0, L).map(e => (0, i.jsx)(d.Z, {
   onView: P,
   theme: T,
   onGuildCardSeen: C,
-  onTagClick: Z
+  onTagClick: v
 }, e.id));
   return (0, i.jsx)('section', {
 className: E.guildListSection,

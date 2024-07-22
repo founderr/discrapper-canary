@@ -31,18 +31,18 @@ h.id,
 I
   ]), {
 acceptMessageRequest: T,
-rejectMessageRequest: S,
-isAcceptLoading: f,
+rejectMessageRequest: f,
+isAcceptLoading: S,
 isRejectLoading: C,
 isUserProfileLoading: N,
 isOptimisticAccepted: A,
-isOptimisticRejected: Z
+isOptimisticRejected: v
   } = (0, d.m)({
 user: n,
 onAcceptSuccess: p,
 onRejectSuccess: g,
 onError: m
-  }), v = f || C || N || A || Z;
+  }), Z = S || C || N || A || v;
   return (0, i.jsxs)('div', {
 className: E.container,
 children: [
@@ -59,10 +59,10 @@ children: [
         color: a.ButtonColors.PRIMARY,
         size: a.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), S(h.id);
+          e.stopPropagation(), f(h.id);
         },
-        disabled: v,
-        submitting: C || Z,
+        disabled: Z,
+        submitting: C || v,
         children: _.Z.Messages.MESSAGE_REQUEST_IGNORE
       }),
       (0, i.jsx)(a.Button, {
@@ -72,8 +72,8 @@ children: [
         onClick: e => {
           e.stopPropagation(), T(h.id);
         },
-        disabled: v,
-        submitting: f || N || A,
+        disabled: Z,
+        submitting: S || N || A,
         children: _.Z.Messages.MESSAGE_REQUEST_ACCEPT
       })
     ]

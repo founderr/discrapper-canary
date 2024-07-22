@@ -46,10 +46,10 @@ super(...e), t = this, n = 'getIcon', i = () => {
 }) : t[n] = i;
   }
 }
-let S = () => null;
+let f = () => null;
 I.isPlatformEmbedded && (m.ZP.on('SYSTEM_TRAY_TOGGLE_MUTE', () => l.Z.toggleSelfMute()), m.ZP.on('SYSTEM_TRAY_TOGGLE_DEAFEN', () => l.Z.toggleSelfDeaf()), m.ZP.on('SYSTEM_TRAY_OPEN_VOICE_SETTINGS', () => {
   o.Z.open(g.oAB.VOICE);
-}), S = r.ZP.connectStores([
+}), f = r.ZP.connectStores([
   _.Z,
   d.Z,
   h.Z,
@@ -68,4 +68,4 @@ muted: d.Z.isSelfMute() || d.Z.isSelfMutedTemporarily(),
 deafened: d.Z.isSelfDeaf(),
 unread: !i && !!(t || e + n > 0)
   };
-})(T)), t.Z = S;
+})(T)), t.Z = f;

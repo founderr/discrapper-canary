@@ -1,6 +1,6 @@
 n.d(t, {
   DL: function() {
-return v;
+return Z;
   }
 }), n(411104);
 var i = n(433517),
@@ -20,7 +20,7 @@ let I = 'LATEST_HEARTBEAST_EVENT_TIMESTAMP',
   g = null,
   p = null,
   T = !1;
-async function S() {
+async function f() {
   if (T)
 return;
   T = !0, (0, E.fr)(!0), _.Z.addBreadcrumb({
@@ -35,14 +35,14 @@ n = 15 * d.Z.Millis.MINUTE + e - t;
 message: 'Received invalid Date.now() when generating a heartbeat. Date.now() = '.concat(t, ', timeUntilNextHeartbeat = ').concat(n, ', latestHeartbeatEventTimestamp = ').concat(e)
   }), e > t && (n = 0), _.Z.addBreadcrumb({
 message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(n / 1000, ' seconds. Scheduling Heartbeat')
-  }), f(!1), g = setTimeout(() => {
+  }), S(!1), g = setTimeout(() => {
 C(), m = setInterval(() => {
   C();
 }, 15 * d.Z.Millis.MINUTE);
   }, Math.max(n, 0));
 }
 
-function f() {
+function S() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   null != g && (clearTimeout(g), g = null), null != m && (clearInterval(m), m = null), null != p && e && (_.Z.addBreadcrumb({
 message: 'Heartbeat correctly scheduled. Clearing 10s check timeout'
@@ -57,7 +57,7 @@ _.Z.captureException(Error('Null session when tracking session heartbeat. Waited
 return;
   }
   if (!T) {
-_.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), f();
+_.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), S();
 return;
   }
   _.Z.addBreadcrumb({
@@ -83,10 +83,10 @@ null != e && (s.client_heartbeat_current_game_id = e.id, s.client_heartbeat_curr
 let N = null,
   A = !0;
 
-function Z() {
+function v() {
   if (A || null != N && N !== h.hes.DISCONNECTED && N !== h.hes.RTC_DISCONNECTED)
 try {
-  S();
+  f();
 } catch (e) {
   _.Z.captureException(e);
 }
@@ -95,14 +95,14 @@ try {
   if (!!T)
     T = !1, _.Z.addBreadcrumb({
       message: 'Stopping Analytics Heartbeat'
-    }), (0, E.fr)(!1), f(), (0, a.Z)();
+    }), (0, E.fr)(!1), S(), (0, a.Z)();
 }();
 }
 
-function v() {
+function Z() {
   _.Z.addBreadcrumb({
 message: 'Initializing SessionHeartbeatScheduler'
-  }), o.Z.addChangeListener(O), s.Z.subscribe('WINDOW_FOCUS', R), s.Z.subscribe('APP_STATE_UPDATE', x), s.Z.subscribe('LOGIN_SUCCESS', L), Z();
+  }), o.Z.addChangeListener(O), s.Z.subscribe('WINDOW_FOCUS', R), s.Z.subscribe('APP_STATE_UPDATE', x), s.Z.subscribe('LOGIN_SUCCESS', L), v();
 }
 
 function L() {
@@ -111,19 +111,19 @@ function L() {
 
 function O() {
   let e = o.Z.getState();
-  N !== e && (N = e, Z());
+  N !== e && (N = e, v());
 }
 
 function R(e) {
   let {
 focused: t
   } = e;
-  A = t, Z();
+  A = t, v();
 }
 
 function x(e) {
   let {
 state: t
   } = e;
-  A = t === h.$7l.ACTIVE, Z();
+  A = t === h.$7l.ACTIVE, v();
 }
