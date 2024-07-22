@@ -1,42 +1,28 @@
 n.d(t, {
-  TX: function() {
-return d;
-  },
-  oy: function() {
-return c;
+  o: function() {
+return u;
   }
 });
-var r = n(442837),
-  i = n(592125),
-  a = n(944486),
-  s = n(595519),
-  o = n(317381),
-  l = n(981631);
+var i = n(442837),
+  l = n(592125),
+  r = n(944486),
+  a = n(595519),
+  o = n(981631);
 
 function u(e) {
-  let {
-channelId: t,
-SelectedChannelStore: n,
-ChannelStore: r
-  } = e, i = r.getChannel(t), a = (0, s.WS)(i, !1);
-  return !!((null == i ? void 0 : i.type) === l.d4z.GUILD_TEXT && a || null != i && i.isPrivate() && a && null == n.getVoiceChannelId()) || !1;
-}
-
-function c(e) {
-  return (0, r.e7)([
-i.Z,
-a.Z
-  ], () => u({
+  return (0, i.e7)([
+l.Z,
+r.Z
+  ], () => function(e) {
+let {
+  channelId: t,
+  SelectedChannelStore: n,
+  ChannelStore: i
+} = e, l = i.getChannel(t), r = (0, a.WS)(l, !1);
+return !!((null == l ? void 0 : l.type) === o.d4z.GUILD_TEXT && r || null != l && l.isPrivate() && r && null == n.getVoiceChannelId()) || !1;
+  }({
 channelId: null == e ? void 0 : e.id,
-ChannelStore: i.Z,
-SelectedChannelStore: a.Z
+ChannelStore: l.Z,
+SelectedChannelStore: r.Z
   }));
-}
-
-function d(e, t, n, r) {
-  return !o.ZP.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === t) && u({
-channelId: e,
-SelectedChannelStore: n,
-ChannelStore: r
-  });
 }

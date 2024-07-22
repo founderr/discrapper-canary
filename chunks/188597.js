@@ -1,9 +1,12 @@
 n.d(t, {
   $s: function() {
-return N;
+return O;
   },
   Sg: function() {
-return S;
+return N;
+  },
+  XV: function() {
+return g;
   },
   ow: function() {
 return m;
@@ -15,7 +18,7 @@ return T;
 return r;
   },
   t$: function() {
-return A;
+return v;
   },
   tM: function() {
 return I;
@@ -58,7 +61,7 @@ data: {
   customId: i,
   componentId: s
 },
-onFailure: (e, t) => g(f, e, t)
+onFailure: (e, t) => A(f, e, t)
   }), null != m && (0, _.B0)(n, I, m, s);
   let T = {
 type: l.B8.MESSAGE_COMPONENT,
@@ -90,7 +93,7 @@ url: p.ANM.INTERACTIONS,
 body: T,
 timeout: 3000
   }, e => {
-S(I, e, o, f, h);
+N(I, e, o, f, h);
   });
 }, T = async e => {
   let {
@@ -98,33 +101,58 @@ applicationId: t,
 channelId: n,
 guildId: r,
 command: i
-  } = e, s = d.default.fromTimestamp(Date.now()), o = null == i ? {
-type: l.yU.PRIMARY_ENTRY_POINT
-  } : {
+  } = e, a = {
 application_id: t,
 name: i.name,
 type: i.type,
 version: i.version,
 id: i.id
-  }, u = {
+  };
+  await S({
+applicationId: t,
+channelId: n,
+guildId: r,
+data: a
+  });
+}, g = async e => {
+  let {
+applicationId: t,
+channelId: n,
+guildId: r
+  } = e, i = {
+type: l.yU.PRIMARY_ENTRY_POINT
+  };
+  await S({
+applicationId: t,
+channelId: n,
+guildId: r,
+data: i
+  });
+}, S = async e => {
+  let {
+applicationId: t,
+channelId: n,
+guildId: r,
+data: i
+  } = e, s = d.default.fromTimestamp(Date.now()), o = {
 type: l.B8.APPLICATION_COMMAND,
 nonce: s,
 guild_id: r,
 channel_id: n,
 application_id: t,
 session_id: c.default.getSessionId(),
-data: o
+data: i
   };
   await a.tn.post({
 url: p.ANM.INTERACTIONS,
-body: u,
+body: o,
 timeout: 3000
   }, e => {
-S(s, e, t, n, r);
+N(s, e, t, n, r);
   });
-}, g = (e, t, n) => {
+}, A = (e, t, n) => {
   null == n && null != t && o.Z.sendClydeError(e, t);
-}, S = (e, t, n, r, i) => {
+}, N = (e, t, n, r, i) => {
   if (!t.ok) {
 if (!t.hasErr) {
   var a;
@@ -149,7 +177,7 @@ if (!t.hasErr) {
   }
 };
 (i = r || (r = {}))[i.SENDING = 0] = 'SENDING', i[i.CREATED = 1] = 'CREATED', i[i.FAILED = 2] = 'FAILED', i[i.TIMED_OUT = 3] = 'TIMED_OUT', i[i.EPHEMERAL_SUCCESS = 4] = 'EPHEMERAL_SUCCESS';
-let A = (e, t) => {
+let v = (e, t) => {
   var n;
   let r = null == t ? void 0 : t.state,
 i = e.state === p.yb.SENT && m(e.id) < Date.now();
@@ -170,7 +198,7 @@ return 2;
 return 4;
 };
 
-function N(e) {
+function O(e) {
   let t = e.options;
   for (;
 (null == t ? void 0 : t.length) === 1 && (t[0].type === l.jw.SUB_COMMAND_GROUP || t[0].type === l.jw.SUB_COMMAND);)

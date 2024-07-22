@@ -22,7 +22,7 @@ channel: p
 filter: f
   } = (0, l.cj)([a.Z], () => ({
 filter: a.Z.getFilter()
-  })), v = (0, u.E)(t), h = (0, c.Z)(v), Z = (0, d.o)(), _ = (0, o.oy)(p);
+  })), v = (0, u.E)(t), h = (0, c.Z)(v), Z = (0, d.o)(), _ = (0, o.o)(p);
   return i.useMemo(() => {
 function e(e) {
   return !!(!n || '' === f || e.application.name.toLowerCase().includes(f.toLowerCase())) || !1;
