@@ -4,8 +4,8 @@ return i;
   }
 });
 let i = (0, t(818083).B)({
-  kind: 'guild',
-  id: '2024-07_contextual_image_recs',
+  kind: 'user',
+  id: '2024-07_contextual_image_recs_user',
   label: 'Contextual Image Recommendations',
   defaultConfig: {
 imageRecsEnabled: !1

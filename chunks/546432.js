@@ -1,18 +1,18 @@
 t.d(n, {
   Ld: function() {
-return A;
-  },
-  OB: function() {
-return w;
-  },
-  R_: function() {
 return O;
   },
+  OB: function() {
+return A;
+  },
+  R_: function() {
+return N;
+  },
   aw: function() {
-return P;
+return w;
   },
   pU: function() {
-return _;
+return P;
   }
 }), t(789020), t(47120);
 var i = t(735250),
@@ -26,27 +26,26 @@ var i = t(735250),
   m = t(25610),
   c = t(124347),
   h = t(976853),
-  I = t(592125),
-  x = t(68588),
-  p = t(941797),
-  g = t(630388),
-  C = t(956664),
-  f = t(406432),
-  j = t(169525),
-  T = t(65838),
-  M = t(217702),
-  E = t(981631),
-  y = t(689938),
-  v = t(62233);
-let N = /\.(mp3|m4a|ogg|wav|flac)$/i,
-  O = e => 'IMAGE' === e || 'VIDEO' === e || 'CLIP' === e,
-  A = e => 'IMAGE' === e || 'VIDEO' === e;
+  I = t(68588),
+  x = t(941797),
+  p = t(630388),
+  g = t(956664),
+  C = t(406432),
+  f = t(169525),
+  j = t(65838),
+  T = t(217702),
+  M = t(981631),
+  E = t(689938),
+  y = t(62233);
+let v = /\.(mp3|m4a|ogg|wav|flac)$/i,
+  N = e => 'IMAGE' === e || 'VIDEO' === e || 'CLIP' === e,
+  O = e => 'IMAGE' === e || 'VIDEO' === e;
 
-function w(e, n) {
+function A(e, n) {
   return {
 uniqueId: e.id,
 originalItem: e,
-type: P(e, n),
+type: w(e, n),
 downloadUrl: e.url,
 height: e.height,
 width: e.width,
@@ -55,40 +54,40 @@ contentType: e.content_type
   };
 }
 
-function P(e, n) {
+function w(e, n) {
   let {
 filename: t,
 width: i,
 height: o
   } = e;
   if (n && null != i && i > 0 && null != o && o > 0) {
-if ((0, f.CO)(t))
+if ((0, C.CO)(t))
   return 'IMAGE';
-if (!(0, f.NU)(t) || null == e.proxy_url)
+if (!(0, C.NU)(t) || null == e.proxy_url)
   return 'INVALID';
 else {
   var s;
-  return (0, g.yE)(null !== (s = e.flags) && void 0 !== s ? s : 0, E.J0y.IS_CLIP) ? 'CLIP' : 'VIDEO';
+  return (0, p.yE)(null !== (s = e.flags) && void 0 !== s ? s : 0, M.J0y.IS_CLIP) ? 'CLIP' : 'VIDEO';
 }
   }
-  if (null != n && N.test(t) && null != e.url)
+  if (null != n && v.test(t) && null != e.url)
 return 'AUDIO';
-  if (null != e.url && (0, T.O)(t))
+  if (null != e.url && (0, j.O)(t))
 return 'PLAINTEXT_PREVIEW';
   return 'OTHER';
 }
 
-function _(e, n) {
+function P(e, n) {
   let {
 contentType: t,
 width: i,
 height: o
   } = e;
   if (n && i > 0 && o > 0)
-return (0, f.tw)(t) ? 'IMAGE' : (0, f.X2)(t) ? 'VIDEO' : 'INVALID';
+return (0, C.tw)(t) ? 'IMAGE' : (0, C.X2)(t) ? 'VIDEO' : 'INVALID';
   return 'OTHER';
 }
-let L = e => {
+let _ = e => {
   let n, t, o, {
 downloadURL: s,
 downloadMimeType: r,
@@ -97,13 +96,13 @@ onOpenImageAppPicker: m,
 isVisualMediaType: c
   } = e;
   return (null != s && null != r && (n = (0, i.jsx)(a.Tooltip, {
-text: y.Z.Messages.DOWNLOAD,
+text: E.Z.Messages.DOWNLOAD,
 children: e => (0, i.jsx)(u.Z, {
   ...e,
   target: '_blank',
   rel: 'noreferrer noopener',
-  className: v.hoverButton,
-  iconClassName: v.downloadHoverButtonIcon,
+  className: y.hoverButton,
+  iconClassName: y.downloadHoverButtonIcon,
   focusProps: {
     offset: 2
   },
@@ -111,15 +110,15 @@ children: e => (0, i.jsx)(u.Z, {
   mimeType: r
 })
   })), null != d && (t = (0, i.jsx)(a.Tooltip, {
-text: y.Z.Messages.REMOVE_ATTACHMENT_TOOLTIP_TEXT,
+text: E.Z.Messages.REMOVE_ATTACHMENT_TOOLTIP_TEXT,
 children: e => (0, i.jsx)(a.Clickable, {
   ...e,
-  className: l()(v.hoverButton, v.removeMosaicItemHoverButton),
+  className: l()(y.hoverButton, y.removeMosaicItemHoverButton),
   focusProps: {
     offset: 2
   },
   onClick: d,
-  'aria-label': y.Z.Messages.REMOVE_MESSAGE_ATTACHMENT,
+  'aria-label': E.Z.Messages.REMOVE_MESSAGE_ATTACHMENT,
   children: (0, i.jsx)(a.TrashIcon, {
     size: 'custom',
     color: 'currentColor',
@@ -128,15 +127,15 @@ children: e => (0, i.jsx)(a.Clickable, {
   })
 })
   })), null != m && (o = (0, i.jsx)(a.Tooltip, {
-text: y.Z.Messages.APP_IMAGE_REC_USE_APP_TOOLTIP,
+text: E.Z.Messages.APP_IMAGE_REC_USE_APP_TOOLTIP,
 children: e => (0, i.jsx)(a.Clickable, {
   ...e,
-  className: v.hoverButton,
+  className: y.hoverButton,
   focusProps: {
     offset: 2
   },
   onClick: m,
-  'aria-label': y.Z.Messages.APP_IMAGE_REC_USE_APP_TOOLTIP,
+  'aria-label': E.Z.Messages.APP_IMAGE_REC_USE_APP_TOOLTIP,
   children: (0, i.jsx)(a.AppsIcon, {
     size: 'custom',
     color: 'currentColor',
@@ -145,8 +144,8 @@ children: e => (0, i.jsx)(a.Clickable, {
   })
 })
   })), null == t && null == n && null == o) ? null : (0, i.jsxs)('div', {
-className: l()(v.hoverButtonGroup, {
-  [v.nonMediaMosaicItem]: !c
+className: l()(y.hoverButtonGroup, {
+  [y.nonMediaMosaicItem]: !c
 }),
 children: [
   o,
@@ -156,7 +155,7 @@ children: [
   });
 };
 
-function S(e) {
+function L(e) {
   let {
 message: n,
 item: t,
@@ -164,187 +163,186 @@ autoPlayGif: s,
 canRemoveItem: u,
 onRemoveItem: d,
 onClick: m,
-onContextMenu: x,
-onPlay: g,
-renderImageComponent: f,
-renderVideoComponent: j,
-renderAudioComponent: T,
-renderPlaintextFilePreview: E,
-renderGenericFileComponent: N,
-className: O,
-imgContainerClassName: A,
-imgClassName: w,
-focusable: P,
-hiddenSpoilers: _,
-mediaLayoutType: S,
-maxWidth: V,
-maxHeight: b,
-hasFooter: F,
-useFullWidth: k,
-isVisualMediaType: G,
-onVideoControlsShow: B,
-onVideoControlsHide: H
+onContextMenu: I,
+onPlay: p,
+renderImageComponent: C,
+renderVideoComponent: f,
+renderAudioComponent: j,
+renderPlaintextFilePreview: M,
+renderGenericFileComponent: v,
+className: N,
+imgContainerClassName: O,
+imgClassName: A,
+focusable: w,
+hiddenSpoilers: P,
+mediaLayoutType: L,
+maxWidth: S,
+maxHeight: V,
+hasFooter: b,
+useFullWidth: F,
+isVisualMediaType: k,
+onVideoControlsShow: G,
+onVideoControlsHide: B
   } = e, {
-width: R,
-height: D,
-spoiler: W,
-type: Z,
-contentType: U
-  } = t, [q, z] = o.useState(!1), X = n.getChannelId(), J = (0, h.Z)(X), $ = I.Z.getChannel(X), K = r.P.useExperiment({
-location: 'MediaMosaicItem',
-guildId: null == $ ? void 0 : $.guild_id
+width: H,
+height: R,
+spoiler: D,
+type: W,
+contentType: Z
+  } = t, [U, q] = o.useState(!1), z = n.getChannelId(), X = (0, h.Z)(z), J = r.P.useExperiment({
+location: 'MediaMosaicItem'
   }, {
 autoTrackExposure: !0
-  }).imageRecsEnabled, Q = o.useMemo(() => null != U && -1 !== U.indexOf('/') ? U.split('/') : [
+  }).imageRecsEnabled, $ = o.useMemo(() => null != Z && -1 !== Z.indexOf('/') ? Z.split('/') : [
 'unknown',
 'unknown'
-  ], [U]), Y = o.useCallback(() => {
+  ], [Z]), K = o.useCallback(() => {
 d(t);
   }, [
 t,
 d
-  ]), ee = o.useCallback(() => () => {}, []), en = o.useCallback(() => {
-if (S === M.hV.MOSAIC) {
-  let e = !J && [
+  ]), Q = o.useCallback(() => () => {}, []), Y = o.useCallback(() => {
+if (L === T.hV.MOSAIC) {
+  let e = !X && [
       'VIDEO',
       'CLIP',
       'AUDIO'
-    ].includes(Z) || 'OTHER' === Z,
-    n = 'IMAGE' === Z && !('gif' === Q[1] || c.u.test(t.downloadUrl));
-  if (G) {
-    if (null == R || null == D)
+    ].includes(W) || 'OTHER' === W,
+    n = 'IMAGE' === W && !('gif' === $[1] || c.u.test(t.downloadUrl));
+  if (k) {
+    if (null == H || null == R)
       return null;
-    let e = (0, C.Dc)({
-      width: R,
-      height: D,
-      maxWidth: M.mT,
-      maxHeight: M.Jj
+    let e = (0, g.Dc)({
+      width: H,
+      height: R,
+      maxWidth: T.mT,
+      maxHeight: T.Jj
     });
-    if (!k && (e * R < M.OF || e * D < M.OF))
+    if (!F && (e * H < T.OF || e * R < T.OF))
       return null;
   }
-  return !q && (0, i.jsx)(L, {
+  return !U && (0, i.jsx)(_, {
     downloadURL: e ? t.downloadUrl : void 0,
-    downloadMimeType: e ? Q : void 0,
-    onRemoveItem: u ? Y : void 0,
-    onOpenImageAppPicker: n && K ? ee : void 0,
-    isVisualMediaType: G
+    downloadMimeType: e ? $ : void 0,
+    onRemoveItem: u ? K : void 0,
+    onOpenImageAppPicker: n && J ? Q : void 0,
+    isVisualMediaType: k
   });
 }
 return u && (0, i.jsx)(a.Clickable, {
-  className: W ? v.spoilerRemoveMosaicItemButton : v.removeMosaicItemButton,
+  className: D ? y.spoilerRemoveMosaicItemButton : y.removeMosaicItemButton,
   focusProps: {
     offset: {
       bottom: 4
     }
   },
   onClick: () => d(t),
-  'aria-label': y.Z.Messages.REMOVE_MESSAGE_ATTACHMENT,
+  'aria-label': E.Z.Messages.REMOVE_MESSAGE_ATTACHMENT,
   children: (0, i.jsx)(a.CloseSmallIcon, {
     size: 'xs',
     color: 'currentColor'
   })
 });
   }, [
-S,
+L,
 u,
-W,
-Z,
-G,
-q,
-t,
-Q,
-Y,
-R,
 D,
+W,
 k,
-d,
+U,
+t,
+$,
 K,
-ee,
-J
+H,
+R,
+F,
+d,
+J,
+Q,
+X
   ]);
-  switch (Z) {
+  switch (W) {
 case 'IMAGE':
-  return (0, i.jsx)(p.h.Consumer, {
-    children: e => (0, i.jsx)(f, {
+  return (0, i.jsx)(x.h.Consumer, {
+    children: e => (0, i.jsx)(C, {
       item: t,
       message: n,
-      width: R,
-      height: D,
-      autoPlay: s && !_,
+      width: H,
+      height: R,
+      autoPlay: s && !P,
       onClick: m,
-      onContextMenu: x,
-      shouldHideMediaOptions: J,
+      onContextMenu: I,
+      shouldHideMediaOptions: X,
       renderAccessory: e,
-      renderAdjacentContent: en,
-      containerClassName: O,
-      className: A,
-      imageClassName: w,
-      shouldLink: P,
-      hiddenSpoilers: _,
+      renderAdjacentContent: Y,
+      containerClassName: N,
+      className: O,
+      imageClassName: A,
+      shouldLink: w,
+      hiddenSpoilers: P,
       responsive: !0,
-      mediaLayoutType: S,
-      maxWidth: V,
-      maxHeight: b,
-      useFullWidth: k
+      mediaLayoutType: L,
+      maxWidth: S,
+      maxHeight: V,
+      useFullWidth: F
     })
   });
 case 'VIDEO':
 case 'CLIP':
+  return (0, i.jsx)(f, {
+    item: t,
+    message: n,
+    width: H,
+    height: R,
+    onClick: m,
+    onContextMenu: I,
+    renderAdjacentContent: Y,
+    naturalWidth: H,
+    naturalHeight: R,
+    className: l()(N, {
+      [y.hasFooter]: b
+    }),
+    playable: w,
+    responsive: !0,
+    mediaLayoutType: L,
+    maxWidth: S,
+    maxHeight: V,
+    useFullWidth: F,
+    mimeType: $,
+    onControlsShow: G,
+    onControlsHide: B,
+    downloadable: !X,
+    mediaPlayerClassName: b ? y.hasFooter : void 0
+  });
+case 'AUDIO':
   return (0, i.jsx)(j, {
     item: t,
     message: n,
-    width: R,
-    height: D,
-    onClick: m,
-    onContextMenu: x,
-    renderAdjacentContent: en,
-    naturalWidth: R,
-    naturalHeight: D,
-    className: l()(O, {
-      [v.hasFooter]: F
-    }),
-    playable: P,
-    responsive: !0,
-    mediaLayoutType: S,
-    maxWidth: V,
-    maxHeight: b,
-    useFullWidth: k,
-    mimeType: Q,
-    onControlsShow: B,
-    onControlsHide: H,
-    downloadable: !J,
-    mediaPlayerClassName: F ? v.hasFooter : void 0
-  });
-case 'AUDIO':
-  return (0, i.jsx)(T, {
-    item: t,
-    message: n,
-    className: O,
-    playable: P,
-    mimeType: Q,
-    renderAdjacentContent: en,
-    onVolumeShow: () => z(!0),
-    onVolumeHide: () => z(!1),
-    onPlay: g
+    className: N,
+    playable: w,
+    mimeType: $,
+    renderAdjacentContent: Y,
+    onVolumeShow: () => q(!0),
+    onVolumeHide: () => q(!1),
+    onPlay: p
   });
 case 'PLAINTEXT_PREVIEW':
-  return (0, i.jsx)(E, {
+  return (0, i.jsx)(M, {
     item: t,
     message: n,
-    className: O,
+    className: N,
     onClick: m,
-    onContextMenu: x,
-    renderAdjacentContent: en
+    onContextMenu: I,
+    renderAdjacentContent: Y
   });
 case 'OTHER':
-  return (0, i.jsx)(N, {
+  return (0, i.jsx)(v, {
     item: t,
     message: n,
-    className: O,
+    className: N,
     onClick: m,
-    onContextMenu: x,
-    renderAdjacentContent: en
+    onContextMenu: I,
+    renderAdjacentContent: Y
   });
 case 'INVALID':
   return null;
@@ -360,16 +358,16 @@ getObscureReason: r,
 useFullWidth: u,
 mediaLayoutType: c,
 isSingleMosaicItem: h,
-footer: I,
+footer: x,
 ...p
   } = e, {
-width: g,
-height: f,
-type: T
-  } = s, E = r(s, (0, m.V)(a.channel_id, a.author.id)), [y, N] = o.useState(null != E), A = c === M.hV.MOSAIC, w = !A && (null != g && g < 200 || null != f && f < 50);
-  let P = 'IMAGE' === (n = T) || 'VIDEO' === n,
-_ = O(T),
-L = h && null != E && (0, d.bR)(g, f),
+width: C,
+height: j,
+type: M
+  } = s, E = r(s, (0, m.V)(a.channel_id, a.author.id)), [v, O] = o.useState(null != E), A = c === T.hV.MOSAIC, w = !A && (null != C && C < 200 || null != j && j < 50);
+  let P = 'IMAGE' === (n = M) || 'VIDEO' === n,
+_ = N(M),
+S = h && null != E && (0, d.bR)(C, j),
 [V, b] = o.useState(!1),
 F = () => {
   b(!0);
@@ -379,26 +377,26 @@ k = () => {
 },
 G = function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  return (0, i.jsx)(S, {
+  return (0, i.jsx)(L, {
     ...p,
     item: s,
     message: a,
     getObscureReason: r,
     hiddenSpoilers: e,
-    className: l()(t, v.mosaicItemContent, {
-      [v.obscured]: y && !w,
-      [v.hiddenSpoiler]: y && E === j.wk.SPOILER,
-      [v.hiddenExplicit]: y && null != E && [
-        j.wk.EXPLICIT_CONTENT,
-        j.wk.POTENTIAL_EXPLICIT_CONTENT
+    className: l()(t, y.mosaicItemContent, {
+      [y.obscured]: v && !w,
+      [y.hiddenSpoiler]: v && E === f.wk.SPOILER,
+      [y.hiddenExplicit]: v && null != E && [
+        f.wk.EXPLICIT_CONTENT,
+        f.wk.POTENTIAL_EXPLICIT_CONTENT
       ].includes(E),
-      [v.hiddenMosaicItem]: y && e,
-      [v.inline]: y && w
+      [y.hiddenMosaicItem]: v && e,
+      [y.inline]: v && w
     }),
     focusable: !e,
     mediaLayoutType: c,
-    hasFooter: null != I,
-    useFullWidth: !!L || u,
+    hasFooter: null != x,
+    useFullWidth: !!S || u,
     isVisualMediaType: _,
     onVideoControlsShow: F,
     onVideoControlsHide: k
@@ -406,20 +404,20 @@ G = function() {
 };
   return (0, i.jsx)(i.Fragment, {
 children: (0, i.jsxs)('div', {
-  className: l()(v.mosaicItem, {
-    [v.mosaicItemNoJustify]: P,
-    [v.mosaicItemFullWidth]: u,
-    [v.mosaicItemMediaMosaic]: A,
-    [v.hideOverflow]: A && _,
-    [v.mosaicItemWithFooter]: null != I
+  className: l()(y.mosaicItem, {
+    [y.mosaicItemNoJustify]: P,
+    [y.mosaicItemFullWidth]: u,
+    [y.mosaicItemMediaMosaic]: A,
+    [y.hideOverflow]: A && _,
+    [y.mosaicItemWithFooter]: null != x
   }),
   children: [
-    null != E ? (0, i.jsx)(x.Z, {
-      type: x.Z.Types.ATTACHMENT,
+    null != E ? (0, i.jsx)(I.Z, {
+      type: I.Z.Types.ATTACHMENT,
       inline: w,
       reason: E,
       isSingleMosaicItem: h,
-      obscured: y,
+      obscured: v,
       containerStyles: function(e, n, t) {
         if (!n)
           return;
@@ -427,7 +425,7 @@ children: (0, i.jsxs)('div', {
         if (void 0 !== e.width && void 0 !== e.height) {
           let {
             width: n
-          } = (0, C.Tj)({
+          } = (0, g.Tj)({
             width: e.width,
             height: e.height,
             maxWidth: 400,
@@ -436,7 +434,7 @@ children: (0, i.jsxs)('div', {
           i = n;
         }
         return {
-          ...t !== M.hV.MOSAIC && {
+          ...t !== T.hV.MOSAIC && {
             maxWidth: null != i ? i : '400px'
           },
           width: '100%',
@@ -445,12 +443,12 @@ children: (0, i.jsxs)('div', {
         };
       }(s, P, c),
       obscurityControlClassName: l()({
-        [v.obscureVideoSpacing]: 'VIDEO' === T && h && !y && V
+        [y.obscureVideoSpacing]: 'VIDEO' === M && h && !v && V
       }),
-      onToggleObscurity: () => N(e => !e),
+      onToggleObscurity: () => O(e => !e),
       children: e => G(e)
     }) : G(),
-    I
+    x
   ]
 })
   });
