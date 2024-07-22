@@ -28,45 +28,41 @@ function S(e) {
 quest: S,
 questContent: C,
 isHovering: N
-  } = e, A = E.r.build(S.config).defaultReward.messages.name, v = (0, d.Rf)(S), Z = v.percentComplete > 0, L = (0, d.B6)(S.config.expiresAt, {
-month: '2-digit',
-day: '2-digit'
-  }), [O, R] = s.useState(0), x = s.useRef(null), b = s.useRef(null), P = (0, _.D)({
+  } = e, A = E.r.build(S.config).defaultReward.messages.name, v = (0, d.Rf)(S), Z = v.percentComplete > 0, [L, O] = s.useState(0), R = s.useRef(null), x = s.useRef(null), b = (0, _.D)({
 quest: S,
 taskDetails: v,
 location: g.dr.QUEST_HOME_DESKTOP,
 questContent: u.jn.QUEST_HOME_DESKTOP,
-useV2Variants: !0,
-expiryDate: L
-  }), M = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, D = (null === (n = S.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, y = (0, d.B6)(null === (a = S.userStatus) || void 0 === a ? void 0 : a.claimedAt), j = null != b.current && b.current.scrollHeight > b.current.clientHeight;
+useV2Variants: !0
+  }), P = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, M = (null === (n = S.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, D = (0, d.B6)(null === (a = S.userStatus) || void 0 === a ? void 0 : a.claimedAt), y = null != x.current && x.current.scrollHeight > x.current.clientHeight;
   s.useEffect(() => {
-null != x.current && R(x.current.offsetHeight);
+null != R.current && O(R.current.offsetHeight);
   }, []);
-  let U = s.useCallback(() => (0, i.jsx)(o.Text, {
+  let j = s.useCallback(() => (0, i.jsx)(o.Text, {
   variant: 'text-md/semibold',
   color: 'text-brand',
   tag: 'span',
   className: T.header,
   children: A
 }), [A]),
-G = s.useMemo(() => D ? U() : p.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
-  rewardHook: U
+U = s.useMemo(() => M ? j() : p.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
+  rewardHook: j
 }), [
-  D,
-  U
+  M,
+  j
 ]),
-k = s.useMemo(() => {
-  let e = O > 20,
+G = s.useMemo(() => {
+  let e = L > 20,
     t = !N && e,
     n = !N && !e,
     s = null;
-  if (D ? s = p.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
-      claimDate: y
-    }) : null != P && (s = P), null != s)
+  if (M ? s = p.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
+      claimDate: D
+    }) : null != b && (s = b), null != s)
     return (0, i.jsx)(o.Text, {
       variant: 'text-sm/medium',
       color: 'text-muted',
-      ref: b,
+      ref: x,
       className: r()(T.description, {
         [T.truncateTextTwoLines]: t,
         [T.truncateTextThreeLines]: n
@@ -74,34 +70,34 @@ k = s.useMemo(() => {
       children: s
     });
 }, [
+  M,
+  b,
   D,
-  P,
-  y,
   N,
-  O
+  L
 ]),
-w = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
+k = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
   return (0, i.jsxs)('div', {
 className: r()(T.container, {
-  [T.hoveredHeight]: j && N,
-  [T.height]: !N || !j
+  [T.hoveredHeight]: y && N,
+  [T.height]: !N || !y
 }),
 children: [
   (0, i.jsxs)('div', {
     className: r()(T.rewardDescriptionContainer),
     children: [
-      !D && M && (0, i.jsx)('div', {
+      !M && P && (0, i.jsx)('div', {
         className: T.completionAnimation
       }),
-      Z && !D ? (0, i.jsxs)('div', {
+      Z && !M ? (0, i.jsxs)('div', {
         className: T.progressWrapper,
         children: [
-          M && (0, i.jsx)(o.LottieAnimation, {
+          P && (0, i.jsx)(o.LottieAnimation, {
             importData: f,
             className: T.confetti,
             loop: !1,
             autoplay: !1,
-            shouldAnimate: !w
+            shouldAnimate: !k
           }),
           (0, i.jsx)(h.Z, {
             quest: S,
@@ -127,18 +123,18 @@ children: [
         className: T.textContainer,
         children: [
           (0, i.jsx)('div', {
-            ref: x,
+            ref: R,
             children: (0, i.jsx)('span', {
               className: T.headerSpan,
               children: (0, i.jsx)(o.Text, {
                 variant: 'text-md/semibold',
                 color: 'header-primary',
                 className: T.header,
-                children: G
+                children: U
               })
             })
           }),
-          k
+          G
         ]
       })
     ]

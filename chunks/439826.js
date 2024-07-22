@@ -29,7 +29,10 @@ isHovering: a,
 onCtxMenuClose: f,
 onCtxMenuOpen: S,
 onCtxMenuSelect: C
-  } = e, N = (0, h.j8)(n), A = (0, d.ZP)(), v = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, Z = v === g.BRd.DARK, L = s.useMemo(() => (0, h.nP)(n.config.assets.hero), [n]), O = s.useContext(l.S).reducedMotion.enabled, R = (0, h.Mi)(n, E.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = s.useRef(a), M = s.useRef(null);
+  } = e, N = (0, h.j8)(n), A = (0, d.ZP)(), v = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, Z = v === g.BRd.DARK, L = s.useMemo(() => (0, h.nP)(n.config.assets.hero), [n]), O = s.useContext(l.S).reducedMotion.enabled, R = (0, h.Mi)(n, E.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = s.useRef(a), M = s.useRef(null), D = (0, _.B6)(n.config.expiresAt, {
+month: 'numeric',
+day: '2-digit'
+  });
   return s.useEffect(() => {
 if (L && null != M.current)
   return P.current !== a && (a ? M.current.play() : (M.current.pause(), M.current.currentTime = 0)), P.current = a, () => {
@@ -122,15 +125,24 @@ children: [
             src: (0, h.Gs)(n, v)
           })
         }),
-        (0, i.jsx)('div', {
+        (0, i.jsxs)('div', {
           className: T.bottomRow,
-          children: (0, i.jsx)(c.Text, {
-            variant: 'text-sm/medium',
-            color: 'text-muted',
-            children: p.Z.Messages.QUESTS_PROMOTED_BY_BRAND.format({
-              brandName: n.config.messages.gamePublisher
+          children: [
+            (0, i.jsx)(c.Text, {
+              variant: 'text-sm/medium',
+              color: 'text-muted',
+              children: p.Z.Messages.QUESTS_PROMOTED_BY_BRAND.format({
+                brandName: n.config.messages.gamePublisher
+              })
+            }),
+            x || b ? null : (0, i.jsx)(c.Text, {
+              variant: 'text-sm/medium',
+              color: 'text-muted',
+              children: p.Z.Messages.QUESTS_TILE_BANNER_EXPIRES_ON_DATE.format({
+                expiryDate: D
+              })
             })
-          })
+          ]
         })
       ]
     })
