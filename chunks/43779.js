@@ -119,6 +119,7 @@ children: [
         ]
       }) : (0, i.jsx)(I.Z, {
         quest: S,
+        autoplay: N,
         questContent: u.jn.QUEST_HOME_DESKTOP,
         className: T.questRewardTileAsset
       }),

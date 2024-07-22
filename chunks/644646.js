@@ -33,8 +33,7 @@ n.id,
 e
   ]), v = i.useRef(null), O = i.useRef(a);
   i.useEffect(() => {
-var e, t;
-A && !g && null != v.current && (a && !O.current ? null === (e = v.current) || void 0 === e || e.play() : !a && O.current && (null === (t = v.current) || void 0 === t || t.pause()), O.current = a);
+A && !g && null != v.current && (a && !O.current ? v.current.play() : !a && O.current && (v.current.currentTime = 0, v.current.pause()), O.current = a);
   }, [
 a,
 A,
