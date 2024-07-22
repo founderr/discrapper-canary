@@ -1,60 +1,151 @@
 n.d(t, {
-  C: function() {
-return o;
+  H: function() {
+return g;
+  },
+  f: function() {
+return m;
   }
-}), n(47120);
+});
 var i = n(470079),
-  s = n(212093),
-  a = n(706454),
-  r = n(900849),
-  l = n(731455);
+  s = n(143927),
+  a = n(442837),
+  r = n(212093),
+  l = n(36867),
+  o = n(706454),
+  c = n(251625),
+  d = n(900849),
+  u = n(540742),
+  _ = n(731455);
+let E = [],
+  h = (0, c.oH)(() => {
+var e;
+let t = _.dU,
+  n = o.default.locale;
+return null !== (e = t.find(e => e.code === n)) && void 0 !== e ? e : t[0];
+  });
 
-function o(e) {
-  var t;
+function I(e) {
   let {
-loadId: n,
-categoryId: o
-  } = e, [c, d] = i.useState(!1), [u, _] = i.useState(''), [E, h] = i.useState(''), I = i.useRef('');
-  i.useEffect(() => {
-s.Ue();
-  }, []);
-  let m = l.dU,
-g = a.default.locale,
-p = null !== (t = m.find(e => e.code === g)) && void 0 !== t ? t : m[0],
-T = i.useCallback(() => {
-  r.tI(n, o), d(!0), _(I.current), s.bR(I.current, {
-    categoryId: o,
-    preferredLocale: p.code,
-    offset: 0,
-    length: 12,
-    filters: {
-      approximate_member_count: r.sq
-    }
+loadId: t,
+categoryId: n,
+offset: i
+  } = e;
+  u.B.setState({
+isSearchVisible: !0,
+searchCategoryId: n
+  });
+  let {
+searchResultsQuery: s,
+searchQuery: a,
+searchCategoryId: o
+  } = u.B.getState(), {
+guilds: c,
+total: _,
+loading: E,
+initialized: I
+  } = l.Z.getResults(s, o);
+  if (E || I && c.length >= _)
+return;
+  u.B.setState({
+searchResultsQuery: a
+  });
+  let m = h();
+  d.tI(t, o), r.bR(a, {
+categoryId: n,
+preferredLocale: m.code,
+offset: i,
+length: 12,
+filters: {
+  approximate_member_count: d.sq
+}
   }, !1);
-}, [
-  o,
-  p.code,
-  n
-]);
-  i.useEffect(() => {
-c && T();
-  }, [
-c,
-T
+}
+
+function m(e) {
+  let {
+loadId: t
+  } = e, n = (0, u.B)(e => {
+let {
+  searchResultsQuery: t
+} = e;
+return t;
+  }, s.Z), r = (0, u.B)(e => {
+let {
+  searchCategoryId: t
+} = e;
+return t;
+  }, s.Z), {
+guilds: o,
+loading: c
+  } = (0, a.e7)([l.Z], () => null == n ? {
+guilds: E,
+loading: !0
+  } : l.Z.getResults(n, r)), d = i.useCallback(() => I({
+loadId: t,
+categoryId: r,
+offset: o.length
+  }), [
+o.length,
+t,
+r
   ]);
-  let S = i.useCallback(() => {
-h(''), I.current = '', d(!1), r.IZ(n);
-  }, [n]);
+  return i.useMemo(() => ({
+guilds: o,
+loading: c,
+searchResultsQuery: n,
+loadMore: d,
+searchCategoryId: r
+  }), [
+o,
+d,
+n,
+c,
+r
+  ]);
+}
+
+function g(e) {
+  let {
+loadId: t,
+categoryId: n
+  } = e, a = (0, u.B)(e => {
+let {
+  isSearchVisible: t
+} = e;
+return t;
+  }, s.Z), l = (0, u.B)(e => {
+let {
+  searchQuery: t
+} = e;
+return t;
+  }, s.Z);
+  i.useEffect(() => {
+r.Ue();
+  }, []);
+  let o = i.useCallback(e => {
+  u.B.setState({
+    searchQuery: e
+  });
+}, []),
+c = i.useCallback(() => {
+  u.B.setState({
+    searchResultsQuery: '',
+    searchQuery: '',
+    isSearchVisible: !1
+  }), d.IZ(t);
+}, [t]);
   return {
-isSearchVisible: c,
-searchQuery: E,
-searchResultsQuery: u,
-onSearchTextChange: i.useCallback(e => {
-  if ('' === e)
-    return S();
-  h(e), I.current = e;
-}, [S]),
-onSearchSubmit: T,
-resetSearch: S
+searchQuery: l,
+onSearchTextChange: o,
+onClearSearch: c,
+onSearchSubmit: i.useCallback(() => I({
+  loadId: t,
+  categoryId: n,
+  offset: 0
+}), [
+  n,
+  t
+]),
+isSearchVisible: a
   };
 }

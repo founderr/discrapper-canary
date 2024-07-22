@@ -8,30 +8,25 @@ var i = n(470079),
 
 function a(e) {
   let {
-categoryId: t,
-guildDiscoveryCardSeenManager: n,
-loadId: a
-  } = e, r = i.useCallback(e => {
-n.markAsSeen(t, e, a);
+guildDiscoveryCardSeenManager: t,
+loadId: n
+  } = e, a = i.useCallback((e, i) => {
+t.markAsSeen(i, e, n);
   }, [
 t,
-n,
-a
-  ]), l = i.useCallback((e, n) => s.Lq({
-loadId: a,
+n
+  ]), r = i.useCallback((e, t, i) => s.Lq({
+loadId: n,
 guildId: e,
-index: n,
+index: t,
 analyticsContext: s.P1.GLOBAL_DISCOVERY,
-categoryId: t
-  }), [
-t,
-a
-  ]);
+categoryId: i
+  }), [n]);
   return i.useMemo(() => ({
-onGuildCardSeen: r,
-onGuildCardClick: l
+onGuildCardSeen: a,
+onGuildCardClick: r
   }), [
-l,
-r
+r,
+a
   ]);
 }

@@ -1,61 +1,43 @@
 n.d(t, {
   Z: function() {
-return u;
+return d;
   }
 });
 var i = n(735250);
 n(470079);
 var s = n(120356),
   a = n.n(s),
-  r = n(338545),
-  l = n(780384),
-  o = n(481060),
-  c = n(410030),
-  d = n(278560);
+  r = n(780384),
+  l = n(481060),
+  o = n(410030),
+  c = n(278560);
 
-function u(e) {
+function d(e) {
   let {
 selectedTab: t,
 tabs: n,
-onTabSelect: s,
-backgroundStyle: u,
-leading: _,
-trailing: E,
-selectedTabColor: h,
-tabColor: I = 'header-primary'
-  } = e, m = (0, l.wj)((0, c.ZP)()), g = null != h ? h : m ? 'text-muted' : 'header-primary';
-  return (0, i.jsxs)('div', {
-className: d.container,
-children: [
-  (0, i.jsx)(r.animated.div, {
-    className: d.backdrop,
-    style: u
-  }),
-  _,
-  (0, i.jsx)(o.TabBar, {
-    type: 'top',
-    selectedItem: t,
-    onItemSelect: s,
-    className: d.tabs,
-    children: n.map(e => {
-      let n = t === e.id,
-        s = n ? g : I;
-      return (0, i.jsx)(o.TabBar.Item, {
-        id: e.id,
-        color: I,
-        'aria-label': e.label,
-        className: a()(d.tab, {
-          [d.selected]: n
-        }),
-        children: (0, i.jsx)(o.Text, {
-          variant: 'text-md/medium',
-          color: s,
-          children: e.label
-        })
-      }, e.id);
+onTabSelect: s
+  } = e, d = (0, o.ZP)(), u = (0, r.wj)(d);
+  return (0, i.jsx)(l.TabBar, {
+type: 'top',
+selectedItem: t,
+onItemSelect: s,
+className: c.tabs,
+children: n.map(e => {
+  let n = t === e.id;
+  return (0, i.jsx)(l.TabBar.Item, {
+    id: e.id,
+    color: 'text-muted',
+    'aria-label': e.label,
+    className: a()(c.tab, {
+      [c.selected]: n
+    }),
+    children: (0, i.jsx)(l.Text, {
+      variant: 'text-md/medium',
+      color: n ? 'header-primary' : u ? 'text-muted' : 'header-primary',
+      children: e.label
     })
-  }),
-  E
-]
+  }, e.id);
+})
   });
 }
