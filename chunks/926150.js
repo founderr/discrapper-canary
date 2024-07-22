@@ -101,7 +101,7 @@ children: [
         channel: Z
       }),
       (0, i.jsx)(f.Z, {
-        title: N.Z.Messages.BOT_PROFILE_CREATED_ON,
+        title: t.bot ? N.Z.Messages.BOT_PROFILE_CREATED_ON : N.Z.Messages.USER_PROFILE_MEMBER_SINCE,
         headingColor: 'header-primary',
         children: (0, i.jsx)(_.Z, {
           userId: t.id

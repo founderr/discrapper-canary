@@ -1,12 +1,15 @@
 n.d(t, {
   A9: function() {
-return X;
+return $;
   },
   CT: function() {
 return k;
   },
   DA: function() {
-return $;
+return J;
+  },
+  Dd: function() {
+return Q;
   },
   Du: function() {
 return m;
@@ -72,7 +75,7 @@ return q;
 return b;
   },
   gQ: function() {
-return J;
+return ee;
   },
   gh: function() {
 return F;
@@ -114,7 +117,7 @@ return R;
 return P;
   },
   yi: function() {
-return Q;
+return X;
   },
   ym: function() {
 return j;
@@ -456,7 +459,11 @@ function q() {
   return j[Math.floor(Math.random() * j.length)];
 }
 
-function Q(e) {
+function Q(e, t) {
+  return null == e || null == t ? e === t : e.identityGuildId === t.identityGuildId && e.identityEnabled === t.identityEnabled && e.tag === t.tag && e.badge === t.badge;
+}
+
+function X(e) {
   return null == e ? null : 'identityGuildId' in e ? e : {
 identityGuildId: e.identity_guild_id,
 identityEnabled: e.identity_enabled,
@@ -465,12 +472,12 @@ badge: e.badge
   };
 }
 
-function X(e) {
+function $(e) {
   return {
 tag: e.tag
   };
 }
-let $ = {
+let J = {
 AGE_OF_EMPIRES_2: '720771660768084008',
 VALORANT: '700136079562375258',
 HELLDIVERS_2: '1205090671527071784',
@@ -482,7 +489,7 @@ BALDURS_GATE_3: '1137125502985961543',
 AIMLAB: '506950362461110273',
 HONKAI_STAR_RAIL: '1121201675240210523'
   },
-  J = new Map([
+  ee = new Map([
 '432980957394370572',
 '363445589247131668',
 '356869127241072640',
