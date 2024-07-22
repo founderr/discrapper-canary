@@ -30,7 +30,7 @@ p.default.track(A.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
   link_type: t
 });
 }
-(i = s || (s = {})).SETTINGS = 'settings', i.CHANGELOG = 'changelog', i.LIBRARY = 'library', i.STORE = 'store', i.INVITE = 'invite', i.CHANNEL = 'channel', i.GUILD_SETTINGS = 'guild_settings', t.Z = {
+(i = s || (s = {})).SETTINGS = 'settings', i.CHANGELOG = 'changelog', i.LIBRARY = 'library', i.STORE = 'store', i.INVITE = 'invite', i.CHANNEL = 'channel', i.GUILD_SETTINGS = 'guild_settings', i.QUEST_HOME = 'quest_home', t.Z = {
   [A.Etm.INVITE_BROWSER]: {
 scope: N.cE,
 async handler(e) {
@@ -164,6 +164,12 @@ handler(e) {
         pathname: A.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
         search: n.search
       }), v(n.fingerprint, 'channel'));
+      break;
+    case N.jE.QUEST_HOME:
+      null != n ? ((0, I.dL)({
+        pathname: A.Z5c.QUEST_HOME,
+        hash: n.questId
+      }), v(n.fingerprint, 'quest_home')) : (0, I.dL)(A.Z5c.QUEST_HOME);
   }
 }
   },
