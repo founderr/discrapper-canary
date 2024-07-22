@@ -1,7 +1,6 @@
 e.exports = {
   container: 'container_f2bc91',
   positionContentOverBackground: 'positionContentOverBackground_f2bc91',
-  hoveredHeight: 'hoveredHeight_f2bc91',
   contents: 'contents_f2bc91',
   heroAssetWrapper: 'heroAssetWrapper_f2bc91',
   heroAsset: 'heroAsset_f2bc91',

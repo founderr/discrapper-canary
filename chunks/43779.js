@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return f;
+return S;
   }
 }), n(47120);
 var i = n(735250),
@@ -20,52 +20,53 @@ var i = n(735250),
   g = n(46140),
   p = n(689938),
   T = n(855892);
-let S = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
+let f = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 
-function f(e) {
+function S(e) {
   var t, n, a;
   let {
-quest: f,
+quest: S,
 questContent: C,
 isHovering: N
-  } = e, A = E.r.build(f.config).defaultReward.messages.name, Z = (0, d.Rf)(f), v = Z.percentComplete > 0, L = (0, d.B6)(f.config.expiresAt, {
+  } = e, A = E.r.build(S.config).defaultReward.messages.name, v = (0, d.Rf)(S), Z = v.percentComplete > 0, L = (0, d.B6)(S.config.expiresAt, {
 month: '2-digit',
 day: '2-digit'
-  }), [O, R] = s.useState(0), x = s.useRef(null), b = (0, _.D)({
-quest: f,
-taskDetails: Z,
+  }), [O, R] = s.useState(0), x = s.useRef(null), b = s.useRef(null), P = (0, _.D)({
+quest: S,
+taskDetails: v,
 location: g.dr.QUEST_HOME_DESKTOP,
 questContent: u.jn.QUEST_HOME_DESKTOP,
 useV2Variants: !0,
 expiryDate: L
-  }), P = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, M = (null === (n = f.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, D = (0, d.B6)(null === (a = f.userStatus) || void 0 === a ? void 0 : a.claimedAt);
+  }), M = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, D = (null === (n = S.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, y = (0, d.B6)(null === (a = S.userStatus) || void 0 === a ? void 0 : a.claimedAt), j = null != b.current && b.current.scrollHeight > b.current.clientHeight;
   s.useEffect(() => {
 null != x.current && R(x.current.offsetHeight);
   }, []);
-  let y = s.useCallback(() => (0, i.jsx)(o.Text, {
+  let U = s.useCallback(() => (0, i.jsx)(o.Text, {
   variant: 'text-md/semibold',
   color: 'text-brand',
   tag: 'span',
   className: T.header,
   children: A
 }), [A]),
-j = s.useMemo(() => M ? y() : p.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
-  rewardHook: y
+G = s.useMemo(() => D ? U() : p.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
+  rewardHook: U
 }), [
-  M,
-  y
+  D,
+  U
 ]),
-U = s.useMemo(() => {
+k = s.useMemo(() => {
   let e = O > 20,
     t = !N && e,
     n = !N && !e,
     s = null;
-  if (M ? s = p.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
-      claimDate: D
-    }) : null != b && (s = b), null != s)
+  if (D ? s = p.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
+      claimDate: y
+    }) : null != P && (s = P), null != s)
     return (0, i.jsx)(o.Text, {
       variant: 'text-sm/medium',
       color: 'text-muted',
+      ref: b,
       className: r()(T.description, {
         [T.truncateTextTwoLines]: t,
         [T.truncateTextThreeLines]: n
@@ -73,43 +74,43 @@ U = s.useMemo(() => {
       children: s
     });
 }, [
-  M,
-  b,
   D,
+  P,
+  y,
   N,
   O
 ]),
-G = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
+w = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
   return (0, i.jsxs)('div', {
 className: r()(T.container, {
-  [T.hoveredHeight]: N,
-  [T.height]: !N
+  [T.hoveredHeight]: j && N,
+  [T.height]: !N || !j
 }),
 children: [
   (0, i.jsxs)('div', {
     className: r()(T.rewardDescriptionContainer),
     children: [
-      !M && P && (0, i.jsx)('div', {
+      !D && M && (0, i.jsx)('div', {
         className: T.completionAnimation
       }),
-      v && !M ? (0, i.jsxs)('div', {
+      Z && !D ? (0, i.jsxs)('div', {
         className: T.progressWrapper,
         children: [
-          P && (0, i.jsx)(o.LottieAnimation, {
-            importData: S,
+          M && (0, i.jsx)(o.LottieAnimation, {
+            importData: f,
             className: T.confetti,
             loop: !1,
             autoplay: !1,
-            shouldAnimate: !G
+            shouldAnimate: !w
           }),
           (0, i.jsx)(h.Z, {
-            quest: f,
+            quest: S,
             size: 76,
-            percentComplete: Z.percentComplete,
+            percentComplete: v.percentComplete,
             children: (0, i.jsx)('div', {
               className: T.circularRewardTileWrapper,
               children: (0, i.jsx)(I.Z, {
-                quest: f,
+                quest: S,
                 questContent: C,
                 className: T.circularQuestRewardTileAsset
               })
@@ -117,7 +118,7 @@ children: [
           })
         ]
       }) : (0, i.jsx)(I.Z, {
-        quest: f,
+        quest: S,
         questContent: u.jn.QUEST_HOME_DESKTOP,
         className: T.questRewardTileAsset
       }),
@@ -132,17 +133,17 @@ children: [
                 variant: 'text-md/semibold',
                 color: 'header-primary',
                 className: T.header,
-                children: j
+                children: G
               })
             })
           }),
-          U
+          k
         ]
       })
     ]
   }),
   (0, i.jsx)(m.Z, {
-    quest: f
+    quest: S
   })
 ]
   });

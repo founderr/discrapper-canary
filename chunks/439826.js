@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return S;
+return f;
   }
 });
 var i = n(735250),
@@ -21,15 +21,15 @@ var i = n(735250),
   p = n(689938),
   T = n(985164);
 
-function S(e) {
+function f(e) {
   var t;
   let {
 quest: n,
 isHovering: a,
-onCtxMenuClose: S,
-onCtxMenuOpen: f,
+onCtxMenuClose: f,
+onCtxMenuOpen: S,
 onCtxMenuSelect: C
-  } = e, N = (0, h.ph)(n), A = (0, d.ZP)(), Z = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, v = Z === g.BRd.DARK, L = s.useMemo(() => (0, h.nP)(n.config.assets.questBarHero), [n]), O = s.useContext(l.S).reducedMotion.enabled, R = (0, h.Mi)(n, E.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = s.useRef(a), M = s.useRef(null);
+  } = e, N = (0, h.ph)(n), A = (0, d.ZP)(), v = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, Z = v === g.BRd.DARK, L = s.useMemo(() => (0, h.nP)(n.config.assets.questBarHero), [n]), O = s.useContext(l.S).reducedMotion.enabled, R = (0, h.Mi)(n, E.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = s.useRef(a), M = s.useRef(null);
   return s.useEffect(() => {
 if (L && null != M.current)
   return P.current !== a && (a ? M.current.play() : (M.current.pause(), M.current.currentTime = 0)), P.current = a, () => {
@@ -40,9 +40,7 @@ if (L && null != M.current)
 a,
 L
   ]), (0, i.jsxs)('div', {
-className: r()(T.container, {
-  [T.hoveredHeight]: a
-}),
+className: T.container,
 children: [
   (0, i.jsx)('div', {
     className: T.heroAssetWrapper,
@@ -72,14 +70,12 @@ children: [
   }),
   (0, i.jsx)('div', {
     className: r()(T.overlay, {
-      [T.darkThemeGradient]: v,
-      [T.lightThemeGradient]: !v
+      [T.darkThemeGradient]: Z,
+      [T.lightThemeGradient]: !Z
     })
   }),
   (0, i.jsx)('div', {
-    className: r()(T.positionContentOverBackground, {
-      [T.hoveredHeight]: a
-    }),
+    className: T.positionContentOverBackground,
     children: (0, i.jsxs)('div', {
       className: T.contents,
       children: [
@@ -96,8 +92,8 @@ children: [
               })
             }),
             (0, i.jsx)(m.r, {
-              onOpen: f,
-              onClose: S,
+              onOpen: S,
+              onClose: f,
               onSelect: C,
               questContent: E.jn.QUEST_HOME_DESKTOP,
               quest: n,
@@ -123,7 +119,7 @@ children: [
             ref: e,
             className: T.partnerBranding,
             alt: n.config.messages.gameTitle,
-            src: (0, h.Gs)(n, Z)
+            src: (0, h.Gs)(n, v)
           })
         }),
         (0, i.jsx)('div', {
