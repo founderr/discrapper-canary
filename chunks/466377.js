@@ -178,7 +178,7 @@ focusProps: e.focusProps,
 look: E.zx.Looks.BLANK,
 size: E.zx.Sizes.NONE,
 onClick: e.onClick,
-innerClassName: l()({
+innerClassName: l()(e.innerClassName, {
   [v.closeWithCircleBackground]: e.withCircleBackground
 }),
 className: l()(e.className, {
@@ -188,7 +188,7 @@ className: l()(e.className, {
 children: (0, a.jsx)(m.F, {
   size: 'md',
   color: 'currentColor',
-  className: v.closeIcon
+  className: l()(e.innerClassName, v.closeIcon)
 })
   });
 }

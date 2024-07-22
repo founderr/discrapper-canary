@@ -14,19 +14,21 @@ let o = 32,
 
 function d(e) {
   let {
-defaultPosition: t = s.VD2.TOP_RIGHT,
-children: n
-  } = e, [d, _] = i.useState(t);
+className: t,
+defaultPosition: n = s.VD2.TOP_RIGHT,
+children: d
+  } = e, [_, E] = i.useState(n);
   return (0, r.jsx)(a._, {
-position: d,
+className: t,
+position: _,
 id: 0,
-onMove: (e, t) => _(t),
+onMove: (e, t) => E(t),
 maxX: window.innerWidth,
 maxY: window.innerHeight,
 edgeOffsetTop: o,
 edgeOffsetBottom: l,
 edgeOffsetLeft: u,
 edgeOffsetRight: c,
-children: n
+children: d
   });
 }
