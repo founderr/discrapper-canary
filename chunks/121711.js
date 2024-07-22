@@ -31,13 +31,14 @@ onSelectTab: O
 onScroll: R,
 scrollPosition: x
   } = (0, E.c)(), b = (0, l.wj)((0, c.ZP)()), P = (0, r.e7)([_.Z], () => _.Z.hasLoadedExperiments), {
-quests: M
-  } = (0, p.bA)(L), D = (0, S.Z)(), y = null;
+quests: M,
+isFetchingCurrentQuests: D
+  } = (0, p.bA)(L), y = (0, S.Z)(), j = null;
   if (window.location.hash.length > 0) {
 let e = window.location.hash.slice(1);
 for (let t of M)
   if (t.id === e) {
-    y = e;
+    j = e;
     break;
   }
   }
@@ -47,7 +48,7 @@ P && !t && (0, a.uL)(N.Z5c.FRIENDS);
 P,
 t
   ]), s.useEffect(() => {}, []);
-  let j = s.useCallback(() => {
+  let U = s.useCallback(() => {
 window.open(g.Z.getArticleURL(N.BhN.QUESTS_LEARN_MORE));
   }, []);
   return ((0, u.Tt)({
@@ -73,7 +74,7 @@ children: [
   (0, i.jsx)(h.Z, {
     title: A.Z.Messages.QUESTS_HOME_HERO_TITLE,
     description: A.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-    backgroundImageUrl: D,
+    backgroundImageUrl: y,
     onScroll: R,
     bannerContainerClassName: v.bannerContainer,
     bannerImageClassName: v.bannerImage,
@@ -83,7 +84,7 @@ children: [
       size: 'medium',
       color: b ? o.ButtonColors.TRANSPARENT : o.ButtonColors.WHITE,
       className: v.button,
-      onClick: j,
+      onClick: U,
       innerClassName: v.innerButton,
       children: [
         (0, i.jsx)(o.Text, {
@@ -98,7 +99,9 @@ children: [
         })
       ]
     }),
-    children: 0 === M.length && L === p.e5.CLAIMED ? (0, i.jsxs)('div', {
+    children: D && 0 === M.length ? (0, i.jsx)(o.Spinner, {
+      className: v.spinner
+    }) : 0 === M.length && L === p.e5.CLAIMED ? (0, i.jsxs)('div', {
       className: v.emptyState,
       children: [
         (0, i.jsx)(o.EmptyStateImage, {
@@ -119,7 +122,7 @@ children: [
       className: v.gridContainer,
       children: (0, i.jsx)(f.Z, {
         quests: M,
-        selectedQuestId: y
+        selectedQuestId: j
       })
     })
   })
