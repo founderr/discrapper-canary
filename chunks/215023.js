@@ -1,15 +1,15 @@
 n.d(t, {
   N: function() {
-return h;
+return f;
   },
   Ve: function() {
-return d;
+return c;
   },
   rL: function() {
-return _;
+return d;
   },
   yf: function() {
-return p;
+return h;
   }
 }), n(47120), n(470079);
 var r = n(463570),
@@ -18,9 +18,8 @@ var r = n(463570),
   s = n.n(a),
   o = n(705108),
   l = n.n(o),
-  u = n(180650),
-  c = n(435275);
-let d = {
+  u = n(180650);
+let c = {
 [u.T.SPRINGTOONS]: {
   logoMaxWidth: '48%',
   addGradient: !1,
@@ -56,19 +55,12 @@ let d = {
   hideAttributionLogos: !0,
   showDarkBannerText: !0,
   pdpLogoStyle: {
-    maxHeight: '60px',
-    width: '79px',
-    position: 'absolute',
-    top: 0,
-    transform: 'translate(5px, 5px)',
-    backgroundImage: 'url('.concat(c, ')'),
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat'
+    maxHeight: '60px'
   }
 }
   },
-  _ = '1225876188074082374',
-  E = [
+  d = '1225876188074082374',
+  _ = [
 '1245481938202918912',
 '1245087661316898877',
 '1245087724265013299',
@@ -80,7 +72,7 @@ let d = {
 '1245088205330710539',
 '1245088254647205991'
   ],
-  f = [
+  E = [
 '1243619479645065287',
 '1245481938202918912',
 '1243620093431119922',
@@ -92,7 +84,7 @@ let d = {
 '1243618548673417298',
 '1243619153688920206'
   ],
-  h = [
+  f = [
 '1212569433839636530',
 '1232073608168472638',
 '1232071712695386162',
@@ -109,7 +101,7 @@ let d = {
 '1139323093551165533',
 '1232073448415821854'
   ],
-  p = s()([
-...l()(E, i()(Array(E.length), new Date('2024-06-14').getTime())),
-...l()(f, i()(Array(f.length), new Date('2024-06-14').getTime()))
+  h = s()([
+...l()(_, i()(Array(_.length), new Date('2024-06-14').getTime())),
+...l()(E, i()(Array(E.length), new Date('2024-06-14').getTime()))
   ]);
