@@ -67,7 +67,7 @@ return Array.from(null !== (e = null == t ? void 0 : t.userIds) && void 0 !== e 
   }), d = f.ZP.getName(l, null == i ? void 0 : i.id, null == c ? void 0 : c[0]);
   if (d = (0, _.aF)(d, 15), null == t || 0 === c.length) {
 var u, g;
-let e = ''.concat((0, C.Z)(null !== (u = n.maxParticipants) && void 0 !== u ? u : 0));
+let e = ''.concat((0, C.ZP)(null !== (u = n.maxParticipants) && void 0 !== u ? u : 0));
 return s && (e = null !== (g = n.description) && void 0 !== g ? g : ''), (0, a.jsx)(o.Text, {
   className: Z.activitySubtitleText,
   variant: 'text-xs/normal',
@@ -227,7 +227,7 @@ children: [
         className: Z.activityMaxParticipantsLarge,
         variant: 'text-xs/normal',
         color: 'interactive-normal',
-        children: (0, C.Z)(null !== (t = Y.maxParticipants) && void 0 !== t ? t : 0)
+        children: (0, C.ZP)(null !== (t = Y.maxParticipants) && void 0 !== t ? t : 0)
       }) : null,
       (0, a.jsxs)('div', {
         className: Z.activityName,
