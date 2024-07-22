@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return k;
+return B;
   }
 }), t(47120);
 var i = t(735250),
@@ -23,13 +23,13 @@ var i = t(735250),
   C = t(541099),
   v = t(827498),
   I = t(496158),
-  P = t(676161),
-  x = t(660090),
+  x = t(676161),
+  P = t(660090),
   T = t(783097),
   S = t(176412),
   L = t(870205),
-  R = t(981631),
-  g = t(689079),
+  g = t(981631),
+  R = t(689079),
   M = t(689938),
   y = t(627542),
   O = t(763963);
@@ -57,7 +57,7 @@ N.y(v.ti.COMMAND), (0, h.Mo)({
   sectionName: c,
   source: e,
   commandOrigin: A.bB.APPLICATION_LAUNCHER
-}), f.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, {
+}), f.S.dispatch(g.CkL.FOCUS_CHANNEL_TEXT_AREA, {
   channelId: a.id
 });
   }, [
@@ -241,7 +241,7 @@ children: [
   });
 }
 
-function k(e) {
+function B(e) {
   var n;
   let {
 channel: t,
@@ -257,7 +257,7 @@ loading: m
 commandType: d.yU.CHAT
   }, {
 placeholderCount: 0,
-limit: g.tn,
+limit: R.tn,
 includeFrecency: !0,
 allowApplicationState: s,
 applicationId: a.id
@@ -266,7 +266,7 @@ sortOrder: _,
 setSortOrder: A,
 commands: h,
 canSort: f
-  } = (0, x.Z)({
+  } = (0, P.Z)({
 sectionId: a.id,
 commandsByActiveSection: c
   });
@@ -276,7 +276,7 @@ o(a.id);
 a.id,
 o
   ]);
-  let N = (0, P.Z)({
+  let N = (0, x.Z)({
 channel: t,
 commands: h,
 limit: 5

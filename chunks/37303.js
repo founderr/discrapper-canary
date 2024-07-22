@@ -46,7 +46,7 @@ quest: t,
 location: n,
 initiallyExpanded: r,
 contentPosition: c
-  } = e, [N, f] = a.useState(!1), p = a.useCallback(() => f(!0), []), C = a.useCallback(() => f(!1), []), g = (0, o.tP)(t), {
+  } = e, [N, f] = a.useState(!1), C = a.useCallback(() => f(!0), []), p = a.useCallback(() => f(!1), []), g = (0, o.tP)(t), {
 containerRef: S,
 size: A,
 height: R
@@ -83,10 +83,10 @@ children: e => (0, i.jsx)(i.Fragment, {
       })
     },
     className: h.questsCard,
-    onFocus: p,
-    onMouseEnter: p,
-    onBlur: C,
-    onMouseLeave: C,
+    onFocus: C,
+    onMouseEnter: C,
+    onBlur: p,
+    onMouseLeave: p,
     children: (0, i.jsxs)('div', {
       ref: t => {
         e.current = t, S.current = t;

@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return P;
+return x;
   }
 });
 var i = t(735250),
@@ -24,32 +24,32 @@ var i = t(735250),
   v = t(132439),
   I = t(413097);
 
-function P(e) {
+function x(e) {
   var n;
   let {
 channel: t,
 application: o,
 sectionName: c,
-installOnDemand: P
+installOnDemand: x
   } = e, T = (0, a.e7)([m.Z], () => m.Z.entrypoint()), S = null !== (n = (0, d.q)(o.id === N.bi.BUILT_IN ? null : o.id)) && void 0 !== n ? n : o, L = (0, _.ye)({
 application: S
-  }) ? x : f.Z, R = l.useRef(null), {
-iconURL: g,
+  }) ? P : f.Z, g = l.useRef(null), {
+iconURL: R,
 name: M
   } = l.useMemo(() => (0, _.sl)(S, {
 fakeAppIconURL: I,
 size: 84
   }), [S]);
   return l.useEffect(() => {
-P ? u.ZP.queryInstallOnDemandApp(S.id, t.id) : u.ZP.maybeQueryForInstallLessApps(S.id, t.id);
+x ? u.ZP.queryInstallOnDemandApp(S.id, t.id) : u.ZP.maybeQueryForInstallLessApps(S.id, t.id);
   }, [
 S.id,
 t.id,
-P
+x
   ]), (0, i.jsxs)(s.ScrollerNone, {
 className: v.container,
 fade: !0,
-ref: R,
+ref: g,
 role: 'region',
 'aria-label': C.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({
   applicationName: M
@@ -57,11 +57,11 @@ role: 'region',
 children: [
   (0, i.jsx)(h.Z, {
     name: M,
-    iconURL: g,
-    scrollerRef: R
+    iconURL: R,
+    scrollerRef: g
   }),
-  null != g && (0, i.jsx)(E.Z, {
-    src: g,
+  null != R && (0, i.jsx)(E.Z, {
+    src: R,
     className: v.appIcon
   }),
   (0, i.jsx)(r.Z, {
@@ -76,13 +76,13 @@ children: [
     channel: t,
     application: S,
     sectionName: c,
-    installOnDemand: P
+    installOnDemand: x
   }) : null
 ]
   });
 }
 
-function x(e) {
+function P(e) {
   let {
 channel: n,
 application: t,

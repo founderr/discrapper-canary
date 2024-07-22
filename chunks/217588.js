@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(430824),
   N = n(594174),
   f = n(285952),
-  p = n(514342),
-  C = n(626135),
+  C = n(514342),
+  p = n(626135),
   g = n(74538),
   S = n(453070),
   A = n(926491),
@@ -46,7 +46,7 @@ return a.useMemo(() => null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => 
   };
 
 function j(e) {
-  C.default.track(M.rMx.PREMIUM_PROMOTION_OPENED, {
+  p.default.track(M.rMx.PREMIUM_PROMOTION_OPENED, {
 location_page: null != e.guild_id ? M.ZY5.GUILD_CHANNEL : M.ZY5.DM_CHANNEL,
 location_section: M.jXE.STICKER_POPOUT
   }), (0, m.z)();
@@ -72,7 +72,7 @@ children: [
       (0, i.jsx)(o.Text, {
         className: P.__invalid_emojiName,
         variant: 'text-md/semibold',
-        children: (0, i.jsx)(p.Z, {
+        children: (0, i.jsx)(C.Z, {
           children: t.name
         })
       }),
@@ -104,7 +104,7 @@ let m = (0, S.Sd)(s);
 return (a.useEffect(() => {
   r();
 }, [u]), a.useEffect(() => {
-  C.default.track(M.rMx.OPEN_POPOUT, {
+  p.default.track(M.rMx.OPEN_POPOUT, {
     type: M.jXE.STICKER_POPOUT,
     guild_id: s.getGuildId(),
     sticker_pack_id: n.pack_id,
@@ -153,7 +153,7 @@ let t, {
     sticker: n,
     channel: s,
     closePopout: m,
-    refreshPositionKey: p
+    refreshPositionKey: C
   } = e,
   [S, A] = a.useState(null),
   [R, x] = a.useState(!1),
@@ -192,12 +192,12 @@ D ? t = B ? Y ? L.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : 
 }), K = 'Custom Sticker Popout (Soft Upsell)');
 let Q = !z && !B && W && D;
 return (a.useEffect(() => {
-  p();
+  C();
 }, [
   R,
   S
 ]), a.useEffect(() => {
-  C.default.track(M.rMx.OPEN_POPOUT, {
+  p.default.track(M.rMx.OPEN_POPOUT, {
     type: K,
     ...H
   });
@@ -263,7 +263,7 @@ return (a.useEffect(() => {
             children: [
               (0, i.jsx)(o.Clickable, {
                 onClick: () => {
-                  p(), G(!k);
+                  C(), G(!k);
                 },
                 className: P.showMoreEmojis,
                 children: (0, i.jsxs)(f.Z, {

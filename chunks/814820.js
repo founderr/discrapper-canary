@@ -1,6 +1,6 @@
 n.d(t, {
   f: function() {
-return p;
+return C;
   }
 }), n(47120);
 var i = n(735250),
@@ -61,7 +61,7 @@ return (0, i.jsx)('div', {
   })
 });
   },
-  p = e => {
+  C = e => {
 let {
   message: t,
   channel: n

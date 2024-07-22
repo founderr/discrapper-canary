@@ -23,8 +23,8 @@ var i = n(735250),
   h = n(585483),
   N = n(143316),
   f = n(240126),
-  p = n(791914),
-  C = n(147522),
+  C = n(791914),
+  p = n(147522),
   g = n(809780),
   S = n(981631),
   A = n(689938),
@@ -98,7 +98,7 @@ var B;
 return (0, i.jsxs)('div', {
   className: R.container,
   children: [
-    (0, i.jsx)(p.Z, {
+    (0, i.jsx)(C.Z, {
       tab: u.X.UNREADS,
       setTab: t,
       badgeState: M,
@@ -116,7 +116,7 @@ return (0, i.jsxs)('div', {
 className: r()(R.container, 'group-spacing-'.concat(U)),
 'aria-label': A.Z.Messages.UNREADS_TAB_LABEL,
 children: [
-  (0, i.jsx)(p.Z, {
+  (0, i.jsx)(C.Z, {
     tab: u.X.UNREADS,
     setTab: t,
     badgeState: M,
@@ -146,7 +146,7 @@ children: [
             s ? (0, i.jsx)(x, {
               setSeenTutorial: l
             }) : null,
-            (0, C.Z)(b, Z, n),
+            (0, p.Z)(b, Z, n),
             P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, {
               className: R.spinner
             })
@@ -206,7 +206,7 @@ closePopout: a
   return (0, i.jsxs)('div', {
 className: R.container,
 children: [
-  (0, i.jsx)(p.Z, {
+  (0, i.jsx)(C.Z, {
     tab: u.X.UNREADS,
     setTab: t,
     badgeState: n,

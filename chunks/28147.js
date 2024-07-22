@@ -23,13 +23,13 @@ var i = t(735250),
   C = t(532309),
   v = t(561160),
   I = t(41558),
-  P = t(106771),
-  x = t(79984),
+  x = t(106771),
+  P = t(79984),
   T = t(314734),
   S = t(981631),
   L = t(689938),
-  R = t(933693);
-let g = Array(6).fill(0).map((e, n) => n),
+  g = t(933693);
+let R = Array(6).fill(0).map((e, n) => n),
   M = [, , , ].fill(0).map((e, n) => n);
 
 function y(e) {
@@ -75,8 +75,8 @@ I,
 N,
 o
   ]);
-  let P = null == N || N === d.M.FETCHING,
-x = l.useMemo(() => {
+  let x = null == N || N === d.M.FETCHING,
+P = l.useMemo(() => {
   let e = f.map(e => ({
     application: e,
     installOnDemand: !1
@@ -101,8 +101,8 @@ x = l.useMemo(() => {
   C,
   f
 ]),
-T = x.length > 0,
-S = p && !T && !P;
+T = P.length > 0,
+S = p && !T && !x;
   return m ? (0, i.jsx)(D, {}) : S ? (0, i.jsx)(v.A, {
 type: A.LG.SEARCH_EMPTY,
 searchQuery: t,
@@ -114,9 +114,9 @@ children: [
     commandResults: _,
     query: t
   }),
-  (T || P) && (0, i.jsx)(H, {
-    applicationResults: x,
-    includePlaceholder: P,
+  (T || x) && (0, i.jsx)(H, {
+    applicationResults: P,
+    includePlaceholder: x,
     query: t,
     searchesBots: u
   })
@@ -176,18 +176,18 @@ query: r
   } = e, s = a.length > 4, d = l.useMemo(() => s ? a.slice(0, 4) : a, [
 a,
 s
-  ]), [h, f] = l.useState(!1), C = l.useCallback(() => f(e => !e), []), v = (null !== (n = (0, o.Z)(r)) && void 0 !== n ? n : r)[0] !== r[0], x = h && !v;
+  ]), [h, f] = l.useState(!1), C = l.useCallback(() => f(e => !e), []), v = (null !== (n = (0, o.Z)(r)) && void 0 !== n ? n : r)[0] !== r[0], P = h && !v;
   l.useLayoutEffect(() => f(!1), [v]);
   let {
-ref: g,
+ref: R,
 isTransitioning: M,
 onTransitionEnd: y
   } = (0, N.Z)({
 key: r,
-isExpanded: x,
+isExpanded: P,
 durationMs: 200,
 maxAnimationHeight: T.lv
-  }), O = x || M, j = x ? I.Z.buttonTypes.VIEW_LESS : I.Z.buttonTypes.VIEW_MORE, b = O ? a : d;
+  }), O = P || M, j = P ? I.Z.buttonTypes.VIEW_LESS : I.Z.buttonTypes.VIEW_MORE, b = O ? a : d;
   return (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(I.Z, {
@@ -196,8 +196,8 @@ children: [
     onClickViewButton: s ? C : void 0
   }),
   (0, i.jsx)('div', {
-    className: R.sectionContentContainer,
-    ref: g,
+    className: g.sectionContentContainer,
+    ref: R,
     onTransitionEnd: y,
     children: b.map((e, n) => {
       let {
@@ -205,7 +205,7 @@ children: [
         application: a,
         section: s
       } = e;
-      return (0, i.jsx)(P.Z, {
+      return (0, i.jsx)(x.Z, {
         command: l,
         application: a,
         query: r,
@@ -247,7 +247,7 @@ query: e.query,
 searchResultsPosition: e.resultsPosition
   });
   return (0, i.jsx)('div', {
-className: R.searchOpenAppDetailAppCard,
+className: g.searchOpenAppDetailAppCard,
 ref: e => n.current = e,
 children: (0, i.jsx)(f.kA, {
   ...e,
@@ -270,7 +270,7 @@ children: [
     title: L.Z.Messages.APPS
   }),
   (0, i.jsxs)('div', {
-    className: R.sectionContentContainer,
+    className: g.sectionContentContainer,
     children: [
       n.map((e, n) => {
         let {
@@ -286,7 +286,7 @@ children: [
           query: l
         }, t.id);
       }),
-      t && M.map(e => (0, i.jsx)(x.Z, {}, e))
+      t && M.map(e => (0, i.jsx)(P.Z, {}, e))
     ]
   })
 ]
@@ -296,7 +296,7 @@ children: [
     title: L.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE
   }),
   (0, i.jsxs)('div', {
-    className: R.sectionActivitiesContentContainer,
+    className: g.sectionActivitiesContentContainer,
     children: [
       n.map((e, n) => {
         let {
@@ -313,7 +313,7 @@ children: [
           query: l
         }, t.id);
       }),
-      t && M.map(e => (0, i.jsx)(x.Z, {}, e))
+      t && M.map(e => (0, i.jsx)(P.Z, {}, e))
     ]
   })
 ]
@@ -322,7 +322,7 @@ children: [
 
 function U(e) {
   let n = (0, f.cG)(e);
-  return (0, i.jsx)(P.Z, {
+  return (0, i.jsx)(x.Z, {
 application: e.application,
 onClick: n,
 query: e.query,
@@ -337,15 +337,15 @@ children: [
     title: L.Z.Messages.COMMANDS
   }),
   (0, i.jsx)('div', {
-    className: R.sectionContentContainer,
-    children: g.map(e => (0, i.jsx)(x.Z, {}, e))
+    className: g.sectionContentContainer,
+    children: R.map(e => (0, i.jsx)(P.Z, {}, e))
   }),
   (0, i.jsx)(I.Z, {
     title: L.Z.Messages.APPS
   }),
   (0, i.jsx)('div', {
-    className: R.sectionContentContainer,
-    children: M.map(e => (0, i.jsx)(x.Z, {}, e))
+    className: g.sectionContentContainer,
+    children: M.map(e => (0, i.jsx)(P.Z, {}, e))
   })
 ]
   });

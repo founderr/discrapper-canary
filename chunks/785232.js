@@ -1,33 +1,33 @@
-var l = n(735250);
+var i = n(735250);
 n(470079);
 var a = n(442837),
-  i = n(481060),
-  s = n(289823),
+  s = n(481060),
+  l = n(289823),
   r = n(594174);
 t.Z = function(e) {
   let {
 recipients: t,
 size: n,
-status: c,
-isTyping: o,
-className: u,
-...d
-  } = e, _ = i.AvatarSizeSpecs[n], f = (0, a.Wu)([r.default], () => t.slice(0, 2).map(e => {
+status: o,
+isTyping: c,
+className: d,
+...u
+  } = e, h = s.AvatarSizeSpecs[n], p = (0, a.Wu)([r.default], () => t.slice(0, 2).map(e => {
 let t = r.default.getUser(e);
 if (null != t)
-  return t.getAvatarURL(void 0, _.size, !1);
+  return t.getAvatarURL(void 0, h.size, !1);
   }), [
 t,
-_.size
+h.size
   ]);
-  return (0, l.jsx)(s.Z, {
-'aria-label': d['aria-label'],
-'aria-hidden': d['aria-hidden'],
-backSrc: f[0],
-frontSrc: f[1],
+  return (0, i.jsx)(l.Z, {
+'aria-label': u['aria-label'],
+'aria-hidden': u['aria-hidden'],
+backSrc: p[0],
+frontSrc: p[1],
 size: n,
-status: c,
-isTyping: null != o && o,
-className: u
+status: o,
+isTyping: null != c && c,
+className: d
   });
 };

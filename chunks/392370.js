@@ -31,13 +31,13 @@ function I(e, n) {
   return h.Z.getScoreWithoutLoadingLatest(n.id) - t;
 }
 
-function P(e, n) {
+function x(e, n) {
   let t = (0, N.$d)(e),
 i = (0, N.$d)(n);
   return (0, m.un)(t, i);
 }
 
-function x(e, n) {
+function P(e, n) {
   return (0, m.un)(e.displayName, n.displayName);
 }
 
@@ -127,7 +127,7 @@ includeBuiltIn: !0
   }), L = (0, u.Z)({
 guildId: n.getGuildId(),
 channel: n
-  }), R = i.useMemo(() => {
+  }), g = i.useMemo(() => {
 var e;
 if (!s)
   return [];
@@ -234,7 +234,7 @@ return (0, f.N)(A, {
     }({
       channel: n
     }),
-    x
+    P
   ]
 });
   }, [
@@ -243,14 +243,14 @@ A,
 l,
 n,
 t
-  ]), g = i.useMemo(() => {
-if (0 === R.length)
+  ]), R = i.useMemo(() => {
+if (0 === g.length)
   return [];
 let e = new Map(S.map(e => [
   e.id,
   e
 ]));
-return a().compact(R.map(n => {
+return a().compact(g.map(n => {
   var t;
   let i = e.get(n.applicationId);
   if (null == i)
@@ -264,7 +264,7 @@ return a().compact(R.map(n => {
 }));
   }, [
 S,
-R,
+g,
 h
   ]), M = i.useMemo(() => {
 var e;
@@ -347,7 +347,7 @@ return (0, f.N)(i, {
   ],
   sortComparers: [
     I,
-    P
+    x
   ]
 });
   }, [
@@ -358,9 +358,9 @@ n,
 t,
 S,
 L
-  ]), y = g.length > 0, O = M.length > 0;
+  ]), y = R.length > 0, O = M.length > 0;
   return {
-commandResults: g,
+commandResults: R,
 hasCommandResults: y,
 applicationResults: M,
 hasApplicationResults: O,

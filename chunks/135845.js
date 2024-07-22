@@ -24,8 +24,8 @@ function h(e) {
   invite: h,
   currentUserId: N,
   guild: f,
-  onTransitionToInviteChannel: p,
-  onAcceptInstantInvite: C
+  onTransitionToInviteChannel: C,
+  onAcceptInstantInvite: p
 } = e,
 g = null == f ? void 0 : f.id,
 S = (0, r.e7)([u.Z], () => u.Z.getGuildId()),
@@ -54,7 +54,7 @@ if (null == h.guild)
 f = new c.ZP(h.guild);
   }
   let b = null != h.channel ? (0, o.jD)(h.channel) : null,
-D = O ? p : C;
+D = O ? C : p;
   P && !x ? a = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({
 name: v.username
   }) : (t = m.Z.Messages.WATCH, n = l.Z.Button.Colors.GREEN, O && (t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING, n = l.Z.Button.Colors.PRIMARY), a = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({

@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(617379),
   N = n(324081),
   f = n(305248),
-  p = n(520116),
-  C = n(981631),
+  C = n(520116),
+  p = n(981631),
   g = n(689938),
   S = n(540895);
 let A = a.memo(function(e) {
@@ -83,12 +83,12 @@ toggle: r
 }), null == l || !t.hasLoadedAnything)
 return null;
   let E = (e, i) => {
-(0, _.yw)(C.rMx.INBOX_CHANNEL_CLICKED, {
+(0, _.yw)(p.rMx.INBOX_CHANNEL_CLICKED, {
   channel_id: t.channelId,
   guild_id: t.guildId
 });
 let a = null != i ? i : t.oldestUnreadMessageId;
-(0, I.uL)(C.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : a)), n(e);
+(0, I.uL)(p.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : a)), n(e);
   };
   return (0, i.jsx)('div', {
 className: S.channel,
@@ -111,7 +111,7 @@ children: (0, i.jsx)(c.HeadingLevel, {
       })
     ]
   }),
-  children: t.collapsed ? null : 'messages' === t.type ? (0, i.jsx)(p.Z, {
+  children: t.collapsed ? null : 'messages' === t.type ? (0, i.jsx)(C.Z, {
     channel: t,
     channelRecord: l,
     gotoChannel: E
@@ -143,7 +143,7 @@ icon: r ? (0, i.jsx)(c.DoubleCheckmarkLargeIcon, {
   color: 'currentColor'
 }),
 onClick: function() {
-  r && null != t.guildId ? a(t.guildId) : n(t), (0, _.yw)(C.rMx.INBOX_CHANNEL_ACKED, {
+  r && null != t.guildId ? a(t.guildId) : n(t), (0, _.yw)(p.rMx.INBOX_CHANNEL_ACKED, {
     channel_id: t.channelId,
     guild_id: t.guildId,
     marked_all_channels_as_read: !1,
@@ -161,7 +161,7 @@ getNumUnreadChannels: a
   } = e;
 
   function s() {
-n(t), (0, _.yw)(C.rMx.INBOX_CHANNEL_COLLAPSED, {
+n(t), (0, _.yw)(p.rMx.INBOX_CHANNEL_COLLAPSED, {
   channel_id: t.channelId,
   guild_id: t.guildId,
   num_unread_channels_remaining: a(),

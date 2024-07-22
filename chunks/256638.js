@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return ep;
+return eC;
   },
   c: function() {
 return eN;
@@ -23,8 +23,8 @@ var i = n(735250),
   h = n(205355),
   N = n(558381),
   f = n(223245),
-  p = n(491428),
-  C = n(401430),
+  C = n(491428),
+  p = n(401430),
   g = n(230711),
   S = n(726542),
   A = n(100527),
@@ -118,19 +118,19 @@ A = (0, o.e7)([$.Z], () => $.Z.getGuildId()),
 ec = (0, o.e7)([ei.Z], () => ei.Z.getNotice()),
 ef = (0, o.e7)([q.Z], () => q.Z.getGuild(A)),
 {
-  analyticsLocations: ep
+  analyticsLocations: eC
 } = (0, R.ZP)(),
-eC = null == ec ? void 0 : ec.type,
+ep = null == ec ? void 0 : ec.type,
 eg = (0, U.J)(A);
   a.useEffect(() => {
-null != eC && ! function(e, t) {
+null != ep && ! function(e, t) {
   let n = {
     notice_type: e
   };
   null != t && (n.guild_id = t), es.default.track(ed.rMx.APP_NOTICE_VIEWED, n);
-}(eC, A);
+}(ep, A);
   }, [
-eC,
+ep,
 A
   ]), a.useEffect(() => {
 if (null != ec && ec.type === ed.kVF.SURVEY && null != ec.metadata) {
@@ -139,7 +139,7 @@ if (null != ec && ec.type === ed.kVF.SURVEY && null != ec.metadata) {
   } = ec, t = Z.Z.getUserExperimentDescriptor(e.id);
   null != t && (0, L.W9)(e.id, t), (async () => {
     var e, t;
-    (null === (e = ec.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, p.g8)(null === (t = ec.metadata) || void 0 === t ? void 0 : t.id);
+    (null === (e = ec.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, C.g8)(null === (t = ec.metadata) || void 0 === t ? void 0 : t.id);
   })();
 }
   }, [ec]);
@@ -148,7 +148,7 @@ let {
   enabled: t
 } = (0, V.ZP)(!0, e !== ed.kVF.PREMIUM_TIER_2_TRIAL_ENDING);
 return t || null == e ? null : ei.m[e];
-  }(eC);
+  }(ep);
   if (null == ec)
 return null;
   if (null != eS)
@@ -468,11 +468,11 @@ case ed.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
             (0, w.Z)({
               initialPlanId: null,
               subscriptionTier: eu.Si.TIER_2,
-              analyticsLocations: ep,
+              analyticsLocations: eC,
               analyticsObject: eU
             });
           },
-          analyticsLocations: ep,
+          analyticsLocations: eC,
           analyticsLocationObject: eU,
           context: __OVERLAY__ ? ed.IlC.OVERLAY : ed.IlC.APP
         }).then(() => _.Z(eD.id)),
@@ -536,14 +536,14 @@ case ed.kVF.SURVEY: {
       (0, i.jsx)(c.NoticeCloseButton, {
         noticeType: ed.kVF.SURVEY,
         onClick: () => {
-          (0, p.hZ)(t, !0);
+          (0, C.hZ)(t, !0);
         }
       }),
       n,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: ed.kVF.SURVEY,
         onClick: () => {
-          window.open(s, '_blank'), (0, p.hZ)(t, !1);
+          window.open(s, '_blank'), (0, C.hZ)(t, !1);
         },
         children: a
       })
@@ -691,7 +691,7 @@ case ed.kVF.APPLICATION_TEST_MODE:
             })
           }),
           (0, i.jsx)(c.NoticeCloseButton, {
-            onClick: C.mc,
+            onClick: p.mc,
             noticeType: ed.kVF.APPLICATION_TEST_MODE
           })
         ]
@@ -725,7 +725,7 @@ case ed.kVF.APPLICATION_TEST_MODE:
           children: eI.Z.Messages.NOTICE_APPLICATION_TEST_MODE_GO_TO_LISTING
         }),
         (0, i.jsx)(c.NoticeCloseButton, {
-          onClick: C.mc,
+          onClick: p.mc,
           noticeType: ed.kVF.APPLICATION_TEST_MODE
         })
       ]
@@ -794,7 +794,7 @@ case ed.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
     color: c.NoticeColors.WARNING,
     children: [
       (0, i.jsx)(c.NoticeCloseButton, {
-        noticeType: eC,
+        noticeType: ep,
         onClick: () => {
           eN(ew);
         }
@@ -896,7 +896,7 @@ case ed.kVF.AUTOMOD_QUARANTINED_USER_PROFILE: {
   };
   return (0, i.jsx)(D.Z, {
     guildId: A,
-    analyticsLocations: ep,
+    analyticsLocations: eC,
     analyticsLocation: e
   });
 }
@@ -1030,7 +1030,7 @@ default:
   }
 }) : null;
 
-function ep() {
+function eC() {
   let {
 analyticsLocations: e
   } = (0, R.ZP)(A.Z.NOTICE);

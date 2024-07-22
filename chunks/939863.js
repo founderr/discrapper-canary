@@ -1,35 +1,35 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
 return d;
   }
 });
-var i = t(735250);
-t(470079);
-var a = t(120356),
-  l = t.n(a),
-  r = t(689938),
-  o = t(739720),
-  c = t(296507),
-  s = t(866402);
+var i = n(735250);
+n(470079);
+var a = n(120356),
+  s = n.n(a),
+  l = n(689938),
+  r = n(739720),
+  o = n(296507),
+  c = n(866402);
 
 function d(e) {
   let {
-className: n,
-children: t
+className: t,
+children: n
   } = e;
   return (0, i.jsxs)('div', {
-className: l()(o.container, n),
+className: s()(r.container, t),
 children: [
   (0, i.jsx)('img', {
-    alt: r.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
-    src: s,
-    className: l()(o.sparkleIcon, o.sparkleBottom)
-  }),
-  t,
-  (0, i.jsx)('img', {
-    alt: r.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+    alt: l.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
     src: c,
-    className: l()(o.sparkleIcon, o.sparkleTop)
+    className: s()(r.sparkleIcon, r.sparkleBottom)
+  }),
+  n,
+  (0, i.jsx)('img', {
+    alt: l.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+    src: o,
+    className: s()(r.sparkleIcon, r.sparkleTop)
   })
 ]
   });

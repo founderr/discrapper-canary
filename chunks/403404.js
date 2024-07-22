@@ -39,7 +39,7 @@ null != t && (0, r.Z)({
 return;
   }
   _ && (0, l.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
-  let p = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+  let C = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
   return (0, a.openModalLazy)(async () => {
 let {
   default: e
@@ -59,6 +59,6 @@ return n => (0, i.jsx)(e, {
 });
   }, {
 modalKey: o.AC,
-contextKey: p
+contextKey: C
   });
 }

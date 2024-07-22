@@ -16,8 +16,8 @@ var i, a, s, r, l = n(913527),
   h = n(223892),
   N = n(674525),
   f = n(605236),
-  p = n(524347),
-  C = n(853197),
+  C = n(524347),
+  p = n(853197),
   g = n(353926),
   S = n(594190),
   A = n(38618),
@@ -70,8 +70,8 @@ var i, a, s, r, l = n(913527),
   eh = n(351402),
   eN = n(853872),
   ef = n(78839),
-  ep = n(295226),
-  eC = n(580130),
+  eC = n(295226),
+  ep = n(580130),
   eg = n(695103),
   eS = n(358085),
   eA = n(74538),
@@ -506,10 +506,10 @@ eM.kVF.SCHEDULED_MAINTENANCE
   predicate: () => ee.Z.isSuggestedAccountType(eM.ABu.PLAYSTATION) && null == ee.Z.getAccount(null, eM.ABu.PLAYSTATION) && !eV(eM.kVF.CONNECT_PLAYSTATION)
 },
 [eM.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: {
-  predicate: () => ep.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_2]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_2_TRIAL_ENDING)
+  predicate: () => eC.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_2]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_2_TRIAL_ENDING)
 },
 [eM.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: {
-  predicate: () => ep.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_0]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_0_TRIAL_ENDING)
+  predicate: () => eC.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_0]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_0_TRIAL_ENDING)
 },
 [eM.kVF.PREMIUM_UNCANCEL]: {
   predicate: e => {
@@ -536,7 +536,7 @@ eM.kVF.SCHEDULED_MAINTENANCE
     let {
       premiumSubscription: t,
       currentUser: n
-    } = e, i = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf('day'), 'days') : 0, a = null != t ? o()(t.currentPeriodEnd).diff(o()(t.currentPeriodStart).startOf('day'), 'days') : 0, s = null != t && o()(t.currentPeriodEnd).isBefore(o()()), r = eC.Z.applicationIdsFetched.has(eZ.RQ), l = eC.Z.getForApplication(eZ.RQ), c = null != t ? (0, eA.Af)(t) : null, d = null != c ? eA.ZP.getSkuIdForPlan(c.planId) : null, u = null != l && null != c && Array.from(l).filter(e => {
+    } = e, i = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf('day'), 'days') : 0, a = null != t ? o()(t.currentPeriodEnd).diff(o()(t.currentPeriodStart).startOf('day'), 'days') : 0, s = null != t && o()(t.currentPeriodEnd).isBefore(o()()), r = ep.Z.applicationIdsFetched.has(eZ.RQ), l = ep.Z.getForApplication(eZ.RQ), c = null != t ? (0, eA.Af)(t) : null, d = null != c ? eA.ZP.getSkuIdForPlan(c.planId) : null, u = null != l && null != c && Array.from(l).filter(e => {
       let {
         skuId: t,
         consumed: n
@@ -658,15 +658,15 @@ eM.kVF.SCHEDULED_MAINTENANCE
   }
 },
 [eM.kVF.DROPS_GO_LIVE_BANNER]: {
-  predicate: () => !eV(eM.kVF.DROPS_GO_LIVE_BANNER) && (0, f.un)(u.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, f.un)(u.z.QUEST_2_COMPLETION_TOOLTIP) && (0, C.Tn)(eL.X2.FORTNITE),
+  predicate: () => !eV(eM.kVF.DROPS_GO_LIVE_BANNER) && (0, f.un)(u.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, f.un)(u.z.QUEST_2_COMPLETION_TOOLTIP) && (0, p.Tn)(eL.X2.FORTNITE),
   metadata: () => ({
     partnerGame: eL.X2.FORTNITE
   })
 },
 [eM.kVF.DROPS_PROGRESS_INTERRUPTION]: {
-  predicate: () => p.Z.isCurrentQuestInterrupted && null != p.Z.currentDropQuestGameTitle,
+  predicate: () => C.Z.isCurrentQuestInterrupted && null != C.Z.currentDropQuestGameTitle,
   metadata: () => ({
-    gameTitle: p.Z.currentDropQuestGameTitle,
+    gameTitle: C.Z.currentDropQuestGameTitle,
     reloadCallback: () => window.location.reload(!0)
   })
 },
@@ -674,7 +674,7 @@ eM.kVF.SCHEDULED_MAINTENANCE
   predicate: () => (0, j.e)() && !eV(eM.kVF.POMELO_ELIGIBLE) && !(0, D.ov)()
 },
 [eM.kVF.DROPS_ENDED_INCOMPLETE]: {
-  predicate: () => !eV(eM.kVF.DROPS_ENDED_INCOMPLETE) && (0, f.un)(u.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, f.un)(u.z.QUEST_2_COMPLETION_TOOLTIP) && (0, C.FL)(eL.X2.FORTNITE),
+  predicate: () => !eV(eM.kVF.DROPS_ENDED_INCOMPLETE) && (0, f.un)(u.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, f.un)(u.z.QUEST_2_COMPLETION_TOOLTIP) && (0, p.FL)(eL.X2.FORTNITE),
   metadata: () => ({
     partnerGame: eL.X2.FORTNITE
   })
@@ -799,14 +799,14 @@ this.syncWith([
   et.Z,
   ed.Z,
   F.Z,
-  ep.Z,
+  eC.Z,
   X.Z,
   ee.Z,
   K.Z,
   M.Z,
   H.Z,
   Q.Z
-], ez), this.waitFor(em.default, eu.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, ed.Z, eI.Z, W.Z, S.ZP, el.Z, eR.Z, eO.Z, eg.Z, es.Z, ef.ZP, ex.Z, et.Z, eN.Z, er.Z, F.Z, eC.Z, ep.Z, ee.Z, b.Z, p.Z, N.Z, V.Z, H.Z, Q.Z);
+], ez), this.waitFor(em.default, eu.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, ed.Z, eI.Z, W.Z, S.ZP, el.Z, eR.Z, eO.Z, eg.Z, es.Z, ef.ZP, ex.Z, et.Z, eN.Z, er.Z, F.Z, ep.Z, eC.Z, ee.Z, b.Z, C.Z, N.Z, V.Z, H.Z, Q.Z);
   }
   hasNotice() {
 return null != eG && null != eG.type;

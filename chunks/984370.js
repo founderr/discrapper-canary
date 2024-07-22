@@ -21,8 +21,8 @@ var a = n(120356),
   h = n(300986),
   N = n(314451),
   f = n(35583),
-  p = n(981631),
-  C = n(176505),
+  C = n(981631),
+  p = n(176505),
   g = n(139715);
 async function S() {
   if ((0, I.isMac)() && I.isPlatformEmbedded) {
@@ -42,8 +42,8 @@ innerClassname: o,
 transparent: c = !1,
 toolbar: I,
 mobileToolbar: m,
-'aria-label': p,
-'aria-labelledby': C,
+'aria-label': C,
+'aria-labelledby': p,
 scrollable: A,
 role: R,
 hideSearch: O,
@@ -74,8 +74,8 @@ toolbar: function() {
 }(),
 transparent: c,
 onDoubleClick: S,
-'aria-label': p,
-'aria-labelledby': C,
+'aria-label': C,
+'aria-labelledby': p,
 role: R,
 scrollable: A,
 children: t
@@ -107,7 +107,7 @@ isAuthenticated: t = !0,
   } = e, {
 analyticsLocations: a
   } = (0, c.ZP)(o.Z.HEADER_BAR), r = s()(n.className, {
-[g.forumOrHome]: null != n.channelType && p.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === C.oC.GUILD_HOME
+[g.forumOrHome]: null != n.channelType && C.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === p.oC.GUILD_HOME
   });
   return (0, i.jsx)(c.Gt, {
 value: a,

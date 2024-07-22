@@ -27,9 +27,9 @@ usernameHook: a
 avatarSrc: N,
 eventHandlers: {
   onMouseEnter: f,
-  onMouseLeave: p
+  onMouseLeave: C
 }
-  } = (0, u.m)(!0), C = '' !== t.content ? new Date(t.content).toLocaleString(I.Z.getLocale(), {
+  } = (0, u.m)(!0), p = '' !== t.content ? new Date(t.content).toLocaleString(I.Z.getLocale(), {
 hour: 'numeric',
 minute: '2-digit',
 month: '2-digit',
@@ -38,7 +38,7 @@ year: 'numeric'
   }) : '';
   return (0, i.jsx)('div', {
 onMouseEnter: f,
-onMouseLeave: p,
+onMouseLeave: C,
 children: (0, i.jsx)(o.Z, {
   className: s()(m.mainContainer, {
     [m.compact]: n
@@ -85,7 +85,7 @@ children: (0, i.jsx)(o.Z, {
         children: t.type === _.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED ? I.Z.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
           username: T.nick,
           usernameHook: h,
-          time: C
+          time: p
         }) : I.Z.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
           username: T.nick,
           usernameHook: h

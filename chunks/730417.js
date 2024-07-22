@@ -12,7 +12,7 @@ return f;
 return h;
   },
   hs: function() {
-return p;
+return C;
   },
   op: function() {
 return N;
@@ -121,7 +121,7 @@ showDropsSparkles: !u && !h
   };
 }
 
-function p(e, t, n) {
+function C(e, t, n) {
   let i = (0, E.BS)(e);
   (0, r.Z)({
 type: t,

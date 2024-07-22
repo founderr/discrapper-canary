@@ -26,7 +26,7 @@ let s = 'app-launcher-element',
   r = 'app-launcher-modal',
   l = 'app-launcher-entrypoint',
   o = 500,
-  c = 628,
+  c = 650,
   d = {
 '--custom-app-launcher-width': ''.concat(o, 'px'),
 '--custom-app-launcher-height': ''.concat(c, 'px')

@@ -23,7 +23,7 @@ maxAnimationHeight: c
   N.current = o;
   let C = i.useRef(c);
   C.current = c;
-  let [v, I] = i.useState(!1), P = i.useCallback(() => I(!1), []);
+  let [v, I] = i.useState(!1), x = i.useCallback(() => I(!1), []);
   return i.useLayoutEffect(() => {
 void 0 !== n && (_.current = void 0, E.current = void 0, I(!1));
   }, [n]), i.useLayoutEffect(() => {
@@ -63,6 +63,6 @@ v
   ]), {
 ref: u ? p : m,
 isTransitioning: v,
-onTransitionEnd: P
+onTransitionEnd: x
   };
 }

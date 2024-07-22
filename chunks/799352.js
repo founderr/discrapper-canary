@@ -1,13 +1,13 @@
-n.d(s, {
+n.d(t, {
   O: function() {
-return _;
+return s;
   }
 });
-var a = n(544891),
-  t = n(981631);
+var i = n(544891),
+  a = n(981631);
 
-function _(e) {
-  return a.tn.post({
-url: t.ANM.CHANNEL_BLOCKED_USER_WARNING_ACK(e)
+function s(e) {
+  return i.tn.post({
+url: a.ANM.CHANNEL_BLOCKED_USER_WARNING_ACK(e)
   });
 }

@@ -31,7 +31,7 @@ let e = (await (0, l.oJ)(t)).find(e => e.sku.id === n);
 s()(null != e, 'Could not find store listing for sku'), e.sku.type === T.epS.SUBSCRIPTION_GROUP && await (0, E.rx)(t, e.id);
   }
   f = null != f ? f : m.Z.get(n), s()(null != f && f.applicationId === t, 'SKU must belong to application'), f.type === T.epS.SUBSCRIPTION && !(0, c.a)([f.id]) && await (0, o.GZ)(f.id);
-  let p = function() {
+  let C = function() {
 let e = _.Z.getWindow(T.KJ3.CHANNEL_CALL_POPOUT);
 return null == e || e.closed ? r.DEFAULT_MODAL_CONTEXT : r.POPOUT_MODAL_CONTEXT;
   }();
@@ -42,7 +42,7 @@ return new Promise((e, i) => {
     skuId: n,
     analyticsLocationObject: N,
     analyticsLocations: h,
-    contextKey: p,
+    contextKey: C,
     onComplete: t => {
       var n;
       e(null !== (n = null == t ? void 0 : t.entitlements) && void 0 !== n ? n : []);

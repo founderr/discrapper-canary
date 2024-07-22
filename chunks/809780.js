@@ -25,8 +25,8 @@ var i, a, s, r, l = n(470079),
   h = n(853856),
   N = n(181945),
   f = n(220444),
-  p = n(601070),
-  C = n(344185),
+  C = n(601070),
+  p = n(344185),
   g = n(569471),
   S = n(723170),
   A = n(675478),
@@ -91,7 +91,7 @@ if ('nsfw' === e.type)
     hasLoadedAnything: !0
   };
 if ('forum' === e.type) {
-  let t = C.Z.hasLoaded(e.guildId);
+  let t = p.Z.hasLoaded(e.guildId);
   return {
     ...e,
     isFullyLoaded: t,
@@ -238,7 +238,7 @@ super(), F(this, 'state', void 0), F(this, 'scrollerRef', void 0), F(this, 'mayb
     if ('forum' !== e.type)
       return e;
     {
-      let t = C.Z.hasLoaded(e.guildId);
+      let t = p.Z.hasLoaded(e.guildId);
       return {
         ...e,
         isFullyLoaded: t,
@@ -290,7 +290,7 @@ t = function(e) {
     if (null == n)
       return;
     let i = M.ZP.getSelectableChannelIds(n),
-      a = p.Z.getActiveJoinedUnreadThreadsForGuild(n);
+      a = C.Z.getActiveJoinedUnreadThreadsForGuild(n);
     i.forEach(i => {
       var s;
       W(e, t, n, i);
@@ -411,7 +411,7 @@ e
   ]), l.useLayoutEffect(t.maybeLoadMore, [
 null == r ? void 0 : r.channels,
 null == r ? void 0 : r.loadState
-  ]), l.useEffect(() => (Z.Z.addChangeListener(t.reloadMessages), () => Z.Z.removeChangeListener(t.reloadMessages)), [t.reloadMessages]), l.useEffect(() => (j.ZP.addChangeListener(t.handleUserGuildSettingsStoreChange), () => j.ZP.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]), l.useEffect(() => (g.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => g.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]), l.useEffect(() => (C.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => C.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]), [
+  ]), l.useEffect(() => (Z.Z.addChangeListener(t.reloadMessages), () => Z.Z.removeChangeListener(t.reloadMessages)), [t.reloadMessages]), l.useEffect(() => (j.ZP.addChangeListener(t.handleUserGuildSettingsStoreChange), () => j.ZP.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]), l.useEffect(() => (g.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => g.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]), l.useEffect(() => (p.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => p.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]), [
 r,
 t
   ];

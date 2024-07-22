@@ -25,13 +25,13 @@ function f(e) {
 message: t,
 channel: s,
 compact: f
-  } = e, p = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20), [C, g] = a.useState(null);
+  } = e, C = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20), [p, g] = a.useState(null);
   return (a.useEffect(() => {
 let e = setInterval(() => {
-  p.length > 0 && g(p[Math.floor(Math.random() * p.length)]);
+  C.length > 0 && g(C[Math.floor(Math.random() * C.length)]);
 }, 500);
 return () => clearInterval(e);
-  }, [p]), null == s.guild_id) ? null : (0, i.jsxs)('div', {
+  }, [C]), null == s.guild_id) ? null : (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(_.Z, {
     className: r()(N.mainContainer, {
@@ -88,9 +88,9 @@ children: [
               action_type: 'sticker'
             }), (0, m.O)(t.id, s);
           },
-          children: null != C ? (0, i.jsx)(u.ZP, {
+          children: null != p ? (0, i.jsx)(u.ZP, {
             size: 32,
-            sticker: C
+            sticker: p
           }) : (0, i.jsx)(o.ReactionIcon, {
             size: 'md',
             color: 'currentColor'

@@ -12,8 +12,8 @@ var i, a, s, r, l = n(392711),
   h = n(594174),
   N = n(580130),
   f = n(55563),
-  p = n(981631);
-let C = 'DetectedOffPlatformPremiumPerksStore',
+  C = n(981631);
+let p = 'DetectedOffPlatformPremiumPerksStore',
   g = {},
   S = {},
   A = [];
@@ -47,7 +47,7 @@ N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrent
 class O extends(i = c.ZP.Store) {
   initialize() {
 var e;
-this.waitFor(T.ZP, f.Z, N.Z), A = null !== (e = d.K.get(C)) && void 0 !== e ? e : A;
+this.waitFor(T.ZP, f.Z, N.Z), A = null !== (e = d.K.get(p)) && void 0 !== e ? e : A;
   }
   getDetectedOffPlatformPremiumPerks() {
 return o().values(g);
@@ -72,7 +72,7 @@ let {
 } = e;
 if (delete g[t], A.includes(t))
   return !1;
-A.push(t), d.K.set(C, A);
+A.push(t), d.K.set(p, A);
   },
   RUNNING_GAMES_CHANGE: function() {
 let e = !1;
@@ -81,12 +81,12 @@ for (let {
     distributor: n
   }
   of T.ZP.getRunningGames())
-  if (null != t && n !== p.GQo.DISCORD)
+  if (null != t && n !== C.GQo.DISCORD)
     for (let {
         skuId: n,
         applicationId: i
       }
-      of p.Lg6) {
+      of C.Lg6) {
       if (!(i !== t || A.includes(n)))
         null == S[n] && (!N.Z.applicationIdsFetched.has(i) && !N.Z.applicationIdsFetching.has(i) && null == N.Z.getForSku(n) && _.yD(i), S[n] = {
           skuId: n,

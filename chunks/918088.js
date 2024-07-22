@@ -29,8 +29,8 @@ var i = n(278074),
   h = n(798628),
   N = n(79390),
   f = n(839963),
-  p = n(897325),
-  C = n(57101),
+  C = n(897325),
+  p = n(57101),
   g = n(562293),
   S = n(981631),
   A = n(689938);
@@ -93,18 +93,18 @@ m = null == I && E,
   selectedAnswerIds: T,
   submitting: N,
   editing: f,
-  showResults: p
+  showResults: C
 } = null !== (a = null != t ? t : (0, h.fU)(e.getChannelId(), e.id)) && void 0 !== a ? a : R,
-C = e.reactions,
+p = e.reactions,
 A = !0;
   if (!M(e)) {
 let t = _.Z.getMessage(e.channel_id, e.id);
-A = !e.isSearchHit && null != t, C = null !== (s = null == t ? void 0 : t.reactions) && void 0 !== s ? s : C;
+A = !e.isSearchHit && null != t, p = null !== (s = null == t ? void 0 : t.reactions) && void 0 !== s ? s : p;
   }
   let O = T.size > 0,
-x = C.some(e => !0 === e.me_vote),
+x = p.some(e => !0 === e.me_vote),
 v = !f && x,
-L = v || m || p,
+L = v || m || C,
 Z = E && A && (!x || f || L),
 P = null === (i = d.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
 b = null != P ? u.ZP.getSelfMember(P) : null,
@@ -124,11 +124,11 @@ isEditingVote: f,
 isExpired: m,
 isInteractive: A,
 isSent: E,
-reactions: C,
+reactions: p,
 selectedAnswerIds: T,
 submitting: N,
 tapShouldOpenVotersModal: L,
-showResults: p
+showResults: C
   };
 }
 
@@ -148,7 +148,7 @@ return;
 return;
   let S = s.Z.useReducedMotion,
 R = null === (o = d.Z.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
-M = (0, p.E)(g, R),
+M = (0, C.E)(g, R),
 L = h.answers,
 Z = h.layout_type,
 P = v(e, t, {
@@ -338,7 +338,7 @@ answersInteraction: (0, i.EQ)({
 }, () => f.Y7.CHECKBOXES).exhaustive(),
 answerTapAccessibilityLabel: W ? $ : void 0,
 layoutType: Z,
-resources: (0, C.Z)({
+resources: (0, p.Z)({
   theme: u,
   layoutType: Z
 }),

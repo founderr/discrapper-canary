@@ -15,8 +15,8 @@ var i, a = n(735250),
   h = n(592745),
   N = n(952164),
   f = n(768419),
-  p = n(456432),
-  C = n(103575),
+  C = n(456432),
+  p = n(103575),
   g = n(789407),
   S = n(598077),
   A = n(757266),
@@ -154,7 +154,7 @@ super(...e), B(this, 'state', {
     message: s,
     analyticsLocations: r
   } = this.props;
-  return null == n ? null : (0, a.jsx)(C.Z, {
+  return null == n ? null : (0, a.jsx)(p.Z, {
     ...t,
     location: 'ActivityInviteEmbed',
     userId: e.id,
@@ -168,7 +168,7 @@ super(...e), B(this, 'state', {
     channelId: t,
     guildId: n
   } = this.props;
-  return (0, a.jsx)(p.Z, {
+  return (0, a.jsx)(C.Z, {
     guildId: null != n ? n : void 0,
     channelId: t,
     source: 'Invite Embed',

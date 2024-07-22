@@ -25,7 +25,7 @@ return n < 0 ? e : [
   ...e.slice(n + 1)
 ];
   };
-class p extends a.PureComponent {
+class C extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
 let n = e.message.reactions.length;
 return 0 === t.reactionsCount && n > 0 ? {
@@ -45,8 +45,8 @@ let {
   isPendingMember: h,
   isForumToolbar: N,
   channel: f,
-  className: p,
-  forceAddReactions: C,
+  className: C,
+  forceAddReactions: p,
   reactionClassName: g,
   useChatFontScaling: S,
   forceHideReactionCreates: A,
@@ -56,9 +56,9 @@ let {
 } = this.props, {
   disableTransitionAppear: M
 } = this.state, v = S ? T : m, L = x > 0;
-return L || C ? (0, i.jsxs)(l.W, {
+return L || p ? (0, i.jsxs)(l.W, {
   component: 'div',
-  className: r()(v.reactions, p),
+  className: r()(v.reactions, C),
   transitionAppear: !M,
   role: 'group',
   transitionLeave: !1,
@@ -103,8 +103,8 @@ return L || C ? (0, i.jsxs)(l.W, {
       useChatFontScaling: S,
       isHovered: this.state.isHovered,
       className: r()({
-        [v.forceShow]: C && !L,
-        [v.forceShowLook]: C
+        [v.forceShow]: p && !L,
+        [v.forceShowLook]: p
       })
     })
   ]
@@ -157,7 +157,7 @@ s,
 n,
 t.reactions
   ]);
-  return (0, i.jsx)(p, {
+  return (0, i.jsx)(C, {
 ...e,
 visibleReactionsCount: o,
 combinedReactions: r,

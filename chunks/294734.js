@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(906467),
   N = n(430824),
   f = n(496675),
-  p = n(699516),
-  C = n(594174),
+  C = n(699516),
+  p = n(594174),
   g = n(100604),
   S = n(694784),
   A = n(39154),
@@ -58,12 +58,12 @@ n,
 u
   ]), E = (0, r.e7)([
 T.Z,
-C.default,
-p.Z,
+p.default,
+C.Z,
 f.Z,
 N.Z,
 d.Z
-  ], () => _.getForwardInfo(T.Z, C.default, p.Z, f.Z, N.Z, d.Z).footerInfo, [_], l.Z), I = a.useCallback(() => {
+  ], () => _.getForwardInfo(T.Z, p.default, C.Z, f.Z, N.Z, d.Z).footerInfo, [_], l.Z), I = a.useCallback(() => {
 (0, S.Z)(t);
   }, [t]);
   return null == E ? null : (0, i.jsxs)(c.Clickable, {
@@ -99,8 +99,8 @@ index: l
 n,
 s
   ]), c = m.RS.useSetting(), d = m.NA.useSetting(), N = (0, r.e7)([h.Z], () => h.Z.isDeveloper), f = (0, u.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
-content: p,
-hasSpoilerEmbeds: C
+content: C,
+hasSpoilerEmbeds: p
   } = (0, E.Z)(o, {
 hideSimpleEmbedContent: c && d,
 isInteracting: !1,
@@ -123,7 +123,7 @@ children: [
       (0, i.jsx)(x, {}),
       (0, i.jsx)(_.ZP, {
         message: o,
-        content: p
+        content: C
       }),
       (0, I.Z)({
         channelMessageProps: {
@@ -131,7 +131,7 @@ children: [
           channel: g,
           compact: S
         },
-        hasSpoilerEmbeds: C,
+        hasSpoilerEmbeds: p,
         isInteracting: !1,
         isMessageSnapshot: !0,
         renderThreadAccessory: !1

@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(153209),
   N = n(349643),
   f = n(881591),
-  p = n(903672),
-  C = n(946443),
+  C = n(903672),
+  p = n(946443),
   g = n(264233),
   S = n(981631),
   A = n(689938);
@@ -125,7 +125,7 @@ children: (0, i.jsx)(o.Popout, {
         setTab: b,
         badgeState: O,
         closePopout: U
-      }) : P === l.X.MENTIONS ? (0, i.jsx)(p.Z, {
+      }) : P === l.X.MENTIONS ? (0, i.jsx)(C.Z, {
         setTab: b,
         onJump: w,
         badgeState: O,
@@ -143,12 +143,12 @@ children: (0, i.jsx)(o.Popout, {
         onJump: w,
         closePopout: U
       }) : (0, i.jsx)(s.SV, {
-        fallback: (0, i.jsx)(C.h, {
+        fallback: (0, i.jsx)(p.h, {
           setTab: b,
           closePopout: U,
           badgeState: O
         }),
-        children: (0, i.jsx)(C.Z, {
+        children: (0, i.jsx)(p.Z, {
           setTab: b,
           onJump: w,
           showTutorial: D,

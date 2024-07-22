@@ -8,18 +8,18 @@ var t = a(735250),
   p = a(421591),
   _ = a(314734),
   l = a(689938),
-  b = a(608305);
+  C = a(608305);
 n.default = o.memo(function(e) {
   let {
 channel: n,
 ...a
-  } = e, f = (0, i.e7)([c.Z], () => c.Z.shouldShowModal());
+  } = e, s = (0, i.e7)([c.Z], () => c.Z.shouldShowModal());
   return o.useEffect(() => {
-!f && (0, r.closeModal)(_.e9);
+!s && (0, r.closeModal)(_.e9);
   }), (0, t.jsx)('span', {
 style: _.u$,
 children: (0, t.jsx)(r.ModalRoot, {
-  className: b.root,
+  className: C.root,
   'aria-label': l.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE,
   ...a,
   children: (0, t.jsx)(p.Z, {

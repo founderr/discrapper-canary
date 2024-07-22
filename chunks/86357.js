@@ -24,7 +24,7 @@ return (0, u.jsxs)('div', {
   ]
 });
   },
-  p = e => {
+  C = e => {
 let {
   sku: t,
   className: n
@@ -41,7 +41,7 @@ return (0, u.jsxs)('div', {
   ]
 });
   },
-  C = e => {
+  p = e => {
 let {
   sku: t,
   className: n
@@ -79,7 +79,7 @@ let {
 return (0, u.jsxs)('div', {
   className: I()(N.row, n),
   children: [
-    (0, u.jsx)(C, {
+    (0, u.jsx)(p, {
       sku: t
     }),
     (0, u.jsx)(g, {
@@ -136,7 +136,7 @@ switch (e) {
       className: I()(t, n)
     });
   case 3:
-    return (0, u.jsx)(p, {
+    return (0, u.jsx)(C, {
       sku: i,
       className: I()(t, n)
     });
@@ -163,7 +163,7 @@ switch (e) {
       className: I()(t)
     });
   case 3:
-    return (0, u.jsx)(p, {
+    return (0, u.jsx)(C, {
       sku: n,
       className: I()(N.directoryHeroPricePremium, t)
     });
@@ -198,7 +198,7 @@ switch (e) {
             (0, u.jsx)(S, {
               sku: i
             }),
-            (0, u.jsx)(C, {
+            (0, u.jsx)(p, {
               sku: i
             })
           ]

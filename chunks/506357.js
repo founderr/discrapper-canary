@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return C;
+return p;
   }
 });
 var i = n(735250),
@@ -20,10 +20,10 @@ var i = n(735250),
   h = n(981631),
   N = n(176505),
   f = n(689938),
-  p = n(985343);
+  C = n(985343);
 
-function C(e) {
-  var t, C;
+function p(e) {
+  var t, p;
   let {
 onDismiss: g
   } = e, S = (0, s.e7)([_.Z], () => _.Z.getGuildId()), A = (0, s.e7)([u.Z], () => null != S ? u.Z.getChannelId(S) : null, [S]), R = null != S ? S : null, O = (0, s.e7)([d.Z], () => null != R ? d.Z.getGuild(R) : null, [R]), {
@@ -57,14 +57,14 @@ return null;
   });
 },
 b = (0, i.jsx)(l.Z, {
-  className: p.guildIcon,
+  className: C.guildIcon,
   guild: O,
   size: l.Z.Sizes.MINI
 }),
 D = (0, T.OY)(M, O.name);
-  if (null != (null !== (C = M.dmsDisabledUntil) && void 0 !== C ? C : M.invitesDisabledUntil) && v)
+  if (null != (null !== (p = M.dmsDisabledUntil) && void 0 !== p ? p : M.invitesDisabledUntil) && v)
 return (0, i.jsxs)(r.Notice, {
-  className: p.notice,
+  className: C.notice,
   color: r.NoticeColors.NEUTRAL,
   children: [
     (0, i.jsx)(r.NoticeCloseButton, {
@@ -74,10 +74,10 @@ return (0, i.jsxs)(r.Notice, {
     b,
     D,
     (0, i.jsx)(r.NoticeButton, {
-      className: p.actionButton,
+      className: C.actionButton,
       onClick: () => P(!1),
       children: (0, i.jsxs)('div', {
-        className: p.actionButtonInner,
+        className: C.actionButtonInner,
         children: [
           (0, i.jsx)(r.LockIcon, {
             size: 'xs',
@@ -100,7 +100,7 @@ return (0, i.jsxs)(r.Notice, {
 }),
 U = L && A === N.oC.MEMBER_SAFETY;
   return (0, i.jsxs)(r.Notice, {
-className: p.notice,
+className: C.notice,
 color: r.NoticeColors.WARNING,
 children: [
   (0, i.jsx)(r.NoticeCloseButton, {
@@ -110,10 +110,10 @@ children: [
   b,
   j,
   !U && (0, i.jsx)(r.NoticeButton, {
-    className: p.actionButton,
+    className: C.actionButton,
     onClick: () => P(!0),
     children: (0, i.jsx)('div', {
-      className: p.actionButtonInner,
+      className: C.actionButtonInner,
       children: (0, i.jsx)('span', {
         children: f.Z.Messages.GUILD_ANTIRAID_NAGBAR_ACTION_VIEW
       })

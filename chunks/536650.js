@@ -45,13 +45,13 @@ return null !== (n = null === (e = (0, d.k8)({
   }, [
 v,
 A
-  ]), P = E(h), x = E(f), T = l.useCallback(() => {
+  ]), x = E(h), P = E(f), T = l.useCallback(() => {
 var e, n, t, i, l, r, s, o, c;
 let u = _.current,
   d = h.current,
   m = N.current,
-  p = parseInt(null !== (e = null == P ? void 0 : P.height) && void 0 !== e ? e : ''),
-  E = parseInt(null !== (n = null == x ? void 0 : x.height) && void 0 !== n ? n : '');
+  p = parseInt(null !== (e = null == x ? void 0 : x.height) && void 0 !== e ? e : ''),
+  E = parseInt(null !== (n = null == P ? void 0 : P.height) && void 0 !== n ? n : '');
 if (null != u && null != d && null != m && !isNaN(p) && !isNaN(E)) {
   ;
   let e = null !== (t = u.scrollTop) && void 0 !== t ? t : 0,
@@ -65,10 +65,10 @@ if (null != u && null != d && null != m && !isNaN(p) && !isNaN(E)) {
   }, [
 I,
 v,
-null == x ? void 0 : x.height,
+null == P ? void 0 : P.height,
 A,
 _,
-null == P ? void 0 : P.height
+null == x ? void 0 : x.height
   ]);
   return l.useEffect(() => {
 T();

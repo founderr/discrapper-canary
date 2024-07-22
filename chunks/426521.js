@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(833592),
   N = n(497089),
   f = n(178480),
-  p = n(418316),
-  C = n(526146),
+  C = n(418316),
+  p = n(526146),
   g = n(400565),
   S = n(148789),
   A = n(11825),
@@ -104,7 +104,7 @@ let {
   ackedBeforeId: u
 } = e, {
   analyticsLocations: _
-} = (0, l.ZP)(), E = (0, C.I)(r, u), O = a.useCallback(async () => {
+} = (0, l.ZP)(), E = (0, p.I)(r, u), O = a.useCallback(async () => {
   if (!E && (0, h.wt)(r), null != r.item_enum && r.item_enum === N.AM.FIND_FRIENDS) {
     (0, s.openModalLazy)(async () => {
       let {
@@ -156,7 +156,7 @@ r.type === N.O7.INCOMING_FRIEND_REQUESTS && null != r.other_user && (M = (0, i.j
   userId: r.other_user.id
 }));
 let v = null != r.local_id,
-  b = (0, p.Z)(r);
+  b = (0, C.Z)(r);
 return (0, i.jsxs)('div', {
   className: x.row,
   children: [
