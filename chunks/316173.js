@@ -49,7 +49,7 @@ children: [
     className: h.icon
   }),
   E.Z.Messages.DEV_NOTICE_STAGING.format({
-    buildNumber: '311565'
+    buildNumber: '311670'
   }),
   (0, i.jsx)(g, {})
 ]

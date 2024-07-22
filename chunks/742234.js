@@ -19,7 +19,7 @@ analyticsLocation: M,
 ...T
   } = E;
   return (0, a.jsx)(t.Z, {
-artURL: e(230321),
+artURL: e(677531),
 type: o.cd.CLIENT_THEMES_UPSELL,
 title: c.Z.Messages.PREMIUM_UPSELL_FEATURE_CLIENT_THEMES_TITLE,
 body: c.Z.Messages.PREMIUM_UPSELL_FEATURE_CLIENT_THEMES_DESCRIPTION,

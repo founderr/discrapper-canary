@@ -78,7 +78,7 @@ isScrollCloseToBottom: o
 className: w.container,
 children: [
   M ? (0, i.jsx)(Y, {}) : null,
-  (0, i.jsx)(z, {
+  (0, i.jsx)(X, {
     searchQuery: a,
     setSearchQuery: r,
     placeholder: f ? B.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : B.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
@@ -95,7 +95,7 @@ children: [
       isScrollCloseToBottom: o
     }) : (0, i.jsxs)('div', {
       children: [
-        _ && (0, i.jsx)(X, {
+        _ && (0, i.jsx)(z, {
           channel: n,
           entrypoint: t,
           onEmptyState: C
@@ -140,7 +140,7 @@ children: [
   });
 }
 
-function z(e) {
+function X(e) {
   let {
 searchQuery: n,
 setSearchQuery: t,
@@ -200,7 +200,7 @@ children: (0, i.jsx)(u.SearchBar, {
   });
 }
 
-function X(e) {
+function z(e) {
   let {
 channel: n,
 entrypoint: t,
