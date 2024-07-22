@@ -2,6 +2,8 @@ e.exports = {
   textXsNormal: 'textXsNormal_ae1fa2',
   textEllipsis: 'textEllipsis_ae1fa2',
   card: 'card_ae1fa2',
+  header: 'header_ae1fa2',
+  platformIcon: 'platformIcon_ae1fa2',
   body: 'body_ae1fa2',
   content: 'content_ae1fa2',
   fullSize: 'fullSize_ae1fa2',
@@ -22,8 +24,5 @@ e.exports = {
   voiceChannelDetails: 'voiceChannelDetails_ae1fa2',
   voiceChannelInfo: 'voiceChannelInfo_ae1fa2',
   voiceChannelDivider: 'voiceChannelDivider_ae1fa2',
-  timeBar: 'timeBar_ae1fa2',
-  platformIcon: 'platformIcon_ae1fa2',
-  biteSize: 'biteSize_ae1fa2',
-  panel: 'panel_ae1fa2'
+  timeBar: 'timeBar_ae1fa2'
 };
