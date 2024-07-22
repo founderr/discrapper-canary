@@ -13,7 +13,7 @@ codeBase64: t,
 chunkSize: n,
 desiredLength: s
   } = e, i = o.useMemo(() => {
-if (null == t)
+if (null == t || '' === t)
   return null;
 let e = r.toByteArray(t),
   o = (0, a.Dq)(e, s, n);
@@ -27,7 +27,7 @@ n,
 t,
 s
   ]);
-  if (null != t && null == i)
+  if (null != t && '' !== t && null == i)
 throw Error('[useReadableSecureFramesCode] Failed to parse base 64 code.');
   return i;
 }
