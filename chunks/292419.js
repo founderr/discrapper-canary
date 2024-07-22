@@ -195,6 +195,8 @@ switch (t.type) {
         spacing: null !== (T = t.spacing) && void 0 !== T ? T : r.US.SMALL
     };
   case r.re.CONTENT_INVENTORY_ENTRY:
+    if (null == t.content_inventory_entry)
+      return null;
     return {
       type: r.re.CONTENT_INVENTORY_ENTRY,
         id: p(i),
