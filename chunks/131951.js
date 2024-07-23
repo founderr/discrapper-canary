@@ -779,9 +779,7 @@ eO.on(m.aB.Connection, e => {
   [em.AN.VIDEO]: eO.supports(em.AN.VIDEO),
   [em.AN.DESKTOP_CAPTURE]: eO.supports(em.AN.DESKTOP_CAPTURE),
   [em.AN.HYBRID_VIDEO]: eO.supports(em.AN.HYBRID_VIDEO)
-}, this.waitFor(ea.default, eo.Z, el.Z, eu.Z, ec.Z, b.ZP, z.Z.storage, X.Z, D.Z, O.Z), eO.setSidechainCompression(Z.Z.getCurrentConfig({
-  location: 'MediaEngineStore.initialize'
-}).enableSidechainCompression);
+}, this.waitFor(ea.default, eo.Z, el.Z, eu.Z, ec.Z, b.ZP, z.Z.storage, X.Z, D.Z, O.Z);
   }
   supports(e) {
 return eO.supports(e);
@@ -1145,7 +1143,15 @@ let {
 return t.reduce((e, t) => i === t.sessionId ? (eU = t.mute || t.suppress, eG = t.deaf, eO.eachConnection(te), tt(!(null != t.guildId && null != t.channelId && null != eQ && eQ !== t.channelId) && ek), eQ = t.channelId, !0) : (!__OVERLAY__ && t.userId === ea.default.getId() && null == ec.Z.getChannelId() && tt(!1, null), e), !1);
   },
   CONNECTION_OPEN: function(e) {
-i = e.sessionId, eU = !1, eG = !1, (0, q.R)() && tE();
+i = e.sessionId, eU = !1, eG = !1;
+let {
+  enableSidechainCompression: t
+} = Z.Z.getCurrentConfig({
+  location: 'handleConnectionOpen'
+}, {
+  autoTrackExposure: !1
+});
+eO.setSidechainCompression(t), (0, q.R)() && tE();
   },
   CONNECTION_CLOSED: function() {
 i = null;
