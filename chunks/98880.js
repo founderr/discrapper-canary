@@ -3,13 +3,13 @@ t.d(n, {
 return i;
   },
   cG: function() {
-return H;
+return B;
   },
   kA: function() {
-return U;
+return k;
   },
   qR: function() {
-return D;
+return w;
   }
 }), t(47120), t(411104);
 var i, l, a = t(735250),
@@ -45,66 +45,130 @@ application: n,
 look: t = 'large_banner',
 isPartner: i,
 onClick: l,
-bannerImageStyle: s,
-enableVideoBanner: u = !0,
-children: d,
-sectionName: m,
-resultsPosition: p,
-tracksImpression: _ = !0
+bannerImageStyle: r,
+enableVideoBanner: s = !0,
+children: o,
+sectionName: c,
+resultsPosition: u,
+tracksImpression: d = !0,
+disabled: m = !1
+  } = e;
+  return (0, a.jsx)(j, {
+application: n,
+onClick: l,
+sectionName: c,
+resultsPosition: u,
+disabled: m,
+tracksImpression: d,
+containerStyle: 'icon' === t ? R.iconCard : void 0,
+children: 'icon' === t ? (0, a.jsx)(O, {
+  application: n
+}) : (0, a.jsx)(b, {
+  application: n,
+  look: t,
+  isPartner: i,
+  bannerImageStyle: r,
+  enableVideoBanner: s,
+  children: o
+})
+  });
+}
+
+function j(e) {
+  let {
+application: n,
+onClick: t,
+children: i,
+sectionName: l,
+resultsPosition: s,
+tracksImpression: u,
+disabled: d,
+containerStyle: m
   } = e, {
-iconURL: A,
-name: h,
-description: N
+name: p,
+description: _
   } = r.useMemo(() => (0, C.sl)(n, {
 fakeAppIconURL: M
-  }), [n]), v = (0, E.ZP)(A, ''), {
-trackItemImpressionRef: I
+  }), [n]), {
+trackItemImpressionRef: E
   } = (0, x.Z)({
 applicationId: n.id,
-sectionName: m,
-sectionPosition: p
-  }), [T, S] = r.useState(!1), y = r.useCallback(() => {
-!0 === u && S(!0);
-  }, [u]), j = r.useCallback(() => S(!1), []);
-  return 'icon' === t ? (0, a.jsx)(c.Clickable, {
-innerRef: _ ? e => I.current = e : void 0,
-className: o()(R.container, R.iconCard),
-onClick: l,
+sectionName: l,
+sectionPosition: s
+  }), A = r.useMemo(() => {
+let e = d ? R.containerDisabled : R.container;
+return o()(e, m);
+  }, [
+m,
+d
+  ]);
+  return d ? (0, a.jsx)('div', {
+ref: u ? E : void 0,
+className: A,
+children: i
+  }) : (0, a.jsx)(c.Clickable, {
+innerRef: u ? E : void 0,
+className: A,
+onClick: t,
 'aria-label': g.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
-  applicationName: h,
-  applicationDescription: N
+  applicationName: p,
+  applicationDescription: _
 }),
-children: (0, a.jsx)(P.Z, {
-  src: A,
-  className: R.iconCard,
-  'aria-hidden': !0,
-  rendersPlaceholder: !0
-})
-  }) : (0, a.jsxs)(c.Clickable, {
-innerRef: _ ? e => I.current = e : void 0,
-className: R.container,
-onClick: l,
-'aria-label': g.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
-  applicationName: h,
-  applicationDescription: N
-}),
+children: i
+  });
+}
+
+function O(e) {
+  let {
+application: n
+  } = e, {
+iconURL: t
+  } = r.useMemo(() => (0, C.sl)(n, {
+fakeAppIconURL: M
+  }), [n]);
+  return (0, a.jsx)(P.Z, {
+src: t,
+className: R.iconCard,
+'aria-hidden': !0,
+rendersPlaceholder: !0
+  });
+}
+
+function b(e) {
+  let {
+application: n,
+look: t,
+isPartner: i,
+bannerImageStyle: l,
+enableVideoBanner: s,
+children: u
+  } = e, {
+iconURL: d,
+name: m,
+description: p
+  } = r.useMemo(() => (0, C.sl)(n, {
+fakeAppIconURL: M
+  }), [n]), _ = (0, E.ZP)(d, ''), [A, h] = r.useState(!1), N = r.useCallback(() => {
+!0 === s && h(!0);
+  }, [s]), v = r.useCallback(() => h(!1), []);
+  return (0, a.jsxs)(a.Fragment, {
 children: [
   (0, a.jsxs)('div', {
-    onMouseEnter: y,
-    onFocus: y,
-    onMouseLeave: j,
-    onBlur: j,
+    onMouseEnter: N,
+    onFocus: N,
+    onMouseLeave: v,
+    onBlur: v,
     className: o()(R.bannerImageContainer, {
       [R.mediumBanner]: 'medium_banner' === t,
       [R.largeBanner]: 'large_banner' === t
     }),
     children: [
       (0, a.jsx)('span', {
-        className: s,
-        children: (0, a.jsx)(O, {
+        className: l,
+        children: (0, a.jsx)(Z, {
           application: n,
-          fallbackColor: v,
-          showVideo: T
+          fallbackColor: _,
+          showVideo: A
         })
       }),
       i && (0, a.jsx)('div', {
@@ -118,7 +182,7 @@ children: [
       }),
       'large_banner' === t || 'medium_banner' === t ? (0, a.jsx)('div', {
         className: R.bannerImageChildContainer,
-        children: d
+        children: u
       }) : null
     ]
   }),
@@ -126,7 +190,7 @@ children: [
     className: R.appDetailsContainer,
     children: [
       (0, a.jsx)(P.Z, {
-        src: A,
+        src: d,
         className: R.icon,
         'aria-hidden': !0,
         rendersPlaceholder: !0
@@ -138,13 +202,13 @@ children: [
             variant: 'heading-md/semibold',
             color: 'header-primary',
             lineClamp: 1,
-            children: h
+            children: m
           }),
           (0, a.jsx)(c.Text, {
             variant: 'text-sm/normal',
             color: 'text-secondary',
             lineClamp: 1,
-            children: N
+            children: p
           })
         ]
       })
@@ -154,7 +218,7 @@ children: [
   });
 }
 
-function O(e) {
+function Z(e) {
   let {
 application: n,
 fallbackColor: t,
@@ -164,22 +228,22 @@ showVideo: i
 if ((0, C.ye)({
     application: n
   }))
-  return (0, a.jsx)(j, {
+  return (0, a.jsx)(H, {
     application: n,
     showVideo: i
   });
 if (null != n.bot)
-  return (0, a.jsx)(b, {
+  return (0, a.jsx)(U, {
     bot: n.bot,
     fallbackColor: t
   });
   }
-  return (0, a.jsx)(Z, {
+  return (0, a.jsx)(D, {
 fallbackColor: t
   });
 }
 
-function j(e) {
+function H(e) {
   let {
 application: n,
 showVideo: t
@@ -221,7 +285,7 @@ children: [
   });
 }
 
-function b(e) {
+function U(e) {
   let {
 bot: n,
 fallbackColor: t
@@ -231,7 +295,7 @@ banner: n.banner,
 canAnimate: !1,
 size: 600
   });
-  return null == i ? (0, a.jsx)(Z, {
+  return null == i ? (0, a.jsx)(D, {
 fallbackColor: t
   }) : (0, a.jsx)('img', {
 src: i,
@@ -240,7 +304,7 @@ className: R.bannerImage
   });
 }
 
-function Z(e) {
+function D(e) {
   let {
 fallbackColor: n
   } = e;
@@ -252,7 +316,7 @@ style: {
   });
 }
 
-function H(e) {
+function B(e) {
   let {
 application: n,
 sectionName: t,
@@ -288,15 +352,15 @@ t
   ]);
 }
 
-function U(e) {
-  let n = H(e);
+function k(e) {
+  let n = B(e);
   return (0, a.jsx)(y, {
 ...e,
 onClick: n
   });
 }
 
-function D(e) {
+function w(e) {
   let {
 channel: n,
 application: t,
@@ -320,7 +384,7 @@ return r ? (0, a.jsx)(y, {
   application: t,
   onClick: o,
   enableVideoBanner: !0
-}) : (0, a.jsx)(U, {
+}) : (0, a.jsx)(k, {
   ...s,
   sectionName: l,
   application: t,
@@ -335,6 +399,7 @@ onClick: e => {
 },
 bannerImageStyle: R.darkenBannerImage,
 enableVideoBanner: !1,
+disabled: !0,
 children: (0, a.jsx)('div', {
   className: R.voiceLauncherAppCardContainer,
   children: (0, a.jsx)(c.Button, {
@@ -344,6 +409,10 @@ children: (0, a.jsx)('div', {
     color: m,
     disabled: !1,
     onClick: o,
+    'aria-label': g.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
+      buttonText: p,
+      applicationName: t.name
+    }),
     children: p
   })
 })
