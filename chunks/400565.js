@@ -51,20 +51,23 @@ else if (null != t.other_user) {
     src: l.VH[(0, l.q7)(t)]
   });
 let d = (0, l.Vi)(t.type);
-return (0, i.jsxs)(r.ZP, {
-  mask: null == d ? r.QS.AVATAR_DEFAULT : r.QS.AVATAR_STATUS_ROUND_16,
-  width: 40,
-  height: 40,
-  rightOverhang: 3,
-  bottomOverhang: 3,
-  className: o.mask,
+return (0, i.jsxs)('div', {
+  className: o.container,
   children: [
-    (0, i.jsx)('div', {
-      className: o.container,
-      style: a ? void 0 : {
-        backgroundColor: (0, l.Vu)(t)
-      },
-      children: n
+    (0, i.jsx)(r.ZP, {
+      mask: null == d ? r.QS.AVATAR_DEFAULT : r.QS.AVATAR_STATUS_ROUND_16,
+      width: 40,
+      height: 40,
+      rightOverhang: 3,
+      bottomOverhang: 3,
+      className: o.mask,
+      children: (0, i.jsx)('div', {
+        className: o.imageContainer,
+        style: a ? void 0 : {
+          backgroundColor: (0, l.Vu)(t)
+        },
+        children: n
+      })
     }),
     (0, i.jsx)(c, {
       mask: d
