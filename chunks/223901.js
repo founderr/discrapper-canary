@@ -1,33 +1,33 @@
-s.r(e), s.d(e, {
+t.r(a), t.d(a, {
   default: function() {
 return d;
   }
 });
-var o = s(735250),
-  r = s(470079),
-  t = s(481060),
-  n = s(91159),
-  i = s(593130),
-  c = s(689938),
-  l = s(905609);
+var n = t(735250),
+  c = t(470079),
+  r = t(481060),
+  o = t(91159),
+  s = t(593130),
+  i = t(689938),
+  b = t(711406);
 
-function d(a) {
+function d(e) {
   let {
-channel: e,
-onClose: s,
+channel: a,
+onClose: t,
 transitionState: d
-  } = a;
-  return r.useEffect(() => {
-(0, n.U4)();
-  }, []), (0, o.jsx)(t.ModalRoot, {
-className: l.modal,
+  } = e;
+  return c.useEffect(() => {
+(0, o.U4)();
+  }, []), (0, n.jsx)(r.ModalRoot, {
+className: b.modal,
 transitionState: d,
-'aria-label': c.Z.Messages.THREADS,
-size: t.ModalSize.DYNAMIC,
-children: (0, o.jsx)(i.Z, {
-  className: l.browser,
-  channel: e,
-  onClose: s
+'aria-label': i.Z.Messages.THREADS,
+size: r.ModalSize.DYNAMIC,
+children: (0, n.jsx)(s.Z, {
+  className: b.browser,
+  channel: a,
+  onClose: t
 })
   });
 }

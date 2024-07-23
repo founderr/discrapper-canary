@@ -15,15 +15,15 @@ var a = n(120356),
   u = n(768943),
   _ = n(43690),
   E = n(695346),
-  I = n(592125),
-  m = n(655354),
+  m = n(592125),
+  I = n(655354),
   T = n(324081),
   h = n(240126),
   N = n(791914),
   f = n(981631),
   p = n(689938),
-  C = n(166311),
-  g = n(699723);
+  C = n(754869),
+  g = n(674069);
 let S = {
   offset: {
 left: 4,
@@ -56,7 +56,7 @@ children: [
 function R(e) {
   let {
 savedMessage: t
-  } = e, n = (0, r.e7)([I.Z], () => I.Z.getChannel(t.saveData.channelId)), a = () => {
+  } = e, n = (0, r.e7)([m.Z], () => m.Z.getChannel(t.saveData.channelId)), a = () => {
 (0, d.uL)(f.Z5c.CHANNEL(null == n ? void 0 : n.getGuildId(), t.saveData.channelId, t.saveData.messageId));
   };
   return (0, i.jsx)('div', {
@@ -80,7 +80,7 @@ children: null != n && null != t.message ? (0, i.jsxs)(i.Fragment, {
     (0, i.jsxs)('div', {
       className: s()(g.messageContainer, C.unloadedMessage),
       children: [
-        (0, i.jsx)(m.Z, {
+        (0, i.jsx)(I.Z, {
           className: g.jumpMessageButton,
           onJump: a
         }),

@@ -20,8 +20,8 @@ fullWidth: n = !1,
 size: u = s.Button.Sizes.LARGE,
 color: _,
 customDisabledColor: E,
-hideNotLaunchable: I,
-tooltipPosition: m,
+hideNotLaunchable: m,
+tooltipPosition: I,
 onClick: T,
 className: h,
 source: N,
@@ -32,7 +32,7 @@ fullWidth: n,
 size: u,
 color: _,
 customDisabledColor: E,
-tooltipPosition: m,
+tooltipPosition: I,
 onClick: T,
 className: h,
 hover: f,
@@ -46,7 +46,7 @@ source: N
 children: 'deprecated!'
   }) : (0, i.jsx)(c.Z, {
 ...C,
-hideNotLaunchable: I,
+hideNotLaunchable: m,
 applicationId: t.id
   });
 }

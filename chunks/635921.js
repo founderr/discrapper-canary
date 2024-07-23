@@ -20,8 +20,8 @@ var a = n(120356),
   m = n(409100),
   N = n(474936),
   f = n(689938),
-  h = n(951268);
-let S = e => {
+  S = n(738527);
+let h = e => {
 let {
   inOfferExperience: t,
   inTrial: n,
@@ -29,24 +29,24 @@ let {
   buttonClassName: i
 } = e, l = null;
 !t && (l = (0, s.jsxs)('div', {
-  className: h.buttonContainer,
+  className: S.buttonContainer,
   children: [
     (0, s.jsx)(m.Z, {
       forceInverted: !0,
-      className: r()(h.button, i),
+      className: r()(S.button, i),
       subscriptionTier: a
     }),
     (0, s.jsx)(A.Z, {
-      className: r()(h.button, i),
+      className: r()(S.button, i),
       forceWhite: !0
     })
   ]
 }));
 let o = null;
 return n && (o = (0, s.jsx)('div', {
-  className: h.buttonContainer,
+  className: S.buttonContainer,
   children: (0, s.jsx)(A.Z, {
-    className: r()(h.button, i),
+    className: r()(S.button, i),
     forceWhite: !0
   })
 })), (0, s.jsxs)(s.Fragment, {
@@ -64,16 +64,16 @@ let {
 return (0, s.jsxs)(s.Fragment, {
   children: [
     (0, s.jsx)(d.A, {
-      className: t ? h.fullscreenSparkleStar1 : h.settingsSparkleStar1
+      className: t ? S.fullscreenSparkleStar1 : S.settingsSparkleStar1
     }),
     (0, s.jsx)(d.A, {
-      className: t ? h.fullscreenSparkleStar2 : h.settingsSparkleStar2
+      className: t ? S.fullscreenSparkleStar2 : S.settingsSparkleStar2
     }),
     (0, s.jsx)(d.A, {
-      className: t ? h.fullscreenSparkleStar3 : h.settingsSparkleStar3
+      className: t ? S.fullscreenSparkleStar3 : S.settingsSparkleStar3
     }),
     (0, s.jsx)(d.A, {
-      className: t ? h.fullscreenSparkleStar4 : h.settingsSparkleStar4
+      className: t ? S.fullscreenSparkleStar4 : S.settingsSparkleStar4
     })
   ]
 });
@@ -87,8 +87,8 @@ withBottomMargin: n = !0
   return (0, s.jsx)(l.Text, {
 variant: t,
 color: 'always-white',
-className: r()(h.description, {
-  [h.descriptionBottomMargin]: n
+className: r()(S.description, {
+  [S.descriptionBottomMargin]: n
 }),
 children: f.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
   cheapestMonthlyPrice: a
@@ -116,14 +116,14 @@ autoTrackExposure: !1
   return (0, s.jsx)(c.Gt, {
 value: O,
 children: (0, s.jsxs)('div', {
-  className: r()(h.container, n, {
-    [h.settingsContainer]: !t,
-    [h.affinityHeight]: !t && U
+  className: r()(S.container, n, {
+    [S.settingsContainer]: !t,
+    [S.affinityHeight]: !t && U
   }),
   'data-testid': 'v2-marketing-page-hero-header',
   children: [
     (0, s.jsxs)('div', {
-      className: t ? h.fullscreenTextContainer : h.settingsTextContainer,
+      className: t ? S.fullscreenTextContainer : S.settingsTextContainer,
       children: [
         (0, s.jsx)(l.Heading, {
           variant: t ? 'display-lg' : 'display-md',
@@ -133,19 +133,19 @@ children: (0, s.jsxs)('div', {
         j ? (0, s.jsx)(p.Z, {
           referrer: D
         }) : U ? (0, s.jsx)('div', {
-          className: r()(h.affinityDescription),
+          className: r()(S.affinityDescription),
           children: (0, s.jsx)(C.Z, {
             textColor: 'always-white',
             smallerText: !t
           })
         }) : (0, s.jsx)(x, {}),
         v ? (0, s.jsx)('div', {
-          className: h.buttonContainer,
+          className: S.buttonContainer,
           children: (0, s.jsx)(A.Z, {
-            className: r()(h.button, a),
+            className: r()(S.button, a),
             forceWhite: !0
           })
-        }) : m ? null : (0, s.jsx)(S, {
+        }) : m ? null : (0, s.jsx)(h, {
           subscriptionTier: d,
           inOfferExperience: L,
           inTrial: P,

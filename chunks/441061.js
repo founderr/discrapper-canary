@@ -1,22 +1,22 @@
 n.d(t, {
   Z: function() {
-return c;
+return d;
   }
 });
 var i = n(735250);
 n(470079);
-var a = n(442837),
-  s = n(481060),
-  l = n(475179),
-  r = n(358221),
-  o = n(689938);
+var r = n(442837),
+  a = n(481060),
+  o = n(475179),
+  s = n(358221),
+  u = n(689938);
 
-function c(e) {
-  let t = (0, a.e7)([r.Z], () => r.Z.getVoiceParticipantsHidden(e));
-  return (0, i.jsx)(s.MenuCheckboxItem, {
+function d(e) {
+  let t = (0, r.e7)([s.Z], () => s.Z.getVoiceParticipantsHidden(e));
+  return (0, i.jsx)(a.MenuCheckboxItem, {
 id: 'no-video-hide',
-label: o.Z.Messages.STREAM_SHOW_NON_VIDEO,
+label: u.Z.Messages.STREAM_SHOW_NON_VIDEO,
 checked: !t,
-action: () => l.Z.toggleVoiceParticipantsHidden(e, !t)
+action: () => o.Z.toggleVoiceParticipantsHidden(e, !t)
   });
 }

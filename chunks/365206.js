@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 });
 var i = n(735250);
@@ -88,7 +88,7 @@ children: [
   });
 }
 
-function I(e) {
+function m(e) {
   let {
 isExpired: t,
 myAvatarUrl: n,

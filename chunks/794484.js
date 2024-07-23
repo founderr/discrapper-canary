@@ -13,7 +13,7 @@ var s = n(735250),
   T = n(391110),
   I = n(75077),
   R = n(320319),
-  C = n(755878);
+  C = n(126274);
 let g = e => {
   let {
 showAllPerksButton: t,
@@ -53,7 +53,7 @@ leftAlignHeaders: A = !1,
 showAllPerksButton: m,
 headerClassname: N,
 isFullScreen: f = !0
-  } = e, h = a.useRef(null), S = (0, _.yQ)(), M = (0, u.Ag)(S), x = (0, c.ZP)('perks-discoverability');
+  } = e, S = a.useRef(null), h = (0, _.yQ)(), M = (0, u.Ag)(h), x = (0, c.ZP)('perks-discoverability');
   (0, u.I2)();
   let b = (0, d.HI)({
   location: T.R0.PERKS_DISCOVERABILITY
@@ -67,7 +67,7 @@ P,
 O,
 M
   ]), a.useEffect(() => {
-let e = h.current;
+let e = S.current;
 if (null == e || !M || !O)
   return;
 let t = requestAnimationFrame(() => {
@@ -79,7 +79,7 @@ return () => {
   cancelAnimationFrame(t), O && P();
 };
   }, [
-h,
+S,
 M,
 O,
 P
@@ -92,7 +92,7 @@ D = (0, I.sP)({
   variant: r,
   shopMarketingVariation: x,
   isFullScreen: f,
-  showTenureCard: null == S ? void 0 : S.showCard,
+  showTenureCard: null == h ? void 0 : h.showCard,
   tileOrderVariant: b,
   isPremiumSubscriber: Z
 }),
@@ -107,7 +107,7 @@ children: [
     environment: G.current
   }),
   (0, s.jsxs)('div', {
-    ref: h,
+    ref: S,
     className: i()(C.section, {
       [C.centerAlignSection]: !A,
       [C.leftAlignSection]: A

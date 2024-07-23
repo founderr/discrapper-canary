@@ -1,47 +1,47 @@
-t(47120);
-var n = t(735250),
-  a = t(470079),
-  i = t(120356),
-  r = t.n(i),
-  o = t(544891),
-  l = t(780384),
-  c = t(481060),
-  d = t(410030),
-  _ = t(63063),
-  E = t(74538),
-  u = t(937615),
-  T = t(230916),
-  I = t(798769),
-  S = t(474936),
-  N = t(981631),
-  C = t(689938),
-  m = t(508388),
-  A = t(982404),
-  h = t(299156);
-s.Z = function(e) {
+s(47120);
+var n = s(735250),
+  a = s(470079),
+  i = s(120356),
+  r = s.n(i),
+  o = s(544891),
+  l = s(780384),
+  c = s(481060),
+  d = s(410030),
+  _ = s(63063),
+  E = s(74538),
+  u = s(937615),
+  T = s(230916),
+  I = s(798769),
+  S = s(474936),
+  N = s(981631),
+  C = s(689938),
+  m = s(956554),
+  A = s(982404),
+  g = s(299156);
+t.Z = function(e) {
   let {
-premiumSubscription: s,
-premiumType: t,
+premiumSubscription: t,
+premiumType: s,
 onClose: i,
-onConfirm: g,
+onConfirm: h,
 userDiscountOffer: O
-  } = e, [p, R] = a.useState(!1), [x, M] = a.useState(!1), D = async e => {
+  } = e, [p, R] = a.useState(!1), [x, M] = a.useState(!1), f = async e => {
 try {
   M(!0), R(!1), await o.tn.post({
     url: N.ANM.USER_OFFER_REDEEM,
     body: {
       user_discount_offer_id: e
     }
-  }), g();
+  }), h();
 } catch (e) {
   R(!0);
 }
 M(!1);
-  }, f = (0, d.ZP)(), P = (0, l.wj)(f) ? A : h, L = (0, T._)(s, S.Xh.PREMIUM_MONTH_TIER_2, O), Z = (0, E.aS)(S.Xh.PREMIUM_MONTH_TIER_2), b = (0, u.T4)(Z.amount, Z.currency);
+  }, D = (0, d.ZP)(), P = (0, l.wj)(D) ? A : g, L = (0, T._)(t, S.Xh.PREMIUM_MONTH_TIER_2, O), b = (0, E.aS)(S.Xh.PREMIUM_MONTH_TIER_2), Z = (0, u.T4)(b.amount, b.currency);
   return null == O ? null : (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsx)(I.Z, {
-    premiumType: t,
+    premiumType: s,
     onClose: i
   }),
   (0, n.jsx)(c.ModalContent, {
@@ -68,7 +68,7 @@ children: [
               children: C.Z.Messages.CHURN_DISCOUNT_CONFIRM_DESCRIPTION.format({
                 percent: O.discount.amount,
                 numMonths: O.discount.user_usage_limit,
-                price: b
+                price: Z
               })
             })
           ]
@@ -82,7 +82,7 @@ children: [
               discountedPrice: L,
               billingPeriod: (0, E.JP)(O.discount.user_usage_limit_interval),
               numMonths: O.discount.user_usage_limit,
-              fullPrice: b,
+              fullPrice: Z,
               helpdeskArticle: _.Z.getArticleURL(N.BhN.PAID_TERMS)
             })
           })
@@ -109,7 +109,7 @@ children: [
             (0, n.jsx)(c.Button, {
               size: c.ButtonSizes.SMALL,
               submitting: x,
-              onClick: () => D(O.id),
+              onClick: () => f(O.id),
               children: C.Z.Messages.CHURN_DISCOUNT_CONFIRM_DISCOUNT
             })
           ]

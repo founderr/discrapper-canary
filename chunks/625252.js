@@ -1,38 +1,38 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
-return h;
+return g;
   }
 });
-var n = t(735250),
-  a = t(470079),
-  i = t(120356),
-  r = t.n(i),
-  o = t(948789),
-  l = t(704215),
-  c = t(780384),
-  d = t(481060),
-  _ = t(37234),
-  E = t(410030),
-  u = t(100527),
-  T = t(605236),
-  I = t(709158),
-  S = t(906739),
-  N = t(981631),
-  C = t(689938),
-  m = t(74242),
-  A = t(66094);
+var n = s(735250),
+  a = s(470079),
+  i = s(120356),
+  r = s.n(i),
+  o = s(948789),
+  l = s(704215),
+  c = s(780384),
+  d = s(481060),
+  _ = s(37234),
+  E = s(410030),
+  u = s(100527),
+  T = s(605236),
+  I = s(709158),
+  S = s(906739),
+  N = s(981631),
+  C = s(689938),
+  m = s(74242),
+  A = s(66094);
 
-function h() {
+function g() {
   let e = (0, I.Z)(u.Z.USER_SETTINGS_GIFT_INVENTORY),
-s = (0, S.Z)(),
-t = (0, c.wj)((0, E.ZP)()),
+t = (0, S.Z)(),
+s = (0, c.wj)((0, E.ZP)()),
 i = a.useMemo(() => ({
-  backgroundImage: 'url('.concat(s, ')')
-}), [s]),
-h = a.useCallback(() => {
+  backgroundImage: 'url('.concat(t, ')')
+}), [t]),
+g = a.useCallback(() => {
   (0, _.xf)(), (0, o.uL)(N.Z5c.QUEST_HOME);
 }, []),
-g = a.useCallback(() => {
+h = a.useCallback(() => {
   (0, T.EW)(l.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME);
 }, []);
   return !e || (0, T.un)(l.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME) ? null : (0, n.jsxs)('div', {
@@ -45,7 +45,7 @@ children: [
       tooltip: C.Z.Messages.CLOSE,
       color: d.CircleIconButtonColors.SECONDARY,
       size: d.CircleIconButtonSizes.SIZE_24,
-      onClick: g,
+      onClick: h,
       icon: (0, n.jsx)(d.CloseSmallIcon, {
         size: 'xs',
         color: 'currentColor',
@@ -78,13 +78,13 @@ children: [
       }),
       (0, n.jsx)(d.Button, {
         size: 'large',
-        color: t ? d.ButtonColors.BRAND : d.ButtonColors.WHITE,
+        color: s ? d.ButtonColors.BRAND : d.ButtonColors.WHITE,
         className: m.button,
-        onClick: h,
+        onClick: g,
         innerClassName: m.innerButton,
         children: (0, n.jsx)(d.Text, {
           variant: 'text-md/medium',
-          color: t ? 'always-white' : 'text-normal',
+          color: s ? 'always-white' : 'text-normal',
           children: C.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_BUTTON
         })
       })

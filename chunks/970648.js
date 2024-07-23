@@ -1,13 +1,13 @@
 n(411104);
 var s = n(772848),
-  r = n(544891),
+  a = n(544891),
   i = n(981631);
-async function a(e) {
+async function r(e) {
   let {
 body: {
   handoff_token: t
 }
-  } = await r.tn.post({
+  } = await a.tn.post({
 url: i.ANM.HANDOFF,
 body: {
   key: e
@@ -23,5 +23,5 @@ t.Z = {
   generateNonce: function() {
 return (0, s.Z)();
   },
-  createHandoffToken: a
+  createHandoffToken: r
 };

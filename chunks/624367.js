@@ -15,8 +15,8 @@ var a = n(613828),
   u = n(906732),
   _ = n(835473),
   E = n(522474),
-  I = n(523746),
-  m = n(592125),
+  m = n(523746),
+  I = n(592125),
   T = n(594174),
   h = n(630388),
   N = n(823379),
@@ -32,7 +32,7 @@ var a = n(613828),
   M = n(701488),
   v = n(981631),
   L = n(689938),
-  Z = n(615010);
+  Z = n(671487);
 let P = (0, f.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 
 function b(e) {
@@ -42,7 +42,7 @@ applicationId: b,
 message: D
   } = e, {
 analyticsLocations: j
-  } = (0, u.ZP)(d.Z.ACTIVITY_BOOKMARK), U = (0, c.O)(), y = D.channel_id, B = (0, s.e7)([m.Z], () => m.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, s.e7)([p.ZP], () => p.ZP.getSelfEmbeddedActivityForChannel(y)), w = (null == F ? void 0 : F.applicationId) === b, [V, H] = (0, _.Z)([
+  } = (0, u.ZP)(d.Z.ACTIVITY_BOOKMARK), U = (0, c.O)(), y = D.channel_id, B = (0, s.e7)([I.Z], () => I.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, s.e7)([p.ZP], () => p.ZP.getSelfEmbeddedActivityForChannel(y)), w = (null == F ? void 0 : F.applicationId) === b, [V, H] = (0, _.Z)([
 b,
 null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : ''
   ]), Y = (0, S.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0), [W] = (0, s.Wu)([p.ZP], () => G ? p.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === b) : [], [
@@ -65,7 +65,7 @@ if (G) {
       analyticsLocations: j
     });
   else {
-    let e = B.isPrivate() && !I.Z.isCallActive(y),
+    let e = B.isPrivate() && !m.Z.isCallActive(y),
       t = () => (0, g.Z)({
         targetApplicationId: b,
         currentEmbeddedApplication: H,

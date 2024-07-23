@@ -20,8 +20,8 @@ var i = n(735250),
   u = n(481060),
   _ = n(668781),
   E = n(904245),
-  I = n(724757),
-  m = n(294218),
+  m = n(724757),
+  I = n(294218),
   T = n(703656),
   h = n(210887),
   N = n(592125),
@@ -34,7 +34,7 @@ var i = n(735250),
   R = n(585483),
   x = n(981631),
   O = n(689938),
-  M = n(928482);
+  M = n(409804);
 
 function v(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -170,13 +170,13 @@ hasMore: s,
 loading: l,
 loadMore: _,
 renderHeader: E,
-renderEmptyState: m,
+renderEmptyState: I,
 renderItem: T,
 getProTip: N,
 scrollerClassName: f,
 className: p,
 listName: v
-  } = e, Z = a.useRef(null), P = (0, I.Z)(v, Z), b = (0, d.e7)([C.Z], () => C.Z.hasNotice()), D = (0, d.e7)([g.Z], () => g.Z.windowSize());
+  } = e, Z = a.useRef(null), P = (0, m.Z)(v, Z), b = (0, d.e7)([C.Z], () => C.Z.hasNotice()), D = (0, d.e7)([g.Z], () => g.Z.windowSize());
   a.useEffect(() => {
 A.default.track(x.rMx.OPEN_POPOUT, {
   type: t
@@ -214,7 +214,7 @@ y = !0;
 className: r()(M.emptyPlaceholder, M.loadingPlaceholder),
 children: (0, i.jsx)(u.Spinner, {})
   }, 'spinner')] : 0 === n.length ? U.push((0, i.jsx)(a.Fragment, {
-children: m(h.Z.theme)
+children: I(h.Z.theme)
   }, 'empty-state')) : (y = !1, U = [], o().each(n, e => {
 U.push(...T(e));
   }));
@@ -233,7 +233,7 @@ children: (0, i.jsx)(u.Button, {
 })
   }) : (0, i.jsx)('div', {
 className: M.scrollingFooterWrap,
-children: m(h.Z.theme)
+children: I(h.Z.theme)
   }));
   let k = null == N ? void 0 : N(),
 G = y && null != k ? (0, i.jsx)('div', {
@@ -301,7 +301,7 @@ hasMore: l,
 loading: o,
 loadMore: c,
 onJump: u,
-canCloseAllMessages: I = !1,
+canCloseAllMessages: m = !1,
 renderHeader: h,
 renderEmptyState: p,
 renderMessage: C,
@@ -372,7 +372,7 @@ renderItem: function(e) {
   return null == n ? [] : (a.push((0, i.jsxs)('div', {
     className: M.messageGroupWrapper,
     children: [
-      (0, i.jsx)(m.Z, {
+      (0, i.jsx)(I.Z, {
         className: M.messageGroupCozy,
         message: t,
         channel: n
@@ -381,7 +381,7 @@ renderItem: function(e) {
         channel: s,
         message: t,
         jumping: L,
-        canCloseAllMessages: I,
+        canCloseAllMessages: m,
         jumpTo: Z,
         onCloseMessage: R
       })

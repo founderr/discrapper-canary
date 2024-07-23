@@ -24,7 +24,7 @@ var a = n(735250),
   I = n(127654),
   E = n(124252),
   N = n(689938),
-  b = n(414805);
+  b = n(931162);
 let v = [{
 name: 'Media Post Thumbnail',
 extensions: [

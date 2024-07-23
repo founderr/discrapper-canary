@@ -32,8 +32,8 @@ var i = t(735250),
   R = t(783097),
   M = t(695676),
   y = t(98880),
-  O = t(804307),
-  j = t(888617),
+  j = t(804307),
+  O = t(888617),
   b = t(561160),
   Z = t(41558),
   H = t(105862),
@@ -41,7 +41,7 @@ var i = t(735250),
   D = t(981631),
   B = t(689079),
   k = t(689938),
-  w = t(678313);
+  w = t(537460);
 let V = [],
   W = Array(8).fill(0).map((e, n) => n),
   F = [{
@@ -284,7 +284,7 @@ onEmptyState: t
 r = y.U4.LARGE_BANNER,
 {
   trackSectionImpressionRef: s
-} = (0, j.Z)({
+} = (0, O.Z)({
   sectionName: L.L3.ACTIVITIES,
   numItems: a.length,
   numVisibleItems: a.length
@@ -374,7 +374,7 @@ items: A,
 handleViewMore: h
   } = ee(k.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, y.U4.NO_BANNER, E, 8, _), {
 trackSectionImpressionRef: f
-  } = (0, j.Z)({
+  } = (0, O.Z)({
 sectionName: _,
 numItems: E.length,
 numVisibleItems: A.length
@@ -396,7 +396,7 @@ children: [
   }),
   (0, i.jsx)('div', {
     className: w.sectionContentContainer,
-    children: N ? W.map(e => (0, i.jsx)(O.Z, {
+    children: N ? W.map(e => (0, i.jsx)(j.Z, {
       look: y.U4.NO_BANNER
     }, e)) : A.map((e, n) => {
       let {
@@ -516,7 +516,7 @@ children: m ? F.map((e, n) => {
       (0, i.jsx)(Z.Z.Loading, {}),
       (0, i.jsx)('div', {
         className: w.sectionContentContainer,
-        children: t.map(e => (0, i.jsx)(O.Z, {
+        children: t.map(e => (0, i.jsx)(j.Z, {
           look: l
         }, e))
       })
@@ -590,7 +590,7 @@ items: m,
 handleViewMore: p
   } = ee(c, n, u, t, d), {
 trackSectionImpressionRef: _
-  } = (0, j.Z)({
+  } = (0, O.Z)({
 sectionName: d,
 numItems: u.length,
 numVisibleItems: m.length

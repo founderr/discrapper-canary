@@ -1,17 +1,17 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return o;
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(481060),
-  i = t(689938),
-  r = t(697287);
+var n = s(735250);
+s(470079);
+var a = s(481060),
+  i = s(689938),
+  r = s(795899);
 
 function o(e) {
   let {
-count: s
+count: t
   } = e;
   return (0, n.jsxs)('div', {
 className: r.countContainer,
@@ -23,7 +23,7 @@ children: [
     variant: 'text-xs/medium',
     color: 'header-secondary',
     children: i.Z.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
-      count: s
+      count: t
     })
   })
 ]

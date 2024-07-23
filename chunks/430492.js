@@ -1,28 +1,28 @@
-t.d(s, {
+s.d(t, {
   L1: function() {
 return S;
   },
   o1: function() {
 return I;
   }
-}), t(47120);
-var n = t(735250),
-  a = t(470079),
-  i = t(442837),
-  r = t(481060),
-  o = t(570140),
-  l = t(782568),
-  c = t(153124),
-  d = t(960359),
-  _ = t(524347),
-  E = t(853197),
-  u = t(689938),
-  T = t(747311);
+}), s(47120);
+var n = s(735250),
+  a = s(470079),
+  i = s(442837),
+  r = s(481060),
+  o = s(570140),
+  l = s(782568),
+  c = s(153124),
+  d = s(960359),
+  _ = s(524347),
+  E = s(853197),
+  u = s(689938),
+  T = s(144048);
 
 function I(e) {
   let {
-onClose: s,
-code: t,
+onClose: t,
+code: s,
 copyInputTitle: a,
 bodyText: i
   } = e;
@@ -56,7 +56,7 @@ children: [
         title: a,
         className: T.formSection,
         children: (0, n.jsx)(r.Button, {
-          onClick: () => (0, l.Z)(t),
+          onClick: () => (0, l.Z)(s),
           color: r.Button.Colors.BRAND,
           look: r.Button.Looks.FILLED,
           children: u.Z.Messages.GIFT_EMBED_BUTTON_CLAIM
@@ -68,7 +68,7 @@ children: [
     className: T.modalFooter,
     children: (0, n.jsx)(r.Button, {
       className: T.closeButton,
-      onClick: s,
+      onClick: t,
       look: r.Button.Looks.LINK,
       color: T.closeButton,
       children: u.Z.Messages.CLOSE
@@ -80,15 +80,15 @@ children: [
 
 function S(e) {
   let {
-onClose: s,
-errorCode: t
+onClose: t,
+errorCode: s
   } = e, a = {
 260000: u.Z.Messages.DROPS_USER_NOT_ENROLLED_ERROR,
 260001: u.Z.Messages.DROPS_QUEST_NOT_COMPLETED_ERROR,
 260002: u.Z.Messages.DROPS_NO_CODE_AVAILABLE_ERROR,
 260003: u.Z.Messages.DROPS_CODE_ALREADY_CLAIMED_ERROR
   }, i = u.Z.Messages.GENERIC_ERROR_BODY;
-  return null != a[t] && (i = a[t]), (0, n.jsxs)(n.Fragment, {
+  return null != a[s] && (i = a[s]), (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)(r.ModalHeader, {
     separator: !1,
@@ -114,21 +114,21 @@ children: [
   (0, n.jsx)(r.ModalFooter, {
     children: (0, n.jsx)(r.Button, {
       color: r.Button.Colors.BRAND,
-      onClick: s,
+      onClick: t,
       children: u.Z.Messages.CLOSE
     })
   })
 ]
   });
 }
-s.ZP = function(e) {
+t.ZP = function(e) {
   let {
-onClose: s,
+onClose: t,
 code: l,
 drop: S,
 platform: N,
 transitionState: C
-  } = e, m = (0, c.Dt)(), [A, h] = a.useState();
+  } = e, m = (0, c.Dt)(), [A, g] = a.useState();
   a.useEffect(() => {
 null == l && o.Z.wait(async () => {
   await (0, d.dN)(S.dropsQuestId);
@@ -137,7 +137,7 @@ null == l && o.Z.wait(async () => {
 S.dropsQuestId,
 l
   ]);
-  let g = (0, i.e7)([_.Z], () => _.Z.platformAvailability);
+  let h = (0, i.e7)([_.Z], () => _.Z.platformAvailability);
   return (0, n.jsx)(r.ModalRoot, {
 transitionState: C,
 'aria-labelledby': m,
@@ -146,20 +146,20 @@ children: (0, n.jsx)(n.Fragment, {
     if (null != l)
       return (0, n.jsx)(I, {
         bodyText: S.messages.claimTip(),
-        onClose: s,
+        onClose: t,
         copyInputTitle: u.Z.Messages.DROPS_REDEMPTION_CODE_PLATFORM_TITLE.format({
           platform: N
         }),
         code: l
       });
-    if (null === g)
+    if (null === h)
       return (0, n.jsx)('div', {
         className: T.spinnerContainer,
         children: (0, n.jsx)(r.Spinner, {})
       });
     {
-      let e = g.length > 0,
-        a = 1 === g.length;
+      let e = h.length > 0,
+        a = 1 === h.length;
       return (0, n.jsxs)(n.Fragment, {
         children: [
           (0, n.jsxs)(r.ModalHeader, {
@@ -181,7 +181,7 @@ children: (0, n.jsx)(n.Fragment, {
                 variant: 'text-md/normal',
                 className: T.dropBodyText,
                 children: a ? u.Z.Messages.DROPS_MODAL_CHOOSE_SINGLE_PLATFORM.format({
-                  platform: (0, E.Un)(g[0])
+                  platform: (0, E.Un)(h[0])
                 }) : u.Z.Messages.DROPS_MODAL_CHOOSE_PLATFORM.format({
                   title: S.title
                 })
@@ -193,12 +193,12 @@ children: (0, n.jsx)(n.Fragment, {
                 className: T.dropFormSection,
                 children: [
                   (0, n.jsx)(r.SingleSelect, {
-                    onChange: h,
-                    options: g.map(e => ({
+                    onChange: g,
+                    options: h.map(e => ({
                       value: e,
                       label: (0, E.Un)(e)
                     })),
-                    value: a ? g[0] : A,
+                    value: a ? h[0] : A,
                     isDisabled: !e,
                     className: e ? '' : T.selectDangerBorder,
                     look: e ? r.SelectLooks.FILLED : r.SelectLooks.CUSTOM
@@ -221,13 +221,13 @@ children: (0, n.jsx)(n.Fragment, {
                   (0, r.openModalLazy)(async () => {
                     let {
                       default: e
-                    } = await t.e('5004').then(t.bind(t, 233070));
-                    return t => (void 0 !== A || a) && (0, n.jsx)(e, {
-                      ...t,
-                      platform: void 0 === A ? g[0] : A,
+                    } = await s.e('5004').then(s.bind(s, 233070));
+                    return s => (void 0 !== A || a) && (0, n.jsx)(e, {
+                      ...s,
+                      platform: void 0 === A ? h[0] : A,
                       code: l,
                       dropsQuestId: S.dropsQuestId,
-                      closeParentModal: s,
+                      closeParentModal: t,
                       singlePlatformClaim: a
                     });
                   });
@@ -236,12 +236,12 @@ children: (0, n.jsx)(n.Fragment, {
                 children: u.Z.Messages.UNLOCK_CODE
               }),
               e ? (0, n.jsx)(r.Button, {
-                onClick: s,
+                onClick: t,
                 look: r.Button.Looks.LINK,
                 color: T.maybeLaterButton,
                 children: u.Z.Messages.MAYBE_LATER
               }) : (0, n.jsx)(r.Button, {
-                onClick: s,
+                onClick: t,
                 look: r.Button.Looks.LINK,
                 color: T.closeButton,
                 children: u.Z.Messages.CLOSE

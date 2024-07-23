@@ -32,7 +32,7 @@ action: () => (0, u.openModalLazy)(async () => {
     default: u
   } = await Promise.all([
     a.e('7654'),
-    a.e('21026')
+    a.e('66633')
   ]).then(a.bind(a, 560114));
   return a => (0, t.jsx)(u, {
     ...a,

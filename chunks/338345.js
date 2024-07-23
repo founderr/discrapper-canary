@@ -1,39 +1,39 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return C;
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(120356),
-  i = t.n(a),
-  r = t(442837),
-  o = t(481060),
-  l = t(223245),
-  c = t(230711),
-  d = t(921801),
-  _ = t(246946),
-  E = t(358085),
-  u = t(726985),
-  T = t(981631),
-  I = t(689938),
-  S = t(824868),
-  N = t(549856);
+var n = s(735250);
+s(470079);
+var a = s(120356),
+  i = s.n(a),
+  r = s(442837),
+  o = s(481060),
+  l = s(223245),
+  c = s(230711),
+  d = s(921801),
+  _ = s(246946),
+  E = s(358085),
+  u = s(726985),
+  T = s(981631),
+  I = s(689938),
+  S = s(302823),
+  N = s(224499);
 
 function C() {
   let {
 enabled: e,
-autoToggle: s,
+autoToggle: t,
 hideInstantInvites: a,
 hidePersonalInformation: C,
 disableSounds: m,
 disableNotifications: A,
-enableContentProtection: h
+enableContentProtection: g
   } = (0, r.cj)([_.Z], () => ({
 ..._.Z.getSettings()
-  })), g = (e, s) => {
+  })), h = (e, t) => {
 l.Z.update({
-  [e]: s
+  [e]: t
 });
   };
   return (0, n.jsxs)(o.FormSection, {
@@ -48,7 +48,7 @@ children: [
       iconClassName: S.noticeIcon,
       type: o.FormNoticeTypes.PRIMARY,
       imageData: {
-        src: t(560264),
+        src: s(560264),
         width: 184,
         height: 110,
         position: o.FormNoticeImagePositions.RIGHT
@@ -64,7 +64,7 @@ children: [
     children: [
       (0, n.jsx)(o.FormSwitch, {
         value: e,
-        onChange: e => g('enabled', e),
+        onChange: e => h('enabled', e),
         note: I.Z.Messages.ENABLE_STREAMER_MODE_DESCRIPTION.format({
           onClick: () => {
             c.Z.setSection(T.oAB.KEYBINDS);
@@ -75,8 +75,8 @@ children: [
       (() => {
         if (E.isPlatformEmbedded)
           return (0, n.jsx)(o.FormSwitch, {
-            value: s,
-            onChange: e => g('autoToggle', e),
+            value: t,
+            onChange: e => h('autoToggle', e),
             note: I.Z.Messages.AUTO_TOGGLE_STREAMER_MODE_DESCRIPTION,
             children: I.Z.Messages.AUTO_TOGGLE_STREAMER_MODE_LABEL
           });
@@ -93,7 +93,7 @@ children: [
         setting: u.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
         children: (0, n.jsx)(o.FormSwitch, {
           value: C,
-          onChange: e => g('hidePersonalInformation', e),
+          onChange: e => h('hidePersonalInformation', e),
           note: I.Z.Messages.HIDE_PERSONAL_INFORMATION_DESCRIPTION,
           children: I.Z.Messages.HIDE_PERSONAL_INFORMATION_LABEL
         })
@@ -102,7 +102,7 @@ children: [
         setting: u.s6.STREAMER_MODE_HIDE_INVITE_LINKS,
         children: (0, n.jsx)(o.FormSwitch, {
           value: a,
-          onChange: e => g('hideInstantInvites', e),
+          onChange: e => h('hideInstantInvites', e),
           note: I.Z.Messages.HIDE_INSTANT_INVITES_DESCRIPTION,
           children: I.Z.Messages.HIDE_INSTANT_INVITES_LABEL
         })
@@ -111,7 +111,7 @@ children: [
         setting: u.s6.STREAMER_MODE_DISABLE_SOUNDS,
         children: (0, n.jsx)(o.FormSwitch, {
           value: m,
-          onChange: e => g('disableSounds', e),
+          onChange: e => h('disableSounds', e),
           note: I.Z.Messages.DISABLE_SOUNDS_DESCRIPTION,
           children: I.Z.Messages.DISABLE_SOUNDS_LABEL
         })
@@ -120,7 +120,7 @@ children: [
         setting: u.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
         children: (0, n.jsx)(o.FormSwitch, {
           value: A,
-          onChange: e => g('disableNotifications', e),
+          onChange: e => h('disableNotifications', e),
           note: I.Z.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
           children: I.Z.Messages.DISABLE_NOTIFICATIONS_LABEL
         })
@@ -128,8 +128,8 @@ children: [
       (0, n.jsx)(d.F, {
         setting: u.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
         children: (0, n.jsx)(o.FormSwitch, {
-          value: h,
-          onChange: e => g('enableContentProtection', e),
+          value: g,
+          onChange: e => h('enableContentProtection', e),
           note: I.Z.Messages.HIDE_WINDOW_FROM_STREAM_DESCRIPTION,
           children: I.Z.Messages.HIDE_WINDOW_FROM_STREAM_LABEL
         })

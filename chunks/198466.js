@@ -10,7 +10,7 @@ var r, i, a = n(735250),
   u = n(481060),
   c = n(607070),
   d = n(745510),
-  _ = n(644308);
+  _ = n(686956);
 
 function E(e) {
   let {
@@ -21,7 +21,7 @@ setShouldFireConfetti: i,
 tooltipProps: d
   } = e, [E, f] = s.useState(0), h = s.useRef(-1), p = s.useRef(!0), m = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), {
 scaleFactor: I
-  } = (0, o.useSpring)({
+  } = (0, u.useSpring)({
 from: {
   scaleFactor: 1
 },

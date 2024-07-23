@@ -26,7 +26,7 @@ SMALL: u.liveSmall
 [c.BadgeShapes.SQUARE]: ''
   };
 
-function I(e) {
+function m(e) {
   let {
 className: t,
 style: n,
@@ -48,4 +48,4 @@ shape: E[i],
 style: n
   });
 }
-I.Looks = a, I.Sizes = _, t.ZP = I;
+m.Looks = a, m.Sizes = _, t.ZP = m;

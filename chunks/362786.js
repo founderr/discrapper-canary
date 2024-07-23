@@ -1,5 +1,5 @@
 var n, a, i, r, o, l;
-t.d(s, {
+s.d(t, {
   HZ: function() {
 return n;
   },

@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(358221),
   _ = n(594190),
   E = n(687516),
-  I = n(210887),
-  m = n(937995),
+  m = n(210887),
+  I = n(937995),
   T = n(158776),
   h = n(594174),
   N = n(617136),
@@ -33,14 +33,14 @@ var i = n(735250),
   D = n(981631),
   j = n(354459),
   U = n(689938),
-  y = n(630706);
+  y = n(212522);
 t.Z = function(e) {
   var t, n, s;
   let {
 channelId: B,
 previewQuest: k,
 isParticipatingOverride: G
-  } = e, [F, w] = a.useState(!1), V = a.useCallback(() => w(!0), []), H = a.useCallback(() => w(!1), []), Y = a.useContext(m.h9), W = (0, l.e7)([h.default], () => h.default.getCurrentUser()), z = (0, l.e7)([I.Z], () => I.Z.getState().theme), K = (0, o.wj)(z) ? D.BRd.DARK : D.BRd.LIGHT, {
+  } = e, [F, w] = a.useState(!1), V = a.useCallback(() => w(!0), []), H = a.useCallback(() => w(!1), []), Y = a.useContext(I.h9), W = (0, l.e7)([h.default], () => h.default.getCurrentUser()), z = (0, l.e7)([m.Z], () => m.Z.getState().theme), K = (0, o.wj)(z) ? D.BRd.DARK : D.BRd.LIGHT, {
 isCurrentUserStreamingQuestApplication: Q,
 quest: q
   } = (0, l.cj)([
@@ -132,16 +132,16 @@ return null;
   let eu = (null === (t = q.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
 e_ = (null === (n = q.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
 eE = null != q.userStatus && (0, S.zE)(q.userStatus, g.jn.QUEST_LIVE_STREAM),
-eI = null != q.userStatus && (0, S.zE)(q.userStatus, g.jn.QUEST_BAR),
-em = (0, S.Mi)(q, g.jn.QUEST_BAR) && !eI;
+em = null != q.userStatus && (0, S.zE)(q.userStatus, g.jn.QUEST_BAR),
+eI = (0, S.Mi)(q, g.jn.QUEST_BAR) && !em;
   ec.info({
 isQuestCallHeaderDismissed: eE,
 isQuestExpired: ed,
-isQuestBarShowing: em,
+isQuestBarShowing: eI,
 isCurrentUserCallParticipant: en
   });
   let eT = null != k && (null === (s = q.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null;
-  if (!eT && (eE || ed || em) || !eT && !en)
+  if (!eT && (eE || ed || eI) || !eT && !en)
 return null;
   let eh = (0, S.il)(q),
 eN = (0, i.jsx)(v.Z, {

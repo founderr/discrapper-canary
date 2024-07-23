@@ -1,28 +1,28 @@
-s.d(t, {
+n.d(t, {
   F: function() {
 return d;
   }
 });
-var n = s(735250),
-  r = s(470079),
-  a = s(481060),
-  o = s(906732),
-  i = s(963249),
-  l = s(474936),
-  c = s(585367);
+var s = n(735250),
+  r = n(470079),
+  a = n(481060),
+  i = n(906732),
+  o = n(963249),
+  c = n(474936),
+  l = n(585367);
 let d = e => {
   let {
 text: t
   } = e, {
-analyticsLocations: s
-  } = (0, o.ZP)(), d = r.useRef(null);
-  return (0, n.jsx)(a.Clickable, {
-className: c.subscribeNow,
+analyticsLocations: n
+  } = (0, i.ZP)(), d = r.useRef(null);
+  return (0, s.jsx)(a.Clickable, {
+className: l.subscribeNow,
 innerRef: d,
 onClick: () => {
-  (0, i.Z)({
-    subscriptionTier: l.Si.TIER_2,
-    analyticsLocations: s,
+  (0, o.Z)({
+    subscriptionTier: c.Si.TIER_2,
+    analyticsLocations: n,
     returnRef: d
   });
 },

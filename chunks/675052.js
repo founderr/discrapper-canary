@@ -1,38 +1,38 @@
-s.d(t, {
+n.d(t, {
   a: function() {
-return l;
+return c;
   }
-}), s(47120), s(653041);
-var n = s(470079),
-  r = s(399606),
-  a = s(1870),
-  o = s(215023);
-let i = e => {
+}), n(47120), n(653041);
+var s = n(470079),
+  r = n(399606),
+  a = n(1870),
+  i = n(215023);
+let o = e => {
 let t = new Map();
-return o.N.forEach((e, s) => {
-  t.set(e, s);
-}), e.sort((e, s) => {
-  var n, r;
-  let a = null !== (n = t.get(e.skuId)) && void 0 !== n ? n : 1 / 0;
-  return a - (null !== (r = t.get(s.skuId)) && void 0 !== r ? r : 1 / 0);
+return i.N.forEach((e, n) => {
+  t.set(e, n);
+}), e.sort((e, n) => {
+  var s, r;
+  let a = null !== (s = t.get(e.skuId)) && void 0 !== s ? s : 1 / 0;
+  return a - (null !== (r = t.get(n.skuId)) && void 0 !== r ? r : 1 / 0);
 });
   },
-  l = e => {
+  c = e => {
 let t = (0, r.e7)([a.Z], () => a.Z.purchases),
   {
-    sortedPopularPickProducts: s,
-    popularProductToCategoryMap: l
-  } = (0, n.useMemo)(() => {
-    let s = [],
-      n = [],
+    sortedPopularPickProducts: n,
+    popularProductToCategoryMap: c
+  } = (0, s.useMemo)(() => {
+    let n = [],
+      s = [],
       r = new Map();
     for (let a of e.values())
       a.products.forEach(e => {
-        o.N.includes(e.skuId) && !r.has(e.skuId) && (t.get(e.skuId) ? s.push(e) : n.push(e), r.set(e.skuId, a));
+        i.N.includes(e.skuId) && !r.has(e.skuId) && (t.get(e.skuId) ? n.push(e) : s.push(e), r.set(e.skuId, a));
       });
-    let a = i(s);
+    let a = o(n);
     return {
-      sortedPopularPickProducts: i(n).concat(a).slice(0, 12),
+      sortedPopularPickProducts: o(s).concat(a).slice(0, 12),
       popularProductToCategoryMap: r
     };
   }, [
@@ -40,7 +40,7 @@ let t = (0, r.e7)([a.Z], () => a.Z.purchases),
     t
   ]);
 return {
-  sortedPopularPickProducts: s,
-  popularProductToCategoryMap: l
+  sortedPopularPickProducts: n,
+  popularProductToCategoryMap: c
 };
   };

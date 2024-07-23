@@ -19,8 +19,8 @@ function E(e) {
   var t;
   let {
 code: E
-  } = e, I = (0, a.e7)([o.Z], () => o.Z.getGuildTemplate(E));
-  if (null == I || I.state === c.Rj.RESOLVING)
+  } = e, m = (0, a.e7)([o.Z], () => o.Z.getGuildTemplate(E));
+  if (null == m || m.state === c.Rj.RESOLVING)
 return (0, i.jsxs)(r.Z, {
   children: [
     (0, i.jsx)(r.Z.Header, {
@@ -31,7 +31,7 @@ return (0, i.jsxs)(r.Z, {
     })
   ]
 });
-  if (I.state === c.Rj.EXPIRED)
+  if (m.state === c.Rj.EXPIRED)
 return (0, i.jsxs)(r.Z, {
   children: [
     (0, i.jsx)(r.Z.Header, {
@@ -50,7 +50,7 @@ return (0, i.jsxs)(r.Z, {
     })
   ]
 });
-  let m = __OVERLAY__ ? (0, i.jsx)(r.Z.Button, {
+  let I = __OVERLAY__ ? (0, i.jsx)(r.Z.Button, {
 isDisabled: !0,
 color: r.Z.Button.Colors.PRIMARY,
 children: d.Z.Messages.GUILD_TEMPLATE_EMBED_VIEW_IN_APP
@@ -65,11 +65,11 @@ onClick: () => {
     ]).then(n.bind(n, 766775));
     return t => (0, i.jsx)(e, {
       ...t,
-      guildTemplate: I
+      guildTemplate: m
     });
   });
 },
-submitting: I.state === c.Rj.ACCEPTING,
+submitting: m.state === c.Rj.ACCEPTING,
 color: r.Z.Button.Colors.GREEN,
 children: d.Z.Messages.GUILD_TEMPLATE_OPEN
   });
@@ -87,14 +87,14 @@ children: [
             className: u.icon
           }),
           (0, i.jsx)(r.Z.Info, {
-            title: I.name,
+            title: m.name,
             children: d.Z.Messages.GUILD_TEMPLATE_USAGES.format({
-              usageCount: String(null !== (t = I.usageCount) && void 0 !== t ? t : 0)
+              usageCount: String(null !== (t = m.usageCount) && void 0 !== t ? t : 0)
             })
           })
         ]
       }),
-      m
+      I
     ]
   })
 ]

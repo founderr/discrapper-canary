@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return I;
   }
 });
 var i = n(735250),
@@ -14,39 +14,39 @@ var i = n(735250),
   u = n(626135),
   _ = n(981631),
   E = n(689938),
-  I = n(29062);
+  m = n(29062);
 
-function m(e) {
+function I(e) {
   var t;
   let {
 guild: n,
-channel: m,
+channel: I,
 messageData: T
   } = e, h = d.Z.getGuildId(), N = c.Z.getChannelId(h), f = a.useCallback(() => {
 var e;
 u.default.track(_.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
   author_id: null === (e = T.author) || void 0 === e ? void 0 : e.id,
   link_guild_id: n.id,
-  link_channel_id: m.id,
-  link_channel_type: m.type,
+  link_channel_id: I.id,
+  link_channel_type: I.type,
   guild_id: h,
   channel_id: N
-}), (0, r.K)(n.id, m.id), s.default.selectVoiceChannel(m.id);
+}), (0, r.K)(n.id, I.id), s.default.selectVoiceChannel(I.id);
   }, [
 null === (t = T.author) || void 0 === t ? void 0 : t.id,
 n.id,
-m.id,
-m.type,
+I.id,
+I.type,
 h,
 N
   ]), p = (0, i.jsx)(o.Z.Channel, {
-channel: m
+channel: I
   });
   return (0, i.jsx)(o.Z, {
 children: (0, i.jsxs)(o.Z.Body, {
   children: [
     (0, i.jsxs)('div', {
-      className: I.headerLine,
+      className: m.headerLine,
       children: [
         (0, i.jsx)(o.Z.Icon, {
           guild: n
@@ -55,13 +55,13 @@ children: (0, i.jsxs)(o.Z.Body, {
           title: p,
           onClick: f,
           children: (0, i.jsxs)('span', {
-            className: I.infoTitle,
+            className: m.infoTitle,
             children: [
               E.Z.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
                 guildName: n.name
               }),
               (0, i.jsx)('span', {
-                className: I.infoBadge,
+                className: m.infoBadge,
                 children: (0, i.jsx)(l.Z, {
                   guild: n,
                   isBannerVisible: !1
@@ -75,7 +75,7 @@ children: (0, i.jsxs)(o.Z.Body, {
     (0, i.jsx)(o.Z.Button, {
       onClick: f,
       color: o.Z.Button.Colors.GREEN,
-      children: m.isGuildStageVoice() ? E.Z.Messages.STAGE_CHANNEL_JOIN : E.Z.Messages.JOIN_VOICE
+      children: I.isGuildStageVoice() ? E.Z.Messages.STAGE_CHANNEL_JOIN : E.Z.Messages.JOIN_VOICE
     })
   ]
 })

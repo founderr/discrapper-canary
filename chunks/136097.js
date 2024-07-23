@@ -1,32 +1,32 @@
-t.d(s, {
+s.d(t, {
   h: function() {
 return d;
   },
   p: function() {
 return _;
   }
-}), t(47120);
-var n = t(470079),
-  a = t(913527),
-  i = t.n(a),
-  r = t(442837),
-  o = t(314897),
-  l = t(673096),
-  c = t(689938);
+}), s(47120);
+var n = s(470079),
+  a = s(913527),
+  i = s.n(a),
+  r = s(442837),
+  o = s(314897),
+  l = s(673096),
+  c = s(689938);
 
 function d() {
   let e = (0, r.cj)([l.Z], () => l.Z.getSessions());
   return n.useMemo(() => {
-let s = [...e],
-  t = null,
+let t = [...e],
+  s = null,
   n = o.default.getAuthSessionIdHash();
 if (null != n) {
-  let e = s.findIndex(e => e.id_hash === n);
-  e >= 0 && (t = s.splice(e, 1)[0]);
+  let e = t.findIndex(e => e.id_hash === n);
+  e >= 0 && (s = t.splice(e, 1)[0]);
 }
-return s.sort((e, s) => s.approx_last_used_time.valueOf() - e.approx_last_used_time.valueOf()), {
-  currentSession: t,
-  otherSessions: s
+return t.sort((e, t) => t.approx_last_used_time.valueOf() - e.approx_last_used_time.valueOf()), {
+  currentSession: s,
+  otherSessions: t
 };
   }, [e]);
 }

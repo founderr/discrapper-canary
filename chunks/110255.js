@@ -20,15 +20,15 @@ function E(e) {
 channel: t,
 closePopout: n,
 onSelect: E,
-navId: I,
-label: m,
+navId: m,
+label: I,
 location: T,
 includeGuildMute: h
   } = e, N = (0, l.c)(t), f = (0, o.EQ)(t), p = (0, a.e7)([_.Z], () => _.Z.getGuild(t.guild_id)), C = (0, c.Z)(p), g = (0, d.Mn)('ChannelNotificationSettingsPopoutMenu') && u.$N.has(t.type);
   return (0, i.jsxs)(s.Menu, {
-navId: I,
+navId: m,
 onClose: n,
-'aria-label': m,
+'aria-label': I,
 onSelect: E,
 children: [
   (0, i.jsx)(s.MenuGroup, {

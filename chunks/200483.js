@@ -1,9 +1,9 @@
-t.d(s, {
+s.d(t, {
   j: function() {
 return a;
   }
 });
-let n = (0, t(818083).B)({
+let n = (0, s(818083).B)({
   kind: 'user',
   id: '2023-07_mfa_email_verification',
   label: 'Safety Experience Mfa Email Verification',

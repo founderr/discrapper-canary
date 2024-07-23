@@ -1,9 +1,9 @@
-s.d(t, {
+n.d(t, {
   O: function() {
 return r;
   }
 });
-let n = (0, s(818083).B)({
+let s = (0, n(818083).B)({
 kind: 'user',
 id: '2024-05_shop_condensed_category_banners',
 label: 'Collectibles Shop Dynamic Header & Condensed Category Banners',
@@ -45,7 +45,7 @@ treatments: [{
 let {
   location: t
 } = e;
-return n.useExperiment({
+return s.useExperiment({
   location: t
 });
   };

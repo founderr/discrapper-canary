@@ -1,101 +1,101 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-return b;
+return p;
   }
-}), t(789020);
-var i = t(735250),
-  r = t(470079),
-  o = t(131388),
-  a = t(607070),
-  s = t(745510),
-  l = t(171246),
-  c = t(689011),
-  d = t(931905),
-  u = t(598),
-  _ = t(409813),
-  p = t(586585),
-  f = t(456251),
-  I = t(614277),
-  m = t(698708),
-  C = t(750143),
-  S = t(689938);
+}), n(789020);
+var r = n(735250),
+  a = n(470079),
+  i = n(131388),
+  l = n(607070),
+  s = n(745510),
+  o = n(171246),
+  u = n(689011),
+  c = n(931905),
+  d = n(598),
+  I = n(409813),
+  _ = n(586585),
+  f = n(456251),
+  h = n(614277),
+  E = n(698708),
+  S = n(750143),
+  m = n(689938);
 
-function b(e) {
-  var n, t;
-  let b, h, {
-  showBenefits: T,
-  handleClose: g,
-  onSubscriptionConfirmation: E
+function p(e) {
+  var t, n;
+  let p, T, {
+  showBenefits: C,
+  handleClose: N,
+  onSubscriptionConfirmation: A
 } = e,
 {
-  updatedSubscription: N,
+  updatedSubscription: O,
   readySlideId: P,
-  selectedSku: O,
-  selectedStoreListing: x,
-  application: A
-} = (0, u.usePaymentContext)(),
-v = (0, o.Z)(C.i),
+  selectedSku: b,
+  selectedStoreListing: g,
+  application: v
+} = (0, d.usePaymentContext)(),
+x = (0, i.Z)(S.i),
 {
-  createMultipleConfettiAt: R
-} = r.useContext(s.h),
-M = null !== (n = null == O ? void 0 : O.name) && void 0 !== n ? n : '',
-L = () => {
-  g(), null == E || E();
+  createMultipleConfettiAt: L
+} = a.useContext(s.h),
+R = null !== (t = null == b ? void 0 : b.name) && void 0 !== t ? t : '',
+M = () => {
+  N(), null == A || A();
 },
-B = P === _.h8.CONFIRM,
-y = (0, l.KW)(null !== (t = null == O ? void 0 : O.flags) && void 0 !== t ? t : 0),
-k = null != x && x.benefits.length > 0 ? S.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({
-  benefitCount: x.benefits.length
+k = P === I.h8.CONFIRM,
+B = (0, o.KW)(null !== (n = null == b ? void 0 : b.flags) && void 0 !== n ? n : 0),
+j = null != g && g.benefits.length > 0 ? m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({
+  benefitCount: g.benefits.length
 }) : null;
-  return T ? v ? b = (0, i.jsx)(d.h, {
-title: S.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE_V2.format({
-  tierName: M
+  return C ? x ? p = (0, r.jsx)(c.h, {
+title: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE_V2.format({
+  tierName: R
 }),
-subtitle: null != x && x.benefits.length > 0 ? S.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
-  benefits: k
+subtitle: null != g && g.benefits.length > 0 ? m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
+  benefits: j
 }) : null,
-onConfirm: L,
-confirmCta: S.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
-  }) : (b = null != x && null != A ? (0, i.jsx)(c.Oc, {
-icon: x.thumbnail,
-storeListingBenefits: x.benefits,
-application: A,
-title: S.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE_V2.format({
-  tier: M
+onConfirm: M,
+confirmCta: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
+  }) : (p = null != g && null != v ? (0, r.jsx)(u.Oc, {
+icon: g.thumbnail,
+storeListingBenefits: g.benefits,
+application: v,
+title: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE_V2.format({
+  tier: R
 }),
-subtitle: S.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_BENEFITS_PREVIEW,
-description: y ? S.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
-  applicationName: null == A ? void 0 : A.name
-}) : S.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
-  tier: M
+subtitle: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_BENEFITS_PREVIEW,
+description: B ? m.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
+  applicationName: null == v ? void 0 : v.name
+}) : m.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
+  tier: R
 })
-  }) : (0, i.jsx)(f.Z, {}), h = (0, i.jsx)(p.Z, {
-onPrimary: L,
-primaryCTA: p.g.CONTINUE,
-primaryText: S.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
-  })) : b = v ? (0, i.jsx)(d.m, {
-tierName: M,
-onConfirm: L,
-subscription: N
-  }) : (0, i.jsx)(c.xe, {
-tierName: M,
-onConfirm: L,
-subscription: N
-  }), r.useEffect(() => {
-a.Z.useReducedMotion && B && R(window.innerWidth / 2, window.innerHeight / 2);
+  }) : (0, r.jsx)(f.Z, {}), T = (0, r.jsx)(_.Z, {
+onPrimary: M,
+primaryCTA: _.g.CONTINUE,
+primaryText: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
+  })) : p = x ? (0, r.jsx)(c.m, {
+tierName: R,
+onConfirm: M,
+subscription: O
+  }) : (0, r.jsx)(u.xe, {
+tierName: R,
+onConfirm: M,
+subscription: O
+  }), a.useEffect(() => {
+l.Z.useReducedMotion && k && L(window.innerWidth / 2, window.innerHeight / 2);
   }, [
-R,
-B
-  ]), (0, i.jsxs)(i.Fragment, {
+L,
+k
+  ]), (0, r.jsxs)(r.Fragment, {
 children: [
-  (0, i.jsxs)(I.C3, {
+  (0, r.jsxs)(h.C3, {
     children: [
-      (0, i.jsx)(m.Z, {}),
-      b
+      (0, r.jsx)(E.Z, {}),
+      p
     ]
   }),
-  null != h && (0, i.jsx)(I.O3, {
-    children: h
+  null != T && (0, r.jsx)(h.O3, {
+    children: T
   })
 ]
   });

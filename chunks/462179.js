@@ -107,7 +107,7 @@ onStartClick: A && U && !(null == z ? void 0 : z.is_canceled) ? function(e) {
       default: e
     } = await Promise.all([
       t.e('84722'),
-      t.e('89635')
+      t.e('36783')
     ]).then(t.bind(t, 296864));
     return n => (0, i.jsx)(e, {
       ...n,
@@ -135,7 +135,7 @@ onInviteClick: function(e) {
       } = await Promise.all([
         t.e('7654'),
         t.e('1187'),
-        t.e('54531')
+        t.e('31400')
       ]).then(t.bind(t, 560114));
       return t => (0, i.jsx)(e, {
         ...t,

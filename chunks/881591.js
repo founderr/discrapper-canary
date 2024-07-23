@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(481060),
   _ = n(239091),
   E = n(294218),
-  I = n(703656),
-  m = n(768943),
+  m = n(703656),
+  I = n(768943),
   T = n(962796),
   h = n(695346),
   N = n(592125),
@@ -25,8 +25,8 @@ var i = n(735250),
   g = n(791914),
   S = n(981631),
   A = n(689938),
-  R = n(166311),
-  x = n(699723);
+  R = n(754869),
+  x = n(674069);
 let O = {
   offset: {
 left: 4,
@@ -38,7 +38,7 @@ function M(e) {
   let {
 setTab: t,
 closePopout: n
-  } = e, s = (0, c.Wu)([m.Z], () => m.Z.getMessageReminders());
+  } = e, s = (0, c.Wu)([I.Z], () => I.Z.getMessageReminders());
   a.useEffect(() => () => {
 (0, T.Mf)();
   }, []);
@@ -88,22 +88,22 @@ function v(e) {
 s = a.complete,
 l = a.saveData,
 d = a.message,
-m = (0, c.e7)([N.Z], () => N.Z.getChannel(l.channelId)),
+I = (0, c.e7)([N.Z], () => N.Z.getChannel(l.channelId)),
 C = () => {
-  (0, I.uL)(S.Z5c.CHANNEL(null == m ? void 0 : m.getGuildId(), l.channelId, l.messageId));
+  (0, m.uL)(S.Z5c.CHANNEL(null == I ? void 0 : I.getGuildId(), l.channelId, l.messageId));
 },
 g = null;
   return (null != l.dueAt && (l.dueAt > new Date() ? (t = 'text-muted', g = A.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
 duration: o().duration(l.dueAt.getTime() - Date.now(), 'millisecond').humanize()
   })) : (t = 'text-danger', g = A.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
 duration: o().duration(Date.now() - l.dueAt.getTime(), 'millisecond').humanize()
-  }))), null == d || null == m) ? (0, i.jsx)('div', {
+  }))), null == d || null == I) ? (0, i.jsx)('div', {
 children: 'The message isn\'t accessible. We will deal with this later.'
   }) : (0, i.jsxs)('div', {
 className: x.container,
 children: [
   (0, i.jsx)(p.Z, {
-    channel: m,
+    channel: I,
     gotoChannel: C,
     children: (0, i.jsxs)('div', {
       className: R.reminderActions,
@@ -168,7 +168,7 @@ children: [
       }),
       (0, i.jsx)(E.Z, {
         message: d,
-        channel: m,
+        channel: I,
         className: x.message,
         compact: h.jU.getSetting(),
         animateAvatar: !1,

@@ -7,17 +7,17 @@ var i = n(735250),
   c = n(727218),
   d = n(212342),
   u = n(689938),
-  _ = n(782944);
+  _ = n(493249);
 t.Z = e => {
   let {
 channelId: t,
 messageId: n
-  } = e, E = (0, s.e7)([d.Z], () => d.Z.shouldShowBump(n), [n]), I = a.useCallback(() => {
+  } = e, E = (0, s.e7)([d.Z], () => d.Z.shouldShowBump(n), [n]), m = a.useCallback(() => {
 l.Z.dismissPublishBump(n), (0, o.Z)(t, n);
   }, [
 t,
 n
-  ]), m = a.useCallback(() => {
+  ]), I = a.useCallback(() => {
 l.Z.dismissPublishBump(n);
   }, [n]), T = a.useCallback(() => {
 l.Z.permanentlyHidePublishBump(t);
@@ -43,11 +43,11 @@ children: [
         look: r.Button.Looks.LINK,
         size: r.Button.Sizes.MIN,
         className: _.publish,
-        onClick: I,
+        onClick: m,
         children: u.Z.Messages.NEWS_CHANNEL_PUBLISH
       }),
       (0, i.jsx)(r.Clickable, {
-        onClick: m,
+        onClick: I,
         children: (0, i.jsx)(r.CircleXIcon, {
           size: 'xs',
           color: 'currentColor',

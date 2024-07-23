@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(367907),
   _ = n(213609),
   E = n(565138),
-  I = n(267101),
-  m = n(336197),
+  m = n(267101),
+  I = n(336197),
   T = n(661824),
   h = n(430824),
   N = n(626135),
@@ -24,7 +24,7 @@ var i = n(735250),
   C = n(886176),
   g = n(981631),
   S = n(689938),
-  A = n(638948);
+  A = n(114480);
 
 function R(e) {
   var t;
@@ -35,12 +35,12 @@ loading: R,
 subscriptionsSettings: x
   } = (0, f.H)(n), {
 listingsLoaded: O
-  } = (0, I.eD)(n), M = (0, I.ue)(n, {
+  } = (0, m.eD)(n), M = (0, m.ue)(n, {
 publishedOnly: !0
   }), v = a.useCallback(async () => {
 N.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, {
   ...(0, u.hH)(n)
-}), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
+}), await (0, I.Z)(g.Z5c.SERVER_SHOP(n));
   }, [n]);
   (0, _.Z)({
 type: l.ImpressionTypes.VIEW,

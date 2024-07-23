@@ -7,7 +7,7 @@ var a = n(120356),
   o = n(176782),
   c = n(743612),
   d = n(735825),
-  _ = n(972272),
+  _ = n(817199),
   u = n(721239),
   E = n(557634),
   T = n(992429);
@@ -23,10 +23,10 @@ t.Z = e => {
   perkComponent: m,
   subtitle: N = '',
   descriptionCta: f = '',
-  cardVariant: h,
-  subtitleClassName: S
+  cardVariant: S,
+  subtitleClassName: h
 } = e,
-M = (0, o._)(h),
+M = (0, o._)(S),
 x = (0, l.yQ)(),
 b = (null == x ? void 0 : x.nitroTenureStatus) === d.EB.REDEEMABLE;
   switch (null == x ? void 0 : x.nitroTenureStatus) {
@@ -53,7 +53,7 @@ children: [
     cardVariantStyleInfo: M,
     titleClassName: R,
     subtitle: N,
-    subtitleClassName: S
+    subtitleClassName: h
   }),
   null != g && (0, s.jsx)('img', {
     src: g,

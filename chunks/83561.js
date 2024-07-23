@@ -1,6 +1,6 @@
 n.d(t, {
   S: function() {
-return I;
+return m;
   },
   m: function() {
 return E;
@@ -14,7 +14,7 @@ var i = n(735250),
   o = n(426563),
   c = n(998502),
   d = n(689938),
-  u = n(117414);
+  u = n(735612);
 let _ = c.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
 function E() {
@@ -39,7 +39,7 @@ eventHandlers: {
   };
 }
 
-function I(e) {
+function m(e) {
   let {
 src: t
   } = e;

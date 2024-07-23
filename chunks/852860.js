@@ -7,7 +7,7 @@ var n = s(735250),
   o = s(585483),
   d = s(981631),
   c = s(689938),
-  u = s(631769);
+  u = s(591318);
 t.Z = function(e) {
   var t;
   let {
@@ -23,7 +23,7 @@ disabled: _,
 saveButtonTooltip: S
   } = e, x = l.useRef(null), [{
 spring: f
-  }, C] = (0, a.useSpring)(() => ({
+  }, C] = (0, r.useSpring)(() => ({
 spring: 0
   }));
   l.useEffect(() => {

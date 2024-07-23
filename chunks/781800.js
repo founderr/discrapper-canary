@@ -5,7 +5,7 @@ var a = n(481060),
   i = n(391110),
   l = n(981631),
   o = n(689938),
-  c = n(391552);
+  c = n(396001);
 t.Z = e => {
   let {
 setIsAllPerksVisible: t,

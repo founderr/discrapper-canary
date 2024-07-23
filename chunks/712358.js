@@ -1,9 +1,9 @@
-t.d(s, {
+s.d(t, {
   U: function() {
 return a;
   }
 });
-let n = (0, t(818083).B)({
+let n = (0, s(818083).B)({
   id: '2021-08_user_initiated_refunds',
   label: 'User Initiated Refunds',
   kind: 'user',

@@ -1,33 +1,33 @@
 n.d(t, {
   B: function() {
-return x;
+return m;
   },
   L: function() {
-return f;
+return C;
   }
 });
 var s = n(470079),
   o = n(626135),
   r = n(70956),
   a = n(617136),
-  i = n(918701),
-  l = n(988303),
+  l = n(918701),
+  i = n(988303),
   c = n(658590),
   d = n(448018),
   u = n(46140),
   p = n(981631);
-let x = (e, t) => {
-let n = (0, i.zK)(e, u.S7.QUEST_BAR_V2),
+let m = (e, t) => {
+let n = (0, l.zK)(e, u.S7.QUEST_BAR_V2),
   o = (0, c.a)(e),
   {
     primaryVariant: r,
     progressVariant: a
-  } = l.u.useExperiment({
+  } = i.u.useExperiment({
     location: u.dr.QUESTS_BAR
   }, {
     autoTrackExposure: t && n
   });
-return s.useMemo(() => o ? (0, d.v)(e, l.P.V2, l.P.V2) : n ? (0, d.v)(e, r, a) : (0, d.v)(e, l.P.V1, l.P.V1), [
+return s.useMemo(() => o ? (0, d.v)(e, i.P.V2, i.P.V2) : n ? (0, d.v)(e, r, a) : (0, d.v)(e, i.P.V1, i.P.V1), [
   o,
   r,
   a,
@@ -35,11 +35,11 @@ return s.useMemo(() => o ? (0, d.v)(e, l.P.V2, l.P.V2) : n ? (0, d.v)(e, r, a) :
   n
 ]);
   },
-  m = 30 * r.Z.Millis.SECOND,
-  g = 20 * r.Z.Millis.MINUTE,
-  C = Date.now();
+  x = 30 * r.Z.Millis.SECOND,
+  f = 20 * r.Z.Millis.MINUTE,
+  g = Date.now();
 
-function f(e) {
+function C(e) {
   let t = s.useRef({
 renderCount: 0,
 renderCountResetAt: 0,
@@ -50,10 +50,10 @@ expandAnimationEndedAt: 0
   });
   return s.useEffect(() => {
 let n = performance.now();
-n - t.current.renderCountResetAt > m && (t.current.renderCount = 0, t.current.renderCountResetAt = n), t.current.renderCount++, ! function(e, t) {
+n - t.current.renderCountResetAt > x && (t.current.renderCount = 0, t.current.renderCountResetAt = n), t.current.renderCount++, ! function(e, t) {
   let n = Date.now();
-  if (!(n - C < g))
-    C = n, window.requestIdleCallback(() => {
+  if (!(n - g < f))
+    g = n, window.requestIdleCallback(() => {
       o.default.track(p.rMx.QUEST_BAR_RENDER_PERFORMANCE_MEASURED, {
         render_count_30s: e.renderCount,
         expanded_paint_duration_ms: e.paintedAfterExpandAt - e.expandedAt,

@@ -1,16 +1,16 @@
-t.d(s, {
+s.d(t, {
   a: function() {
 return a;
   }
 });
-var n, a, i = t(735250);
-t(470079);
-var r = t(481060);
+var n, a, i = s(735250);
+s(470079);
+var r = s(481060);
 (n = a || (a = {}))[n.UNENROLLED = 0] = 'UNENROLLED', n[n.ENROLLED = 1] = 'ENROLLED', n[n.COMPLETED_25 = 2] = 'COMPLETED_25', n[n.COMPLETED_50 = 3] = 'COMPLETED_50', n[n.COMPLETED_75 = 4] = 'COMPLETED_75', n[n.COMPLETED_100 = 5] = 'COMPLETED_100', n[n.CLAIMED = 6] = 'CLAIMED';
-s.Z = function(e) {
+t.Z = function(e) {
   let {
-onChange: s,
-value: t
+onChange: t,
+value: s
   } = e;
   return (0, i.jsxs)(r.FormItem, {
 children: [
@@ -50,8 +50,8 @@ children: [
           value: 6
         }
       ],
-      isSelected: e => e === t,
-      select: s,
+      isSelected: e => e === s,
+      select: t,
       serialize: String
     })
   })

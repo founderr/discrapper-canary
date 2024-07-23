@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(481060),
   _ = n(568836),
   E = n(100527),
-  I = n(906732),
-  m = n(963249),
+  m = n(906732),
+  I = n(963249),
   T = n(594174),
   h = n(78839),
   N = n(55935),
@@ -27,7 +27,7 @@ var i = n(735250),
   A = n(474936),
   R = n(981631),
   x = n(689938),
-  O = n(951992);
+  O = n(474013);
 class M extends a.Component {
   renderTitle(e, t, n) {
 let {
@@ -73,7 +73,7 @@ return l.disabled = o, (0, i.jsxs)('div', {
         ...l,
         size: u.Button.Sizes.SMALL,
         onClick: () => {
-          (0, m.Z)({
+          (0, I.Z)({
             initialPlanId: null,
             subscriptionTier: A.Si.TIER_2,
             analyticsLocations: r,
@@ -168,7 +168,7 @@ return (0, i.jsxs)('div', {
   constructor(...e) {
 var t, n, i;
 super(...e), t = this, n = 'handleStartTrial', i = (e, t) => {
-  (0, m.Z)({
+  (0, I.Z)({
     initialPlanId: null,
     subscriptionTier: A.Si.TIER_2,
     analyticsLocations: t,
@@ -201,8 +201,8 @@ var e;
 return l ? null === (e = h.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt : null;
   }), {
 analyticsLocations: u
-  } = (0, I.ZP)(E.Z.SHARE_NITRO_EMBED), {
-enabled: m
+  } = (0, m.ZP)(E.Z.SHARE_NITRO_EMBED), {
+enabled: I
   } = g.Z.useExperiment({
 location: 'f4ff1d_1'
   }, {
@@ -216,7 +216,7 @@ currentUser: r,
 recipientHasNitro: l,
 trialEndsAt: o,
 analyticsLocations: u,
-shouldShowBirthdayUX: m,
+shouldShowBirthdayUX: I,
 ...e
   }) : (0, i.jsx)('div', {
 className: O.invalidWrapper,

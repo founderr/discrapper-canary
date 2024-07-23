@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 }), n(47120);
 var i = n(735250),
@@ -12,7 +12,7 @@ var i = n(735250),
   c = n(607070),
   d = n(768943),
   u = n(742989),
-  _ = n(862479);
+  _ = n(929792);
 class E extends a.PureComponent {
   componentDidUpdate(e) {
 e.count < this.props.count && !this.props.reducedMotion && l.Z.sequence([
@@ -52,7 +52,7 @@ super(...e), t = this, n = 'animationScale', i = new l.Z.Value(1), n in t ? Obje
   }
 }
 
-function I(e) {
+function m(e) {
   let {
 className: t
   } = e, {

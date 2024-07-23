@@ -58,8 +58,8 @@ j = (0, E.h6)(e),
   enableStudyGroup: U
 } = (0, u.s)(e),
 G = j.length > 0,
-k = U && !(null == e ? void 0 : e.hasFeature(N.oNc.HUB)),
-w = (0, d.Vm)(n),
+w = U && !(null == e ? void 0 : e.hasFeature(N.oNc.HUB)),
+k = (0, d.Vm)(n),
 B = (0, r.e7)([I.Z], () => null != I.Z.getActiveGuildSignUp(n));
   if (a.useEffect(() => {
   o.Z.getGuildEventsForCurrentUser(n);
@@ -79,7 +79,7 @@ return 0;
 return 1;
   if (Z)
 return 2;
-  else if (M || null != w)
+  else if (M || null != k)
 return 3;
   else if (D)
 return 4;
@@ -87,7 +87,7 @@ return 4;
 return 5;
   else if (G)
 return 6;
-  else if (k)
+  else if (w)
 return 7;
   else if (B)
 return 8;

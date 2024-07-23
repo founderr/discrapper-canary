@@ -1,21 +1,21 @@
-t.d(s, {
+s.d(t, {
   b: function() {
 return _;
   }
 });
-var n = t(481060),
-  a = t(358085),
-  i = t(394644),
-  r = t(295545),
-  o = t(168308),
-  l = t(726985),
-  c = t(332325),
-  d = t(689938);
+var n = s(481060),
+  a = s(358085),
+  i = s(394644),
+  r = s(295545),
+  o = s(168308),
+  l = s(726985),
+  c = s(332325),
+  d = s(689938);
 
 function _() {
   let e = (0, o.bC)(),
-s = (0, i.Gj)(l.s6.GAMES);
-  return function(e, s, t) {
+t = (0, i.Gj)(l.s6.GAMES);
+  return function(e, t, s) {
 var i;
 let r = (i = e, [{
     id: c.Z.MY_GAMES,
@@ -44,12 +44,12 @@ let r = (i = e, [{
     setting: l.s6.GAMES_ACTIVITY_PRIVACY
   }
 ]).filter(e => null == e.predicate || !e.predicate());
-if (s && null != t && t.size > 0) {
-  let e = r.filter(e => t.has(e.setting));
+if (t && null != s && s.size > 0) {
+  let e = r.filter(e => s.has(e.setting));
   return e.length > 0 ? e : r;
 }
 return r;
   }(e, (0, r.eA)({
 location: 'settings'
-  }), s);
+  }), t);
 }

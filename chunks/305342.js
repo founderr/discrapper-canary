@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(351402),
   _ = n(153124),
   E = n(768581),
-  I = n(817460),
-  m = n(584825),
+  m = n(817460),
+  I = n(584825),
   T = n(290348),
   h = n(934826),
   N = n(768318),
@@ -31,7 +31,7 @@ var i = n(735250),
   M = n(293810),
   v = n(981631),
   L = n(689938),
-  Z = n(860243);
+  Z = n(379391);
 let P = e => {
 let {
   benefits: t,
@@ -39,7 +39,7 @@ let {
   guildId: s
 } = e, [r, l] = a.useState(!1), c = r ? t : t.slice(0, 5), d = t.length > 5, u = t.length - 5, E = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION_WITH_ITEMS.format({
   numTruncated: u
-}), m = (0, _.Dt)();
+}), I = (0, _.Dt)();
 return 0 === t.length ? null : (0, i.jsxs)('div', {
   className: Z.benefitsSection,
   children: [
@@ -47,7 +47,7 @@ return 0 === t.length ? null : (0, i.jsxs)('div', {
       variant: 'text-xs/bold',
       color: 'header-secondary',
       className: Z.sectionHeader,
-      id: m,
+      id: I,
       children: n
     }),
     (0, i.jsx)(o.Spacer, {
@@ -55,12 +55,12 @@ return 0 === t.length ? null : (0, i.jsxs)('div', {
     }),
     (0, i.jsx)('ul', {
       className: Z.benefitsList,
-      'aria-labelledby': m,
+      'aria-labelledby': I,
       children: c.map((e, t) => (0, i.jsx)('li', {
         children: (0, i.jsx)(A.Z, {
           guildId: s,
           benefit: e
-        }, (0, I.ab)(e))
+        }, (0, m.ab)(e))
       }, t))
     }),
     d && (0, i.jsx)(j, {
@@ -202,7 +202,7 @@ listingId: n,
 guildId: s,
 groupListingId: _,
 analyticsLocation: E
-  } = e, f = (0, m.jO)(n), {
+  } = e, f = (0, I.jO)(n), {
 openModal: p,
 canOpenModal: C,
 cannotOpenReason: S,
@@ -222,7 +222,7 @@ children: [
     className: r()(Z.tierTrialIndicator, Z.tierTopIndicator),
     children: [
       L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_PERIOD.format({
-        trialPeriodDuration: (0, I.iG)({
+        trialPeriodDuration: (0, m.iG)({
           interval: W.interval,
           interval_count: W.interval_count
         })

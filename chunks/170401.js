@@ -1,39 +1,39 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return r;
   }
-}), t(47120), t(653041);
-var n = t(658722),
-  a = t.n(n);
+}), s(47120), s(653041);
+var n = s(658722),
+  a = s.n(n);
 
-function i(e, s, t) {
-  return s in e ? Object.defineProperty(e, s, {
-value: t,
+function i(e, t, s) {
+  return t in e ? Object.defineProperty(e, t, {
+value: s,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[s] = t, e;
+  }) : e[t] = s, e;
 }
 class r {
   search(e) {
-return new Promise(s => {
-  s(this.getMatchingSettings(e));
+return new Promise(t => {
+  t(this.getMatchingSettings(e));
 });
   }
   getMatchingSettings(e) {
-let s = this.cache[e];
-if (null != s)
-  return s;
+let t = this.cache[e];
+if (null != t)
+  return t;
 {
-  let s = [];
-  return this.terms.forEach(t => {
-    let [n, i] = t;
-    for (let t of i)
-      if (a()(e.toLowerCase(), t.toLowerCase())) {
-        s.push(n);
+  let t = [];
+  return this.terms.forEach(s => {
+    let [n, i] = s;
+    for (let s of i)
+      if (a()(e.toLowerCase(), s.toLowerCase())) {
+        t.push(n);
         break;
       }
-  }), this.cache[e] = s, s;
+  }), this.cache[e] = t, t;
 }
   }
   constructor(e) {

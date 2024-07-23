@@ -3,7 +3,7 @@ n.d(t, {
 return T;
   },
   au: function() {
-return m;
+return I;
   },
   c: function() {
 return f;
@@ -29,9 +29,9 @@ var i = n(470079),
   u = n(346114),
   _ = n(524347),
   E = n(853197),
-  I = n(702512);
+  m = n(288836);
 
-function m(e) {
+function I(e) {
   let t, n;
   let i = u.a.useExperiment({
 location: '59cc4b_1'
@@ -41,7 +41,7 @@ return null;
   let a = (0, E.BS)(e);
   if (null == a)
 return null;
-  if (a.dropsQuestId === I.oL)
+  if (a.dropsQuestId === m.oL)
 t = u.a, n = i;
   else
 t = null, n = null;
@@ -55,7 +55,7 @@ drop: a
 function T(e) {
   var t;
   let n = (0, a.e7)([_.Z], () => _.Z.serverEligibleByQuestIds),
-r = m(e),
+r = I(e),
 l = function(e) {
   let t = (0, a.Wu)([c.ZP], () => c.ZP.getGamesSeen(!1)),
     n = i.useMemo(() => (0, E.R9)(), []);
@@ -66,28 +66,28 @@ o = null != r && n[r.drop.dropsQuestId];
 location: 'ELIGIBILITY_ENROLLMENT_TOOLTIP'
   });
   let u = null == r ? void 0 : null === (t = r.config) || void 0 === t ? void 0 : t.dropsEnabled,
-I = null == r ? void 0 : r.drop,
-T = null == I || (0, E.hM)(I);
+m = null == r ? void 0 : r.drop,
+T = null == m || (0, E.hM)(m);
   return i.useEffect(() => {
-u && !T && l && null != I && s.Z.wait(() => {
-  null == o && (0, d.Vt)(I.dropsQuestId);
+u && !T && l && null != m && s.Z.wait(() => {
+  null == o && (0, d.Vt)(m.dropsQuestId);
 });
   }, [
 o,
-I,
+m,
 u,
 T,
 l
-  ]), null != I && !!u && !T && o && l;
+  ]), null != m && !!u && !T && o && l;
 }
 
 function h() {
-  let e = m(I.X2.FORTNITE);
+  let e = I(m.X2.FORTNITE);
   return null == e ? void 0 : e.config.dropsEnabled;
 }
 
 function N(e) {
-  let t = m(e),
+  let t = I(e),
 n = null == t ? void 0 : t.drop,
 s = (0, a.e7)([_.Z], () => null != n && _.Z.serverEligibleByQuestIds[n.dropsQuestId]),
 r = (0, a.e7)([_.Z], () => _.Z.hasInitialProgressFetched);
@@ -102,18 +102,18 @@ r
 
 function f(e, t, n, i) {
   var s;
-  let r = m(e),
+  let r = I(e),
 c = null == r ? void 0 : r.drop,
 d = (0, a.e7)([_.Z], () => null != c && _.Z.serverEligibleByQuestIds[c.dropsQuestId]),
 u = (0, a.e7)([_.Z], () => _.Z.getIsPartnerGameQuestComplete(e)),
-I = (0, E.wj)(null == t ? void 0 : t.name, null !== (s = null == c ? void 0 : c.gameSearchTerm) && void 0 !== s ? s : []),
+m = (0, E.wj)(null == t ? void 0 : t.name, null !== (s = null == c ? void 0 : c.gameSearchTerm) && void 0 !== s ? s : []),
 T = (0, l.ot)([
   n,
   i
 ]),
 h = (0, o.wE)(i),
 N = null == c || (0, E.hM)(c),
-f = !!(null != c && !N && I && (null == r ? void 0 : r.config.dropsEnabled) && d);
+f = !!(null != c && !N && m && (null == r ? void 0 : r.config.dropsEnabled) && d);
   return {
 partnerGame: f ? e : null,
 dropsActivityPanelExperienceBlocked: T,

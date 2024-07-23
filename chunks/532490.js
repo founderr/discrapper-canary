@@ -19,7 +19,7 @@ var i, a, s = n(735250),
   C = n(856682),
   g = n(284019),
   I = n(689938),
-  x = n(333626);
+  x = n(556070);
 (a = i || (i = {})).LEFT = 'left', a.RIGHT = 'right';
 t.Z = l.memo(function(e) {
   let {
@@ -40,7 +40,7 @@ e.preventDefault(), e.stopPropagation(), null == r || r(), R(!0);
 e && (D.current = setTimeout(() => {
   y(!0);
 }, T));
-  }, [T]), U = (0, p.O)(k), w = (0, d.e7)([m.Z], () => m.Z.useReducedMotion), B = (0, d.e7)([_.default], () => _.default.getCurrentUser()), [H, G] = (0, c.useSpring)(() => {
+  }, [T]), U = (0, p.O)(k), w = (0, d.e7)([m.Z], () => m.Z.useReducedMotion), B = (0, d.e7)([_.default], () => _.default.getCurrentUser()), [H, G] = (0, u.useSpring)(() => {
 var e, t;
 return e = S, t = w, 'left' === e ? {
   right: t ? 68 : 0,
@@ -49,7 +49,7 @@ return e = S, t = w, 'left' === e ? {
   left: t ? 68 : 0,
   config: c.config.stiff
 };
-  }), [V, F] = (0, c.useSpring)(() => ({
+  }), [V, F] = (0, u.useSpring)(() => ({
 opacity: 0,
 top: -24,
 onRest: () => {

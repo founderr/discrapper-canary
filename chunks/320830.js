@@ -3,14 +3,14 @@ var s = n(735250),
   r = n(470079),
   i = n(954955),
   a = n.n(i),
-  l = n(748780),
-  o = n(873546),
+  o = n(748780),
+  l = n(873546),
   c = n(477690),
   u = n(481060),
   d = n(624138),
-  h = n(510759);
+  _ = n(510759);
 
-function _(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -30,7 +30,7 @@ tension: 130
 t.Z = function(e) {
   return class extends r.Component {
 componentDidMount() {
-  !o.tq && (window.addEventListener('resize', this.handleResizeDebounced), this.handleResize());
+  !l.tq && (window.addEventListener('resize', this.handleResizeDebounced), this.handleResize());
 }
 componentWillUnmount() {
   clearTimeout(this.timeout), window.removeEventListener('resize', this.handleResizeDebounced);
@@ -45,7 +45,7 @@ componentWillLeave(e) {
   this.state.shouldAnimate ? this.animateTo(g.START, e) : e();
 }
 animateTo(e, t) {
-  l.Z.spring(this.anim, {
+  o.Z.spring(this.anim, {
     toValue: e,
     ...p
   }).start(t);
@@ -85,13 +85,13 @@ getAnimatedStyle(e) {
 }
 render() {
   return (0, s.jsx)('div', {
-    className: h.wrapper,
+    className: _.wrapper,
     children: (0, s.jsx)(u.AccessibilityPreferencesContext.Consumer, {
       children: t => {
         let {
           reducedMotion: n
         } = t;
-        return (0, s.jsx)(l.Z.div, {
+        return (0, s.jsx)(o.Z.div, {
           style: this.getAnimatedStyle(n.enabled),
           children: (0, s.jsx)(e, {
             ...this.props
@@ -102,14 +102,14 @@ render() {
   });
 }
 constructor(...e) {
-  super(...e), _(this, 'timeout', void 0), _(this, 'anim', new l.Z.Value(g.START)), _(this, 'state', {
-    shouldAnimate: !o.tq
-  }), _(this, 'handleResize', () => {
+  super(...e), h(this, 'timeout', void 0), h(this, 'anim', new o.Z.Value(g.START)), h(this, 'state', {
+    shouldAnimate: !l.tq
+  }), h(this, 'handleResize', () => {
     let e = window.innerWidth > E;
     !this.state.shouldAnimate && e && this.anim.setValue(g.END), this.setState({
       shouldAnimate: e
     });
-  }), _(this, 'handleResizeDebounced', a()(this.handleResize, 60));
+  }), h(this, 'handleResizeDebounced', a()(this.handleResize, 60));
 }
   };
 };

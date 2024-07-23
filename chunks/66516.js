@@ -1,72 +1,72 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
-return f;
+return D;
   }
 });
-var n = t(735250),
-  a = t(470079),
-  i = t(512722),
-  r = t.n(i),
-  o = t(442837),
-  l = t(481060),
-  c = t(570140),
-  d = t(497321),
-  _ = t(100527),
-  E = t(367907),
-  u = t(906732),
-  T = t(296810),
-  I = t(921813),
-  S = t(621853),
-  N = t(246946),
-  C = t(594174),
-  m = t(63063),
-  A = t(74538),
-  h = t(18438),
-  g = t(778825),
-  O = t(856607),
-  p = t(594496),
-  R = t(856768),
-  x = t(981631),
-  M = t(689938);
+var n = s(735250),
+  a = s(470079),
+  i = s(512722),
+  r = s.n(i),
+  o = s(442837),
+  l = s(481060),
+  c = s(570140),
+  d = s(497321),
+  _ = s(100527),
+  E = s(367907),
+  u = s(906732),
+  T = s(296810),
+  I = s(921813),
+  S = s(621853),
+  N = s(246946),
+  C = s(594174),
+  m = s(63063),
+  A = s(74538),
+  g = s(18438),
+  h = s(778825),
+  O = s(856607),
+  p = s(594496),
+  R = s(856768),
+  x = s(981631),
+  M = s(689938);
 
-function D(e) {
+function f(e) {
   (0, l.openModalLazy)(async () => {
 let {
-  default: s
-} = await t.e('84509').then(t.bind(t, 933696));
-return t => (0, n.jsx)(s, {
+  default: t
+} = await s.e('84509').then(s.bind(s, 933696));
+return s => (0, n.jsx)(t, {
   source: {
     ...e,
     page: x.ZY5.GUILD_MEMBER_PROFILE_SETTINGS
   },
-  ...t
+  ...s
 });
   });
 }
 
-function f(e) {
+function D(e) {
   let {
-selectedGuild: s
+selectedGuild: t
   } = e, {
-analyticsLocations: t
+analyticsLocations: s
   } = (0, u.ZP)(_.Z.GUILD_PROFILE), i = (0, o.e7)([C.default], () => {
 let e = C.default.getCurrentUser();
 return r()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
-  }), f = (0, o.e7)([S.Z], () => !S.Z.isFetchingProfile(i.id)), P = (0, o.e7)([N.Z], () => N.Z.hidePersonalInformation), {
+  }), D = (0, o.e7)([S.Z], () => !S.Z.isFetchingProfile(i.id)), P = (0, o.e7)([N.Z], () => N.Z.hidePersonalInformation), {
 source: L,
-...Z
-  } = (0, o.cj)([g.Z], () => ({
-...g.Z.getAllPending(),
-source: g.Z.getSource()
+...b
+  } = (0, o.cj)([h.Z], () => ({
+...h.Z.getAllPending(),
+source: h.Z.getSource()
   }));
-  return (a.useEffect(() => () => c.Z.wait(h.W3), []), a.useEffect(() => {
+  return (a.useEffect(() => () => c.Z.wait(g.W3), []), a.useEffect(() => {
 null != L && E.ZP.trackWithMetadata(x.rMx.SETTINGS_PANE_VIEWED, {
   settings_type: 'guild',
   destination_pane: x.jXE.SETTINGS_CUSTOMIZE_PROFILE,
   source: L
 });
-  }, [L]), P) ? (0, n.jsx)(d.Z, {}) : f ? (0, n.jsxs)(u.Gt, {
-value: t,
+  }, [L]), P) ? (0, n.jsx)(d.Z, {}) : D ? (0, n.jsxs)(u.Gt, {
+value: s,
 children: [
   (0, n.jsx)(l.Text, {
     variant: 'text-sm/normal',
@@ -74,24 +74,24 @@ children: [
       helpCenterLink: m.Z.getArticleURL(x.BhN.GUILD_PROFILES)
     })
   }),
-  null != s ? (0, n.jsxs)(n.Fragment, {
+  null != t ? (0, n.jsxs)(n.Fragment, {
     children: [
       (0, n.jsx)(R.Z, {
-        guildId: s.id,
+        guildId: t.id,
         onChange: e => {
-          null != e && (0, h.HP)(e);
+          null != e && (0, g.HP)(e);
         }
       }),
       (0, n.jsx)(T.Z, {
         previewTitle: M.Z.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
-          guildName: null == s ? void 0 : s.name
+          guildName: null == t ? void 0 : t.name
         }),
         profilePreview: (0, n.jsx)(I.Z, {
           user: i,
-          guild: s,
+          guild: t,
           canUsePremiumCustomization: A.ZP.canUsePremiumProfileCustomization(i),
-          onUpsellClick: D,
-          ...Z
+          onUpsellClick: f,
+          ...b
         }),
         children: (0, n.jsx)(p.Z, {})
       })

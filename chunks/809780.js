@@ -19,8 +19,8 @@ var i, a, s, r, l = n(470079),
   u = n(392711),
   _ = n.n(u),
   E = n(570140),
-  I = n(904245),
-  m = n(45114),
+  m = n(904245),
+  I = n(45114),
   T = n(607070),
   h = n(853856),
   N = n(181945),
@@ -106,8 +106,8 @@ this.setState({
 });
   }
   loadChannelMessages(e) {
-I.Z.clearChannel(e.channelId);
-let t = I.Z.fetchMessages({
+m.Z.clearChannel(e.channelId);
+let t = m.Z.fetchMessages({
   channelId: e.channelId,
   limit: k.AQB,
   jump: {
@@ -175,7 +175,7 @@ super(), F(this, 'state', void 0), F(this, 'scrollerRef', void 0), F(this, 'mayb
     channelId: t,
     newestUnreadMessageId: n
   } = e;
-  if (E.Z.wait(() => m.In(t, !0, void 0, n, {
+  if (E.Z.wait(() => I.In(t, !0, void 0, n, {
       section: k.jXE.INBOX
     })), 1 === this.state.channels.length) {
     this.deleteChannel(t);
@@ -197,7 +197,7 @@ super(), F(this, 'state', void 0), F(this, 'scrollerRef', void 0), F(this, 'mayb
     channels: this.state.channels.filter(t => t.channelId !== e)
   }), this.maybeLoadMore();
 }, this.markAllRead = () => {
-  m.y5(this.state.channels.map(e => ({
+  I.y5(this.state.channels.map(e => ({
     channelId: e.channelId,
     messageId: e.newestUnreadMessageId
   }))), this.setState({

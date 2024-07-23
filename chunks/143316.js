@@ -20,7 +20,7 @@ n(), r.default.track(o.rMx.INBOX_CHANNEL_ACKED, {
   marked_all_channels_as_read: !0,
   num_unread_channels_remaining: 0
 });
-  }, I = e => {
+  }, m = e => {
 e.shiftKey ? E() : _(!0);
   };
   return (0, i.jsxs)(i.Fragment, {
@@ -32,7 +32,7 @@ children: [
   'bottom-floating' === t ? (0, i.jsx)(l.a, {
     text: c.Z.Messages.MARK_ALL_AS_READ,
     icon: s.DoubleCheckmarkLargeIcon,
-    onClick: I
+    onClick: m
   }) : (0, i.jsx)(s.CircleIconButton, {
     tooltip: c.Z.Messages.MARK_ALL_AS_READ,
     color: s.CircleIconButtonColors.SECONDARY,
@@ -40,7 +40,7 @@ children: [
       size: 'xs',
       color: 'currentColor'
     }),
-    onClick: I
+    onClick: m
   })
 ]
   });

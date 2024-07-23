@@ -1,10 +1,10 @@
-var n = t(735250),
-  a = t(470079),
-  i = t(481060),
-  r = t(707558),
-  o = t(577720),
-  l = t(689938),
-  c = t(772258);
+var n = s(735250),
+  a = s(470079),
+  i = s(481060),
+  r = s(707558),
+  o = s(577720),
+  l = s(689938),
+  c = s(815420);
 let d = () => [{
 icon: c.perkNewsletter,
 title: l.Z.Messages.HYPESQUAD_PERK_TITLE_NEWSLETTER,
@@ -42,4 +42,4 @@ return (0, n.jsxs)('div', {
 });
   }
 }
-s.Z = _;
+t.Z = _;

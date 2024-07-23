@@ -1,6 +1,6 @@
 n.d(t, {
   n: function() {
-return m;
+return I;
   }
 }), n(411104);
 var i = n(735250);
@@ -13,7 +13,7 @@ var a = n(120356),
   c = n(723851),
   d = n(981631),
   u = n(689938),
-  _ = n(317523);
+  _ = n(357715);
 let E = {
   [d.TaA.WINDOWS]: {
 icon: c.Z,
@@ -29,7 +29,7 @@ getLabel: () => u.Z.Messages.LINUX
   }
 };
 
-function I(e) {
+function m(e) {
   let {
 operatingSystem: t,
 className: n
@@ -45,7 +45,7 @@ children: e => (0, i.jsx)(s, {
 })
   });
 }
-let m = e => {
+let I = e => {
   let {
 systems: t,
 className: n,
@@ -53,7 +53,7 @@ iconClassName: a
   } = e;
   return (0, i.jsx)('div', {
 className: s()(_.OSSection, n),
-children: t.map(e => (0, i.jsx)(I, {
+children: t.map(e => (0, i.jsx)(m, {
   operatingSystem: e,
   className: s()(_.purchaseUnitOperatingSystem, a)
 }, e))

@@ -1,57 +1,57 @@
 n.d(t, {
   Z: function() {
-return _;
+return d;
   }
 }), n(47120), n(411104);
-var r = n(735250),
-  a = n(470079),
+var i = n(735250),
+  r = n(470079),
   s = n(442837),
-  u = n(481060),
-  l = n(607070),
-  i = n(409302),
-  E = n(474936);
+  l = n(481060),
+  a = n(607070),
+  o = n(409302),
+  u = n(474936);
 
-function _(e) {
+function d(e) {
   let {
 giftStyle: t,
 className: n,
-shouldAnimate: _ = !0,
+shouldAnimate: d = !0,
 defaultAnimationState: c,
-idleAnimationState: O
-  } = e, C = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), [A, d] = a.useState(c), o = a.useRef((0, i._)(t, A)), [N, I] = a.useState(null == O), [f, R] = a.useState(!1), [L, P] = a.useState(-1), h = () => {
-o.current = (0, i._)(t, A), P(e => e + 1);
-  }, S = () => {
-I(!1), R(!0), P(-1), d(c);
+idleAnimationState: _
+  } = e, E = (0, s.e7)([a.Z], () => a.Z.useReducedMotion), [h, p] = r.useState(c), f = r.useRef((0, o._)(t, h)), [S, m] = r.useState(null == _), [I, b] = r.useState(!1), [g, C] = r.useState(-1), O = () => {
+f.current = (0, o._)(t, h), C(e => e + 1);
+  }, A = () => {
+m(!1), b(!0), C(-1), p(c);
   };
-  a.useEffect(() => {
-null == O && d(c);
+  r.useEffect(() => {
+null == _ && p(c);
   }, [
-O,
+_,
 c
-  ]), a.useEffect(() => {
-if (null != O && L >= 0) {
-  S();
+  ]), r.useEffect(() => {
+if (null != _ && g >= 0) {
+  A();
   return;
 }
-h();
+O();
   }, [
 t,
-O
-  ]), a.useEffect(() => {
-(!f || null == O) && h();
-  }, [A]), a.useEffect(() => {
-f && (I(null == O), R(!1), h());
-  }, [f]);
-  if (!E.Cj.hasOwnProperty(t))
+_
+  ]), r.useEffect(() => {
+(!I || null == _) && O();
+  }, [h]), r.useEffect(() => {
+I && (m(null == _), b(!1), O());
+  }, [I]);
+  if (!u.Cj.hasOwnProperty(t))
 throw Error('Unexpected giftStyle '.concat(t));
-  return (0, r.jsx)(u.LottieAnimation, {
-importData: o.current,
-shouldAnimate: !C && _,
+  return (0, i.jsx)(l.LottieAnimation, {
+importData: f.current,
+shouldAnimate: !E && d,
 className: n,
-versionKey: L,
-onComplete: null != O ? () => {
-  null != O && (d(O), I(!0));
+versionKey: g,
+onComplete: null != _ ? () => {
+  null != _ && (p(_), m(!0));
 } : void 0,
-loop: N
+loop: S
   });
 }

@@ -17,8 +17,8 @@ var i = n(735250),
   u = n(565138),
   _ = n(353254),
   E = n(695346),
-  I = n(271383),
-  m = n(594174),
+  m = n(271383),
+  I = n(594174),
   T = n(671533),
   h = n(810090),
   N = n(51144),
@@ -92,13 +92,13 @@ subscriptionsSettings: E
 nickname: h,
 nickcolor: f
   } = (s = T, (0, l.cj)([
-I.ZP,
-m.default
+m.ZP,
+I.default
   ], () => {
 var e, t;
-let n = m.default.getCurrentUser();
+let n = I.default.getCurrentUser();
 r()(null != n, 'user cannot be null');
-let i = I.ZP.getMember(s, n.id);
+let i = m.ZP.getMember(s, n.id);
 return {
   nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : N.ZP.getName(n),
   nickcolor: null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : void 0

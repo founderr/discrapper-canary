@@ -10,7 +10,7 @@ var o = r(735250),
   w = r(954824),
   l = r(981631),
   m = r(689938),
-  p = r(299891);
+  p = r(842585);
 let f = [{
   id: 'discord',
   getName: () => m.Z.Messages.DESKTOP_APP,

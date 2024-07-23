@@ -23,8 +23,8 @@ var a = r(735250),
   k = r(650613),
   v = r(789086),
   _ = r(206583),
-  w = r(262737),
-  C = r(979756);
+  w = r(787524),
+  C = r(535271);
 let j = [{
 key: 'type',
 cellClassName: o()(w.cell, w.cellType),

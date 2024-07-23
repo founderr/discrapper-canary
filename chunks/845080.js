@@ -16,16 +16,16 @@ channel: i,
 author: o,
 compact: c,
 animateAvatar: l,
-guildId: s,
-isGroupStart: d = !0,
+guildId: d,
+isGroupStart: s = !0,
 roleIcon: u,
 hideTimestamp: _
   } = e;
-  return !(0, a.Z)(n) && (d || c) ? (0, t.jsx)(r, {
+  return !(0, a.Z)(n) && (s || c) ? (0, t.jsx)(r, {
 message: n,
 channel: i,
 author: o,
-guildId: s,
+guildId: d,
 compact: c,
 animate: l,
 roleIcon: u,

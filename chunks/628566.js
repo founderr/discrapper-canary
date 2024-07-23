@@ -9,8 +9,8 @@ var i, a, s, r, l, o, c = n(442837),
   _ = n(911955);
 (s = i || (i = {}))[s.NOT_FETCHED = 0] = 'NOT_FETCHED', s[s.FETCHING = 1] = 'FETCHING', s[s.FETCHED = 2] = 'FETCHED', s[s.FETCH_FAILED = 3] = 'FETCH_FAILED';
 let E = new Map(),
-  I = new Map(),
-  m = [],
+  m = new Map(),
+  I = [],
   T = 0,
   h = [];
 class N extends(a = c.ZP.Store) {
@@ -27,13 +27,13 @@ return E;
   }
   getIntegrationsFetchState(e) {
 var t;
-return null !== (t = I.get(e)) && void 0 !== t ? t : 0;
+return null !== (t = m.get(e)) && void 0 !== t ? t : 0;
   }
   getApplicationsShelfFetchState() {
 return T;
   }
   getApplicationsShelf() {
-return m;
+return I;
   }
 }
 
@@ -51,15 +51,15 @@ let p = new N(d.Z, {
 E.clear();
   },
   CONNECTION_OPEN() {
-E.clear(), I.clear();
+E.clear(), m.clear();
   },
   CHANNEL_SELECT(e) {
 let {
   channelId: t
 } = e;
-if (null == t || 3 !== I.get(t))
+if (null == t || 3 !== m.get(t))
   return !1;
-I.set(t, 0);
+m.set(t, 0);
   },
   APPLICATIONS_SHELF_FETCH_START() {
 T = 1;
@@ -68,7 +68,7 @@ T = 1;
 let {
   applications: t
 } = e;
-m = t.map(u.Z.createFromServer).sort((e, t) => e.name.localeCompare(t.name)), T = 2;
+I = t.map(u.Z.createFromServer).sort((e, t) => e.name.localeCompare(t.name)), T = 2;
   },
   APPLICATIONS_SHELF_FETCH_FAIL() {
 T = 3;
@@ -77,20 +77,20 @@ T = 3;
 let {
   channelId: t
 } = e;
-E.set(t, null), I.set(t, 1);
+E.set(t, null), m.set(t, 1);
   },
   FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS(e) {
 let {
   channelId: t,
   integrations: n
 } = e;
-E.set(t, f(n.map(_.F))), I.set(t, 2);
+E.set(t, f(n.map(_.F))), m.set(t, 2);
   },
   FETCH_PRIVATE_CHANNEL_INTEGRATIONS_FAIL(e) {
 let {
   channelId: t
 } = e;
-I.set(t, 3);
+m.set(t, 3);
   },
   PRIVATE_CHANNEL_INTEGRATION_CREATE(e) {
 let {

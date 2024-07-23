@@ -10,7 +10,7 @@ var a = t(735250),
   o = t(481060),
   l = t(813197),
   i = t(689938),
-  d = t(960445);
+  d = t(709908);
 let c = 'custom-image',
   u = n.forwardRef(function(e, A) {
 let {

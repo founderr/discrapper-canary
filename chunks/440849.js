@@ -1,10 +1,10 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return i;
   }
 });
-var n = t(969943),
-  a = t(689938);
+var n = s(969943),
+  a = s(689938);
 
 function i(e) {
   switch (e) {

@@ -1,20 +1,20 @@
-var n = t(735250),
-  a = t(470079),
-  i = t(120356),
-  r = t.n(i),
-  o = t(481060),
-  l = t(358085),
-  c = t(998502),
-  d = t(689938),
-  _ = t(549856);
+var n = s(735250),
+  a = s(470079),
+  i = s(120356),
+  r = s.n(i),
+  o = s(481060),
+  l = s(358085),
+  c = s(998502),
+  d = s(689938),
+  _ = s(224499);
 
-function E(e, s, t) {
-  return s in e ? Object.defineProperty(e, s, {
-value: t,
+function E(e, t, s) {
+  return t in e ? Object.defineProperty(e, t, {
+value: s,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[s] = t, e;
+  }) : e[t] = s, e;
 }
 class u extends a.PureComponent {
   async componentDidMount() {
@@ -27,8 +27,8 @@ this.setState({
   render() {
 let {
   openOnStartup: e,
-  startMinimized: s,
-  minimizeToTray: t
+  startMinimized: t,
+  minimizeToTray: s
 } = this.state, a = (0, l.isLinux)() ? d.Z.Messages.USER_SETTINGS_LINUX_SETTINGS : d.Z.Messages.USER_SETTINGS_WINDOWS_SETTINGS;
 return (0, n.jsxs)(o.FormSection, {
   tag: o.FormTitleTags.H1,
@@ -47,7 +47,7 @@ return (0, n.jsxs)(o.FormSection, {
     (0, l.isWindows)() ? (0, n.jsx)(o.FormSwitch, {
       disabled: !e,
       className: r()(_.marginTop8, _.marginBottom20),
-      value: !!e && s,
+      value: !!e && t,
       note: d.Z.Messages.USER_SETTINGS_START_MINIMIZED_BODY,
       onChange: this.handleToggleStartMinimized,
       children: d.Z.Messages.USER_SETTINGS_START_MINIMIZED_LABEL
@@ -58,7 +58,7 @@ return (0, n.jsxs)(o.FormSection, {
     }),
     (0, n.jsx)(o.FormSwitch, {
       className: _.marginBottom20,
-      value: t,
+      value: s,
       note: d.Z.Messages.USER_SETTINGS_MINIMIZE_TO_TRAY_BODY,
       onChange: this.handleToggleMinimizeToTray,
       children: d.Z.Messages.USER_SETTINGS_MINIMIZE_TO_TRAY_LABEL
@@ -89,4 +89,4 @@ super(e), E(this, 'handleToggleOpenOnStartup', () => {
 };
   }
 }
-s.Z = u;
+t.Z = u;

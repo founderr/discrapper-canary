@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(900164),
   _ = n(554838),
   E = n(493892),
-  I = n(661824),
-  m = n(37772),
+  m = n(661824),
+  I = n(37772),
   T = n(695346),
   h = n(314897),
   N = n(496675),
@@ -25,7 +25,7 @@ var i = n(735250),
   g = n(809780),
   S = n(981631),
   A = n(689938),
-  R = n(104219);
+  R = n(717229);
 let x = {
   left: 4,
   right: -12
@@ -57,7 +57,7 @@ children: (0, i.jsxs)('div', {
       className: R.jumpButton,
       onJump: e => u(e, s.id)
     }),
-    (0, i.jsx)(m.Z, {
+    (0, i.jsx)(I.Z, {
       id: s.id,
       message: s,
       channel: n,
@@ -80,7 +80,7 @@ channel: a,
 channelRecord: s,
 gotoChannel: l
   } = e, {
-enabled: m
+enabled: I
   } = d.Z.useExperiment({
 location: '20e3b0_1'
   }, {
@@ -94,7 +94,7 @@ n.forEach(n => {
   if (!(0, u.Z)(n, x)) {
     if (!L && (null == e || !e.isSame(n.timestamp, 'day'))) {
       let t = (0, p.vc)(n.timestamp, 'LL');
-      P.push((0, i.jsx)(I.Z, {
+      P.push((0, i.jsx)(m.Z, {
         className: R.divider,
         children: t
       }, t)), e = r()(n.timestamp);
@@ -105,7 +105,7 @@ n.forEach(n => {
       message: n,
       compact: C,
       isGroupStart: a,
-      treatSpam: !Z && m && (0, E.DQ)(n) && M,
+      treatSpam: !Z && I && (0, E.DQ)(n) && M,
       gotoChannel: l
     }, n.id));
   }

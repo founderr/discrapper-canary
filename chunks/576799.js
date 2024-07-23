@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 });
 var i = n(735250),
@@ -13,13 +13,13 @@ var i = n(735250),
   d = n(123145),
   u = n(699516),
   _ = n(217702),
-  E = n(475525);
+  E = n(438379);
 
-function I(e) {
+function m(e) {
   let {
 message: t,
 channel: n
-  } = e, I = (0, s.e7)([u.Z], () => u.Z.isBlockedForMessage(t)), m = (0, l.p)(), T = a.useMemo(() => ({
+  } = e, m = (0, s.e7)([u.Z], () => u.Z.isBlockedForMessage(t)), I = (0, l.p)(), T = a.useMemo(() => ({
 [n.guild_id]: [t.author.id]
   }), [
 n.guild_id,
@@ -28,10 +28,10 @@ t.author.id
   (0, r.$)(T);
   let h = a.useMemo(() => null != t.content && '' !== t.content ? (0, o.ZP)(t, {
 formatInline: !0,
-shouldFilterKeywords: m
+shouldFilterKeywords: I
   }).content : null, [
 t,
-m
+I
   ]);
   return (0, i.jsxs)('div', {
 className: E.threadMessageAccessory,
@@ -69,7 +69,7 @@ children: [
           l
         ]
       });
-    }(t, h, I)
+    }(t, h, m)
   })
 ]
   });

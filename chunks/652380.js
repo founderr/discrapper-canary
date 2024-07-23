@@ -1,35 +1,35 @@
-t(47120), t(627341);
-var n = t(735250),
-  a = t(470079),
-  i = t(278074),
-  r = t(754700),
-  o = t(887003),
-  l = t(742635),
-  c = t(458708),
-  d = t(481060),
-  _ = t(70956),
-  E = t(497505),
-  u = t(210724),
-  T = t(130653),
-  I = t(78826),
-  S = t(37303),
-  N = t(134483),
-  C = t(478977),
-  m = t(456799),
-  A = t(210851),
-  h = t(602683),
-  g = t(916028),
-  O = t(15033),
-  p = t(899457),
-  R = t(452693);
+s(47120), s(627341);
+var n = s(735250),
+  a = s(470079),
+  i = s(278074),
+  r = s(754700),
+  o = s(887003),
+  l = s(742635),
+  c = s(458708),
+  d = s(481060),
+  _ = s(70956),
+  E = s(497505),
+  u = s(210724),
+  T = s(130653),
+  I = s(78826),
+  S = s(37303),
+  N = s(134483),
+  C = s(478977),
+  m = s(456799),
+  A = s(210851),
+  g = s(602683),
+  h = s(916028),
+  O = s(15033),
+  p = s(899457),
+  R = s(673105);
 
-function x(e, s, t) {
-  return s in e ? Object.defineProperty(e, s, {
-value: t,
+function x(e, t, s) {
+  return t in e ? Object.defineProperty(e, t, {
+value: s,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[s] = t, e;
+  }) : e[t] = s, e;
 }
 let M = [
 'svg',
@@ -37,13 +37,13 @@ let M = [
 'gif',
 'webp'
   ],
-  D = [
+  f = [
 ...M,
 'jpg',
 'jpeg'
   ],
-  f = Array.from(new Set([
-...D,
+  D = Array.from(new Set([
+...f,
 'gif',
 'mp4',
 'webm'
@@ -52,8 +52,8 @@ let M = [
 function P() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
 {
-  streamProgressSeconds: s = 0,
-  completedAt: t = null,
+  streamProgressSeconds: t = 0,
+  completedAt: s = null,
   enrolledAt: n = null,
   claimedAt: a = null
 } = e;
@@ -61,17 +61,17 @@ function P() {
 userId: '123',
 questId: '1193992107035983872',
 enrolledAt: n,
-completedAt: t,
+completedAt: s,
 claimedAt: a,
 claimedTier: null,
 lastStreamHeartbeatAt: null,
-streamProgressSeconds: s,
+streamProgressSeconds: t,
 dismissedQuestContent: 0,
 progress: {}
   };
 }
 let L = '1193992107035983872',
-  Z = {
+  b = {
 id: L,
 preview: !0,
 config: {
@@ -143,16 +143,16 @@ userStatus: null,
 targetedContent: []
   };
 
-function b() {
-  var e, s, t;
-  let [r, o] = a.useState(Z), [l, c] = a.useState(p.a.UNENROLLED), [x, L] = a.useState([]), [b, v] = a.useState(!1), [j, B] = a.useState(null);
-  let U = (t = r.config, (0, i.EQ)(t).with({
+function Z() {
+  var e, t, s;
+  let [r, o] = a.useState(b), [l, c] = a.useState(p.a.UNENROLLED), [x, L] = a.useState([]), [Z, v] = a.useState(!1), [j, B] = a.useState(null);
+  let U = (s = r.config, (0, i.EQ)(s).with({
 configVersion: 2
   }, e => {
-let s = e.rewardsConfig.rewards[0];
+let t = e.rewardsConfig.rewards[0];
 return {
-  ...s.messages,
-  rewardTile: s.asset
+  ...t.messages,
+  rewardTile: t.asset
 };
   }).exhaustive());
   a.useEffect(() => {
@@ -162,14 +162,14 @@ L((e = r.config, (0, i.EQ)(e).with({
 }, e => e.features).exhaustive()));
   }, [r]);
 
-  function G(e, s) {
-var t, n;
+  function G(e, t) {
+var s, n;
 if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e)
   o({
     ...r,
-    config: (t = r.config, n = {
-      [e]: s
-    }, (0, i.EQ)(t).with({
+    config: (s = r.config, n = {
+      [e]: t
+    }, (0, i.EQ)(s).with({
       configVersion: 2
     }, e => ({
       ...e,
@@ -181,14 +181,14 @@ if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e
   });
   }
 
-  function F(e, s) {
-var t, n;
+  function F(e, t) {
+var s, n;
 if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
   o({
     ...r,
-    config: (t = r.config, n = {
-      [e]: s
-    }, (0, i.EQ)(t).with({
+    config: (s = r.config, n = {
+      [e]: t
+    }, (0, i.EQ)(s).with({
       configVersion: 2
     }, e => ({
       ...e,
@@ -200,20 +200,20 @@ if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
   });
   }
 
-  function y(e, s) {
-var t, n;
+  function y(e, t) {
+var s, n;
 if ('rewardName' === e || 'rewardNameWithArticle' === e)
   o({
     ...r,
-    config: (t = r.config, n = {
-      [e]: s
-    }, (0, i.EQ)(t).with({
+    config: (s = r.config, n = {
+      [e]: t
+    }, (0, i.EQ)(s).with({
       configVersion: 2
     }, e => ({
       ...e,
       rewardsConfig: {
         ...e.rewardsConfig,
-        rewards: e.rewardsConfig.rewards.map((e, s) => 0 === s ? {
+        rewards: e.rewardsConfig.rewards.map((e, t) => 0 === t ? {
           ...e,
           messages: {
             ...e.messages,
@@ -225,14 +225,14 @@ if ('rewardName' === e || 'rewardNameWithArticle' === e)
   });
   }
 
-  function V(e, s) {
+  function V(e, t) {
 o({
   ...r,
   config: {
     ...r.config,
     colors: {
       ...r.config.colors,
-      [e]: s
+      [e]: t
     }
   }
 });
@@ -246,7 +246,7 @@ children: [
   }),
   (0, n.jsx)('div', {
     className: R.fields,
-    children: (0, n.jsx)(g.Z, {
+    children: (0, n.jsx)(h.Z, {
       onSelect: function(e) {
         if (B(e), null != e)
           o(e);
@@ -262,25 +262,25 @@ children: [
   (0, n.jsxs)('div', {
     className: R.fields,
     children: [
-      (0, n.jsx)(h.Z, {
+      (0, n.jsx)(g.Z, {
         title: 'Quest Name',
         assetKey: 'questName',
         onMessageChange: F,
         initialValue: r.config.messages.questName
       }),
-      (0, n.jsx)(h.Z, {
+      (0, n.jsx)(g.Z, {
         title: 'Game Title',
         assetKey: 'gameTitle',
         onMessageChange: F,
         initialValue: r.config.messages.gameTitle
       }),
-      (0, n.jsx)(h.Z, {
+      (0, n.jsx)(g.Z, {
         title: 'Reward Name',
         assetKey: 'rewardName',
         onMessageChange: y,
         initialValue: U.name
       }),
-      (0, n.jsx)(h.Z, {
+      (0, n.jsx)(g.Z, {
         title: 'Reward Name With Article',
         assetKey: 'rewardNameWithArticle',
         onMessageChange: y,
@@ -300,7 +300,7 @@ children: [
         title: 'Game Tile Asset',
         assetKey: 'gameTile',
         onFileChange: G,
-        filters: D,
+        filters: f,
         initialValue: r.config.assets.gameTile
       }),
       (0, n.jsx)(A.Z, {
@@ -314,20 +314,20 @@ children: [
         title: 'Quest Bar Hero Asset',
         assetKey: 'questBarHero',
         onFileChange: G,
-        filters: f,
+        filters: D,
         initialValue: r.config.assets.questBarHero
       }),
       (0, n.jsx)(A.Z, {
         title: 'Reward Tile Asset',
         assetKey: 'rewardTile',
-        onFileChange: function(e, s) {
-          var t, n;
+        onFileChange: function(e, t) {
+          var s, n;
           if ('rewardTile' === e)
             o({
               ...r,
-              config: (t = r.config, n = {
-                [e]: s
-              }, (0, i.EQ)(t).with({
+              config: (s = r.config, n = {
+                [e]: t
+              }, (0, i.EQ)(s).with({
                 configVersion: 2
               }, e => ({
                 ...e,
@@ -337,7 +337,7 @@ children: [
                 },
                 rewardsConfig: {
                   ...e.rewardsConfig,
-                  rewards: e.rewardsConfig.rewards.map((e, s) => 0 === s ? {
+                  rewards: e.rewardsConfig.rewards.map((e, t) => 0 === t ? {
                     ...e,
                     asset: n.rewardTile
                   } : e)
@@ -345,14 +345,14 @@ children: [
               })).exhaustive())
             });
         },
-        filters: f,
+        filters: D,
         initialValue: U.rewardTile
       }),
       (0, n.jsx)(A.Z, {
         title: 'Gift Inventory Hero',
         assetKey: 'hero',
         onFileChange: G,
-        filters: f,
+        filters: D,
         initialValue: r.config.assets.hero
       })
     ]
@@ -363,14 +363,14 @@ children: [
       className: R.fullWidthField,
       children: (0, n.jsx)(O.Z, {
         onChange: function(e) {
-          var s, t;
+          var t, s;
           o({
             ...r,
-            config: (s = r.config, t = e, (0, i.EQ)(s).with({
+            config: (t = r.config, s = e, (0, i.EQ)(t).with({
               configVersion: 2
             }, e => ({
               ...e,
-              features: t
+              features: s
             })).exhaustive())
           }), L(e);
         },
@@ -537,7 +537,7 @@ children: [
           (0, n.jsx)(d.FormTitle, {
             children: 'Channel Call Header'
           }),
-          (null === (s = r.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null && (0, n.jsx)(d.Text, {
+          (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null && (0, n.jsx)(d.Text, {
             color: 'text-secondary',
             variant: 'text-sm/normal',
             children: 'The Quest Channel Call Header is hidden when the user has claimed the reward.'
@@ -553,7 +553,7 @@ children: [
                 children: (0, n.jsx)(N.Z, {
                   channelId: '123',
                   previewQuest: r,
-                  isParticipatingOverride: b
+                  isParticipatingOverride: Z
                 })
               })
             })
@@ -564,7 +564,7 @@ children: [
         className: R.channelCallParticipationToggle,
         children: (0, n.jsx)(d.FormItem, {
           children: (0, n.jsx)(d.FormSwitch, {
-            value: b,
+            value: Z,
             onChange: function(e) {
               v(e);
             },
@@ -587,7 +587,7 @@ this.setState({
   render() {
 let {
   error: e,
-  renderKey: s
+  renderKey: t
 } = this.state;
 return null != e ? (0, n.jsxs)('div', {
   className: R.errorBoundary,
@@ -612,7 +612,7 @@ return null != e ? (0, n.jsxs)('div', {
       })
     })
   ]
-}) : (0, n.jsx)(b, {}, s);
+}) : (0, n.jsx)(Z, {}, t);
   }
   constructor(...e) {
 super(...e), x(this, 'state', {
@@ -626,4 +626,4 @@ super(...e), x(this, 'state', {
 });
   }
 }
-s.Z = v;
+t.Z = v;

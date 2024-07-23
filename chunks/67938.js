@@ -1,42 +1,42 @@
-s.d(t, {
+n.d(t, {
   G: function() {
-return h;
+return b;
   }
 });
-var n = s(735250);
-s(470079);
-var r = s(120356),
-  a = s.n(r),
-  o = s(442837),
-  i = s(481060),
-  l = s(607070),
-  c = s(372047),
-  d = s(712953),
-  u = s(196798),
-  p = s(660348),
-  g = s(872044),
-  f = s(671581),
-  C = s(830487),
-  m = s(602476);
+var s = n(735250);
+n(470079);
+var r = n(120356),
+  a = n.n(r),
+  i = n(442837),
+  o = n(481060),
+  c = n(607070),
+  l = n(372047),
+  d = n(731782),
+  u = n(196798),
+  f = n(660348),
+  p = n(872044),
+  g = n(671581),
+  C = n(830487),
+  _ = n(602476);
 
-function _() {
-  return (0, n.jsxs)('div', {
+function m() {
+  return (0, s.jsxs)('div', {
 className: d.attributionLogos,
 'aria-label': 'Discord x Pocketpair',
 children: [
-  (0, n.jsx)(i.ClydeIcon, {
+  (0, s.jsx)(o.ClydeIcon, {
     size: 'custom',
     color: 'currentColor',
     height: 22,
     'aria-hidden': !0
   }),
-  (0, n.jsx)(i.Text, {
+  (0, s.jsx)(o.Text, {
     variant: 'heading-sm/extrabold',
     tag: 'div',
     children: '|'
   }),
-  (0, n.jsx)('img', {
-    src: p,
+  (0, s.jsx)('img', {
+    src: f,
     alt: '',
     'aria-hidden': !0
   })
@@ -44,56 +44,56 @@ children: [
   });
 }
 
-function h(e) {
+function b(e) {
   let {
 category: t
-  } = e, s = (0, o.e7)([l.Z], () => l.Z.useReducedMotion), {
+  } = e, n = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), {
 enabled: r
-  } = (0, c.Z)({
+  } = (0, l.Z)({
 location: 'CollectiblesShop'
   });
-  return (0, n.jsxs)('div', {
+  return (0, s.jsxs)('div', {
 className: a()(d.banner, {
   [d.noTopMargin]: r
 }),
 'aria-label': t.name,
 children: [
-  (0, n.jsxs)('div', {
+  (0, s.jsxs)('div', {
     className: d.mainContent,
     children: [
-      (0, n.jsx)('img', {
-        src: g,
+      (0, s.jsx)('img', {
+        src: p,
         className: d.bannerImage,
         alt: t.name,
         'aria-hidden': !0
       }),
-      (0, n.jsx)(_, {}),
-      (0, n.jsx)('img', {
-        src: f,
+      (0, s.jsx)(m, {}),
+      (0, s.jsx)('img', {
+        src: g,
         className: d.categoryLogo,
         alt: t.name,
         'aria-hidden': !0
       }),
-      !s && (0, n.jsx)('img', {
+      !n && (0, s.jsx)('img', {
         src: u,
         className: d.animatedLayer,
         alt: '',
         'aria-hidden': !0
       }),
-      (0, n.jsx)(i.Text, {
+      (0, s.jsx)(o.Text, {
         className: d.summary,
         variant: 'text-md/normal',
         children: t.summary
       })
     ]
   }),
-  (0, n.jsx)('img', {
-    src: m,
+  (0, s.jsx)('img', {
+    src: _,
     className: a()(d.overflowImage, d.overflowRight),
     alt: '',
     'aria-hidden': !0
   }),
-  (0, n.jsx)('img', {
+  (0, s.jsx)('img', {
     src: C,
     className: a()(d.overflowImage, d.overflowLeft),
     alt: '',

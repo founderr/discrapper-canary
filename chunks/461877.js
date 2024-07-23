@@ -3,14 +3,14 @@ function n(e) {
 }
 
 function a(e) {
-  let [s, t] = e.split('@');
-  return ''.concat('*'.repeat(s.length), '@').concat(t);
+  let [t, s] = e.split('@');
+  return ''.concat('*'.repeat(t.length), '@').concat(s);
 }
-t.d(s, {
+s.d(t, {
   E: function() {
 return a;
   },
   n: function() {
 return n;
   }
-}), t(47120);
+}), s(47120);

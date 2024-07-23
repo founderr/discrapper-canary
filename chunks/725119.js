@@ -1,35 +1,35 @@
-n.d(t, {
+i.d(n, {
   Z: function() {
-return h;
+return Z;
   }
 });
-var i = n(735250),
-  a = n(470079),
-  s = n(481060),
-  l = n(40851),
-  r = n(906732),
-  o = n(171368),
-  c = n(626135),
-  d = n(981631),
-  u = n(689938);
+var t = i(735250),
+  l = i(470079),
+  s = i(481060),
+  o = i(40851),
+  a = i(906732),
+  u = i(171368),
+  d = i(626135),
+  r = i(981631),
+  c = i(689938);
 
-function h(e, t, n) {
-  let h = a.useContext(c.AnalyticsContext),
+function Z(e, n, i) {
+  let Z = l.useContext(d.AnalyticsContext),
 {
-  analyticsLocations: p
-} = (0, r.ZP)(),
-m = (0, l.Aq)();
-  return (0, i.jsx)(s.MenuItem, {
+  analyticsLocations: M
+} = (0, a.ZP)(),
+E = (0, o.Aq)();
+  return (0, t.jsx)(s.MenuItem, {
 id: 'user-profile',
-label: u.Z.Messages.PROFILE,
+label: c.Z.Messages.PROFILE,
 action: () => {
-  (0, o.openUserProfileModal)({
+  (0, u.openUserProfileModal)({
     userId: e,
-    guildId: t,
-    channelId: n,
-    sourceAnalyticsLocations: p,
-    analyticsLocation: h.location
-  }), m.dispatch(d.CkL.POPOUT_CLOSE);
+    guildId: n,
+    channelId: i,
+    sourceAnalyticsLocations: M,
+    analyticsLocation: Z.location
+  }), E.dispatch(r.CkL.POPOUT_CLOSE);
 }
   });
 }

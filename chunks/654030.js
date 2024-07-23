@@ -9,8 +9,8 @@ var i, a = n(735250),
   u = n(498179),
   _ = n(276852),
   E = n(994339),
-  I = n(275920),
-  m = n(917621),
+  m = n(275920),
+  I = n(917621),
   T = n(431583),
   h = n(592745),
   N = n(952164),
@@ -106,7 +106,7 @@ super(...e), B(this, 'state', {
       applicationId: e.application_id,
       channelId: a,
       messageId: i.id
-    }), (0, I.Z)({
+    }), (0, m.Z)({
       type: U.q5t.JOIN,
       source: U.Sbl.MESSAGE_EMBED,
       userId: n,
@@ -198,7 +198,7 @@ super(...e), B(this, 'state', {
     className: u,
     channelId: _,
     message: E,
-    hideParty: I,
+    hideParty: m,
     isSyncable: T,
     isLaunchable: h,
     guildId: N
@@ -209,7 +209,7 @@ super(...e), B(this, 'state', {
     let [t] = n.split(':');
     e = k[t];
   }
-  return (0, a.jsx)(m.Z, {
+  return (0, a.jsx)(I.Z, {
     activity: t,
     partyId: n,
     myPartyId: i,
@@ -228,7 +228,7 @@ super(...e), B(this, 'state', {
     channelId: _,
     guildId: null != N ? N : void 0,
     message: E,
-    hideParty: I,
+    hideParty: m,
     onJoin: this.handleJoin,
     onInvite: this.handleInvite,
     onSync: this.handleSync,
@@ -283,14 +283,14 @@ id: l
 }),
 _ = null != t && f.Z.canPlay(t),
 E = f.Z.getSyncingWith(),
-I = null != E && null != s && E.userId === s;
+m = null != E && null != s && E.userId === s;
   return {
 analyticsLocations: n,
 partyMembers: u,
 connectedApplication: null != l ? A.Z.getApplication(l) : null,
 myPartyId: null != c && null != c.party ? c.party.id : null,
 isLaunching: d,
-isSyncable: _ && !I,
+isSyncable: _ && !m,
 isLaunchable: null != l && (0, D.t)({
   LibraryApplicationStore: O.Z,
   LaunchableGameStore: h.Z,

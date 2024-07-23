@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(624138),
   _ = n(453070),
   E = n(373228),
-  I = n(419922),
-  m = n(217588),
+  m = n(419922),
+  I = n(217588),
   T = n(981631),
   h = n(474936),
   N = n(9758);
@@ -53,7 +53,7 @@ children: (0, i.jsx)(r.Popout, {
   onRequestClose: () => {
     u(!0);
   },
-  renderPopout: e => (0, i.jsx)(m.Z, {
+  renderPopout: e => (0, i.jsx)(I.Z, {
     ...e,
     renderableSticker: t,
     channel: n,
@@ -78,7 +78,7 @@ children: (0, i.jsx)(r.Popout, {
           u(!o), n(e);
         },
         tag: 'span',
-        children: (0, i.jsx)(I.ZP, {
+        children: (0, i.jsx)(m.ZP, {
           isInteracting: s,
           size: f,
           sticker: null != h ? h : t

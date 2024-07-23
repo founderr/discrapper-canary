@@ -30,8 +30,8 @@ var r = n(735250),
   C = n(921944),
   y = n(474936),
   D = n(689938),
-  L = n(759954),
-  b = n(497471);
+  L = n(881485),
+  b = n(305489);
 let M = [{
   box: '#FFD89E',
   ribbon: '#FF7476'
@@ -100,12 +100,12 @@ function B(e) {
   let {
 themeOverride: t,
 hovered: n,
-isContentDismissed: s,
-boxColors: o = {
+isContentDismissed: a,
+boxColors: s = {
   dark: M,
   light: P
 }
-  } = e, u = (0, d.ZP)(), [c, _] = function(e) {
+  } = e, o = (0, d.ZP)(), [c, _] = function(e) {
 let [t, n] = i.useState(!1), [r, a] = i.useState(Math.floor(7 * Math.random()));
 return i.useEffect(() => {
   if (e)
@@ -122,7 +122,7 @@ return i.useEffect(() => {
   t,
   r
 ];
-  }(n), E = (0, a.useSpring)({
+  }(n), E = (0, u.useSpring)({
 reverse: !n,
 reset: !0,
 from: {
@@ -135,9 +135,9 @@ config: {
   tension: 800,
   friction: 24
 }
-  }), f = s ? _ : 0, h = (0, l.wj)(null != t ? t : u) ? o.dark[f] : o.light[f];
-  return !n && s ? (0, r.jsx)(k, {}) : s && c ? (0, r.jsx)(G, {
-isDark: (0, l.wj)(u),
+  }), f = a ? _ : 0, h = (0, l.wj)(null != t ? t : o) ? s.dark[f] : s.light[f];
+  return !n && a ? (0, r.jsx)(k, {}) : a && c ? (0, r.jsx)(G, {
+isDark: (0, l.wj)(o),
 style: E
   }) : (0, r.jsx)(x, {
 boxColor: h.box,

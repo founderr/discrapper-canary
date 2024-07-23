@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(778087),
   _ = n(603721),
   E = n(124072),
-  I = n(171368),
-  m = n(592125),
+  m = n(171368),
+  I = n(592125),
   T = n(430824),
   h = n(594174),
   N = n(739566),
@@ -118,7 +118,7 @@ for (let n of null !== (x = Z.options) && void 0 !== x ? x : [])
             let e = (0, N.ij)(t, O);
             g = (0, i.jsxs)(E.Z, {
               ...A,
-              onClick: () => (0, I.openUserProfileModal)({
+              onClick: () => (0, m.openUserProfileModal)({
                 userId: t.id,
                 guildId: O.guild_id,
                 channelId: O.id,
@@ -138,7 +138,7 @@ for (let n of null !== (x = Z.options) && void 0 !== x ? x : [])
         }
         case c.jw.CHANNEL: {
           let e = x.value.toString(),
-            t = m.Z.getChannel(e);
+            t = I.Z.getChannel(e);
           null != t && (g = (0, i.jsxs)(E.Z, {
             ...A,
             children: [
@@ -176,7 +176,7 @@ for (let n of null !== (x = Z.options) && void 0 !== x ? x : [])
               let e = (0, N.ij)(t, O);
               g = (0, i.jsxs)(E.Z, {
                 ...A,
-                onClick: () => (0, I.openUserProfileModal)({
+                onClick: () => (0, m.openUserProfileModal)({
                   userId: t.id,
                   guildId: O.guild_id,
                   analyticsLocation: {

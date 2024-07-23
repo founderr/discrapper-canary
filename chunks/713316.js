@@ -1,54 +1,54 @@
-t.d(n, {
+n.d(t, {
   w: function() {
-return _;
+return f;
   }
 });
-var i = t(735250);
-t(470079);
-var r = t(512722),
-  o = t.n(r),
-  a = t(481060),
-  s = t(598),
-  l = t(698708),
-  c = t(614277),
-  d = t(689938),
-  u = t(811586);
+var r = n(735250);
+n(470079);
+var a = n(512722),
+  i = n.n(a),
+  o = n(481060),
+  s = n(598),
+  l = n(698708),
+  c = n(614277),
+  d = n(689938),
+  u = n(642852);
 
-function _(e) {
+function f(e) {
   let {
-handleClose: n
+handleClose: t
   } = e, {
-skusById: t,
-selectedSkuId: r,
-application: _
+skusById: n,
+selectedSkuId: a,
+application: f
   } = (0, s.usePaymentContext)();
-  o()(null != r, 'Expected selectedSkuId'), o()(null != _, 'Expected application');
-  let p = t[r];
-  o()(null != p, 'Expected sku');
-  let f = d.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
-applicationName: _.name,
-itemName: p.name
+  i()(null != a, 'Expected selectedSkuId'), i()(null != f, 'Expected application');
+  let h = n[a];
+  i()(null != h, 'Expected sku');
+  let p = d.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+applicationName: f.name,
+itemName: h.name
   });
-  return (0, i.jsxs)(c.C3, {
+  return (0, r.jsxs)(c.C3, {
 children: [
-  (0, i.jsx)(l.Z, {}),
-  (0, i.jsxs)('div', {
+  (0, r.jsx)(l.Z, {}),
+  (0, r.jsxs)('div', {
     className: u.confirmation,
     children: [
-      (0, i.jsx)(a.Heading, {
+      (0, r.jsx)(o.Heading, {
         variant: 'heading-xxl/bold',
         className: u.confirmationHeader,
         children: 'Success!'
       }),
-      (0, i.jsx)(a.Text, {
+      (0, r.jsx)(o.Text, {
         variant: 'text-md/normal',
-        children: f
+        children: p
       }),
-      (0, i.jsx)('div', {
+      (0, r.jsx)('div', {
         className: u.divider
       }),
-      (0, i.jsx)(a.Button, {
-        onClick: n,
+      (0, r.jsx)(o.Button, {
+        onClick: t,
         children: d.Z.Messages.CLOSE
       })
     ]

@@ -17,7 +17,7 @@ var r = n(735250),
   f = n(74538),
   h = n(921944),
   p = n(689938),
-  m = n(774577);
+  m = n(840587);
 let I = {
   tension: 750,
   mass: 2.5,
@@ -62,7 +62,7 @@ function g(e) {
 checked: t,
 onClick: n,
 id: a = 'burst-reaction-toggle-button'
-  } = e, g = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), S = E.default.getCurrentUser(), A = null == S || (0, f.I5)(S) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [], [N, v] = (0, _.U)(A), [O, R] = i.useState(!1), [C, y] = (0, o.useSpring)(() => ({})), D = (0, o.animated)(c.SuperReactionIcon);
+  } = e, g = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), S = E.default.getCurrentUser(), A = null == S || (0, f.I5)(S) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [], [N, v] = (0, _.U)(A), [O, R] = i.useState(!1), [C, y] = (0, c.useSpring)(() => ({})), D = (0, o.animated)(c.SuperReactionIcon);
   i.useEffect(() => {
 let e = N === u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
 e && (v(h.L.DISMISS), setTimeout(() => R(e), 200));

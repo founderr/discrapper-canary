@@ -20,7 +20,7 @@ var i = n(735250),
   g = n(650394),
   p = n(731455),
   T = n(689938),
-  f = n(178698);
+  f = n(514768);
 let S = 12,
   C = () => {
 let e = (0, u.s1)().location.search;
@@ -90,7 +90,7 @@ onTagClick: D
 guilds: j,
 loading: U,
 total: G
-  } = n, [k, w] = s.useState(!1), {
+  } = n, [w, k] = s.useState(!1), {
 tag: B
   } = C(), [H, V] = s.useState(B), F = (0, o.e7)([_.ZP], () => _.ZP.hasSearchError()), Y = (e, t, n) => {
 d.bR(a, {
@@ -101,7 +101,7 @@ d.bR(a, {
   filters: {
     approximate_member_count: h.sq
   }
-}), w(!1);
+}), k(!1);
   }, W = () => {
 null == Z || Z.scrollTo({
   to: 0
@@ -112,7 +112,7 @@ let {
   offset: e,
   tag: t
 } = C(), n = null != e ? Math.floor(parseInt(e, 10) / S) + 1 : 1;
-V(!!t), 1 === n && w(!0);
+V(!!t), 1 === n && k(!0);
   }, [a]);
   let z = R === p.Hk ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
 count: null != G ? G.toLocaleString() : '0',
@@ -168,7 +168,7 @@ children: [
     children: (0, i.jsx)(I.Z, {
       pageSize: S,
       totalCount: G,
-      resetCurrentPage: k,
+      resetCurrentPage: w,
       onPageChange: e => {
         Y((e - 1) * S, S), W();
       },

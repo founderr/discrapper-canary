@@ -12,7 +12,7 @@ return S;
 return p;
   },
   R9: function() {
-return m;
+return I;
   },
   Tn: function() {
 return f;
@@ -33,7 +33,7 @@ return C;
 return E;
   },
   wj: function() {
-return I;
+return m;
   },
   x8: function() {
 return A;
@@ -46,7 +46,7 @@ var i = n(913527),
   l = n(77498),
   o = n(70956),
   c = n(346114),
-  d = n(702512),
+  d = n(288836),
   u = n(689938);
 
 function _(e) {
@@ -60,7 +60,7 @@ return c.a;
   return null;
 }
 
-function I(e, t) {
+function m(e, t) {
   if (null == e)
 return !1;
   let n = l.Z.getGameByName(e);
@@ -70,7 +70,7 @@ return e.toLowerCase() === (null == n ? void 0 : null === (t = n.name) || void 0
   })) || !1;
 }
 
-function m() {
+function I() {
   return Math.floor(Date.now() / 1000) - d.kS;
 }
 
@@ -78,7 +78,7 @@ function T(e, t, n) {
   var i, a, s, r;
   if (null == g(e))
 return !1;
-  let l = (i = t, a = d.RN[e], null !== (s = i.find(e => I(e.name, a))) && void 0 !== s ? s : null);
+  let l = (i = t, a = d.RN[e], null !== (s = i.find(e => m(e.name, a))) && void 0 !== s ? s : null);
   if (null != l) {
 ;
 let e = null !== (r = null == l ? void 0 : l.lastLaunched) && void 0 !== r ? r : 0;
@@ -88,7 +88,7 @@ return n <= l.lastFocused || n * o.Z.Millis.SECOND <= e;
 }
 
 function h(e) {
-  return T(e, s.ZP.getGamesSeen(!1), m());
+  return T(e, s.ZP.getGamesSeen(!1), I());
 }
 
 function N(e, t) {

@@ -1,38 +1,38 @@
-a.d(n, {
+s.d(n, {
   Z: function() {
 return u;
   }
 });
-var s = a(735250);
-a(470079);
-var t = a(120356),
-  r = a.n(t),
-  l = a(937615),
-  i = a(474936),
-  o = a(689938),
-  c = a(25817);
+var t = s(735250);
+s(470079);
+var r = s(120356),
+  l = s.n(r),
+  a = s(937615),
+  i = s(474936),
+  c = s(689938),
+  o = s(25817);
 
 function u(e) {
   let {
 price: n,
-currency: a,
-intervalType: t,
+currency: s,
+intervalType: r,
 className: u,
-intervalCount: d = 1,
+intervalCount: I = 1,
 isPrepaidPaymentSource: _ = !1
-  } = e, I = (0, l.T4)(n, a), E = null;
-  return t === i.rV.YEAR ? E = o.Z.Messages.BILLING_PRICE_PER_YEAR_BOLD.format({
-price: I
-  }) : t === i.rV.MONTH && 1 === d ? E = o.Z.Messages.BILLING_PRICE_PER_MONTH_BOLD.format({
-price: I
-  }) : t === i.rV.MONTH && d > 1 && (E = o.Z.Messages.BILLING_PRICE_PER_MULTI_MONTHS_BOLD.format({
-price: I,
-intervalCount: d
-  })), (0, s.jsx)('div', {
-className: r()(c.pricePerInterval, u),
-'data-testid': 'PricePerInterval-'.concat(a),
-children: null == t || _ ? (0, s.jsx)('strong', {
-  children: I
-}) : E
+  } = e, E = (0, a.T4)(n, s), T = null;
+  return r === i.rV.YEAR ? T = c.Z.Messages.BILLING_PRICE_PER_YEAR_BOLD.format({
+price: E
+  }) : r === i.rV.MONTH && 1 === I ? T = c.Z.Messages.BILLING_PRICE_PER_MONTH_BOLD.format({
+price: E
+  }) : r === i.rV.MONTH && I > 1 && (T = c.Z.Messages.BILLING_PRICE_PER_MULTI_MONTHS_BOLD.format({
+price: E,
+intervalCount: I
+  })), (0, t.jsx)('div', {
+className: l()(o.pricePerInterval, u),
+'data-testid': 'PricePerInterval-'.concat(s),
+children: null == r || _ ? (0, t.jsx)('strong', {
+  children: E
+}) : T
   });
 }

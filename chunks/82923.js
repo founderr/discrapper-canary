@@ -1,13 +1,13 @@
-s(47120);
-var n = s(748780);
+n(47120);
+var s = n(748780);
 
-function r(e, t, s) {
+function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-value: s,
+value: n,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[t] = s, e;
+  }) : e[t] = n, e;
 }
 class a {
   start() {
@@ -24,7 +24,7 @@ this.animation.stop();
 r(this, 'animation', void 0), this.animation = e;
   }
 }
-class o {
+class i {
   _map(e) {
 return this.animations.map(e);
   }
@@ -38,7 +38,7 @@ this._map(e => e.stop());
 r(this, 'animations', void 0), this.animations = e;
   }
 }
-class i {
+class o {
   async start() {
 for (let e of (this.stopped = !1, this.animations)) {
   if (this.stopped)
@@ -54,23 +54,23 @@ r(this, 'animations', void 0), r(this, 'stopped', !1), this.animations = e;
   }
 }
 
-function l(e, t, s) {
-  return new a(s(e, {
+function c(e, t, n) {
+  return new a(n(e, {
 ...t
   }));
 }
 t.Z = {
-  ...n.Z,
+  ...s.Z,
   timing: function(e, t) {
-return l(e, t, n.Z.timing);
+return c(e, t, s.Z.timing);
   },
   spring: function(e, t) {
-return l(e, t, n.Z.spring);
+return c(e, t, s.Z.spring);
   },
   parallel: function(e) {
-return new o(e);
+return new i(e);
   },
   sequence: function(e) {
-return new i(e);
+return new o(e);
   }
 };

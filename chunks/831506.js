@@ -6,21 +6,21 @@ var i, a, s, r, l = n(392711),
   u = n(314897),
   _ = n(699516),
   E = n(885110),
-  I = n(981631);
-let m = {},
+  m = n(981631);
+let I = {},
   T = {};
 
 function h(e, t) {
   var n;
-  return (null !== (n = m[e]) && void 0 !== n ? n : {})[t];
+  return (null !== (n = I[e]) && void 0 !== n ? n : {})[t];
 }
 
 function N(e, t) {
   let n = h(e, t);
   if (null == n)
 return;
-  let i = m[e];
-  delete i[t], o().isEmpty(i) && delete m[e];
+  let i = I[e];
+  delete i[t], o().isEmpty(i) && delete I[e];
   let a = T[n];
   null != a && (a.delete(e), 0 === a.size && delete T[n]);
 }
@@ -29,7 +29,7 @@ function f(e, t, n, i) {
   let a = n.find(e => null != e.party && e.party.id),
 s = null != a && null != a.party ? a.party.id : null,
 r = h(t, e);
-  if (null == s || i === I.Skl.OFFLINE)
+  if (null == s || i === m.Skl.OFFLINE)
 return null != r && (N(t, e), void 0);
   if (null != r) {
 if (r === s)
@@ -37,8 +37,8 @@ if (r === s)
 N(t, e);
   }! function(e, t, n) {
 var i;
-let a = m[e];
-if (null == a && (a = m[e] = {}), a[t] = n, _.Z.isBlocked(e))
+let a = I[e];
+if (null == a && (a = I[e] = {}), a[t] = n, _.Z.isBlocked(e))
   return;
 let s = null !== (i = T[n]) && void 0 !== i ? i : new Set();
 T[n] = s, s.add(e);
@@ -69,7 +69,7 @@ null != t && f(e, t.user.id, t.activities, t.status) && (n = !0);
 function g() {
   let e = u.default.getId(),
 t = E.Z.getActivities();
-  return f(I.ME, e, t);
+  return f(m.ME, e, t);
 }
 class S extends(i = c.ZP.Store) {
   initialize() {
@@ -79,7 +79,7 @@ this.syncWith([E.Z], g), this.waitFor(E.Z, _.Z);
 return null != e && null != T[e] ? T[e] : null;
   }
   getUserParties() {
-return m;
+return I;
   }
   getParties() {
 return T;
@@ -102,7 +102,7 @@ for (let {
     activities: a
   }
   of n)
-  null != e && !1 !== f(I.ME, e.id, a, t) && (i = !0);
+  null != e && !1 !== f(m.ME, e.id, a, t) && (i = !0);
 for (let e of t)
   !1 !== p({
     guild: e
@@ -114,7 +114,7 @@ let {
   parties: t,
   userParties: n
 } = e;
-T = {}, m = {
+T = {}, I = {
   ...n
 }, Object.keys(t).forEach(e => T[e] = new Set(t[e]));
   },
@@ -128,7 +128,7 @@ for (let {
     activities: i
   }
   of t)
-  null != e && !1 !== f(I.ME, e.id, i) && (n = !0);
+  null != e && !1 !== f(m.ME, e.id, i) && (n = !0);
 return n;
   },
   PRESENCE_UPDATES: function(e) {
@@ -142,7 +142,7 @@ return t.map(e => {
     status: i,
     activities: a
   } = e;
-  return f(null != t ? t : I.ME, n.id, a, i);
+  return f(null != t ? t : m.ME, n.id, a, i);
 }).some(e => e);
   },
   THREAD_MEMBER_LIST_UPDATE: function(e) {
@@ -165,7 +165,7 @@ let {
 } = e;
 if (!_.Z.isBlocked(t.id))
   return !1;
-let n = m[t.id];
+let n = I[t.id];
 if (null == n)
   return !1;
 for (let e of o().values(n)) {
@@ -176,7 +176,7 @@ for (let e of o().values(n)) {
   RELATIONSHIP_REMOVE: function(e) {
 let {
   relationship: t
-} = e, n = m[t.id];
+} = e, n = I[t.id];
 if (null == n)
   return !1;
 for (let e of o().values(n)) {

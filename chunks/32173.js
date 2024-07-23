@@ -23,8 +23,8 @@ var i = n(399606),
   m = n(74538),
   N = n(494127),
   f = n(314684),
-  h = n(687362),
-  S = n(119269),
+  S = n(687362),
+  h = n(119269),
   M = n(391110),
   x = n(75077),
   b = n(474936),
@@ -39,8 +39,8 @@ var i = n(399606),
   U = n(704565),
   G = n(393305),
   y = n(338879),
-  H = n(203302),
-  k = n(766491),
+  k = n(203302),
+  H = n(766491),
   w = n(193943),
   F = n(707046),
   V = n(488459),
@@ -72,7 +72,7 @@ flipped: ed
 flipped: e_
   } = (0, N.as)(), eu = (0, f.nY)({
 showAnimations: !0
-  }), eE = null != eu ? eu.initialPercentage : void 0, eT = null != eu ? eu.percentage : void 0, eI = (0, u.Z)(R.Z), eR = (0, h.Z)(), eC = (0, E.Z)({
+  }), eE = null != eu ? eu.initialPercentage : void 0, eT = null != eu ? eu.percentage : void 0, eI = (0, u.Z)(R.Z), eR = (0, S.Z)(), eC = (0, E.Z)({
 scrollPosition: P.Y_.TRY_IT_OUT,
 analyticsLocations: e
   }), eg = () => {
@@ -95,7 +95,7 @@ avatarDecorations: eo ? {
   descriptionCta: v.Z.Messages.VISIT_THE_SHOP_CTA,
   onCtaClick: ep,
   pillText: v.Z.Messages.EARLY_ACCESS,
-  perkImage: H,
+  perkImage: k,
   canReveal: ed,
   dismissibleContentType: l.z.WHATS_NEW_AVATAR_DECOS_FLIP
 } : {
@@ -104,7 +104,7 @@ avatarDecorations: eo ? {
   subtitle: v.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_NON_SUB,
   description: v.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
   pillText: v.Z.Messages.EARLY_ACCESS,
-  perkImage: H,
+  perkImage: k,
   canReveal: ed,
   dismissibleContentType: l.z.WHATS_NEW_AVATAR_DECOS_FLIP
 },
@@ -137,14 +137,14 @@ clips: eo ? {
   } : () => {
     window.open(p.Z.getArticleURL(O.BhN.CLIPS), '_blank');
   },
-  perkImage: k
+  perkImage: H
 } : {
   name: 'clips',
   title: v.Z.Messages.CLIPS,
   subtitle: v.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
   description: v.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_NON_SUB,
   pillText: v.Z.Messages.EARLY_ACCESS,
-  perkImage: k
+  perkImage: H
 },
 earlyAccess: eo ? {
   name: 'earlyAccess',
@@ -436,7 +436,7 @@ let {
   pillText: a,
   ctaDescription: i,
   dismissibleContentType: l
-} = eR, c = (0, r.jsx)(S.Z, {
+} = eR, c = (0, r.jsx)(h.Z, {
   showAnimations: !0,
   percentage: eT,
   initialPercentage: eE

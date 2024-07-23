@@ -1,39 +1,39 @@
-n.d(t, {
+i.d(n, {
   q: function() {
-return l;
+return o;
   },
   z: function() {
 return s;
   }
 });
-var i = n(735250);
-n(470079);
-var a = n(481060);
+var t = i(735250);
+i(470079);
+var l = i(481060);
 
-function s(e, t, s) {
-  (0, a.openModalLazy)(async () => {
+function s(e, n, s) {
+  (0, l.openModalLazy)(async () => {
 let {
-  default: a
-} = await n.e('72920').then(n.bind(n, 109730));
-return n => (0, i.jsx)(a, {
+  default: l
+} = await i.e('72920').then(i.bind(i, 109730));
+return i => (0, t.jsx)(l, {
   guildId: e,
-  userId: t,
+  userId: n,
   anaylticsLocations: s,
-  ...n
+  ...i
 });
   });
 }
 
-function l(e, t, s) {
-  (0, a.openModalLazy)(async () => {
+function o(e, n, s) {
+  (0, l.openModalLazy)(async () => {
 let {
-  default: a
-} = await n.e('76233').then(n.bind(n, 171494));
-return n => (0, i.jsx)(a, {
+  default: l
+} = await i.e('76233').then(i.bind(i, 171494));
+return i => (0, t.jsx)(l, {
   guildId: e,
-  userId: t,
+  userId: n,
   anaylticsLocations: s,
-  ...n
+  ...i
 });
   });
 }

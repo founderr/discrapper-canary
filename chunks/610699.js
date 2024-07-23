@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(481060),
   _ = n(447543),
   E = n(317381),
-  I = n(778569),
-  m = n(182906),
+  m = n(778569),
+  I = n(182906),
   T = n(884338),
   h = n(100527),
   N = n(906732),
@@ -33,7 +33,7 @@ var i = n(735250),
   L = n(981631),
   Z = n(245335),
   P = n(689938),
-  b = n(556849);
+  b = n(652267);
 let D = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
   j = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
   U = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
@@ -181,7 +181,7 @@ X = (0, c.e7)([R.Z], () => null != q && R.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q
 {
   analyticsLocations: J
 } = (0, N.ZP)(h.Z.INVITE_EMBED),
-$ = (0, I.Z)({
+$ = (0, m.Z)({
   applicationId: G.id,
   size: D,
   names: ['embedded_cover']
@@ -215,7 +215,7 @@ children: [
       [b.large]: w,
       [b.stacked]: H
     }),
-    children: (0, i.jsx)(m.Z, {
+    children: (0, i.jsx)(I.Z, {
       imageBackground: $,
       applicationName: null !== (n = null == z ? void 0 : z.name) && void 0 !== n ? n : '',
       imageClassName: r()(b.img, {

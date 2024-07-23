@@ -1,27 +1,27 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return S;
   }
-}), t(47120), t(653041);
-var n = t(735250),
-  a = t(470079),
-  i = t(120356),
-  r = t.n(i),
-  o = t(442837),
-  l = t(481060),
-  c = t(570140),
-  d = t(622414),
-  _ = t(171156),
-  E = t(399002),
-  u = t(369541),
-  T = t(549856);
+}), s(47120), s(653041);
+var n = s(735250),
+  a = s(470079),
+  i = s(120356),
+  r = s.n(i),
+  o = s(442837),
+  l = s(481060),
+  c = s(570140),
+  d = s(622414),
+  _ = s(171156),
+  E = s(399002),
+  u = s(369541),
+  T = s(224499);
 class I extends a.Component {
-  renderTestCase(e, s, t, a, i) {
-let o = null == s ? void 0 : s.summary;
+  renderTestCase(e, t, s, a, i) {
+let o = null == t ? void 0 : t.summary;
 return (0, n.jsxs)(l.FormText, {
   className: T.marginBottom20,
   children: [
-    !0 === a ? '\u2705' : !0 === i ? '\u274C' : !0 === t ? '\uD83C\uDFCE️' : '',
+    !0 === a ? '\u2705' : !0 === i ? '\u274C' : !0 === s ? '\uD83C\uDFCE️' : '',
     'speed test, bitrate = ',
     ((0, E.Hm)(e) / 1000).toFixed(0),
     ' kbps, framerate =',
@@ -60,7 +60,7 @@ return (0, n.jsxs)(l.FormText, {
         })
       ]
     }),
-    !1 === a && !0 === t && !1 === i && (0, n.jsx)('div', {
+    !1 === a && !0 === s && !1 === i && (0, n.jsx)('div', {
       children: (0, n.jsx)('div', {
         className: r()(T.marginTop8, T.marginBottom8),
         children: 'Test in progress. Results will appear when test completes.'
@@ -75,25 +75,25 @@ return (0, n.jsxs)(l.FormText, {
   ]
 });
   }
-  renderTestCases(e, s, t, n, a) {
+  renderTestCases(e, t, s, n, a) {
 if (!1 === e)
   return;
 let i = [];
-for (let [e, r] of t.entries()) {
-  let t = e === a,
+for (let [e, r] of s.entries()) {
+  let s = e === a,
     o = null != a && e < a;
-  i.push(this.renderTestCase(r, n[e], t, o, s));
+  i.push(this.renderTestCase(r, n[e], s, o, t));
 }
 return i;
   }
-  renderPing(e, s, t) {
+  renderPing(e, t, s) {
 if (!1 === e)
   return;
-let a = t.length > 0 ? (0, E.B9)(t) : null;
+let a = s.length > 0 ? (0, E.B9)(s) : null;
 return (0, n.jsxs)(l.FormText, {
   className: T.marginBottom20,
   children: [
-    s > u.N7.PINGING ? '\u2705' : s === u.N7.PINGING ? '\uD83C\uDFCE️' : '',
+    t > u.N7.PINGING ? '\u2705' : t === u.N7.PINGING ? '\uD83C\uDFCE️' : '',
     'Ping endpoint',
     null !== a && (0, n.jsxs)('div', {
       className: r()(T.marginTop8, T.marginBottom8),
@@ -112,14 +112,14 @@ return (0, n.jsxs)(l.FormText, {
   ]
 });
   }
-  renderConnect(e, s, t) {
+  renderConnect(e, t, s) {
 if (!1 !== e)
   return (0, n.jsxs)(l.FormText, {
     className: T.marginBottom20,
     children: [
-      s > u.N7.CONNECTING ? '\u2705' : s === u.N7.CONNECTING ? '\uD83C\uDFCE️' : '',
+      t > u.N7.CONNECTING ? '\u2705' : t === u.N7.CONNECTING ? '\uD83C\uDFCE️' : '',
       'Connect to ',
-      null != t ? t : 'endpoint'
+      null != s ? s : 'endpoint'
     ]
   });
   }
@@ -135,28 +135,28 @@ return (0, n.jsx)(l.TextArea, {
   placeholder: 'Anything we should know about this test? Enter any relevant information about location, connection strength, or recent call quality here.'
 });
   }
-  renderAwaitingEndpoint(e, s) {
+  renderAwaitingEndpoint(e, t) {
 if (!1 !== e)
   return (0, n.jsxs)(l.FormText, {
     className: T.marginBottom20,
     children: [
-      s > u.N7.AWAITING_ENDPOINT ? '\u2705' : s === u.N7.AWAITING_ENDPOINT ? '\uD83C\uDFCE️' : '',
+      t > u.N7.AWAITING_ENDPOINT ? '\u2705' : t === u.N7.AWAITING_ENDPOINT ? '\uD83C\uDFCE️' : '',
       'Select endpoint'
     ]
   });
   }
-  renderUpload(e, s) {
+  renderUpload(e, t) {
 if (!1 !== e)
   return (0, n.jsxs)(l.FormText, {
     className: T.marginBottom20,
     children: [
-      s > u.N7.UPLOADING ? '\u2705' : s === u.N7.UPLOADING ? '\uD83C\uDFCE️' : '',
+      t > u.N7.UPLOADING ? '\u2705' : t === u.N7.UPLOADING ? '\uD83C\uDFCE️' : '',
       'Upload results'
     ]
   });
   }
-  renderComplete(e, s) {
-if (!1 !== e && s === u.N7.COMPLETED)
+  renderComplete(e, t) {
+if (!1 !== e && t === u.N7.COMPLETED)
   return (0, n.jsx)(l.FormText, {
     className: T.marginBottom20,
     children: 'Your Speed Test is completed and the results have been uploaded. You may safely close this page.'
@@ -164,15 +164,15 @@ if (!1 !== e && s === u.N7.COMPLETED)
   }
   render() {
 let e = this.props.available,
-  s = this.props.active,
-  t = this.props.failed,
+  t = this.props.active,
+  s = this.props.failed,
   a = this.props.endpoint,
   i = this.props.lifecycle,
   r = this.props.testCases,
   o = this.props.currentTest,
   c = this.props.testResults,
   _ = this.props.pings,
-  E = s ? d.Z.stopSpeedTest : d.Z.startSpeedTest,
+  E = t ? d.Z.stopSpeedTest : d.Z.startSpeedTest,
   I = i >= u.N7.AWAITING_ENDPOINT;
 return !1 === e ? (0, n.jsx)(l.FormSection, {
   tag: l.FormTitleTags.H1,
@@ -191,29 +191,29 @@ return !1 === e ? (0, n.jsx)(l.FormSection, {
       children: (0, n.jsx)('div', {
         children: (0, n.jsx)(l.Button, {
           onClick: () => E(),
-          children: s ? 'Stop Speed Test' : 'Start Speed Test'
+          children: t ? 'Stop Speed Test' : 'Start Speed Test'
         })
       })
     }),
     this.renderAwaitingEndpoint(I, i),
     this.renderConnect(I, i, a),
     this.renderPing(I, i, _),
-    this.renderTestCases(I, t, r, c, o),
+    this.renderTestCases(I, s, r, c, o),
     this.renderUpload(I, i),
     this.renderComplete(I, i)
   ]
 });
   }
   constructor(...e) {
-var s, t, n;
-super(...e), s = this, t = 'state', n = {
+var t, s, n;
+super(...e), t = this, s = 'state', n = {
   notes: this.props.notes
-}, t in s ? Object.defineProperty(s, t, {
+}, s in t ? Object.defineProperty(t, s, {
   value: n,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[t] = n;
+}) : t[s] = n;
   }
 }
 
@@ -230,11 +230,11 @@ function S() {
   pings: _.Z.getPings(),
   notes: _.Z.getNotes()
 })),
-[s, t] = a.useState(0),
+[t, s] = a.useState(0),
 i = a.useCallback(e => {
   let {} = e;
-  t(s + 1);
-}, [s]);
+  s(t + 1);
+}, [t]);
   return a.useEffect(() => (c.Z.subscribe('RTC_SPEED_TEST_STATE_UPDATE', i), () => {
 c.Z.unsubscribe('RTC_SPEED_TEST_STATE_UPDATE', i);
   }), [i]), (0, n.jsx)(I, {

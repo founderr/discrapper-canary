@@ -16,7 +16,7 @@ var a = n(442837),
   _ = n(981631),
   f = n(815660),
   m = n(689938),
-  g = n(198707);
+  g = n(160826);
 (i = l || (l = {}))[i.VOICE = 0] = 'VOICE';
 t.Z = e => {
   let {
@@ -66,7 +66,7 @@ children: [
                   default: e
                 } = await Promise.all([
                   n.e('76540'),
-                  n.e('52443')
+                  n.e('97733')
                 ]).then(n.bind(n, 607018));
                 return t => (0, r.jsx)(e, {
                   reason: u.L.GUILD_PHONE_REQUIRED,

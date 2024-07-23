@@ -17,10 +17,10 @@ var i = n(735250),
   u = n(602667),
   _ = n(87894),
   E = n(372113),
-  I = n(206044),
-  m = n(266843),
+  m = n(206044),
+  I = n(266843),
   T = n(46140),
-  h = n(959445);
+  h = n(861495);
 
 function N(e) {
   let {
@@ -50,14 +50,14 @@ contentPosition: c
 containerRef: S,
 size: A,
 height: R
-  } = (0, m.h)(), x = (0, l.q)({
+  } = (0, I.h)(), x = (0, l.q)({
 location: T.dr.QUESTS_CARD
   }), {
 expansionSpring: O,
 isAnimating: M,
 isExpanded: v,
 toggleExpanded: L
-  } = (0, m.O)({
+  } = (0, I.O)({
 initiallyExpanded: !x || r || (0, _.iM)({
   location: n,
   quest: t
@@ -92,7 +92,7 @@ children: e => (0, i.jsx)(i.Fragment, {
         e.current = t, S.current = t;
       },
       children: [
-        (0, i.jsx)(I.Z, {
+        (0, i.jsx)(m.Z, {
           isFocused: N,
           isQuestExpired: g,
           location: n,

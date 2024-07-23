@@ -60,7 +60,7 @@ return _.hasNewMentions || _.isDataStale || _.isRefreshing;
 }
 d(E, 'displayName', 'NotificationCenterStore'), d(E, 'persistKey', 'NotificationCenterStore');
 
-function I() {
+function m() {
   _.hasNewMentions = !1, _.isDataStale = !1, _.isRefreshing = !1;
 }
 t.Z = new E(s.Z, {
@@ -92,6 +92,6 @@ t.forEach(e => {
   NOTIFICATION_CENTER_REFRESH: function() {
 _.isRefreshing = !0;
   },
-  LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: I,
-  LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: I
+  LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: m,
+  LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: m
 });

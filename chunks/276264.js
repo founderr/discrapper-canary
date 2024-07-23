@@ -29,7 +29,7 @@ var r = n(735250),
   R = n(674563),
   C = n(524484),
   y = n(689938),
-  D = n(952384);
+  D = n(410740);
 let L = (0, A.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 t.Z = function(e) {
   var t;

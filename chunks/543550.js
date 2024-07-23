@@ -26,7 +26,7 @@ var i = n(735250),
   f = n(490610),
   S = n(981631),
   C = n(689938),
-  N = n(813580);
+  N = n(145745);
 let A = (e, t) => {
   switch (e) {
 case m.hz.GENSHIN:
@@ -45,7 +45,7 @@ n = (0, m.GN)(e => e.setUserUpsellScreen, o.Z),
   width: c
 } = (0, u.Z)(),
 [E, h] = s.useState(0),
-g = (0, l.useSpring)({
+g = (0, d.useSpring)({
   from: {
     scrollHeight: 0
   },

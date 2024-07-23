@@ -1,15 +1,15 @@
 a.d(n, {
   Ul: function() {
-return c;
+return _;
   },
   YE: function() {
-return i;
+return l;
   }
 }), a(47120);
-var s = a(818083),
-  t = a(981631),
-  r = a(689938);
-n.ZP = (0, s.B)({
+var t = a(818083),
+  r = a(981631),
+  o = a(689938);
+n.ZP = (0, t.B)({
   kind: 'user',
   id: '2021-08_regional_payment_methods',
   label: 'Regional Payment Methods',
@@ -22,7 +22,7 @@ validCountryCodes: []
   id: 1,
   label: 'Regional Payment Method for Germany',
   config: {
-    enabledPaymentTypes: [t.HeQ.SOFORT],
+    enabledPaymentTypes: [r.HeQ.SOFORT],
     forceCountryCode: 'DE',
     validCountryCodes: ['DE']
   }
@@ -32,8 +32,8 @@ validCountryCodes: []
   label: 'Regional Payment Method for US',
   config: {
     enabledPaymentTypes: [
-      t.HeQ.VENMO,
-      t.HeQ.CASH_APP
+      r.HeQ.VENMO,
+      r.HeQ.CASH_APP
     ],
     forceCountryCode: 'US',
     validCountryCodes: ['US']
@@ -61,7 +61,7 @@ validCountryCodes: []
   id: 5,
   label: 'Regional Payment Method for Poland',
   config: {
-    enabledPaymentTypes: [t.HeQ.PRZELEWY24],
+    enabledPaymentTypes: [r.HeQ.PRZELEWY24],
     forceCountryCode: 'PL',
     validCountryCodes: ['PL']
   }
@@ -70,7 +70,7 @@ validCountryCodes: []
   id: 6,
   label: 'Enable paysafecard',
   config: {
-    enabledPaymentTypes: [t.HeQ.PAYSAFE_CARD],
+    enabledPaymentTypes: [r.HeQ.PAYSAFE_CARD],
     forceCountryCode: 'DE',
     validCountryCodes: [
       'BG',
@@ -87,7 +87,7 @@ validCountryCodes: []
   id: 7,
   label: 'Regional Payment Method for Philippines',
   config: {
-    enabledPaymentTypes: [t.HeQ.GCASH],
+    enabledPaymentTypes: [r.HeQ.GCASH],
     forceCountryCode: 'PH',
     validCountryCodes: ['PH']
   }
@@ -96,7 +96,7 @@ validCountryCodes: []
   id: 8,
   label: 'Regional Payment Method for Malaysia',
   config: {
-    enabledPaymentTypes: [t.HeQ.GRABPAY_MY],
+    enabledPaymentTypes: [r.HeQ.GRABPAY_MY],
     forceCountryCode: 'MY',
     validCountryCodes: ['MY']
   }
@@ -105,7 +105,7 @@ validCountryCodes: []
   id: 9,
   label: 'Regional Payment Method for Vietnam',
   config: {
-    enabledPaymentTypes: [t.HeQ.MOMO_WALLET],
+    enabledPaymentTypes: [r.HeQ.MOMO_WALLET],
     forceCountryCode: 'VN',
     validCountryCodes: ['VN']
   }
@@ -114,7 +114,7 @@ validCountryCodes: []
   id: 10,
   label: 'Regional Payment Method for Indonesia',
   config: {
-    enabledPaymentTypes: [t.HeQ.GOPAY_WALLET],
+    enabledPaymentTypes: [r.HeQ.GOPAY_WALLET],
     forceCountryCode: 'ID',
     validCountryCodes: ['ID']
   }
@@ -123,7 +123,7 @@ validCountryCodes: []
   id: 11,
   label: 'Regional Payment Method for South Korea',
   config: {
-    enabledPaymentTypes: [t.HeQ.KAKAOPAY],
+    enabledPaymentTypes: [r.HeQ.KAKAOPAY],
     forceCountryCode: 'KR',
     validCountryCodes: ['KR']
   }
@@ -133,9 +133,9 @@ validCountryCodes: []
   label: 'Regional Payment Method for Belgium',
   config: {
     enabledPaymentTypes: [
-      t.HeQ.PAYSAFE_CARD,
-      t.HeQ.SOFORT,
-      t.HeQ.BANCONTACT
+      r.HeQ.PAYSAFE_CARD,
+      r.HeQ.SOFORT,
+      r.HeQ.BANCONTACT
     ],
     forceCountryCode: 'BE',
     validCountryCodes: ['BE']
@@ -146,9 +146,9 @@ validCountryCodes: []
   label: 'Regional Payment Method for Austria',
   config: {
     enabledPaymentTypes: [
-      t.HeQ.PAYSAFE_CARD,
-      t.HeQ.EPS,
-      t.HeQ.SOFORT
+      r.HeQ.PAYSAFE_CARD,
+      r.HeQ.EPS,
+      r.HeQ.SOFORT
     ],
     forceCountryCode: 'AT',
     validCountryCodes: ['AT']
@@ -159,9 +159,9 @@ validCountryCodes: []
   label: 'Regional Payment Method for Netherlands',
   config: {
     enabledPaymentTypes: [
-      t.HeQ.PAYSAFE_CARD,
-      t.HeQ.IDEAL,
-      t.HeQ.SOFORT
+      r.HeQ.PAYSAFE_CARD,
+      r.HeQ.IDEAL,
+      r.HeQ.SOFORT
     ],
     forceCountryCode: 'NL',
     validCountryCodes: ['NL']
@@ -172,8 +172,8 @@ validCountryCodes: []
   label: 'Launch Paysafecard and Sofort',
   config: {
     enabledPaymentTypes: [
-      t.HeQ.PAYSAFE_CARD,
-      t.HeQ.SOFORT
+      r.HeQ.PAYSAFE_CARD,
+      r.HeQ.SOFORT
     ],
     forceCountryCode: 'ES',
     validCountryCodes: [
@@ -186,14 +186,14 @@ validCountryCodes: []
   id: 16,
   label: 'Launch Cash App',
   config: {
-    enabledPaymentTypes: [t.HeQ.CASH_APP],
+    enabledPaymentTypes: [r.HeQ.CASH_APP],
     forceCountryCode: 'US',
     validCountryCodes: ['US']
   }
 }
   ]
 });
-let l = new Map([
+let s = new Map([
   [
 'abn_amro',
 'ABN AMRO'
@@ -244,10 +244,10 @@ let l = new Map([
   ]
 ]);
 
-function i(e) {
-  return void 0 !== e && l.has(e) ? l.get(e) : r.Z.Messages.PAYMENT_SOURCE_UNKNOWN;
+function l(e) {
+  return void 0 !== e && s.has(e) ? s.get(e) : o.Z.Messages.PAYMENT_SOURCE_UNKNOWN;
 }
-let o = new Map([
+let i = new Map([
   [
 'arzte_und_apotheker_bank',
 'Ärzte- und Apothekerbank'
@@ -358,6 +358,6 @@ let o = new Map([
   ]
 ]);
 
-function c(e) {
-  return void 0 !== e && o.has(e) ? o.get(e) : r.Z.Messages.PAYMENT_SOURCE_UNKNOWN;
+function _(e) {
+  return void 0 !== e && i.has(e) ? i.get(e) : o.Z.Messages.PAYMENT_SOURCE_UNKNOWN;
 }

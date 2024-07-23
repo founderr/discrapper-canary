@@ -1,86 +1,86 @@
 t.d(n, {
   g: function() {
-return l;
+return r;
   }
 });
-var r, l, i = t(735250);
+var o, r, a = t(735250);
 t(470079);
-var s = t(481060),
-  a = t(285952),
-  o = t(612853),
-  u = t(689938),
-  c = t(422090);
-(r = l || (l = {}))[r.CONTINUE = 0] = 'CONTINUE', r[r.UPGRADE = 1] = 'UPGRADE', r[r.PURCHASE = 2] = 'PURCHASE';
+var i = t(481060),
+  c = t(285952),
+  l = t(612853),
+  s = t(689938),
+  u = t(527926);
+(o = r || (r = {}))[o.CONTINUE = 0] = 'CONTINUE', o[o.UPGRADE = 1] = 'UPGRADE', o[o.PURCHASE = 2] = 'PURCHASE';
 let d = e => {
   let {
 onBack: n,
 backText: t,
-primaryIcon: r,
-primaryCTA: l,
+primaryIcon: o,
+primaryCTA: r,
 primaryType: d,
-primaryText: m,
-primaryTooltip: f,
-primaryDisabled: x,
-primarySubmitting: h,
-onPrimary: C,
-secondaryText: N,
-onSecondary: v
+primaryText: p,
+primaryTooltip: _,
+primaryDisabled: f,
+primarySubmitting: m,
+onPrimary: h,
+secondaryText: S,
+onSecondary: I
   } = e;
-  return (0, i.jsxs)(s.ModalFooter, {
-justify: a.Z.Justify.BETWEEN,
-align: a.Z.Align.CENTER,
+  return (0, a.jsxs)(i.ModalFooter, {
+justify: c.Z.Justify.BETWEEN,
+align: c.Z.Align.CENTER,
 children: [
   (() => {
-    if (null == l || null == m)
+    if (null == r || null == p)
       return null;
-    let e = 2 === l ? s.ShinyButton : s.Button,
+    let e = 2 === r ? i.ShinyButton : i.Button,
       n = {
-        innerClassName: c.button,
+        innerClassName: u.button,
         type: d,
-        disabled: x,
-        submitting: h,
-        color: 0 === l ? s.Button.Colors.BRAND : s.Button.Colors.GREEN,
-        onClick: C
+        disabled: f,
+        submitting: m,
+        color: 0 === r ? i.Button.Colors.BRAND : i.Button.Colors.GREEN,
+        onClick: h
       };
-    return null != f ? (0, i.jsx)(s.Tooltip, {
-      text: f,
-      children: t => (0, i.jsxs)(e, {
+    return null != _ ? (0, a.jsx)(i.Tooltip, {
+      text: _,
+      children: t => (0, a.jsxs)(e, {
         ...t,
         ...n,
         children: [
-          null == r ? null : (0, i.jsx)(r, {
+          null == o ? null : (0, a.jsx)(o, {
             color: 'currentColor',
-            className: c.primaryIcon
+            className: u.primaryIcon
           }),
-          m
+          p
         ]
       })
-    }) : (0, i.jsxs)(e, {
+    }) : (0, a.jsxs)(e, {
       ...n,
       children: [
-        null == r ? null : (0, i.jsx)(r, {
+        null == o ? null : (0, a.jsx)(o, {
           color: 'currentColor',
-          className: c.primaryIcon
+          className: u.primaryIcon
         }),
-        m
+        p
       ]
     });
   })(),
-  null == N ? null : (0, i.jsx)(s.Button, {
-    color: s.Button.Colors.PRIMARY,
-    look: s.Button.Looks.LINK,
-    onClick: v,
-    children: N
+  null == S ? null : (0, a.jsx)(i.Button, {
+    color: i.Button.Colors.PRIMARY,
+    look: i.Button.Looks.LINK,
+    onClick: I,
+    children: S
   }),
-  (0, i.jsx)(o.Z, {}),
-  null == n ? null : (0, i.jsx)(s.Button, {
-    className: c.back,
-    color: s.Button.Colors.PRIMARY,
-    look: s.Button.Looks.LINK,
+  (0, a.jsx)(l.Z, {}),
+  null == n ? null : (0, a.jsx)(i.Button, {
+    className: u.back,
+    color: i.Button.Colors.PRIMARY,
+    look: i.Button.Looks.LINK,
     onClick: n,
-    children: null != t ? t : u.Z.Messages.BACK
+    children: null != t ? t : s.Z.Messages.BACK
   })
 ]
   });
 };
-d.CTAType = l, n.Z = d;
+d.CTAType = r, n.Z = d;

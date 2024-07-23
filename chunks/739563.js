@@ -1,13 +1,13 @@
-t(47120);
-var n = t(735250),
-  a = t(470079),
-  i = t(120356),
-  r = t.n(i),
-  o = t(481060),
-  l = t(981631),
-  c = t(689938),
-  d = t(334711),
-  _ = t(549856);
+s(47120);
+var n = s(735250),
+  a = s(470079),
+  i = s(120356),
+  r = s.n(i),
+  o = s(481060),
+  l = s(981631),
+  c = s(689938),
+  d = s(645485),
+  _ = s(224499);
 let E = 0,
   u = () => 'notification-position-selector-'.concat(E++),
   T = e => {
@@ -34,10 +34,10 @@ l._vf.BOTTOM_RIGHT
 
 function S(e) {
   let {
-position: s,
-onChange: t
-  } = e, [i] = a.useState(() => u()), E = s === l._vf.DISABLED ? c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({
-position: T(s)
+position: t,
+onChange: s
+  } = e, [i] = a.useState(() => u()), E = t === l._vf.DISABLED ? c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({
+position: T(t)
   });
   return (0, n.jsxs)('div', {
 children: [
@@ -46,11 +46,11 @@ children: [
     offset: -2,
     children: (0, n.jsx)('div', {
       className: r()(d.wrapper, {
-        [d.disabledSelected]: s === l._vf.DISABLED
+        [d.disabledSelected]: t === l._vf.DISABLED
       }),
       children: I.map(e => (0, n.jsxs)('label', {
         className: r()({
-          [d.selected]: e === s,
+          [d.selected]: e === t,
           [d.disabled]: e === l._vf.DISABLED,
           [d.topRight]: e === l._vf.TOP_RIGHT,
           [d.topLeft]: e === l._vf.TOP_LEFT,
@@ -68,7 +68,7 @@ children: [
             type: 'radio',
             name: i,
             value: e,
-            onChange: s => t(s, e),
+            onChange: t => s(t, e),
             className: d.hiddenInput
           })
         ]
@@ -83,4 +83,4 @@ children: [
 ]
   });
 }
-S.Positions = l._vf, s.Z = S;
+S.Positions = l._vf, t.Z = S;

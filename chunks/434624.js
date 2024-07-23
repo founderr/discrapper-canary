@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(56314),
   _ = n(566006),
   E = n(287151),
-  I = n(716862),
-  m = n(372178);
+  m = n(952527),
+  I = n(219021);
 let T = a.memo(function(e) {
 let t, n, {
     useChatFontScaling: a,
@@ -36,7 +36,7 @@ let t, n, {
   O = x === _.O.BURST,
   M = (0, E.y4)(N, f, x),
   v = (0, u.v)(O && null != C ? C : []),
-  L = a ? m : I,
+  L = a ? I : m,
   Z = O ? p : h,
   P = (0, d.y)(Z, E.aO),
   b = {};
@@ -90,15 +90,15 @@ let {
 }, [
   r,
   o
-]), I = (0, c.O)(u), m = r && !o || t ? E.le : T;
+]), m = (0, c.O)(u), I = r && !o || t ? E.le : T;
 return (0, i.jsxs)(i.Fragment, {
   children: [
     (0, i.jsx)('div', {
-      ref: I
+      ref: m
     }),
     n.map(e => {
       var t, n;
-      return (0, i.jsx)(m, {
+      return (0, i.jsx)(I, {
         ...s,
         ...e
       }, (t = e, ''.concat(t.type === _.O.BURST ? 'burst:' : '').concat(null !== (n = t.emoji.id) && void 0 !== n ? n : 0, ':').concat(t.emoji.name)));

@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(913527),
   _ = n.n(u),
   E = n(608787),
-  I = n(442837),
-  m = n(481060),
+  m = n(442837),
+  I = n(481060),
   T = n(603263),
   h = n(542051),
   N = n(349033),
@@ -33,7 +33,7 @@ var i = n(735250),
   D = n(854709),
   j = n(981631),
   U = n(689938),
-  y = n(368002);
+  y = n(999969);
 
 function B(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -119,7 +119,7 @@ let t, n, {
   tabIndex: u,
   'aria-selected': _,
   onSelect: E,
-  onFocus: I,
+  onFocus: m,
   showFilter: T,
   renderResult: h
 } = e;
@@ -132,11 +132,11 @@ if (T) {
 }
 return n = null != h ? h(s, o, l) : (0, i.jsx)('strong', {
   children: l.text
-}), (0, i.jsxs)(m.Clickable, {
+}), (0, i.jsxs)(I.Clickable, {
   tag: 'li',
   className: r()(y.option, c),
   onClick: E,
-  onFocus: I,
+  onFocus: m,
   id: a,
   role: d,
   tabIndex: u,
@@ -144,7 +144,7 @@ return n = null != h ? h(s, o, l) : (0, i.jsx)('strong', {
   children: [
     t,
     n,
-    (0, i.jsx)(m.PlusSmallIcon, {
+    (0, i.jsx)(I.PlusSmallIcon, {
       size: 'sm',
       color: 'currentColor',
       className: y.plusIcon
@@ -188,7 +188,7 @@ renderResult: F
     let {
       searchId: t
     } = e;
-    return (0, i.jsx)(m.Tooltip, {
+    return (0, i.jsx)(I.Tooltip, {
       text: U.Z.Messages.SEARCH_CLEAR_HISTORY,
       position: 'left',
       children: e => {
@@ -196,14 +196,14 @@ renderResult: F
           onMouseEnter: n,
           onMouseLeave: a
         } = e;
-        return (0, i.jsx)(m.Clickable, {
+        return (0, i.jsx)(I.Clickable, {
           onClick: () => (0, T.QQ)(t),
           onMouseEnter: n,
           onMouseLeave: a,
           className: y.searchClearHistory,
           title: U.Z.Messages.SEARCH_CLEAR_HISTORY,
           'aria-label': U.Z.Messages.SEARCH_CLEAR_HISTORY,
-          children: (0, i.jsx)(m.TrashIcon, {
+          children: (0, i.jsx)(I.TrashIcon, {
             size: 'md',
             color: 'currentColor'
           })
@@ -239,7 +239,7 @@ renderResult: F
         children: t
       }, e.type + t);
     });
-    return (0, i.jsxs)(m.Clickable, {
+    return (0, i.jsxs)(I.Clickable, {
       className: r()(y.option, y.__invalid_history),
       onClick: t,
       onFocus: n,
@@ -249,7 +249,7 @@ renderResult: F
       }),
       children: [
         E,
-        (0, i.jsx)(m.PlusSmallIcon, {
+        (0, i.jsx)(I.PlusSmallIcon, {
           size: 'sm',
           color: 'currentColor',
           className: y.plusIcon
@@ -260,16 +260,16 @@ renderResult: F
 },
 [j.rtL.SEARCH_OPTIONS]: {
   titleText: () => U.Z.Messages.SEARCH_GROUP_HEADER_SEARCH_OPTIONS,
-  groupTip: () => (0, i.jsx)(m.Tooltip, {
+  groupTip: () => (0, i.jsx)(I.Tooltip, {
     text: U.Z.Messages.LEARN_MORE,
     position: 'left',
     children: e => (0, i.jsx)('div', {
       className: y.searchLearnMore,
       ...e,
-      children: (0, i.jsx)(m.Anchor, {
+      children: (0, i.jsx)(I.Anchor, {
         href: Z.Z.getArticleURL(j.BhN.USING_SEARCH),
         title: U.Z.Messages.LEARN_MORE,
-        children: (0, i.jsx)(m.CircleQuestionIcon, {
+        children: (0, i.jsx)(I.CircleQuestionIcon, {
           size: 'md',
           color: 'currentColor'
         })
@@ -286,7 +286,7 @@ renderResult: F
       searchId: o,
       ...c
     } = e, d = P.Ko(null !== (t = n.token) && void 0 !== t ? t : '');
-    return (0, i.jsxs)(m.Clickable, {
+    return (0, i.jsxs)(I.Clickable, {
       className: r()(y.option, y.searchOption),
       onClick: a,
       onFocus: s,
@@ -302,7 +302,7 @@ renderResult: F
           }),
           children: d
         }),
-        (0, i.jsx)(m.PlusSmallIcon, {
+        (0, i.jsx)(I.PlusSmallIcon, {
           size: 'sm',
           color: 'currentColor',
           className: y.plusIcon
@@ -460,7 +460,7 @@ super(...e), t = this, B(this, 'state', {
             '\xA0'
           ]
         }),
-        (0, i.jsx)(m.Clickable, {
+        (0, i.jsx)(I.Clickable, {
           tag: 'span',
           className: y.hintValue,
           onClick: this.handleHintClick,
@@ -498,10 +498,10 @@ super(...e), t = this, B(this, 'state', {
       children: _.titleText()
     }));
     let E = null !== (o = _.groupTip) && void 0 !== o ? o : null,
-      I = null != E ? (0, i.jsx)(E, {
+      m = null != E ? (0, i.jsx)(E, {
         searchId: n
       }) : null,
-      m = null !== (c = _.component) && void 0 !== c ? c : V,
+      I = null !== (c = _.component) && void 0 !== c ? c : V,
       T = s.type === j.Sap.FILTER_ALL;
     return (0, i.jsxs)('ul', {
       role: 'group',
@@ -509,13 +509,13 @@ super(...e), t = this, B(this, 'state', {
       className: y.resultsGroup,
       children: [
         d,
-        I,
+        m,
         a.results.map(s => {
           var l, o;
           if (null == s || null == a)
             return null;
           let c = e === (r += 1);
-          return (0, i.jsx)(m, {
+          return (0, i.jsx)(I, {
             searchId: n,
             group: null !== (l = s.group) && void 0 !== l ? l : a.group,
             result: s,
@@ -532,7 +532,7 @@ super(...e), t = this, B(this, 'state', {
   }
 }
 t.ZP = a.forwardRef((e, t) => {
-  let [n, a, s] = (0, I.Wu)([
+  let [n, a, s] = (0, m.Wu)([
 O.Z,
 x.Z,
 R.Z

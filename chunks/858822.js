@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 });
 var i = n(735250);
@@ -16,20 +16,20 @@ var a = n(913527),
   _ = n(621600),
   E = n(689938);
 
-function I(e, t) {
+function m(e, t) {
   let n = null == e ? void 0 : e.id,
 {
   muted: a,
-  muteConfig: I
+  muteConfig: m
 } = (0, r.cj)([u.ZP], () => ({
   muted: null != n ? u.ZP.isMuted(n) : void 0,
   muteConfig: null != n ? u.ZP.getMuteConfig(n) : void 0
 }), [n]),
-m = (0, d.U)(I);
+I = (0, d.U)(m);
   return null == n ? null : a ? (0, i.jsx)(l.MenuItem, {
 id: 'unmute-guild',
 label: E.Z.Messages.UNMUTE_SERVER,
-subtext: m,
+subtext: I,
 action: () => o.Z.updateGuildNotificationSettings(n, {
   muted: !1
 }, _.ZB.Unmuted)

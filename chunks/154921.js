@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  s = n(704358),
-  o = n(193492);
+  s = n(671746),
+  o = n(517311);
 let l = Object.freeze({
 STANDARD: s.colorStandard,
 MUTED: s.colorMuted,

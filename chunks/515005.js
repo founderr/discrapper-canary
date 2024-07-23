@@ -16,7 +16,7 @@ var r = n(735250),
   I = n(490095),
   T = n(981631),
   g = n(689938),
-  S = n(475686);
+  S = n(323276);
 let A = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions),
   N = (0, l.Mg)(S.__invalid_stickerPickerPreviewPadding),
   v = i.memo(function(e) {
@@ -99,7 +99,7 @@ return (0, r.jsx)('div', {
                   default: t
                 } = await Promise.all([
                   n.e('93626'),
-                  n.e('10831')
+                  n.e('61566')
                 ]).then(n.bind(n, 136735));
                 return n => (0, r.jsx)(t, {
                   guildId: e.guild_id,

@@ -1,49 +1,49 @@
-t.r(s), t.d(s, {
+s.r(t), s.d(t, {
   default: function() {
 return T;
   }
-}), t(47120);
-var n = t(735250),
-  a = t(470079),
-  i = t(442837),
-  r = t(481060),
-  o = t(809206),
-  l = t(25990),
-  c = t(154921),
-  d = t(155433),
-  _ = t(981631),
-  E = t(689938),
-  u = t(440478);
+}), s(47120);
+var n = s(735250),
+  a = s(470079),
+  i = s(442837),
+  r = s(481060),
+  o = s(809206),
+  l = s(25990),
+  c = s(154921),
+  d = s(155433),
+  _ = s(981631),
+  E = s(689938),
+  u = s(312254);
 
 function T(e) {
-  var s, t, T, I;
+  var t, s, T, I;
   let {
 transitionState: S,
 onSuccess: N,
 onClose: C,
 requirementsUpdated: m,
 noSkip: A = !1
-  } = e, [h, g] = a.useState(''), [O, p] = a.useState(''), [R, x] = a.useState(''), [M, D] = a.useState(null), [f, P] = a.useState(null), L = (0, i.e7)([l.Z], () => l.Z.getErrors()), Z = (0, i.e7)([l.Z], () => l.Z.getFormState()), b = a.useRef(null);
+  } = e, [g, h] = a.useState(''), [O, p] = a.useState(''), [R, x] = a.useState(''), [M, f] = a.useState(null), [D, P] = a.useState(null), L = (0, i.e7)([l.Z], () => l.Z.getErrors()), b = (0, i.e7)([l.Z], () => l.Z.getFormState()), Z = a.useRef(null);
   async function v(e) {
 e.preventDefault(), (0, o.b9)();
-let s = !1;
-if ('' === O ? (D(E.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), s = !0) : D(null), O !== R ? (P(E.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), s = !0) : P(null), s)
+let t = !1;
+if ('' === O ? (f(E.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), t = !0) : f(null), O !== R ? (P(E.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), t = !0) : P(null), t)
   return;
-let t = await (0, o.Mn)({
-  password: h,
+let s = await (0, o.Mn)({
+  password: g,
   newPassword: O
 });
-if (null == t ? void 0 : t.ok)
+if (null == s ? void 0 : s.ok)
   N();
 else {
   var n;
-  (null == t ? void 0 : null === (n = t.body) || void 0 === n ? void 0 : n.username) != null && (0, d.P)();
+  (null == s ? void 0 : null === (n = s.body) || void 0 === n ? void 0 : n.username) != null && (0, d.P)();
 }
   }
   return a.useEffect(() => {
 if (S === r.ModalTransitionState.ENTERED) {
   var e;
-  null === (e = b.current) || void 0 === e || e.focus();
+  null === (e = Z.current) || void 0 === e || e.focus();
 }
   }, [S]), (0, n.jsxs)(r.ModalRoot, {
 transitionState: S,
@@ -78,18 +78,18 @@ children: [
         children: [
           (0, n.jsx)(r.FormItem, {
             title: E.Z.Messages.FORM_LABEL_CURRENT_PASSWORD,
-            error: null == L ? void 0 : null === (s = L.password) || void 0 === s ? void 0 : s[0],
+            error: null == L ? void 0 : null === (t = L.password) || void 0 === t ? void 0 : t[0],
             children: (0, n.jsx)(r.TextInput, {
               type: 'password',
-              value: h,
-              onChange: g,
-              inputRef: b
+              value: g,
+              onChange: h,
+              inputRef: Z
             })
           }),
           (0, n.jsx)(r.FormItem, {
             className: u.newPassword,
             title: E.Z.Messages.FORM_LABEL_NEW_PASSWORD,
-            error: null !== (I = null !== (T = null == L ? void 0 : null === (t = L.new_password) || void 0 === t ? void 0 : t[0]) && void 0 !== T ? T : M) && void 0 !== I ? I : void 0,
+            error: null !== (I = null !== (T = null == L ? void 0 : null === (s = L.new_password) || void 0 === s ? void 0 : s[0]) && void 0 !== T ? T : M) && void 0 !== I ? I : void 0,
             children: (0, n.jsx)(r.TextInput, {
               type: 'password',
               value: O,
@@ -99,7 +99,7 @@ children: [
           (0, n.jsx)(r.FormItem, {
             className: u.newPassword,
             title: E.Z.Messages.FORM_LABEL_CONFIRM_NEW_PASSWORD,
-            error: null != f ? f : void 0,
+            error: null != D ? D : void 0,
             children: (0, n.jsx)(r.TextInput, {
               type: 'password',
               value: R,
@@ -114,7 +114,7 @@ children: [
             type: 'submit',
             color: r.Button.Colors.BRAND,
             size: r.Button.Sizes.MEDIUM,
-            submitting: Z === _.QZA.SUBMITTING,
+            submitting: b === _.QZA.SUBMITTING,
             children: E.Z.Messages.DONE
           }),
           !0 !== A && (0, n.jsx)(r.Button, {

@@ -1,21 +1,21 @@
-t.d(s, {
+s.d(t, {
   Yn: function() {
 return u;
   }
-}), t(411104), t(47120);
-var n = t(735250),
-  a = t(470079),
-  i = t(283693),
-  r = t(481060),
-  o = t(816814),
-  l = t(200483),
-  c = t(981631),
-  d = t(689938);
+}), s(411104), s(47120);
+var n = s(735250),
+  a = s(470079),
+  i = s(283693),
+  r = s(481060),
+  o = s(816814),
+  l = s(200483),
+  c = s(981631),
+  d = s(689938);
 
 function _(e) {
   let {
-onError: s,
-onSuccess: t,
+onError: t,
+onSuccess: s,
 PasswordConfirm: r,
 ...l
   } = e, [_, E] = a.useState('');
@@ -25,9 +25,9 @@ handleSubmit: e => o.Z.enableMFAStart(e),
 onError: e => {
   var n;
   if (('object' == typeof(n = e) && null != n && (0, i.nr)(n, 'code') && 'number' == typeof n.code ? n.code : 0) === c.evJ.MFA_INVALID_SECRET)
-    t(_), l.onClose();
+    s(_), l.onClose();
   else
-    s(e);
+    t(e);
 },
 onPasswordChange: E,
 title: d.Z.Messages.TWO_FA_ENABLE,
@@ -36,19 +36,19 @@ skipErrorMsgAbortCode: c.evJ.MFA_INVALID_SECRET
   });
 }
 
-function E(e, s) {
+function E(e, t) {
   return new Promise(a => {
 (0, r.openModalLazy)(async () => {
   let {
     default: i
   } = await Promise.all([
-    t.e('32873'),
-    t.e('23746')
-  ]).then(t.bind(t, 837651));
-  return t => (0, n.jsx)(i, {
-    ...t,
+    s.e('32873'),
+    s.e('23746')
+  ]).then(s.bind(s, 837651));
+  return s => (0, n.jsx)(i, {
+    ...s,
     password: e,
-    emailToken: s,
+    emailToken: t,
     handleEnableMFASuccess: a
   });
 });
@@ -57,50 +57,50 @@ function E(e, s) {
 
 function u() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  return new Promise(s => {
+  return new Promise(t => {
 (0, r.openModalLazy)(async () => {
   let {
-    default: s
+    default: t
   } = await Promise.all([
-    t.e('76540'),
-    t.e('93671')
-  ]).then(t.bind(t, 628908));
-  return t => (0, n.jsx)(s, {
-    ...t,
+    s.e('76540'),
+    s.e('92539')
+  ]).then(s.bind(s, 628908));
+  return s => (0, n.jsx)(t, {
+    ...s,
     isTotp: e
   });
 }, {
-  onCloseCallback: s,
+  onCloseCallback: t,
   onCloseRequest: c.VqG
 });
   });
 }
 async function T() {
-  let e = await new Promise((e, s) => {
+  let e = await new Promise((e, t) => {
 (0, r.openModalLazy)(async () => {
   let {
     default: a
-  } = await t.e('24642').then(t.bind(t, 279837));
-  return t => (0, n.jsx)(_, {
-    ...t,
+  } = await s.e('24642').then(s.bind(s, 279837));
+  return s => (0, n.jsx)(_, {
+    ...s,
     onSuccess: e,
-    onError: s,
+    onError: t,
     PasswordConfirm: a
   });
 });
   });
   if ((0, l.j)()) {
-var s;
-let a = await (s = e, new Promise(e => {
+var t;
+let a = await (t = e, new Promise(e => {
   (0, r.openModalLazy)(async () => {
     let {
       default: a
-    } = await t.e('94566').then(t.bind(t, 965072));
-    return t => (0, n.jsx)(a, {
-      ...t,
+    } = await s.e('94566').then(s.bind(s, 965072));
+    return s => (0, n.jsx)(a, {
+      ...s,
       onFormSubmit: async e => await o.Z.verifyEmailCode(e),
       onResend: async () => {
-        await o.Z.resendEmailCode(s);
+        await o.Z.resendEmailCode(t);
       },
       onSuccess: e,
       headerText: d.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_TITLE_DESKTOP,
@@ -113,6 +113,6 @@ await E(e, null == a ? void 0 : a.token);
 await E(e);
   await u();
 }
-s.ZP = {
+t.ZP = {
   enableMFA: T
 };

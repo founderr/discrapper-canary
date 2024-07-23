@@ -1,4 +1,4 @@
-t.d(s, {
+s.d(t, {
   C: function() {
 return o;
   },
@@ -6,9 +6,9 @@ return o;
 return r;
   }
 });
-var n = t(873546),
-  a = t(464179),
-  i = t(981631);
+var n = s(873546),
+  a = s(464179),
+  i = s(981631);
 let r = e => [
 i.HeQ.CARD,
 i.HeQ.VENMO

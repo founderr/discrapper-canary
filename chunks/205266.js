@@ -1,17 +1,17 @@
-t.d(s, {
+s.d(t, {
   t: function() {
 return _;
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(704215),
-  i = t(231757),
-  r = t(63063),
-  o = t(249881),
-  l = t(981631),
-  c = t(689938),
-  d = t(359734);
+var n = s(735250);
+s(470079);
+var a = s(704215),
+  i = s(231757),
+  r = s(63063),
+  o = s(249881),
+  l = s(981631),
+  c = s(689938),
+  d = s(359734);
 let _ = () => {
   let e = r.Z.getArticleURL(l.BhN.PS_CONNECTION);
   return (0, n.jsx)(o.t, {

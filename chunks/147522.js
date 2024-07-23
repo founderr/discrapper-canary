@@ -11,7 +11,7 @@ var a = n(392711),
   l = n(289481),
   o = n(809780),
   c = n(689938),
-  d = n(111468);
+  d = n(379850);
 
 function u(e, t, n) {
   let {
@@ -19,11 +19,11 @@ markChannelRead: a,
 markGuildRead: u,
 deleteChannel: _,
 toggle: E,
-getNumUnreadChannels: I
-  } = t, m = null;
+getNumUnreadChannels: m
+  } = t, I = null;
   return s().flatMap(e, e => {
-let t = e.sortOrder !== m;
-m = e.sortOrder;
+let t = e.sortOrder !== I;
+I = e.sortOrder;
 let s = [];
 return t && (e.hasLoadedAnything && e.sortOrder === o.As.ReallyOldChannel ? s.push((0, i.jsx)(r.Z, {
   className: d.divider,
@@ -40,7 +40,7 @@ return t && (e.hasLoadedAnything && e.sortOrder === o.As.ReallyOldChannel ? s.pu
   toggle: E,
   deleteChannel: _,
   onJump: n,
-  getNumUnreadChannels: I
+  getNumUnreadChannels: m
 }, e.channelId)), s;
   });
 }

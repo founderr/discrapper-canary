@@ -1,18 +1,18 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return N;
   }
-}), t(47120);
-var n = t(735250),
-  a = t(470079),
-  i = t(120356),
-  r = t.n(i),
-  o = t(481060),
-  l = t(285952),
-  c = t(490529),
-  d = t(981631),
-  _ = t(689938),
-  E = t(354181);
+}), s(47120);
+var n = s(735250),
+  a = s(470079),
+  i = s(120356),
+  r = s.n(i),
+  o = s(481060),
+  l = s(285952),
+  c = s(490529),
+  d = s(981631),
+  _ = s(689938),
+  E = s(678986);
 let u = {
 [d.gkr.HOUSE_1]: E.membershipDialogHouse1,
 [d.gkr.HOUSE_2]: E.membershipDialogHouse2,
@@ -24,9 +24,9 @@ let u = {
 [d.gkr.HOUSE_3]: E.__invalid_houseLogoHouse3
   },
   I = {
-[d.gkr.HOUSE_1]: t(246300),
-[d.gkr.HOUSE_2]: t(797148),
-[d.gkr.HOUSE_3]: t(374347)
+[d.gkr.HOUSE_1]: s(246300),
+[d.gkr.HOUSE_2]: s(797148),
+[d.gkr.HOUSE_3]: s(374347)
   },
   S = e => ({
 [d.gkr.HOUSE_1]: _.Z.Messages.HYPESQUAD_DESCRIPTION_HOUSE_1,
@@ -37,13 +37,13 @@ class N extends a.Component {
   render() {
 let {
   houseMembership: e,
-  isClaimed: s,
-  isVerified: t
+  isClaimed: t,
+  isVerified: s
 } = this.props;
-if (!s || !t)
+if (!t || !s)
   return null;
 if (null != e) {
-  let s = _.Z.Messages.HYPESQUAD_MEMBERSHIP_HEADING.format({
+  let t = _.Z.Messages.HYPESQUAD_MEMBERSHIP_HEADING.format({
     houseName: (0, c.X8)(e)
   });
   return (0, n.jsx)('div', {
@@ -65,7 +65,7 @@ if (null != e) {
                 (0, n.jsx)(o.Heading, {
                   className: E.membershipDialogHouseName,
                   variant: 'heading-sm/semibold',
-                  children: s
+                  children: t
                 }),
                 (0, n.jsx)(o.Text, {
                   className: E.membershipDialogHouseDescription,
@@ -82,7 +82,7 @@ if (null != e) {
               children: (0, n.jsx)('img', {
                 className: r()(E.houseLogo, T[e]),
                 src: I[e],
-                alt: s
+                alt: t
               })
             })
           ]
@@ -140,21 +140,21 @@ return (0, n.jsxs)('div', {
 });
   }
   constructor(...e) {
-var s, a, i;
-super(...e), s = this, a = 'handleJoinHypeSquadClick', i = () => {
+var t, a, i;
+super(...e), t = this, a = 'handleJoinHypeSquadClick', i = () => {
   (0, o.openModalLazy)(async () => {
     let {
       default: e
-    } = await t.e('83264').then(t.bind(t, 711184));
-    return s => (0, n.jsx)(e, {
-      ...s
+    } = await s.e('83264').then(s.bind(s, 711184));
+    return t => (0, n.jsx)(e, {
+      ...t
     });
   });
-}, a in s ? Object.defineProperty(s, a, {
+}, a in t ? Object.defineProperty(t, a, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = i;
+}) : t[a] = i;
   }
 }

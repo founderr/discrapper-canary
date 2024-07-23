@@ -1,4 +1,4 @@
-let n = (0, t(818083).B)({
+let n = (0, s(818083).B)({
   kind: 'user',
   id: '2023-12_pause_subscriptions_experiment',
   label: 'Pause Subscriptions Experiment',
@@ -13,16 +13,16 @@ config: {
 }
   }]
 });
-s.ZP = e => {
+t.ZP = e => {
   let {
-location: s,
-autoTrackExposure: t = !0,
+location: t,
+autoTrackExposure: s = !0,
 trackExposureOptions: a = {}
   } = e;
   return n.useExperiment({
-location: s
+location: t
   }, {
-autoTrackExposure: t,
+autoTrackExposure: s,
 trackExposureOptions: a
   });
 };

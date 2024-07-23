@@ -13,7 +13,7 @@ var i = n(735250),
   m = n(665149),
   _ = n(134612),
   f = n(689938),
-  E = n(939844);
+  E = n(622427);
 t.Z = a.memo(function(e) {
   let {
 channel: t

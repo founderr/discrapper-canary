@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(430824),
   _ = n(594174),
   E = n(897285),
-  I = n(924301),
-  m = n(482241),
+  m = n(924301),
+  I = n(482241),
   T = n(11868),
   h = n(231338);
 
@@ -28,14 +28,14 @@ guild: C,
 channel: g,
 isMember: S
   } = (0, s.cj)([
-I.ZP,
+m.ZP,
 u.Z,
 c.Z,
 d.ZP,
 _.default
   ], () => {
 var e, t;
-let i = null !== (t = I.ZP.getGuildScheduledEvent(N)) && void 0 !== t ? t : void 0,
+let i = null !== (t = m.ZP.getGuildScheduledEvent(N)) && void 0 !== t ? t : void 0,
   a = u.Z.getGuild(n),
   s = c.Z.getChannel(null == i ? void 0 : i.channel_id);
 return {
@@ -49,7 +49,7 @@ n,
 N
   ]);
   return a.useEffect(() => {
-(null == p ? void 0 : p.id) == null && m.Z.fetchGuildEvent(n, N), E.Z.getGuildEventUserCounts(n, N, null != f ? [f] : []), E.Z.getGuildEventsForCurrentUser(n);
+(null == p ? void 0 : p.id) == null && I.Z.fetchGuildEvent(n, N), E.Z.getGuildEventUserCounts(n, N, null != f ? [f] : []), E.Z.getGuildEventsForCurrentUser(n);
   }, [
 N,
 n,
@@ -66,7 +66,7 @@ onTransitionToInviteChannel: function() {
     (0, r.hk)(n);
     return;
   }
-  (null == g ? void 0 : g.isGuildStageVoice()) ? (0, o.Cq)(g) : (null == g ? void 0 : g.isGuildVoice()) && m.Z.joinVoiceEvent(g.guild_id, g.id);
+  (null == g ? void 0 : g.isGuildStageVoice()) ? (0, o.Cq)(g) : (null == g ? void 0 : g.isGuildVoice()) && I.Z.joinVoiceEvent(g.guild_id, g.id);
 },
 recurrenceId: f
   });

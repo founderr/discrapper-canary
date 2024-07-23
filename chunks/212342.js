@@ -6,8 +6,8 @@ var i, a, s, r, l = n(442837),
   u = n(592125),
   _ = n(496675),
   E = n(594174),
-  I = n(630388),
-  m = n(110630),
+  m = n(630388),
+  I = n(110630),
   T = n(981631);
 let h = 'ChannelFollowingBumpChannels',
   N = new Set(),
@@ -37,7 +37,7 @@ if (a || N.has(n))
   return !1;
 let s = u.Z.getChannel(n),
   r = E.default.getCurrentUser();
-if (!(null != s && s.type === T.d4z.GUILD_ANNOUNCEMENT && (0, m.Z)(i) && (null != r && (null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.id ? _.Z.can(T.Plq.SEND_MESSAGES, s) : _.Z.can(T.Plq.MANAGE_MESSAGES, s)) && !I.yE(Number(i.flags), T.iLy.CROSSPOSTED)))
+if (!(null != s && s.type === T.d4z.GUILD_ANNOUNCEMENT && (0, I.Z)(i) && (null != r && (null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.id ? _.Z.can(T.Plq.SEND_MESSAGES, s) : _.Z.can(T.Plq.MANAGE_MESSAGES, s)) && !m.yE(Number(i.flags), T.iLy.CROSSPOSTED)))
   return !1;
 f.add(i.id);
   },
@@ -45,7 +45,7 @@ f.add(i.id);
 let {
   message: t
 } = e;
-f.has(t.id) && I.yE(Number(t.flags), T.iLy.CROSSPOSTED) && f.delete(t.id);
+f.has(t.id) && m.yE(Number(t.flags), T.iLy.CROSSPOSTED) && f.delete(t.id);
   },
   CHANNEL_SELECT: function(e) {
 f.clear();

@@ -6,9 +6,9 @@ var i, a, s, r, l = n(442837),
 let u = [],
   _ = {},
   E = null,
-  I = 0;
+  m = 0;
 
-function m(e) {
+function I(e) {
   let t = null;
   try {
 t = JSON.parse(e.launch_parameters);
@@ -47,7 +47,7 @@ return null === (t = _[e.invite_id]) || void 0 === t ? void 0 : t.joinable;
 return E;
   }
   getUnseenInviteCount() {
-return I;
+return m;
   }
 }
 r = 'GameInviteStore', (s = 'displayName') in(a = T) ? Object.defineProperty(a, s, {
@@ -60,16 +60,16 @@ r = 'GameInviteStore', (s = 'displayName') in(a = T) ? Object.defineProperty(a, 
 let {
   gameInvites: t
 } = e;
-u = t.map(m).filter(c.lm);
+u = t.map(I).filter(c.lm);
   },
   GAME_INVITE_CREATE: function(e) {
 let {
   gameInvite: t
-} = e, n = m(t);
+} = e, n = I(t);
 null != n && (u = [
   n,
   ...u
-], E = t, I += 1);
+], E = t, m += 1);
   },
   GAME_INVITE_DELETE: function(e) {
 let {
@@ -92,6 +92,6 @@ u = u.filter(e => !t.includes(e.invite_id));
 };
   },
   GAME_INVITE_CLEAR_UNSEEN: function(e) {
-E = null, I = 0;
+E = null, m = 0;
   }
 });

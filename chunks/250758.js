@@ -6,8 +6,8 @@ var i, a, s, r, l = n(442837),
   u = n(57132),
   _ = n(483360),
   E = n(892880),
-  I = n(405656),
-  m = n(51144),
+  m = n(405656),
+  I = n(51144),
   T = n(271383),
   h = n(768119),
   N = n(246946),
@@ -60,7 +60,7 @@ return (e = e.reduce((e, t) => {
   let n = f.default.getUser(t.id);
   return null == n ? e : (e.push({
     id: n.id,
-    text: m.ZP.getUserTag(n),
+    text: I.ZP.getUserTag(n),
     user: n
   }), e);
 }, [])).length > t && (e.length = t), e;
@@ -95,7 +95,7 @@ null == e ? i = null : ((null == t || 0 === t.getFullMatch().trim().length) && (
   } = e;
   return {
     user: t,
-    text: m.ZP.getUserTag(t)
+    text: I.ZP.getUserTag(t)
   };
 })), i = e.results);
   } else {
@@ -162,7 +162,7 @@ return null != n && '' !== n && (function(e) {
       ]
     };
   }
-}(e, t))), 5 > (0, I.BU)(i) && i.push(x(e)), i;
+}(e, t))), 5 > (0, m.BU)(i) && i.push(x(e)), i;
   }(t.token, e) : t.type === p.Sap.EMPTY && (n.push(x(t.token)), (0, u.cn)(), n.push(function(e) {
 if (N.Z.hidePersonalInformation)
   return null;
@@ -177,7 +177,7 @@ return null == t ? null : {
 }
 
 function M() {
-  (0, I.WU)();
+  (0, m.WU)();
 }
 
 function v(e) {
@@ -245,8 +245,8 @@ let n, {
     tokens: a,
     cursorScope: s
   } = e,
-  r = (0, I.cl)(a),
-  l = (0, I.qc)(s, a),
+  r = (0, m.cl)(a),
+  l = (0, m.qc)(s, a),
   o = null !== (t = C[i]) && void 0 !== t ? t : {},
   c = g[i],
   d = !0;

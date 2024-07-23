@@ -43,9 +43,9 @@ var i, s, a = n(735250),
   j = n(854698),
   U = n(139712),
   G = n(765305),
-  k = n(981631),
-  w = n(689938),
-  B = n(538704);
+  w = n(981631),
+  k = n(689938),
+  B = n(697879);
 let H = r.memo(function(e) {
   let {
 heading: t,
@@ -81,7 +81,7 @@ children: [
       null != c && (0, a.jsx)(d.Clickable, {
         onClick: c,
         className: B.closeIcon,
-        'aria-label': w.Z.Messages.CLOSE,
+        'aria-label': k.Z.Messages.CLOSE,
         children: (0, a.jsx)(d.CloseSmallIcon, {
           size: 'xs',
           color: 'currentColor'
@@ -143,7 +143,7 @@ return t;
 onClickCloseIcon: () => (0, O.ji)({
   eventId: null == t ? void 0 : t.id
 }),
-heading: w.Z.Messages.STAGE_CHANNEL_LIVE_NOW,
+heading: k.Z.Messages.STAGE_CHANNEL_LIVE_NOW,
 topic: t.name,
 location: n.name,
 locationIcon: null != s ? (0, a.jsx)(s, {
@@ -172,7 +172,7 @@ fullWidth: !0,
 className: B.joinButton,
 innerClassName: B.rsvpButton,
 onClick: function() {
-  (0, U.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, O.L_)(t.id), 1000)), A.default.track(k.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
+  (0, U.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, O.L_)(t.id), 1000)), A.default.track(w.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
     guild_id: t.guild_id,
     notice_type: n
   });
@@ -194,7 +194,7 @@ children: [
     height: 16,
     className: B.buttonIcon
   }),
-  w.Z.Messages.INDICATE_RSVP
+  k.Z.Messages.INDICATE_RSVP
 ]
   });
 }
@@ -211,13 +211,13 @@ endTime: h
 startDateTimeString: I,
 upcomingEvent: m,
 diffMinutes: g
-  } = (0, j.ub)(E.toISOString(), null == h ? void 0 : h.toISOString()), p = m ? g > 0 ? w.Z.Messages.STARTING_IN_MINUTES.format({
+  } = (0, j.ub)(E.toISOString(), null == h ? void 0 : h.toISOString()), p = m ? g > 0 ? k.Z.Messages.STARTING_IN_MINUTES.format({
 minutes: g
-  }) : w.Z.Messages.STARTING_SOON : w.Z.Messages.STARTING_ON_DATE.format({
+  }) : k.Z.Messages.STARTING_SOON : k.Z.Messages.STARTING_ON_DATE.format({
 date: I
   });
   return r.useEffect(() => {
-A.default.track(k.rMx.CHANNEL_NOTICE_VIEWED, {
+A.default.track(w.rMx.CHANNEL_NOTICE_VIEWED, {
   notice_type: i,
   guild_id: n.guild_id
 });
@@ -244,13 +244,13 @@ children: [
       }),
       (0, a.jsx)(d.Clickable, {
         onClick: () => {
-          A.default.track(k.rMx.CHANNEL_NOTICE_CLOSED, {
+          A.default.track(w.rMx.CHANNEL_NOTICE_CLOSED, {
             notice_type: i,
             guild_id: n.guild_id
           }), (0, O.L_)(n.id);
         },
         className: B.closeIcon,
-        'aria-label': w.Z.Messages.CLOSE,
+        'aria-label': k.Z.Messages.CLOSE,
         children: (0, a.jsx)(d.CloseSmallIcon, {
           size: 'xs',
           color: 'currentColor'
@@ -314,7 +314,7 @@ guildEvent: t
 onClickCloseIcon: () => (0, O.ji)({
   eventId: null == t ? void 0 : t.id
 }),
-heading: w.Z.Messages.HAPPENING_NOW,
+heading: k.Z.Messages.HAPPENING_NOW,
 topic: t.name,
 location: (0, b.m)(n, !0),
 locationIcon: (0, a.jsx)(d.LocationIcon, {
@@ -344,7 +344,7 @@ className: B.joinButton,
 onClick: n,
 color: d.Button.Colors.GREEN,
 size: d.Button.Sizes.SMALL,
-children: w.Z.Messages.SEE_DETAIL
+children: k.Z.Messages.SEE_DETAIL
   });
 }
 
@@ -369,14 +369,14 @@ function q(e) {
   let {
 stageInstance: t,
 channel: n
-  } = e, i = (0, c.Wu)([g.Z], () => [...new Set(g.Z.getMutableParticipants(n.id, p.pV.SPEAKER).map(e => e.user))], [n.id]), s = (0, c.e7)([g.Z], () => g.Z.getParticipantCount(n.id, p.pV.AUDIENCE), [n.id]), r = w.Z.Messages.LISTENING_COUNT.format({
+  } = e, i = (0, c.Wu)([g.Z], () => [...new Set(g.Z.getMutableParticipants(n.id, p.pV.SPEAKER).map(e => e.user))], [n.id]), s = (0, c.e7)([g.Z], () => g.Z.getParticipantCount(n.id, p.pV.AUDIENCE), [n.id]), r = k.Z.Messages.LISTENING_COUNT.format({
 count: ''.concat(s)
   });
   return (0, a.jsx)(H, {
 onClickCloseIcon: () => (0, O.ji)({
   stageId: null == t ? void 0 : t.id
 }),
-heading: w.Z.Messages.STAGE_CHANNEL_LIVE_NOW,
+heading: k.Z.Messages.STAGE_CHANNEL_LIVE_NOW,
 location: n.name,
 details: r,
 detailsIcon: (0, a.jsx)(d.HeadphonesIcon, {
@@ -407,16 +407,16 @@ function Q(e) {
 channel: t,
 speakers: n,
 voiceType: i
-  } = e, s = t.getGuildId(), l = r.useMemo(() => n.slice(0, 3), [n]), _ = (0, c.e7)([C.Z], () => C.Z.can(k.Plq.CONNECT, t)), E = (0, S.Z)(t.id), h = w.Z.Messages.JOIN;
+  } = e, s = t.getGuildId(), l = r.useMemo(() => n.slice(0, 3), [n]), _ = (0, c.e7)([C.Z], () => C.Z.can(w.Plq.CONNECT, t)), E = (0, S.Z)(t.id), h = k.Z.Messages.JOIN;
   switch (i) {
 case 1:
-  h = w.Z.Messages.JOIN;
+  h = k.Z.Messages.JOIN;
   break;
 case 2:
-  h = w.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON, (null == E ? void 0 : E.speaker) ? h = w.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != E && (h = w.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON);
+  h = k.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON, (null == E ? void 0 : E.speaker) ? h = k.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != E && (h = k.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON);
   break;
 case 3:
-  h = w.Z.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA;
+  h = k.Z.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA;
   break;
 default:
   (0, v.vE)(i);
@@ -482,7 +482,7 @@ guildEvent: s
 guildEvent: s,
 channel: i
   }));
-  let I = t.hasFeature(k.oNc.COMMUNITY) || t.hasFeature(k.oNc.HUB);
+  let I = t.hasFeature(w.oNc.COMMUNITY) || t.hasFeature(w.oNc.HUB);
   if (null == u && null != r && !I) {
 let {
   upcomingEvent: e,

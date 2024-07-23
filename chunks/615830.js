@@ -1,14 +1,14 @@
-t(653041), t(47120);
-var n, a = t(442837),
-  i = t(570140);
+s(653041), s(47120);
+var n, a = s(442837),
+  i = s(570140);
 
-function r(e, s, t) {
-  return s in e ? Object.defineProperty(e, s, {
-value: t,
+function r(e, t, s) {
+  return t in e ? Object.defineProperty(e, t, {
+value: s,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[s] = t, e;
+  }) : e[t] = s, e;
 }
 let o = !1,
   l = [];
@@ -29,17 +29,17 @@ return o;
 return l;
   }
 }
-r(c, 'displayName', 'SecureFramesPersistedStore'), r(c, 'persistKey', 'SecureFramesPersistedStore'), s.Z = new c(i.Z, {
+r(c, 'displayName', 'SecureFramesPersistedStore'), r(c, 'persistKey', 'SecureFramesPersistedStore'), t.Z = new c(i.Z, {
   SECURE_FRAMES_SETTINGS_UPDATE: function(e) {
 o = e.persistentCodesEnabled;
   },
   SECURE_FRAMES_UPLOAD_PUBLIC_KEY_SUCCESS: function(e) {
-let s = [];
-for (let t of l) {
-  if (t === e.keyVersion)
+let t = [];
+for (let s of l) {
+  if (s === e.keyVersion)
     return;
-  s.push(t);
+  t.push(s);
 }
-s.push(e.keyVersion), l = s;
+t.push(e.keyVersion), l = t;
   }
 });

@@ -7,7 +7,7 @@ return s;
   }
 });
 var r = n(735250);
-n(470079), n(323383);
+n(470079), n(746197);
 let i = 'cash-app-pay-container';
 
 function a() {

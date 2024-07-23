@@ -11,8 +11,8 @@ var i, a, s, r = n(735250),
   u = n(58642),
   _ = n(2052),
   E = n(710845),
-  I = n(703656),
-  m = n(173747),
+  m = n(703656),
+  I = n(173747),
   T = n(7956),
   h = n(293245),
   N = n(417363),
@@ -230,7 +230,7 @@ super(...e), M(this, '_uninstallStringIndex', null), M(this, 'handleAddToLibrary
     let {
       libraryApplication: e
     } = this.props;
-    await u.h(e.id, e.branchId, e.getFlags() & ~R.eHb.HIDDEN), (0, I.uL)(R.Z5c.APPLICATION_LIBRARY);
+    await u.h(e.id, e.branchId, e.getFlags() & ~R.eHb.HIDDEN), (0, m.uL)(R.Z5c.APPLICATION_LIBRARY);
   } catch (e) {
     new E.Z('LibraryApplicationButton').error(e);
   }
@@ -267,7 +267,7 @@ f.Z
   ], () => [
 (0, T.i)(t, N.Z, f.Z),
 N.Z.getState(t.id, t.branchId)
-  ], [t]), s = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]), l = (0, o.e7)([m.Z], () => m.Z.hasNoBuild(t.id, t.branchId), [t]);
+  ], [t]), s = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]), l = (0, o.e7)([I.Z], () => I.Z.hasNoBuild(t.id, t.branchId), [t]);
   return (0, r.jsx)(Z, {
 ...e,
 analyticsContext: n,

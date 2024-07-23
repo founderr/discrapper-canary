@@ -17,11 +17,11 @@ targetUser: o,
 actorUsernameHook: c,
 targetUsernameHook: d,
 compact: u
-  } = e, _ = (0, s.ZP)(t), E = (0, s.Sw)(o, l), I = c(_), m = d(null != E ? E : void 0), T = r.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
+  } = e, _ = (0, s.ZP)(t), E = (0, s.Sw)(o, l), m = c(_), I = d(null != E ? E : void 0), T = r.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
 actorName: _.nick,
-actorHook: I,
+actorHook: m,
 targetName: null == E ? void 0 : E.nick,
-targetHook: m
+targetHook: I
   });
   return (0, i.jsx)(a.Z, {
 icon: n(570111),

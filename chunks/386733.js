@@ -19,9 +19,9 @@ var s = n(735250),
   A = n(119269),
   m = n(981631),
   N = n(689938),
-  f = n(141253),
-  h = n(691766);
-let S = e => {
+  f = n(484757),
+  S = n(691766);
+let h = e => {
 let {
   userRecord: t,
   placement: n
@@ -80,7 +80,7 @@ let {
 return (0, s.jsxs)('div', {
   className: f.userAvatarProgressBarContainer,
   children: [
-    (0, s.jsx)(S, {
+    (0, s.jsx)(h, {
       userRecord: a,
       placement: 1
     }),
@@ -88,7 +88,7 @@ return (0, s.jsxs)('div', {
       numSentReferrals: n,
       placement: 1
     }),
-    (0, s.jsx)(S, {
+    (0, s.jsx)(h, {
       userRecord: r,
       placement: 2
     }),
@@ -96,7 +96,7 @@ return (0, s.jsxs)('div', {
       numSentReferrals: n,
       placement: 2
     }),
-    (0, s.jsx)(S, {
+    (0, s.jsx)(h, {
       userRecord: i,
       placement: 3
     })
@@ -115,7 +115,7 @@ helpdeskArticle: s
 t.Z = e => {
   let {
 isInSettings: t = !1
-  } = e, r = (0, l.Wu)([C.Z], () => C.Z.getSentUserIds()), u = (0, l.Wu)([T.default], () => r.map(e => T.default.getUser(e)).filter(e => null != e)), S = a.useMemo(() => u.map(e => new E.Z(e)), [u]), {
+  } = e, r = (0, l.Wu)([C.Z], () => C.Z.getSentUserIds()), u = (0, l.Wu)([T.default], () => r.map(e => T.default.getUser(e)).filter(e => null != e)), h = a.useMemo(() => u.map(e => new E.Z(e)), [u]), {
 subscriberHomeVariant: M
   } = g.g.useExperiment({
 location: 'ReferralProgramProgressBar'
@@ -166,7 +166,7 @@ children: [
         children: Z
       }),
       (0, s.jsx)(x, {
-        userRecords: S
+        userRecords: h
       }),
       (0, s.jsx)(o.Text, {
         variant: t ? 'text-sm/normal' : 'text-lg/medium',
@@ -209,7 +209,7 @@ children: [
               className: f.expandedProgressBarSelectFriendsCTAInner,
               children: [
                 (0, s.jsx)('img', {
-                  src: h,
+                  src: S,
                   alt: '',
                   className: f.expandedProgressBarSelectFriendsIcon
                 }),

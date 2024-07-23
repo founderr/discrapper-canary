@@ -1,28 +1,28 @@
-t.d(s, {
+s.d(t, {
   t: function() {
 return _;
   }
 });
-var n = t(735250),
-  a = t(470079),
-  i = t(481060),
-  r = t(243778),
-  o = t(921944),
-  l = t(689938),
-  c = t(685140);
+var n = s(735250),
+  a = s(470079),
+  i = s(481060),
+  r = s(243778),
+  o = s(921944),
+  l = s(689938),
+  c = s(643602);
 let d = e => {
 let {
-  markAsDismissed: s
+  markAsDismissed: t
 } = e;
-return a.useEffect(() => s(o.L.UNKNOWN), [s]), (0, n.jsx)(i.TextBadge, {
+return a.useEffect(() => t(o.L.UNKNOWN), [t]), (0, n.jsx)(i.TextBadge, {
   className: c.newBadge,
   text: l.Z.Messages.NEW
 });
   },
   _ = e => {
 let {
-  title: s,
-  body: t,
+  title: t,
+  body: s,
   img: a,
   newIndicatorDismissibleContent: o,
   onClick: _
@@ -41,23 +41,23 @@ return (0, n.jsxs)('div', {
               contentTypes: [o],
               children: e => {
                 let {
-                  visibleContent: s,
-                  markAsDismissed: t
+                  visibleContent: t,
+                  markAsDismissed: s
                 } = e;
-                return s === o ? (0, n.jsx)(d, {
-                  markAsDismissed: t
+                return t === o ? (0, n.jsx)(d, {
+                  markAsDismissed: s
                 }) : null;
               }
             }),
             (0, n.jsx)(i.Text, {
               variant: 'text-md/semibold',
-              children: s
+              children: t
             })
           ]
         }),
         (0, n.jsx)(i.Text, {
           variant: 'text-xs/normal',
-          children: t
+          children: s
         })
       ]
     }),

@@ -11,7 +11,7 @@ var a = n(120356),
   l = n(492593),
   o = n(930282),
   c = n(464891),
-  d = n(444190);
+  d = n(612950);
 
 function u(e) {
   let {
@@ -21,13 +21,13 @@ content: a,
 className: u,
 compact: _,
 popoutProps: E,
-hideTimestamp: I = !1,
-withFooter: m = !1,
+hideTimestamp: m = !1,
+withFooter: I = !1,
 ...T
   } = e, h = (0, r.ZP)(t);
   return (0, i.jsx)('div', {
 className: s()({
-  [d.withFooter]: m
+  [d.withFooter]: I
 }, d.embedCard, {
   [d.compact]: _
 }, u),
@@ -49,7 +49,7 @@ children: (0, i.jsx)(l.Z, {
     author: h,
     guildId: null == n ? void 0 : n.guild_id,
     compact: _,
-    hideTimestamp: I,
+    hideTimestamp: m,
     className: s()(d.header, {
       [d.compact]: _
     }),

@@ -1,25 +1,25 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return c;
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(120356),
-  i = t.n(a),
-  r = t(285952),
-  o = t(607254),
-  l = t(549856);
+var n = s(735250);
+s(470079);
+var a = s(120356),
+  i = s.n(a),
+  r = s(285952),
+  o = s(526097),
+  l = s(224499);
 
 function c(e) {
   let {
-features: s
+features: t
   } = e;
   return (0, n.jsx)(n.Fragment, {
-children: s.map((e, s) => (0, n.jsxs)(r.Z, {
+children: t.map((e, t) => (0, n.jsxs)(r.Z, {
   align: r.Z.Align.CENTER,
   className: i()(l.marginTop20, o.feature, {
-    [o.featureBorder]: 0 !== s
+    [o.featureBorder]: 0 !== t
   }),
   children: [
     null != e.icon ? (0, n.jsx)('div', {
@@ -38,6 +38,6 @@ children: s.map((e, s) => (0, n.jsxs)(r.Z, {
       ]
     })
   ]
-}, s))
+}, t))
   });
 }

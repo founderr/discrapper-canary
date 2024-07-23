@@ -30,7 +30,7 @@ var i = n(735250),
   S = n(981631),
   T = n(420212),
   x = n(689938),
-  y = n(108421);
+  y = n(537547);
 let P = g.Z.getArticleURL(S.BhN.APP_DIRECTORY_HEADER_LEARN_MORE);
 
 function O(e) {

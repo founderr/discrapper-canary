@@ -39,8 +39,8 @@ var i = n(735250),
   j = n(972264),
   U = n(11352),
   G = n(304445),
-  k = n(344185),
-  w = n(557494),
+  w = n(344185),
+  k = n(155409),
   B = n(10401),
   H = n(970731),
   V = n(210887),
@@ -68,7 +68,7 @@ var i = n(735250),
   eu = n(921944),
   e_ = n(647086),
   eE = n(689938),
-  eh = n(517770);
+  eh = n(764842);
 
 function eI(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -134,7 +134,7 @@ let {
 if (n)
   return (0, i.jsx)('div', {
     onClick: t => e ? null : t.stopPropagation(),
-    children: (0, i.jsx)(w.Z, {
+    children: (0, i.jsx)(k.Z, {
       tutorialId: eg,
       position: 'bottom',
       inlineSpecs: ep,
@@ -395,12 +395,12 @@ super(...e), eI(this, 'historyUnlisten', () => {}), eI(this, 'showTimeout', new 
       n.e('50654'),
       n.e('7654'),
       n.e('44156'),
-      n.e('71700'),
+      n.e('16435'),
       n.e('85552'),
       n.e('58227'),
-      n.e('10926'),
+      n.e('45361'),
       n.e('33213'),
-      n.e('41292')
+      n.e('12303')
     ]).then(n.bind(n, 545135));
     return n => (0, i.jsx)(e, {
       ...n,
@@ -497,7 +497,7 @@ h = (0, o.e7)([$.Z], () => $.Z.getChannelId()),
 ]),
 y = (0, o.e7)([W.Z], () => W.Z.isUnavailable(n)),
 G = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()),
-w = (0, o.e7)([V.Z], () => V.Z.darkSidebar ? ec.BRd.DARK : V.Z.theme),
+k = (0, o.e7)([V.Z], () => V.Z.darkSidebar ? ec.BRd.DARK : V.Z.theme),
 {
   enableStudyGroup: H
 } = (0, D.s)(d),
@@ -525,12 +525,12 @@ M.Z,
 Q.Z
   ], () => null != d && null != G && S && !Q.Z.hasLayers() && M.Z.shouldShowGuildTemplateDirtyTooltip(n)), ex = (0, o.e7)([F.Z], () => F.Z.getChannel(l)), {
 isPopoutOpen: eb
-  } = (0, O.y)(), eP = null !== (t = null == d ? void 0 : d.hasFeature(ec.oNc.COMMUNITY)) && void 0 !== t && t, eM = (0, o.e7)([k.Z], () => !r().isEmpty(k.Z.getThreadsForGuild(n))), eD = et.ZP.isNewUser(G), ey = ei && !eD, ej = (0, C.Z)(G);
+  } = (0, O.y)(), eP = null !== (t = null == d ? void 0 : d.hasFeature(ec.oNc.COMMUNITY)) && void 0 !== t && t, eM = (0, o.e7)([w.Z], () => !r().isEmpty(w.Z.getThreadsForGuild(n))), eD = et.ZP.isNewUser(G), ey = ei && !eD, ej = (0, C.Z)(G);
   (0, R.Z)(d);
   let eU = (0, v.wE)(c.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
 eG = (0, j.Z)(n),
-ek = (0, x.Z)(n),
-ew = (0, o.e7)([$.Z], () => $.Z.getChannelId()),
+ew = (0, x.Z)(n),
+ek = (0, o.e7)([$.Z], () => $.Z.getChannelId()),
 eB = (0, o.e7)([J.Z], () => J.Z.desyncedVoiceStatesCount),
 eH = U.Y.useExperiment({
   location: 'GuildSidebar'
@@ -546,10 +546,10 @@ selectedChannelId: a ? null : l,
 selectedChannel: ex,
 selectedVoiceChannelId: h,
 voiceStates: _,
-rtcConnectedChannelId: ew,
+rtcConnectedChannelId: ek,
 rtcDesyncedVoiceStatesCount: eB,
 isUnavailable: y,
-theme: w,
+theme: k,
 user: G,
 hasChannelNotice: null != eE || eo,
 anyLayerOpen: eh || eI,
@@ -566,7 +566,7 @@ showNewUnreadsBar: eP,
 showActiveThreadsNotice: P && null != ef && ef >= 200 && eM,
 showGuildSoundboardPermissionUpsell: eC,
 showMediaChannelUpsell: eG,
-showTierTemplatesUpsell: ek,
+showTierTemplatesUpsell: ew,
 isHeaderPopoutOpen: eb,
 enableStudyGroup: H,
 isGuildHeaderDismissibleTooltipShown: e_,

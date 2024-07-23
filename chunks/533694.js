@@ -15,20 +15,20 @@ var a = n(399606),
   u = n(331372),
   _ = n(981631),
   E = n(689938),
-  I = n(87191);
+  m = n(87191);
 
-function m(e) {
+function I(e) {
   let {
 guildId: t,
 user: n,
 username: l
   } = e, o = (0, a.e7)([r.Z], () => !r.Z.useReducedMotion), c = n.getAvatarURL(t, 56, o), d = (0, i.jsx)('img', {
 src: c,
-className: I.userAvatar,
+className: m.userAvatar,
 alt: ''
   });
   return (0, i.jsxs)('div', {
-className: I.thankYouCard,
+className: m.thankYouCard,
 role: 'img',
 'aria-label': E.Z.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_ARIA_LABEL.format({
   username: l
@@ -38,7 +38,7 @@ children: [
     avatar: d
   }),
   (0, i.jsx)(s.Text, {
-    className: I.thankYouText,
+    className: m.thankYouText,
     tag: 'p',
     color: 'status-positive-text',
     variant: 'heading-xl/medium',
@@ -62,7 +62,7 @@ function T(e) {
   let {
 channel: r,
 message: u,
-compact: I
+compact: m
   } = e, T = (0, l.ZP)(u), h = (0, o.l)({
 user: u.author,
 channelId: r.id,
@@ -82,10 +82,10 @@ children: [
   (0, i.jsx)(d.Z, {
     icon: n(570111),
     timestamp: u.timestamp,
-    compact: I,
+    compact: m,
     children: N
   }),
-  (0, i.jsx)(m, {
+  (0, i.jsx)(I, {
     username: T.nick,
     guildId: r.guild_id,
     user: u.author

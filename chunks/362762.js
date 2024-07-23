@@ -1,8 +1,8 @@
-var s, r, i, a, l = n(442837),
-  o = n(570140),
+var s, r, i, a, o = n(442837),
+  l = n(570140),
   c = n(981631);
 let u = {};
-class d extends(a = l.ZP.Store) {
+class d extends(a = o.ZP.Store) {
   getState(e) {
 return u[e];
   }
@@ -12,7 +12,7 @@ i = 'CodedLinkNativeAppStateStore', (r = 'displayName') in(s = d) ? Object.defin
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[r] = i, t.Z = new d(o.Z, {
+}) : s[r] = i, t.Z = new d(l.Z, {
   NATIVE_APP_MODAL_OPENING: function(e) {
 let {
   code: t

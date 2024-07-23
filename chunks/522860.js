@@ -20,19 +20,19 @@ playingActivity: d,
 onJoinStream: u,
 usernameHook: _,
 compact: E
-  } = e, I = (0, l.ZP)(n), m = null === (t = n.call) || void 0 === t ? void 0 : t.duration, T = _(I), h = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
-username: I.nick,
+  } = e, m = (0, l.ZP)(n), I = null === (t = n.call) || void 0 === t ? void 0 : t.duration, T = _(m), h = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
+username: m.nick,
 activityName: null != d ? d.name : 'unknown',
 onJoinStream: u,
 usernameHook: T
   });
-  return null != m && (h = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
-username: I.nick,
-duration: m.humanize(),
+  return null != I && (h = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
+username: m.nick,
+duration: I.humanize(),
 channelName: c.name,
 usernameHook: T
   })), (0, i.jsx)(s.Z, {
-iconNode: null != m ? (0, i.jsx)(a.ScreenXIcon, {
+iconNode: null != I ? (0, i.jsx)(a.ScreenXIcon, {
   size: 'custom',
   color: 'currentColor',
   width: 20,

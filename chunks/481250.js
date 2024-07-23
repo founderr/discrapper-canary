@@ -19,8 +19,8 @@ var a = n(120356),
   m = n(40300),
   p = n(513547),
   h = n(65154),
-  g = n(634040),
-  f = n(549856);
+  g = n(876975),
+  f = n(224499);
 let C = {
   [h.Z.NO_OVERRIDE]: 'None',
   [h.Z.LOW]: 'Low Quality Stream',

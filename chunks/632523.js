@@ -12,15 +12,15 @@ var i = n(735250),
   c = n(213609),
   d = n(441358),
   u = n(426521),
-  _ = n(537959);
+  _ = n(687455);
 
 function E(e) {
   let {
 initialized: t,
 items: n,
 loading: E,
-loadMore: I
-  } = e, m = a.useRef(null), T = (0, o.Z)('for-you', m);
+loadMore: m
+  } = e, I = a.useRef(null), T = (0, o.Z)('for-you', I);
   (0, c.Z)({
 type: s.ImpressionTypes.VIEW,
 name: s.ImpressionNames.NOTIFICATION_CENTER_LANDING,
@@ -32,9 +32,9 @@ disableTrack: !t
   }, [t]);
   let h = () => {
 var e;
-let t = null === (e = m.current) || void 0 === e ? void 0 : e.getScrollerState();
+let t = null === (e = I.current) || void 0 === e ? void 0 : e.getScrollerState();
 if (null != t)
-  t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && I();
+  t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && m();
   };
   return t ? 0 === n.length ? (0, i.jsx)(d.v, {}) : (0, i.jsx)(i.Fragment, {
 children: (0, i.jsx)(r.bG, {
@@ -49,7 +49,7 @@ children: (0, i.jsx)(r.bG, {
         className: _.container,
         ref: e => {
           var n;
-          m.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null;
+          I.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null;
         },
         ...a,
         onScroll: h,

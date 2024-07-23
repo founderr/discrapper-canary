@@ -33,7 +33,7 @@ var n = s(735250),
   D = s(183391),
   K = s(206583),
   j = s(689938),
-  F = s(421377);
+  F = s(707443);
 let U = 'GameProfileModal',
   w = e => {
 let {

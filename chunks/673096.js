@@ -1,6 +1,6 @@
-t(47120);
-var n, a, i, r, o = t(442837),
-  l = t(570140);
+s(47120);
+var n, a, i, r, o = s(442837),
+  l = s(570140);
 let c = [];
 
 function d() {
@@ -16,28 +16,28 @@ r = 'AuthSessionsStore', (i = 'displayName') in(a = _) ? Object.defineProperty(a
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[i] = r, s.Z = new _(l.Z, {
+}) : a[i] = r, t.Z = new _(l.Z, {
   LOGOUT: d,
   LOGIN_SUCCESS: d,
   FETCH_AUTH_SESSIONS_SUCCESS: function(e) {
 let {
-  sessions: s
+  sessions: t
 } = e;
-c = s.map(e => ({
+c = t.map(e => ({
   ...e,
   approx_last_used_time: new Date(e.approx_last_used_time)
 }));
   },
   LOGOUT_AUTH_SESSIONS_SUCCESS: function(e) {
 let {
-  sessionIdHashes: s
-} = e, t = [...c], n = !1;
-for (let e of s) {
-  let s = t.findIndex(s => s.id_hash === e);
-  s >= 0 && (t.splice(s, 1), n = !0);
+  sessionIdHashes: t
+} = e, s = [...c], n = !1;
+for (let e of t) {
+  let t = s.findIndex(t => t.id_hash === e);
+  t >= 0 && (s.splice(t, 1), n = !0);
 }
 if (!n)
   return !1;
-c = t;
+c = s;
   }
 });

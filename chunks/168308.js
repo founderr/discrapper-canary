@@ -1,4 +1,4 @@
-t.d(s, {
+s.d(t, {
   Jw: function() {
 return r;
   },
@@ -6,9 +6,9 @@ return r;
 return o;
   }
 });
-var n = t(442837),
-  a = t(808506),
-  i = t(358085);
+var n = s(442837),
+  a = s(808506),
+  i = s(358085);
 
 function r() {
   return i.isPlatformEmbedded;

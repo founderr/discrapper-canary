@@ -1,56 +1,56 @@
-t(653041), t(47120);
-var n = t(735250),
-  a = t(470079),
-  i = t(120356),
-  r = t.n(i),
-  o = t(658722),
-  l = t.n(o),
-  c = t(243814),
-  d = t(442837),
-  _ = t(921072),
-  E = t(1561),
-  u = t(481060),
-  T = t(384275),
-  I = t(230711),
-  S = t(497321),
-  N = t(468026),
-  C = t(566620),
-  m = t(317381),
-  A = t(979200),
-  h = t(713938),
-  g = t(881998),
-  O = t(246946),
-  p = t(285952),
-  R = t(768581),
-  x = t(49012),
-  M = t(210887),
-  D = t(436267),
-  f = t(494620),
-  P = t(981631),
-  L = t(689938),
-  Z = t(756576),
-  b = t(549856);
+s(653041), s(47120);
+var n = s(735250),
+  a = s(470079),
+  i = s(120356),
+  r = s.n(i),
+  o = s(658722),
+  l = s.n(o),
+  c = s(243814),
+  d = s(442837),
+  _ = s(921072),
+  E = s(1561),
+  u = s(481060),
+  T = s(384275),
+  I = s(230711),
+  S = s(497321),
+  N = s(468026),
+  C = s(566620),
+  m = s(317381),
+  A = s(979200),
+  g = s(713938),
+  h = s(881998),
+  O = s(246946),
+  p = s(285952),
+  R = s(768581),
+  x = s(49012),
+  M = s(210887),
+  f = s(436267),
+  D = s(494620),
+  P = s(981631),
+  L = s(689938),
+  b = s(102507),
+  Z = s(224499);
 let v = d.ZP.connectStores([M.Z], () => ({
   theme: M.Z.theme
 }))(u.EmptyState);
 
 function j(e) {
   let {
-application: s
+application: t
   } = e;
   return (0, n.jsxs)('div', {
-className: Z.twoWayWarning,
+className: b.twoWayWarning,
 children: [
   (0, n.jsx)(u.CircleInformationIcon, {
     size: 'md',
     color: 'currentColor',
-    className: Z.twoWayWarningIcon
+    className: b.twoWayWarningIcon
   }),
   (0, n.jsx)(u.Text, {
     color: 'text-normal',
     variant: 'text-sm/medium',
     children: L.Z.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT.format({
-      applicationName: s.name,
+      applicationName: t.name,
       onConnectionPress: () => I.Z.setSection(P.jXE.SETTINGS_CONNECTIONS)
     })
   })
@@ -59,75 +59,75 @@ children: [
 }
 let B = e => {
 let {
-  disclosure: s
+  disclosure: t
 } = e;
 return a.useMemo(() => {
-  switch (s) {
+  switch (t) {
     case _.u$.IP_LOCATION:
       return (0, n.jsx)(u.GlobeEarthIcon, {
         size: 'md',
         color: 'currentColor',
-        className: Z.disclosureIcon
+        className: b.disclosureIcon
       });
     case _.u$.DISPLAYS_ADVERTISEMENTS:
       return (0, n.jsx)(u.EmbedIcon, {
-        className: Z.disclosureIcon
+        className: b.disclosureIcon
       });
     default:
       return (0, n.jsx)(u.CircleInformationIcon, {
-        className: Z.disclosureIcon
+        className: b.disclosureIcon
       });
   }
-}, [s]);
+}, [t]);
   },
   U = e => {
 let {
-  scopes: s,
-  application: t,
+  scopes: t,
+  application: s,
   onDelete: a,
   disclosures: i
 } = e, o = () => {
   let e = L.Z.Messages.DELETE_APP_CONFIRM_MSG;
-  return (0, D.Z)(t.id) && (e = (0, n.jsxs)(n.Fragment, {
+  return (0, f.Z)(s.id) && (e = (0, n.jsxs)(n.Fragment, {
     children: [
       e,
-      (0, n.jsx)(f.Z, {
-        className: Z.infoBox,
+      (0, n.jsx)(D.Z, {
+        className: b.infoBox,
         children: L.Z.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT_DISCONNECT_WARNING.format({
-          applicationName: t.name
+          applicationName: s.name
         })
       })
     ]
-  })), (0, u.openModal)(s => (0, n.jsx)(N.default, {
+  })), (0, u.openModal)(t => (0, n.jsx)(N.default, {
     title: L.Z.Messages.DEAUTHORIZE_APP,
     body: e,
     confirmText: L.Z.Messages.DEAUTHORIZE,
     cancelText: L.Z.Messages.CANCEL,
     onConfirm: a,
-    ...s
+    ...t
   }));
 }, l = () => {
-  null != t.terms_of_service_url && (0, x.q)({
-    href: t.terms_of_service_url,
+  null != s.terms_of_service_url && (0, x.q)({
+    href: s.terms_of_service_url,
     shouldConfirm: !0
   });
 }, d = () => {
-  null != t.privacy_policy_url && (0, x.q)({
-    href: t.privacy_policy_url,
+  null != s.privacy_policy_url && (0, x.q)({
+    href: s.privacy_policy_url,
     shouldConfirm: !0
   });
-}, _ = (0, D.O)(t.id);
+}, _ = (0, f.O)(s.id);
 return (0, n.jsx)(u.Card, {
-  className: r()(Z.authedApp, b.marginBottom8),
+  className: r()(b.authedApp, Z.marginBottom8),
   outline: !0,
   children: (0, n.jsxs)(u.HeadingLevel, {
     component: (() => {
       let e = R.ZP.getApplicationIconURL({
-          id: t.id,
-          icon: t.icon
+          id: s.id,
+          icon: s.icon
         }),
-        s = null != e ? (0, n.jsx)(p.Z.Child, {
-          className: Z.appAvatar,
+        t = null != e ? (0, n.jsx)(p.Z.Child, {
+          className: b.appAvatar,
           grow: 0,
           children: (0, n.jsx)('img', {
             src: e,
@@ -135,16 +135,16 @@ return (0, n.jsx)(u.Card, {
           })
         }) : null;
       return (0, n.jsxs)(p.Z, {
-        className: r()(Z.__invalid_header, b.marginBottom20),
+        className: r()(b.__invalid_header, Z.marginBottom20),
         children: [
           (0, n.jsxs)(p.Z, {
-            className: Z.headerInfo,
+            className: b.headerInfo,
             children: [
-              s,
+              t,
               (0, n.jsx)(p.Z.Child, {
                 children: (0, n.jsx)(u.Heading, {
                   variant: 'text-sm/semibold',
-                  children: t.name
+                  children: s.name
                 })
               })
             ]
@@ -165,52 +165,52 @@ return (0, n.jsx)(u.Card, {
     })(),
     children: [
       (() => {
-        if (null != t.description && '' !== t.description)
+        if (null != s.description && '' !== s.description)
           return (0, n.jsx)(u.FormItem, {
             faded: !0,
             title: L.Z.Messages.ABOUT_THIS_APP,
             children: (0, n.jsx)(u.FormText, {
-              children: t.description
+              children: s.description
             })
           });
       })(),
       (() => {
-        if (null != t.terms_of_service_url || null != t.privacy_policy_url)
+        if (null != s.terms_of_service_url || null != s.privacy_policy_url)
           return (0, n.jsxs)('div', {
-            className: Z.tosPrivacy,
+            className: b.tosPrivacy,
             children: [
-              null != t.terms_of_service_url ? (0, n.jsxs)(E.P, {
+              null != s.terms_of_service_url ? (0, n.jsxs)(E.P, {
                 tag: 'a',
                 onClick: l,
-                className: Z.tos,
+                className: b.tos,
                 children: [
                   (0, n.jsx)(u.FormText, {
-                    className: Z.link,
+                    className: b.link,
                     children: L.Z.Messages.AUTHORIZED_APPS_TERMS_OF_SERVICE
                   }),
                   (0, n.jsx)(u.LinkExternalSmallIcon, {
-                    className: Z.externalLinkIcon,
+                    className: b.externalLinkIcon,
                     color: 'var(--text-link)'
                   })
                 ]
               }) : null,
-              null != t.privacy_policy_url ? (0, n.jsxs)('div', {
-                className: Z.privacy,
+              null != s.privacy_policy_url ? (0, n.jsxs)('div', {
+                className: b.privacy,
                 children: [
-                  null != t.terms_of_service_url ? (0, n.jsx)('div', {
-                    className: Z.divider
+                  null != s.terms_of_service_url ? (0, n.jsx)('div', {
+                    className: b.divider
                   }) : null,
                   (0, n.jsxs)(E.P, {
                     tag: 'a',
                     onClick: d,
-                    className: Z.privacy,
+                    className: b.privacy,
                     children: [
                       (0, n.jsx)(u.FormText, {
-                        className: Z.link,
+                        className: b.link,
                         children: L.Z.Messages.AUTHORIZED_APPS_PRIVACY_POLICY
                       }),
                       (0, n.jsx)(u.LinkExternalSmallIcon, {
-                        className: Z.externalLinkIcon,
+                        className: b.externalLinkIcon,
                         color: 'var(--text-link)'
                       })
                     ]
@@ -222,68 +222,68 @@ return (0, n.jsx)(u.Card, {
       })(),
       (() => {
         let e = [];
-        for (let t of s)
-          e.push((0, h.jW)(t, s)), t === c.x.APPLICATIONS_COMMANDS && e.push(L.Z.Messages.SCOPE_DM_YOU);
+        for (let s of t)
+          e.push((0, g.jW)(s, t)), s === c.x.APPLICATIONS_COMMANDS && e.push(L.Z.Messages.SCOPE_DM_YOU);
         if (e.length > 0 || null != i && i.length > 0)
           return (0, n.jsx)(u.FormItem, {
             faded: !0,
             title: L.Z.Messages.PERMISSIONS,
-            className: b.marginTop20,
+            className: Z.marginTop20,
             children: (0, n.jsxs)('ul', {
               children: [
-                e.map((e, s) => (0, n.jsxs)('li', {
-                  className: r()(Z.permission, b.marginTop8),
+                e.map((e, t) => (0, n.jsxs)('li', {
+                  className: r()(b.permission, Z.marginTop8),
                   children: [
                     (0, n.jsx)('i', {
-                      className: Z.permissionCheckmark
+                      className: b.permissionCheckmark
                     }),
                     (0, n.jsx)(u.FormText, {
                       children: e
                     })
                   ]
-                }, s)),
-                null == i ? void 0 : i.map((s, t) => {
-                  let a = (0, A.PM)(s);
+                }, t)),
+                null == i ? void 0 : i.map((t, s) => {
+                  let a = (0, A.PM)(t);
                   return null != a ? (0, n.jsxs)('li', {
-                    className: r()(Z.permission, b.marginTop8),
+                    className: r()(b.permission, Z.marginTop8),
                     children: [
                       (0, n.jsx)(B, {
-                        disclosure: s
+                        disclosure: t
                       }),
                       (0, n.jsx)(u.FormText, {
                         children: a
                       })
                     ]
-                  }, t + e.length) : null;
+                  }, s + e.length) : null;
                 })
               ]
             })
           });
       })(),
       _ && (0, n.jsx)(j, {
-        application: t
+        application: s
       })
     ]
   })
 });
   };
-s.Z = () => {
+t.Z = () => {
   let e = (0, d.e7)([O.Z], () => O.Z.hidePersonalInformation),
-s = (0, d.e7)([g.Z], () => g.Z.getApps()),
+t = (0, d.e7)([h.Z], () => h.Z.getApps()),
 i = (0, d.e7)([m.ZP], () => m.ZP.getSelfEmbeddedActivities());
   a.useEffect(() => {
 T.Z.fetch();
   }, []);
   let r = e => {
   let {
-    id: s,
-    application: t
+    id: t,
+    application: s
   } = e;
-  T.Z.delete(s);
-  let n = i.get(t.id);
+  T.Z.delete(t);
+  let n = i.get(s.id);
   null != n && (0, C.mW)({
     channelId: n.channelId,
-    applicationId: t.id
+    applicationId: s.id
   });
 },
 [o, c] = a.useState(''),
@@ -294,7 +294,7 @@ E = () => {
   c('');
 },
 I = () => (0, n.jsx)('div', {
-  className: Z.searchContainer,
+  className: b.searchContainer,
   children: (0, n.jsx)(u.SearchBar, {
     size: u.SearchBar.Sizes.MEDIUM,
     query: o,
@@ -304,26 +304,26 @@ I = () => (0, n.jsx)('div', {
     'aria-label': L.Z.Messages.INTEGRATIONS_SEARCH
   })
 }),
-N = (e, s) => (0, n.jsxs)(v, {
-  className: Z.__invalid_marginTop20,
+N = (e, t) => (0, n.jsxs)(v, {
+  className: b.__invalid_marginTop20,
   children: [
     (0, n.jsx)(u.EmptyStateImage, {
-      darkSrc: t(701972),
-      lightSrc: t(818658),
+      darkSrc: s(701972),
+      lightSrc: s(818658),
       width: 380,
       height: 282
     }),
     (0, n.jsx)(u.EmptyStateText, {
       note: e,
-      children: s
+      children: t
     })
   ]
 }),
 A = a.useMemo(() => {
   let e = o.trim().toLowerCase();
-  return '' === e || null == s ? s : s.length < 100 ? s.filter(s => l()(e, s.application.name.toLowerCase())) : s.filter(s => s.application.name.toLowerCase().includes(e));
+  return '' === e || null == t ? t : t.length < 100 ? t.filter(t => l()(e, t.application.name.toLowerCase())) : t.filter(t => t.application.name.toLowerCase().includes(e));
 }, [
-  s,
+  t,
   o
 ]);
   return e ? (0, n.jsx)(S.Z, {}) : (0, n.jsx)(u.FormSection, {
@@ -331,15 +331,15 @@ tag: u.FormTitleTags.H1,
 title: L.Z.Messages.AUTHORIZED_APPS,
 children: (0, n.jsx)(u.HeadingLevel, {
   component: (0, n.jsx)(u.FormNotice, {
-    className: b.marginBottom40,
+    className: Z.marginBottom40,
     type: u.CardTypes.PRIMARY,
     title: L.Z.Messages.APPLICATIONS_AND_CONNECTIONS,
     body: L.Z.Messages.APPLICATIONS_AND_CONNECTIONS_BODY
   }),
-  children: null == s || null == A ? (0, n.jsx)(u.Spinner, {
-    className: b.marginTop20,
+  children: null == t || null == A ? (0, n.jsx)(u.Spinner, {
+    className: Z.marginTop20,
     type: u.Spinner.Type.SPINNING_CIRCLE
-  }) : 0 === s.length ? N(L.Z.Messages.NO_AUTHORIZED_APPS_NOTE, L.Z.Messages.NO_AUTHORIZED_APPS) : 0 === A.length ? (0, n.jsxs)(n.Fragment, {
+  }) : 0 === t.length ? N(L.Z.Messages.NO_AUTHORIZED_APPS_NOTE, L.Z.Messages.NO_AUTHORIZED_APPS) : 0 === A.length ? (0, n.jsxs)(n.Fragment, {
     children: [
       I(),
       N(null, L.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH)
@@ -347,7 +347,7 @@ children: (0, n.jsx)(u.HeadingLevel, {
   }) : (0, n.jsxs)(n.Fragment, {
     children: [
       I(),
-      A.sort((e, s) => e.application.name.localeCompare(s.application.name)).map(e => (0, n.jsx)(U, {
+      A.sort((e, t) => e.application.name.localeCompare(t.application.name)).map(e => (0, n.jsx)(U, {
         onDelete: () => r(e),
         ...e
       }, e.id))

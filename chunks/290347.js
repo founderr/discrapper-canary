@@ -22,7 +22,7 @@ var i = n(735250),
   T = n(565216),
   f = n(981631),
   S = n(921944),
-  C = n(757601);
+  C = n(341695);
 let N = [],
   A = e => {
 let {
@@ -95,7 +95,7 @@ body: y
   } = e, {
 onClose: j,
 transitionState: U
-  } = n, G = (0, I.Dt)(), k = P.length % 2 == 0, w = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), [B, H] = s.useState(Date.now()), [V, F] = s.useState(0), [Y, W] = s.useState(0), [z, K] = s.useState(!1), [q, Q] = s.useState(!0), X = s.useRef(B), J = s.useRef(V), $ = s.useRef(Y), ee = s.useRef(z), et = s.useRef(q), [en, ei] = s.useState(N), es = s.useRef(!1);
+  } = n, G = (0, I.Dt)(), w = P.length % 2 == 0, k = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), [B, H] = s.useState(Date.now()), [V, F] = s.useState(0), [Y, W] = s.useState(0), [z, K] = s.useState(!1), [q, Q] = s.useState(!0), X = s.useRef(B), J = s.useRef(V), $ = s.useRef(Y), ee = s.useRef(z), et = s.useRef(q), [en, ei] = s.useState(N), es = s.useRef(!1);
 
   function ea() {
 let e = Date.now(),
@@ -201,7 +201,7 @@ children: [
       }),
       'video' === a.type ? (0, i.jsx)(m.Z, {
         className: r()(C.video, A),
-        autoPlay: !w,
+        autoPlay: !k,
         loop: !0,
         muted: !0,
         controls: !0,
@@ -271,11 +271,11 @@ children: [
       }),
       (0, i.jsx)('div', {
         className: r()(C.featureCardGroup, {
-          [C.wideStyle]: k
+          [C.wideStyle]: w
         }),
         children: P.map((e, t) => (0, i.jsx)(v, {
           ...e,
-          wideStyle: k
+          wideStyle: w
         }, ''.concat(e.header, '_').concat(t)))
       }),
       D()

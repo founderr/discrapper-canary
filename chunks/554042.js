@@ -1,27 +1,27 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return O;
   }
-}), t(47120);
-var n = t(735250),
-  a = t(470079),
-  i = t(120356),
-  r = t.n(i),
-  o = t(442837),
-  l = t(433517),
-  c = t(481060),
-  d = t(37234),
-  _ = t(153867),
-  E = t(425493),
-  u = t(607070),
-  T = t(304761),
-  I = t(865427),
-  S = t(358085),
-  N = t(210887),
-  C = t(981631),
-  m = t(689938),
-  A = t(452935);
-let h = [{
+}), s(47120);
+var n = s(735250),
+  a = s(470079),
+  i = s(120356),
+  r = s.n(i),
+  o = s(442837),
+  l = s(433517),
+  c = s(481060),
+  d = s(37234),
+  _ = s(153867),
+  E = s(425493),
+  u = s(607070),
+  T = s(304761),
+  I = s(865427),
+  S = s(358085),
+  N = s(210887),
+  C = s(981631),
+  m = s(689938),
+  A = s(945437);
+let g = [{
 label: 'Latin alphabet',
 value: 'aBcDeFgHiJkLmNoPqRsTuVwXyZ'
   },
@@ -51,25 +51,25 @@ value: 'custom'
   }
 ];
 
-function g(e, s) {
-  let [t, n] = a.useState(() => {
-let t = l.K.get(e);
-return null != t ? t : s;
+function h(e, t) {
+  let [s, n] = a.useState(() => {
+let s = l.K.get(e);
+return null != s ? s : t;
   });
   return a.useEffect(() => {
-l.K.set(e, t);
+l.K.set(e, s);
   }, [
 e,
-t
+s
   ]), [
-t,
+s,
 n
   ];
 }
 
 function O() {
-  let [e, s] = a.useState(Math.round(window.outerWidth / window.innerWidth * 100)), {
-platformZoom: t,
+  let [e, t] = a.useState(Math.round(window.outerWidth / window.innerWidth * 100)), {
+platformZoom: s,
 theme: i
   } = (0, o.cj)([
 N.Z,
@@ -107,26 +107,26 @@ platformZoom: u.Z.zoom
   ]);
   a.useEffect(() => {
 !S.isPlatformEmbedded && window.addEventListener('resize', () => {
-  s(Math.round(window.outerWidth / window.innerWidth * 100));
+  t(Math.round(window.outerWidth / window.innerWidth * 100));
 });
   }, []);
-  let x = S.isPlatformEmbedded ? t : e,
+  let x = S.isPlatformEmbedded ? s : e,
 M = (0, o.e7)([T.C], () => {
-  var e, s;
-  return (0, I.fD)() ? null === (s = T.C.getCurrentBuildOverride()) || void 0 === s ? void 0 : null === (e = s.overrides) || void 0 === e ? void 0 : e.discord_web : null;
+  var e, t;
+  return (0, I.fD)() ? null === (t = T.C.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null;
 }),
-[D, f] = g('playground-overrideText', null),
-[P, L] = g('playground-defaultText', h[0].value),
-Z = a.useCallback(e => {
-  let s = h.find(s => {
+[f, D] = h('playground-overrideText', null),
+[P, L] = h('playground-defaultText', g[0].value),
+b = a.useCallback(e => {
+  let t = g.find(t => {
     let {
-      value: t
-    } = s;
-    return t === e;
+      value: s
+    } = t;
+    return s === e;
   });
-  '' === e || null == e ? (L(h[0].value), f(null)) : null != s ? L(s.value) : (L('custom'), f(e));
+  '' === e || null == e ? (L(g[0].value), D(null)) : null != t ? L(t.value) : (L('custom'), D(e));
 }, [
-  f,
+  D,
   L
 ]);
   return (0, n.jsx)('div', {
@@ -174,8 +174,8 @@ children: (0, n.jsxs)(c.FormSection, {
         (0, n.jsx)(c.FormItem, {
           children: (0, n.jsx)(c.SingleSelect, {
             className: A.select,
-            options: h,
-            onChange: e => Z(e),
+            options: g,
+            onChange: e => b(e),
             value: P
           })
         }),
@@ -184,8 +184,8 @@ children: (0, n.jsxs)(c.FormSection, {
             className: A.input,
             children: (0, n.jsx)(c.TextInput, {
               placeholder: 'Enter custom input...',
-              value: null != D ? D : '',
-              onChange: Z
+              value: null != f ? f : '',
+              onChange: b
             })
           })
         }),
@@ -284,19 +284,19 @@ children: (0, n.jsxs)(c.FormSection, {
                 }) : null
               ]
             }, e),
-            p.map(s => {
-              var t;
-              let a = null !== (t = 'custom' === P ? D : P) && void 0 !== t ? t : '';
+            p.map(t => {
+              var s;
+              let a = null !== (s = 'custom' === P ? f : P) && void 0 !== s ? s : '';
               return (0, n.jsx)('div', {
                 className: A.textSample,
                 children: (0, n.jsxs)('div', {
-                  title: ''.concat(e, 'px at ').concat(s),
+                  title: ''.concat(e, 'px at ').concat(t),
                   className: r()(A.text, {
                     [A.breakAnywhere]: !a.includes(' ')
                   }),
                   style: {
                     fontSize: e,
-                    fontWeight: R.get(s)
+                    fontWeight: R.get(t)
                   },
                   children: [
                     (0, n.jsx)('p', {
@@ -316,7 +316,7 @@ children: (0, n.jsxs)(c.FormSection, {
                     })
                   ]
                 })
-              }, ''.concat(e, '-').concat(s));
+              }, ''.concat(e, '-').concat(t));
             })
           ]
         }, e))

@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(285952),
   _ = n(936195),
   E = n(409216),
-  I = n(63063),
-  m = n(153066),
+  m = n(63063),
+  I = n(153066),
   T = n(51144),
   h = n(620662),
   N = n(994339),
@@ -19,7 +19,7 @@ var i = n(735250),
   p = n(981631),
   C = n(616922),
   g = n(689938),
-  S = n(599723);
+  S = n(862810);
 
 function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -321,7 +321,7 @@ null == t || null == a || s ? !s && c && (d = (0, i.jsx)('div', {
 })) : d = (0, i.jsx)('img', {
   alt: '',
   src: t,
-  className: (0, m.l)(S, 'artwork', this.getActionableMode())
+  className: (0, I.l)(S, 'artwork', this.getActionableMode())
 });
 let _ = null != a && null != d && null != a.assets && null != a.assets.large_text && '' !== a.assets.large_text && !c && (0, f.Z)(a) ? a.assets.large_text : null,
   E = null != _ ? (0, i.jsx)(o.Tooltip, {
@@ -345,7 +345,7 @@ return (0, i.jsxs)('div', {
     (0, i.jsx)('div', {
       className: S.coverImageWrapper,
       children: (0, i.jsx)('div', {
-        className: r()((0, m.l)(S, 'coverImage', this.getActionableMode()), null != d ? S.blurred : null),
+        className: r()((0, I.l)(S, 'coverImage', this.getActionableMode()), null != d ? S.blurred : null),
         style: {
           backgroundImage: null != t ? 'url(\''.concat(t, '\')') : void 0
         }
@@ -392,7 +392,7 @@ return (0, i.jsxs)('div', {
       ]
     }),
     (0, i.jsx)(o.Anchor, {
-      href: I.Z.getArticleURL(this.getHelpdeskArticleURL()),
+      href: m.Z.getArticleURL(this.getHelpdeskArticleURL()),
       className: S.helpIcon,
       children: (0, i.jsx)(o.CircleQuestionIcon, {
         color: l.Z.unsafe_rawColors.PRIMARY_300.css,

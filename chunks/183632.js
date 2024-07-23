@@ -1,23 +1,23 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return u;
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(442837),
-  i = t(481060),
-  r = t(579806),
-  o = t(435064),
-  l = t(39604),
-  c = t(442334),
-  d = t(689938),
-  _ = t(885582),
-  E = t(249866);
+var n = s(735250);
+s(470079);
+var a = s(442837),
+  i = s(481060),
+  r = s(579806),
+  o = s(435064),
+  l = s(39604),
+  c = s(442334),
+  d = s(689938),
+  _ = s(992133),
+  E = s(677787);
 
 function u() {
   let e = (0, a.e7)([o.Z], () => o.Z.getSettings().storageLocation),
-s = async () => {
+t = async () => {
   let e = await r.Z.fileManager.showOpenDialog({
     properties: [
       'openDirectory',
@@ -36,7 +36,7 @@ children: (0, n.jsx)(c.O, {
     'aria-label': d.Z.Messages.CLIPS_SETTINGS_STORAGE_LOCATION_LABEL.format({
       storageLocation: e
     }),
-    onClick: s,
+    onClick: t,
     children: (0, n.jsx)(i.TextInput, {
       tabIndex: -1,
       value: e,

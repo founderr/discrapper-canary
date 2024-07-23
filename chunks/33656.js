@@ -1,59 +1,59 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return m;
   }
-}), t(724458);
-var n = t(735250),
-  a = t(470079),
-  i = t(120356),
-  r = t.n(i),
-  o = t(442837),
-  l = t(481060),
-  c = t(921801),
-  d = t(663389),
-  _ = t(960412),
-  E = t(151662),
-  u = t(930441),
-  T = t(726985),
-  I = t(689938),
-  S = t(252660),
-  N = t(549856);
+}), s(724458);
+var n = s(735250),
+  a = s(470079),
+  i = s(120356),
+  r = s.n(i),
+  o = s(442837),
+  l = s(481060),
+  c = s(921801),
+  d = s(663389),
+  _ = s(960412),
+  E = s(151662),
+  u = s(930441),
+  T = s(726985),
+  I = s(689938),
+  S = s(780346),
+  N = s(224499);
 
 function C(e) {
   let {
-label: s,
-onChange: t,
+label: t,
+onChange: s,
 enabled: a,
 subLabel: i
   } = e;
   return (0, n.jsx)(l.FormSwitch, {
 value: !!a,
-onChange: t,
+onChange: s,
 note: i,
-children: s
+children: t
   });
 }
 
 function m() {
   let e = (0, o.e7)([d.Z], () => d.Z.getSubsection()),
-s = a.createRef(),
+t = a.createRef(),
 {
-  categories: t,
+  categories: s,
   initialized: i
 } = (0, o.cj)([E.Z], () => E.Z.getEmailSettings());
   a.useEffect(() => {
 if (null == i)
   (0, _.Y7)();
 else if (e === u.vG.toUpperCase()) {
-  var t;
-  null == s || null === (t = s.current) || void 0 === t || t.scrollIntoView(!0);
+  var s;
+  null == t || null === (s = t.current) || void 0 === s || s.scrollIntoView(!0);
 }
   }, [
 i,
-s,
+t,
 e
   ]);
-  let m = u.M0.reduce((e, s) => e || !!t[s], !1),
+  let m = u.M0.reduce((e, t) => e || !!s[t], !1),
 A = {
   [u.$Z.COMMUNICATION]: T.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
   [u.$Z.SOCIAL]: T.s6.NOTIFICATIONS_EMAILS_SOCIAL,
@@ -65,7 +65,7 @@ A = {
 setting: T.s6.NOTIFICATIONS_EMAILS,
 children: [
   (0, n.jsx)('div', {
-    ref: s
+    ref: t
   }),
   (0, n.jsxs)(l.FormSection, {
     className: r()(N.marginTop40),
@@ -74,16 +74,16 @@ children: [
     children: [
       u.Od.map(e => {
         let {
-          category: s,
+          category: t,
           label: a,
           subLabel: i
-        } = e, r = A[s], o = (0, n.jsx)(C, {
+        } = e, r = A[t], o = (0, n.jsx)(C, {
           label: a(),
           subLabel: i(),
-          enabled: t[s],
+          enabled: s[t],
           onChange: e => {
-            var t, n;
-            return t = s, n = e, void(0, _.pR)(t, n);
+            var s, n;
+            return s = t, n = e, void(0, _.pR)(s, n);
           }
         }, a());
         return null != r ? (0, n.jsx)(c.F, {

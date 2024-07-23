@@ -19,12 +19,12 @@ var s = n(735250),
   A = n(75077),
   m = n(981631),
   N = n(689938),
-  f = n(391552),
-  h = n(865215);
+  f = n(396001),
+  S = n(865215);
 t.Z = e => {
   let t, n, {
   isAllPerksVisible: r,
-  setIsAllPerksVisible: S,
+  setIsAllPerksVisible: h,
   previousComponent: M,
   isFullScreen: x
 } = e,
@@ -57,7 +57,7 @@ children: (0, s.jsx)('div', {
       (0, s.jsx)(R.Z, {
         className: f.heroHeading,
         onBackClick: () => {
-          S(!1), T.default.track(m.rMx.NITRO_HOME_NAVIGATION, {
+          h(!1), T.default.track(m.rMx.NITRO_HOME_NAVIGATION, {
             current_component: p.MQ.SEE_ALL,
             next_component: M,
             interaction_component: 'Back Button'
@@ -137,7 +137,7 @@ children: (0, s.jsx)('div', {
         })
       }),
       (0, s.jsx)(c.Image, {
-        src: h,
+        src: S,
         className: f.bottomIllustration,
         width: 112,
         height: 85,

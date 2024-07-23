@@ -10,9 +10,9 @@ var i = n(735250),
   u = n(453687),
   _ = n(434624),
   E = n(287151),
-  I = n(689938),
-  m = n(716862),
-  T = n(372178);
+  m = n(689938),
+  I = n(952527),
+  T = n(219021);
 let h = (e, t) => null == e && null == t || e === t,
   N = (e, t) => e.findIndex(e => h(e.emoji.id, null == t ? void 0 : t.id) && h(e.emoji.name, null == t ? void 0 : t.name)),
   f = (e, t) => {
@@ -55,7 +55,7 @@ let {
   visibleReactionsCount: O
 } = this.props, {
   disableTransitionAppear: M
-} = this.state, v = S ? T : m, L = O > 0;
+} = this.state, v = S ? T : I, L = O > 0;
 return L || C ? (0, i.jsxs)(l.W, {
   component: 'div',
   className: r()(v.reactions, p),
@@ -86,7 +86,7 @@ return L || C ? (0, i.jsxs)(l.W, {
         t.stopPropagation(), (0, E.op)(f, e);
       },
       className: r()(v.reaction, g, v.remainingReactions),
-      'aria-label': I.Z.Messages.ADD_REACTION,
+      'aria-label': m.Z.Messages.ADD_REACTION,
       children: (0, i.jsxs)(o.Text, {
         className: v.reactionInner,
         variant: 'text-sm/normal',

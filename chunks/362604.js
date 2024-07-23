@@ -14,11 +14,11 @@ var i = n(735250),
   u = n(419922),
   _ = n(702346),
   E = n(626135),
-  I = n(585483),
-  m = n(115610),
+  m = n(585483),
+  I = n(115610),
   T = n(981631),
   h = n(689938),
-  N = n(296361);
+  N = n(360869);
 
 function f(e) {
   let {
@@ -64,7 +64,7 @@ children: [
               channel_id: s.id,
               guild_id: s.guild_id,
               action_type: 'upload_file'
-            }), I.S.dispatch(T.CkL.UPLOAD_FILE), (0, c.fE)({
+            }), m.S.dispatch(T.CkL.UPLOAD_FILE), (0, c.fE)({
               message: t,
               channel: s,
               shouldMention: !0
@@ -86,7 +86,7 @@ children: [
               channel_id: s.id,
               guild_id: s.guild_id,
               action_type: 'sticker'
-            }), (0, m.O)(t.id, s);
+            }), (0, I.O)(t.id, s);
           },
           children: null != C ? (0, i.jsx)(u.ZP, {
             size: 32,

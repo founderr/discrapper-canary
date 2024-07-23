@@ -32,7 +32,7 @@ var i = n(735250),
   M = n(86826),
   D = n(981631),
   y = n(689938),
-  j = n(350062);
+  j = n(316366);
 
 function U(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -55,11 +55,11 @@ return (0, i.jsx)('div', {
   children: n
 });
   },
-  k = [
+  w = [
 d.Z.unsafe_rawColors.BLUE_345.css,
 d.Z.colors.INTERACTIVE_NORMAL.css
   ],
-  w = e => {
+  k = e => {
 let {
   tooltip: t,
   onClick: n,
@@ -303,7 +303,7 @@ return (0, i.jsxs)(O.Z, {
     (0, i.jsx)(_.StackedProgress, {
       percents: t,
       size: _.Progress.Sizes.SMALL,
-      foregroundColors: k,
+      foregroundColors: w,
       animate: this.isFocused
     }),
     (0, i.jsx)('div', {
@@ -488,12 +488,12 @@ super(...e), U(this, 'renderProgressPatchingBody', (e, t) => {
 });
   }
 }
-let q = () => (0, i.jsx)(w, {
+let q = () => (0, i.jsx)(k, {
 icon: _.PlayIcon,
 tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
 onClick: () => I.v4()
   }),
-  Q = () => (0, i.jsx)(w, {
+  Q = () => (0, i.jsx)(k, {
 icon: _.PauseIcon,
 tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
 onClick: () => I.wO()
@@ -502,7 +502,7 @@ onClick: () => I.wO()
 let {
   item: t
 } = e;
-return (0, i.jsx)(w, {
+return (0, i.jsx)(k, {
   icon: _.ArrowSmallUpIcon,
   tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
   onClick: () => I.A1(t.applicationId, t.branchId)
@@ -512,7 +512,7 @@ return (0, i.jsx)(w, {
 let {
   item: t
 } = e;
-return (0, i.jsx)(w, {
+return (0, i.jsx)(k, {
   icon: _.CloseSmallIcon,
   tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
   onClick: () => I.al(t.applicationId, t.branchId)

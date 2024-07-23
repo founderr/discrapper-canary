@@ -1,46 +1,46 @@
-s.d(t, {
+n.d(t, {
   U: function() {
-return c;
+return l;
   }
 });
-var n = s(735250);
-s(470079);
-var r = s(120356),
-  a = s.n(r),
-  o = s(481060),
-  i = s(689938),
-  l = s(613616);
-let c = e => {
+var s = n(735250);
+n(470079);
+var r = n(120356),
+  a = n.n(r),
+  i = n(481060),
+  o = n(689938),
+  c = n(613616);
+let l = e => {
   let {
 className: t,
-isPartiallyPurchased: s
+isPartiallyPurchased: n
   } = e;
-  return s ? (0, n.jsx)(o.Tooltip, {
-tooltipClassName: l.partiallyOwnedDisclaimer,
+  return n ? (0, s.jsx)(i.Tooltip, {
+tooltipClassName: c.partiallyOwnedDisclaimer,
 position: 'top',
 align: 'left',
-text: i.Z.Messages.COLLECTIBLES_PARTIALLY_OWNED_DISCLAIMER,
-children: e => (0, n.jsxs)('div', {
-  className: a()(l.partialOwnStateContainer, t),
+text: o.Z.Messages.COLLECTIBLES_PARTIALLY_OWNED_DISCLAIMER,
+children: e => (0, s.jsxs)('div', {
+  className: a()(c.partialOwnStateContainer, t),
   ...e,
   children: [
-    (0, n.jsx)('span', {
-      className: l.iconWrapper,
-      children: (0, n.jsx)(o.CircleInformationIcon, {
+    (0, s.jsx)('span', {
+      className: c.iconWrapper,
+      children: (0, s.jsx)(i.CircleInformationIcon, {
         size: 'md',
         color: 'currentColor',
-        className: l.infoIcon
+        className: c.infoIcon
       })
     }),
-    (0, n.jsx)(o.Text, {
+    (0, s.jsx)(i.Text, {
       variant: 'text-md/semibold',
-      children: i.Z.Messages.COLLECTIBLES_PARTIALLY_OWNED
+      children: o.Z.Messages.COLLECTIBLES_PARTIALLY_OWNED
     })
   ]
 })
-  }) : (0, n.jsx)(o.Text, {
+  }) : (0, s.jsx)(i.Text, {
 variant: 'text-md/semibold',
 className: t,
-children: i.Z.Messages.COLLECTIBLES_ALREADY_OWNED
+children: o.Z.Messages.COLLECTIBLES_ALREADY_OWNED
   });
 };

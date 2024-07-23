@@ -13,13 +13,13 @@ var i, a = n(735250),
   u = n(2052),
   _ = n(594190),
   E = n(592745),
-  I = n(757266),
-  m = n(417363),
+  m = n(757266),
+  I = n(417363),
   T = n(358085),
   h = n(346329),
   N = n(981631),
   f = n(689938),
-  p = n(376296);
+  p = n(713958);
 
 function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -165,16 +165,16 @@ function S(e) {
 applicationId: t,
 libraryApplication: n
   } = e, i = (0, u.O)(), [s, r] = (0, o.Wu)([
-I.Z,
+m.Z,
 E.Z,
-m.Z
+I.Z
   ], () => [
-I.Z.isConnected(t) || E.Z.isLaunchable(t) || null != n && m.Z.isLaunchable(n.id, n.branchId),
+m.Z.isConnected(t) || E.Z.isLaunchable(t) || null != n && I.Z.isLaunchable(n.id, n.branchId),
 E.Z.launchingGames.has(t)
   ], [
 t,
 n
-  ]), l = (0, o.e7)([_.ZP], () => new Set(_.ZP.getRunningVerifiedApplicationIds()).has(t), [t]), c = (0, o.e7)([m.Z], () => null != n ? m.Z.getState(n.id, n.branchId) : null, [n]);
+  ]), l = (0, o.e7)([_.ZP], () => new Set(_.ZP.getRunningVerifiedApplicationIds()).has(t), [t]), c = (0, o.e7)([I.Z], () => null != n ? I.Z.getState(n.id, n.branchId) : null, [n]);
   return (0, a.jsx)(g, {
 ...e,
 analyticsContext: i,

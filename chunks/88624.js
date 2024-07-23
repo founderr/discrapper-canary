@@ -1,17 +1,17 @@
-var n = t(735250),
-  a = t(470079),
-  i = t(512722),
-  r = t.n(i),
-  o = t(442837),
-  l = t(481060),
-  c = t(346951),
-  d = t(644744),
-  _ = t(792423),
-  E = t(674985),
-  u = t(594174),
-  T = t(843200),
-  I = t(689938),
-  S = t(734833);
+var n = s(735250),
+  a = s(470079),
+  i = s(512722),
+  r = s.n(i),
+  o = s(442837),
+  l = s(481060),
+  c = s(346951),
+  d = s(644744),
+  _ = s(792423),
+  E = s(674985),
+  u = s(594174),
+  T = s(843200),
+  I = s(689938),
+  S = s(477810);
 class N extends a.PureComponent {
   renderIntroHeader() {
 let {
@@ -22,8 +22,8 @@ return null == e ? I.Z.Messages.HYPESQUAD_HEADING : I.Z.Messages.HYPESQUAD_HEADI
   render() {
 let {
   houseMembership: e,
-  isClaimed: s,
-  isVerified: t
+  isClaimed: t,
+  isVerified: s
 } = this.props;
 return (0, n.jsxs)(l.HeadingLevel, {
   component: (0, n.jsxs)('div', {
@@ -48,8 +48,8 @@ return (0, n.jsxs)(l.HeadingLevel, {
     }),
     (0, n.jsx)(d.Z, {
       houseMembership: e,
-      isClaimed: s,
-      isVerified: t
+      isClaimed: t,
+      isVerified: s
     }),
     (0, n.jsx)(c.Z, {}),
     (0, n.jsx)(_.Z, {
@@ -59,7 +59,7 @@ return (0, n.jsxs)(l.HeadingLevel, {
 });
   }
 }
-s.Z = o.ZP.connectStores([
+t.Z = o.ZP.connectStores([
   u.default,
   E.Z
 ], () => {

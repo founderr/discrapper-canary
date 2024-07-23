@@ -1,15 +1,15 @@
-var n = s(735250),
-  r = s(470079),
-  a = s(481060),
-  o = s(727637),
-  i = s(906732),
-  l = s(241553),
-  c = s(333867),
-  d = s(884697),
-  u = s(231338),
-  p = s(689938),
-  g = s(918259);
-let f = {
+var s = n(735250),
+  r = n(470079),
+  a = n(481060),
+  i = n(727637),
+  o = n(906732),
+  c = n(241553),
+  l = n(333867),
+  d = n(884697),
+  u = n(231338),
+  f = n(689938),
+  p = n(703909);
+let g = {
   dark: [{
   box: '#FFF19E',
   ribbon: '#FF484B'
@@ -72,43 +72,43 @@ let f = {
 t.Z = e => {
   let {
 product: t,
-returnRef: s,
+returnRef: n,
 onSuccess: C,
-tooltipDelay: m,
-isGiftEasterEggEnabled: _,
-disableCustomColor: h = !1
+tooltipDelay: _,
+isGiftEasterEggEnabled: m,
+disableCustomColor: b = !1
   } = e, {
-analyticsLocations: b
-  } = (0, i.ZP)(), x = r.useRef(null), I = (0, o.Z)(x), E = h ? u.BR.DARK : u.BR.LIGHT;
-  return (0, d.x6)(t) ? null : (0, n.jsx)(a.Tooltip, {
-text: p.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-delay: m,
-children: e => (0, n.jsx)(a.Button, {
+analyticsLocations: h
+  } = (0, o.ZP)(), x = r.useRef(null), I = (0, i.Z)(x), E = b ? u.BR.DARK : u.BR.LIGHT;
+  return (0, d.x6)(t) ? null : (0, s.jsx)(a.Tooltip, {
+text: f.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
+delay: _,
+children: e => (0, s.jsx)(a.Button, {
   ...e,
   buttonRef: x,
-  className: g.giftButton,
-  color: h ? a.ButtonColors.BRAND : a.ButtonColors.CUSTOM,
+  className: p.giftButton,
+  color: b ? a.ButtonColors.BRAND : a.ButtonColors.CUSTOM,
   look: a.Button.Looks.FILLED,
   size: a.ButtonSizes.ICON,
-  innerClassName: g.giftButtonInner,
-  'aria-label': p.Z.Messages.PREMIUM_GIFTING_BUTTON,
+  innerClassName: p.giftButtonInner,
+  'aria-label': f.Z.Messages.PREMIUM_GIFTING_BUTTON,
   onClick: e => {
-    e.stopPropagation(), (0, c.Z)({
+    e.stopPropagation(), (0, l.Z)({
       skuId: t.skuId,
       isGift: !0,
-      analyticsLocations: b,
-      returnRef: s,
+      analyticsLocations: h,
+      returnRef: n,
       onClose: null != C ? e => {
         e && C();
       } : void 0
     });
   },
-  children: _ ? (0, n.jsx)(l.e, {
+  children: m ? (0, s.jsx)(c.e, {
     hovered: I,
     isContentDismissed: !0,
     themeOverride: E,
-    boxColors: f
-  }) : (0, n.jsx)(a.GiftIcon, {
+    boxColors: g
+  }) : (0, s.jsx)(a.GiftIcon, {
     size: 'md',
     color: 'currentColor'
   })

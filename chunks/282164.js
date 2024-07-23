@@ -1,14 +1,14 @@
-var n = t(735250),
-  s = t(470079),
-  r = t(442837),
-  l = t(481060),
+var s = t(735250),
+  n = t(470079),
+  l = t(442837),
+  r = t(481060),
   o = t(873115),
   i = t(219929),
   c = t(618541),
   u = t(975060),
   d = t(689938),
-  E = t(647728);
-class _ extends s.PureComponent {
+  E = t(223811);
+class A extends n.PureComponent {
   componentDidMount() {
 null != this.props.paypalClient && o.f6();
   }
@@ -21,17 +21,17 @@ let {
   className: a,
   paypalClient: t
 } = this.props;
-return (0, n.jsx)(l.FormSection, {
+return (0, s.jsx)(r.FormSection, {
   className: a,
   title: d.Z.Messages.PAYMENT_SOURCE_PAYPAL_ACCOUNT,
-  children: (0, n.jsxs)('div', {
+  children: (0, s.jsxs)('div', {
     className: E.inputWrapper,
     children: [
-      (0, n.jsx)(i.ZP, {
+      (0, s.jsx)(i.ZP, {
         type: i.ZP.Types.PAYPAL,
         className: E.paypalIcon
       }),
-      (0, n.jsx)(l.TextInput, {
+      (0, s.jsx)(r.TextInput, {
         value: e,
         editable: !1,
         readOnly: !0,
@@ -43,10 +43,10 @@ return (0, n.jsx)(l.FormSection, {
 });
   }
 }
-a.Z = r.ZP.connectStores([
+a.Z = l.ZP.connectStores([
   c.Z,
   u.Z
 ], () => ({
   braintreeEmail: u.Z.braintreeEmail,
   paypalClient: c.Z.getPayPalClient()
-}))(_);
+}))(A);

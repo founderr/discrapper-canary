@@ -24,7 +24,7 @@ var i = n(735250),
   S = n(981631),
   C = n(921944),
   N = n(689938),
-  A = n(902569);
+  A = n(532140);
 
 function v(e) {
   let {
@@ -42,7 +42,7 @@ isSoundboardButtonDisabled: b
 analyticsLocations: G
   } = (0, E.ZP)(_.Z.SOUNDBOARD_BUTTON);
 
-  function k(e) {
+  function w(e) {
 null != D && (0, u.jW)(e, async () => {
   let {
     default: e
@@ -54,7 +54,7 @@ null != D && (0, u.jW)(e, async () => {
 });
   }
   let {
-Component: w,
+Component: k,
 play: B,
 events: {
   onMouseEnter: H,
@@ -103,11 +103,11 @@ children: t => (0, i.jsx)('div', {
       var n, i;
       null === (n = L.onMouseLeave) || void 0 === n || n.call(L, t), null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e), V();
     },
-    onContextMenu: k,
+    onContextMenu: w,
     fullWidth: !0,
     size: d.Button.Sizes.SMALL,
     ...L,
-    children: (0, i.jsx)(w, {
+    children: (0, i.jsx)(k, {
       className: a,
       size: 'sm',
       color: P ? 'white' : d.tokens.colors.INTERACTIVE_ACTIVE

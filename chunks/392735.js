@@ -1,5 +1,5 @@
-var n = t(818083);
-s.Z = (0, n.B)({
+var n = s(818083);
+t.Z = (0, n.B)({
   kind: 'user',
   id: '2022-06_auth_sessions_user_settings',
   label: 'Auth Sessions User Settings',

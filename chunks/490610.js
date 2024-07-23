@@ -13,7 +13,7 @@ var i = n(735250),
   h = n(777734),
   I = n(976757),
   m = n(981631),
-  g = n(477975);
+  g = n(266489);
 t.Z = s.memo(function(e) {
   let {
 title: t,

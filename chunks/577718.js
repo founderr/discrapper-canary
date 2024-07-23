@@ -23,8 +23,8 @@ var i = n(735250),
   A = n(30513),
   v = n(474936),
   Z = n(689938),
-  L = n(517770),
-  O = n(735233),
+  L = n(764842),
+  O = n(928874),
   R = n(741160),
   x = n(829972),
   b = n(31932),
@@ -93,15 +93,15 @@ f.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
   },
   location_stack: _
 });
-  }, G = (0, r.wj)(n) ? x : b, [k, w] = (0, u.U)(t, N.R.GUILD_HEADER_TOOLTIPS);
+  }, G = (0, r.wj)(n) ? x : b, [w, k] = (0, u.U)(t, N.R.GUILD_HEADER_TOOLTIPS);
   return (0, i.jsx)(i.Fragment, {
 children: (() => {
-  switch (k) {
+  switch (w) {
     case a.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_COACHMARK:
       return (0, i.jsx)(j, {
         renderPopout: (0, i.jsx)(p.Z, {
           guildId: s.id,
-          markAsDismissed: w
+          markAsDismissed: k
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -120,7 +120,7 @@ children: (() => {
           secondaryButtonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
           onSecondaryClick: () => M(),
           onClick: () => M(s),
-          markAsDismissed: w
+          markAsDismissed: k
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -139,7 +139,7 @@ children: (() => {
           secondaryButtonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
           onSecondaryClick: () => M(),
           onClick: () => M(s),
-          markAsDismissed: w
+          markAsDismissed: k
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -147,7 +147,7 @@ children: (() => {
       return (0, i.jsx)(j, {
         renderPopout: (0, i.jsx)(E.Z, {
           guildId: s.id,
-          markAsDismissed: w
+          markAsDismissed: k
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -156,7 +156,7 @@ children: (() => {
         renderPopout: (0, i.jsx)(d.Z, {
           onClick: () => D(s, !0),
           onSecondaryClick: () => D(s),
-          markAsDismissed: w
+          markAsDismissed: k
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -164,7 +164,7 @@ children: (() => {
       return (0, i.jsx)(j, {
         renderPopout: (0, i.jsx)(c.Z, {
           guild: s,
-          markAsDismissed: w
+          markAsDismissed: k
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -187,14 +187,14 @@ children: (() => {
           secondaryButtonCTA: Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
           onSecondaryClick: () => y(_),
           onClick: () => y(_, s),
-          markAsDismissed: w
+          markAsDismissed: k
         }),
         renderGuildHeaderDropdownButton: l
       });
     case a.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
       return (0, i.jsx)(j, {
         renderPopout: (0, i.jsx)(m.Z, {
-          markAsDismissed: w
+          markAsDismissed: k
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -205,8 +205,8 @@ children: (() => {
           header: Z.Z.Messages.ACTIVE_THREADS_UPSELL_HEADER,
           content: Z.Z.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
           buttonCTA: Z.Z.Messages.GOT_IT,
-          onClick: () => w(N.L.UNKNOWN),
-          markAsDismissed: w
+          onClick: () => k(N.L.UNKNOWN),
+          markAsDismissed: k
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -225,7 +225,7 @@ children: (() => {
           onClick: () => {
             I.Z.open(s.id, C.pNK.ROLES), I.Z.selectRole(s.getEveryoneRoleId(), Z.Z.Messages.USE_SOUNDBOARD);
           },
-          markAsDismissed: w
+          markAsDismissed: k
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -233,7 +233,7 @@ children: (() => {
       return (0, i.jsx)(j, {
         renderPopout: (0, i.jsx)(g.Z, {
           guildId: s.id,
-          markAsDismissed: w
+          markAsDismissed: k
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -241,7 +241,7 @@ children: (() => {
       return (0, i.jsx)(j, {
         renderPopout: (0, i.jsx)(h.Z, {
           guildId: s.id,
-          markAsDismissed: w
+          markAsDismissed: k
         }),
         renderGuildHeaderDropdownButton: l
       });

@@ -15,9 +15,9 @@ var a = n(120356),
   u = n(739566),
   _ = n(464891),
   E = n(83561),
-  I = n(674563),
-  m = n(689938),
-  T = n(713389);
+  m = n(674563),
+  I = n(689938),
+  T = n(549766);
 
 function h(e) {
   var t;
@@ -64,10 +64,10 @@ children: (0, i.jsx)(d.Z, {
               color: 'text-brand',
               tag: 'span',
               className: T.username,
-              children: m.Z.Messages.GUILD_AUTOMOD_USERNAME
+              children: I.Z.Messages.GUILD_AUTOMOD_USERNAME
             }),
             (0, i.jsx)(o.Z, {
-              type: I.Hb.SYSTEM_DM,
+              type: m.Hb.SYSTEM_DM,
               className: T.systemTag
             })
           ]
@@ -79,7 +79,7 @@ children: (0, i.jsx)(d.Z, {
         className: s()(T.__invalid_messageContent, {
           [T.compact]: a
         }),
-        children: m.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
+        children: I.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
           username: p.nick,
           usernameHook: C,
           guildName: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : ''

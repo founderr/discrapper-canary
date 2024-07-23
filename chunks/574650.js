@@ -11,19 +11,19 @@ var a = n(120356),
   u = n(693546),
   _ = n(305325),
   E = n(246364),
-  I = n(937111),
-  m = n(981631),
+  m = n(937111),
+  I = n(981631),
   T = n(176505),
   h = n(689938),
-  N = n(103809),
-  f = n(581611);
+  N = n(975870),
+  f = n(389397);
 t.Z = () => {
   var e, t;
   let a = (0, l.e7)([d.Z], () => d.Z.getGuildId(), []),
 p = (0, l.e7)([c.Z], () => c.Z.getGuild(a), [a]),
-C = (0, l.e7)([I.Z], () => null != a ? I.Z.getRequest(a) : null, [a]),
+C = (0, l.e7)([m.Z], () => null != a ? m.Z.getRequest(a) : null, [a]),
 g = (0, r.TH)(),
-S = (null === (e = (0, r.LX)(g.pathname, m.Z5c.CHANNEL(null == p ? void 0 : p.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+S = (null === (e = (0, r.LX)(g.pathname, I.Z5c.CHANNEL(null == p ? void 0 : p.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
   if (null == p || !p.hasVerificationGate() || S)
 return null;
   let A = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,

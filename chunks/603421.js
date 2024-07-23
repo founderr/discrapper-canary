@@ -1,6 +1,6 @@
-var n, s;
+var s, n;
 
-function r(e) {
+function l(e) {
   if (null != e) {
 if (e.hasCardError())
   return 'credit_card_information';
@@ -11,9 +11,9 @@ if (e.hasAddressError())
 }
 t.d(a, {
   Rg: function() {
-return n;
+return s;
   },
   ly: function() {
-return r;
+return l;
   }
-}), (s = n || (n = {})).SELECT_PLAN = 'select_plan', s.PAYMENT_TYPE = 'payment_type', s.PAYPAL = 'paypal', s.PAYPAL_ADDRESS = 'paypal_address', s.PAYMENT_REQUEST_INFO = 'payment_request_info', s.CREDIT_CARD_INFORMATION = 'credit_card_information', s.ADDRESS = 'address', s.REVIEW = 'review', s.CONFIRM = 'confirm', s.AWAITING_AUTHENTICATION = 'awaiting_authentication', s.VENMO = 'venmo', s.VENMO_ADDRESS = 'venmo_address';
+}), (n = s || (s = {})).SELECT_PLAN = 'select_plan', n.PAYMENT_TYPE = 'payment_type', n.PAYPAL = 'paypal', n.PAYPAL_ADDRESS = 'paypal_address', n.PAYMENT_REQUEST_INFO = 'payment_request_info', n.CREDIT_CARD_INFORMATION = 'credit_card_information', n.ADDRESS = 'address', n.REVIEW = 'review', n.CONFIRM = 'confirm', n.AWAITING_AUTHENTICATION = 'awaiting_authentication', n.VENMO = 'venmo', n.VENMO_ADDRESS = 'venmo_address';

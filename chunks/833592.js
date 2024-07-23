@@ -9,10 +9,10 @@ return h;
 return E;
   },
   jk: function() {
-return I;
+return m;
   },
   wt: function() {
-return m;
+return I;
   }
 });
 var i = n(990547),
@@ -37,7 +37,7 @@ function E() {
 type: 'RESET_NOTIFICATION_CENTER'
   });
 }
-async function I(e, t) {
+async function m(e, t) {
   if (c.Z.loading)
 return;
   await r.Z.dispatch({
@@ -76,7 +76,7 @@ null == t || t(), await r.Z.dispatch({
   }
 }
 
-function m(e) {
+function I(e) {
   null != e.local_id ? function(e) {
 r.Z.dispatch({
   type: 'NOTIFICATION_CENTER_ITEMS_LOCAL_ACK',

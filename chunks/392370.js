@@ -358,13 +358,13 @@ n,
 t,
 S,
 L
-  ]), y = R.length > 0, O = M.length > 0;
+  ]), y = R.length > 0, j = M.length > 0;
   return {
 commandResults: R,
 hasCommandResults: y,
 applicationResults: M,
-hasApplicationResults: O,
-isEmptyState: !y && !O,
+hasApplicationResults: j,
+isEmptyState: !y && !j,
 loading: T && s
   };
 }

@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(628238),
   _ = n(976853),
   E = n(977683),
-  I = n(869765),
-  m = n(695346),
+  m = n(869765),
+  I = n(695346),
   T = n(592125),
   h = n(699516),
   N = n(702346),
@@ -76,7 +76,7 @@ onClick: G,
 disableInteraction: F = !1,
 hasThread: w,
 treatSpam: V
-  } = t, H = D.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, l.e7)([I.Z], () => I.Z.getMessageByReference(H)), W = (0, l.e7)([T.Z], () => o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null), z = m.x4.useSetting(), K = m.RS.useSetting(), Q = m.NA.useSetting(), q = m.QK.useSetting(), X = (0, u.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, _.Z)(null == s ? void 0 : s.id), {
+  } = t, H = D.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, l.e7)([m.Z], () => m.Z.getMessageByReference(H)), W = (0, l.e7)([T.Z], () => o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === m.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null), z = I.x4.useSetting(), K = I.RS.useSetting(), Q = I.NA.useSetting(), q = I.QK.useSetting(), X = (0, u.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, _.Z)(null == s ? void 0 : s.id), {
 disableReactionCreates: $
   } = (0, A.Z)(s), {
 content: ee,
@@ -87,7 +87,7 @@ allowList: X,
 allowHeading: X,
 allowLinks: !0,
 previewLinkTarget: !0
-  }), en = (0, S.ZP)(o), ei = (0, l.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(p.default.castMessageIdAsChannelId(o.id))), ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W, es = !ea && void 0 === a, er = (0, M.Z)({
+  }), en = (0, S.ZP)(o), ei = (0, l.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(p.default.castMessageIdAsChannelId(o.id))), ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === m.Y.LOADED && null != W, es = !ea && void 0 === a, er = (0, M.Z)({
 message: o,
 channel: s,
 enabled: es

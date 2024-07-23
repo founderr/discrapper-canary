@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return O;
+return j;
   }
 }), t(47120);
 var i = t(735250),
@@ -29,19 +29,19 @@ var i = t(735250),
   S = t(314734),
   L = t(981631),
   g = t(689938),
-  R = t(933693);
+  R = t(429032);
 let M = Array(6).fill(0).map((e, n) => n),
   y = [, , , ].fill(0).map((e, n) => n);
 
-function O(e) {
-  return e.enableGlobalSearch ? (0, i.jsx)(j, {
+function j(e) {
+  return e.enableGlobalSearch ? (0, i.jsx)(O, {
 ...e
   }) : (0, i.jsx)(b, {
 ...e
   });
 }
 
-function j(e) {
+function O(e) {
   let {
 channel: n,
 query: t,
@@ -180,8 +180,8 @@ m
   ]), [N, v] = l.useState(!1), I = null !== (n = (0, o.Z)(N)) && void 0 !== n ? n : N, T = l.useCallback(() => v(e => !e), []), M = (null !== (t = (0, o.Z)(s)) && void 0 !== t ? t : s)[0] !== s[0], y = N && !M;
   l.useLayoutEffect(() => v(!1), [M]);
   let {
-ref: O,
-isTransitioning: j,
+ref: j,
+isTransitioning: O,
 onTransitionEnd: b
   } = (0, C.Z)({
 key: s,
@@ -200,7 +200,7 @@ r.length,
 I,
 N
   ]);
-  let Z = y || j,
+  let Z = y || O,
 H = y ? x.Z.buttonTypes.VIEW_LESS : x.Z.buttonTypes.VIEW_MORE,
 U = Z ? r : f;
   return (0, i.jsxs)('div', {
@@ -212,7 +212,7 @@ children: [
   }),
   (0, i.jsx)('div', {
     className: R.sectionContentContainer,
-    ref: O,
+    ref: j,
     onTransitionEnd: b,
     children: U.map((e, n) => {
       let {

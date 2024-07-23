@@ -35,8 +35,8 @@ var i = n(735250),
   j = n(451478),
   U = n(378720),
   G = n(285952),
-  k = n(626135),
-  w = n(572004),
+  w = n(626135),
+  k = n(572004),
   B = n(630388),
   H = n(937615),
   V = n(73346),
@@ -57,7 +57,7 @@ var i = n(735250),
   es = n(981631),
   ea = n(186901),
   er = n(689938),
-  el = n(261343);
+  el = n(398479);
 
 function eo(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -120,7 +120,7 @@ let {
     loadDate: t
   }
 } = this.props;
-null != t && k.default.track(es.rMx.STORE_LISTING_EXITED, {
+null != t && w.default.track(es.rMx.STORE_LISTING_EXITED, {
   load_id: e,
   duration_ms: Date.now() - t
 });
@@ -139,7 +139,7 @@ let s = t.carouselItems.reduce((e, t) => (null != t.assetId ? e.images++ : e.vid
   images: 0,
   videos: 0
 });
-k.default.track(es.rMx.STORE_LISTING_VIEWED, {
+w.default.track(es.rMx.STORE_LISTING_VIEWED, {
   ...this._extraAnalyticsProperties,
   load_id: i.loadId,
   has_description: null != t.description && t.description.length > 0,
@@ -483,7 +483,7 @@ super(...e), eo(this, 'showCopyLinkTextTimeout', new o.V7()), eo(this, '_tracked
   let {
     sku: i
   } = this.props;
-  null != i && k.default.track(es.rMx.STORE_LISTING_MEDIA_SCROLLED, {
+  null != i && w.default.track(es.rMx.STORE_LISTING_MEDIA_SCROLLED, {
     ...(0, N.Z)(i),
     card_index: n,
     card_type: e.type === es.s9s.IMG ? 'image' : 'video'
@@ -493,7 +493,7 @@ super(...e), eo(this, 'showCopyLinkTextTimeout', new o.V7()), eo(this, '_tracked
   let {
     location: t
   } = this.props;
-  (0, w.JG)((e = t.pathname, ''.concat(location.protocol, '//').concat(location.host).concat(e))), this.setState({
+  (0, k.JG)((e = t.pathname, ''.concat(location.protocol, '//').concat(location.host).concat(e))), this.setState({
     showLinkCopied: !0
   }, () => {
     this.showCopyLinkTextTimeout.start(1500, () => {
@@ -512,7 +512,7 @@ super(...e), eo(this, 'showCopyLinkTextTimeout', new o.V7()), eo(this, '_tracked
       default: s
     } = await Promise.all([
       n.e('7654'),
-      n.e('21026')
+      n.e('66633')
     ]).then(n.bind(n, 560114));
     return n => (0, i.jsx)(s, {
       ...n,

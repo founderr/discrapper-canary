@@ -15,15 +15,15 @@ var a = n(120356),
   u = n(739566),
   _ = n(779125),
   E = n(599706),
-  I = n(703656),
-  m = n(592125),
+  m = n(703656),
+  I = n(592125),
   T = n(430824),
   h = n(594174),
   N = n(938475),
   f = n(5192),
   p = n(981631),
   C = n(689938),
-  g = n(373841);
+  g = n(745571);
 
 function S(e) {
   var t, n, a, S, A, R, x, O, M, v;
@@ -40,7 +40,7 @@ let {
   rawName: t
 } = e;
 return 'channel_id' === t;
-  })) || void 0 === S ? void 0 : S.rawValue, D = (0, r.e7)([T.Z], () => T.Z.getGuild(P)), j = (0, r.e7)([m.Z], () => m.Z.getChannel(b)), U = (0, r.e7)([h.default], () => h.default.getCurrentUser()), y = (0, r.e7)([], () => L.author.id === (null == U ? void 0 : U.id)), B = null === (x = Z.recipients) || void 0 === x ? void 0 : x.find(e => e !== L.author.id), k = (0, r.e7)([h.default], () => null != B ? h.default.getUser(B) : null), G = (0, u.ZP)(L), F = (0, f._T)(Z.getGuildId(), Z.id, k), w = (0, r.Wu)([N.ZP], () => null != j ? N.ZP.getVoiceStatesForChannel(j) : [], [j]), V = w.some(e => e.user.id === (null == U ? void 0 : U.id)), H = null === (v = L.embeds[0]) || void 0 === v ? void 0 : null === (M = v.fields) || void 0 === M ? void 0 : null === (O = M.find(e => {
+  })) || void 0 === S ? void 0 : S.rawValue, D = (0, r.e7)([T.Z], () => T.Z.getGuild(P)), j = (0, r.e7)([I.Z], () => I.Z.getChannel(b)), U = (0, r.e7)([h.default], () => h.default.getCurrentUser()), y = (0, r.e7)([], () => L.author.id === (null == U ? void 0 : U.id)), B = null === (x = Z.recipients) || void 0 === x ? void 0 : x.find(e => e !== L.author.id), k = (0, r.e7)([h.default], () => null != B ? h.default.getUser(B) : null), G = (0, u.ZP)(L), F = (0, f._T)(Z.getGuildId(), Z.id, k), w = (0, r.Wu)([N.ZP], () => null != j ? N.ZP.getVoiceStatesForChannel(j) : [], [j]), V = w.some(e => e.user.id === (null == U ? void 0 : U.id)), H = null === (v = L.embeds[0]) || void 0 === v ? void 0 : null === (M = v.fields) || void 0 === M ? void 0 : null === (O = M.find(e => {
 let {
   rawName: t
 } = e;
@@ -108,7 +108,7 @@ children: [
       (0, i.jsxs)(l.Button, {
         color: l.Button.Colors.BRAND,
         onClick: () => {
-          null != b && null != P && ((0, I.uL)(p.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
+          null != b && null != P && ((0, m.uL)(p.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
         },
         className: g.button,
         innerClassName: g.buttonInner,

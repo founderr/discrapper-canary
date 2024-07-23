@@ -15,7 +15,7 @@ var s = n(735250),
   R = n(881100),
   C = n(981631),
   g = n(689938),
-  p = n(323367);
+  p = n(757355);
 let A = e => e ? g.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : g.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE,
   m = e => {
 let {
@@ -100,7 +100,7 @@ isSubscriberNitroHome: n = !1
 styles: p
   }), E = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), {
 analyticsLocations: g
-  } = (0, _.ZP)(), f = (0, T._f)(), h = [
+  } = (0, _.ZP)(), f = (0, T._f)(), S = [
 u.emoji,
 u.streaming,
 u.upload,
@@ -127,7 +127,7 @@ children: [
     className: i()(p.perkCardContainer, {
       [p.perkCardContainerExpanded]: r
     }),
-    children: h.map(e => null != e && (0, s.jsx)(N, {
+    children: S.map(e => null != e && (0, s.jsx)(N, {
       ...e
     }, e.title))
   }),

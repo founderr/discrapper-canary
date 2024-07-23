@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(442837),
   _ = n(481060),
   E = n(607070),
-  I = n(385499),
-  m = n(313889),
+  m = n(385499),
+  I = n(313889),
   T = n(825829),
   h = n(226192),
   N = n(36459),
@@ -40,7 +40,7 @@ var i = n(735250),
   y = n(674563),
   B = n(590433),
   k = n(689938),
-  G = n(117414);
+  G = n(735612);
 
 function F(e, t) {
   let {
@@ -112,21 +112,21 @@ children: t
 
 function Y(e, t) {
   switch (e) {
-case m.d.DELETE_USER_MESSAGE:
+case I.d.DELETE_USER_MESSAGE:
   return (0, i.jsx)(_.TrashIcon, {
     size: 'xs',
     color: 'currentColor',
     className: G.alertActionIcon,
     ...t
   });
-case m.d.SET_COMPLETED:
+case I.d.SET_COMPLETED:
   return (0, i.jsx)(_.CheckmarkLargeIcon, {
     size: 'xs',
     color: 'currentColor',
     className: r()(G.alertActionIcon, G.alertActionSetCompletedIcon),
     ...t
   });
-case m.d.SUBMIT_FEEDBACK:
+case I.d.SUBMIT_FEEDBACK:
   return (0, i.jsx)(_.FlagIcon, {
     size: 'xs',
     color: 'currentColor',
@@ -154,17 +154,17 @@ let s = function(e, t, n) {
     r = ''.concat(a, ' ').concat(s.fromNow());
   try {
     switch (parseInt(e.actionType)) {
-      case m.d.DELETE_USER_MESSAGE:
+      case I.d.DELETE_USER_MESSAGE:
         return k.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_DELETE_MESSAGE.format({
           userName: a,
           timestamp: s.fromNow()
         });
-      case m.d.SET_COMPLETED:
+      case I.d.SET_COMPLETED:
         return k.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SET_COMPLETED.format({
           userName: a,
           timestamp: s.fromNow()
         });
-      case m.d.SUBMIT_FEEDBACK:
+      case I.d.SUBMIT_FEEDBACK:
         return k.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SUBMIT_FEEDBACK.format({
           userName: a,
           timestamp: s.fromNow()
@@ -218,8 +218,8 @@ u = (0, L.CF)({
   ...o
 }, c),
 E = g.default.getUser(l),
-I = F(n, a),
-m = w(a, E);
+m = F(n, a),
+I = w(a, E);
   if (null != E) {
 let e = (0, O.ij)(E, a),
   i = (0, L.CF)({
@@ -228,8 +228,8 @@ let e = (0, O.ij)(E, a),
     author: e,
     guildId: null == a ? void 0 : a.guild_id,
     compact: r,
-    ...I
-  }, m);
+    ...m
+  }, I);
 t = () => i;
   }
   return (0, i.jsx)(_.Text, {
@@ -301,11 +301,11 @@ if (null != J && null != Y)
 Y,
 J
   ]), ec = a.useCallback(() => {
-(0, N.Xx)(s.id, l, m.d.DELETE_USER_MESSAGE);
+(0, N.Xx)(s.id, l, I.d.DELETE_USER_MESSAGE);
   }, [
 l,
 s.id
-  ]), ed = (0, B.L9)(Number($)), eu = null != ee, e_ = j && null != J && (null == et || !et.actions.hasOwnProperty(m.d.DELETE_USER_MESSAGE));
+  ]), ed = (0, B.L9)(Number($)), eu = null != ee, e_ = j && null != J && (null == et || !et.actions.hasOwnProperty(I.d.DELETE_USER_MESSAGE));
   return (0, i.jsx)('div', {
 onMouseEnter: p,
 onMouseLeave: g,
@@ -339,7 +339,7 @@ children: (0, i.jsx)(S.Z, {
               className: G.username,
               children: k.Z.Messages.GUILD_AUTOMOD_USERNAME
             }),
-            (0, i.jsx)(I.Z, {
+            (0, i.jsx)(m.Z, {
               type: y.Hb.SYSTEM_DM,
               className: G.systemTag
             }),

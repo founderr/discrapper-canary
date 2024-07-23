@@ -1,20 +1,20 @@
-t.d(s, {
+s.d(t, {
   a: function() {
 return l;
   }
 });
-var n = t(442837),
-  a = t(663389),
-  i = t(128277),
-  r = t(394644),
-  o = t(295545);
+var n = s(442837),
+  a = s(663389),
+  i = s(128277),
+  r = s(394644),
+  o = s(295545);
 
-function l(e, s) {
-  var t;
+function l(e, t) {
+  var s;
   let l = (0, o.eA)({
   location: 'settingsTabs'
 }),
-c = (0, r.Gj)(s),
+c = (0, r.Gj)(t),
 d = (0, i.Z7)(),
 _ = (0, n.e7)([a.Z], () => a.Z.getSubsection()),
 E = e.filter(e => null == e.predicate || e.predicate());
@@ -32,7 +32,7 @@ if (null != d && d.length > 0 && null == _) {
     };
 }
   }
-  let u = null !== (t = E.find(e => null != e && e.setting === _)) && void 0 !== t ? t : E[0];
+  let u = null !== (s = E.find(e => null != e && e.setting === _)) && void 0 !== s ? s : E[0];
   return {
 viewableTabs: E,
 selectedTab: u

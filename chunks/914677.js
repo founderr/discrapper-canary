@@ -4,7 +4,7 @@ var s = n(735250),
   r = n(780384),
   i = n(410030),
   l = n(119269),
-  o = n(649982);
+  o = n(878777);
 let c = 'url(#gradient)',
   d = (e, t) => {
 switch (e) {
@@ -54,7 +54,7 @@ return () => clearTimeout(e);
 m = (0, r.ap)(A),
 N = _(I),
 f = d(I, m),
-h = u(m, I);
+S = u(m, I);
   return (0, s.jsxs)('div', {
 className: o.circleContainer,
 children: [
@@ -73,7 +73,7 @@ children: [
         strokeOpacity: f
       }),
       (0, s.jsx)('circle', {
-        stroke: h,
+        stroke: S,
         strokeWidth: T,
         strokeLinecap: 'round',
         strokeDasharray: ''.concat(C, ' ').concat(C),

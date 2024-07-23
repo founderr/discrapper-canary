@@ -17,7 +17,7 @@ var n = s(735250),
   T = s(801461),
   O = s(228168),
   N = s(689938),
-  h = s(850114),
+  h = s(740080),
   f = s(733469);
 let M = i.forwardRef(function(e, t) {
   let {
@@ -65,7 +65,7 @@ username: Z,
 globalName: U
   } = L, G = i.useRef(null), b = i.useRef(null), j = i.useMemo(() => s.merge({
 discriminator: '0000'
-  }), [s]), [D, W] = (0, l.useSpring)(() => ({
+  }), [s]), [D, W] = (0, u.useSpring)(() => ({
 opacity: 0,
 y: 5
   }));

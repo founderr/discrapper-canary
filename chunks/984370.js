@@ -15,20 +15,20 @@ var a = n(120356),
   u = n(141321),
   _ = n(208450),
   E = n(594174),
-  I = n(358085),
-  m = n(998502),
+  m = n(358085),
+  I = n(998502),
   T = n(665149),
   h = n(300986),
   N = n(314451),
   f = n(35583),
   p = n(981631),
   C = n(176505),
-  g = n(139715);
+  g = n(659119);
 async function S() {
-  if ((0, I.isMac)() && I.isPlatformEmbedded) {
+  if ((0, m.isMac)() && m.isPlatformEmbedded) {
 var e, t, n;
 let i = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e ? void 0 : e.call(t))) && void 0 !== n ? n : 'Maximize';
-'Minimize' === i ? m.ZP.minimize() : 'Maximize' === i && m.ZP.maximize();
+'Minimize' === i ? I.ZP.minimize() : 'Maximize' === i && I.ZP.maximize();
   }
 }
 
@@ -40,8 +40,8 @@ channelId: a,
 guildId: s,
 innerClassname: o,
 transparent: c = !1,
-toolbar: I,
-mobileToolbar: m,
+toolbar: m,
+mobileToolbar: I,
 'aria-label': p,
 'aria-labelledby': C,
 scrollable: A,
@@ -53,12 +53,12 @@ showDivider: O
 className: n,
 innerClassName: o,
 toolbar: function() {
-  if (null == I)
+  if (null == m)
     return null;
   let e = null != a && !x;
-  return r.tq ? m : (0, i.jsxs)(i.Fragment, {
+  return r.tq ? I : (0, i.jsxs)(i.Fragment, {
     children: [
-      I,
+      m,
       e ? (0, i.jsx)(_.Z, {
         className: g.search
       }, null != s ? s : a) : null,

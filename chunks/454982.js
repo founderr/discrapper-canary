@@ -1,35 +1,35 @@
-t(47120);
-var n = t(735250),
-  a = t(470079),
-  i = t(481060),
-  r = t(484614),
-  o = t(430492),
-  l = t(153124),
-  c = t(518638),
-  d = t(689938),
-  _ = t(925457);
-s.Z = function(e) {
+s(47120);
+var n = s(735250),
+  a = s(470079),
+  i = s(481060),
+  r = s(484614),
+  o = s(430492),
+  l = s(153124),
+  c = s(518638),
+  d = s(689938),
+  _ = s(287420);
+t.Z = function(e) {
   let {
-onClose: s,
-onClaim: t,
+onClose: t,
+onClaim: s,
 code: E,
 outboundPromotion: u,
 transitionState: T
   } = e, [I, S] = a.useState(null), N = (0, l.Dt)();
   return a.useEffect(() => {
-null == E && (0, c.A2)(u.id).then(e => t(e)).catch(e => {
-  var s;
-  return S(null == e ? void 0 : null === (s = e.body) || void 0 === s ? void 0 : s.code);
+null == E && (0, c.A2)(u.id).then(e => s(e)).catch(e => {
+  var t;
+  return S(null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code);
 });
   }, [
 E,
 u.id,
-t
+s
   ]), (0, n.jsx)(i.ModalRoot, {
 transitionState: T,
 'aria-labelledby': N,
 children: null != I ? (0, n.jsx)(o.L1, {
-  onClose: s,
+  onClose: t,
   errorCode: I
 }) : null == E ? (0, n.jsx)(i.ModalContent, {
   children: (0, n.jsx)(i.Spinner, {
@@ -92,7 +92,7 @@ children: null != I ? (0, n.jsx)(o.L1, {
           children: d.Z.Messages.REDEEM
         }),
         (0, n.jsx)(i.Button, {
-          onClick: s,
+          onClick: t,
           look: i.Button.Looks.LINK,
           color: _.maybeLaterButton,
           children: d.Z.Messages.MAYBE_LATER

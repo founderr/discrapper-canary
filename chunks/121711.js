@@ -21,7 +21,7 @@ var i = n(735250),
   C = n(452081),
   N = n(981631),
   A = n(689938),
-  v = n(852595);
+  v = n(296561);
 t.Z = function(e) {
   let {} = e, t = (0, T.Z)(d.Z.QUEST_HOME_PAGE), {
 tabs: Z,

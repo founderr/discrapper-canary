@@ -1,23 +1,23 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return r;
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(481060),
-  i = t(493052);
+var n = s(735250);
+s(470079);
+var a = s(481060),
+  i = s(520452);
 
 function r(e) {
   let {
-children: s,
-...t
+children: t,
+...s
   } = e;
   return (0, n.jsx)(a.Button, {
-...t,
+...s,
 size: a.Button.Sizes.SMALL,
 color: a.Button.Colors.BRAND_INVERTED,
 className: i.button,
-children: s
+children: t
   });
 }

@@ -1,26 +1,26 @@
-var n = t(735250);
-t(470079);
-var a = t(120356),
-  i = t.n(a),
-  r = t(399606),
-  o = t(481060),
-  l = t(565138),
-  c = t(623624),
-  d = t(678558),
-  _ = t(430824),
-  E = t(709586),
-  u = t(267642),
-  T = t(981631),
-  I = t(689938),
-  S = t(660847);
-s.Z = function(e) {
+var n = s(735250);
+s(470079);
+var a = s(120356),
+  i = s.n(a),
+  r = s(399606),
+  o = s(481060),
+  l = s(565138),
+  c = s(623624),
+  d = s(678558),
+  _ = s(430824),
+  E = s(709586),
+  u = s(267642),
+  T = s(981631),
+  I = s(689938),
+  S = s(660847);
+t.Z = function(e) {
   let {
-className: s,
-guildId: t,
+className: t,
+guildId: s,
 boostingVariant: a
-  } = e, N = (0, r.e7)([_.Z], () => _.Z.getGuild(t), [t]);
+  } = e, N = (0, r.e7)([_.Z], () => _.Z.getGuild(s), [s]);
   return null == N ? (0, n.jsx)('div', {
-className: i()(s, S.guildContainer),
+className: i()(t, S.guildContainer),
 children: (0, n.jsx)('div', {
   className: S.guildInfoContainer,
   children: (0, n.jsx)(o.Text, {
@@ -29,7 +29,7 @@ children: (0, n.jsx)('div', {
   })
 })
   }) : (0, n.jsxs)('div', {
-className: i()(s, S.guildContainer),
+className: i()(t, S.guildContainer),
 children: [
   (0, n.jsx)(l.Z, {
     className: S.__invalid_guildIcon,

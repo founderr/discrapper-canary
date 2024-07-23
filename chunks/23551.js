@@ -1,24 +1,24 @@
-var n = t(735250);
-t(470079);
-var a = t(120356),
-  i = t.n(a),
-  r = t(780384),
-  o = t(481060),
-  l = t(410030),
-  c = t(726542),
-  d = t(122021),
-  _ = t(231757),
-  E = t(626135),
-  u = t(981631),
-  T = t(772322);
-s.Z = e => {
+var n = s(735250);
+s(470079);
+var a = s(120356),
+  i = s.n(a),
+  r = s(780384),
+  o = s(481060),
+  l = s(410030),
+  c = s(726542),
+  d = s(122021),
+  _ = s(231757),
+  E = s(626135),
+  u = s(981631),
+  T = s(157301);
+t.Z = e => {
   let {
-disabled: s = !1,
-type: t,
+disabled: t = !1,
+type: s,
 className: a,
 innerClassName: I,
 onConnect: S
-  } = e, N = (0, l.ZP)(), C = c.Z.get((0, d.rR)(t));
+  } = e, N = (0, l.ZP)(), C = c.Z.get((0, d.rR)(s));
   return (0, n.jsx)(o.Tooltip, {
 text: C.name,
 children: e => {
@@ -34,21 +34,21 @@ children: e => {
         onMouseLeave: d,
         className: i()(T.inner, I),
         type: 'button',
-        disabled: s,
+        disabled: t,
         style: {
           backgroundImage: 'url(\''.concat((0, r.wj)(N) ? C.icon.darkSVG : C.icon.lightSVG, '\')')
         },
         onClick: null != S ? S : () => function(e) {
-          let s = c.Z.get(e);
+          let t = c.Z.get(e);
           (0, _.Z)({
-            platformType: s.type,
+            platformType: t.type,
             location: 'Friends List'
           }), E.default.track(u.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
             current_step: 'desktop oauth',
-            platform_type: s.type
+            platform_type: t.type
           });
-        }(t),
+        }(s),
         'aria-label': C.name
       })
     })

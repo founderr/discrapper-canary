@@ -27,7 +27,7 @@ var i = n(120356),
   l = n(626135),
   u = n(981631),
   c = n(689938),
-  d = n(581611);
+  d = n(389397);
 let _ = Object.freeze({
   DEFAULT: d.colorDefault,
   NEUTRAL: d.colorNeutral,

@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(869765),
   _ = n(592125),
   E = n(496675),
-  I = n(630388),
-  m = n(709054),
+  m = n(630388),
+  I = n(709054),
   T = n(900164),
   h = n(739566),
   N = n(492593),
@@ -51,7 +51,7 @@ allowList: w || V,
 allowHeading: w || V,
 allowLinks: !0,
 previewLinkTarget: !0
-  }), W = a.type === M.uaV.REPLY ? a.messageReference : void 0, z = (0, o.e7)([u.Z], () => u.Z.getMessageByReference(W)), K = (0, l.JA)(a.id), Q = (0, h.ZP)(a), q = (0, o.e7)([_.Z], () => a.hasFlag(M.iLy.HAS_THREAD) && _.Z.getChannel(m.default.castMessageIdAsChannelId(a.id))), X = (0, c.p9)({
+  }), W = a.type === M.uaV.REPLY ? a.messageReference : void 0, z = (0, o.e7)([u.Z], () => u.Z.getMessageByReference(W)), K = (0, l.JA)(a.id), Q = (0, h.ZP)(a), q = (0, o.e7)([_.Z], () => a.hasFlag(M.iLy.HAS_THREAD) && _.Z.getChannel(I.default.castMessageIdAsChannelId(a.id))), X = (0, c.p9)({
 guildId: D.guild_id,
 roleId: Q.iconRoleId
   }), J = (0, o.e7)([E.Z], () => E.Z.can(M.Plq.CREATE_INSTANT_INVITE, D)), $ = (0, C.Z)({
@@ -66,7 +66,7 @@ et = (0, f.Gx)(a);
   return (0, i.jsx)(N.Z, {
 compact: s,
 className: r()(L, {
-  [v.ephemeral]: (0, I.yE)(a.flags, M.iLy.EPHEMERAL),
+  [v.ephemeral]: (0, m.yE)(a.flags, M.iLy.EPHEMERAL),
   [v.disableInteraction]: F
 }),
 disableInteraction: F,

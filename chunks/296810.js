@@ -1,22 +1,22 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return _;
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(120356),
-  i = t.n(a),
-  r = t(873546),
-  o = t(481060),
-  l = t(993413),
-  c = t(689938),
-  d = t(265503);
+var n = s(735250);
+s(470079);
+var a = s(120356),
+  i = s.n(a),
+  r = s(873546),
+  o = s(481060),
+  l = s(993413),
+  c = s(689938),
+  d = s(308152);
 
 function _(e) {
   let {
-children: s,
-className: t,
+children: t,
+className: s,
 layoutClassName: a,
 profilePreview: _,
 previewTitle: E
@@ -26,7 +26,7 @@ className: d.preview,
 children: _
   });
   return (0, n.jsx)('div', {
-className: t,
+className: s,
 children: (0, n.jsxs)(o.FormSection, {
   className: d.profileCustomizationSection,
   children: [
@@ -34,7 +34,7 @@ children: (0, n.jsxs)(o.FormSection, {
     (0, n.jsxs)('div', {
       className: i()(d.baseLayout, a),
       children: [
-        s,
+        t,
         !r.tq && u()
       ]
     })

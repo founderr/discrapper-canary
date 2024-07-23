@@ -15,8 +15,8 @@ var a = n(512722),
   u = n(823379),
   _ = n(358595),
   E = n(981631),
-  I = n(689938),
-  m = n(29062);
+  m = n(689938),
+  I = n(29062);
 
 function T(e) {
   let t, {
@@ -44,13 +44,13 @@ let e = d.default.getCurrentUser();
 g && null != e && t.push(e);
   }
   let S = C.name;
-  (null == S || '' === S) && (S = t.length > 0 ? t.filter(u.lm).map(e => e.username).join(', ') : I.Z.Messages.UNNAMED);
+  (null == S || '' === S) && (S = t.length > 0 ? t.filter(u.lm).map(e => e.username).join(', ') : m.Z.Messages.UNNAMED);
   let A = g ? h : N,
-R = I.Z.Messages.JOIN_GUILD,
+R = m.Z.Messages.JOIN_GUILD,
 x = l.Z.Button.Colors.GREEN;
-  g && (R = I.Z.Messages.JOINED_GUILD, x = l.Z.Button.Colors.PRIMARY);
-  let O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
-  return f && (O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, i.jsxs)(l.Z, {
+  g && (R = m.Z.Messages.JOINED_GUILD, x = l.Z.Button.Colors.PRIMARY);
+  let O = m.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
+  return f && (O = m.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, i.jsxs)(l.Z, {
 children: [
   (0, i.jsx)(l.Z.Header, {
     text: O
@@ -58,7 +58,7 @@ children: [
   (0, i.jsxs)(l.Z.Body, {
     children: [
       (0, i.jsxs)('div', {
-        className: m.headerLine,
+        className: I.headerLine,
         children: [
           (0, i.jsx)(l.Z.Icon, {
             channel: C,

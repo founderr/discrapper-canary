@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return k;
+return w;
   }
 }), n(47120);
 var i, s, a = n(735250),
@@ -36,16 +36,16 @@ var i, s, a = n(735250),
   y = n(981631),
   j = n(765305),
   U = n(689938),
-  G = n(366846);
+  G = n(167555);
 (s = i || (i = {}))[s.STAGE = 0] = 'STAGE', s[s.EVENT_EXTERNAL = 1] = 'EVENT_EXTERNAL', s[s.EVENT_VOICE = 2] = 'EVENT_VOICE', s[s.STUDY_ROOM = 3] = 'STUDY_ROOM';
 
-function k(e) {
+function w(e) {
   let {
 guild: t,
 isStudyRoomNotice: n = !1
   } = e, i = (0, f.y)(t.id), s = (0, S.k5)(t.id), l = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
-isStageNoticeHidden: k,
-isEventNoticeHidden: w
+isStageNoticeHidden: w,
+isEventNoticeHidden: k
   } = (0, c.cj)([p.Z], () => ({
 isStageNoticeHidden: p.Z.isLiveChannelNoticeHidden({
   stageId: null == l ? void 0 : l.id
@@ -275,8 +275,8 @@ myRole: Y,
 eventCreator: z,
 speakers: H,
 listenerCount: V,
-isEventNoticeHidden: w,
-isStageNoticeHidden: k,
+isEventNoticeHidden: k,
+isStageNoticeHidden: w,
 isStudyRoomNotice: n
   }), [
 s,
@@ -287,8 +287,8 @@ Y,
 z,
 H,
 V,
-w,
 k,
+w,
 n
   ]);
   return null == K ? null : (0, a.jsxs)('div', {

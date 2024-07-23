@@ -43,7 +43,7 @@ super(...e), E(this, 'handleInvite', () => {
       default: t
     } = await Promise.all([
       n.e('7654'),
-      n.e('21026')
+      n.e('66633')
     ]).then(n.bind(n, 560114));
     return n => (0, i.jsx)(t, {
       ...n,

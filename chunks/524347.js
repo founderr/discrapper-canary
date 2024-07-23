@@ -5,11 +5,11 @@ var i, a, s, r, l = n(913527),
   u = n(570140),
   _ = n(594190),
   E = n(569545),
-  I = n(314897),
-  m = n(70956),
+  m = n(314897),
+  I = n(70956),
   T = n(960359),
   h = n(853197),
-  N = n(702512);
+  N = n(288836);
 let f = null,
   p = null,
   C = {},
@@ -31,7 +31,7 @@ let {
   gameTitle: s
 } = R;
 if (!(null == t || null == s || a || null == i || null == n || A.isStarted()))
-  e ? (0, T.m0)(t, n, i.pid) : A.start(1 * m.Z.Millis.MINUTE, () => {
+  e ? (0, T.m0)(t, n, i.pid) : A.start(1 * I.Z.Millis.MINUTE, () => {
     (0, T.m0)(t, n, i.pid);
   });
   },
@@ -162,7 +162,7 @@ let {
   streamType: n,
   guildId: i,
   channelId: a,
-  ownerId: I.default.getId()
+  ownerId: m.default.getId()
 });
 if (null == s)
   return;

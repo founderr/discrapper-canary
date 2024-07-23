@@ -51,7 +51,7 @@ onChannelContextMenu: e => {
   null != u.options.channel && null != i && (0, a.jW)(e, async () => {
     let {
       default: e
-    } = await n.e('51529').then(n.bind(n, 911053));
+    } = await n.e('51529').then(n.bind(n, 228620));
     return t => (0, s.jsx)(e, {
       ...t,
       channel: u.options.channel
@@ -68,7 +68,7 @@ onTargetContextMenu: e => {
         return (0, a.jW)(e, async () => {
           let {
             default: e
-          } = await n.e('51529').then(n.bind(n, 911053));
+          } = await n.e('51529').then(n.bind(n, 228620));
           return t => (0, s.jsx)(e, {
             ...t,
             channel: o

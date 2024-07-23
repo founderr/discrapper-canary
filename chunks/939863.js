@@ -1,35 +1,35 @@
-n.d(t, {
+t.d(e, {
   Z: function() {
-return d;
+return u;
   }
 });
-var i = n(735250);
-n(470079);
-var a = n(120356),
-  s = n.n(a),
-  l = n(689938),
-  r = n(739720),
-  o = n(296507),
-  c = n(866402);
+var i = t(735250);
+t(470079);
+var s = t(120356),
+  l = t.n(s),
+  a = t(689938),
+  r = t(805881),
+  c = t(296507),
+  o = t(866402);
 
-function d(e) {
+function u(n) {
   let {
-className: t,
-children: n
-  } = e;
+className: e,
+children: t
+  } = n;
   return (0, i.jsxs)('div', {
-className: s()(r.container, t),
+className: l()(r.container, e),
 children: [
   (0, i.jsx)('img', {
-    alt: l.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
-    src: c,
-    className: s()(r.sparkleIcon, r.sparkleBottom)
-  }),
-  n,
-  (0, i.jsx)('img', {
-    alt: l.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+    alt: a.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
     src: o,
-    className: s()(r.sparkleIcon, r.sparkleTop)
+    className: l()(r.sparkleIcon, r.sparkleBottom)
+  }),
+  t,
+  (0, i.jsx)('img', {
+    alt: a.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+    src: c,
+    className: l()(r.sparkleIcon, r.sparkleTop)
   })
 ]
   });

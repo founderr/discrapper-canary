@@ -10,9 +10,9 @@ var i = n(735250),
   u = n(35818),
   _ = n(665149),
   E = n(689938),
-  I = n(139715);
+  m = n(659119);
 
-function m(e, t, n) {
+function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -39,15 +39,15 @@ switch (this.props.mode) {
     return (0, i.jsx)(_.JO, {
       hideOnClick: !1,
       tooltip: E.Z.Messages.UPDATE_AVAILABLE,
-      foreground: I.downloadArrow,
-      background: I.cloud,
+      foreground: m.downloadArrow,
+      background: m.cloud,
       icon: r.DownloadIcon
     });
   case 'UPDATE_MANUALLY':
   case 'UPDATE_DOWNLOADED':
     return (0, i.jsx)(_.JO, {
       tooltip: E.Z.Messages.UPDATE_DOWNLOADED,
-      foreground: I.updateIconForeground,
+      foreground: m.updateIconForeground,
       onClick: this.handleInstallDownload,
       icon: r.DownloadIcon
     });
@@ -56,10 +56,10 @@ switch (this.props.mode) {
 }
   }
   constructor(...e) {
-super(...e), m(this, 'state', {
+super(...e), I(this, 'state', {
   memoizedMode: this.props.mode,
   clicked: !1
-}), m(this, 'handleInstallDownload', () => {
+}), I(this, 'handleInstallDownload', () => {
   d.Z.isConnected() ? l.Z.show({
     title: E.Z.Messages.UPDATE_DURING_CALL_TITLE,
     body: E.Z.Messages.UPDATE_DURING_CALL_BODY,
@@ -67,7 +67,7 @@ super(...e), m(this, 'state', {
     cancelText: E.Z.Messages.CANCEL,
     confirmText: E.Z.Messages.UPDATE_DURING_CALL_CONTINUE
   }) : this.doUpdate();
-}), m(this, 'doUpdate', () => {
+}), I(this, 'doUpdate', () => {
   !this.state.clicked && (this.setState({
     clicked: !0
   }), (0, u.Q)());

@@ -1,23 +1,23 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return E;
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(120356),
-  i = t.n(a),
-  r = t(481060),
-  o = t(654904),
-  l = t(993413),
-  c = t(486324),
-  d = t(689938),
-  _ = t(607058);
+var n = s(735250);
+s(470079);
+var a = s(120356),
+  i = s.n(a),
+  r = s(481060),
+  o = s(654904),
+  l = s(993413),
+  c = s(486324),
+  d = s(689938),
+  _ = s(949985);
 
 function E(e) {
   let {
-showRemoveBannerButton: s,
-errors: t,
+showRemoveBannerButton: t,
+errors: s,
 onBannerChange: a,
 guildId: E,
 className: u,
@@ -31,7 +31,7 @@ withHighlight: C = !1
 className: u,
 title: d.Z.Messages.USER_SETTINGS_PROFILE_BANNER,
 showPremiumIcon: I,
-errors: t,
+errors: s,
 disabled: T,
 forcedDivider: N,
 children: (0, n.jsxs)('div', {
@@ -45,7 +45,7 @@ children: (0, n.jsxs)('div', {
       onClick: () => (0, o.$r)(c.pC.BANNER, E, S, void 0),
       children: d.Z.Messages.CHANGE_BANNER
     }),
-    s && (0, n.jsx)(r.Button, {
+    t && (0, n.jsx)(r.Button, {
       className: _.removeButton,
       color: r.Button.Colors.PRIMARY,
       look: r.Button.Looks.LINK,

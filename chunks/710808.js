@@ -1,40 +1,40 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return O;
   }
-}), t(47120);
-var n = t(735250),
-  a = t(470079),
-  i = t(442837),
-  r = t(481060),
-  o = t(846027),
-  l = t(304680),
-  c = t(579806),
-  d = t(729345),
-  _ = t(921801),
-  E = t(131951),
-  u = t(226961),
-  T = t(285952),
-  I = t(12647),
-  S = t(726985),
-  N = t(981631),
-  C = t(65154),
-  m = t(689938),
-  A = t(549856);
-async function h() {
+}), s(47120);
+var n = s(735250),
+  a = s(470079),
+  i = s(442837),
+  r = s(481060),
+  o = s(846027),
+  l = s(304680),
+  c = s(579806),
+  d = s(729345),
+  _ = s(921801),
+  E = s(131951),
+  u = s(226961),
+  T = s(285952),
+  I = s(12647),
+  S = s(726985),
+  N = s(981631),
+  C = s(65154),
+  m = s(689938),
+  A = s(224499);
+async function g() {
   let e = await c.Z.fileManager.getModulePath(),
-s = c.Z.fileManager.join(e, 'discord_voice');
-  c.Z.fileManager.showItemInFolder(s);
+t = c.Z.fileManager.join(e, 'discord_voice');
+  c.Z.fileManager.showItemInFolder(t);
 }
 
-function g(e) {
-  (0, r.openModal)(s => (0, n.jsx)(r.ConfirmModal, {
+function h(e) {
+  (0, r.openModal)(t => (0, n.jsx)(r.ConfirmModal, {
 header: m.Z.Messages.SET_DEBUG_LOGGING,
 confirmText: m.Z.Messages.OKAY,
 cancelText: m.Z.Messages.CANCEL,
-onCancel: s.onClose,
+onCancel: t.onClose,
 onConfirm: () => o.Z.setDebugLogging(e),
-...s,
+...t,
 children: (0, n.jsx)(r.Text, {
   variant: 'text-md/normal',
   children: m.Z.Messages.SET_DEBUG_LOGGING_BODY
@@ -43,8 +43,8 @@ children: (0, n.jsx)(r.Text, {
 }
 
 function O() {
-  let [e, s] = a.useState(!1), {
-debugLogging: t,
+  let [e, t] = a.useState(!1), {
+debugLogging: s,
 aecDumpEnabled: c
   } = (0, i.cj)([E.Z], () => ({
 aecDumpSupported: E.Z.isAecDumpSupported(),
@@ -53,7 +53,7 @@ aecDumpEnabled: E.Z.getAecDump(),
 supportsConnectionReplay: E.Z.supports(C.AN.CONNECTION_REPLAY)
   })), O = (0, i.e7)([u.ZP], () => u.ZP.shouldRecordNextConnection());
   async function p() {
-s(!0);
+t(!0);
 try {
   await E.Z.getMediaEngine().writeAudioDebugState(), await I.Z.submitLiveCrashReport({
     message: {
@@ -61,30 +61,30 @@ try {
     }
   }), await (0, d.E)(N.GU0.RTC), ! function() {
     let e = m.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
-      s = m.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
-    (0, r.openModal)(t => (0, n.jsx)(r.ConfirmModal, {
+      t = m.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
+    (0, r.openModal)(s => (0, n.jsx)(r.ConfirmModal, {
       header: e,
       confirmButtonColor: r.Button.Colors.BRAND,
       confirmText: m.Z.Messages.OKAY,
-      ...t,
+      ...s,
       children: (0, n.jsx)(r.Text, {
         variant: 'text-md/normal',
-        children: s
+        children: t
       })
     }));
   }();
 } catch (e) {
   ! function(e) {
-    let s = m.Z.Messages.UPLOAD_DEBUG_LOG_FAILURE_HEADER,
-      t = null != e ? e : m.Z.Messages.UPLOAD_DEBUG_LOG_FAILURE;
+    let t = m.Z.Messages.UPLOAD_DEBUG_LOG_FAILURE_HEADER,
+      s = null != e ? e : m.Z.Messages.UPLOAD_DEBUG_LOG_FAILURE;
     (0, r.openModal)(e => (0, n.jsx)(r.ConfirmModal, {
-      header: s,
+      header: t,
       confirmButtonColor: r.Button.Colors.BRAND,
       confirmText: m.Z.Messages.OKAY,
       ...e,
       children: (0, n.jsx)(r.Text, {
         variant: 'text-md/normal',
-        children: t
+        children: s
       })
     }));
   }(e.displayMessage);
@@ -137,8 +137,8 @@ children: [
     children: [
       (0, n.jsx)(r.FormSwitch, {
         hideBorder: !0,
-        value: t,
-        onChange: g,
+        value: s,
+        onChange: h,
         note: m.Z.Messages.FORM_HELP_DEBUG_LOGGING,
         children: m.Z.Messages.FORM_CHECKBOX_DEBUG_LOGGING
       }),
@@ -160,7 +160,7 @@ children: [
               shrink: 0,
               children: (0, n.jsx)(r.Button, {
                 size: r.Button.Sizes.SMALL,
-                onClick: h,
+                onClick: g,
                 children: m.Z.Messages.SHOW_FOLDER
               })
             })

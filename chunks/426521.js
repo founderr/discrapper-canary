@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(695346),
   _ = n(598077),
   E = n(594174),
-  I = n(626135),
-  m = n(709054),
+  m = n(626135),
+  I = n(709054),
   T = n(591759),
   h = n(833592),
   N = n(497089),
@@ -27,7 +27,7 @@ var i = n(735250),
   A = n(11825),
   R = n(981631),
   x = n(689938),
-  O = n(273270),
+  O = n(134082),
   M = n(756688),
   v = n(886765);
 
@@ -140,7 +140,7 @@ let {
       } else
         await (0, o.Z)(i);
     }
-    I.default.track(R.rMx.NOTIFICATION_CENTER_ACTION, {
+    m.default.track(R.rMx.NOTIFICATION_CENTER_ACTION, {
       action_type: N.ud.CLICKED,
       notification_center_id: r.id,
       item_type: r.type,
@@ -194,7 +194,7 @@ return (0, i.jsxs)('div', {
             (0, i.jsx)(s.Text, {
               variant: 'text-xs/medium',
               color: E ? 'text-muted' : 'header-secondary',
-              children: (0, f.a3)(m.default.extractTimestamp(r.id))
+              children: (0, f.a3)(I.default.extractTimestamp(r.id))
             }),
             M
           ]

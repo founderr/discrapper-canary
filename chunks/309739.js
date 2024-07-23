@@ -1,39 +1,39 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
-return g;
+return h;
   }
-}), t(47120);
-var n = t(735250);
-t(470079);
-var a = t(481060),
-  i = t(787740),
-  r = t(134598),
-  o = t(921801),
-  l = t(430824),
-  c = t(63063),
-  d = t(358085),
-  _ = t(709054),
-  E = t(695346),
-  u = t(726985),
-  T = t(981631),
-  I = t(689938),
-  S = t(359043),
-  N = t(224499);
+}), s(47120);
+var n = s(735250);
+s(470079);
+var a = s(481060),
+  i = s(787740),
+  r = s(134598),
+  o = s(921801),
+  l = s(430824),
+  c = s(63063),
+  d = s(358085),
+  _ = s(709054),
+  E = s(695346),
+  u = s(726985),
+  T = s(981631),
+  I = s(689938),
+  S = s(359043),
+  N = s(224499);
 
 function C() {
   let e = E.G6.useSetting(),
-s = E.Wz.useSetting(),
-t = d.isPlatformEmbedded ? I.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : I.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC,
+t = E.Wz.useSetting(),
+s = d.isPlatformEmbedded ? I.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : I.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC,
 i = e => {
   E.Wz.updateSetting(e), ! function(e) {
-    let s = () => {
+    let t = () => {
       E.SE.updateSetting(e ? _.default.keys(l.Z.getGuilds()) : []);
     };
     (0, a.openModal)(e => (0, n.jsx)(a.ConfirmModal, {
       header: I.Z.Messages.USER_DM_SETTINGS_TITLE,
       confirmText: I.Z.Messages.NO_TEXT,
       cancelText: I.Z.Messages.YES_TEXT,
-      onCancel: s,
+      onCancel: t,
       confirmButtonColor: a.Button.Colors.BRAND,
       ...e,
       children: (0, n.jsx)(a.Text, {
@@ -56,11 +56,11 @@ children: (0, n.jsxs)(a.FormSection, {
     (0, n.jsx)(a.FormSwitch, {
       value: e,
       onChange: e => E.G6.updateSetting(e),
-      note: t,
+      note: s,
       children: I.Z.Messages.SHOW_CURRENT_ACTIVITY
     }),
     (0, n.jsx)(a.FormSwitch, {
-      value: !s,
+      value: !t,
       note: I.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT_NOTE.format({
         helpdeskArticle: c.Z.getArticleURL(T.BhN.ACTIVITY_STATUS_SETTINGS)
       }),
@@ -74,7 +74,7 @@ children: (0, n.jsxs)(a.FormSection, {
 
 function m() {
   let e = E.cP.useSetting(),
-s = E.Ou.useSetting();
+t = E.Ou.useSetting();
   return (0, n.jsx)(o.F, {
 setting: u.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
 children: (0, n.jsxs)(a.FormSection, {
@@ -92,7 +92,7 @@ children: (0, n.jsxs)(a.FormSection, {
       children: I.Z.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS
     }),
     (0, n.jsx)(a.FormSwitch, {
-      value: s,
+      value: t,
       note: I.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP,
       onChange: e => E.Ou.updateSetting(e),
       children: I.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL
@@ -135,7 +135,7 @@ children: (0, n.jsxs)(a.FormSection, {
   });
 }
 
-function h() {
+function g() {
   return (0, n.jsx)(o.F, {
 setting: u.s6.ACTIVITY_PRIVACY_TOS,
 children: (0, n.jsx)(a.FormSection, {
@@ -151,20 +151,20 @@ children: (0, n.jsx)(a.FormSection, {
   });
 }
 
-function g(e) {
+function h(e) {
   let {
-className: s,
-showHeader: t = !0
+className: t,
+showHeader: s = !0
   } = e;
   return (0, n.jsxs)(a.FormSection, {
-className: s,
+className: t,
 tag: a.FormTitleTags.H1,
-title: t ? I.Z.Messages.ACTIVITY_PRIVACY : null,
+title: s ? I.Z.Messages.ACTIVITY_PRIVACY : null,
 children: [
   (0, n.jsx)(C, {}),
   (0, n.jsx)(m, {}),
   (0, n.jsx)(A, {}),
-  (0, n.jsx)(h, {})
+  (0, n.jsx)(g, {})
 ]
   });
 }

@@ -15,7 +15,7 @@ var s = n(266067),
   m = n(981631),
   g = n(474936),
   p = n(689938),
-  T = n(314974);
+  T = n(254225);
 let f = a.ZP.connectStores([h.default], () => ({
   user: h.default.getCurrentUser()
 }))((0, c.Z)((0, o.Z)(e => {

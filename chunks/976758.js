@@ -1,26 +1,26 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return I;
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(442837),
-  i = t(481060),
-  r = t(846027),
-  o = t(131951),
-  l = t(285952),
-  c = t(153124),
-  d = t(36703),
-  _ = t(689938),
-  E = t(549856);
+var n = s(735250);
+s(470079);
+var a = s(442837),
+  i = s(481060),
+  r = s(846027),
+  o = s(131951),
+  l = s(285952),
+  c = s(153124),
+  d = s(36703),
+  _ = s(689938),
+  E = s(224499);
 let u = (0, c.hQ)(),
   T = (0, c.hQ)();
 
 function I() {
   let {
 inputVolume: e,
-outputVolume: s
+outputVolume: t
   } = (0, a.cj)([o.Z], () => ({
 inputVolume: o.Z.getInputVolume(),
 outputVolume: o.Z.getOutputVolume()
@@ -54,7 +54,7 @@ children: [
         children: _.Z.Messages.FORM_LABEL_OUTPUT_VOLUME
       }),
       (0, n.jsx)(i.Slider, {
-        initialValue: (0, d.P)(s),
+        initialValue: (0, d.P)(t),
         maxValue: 200,
         onValueRender: e => ''.concat(e.toFixed(0), '%'),
         asValueChanges: e => r.Z.setOutputVolume((0, d.A)(e)),

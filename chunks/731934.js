@@ -17,11 +17,11 @@ var s = n(735250),
   p = n(250285),
   A = n(292352),
   m = n(689938),
-  N = n(277421),
-  f = n(549856),
-  h = n(926895);
+  N = n(548902),
+  f = n(224499),
+  S = n(926895);
 
-function S(e) {
+function h(e) {
   let {
 header: t,
 description: n,
@@ -86,7 +86,7 @@ children: [
       }),
       (0, s.jsx)('img', {
         className: N.bannerArt,
-        src: h,
+        src: S,
         alt: m.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
       })
     ]
@@ -94,17 +94,17 @@ children: [
   (0, s.jsxs)('div', {
     className: N.steps,
     children: [
-      (0, s.jsx)(S, {
+      (0, s.jsx)(h, {
         header: m.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_HEADER,
         description: m.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_DESCRIPTION,
         stepNumber: 1
       }),
-      (0, s.jsx)(S, {
+      (0, s.jsx)(h, {
         header: m.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_HEADER,
         description: m.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_DESCRIPTION,
         stepNumber: 2
       }),
-      (0, s.jsx)(S, {
+      (0, s.jsx)(h, {
         header: m.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_HEADER,
         description: m.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_DESCRIPTION,
         stepNumber: 3
@@ -142,7 +142,7 @@ children: [
   }),
   (0, s.jsx)('img', {
     className: N.bannerArt,
-    src: h,
+    src: S,
     alt: m.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
   })
 ]

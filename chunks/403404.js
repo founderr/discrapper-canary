@@ -19,8 +19,8 @@ guildId: d,
 locationObject: u,
 openInPopout: _,
 initialSelectedApplicationId: E,
-initialSlide: I = o.ag.DIRECTORY,
-enableSelectedTextChannelInvite: m = !1,
+initialSlide: m = o.ag.DIRECTORY,
+enableSelectedTextChannelInvite: I = !1,
 analyticsLocations: T,
 opensAppLauncherModal: h = !1
   } = e, N = T.length > 0 ? T[T.length - 1] : 'open-activity-shelf', {
@@ -52,9 +52,9 @@ return n => (0, i.jsx)(e, {
   channel: t,
   guildId: d,
   locationObject: u,
-  initialSlide: I,
+  initialSlide: m,
   initialSelectedApplicationId: E,
-  enableSelectedTextChannelInvite: m,
+  enableSelectedTextChannelInvite: I,
   analyticsLocations: T
 });
   }, {

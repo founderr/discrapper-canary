@@ -1,68 +1,68 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
-return D;
+return f;
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(512722),
-  i = t.n(a),
-  r = t(392711),
-  o = t.n(r),
-  l = t(442837),
-  c = t(481060),
-  d = t(660216),
-  _ = t(13245),
-  E = t(825209),
-  u = t(887278),
-  T = t(630699),
-  I = t(658785),
-  S = t(556296),
-  N = t(808506),
-  C = t(237997),
-  m = t(739563),
-  A = t(626135);
-t(63063);
-var h = t(13140),
-  g = t(981631),
-  O = t(689938),
-  p = t(766877);
+var n = s(735250);
+s(470079);
+var a = s(512722),
+  i = s.n(a),
+  r = s(392711),
+  o = s.n(r),
+  l = s(442837),
+  c = s(481060),
+  d = s(660216),
+  _ = s(13245),
+  E = s(825209),
+  u = s(887278),
+  T = s(630699),
+  I = s(658785),
+  S = s(556296),
+  N = s(808506),
+  C = s(237997),
+  m = s(739563),
+  A = s(626135);
+s(63063);
+var g = s(13140),
+  h = s(981631),
+  O = s(689938),
+  p = s(232603);
 let R = x(null);
 
 function x(e) {
-  var s;
-  let t = C.Z.getNotificationPositionMode(),
-n = t !== g._vf.DISABLED,
+  var t;
+  let s = C.Z.getNotificationPositionMode(),
+n = s !== h._vf.DISABLED,
 a = S.Z.getOverlayKeybind(),
 i = S.Z.getOverlayChatKeybind();
   return {
 enabled: N.Z.enabled,
 notifications_enabled: n,
-notifications_position: n ? t : null,
+notifications_position: n ? s : null,
 text_notifications_mode: C.Z.getTextChatNotificationMode(),
-hotkey: null != a ? (0, h.BB)(a.shortcut) : null,
-text_activation_hotkey: null != i ? (0, h.BB)(i.shortcut) : null,
+hotkey: null != a ? (0, g.BB)(a.shortcut) : null,
+text_activation_hotkey: null != i ? (0, g.BB)(i.shortcut) : null,
 text_opacity_slider: C.Z.getTextWidgetOpacity(),
-old_enabled: null !== (s = null == e ? void 0 : e.enabled) && void 0 !== s ? s : N.Z.enabled
+old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : N.Z.enabled
   };
 }
 
 function M(e) {
   let {
-children: s,
-title: t
+children: t,
+title: s
   } = e;
   return (0, n.jsx)(c.FormItem, {
-title: t,
+title: s,
 className: p.userSettingsOverlayField,
-children: s
+children: t
   });
 }
 
-function D(e) {
+function f(e) {
   let {
-className: s,
-showHeader: t = !0
+className: t,
+showHeader: s = !0
   } = e, {
 enabled: a,
 legacyEnabled: r
@@ -70,12 +70,12 @@ legacyEnabled: r
 enabled: N.Z.enabled,
 legacyEnabled: N.Z.legacyEnabled
   })), {
-avatarSizeMode: h,
-displayNameMode: D,
-displayUserMode: f,
+avatarSizeMode: g,
+displayNameMode: f,
+displayUserMode: D,
 notificationPositionMode: P,
 textChatNotificationMode: L,
-shouldShowKeybindIndicators: Z
+shouldShowKeybindIndicators: b
   } = (0, l.cj)([C.Z], () => ({
 avatarSizeMode: C.Z.getAvatarSizeMode(),
 displayNameMode: C.Z.getDisplayNameMode(),
@@ -83,34 +83,34 @@ displayUserMode: C.Z.getDisplayUserMode(),
 notificationPositionMode: C.Z.getNotificationPositionMode(),
 textChatNotificationMode: C.Z.getTextChatNotificationMode(),
 shouldShowKeybindIndicators: C.Z.showKeybindIndicators
-  })), b = (0, l.e7)([S.Z], () => S.Z.getOverlayKeybind()), {
+  })), Z = (0, l.e7)([S.Z], () => S.Z.getOverlayKeybind()), {
 showKeybindIndicators: v
   } = I.Z.useExperiment({
 location: 'overlay_user_settings'
   }), j = (0, u.$1)();
 
   function B(e) {
-_.Z.setEnabled(e, r), A.default.track(g.rMx.OVERLAY_TOGGLED, {
+_.Z.setEnabled(e, r), A.default.track(h.rMx.OVERLAY_TOGGLED, {
   enabled: e,
   setting_type: 'overlay toggled - global'
 });
   }
 
   function U(e) {
-_.Z.setEnabled(a, e), A.default.track(g.rMx.OVERLAY_TOGGLED, {
+_.Z.setEnabled(a, e), A.default.track(h.rMx.OVERLAY_TOGGLED, {
   enabled: e,
   setting_type: 'overlay toggled - legacy'
 });
   }
   return ! function() {
 let e = x(R);
-!o().isEqual(e, R) && (A.default.track(g.rMx.OVERLAY_SETTINGS_UPDATED, e), R = e);
+!o().isEqual(e, R) && (A.default.track(h.rMx.OVERLAY_SETTINGS_UPDATED, e), R = e);
   }(), (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)(c.FormSection, {
-    className: s,
+    className: t,
     tag: c.FormTitleTags.H1,
-    title: t ? O.Z.Messages.OVERLAY : null,
+    title: s ? O.Z.Messages.OVERLAY : null,
     children: [
       !1,
       (0, n.jsxs)('div', {
@@ -155,10 +155,10 @@ children: [
             className: p.enableOverlayItem,
             children: (0, n.jsx)(E.Z, {
               disabled: !a,
-              defaultValue: null != b ? b.shortcut : [],
+              defaultValue: null != Z ? Z.shortcut : [],
               onChange: function(e) {
-                i()(null != b, 'Keybind should never be undefined'), d.Z.setKeybind({
-                  ...b,
+                i()(null != Z, 'Keybind should never be undefined'), d.Z.setKeybind({
+                  ...Z,
                   shortcut: e
                 });
               }
@@ -171,20 +171,20 @@ children: [
         children: (0, n.jsx)(c.RadioGroup, {
           options: [{
               name: O.Z.Messages.AVATAR_SIZE_OPTION_LARGE,
-              value: g.ipw.LARGE
+              value: h.ipw.LARGE
             },
             {
               name: O.Z.Messages.AVATAR_SIZE_OPTION_SMALL,
-              value: g.ipw.SMALL
+              value: h.ipw.SMALL
             }
           ],
           onChange: e => {
             let {
-              value: s
+              value: t
             } = e;
-            return _.Z.setAvatarSizeMode(s);
+            return _.Z.setAvatarSizeMode(t);
           },
-          value: h
+          value: g
         })
       }),
       (0, n.jsx)(M, {
@@ -192,24 +192,24 @@ children: [
         children: (0, n.jsx)(c.RadioGroup, {
           options: [{
               name: O.Z.Messages.DISPLAY_OPTION_ALWAYS,
-              value: g.wC$.ALWAYS
+              value: h.wC$.ALWAYS
             },
             {
               name: O.Z.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING,
-              value: g.wC$.ONLY_WHILE_SPEAKING
+              value: h.wC$.ONLY_WHILE_SPEAKING
             },
             {
               name: O.Z.Messages.DISPLAY_OPTION_NEVER,
-              value: g.wC$.NEVER
+              value: h.wC$.NEVER
             }
           ],
           onChange: e => {
             let {
-              value: s
+              value: t
             } = e;
-            return _.Z.setDisplayNameMode(s);
+            return _.Z.setDisplayNameMode(t);
           },
-          value: D
+          value: f
         })
       }),
       (0, n.jsx)(M, {
@@ -217,25 +217,25 @@ children: [
         children: (0, n.jsx)(c.RadioGroup, {
           options: [{
               name: O.Z.Messages.DISPLAY_OPTION_ALWAYS,
-              value: g.OYC.ALWAYS
+              value: h.OYC.ALWAYS
             },
             {
               name: O.Z.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING,
-              value: g.OYC.ONLY_WHILE_SPEAKING
+              value: h.OYC.ONLY_WHILE_SPEAKING
             }
           ],
           onChange: e => {
             let {
-              value: s
+              value: t
             } = e;
-            return _.Z.setDisplayUserMode(s);
+            return _.Z.setDisplayUserMode(t);
           },
-          value: f
+          value: D
         })
       }),
       v && (0, n.jsx)(M, {
         children: (0, n.jsx)(c.FormSwitch, {
-          value: Z,
+          value: b,
           onChange: e => _.Z.setShowKeybindIndicators(e),
           hideBorder: !0,
           children: O.Z.Messages.FORM_LABEL_OVERLAY_SHOW_MUTE_DEAFEN_KEYBINDS
@@ -254,20 +254,20 @@ children: [
           className: p.notificationSettings,
           children: (0, n.jsx)(m.Z, {
             position: P,
-            onChange: (e, s) => _.Z.setNotificationPositionMode(s)
+            onChange: (e, t) => _.Z.setNotificationPositionMode(t)
           })
         })
       }),
       (0, n.jsx)(M, {
         children: (0, n.jsx)(c.FormSwitch, {
-          value: P !== g._vf.DISABLED && L === g.Ypu.ENABLED,
-          disabled: P === g._vf.DISABLED,
+          value: P !== h._vf.DISABLED && L === h.Ypu.ENABLED,
+          disabled: P === h._vf.DISABLED,
           onChange: function() {
             let {
               ENABLED: e,
-              DISABLED: s
-            } = g.Ypu;
-            _.Z.setTextChatNotificationMode(L === e ? s : e);
+              DISABLED: t
+            } = h.Ypu;
+            _.Z.setTextChatNotificationMode(L === e ? t : e);
           },
           hideBorder: !0,
           children: O.Z.Messages.FORM_LABEL_OVERLAY_TEXT_CHAT_NOTIFICATIONS

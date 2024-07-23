@@ -35,8 +35,8 @@ var i = n(735250),
   j = n(408026),
   U = n(763916),
   G = n(306721),
-  k = n(531551),
-  w = n(38618),
+  w = n(531551),
+  k = n(38618),
   B = n(972830),
   H = n(981283),
   V = n(584233),
@@ -89,8 +89,8 @@ var i = n(735250),
   ej = n(819640),
   eU = n(283595),
   eG = n(944486),
-  ek = n(914010),
-  ew = n(695103),
+  ew = n(914010),
+  ek = n(695103),
   eB = n(241890),
   eH = n(897607),
   eV = n(417363),
@@ -126,11 +126,11 @@ analyticsParams: {
   });
 }));
 let e$ = l.ZP.connectStores([
-w.Z,
+k.Z,
 eD.Z,
 eb.default
   ], () => ({
-isConnected: w.Z.isConnected(),
+isConnected: k.Z.isConnected(),
 defaultRoute: eD.Z.defaultRoute,
 defaultRouteFallback: eD.Z.fallbackRoute,
 token: eb.default.getToken()
@@ -258,7 +258,7 @@ render: function(e) {
           break;
         }
         case 'test-mode':
-          ew.Z.whenInitialized(() => E.Wt(n));
+          ek.Z.whenInitialized(() => E.Wt(n));
           break;
         case 'uninstall': {
           let e = eU.Z.getActiveLibraryApplication(n);
@@ -331,7 +331,7 @@ render: function(e) {
         default: e
       } = await Promise.all([
         n.e('5863'),
-        n.e('12876')
+        n.e('48324')
       ]).then(n.bind(n, 751212));
       return t => (0, i.jsx)(e, {
         ...t,
@@ -465,7 +465,7 @@ channelId: t,
 guildId: n,
 pathname: i
   } = e;
-  if (!w.Z.isConnected())
+  if (!k.Z.isConnected())
 return;
   let {
 location: s
@@ -475,7 +475,7 @@ null == eM.Z.getChannel(t) ? (0, eE.dL)(eK.Z5c.CHANNEL(n)) : (0, eE.dL)(i);
 }
 class e9 extends s.PureComponent {
   componentDidMount() {
-eW.ZP.setZoomFactor(I.Z.zoom), eh.Z.init(), Z.Z.initialize(), er.Z.initialize(), j.Z.initialize(), ex.Z.initialize(), U.Z.initialize(), eo.Z.initialize(), Q.Z.initialize(), m.Z.init(), k.Z.init(), G.Z.init(), et.Z.initialize(), S.Z.initialize(), D.Z.initialize(), ec.Z.initialize(), f.ZP.initialize(), eR.Z.initialize(), ea.Z.initialize(), T.Z.initialize(), H.Z.init(), K.Z.init(), eH.Z.init(), eF.Z.init(), p.Z.initialize(), eN.Z.init(), eB.Z.init(), eZ.Z.init(), eT.Z.initialize(), ef.Z.initialize(), ev.Z.initialize(), eL.Z.init(), M.Z.initialize(), g.Z.initialize(), eI.Z.initialize(), ep.Z.initialize(), ei.Z.initialize(), en.Z.initialize(), es.Z.initialize(), O.Z.initialize(), q.Z.init({
+eW.ZP.setZoomFactor(I.Z.zoom), eh.Z.init(), Z.Z.initialize(), er.Z.initialize(), j.Z.initialize(), ex.Z.initialize(), U.Z.initialize(), eo.Z.initialize(), Q.Z.initialize(), m.Z.init(), w.Z.init(), G.Z.init(), et.Z.initialize(), S.Z.initialize(), D.Z.initialize(), ec.Z.initialize(), f.ZP.initialize(), eR.Z.initialize(), ea.Z.initialize(), T.Z.initialize(), H.Z.init(), K.Z.init(), eH.Z.init(), eF.Z.init(), p.Z.initialize(), eN.Z.init(), eB.Z.init(), eZ.Z.init(), eT.Z.initialize(), ef.Z.initialize(), ev.Z.initialize(), eL.Z.init(), M.Z.initialize(), g.Z.initialize(), eI.Z.initialize(), ep.Z.initialize(), ei.Z.initialize(), en.Z.initialize(), es.Z.initialize(), O.Z.initialize(), q.Z.init({
   hasModalOpen: o.hasAnyModalOpen,
   openModal: () => (0, o.openModalLazy)(async () => {
     let {
@@ -496,7 +496,7 @@ let {
   search: n
 } = e;
 ! function(e) {
-  if (w.Z.isConnected() || w.Z.isTryingToConnect())
+  if (k.Z.isConnected() || k.Z.isTryingToConnect())
     return;
   let t = eb.default.getToken();
   if (null != t)
@@ -525,7 +525,7 @@ let {
     channelId: s,
     messageId: l,
     threadId: o
-  } = e7(n), c = (0, e_.S)(i), d = (0, e_.c)(s), E = (0, e_.c)(o), h = ek.Z.getGuildId(), I = h !== i;
+  } = e7(n), c = (0, e_.S)(i), d = (0, e_.c)(s), E = (0, e_.c)(o), h = ew.Z.getGuildId(), I = h !== i;
   if (c && I && u.Z.selectGuild(i), c && d) {
     let n = eG.Z.getChannelId(h),
       r = n !== s;
@@ -580,7 +580,7 @@ let {
 }(t, n);
   }
   ensureChannelMatchesGuild(e) {
-if (!w.Z.isConnected())
+if (!k.Z.isConnected())
   return null;
 let {
   pathname: t

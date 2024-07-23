@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(481060),
   _ = n(603263),
   E = n(461745),
-  I = n(349033),
-  m = n(999650),
+  m = n(349033),
+  I = n(999650),
   T = n(857595),
   h = n(607070),
   N = n(367907),
@@ -28,7 +28,7 @@ var i = n(735250),
   v = n(778177),
   L = n(981631),
   Z = n(689938),
-  P = n(356852);
+  P = n(981338);
 
 function b(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-n(270799);
+n(729068);
 let D = (0, S.hQ)(),
   j = c()(_.yC, 500);
 class U extends a.PureComponent {
@@ -61,8 +61,8 @@ if (t !== e.editorState) {
 A.S.unsubscribe(L.CkL.PERFORM_SEARCH, this.search), A.S.unsubscribe(L.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), A.S.unsubscribe(L.CkL.FOCUS_SEARCH, this.handleFocusSearch);
   }
   tokenize(e) {
-let t = x.kG(R.Sq(e)).filter(e => e.type !== I.ZP.NON_TOKEN_TYPE);
-return R.lv(t, e, m.ZP);
+let t = x.kG(R.Sq(e)).filter(e => e.type !== m.ZP.NON_TOKEN_TYPE);
+return R.lv(t, e, I.ZP);
   }
   clearSearch() {
 let {
@@ -236,7 +236,7 @@ super(e), b(this, 'state', {
   let a = p.ZP.getTextChannelNameDisambiguations(i.getGuildId())[i.id],
     s = null != a ? a.name : i.name;
   this.handleSetSearchQuery({
-    query: m.ZP[L.dCx.FILTER_IN].key + '#'.concat(s, ' '),
+    query: I.ZP[L.dCx.FILTER_IN].key + '#'.concat(s, ' '),
     replace: !0
   });
 }), b(this, 'focusEditor', () => {
@@ -383,7 +383,7 @@ t.Z = d.ZP.connectStores([
   let t = C.Z.getCurrentSearchId(),
 n = C.Z.getSearchType(),
 i = null != t && C.Z.isSearching(t),
-a = null != t && null !== (e = C.Z.getEditorState(t)) && void 0 !== e ? e : R.nR(O.Jl(m.ZP)),
+a = null != t && null !== (e = C.Z.getEditorState(t)) && void 0 !== e ? e : R.nR(O.Jl(I.ZP)),
 s = h.Z.keyboardModeEnabled;
   return {
 searchId: t,

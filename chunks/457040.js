@@ -27,14 +27,14 @@ var r = n(735250),
   y = n(373228),
   D = n(462109),
   L = n(422195),
-  b = n(135065),
+  b = n(657795),
   M = n(489762),
   P = n(31543),
   U = n(814042),
   w = n(15350),
   x = n(611480),
   G = n(981631),
-  k = n(660790);
+  k = n(219596);
 let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
   F = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
   V = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
@@ -127,7 +127,7 @@ let ea = (0, R.Sd)(u),
             default: t
           } = await Promise.all([
             n.e('93626'),
-            n.e('10831')
+            n.e('61566')
           ]).then(n.bind(n, 136735));
           return n => (0, r.jsx)(t, {
             guildId: e.guild_id,

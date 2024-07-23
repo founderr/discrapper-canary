@@ -1,28 +1,28 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return m;
   }
-}), t(47120);
-var n, a, i = t(735250),
-  r = t(470079),
-  o = t(442837),
-  l = t(481060),
-  c = t(570140),
-  d = t(401430),
-  _ = t(155268),
-  E = t(695103),
-  u = t(285952),
-  T = t(153124),
-  I = t(689938),
-  S = t(873644),
-  N = t(549856);
+}), s(47120);
+var n, a, i = s(735250),
+  r = s(470079),
+  o = s(442837),
+  l = s(481060),
+  c = s(570140),
+  d = s(401430),
+  _ = s(155268),
+  E = s(695103),
+  u = s(285952),
+  T = s(153124),
+  I = s(689938),
+  S = s(395571),
+  N = s(224499);
 let C = /^\d+$|^$/;
 (a = n || (n = {})).LOCALHOST = 'localhost', a.PROXY = 'proxy';
 
 function m(e) {
   let {
-onClose: s,
-transitionState: t
+onClose: t,
+transitionState: s
   } = e, {
 authorizedApplicationId: n,
 authorizationError: a,
@@ -31,29 +31,29 @@ authorizing: m
 authorizedApplicationId: E.Z.testModeApplicationId,
 authorizationError: E.Z.error,
 authorizing: E.Z.isFetchingAuthorization
-  })), [A, h] = r.useState(null != n ? n : ''), [g, O] = r.useState('8080'), [p, R] = r.useState('localhost'), x = (0, T.Dt)(), M = C.test(A);
-  async function D() {
+  })), [A, g] = r.useState(null != n ? n : ''), [h, O] = r.useState('8080'), [p, R] = r.useState('localhost'), x = (0, T.Dt)(), M = C.test(A);
+  async function f() {
 d.q$();
-let e = function(e, s, t) {
+let e = function(e, t, s) {
   if (null == e)
     return null;
   switch (e) {
     case 'localhost':
-      return 'https://localhost:'.concat(s);
+      return 'https://localhost:'.concat(t);
     case 'proxy':
-      return (0, _.Z)(t);
+      return (0, _.Z)(s);
   }
-}(p, g, A);
-null != await d.Wt(A, e) && s();
+}(p, h, A);
+null != await d.Wt(A, e) && t();
   }
   r.useEffect(() => () => c.Z.wait(() => d.q$()), []);
-  let f = null != n && n === A,
-P = f ? function() {
-  d.mc(), h(''), R(null);
-} : D;
+  let D = null != n && n === A,
+P = D ? function() {
+  d.mc(), g(''), R(null);
+} : f;
   return (0, i.jsxs)(l.ModalRoot, {
 'aria-labelledby': x,
-transitionState: t,
+transitionState: s,
 children: [
   (0, i.jsxs)(l.ModalHeader, {
     justify: u.Z.Justify.BETWEEN,
@@ -66,7 +66,7 @@ children: [
         children: I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
       }),
       (0, i.jsx)(l.ModalCloseButton, {
-        onClick: s
+        onClick: t
       })
     ]
   }),
@@ -99,7 +99,7 @@ children: [
                 maxLength: 19,
                 error: M ? null : I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
                 onChange: function(e) {
-                  h(e);
+                  g(e);
                 },
                 disabled: m
               })
@@ -132,7 +132,7 @@ children: [
               title: I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
               required: !0,
               children: (0, i.jsx)(l.TextInput, {
-                value: g,
+                value: h,
                 maxLength: 5,
                 onChange: e => O(e),
                 disabled: m
@@ -141,9 +141,9 @@ children: [
             (0, i.jsx)(l.Button, {
               submitting: m,
               type: 'submit',
-              disabled: !M || 0 === A.length || 'localhost' === p && 0 === g.length,
-              color: f ? l.Button.Colors.RED : l.Button.Colors.GREEN,
-              children: f ? I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
+              disabled: !M || 0 === A.length || 'localhost' === p && 0 === h.length,
+              color: D ? l.Button.Colors.RED : l.Button.Colors.GREEN,
+              children: D ? I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
             })
           ]
         })

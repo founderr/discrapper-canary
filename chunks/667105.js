@@ -73,7 +73,7 @@ let A = e => {
 let {
   useReducedMotion: t,
   className: n
-} = e, [s, l] = (0, a.useSpring)(() => ({})), u = i.useRef(!1), c = (0, a.animated)(o.RefreshIcon);
+} = e, [s, l] = (0, o.useSpring)(() => ({})), u = i.useRef(!1), c = (0, a.animated)(o.RefreshIcon);
 return {
   render: () => (0, r.jsx)(c, {
     className: n,

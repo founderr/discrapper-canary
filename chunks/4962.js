@@ -8,7 +8,7 @@ var r = n(120356),
   d = n(700582),
   u = n(451478),
   _ = n(689938),
-  E = n(390826);
+  E = n(605366);
 (s = i || (i = {}))[s.STAFF_NOTES = 1] = 'STAFF_NOTES';
 let h = o.ZP.connectStores([u.Z], () => ({
 animate: u.Z.isFocused()

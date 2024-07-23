@@ -3,12 +3,12 @@ n.d(t, {
 return s;
   }
 });
-var r = n(479446),
-  a = n(474936);
+var i = n(479446),
+  r = n(474936);
 let s = (e, t) => {
   let s;
   switch (e) {
-case a.Cj.SNOWGLOBE:
+case r.Cj.SNOWGLOBE:
   s = () => n.e('20268').then(n.t.bind(n, 22952, 19)).then(e => {
     let {
       default: t
@@ -16,7 +16,7 @@ case a.Cj.SNOWGLOBE:
     return t;
   });
   break;
-case a.Cj.BOX:
+case r.Cj.BOX:
   s = () => n.e('37372').then(n.t.bind(n, 459274, 19)).then(e => {
     let {
       default: t
@@ -24,7 +24,7 @@ case a.Cj.BOX:
     return t;
   });
   break;
-case a.Cj.CUP:
+case r.Cj.CUP:
   s = () => n.e('37066').then(n.t.bind(n, 990632, 19)).then(e => {
     let {
       default: t
@@ -32,9 +32,9 @@ case a.Cj.CUP:
     return t;
   });
   break;
-case a.Cj.STANDARD_BOX:
+case r.Cj.STANDARD_BOX:
   switch (t) {
-    case r.S.IDLE:
+    case i.S.IDLE:
       s = () => n.e('60592').then(n.t.bind(n, 433166, 19)).then(e => {
         let {
           default: t
@@ -42,7 +42,7 @@ case a.Cj.STANDARD_BOX:
         return t;
       });
       break;
-    case r.S.LOOP:
+    case i.S.LOOP:
       s = () => n.e('81358').then(n.t.bind(n, 145894, 19)).then(e => {
         let {
           default: t
@@ -59,9 +59,9 @@ case a.Cj.STANDARD_BOX:
       });
   }
   break;
-case a.Cj.CAKE:
+case r.Cj.CAKE:
   switch (t) {
-    case r.S.IDLE:
+    case i.S.IDLE:
       s = () => n.e('5996').then(n.t.bind(n, 889601, 19)).then(e => {
         let {
           default: t
@@ -69,7 +69,7 @@ case a.Cj.CAKE:
         return t;
       });
       break;
-    case r.S.LOOP:
+    case i.S.LOOP:
       s = () => n.e('71378').then(n.t.bind(n, 445637, 19)).then(e => {
         let {
           default: t
@@ -86,9 +86,9 @@ case a.Cj.CAKE:
       });
   }
   break;
-case a.Cj.CHEST:
+case r.Cj.CHEST:
   switch (t) {
-    case r.S.IDLE:
+    case i.S.IDLE:
       s = () => n.e('38506').then(n.t.bind(n, 449445, 19)).then(e => {
         let {
           default: t
@@ -96,7 +96,7 @@ case a.Cj.CHEST:
         return t;
       });
       break;
-    case r.S.LOOP:
+    case i.S.LOOP:
       s = () => n.e('31085').then(n.t.bind(n, 837312, 19)).then(e => {
         let {
           default: t
@@ -113,9 +113,9 @@ case a.Cj.CHEST:
       });
   }
   break;
-case a.Cj.COFFEE:
+case r.Cj.COFFEE:
   switch (t) {
-    case r.S.IDLE:
+    case i.S.IDLE:
       s = () => n.e('23847').then(n.t.bind(n, 98860, 19)).then(e => {
         let {
           default: t
@@ -123,7 +123,7 @@ case a.Cj.COFFEE:
         return t;
       });
       break;
-    case r.S.LOOP:
+    case i.S.LOOP:
       s = () => n.e('93554').then(n.t.bind(n, 732573, 19)).then(e => {
         let {
           default: t
@@ -140,9 +140,9 @@ case a.Cj.COFFEE:
       });
   }
   break;
-case a.Cj.SEASONAL_STANDARD_BOX:
+case r.Cj.SEASONAL_STANDARD_BOX:
   switch (t) {
-    case r.S.IDLE:
+    case i.S.IDLE:
       s = () => n.e('20196').then(n.t.bind(n, 862977, 19)).then(e => {
         let {
           default: t
@@ -150,7 +150,7 @@ case a.Cj.SEASONAL_STANDARD_BOX:
         return t;
       });
       break;
-    case r.S.LOOP:
+    case i.S.LOOP:
       s = () => n.e('58903').then(n.t.bind(n, 883984, 19)).then(e => {
         let {
           default: t
@@ -167,9 +167,9 @@ case a.Cj.SEASONAL_STANDARD_BOX:
       });
   }
   break;
-case a.Cj.SEASONAL_CAKE:
+case r.Cj.SEASONAL_CAKE:
   switch (t) {
-    case r.S.IDLE:
+    case i.S.IDLE:
       s = () => n.e('22101').then(n.t.bind(n, 953256, 19)).then(e => {
         let {
           default: t
@@ -177,7 +177,7 @@ case a.Cj.SEASONAL_CAKE:
         return t;
       });
       break;
-    case r.S.LOOP:
+    case i.S.LOOP:
       s = () => n.e('63007').then(n.t.bind(n, 320152, 19)).then(e => {
         let {
           default: t
@@ -194,9 +194,9 @@ case a.Cj.SEASONAL_CAKE:
       });
   }
   break;
-case a.Cj.SEASONAL_CHEST:
+case r.Cj.SEASONAL_CHEST:
   switch (t) {
-    case r.S.IDLE:
+    case i.S.IDLE:
       s = () => n.e('97674').then(n.t.bind(n, 897198, 19)).then(e => {
         let {
           default: t
@@ -204,7 +204,7 @@ case a.Cj.SEASONAL_CHEST:
         return t;
       });
       break;
-    case r.S.LOOP:
+    case i.S.LOOP:
       s = () => n.e('37357').then(n.t.bind(n, 967705, 19)).then(e => {
         let {
           default: t
@@ -221,9 +221,9 @@ case a.Cj.SEASONAL_CHEST:
       });
   }
   break;
-case a.Cj.SEASONAL_COFFEE:
+case r.Cj.SEASONAL_COFFEE:
   switch (t) {
-    case r.S.IDLE:
+    case i.S.IDLE:
       s = () => n.e('83646').then(n.t.bind(n, 804732, 19)).then(e => {
         let {
           default: t
@@ -231,7 +231,7 @@ case a.Cj.SEASONAL_COFFEE:
         return t;
       });
       break;
-    case r.S.LOOP:
+    case i.S.LOOP:
       s = () => n.e('92695').then(n.t.bind(n, 702411, 19)).then(e => {
         let {
           default: t

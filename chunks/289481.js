@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(45114),
   _ = n(367907),
   E = n(717680),
-  I = n(703656),
-  m = n(592125),
+  m = n(703656),
+  I = n(592125),
   T = n(259580),
   h = n(617379),
   N = n(324081),
@@ -19,7 +19,7 @@ var i = n(735250),
   p = n(520116),
   C = n(981631),
   g = n(689938),
-  S = n(540895);
+  S = n(793355);
 let A = a.memo(function(e) {
   let {
 channel: t,
@@ -54,7 +54,7 @@ size: u ? 0 : 1,
 onRest: () => {
   n(t.channelId);
 }
-  }, 'animate-always'), I = {
+  }, 'animate-always'), m = {
 opacity: _,
 height: E.to(e => u ? function(e, t, n) {
   return t + (e - t) * n;
@@ -62,7 +62,7 @@ height: E.to(e => u ? function(e, t, n) {
   };
   return (0, i.jsx)(l.animated.div, {
 ref: s,
-style: I,
+style: m,
 children: (0, i.jsx)(R, {
   ...e
 })
@@ -75,7 +75,7 @@ channel: t,
 onJump: n,
 deleteChannel: s,
 toggle: r
-  } = e, l = (0, o.e7)([m.Z], () => m.Z.getChannel(t.channelId));
+  } = e, l = (0, o.e7)([I.Z], () => I.Z.getChannel(t.channelId));
   if (a.useEffect(() => {
   null != l && t.isFullyLoaded && !t.hasError && !t.collapsed && 'messages' === t.type && 0 === t.messages.length && d.Z.wait(() => {
     (0, u.In)(t.channelId, !0), s(t.channelId);
@@ -88,7 +88,7 @@ return null;
   guild_id: t.guildId
 });
 let a = null != i ? i : t.oldestUnreadMessageId;
-(0, I.uL)(C.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : a)), n(e);
+(0, m.uL)(C.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : a)), n(e);
   };
   return (0, i.jsx)('div', {
 className: S.channel,

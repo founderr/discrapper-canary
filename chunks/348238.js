@@ -56,8 +56,8 @@ var i = n(735250),
   u = n(323873),
   _ = n(375954),
   E = n(594174),
-  I = n(585483),
-  m = n(5967),
+  m = n(585483),
+  I = n(5967),
   T = n(630388),
   h = n(358085),
   N = n(51144),
@@ -92,7 +92,7 @@ let s = '@'.concat(N.ZP.getUserTag(a, {
     decoration: 'never'
   })),
   r = '<@'.concat(e, '>');
-I.S.dispatchToLastSubscribed(g.CkL.INSERT_TEXT, {
+m.S.dispatchToLastSubscribed(g.CkL.INSERT_TEXT, {
   plainText: s,
   rawText: r
 }), o.Z.startTyping(t);
@@ -141,10 +141,10 @@ function b(e, t, s, l) {
 id: o
   } = t, {
 id: E,
-flags: I
-  } = e, m = (0, T.yE)(I, g.iLy.EPHEMERAL), N = (0, p.Z)(e), f = (0, c.bp)();
+flags: m
+  } = e, I = (0, T.yE)(m, g.iLy.EPHEMERAL), N = (0, p.Z)(e), f = (0, c.bp)();
   return a.useCallback((e, t) => {
-if (m)
+if (I)
   return;
 if (!h.isPlatformEmbedded) {
   let t = e.target;
@@ -156,8 +156,8 @@ if (!h.isPlatformEmbedded) {
 }
 let a = d.Z.getChannel(o),
   c = _.Z.getMessage(o, E),
-  I = u.Z.isEditing(o, E);
-if (null != a && null != c && !I)
+  m = u.Z.isEditing(o, E);
+if (null != a && null != c && !m)
   s({
     contextMenu: !0
   }), (0, r.jW)(e, async () => {
@@ -166,7 +166,7 @@ if (null != a && null != c && !I)
         default: e
       } = await Promise.all([
         n.e('29975'),
-        n.e('10941')
+        n.e('64026')
       ]).then(n.bind(n, 240678));
       return n => (0, i.jsx)(e, {
         ...n,
@@ -181,7 +181,7 @@ if (null != a && null != c && !I)
         n.e('29975'),
         n.e('37220'),
         n.e('92557'),
-        n.e('53926')
+        n.e('37395')
       ]).then(n.bind(n, 225138));
       return n => (0, i.jsx)(e, {
         ...n,
@@ -198,7 +198,7 @@ if (null != a && null != c && !I)
     context: f
   });
   }, [
-m,
+I,
 o,
 E,
 s,
@@ -266,13 +266,13 @@ s = a.useRef(n),
 [r, l] = a.useState(n);
   s.current = r || s.current;
   let o = a.useCallback(() => {
-  !r && (I.S.dispatchKeyed(g.LPv.ANIMATE_CHAT_AVATAR, i, !0), l(!0));
+  !r && (m.S.dispatchKeyed(g.LPv.ANIMATE_CHAT_AVATAR, i, !0), l(!0));
 }, [
   r,
   i
 ]),
 c = a.useCallback(() => {
-  I.S.dispatchKeyed(g.LPv.ANIMATE_CHAT_AVATAR, i, !1), l(!1);
+  m.S.dispatchKeyed(g.LPv.ANIMATE_CHAT_AVATAR, i, !1), l(!1);
 }, [i]);
   return {
 hasHovered: s.current,
@@ -285,14 +285,14 @@ handleMouseLeave: c
 function k(e, t) {
   let [n, i] = a.useState(!1), [s, r] = a.useState(!1), l = a.useCallback(t => {
 var n, a;
-let s = null !== (a = null === (n = (0, m.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
+let s = null !== (a = null === (n = (0, I.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
 (t.target === t.currentTarget || t.currentTarget.contains(s)) && (r(!0), i(!0)), null != e && e(t);
   }, [e]);
   return {
 handleFocus: l,
 handleBlur: a.useCallback(e => {
   var n, a;
-  let s = null !== (a = null === (n = (0, m.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
+  let s = null !== (a = null === (n = (0, I.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
   (e.target === e.currentTarget || !e.currentTarget.contains(s)) && i(!1), null != t && t(e);
 }, [t]),
 isFocused: n,

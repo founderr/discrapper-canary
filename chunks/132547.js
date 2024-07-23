@@ -17,7 +17,7 @@ var s = n(735250),
   g = n(71363),
   p = n(781800),
   A = n(981631),
-  m = n(391552),
+  m = n(396001),
   N = n(865215);
 t.Z = () => {
   let e = a.useRef(null),
@@ -25,9 +25,9 @@ t.Z = () => {
 {
   analyticsLocations: r
 } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-[f, h] = a.useState(!1);
+[f, S] = a.useState(!1);
   (0, u.FM)();
-  let S = (0, R.b)('SubscriberNitroHome');
+  let h = (0, R.b)('SubscriberNitroHome');
   return (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsx)(o.AdvancedScrollerAuto, {
@@ -45,7 +45,7 @@ children: [
           (0, s.jsx)(E.Z, {
             variant: C.R0.WHATS_NEW,
             className: i()(m.whatsNew, {
-              [m.whatsNewWithOriginalHeroHeading]: !S
+              [m.whatsNewWithOriginalHeroHeading]: !h
             }),
             noBackground: !0,
             leftAlignHeaders: !0
@@ -74,7 +74,7 @@ children: [
             onChange: e => {
               e && !f && (_.default.track(A.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                 location_stack: r
-              }), h(!0));
+              }), S(!0));
             },
             children: (0, s.jsx)('div', {
               className: m.bottomOfPageVisibilitySensor

@@ -14,17 +14,17 @@ var i = n(735250),
   u = n(594174),
   _ = n(280763),
   E = n(178088),
-  I = n(222940),
-  m = n(490897),
+  m = n(222940),
+  I = n(490897),
   T = n(689938),
-  h = n(423493);
+  h = n(166535);
 
 function N(e) {
   let {
 onOpen: t,
 onClose: n,
 className: N
-  } = e, f = (0, s.e7)([u.default], () => u.default.getCurrentUser()), p = a.useRef(null), C = (0, s.e7)([d.ZP], () => (null == f ? void 0 : f.id) != null && d.ZP.getMentionCount(f.id, m.W.NOTIFICATION_CENTER) > 0), {
+  } = e, f = (0, s.e7)([u.default], () => u.default.getCurrentUser()), p = a.useRef(null), C = (0, s.e7)([d.ZP], () => (null == f ? void 0 : f.id) != null && d.ZP.getMentionCount(f.id, I.W.NOTIFICATION_CENTER) > 0), {
 enabled: g
   } = o.Z.useExperiment({
 location: 'RecentsButton'
@@ -43,7 +43,7 @@ children: (e, t, n) => (0, i.jsxs)('div', {
   ref: p,
   className: h.recentsIcon,
   children: [
-    g && (0, i.jsx)(I.Z, {
+    g && (0, i.jsx)(m.Z, {
       inboxIconRef: p,
       recentsPopoutShown: t
     }),

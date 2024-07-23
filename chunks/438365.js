@@ -1,17 +1,17 @@
-t.d(s, {
+s.d(t, {
   r: function() {
 return c;
   }
 });
-var n = t(470079),
-  a = t(442837),
-  i = t(430824),
-  r = t(594174),
-  o = t(645896),
-  l = t(353093);
+var n = s(470079),
+  a = s(442837),
+  i = s(430824),
+  r = s(594174),
+  o = s(645896),
+  l = s(353093);
 
 function c(e) {
-  var s, t;
+  var t, s;
   let {
 userId: c
   } = e, d = (0, a.e7)([r.default], () => {
@@ -31,8 +31,8 @@ I = (0, a.e7)([i.Z], () => i.Z.getGuild(null == d ? void 0 : d.identityGuildId))
 userClanTag: _,
 userClanBadge: E,
 guildId: u,
-guildName: null !== (s = null == I ? void 0 : I.name) && void 0 !== s ? s : null == T ? void 0 : T.name,
-guildIcon: null !== (t = null == I ? void 0 : I.icon) && void 0 !== t ? t : null == T ? void 0 : T.icon,
+guildName: null !== (t = null == I ? void 0 : I.name) && void 0 !== t ? t : null == T ? void 0 : T.name,
+guildIcon: null !== (s = null == I ? void 0 : I.icon) && void 0 !== s ? s : null == T ? void 0 : T.icon,
 clan: T
   };
 }

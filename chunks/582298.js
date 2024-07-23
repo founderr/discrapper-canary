@@ -11,7 +11,7 @@ var a = n(481060),
   l = n(646504),
   o = n(981631),
   c = n(689938),
-  d = n(180090);
+  d = n(400362);
 
 function u(e) {
   let t, {
@@ -19,7 +19,7 @@ function u(e) {
   isOwner: _,
   channel: E
 } = e,
-I = () => {
+m = () => {
   let e = s.Z.getGuild(E.getGuildId());
   null != e && ((0, a.openModalLazy)(async () => {
     let {
@@ -27,7 +27,7 @@ I = () => {
     } = await Promise.all([
       n.e('7654'),
       n.e('1187'),
-      n.e('26155')
+      n.e('84003')
     ]).then(n.bind(n, 560114));
     return n => (0, i.jsx)(t, {
       ...n,
@@ -37,17 +37,17 @@ I = () => {
     });
   }), (0, l.w)());
 },
-m = (e, t) => (0, i.jsx)(a.Anchor, {
+I = (e, t) => (0, i.jsx)(a.Anchor, {
   className: d.inviteLink,
-  onClick: I,
+  onClick: m,
   children: e
 }, t);
   return t = u ? (0, i.jsx)('div', {
 className: d.inviteContent,
 children: _ ? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT.format({
-  inviteHook: m
+  inviteHook: I
 }) : c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_COMPACT.format({
-  inviteHook: m
+  inviteHook: I
 })
   }) : (0, i.jsxs)('div', {
 className: d.content,
@@ -61,7 +61,7 @@ children: [
     children: _ ? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION_OWNER : c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION
   }),
   (0, i.jsx)(a.Button, {
-    onClick: I,
+    onClick: m,
     size: a.Button.Sizes.SMALL,
     className: d.inviteButton,
     children: c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_BUTTON

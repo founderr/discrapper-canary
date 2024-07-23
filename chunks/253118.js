@@ -17,7 +17,7 @@ message: t,
 usernameHook: c,
 onClickPins: d,
 compact: u
-  } = e, _ = (0, l.ZP)(t), E = _.nick, I = c(_), m = () => {
+  } = e, _ = (0, l.ZP)(t), E = _.nick, m = c(_), I = () => {
 if (null == t.messageReference)
   return;
 let {
@@ -42,19 +42,19 @@ icon: n(879066)
 timestamp: t.timestamp,
 compact: u,
 children: null != t.messageReference ? null == d ? o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_WITH_MESSAGE_HOOK.format({
-  usernameHook: I,
+  usernameHook: m,
   username: E,
-  messageOnClick: m
+  messageOnClick: I
 }) : o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_WITH_MESSAGE.format({
-  usernameHook: I,
+  usernameHook: m,
   username: E,
   pinsActionOnClick: d,
-  messageOnClick: m
+  messageOnClick: I
 }) : null == d ? o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_HOOK.format({
-  usernameHook: I,
+  usernameHook: m,
   username: E
 }) : o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE.format({
-  usernameHook: I,
+  usernameHook: m,
   username: E,
   pinsActionOnClick: d
 })

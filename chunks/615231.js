@@ -17,7 +17,7 @@ n += String.fromCharCode(e);
 }
 n.d(t, {
   U2: function() {
-return f;
+return I;
   },
   wz: function() {
 return p;
@@ -26,13 +26,13 @@ return p;
 var i = 'copy',
   a = 'convert';
 
-function l(e, t, n) {
+function o(e, t, n) {
   if (t === i)
 return n;
   if (t === a)
 return e(n);
   if (t instanceof Array)
-return n.map(n => l(e, t[0], n));
+return n.map(n => o(e, t[0], n));
   if (t instanceof Object) {
 let s = {};
 for (let [r, i] of Object.entries(t)) {
@@ -49,13 +49,13 @@ for (let [r, i] of Object.entries(t)) {
     s[r] = null;
     continue;
   }
-  s[r] = l(e, i.schema, n[r]);
+  s[r] = o(e, i.schema, n[r]);
 }
 return s;
   }
 }
 
-function o(e, t) {
+function l(e, t) {
   return {
 required: !0,
 schema: e,
@@ -81,12 +81,12 @@ type: c(i),
 id: c(a),
 transports: u(i)
   },
-  h = {
+  _ = {
 appid: u(i),
 appidExclude: u(i),
 credProps: u(i)
   },
-  _ = {
+  h = {
 appid: u(i),
 appidExclude: u(i),
 credProps: u(i)
@@ -104,15 +104,15 @@ displayName: c(i)
   excludeCredentials: u([d]),
   authenticatorSelection: u(i),
   attestation: u(i),
-  extensions: u(h)
+  extensions: u(_)
 }), u(i), c(i), c(i), c(a), u(i), c({
   clientDataJSON: c(a),
   attestationObject: c(a),
-  transports: o(i, e => {
+  transports: l(i, e => {
 var t;
 return (null == (t = e.getTransports) ? void 0 : t.call(e)) || [];
   })
-}), o(_, e => e.getClientExtensionResults());
+}), l(h, e => e.getClientExtensionResults());
 var E = {
 mediation: u(i),
 publicKey: c({
@@ -121,7 +121,7 @@ publicKey: c({
   rpId: u(i),
   allowCredentials: u([d]),
   userVerification: u(i),
-  extensions: u(h)
+  extensions: u(_)
 }),
 signal: u(i)
   },
@@ -136,13 +136,13 @@ response: c({
   signature: c(a),
   userHandle: c(a)
 }),
-clientExtensionResults: o(_, e => e.getClientExtensionResults())
+clientExtensionResults: l(h, e => e.getClientExtensionResults())
   };
 
 function p(e) {
-  return l(s, E, e);
+  return o(s, E, e);
 }
-async function f(e) {
+async function I(e) {
   let t = await navigator.credentials.get(e);
-  return t.toJSON = () => l(r, g, t), t;
+  return t.toJSON = () => o(r, g, t), t;
 }

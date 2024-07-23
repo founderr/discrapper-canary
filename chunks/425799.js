@@ -1,45 +1,45 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return m;
   }
-}), t(47120), t(315314), t(610138), t(216116), t(78328), t(815648);
-var n = t(735250),
-  a = t(470079),
-  i = t(979554),
-  r = t(442837),
-  o = t(780384),
-  l = t(481060),
-  c = t(53281),
-  d = t(410030),
-  _ = t(921813),
-  E = t(680295),
-  u = t(594174),
-  T = t(572004),
-  I = t(590259),
-  S = t(160482),
-  N = t(334428),
-  C = t(844593);
+}), s(47120), s(315314), s(610138), s(216116), s(78328), s(815648);
+var n = s(735250),
+  a = s(470079),
+  i = s(979554),
+  r = s(442837),
+  o = s(780384),
+  l = s(481060),
+  c = s(53281),
+  d = s(410030),
+  _ = s(921813),
+  E = s(680295),
+  u = s(594174),
+  T = s(572004),
+  I = s(590259),
+  S = s(907183),
+  N = s(334428),
+  C = s(844593);
 
 function m() {
   let e = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
-[s, t] = a.useState(!0),
+[t, s] = a.useState(!0),
 [m, A] = a.useState([]),
-h = a.useRef(null),
-[g, O] = a.useState(!1),
+g = a.useRef(null),
+[h, O] = a.useState(!1),
 [p, R] = a.useState(!1),
 [x, M] = a.useState(!1),
-D = (0, o.wj)((0, d.ZP)());
+f = (0, o.wj)((0, d.ZP)());
   return null == e ? (0, n.jsx)('div', {}) : (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)('div', {
     className: S.root,
     children: [
       (0, n.jsx)('img', {
-        src: g ? N : C,
+        src: h ? N : C,
         alt: '',
         width: 450
       }),
-      s && (0, n.jsx)(E.n, {
+      t && (0, n.jsx)(E.n, {
         profileEffectConfig: {
           type: i.Z.PROFILE_EFFECT,
           title: 'debug',
@@ -86,10 +86,10 @@ children: [
       }),
       (0, n.jsx)('input', {
         type: 'checkbox',
-        checked: g,
+        checked: h,
         className: S.checkBox,
         onChange: () => {
-          O(!g);
+          O(!h);
         }
       }),
       (0, n.jsx)(l.Text, {
@@ -129,22 +129,22 @@ children: [
             children: 'Click to upload image'
           }),
           (0, n.jsx)(c.Z, {
-            ref: h,
+            ref: g,
             onChange: e => {
-              let s = e.currentTarget.files;
-              if (null == s)
+              let t = e.currentTarget.files;
+              if (null == t)
                 return;
-              let t = s[0],
+              let s = t[0],
                 n = new FileReader();
               n.onload = async e => {
                 if (null == e.target || 'string' != typeof e.target.result)
                   return;
-                let s = await (0, I.Xv)(URL.createObjectURL(t), t, m.length);
+                let t = await (0, I.Xv)(URL.createObjectURL(s), s, m.length);
                 A(e => [
                   ...e,
-                  s
+                  t
                 ]);
-              }, n.readAsDataURL(t);
+              }, n.readAsDataURL(s);
             },
             multiple: !1
           })
@@ -156,10 +156,10 @@ children: [
       })
     ]
   }),
-  m.map((e, s) => (0, n.jsxs)('div', {
+  m.map((e, t) => (0, n.jsxs)('div', {
     style: {
       marginBottom: 8,
-      color: D ? 'white' : 'black'
+      color: f ? 'white' : 'black'
     },
     children: [
       (0, n.jsxs)('div', {
@@ -180,7 +180,7 @@ children: [
             color: l.ButtonColors.RED,
             look: l.ButtonLooks.LINK,
             onClick: () => {
-              A(s => s.filter(s => s !== e));
+              A(t => t.filter(t => t !== e));
             },
             children: 'Remove'
           })
@@ -194,10 +194,10 @@ children: [
         value: e.start,
         className: S.numberInput,
         onChange: e => {
-          A(t => {
-            let n = [...t],
-              a = t[s];
-            return a.start = +e.target.value, n[s] = a, n;
+          A(s => {
+            let n = [...s],
+              a = s[t];
+            return a.start = +e.target.value, n[t] = a, n;
           });
         },
         contentEditable: !0
@@ -210,10 +210,10 @@ children: [
         value: e.duration,
         className: S.numberInput,
         onChange: e => {
-          A(t => {
-            let n = [...t],
-              a = t[s];
-            return a.duration = +e.target.value, n[s] = a, n;
+          A(s => {
+            let n = [...s],
+              a = s[t];
+            return a.duration = +e.target.value, n[t] = a, n;
           });
         },
         contentEditable: !0
@@ -226,10 +226,10 @@ children: [
         checked: e.loop,
         className: S.checkBox,
         onChange: e => {
-          A(t => {
-            let n = [...t],
-              a = t[s];
-            return a.loop = e.target.checked, n[s] = a, n;
+          A(s => {
+            let n = [...s],
+              a = s[t];
+            return a.loop = e.target.checked, n[t] = a, n;
           });
         }
       }),
@@ -243,10 +243,10 @@ children: [
             value: e.loopDelay,
             className: S.checkBox,
             onChange: e => {
-              A(t => {
-                let n = [...t],
-                  a = t[s];
-                return a.loopDelay = +e.target.value, n[s] = a, n;
+              A(s => {
+                let n = [...s],
+                  a = s[t];
+                return a.loopDelay = +e.target.value, n[t] = a, n;
               });
             },
             contentEditable: !0
@@ -262,16 +262,16 @@ children: [
         className: S.checkBox,
         disabled: !0,
         onChange: e => {
-          A(t => {
-            let n = [...t],
-              a = t[s];
-            return a.zIndex = +e.target.value, n[s] = a, n;
+          A(s => {
+            let n = [...s],
+              a = s[t];
+            return a.zIndex = +e.target.value, n[t] = a, n;
           });
         },
         contentEditable: !0
       })
     ]
-  }, s)),
+  }, t)),
   (0, n.jsxs)('div', {
     className: S.bottomControls,
     children: [
@@ -286,7 +286,7 @@ children: [
       (0, n.jsx)(l.Button, {
         color: l.ButtonColors.BRAND,
         onClick: () => {
-          t(!1), setTimeout(() => t(!0), 100);
+          s(!1), setTimeout(() => s(!0), 100);
         },
         children: 'Replay Animation'
       }),

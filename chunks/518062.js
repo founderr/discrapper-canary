@@ -1,49 +1,49 @@
-t.d(s, {
+t.d(n, {
   Z: function() {
-return _;
+return d;
   }
 }), t(47120);
-var n = t(735250);
+var o = t(735250);
 t(470079);
-var a = t(442837),
-  i = t(481060),
-  r = t(607070),
-  o = t(122890),
+var r = t(442837),
+  a = t(481060),
+  i = t(607070),
+  c = t(122890),
   l = t(285952),
-  c = t(300395),
-  d = t(546590);
+  s = t(300395),
+  u = t(937934);
 
-function _(e) {
+function d(e) {
   let {
-purchaseState: s,
+purchaseState: n,
 currentStep: t,
-onClose: _
-  } = e, [E, u] = (0, o.z)({
-purchaseState: s,
+onClose: d
+  } = e, [p, _] = (0, c.z)({
+purchaseState: n,
 currentStep: t,
-initialScene: c.fe.Scenes.ENTRY,
-purchaseScene: c.fe.Scenes.STARS,
-errorScene: c.fe.Scenes.ERROR,
-successScene: c.fe.Scenes.SUCCESS
-  }), T = (0, a.e7)([r.Z], () => r.Z.useReducedMotion);
-  return (0, n.jsxs)(i.ModalHeader, {
+initialScene: s.fe.Scenes.ENTRY,
+purchaseScene: s.fe.Scenes.STARS,
+errorScene: s.fe.Scenes.ERROR,
+successScene: s.fe.Scenes.SUCCESS
+  }), f = (0, r.e7)([i.Z], () => i.Z.useReducedMotion);
+  return (0, o.jsxs)(a.ModalHeader, {
 align: l.Z.Align.START,
-className: d.header,
+className: u.header,
 separator: !1,
 children: [
-  (0, n.jsx)(c.fe, {
-    className: d.animation,
-    nextScene: E,
-    onScenePlay: e => u(c.fe.getNextScene(e)),
+  (0, o.jsx)(s.fe, {
+    className: u.animation,
+    nextScene: p,
+    onScenePlay: e => _(s.fe.getNextScene(e)),
     pauseWhileUnfocused: !1,
-    pause: T
+    pause: f
   }),
-  (0, n.jsx)('div', {
-    className: d.headerTitle
+  (0, o.jsx)('div', {
+    className: u.headerTitle
   }),
-  (0, n.jsx)(i.ModalCloseButton, {
-    onClick: _,
-    className: d.closeButton
+  (0, o.jsx)(a.ModalCloseButton, {
+    onClick: d,
+    className: u.closeButton
   })
 ]
   });

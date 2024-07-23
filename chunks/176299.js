@@ -24,7 +24,7 @@ var i = n(735250),
   S = n(626421),
   C = n(118379),
   N = n(652515),
-  A = n(544978),
+  A = n(857428),
   v = n(194729),
   Z = n(668940),
   L = n(831565),
@@ -39,8 +39,8 @@ var i = n(735250),
   j = n(416568),
   U = n(613609),
   G = n(160404),
-  k = n(225675),
-  w = n(745052),
+  w = n(225675),
+  k = n(745052),
   B = n(285865),
   H = n(659971),
   V = n(179742),
@@ -67,7 +67,7 @@ var i = n(735250),
   ed = n(981631),
   eu = n(176505),
   e_ = n(290511),
-  eE = n(171200);
+  eE = n(264044);
 let eh = () => (0, i.jsx)('div', {
 className: eE.loader,
 children: (0, i.jsx)(_.Spinner, {})
@@ -105,7 +105,7 @@ createPromise: () => Promise.all([
   n.e('44156'),
   n.e('58227'),
   n.e('38359'),
-  n.e('21013')
+  n.e('84589')
 ]).then(n.bind(n, 603072)),
 webpackId: 603072,
 name: 'ChannelsAndRolesPage',
@@ -117,7 +117,7 @@ createPromise: () => Promise.all([
   n.e('44156'),
   n.e('19878'),
   n.e('38359'),
-  n.e('52190')
+  n.e('45030')
 ]).then(n.bind(n, 599263)),
 webpackId: 599263,
 name: 'GuildOnboardingPage',
@@ -140,7 +140,7 @@ let {
   if (null == s)
     return;
   let e = G.Z.getData(s);
-  if ((null == e ? void 0 : e.type) === k.z.SERVER_SHOP)
+  if ((null == e ? void 0 : e.type) === w.z.SERVER_SHOP)
     switch (e.initialTab) {
       case 'role_subscriptions':
         return A.y.GUILD_ROLE_SUBSCRIPTIONS;
@@ -267,7 +267,7 @@ return function(t) {
   }),
   eb = () => (0, i.jsx)(m.Z, {}),
   eP = () => (0, i.jsx)(F.Z, {}),
-  eM = () => (0, i.jsx)(w.Z, {}),
+  eM = () => (0, i.jsx)(k.Z, {}),
   eD = () => (0, i.jsx)(V.Z, {}),
   ey = e => {
 let {

@@ -1,4 +1,4 @@
-t.d(s, {
+s.d(t, {
   X8: function() {
 return u;
   },
@@ -8,11 +8,11 @@ return E;
   uj: function() {
 return o;
   }
-}), t(653041);
-var n = t(512722),
-  a = t.n(n),
-  i = t(981631),
-  r = t(689938);
+}), s(653041);
+var n = s(512722),
+  a = s.n(n),
+  i = s(981631),
+  r = s(689938);
 let o = () => {
 let e = Object.keys(i.gkr);
 return e[Math.floor(Math.random() * e.length)];
@@ -20,8 +20,8 @@ return e[Math.floor(Math.random() * e.length)];
   l = () => {
 let e = [];
 for (; e.length < 5;) {
-  let s = Math.floor(15 * Math.random());
-  !e.includes(s) && e.push(s);
+  let t = Math.floor(15 * Math.random());
+  !e.includes(t) && e.push(t);
 }
 return e;
   },
@@ -142,17 +142,17 @@ i.jsM
   ],
   E = () => {
 let e = _(),
-  s = c(),
-  t = d();
+  t = c(),
+  s = d();
 return l().map(n => {
-  let i = s[n],
-    r = t[n];
+  let i = t[n],
+    r = s[n];
   return a()(null != i && null != r, 'Invalid HypeSquad quiz question index'), {
     prompt: i,
-    options: r.map((s, t) => {
-      let n = e[t];
+    options: r.map((t, s) => {
+      let n = e[s];
       return a()(null !== n, 'Invalid HypeSquad quiz question option index'), {
-        copy: s,
+        copy: t,
         house: n
       };
     })

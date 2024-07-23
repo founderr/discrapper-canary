@@ -19,8 +19,8 @@ var i, a = n(735250),
   u = n(902704),
   _ = n(481060),
   E = n(904245),
-  I = n(637374),
-  m = n(626799),
+  m = n(637374),
+  I = n(626799),
   T = n(911969),
   h = n(624367),
   N = n(433074),
@@ -73,8 +73,8 @@ var i, a = n(735250),
   eu = n(594174),
   e_ = n(941797),
   eE = n(52824),
-  eI = n(592256),
-  em = n(626135),
+  em = n(592256),
+  eI = n(626135),
   eT = n(70956),
   eh = n(408433),
   eN = n(630388),
@@ -303,7 +303,7 @@ let {
 } = e, o = eu.default.getCurrentUser();
 return null != o && t.length > 0 ? t.map(e => (0, a.jsx)('div', {
   className: eW.giftCodeContainer,
-  children: (0, a.jsx)(I.Z, {
+  children: (0, a.jsx)(m.Z, {
     code: e,
     author: n,
     channelId: i,
@@ -372,15 +372,15 @@ let {
   inlineAttachmentMedia: d,
   onMediaItemContextMenu: u,
   shouldHideMediaOptions: _
-} = this.props, E = l.map(t => (0, eI.j9)(t, (0, P.s)(e, {
+} = this.props, E = l.map(t => (0, em.j9)(t, (0, P.s)(e, {
   type: 'attachment',
   attachmentId: t.id
-}), _, s)).filter(ef.lm), I = {
+}), _, s)).filter(ef.lm), m = {
   source: 'Media Mosaic',
   guild_id: i.guild_id,
   channel_id: i.id,
   channel_type: i.type
-}, m = E.length > 1 ? (0, eI.Cx)(E, I) : {}, T = (0, eN.yE)(n, ew.iLy.IS_VOICE_MESSAGE);
+}, I = E.length > 1 ? (0, em.Cx)(E, m) : {}, T = (0, eN.yE)(n, ew.iLy.IS_VOICE_MESSAGE);
 
 function h(e, t) {
   return (0, eg.dn)(e.originalItem, t);
@@ -405,7 +405,7 @@ let N = l.map(t => {
         renderGenericFileComponent: eP.ZK,
         renderMosaicItemFooter: eP.L9,
         onPlay: (e, n, a) => {
-          em.default.track(ew.rMx.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
+          eI.default.track(ew.rMx.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
             guild_id: i.guild_id,
             channel_id: i.id,
             channel_type: i.type,
@@ -421,7 +421,7 @@ let N = l.map(t => {
         proxyURL: t.proxy_url,
         url: t.url
       });
-    return s in m && (a.onClick = m[s]), a;
+    return s in I && (a.onClick = I[s]), a;
   }),
   f = r ? (0, a.jsx)(D.Z, {
     className: eY.hideIfMessageNotFocused,
@@ -455,7 +455,7 @@ return 0 !== e.embeds.length && t ? e.embeds.map((t, n) => {
     if (null != s && null != s.pathname) {
       let r = s.pathname.split('/')[3];
       if (null != r)
-        return (0, a.jsx)(m.Z, {
+        return (0, a.jsx)(I.Z, {
           skuId: r,
           renderFallback: () => this.renderEmbed(t, n, i, e.id, e.channel_id)
         }, t.id);
@@ -686,8 +686,8 @@ let {
 } = this.props, {
   showSuppressModal: s,
   showRemoveAttachmentModal: r
-} = this.state, o = this.renderCodedLinks(t), c = this.renderGiftCodes(t), d = this.renderReferralTrial(t), u = this.renderAttachments(t), _ = this.renderCtaButton(), E = this.renderSocialProofingFileSizeNitroUpsell(t), I = this.renderEmbeds(t), m = this.renderActivityInvite(t), T = this.renderReactions(t), h = this.renderPublishBump(t), N = this.renderEphemeralAccessories(t), f = this.renderStickersAccessories(t), p = this.renderThreadAccessories(t), C = this.renderComponentAccessories(t), g = this.renderThreadRoleMentionWarning(t), S = this.renderEmbeddedApplicationInstanceEmbed(t), A = this.renderInteractionPremiumUpsell(t), R = this.renderMediaPostEmbeds(t), x = this.renderSafetyPolicyNotice(t), O = this.renderSafetySystemNotification(t), M = this.renderVoiceChannelInvite(t, n), v = this.renderMediaObscureNotice(t), L = this.renderPoll(t, i), Z = this.renderForwardedMessage(t);
-return null == o && null == u && null == I && null == m && null == T && null == c && null == d && null == h && null == N && null == f && null == p && null == C && null == S && null == g && null == R && null == x && null != A && null == L && null == M && null == Z ? null : (0, a.jsxs)('div', {
+} = this.state, o = this.renderCodedLinks(t), c = this.renderGiftCodes(t), d = this.renderReferralTrial(t), u = this.renderAttachments(t), _ = this.renderCtaButton(), E = this.renderSocialProofingFileSizeNitroUpsell(t), m = this.renderEmbeds(t), I = this.renderActivityInvite(t), T = this.renderReactions(t), h = this.renderPublishBump(t), N = this.renderEphemeralAccessories(t), f = this.renderStickersAccessories(t), p = this.renderThreadAccessories(t), C = this.renderComponentAccessories(t), g = this.renderThreadRoleMentionWarning(t), S = this.renderEmbeddedApplicationInstanceEmbed(t), A = this.renderInteractionPremiumUpsell(t), R = this.renderMediaPostEmbeds(t), x = this.renderSafetyPolicyNotice(t), O = this.renderSafetySystemNotification(t), M = this.renderVoiceChannelInvite(t, n), v = this.renderMediaObscureNotice(t), L = this.renderPoll(t, i), Z = this.renderForwardedMessage(t);
+return null == o && null == u && null == m && null == I && null == T && null == c && null == d && null == h && null == N && null == f && null == p && null == C && null == S && null == g && null == R && null == x && null != A && null == L && null == M && null == Z ? null : (0, a.jsxs)('div', {
   id: (0, eb.bX)(t),
   className: l()(e, eW.container),
   children: [
@@ -700,9 +700,9 @@ return null == o && null == u && null == I && null == m && null == T && null == 
     R,
     u,
     _,
-    I,
-    v,
     m,
+    v,
+    I,
     f,
     C,
     S,
@@ -811,7 +811,7 @@ channel: n,
 message: i,
 renderSuppressEmbeds: s,
 isMessageSnapshot: r
-  } = e, l = (0, c.e7)([el.default], () => el.default.getId()), o = er.x4.useSetting(), d = er.RS.useSetting(), u = er.NA.useSetting() && !(0, eR.Z)(e.message), _ = er.nc.useSetting(), E = er.QK.useSetting(), I = (0, c.e7)([ec.Z], () => null == n.guild_id || ec.Z.canChatInGuild(n.guild_id), [n]), m = (0, c.e7)([w.Z], () => null != n.guild_id && w.Z.isLurking(n.guild_id), [n]), T = (0, c.e7)([eo.ZP], () => eo.ZP.isCurrentUserGuest(n.guild_id), [n]), h = (0, c.e7)([
+  } = e, l = (0, c.e7)([el.default], () => el.default.getId()), o = er.x4.useSetting(), d = er.RS.useSetting(), u = er.NA.useSetting() && !(0, eR.Z)(e.message), _ = er.nc.useSetting(), E = er.QK.useSetting(), m = (0, c.e7)([ec.Z], () => null == n.guild_id || ec.Z.canChatInGuild(n.guild_id), [n]), I = (0, c.e7)([w.Z], () => null != n.guild_id && w.Z.isLurking(n.guild_id), [n]), T = (0, c.e7)([eo.ZP], () => eo.ZP.isCurrentUserGuest(n.guild_id), [n]), h = (0, c.e7)([
 eo.ZP,
 eu.default
   ], () => {
@@ -822,17 +822,17 @@ return null !== (t = null != n.guild_id && null != i ? null === (e = eo.ZP.getMe
 canAddNewReactions: N,
 canManageMessages: f
   } = (0, c.cj)([ed.Z], () => ({
-canAddNewReactions: I && ed.Z.can(ew.Plq.ADD_REACTIONS, n),
+canAddNewReactions: m && ed.Z.can(ew.Plq.ADD_REACTIONS, n),
 canManageMessages: ed.Z.can(ew.Plq.MANAGE_MESSAGES, n)
   }), [
-I,
+m,
 n
   ]), p = (0, j.ux)(n.guild_id), [, C] = (0, U.AB)(n.guild_id), g = (0, ea.$R)(n), S = (l === i.author.id || f) && i.author.id !== ew.LAt && !1 !== s && !(0, eN.yE)(i.flags, ew.iLy.EPHEMERAL) && g && 1 === (0, eA.Z)(i), A = l === i.author.id && g && !r, R = i.author.id === l, M = i.isFirstMessageInForumPost(n), v = (0, ex.Z)({
 channel: n,
-canChat: I,
+canChat: m,
 renderReactions: _,
 canAddNewReactions: N,
-isLurking: m,
+isLurking: I,
 isGuest: T,
 communicationDisabled: C,
 isActiveChannelOrUnarchivableThread: g,
@@ -848,9 +848,9 @@ canDeleteAttachments: A,
 ...v,
 disableReactionReads: !!M || v.disableReactionReads,
 ...e,
-isLurking: m && I,
-isGuest: T && I,
-isPendingMember: h && I,
+isLurking: I && m,
+isGuest: T && m,
+isPendingMember: h && m,
 isCurrentUser: R,
 inlineAttachmentMedia: o,
 inlineEmbedMedia: d,
@@ -881,7 +881,7 @@ renderThreadAccessory: l = !1,
 disableReactionCreates: o = !0,
 disableReactionUpdates: c = !0,
 ...d
-  } = e, u = er.x4.useSetting(), _ = er.RS.useSetting(), E = er.NA.useSetting(), I = er.QK.useSetting(), m = (0, V.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), T = (0, z.Z)(null == i ? void 0 : i.id), h = (0, x.V)(i.id, n.author.id), N = (0, O.r)(n.id), f = (0, Q.Z)(n);
+  } = e, u = er.x4.useSetting(), _ = er.RS.useSetting(), E = er.NA.useSetting(), m = er.QK.useSetting(), I = (0, V.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), T = (0, z.Z)(null == i ? void 0 : i.id), h = (0, x.V)(i.id, n.author.id), N = (0, O.r)(n.id), f = (0, Q.Z)(n);
   return (0, a.jsx)(e0, {
 ...d,
 message: n,
@@ -896,10 +896,10 @@ renderThreadAccessory: l,
 inlineAttachmentMedia: u,
 inlineEmbedMedia: _,
 renderEmbeds: E,
-gifAutoPlay: I,
+gifAutoPlay: m,
 poll: f,
-showListsAndHeaders: m,
-showMaskedLinks: m,
+showListsAndHeaders: I,
+showMaskedLinks: I,
 shouldHideMediaOptions: T,
 shouldRedactExplicitContent: h,
 shouldRenderCtaButton: N,

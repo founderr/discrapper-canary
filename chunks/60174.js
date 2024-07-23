@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(130402),
   _ = n(466794),
   E = n(659215),
-  I = n(222677),
-  m = n(995774),
+  m = n(222677),
+  I = n(995774),
   T = n(931651),
   h = n(594174),
   N = n(630388),
@@ -25,8 +25,8 @@ var i = n(735250),
   g = n(185923),
   S = n(474936),
   A = n(689938),
-  R = n(716862),
-  x = n(372178);
+  R = n(952527),
+  x = n(219021);
 
 function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -50,9 +50,9 @@ let {
 if (o || (0, N.yE)(t.flags, C.iLy.EPHEMERAL))
   return null;
 let E = h.default.getCurrentUser(),
-  I = (0, f.I5)(E),
-  m = c ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION;
-!I && c && (m = (0, i.jsx)(_.X, {
+  m = (0, f.I5)(E),
+  I = c ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION;
+!m && c && (I = (0, i.jsx)(_.X, {
   tooltipText: A.Z.Messages.ADD_BURST_REACTION
 }));
 let T = s ? x : R;
@@ -66,7 +66,7 @@ return (0, i.jsx)(d.Popout, {
       isShown: s
     } = t;
     return (0, i.jsx)(d.TooltipContainer, {
-      text: m,
+      text: I,
       color: d.TooltipColors.PRIMARY,
       'aria-label': c ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION,
       tooltipClassName: T.__invalid_addReactionTooltip,
@@ -112,7 +112,7 @@ super(...e), O(this, 'state', {
     message: i,
     isForumToolbar: a
   } = this.props;
-  (0, I.rU)(n.id, i.id, (0, m.g1)(e), a ? I.TW.FORUM_TOOLBAR : I.TW.MESSAGE, {
+  (0, m.rU)(n.id, i.id, (0, I.g1)(e), a ? m.TW.FORUM_TOOLBAR : m.TW.MESSAGE, {
     burst: t
   });
 }), O(this, 'handleReactionPickerToggle', () => {
@@ -130,7 +130,7 @@ super(...e), O(this, 'state', {
     analytics: {
       type: S.cd.BURST_REACTION_UPSELL,
       page: null != n.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
-      section: (0, m.s4)(n),
+      section: (0, I.s4)(n),
       object: C.qAy.INLINE_REACTION_PICKER_UPSELL
     }
   }), this.handleReactionPickerToggle();
@@ -146,7 +146,7 @@ super(...e), O(this, 'state', {
     ...n === p.O.BURST && {
       openPopoutType: 'message_super_reaction_emoji_picker',
       page: null != a.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
-      section: (0, m.s4)(a),
+      section: (0, I.s4)(a),
       object: C.qAy.REACTION_RAIL
     }
   }, l = (0, i.jsx)(T.$, {

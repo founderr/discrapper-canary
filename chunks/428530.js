@@ -10,7 +10,7 @@ var n = r(346652),
   o = r(410030),
   l = r(68588),
   c = r(981631),
-  s = r(979756);
+  s = r(535271);
 let d = {
   base00: i.Z.colors.BACKGROUND_SECONDARY.css,
   base03: i.Z.colors.TEXT_WARNING.css,

@@ -11,12 +11,12 @@ var a = n(120356),
   u = n(113434),
   _ = n(566078),
   E = n(667105),
-  I = n(689938),
-  m = n(787248);
-let T = e => 0 === e.length ? m.warning : m.danger,
-  h = (e, t) => 0 === e.length ? I.Z.Messages.QUESTS_LAUNCHED_GAME.format({
+  m = n(689938),
+  I = n(410301);
+let T = e => 0 === e.length ? I.warning : I.danger,
+  h = (e, t) => 0 === e.length ? m.Z.Messages.QUESTS_LAUNCHED_GAME.format({
 gameTitle: t
-  }) : I.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({
+  }) : m.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({
 gameTitle: t
   }),
   N = (e, t, n) => {
@@ -24,12 +24,12 @@ if (0 === e.length)
   return (0, i.jsx)(l.Text, {
     variant: 'text-sm/medium',
     color: 'text-muted',
-    children: I.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({
+    children: m.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({
       gameTitle: t
     })
   });
 let a = [
-  (0, c.isWeb)() ? I.Z.Messages.QUEST_PROGRESS_NO_GAME_WEB : I.Z.Messages.QUEST_PROGRESS_NO_GAME,
+  (0, c.isWeb)() ? m.Z.Messages.QUEST_PROGRESS_NO_GAME_WEB : m.Z.Messages.QUEST_PROGRESS_NO_GAME,
   ...e,
   n
 ];
@@ -51,7 +51,7 @@ n = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
 a = (0, E.k3)(e.quest.id, e.location),
 c = (0, E.g2)({
   useReducedMotion: n,
-  className: m.refreshIcon
+  className: I.refreshIcon
 }),
 {
   errorHints: f,
@@ -69,18 +69,18 @@ c = (0, E.g2)({
   afterRequest: c.stopAnimation
 });
   return (0, i.jsxs)('div', {
-className: s()(m.container, {
-  [m.inFlight]: p
+className: s()(I.container, {
+  [I.inFlight]: p
 }),
 children: [
   (0, i.jsxs)('div', {
-    className: m.info,
+    className: I.info,
     children: [
       (0, i.jsxs)('div', {
-        className: m.header,
+        className: I.header,
         children: [
           (0, i.jsx)(l.CircleExclamationPointIcon, {
-            className: s()(m.headerIcon, T(f)),
+            className: s()(I.headerIcon, T(f)),
             size: 'custom',
             color: 'currentColor',
             width: 16,
@@ -96,16 +96,16 @@ children: [
     ]
   }),
   (0, i.jsx)('div', {
-    className: m.cta,
+    className: I.cta,
     children: (0, i.jsx)(l.Button, {
       color: l.ButtonColors.PRIMARY,
       onClick: C,
       disabled: p,
       children: (0, i.jsxs)('div', {
-        className: m.ctaInner,
+        className: I.ctaInner,
         children: [
           c.render(),
-          I.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA
+          m.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA
         ]
       })
     })

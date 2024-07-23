@@ -1,18 +1,18 @@
-var n = t(735250);
-t(470079);
-var a = t(325767);
-s.Z = e => {
+var n = s(735250);
+s(470079);
+var a = s(325767);
+t.Z = e => {
   let {
-width: s = 24,
-height: t = 24,
+width: t = 24,
+height: s = 24,
 color: i = 'currentColor',
 className: r,
 foreground: o,
 ...l
   } = e;
   return (0, n.jsx)('svg', {
-width: s,
-height: t,
+width: t,
+height: s,
 viewBox: '0 0 24 24',
 className: r,
 ...(0, a.Z)(l),

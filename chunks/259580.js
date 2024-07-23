@@ -4,7 +4,7 @@ var i = n(120356),
   a = n.n(i),
   s = n(481060),
   o = n(325767),
-  l = n(509682);
+  l = n(543175);
 let u = {
 UP: l.directionUp,
 RIGHT: l.directionRight,

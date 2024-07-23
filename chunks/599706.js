@@ -11,8 +11,8 @@ var a = n(392711),
   u = n(463618),
   _ = n(823379),
   E = n(981631),
-  I = n(809079);
-let m = (0, l.Z)(e => {
+  m = n(607746);
+let I = (0, l.Z)(e => {
   let {
 member: t,
 empty: n,
@@ -21,13 +21,13 @@ guildId: s
   } = e;
   if (n)
 return (0, i.jsx)('div', {
-  className: I.partyMemberEmpty
+  className: m.partyMemberEmpty
 });
   if (null == t)
 return (0, i.jsx)('div', {
-  className: I.partyMemberUnknown,
+  className: m.partyMemberUnknown,
   children: (0, i.jsx)(u.Z, {
-    className: I.partyMemberUnknownIcon
+    className: m.partyMemberUnknownIcon
   })
 });
   let l = {
@@ -37,7 +37,7 @@ location: {
 }
   };
   return (0, i.jsx)('div', {
-className: I.partyMemberKnown,
+className: m.partyMemberKnown,
 children: (0, i.jsx)(r.Popout, {
   preload: () => (0, c.W)(t.id, t.getAvatarURL(s, 80), {
     guildId: s
@@ -56,7 +56,7 @@ children: (0, i.jsx)(r.Popout, {
     src: t.getAvatarURL(s, 24),
     'aria-label': t.username,
     size: r.AvatarSizes.SIZE_24,
-    className: I.partyMember
+    className: m.partyMember
   })
 })
   });
@@ -75,36 +75,36 @@ knownSize: d
   } = t;
   if (c < a)
 return null;
-  let u = s()(n).filter(_.lm).take(r).map(e => (0, i.jsx)(m, {
+  let u = s()(n).filter(_.lm).take(r).map(e => (0, i.jsx)(I, {
 member: e,
 guildId: l
   }, e.id)).value();
   for (let e = 0; e < o && u.length < r; e++)
-u.push((0, i.jsx)(m, {
+u.push((0, i.jsx)(I, {
   guildId: l
 }, 'unknown-member-'.concat(e)));
   let E = c - d - o;
   for (let e = 0; e < E && u.length < r; e++)
-u.push((0, i.jsx)(m, {
+u.push((0, i.jsx)(I, {
   empty: !0,
   guildId: l
 }, 'empty-member-'.concat(e)));
   let T = Math.max(Math.min(c - u.length, 99), 0);
   if (1 === T) {
 let e = n[r];
-u.push((0, i.jsx)(m, {
+u.push((0, i.jsx)(I, {
   member: e,
   guildId: l
 }, e.id));
   }
   return (0, i.jsx)('div', {
-className: I.wrapper,
+className: m.wrapper,
 children: (0, i.jsxs)('div', {
-  className: I.partyMembers,
+  className: m.partyMembers,
   children: [
     u,
     T > 1 ? (0, i.jsxs)('div', {
-      className: I.partyMemberOverflow,
+      className: m.partyMemberOverflow,
       children: [
         '+',
         T

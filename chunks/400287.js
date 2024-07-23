@@ -1,35 +1,35 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
 return N;
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(120356),
-  i = t.n(a),
-  r = t(481060),
-  o = t(100527),
-  l = t(906732),
-  c = t(454585),
-  d = t(921801),
-  _ = t(626135),
-  E = t(695346),
-  u = t(726985),
-  T = t(981631),
-  I = t(689938),
-  S = t(549856);
+var n = s(735250);
+s(470079);
+var a = s(120356),
+  i = s.n(a),
+  r = s(481060),
+  o = s(100527),
+  l = s(906732),
+  c = s(454585),
+  d = s(921801),
+  _ = s(626135),
+  E = s(695346),
+  u = s(726985),
+  T = s(981631),
+  I = s(689938),
+  S = s(224499);
 
 function N() {
   let e = E.up.useSetting(),
-s = E.fq.useSetting(),
-t = E.R$.useSetting(),
+t = E.fq.useSetting(),
+s = E.R$.useSetting(),
 a = E.cC.useSetting(),
 N = E.vF.useSetting(),
 C = E.H1.useSetting(),
 m = E.ev.useSetting(),
 A = E.x4.useSetting(),
-h = E.RS.useSetting(),
-g = E.NA.useSetting(),
+g = E.RS.useSetting(),
+h = E.NA.useSetting(),
 O = E.nc.useSetting(),
 {
   analyticsLocations: p
@@ -49,7 +49,7 @@ children: [
         setting: u.s6.CHAT_INLINE_MEDIA_LINKS,
         children: (0, n.jsx)(r.FormSwitch, {
           className: i()(S.marginTop8, S.marginBottom20),
-          value: h,
+          value: g,
           onChange: E.RS.updateSetting,
           children: I.Z.Messages.INLINE_EMBED_MEDIA
         })
@@ -89,7 +89,7 @@ children: [
         setting: u.s6.CHAT_EMBEDS_LINK_PREVIEWS,
         children: (0, n.jsx)(r.FormSwitch, {
           className: i()(S.marginTop8, S.marginBottom40),
-          value: g,
+          value: h,
           onChange: E.NA.updateSetting,
           children: I.Z.Messages.RENDER_EMBEDS
         })
@@ -139,7 +139,7 @@ children: [
             className: i()(S.marginTop8, S.marginBottom20),
             value: e,
             note: I.Z.Messages.AUTO_SUGGEST_STICKERS_DESCRIPTION,
-            onChange: s => {
+            onChange: t => {
               _.default.track(T.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
                 enabled: !e,
                 location: {
@@ -155,7 +155,7 @@ children: [
           setting: u.s6.CHAT_STICKERS_AUTOCOMPLETE,
           children: (0, n.jsx)(r.FormSwitch, {
             className: S.marginBottom40,
-            value: s,
+            value: t,
             note: I.Z.Messages.INCLUDE_STICKER_RESULTS_IN_AUTOCOMPLETE,
             onChange: e => {
               _.default.track(T.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
@@ -185,7 +185,7 @@ children: [
           setting: u.s6.CHAT_TEXT_BOX_PREVIEW,
           children: (0, n.jsx)(r.FormSwitch, {
             className: i()(S.marginTop8, S.marginBottom40),
-            value: t,
+            value: s,
             onChange: e => {
               _.default.track(T.rMx.PREVIEW_MARKDOWN_TOGGLED, {
                 enabled: e,

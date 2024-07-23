@@ -7,7 +7,7 @@ t.Z = function(e) {
   let {
 match: t,
 location: n
-  } = e, l = async (e, t) => {
+  } = e, o = async (e, t) => {
 await (0, r.s)(a.jE.CHANNEL, {
   guildId: e.params.guildId,
   channelId: e.params.channelId,
@@ -18,6 +18,6 @@ await (0, r.s)(a.jE.CHANNEL, {
   return (0, s.jsx)(i.Z, {
 match: t,
 location: n,
-attemptDeepLink: l
+attemptDeepLink: o
   });
 };

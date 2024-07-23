@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(230711),
   _ = n(568836),
   E = n(730749),
-  I = n(112724),
-  m = n(607070),
+  m = n(112724),
+  I = n(607070),
   T = n(884697),
   h = n(479446),
   N = n(930114),
@@ -388,7 +388,7 @@ super(...e), G(this, 'handleViewLibrary', e => {
 });
   }
 }
-let H = (0, I.Z)((0, E.Z)(V));
+let H = (0, m.Z)((0, E.Z)(V));
 t.Z = c.ZP.connectStores([
   g.Z,
   x.Z,
@@ -396,13 +396,13 @@ t.Z = c.ZP.connectStores([
   S.Z,
   R.Z,
   C.default,
-  m.Z
+  I.Z
 ], e => {
   let {
 code: t,
 author: n,
 currentUser: i
-  } = e, a = g.Z.get(t), s = null != a ? x.Z.get(a.skuId) : null, r = null != a && null != a.userId ? A.default.getUser(a.userId) : null, l = m.Z.useReducedMotion;
+  } = e, a = g.Z.get(t), s = null != a ? x.Z.get(a.skuId) : null, r = null != a && null != a.userId ? A.default.getUser(a.userId) : null, l = I.Z.useReducedMotion;
   return {
 sku: s,
 giftCode: a,

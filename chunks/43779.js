@@ -19,7 +19,7 @@ var i = n(735250),
   m = n(69439),
   g = n(46140),
   p = n(689938),
-  T = n(855892);
+  T = n(803162);
 let f = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 
 function S(e) {
@@ -76,7 +76,7 @@ G = s.useMemo(() => {
   N,
   L
 ]),
-k = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
+w = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
   return (0, i.jsxs)('div', {
 className: r()(T.container, {
   [T.hoveredHeight]: y && N,
@@ -97,7 +97,7 @@ children: [
             className: T.confetti,
             loop: !1,
             autoplay: !1,
-            shouldAnimate: !k
+            shouldAnimate: !w
           }),
           (0, i.jsx)(h.Z, {
             quest: S,

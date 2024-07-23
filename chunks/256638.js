@@ -17,8 +17,8 @@ var i = n(735250),
   u = n(893776),
   _ = n(117266),
   E = n(37234),
-  I = n(254854),
-  m = n(195500),
+  m = n(254854),
+  I = n(195500),
   T = n(287734),
   h = n(205355),
   N = n(558381),
@@ -71,8 +71,8 @@ var i = n(735250),
   eu = n(474936),
   e_ = n(610674),
   eE = n(65154),
-  eI = n(689938),
-  em = n(66740);
+  em = n(689938),
+  eI = n(66740);
 let eT = () => (0, i.jsxs)(c.Notice, {
 color: c.NoticeColors.DANGER,
 children: [
@@ -81,10 +81,10 @@ children: [
       eN(), (0, ec.b)();
     }
   }),
-  eI.Z.Messages.NOTICE_NO_INPUT_DETECTED,
+  em.Z.Messages.NOTICE_NO_INPUT_DETECTED,
   (0, i.jsx)(c.NoticeButtonAnchor, {
     href: er.Z.getArticleURL(ed.BhN.NO_INPUT_DETECTED),
-    children: eI.Z.Messages.NOTICE_NO_INPUT_DETECTED_HELP_LINK_TEXT
+    children: em.Z.Messages.NOTICE_NO_INPUT_DETECTED_HELP_LINK_TEXT
   })
 ]
   }),
@@ -96,24 +96,24 @@ children: [
       eN(), (0, ec.b)();
     }
   }),
-  eI.Z.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS,
+  em.Z.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS,
   (0, i.jsx)(c.NoticeButton, {
     onClick: () => {
       (0, E.jN)(ed.S9g.USER_SETTINGS), g.Z.setSection(ed.oAB.VOICE);
     },
-    children: eI.Z.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS_LINK_TEXT
+    children: em.Z.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS_LINK_TEXT
   })
 ]
   });
 
 function eN(e) {
-  I.Z.dismiss(null != e ? {
+  m.Z.dismiss(null != e ? {
 untilAtLeast: r()(e)
   } : void 0);
 }
 let ef = 12633 == n.j ? a.memo(function() {
   var e, t, s;
-  let I = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()),
+  let m = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()),
 A = (0, o.e7)([$.Z], () => $.Z.getGuildId()),
 ec = (0, o.e7)([ei.Z], () => ei.Z.getNotice()),
 ef = (0, o.e7)([q.Z], () => q.Z.getGuild(A)),
@@ -182,7 +182,7 @@ case ed.kVF.WIN32_DEPRECATED_MESSAGE:
         onClick: () => eN(ex),
         noticeType: ed.kVF.WIN32_DEPRECATED_MESSAGE
       }),
-      eI.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({
+      em.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({
         helpCenterLink: er.Z.getArticleURL(ed.BhN.WIN32_DEPRECATE)
       })
     ]
@@ -198,7 +198,7 @@ case ed.kVF.WIN7_8_DEPRECATED_MESSAGE:
         onClick: () => eN(eO),
         noticeType: ed.kVF.WIN7_8_DEPRECATED_MESSAGE
       }),
-      eI.Z.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({
+      em.Z.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({
         helpCenterLink: er.Z.getArticleURL(ed.BhN.WIN7_8_DEPRECATE)
       })
     ]
@@ -214,7 +214,7 @@ case ed.kVF.MACOS_17_18_DEPRECATED_MESSAGE:
         onClick: () => eN(eM),
         noticeType: ed.kVF.MACOS_17_18_DEPRECATED_MESSAGE
       }),
-      eI.Z.Messages.MACOS_DEPRECATED_WARNING.format({
+      em.Z.Messages.MACOS_DEPRECATED_WARNING.format({
         helpCenterLink: er.Z.getArticleURL(ed.BhN.MACOS_17_18_DEPRECATE)
       })
     ]
@@ -257,18 +257,18 @@ case ed.kVF.VOICE_DISABLED:
     children: [
       (0, i.jsx)(c.NoticeCloseButton, {
         onClick: () => {
-          m.Z.clearRemoteDisconnectVoiceChannelId(), eN();
+          I.Z.clearRemoteDisconnectVoiceChannelId(), eN();
         },
         noticeType: ed.kVF.VOICE_DISABLED
       }),
-      eI.Z.Messages.NOTICE_CONNECTION_CONFLICT,
+      em.Z.Messages.NOTICE_CONNECTION_CONFLICT,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         onClick: () => {
           let e = J.Z.getRemoteDisconnectVoiceChannelId();
           null != e && null != Q.Z.getChannel(e) && T.default.selectVoiceChannel(e);
         },
         noticeType: ed.kVF.VOICE_DISABLED,
-        children: eI.Z.Messages.RECONNECT
+        children: em.Z.Messages.RECONNECT
       })
     ]
   });
@@ -278,18 +278,18 @@ case ed.kVF.VOICE_CONNECTED_LAST_SESSION:
     children: [
       (0, i.jsx)(c.NoticeCloseButton, {
         onClick: () => {
-          m.Z.clearLastSessionVoiceChannelId(), eN();
+          I.Z.clearLastSessionVoiceChannelId(), eN();
         },
         noticeType: ed.kVF.VOICE_CONNECTED_LAST_SESSION
       }),
-      eI.Z.Messages.NOTICE_VOICE_CONNECTED_LAST_SESSION,
+      em.Z.Messages.NOTICE_VOICE_CONNECTED_LAST_SESSION,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         onClick: () => {
           let e = J.Z.getLastSessionVoiceChannelId();
           null != e && null != Q.Z.getChannel(e) && T.default.selectVoiceChannel(e);
         },
         noticeType: ed.kVF.VOICE_CONNECTED_LAST_SESSION,
-        children: eI.Z.Messages.RECONNECT
+        children: em.Z.Messages.RECONNECT
       })
     ]
   });
@@ -304,20 +304,20 @@ case ed.kVF.SPOTIFY_AUTO_PAUSED:
       }),
       (0, i.jsx)('img', {
         alt: '',
-        className: em.platformIcon,
+        className: eI.platformIcon,
         src: ev.icon.whiteSVG
       }),
-      eI.Z.Messages.NOTICE_SPOTIFY_AUTO_PAUSED,
+      em.Z.Messages.NOTICE_SPOTIFY_AUTO_PAUSED,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         onClick: () => g.Z.open(ed.oAB.VOICE),
         noticeType: ed.kVF.SPOTIFY_AUTO_PAUSED,
-        children: eI.Z.Messages.VOICE_SETTINGS
+        children: em.Z.Messages.VOICE_SETTINGS
       }),
       (0, i.jsx)(c.Anchor, {
-        className: em.textLinkSmall,
+        className: eI.textLinkSmall,
         href: er.Z.getArticleURL(ed.BhN.SPOTIFY_AUTO_PAUSED),
         target: '_blank',
-        children: eI.Z.Messages.NOTICE_WHATS_THIS
+        children: em.Z.Messages.NOTICE_WHATS_THIS
       })
     ]
   });
@@ -325,11 +325,11 @@ case ed.kVF.UNCLAIMED_ACCOUNT:
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.DEFAULT,
     children: [
-      eI.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT,
+      em.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: ed.kVF.UNCLAIMED_ACCOUNT,
         onClick: () => eg && null != A ? (0, j.hk)(A) : O.j(),
-        children: eI.Z.Messages.CLAIM_ACCOUNT
+        children: em.Z.Messages.CLAIM_ACCOUNT
       })
     ]
   });
@@ -337,20 +337,20 @@ case ed.kVF.UNVERIFIED_ACCOUNT:
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.DEFAULT,
     children: [
-      eI.Z.Messages.NOTICE_UNVERIFIED_ACCOUNT_UU,
+      em.Z.Messages.NOTICE_UNVERIFIED_ACCOUNT_UU,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: ed.kVF.UNVERIFIED_ACCOUNT,
         onClick: () => {
           u.Z.verifyResend(), d.Z.show({
-            title: eI.Z.Messages.VERIFICATION_EMAIL_TITLE,
-            body: eI.Z.Messages.VERIFICATION_EMAIL_BODY.format({
-              email: null == I ? void 0 : I.email
+            title: em.Z.Messages.VERIFICATION_EMAIL_TITLE,
+            body: em.Z.Messages.VERIFICATION_EMAIL_BODY.format({
+              email: null == m ? void 0 : m.email
             }),
-            secondaryConfirmText: eI.Z.Messages.CHANGE_EMAIL,
+            secondaryConfirmText: em.Z.Messages.CHANGE_EMAIL,
             onConfirmSecondary: O.j
           });
         },
-        children: eI.Z.Messages.RESEND_EMAIL_SHORT
+        children: em.Z.Messages.RESEND_EMAIL_SHORT
       })
     ]
   });
@@ -364,10 +364,10 @@ case ed.kVF.SCHEDULED_MAINTENANCE:
         onClick: () => h.Z.ackScheduledMaintenance(),
         noticeType: ed.kVF.SCHEDULED_MAINTENANCE
       }),
-      eI.Z.Messages.NOTICE_SCHEDULED_MAINTENANCE.format(ec.metadata),
+      em.Z.Messages.NOTICE_SCHEDULED_MAINTENANCE.format(ec.metadata),
       (0, i.jsx)(c.NoticeButtonAnchor, {
         href: ''.concat(ed.yXt.STATUS, '/incidents/').concat(ec.metadata.id),
-        children: eI.Z.Messages.LEARN_MORE
+        children: em.Z.Messages.LEARN_MORE
       })
     ]
   });
@@ -385,7 +385,7 @@ case ed.kVF.HARDWARE_MUTE:
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.DANGER,
     children: [
-      eI.Z.Messages.NOTICE_HARDWARE_MUTE.format({
+      em.Z.Messages.NOTICE_HARDWARE_MUTE.format({
         vendorName: eL.name,
         modelName: eZ.name
       }),
@@ -393,7 +393,7 @@ case ed.kVF.HARDWARE_MUTE:
         href: eZ.url,
         target: '_blank',
         rel: 'noreferrer noopener',
-        children: eI.Z.Messages.SUPPORT
+        children: em.Z.Messages.SUPPORT
       })
     ]
   });
@@ -405,11 +405,11 @@ case ed.kVF.STREAMER_MODE:
         onClick: () => eN(),
         noticeType: ed.kVF.STREAMER_MODE
       }),
-      eI.Z.Messages.NOTICE_STREAMER_MODE_TEXT,
+      em.Z.Messages.NOTICE_STREAMER_MODE_TEXT,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         onClick: () => f.Z.setEnabled(!1),
         noticeType: ed.kVF.STREAMER_MODE,
-        children: eI.Z.Messages.DISABLE
+        children: em.Z.Messages.DISABLE
       })
     ]
   });
@@ -422,12 +422,12 @@ case ed.kVF.H264_DISABLED:
           eN();
         }
       }),
-      eI.Z.Messages.NOTICE_H264_DISABLED_SETTINGS,
+      em.Z.Messages.NOTICE_H264_DISABLED_SETTINGS,
       (0, i.jsx)(c.NoticeButton, {
         onClick: () => {
           (0, E.jN)(ed.S9g.USER_SETTINGS), g.Z.setSection(ed.oAB.VOICE);
         },
-        children: eI.Z.Messages.NOTICE_H264_DISABLED_SETTINGS_LINK_TEXT
+        children: em.Z.Messages.NOTICE_H264_DISABLED_SETTINGS_LINK_TEXT
       })
     ]
   });
@@ -453,9 +453,9 @@ case ed.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
       (0, i.jsx)(c.NitroWheelIcon, {
         size: 'md',
         color: 'currentColor',
-        className: em.premiumIcon
+        className: eI.premiumIcon
       }),
-      eI.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_MESSAGE.format({
+      em.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_MESSAGE.format({
         applicationName: ej.name,
         skuName: eD.name
       }),
@@ -476,7 +476,7 @@ case ed.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
           analyticsLocationObject: eU,
           context: __OVERLAY__ ? ed.IlC.OVERLAY : ed.IlC.APP
         }).then(() => _.Z(eD.id)),
-        children: eI.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_BUTTON
+        children: em.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_BUTTON
       })
     ]
   });
@@ -499,9 +499,9 @@ case ed.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL: {
       (0, i.jsx)(c.NitroWheelIcon, {
         size: 'md',
         color: 'currentColor',
-        className: em.premiumIcon
+        className: eI.premiumIcon
       }),
-      eI.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_NO_PREMIUM_PERK_MESSAGE.format({
+      em.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_NO_PREMIUM_PERK_MESSAGE.format({
         applicationName: a.name,
         skuName: n.name
       }),
@@ -514,7 +514,7 @@ case ed.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL: {
               scrollRestoration: !1
             }
           },
-          children: eI.Z.Messages.LEARN_MORE
+          children: em.Z.Messages.LEARN_MORE
         })
       })
     ]
@@ -560,18 +560,18 @@ case ed.kVF.SERVER_USAGE_SURVEY:
           eN();
         }
       }),
-      eI.Z.Messages.SERVER_USAGE_SURVEY_BODY.format({
+      em.Z.Messages.SERVER_USAGE_SURVEY_BODY.format({
         guildName: null !== (t = null == ef ? void 0 : ef.name) && void 0 !== t ? t : 'this server'
       }),
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: ed.kVF.SERVER_USAGE_SURVEY,
         onClick: () => {
-          window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == I ? void 0 : I.id, '&guild_id=').concat(null == ef ? void 0 : ef.id), '_blank'), eN();
+          window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == m ? void 0 : m.id, '&guild_id=').concat(null == ef ? void 0 : ef.id), '_blank'), eN();
         },
         additionalTrackingProps: {
           guild_id: null == ef ? void 0 : ef.id
         },
-        children: eI.Z.Messages.SERVER_USAGE_SURVEY_CTA
+        children: em.Z.Messages.SERVER_USAGE_SURVEY_CTA
       })
     ]
   });
@@ -579,11 +579,11 @@ case ed.kVF.CORRUPT_INSTALLATION:
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.DANGER,
     children: [
-      eI.Z.Messages.NOTICE_CORRUPT_INSTALLATION,
+      em.Z.Messages.NOTICE_CORRUPT_INSTALLATION,
       (0, i.jsx)(c.NoticeButtonAnchor, {
         href: er.Z.getArticleURL(ed.BhN.CORRUPT_INSTALLATION),
         target: '_blank',
-        children: eI.Z.Messages.NOTICE_CORRUPT_INSTALLATION_HELP_LINK_TEXT
+        children: em.Z.Messages.NOTICE_CORRUPT_INSTALLATION_HELP_LINK_TEXT
       })
     ]
   });
@@ -595,7 +595,7 @@ case ed.kVF.VIDEO_UNSUPPORTED_BROWSER:
         onClick: () => eN(),
         noticeType: ed.kVF.VIDEO_UNSUPPORTED_BROWSER
       }),
-      eI.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,
+      em.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: ed.kVF.VIDEO_UNSUPPORTED_BROWSER,
         onClick: () => {
@@ -609,7 +609,7 @@ case ed.kVF.VIDEO_UNSUPPORTED_BROWSER:
             });
           });
         },
-        children: eI.Z.Messages.DOWNLOAD
+        children: em.Z.Messages.DOWNLOAD
       })
     ]
   });
@@ -637,7 +637,7 @@ case ed.kVF.DISPATCH_ERROR:
             ...t
           });
         }),
-        children: eI.Z.Messages.LEARN_MORE
+        children: em.Z.Messages.LEARN_MORE
       })
     ]
   });
@@ -659,17 +659,17 @@ case ed.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS:
       (0, i.jsxs)(ea.Z, {
         justify: ea.Z.Justify.CENTER,
         children: [
-          null != eG ? eI.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
+          null != eG ? em.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
             name: ''.concat(eG),
             progress: ''.concat(eB),
             total: ''.concat(ek)
-          }) : eI.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS.format({
+          }) : em.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS.format({
             progress: ''.concat(eB),
             total: ''.concat(ek)
           }),
           (0, i.jsx)(c.Spinner, {
             type: c.Spinner.Type.PULSING_ELLIPSIS,
-            className: em.ellipsis
+            className: eI.ellipsis
           })
         ]
       })
@@ -686,7 +686,7 @@ case ed.kVF.APPLICATION_TEST_MODE:
         align: ea.Z.Align.CENTER,
         children: [
           (0, i.jsx)('div', {
-            children: eI.Z.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({
+            children: em.Z.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({
               applicationName: ec.metadata.applicationName
             })
           }),
@@ -704,13 +704,13 @@ case ed.kVF.APPLICATION_TEST_MODE:
       align: ea.Z.Align.CENTER,
       children: [
         (0, i.jsx)('div', {
-          children: eI.Z.Messages.NOTICE_APPLICATION_TEST_MODE.format({
+          children: em.Z.Messages.NOTICE_APPLICATION_TEST_MODE.format({
             applicationName: ec.metadata.applicationName
           })
         }),
         (0, i.jsx)(eo.Z, {
           dropdownSize: eo.E.DropdownSizes.SMALL,
-          className: em.testModeSKUSelector,
+          className: eI.testModeSKUSelector,
           color: eo.E.Colors.WHITE,
           look: eo.E.Looks.OUTLINED,
           size: eo.E.Sizes.MIN,
@@ -722,7 +722,7 @@ case ed.kVF.APPLICATION_TEST_MODE:
             }
           }),
           applicationId: ec.metadata.applicationId,
-          children: eI.Z.Messages.NOTICE_APPLICATION_TEST_MODE_GO_TO_LISTING
+          children: em.Z.Messages.NOTICE_APPLICATION_TEST_MODE_GO_TO_LISTING
         }),
         (0, i.jsx)(c.NoticeCloseButton, {
           onClick: C.mc,
@@ -749,13 +749,13 @@ case ed.kVF.PREMIUM_UNCANCEL:
       (0, i.jsx)(c.NitroWheelIcon, {
         size: 'md',
         color: 'currentColor',
-        className: em.premiumIcon
+        className: eI.premiumIcon
       }),
-      eA === eu.p9.TIER_1 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({
+      eA === eu.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({
         daysLeft: ec.metadata.daysLeft
-      }) : eA === eu.p9.TIER_0 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({
+      }) : eA === eu.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({
         daysLeft: ec.metadata.daysLeft
-      }) : eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({
+      }) : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({
         daysLeft: ec.metadata.daysLeft
       }),
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
@@ -781,7 +781,7 @@ case ed.kVF.PREMIUM_UNCANCEL:
             });
           });
         },
-        children: eA === eu.p9.TIER_1 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT : eA === eu.p9.TIER_0 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT : eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
+        children: eA === eu.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT : eA === eu.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
       })
     ]
   });
@@ -799,7 +799,7 @@ case ed.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
           eN(ew);
         }
       }),
-      eI.Z.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT_NO_ACTION.format({
+      em.Z.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT_NO_ACTION.format({
         daysPastDue: eF
       }),
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
@@ -807,7 +807,7 @@ case ed.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
         onClick: () => {
           eN(ew), g.Z.open(ed.oAB.SUBSCRIPTIONS);
         },
-        children: eI.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_RENEW_NOW_BUTTON_TEXT
+        children: em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_RENEW_NOW_BUTTON_TEXT
       })
     ]
   });
@@ -822,14 +822,14 @@ case ed.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT:
           eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
         }
       }),
-      eI.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_TEXT,
+      em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_TEXT,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: ed.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT,
         onClick: () => {
           var e, t;
           eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), g.Z.open(ed.oAB.SUBSCRIPTIONS);
         },
-        children: eI.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT
+        children: em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT
       })
     ]
   });
@@ -844,14 +844,14 @@ case ed.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT:
           eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
         }
       }),
-      eI.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_TEXT,
+      em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_TEXT,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: ed.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT,
         onClick: () => {
           var e, t;
           eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), g.Z.open(ed.oAB.SUBSCRIPTIONS);
         },
-        children: eI.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
+        children: em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
       })
     ]
   });
@@ -866,11 +866,11 @@ case ed.kVF.PREMIUM_MISSING_PAYMENT:
           eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
         }
       }),
-      eA === eu.p9.TIER_1 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({
+      eA === eu.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({
         daysLeft: ec.metadata.daysLeft
-      }) : eA === eu.p9.TIER_0 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({
+      }) : eA === eu.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({
         daysLeft: ec.metadata.daysLeft
-      }) : eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_TEXT.format({
+      }) : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_TEXT.format({
         daysLeft: ec.metadata.daysLeft
       }),
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
@@ -879,13 +879,13 @@ case ed.kVF.PREMIUM_MISSING_PAYMENT:
           var e, t;
           eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), g.Z.open(ed.oAB.SUBSCRIPTIONS);
         },
-        children: eA === eu.p9.TIER_1 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : eA === eu.p9.TIER_0 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
+        children: eA === eu.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : eA === eu.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
       })
     ]
   });
 case ed.kVF.BACK_TO_PREVIOUS_SCREEN:
   return (0, i.jsx)(B.h, {
-    buttonText: null !== (s = ec.buttonText) && void 0 !== s ? s : eI.Z.Messages.GO_BACK,
+    buttonText: null !== (s = ec.buttonText) && void 0 !== s ? s : em.Z.Messages.GO_BACK,
     onGoBack: ec.callback,
     onDismiss: () => eN(),
     showCloseButton: !0
@@ -903,19 +903,19 @@ case ed.kVF.AUTOMOD_QUARANTINED_USER_PROFILE: {
 case ed.kVF.QUARANTINED:
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.CUSTOM,
-    className: em.quarantineNotice,
+    className: eI.quarantineNotice,
     children: [
-      eI.Z.Messages.LIMITED_ACCESS_NAG_BAR_NOTICE,
+      em.Z.Messages.LIMITED_ACCESS_NAG_BAR_NOTICE,
       (0, i.jsx)(c.NoticeButtonAnchor, {
         href: e_.Z,
         target: '_blank',
-        children: eI.Z.Messages.LIMITED_ACCESS_NAG_BAR_APPEAL
+        children: em.Z.Messages.LIMITED_ACCESS_NAG_BAR_APPEAL
       }),
       (0, i.jsx)(c.Anchor, {
         href: er.Z.getArticleURL(ed.BhN.QUARANTINE),
         target: '_blank',
-        className: em.quarantineLearnMoreLink,
-        children: eI.Z.Messages.LEARN_MORE
+        className: eI.quarantineLearnMoreLink,
+        children: em.Z.Messages.LEARN_MORE
       })
     ]
   });
@@ -923,10 +923,10 @@ case ed.kVF.BLOCKED_BY_PROXY:
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.WARNING,
     children: [
-      eI.Z.Messages.BLOCKED_BY_PROXY_NOTICE,
+      em.Z.Messages.BLOCKED_BY_PROXY_NOTICE,
       (0, i.jsx)(c.NoticeButtonAnchor, {
         href: ''.concat(ed.yXt.STATUS),
-        children: eI.Z.Messages.LEARN_MORE
+        children: em.Z.Messages.LEARN_MORE
       }),
       (0, i.jsx)(c.NoticeCloseButton, {
         onClick: () => eN(),
@@ -938,12 +938,12 @@ case ed.kVF.DROPS_PROGRESS_INTERRUPTION:
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.DANGER,
     children: [
-      eI.Z.Messages.DROPS_PROGRESS_INTERRUPTION_WARNING.format({
+      em.Z.Messages.DROPS_PROGRESS_INTERRUPTION_WARNING.format({
         gameTitle: ec.metadata.gameTitle
       }),
       (0, i.jsx)(c.NoticeButton, {
         onClick: ec.metadata.reloadCallback,
-        children: eI.Z.Messages.ERRORS_RESTART_APP
+        children: em.Z.Messages.ERRORS_RESTART_APP
       })
     ]
   });
@@ -961,18 +961,18 @@ case ed.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION:
           null != A && (0, b.T9)(A), eN(eV);
         }
       }),
-      eI.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_MESSAGE,
+      em.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_MESSAGE,
       (0, i.jsx)(c.NoticeButton, {
         onClick: () => {
           null != A && (0, b.UE)(A, eH, () => {
             eN(eV), (0, b.T9)(A);
           });
         },
-        children: eI.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
+        children: em.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
       }),
       null != A ? (0, i.jsx)(c.NoticeButton, {
         onClick: () => k.Z.open(A, ed.pNK.GUILD_AUTOMOD, void 0, ed.KsC.AUTOMOD_MENTION_SPAM),
-        children: eI.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
+        children: em.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
       }) : null
     ]
   });
@@ -986,7 +986,7 @@ case ed.kVF.SAFETY_USER_SENTIMENT_NAGBAR:
           z.hZ(), eN();
         }
       }),
-      eI.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE,
+      em.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: ed.kVF.SAFETY_USER_SENTIMENT_NAGBAR,
         onClick: () => {
@@ -999,7 +999,7 @@ case ed.kVF.SAFETY_USER_SENTIMENT_NAGBAR:
             });
           }), z.hZ(), eN();
         },
-        children: eI.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE_CTA
+        children: em.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE_CTA
       })
     ]
   });
@@ -1022,7 +1022,7 @@ case ed.kVF.QUESTS_PROGRESS_INTERRUPTION:
           (null === (e = ec.metadata) || void 0 === e ? void 0 : e.streamKey) != null && (0, W.nE)(ec.metadata.streamKey);
         }
       }),
-      eI.Z.Messages.QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE
+      em.Z.Messages.QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE
     ]
   });
 default:

@@ -1,18 +1,18 @@
 a.d(n, {
   Qy: function() {
-return s;
+return t;
   },
   Uy: function() {
-return _;
+return p;
   }
 }), a(757143);
-var s, t, r, l = a(735250),
-  i = a(470079),
-  o = a(120356),
-  c = a.n(o),
-  u = a(335180);
+var t, o, r, i = a(735250),
+  c = a(470079),
+  s = a(120356),
+  l = a.n(s),
+  d = a(210702);
 
-function d(e, n, a) {
+function u(e, n, a) {
   return n in e ? Object.defineProperty(e, n, {
 value: a,
 enumerable: !0,
@@ -20,33 +20,33 @@ configurable: !0,
 writable: !0
   }) : e[n] = a, e;
 }
-(r = s || (s = {})).UNKNOWN = 'unknown', r.VISA = 'visa', r.DISCOVER = 'discover', r.MASTERCARD = 'mastercard', r.AMEX = 'amex', r.PAYPAL = 'paypal', r.PAYMENT_REQUEST = 'paymentRequest', r.G_PAY = 'gPay', r.DINERS = 'diners', r.JCB = 'jcb', r.UNIONPAY = 'unionpay', r.SOFORT = 'sofort', r.PRZELEWY24 = 'przelewy24', r.GIROPAY = 'giropay', r.PAYSAFECARD = 'paysafecard', r.GCASH = 'gcash', r.GRABPAY = 'grabpay', r.MOMO_WALLET = 'momo_wallet', r.VENMO = 'venmo', r.KAKAOPAY = 'kakaopay', r.GOPAY_WALLET = 'gopay_wallet', r.BANCONTACT = 'bancontact', r.EPS = 'eps', r.IDEAL = 'ideal', r.CASH_APP = 'cash_app', r.APPLE = 'apple';
-let _ = {
-  SMALL: u.cardIconSmall,
-  MEDIUM: u.cardIconMedium,
-  LARGE: u.cardIconLarge,
-  XLARGE: u.cardIconXLarge
+(r = t || (t = {})).UNKNOWN = 'unknown', r.VISA = 'visa', r.DISCOVER = 'discover', r.MASTERCARD = 'mastercard', r.AMEX = 'amex', r.PAYPAL = 'paypal', r.PAYMENT_REQUEST = 'paymentRequest', r.G_PAY = 'gPay', r.DINERS = 'diners', r.JCB = 'jcb', r.UNIONPAY = 'unionpay', r.SOFORT = 'sofort', r.PRZELEWY24 = 'przelewy24', r.GIROPAY = 'giropay', r.PAYSAFECARD = 'paysafecard', r.GCASH = 'gcash', r.GRABPAY = 'grabpay', r.MOMO_WALLET = 'momo_wallet', r.VENMO = 'venmo', r.KAKAOPAY = 'kakaopay', r.GOPAY_WALLET = 'gopay_wallet', r.BANCONTACT = 'bancontact', r.EPS = 'eps', r.IDEAL = 'ideal', r.CASH_APP = 'cash_app', r.APPLE = 'apple';
+let p = {
+  SMALL: d.cardIconSmall,
+  MEDIUM: d.cardIconMedium,
+  LARGE: d.cardIconLarge,
+  XLARGE: d.cardIconXLarge
 };
-class I extends(t = i.PureComponent) {
+class f extends(o = c.PureComponent) {
   static getType(e) {
-return null == e ? 'unknown' : s[e.replace(/[^a-z0-9_]/gi, '').toUpperCase()] || 'unknown';
+return null == e ? 'unknown' : t[e.replace(/[^a-z0-9_]/gi, '').toUpperCase()] || 'unknown';
   }
   render() {
 let {
   flipped: e,
   type: n,
   className: a,
-  size: s
+  size: t
 } = this.props;
-return (0, l.jsx)('div', {
-  className: c()(s, u[n], a, {
-    [u.flipped]: e
+return (0, i.jsx)('div', {
+  className: l()(t, d[n], a, {
+    [d.flipped]: e
   }),
   children: n
 });
   }
 }
-d(I, 'Types', s), d(I, 'Sizes', _), d(I, 'defaultProps', {
-  size: _.SMALL,
+u(f, 'Types', t), u(f, 'Sizes', p), u(f, 'defaultProps', {
+  size: p.SMALL,
   flipped: !1
-}), n.ZP = I;
+}), n.ZP = f;
