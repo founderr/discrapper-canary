@@ -119,7 +119,7 @@ function p(e) {
   var t;
   return {
 id: e.id,
-type: _.Rr.ACTIVITY,
+type: _.Rr.CUSTOM_STATUS,
 activity: {
   id: e.id,
   author_id: e.data.user_id,
