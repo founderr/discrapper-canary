@@ -49,6 +49,7 @@ children: (e, t) => {
   } = t;
   return (0, i.jsxs)(o.TabBar.Item, {
     ...e,
+    id: 'more',
     color: 'text-muted',
     className: r()(E.tab, E.more, {
       [E.selected]: I
