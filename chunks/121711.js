@@ -58,6 +58,9 @@ className: v.container,
 children: [
   (0, i.jsxs)(I.ZP, {
     children: [
+      (0, i.jsx)('div', {
+        className: v.dragRegion
+      }),
       (0, i.jsx)(I.z6, {
         scrollPosition: x
       }),
