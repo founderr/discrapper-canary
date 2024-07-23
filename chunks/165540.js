@@ -5,60 +5,66 @@ var i = n(735250),
   l = n.n(s),
   r = n(149765),
   o = n(442837),
-  c = n(481060),
-  d = n(367907),
-  u = n(499254),
-  h = n(424602),
-  p = n(541099),
-  m = n(827498),
-  _ = n(663924),
-  f = n(998698),
-  E = n(747127),
-  C = n(665906),
-  g = n(271383),
-  I = n(496675),
-  x = n(594174),
-  T = n(583027),
-  v = n(981631),
-  N = n(314734),
-  S = n(689938),
-  Z = n(979030);
-let A = a.forwardRef(function(e, t) {
+  c = n(704215),
+  d = n(481060),
+  u = n(367907),
+  h = n(499254),
+  p = n(424602),
+  m = n(541099),
+  _ = n(827498),
+  f = n(663924),
+  E = n(998698),
+  C = n(605236),
+  g = n(747127),
+  I = n(665906),
+  x = n(271383),
+  T = n(496675),
+  N = n(594174),
+  v = n(291407),
+  S = n(583027),
+  Z = n(981631),
+  A = n(314734),
+  M = n(921944),
+  b = n(689938),
+  R = n(979030);
+let j = a.forwardRef(function(e, t) {
   let {
 type: n
-  } = e, [s, r] = a.useState(!1), h = (0, o.e7)([p.Z], () => p.Z.shouldShowPopup()), _ = a.useCallback(() => {
-(0, d.yw)(v.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), h ? u.y(m.ti.DISMISSED) : u._(m._b.TEXT, n);
+  } = e, [s, r] = a.useState(!1), p = (0, o.e7)([m.Z], () => m.Z.shouldShowPopup()), f = a.useCallback(() => {
+(0, u.yw)(Z.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.y(_.ti.DISMISSED) : ((0, C.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
+  dismissAction: M.L.TAKE_ACTION
+}), h._(_._b.TEXT, n));
   }, [
-h,
+p,
 n
-  ]), f = () => {
+  ]), E = () => {
 r(!0);
-  }, C = () => {
+  }, I = () => {
 r(!1);
-  }, g = a.useRef(), I = (0, E.Z)(t, g);
-  return a.useEffect(() => T.HJ.subscribe(e => {
+  }, x = a.useRef(), T = (0, g.Z)(t, x);
+  return a.useEffect(() => S.HJ.subscribe(e => {
 let {
   channelTextAreaHeight: t
 } = e;
 return t;
   }, e => {
-let t = g.current;
+let t = x.current;
 null != t && (t.style.transform = null != e ? 'translateY(calc(100% - min('.concat(e, 'px, var(--custom-channel-textarea-text-area-max-height)))') : '');
   }), []), (0, i.jsx)('div', {
-className: l()(Z.buttonContainer, N.t4),
-ref: I,
-children: (0, i.jsx)(c.Button, {
-  look: c.Button.Looks.BLANK,
-  size: c.Button.Sizes.NONE,
+className: l()(R.buttonContainer, A.t4),
+ref: T,
+children: (0, i.jsx)(d.Button, {
+  look: d.Button.Looks.BLANK,
+  size: d.Button.Sizes.NONE,
   tabIndex: 0,
-  className: Z.button,
-  onClick: _,
-  onMouseEnter: f,
-  onMouseOver: f,
-  onMouseLeave: C,
-  onFocus: f,
-  onBlur: C,
-  'aria-label': S.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
+  className: R.button,
+  onClick: f,
+  onMouseEnter: E,
+  onMouseOver: E,
+  onMouseLeave: I,
+  onFocus: E,
+  onBlur: I,
+  'aria-label': b.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
   focusProps: {
     offset: {
       top: 4,
@@ -67,9 +73,9 @@ children: (0, i.jsx)(c.Button, {
       right: -4
     }
   },
-  innerClassName: Z.buttonContents,
-  children: (0, i.jsx)(c.AppsIcon, {
-    className: l()(s || h ? Z.iconActive : Z.iconInactive)
+  innerClassName: R.buttonContents,
+  children: (0, i.jsx)(d.AppsIcon, {
+    className: l()(s || p ? R.iconActive : R.iconInactive)
   })
 })
   });
@@ -81,22 +87,22 @@ type: n
   } = e, s = a.useRef(null), l = function(e, t) {
 let n = e.getGuildId(),
   i = (0, o.e7)([
-    g.ZP,
-    x.default
+    x.ZP,
+    N.default
   ], () => {
     var e, t;
-    let i = x.default.getCurrentUser();
-    return null !== (t = null != n && null != i ? null === (e = g.ZP.getMember(n, i.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t;
+    let i = N.default.getCurrentUser();
+    return null !== (t = null != n && null != i ? null === (e = x.ZP.getMember(n, i.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t;
   }),
   {
     messagesDisabled: a
-  } = (0, o.cj)([I.Z], () => {
+  } = (0, o.cj)([T.Z], () => {
     var n, a;
     let s = e.isPrivate(),
-      l = I.Z.computePermissions(e),
-      o = r.e$(l, v.Plq.CREATE_PUBLIC_THREADS) || r.e$(l, v.Plq.CREATE_PRIVATE_THREADS),
-      c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(l, v.Plq.SEND_MESSAGES)),
-      d = (0, C.xl)(e);
+      l = T.Z.computePermissions(e),
+      o = r.e$(l, Z.Plq.CREATE_PUBLIC_THREADS) || r.e$(l, Z.Plq.CREATE_PRIVATE_THREADS),
+      c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(l, Z.Plq.SEND_MESSAGES)),
+      d = (0, I.xl)(e);
     return {
       messagesDisabled: i || !s && !c || d
     };
@@ -109,27 +115,33 @@ let n = e.getGuildId(),
 return a;
   }(t, n), {
 activeCommand: c
-  } = (0, o.cj)([f.Z], () => {
+  } = (0, o.cj)([E.Z], () => {
 var e;
 return {
-  activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? f.Z.getActiveCommand(t.id) : null
+  activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? E.Z.getActiveCommand(t.id) : null
 };
-  }), d = h.T.useExperiment({
+  }), d = p.T.useExperiment({
 location: 'chat_input'
   }, {
 autoTrackExposure: !0
-  }).enabled, u = (0, o.e7)([p.Z], () => {
-let e = p.Z.activeViewType();
-return null != e && e === n && p.Z.shouldShowPopup();
+  }).enabled, u = (0, o.e7)([m.Z], () => {
+let e = m.Z.activeViewType();
+return null != e && e === n && m.Z.shouldShowPopup();
   }, [n]);
   return d && null == c && !l ? (0, i.jsxs)('div', {
-className: Z.channelAppLauncher,
+className: R.channelAppLauncher,
 children: [
-  (0, i.jsx)(A, {
-    type: n,
-    ref: s
+  (0, i.jsx)(v.Z, {
+    channel: t,
+    animationContainerClassName: R.entrypointAnimation,
+    glowClassName: R.animationGlow,
+    trinketsClassName: R.animationTrinkets,
+    children: (0, i.jsx)(j, {
+      type: n,
+      ref: s
+    })
   }),
-  u ? (0, i.jsx)(_.Z, {
+  u ? (0, i.jsx)(f.Z, {
     positionTargetRef: s,
     channel: t
   }) : null

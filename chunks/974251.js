@@ -19,8 +19,8 @@ var i = n(735250),
   I = n(536442),
   x = n(79390),
   T = n(665906),
-  v = n(695346),
-  N = n(433355),
+  N = n(695346),
+  v = n(433355),
   S = n(819640),
   Z = n(375954),
   A = n(496675),
@@ -54,7 +54,7 @@ Q = (0, r.e7)([M.Z], () => M.Z.getActivities()),
 J = (0, r.e7)([E.Z], () => E.Z.getSettings().clipsEnabled),
 $ = (0, r.e7)([E.Z], () => E.Z.getLastClipsSession()),
 ee = (0, r.Wu)([E.Z], () => E.Z.getNewClipIds()),
-et = (0, r.e7)([N.ZP], () => null == N.ZP.getCurrentSidebarChannelId(F.id)),
+et = (0, r.e7)([v.ZP], () => null == v.ZP.getCurrentSidebarChannelId(F.id)),
 {
   showClipsHeaderEntrypoint: en
 } = f.NV.useExperiment({
@@ -114,12 +114,12 @@ return j.S.subscribe(k.CkL.UPLOAD_FILE, e), () => {
   });
   let eE = (0, T.NE)(F),
 eC = (0, T.Xu)(F),
-eg = !v.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserver,
+eg = !N.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserver,
 eI = (0, x.UI)(null != F ? F : void 0),
 ex = (0, c.useRedesignIconContext)().enabled,
 eT = (0, p.qB)(F.id, 'ChannelAttachButton'),
-ev = null !== (s = null == ee ? void 0 : ee.length) && void 0 !== s ? s : 0,
-eN = (0, D.Z)({
+eN = null !== (s = null == ee ? void 0 : ee.length) && void 0 !== s ? s : 0,
+ev = (0, D.Z)({
   canAttachFiles: eh,
   canStartThreads: eE || eC,
   useSlate: eg,
@@ -127,12 +127,12 @@ eN = (0, D.Z)({
   canUseApplicationCommands: !K && !ei,
   channel: F,
   activities: Q,
-  newClipsCount: ev,
+  newClipsCount: eN,
   canPostPolls: eI,
   canLaunchActivities: eT,
   appContext: q
 });
-  if (0 === eN.length)
+  if (0 === ev.length)
 return null;
   let eS = Q.some(e => (0, m.Z)(e, k.xjy.SYNC)),
 eZ = Q.some(e => (0, m.Z)(e, k.xjy.JOIN) && !(0, m.Z)(e, k.xjy.EMBEDDED)) || eS;
@@ -145,7 +145,7 @@ foreground: H.attachButtonPlay,
 background: H.attachButtonPlus,
 width: 24,
 height: 24
-  }) : ev > 0 ? (0, i.jsx)(b.Z, {
+  }) : eN > 0 ? (0, i.jsx)(b.Z, {
 className: H.__invalid_attachButtonIcon,
 foreground: H.attachButtonClip,
 background: H.attachButtonPlus,
@@ -185,7 +185,7 @@ renderPopout: e => {
       return (0, i.jsx)(y.Z, {
         ...e,
         onClose: () => ec(null),
-        options: eN,
+        options: ev,
         channel: F,
         onFileUpload: () => {
           var e;
@@ -234,6 +234,10 @@ children: [
       channel: F,
       isOmniMenuOpen: 'attachMenu' === eo,
       openOmniMenu: () => ec('attachMenu'),
+      enabled: eT,
+      animationContainerClassName: H.buttonAnimation,
+      glowClassName: H.buttonAnimationGlow,
+      trinketsClassName: H.buttonAnimationTrinkets,
       children: eA
     })
   })
