@@ -206,8 +206,9 @@ return null == r ? void 0 : r.getSecureFramesState();
 let t = null == r ? void 0 : r.getUserIds();
 return null != t && t.has(e);
   }
-  getSecureFramesRosterMap() {
-return null == r ? void 0 : r.getSecureFramesRosterMap();
+  getSecureFramesRosterMapEntry(e) {
+let t = null == r ? void 0 : r.getSecureFramesRosterMap();
+return null == t ? void 0 : t.get(e);
   }
 }
 l = 'RTCConnectionStore', (o = 'displayName') in(s = M) ? Object.defineProperty(s, o, {

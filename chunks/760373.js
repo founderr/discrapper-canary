@@ -3,6 +3,9 @@ t.d(n, {
   $J: function() {
 return l;
   },
+  GB: function() {
+return S;
+  },
   HK: function() {
 return N;
   },
@@ -46,3 +49,4 @@ let o = '',
 (a = i || (i = {})).MATCH = 'match', a.OTHER_USER_ALREADY_VERIFIED = 'other_user_already_verified', a.MISMATCH = 'mismatch', a.UNABLE_TO_VERIFY = 'unable_to_verify', a.OTHER_USER_DISCONNECTED = 'other_user_disconnected', a.CURRENT_USER_DISCONNECTED = 'current_user_disconnected';
 let N = 100;
 (s = r || (r = {})).RTC_DEBUG_PANEL = 'rtc_debug_panel', s.RTC_SECURE_FRAMES = 'rtc_secure_frames';
+let S = 1;

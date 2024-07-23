@@ -1,71 +1,49 @@
 n.d(t, {
   DF: function() {
-return _;
+return f;
+  },
+  KA: function() {
+return S;
   },
   M1: function() {
-return E;
+return l;
   },
   PM: function() {
-return d;
+return _;
   },
   Pn: function() {
 return I;
   },
   Rq: function() {
-return l;
-  },
-  s$: function() {
 return u;
   },
+  s$: function() {
+return d;
+  },
   sN: function() {
-return c;
+return E;
   }
 });
-var o = n(367907),
-  r = n(221292),
-  a = n(592125),
-  s = n(981631);
-
-function i(e) {
-  var t;
-  return null === (t = a.Z.getChannel(e)) || void 0 === t ? void 0 : t.guild_id;
-}
+var r = n(367907),
+  a = n(221292),
+  o = n(592125),
+  s = n(626135),
+  i = n(981631);
 
 function c(e) {
-  let {
-channelId: t,
-selectedTab: n
-  } = e;
-  o.ZP.trackWithMetadata(s.rMx.RTC_PANEL_VIEWED, {
-channel_id: t,
-guild_id: i(t),
-selected_tab: n
-  });
-}
-
-function l(e) {
-  let {
-channelId: t,
-userId: n
-  } = e;
-  o.ZP.trackWithMetadata(s.rMx.E2EE_USER_VERIFICATION_VIEWED, {
-channel_id: t,
-guild_id: i(t),
-...(0, r.QN)(n)
-  });
+  var t;
+  return null === (t = o.Z.getChannel(e)) || void 0 === t ? void 0 : t.guild_id;
 }
 
 function E(e) {
   let {
 channelId: t,
-userId: n,
-analyticsLocation: a
+selectedTab: n
   } = e;
-  o.ZP.trackWithMetadata(s.rMx.E2EE_USER_VERIFIED, {
+  r.ZP.trackWithMetadata(i.rMx.RTC_PANEL_VIEWED, {
 channel_id: t,
-guild_id: i(t),
-location: a,
-...(0, r.QN)(n)
+guild_id: c(t),
+selected_tab: n
   });
 }
 
@@ -74,27 +52,59 @@ function u(e) {
 channelId: t,
 userId: n
   } = e;
-  o.ZP.trackWithMetadata(s.rMx.E2EE_USER_VERIFICATION_CODE_COPIED, {
+  r.ZP.trackWithMetadata(i.rMx.E2EE_USER_VERIFICATION_VIEWED, {
 channel_id: t,
-guild_id: i(t),
-...(0, r.QN)(n)
+guild_id: c(t),
+...(0, a.QN)(n)
+  });
+}
+
+function l(e) {
+  let {
+channelId: t,
+userId: n,
+analyticsLocation: o
+  } = e;
+  r.ZP.trackWithMetadata(i.rMx.E2EE_USER_VERIFIED, {
+channel_id: t,
+guild_id: c(t),
+location: o,
+...(0, a.QN)(n)
   });
 }
 
 function d(e) {
   let {
-channelId: t
+channelId: t,
+userId: n
   } = e;
-  o.ZP.trackWithMetadata(s.rMx.E2EE_CALL_VERIFICATION_CODE_COPIED, {
+  r.ZP.trackWithMetadata(i.rMx.E2EE_USER_VERIFICATION_CODE_COPIED, {
 channel_id: t,
-guild_id: i(t)
+guild_id: c(t),
+...(0, a.QN)(n)
   });
 }
 
-function _() {
-  o.ZP.trackWithMetadata(s.rMx.E2EE_SETTINGS_USER_DELETE);
+function _(e) {
+  let {
+channelId: t
+  } = e;
+  r.ZP.trackWithMetadata(i.rMx.E2EE_CALL_VERIFICATION_CODE_COPIED, {
+channel_id: t,
+guild_id: c(t)
+  });
+}
+
+function f() {
+  s.default.track(i.rMx.E2EE_SETTINGS_USER_DELETE);
 }
 
 function I() {
-  o.ZP.trackWithMetadata(s.rMx.E2EE_SETTINGS_DEVICE_DELETE);
+  s.default.track(i.rMx.E2EE_SETTINGS_DEVICE_DELETE);
+}
+
+function S(e) {
+  s.default.track(i.rMx.E2EE_PUBLIC_KEY_MISMATCH, {
+key_version: ''.concat(e)
+  });
 }

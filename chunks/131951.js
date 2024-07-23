@@ -1030,6 +1030,9 @@ return e7().attenuateWhileSpeakingOthers;
   getAudioSubsystem() {
 return eO.getAudioSubsystem();
   }
+  getMLSSigningKey(e, t) {
+return eO.getMLSSigningKey(e, t);
+  }
   getSettings() {
 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : em.Yn.DEFAULT;
 return e7(e);
