@@ -1,45 +1,50 @@
 n(47120);
 var s = n(735250),
   o = n(470079),
-  r = n(887024),
-  a = n(338545),
-  i = n(442837),
-  l = n(110924),
-  c = n(607070),
-  d = n(819640),
-  u = n(569379),
-  p = n(675654),
-  x = n(267925),
-  m = n(197857);
-let g = ['#51BC9D'];
+  r = n(120356),
+  a = n.n(r),
+  l = n(887024),
+  i = n(699581),
+  c = n(338545),
+  d = n(442837),
+  u = n(110924),
+  p = n(607070),
+  m = n(819640),
+  x = n(569379),
+  f = n(675654),
+  g = n(267925),
+  C = n(197857);
+let _ = ['#51BC9D'];
 t.Z = e => {
   var t;
   let {
-quest: n,
-progressBarRef: C,
-isExpanded: f
+expansionSpring: n,
+overlayRef: r,
+quest: h,
+progressBarRef: E,
+isExpanded: S
   } = e, {
-completionSpring: _,
-startCompletionAnimation: h
-  } = (0, u.GX)(), E = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = o.useRef(!1), T = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), A = o.useRef(null), v = (0, i.e7)([d.Z], () => d.Z.hasLayers()), N = (0, l.Z)(v), [j, B] = o.useState(null), [b, R] = o.useState(null), y = o.useRef(new r.qA({
+completionSpring: T,
+startCompletionAnimation: v
+  } = (0, x.GX)(), N = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, A = o.useRef(!1), j = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), B = o.useRef(null), b = (0, d.e7)([m.Z], () => m.Z.hasLayers()), R = (0, u.Z)(b), [y, I] = o.useState(null), [q, O] = o.useState(null), M = o.useRef(new l.qA({
 gravity: 0,
 wind: 0
-  })), I = (0, r.uR)(j, b), M = o.useCallback(() => {
-if (T)
+  })), U = (0, l.uR)(y, q), k = o.useCallback(() => {
+if (j)
   return;
-let e = C.current,
-  t = A.current;
-if (null != t && null != e && I.isReady) {
+let e = E.current,
+  t = B.current;
+if (null != t && null != e && U.isReady) {
   var n, s, o, r;
   let {
     x: a,
-    y: i
+    y: l
   } = e.getBoundingClientRect(), {
-    x: l,
+    x: i,
     y: c
   } = t.getBoundingClientRect();
-  I.createMultipleConfetti((n = a - l, s = i - c, o = e.clientHeight, r = e.clientWidth, {
-    ...p.We,
+  U.createMultipleConfetti((n = a - i, s = l - c, o = e.clientHeight, r = e.clientWidth, {
+    ...f.We,
     position: {
       type: 'static-random',
       minValue: {
@@ -79,60 +84,89 @@ if (null != t && null != e && I.isReady) {
   }), 100);
 }
   }, [
-C,
-A,
-I,
-T
-  ]), O = (0, l.Z)(f);
+E,
+B,
+U,
+j
+  ]), P = (0, u.Z)(S);
   return (o.useEffect(() => {
-E && f && !O && (h(), M());
+N && S && !P && (v(), k());
   }, [
-f,
-E,
-h,
-M,
-O
-  ]), o.useEffect(() => {
-E && !v && N && setTimeout(() => {
-  h(), M();
-}, 200);
-  }, [
-E,
+S,
 N,
 v,
-h,
-M
+k,
+P
   ]), o.useEffect(() => {
-if (!!I.isReady)
-  !S.current && E && (h(), M()), S.current = E;
+N && !b && R && setTimeout(() => {
+  v(), k();
+}, 200);
   }, [
-E,
-S,
-M,
-h,
-I
-  ]), T) ? null : (0, s.jsxs)('div', {
-className: x.wrapper,
+N,
+R,
+b,
+v,
+k
+  ]), o.useEffect(() => {
+if (!!U.isReady)
+  !A.current && N && (v(), k()), A.current = N;
+  }, [
+N,
+A,
+k,
+v,
+U
+  ]), j) ? null : (0, s.jsxs)('div', {
+className: g.wrapper,
 'aria-hidden': 'true',
-ref: A,
+ref: B,
 children: [
-  (0, s.jsx)(a.animated.div, {
-    className: x.background,
+  (0, s.jsx)(c.animated.div, {
+    className: g.background,
     style: {
-      opacity: _
+      opacity: T
     }
   }),
-  (0, s.jsx)(r.O_, {
-    ref: B,
-    className: x.confetti,
-    environment: y.current
+  (0, s.jsx)(c.animated.div, {
+    className: a()(g.borders, g.bordersTopLeft),
+    style: {
+      opacity: T
+    }
   }),
-  (0, s.jsx)(r.Ji, {
-    ref: R,
-    sprites: [m],
-    colors: g,
-    spriteWidth: p.Ko,
-    spriteHeight: p.Ko
+  (0, s.jsxs)(c.animated.div, {
+    className: g.confettiWrapper,
+    style: {
+      transform: n.to({
+        range: [
+          0,
+          1
+        ],
+        output: [
+          -35,
+          0
+        ]
+      }).to(e => 'translateY('.concat(e, 'px)'))
+    },
+    children: [
+      (0, s.jsx)(l.O_, {
+        ref: I,
+        className: g.confetti,
+        environment: M.current
+      }),
+      (0, s.jsx)(l.Ji, {
+        ref: O,
+        sprites: [C],
+        colors: _,
+        spriteWidth: f.Ko,
+        spriteHeight: f.Ko
+      }),
+      null != r.current && (0, i.createPortal)((0, s.jsx)(c.animated.div, {
+        className: a()(g.borders, g.bordersBottom),
+        style: {
+          opacity: T
+        }
+      }), r.current)
+    ]
   })
 ]
   });
