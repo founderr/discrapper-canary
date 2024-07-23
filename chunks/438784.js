@@ -57,15 +57,15 @@ let {
   dotPosition: n,
   fill: a = 'currentColor',
   spacing: s = 2.5
-} = e, l = i.useRef(c()), u = i.useRef(!0);
-i.useEffect(() => () => void(u.current = !1), []);
-let [d] = (0, o.useSpring)(() => ({
+} = e, u = i.useRef(c()), d = i.useRef(!0);
+i.useEffect(() => () => void(d.current = !1), []);
+let [f] = (0, l.useSpring)(() => ({
   ..._,
   to: async e => {
     let t = 2.8;
-    for (; u.current;) {
+    for (; d.current;) {
       ;
-      l.current = c(), l.current ? (t += 4, await e({
+      u.current = c(), u.current ? (t += 4, await e({
         dotCycle: t,
         immediate: !1
       })) : 2.8 !== t ? (t = 2.8, await e({
@@ -74,7 +74,7 @@ let [d] = (0, o.useSpring)(() => ({
       })) : await new Promise(e => setTimeout(e, 1000));
     }
   }
-})), f = (6 * t + t / 4 * 2) / 2;
+}), 'animate-always'), h = (6 * t + t / 4 * 2) / 2;
 return (0, r.jsx)(r.Fragment, {
   children: [
     0,
@@ -82,17 +82,17 @@ return (0, r.jsx)(r.Fragment, {
     2
   ].map(e => {
     let i = 0.25 * e,
-      u = t + t * s * e;
+      l = t + t * s * e;
     return (0, r.jsx)(o.animated.circle, {
       cx: n ? n.to([
         0,
         1
       ], [
-        f,
-        u
-      ]) : u,
+        h,
+        l
+      ]) : l,
       cy: t,
-      r: d.dotCycle.to(e => E(e - i)).to([
+      r: f.dotCycle.to(e => E(e - i)).to([
         0,
         0.4,
         0.8,
@@ -102,10 +102,10 @@ return (0, r.jsx)(r.Fragment, {
         0.8 * t,
         t,
         t
-      ]).to(e => l.current ? e : t),
+      ]).to(e => u.current ? e : t),
       fill: a,
       style: {
-        opacity: d.dotCycle.to(e => E(e - i)).to([
+        opacity: f.dotCycle.to(e => E(e - i)).to([
           0,
           0.4,
           0.8,
@@ -115,7 +115,7 @@ return (0, r.jsx)(r.Fragment, {
           0.3,
           1,
           1
-        ]).to(e => l.current ? e : 1)
+        ]).to(e => u.current ? e : 1)
       }
     }, e);
   })

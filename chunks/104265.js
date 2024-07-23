@@ -32,24 +32,24 @@ reducedMotion: k
   } = o.useContext(d.AccessibilityPreferencesContext), Z = (0, s.e7)([v.Z], () => {
 var e, n, r, o;
 return (null === (e = t.emoji) || void 0 === e ? void 0 : e.id) != null && null !== (o = null === (n = v.Z.getCustomEmojiById(null === (r = t.emoji) || void 0 === r ? void 0 : r.id)) || void 0 === n ? void 0 : n.animated) && void 0 !== o && o;
-  }), T = (0, p.Z)(n, 1000), S = null == T || null == t.roleIds ? 0 : Math.max(...t.roleIds.map(e => T[e])), y = b && !a && t.isUnseen, I = (0, i.useSpring)({
+  }), y = (0, p.Z)(n, 1000), T = null == y || null == t.roleIds ? 0 : Math.max(...t.roleIds.map(e => y[e])), S = b && !a && t.isUnseen, w = (0, d.useSpring)({
 transform: a || k.enabled ? 'scale(1)' : 'scale(0.7)',
 opacity: a ? 1 : 0,
 config: {
   duration: 150
 }
-  }), w = (0, d.useToken)(c.Z.colors.BACKGROUND_MODIFIER_ACCENT), R = (0, d.useToken)(c.Z.unsafe_rawColors.BRAND_500), E = (0, i.useSpring)({
+  }, 'animate-always'), I = (0, d.useToken)(c.Z.colors.BACKGROUND_MODIFIER_ACCENT), R = (0, d.useToken)(c.Z.unsafe_rawColors.BRAND_500), E = (0, d.useSpring)({
 from: {
   color: R.spring()
 },
-color: w.spring({
+color: I.spring({
   opacity: O ? 0.5 : 0.25
 }),
 config: {
   duration: 300
 },
 delay: 500
-  }), A = (0, d.useTransition)(_, {
+  }, 'animate-always'), A = (0, d.useTransition)(_, {
 from: {
   transform: k.enabled ? 'translateX(0)' : 'translateX(8px)',
   opacity: 0
@@ -78,7 +78,7 @@ if (_)
   [x.selected]: a,
   [x.pressed]: D
 }),
-P = y ? {
+P = S ? {
   borderColor: E.color
 } : {};
   return (0, r.jsx)(r.Fragment, {
@@ -116,7 +116,7 @@ children: (0, r.jsx)(i.animated.div, {
       }),
       (0, r.jsx)(i.animated.div, {
         className: x.checkIcon,
-        style: I,
+        style: w,
         children: (0, r.jsx)(d.CheckmarkLargeIcon, {
           size: 'custom',
           width: 10,
@@ -124,18 +124,18 @@ children: (0, r.jsx)(i.animated.div, {
           color: c.Z.unsafe_rawColors.WHITE_500.css
         })
       }),
-      A((e, n) => S > 0 && n && (0, r.jsx)(i.animated.div, {
+      A((e, n) => T > 0 && n && (0, r.jsx)(i.animated.div, {
         className: x.memberCount,
         style: e,
         children: (0, r.jsx)(d.Text, {
           variant: 'text-xs/normal',
           color: 'always-white',
           children: g.Z.Messages.ONBOARDING_OPTION_ROLE_COUNTS.format({
-            memberCount: S
+            memberCount: T
           })
         })
       })),
-      y && (0, r.jsx)(d.TextBadge, {
+      S && (0, r.jsx)(d.TextBadge, {
         color: c.Z.unsafe_rawColors.BRAND_260.css,
         text: g.Z.Messages.NEW,
         className: x.newBadge

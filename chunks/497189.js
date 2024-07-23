@@ -236,7 +236,7 @@ null != e && U !== G && N.GN.getState().setGame(e);
 G,
 U
   ]);
-  let k = s.useCallback(() => {
+  let w = s.useCallback(() => {
   !o && ((0, I._9)({
     guildId: x,
     location: E.Z.CLAN_DISCOVERY
@@ -255,14 +255,14 @@ U
   o,
   x
 ]),
-w = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
+k = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
 B = (0, v.L)({
   guild: D,
   selectedGame: a
 }),
 H = (0, Z.n)(U),
 [V, F] = s.useState(!0),
-Y = (0, l.useSpring)({
+Y = (0, d.useSpring)({
   from: {
     opacity: 0
   },
@@ -273,9 +273,9 @@ Y = (0, l.useSpring)({
   config: {
     duration: 0
   }
-}),
-W = (0, l.useSpring)({
-  from: w ? {
+}, 'animate-always'),
+W = (0, d.useSpring)({
+  from: k ? {
     transform: 'translate(0px, 0px) rotate(0deg) scale(1)'
   } : {
     transform: 'translate(324px, -56px) rotate(8deg) scale(1.25)'
@@ -285,9 +285,9 @@ W = (0, l.useSpring)({
   },
   config: P,
   delay: 400
-}),
-z = (0, l.useSpring)({
-  from: w ? {
+}, 'animate-always'),
+z = (0, d.useSpring)({
+  from: k ? {
     transform: 'translate(0px, 0px) rotate(0deg) scale(1)'
   } : {
     transform: 'translate(176px, -24px) rotate(4deg) scale(1.1111)'
@@ -297,9 +297,9 @@ z = (0, l.useSpring)({
   },
   config: P,
   delay: 350
-}),
-K = (0, l.useSpring)({
-  from: w ? {
+}, 'animate-always'),
+K = (0, d.useSpring)({
+  from: k ? {
     transform: 'translate(0px, 0px) rotate(0deg) scale(1)'
   } : {
     transform: 'translate(-176px, -24px) rotate(-4deg) scale(1.1111)'
@@ -309,9 +309,9 @@ K = (0, l.useSpring)({
   },
   config: P,
   delay: 350
-}),
-q = (0, l.useSpring)({
-  from: w ? {
+}, 'animate-always'),
+q = (0, d.useSpring)({
+  from: k ? {
     transform: 'translate(0px, 0px) rotate(0deg) scale(1)'
   } : {
     transform: 'translate(-324px, -56px) rotate(-8deg) scale(1.25)'
@@ -321,9 +321,9 @@ q = (0, l.useSpring)({
   },
   config: P,
   delay: 400
-}),
-Q = (0, l.useSpring)({
-  from: w ? {
+}, 'animate-always'),
+Q = (0, d.useSpring)({
+  from: k ? {
     transform: 'scale(1)',
     opacity: 0
   } : {
@@ -336,9 +336,9 @@ Q = (0, l.useSpring)({
   },
   config: P,
   delay: 200
-}),
-X = (0, l.useSpring)({
-  from: w ? {
+}, 'animate-always'),
+X = (0, d.useSpring)({
+  from: k ? {
     transform: 'translateY(0px)'
   } : {
     transform: 'translateY(240px)'
@@ -349,7 +349,7 @@ X = (0, l.useSpring)({
   config: P,
   delay: 250,
   onRest: () => F(!1)
-}),
+}, 'animate-always'),
 J = s.useMemo(() => null == j ? O.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : O.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [j]),
 $ = s.useCallback(async () => {
   await (0, h.Zx)(x), u.Z.transitionToGuildSync('936317138904440892');
@@ -443,7 +443,7 @@ children: [
       selectedGuildId: x,
       setSelectedGuildId: b,
       eligibleGuilds: t,
-      onButtonClick: k,
+      onButtonClick: w,
       buttonText: J,
       hasCompletedUpsell: o,
       isBrowseButtonVisible: r

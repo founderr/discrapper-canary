@@ -17,12 +17,11 @@ flashKey: r
 opacity: 1
   }), c = (0, l.useToken)(l.tokens.colors.BACKGROUND_MESSAGE_HIGHLIGHT).spring({
 opacity: 0
-  }), [d, u] = (0, s.useSpring)(() => ({
-immediate: !0,
+  }), [d, u] = (0, l.useSpring)(() => ({
 from: {
   backgroundColor: o
 }
-  }));
+  }), 'animate-never');
   return a.useEffect(() => {
 u({
   reset: !0,

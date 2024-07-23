@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return f;
+return E;
   }
 }), n(47120);
 var i = n(735250),
@@ -8,24 +8,25 @@ var i = n(735250),
   s = n(120356),
   l = n.n(s),
   r = n(338545),
-  o = n(393238),
-  c = n(410030),
-  d = n(231338),
-  u = n(493796);
-let h = {
+  o = n(481060),
+  c = n(393238),
+  d = n(410030),
+  u = n(231338),
+  h = n(493796);
+let p = {
 mass: 1,
 tension: 400,
 friction: 60,
 clamp: !0
   },
-  p = {
+  m = {
 mass: 1,
 tension: 600,
 friction: 60,
 clamp: !0
   };
 
-function m(e) {
+function _(e) {
   let {
 paperColor: t,
 paperColorAlt: n,
@@ -101,7 +102,7 @@ children: [
   });
 }
 
-function _(e) {
+function f(e) {
   let {
 paperColor: t,
 paperColorAlt: n
@@ -165,69 +166,69 @@ children: [
   });
 }
 
-function f(e) {
+function E(e) {
   let {
 children: t,
 fullHeight: n = !1
-  } = e, [s, f] = a.useState(!1), {
-height: E,
-ref: C
-  } = (0, o.Z)(), {
-height: g,
-ref: I
-  } = (0, o.Z)(), x = n ? g : 59 + (null != E ? E : 100) + 101, T = (0, r.useSpring)({
+  } = e, [s, E] = a.useState(!1), {
+height: C,
+ref: g
+  } = (0, c.Z)(), {
+height: I,
+ref: x
+  } = (0, c.Z)(), T = n ? I : 59 + (null != C ? C : 100) + 101, N = (0, o.useSpring)({
 from: {
   height: 0
 },
 to: {
-  height: x
+  height: T
 },
-config: h,
+config: p,
 delay: s ? 0 : 800,
-onRest: () => f(!0)
-  }), N = (0, r.useSpring)({
+onRest: () => E(!0)
+  }), v = (0, o.useSpring)({
 from: {
   opacity: 0
 },
 to: {
   opacity: 1
 },
-config: p,
+config: m,
 delay: 1000
-  }), v = (0, c.Fg)(), S = v === d.BR.LIGHT ? '#FFFFFF' : '#1C1D23', Z = v === d.BR.LIGHT ? '#EBEDEF' : '#26272F', A = v === d.BR.LIGHT ? '#CCCCCC' : '#1A1A1E';
+  }), S = (0, d.Fg)(), Z = S === u.BR.LIGHT ? '#FFFFFF' : '#1C1D23', A = S === u.BR.LIGHT ? '#EBEDEF' : '#26272F', M = S === u.BR.LIGHT ? '#CCCCCC' : '#1A1A1E';
   return (0, i.jsx)('div', {
-className: u.container,
-ref: I,
+className: h.container,
+ref: x,
 children: (0, i.jsxs)(r.animated.div, {
-  className: u.heightContainer,
+  className: h.heightContainer,
   style: {
-    ...T,
+    ...N,
     overflow: s ? 'initial' : 'hidden'
   },
   children: [
-    (0, i.jsx)(m, {
-      paperColor: S,
-      paperColorAlt: Z,
-      axleColor: A
+    (0, i.jsx)(_, {
+      paperColor: Z,
+      paperColorAlt: A,
+      axleColor: M
     }),
     (0, i.jsx)('div', {
-      className: l()(u.content, n && u.fullHeight),
-      ref: C,
+      className: l()(h.content, n && h.fullHeight),
+      ref: g,
       children: (0, i.jsx)('div', {
-        className: l()(u.innerContent, n && u.fullHeight),
+        className: l()(h.innerContent, n && h.fullHeight),
         style: {
-          backgroundColor: S
+          backgroundColor: Z
         },
         children: (0, i.jsx)(r.animated.div, {
-          className: l()(u.contentAnimContainer, n && u.fullHeight),
-          style: N,
+          className: l()(h.contentAnimContainer, n && h.fullHeight),
+          style: v,
           children: t
         })
       })
     }),
-    (0, i.jsx)(_, {
-      paperColor: S,
-      paperColorAlt: Z
+    (0, i.jsx)(f, {
+      paperColor: Z,
+      paperColorAlt: A
     })
   ]
 })

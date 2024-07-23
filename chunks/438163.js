@@ -66,11 +66,11 @@ q,
 Q,
 X
   ]);
-  let [el, eu] = (0, o.useSpring)(() => ({
+  let [el, eu] = (0, c.useSpring)(() => ({
 maxHeight: ''.concat(X, 'px'),
 config: {
   clamp: !0,
-  duration: U ? 0 : 150
+  duration: 150
 }
   }));
   if (i.useEffect(() => () => w.stop(), [w]), !$ && !J)

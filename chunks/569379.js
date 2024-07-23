@@ -13,8 +13,8 @@ return f;
   }
 }), n(47120);
 var s = n(470079),
-  o = n(338545),
-  r = n(442837),
+  o = n(442837),
+  r = n(481060),
   a = n(410030),
   i = n(706454),
   l = n(930153),
@@ -28,14 +28,14 @@ var s = n(470079),
 
 function C(e) {
   var t, n;
-  let s = (0, r.e7)([i.default], () => i.default.locale),
+  let s = (0, o.e7)([i.default], () => i.default.locale),
 {
-  percentComplete: o
+  percentComplete: r
 } = (0, c.Rf)(e);
   if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null)
 return g.Z.Messages.QUESTS_COMPLETION_COMPLETE;
-  if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && o > 0) {
-let e = (0, l.T3)(s, o, {
+  if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && r > 0) {
+let e = (0, l.T3)(s, r, {
   roundingMode: 'floor'
 });
 return g.Z.Messages.QUESTS_COMPLETION_PROGRESS_STARTED_V2.format({
@@ -75,9 +75,9 @@ return a ? (0, u.AV)({
 function _() {
   let [{
 spring: e
-  }, t] = (0, o.useSpring)(() => ({
+  }, t] = (0, r.useSpring)(() => ({
 spring: 0
-  }));
+  }), 'animate-always');
   return {
 completionSpring: e,
 startCompletionAnimation: s.useCallback(() => {

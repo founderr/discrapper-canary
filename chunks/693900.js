@@ -1,25 +1,26 @@
 n.d(t, {
   n: function() {
-return p;
+return x;
   },
   t: function() {
-return u;
+return p;
   }
 }), n(47120);
 var s = n(735250),
   o = n(470079),
   r = n(338545),
   a = n(442837),
-  i = n(393238),
-  l = n(110924),
-  c = n(607070);
-let d = o.createContext({
+  i = n(481060),
+  l = n(393238),
+  c = n(110924),
+  d = n(607070);
+let u = o.createContext({
   springConfig: {},
   onHeightChange: () => {},
   isExpanded: !1
 });
 
-function u(e) {
+function p(e) {
   let t = o.useMemo(() => ({
 springConfig: e.springConfig,
 isExpanded: e.isExpanded,
@@ -29,63 +30,62 @@ e.springConfig,
 e.onHeightChange,
 e.isExpanded
   ]);
-  return (0, s.jsx)(d.Provider, {
+  return (0, s.jsx)(u.Provider, {
 value: t,
 children: e.children
   });
 }
 
-function p(e) {
+function x(e) {
   var t;
   let {
 children: n
   } = e, {
-springConfig: u,
-isExpanded: p,
-onHeightChange: x
-  } = o.useContext(d), m = (0, a.e7)([c.Z], () => c.Z.useReducedMotion), {
-ref: g,
-height: C = null
-  } = (0, i.Z)(), f = null !== (t = (0, l.Z)(C)) && void 0 !== t ? t : null, [{
-height: _
-  }, h] = (0, r.useSpring)(() => ({
+springConfig: p,
+isExpanded: x,
+onHeightChange: m
+  } = o.useContext(u), g = (0, a.e7)([d.Z], () => d.Z.useReducedMotion), {
+ref: C,
+height: f = null
+  } = (0, l.Z)(), _ = null !== (t = (0, c.Z)(f)) && void 0 !== t ? t : null, [{
+height: h
+  }, E] = (0, i.useSpring)(() => ({
 from: {
   height: 0
 },
-config: u,
-immediate: m
+config: p
   }));
   return o.useLayoutEffect(() => {
-if (null === f || null === C)
+if (null === _ || null === f)
   return;
-let e = C - f;
-0 !== e && x(e);
+let e = f - _;
+0 !== e && m(e);
   }, [
-C,
 f,
-x,
-p
+_,
+m,
+x
   ]), o.useLayoutEffect(() => {
-null !== C && h({
-  height: C,
-  immediate: !p || m || null === f
+null !== f && E({
+  height: f,
+  immediate: !x || g || null === _
 });
   }, [
-C,
-h,
-p,
-m,
-f
+f,
+E,
+x,
+g,
+_
   ]), (0, s.jsx)(r.animated.div, {
 style: {
-  height: null === f ? 'auto' : _,
+  height: null === _ ? 'auto' : h,
   overflow: 'hidden'
 },
 children: (0, s.jsx)('div', {
   style: {
     overflow: 'hidden'
   },
-  ref: g,
+  ref: C,
   children: n
 })
   });

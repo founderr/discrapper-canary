@@ -1,6 +1,6 @@
 n.d(t, {
   z: function() {
-return _;
+return d;
   }
 }), n(47120);
 var r = n(735250),
@@ -8,60 +8,58 @@ var r = n(735250),
   a = n(120356),
   s = n.n(a),
   o = n(338545),
-  l = n(442837),
+  l = n(481060),
   u = n(393238),
-  c = n(607070),
-  d = n(800594);
+  c = n(800594);
 
-function _(e) {
+function d(e) {
   let {
 children: t,
 className: n,
 collapsibleContent: a,
-isExpanded: _
-  } = e, [E, f] = i.useState(!1), h = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), [p, m] = i.useState(!0), [I, T] = i.useState(!1), g = null != _ ? _ : E, {
+isExpanded: d
+  } = e, [_, E] = i.useState(!1), [f, h] = i.useState(!0), [p, m] = i.useState(!1), I = null != d ? d : _, {
+ref: T,
+height: g = 0
+  } = (0, u.Z)(), {
 ref: S,
 height: A = 0
-  } = (0, u.Z)(), {
-ref: N,
-height: v = 0
-  } = (0, u.Z)(), O = (0, o.useSpring)({
-height: g ? A + v : v,
-immediate: p || h,
+  } = (0, u.Z)(), N = (0, l.useSpring)({
+height: I ? g + A : A,
 config: o.config.stiff,
-onRest: () => T(!0)
-  }), R = i.useCallback(() => {
-f(!E);
+onRest: () => m(!0)
+  }, f ? 'animate-never' : 'respect-motion-settings'), v = i.useCallback(() => {
+E(!_);
   }, [
-E,
-f
+_,
+E
   ]);
   return i.useLayoutEffect(() => {
 let e = setTimeout(() => {
-  m(!1);
+  h(!1);
 }, 100);
 return () => clearTimeout(e);
   }, []), (0, r.jsx)('div', {
-className: s()(d.collapseable, {
-  [d.toggled]: g
+className: s()(c.collapseable, {
+  [c.toggled]: I
 }, n),
 children: (0, r.jsxs)(o.animated.div, {
-  className: s()(d.contentExpandContainer, {
-    [d.showOverflow]: g && I
+  className: s()(c.contentExpandContainer, {
+    [c.showOverflow]: I && p
   }),
-  style: O,
+  style: N,
   children: [
     (0, r.jsx)('div', {
-      ref: N,
-      className: s()(d.header, {
-        [d.toggled]: g
+      ref: S,
+      className: s()(c.header, {
+        [c.toggled]: I
       }),
       children: t({
-        onClick: R
+        onClick: v
       })
     }),
     (0, r.jsx)('div', {
-      ref: S,
+      ref: T,
       children: a
     })
   ]

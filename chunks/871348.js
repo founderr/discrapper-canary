@@ -1,31 +1,29 @@
 n.d(t, {
   U: function() {
-return m;
+return h;
   }
 }), n(47120);
 var i = n(735250),
   s = n(470079),
   a = n(338545),
   r = n(143927),
-  l = n(399606),
-  o = n(481060),
-  c = n(393238),
-  d = n(607070),
-  u = n(931515),
-  _ = n(807933),
-  E = n(207796),
-  h = n(895068),
-  I = n(207462);
+  l = n(481060),
+  o = n(393238),
+  c = n(931515),
+  d = n(807933),
+  u = n(207796),
+  _ = n(895068),
+  E = n(207462);
 
-function m(e) {
+function h(e) {
   let {
 onScroll: t
-  } = e, n = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), {
-loading: m
-  } = (0, u.LE)(), {
-ref: g,
-width: p
-  } = (0, c.Z)(), T = (0, E.GN)(e => e.mode, r.Z), [f, S] = s.useState(!0), C = (0, a.useSpring)({
+  } = e, {
+loading: n
+  } = (0, c.LE)(), {
+ref: h,
+width: I
+  } = (0, o.Z)(), m = (0, u.GN)(e => e.mode, r.Z), [g, p] = s.useState(!0), T = (0, l.useSpring)({
 from: {
   opacity: 0
 },
@@ -38,32 +36,31 @@ config: {
   friction: 60
 },
 delay: 200,
-immediate: n,
-onRest: () => S(!1)
+onRest: () => p(!1)
   });
   return (0, i.jsxs)('section', {
-ref: g,
-className: I.guilds,
+ref: h,
+className: E.guilds,
 children: [
-  m ? (0, i.jsx)('div', {
-    className: I.loading,
-    children: (0, i.jsx)(o.Spinner, {})
+  n ? (0, i.jsx)('div', {
+    className: E.loading,
+    children: (0, i.jsx)(l.Spinner, {})
   }) : (0, i.jsx)(a.animated.div, {
-    className: I.list,
+    className: E.list,
     style: {
-      opacity: C.opacity
+      opacity: T.opacity
     },
-    children: (0, i.jsx)(h.ZP, {
-      width: null != p ? p : 0,
-      isAnimating: f,
-      variant: h.Bj.GLOBAL_DISCOVERY,
+    children: (0, i.jsx)(_.ZP, {
+      width: null != I ? I : 0,
+      isAnimating: g,
+      variant: _.Bj.GLOBAL_DISCOVERY,
       onScroll: t
     })
   }),
   (0, i.jsx)('div', {
-    className: I.selectors,
-    children: (0, i.jsx)(_.Z, {
-      mode: T
+    className: E.selectors,
+    children: (0, i.jsx)(d.Z, {
+      mode: m
     })
   })
 ]

@@ -31,13 +31,13 @@ let {
   onClick: i,
   delay: a,
   index: s
-} = e, o = (0, c.JA)('item-'.concat(s)), l = T.ZP.getURL(O + n), _ = (0, u.useSpring)({
+} = e, o = (0, c.JA)('item-'.concat(s)), l = T.ZP.getURL(O + n), _ = (0, E.useSpring)({
   opacity: 1,
   from: {
     opacity: t ? 0 : 1
   },
   delay: a
-});
+}, 'animate-always');
 return (0, r.jsx)(E.Clickable, {
   ...o,
   role: 'option',
@@ -75,7 +75,7 @@ let {
   selectedSurrogate: n,
   onClick: a,
   hasTabWrapper: o
-} = e, d = (0, p.Z)('diversity'), _ = (0, u.useSpring)({
+} = e, d = (0, p.Z)('diversity'), _ = (0, E.useSpring)({
   height: (C + 2 * R) * (m.gw.length + 1),
   from: {
     height: C
@@ -87,11 +87,11 @@ let {
 i.useEffect(() => {
   d.focusFirstVisibleItem();
 }, [d]);
-let E = [
+let f = [
   '',
   ...m.gw
 ];
-return l().remove(E, e => e === n), E.unshift(n), (0, r.jsx)(c.bG, {
+return l().remove(f, e => e === n), f.unshift(n), (0, r.jsx)(c.bG, {
   navigator: d,
   children: (0, r.jsx)(c.SJ, {
     children: e => {
@@ -108,7 +108,7 @@ return l().remove(E, e => e === n), E.unshift(n), (0, r.jsx)(c.bG, {
         }),
         style: _,
         role: 'listbox',
-        children: E.map((e, t) => (0, r.jsx)(y, {
+        children: f.map((e, t) => (0, r.jsx)(y, {
           index: t,
           fade: 0 !== t,
           delay: 20 * t,

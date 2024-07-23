@@ -25,44 +25,44 @@ let A = a.memo(function(e) {
 channel: t,
 deleteChannel: n
   } = e, s = a.useRef(null), [
-[r, o], c
+[r, o], d
   ] = a.useState([
 0,
 0
-  ]), d = t.deleted && r > 0;
+  ]), u = t.deleted && r > 0;
   if (t.deleted && 0 === r && null != s.current) {
 let e = s.current.offsetHeight,
   t = s.current.offsetTop,
   n = s.current.parentElement.scrollTop,
   i = n > t ? e - (n - t) : e;
-c([
+d([
   e,
   e - i
 ]);
   }
   let {
-opacity: u,
-size: _
-  } = (0, l.useSpring)({
+opacity: _,
+size: E
+  } = (0, c.useSpring)({
 config: {
   clamp: !0,
   friction: 18,
   tension: 200
 },
-opacity: d ? 0 : 1,
-size: d ? 0 : 1,
+opacity: u ? 0 : 1,
+size: u ? 0 : 1,
 onRest: () => {
   n(t.channelId);
 }
-  }), E = {
-opacity: u,
-height: _.to(e => d ? function(e, t, n) {
+  }, 'animate-always'), I = {
+opacity: _,
+height: E.to(e => u ? function(e, t, n) {
   return t + (e - t) * n;
 }(r, o, e) : 'auto')
   };
   return (0, i.jsx)(l.animated.div, {
 ref: s,
-style: E,
+style: I,
 children: (0, i.jsx)(R, {
   ...e
 })

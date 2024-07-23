@@ -121,7 +121,7 @@ function g(e) {
   let {
 percentage: t,
 shouldAnimate: n
-  } = e, a = (0, o.useSpring)({
+  } = e, a = (0, u.useSpring)({
 from: {
   width: n ? '0%' : ''.concat(t, '%')
 },
@@ -132,7 +132,7 @@ config: {
   duration: 1200,
   easing: d.Z.Easing.inOut(d.Z.Easing.ease)
 }
-  });
+  }, 'animate-always');
   return (0, i.jsx)(o.animated.span, {
 className: p.votePercentageBar,
 style: a,

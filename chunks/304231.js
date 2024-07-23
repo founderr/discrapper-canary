@@ -4,57 +4,58 @@ var i = n(735250),
   a = n(338545),
   r = n(143927),
   l = n(442837),
-  o = n(607070),
-  c = n(950279),
-  d = n(741595),
-  u = n(754961),
-  _ = n(363915),
-  E = n(359380),
-  h = n(207796),
-  I = n(316553),
-  m = n(689938),
-  g = n(270590);
-let p = {
+  o = n(481060),
+  c = n(607070),
+  d = n(950279),
+  u = n(741595),
+  _ = n(754961),
+  E = n(363915),
+  h = n(359380),
+  I = n(207796),
+  m = n(316553),
+  g = n(689938),
+  p = n(270590);
+let T = {
   mass: 1,
   tension: 600,
   friction: 60
 };
 
-function T(e) {
+function f(e) {
   let {
 selectedGame: t
-  } = e, n = (0, h.GN)(e => e.selectedGames, r.Z), a = s.useMemo(() => new Set(n), [n]), l = (0, I.J)({
+  } = e, n = (0, I.GN)(e => e.selectedGames, r.Z), a = s.useMemo(() => new Set(n), [n]), l = (0, m.J)({
 selectedGame: t
-  }), o = s.useCallback(e => h.GN.getState().setSelectedGames(Array.from(e)), []);
-  return (0, i.jsx)(c.Z, {
-title: m.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
-description: m.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
+  }), o = s.useCallback(e => I.GN.getState().setSelectedGames(Array.from(e)), []);
+  return (0, i.jsx)(d.Z, {
+title: g.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
+description: g.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
 requiredGameId: l,
 handleUpdate: o,
 gameApplicationIds: a
   });
 }
 
-function f() {
-  let e = (0, h.GN)(e => e.selectedPlaystyle, r.Z),
-t = s.useCallback(e => h.GN.getState().setSelectedPlaystyle(e), []);
-  return (0, i.jsx)(d.Z, {
-title: m.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
-description: m.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
+function S() {
+  let e = (0, I.GN)(e => e.selectedPlaystyle, r.Z),
+t = s.useCallback(e => I.GN.getState().setSelectedPlaystyle(e), []);
+  return (0, i.jsx)(u.Z, {
+title: g.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
+description: g.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
 handleUpdate: t,
 playstyle: e
   });
 }
 
-function S(e) {
+function C(e) {
   let {
 selectedGame: t
-  } = e, n = (0, I.J)({
+  } = e, n = (0, m.J)({
 selectedGame: t
-  }), a = (0, h.GN)(e => e.selectedTraits, r.Z), l = s.useMemo(() => new Set(a), [a]), o = s.useCallback(e => h.GN.getState().setSelectedTraits([...e]), []);
-  return (0, i.jsx)(E.Z, {
-title: m.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
-description: m.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
+  }), a = (0, I.GN)(e => e.selectedTraits, r.Z), l = s.useMemo(() => new Set(a), [a]), o = s.useCallback(e => I.GN.getState().setSelectedTraits([...e]), []);
+  return (0, i.jsx)(h.Z, {
+title: g.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
+description: g.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
 handleUpdate: o,
 interests: l,
 requiredGameId: n,
@@ -62,128 +63,128 @@ hidePreview: !0
   });
 }
 
-function C(e) {
+function N(e) {
   return e.toString();
 }
 t.Z = s.memo(function(e) {
   let {
 selectedGame: t,
 setScreen: n
-  } = e, c = s.useRef(null), d = s.useRef(null), E = s.useRef(null), I = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), [N, A] = s.useState(0), [v, Z] = s.useState(0), L = (0, h.GN)(e => e.selectedPlaystyle, r.Z), O = (0, h.GN)(e => e.previousMode, r.Z), R = s.useCallback(e => {
-A(e), v < e && Z(e);
-  }, [v]), x = s.useCallback(() => {
-0 === N ? (n(h.o2.USER_UPSELL), (0, h.fH)(O)) : R(N - 1);
+  } = e, d = s.useRef(null), u = s.useRef(null), h = s.useRef(null), m = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), [A, v] = s.useState(0), [Z, L] = s.useState(0), O = (0, I.GN)(e => e.selectedPlaystyle, r.Z), R = (0, I.GN)(e => e.previousMode, r.Z), x = s.useCallback(e => {
+v(e), Z < e && L(e);
+  }, [Z]), b = s.useCallback(() => {
+0 === A ? (n(I.o2.USER_UPSELL), (0, I.fH)(R)) : x(A - 1);
   }, [
-N,
-O,
+A,
+R,
 n,
-R
-  ]), b = s.useCallback(() => {
-2 === N ? (0, h.fH)(h.v0.DISCOVERY) : R(N + 1);
+x
+  ]), P = s.useCallback(() => {
+2 === A ? (0, I.fH)(I.v0.DISCOVERY) : x(A + 1);
   }, [
-N,
-R
-  ]), P = s.useMemo(() => 1 === N && null == L, [
-L,
-N
-  ]), M = s.useMemo(() => [{
+A,
+x
+  ]), M = s.useMemo(() => 1 === A && null == O, [
+O,
+A
+  ]), D = s.useMemo(() => [{
   index: 0,
-  name: m.Z.Messages.CLAN_SETUP_GAMES_STEP
+  name: g.Z.Messages.CLAN_SETUP_GAMES_STEP
 },
 {
   index: 1,
-  name: m.Z.Messages.CLAN_SETUP_PLAYSTYLE_STEP
+  name: g.Z.Messages.CLAN_SETUP_PLAYSTYLE_STEP
 },
 {
   index: 2,
-  name: m.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_STEP
+  name: g.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_STEP
 }
-  ], []), D = (0, a.useSpring)({
-ref: c,
+  ], []), y = (0, o.useSpring)({
+ref: d,
 from: {
   opacity: 0
 },
 to: {
   opacity: 1
 },
-config: p
-  }), y = (0, a.useSpring)({
-ref: d,
+config: T
+  }, 'animate-always'), j = (0, o.useSpring)({
+ref: u,
 from: {
   opacity: 0,
-  transform: I ? 'translateY(0px)' : 'translateY(40px)'
+  transform: m ? 'translateY(0px)' : 'translateY(40px)'
 },
 to: {
   opacity: 1,
   transform: 'translateY(0px)'
 },
-config: p
-  }), j = (0, a.useSpring)({
-ref: E,
+config: T
+  }, 'animate-always'), U = (0, o.useSpring)({
+ref: h,
 from: {
   opacity: 0,
-  transform: I ? 'translateY(0px)' : 'translateY(40px)'
+  transform: m ? 'translateY(0px)' : 'translateY(40px)'
 },
 to: {
   opacity: 1,
   transform: 'translateY(0px)'
 },
-config: p
-  });
+config: T
+  }, 'animate-always');
   (0, a.useChain)([
-c,
 d,
-E
+u,
+h
   ], [
 0,
 0.2,
 0.5
   ]);
-  let U = s.useMemo(() => [N], [N]),
-G = s.useCallback(e => {
+  let G = s.useMemo(() => [A], [A]),
+w = s.useCallback(e => {
   switch (e) {
     case 0:
-      return (0, i.jsx)(T, {
+      return (0, i.jsx)(f, {
         selectedGame: t
       });
     case 1:
-      return (0, i.jsx)(f, {});
+      return (0, i.jsx)(S, {});
     case 2:
-      return (0, i.jsx)(S, {
+      return (0, i.jsx)(C, {
         selectedGame: t
       });
   }
 }, [t]);
   return (0, i.jsxs)(a.animated.div, {
-className: g.container,
-style: D,
+className: p.container,
+style: y,
 children: [
   (0, i.jsx)(a.animated.div, {
-    className: g.sequencer,
-    style: y,
-    children: (0, i.jsx)(_.Z, {
-      currentStep: N,
-      items: U,
-      renderItem: G,
-      getItemKey: C
+    className: p.sequencer,
+    style: j,
+    children: (0, i.jsx)(E.Z, {
+      currentStep: A,
+      items: G,
+      renderItem: w,
+      getItemKey: N
     })
   }),
   (0, i.jsxs)(a.animated.div, {
-    className: g.footer,
-    style: j,
+    className: p.footer,
+    style: U,
     children: [
-      (0, i.jsx)(u.T, {
-        currentStepIndex: N,
-        steps: M,
-        furthestStepIndex: v,
-        onStepClick: R
+      (0, i.jsx)(_.T, {
+        currentStepIndex: A,
+        steps: D,
+        furthestStepIndex: Z,
+        onStepClick: x
       }),
-      (0, i.jsx)(u.i, {
-        className: g.footerButtons,
+      (0, i.jsx)(_.i, {
+        className: p.footerButtons,
         isBackDisabled: !1,
-        isNextDisabled: P,
-        onNextClick: b,
-        onBackClick: x
+        isNextDisabled: M,
+        onNextClick: P,
+        onBackClick: b
       })
     ]
   })

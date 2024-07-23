@@ -5,91 +5,88 @@ var i, s, a = n(735250),
   o = n(143927),
   c = n(704215),
   d = n(481060),
-  u = n(442837),
-  _ = n(393238),
-  E = n(607070),
-  h = n(963202),
-  I = n(353093),
-  m = n(605236),
-  g = n(931515),
-  p = n(807933),
-  T = n(702646),
-  f = n(207796),
-  S = n(543550),
-  C = n(895068),
-  N = n(921944),
-  A = n(540736);
+  u = n(393238),
+  _ = n(963202),
+  E = n(353093),
+  h = n(605236),
+  I = n(931515),
+  m = n(807933),
+  g = n(702646),
+  p = n(207796),
+  T = n(543550),
+  f = n(895068),
+  S = n(921944),
+  C = n(540736);
 (s = i || (i = {})).TOP_PICKS = 'top_picks', s.OTHER_GUILDS = 'other_guilds';
-let v = {
+let N = {
 mass: 1,
 tension: 600,
 friction: 60
   },
-  Z = r.memo(function(e) {
+  A = r.memo(function(e) {
 let {
   width: t
-} = e, n = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), i = (0, f.GN)(e => e.mode, o.Z), [s, d] = r.useState(!0), _ = (0, l.useSpring)({
+} = e, n = (0, p.GN)(e => e.mode, o.Z), [i, s] = r.useState(!0), u = (0, d.useSpring)({
   from: {
     opacity: 0
   },
   to: {
-    opacity: i === f.v0.GET_STARTED ? 0 : 1
+    opacity: n === p.v0.GET_STARTED ? 0 : 1
   },
-  config: v,
+  config: N,
   delay: 500,
-  immediate: n,
-  onRest: () => d(!1)
-}), g = (0, f.GN)(e => e.userUpsellScreen, o.Z), Z = (0, f.GN)(e => e.started, o.Z), {
-  guilds: L
-} = (0, h.C3)({
+  onRest: () => s(!1)
+}), I = (0, p.GN)(e => e.userUpsellScreen, o.Z), A = (0, p.GN)(e => e.started, o.Z), {
+  guilds: v
+} = (0, _.C3)({
   location: 'ClanDiscoveryAdminContainer',
   includeConverted: !0
-}), O = r.useMemo(() => L.filter(e => !(0, I.EJ)(e)), [L]), {
-  enableApplication: R
-} = (0, h.Fg)('ClanDiscoveryAdminContainer'), x = (0, m.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
+}), Z = r.useMemo(() => v.filter(e => !(0, E.EJ)(e)), [v]), {
+  enableApplication: L
+} = (0, _.Fg)('ClanDiscoveryAdminContainer'), O = (0, h.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
 switch (r.useEffect(() => {
-    !x && (0, m.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
-      dismissAction: N.L.TAKE_ACTION,
+    !O && (0, h.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
+      dismissAction: S.L.TAKE_ACTION,
       forceTrack: !0
     });
-  }, [x]), r.useEffect(() => {
-    let e = L.length > 0;
-    if (e && !R && g === f.o2.USER_UPSELL) {
-      (0, f.fH)(f.v0.ADMIN_UPSELL);
+  }, [O]), r.useEffect(() => {
+    let e = v.length > 0;
+    if (e && !L && I === p.o2.USER_UPSELL) {
+      (0, p.fH)(p.v0.ADMIN_UPSELL);
       return;
     }
-    if (!e && R && !Z) {
-      (0, f.fH)(f.v0.GET_STARTED);
+    if (!e && L && !A) {
+      (0, p.fH)(p.v0.GET_STARTED);
       return;
     }
-    if (R && i === f.v0.ADMIN_UPSELL && 0 === O.length) {
-      (0, f.fH)(f.v0.GET_STARTED), f.GN.getState().setUserUpsellScreen(f.o2.USER_UPSELL);
+    if (L && n === p.v0.ADMIN_UPSELL && 0 === Z.length) {
+      (0, p.fH)(p.v0.GET_STARTED), p.GN.getState().setUserUpsellScreen(p.o2.USER_UPSELL);
       return;
     }
   }, [
-    O.length,
-    L.length,
-    Z,
-    R,
-    i,
-    g
-  ]), i) {
-  case f.v0.ADMIN_UPSELL:
-    return (0, a.jsx)(S.$, {});
-  case f.v0.GET_STARTED:
-    return (0, a.jsx)(S.J, {});
-  case f.v0.DISCOVERY:
-  case f.v0.GAMES:
-  case f.v0.PLAYSTYLE:
-  case f.v0.TRAITS:
+    Z.length,
+    v.length,
+    A,
+    L,
+    n,
+    I
+  ]), n) {
+  case p.v0.ADMIN_UPSELL:
+    return (0, a.jsx)(T.$, {});
+  case p.v0.GET_STARTED:
+    return (0, a.jsx)(T.J, {});
+  case p.v0.DISCOVERY:
+  case p.v0.GAMES:
+  case p.v0.PLAYSTYLE:
+  case p.v0.TRAITS:
     return (0, a.jsxs)('div', {
-      className: A.discoveryContainer,
+      className: C.discoveryContainer,
       children: [
         (0, a.jsx)(l.animated.div, {
-          className: A.toolbar,
+          className: C.toolbar,
           style: {
-            opacity: _.opacity,
-            transform: _.opacity.to([
+            opacity: u.opacity,
+            transform: u.opacity.to([
               0,
               1
             ], [
@@ -98,13 +95,13 @@ switch (r.useEffect(() => {
             ]).to(e => 'translateY('.concat(e, 'px)')),
             borderBottom: '1px solid var(--bg-mod-strong)'
           },
-          children: (0, a.jsx)(T.Z, {})
+          children: (0, a.jsx)(g.Z, {})
         }),
         (0, a.jsx)(l.animated.div, {
-          className: A.content,
+          className: C.content,
           style: {
-            opacity: _.opacity,
-            transform: _.opacity.to([
+            opacity: u.opacity,
+            transform: u.opacity.to([
               0,
               1
             ], [
@@ -112,15 +109,15 @@ switch (r.useEffect(() => {
               0
             ]).to(e => 'translateY('.concat(e, 'px)'))
           },
-          children: (0, a.jsx)(C.ZP, {
+          children: (0, a.jsx)(f.ZP, {
             width: t,
-            isAnimating: s
+            isAnimating: i
           })
         }),
         (0, a.jsx)('div', {
-          className: A.selectors,
-          children: (0, a.jsx)(p.Z, {
-            mode: i
+          className: C.selectors,
+          children: (0, a.jsx)(m.Z, {
+            mode: n
           })
         })
       ]
@@ -130,21 +127,21 @@ switch (r.useEffect(() => {
 t.Z = r.memo(function() {
   let {
 loading: e
-  } = (0, g.LE)(), {
+  } = (0, I.LE)(), {
 ref: t,
 width: n
-  } = (0, _.Z)();
+  } = (0, u.Z)();
   return (0, a.jsxs)('main', {
-className: A.container,
+className: C.container,
 ref: t,
 children: [
   (0, a.jsx)('div', {
-    className: A.dragRegion
+    className: C.dragRegion
   }),
   e ? (0, a.jsx)('div', {
-    className: A.loading,
+    className: C.loading,
     children: (0, a.jsx)(d.Spinner, {})
-  }) : (0, a.jsx)(Z, {
+  }) : (0, a.jsx)(A, {
     width: null != n ? n : 0
   })
 ]

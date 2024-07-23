@@ -84,7 +84,7 @@ return () => {
   clearTimeout(e);
 };
   }, []);
-  let ed = (0, r.useSpring)({
+  let ed = (0, o.useSpring)({
   value: $ ? 1 : 0,
   delay: ec || !$ ? 0 : 100,
   config: {
@@ -96,29 +96,28 @@ return () => {
   onRest: () => {
     K(!1), m.S.dispatch(I.CkL.REMEASURE_TARGET);
   }
-}),
-eu = (0, r.useSpring)({
+}, 'animate-always'),
+eu = (0, o.useSpring)({
   value: $ ? 1 : 0,
   config: {
     ...r.config.stiff,
     clamp: !0
   }
-}),
-eh = (0, r.useSpring)({
+}, 'animate-always'),
+eh = (0, o.useSpring)({
   value: er,
   config: {
     ...r.config.stiff,
     clamp: !0
-  },
-  immediate: ee === $ && eu.value.idle && !ei
-}),
-ep = (0, r.useSpring)({
+  }
+}, ee === $ && eu.value.idle && !ei ? 'animate-never' : 'animate-always'),
+ep = (0, o.useSpring)({
   value: t,
   config: {
     ...r.config.stiff,
     clamp: !0
   }
-}),
+}, 'animate-always'),
 em = (0, o.useTransition)(L, {
   keys: e => null == e ? void 0 : e.id,
   config: {

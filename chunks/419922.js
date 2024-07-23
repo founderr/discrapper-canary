@@ -238,12 +238,12 @@ let {
   },
   leave: m,
   config: N
-}), T = i.useRef(null), g = (0, u.useSpring)({
+}), T = i.useRef(null), g = (0, _.useSpring)({
   ref: T,
   transform: s || f ? 'translateY(0)' : 'translateY(-25px)',
   opacity: s ? 1 : 0,
   config: v
-});
+}, 'animate-always');
 return (0, u.useChain)(s ? [
   p,
   T

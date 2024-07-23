@@ -87,12 +87,11 @@ height: U = 0
 ...y.enabled ? {
   clamp: !0
 } : null
-  }, x = (0, a.useSpring)({
-immediate: null == R,
+  }, x = (0, u.useSpring)({
 width: null !== (n = A.width) && void 0 !== n ? n : P,
 height: U,
 config: w
-  }), G = (0, u.useTransition)(O, {
+  }, null == R ? 'animate-never' : 'respect-motion-settings'), G = (0, u.useTransition)(O, {
 value: 0,
 from: {
   value: 1

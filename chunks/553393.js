@@ -79,7 +79,7 @@ S,
 J,
 k
   ]);
-  let ee = (0, a.useSpring)({
+  let ee = (0, u.useSpring)({
   from: {
     height: 0
   },
@@ -88,7 +88,6 @@ k
     tension: 450,
     friction: 45
   },
-  immediate: K,
   onRest: () => X(!0)
 }),
 et = (0, u.useTransition)(Q, {

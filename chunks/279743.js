@@ -31,13 +31,12 @@ opacity: 0
 opacity: 1
   }), A = e => {
 e.finished && (null == i || i());
-  }, [h, g] = (0, o.useSpring)(() => ({
-immediate: !0,
+  }, [h, g] = (0, c.useSpring)(() => ({
 from: {
   backgroundColor: S,
   borderColor: S
 }
-  })), O = E + 200 + 200, p = I ? 0 : 200;
+  }), 'animate-never'), O = E + 200 + 200, p = I ? 0 : 200;
   return a.useEffect(() => {
 g({
   reset: !0,

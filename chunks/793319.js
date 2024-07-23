@@ -247,7 +247,7 @@ r,
 t,
 C,
 I
-  ]), [N, v] = l.useState(T()), S = (0, u.useSpring)({
+  ]), [N, v] = l.useState(T()), S = (0, m.useSpring)({
 opacity: c ? 0.2 : 1,
 transform: c && !o.enabled ? 'scale(0.7)' : 'scale(1)',
 config: {
@@ -260,7 +260,7 @@ config: {
 onRest: () => {
   v(T()), d(!1);
 }
-  });
+  }, 'animate-always');
   l.useEffect(() => {
 T() !== N && d(!0);
   }, [

@@ -59,9 +59,9 @@ let e = (0, L.lg)(S);
 return null != e && !f.Z.isEducationUpsellDismissed(e);
   }), F = (0, I.ZP)(), w = a.useRef(null), [{
 spring: k
-  }, H] = (0, l.useSpring)(() => ({
+  }, H] = (0, _.useSpring)(() => ({
 spring: 0
-  }));
+  }), 'animate-always');
   a.useEffect(() => {
 function e() {
   H({

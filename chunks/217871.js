@@ -36,13 +36,13 @@ a.useEffect(() => {
   return () => clearTimeout(e);
 }, [l]);
 let p = null != l ? '100%' : '200%',
-  m = (0, r.useSpring)({
+  m = (0, c.useSpring)({
     opacity: d ? 1 : 0,
     translateY: d ? '0' : p,
     pointerEvents: 'none',
     width: n,
     config: s ? r.config.stiff : r.config.slow
-  });
+  }, 'animate-always');
 return (0, i.jsx)(i.Fragment, {
   children: null != l && (0, i.jsx)(r.animated.div, {
     className: T.messageComboScore,
@@ -137,43 +137,42 @@ channelId: t
   } = e, n = (0, o.e7)([p.default], () => p.default.getId()), s = (0, o.e7)([m.Z], () => m.Z.isTyping(t, n), [
 t,
 n
-  ]), l = (0, o.e7)([E.Z], () => E.Z.isEnabled()), c = (0, o.e7)([C.ZP], () => C.ZP.isComboing(n, t), [
+  ]), l = (0, o.e7)([E.Z], () => E.Z.isEnabled()), u = (0, o.e7)([C.ZP], () => C.ZP.isComboing(n, t), [
 t,
 n
   ]), {
 ref: h,
 width: _ = 0
-  } = (0, d.Z)(), f = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), [g, x] = a.useState(!1), S = (0, I.Z)(t), Z = l && c && s;
+  } = (0, d.Z)(), [f, g] = a.useState(!1), x = (0, I.Z)(t), S = l && u && s;
   a.useEffect(() => {
-Z && x(!0);
-let e = setTimeout(() => x(Z), 1000);
+S && g(!0);
+let e = setTimeout(() => g(S), 1000);
 return () => clearTimeout(e);
-  }, [Z]);
-  let A = (0, r.useSpring)({
-  opacity: g ? 1 : 0,
-  transform: g ? 'translateY(0)' : 'translateY(100%)',
+  }, [S]);
+  let Z = (0, c.useSpring)({
+  opacity: f ? 1 : 0,
+  transform: f ? 'translateY(0)' : 'translateY(100%)',
   pointerEvents: 'none',
-  config: r.config.stiff,
-  immediate: f
+  config: r.config.stiff
 }),
-M = a.useMemo(() => null != S ? S : {
+A = a.useMemo(() => null != x ? x : {
   value: 0,
   multiplier: 1
-}, [S]),
-b = a.useRef(M);
+}, [x]),
+M = a.useRef(A);
   a.useEffect(() => {
-(M.multiplier > 1 || M.value > 0) && (b.current = M);
-  }, [M]);
+(A.multiplier > 1 || A.value > 0) && (M.current = A);
+  }, [A]);
   let {
-multiplier: R,
-value: j
+multiplier: b,
+value: R
   } = a.useMemo(() => ({
-value: Z ? M.value : b.current.value,
-multiplier: Z ? M.multiplier : b.current.multiplier
+value: S ? A.value : M.current.value,
+multiplier: S ? A.multiplier : M.current.multiplier
   }), [
-Z,
-M,
-b
+S,
+A,
+M
   ]);
   return (0, i.jsxs)(i.Fragment, {
 children: [
@@ -184,10 +183,10 @@ children: [
   (0, i.jsx)(r.animated.div, {
     ref: h,
     className: T.combo,
-    style: A,
+    style: Z,
     children: (0, i.jsx)(v, {
-      value: j,
-      multiplier: R
+      value: R,
+      multiplier: b
     })
   })
 ]

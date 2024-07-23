@@ -42,25 +42,25 @@ searchResult: R,
 searchCriteria: x
   } = (0, T.Qc)(), b = (0, S.GN)(e => e.selectedTraits, d.Z), P = (0, _.Z)(R), [M, D] = o.useState(0), y = o.useMemo(() => ({
 height: M
-  }), [M]), j = (0, c.useSpring)({
+  }), [M]), j = (0, u.useSpring)({
 opacity: M > 0 ? 1 : 0,
 config: c.config.stiff
-  }), U = 'default' !== i, G = Math.min(null != t ? t : 1024, 2000), k = o.useMemo(() => {
+  }, 'animate-always'), U = 'default' !== i, G = Math.min(null != t ? t : 1024, 2000), w = o.useMemo(() => {
 let e = G / 256,
   t = G / 376,
   n = G / e,
   i = G / t;
 return i > 360 ? Math.floor(t - (t - e) / 2) : n < 240 ? Math.max(e, t) : e;
-  }, [G]), w = o.useCallback(e => {
+  }, [G]), k = o.useCallback(e => {
 if (null == e) {
   D(0);
   return;
 }
 D(e.getBoundingClientRect().y + 8 + 400 + 64);
-  }, []), B = (0, E.y)(w), H = o.useCallback(e => {
-w(B.current), null != e && (null == s || s(e));
+  }, []), B = (0, E.y)(k), H = o.useCallback(e => {
+k(B.current), null != e && (null == s || s(e));
   }, [
-w,
+k,
 B,
 s
   ]), V = (0, h.h)(H, 10, [H], {
@@ -164,9 +164,9 @@ R
     default:
       return [];
   }
-}(r, k, i), [
+}(r, w, i), [
   r,
-  k,
+  w,
   i
 ]),
 Y = o.useMemo(() => new Set(x.games), [x.games]),
@@ -272,7 +272,7 @@ children: (0, l.jsxs)('div', {
         } = e;
         return t.length;
       }),
-      columns: k,
+      columns: w,
       itemGutter: 16,
       paddingHorizontal: 16,
       paddingVertical: 'upsell' === i ? 64 : 0,

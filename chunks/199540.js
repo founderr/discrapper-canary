@@ -54,7 +54,7 @@ _ = h.map(e => e.id),
 [f, g] = l.useState(!1),
 [x, S] = l.useState(c),
 v = c ? 0 : -E,
-Z = (0, s.useSpring)({
+Z = (0, d.useSpring)({
   transform: 'translate3d(0, '.concat(v, 'px, 0)'),
   config: {
     duration: I
@@ -65,7 +65,7 @@ Z = (0, s.useSpring)({
   onRest() {
     g(!1), S(c);
   }
-}),
+}, 'animate-always'),
 T = f ? Z : void 0;
   return (f || x) && (t = (0, i.jsx)(s.animated.div, {
 style: T,

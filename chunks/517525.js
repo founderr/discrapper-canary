@@ -171,10 +171,10 @@ reducedMotion: f
   leave: f.enabled ? b : A,
   config: P
 }, 'animate-always'),
-x = (0, r.useSpring)({
+x = (0, h.useSpring)({
   to: C ? L : j,
   config: P
-});
+}, 'animate-always');
   return (e => {
 let {
   className: n,

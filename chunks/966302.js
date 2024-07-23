@@ -161,13 +161,13 @@ R.Z.supports(U.AN.VIDEO),
 Object.keys(R.Z.getVideoDevices()).length
   ]), A = (0, l.e7)([y.Z], () => y.Z.isFocused()), N = (0, l.e7)([L.Z], () => L.Z.getMode(_.id)), v = i.useCallback(e => {
 null != e.top && null != e.left && d.Z.move(e.left, e.top);
-  }, []), O = (0, o.useSpring)({
+  }, []), O = (0, u.useSpring)({
 value: p ? 1 : 0,
 config: {
   ...o.config.stiff,
   clamp: !0
 }
-  });
+  }, 'animate-always');
   i.useEffect(() => {
 let e = e => {
   e.keyCode === P.yXg.ESCAPE && c.Z.stopRinging(_.id);

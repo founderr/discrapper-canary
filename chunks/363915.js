@@ -1,37 +1,35 @@
 n.d(t, {
   Z: function() {
-return E;
+return u;
   }
 });
 var i = n(735250),
   s = n(470079),
   a = n(338545),
-  r = n(442837),
-  l = n(481060),
-  o = n(607070),
-  c = n(981562);
-let d = {
+  r = n(481060),
+  l = n(981562);
+let o = {
 mass: 1,
 tension: 300,
 friction: 60,
 clamp: !0
   },
-  u = {
+  c = {
 mass: 1,
 tension: 600,
 friction: 60,
 clamp: !0
   };
 
-function _(e) {
-  var t, n, s, _;
+function d(e) {
+  var t, n, s;
   let {
-state: E,
-direction: h,
-cleanUp: I,
-children: m
-  } = e, g = (0, r.e7)([o.Z], () => o.Z.useReducedMotion);
-  let p = (0, a.useSpring)((t = E, n = h, s = I, _ = g, t === l.TransitionStates.MOUNTED ? {
+state: d,
+direction: u,
+cleanUp: _,
+children: E
+  } = e;
+  let h = (0, r.useSpring)((t = d, n = u, s = _, t === r.TransitionStates.MOUNTED ? {
 from: {
   opacity: 0,
   transform: 'translateY(40px) translateX(0px)'
@@ -40,10 +38,9 @@ to: {
   opacity: 1,
   transform: 'translateY(0px) translateX(0px)'
 },
-config: d,
-delay: 500,
-immediate: _
-  } : t === l.TransitionStates.ENTERED ? {
+config: o,
+delay: 500
+  } : t === r.TransitionStates.ENTERED ? {
 from: {
   opacity: 0,
   transform: 'translateY(0px) translateX('.concat(-1 === n ? -40 : 40, 'px)')
@@ -52,9 +49,8 @@ to: {
   opacity: 1,
   transform: 'translateY(0px) translateX(0px)'
 },
-config: u,
-delay: 500,
-immediate: _
+config: c,
+delay: 500
   } : {
 from: {
   opacity: 1,
@@ -64,48 +60,47 @@ to: {
   opacity: 0,
   transform: 'translateY(0px) translateX('.concat(-1 === n ? 40 : -40, 'px))')
 },
-config: u,
-immediate: _,
+config: c,
 onRest: () => {
   s();
 }
   }));
   return (0, i.jsx)(a.animated.div, {
-style: p,
-className: c.step,
-children: (0, i.jsx)(l.ScrollerThin, {
-  className: c.scroller,
-  children: m
+style: h,
+className: l.step,
+children: (0, i.jsx)(r.ScrollerThin, {
+  className: l.scroller,
+  children: E
 })
   });
 }
 
-function E(e) {
+function u(e) {
   let {
 currentStep: t,
 renderItem: n,
 items: a,
-getItemKey: r
-  } = e, o = s.useRef(t - 1);
+getItemKey: o
+  } = e, c = s.useRef(t - 1);
   s.useEffect(() => {
-o.current = t;
+c.current = t;
   }, [t]);
-  let d = s.useMemo(() => null == o.current || t === o.current ? 0 : o.current < t ? 1 : -1, [t]),
-u = s.useCallback((e, t, s, a) => (0, i.jsx)(_, {
+  let u = s.useMemo(() => null == c.current || t === c.current ? 0 : c.current < t ? 1 : -1, [t]),
+_ = s.useCallback((e, t, s, a) => (0, i.jsx)(d, {
   state: s,
   cleanUp: a,
-  direction: d,
+  direction: u,
   children: n(t)
 }, e), [
-  d,
+  u,
   n
 ]);
   return (0, i.jsx)('div', {
-className: c.stepsTransitionGroup,
-children: (0, i.jsx)(l.TransitionGroup, {
+className: l.stepsTransitionGroup,
+children: (0, i.jsx)(r.TransitionGroup, {
   items: a,
-  renderItem: u,
-  getItemKey: r
+  renderItem: _,
+  getItemKey: o
 })
   });
 }
