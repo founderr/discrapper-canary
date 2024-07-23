@@ -123,39 +123,39 @@ let {
 } = e, {
   ref: g,
   width: p
-} = (0, o.Z)(), [T, S] = s.useState(null), f = t.filter(e => !_.includes(e.toLowerCase()));
+} = (0, o.Z)(), [T, f] = s.useState(null), S = t.filter(e => !_.includes(e.toLowerCase()));
 return s.useLayoutEffect(() => {
   if (null == g.current || null == p || 0 === p)
     return;
   let e = 0,
     t = 0,
     n = p - 40 - 4;
-  for (let i = 0; i < f.length && (t += g.current.children[i].clientWidth + 4, i === f.length - 1 ? !(t > n + 40) : !(t > n)); i++) {
+  for (let i = 0; i < S.length && (t += g.current.children[i].clientWidth + 4, i === S.length - 1 ? !(t > n + 40) : !(t > n)); i++) {
     ;
     e++;
   }
-  S(t => e <= f.length ? e : t);
+  f(t => e <= S.length ? e : t);
 }, [
   p,
   g,
-  f
+  S
 ]), (0, i.jsxs)('ul', {
   ref: g,
   className: r()(u.tagContainer, a, {
     [u.invisible]: null == T
   }),
   children: [
-    f.map((e, t) => (0, i.jsx)(E, {
+    S.map((e, t) => (0, i.jsx)(E, {
       className: l,
       onClick: () => n(e),
       hide: null != T && t >= T,
       text: e
     }, e)),
-    !c && null != T && T < f.length && (0, i.jsx)(I, {
+    !c && null != T && T < S.length && (0, i.jsx)(I, {
       className: l,
       onTagClick: n,
-      tags: f.slice(T),
-      count: f.length - T,
+      tags: S.slice(T),
+      count: S.length - T,
       guildId: d,
       section: h
     })

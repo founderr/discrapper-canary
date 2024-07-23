@@ -11,8 +11,8 @@ var i, a, s, r, l = n(913527),
   h = n(853197),
   N = n(702512);
 let f = null,
-  C = null,
-  p = {},
+  p = null,
+  C = {},
   g = {},
   S = N._e.LOADING_INITIAL_PROGRESS,
   A = new d.V7(),
@@ -22,7 +22,7 @@ initialProgressFetched: !1,
 interrupted: !1,
 retries: 0
   },
-  O = e => {
+  x = e => {
 let {
   dropsQuestId: t,
   streamKey: n,
@@ -35,12 +35,12 @@ if (!(null == t || null == s || a || null == i || null == n || A.isStarted()))
     (0, T.m0)(t, n, i.pid);
   });
   },
-  x = e => {
+  O = e => {
 R.retries = 0, R.completed = e.completed, R.initialProgressFetched = !0, R.progress = e.progress, R.lastCheckedAt = o().now(), S = R.completed ? N._e.QUEST_COMPLETION : N._e.TRACK_PROGRESS;
   },
   M = (e, t, n) => {
 if (!R.completed || e.dropsQuestId !== R.dropsQuestId)
-  R.game = t, R.dropsQuestId = e.dropsQuestId, R.gameTitle = e.title, R.completed = !1, R.interrupted = !1, R.streamKey = n, R.retries = 0, R.lastCheckedAt = o().now(), A.start(5000, () => O(!0));
+  R.game = t, R.dropsQuestId = e.dropsQuestId, R.gameTitle = e.title, R.completed = !1, R.interrupted = !1, R.streamKey = n, R.retries = 0, R.lastCheckedAt = o().now(), A.start(5000, () => x(!0));
   };
 class v extends(r = c.ZP.Store) {
   initialize() {
@@ -52,19 +52,19 @@ return S;
   getIsPartnerGameQuestComplete(e) {
 var t;
 let n = (0, h.BS)(e);
-if (null == n || null == C)
+if (null == n || null == p)
   return !1;
-let i = !!(null === (t = C[n.dropsQuestId]) || void 0 === t ? void 0 : t.completed_at);
+let i = !!(null === (t = p[n.dropsQuestId]) || void 0 === t ? void 0 : t.completed_at);
 return R.completed && R.gameTitle === n.title || i;
   }
   get serverEligibleByQuestIds() {
-return p;
+return C;
   }
   get platformAvailability() {
 return f;
   }
   get userStatus() {
-return C;
+return p;
   }
   get activityPanelTooltipAction() {
 return S;
@@ -99,17 +99,17 @@ s = 'DropsStore', (a = 'displayName') in(i = v) ? Object.defineProperty(i, a, {
   writable: !0
 }) : i[a] = s, t.Z = new v(u.Z, {
   DROPS_ELIGIBILITY_FETCH_SUCCESS: e => {
-p[e.dropsQuestId] = e.isEligible;
+C[e.dropsQuestId] = e.isEligible;
   },
   DROPS_PLATFORM_AVAILABILITY_SUCCESS: e => {
 f = e.availablePlatforms.filter(e => N.El.includes(e));
   },
   DROPS_USER_STATUS_FETCH_SUCCESS: e => {
 var t;
-C = null !== (t = e.codes) && void 0 !== t ? t : {};
+p = null !== (t = e.codes) && void 0 !== t ? t : {};
   },
   DROPS_USER_STATUS_FETCH_FAILURE: e => {
-C = {};
+p = {};
   },
   DROPS_ENROLLED_USER_FETCH_SUCCESS: e => {
 g[e.dropsQuestId] = {
@@ -117,13 +117,13 @@ g[e.dropsQuestId] = {
   enrolledUser: e.enrolledUser
 };
   },
-  DROPS_FETCH_PROGRESS_SUCCESS: x,
+  DROPS_FETCH_PROGRESS_SUCCESS: O,
   DROPS_FETCH_PROGRESS_FAILURE: e => {
 if (!R.initialProgressFetched)
   R.initialProgressFetched = !0, S = N._e.STREAM_CTA;
   },
   DROPS_HEARTBEAT_SUCCESS: e => {
-x(e), p[e.dropsQuestId] = !0, O();
+O(e), C[e.dropsQuestId] = !0, x();
   },
   DROPS_HEARTBEAT_FAILURE: e => {
 let {
@@ -131,15 +131,15 @@ let {
   statusCode: n
 } = e;
 if (R.completed = !1, R.initialProgressFetched = !0, R.lastCheckedAt = o().now(), 429 === n && 0 === R.retries) {
-  R.retries = R.retries + 1, O();
+  R.retries = R.retries + 1, x();
   return;
 }
-S = N._e.STREAM_CTA, 403 === n ? p[t] = !1 : R.interrupted = !0;
+S = N._e.STREAM_CTA, 403 === n ? C[t] = !1 : R.interrupted = !0;
   },
   DROPS_UNENROLL_USER: e => {
-C = null, p = {
-  ...p
-}, delete p[e.dropsQuestId], g = {
+p = null, C = {
+  ...C
+}, delete C[e.dropsQuestId], g = {
   ...g
 }, delete g[e.dropsQuestId], R.dropsQuestId === e.dropsQuestId && (R = {
   completed: !1,
@@ -189,6 +189,6 @@ null != g[o.dropsQuestId] && g[o.dropsQuestId].isEnrolled || d ? M(o, l, r) : u.
 });
   },
   LOGOUT: function() {
-p = {}, g = {}, C = {}, A.stop();
+C = {}, g = {}, p = {}, A.stop();
   }
 });

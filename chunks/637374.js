@@ -16,14 +16,14 @@ var i = n(735250),
   h = n(479446),
   N = n(930114),
   f = n(981632),
-  C = n(703656),
-  p = n(314897),
+  p = n(703656),
+  C = n(314897),
   g = n(82142),
   S = n(283595),
   A = n(594174),
   R = n(509545),
-  O = n(55563),
-  x = n(285952),
+  x = n(55563),
+  O = n(285952),
   M = n(199480),
   v = n(70613),
   L = n(626135),
@@ -117,10 +117,10 @@ return {
 let {
   libraryApplication: t
 } = this.props;
-return (0, i.jsxs)(x.Z, {
-  justify: x.Z.Justify.BETWEEN,
+return (0, i.jsxs)(O.Z, {
+  justify: O.Z.Justify.BETWEEN,
   children: [
-    (0, i.jsxs)(x.Z, {
+    (0, i.jsxs)(O.Z, {
       children: [
         this.renderButton(e),
         null == t || e.isSubscription ? null : (0, i.jsx)(F, {
@@ -129,11 +129,11 @@ return (0, i.jsxs)(x.Z, {
         })
       ]
     }),
-    (0, i.jsxs)(x.Z, {
-      align: x.Z.Align.END,
-      justify: x.Z.Justify.END,
+    (0, i.jsxs)(O.Z, {
+      align: O.Z.Align.END,
+      justify: O.Z.Justify.END,
       className: k.metadata,
-      direction: x.Z.Direction.VERTICAL,
+      direction: O.Z.Direction.VERTICAL,
       children: [
         e.hasMultipleCopies ? (0, i.jsx)('div', {
           children: this.renderGiftCodeCopiesLeft(e)
@@ -310,7 +310,7 @@ super(...e), G(this, 'handleViewLibrary', e => {
   let {
     libraryApplication: t
   } = this.props;
-  e.preventDefault(), null != t && t.isHidden() ? (0, C.uL)(U.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, C.uL)(U.Z5c.APPLICATION_LIBRARY, {
+  e.preventDefault(), null != t && t.isHidden() ? (0, p.uL)(U.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, p.uL)(U.Z5c.APPLICATION_LIBRARY, {
     state: {
       applicationId: null != t ? t.id : void 0
     }
@@ -391,25 +391,25 @@ super(...e), G(this, 'handleViewLibrary', e => {
 let H = (0, I.Z)((0, E.Z)(V));
 t.Z = c.ZP.connectStores([
   g.Z,
-  O.Z,
+  x.Z,
   A.default,
   S.Z,
   R.Z,
-  p.default,
+  C.default,
   m.Z
 ], e => {
   let {
 code: t,
 author: n,
 currentUser: i
-  } = e, a = g.Z.get(t), s = null != a ? O.Z.get(a.skuId) : null, r = null != a && null != a.userId ? A.default.getUser(a.userId) : null, l = m.Z.useReducedMotion;
+  } = e, a = g.Z.get(t), s = null != a ? x.Z.get(a.skuId) : null, r = null != a && null != a.userId ? A.default.getUser(a.userId) : null, l = m.Z.useReducedMotion;
   return {
 sku: s,
 giftCode: a,
 gifter: r,
 currentUser: i,
 subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, b.oE)(a.subscriptionPlanId) : null,
-isSelfGift: null != a ? p.default.getId() === a.userId : p.default.getId() === n.id,
+isSelfGift: null != a ? C.default.getId() === a.userId : C.default.getId() === n.id,
 resolved: g.Z.getIsResolved(t),
 libraryApplication: null != s && (null == a ? void 0 : a.entitlementBranches) != null ? Z.z2(a.entitlementBranches, s, S.Z) : null,
 useReducedMotion: l

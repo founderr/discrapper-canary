@@ -25,7 +25,7 @@ function T(e) {
   (0, o.Z)(m.Z.CLIPS), (0, E.UW)(e);
 }
 
-function S() {
+function f() {
   let e = (0, r.e7)([c.Z], () => c.Z.getKeybindForAction(I.kg4.SAVE_CLIP));
   if (null == e)
 return (0, i.jsx)(i.Fragment, {
@@ -44,7 +44,7 @@ children: g.Z.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY.format({
 })
   });
 }
-let f = {
+let S = {
   [h.D5.Error]: {
 textColor: 'text-primary',
 buttonLook: l.Button.Looks.FILLED,
@@ -78,7 +78,7 @@ containerClass: p.container
 textColor: 'always-white',
 buttonLook: l.Button.Looks.FILLED,
 buttonColor: l.Button.Colors.BRAND_INVERTED,
-bodyCopy: () => (0, i.jsx)(S, {}),
+bodyCopy: () => (0, i.jsx)(f, {}),
 buttonCopy: () => g.Z.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
 ctaOnClick: () => T(h.D5.Enabled),
 containerClass: a()(p.container, p.containerEnabled)
@@ -103,7 +103,7 @@ clipsError: _.Z.getLastClipsError()
   buttonColor: u,
   buttonLook: I,
   containerClass: m
-} = f[s];
+} = S[s];
   return (0, i.jsxs)('div', {
 className: m,
 children: [

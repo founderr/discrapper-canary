@@ -35,7 +35,7 @@ gameApplicationIds: a
   });
 }
 
-function S() {
+function f() {
   let e = (0, h.GN)(e => e.selectedPlaystyle, r.Z),
 t = s.useCallback(e => h.GN.getState().setSelectedPlaystyle(e), []);
   return (0, i.jsx)(d.Z, {
@@ -46,7 +46,7 @@ playstyle: e
   });
 }
 
-function f(e) {
+function S(e) {
   let {
 selectedGame: t
   } = e, n = (0, I.J)({
@@ -147,9 +147,9 @@ G = s.useCallback(e => {
         selectedGame: t
       });
     case 1:
-      return (0, i.jsx)(S, {});
+      return (0, i.jsx)(f, {});
     case 2:
-      return (0, i.jsx)(f, {
+      return (0, i.jsx)(S, {
         selectedGame: t
       });
   }

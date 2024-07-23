@@ -15,14 +15,14 @@ var i, a = n(735250),
   h = n(592745),
   N = n(952164),
   f = n(768419),
-  C = n(456432),
-  p = n(103575),
+  p = n(456432),
+  C = n(103575),
   g = n(789407),
   S = n(598077),
   A = n(757266),
   R = n(831506),
-  O = n(271383),
-  x = n(283595),
+  x = n(271383),
+  O = n(283595),
   M = n(293273),
   v = n(594174),
   L = n(181106),
@@ -154,7 +154,7 @@ super(...e), B(this, 'state', {
     message: s,
     analyticsLocations: r
   } = this.props;
-  return null == n ? null : (0, a.jsx)(p.Z, {
+  return null == n ? null : (0, a.jsx)(C.Z, {
     ...t,
     location: 'ActivityInviteEmbed',
     userId: e.id,
@@ -168,7 +168,7 @@ super(...e), B(this, 'state', {
     channelId: t,
     guildId: n
   } = this.props;
-  return (0, a.jsx)(C.Z, {
+  return (0, a.jsx)(p.Z, {
     guildId: null != n ? n : void 0,
     channelId: t,
     source: 'Invite Embed',
@@ -249,13 +249,13 @@ B(G, 'defaultProps', {
   f.Z,
   R.Z,
   M.Z,
-  x.Z,
+  O.Z,
   h.Z,
   Z.Z,
   A.Z,
   L.Z,
   v.default,
-  O.ZP
+  x.ZP
 ], e => {
   let {
 activity: t,
@@ -269,7 +269,7 @@ id: l
   } = null != i ? i : {}, o = null != t && null != t.party && t.party.id === a ? R.Z.getParty(t.party.id) : null, c = null != l ? M.Z.getApplicationActivity(l) : M.Z.findActivity(e => e.type === U.IIU.LISTENING), d = !1;
   null != l && (d = L.Z.getState(l, U.mFx.JOIN) === U.OcF.LOADING);
   let u = Array.from(null != o ? o : []).map(e => {
-  let t = null != r ? O.ZP.getMember(r, e) : null,
+  let t = null != r ? x.ZP.getMember(r, e) : null,
     n = null != t ? t.nick : null,
     i = v.default.getUser(e),
     a = null == i;
@@ -292,7 +292,7 @@ myPartyId: null != c && null != c.party ? c.party.id : null,
 isLaunching: d,
 isSyncable: _ && !I,
 isLaunchable: null != l && (0, D.t)({
-  LibraryApplicationStore: x.Z,
+  LibraryApplicationStore: O.Z,
   LaunchableGameStore: h.Z,
   DispatchApplicationStore: Z.Z,
   ConnectedAppsStore: A.Z,

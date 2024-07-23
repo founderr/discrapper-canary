@@ -20,14 +20,14 @@ var i = n(735250),
   h = n(100527),
   N = n(906732),
   f = n(835473),
-  C = n(471445),
-  p = n(955415),
+  p = n(471445),
+  C = n(955415),
   g = n(601964),
   S = n(592125),
   A = n(430824),
   R = n(496675),
-  O = n(594174),
-  x = n(514342),
+  x = n(594174),
+  O = n(514342),
   M = n(624138),
   v = n(358595),
   L = n(981631),
@@ -90,7 +90,7 @@ isStacked: a,
 hasEnded: s
   } = e;
   if (null != t && null != n) {
-let e = (0, C.KS)(t, n);
+let e = (0, p.KS)(t, n);
 return (0, i.jsxs)('div', {
   className: r()(b.channel, {
     [b.stacked]: a,
@@ -102,7 +102,7 @@ return (0, i.jsxs)('div', {
       size: 'xs',
       color: 'currentColor'
     }) : null,
-    (0, i.jsx)(x.Z, {
+    (0, i.jsx)(O.Z, {
       children: (0, i.jsx)(u.Text, {
         variant: 'text-xs/normal',
         children: P.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
@@ -119,7 +119,7 @@ className: r()(b.channel, {
   [b.stacked]: a,
   [b.ended]: s
 }),
-children: (0, i.jsx)(x.Z, {
+children: (0, i.jsx)(O.Z, {
   children: (0, i.jsx)(u.Text, {
     variant: 'text-xs/normal',
     children: P.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
@@ -134,10 +134,10 @@ function k(e) {
   var t, n;
   let s, l, {
   invite: d,
-  getAcceptInviteContext: C
+  getAcceptInviteContext: p
 } = e,
 {
-  approximate_member_count: x,
+  approximate_member_count: O,
   approximate_presence_count: M,
   target_type: k,
   target_application: G
@@ -190,7 +190,7 @@ ee = (0, c.Wu)([E.ZP], () => null != q ? E.ZP.getEmbeddedActivitiesForChannel(q.
   q,
   G.id
 ]),
-et = (0, c.Wu)([O.default], () => ee.map(e => O.default.getUser(e)), [ee]),
+et = (0, c.Wu)([x.default], () => ee.map(e => x.default.getUser(e)), [ee]),
 en = d.state === L.r2o.ACCEPTING,
 ei = null != W;
   if (null == W) {
@@ -202,7 +202,7 @@ W = new g.ZP(d.guild);
 es = () => {
   _.Z.acceptInviteAndTransitionToInviteChannel({
     inviteKey: d.code,
-    context: C('Invite Button Embed'),
+    context: p('Invite Button Embed'),
     analyticsLocations: J
   });
 };
@@ -228,7 +228,7 @@ children: [
       })
     })
   }),
-  (0, i.jsxs)(p.Z, {
+  (0, i.jsxs)(C.Z, {
     className: r()(b.content, {
       [b.large]: w,
       [b.stacked]: H
@@ -275,7 +275,7 @@ children: [
             ]
           }) : null,
           ei ? null : (0, i.jsx)(y, {
-            members: x,
+            members: O,
             membersOnline: M,
             isLarge: w,
             isStacked: H

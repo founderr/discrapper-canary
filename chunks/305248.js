@@ -42,7 +42,7 @@ return I.Z.getChannel(t);
 t.oldestReadMessageId,
 n.guild_id,
 n.id
-  ]), C = a.useCallback((e, t) => {
+  ]), p = a.useCallback((e, t) => {
 (0, E.ok)(e, t, h.on.INBOX);
   }, []);
   return a.useEffect(() => {
@@ -56,7 +56,7 @@ children: f.map(e => (0, i.jsx)(u.oL, {
   children: (0, i.jsx)(d.ZP, {
     className: N.forumPost,
     threadId: e.id,
-    goToThread: C
+    goToThread: p
   })
 }, e.id))
   });

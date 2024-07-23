@@ -26,8 +26,8 @@ onClick: T,
 className: h,
 source: N,
 hover: f,
-innerClassName: C
-  } = e, p = {
+innerClassName: p
+  } = e, C = {
 fullWidth: n,
 size: u,
 color: _,
@@ -36,16 +36,16 @@ tooltipPosition: m,
 onClick: T,
 className: h,
 hover: f,
-innerClassName: C
+innerClassName: p
   }, g = (0, a.e7)([r.Z], () => r.Z.getActiveLibraryApplication(t.id)), S = null != g ? g.sku.id : null, A = null != S ? S : t.primarySkuId, R = (0, a.e7)([l.Z], () => null != A && !l.Z.didFetchingSkuFail(A));
   return null != g && (0, o.Je)(g) ? (0, i.jsx)(d.Z, {
-...p,
+...C,
 libraryApplication: g,
 source: N
   }) : R ? (0, i.jsx)('div', {
 children: 'deprecated!'
   }) : (0, i.jsx)(c.Z, {
-...p,
+...C,
 hideNotLaunchable: I,
 applicationId: t.id
   });

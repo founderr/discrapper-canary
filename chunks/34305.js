@@ -229,7 +229,7 @@ super(...e), p(this, 'state', {
 });
   }
 }
-class S extends s.PureComponent {
+class f extends s.PureComponent {
   componentDidMount() {
 (0, l.ec)(this.props.installationPaths.map(e => {
   let {
@@ -296,4 +296,4 @@ t.Z = a.ZP.connectStores([c.Z], () => ({
   installationPaths: c.Z.installationPaths,
   installationPathsMetadata: c.Z.installationPathsMetadata,
   defaultInstallationPath: c.Z.defaultInstallationPath
-}))(S);
+}))(f);

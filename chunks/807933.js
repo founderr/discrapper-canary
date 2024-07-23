@@ -104,11 +104,11 @@ children: u
   });
 }
 
-function S(e) {
+function f(e) {
   return e;
 }
 
-function f(e, t, n, s) {
+function S(e, t, n, s) {
   return (0, i.jsx)(T, {
 item: t,
 state: n,
@@ -121,7 +121,7 @@ mode: t
   } = e, n = s.useMemo(() => null != p[t] ? [t] : [], [t]);
   return (0, i.jsx)(o.TransitionGroup, {
 items: n,
-renderItem: f,
-getItemKey: S
+renderItem: S,
+getItemKey: f
   });
 });

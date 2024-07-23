@@ -46,7 +46,7 @@ o = 'PrivateChannelIntegrationStore', (l = 'displayName') in(r = N) ? Object.def
   configurable: !0,
   writable: !0
 }) : r[l] = o;
-let C = new N(d.Z, {
+let p = new N(d.Z, {
   LOGOUT() {
 E.clear();
   },
@@ -130,4 +130,4 @@ let {
 return E.delete(t.id);
   }
 });
-t.Z = C;
+t.Z = p;

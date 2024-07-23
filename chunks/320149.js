@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(433355),
   p = n(933557),
   T = n(287746),
-  S = n(689938),
-  f = n(240196),
+  f = n(689938),
+  S = n(240196),
   C = n(712759);
 
 function N(e) {
@@ -37,7 +37,7 @@ v,
 Z,
 A
   ]), x = s.useCallback(() => {
-(0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
+(0, r.showToast)((0, r.createToast)(f.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
   }, []), {
 markAsNotSpam: b
   } = (0, E.m)({
@@ -48,14 +48,14 @@ onError: x
 return null;
   let P = [(0, i.jsx)(o.ZP.Icon, {
 icon: r.CloseSmallIcon,
-tooltip: S.Z.Messages.CLOSE,
+tooltip: f.Z.Messages.CLOSE,
 onClick: () => m.Z.closeChannelSidebar(n)
   }, 'close')];
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(o.ZP, {
     toolbar: P,
-    'aria-label': S.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
+    'aria-label': f.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
     children: (0, c.ud)({
       channel: t,
       channelName: N,
@@ -68,18 +68,18 @@ children: [
       (0, i.jsx)(r.Text, {
         className: C.__invalid_hamBannerText,
         variant: 'text-sm/normal',
-        children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
+        children: f.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
       }),
       (0, i.jsx)(r.Button, {
         className: C.hamBannerButton,
         size: r.ButtonSizes.SMALL,
         onClick: () => b(t, O),
-        children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
+        children: f.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
       })
     ]
   }),
   (0, i.jsx)('div', {
-    className: f.chat,
+    className: S.chat,
     children: (0, i.jsx)(T.Z, {
       channel: t,
       guild: null,

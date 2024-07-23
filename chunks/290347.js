@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(626135),
   p = n(960048),
   T = n(565216),
-  S = n(981631),
-  f = n(921944),
+  f = n(981631),
+  S = n(921944),
   C = n(757601);
 let N = [],
   A = e => {
@@ -151,10 +151,10 @@ q
   ]), s.useEffect(() => () => {
 if ('video' === a.type || 'embed' === a.type) {
   let [e, t] = ea();
-  g.default.track(S.rMx.CHANGE_LOG_VIDEO_PLAYED, {
+  g.default.track(f.rMx.CHANGE_LOG_VIDEO_PLAYED, {
     change_log_id: M,
     seconds_played: Math.round(e / 1000)
-  }), g.default.track(S.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
+  }), g.default.track(f.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
     change_log_id: M,
     seconds_unmuted: Math.round(t / 1000)
   });
@@ -165,14 +165,14 @@ a.type
   ]), s.useEffect(() => {
 null != Z && (0, E.kk)(Z);
 let e = Date.now();
-return g.default.track(S.rMx.CHANGE_LOG_OPENED, {
+return g.default.track(f.rMx.CHANGE_LOG_OPENED, {
   change_log_id: M
 }), () => {
-  g.default.track(S.rMx.CHANGE_LOG_CLOSED, {
+  g.default.track(f.rMx.CHANGE_LOG_CLOSED, {
     change_log_id: M,
     seconds_open: Math.round((Date.now() - e) / 1000)
   }), null != Z && (0, E.EW)(Z, {
-    dismissAction: f.L.DISMISS
+    dismissAction: S.L.DISMISS
   });
 };
   }, [
@@ -209,7 +209,7 @@ children: [
         src: a.src,
         poster: a.poster,
         onPlay: e => {
-          g.default.track(S.rMx.CHANGE_LOG_VIDEO_INTERACTED, {
+          g.default.track(f.rMx.CHANGE_LOG_VIDEO_INTERACTED, {
             change_log_id: M
           }), H(Date.now()), K(!0), Q(e.currentTarget.muted);
         },
@@ -245,9 +245,9 @@ children: [
         renderVideoComponent: h.lV,
         renderImageComponent: h.Yi,
         renderLinkComponent: h.iT,
-        renderForwardComponent: S.VqG,
+        renderForwardComponent: f.VqG,
         onPlay: () => {
-          g.default.track(S.rMx.CHANGE_LOG_VIDEO_INTERACTED, {
+          g.default.track(f.rMx.CHANGE_LOG_VIDEO_INTERACTED, {
             change_log_id: M
           });
         }

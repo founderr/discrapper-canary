@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(594174),
   N = n(739566),
   f = n(981631),
-  C = n(665692),
-  p = n(689938),
+  p = n(665692),
+  C = n(689938),
   g = n(69038);
 let S = {
 tag: 'span',
@@ -38,7 +38,7 @@ children: (0, i.jsx)(o.Text, {
   });
 }
 t.Z = a.memo(function(e) {
-  var t, n, s, r, O, x;
+  var t, n, s, r, x, O;
   let M, {
   channel: v,
   messageId: L,
@@ -69,26 +69,26 @@ let e = [],
     e.name,
     e
   ]));
-for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
+for (let n of null !== (x = Z.options) && void 0 !== x ? x : [])
   e = e.concat(function e(t) {
     var n, s, r, l, d, u, _;
     let g, {
-        option: O,
-        channel: x,
+        option: x,
+        channel: O,
         guild: M,
         messageId: v,
         parentOptionKey: L,
         commandOptionSpec: Z,
         sourceAnalyticsLocations: P
       } = t,
-      b = null != L ? L + ' ' + O.name : O.name;
-    if (O.type === c.jw.SUB_COMMAND || O.type === c.jw.SUB_COMMAND_GROUP) {
+      b = null != L ? L + ' ' + x.name : x.name;
+    if (x.type === c.jw.SUB_COMMAND || x.type === c.jw.SUB_COMMAND_GROUP) {
       let t = [(0, i.jsxs)(a.Fragment, {
           children: [
             ' ',
             (0, i.jsx)(o.Text, {
               ...S,
-              children: null !== (s = null == Z ? void 0 : Z.name_localized) && void 0 !== s ? s : O.name
+              children: null !== (s = null == Z ? void 0 : Z.name_localized) && void 0 !== s ? s : x.name
             })
           ]
         }, b)],
@@ -96,10 +96,10 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           e.name,
           e
         ]));
-      for (let n of null !== (l = O.options) && void 0 !== l ? l : [])
+      for (let n of null !== (l = x.options) && void 0 !== l ? l : [])
         t = t.concat(e({
           option: n,
-          channel: x,
+          channel: O,
           guild: M,
           messageId: v,
           parentOptionKey: b,
@@ -108,20 +108,20 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
         }));
       return t;
     }
-    let D = O.value;
-    if (null != O.value)
-      switch (O.type) {
+    let D = x.value;
+    if (null != x.value)
+      switch (x.type) {
         case c.jw.USER: {
-          let e = O.value.toString(),
+          let e = x.value.toString(),
             t = h.default.getUser(e);
           if (null != t) {
-            let e = (0, N.ij)(t, x);
+            let e = (0, N.ij)(t, O);
             g = (0, i.jsxs)(E.Z, {
               ...A,
               onClick: () => (0, I.openUserProfileModal)({
                 userId: t.id,
-                guildId: x.guild_id,
-                channelId: x.id,
+                guildId: O.guild_id,
+                channelId: O.id,
                 messageId: v,
                 sourceAnalyticsLocations: P,
                 analyticsLocation: {
@@ -129,7 +129,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
                 }
               }),
               children: [
-                C.ME,
+                p.ME,
                 e.nick
               ]
             });
@@ -137,54 +137,54 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           break;
         }
         case c.jw.CHANNEL: {
-          let e = O.value.toString(),
+          let e = x.value.toString(),
             t = m.Z.getChannel(e);
           null != t && (g = (0, i.jsxs)(E.Z, {
             ...A,
             children: [
-              C.zy,
+              p.zy,
               t.name
             ]
           }));
           break;
         }
         case c.jw.ROLE: {
-          let e = O.value.toString(),
+          let e = x.value.toString(),
             t = null != M ? T.Z.getRole(M.id, e) : void 0;
           null != t && (g = (0, i.jsxs)(E.Z, {
             ...A,
             children: [
-              C.ME,
+              p.ME,
               t.name
             ]
           }));
           break;
         }
         case c.jw.MENTIONABLE: {
-          let e = O.value.toString(),
+          let e = x.value.toString(),
             t = null != M ? T.Z.getRole(M.id, e) : void 0;
           if (null != t)
             g = (0, i.jsxs)(E.Z, {
               children: [
-                C.ME,
+                p.ME,
                 t.name
               ]
             });
           else {
             let t = h.default.getUser(e);
             if (null != t) {
-              let e = (0, N.ij)(t, x);
+              let e = (0, N.ij)(t, O);
               g = (0, i.jsxs)(E.Z, {
                 ...A,
                 onClick: () => (0, I.openUserProfileModal)({
                   userId: t.id,
-                  guildId: x.guild_id,
+                  guildId: O.guild_id,
                   analyticsLocation: {
                     section: f.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE
                   }
                 }),
                 children: [
-                  C.ME,
+                  p.ME,
                   e.nick
                 ]
               });
@@ -193,10 +193,10 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           break;
         }
         case c.jw.ATTACHMENT:
-          g = R(p.Z.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
+          g = R(C.Z.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
           break;
         default: {
-          let e = null == Z ? void 0 : null === (d = Z.choices) || void 0 === d ? void 0 : d.find(e => e.value === O.value);
+          let e = null == Z ? void 0 : null === (d = Z.choices) || void 0 === d ? void 0 : d.find(e => e.value === x.value);
           null != e && (D = null !== (u = e.name_localized) && void 0 !== u ? u : e.name);
         }
       }
@@ -206,7 +206,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           ...S,
           children: [
             ' ',
-            null !== (_ = null == Z ? void 0 : Z.name_localized) && void 0 !== _ ? _ : O.name,
+            null !== (_ = null == Z ? void 0 : Z.name_localized) && void 0 !== _ ? _ : x.name,
             ': '
           ]
         }),
@@ -228,7 +228,7 @@ M = (0, i.jsxs)(i.Fragment, {
       ...S,
       children: [
         '/',
-        null !== (x = null === (s = Z.application_command) || void 0 === s ? void 0 : s.name_localized) && void 0 !== x ? x : Z.name
+        null !== (O = null === (s = Z.application_command) || void 0 === s ? void 0 : s.name_localized) && void 0 !== O ? O : Z.name
       ]
     }),
     e

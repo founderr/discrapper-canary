@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return S;
+return f;
   }
 });
 var i = n(735250),
@@ -21,13 +21,13 @@ var i = n(735250),
   p = n(689938),
   T = n(985164);
 
-function S(e) {
+function f(e) {
   var t;
   let {
 quest: n,
 isHovering: a,
-onCtxMenuClose: S,
-onCtxMenuOpen: f,
+onCtxMenuClose: f,
+onCtxMenuOpen: S,
 onCtxMenuSelect: C
   } = e, N = (0, h.j8)(n), A = (0, d.ZP)(), v = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, Z = v === g.BRd.DARK, L = s.useMemo(() => (0, h.nP)(n.config.assets.hero), [n]), O = s.useContext(l.S).reducedMotion.enabled, R = (0, h.Mi)(n, E.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = s.useRef(a), M = s.useRef(null), D = (0, _.B6)(n.config.expiresAt, {
 month: 'numeric',
@@ -95,8 +95,8 @@ children: [
               })
             }),
             (0, i.jsx)(m.r, {
-              onOpen: f,
-              onClose: S,
+              onOpen: S,
+              onClose: f,
               onSelect: C,
               questContent: E.jn.QUEST_HOME_DESKTOP,
               quest: n,

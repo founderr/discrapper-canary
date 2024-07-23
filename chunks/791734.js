@@ -94,7 +94,7 @@ n
   ]), p = s.useMemo(() => n.slice(u + 1), [
 u,
 n
-  ]), T = (0, c.ZP)(), S = (0, l.wj)(T);
+  ]), T = (0, c.ZP)(), f = (0, l.wj)(T);
   return (0, i.jsxs)('div', {
 className: E.container,
 ref: _,
@@ -142,7 +142,7 @@ children: [
           }),
           children: (0, i.jsx)(o.Text, {
             variant: 'text-md/medium',
-            color: n ? 'header-primary' : S ? 'text-muted' : 'header-primary',
+            color: n ? 'header-primary' : f ? 'text-muted' : 'header-primary',
             children: e.label
           })
         }, e.id);

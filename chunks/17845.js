@@ -27,7 +27,7 @@ m,
 u
   ]), p = s.useMemo(() => ({
 backgroundImage: 'url('.concat(g, ')')
-  }), [g]), T = null != h ? h : m ? 'always-white' : 'header-primary', S = null != I ? I : m ? 'text-muted' : 'header-primary';
+  }), [g]), T = null != h ? h : m ? 'always-white' : 'header-primary', f = null != I ? I : m ? 'text-muted' : 'header-primary';
   return (0, i.jsxs)('div', {
 className: r()(d.imageContainer, _),
 children: [
@@ -43,7 +43,7 @@ children: [
         }),
         (0, i.jsx)(o.Text, {
           variant: 'text-md/medium',
-          color: S,
+          color: f,
           children: n
         }),
         a

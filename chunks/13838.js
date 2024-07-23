@@ -16,13 +16,13 @@ var i = n(392711),
   g = n(996106),
   p = n(914946),
   T = n(238679),
-  S = n(452426),
-  f = n(295424),
+  f = n(452426),
+  S = n(295424),
   C = n(222263),
   N = n(863141),
   A = n(186901),
   v = n(981631);
-let Z = e => (0, S.Z)(e).required().keys({
+let Z = e => (0, f.Z)(e).required().keys({
   channel_id: e.string().required()
 });
 
@@ -43,7 +43,7 @@ throw new g.Z({
   errorCode: v.lTL.INVALID_CHANNEL
 }, 'Invalid nsfw channel id: '.concat(s.id));
 }
-let O = e => (0, S.Z)(e).keys({
+let O = e => (0, f.Z)(e).keys({
   channel_id: e.string().allow(null)
 });
 
@@ -61,7 +61,7 @@ throw new g.Z({
 let x = {
   [v.zMe.GUILD_STATUS]: {
 scope: a.x.RPC,
-validation: e => (0, S.Z)(e).required().keys({
+validation: e => (0, f.Z)(e).required().keys({
   guild_id: e.string().required()
 }),
 handler(e) {
@@ -101,7 +101,7 @@ scope: {
     a.x.RPC_VOICE_READ
   ]
 },
-validation: e => (0, S.Z)(e).required().keys({
+validation: e => (0, f.Z)(e).required().keys({
   channel_id: e.string().required()
 }),
 handler(e) {
@@ -139,7 +139,7 @@ scope: {
     a.x.RPC_VOICE_READ
   ]
 },
-validation: e => (0, S.Z)(e).required().keys({
+validation: e => (0, f.Z)(e).required().keys({
   channel_id: e.string().required()
 }),
 handler(e) {
@@ -177,7 +177,7 @@ scope: {
     a.x.RPC_VOICE_READ
   ]
 },
-validation: e => (0, S.Z)(e).required().keys({
+validation: e => (0, f.Z)(e).required().keys({
   channel_id: e.string().required()
 }),
 handler(e) {
@@ -450,7 +450,7 @@ handler: () => e => {
   let {
     prevState: i,
     dispatch: a
-  } = e, r = c.Z.getStreamerActiveStreamMetadata(), d = (null == r ? void 0 : r.pid) != null ? o.ZP.getGameForPID(r.pid) : null, u = (null == d ? void 0 : d.id) != null ? l.Z.getApplication(d.id) : null, _ = null != u ? (0, f.Z)(u) : null, E = null == r ? void 0 : r.sourceName, h = {
+  } = e, r = c.Z.getStreamerActiveStreamMetadata(), d = (null == r ? void 0 : r.pid) != null ? o.ZP.getGameForPID(r.pid) : null, u = (null == d ? void 0 : d.id) != null ? l.Z.getApplication(d.id) : null, _ = null != u ? (0, S.Z)(u) : null, E = null == r ? void 0 : r.sourceName, h = {
     active: null != r,
     pid: null !== (t = null == r ? void 0 : r.pid) && void 0 !== t ? t : null,
     application: (n = null != _, n) ? {

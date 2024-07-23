@@ -20,14 +20,14 @@ var i = n(735250),
   h = n(226192),
   N = n(36459),
   f = n(336197),
-  C = n(103575),
-  p = n(496675),
+  p = n(103575),
+  C = n(496675),
   g = n(594174),
   S = n(702346),
   A = n(5192),
   R = n(51144),
-  O = n(937889),
-  x = n(739566),
+  x = n(937889),
+  O = n(739566),
   M = n(779125),
   v = n(890410),
   L = n(464891),
@@ -71,7 +71,7 @@ showUsernamePopout: r
 function w(e, t) {
   return a.useMemo(() => {
 if (null != t)
-  return n => (0, i.jsx)(C.Z, {
+  return n => (0, i.jsx)(p.Z, {
     ...n,
     location: 'AutomodFlagToChannel',
     userId: t.id,
@@ -208,7 +208,7 @@ let K = a.memo(function(e) {
 } = e,
 o = F(n, a),
 c = w(a, n.author),
-d = (0, x.ZP)(n),
+d = (0, O.ZP)(n),
 u = (0, L.CF)({
   message: n,
   channel: a,
@@ -221,7 +221,7 @@ E = g.default.getUser(l),
 I = F(n, a),
 m = w(a, E);
   if (null != E) {
-let e = (0, x.ij)(E, a),
+let e = (0, O.ij)(E, a),
   i = (0, L.CF)({
     message: n,
     channel: a,
@@ -257,17 +257,17 @@ channel: l
   } = e, {
 avatarSrc: o,
 eventHandlers: {
-  onMouseEnter: C,
+  onMouseEnter: p,
   onMouseLeave: g
 }
   } = (0, D.m)(!0), {
 onFocus: A,
 ...R
   } = (0, c.JA)(null != t ? t : ''), {
-isFocused: x,
+isFocused: O,
 handleFocus: M,
 handleBlur: Z
-  } = (0, P.bb)(A), b = (0, u.e7)([E.Z], () => E.Z.keyboardModeEnabled), j = (0, u.e7)([p.Z], () => p.Z.can(U.Plq.MANAGE_MESSAGES, l), [l]), {
+  } = (0, P.bb)(A), b = (0, u.e7)([E.Z], () => E.Z.keyboardModeEnabled), j = (0, u.e7)([C.Z], () => C.Z.can(U.Plq.MANAGE_MESSAGES, l), [l]), {
 ruleName: w,
 embedChannel: Y,
 decisionId: W,
@@ -280,7 +280,7 @@ decisionReason: ee,
 alertActionsExecution: et,
 quarantineType: en,
 interactionUserId: ei
-  } = (0, T.ZP)(s), ea = a.useMemo(() => (0, O.k$)(X, Q, l.id), [
+  } = (0, T.ZP)(s), ea = a.useMemo(() => (0, x.k$)(X, Q, l.id), [
 X,
 Q,
 l
@@ -307,7 +307,7 @@ l,
 s.id
   ]), ed = (0, B.L9)(Number($)), eu = null != ee, e_ = j && null != J && (null == et || !et.actions.hasOwnProperty(m.d.DELETE_USER_MESSAGE));
   return (0, i.jsx)('div', {
-onMouseEnter: C,
+onMouseEnter: p,
 onMouseLeave: g,
 children: (0, i.jsx)(S.Z, {
   className: r()(G.mainContainer, {
@@ -369,7 +369,7 @@ children: (0, i.jsx)(S.Z, {
           hideTimestamp: !0,
           className: r()(G.embedCard, {
             [G.compact]: n,
-            [G.selected]: es || b && x,
+            [G.selected]: es || b && O,
             [G.isClickable]: null != J && null != Y
           }),
           childrenAccessories: (0, i.jsxs)(i.Fragment, {

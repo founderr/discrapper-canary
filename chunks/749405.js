@@ -31,8 +31,8 @@ h.id,
 I
   ]), {
 acceptMessageRequest: T,
-rejectMessageRequest: S,
-isAcceptLoading: f,
+rejectMessageRequest: f,
+isAcceptLoading: S,
 isRejectLoading: C,
 isUserProfileLoading: N,
 isOptimisticAccepted: A,
@@ -42,7 +42,7 @@ user: n,
 onAcceptSuccess: p,
 onRejectSuccess: g,
 onError: m
-  }), Z = f || C || N || A || v;
+  }), Z = S || C || N || A || v;
   return (0, i.jsxs)('div', {
 className: E.container,
 children: [
@@ -59,7 +59,7 @@ children: [
         color: a.ButtonColors.PRIMARY,
         size: a.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), S(h.id);
+          e.stopPropagation(), f(h.id);
         },
         disabled: Z,
         submitting: C || v,
@@ -73,7 +73,7 @@ children: [
           e.stopPropagation(), T(h.id);
         },
         disabled: Z,
-        submitting: f || N || A,
+        submitting: S || N || A,
         children: _.Z.Messages.MESSAGE_REQUEST_ACCEPT
       })
     ]

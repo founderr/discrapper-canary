@@ -55,8 +55,8 @@ c = (0, E.g2)({
 }),
 {
   errorHints: f,
-  startingConsoleQuest: C,
-  startConsoleQuest: p
+  startingConsoleQuest: p,
+  startConsoleQuest: C
 } = (0, u.GI)({
   questId: e.quest.id,
   beforeRequest: () => {
@@ -70,7 +70,7 @@ c = (0, E.g2)({
 });
   return (0, i.jsxs)('div', {
 className: s()(m.container, {
-  [m.inFlight]: C
+  [m.inFlight]: p
 }),
 children: [
   (0, i.jsxs)('div', {
@@ -99,8 +99,8 @@ children: [
     className: m.cta,
     children: (0, i.jsx)(l.Button, {
       color: l.ButtonColors.PRIMARY,
-      onClick: p,
-      disabled: C,
+      onClick: C,
+      disabled: p,
       children: (0, i.jsxs)('div', {
         className: m.ctaInner,
         children: [

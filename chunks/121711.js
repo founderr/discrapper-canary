@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(63063),
   p = n(113434),
   T = n(709158),
-  S = n(710914),
-  f = n(906739),
+  f = n(710914),
+  S = n(906739),
   C = n(452081),
   N = n(981631),
   A = n(689938),
@@ -33,7 +33,7 @@ scrollPosition: x
   } = (0, E.c)(), b = (0, l.wj)((0, c.ZP)()), P = (0, r.e7)([_.Z], () => _.Z.hasLoadedExperiments), {
 quests: M,
 isFetchingCurrentQuests: D
-  } = (0, p.bA)(L), y = (0, f.Z)(), j = null;
+  } = (0, p.bA)(L), y = (0, S.Z)(), j = null;
   if (window.location.hash.length > 0) {
 let e = window.location.hash.slice(1);
 for (let t of M)
@@ -123,7 +123,7 @@ children: [
       ]
     }) : (0, i.jsx)('div', {
       className: v.gridContainer,
-      children: (0, i.jsx)(S.Z, {
+      children: (0, i.jsx)(f.Z, {
         quests: M,
         selectedQuestId: j
       })

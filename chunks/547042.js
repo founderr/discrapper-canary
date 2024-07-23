@@ -21,9 +21,9 @@ var i, s, a = n(735250),
   g = n(981631),
   p = n(921944),
   T = n(689938),
-  S = n(660979);
+  f = n(660979);
 (i = s || (s = {})).BOOSTING = 'BOOSTING', i.NITRO = 'NITRO', i.BASH_OUT = 'BASH_OUT', i.GAME_NIGHT = 'GAME_NIGHT';
-let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
+let S = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
   C = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
   N = e => {
 let {
@@ -51,7 +51,7 @@ let {
           learnMore: !0,
           title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE,
           videoPosterUrl: C,
-          videoUrl: f,
+          videoUrl: S,
           ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT,
           dismissText: T.Z.Messages.DISMISS
       };
@@ -63,7 +63,7 @@ let {
           learnMore: !0,
           title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE,
           videoPosterUrl: C,
-          videoUrl: f,
+          videoUrl: S,
           ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT,
           dismissText: T.Z.Messages.DISMISS
       };
@@ -117,14 +117,14 @@ let M = (0, c.bp)() === g.IlC.POPOUT,
 return (0, a.jsx)(E.Gt, {
   value: P,
   children: (0, a.jsx)('div', {
-    className: S.wrapper,
+    className: f.wrapper,
     children: (0, a.jsx)('div', {
-      className: S.container,
+      className: f.container,
       children: (0, a.jsxs)('div', {
-        className: S.content,
+        className: f.content,
         children: [
           (0, a.jsx)(I.Z, {
-            className: S.video,
+            className: f.video,
             src: x,
             poster: R,
             width: 224,
@@ -134,16 +134,16 @@ return (0, a.jsx)(E.Gt, {
             autoPlay: !0
           }),
           (0, a.jsx)('div', {
-            className: S.header,
+            className: f.header,
             children: (0, a.jsx)(o.Heading, {
-              className: S.__invalid_headerText,
+              className: f.__invalid_headerText,
               variant: 'text-sm/bold',
               color: 'always-white',
               children: O
             })
           }),
           (0, a.jsxs)(o.Text, {
-            className: S.subheaderText,
+            className: f.subheaderText,
             variant: 'text-xs/normal',
             color: 'always-white',
             children: [
@@ -152,7 +152,7 @@ return (0, a.jsx)(E.Gt, {
                 children: [
                   ' ',
                   (0, a.jsx)(o.Anchor, {
-                    className: S.learnMoreLink,
+                    className: f.learnMoreLink,
                     href: 'https://support.discord.com/hc/articles/4422142836759',
                     children: T.Z.Messages.LEARN_MORE
                   })
@@ -161,7 +161,7 @@ return (0, a.jsx)(E.Gt, {
             ]
           }),
           (0, a.jsxs)('div', {
-            className: S.ctaActionWrapper,
+            className: f.ctaActionWrapper,
             children: [
               (0, a.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,

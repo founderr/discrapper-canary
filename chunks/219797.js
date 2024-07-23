@@ -1,15 +1,15 @@
 n.d(t, {
   L9: function() {
-return x;
+return O;
   },
   ZK: function() {
-return O;
+return x;
   },
   d4: function() {
 return R;
   },
   dS: function() {
-return p;
+return C;
   },
   jY: function() {
 return A;
@@ -38,9 +38,9 @@ var i = n(735250),
   h = n(524444),
   N = n(981631),
   f = n(689938),
-  C = n(736984);
+  p = n(736984);
 
-function p(e) {
+function C(e) {
   let t = e.item.originalItem;
   return (0, h.Yi)({
 ...e,
@@ -65,7 +65,7 @@ n = a.useCallback(() => {
   var e;
   return (0, I.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, N.J0y.IS_CLIP) ? (0, i.jsxs)(l.DY, {
     text: f.Z.Messages.CLIPS_BETA_TAG_HOVER,
-    className: C.clipPill,
+    className: p.clipPill,
     children: [
       (0, i.jsx)(o.ClipsIcon, {
         size: 'xs',
@@ -151,7 +151,7 @@ contentType: t.content_type
   });
 }
 
-function O(e) {
+function x(e) {
   let t = e.item.originalItem;
   return (0, h.ur)({
 ...e,
@@ -161,7 +161,7 @@ fileSize: t.size
   });
 }
 
-function x(e) {
+function O(e) {
   if ('CLIP' === e.item.type)
 return (0, i.jsx)(M, {
   attachment: e.item.originalItem,

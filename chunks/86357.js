@@ -24,7 +24,7 @@ return (0, u.jsxs)('div', {
   ]
 });
   },
-  C = e => {
+  p = e => {
 let {
   sku: t,
   className: n
@@ -41,7 +41,7 @@ return (0, u.jsxs)('div', {
   ]
 });
   },
-  p = e => {
+  C = e => {
 let {
   sku: t,
   className: n
@@ -79,7 +79,7 @@ let {
 return (0, u.jsxs)('div', {
   className: I()(N.row, n),
   children: [
-    (0, u.jsx)(p, {
+    (0, u.jsx)(C, {
       sku: t
     }),
     (0, u.jsx)(g, {
@@ -100,7 +100,7 @@ return (0, u.jsx)('div', {
   children: h.Z.Messages.APPLICATION_STORE_FREE
 });
   };
-class O extends(s = _.PureComponent) {
+class x extends(s = _.PureComponent) {
   getState() {
 let {
   inLibrary: e,
@@ -136,7 +136,7 @@ switch (e) {
       className: I()(t, n)
     });
   case 3:
-    return (0, u.jsx)(C, {
+    return (0, u.jsx)(p, {
       sku: i,
       className: I()(t, n)
     });
@@ -163,7 +163,7 @@ switch (e) {
       className: I()(t)
     });
   case 3:
-    return (0, u.jsx)(C, {
+    return (0, u.jsx)(p, {
       sku: n,
       className: I()(N.directoryHeroPricePremium, t)
     });
@@ -198,7 +198,7 @@ switch (e) {
             (0, u.jsx)(S, {
               sku: i
             }),
-            (0, u.jsx)(p, {
+            (0, u.jsx)(C, {
               sku: i
             })
           ]
@@ -239,9 +239,9 @@ switch (this.props.type) {
 }
   }
 }
-o = O, c = 'Types', d = i, c in o ? Object.defineProperty(o, c, {
+o = x, c = 'Types', d = i, c in o ? Object.defineProperty(o, c, {
   value: d,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[c] = d, t.Z = O;
+}) : o[c] = d, t.Z = x;

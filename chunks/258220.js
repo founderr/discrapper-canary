@@ -30,7 +30,7 @@ c.default.track(u.rMx.OPEN_MODAL, {
   type: h
 });
   }, []);
-  let S = () => {
+  let f = () => {
 let e = 'temporary';
 m && (e = 'permanent', r.ZP.updatedUnsyncedSettings({
   disableActivityHardwareAccelerationPrompt: !0
@@ -53,7 +53,7 @@ children: [
         children: _.Z.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE
       }),
       (0, i.jsx)(a.ModalCloseButton, {
-        onClick: S,
+        onClick: f,
         className: E.closeButton
       })
     ]
@@ -84,7 +84,7 @@ children: [
       }),
       (0, i.jsx)(a.Button, {
         color: a.Button.Colors.PRIMARY,
-        onClick: S,
+        onClick: f,
         children: _.Z.Messages.ACTIVITY_HARDWARE_ACCELERATION_NO_THANKS
       }),
       (0, i.jsx)(a.Button, {

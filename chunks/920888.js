@@ -25,7 +25,7 @@ return n < 0 ? e : [
   ...e.slice(n + 1)
 ];
   };
-class C extends a.PureComponent {
+class p extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
 let n = e.message.reactions.length;
 return 0 === t.reactionsCount && n > 0 ? {
@@ -45,20 +45,20 @@ let {
   isPendingMember: h,
   isForumToolbar: N,
   channel: f,
-  className: C,
-  forceAddReactions: p,
+  className: p,
+  forceAddReactions: C,
   reactionClassName: g,
   useChatFontScaling: S,
   forceHideReactionCreates: A,
   remainingReactions: R,
-  combinedReactions: O,
-  visibleReactionsCount: x
+  combinedReactions: x,
+  visibleReactionsCount: O
 } = this.props, {
   disableTransitionAppear: M
-} = this.state, v = S ? T : m, L = x > 0;
-return L || p ? (0, i.jsxs)(l.W, {
+} = this.state, v = S ? T : m, L = O > 0;
+return L || C ? (0, i.jsxs)(l.W, {
   component: 'div',
-  className: r()(v.reactions, C),
+  className: r()(v.reactions, p),
   transitionAppear: !M,
   role: 'group',
   transitionLeave: !1,
@@ -71,7 +71,7 @@ return L || p ? (0, i.jsxs)(l.W, {
   }),
   children: [
     (0, i.jsx)(_.l, {
-      reactions: O,
+      reactions: x,
       message: e,
       readOnly: n,
       isLurking: a,
@@ -103,8 +103,8 @@ return L || p ? (0, i.jsxs)(l.W, {
       useChatFontScaling: S,
       isHovered: this.state.isHovered,
       className: r()({
-        [v.forceShow]: p && !L,
-        [v.forceShowLook]: p
+        [v.forceShow]: C && !L,
+        [v.forceShowLook]: C
       })
     })
   ]
@@ -157,7 +157,7 @@ s,
 n,
 t.reactions
   ]);
-  return (0, i.jsx)(C, {
+  return (0, i.jsx)(p, {
 ...e,
 visibleReactionsCount: o,
 combinedReactions: r,

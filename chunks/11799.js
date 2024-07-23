@@ -21,8 +21,8 @@ let {
   initialPageSize: I
 } = e, m = (0, a.e7)([d.Z], () => d.Z.shouldReload()), T = i.useRef(!1), [h, N] = i.useState(!1), {
   initialized: f,
-  loading: C,
-  items: p,
+  loading: p,
+  items: C,
   hasMore: g,
   cursor: S,
   errored: A
@@ -35,7 +35,7 @@ let {
   errored: c.Z.errored
 })), {
   roleFilter: R,
-  everyoneFilter: O
+  everyoneFilter: x
 } = (0, a.cj)([l.Z], () => ({
   everyoneFilter: l.Z.everyoneFilter,
   roleFilter: l.Z.roleFilter
@@ -46,14 +46,14 @@ i.useEffect(() => ((0, o.Vk)(!0), () => (0, o.Vk)(!1)), []), i.useEffect(() => {
   t,
   f
 ]);
-let x = (0, r.Z)();
+let O = (0, r.Z)();
 i.useEffect(() => () => {
-  _ ? !x() && (A || p.length > 100) && (0, o.jF)() : n && p.length > 100 && (0, o.jF)();
+  _ ? !O() && (A || C.length > 100) && (0, o.jF)() : n && C.length > 100 && (0, o.jF)();
 }, [
   n,
-  p,
+  C,
   _,
-  x,
+  O,
   A
 ]), i.useEffect(() => {
   let e = m && t;
@@ -61,7 +61,7 @@ i.useEffect(() => () => {
     limit: null != I ? I : E ? 8 : 20,
     with_mentions: E,
     roles_filter: R,
-    everyone_filter: O
+    everyone_filter: x
   });
 }, [
   f,
@@ -69,7 +69,7 @@ i.useEffect(() => () => {
   t,
   E,
   R,
-  O,
+  x,
   I
 ]);
 let M = i.useCallback(async e => {
@@ -77,7 +77,7 @@ let M = i.useCallback(async e => {
     after: S,
     with_mentions: E,
     roles_filter: R,
-    everyone_filter: O,
+    everyone_filter: x,
     limit: E ? 8 : 20
   }, () => {
     T.current = !1;
@@ -89,12 +89,12 @@ let M = i.useCallback(async e => {
   A,
   E,
   R,
-  O
+  x
 ]);
 return {
   initialized: f,
-  loading: C,
-  items: p,
+  loading: p,
+  items: C,
   hasMore: g,
   loadMore: M,
   loadingMore: h,

@@ -16,14 +16,14 @@ var i = n(735250),
   h = n(594174),
   N = n(617136),
   f = n(272008),
-  C = n(113434),
-  p = n(569984),
+  p = n(113434),
+  C = n(569984),
   g = n(497505),
   S = n(918701),
   A = n(5881),
   R = n(566078),
-  O = n(602667),
-  x = n(340100),
+  x = n(602667),
+  O = n(340100),
   M = n(611855),
   v = n(644646),
   L = n(670638),
@@ -46,7 +46,7 @@ quest: q
   } = (0, l.cj)([
 T.Z,
 u.Z,
-p.Z
+C.Z
   ], () => {
 var e, t, n, i;
 let a = u.Z.getParticipants(B),
@@ -71,7 +71,7 @@ let a = u.Z.getParticipants(B),
       }
     }
     return null;
-  }(a, p.Z.quests, T.Z);
+  }(a, C.Z.quests, T.Z);
 return {
   isCurrentUserStreamingQuestApplication: null != s && null != W && (e = a, t = s, n = W, i = T.Z, e.some(e => {
     if (e.type !== j.fO.STREAM || e.user.id !== n.id)
@@ -100,10 +100,10 @@ return !!(null != t && (0, S.$J)(q) && (0, S._D)(t, q)) || !1;
 q,
 J,
 W
-  ]), ee = !0 === G || Q || $, et = (0, l.e7)([p.Z], () => null != q && p.Z.isEnrolling(q.id), [q]), en = (0, l.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [
+  ]), ee = !0 === G || Q || $, et = (0, l.e7)([C.Z], () => null != q && C.Z.isEnrolling(q.id), [q]), en = (0, l.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [
 B,
 W
-  ]), ei = (0, C.B6)(null == q ? void 0 : q.config.expiresAt), ea = (0, C.B6)(null == X ? void 0 : X.rewardsExpireAt), es = a.useCallback(() => {
+  ]), ei = (0, p.B6)(null == q ? void 0 : q.config.expiresAt), ea = (0, p.B6)(null == X ? void 0 : X.rewardsExpireAt), es = a.useCallback(() => {
 null != q && (0, f.AH)(q.id, {
   questContent: g.jn.QUEST_LIVE_STREAM,
   questContentCTA: N.jZ.ACCEPT_QUEST
@@ -126,7 +126,7 @@ location: g.jn.QUEST_LIVE_STREAM
   }), ec = a.useMemo(() => (0, A.T)({
 quest: q,
 location: b.dr.QUEST_CHANNEL_CALL_HEADER
-  }), [q]), ed = (0, C.tP)(q);
+  }), [q]), ed = (0, p.tP)(q);
   if (null == q || !(0, S.dl)(q))
 return null;
   let eu = (null === (t = q.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
@@ -150,7 +150,7 @@ eN = (0, i.jsx)(v.Z, {
   quest: q,
   questContent: g.jn.QUEST_LIVE_STREAM
 });
-  return (0, i.jsx)(O.A, {
+  return (0, i.jsx)(x.A, {
 questOrQuests: q,
 overrideVisibility: !Y,
 questContent: g.jn.QUEST_LIVE_STREAM,
@@ -264,7 +264,7 @@ children: () => {
                   })
                 ]
               }),
-              eu && !e_ && ee && (0, i.jsx)(x.Z, {
+              eu && !e_ && ee && (0, i.jsx)(O.Z, {
                 color: c.tokens.colors.BG_BRAND,
                 quest: q
               }),

@@ -3,7 +3,7 @@ e.d(t, {
 return h;
   },
   GE: function() {
-return C;
+return p;
   },
   GL: function() {
 return N;
@@ -30,10 +30,10 @@ return S;
 return Z;
   },
   dw: function() {
-return p;
+return C;
   },
   ig: function() {
-return L;
+return g;
   },
   kr: function() {
 return I;
@@ -42,7 +42,7 @@ return I;
 return R;
   },
   nB: function() {
-return g;
+return L;
   },
   q_: function() {
 return m;
@@ -182,12 +182,12 @@ function Z(n) {
   return null === (t = A(n, o.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
 }
 
-function p(n) {
+function C(n) {
   let t = A(n, o.N.RESURRECTED);
   return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0;
 }
 
-function C(n) {
+function p(n) {
   let {
 months: t = 0,
 weeks: e = 0,
@@ -236,13 +236,13 @@ function G(n) {
   return e > 10 * T.Z.Seconds.HOUR ? s.Z.Messages.MEMBER_LIST_CONTENT_FEED_EPIC_MARATHON : e > 5 * T.Z.Seconds.HOUR ? s.Z.Messages.MEMBER_LIST_CONTENT_FEED_ULTRA_MARATHON : s.Z.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON;
 }
 
-function g(n) {
+function L(n) {
   let t = h(n),
 e = G(n);
   return null == t ? e : ''.concat(e, ' \u2014 ').concat(t);
 }
 
-function L(n) {
+function g(n) {
   var t;
   return null === (t = A(n, o.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
 }

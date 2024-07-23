@@ -48,8 +48,8 @@ let T = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.Z,
   h = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
   N = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
   f = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.Z,
-  C = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Z,
-  p = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.Z,
+  p = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Z,
+  C = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.Z,
   {
     snapshotIndex: g,
     parentMessage: S,
@@ -64,17 +64,17 @@ if (!R)
   return {
     snapshotIndex: g
   };
-let O = (0, u.Xf)(A.message.timestamp),
-  x = T.getChannel(this.parentMessage.channel_id);
-if (null != x && x.guild_id === (null === (e = S.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
+let x = (0, u.Xf)(A.message.timestamp),
+  O = T.getChannel(this.parentMessage.channel_id);
+if (null != O && O.guild_id === (null === (e = S.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
   let e = T.getChannel(null === (d = S.messageReference) || void 0 === d ? void 0 : d.channel_id);
   if (null == e) {
-    let e = C.getGuild(x.guild_id);
+    let e = p.getGuild(O.guild_id);
     return null == e ? {
       snapshotIndex: g
     } : {
       snapshotIndex: g,
-      footerInfo: m(e, O)
+      footerInfo: m(e, x)
     };
   }
   if (!f.can(e.accessPermissions, e))
@@ -86,10 +86,10 @@ if (null != x && x.guild_id === (null === (e = S.messageReference) || void 0 ===
     snapshotIndex: g,
     footerInfo: {
       originLabel: t,
-      timestampLabel: O,
+      timestampLabel: x,
       accessibilityLabel: E.Z.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
         origin: t,
-        timestamp: O
+        timestamp: x
       })
     }
   };
@@ -99,7 +99,7 @@ if (null == M)
   return {
     snapshotIndex: g
   };
-let v = null !== (I = C.getGuild(M)) && void 0 !== I ? I : p.getGuild(M);
+let v = null !== (I = p.getGuild(M)) && void 0 !== I ? I : C.getGuild(M);
 if (null == v)
   return {
     snapshotIndex: g
@@ -107,7 +107,7 @@ if (null == v)
 let L = T.getChannel(null === (n = S.messageReference) || void 0 === n ? void 0 : n.channel_id);
 return null == L || f.can(L.accessPermissions, L) ? {
   snapshotIndex: g,
-  footerInfo: m(v, O)
+  footerInfo: m(v, x)
 } : {
   snapshotIndex: g
 };

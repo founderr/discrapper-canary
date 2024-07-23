@@ -21,12 +21,12 @@ var a = n(120356),
   h = n(594174),
   N = n(938475),
   f = n(5192),
-  C = n(981631),
-  p = n(689938),
+  p = n(981631),
+  C = n(689938),
   g = n(373841);
 
 function S(e) {
-  var t, n, a, S, A, R, O, x, M, v;
+  var t, n, a, S, A, R, x, O, M, v;
   let {
 message: L,
 channel: Z
@@ -40,26 +40,26 @@ let {
   rawName: t
 } = e;
 return 'channel_id' === t;
-  })) || void 0 === S ? void 0 : S.rawValue, D = (0, r.e7)([T.Z], () => T.Z.getGuild(P)), j = (0, r.e7)([m.Z], () => m.Z.getChannel(b)), U = (0, r.e7)([h.default], () => h.default.getCurrentUser()), y = (0, r.e7)([], () => L.author.id === (null == U ? void 0 : U.id)), B = null === (O = Z.recipients) || void 0 === O ? void 0 : O.find(e => e !== L.author.id), k = (0, r.e7)([h.default], () => null != B ? h.default.getUser(B) : null), G = (0, u.ZP)(L), F = (0, f._T)(Z.getGuildId(), Z.id, k), w = (0, r.Wu)([N.ZP], () => null != j ? N.ZP.getVoiceStatesForChannel(j) : [], [j]), V = w.some(e => e.user.id === (null == U ? void 0 : U.id)), H = null === (v = L.embeds[0]) || void 0 === v ? void 0 : null === (M = v.fields) || void 0 === M ? void 0 : null === (x = M.find(e => {
+  })) || void 0 === S ? void 0 : S.rawValue, D = (0, r.e7)([T.Z], () => T.Z.getGuild(P)), j = (0, r.e7)([m.Z], () => m.Z.getChannel(b)), U = (0, r.e7)([h.default], () => h.default.getCurrentUser()), y = (0, r.e7)([], () => L.author.id === (null == U ? void 0 : U.id)), B = null === (x = Z.recipients) || void 0 === x ? void 0 : x.find(e => e !== L.author.id), k = (0, r.e7)([h.default], () => null != B ? h.default.getUser(B) : null), G = (0, u.ZP)(L), F = (0, f._T)(Z.getGuildId(), Z.id, k), w = (0, r.Wu)([N.ZP], () => null != j ? N.ZP.getVoiceStatesForChannel(j) : [], [j]), V = w.some(e => e.user.id === (null == U ? void 0 : U.id)), H = null === (v = L.embeds[0]) || void 0 === v ? void 0 : null === (M = v.fields) || void 0 === M ? void 0 : null === (O = M.find(e => {
 let {
   rawName: t
 } = e;
 return 'voice_user_ids' === t;
-  })) || void 0 === x ? void 0 : x.rawValue, Y = null != H ? H.split(',') : [], W = (0, r.Wu)([h.default], () => Y.map(e => h.default.getUser(e)).filter(Boolean)), z = y && null != k ? p.Z.Messages.WAVED_AT_USER.format({
+  })) || void 0 === O ? void 0 : O.rawValue, Y = null != H ? H.split(',') : [], W = (0, r.Wu)([h.default], () => Y.map(e => h.default.getUser(e)).filter(Boolean)), z = y && null != k ? C.Z.Messages.WAVED_AT_USER.format({
 username: F
-  }) : p.Z.Messages.WAVED_AT_YOU.format({
+  }) : C.Z.Messages.WAVED_AT_YOU.format({
 username: G.nick
   }), K = null != D && null != j, Q = null;
-  Q = K ? y || V ? p.Z.Messages.YOU_ARE_IN_CHANNEL.format({
+  Q = K ? y || V ? C.Z.Messages.YOU_ARE_IN_CHANNEL.format({
 channelHook: (e, t) => (0, i.jsx)(_.Z, {
   channel: null != j ? j : void 0
 }, t)
-  }) : p.Z.Messages.THEY_ARE_IN_CHANNEL.format({
+  }) : C.Z.Messages.THEY_ARE_IN_CHANNEL.format({
 channelHook: (e, t) => (0, i.jsx)(_.Z, {
   channel: null != j ? j : void 0
 }, t)
-  }) : p.Z.Messages.CANNOT_ACCESS_HANGOUT, 0 === w.length && (Q = y ? p.Z.Messages.HANGOUT_OVER_SENDER : p.Z.Messages.HANGOUT_OVER_RECEIVER);
-  let q = y ? p.Z.Messages.WAVE_AGAIN : p.Z.Messages.WAVE_BACK;
+  }) : C.Z.Messages.CANNOT_ACCESS_HANGOUT, 0 === w.length && (Q = y ? C.Z.Messages.HANGOUT_OVER_SENDER : C.Z.Messages.HANGOUT_OVER_RECEIVER);
+  let q = y ? C.Z.Messages.WAVE_AGAIN : C.Z.Messages.WAVE_BACK;
   return (0, i.jsxs)('div', {
 children: [
   (0, i.jsxs)('div', {
@@ -108,7 +108,7 @@ children: [
       (0, i.jsxs)(l.Button, {
         color: l.Button.Colors.BRAND,
         onClick: () => {
-          null != b && null != P && ((0, I.uL)(C.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
+          null != b && null != P && ((0, I.uL)(p.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
         },
         className: g.button,
         innerClassName: g.buttonInner,
@@ -118,7 +118,7 @@ children: [
             size: 'md',
             color: 'currentColor'
           }),
-          p.Z.Messages.JOIN_HANGOUT
+          C.Z.Messages.JOIN_HANGOUT
         ]
       }),
       (0, i.jsx)(l.Button, {

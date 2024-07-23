@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(730749),
   p = n(112724),
   T = n(812206),
-  S = n(44315),
-  f = n(925329),
+  f = n(44315),
+  S = n(925329),
   C = n(707409),
   N = n(210887),
   A = n(283595),
@@ -278,10 +278,10 @@ return (0, i.jsxs)(O.Z, {
     (0, i.jsx)(_.Progress, {
       percent: t,
       size: _.Progress.Sizes.SMALL,
-      foregroundColor: (0, S.Lq)(n),
+      foregroundColor: (0, f.Lq)(n),
       foregroundGradientColor: null != s ? [
-        (0, S.Lq)(s[0]),
-        (0, S.Lq)(s[1])
+        (0, f.Lq)(s[0]),
+        (0, f.Lq)(s[1])
       ] : void 0,
       animate: this.isFocused
     }),
@@ -524,10 +524,10 @@ return (0, i.jsx)(w, {
   render: e => (0, i.jsxs)(O.Z, {
     align: O.Z.Align.CENTER,
     children: [
-      (0, i.jsx)(f.Z, {
+      (0, i.jsx)(S.Z, {
         game: e.application,
         className: j.__invalid_gameIcon,
-        size: f.Z.Sizes.SMALL
+        size: S.Z.Sizes.SMALL
       }),
       (0, i.jsx)('div', {
         className: j.nameCellText,

@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(785570),
   p = n(100527),
   T = n(963202),
-  S = n(252618),
-  f = n(440190),
+  f = n(252618),
+  S = n(440190),
   C = n(665149),
   N = n(5955),
   A = n(121711),
@@ -301,7 +301,7 @@ let I = l === F.Hk ? W.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : W.Z.Messages.GUIL
 return (0, i.jsxs)('div', {
   className: z.pageWrapper,
   children: [
-    (0, i.jsx)(S.yY, {
+    (0, i.jsx)(f.yY, {
       subsection: d ? a : void 0,
       location: I
     }),
@@ -508,10 +508,10 @@ searchRoute: t
 fetching: n,
 loadId: s,
 recommendedGuilds: a
-  } = (0, _.cj)([f.Z], () => ({
-recommendedGuilds: f.Z.getRecommendedGuilds(),
-loadId: f.Z.getLoadId(),
-fetching: f.Z.isFetching()
+  } = (0, _.cj)([S.Z], () => ({
+recommendedGuilds: S.Z.getRecommendedGuilds(),
+loadId: S.Z.getLoadId(),
+fetching: S.Z.isFetching()
   }));
   return (0, i.jsx)(J, {
 searchRoute: t,

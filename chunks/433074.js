@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(264043),
   N = n(132871),
   f = n(147890),
-  C = n(981631),
-  p = n(689938),
+  p = n(981631),
+  C = n(689938),
   g = n(916718);
 
 function S(e) {
@@ -29,7 +29,7 @@ function S(e) {
   let {
 code: S,
 message: A
-  } = e, [R, O, x] = (0, r.Wu)([h.Z], () => [
+  } = e, [R, x, O] = (0, r.Wu)([h.Z], () => [
 h.Z.getApplication(S),
 h.Z.isInvalidApplication(S),
 h.Z.getApplicationFetchState(S)
@@ -42,7 +42,7 @@ e && P(!0);
   a.useEffect(() => {
 (0, T.gZ)(S);
   }, [S]), a.useEffect(() => {
-Z && x === h.M.FETCHED && I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+Z && O === h.M.FETCHED && I.default.track(p.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
   application_id: S,
   device_platform: s.tq ? 'mobile_web' : 'desktop_web',
   sender_user_id: A.author.id,
@@ -56,9 +56,9 @@ null == L ? void 0 : L.id,
 A.channel_id,
 v,
 A.author.id,
-x
+O
   ]), a.useEffect(() => {
-Z && O && I.default.track(C.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+Z && x && I.default.track(p.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
   device_platform: s.tq ? 'mobile_web' : 'desktop_web',
   sender_user_id: A.author.id,
   guild_id: v,
@@ -67,12 +67,12 @@ Z && O && I.default.track(C.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
   }, [
 Z,
 v,
-O,
+x,
 A.author.id,
 A.channel_id
   ]);
   let j = e => {
-I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
+I.default.track(p.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
   application_id: S,
   device_platform: s.tq ? 'mobile_web' : 'desktop_web',
   clicked_section: e,
@@ -87,12 +87,12 @@ I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
   }
 });
   };
-  if (O)
+  if (x)
 return (0, i.jsxs)(c.Z, {
   containerRef: D,
   children: [
     (0, i.jsx)(c.Z.Header, {
-      text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER
+      text: C.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER
     }),
     (0, i.jsx)(c.Z.Body, {
       children: (0, i.jsxs)('div', {
@@ -103,20 +103,20 @@ return (0, i.jsxs)(c.Z, {
           }),
           (0, i.jsx)(c.Z.Info, {
             expired: !0,
-            title: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE,
-            children: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_BODY
+            title: C.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE,
+            children: C.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_BODY
           })
         ]
       })
     })
   ]
 });
-  if (null == R || x === h.M.FETCHING)
+  if (null == R || O === h.M.FETCHING)
 return (0, i.jsxs)(c.Z, {
   containerRef: D,
   children: [
     (0, i.jsx)(c.Z.Header, {
-      text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER
+      text: C.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER
     }),
     (0, i.jsx)(c.Z.Body, {
       resolving: !0
@@ -131,7 +131,7 @@ compactDisplay: 'short'
 containerRef: D,
 children: [
   (0, i.jsx)(c.Z.Header, {
-    text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_HEADER
+    text: C.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_HEADER
   }),
   (0, i.jsxs)(c.Z.Body, {
     children: [
@@ -159,7 +159,7 @@ children: [
                   height: 16,
                   className: g.guildCountIcon
                 }),
-                p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT.format({
+                C.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT.format({
                   guildCount: U
                 })
               ]
@@ -180,7 +180,7 @@ children: [
             });
         },
         color: c.Z.Button.Colors.GREEN,
-        children: p.Z.Messages.APPLICATION_ADD_BUTTON
+        children: C.Z.Messages.APPLICATION_ADD_BUTTON
       })
     ]
   })

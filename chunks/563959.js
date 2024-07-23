@@ -3,7 +3,7 @@ n.d(t, {
 return f;
   },
   e: function() {
-return C;
+return p;
   }
 });
 var i = n(735250),
@@ -46,18 +46,18 @@ let T = E.ZP.getApplicationIconURL({
     });
   } : null != h ? t => (0, I.Pv)(t, h, e) : void 0,
   {
-    bot: C
+    bot: p
   } = a;
-return null == C ? l : (0, i.jsx)(s.Popout, {
+return null == p ? l : (0, i.jsx)(s.Popout, {
   position: 'right',
-  preload: () => (0, c.W)(C.id, T, {
+  preload: () => (0, c.W)(p.id, T, {
     guildId: e.guild_id,
     channelId: e.id
   }),
   renderPopout: n => (0, i.jsx)(d.Z, {
     ...n,
     location: 'PrivateChannelIntegrationSystemMessage',
-    userId: C.id,
+    userId: p.id,
     guildId: e.guild_id,
     channelId: e.id,
     messageId: t.id
@@ -98,7 +98,7 @@ children: (0, T.DS)({
   });
 }
 
-function C(e) {
+function p(e) {
   let {
 message: t,
 channel: a,

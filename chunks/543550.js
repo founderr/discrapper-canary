@@ -23,16 +23,16 @@ var i = n(735250),
   g = n(497189),
   p = n(304231),
   T = n(895068),
-  S = n(490610),
-  f = n(981631),
+  f = n(490610),
+  S = n(981631),
   C = n(689938),
   N = n(813580);
 let A = (e, t) => {
   switch (e) {
 case m.hz.GENSHIN:
-  return t === f.BRd.DARK ? N.genshinUpsellBackgroundImageDark : N.genshinUpsellBackgroundImageLight;
+  return t === S.BRd.DARK ? N.genshinUpsellBackgroundImageDark : N.genshinUpsellBackgroundImageLight;
 case m.hz.VALORANT:
-  return t === f.BRd.DARK ? N.valorantUpsellBackgroundImageDark : N.valorantUpsellBackgroundImageLight;
+  return t === S.BRd.DARK ? N.valorantUpsellBackgroundImageDark : N.valorantUpsellBackgroundImageLight;
   }
 };
 
@@ -53,10 +53,10 @@ g = (0, l.useSpring)({
     scrollHeight: E
   }
 }),
-S = (0, _.ZP)(),
-C = s.useMemo(() => A(e, S), [
+f = (0, _.ZP)(),
+C = s.useMemo(() => A(e, f), [
   e,
-  S
+  f
 ]),
 v = s.useCallback(e => {
   h(e.currentTarget.scrollTop);
@@ -64,13 +64,13 @@ v = s.useCallback(e => {
 Z = s.useMemo(() => {
   switch (e) {
     case m.hz.GENSHIN:
-      return S === f.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
+      return f === S.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
     case m.hz.VALORANT:
-      return S === f.BRd.DARK ? N.valorantOnboardingBackgroundImageDark : N.valorantOnboardingBackgroundImageLight;
+      return f === S.BRd.DARK ? N.valorantOnboardingBackgroundImageDark : N.valorantOnboardingBackgroundImageLight;
   }
 }, [
   e,
-  S
+  f
 ]),
 L = (0, d.useToken)(d.tokens.colors.BG_MOD_STRONG);
   switch (t) {
@@ -210,7 +210,7 @@ children: (0, i.jsxs)(c.u2, {
         })
       ]
     }),
-    (0, i.jsx)(S.Z, {
+    (0, i.jsx)(f.Z, {
       title: C.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
       subtitle: I ? C.Z.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
     })

@@ -10,8 +10,8 @@ var r, l, o, c, d = n(392711),
   g = n(496675),
   p = n(855674),
   T = n(981631);
-let S = [],
-  f = null,
+let f = [],
+  S = null,
   C = !1,
   N = T.QZA.CLOSED,
   A = {},
@@ -19,18 +19,18 @@ let S = [],
   Z = null;
 
 function L() {
-  if (i = null != (s = I.Z.getChannel()) ? m.Z.getGuild(s.guild_id) : null, S = null != s && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, s) ? p.Z.getWebhooksForChannel(i.id, s.id) : [], null != f) {
-let e = R(f.id);
-null != e && (f = e);
+  if (i = null != (s = I.Z.getChannel()) ? m.Z.getGuild(s.guild_id) : null, f = null != s && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, s) ? p.Z.getWebhooksForChannel(i.id, s.id) : [], null != S) {
+let e = R(S.id);
+null != e && (S = e);
   }
   N = T.QZA.OPEN, A = {}, v = !1;
 }
 let O = u().debounce(() => {
-  v && ((null == f || u().isEqual(f, R(f.id))) && (v = !1), !v && b.emitChange());
+  v && ((null == S || u().isEqual(S, R(S.id))) && (v = !1), !v && b.emitChange());
 }, 500);
 
 function R(e) {
-  return S.find(t => {
+  return f.find(t => {
 let {
   id: n
 } = t;
@@ -45,10 +45,10 @@ this.waitFor(I.Z, m.Z, p.Z, g.Z);
 return v;
   }
   get webhooks() {
-return S;
+return f;
   }
   get editedWebhook() {
-return f;
+return S;
   }
   get formState() {
 return N;
@@ -62,8 +62,8 @@ return this.hasChanges();
   getProps() {
 return {
   submitting: N === T.QZA.SUBMITTING,
-  webhooks: S,
-  editedWebhook: f,
+  webhooks: f,
+  editedWebhook: S,
   section: a,
   sectionId: Z,
   hasChanges: this.hasChanges(),
@@ -106,23 +106,23 @@ let {
 } = e, n = R(t);
 if (null == n)
   return !1;
-f = n, A = {}, v = !1;
+S = n, A = {}, v = !1;
   },
   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function() {
-f = null, A = {}, v = !1;
+S = null, A = {}, v = !1;
   },
   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function(e) {
 let {
   settings: t
 } = e;
-if (null == f)
+if (null == S)
   return !1;
-f = {
-  ...f
-}, null != t.name && f.name !== t.name && (f.name = t.name, v = !0), void 0 !== t.avatar && f.avatar !== t.avatar && (f.avatar = t.avatar, v = !0), null != t.channelId && f.channel_id !== t.channelId && (f.channel_id = t.channelId, v = !0), v && O();
+S = {
+  ...S
+}, null != t.name && S.name !== t.name && (S.name = t.name, v = !0), void 0 !== t.avatar && S.avatar !== t.avatar && (S.avatar = t.avatar, v = !0), null != t.channelId && S.channel_id !== t.channelId && (S.channel_id = t.channelId, v = !0), v && O();
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-s = null, i = null, S = [], f = null, N = T.QZA.CLOSED;
+s = null, i = null, f = [], S = null, N = T.QZA.CLOSED;
   },
   WEBHOOKS_UPDATE: function(e) {
 let {
@@ -133,8 +133,8 @@ let {
 if (null == i || t !== i.id || null == s || n !== s.id || null == a || N === T.QZA.SUBMITTING)
   return !1;
 C = !1;
-for (let e = S.length - 1; e >= 0; e--) {
-  let t = S[e];
+for (let e = f.length - 1; e >= 0; e--) {
+  let t = f[e];
   if (null != n && (null == t ? void 0 : t.channel_id) !== n)
     continue;
   let i = a.find(e => {
@@ -149,19 +149,19 @@ for (let e = S.length - 1; e >= 0; e--) {
       ...t,
       ...i
     };
-    S[e] = n, !v && (null == f ? void 0 : f.id) === n.id && (f = n);
+    f[e] = n, !v && (null == S ? void 0 : S.id) === n.id && (S = n);
   } else
-    (null == f ? void 0 : f.id) === t.id && (f = null), S.splice(e, 1);
+    (null == S ? void 0 : S.id) === t.id && (S = null), f.splice(e, 1);
 }
 for (let e of a)
-  null == S.find(t => {
+  null == f.find(t => {
     let {
       id: n
     } = t;
     if (n === e.id)
       return !0;
-  }) && S.push(e);
-S = [...S], O();
+  }) && f.push(e);
+f = [...f], O();
   },
   INTEGRATION_SETTINGS_SUBMITTING: function() {
 N = T.QZA.SUBMITTING, A = {};

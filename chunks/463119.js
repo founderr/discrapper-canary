@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(821982),
   p = n(377171),
   T = n(633302),
-  S = n(153066),
-  f = n(335131),
+  f = n(153066),
+  S = n(335131),
   C = n(141594),
   N = n(302800),
   A = n(981631),
@@ -48,7 +48,7 @@ let {
   ...u
 } = e, E = (0, l.JA)('shop'), h = I.Z.HOME_PAGE_SHOP_TAB, {
   analyticsLocations: g
-} = (0, m.ZP)(h), p = s.useCallback(() => (0, f.mK)({
+} = (0, m.ZP)(h), p = s.useCallback(() => (0, S.mK)({
   openInLayer: !1,
   analyticsSource: h,
   analyticsLocations: g
@@ -122,7 +122,7 @@ let {
   selected: t,
   locationState: n,
   displayOptions: a
-} = e, l = (0, o.e7)([h.Z], () => h.Z.useReducedMotion), [u, _] = s.useState(0), [I, m] = s.useState(!1), g = (0, E.ZP)(), p = a.entrypointDecorationAssets, T = a.entryPointBackgroundAssets, f = s.useCallback(e => {
+} = e, l = (0, o.e7)([h.Z], () => h.Z.useReducedMotion), [u, _] = s.useState(0), [I, m] = s.useState(!1), g = (0, E.ZP)(), p = a.entrypointDecorationAssets, T = a.entryPointBackgroundAssets, S = s.useCallback(e => {
   _(e => (e + 1) % a.assetIds.length), m(!0), null == e || e();
 }, [a.assetIds]), C = s.useCallback(e => {
   m(!1), null == e || e();
@@ -140,12 +140,12 @@ return (0, i.jsx)(d.Tooltip, {
   hideOnClick: !1,
   'aria-label': 'string' == typeof N ? N : v.Z.Messages.COLLECTIBLES_SEE_WHATS_NEW,
   children: e => (0, i.jsxs)(O, {
-    className: null != a.entryPointClassName ? (0, S.l)(Z, a.entryPointClassName) : void 0,
+    className: null != a.entryPointClassName ? (0, f.l)(Z, a.entryPointClassName) : void 0,
     selected: t,
     locationState: n,
     icon: a.entryPointIcon,
     ...e,
-    onMouseEnter: () => f(e.onMouseEnter),
+    onMouseEnter: () => S(e.onMouseEnter),
     onMouseLeave: () => C(e.onMouseLeave),
     children: [
       null != T && (0, i.jsx)('img', {

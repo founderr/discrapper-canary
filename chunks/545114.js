@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return f;
+return S;
   }
 });
 var i = n(735250),
@@ -20,14 +20,14 @@ var i = n(735250),
   g = n(775260),
   p = n(49898),
   T = n(689938),
-  S = n(679199);
+  f = n(679199);
 
-function f() {
+function S() {
   let e = s.useRef((0, r.P)()),
 {
   tabs: t,
   selectedTab: n,
-  onSelectTab: f
+  onSelectTab: S
 } = (0, g.Y)(),
 {
   onScroll: C,
@@ -89,10 +89,10 @@ Z,
 n
   ]);
   return (0, i.jsxs)('div', {
-className: S.container,
+className: f.container,
 children: [
   (0, i.jsxs)(d.ZP, {
-    className: v ? S.search : void 0,
+    className: v ? f.search : void 0,
     children: [
       !v && (0, i.jsx)(d.z6, {
         scrollPosition: N
@@ -104,7 +104,7 @@ children: [
       (0, i.jsx)(_.Z, {
         tabs: x,
         selectedTab: n,
-        onTabSelect: f
+        onTabSelect: S
       }),
       D
     ]

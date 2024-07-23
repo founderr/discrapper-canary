@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(650461),
   p = n(432632),
   T = n(35313),
-  S = n(284019),
-  f = n(672775),
+  f = n(284019),
+  S = n(672775),
   C = n(601463),
   N = n(192565),
   A = n(641037),
@@ -221,7 +221,7 @@ children: (0, i.jsxs)(d.FocusRingScope, {
               className: r()(Z.navigationContainer, {
                 [Z.elevatedNavigationContainer]: !w
               }),
-              children: (0, i.jsx)(f.Z, {
+              children: (0, i.jsx)(S.Z, {
                 steps: M,
                 progress: R,
                 updateCurrentStep: z,
@@ -267,7 +267,7 @@ children: (0, i.jsxs)(d.FocusRingScope, {
         'aria-label': null != q ? v.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
         shouldShow: null != q,
         forceOpen: null != q,
-        children: e => (0, i.jsx)(S.Z, {
+        children: e => (0, i.jsx)(f.Z, {
           ...e,
           themeColor: R.brandPrimaryColor,
           disabled: !D || K,

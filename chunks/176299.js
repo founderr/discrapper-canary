@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(279240),
   p = n(765717),
   T = n(358221),
-  S = n(823748),
-  f = n(626421),
+  f = n(823748),
+  S = n(626421),
   C = n(118379),
   N = n(652515),
   A = n(544978),
@@ -111,7 +111,7 @@ webpackId: 603072,
 name: 'ChannelsAndRolesPage',
 renderLoader: eh
   }),
-  eS = (0, c.Un)({
+  ef = (0, c.Un)({
 createPromise: () => Promise.all([
   n.e('96427'),
   n.e('44156'),
@@ -123,7 +123,7 @@ webpackId: 599263,
 name: 'GuildOnboardingPage',
 renderLoader: eh
   }),
-  ef = e => {
+  eS = e => {
 let {
   match: t
 } = e, n = (0, u.e7)([
@@ -179,7 +179,7 @@ if (null != s && null != a && (0, eu.AB)(a))
         selectedSection: e_.l7.BROWSE
       });
     case eu.oC.GUILD_ONBOARDING:
-      return (0, i.jsx)(eS, {
+      return (0, i.jsx)(ef, {
         guildId: s
       });
     case eu.oC.CUSTOMIZE_COMMUNITY:
@@ -206,7 +206,7 @@ if ((null == n ? void 0 : n.type) === ed.d4z.GUILD_STORE) {
     inputSkuId: e
   }, n.id);
 }
-return (0, i.jsx)(S.Z, {});
+return (0, i.jsx)(f.Z, {});
   },
   eC = s.memo(function() {
 let {
@@ -224,7 +224,7 @@ return null != e ? (0, i.jsx)(y.Z, {
   guildId: e
 }, e) : (0, i.jsx)(el.Z, {});
   }),
-  eN = e => (0, i.jsx)(ef, {
+  eN = e => (0, i.jsx)(eS, {
 ...e
   }),
   eA = e => {
@@ -396,7 +396,7 @@ children: (0, i.jsxs)('div', {
           (0, i.jsxs)('div', {
             className: eE.content,
             children: [
-              (0, i.jsx)(f.Z, {}),
+              (0, i.jsx)(S.Z, {}),
               (0, i.jsx)(ej, {
                 hasNotice: t,
                 sidebarTheme: n,

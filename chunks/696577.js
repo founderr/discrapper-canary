@@ -25,8 +25,8 @@ user: t,
 type: n,
 status: p,
 isFocused: T
-  } = e, S = s.useContext(u.AnalyticsContext), {
-analyticsLocations: f
+  } = e, f = s.useContext(u.AnalyticsContext), {
+analyticsLocations: S
   } = (0, o.ZP)(), C = e => {
 e.stopPropagation(), l.Z.cancelFriendRequest(t.id, {
   location: 'Friends'
@@ -44,8 +44,8 @@ isFocused: T,
 user: t,
 onClick: () => (0, c.openUserProfileModal)({
   userId: t.id,
-  sourceAnalyticsLocations: f,
-  analyticsLocation: S.location
+  sourceAnalyticsLocations: S,
+  analyticsLocation: f.location
 }),
 children: e => {
   var s;

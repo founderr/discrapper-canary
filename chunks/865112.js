@@ -1,12 +1,12 @@
 n.d(t, {
   RB: function() {
-return O;
+return x;
   },
   VH: function() {
 return S;
   },
   Vi: function() {
-return x;
+return O;
   },
   Vu: function() {
 return M;
@@ -28,13 +28,13 @@ var i, a, s, r, l = n(692547),
   h = n(333722),
   N = n(549931),
   f = n(178561),
-  C = n(39863),
-  p = n(130312);
+  p = n(39863),
+  C = n(130312);
 (i = s || (s = {})).CHECKED = 'CHECKED', i.FRIENDS = 'FRIENDS', i.SHARE_SCREEN = 'SHARE_SCREEN', i.NEW_MESSAGE = 'NEW_MESSAGE';
 let g = {
   CHECKED: _,
   FRIENDS: I,
-  SHARE_SCREEN: C,
+  SHARE_SCREEN: p,
   NEW_MESSAGE: N
 };
 (a = r || (r = {})).MISSED_MESSAGES = 'MISSED_MESSAGES', a.FRIEND_REQUEST_REMINDER = 'FRIEND_REQUEST_REMINDER', a.SCHEDULED_GUILD_EVENT = 'SCHEDULED_GUILD_EVENT', a.TOP_MESSAGES = 'TOP_MESSAGES', a.NOTIFICATION_CENTER = 'NOTIFICATION_CENTER', a.UPDATE_PROFILE = 'UPDATE_PROFILE', a.FIND_FRIENDS = 'FIND_FRIENDS', a.ADD_FRIEND = 'ADD_FRIEND', a.FIRST_MESSAGE = 'FIRST_MESSAGE';
@@ -44,7 +44,7 @@ FRIEND_REQUEST_REMINDER: m,
 SCHEDULED_GUILD_EVENT: E,
 TOP_MESSAGES: T,
 NOTIFICATION_CENTER: u,
-UPDATE_PROFILE: p,
+UPDATE_PROFILE: C,
 FIND_FRIENDS: d,
 ADD_FRIEND: d,
 FIRST_MESSAGE: f
@@ -79,12 +79,12 @@ switch (e.type) {
     return 'NOTIFICATION_CENTER';
 }
   },
-  O = e => {
+  x = e => {
 if ('icHighlight' === e)
   return 'TOP_MESSAGES';
 return 'NOTIFICATION_CENTER';
   },
-  x = e => {
+  O = e => {
 switch (e) {
   case o.DY.GO_LIVE_PUSH:
     return {

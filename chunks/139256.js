@@ -33,15 +33,15 @@ var i, a, s = n(735250),
   h = n(553826),
   N = n(506071),
   f = n(203143),
-  C = n(79390),
-  p = n(839963),
+  p = n(79390),
+  C = n(839963),
   g = n(294608),
   S = n(65145),
   A = n(981631),
   R = n(689938),
-  O = n(357298);
+  x = n(357298);
 
-function x(e) {
+function O(e) {
   let {
 className: t,
 children: n
@@ -93,7 +93,7 @@ pollAnswerRef: l
   } = (0, S.dv)();
   return (0, s.jsx)(d.Clickable, {
 role: 'checkbox',
-className: o()(t, O.enabled),
+className: o()(t, x.enabled),
 onClick: n,
 'aria-checked': i,
 ref: a ? l : void 0,
@@ -116,7 +116,7 @@ pollAnswerRef: u
   } = (0, S.dv)();
   return (0, s.jsx)(d.Clickable, {
 role: 'radio',
-className: o()(n, O.enabled),
+className: o()(n, x.enabled),
 onClick: a,
 'aria-checked': r,
 tabIndex: t,
@@ -142,29 +142,29 @@ answerElementType: E
 canTapAnswers: a,
 answersInteraction: n
   }).with({
-answersInteraction: p.Y7.RADIO_BUTTONS
+answersInteraction: C.Y7.RADIO_BUTTONS
   }, () => ({
 ContainerComponent: v,
 answerElementType: 1
   })).with({
-answersInteraction: p.Y7.CHECKBOXES
+answersInteraction: C.Y7.CHECKBOXES
   }, () => ({
 ContainerComponent: M,
 answerElementType: 2
   })).with({
 canTapAnswers: !0,
-answersInteraction: p.Y7.LIST
+answersInteraction: C.Y7.LIST
   }, () => ({
-ContainerComponent: x,
+ContainerComponent: O,
 answerElementType: 3
   })).otherwise(() => ({
-ContainerComponent: x,
+ContainerComponent: O,
 answerElementType: 0
   }));
   return (0, s.jsx)(_, {
 className: l,
 children: t.map((e, t) => (0, s.jsx)(b, {
-  className: o()(O.__invalid_answer, d),
+  className: o()(x.__invalid_answer, d),
   answer: e,
   isFirstAnswer: 0 === t,
   elementType: E,
@@ -232,9 +232,9 @@ className: i
   } = e, a = (0, N.n)(), r = m.QK.useSetting();
   return (0, s.jsx)(I.Z, {
 className: i,
-imageClassName: O.attachmentImage,
+imageClassName: x.attachmentImage,
 src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,
-alt: null !== (t = n.description) && void 0 !== t ? t : (0, C.fw)(n.filename),
+alt: null !== (t = n.description) && void 0 !== t ? t : (0, p.fw)(n.filename),
 responsive: !0,
 width: 212,
 height: 212,
@@ -342,12 +342,12 @@ className: i
   } = e, a = {
 width: n,
 height: n,
-background: O.radioBackground,
+background: x.radioBackground,
 'aria-hidden': !0
   };
   return t ? (0, s.jsx)(h.Z, {
 ...a,
-foreground: O.radioForeground,
+foreground: x.radioForeground,
 className: i
   }) : (0, s.jsx)(T.Z, {
 ...a,
@@ -362,8 +362,8 @@ size: n,
 className: i
   } = e, a = 0.85 * n;
   return (0, s.jsx)('div', {
-className: o()(O.checkbox, {
-  [O.checkboxSelected]: t
+className: o()(x.checkbox, {
+  [x.checkboxSelected]: t
 }, i),
 style: {
   width: n,

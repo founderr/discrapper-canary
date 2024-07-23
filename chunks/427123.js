@@ -12,8 +12,8 @@ var i, a, s, r, l = n(392711),
   h = n(594174),
   N = n(580130),
   f = n(55563),
-  C = n(981631);
-let p = 'DetectedOffPlatformPremiumPerksStore',
+  p = n(981631);
+let C = 'DetectedOffPlatformPremiumPerksStore',
   g = {},
   S = {},
   A = [];
@@ -44,21 +44,21 @@ N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrent
   }
   return e;
 }
-class O extends(i = c.ZP.Store) {
+class x extends(i = c.ZP.Store) {
   initialize() {
 var e;
-this.waitFor(T.ZP, f.Z, N.Z), A = null !== (e = d.K.get(p)) && void 0 !== e ? e : A;
+this.waitFor(T.ZP, f.Z, N.Z), A = null !== (e = d.K.get(C)) && void 0 !== e ? e : A;
   }
   getDetectedOffPlatformPremiumPerks() {
 return o().values(g);
   }
 }
-r = 'DetectedOffPlatformPremiumPerksStore', (s = 'displayName') in(a = O) ? Object.defineProperty(a, s, {
+r = 'DetectedOffPlatformPremiumPerksStore', (s = 'displayName') in(a = x) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = r, t.Z = new O(u.Z, {
+}) : a[s] = r, t.Z = new x(u.Z, {
   LOGOUT: function() {
 g = {}, S = {};
   },
@@ -72,7 +72,7 @@ let {
 } = e;
 if (delete g[t], A.includes(t))
   return !1;
-A.push(t), d.K.set(p, A);
+A.push(t), d.K.set(C, A);
   },
   RUNNING_GAMES_CHANGE: function() {
 let e = !1;
@@ -81,12 +81,12 @@ for (let {
     distributor: n
   }
   of T.ZP.getRunningGames())
-  if (null != t && n !== C.GQo.DISCORD)
+  if (null != t && n !== p.GQo.DISCORD)
     for (let {
         skuId: n,
         applicationId: i
       }
-      of C.Lg6) {
+      of p.Lg6) {
       if (!(i !== t || A.includes(n)))
         null == S[n] && (!N.Z.applicationIdsFetched.has(i) && !N.Z.applicationIdsFetching.has(i) && null == N.Z.getForSku(n) && _.yD(i), S[n] = {
           skuId: n,

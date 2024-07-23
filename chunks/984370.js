@@ -21,8 +21,8 @@ var a = n(120356),
   h = n(300986),
   N = n(314451),
   f = n(35583),
-  C = n(981631),
-  p = n(176505),
+  p = n(981631),
+  C = n(176505),
   g = n(139715);
 async function S() {
   if ((0, I.isMac)() && I.isPlatformEmbedded) {
@@ -42,12 +42,12 @@ innerClassname: o,
 transparent: c = !1,
 toolbar: I,
 mobileToolbar: m,
-'aria-label': C,
-'aria-labelledby': p,
+'aria-label': p,
+'aria-labelledby': C,
 scrollable: A,
 role: R,
-hideSearch: O,
-showDivider: x
+hideSearch: x,
+showDivider: O
   } = e, M = (0, l.e7)([E.default], () => E.default.getCurrentUser()), v = (null == M ? void 0 : M.isStaff()) || (null == M ? void 0 : M.isStaffPersonal()) || !1;
   return (0, i.jsx)(T.ZP, {
 className: n,
@@ -55,14 +55,14 @@ innerClassName: o,
 toolbar: function() {
   if (null == I)
     return null;
-  let e = null != a && !O;
+  let e = null != a && !x;
   return r.tq ? m : (0, i.jsxs)(i.Fragment, {
     children: [
       I,
       e ? (0, i.jsx)(_.Z, {
         className: g.search
       }, null != s ? s : a) : null,
-      x && (0, i.jsx)(T.ZP.Divider, {}),
+      O && (0, i.jsx)(T.ZP.Divider, {}),
       (0, i.jsx)(f.Z, {}),
       (0, i.jsx)(d.Z, {
         canShowReminder: !0
@@ -74,8 +74,8 @@ toolbar: function() {
 }(),
 transparent: c,
 onDoubleClick: S,
-'aria-label': C,
-'aria-labelledby': p,
+'aria-label': p,
+'aria-labelledby': C,
 role: R,
 scrollable: A,
 children: t
@@ -100,14 +100,14 @@ children: t
   });
 }
 
-function O(e) {
+function x(e) {
   let {
 isAuthenticated: t = !0,
 ...n
   } = e, {
 analyticsLocations: a
   } = (0, c.ZP)(o.Z.HEADER_BAR), r = s()(n.className, {
-[g.forumOrHome]: null != n.channelType && C.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === p.oC.GUILD_HOME
+[g.forumOrHome]: null != n.channelType && p.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === C.oC.GUILD_HOME
   });
   return (0, i.jsx)(c.Gt, {
 value: a,
@@ -120,4 +120,4 @@ children: t ? (0, i.jsx)(A, {
 })
   });
 }
-O.Title = T.ZP.Title, O.Icon = T.ZP.Icon, O.Divider = T.ZP.Divider, O.Caret = T.ZP.Caret, t.Z = O;
+x.Title = T.ZP.Title, x.Icon = T.ZP.Icon, x.Divider = T.ZP.Divider, x.Caret = T.ZP.Caret, t.Z = x;

@@ -15,14 +15,14 @@ var i = n(735250),
   h = n(281956),
   N = n(41776),
   f = n(738737),
-  C = n(509545),
-  p = n(63063),
+  p = n(509545),
+  C = n(63063),
   g = n(817460),
   S = n(584825),
   A = n(697227),
   R = n(934826),
-  O = n(896083),
-  x = n(939872),
+  x = n(896083),
+  O = n(939872),
   M = n(265985),
   v = n(293810),
   L = n(981631),
@@ -37,7 +37,7 @@ U = null == e ? void 0 : e.subscription_plans[0],
 y = null == U ? void 0 : U.id,
 B = (null == e ? void 0 : e.published) === !0,
 k = null == U ? void 0 : U.sku_id,
-G = (0, c.e7)([C.Z], () => null != y ? C.Z.get(y) : null),
+G = (0, c.e7)([p.Z], () => null != y ? p.Z.get(y) : null),
 {
   activeSubscription: F,
   activeSubscriptionPlanFromStore: w
@@ -52,7 +52,7 @@ z = (null == F ? void 0 : F.trialId) != null,
 {
   loading: K,
   getTrialPurchaseEligibility: Q
-} = (0, O.F)(),
+} = (0, x.F)(),
 q = (0, S.oC)(null == e ? void 0 : e.id),
 {
   analyticsLocations: X
@@ -89,9 +89,9 @@ k
       interval: (0, g.iG)(U),
       days: 1,
       contactLink: L.EYA.CONTACT,
-      cancelSubscriptionArticle: p.Z.getArticleURL(L.BhN.ROLE_SUBSCRIPTION_CANCEL),
-      helpdeskArticle: p.Z.getArticleURL(L.BhN.ROLE_SUBSCRIPTION_TRIAL),
-      paidServiceTermsArticle: p.Z.getArticleURL(L.BhN.PAID_TERMS),
+      cancelSubscriptionArticle: C.Z.getArticleURL(L.BhN.ROLE_SUBSCRIPTION_CANCEL),
+      helpdeskArticle: C.Z.getArticleURL(L.BhN.ROLE_SUBSCRIPTION_TRIAL),
+      paidServiceTermsArticle: C.Z.getArticleURL(L.BhN.PAID_TERMS),
       tierName: U.name
     }) : void 0,
     analyticsLocations: X,
@@ -105,7 +105,7 @@ k
     initialPlanId: U.id,
     skuId: U.sku_id,
     planGroup: H,
-    renderPurchaseConfirmation: (n, a) => $ ? (0, i.jsx)(x.m, {
+    renderPurchaseConfirmation: (n, a) => $ ? (0, i.jsx)(O.m, {
       listing: e,
       onClose: a,
       guildId: t

@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(706454),
   p = n(215427),
   T = n(820254),
-  S = n(838949),
-  f = n(358085),
+  f = n(838949),
+  S = n(358085),
   C = n(557177),
   N = n(998502),
   A = n(981631),
@@ -86,7 +86,7 @@ if (!this.state.shouldRender)
       (0, i.jsxs)('div', {
         className: Z.content,
         children: [
-          (0, i.jsx)(S.Z, {
+          (0, i.jsx)(f.Z, {
             autoPlay: !0,
             loop: !e,
             setRef: this.setVideoRef,
@@ -286,7 +286,7 @@ super(e), L(this, 'videoRef', null), L(this, '_noProblemsTimeout', null), L(this
 }()), L(this, 'handleReady', () => {
   this.setState({
     ready: !0
-  }), (0, f.isDesktop)() && (N.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), N.ZP.send('UPDATE_OPEN_ON_STARTUP'));
+  }), (0, S.isDesktop)() && (N.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), N.ZP.send('UPDATE_OPEN_ON_STARTUP'));
 }), L(this, 'setVideoRef', e => {
   this.videoRef = e;
 }), L(this, 'setProblemsTimeout', () => {

@@ -39,7 +39,7 @@ m.id,
 m.type,
 h,
 N
-  ]), C = (0, i.jsx)(o.Z.Channel, {
+  ]), p = (0, i.jsx)(o.Z.Channel, {
 channel: m
   });
   return (0, i.jsx)(o.Z, {
@@ -52,7 +52,7 @@ children: (0, i.jsxs)(o.Z.Body, {
           guild: n
         }),
         (0, i.jsx)(o.Z.Info, {
-          title: C,
+          title: p,
           onClick: f,
           children: (0, i.jsxs)('span', {
             className: I.infoTitle,

@@ -3,7 +3,7 @@ n.d(t, {
 return M;
   },
   Z: function() {
-return x;
+return O;
   }
 }), n(47120);
 var i = n(735250),
@@ -23,14 +23,14 @@ var i = n(735250),
   h = n(810090),
   N = n(51144),
   f = n(506071),
-  C = n(696014),
-  p = n(847033),
+  p = n(696014),
+  C = n(847033),
   g = n(544978),
   S = n(893182),
   A = n(689938),
   R = n(55686);
 
-function O(e) {
+function x(e) {
   let {
 onClick: t
   } = e;
@@ -55,7 +55,7 @@ children: [
   });
 }
 
-function x(e) {
+function O(e) {
   let {
 coverImageAsset: t,
 isPreview: n = !1
@@ -106,10 +106,10 @@ return {
   }, [s])), {
 isTruncated: M,
 ExpandableTextContainer: v
-  } = (0, C.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = a.useState(1), b = (0, c.Z)('(max-width: 1439px)'), {
+  } = (0, p.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = a.useState(1), b = (0, c.Z)('(max-width: 1439px)'), {
 selectedTab: D,
 isPhantomPreview: j
-  } = (0, p.m)(), U = D === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, i.jsxs)(i.Fragment, {
+  } = (0, C.m)(), U = D === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(v, {
     lineClamp: b || 2 === Z ? 2 : 3,
@@ -124,7 +124,7 @@ children: [
       (0, i.jsx)(o.Spacer, {
         size: 4
       }),
-      (0, i.jsx)(O, {
+      (0, i.jsx)(x, {
         onClick: () => (0, S.Z)({
           guildId: T
         })
@@ -199,7 +199,7 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(x, {
+  (0, i.jsx)(O, {
     coverImageAsset: null == E ? void 0 : E.cover_image_asset,
     isPreview: j
   })

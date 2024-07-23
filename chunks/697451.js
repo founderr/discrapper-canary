@@ -20,15 +20,15 @@ var i = n(735250),
   h = n(103575),
   N = n(768581),
   f = n(55935),
-  C = n(739566),
-  p = n(421399),
+  p = n(739566),
+  C = n(421399),
   g = n(310423),
   S = n(223021),
   A = n(981631),
   R = n(689938),
-  O = n(475525);
+  x = n(475525);
 
-function x(e) {
+function O(e) {
   let {
 width: t = 6,
 height: n = 10,
@@ -79,7 +79,7 @@ interactionData: s.interactionData
 l,
 s.id,
 s.interactionData
-  ]), L = (0, C.Sw)(null === (t = s.interaction) || void 0 === t ? void 0 : t.user, l), Z = a.useMemo(() => e.compact ? (0, S.Z)((0, f.vc)(d()(), 'LT')) : null, [e.compact]), P = (0, _.NX)(l.id, !0), b = s.interaction;
+  ]), L = (0, p.Sw)(null === (t = s.interaction) || void 0 === t ? void 0 : t.user, l), Z = a.useMemo(() => e.compact ? (0, S.Z)((0, f.vc)(d()(), 'LT')) : null, [e.compact]), P = (0, _.NX)(l.id, !0), b = s.interaction;
   if (null == b || null == L)
 return null;
   let D = () => {
@@ -96,14 +96,14 @@ let t = function(e, t) {
     } = e;
     if (s && null == a.activityInstance || o)
       return (0, i.jsx)('div', {
-        className: O.replyBadge,
-        children: (0, i.jsx)(x, {
-          className: O.commandIcon
+        className: x.replyBadge,
+        children: (0, i.jsx)(O, {
+          className: x.commandIcon
         })
       });
     if (null != a.interaction) {
       var I, m, T;
-      let e = (0, C.ij)(a.interaction.user, l);
+      let e = (0, p.ij)(a.interaction.user, l);
       n = null !== (T = N.ZP.getGuildMemberAvatarURL({
         avatar: null !== (I = e.guildMemberAvatar) && void 0 !== I ? I : void 0,
         userId: a.interaction.user.id,
@@ -126,8 +126,8 @@ let t = function(e, t) {
         onContextMenu: l,
         onMouseDown: o,
         className: r()({
-          [O.executedCommandAvatar]: !0,
-          [O.clickable]: null != s
+          [x.executedCommandAvatar]: !0,
+          [x.clickable]: null != s
         })
       });
     }({
@@ -155,7 +155,7 @@ let t = function(e, t) {
       onUserContextMenu: c,
       onPopoutRequestClose: d
     } = e;
-    return (0, i.jsx)(p.Z, {
+    return (0, i.jsx)(C.Z, {
       compact: !0,
       author: t,
       message: s,
@@ -199,7 +199,7 @@ n = P ? R.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
     tag: 'span',
     onClick: e,
     children: (0, i.jsx)('div', {
-      className: r()(O.commandName, O.clickable),
+      className: r()(x.commandName, x.clickable),
       children: R.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
     })
   })
@@ -235,20 +235,20 @@ n = R.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
             tag: 'span',
             onClick: s,
             children: (0, i.jsxs)('div', {
-              className: r()(O.appLauncherOnboardingCommandName, O.clickable),
+              className: r()(x.appLauncherOnboardingCommandName, x.clickable),
               children: [
                 (0, i.jsx)(u.AppsIcon, {
                   size: 'custom',
                   color: 'currentColor',
                   height: 10,
                   width: 10,
-                  className: O.appsIcon
+                  className: x.appsIcon
                 }),
                 o
               ]
             })
           }) : (0, i.jsx)('div', {
-            className: O.commandName,
+            className: x.commandName,
             children: o
           });
         }
@@ -262,7 +262,7 @@ n = R.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
   return (0, i.jsx)(T.Gt, {
 value: c,
 children: (0, i.jsx)('div', {
-  className: r()(O.repliedMessage, O.executedCommand, Z),
+  className: r()(x.repliedMessage, x.executedCommand, Z),
   'aria-hidden': !e.compact,
   children: n
 })

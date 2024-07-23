@@ -25,14 +25,14 @@ var i, a = n(735250),
   h = n(624367),
   N = n(433074),
   f = n(421474),
-  C = n(603270),
-  p = n(222709),
+  p = n(603270),
+  C = n(222709),
   g = n(446411),
   S = n(960904),
   A = n(161314),
   R = n(163268),
-  O = n(25610),
-  x = n(703751),
+  x = n(25610),
+  O = n(703751),
   M = n(761538),
   v = n(674611),
   L = n(346610),
@@ -79,14 +79,14 @@ var i, a = n(735250),
   eh = n(408433),
   eN = n(630388),
   ef = n(823379),
-  eC = n(709054),
-  ep = n(591759),
+  ep = n(709054),
+  eC = n(591759),
   eg = n(169525),
   eS = n(161010),
   eA = n(461157),
   eR = n(901461),
-  eO = n(432376),
-  ex = n(384203),
+  ex = n(432376),
+  eO = n(384203),
   eM = n(633957),
   ev = n(530472),
   eL = n(29909),
@@ -251,7 +251,7 @@ return 0 === e.codedLinks.length ? null : e.codedLinks.map(t => {
       code: i
     }, i);
   else if (n === S.g.CHANNEL_LINK)
-    return (0, a.jsx)(ex.Z, {
+    return (0, a.jsx)(eO.Z, {
       code: i,
       messageData: e
     }, i);
@@ -278,13 +278,13 @@ return 0 === e.codedLinks.length ? null : e.codedLinks.map(t => {
       questId: i
     }, i);
   else if (n === S.g.APP_DIRECTORY_STOREFRONT)
-    return (0, a.jsx)(C.P, {
+    return (0, a.jsx)(p.P, {
       appId: i,
       message: e
     }, i);
   else if (n === S.g.APP_DIRECTORY_STOREFRONT_SKU) {
     let t = (0, f.Q)(i);
-    return null == t ? null : (0, a.jsx)(C.F, {
+    return null == t ? null : (0, a.jsx)(p.F, {
       skuId: t.skuId,
       message: e
     }, i);
@@ -451,7 +451,7 @@ return 0 !== e.embeds.length && t ? e.embeds.map((t, n) => {
     })
   };
   if (t.type === ew.hBH.ARTICLE && null != t.url && /^https?:\/\/(?:canary|ptb|www)?\.discord(?:app)?\.com\/store\/skus\/(?:[0-9]+)/.test(t.url) && null != t.provider && 'Discord' === t.provider.name) {
-    let s = ep.Z.safeParseWithQuery(t.url);
+    let s = eC.Z.safeParseWithQuery(t.url);
     if (null != s && null != s.pathname) {
       let r = s.pathname.split('/')[3];
       if (null != r)
@@ -499,7 +499,7 @@ return (0, a.jsx)(ej.Z, {
 });
   }
   renderPublishBump(e) {
-return this.props.channel.type !== ew.d4z.GUILD_ANNOUNCEMENT || this.props.isMessageSnapshot ? null : (0, a.jsx)(p.Z, {
+return this.props.channel.type !== ew.d4z.GUILD_ANNOUNCEMENT || this.props.isMessageSnapshot ? null : (0, a.jsx)(C.Z, {
   channelId: e.channel_id,
   messageId: e.id
 });
@@ -533,7 +533,7 @@ if (e.hasFlag(ew.iLy.HAS_THREAD) && !1 !== this.props.renderThreadAccessory)
   }
   renderThreadRoleMentionWarning(e) {
 if (!!e.hasFlag(ew.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD) && !!this.props.isCurrentUser) {
-  if (!(Date.now() - eC.default.extractTimestamp(e.id) >= eq))
+  if (!(Date.now() - ep.default.extractTimestamp(e.id) >= eq))
     return (0, a.jsx)('div', {
       className: eW.threadRoleMentionFailure,
       children: eH.Z.Messages.THREAD_ROLE_MENTION_FAILURE
@@ -686,8 +686,8 @@ let {
 } = this.props, {
   showSuppressModal: s,
   showRemoveAttachmentModal: r
-} = this.state, o = this.renderCodedLinks(t), c = this.renderGiftCodes(t), d = this.renderReferralTrial(t), u = this.renderAttachments(t), _ = this.renderCtaButton(), E = this.renderSocialProofingFileSizeNitroUpsell(t), I = this.renderEmbeds(t), m = this.renderActivityInvite(t), T = this.renderReactions(t), h = this.renderPublishBump(t), N = this.renderEphemeralAccessories(t), f = this.renderStickersAccessories(t), C = this.renderThreadAccessories(t), p = this.renderComponentAccessories(t), g = this.renderThreadRoleMentionWarning(t), S = this.renderEmbeddedApplicationInstanceEmbed(t), A = this.renderInteractionPremiumUpsell(t), R = this.renderMediaPostEmbeds(t), O = this.renderSafetyPolicyNotice(t), x = this.renderSafetySystemNotification(t), M = this.renderVoiceChannelInvite(t, n), v = this.renderMediaObscureNotice(t), L = this.renderPoll(t, i), Z = this.renderForwardedMessage(t);
-return null == o && null == u && null == I && null == m && null == T && null == c && null == d && null == h && null == N && null == f && null == C && null == p && null == S && null == g && null == R && null == O && null != A && null == L && null == M && null == Z ? null : (0, a.jsxs)('div', {
+} = this.state, o = this.renderCodedLinks(t), c = this.renderGiftCodes(t), d = this.renderReferralTrial(t), u = this.renderAttachments(t), _ = this.renderCtaButton(), E = this.renderSocialProofingFileSizeNitroUpsell(t), I = this.renderEmbeds(t), m = this.renderActivityInvite(t), T = this.renderReactions(t), h = this.renderPublishBump(t), N = this.renderEphemeralAccessories(t), f = this.renderStickersAccessories(t), p = this.renderThreadAccessories(t), C = this.renderComponentAccessories(t), g = this.renderThreadRoleMentionWarning(t), S = this.renderEmbeddedApplicationInstanceEmbed(t), A = this.renderInteractionPremiumUpsell(t), R = this.renderMediaPostEmbeds(t), x = this.renderSafetyPolicyNotice(t), O = this.renderSafetySystemNotification(t), M = this.renderVoiceChannelInvite(t, n), v = this.renderMediaObscureNotice(t), L = this.renderPoll(t, i), Z = this.renderForwardedMessage(t);
+return null == o && null == u && null == I && null == m && null == T && null == c && null == d && null == h && null == N && null == f && null == p && null == C && null == S && null == g && null == R && null == x && null != A && null == L && null == M && null == Z ? null : (0, a.jsxs)('div', {
   id: (0, eb.bX)(t),
   className: l()(e, eW.container),
   children: [
@@ -704,7 +704,7 @@ return null == o && null == u && null == I && null == m && null == T && null == 
     v,
     m,
     f,
-    p,
+    C,
     S,
     A,
     E,
@@ -713,9 +713,9 @@ return null == o && null == u && null == I && null == m && null == T && null == 
     N,
     s && this.renderSuppressConfirmModal(),
     r && this.renderRemoveAttachmentConfirmModal(),
-    C,
-    O,
+    p,
     x,
+    O,
     M
   ]
 });
@@ -827,17 +827,17 @@ canManageMessages: ed.Z.can(ew.Plq.MANAGE_MESSAGES, n)
   }), [
 I,
 n
-  ]), C = (0, j.ux)(n.guild_id), [, p] = (0, U.AB)(n.guild_id), g = (0, ea.$R)(n), S = (l === i.author.id || f) && i.author.id !== ew.LAt && !1 !== s && !(0, eN.yE)(i.flags, ew.iLy.EPHEMERAL) && g && 1 === (0, eA.Z)(i), A = l === i.author.id && g && !r, R = i.author.id === l, M = i.isFirstMessageInForumPost(n), v = (0, eO.Z)({
+  ]), p = (0, j.ux)(n.guild_id), [, C] = (0, U.AB)(n.guild_id), g = (0, ea.$R)(n), S = (l === i.author.id || f) && i.author.id !== ew.LAt && !1 !== s && !(0, eN.yE)(i.flags, ew.iLy.EPHEMERAL) && g && 1 === (0, eA.Z)(i), A = l === i.author.id && g && !r, R = i.author.id === l, M = i.isFirstMessageInForumPost(n), v = (0, ex.Z)({
 channel: n,
 canChat: I,
 renderReactions: _,
 canAddNewReactions: N,
 isLurking: m,
 isGuest: T,
-communicationDisabled: p,
+communicationDisabled: C,
 isActiveChannelOrUnarchivableThread: g,
-isAutomodQuarantined: C
-  }), P = (0, V.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), b = (0, z.Z)(null == n ? void 0 : n.id), D = (0, Q.Z)(i), y = (0, O.V)(n.id, i.author.id), B = (0, x.r)(i.id), {
+isAutomodQuarantined: p
+  }), P = (0, V.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), b = (0, z.Z)(null == n ? void 0 : n.id), D = (0, Q.Z)(i), y = (0, x.V)(n.id, i.author.id), B = (0, O.r)(i.id), {
 hasInlineForwardButton: k
   } = L.w.useExperiment({
 location: 'MessageAccessories'
@@ -881,7 +881,7 @@ renderThreadAccessory: l = !1,
 disableReactionCreates: o = !0,
 disableReactionUpdates: c = !0,
 ...d
-  } = e, u = er.x4.useSetting(), _ = er.RS.useSetting(), E = er.NA.useSetting(), I = er.QK.useSetting(), m = (0, V.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), T = (0, z.Z)(null == i ? void 0 : i.id), h = (0, O.V)(i.id, n.author.id), N = (0, x.r)(n.id), f = (0, Q.Z)(n);
+  } = e, u = er.x4.useSetting(), _ = er.RS.useSetting(), E = er.NA.useSetting(), I = er.QK.useSetting(), m = (0, V.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), T = (0, z.Z)(null == i ? void 0 : i.id), h = (0, x.V)(i.id, n.author.id), N = (0, O.r)(n.id), f = (0, Q.Z)(n);
   return (0, a.jsx)(e0, {
 ...d,
 message: n,

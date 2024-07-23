@@ -30,10 +30,10 @@ return;
   if (null == f)
 return;
   await (0, l.$p)();
-  let C = Array.from(o.Z.getAllStickersIterator()),
-p = C.filter(e => e.type === c.n0.GUILD).filter(e => T(e.guild_id) && (0, r.kl)(e, f, t)).sort((e, t) => -E.default.compare(e.id, t.id));
-  if (p.length > 5) {
-let a = [p[Math.floor(Math.pow(Math.random(), 2) * p.length)].id];
+  let p = Array.from(o.Z.getAllStickersIterator()),
+C = p.filter(e => e.type === c.n0.GUILD).filter(e => T(e.guild_id) && (0, r.kl)(e, f, t)).sort((e, t) => -E.default.compare(e.id, t.id));
+  if (C.length > 5) {
+let a = [C[Math.floor(Math.pow(Math.random(), 2) * C.length)].id];
 i.Z.sendStickers(t.id, a, '', {
   messageReference: {
     guild_id: null !== (n = t.getGuildId()) && void 0 !== n ? n : void 0,
@@ -60,7 +60,7 @@ i.Z.sendMessage(t.id, s.ZP.parse(t, n.allNamesString), !1, {
 });
 return;
   }
-  let S = C.filter(e => e.type === c.n0.STANDARD),
+  let S = p.filter(e => e.type === c.n0.STANDARD),
 A = [S[Math.floor(Math.random() * S.length)].id];
   i.Z.sendStickers(t.id, A, '', {
 messageReference: {

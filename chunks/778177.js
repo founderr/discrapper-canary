@@ -16,14 +16,14 @@ var i = n(735250),
   h = n(542051),
   N = n(349033),
   f = n(999650),
-  C = n(933557),
-  p = n(471445),
+  p = n(933557),
+  C = n(471445),
   g = n(592125),
   S = n(271383),
   A = n(699516),
   R = n(250758),
-  O = n(944486),
-  x = n(914010),
+  x = n(944486),
+  O = n(914010),
   M = n(246946),
   v = n(594174),
   L = n(585483),
@@ -91,7 +91,7 @@ if (null == a)
     children: s
   });
 let r = g.Z.getChannel(a.parent_id),
-  l = (0, p.KS)(a);
+  l = (0, C.KS)(a);
 return (0, i.jsxs)('div', {
   className: y.resultChannel,
   children: [
@@ -99,11 +99,11 @@ return (0, i.jsxs)('div', {
       className: y.searchResultChannelIcon
     }) : null,
     (0, i.jsx)('strong', {
-      children: (0, C.F6)(a, v.default, A.Z)
+      children: (0, p.F6)(a, v.default, A.Z)
     }),
     null != r ? (0, i.jsx)('span', {
       className: y.searchResultChannelCategory,
-      children: (0, C.F6)(r, v.default, A.Z)
+      children: (0, p.F6)(r, v.default, A.Z)
     }) : null
   ]
 });
@@ -124,10 +124,10 @@ let t, n, {
   renderResult: h
 } = e;
 if (T) {
-  var N, C;
+  var N, p;
   t = (0, i.jsx)('span', {
     className: y.filter,
-    children: null !== (C = null === (N = f.ZP[o]) || void 0 === N ? void 0 : N.key) && void 0 !== C ? C : 'addme:'
+    children: null !== (p = null === (N = f.ZP[o]) || void 0 === N ? void 0 : N.key) && void 0 !== p ? p : 'addme:'
   });
 }
 return n = null != h ? h(s, o, l) : (0, i.jsx)('strong', {
@@ -533,12 +533,12 @@ super(...e), t = this, B(this, 'state', {
 }
 t.ZP = a.forwardRef((e, t) => {
   let [n, a, s] = (0, I.Wu)([
-x.Z,
 O.Z,
+x.Z,
 R.Z
   ], () => {
-let e = x.Z.getGuildId(),
-  t = O.Z.getChannelId(),
+let e = O.Z.getGuildId(),
+  t = x.Z.getChannelId(),
   n = null != e ? e : t;
 o()(null != n, 'SearchPopout.getStateFromStores - invalid searchId');
 let i = R.Z.getState(n),

@@ -23,12 +23,12 @@ function h(e) {
 setTab: t,
 badgeState: s,
 closePopout: h
-  } = e, f = (0, l.Wu)([d.Z], () => d.Z.getInvites()), C = (0, l.e7)([d.Z], () => d.Z.getInviteStatuses()), [p, g] = a.useMemo(() => r().partition(f, e => {
+  } = e, f = (0, l.Wu)([d.Z], () => d.Z.getInvites()), p = (0, l.e7)([d.Z], () => d.Z.getInviteStatuses()), [C, g] = a.useMemo(() => r().partition(f, e => {
 var t;
-return (null === (t = C[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
+return (null === (t = p[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
   }), [
 f,
-C
+p
   ]);
   return (a.useEffect(() => {
 (0, u.sJ)();
@@ -84,13 +84,13 @@ children: [
     children: (0, i.jsxs)('div', {
       className: T.invitesContainer,
       children: [
-        p.length > 0 && (0, i.jsxs)(i.Fragment, {
+        C.length > 0 && (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)(N, {
               title: m.Z.Messages.GAME_INVITES_RECENT_HEADER
             }),
             (0, i.jsx)(i.Fragment, {
-              children: p.map(e => (0, i.jsx)(I.Z, {
+              children: C.map(e => (0, i.jsx)(I.Z, {
                 invite: e,
                 expired: !1
               }, e.invite_id))
