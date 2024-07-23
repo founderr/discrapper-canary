@@ -1,417 +1,431 @@
-t.d(n, {
+n.d(t, {
   Af: function() {
-return p;
+return L;
   },
   An: function() {
-return F;
-  },
-  E6: function() {
-return w;
-  },
-  EE: function() {
-return P;
-  },
-  Gk: function() {
-return k;
-  },
-  Gt: function() {
-return r;
-  },
-  OV: function() {
-return O;
-  },
-  Rg: function() {
-return b;
-  },
-  U9: function() {
 return B;
   },
+  E6: function() {
+return k;
+  },
+  EE: function() {
+return M;
+  },
+  Gk: function() {
+return Y;
+  },
+  Gt: function() {
+return i;
+  },
+  OV: function() {
+return b;
+  },
+  Rg: function() {
+return Z;
+  },
+  U9: function() {
+return V;
+  },
   XF: function() {
-return L;
+return P;
   },
   Yl: function() {
 return H;
   },
+  ej: function() {
+return D;
+  },
   f: function() {
-return U;
+return G;
   },
   gj: function() {
+return U;
+  },
+  m7: function() {
 return y;
   },
   n8: function() {
-return G;
+return F;
   },
   pQ: function() {
-return D;
+return w;
   },
   v1: function() {
-return j;
+return x;
   }
 });
-var l, r, a = t(735250),
-  o = t(470079),
-  i = t(120356),
-  u = t.n(i),
-  s = t(913527),
-  c = t.n(s),
-  d = t(884439),
-  E = t(705512),
-  _ = t(442837),
-  f = t(481060),
-  v = t(70956),
-  T = t(823379),
-  m = t(709054),
-  h = t(719247),
-  I = t(22211),
-  N = t(561308),
-  x = t(797342),
-  g = t(371991),
-  M = t(206583),
-  A = t(689938),
-  C = t(119369);
-(l = r || (r = {}))[l.CARD = 0] = 'CARD', l[l.POPOUT = 1] = 'POPOUT', l[l.GAME_PROFILE = 2] = 'GAME_PROFILE';
-let R = o.createContext({});
+var r, i, a = n(735250),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
+  u = n(913527),
+  c = n.n(u),
+  d = n(884439),
+  _ = n(705512),
+  E = n(442837),
+  f = n(481060),
+  h = n(70956),
+  p = n(823379),
+  m = n(709054),
+  I = n(719247),
+  T = n(22211),
+  g = n(561308),
+  S = n(797342),
+  A = n(371991),
+  N = n(206583),
+  v = n(689938),
+  O = n(119369);
+(r = i || (i = {}))[r.CARD = 0] = 'CARD', r[r.POPOUT = 1] = 'POPOUT', r[r.GAME_PROFILE = 2] = 'GAME_PROFILE', r[r.USER_PROFILE = 3] = 'USER_PROFILE';
+let R = s.createContext({});
 
-function S() {
-  return o.useContext(R);
+function C() {
+  return s.useContext(R);
 }
 
-function Z(e) {
+function y(e) {
   let {
-Icon: n,
-text: t,
-iconColor: l,
-tooltipText: r,
-showTooltip: o
+children: t,
+...n
+  } = e;
+  return (0, a.jsx)('div', {
+className: O.badgeContainer,
+...n,
+children: t
+  });
+}
+
+function D(e) {
+  let {
+Icon: t,
+text: n,
+iconColor: r,
+tooltipText: i,
+showTooltip: s
   } = e, {
-defaultTextColor: i,
-defaultIconColor: u
-  } = S();
+defaultTextColor: o,
+defaultIconColor: l
+  } = C();
   return (0, a.jsx)(f.Tooltip, {
-text: r,
-shouldShow: o,
-children: e => (0, a.jsxs)('div', {
-  className: C.badgeContainer,
+text: i,
+shouldShow: s,
+children: e => (0, a.jsxs)(y, {
   ...e,
   children: [
-    (0, a.jsx)(n, {
+    (0, a.jsx)(t, {
       size: 'xxs',
-      color: null != l ? l : u
+      color: null != r ? r : l
     }),
     (0, a.jsx)(f.Text, {
       variant: 'text-xs/normal',
-      color: i,
-      className: C.badgeLabel,
-      children: t
+      color: o,
+      className: O.badgeLabel,
+      children: n
     })
   ]
 })
   });
 }
 
-function p(e) {
+function L(e) {
   let {
-entry: n
+entry: t
   } = e, {
-channel: t
-  } = (0, I.Z)(n), {
-location: l
-  } = S();
-  return null == t || (0, T.Hi)(l, [
+channel: n
+  } = (0, T.Z)(t), {
+location: r
+  } = C();
+  return null == n || (0, p.Hi)(r, [
 1,
-2
-  ]) ? null : (0, a.jsx)(Z, {
+2,
+3
+  ]) ? null : (0, a.jsx)(D, {
 Icon: f.VoiceNormalIcon,
-text: t.name
+text: n.name
   });
 }
 
-function O(e) {
+function b(e) {
   let {
-entry: n,
-hovered: t
+entry: t,
+hovered: n
   } = e, {
-defaultTextColor: l,
-defaultIconColor: r,
-location: o
-  } = S(), i = 0 === o, u = (0, N.kr)(n), s = i && u ? f.tokens.colors.STATUS_POSITIVE : r, c = i && u ? 'text-positive' : l, {
-streamPreviewUrl: d
-  } = (0, I.Z)(n);
-  return (0, a.jsxs)('div', {
-className: C.badgeContainer,
+defaultTextColor: r,
+defaultIconColor: i,
+location: s
+  } = C(), o = (0, g.kr)(t) && (0, p.Hi)(s, [
+0,
+3
+  ]), l = o ? f.tokens.colors.TEXT_POSITIVE : i, {
+streamPreviewUrl: u
+  } = (0, T.Z)(t);
+  return (0, a.jsxs)(y, {
 children: [
-  null == d ? (0, a.jsx)(f.GameControllerIcon, {
+  null == u ? (0, a.jsx)(f.GameControllerIcon, {
     size: 'xxs',
-    color: s
+    color: l
   }) : (0, a.jsx)(f.ScreenArrowIcon, {
     size: 'xxs',
-    color: s
+    color: l
   }),
-  (0, a.jsx)(g.ZP, {
-    entry: n,
-    textColor: c,
-    hovered: t,
+  (0, a.jsx)(A.ZP, {
+    entry: t,
+    textColor: o ? 'text-positive' : r,
+    hovered: n,
     bold: !0
+  })
+]
+  });
+}
+
+function M(e) {
+  let {
+entry: t
+  } = e, {
+defaultTextColor: n,
+defaultIconColor: r
+  } = C(), {
+state: i,
+party: s,
+inExperiment: o
+  } = (0, S.n)(t);
+  if (!o)
+return null;
+  let l = (0, g.bT)(i, s);
+  return null == l ? null : (0, a.jsxs)(y, {
+children: [
+  (0, a.jsx)(f.GroupIcon, {
+    size: 'xxs',
+    color: r
+  }),
+  (0, a.jsx)(f.Text, {
+    variant: 'text-xs/normal',
+    color: n,
+    lineClamp: 1,
+    children: l
   })
 ]
   });
 }
 
 function P(e) {
-  var n, t, l, r;
+  var t;
   let {
-entry: o
+entry: n,
+hovered: r
   } = e, {
 defaultTextColor: i,
-defaultIconColor: u
-  } = S(), {
-state: s,
-party: c,
-inExperiment: d
-  } = (0, x.n)(o);
-  if (!d)
+defaultIconColor: s,
+location: o
+  } = C(), l = (0, E.e7)([I.Z], () => I.Z.getMatchingActivity(n));
+  if ((null == l ? void 0 : l.timestamps) == null)
 return null;
-  let E = null !== (l = null == c ? void 0 : null === (n = c.size) || void 0 === n ? void 0 : n[0]) && void 0 !== l ? l : void 0,
-_ = null !== (r = null == c ? void 0 : null === (t = c.size) || void 0 === t ? void 0 : t[1]) && void 0 !== r ? r : void 0,
-v = null != E && null != _ ? A.Z.Messages.CONTENT_INVENTORY_GAME_STATE_SIZE.format({
-  count: E,
-  max: _
-}) : void 0,
-T = null != v && null != s ? ''.concat(s, ' (').concat(v, ')') : null != s ? s : v;
-  return null == T ? null : (0, a.jsxs)('div', {
-className: C.badgeContainer,
-children: [
-  (0, a.jsx)(f.GroupIcon, {
-    size: 'xxs',
-    color: u
-  }),
-  (0, a.jsx)(f.Text, {
-    variant: 'text-xs/normal',
-    color: i,
-    lineClamp: 1,
-    children: T
-  })
-]
-  });
-}
-
-function L(e) {
-  var n;
-  let {
-entry: t,
-hovered: l
-  } = e, {
-defaultTextColor: r,
-defaultIconColor: o,
-location: i
-  } = S(), u = 0 === i, s = (0, _.e7)([h.Z], () => h.Z.getMatchingActivity(t));
-  if ((null == s ? void 0 : s.timestamps) == null)
-return null;
-  let c = u ? f.tokens.colors.STATUS_POSITIVE : o,
-d = null === (n = s.timestamps) || void 0 === n ? void 0 : n.start;
+  let u = (0, p.Hi)(o, [
+  0,
+  3
+]),
+c = u ? f.tokens.colors.TEXT_POSITIVE : s,
+d = null === (t = l.timestamps) || void 0 === t ? void 0 : t.start;
   return (0, a.jsxs)('div', {
-className: C.badgeContainer,
+className: O.badgeContainer,
 children: [
   (0, a.jsx)(f.RecordPlayerIcon, {
     size: 'xxs',
     color: c
   }),
-  (0, a.jsx)(g.x3, {
+  (0, a.jsx)(A.x3, {
     entry: null != d ? {
       start: d
-    } : t,
-    textColor: u ? 'text-positive' : r,
-    hovered: l,
+    } : n,
+    textColor: u ? 'text-positive' : i,
+    hovered: r,
     bold: !0
   })
 ]
   });
 }
 
-function y(e) {
-  let {
-entry: n
-  } = e, {
-location: t
-  } = S(), l = 0 === t ? f.tokens.colors.STATUS_POSITIVE : void 0;
-  return (0, N.Ol)(n) ? (0, a.jsx)(Z, {
-Icon: f.NewUserSmallIcon,
-text: A.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
-iconColor: l
-  }) : null;
-}
-
-function D(e) {
-  let {
-entry: n
-  } = e, {
-location: t
-  } = S();
-  if (!(0, N.V5)(n))
-return null;
-  let l = (0, N.kr)(n),
-r = 0 === t,
-o = r || l ? (0, N.z5)(n) : (0, N.nB)(n);
-  return (0, a.jsx)(Z, {
-Icon: f.TimerIcon,
-text: o,
-tooltipText: (0, N.EX)(n),
-showTooltip: r && !l
-  });
-}
-
-function j(e) {
-  let {
-entry: n
-  } = e, {
-location: t
-  } = S(), l = 0 !== t, r = (0, N.dw)(n);
-  if (null == r)
-return null;
-  let o = (0, N.GE)(r);
-  return (0, a.jsx)(Z, {
-Icon: f.RetryIcon,
-showTooltip: !l,
-tooltipText: o,
-text: l ? o : A.Z.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
-  });
-}
-
 function U(e) {
   let {
-entry: n
+entry: t
   } = e, {
-location: t
-  } = S(), l = (0, N.vU)(n);
-  return (0, N.q_)(n) ? (0, a.jsx)(Z, {
-Icon: f.FlashIcon,
-showTooltip: 0 === t,
-text: A.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
-  days: l
-}),
-tooltipText: A.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_TOOLTIP.format({
-  days: l
-})
+location: n
+  } = C(), r = 0 === n ? f.tokens.colors.STATUS_POSITIVE : void 0;
+  return (0, g.Ol)(t) ? (0, a.jsx)(D, {
+Icon: f.NewUserSmallIcon,
+text: v.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
+iconColor: r
   }) : null;
 }
 
 function w(e) {
   let {
-entry: n
+entry: t
   } = e, {
-location: t
-  } = S(), l = 0 !== t, r = (0, N.yA)(n);
-  if (null == r)
+location: n
+  } = C();
+  if (!(0, g.V5)(t))
 return null;
-  let o = l ? A.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : A.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
-  return (0, a.jsx)(Z, {
+  let r = (0, g.kr)(t),
+i = 0 === n,
+s = i || r ? (0, g.z5)(t) : (0, g.nB)(t);
+  return (0, a.jsx)(D, {
+Icon: f.TimerIcon,
+text: s,
+tooltipText: (0, g.EX)(t),
+showTooltip: i && !r
+  });
+}
+
+function x(e) {
+  let {
+entry: t
+  } = e, {
+location: n
+  } = C(), r = 0 !== n, i = (0, g.dw)(t);
+  if (null == i)
+return null;
+  let s = (0, g.GE)(i);
+  return (0, a.jsx)(D, {
+Icon: f.RetryIcon,
+showTooltip: !r,
+tooltipText: s,
+text: r ? s : v.Z.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
+  });
+}
+
+function G(e) {
+  let {
+entry: t
+  } = e, {
+location: n
+  } = C(), r = (0, g.vU)(t);
+  return (0, g.q_)(t) ? (0, a.jsx)(D, {
+Icon: f.FlashIcon,
+showTooltip: 0 === n,
+text: v.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
+  days: r
+}),
+tooltipText: v.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_TOOLTIP.format({
+  days: r
+})
+  }) : null;
+}
+
+function k(e) {
+  let {
+entry: t
+  } = e, {
+location: n
+  } = C(), r = 0 !== n, i = (0, g.yA)(t);
+  if (null == i)
+return null;
+  let s = r ? v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
+  return (0, a.jsx)(D, {
 Icon: f.TrophyIcon,
 text: (0, a.jsxs)(a.Fragment, {
   children: [
-    A.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME,
-    l ? ' \u2014 ' : ': ',
-    o.format({
-      hours: Math.round(r / v.Z.Seconds.HOUR)
+    v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME,
+    r ? ' \u2014 ' : ': ',
+    s.format({
+      hours: Math.round(i / h.Z.Seconds.HOUR)
     })
   ]
 })
   });
 }
 
+function B(e) {
+  var t;
+  let {
+entry: n
+  } = e, {
+location: r
+  } = C(), i = null === (t = (0, g.PJ)(n, d.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
+  if (null == i)
+return null;
+  let s = 1 === r ? v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({
+count: i
+  }) : v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRACKS_THIS_WEEK.format({
+count: i
+  });
+  return (0, a.jsx)(D, {
+Icon: f.TrophyIcon,
+text: s
+  });
+}
+
 function F(e) {
-  var n;
   let {
 entry: t
   } = e, {
-location: l
-  } = S(), r = null === (n = (0, N.PJ)(t, d.N.AGGREGATE_COUNT)) || void 0 === n ? void 0 : n.count;
-  if (null == r)
+location: n
+  } = C();
+  if (2 === n)
 return null;
-  let o = 1 === l ? A.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({
-count: r
-  }) : A.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRACKS_THIS_WEEK.format({
-count: r
-  });
-  return (0, a.jsx)(Z, {
-Icon: f.TrophyIcon,
-text: o
-  });
-}
-
-function G(e) {
-  let {
-entry: n
-  } = e, {
-location: t
-  } = S();
-  if (2 === t)
-return null;
-  let l = (0, N.ig)(n);
-  return null == l || l === E.o.TRENDING_TYPE_UNSPECIFIED ? null : (0, a.jsx)(Z, {
+  let r = (0, g.ig)(t);
+  return null == r || r === _.o.TRENDING_TYPE_UNSPECIFIED ? null : (0, a.jsx)(D, {
 Icon: f.FireIcon,
-text: A.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+text: v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
   });
 }
 
-function B(e) {
+function V(e) {
   let {
-entry: n
+entry: t
   } = e, {
-location: t
-  } = S();
-  if (2 === t)
+location: n
+  } = C();
+  if (2 === n)
 return null;
-  let l = m.default.extractTimestamp(n.extra.application_id);
-  return c()().diff(c()(l), 'days') > M.G ? null : (0, a.jsx)(Z, {
+  let r = m.default.extractTimestamp(t.extra.application_id);
+  return c()().diff(c()(r), 'days') > N.G ? null : (0, a.jsx)(D, {
 Icon: f.StarShootingIcon,
-text: A.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
+text: v.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
   });
 }
 
 function H(e) {
   let {
-entry: n,
-hovered: t
+entry: t,
+hovered: n
   } = e, {
-defaultTextColor: l,
-defaultIconColor: r
-  } = S();
+defaultTextColor: r,
+defaultIconColor: i,
+location: s
+  } = C(), o = (0, g.kr)(t) && 3 === s, l = o ? f.tokens.colors.TEXT_POSITIVE : i;
   return (0, a.jsxs)('div', {
-className: C.badgeContainer,
+className: O.badgeContainer,
 children: [
   (0, a.jsx)(f.TvIcon, {
     size: 'xxs',
-    color: r
+    color: l
   }),
-  (0, a.jsx)(g.ZP, {
-    entry: n,
-    textColor: l,
-    hovered: t,
+  (0, a.jsx)(A.ZP, {
+    entry: t,
+    textColor: o ? 'text-positive' : r,
+    hovered: n,
     bold: !0
   })
 ]
   });
 }
 
-function b(e) {
-  var n;
+function Z(e) {
   let {
 entry: t
-  } = e, l = /\w+ (\d+), \w+ (\d+)/.exec(null !== (n = t.extra.media_assets_large_text) && void 0 !== n ? n : ''), r = null != l ? A.Z.Messages.MEMBER_LIST_CONTENT_FEED_WATCH_SEASON_EPISODE.format({
-seasonNum: l[1],
-episodeNum: l[2]
-  }) : null;
-  return (0, a.jsx)(Z, {
+  } = e, n = (0, g.ap)(t.extra.media_assets_large_text);
+  return null == n ? null : (0, a.jsx)(D, {
 Icon: f.TopicsIcon,
-text: r
+text: n
   });
 }
 
-function k(e) {
+function Y(e) {
   let {
-location: n,
-children: t
-  } = e, l = 1 === n ? {
+location: t,
+children: n,
+className: r
+  } = e, i = 1 === t ? {
 defaultTextColor: 'content-inventory-overlay-text-secondary',
 defaultIconColor: f.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY
   } : {
@@ -419,16 +433,16 @@ defaultTextColor: 'text-secondary'
   };
   return (0, a.jsx)(R.Provider, {
 value: {
-  location: n,
-  ...l
+  location: t,
+  ...i
 },
 children: (0, a.jsx)('div', {
-  className: u()(C.badgesContainer, {
-    [C.badgesContainerCard]: 0 === n,
-    [C.badgesContainerPopout]: 1 === n,
-    [C.badgesContainerGameProfile]: 2 === n
+  className: l()(O.badgesContainer, r, {
+    [O.badgesContainerCard]: 0 === t,
+    [O.badgesContainerPopout]: 1 === t,
+    [O.badgesContainerGameProfile]: 2 === t
   }),
-  children: t
+  children: n
 })
   });
 }

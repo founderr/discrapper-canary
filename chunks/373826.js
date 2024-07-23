@@ -1,36 +1,38 @@
 n.d(t, {
   Z: function() {
-return l;
+return c;
   }
 });
 var r = n(735250);
 n(470079);
-var i = n(481060),
-  a = n(652853),
-  s = n(228168),
-  o = n(139665);
+var i = n(120356),
+  a = n.n(i),
+  s = n(481060),
+  o = n(652853),
+  l = n(228168),
+  u = n(139665);
 
-function l(e) {
+function c(e) {
   let {
 text: t,
 onClick: n,
-...l
+...i
   } = e, {
-profileType: u
-  } = (0, a.z)(), c = u !== s.y0.FULL_SIZE ? 1 : void 0;
-  return null == t || '' === t ? null : null != n ? (0, r.jsx)(i.Clickable, {
+profileType: c
+  } = (0, o.z)(), d = c !== l.y0.FULL_SIZE ? 1 : void 0;
+  return null == t || '' === t ? null : null != n ? (0, r.jsx)(s.Clickable, {
 onClick: n,
-children: (0, r.jsx)(i.Text, {
+className: a()(u.clickable, u.text),
+children: (0, r.jsx)(s.Text, {
   color: 'text-normal',
-  lineClamp: c,
-  className: o.link,
-  ...l,
+  lineClamp: d,
+  ...i,
   children: t
 })
-  }) : (0, r.jsx)(i.Text, {
+  }) : (0, r.jsx)(s.Text, {
 color: 'text-normal',
-lineClamp: c,
-...l,
+lineClamp: d,
+...i,
 children: t
   });
 }
