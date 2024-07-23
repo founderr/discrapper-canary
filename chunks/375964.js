@@ -8261,6 +8261,7 @@ e.exports = Object.freeze({
   RESEND_CODE: 'Resend Code',
   COUNTRY_CODE: 'Country Code',
   COUNTRY_CODES: 'Country Codes',
+  COUNTRY_CODE_SELECT_A11Y_HINT: 'Tap to change country code',
   COUNTRY_NO_RESULTS: 'No countries found.',
   EMAIL: 'Email',
   YOUR_EMAIL: 'Your Email',
