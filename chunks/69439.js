@@ -28,7 +28,7 @@ day: '2-digit'
 isClaiming: T,
 isEnrolling: f
   } = (0, s.cj)([l.Z], () => ({
-isClaiming: l.Z.isClaimingRewardCode(I.id) || l.Z.isClaimingReward(I.id) || l.Z.isFetchingRewardCode(I.id),
+isClaiming: l.Z.isClaimingReward(I.id) || l.Z.isFetchingRewardCode(I.id),
 isEnrolling: l.Z.isEnrolling(I.id)
   })), S = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, C = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, N = C && (null === (E = I.userStatus) || void 0 === E ? void 0 : E.claimedAt) == null, A = (0, o.iQ)(I), v = !(0, o.zi)(I), Z = (0, r._Q)(I), L = (0, o.zK)(I, d.S7.IN_HOUSE_CONSOLE_QUEST), O = (0, o.Xv)(I.config), {
 text: R,

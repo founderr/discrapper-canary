@@ -6,25 +6,22 @@ return T;
 return h;
   },
   EW: function() {
-return y;
-  },
-  QB: function() {
-return S;
-  },
-  T0: function() {
 return C;
   },
-  Tj: function() {
+  QB: function() {
 return g;
   },
-  Wf: function() {
-return O;
-  },
-  eT: function() {
+  T0: function() {
 return R;
   },
+  Wf: function() {
+return v;
+  },
+  eT: function() {
+return O;
+  },
   gl: function() {
-return N;
+return A;
   },
   is: function() {
 return p;
@@ -33,10 +30,10 @@ return p;
 return I;
   },
   nE: function() {
-return v;
+return N;
   },
   pf: function() {
-return A;
+return S;
   },
   xw: function() {
 return m;
@@ -192,34 +189,6 @@ try {
   }
 }
 async function g(e, t, n) {
-  if (!c.Z.isClaimingRewardCode(e)) {
-a.Z.dispatch({
-  type: 'QUESTS_CLAIM_REWARD_CODE_BEGIN',
-  questId: e
-});
-try {
-  let r = await i.tn.post({
-    url: E.ANM.QUESTS_REWARD_CODE(e),
-    body: {
-      platform: t,
-      location: n
-    }
-  });
-  a.Z.dispatch({
-    type: 'QUESTS_CLAIM_REWARD_CODE_SUCCESS',
-    questId: e,
-    rewardCode: (0, d.yI)(r.body)
-  });
-} catch (t) {
-  throw a.Z.dispatch({
-    type: 'QUESTS_CLAIM_REWARD_CODE_FAILURE',
-    error: new s.Z(t),
-    questId: e
-  }), t;
-}
-  }
-}
-async function S(e, t, n) {
   if (!c.Z.isClaimingReward(e)) {
 a.Z.dispatch({
   type: 'QUESTS_CLAIM_REWARD_BEGIN',
@@ -252,7 +221,7 @@ try {
 }
   }
 }
-async function A(e) {
+async function S(e) {
   if (!c.Z.isFetchingRewardCode(e)) {
 a.Z.dispatch({
   type: 'QUESTS_FETCH_REWARD_CODE_BEGIN',
@@ -276,7 +245,7 @@ try {
 }
   }
 }
-async function N(e, t) {
+async function A(e, t) {
   let n = c.Z.isDismissingContent(e),
 r = (0, d.GN)(t);
   if (!n && r) {
@@ -304,13 +273,13 @@ try {
   }
 }
 
-function v(e) {
+function N(e) {
   a.Z.dispatch({
 type: 'QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE',
 streamKey: e
   });
 }
-async function O(e) {
+async function v(e) {
   try {
 let t = await i.tn.post({
   url: E.ANM.QUESTS_PREVIEW_COMPLETE(e),
@@ -328,7 +297,7 @@ a.Z.dispatch({
 });
   }
 }
-async function R(e) {
+async function O(e) {
   try {
 let t = await i.tn.del({
   url: E.ANM.QUESTS_PREVIEW_STATUS(e),
@@ -346,7 +315,7 @@ a.Z.dispatch({
 });
   }
 }
-async function C(e) {
+async function R(e) {
   try {
 let t = await i.tn.del({
   url: E.ANM.QUESTS_PREVIEW_DISMISSIBILITY(e),
@@ -365,7 +334,7 @@ a.Z.dispatch({
   }
 }
 
-function y(e) {
+function C(e) {
   a.Z.dispatch({
 type: 'QUESTS_DELIVERY_OVERRIDE',
 questId: e
