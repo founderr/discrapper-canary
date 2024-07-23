@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return L;
+return b;
   },
   _: function() {
 return r;
@@ -13,95 +13,127 @@ var r, i, a = n(735250),
   u = n(481060),
   c = n(230711),
   d = n(351773),
-  _ = n(94795),
-  E = n(327943),
-  f = n(539873),
-  h = n(238302),
-  p = n(514361),
-  m = n(572397),
-  I = n(705262),
-  T = n(197115),
-  g = n(672752),
-  S = n(727939),
-  A = n(981631),
-  N = n(921944),
-  v = n(474936),
-  O = n(689938),
-  R = n(440443);
+  _ = n(100527),
+  E = n(94795),
+  f = n(327943),
+  h = n(539873),
+  p = n(238302),
+  m = n(514361),
+  I = n(572397),
+  T = n(705262),
+  g = n(197115),
+  S = n(672752),
+  A = n(727939),
+  N = n(981631),
+  v = n(921944),
+  O = n(474936),
+  R = n(689938),
+  C = n(440443);
 
-function C() {
-  let e = (0, m.q)();
-  return s.useEffect(() => ((0, h.Kq)(), e(A.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => {
-e(A.rMx.CLIENT_THEME_PREVIEW_CLOSED);
-  }), [e]), (0, a.jsxs)(I.ZP, {
-type: I.yH.EDITOR,
-children: [
-  (0, a.jsx)(I.ZP.Basic, {}),
-  (0, a.jsx)(I.ZP.Gradient, {})
-]
+function y() {
+  let e = (0, I.q)();
+  return s.useEffect(() => ((0, p.Kq)(), e(N.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => {
+e(N.rMx.CLIENT_THEME_PREVIEW_CLOSED);
+  }), [e]), (0, a.jsx)(T.ZP, {
+type: T.yH.EDITOR,
+children: (0, a.jsx)(T.ZP.BasicAndGradient, {
+  isEditor: !0
+})
   });
 }
 
-function y() {
+function D() {
   return s.useEffect(() => {
-(0, _.nJ)();
-  }, []), (0, a.jsx)(f.Z, {
+(0, E.nJ)();
+  }, []), (0, a.jsx)(h.Z, {
 isEditor: !0
   });
 }
 
-function D(e) {
+function L(e) {
   let {
-isPreview: t,
-isCoachmark: n,
-onClose: r
-  } = e, i = s.useCallback(() => {
-r(), !n && c.Z.open();
+tab: t,
+isPreview: r,
+isCoachmark: i,
+onClose: l
+  } = e, d = s.useCallback(() => {
+l(), !i && c.Z.open();
   }, [
-r,
-n
-  ]), l = (0, o.EQ)({
-isPreview: t,
-isCoachmark: n
+l,
+i
+  ]), E = (0, o.EQ)({
+isPreview: r,
+isCoachmark: i
   }).with({
 isCoachmark: !0
-  }, () => O.Z.Messages.CLOSE).with({
+  }, () => R.Z.Messages.CLOSE).with({
 isPreview: !0
-  }, () => O.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW).otherwise(() => O.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS);
+  }, () => R.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW).otherwise(() => R.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS), f = s.useCallback(() => {
+if (1 === t) {
+  (0, u.openModalLazy)(async () => {
+    let {
+      default: e
+    } = await n.e('69052').then(n.bind(n, 184250));
+    return t => (0, a.jsx)(e, {
+      analyticsSource: _.Z.APP_ICON_EDITOR,
+      analyticsLocation: {
+        section: N.jXE.SETTINGS_APP_ICONS
+      },
+      ...t
+    });
+  });
+  return;
+}
+if (0 === t) {
+  (0, u.openModalLazy)(async () => {
+    let {
+      default: e
+    } = await n.e('68192').then(n.bind(n, 742234));
+    return t => (0, a.jsx)(e, {
+      analyticsSource: _.Z.CLIENT_THEMES_EDITOR,
+      analyticsLocation: {
+        section: N.jXE.SETTINGS_CLIENT_THEMES
+      },
+      ...t
+    });
+  });
+  return;
+}
+  }, [t]);
   return (0, a.jsxs)('div', {
-className: R.footerContainer,
+className: C.footerContainer,
 children: [
-  (0, a.jsxs)('div', {
-    className: R.footerLabelContainer,
+  r && (0, a.jsxs)('div', {
+    className: C.footerLabelContainer,
     children: [
       (0, a.jsx)(u.NitroWheelIcon, {
-        className: R.footerNitro,
+        className: C.footerNitro,
         size: 'xs',
-        color: g.JX.PREMIUM_TIER_2
+        color: S.JX.PREMIUM_TIER_2
       }),
       (0, a.jsx)(u.Text, {
-        className: R.footerText,
+        className: C.footerText,
         variant: 'text-sm/medium',
-        children: O.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({
-          onClick: () => {}
+        children: R.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({
+          onClick: f
         })
       })
     ]
   }),
   (0, a.jsxs)('div', {
-    className: R.footerButtonContainer,
+    className: C.footerButtonContainer,
     children: [
       (0, a.jsx)(u.Button, {
-        className: R.footerButton,
+        className: C.footerButton,
         color: u.ButtonColors.PRIMARY,
-        onClick: i,
-        children: l
+        onClick: d,
+        children: E
       }),
-      t && (0, a.jsx)(T.Z, {
-        className: R.footerButton,
-        subscriptionTier: v.Si.TIER_2,
+      r && (0, a.jsx)(g.Z, {
+        className: C.footerButton,
+        subscriptionTier: O.Si.TIER_2,
         showGradient: !0,
-        buttonText: O.Z.Messages.PREMIUM_UPSELL_GET_NITRO
+        buttonText: R.Z.Messages.PREMIUM_UPSELL_GET_NITRO
       })
     ]
   })
@@ -109,73 +141,78 @@ children: [
   });
 }
 
-function L(e) {
+function b(e) {
   let {
 initialTab: t,
 markAsDismissed: n
   } = e, [r, i] = s.useState(t), o = s.useMemo(() => [{
-  name: O.Z.Messages.THEME,
+  name: R.Z.Messages.THEME,
   value: 0
 },
 {
-  name: O.Z.Messages.USER_SETTINGS_APPEARANCE_IN_APP_ICON_TITLE,
+  name: R.Z.Messages.USER_SETTINGS_APPEARANCE_IN_APP_ICON_TITLE,
   value: 1
 }
-  ], []), c = (0, l.e7)([p.Z], () => p.Z.isPreview), f = (0, l.e7)([E.Z], () => E.Z.isUpsellPreview), I = c || f, T = (0, m.J)(), g = s.useCallback(() => {
-c && T(), f && (0, _.O7)();
+  ], []), c = (0, l.e7)([m.Z], () => m.Z.isPreview), _ = (0, l.e7)([f.Z], () => f.Z.isUpsellPreview), h = c || _, T = (0, I.J)(), g = s.useCallback(() => {
+c && T(), _ && (0, E.O7)();
   }, [
 c,
-f,
+_,
 T
-  ]), v = (0, d.Z)(null, I ? g : A.dG4), L = s.useCallback(() => {
-(0, _.G8)(), (0, h.Mo)(), g(), null == n || n(N.L.DISMISS);
+  ]), S = (0, d.Z)(null, h ? g : N.dG4), O = s.useCallback(() => {
+(0, E.G8)(), (0, p.Mo)(), g(), null == n || n(v.L.DISMISS);
   }, [
 g,
 n
   ]);
-  return (0, a.jsx)(S.Z, {
-className: R.draggableContainer,
+  return (0, a.jsx)(A.Z, {
+className: C.draggableContainer,
 children: (0, a.jsxs)('div', {
-  ref: v,
-  className: R.container,
+  ref: S,
+  className: C.container,
   children: [
     (0, a.jsxs)('div', {
-      className: R.headerContainer,
+      className: C.headerParentContainer,
       children: [
-        (0, a.jsx)(u.Heading, {
-          variant: 'heading-lg/extrabold',
-          children: O.Z.Messages.PREMIUM_UPSELL_FEATURE_CLIENT_THEMES_APP_ICONS_PREVIEW_TITLE
+        (0, a.jsxs)('div', {
+          className: C.headerContainer,
+          children: [
+            (0, a.jsx)(u.Heading, {
+              variant: 'heading-lg/extrabold',
+              children: R.Z.Messages.PREMIUM_UPSELL_FEATURE_CLIENT_THEMES_APP_ICONS_PREVIEW_TITLE
+            }),
+            (0, a.jsx)(u.ModalCloseButton, {
+              className: C.closeContainer,
+              innerClassName: C.closeInner,
+              withCircleBackground: !0,
+              onClick: O
+            })
+          ]
         }),
-        (0, a.jsx)(u.ModalCloseButton, {
-          className: R.closeContainer,
-          innerClassName: R.closeInner,
-          withCircleBackground: !0,
-          onClick: L
+        (0, a.jsx)(u.SegmentedControl, {
+          options: o,
+          value: r,
+          onChange: e => {
+            let {
+              value: t
+            } = e;
+            return i(t);
+          },
+          look: 'pill'
         })
       ]
     }),
-    (0, a.jsx)(u.SegmentedControl, {
-      className: R.segmentedControl,
-      options: o,
-      value: r,
-      onChange: e => {
-        let {
-          value: t
-        } = e;
-        return i(t);
-      },
-      look: 'pill'
-    }),
     (0, a.jsxs)(u.Scroller, {
-      className: R.scrollContainer,
+      className: C.scrollContainer,
       children: [
-        0 === r && (0, a.jsx)(C, {}),
-        1 === r && (0, a.jsx)(y, {})
+        0 === r && (0, a.jsx)(y, {}),
+        1 === r && (0, a.jsx)(D, {})
       ]
     }),
-    (0, a.jsx)(D, {
-      isPreview: I,
-      onClose: L,
+    (0, a.jsx)(L, {
+      tab: r,
+      isPreview: h,
+      onClose: O,
       isCoachmark: !1
     })
   ]

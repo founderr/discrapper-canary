@@ -96,7 +96,7 @@ return (0, a.jsxs)('div', {
       variant: 'text-md/medium',
       children: s
     }),
-    !i && (0, a.jsx)(v.Z, {
+    (!i || 'EDITOR' === t) && (0, a.jsx)(v.Z, {
       className: F.premiumIcon
     })
   ]
@@ -161,15 +161,16 @@ return l ? (0, a.jsxs)('div', {
   W = e => {
 var t, n;
 let {
-  renderCTAButtons: r
+  hideDescription: r = !1,
+  renderCTAButtons: i
 } = e, {
-  type: i
-} = s.useContext(H), [o, l] = (0, c.Wu)([L.Z], () => [
+  type: o
+} = s.useContext(H), [l, u] = (0, c.Wu)([L.Z], () => [
   L.Z.isPreview,
   L.Z.isCoachmark
-]), u = (null === (n = (0, S.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === w.Si.TIER_2;
+]), d = (null === (n = (0, S.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === w.Si.TIER_2;
 return (0, a.jsx)(a.Fragment, {
-  children: 'EDITOR' === i && o && u ? (0, a.jsx)(N.ZP, {
+  children: 'EDITOR' === o && l && d ? (0, a.jsx)(N.ZP, {
     type: w.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
     subscriptionTier: w.Si.TIER_2,
     children: B.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
@@ -182,18 +183,18 @@ return (0, a.jsx)(a.Fragment, {
         className: F.headings,
         children: [
           (0, a.jsx)(Y, {
-            type: i,
-            isPreview: o,
-            isCoachmark: l
+            type: o,
+            isPreview: l,
+            isCoachmark: u
           }),
-          (0, a.jsx)(j, {
-            type: i,
-            isPreview: o,
-            isCoachmark: l
+          !r && (0, a.jsx)(j, {
+            type: o,
+            isPreview: l,
+            isCoachmark: u
           })
         ]
       }),
-      null == r ? void 0 : r()
+      null == i ? void 0 : i()
     ]
   })
 });
@@ -437,17 +438,26 @@ children: [
   });
 }, q.BasicAndGradient = e => {
   let {
-className: t,
-renderCTAButtons: n
-  } = e;
+isEditor: t,
+className: n,
+renderCTAButtons: r
+  } = e, i = (0, c.e7)([L.Z], () => L.Z.isCoachmark);
   return (0, a.jsxs)('section', {
-className: t,
+className: n,
 children: [
   (0, a.jsx)(W, {
-    renderCTAButtons: n
+    renderCTAButtons: r,
+    hideDescription: t
+  }),
+  i && t && (0, a.jsx)(_.Heading, {
+    className: F.upsellText,
+    variant: 'heading-sm/semibold',
+    children: B.Z.Messages.CLIENT_THEMES_EDITOR_UPSELL_HEADER
   }),
   (0, a.jsxs)('div', {
-    className: F.presets,
+    className: l()(F.presets, {
+      [F.presetsJustify]: t
+    }),
     children: [
       (0, a.jsx)(z, {
         systemSelectorFirst: !0

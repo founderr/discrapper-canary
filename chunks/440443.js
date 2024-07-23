@@ -1,10 +1,10 @@
 e.exports = {
   draggableContainer: 'draggableContainer_ca37d0',
   container: 'container_ca37d0',
+  headerParentContainer: 'headerParentContainer_ca37d0',
   headerContainer: 'headerContainer_ca37d0',
   closeContainer: 'closeContainer_ca37d0',
   closeInner: 'closeInner_ca37d0',
-  segmentedControl: 'segmentedControl_ca37d0',
   scrollContainer: 'scrollContainer_ca37d0',
   footerContainer: 'footerContainer_ca37d0',
   footerLabelContainer: 'footerLabelContainer_ca37d0',
