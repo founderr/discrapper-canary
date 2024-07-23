@@ -52,12 +52,13 @@ default:
 function h(e) {
   let {
 backgroundGradientPresetId: t,
-theme: n
-  } = e, r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.fy.INFREQUENT_USER_ACTION;
+theme: n,
+useSystemTheme: r
+  } = e, s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.fy.INFREQUENT_USER_ACTION, l = 'system' === n ? _.K.ON : _.K.OFF;
   if (a.Z.dispatch({
   type: 'UNSYNCED_USER_SETTINGS_UPDATE',
   settings: {
-    useSystemTheme: 'system' === n ? _.K.ON : _.K.OFF
+    useSystemTheme: null != r ? r : l
   }
 }), a.Z.dispatch({
   type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
@@ -81,7 +82,7 @@ return c.hW.updateAsync('appearance', e => {
       value: r.backgroundGradientPresetId
     }) : void 0
   };
-}, r);
+}, s);
 }
 t.ZP = {
   overrideLocale(e) {
