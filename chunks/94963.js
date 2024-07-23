@@ -289,8 +289,7 @@ children: [
                     }),
                     children: [
                       (0, a.jsx)(e.icon, {
-                        size: 'md',
-                        color: 'currentColor'
+                        size: 'md'
                       }),
                       (0, a.jsx)(u.Text, {
                         variant: 'text-sm/medium',
