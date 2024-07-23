@@ -227,6 +227,9 @@ return Z;
   hasOpenedEnoughTimes() {
 return 5 === V;
   }
+  hasOpened() {
+return k;
+  }
   getState() {
 return {
   dehydratedItems: v,
