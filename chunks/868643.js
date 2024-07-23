@@ -23,7 +23,7 @@ function u(e) {
   if (!d(e))
 return !1;
   let n = null === (t = r.Z.getChannel(e.channel_id)) || void 0 === t ? void 0 : t.guild_id;
-  return !(null != n && s.Z.isChannelGated(n, e.channel_id)) && !0;
+  return !(null != n && s.Z.isChannelOrThreadParentGated(n, e.channel_id)) && !0;
 }
 
 function _(e) {
@@ -35,7 +35,7 @@ var t;
 if (null == e)
   return !1;
 let n = null === (t = r.Z.getChannel(e.channel_id)) || void 0 === t ? void 0 : t.guild_id;
-return null != n && s.Z.isChannelGated(n, e.channel_id);
+return null != n && s.Z.isChannelOrThreadParentGated(n, e.channel_id);
   });
   return i.useMemo(() => null != e && d(e), [e]) && !t;
 }
