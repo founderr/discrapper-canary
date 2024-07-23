@@ -1,40 +1,40 @@
 n.d(t, {
   Z: function() {
-return u;
+return d;
   }
 }), n(47120);
 var i = n(735250),
   s = n(470079),
   a = n(120356),
   r = n.n(a),
-  l = n(497505),
-  o = n(439826),
-  c = n(43779),
-  d = n(444627);
+  l = n(439826),
+  o = n(43779),
+  c = n(444627);
 
-function u(e) {
+function d(e) {
   let {
 quest: t,
-className: n
-  } = e, [a, u] = s.useState(!1), _ = s.useCallback(() => {
+className: n,
+questContent: a
+  } = e, [d, u] = s.useState(!1), _ = s.useCallback(() => {
 u(!0);
   }, [u]), E = s.useCallback(() => {
 u(!1);
   }, [u]);
   return (0, i.jsxs)('div', {
 id: 'quest-tile-'.concat(t.id),
-className: r()(d.container, n),
+className: r()(c.container, n),
 onMouseEnter: _,
 onMouseLeave: E,
 children: [
+  (0, i.jsx)(l.Z, {
+    quest: t,
+    isHovering: d
+  }),
   (0, i.jsx)(o.Z, {
     quest: t,
-    isHovering: a
-  }),
-  (0, i.jsx)(c.Z, {
-    quest: t,
-    questContent: l.jn.QUEST_HOME_DESKTOP,
-    isHovering: a
+    questContent: a,
+    isHovering: d
   })
 ]
   });

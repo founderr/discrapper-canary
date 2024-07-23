@@ -1,15 +1,18 @@
 n.d(t, {
+  Ks: function() {
+return v;
+  },
   g2: function() {
-return I;
+return A;
   },
   hf: function() {
-return p;
+return g;
   },
   k3: function() {
-return T;
+return N;
   },
   tP: function() {
-return m;
+return S;
   }
 }), n(47120);
 var r = n(735250),
@@ -20,13 +23,17 @@ var r = n(735250),
   l = n(594190),
   u = n(594174),
   c = n(617136),
-  d = n(113434),
-  _ = n(918701),
-  E = n(920916),
-  f = n(669041),
-  h = n(341907);
+  d = n(272008),
+  _ = n(113434),
+  E = n(918701),
+  f = n(796111),
+  h = n(920916),
+  p = n(669041),
+  m = n(341907),
+  I = n(46140),
+  T = n(689938);
 
-function p(e) {
+function g(e) {
   let {
 quest: t,
 location: n,
@@ -41,11 +48,11 @@ null != t && ((0, c._3)({
   questContent: n,
   questContentCTA: c.jZ.CLAIM_REWARD,
   questContentPosition: r
-}), a ? (0, _.Xv)(t.config) ? (0, E.openCollectibleRewardModal)(t, n) : (0, _.vQ)(t.config) ? (0, h.C)(t, n) : (0, h.hp)({
+}), a ? (0, E.Xv)(t.config) ? (0, h.openCollectibleRewardModal)(t, n) : (0, E.vQ)(t.config) ? (0, m.C)(t, n) : (0, m.hp)({
   questId: t.id,
   location: n,
   questContentPosition: r
-}) : (0, f.openRewardModalUnverified)());
+}) : (0, p.openRewardModalUnverified)());
   }, [
 t,
 n,
@@ -54,7 +61,7 @@ a
   ]);
 }
 
-function m(e) {
+function S(e) {
   var t;
   let n = (0, s.Wu)([l.ZP], () => l.ZP.getGamesSeen(!1)).find(t => (null == t ? void 0 : t.id) === e);
   if (null == n)
@@ -62,7 +69,7 @@ return !1;
   let r = Date.now() - 25920000000;
   return r <= (null !== (t = n.lastLaunched) && void 0 !== t ? t : 0);
 }
-let I = e => {
+let A = e => {
 let {
   useReducedMotion: t,
   className: n
@@ -96,11 +103,11 @@ return {
   }
 };
   },
-  T = (e, t) => {
+  N = (e, t) => {
 let {
   message: n,
   xboxURL: i
-} = (0, d.KX)();
+} = (0, _.KX)();
 return (0, r.jsx)('span', {
   onClick: n => {
     var r;
@@ -117,3 +124,96 @@ return (0, r.jsx)('span', {
   children: n
 });
   };
+
+function v(e) {
+  let {
+quest: t,
+progressState: n,
+isCollectibleQuest: r,
+location: a,
+questContentPosition: s,
+isInHouseQuest: o,
+inGiftInventory: l
+  } = e, u = g({
+quest: t,
+location: a,
+questContentPosition: s
+  }), h = (0, _._s)({
+quest: t
+  });
+  return i.useMemo(() => {
+switch (n) {
+  case _.OH.UNACCEPTED:
+    return {
+      text: T.Z.Messages.QUESTS_ACCEPT,
+        tooltipText: T.Z.Messages.QUESTS_ACCEPT_TOOLTIP,
+        onClick: () => (0, d.AH)(t.id, {
+          questContent: a,
+          questContentCTA: c.jZ.ACCEPT_QUEST,
+          questContentPosition: s
+        })
+    };
+  case _.OH.ACCEPTED:
+  case _.OH.IN_PROGRESS:
+    if (h && l)
+      return {
+        text: T.Z.Messages.QUESTS_CONNECT_CONSOLE,
+        tooltipText: null,
+        onClick: () => (0, E.gI)({
+          quest: t,
+          showInline: (0, f.i)({
+            location: I.dr.QUESTS_CARD
+          })
+        }, {
+          content: a,
+          ctaContent: c.jZ.CONNECT_CONSOLE
+        })
+      };
+    return {
+      text: T.Z.Messages.QUESTS_CLAIM_REWARD,
+        tooltipText: T.Z.Messages.QUESTS_IN_PROGRESS_TOOLTIP,
+        onClick: null
+    };
+  case _.OH.COMPLETED:
+    return {
+      text: T.Z.Messages.QUESTS_CLAIM_REWARD,
+        tooltipText: o ? T.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : null,
+        onClick: u
+    };
+  case _.OH.CLAIMED:
+    let e = {
+      tooltipText: null,
+      onClick: u
+    };
+    if (o)
+      return {
+        ...e,
+        text: T.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
+      };
+    if (r)
+      return {
+        ...e,
+        text: T.Z.Messages.COLLECTIBLES_USE_NOW
+      };
+    else if ((0, E.vQ)(t.config))
+      return {
+        ...e,
+        text: T.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
+      };
+    return {
+      ...e,
+      text: T.Z.Messages.QUESTS_SEE_CODE
+    };
+}
+  }, [
+t,
+r,
+o,
+a,
+u,
+n,
+s,
+h,
+l
+  ]);
+}

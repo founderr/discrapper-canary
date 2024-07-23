@@ -1,84 +1,84 @@
 n.d(t, {
   Z: function() {
-return g;
+return E;
   }
 });
-var i = n(735250),
-  s = n(470079),
-  a = n(442837),
-  r = n(481060),
-  l = n(617136),
-  o = n(272008),
-  c = n(113434),
-  d = n(569984),
-  u = n(497505),
-  _ = n(918701),
-  E = n(667105),
-  h = n(689938),
-  I = n(207637);
+var i = n(735250);
+n(470079);
+var s = n(442837),
+  a = n(481060),
+  r = n(113434),
+  l = n(569984),
+  o = n(918701),
+  c = n(667105),
+  d = n(46140),
+  u = n(689938),
+  _ = n(207637);
 
-function m(e) {
+function E(e) {
+  var t, n, E, h;
   let {
-onClick: t,
-submitting: n
-  } = e;
-  return (0, i.jsx)(r.Button, {
-color: r.ButtonColors.BRAND,
-onClick: t,
-submitting: n,
-className: I.button,
-children: h.Z.Messages.QUESTS_CLAIM_REWARD
-  });
-}
-
-function g(e) {
-  var t, n, g, p;
-  let {
-quest: T
-  } = e, S = (0, c.B6)(T.config.expiresAt, {
+quest: I,
+location: m,
+questContentPosition: g
+  } = e, p = (0, r.B6)(I.config.expiresAt, {
 month: 'numeric',
 day: '2-digit'
   }), {
-isClaiming: f,
-isEnrolling: C
-  } = (0, a.cj)([d.Z], () => ({
-isClaiming: d.Z.isClaimingRewardCode(T.id) || d.Z.isClaimingReward(T.id) || d.Z.isFetchingRewardCode(T.id),
-isEnrolling: d.Z.isEnrolling(T.id)
-  })), N = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, A = (null === (n = T.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (g = T.userStatus) || void 0 === g ? void 0 : g.claimedAt) == null, v = (0, _.iQ)(T), Z = !(0, _.zi)(T), L = (null === (p = T.userStatus) || void 0 === p ? void 0 : p.claimedAt) != null, O = (0, E.hf)({
-quest: T,
-location: u.jn.QUEST_BAR
-  }), R = s.useCallback(() => {
-(0, o.AH)(T.id, {
-  questContent: u.jn.QUEST_HOME_DESKTOP,
-  questContentCTA: l.jZ.ACCEPT_QUEST
-});
-  }, [T]), x = null;
-  return (v && A ? x = (0, i.jsx)(m, {
-submitting: f,
-onClick: O
-  }) : Z ? Z && A ? x = (0, i.jsx)(m, {
-submitting: f,
-onClick: O
-  }) : Z && N && !L ? x = (0, i.jsx)(r.Button, {
-color: r.ButtonColors.PRIMARY,
+isClaiming: T,
+isEnrolling: f
+  } = (0, s.cj)([l.Z], () => ({
+isClaiming: l.Z.isClaimingRewardCode(I.id) || l.Z.isClaimingReward(I.id) || l.Z.isFetchingRewardCode(I.id),
+isEnrolling: l.Z.isEnrolling(I.id)
+  })), S = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, C = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, N = C && (null === (E = I.userStatus) || void 0 === E ? void 0 : E.claimedAt) == null, A = (0, o.iQ)(I), v = !(0, o.zi)(I), Z = (0, r._Q)(I), L = (0, o.zK)(I, d.S7.IN_HOUSE_CONSOLE_QUEST), O = (0, o.Xv)(I.config), {
+text: R,
+onClick: x
+  } = (0, c.Ks)({
+progressState: Z,
+quest: I,
+isInHouseQuest: L,
+location: m,
+isCollectibleQuest: O,
+questContentPosition: g,
+inGiftInventory: !0
+  }), b = (null === (h = I.userStatus) || void 0 === h ? void 0 : h.claimedAt) != null, P = null;
+  return (A && N ? P = (0, i.jsx)(a.Button, {
+color: a.ButtonColors.BRAND,
+submitting: T,
+onClick: null != x ? x : void 0,
+className: _.button,
+children: R
+  }) : !v && C ? P = (0, i.jsx)(a.Button, {
+color: a.ButtonColors.PRIMARY,
+className: _.button,
+onClick: null != x ? x : void 0,
+children: R
+  }) : v ? v && N ? P = (0, i.jsx)(a.Button, {
+color: a.ButtonColors.BRAND,
+submitting: T,
+onClick: null != x ? x : void 0,
+className: _.button,
+children: R
+  }) : v && S && !b ? P = (0, i.jsx)(a.Button, {
+color: a.ButtonColors.PRIMARY,
 disabled: !0,
-className: I.button,
-children: h.Z.Messages.QUEST_ACCEPTED
-  }) : Z && !N && (x = (0, i.jsx)(r.Button, {
-submitting: C,
-color: r.ButtonColors.BRAND,
-onClick: R,
-className: I.button,
-children: h.Z.Messages.QUESTS_ACCEPT
-  })) : x = (0, i.jsx)(r.Button, {
-color: r.ButtonColors.PRIMARY,
+className: _.button,
+children: u.Z.Messages.QUEST_ACCEPTED
+  }) : v && !S && (P = (0, i.jsx)(a.Button, {
+submitting: f,
+color: a.ButtonColors.BRAND,
+onClick: null != x ? x : void 0,
+className: _.button,
+children: R
+  })) : P = (0, i.jsx)(a.Button, {
+color: a.ButtonColors.PRIMARY,
 disabled: !0,
-className: I.button,
-children: h.Z.Messages.QUESTS_ENDED_ON_DATE.format({
-  expiryDate: S
+className: _.button,
+children: u.Z.Messages.QUESTS_ENDED_ON_DATE.format({
+  expiryDate: p
 })
-  }), null == x) ? null : (0, i.jsx)('div', {
-className: I.container,
-children: x
+  }), null == P) ? null : (0, i.jsx)('div', {
+className: _.container,
+children: P
   });
 }
