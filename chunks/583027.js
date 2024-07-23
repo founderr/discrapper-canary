@@ -1,34 +1,21 @@
 t.d(n, {
-  As: function() {
+  Mo: function() {
 return r;
   },
-  HJ: function() {
-return a;
-  },
-  Mo: function() {
-return s;
-  },
   SC: function() {
-return c;
+return o;
   },
   _U: function() {
-return o;
+return s;
   }
 }), t(47120);
 var i = t(652874),
   l = t(868888);
 let a = (0, i.Z)((0, l.XR)(() => ({
-  channelTextAreaHeight: void 0,
   commandAnalyticsContext: new Map()
 })));
 
 function r(e) {
-  a.setState({
-channelTextAreaHeight: e
-  });
-}
-
-function s(e) {
   let {
 command: n,
 location: t,
@@ -47,14 +34,14 @@ e.set(n, {
   }
 }
 
-function o(e) {
+function s(e) {
   let {
 commandAnalyticsContext: n
   } = a.getState();
   return n.get(e);
 }
 
-function c(e) {
+function o(e) {
   let {
 commandAnalyticsContext: n
   } = a.getState();

@@ -15,56 +15,46 @@ var i = n(735250),
   f = n(663924),
   E = n(998698),
   C = n(605236),
-  g = n(747127),
-  I = n(665906),
-  x = n(271383),
-  T = n(496675),
-  N = n(594174),
-  v = n(291407),
-  S = n(583027),
-  Z = n(981631),
-  A = n(314734),
-  M = n(921944),
-  b = n(689938),
-  R = n(979030);
-let j = a.forwardRef(function(e, t) {
+  g = n(665906),
+  I = n(271383),
+  x = n(496675),
+  T = n(594174),
+  N = n(291407),
+  v = n(981631),
+  S = n(314734),
+  Z = n(921944),
+  A = n(689938),
+  M = n(979030);
+let b = a.forwardRef(function(e, t) {
   let {
 type: n
   } = e, [s, r] = a.useState(!1), p = (0, o.e7)([m.Z], () => m.Z.shouldShowPopup()), f = a.useCallback(() => {
-(0, u.yw)(Z.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.y(_.ti.DISMISSED) : ((0, C.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
-  dismissAction: M.L.TAKE_ACTION
+(0, u.yw)(v.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.y(_.ti.DISMISSED) : ((0, C.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
+  dismissAction: Z.L.TAKE_ACTION
 }), h._(_._b.TEXT, n));
   }, [
 p,
 n
   ]), E = () => {
 r(!0);
-  }, I = () => {
+  }, g = () => {
 r(!1);
-  }, x = a.useRef(), T = (0, g.Z)(t, x);
-  return a.useEffect(() => S.HJ.subscribe(e => {
-let {
-  channelTextAreaHeight: t
-} = e;
-return t;
-  }, e => {
-let t = x.current;
-null != t && (t.style.transform = null != e ? 'translateY(calc(100% - min('.concat(e, 'px, var(--custom-channel-textarea-text-area-max-height)))') : '');
-  }), []), (0, i.jsx)('div', {
-className: l()(R.buttonContainer, A.t4),
-ref: T,
+  };
+  return (0, i.jsx)('div', {
+className: l()(M.buttonContainer, S.t4),
+ref: t,
 children: (0, i.jsx)(d.Button, {
   look: d.Button.Looks.BLANK,
   size: d.Button.Sizes.NONE,
   tabIndex: 0,
-  className: R.button,
+  className: M.button,
   onClick: f,
   onMouseEnter: E,
   onMouseOver: E,
-  onMouseLeave: I,
+  onMouseLeave: g,
   onFocus: E,
-  onBlur: I,
-  'aria-label': b.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
+  onBlur: g,
+  'aria-label': A.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
   focusProps: {
     offset: {
       top: 4,
@@ -73,9 +63,9 @@ children: (0, i.jsx)(d.Button, {
       right: -4
     }
   },
-  innerClassName: R.buttonContents,
+  innerClassName: M.buttonContents,
   children: (0, i.jsx)(d.AppsIcon, {
-    className: l()(s || p ? R.iconActive : R.iconInactive)
+    className: l()(s || p ? M.iconActive : M.iconInactive)
   })
 })
   });
@@ -87,22 +77,22 @@ type: n
   } = e, s = a.useRef(null), l = function(e, t) {
 let n = e.getGuildId(),
   i = (0, o.e7)([
-    x.ZP,
-    N.default
+    I.ZP,
+    T.default
   ], () => {
     var e, t;
-    let i = N.default.getCurrentUser();
-    return null !== (t = null != n && null != i ? null === (e = x.ZP.getMember(n, i.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t;
+    let i = T.default.getCurrentUser();
+    return null !== (t = null != n && null != i ? null === (e = I.ZP.getMember(n, i.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t;
   }),
   {
     messagesDisabled: a
-  } = (0, o.cj)([T.Z], () => {
+  } = (0, o.cj)([x.Z], () => {
     var n, a;
     let s = e.isPrivate(),
-      l = T.Z.computePermissions(e),
-      o = r.e$(l, Z.Plq.CREATE_PUBLIC_THREADS) || r.e$(l, Z.Plq.CREATE_PRIVATE_THREADS),
-      c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(l, Z.Plq.SEND_MESSAGES)),
-      d = (0, I.xl)(e);
+      l = x.Z.computePermissions(e),
+      o = r.e$(l, v.Plq.CREATE_PUBLIC_THREADS) || r.e$(l, v.Plq.CREATE_PRIVATE_THREADS),
+      c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(l, v.Plq.SEND_MESSAGES)),
+      d = (0, g.xl)(e);
     return {
       messagesDisabled: i || !s && !c || d
     };
@@ -129,14 +119,14 @@ let e = m.Z.activeViewType();
 return null != e && e === n && m.Z.shouldShowPopup();
   }, [n]);
   return d && null == c && !l ? (0, i.jsxs)('div', {
-className: R.channelAppLauncher,
+className: M.channelAppLauncher,
 children: [
-  (0, i.jsx)(v.Z, {
+  (0, i.jsx)(N.Z, {
     channel: t,
-    animationContainerClassName: R.entrypointAnimation,
-    glowClassName: R.animationGlow,
-    trinketsClassName: R.animationTrinkets,
-    children: (0, i.jsx)(j, {
+    animationContainerClassName: M.entrypointAnimation,
+    glowClassName: M.animationGlow,
+    trinketsClassName: M.animationTrinkets,
+    children: (0, i.jsx)(b, {
       type: n,
       ref: s
     })

@@ -175,61 +175,62 @@ let {
   focused: t,
   onBlur: n,
   onFocus: a,
-  highlighted: s,
-  pendingReply: r,
-  chatInputType: o,
-  placeholder: c,
-  accessibilityLabel: u,
-  shakeIntensity: h,
-  poggermodeEnabled: p
+  onResize: s,
+  highlighted: r,
+  pendingReply: o,
+  chatInputType: c,
+  placeholder: u,
+  accessibilityLabel: h,
+  shakeIntensity: p,
+  poggermodeEnabled: m
 } = this.props, {
-  contentWarningProps: m
-} = this.state, _ = (0, i.jsx)(y.Z, {
+  contentWarningProps: _
+} = this.state, f = (0, i.jsx)(y.Z, {
   textValue: this.state.textValue,
   richValue: this.state.richValue,
   focused: t,
   className: eL.channelTextArea,
   channel: e,
-  placeholder: c,
-  accessibilityLabel: u,
-  pendingReply: r,
-  type: o,
+  placeholder: u,
+  accessibilityLabel: h,
+  pendingReply: o,
+  type: c,
   onChange: this.handleTextareaChange,
   onSubmit: this.handleSendMessage,
-  onResize: this.handleResize,
+  onResize: s,
   onFocus: a,
   onBlur: n,
   onKeyDown: this.handleKeyDown,
   renderAttachButton: this.renderAttachButton,
   renderApplicationCommandIcon: this.renderApplicationCommandIcon,
   promptToUpload: eT.d,
-  highlighted: s,
+  highlighted: r,
   setEditorRef: e => this.editorRef = e
 });
 return (0, i.jsx)(d.Popout, {
   position: 'top',
   onRequestClose: () => {
     var e;
-    null == m || null === (e = m.onCancel) || void 0 === e || e.call(m), this.setState({
+    null == _ || null === (e = _.onCancel) || void 0 === e || e.call(_), this.setState({
       contentWarningProps: null
     });
   },
-  shouldShow: null != m,
+  shouldShow: null != _,
   renderPopout: e => {
     let {
       closePopout: t
     } = e;
-    return l()(null != m, 'ChannelTextAreaForm > Popout > renderPopout: contentWarningProps cannot be null'), (0, i.jsx)(C.Z, {
+    return l()(null != _, 'ChannelTextAreaForm > Popout > renderPopout: contentWarningProps cannot be null'), (0, i.jsx)(C.Z, {
       onClose: t,
-      ...m
+      ..._
     });
   },
-  children: () => p ? (0, i.jsx)(d.Shaker, {
-    isShaking: h > 0,
-    intensity: h,
+  children: () => m ? (0, i.jsx)(d.Shaker, {
+    isShaking: p > 0,
+    intensity: p,
     className: eL.shaker,
-    children: _
-  }) : _
+    children: f
+  }) : f
 });
   }
   constructor(...e) {
@@ -449,9 +450,6 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
   var t, n;
   let i = null === (t = this.editorRef) || void 0 === t ? void 0 : t.getSlateEditor();
   null != i && (D.Q.select(i, []), i.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus());
-}), eP(this, 'handleResize', e => {
-  var t, n;
-  null === (t = (n = this.props).onResize) || void 0 === t || t.call(n, e), (0, eZ.As)(e);
 }), eP(this, 'renderAttachButton', (e, t) => (0, i.jsx)(O.Z, {
   className: t,
   channel: this.props.channel,
