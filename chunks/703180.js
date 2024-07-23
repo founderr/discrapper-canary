@@ -43,7 +43,7 @@ children: (0, i.jsxs)(s.MenuGroup, {
       label: c.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_HIDE,
       checked: d,
       action: () => {
-        (0, l.l)(), null == t || t();
+        (0, l.lY)(), null == t || t();
       }
     })
   ]

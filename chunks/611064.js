@@ -51,7 +51,7 @@ children: [
   (0, i.jsxs)(l.Clickable, {
     onClick: e => {
       if (e.currentTarget === e.target || e.currentTarget.contains(e.target))
-        return I ? (0, c.l)() : g > 3 ? E() : (0, p.dG4)();
+        return I ? (0, c.lY)() : g > 3 ? E() : (0, p.dG4)();
     },
     onContextMenu: x,
     tag: 'span',
