@@ -1017,6 +1017,8 @@ case H.Plq.MANAGE_GUILD:
   return F.Z.Messages.MANAGE_SERVER;
 case H.Plq.VIEW_GUILD_ANALYTICS:
   return F.Z.Messages.VIEW_GUILD_ANALYTICS;
+case H.Plq.VIEW_CREATOR_MONETIZATION_ANALYTICS:
+  return F.Z.Messages.VIEW_CREATOR_MONETIZATION_ANALYTICS;
 case H.Plq.CHANGE_NICKNAME:
   return F.Z.Messages.CHANGE_NICKNAME;
 case H.Plq.MANAGE_NICKNAMES:
@@ -1032,7 +1034,9 @@ case H.Plq.MANAGE_GUILD_EXPRESSIONS:
 case H.Plq.VIEW_AUDIT_LOG:
   return F.Z.Messages.VIEW_AUDIT_LOG;
 case H.Plq.VIEW_CHANNEL:
-  return F.Z.Messages.READ_MESSAGES;
+  if (_.targetType === H.KFR.CHANNEL || _.targetType === H.KFR.CHANNEL_OVERWRITE)
+    return F.Z.Messages.VIEW_CHANNEL;
+  return F.Z.Messages.ROLE_PERMISSIONS_VIEW_CHANNEL;
 case H.Plq.SEND_MESSAGES:
   return F.Z.Messages.SEND_MESSAGES;
 case H.Plq.SEND_TTS_MESSAGES:

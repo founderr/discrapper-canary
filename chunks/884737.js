@@ -853,7 +853,7 @@ case u.Plq.MANAGE_GUILD_EXPRESSIONS:
 case u.Plq.VIEW_AUDIT_LOG:
   return c.Z.Messages.VIEW_AUDIT_LOG;
 case u.Plq.VIEW_CHANNEL:
-  return c.Z.Messages.READ_MESSAGES;
+  return c.Z.Messages.VIEW_CHANNEL;
 case u.Plq.SEND_MESSAGES:
   return c.Z.Messages.SEND_MESSAGES;
 case u.Plq.SEND_TTS_MESSAGES:
