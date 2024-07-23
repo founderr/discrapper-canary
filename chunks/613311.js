@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(730749),
   p = n(666743),
   T = n(115130),
-  f = n(812206),
-  S = n(811066),
+  S = n(812206),
+  f = n(811066),
   C = n(252618),
   N = n(100159),
   A = n(646288),
@@ -332,10 +332,10 @@ if (null == e || null == t || null == n)
 let s = [],
   a = n.getSplashURL(1024);
 null != a && s.push(a), null != t.headerLogoLightTheme && s.unshift((0, V._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
-let r = S.Z.Product({
+let r = f.Z.Product({
     name: e.name,
     description: null != e.summary && '' !== e.summary ? e.summary : t.tagline,
-    image: S.Z.Product.Image(s),
+    image: f.Z.Product.Image(s),
     sku: e.id
   }),
   l = e.getPrice();
@@ -344,17 +344,17 @@ if (null != l) {
     amount: e,
     currency: t
   } = l;
-  r.offers = S.Z.Offer({
+  r.offers = f.Z.Offer({
     priceCurrency: t.toUpperCase(),
     price: (0, H.T4)(e, t, {
       style: 'decimal'
     })
   });
 }
-let o = S.Z.ItemPage({
+let o = f.Z.ItemPage({
   mainEntity: r
 });
-return (0, i.jsx)(S.Z, {
+return (0, i.jsx)(f.Z, {
   data: o
 });
   }
@@ -666,7 +666,7 @@ t.Z = (0, g.Z)((0, p.Z)(l.ZP.connectStores([
   M.Z,
   y.Z,
   T.Z,
-  f.Z,
+  S.Z,
   x.Z,
   O.Z,
   P.Z
@@ -681,17 +681,17 @@ channel: o
   if (null == a) {
 if (null == s)
   throw Error('Needs applicationId or skuId');
-t = s, null != (a = null != (n = M.Z.get(s)) ? n.applicationId : null) && (i = f.Z.getApplication(a));
+t = s, null != (a = null != (n = M.Z.get(s)) ? n.applicationId : null) && (i = S.Z.getApplication(a));
   } else if (null == s) {
 if (null == a)
   throw Error('Needs applicationId or skuId');
-null != (i = f.Z.getApplication(a)) && (t = i.destinationSkuId), n = null != t ? M.Z.get(t) : null;
+null != (i = S.Z.getApplication(a)) && (t = i.destinationSkuId), n = null != t ? M.Z.get(t) : null;
   }
   (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, es.l4R.STICKER_PACK) && (n = null);
   let c = null != a && (y.Z.inTestModeForApplication(a) || T.Z.inDevModeForApplication(a));
   return {
 skuId: t,
-application: null != a ? f.Z.getApplication(a) : null,
+application: null != a ? S.Z.getApplication(a) : null,
 isFetchingEntitlements: null != a && P.Z.applicationIdsFetching.has(a),
 didFetchEntitlements: null != a && P.Z.applicationIdsFetched.has(a),
 shouldFetchStatistics: l && null != a && x.Z.shouldFetchStatisticsForApplication(a),

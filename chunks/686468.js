@@ -92,7 +92,7 @@ onContinueClick: n
   } = e, s = (0, a.e7)([p.Z], () => p.Z.can(m.yP, t), [t]), r = t.guild_id, {
 canCreateGuildEvent: o
   } = (0, h.XJ)(t), T = (0, f.Z)(t.id), {
-usersInSummary: v
+usersInSummary: N
   } = (0, _.Z)(t.id);
   return (0, i.jsxs)('div', {
 children: [
@@ -134,7 +134,7 @@ children: [
     className: g.eventPrompt,
     guildId: r
   }) : null,
-  (s || v.length > 0) && (0, i.jsx)('hr', {
+  (s || N.length > 0) && (0, i.jsx)('hr', {
     className: g.separator
   }),
   s ? (0, i.jsx)(I, {

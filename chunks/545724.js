@@ -20,10 +20,10 @@ isFocused: m,
 isActive: g,
 onOtherHover: p,
 className: T
-  } = e, [f, S] = s.useState(!1), [C, N] = s.useState(!1), A = () => {
-S(!0), m && !g && !C && (null == p || p());
+  } = e, [S, f] = s.useState(!1), [C, N] = s.useState(!1), A = () => {
+f(!0), m && !g && !C && (null == p || p());
   }, v = () => {
-S(!1);
+f(!1);
   }, Z = (e, t) => {
 if (null != t)
   N(!0), (0, d.jW)(e, async () => {
@@ -65,7 +65,7 @@ children: e => (0, i.jsx)(c.FocusRing, {
       opacity: 1
     },
     ...e,
-    children: a(f || g || C)
+    children: a(S || g || C)
   })
 })
   });

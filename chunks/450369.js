@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(430824),
   x = n(496675),
   T = n(979651),
-  v = n(40300),
-  N = n(88751),
+  N = n(40300),
+  v = n(88751),
   S = n(252132),
   Z = n(248400),
   A = n(981631),
@@ -93,7 +93,7 @@ let {
 } = e, {
   reducedMotion: C
 } = a.useContext(o.AccessibilityPreferencesContext), {
-  id: N,
+  id: v,
   blocked: j
 } = t, L = (0, r.Wu)([g.Z], () => g.Z.getAllActiveStreams(), []), {
   selectedParticipant: P,
@@ -119,7 +119,7 @@ let {
 return (0, i.jsx)(S.Z, {
   participant: n,
   aspectRatio: R,
-  fit: n.type === M.fO.USER ? v.L.COVER : void 0,
+  fit: n.type === M.fO.USER ? N.L.COVER : void 0,
   blocked: j,
   channel: s,
   className: b.tile,
@@ -131,7 +131,7 @@ return (0, i.jsx)(S.Z, {
   pulseSpeakingIndicator: !C.enabled,
   width: l,
   children: d && n.type === M.fO.USER && (0, i.jsx)(Z.Z, {})
-}, N);
+}, v);
   };
 t.Z = a.memo(function(e) {
   var t;
@@ -146,7 +146,7 @@ user: m
   } = a, _ = (0, r.e7)([p.Z], () => p.Z.getParticipant(s.id, a.id), [
 s.id,
 a.id
-  ]), f = (0, r.e7)([N.ZP], () => N.ZP.isModerator(m.id, s.id), [
+  ]), f = (0, r.e7)([v.ZP], () => v.ZP.isModerator(m.id, s.id), [
 s.id,
 m.id
   ]);

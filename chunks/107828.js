@@ -3,10 +3,10 @@ s.d(n, {
 return j;
   },
   Mx: function() {
-return A;
+return Z;
   },
   PZ: function() {
-return Z;
+return A;
   },
   h4: function() {
 return T;
@@ -18,7 +18,7 @@ return v;
 return L;
   },
   rU: function() {
-return R;
+return S;
   }
 }), s(47120);
 var t, r = s(735250),
@@ -34,8 +34,8 @@ var t, r = s(735250),
   p = s(430824),
   m = s(699516),
   C = s(594174),
-  N = s(51144),
-  _ = s(2093),
+  _ = s(51144),
+  N = s(2093),
   x = s(409216),
   f = s(689938),
   I = s(66479);
@@ -222,7 +222,7 @@ let {
   category: t,
   channel: a
 } = this.props;
-return null != s && s > 0 && (e = (0, r.jsx)(_.Z, {
+return null != s && s > 0 && (e = (0, r.jsx)(N.Z, {
   className: I.badge,
   value: s
 })), null != t && (n = (0, r.jsx)('span', {
@@ -316,7 +316,7 @@ return (0, r.jsx)(M, {
 g(j, 'defaultProps', {
   unread: !1
 });
-class Z extends a.Component {
+class A extends a.Component {
   renderIcon() {
 let {
   channel: e
@@ -336,7 +336,7 @@ let {
   mentions: n,
   channel: s
 } = this.props;
-return null != n && n > 0 && (e = (0, r.jsx)(_.Z, {
+return null != n && n > 0 && (e = (0, r.jsx)(N.Z, {
   className: I.badge,
   value: n
 })), (0, r.jsxs)('div', {
@@ -422,7 +422,7 @@ let {
   user: n,
   comparator: s
 } = this.props, t = m.Z.getNickname(n.id);
-return ((e = s === n.tag || null == s || '' === s ? n.username : s) === n.username || e === n.id) && (e = null != t ? t : N.ZP.getName(n)), e;
+return ((e = s === n.tag || null == s || '' === s ? n.username : s) === n.username || e === n.id) && (e = null != t ? t : _.ZP.getName(n)), e;
   }
   renderName() {
 let e;
@@ -430,7 +430,7 @@ let {
   user: n,
   mentions: s
 } = this.props, t = this.getDisplayNickname();
-return null != s && s > 0 && (e = (0, r.jsx)(_.Z, {
+return null != s && s > 0 && (e = (0, r.jsx)(N.Z, {
   className: I.badge,
   value: s
 })), (0, r.jsxs)('div', {
@@ -443,7 +443,7 @@ return null != s && s > 0 && (e = (0, r.jsx)(_.Z, {
     e,
     (0, r.jsx)('span', {
       className: I.username,
-      children: N.ZP.getUserTag(n)
+      children: _.ZP.getUserTag(n)
     })
   ]
 });
@@ -469,7 +469,7 @@ return (0, r.jsxs)('div', {
 let {
   mentions: e,
   user: n
-} = this.props, s = this.getDisplayNickname(), t = N.ZP.getUserTag(n);
+} = this.props, s = this.getDisplayNickname(), t = _.ZP.getUserTag(n);
 return null != e && e > 0 ? f.Z.Messages.QUICK_SWITCHER_RESULTS_USER_UNREAD_LABEL.format({
   name: s,
   id: t,
@@ -502,7 +502,7 @@ return (0, r.jsx)(M, {
 });
   }
 }
-class A extends a.Component {
+class Z extends a.Component {
   renderContent() {
 let {
   children: e,
@@ -560,7 +560,7 @@ return (0, r.jsx)('div', {
 });
   }
 }
-class R extends a.Component {
+class S extends a.Component {
   renderContent() {
 let e, n;
 let {

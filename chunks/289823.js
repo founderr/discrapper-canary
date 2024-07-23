@@ -130,9 +130,9 @@ isTyping: g,
 status: I,
 style: x,
 className: T,
-...v
+...N
   } = e, {
-size: N
+size: v
   } = c.AvatarSizeSpecs[_], {
 statusCoords: S,
 frontAvatarOffsetPx: Z,
@@ -140,7 +140,7 @@ frontAvatarSizePx: A,
 backAvatarSizePx: M
   } = a.useMemo(() => {
 var e;
-let t = ''.concat(N, '-').concat(g);
+let t = ''.concat(v, '-').concat(g);
 return null !== (e = p[t]) && void 0 !== e ? e : function(e, t, n) {
   let i = c.AvatarSizeSpecs[e],
     a = i.size / (u.z3 + u.o),
@@ -156,25 +156,25 @@ return null !== (e = p[t]) && void 0 !== e ? e : function(e, t, n) {
   return p[n] = o, o;
 }(_, g, t);
   }, [
-N,
+v,
 g,
 _
   ]);
   let b = (t = null != I, n = g, s = _, n ? C[s].typing : t ? C[s].status : C[s].default);
   return (0, i.jsxs)('div', {
 style: {
-  width: N,
-  height: N,
+  width: v,
+  height: v,
   ...x
 },
-'aria-label': v['aria-label'],
-'aria-hidden': v['aria-hidden'],
+'aria-label': N['aria-label'],
+'aria-hidden': N['aria-hidden'],
 className: l()(h.container, T),
 children: [
   (0, i.jsxs)(d.ZP, {
     mask: b,
-    height: N,
-    width: N,
+    height: v,
+    width: v,
     children: [
       (0, i.jsx)('img', {
         src: o,

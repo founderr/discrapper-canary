@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(556017),
   p = n(879484),
   T = n(26580),
-  f = n(206887),
-  S = n(981631),
+  S = n(206887),
+  f = n(981631),
   C = n(689938),
   N = n(465423),
   A = n(129512),
@@ -53,9 +53,9 @@ splash: x,
 size: 240 * (0, u.x_)()
   }), V = null != H ? H : function(e) {
 switch (e) {
-  case S.BRd.DARK:
+  case f.BRd.DARK:
     return A;
-  case S.BRd.LIGHT:
+  case f.BRd.LIGHT:
     return v;
 }
   }(Z), F = null !== (t = I.ZP.getGuildIconURL({
@@ -70,11 +70,11 @@ if (!t.includes('Menu')) {
   if ((0, _.yU)()) {
     (0, E.Z)({
       analyticsSource: {
-        page: S.ZY5.GUILD_DISCOVERY
+        page: f.ZY5.GUILD_DISCOVERY
       },
       analyticsLocation: {
-        page: S.ZY5.GUILD_DISCOVERY,
-        section: S.jXE.GUILD_CAP_UPSELL_MODAL
+        page: f.ZY5.GUILD_DISCOVERY,
+        section: f.jXE.GUILD_CAP_UPSELL_MODAL
       },
       analyticsLocations: B
     });
@@ -223,7 +223,7 @@ children: [
           }),
           z ? (0, i.jsx)('div', {
             className: N.actionButtons,
-            children: (0, i.jsx)(f.Z, {
+            children: (0, i.jsx)(S.Z, {
               guild: a
             })
           }) : null

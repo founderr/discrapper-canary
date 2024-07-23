@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(551228),
   x = n(591853),
   T = n(371991),
-  v = n(410441),
-  N = n(981631),
+  N = n(410441),
+  v = n(981631),
   S = n(616922),
   Z = n(689938),
   A = n(153602),
@@ -117,7 +117,7 @@ function j(e) {
 F = (0, l.e7)([
   d.Z,
   p.default
-], () => (null == D ? void 0 : D.type) === N.IIU.LISTENING && null != H ? (0, u.Z)(d.Z, p.default, H, D) : void 0, [
+], () => (null == D ? void 0 : D.type) === v.IIU.LISTENING && null != H ? (0, u.Z)(d.Z, p.default, H, D) : void 0, [
   D,
   H
 ], r.Z),
@@ -189,7 +189,7 @@ thumbnailSrc: w,
 onClickThumbnail: j,
 channel: L,
 entry: P,
-headerIcons: k.media.provider === s.p.SPOTIFY ? (0, i.jsx)(v.Z, {
+headerIcons: k.media.provider === s.p.SPOTIFY ? (0, i.jsx)(N.Z, {
   onClick: T,
   'aria-label': Z.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
   Icon: _.Z

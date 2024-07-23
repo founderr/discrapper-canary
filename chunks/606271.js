@@ -20,8 +20,8 @@ var i = n(392711),
   g = n(594174),
   p = n(979651),
   T = n(626135),
-  f = n(823379),
-  S = n(358085),
+  S = n(823379),
+  f = n(358085),
   C = n(914946),
   N = n(238679),
   A = n(863141),
@@ -39,7 +39,7 @@ writable: !0
 }
 class R {
   loadServer() {
-for (let e of (S.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports))
+for (let e of (f.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports))
   this.rpcServer.registerTransport(e);
 for (let [e, t] of Object.entries(this.rpcCommandHandlers))
   this.rpcServer.setCommandHandler(e, t);
@@ -95,7 +95,7 @@ switch (e.type) {
     }, s = ''.concat(t).concat(e.id);
     break;
   default:
-    return (0, f.vE)(e);
+    return (0, S.vE)(e);
 }
 null != n && this.rpcServer.dispatchToSubscriptions(t, {
   channel_id: n

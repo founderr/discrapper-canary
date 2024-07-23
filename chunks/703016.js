@@ -16,8 +16,8 @@ var i = n(913527),
   g = n(131951),
   p = n(292959),
   T = n(699516),
-  f = n(944486),
-  S = n(9156),
+  S = n(944486),
+  f = n(9156),
   C = n(594174),
   N = n(51144),
   A = n(196051),
@@ -119,7 +119,7 @@ return !1;
   let d = h.Z.getChannel(l);
   if (null == d)
 return !1;
-  let m = f.Z.getChannelId(),
+  let m = S.Z.getChannelId(),
 C = E.ZP.getCurrentSidebarChannelId(m),
 A = l === m || l === C,
 v = u.OW.getSetting() && o.tts && A,
@@ -130,7 +130,7 @@ if (R.indexOf(o.id) >= 0)
   return !1;
 R.unshift(o.id) > 10 && R.pop();
 let e = d.getGuildId();
-if (null != e && S.ZP.getMutedChannels(e).has(l))
+if (null != e && f.ZP.getMutedChannels(e).has(l))
   return !1;
 let t = null !== (a = null !== (s = I.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== s ? s : N.ZP.getName(o.author)) && void 0 !== a ? a : '',
   c = o.type === L.uaV.REPLY ? null === (i = o.referenced_message) || void 0 === i ? void 0 : i.author : null,

@@ -30,8 +30,8 @@ onGuildCardSeen: n,
 onGuildCardClick: r
   } = e, E = (0, c.ZP)(), {
 guilds: T,
-loading: f,
-searchResultsQuery: S,
+loading: S,
+searchResultsQuery: f,
 loadMore: C,
 searchCategoryId: N
   } = (0, h.f)({
@@ -39,12 +39,12 @@ loadId: t
   }), A = s.useContext(_.AnalyticsContext), [v, Z] = s.useState((0, d.P)());
   s.useEffect(() => {
 Z((0, d.P)());
-  }, [S]);
+  }, [f]);
   let L = s.useCallback(e => {
   p({
     loadId: t,
     searchId: v,
-    query: S,
+    query: f,
     guildResults: T,
     analyticsContext: A,
     categoryId: N,
@@ -57,14 +57,14 @@ Z((0, d.P)());
   n,
   N,
   v,
-  S
+  f
 ]),
-O = s.useMemo(() => f ? [
+O = s.useMemo(() => S ? [
   T.length,
   0
 ] : [T.length], [
   T.length,
-  f
+  S
 ]),
 R = s.useCallback(e => {
   switch (e) {
@@ -73,7 +73,7 @@ R = s.useCallback(e => {
         variant: 'heading-xl/semibold',
         className: m.heading,
         children: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({
-          query: S
+          query: f
         })
       });
     case 1:
@@ -81,7 +81,7 @@ R = s.useCallback(e => {
         className: m.spinner
       });
   }
-}, [S]),
+}, [f]),
 x = s.useCallback(e => {
   switch (e) {
     case 0:

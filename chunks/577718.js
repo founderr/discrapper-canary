@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(782959),
   p = n(276645),
   T = n(970731),
-  f = n(626135),
-  S = n(267642),
+  S = n(626135),
+  f = n(267642),
   C = n(981631),
   N = n(921944),
   A = n(30513),
@@ -43,7 +43,7 @@ function D(e, t) {
 
 function y(e, t) {
   if (null != t)
-(0, S.f2)(t, C.Eu4.TIER_1) ? I.Z.open(t.id, C.pNK.OVERVIEW, {
+(0, f.f2)(t, C.Eu4.TIER_1) ? I.Z.open(t.id, C.pNK.OVERVIEW, {
   section: C.jXE.PREMIUM_GUILD_INVITE_SPLASH
 }, C.KsC.INVITE) : (0, _.Z)({
   analyticsLocations: e,
@@ -79,14 +79,14 @@ renderGuildHeaderDropdownButton: l
   } = e, {
 analyticsLocations: _
   } = (0, o.ZP)(), A = () => {
-f.default.track(C.rMx.TOOLTIP_VIEWED, {
+S.default.track(C.rMx.TOOLTIP_VIEWED, {
   type: v.cd.PREMIUM_PROGRESS_BAR,
   location: {
     page: C.ZY5.GUILD_CHANNEL
   }
 });
   }, U = () => {
-f.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
+S.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
   type: v.cd.INVITE_SPLASH_UPSELL,
   location: {
     page: C.ZY5.GUILD_CHANNEL
@@ -169,10 +169,10 @@ children: (() => {
         renderGuildHeaderDropdownButton: l
       });
     case a.z.GUILD_HEADER_INVITE_SPLASH:
-      let e = (0, S.f2)(s, C.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
-          boostCount: (0, S.KK)(s, C.Eu4.TIER_1)
+      let e = (0, f.f2)(s, C.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
+          boostCount: (0, f.KK)(s, C.Eu4.TIER_1)
         }),
-        t = (0, S.f2)(s, C.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : Z.Z.Messages.LEARN_MORE;
+        t = (0, f.f2)(s, C.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : Z.Z.Messages.LEARN_MORE;
       return (0, i.jsx)(j, {
         renderPopout: (0, i.jsx)(T.ZP, {
           onComponentMount: U,

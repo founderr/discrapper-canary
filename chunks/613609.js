@@ -20,12 +20,12 @@ inviteCode: n
   s.useEffect(() => {
 null != n && r.Z.resolveInvite(n, 'Hub').finally(() => T(!1));
   }, [n]);
-  let f = (0, a.e7)([d.Z], () => null != n ? d.Z.getInvite(n) : null),
-S = (0, a.e7)([c.Z], () => c.Z.getGuild(t));
+  let S = (0, a.e7)([d.Z], () => null != n ? d.Z.getInvite(n) : null),
+f = (0, a.e7)([c.Z], () => c.Z.getGuild(t));
   s.useEffect(() => {
-null != S && (0, o.uL)(E.Z5c.CHANNEL(t));
+null != f && (0, o.uL)(E.Z5c.CHANNEL(t));
   }, [
-S,
+f,
 t
   ]);
   let C = s.useCallback(e => {
@@ -47,7 +47,7 @@ children: (0, i.jsxs)(l.Z, {
     (0, i.jsx)('div', {
       className: I.contentWrapper,
       children: !p && (0, i.jsx)(_.HubEmailConnectionModalView, {
-        invite: f
+        invite: S
       })
     })
   ]

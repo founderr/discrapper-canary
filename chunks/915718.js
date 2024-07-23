@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(523746),
   x = n(819640),
   T = n(131951),
-  v = n(699516),
-  N = n(594174),
+  N = n(699516),
+  v = n(594174),
   S = n(979651),
   Z = n(810090),
   A = n(585483),
@@ -218,10 +218,10 @@ callUnavailable: I.Z.isCallUnavailable(t.id)
   })), E = t.getRecipientId(), {
 notFriend: C,
 isBlocked: g
-  } = (0, s.cj)([v.Z], () => ({
-notFriend: t.type === R.d4z.DM && null != E && !v.Z.isFriend(E),
-isBlocked: t.type === R.d4z.DM && null != E && v.Z.isBlocked(E)
-  })), T = (0, s.e7)([N.default], () => N.default.getUser(E)), Z = (0, d.bp)(), A = [], M = (0, h.Z)(t.id), b = (0, s.e7)([x.Z], () => x.Z.hasLayers());
+  } = (0, s.cj)([N.Z], () => ({
+notFriend: t.type === R.d4z.DM && null != E && !N.Z.isFriend(E),
+isBlocked: t.type === R.d4z.DM && null != E && N.Z.isBlocked(E)
+  })), T = (0, s.e7)([v.default], () => v.default.getUser(E)), Z = (0, d.bp)(), A = [], M = (0, h.Z)(t.id), b = (0, s.e7)([x.Z], () => x.Z.hasLayers());
   M && !b && A.push(l.z.ACTIVITY_GDM_CALL_TOOLTIP);
   let [j, L] = a.useState(!1);
   return (a.useEffect(() => {

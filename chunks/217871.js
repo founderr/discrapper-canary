@@ -19,7 +19,7 @@ var i = n(735250),
   I = n(989830),
   x = n(689938),
   T = n(934376);
-let v = a.memo(function(e) {
+let N = a.memo(function(e) {
 let {
   channelId: t,
   width: n
@@ -55,7 +55,7 @@ return (0, i.jsx)(i.Fragment, {
   })
 });
   }),
-  N = a.memo(function(e) {
+  v = a.memo(function(e) {
 let {
   value: t,
   multiplier: n
@@ -177,7 +177,7 @@ b
   ]);
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsx)(v, {
+  (0, i.jsx)(N, {
     channelId: t,
     width: _
   }),
@@ -185,7 +185,7 @@ children: [
     ref: h,
     className: T.combo,
     style: A,
-    children: (0, i.jsx)(N, {
+    children: (0, i.jsx)(v, {
       value: j,
       multiplier: R
     })

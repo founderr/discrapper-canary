@@ -90,13 +90,13 @@ super(...e), d(this, 'dataChangedAt', void 0), d(this, 'fillColor', void 0), d(t
   let p = Math.floor(i.width / (g - 3)),
     T = 0.5 * p;
   E.translate(p - p * _, 0), E.beginPath();
-  let f = -p;
+  let S = -p;
   s.forEach((e, i) => {
     t = {
-      x: f,
+      x: S,
       y: I * e / h
-    }, 0 === i ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + T, n.y, t.x - T, t.y, t.x, t.y), n = t, f += p;
-  }), E.stroke(), E.lineTo(f - p, 0), E.lineTo(0, 0), E.fill(), d && _ < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
+    }, 0 === i ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + T, n.y, t.x - T, t.y, t.x, t.y), n = t, S += p;
+  }), E.stroke(), E.lineTo(S - p, 0), E.lineTo(0, 0), E.fill(), d && _ < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
 });
   }
 }

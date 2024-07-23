@@ -38,7 +38,7 @@ stream: t,
 inPopout: n
   } = e, {
 reducedMotion: g
-  } = a.useContext(r.Sf), I = (0, a.useRef)(null), x = u.n.getState().clipsButtonRef, T = (0, h.V9)(t), v = (0, l.e7)([c.Z], () => c.Z.getActiveAnimation()), N = (0, l.Wu)([c.Z], () => c.Z.getStreamClipAnimations(T)), S = (0, a.useRef)();
+  } = a.useContext(r.Sf), I = (0, a.useRef)(null), x = u.n.getState().clipsButtonRef, T = (0, h.V9)(t), N = (0, l.e7)([c.Z], () => c.Z.getActiveAnimation()), v = (0, l.Wu)([c.Z], () => c.Z.getStreamClipAnimations(T)), S = (0, a.useRef)();
   a.useEffect(() => () => {
 (0, d.Gh)(T);
   }, [T]);
@@ -54,7 +54,7 @@ reducedMotion: g
 },
 A = e => {
   let t = null == x ? void 0 : x.getBoundingClientRect();
-  if (S.current = t, e.timestamp !== v || null == t || n)
+  if (S.current = t, e.timestamp !== N || null == t || n)
     return _;
   let {
     top: i,
@@ -68,7 +68,7 @@ A = e => {
   };
 },
 M = (0, a.useRef)(null),
-b = (0, o.useTransition)(N, {
+b = (0, o.useTransition)(v, {
   keys: e => e.timestamp,
   ref: M,
   from: {
@@ -80,7 +80,7 @@ b = (0, o.useTransition)(N, {
   config: f
 }, 'animate-always'),
 R = (0, a.useRef)(null),
-j = (0, o.useTransition)(N, {
+j = (0, o.useTransition)(v, {
   ref: R,
   keys: e => e.timestamp,
   from: e => ({
@@ -110,7 +110,7 @@ j = (0, o.useTransition)(N, {
   },
   config: g.enabled ? C : E,
   onRest: (e, t) => {
-    null != t.item && null != N.find(e => e.timestamp === t.item.timestamp) && (0, d.Gh)(T, t.item.timestamp);
+    null != t.item && null != v.find(e => e.timestamp === t.item.timestamp) && (0, d.Gh)(T, t.item.timestamp);
   }
 }, 'animate-always');
   return (0, s.useChain)([

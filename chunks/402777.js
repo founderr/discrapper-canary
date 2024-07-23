@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(544989),
   x = n(481932),
   T = n(272510),
-  v = n(171368),
-  N = n(926150),
+  N = n(171368),
+  v = n(926150),
   S = n(308829),
   Z = n(940885),
   A = n(625015),
@@ -42,7 +42,7 @@ statusReactReplyEnabled: O
   } = (0, h.t)({
 location: 'SimplifiedProfilePanel'
   }), y = a.useRef(null), D = (0, l.Z)(y), k = e => {
-(0, v.openUserProfileModal)({
+(0, N.openUserProfileModal)({
   sourceAnalyticsLocations: j,
   userId: t.id,
   channelId: n.id,
@@ -105,7 +105,7 @@ children: (0, i.jsx)(u.Mt, {
               })
             ]
           }),
-          (0, i.jsx)(N.Z, {
+          (0, i.jsx)(v.Z, {
             user: t,
             displayProfile: L,
             channel: n,

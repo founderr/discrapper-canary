@@ -17,8 +17,8 @@ t.Z = a.memo(function(e) {
 guildId: g,
 isTagAdopted: I,
 onChangeUseTag: x
-  } = e, T = (0, u.Cc)(g), v = (0, s.e7)([o.Z], () => o.Z.getGuild(g)), N = null !== (f = null == T ? void 0 : null === (t = T.badge) || void 0 === t ? void 0 : t.imageHash) && void 0 !== f ? f : null == v ? void 0 : null === (n = v.clan) || void 0 === n ? void 0 : n.badge, S = null !== (E = null == T ? void 0 : T.tag) && void 0 !== E ? E : null == v ? void 0 : null === (a = v.clan) || void 0 === a ? void 0 : a.tag, Z = (0, s.e7)([c.default], () => c.default.getCurrentUser()), A = (0, s.e7)([r.ZP], () => null != Z ? r.ZP.getMember(g, Z.id) : null);
-  return null == v || null == Z || null == A || null == N ? null : (0, i.jsxs)('div', {
+  } = e, T = (0, u.Cc)(g), N = (0, s.e7)([o.Z], () => o.Z.getGuild(g)), v = null !== (f = null == T ? void 0 : null === (t = T.badge) || void 0 === t ? void 0 : t.imageHash) && void 0 !== f ? f : null == N ? void 0 : null === (n = N.clan) || void 0 === n ? void 0 : n.badge, S = null !== (E = null == T ? void 0 : T.tag) && void 0 !== E ? E : null == N ? void 0 : null === (a = N.clan) || void 0 === a ? void 0 : a.tag, Z = (0, s.e7)([c.default], () => c.default.getCurrentUser()), A = (0, s.e7)([r.ZP], () => null != Z ? r.ZP.getMember(g, Z.id) : null);
+  return null == N || null == Z || null == A || null == v ? null : (0, i.jsxs)('div', {
 className: _.previewSection,
 children: [
   (0, i.jsxs)('div', {
@@ -42,7 +42,7 @@ children: [
               }),
               I && (0, i.jsx)(h.aG, {
                 guildId: g,
-                clanBadge: N,
+                clanBadge: v,
                 clanTag: S,
                 badgeSize: p.NC.SIZE_12,
                 textVariant: 'text-xs/semibold'

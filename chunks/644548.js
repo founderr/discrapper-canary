@@ -40,8 +40,8 @@ closePopout: r
 iconUrl: I,
 iconTitle: x,
 user: T,
-details: v,
-appName: N,
+details: N,
+appName: v,
 coverImageUrl: S
   } = (0, f.n)(n), {
 primaryColor: Z,
@@ -87,8 +87,8 @@ children: [
     }),
     entry: n,
     userDescription: E.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
-    title: N,
-    subtitle: v,
+    title: v,
+    subtitle: N,
     badges: (0, i.jsx)(p.Gk, {
       location: p.Gt.POPOUT,
       children: h.Hs.map((e, t) => (0, i.jsx)(e, {

@@ -15,8 +15,8 @@ var a, s, l, r, o = n(392711),
   I = n(592125),
   x = n(580005),
   T = n(699516),
-  v = n(594174),
-  N = n(981631);
+  N = n(594174),
+  v = n(981631);
 let S = !1,
   Z = '',
   A = 0,
@@ -41,7 +41,7 @@ return !1;
 return null != i && i.clearQuery(), M = function(e) {
   let t = T.Z.getFriendIDs();
   return (null == e ? void 0 : e.isPrivate()) && (t = t.filter(t => !e.recipients.includes(t))), t.reduce((e, t) => {
-    let n = v.default.getUser(t);
+    let n = N.default.getUser(t);
     return null == n ? e : (e.push({
       user: n
     }), e);
@@ -73,7 +73,7 @@ function y() {
   if (!S)
 return !1;
   let e = b;
-  return (b = c().some(T.Z.getRelationships(), e => e === N.OGo.FRIEND)) !== e;
+  return (b = c().some(T.Z.getRelationships(), e => e === v.OGo.FRIEND)) !== e;
 }
 
 function D(e, t) {
@@ -106,7 +106,7 @@ M = t.map(e => {
     id: t
   } = e;
   return {
-    user: v.default.getUser(t)
+    user: N.default.getUser(t)
   };
 }).filter(e => null != e.user), V.emitChange();
 }
@@ -116,13 +116,13 @@ function U() {
 }
 
 function w(e) {
-  if (e.key !== N.vTt)
+  if (e.key !== v.vTt)
 return !1;
   S = !0, y(), i = U(), j = null, P('');
 }
 
 function B(e) {
-  if (e.key !== N.vTt)
+  if (e.key !== v.vTt)
 return !1;
   H();
 }
@@ -132,8 +132,8 @@ function H() {
 }
 class G extends(a = d.ZP.Store) {
   initialize() {
-this.waitFor(v.default, I.Z, T.Z, p.Z), this.syncWith([
-  v.default,
+this.waitFor(N.default, I.Z, T.Z, p.Z), this.syncWith([
+  N.default,
   I.Z
 ], O), this.syncWith([T.Z], y);
   }

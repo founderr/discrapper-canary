@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(348600),
   x = n(566620),
   T = n(520599),
-  v = n(127255),
-  N = n(5200),
+  N = n(127255),
+  v = n(5200),
   S = n(558317),
   Z = n(403404),
   A = n(701488),
@@ -85,7 +85,7 @@ let W = (0, h.bp)(),
   K = W === M.IlC.POPOUT,
   q = (0, u.O)(),
   X = function(e, t) {
-    return (0, v.Z)({
+    return (0, N.Z)({
       guildId: e,
       channel: t
     }).slice(0, 5);
@@ -216,13 +216,13 @@ return (0, i.jsx)(_.Gt, {
             (0, i.jsxs)('div', {
               className: R.activityContainer,
               children: [
-                X.map(e => (0, i.jsx)(N.Y, {
+                X.map(e => (0, i.jsx)(v.Y, {
                   channel: n,
                   activityItem: e,
                   onClick: () => {
                     o(), k();
                   },
-                  aspectRatio: N.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
+                  aspectRatio: v.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                   animatedDivClass: R.activitySuggestion
                 }, e.application.id)),
                 (0, i.jsx)('div', {

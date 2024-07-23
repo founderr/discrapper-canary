@@ -17,8 +17,8 @@ var a = n(481060),
   g = n(914010),
   p = n(594174),
   T = n(823379),
-  f = n(358085),
-  S = n(929809),
+  S = n(358085),
+  f = n(929809),
   C = n(179645),
   N = n(701476),
   A = n(785997),
@@ -57,7 +57,7 @@ if (r === N.M5.INVITE_UNCLAIMED) {
   let e = m.Z.getGuild(O);
   (null == e ? void 0 : e.hasVerificationGate()) && (l = !0, (0, E.RM)(e.id));
 }
-let R = () => 0 === I.Z.totalGuilds && !f.isPlatformEmbedded,
+let R = () => 0 === I.Z.totalGuilds && !S.isPlatformEmbedded,
   x = o.b();
 e = [{
     key: 'Unified NUF Modal',
@@ -118,7 +118,7 @@ e = [{
   },
   {
     key: 'Claim Account Modal',
-    open: e => c.j(f.isPlatformEmbedded, e),
+    open: e => c.j(S.isPlatformEmbedded, e),
     predicate: () => {
       var e;
       return !l && null != p.default.getCurrentUser() && !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !Z.a && !(0, u.g)('new_user_manager');
@@ -148,7 +148,7 @@ e = [{
     predicate: () => null != O && null != h.Z.get(O) && h.Z.get(O) !== h.a
   }
 ], t = () => {
-  S.H(), _.Z.flowStep(L.MK.ANY, L.EW.NUF_COMPLETE, !0);
+  f.H(), _.Z.flowStep(L.MK.ANY, L.EW.NUF_COMPLETE, !0);
 }, [...e].reverse().forEach(e => {
   let n = t;
   t = () => {

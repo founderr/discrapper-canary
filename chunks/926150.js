@@ -24,8 +24,8 @@ var a = n(442837),
   I = n(827313),
   x = n(580512),
   T = n(228168),
-  v = n(981631),
-  N = n(689938),
+  N = n(981631),
+  v = n(689938),
   S = n(790884);
 
 function Z(e) {
@@ -69,7 +69,7 @@ children: [
       ]
     })
   }),
-  R === v.OGo.PENDING_INCOMING && (0, i.jsx)(E.Z.Overlay, {
+  R === N.OGo.PENDING_INCOMING && (0, i.jsx)(E.Z.Overlay, {
     children: (0, i.jsx)(m.Z, {
       user: t,
       channelId: Z.id
@@ -86,7 +86,7 @@ children: [
     className: S.overlay,
     children: [
       !j && (null == n ? void 0 : n.bio) != null && (null == n ? void 0 : n.bio) !== '' && (0, i.jsx)(f.Z, {
-        title: N.Z.Messages.USER_POPOUT_ABOUT_ME,
+        title: v.Z.Messages.USER_POPOUT_ABOUT_ME,
         headingColor: 'header-primary',
         children: (0, i.jsx)(u.Z, {
           userBio: n.bio,
@@ -101,7 +101,7 @@ children: [
         channel: Z
       }),
       (0, i.jsx)(f.Z, {
-        title: t.bot ? N.Z.Messages.BOT_PROFILE_CREATED_ON : N.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+        title: t.bot ? v.Z.Messages.BOT_PROFILE_CREATED_ON : v.Z.Messages.USER_PROFILE_MEMBER_SINCE,
         headingColor: 'header-primary',
         children: (0, i.jsx)(_.Z, {
           userId: t.id

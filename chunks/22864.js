@@ -7,8 +7,8 @@ var a = n(348327),
   s = n.n(a),
   l = n(392711),
   r = n.n(l),
-  o = n(442837),
-  i = n(566006),
+  i = n(442837),
+  o = n(566006),
   d = n(542578),
   c = n(981631);
 
@@ -18,8 +18,8 @@ function u(e) {
 channelId: a,
 messageId: l,
 reaction: u
-  } = e, m = (0, o.e7)([d.Z], () => {
-let e = d.Z.getReactions(a, l, u.emoji, c.pTL, i.O.VOTE);
+  } = e, m = (0, i.e7)([d.Z], () => {
+let e = d.Z.getReactions(a, l, u.emoji, c.pTL, o.O.VOTE);
 return r().map(e, e => e);
   }, [
 a,

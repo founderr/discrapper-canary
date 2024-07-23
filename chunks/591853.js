@@ -39,8 +39,8 @@ var c = n(442837),
   I = n(557135),
   x = n(605236),
   T = n(543241),
-  v = n(318374),
-  N = n(258609),
+  N = n(318374),
+  v = n(258609),
   S = n(810568),
   Z = n(168524),
   A = n(382182),
@@ -144,7 +144,7 @@ entry: _,
 requestId: f,
 buttons: E = [],
 header: T
-  } = e, [v, N] = a.useState(!1), [S, Z] = a.useState(null), A = (0, c.e7)([k.Z], () => k.Z.can(eo.Plq.SEND_MESSAGES, t)), M = (0, $.a)({
+  } = e, [N, v] = a.useState(!1), [S, Z] = a.useState(null), A = (0, c.e7)([k.Z], () => k.Z.can(eo.Plq.SEND_MESSAGES, t)), M = (0, $.a)({
 location: 'PopoutReactor'
   }), [P, O] = a.useState(!1), [B, F] = a.useState(!1), {
 voiceBar: z,
@@ -197,7 +197,7 @@ let g = null != l,
       routeDirectlyToChannel: !0
     });
   },
-  v = e => {
+  N = e => {
     let {
       children: t,
       text: n,
@@ -220,12 +220,12 @@ let g = null != l,
       children: t
     }, 'voice-preview');
   },
-  N = (0, i.jsxs)(i.Fragment, {
+  v = (0, i.jsxs)(i.Fragment, {
     children: [
       (0, i.jsxs)('div', {
         className: ed.voiceChannelPopoutReactorHeader,
         children: [
-          (0, i.jsx)(v, {
+          (0, i.jsx)(N, {
             text: ec.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_PREVIEW_VOICE_CHANNEL,
             hasBlockedOrMutedVCParticipant: C,
             children: e => (0, i.jsxs)(h.Clickable, {
@@ -284,8 +284,8 @@ let g = null != l,
     ]
   });
 return {
-  voiceBar: N,
-  joinVoiceButton: E ? null : (0, i.jsx)(v, {
+  voiceBar: v,
+  joinVoiceButton: E ? null : (0, i.jsx)(N, {
     hasBlockedOrMutedVCParticipant: C,
     children: e => (0, i.jsx)(ex, {
       ...e,
@@ -300,7 +300,7 @@ return {
 channel: t,
 entry: _,
 requestId: f
-  }), q = null != K && 0 === E.length ? [K] : E, Q = q.length > 0, et = q.length >= 2, [ea, es] = a.useState(!Q), eu = '#'.concat(t.name), eh = Y.ZP.getName(t.guild_id, t.id, n), ep = v ? ec.Z.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : ec.Z.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, em = async e => {
+  }), q = null != K && 0 === E.length ? [K] : E, Q = q.length > 0, et = q.length >= 2, [ea, es] = a.useState(!Q), eu = '#'.concat(t.name), eh = Y.ZP.getName(t.guild_id, t.id, n), ep = N ? ec.Z.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : ec.Z.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, em = async e => {
 if (null != e) {
   if (W.default.track(eo.rMx.CONTENT_POPOUT_EMOJI_CLICKED, {
       surface_type: er.Kd.GUILD_MEMBER_LIST,
@@ -308,7 +308,7 @@ if (null != e) {
       guild_id: t.guild_id
     }), M) {
     let a;
-    if ((0, x.EW)(d.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), O(!0), F(!1), v)
+    if ((0, x.EW)(d.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), O(!0), F(!1), N)
       a = t;
     else {
       var i;
@@ -330,7 +330,7 @@ if (null != e) {
 }
   }, e_ = async e => {
 let i;
-if (M && (0, x.EW)(d.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), v)
+if (M && (0, x.EW)(d.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), N)
   i = t;
 else {
   let e = await p.Z.openPrivateChannel(n.id, !1, !1),
@@ -419,19 +419,19 @@ children: [
     children: [
       (0, i.jsx)(C.A7, {
         placeholder: ec.Z.Messages.TEXTAREA_PLACEHOLDER.format({
-          channel: v ? eu : '@'.concat(eh)
+          channel: N ? eu : '@'.concat(eh)
         }),
         onEnter: e_,
         setEditorRef: e => Z(e),
-        channel: v ? t : void 0,
+        channel: N ? t : void 0,
         showEmojiButton: null != eC,
         renderAttachButton: A ? () => (0, i.jsx)(h.Tooltip, {
           text: ep,
           children: e => (0, i.jsx)(h.Clickable, {
             ...e,
             className: ed.shareToChannelButton,
-            onClick: () => N(e => !e),
-            children: v ? (0, i.jsx)(h.TextIcon, {
+            onClick: () => v(e => !e),
+            children: N ? (0, i.jsx)(h.TextIcon, {
               size: 'custom',
               width: 20,
               height: 20
@@ -555,7 +555,7 @@ children: [
   (0, i.jsxs)('div', {
     className: ed.popoutUserContainer,
     children: [
-      (0, i.jsx)(v.Z, {
+      (0, i.jsx)(N.Z, {
         maxUsers: 3,
         users: r,
         size: h.AvatarSizes.SIZE_24,
@@ -722,15 +722,15 @@ onClickThumbnail: p,
 onClickTitle: m,
 onClickSubtitle: E,
 ...C
-  } = e, g = (0, c.e7)([y.Z], () => y.Z.getChannel(null == r ? void 0 : r.channelId)), [I] = a.useMemo(() => (0, A.p9)(g, H.Z, D.Z, k.Z, N.Z), [g]), {
+  } = e, g = (0, c.e7)([y.Z], () => y.Z.getChannel(null == r ? void 0 : r.channelId)), [I] = a.useMemo(() => (0, A.p9)(g, H.Z, D.Z, k.Z, v.Z), [g]), {
 entry: x
-  } = C, T = (0, q.d)(x), v = (0, Z.Z)({
+  } = C, T = (0, q.d)(x), N = (0, Z.Z)({
 location: 'ContentPopout',
 applicationId: T ? null === (t = x.extra) || void 0 === t ? void 0 : t.application_id : void 0,
 source: S.m1.ActivityCard,
 trackEntryPointImpression: !0,
 sourceUserId: x.author_id
-  }), b = T ? v : void 0;
+  }), b = T ? N : void 0;
   return null == r ? null : (0, i.jsxs)('div', {
 className: ed.popoutContentWrapper,
 children: [

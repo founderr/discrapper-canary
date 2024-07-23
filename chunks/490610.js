@@ -22,31 +22,31 @@ className: a
   } = e, {
 loaded: p,
 clans: T,
-searchResult: f,
-searchCriteria: S
-  } = (0, _.Qc)(20), C = (0, E.GN)(e => e.selectedTraits, l.Z), N = s.useMemo(() => new Set(S.games), [S.games]), A = s.useCallback(e => {
+searchResult: S,
+searchCriteria: f
+  } = (0, _.Qc)(20), C = (0, E.GN)(e => e.selectedTraits, l.Z), N = s.useMemo(() => new Set(f.games), [f.games]), A = s.useCallback(e => {
 var t;
 return (0, i.jsx)(u.ZP, {
   clan: e,
   className: g.card,
-  affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, d.y)(e, S),
+  affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, d.y)(e, f),
   traitsToHighlight: C,
   source: m.jXE.DISCOVER_SEARCH,
   prioritizedGameIds: N,
   onlyAnimateIconOnHover: !0
 }, e.id);
   }, [
-S,
+f,
 C,
 N
-  ]), v = s.useMemo(() => null != f && (0, I.Pw)(f) ? T : [], [
+  ]), v = s.useMemo(() => null != S && (0, I.Pw)(S) ? T : [], [
 T,
-f
+S
   ]), Z = s.useCallback(e => {
-e && v.length > 0 && (0, c.Oe)(v.map(e => e.id), 'top_picks', S);
+e && v.length > 0 && (0, c.Oe)(v.map(e => e.id), 'top_picks', f);
   }, [
 v,
-S
+f
   ]);
   return 0 !== T.length && p ? (0, i.jsx)(o.$, {
 onChange: Z,

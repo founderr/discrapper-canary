@@ -35,11 +35,11 @@ function g(e) {
   var t, n, g, p;
   let {
 quest: T
-  } = e, f = (0, c.B6)(T.config.expiresAt, {
+  } = e, S = (0, c.B6)(T.config.expiresAt, {
 month: 'numeric',
 day: '2-digit'
   }), {
-isClaiming: S,
+isClaiming: f,
 isEnrolling: C
   } = (0, a.cj)([d.Z], () => ({
 isClaiming: d.Z.isClaimingRewardCode(T.id) || d.Z.isClaimingReward(T.id) || d.Z.isFetchingRewardCode(T.id),
@@ -54,10 +54,10 @@ location: u.jn.QUEST_BAR
 });
   }, [T]), x = null;
   return (v && A ? x = (0, i.jsx)(m, {
-submitting: S,
+submitting: f,
 onClick: O
   }) : Z ? Z && A ? x = (0, i.jsx)(m, {
-submitting: S,
+submitting: f,
 onClick: O
   }) : Z && N && !L ? x = (0, i.jsx)(r.Button, {
 color: r.ButtonColors.PRIMARY,
@@ -75,7 +75,7 @@ color: r.ButtonColors.PRIMARY,
 disabled: !0,
 className: I.button,
 children: h.Z.Messages.QUESTS_ENDED_ON_DATE.format({
-  expiryDate: f
+  expiryDate: S
 })
   }), null == x) ? null : (0, i.jsx)('div', {
 className: I.container,

@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(410575),
   p = n(941129),
   T = n(83200),
-  f = n(634894),
-  S = n(586902),
+  S = n(634894),
+  f = n(586902),
   C = n(570928),
   N = n(515550),
   A = n(1585),
@@ -74,8 +74,8 @@ var i = n(735250),
   eg = n(78839),
   ep = n(285952),
   eT = n(976401),
-  ef = n(333454),
-  eS = n(864441),
+  eS = n(333454),
+  ef = n(864441),
   eC = n(626135),
   eN = n(768581),
   eA = n(572004),
@@ -167,13 +167,13 @@ return (c || o && a.isPomelo()) && (e = (0, i.jsx)(C.Z, {
   children: [
     (0, i.jsx)('div', {
       className: eM.panelTitleContainer,
-      children: (0, i.jsx)(eS.Z, {
+      children: (0, i.jsx)(ef.Z, {
         children: l
       })
     }),
     (0, i.jsx)('div', {
       className: eM.panelSubtextContainer,
-      children: (0, i.jsx)(ef.Z, {
+      children: (0, i.jsx)(eS.Z, {
         children: null != e ? e : s
       })
     })
@@ -604,7 +604,7 @@ c = (0, M.a)(),
   streaming: null != eh.Z.findActivity(e => e.type === eR.IIU.STREAMING),
   status: eh.Z.getStatus()
 })),
-_ = (0, S.Z)({
+_ = (0, f.Z)({
   userId: r
 }),
 I = eL.ZP.useUserTag(n, {
@@ -647,10 +647,10 @@ en = (0, X.t)(),
 ei = (0, es.Z)(n),
 ea = (null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === ex.rL,
 er = 'account';
-  (0, f.j)({
+  (0, S.j)({
 location: er + ' auto on',
 autoTrackExposure: !0
-  }), (0, f.j)({
+  }), (0, S.j)({
 location: er + ' auto off',
 autoTrackExposure: !1
   }), (0, Q.o)();
@@ -697,18 +697,18 @@ eT = function() {
   ]), !e && !!r && !c && null != n && n;
 }(),
 {
-  enabled: ef
+  enabled: eS
 } = (0, z._)({
   location: 'AccountConnected'
 }),
-eS = {
+ef = {
   avatar: [],
   settings: []
 };
-  return !D && (eT && eS.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), a && (eS.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), B && F === (null === (t = (0, k.BS)(eb.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && eS.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), q && J && eS.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), $ && (1 === ee ? eS.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eS.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), ep && eS.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), en && eS.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), ei && eS.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), ef && eS.settings.push(o.z.PRIDE_ICONS_COACHMARK), ea && eS.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, i.jsx)(eU, {
+  return !D && (eT && ef.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), a && (ef.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), B && F === (null === (t = (0, k.BS)(eb.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && ef.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), q && J && ef.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), $ && (1 === ee ? ef.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : ef.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), ep && ef.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), en && ef.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), ei && ef.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eS && ef.settings.push(o.z.PRIDE_ICONS_COACHMARK), ea && ef.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, i.jsx)(eU, {
 currentUser: n,
 customStatusActivity: c,
-dismissibleContents: eS,
+dismissibleContents: ef,
 userTag: I,
 hidePrivateData: m,
 occluded: D,
@@ -776,7 +776,7 @@ onContextMenu: I
 Component: g,
 play: p,
 events: T
-  } = (0, u.O)(m ? 'unmute' : 'mute'), f = n || a ? E.MicrophoneDenyIcon : g;
+  } = (0, u.O)(m ? 'unmute' : 'mute'), S = n || a ? E.MicrophoneDenyIcon : g;
   return s.useEffect(() => () => p(), [
 m,
 p
@@ -790,7 +790,7 @@ onMouseEnter: () => {
 onMouseLeave: () => {
   _(), T.onMouseLeave();
 },
-icon: (0, i.jsx)(f, {
+icon: (0, i.jsx)(S, {
   size: 'custom',
   width: 20,
   height: 20,

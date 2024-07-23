@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return S;
+return f;
   }
 }), n(47120);
 var i = n(735250),
@@ -20,21 +20,21 @@ var i = n(735250),
   g = n(46140),
   p = n(689938),
   T = n(855892);
-let f = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
+let S = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 
-function S(e) {
+function f(e) {
   var t, n, a;
   let {
-quest: S,
+quest: f,
 questContent: C,
 isHovering: N
-  } = e, A = E.r.build(S.config).defaultReward.messages.name, v = (0, d.Rf)(S), Z = v.percentComplete > 0, [L, O] = s.useState(0), R = s.useRef(null), x = s.useRef(null), b = (0, _.D)({
-quest: S,
+  } = e, A = E.r.build(f.config).defaultReward.messages.name, v = (0, d.Rf)(f), Z = v.percentComplete > 0, [L, O] = s.useState(0), R = s.useRef(null), x = s.useRef(null), b = (0, _.D)({
+quest: f,
 taskDetails: v,
 location: g.dr.QUEST_HOME_DESKTOP,
 questContent: u.jn.QUEST_HOME_DESKTOP,
 useV2Variants: !0
-  }), P = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, M = (null === (n = S.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, D = (0, d.B6)(null === (a = S.userStatus) || void 0 === a ? void 0 : a.claimedAt), y = null != x.current && x.current.scrollHeight > x.current.clientHeight;
+  }), P = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, M = (null === (n = f.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, D = (0, d.B6)(null === (a = f.userStatus) || void 0 === a ? void 0 : a.claimedAt), y = null != x.current && x.current.scrollHeight > x.current.clientHeight;
   s.useEffect(() => {
 null != R.current && O(R.current.offsetHeight);
   }, []);
@@ -93,20 +93,20 @@ children: [
         className: T.progressWrapper,
         children: [
           P && (0, i.jsx)(o.LottieAnimation, {
-            importData: f,
+            importData: S,
             className: T.confetti,
             loop: !1,
             autoplay: !1,
             shouldAnimate: !k
           }),
           (0, i.jsx)(h.Z, {
-            quest: S,
+            quest: f,
             size: 76,
             percentComplete: v.percentComplete,
             children: (0, i.jsx)('div', {
               className: T.circularRewardTileWrapper,
               children: (0, i.jsx)(I.Z, {
-                quest: S,
+                quest: f,
                 questContent: C,
                 className: T.circularQuestRewardTileAsset
               })
@@ -114,7 +114,7 @@ children: [
           })
         ]
       }) : (0, i.jsx)(I.Z, {
-        quest: S,
+        quest: f,
         autoplay: N,
         questContent: u.jn.QUEST_HOME_DESKTOP,
         className: T.questRewardTileAsset
@@ -140,7 +140,7 @@ children: [
     ]
   }),
   (0, i.jsx)(m.Z, {
-    quest: S
+    quest: f
   })
 ]
   });

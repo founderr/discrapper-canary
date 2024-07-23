@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(918701),
   p = n(585500),
   T = n(566078),
-  f = n(602667),
-  S = n(611855),
+  S = n(602667),
+  f = n(611855),
   C = n(670638),
   N = n(667105),
   A = n(860151),
@@ -95,7 +95,7 @@ taskDetails: V,
 location: v.dr.ACTIVITY_PANEL,
 questContent: m.jn.ACTIVITY_PANEL
   });
-  return H || G || B || !(0, g.dl)(o) ? null : (0, i.jsx)(f.A, {
+  return H || G || B || !(0, g.dl)(o) ? null : (0, i.jsx)(S.A, {
 questOrQuests: o,
 questContent: m.jn.ACTIVITY_PANEL,
 children: e => {
@@ -119,7 +119,7 @@ children: e => {
         children: [
           k ? (0, i.jsx)(R, {
             quest: o
-          }) : (0, i.jsx)(S.Z, {
+          }) : (0, i.jsx)(f.Z, {
             textOpacity: 0.5
           }),
           (0, i.jsx)(C.r, {

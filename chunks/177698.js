@@ -23,8 +23,8 @@ codeChallengeMethod: m,
 state: g,
 guildId: p,
 channelId: T,
-prompt: f,
-disableGuildSelect: S,
+prompt: S,
+disableGuildSelect: f,
 disclosures: C,
 integrationType: N
   } = e, A = 'OAuth2Authorize_'.concat(n, '_').concat(p, '_').concat(T), v = null != N ? null == o ? void 0 : o.get(N) : void 0, Z = null !== (t = null == v ? void 0 : v.application) && void 0 !== t ? t : r.Z.getApplication(n);
@@ -52,8 +52,8 @@ let r = n => {
   permissions: u,
   guildId: p,
   channelId: T,
-  prompt: f,
-  disableGuildSelect: 'boolean' == typeof S ? S : 'true' === S,
+  prompt: S,
+  disableGuildSelect: 'boolean' == typeof f ? f : 'true' === f,
   integrationType: N
 }), {
   modalKey: A,

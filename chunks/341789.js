@@ -65,18 +65,18 @@ selectedTab: n,
 onScroll: r,
 onGuildCardSeen: u,
 onGuildCardClick: I
-  } = e, p = (0, d.lg)(n), T = (0, a.e7)([l.ZP], () => l.ZP.isFetching()), f = (0, a.Wu)([l.ZP], () => l.ZP.getDiscoverableGuilds().featured.guilds), S = (0, a.Wu)([l.ZP], () => l.ZP.getDiscoverableGuilds().gamesYouPlay.guilds);
+  } = e, p = (0, d.lg)(n), T = (0, a.e7)([l.ZP], () => l.ZP.isFetching()), S = (0, a.Wu)([l.ZP], () => l.ZP.getDiscoverableGuilds().featured.guilds), f = (0, a.Wu)([l.ZP], () => l.ZP.getDiscoverableGuilds().gamesYouPlay.guilds);
   switch (s.useEffect(() => {
-  f.length > 0 && !T && c.Zt({
-    allGuilds: f,
+  S.length > 0 && !T && c.Zt({
+    allGuilds: S,
     loadId: t,
-    gamesYouPlayGuilds: S,
+    gamesYouPlayGuilds: f,
     categoryId: p
   });
 }, [
-  f,
-  p,
   S,
+  p,
+  f,
   T,
   t
 ]), n) {

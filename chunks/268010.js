@@ -37,20 +37,20 @@ requestId: c,
 closePopout: x
   } = e, {
 user: T,
-mediaImageSrc: v,
-episodeDescription: N
+mediaImageSrc: N,
+episodeDescription: v
   } = (0, m.Bj)(n), {
 primaryColor: S,
 secondaryColor: Z
-  } = (0, p.Z)(v), A = (0, s.e7)([r.default], () => r.default.locale), M = a.useCallback(e => {
-if (null != T && null != v)
+  } = (0, p.Z)(N), A = (0, s.e7)([r.default], () => r.default.locale), M = a.useCallback(e => {
+if (null != T && null != N)
   return (0, h.B)({
     entry: n,
-    mediaImageSrc: v,
+    mediaImageSrc: N,
     avatarSrc: T.getAvatarURL(t.guild_id, 128),
     description: g(n, t, T),
     timestamp: (0, u.yh)(n, A),
-    episodeDescription: N,
+    episodeDescription: v,
     colors: [
       S,
       Z
@@ -60,9 +60,9 @@ if (null != T && null != v)
   }, [
 t,
 n,
-N,
-A,
 v,
+A,
+N,
 S,
 Z,
 T
@@ -79,7 +79,7 @@ if (null != e && null != e.protocol && null != e.hostname)
   return null == T ? null : (0, i.jsxs)(f.yR, {
 children: [
   (0, i.jsx)(f.wG, {
-    thumbnailSrc: v,
+    thumbnailSrc: N,
     channel: t,
     entry: n,
     userDescription: (0, u.kr)(n) ? C.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING : C.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,

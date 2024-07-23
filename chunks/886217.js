@@ -30,7 +30,7 @@ return a.plainFormat({
   userName: l
 }).replaceAll('*', '');
   },
-  v = (e, t) => x.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_TOP_ARTIST.format({
+  N = (e, t) => x.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_TOP_ARTIST.format({
 username: t.username,
 artist: e.extra.artist.name
   });
@@ -41,7 +41,7 @@ entry: n,
 requestId: s,
 closePopout: h
   } = e, {
-parent_title: N,
+parent_title: v,
 provider: S,
 image_url: Z
   } = n.extra.media, A = n.extra.artist.name, M = (0, r.e7)([c.default], () => c.default.getUser(n.author_id)), {
@@ -98,7 +98,7 @@ children: [
       'aria-label': x.Z.Messages.SPOTIFY
     }) : null,
     userDescription: x.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
-    title: N,
+    title: v,
     subtitle: A,
     badges: (0, i.jsx)(E.Gk, {
       location: E.Gt.POPOUT,
@@ -113,7 +113,7 @@ children: [
       user: M,
       channel: t,
       generateReactionImage: L,
-      reactionImageAltText: v(n, M),
+      reactionImageAltText: N(n, M),
       entry: n,
       requestId: s
     })

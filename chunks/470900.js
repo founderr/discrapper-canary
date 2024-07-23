@@ -3,7 +3,7 @@ n.d(t, {
 return T;
   },
   Z: function() {
-return v;
+return N;
   }
 });
 var i = n(735250);
@@ -106,7 +106,7 @@ children: [
   });
 }
 
-function v(e) {
+function N(e) {
   let {
 user: t,
 onClose: n

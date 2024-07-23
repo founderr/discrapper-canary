@@ -53,7 +53,7 @@ function T(e) {
   return I('QuantitativeValue', e);
 }
 (c = s || (s = {})).DAMAGED = 'http://schema.org/DamagedCondition', c.NEW = 'http://schema.org/NewCondition', c.REFURBISHED = 'http://schema.org/RefurbishedCondition', c.USED = 'http://schema.org/UsedCondition', (d = a || (a = {})).DISCONTINUED = 'http://schema.org/Discontinued', d.IN_STOCK = 'http://schema.org/InStock', d.IN_STORE_ONLY = 'http://schema.org/InStoreOnly', d.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability', d.ONLINE_ONLY = 'http://schema.org/OnlineOnly', d.OUT_OF_STOCK = 'http://schema.org/OutOfStock', d.PREORDER = 'http://schema.org/PreOrder', d.PRESALE = 'http://schema.org/PreSale', d.SOLD_OUT = 'http://schema.org/SoldOut', p.ItemConditions = s, p.ItemAvailability = a, (u = r || (r = {})).YEARLY = 'ANN', u.MONTHLY = 'MON', T.UnitCodes = r;
-class f extends(l = E.Component) {
+class S extends(l = E.Component) {
   render() {
 let {
   debug: e,
@@ -68,18 +68,18 @@ return (0, _.jsx)('script', {
 });
   }
 }
-h(f, 'Thing', m), h(f, 'Brand', m), h(f, 'Person', function(e) {
+h(S, 'Thing', m), h(S, 'Brand', m), h(S, 'Person', function(e) {
   return I('Person', e);
-}), h(f, 'Organization', function(e) {
+}), h(S, 'Organization', function(e) {
   return I('Organization', e);
-}), h(f, 'ItemPage', function(e) {
+}), h(S, 'ItemPage', function(e) {
   return I('ItemPage', e);
-}), h(f, 'Product', g), h(f, 'Offer', p), h(f, 'Rating', function(e) {
+}), h(S, 'Product', g), h(S, 'Offer', p), h(S, 'Rating', function(e) {
   return I('Rating', e);
-}), h(f, 'AggregateRating', function(e) {
+}), h(S, 'AggregateRating', function(e) {
   return I('AggregateRating', e);
-}), h(f, 'AggregateOffer', function(e) {
+}), h(S, 'AggregateOffer', function(e) {
   return I('AggregateOffer', e);
-}), h(f, 'QuantitativeValue', T), h(f, 'UnitPriceSpecification', function(e) {
+}), h(S, 'QuantitativeValue', T), h(S, 'UnitPriceSpecification', function(e) {
   return I('UnitPriceSpecification', e);
-}), t.Z = f;
+}), t.Z = S;

@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(100527),
   x = n(367907),
   T = n(906732),
-  v = n(493324),
-  N = n(611064),
+  N = n(493324),
+  v = n(611064),
   S = n(677432),
   Z = n(178762),
   A = n(868671),
@@ -266,7 +266,7 @@ class et extends a.Component {
 return e.channel.id !== this.props.channel.id || e.version !== this.props.version || e.groups.length !== this.props.groups.length;
   }
   componentDidMount() {
-this.updateSubscription(), this.trackMemberListViewed(), this._areActivitiesExperimentallyHidden = (0, v.$)('ChannelMembers');
+this.updateSubscription(), this.trackMemberListViewed(), this._areActivitiesExperimentallyHidden = (0, N.$)('ChannelMembers');
   }
   componentDidUpdate(e) {
 e.channel.id !== this.props.channel.id && this.updateSubscription(), this.trackMemberListViewed(), this.updateMaxContentFeedRowSeen();
@@ -369,7 +369,7 @@ super(...e), Y(this, '_list', null), Y(this, '_areActivitiesExperimentallyHidden
     groups: n,
     channel: s
   } = this.props, l = n[t];
-  return (0, N.R)(l) ? (0, a.createElement)(N.Z, {
+  return (0, v.R)(l) ? (0, a.createElement)(v.Z, {
     ...l,
     key: 'section-'.concat(t)
   }) : 0 === t ? (0, i.jsx)(R.Z, {
@@ -461,7 +461,7 @@ super(...e), Y(this, '_list', null), Y(this, '_areActivitiesExperimentallyHidden
   this.props.updateMaxContentFeedRowSeen(n + t - 40);
 }, 50)), Y(this, 'getContentFeedGroup', () => {
   let e = this.props.groups[A.T];
-  if ((0, N.R)(e))
+  if ((0, v.R)(e))
     return e;
 }), Y(this, 'hasContentFeed', () => null != this.getContentFeedGroup()), Y(this, 'getRowHeightComputer', () => {
   let e = this.getContentFeedGroup();
@@ -577,7 +577,7 @@ t.scrollToBottom({
     requestAnimationFrame(() => setTimeout(e, 100));
   }
 });
-  }), []), v = (0, d.ZP)({
+  }), []), N = (0, d.ZP)({
 id: 'members-'.concat(t.id),
 setFocus: E,
 isEnabled: r,
@@ -589,7 +589,7 @@ value: s,
 children: (0, i.jsx)('div', {
   className: l()(z.container, n),
   children: (0, i.jsx)(c.bG, {
-    navigator: v,
+    navigator: N,
     children: (0, i.jsx)(et, {
       ...e,
       ...o,

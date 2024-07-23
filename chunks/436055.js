@@ -3,24 +3,24 @@ n.d(t, {
 return s;
   }
 }), n(411104);
-var o = n(470079),
-  r = n(250683),
-  a = n(253135);
+var r = n(470079),
+  a = n(250683),
+  o = n(253135);
 
 function s(e) {
   let {
 codeBase64: t,
 chunkSize: n,
 desiredLength: s
-  } = e, i = o.useMemo(() => {
+  } = e, i = r.useMemo(() => {
 if (null == t || '' === t)
   return null;
-let e = r.toByteArray(t),
-  o = (0, a.Dq)(e, s, n);
-if (null == o)
+let e = a.toByteArray(t),
+  r = (0, o.Dq)(e, s, n);
+if (null == r)
   return null;
 let i = RegExp('.{1,'.concat(n, '}'), 'g'),
-  c = o.match(i);
+  c = r.match(i);
 return null == c ? null : Array.from(c);
   }, [
 n,

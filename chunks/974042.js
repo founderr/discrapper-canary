@@ -31,7 +31,7 @@ usernameLower: null != t ? t.username.toLowerCase() : null
   };
 }
 
-function f(e) {
+function S(e) {
   return {
 status: h.Z.getStatus(e),
 isMobile: h.Z.isMobileOnline(e),
@@ -40,7 +40,7 @@ applicationStream: u.Z.getAnyStreamForUser(e)
   };
 }
 
-function S(e) {
+function f(e) {
   let t = [];
   return a()(_.ZP.memberOf(e)).map(E.Z.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
 null != e && t.push(e);
@@ -68,16 +68,16 @@ let e = a().map(I.Z.getRelationships(), (e, t) => new C({
     type: e,
     nickname: I.Z.getNickname(t),
     ...T(t),
-    ...f(t),
-    ...S(t)
+    ...S(t),
+    ...f(t)
   })),
   t = a().map(d.Z.getSuggestions(), e => new C({
     key: e.key,
     type: 99,
     nickname: e.name,
     ...T(e.key),
-    ...f(e.key),
-    ...S(e.key)
+    ...S(e.key),
+    ...f(e.key)
   }));
 return new N(a().concat(e, t));
   }
@@ -171,7 +171,7 @@ class D extends(i = r.ZP.Store) {
 this.waitFor(I.Z, h.Z, m.default, E.Z, _.ZP, u.Z, d.Z), this.syncWith([I.Z], P), this.syncWith([d.Z], P), this.syncWith([m.default], M(T)), this.syncWith([
   h.Z,
   u.Z
-], M(f)), b();
+], M(S)), b();
   }
   getState() {
 return {

@@ -11,8 +11,8 @@ var a, r, l, o, c = n(392711),
   g = n(981631),
   p = n(71080);
 let T = new Set(),
-  f = g.QZA.CLOSED,
-  S = !1,
+  S = g.QZA.CLOSED,
+  f = !1,
   C = null,
   N = null,
   A = null,
@@ -33,14 +33,14 @@ function x() {
   if (A = I.Z.getChannel(), v = I.Z.getCategory(), null == A)
 return !1;
   let e = A.getGuildId();
-  N = C = R(A), null == C[Z] && (Z = e), s = null != v, i = h.o4(A, v), L = null, S = !1, f = g.QZA.CLOSED, T.clear();
+  N = C = R(A), null == C[Z] && (Z = e), s = null != v, i = h.o4(A, v), L = null, f = !1, S = g.QZA.CLOSED, T.clear();
 }
 class b extends(a = u.ZP.Store) {
   initialize() {
 this.waitFor(I.Z, m.Z);
   }
   hasChanges() {
-return S;
+return f;
   }
   showNotice() {
 return this.hasChanges();
@@ -58,7 +58,7 @@ return C;
 return Z;
   }
   get formState() {
-return f;
+return S;
   }
   get isLockable() {
 return s;
@@ -106,7 +106,7 @@ a = {
 }, C = {
   ...C,
   [t]: a
-}, T.add(t), f = g.QZA.OPEN, S = !d().isEqual(C, N), i = h.o4(A, v);
+}, T.add(t), S = g.QZA.OPEN, f = !d().isEqual(C, N), i = h.o4(A, v);
   },
   CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function(e) {
 let {
@@ -121,7 +121,7 @@ else {
 }
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-f = g.QZA.CLOSED, C = null, N = null, A = null, v = null, S = !1, T.clear(), Z = null, L = null;
+S = g.QZA.CLOSED, C = null, N = null, A = null, v = null, f = !1, T.clear(), Z = null, L = null;
   },
   CHANNEL_UPDATES: function(e) {
 let {
@@ -150,13 +150,13 @@ for (let e of t)
 return n;
   },
   CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING: function() {
-f = g.QZA.SUBMITTING;
+S = g.QZA.SUBMITTING;
   },
   CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function(e) {
 let {
   silent: t
 } = e;
-t ? f = g.QZA.OPEN : (f = g.QZA.CLOSED, x());
+t ? S = g.QZA.OPEN : (S = g.QZA.CLOSED, x());
   },
   CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function(e) {
 let {

@@ -25,8 +25,8 @@ var r = t(442837),
   R = t(570870),
   C = t(389052),
   g = t(24311),
-  m = t(332576),
-  G = t(710631),
+  G = t(332576),
+  m = t(710631),
   y = t(297047),
   D = t(88966),
   v = t(712301),
@@ -73,7 +73,7 @@ guildId: t,
 userId: n.id,
 analyticsLocation: Y,
 context: w
-  }), eu = (0, G.Z)({
+  }), eu = (0, m.Z)({
 user: n,
 guildId: t
   }), el = (0, d.Z)(null, n), eo = (0, f.Z)(n), ea = (0, C.Z)({
@@ -81,7 +81,7 @@ user: n
   }), es = (0, Z.Z)(n, t, o.id), ed = (0, b.Z)(n.id, t), ec = (0, v.Z)(n, t), e_ = (0, N.Z)({
 id: n.id,
 label: B.Z.Messages.COPY_ID_USER
-  }), eE = (0, m.Z)(n.id, o.id), eI = (0, E.Z)(n.id), eT = (0, _.Z)(o.id), eN = (0, A.Z)(n), eS = (0, p.Z)(n, t, o.id), eA = (0, r.e7)([O.Z], () => null != W ? O.Z.getChannel(W) : null), ep = (0, R.Z)({
+  }), eE = (0, G.Z)(n.id, o.id), eI = (0, E.Z)(n.id), eT = (0, _.Z)(o.id), eN = (0, A.Z)(n), eS = (0, p.Z)(n, t, o.id), eA = (0, r.e7)([O.Z], () => null != W ? O.Z.getChannel(W) : null), ep = (0, R.Z)({
 commandType: s.yU.USER,
 commandTargetId: n.id,
 channel: null != eA ? eA : o,

@@ -185,7 +185,7 @@ to: {
 config: h,
 delay: s ? 0 : 800,
 onRest: () => f(!0)
-  }), v = (0, r.useSpring)({
+  }), N = (0, r.useSpring)({
 from: {
   opacity: 0
 },
@@ -194,7 +194,7 @@ to: {
 },
 config: p,
 delay: 1000
-  }), N = (0, c.Fg)(), S = N === d.BR.LIGHT ? '#FFFFFF' : '#1C1D23', Z = N === d.BR.LIGHT ? '#EBEDEF' : '#26272F', A = N === d.BR.LIGHT ? '#CCCCCC' : '#1A1A1E';
+  }), v = (0, c.Fg)(), S = v === d.BR.LIGHT ? '#FFFFFF' : '#1C1D23', Z = v === d.BR.LIGHT ? '#EBEDEF' : '#26272F', A = v === d.BR.LIGHT ? '#CCCCCC' : '#1A1A1E';
   return (0, i.jsx)('div', {
 className: u.container,
 ref: I,
@@ -220,7 +220,7 @@ children: (0, i.jsxs)(r.animated.div, {
         },
         children: (0, i.jsx)(r.animated.div, {
           className: l()(u.contentAnimContainer, n && u.fullHeight),
-          style: v,
+          style: N,
           children: t
         })
       })

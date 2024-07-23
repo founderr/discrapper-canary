@@ -18,8 +18,8 @@ var i = n(470079),
   I = n(572004),
   x = n(585483),
   T = n(358085),
-  v = n(709054),
-  N = n(418476),
+  N = n(709054),
+  v = n(418476),
   S = n(901461),
   Z = n(432376),
   A = n(996861),
@@ -54,7 +54,7 @@ switch (n.key.toLowerCase()) {
   case 'e':
     if (y) {
       ;
-      if (i = G, j = H, L = B, !j.isSystemDM() && (0, N.Z)(L, i))
+      if (i = G, j = H, L = B, !j.isSystemDM() && (0, v.Z)(L, i))
         n.preventDefault(), (0, A.Hd)(H, B);
     }
     break;
@@ -103,7 +103,7 @@ switch (n.key.toLowerCase()) {
     if (y && (0, d.ki)(H, B))
       n.preventDefault(), (0, u.R6)(H, B, 'Message Shortcut');
     else if (B.hasFlag(M.iLy.HAS_THREAD)) {
-      let e = m.Z.getChannel(v.default.castMessageIdAsChannelId(B.id));
+      let e = m.Z.getChannel(N.default.castMessageIdAsChannelId(B.id));
       null != e && (y || w) && (n.preventDefault(), (0, u.ok)(e, w));
     }
     break;

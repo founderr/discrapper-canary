@@ -27,8 +27,8 @@ let I = {},
   g = !1,
   p = {},
   T = {},
-  f = {},
-  S = {
+  S = {},
+  f = {
 id: null,
 justChanged: !1
   },
@@ -67,13 +67,13 @@ return m;
 return g;
   }
   get lastDeviceConnected() {
-return f;
+return S;
   }
   get inputDevices() {
 return p;
   }
   get lastInputSystemDevice() {
-return S;
+return f;
   }
   get outputDevices() {
 return T;
@@ -88,11 +88,11 @@ let {
   inputDevices: t,
   outputDevices: n
 } = e, i = {};
-S.justChanged = !1, t.forEach(e => {
+f.justChanged = !1, t.forEach(e => {
   if (i[A(e)] = e.id, e.id === E.w5) {
     var t;
     let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-    n !== S.id && (S.justChanged = !0), S.id = n;
+    n !== f.id && (f.justChanged = !0), f.id = n;
   }
 });
 let s = {};
@@ -112,10 +112,10 @@ let r = Object.keys(p),
   c = Object.keys(s),
   d = a().difference(r, l),
   u = a().difference(o, c);
-return d.length > 0 || u.length > 0 ? f = {} : (a().difference(l, r).forEach(e => {
-  f[e] = v(f[e], e, _.QyF.INPUT);
+return d.length > 0 || u.length > 0 ? S = {} : (a().difference(l, r).forEach(e => {
+  S[e] = v(S[e], e, _.QyF.INPUT);
 }), a().difference(c, o).forEach(e => {
-  f[e] = v(f[e], e, _.QyF.OUTPUT);
+  S[e] = v(S[e], e, _.QyF.OUTPUT);
 })), !(a().isEqual(r, l) && a().isEqual(o, c)) && (p = i, T = s, !0);
   },
   CONNECTED_DEVICE_SET: function(e) {
@@ -133,16 +133,16 @@ let {
     let t = T[e];
     l.Z.wait(() => o.Z.setOutputDevice(t, n));
   }
-}(t, n, i), delete f[t];
+}(t, n, i), delete S[t];
   },
   CONNECTED_DEVICE_IGNORE: function(e) {
 let {
   displayName: t
 } = e;
-delete f[t];
+delete S[t];
   },
   CONNECTED_DEVICE_NEVER_SHOW_MODAL: function() {
-f = {}, m = {
+S = {}, m = {
   neverShowModal: !0
 };
   }

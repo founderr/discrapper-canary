@@ -26,8 +26,8 @@ var i = n(735250),
   I = n(314897),
   x = n(592125),
   T = n(131951),
-  v = n(451478),
-  N = n(40300),
+  N = n(451478),
+  v = n(40300),
   S = n(368666),
   Z = n(685203),
   A = n(112560),
@@ -88,7 +88,7 @@ streamId: z
   } = t, Y = (0, r.e7)([x.Z], () => x.Z.getChannel(F.channelId)), K = (0, r.e7)([g.Z], () => g.Z.getActiveStreamForUser(W.id, F.guildId), [
 W.id,
 F.guildId
-  ]), q = (0, r.e7)([g.Z], () => g.Z.getAllActiveStreams().length > 0), X = (0, r.e7)([v.Z], () => v.Z.isFocused()), Q = (null == K ? void 0 : K.ownerId) === G, J = Q && !X && !S, $ = null != K ? (0, m.Z)(K, W, W.id === G, J) : null, ee = P < 195;
+  ]), q = (0, r.e7)([g.Z], () => g.Z.getAllActiveStreams().length > 0), X = (0, r.e7)([N.Z], () => N.Z.isFocused()), Q = (null == K ? void 0 : K.ownerId) === G, J = Q && !X && !S, $ = null != K ? (0, m.Z)(K, W, W.id === G, J) : null, ee = P < 195;
   if (a.useEffect(() => {
   !q && (null == Y ? void 0 : Y.isGuildStageVoice()) && !Q && ((0, d.rn)(F), c.Z.updateStageStreamSize(F.channelId, !1));
 }, []), a.useEffect(() => {
@@ -133,7 +133,7 @@ return (0, i.jsxs)(i.Fragment, {
       hasScreenMessage: null != $,
       stream: F
     }) : null,
-    (0, i.jsx)(N.Z, {
+    (0, i.jsx)(v.Z, {
       onResize: s,
       wrapperClassName: w.videoWrapper,
       className: w.content,

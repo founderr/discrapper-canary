@@ -29,8 +29,8 @@ exitFullScreen: g,
 appContext: I,
 analyticsLocation: x,
 className: T,
-...v
-  } = e, N = null == C ? void 0 : C.getGuildId(), S = null == C ? void 0 : C.id, Z = (0, o.e7)([h.Z], () => null != N ? h.Z.getGuild(N) : null, [N]), A = (0, o.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(S), [S]);
+...N
+  } = e, v = null == C ? void 0 : C.getGuildId(), S = null == C ? void 0 : C.id, Z = (0, o.e7)([h.Z], () => null != v ? h.Z.getGuild(v) : null, [v]), A = (0, o.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(S), [S]);
   if (t = Z, a = C, !(null != t && null != a && p.Z.can(m.Plq.CREATE_INSTANT_INVITE, a)))
 return null;
   let M = _.Z.Messages.INSTANT_INVITE;
@@ -84,7 +84,7 @@ children: [
       });
     },
     className: s()(T, f.textButton),
-    ...v,
+    ...N,
     children: M
   }),
   (0, i.jsx)(u.Z, {

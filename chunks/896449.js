@@ -32,7 +32,7 @@ applicationId: I ? null === (t = f.extra) || void 0 === t ? void 0 : t.applicati
 source: o.m1.ActivityCardContextMenu,
 trackEntryPointImpression: !0,
 sourceUserId: f.author_id
-  }), [T, v] = a.useState(!1);
+  }), [T, N] = a.useState(!1);
   return (0, i.jsx)(s.Popout, {
 align: 'top',
 position: 'right',
@@ -64,7 +64,7 @@ renderPopout: () => (0, i.jsx)(s.Menu, {
 children: () => (0, i.jsx)(s.Clickable, {
   className: p.menuIcon,
   onClick: () => {
-    v(!0);
+    N(!0);
   },
   children: (0, i.jsx)(s.MoreHorizontalIcon, {
     color: 'currentColor',

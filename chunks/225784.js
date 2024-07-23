@@ -15,8 +15,8 @@ var i, s = n(735250),
   g = n(556017),
   p = n(879484),
   T = n(26580),
-  f = n(206887),
-  S = n(981631),
+  S = n(206887),
+  f = n(981631),
   C = n(689938),
   N = n(806315),
   A = n(129512),
@@ -36,9 +36,9 @@ class O extends(i = a.PureComponent) {
 if (t)
   return Z;
 switch (e) {
-  case S.BRd.DARK:
+  case f.BRd.DARK:
     return A;
-  case S.BRd.LIGHT:
+  case f.BRd.LIGHT:
     return v;
 }
   }
@@ -60,7 +60,7 @@ let {
   presenceCount: O,
   memberCount: R,
   keywords: x
-} = t, b = null === (e = t.features) || void 0 === e ? void 0 : e.has(S.oNc.HUB), P = I.ZP.getGuildDiscoverySplashURL({
+} = t, b = null === (e = t.features) || void 0 === e ? void 0 : e.has(f.oNc.HUB), P = I.ZP.getGuildDiscoverySplashURL({
   id: t.id,
   splash: t.discoverySplash,
   size: 300 * (0, _.x_)()
@@ -133,7 +133,7 @@ return (0, s.jsx)(o.$, {
                 }),
                 U || j ? (0, s.jsx)('div', {
                   className: N.actionButtons,
-                  children: (0, s.jsx)(f.Z, {
+                  children: (0, s.jsx)(S.Z, {
                     guild: t
                   })
                 }) : null,

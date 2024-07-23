@@ -20,10 +20,10 @@ var i = n(735250),
   g = n(524484),
   p = n(689938),
   T = n(372844);
-let f = {
+let S = {
 offset: 2
   },
-  S = {
+  f = {
 serverDeaf: {
   icon: o.HeadphonesDenyIcon,
   colorize: !0,
@@ -77,15 +77,15 @@ let {
   localMute: a
 } = e;
 if (t)
-  return S.serverDeaf;
+  return f.serverDeaf;
 if (n)
-  return S.deaf;
+  return f.deaf;
 if (i)
-  return S.serverMute;
+  return f.serverMute;
 else if (a)
-  return S.localMute;
+  return f.localMute;
 else if (s)
-  return S.mute;
+  return f.mute;
   }({
 serverDeaf: Z,
 deaf: A,
@@ -149,7 +149,7 @@ children: e => (0, i.jsx)(o.Tooltip, {
     ...e,
     className: T.avatarContainer,
     onContextMenu: j,
-    focusProps: f,
+    focusProps: S,
     children: (0, i.jsx)(u.Z, {
       shakeLocation: g.oZ.VOICE_USER,
       isShaking: O,
@@ -189,7 +189,7 @@ icon: (0, i.jsx)(u, {
   size: 'xs',
   color: 'currentColor'
 }),
-focusProps: f
+focusProps: S
   }), E = (0, l.e7)([h.default], () => h.default.getId(), []), [I, m] = function(e, t) {
 let n = [];
 for (let i of e) {

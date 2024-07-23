@@ -25,7 +25,7 @@ I ? (0, c.hk)(C.guild_id, () => r.default.selectVoiceChannel(C.id)) : r.default.
 C.id,
 C.guild_id,
 I
-  ]), T = p.filter(e => e.type === m.Ui.VOICE), v = 4 === T.length ? 2 : 3, N = (0, s.Wu)([o.Z], () => T.map(e => o.Z.getParticipant(C.id, e.id)).filter(h.lm), [
+  ]), T = p.filter(e => e.type === m.Ui.VOICE), N = 4 === T.length ? 2 : 3, v = (0, s.Wu)([o.Z], () => T.map(e => o.Z.getParticipant(C.id, e.id)).filter(h.lm), [
 C.id,
 T
   ]);
@@ -35,9 +35,9 @@ children: [
   (0, i.jsx)('div', {
     className: f.tiles,
     style: {
-      maxWidth: 168 * v
+      maxWidth: 168 * N
     },
-    children: N.slice(0, 5).map(e => (0, i.jsx)(u.ZP, {
+    children: v.slice(0, 5).map(e => (0, i.jsx)(u.ZP, {
       participant: e,
       channel: C,
       className: f.tile,

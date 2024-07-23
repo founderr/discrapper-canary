@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(367907),
   p = n(770471),
   T = n(158631),
-  f = n(143614),
-  S = n(463119),
+  S = n(143614),
+  f = n(463119),
   C = n(377171),
   N = n(243778),
   A = n(922409),
@@ -53,7 +53,7 @@ let q = e => {
 let {
   selected: t,
   ...n
-} = e, s = (0, o.JA)('friends'), a = (0, d.e7)([j.Z], () => j.Z.getPendingCount()), r = (0, f.Z)(), {
+} = e, s = (0, o.JA)('friends'), a = (0, d.e7)([j.Z], () => j.Z.getPendingCount()), r = (0, S.Z)(), {
   canViewBroadcasts: l
 } = p.Z.useExperiment({
   location: 'friends_tab_no_track'
@@ -319,7 +319,7 @@ children: [
       (0, i.jsx)($, {
         selected: null == u ? null != s && s.startsWith(W.Z5c.MESSAGE_REQUESTS) : u === W.Z5c.MESSAGE_REQUESTS
       }, 'message-requests'),
-      (0, i.jsx)(S.i, {
+      (0, i.jsx)(f.i, {
         selected: u === W.Z5c.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(W.Z5c.COLLECTIBLES_SHOP)),
         locationState: {
           analyticsSource: {

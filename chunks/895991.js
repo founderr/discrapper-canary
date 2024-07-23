@@ -20,9 +20,9 @@ var i = n(735250),
   g = n(530151),
   p = n(981631),
   T = n(186901),
-  f = n(668840);
+  S = n(668840);
 
-function S(e, t, n) {
+function f(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -56,7 +56,7 @@ return (0, i.jsxs)(s.Fragment, {
     }),
     e ? null : t,
     (0, i.jsxs)(l.AdvancedScrollerAuto, {
-      className: r()(f.container, f.scroller),
+      className: r()(S.container, S.scroller),
       ref: this._scrollerRef,
       children: [
         e ? t : null,
@@ -73,13 +73,13 @@ return (0, i.jsxs)(s.Fragment, {
 });
   }
   constructor(...e) {
-super(...e), S(this, '_scrollerRef', s.createRef()), S(this, '_scrollToOnMount', void 0), S(this, '_scrollToPadding', 0), S(this, 'state', {
+super(...e), f(this, '_scrollerRef', s.createRef()), f(this, '_scrollToOnMount', void 0), f(this, '_scrollToPadding', 0), f(this, 'state', {
   includeUpdatesInScroller: !1
-}), S(this, 'handleHeightTallerThanHalfViewportChange', e => {
+}), f(this, 'handleHeightTallerThanHalfViewportChange', e => {
   this.setState({
     includeUpdatesInScroller: e
   });
-}), S(this, 'scrollToRow', (e, t) => {
+}), f(this, 'scrollToRow', (e, t) => {
   let n = this._scrollerRef.current;
   null != n ? (e.focus(), n.scrollIntoViewRect({
     start: t,

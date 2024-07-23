@@ -14,8 +14,8 @@ var i, s, a = n(735250),
   g = n(122810),
   p = n(833664),
   T = n(503438),
-  f = n(420660),
-  S = n(74433),
+  S = n(420660),
+  f = n(74433),
   C = n(952561),
   N = n(513202),
   A = n(906732),
@@ -468,7 +468,7 @@ children: (0, a.jsxs)('div', {
   assets: _,
   application_id: E
 } = i;
-  if (null != _ && (0, f.Z)(i)) {
+  if (null != _ && (0, S.Z)(i)) {
 var I;
 t = (0, a.jsx)(y.Z, {
   className: W.twitchSectionPreviewWrapper,
@@ -549,7 +549,7 @@ children: [
     })
   })
 ]
-  }), I = null !== (n = null === (t = (0, S.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : Y.Z.Messages.SHARING_SCREEN;
+  }), I = null !== (n = null === (t = (0, f.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : Y.Z.Messages.SHARING_SCREEN;
   return (0, a.jsxs)(J, {
 children: [
   (0, a.jsxs)('div', {
@@ -605,7 +605,7 @@ return null;
   let T = null != t.created_at && t.created_at > 0 ? {
   start: t.created_at
 } : void 0,
-f = (0, w.getAssetImage)(p.id, o, 300);
+S = (0, w.getAssetImage)(p.id, o, 300);
   return (0, a.jsxs)(J, {
 children: [
   (0, a.jsxs)('div', {
@@ -638,8 +638,8 @@ children: [
   (0, a.jsxs)('div', {
     className: W.embeddedActivityPlayerContainer,
     children: [
-      null != f ? (0, a.jsx)('img', {
-        src: f,
+      null != S ? (0, a.jsx)('img', {
+        src: S,
         alt: p.name,
         className: W.embeddedActivityImage
       }) : null,

@@ -15,8 +15,8 @@ var i = n(735250),
   g = n(585483),
   p = n(145604),
   T = n(718813),
-  f = n(981631),
-  S = n(582614);
+  S = n(981631),
+  f = n(582614);
 t.Z = s.memo(function() {
   let e = s.useRef(null),
 t = s.useCallback(t => {
@@ -31,14 +31,14 @@ t = s.useCallback(t => {
   } = e;
   r()(null != s, 'Shakeable is shaken when not mounted'), s.shake(n, i);
 }, []);
-  return s.useEffect(() => (u.Z.setLayout(d.ZP), u.Z.enable(), () => u.Z.disable()), []), s.useEffect(() => (g.S.subscribe(f.CkL.SHAKE_APP, t), () => {
-g.S.unsubscribe(f.CkL.SHAKE_APP, t);
+  return s.useEffect(() => (u.Z.setLayout(d.ZP), u.Z.enable(), () => u.Z.disable()), []), s.useEffect(() => (g.S.subscribe(S.CkL.SHAKE_APP, t), () => {
+g.S.unsubscribe(S.CkL.SHAKE_APP, t);
   }), [t]), (0, E.Z)(), (0, i.jsxs)(l.Shakeable, {
 ref: e,
-className: S.app,
+className: f.app,
 children: [
   (0, i.jsx)(T.Z, {
-    className: S.layers,
+    className: f.layers,
     children: (0, i.jsx)(o.Z, {})
   }),
   (0, i.jsx)(h.Z, {}),

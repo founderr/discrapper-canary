@@ -26,8 +26,8 @@ var i = n(735250),
   I = n(678869),
   x = n(278399),
   T = n(886217),
-  v = n(555672),
-  N = n(644548),
+  N = n(555672),
+  v = n(644548),
   S = n(335326),
   Z = n(268010),
   A = n(797342),
@@ -60,7 +60,7 @@ switch (t.content_type) {
       entry: t
     });
   case o.s.TOP_GAME:
-    return (0, i.jsx)(v.ZP, {
+    return (0, i.jsx)(N.ZP, {
       ...n,
       entry: t
     });
@@ -95,7 +95,7 @@ switch (t.content_type) {
       entry: t
     });
   case o.s.TOP_GAME:
-    return (0, i.jsx)(N.Z, {
+    return (0, i.jsx)(v.Z, {
       ...n,
       entry: t
     });
@@ -131,11 +131,11 @@ richPresenceName: g ? I : void 0
 openOnHover: T
   } = (0, _.C)({
 location: 'MemberListContentRow'
-  }), v = a.useRef(!1), [N, S] = a.useState(!1), [Z, b] = a.useState(!1), [R, O] = a.useState(!1), y = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
+  }), N = a.useRef(!1), [v, S] = a.useState(!1), [Z, b] = a.useState(!1), [R, O] = a.useState(!1), y = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
   a.useEffect(() => {
-N && y && O(!0);
+v && y && O(!0);
   }, [
-N,
+v,
 y
   ]);
   let D = a.useCallback(e => {
@@ -157,14 +157,14 @@ k = a.useCallback(() => {
   p(String(Date.now()));
 }, []),
 U = () => {
-  v.current = !1, setTimeout(() => {
-    !v.current && (S(!1), O(y));
+  N.current = !1, setTimeout(() => {
+    !N.current && (S(!1), O(y));
   }, 100);
 };
   return (0, i.jsx)('div', {
 onMouseEnter: () => {
-  v.current = !0, setTimeout(() => {
-    v.current && S(!0), T && (0, f.L)(M.xP.CARD_CLICK, x);
+  N.current = !0, setTimeout(() => {
+    N.current && S(!0), T && (0, f.L)(M.xP.CARD_CLICK, x);
   }, 100);
 },
 onMouseLeave: U,
@@ -180,7 +180,7 @@ children: (0, i.jsx)(d.Popout, {
     });
   },
   position: 'left',
-  shouldShow: T ? N : Z,
+  shouldShow: T ? v : Z,
   positionKey: o,
   onRequestOpen: () => (0, f.L)(M.xP.CARD_CLICK, x),
   onRequestClose: () => {
@@ -193,7 +193,7 @@ children: (0, i.jsx)(d.Popout, {
     } = t;
     return (0, i.jsx)(d.Clickable, {
       onClick: () => {
-        T && !N && S(!0), !T && b(e => !e);
+        T && !v && S(!0), !T && b(e => !e);
       },
       children: (0, i.jsx)(d.FocusRing, {
         offset: {
@@ -212,7 +212,7 @@ children: (0, i.jsx)(d.Popout, {
           children: (0, i.jsx)(L, {
             ...l,
             selected: n,
-            hovered: v.current
+            hovered: N.current
           })
         })
       })

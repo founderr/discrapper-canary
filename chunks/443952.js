@@ -17,8 +17,8 @@ var s = n(243814),
   g = n(592125),
   p = n(293273),
   T = n(885110),
-  f = n(451478),
-  S = n(630388),
+  S = n(451478),
+  f = n(630388),
   C = n(823379),
   N = n(591759),
   A = n(228488),
@@ -233,7 +233,7 @@ handler(e) {
   return new Promise((e, t) => {
     ! function(e, t) {
       var n;
-      let i = f.Z.getLastFocusedWindowId(),
+      let i = S.Z.getLastFocusedWindowId(),
         s = null == i ? null : null === (n = (0, _.g0)(i)) || void 0 === n ? void 0 : n.renderWindow;
       if (null == s)
         throw new v.Z({
@@ -283,7 +283,7 @@ handler(e) {
     throw new v.Z({
       errorCode: P.lTL.INVALID_COMMAND
     }, 'No application.');
-  if (!(0, S.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.udG.EMBEDDED))
+  if (!(0, f.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.udG.EMBEDDED))
     throw new v.Z({
       errorCode: P.lTL.INVALID_COMMAND
     }, 'This application cannot access this API');

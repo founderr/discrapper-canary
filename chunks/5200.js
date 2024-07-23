@@ -33,8 +33,8 @@ aspectRatio: r = 0,
 animatedDivClass: x
   } = e, {
 onActivityItemSelected: T,
-imageBackground: v,
-activityAction: N,
+imageBackground: N,
+activityAction: v,
 labelType: S
   } = (0, h.ZP)({
 channel: n,
@@ -61,7 +61,7 @@ children: (0, s.jsx)('div', {
 i.application.name,
 S
   ]), j = l.useMemo(() => {
-switch (N) {
+switch (v) {
   case h.JS.JOIN:
     return (0, s.jsx)('div', {
       className: C.activityAction,
@@ -90,7 +90,7 @@ switch (N) {
   default:
     return (0, s.jsx)(s.Fragment, {});
 }
-  }, [N]);
+  }, [v]);
   return (0, s.jsx)(d.Button, {
 onClick: T,
 color: 'transparent',
@@ -130,7 +130,7 @@ children: (0, s.jsx)(d.Spring, {
       children: (0, s.jsxs)(s.Fragment, {
         children: [
           (0, s.jsx)(p.Z, {
-            imageBackground: v,
+            imageBackground: N,
             applicationName: i.application.name,
             imageClassName: C.activitySuggestionImage,
             imageNotFoundClassName: C.brokenImageIconWrapper

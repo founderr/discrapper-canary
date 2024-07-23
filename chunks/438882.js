@@ -1,23 +1,23 @@
 n.d(t, {
   D: function() {
-return o;
+return r;
   }
 }), n(411104);
 
-function o(e, t, n) {
+function r(e, t, n) {
   if (e.byteLength < t)
 throw Error('data.byteLength must be greater than or equal to desiredLength');
   if (t % n != 0)
 throw Error('desiredLength must be a multiple of groupSize');
   if (n > 8)
 throw Error('groupSize must be less than or equal to '.concat(8));
-  let o = BigInt(10 ** n),
-r = '';
-  for (let a = 0; a < t; a += n) {
+  let r = BigInt(10 ** n),
+a = '';
+  for (let o = 0; o < t; o += n) {
 let t = BigInt(0);
-for (let o = n; o > 0; --o)
-  t = t << 8n | BigInt(e[a + (n - o)]);
-t %= o, r += t.toString().padStart(n, '0');
+for (let r = n; r > 0; --r)
+  t = t << 8n | BigInt(e[o + (n - r)]);
+t %= r, a += t.toString().padStart(n, '0');
   }
-  return r;
+  return a;
 }

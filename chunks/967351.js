@@ -31,7 +31,7 @@ function p(e) {
   return new Promise((t, n) => {
 'string' == typeof e && (e = E.net.createConnection(e)), e.pause(), e.on('readable', () => {
   try {
-    f(e);
+    S(e);
   } catch (t) {
     e.end(T(I.CLOSE, {
       code: 1003,
@@ -69,7 +69,7 @@ a = i.Buffer.alloc(8 + s);
   return a.writeInt32LE(e, 0), a.writeInt32LE(s, 4), a.write(t, 8, s), (n = a).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength);
 }
 
-function f(e) {
+function S(e) {
   let t = e.read(8);
   if (null == t)
 return;
@@ -101,9 +101,9 @@ case I.FRAME:
 case I.CLOSE:
   e.end(), e.destroy();
   }
-  f(e);
+  S(e);
 }
-class S extends d.Z {
+class f extends d.Z {
   send(e) {
 h.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(T(I.FRAME, e));
   }
@@ -127,7 +127,7 @@ class C extends s.EventEmitter {
   handleConnection(e) {
 m(e, !1), e.pause(), e.on('readable', () => {
   try {
-    f(e);
+    S(e);
   } catch (t) {
     e.end(T(I.CLOSE, {
       code: _.$VG.CLOSE_UNSUPPORTED,
@@ -139,7 +139,7 @@ m(e, !1), e.pause(), e.on('readable', () => {
   let i = t.client_id,
     s = +t.v;
   try {
-    n = new S(e, s, 'json');
+    n = new f(e, s, 'json');
   } catch (t) {
     e.end(T(I.CLOSE, {
       code: t.code,

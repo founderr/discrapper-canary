@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(601964),
   p = n(430824),
   T = n(378720),
-  f = n(285952),
-  S = n(843445),
+  S = n(285952),
+  f = n(843445),
   C = n(981631),
   N = n(689938),
   A = n(81772);
@@ -36,9 +36,9 @@ let {
   approximateMemberCount: e,
   approximatePresenceCount: t
 } = this.props.guild;
-return null == e || null == t ? null : (0, i.jsxs)(f.Z, {
+return null == e || null == t ? null : (0, i.jsxs)(S.Z, {
   className: A.memberInfo,
-  align: f.Z.Align.CENTER,
+  align: S.Z.Align.CENTER,
   children: [
     (0, i.jsx)('div', {
       className: A.dotOnline
@@ -78,8 +78,8 @@ let d = new g.ZP(e),
   _ = this.handleJoinOrView,
   h = c.Button.Looks.FILLED,
   I = c.Button.Colors.PRIMARY;
-return a ? n ? (h = c.Button.Looks.OUTLINED, I = A.buttonColorInGuild, u = (0, i.jsxs)(f.Z, {
-  align: f.Z.Align.CENTER,
+return a ? n ? (h = c.Button.Looks.OUTLINED, I = A.buttonColorInGuild, u = (0, i.jsxs)(S.Z, {
+  align: S.Z.Align.CENTER,
   children: [
     (0, i.jsx)('div', {
       children: N.Z.Messages.JOINED_GUILD
@@ -91,7 +91,7 @@ return a ? n ? (h = c.Button.Looks.OUTLINED, I = A.buttonColorInGuild, u = (0, i
     })
   ]
 })) : s && t && (u = N.Z.Messages.JOIN_GUILD) : (u = N.Z.Messages._LOGIN, _ = this.handleLogin), (0, i.jsxs)('div', {
-  className: r()(l, o === S.b.SMALL ? A.inviteSmall : A.inviteLarge),
+  className: r()(l, o === f.b.SMALL ? A.inviteSmall : A.inviteLarge),
   children: [
     (0, i.jsx)(T.Z, {
       children: N.Z.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD

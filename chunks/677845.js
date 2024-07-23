@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(27457),
   x = n(251564),
   T = n(695492),
-  v = n(981631),
-  N = n(97727);
+  N = n(981631),
+  v = n(97727);
 
 function S(e) {
   let {
@@ -37,7 +37,7 @@ className: M,
 inCall: b,
 totalNumberOfParticipants: R,
 paused: j = !1
-  } = e, L = (0, o.bp)() === v.IlC.POPOUT, P = (0, l.e7)([f.Z], () => f.Z.getGuild(A.guild_id), [A.guild_id]), {
+  } = e, L = (0, o.bp)() === N.IlC.POPOUT, P = (0, l.e7)([f.Z], () => f.Z.getGuild(A.guild_id), [A.guild_id]), {
 dismissedActivityEntryPointTileChannel: O
   } = (0, x.d)(), y = (0, l.e7)([h.Z], () => h.Z.getUserParticipantCount(A.id), [A]), D = (0, _.bt)(A.id, t), k = a.useCallback(() => {
 x.d.setState({
@@ -65,7 +65,7 @@ F = null != O && O === A.id,
 W = D.map(e => t => (0, i.jsx)(I.ZP, {
   participant: e,
   channel: A,
-  className: N.tile,
+  className: v.tile,
   paused: j,
   onClick: n,
   onDoubleClick: S,

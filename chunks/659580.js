@@ -26,7 +26,7 @@ renderInputModes: f = !1,
 renderInputVolume: E = !1,
 renderOutputVolume: C = !1,
 onSelect: g
-  } = e, I = (0, u.Z)(), x = (0, c.Z)(), T = (0, d.Z)(), v = (0, l.Z)(), N = (0, r.Z)(), S = (0, o.Z)();
+  } = e, I = (0, u.Z)(), x = (0, c.Z)(), T = (0, d.Z)(), N = (0, l.Z)(), v = (0, r.Z)(), S = (0, o.Z)();
   return (0, i.jsx)(s.Z, {
 object: h.qAy.CONTEXT_MENU,
 children: (0, i.jsxs)(a.Menu, {
@@ -46,11 +46,11 @@ children: (0, i.jsxs)(a.Menu, {
     }) : null,
     f ? (0, i.jsx)(a.MenuGroup, {
       label: p.Z.Messages.FORM_LABEL_INPUT_MODE,
-      children: v
+      children: N
     }) : null,
     (0, i.jsxs)(a.MenuGroup, {
       children: [
-        E ? N : null,
+        E ? v : null,
         C ? S : null,
         I
       ]

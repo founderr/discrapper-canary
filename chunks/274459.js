@@ -28,7 +28,7 @@ onComplete: s
   } = e, {
 emoji: h,
 sentAt: g
-  } = n, I = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), [x, T] = a.useState(!0), v = !I, N = (0, c.useTransition)(x, {
+  } = n, I = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), [x, T] = a.useState(!0), N = !I, v = (0, c.useTransition)(x, {
 from: {
   rotate: -120
 },
@@ -49,15 +49,15 @@ onRest: (e, t) => {
   return (a.useEffect(() => {
 let e;
 return Date.now() - g >= E ? (0, p.H)(t) : e = setTimeout(() => {
-  T(!1), v && (0, p.H)(t);
-}, v ? f : _), () => {
+  T(!1), N && (0, p.H)(t);
+}, N ? f : _), () => {
   null != e && clearTimeout(e);
 };
   }, [
 g,
 t,
-v
-  ]), v) ? null : N((e, t) => {
+N
+  ]), N) ? null : v((e, t) => {
 var n;
 let {
   rotate: a

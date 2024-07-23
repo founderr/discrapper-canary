@@ -26,8 +26,8 @@ var i = n(735250),
   I = n(354459),
   x = n(185923),
   T = n(420212),
-  v = n(419477);
-let N = x.Hz.CHAT,
+  N = n(419477);
+let v = x.Hz.CHAT,
   S = [
 _.ZP.getByName('thumbsup'),
 _.ZP.getByName('eyes'),
@@ -76,8 +76,8 @@ children: (0, i.jsx)(c.Button, {
           ]).to(e => 'scale('.concat(e, ')'))
         },
         children: (0, i.jsx)(d.Z, {
-          className: l()(v.emoji, r, {
-            [v.emojiItemDisabled]: n
+          className: l()(N.emoji, r, {
+            [N.emojiItemDisabled]: n
           }),
           emojiId: t.id,
           emojiName: null == t ? void 0 : t.surrogates,
@@ -101,15 +101,15 @@ onFocus: s
 children: [
   t,
   (0, i.jsx)(c.Clickable, {
-    className: v.dropDownContainer,
+    className: N.dropDownContainer,
     onClick: () => {
       a(!n), s();
     },
     children: (0, i.jsx)(c.ChevronSmallDownIcon, {
       size: 'md',
       color: 'currentColor',
-      className: l()(v.dropDown, {
-        [v.dropDownOpen]: n
+      className: l()(N.dropDown, {
+        [N.dropDownOpen]: n
       })
     })
   })
@@ -135,7 +135,7 @@ analyticsOverride: M
   ], 'name').filter(e => !C.ZP.isEmojiFilteredOrLocked({
 emoji: e,
 channel: t,
-intention: N
+intention: v
   })).slice(0, I.e5);
   null != g && g.length > 0 && P.splice(P.length - 1, 1, g[0]);
   let O = e => {
@@ -162,22 +162,22 @@ children: [
     })
   }),
   (0, i.jsxs)('div', {
-    className: v.container,
+    className: N.container,
     children: [
       (0, i.jsx)(m.Z, {
         analyticsOverride: M,
         channel: t,
-        className: l()(v.animatedPicker, {
-          [v.animatedPickerTall]: R
+        className: l()(N.animatedPicker, {
+          [N.animatedPickerTall]: R
         }),
-        headerClassName: l()(v.emojiPickerHeader, {
-          [v.emojiPickerHeaderExpanded]: R
+        headerClassName: l()(N.emojiPickerHeader, {
+          [N.emojiPickerHeaderExpanded]: R
         }),
         closePopout: s,
         onSelectEmoji: R ? y : () => {},
         shouldHidePickerActions: !R,
         wrapper: 'div',
-        pickerIntention: N,
+        pickerIntention: v,
         searchProps: {
           ..._,
           accessory: (0, i.jsx)(A, {
@@ -192,9 +192,9 @@ children: [
         }
       }),
       (0, i.jsx)('div', {
-        className: v.slotsContainer,
+        className: N.slotsContainer,
         children: (0, i.jsx)('div', {
-          className: l()(v.slots, v.slotsWide),
+          className: l()(N.slots, N.slotsWide),
           children: P.map(e => {
             let n = C.ZP.isEmojiDisabled({
               emoji: e,
@@ -202,12 +202,12 @@ children: [
               intention: x.Hz.CHAT
             });
             return (0, i.jsx)('div', {
-              className: v.slot,
+              className: N.slot,
               children: (0, i.jsx)(c.TooltipContainer, {
                 text: e.name,
                 position: 'top',
                 'aria-label': e.name,
-                tooltipClassName: v.tooltipContainer,
+                tooltipClassName: N.tooltipContainer,
                 color: c.Tooltip.Colors.BRAND,
                 children: (0, i.jsx)(Z, {
                   emoji: e,

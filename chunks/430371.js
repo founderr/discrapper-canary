@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(981631),
   x = n(354459),
   T = n(524465),
-  v = n(456515);
-let N = 16 / 9,
+  N = n(456515);
+let v = 16 / 9,
   S = 8 + g.cF;
 
 function Z(e) {
@@ -63,7 +63,7 @@ en = !J && (!et || q),
 ei = (0, _.Z)(en, 100),
 ea = 0;
   (q || $) && (ea += 72), q && !$ && (en ? ea += 48 : ea += 8), $ && (ea += 0.5 * S + 8);
-  let es = a.useMemo(() => q && X ? D / (k - 2 * ea) : Q && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : N, [
+  let es = a.useMemo(() => q && X ? D / (k - 2 * ea) : Q && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : v, [
   Q,
   V,
   q,
@@ -145,16 +145,16 @@ ef = $ || y ? [] : (0, C.n3)(A, L, G),
   participantTileWidth: eC
 } = (0, g.ZB)(D, M);
   return (0, i.jsxs)('div', {
-className: l()(v.root, T.flexCenter, O),
+className: l()(N.root, T.flexCenter, O),
 children: [
   (0, i.jsxs)('div', {
-    className: v.tileWrapper,
+    className: N.tileWrapper,
     style: {
       opacity: Q && W ? 0 : 1
     },
     children: [
       (0, i.jsxs)(r.animated.div, {
-        className: v.videoFrame,
+        className: N.videoFrame,
         style: {
           top: eu.value.to(e => -e * S / 2)
         },
@@ -163,7 +163,7 @@ children: [
             style: {
               width: eh.value
             },
-            className: v.videoWrapper,
+            className: N.videoWrapper,
             children: (0, i.jsx)('div', {
               className: l()(T.videoSizer),
               style: {
@@ -197,8 +197,8 @@ children: [
             })
           }),
           en ? (0, i.jsx)(r.animated.div, {
-            className: l()(v.actionRow, {
-              [v.idle]: w
+            className: l()(N.actionRow, {
+              [N.idle]: w
             }),
             style: {
               bottom: ep.value
@@ -212,7 +212,7 @@ children: [
         ]
       }),
       (0, i.jsx)(r.animated.div, {
-        className: v.participantsWrapperAnimated,
+        className: N.participantsWrapperAnimated,
         style: {
           translateY: ed.value.to(e => e * S / 2),
           opacity: ed.value,

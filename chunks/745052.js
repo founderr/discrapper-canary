@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(607070),
   p = n(209613),
   T = n(325708),
-  f = n(320149),
-  S = n(252618),
+  S = n(320149),
+  f = n(252618),
   C = n(605236),
   N = n(243778),
   A = n(984370),
@@ -84,13 +84,13 @@ g = (0, p.Z)('message-requests-list'),
 {
   channelId: T
 } = (0, F._)(),
-f = s.useCallback(() => {
+S = s.useCallback(() => {
   I(n.map(e => e.channel.id));
 }, [
   n,
   I
 ]),
-S = s.useCallback(e => {
+f = s.useCallback(e => {
   var t, s;
   let {
     row: l
@@ -126,7 +126,7 @@ C = s.useCallback(() => (0, i.jsxs)(y.Z, {
           children: '\u2022'
         }),
         (0, i.jsx)(u.Button, {
-          onClick: f,
+          onClick: S,
           look: u.ButtonLooks.LINK,
           color: u.ButtonColors.LINK,
           size: u.ButtonSizes.SMALL,
@@ -139,7 +139,7 @@ C = s.useCallback(() => (0, i.jsxs)(y.Z, {
   ]
 }, 'title'), [
   t,
-  f,
+  S,
   c
 ]);
   return (n.length !== t && v.Z.increment({
@@ -168,7 +168,7 @@ children: (0, i.jsx)(l.SJ, {
       sectionHeight: X.oi,
       rowHeight: X.WN,
       renderSection: C,
-      renderRow: S,
+      renderRow: f,
       sections: [n.length],
       chunkSize: 30,
       fade: !0,
@@ -191,7 +191,7 @@ return null;
 sidebarType: T.y.MessageRequestSidebar,
 maxWidth: r,
 onWidthChange: n,
-children: (0, i.jsx)(f.Z, {
+children: (0, i.jsx)(S.Z, {
   channel: a,
   baseChannelId: P.uZ
 })
@@ -292,8 +292,8 @@ p,
 m,
 g
   ]);
-  let [T, f] = s.useState(X.pS.REQUESTS);
-  return (0, S.Tt)({
+  let [T, S] = s.useState(X.pS.REQUESTS);
+  return (0, f.Tt)({
 location: et.Z.Messages.MESSAGE_REQUESTS
   }), (0, i.jsxs)(i.Fragment, {
 children: [
@@ -322,7 +322,7 @@ children: [
             selectedItem: T,
             type: 'top-pill',
             onItemSelect: e => {
-              f(e);
+              S(e);
             },
             className: en.__invalid_tabBar,
             children: [

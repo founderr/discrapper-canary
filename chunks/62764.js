@@ -23,8 +23,8 @@ var i = n(735250),
   I = n(569471),
   x = n(346479),
   T = n(592125),
-  v = n(934415),
-  N = n(456269),
+  N = n(934415),
+  v = n(456269),
   S = n(109590),
   Z = n(228392),
   A = n(981631),
@@ -49,7 +49,7 @@ disableReactionCreates: F,
 isLurking: W,
 isGuest: z,
 isPendingMember: Y
-  } = (0, _.Z)(B), K = (0, o.e7)([T.Z], () => T.Z.getChannel(j)), q = (0, N.Bs)(K), X = (0, o.e7)([h.Z], () => h.Z.shouldDisplayPrompt(t) && !0 === n, [
+  } = (0, _.Z)(B), K = (0, o.e7)([T.Z], () => T.Z.getChannel(j)), q = (0, v.Bs)(K), X = (0, o.e7)([h.Z], () => h.Z.shouldDisplayPrompt(t) && !0 === n, [
 t,
 n
   ]), Q = a.useCallback(e => {
@@ -87,7 +87,7 @@ en = () => {
     location: {
       section: A.jXE.CHANNEL_HEADER
     }
-  }), (0, r.J)((0, v.EO)(B, K)), w(!0);
+  }), (0, r.J)((0, N.EO)(B, K)), w(!0);
 },
 ei = G ? c.CheckmarkLargeIcon : c.BellIcon;
   return (0, i.jsxs)(i.Fragment, {

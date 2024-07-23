@@ -53,8 +53,8 @@ subtitle: m,
 guildsData: g,
 analyticsContext: p,
 theme: T,
-onViewGuild: f,
-fetchGuilds: S,
+onViewGuild: S,
+fetchGuilds: f,
 onGuildCardSeen: C,
 currentCategoryId: N,
 loadId: A,
@@ -62,7 +62,7 @@ onTagClick: v,
 showMoreCards: Z = !1
   } = e;
   s.useEffect(() => {
-r.Z.wait(() => S());
+r.Z.wait(() => f());
   }, [N]);
   let L = (0, u.Z)(Z ? I : h),
 {
@@ -90,7 +90,7 @@ if ((0, o.yU)())
   });
 else {
   let t = R.findIndex(t => t.id === e);
-  await f(e, t, p, A);
+  await S(e, t, p, A);
 }
   };
   if (x || null == R) {

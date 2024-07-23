@@ -37,8 +37,8 @@ function I(e) {
 userId: I,
 guildId: x,
 onClose: T,
-analyticsLocation: v,
-className: N
+analyticsLocation: N,
+className: v
   } = e, S = (0, l.e7)([u.ZP], () => u.ZP.getGuildSidebarState(x), [x]), Z = null !== (t = null == S ? void 0 : S.details.modViewPanel) && void 0 !== t ? t : E.k.INFO, A = (0, c.Z)(I);
   let M = null == (n = Z) ? null : n === E.k.INFO ? 'backwards' : 'forwards',
 b = (0, h.Z)(M),
@@ -116,21 +116,21 @@ children: P((e, t, n) => {
             userId: I,
             guildId: x,
             onNavigate: j,
-            className: N
+            className: v
           });
         case E.k.MESSAGE_HISTORY:
           return (0, i.jsx)(_.Z, {
             userId: I,
             guildId: x,
             onNavigate: () => j(E.k.INFO),
-            className: N
+            className: v
           });
         case E.k.PERMISSIONS:
           return (0, i.jsx)(f.Z, {
             userId: I,
             guildId: x,
             onNavigate: () => j(E.k.INFO),
-            className: N
+            className: v
           });
         default:
           return null;

@@ -70,7 +70,7 @@ return p(t.id);
   }), s;
 }
 
-function f() {
+function S() {
   let e = !1;
   if (!d.Z.needsRefresh() && !h) {
 let t;
@@ -84,9 +84,9 @@ I = {}, m = {}, t = !1, u.Z.getUserIds().forEach(e => {
   }
   return h = !d.Z.needsRefresh(), e;
 }
-class S extends(r = l.ZP.Store) {
+class f extends(r = l.ZP.Store) {
   initialize() {
-this.waitFor(d.Z), this.syncWith([d.Z], f);
+this.waitFor(d.Z), this.syncWith([d.Z], S);
   }
   get games() {
 return I;
@@ -104,12 +104,12 @@ return I[e];
 return m[e];
   }
 }
-a = 'NowPlayingStore', (s = 'displayName') in(i = S) ? Object.defineProperty(i, s, {
+a = 'NowPlayingStore', (s = 'displayName') in(i = f) ? Object.defineProperty(i, s, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = a, t.Z = new S(o.Z, {
+}) : i[s] = a, t.Z = new f(o.Z, {
   CONNECTION_OPEN: function() {
 I = {}, m = {};
   },

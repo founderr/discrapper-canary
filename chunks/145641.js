@@ -43,7 +43,7 @@ null != t && null != n && n.scrollIntoViewNode({
   padding: 8,
   callback: () => null == t ? void 0 : t.focus()
 });
-  }, []), f = (0, a.ZP)({
+  }, []), S = (0, a.ZP)({
 id: 'people-list',
 isEnabled: I,
 scrollToStart: g,
@@ -51,7 +51,7 @@ scrollToEnd: p,
 setFocus: T
   });
   return (0, i.jsx)(r.bG, {
-navigator: f,
+navigator: S,
 children: (0, i.jsx)(r.SJ, {
   children: e => {
     let {

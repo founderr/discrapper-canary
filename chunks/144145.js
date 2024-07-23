@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(757266),
   p = n(283595),
   T = n(417363),
-  f = n(626135),
-  S = n(804739),
+  S = n(626135),
+  f = n(804739),
   C = n(346329),
   N = n(981631),
   A = n(689938);
@@ -49,7 +49,7 @@ return n || !s ? null : (0, i.jsx)(r.MenuItem, {
   }(e), L = function(e) {
 let {
   currentActivities: t
-} = e, n = s.useContext(f.AnalyticsContext);
+} = e, n = s.useContext(S.AnalyticsContext);
 return (0, a.Wu)([
   h.ZP,
   p.Z,
@@ -65,7 +65,7 @@ return (0, a.Wu)([
     ...e,
     libraryApplication: s,
     canJoin: null != t && (0, u.Z)(t, N.xjy.JOIN) && t.type === N.IIU.PLAYING,
-    canPlay: (0, S.t)({
+    canPlay: (0, f.t)({
       LibraryApplicationStore: p.Z,
       LaunchableGameStore: I.Z,
       DispatchApplicationStore: T.Z,

@@ -26,8 +26,8 @@ var i = n(735250),
   I = n(592125),
   x = n(906467),
   T = n(323873),
-  v = n(630388),
-  N = n(709054),
+  N = n(630388),
+  v = n(709054),
   S = n(534091),
   Z = n(901461),
   A = n(739566),
@@ -119,7 +119,7 @@ channel: {
 compact: I = !1,
 className: x,
 groupId: T,
-viewingChannelId: N
+viewingChannelId: v
   } = e, S = r.type === W.uaV.REPLY ? r.messageReference : void 0, {
 onFocus: M,
 ...y
@@ -146,7 +146,7 @@ allowList: ee,
 allowHeading: ee,
 allowLinks: !0,
 previewLinkTarget: !0,
-viewingChannelId: N
+viewingChannelId: v
   }), ec = (0, L.Z)(o, p, ea), ed = (0, A.ZP)(r), eu = (0, R.iG)(r, T), eh = (0, R.Gx)(r), ep = (0, B.Z)(e, er, !1), em = a.useCallback(() => (0, C.XU)(f, p, o), [
 f,
 p,
@@ -172,7 +172,7 @@ children: [
       [Y.message]: !0,
       [Y.cozyMessage]: !I,
       [Y.mentioned]: r.mentioned,
-      [Y.ephemeral]: (0, v.yE)(r.flags, W.iLy.EPHEMERAL),
+      [Y.ephemeral]: (0, N.yE)(r.flags, W.iLy.EPHEMERAL),
       [Y.systemMessage]: (0, Z.Z)(r),
       [Y.groupStart]: r.id === T || r.type === W.uaV.REPLY,
       [Y.selected]: es
@@ -263,8 +263,8 @@ eI = (0, d.e7)([T.Z], () => T.Z.isEditing(q, S), [
 ]),
 ex = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
 eT = eo || eI || ex && ef,
-ev = eT || e_,
-eN = (0, d.e7)([I.Z], () => C.hasFlag(W.iLy.HAS_THREAD) && I.Z.getChannel(N.default.castMessageIdAsChannelId(C.id))),
+eN = eT || e_,
+ev = (0, d.e7)([I.Z], () => C.hasFlag(W.iLy.HAS_THREAD) && I.Z.getChannel(v.default.castMessageIdAsChannelId(C.id))),
 eS = C.isFirstMessageInForumPost(K),
 eZ = (0, _.A)((null !== (n = C.editedTimestamp) && void 0 !== n ? n : C.timestamp).valueOf()),
 eA = (0, d.e7)([x.Z], () => x.Z.isDeveloper),
@@ -273,7 +273,7 @@ eA = (0, d.e7)([x.Z], () => x.Z.isDeveloper),
   hasSpoilerEmbeds: eb
 } = (0, O.Z)(C, {
   hideSimpleEmbedContent: ea && es,
-  isInteracting: ev,
+  isInteracting: eN,
   formatInline: !1,
   allowList: eS || eZ,
   allowHeading: eS || eZ,
@@ -328,7 +328,7 @@ eH = (0, i.jsx)(u.FocusRing, {
         [Y.message]: !0,
         [Y.cozyMessage]: !X,
         [Y.mentioned]: C.mentioned,
-        [Y.ephemeral]: (0, v.yE)(C.flags, W.iLy.EPHEMERAL),
+        [Y.ephemeral]: (0, N.yE)(C.flags, W.iLy.EPHEMERAL),
         [Y.nitroMessage]: C.type === W.uaV.NITRO_NOTIFICATION,
         [Y.systemMessage]: (0, Z.Z)(C),
         [Y.groupStart]: !ee && (eB || C.type === W.uaV.REPLY),
@@ -353,7 +353,7 @@ eH = (0, i.jsx)(u.FocusRing, {
         channelMessageProps: e,
         hasSpoilerEmbeds: eb,
         handleContextMenu: ed,
-        isInteracting: ev,
+        isInteracting: eN,
         isAutomodBlockedMessage: ew
       }),
       childrenButtons: em || eE ? (0, U.Z)({
@@ -366,7 +366,7 @@ eH = (0, i.jsx)(u.FocusRing, {
       childrenMessageContent: s,
       onMouseMove: eh,
       onMouseLeave: ep,
-      hasThread: !ee && C.hasFlag(W.iLy.HAS_THREAD) && null != eN,
+      hasThread: !ee && C.hasFlag(W.iLy.HAS_THREAD) && null != ev,
       isSystemMessage: (0, Z.Z)(C),
       hasReply: C.type === W.uaV.REPLY,
       messageRef: eU

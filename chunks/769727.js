@@ -14,8 +14,8 @@ var i, s, a = n(735250),
   g = n(931515),
   p = n(807933),
   T = n(702646),
-  f = n(207796),
-  S = n(543550),
+  S = n(207796),
+  f = n(543550),
   C = n(895068),
   N = n(921944),
   A = n(540736);
@@ -28,18 +28,18 @@ friction: 60
   Z = r.memo(function(e) {
 let {
   width: t
-} = e, n = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), i = (0, f.GN)(e => e.mode, o.Z), [s, d] = r.useState(!0), _ = (0, l.useSpring)({
+} = e, n = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), i = (0, S.GN)(e => e.mode, o.Z), [s, d] = r.useState(!0), _ = (0, l.useSpring)({
   from: {
     opacity: 0
   },
   to: {
-    opacity: i === f.v0.GET_STARTED ? 0 : 1
+    opacity: i === S.v0.GET_STARTED ? 0 : 1
   },
   config: v,
   delay: 500,
   immediate: n,
   onRest: () => d(!1)
-}), g = (0, f.GN)(e => e.userUpsellScreen, o.Z), Z = (0, f.GN)(e => e.started, o.Z), {
+}), g = (0, S.GN)(e => e.userUpsellScreen, o.Z), Z = (0, S.GN)(e => e.started, o.Z), {
   guilds: L
 } = (0, h.C3)({
   location: 'ClanDiscoveryAdminContainer',
@@ -54,16 +54,16 @@ switch (r.useEffect(() => {
     });
   }, [x]), r.useEffect(() => {
     let e = L.length > 0;
-    if (e && !R && g === f.o2.USER_UPSELL) {
-      (0, f.fH)(f.v0.ADMIN_UPSELL);
+    if (e && !R && g === S.o2.USER_UPSELL) {
+      (0, S.fH)(S.v0.ADMIN_UPSELL);
       return;
     }
     if (!e && R && !Z) {
-      (0, f.fH)(f.v0.GET_STARTED);
+      (0, S.fH)(S.v0.GET_STARTED);
       return;
     }
-    if (R && i === f.v0.ADMIN_UPSELL && 0 === O.length) {
-      (0, f.fH)(f.v0.GET_STARTED), f.GN.getState().setUserUpsellScreen(f.o2.USER_UPSELL);
+    if (R && i === S.v0.ADMIN_UPSELL && 0 === O.length) {
+      (0, S.fH)(S.v0.GET_STARTED), S.GN.getState().setUserUpsellScreen(S.o2.USER_UPSELL);
       return;
     }
   }, [
@@ -74,14 +74,14 @@ switch (r.useEffect(() => {
     i,
     g
   ]), i) {
-  case f.v0.ADMIN_UPSELL:
-    return (0, a.jsx)(S.$, {});
-  case f.v0.GET_STARTED:
-    return (0, a.jsx)(S.J, {});
-  case f.v0.DISCOVERY:
-  case f.v0.GAMES:
-  case f.v0.PLAYSTYLE:
-  case f.v0.TRAITS:
+  case S.v0.ADMIN_UPSELL:
+    return (0, a.jsx)(f.$, {});
+  case S.v0.GET_STARTED:
+    return (0, a.jsx)(f.J, {});
+  case S.v0.DISCOVERY:
+  case S.v0.GAMES:
+  case S.v0.PLAYSTYLE:
+  case S.v0.TRAITS:
     return (0, a.jsxs)('div', {
       className: A.discoveryContainer,
       children: [

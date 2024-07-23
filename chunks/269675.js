@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(351402),
   p = n(730647),
   T = n(772021),
-  f = n(396828),
-  S = n(293423),
+  S = n(396828),
+  f = n(293423),
   C = n(20967),
   N = n(504762),
   A = n(807152),
@@ -62,7 +62,7 @@ children: [
     className: L.headerBar,
     children: [
       (0, i.jsx)(I.Z.Icon, {
-        icon: (0, l.makeIconCompat)(f.Z),
+        icon: (0, l.makeIconCompat)(S.Z),
         'aria-hidden': !0
       }),
       (0, i.jsx)(I.Z.Title, {
@@ -79,7 +79,7 @@ children: [
       className: L.scroller,
       children: (0, i.jsx)('div', {
         className: L.scrollerContent,
-        children: y ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(S.Z, {
+        children: y ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(f.Z, {
           guild: n
         })
       })
