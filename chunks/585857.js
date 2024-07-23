@@ -8,17 +8,17 @@ n(470079);
 var o = n(120356),
   r = n.n(o),
   a = n(533627),
-  i = n(432594),
-  l = n(481060),
+  l = n(432594),
+  i = n(481060),
   c = n(230711),
   d = n(231757),
   u = n(617136),
   p = n(497505),
-  x = n(796111),
-  m = n(46140),
-  g = n(981631),
-  C = n(689938),
-  f = n(276458);
+  m = n(796111),
+  x = n(46140),
+  f = n(981631),
+  g = n(689938),
+  C = n(59596);
 
 function _(e) {
   let {
@@ -26,8 +26,8 @@ quest: t,
 isConnected: n,
 consoleType: o
   } = e;
-  return (0, s.jsx)(l.Clickable, {
-className: f.connectConsoleButtonWrapper,
+  return (0, s.jsx)(i.Clickable, {
+className: C.connectConsoleButtonWrapper,
 onClick: () => {
   (0, u._3)({
     questId: t.id,
@@ -37,11 +37,11 @@ onClick: () => {
     platformType: o
   });
 },
-children: o === g.ABu.PLAYSTATION ? (0, s.jsx)(a.K, {
-  colorClass: r()(f.connectConsoleButton, n ? f.playstationButtonConnected : f.connectConsoleButtonUnconnected),
+children: o === f.ABu.PLAYSTATION ? (0, s.jsx)(a.K, {
+  colorClass: r()(C.connectConsoleButton, n ? C.playstationButtonConnected : C.connectConsoleButtonUnconnected),
   size: 'sm'
-}) : (0, s.jsx)(i.a, {
-  colorClass: r()(f.connectConsoleButton, n ? f.xboxButtonConnected : f.connectConsoleButtonUnconnected),
+}) : (0, s.jsx)(l.a, {
+  colorClass: r()(C.connectConsoleButton, n ? C.xboxButtonConnected : C.connectConsoleButtonUnconnected),
   size: 'sm'
 })
   });
@@ -52,16 +52,16 @@ function h(e) {
 text: t,
 quest: n
   } = e;
-  return (0, s.jsx)(l.Clickable, {
-className: f.showConnectionsButton,
+  return (0, s.jsx)(i.Clickable, {
+className: C.showConnectionsButton,
 onClick: () => {
   (0, u._3)({
     questId: n.id,
     questContent: p.jn.QUEST_BAR_V2,
     questContentCTA: u.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
-  }), c.Z.open(g.oAB.CONNECTIONS);
+  }), c.Z.open(f.oAB.CONNECTIONS);
 },
-children: (0, s.jsx)(l.Text, {
+children: (0, s.jsx)(i.Text, {
   'aria-label': t,
   color: 'none',
   variant: 'text-xxs/normal',
@@ -76,31 +76,31 @@ quest: t,
 xboxAccounts: n,
 playstationAccounts: o,
 xboxAndPlaystationAccounts: a
-  } = e, i = a.slice(0, 2), c = a.length > 0, d = n.length > 0, u = o.length > 0;
+  } = e, l = a.slice(0, 2), c = a.length > 0, d = n.length > 0, u = o.length > 0;
   return (0, s.jsxs)('div', {
-className: f.inlineConsoleConnectionDetails,
+className: C.inlineConsoleConnectionDetails,
 children: [
   (0, s.jsxs)('div', {
-    className: f.inlineConsoleConnectionDetailsUpper,
+    className: C.inlineConsoleConnectionDetailsUpper,
     children: [
-      (0, s.jsx)(l.Text, {
+      (0, s.jsx)(i.Text, {
         color: 'header-secondary',
         variant: 'text-xxs/normal',
-        children: c ? C.Z.Messages.QUESTS_CONNECTED : C.Z.Messages.QUESTS_SELECT_TO_START
+        children: c ? g.Z.Messages.QUESTS_CONNECTED : g.Z.Messages.QUESTS_SELECT_TO_START
       }),
       (0, s.jsxs)('div', {
-        className: f.inlineConsoleConnectionDetailsIcons,
+        className: C.inlineConsoleConnectionDetailsIcons,
         children: [
           (0, s.jsx)(_, {
-            consoleType: g.ABu.PLAYSTATION,
+            consoleType: f.ABu.PLAYSTATION,
             isConnected: u,
             quest: t
           }),
           (0, s.jsx)('div', {
-            className: f.consoleIconDivider
+            className: C.consoleIconDivider
           }),
           (0, s.jsx)(_, {
-            consoleType: g.ABu.XBOX,
+            consoleType: f.ABu.XBOX,
             isConnected: d,
             quest: t
           })
@@ -109,17 +109,17 @@ children: [
     ]
   }),
   c && (0, s.jsxs)('div', {
-    className: f.inlineConsoleConnectionDetailsLower,
+    className: C.inlineConsoleConnectionDetailsLower,
     children: [
-      i.map((e, t) => (0, s.jsxs)('div', {
-        className: r()(f.inlineConsoleConnectionDetailsLowerItem, t > 0 ? f.marginTop4px : void 0),
+      l.map((e, t) => (0, s.jsxs)('div', {
+        className: r()(C.inlineConsoleConnectionDetailsLowerItem, t > 0 ? C.marginTop4px : void 0),
         children: [
-          (0, s.jsx)(l.Text, {
+          (0, s.jsx)(i.Text, {
             color: 'header-secondary',
             variant: 'text-xxs/normal',
-            children: e.type === g.ABu.XBOX ? C.Z.Messages.QUESTS_XBOX_ID : C.Z.Messages.QUESTS_PSN_ONLINE_ID_V2
+            children: e.type === f.ABu.XBOX ? g.Z.Messages.QUESTS_XBOX_ID : g.Z.Messages.QUESTS_PSN_ONLINE_ID_V2
           }),
-          (0, s.jsx)(l.Text, {
+          (0, s.jsx)(i.Text, {
             color: 'header-secondary',
             variant: 'text-xxs/normal',
             children: e.name
@@ -127,7 +127,7 @@ children: [
         ]
       }, t)),
       a.length > 2 && (0, s.jsx)(h, {
-        text: C.Z.Messages.QUESTS_VIEW_MORE_ACCOUNTS,
+        text: g.Z.Messages.QUESTS_VIEW_MORE_ACCOUNTS,
         quest: t
       })
     ]
@@ -142,21 +142,21 @@ xboxAndPlaystationAccounts: t,
 quest: n
   } = e;
   return t.length > 0 ? (0, s.jsx)(h, {
-text: C.Z.Messages.QUESTS_SHOW_CONNECTIONS,
+text: g.Z.Messages.QUESTS_SHOW_CONNECTIONS,
 quest: n
   }) : null;
 }
 
 function T(e) {
-  let t = (0, x.P)({
-location: m.dr.QUESTS_BAR
+  let t = (0, m.P)({
+location: x.dr.QUESTS_BAR
   });
   return (0, s.jsxs)(s.Fragment, {
 children: [
-  (0, s.jsx)(l.Text, {
+  (0, s.jsx)(i.Text, {
     color: 'text-muted',
     variant: 'text-xs/medium',
-    children: C.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT
+    children: g.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT
   }),
   t ? (0, s.jsx)(E, {
     ...e

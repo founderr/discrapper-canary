@@ -26,8 +26,8 @@ var n = s(735250),
   N = s(626135),
   O = s(74538),
   j = s(335131),
-  Z = s(372047),
-  k = s(328347),
+  k = s(372047),
+  Z = s(328347),
   R = s(280773),
   A = s(617452),
   P = s(223143),
@@ -53,7 +53,7 @@ var n = s(735250),
   ee = s(420212),
   et = s(474936),
   es = s(689938),
-  en = s(425391);
+  en = s(53824);
 
 function er(e) {
   let {
@@ -95,7 +95,7 @@ category: t,
 initialItemCardRef: s,
 includeBundles: a = !1,
 ...o
-  } = e, d = (0, y.l)(t.products), u = (0, c.e7)([k.Z], () => k.Z.initialProductSkuId), p = r.useCallback(e => t => {
+  } = e, d = (0, y.l)(t.products), u = (0, c.e7)([Z.Z], () => Z.Z.initialProductSkuId), p = r.useCallback(e => t => {
 e.skuId === u && (s.current = t.current);
   }, [
 u,
@@ -192,7 +192,7 @@ isFullScreen: t = !0
   } = e, {
 analyticsSource: s,
 analyticsLocations: a
-  } = (0, c.cj)([k.Z], () => k.Z.getAnalytics()), {
+  } = (0, c.cj)([Z.Z], () => Z.Z.getAnalytics()), {
 analyticsLocations: i
   } = (0, _.ZP)([
 ...a,
@@ -299,7 +299,7 @@ E
 }),
 {
   enabled: eI
-} = (0, Z.Z)({
+} = (0, k.Z)({
   location: 'CollectiblesShop'
 }),
 eE = (0, c.e7)([b.Z], () => b.Z.gradientPreset),

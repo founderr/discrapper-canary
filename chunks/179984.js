@@ -20,12 +20,12 @@ var s = n(735250),
   m = n(230916),
   N = n(248042),
   f = n(823188),
-  h = n(21023),
-  S = n(318747),
+  S = n(21023),
+  h = n(318747),
   M = n(409100),
   x = n(474936),
   b = n(689938),
-  O = n(471587),
+  O = n(59486),
   P = n(102655),
   L = n(768236),
   v = n(314907),
@@ -139,9 +139,9 @@ t.Z = e => {
   selectedPlanTier: y = x.p9.TIER_2
 } = e,
 {
-  analyticsLocations: H
+  analyticsLocations: k
 } = (0, E.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-k = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
+H = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
 w = (0, T.V)(),
 F = 'PlanComparisonTable';
   (0, d.j)({
@@ -164,9 +164,9 @@ $ = (0, m.A)(x.Xh.PREMIUM_MONTH_TIER_2),
 ee = ''.concat($, '/').concat((0, C.eP)(x.rV.MONTH)),
 et = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_0),
 en = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_2),
-es = (0, h.n)(et, en, X, ee),
+es = (0, S.n)(et, en, X, ee),
 ea = (0, N.Vi)();
-  if (!k || !w)
+  if (!H || !w)
 return null;
   let er = {
 label: (0, s.jsx)(c.Heading, {
@@ -205,7 +205,7 @@ column1: (0, s.jsxs)(s.Fragment, {
       subscriptionTier: x.Si.TIER_0,
       showIcon: !1
     }),
-    q === x.p9.TIER_2 || null != Q ? null : (0, s.jsx)(S.Z, {
+    q === x.p9.TIER_2 || null != Q ? null : (0, s.jsx)(h.Z, {
       className: O.button,
       subscriptionTier: x.Si.TIER_0
     })
@@ -226,7 +226,7 @@ column2: (0, s.jsxs)(s.Fragment, {
       showIcon: !1,
       isEligibleForBogoPromotion: ea
     }),
-    q === x.p9.TIER_0 || null != Q ? null : (0, s.jsx)(S.Z, {
+    q === x.p9.TIER_0 || null != Q ? null : (0, s.jsx)(h.Z, {
       className: O.button,
       subscriptionTier: x.Si.TIER_2
     })
@@ -242,7 +242,7 @@ colorOptions: Q === x.Si.TIER_0 ? W ? f.VE.PREMIUM_TIER_0_GRADIENT_FILL : f.VE.P
   }) : ea ? (0, s.jsx)(D, {}) : (0, s.jsx)(B, {});
   let ei = Q === x.Si.TIER_0 || q === x.p9.TIER_0 || y === x.p9.TIER_0;
   return (0, s.jsx)(E.Gt, {
-value: H,
+value: k,
 children: (0, s.jsxs)('div', {
   className: i()(O.root, r),
   'data-testid': 'v2-marketing-page-comparison-table',

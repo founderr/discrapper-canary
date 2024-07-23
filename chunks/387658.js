@@ -31,10 +31,10 @@ var i = t(735250),
   g = t(981631),
   R = t(689079),
   M = t(689938),
-  y = t(627542),
-  O = t(763963);
-let j = 'placeholder',
-  b = [, , , , , ].fill(j);
+  y = t(202558),
+  j = t(66086);
+let O = 'placeholder',
+  b = [, , , , , ].fill(O);
 
 function Z(e) {
   var n, t;
@@ -66,7 +66,7 @@ r,
 o,
 c
   ]), m = (null !== (t = null === (n = r.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0, _ = l.useMemo(() => (0, i.jsxs)('div', {
-className: O.commandTextContainer,
+className: j.commandTextContainer,
 children: [
   (0, i.jsx)(u.Text, {
     variant: 'text-sm/semibold',
@@ -85,7 +85,7 @@ r.displayDescription,
 r.displayName
   ]);
   return (0, i.jsxs)(u.Clickable, {
-className: O.command,
+className: j.command,
 onClick: d,
 children: [
   _,
@@ -114,7 +114,7 @@ function H() {
   }
 }), []),
 a = l.useMemo(() => (0, i.jsxs)('div', {
-  className: O.commandTextContainerPlaceholder,
+  className: j.commandTextContainerPlaceholder,
   children: [
     (0, i.jsx)('div', {
       className: y.textPlaceholder,
@@ -144,7 +144,7 @@ a = l.useMemo(() => (0, i.jsxs)('div', {
   t
 ]);
   return (0, i.jsx)('div', {
-className: r()(O.command, y.loadingAnimation, {
+className: r()(j.command, y.loadingAnimation, {
   [y.noAnimation]: e
 }),
 children: a
@@ -187,8 +187,8 @@ onClick: p,
 disabled: d,
 size: u.ButtonSizes.ICON,
 color: u.Button.Colors.PRIMARY,
-className: O.commandSentCTAButton,
-innerClassName: O.commandSentCTAButtonInner,
+className: j.commandSentCTAButton,
+innerClassName: j.commandSentCTAButtonInner,
 'aria-label': M.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({
   commandName: t.name
 }),
@@ -218,7 +218,7 @@ children: s
   return 0 === t.length ? null : (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsxs)('div', {
-    className: O.commandListHeader,
+    className: j.commandListHeader,
     children: [
       (0, i.jsx)(u.Heading, {
         variant: 'heading-sm/semibold',
@@ -228,9 +228,9 @@ children: [
     ]
   }),
   (0, i.jsx)('ul', {
-    className: O.commandContainer,
+    className: j.commandContainer,
     'aria-label': a,
-    children: t.map((e, t) => e === j ? (0, i.jsx)(H, {}, e + t) : (0, i.jsx)(Z, {
+    children: t.map((e, t) => e === O ? (0, i.jsx)(H, {}, e + t) : (0, i.jsx)(Z, {
       channel: n,
       command: e,
       section: l,
@@ -282,7 +282,7 @@ commands: h,
 limit: 5
   });
   return (0, i.jsxs)('ul', {
-className: O.contentContainer,
+className: j.contentContainer,
 children: [
   (0, i.jsx)(D, {
     channel: t,

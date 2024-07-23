@@ -3,7 +3,7 @@ var a, o, r, i, s = n(735250),
   c = n(120356),
   u = n.n(c),
   d = n(481060),
-  p = n(780516);
+  p = n(36169);
 let h = {
 UP: 'up',
 RIGHT: 'right',

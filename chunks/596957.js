@@ -26,7 +26,7 @@ var i = n(735250),
   L = n(617015),
   O = n(981631),
   R = n(689938),
-  x = n(493367);
+  x = n(49175);
 t.Z = function(e) {
   let {
 sectionFilter: t,
@@ -49,7 +49,7 @@ U({
   }, [
 j,
 t
-  ]), k = s.useCallback(() => {
+  ]), w = s.useCallback(() => {
 U({
   ...j,
   [t]: ''
@@ -57,8 +57,8 @@ U({
   }, [
 j,
 t
-  ]), w = b.filter(t, j[t]);
-  if (0 === w.length && '' === j[t])
+  ]), k = b.filter(t, j[t]);
+  if (0 === k.length && '' === j[t])
 return (0, i.jsxs)('div', {
   className: x.emptyStateContainer,
   children: [
@@ -71,9 +71,9 @@ return (0, i.jsxs)('div', {
     }, P)
   ]
 });
-  let B = [w],
-H = 0 === w.length && '' !== j[t],
-V = w.filter(e => e.type === O.OGo.PENDING_INCOMING).length,
+  let B = [k],
+H = 0 === k.length && '' !== j[t],
+V = k.filter(e => e.type === O.OGo.PENDING_INCOMING).length,
 F = t === O.pJs.PENDING && V > 0 && y && V >= L.yf;
   return (0, i.jsx)(h.Gt, {
 value: a,
@@ -84,7 +84,7 @@ children: (0, i.jsxs)(u.Z, {
       className: r()(x.searchBar, H ? x.searchEmptyState : null),
       query: j[t],
       onChange: G,
-      onClear: k,
+      onClear: w,
       size: o.SearchBar.Sizes.MEDIUM
     }),
     t === O.pJs.ONLINE && '' === j[t] && (0, i.jsx)(I.Z, {}),
@@ -116,7 +116,7 @@ children: (0, i.jsxs)(u.Z, {
                   count: t.toString()
                 });
             }
-          }(t, w.length)
+          }(t, k.length)
         }),
         F && (0, i.jsx)(o.Button, {
           look: o.ButtonLooks.LINK,

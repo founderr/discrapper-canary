@@ -3,7 +3,7 @@ var s = n(735250),
   r = n(481060),
   i = n(377171),
   o = n(689938),
-  u = n(484779);
+  u = n(30897);
 t.Z = a.forwardRef(function(e, t) {
   let {
 isInventory: n,

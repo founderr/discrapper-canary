@@ -1,1 +1,5 @@
-e.exports = '/assets/01feea1f6d970557cf96.svg';
+e.exports = {
+  progress: 'progress_d8cc3d',
+  container: 'container_d8cc3d',
+  countdown: 'countdown_d8cc3d'
+};

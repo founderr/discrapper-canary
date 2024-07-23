@@ -70,7 +70,7 @@ var t = i(735250),
   ep = i(981631),
   em = i(558921),
   eI = i(689938),
-  ef = i(57853),
+  ef = i(364658),
   eg = i(902294);
 let eh = d().parserFor(ec.Z),
   eC = d().reactFor(d().ruleOutput(ec.Z, 'react')),
@@ -413,11 +413,11 @@ eW
   guildId: f
 }),
 e9 = (null == eM ? void 0 : eM.id) === em.g,
-[e4, e2] = a.useState(!1),
+[e2, e4] = a.useState(!1),
 [e7, ne] = a.useState(!1),
 [nn, ni] = a.useState(!0),
 nt = e => {
-  null != e && e2(e.scrollHeight > e.clientHeight);
+  null != e && e4(e.scrollHeight > e.clientHeight);
 },
 na = null != ez && ez.length > 0,
 nr = (null == eM ? void 0 : eM.flags) != null,
@@ -458,7 +458,7 @@ p
               children: r
             })
           }),
-          (e4 || e7) && (0, t.jsx)(eR, {
+          (e2 || e7) && (0, t.jsx)(eR, {
             isViewAll: e7,
             onToggle: () => {
               ne(e => !e);
@@ -591,7 +591,7 @@ p
   eM,
   eL,
   e7,
-  e4,
+  e2,
   eq,
   ey,
   eJ,

@@ -33,7 +33,7 @@ var r = n(735250),
   U = n(185923),
   w = n(611480),
   x = n(689938),
-  G = n(34596);
+  G = n(118282);
 let k = b.Om + P.Su.MEDIUM,
   B = i.memo(function(e) {
 let {

@@ -37,7 +37,7 @@ var i = n(735250),
   T = n(217702),
   E = n(981631),
   v = n(689938),
-  y = n(62233);
+  y = n(670347);
 let N = /\.(mp3|m4a|ogg|wav|flac)$/i,
   O = e => 'IMAGE' === e || 'VIDEO' === e || 'CLIP' === e,
   A = e => 'IMAGE' === e || 'VIDEO' === e;
