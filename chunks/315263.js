@@ -110,7 +110,7 @@ return e => {
   if (null != s && s.type === c.g.QUESTS_EMBED && (0, m.cB)({
   location: C.dr.EMBED_MOBILE
 }))
-return e => (null == e || e.preventDefault(), o.Z.open(R.oAB.QUESTS), !0);
+return e => (null == e || e.preventDefault(), o.Z.open(R.oAB.INVENTORY), !0);
   let {
 path: g,
 hostname: N = '',
