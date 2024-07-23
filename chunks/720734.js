@@ -39,8 +39,8 @@ var i = n(735250),
   j = n(243778),
   U = n(730417),
   G = n(524347),
-  k = n(853197),
-  w = n(810280),
+  w = n(853197),
+  k = n(810280),
   B = n(60762),
   H = n(258609),
   V = n(278464),
@@ -85,9 +85,9 @@ var i = n(735250),
   eO = n(998502),
   eR = n(981631),
   ex = n(215023),
-  eb = n(702512),
+  eb = n(288836),
   eP = n(689938),
-  eM = n(614493);
+  eM = n(108079);
 
 function eD(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -288,7 +288,7 @@ return null == e ? null : (0, i.jsxs)('div', {
     (0, i.jsxs)(ep.Z, {
       grow: 0,
       children: [
-        (0, i.jsx)(ew, {
+        (0, i.jsx)(ek, {
           selfMute: n,
           serverMute: a,
           suppress: l,
@@ -329,7 +329,7 @@ return null == e ? null : (0, i.jsxs)('div', {
                   position: 'top',
                   align: 'center',
                   shouldShow: !0,
-                  renderPopout: () => (0, i.jsx)(w.Z, {
+                  renderPopout: () => (0, i.jsx)(k.Z, {
                     markAsDismissed: n,
                     partnerGame: eb.X2.FORTNITE
                   }),
@@ -459,15 +459,13 @@ super(...e), eD(this, 'copiedTimeout', new c.V7()), eD(this, 'copiedDecayTimeout
       default: e
     } = await Promise.all([
       n.e('96427'),
-      n.e('77298'),
-      n.e('23357'),
       n.e('19503'),
       n.e('15972'),
-      n.e('12013'),
+      n.e('13682'),
+      n.e('15685'),
       n.e('47006'),
-      n.e('60623'),
       n.e('32776'),
-      n.e('95900'),
+      n.e('18209'),
       n.e('33053'),
       n.e('8016'),
       n.e('50654'),
@@ -476,11 +474,12 @@ super(...e), eD(this, 'copiedTimeout', new c.V7()), eD(this, 'copiedDecayTimeout
       n.e('87624'),
       n.e('22646'),
       n.e('5528'),
-      n.e('23831'),
+      n.e('43331'),
       n.e('30419'),
       n.e('18824'),
-      n.e('51395'),
-      n.e('94335')
+      n.e('52619'),
+      n.e('66436'),
+      n.e('26025')
     ]).then(n.bind(n, 923422));
     return n => (0, i.jsx)(e, {
       ...n,
@@ -582,7 +581,7 @@ super(...e), eD(this, 'copiedTimeout', new c.V7()), eD(this, 'copiedDecayTimeout
   }) : (this.setState({
     shouldShowSpeakingWhileMutedTooltip: !1
   }), this.speakingWhileMutedTooltipTimeout.stop());
-}), eD(this, 'renderSettingsGear', () => (0, i.jsx)(ek, {
+}), eD(this, 'renderSettingsGear', () => (0, i.jsx)(ew, {
   isEligibleForPomelo: this.props.isEligibleForPomelo,
   webBuildOverride: this.props.webBuildOverride,
   onClick: this.handleOpenAccountSettings,
@@ -636,7 +635,7 @@ b = (0, l.e7)([e_.Z], () => e_.Z.getEverSpeakingWhileMuted()),
 P = (0, l.e7)([eu.Z], () => eu.Z.hasLayers()),
 D = (0, E.useModalsStore)(E.hasAnyModalOpenSelector) || P || eZ.s.isDisallowPopupsSet(),
 j = (0, Y.b)(),
-w = (0, l.e7)([H.Z], () => null != H.Z.getAwaitingRemoteSessionInfo()),
+k = (0, l.e7)([H.Z], () => null != H.Z.getAwaitingRemoteSessionInfo()),
 B = (0, l.e7)([G.Z], () => G.Z.isCurrentQuestCompleted),
 F = (0, l.e7)([G.Z], () => G.Z.currentDropQuestGameTitle),
 q = (0, V.n)(),
@@ -705,7 +704,7 @@ eS = {
   avatar: [],
   settings: []
 };
-  return !D && (eT && eS.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), a && (eS.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), B && F === (null === (t = (0, k.BS)(eb.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && eS.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), q && J && eS.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), $ && (1 === ee ? eS.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eS.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), ep && eS.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), en && eS.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), ei && eS.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), ef && eS.settings.push(o.z.PRIDE_ICONS_COACHMARK), ea && eS.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, i.jsx)(eU, {
+  return !D && (eT && eS.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), a && (eS.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), B && F === (null === (t = (0, w.BS)(eb.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && eS.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), q && J && eS.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), $ && (1 === ee ? eS.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eS.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), ep && eS.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), en && eS.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), ei && eS.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), ef && eS.settings.push(o.z.PRIDE_ICONS_COACHMARK), ea && eS.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, i.jsx)(eU, {
 currentUser: n,
 customStatusActivity: c,
 dismissibleContents: eS,
@@ -723,12 +722,12 @@ status: u,
 streaming: d,
 suppress: A,
 webBuildOverride: R,
-awaitingRemote: w,
+awaitingRemote: k,
 isEligibleForPomelo: j
   });
 }
 
-function ek(e) {
+function ew(e) {
   let {
 webBuildOverride: t,
 isEligibleForPomelo: n,
@@ -759,7 +758,7 @@ children: l
   });
 }
 
-function ew(e) {
+function ek(e) {
   let {
 selfMute: t,
 serverMute: n,

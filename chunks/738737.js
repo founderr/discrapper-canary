@@ -19,8 +19,8 @@ onClose: d,
 analyticsObject: u,
 analyticsLocation: _,
 analyticsLocations: E,
-analyticsSubscriptionType: I,
-renderHeader: m,
+analyticsSubscriptionType: m,
+renderHeader: I,
 renderPurchaseConfirmation: T,
 planGroup: h,
 reviewWarningMessage: N,
@@ -40,17 +40,16 @@ let {
   STEPS: r
 } = await Promise.all([
   n.e('96427'),
-  n.e('77298'),
-  n.e('23357'),
   n.e('15972'),
-  n.e('12013'),
+  n.e('13682'),
+  n.e('15685'),
   n.e('47006'),
-  n.e('43300'),
   n.e('32776'),
-  n.e('95900'),
+  n.e('18209'),
   n.e('8016'),
   n.e('68136'),
-  n.e('5701')
+  n.e('62761'),
+  n.e('71529')
 ]).then(n.bind(n, 7305));
 return n => {
   let {
@@ -71,9 +70,9 @@ return n => {
         analyticsLocations: E,
         analyticsObject: u,
         analyticsLocation: _,
-        analyticsSubscriptionType: I,
+        analyticsSubscriptionType: m,
         skuId: f,
-        renderHeader: m,
+        renderHeader: I,
         renderPurchaseConfirmation: T,
         planGroup: h,
         trialId: o,
