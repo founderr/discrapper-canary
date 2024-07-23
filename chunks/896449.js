@@ -26,7 +26,7 @@ onSelect: E
   } = e, C = (0, d.Z)(n.id, m, _.id), g = (0, r.Z)({
 id: n.id,
 label: h.Z.Messages.COPY_ID_USER
-  }), I = (0, u.d)(f), x = (0, c.Z)({
+  }), I = (0, u.dX)(f), x = (0, c.Z)({
 location: 'ContentPopoutContextMenu',
 applicationId: I ? null === (t = f.extra) || void 0 === t ? void 0 : t.application_id : void 0,
 source: o.m1.ActivityCardContextMenu,

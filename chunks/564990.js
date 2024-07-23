@@ -1,24 +1,28 @@
 n.d(t, {
-  m: function() {
-return o;
+  JX: function() {
+return u;
   },
-  y: function() {
+  mt: function() {
 return l;
+  },
+  yK: function() {
+return c;
   }
 });
 var r = n(544891),
-  i = n(881052),
-  a = n(206583),
-  s = n(981631);
-let o = async e => {
+  i = n(570140),
+  a = n(881052),
+  s = n(206583),
+  o = n(981631);
+let l = async e => {
   let {
 token: t,
 feedId: n
   } = e;
   try {
 let e = (await r.tn.get({
-    url: s.ANM.MY_CONTENT_INVENTORY(t),
-    ...n === a.YN.GAME_PROFILE_FEED && {
+    url: o.ANM.MY_CONTENT_INVENTORY(t),
+    ...n === s.YN.GAME_PROFILE_FEED && {
       query: {
         for_game_profile: !0
       }
@@ -31,19 +35,32 @@ if (null != i) {
 }
 return e;
   } catch (e) {
-throw new i.Hx(e);
+throw new a.Hx(e);
+  }
+}, u = async e => {
+  try {
+let t = (await r.tn.get({
+  url: o.ANM.CONTENT_INVENTORY_OUTBOX(e)
+})).body;
+return i.Z.dispatch({
+  type: 'CONTENT_INVENTORY_SET_USER_OUTBOX',
+  outbox: t,
+  userId: e
+}), t;
+  } catch (e) {
+throw new a.Hx(e);
   }
 };
-async function l(e, t) {
+async function c(e, t) {
   try {
 await r.tn.post({
-  url: s.ANM.MY_SPOTIFY_CONTENT_INVENTORY,
+  url: o.ANM.MY_SPOTIFY_CONTENT_INVENTORY,
   body: {
     connection_id: e,
     tracks: [t]
   }
 });
   } catch (e) {
-throw new i.Hx(e);
+throw new a.Hx(e);
   }
 }

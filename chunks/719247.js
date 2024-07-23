@@ -1,107 +1,128 @@
-e.d(t, {
+n.d(t, {
   T: function() {
-return I;
+return A;
   }
-}), e(47120);
-var r, u = e(392711),
-  i = e.n(u),
-  o = e(661869),
-  E = e(876215),
-  l = e(423875),
-  a = e(442837),
-  T = e(570140),
-  _ = e(158776),
-  c = e(146282),
-  s = e(26033),
-  d = e(561308),
-  f = e(981631),
-  S = e(616922);
+}), n(47120);
+var r, i = n(392711),
+  a = n.n(i),
+  s = n(661869),
+  o = n(876215),
+  l = n(423875),
+  u = n(442837),
+  c = n(570140),
+  d = n(158776),
+  _ = n(146282),
+  E = n(26033),
+  f = n(561308),
+  h = n(981631),
+  p = n(616922),
+  m = n(728151);
 
-function N(n, t, e) {
-  return t in n ? Object.defineProperty(n, t, {
-value: e,
+function I(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+value: n,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : n[t] = e, n;
+  }) : e[t] = n, e;
 }
-let M = new Set([E.s.LISTENED_SESSION]),
-  A = new Map();
+let T = new Set([o.s.LISTENED_SESSION]),
+  g = new Map(),
+  S = new Map();
 
-function I(n) {
-  return ''.concat(n.author_id, ':').concat(n.id);
+function A(e) {
+  return ''.concat(e.author_id, ':').concat(e.id);
 }
 
-function O(n) {
+function N(e, t) {
+  let n = e.extra;
+  return null != n && ('application_id' in t && t.application_id === n.application_id || 'game_name' in n && t.name === n.game_name);
+}
+
+function v(e, t) {
+  var n, r, i;
+  return (null === (r = e.extra.entries[0]) || void 0 === r ? void 0 : null === (n = r.media) || void 0 === n ? void 0 : n.provider) === l.p.SPOTIFY && (0, p.Ps)(null === (i = t.party) || void 0 === i ? void 0 : i.id);
+}
+
+function O(e) {
   let t = new Set(),
-e = new Set();
-  for (let r of n) {
-let n = function(n) {
-  return (0, d.n2)(n) ? null : (0, d.kr)(n) && n.author_type === o.i.USER ? _.Z.getActivities(n.author_id).find(t => {
-    if (t.type === f.IIU.PLAYING && (0, s.d)(n))
-      return function(n, t) {
-        let e = n.extra;
-        return null != e && ('application_id' in t && t.application_id === e.application_id || 'game_name' in e && t.name === e.game_name);
-      }(n, t);
-    if (t.type === f.IIU.LISTENING && n.content_type === E.s.LISTENED_SESSION) {
-      var e, r, u, i, o;
-      return e = n, r = t, (null === (i = e.extra.entries[0]) || void 0 === i ? void 0 : null === (u = i.media) || void 0 === u ? void 0 : u.provider) === l.p.SPOTIFY && (0, S.Ps)(null === (o = r.party) || void 0 === o ? void 0 : o.id);
-    }
-    return !1;
-  }) : void 0;
+n = new Set();
+  for (let r of e) {
+let e = function(e) {
+  return (0, f.n2)(e) ? null : (0, f.kr)(e) && e.author_type === s.i.USER ? d.Z.getActivities(e.author_id).find(t => t.type === h.IIU.PLAYING && (0, E.dX)(e) ? N(e, t) : !!(t.type === h.IIU.LISTENING && (0, E.kx)(e)) && v(e, t)) : void 0;
 }(r.content);
-if (void 0 !== n) {
-  let u = I(r.content);
-  e.add(u), n !== A.get(u) && (t.add(u), A.set(u, n));
+if (void 0 !== e) {
+  let i = A(r.content);
+  n.add(i), e !== g.get(i) && (t.add(i), g.set(i, e));
 }
   }
   return {
 updatedKeys: t,
-matchedKeys: e
+matchedKeys: n
   };
 }
 
 function R() {
-  let n = !1,
-t = Array.from(A.keys()),
-e = new Set(),
+  let e = !1,
+t = Array.from(g.keys()),
+n = new Set(),
 r = new Set();
-  for (let t of c.Z.getFeeds().values()) {
+  for (let t of _.Z.getFeeds().values()) {
 let {
-  updatedKeys: u,
-  matchedKeys: i
-} = O(e.size > 0 ? t.entries.filter(n => !e.has(I(n.content))) : t.entries);
-for (let n of u)
-  e.add(n);
-for (let n of i)
-  r.add(n);
-n = n || u.size > 0;
+  updatedKeys: i,
+  matchedKeys: a
+} = O(n.size > 0 ? t.entries.filter(e => !n.has(A(e.content))) : t.entries);
+for (let e of i)
+  n.add(e);
+for (let e of a)
+  r.add(e);
+e = e || i.size > 0;
   }
-  for (let e of i().difference(t, [...r]))
-A.delete(e), n = !0;
-  return n;
+  for (let n of a().difference(t, [...r]))
+g.delete(n), e = !0;
+  return e;
 }
-class D extends(r = a.ZP.Store) {
+class C extends(r = u.ZP.Store) {
   initialize() {
-this.waitFor(c.Z, _.Z), this.syncWith([_.Z], R);
+this.waitFor(_.Z, d.Z), this.syncWith([d.Z], R);
   }
-  getMatchingActivity(n) {
-return (0, d.n2)(n) ? null : A.get(I(n));
+  getMatchingActivity(e) {
+return (0, f.n2)(e) ? null : g.get(A(e));
   }
-  constructor(...n) {
-super(...n), N(this, 'canRenderContent', n => !(0, d.n2)(n) && (!M.has(n.content_type) || null != this.getMatchingActivity(n)));
+  getMatchingOutboxEntry(e, t) {
+let n = S.get(t);
+if (null == n || null == e)
+  return;
+let r = n.entries.filter(f.kr);
+return e.type === h.IIU.PLAYING ? r.filter(E.dX).find(t => N(t, e)) : e.type === h.IIU.LISTENING ? r.filter(E.kx).find(t => v(t, e)) : e.type === h.IIU.WATCHING ? n.entries.filter(E.r5).find(t => {
+  var n, r;
+  return n = t, (r = e).application_id === m.sp && n.extra.application_id === m.sp && n.extra.media_title === r.details && n.extra.media_subtitle === r.state;
+}) : void 0;
+  }
+  getUserOutbox(e) {
+return S.get(e);
+  }
+  constructor(...e) {
+super(...e), I(this, 'canRenderContent', e => !(0, f.n2)(e) && (!T.has(e.content_type) || null != this.getMatchingActivity(e)));
   }
 }
-N(D, 'displayName', 'ContentInventoryActivityStore'), t.Z = new D(T.Z, {
+I(C, 'displayName', 'ContentInventoryActivityStore'), t.Z = new C(c.Z, {
   CONNECTION_OPEN: function() {
-A.clear();
+g.clear();
   },
-  CONTENT_INVENTORY_SET_FEED: function(n) {
+  CONTENT_INVENTORY_SET_FEED: function(e) {
 let {
   feed: t
-} = n, {
-  updatedKeys: e
+} = e, {
+  updatedKeys: n
 } = O(t.entries);
-return e.size > 0;
+return n.size > 0;
+  },
+  CONTENT_INVENTORY_SET_USER_OUTBOX: function(e) {
+let {
+  outbox: t,
+  userId: n
+} = e;
+S.set(n, t);
   }
 });

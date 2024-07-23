@@ -16,7 +16,7 @@ let h = E.YN.GLOBAL_FEED,
   m = new Set(),
   I = new Map(),
   T = null,
-  g = (0, r.debounce)(d.y, 3000, {
+  g = (0, r.debounce)(d.yK, 3000, {
 trailing: !0
   });
 
@@ -76,7 +76,7 @@ try {
   m.add(e), S(e, {
     loading: !0
   });
-  let n = await (0, d.m)({
+  let n = await (0, d.mt)({
     token: null == t ? void 0 : t.refresh_token,
     feedId: e
   });

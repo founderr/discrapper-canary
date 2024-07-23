@@ -634,7 +634,7 @@ headerIcons: _,
 ...f
   } = e, {
 entry: E
-  } = f, C = (0, q.d)(E), g = (0, Z.Z)({
+  } = f, C = (0, q.dX)(E), g = (0, Z.Z)({
 location: 'ContentPopout',
 applicationId: C ? null === (t = E.extra) || void 0 === t ? void 0 : t.application_id : void 0,
 source: S.m1.ActivityCard,
@@ -724,7 +724,7 @@ onClickSubtitle: E,
 ...C
   } = e, g = (0, c.e7)([y.Z], () => y.Z.getChannel(null == r ? void 0 : r.channelId)), [I] = a.useMemo(() => (0, A.p9)(g, H.Z, D.Z, k.Z, v.Z), [g]), {
 entry: x
-  } = C, T = (0, q.d)(x), N = (0, Z.Z)({
+  } = C, T = (0, q.dX)(x), N = (0, Z.Z)({
 location: 'ContentPopout',
 applicationId: T ? null === (t = x.extra) || void 0 === t ? void 0 : t.application_id : void 0,
 source: S.m1.ActivityCard,
