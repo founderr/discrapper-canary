@@ -232,9 +232,6 @@ return (0, l.yE)(this.flags, c.iLy.IS_UIKIT_COMPONENTS);
   isInteractionPlaceholder() {
 return null != this.interaction && this.author.isNonUserBot();
   }
-  isEmptyInteractionMessage() {
-return null != this.interaction && '' === this.content && 0 === this.components.length && 0 === this.embeds.length && 0 === this.attachments.length;
-  }
   canDeleteOwnMessage(e) {
 var t, n, i;
 if (this.author.id === e)
