@@ -1031,7 +1031,8 @@ let a = await s.tn.post({
     payment_source_id: null != n ? n.id : null,
     payment_source_token: null != n ? await H(n) : null,
     return_url: i,
-    currency: r
+    currency: r,
+    purchase_token: (0, p.d)()
   },
   oldFormErrors: !0
 });
@@ -1297,7 +1298,8 @@ let l = {
   currency: t.currency,
   gateway_checkout_context: await (0, f.cn)(t.paymentSource),
   load_id: i,
-  pause_duration: t.pauseDuration
+  pause_duration: t.pauseDuration,
+  purchase_token: (0, p.d)()
 };
 if (null != t.paymentSource && g.QL.has(t.paymentSource.type)) {
   let e = await eI(t.paymentSource.type);
