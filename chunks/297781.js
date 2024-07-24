@@ -266,13 +266,15 @@ location: n
   if (!(0, g.V5)(t))
 return null;
   let r = (0, g.kr)(t),
-i = 0 === n,
-s = i || r ? (0, g.z5)(t) : (0, g.nB)(t);
+{
+  text: i,
+  tooltipText: s
+} = (0, g.zo)(t);
   return (0, a.jsx)(D, {
 Icon: f.TimerIcon,
-text: s,
-tooltipText: (0, g.EX)(t),
-showTooltip: i && !r
+text: i,
+tooltipText: s,
+showTooltip: 0 === n && !r
   });
 }
 

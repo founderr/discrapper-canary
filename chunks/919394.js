@@ -67,10 +67,16 @@ let l = (0, E.dw)(e);
 if (null != l && t.push({
     iconPath: I.Z,
     text: (0, E.GE)(l)
-  }), (0, E.V5)(e) && t.push({
+  }), (0, E.V5)(e)) {
+  let {
+    text: n
+  } = (0, E.zo)(e);
+  null != n && t.push({
     iconPath: I.Md,
-    text: (0, E.kr)(e) ? (0, E.z5)(e) : (0, E.nB)(e)
-  }), (0, E.Jd)(e)) {
+    text: n
+  });
+}
+if ((0, E.Jd)(e)) {
   let n = (0, E.yA)(e);
   if (null != n) {
     let e = M.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({

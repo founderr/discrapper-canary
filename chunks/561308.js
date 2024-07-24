@@ -1,7 +1,4 @@
 n.d(t, {
-  EX: function() {
-return P;
-  },
   GE: function() {
 return C;
   },
@@ -39,7 +36,7 @@ return D;
 return R;
   },
   ig: function() {
-return x;
+return U;
   },
   kr: function() {
 return g;
@@ -47,14 +44,11 @@ return g;
   n2: function() {
 return A;
   },
-  nB: function() {
-return w;
-  },
   q_: function() {
 return M;
   },
   qy: function() {
-return G;
+return w;
   },
   vU: function() {
 return b;
@@ -65,8 +59,8 @@ return N;
   yh: function() {
 return I;
   },
-  z5: function() {
-return U;
+  zo: function() {
+return P;
   }
 }), n(47120);
 var r = n(164369),
@@ -250,31 +244,27 @@ return !1;
 function P(e) {
   let t = N(e);
   if (null == t)
-return null;
+return {
+  text: null,
+  tooltipText: null
+};
   let n = Math.round(t / c.Z.Seconds.HOUR);
-  return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_FOR_HOURS.format({
-hours: n
-  });
+  return {
+text: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON_TIME.format({
+  hours: n
+}),
+tooltipText: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_FOR_HOURS.format({
+  hours: n
+})
+  };
 }
 
 function U(e) {
   var t;
-  let n = null !== (t = N(e)) && void 0 !== t ? t : 0;
-  return n > 10 * c.Z.Seconds.HOUR ? E.Z.Messages.MEMBER_LIST_CONTENT_FEED_EPIC_MARATHON : n > 5 * c.Z.Seconds.HOUR ? E.Z.Messages.MEMBER_LIST_CONTENT_FEED_ULTRA_MARATHON : E.Z.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON;
-}
-
-function w(e) {
-  let t = P(e),
-n = U(e);
-  return null == t ? n : ''.concat(n, ' \u2014 ').concat(t);
-}
-
-function x(e) {
-  var t;
   return null === (t = T(e, s.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
 }
 
-function G(e) {
+function w(e) {
   let t = (0, o.e7)([_.Z], () => _.Z.getMatchingActivity(e)),
 [n, r] = (0, u.Z)([
   null == t ? void 0 : t.application_id,
