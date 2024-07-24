@@ -260,6 +260,7 @@ placeholderCount: 0,
 limit: R.tn,
 includeFrecency: !0,
 allowApplicationState: o,
+installOnDemand: o,
 applicationId: l.id
   }), p = null !== (n = u.find(e => e.id === l.id)) && void 0 !== n ? n : null, {
 sortOrder: _,

@@ -218,7 +218,8 @@ let c = en({
   userState: i,
   applicationStates: n.allowApplicationState ? s : new Map(),
   sortOptions: n.sortOptions,
-  singleApplicationId: n.applicationId
+  singleApplicationId: n.applicationId,
+  installOnDemand: n.installOnDemand
 });
 return c.loading = c.loading || u, c;
   }
@@ -615,7 +616,8 @@ contextState: a,
 userState: o,
 applicationStates: n.allowApplicationState ? l : new Map(),
 sortOptions: n.sortOptions,
-singleApplicationId: n.applicationId
+singleApplicationId: n.applicationId,
+installOnDemand: n.installOnDemand
   }), [
 r,
 t.text,
@@ -626,6 +628,7 @@ n.allowEmptySections,
 n.sortOptions,
 n.allowApplicationState,
 n.applicationId,
+n.installOnDemand,
 a,
 o,
 l,
@@ -646,40 +649,42 @@ allowApplicationCommands: h = !0,
 singleApplicationId: p,
 allowEmptySections: I = !1,
 scoreMethod: g = R.p.NONE,
-sortOptions: S = ee
+sortOptions: S = ee,
+installOnDemand: N = !1
   } = e, {
-commandType: N
-  } = o, O = null == _ ? void 0 : _.toLowerCase(), C = null == O ? void 0 : O.split(' '), y = E === R.D.ONLY_TEXT, D = E !== R.D.DENY ? (0, A.Kh)(N, !0, y) : [], L = [], M = {
+commandType: O
+  } = o, C = null == _ ? void 0 : _.toLowerCase(), y = null == C ? void 0 : C.split(' '), D = E === R.D.ONLY_TEXT, L = E !== R.D.DENY ? (0, A.Kh)(O, !0, D) : [], M = [], P = {
 permissionContext: o,
-query: O,
-splitQuery: C,
+query: C,
+splitQuery: y,
 allowEmptySections: I,
-scoreMethod: g
-  }, P = null !== (i = null === (t = u.result) || void 0 === t ? void 0 : t.sections) && void 0 !== i ? i : {}, U = null !== (a = null === (n = c.result) || void 0 === n ? void 0 : n.sections) && void 0 !== a ? a : {}, w = new Set();
+scoreMethod: g,
+installOnDemand: N
+  }, U = null !== (i = null === (t = u.result) || void 0 === t ? void 0 : t.sections) && void 0 !== i ? i : {}, w = null !== (a = null === (n = c.result) || void 0 === n ? void 0 : n.sections) && void 0 !== a ? a : {}, x = new Set();
   if (h) {
 if (o.hasBaseAccessPermissions)
-  for (let e in P) {
-    let t = P[e];
-    (null == p || t.descriptor.id === p) && w.add(e);
+  for (let e in U) {
+    let t = U[e];
+    (null == p || t.descriptor.id === p) && x.add(e);
   }
-for (let e in U) {
-  let t = U[e];
-  (null == p || t.descriptor.id === p) && w.add(e);
+for (let e in w) {
+  let t = w[e];
+  (null == p || t.descriptor.id === p) && x.add(e);
 }
   }
-  let x = new Map();
+  let G = new Map();
   for (let [e, t] of d)
 if (null == p || e === p) {
   let e = null === (s = t.result) || void 0 === s ? void 0 : s.sections;
   if (null != e)
     for (let t of Object.keys(e))
-      w.add(t), x.set(t, e[t]);
+      x.add(t), G.set(t, e[t]);
 }
-  for (let e of Array.from(w)) {
+  for (let e of Array.from(x)) {
 let t, n;
-let r = P[e],
-  i = U[e],
-  a = x.get(e),
+let r = U[e],
+  i = w[e],
+  a = G.get(e),
   s = null != r,
   o = null != i;
 if (null != r && null != i) {
@@ -695,10 +700,10 @@ if (null != r && null != i) {
 } else
   null != r ? (t = r.descriptor, n = Object.values(r.commands)) : null != i ? (t = i.descriptor, n = Object.values(i.commands)) : null != a && (t = a.descriptor, n = Object.values(a.commands));
 l()(null != t, 'Failed to select application descriptor'), l()(null != n, 'Failed to select list of application commands');
-let u = er(t, n, s, o, M);
-null != u && L.push(u);
+let u = er(t, n, s, o, P);
+null != u && M.push(u);
   }
-  if (S.applications.useFrecency && m.DZ.loadIfNecessary(), L.sort((e, t) => {
+  if (S.applications.useFrecency && m.DZ.loadIfNecessary(), M.sort((e, t) => {
   if (S.applications.useScore && g === R.p.APPLICATION_ONLY) {
     var n, r, i, a;
     let s = null !== (i = null === (n = e.data[0]) || void 0 === n ? void 0 : n.score) && void 0 !== i ? i : Number.MAX_VALUE,
@@ -713,18 +718,18 @@ null != u && L.push(u);
       return r - n;
   }
   return eu(e.section.name, t.section.name);
-}), D.length > 0 || !0 === I) {
-let e = er(A.Tm[b.bi.BUILT_IN], D, !0, !0, M);
-null != e && L.push(e);
+}), L.length > 0 || !0 === I) {
+let e = er(A.Tm[b.bi.BUILT_IN], L, !0, !0, P);
+null != e && M.push(e);
   }
-  let G = L.flatMap(e => e.data.map(t => ({
+  let k = M.flatMap(e => e.data.map(t => ({
 ...t,
 section: e.section
   })));
   if (g === R.p.COMMAND_ONLY || g === R.p.COMMAND_OR_APPLICATION) {
 let e = o.context,
   t = T.Z.getGuild(o.context.guild_id);
-S.commands.useFrecency && m.DZ.loadIfNecessary(), G.sort((n, r) => {
+S.commands.useFrecency && m.DZ.loadIfNecessary(), k.sort((n, r) => {
   if (S.commands.useScore) {
     var i, a;
     let e = null !== (i = n.score) && void 0 !== i ? i : 0,
@@ -748,9 +753,9 @@ S.commands.useFrecency && m.DZ.loadIfNecessary(), G.sort((n, r) => {
 });
   }
   return {
-commands: G,
-descriptors: L.map(e => e.section),
-sectionedCommands: L,
+commands: k,
+descriptors: M.map(e => e.section),
+sectionedCommands: M,
 loading: (null == u ? void 0 : u.fetchState.fetching) === !0 || (null == c ? void 0 : c.fetchState.fetching) === !0 || null != p && (null === (r = d.get(p)) || void 0 === r ? void 0 : r.fetchState.fetching) === !0
   };
 }
@@ -761,25 +766,26 @@ function er(e, t, n, r, i) {
   splitQuery: o,
   allowEmptySections: l,
   scoreMethod: u,
-  permissionContext: c
+  permissionContext: c,
+  installOnDemand: d
 } = i,
 {
-  context: d,
-  userId: _,
-  roleIds: E,
-  isImpersonating: f
+  context: _,
+  userId: E,
+  roleIds: f,
+  isImpersonating: h
 } = c,
-h = null != d.guild_id ? L.ML(e.permissions, d.guild_id, _, E, f) : null,
-p = null != d.guild_id ? L.ZJ(e.permissions, d, d.guild_id) : null,
-m = [];
+p = null != _.guild_id ? L.ML(e.permissions, _.guild_id, E, f, h) : null,
+m = null != _.guild_id ? L.ZJ(e.permissions, _, _.guild_id) : null,
+I = [];
   for (let i of t)
 L.Ft(i, c, {
-  applicationAllowedForUser: h,
-  applicationAllowedForChannel: p,
+  applicationAllowedForUser: p,
+  applicationAllowedForChannel: m,
   commandBotId: e.botId,
   isGuildInstalled: n,
-  isUserInstalled: r
-}) === L.mF.ALLOWED && m.push(i);
+  isUserInstalled: r || d
+}) === L.mF.ALLOWED && I.push(i);
   return 0 !== (a = u !== R.p.NONE && null != s && null != o ? function(e, t, n, r, i) {
 let a;
 let s = [];
@@ -826,7 +832,7 @@ for (let t of n) {
   });
 }
 return s;
-  }(s, o, m, e, u) : m).length || l ? ((u === R.p.NONE || u === R.p.APPLICATION_ONLY) && a.sort((e, t) => eu(e.displayName, t.displayName)), {
+  }(s, o, I, e, u) : I).length || l ? ((u === R.p.NONE || u === R.p.APPLICATION_ONLY) && a.sort((e, t) => eu(e.displayName, t.displayName)), {
 section: e,
 data: a
   }) : null;
