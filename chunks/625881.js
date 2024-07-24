@@ -25,9 +25,9 @@ premiumType: s,
 onClose: i,
 onConfirm: h,
 userDiscountOffer: O
-  } = e, [p, R] = a.useState(!1), [x, M] = a.useState(!1), f = async e => {
+  } = e, [p, R] = a.useState(!1), [x, f] = a.useState(!1), M = async e => {
 try {
-  M(!0), R(!1), await o.tn.post({
+  f(!0), R(!1), await o.tn.post({
     url: N.ANM.USER_OFFER_REDEEM,
     body: {
       user_discount_offer_id: e
@@ -36,7 +36,7 @@ try {
 } catch (e) {
   R(!0);
 }
-M(!1);
+f(!1);
   }, D = (0, d.ZP)(), P = (0, l.wj)(D) ? A : g, L = (0, T._)(t, S.Xh.PREMIUM_MONTH_TIER_2, O), b = (0, E.aS)(S.Xh.PREMIUM_MONTH_TIER_2), Z = (0, u.T4)(b.amount, b.currency);
   return null == O ? null : (0, n.jsxs)(n.Fragment, {
 children: [
@@ -109,7 +109,7 @@ children: [
             (0, n.jsx)(c.Button, {
               size: c.ButtonSizes.SMALL,
               submitting: x,
-              onClick: () => f(O.id),
+              onClick: () => M(O.id),
               children: C.Z.Messages.CHURN_DISCOUNT_CONFIRM_DISCOUNT
             })
           ]

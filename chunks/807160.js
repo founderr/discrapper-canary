@@ -24,8 +24,8 @@ var n, a, i, r = s(735250),
   p = s(240864),
   R = s(942833),
   x = s(400916),
-  M = s(916001),
-  f = s(539290),
+  f = s(916001),
+  M = s(539290),
   D = s(336197),
   P = s(690221),
   L = s(219929),
@@ -222,7 +222,7 @@ children: [
         className: ee.guildProductBenefitLabel,
         children: $.Z.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_ROLE_UNLOCKED
       }),
-      (0, r.jsx)(M.Z, {
+      (0, r.jsx)(f.Z, {
         role: c
       })
     ]
@@ -675,9 +675,9 @@ return e.isGuildProductPurchase ? (0, r.jsxs)(r.Fragment, {
     (0, r.jsx)('div', {
       className: ee.sectionDivider
     }),
-    e.isSoftDeletedProduct ? (0, r.jsx)(f.Z, {
+    e.isSoftDeletedProduct ? (0, r.jsx)(M.Z, {
       className: ee.warningBlock,
-      buttonPosition: f.E.RIGHT,
+      buttonPosition: M.E.RIGHT,
       notice: $.Z.Messages.GUILD_PRODUCT_BILLING_PRODUCT_UNAVAILABLE,
       ctaLabel: $.Z.Messages.GUILD_PRODUCT_BILLING_CONTACT_SUPPORT,
       onClick: () => (0, m.Z)(es(s))

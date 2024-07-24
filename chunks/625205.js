@@ -52,8 +52,8 @@ children: S.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
   }));
   let R = i()(O).values().first(),
 x = null != R ? R.disabled : null != e,
-M = i()(p).values().first(),
-f = null != M ? M.disabled : null != t;
+f = i()(p).values().first(),
+M = null != f ? f.disabled : null != t;
 
   function D(e) {
 let t, {
@@ -135,7 +135,7 @@ children: [
             label: s
           };
         }),
-        isDisabled: f,
+        isDisabled: M,
         renderOptionValue: P,
         renderOptionLabel: D
       }),

@@ -32,30 +32,30 @@ showBorder: h = !1,
 isTryItOutFlow: O = !1,
 initialSelectedEffectId: p
   } = e, R = (0, E.Kg)(t, s), x = _.ZP.canUsePremiumProfileCustomization(t), {
-analyticsLocations: M
+analyticsLocations: f
   } = (0, l.ZP)(), {
-pendingProfileEffectId: f,
+pendingProfileEffectId: M,
 errors: D
   } = (0, E.bd)(s), P = a.useCallback(() => (0, c.H)({
-analyticsLocations: M,
+analyticsLocations: f,
 initialSelectedEffectId: p,
 guild: s
   }), [
-M,
+f,
 p,
 s
   ]);
   a.useEffect(() => {
 x && d.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
   type: S.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
-  location_stack: M
+  location_stack: f
 });
   }, [
 x,
-M
+f
   ]);
   let L = null != s,
-b = O || void 0 !== f ? null != f : null != R,
+b = O || void 0 !== M ? null != M : null != R,
 Z = g ? o.ShinyButton : o.Button;
   return (0, n.jsx)(u.Z, {
 forcedDivider: A,

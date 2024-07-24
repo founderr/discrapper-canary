@@ -1,8 +1,8 @@
 let {
   createLoader: n
 } = s(303872), a = n([
-  'HMvECw',
-  'JJ0wpK'
+  'JJ0wpK',
+  'HMvECw'
 ], {
   'en-US': () => s.e('57763').then(s.bind(s, 266292))
 });

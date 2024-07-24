@@ -27,8 +27,8 @@ var n = s(735250),
   p = s(433411),
   R = s(532432),
   x = s(504983),
-  M = s(134795),
-  f = s(513901),
+  f = s(134795),
+  M = s(513901),
   D = s(451392),
   P = s(981631),
   L = s(474936),
@@ -150,7 +150,7 @@ children: (0, n.jsxs)(x.Z, {
             showPremiumIcon: !1,
             preventDisabled: !0
           }),
-          (0, n.jsx)(M.Z, {
+          (0, n.jsx)(f.Z, {
             className: v.customizationSection,
             isTryItOutFlow: !0,
             showRemoveBannerButton: null != K,
@@ -171,7 +171,7 @@ children: (0, n.jsxs)(x.Z, {
             user: U,
             sectionTitle: Z.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
           }, 'decoration'),
-          (0, n.jsx)(f.Z, {
+          (0, n.jsx)(M.Z, {
             className: v.customizationSection,
             isTryItOutFlow: !0,
             initialSelectedEffectId: q,

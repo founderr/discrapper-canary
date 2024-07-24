@@ -23,8 +23,8 @@ var n = s(735250),
   p = s(454982),
   R = s(197115),
   x = s(504983),
-  M = s(703656),
-  f = s(594174),
+  f = s(703656),
+  M = s(594174),
   D = s(580130),
   P = s(669079),
   L = s(74538),
@@ -67,7 +67,7 @@ onClickDetails: T
 R = a.useCallback(() => u(!1), []),
 {
   outboundTitle: x,
-  outboundTermsAndConditions: M
+  outboundTermsAndConditions: f
 } = s;
   return (0, n.jsxs)(n.Fragment, {
 children: [
@@ -118,7 +118,7 @@ children: [
         className: G.promotionLegalese,
         variant: 'text-xs/normal',
         color: 'header-secondary',
-        children: m.Z.parse(M, !1, {
+        children: m.Z.parse(f, !1, {
           allowLinks: !0
         })
       })
@@ -145,7 +145,7 @@ t.Z = function() {
   } = e;
   return null == t;
 }),
-i = (0, c.e7)([f.default], () => L.ZP.isPremium(f.default.getCurrentUser())),
+i = (0, c.e7)([M.default], () => L.ZP.isPremium(M.default.getCurrentUser())),
 o = l().groupBy(t, e => (0, P.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
 [I, m] = a.useState(!1),
 g = (0, c.e7)([C.Z], () => C.Z.userStatus);
@@ -210,7 +210,7 @@ children: [
                 className: G.promoDescription,
                 children: U.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_GIFTS_DESCRIPTION.format({
                   onClick: () => {
-                    (0, u.xf)(), (0, M.uL)(j.Z5c.APPLICATION_STORE);
+                    (0, u.xf)(), (0, f.uL)(j.Z5c.APPLICATION_STORE);
                   }
                 })
               })

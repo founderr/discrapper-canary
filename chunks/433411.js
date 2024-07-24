@@ -34,7 +34,7 @@ userAvatarDecoration: O,
 guildAvatarDecoration: p,
 pendingAvatarDecoration: R,
 pendingErrors: x
-  } = (0, u.$U)(t, s), M = (0, _.Z)('enable_avatar_decoration_uploads'), f = a.useCallback(() => (0, d.ps)({
+  } = (0, u.$U)(t, s), f = (0, _.Z)('enable_avatar_decoration_uploads'), M = a.useCallback(() => (0, d.ps)({
 analyticsLocations: g,
 isTryItOutFlow: A,
 guild: s
@@ -55,7 +55,7 @@ children: [
     children: [
       (0, n.jsx)(P, {
         size: o.Button.Sizes.SMALL,
-        onClick: f,
+        onClick: M,
         className: r()({
           [S.buttonHighlighted]: m
         }),
@@ -73,7 +73,7 @@ children: [
       })
     ]
   }),
-  t.isStaff() && M && (0, n.jsx)(C, {
+  t.isStaff() && f && (0, n.jsx)(C, {
     user: t
   })
 ]

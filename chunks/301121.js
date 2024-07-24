@@ -25,8 +25,8 @@ var n, a, i = s(735250),
   p = s(294602),
   R = s(778825),
   x = s(856768),
-  M = s(592204),
-  f = s(712950),
+  f = s(592204),
+  M = s(712950),
   D = s(880257),
   P = s(16703),
   L = s(977059),
@@ -1014,14 +1014,14 @@ t = (0, u.cj)([G.Z], () => ({
 s = (0, u.e7)([b.Z], () => b.Z.getFetchError()),
 n = (0, u.e7)([y.Z], () => y.Z.getSubsection()),
 a = (0, h.yh)(),
-r = (0, M.Xo)({
+r = (0, f.Xo)({
   location: 'web_user_privacy_and_safety_settings'
 }),
 {
   hasSearchResults: o,
   searchResults: l
 } = (0, ee.E)(),
-c = (0, f.p)(),
+c = (0, M.p)(),
 _ = (0, D.Z)(),
 E = (0, z.H)({
   location: 'user_settings_privacy_safety'

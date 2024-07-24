@@ -27,8 +27,8 @@ var n = s(735250),
   p = s(285952),
   R = s(63063),
   x = s(358085),
-  M = s(13140),
-  f = s(210887),
+  f = s(13140),
+  M = s(210887),
   D = s(659947),
   P = s(981631),
   L = s(420212),
@@ -60,14 +60,14 @@ S.Q2.MISCELLANEOUS
   ]);
 }
 let G = l()((0, S.Rv)()).filter(e => e.description !== b.Z.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(),
-  F = c.ZP.connectStores([f.Z], () => ({
-theme: f.Z.theme
+  F = c.ZP.connectStores([M.Z], () => ({
+theme: M.Z.theme
   }))(_.EmptyState);
 class y extends a.PureComponent {
   renderMessage() {
 let {
   keybind: e
-} = this.props, t = M.BB(e.shortcut);
+} = this.props, t = f.BB(e.shortcut);
 return N.Z.hasBind(t) ? (0, n.jsx)(_.FormText, {
   className: Z.keybindMessage,
   type: _.FormTextTypes.DESCRIPTION,

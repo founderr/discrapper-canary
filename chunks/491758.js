@@ -27,8 +27,8 @@ var n = s(735250),
   p = s(981631),
   R = s(37113),
   x = s(526761),
-  M = s(689938),
-  f = s(899013),
+  f = s(689938),
+  M = s(899013),
   D = s(992133),
   P = s(224499);
 
@@ -62,67 +62,67 @@ B = (0, A.Z)(I.Z),
   let G = (0, o.e7)([u.default], () => u.default.locale),
 F = a.useMemo(() => [{
     value: O.OT.SECONDS_30,
-    label: M.Z.Messages.CLIPS_LENGTH_SECONDS.format({
+    label: f.Z.Messages.CLIPS_LENGTH_SECONDS.format({
       count: 30
     })
   },
   {
     value: O.OT.MINUTES_1,
-    label: M.Z.Messages.CLIPS_LENGTH_MINUTES.format({
+    label: f.Z.Messages.CLIPS_LENGTH_MINUTES.format({
       count: 1
     })
   },
   {
     value: O.OT.MINUTES_2,
-    label: M.Z.Messages.CLIPS_LENGTH_MINUTES.format({
+    label: f.Z.Messages.CLIPS_LENGTH_MINUTES.format({
       count: 2
     })
   }
 ], [G]),
 y = a.useMemo(() => [{
     value: R.LY.RESOLUTION_480,
-    label: M.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
+    label: f.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
       resolution: R.LY.RESOLUTION_480
     })
   },
   {
     value: R.LY.RESOLUTION_720,
-    label: M.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
+    label: f.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
       resolution: R.LY.RESOLUTION_720
     })
   },
   {
     value: R.LY.RESOLUTION_1080,
-    label: M.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
+    label: f.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
       resolution: R.LY.RESOLUTION_1080
     })
   },
   {
     value: R.LY.RESOLUTION_1440,
-    label: M.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
+    label: f.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
       resolution: R.LY.RESOLUTION_1440
     })
   },
   {
     value: R.LY.RESOLUTION_SOURCE,
-    label: M.Z.Messages.SCREENSHARE_SOURCE
+    label: f.Z.Messages.SCREENSHARE_SOURCE
   }
 ], [G]),
 V = a.useMemo(() => [{
     value: R.ws.FPS_15,
-    label: M.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
+    label: f.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
       fps: R.ws.FPS_15
     })
   },
   {
     value: R.ws.FPS_30,
-    label: M.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
+    label: f.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
       fps: R.ws.FPS_30
     })
   },
   {
     value: R.ws.FPS_60,
-    label: M.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
+    label: f.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
       fps: R.ws.FPS_60
     })
   }
@@ -141,7 +141,7 @@ children: [
       !e && (0, n.jsx)(T.Z, {
         look: T.z.WARNING,
         className: D.formItem,
-        children: M.Z.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({
+        children: f.Z.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({
           onClick: () => d.Z.open(p.oAB.VOICE, null, {
             scrollPosition: x.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
@@ -150,23 +150,23 @@ children: [
       Z === m.x.BELOW_MINIMUM ? (0, n.jsx)(T.Z, {
         look: T.z.WARNING,
         className: D.formItem,
-        children: M.Z.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
+        children: f.Z.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
       }) : null,
       (0, n.jsx)(l.FormSwitch, {
         hideBorder: !0,
         disabled: !e,
         className: D.formItem,
         value: t,
-        note: M.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
+        note: f.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
         onChange: e => g.em({
           clipsEnabled: e,
           trackAnalytics: !0
         }),
-        children: M.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
+        children: f.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
       }),
       e && (0, n.jsx)(T.Z, {
         className: D.formItem,
-        children: M.Z.Messages.CLIPS_SETTINGS_QUALITY_INFOBOX
+        children: f.Z.Messages.CLIPS_SETTINGS_QUALITY_INFOBOX
       })
     ]
   }),
@@ -181,12 +181,12 @@ children: [
           disabled: !e,
           className: D.formItem,
           value: i,
-          note: M.Z.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS_HELP,
+          note: f.Z.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS_HELP,
           onChange: e => g._Q({
             enabled: e,
             trackAnalytics: !0
           }),
-          children: M.Z.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS
+          children: f.Z.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS
         })
       })
     ]
@@ -200,9 +200,9 @@ children: [
           hideBorder: !0,
           className: D.formItem,
           value: s,
-          note: M.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
+          note: f.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
           onChange: e => g.N0(e),
-          children: M.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS
+          children: f.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS
         })
       })
     ]
@@ -214,8 +214,8 @@ children: [
       (0, n.jsx)(h.Q, {
         className: D.formItem,
         select: g.eU,
-        title: M.Z.Messages.CLIPS_SETTINGS_LENGTH,
-        note: M.Z.Messages.CLIPS_SETTINGS_LENGTH_HELP,
+        title: f.Z.Messages.CLIPS_SETTINGS_LENGTH,
+        note: f.Z.Messages.CLIPS_SETTINGS_LENGTH_HELP,
         value: L,
         options: F
       }),
@@ -225,8 +225,8 @@ children: [
           resolution: e,
           frameRate: b.frameRate
         }),
-        title: M.Z.Messages.CLIPS_SETTINGS_RESOLUTION,
-        note: M.Z.Messages.CLIPS_SETTINGS_RESOLUTION_NOTE,
+        title: f.Z.Messages.CLIPS_SETTINGS_RESOLUTION,
+        note: f.Z.Messages.CLIPS_SETTINGS_RESOLUTION_NOTE,
         value: b.resolution,
         options: y
       }),
@@ -236,17 +236,17 @@ children: [
           resolution: b.resolution,
           frameRate: e
         }),
-        title: M.Z.Messages.CLIPS_SETTINGS_FRAMERATE,
-        note: M.Z.Messages.CLIPS_SETTINGS_FRAMERATE_NOTE,
+        title: f.Z.Messages.CLIPS_SETTINGS_FRAMERATE,
+        note: f.Z.Messages.CLIPS_SETTINGS_FRAMERATE_NOTE,
         value: b.frameRate,
         options: V
       }),
       (0, n.jsx)(h.O, {
         className: D.formItem,
-        title: M.Z.Messages.CLIPS_SETTINGS_KEYBIND,
-        note: M.Z.Messages.CLIPS_SETTINGS_KEYBIND_HELP,
+        title: f.Z.Messages.CLIPS_SETTINGS_KEYBIND,
+        note: f.Z.Messages.CLIPS_SETTINGS_KEYBIND_HELP,
         children: (0, n.jsx)('div', {
-          className: f.keyRecorder,
+          className: M.keyRecorder,
           children: (0, n.jsx)(_.Z, {
             defaultValue: v.shortcut,
             onChange: Y

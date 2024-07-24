@@ -97,8 +97,8 @@ R = e => {
   });
 },
 x = t.map(e => l.z[e]),
-M = O.filter(e => e.toLowerCase().includes(T.toLowerCase())).filter(e => !x.includes(e)),
-f = Object.keys(l.z).filter(e => !x.includes(e)).filter(e => !O.includes(e)).filter(e => e.toLowerCase().includes(T.toLowerCase())).sort((e, t) => e.localeCompare(t));
+f = O.filter(e => e.toLowerCase().includes(T.toLowerCase())).filter(e => !x.includes(e)),
+M = Object.keys(l.z).filter(e => !x.includes(e)).filter(e => !O.includes(e)).filter(e => e.toLowerCase().includes(T.toLowerCase())).sort((e, t) => e.localeCompare(t));
   return (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)(d.FormSection, {
@@ -174,7 +174,7 @@ children: [
           })
         ]
       }) : null,
-      M.length > 0 ? (0, n.jsxs)(n.Fragment, {
+      f.length > 0 ? (0, n.jsxs)(n.Fragment, {
         children: [
           (0, n.jsx)('div', {
             className: A.marginBottom20,
@@ -183,7 +183,7 @@ children: [
             })
           }),
           (0, n.jsx)(h, {
-            items: M,
+            items: f,
             dismissedContents: g,
             handleChange: R
           })
@@ -196,7 +196,7 @@ children: [
         })
       }),
       (0, n.jsx)(h, {
-        items: f,
+        items: M,
         dismissedContents: g,
         handleChange: R
       })

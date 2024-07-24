@@ -23,8 +23,8 @@ var n = s(735250),
   p = s(806406),
   R = s(256507),
   x = s(257995),
-  M = s(440376),
-  f = s(224499);
+  f = s(440376),
+  M = s(224499);
 let D = o.ZP.connectStores([g.Z], () => ({
 theme: g.Z.theme
   }))(c.EmptyState),
@@ -57,7 +57,7 @@ children: [
     })
   }),
   (0, n.jsx)(c.FormDivider, {
-    className: r()(f.marginTop8, f.marginBottom8)
+    className: r()(M.marginTop8, M.marginBottom8)
   }),
   (0, n.jsxs)('div', {
     className: r()(p.actions, x.horizontal),
@@ -93,10 +93,10 @@ isOverride: T
 S.Z,
 u.ZP,
 N.Z
-  ], () => (0, u.FZ)(s)), [A, g] = a.useState(!1), [R, f] = a.useState(null !== (t = m.name) && void 0 !== t ? t : '???'), D = r()(x.flexCenter, {
+  ], () => (0, u.FZ)(s)), [A, g] = a.useState(!1), [R, M] = a.useState(null !== (t = m.name) && void 0 !== t ? t : '???'), D = r()(x.flexCenter, {
 [p.game]: !i,
 [p.activeGame]: i,
-[M.card]: !i,
+[f.card]: !i,
 [p.nowPlaying]: null != m && i
   });
 
@@ -163,7 +163,7 @@ children: [
         value: R,
         onBlur: b,
         onKeyDown: Z,
-        onChange: e => f(e.target.value)
+        onChange: e => M(e.target.value)
       }),
       function() {
         let e;
@@ -325,7 +325,7 @@ function v(e) {
 children: t
   } = e;
   return (0, n.jsxs)(D, {
-className: f.marginTop40,
+className: M.marginTop40,
 children: [
   (0, n.jsx)(c.EmptyStateImage, {
     darkSrc: s(879601),
@@ -364,7 +364,7 @@ children: [
     nowPlaying: !0
   }, (0, u.rH)(l)) : (0, n.jsx)(Z, {}),
   (0, n.jsxs)('div', {
-    className: r()(p.nowPlayingAdd, f.marginReset, f.marginTop8, f.marginBottom20),
+    className: r()(p.nowPlayingAdd, M.marginReset, M.marginTop8, M.marginBottom20),
     children: [
       (0, n.jsx)('span', {
         children: O.Z.Messages.SETTINGS_GAMES_NOT_SEEING_GAME
@@ -395,10 +395,10 @@ children: [
       children: O.Z.Messages.SETTINGS_GAMES_NO_GAMES_HEADER
     })
   }) : (0, n.jsxs)(c.FormSection, {
-    className: f.marginTop40,
+    className: M.marginTop40,
     children: [
       (0, n.jsx)(c.FormTitle, {
-        className: f.marginBottom4,
+        className: M.marginBottom4,
         children: O.Z.Messages.SETTINGS_GAMES_ADDED_GAMES_LABEL
       }),
       (0, n.jsx)(c.FormText, {

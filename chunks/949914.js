@@ -23,8 +23,8 @@ var n = s(735250),
   p = s(153124),
   R = s(245950),
   x = s(404203),
-  M = s(330181),
-  f = s(954821),
+  f = s(330181),
+  M = s(954821),
   D = s(980864),
   P = s(981631),
   L = s(176505),
@@ -144,7 +144,7 @@ return null;
   null != l && ((0, g.uL)(P.Z5c.CHANNEL(l.id, L.oC.ROLE_SUBSCRIPTIONS)), (0, _.xf)(), E.Z.show(P.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => u.Z.open(P.oAB.SUBSCRIPTIONS, b.cP)));
 },
 w = () => {
-  null != l && (0, f.h)({
+  null != l && (0, M.h)({
     guildId: l.id,
     groupListing: i,
     listing: s,
@@ -265,7 +265,7 @@ children: [
       (0, n.jsx)('div', {
         className: v.divider
       }),
-      (0, n.jsx)(M.Z, {
+      (0, n.jsx)(f.Z, {
         groupListingId: i.id,
         subscription: t,
         className: v.changePlanNotice

@@ -37,15 +37,15 @@ location: 'Clips Settings'
 autoTrackExposure: !1
   }), {
 analyticsLocations: x
-  } = (0, l.ZP)(), M = (0, u.Go)(), {
-viewerClipsEnabled: f
+  } = (0, l.ZP)(), f = (0, u.Go)(), {
+viewerClipsEnabled: M
   } = (0, i.cj)([T.Z], () => T.Z.getSettings()), D = (0, I.Z)(E.Z);
   return a.useEffect(() => {
 (0, c.EW)(r.z.CLIPS_SETTINGS_BETA_TAG);
   }), (0, n.jsxs)(l.Gt, {
 value: x,
 children: [
-  (M || s) && (0, n.jsx)(o.FormSection, {
+  (f || s) && (0, n.jsx)(o.FormSection, {
     className: t,
     tag: o.FormTitleTags.H1,
     title: s ? (0, n.jsxs)('div', {
@@ -55,7 +55,7 @@ children: [
         (0, n.jsx)(N.Z, {})
       ]
     }) : null,
-    children: M && (0, n.jsxs)('form', {
+    children: f && (0, n.jsxs)('form', {
       onSubmit: e => e.preventDefault(),
       children: [
         (0, n.jsx)(C.Z, {}),
@@ -63,9 +63,9 @@ children: [
       ]
     })
   }),
-  M && (0, n.jsx)(o.FormDivider, {}),
+  f && (0, n.jsx)(o.FormDivider, {}),
   (0, n.jsxs)(o.FormSection, {
-    className: s || M ? O.marginTop20 : t,
+    className: s || f ? O.marginTop20 : t,
     children: [
       (0, n.jsx)(o.FormSwitch, {
         hideBorder: !0,
@@ -80,7 +80,7 @@ children: [
       R && D && (0, n.jsx)(o.FormSwitch, {
         hideBorder: !0,
         className: h.formItem,
-        value: f,
+        value: M,
         note: A.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
         onChange: e => S.yl({
           enabled: e,

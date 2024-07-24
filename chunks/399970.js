@@ -31,8 +31,8 @@ authorizing: m
 authorizedApplicationId: E.Z.testModeApplicationId,
 authorizationError: E.Z.error,
 authorizing: E.Z.isFetchingAuthorization
-  })), [A, g] = r.useState(null != n ? n : ''), [h, O] = r.useState('8080'), [p, R] = r.useState('localhost'), x = (0, T.Dt)(), M = C.test(A);
-  async function f() {
+  })), [A, g] = r.useState(null != n ? n : ''), [h, O] = r.useState('8080'), [p, R] = r.useState('localhost'), x = (0, T.Dt)(), f = C.test(A);
+  async function M() {
 d.q$();
 let e = function(e, t, s) {
   if (null == e)
@@ -50,7 +50,7 @@ null != await d.Wt(A, e) && t();
   let D = null != n && n === A,
 P = D ? function() {
   d.mc(), g(''), R(null);
-} : f;
+} : M;
   return (0, i.jsxs)(l.ModalRoot, {
 'aria-labelledby': x,
 transitionState: s,
@@ -97,7 +97,7 @@ children: [
               children: (0, i.jsx)(l.TextInput, {
                 value: A,
                 maxLength: 19,
-                error: M ? null : I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
+                error: f ? null : I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
                 onChange: function(e) {
                   g(e);
                 },
@@ -108,7 +108,7 @@ children: [
               className: S.inputWrapper,
               title: I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
               children: (0, i.jsx)(l.SingleSelect, {
-                isDisabled: !M || '' === A,
+                isDisabled: !f || '' === A,
                 value: p,
                 options: [{
                     value: 'localhost',
@@ -141,7 +141,7 @@ children: [
             (0, i.jsx)(l.Button, {
               submitting: m,
               type: 'submit',
-              disabled: !M || 0 === A.length || 'localhost' === p && 0 === h.length,
+              disabled: !f || 0 === A.length || 'localhost' === p && 0 === h.length,
               color: D ? l.Button.Colors.RED : l.Button.Colors.GREEN,
               children: D ? I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
             })

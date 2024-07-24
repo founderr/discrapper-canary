@@ -88,14 +88,14 @@ function x() {
   p.lifecycle === m.N7.TESTING && (p.failed = !0, v(), j());
 }
 
-function M() {
+function f() {
   if (p.lifecycle === m.N7.CONNECTING) {
 var e;
 b(m.N7.PINGING), null === (e = p.connection) || void 0 === e || e.setPingInterval(500), P();
   }
 }
 
-function f(e, t) {
+function M(e, t) {
   if (null != p.currentTest) {
 if (!0 !== p.failed)
   p.currentTest = p.currentTest + 1, p.results.push({
@@ -268,6 +268,6 @@ L(), p.endpoint = null !== (t = e.endpoint) && void 0 !== t ? t : null, p.connec
   rtcServerId: p.rtcServerId,
   endpoint: e.endpoint,
   token: e.token
-}), p.connection.on('state', R), p.connection.on('resuming', x), p.connection.on('ready', M), p.connection.on('speed-test-completed', f), p.connection.on('ping', D), p.connection.on('ping-timeout', D), p.connection.connect(), b(m.N7.CONNECTING);
+}), p.connection.on('state', R), p.connection.on('resuming', x), p.connection.on('ready', f), p.connection.on('speed-test-completed', M), p.connection.on('ping', D), p.connection.on('ping-timeout', D), p.connection.connect(), b(m.N7.CONNECTING);
   }
 });

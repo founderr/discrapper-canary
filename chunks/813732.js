@@ -22,8 +22,8 @@ var n = s(735250),
   p = s(246946),
   R = s(663389),
   x = s(351402),
-  M = s(853872),
-  f = s(78839),
+  f = s(853872),
+  M = s(78839),
   D = s(580130),
   P = s(285952),
   L = s(626135),
@@ -83,13 +83,13 @@ children: [
   });
 }
 t.Z = function() {
-  let e = (0, o.e7)([f.ZP], () => f.ZP.getPremiumTypeSubscription()),
+  let e = (0, o.e7)([M.ZP], () => M.ZP.getPremiumTypeSubscription()),
 t = (0, S.Z)({
   subscriptionFilter: e => j.eS.has(e.status)
 }),
 s = t.length > 1,
-i = (0, o.e7)([M.Z], () => null != e && null != e.paymentSourceId ? M.Z.getPaymentSource(e.paymentSourceId) : null, [e]),
-E = (0, o.e7)([f.ZP], () => f.ZP.hasFetchedSubscriptions()),
+i = (0, o.e7)([f.Z], () => null != e && null != e.paymentSourceId ? f.Z.getPaymentSource(e.paymentSourceId) : null, [e]),
+E = (0, o.e7)([M.ZP], () => M.ZP.hasFetchedSubscriptions()),
 C = (0, o.e7)([x.Z], () => x.Z.isBusy),
 D = (0, N.V)(),
 P = (0, o.e7)([R.Z], () => R.Z.getSubsection());

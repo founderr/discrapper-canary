@@ -28,8 +28,8 @@ var a = s(512722),
   p = s(52597),
   R = s(430131),
   x = s(133484),
-  M = s(689938),
-  f = s(84482);
+  f = s(689938),
+  M = s(84482);
 
 function D(e) {
   var t, s, a, D;
@@ -81,7 +81,7 @@ X = (e, t, s) => {
   s(null != e ? e : null != t ? null : void 0);
 };
   return (0, n.jsxs)('div', {
-className: f.sectionsContainer,
+className: M.sectionsContainer,
 children: [
   (0, n.jsx)(R.Z, {
     errors: null !== (a = null == G ? void 0 : G.nick) && void 0 !== a ? a : null == V ? void 0 : V.nick,
@@ -91,7 +91,7 @@ children: [
     guild: y
   }, 'nick'),
   (0, n.jsx)(S.Z, {
-    sectionTitle: M.Z.Messages.USER_SETTINGS_PRONOUNS,
+    sectionTitle: f.Z.Messages.USER_SETTINGS_PRONOUNS,
     errors: null == G ? void 0 : G.pronouns,
     onPronounsChange: e => {
       (0, p.xs)(e, Q);
@@ -106,14 +106,14 @@ children: [
       (0, n.jsx)(E.Z, {
         sectionTitle: (0, n.jsxs)(n.Fragment, {
           children: [
-            M.Z.Messages.USER_SETTINGS_AVATAR,
+            f.Z.Messages.USER_SETTINGS_AVATAR,
             (0, n.jsx)(o.Tooltip, {
-              text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+              text: f.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
               children: e => (0, n.jsx)(o.NitroWheelIcon, {
                 size: 'md',
                 color: 'currentColor',
                 ...e,
-                className: f.nitroWheel
+                className: M.nitroWheel
               })
             })
           ]
@@ -127,14 +127,14 @@ children: [
       (0, n.jsx)(_.Z, {
         sectionTitle: (0, n.jsxs)(n.Fragment, {
           children: [
-            M.Z.Messages.USER_SETTINGS_AVATAR_DECORATION,
+            f.Z.Messages.USER_SETTINGS_AVATAR_DECORATION,
             (0, n.jsx)(o.Tooltip, {
-              text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+              text: f.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
               children: e => (0, n.jsx)(o.NitroWheelIcon, {
                 size: 'md',
                 color: 'currentColor',
                 ...e,
-                className: f.nitroWheel
+                className: M.nitroWheel
               })
             })
           ]
@@ -145,14 +145,14 @@ children: [
       (0, n.jsx)(T.Z, {
         sectionTitle: (0, n.jsxs)(n.Fragment, {
           children: [
-            M.Z.Messages.USER_SETTINGS_PROFILE_EFFECT,
+            f.Z.Messages.USER_SETTINGS_PROFILE_EFFECT,
             (0, n.jsx)(o.Tooltip, {
-              text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+              text: f.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
               children: e => (0, n.jsx)(o.NitroWheelIcon, {
                 size: 'md',
                 color: 'currentColor',
                 ...e,
-                className: f.nitroWheel
+                className: M.nitroWheel
               })
             })
           ]
@@ -178,17 +178,17 @@ children: [
         showResetThemeButton: K
       }),
       (0, n.jsx)(d.Z, {
-        placeholder: M.Z.Messages.CHANGE_IDENTITY_BIO_PLACEHOLDER,
+        placeholder: f.Z.Messages.CHANGE_IDENTITY_BIO_PLACEHOLDER,
         sectionTitle: (0, n.jsxs)(n.Fragment, {
           children: [
-            M.Z.Messages.USER_PROFILE_ABOUT_ME,
+            f.Z.Messages.USER_PROFILE_ABOUT_ME,
             (0, n.jsx)(o.Tooltip, {
-              text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+              text: f.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
               children: e => (0, n.jsx)(o.NitroWheelIcon, {
                 size: 'md',
                 color: 'currentColor',
                 ...e,
-                className: f.nitroWheel
+                className: M.nitroWheel
               })
             })
           ]

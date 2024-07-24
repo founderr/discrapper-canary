@@ -27,8 +27,8 @@ var n = s(735250),
   p = s(804545),
   R = s(311476),
   x = s(921801),
-  M = s(594174),
-  f = s(285952),
+  f = s(594174),
+  M = s(285952),
   D = s(153124),
   P = s(358085),
   L = s(210887),
@@ -166,8 +166,8 @@ return (0, n.jsxs)(d.FormItem, {
       className: Y.marginBottom8,
       children: y.Z.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
     }),
-    (0, n.jsx)(f.Z, {
-      align: f.Z.Align.CENTER,
+    (0, n.jsx)(M.Z, {
+      align: M.Z.Align.CENTER,
       children: (0, n.jsx)(d.Slider, {
         className: r()(Y.marginTop20, Y.marginBottom4),
         initialValue: this.props.fontSize,
@@ -425,7 +425,7 @@ J(l.z.CLIENT_THEMES_SETTINGS_BADGE), J(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), J(l.z
 L.Z,
 b.ZP,
 I.Z,
-M.default,
+f.default,
 N.Z
   ], () => {
 var e, t;
@@ -438,7 +438,7 @@ return {
   zoom: I.Z.zoom,
   messageGroupSpacing: I.Z.messageGroupSpacing,
   displayCompactAvatars: b.ZP.displayCompactAvatars,
-  isStaff: null !== (t = null === (e = M.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
+  isStaff: null !== (t = null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
   gradientPreset: N.Z.gradientPreset
 };
   });

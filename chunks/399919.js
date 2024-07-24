@@ -1,8 +1,4 @@
 a.r(s), s.default = {
-  swfLzc: [{
-type: 0,
-value: 'This message comes from a separate file'
-  }],
   HMvECw: [{
   type: 0,
   value: 'All of this is managed locally and has '
@@ -27,5 +23,9 @@ value: 'This message comes from a separate file'
   JJ0wpK: [{
 type: 0,
 value: 'This page uses the new intl system for displaying messages'
+  }],
+  swfLzc: [{
+type: 0,
+value: 'This message comes from a separate file'
   }]
 };

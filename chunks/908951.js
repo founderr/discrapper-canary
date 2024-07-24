@@ -27,8 +27,8 @@ var n = s(735250),
   p = s(374649),
   R = s(981631),
   x = s(689938),
-  M = s(553136),
-  f = s(257995);
+  f = s(553136),
+  M = s(257995);
 
 function D(e) {
   let {
@@ -93,7 +93,7 @@ return (e => {
   return (0, n.jsx)(d.Anchor, {
     href: t,
     useDefaultUnderlineStyles: !1,
-    className: M.externalLink,
+    className: f.externalLink,
     children: (0, n.jsx)(d.Button, {
       fullWidth: !0,
       look: d.Button.Looks.FILLED,
@@ -138,13 +138,13 @@ return (0, n.jsxs)(n.Fragment, {
     null != t.paymentSourceId ? (0, n.jsx)(T.b, {
       currencies: s,
       children: (0, n.jsxs)('div', {
-        className: r()(M.currency, f.flex, f.alignCenter),
+        className: r()(f.currency, M.flex, M.alignCenter),
         children: [
           (0, n.jsx)('div', {
             children: x.Z.Messages.PAYMENT_CURRENCY_PAYING_IN
           }),
           (0, n.jsx)(T.Z, {
-            className: M.currencyDropdown,
+            className: f.currencyDropdown,
             selectedCurrency: V,
             currencies: s,
             onChange: e => {

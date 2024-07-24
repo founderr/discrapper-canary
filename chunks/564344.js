@@ -38,9 +38,9 @@ s = (0, i.e7)([
   S.Z
 ], () => _.Z.showNotice() || S.Z.showNotice()),
 x = null != e ? e : t,
-M = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
+f = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
 {
-  subsection: f,
+  subsection: M,
   setSubsection: D
 } = (0, A.Z)(),
 {
@@ -52,7 +52,7 @@ M = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
 } = (0, I.E)();
 
   function Z(t) {
-if (f !== t) {
+if (M !== t) {
   if (s) {
     C.S.dispatch(g.CkL.SHAKE_APP, {
       duration: 300,
@@ -64,12 +64,12 @@ if (f !== t) {
 }
   }
   a.useEffect(() => {
-null != M && (0, u.Z)(M.id, M.getAvatarURL(null == x ? void 0 : x.id, 80), {
+null != f && (0, u.Z)(f.id, f.getAvatarURL(null == x ? void 0 : x.id, 80), {
   guildId: null == x ? void 0 : x.id
 });
   }, [
 null == x ? void 0 : x.id,
-M
+f
   ]);
   let v = !0,
 j = !0;
@@ -85,7 +85,7 @@ children: (0, n.jsxs)(r.HeadingLevel, {
       className: R.tabBar,
       type: 'top',
       look: 'brand',
-      selectedItem: f,
+      selectedItem: M,
       onItemSelect: Z,
       children: [
         j ? (0, n.jsx)(r.TabBar.Item, {
@@ -100,7 +100,7 @@ children: (0, n.jsxs)(r.HeadingLevel, {
         }, h.NB.GUILD) : null
       ]
     }),
-    f === h.NB.GUILD ? (0, n.jsx)(E.Z, {
+    M === h.NB.GUILD ? (0, n.jsx)(E.Z, {
       selectedGuild: x
     }) : (0, n.jsx)(T.Z, {})
   ]

@@ -29,12 +29,12 @@ onClose: A,
 confettiCanvas: g,
 userWasChurned: h = !1,
 userDiscountOffer: O
-  } = e, p = (0, l.ZP)(), R = (0, r.wj)(p) ? C : m, x = a.useRef(null), [M, f] = a.useState(!1), D = (0, u._)(t, I.Xh.PREMIUM_MONTH_TIER_2, O), P = (0, _.aS)(I.Xh.PREMIUM_MONTH_TIER_2), L = (0, E.T4)(P.amount, P.currency), b = (0, i.e7)([c.Z], () => c.Z.useReducedMotion);
+  } = e, p = (0, l.ZP)(), R = (0, r.wj)(p) ? C : m, x = a.useRef(null), [f, M] = a.useState(!1), D = (0, u._)(t, I.Xh.PREMIUM_MONTH_TIER_2, O), P = (0, _.aS)(I.Xh.PREMIUM_MONTH_TIER_2), L = (0, E.T4)(P.amount, P.currency), b = (0, i.e7)([c.Z], () => c.Z.useReducedMotion);
   if (a.useEffect(() => {
-  null != x.current && null != D && f(!0);
+  null != x.current && null != D && M(!0);
 }, [
   x,
-  M,
+  f,
   D
 ]), null == O || null == D)
 return null;
@@ -87,7 +87,7 @@ children: [
       }) : (0, n.jsx)(o.Spinner, {})
     })
   }),
-  !b && M && (0, n.jsx)(d.Z, {
+  !b && f && (0, n.jsx)(d.Z, {
     confettiTarget: x.current,
     confettiCanvas: g,
     confettiVelocityMultiplier: 0.75

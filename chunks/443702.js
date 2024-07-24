@@ -1,6 +1,6 @@
 s.d(t, {
   Z: function() {
-return f;
+return M;
   }
 });
 var n = s(735250),
@@ -27,7 +27,7 @@ var n = s(735250),
   p = s(981631),
   R = s(689938),
   x = s(451723);
-class M extends a.PureComponent {
+class f extends a.PureComponent {
   componentDidMount() {
 c.Z.wait(() => {
   d.tZ(), d.jg();
@@ -94,7 +94,7 @@ return t ? (0, n.jsx)(E.Z, {}) : (0, n.jsxs)('div', {
   }
 }
 
-function f() {
+function M() {
   let e = (0, o.cj)([
 h.default,
 m.Z,
@@ -118,7 +118,7 @@ return r()(null != t, 'UserSettingsBilling: currentUser cannot be undefined'), {
   isUpdatingPaymentSource: m.Z.isUpdatingPaymentSource
 };
   });
-  return (0, n.jsx)(M, {
+  return (0, n.jsx)(f, {
 ...e
   });
 }

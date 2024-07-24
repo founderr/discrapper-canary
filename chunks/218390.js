@@ -23,8 +23,8 @@ var n = s(735250),
   p = s(15640),
   R = s(89057),
   x = s(406128),
-  M = s(703656),
-  f = s(246946),
+  f = s(703656),
+  M = s(246946),
   D = s(78839),
   P = s(483444),
   L = s(626135),
@@ -132,7 +132,7 @@ children: [
           L.default.track(H.rMx.PREMIUM_SETTINGS_INTERACTED, {
             cta_type: 'to_premium_home_button',
             target: 'premium home page'
-          }), (0, I.xf)(), (0, M.uL)(H.Z5c.APPLICATION_STORE);
+          }), (0, I.xf)(), (0, f.uL)(H.Z5c.APPLICATION_STORE);
         },
         children: (0, n.jsx)(E.Text, {
           className: K.tierCardButtonCTA,
@@ -246,7 +246,7 @@ r = (0, p.V)(),
 [o, l] = a.useState(!0),
 _ = (0, B.n)(),
 I = null == _ ? void 0 : _.countryCode,
-N = (0, c.e7)([f.Z], () => f.Z.enabled),
+N = (0, c.e7)([M.Z], () => M.Z.enabled),
 A = 'PremiumManagementSettings';
   (0, m.j)({
 location: A + ' auto on',
@@ -255,7 +255,7 @@ autoTrackExposure: !0
 location: A + ' auto off',
 autoTrackExposure: !1
   }), (0, U.B)('PremiumManagementSettings');
-  let M = (0, w.b)('PremiumManagementSettings');
+  let f = (0, w.b)('PremiumManagementSettings');
   a.useEffect(() => {
 u.Z.wait(async () => {
   !N && !e && await Promise.all([
@@ -290,7 +290,7 @@ children: (0, n.jsxs)(n.Fragment, {
       className: K.__invalid_container,
       children: [
         (0, n.jsx)(q, {}),
-        M && (0, n.jsx)(Y.Z, {
+        f && (0, n.jsx)(Y.Z, {
           isInSettings: !0
         }),
         (0, n.jsx)(J, {}),

@@ -23,8 +23,8 @@ var n, a, i, r, o = s(735250),
   p = s(524484),
   R = s(981631),
   x = s(689938),
-  M = s(726881);
-let f = {
+  f = s(726881);
+let M = {
 enabled: !0,
 combosEnabled: !0,
 screenshakeEnabled: !1,
@@ -104,7 +104,7 @@ function B(e) {
 children: t
   } = e;
   return (0, o.jsx)(E.Text, {
-className: M.sliderDescription,
+className: f.sliderDescription,
 variant: 'text-sm/normal',
 color: 'header-secondary',
 children: t
@@ -127,7 +127,7 @@ onChange: e => {
     header: a ? x.Z.Messages.POGGERMODE_WARNING_TITLE_REDUCED_MOTION : x.Z.Messages.POGGERMODE_WARNING_TITLE,
     confirmText: x.Z.Messages.ENABLE,
     cancelText: x.Z.Messages.CANCEL,
-    onConfirm: () => n(a ? f : {
+    onConfirm: () => n(a ? M : {
       enabled: !0,
       warningSeen: !0
     }),
@@ -171,7 +171,7 @@ children: [
   (0, o.jsxs)(E.FormItem, {
     disabled: l,
     title: x.Z.Messages.POGGERMODE_CONFETTI_COUNT,
-    className: M.formItem,
+    className: f.formItem,
     children: [
       (0, o.jsx)(B, {
         children: x.Z.Messages.POGGERMODE_CONFETTI_COUNT_DESCRIPTION
@@ -193,7 +193,7 @@ children: [
   (0, o.jsxs)(E.FormItem, {
     disabled: l,
     title: x.Z.Messages.POGGERMODE_CONFETTI_SIZE,
-    className: M.formItem,
+    className: f.formItem,
     children: [
       (0, o.jsx)(B, {
         children: x.Z.Messages.POGGERMODE_CONFETTI_SIZE_DESCRIPTION
@@ -259,7 +259,7 @@ children: [
   (0, o.jsxs)(E.FormItem, {
     disabled: r,
     title: x.Z.Messages.POGGERMODE_COMBOS_REQUIRED,
-    className: M.formItem,
+    className: f.formItem,
     children: [
       (0, o.jsx)(B, {
         children: x.Z.Messages.POGGERMODE_COMBOS_REQUIRED_DESCRIPTION
@@ -279,7 +279,7 @@ children: [
     ]
   }),
   (0, o.jsx)(E.FormDivider, {
-    className: M.divider
+    className: f.divider
   })
 ]
   });
@@ -314,7 +314,7 @@ children: [
   (0, o.jsxs)(E.FormItem, {
     disabled: l,
     title: x.Z.Messages.POGGERMODE_SCREENSHAKE,
-    className: M.formItem,
+    className: f.formItem,
     children: [
       (0, o.jsx)(B, {
         children: x.Z.Messages.POGGERMODE_SCREENSHAKE_DESCRIPTION
@@ -354,14 +354,14 @@ updateSettings: t
 tag: E.FormTitleTags.H1,
 title: x.Z.Messages.POGGERMODE_SETTINGS_CUSTOMIZATION,
 children: (0, o.jsxs)(E.FormItem, {
-  className: M.formItem,
+  className: f.formItem,
   children: [
     (0, o.jsx)(E.FormText, {
-      className: M.formItem,
+      className: f.formItem,
       children: x.Z.Messages.POGGERMODE_HIDE_SETTINGS_DESCRIPTION
     }),
     (0, o.jsx)(E.Button, {
-      className: M.hideButton,
+      className: f.hideButton,
       size: E.Button.Sizes.SMALL,
       onClick: () => {
         t({
@@ -384,17 +384,17 @@ onChangePage: t
 children: [
   (0, o.jsxs)(E.Clickable, {
     onClick: () => t(1),
-    className: M.achievementContainer,
+    className: f.achievementContainer,
     children: [
       (0, o.jsx)('div', {
-        className: M.achievementIconContainer,
+        className: f.achievementIconContainer,
         children: (0, o.jsx)(E.TrophyIcon, {
           size: 'md',
           color: _.Z.unsafe_rawColors.ORANGE_345.css
         })
       }),
       (0, o.jsxs)('div', {
-        className: M.achievementTextContainer,
+        className: f.achievementTextContainer,
         children: [
           (0, o.jsx)(E.Heading, {
             variant: 'heading-md/semibold',
@@ -412,12 +412,12 @@ children: [
         size: 'custom',
         color: 'currentColor',
         width: 16,
-        className: M.rightCaretIcon
+        className: f.rightCaretIcon
       })
     ]
   }),
   (0, o.jsx)(E.FormDivider, {
-    className: M.divider
+    className: f.divider
   })
 ]
   });
@@ -476,7 +476,7 @@ T = e => {
 children: [
   (0, o.jsx)(E.Heading, {
     variant: 'heading-lg/semibold',
-    className: M.title,
+    className: f.title,
     children: x.Z.Messages.POGGERMODE
   }),
   (0, o.jsx)(U, {
@@ -536,15 +536,15 @@ Math.random() > 0.99 && (0, C.T)(m.hn.VISITOR_100);
   }, []), (0, o.jsxs)(o.Fragment, {
 children: [
   (0, o.jsx)(I.Z, {
-    className: M.slideAnimator,
+    className: f.slideAnimator,
     step: e,
     direction: s,
     children: H(e, t, i)
   }),
   (0, o.jsx)('div', {
-    className: c ? M.enableAnimationOverlayVisible : M.enableAnimationOverlayHidden,
+    className: c ? f.enableAnimationOverlayVisible : f.enableAnimationOverlayHidden,
     children: (0, o.jsx)(E.LottieAnimation, {
-      className: M.enableAnimation,
+      className: f.enableAnimation,
       importData: w,
       shouldAnimate: c,
       autoplay: !1,

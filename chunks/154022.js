@@ -27,8 +27,8 @@ var n = s(735250),
   p = s(285952),
   R = s(153124),
   x = s(626135),
-  M = s(63063),
-  f = s(695346),
+  f = s(63063),
+  M = s(695346),
   D = s(263937),
   P = s(996073),
   L = s(526761),
@@ -122,7 +122,7 @@ children: [
 }
 
 function W() {
-  let e = f.jU.useSetting(),
+  let e = M.jU.useSetting(),
 [t] = a.useState(() => {
   let e = (0, S.e5)({
     ...(0, N.ZP)({
@@ -332,7 +332,7 @@ t,
 e
   ]);
   let r = B.Z.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_DESCRIPTION.format({
-learnMoreLink: M.Z.getArticleURL(Z.BhN.FORCED_COLORS)
+learnMoreLink: f.Z.getArticleURL(Z.BhN.FORCED_COLORS)
   });
   return (0, n.jsx)(d.FormItem, {
 title: B.Z.Messages.ACCESSIBILITY_SETTINGS_CONTRAST,
@@ -347,8 +347,8 @@ children: (0, n.jsx)(d.FormSwitch, {
 }
 
 function $() {
-  let e = f.QK.useSetting(),
-t = f.Yk.useSetting(),
+  let e = M.QK.useSetting(),
+t = M.Yk.useSetting(),
 {
   useReducedMotion: s,
   rawPrefersReducedMotion: i,
@@ -382,7 +382,7 @@ children: [
     type: d.FormText.Types.DESCRIPTION,
     className: G.marginBottom8,
     children: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_DESCRIPTION.format({
-      helpdeskArticle: M.Z.getArticleURL(Z.BhN.REDUCED_MOTION)
+      helpdeskArticle: f.Z.getArticleURL(Z.BhN.REDUCED_MOTION)
     })
   }),
   (0, n.jsx)(d.Checkbox, {
@@ -406,14 +406,14 @@ children: [
     className: G.marginBottom40,
     value: e,
     note: null != l ? (0, A.Z)(l) : void 0,
-    onChange: f.QK.updateSetting,
+    onChange: M.QK.updateSetting,
     children: B.Z.Messages.GIF_AUTO_PLAY_LABEL
   }),
   (0, n.jsx)(d.FormSwitch, {
     className: r()(G.marginTop8, G.marginBottom20),
     value: t,
     note: null != _ ? (0, A.Z)(_) : void 0,
-    onChange: f.Yk.updateSetting,
+    onChange: M.Yk.updateSetting,
     children: B.Z.Messages.ANIMATE_EMOJI
   })
 ]
@@ -421,10 +421,10 @@ children: [
 }
 
 function ee() {
-  let e = f.Wp.useSetting(),
+  let e = M.Wp.useSetting(),
 t = (0, c.e7)([D.Z], () => D.Z.getAppliedOverrideReasonKey('animateStickers')),
 s = a.useCallback(e => {
-  f.Wp.updateSetting(e.value);
+  M.Wp.updateSetting(e.value);
 }, []);
   return (0, n.jsxs)(d.FormItem, {
 className: G.marginBottom40,
@@ -459,7 +459,7 @@ children: [
 
 function et() {
   let e = (0, c.e7)([T.Z], () => T.Z.isSubmitButtonEnabled),
-t = f.dN.useSetting(),
+t = M.dN.useSetting(),
 s = a.useRef(null);
   return (0, P.Z)(s, L.rP.LEGACY_CHAT_INPUT), (0, n.jsxs)(d.FormItem, {
 ref: s,
@@ -484,7 +484,7 @@ children: [
         location: {
           section: Z.jXE.SETTINGS_ACCESSIBILITY
         }
-      }), f.dN.updateSetting(e);
+      }), M.dN.updateSetting(e);
     },
     children: B.Z.Messages.LEGACY_CHAT_INPUT
   })
@@ -493,7 +493,7 @@ children: [
 }
 
 function es() {
-  let e = f.OW.useSetting(),
+  let e = M.OW.useSetting(),
 t = (0, c.e7)([O.Z], () => O.Z.speechRate),
 [s, i] = a.useState(!1);
   return E.Zh ? (0, n.jsxs)(n.Fragment, {
@@ -507,7 +507,7 @@ children: [
       (0, n.jsx)(d.FormSwitch, {
         className: G.marginTop20,
         value: e,
-        onChange: f.OW.updateSetting,
+        onChange: M.OW.updateSetting,
         children: B.Z.Messages.ALLOW_TTS_COMMAND
       })
     ]

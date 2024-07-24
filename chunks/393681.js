@@ -23,8 +23,8 @@ var n = s(735250),
   p = s(484459),
   R = s(430824),
   x = s(325067),
-  M = s(246946),
-  f = s(594174),
+  f = s(246946),
+  M = s(594174),
   D = s(285952),
   P = s(709054),
   L = s(706454),
@@ -339,12 +339,12 @@ super(e), this.state = {
   }
 }
 t.Z = () => {
-  let e = (0, c.e7)([f.default], () => {
-  let e = f.default.getCurrentUser();
+  let e = (0, c.e7)([M.default], () => {
+  let e = M.default.getCurrentUser();
   return l()(null != e, 'ConnectedUserAccountSettings: currentUser cannot be undefined'), e;
 }),
 t = (0, c.e7)([x.Z], () => x.Z.getBackupCodes()),
-s = (0, c.e7)([M.Z], () => M.Z.hidePersonalInformation),
+s = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation),
 a = (0, c.e7)([b.Z], () => b.Z.theme),
 i = (0, A.b)(),
 r = (0, m.CC)(),

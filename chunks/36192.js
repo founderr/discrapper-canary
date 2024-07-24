@@ -45,7 +45,7 @@ return () => {
     url: A.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG
   });
 },
-[p, M] = a.useState(new Set());
+[p, f] = a.useState(new Set());
   return i ? (0, n.jsx)(E.Z, {}) : (e = null == t && 0 === s.length ? _ ? (0, n.jsx)('div', {
 className: O.loading,
 children: (0, n.jsx)(d.Spinner, {})
@@ -75,7 +75,7 @@ children: [
             checked: p.has(e.id_hash),
             setChecked: t => {
               let s = new Set(p);
-              t ? s.add(e.id_hash) : s.delete(e.id_hash), M(s);
+              t ? s.add(e.id_hash) : s.delete(e.id_hash), f(s);
             }
           }, e.id_hash)),
           (null == r ? void 0 : r.mfaEnabled) ? null : (0, n.jsx)(x, {})

@@ -1,9 +1,9 @@
 s.d(t, {
   Z: function() {
-return f;
+return M;
   },
   r: function() {
-return M;
+return f;
   }
 }), s(653041), s(47120);
 var n = s(735250),
@@ -242,7 +242,7 @@ children: [
   });
 }
 
-function M(e) {
+function f(e) {
   let {
 appliedGuildBoosts: t,
 premiumSubscription: s
@@ -271,7 +271,7 @@ children: [
   });
 }
 
-function f(e) {
+function M(e) {
   let {
 guildBoostSlots: t,
 premiumSubscription: s

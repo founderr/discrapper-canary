@@ -27,9 +27,9 @@ var n = s(735250),
   p = s(594496),
   R = s(856768),
   x = s(981631),
-  M = s(689938);
+  f = s(689938);
 
-function f(e) {
+function M(e) {
   (0, l.openModalLazy)(async () => {
 let {
   default: t
@@ -70,7 +70,7 @@ value: s,
 children: [
   (0, n.jsx)(l.Text, {
     variant: 'text-sm/normal',
-    children: M.Z.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({
+    children: f.Z.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({
       helpCenterLink: m.Z.getArticleURL(x.BhN.GUILD_PROFILES)
     })
   }),
@@ -83,14 +83,14 @@ children: [
         }
       }),
       (0, n.jsx)(T.Z, {
-        previewTitle: M.Z.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
+        previewTitle: f.Z.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
           guildName: null == t ? void 0 : t.name
         }),
         profilePreview: (0, n.jsx)(I.Z, {
           user: i,
           guild: t,
           canUsePremiumCustomization: A.ZP.canUsePremiumProfileCustomization(i),
-          onUpsellClick: f,
+          onUpsellClick: M,
           ...b
         }),
         children: (0, n.jsx)(p.Z, {})

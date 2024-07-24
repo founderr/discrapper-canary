@@ -26,8 +26,8 @@ var n, a = s(735250),
   p = s(807160),
   R = s(474936),
   x = s(231338),
-  M = s(689938),
-  f = s(40810),
+  f = s(689938),
+  M = s(40810),
   D = s(495018);
 
 function P(e, t, s) {
@@ -71,7 +71,7 @@ children: (0, a.jsx)(d.SJ, {
       ...i
     } = e;
     return (0, a.jsx)(C.Z, {
-      className: o()(f.verticalFit, f.paginator),
+      className: o()(M.verticalFit, M.paginator),
       currentPageIndex: c,
       onChangePage: m,
       numPages: r,
@@ -79,10 +79,10 @@ children: (0, a.jsx)(d.SJ, {
       ref: t,
       ...i,
       children: (0, a.jsx)(E.AdvancedScroller, {
-        className: f.bottomDivider,
+        className: M.bottomDivider,
         ref: l,
         children: S.map((e, t) => (0, a.jsx)(p.Z, {
-          className: o()(f.paymentRow, f.bottomDivider),
+          className: o()(M.paymentRow, M.bottomDivider),
           payment: e,
           locale: s,
           compactMode: n
@@ -104,17 +104,17 @@ u.Z.wait(() => {
   }
   renderPremiumExternalSubscription(e) {
 return c()(null != e.paymentGateway, 'Expected payment gateway when rendering for external subscription'), (0, a.jsxs)(E.Card, {
-  className: f.externalRow,
+  className: M.externalRow,
   children: [
     (0, a.jsx)('div', {
-      className: f.externalRowHeader,
-      children: M.Z.Messages.BILLING_EXTERNAL_HEADER.format({
+      className: M.externalRowHeader,
+      children: f.Z.Messages.BILLING_EXTERNAL_HEADER.format({
         paymentGatewayName: x.Vz[e.paymentGateway]
       })
     }),
     (0, a.jsx)('div', {
-      className: f.externalRowBody,
-      children: M.Z.Messages.BILLING_EXTERNAL_DESCRIPTION.format({
+      className: M.externalRowBody,
+      children: f.Z.Messages.BILLING_EXTERNAL_DESCRIPTION.format({
         paymentGatewayName: x.Vz[e.paymentGateway],
         billingHistoryLink: (0, O.JE)(e.paymentGateway, 'BILLING_HISTORY')
       })
@@ -130,28 +130,28 @@ let {
   locale: n
 } = this.props, i = null != s && s.isPurchasedExternally;
 return 0 !== t.length || i ? (0, a.jsxs)('div', {
-  className: f.verticalFit,
+  className: M.verticalFit,
   children: [
     null != s && i ? this.renderPremiumExternalSubscription(s) : null,
     t.length > 0 ? (0, a.jsxs)('div', {
-      className: o()(f.paymentPane, f.verticalFit),
+      className: o()(M.paymentPane, M.verticalFit),
       children: [
         e ? null : (0, a.jsx)('div', {
-          className: o()(f.paymentRow, f.bottomDivider),
+          className: o()(M.paymentRow, M.bottomDivider),
           children: (0, a.jsxs)(h.Z, {
-            className: f.paymentRowHeader,
+            className: M.paymentRowHeader,
             children: [
               (0, a.jsx)('div', {
                 className: D.date,
-                children: M.Z.Messages.BILLING_PAYMENT_TABLE_HEADER_DATE
+                children: f.Z.Messages.BILLING_PAYMENT_TABLE_HEADER_DATE
               }),
               (0, a.jsx)('div', {
-                className: f.paymentRowHeaderDescription,
-                children: M.Z.Messages.BILLING_PAYMENT_TABLE_HEADER_DESCRIPTION
+                className: M.paymentRowHeaderDescription,
+                children: f.Z.Messages.BILLING_PAYMENT_TABLE_HEADER_DESCRIPTION
               }),
               (0, a.jsx)('div', {
                 className: D.amount,
-                children: M.Z.Messages.BILLING_PAYMENT_TABLE_HEADER_AMOUNT
+                children: f.Z.Messages.BILLING_PAYMENT_TABLE_HEADER_AMOUNT
               })
             ]
           })

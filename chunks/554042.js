@@ -111,11 +111,11 @@ platformZoom: u.Z.zoom
 });
   }, []);
   let x = S.isPlatformEmbedded ? s : e,
-M = (0, o.e7)([T.C], () => {
+f = (0, o.e7)([T.C], () => {
   var e, t;
   return (0, I.fD)() ? null === (t = T.C.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null;
 }),
-[f, D] = h('playground-overrideText', null),
+[M, D] = h('playground-overrideText', null),
 [P, L] = h('playground-defaultText', g[0].value),
 b = a.useCallback(e => {
   let t = g.find(t => {
@@ -155,7 +155,7 @@ children: (0, n.jsxs)(c.FormSection, {
                 '%'
               ]
             }),
-            null != M ? (0, n.jsxs)(c.Text, {
+            null != f ? (0, n.jsxs)(c.Text, {
               tag: 'div',
               variant: 'heading-lg/bold',
               style: {
@@ -165,7 +165,7 @@ children: (0, n.jsxs)(c.FormSection, {
               color: 'header-secondary',
               children: [
                 '(',
-                M.id,
+                f.id,
                 ')'
               ]
             }) : null
@@ -184,7 +184,7 @@ children: (0, n.jsxs)(c.FormSection, {
             className: A.input,
             children: (0, n.jsx)(c.TextInput, {
               placeholder: 'Enter custom input...',
-              value: null != f ? f : '',
+              value: null != M ? M : '',
               onChange: b
             })
           })
@@ -286,7 +286,7 @@ children: (0, n.jsxs)(c.FormSection, {
             }, e),
             p.map(t => {
               var s;
-              let a = null !== (s = 'custom' === P ? f : P) && void 0 !== s ? s : '';
+              let a = null !== (s = 'custom' === P ? M : P) && void 0 !== s ? s : '';
               return (0, n.jsx)('div', {
                 className: A.textSample,
                 children: (0, n.jsxs)('div', {

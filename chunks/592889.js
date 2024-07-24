@@ -43,7 +43,7 @@ await (0, E.dP)(t, t.planId, O, r), i();
   paymentSourceId: t.paymentSourceId,
   currency: t.currency
 }),
-M = (0, A.og)((0, A.T4)(x.amount, x.currency), R.interval, R.intervalCount);
+f = (0, A.og)((0, A.T4)(x.amount, x.currency), R.interval, R.intervalCount);
   return (0, n.jsxs)(_.ModalRoot, {
 transitionState: a,
 'aria-label': g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
@@ -65,11 +65,11 @@ children: [
     className: h.modalBody,
     children: (0, S.Q0)(t.planId) ? g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
       downgradedPlan: m.ZP.getDisplayName(s.planId),
-      existingRate: M
+      existingRate: f
     }) : g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format({
       existingPlan: m.ZP.getDisplayName(t.planId),
       downgradedPlan: m.ZP.getDisplayName(s.planId),
-      existingRate: M
+      existingRate: f
     })
   }),
   (0, n.jsxs)(_.ModalFooter, {
