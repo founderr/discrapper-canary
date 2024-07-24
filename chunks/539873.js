@@ -26,7 +26,7 @@ var r = n(735250),
   N = n(921944),
   v = n(526761),
   O = n(689938),
-  R = n(435880);
+  R = n(172415);
 
 function C(e) {
   let {
@@ -112,18 +112,18 @@ children: (0, r.jsx)('div', {
           (0, r.jsxs)('div', {
             className: R.headings,
             children: [
-              !L || M ? (0, r.jsxs)('div', {
+              !L && (0, r.jsxs)('div', {
                 className: R.title,
                 children: [
                   (0, r.jsx)(l.Heading, {
                     variant: 'text-md/medium',
                     children: O.Z.Messages.APP_ICON_SETTINGS_TITLE
                   }),
-                  (!M || C) && (0, r.jsx)(h.Z, {
+                  !M && (0, r.jsx)(h.Z, {
                     className: R.premiumIcon
                   })
                 ]
-              }) : null,
+              }),
               M ? L ? null : (0, r.jsxs)('div', {
                 className: R.description,
                 children: [

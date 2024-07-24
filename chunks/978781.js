@@ -123,11 +123,13 @@ children: [
   (0, a.jsxs)('div', {
     className: y.footerButtonContainer,
     children: [
-      (0, a.jsx)(u.Button, {
-        className: y.footerButton,
-        color: u.ButtonColors.PRIMARY,
-        onClick: d,
-        children: E
+      (0, a.jsx)('div', {
+        children: (0, a.jsx)(u.Button, {
+          className: y.footerButton,
+          color: u.ButtonColors.PRIMARY,
+          onClick: d,
+          children: E
+        })
       }),
       r && (0, a.jsx)(S.Z, {
         className: y.footerButton,

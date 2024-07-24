@@ -41,7 +41,7 @@ var r, i, a = n(735250),
   G = n(526761),
   k = n(231338),
   B = n(689938),
-  F = n(776133);
+  F = n(809728);
 (i = r || (r = {})).EDITOR = 'EDITOR', i.SETTINGS = 'SETTINGS';
 let V = Object.freeze({
 EDITOR: G.fy.SLOW_USER_ACTION,
@@ -163,16 +163,15 @@ return l ? (0, a.jsxs)('div', {
   W = e => {
 var t, n;
 let {
-  hideDescription: r = !1,
-  renderCTAButtons: i
+  renderCTAButtons: r
 } = e, {
-  type: o
-} = s.useContext(H), [l, u] = (0, c.Wu)([L.Z], () => [
+  type: i
+} = s.useContext(H), [o, l] = (0, c.Wu)([L.Z], () => [
   L.Z.isPreview,
   L.Z.isCoachmark
-]), d = (null === (n = (0, S.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === w.Si.TIER_2;
+]), u = (null === (n = (0, S.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === w.Si.TIER_2;
 return (0, a.jsx)(a.Fragment, {
-  children: 'EDITOR' === o && l && d ? (0, a.jsx)(N.ZP, {
+  children: 'EDITOR' === i && o && u ? (0, a.jsx)(N.ZP, {
     type: w.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
     subscriptionTier: w.Si.TIER_2,
     children: B.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
@@ -185,18 +184,18 @@ return (0, a.jsx)(a.Fragment, {
         className: F.headings,
         children: [
           (0, a.jsx)(Y, {
-            type: o,
-            isPreview: l,
-            isCoachmark: u
+            type: i,
+            isPreview: o,
+            isCoachmark: l
           }),
-          !r && (0, a.jsx)(j, {
-            type: o,
-            isPreview: l,
-            isCoachmark: u
+          (0, a.jsx)(j, {
+            type: i,
+            isPreview: o,
+            isCoachmark: l
           })
         ]
       }),
-      null == i ? void 0 : i()
+      null == r ? void 0 : r()
     ]
   })
 });
@@ -447,11 +446,10 @@ renderCTAButtons: r
   return (0, a.jsxs)('section', {
 className: n,
 children: [
-  (0, a.jsx)(W, {
-    renderCTAButtons: r,
-    hideDescription: t
+  !t && (0, a.jsx)(W, {
+    renderCTAButtons: r
   }),
-  i && t && (0, a.jsx)(_.Heading, {
+  t && i && (0, a.jsx)(_.Heading, {
     className: F.upsellText,
     variant: 'heading-sm/semibold',
     children: B.Z.Messages.CLIENT_THEMES_EDITOR_UPSELL_HEADER
