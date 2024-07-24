@@ -28,4 +28,4 @@ let d = '2023-10_triggerdebuggingaa',
 d,
 _
   ];
-(c = s || (s = {}))[c.NONE = 0] = 'NONE', c[c.POST_CONNECTION_OPEN = 1] = 'POST_CONNECTION_OPEN', c[c.VOICE_CALL = 2] = 'VOICE_CALL', c[c.OPEN_USER_SETTINGS = 5] = 'OPEN_USER_SETTINGS';
+(c = s || (s = {}))[c.NONE = 0] = 'NONE', c[c.POST_CONNECTION_OPEN = 1] = 'POST_CONNECTION_OPEN', c[c.VOICE_CALL = 2] = 'VOICE_CALL', c[c.COLLECTIBLES_SHOP_OPEN = 4] = 'COLLECTIBLES_SHOP_OPEN', c[c.OPEN_USER_SETTINGS = 5] = 'OPEN_USER_SETTINGS';
