@@ -108,51 +108,54 @@ children: e => {
     }),
     noBorder: !J,
     children: [
-      (i = f, o = h, u = E, c = $, d = er, J && null != k && ((null == W ? void 0 : W.type) === M.fO.ACTIVITY || c) ? (null === (_ = k.config) || void 0 === _ ? void 0 : _.useInteractivePIP) ? (0, r.jsx)(C.of, {
-        onJumpToChannel: et,
-        applicationId: k.applicationId,
-        channel: a,
-        showControls: !u,
-        onMouseDown: i,
-        onMouseMove: i,
-        onMouseLeave: o,
-        onToggleHeight: en,
-        isExpanded: x,
-        hideExpandedButton: c
-      }) : c ? (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsx)(C.q5, {
-          idle: u,
-          onMouseMove: i,
-          onMouseDown: i,
-          onMouseLeave: o,
-          onJumpToChannel: () => {
-            et(), (0, A.tg)(L.Ez.PANEL);
-          },
-          channel: a,
+      (0, r.jsx)('div', {
+        className: 'theme-dark',
+        children: (i = f, o = h, u = E, c = $, d = er, J && null != k && ((null == W ? void 0 : W.type) === M.fO.ACTIVITY || c) ? (null === (_ = k.config) || void 0 === _ ? void 0 : _.useInteractivePIP) ? (0, r.jsx)(C.of, {
+          onJumpToChannel: et,
           applicationId: k.applicationId,
-          users: d
-        })
-      }) : null == W ? null : (0, r.jsxs)(r.Fragment, {
-        children: [
-          (0, r.jsx)('div', {
-            onMouseMove: i,
-            onMouseDown: i,
-            onMouseLeave: o,
-            className: P.clickShield,
-            onDoubleClick: et
-          }),
-          (0, r.jsx)(C.YB, {
+          channel: a,
+          showControls: !u,
+          onMouseDown: i,
+          onMouseMove: i,
+          onMouseLeave: o,
+          onToggleHeight: en,
+          isExpanded: x,
+          hideExpandedButton: c
+        }) : c ? (0, r.jsx)(r.Fragment, {
+          children: (0, r.jsx)(C.q5, {
             idle: u,
             onMouseMove: i,
             onMouseDown: i,
             onMouseLeave: o,
-            onJumpToChannel: et,
+            onJumpToChannel: () => {
+              et(), (0, A.tg)(L.Ez.PANEL);
+            },
             channel: a,
             applicationId: k.applicationId,
-            selectedParticipant: W
+            users: d
           })
-        ]
-      }) : null),
+        }) : null == W ? null : (0, r.jsxs)(r.Fragment, {
+          children: [
+            (0, r.jsx)('div', {
+              onMouseMove: i,
+              onMouseDown: i,
+              onMouseLeave: o,
+              className: P.clickShield,
+              onDoubleClick: et
+            }),
+            (0, r.jsx)(C.YB, {
+              idle: u,
+              onMouseMove: i,
+              onMouseDown: i,
+              onMouseLeave: o,
+              onJumpToChannel: et,
+              channel: a,
+              applicationId: k.applicationId,
+              selectedParticipant: W
+            })
+          ]
+        }) : null)
+      }),
       y ? (0, r.jsx)(l.Spinner, {
         className: s()(P.iframe, {
           [P.pipModeShort]: J && !x,

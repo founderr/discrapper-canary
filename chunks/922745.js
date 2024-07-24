@@ -97,7 +97,7 @@ children: [
     ...f
   }) : null,
   !p && (0, r.jsxs)('div', {
-    className: m.videoControls,
+    className: a()(m.videoControls, 'theme-dark'),
     children: [
       (0, r.jsx)('div', {
         className: m.topControls,
