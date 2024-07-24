@@ -1,4 +1,4 @@
-n(47120), n(411104);
+n(47120), n(315314), n(610138), n(216116), n(78328), n(815648), n(519149), n(411104);
 var r, i = n(512722),
   a = n.n(i),
   s = n(392711),
@@ -40,13 +40,17 @@ alwaysOnTop: !!_.isPlatformEmbedded && I[e]
   });
 }
 
-function R(e, t, n) {
-  let r = e.document,
-i = ''.concat(window.location.protocol, '//').concat(window.location.host);
-  if (!t.startsWith(i))
+function R(e, t, r) {
+  let i = e.document,
+s = new URL(t).origin,
+o = new URL(''.concat(window.location.protocol, '//').concat(window.location.host)).origin,
+l = URL.canParse(n.p) ? new URL(n.p).origin : '';
+  if (s !== o && s !== l) {
+new d.Z('PopoutWindowStore').warn('Not injecting stylesheet, unrecognized origin', s);
 return;
-  let s = r.createElement('link');
-  s.href = t, s.rel = 'stylesheet', s.integrity = n, a()(null != r.head, 'Document head was null'), r.head.appendChild(s);
+  }
+  let u = i.createElement('link');
+  u.href = t, u.rel = 'stylesheet', u.integrity = r, a()(null != i.head, 'Document head was null'), i.head.appendChild(u);
 }
 
 function C(e) {
