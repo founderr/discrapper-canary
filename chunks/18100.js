@@ -13,10 +13,10 @@ var a = t(735250),
   d = t(430824),
   u = t(214715),
   m = t(308083),
-  C = t(689938),
-  f = t(376851);
+  f = t(689938),
+  _ = t(376851);
 
-function _(e) {
+function C(e) {
   let {
 trait: n,
 selected: t,
@@ -25,8 +25,8 @@ onClick: i
   return (0, a.jsx)(u.Z, {
 variant: 'text-xs/semibold',
 color: o ? 'text-muted' : 'interactive-active',
-className: s()(f.trait, {
-  [f.strikethrough]: o
+className: s()(_.trait, {
+  [_.strikethrough]: o
 }),
 text: n,
 selected: t,
@@ -47,18 +47,18 @@ maskTraits: x,
 onTraitClick: g
   } = e, p = (0, o.e7)([d.Z], () => d.Z.getGuild(t)), {
 interests: T,
-description: I,
-playstyle: E,
+description: E,
+playstyle: I,
 wildcardDescriptors: b,
 brandPrimaryColor: N
   } = i, v = (0, l.useToken)(l.tokens.colors.TEXT_BRAND), y = Array.from(T), S = r.useMemo(() => null != u ? new Set(u) : new Set(), [u]);
   return (0, a.jsxs)('div', {
 children: [
   (0, a.jsxs)('div', {
-    className: s()(f.description, h ? f.descriptionBorderMask : void 0),
+    className: s()(_.description, h ? _.descriptionBorderMask : void 0),
     children: [
       (0, a.jsx)('div', {
-        className: h ? f.descriptionMask : void 0
+        className: h ? _.descriptionMask : void 0
       }),
       (0, a.jsx)(l.Heading, {
         variant: 'heading-md/medium',
@@ -67,22 +67,22 @@ children: [
         children: null == p ? void 0 : p.name
       }),
       (0, a.jsxs)('div', {
-        className: f.clanInfoRow,
+        className: _.clanInfoRow,
         children: [
           (0, a.jsx)(l.Text, {
             variant: 'text-xxs/normal',
-            className: f.clanInfoItem,
+            className: _.clanInfoItem,
             children: (0, a.jsx)('span', {
               role: 'img',
-              'aria-label': C.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
+              'aria-label': f.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
               children: '\uD83C\uDFAE'
             })
           }),
           (0, a.jsx)(l.Text, {
             variant: 'text-xs/normal',
             color: 'text-secondary',
-            className: f.clanInfoItem,
-            children: null !== (n = (0, m.mv)(E)) && void 0 !== n ? n : C.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
+            className: _.clanInfoItem,
+            children: null !== (n = (0, m.mv)(I)) && void 0 !== n ? n : f.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
           }),
           null != p && (0, a.jsx)(c.cS, {
             wildcardDescriptors: b,
@@ -93,36 +93,36 @@ children: [
       (0, a.jsx)(l.Text, {
         variant: 'text-xs/medium',
         color: 'header-secondary',
-        className: f.descriptionText,
-        children: (null == I ? void 0 : I.length) > 0 ? I : C.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
+        className: _.descriptionText,
+        children: (null == E ? void 0 : E.length) > 0 ? E : f.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
       })
     ]
   }),
   (0, a.jsxs)('div', {
-    className: s()(f.tagsContainer, x ? f.traitsBorderMask : void 0),
+    className: s()(_.tagsContainer, x ? _.traitsBorderMask : void 0),
     children: [
       (0, a.jsx)('div', {
-        className: x ? f.traitsMask : void 0
+        className: x ? _.traitsMask : void 0
       }),
       (0, a.jsxs)('div', {
-        className: f.tagsCount,
+        className: _.tagsCount,
         children: [
           (0, a.jsx)(l.TagsIcon, {
             size: 'xxs',
-            className: f.tags
+            className: _.tags
           }),
           (0, a.jsx)(l.Text, {
             variant: 'text-xs/semibold',
             color: 'text-muted',
-            children: C.Z.Messages.CLAN_SETUP_NUM_TRAITS.format({
+            children: f.Z.Messages.CLAN_SETUP_NUM_TRAITS.format({
               n: y.length
             })
           })
         ]
       }),
       (0, a.jsx)('div', {
-        className: f.traits,
-        children: y.map(e => (0, a.jsx)(_, {
+        className: _.traits,
+        children: y.map(e => (0, a.jsx)(C, {
           trait: e,
           selected: S.has(e),
           onClick: g

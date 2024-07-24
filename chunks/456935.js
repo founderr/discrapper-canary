@@ -27,7 +27,7 @@ default:
   return '';
   }
 }
-let C = {
+let f = {
   [c.sFg.NONE]: '',
   [c.sFg.LOW]: i.Z.unsafe_rawColors.GREEN_360.css,
   [c.sFg.MEDIUM]: i.Z.unsafe_rawColors.YELLOW_300.css,
@@ -37,7 +37,7 @@ let C = {
 n.ZP = function(e) {
   let {
 guild: n
-  } = e, i = o.Z.can(c.Plq.MANAGE_GUILD, n), f = n.verificationLevel, _ = f === c.sFg.VERY_HIGH ? s.MobilePhoneIcon : s.EnvelopeIcon, h = r.useMemo(() => m(f), [f]), x = C[f], g = (0, a.jsx)('div', {
+  } = e, i = o.Z.can(c.Plq.MANAGE_GUILD, n), _ = n.verificationLevel, C = _ === c.sFg.VERY_HIGH ? s.MobilePhoneIcon : s.EnvelopeIcon, h = r.useMemo(() => m(_), [_]), x = f[_], g = (0, a.jsx)('div', {
 className: u.verificationLevelTitle,
 children: d.Z.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
   verificationLevelHook: function() {
@@ -51,13 +51,13 @@ children: d.Z.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
     }, 'hook');
   }
 })
-  }), p = f === c.sFg.VERY_HIGH ? d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
+  }), p = _ === c.sFg.VERY_HIGH ? d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
   return (0, a.jsx)(l.Z, {
 title: g,
 children: (0, a.jsxs)('div', {
   className: u.verificationContainer,
   children: [
-    (0, a.jsx)(_, {
+    (0, a.jsx)(C, {
       size: 'custom',
       color: 'currentColor',
       width: 20,

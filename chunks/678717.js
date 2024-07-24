@@ -37,8 +37,8 @@ var y = r(392750),
   O = r(514866),
   B = r(678639),
   P = r(351930),
-  L = r(771751),
-  A = r(596768),
+  A = r(771751),
+  L = r(596768),
   D = r(621060),
   M = r(689938),
   G = r(941735),
@@ -73,7 +73,7 @@ function z() {
     {
       id: 'triggers',
       name: 'Triggers',
-      render: () => (0, a.jsx)(A.Z, {})
+      render: () => (0, a.jsx)(L.Z, {})
     },
     {
       id: 'stores',
@@ -141,7 +141,7 @@ function z() {
   }), window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') && (e.push({
     id: 'trials',
     name: 'Trials',
-    render: () => (0, a.jsx)(L.Z, {})
+    render: () => (0, a.jsx)(A.Z, {})
   }), e.push({
     id: 'payments',
     name: 'Payments',

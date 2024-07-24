@@ -13,13 +13,13 @@ n.Z = e => {
   let {
 guildId: u,
 handleUpdate: m,
-progress: C,
-errors: f
+progress: f,
+errors: _
   } = e, {
-wildcardDescriptors: _,
+wildcardDescriptors: C,
 description: h
-  } = C, x = (e, n) => {
-let t = [..._];
+  } = f, x = (e, n) => {
+let t = [...C];
 t[n] = e, m({
   wildcardDescriptors: t
 });
@@ -38,11 +38,11 @@ children: [
     className: d.subtitle,
     children: c.Z.Messages.CLAN_SETUP_DESCRIPTION_SUBTITLE
   }),
-  (null == f ? void 0 : f.description) != null && (0, a.jsx)(s.Text, {
+  (null == _ ? void 0 : _.description) != null && (0, a.jsx)(s.Text, {
     variant: 'text-sm/normal',
     color: 'status-danger',
     className: d.errorText,
-    children: f.description
+    children: _.description
   }),
   (0, a.jsxs)('div', {
     className: d.content,
@@ -77,32 +77,32 @@ children: [
             className: d.title,
             children: c.Z.Messages.CLAN_SETUP_WILDCARDS_SUBTITLE
           }),
-          (null == f ? void 0 : f.wildcardDescriptors) != null && (0, a.jsx)(s.Text, {
+          (null == _ ? void 0 : _.wildcardDescriptors) != null && (0, a.jsx)(s.Text, {
             variant: 'text-sm/normal',
             color: 'status-danger',
             className: d.errorText,
-            children: f.wildcardDescriptors
+            children: _.wildcardDescriptors
           }),
           (0, a.jsxs)('div', {
             className: d.wildcardRow,
             children: [
               (0, a.jsx)(s.TextInput, {
                 inputClassName: i()(d.input, d.wildcardInput),
-                value: null !== (n = _[0]) && void 0 !== n ? n : '',
+                value: null !== (n = C[0]) && void 0 !== n ? n : '',
                 onChange: e => x(e, 0),
                 maxLength: l.TY,
                 placeholder: l.LK['0']
               }),
               (0, a.jsx)(s.TextInput, {
                 inputClassName: i()(d.input, d.wildcardInput),
-                value: null !== (t = _[1]) && void 0 !== t ? t : '',
+                value: null !== (t = C[1]) && void 0 !== t ? t : '',
                 onChange: e => x(e, 1),
                 maxLength: l.TY,
                 placeholder: l.LK['1']
               }),
               (0, a.jsx)(s.TextInput, {
                 inputClassName: i()(d.input, d.wildcardInput),
-                value: null !== (r = _[2]) && void 0 !== r ? r : '',
+                value: null !== (r = C[2]) && void 0 !== r ? r : '',
                 onChange: e => x(e, 2),
                 maxLength: l.TY,
                 placeholder: l.LK['2']
@@ -115,7 +115,7 @@ children: [
         className: d.fixedWidthSidebar,
         children: (0, a.jsx)(o.Z, {
           guildId: u,
-          progress: C,
+          progress: f,
           maskTraits: !0
         })
       })

@@ -1,112 +1,112 @@
-t.d(n, {
+e.d(t, {
   $J: function() {
-return h;
+return A;
   },
   He: function() {
-return l;
+return s;
   },
   av: function() {
-return C;
+return E;
   },
   df: function() {
-return f;
+return N;
   },
   hY: function() {
-return _;
+return R;
   },
   oL: function() {
-return g;
+return O;
   },
   wE: function() {
-return d;
+return l;
   },
   wZ: function() {
-return m;
+return _;
   },
   yk: function() {
-return c;
+return u;
   },
   zo: function() {
-return u;
+return T;
   }
 });
-var a = t(544891),
-  r = t(570140),
-  i = t(728345),
-  s = t(981631),
-  o = t(674563);
-async function l(e) {
+var a = e(544891),
+  i = e(570140),
+  o = e(728345),
+  r = e(981631),
+  c = e(674563);
+async function s(n) {
   await a.tn.post({
-url: s.ANM.CREATOR_MONETIZATION_ENABLE_REQUESTS(e)
+url: r.ANM.CREATOR_MONETIZATION_ENABLE_REQUESTS(n)
   });
 }
-async function c(e) {
+async function u(n) {
   return (await a.tn.get({
-url: s.ANM.CREATOR_MONETIZATION_ELIGIBILITY(e)
+url: r.ANM.CREATOR_MONETIZATION_ELIGIBILITY(n)
   })).body;
 }
-async function d(e, n) {
+async function l(n, t) {
   await a.tn.post({
-url: s.ANM.CREATOR_MONETIZATION_ACCEPT_TERMS(e, n)
+url: r.ANM.CREATOR_MONETIZATION_ACCEPT_TERMS(n, t)
   });
 }
-async function u(e) {
+async function T(n) {
   await a.tn.post({
-url: s.ANM.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(e)
+url: r.ANM.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(n)
   });
 }
-async function m(e) {
+async function _(n) {
   return (await a.tn.get({
-url: s.ANM.CREATOR_MONETIZATION_MARKETING_ONBOARDING(e)
+url: r.ANM.CREATOR_MONETIZATION_MARKETING_ONBOARDING(n)
   })).body;
 }
-async function C(e) {
+async function E(n) {
   try {
-let n = await a.tn.get({
-  url: s.ANM.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
+let t = await a.tn.get({
+  url: r.ANM.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
   query: {
-    nag_guild_ids: e
+    nag_guild_ids: n
   }
 });
-r.Z.dispatch({
+i.Z.dispatch({
   type: 'CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS',
-  eligibleGuilds: n.body.eligible_guilds
+  eligibleGuilds: t.body.eligible_guilds
 });
-  } catch (e) {}
+  } catch (n) {}
 }
-async function f(e, n) {
-  let t = (await a.tn.post({
-url: s.ANM.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(e),
+async function N(n, t) {
+  let e = (await a.tn.post({
+url: r.ANM.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(n),
 body: {
-  team_id: n
+  team_id: t
 }
   })).body;
-  return null != t.application && r.Z.dispatch({
+  return null != e.application && i.Z.dispatch({
 type: 'APPLICATION_FETCH_SUCCESS',
-application: t.application
-  }), t;
+application: e.application
+  }), e;
 }
 
-function _(e) {
+function R(n) {
   return a.tn.post({
-url: s.ANM.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(e)
+url: r.ANM.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(n)
   });
 }
 
-function h(e) {
+function A(n) {
   return a.tn.post({
-url: s.ANM.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(e)
+url: r.ANM.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(n)
   });
 }
-async function x(e) {
+async function I(n) {
   await a.tn.post({
-url: s.ANM.CREATOR_MONETIZATION_REMOVE_MONETIZATION(e),
+url: r.ANM.CREATOR_MONETIZATION_REMOVE_MONETIZATION(n),
 body: {}
   });
 }
-async function g(e) {
-  return await x(e), await i.Z.getApplicationsForGuild(e, {
-type: o.wW.GUILD_ROLE_SUBSCRIPTIONS,
+async function O(n) {
+  return await I(n), await o.Z.getApplicationsForGuild(n, {
+type: c.wW.GUILD_ROLE_SUBSCRIPTIONS,
 includeTeam: !0
   });
 }

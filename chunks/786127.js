@@ -13,10 +13,10 @@ isDropHovered: c,
 onDrop: d,
 onEdit: u,
 onRemove: m,
-canRemove: C,
-actionsLocation: f
+canRemove: f,
+actionsLocation: _
   } = e, {
-label: _,
+label: C,
 placeholder: h
   } = n;
   return (0, a.jsx)(i.Z, {
@@ -27,9 +27,9 @@ isDropHovered: c,
 onDrop: d,
 onEdit: u,
 onRemove: m,
-title: _,
-canRemove: C,
-actionsLocation: f,
+title: C,
+canRemove: f,
+actionsLocation: _,
 children: (0, a.jsx)(r.Gi, {
   className: o.fieldBackground,
   placeholder: null != h ? h : s.Z.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,

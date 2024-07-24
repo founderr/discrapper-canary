@@ -13,9 +13,9 @@ n.Z = function(e) {
 applicationId: n,
 imageContainerClassName: t,
 onClick: i,
-selected: C,
-locked: f = !1,
-otherGamesCount: _ = 0
+selected: f,
+locked: _ = !1,
+otherGamesCount: C = 0
   } = e, h = (0, o.useToken)(o.tokens.colors.WHITE), {
 isFetching: x,
 coverImageUrl: g
@@ -30,7 +30,7 @@ null == i || i(n);
   }, [
 n,
 i
-  ]), I = r.useMemo(() => x ? null : null == g ? (0, a.jsx)('div', {
+  ]), E = r.useMemo(() => x ? null : null == g ? (0, a.jsx)('div', {
 className: m.gameUnknownImage,
 children: (0, a.jsx)(o.UnknownGameIcon, {
   size: 'lg'
@@ -51,25 +51,25 @@ children: [
     onClick: T,
     className: s()(t, x ? m.gameImageLoading : void 0, m.gameImageBackground),
     children: [
-      C && (0, a.jsx)('div', {
+      f && (0, a.jsx)('div', {
         className: m.checkBackground,
         children: (0, a.jsx)(o.CircleCheckIcon, {
           size: 'md',
           color: 'currentColor',
           secondaryColor: h.hex(),
           className: s()(m.selectedGameCheck, {
-            [m.selectedGameCheckLocked]: f
+            [m.selectedGameCheckLocked]: _
           })
         })
       }),
-      I,
-      _ > 0 && (0, a.jsx)('div', {
+      E,
+      C > 0 && (0, a.jsx)('div', {
         className: m.remainingGame,
         children: (0, a.jsx)(o.Text, {
           variant: 'text-xs/normal',
           color: 'always-white',
           children: u.Z.Messages.COUNT_REMAINING.format({
-            count: _
+            count: C
           })
         })
       })
@@ -81,7 +81,7 @@ children: [
     color: 'header-primary',
     children: [
       p,
-      f && (0, a.jsx)(o.LockIcon, {
+      _ && (0, a.jsx)(o.LockIcon, {
         size: 'xxs'
       })
     ]

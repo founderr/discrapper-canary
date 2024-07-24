@@ -40,8 +40,8 @@ function h(e) {
 } = (0, c.usePaymentContext)(),
 {
   isGift: P,
-  giftRecipient: v,
-  giftCode: Z,
+  giftRecipient: Z,
+  giftCode: v,
   hasSentMessage: y,
   isSendingMessage: b,
   sendGiftMessage: U
@@ -54,7 +54,7 @@ h,
 f
   ]);
   return i.useEffect(() => {
-if (!(!P || null == v || null == Z || y || b || (0, C.pO)(v)))
+if (!(!P || null == Z || null == v || y || b || (0, C.pO)(Z)))
   a.F.getCurrentConfig({
     location: '36b986_1'
   }).enabled && U({
@@ -63,8 +63,8 @@ if (!(!P || null == v || null == Z || y || b || (0, C.pO)(v)))
   }, [
 U,
 P,
-v,
 Z,
+v,
 y,
 b,
 f

@@ -106,7 +106,7 @@ let {
   value: t
 } = e;
 return t === Z;
-  })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : 'Unknown', O = null != T, B = null != T && new Date(T).getTime() < Date.now(), P = (null == E ? void 0 : E.sku_id) === f.Si.TIER_0, L = async () => {
+  })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : 'Unknown', O = null != T, B = null != T && new Date(T).getTime() < Date.now(), P = (null == E ? void 0 : E.sku_id) === f.Si.TIER_0, A = async () => {
 w(!0), O ? await C(S, 'trial') : await (0, d.a)(c), h(), w(!1);
   };
   n.useEffect(() => {
@@ -130,8 +130,8 @@ if (x) {
 p,
 x
   ]);
-  let A = 'Active';
-  return O && (A = 'Acknowledged'), B && (A = 'Expired'), (0, a.jsxs)('div', {
+  let L = 'Active';
+  return O && (L = 'Acknowledged'), B && (L = 'Expired'), (0, a.jsxs)('div', {
 className: o()(y.card, P ? y.gradientWrapperTier0 : y.gradientWrapperTier2),
 children: [
   (0, a.jsxs)('div', {
@@ -223,15 +223,15 @@ children: [
     className: y.badgeContainer,
     children: [
       (0, a.jsx)(s.Clickable, {
-        onClick: L,
+        onClick: A,
         className: o()(y.badge, y.clickable, {
           [y.acked]: O,
           [y.expired]: B
         }),
         children: (0, a.jsx)(s.Text, {
           variant: 'eyebrow',
-          color: 'Acknowledged' === A ? void 0 : 'always-white',
-          children: A
+          color: 'Acknowledged' === L ? void 0 : 'always-white',
+          children: L
         })
       }),
       null != I && (0, a.jsx)('div', {

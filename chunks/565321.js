@@ -12,19 +12,19 @@ n.Z = function(e) {
 guildId: n,
 onSave: t,
 formDescription: u
-  } = e, [m, C] = r.useState(null), [f, _] = r.useState(u), h = r.useRef(!1), x = r.useRef(!1);
+  } = e, [m, f] = r.useState(null), [_, C] = r.useState(u), h = r.useRef(!1), x = r.useRef(!1);
   r.useEffect(() => () => {
 x.current = !0;
   }, []);
   let g = r.useCallback(async () => {
 if (!h.current) {
-  C(null);
+  f(null);
   try {
-    await t(n, f);
+    await t(n, _);
   } catch (e) {
     if (x.current)
       return;
-    C(new s.Hx(e).getAnyErrorMessage());
+    f(new s.Hx(e).getAnyErrorMessage());
   } finally {
     if (x.current)
       return;
@@ -32,7 +32,7 @@ if (!h.current) {
   }
 }
   }, [
-f,
+_,
 n,
 t
   ]);
@@ -42,10 +42,10 @@ children: [
   (0, a.jsx)(i.TextArea, {
     className: d.fieldBackground,
     maxLength: l.Us,
-    value: null != f ? f : '',
+    value: null != _ ? _ : '',
     placeholder: c.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
     onChange: e => {
-      _(e);
+      C(e);
     },
     onBlur: g,
     autosize: !0

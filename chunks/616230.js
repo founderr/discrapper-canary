@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return E;
+return I;
   }
 }), t(47120);
 var a = t(735250),
@@ -13,9 +13,9 @@ var a = t(735250),
   d = t(863249),
   u = t(944163),
   m = t(246364),
-  C = t(571728),
-  f = t(755340),
-  _ = t(449226),
+  f = t(571728),
+  _ = t(755340),
+  C = t(449226),
   h = t(689938),
   x = t(70529),
   g = t(136815);
@@ -26,9 +26,9 @@ guild: n,
 isExpanded: i,
 emptyFormFields: s,
 hasTermsField: o
-  } = e, c = n.hasVerificationGate(), [u, m] = r.useState(c), C = e => {
+  } = e, c = n.hasVerificationGate(), [u, m] = r.useState(c), f = e => {
 e.preventDefault(), e.stopPropagation();
-  }, f = async e => {
+  }, _ = async e => {
 try {
   m(e), await d.Z.enableVerificationForm(n.id, e);
 } catch {
@@ -44,13 +44,13 @@ e && s ? (0, l.openModalLazy)(async () => {
     header: h.Z.Messages.MEMBER_VERIFICATION_WARNING_TITLE,
     cancelText: h.Z.Messages.MEMBER_VERIFICATION_WARNING_CANCEL,
     confirmText: h.Z.Messages.MEMBER_VERIFICATION_WARNING_CONFIRM,
-    onConfirm: () => f(e),
+    onConfirm: () => _(e),
     children: (0, a.jsx)(l.Text, {
       variant: 'text-md/normal',
       children: h.Z.Messages.MEMBER_VERIFICATION_AUTOMATIC_WARNING
     })
   });
-}) : f(e);
+}) : _(e);
   }, T = () => {
 (0, l.openModalLazy)(async () => {
   let {
@@ -106,10 +106,10 @@ children: [
     children: i || u || !s ? (0, a.jsxs)(a.Fragment, {
       children: [
         (0, a.jsx)(l.Clickable, {
-          onMouseDown: C,
-          onMouseUp: C,
+          onMouseDown: f,
+          onMouseUp: f,
           onClick: e => {
-            C(e), T();
+            f(e), T();
           },
           children: (0, a.jsx)(l.Tooltip, {
             tooltipContentClassName: g.__invalid_tooltip,
@@ -122,7 +122,7 @@ children: [
             })
           })
         }),
-        (0, a.jsx)(_.Z, {
+        (0, a.jsx)(C.Z, {
           checked: u,
           onChange: () => p(!u)
         })
@@ -138,28 +138,28 @@ children: [
 async function T(e, n) {
   await d.Z.updateVerificationForm(e, n);
 }
-async function I(e, n) {
+async function E(e, n) {
   await d.Z.updateVerificationFormDescription(e, n);
 }
 
-function E(e) {
+function I(e) {
   var n, t, i;
   let {
 guild: l,
-isClanContext: _ = !1,
+isClanContext: C = !1,
 onFieldsSave: h,
-onDescriptionSave: E,
+onDescriptionSave: I,
 verificationForm: b
-  } = e, [N, v] = r.useState(_), y = r.useRef(!1), S = r.useCallback(() => {
+  } = e, [N, v] = r.useState(C), y = r.useRef(!1), S = r.useCallback(() => {
 y.current = !0;
-  }, []), A = null !== (n = (0, C.A)({
+  }, []), A = null !== (n = (0, f.A)({
 guildId: l.id
   })) && void 0 !== n ? n : 0, M = (0, o.e7)([u.Z], () => null != b ? b : u.Z.get(l.id)), j = null !== (t = null == M ? void 0 : M.formFields) && void 0 !== t ? t : [];
   r.useEffect(() => {
 d.Z.fetchVerificationForm(l.id);
   }, [l.id]);
   let R = null != M,
-L = !_;
+L = !C;
   return (0, a.jsx)(c.Z, {
 renderHeader: L ? (0, a.jsx)(p, {
   guild: l,
@@ -169,22 +169,22 @@ renderHeader: L ? (0, a.jsx)(p, {
 }) : null,
 isExpanded: N,
 onExpand: () => v(!N),
-disableAnimation: _,
+disableAnimation: C,
 disableBackground: !L,
 children: (0, a.jsx)('div', {
   className: s()(x.itemBodyContainer, {
     [x.noPadding]: !L,
     [g.rulesScreeningItemsNoBorder]: !L
   }),
-  children: R && (0, a.jsx)(f.Z, {
+  children: R && (0, a.jsx)(_.Z, {
     guild: l,
     submittedGuildJoinRequestsCount: A,
     formFields: j,
     onFormFieldUpdate: S,
     hideVerificationLevelField: !0,
-    isClanContext: _,
+    isClanContext: C,
     onFieldsSave: null != h ? h : T,
-    onDescriptionSave: null != E ? E : I,
+    onDescriptionSave: null != I ? I : E,
     formDescription: null !== (i = null == M ? void 0 : M.description) && void 0 !== i ? i : ''
   })
 })

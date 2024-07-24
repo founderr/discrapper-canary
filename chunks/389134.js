@@ -5,54 +5,54 @@ var a, r, i, s, o = t(392711),
   d = t.n(c),
   u = t(442837),
   m = t(570140),
-  C = t(944163),
-  f = t(116175),
-  _ = t(308083);
+  f = t(944163),
+  _ = t(116175),
+  C = t(308083);
 let h = () => ({
 gameApplicationIds: new Set(),
-playstyle: _.zv.NONE,
+playstyle: C.zv.NONE,
 interests: new Set(),
 description: '',
 wildcardDescriptors: [
-  _.U6,
-  _.U6,
-  _.U6
+  C.U6,
+  C.U6,
+  C.U6
 ],
 tag: '',
 verificationForm: {
-  ...C.t
+  ...f.t
 },
-badgeKind: f.ZD.SWORD,
-badgePrimaryColor: f.sg['0'].primary,
-badgeSecondaryColor: f.sg['0'].secondary,
-banner: _.qC.NIGHT_SKY,
-brandPrimaryColor: _.ym['0'].primary,
-brandSecondaryColor: _.ym['0'].secondary
+badgeKind: _.ZD.SWORD,
+badgePrimaryColor: _.sg['0'].primary,
+badgeSecondaryColor: _.sg['0'].secondary,
+banner: C.qC.NIGHT_SKY,
+brandPrimaryColor: C.ym['0'].primary,
+brandSecondaryColor: C.ym['0'].secondary
   }),
   x = h(),
   g = d()(x),
   p = !1,
   T = !1,
-  I = {};
-class E extends(a = u.ZP.Store) {
+  E = {};
+class I extends(a = u.ZP.Store) {
   getState() {
 return {
   initialSettings: x,
   settings: g,
   dirty: p,
-  errors: I,
+  errors: E,
   submitting: T
 };
   }
 }
-s = 'ClanSettingsStore', (i = 'displayName') in(r = E) ? Object.defineProperty(r, i, {
+s = 'ClanSettingsStore', (i = 'displayName') in(r = I) ? Object.defineProperty(r, i, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[i] = s, n.Z = new E(m.Z, {
+}) : r[i] = s, n.Z = new I(m.Z, {
   CLAN_SETTINGS_FETCH_START: function() {
-T = !1, x = h(), g = d()(x), p = !1, I = {};
+T = !1, x = h(), g = d()(x), p = !1, E = {};
   },
   CLAN_SETTINGS_FETCH_SUCCESS: function(e) {
 let {
@@ -71,22 +71,22 @@ for (let e in (g = {
     ...g,
     ...d()(n)
   }, n))
-  delete I[e], I = {
-    ...I
+  delete E[e], E = {
+    ...E
   };
 p = !l().isEqual(l().omit(g, 'verificationForm'), l().omit(x, 'verificationForm'));
   },
   CLAN_SETTINGS_SUBMIT: function() {
-T = !0, I = {};
+T = !0, E = {};
   },
   CLAN_SETTINGS_SUBMIT_SUCCESS: function() {
-T = !1, x = d()(g), p = !1, I = {};
+T = !1, x = d()(g), p = !1, E = {};
   },
   CLAN_SETTINGS_SUBMIT_ERROR: function(e) {
 let {
   error: n
 } = e;
-T = !1, I = {
+T = !1, E = {
   gameApplicationIds: n.getFirstFieldErrorMessage('game_application_ids'),
   playstyle: n.getFirstFieldErrorMessage('play_style'),
   description: n.getFirstFieldErrorMessage('description'),

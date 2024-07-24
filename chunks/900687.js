@@ -1,40 +1,40 @@
-i.d(n, {
+i.d(s, {
   Z: function() {
-return r;
+return a;
   }
 });
-var s = i(735250);
+var n = i(735250);
 i(470079);
 var l = i(705556),
-  o = i(225714),
-  t = i(612309);
+  t = i(225714),
+  o = i(612309);
 
-function r(e) {
+function a(e) {
   let {
-user: n,
+user: s,
 isCurrentUser: i,
-guildId: r,
-friendToken: a,
+guildId: a,
+friendToken: r,
 relationshipType: d,
 persistentCallCtaEnabled: c = !1,
 activeInviteToCallCtaEnabled: u = !1,
 onClose: I
   } = e;
-  return (0, s.jsxs)('div', {
-className: t.buttons,
+  return (0, n.jsxs)('div', {
+className: o.buttons,
 children: [
-  (0, s.jsx)(o.Z, {
-    user: n,
+  (0, n.jsx)(t.Z, {
+    user: s,
     isCurrentUser: i,
     relationshipType: d,
     persistentCallCtaEnabled: c,
     activeInviteToCallCtaEnabled: u,
-    friendToken: a,
+    friendToken: r,
     onClose: I
   }),
-  (0, s.jsx)(l.Z, {
-    user: n,
-    guildId: r,
+  (0, n.jsx)(l.Z, {
+    user: s,
+    guildId: a,
     onClose: I
   })
 ]

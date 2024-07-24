@@ -9,9 +9,9 @@ var a = t(735250),
   d = t(353093),
   u = t(214715),
   m = t(18100),
-  C = t(308083),
-  f = t(689938),
-  _ = t(318577);
+  f = t(308083),
+  _ = t(689938),
+  C = t(318577);
 n.Z = e => {
   let {
 guildId: n,
@@ -20,19 +20,19 @@ progress: i,
 error: h
   } = e, {
 interests: x
-  } = i, [g, p] = r.useState(''), T = (0, l.e7)([c.default], () => c.default.getId()), I = r.useMemo(() => (0, d.SS)(C.i6, T), [T]), E = r.useMemo(() => Array.from(x), [x]), b = r.useMemo(() => E.filter(C.O6), [E]), N = r.useMemo(() => [
-...I,
+  } = i, [g, p] = r.useState(''), T = (0, l.e7)([c.default], () => c.default.getId()), E = r.useMemo(() => (0, d.SS)(f.i6, T), [T]), I = r.useMemo(() => Array.from(x), [x]), b = r.useMemo(() => I.filter(f.O6), [I]), N = r.useMemo(() => [
+...E,
 ...b
   ], [
 b,
-I
-  ]), v = r.useMemo(() => E.filter(e => !C.WZ.has(e) && !C.gh.has(e)), [E]), y = e => {
+E
+  ]), v = r.useMemo(() => I.filter(e => !f.WZ.has(e) && !f.gh.has(e)), [I]), y = e => {
 let n = new Set(x);
 n.delete(e), t({
   interests: n
 });
   }, S = r.useCallback(e => {
-if (x.size === C.c4)
+if (x.size === f.c4)
   return;
 let n = null != e ? e : g.trim();
 if (0 === n.length)
@@ -53,75 +53,75 @@ switch (e.key) {
 }
   }, [S]);
   return (0, a.jsxs)('div', {
-className: _.slideContent,
+className: C.slideContent,
 children: [
   (0, a.jsx)(o.Heading, {
     variant: 'heading-xxl/medium',
-    className: _.title,
-    children: f.Z.Messages.CLAN_SETUP_INTERESTS_TITLE
+    className: C.title,
+    children: _.Z.Messages.CLAN_SETUP_INTERESTS_TITLE
   }),
   (0, a.jsx)(o.Text, {
     variant: 'text-md/normal',
     color: 'header-secondary',
-    className: _.subtitle,
-    children: f.Z.Messages.CLAN_SETUP_INTERESTS_SUBTITLE.format()
+    className: C.subtitle,
+    children: _.Z.Messages.CLAN_SETUP_INTERESTS_SUBTITLE.format()
   }),
   null != h && (0, a.jsx)(o.Text, {
     variant: 'text-sm/normal',
     color: 'status-danger',
-    className: _.errorText,
+    className: C.errorText,
     children: h
   }),
   (0, a.jsxs)('div', {
-    className: _.content,
+    className: C.content,
     children: [
       (0, a.jsxs)('div', {
-        className: _.mainPanelContainer,
+        className: C.mainPanelContainer,
         children: [
           (0, a.jsxs)('div', {
-            className: _.inputContainer,
+            className: C.inputContainer,
             children: [
               (0, a.jsx)(o.Text, {
                 variant: 'text-xs/semibold',
                 color: 'text-muted',
-                className: _.contentLabel,
-                children: f.Z.Messages.CLAN_SETUP_INTERESTS_LABEL
+                className: C.contentLabel,
+                children: _.Z.Messages.CLAN_SETUP_INTERESTS_LABEL
               }),
               (0, a.jsx)(o.TextInput, {
                 autoFocus: !0,
-                inputClassName: _.input,
+                inputClassName: C.input,
                 value: g,
                 onKeyDown: A,
                 onChange: p,
-                placeholder: f.Z.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
-                maxLength: C.Sq,
-                disabled: x.size === C.c4
+                placeholder: _.Z.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
+                maxLength: f.Sq,
+                disabled: x.size === f.c4
               }),
               g.length > 0 && (0, a.jsx)(o.Clickable, {
                 onClick: () => S(g.trim()),
-                className: s()(_.plusIcon, _.clickable),
+                className: s()(C.plusIcon, C.clickable),
                 children: (0, a.jsx)(o.PlusSmallIcon, {
                   size: 'md',
                   color: 'currentColor',
-                  className: _.icon
+                  className: C.icon
                 })
               }),
               g.length > 0 && (0, a.jsx)(o.Text, {
                 color: 'text-muted',
                 variant: 'text-xs/normal',
-                className: _.enterToSearchText,
-                children: f.Z.Messages.CLAN_SETUP_INTERESTS_HELP
+                className: C.enterToSearchText,
+                children: _.Z.Messages.CLAN_SETUP_INTERESTS_HELP
               })
             ]
           }),
           (0, a.jsx)(o.Text, {
-            className: _.interestsCategoryTitle,
+            className: C.interestsCategoryTitle,
             variant: 'text-xs/semibold',
             color: 'text-muted',
-            children: f.Z.Messages.CLAN_SETUP_SUGGESTED_INTERESTS
+            children: _.Z.Messages.CLAN_SETUP_SUGGESTED_INTERESTS
           }),
           (0, a.jsx)('div', {
-            className: _.interestsCategory,
+            className: C.interestsCategory,
             children: N.map(e => {
               let n = x.has(e);
               return (0, a.jsx)(u.Z, {
@@ -136,8 +136,8 @@ children: [
         ]
       }),
       (0, a.jsx)('div', {
-        className: _.fixedWidthSidebar,
-        children: E.length > 0 && (0, a.jsx)(m.Z, {
+        className: C.fixedWidthSidebar,
+        children: I.length > 0 && (0, a.jsx)(m.Z, {
           guildId: n,
           progress: i,
           traitsToHighlight: v,

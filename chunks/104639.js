@@ -3,8 +3,8 @@ function r() {
   return {
 logsUploaded: new Date().toISOString(),
 releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-buildNumber: '312577',
-versionHash: '293bd75c93d6ff9506444775cd220c8a835ff58c'
+buildNumber: '312607',
+versionHash: '2c54336dabc853f721c022732849d99f60c39f53'
   };
 }
 n.d(t, {

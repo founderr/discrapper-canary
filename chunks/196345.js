@@ -1,47 +1,47 @@
 t.d(n, {
   EK: function() {
-return u;
+return d;
   },
   G0: function() {
 return m;
   },
   QC: function() {
-return C;
+return f;
   },
   dd: function() {
-return f;
+return _;
   }
 }), t(47120);
-var a = t(735250);
+var o = t(735250);
 t(470079);
 var r = t(120356),
   i = t.n(r),
-  s = t(481060),
-  o = t(454585),
+  a = t(481060),
+  s = t(454585),
   l = t(489813),
   c = t(689938),
-  d = t(994735);
+  u = t(994735);
 
-function u(e) {
+function d(e) {
   let {
 terms: n,
 channelId: t,
 className: r
   } = e;
-  return (0, a.jsx)('div', {
-className: i()(d.termsFieldBody, r),
-children: n.map((e, n) => (0, a.jsxs)('div', {
-  className: d.termsRow,
+  return (0, o.jsx)('div', {
+className: i()(u.termsFieldBody, r),
+children: n.map((e, n) => (0, o.jsxs)('div', {
+  className: u.termsRow,
   children: [
-    (0, a.jsx)(s.Text, {
+    (0, o.jsx)(a.Text, {
       variant: 'text-md/normal',
       color: 'text-muted',
       children: ''.concat(n + 1, '.')
     }),
-    (0, a.jsx)(s.Text, {
+    (0, o.jsx)(a.Text, {
       variant: 'text-md/normal',
-      className: d.termsRowContent,
-      children: o.Z.parseGuildVerificationFormRule(e, !0, {
+      className: u.termsRowContent,
+      children: s.Z.parseGuildVerificationFormRule(e, !0, {
         channelId: t
       })
     })
@@ -56,48 +56,48 @@ onChange: n,
 checked: t,
 disabled: r
   } = e;
-  return (0, a.jsx)(s.Checkbox, {
+  return (0, o.jsx)(a.Checkbox, {
 size: 20,
-type: s.Checkbox.Types.INVERTED,
+type: a.Checkbox.Types.INVERTED,
 value: t,
 onChange: n,
 disabled: r,
 style: {
   borderWidth: 2
 },
-className: d.checkbox,
-children: (0, a.jsx)(s.Text, {
+className: u.checkbox,
+children: (0, o.jsx)(a.Text, {
   variant: 'text-sm/normal',
   children: c.Z.Messages.MEMBER_VERIFICATION_READ_RULES
 })
   });
 }
 
-function C(e) {
+function f(e) {
   let {
 formField: n
   } = e;
-  return (0, a.jsx)(l.Ih, {
-icon: s.BookCheckIcon,
+  return (0, o.jsx)(l.Ih, {
+icon: a.BookCheckIcon,
 text: c.Z.Messages.MEMBER_VERIFICATION_AGREED_TO_RULES,
 meetsRequirement: !!n.response
   });
 }
-let f = e => {
+let _ = e => {
   let {
 channelId: n,
 formField: t,
 onChange: r
   } = e;
-  return (0, a.jsxs)(l.hK, {
+  return (0, o.jsxs)(l.hK, {
 title: c.Z.Messages.SERVER_DISCOVERY_AGREE_TO_RULES,
 children: [
-  (0, a.jsx)(u, {
-    className: d.fieldBackground,
+  (0, o.jsx)(d, {
+    className: u.fieldBackground,
     terms: t.values,
     channelId: n
   }),
-  (0, a.jsx)(m, {
+  (0, o.jsx)(m, {
     onChange: r,
     checked: t.response
   })

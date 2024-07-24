@@ -14,17 +14,17 @@ renderHeader: n,
 children: t,
 isExpanded: i,
 isStuck: m,
-onExpand: C,
-disableAnimation: f,
-disableBackground: _
+onExpand: f,
+disableAnimation: _,
+disableBackground: C
   } = e, [h, x] = r.useState(!0), [g, p] = r.useState(!1), {
 ref: T,
-height: I = 0
+height: E = 0
   } = (0, c.Z)(), {
-ref: E,
+ref: I,
 height: b = 0
   } = (0, c.Z)(), [N, v] = r.useState(i), y = (0, l.useSpring)({
-height: N ? b + I : I,
+height: N ? b + E : E,
 config: {
   ...o.config.stiff,
   clamp: !0
@@ -35,7 +35,7 @@ onStart: () => {
 onRest: () => {
   p(!0);
 }
-  }, h || f ? 'animate-never' : 'respect-motion-settings');
+  }, h || _ ? 'animate-never' : 'respect-motion-settings');
   return r.useLayoutEffect(() => {
 p(!1), v(i);
   }, [i]), r.useLayoutEffect(() => {
@@ -46,7 +46,7 @@ return () => clearTimeout(e);
   }, []), (0, a.jsx)(l.Clickable, {
 className: s()(u.editCard, {
   [u.toggled]: i,
-  [u.noBackground]: _
+  [u.noBackground]: C
 }),
 children: (0, a.jsxs)(o.animated.div, {
   className: s()(u.contentExpandContainer, {
@@ -56,7 +56,7 @@ children: (0, a.jsxs)(o.animated.div, {
   children: [
     (0, a.jsx)(l.Clickable, {
       innerRef: T,
-      onClick: m ? void 0 : C,
+      onClick: m ? void 0 : f,
       className: s()(u.innerHeader, {
         [u.toggled]: i && m
       }),
@@ -64,7 +64,7 @@ children: (0, a.jsxs)(o.animated.div, {
       children: n
     }),
     (0, a.jsx)('div', {
-      ref: E,
+      ref: I,
       children: t
     })
   ]
