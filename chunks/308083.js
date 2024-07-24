@@ -1,27 +1,27 @@
 n.d(t, {
   A9: function() {
-return $;
+return X;
   },
   CT: function() {
-return k;
+return G;
   },
   DA: function() {
-return J;
+return $;
   },
   Dd: function() {
-return Q;
+return q;
   },
   Du: function() {
 return m;
   },
   HR: function() {
-return H;
+return V;
   },
   K_: function() {
-return K;
+return W;
   },
   LD: function() {
-return z;
+return K;
   },
   LK: function() {
 return D;
@@ -33,10 +33,10 @@ return a;
 return s;
   },
   O6: function() {
-return V;
+return F;
   },
   OH: function() {
-return W;
+return j;
   },
   Pv: function() {
 return T;
@@ -54,7 +54,7 @@ return y;
 return O;
   },
   WZ: function() {
-return B;
+return k;
   },
   Wy: function() {
 return r;
@@ -69,31 +69,25 @@ return I;
 return S;
   },
   dt: function() {
-return q;
+return z;
   },
   f4: function() {
 return b;
   },
   gQ: function() {
-return ee;
+return J;
   },
   gh: function() {
-return F;
-  },
-  hm: function() {
-return w;
+return B;
   },
   i1: function() {
-return Y;
-  },
-  i6: function() {
 return Z;
   },
-  jK: function() {
-return G;
+  i6: function() {
+return H;
   },
-  k3: function() {
-return U;
+  jK: function() {
+return x;
   },
   mv: function() {
 return L;
@@ -117,10 +111,10 @@ return R;
 return P;
   },
   yi: function() {
-return X;
+return Q;
   },
   ym: function() {
-return j;
+return Y;
   },
   zv: function() {
 return h.z;
@@ -163,8 +157,9 @@ case h.z.VERY_HARDCORE:
   return p.Z.Messages.CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_TITLE;
 case h.z.CREATIVE:
 case h.z.NONE:
-default:
   return null;
+default:
+  return e;
   }
 }
 
@@ -215,7 +210,8 @@ let M = '700136079562375258',
 'Platinum+',
 'Diamond+'
   ],
-  w = [
+  w = new Set([
+...U,
 'Server: NA',
 'Server: EU',
 'Server: Asia',
@@ -229,18 +225,14 @@ let M = '700136079562375258',
 'Spenders',
 'Co-op',
 'Support'
-  ],
-  x = new Set([
-...U,
-...w
   ]),
-  G = [
+  x = [
 '20+',
 '30+',
 '40+',
 'All Ages'
   ],
-  k = [
+  G = [
 'Beginner Friendly',
 'PUGs',
 'Inclusive',
@@ -248,12 +240,12 @@ let M = '700136079562375258',
 'Work-life Balance',
 'Streamers'
   ],
-  B = new Set([
+  k = new Set([
 ...U,
-...G,
-...k
+...x,
+...G
   ]),
-  F = new Set([
+  B = new Set([
 'Bulgarian',
 'Chinese (Simplified)',
 'Chinese (Traditional)',
@@ -285,15 +277,15 @@ let M = '700136079562375258',
 'Vietnamese'
   ]);
 
-function V(e) {
-  return !B.has(e) && !Z.has(e) && !F.has(e);
+function F(e) {
+  return !k.has(e) && !H.has(e) && !B.has(e);
 }
 
-function H(e, t) {
+function V(e, t) {
   var n;
-  return _().sortBy(e, (n = t, e => -(((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4 | (V(e) ? 1 : 0) << 3 | (x.has(e) ? 1 : 0) << 2 | (G.includes(e) ? 1 : 0) << 1 | (k.includes(e) ? 1 : 0) << 0)));
+  return _().sortBy(e, (n = t, e => -(((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4 | (F(e) ? 1 : 0) << 3 | (w.has(e) ? 1 : 0) << 2 | (x.includes(e) ? 1 : 0) << 1 | (G.includes(e) ? 1 : 0) << 0)));
 }
-let Z = new Set([
+let H = new Set([
   'anime',
   'fanart',
   'venting',
@@ -399,12 +391,12 @@ let Z = new Set([
   'FNAF'
 ]);
 
-function Y() {
+function Z() {
   let e = Object.keys(i).filter(e => isNaN(Number(e)));
   return i[e[Math.round(Math.random() * e.length - 1)]];
 }
 (l = i || (i = {}))[l.NIGHT_SKY = 0] = 'NIGHT_SKY', l[l.CASTLE = 1] = 'CASTLE', l[l.WORLD_MAP = 2] = 'WORLD_MAP', l[l.SEA_FOAM = 3] = 'SEA_FOAM', l[l.WARP_TUNNEL = 4] = 'WARP_TUNNEL', l[l.HOUSE = 5] = 'HOUSE', l[l.HEIGHTMAP = 6] = 'HEIGHTMAP', l[l.MESH = 7] = 'MESH', l[l.SPATTER = 8] = 'SPATTER', (u = a || (a = {})).BOULDER = 'Boulder', u.CASCADE = 'Cascade', u.THUNDER = 'Thunder', u.SOUL = 'Soul', u.MARSH = 'Marsh', u.VOLCANO = 'Volcano', u.EARTH = 'Earth', u.ZEPHYR = 'Zephyr';
-let j = [{
+let Y = [{
   name: 'Boulder',
   primary: '#8c8d8d',
   secondary: '#d0d0d1'
@@ -445,9 +437,9 @@ let j = [{
   secondary: '#78b6f0'
 }
   ],
-  W = j[0].primary,
-  K = j[0].secondary,
-  z = Object.fromEntries(j.map(e => [
+  j = Y[0].primary,
+  W = Y[0].secondary,
+  K = Object.fromEntries(Y.map(e => [
 e.name,
 {
   primary: e.primary,
@@ -455,15 +447,15 @@ e.name,
 }
   ]));
 
-function q() {
-  return j[Math.floor(Math.random() * j.length)];
+function z() {
+  return Y[Math.floor(Math.random() * Y.length)];
 }
 
-function Q(e, t) {
+function q(e, t) {
   return null == e || null == t ? e === t : e.identityGuildId === t.identityGuildId && e.identityEnabled === t.identityEnabled && e.tag === t.tag && e.badge === t.badge;
 }
 
-function X(e) {
+function Q(e) {
   return null == e ? null : 'identityGuildId' in e ? e : {
 identityGuildId: e.identity_guild_id,
 identityEnabled: e.identity_enabled,
@@ -472,12 +464,12 @@ badge: e.badge
   };
 }
 
-function $(e) {
+function X(e) {
   return {
 tag: e.tag
   };
 }
-let J = {
+let $ = {
 AGE_OF_EMPIRES_2: '720771660768084008',
 VALORANT: '700136079562375258',
 HELLDIVERS_2: '1205090671527071784',
@@ -489,7 +481,7 @@ BALDURS_GATE_3: '1137125502985961543',
 AIMLAB: '506950362461110273',
 HONKAI_STAR_RAIL: '1121201675240210523'
   },
-  ee = new Map([
+  J = new Map([
 '432980957394370572',
 '363445589247131668',
 '356869127241072640',

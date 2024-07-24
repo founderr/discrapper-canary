@@ -158,7 +158,6 @@ case m.o2.USER_ONBOARDING:
         (0, i.jsx)('div', {
           className: N.backgroundImageContent,
           children: (0, i.jsx)(p.Z, {
-            selectedGame: e,
             setScreen: n
           })
         })

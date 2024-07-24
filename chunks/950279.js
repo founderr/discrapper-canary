@@ -9,74 +9,65 @@ var a = t(735250),
   d = t(308083),
   u = t(689938),
   m = t(258925),
-  C = t(318577);
+  f = t(318577);
 n.Z = e => {
   let {
 title: n,
 description: t,
 handleUpdate: i,
-gameApplicationIds: f,
-error: _,
-requiredGameId: h,
-inSettings: x
+gameApplicationIds: _,
+error: C
   } = e, {
-options: g,
-matchSorterOptions: p
-  } = (0, l.P)();
-  r.useEffect(() => {
-if (!x && null != h && !f.has(h) && g.length > 0) {
-  let e = new Set(f);
-  e.add(h), i(e);
-}
-  }, [
-g.length,
-h,
-x
-  ]);
-  let T = r.useMemo(() => Array.from(f), [f]),
-I = r.useCallback(e => {
-  let n = new Set(e);
-  (null == h || n.has(h)) && i(n);
-}, [
-  i,
-  h
-]);
+options: h,
+matchSorterOptions: x
+  } = (0, l.P)(), g = r.useMemo(() => Array.from(_), [_]), p = r.useCallback(e => {
+if (0 !== e.length)
+  i(new Set(e));
+  }, [i]), T = _.size <= 1;
   return (0, a.jsxs)('div', {
-className: s()(C.slideContent, m.container),
+className: s()(f.slideContent, m.container),
 children: [
   (0, a.jsx)(o.Heading, {
     variant: 'heading-xxl/medium',
-    className: C.title,
+    className: f.title,
     children: n
   }),
   (0, a.jsx)(o.Text, {
     variant: 'text-md/normal',
     color: 'header-secondary',
-    className: C.subtitle,
+    className: f.subtitle,
     children: t
   }),
   (0, a.jsx)('div', {
     className: m.inputContainer,
     children: (0, a.jsx)(o.FormItem, {
-      error: _,
+      error: C,
       children: (0, a.jsx)(o.SearchableSelect, {
         multi: !0,
         hidePills: !0,
-        wrapperClassName: s()(C.input, m.input),
-        options: g,
-        value: T,
+        wrapperClassName: s()(f.input, m.input),
+        options: h,
+        value: g,
         placeholder: u.Z.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
-        onChange: I,
-        isDisabled: f.size === d.cm,
-        matchSorterOptions: p,
+        onChange: p,
+        isDisabled: _.size === d.cm,
+        matchSorterOptions: x,
         clearQueryOnSelect: !0,
         customPillContainerClassName: m.pills,
-        renderCustomPill: e => (0, a.jsx)(c.Z, {
-          applicationId: e.value,
-          imageContainerClassName: e.value !== h ? m.clickableGame : m.defaultGame,
-          selected: !0,
-          locked: e.value === h
-        }, e.value)
+        renderCustomPill: e => (0, a.jsx)(o.Tooltip, {
+          text: u.Z.Messages.CLAN_SETUP_GAMES_ONE_GAME_REQUIRED,
+          shouldShow: T,
+          tooltipContentClassName: m.tooltip,
+          children: n => (0, a.jsx)('div', {
+            ...n,
+            children: (0, a.jsx)(c.Z, {
+              applicationId: e.value,
+              imageContainerClassName: _.size > 1 ? m.clickableGame : void 0,
+              selected: !0,
+              locked: T
+            }, e.value)
+          })
+        })
       })
     })
   })

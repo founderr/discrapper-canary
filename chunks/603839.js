@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return L;
+return Z;
   }
 }), n(47120);
 var i = n(735250),
@@ -17,30 +17,29 @@ var i = n(735250),
   h = n(970606),
   I = n(963202),
   m = n(650461),
-  g = n(432632),
-  p = n(35313),
-  T = n(284019),
-  f = n(672775),
-  S = n(601463),
-  C = n(192565),
-  N = n(641037),
-  A = n(689938),
-  v = n(629209);
-let Z = {
+  g = n(35313),
+  p = n(284019),
+  T = n(672775),
+  f = n(601463),
+  S = n(192565),
+  C = n(641037),
+  N = n(689938),
+  A = n(629209);
+let v = {
   mass: 1,
   tension: 600,
   friction: 60,
   clamp: !0
 };
 
-function L(e) {
+function Z(e) {
   let {
 guildId: t,
 onClose: n
   } = e, a = (0, m.Wg)(), {
-progress: L,
-errors: O,
-submitting: R
+progress: Z,
+errors: L,
+submitting: O
   } = (0, c.cj)([m.ZP], () => {
 var e, n, i, s;
 return {
@@ -48,15 +47,15 @@ return {
   errors: null === (n = m.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
   submitting: null === (i = m.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
 };
-  }), x = (0, g.N)(t, 'ClanSetupModal'), b = s.useMemo(() => (0, N.G)(O), [O]), [P, M] = s.useState(!1), [D, y] = s.useState(window.innerWidth), [j, U] = s.useState(1), [G, w] = s.useState(!0), k = (0, p.f)(), B = (0, d.useSpring)({
-opacity: j,
-config: Z,
-onStart: () => w(!0),
-onRest: () => w(1 === j)
-  }), H = (0, d.useSpring)({
-transform: 'translateX('.concat(1 === j ? 0 : -1 * (D - 380) / 2 + 190, 'px)'),
-config: Z
-  }, 'respect-motion-settings'), V = (0, d.useTransition)(0 === j, {
+  }), R = s.useMemo(() => (0, C.G)(L), [L]), [x, b] = s.useState(!1), [P, M] = s.useState(window.innerWidth), [D, y] = s.useState(1), [j, U] = s.useState(!0), G = (0, g.f)(), w = (0, d.useSpring)({
+opacity: D,
+config: v,
+onStart: () => U(!0),
+onRest: () => U(1 === D)
+  }), k = (0, d.useSpring)({
+transform: 'translateX('.concat(1 === D ? 0 : -1 * (P - 380) / 2 + 190, 'px)'),
+config: v
+  }, 'respect-motion-settings'), B = (0, d.useTransition)(0 === D, {
 from: {
   opacity: 0
 },
@@ -64,8 +63,8 @@ enter: {
   opacity: 1,
   delay: 500
 },
-config: Z
-  }), F = (0, d.useTransition)(0 === j, {
+config: v
+  }), H = (0, d.useTransition)(0 === D, {
 from: {
   opacity: 0
 },
@@ -75,107 +74,100 @@ enter: {
 leave: {
   opacity: 0
 },
-config: Z
-  }), Y = s.useCallback(e => {
-if (e === b.length)
-  U(0), (0, h.Lp)(t, 'signature');
-else if (0 === j)
-  U(1);
+config: v
+  }), V = s.useCallback(e => {
+if (e === R.length)
+  y(0), (0, h.Lp)(t, 'signature');
+else if (0 === D)
+  y(1);
 else {
   var n;
   E._9(t, {
     currentStep: e,
-    furthestStep: Math.max(null !== (n = L.furthestStep) && void 0 !== n ? n : 0, e)
+    furthestStep: Math.max(null !== (n = Z.furthestStep) && void 0 !== n ? n : 0, e)
   });
 }
   }, [
-j,
+D,
 t,
-L.furthestStep,
-b.length
+Z.furthestStep,
+R.length
   ]);
   s.useEffect(() => {
-(0, h.Lp)(t, (0, h.Qh)(L.currentStep));
+(0, h.Lp)(t, (0, h.Qh)(Z.currentStep));
   }, [
 t,
-L.currentStep
+Z.currentStep
   ]), s.useEffect(() => {
-let e = (0, _.pP)((0, l.debounce)(() => y(window.innerWidth), 250));
+let e = (0, _.pP)((0, l.debounce)(() => M(window.innerWidth), 250));
 return (0, _.YP)(e, document.body), () => (0, _.UC)(e, document.body);
   }, [
-j,
-G
-  ]), s.useEffect(() => {
-null != x && (0, E._9)(t, {
-  requiredGameId: x
-});
-  }, [
-x,
-t
+D,
+j
   ]);
-  let W = s.useMemo(() => null != O && Object.values(O).some(e => null != e), [O]),
-z = s.useMemo(() => null != O && Object.values(O).length > 0 ? (0, N.G)(O).find(e => e.hasError) : null, [O]),
-K = s.useCallback(() => {
-  U(1), E._9(t, {
-    currentStep: null == z ? void 0 : z.index
+  let F = s.useMemo(() => null != L && Object.values(L).some(e => null != e), [L]),
+Y = s.useMemo(() => null != L && Object.values(L).length > 0 ? (0, C.G)(L).find(e => e.hasError) : null, [L]),
+W = s.useCallback(() => {
+  y(1), E._9(t, {
+    currentStep: null == Y ? void 0 : Y.index
   });
 }, [
-  null == z ? void 0 : z.index,
+  null == Y ? void 0 : Y.index,
   t
 ]),
 {
-  guilds: q
+  guilds: z
 } = (0, I.C3)({
   location: 'ClanDiscoveryAdminContainer',
   includeConverted: !1
 }),
 {
-  enableApplication: Q
+  enableApplication: K
 } = (0, I.Fg)('ClanDiscoveryAdminContainer'),
-X = s.useCallback(() => {
-  0 === q.filter(e => e.id !== t).length && Q ? (0, u.fH)(u.v0.GET_STARTED) : (0, u.fH)(u.v0.ADMIN_UPSELL);
+q = s.useCallback(() => {
+  0 === z.filter(e => e.id !== t).length && K ? (0, u.fH)(u.v0.GET_STARTED) : (0, u.fH)(u.v0.ADMIN_UPSELL);
 }, [
-  q,
+  z,
   t,
-  Q
+  K
 ]),
-J = s.useCallback(() => {
-  (0, N.V)({
+Q = s.useCallback(() => {
+  (0, C.V)({
     guildId: t,
     onSuccess: () => {
-      X(), n();
+      q(), n();
     },
-    progress: L
+    progress: Z
   });
 }, [
   t,
-  L,
-  X,
+  Z,
+  q,
   n
 ]),
-$ = s.useRef(null),
-ee = null != z ? (0, i.jsxs)('div', {
-  className: v.tooltipContents,
+X = s.useRef(null),
+J = null != Y ? (0, i.jsxs)('div', {
+  className: A.tooltipContents,
   children: [
     (0, i.jsx)(d.WarningIcon, {
       size: 'xs',
       color: 'currentColor',
-      className: v.errorIcon
+      className: A.errorIcon
     }),
     (0, i.jsxs)('div', {
       children: [
         (0, i.jsx)(d.Text, {
           variant: 'text-sm/medium',
           color: 'header-primary',
-          children: A.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
+          children: N.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
         }),
         (0, i.jsx)(d.Text, {
           variant: 'text-xs/normal',
           color: 'text-muted',
-          children: A.Z.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
+          children: N.Z.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
             backHook: (e, t) => (0, i.jsx)(d.Anchor, {
-              className: v.errorLink,
-              onClick: K,
+              className: A.errorLink,
+              onClick: W,
               children: e
             }, t)
           })
@@ -185,95 +177,95 @@ ee = null != z ? (0, i.jsxs)('div', {
   ]
 }) : null;
   return (0, i.jsx)(o.animated.div, {
-ref: $,
-style: k,
-className: v.modal,
+ref: X,
+style: G,
+className: A.modal,
 children: (0, i.jsxs)(d.FocusRingScope, {
-  containerRef: $,
+  containerRef: X,
   children: [
     (0, i.jsx)(d.Button, {
-      className: v.close,
+      className: A.close,
       look: d.Button.Looks.OUTLINED,
       size: d.Button.Sizes.MEDIUM,
       color: d.Button.Colors.PRIMARY,
       onClick: n,
-      children: A.Z.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
+      children: N.Z.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }),
     (0, i.jsxs)('div', {
-      className: v.content,
+      className: A.content,
       children: [
         (0, i.jsxs)('div', {
-          className: v.panel,
+          className: A.panel,
           children: [
             (0, i.jsx)(o.animated.div, {
-              style: B,
-              className: r()(v.stepsContainer, {
-                [v.hidden]: !G
+              style: w,
+              className: r()(A.stepsContainer, {
+                [A.hidden]: !j
               }),
-              children: (0, i.jsx)(C.Z, {
+              children: (0, i.jsx)(S.Z, {
                 guildId: t
               })
             }),
             (0, i.jsx)('div', {
-              className: r()(v.navigationContainer, {
-                [v.elevatedNavigationContainer]: !G
+              className: r()(A.navigationContainer, {
+                [A.elevatedNavigationContainer]: !j
               }),
-              children: (0, i.jsx)(f.Z, {
-                steps: b,
-                progress: L,
-                updateCurrentStep: Y,
-                animationStyle: B,
+              children: (0, i.jsx)(T.Z, {
+                steps: R,
+                progress: Z,
+                updateCurrentStep: V,
+                animationStyle: w,
                 animationClassName: r()({
-                  [v.hidden]: !G
+                  [A.hidden]: !j
                 })
               })
             })
           ]
         }),
         (0, i.jsx)(o.animated.div, {
-          style: B,
-          className: r()(v.divider, {
-            [v.hidden]: !G,
-            [v.dividerResponsive]: G
+          style: w,
+          className: r()(A.divider, {
+            [A.hidden]: !j,
+            [A.dividerResponsive]: j
           })
         }),
         (0, i.jsx)(o.animated.div, {
-          style: H,
-          className: r()(v.sidebar, {
-            [v.sidebarResponsive]: G
+          style: k,
+          className: r()(A.sidebar, {
+            [A.sidebarResponsive]: j
           }),
-          children: (0, i.jsx)(S.Z, {
+          children: (0, i.jsx)(f.Z, {
             guildId: t,
-            signed: P,
-            setSigned: G ? void 0 : M,
+            signed: x,
+            setSigned: j ? void 0 : b,
             sidebarWidth: 380,
-            windowWidth: D,
-            transition: V,
-            brandPrimaryColor: L.brandPrimaryColor
+            windowWidth: P,
+            transition: B,
+            brandPrimaryColor: Z.brandPrimaryColor
           })
         })
       ]
     }),
-    F((e, t) => t && (0, i.jsx)(o.animated.div, {
+    H((e, t) => t && (0, i.jsx)(o.animated.div, {
       style: e,
-      className: v.submit,
+      className: A.submit,
       children: (0, i.jsx)(d.Tooltip, {
         color: d.Tooltip.Colors.GREY,
-        tooltipClassName: v.tooltip,
-        text: ee,
-        'aria-label': null != z ? A.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
-        shouldShow: null != z,
-        forceOpen: null != z,
-        children: e => (0, i.jsx)(T.Z, {
+        tooltipClassName: A.tooltip,
+        text: J,
+        'aria-label': null != Y ? N.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
+        shouldShow: null != Y,
+        forceOpen: null != Y,
+        children: e => (0, i.jsx)(p.Z, {
           ...e,
-          themeColor: L.brandPrimaryColor,
-          disabled: !P || W,
-          submitting: R,
+          themeColor: Z.brandPrimaryColor,
+          disabled: !x || F,
+          submitting: O,
           look: d.Button.Looks.FILLED,
           size: d.Button.Sizes.MEDIUM,
           color: d.Button.Colors.BRAND,
-          onClick: J,
-          children: A.Z.Messages.FINISH
+          onClick: Q,
+          children: N.Z.Messages.FINISH
         })
       })
     }))

@@ -60,7 +60,6 @@ return (0, i.jsx)(u.Z, {
     gameApplicationIds: e
   }),
   gameApplicationIds: n.gameApplicationIds,
-  requiredGameId: n.requiredGameId,
   error: null == a ? void 0 : a.gameApplicationIds
 });
   },
@@ -96,7 +95,6 @@ return (0, i.jsx)(g.Z, {
   handleUpdate: e => s({
     interests: e
   }),
-  requiredGameId: n.requiredGameId,
   progress: n
 });
   },
