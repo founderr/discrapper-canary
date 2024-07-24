@@ -67,7 +67,6 @@ subscriptionTrial: S
   return (0, s.jsx)(_.Z, {
 color: N ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,
 buttonShineClassName: 'buttonShineClassName' in A ? A.buttonShineClassName : N ? T.brandShine : void 0,
-trialId: null == S ? void 0 : S.id,
 buttonText: P,
 buttonTextClassName: x ? T.freeTrialText : void 0,
 onlyShineOnHover: !0,

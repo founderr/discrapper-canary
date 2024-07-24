@@ -177,23 +177,22 @@ children: [
             children: Z
           }) : null,
           (() => {
-            let e;
             if (et)
               return (0, r.jsx)(_.Z, {
                 analyticsLocation: b,
                 guild: D.guild,
                 onClose: F
               });
-            let t = $ ? v.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
+            let e = $ ? v.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
             if (ei) {
               if (null != en) {
-                var n, i;
-                t = (0, f.Rt)({
-                  intervalType: null == en ? void 0 : null === (n = en.subscription_trial) || void 0 === n ? void 0 : n.interval,
-                  intervalCount: null == en ? void 0 : null === (i = en.subscription_trial) || void 0 === i ? void 0 : i.interval_count
-                }), e = null == en ? void 0 : en.trial_id;
+                var t, n;
+                e = (0, f.Rt)({
+                  intervalType: null == en ? void 0 : null === (t = en.subscription_trial) || void 0 === t ? void 0 : t.interval,
+                  intervalCount: null == en ? void 0 : null === (n = en.subscription_trial) || void 0 === n ? void 0 : n.interval_count
+                });
               } else
-                null != er && (t = v.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
+                null != er && (e = v.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
                   percent: er.discount.amount
                 }));
             }
@@ -201,13 +200,12 @@ children: [
               showGradient: $,
               premiumModalAnalyticsLocation: b,
               subscriptionTier: z,
-              trialId: e,
               size: l.Button.Sizes.SMALL,
               color: $ ? l.Button.Colors.CUSTOM : l.Button.Colors.GREEN,
               onClick: () => {
                 null == V || V(), F();
               },
-              buttonText: null != Y ? Y : t
+              buttonText: null != Y ? Y : e
             });
           })()
         ]
