@@ -1,0 +1,31 @@
+a.r(s), s.default = {
+  swfLzc: [{
+type: 0,
+value: 'This message comes from a separate file'
+  }],
+  HMvECw: [{
+  type: 0,
+  value: 'All of this is managed locally and has '
+},
+{
+  type: 8,
+  value: 'i',
+  children: [{
+    type: 0,
+    value: 'not yet'
+  }]
+},
+{
+  type: 0,
+  value: ' '
+},
+{
+  type: 0,
+  value: 'replaced the global i18n system'
+}
+  ],
+  JJ0wpK: [{
+type: 0,
+value: 'This page uses the new intl system for displaying messages'
+  }]
+};
