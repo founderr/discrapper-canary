@@ -15,7 +15,7 @@ var i = n(735250),
   h = n(718107),
   p = n(318661),
   m = n(78675),
-  _ = n(899007),
+  _ = n(113557),
   f = n(438163),
   E = n(502762),
   C = n(256059),
@@ -89,6 +89,7 @@ children: (0, i.jsx)(d.Mt, {
                 animateOnHover: !D
               }),
               (0, i.jsx)(_.Z, {
+                location: 'SimplifiedProfilePanel',
                 user: t,
                 displayProfile: L,
                 channelId: n.id,

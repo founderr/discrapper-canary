@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return g;
+return A;
   }
 }), n(47120);
 var r = n(735250);
@@ -11,16 +11,18 @@ var i = n(120356),
   o = n(481060),
   l = n(607070),
   u = n(907040),
-  c = n(404975),
-  d = n(823379),
-  _ = n(5192),
-  E = n(785717),
-  f = n(485216),
-  h = n(228168),
-  p = n(185923),
-  m = n(689938),
-  I = n(951768);
-let T = e => {
+  c = n(314897),
+  d = n(404975),
+  _ = n(823379),
+  E = n(5192),
+  f = n(785717),
+  h = n(505737),
+  p = n(485216),
+  m = n(228168),
+  I = n(185923),
+  T = n(689938),
+  g = n(951768);
+let S = e => {
   let {
 emoji: t,
 username: n,
@@ -28,67 +30,67 @@ sourceType: r,
 sourceDetails: i
   } = e, a = ':'.concat(t.name, ':');
   switch (r) {
-case h.N9.ACTIVITY:
-  let s = m.Z.Messages.USER_PROFILE_REACTED_TO_ACTIVITY.format({
+case m.N9.ACTIVITY:
+  let s = T.Z.Messages.USER_PROFILE_REACTED_TO_ACTIVITY.format({
     username: n
   });
   return '> -# *'.concat(s, '*\n').concat(a);
-case h.N9.AVATAR:
-  let o = m.Z.Messages.USER_PROFILE_REACTED_TO_AVATAR.format({
+case m.N9.AVATAR:
+  let o = T.Z.Messages.USER_PROFILE_REACTED_TO_AVATAR.format({
     username: n
   });
   return '> -# *'.concat(o, '*\n').concat(a);
-case h.N9.STATUS:
-  let l = m.Z.Messages.USER_PROFILE_REACTED_TO_STATUS.format({
+case m.N9.STATUS:
+  let l = T.Z.Messages.USER_PROFILE_REACTED_TO_STATUS.format({
     username: n
   });
   return null != i ? '> -# *'.concat(l, '*').concat('\n > '.concat(i), '\n').concat(a) : '> -# *'.concat(l, '*\n').concat(a);
 default:
-  (0, d.vE)(r);
+  (0, _.vE)(r);
   }
 };
 
-function g(e) {
+function A(e) {
   let {
 user: t,
 channel: n,
 sourceType: i,
-sourceDetails: d,
-isVisible: h,
-isExpandable: g
+sourceDetails: _,
+isVisible: m,
+isExpandable: A
   } = e, {
-trackUserProfileAction: S
-  } = (0, E.KZ)(), [A, N] = (0, s.Wu)([l.Z], () => [
+trackUserProfileAction: N
+  } = (0, f.KZ)(), v = (0, s.e7)([c.default], () => c.default.getId() === t.id), O = (0, h.Z)(t.id), [R, C] = (0, s.Wu)([l.Z], () => [
 l.Z.useReducedMotion,
 l.Z.keyboardModeEnabled
-  ]), v = !g || A || N ? 0 : 300, O = async e => {
+  ]), y = !A || R || C ? 0 : 300, D = async e => {
 if (null == e)
   return;
-S({
+N({
   action: 'PRESS_REACT'
 });
-let r = T({
+let r = S({
   emoji: e,
-  username: _.ZP.getName(null, null == n ? void 0 : n.id, t),
+  username: E.ZP.getName(null, null == n ? void 0 : n.id, t),
   sourceType: i,
-  sourceDetails: d
+  sourceDetails: _
 });
-await (0, f.Z)({
+await (0, p.Z)({
   userId: t.id,
   content: r,
   location: 'UserProfileReactReplyBar'
 });
   };
-  return (0, r.jsxs)(c.ZP, {
-className: a()(I.popover, {
-  [I.visible]: h,
-  [I.expandable]: g
+  return t.bot || v || !O ? null : (0, r.jsxs)(d.ZP, {
+className: a()(g.popover, {
+  [g.visible]: m,
+  [g.expandable]: A
 }),
 children: [
   (0, r.jsx)(o.TooltipContainer, {
-    text: m.Z.Messages.USER_PROFILE_SEND_REACTION,
-    shouldShow: h,
-    delay: v,
+    text: T.Z.Messages.USER_PROFILE_SEND_REACTION,
+    shouldShow: m,
+    delay: y,
     'aria-label': !1,
     children: (0, r.jsx)(o.Popout, {
       renderPopout: e => {
@@ -99,42 +101,42 @@ children: [
           guildId: null == n ? void 0 : n.guild_id,
           closePopout: t,
           onSelectEmoji: (e, n) => {
-            O(e), n && t();
+            D(e), n && t();
           },
-          pickerIntention: p.Hz.PROFILE,
+          pickerIntention: I.Hz.PROFILE,
           channel: n
         });
       },
       position: 'left',
       animation: o.Popout.Animation.NONE,
       align: 'top',
-      children: e => (0, r.jsx)(c.zx, {
+      children: e => (0, r.jsx)(d.zx, {
         ...e,
-        className: a()(I.button, I.left),
-        'aria-label': m.Z.Messages.USER_PROFILE_SEND_REACTION,
+        className: a()(g.button, g.left),
+        'aria-label': T.Z.Messages.USER_PROFILE_SEND_REACTION,
         children: (0, r.jsx)(o.ReactionIcon, {
           size: 'xs',
-          className: I.icon
+          className: g.icon
         })
       })
     })
   }),
   (0, r.jsx)(o.TooltipContainer, {
-    text: m.Z.Messages.USER_PROFILE_REPLY,
-    shouldShow: h,
-    delay: v,
+    text: T.Z.Messages.USER_PROFILE_REPLY,
+    shouldShow: m,
+    delay: y,
     'aria-label': !1,
-    children: (0, r.jsx)(c.zx, {
-      className: a()(I.button, I.right),
-      'aria-label': m.Z.Messages.USER_PROFILE_REPLY,
+    children: (0, r.jsx)(d.zx, {
+      className: a()(g.button, g.right),
+      'aria-label': T.Z.Messages.USER_PROFILE_REPLY,
       onClick: () => {
-        S({
+        N({
           action: 'PRESS_REPLY'
         });
       },
       children: (0, r.jsx)(o.ArrowAngleLeftUpIcon, {
         size: 'xs',
-        className: I.icon
+        className: g.icon
       })
     })
   })

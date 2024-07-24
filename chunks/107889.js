@@ -13,15 +13,15 @@ var s = i(735250),
   c = i(564990),
   u = i(680295),
   I = i(699516),
-  _ = i(5192),
-  f = i(785717),
+  f = i(5192),
+  _ = i(785717),
   E = i(481046),
   m = i(910128),
   S = i(718107),
   Z = i(27144),
   v = i(318661),
   x = i(78675),
-  h = i(899007),
+  h = i(113557),
   p = i(438163),
   T = i(502762),
   g = i(544989),
@@ -56,7 +56,7 @@ analyticsLocations: z
   } = (0, d.ZP)([
 ...H,
 a.Z.SIMPLIFIED_PROFILE_MODAL
-  ]), K = (0, f.Q1)({
+  ]), K = (0, _.Q1)({
 layout: 'SIMPLIFIED_MODAL',
 userId: n.id,
 guildId: W,
@@ -94,7 +94,7 @@ eo = () => (null == en ? void 0 : en.guildId) == null ? null : (null == ee ? voi
   id: 'view-main-profile',
   label: R.Z.Messages.VIEW_MAIN_PROFILE,
   subtext: R.Z.Messages.AKA_DISPLAY_NAME.format({
-    displayName: _.ZP.getName(void 0, void 0, n)
+    displayName: f.ZP.getName(void 0, void 0, n)
   }),
   action: () => {
     K({
@@ -115,7 +115,7 @@ eo = () => (null == en ? void 0 : en.guildId) == null ? null : (null == ee ? voi
   id: 'view-server-profile',
   label: R.Z.Messages.VIEW_SERVER_PROFILE,
   subtext: R.Z.Messages.AKA_DISPLAY_NAME.format({
-    displayName: _.ZP.getName(W, y, n)
+    displayName: f.ZP.getName(W, y, n)
   }),
   action: () => {
     K({
@@ -135,7 +135,7 @@ eo = () => (null == en ? void 0 : en.guildId) == null ? null : (null == ee ? voi
 });
   return (0, s.jsx)(d.Gt, {
 value: z,
-children: (0, s.jsx)(f.Mt, {
+children: (0, s.jsx)(_.Mt, {
   layout: 'SIMPLIFIED_MODAL',
   userId: n.id,
   guildId: W,
@@ -188,6 +188,7 @@ children: (0, s.jsx)(f.Mt, {
                 className: P.headerInner,
                 children: [
                   (0, s.jsx)(h.Z, {
+                    location: 'SimplifiedUserProfileModal',
                     user: n,
                     displayProfile: ee,
                     guildId: W,

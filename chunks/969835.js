@@ -20,7 +20,7 @@ var r = n(735250),
   m = n(27144),
   I = n(318661),
   T = n(78675),
-  g = n(899007),
+  g = n(113557),
   S = n(438163),
   A = n(502762),
   N = n(544989),
@@ -152,6 +152,7 @@ children: (0, r.jsx)(f.Mt, {
                 hasProfileEffect: (null == q ? void 0 : q.profileEffectId) != null
               }),
               (0, r.jsx)(g.Z, {
+                location: 'BiteSizeProfilePopout',
                 user: t,
                 displayProfile: q,
                 guildId: P,
