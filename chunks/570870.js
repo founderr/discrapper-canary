@@ -4,12 +4,12 @@ var i = n(735250),
   o = n.n(a),
   s = n(442837),
   u = n(481060),
-  d = n(10718),
-  l = n(667204),
+  l = n(10718),
+  d = n(667204),
   E = n(826298),
-  _ = n(17165),
   c = n(276022),
-  I = n(430824),
+  I = n(978983),
+  _ = n(430824),
   T = n(594174),
   N = n(689079),
   S = n(689938),
@@ -23,7 +23,7 @@ t.Z = e => {
   onHeightUpdate: O,
   context: h
 } = e,
-R = (0, s.e7)([I.Z], () => I.Z.getGuild(null != A ? A : p.guild_id)),
+R = (0, s.e7)([_.Z], () => _.Z.getGuild(null != A ? A : p.guild_id)),
 C = (0, s.e7)([T.default], () => T.default.getUser(a)),
 m = (0, c.Z)({
   user: C,
@@ -35,7 +35,7 @@ m = (0, c.Z)({
   commands: v,
   sectionDescriptors: Z,
   loading: M
-} = d.wi(p, {
+} = l.wi(p, {
   commandType: n
 }, {
   limit: N.lr
@@ -73,7 +73,7 @@ return (0, i.jsx)(u.MenuItem, {
     selectable: !1
   }) : null,
   action: () => {
-    (0, l.Z)({
+    (0, d.Z)({
       command: e,
       optionValues: {},
       context: {
@@ -92,7 +92,7 @@ G
   ]);
   return M.current ? t = (0, i.jsx)(u.MenuItem, {
 id: 'menu-commands-placeholder',
-render: () => (0, i.jsx)(_.Z, {}),
+render: () => (0, i.jsx)(I.Z, {}),
 disabled: !0
   }, 'menu-commands-placeholder') : (t = 0 === v.length ? (0, i.jsx)(u.MenuItem, {
 id: 'menu-commands-empty',
