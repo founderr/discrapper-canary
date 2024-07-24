@@ -24,6 +24,5 @@ e.exports = {
   voiceChannel: 'voiceChannel_ae1fa2',
   voiceChannelDetails: 'voiceChannelDetails_ae1fa2',
   voiceChannelInfo: 'voiceChannelInfo_ae1fa2',
-  voiceChannelDivider: 'voiceChannelDivider_ae1fa2',
-  timeBar: 'timeBar_ae1fa2'
+  voiceChannelDivider: 'voiceChannelDivider_ae1fa2'
 };
