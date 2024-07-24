@@ -230,8 +230,7 @@ C.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
 });
   }, []);
   let p = (0, d.Z)({
-  guildId: n.id,
-  channel: t
+  guildId: n.id
 }).slice(0, 3),
 {
   analyticsLocations: g

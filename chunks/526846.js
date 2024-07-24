@@ -92,12 +92,11 @@ let K = (0, h.bp)(),
   ]),
   Q = K === b.IlC.POPOUT,
   J = (0, d.O)(),
-  $ = function(e, t) {
+  $ = function(e) {
     return (0, v.Z)({
-      guildId: e,
-      channel: t
+      guildId: e
     }).slice(0, 5);
-  }(n.getGuildId(), n);
+  }(n.getGuildId());
 a.useEffect(() => {
   let e = setTimeout(() => x.ux(), 1000);
   return () => clearTimeout(e);

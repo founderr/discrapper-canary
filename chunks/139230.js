@@ -53,7 +53,7 @@ applicationId: j
   size: 2048,
   names: ['embedded_cover']
 }),
-y = (0, v.T)(null, null != j && '' !== j ? j : null, void 0);
+y = (0, v.T)(null, null != j && '' !== j ? j : null);
   if (null == j || null == y)
 return null;
   if (!(0, m.yE)(y.application.flags, Z.udG.EMBEDDED))

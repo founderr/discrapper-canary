@@ -26,8 +26,7 @@ function h() {
   let L = (0, r.e7)([l.Z], () => l.Z.useReducedMotion),
 [a] = t.useState(Math.random()),
 i = (0, d.Z)({
-  guildId: null,
-  channel: void 0
+  guildId: null
 }),
 {
   analyticsLocations: h

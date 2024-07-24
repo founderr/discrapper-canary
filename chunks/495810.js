@@ -817,8 +817,7 @@ children: [
 
 function eQ() {
   let e = (0, q.Z)({
-guildId: null,
-channel: void 0
+guildId: null
   });
   return n.useEffect(() => {
 (0, G.w1)({

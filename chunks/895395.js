@@ -45,8 +45,7 @@ onActivityItemVisible: c,
 scrollerRef: y
   } = e, [D, L] = i.useState(0), O = (0, _.Z)({
 guildId: n,
-enableFilter: !0,
-channel: t
+enableFilter: !0
   }), B = (0, o.e7)([p.default], () => p.default.getCurrentUser()), V = (0, o.e7)([m.Z], () => m.Z.getGuild(n), [n]), {
 analyticsLocations: R
   } = (0, g.ZP)(u.Z.ACTIVITY_DIRECTORY), k = (0, C.Z)(null == t ? void 0 : t.id), {

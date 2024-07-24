@@ -125,8 +125,7 @@ channel: n,
 onlyWithCommands: !0,
 includeBuiltIn: !0
   }), S = (0, u.Z)({
-guildId: n.getGuildId(),
-channel: n
+guildId: n.getGuildId()
   }), T = i.useMemo(() => {
 var e;
 if (!o)

@@ -278,8 +278,7 @@ onEmptyState: t
   } = e;
   (0, f.g)();
   let l = (0, _.Z)({
-  guildId: n.getGuildId(),
-  channel: n
+  guildId: n.getGuildId()
 }),
 r = M.U4.LARGE_BANNER,
 {
@@ -480,8 +479,7 @@ let {
 } = e;
 (0, f.g)();
 let i = (0, _.Z)({
-  guildId: n.getGuildId(),
-  channel: n
+  guildId: n.getGuildId()
 });
 return a.useMemo(() => {
   if (!t.some(e => e.appends_remaining_activities))
