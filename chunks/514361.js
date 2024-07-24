@@ -144,7 +144,7 @@ null != i && (0, p.zi)(i.type) && (C = !0, function() {
   O = !0;
 }());
   },
-  LOGOUT: e => {
+  LOGOUT: function() {
 D();
   }
 });

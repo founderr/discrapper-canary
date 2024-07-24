@@ -92,40 +92,45 @@ children: t,
 skipsSettingDefaultPageTitle: n
   } = e, {
 pathname: a
-  } = (0, l.TH)(), _ = (0, z.getPlatform)(), I = u.tq || u.Em, V = (0, c.e7)([G.Z], () => G.Z.darkSidebar ? et.BRd.DARK : void 0), Q = (0, c.e7)([g.Z], () => g.Z.useForcedColors ? 'yes' : 'no'), [ee, es] = (0, c.Wu)([D.Z], () => [
+  } = (0, l.TH)(), _ = (0, z.getPlatform)(), I = u.tq || u.Em, V = (0, c.e7)([G.Z], () => G.Z.darkSidebar ? et.BRd.DARK : void 0), Q = (0, c.e7)([g.Z], () => g.Z.useForcedColors ? 'yes' : 'no'), [ee, es, eo] = (0, c.Wu)([D.Z], () => [
 D.Z.isEditorOpen,
-D.Z.isCoachmark
-  ]), eo = (0, c.e7)([O.Z], () => O.Z.isEditorOpen), el = (0, c.e7)([B.Z], () => B.Z.getLayers().includes(et.S9g.USER_SETTINGS)), eu = (0, c.e7)([F.default], () => q.ZP.canUseClientThemes(F.default.getCurrentUser())), ec = ee && !el, ed = [];
-  ec && es && !eu && ed.push(d.z.CLIENT_THEMES_COACHMARK);
-  let [e_, eE] = (0, P.U)(ed, en.R.SIDEBAR, !0);
-  ed.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
-  let ef = e_ === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
-eh = e_ === d.z.CLIENT_THEMES_COACHMARK;
+D.Z.isCoachmark,
+D.Z.isPreview
+  ]), [el, eu] = (0, c.Wu)([O.Z], () => [
+O.Z.isEditorOpen,
+O.Z.isUpsellPreview
+  ]), ec = (0, c.e7)([B.Z], () => B.Z.getLayers().includes(et.S9g.USER_SETTINGS)), ed = (0, c.e7)([F.default], () => q.ZP.canUseClientThemes(F.default.getCurrentUser())), e_ = ee && !ec, eE = [];
+  e_ && es && !ed && eE.push(d.z.CLIENT_THEMES_COACHMARK);
+  let [ef, eh] = (0, P.U)(eE, en.R.SIDEBAR, !0);
+  eE.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
+  let ep = ef === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
+em = ef === d.z.CLIENT_THEMES_COACHMARK;
   i.useEffect(() => {
 null == (0, l.LX)(a, {
   path: 'invite',
   exact: !1,
   strict: !1
-}) && ef && !eh && ((0, v.nJ)(), f.Z.dispatch({
+}) && ep && !em && ((0, v.nJ)(), f.Z.dispatch({
   type: 'APP_ICON_TRACK_IMPRESSION',
-  markAsDismissed: eE
+  markAsDismissed: eh
 }));
   }, [
-ef,
+ep,
+em,
 eh,
-eE,
 a
   ]);
-  let ep = i.useRef(document.body),
-em = ec && !es || eh,
-eI = eo && !el && !eh,
+  let eI = i.useRef(document.body),
+eT = e_ && !es || em,
+eg = el && !ec && !em,
+eS = eo || eu,
 {
-  enabled: eT
+  enabled: eA
 } = w.Z.useExperiment({
   location: 'AppSkeleton'
 }, {
-  autoTrackExposure: em || eI,
-  disable: !em && !eI
+  autoTrackExposure: eS && (eT || eg),
+  disable: !eS
 });
   return (0, r.jsx)(x.Z, {
 children: (0, r.jsx)(S.Z, {
@@ -137,7 +142,7 @@ children: (0, r.jsx)(S.Z, {
       (0, r.jsx)(J.Z, {
         children: (0, r.jsx)($.Z, {
           children: (0, r.jsxs)(E.FocusRingScope, {
-            containerRef: ep,
+            containerRef: eI,
             children: [
               (0, r.jsx)(K.Co, {}),
               (0, r.jsx)(H.ZP, {}),
@@ -193,16 +198,16 @@ children: (0, r.jsx)(S.Z, {
                         }),
                         (0, r.jsx)(y.Z, {}),
                         (0, r.jsx)(h.Z, {}),
-                        em && !eT && (0, r.jsx)(L.Z, {
-                          markAsDismissed: eE
+                        eT && !eA && (0, r.jsx)(L.Z, {
+                          markAsDismissed: eh
                         }),
-                        eI && !eT && (0, r.jsx)(R.Z, {
-                          isCoachmark: ef,
-                          markAsDismissed: eE
+                        eg && !eA && (0, r.jsx)(R.Z, {
+                          isCoachmark: ep,
+                          markAsDismissed: eh
                         }),
-                        eT && (0, r.jsx)(k.Z, {
-                          initialTab: eI ? k._.APP_ICONS : k._.CLIENT_THEMES,
-                          markAsDismissed: eE
+                        (eT || eg) && eA && (0, r.jsx)(k.Z, {
+                          initialTab: eg ? k._.APP_ICONS : k._.CLIENT_THEMES,
+                          markAsDismissed: eh
                         }),
                         (0, r.jsx)(M.Z, {
                           mobile: I

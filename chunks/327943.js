@@ -83,5 +83,6 @@ let {
   markAsDismissed: t
 } = e;
 f.client.coachmarkImpressions += 1, f.client.coachmarkImpressions >= 2 && (null == t || t(d.L.UNKNOWN), T());
-  }
+  },
+  LOGOUT: T
 });
