@@ -19,18 +19,16 @@ function d(e) {
   let {
 itemGapPx: t,
 items: n,
-maxLines: r
-  } = e, [a, s] = i.useState(0), [o, u] = i.useState(0), c = i.useRef([]), d = i.useRef(0), _ = i.useRef(0), E = i.useRef(null), f = (0, l.y)(e => {
-let t = null == e ? void 0 : e.getBoundingClientRect().width;
-null != t && u(t);
-  }), h = i.useCallback((e, t) => {
-c.current[e] = t;
+maxLines: r,
+containerWidth: a
+  } = e, [s, o] = i.useState(0), l = i.useRef([]), u = i.useRef(0), c = i.useRef(0), d = i.useRef(null), _ = i.useCallback((e, t) => {
+l.current[e] = t;
   }, []);
   return i.useLayoutEffect(() => {
 var e;
-if (null == E.current)
+if (null == d.current)
   return;
-c.current.length = n.length, d.current = null !== (e = E.current.getBoundingClientRect().width) && void 0 !== e ? e : 0;
+l.current.length = n.length, u.current = null !== (e = d.current.getBoundingClientRect().width) && void 0 !== e ? e : 0;
 let i = function(e) {
   let {
     items: t,
@@ -58,26 +56,25 @@ let i = function(e) {
   items: n,
   maxLines: r,
   itemGapPx: t,
-  containerWidth: o,
-  itemWidths: c.current,
-  overflowWidth: d.current
+  containerWidth: a,
+  itemWidths: l.current,
+  overflowWidth: u.current
 });
-i !== _.current && (_.current = i, s(e => e + 1));
+i !== c.current && (c.current = i, o(e => e + 1));
   }, [
-o,
+a,
 t,
 n,
 r
   ]), i.useMemo(() => ({
-lastVisibleIndex: _.current,
-containerRef: f,
-onItemLayout: h,
-overflowItemsRef: E,
-version: a
+lastVisibleIndex: c.current,
+onItemLayout: _,
+overflowItemsRef: d,
+itemWidthsRef: l,
+version: s
   }), [
-f,
-h,
-a
+_,
+s
   ]);
 }
 
@@ -121,22 +118,34 @@ className: t,
 items: n,
 renderItem: a,
 itemGapPx: o = 0,
-maxLines: l
+maxLines: f
   } = e, {
-lastVisibleIndex: f,
-containerRef: h,
-onItemLayout: p,
-overflowItemsRef: m
+ref: h,
+width: p
+  } = function() {
+let [e, t] = i.useState(0);
+return {
+  ref: (0, l.y)(e => {
+    let n = null == e ? void 0 : e.getBoundingClientRect();
+    null != n && t(n.width);
+  }),
+  width: e
+};
+  }(), {
+lastVisibleIndex: m,
+onItemLayout: I,
+overflowItemsRef: T
   } = d({
 items: n,
 itemGapPx: o,
-maxLines: l
-  }), I = i.useMemo(() => n.slice(0, f + 1), [
+maxLines: f,
+containerWidth: p
+  }), g = i.useMemo(() => n.slice(0, m + 1), [
 n,
-f
-  ]), T = i.useMemo(() => n.slice(f + 1), [
+m
+  ]), S = i.useMemo(() => n.slice(m + 1), [
 n,
-f
+m
   ]);
   return (0, r.jsxs)('div', {
 className: s()(t, c.items),
@@ -150,22 +159,22 @@ children: [
         className: c.itemMeasurements,
         children: n.map((e, t) => (0, r.jsx)(E, {
           index: t,
-          onItemLayout: p,
+          onItemLayout: I,
           children: a(e)
         }, e))
       }),
       (0, r.jsx)('div', {
         className: c.overflowMeasurement,
-        ref: m,
+        ref: T,
         children: a(u.Z.Messages.CLAN_DISCOVERY_TRAIT_OVERFLOW.format({
           count: Number('1'.concat(n.length))
         }))
       })
     ]
   }),
-  I.map(a),
-  T.length > 0 && (0, r.jsx)(_, {
-    items: T,
+  g.map(a),
+  S.length > 0 && (0, r.jsx)(_, {
+    items: S,
     renderItem: a
   })
 ]
