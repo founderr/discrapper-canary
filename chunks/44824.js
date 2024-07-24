@@ -77,6 +77,7 @@ children: e => c({
   renderAccessory: e,
   renderForwardComponent: p,
   tabIndex: h ? 0 : -1,
+  dataSafeSrc: t,
   children(e) {
     let {
       src: n,

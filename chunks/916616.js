@@ -55,12 +55,13 @@ let {
   renderAccessory: M,
   onClick: P,
   tabIndex: U,
-  useFullWidth: w = !1,
-  ...x
+  dataSafeSrc: w,
+  useFullWidth: x = !1,
+  ...G
 } = this.props;
 if (1 === E && 1 === T)
   return null;
-let G = (0, _.Tj)({
+let k = (0, _.Tj)({
     width: E,
     height: T,
     maxWidth: g,
@@ -68,27 +69,27 @@ let G = (0, _.Tj)({
     minWidth: A,
     minHeight: O
   }),
-  k = 0 !== G.width ? G.width / G.height : 1;
+  B = 0 !== k.width ? k.width / k.height : 1;
 '' !== a && r !== h.zo9.ERROR ? e = b({
   src: a,
-  size: G,
+  size: k,
   alt: c,
   className: n,
   mediaLayoutType: R
 }) : r !== h.zo9.LOADING && (e = (0, i.jsx)(N, {
-  size: G,
+  size: k,
   mediaLayoutType: R,
   alt: c
 })), e = (0, i.jsx)(f.N, {
   readyState: r,
-  aspectRatio: k,
+  aspectRatio: B,
   placeholder: s,
   placeholderVersion: l,
-  placeholderStyle: v(G, R),
+  placeholderStyle: v(k, R),
   children: e
 });
-let B = null != M ? M() : null;
-return B = null != B ? B : y, (0, i.jsx)(u.FocusRing, {
+let F = null != M ? M() : null;
+return F = null != F ? F : y, (0, i.jsx)(u.FocusRing, {
   ringTarget: this._containerRef,
   focusTarget: this._clickableRef,
   children: (0, i.jsxs)('div', {
@@ -109,8 +110,8 @@ return B = null != B ? B : y, (0, i.jsx)(u.FocusRing, {
         width: '100%',
         aspectRatio: ''.concat(e.width, ' / ').concat(e.height)
       } : e;
-    }(G, C, w, R),
-    ...x,
+    }(k, C, x, R),
+    ...G,
     children: [
       null != L && (0, i.jsx)('a', {
         tabIndex: -1,
@@ -120,7 +121,7 @@ return B = null != B ? B : y, (0, i.jsx)(u.FocusRing, {
         href: L,
         ref: this._containerRef,
         'data-role': 'img',
-        'data-safe-src': a
+        'data-safe-src': null != w ? w : a
       }),
       null != P ? (0, i.jsx)(u.Clickable, {
         className: I.clickableWrapper,
@@ -134,9 +135,9 @@ return B = null != B ? B : y, (0, i.jsx)(u.FocusRing, {
         },
         children: e
       }) : e,
-      null != B ? (0, i.jsx)('div', {
+      null != F ? (0, i.jsx)('div', {
         className: I.imageAccessory,
-        children: B
+        children: F
       }) : null
     ]
   })

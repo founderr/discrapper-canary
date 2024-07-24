@@ -163,16 +163,17 @@ let {
   limitResponsiveWidth: O,
   useFullWidth: C,
   placeholder: y,
-  placeholderVersion: D
+  placeholderVersion: D,
+  dataSafeSrc: L
 } = this.props, {
-  readyState: L,
-  hasMouseOver: b,
-  hasFocus: M
-} = this.state, P = null != n, U = this.getRatio(), w = (0, l.clamp)(Math.round(h * U), null != m ? m : 0, null != T ? T : 1 / 0), x = (0, l.clamp)(Math.round(p * U), null != I ? I : 0, null != g ? g : 1 / 0), G = {
+  readyState: b,
+  hasMouseOver: M,
+  hasFocus: P
+} = this.state, U = null != n, w = this.getRatio(), x = (0, l.clamp)(Math.round(h * w), null != m ? m : 0, null != T ? T : 1 / 0), G = (0, l.clamp)(Math.round(p * w), null != I ? I : 0, null != g ? g : 1 / 0), k = {
   alt: e,
-  readyState: L,
+  readyState: b,
   onContextMenu: null != i ? i : void 0,
-  zoomable: P,
+  zoomable: U,
   className: u,
   imageClassName: c,
   minWidth: m,
@@ -181,11 +182,12 @@ let {
   limitResponsiveWidth: O,
   useFullWidth: C,
   tabIndex: v,
-  width: w,
-  height: x,
+  width: x,
+  height: G,
   src: '',
   placeholder: y,
   placeholderVersion: D,
+  dataSafeSrc: L,
   children: null != _ ? e => {
     let {
       src: t,
@@ -204,17 +206,17 @@ let {
   onFocus: this.onFocus,
   onBlur: this.onBlur
 };
-if (1 === G.width && 1 === G.height)
+if (1 === k.width && 1 === k.height)
   return null;
-switch ((P || null != A) && (G.onClick = this.onClick), r && (G.original = null != o && '' !== o ? o : G.src), L) {
+switch ((U || null != A) && (k.onClick = this.onClick), r && (k.original = null != o && '' !== o ? o : k.src), b) {
   case S.zo9.LOADING:
-    null != t && (G.src = t);
+    null != t && (k.src = t);
     break;
   case S.zo9.READY:
     if (R.isAnimated(this.props)) {
-      G.onMouseLeave = this.onMouseLeave;
-      let e = (a || b || M) && (null == f || f) && R.visibilityObserver.isVisible(this);
-      e ? (G.src = this.getSrc(U), G.renderAccessory = N) : (G.src = this.getSrc(U, !E || !a), G.renderAccessory = this.renderAccessory), null != _ && (G.children = t => {
+      k.onMouseLeave = this.onMouseLeave;
+      let e = (a || M || P) && (null == f || f) && R.visibilityObserver.isVisible(this);
+      e ? (k.src = this.getSrc(w), k.renderAccessory = N) : (k.src = this.getSrc(w, !E || !a), k.renderAccessory = this.renderAccessory), null != _ && (k.children = t => {
         let {
           src: n,
           size: r,
@@ -230,10 +232,10 @@ switch ((P || null != A) && (G.onClick = this.onClick), r && (G.original = null 
         });
       });
     } else
-      G.src = this.getSrc(U);
+      k.src = this.getSrc(w);
 }
 return (0, s.jsx)(d.E, {
-  ...G
+  ...k
 });
   }
   async trackLoadingCompleted(e, t, n) {
