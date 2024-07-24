@@ -135,7 +135,9 @@ children: (0, r.jsx)('div', {
                   (0, r.jsx)(l.Heading, {
                     variant: 'text-sm/normal',
                     children: O.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({
-                      onClick: E.z
+                      onClick: () => {
+                        (0, E.$)();
+                      }
                     })
                   })
                 ]

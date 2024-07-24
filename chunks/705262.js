@@ -149,7 +149,9 @@ return l ? (0, a.jsxs)('div', {
     (0, a.jsx)(_.Heading, {
       variant: 'text-sm/normal',
       children: B.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({
-        onClick: g.z
+        onClick: () => {
+          (0, g.$)();
+        }
       })
     })
   ]
