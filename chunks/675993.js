@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return I;
+return x;
   }
 }), t(47120);
 var i = t(735250),
@@ -21,10 +21,9 @@ var i = t(735250),
   A = t(29380),
   E = t(689938),
   N = t(655863),
-  v = t(910212),
-  x = t(194271);
+  v = t(910212);
 
-function I(e) {
+function x(e) {
   let {
 channel: n,
 application: t,
@@ -65,16 +64,16 @@ children: (0, i.jsxs)('div', {
     (0, i.jsxs)('div', {
       className: u ? N.overviewContainerWithVideo : N.overviewContainerNoVideo,
       children: [
+        (0, i.jsx)(I, {
+          application: t
+        }),
         (0, i.jsx)(g, {
           application: t
         }),
-        (0, i.jsx)(P, {
-          application: t
-        }),
-        c.length > 0 ? (0, i.jsx)(T, {
+        c.length > 0 ? (0, i.jsx)(S, {
           description: c
         }) : null,
-        (0, i.jsx)(S, {
+        (0, i.jsx)(L, {
           channel: n,
           application: t,
           sectionName: s
@@ -86,7 +85,7 @@ children: (0, i.jsxs)('div', {
   });
 }
 
-function g(e) {
+function I(e) {
   var n;
   let {
 application: t
@@ -103,7 +102,7 @@ children: (0, i.jsx)('div', {
   });
 }
 
-function P(e) {
+function g(e) {
   let {
 application: n
   } = e, t = a.useMemo(() => {
@@ -115,7 +114,7 @@ application: n
   }) ? (0, i.jsxs)('div', {
 className: N.tagsContainer,
 children: [
-  (0, i.jsx)(L, {
+  (0, i.jsx)(P, {
     application: n
   }),
   t.map((e, n) => (0, i.jsx)('div', {
@@ -130,7 +129,7 @@ children: [
   }) : null;
 }
 
-function L(e) {
+function P(e) {
   var n;
   let {
 application: t
@@ -143,11 +142,9 @@ return null;
   return (0, i.jsxs)('div', {
 className: N.tagContainer,
 children: [
-  (0, i.jsx)('img', {
-    className: void 0,
-    src: x,
-    alt: '',
-    'aria-hidden': !0
+  (0, i.jsx)(u.GroupIcon, {
+    size: 'xs',
+    color: u.tokens.colors.INTERACTIVE_NORMAL
   }),
   (0, i.jsx)(c.x, {
     variant: 'text-sm/semibold',
@@ -158,7 +155,7 @@ children: [
   });
 }
 
-function S(e) {
+function L(e) {
   let {
 channel: n,
 application: t,
@@ -181,7 +178,7 @@ children: null != t ? (0, i.jsx)(A.Z, {
   }) : null;
 }
 
-function T(e) {
+function S(e) {
   let {
 description: n
   } = e, [t, l] = a.useState(!0);
