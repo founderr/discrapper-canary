@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return y;
+return C;
   }
 }), n(47120);
 var r = n(735250),
@@ -14,47 +14,46 @@ var r = n(735250),
   d = n(605236),
   _ = n(837741),
   E = n(98278),
-  f = n(804545),
-  h = n(311476),
-  p = n(587446),
-  m = n(996073),
-  I = n(153124),
-  T = n(327943),
-  g = n(997945),
-  S = n(401460),
-  A = n(441319),
-  N = n(981631),
-  v = n(921944),
-  O = n(526761),
-  R = n(689938),
-  C = n(435880);
+  f = n(311476),
+  h = n(587446),
+  p = n(996073),
+  m = n(153124),
+  I = n(327943),
+  T = n(997945),
+  g = n(401460),
+  S = n(441319),
+  A = n(981631),
+  N = n(921944),
+  v = n(526761),
+  O = n(689938),
+  R = n(435880);
 
-function y(e) {
+function C(e) {
   let {
 className: t,
 disabled: a,
-isEditor: y,
-renderCTAButtons: D
-  } = e, [L, b, M] = (0, o.Wu)([T.Z], () => [
-T.Z.getCurrentDesktopIcon(),
-T.Z.isEditorOpen,
-T.Z.isUpsellPreview
+isEditor: C,
+renderCTAButtons: y
+  } = e, [D, L, b] = (0, o.Wu)([I.Z], () => [
+I.Z.getCurrentDesktopIcon(),
+I.Z.isEditorOpen,
+I.Z.isUpsellPreview
   ]), {
-enabled: P
-  } = h.Z.getCurrentConfig({
+enabled: M
+  } = f.Z.getCurrentConfig({
 location: 'UserSettingsAppearanceInAppIcon'
   }, {
-autoTrackExposure: M,
-disable: !M
-  }), U = i.useRef(null);
-  (0, m.Z)(U, O.h1.CUSTOM_APP_ICONS);
-  let w = (0, I.Dt)(),
-x = (0, l.useRadioGroup)({
+autoTrackExposure: b,
+disable: !b
+  }), P = i.useRef(null);
+  (0, p.Z)(P, v.h1.CUSTOM_APP_ICONS);
+  let U = (0, m.Dt)(),
+w = (0, l.useRadioGroup)({
   orientation: 'horizontal',
-  labelledBy: w
+  labelledBy: U
 }),
-G = e => {
-  if (P && !y && e !== g.aH.DEFAULT) {
+x = e => {
+  if (M && !C && e !== T.aH.DEFAULT) {
     (0, l.openModalLazy)(async () => {
       let {
         default: e
@@ -62,8 +61,8 @@ G = e => {
       return t => (0, r.jsx)(e, {
         analyticsSource: c.Z.APP_ICON_SELECTOR,
         analyticsLocation: {
-          section: N.jXE.SETTINGS_APPEARANCE_APP_ICON_PICKER,
-          object: N.qAy.BUTTON_ICON
+          section: A.jXE.SETTINGS_APPEARANCE_APP_ICON_PICKER,
+          object: A.qAy.BUTTON_ICON
         },
         ...t
       });
@@ -74,113 +73,99 @@ G = e => {
     type: 'APP_ICON_UPDATED',
     id: e
   });
-  let t = g.Mw.get(e);
+  let t = T.Mw.get(e);
   null != t && (0, d.EW)(t, {
-    dismissAction: v.L.TAKE_ACTION
+    dismissAction: N.L.TAKE_ACTION
   });
 },
-k = 'AppIconSelectionGroup',
 {
-  enabled: B
+  enabled: G
 } = (0, _.J)({
-  location: k
+  location: 'AppIconSelectionGroup'
 }),
-{
-  enabled: F
-} = (0, f._)({
-  location: k
-}),
-V = (e, t) => {
+k = (e, t) => {
   let n = !1;
-  switch (t) {
-    case g.Ru.BLURPLE_TWILIGHT:
-      n = B;
-      break;
-    case g.Ru.IN_RAINBOWS:
-    case g.Ru.MIDNIGHT_PRISM:
-    case g.Ru.COLOR_WAVE:
-      n = F;
-      break;
-    default:
-      n = !0;
-  }
+  if (t === T.Ru.BLURPLE_TWILIGHT)
+    n = G;
+  else
+    n = !0;
   return n && !0 !== e;
 },
-H = i.useMemo(() => e => {
-  let t = g.Mw.get(e),
+B = i.useMemo(() => e => {
+  let t = T.Mw.get(e),
     n = null != t && !(0, d.un)(t);
   return a && n && setTimeout(() => (0, d.EW)(t, {
-    dismissAction: v.L.AUTO_DISMISS
+    dismissAction: N.L.AUTO_DISMISS
   }), 5000), n;
 }, [a]);
   return (0, r.jsx)('div', {
-ref: U,
+ref: P,
 children: (0, r.jsx)('div', {
-  ...x,
-  className: C.__invalid_container,
+  ...w,
+  className: R.__invalid_container,
   children: (0, r.jsxs)('div', {
     className: t,
     children: [
       (0, r.jsxs)('div', {
-        className: C.header,
+        className: R.header,
         children: [
           (0, r.jsxs)('div', {
-            className: C.headings,
+            className: R.headings,
             children: [
-              !b || P ? (0, r.jsxs)('div', {
-                className: C.title,
+              !L || M ? (0, r.jsxs)('div', {
+                className: R.title,
                 children: [
                   (0, r.jsx)(l.Heading, {
                     variant: 'text-md/medium',
-                    children: R.Z.Messages.APP_ICON_SETTINGS_TITLE
+                    children: O.Z.Messages.APP_ICON_SETTINGS_TITLE
                   }),
-                  (!P || y) && (0, r.jsx)(p.Z, {
-                    className: C.premiumIcon
+                  (!M || C) && (0, r.jsx)(h.Z, {
+                    className: R.premiumIcon
                   })
                 ]
               }) : null,
-              P ? b ? null : (0, r.jsxs)('div', {
-                className: C.description,
+              M ? L ? null : (0, r.jsxs)('div', {
+                className: R.description,
                 children: [
                   (0, r.jsx)(l.NitroWheelIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: C.nitroWheel
+                    className: R.nitroWheel
                   }),
                   (0, r.jsx)(l.Heading, {
                     variant: 'text-sm/normal',
-                    children: R.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({
+                    children: O.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({
                       onClick: E.z
                     })
                   })
                 ]
               }) : (0, r.jsx)(l.Heading, {
                 variant: 'text-sm/normal',
-                children: R.Z.Messages.APP_ICON_SETTINGS_DESCRIPTION
+                children: O.Z.Messages.APP_ICON_SETTINGS_DESCRIPTION
               })
             ]
           }),
-          null == D ? void 0 : D()
+          null == y ? void 0 : y()
         ]
       }),
       (0, r.jsx)('div', {
-        className: s()(C.presets, {
-          [C.presetsJustified]: P && y
+        className: s()(R.presets, {
+          [R.presetsJustified]: M && C
         }),
-        children: A.UZ.filter(e => {
+        children: S.UZ.filter(e => {
           let {
             isHidden: t,
             id: n
           } = e;
-          return V(t, n);
-        }).map((e, t) => (0, r.jsx)(S.Z, {
+          return k(t, n);
+        }).map((e, t) => (0, r.jsx)(g.Z, {
           icon: e,
-          isSelected: L === e.id,
-          onSelect: e => G(e),
+          isSelected: D === e.id,
+          onSelect: e => x(e),
           disabled: a,
           tabIndex: 0 !== t || a ? void 0 : 0,
-          isNew: H(e.id),
-          locked: P && !y && e.id !== g.aH.DEFAULT
+          isNew: B(e.id),
+          locked: M && !C && e.id !== T.aH.DEFAULT
         }, e.id))
       })
     ]

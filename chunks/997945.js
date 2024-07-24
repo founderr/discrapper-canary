@@ -19,17 +19,5 @@ let u = new Map([
   [
 'BlurpleTwilightIcon',
 l.z.BRAND_REFRESH_BLURPLE_TWILIGHT_APP_ICON_BADGE
-  ],
-  [
-'InRainbowsIcon',
-l.z.PRIDE_ICONS
-  ],
-  [
-'MidnightPrismIcon',
-l.z.PRIDE_ICONS
-  ],
-  [
-'ColorWaveIcon',
-l.z.PRIDE_ICONS
   ]
 ]);
