@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return S;
+return C;
   }
 }), n(47120);
 var i = n(735250),
@@ -9,139 +9,155 @@ var i = n(735250),
   r = n.n(a),
   l = n(442837),
   o = n(481060),
-  c = n(607070),
-  d = n(113434),
-  u = n(497505),
-  _ = n(585500),
+  c = n(393238),
+  d = n(607070),
+  u = n(113434),
+  _ = n(497505),
+  E = n(585500),
   h = n(566078),
-  E = n(472144),
-  I = n(644646),
-  m = n(69439),
-  g = n(46140),
-  p = n(689938),
-  T = n(803162);
-let f = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
+  I = n(472144),
+  m = n(644646),
+  g = n(69439),
+  p = n(46140),
+  T = n(689938),
+  f = n(803162);
+let S = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 
-function S(e) {
+function C(e) {
   var t, n, a;
   let {
-quest: S,
-questContent: C,
-isHovering: N
-  } = e, A = h.r.build(S.config).defaultReward.messages.name, v = (0, d.Rf)(S), Z = v.percentComplete > 0, [L, O] = s.useState(0), R = s.useRef(null), x = s.useRef(null), b = (0, _.D)({
-quest: S,
-taskDetails: v,
-location: g.dr.QUEST_HOME_DESKTOP,
-questContent: u.jn.QUEST_HOME_DESKTOP,
-useV2Variants: !0
-  }), P = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, M = (null === (n = S.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, D = (0, d.B6)(null === (a = S.userStatus) || void 0 === a ? void 0 : a.claimedAt), y = null != x.current && x.current.scrollHeight > x.current.clientHeight;
-  s.useEffect(() => {
-null != R.current && O(R.current.offsetHeight);
-  }, []);
-  let j = s.useCallback(() => (0, i.jsx)(o.Text, {
+quest: C,
+questContent: N,
+isHovering: A
+  } = e, v = h.r.build(C.config).defaultReward.messages.name, Z = (0, u.Rf)(C), L = Z.percentComplete >= 0, [O, R] = s.useState(!1), x = s.useRef(null);
+  (0, c.P)(x, e => {
+let {
+  height: t
+} = e;
+null != t && t > 20 && R(!0);
+  }, [R]);
+  let b = s.useRef(null),
+[P, M] = s.useState(!1);
+  (0, c.P)(b, e => {
+let {
+  width: t,
+  scrollWidth: n
+} = e;
+null != t && null != n && n > t && M(!0);
+  }, [M]);
+  let D = (0, E.D)({
+  quest: C,
+  taskDetails: Z,
+  location: p.dr.QUEST_HOME_DESKTOP,
+  questContent: _.jn.QUEST_HOME_DESKTOP,
+  useV2Variants: !0
+}),
+y = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+j = (null === (n = C.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
+U = (0, u.B6)(null === (a = C.userStatus) || void 0 === a ? void 0 : a.claimedAt),
+G = s.useCallback(() => (0, i.jsx)(o.Text, {
   variant: 'text-md/semibold',
   color: 'text-brand',
   tag: 'span',
-  className: T.header,
-  children: A
-}), [A]),
-U = s.useMemo(() => M ? j() : p.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
-  rewardHook: j
+  className: f.header,
+  children: v
+}), [v]),
+w = s.useMemo(() => j ? G() : T.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
+  rewardHook: G
 }), [
-  M,
-  j
+  j,
+  G
 ]),
-G = s.useMemo(() => {
-  let e = L > 20,
-    t = !N && e,
-    n = !N && !e,
-    s = null;
-  if (M ? s = p.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
-      claimDate: D
-    }) : null != b && (s = b), null != s)
+k = s.useMemo(() => {
+  let e = !A && O,
+    t = !A && !O,
+    n = null;
+  if (j ? n = T.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
+      claimDate: U
+    }) : null != D && (n = D), null != n)
     return (0, i.jsx)(o.Text, {
       variant: 'text-sm/medium',
       color: 'text-muted',
-      ref: x,
-      className: r()(T.description, {
-        [T.truncateTextTwoLines]: t,
-        [T.truncateTextThreeLines]: n
+      ref: b,
+      className: r()(f.description, {
+        [f.truncateTextTwoLines]: e,
+        [f.truncateTextThreeLines]: t
       }),
-      children: s
+      children: n
     });
 }, [
-  M,
-  b,
+  j,
   D,
-  N,
-  L
+  U,
+  A,
+  O
 ]),
-w = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
+B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
   return (0, i.jsxs)('div', {
-className: r()(T.container, {
-  [T.hoveredHeight]: y && N,
-  [T.height]: !N || !y
+className: r()(f.container, {
+  [f.hoveredHeight]: P && A,
+  [f.height]: !A || !P
 }),
 children: [
   (0, i.jsxs)('div', {
-    className: r()(T.rewardDescriptionContainer),
+    className: r()(f.rewardDescriptionContainer),
     children: [
-      !M && P && (0, i.jsx)('div', {
-        className: T.completionAnimation
+      !j && y && (0, i.jsx)('div', {
+        className: f.completionAnimation
       }),
-      Z && !M ? (0, i.jsxs)('div', {
-        className: T.progressWrapper,
+      L && !j ? (0, i.jsxs)('div', {
+        className: f.progressWrapper,
         children: [
-          P && (0, i.jsx)(o.LottieAnimation, {
-            importData: f,
-            className: T.confetti,
+          y && (0, i.jsx)(o.LottieAnimation, {
+            importData: S,
+            className: f.confetti,
             loop: !1,
             autoplay: !1,
-            shouldAnimate: !w
+            shouldAnimate: !B
           }),
-          (0, i.jsx)(E.Z, {
-            quest: S,
+          (0, i.jsx)(I.Z, {
+            quest: C,
             size: 76,
-            percentComplete: v.percentComplete,
+            percentComplete: Z.percentComplete,
             children: (0, i.jsx)('div', {
-              className: T.circularRewardTileWrapper,
-              children: (0, i.jsx)(I.Z, {
-                quest: S,
-                questContent: C,
-                className: T.circularQuestRewardTileAsset
+              className: f.circularRewardTileWrapper,
+              children: (0, i.jsx)(m.Z, {
+                quest: C,
+                questContent: N,
+                className: f.circularQuestRewardTileAsset
               })
             })
           })
         ]
-      }) : (0, i.jsx)(I.Z, {
-        quest: S,
-        autoplay: N,
-        questContent: C,
-        className: T.questRewardTileAsset
+      }) : (0, i.jsx)(m.Z, {
+        quest: C,
+        autoplay: A,
+        questContent: N,
+        className: f.questRewardTileAsset
       }),
       (0, i.jsxs)('div', {
-        className: T.textContainer,
+        className: f.textContainer,
         children: [
           (0, i.jsx)('div', {
-            ref: R,
+            ref: x,
             children: (0, i.jsx)('span', {
-              className: T.headerSpan,
+              className: f.headerSpan,
               children: (0, i.jsx)(o.Text, {
                 variant: 'text-md/semibold',
                 color: 'header-primary',
-                className: T.header,
-                children: U
+                className: f.header,
+                children: w
               })
             })
           }),
-          G
+          k
         ]
       })
     ]
   }),
-  (0, i.jsx)(m.Z, {
-    quest: S,
-    location: C
+  (0, i.jsx)(g.Z, {
+    quest: C,
+    location: N
   })
 ]
   });
