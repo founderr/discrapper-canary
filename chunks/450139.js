@@ -16,5 +16,6 @@ e.exports = {
   voiceLauncherAppCardButton: 'voiceLauncherAppCardButton_e5da8b',
   activityVideoContainer: 'activityVideoContainer_e5da8b',
   activityVideo: 'activityVideo_e5da8b',
-  videoFadeOut: 'videoFadeOut_e5da8b'
+  videoFadeOut: 'videoFadeOut_e5da8b',
+  tooltipContent: 'tooltipContent_e5da8b'
 };
