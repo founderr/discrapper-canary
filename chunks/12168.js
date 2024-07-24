@@ -13,8 +13,8 @@ var i = n(735250),
   r = n(392711),
   o = n(338545),
   c = n(481060),
-  d = n(596454),
-  u = n(727637),
+  u = n(596454),
+  d = n(727637),
   h = n(543241),
   p = n(318766),
   m = n(907040),
@@ -43,7 +43,7 @@ emoji: t,
 isDisabled: n = !1,
 onClick: s,
 className: r
-  } = e, h = a.useRef(null), m = (0, u.Z)(h);
+  } = e, h = a.useRef(null), m = (0, d.Z)(h);
   return (0, i.jsx)('span', {
 ref: h,
 children: (0, i.jsx)(c.Button, {
@@ -75,7 +75,7 @@ children: (0, i.jsx)(c.Button, {
             1.14
           ]).to(e => 'scale('.concat(e, ')'))
         },
-        children: (0, i.jsx)(d.Z, {
+        children: (0, i.jsx)(u.Z, {
           className: l()(N.emoji, r, {
             [N.emojiItemDisabled]: n
           }),
@@ -123,8 +123,8 @@ channel: t,
 title: n,
 closePopout: s,
 onFocus: o,
-onSelectEmoji: d,
-onSelectDisabledEmoji: u,
+onSelectEmoji: u,
+onSelectDisabledEmoji: d,
 onExpandedToggle: p,
 emojiSearchProps: _,
 recentlyUsedEmojis: g,
@@ -146,7 +146,7 @@ y = (e, t) => {
     s();
     return;
   }
-  null != e && d(e);
+  null != e && u(e);
   O(!t), t && f.kJ.setSearchPlaceholder(null);
 };
   return (0, i.jsxs)(c.Dialog, {
@@ -213,7 +213,7 @@ children: [
                   emoji: e,
                   isDisabled: n,
                   onClick: () => {
-                    n ? null == u || u(e) : y(e, !0);
+                    n ? null == d || d(e) : y(e, !0);
                   }
                 })
               })

@@ -11,8 +11,8 @@ var a = n(693789),
   r = n(699516),
   o = n(626135),
   c = n(280006),
-  d = n(799352),
-  u = n(110223),
+  u = n(799352),
+  d = n(110223),
   h = n(981631),
   p = n(689938);
 
@@ -32,10 +32,10 @@ _ = [{
     text: p.Z.Messages.GDM_BLOCKED_USER_WARNING_LEAVE,
     color: a.zx.Colors.BRAND,
     onclick: () => {
-      (0, d.O)(t.id), s.Z.closePrivateChannel(t.id, !0, !0), o.default.track(h.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-        action: u.q.CLICK_TO_LEAVE,
+      (0, u.O)(t.id), s.Z.closePrivateChannel(t.id, !0, !0), o.default.track(h.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+        action: d.q.CLICK_TO_LEAVE,
         channel_id: t.id,
-        warning_medium: u.X.BANNER,
+        warning_medium: d.X.BANNER,
         blocked_user_ids: n
       });
     },
@@ -45,10 +45,10 @@ _ = [{
     text: p.Z.Messages.GDM_BLOCKED_USER_WARNING_STAY,
     color: a.zx.Colors.PRIMARY,
     onclick: () => {
-      (0, d.O)(t.id), o.default.track(h.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-        action: u.q.CLICK_TO_STAY,
+      (0, u.O)(t.id), o.default.track(h.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+        action: d.q.CLICK_TO_STAY,
         channel_id: t.id,
-        warning_medium: u.X.BANNER,
+        warning_medium: d.X.BANNER,
         blocked_user_ids: n
       });
     },

@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(194359),
   o = n(797614),
   c = n(378298),
-  d = n(359119),
-  u = n(473092),
+  u = n(359119),
+  d = n(473092),
   h = n(177342),
   p = n(134612),
   m = n(981631),
@@ -34,11 +34,11 @@ r.Z.addRelationship({
     location: p.zr
   },
   type: m.OGo.BLOCKED
-}), C(), (0, l.showToast)((0, l.createToast)(_.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, l.ToastType.SUCCESS)), (0, u.qc)({
+}), C(), (0, l.showToast)((0, l.createToast)(_.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, l.ToastType.SUCCESS)), (0, d.qc)({
   channelId: t,
   warningId: f,
   senderId: E,
-  warningType: d.pj.STRANGER_DANGER,
+  warningType: u.pj.STRANGER_DANGER,
   cta: e
 });
   }, [
@@ -48,11 +48,11 @@ f,
 E
   ]);
   a.useEffect(() => {
-(0, u.MC)(m.rMx.SAFETY_WARNING_VIEWED, {
+(0, d.MC)(m.rMx.SAFETY_WARNING_VIEWED, {
   channelId: t,
   warningId: f,
   senderId: E,
-  warningType: d.pj.STRANGER_DANGER
+  warningType: u.pj.STRANGER_DANGER
 }), o.Z.increment({
   name: s.V.SAFETY_WARNING_VIEW
 });
@@ -78,7 +78,7 @@ E
         warningId: f,
         senderId: E,
         handleBlock: () => {
-          x(u.NM.USER_MODAL_BLOCK_CONFIRM, u.NM.USER_MODAL_BLOCK_CANCEL, I);
+          x(d.NM.USER_MODAL_BLOCK_CONFIRM, d.NM.USER_MODAL_BLOCK_CANCEL, I);
         }
       });
     };
@@ -94,11 +94,11 @@ x = (e, a, s) => {
       userId: E,
       confirmBlock: g(e),
       onCancel: () => {
-        null == s || s(), (0, u.qc)({
+        null == s || s(), (0, d.qc)({
           channelId: t,
           warningId: f,
           senderId: E,
-          warningType: d.pj.STRANGER_DANGER,
+          warningType: u.pj.STRANGER_DANGER,
           cta: a
         });
       }
@@ -109,7 +109,7 @@ x = (e, a, s) => {
 channelId: t,
 warningId: f,
 senderId: E,
-warningType: d.pj.STRANGER_DANGER,
+warningType: u.pj.STRANGER_DANGER,
 header: _.Z.Messages.STRANGER_DANGER_BANNER_HEADER,
 description: _.Z.Messages.STRANGER_DANGER_BANNER_DESCRIPTION,
 onDismiss: C,
@@ -117,19 +117,19 @@ buttons: [{
     text: _.Z.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,
     color: l.Button.Colors.BRAND,
     onclick: () => {
-      I(), (0, u.qc)({
+      I(), (0, d.qc)({
         channelId: t,
         warningId: f,
         senderId: E,
-        warningType: d.pj.STRANGER_DANGER,
-        cta: u.NM.OPEN_MORE_TIPS
+        warningType: u.pj.STRANGER_DANGER,
+        cta: d.NM.OPEN_MORE_TIPS
       });
     }
   },
   {
     text: _.Z.Messages.STRANGER_DANGER_BANNER_BLOCK,
     color: l.Button.Colors.RED,
-    onclick: () => x(u.NM.USER_BANNER_BLOCK_CONFIRM, u.NM.USER_BANNER_BLOCK_CANCEL)
+    onclick: () => x(d.NM.USER_BANNER_BLOCK_CONFIRM, d.NM.USER_BANNER_BLOCK_CANCEL)
   }
 ]
   });

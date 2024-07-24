@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(512722),
   o = n.n(r),
   c = n(699581),
-  d = n(374470),
-  u = n(442837),
+  u = n(374470),
+  d = n(442837),
   h = n(481060),
   p = n(260300),
   m = n(819640),
@@ -51,7 +51,7 @@ let {
   updateCache() {
 var e, t;
 let n = (0, c.findDOMNode)(this);
-if (null == n || !(0, d.k)(n, HTMLElement))
+if (null == n || !(0, u.k)(n, HTMLElement))
   return;
 let {
   offsetWidth: i,
@@ -97,8 +97,8 @@ let {
   media: r,
   textAlign: o,
   isLongText: c,
-  highPriority: d,
-  spacing: u,
+  highPriority: u,
+  spacing: d,
   arrowAlignment: p = f.cy.TOP,
   popoutPosition: m
 } = s, {
@@ -109,7 +109,7 @@ let {
   top: null != C ? a.y + C : void 0
 }, x = e => {
   let t = n && !e;
-  return !0 !== d ? null : (0, i.jsxs)('div', {
+  return !0 !== u ? null : (0, i.jsxs)('div', {
     children: [
       (0, i.jsx)('div', {
         className: l()(I.top, {
@@ -130,14 +130,14 @@ let {
   return {
     [I.animating]: t,
     [I.notAnimating]: !t,
-    [I.highPriority]: d
+    [I.highPriority]: u
   };
 }, N = this.getTutorialPopoutText();
 return (0, i.jsx)(f.ZP, {
   position: m,
   renderMedia: r,
   textAlign: o,
-  spacing: u,
+  spacing: d,
   isLongText: c,
   uniqueId: e,
   autoInvert: t,
@@ -184,7 +184,7 @@ indicators: e,
 tutorialData: t,
 windowFocused: n,
 shouldShowAny: a
-  } = (0, u.cj)([
+  } = (0, d.cj)([
 g.Z,
 _.Z,
 m.Z

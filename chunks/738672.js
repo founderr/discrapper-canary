@@ -1,6 +1,6 @@
 n.d(t, {
   h: function() {
-return u;
+return d;
   }
 }), n(47120);
 var i = n(735250),
@@ -10,13 +10,13 @@ var i = n(735250),
   r = n(909820),
   o = n(740492),
   c = n(937995),
-  d = n(618158);
+  u = n(618158);
 
-function u(e) {
+function d(e) {
   let {
 buttonRef: t,
 dismissed: n,
-onDismiss: u,
+onDismiss: d,
 renderComponent: h
   } = e, p = a.useContext(c.h9), [m, _] = a.useState(''), [f, E] = a.useState(!1), C = (0, s.e7)([o.ZP], () => o.ZP.callHeaderHeight), g = a.createRef(), I = a.useRef(0);
   a.useEffect(() => {
@@ -29,7 +29,7 @@ g
   let {
 preventIdle: x,
 allowIdle: T
-  } = (0, d.Y)('popup');
+  } = (0, u.Y)('popup');
   return (null == t ? void 0 : t.current) == null ? null : (0, i.jsx)(r.ZP, {
 children: (0, i.jsx)(l.ReferencePositionLayer, {
   targetRef: t,
@@ -46,7 +46,7 @@ children: (0, i.jsx)(l.ReferencePositionLayer, {
     onMouseLeave: T,
     children: h({
       hidden: f || p || n,
-      onDismiss: u
+      onDismiss: d
     })
   })
 })

@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(399606),
   o = n(481060),
   c = n(893966),
-  d = n(472596),
-  u = n(285173),
+  u = n(472596),
+  d = n(285173),
   h = n(430824),
   p = n(496675),
   m = n(776767),
@@ -33,7 +33,7 @@ s
   ]), g = (0, r.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [
 t.guildId,
 t.userId
-  ]), I = (0, d.zq)(g), x = (0, d.qr)(t), T = (0, r.e7)([p.Z], () => p.Z.can(_.Plq.MANAGE_ROLES, n), [n]);
+  ]), I = (0, u.zq)(g), x = (0, u.qr)(t), T = (0, r.e7)([p.Z], () => p.Z.can(_.Plq.MANAGE_ROLES, n), [n]);
   return null == n ? null : (0, i.jsx)(o.FormItem, {
 title: f.Z.Messages.ROLES,
 titleClassName: E.infoTitle,
@@ -55,7 +55,7 @@ children: (0, i.jsx)(m.WM, {
             return (0, i.jsx)(o.Clickable, {
               onMouseEnter: n,
               onMouseLeave: a,
-              children: (0, i.jsx)(u.Z, {
+              children: (0, i.jsx)(d.Z, {
                 className: l()(E.roleTooltipItem, E.highestRole),
                 role: I,
                 guildId: t.guildId
@@ -63,7 +63,7 @@ children: (0, i.jsx)(m.WM, {
             });
           }
         }),
-        C.map(e => (0, i.jsx)(u.Z, {
+        C.map(e => (0, i.jsx)(d.Z, {
           className: l()(E.roleTooltipItem),
           role: s[e],
           guildId: t.guildId

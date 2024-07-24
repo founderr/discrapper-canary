@@ -13,7 +13,7 @@ function c() {
   return e <= 5 ? 3 : e <= 15 ? 10 : 15;
 }
 
-function d(e, t) {
+function u(e, t) {
   let n = {
   packetsSentOrReceived: 0,
   packetsLost: 0,
@@ -44,7 +44,7 @@ numDatapoints: s
   };
 }
 (i = a || (a = {})).PACKET_LOSS = 'Packet Loss', i.FRAME_RATE_INPUT = 'Frame Rate Encode', i.FRAME_RATE_NETWORK = 'Frame Rate Decode', i.SOUNDSHARE_FAILED = 'Soundshare Failed', i.BAD_CONNECTION = 'Bad Connection';
-let u = (0, s.oH)((e, t) => ({
+let d = (0, s.oH)((e, t) => ({
   message: e,
   errorType: t
 }));
@@ -52,28 +52,28 @@ let u = (0, s.oH)((e, t) => ({
 function h(e, t) {
   if ('streamer' === e.type) {
 if (100 * e.packetLossRate > 10)
-  return u(o.Z.Messages.STREAM_BAD_STREAMER, 'Packet Loss');
+  return d(o.Z.Messages.STREAM_BAD_STREAMER, 'Packet Loss');
 if (e.frameRate <= c(t))
-  return u(o.Z.Messages.STREAM_BAD_STREAMER, 'Frame Rate Encode');
+  return d(o.Z.Messages.STREAM_BAD_STREAMER, 'Frame Rate Encode');
   } else {
 if (100 * e.packetLossRate > 10)
-  return u(o.Z.Messages.STREAM_BAD_SPECTATOR, 'Packet Loss');
+  return d(o.Z.Messages.STREAM_BAD_SPECTATOR, 'Packet Loss');
 if (e.frameRate <= c(t))
-  return u(o.Z.Messages.STREAM_BAD_SPECTATOR, 'Frame Rate Decode');
+  return d(o.Z.Messages.STREAM_BAD_SPECTATOR, 'Frame Rate Decode');
   }
   return null;
 }
 
 function p(e, t, n, i) {
   if (n)
-return u(o.Z.Messages.STREAM_SOUNDSHARE_FAILED, 'Soundshare Failed');
+return d(o.Z.Messages.STREAM_SOUNDSHARE_FAILED, 'Soundshare Failed');
   if (null != t) {
-let e = d(t, 5),
-  n = d(t, 30);
+let e = u(t, 5),
+  n = u(t, 30);
 if (n.numDatapoints >= 5) {
   var a;
   return null !== (a = h(e, null == i ? void 0 : i.maxFrameRate)) && void 0 !== a ? a : h(n, null == i ? void 0 : i.maxFrameRate);
 }
   }
-  return e === r.IE4.BAD ? u(o.Z.Messages.STREAM_NETWORK_QUALITY_ERROR, 'Bad Connection') : null;
+  return e === r.IE4.BAD ? d(o.Z.Messages.STREAM_NETWORK_QUALITY_ERROR, 'Bad Connection') : null;
 }

@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(561472),
   o = n(933557),
   c = n(287746),
-  d = n(541716),
-  u = n(665149),
+  u = n(541716),
+  d = n(665149),
   h = n(910611),
   p = n(703656),
   m = n(664342),
@@ -39,7 +39,7 @@ children: [
     channel: x,
     draftType: f.d.ChannelMessage
   }),
-  (0, i.jsx)(u.ZP, {
+  (0, i.jsx)(d.ZP, {
     toolbar: Z,
     'aria-label': g.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
     children: (0, h.ud)({
@@ -69,7 +69,7 @@ children: [
     children: (0, i.jsx)(c.Z, {
       channel: x,
       guild: N,
-      chatInputType: d.I.SIDEBAR
+      chatInputType: u.I.SIDEBAR
     }, t)
   })
 ]

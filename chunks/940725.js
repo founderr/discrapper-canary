@@ -10,11 +10,11 @@ var i = n(704215),
   r = n(430824),
   o = n(594174),
   c = n(353093),
-  d = n(954138),
-  u = n(981631);
+  u = n(954138),
+  d = n(981631);
 
 function h(e, t) {
-  let n = (0, d.Z)(t),
+  let n = (0, u.Z)(t),
 h = (0, a.e7)([
   o.default,
   r.Z,
@@ -33,11 +33,11 @@ h = (0, a.e7)([
   let s = t.getCurrentUser();
   if (null == s)
     return !1;
-  let d = i.getMember(e, s.id);
+  let u = i.getMember(e, s.id);
   if (null == s.clan)
     return !0;
-  let u = (null == d ? void 0 : d.joinedAt) != null ? new Date(d.joinedAt) : null,
-    h = null != u && Date.now() - u.getTime() > 259200000,
+  let d = (null == u ? void 0 : u.joinedAt) != null ? new Date(u.joinedAt) : null,
+    h = null != d && Date.now() - d.getTime() > 259200000,
     {
       identityGuildId: p,
       identityEnabled: m
@@ -48,6 +48,6 @@ h = (0, a.e7)([
   r.Z,
   l.ZP
 ]), [e]),
-p = (0, s.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : u.lds);
+p = (0, s.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : d.lds);
   return n && h && !p;
 }

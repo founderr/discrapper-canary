@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(287734),
-  d = n(40851),
-  u = n(358221),
+  u = n(40851),
+  d = n(358221),
   h = n(659580),
   p = n(793865),
   m = n(575175),
@@ -67,12 +67,12 @@ function et(e) {
   var t, n;
   let {
 channel: a
-  } = e, s = (0, K.Z)(a.id), [l, c] = (0, X.Z)(a), d = (0, r.e7)([P.Z], () => P.Z.can(Q.Plq.REQUEST_TO_SPEAK, a));
+  } = e, s = (0, K.Z)(a.id), [l, c] = (0, X.Z)(a), u = (0, r.e7)([P.Z], () => P.Z.can(Q.Plq.REQUEST_TO_SPEAK, a));
   if (s)
 return null;
   return (0, i.jsx)(M.d, {
 isActive: l,
-label: (t = l, n = d, t ? J.Z.Messages.AUDIENCE_LOWER_HAND : n ? J.Z.Messages.AUDIENCE_RAISE_HAND_CTA : J.Z.Messages.AUDIENCE_RAISE_HAND_NO_PERMISSION),
+label: (t = l, n = u, t ? J.Z.Messages.AUDIENCE_LOWER_HAND : n ? J.Z.Messages.AUDIENCE_RAISE_HAND_CTA : J.Z.Messages.AUDIENCE_RAISE_HAND_NO_PERMISSION),
 iconComponent: () => (0, i.jsx)(o.HandRequestSpeakIcon, {
   size: 'md',
   color: 'currentColor',
@@ -80,7 +80,7 @@ iconComponent: () => (0, i.jsx)(o.HandRequestSpeakIcon, {
 }),
 onClick: c,
 className: $.buttonSpacing,
-disabled: !d && !l
+disabled: !u && !l
   });
 }
 let en = a.memo(function(e) {
@@ -134,11 +134,11 @@ function ea(e) {
   let {
 channel: t,
 onSelect: n
-  } = e, a = (0, d.bp)(), {
+  } = e, a = (0, u.bp)(), {
 canManageGuildEvent: s
-  } = (0, I.XJ)(t), c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]), u = (0, r.e7)([E.ZP], () => E.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)), h = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]), {
+  } = (0, I.XJ)(t), c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]), d = (0, r.e7)([E.ZP], () => E.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)), h = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]), {
 suppress: p
-  } = (0, v.Z)(t), m = j.default.getId(), [_] = (0, X.Z)(t), f = H.ZP.isModerator(m, t.id), C = (0, w.B)(t.id), g = s(u);
+  } = (0, v.Z)(t), m = j.default.getId(), [_] = (0, X.Z)(t), f = H.ZP.isModerator(m, t.id), C = (0, w.B)(t.id), g = s(d);
   return h ? (f || g) && null != c ? (0, i.jsx)(o.Popout, {
 renderPopout: e => {
   let {
@@ -310,13 +310,13 @@ channel: t
 suppress: n,
 selfMute: a,
 mute: s
-  } = (0, v.Z)(t), c = (0, w.B)(t.id), d = (0, r.e7)([_.Z], () => null != _.Z.getAwaitingRemoteSessionInfo()), {
+  } = (0, v.Z)(t), c = (0, w.B)(t.id), u = (0, r.e7)([_.Z], () => null != _.Z.getAwaitingRemoteSessionInfo()), {
 cameraUnavailable: E,
 enabled: C
   } = (0, x.Z)(), g = (0, N.Z)(t), {
 limit: I,
 reachedLimit: M
-  } = (0, T.Z)(t), j = (0, r.e7)([y.default], () => y.default.getCurrentUser()), P = (0, r.e7)([L.Z], () => (0, f.Z)(L.Z)), D = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]), U = (0, r.e7)([u.Z], () => u.Z.getStreamParticipants(t.id)[0], [t.id]), B = (0, V.PK)(t.id), H = I > 0, G = M && !B || null != U && U.user.id !== (null == j ? void 0 : j.id);
+  } = (0, T.Z)(t), j = (0, r.e7)([y.default], () => y.default.getCurrentUser()), P = (0, r.e7)([L.Z], () => (0, f.Z)(L.Z)), D = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]), U = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(t.id)[0], [t.id]), B = (0, V.PK)(t.id), H = I > 0, G = M && !B || null != U && U.user.id !== (null == j ? void 0 : j.id);
   if (null == j)
 return null;
   let F = (0, i.jsxs)(i.Fragment, {
@@ -408,7 +408,7 @@ children: [
             suppress: n,
             popoutOpen: r,
             onClick: () => (0, m.Z)(s, n),
-            awaitingRemote: d
+            awaitingRemote: u
           });
         }
       })
@@ -447,7 +447,7 @@ t.Z = a.memo(function(e) {
   let {
 channel: t,
 isOnStartStageScreen: n
-  } = e, a = (0, K.Z)(t.id), s = (0, w.B)(t.id), l = (0, r.e7)([P.Z], () => P.Z.can(B.yP, t), [t]), o = (0, q.Z)(t.id), c = (0, r.e7)([u.Z], () => null != t ? u.Z.getSelectedParticipant(t.id) : null), d = !o && null == c;
+  } = e, a = (0, K.Z)(t.id), s = (0, w.B)(t.id), l = (0, r.e7)([P.Z], () => P.Z.can(B.yP, t), [t]), o = (0, q.Z)(t.id), c = (0, r.e7)([d.Z], () => null != t ? d.Z.getSelectedParticipant(t.id) : null), u = !o && null == c;
   return n ? (0, i.jsx)(eo, {
 channel: t
   }) : a || s ? (0, i.jsxs)('div', {
@@ -456,13 +456,13 @@ children: [
   (0, i.jsxs)('div', {
     className: $.eventPrompts,
     children: [
-      d ? (0, i.jsx)(C.Z, {
+      u ? (0, i.jsx)(C.Z, {
         channelId: null == t ? void 0 : t.id
       }) : null,
       (0, i.jsx)('div', {
         className: $.separator
       }),
-      d && l ? (0, i.jsx)(g.Z, {
+      u && l ? (0, i.jsx)(g.Z, {
         highlight: !0,
         channel: t
       }) : null,

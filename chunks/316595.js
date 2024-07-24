@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(890977),
   o = n(605236),
   c = n(243778),
-  d = n(375954),
-  u = n(921944);
+  u = n(375954),
+  d = n(921944);
 
 function h(e) {
   let {
@@ -20,7 +20,7 @@ enabled: n,
 animationContainerClassName: h,
 glowClassName: p,
 trinketsClassName: m
-  } = e, _ = (0, s.e7)([d.Z], () => d.Z.hasCurrentUserSentMessageSinceAppStart()), f = a.useMemo(() => {
+  } = e, _ = (0, s.e7)([u.Z], () => u.Z.hasCurrentUserSentMessageSinceAppStart()), f = a.useMemo(() => {
 let e = [];
 return _ && n && e.push(l.z.ACTIVITIES_CHAT_BUTTON_NUX_V2), e;
   }, [
@@ -28,7 +28,7 @@ _,
 n
   ]), E = () => {
 setTimeout(() => (0, o.EW)(l.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
-  dismissAction: u.L.AUTO_DISMISS
+  dismissAction: d.L.AUTO_DISMISS
 }), 10000);
   };
   return (0, i.jsx)(c.Z, {

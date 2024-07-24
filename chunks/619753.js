@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(837969),
   o = n(481060),
   c = n(668781),
-  d = n(904245),
-  u = n(603263),
+  u = n(904245),
+  d = n(603263),
   h = n(963374),
   p = n(607070),
   m = n(933557),
@@ -56,7 +56,7 @@ showBlockedResults: T
 if (x)
   return;
 let t = e - 1;
-null == E || E(t), u.oO(s, t);
+null == E || E(t), d.oO(s, t);
   }, [
 s,
 x,
@@ -73,7 +73,7 @@ if (e.blocked)
 else {
   let t = N.Z.getChannel(e.channel_id),
     n = null != t ? t.getGuildId() : null;
-  d.Z.trackJump(e.channel_id, e.id, 'Search Results', {
+  u.Z.trackJump(e.channel_id, e.id, 'Search Results', {
     search_id: A.Z.getAnalyticsId(s)
   }), (0, g.uL)(P.Z5c.CHANNEL(n, e.channel_id, e.id));
 }
@@ -158,7 +158,7 @@ children: [
   f > 0 ? (0, i.jsxs)(o.Clickable, {
     tag: 'div',
     className: y.resultsBlocked,
-    onClick: () => u.QY(s, !T),
+    onClick: () => d.QY(s, !T),
     children: [
       (0, i.jsx)('div', {
         className: y.resultsBlockedImage
@@ -226,8 +226,8 @@ function U(e) {
 channel: l,
 results: r,
 highlighter: c,
-startIndex: d,
-resultRefs: u,
+startIndex: u,
+resultRefs: d,
 totalResults: h,
 scrollTo: p,
 searchId: g,
@@ -298,9 +298,9 @@ children: (0, i.jsxs)('ul', {
       })
     }),
     r.map((e, t) => {
-      let n = d + t;
+      let n = u + t;
       return (0, i.jsx)(L.Z, {
-        ref: e => u.current[n] = e,
+        ref: e => d.current[n] = e,
         totalResults: h,
         scrollTo: p,
         searchId: g,

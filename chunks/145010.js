@@ -11,8 +11,8 @@ var a = n(399606),
   r = n(673125),
   o = n(292793),
   c = n(390322),
-  d = n(871499),
-  u = n(12168),
+  u = n(871499),
+  d = n(12168),
   h = n(304388),
   p = n(689938);
 
@@ -33,7 +33,7 @@ renderPopout: e => {
     onFocus: a
   } = e;
   return (0, i.jsx)(c.Z, {
-    children: (0, i.jsx)(u.Z, {
+    children: (0, i.jsx)(d.Z, {
       title: p.Z.Messages.SHARED_CANVAS_DRAW_MODE_EMOJI_HOSE,
       channel: t,
       closePopout: n,
@@ -42,7 +42,7 @@ renderPopout: e => {
     })
   });
 },
-children: e => (0, i.jsx)(d.Z, {
+children: e => (0, i.jsx)(u.Z, {
   ...e,
   iconComponent: s.PaintbrushThinIcon,
   isActive: m || e.isActive,

@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(392711),
   o = n.n(r),
   c = n(91192),
-  d = n(924826),
-  u = n(873546),
+  u = n(924826),
+  d = n(873546),
   h = n(442837),
   p = n(902704),
   m = n(481060),
@@ -85,7 +85,7 @@ let {
   activities: r,
   applicationStream: o,
   status: c,
-  channel: d,
+  channel: u,
   guildId: h,
   isTyping: p,
   isMobileOnline: _,
@@ -94,14 +94,14 @@ let {
 } = this.props, g = null != f ? new Date(f) : null;
 return (0, i.jsx)(m.Popout, {
   preload: () => (0, j.W)(s, {
-    channelId: d.id,
+    channelId: u.id,
     guildId: h
   }),
   renderPopout: this.renderUserPopout,
-  position: u.tq ? 'window_center' : 'left',
+  position: d.tq ? 'window_center' : 'left',
   spacing: 16,
   onShiftClick: this.handleShiftClick,
-  children: (u, m) => {
+  children: (d, m) => {
     let {
       isShown: f
     } = m;
@@ -120,13 +120,13 @@ return (0, i.jsx)(m.Popout, {
       colorString: e,
       colorRoleName: t,
       isTyping: p,
-      channel: d,
+      channel: u,
       guildId: h,
       isMobile: _,
       onClickPremiumGuildIcon: this.openGuildSubscriptionModal,
       selected: f,
       itemProps: E,
-      ...u
+      ...d
     });
   }
 });
@@ -197,7 +197,7 @@ let {
   channel: a,
   user: s,
   index: l
-} = e, r = (0, c.JA)(''.concat(l)), o = (0, h.e7)([y.Z], () => y.Z.isTyping(a.id, s.id)), d = (0, h.e7)([D.default], () => D.default.getCurrentUser()), u = (0, h.e7)([O.Z], () => {
+} = e, r = (0, c.JA)(''.concat(l)), o = (0, h.e7)([y.Z], () => y.Z.isTyping(a.id, s.id)), u = (0, h.e7)([D.default], () => D.default.getCurrentUser()), d = (0, h.e7)([O.Z], () => {
   var e;
   return null != t ? null === (e = O.Z.getRole(a.guild_id, t)) || void 0 === e ? void 0 : e.name : void 0;
 }, [
@@ -208,8 +208,8 @@ return (0, i.jsx)(Q, {
   ...n,
   ...r,
   isTyping: o,
-  currentUser: d,
-  colorRoleName: u
+  currentUser: u,
+  colorRoleName: d
 });
   }),
   $ = a.memo(function(e) {
@@ -338,7 +338,7 @@ return (0, i.jsx)(m.FocusJumpSection, {
                 this._list = e, this.props.listRef.current = e, s.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null;
               },
               className: l()(z.members, {
-                [z.fullWidth]: u.tq
+                [z.fullWidth]: d.tq
               }),
               paddingTop: 0,
               sectionHeight: 40,
@@ -413,8 +413,8 @@ super(...e), Y(this, '_list', null), Y(this, '_areActivitiesExperimentallyHidden
         status: r,
         isOwner: o,
         isMobileOnline: c,
-        nick: d,
-        activities: u,
+        nick: u,
+        activities: d,
         applicationStream: h,
         premiumSince: p
       } = l;
@@ -424,8 +424,8 @@ super(...e), Y(this, '_list', null), Y(this, '_areActivitiesExperimentallyHidden
         user: n,
         status: r,
         isOwner: o,
-        nick: d,
-        activities: this._areActivitiesExperimentallyHidden ? [] : u,
+        nick: u,
+        activities: this._areActivitiesExperimentallyHidden ? [] : d,
         applicationStream: h,
         channel: s,
         guildId: s.guild_id,
@@ -533,7 +533,7 @@ className: n
   } = e, {
 analyticsLocations: s
   } = (0, T.ZP)(I.Z.MEMBER_LIST), r = (0, h.e7)([g.Z], () => g.Z.keyboardModeEnabled), o = (0, h.cj)([P.ZP], () => P.ZP.getProps(t.guild_id, t.id)), {
-rows: u,
+rows: d,
 groups: p,
 version: m,
 updateMaxRowSeen: _
@@ -577,7 +577,7 @@ t.scrollToBottom({
     requestAnimationFrame(() => setTimeout(e, 100));
   }
 });
-  }), []), N = (0, d.ZP)({
+  }), []), N = (0, u.ZP)({
 id: 'members-'.concat(t.id),
 setFocus: E,
 isEnabled: r,
@@ -595,7 +595,7 @@ children: (0, i.jsx)('div', {
       ...o,
       version: m,
       groups: p,
-      rows: u,
+      rows: d,
       listRef: f,
       updateMaxContentFeedRowSeen: _
     })

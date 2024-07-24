@@ -1,19 +1,19 @@
 var i, a, s, l, r = n(442837),
   o = n(570140),
   c = n(41776);
-let d = null,
-  u = null;
+let u = null,
+  d = null;
 
 function h() {
   let e = c.Z.mostRecentLurkedGuildId();
-  null != e ? (d = e, u = null) : (null != d ? u = d : u = null, d = null);
+  null != e ? (u = e, d = null) : (null != u ? d = u : d = null, u = null);
 }
 class p extends(l = r.ZP.Store) {
   initialize() {
 this.syncWith([c.Z], h);
   }
   shouldShowPopout(e) {
-return u === e;
+return d === e;
   }
 }
 s = 'LurkerModePopoutStore', (a = 'displayName') in(i = p) ? Object.defineProperty(i, a, {

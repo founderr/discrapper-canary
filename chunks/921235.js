@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(904245),
-  d = n(268350),
-  u = n(926491),
+  u = n(268350),
+  d = n(926491),
   h = n(419922),
   p = n(314897),
   m = n(375954),
@@ -30,7 +30,7 @@ function N(e) {
 channel: n
   } = e, [s, N] = a.useState('');
   a.useEffect(() => {
-(0, d.FQ)('847199849233514549', !0);
+(0, u.FQ)('847199849233514549', !0);
   }, []);
   let v = (0, r.e7)([
   m.Z,
@@ -38,7 +38,7 @@ channel: n
 ], () => !!l()(m.Z.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== p.default.getId() && e.state === g.yb.SENT && !(0, C.Z)(e))),
 S = (0, r.e7)([_.default], () => _.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
 Z = null !== (t = E.ZP.useName(S)) && void 0 !== t ? t : I.Z.Messages.WAVE_DEFAULT_RECIPIENT,
-A = (0, r.e7)([u.Z], () => u.Z.getStickerById(T)),
+A = (0, r.e7)([d.Z], () => d.Z.getStickerById(T)),
 M = a.useCallback(async () => {
   if (null == s || '' === s)
     try {

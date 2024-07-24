@@ -8,8 +8,8 @@ var i, s = n(876215),
   d = n(314897),
   u = n(592125),
   _ = n(375954),
-  E = n(306680),
-  h = n(699516),
+  h = n(306680),
+  E = n(699516),
   I = n(9156),
   m = n(626135),
   g = n(70956),
@@ -154,7 +154,7 @@ return !1;
 }
 class ee extends(i = a.ZP.PersistedStore) {
   initialize(e) {
-if (this.waitFor(_.Z, u.Z, E.ZP, o.Z, I.ZP, d.default, f.Z, l.Z), null != e) {
+if (this.waitFor(_.Z, u.Z, h.ZP, o.Z, I.ZP, d.default, f.Z, l.Z), null != e) {
   var t, n, i, s, a;
   v = null !== (t = e.dehydratedItems) && void 0 !== t ? t : [], R = null !== (n = e.locallyAddedItems) && void 0 !== n ? n : {}, e.dehydratedItems.forEach(e => {
     x[e.id] = e;
@@ -260,7 +260,7 @@ let {
   guildId: s,
   channelId: a
 } = e;
-if (!(0, S.rK)('GravityStore-handleMessageCreate') || null == s || (null === (t = i.author) || void 0 === t ? void 0 : t.id) === d.default.getId() || h.Z.isBlocked(null === (n = i.author) || void 0 === n ? void 0 : n.id) || s in M && M[s] < 0 || null != D[s] && a in D[s] && null != D[s][a] && D[s][a] < 0)
+if (!(0, S.rK)('GravityStore-handleMessageCreate') || null == s || (null === (t = i.author) || void 0 === t ? void 0 : t.id) === d.default.getId() || E.Z.isBlocked(null === (n = i.author) || void 0 === n ? void 0 : n.id) || s in M && M[s] < 0 || null != D[s] && a in D[s] && null != D[s][a] && D[s][a] < 0)
   return !1;
 let r = u.Z.getChannel(a);
 if (null == r || r.type !== C.d4z.GUILD_ANNOUNCEMENT || I.ZP.isChannelMuted(s, a))
@@ -270,7 +270,7 @@ null == l && (l = (0, c.e5)(i));
 let o = l.mentionEveryone;
 if (i.id in x)
   return !1;
-let E = {
+let h = {
   type: T.Rr.MESSAGE,
   id: i.id,
   score: Date.now(),
@@ -282,8 +282,8 @@ let E = {
     has_mention: o
   }
 };
-o && (null == y[a] && (y[a] = 0), y[a]++, j.add(s)), null == (L = 0 === L.length ? [...v] : [...L]).find(e => e.id === i.id) && (L.unshift(E), R[i.id] = E), Q() && U > 0 && (w = !0), x[i.id] = E, b[i.id] = {
-  ...E,
+o && (null == y[a] && (y[a] = 0), y[a]++, j.add(s)), null == (L = 0 === L.length ? [...v] : [...L]).find(e => e.id === i.id) && (L.unshift(h), R[i.id] = h), Q() && U > 0 && (w = !0), x[i.id] = h, b[i.id] = {
+  ...h,
   message: l
 };
   },
@@ -300,7 +300,7 @@ L = t.filter(e => T.zd.has(e.type)), ! function() {
   }), Object.values(R).forEach(t => {
     T.zd.has(t.type) && (e.has(t.id) || p.default.age(t.id) > g.Z.Millis.DAY || t.type === T.Rr.MESSAGE && I.ZP.isChannelMuted(t.data.guild_id, t.data.channel_id) ? delete R[t.id] : !e.has(t.id) && (L.unshift(t), e.add(t.id)));
   }), L.forEach(e => {
-    x[e.id] = e, e.type === T.Rr.CUSTOM_STATUS && (h.Z.isBlocked(e.data.user_id) ? P[e.id] = !0 : b[e.id] = (0, S.mV)(e));
+    x[e.id] = e, e.type === T.Rr.CUSTOM_STATUS && (E.Z.isBlocked(e.data.user_id) ? P[e.id] = !0 : b[e.id] = (0, S.mV)(e));
   });
 }(), L = z(L), O = {
   load_id: n,
@@ -334,7 +334,7 @@ b = {
 };
 let d = t.reduce((e, t) => (e[t.message.id] = t, e), {}),
   u = n.reduce((e, t) => (e[t.id] = t, e), {}),
-  E = i.reduce((e, t) => (e[t.id] = t, e), {});
+  h = i.reduce((e, t) => (e[t.id] = t, e), {});
 s.forEach(e => {
   let t = d[e.message_id];
   if (null == t) {
@@ -369,7 +369,7 @@ s.forEach(e => {
     summary: (0, S.wV)(t, n.data.guild_id)
   };
 }), r.forEach(e => {
-  let t = E[e.content_id];
+  let t = h[e.content_id];
   if (null == t) {
     P[e.content_id] = !0;
     return;

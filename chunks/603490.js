@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return u;
+return d;
   }
 });
 var i = n(735250);
@@ -11,13 +11,13 @@ var a = n(873546),
   r = n(404975),
   o = n(185923),
   c = n(689938),
-  d = n(903465);
+  u = n(903465);
 
-function u(e) {
+function d(e) {
   let {
 channel: t,
 message: n,
-togglePopout: u,
+togglePopout: d,
 renderEmojiPicker: h,
 shouldShow: p
   } = e;
@@ -30,7 +30,7 @@ renderPopout: e => {
   return h(t, n, i, !1);
 },
 shouldShow: p,
-onRequestClose: u,
+onRequestClose: d,
 position: a.tq ? 'top' : 'left',
 align: a.tq ? 'center' : 'top',
 children: (e, t) => {
@@ -46,7 +46,7 @@ children: (e, t) => {
     color: s.TooltipColors.PRIMARY,
     'aria-label': c.Z.Messages.ADD_REACTION,
     hideOnClick: !0,
-    tooltipClassName: d.tooltip,
+    tooltipClassName: u.tooltip,
     children: e => {
       let {
         onMouseEnter: t,
@@ -59,7 +59,7 @@ children: (e, t) => {
         },
         onMouseLeave: n,
         onClick: () => {
-          u(), null == p || p();
+          d(), null == p || p();
         },
         'aria-label': c.Z.Messages.ADD_REACTION,
         selected: h,
@@ -67,7 +67,7 @@ children: (e, t) => {
         children: (0, i.jsx)(s.ReactionIcon, {
           size: 'sm',
           color: 'currentColor',
-          className: d.icon
+          className: u.icon
         })
       });
     }

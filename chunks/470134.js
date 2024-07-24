@@ -10,46 +10,46 @@ var i = n(735250),
   r = n(481060),
   o = n(923726),
   c = n(689938),
-  d = n(592043);
+  u = n(592043);
 
-function u(e) {
+function d(e) {
   let {
 text: t,
 hasScrolled: n
   } = e;
   return (0, i.jsxs)('div', {
-className: l()(d.container, {
-  [d.containerHide]: n
+className: l()(u.container, {
+  [u.containerHide]: n
 }),
 children: [
   (0, i.jsx)('div', {
-    className: d.notice,
+    className: u.notice,
     children: (0, i.jsx)(r.Text, {
-      className: d.__invalid_label,
+      className: u.__invalid_label,
       variant: 'text-md/medium',
       color: 'header-primary',
       children: t
     })
   }),
   (0, i.jsx)('div', {
-    className: d.noticeArrow
+    className: u.noticeArrow
   })
 ]
   });
 }
 
 function h(e) {
-  let [t, n] = a.useState(), [s, l] = a.useState(), [r, d] = a.useState(!1), [h, p] = a.useState(!1), {
+  let [t, n] = a.useState(), [s, l] = a.useState(), [r, u] = a.useState(!1), [h, p] = a.useState(!1), {
 enabled: m
   } = (0, o.s1)(e);
   return a.useEffect(() => {
-m && null != t && null != s ? d(t < s) : d(!1);
+m && null != t && null != s ? u(t < s) : u(!1);
   }, [
 m,
 t,
 s
   ]), {
-horizontalScrollNotice: a.useMemo(() => r ? (0, i.jsx)(u, {
+horizontalScrollNotice: a.useMemo(() => r ? (0, i.jsx)(d, {
   text: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_LISTINGS_SCROLLABLE_NOTICE,
   hasScrolled: h
 }) : null, [

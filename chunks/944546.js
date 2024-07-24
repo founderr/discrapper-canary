@@ -14,8 +14,8 @@ var a = n(442837),
   r = n(129861),
   o = n(906732),
   c = n(158776),
-  d = n(785717),
-  u = n(726059),
+  u = n(785717),
+  d = n(726059),
   h = n(171368),
   p = n(981631),
   m = n(689938),
@@ -26,11 +26,11 @@ function E(e) {
   let {
 user: t,
 status: o,
-onSelect: d
-  } = e, u = (0, a.e7)([c.Z], () => c.Z.isMobileOnline(t.id));
+onSelect: u
+  } = e, d = (0, a.e7)([c.Z], () => c.Z.isMobileOnline(t.id));
   return (0, i.jsxs)(s.Clickable, {
 className: _.listRow,
-onClick: d,
+onClick: u,
 onContextMenu: e => {
   (0, l.jW)(e, async () => {
     let {
@@ -52,7 +52,7 @@ children: [
     'aria-label': t.username,
     size: s.AvatarSizes.SIZE_40,
     status: o,
-    isMobile: u,
+    isMobile: d,
     className: _.listAvatar
   }),
   (0, i.jsx)(r.Z, {
@@ -70,14 +70,14 @@ user: t,
 onClose: n
   } = e, {
 mutualFriends: a
-  } = (0, u.Z)(t.id), {
+  } = (0, d.Z)(t.id), {
 analyticsLocations: l
   } = (0, o.ZP)(), {
 guildId: r,
 channelId: c,
 messageId: f,
 roleId: C
-  } = (0, d.KZ)(), g = e => {
+  } = (0, u.KZ)(), g = e => {
 n(), (0, h.openUserProfileModal)({
   userId: e,
   guildId: r,

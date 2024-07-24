@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(570140),
   o = n(45114),
   c = n(147754),
-  d = n(306680),
-  u = n(626135),
+  u = n(306680),
+  d = n(626135),
   h = n(597),
   p = n(99325),
   m = n(866112),
@@ -45,7 +45,7 @@ return {
 };
   });
   a.useEffect(() => () => {
-let e = d.ZP.lastMessageId(v.id);
+let e = u.ZP.lastMessageId(v.id);
 if (null != e)
   r.Z.wait(() => {
     (0, o.In)(v.id, !0, !0, e);
@@ -83,7 +83,7 @@ k = '' !== L,
   a.useEffect(() => {
 p.c$(v.id), p.YZ(v.id), U && h.c(v.id), D(L);
   }, [v.id]), a.useEffect(() => {
-u.default.track(T.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
+d.default.track(T.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
   directory_channel_id: v.id,
   directory_guild_id: S.id,
   primary_category_id: Z
@@ -108,7 +108,7 @@ Z
   });
 } : void 0,
 B = e => {
-  0 !== y.trim().length && e.charCode === T.yXg.ENTER && (p.Rq(v.id, y), u.default.track(T.rMx.GUILD_DIRECTORY_SEARCH, {
+  0 !== y.trim().length && e.charCode === T.yXg.ENTER && (p.Rq(v.id, y), d.default.track(T.rMx.GUILD_DIRECTORY_SEARCH, {
     directory_channel_id: v.id,
     directory_guild_id: S.id
   }));

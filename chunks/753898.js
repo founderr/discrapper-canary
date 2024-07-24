@@ -11,8 +11,8 @@ var a = n(442837),
   r = n(43267),
   o = n(933557),
   c = n(266076),
-  d = n(204197),
-  u = n(967128);
+  u = n(204197),
+  d = n(967128);
 
 function h(e) {
   var t;
@@ -24,12 +24,12 @@ user: p
 avatarDecorationSrc: f,
 eventHandlers: E,
 isAnimating: C
-  } = (0, d.Z)({
+  } = (0, u.Z)({
 user: p,
 size: s.AvatarSizes.SIZE_80,
 animateOnHover: !0
   });
-  return (0, i.jsxs)(u.ZP, {
+  return (0, i.jsxs)(d.ZP, {
 channelId: n.id,
 ...E,
 children: [
@@ -48,10 +48,10 @@ children: [
       avatarDecoration: f
     });
   })(),
-  (0, i.jsx)(u.Ot, {
+  (0, i.jsx)(d.Ot, {
     children: _
   }),
-  (0, i.jsx)(u.jz, {
+  (0, i.jsx)(d.jz, {
     children: h
   })
 ]

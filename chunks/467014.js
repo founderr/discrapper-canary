@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(433355),
   o = n(189432),
   c = n(356778),
-  d = n(776767),
-  u = n(50493),
+  u = n(776767),
+  d = n(50493),
   h = n(689938),
   p = n(446926);
 
@@ -28,7 +28,7 @@ if (null == m)
   return;
 let i = (0, c.Ow)(t, e);
 await (0, o.r)(n, t, m.baseChannelId, {
-  modViewPanel: u.k.MESSAGE_HISTORY,
+  modViewPanel: d.k.MESSAGE_HISTORY,
   additionalSearchQuery: i
 });
   }, [
@@ -39,14 +39,14 @@ t
   return (0, i.jsx)(l.FormItem, {
 title: h.Z.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_MESSAGE_ACTIVITY_TITLE,
 titleClassName: p.infoTitle,
-children: (0, i.jsxs)(d.WM, {
+children: (0, i.jsxs)(u.WM, {
   children: [
-    (0, i.jsx)(d._2, {
+    (0, i.jsx)(u._2, {
       icon: (0, i.jsx)(l.ChatIcon, {
         size: 'custom',
         color: 'currentColor',
-        width: d.Mn,
-        height: d.Mn
+        width: u.Mn,
+        height: u.Mn
       }),
       name: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
@@ -63,11 +63,11 @@ children: (0, i.jsxs)(d.WM, {
       }),
       onNavigate: _ > 0 ? () => x(c.mw.MESSAGES) : void 0
     }),
-    (0, i.jsx)(d._2, {
+    (0, i.jsx)(u._2, {
       icon: (0, i.jsx)(l.LinkIcon, {
         size: 'custom',
-        width: d.Mn,
-        height: d.Mn
+        width: u.Mn,
+        height: u.Mn
       }),
       name: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
@@ -84,11 +84,11 @@ children: (0, i.jsxs)(d.WM, {
       }),
       onNavigate: f > 0 ? () => x(c.mw.LINKS) : void 0
     }),
-    (0, i.jsx)(d._2, {
+    (0, i.jsx)(u._2, {
       icon: (0, i.jsx)(l.ImagesIcon, {
         size: 'custom',
-        width: d.Mn,
-        height: d.Mn
+        width: u.Mn,
+        height: u.Mn
       }),
       name: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',

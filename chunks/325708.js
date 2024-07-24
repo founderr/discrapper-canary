@@ -11,8 +11,8 @@ var i, a, s = n(735250),
   r = n(120356),
   o = n.n(r),
   c = n(392711),
-  d = n(692547),
-  u = n(153867),
+  u = n(692547),
+  d = n(153867),
   h = n(347469),
   p = n(740492),
   m = n(36645),
@@ -60,12 +60,12 @@ switch (e) {
     return 'homeSidebarWidth';
 }
   }(t), [C, g] = l.useState(p.ZP[E]), I = l.useCallback(e => {
-u.ZP.updatedUnsyncedSettings({
+d.ZP.updatedUnsyncedSettings({
   [E]: e
 });
   }, [E]), x = (0, m.W)({
 maxWidth: n
-  }), T = (0, c.clamp)(C, m.C, n), N = x ? T : T + d.Z.modules.chat.RESIZE_HANDLE_WIDTH;
+  }), T = (0, c.clamp)(C, m.C, n), N = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
   l.useEffect(() => {
 null == i || i(T, x);
   }, [

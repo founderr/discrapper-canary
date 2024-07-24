@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250);
@@ -12,14 +12,14 @@ var a = n(692547),
   o = n(688641),
   c = n(689938);
 
-function d(e) {
+function u(e) {
   let {
 className: t,
 channel: n,
-highlight: d
-  } = e, u = (0, l.bp)();
+highlight: u
+  } = e, d = (0, l.bp)();
   return (0, i.jsx)(o.Z, {
-highlight: null != d && d,
+highlight: null != u && u,
 className: t,
 icon: (0, i.jsx)(s.StageIcon, {
   size: 'custom',
@@ -31,7 +31,7 @@ color: a.Z.unsafe_rawColors.GREEN_360.css,
 title: c.Z.Messages.STAGE_CHANNEL_START_TITLE,
 description: c.Z.Messages.STAGE_CHANNEL_START_SUBTITLE,
 onClick: function() {
-  (0, r.T)(n, u);
+  (0, r.T)(n, d);
 }
   });
 }

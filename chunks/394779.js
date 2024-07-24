@@ -1,6 +1,6 @@
 i.d(n, {
   s: function() {
-return h;
+return p;
   }
 });
 var t = i(735250),
@@ -64,7 +64,7 @@ children: (0, t.jsx)(r.Text, {
   });
 }
 
-function h(e, n) {
+function p(e, n) {
   let {
 canForwardMessages: i
   } = l.w.getCurrentConfig({

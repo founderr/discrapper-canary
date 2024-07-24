@@ -13,8 +13,8 @@ var i = n(735250),
   r = n(162461),
   o = n(561308),
   c = n(297781),
-  d = n(443487),
-  u = n(43205),
+  u = n(443487),
+  d = n(43205),
   h = n(182022);
 let p = [c.An],
   m = [s._.WEEK];
@@ -27,17 +27,17 @@ selected: a
   if (!(0, r.Rg)('MemberListTopArtistContent'))
 return null;
   let s = (0, o.Nq)(t);
-  return null != s && (0, l.Hi)(s, m) ? (0, i.jsxs)(d.Zb, {
+  return null != s && (0, l.Hi)(s, m) ? (0, i.jsxs)(u.Zb, {
 selected: a,
 children: [
-  (0, i.jsxs)(d.e$, {
+  (0, i.jsxs)(u.e$, {
     children: [
-      (0, i.jsx)(d.F9, {
+      (0, i.jsx)(u.F9, {
         entry: t,
         channelId: n.id,
         guildId: n.guild_id
       }),
-      (0, i.jsx)(d.ll, {
+      (0, i.jsx)(u.ll, {
         children: t.extra.artist.name
       }),
       (0, i.jsx)(c.Gk, {
@@ -48,7 +48,7 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(u.f, {
+  (0, i.jsx)(d.f, {
     src: t.extra.media.image_url,
     size: 48,
     className: h.thumbnail

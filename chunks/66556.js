@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(665149),
   o = n(731290),
   c = n(594174),
-  d = n(91159),
-  u = n(593130),
+  u = n(91159),
+  d = n(593130),
   h = n(689938),
   p = n(283000);
 
@@ -27,7 +27,7 @@ return null == e || t.isNSFW() && (!e.nsfwAllowed || !o.Z.didAgree(t.getGuildId(
   }, [t]), f = a.useCallback(() => {
 m(!1);
   }, []), E = a.useCallback(() => {
-!n && (0, d.U4)('Popout'), m(!n);
+!n && (0, u.U4)('Popout'), m(!n);
   }, [n]);
   return (0, i.jsx)(l.Popout, {
 animation: l.Popout.Animation.NONE,
@@ -38,7 +38,7 @@ shouldShow: n,
 onRequestClose: f,
 renderPopout: function() {
   return (0, i.jsx)(l.Dialog, {
-    children: (0, i.jsx)(u.Z, {
+    children: (0, i.jsx)(d.Z, {
       className: p.browser,
       channel: t,
       onClose: f

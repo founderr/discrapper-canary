@@ -11,8 +11,8 @@ var a = n(442837),
   r = n(171368),
   o = n(650774),
   c = n(430824),
-  d = n(496675),
-  u = n(709054),
+  u = n(496675),
+  d = n(709054),
   h = n(826581),
   p = n(246364),
   m = n(360328),
@@ -25,7 +25,7 @@ function C(e) {
 channelId: t,
 showProfile: n = !1,
 showTrailingDivider: C = !1
-  } = e, g = u.default.cast(t), {
+  } = e, g = d.default.cast(t), {
 joinRequest: I,
 isModmin: x,
 guildId: T,
@@ -33,13 +33,13 @@ maxMembers: N
   } = (0, a.cj)([
 h.Z,
 c.Z,
-d.Z
+u.Z
   ], () => {
 let e = h.Z.getRequest(g),
   t = c.Z.getGuild(null == e ? void 0 : e.guildId);
 return {
   joinRequest: e,
-  isModmin: null != t && d.Z.can(_.Plq.KICK_MEMBERS, t),
+  isModmin: null != t && u.Z.can(_.Plq.KICK_MEMBERS, t),
   guildId: null == t ? void 0 : t.id,
   maxMembers: null == t ? void 0 : t.maxMembers
 };

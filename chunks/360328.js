@@ -11,17 +11,17 @@ var i = n(735250),
   o = n(689938);
 
 function c(e, t) {
-  let [c, d] = a.useState(!1), u = () => {
+  let [c, u] = a.useState(!1), d = () => {
 (0, s.showToast)((0, s.createToast)(o.Z.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE));
   }, h = async () => {
 if (!c && null != e && null != t) {
-  d(!0);
+  u(!0);
   try {
     await l.Z.updateGuildJoinRequest(e, t, r.wB.APPROVED);
   } catch {
-    u();
+    d();
   } finally {
-    d(!1);
+    u(!1);
   }
 }
   };
@@ -36,7 +36,7 @@ rejectRequest: () => {
       modalProps: n,
       guildId: e,
       userId: t,
-      onError: u
+      onError: d
     });
   });
 },

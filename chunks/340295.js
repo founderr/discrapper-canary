@@ -5,8 +5,8 @@ var i = n(735250),
   r = n(305325),
   o = n(281956),
   c = n(584729),
-  d = n(27457),
-  u = n(354459),
+  u = n(27457),
+  d = n(354459),
   h = n(689938),
   p = n(226409);
 t.Z = function(e) {
@@ -15,7 +15,7 @@ t.Z = function(e) {
 participants: m,
 channel: _,
 hasConnectPermission: f
-  } = e, E = m.filter(u.Io), C = (0, o.J)(_.guild_id), g = a.useCallback(() => {
+  } = e, E = m.filter(d.Io), C = (0, o.J)(_.guild_id), g = a.useCallback(() => {
 C ? (0, r.hk)(_.guild_id, () => l.default.selectVoiceChannel(_.id)) : l.default.selectVoiceChannel(_.id);
   }, [
 _.id,
@@ -30,7 +30,7 @@ children: [
     style: {
       maxWidth: 168 * I
     },
-    children: E.slice(0, 5).map(e => (0, i.jsx)(d.ZP, {
+    children: E.slice(0, 5).map(e => (0, i.jsx)(u.ZP, {
       participant: e,
       channel: _,
       className: p.tile,

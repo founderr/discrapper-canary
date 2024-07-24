@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(442837),
   o = n(993365),
   c = n(481060),
-  d = n(153867),
-  u = n(110924),
+  u = n(153867),
+  d = n(110924),
   h = n(607070),
   p = n(900211),
   m = n(740492),
@@ -52,7 +52,7 @@ renderExternalHeader: B
   } = e, H = (0, M.Z)(), G = (0, r.Wu)([S.ZP], () => null != w ? S.ZP.getEmbeddedActivitiesForChannel(w) : [], [w]), V = (0, r.e7)([E.Z], () => E.Z.getChannel(w)), F = (0, Z.gb)(G), W = (0, Z.uF)(F), z = a.useCallback(() => {
 (0, v.tg)(P.Ez.PIP);
   }, []), Y = a.useRef(null), K = (0, r.e7)([S.ZP], () => S.ZP.getFocusedLayout()), q = K !== P.MI.NO_CHAT, [X, Q] = a.useState(null !== (t = m.ZP.activityPanelHeight) && void 0 !== t ? t : s), J = a.useCallback(e => {
-d.ZP.updatedUnsyncedSettings({
+u.ZP.updatedUnsyncedSettings({
   activityPanelHeight: e
 });
   }, []), $ = a.useRef(null), [ee, et] = a.useState({
@@ -95,8 +95,8 @@ ec = a.useMemo(() => {
     null != t && void 0 !== t && e.set(t.userId, t);
   }), e;
 }, [eo]),
-ed = function(e, t, n) {
-  let i = (0, u.Z)(e),
+eu = function(e, t, n) {
+  let i = (0, d.Z)(e),
     s = e !== i,
     [l, r] = a.useState(!1);
   a.useEffect(() => {
@@ -126,8 +126,8 @@ ed = function(e, t, n) {
 }(q, X, s);
   if (null == H)
 return null;
-  let eu = [];
-  null != el && (eu = Array.from(el.embeddedActivity.userIds).map(e => I.default.getUser(e)).filter(e => null != e && void 0 !== e));
+  let ed = [];
+  null != el && (ed = Array.from(el.embeddedActivity.userIds).map(e => I.default.getUser(e)).filter(e => null != e && void 0 !== e));
   let eh = (e, t) => {
 var n;
 if (null == e || void 0 === e || void 0 === t)
@@ -147,7 +147,7 @@ return (0, i.jsx)(c.TooltipContainer, {
   return (0, i.jsxs)('div', {
 className: l()(D.wrapper, U[K], (0, T.Q)(O.BRd.DARK)),
 ref: Y,
-style: ed,
+style: eu,
 children: [
   null == B ? void 0 : B(),
   (0, i.jsxs)('div', {
@@ -183,7 +183,7 @@ children: [
         children: [
           (0, i.jsx)(R.Z, {
             renderIcon: !1,
-            users: eu,
+            users: ed,
             size: k,
             max: 6,
             className: D.userAvatars,

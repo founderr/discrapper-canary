@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(257559),
   o = n(541716),
   c = n(893718),
-  d = n(314897),
-  u = n(323873),
+  u = n(314897),
+  d = n(323873),
   h = n(430824),
   p = n(496675),
   m = n(585483),
@@ -48,11 +48,11 @@ id: c
 editingMessage: S,
 editingTextValue: Z,
 editingRichValue: A
-  } = (0, s.cj)([u.Z], () => ({
-editingMessage: u.Z.getEditingMessage(o),
-editingTextValue: u.Z.getEditingTextValue(o),
-editingRichValue: u.Z.getEditingRichValue(o)
-  }), [o]), M = (0, s.e7)([d.default], () => d.default.getId()), b = a.useCallback((e, n, i) => {
+  } = (0, s.cj)([d.Z], () => ({
+editingMessage: d.Z.getEditingMessage(o),
+editingTextValue: d.Z.getEditingTextValue(o),
+editingRichValue: d.Z.getEditingRichValue(o)
+  }), [o]), M = (0, s.e7)([u.default], () => u.default.getId()), b = a.useCallback((e, n, i) => {
 let {
   content: a
 } = i, s = p.Z.can(g.Plq.MANAGE_MESSAGES, t), o = null != S && null != S.author ? S.author.id : null;
@@ -91,8 +91,8 @@ richValue: n,
 message: s,
 channel: l,
 onChange: r,
-onSubmit: d,
-onKeyDown: u
+onSubmit: u,
+onKeyDown: d
   } = e, [h, p] = a.useState(!0), _ = a.useCallback(() => p(!0), []), f = a.useCallback(() => p(!1), []);
   return a.useEffect(() => (m.S.subscribe(g.CkL.TEXTAREA_FOCUS, _), m.S.subscribe(g.CkL.TEXTAREA_BLUR, f), () => {
 m.S.unsubscribe(g.CkL.TEXTAREA_FOCUS, _), m.S.unsubscribe(g.CkL.TEXTAREA_BLUR, f);
@@ -110,9 +110,9 @@ onSubmit: e => {
   let {
     value: t
   } = e;
-  return d(t);
+  return u(t);
 },
-onKeyDown: u,
+onKeyDown: d,
 focused: h,
 onFocus: _,
 onBlur: f

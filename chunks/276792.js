@@ -14,8 +14,8 @@ var s = n(704215),
   d = n(63063),
   u = n(823188),
   _ = n(474936),
-  E = n(981631),
-  h = n(689938),
+  h = n(981631),
+  E = n(689938),
   I = n(20365),
   m = n(74316);
 
@@ -29,15 +29,15 @@ analyticsLocation: f,
 isLightTheme: S
   } = e, C = 'AnnouncementModalVariant1_'.concat(s.z[Number(g.dismissKey)]), {
 onClose: N
-  } = p, A = null != g.button && '' !== g.button.copy ? g.button.copy : h.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN, v = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button', Z = (null === (n = g.button) || void 0 === n ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? () => {
-(0, o.uL)(E.Z5c.APPLICATION_STORE), N();
+  } = p, A = null != g.button && '' !== g.button.copy ? g.button.copy : E.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN, v = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button', Z = (null === (n = g.button) || void 0 === n ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? () => {
+(0, o.uL)(h.Z5c.APPLICATION_STORE), N();
   } : () => (0, l.Z)({
 subscriptionTier: _.Si.TIER_2,
 analyticsLocations: T,
 analyticsObject: {
   ...f,
-  object: E.qAy.BUTTON_CTA,
-  objectType: E.Qqv.TIER_2
+  object: h.qAy.BUTTON_CTA,
+  objectType: h.Qqv.TIER_2
 },
 onClose: e => {
   e && N();
@@ -45,7 +45,7 @@ onClose: e => {
   }), L = '' !== g.helpArticleId ? () => (0, i.jsx)(r.Anchor, {
 className: I.termsApplyAnchor,
 href: d.Z.getArticleURL(g.helpArticleId),
-children: h.Z.Messages.BOGO_TERMS_APPLY
+children: E.Z.Messages.BOGO_TERMS_APPLY
   }) : void 0, O = {
 type: 'video',
 src: S ? g.heroArtVideoLinkLightTheme : g.videoLink
@@ -87,7 +87,7 @@ button: () => {
     color: r.Button.Colors.GREEN,
     size: r.Button.Sizes.SMALL,
     onClick: () => {
-      c.default.track(E.rMx.CHANGE_LOG_CTA_CLICKED, {
+      c.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
         change_log_id: C,
         cta_type: v,
         seconds_open: Math.round((Date.now() - e) / 1000),

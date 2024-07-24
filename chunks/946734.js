@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(884338),
-  d = n(100527),
-  u = n(906732),
+  u = n(100527),
+  d = n(906732),
   h = n(150039),
   p = n(171368),
   m = n(271383),
@@ -116,7 +116,7 @@ function A(e) {
 channel: t
   } = e, n = t.getRecipientId(), s = (0, h.gc)(n), l = Array(s.length).fill(null), {
 analyticsLocations: p
-  } = (0, u.ZP)(d.Z.AKA), m = function(e) {
+  } = (0, d.ZP)(u.Z.AKA), m = function(e) {
 let {
   userId: t,
   channelId: n,
@@ -140,7 +140,7 @@ channelId: t.id
   });
   return 0 === m.getNicknameGuildPairs().length && 0 === s.length ? (0, i.jsx)('div', {
 className: v.spacer
-  }) : (0, i.jsxs)(u.Gt, {
+  }) : (0, i.jsxs)(d.Gt, {
 value: p,
 children: [
   (0, i.jsx)(I.iz, {}),

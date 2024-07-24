@@ -11,8 +11,8 @@ var a = n(399606),
   r = n(158776),
   o = n(699516),
   c = n(594174),
-  d = n(51144),
-  u = n(984370),
+  u = n(51144),
+  d = n(984370),
   h = n(689938),
   p = n(625032);
 
@@ -23,7 +23,7 @@ m = (0, a.e7)([c.default], () => c.default.getUser(t)),
 _ = (0, a.e7)([r.Z], () => r.Z.getStatus(t)),
 f = (0, a.e7)([r.Z], () => r.Z.isMobileOnline(t)),
 E = (0, a.e7)([o.Z], () => o.Z.getNickname(t)),
-C = d.ZP.useUserTag(m),
+C = u.ZP.useUserTag(m),
 g = (0, l.m$)({
   channelId: e.channel.id,
   location: 'HeaderBarDirectMessageV2'
@@ -39,11 +39,11 @@ children: [
       isMobile: f,
       className: p.avatar,
       size: s.AvatarSizes.SIZE_24,
-      'aria-label': d.ZP.getName(m),
+      'aria-label': u.ZP.getName(m),
       src: m.getAvatarURL(void 0, 24)
     })
   }),
-  (0, i.jsx)(u.Z.Title, {
+  (0, i.jsx)(d.Z.Title, {
     level: e.level,
     onClick: e.handleClick,
     onContextMenu: e.handleContextMenu,
@@ -53,7 +53,7 @@ children: [
         (0, i.jsx)(s.TooltipContainer, {
           text: C,
           position: 'bottom',
-          children: null != E ? E : d.ZP.getName(m)
+          children: null != E ? E : u.ZP.getName(m)
         }),
         g && (0, i.jsx)(s.ShieldLockIcon, {
           size: 'xxs',

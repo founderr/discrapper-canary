@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(519938),
   o = n(928518),
   c = n(585483),
-  d = n(317381),
-  u = n(917107),
+  u = n(317381),
+  d = n(917107),
   h = n(716600),
   p = n(918559),
   m = n(981631);
@@ -29,8 +29,8 @@ function f(e) {
 } = e,
 f = (0, s.e7)([o.Z], () => o.Z.getWindow(m.KJ3.CHANNEL_CALL_POPOUT)),
 E = (0, h.Z)(),
-C = (0, s.e7)([d.ZP], () => d.ZP.getActivityPanelMode());
-  if (null != E && !(0, u.Z)(E.channelId) && C === p.Ez.PANEL)
+C = (0, s.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
+  if (null != E && !(0, d.Z)(E.channelId) && C === p.Ez.PANEL)
 t = window;
   else {
 var g;

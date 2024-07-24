@@ -24,7 +24,7 @@ this.animation.stop();
 r(this, 'animation', void 0), this.animation = e;
   }
 }
-class i {
+class o {
   _map(e) {
 return this.animations.map(e);
   }
@@ -38,7 +38,7 @@ this._map(e => e.stop());
 r(this, 'animations', void 0), this.animations = e;
   }
 }
-class o {
+class i {
   async start() {
 for (let e of (this.stopped = !1, this.animations)) {
   if (this.stopped)
@@ -68,9 +68,9 @@ return c(e, t, s.Z.timing);
 return c(e, t, s.Z.spring);
   },
   parallel: function(e) {
-return new i(e);
+return new o(e);
   },
   sequence: function(e) {
-return new o(e);
+return new i(e);
   }
 };

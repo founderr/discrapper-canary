@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(605236),
   o = n(243778),
   c = n(375954),
-  d = n(890977),
-  u = n(921944);
+  u = n(890977),
+  d = n(921944);
 
 function h(e) {
   let {
@@ -24,7 +24,7 @@ let e = [];
 return m && e.push(l.z.DESKTOP_APP_LAUNCHER_ONBOARDING), e;
   }, [m]), f = () => {
 setTimeout(() => (0, r.EW)(l.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
-  dismissAction: u.L.AUTO_DISMISS
+  dismissAction: d.L.AUTO_DISMISS
 }), 10000);
   };
   return (0, i.jsx)(o.Z, {
@@ -34,7 +34,7 @@ children: e => {
     visibleContent: a
   } = e;
   if (a === l.z.DESKTOP_APP_LAUNCHER_ONBOARDING)
-    return (0, i.jsx)(d.b, {
+    return (0, i.jsx)(u.b, {
       animationContainerClassName: n,
       glowClassName: h,
       trinketsClassName: p,

@@ -10,16 +10,16 @@ var i = n(735250),
   r = n.n(l),
   o = n(963838),
   c = n(353368),
-  d = n(949534);
-let u = async e => {
+  u = n(949534);
+let d = async e => {
   var t;
   let {
 animationType: n,
 animationId: i,
 url: a,
 shouldResize: l
-  } = e, r = null !== (t = o.Jw[n]) && void 0 !== t ? t : o.Jw[c.q.BASIC], d = JSON.parse(JSON.stringify(null != i && i < r.length ? r[i] : (0, s.sample)(r)));
-  return d.assets[0].p = l ? await (0, o.lv)(a) : a, d;
+  } = e, r = null !== (t = o.Jw[n]) && void 0 !== t ? t : o.Jw[c.q.BASIC], u = JSON.parse(JSON.stringify(null != i && i < r.length ? r[i] : (0, s.sample)(r)));
+  return u.assets[0].p = l ? await (0, o.lv)(a) : a, u;
 };
 
 function h(e) {
@@ -32,7 +32,7 @@ onComplete: s
 let e;
 return !async function() {
   if (null != l.current) {
-    let t = await u(n);
+    let t = await d(n);
     e = r().loadAnimation({
       container: l.current,
       renderer: 'svg',
@@ -51,7 +51,7 @@ return !async function() {
 s,
 n
   ]), (0, i.jsx)('div', {
-className: d.effect,
+className: u.effect,
 style: {
   height: t.height,
   width: t.width

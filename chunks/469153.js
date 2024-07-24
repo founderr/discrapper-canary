@@ -6,9 +6,9 @@ var a = n(338545),
   r = n(607070),
   o = n(689938),
   c = n(348910),
-  d = n(810819);
-let u = () => (0, i.jsxs)('div', {
-  className: d.toast,
+  u = n(810819);
+let d = () => (0, i.jsxs)('div', {
+  className: u.toast,
   children: [
 (0, i.jsx)(l.Spinner, {
   type: l.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
@@ -26,9 +26,9 @@ t.Z = e => {
 shown: t,
 sent: n,
 className: c
-  } = e, d = (0, s.e7)([r.Z], () => r.Z.useReducedMotion), h = (0, l.useTransition)(t, {
+  } = e, u = (0, s.e7)([r.Z], () => r.Z.useReducedMotion), h = (0, l.useTransition)(t, {
 from: {
-  transform: d ? 'translateY(0)' : 'translateY(16px)',
+  transform: u ? 'translateY(0)' : 'translateY(16px)',
   opacity: 0
 },
 enter: {
@@ -36,7 +36,7 @@ enter: {
   opacity: 1
 },
 leave: {
-  transform: d ? 'translateY(0)' : 'translateY(16px)',
+  transform: u ? 'translateY(0)' : 'translateY(16px)',
   opacity: 0
 },
 config: {
@@ -60,7 +60,7 @@ children: h((e, t) => t && (0, i.jsx)(a.animated.div, {
     type: l.ToastType.CUSTOM,
     id: 'custom_loading_message_toast',
     options: {
-      component: (0, i.jsx)(u, {})
+      component: (0, i.jsx)(d, {})
     }
   })
 }))

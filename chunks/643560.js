@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(299206),
   o = n(726521),
   c = n(99325),
-  d = n(683818),
-  u = n(689938);
+  u = n(683818),
+  d = n(689938);
 
 function h(e) {
   let {
@@ -23,9 +23,9 @@ hideEditButton: m = !1
 isEntryAdmin: _,
 canEdit: f,
 canRemove: E
-  } = (0, d.Z)(t), C = (0, r.Z)({
+  } = (0, u.Z)(t), C = (0, r.Z)({
 id: t.guildId,
-label: u.Z.Messages.COPY_ID_GUILD,
+label: d.Z.Messages.COPY_ID_GUILD,
 onSuccess: p
   });
   a.useEffect(() => {
@@ -41,14 +41,14 @@ c.kx(t.channelId, t.guildId);
   return (0, i.jsxs)(s.Menu, {
 navId: 'guild-entry-context',
 onClose: I,
-'aria-label': u.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
+'aria-label': d.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
 onSelect: h,
 children: [
   (0, i.jsxs)(s.MenuGroup, {
     children: [
       f && !m ? (0, i.jsx)(s.MenuItem, {
         id: 'update-entry',
-        label: u.Z.Messages.HUB_ENTRY_UPDATE,
+        label: d.Z.Messages.HUB_ENTRY_UPDATE,
         action: function() {
           (0, s.openModalLazy)(async () => {
             let {
@@ -63,17 +63,17 @@ children: [
       }) : null,
       E ? (0, i.jsx)(s.MenuItem, {
         id: 'remove-from-hub',
-        label: u.Z.Messages.HUB_ENTRY_REMOVE,
+        label: d.Z.Messages.HUB_ENTRY_REMOVE,
         action: function() {
           (0, s.openModal)(e => (0, i.jsx)(s.ConfirmModal, {
-            header: u.Z.Messages.HUB_ENTRY_REMOVE,
-            confirmText: u.Z.Messages.REMOVE,
-            cancelText: u.Z.Messages.CANCEL,
+            header: d.Z.Messages.HUB_ENTRY_REMOVE,
+            confirmText: d.Z.Messages.REMOVE,
+            cancelText: d.Z.Messages.CANCEL,
             onConfirm: g,
             ...e,
             children: (0, i.jsx)(s.Text, {
               variant: 'text-md/normal',
-              children: u.Z.Messages.HUB_ENTRY_REMOVE_BODY.format({
+              children: d.Z.Messages.HUB_ENTRY_REMOVE_BODY.format({
                 guildName: t.name
               })
             })
@@ -84,7 +84,7 @@ children: [
       _ ? null : (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(s.MenuItem, {
           id: 'report-server-listing',
-          label: u.Z.Messages.REPORT_SERVER_NO_NAME,
+          label: d.Z.Messages.REPORT_SERVER_NO_NAME,
           action: function() {
             null != t && ((0, o.sq)(t), I());
           },

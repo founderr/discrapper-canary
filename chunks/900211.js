@@ -15,13 +15,13 @@ onResize: n,
 onResizeEnd: r,
 minHeight: o,
 maxHeight: c
-  } = e, [d, u] = a.useState(null);
+  } = e, [u, d] = a.useState(null);
   a.useEffect(() => {
 var e, n;
-u(null !== (n = null === (e = t.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== n ? n : null);
+d(null !== (n = null === (e = t.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== n ? n : null);
   }, [t]);
   let h = (0, s.Z)({
-initialElementDimension: d,
+initialElementDimension: u,
 minDimension: o,
 maxDimension: c,
 resizableDomNodeRef: t,

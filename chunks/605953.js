@@ -11,8 +11,8 @@ var a = n(442837),
   r = n(765104),
   o = n(626135),
   c = n(665149),
-  d = n(981631),
-  u = n(814249),
+  u = n(981631),
+  d = n(814249),
   h = n(689938);
 
 function p(e) {
@@ -22,9 +22,9 @@ channel: t
   return (0, i.jsx)(c.ZP.Icon, {
 icon: s.TopicsIcon,
 onClick: () => {
-  o.default.track(d.rMx.SUMMARIES_SIDEBAR_TOGGLED, {
+  o.default.track(u.rMx.SUMMARIES_SIDEBAR_TOGGLED, {
     summaries_sidebar_open: !n,
-    source: u.Dc.TOOLBAR_BUTTON,
+    source: d.Dc.TOOLBAR_BUTTON,
     guild_id: t.guild_id,
     channel_id: t.id,
     channel_type: t.type

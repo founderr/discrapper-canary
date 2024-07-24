@@ -5,12 +5,12 @@ var i = n(735250),
   r = n(481060),
   o = n(346486),
   c = n(433355),
-  d = n(841829);
+  u = n(841829);
 t.Z = a.memo(function(e) {
   let {
 message: t,
 subtitle: n,
-countdown: u,
+countdown: d,
 buttonText: h,
 buttonColor: p,
 buttonSubmitting: m,
@@ -32,24 +32,24 @@ return (0, i.jsx)(i.Fragment, {
   return null != f ? N = (0, i.jsx)('img', {
 alt: '',
 src: f,
-className: d.image
+className: u.image
   }) : null != E && (N = (0, i.jsx)(r.LottieAnimation, {
 importData: E,
 shouldAnimate: !x,
-className: d.animation
+className: u.animation
   })), (0, i.jsxs)('div', {
-className: d.wrapper,
+className: u.wrapper,
 children: [
   (0, i.jsxs)('div', {
-    className: d.content,
+    className: u.content,
     children: [
       N,
       (0, i.jsxs)('div', {
-        className: d.text,
+        className: u.text,
         children: [
           (0, i.jsx)(r.Heading, {
             variant: 'heading-md/semibold',
-            className: d.title,
+            className: u.title,
             children: t
           }),
           null != n && (0, i.jsx)(r.Text, {
@@ -62,10 +62,10 @@ children: [
     ]
   }),
   (0, i.jsxs)('div', {
-    className: d.buttonContainer,
+    className: u.buttonContainer,
     children: [
       null != C && (0, i.jsx)(r.Button, {
-        className: d.button,
+        className: u.button,
         size: r.Button.Sizes.SMALL,
         onClick: g,
         look: r.Button.Looks.LINK,
@@ -74,8 +74,8 @@ children: [
         children: C
       }),
       null != h && (0, i.jsx)(r.Button, {
-        className: d.button,
-        innerClassName: d.innerButton,
+        className: u.button,
+        innerClassName: u.innerButton,
         size: r.Button.Sizes.SMALL,
         onClick: _,
         submitting: m,
@@ -84,9 +84,9 @@ children: [
       })
     ]
   }),
-  null != u && (0, i.jsx)(o.Z, {
-    className: d.countdown,
-    deadline: u
+  null != d && (0, i.jsx)(o.Z, {
+    className: u.countdown,
+    deadline: d
   })
 ]
   });

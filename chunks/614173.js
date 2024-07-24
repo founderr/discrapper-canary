@@ -13,13 +13,13 @@ var i = n(470079),
 function c(e) {
   let t = (0, a.e7)([s.Z], () => s.Z.getChannel(e), [e]),
 n = l.Uu(o.Plq.REQUEST_TO_SPEAK, t),
-[c, d] = i.useState(n);
+[c, u] = i.useState(n);
   return i.useEffect(() => {
-n !== c && d(n);
+n !== c && u(n);
   }, [n]), [
 c,
 e => {
-  null != t && (d(e), (0, r.Pq)(t, o.Plq.REQUEST_TO_SPEAK, e));
+  null != t && (u(e), (0, r.Pq)(t, o.Plq.REQUEST_TO_SPEAK, e));
 }
   ];
 }

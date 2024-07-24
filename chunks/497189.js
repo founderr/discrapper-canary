@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(481060),
   u = n(749210),
   _ = n(607070),
-  E = n(100527),
-  h = n(931240),
+  h = n(100527),
+  E = n(931240),
   I = n(970606),
   m = n(963202),
   g = n(650461),
@@ -91,14 +91,14 @@ onButtonClick: l,
 buttonText: c,
 hasCompletedUpsell: u,
 isBrowseButtonVisible: _
-  } = e, E = (0, N.GN)(e => e.setUserUpsellScreen, o.Z), h = (0, N.GN)(e => e.started, o.Z), I = s.useMemo(() => a.map(e => ({
+  } = e, h = (0, N.GN)(e => e.setUserUpsellScreen, o.Z), E = (0, N.GN)(e => e.started, o.Z), I = s.useMemo(() => a.map(e => ({
 value: e.id,
 label: e.name
   })), [a]), m = s.useCallback(() => {
 (0, N.fH)(N.v0.DISCOVERY);
   }, []), g = s.useCallback(() => {
-(0, N.fH)(N.v0.GET_STARTED), E(N.o2.USER_ONBOARDING);
-  }, [E]), p = a.length > 1;
+(0, N.fH)(N.v0.GET_STARTED), h(N.o2.USER_ONBOARDING);
+  }, [h]), p = a.length > 1;
   return (0, i.jsxs)(i.Fragment, {
 children: [
   u ? (0, i.jsxs)(i.Fragment, {
@@ -181,7 +181,7 @@ children: [
       })
     ]
   }),
-  h && (0, i.jsx)('div', {
+  E && (0, i.jsx)('div', {
     className: R.upsellStaticHeader,
     children: (0, i.jsx)('div', {
       className: R.upsellBackButton,
@@ -211,7 +211,7 @@ return o ? n[0].id : t[0].id;
   s.useEffect(() => {
 !o && (0, I.TE)({
   guildId: x,
-  location: E.Z.CLAN_DISCOVERY
+  location: h.Z.CLAN_DISCOVERY
 });
   }, [
 o,
@@ -239,7 +239,7 @@ U
   let w = s.useCallback(() => {
   !o && ((0, I._9)({
     guildId: x,
-    location: E.Z.CLAN_DISCOVERY
+    location: h.Z.CLAN_DISCOVERY
   }), (0, S.q4)(e => {
     let {
       closeLayer: t
@@ -352,7 +352,7 @@ X = (0, d.useSpring)({
 }, 'animate-always'),
 J = s.useMemo(() => null == j ? O.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : O.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [j]),
 $ = s.useCallback(async () => {
-  await (0, h.Zx)(x), u.Z.transitionToGuildSync('936317138904440892');
+  await (0, E.Zx)(x), u.Z.transitionToGuildSync('936317138904440892');
 }, [x]),
 ee = s.useCallback(e => (0, i.jsx)(d.Clickable, {
   tag: 'span',

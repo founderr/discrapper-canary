@@ -11,8 +11,8 @@ var i, a, s = n(735250),
   r = n(120356),
   o = n.n(r),
   c = n(442837),
-  d = n(481060),
-  u = n(2052),
+  u = n(481060),
+  d = n(2052),
   h = n(317381),
   p = n(638880),
   m = n(613611),
@@ -46,7 +46,7 @@ avatarSize: t,
 guildId: n,
 channelId: i,
 users: a
-  } = e, l = null != t ? t : d.AvatarSizes.SIZE_32, r = (0, d.getAvatarSize)(l);
+  } = e, l = null != t ? t : u.AvatarSizes.SIZE_32, r = (0, u.getAvatarSize)(l);
   return (0, s.jsx)(T.Z, {
 size: r,
 guildId: n,
@@ -56,9 +56,9 @@ renderUser: e => {
   if (null == e)
     return null;
   let t = P.ZP.getName(n, i, e);
-  return (0, s.jsx)(d.TooltipContainer, {
+  return (0, s.jsx)(u.TooltipContainer, {
     text: t,
-    color: d.TooltipColors.GREY,
+    color: u.TooltipColors.GREY,
     children: (0, s.jsx)('img', {
       src: e.getAvatarURL(n, r),
       alt: t,
@@ -80,20 +80,20 @@ width: C
   } = e;
   let g = (i = C) > 400 ? 2 : i > 300 ? 1 : 0;
   let [x] = (a = C) > 400 ? [
-d.AvatarSizes.SIZE_56,
+u.AvatarSizes.SIZE_56,
 56
   ] : a > 300 ? [
-d.AvatarSizes.SIZE_32,
+u.AvatarSizes.SIZE_32,
 32
   ] : [
-d.AvatarSizes.SIZE_24,
+u.AvatarSizes.SIZE_24,
 24
   ], T = (0, c.Wu)([
 j.default,
 b.default
   ], () => Array.from(l).map(e => (0, m.J)(e, b.default) ? null : j.default.getUser(e.userId)).filter(L.lm)), N = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === r.id)), {
 analyticsLocations: v
-  } = (0, Z.ZP)(), S = (0, u.O)(), A = P.ZP.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), M = (0, _.s5)({
+  } = (0, Z.ZP)(), S = (0, d.O)(), A = P.ZP.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), M = (0, _.s5)({
 userId: null === (t = j.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
 channelId: E.id,
 application: r
@@ -107,7 +107,7 @@ children: [
     channelId: E.id,
     users: T
   }),
-  (0, s.jsx)(d.Text, {
+  (0, s.jsx)(u.Text, {
     className: o()(y.subheader, {
       [y.small]: 0 === g,
       [y.medium]: 1 === g
@@ -120,7 +120,7 @@ children: [
       username: A
     })
   }),
-  (0, s.jsx)(d.Text, {
+  (0, s.jsx)(u.Text, {
     className: o()(y.header, {
       [y.small]: 0 === g,
       [y.medium]: 1 === g
@@ -130,7 +130,7 @@ children: [
   }),
   (0, s.jsx)('div', {
     className: y.buttons,
-    children: M ? (0, s.jsx)(d.Button, {
+    children: M ? (0, s.jsx)(u.Button, {
       onClick: function(e) {
         if (e.stopPropagation(), null != N)
           (0, p.Z)({
@@ -145,15 +145,15 @@ children: [
       size: function(e) {
         switch (e) {
           case 2:
-            return d.Button.Sizes.LARGE;
+            return u.Button.Sizes.LARGE;
           case 1:
-            return d.Button.Sizes.MEDIUM;
+            return u.Button.Sizes.MEDIUM;
           case 0:
-            return d.Button.Sizes.SMALL;
+            return u.Button.Sizes.SMALL;
         }
       }(g),
       className: y.button,
-      color: d.Button.Colors.PRIMARY,
+      color: u.Button.Colors.PRIMARY,
       children: O.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
     }) : null
   })
@@ -171,11 +171,11 @@ channel: r
   } = e, {
 analyticsLocations: o
   } = (0, Z.ZP)(S.Z.ACTIVITY_TILE), {
-id: d
-  } = t, u = (0, f.Z)(), h = (null == u ? void 0 : u.channelId) === r.id && u.applicationId === d, p = (0, E.Z)(), [m] = (0, A.Z)([d]), {
+id: u
+  } = t, d = (0, f.Z)(), h = (null == d ? void 0 : d.channelId) === r.id && d.applicationId === u, p = (0, E.Z)(), [m] = (0, A.Z)([u]), {
 url: _
   } = (0, C.Z)({
-applicationId: d,
+applicationId: u,
 names: D,
 size: 1024
   }), I = !i && h, T = !h, b = !h && !i, j = (0, c.e7)([
@@ -186,13 +186,13 @@ LayerStore: R.Z,
 PopoutWindowStore: M.Z
   }));
   return l.useEffect(() => {
-if (I && null != u && !j) {
-  let e = (0, N.Z)(u.channelId, u.applicationId);
+if (I && null != d && !j) {
+  let e = (0, N.Z)(d.channelId, d.applicationId);
   (0, x.jy)(e);
 }
   }, [
 I,
-u,
+d,
 j
   ]), (0, s.jsx)(Z.Gt, {
 value: o,
@@ -202,7 +202,7 @@ children: (0, s.jsx)('div', {
     children: [
       I && (0, s.jsx)(g.Z, {
         className: y.iframe,
-        embedId: (0, N.Z)(r.id, d)
+        embedId: (0, N.Z)(r.id, u)
       }),
       T && null != m && null != _ && '' !== _ ? (0, s.jsx)('img', {
         className: y.splashImage,

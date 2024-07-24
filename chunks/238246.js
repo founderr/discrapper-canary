@@ -5,8 +5,8 @@ var i, a = n(735250),
   r = n.n(l),
   o = n(512722),
   c = n.n(o),
-  d = n(613828),
-  u = n(442837),
+  u = n(613828),
+  d = n(442837),
   h = n(481060),
   p = n(490173),
   m = n(40851),
@@ -131,7 +131,7 @@ let {
   windowKey: l,
   mouseModeEnabled: o,
   keyboardModeEnabled: c,
-  reducedMotionEnabled: u,
+  reducedMotionEnabled: d,
   fontScaleClass: _,
   saturation: E,
   withTitleBar: C,
@@ -140,13 +140,13 @@ let {
   contentClassName: x
 } = this.props, S = (0, O.getPlatform)(), Z = r()(_, {
   'mouse-mode': o,
-  'reduce-motion': u,
-  'full-motion': !u,
+  'reduce-motion': d,
+  'full-motion': !d,
   'keyboard-mode': c,
   'app-focused': n || i,
   'low-saturation': E <= 0.4
 });
-return (0, a.jsx)(d.VK, {
+return (0, a.jsx)(u.VK, {
   children: (0, a.jsx)(A.Z, {
     children: (0, a.jsx)(h.ThemeContextProvider, {
       theme: e,
@@ -220,32 +220,32 @@ let F = s.forwardRef(function(e, t) {
   let {
 guestWindow: n,
 focused: i
-  } = (0, u.cj)([U.Z], () => ({
+  } = (0, d.cj)([U.Z], () => ({
 guestWindow: U.Z.getWindow(e.windowKey),
 focused: U.Z.getWindowFocused(e.windowKey)
   }));
   c()(null != n, 'Missing guestWindow reference');
-  let s = (0, u.e7)([j.Z], () => j.Z.isFocused()),
+  let s = (0, d.e7)([j.Z], () => j.Z.isFocused()),
 {
   locale: l,
   theme: r
-} = (0, u.cj)([
+} = (0, d.cj)([
   b.Z,
   M.default
 ], () => ({
   locale: M.default.locale,
   theme: b.Z.theme
 })),
-o = (0, u.e7)([_.Z], () => _.Z.useForcedColors ? 'yes' : 'no'),
+o = (0, d.e7)([_.Z], () => _.Z.useForcedColors ? 'yes' : 'no'),
 {
-  fontScale: d,
+  fontScale: u,
   keyboardModeEnabled: p,
   reducedMotionEnabled: m,
   fontScaleClass: f,
   saturation: C,
   systemForcedColors: T,
   useForcedColors: N
-} = (0, u.cj)([_.Z], () => ({
+} = (0, d.cj)([_.Z], () => ({
   fontScale: _.Z.fontScale,
   keyboardModeEnabled: _.Z.keyboardModeEnabled,
   reducedMotionEnabled: _.Z.useReducedMotion,
@@ -254,7 +254,7 @@ o = (0, u.e7)([_.Z], () => _.Z.useForcedColors ? 'yes' : 'no'),
   systemForcedColors: _.Z.systemForcedColors,
   useForcedColors: _.Z.useForcedColors
 })),
-v = (0, u.e7)([E.ZP], () => null != e.channelId && null !== E.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
+v = (0, d.e7)([E.ZP], () => null != e.channelId && null !== E.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
   (0, S.Z)(n, !1);
   let A = (0, Z.Z)(n, i),
 {
@@ -278,7 +278,7 @@ children: (0, a.jsx)(I.Gt, {
     forcedColors: o,
     useForcedColors: N,
     systemForcedColors: T,
-    fontScale: d,
+    fontScale: u,
     keyboardModeEnabled: p,
     mouseModeEnabled: A,
     reducedMotionEnabled: m,

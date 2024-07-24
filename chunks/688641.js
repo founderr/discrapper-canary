@@ -17,8 +17,8 @@ className: t,
 iconContainerClassName: n,
 icon: a,
 color: c,
-title: d,
-description: u,
+title: u,
+description: d,
 userCount: h,
 onClick: p,
 highlight: m
@@ -41,13 +41,13 @@ children: [
     children: [
       (0, i.jsx)(l.Heading, {
         variant: 'heading-md/semibold',
-        children: d
+        children: u
       }),
       (0, i.jsx)(l.Text, {
         variant: 'text-xs/normal',
         color: 'header-secondary',
         className: o.inline,
-        children: u
+        children: d
       }),
       null != h && h > 0 ? (0, i.jsxs)(i.Fragment, {
         children: [

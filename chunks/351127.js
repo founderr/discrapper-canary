@@ -22,11 +22,11 @@ var i = n(149765),
   r = n(594174),
   o = n(700785),
   c = n(981631),
-  d = n(135899);
-let u = [c.Plq.USE_CLYDE_AI],
-  h = Object.keys(c.Plq).filter(e => !u.includes(c.Plq[e])),
+  u = n(135899);
+let d = [c.Plq.USE_CLYDE_AI],
+  h = Object.keys(c.Plq).filter(e => !d.includes(c.Plq[e])),
   p = Array.from(new Set([
-...d.$X,
+...u.$X,
 ...c.yYS,
 c.Plq.ADMINISTRATOR,
 c.Plq.KICK_MEMBERS,
@@ -56,36 +56,36 @@ function _(e, t) {
 }
 
 function f(e, t, n) {
-  let d = (0, a.e7)([l.Z], () => l.Z.getGuild(t), [t]);
+  let u = (0, a.e7)([l.Z], () => l.Z.getGuild(t), [t]);
   return (0, a.e7)([
 s.ZP,
 r.default,
 l.Z
   ], () => {
 let a = {},
-  u = s.ZP.getMember(t, e),
+  d = s.ZP.getMember(t, e),
   h = r.default.getUser(e);
-if (null == d || null == u || null == h)
+if (null == u || null == d || null == h)
   return a;
-let p = l.Z.getRole(d.id, d.getEveryoneRoleId()),
+let p = l.Z.getRole(u.id, u.getEveryoneRoleId()),
   m = o.uB({
     user: h,
-    context: d
+    context: u
   });
 for (let e of n) {
   let t = c.Plq[e];
   if (!!i.e$(m, t)) {
-    for (let n of (a[e] = [], u.roles)) {
-      let s = l.Z.getRole(d.id, n);
+    for (let n of (a[e] = [], d.roles)) {
+      let s = l.Z.getRole(u.id, n);
       if (null != s)
         (i.e$(s.permissions, c.Plq.ADMINISTRATOR) || i.Db(s.permissions, t)) && a[e].push(s.id);
     }
-    null != p && (i.e$(p.permissions, c.Plq.ADMINISTRATOR) || i.Db(p.permissions, t)) && a[e].push(p.id), d.isOwner(h) && a[e].push(h.id);
+    null != p && (i.e$(p.permissions, c.Plq.ADMINISTRATOR) || i.Db(p.permissions, t)) && a[e].push(p.id), u.isOwner(h) && a[e].push(h.id);
   }
 }
 return a;
   }, [
-d,
+u,
 t,
 n,
 e

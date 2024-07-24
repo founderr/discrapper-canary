@@ -6,8 +6,8 @@ return E;
 var i, a, s, l, r = n(735250),
   o = n(470079),
   c = n(699581),
-  d = n(374470),
-  u = n(442837),
+  u = n(374470),
+  d = n(442837),
   h = n(260300),
   p = n(451478),
   m = n(5560),
@@ -49,18 +49,18 @@ let {
 } = this.props;
 if (e && null == l) {
   let e = (0, c.findDOMNode)(this);
-  if (!(0, d.k)(e))
+  if (!(0, u.k)(e))
     return;
   let {
     top: s,
     left: l,
     right: o,
-    bottom: u
+    bottom: d
   } = e.getBoundingClientRect();
   h.Z.show(t, {
     position: n,
     targetWidth: o - l,
-    targetHeight: u - s,
+    targetHeight: d - s,
     autoInvert: r,
     origin: {
       x: l,
@@ -103,7 +103,7 @@ return null != e && null != c ? (0, r.jsxs)(r.Fragment, {
 function E(e) {
   let {
 tutorialId: t
-  } = e, n = (0, u.e7)([_.Z], () => _.Z.shouldShow(t), [t]), i = (0, u.e7)([p.Z], () => p.Z.isFocused()), a = (0, u.e7)([p.Z], () => p.Z.windowSize(), []);
+  } = e, n = (0, d.e7)([_.Z], () => _.Z.shouldShow(t), [t]), i = (0, d.e7)([p.Z], () => p.Z.isFocused()), a = (0, d.e7)([p.Z], () => p.Z.windowSize(), []);
   return (0, r.jsx)(f, {
 ...e,
 visible: n,

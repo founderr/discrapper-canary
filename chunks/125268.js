@@ -3,7 +3,7 @@ n.d(t, {
 return c;
   },
   BR: function() {
-return u;
+return d;
   },
   Bo: function() {
 return f;
@@ -18,7 +18,7 @@ return E;
 return p;
   },
   cV: function() {
-return d;
+return u;
   },
   fW: function() {
 return _;
@@ -57,7 +57,7 @@ body: {
   });
 }
 
-function d(e, t, n, i) {
+function u(e, t, n, i) {
   s.Z.dispatch({
 type: 'SHARED_CANVAS_UPDATE_LINE_POINTS',
 userId: t,
@@ -67,7 +67,7 @@ streamerId: n
   });
 }
 
-function u(e, t, n) {
+function d(e, t, n) {
   return a.tn.post({
 url: r.ANM.SHARED_CANVAS_EMOJI_HOSES(e, t),
 body: {

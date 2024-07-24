@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(410030),
   o = n(100527),
   c = n(906732),
-  d = n(680295),
-  u = n(785717),
+  u = n(680295),
+  d = n(785717),
   h = n(718107),
   p = n(318661),
   m = n(78675),
@@ -51,7 +51,7 @@ location: 'SimplifiedProfilePanel'
   };
   return (0, i.jsx)(c.Gt, {
 value: j,
-children: (0, i.jsx)(u.Mt, {
+children: (0, i.jsx)(d.Mt, {
   layout: 'SIMPLIFIED_DM_PANEL',
   userId: t.id,
   channelId: n.id,
@@ -126,7 +126,7 @@ children: (0, i.jsx)(u.Mt, {
         user: t,
         channelId: n.id
       }),
-      (null == L ? void 0 : L.profileEffectId) != null && (0, i.jsx)(d.Z, {
+      (null == L ? void 0 : L.profileEffectId) != null && (0, i.jsx)(u.Z, {
         profileEffectId: null == L ? void 0 : L.profileEffectId,
         isHovering: D
       })

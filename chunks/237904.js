@@ -1,10 +1,10 @@
 var i, a, s, l, r, o, c = n(442837),
-  d = n(570140);
+  u = n(570140);
 (i = r || (r = {})).FAILED = 'failed', i.SUCCEEDED = 'succeeded';
-let u = {};
+let d = {};
 class h extends(o = c.ZP.Store) {
   getFollowerStatsForChannel(e) {
-return u[e];
+return d[e];
   }
 }
 l = 'ChannelFollowerStatsStore', (s = 'displayName') in(a = h) ? Object.defineProperty(a, s, {
@@ -12,16 +12,16 @@ l = 'ChannelFollowerStatsStore', (s = 'displayName') in(a = h) ? Object.definePr
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = l, t.Z = new h(d.Z, {
+}) : a[s] = l, t.Z = new h(u.Z, {
   CONNECTION_OPEN: function() {
-u = {};
+d = {};
   },
   CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS: function(e) {
 let {
   channelId: t,
   stats: n
 } = e;
-n = null != n ? n : {}, u[t] = {
+n = null != n ? n : {}, d[t] = {
   loadingStatus: 'succeeded',
   lastFetched: Date.now(),
   channelsFollowing: n.channels_following,
@@ -36,7 +36,7 @@ n = null != n ? n : {}, u[t] = {
 let {
   channelId: t
 } = e;
-u[t] = {
+d[t] = {
   loadingStatus: 'failed',
   lastFetched: Date.now(),
   channelsFollowing: 0,

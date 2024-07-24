@@ -8,8 +8,8 @@ var i = n(735250),
   d = n(39377),
   u = n(981631),
   _ = n(689938),
-  E = n(269866);
-let h = [{
+  h = n(269866);
+let E = [{
   feature: u.Qa3.SINGLE_PLAYER,
   getText: () => _.Z.Messages.APPLICATION_STORE_SINGLE_PLAYER,
   getTooltip: () => _.Z.Messages.APPLICATION_STORE_SINGLE_PLAYER_TOOLTIP,
@@ -95,23 +95,23 @@ let {
   tooltip: s
 } = e;
 return (0, i.jsxs)('div', {
-  className: E.row,
+  className: h.row,
   children: [
     (0, i.jsx)(a.Tooltip, {
       text: s,
       children: e => (0, i.jsx)(t, {
-        className: E.featureIcon,
+        className: h.featureIcon,
         ...e
       })
     }),
     (0, i.jsx)('span', {
-      className: E.featureText,
+      className: h.featureText,
       children: n
     }),
     (0, i.jsx)(a.CheckmarkLargeIcon, {
       size: 'md',
       color: 'currentColor',
-      className: E.checkmarkIcon
+      className: h.checkmarkIcon
     })
   ]
 });
@@ -120,7 +120,7 @@ class m extends s.PureComponent {
   render() {
 let {
   sku: e
-} = this.props, t = h.filter(t => {
+} = this.props, t = E.filter(t => {
   let {
     feature: n
   } = t;
@@ -139,7 +139,7 @@ let {
   }, t);
 });
 return 0 === t.length ? null : (0, i.jsxs)('div', {
-  className: E.features,
+  className: h.features,
   children: [
     (0, i.jsx)(r.Z, {
       children: _.Z.Messages.APPLICATION_STORE_SECTION_TITLE_FEATURES

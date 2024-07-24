@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(442837),
   o = n(570140),
   c = n(239091),
-  d = n(561472),
-  u = n(367907),
+  u = n(561472),
+  d = n(367907),
   h = n(731429),
   p = n(188471),
   m = n(933557),
@@ -56,9 +56,9 @@ a.useEffect(() => {
     return;
   P.current = !0;
   let e = (0, h.K)(I.Z.getChannel(R.id), !0);
-  (0, u.yw)(Z.rMx.CHANNEL_OPENED, {
+  (0, d.yw)(Z.rMx.CHANNEL_OPENED, {
     ...e,
-    ...(0, u.$H)(R.id),
+    ...(0, d.$H)(R.id),
     channel_view: b
   }), (0, p.a)(Z.rMx.CHANNEL_OPENED_CLICKSTREAM, {
     channelId: R.id
@@ -74,7 +74,7 @@ baseChannelId: s
   });
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsx)(d.Z, {
+  (0, i.jsx)(u.Z, {
     channel: R,
     draftType: x.d.ChannelMessage
   }),

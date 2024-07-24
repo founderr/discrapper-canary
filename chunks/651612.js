@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(481060),
   o = n(481051),
   c = n(871499),
-  d = n(306680),
-  u = n(111583),
+  u = n(306680),
+  d = n(111583),
   h = n(459273),
   p = n(566620),
   m = n(317381),
@@ -32,13 +32,13 @@ let e = x ? _.MI.NO_CHAT : _.MI.RESIZABLE;
 unreadCount: N,
 mentionCount: v
   } = function(e) {
-let t = (0, l.e7)([u.Z], () => !(0, s.isEmpty)(u.Z.getTypingUsers(e)), [e]),
+let t = (0, l.e7)([d.Z], () => !(0, s.isEmpty)(d.Z.getTypingUsers(e)), [e]),
   {
     unreadCount: n,
     mentionCount: i
-  } = (0, l.cj)([d.ZP], () => ({
-    unreadCount: d.ZP.getUnreadCount(e),
-    mentionCount: d.ZP.getMentionCount(e)
+  } = (0, l.cj)([u.ZP], () => ({
+    unreadCount: u.ZP.getUnreadCount(e),
+    mentionCount: u.ZP.getMentionCount(e)
   }), [e]);
 return {
   unreadCount: n,

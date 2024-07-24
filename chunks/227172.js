@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(481060),
   o = n(620662),
   c = n(841784),
-  d = n(420660),
-  u = n(429589),
+  u = n(420660),
+  d = n(429589),
   h = n(757182),
   p = n(706454),
   m = n(374129),
@@ -138,7 +138,7 @@ Q = null == G ? (0, i.jsx)(S.wG, {
   entry: s,
   stream: V
 }),
-J = (0, o.Z)(D, M.xjy.JOIN) || (0, c.Z)(D) ? (0, i.jsx)(u.Z, {
+J = (0, o.Z)(D, M.xjy.JOIN) || (0, c.Z)(D) ? (0, i.jsx)(d.Z, {
   activity: D,
   user: P,
   ButtonComponent: e => (0, i.jsx)(S.Ll, {
@@ -148,7 +148,7 @@ J = (0, o.Z)(D, M.xjy.JOIN) || (0, c.Z)(D) ? (0, i.jsx)(u.Z, {
 }) : null,
 $ = [
   J,
-  (0, d.Z)(D) ? (0, i.jsx)(h.Z, {
+  (0, u.Z)(D) ? (0, i.jsx)(h.Z, {
     activity: D,
     ButtonComponent: e => (0, i.jsx)(S.Ll, {
       IconComponent: r.EyeIcon,

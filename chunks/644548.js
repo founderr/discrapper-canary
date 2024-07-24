@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(5192),
   o = n(561308),
   c = n(919394),
-  d = n(206295),
-  u = n(227172),
+  u = n(206295),
+  d = n(227172),
   h = n(555672),
   p = n(297781),
   m = n(591853),
@@ -46,7 +46,7 @@ coverImageUrl: S
   } = (0, f.n)(n), {
 primaryColor: Z,
 secondaryColor: A
-  } = (0, d.Z)(I), M = (0, o.yA)(n), b = (0, o.Nq)(n), R = a.useCallback(e => {
+  } = (0, u.Z)(I), M = (0, o.yA)(n), b = (0, o.Nq)(n), R = a.useCallback(e => {
 if (null != T && null != M && null != b && !!(0, h.qy)(b))
   return (0, c.SO)({
     entry: n,
@@ -74,7 +74,7 @@ T
   ]);
   if (null == T || null == M || null == b || !(0, h.qy)(b))
 return null;
-  let j = null != n.extra.platform ? u.v[n.extra.platform] : null;
+  let j = null != n.extra.platform ? d.v[n.extra.platform] : null;
   return (0, i.jsxs)(m.yR, {
 children: [
   (0, i.jsx)(m.wG, {

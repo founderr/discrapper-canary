@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(481060),
   o = n(797614),
   c = n(699516),
-  d = n(378298),
-  u = n(359119),
+  u = n(378298),
+  d = n(359119),
   h = n(473092),
   p = n(177342),
   m = n(134612),
@@ -23,7 +23,7 @@ channelId: t,
 warningId: f,
 senderId: E
   } = e, C = a.useCallback(() => {
-(0, d.T)(t, [f]);
+(0, u.T)(t, [f]);
   }, [
 t,
 f
@@ -31,7 +31,7 @@ f
 channelId: t,
 warningId: f,
 senderId: E,
-warningType: u.pj.INAPPROPRIATE_CONVERSATION_TIER_2
+warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2
   }), [
 t,
 f,
@@ -68,7 +68,7 @@ T = a.useCallback(() => {
         otherUserId: E,
         channelId: t,
         warningId: f,
-        warningType: u.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
+        warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
         transitionState: a,
         onClose: s
       });
@@ -128,7 +128,7 @@ S = a.useCallback(() => {
 channelId: t,
 warningId: f,
 senderId: E,
-warningType: u.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
+warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
 header: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_HEADER,
 description: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION,
 onDismiss: C,

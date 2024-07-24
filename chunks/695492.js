@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return u;
+return d;
   }
 });
 var i = n(735250);
@@ -11,19 +11,19 @@ var a = n(481060),
   r = n(981631),
   o = n(689938),
   c = n(140160),
-  d = n(800350);
+  u = n(800350);
 
-function u(e) {
+function d(e) {
   let {
 channel: t,
-guild: u,
+guild: d,
 width: h,
 inPopout: p
   } = e;
   return (0, i.jsx)(s.Z, {
 className: c.root,
 children: (0, i.jsx)(l.Z, {
-  artURL: d,
+  artURL: u,
   size: (0, l.L)(h),
   header: o.Z.Messages.STREAM_SINGLE_PERSON_BODY,
   onCTAClick: () => (0, a.openModalLazy)(async () => {
@@ -35,7 +35,7 @@ children: (0, i.jsx)(l.Z, {
     ]).then(n.bind(n, 560114));
     return n => (0, i.jsx)(e, {
       ...n,
-      guild: u,
+      guild: d,
       channel: t,
       source: r.t4x.CHANNEL_CALL
     });

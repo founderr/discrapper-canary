@@ -12,12 +12,12 @@ function s(e, t) {
 r = null,
 o = null,
 c = !1,
-d = !1;
+u = !1;
   switch (e.type) {
 case a.fO.ACTIVITY:
   break;
 case a.fO.USER:
-  l = e.streamId, o = e.voiceState, c = e.speaking, d = e.ringing;
+  l = e.streamId, o = e.voiceState, c = e.speaking, u = e.ringing;
   break;
 case a.fO.STREAM:
   l = e.streamId, r = e.stream;
@@ -26,7 +26,7 @@ case a.fO.STREAM:
 streamId: l,
 stream: r,
 speaking: c,
-ringing: d,
+ringing: u,
 muted: null !== (n = null == o ? void 0 : o.isVoiceMuted()) && void 0 !== n && n,
 deafen: null !== (s = null == o ? void 0 : o.isVoiceDeafened()) && void 0 !== s && s,
 mirror: e.type === a.fO.USER && e.user.id === t,

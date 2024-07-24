@@ -5,8 +5,8 @@ var i = n(735250),
   r = n(653603),
   o = n.n(r),
   c = n(442837),
-  d = n(481060),
-  u = n(904245),
+  u = n(481060),
+  d = n(904245),
   h = n(232961),
   p = n(223606),
   m = n(63063),
@@ -35,7 +35,7 @@ children: [
     children: [
       (0, i.jsx)('div', {
         className: x.blockedNoticeIcon,
-        children: (0, i.jsx)(d.ShieldIcon, {
+        children: (0, i.jsx)(u.ShieldIcon, {
           size: 'xs',
           color: 'currentColor',
           className: x.shieldIcon
@@ -43,7 +43,7 @@ children: [
       }),
       (0, i.jsx)('div', {
         className: x.blockedNotice,
-        children: (0, i.jsx)(d.Text, {
+        children: (0, i.jsx)(u.Text, {
           variant: 'text-sm/normal',
           color: 'interactive-normal',
           children: n
@@ -58,7 +58,7 @@ children: [
     children: (0, i.jsx)(_.Z, {
       message: t,
       onDeleteMessage: s,
-      children: (0, i.jsx)(d.Text, {
+      children: (0, i.jsx)(u.Text, {
         variant: 'text-xs/normal',
         color: 'interactive-normal',
         tag: 'span',
@@ -77,39 +77,39 @@ t.Z = a.memo(function(e) {
   let {
 className: s,
 compact: r,
-message: d,
+message: u,
 children: m,
 content: _,
 onUpdate: g
-  } = e, S = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), Z = a.useRef(!1), A = (0, c.e7)([p.Z], () => p.Z.getMessage(d.id), [d.id]), M = a.useCallback(() => {
-(null == A ? void 0 : A.isBlockedEdit) ? (0, h.I)(d.id) : u.Z.deleteMessage(d.channel_id, d.id, !0);
+  } = e, S = null === (t = u.editedTimestamp) || void 0 === t ? void 0 : t.toString(), Z = a.useRef(!1), A = (0, c.e7)([p.Z], () => p.Z.getMessage(u.id), [u.id]), M = a.useCallback(() => {
+(null == A ? void 0 : A.isBlockedEdit) ? (0, h.I)(u.id) : d.Z.deleteMessage(u.channel_id, u.id, !0);
   }, [
-d,
+u,
 A
   ]);
   return a.useLayoutEffect(() => {
 Z.current ? null != g && g() : Z.current = !0;
   }, [
 g,
-d.content,
+u.content,
 _,
 S,
 m
   ]), (0, i.jsxs)('div', {
-id: (0, f.ut)(d),
+id: (0, f.ut)(u),
 className: l()(s, N.markup, {
   [T.messageContent]: !0,
-  [T.markupRtl]: 'rtl' === o()(d.content),
+  [T.markupRtl]: 'rtl' === o()(u.content),
   [x.blockedEdit]: null == A ? void 0 : A.isBlockedEdit,
   [x.blockedSend]: !(null == A ? void 0 : A.isBlockedEdit)
 }),
 children: [
-  null != m ? m : (0, E.L5)(d, _),
-  (null == A ? void 0 : A.isBlockedEdit) && null != d.timestamp && (0, i.jsxs)(i.Fragment, {
+  null != m ? m : (0, E.L5)(u, _),
+  (null == A ? void 0 : A.isBlockedEdit) && null != u.timestamp && (0, i.jsxs)(i.Fragment, {
     children: [
       ' ',
       (0, i.jsx)(C.Z, {
-        timestamp: d.timestamp,
+        timestamp: u.timestamp,
         isEdited: !0,
         isInline: !1,
         children: (0, i.jsxs)('span', {
@@ -125,7 +125,7 @@ children: [
   }),
   (0, i.jsx)(v, {
     notice: null !== (n = null == A ? void 0 : A.errorMessage) && void 0 !== n ? n : I.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
-    message: d,
+    message: u,
     compact: r,
     onDismiss: M
   })

@@ -16,8 +16,8 @@ blocked: n,
 channel: r,
 className: o,
 focused: c,
-children: d,
-inCall: u,
+children: u,
+inCall: d,
 inPopout: h,
 noBorder: p,
 onClick: m,
@@ -46,7 +46,7 @@ children: (0, i.jsxs)('div', {
       channel: r,
       className: o,
       focused: c,
-      inCall: u,
+      inCall: d,
       inPopout: h,
       noBorder: p,
       onClick: m,
@@ -60,7 +60,7 @@ children: (0, i.jsxs)('div', {
       width: x,
       ...T
     }),
-    d
+    u
   ]
 })
   });

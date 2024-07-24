@@ -11,8 +11,8 @@ var a = n(442837),
   r = n(889161),
   o = n(390322),
   c = n(871499),
-  d = n(592125),
-  u = n(15274),
+  u = n(592125),
+  d = n(15274),
   h = n(482241),
   p = n(389303),
   m = n(554747),
@@ -23,14 +23,14 @@ function E(e) {
   let {
 channelId: t,
 onClick: n
-  } = e, E = (0, l.bp)(), C = (0, m.qY)(t), g = (0, a.e7)([d.Z], () => d.Z.getChannel(t), [t]), {
+  } = e, E = (0, l.bp)(), C = (0, m.qY)(t), g = (0, a.e7)([u.Z], () => u.Z.getChannel(t), [t]), {
 canManageGuildEvent: I
   } = (0, r.XJ)(g), x = I(C);
   if (null == C)
 return null;
   let T = () => {
   if (null != g && (0, p.Z)(g)) {
-    (0, u.lC)(g, E);
+    (0, d.lC)(g, E);
     return;
   }
   n();

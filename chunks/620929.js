@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(913527),
   o = n.n(r),
   c = n(442837),
-  d = n(481060),
-  u = n(430824),
+  u = n(481060),
+  d = n(430824),
   h = n(650461),
   p = n(353093),
   m = n(105671),
@@ -75,7 +75,7 @@ return null == e ? x.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES.format({
 o,
 n
   ]);
-  return (0, i.jsx)(d.Text, {
+  return (0, i.jsx)(u.Text, {
 variant: 'text-sm/normal',
 color: 'text-muted',
 className: l()(T.overviewText, s),
@@ -85,9 +85,9 @@ children: null == c ? x.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_DEFAULT : c
 t.Z = 12633 == n.j ? e => {
   let {
 guildId: t
-  } = e, n = (0, h.Wg)(), s = (0, c.e7)([u.Z], () => {
+  } = e, n = (0, h.Wg)(), s = (0, c.e7)([d.Z], () => {
 var e, n;
-return null !== (n = null === (e = u.Z.getGuild(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : '';
+return null !== (n = null === (e = d.Z.getGuild(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : '';
   }), {
 gameApplicationIds: l,
 playstyle: r,
@@ -110,19 +110,19 @@ children: [
     primaryColor: null != C ? C : g.Nh,
     secondaryColor: null != S ? S : g.vY
   }),
-  (0, i.jsx)(d.Heading, {
+  (0, i.jsx)(u.Heading, {
     variant: 'heading-xl/normal',
     color: 'text-muted',
     className: T.overviewHeaderPrelude,
     children: x.Z.Messages.CLAN_SETUP_OVERVIEW_TITLE
   }),
-  (0, i.jsx)(d.Heading, {
+  (0, i.jsx)(u.Heading, {
     variant: 'heading-xl/bold',
     color: 'interactive-active',
     className: T.overviewGuildName,
     children: s
   }),
-  (0, i.jsx)(d.Text, {
+  (0, i.jsx)(u.Text, {
     variant: 'text-sm/normal',
     color: 'text-muted',
     className: T.overviewText,
@@ -134,7 +134,7 @@ children: [
     applicationIds: l,
     playstyle: r
   }),
-  null != Z ? (0, i.jsx)(d.Text, {
+  null != Z ? (0, i.jsx)(u.Text, {
     variant: 'text-sm/normal',
     color: 'text-muted',
     className: T.overviewText,
@@ -142,7 +142,7 @@ children: [
       traits: Z
     })
   }) : null,
-  (0, i.jsx)(d.Text, {
+  (0, i.jsx)(u.Text, {
     variant: 'text-sm/normal',
     color: 'text-muted',
     className: T.overviewText,

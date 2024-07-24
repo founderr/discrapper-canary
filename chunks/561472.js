@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(933557),
   o = n(703558),
   c = n(731290),
-  d = n(607744),
-  u = n(819640),
+  u = n(607744),
+  d = n(819640),
   h = n(496675),
   p = n(699516),
   m = n(594174),
@@ -23,10 +23,10 @@ className: t,
 style: n,
 channel: x,
 draftType: T
-  } = e, [N, v] = a.useState(!0), S = (0, s.e7)([u.Z], () => u.Z.hasLayers()), Z = (0, s.e7)([h.Z], () => null != x && h.Z.can(g.Plq.ATTACH_FILES, x), [x]), A = null != (0, s.e7)([l.Z], () => l.Z.getActiveCommand(x.id)), M = x.getGuildId(), b = T === o.d.FirstThreadMessage, R = (0, s.e7)([m.default], () => {
+  } = e, [N, v] = a.useState(!0), S = (0, s.e7)([d.Z], () => d.Z.hasLayers()), Z = (0, s.e7)([h.Z], () => null != x && h.Z.can(g.Plq.ATTACH_FILES, x), [x]), A = null != (0, s.e7)([l.Z], () => l.Z.getActiveCommand(x.id)), M = x.getGuildId(), b = T === o.d.FirstThreadMessage, R = (0, s.e7)([m.default], () => {
 var e;
 return !0 == !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
-  }), j = (0, s.e7)([c.Z], () => c.Z.didAgree(M)) && !R, L = a.useMemo(() => !S && (x.isPrivate() && !x.isManaged() || null != M && (!x.isNSFW() || j) && Z && d.Z.canChatInGuild(M)), [
+  }), j = (0, s.e7)([c.Z], () => c.Z.didAgree(M)) && !R, L = a.useMemo(() => !S && (x.isPrivate() && !x.isManaged() || null != M && (!x.isNSFW() || j) && Z && u.Z.canChatInGuild(M)), [
 Z,
 j,
 x,

@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(92114),
   o = n(9156),
   c = n(585483),
-  d = n(621600),
-  u = n(665149),
+  u = n(621600),
+  d = n(665149),
   h = n(110255),
   p = n(981631),
   m = n(689938),
@@ -33,7 +33,7 @@ return c.S.subscribe(p.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
   let I = e => {
   e.shiftKey ? r.Z.updateChannelOverrideSettings(t.guild_id, t.id, {
     muted: !f
-  }, d.UE.muted(!f)) : g(e => !e);
+  }, u.UE.muted(!f)) : g(e => !e);
 },
 x = m.Z.Messages.NOTIFICATION_SETTINGS;
   return (0, i.jsx)(l.Popout, {
@@ -53,7 +53,7 @@ children: (e, t) => {
   let {
     isShown: a
   } = t;
-  return (0, i.jsx)(u.ZP.Icon, {
+  return (0, i.jsx)(d.ZP.Icon, {
     ...e,
     onClick: I,
     tooltip: a ? null : x,

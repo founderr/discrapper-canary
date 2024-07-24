@@ -1,8 +1,8 @@
 var s = n(735250),
   r = n(470079),
   a = n(481060),
-  i = n(727637),
-  o = n(906732),
+  o = n(727637),
+  i = n(906732),
   c = n(241553),
   l = n(333867),
   d = n(884697),
@@ -79,7 +79,7 @@ isGiftEasterEggEnabled: m,
 disableCustomColor: b = !1
   } = e, {
 analyticsLocations: h
-  } = (0, o.ZP)(), x = r.useRef(null), I = (0, i.Z)(x), E = b ? u.BR.DARK : u.BR.LIGHT;
+  } = (0, i.ZP)(), x = r.useRef(null), E = (0, o.Z)(x), I = b ? u.BR.DARK : u.BR.LIGHT;
   return (0, d.x6)(t) ? null : (0, s.jsx)(a.Tooltip, {
 text: f.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
 delay: _,
@@ -104,9 +104,9 @@ children: e => (0, s.jsx)(a.Button, {
     });
   },
   children: m ? (0, s.jsx)(c.e, {
-    hovered: I,
+    hovered: E,
     isContentDismissed: !0,
-    themeOverride: E,
+    themeOverride: I,
     boxColors: g
   }) : (0, s.jsx)(a.GiftIcon, {
     size: 'md',

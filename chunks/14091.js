@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(392711),
   o = n.n(r),
   c = n(442837),
-  d = n(481060),
-  u = n(447543),
+  u = n(481060),
+  d = n(447543),
   h = n(603263),
   p = n(367907),
   m = n(210887),
@@ -130,7 +130,7 @@ return (0, i.jsxs)('section', {
   'aria-label': v.Z.Messages.SEARCH_RESULTS_SECTION_LABEL,
   children: [
     this.renderHeader(),
-    (0, i.jsx)(d.AdvancedScroller, {
+    (0, i.jsx)(u.AdvancedScroller, {
       ref: this.scrollerRef,
       className: S.scroller,
       children: this.renderContent()
@@ -163,7 +163,7 @@ super(...e), Z(this, 'state', {
     callback: n
   });
 }), Z(this, 'selectChannel', e => {
-  e !== E.Z.getChannelId() && u.Z.transitionToInviteChannelSync(e);
+  e !== E.Z.getChannelId() && d.Z.transitionToInviteChannelSync(e);
 }), Z(this, 'searchPrevious', () => {
   let {
     searchId: e,

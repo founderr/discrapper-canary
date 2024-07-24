@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(704215),
   o = n(481060),
   c = n(570140),
-  d = n(230711),
-  u = n(607070),
+  u = n(230711),
+  d = n(607070),
   h = n(367907),
   p = n(243778),
   m = n(543241),
@@ -56,7 +56,7 @@ function w(e) {
 channel: n,
 closePopout: _,
 onFocus: g
-  } = e, j = (0, l.e7)([u.Z], () => u.Z.useReducedMotion), w = (0, l.e7)([E.default], () => E.default.getCurrentUser()), B = I.ZP.canUseFancyVoiceChannelReactions(w), H = (0, l.e7)([T.Z], () => T.Z.getState().animationType), G = a.useRef(!1), V = (0, m.wC)(n.guild_id), F = (0, s.uniqBy)([
+  } = e, j = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), w = (0, l.e7)([E.default], () => E.default.getCurrentUser()), B = I.ZP.canUseFancyVoiceChannelReactions(w), H = (0, l.e7)([T.Z], () => T.Z.getState().animationType), G = a.useRef(!1), V = (0, m.wC)(n.guild_id), F = (0, s.uniqBy)([
 ...V,
 ...U
   ], 'name').filter(e => !C.ZP.isEmojiFilteredOrLocked({
@@ -127,7 +127,7 @@ children: e => {
         header: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
         content: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
         onClick: () => {
-          d.Z.open(b.oAB.ACCESSIBILITY, null, {
+          u.Z.open(b.oAB.ACCESSIBILITY, null, {
             scrollPosition: P.rP.REDUCED_MOTION
           }), _();
         },

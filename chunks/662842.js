@@ -11,8 +11,8 @@ var i, s, a = n(735250),
   d = n(692547),
   u = n(481060),
   _ = n(232567),
-  E = n(100527),
-  h = n(471445),
+  h = n(100527),
+  E = n(471445),
   I = n(15274),
   m = n(924301),
   g = n(504160),
@@ -82,10 +82,10 @@ let {
   listenerCount: c,
   isEventNoticeHidden: d,
   isStageNoticeHidden: _,
-  isStudyRoomNotice: E
+  isStudyRoomNotice: h
 } = e, I = null != n && null != i && !_, p = null != t ? (0, N.DK)(t) : null;
-if (E && null != i) {
-  let e = (0, h.KS)(i);
+if (h && null != i) {
+  let e = (0, E.KS)(i);
   return {
     noticeType: 3,
     title: '\uD83D\uDCDA\u2615 '.concat(i.name),
@@ -225,7 +225,7 @@ if (null == t || d) {
       })
     };
   } else if (t.entity_type === j.WX.VOICE && null != i) {
-    let e = (0, h.KS)(i),
+    let e = (0, E.KS)(i),
       n = m.ZP.getUserCount(t.id, p);
     return {
       noticeType: 2,
@@ -331,7 +331,7 @@ children: [
           location: 'LiveChannelNotice',
           userId: e.id,
           guildId: t.id,
-          newAnalyticsLocations: [E.Z.AVATAR]
+          newAnalyticsLocations: [h.Z.AVATAR]
         }),
         position: 'right',
         children: n => (0, a.jsx)(u.Avatar, {

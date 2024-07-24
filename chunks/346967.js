@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(442837),
   o = n(911367),
   c = n(594174),
-  d = n(380738),
-  u = n(484459),
+  u = n(380738),
+  d = n(484459),
   h = n(87728),
   p = n(792379),
   m = n(123579),
@@ -24,13 +24,13 @@ channel: n,
 ...s
   } = e, {
 botProfilesEnabled: f
-  } = (0, d.J)({
+  } = (0, u.J)({
 location: t
   }), E = (0, h.Z)();
   (0, o.t)();
   let [C] = n.recipients, g = (0, r.e7)([c.default], () => c.default.getUser(C));
   return (l()(null != g, 'ProfilePanelExperimentWrapper: user cannot be undefined'), a.useEffect(() => {
-(0, u.W)(g, {
+(0, d.W)(g, {
   withMutualFriends: !g.bot,
   withMutualGuilds: !0,
   channelId: n.id

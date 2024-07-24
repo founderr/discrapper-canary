@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250);
@@ -12,14 +12,14 @@ var a = n(481060),
   o = n(689938),
   c = n(903709);
 
-function d(e) {
+function u(e) {
   let {
 user: t,
 channelId: n
   } = e, {
-analyticsLocations: d
+analyticsLocations: u
   } = (0, s.ZP)(), {
-trackUserProfileAction: u
+trackUserProfileAction: d
   } = (0, l.KZ)();
   return (0, i.jsx)('footer', {
 className: c.footer,
@@ -29,10 +29,10 @@ children: (0, i.jsx)(a.Button, {
   look: a.Button.Looks.BLANK,
   color: c.buttonColor,
   onClick: () => {
-    u({
+    d({
       action: 'PRESS_VIEW_PROFILE'
     }), (0, r.openUserProfileModal)({
-      sourceAnalyticsLocations: d,
+      sourceAnalyticsLocations: u,
       userId: t.id,
       channelId: n
     });

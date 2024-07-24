@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return h;
+return E;
   }
 });
 var i = n(735250);
@@ -15,11 +15,11 @@ var s = n(990547),
   u = n(689938),
   _ = n(793961);
 
-function E() {
+function h() {
   (0, c.qV)(), (0, r.uL)(d.Z5c.LOGIN);
 }
 
-function h(e) {
+function E(e) {
   let {
 underageMessage: t,
 transitionState: r
@@ -74,7 +74,7 @@ children: [
     children: (0, i.jsx)(a.Button, {
       size: a.ButtonSizes.SMALL,
       fullWidth: !0,
-      onClick: E,
+      onClick: h,
       children: u.Z.Messages.AGE_GATE_UNDERAGE_BACK_TO_LOGIN
     })
   })

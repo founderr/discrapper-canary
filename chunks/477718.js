@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(913527),
   o = n.n(r),
   c = n(399606),
-  d = n(481060),
-  u = n(480137),
+  u = n(481060),
+  d = n(480137),
   h = n(906732),
   p = n(884737),
   m = n(376923),
@@ -35,12 +35,12 @@ member: n,
 guild: s
   } = e, {
 analyticsLocations: r
-  } = (0, h.ZP)(), u = p.nm(t), f = p.QM(t), g = p.of(t), I = p.J5(t), T = (0, m.LJ)(t.id), Z = (0, c.e7)([C.ZP], () => null != t.userId ? C.ZP.getMember(n.guildId, t.userId) : null, [
+  } = (0, h.ZP)(), d = p.nm(t), f = p.QM(t), g = p.of(t), I = p.J5(t), T = (0, m.LJ)(t.id), Z = (0, c.e7)([C.ZP], () => null != t.userId ? C.ZP.getMember(n.guildId, t.userId) : null, [
 n.guildId,
 t.userId
   ]), A = a.useCallback(e => t => {
 t.preventDefault(), t.stopPropagation(), null != e && (0, _.RE)(e, r);
-  }, [r]), M = a.useCallback(() => null == t.user ? null : (0, i.jsx)(d.Tooltip, {
+  }, [r]), M = a.useCallback(() => null == t.user ? null : (0, i.jsx)(u.Tooltip, {
 text: N.Z.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
 children: e => {
   var a;
@@ -48,18 +48,18 @@ children: e => {
     onMouseEnter: s,
     onMouseLeave: r
   } = e;
-  return (0, i.jsx)(d.Clickable, {
+  return (0, i.jsx)(u.Clickable, {
     tag: 'span',
     className: v.username,
     onClick: A(Z),
     onMouseEnter: s,
     onMouseLeave: r,
-    children: (0, i.jsxs)(d.Text, {
+    children: (0, i.jsxs)(u.Text, {
       variant: 'text-sm/medium',
       tag: 'span',
       children: [
         '@',
-        (0, i.jsx)(d.NameWithRole, {
+        (0, i.jsx)(u.NameWithRole, {
           name: x.ZP.getName(n.guildId, null, t.user),
           color: null !== (a = null == Z ? void 0 : Z.colorString) && void 0 !== a ? a : void 0,
           className: l()(v.__invalid_memberNameText)
@@ -83,12 +83,12 @@ children: [
       (0, i.jsxs)('div', {
         className: v.auditLogItemTitle,
         children: [
-          null != u && (0, i.jsx)(d.Text, {
+          null != d && (0, i.jsx)(u.Text, {
             variant: 'text-sm/semibold',
             color: 'header-primary',
-            children: u
+            children: d
           }),
-          null != f && (0, i.jsxs)(d.Text, {
+          null != f && (0, i.jsxs)(u.Text, {
             variant: 'text-sm/normal',
             color: 'header-secondary',
             children: [
@@ -101,7 +101,7 @@ children: [
       }),
       (0, i.jsx)('div', {
         className: v.auditLogItemDate,
-        children: (0, i.jsx)(d.Text, {
+        children: (0, i.jsx)(u.Text, {
           variant: 'text-sm/medium',
           color: 'header-primary',
           children: T
@@ -115,7 +115,7 @@ children: [
       className: v.auditLogReason,
       children: [
         M,
-        (0, i.jsx)(d.Text, {
+        (0, i.jsx)(u.Text, {
           variant: 'text-sm/normal',
           color: 'text-muted',
           tag: 'span',
@@ -130,7 +130,7 @@ children: [
       className: v.auditLogSecondary,
       children: [
         M,
-        (0, i.jsx)(d.Text, {
+        (0, i.jsx)(u.Text, {
           variant: 'text-sm/normal',
           color: 'text-muted',
           tag: 'span',
@@ -143,7 +143,7 @@ children: [
     className: v.auditLogSecondaryContainer,
     children: (0, i.jsx)('div', {
       className: v.auditLogSecondary,
-      children: (0, i.jsx)(d.Text, {
+      children: (0, i.jsx)(u.Text, {
         variant: 'text-sm/normal',
         color: 'text-muted',
         tag: 'span',
@@ -169,14 +169,14 @@ return null == e || null == n ? [] : I._$(e, n);
   }, [n]);
   return (a.useEffect(() => {
 (async function e(e, t) {
-  await u.gV(t, e);
+  await d.gV(t, e);
 }(t.guildId, t.userId));
   }, [
 t.guildId,
 t.userId
   ]), null == n || 0 === s.length) ? null : (0, i.jsx)('div', {
 className: l()(Z.__invalid_safetySignalsMainContainer),
-children: (0, i.jsx)(d.FormItem, {
+children: (0, i.jsx)(u.FormItem, {
   title: N.Z.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
   titleClassName: Z.infoTitle,
   children: s.length > 0 ? (0, i.jsx)(T.WM, {

@@ -11,8 +11,8 @@ var a = n(120356),
   r = n(481060),
   o = n(99690),
   c = n(40851),
-  d = n(657305),
-  u = n(835473),
+  u = n(657305),
+  d = n(835473),
   h = n(12498),
   p = n(933557),
   m = n(471445),
@@ -93,7 +93,7 @@ function G(e) {
 l = (0, R.Z)(s, !0),
 o = (0, f.qY)(s.id),
 c = null != o ? (0, E.DK)(o) : null,
-u = null != o;
+d = null != o;
   if ((null == a ? void 0 : a.type) === O.fO.ACTIVITY)
 null != n && (t = (0, i.jsxs)(i.Fragment, {
   children: [
@@ -108,7 +108,7 @@ null != n && (t = (0, i.jsxs)(i.Fragment, {
       className: U.playingText,
       variant: 'text-md/normal',
       color: 'none',
-      children: (0, d.Z)(n.name)
+      children: (0, u.Z)(n.name)
     }),
     l && (0, i.jsx)(B, {
       channel: s,
@@ -137,7 +137,7 @@ t = (0, i.jsxs)(i.Fragment, {
   ]
 });
   } else
-u && (t = (0, i.jsx)(C.Z, {
+d && (t = (0, i.jsx)(C.Z, {
   guildEvent: o,
   recurrenceId: c
 }));
@@ -153,14 +153,14 @@ channel: t,
 guild: a,
 appContext: o,
 inCall: c,
-isChatOpen: d,
+isChatOpen: u,
 exitFullScreen: _
   } = e, {
 focusedParticipant: f
   } = (0, l.cj)([M.Z], () => ({
 focusedParticipant: M.Z.getSelectedParticipant(t.id),
 participantsOpen: M.Z.getParticipantsOpen(t.id)
-  }), [t.id]), E = (0, p.ZP)(t), C = (0, m.KS)(t), [S] = (0, u.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), Z = k.Z.Messages.VOICE_CHANNEL;
+  }), [t.id]), E = (0, p.ZP)(t), C = (0, m.KS)(t), [S] = (0, d.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), Z = k.Z.Messages.VOICE_CHANNEL;
   t.isDM() ? Z = k.Z.Messages.DM : t.isGroupDM() && (Z = k.Z.Messages.GROUP_DM);
   let R = (0, l.e7)([h.Z], () => h.Z.getChannelStatus(t)),
 L = t.isGuildVoice() && c && null != R && R.length > 0,
@@ -227,7 +227,7 @@ children: [
       channel: t,
       appContext: o,
       inCall: c,
-      isChatOpen: d,
+      isChatOpen: u,
       exitFullScreen: _
     }),
     children: [

@@ -3,7 +3,7 @@ n.d(t, {
 return o;
   },
   WM: function() {
-return d;
+return u;
   },
   _2: function() {
 return c;
@@ -23,12 +23,12 @@ description: t,
 name: n,
 icon: a,
 onNavigate: c,
-className: d,
-missingNavIcon: u
+className: u,
+missingNavIcon: d
   } = e;
   return (0, i.jsxs)(l.Clickable, {
 onClick: c,
-className: s()(r.modInfoItem, null != c && r.modInfoAction, d),
+className: s()(r.modInfoItem, null != c && r.modInfoAction, u),
 children: [
   null != a && (0, i.jsx)('div', {
     className: s()(r.modInfoItemIcon),
@@ -50,15 +50,15 @@ children: [
       height: o
     })
   }),
-  null == c && null != u && (0, i.jsx)('div', {
+  null == c && null != d && (0, i.jsx)('div', {
     className: s()(r.modInfoItemActionIcon),
-    children: u
+    children: d
   })
 ]
   });
 }
 
-function d(e) {
+function u(e) {
   let {
 children: t
   } = e;

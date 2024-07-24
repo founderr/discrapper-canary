@@ -12,9 +12,9 @@ var l = n(120356),
   r = n.n(l),
   o = n(285952),
   c = n(507675),
-  d = n(344333);
+  u = n(344333);
 
-function u(e) {
+function d(e) {
   let {
 disableGradients: t = !1,
 renderHeader: n,
@@ -24,21 +24,21 @@ renderBottomRight: l,
 renderCenter: r
   } = e;
   return (0, s.jsxs)('div', {
-className: d.videoControls,
+className: u.videoControls,
 children: [
   !(0 === t || !0 === t) && (0, s.jsx)('div', {
-    className: d.gradientTop
+    className: u.gradientTop
   }),
   !(1 === t || !0 === t) && (0, s.jsx)('div', {
-    className: d.gradientBottom
+    className: u.gradientBottom
   }),
   (0, s.jsx)('div', {
-    className: d.topControls,
+    className: u.topControls,
     children: null == n ? void 0 : n()
   }),
   null == r ? void 0 : r(),
   (0, s.jsxs)('div', {
-    className: d.bottomControls,
+    className: u.bottomControls,
     children: [
       (0, s.jsx)(o.Z, {
         grow: 0,
@@ -80,8 +80,8 @@ style: _,
 ...f
   } = e;
   return (0, s.jsxs)('div', {
-className: r()(d.root, {
-  [d.idle]: l
+className: r()(u.root, {
+  [u.idle]: l
 }),
 style: _,
 onMouseMove: i,
@@ -94,12 +94,12 @@ children: [
     size: 'large',
     ...t
   }) : null,
-  (0, s.jsx)(u, {
+  (0, s.jsx)(d, {
     ...f
   }),
   null == h ? void 0 : h({
-    className: d.chatButton,
-    showingClassName: d.chatButtonShowing
+    className: u.chatButton,
+    showingClassName: u.chatButtonShowing
   }),
   null == p ? void 0 : p(),
   null == m ? void 0 : m()

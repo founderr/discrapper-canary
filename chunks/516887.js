@@ -11,15 +11,15 @@ t.Z = a.memo(function(e) {
 className: n,
 channel: a,
 section: s
-  } = e, d = null != s ? (0, o.ky)(s) : null;
+  } = e, u = null != s ? (0, o.ky)(s) : null;
   return (0, i.jsx)('div', {
 className: l()(n, c.wrapper),
 children: (0, i.jsx)('div', {
   className: c.icon,
-  children: null != d ? (0, i.jsx)(r.Tooltip, {
+  children: null != u ? (0, i.jsx)(r.Tooltip, {
     text: null !== (t = null == s ? void 0 : s.name) && void 0 !== t ? t : '',
     position: 'top',
-    children: e => (0, i.jsx)(d, {
+    children: e => (0, i.jsx)(u, {
       ...e,
       channel: a,
       section: s,

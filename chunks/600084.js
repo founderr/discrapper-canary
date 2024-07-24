@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(570140),
   o = n(933557),
   c = n(605436),
-  d = n(736052),
-  u = n(878857),
+  u = n(736052),
+  d = n(878857),
   h = n(621853),
   p = n(484459),
   m = n(131704),
@@ -39,7 +39,7 @@ function P(e) {
 canManageRoles: t,
 channel: n
   } = e, a = t && (0, c.Yk)(n), l = (0, s.e7)([_.ZP], () => null != n.guild_id && n === _.ZP.getDefaultChannel(n.guild_id), [n]);
-  if ((0, d.Z)(n.id))
+  if ((0, u.Z)(n.id))
 return null;
   if (n.isForumPost())
 return (0, i.jsx)(x.Z, {
@@ -67,7 +67,7 @@ function O(e) {
   let {
 channel: n,
 showingBanner: c
-  } = e, d = (0, o.ZP)(n), {
+  } = e, u = (0, o.ZP)(n), {
 type: m
   } = n, _ = (0, s.e7)([E.default], () => n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null), x = C.ZP.useUserTag(_), {
 canManageRoles: v,
@@ -80,7 +80,7 @@ n,
 m
   ]), {
 systemDMRedesignEnabled: M
-  } = u.Z.useExperiment({
+  } = d.Z.useExperiment({
 location: 'bf1a4f_1'
   }, {
 autoTrackExposure: null !== (t = n.isSystemDM()) && void 0 !== t && t
@@ -112,7 +112,7 @@ return (0, i.jsxs)(N.Z, {
       children: x
     }),
     j.Z.Messages.BEGINNING_DM.format({
-      username: d
+      username: u
     }),
     (0, i.jsx)(g.Z, {
       userId: n.getRecipientId(),
@@ -127,7 +127,7 @@ return n.isManaged() ? (0, i.jsxs)(I.ZP, {
   children: [
     (0, i.jsx)(I.Ot, {
       children: j.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({
-        channelName: d
+        channelName: u
       })
     }),
     (0, i.jsx)(I.jz, {
@@ -139,7 +139,7 @@ return n.isManaged() ? (0, i.jsxs)(I.ZP, {
 }) : (0, i.jsx)(N.Z, {
   channel: n,
   children: j.Z.Messages.BEGINNING_GROUP_DM.format({
-    name: d
+    name: u
   })
 });
   return Z ? (0, i.jsx)(P, {
@@ -149,7 +149,7 @@ canManageRoles: v
 channelId: n.id,
 children: (0, i.jsx)(I.jz, {
   children: j.Z.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({
-    channelName: d
+    channelName: u
   })
 })
   });

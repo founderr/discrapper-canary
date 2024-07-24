@@ -10,8 +10,8 @@ var i = n(470079),
   r = n(423589),
   o = n(674190),
   c = n(624617),
-  d = n(490897);
-let u = Object.freeze({
+  u = n(490897);
+let d = Object.freeze({
   NOTICE_RENDER: {
 MAX: 1,
 PER_SECONDS: 600
@@ -37,9 +37,9 @@ h = (0, a.e7)([
     return !1;
   let i = l.ZP.resolveUnreadSetting(e),
     a = l.ZP.getChannelUnreadSetting(t, n),
-    r = c.Z.getNumberOfRendersSince(u.NOTICE_RENDER.PER_SECONDS),
-    o = c.Z.getNumberOfChannelVisitsSince(t, n, u.CHANNEL_VISTS.PER_SECONDS);
-  return a === d.i.UNSET && i !== d.i.ALL_MESSAGES && r <= u.NOTICE_RENDER.MAX && o >= u.CHANNEL_VISTS.MIN;
+    r = c.Z.getNumberOfRendersSince(d.NOTICE_RENDER.PER_SECONDS),
+    o = c.Z.getNumberOfChannelVisitsSince(t, n, d.CHANNEL_VISTS.PER_SECONDS);
+  return a === u.i.UNSET && i !== u.i.ALL_MESSAGES && r <= d.NOTICE_RENDER.MAX && o >= d.CHANNEL_VISTS.MIN;
 }, [e]);
   return i.useEffect(() => {
 t && h && (0, o.g)(e.guild_id, e.id);

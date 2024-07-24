@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(392711),
   o = n.n(r),
   c = n(91192),
-  d = n(924826),
-  u = n(873546),
+  u = n(924826),
+  d = n(873546),
   h = n(442837),
   p = n(481060),
   m = n(239091),
@@ -53,12 +53,12 @@ let {
   sectionId: s,
   userId: l,
   guildOwnerId: r
-} = e, o = (0, h.e7)([R.Z], () => R.Z.isTyping(t.id, l)), d = (0, h.e7)([Z.ZP], () => Z.ZP.getMember(t.guild_id, l)), f = (0, h.e7)([A.Z], () => {
+} = e, o = (0, h.e7)([R.Z], () => R.Z.isTyping(t.id, l)), u = (0, h.e7)([Z.ZP], () => Z.ZP.getMember(t.guild_id, l)), f = (0, h.e7)([A.Z], () => {
   var e;
-  return (null == d ? void 0 : d.colorRoleId) != null ? null === (e = A.Z.getRole(t.guild_id, d.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
+  return (null == u ? void 0 : u.colorRoleId) != null ? null === (e = A.Z.getRole(t.guild_id, u.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
 }, [
   t.guild_id,
-  d
+  u
 ]), E = (0, h.e7)([j.default], () => j.default.getUser(l)), C = (0, h.e7)([j.default], () => j.default.getCurrentUser()), I = (null == E ? void 0 : E.id) === (null == C ? void 0 : C.id), x = (0, h.e7)([
   M.Z,
   b.Z
@@ -108,7 +108,7 @@ let {
 }, [t.guild_id]);
 if (null == E)
   return null;
-let Y = null == d ? void 0 : d.premiumSince;
+let Y = null == u ? void 0 : u.premiumSince;
 return (0, i.jsx)(p.Popout, {
   preload: () => (0, N.W)(E, {
     guildId: t.guild_id,
@@ -127,7 +127,7 @@ return (0, i.jsx)(p.Popout, {
       }
     }
   }),
-  position: u.tq ? 'window_center' : 'left',
+  position: d.tq ? 'window_center' : 'left',
   spacing: 16,
   onShiftClick: F,
   children: (e, n) => {
@@ -139,10 +139,10 @@ return (0, i.jsx)(p.Popout, {
       shouldAnimateStatus: W,
       user: E,
       currentUser: C,
-      nick: null == d ? void 0 : d.nick,
+      nick: null == u ? void 0 : u.nick,
       status: x,
       activities: P,
-      colorString: null == d ? void 0 : d.colorString,
+      colorString: null == u ? void 0 : u.colorString,
       colorRoleName: f,
       isTyping: o,
       channel: t,
@@ -236,7 +236,7 @@ channel: t,
 guild: n
   } = e, s = 'members-'.concat(t.id), {
 analyticsLocations: r
-  } = (0, C.ZP)(E.Z.MEMBER_LIST), u = (0, x.D)(t.id, n), m = u.filter(e => e.userIds.length > 0).reverse()[0], {
+  } = (0, C.ZP)(E.Z.MEMBER_LIST), d = (0, x.D)(t.id, n), m = d.filter(e => e.userIds.length > 0).reverse()[0], {
 navigator: _,
 listRef: g
   } = function(e, t) {
@@ -282,7 +282,7 @@ let n = (0, h.e7)([f.Z], () => f.Z.keyboardModeEnabled),
     });
   }), []);
 return {
-  navigator: (0, d.ZP)({
+  navigator: (0, u.ZP)({
     id: e,
     setFocus: s,
     isEnabled: n,
@@ -291,7 +291,7 @@ return {
   }),
   listRef: i
 };
-  }(s, z), I = 0 === u.length || u.every(e => 0 === e.userIds.length);
+  }(s, z), I = 0 === d.length || d.every(e => 0 === e.userIds.length);
   if (a.useEffect(() => {
   y.default.track(H.rMx.MEMBER_LIST_VIEWED, {
     channel_id: t.id,
@@ -323,7 +323,7 @@ children: (0, i.jsx)(c.bG, {
         renderSection: e => {
           let {
             section: t
-          } = e, a = u[t];
+          } = e, a = d[t];
           return (0, i.jsx)(K, {
             id: a.id,
             label: a.label,
@@ -339,7 +339,7 @@ children: (0, i.jsx)(c.bG, {
           } = e, {
             userIds: s,
             id: l
-          } = u[n];
+          } = d[n];
           return (0, i.jsx)(Y, {
             channel: t,
             sectionId: l,
@@ -347,13 +347,13 @@ children: (0, i.jsx)(c.bG, {
             guildOwnerId: N
           }, s[a]);
         },
-        footerHeight: e => u[e] === m && t.type === H.d4z.PRIVATE_THREAD ? 80 : 0,
-        renderFooter: e => u[e.section] === m ? (0, i.jsx)(q, {
+        footerHeight: e => d[e] === m && t.type === H.d4z.PRIVATE_THREAD ? 80 : 0,
+        renderFooter: e => d[e.section] === m ? (0, i.jsx)(q, {
           channel: t
         }, 'footer') : null,
         innerAriaLabel: G.Z.Messages.MEMBERS,
         innerTag: 'ul',
-        sections: u.map(e => e.userIds.length),
+        sections: d.map(e => e.userIds.length),
         fade: !0,
         ...T,
         ...e

@@ -1,13 +1,13 @@
-n.d(t, {
+t.d(n, {
   l: function() {
 return i;
   }
 });
-let i = (0, n(652874).Z)(e => ({
+let i = (0, t(652874).Z)(e => ({
   canCloseModal: !0,
-  onUpdateCanCloseModal(t) {
+  onUpdateCanCloseModal(n) {
 e({
-  canCloseModal: t
+  canCloseModal: n
 });
   }
 }));

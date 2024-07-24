@@ -11,8 +11,8 @@ var a = n(481060),
   r = n(79874),
   o = n(854698),
   c = n(390966),
-  d = n(689938),
-  u = n(75811);
+  u = n(689938),
+  d = n(75811);
 
 function h(e) {
   let {
@@ -25,13 +25,13 @@ return null;
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(s.ZP.Divider, {
-    className: u.divider
+    className: d.divider
   }),
   (0, i.jsx)(c.z, {
     startTime: h.startTime.toISOString(),
     status: null != m ? m : t.status,
-    liveText: d.Z.Messages.LIVE_EVENT,
-    className: u.eventSchedule,
+    liveText: u.Z.Messages.LIVE_EVENT,
+    className: d.eventSchedule,
     textVariant: 'text-lg/semibold',
     eventType: t.entity_type,
     guildEventId: null == t ? void 0 : t.id,
@@ -40,7 +40,7 @@ children: [
   (0, i.jsx)(a.Text, {
     color: 'header-secondary',
     variant: 'text-md/normal',
-    className: u.eventName,
+    className: d.eventName,
     children: t.name
   })
 ]

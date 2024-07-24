@@ -11,8 +11,8 @@ var a = n(410030),
   r = n(785717),
   o = n(726059),
   c = n(162267),
-  d = n(483517),
-  u = n(502762),
+  u = n(483517),
+  d = n(502762),
   h = n(171368),
   p = n(944546),
   m = n(470900),
@@ -35,7 +35,7 @@ isFetching: T
 mutualGuilds: N,
 isFetching: v
   } = (0, c.Z)(t.id, !0), S = !t.bot && null != x && x.length > 0, Z = null != N && N.length > 0;
-  return S || Z ? (0, i.jsxs)(u.Z.Overlay, {
+  return S || Z ? (0, i.jsxs)(d.Z.Overlay, {
 className: E.overlay,
 children: [
   Z && (0, i.jsx)(_.Z, {
@@ -64,7 +64,7 @@ children: [
       }, n.id);
     })
   }),
-  Z && S && (0, i.jsx)(d.Z, {
+  Z && S && (0, i.jsx)(u.Z, {
     className: E.divider
   }),
   S && (0, i.jsx)(_.Z, {

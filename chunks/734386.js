@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(392711),
   o = n.n(r),
   c = n(149765),
-  d = n(866442),
-  u = n(442837),
+  u = n(866442),
+  d = n(442837),
   h = n(481060),
   p = n(787014),
   m = n(911969),
@@ -37,7 +37,7 @@ var i = n(735250),
 function P(e) {
   let {
 channel: t
-  } = e, [n, s] = a.useState(!1), r = (0, _.ZP)(t, !0), P = t.guild_id, O = (0, u.e7)([I.Z], () => null != P ? I.Z.getRoles(P) : void 0), y = (0, u.e7)([
+  } = e, [n, s] = a.useState(!1), r = (0, _.ZP)(t, !0), P = t.guild_id, O = (0, d.e7)([I.Z], () => null != P ? I.Z.getRoles(P) : void 0), y = (0, d.e7)([
 T.default,
 I.Z
   ], () => {
@@ -60,7 +60,7 @@ return c.e$(n, R.Plq.ADMINISTRATOR) || c.e$(n, R.Plq.VIEW_CHANNEL);
 t,
 P,
 D
-  ]), U = (0, u.Wu)([T.default], () => {
+  ]), U = (0, d.Wu)([T.default], () => {
 let e = {};
 for (let n of (null != y && (e[y.id] = y), Object.values(t.permissionOverwrites))) {
   if (n.type !== m.BN.MEMBER || null != e[n.id])
@@ -168,7 +168,7 @@ children: [
       }(),
       k.map((e, n) => {
         var a, s;
-        let r = null !== (s = e.colorString) && void 0 !== s ? s : (0, d.Rf)(R.p6O),
+        let r = null !== (s = e.colorString) && void 0 !== s ? s : (0, u.Rf)(R.p6O),
           o = (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) !== void 0;
         return w ? (0, i.jsx)(N.Z, {
           className: l()(L.role, {

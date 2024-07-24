@@ -8,8 +8,8 @@ var i, a, s = n(735250),
   r = n(120356),
   o = n.n(r),
   c = n(481060),
-  d = n(763520),
-  u = n(153066),
+  u = n(763520),
+  d = n(153066),
   h = n(153422);
 (a = i || (i = {})).CONTAIN = 'contain', a.COVER = 'cover';
 let p = l.memo(function(e) {
@@ -25,7 +25,7 @@ paused: _ = !1,
 streamPreviewURL: f,
 videoSpinnerContext: E,
 userId: C
-  } = e, [g, I] = l.useState(!0), [x] = l.useState(() => new d.o('VideoStream'));
+  } = e, [g, I] = l.useState(!0), [x] = l.useState(() => new u.o('VideoStream'));
   l.useEffect(() => {
 !_ && (g ? x.onSpinnerStarted() : null != t && x.trackSpinnerDuration(E, C, t));
   }, [
@@ -43,7 +43,7 @@ I(!1);
 className: o()(h.wrapper, i),
 children: [
   null != t && (0, s.jsx)(a, {
-    className: o()(h.video, (0, u.l)(h, 'video', p), {
+    className: o()(h.video, (0, d.l)(h, 'video', p), {
       [h.mirror]: m
     }, r),
     streamId: t,

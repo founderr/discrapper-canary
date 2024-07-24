@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(113434),
   u = n(497505),
   _ = n(585500),
-  E = n(566078),
-  h = n(472144),
+  h = n(566078),
+  E = n(472144),
   I = n(644646),
   m = n(69439),
   g = n(46140),
@@ -28,7 +28,7 @@ function S(e) {
 quest: S,
 questContent: C,
 isHovering: N
-  } = e, A = E.r.build(S.config).defaultReward.messages.name, v = (0, d.Rf)(S), Z = v.percentComplete > 0, [L, O] = s.useState(0), R = s.useRef(null), x = s.useRef(null), b = (0, _.D)({
+  } = e, A = h.r.build(S.config).defaultReward.messages.name, v = (0, d.Rf)(S), Z = v.percentComplete > 0, [L, O] = s.useState(0), R = s.useRef(null), x = s.useRef(null), b = (0, _.D)({
 quest: S,
 taskDetails: v,
 location: g.dr.QUEST_HOME_DESKTOP,
@@ -99,7 +99,7 @@ children: [
             autoplay: !1,
             shouldAnimate: !w
           }),
-          (0, i.jsx)(h.Z, {
+          (0, i.jsx)(E.Z, {
             quest: S,
             size: 76,
             percentComplete: v.percentComplete,

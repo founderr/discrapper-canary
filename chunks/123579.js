@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(410030),
-  d = n(100527),
-  u = n(906732),
+  u = n(100527),
+  d = n(906732),
   h = n(574176),
   p = n(769654),
   m = n(199902),
@@ -54,7 +54,7 @@ user: n,
 channel: s
   } = e, [Q, J] = a.useState(!1), $ = a.useRef(0), {
 analyticsLocations: ee
-  } = (0, u.ZP)(d.Z.PROFILE_PANEL), et = null == n ? void 0 : n.isNonUserBot(), en = (0, Z.ZP)(n.id), ei = (0, r.e7)([
+  } = (0, d.ZP)(u.Z.PROFILE_PANEL), et = null == n ? void 0 : n.isNonUserBot(), en = (0, Z.ZP)(n.id), ei = (0, r.e7)([
 I.Z,
 f.Z
   ], () => {
@@ -73,7 +73,7 @@ customStatusActivity: el,
 isApplicationStreaming: er,
 isMobile: eo,
 status: ec,
-hangStatusActivity: ed
+hangStatusActivity: eu
   } = (0, r.cj)([
 m.Z,
 C.Z,
@@ -103,7 +103,7 @@ return {
     return t === K.IIU.HANG_STATUS;
   }) : null
 };
-  }), eu = null != es || null != ed || er, eh = null !== (t = x.ZP.getNickname(null, s.id, n)) && void 0 !== t ? t : T.ZP.getName(n), ep = (0, r.e7)([g.Z], () => g.Z.hidePersonalInformation), {
+  }), ed = null != es || null != eu || er, eh = null !== (t = x.ZP.getNickname(null, s.id, n)) && void 0 !== t ? t : T.ZP.getName(n), ep = (0, r.e7)([g.Z], () => g.Z.hidePersonalInformation), {
 mutualFriends: em,
 isFetching: e_
   } = (0, M.Z)(n.id, !n.bot), {
@@ -174,10 +174,10 @@ eM = n.bot || eA,
   enabled: eb
 } = (0, S.qI)({
   autoTrackExposure: !0,
-  location: d.Z.PROFILE,
+  location: u.Z.PROFILE,
   disable: eM
 });
-  return (0, i.jsx)(u.Gt, {
+  return (0, i.jsx)(d.Gt, {
 value: ee,
 children: (0, i.jsx)(N.Mt, {
   layout: 'DM_PANEL',
@@ -247,10 +247,10 @@ children: (0, i.jsx)(N.Mt, {
                 })
               ]
             }),
-            eu ? (0, i.jsx)(R.Z.Overlay, {
+            ed ? (0, i.jsx)(R.Z.Overlay, {
               className: X.overlay,
               children: (0, i.jsx)(U.Z, {
-                activity: null != es || er ? es : ed,
+                activity: null != es || er ? es : eu,
                 user: n,
                 channelId: s.id,
                 analyticsParams: {

@@ -17,19 +17,19 @@ flashKey: r
 opacity: 1
   }), c = (0, l.useToken)(l.tokens.colors.BACKGROUND_MESSAGE_HIGHLIGHT).spring({
 opacity: 0
-  }), [d, u] = (0, l.useSpring)(() => ({
+  }), [u, d] = (0, l.useSpring)(() => ({
 from: {
   backgroundColor: o
 }
   }), 'animate-never');
   return a.useEffect(() => {
-u({
+d({
   reset: !0,
   immediate: !0,
   to: {
     backgroundColor: o
   }
-}), u({
+}), d({
   delay: 1000,
   immediate: !1,
   to: {
@@ -38,9 +38,9 @@ u({
 });
   }, [
 r,
-u
+d
   ]), (0, i.jsx)(s.animated.div, {
-style: d,
+style: u,
 className: n,
 children: t
   });

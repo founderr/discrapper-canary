@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(704215),
   o = n(40851),
   c = n(317381),
-  d = n(374065),
-  u = n(213609),
+  u = n(374065),
+  d = n(213609),
   h = n(358221),
   p = n(381586),
   m = n(159300),
@@ -60,7 +60,7 @@ w = (null == P ? void 0 : P.afkChannelId) === A.id,
 B = A.userLimit <= 0 || A.userLimit > 1,
 H = (0, l.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(A.id).length <= 0),
 G = (0, p.N)(r.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
-V = (0, d.KF)(A.id) !== d.jy.CAN_LAUNCH,
+V = (0, u.KF)(A.id) !== u.jy.CAN_LAUNCH,
 F = null != O && O === A.id,
 W = D.map(e => t => (0, i.jsx)(I.ZP, {
   participant: e,
@@ -74,7 +74,7 @@ W = D.map(e => t => (0, i.jsx)(I.ZP, {
   width: t,
   inPopout: L
 }, e.id));
-  (0, u.Z)({
+  (0, d.Z)({
 type: s.ImpressionTypes.VIEW,
 name: s.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
 properties: {

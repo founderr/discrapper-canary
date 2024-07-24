@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250);
@@ -34,12 +34,12 @@ children: (0, i.jsx)('circle', {
   });
 });
 
-function d(e) {
+function u(e) {
   let {
 totalCooldownSeconds: t,
 remainingCooldownSeconds: n,
-onClick: d,
-onKeyDown: u,
+onClick: u,
+onKeyDown: d,
 onMouseEnter: h,
 onMouseLeave: p,
 isActive: m = !1,
@@ -65,8 +65,8 @@ children: [
     disabled: E,
     label: g,
     iconComponent: s.ReactionIcon,
-    onClick: d,
-    onKeyDown: u,
+    onClick: u,
+    onKeyDown: d,
     onMouseEnter: h,
     onMouseLeave: p,
     isActive: m,

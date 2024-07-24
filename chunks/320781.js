@@ -11,8 +11,8 @@ var a = n(442837),
   r = n(456269),
   o = n(660189),
   c = n(257511),
-  d = n(967128),
-  u = n(689938),
+  u = n(967128),
+  d = n(689938),
   h = n(472934);
 
 function p(e) {
@@ -22,7 +22,7 @@ channel: n
   } = e, p = (0, r.eV)(n), {
 firstMessage: m
   } = (0, a.cj)([o.Z], () => o.Z.getMessage(n.id)), _ = new Set((0, r.kn)(n, p)), f = null !== (t = (0, l.KS)(n)) && void 0 !== t ? t : s.ChatIcon;
-  return (0, i.jsxs)(d.ZP, {
+  return (0, i.jsxs)(u.ZP, {
 channelId: n.id,
 className: h.container,
 children: [
@@ -33,14 +33,14 @@ children: [
       strokeWidth: 1.75
     })
   }),
-  (0, i.jsx)(d.Ot, {
+  (0, i.jsx)(u.Ot, {
     className: h.header,
     children: n.name
   }),
   null == m && (0, i.jsx)(s.Text, {
     variant: 'text-md/normal',
     color: 'header-secondary',
-    children: u.Z.Messages.REPLY_QUOTE_MESSAGE_DELETED
+    children: d.Z.Messages.REPLY_QUOTE_MESSAGE_DELETED
   }),
   (0, i.jsx)(c.Z, {
     appliedTags: _

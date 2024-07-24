@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(435064),
   o = n(39604),
   c = n(441167),
-  d = n(871499),
-  u = n(199902),
+  u = n(871499),
+  d = n(199902),
   h = n(314897),
   p = n(358221),
   m = n(354459),
@@ -21,7 +21,7 @@ var i = n(735250),
 function E(e) {
   let {
 channel: t
-  } = e, n = (0, s.e7)([p.Z], () => p.Z.getSelectedParticipant(t.id)), E = (null == n ? void 0 : n.type) === m.fO.STREAM, C = (0, s.e7)([u.Z], () => E ? u.Z.getActiveStreamForStreamKey(n.id) : null), {
+  } = e, n = (0, s.e7)([p.Z], () => p.Z.getSelectedParticipant(t.id)), E = (null == n ? void 0 : n.type) === m.fO.STREAM, C = (0, s.e7)([d.Z], () => E ? d.Z.getActiveStreamForStreamKey(n.id) : null), {
 ignoreSenderPreference: g
   } = c.Z.useExperiment({
 location: 'ActionBarClipsButton'
@@ -37,7 +37,7 @@ isAtMaxSavingClipOperations: r.Z.getIsAtMaxSaveClipOperations()
 ...e,
 color: 'currentColor'
   }), []);
-  return (0, i.jsx)(d.Z, {
+  return (0, i.jsx)(u.Z, {
 className: f.actionBarButton,
 onClick: () => {
   !v && (N ? (0, o.C1)() : (0, o.C1)(n.id));

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(470079),
@@ -11,18 +11,18 @@ var i = n(470079),
   o = n(959517),
   c = n(981631);
 
-function d(e) {
+function u(e) {
   let {
 scrollerRef: t,
 ...n
-  } = e, d = i.useCallback(() => {
+  } = e, u = i.useCallback(() => {
 let e = t.current;
 return null == e ? Promise.resolve() : new Promise(t => {
   e.scrollToBottom({
     callback: () => requestAnimationFrame(t)
   });
 });
-  }, []), u = i.useCallback(() => {
+  }, []), d = i.useCallback(() => {
 let e = t.current;
 return null == e ? Promise.resolve() : new Promise(t => {
   e.scrollToTop({
@@ -47,8 +47,8 @@ id: r.W,
 preserveFocusPosition: !1,
 setFocus: h,
 isEnabled: n.keyboardModeEnabled && !n.isEditing,
-scrollToStart: u,
-scrollToEnd: d,
+scrollToStart: d,
+scrollToEnd: u,
 onNavigateNextAtEnd: p
   }), _ = i.useCallback(e => {
 let {

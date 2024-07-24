@@ -17,16 +17,16 @@ className: t,
 roleColor: n,
 roleName: a,
 hasRemoveIcon: c = !1,
-onClick: d,
-disabled: u = !1,
+onClick: u,
+disabled: d = !1,
 verified: h = !1
   } = e;
   return (0, i.jsx)(l.Button, {
 className: s()(t, o.button),
 look: l.Button.Looks.BLANK,
 size: l.Button.Sizes.NONE,
-onClick: d,
-disabled: u,
+onClick: u,
+disabled: d,
 children: (0, i.jsx)(r.Z, {
   className: o.role,
   roleColor: n,

@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(481060),
   o = n(378298),
   c = n(444957),
-  d = n(276618),
-  u = n(367408),
+  u = n(276618),
+  d = n(367408),
   h = n(473092),
   p = n(819640),
   m = n(665149),
@@ -17,7 +17,7 @@ var i = n(735250),
 t.Z = a.memo(function(e) {
   let {
 channel: t
-  } = e, C = (0, c.h)(t.id), g = (0, d.o)(t.id), I = (0, u.M)(t.id), x = (0, l.f9)(), T = (0, s.e7)([p.Z], () => p.Z.hasLayers()), N = a.useCallback(() => g ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [
+  } = e, C = (0, c.h)(t.id), g = (0, u.o)(t.id), I = (0, d.M)(t.id), x = (0, l.f9)(), T = (0, s.e7)([p.Z], () => p.Z.hasLayers()), N = a.useCallback(() => g ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [
 g,
 I
   ]), v = a.useMemo(() => (g || null != I) && !x && !T, [

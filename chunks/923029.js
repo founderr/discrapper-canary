@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(481060),
   o = n(665149),
   c = n(911560),
-  d = n(210887),
-  u = n(914010),
+  u = n(210887),
+  d = n(914010),
   h = n(981631),
   p = n(689938),
   m = n(42894);
@@ -23,8 +23,8 @@ channelId: _
   a.useEffect(() => {
 c.Z.loadThread(_);
   });
-  let f = (0, l.e7)([u.Z], () => u.Z.getGuildId()) === h.I_8,
-E = (0, l.e7)([d.Z], () => d.Z.theme);
+  let f = (0, l.e7)([d.Z], () => d.Z.getGuildId()) === h.I_8,
+E = (0, l.e7)([u.Z], () => u.Z.theme);
   return t = f ? (0, i.jsx)(r.EmptyStateText, {
 note: p.Z.Messages.FAVORITES_EMPTY_BODY,
 children: p.Z.Messages.FAVORITES_EMPTY_TITLE

@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(873546),
   u = n(442837),
   _ = n(481060),
-  E = n(711237),
-  h = n(532835),
+  h = n(711237),
+  E = n(532835),
   I = n(290297),
   m = n(918854),
   g = n(279240),
@@ -67,28 +67,28 @@ var i = n(735250),
   ed = n(981631),
   eu = n(176505),
   e_ = n(290511),
-  eE = n(264044);
-let eh = () => (0, i.jsx)('div', {
-className: eE.loader,
+  eh = n(264044);
+let eE = () => (0, i.jsx)('div', {
+className: eh.loader,
 children: (0, i.jsx)(_.Spinner, {})
   }),
   eI = (0, c.Un)({
 createPromise: () => n.e('68614').then(n.bind(n, 650788)),
 webpackId: 650788,
 name: 'GuildShopPage',
-renderLoader: eh
+renderLoader: eE
   }),
   em = (0, c.Un)({
 createPromise: () => n.e('44798').then(n.bind(n, 998420)),
 webpackId: 998420,
 name: 'GuildMemberApplicationReview',
-renderLoader: eh
+renderLoader: eE
   }),
   eg = (0, c.Un)({
 createPromise: () => n.e('60493').then(n.bind(n, 231588)),
 webpackId: 231588,
 name: 'GuildHomePage',
-renderLoader: eh
+renderLoader: eE
   }),
   ep = (0, c.Un)({
 createPromise: () => Promise.all([
@@ -97,7 +97,7 @@ createPromise: () => Promise.all([
 ]).then(n.bind(n, 545918)),
 webpackId: 545918,
 name: 'MemberSafetyPage',
-renderLoader: eh
+renderLoader: eE
   }),
   eT = (0, c.Un)({
 createPromise: () => Promise.all([
@@ -109,7 +109,7 @@ createPromise: () => Promise.all([
 ]).then(n.bind(n, 603072)),
 webpackId: 603072,
 name: 'ChannelsAndRolesPage',
-renderLoader: eh
+renderLoader: eE
   }),
   ef = (0, c.Un)({
 createPromise: () => Promise.all([
@@ -121,7 +121,7 @@ createPromise: () => Promise.all([
 ]).then(n.bind(n, 599263)),
 webpackId: 599263,
 name: 'GuildOnboardingPage',
-renderLoader: eh
+renderLoader: eE
   }),
   eS = e => {
 let {
@@ -322,21 +322,21 @@ hasNotice: t,
 sidebarTheme: n,
 hideSidebar: s
   } = e;
-  (0, h.t)(!0);
+  (0, E.t)(!0);
   let a = 'app view user trigger debugging';
-  E.R6.useExperiment({
+  h.R6.useExperiment({
 location: a
   }, {
 autoTrackExposure: !1
-  }), E.R6.trackExposure({
+  }), h.R6.trackExposure({
 location: a
   });
   let l = (0, u.e7)([T.Z], () => T.Z.isFullscreenInContext());
   return s ? null : (0, i.jsxs)('div', {
-className: r()(eE.sidebar, (0, en.Q)(n), {
-  [eE.hasNotice]: t,
-  [eE.fullWidth]: d.tq,
-  [eE.hidden]: l
+className: r()(eh.sidebar, (0, en.Q)(n), {
+  [eh.hasNotice]: t,
+  [eh.fullWidth]: d.tq,
+  [eh.hidden]: l
 }),
 children: [
   (0, i.jsx)(eC, {}),
@@ -372,35 +372,35 @@ _ = function() {
   let t = (0, l.TH)();
   return (null === (e = (0, l.LX)(t.pathname, ed.Z5c.COLLECTIBLES_SHOP_FULLSCREEN)) || void 0 === e ? void 0 : e.isExact) === !0;
 }(),
-E = (0, u.e7)([H.Z], () => H.Z.getIsOpen()),
-h = (0, l.$B)([
+h = (0, u.e7)([H.Z], () => H.Z.getIsOpen()),
+E = (0, l.$B)([
   ed.Z5c.CHANNEL(ed.ME, ':channelId'),
   ed.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')
 ]),
-m = (null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === eu.oC.GUILD_ONBOARDING,
+m = (null == E ? void 0 : null === (e = E.params) || void 0 === e ? void 0 : e.channelId) === eu.oC.GUILD_ONBOARDING,
 g = s.useCallback(() => B.Z.openSidebar(), []);
   return (0, i.jsx)(i.Fragment, {
 children: (0, i.jsxs)('div', {
-  className: eE.container,
+  className: eh.container,
   children: [
-    E && !_ && (0, i.jsx)(j.Z, {
-      className: eE.guilds,
+    h && !_ && (0, i.jsx)(j.Z, {
+      className: eh.guilds,
       themeOverride: n
     }),
     (0, i.jsx)(x.Z.Provider, {
-      value: (null == h ? void 0 : h.params.guildId) === ed.ME ? void 0 : null == h ? void 0 : h.params.guildId,
+      value: (null == E ? void 0 : E.params.guildId) === ed.ME ? void 0 : null == E ? void 0 : E.params.guildId,
       children: (0, i.jsxs)('div', {
-        className: eE.base,
+        className: eh.base,
         children: [
           d.tq ? null : (0, i.jsx)(er.Z, {}),
           (0, i.jsxs)('div', {
-            className: eE.content,
+            className: eh.content,
             children: [
               (0, i.jsx)(S.Z, {}),
               (0, i.jsx)(ej, {
                 hasNotice: t,
                 sidebarTheme: n,
-                hideSidebar: a || r || c || _ || m || !E
+                hideSidebar: a || r || c || _ || m || !h
               }),
               (0, i.jsx)(I.Z.Provider, {
                 value: g,

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(442837),
@@ -11,7 +11,7 @@ var i = n(442837),
   o = n(979651),
   c = n(981631);
 
-function d(e) {
+function u(e) {
   return (0, i.cj)([
 s.default,
 o.Z,
@@ -23,11 +23,11 @@ var t;
 let {
   channel: n,
   authenticationStore: i = s.default,
-  voiceStateStore: d = o.Z,
-  mediaEngineStore: u = l.Z,
+  voiceStateStore: u = o.Z,
+  mediaEngineStore: d = l.Z,
   permissionStore: h = r.Z,
   impersonateStore: p = a.Z
-} = e, m = null != n ? d.getVoiceState(n.getGuildId(), i.getId()) : null, _ = u.isSelfMute() || u.isSelfMutedTemporarily(), f = null == n ? void 0 : n.getGuildId(), E = p.isViewingRoles(f) && !h.can(c.Plq.SPEAK, n);
+} = e, m = null != n ? u.getVoiceState(n.getGuildId(), i.getId()) : null, _ = d.isSelfMute() || d.isSelfMutedTemporarily(), f = null == n ? void 0 : n.getGuildId(), E = p.isViewingRoles(f) && !h.can(c.Plq.SPEAK, n);
 return {
   selfMute: _,
   suppress: (null == m ? void 0 : m.suppress) || E,

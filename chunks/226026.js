@@ -1,30 +1,30 @@
 t.d(n, {
   Z: function() {
-return o;
+return s;
   }
 });
 var i = t(990547),
-  l = t(442837),
-  a = t(213609),
+  a = t(442837),
+  l = t(213609),
   r = t(541099),
-  s = t(312871);
+  o = t(312871);
 
-function o(e) {
+function s(e) {
   let {
 applicationId: n,
 sectionName: t,
-sectionPosition: o
-  } = e, c = (0, l.e7)([r.Z], () => r.Z.entrypoint());
+sectionPosition: s
+  } = e, c = (0, a.e7)([r.Z], () => r.Z.entrypoint());
   return {
-trackItemImpressionRef: (0, s.Z)({
+trackItemImpressionRef: (0, o.Z)({
   onVisible: () => {
-    (0, a.h)({
+    (0, l.h)({
       type: i.ImpressionTypes.VIEW,
       name: i.ImpressionNames.APP_LAUNCHER_ITEM,
       properties: {
         application_id: n,
         section_name: t,
-        section_position: o,
+        section_position: s,
         source: c
       }
     });

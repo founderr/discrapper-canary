@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(952265),
   o = n(481060),
   c = n(243778),
-  d = n(38618),
-  u = n(914010),
+  u = n(38618),
+  d = n(914010),
   h = n(921944);
 
 function p(e) {
@@ -15,7 +15,7 @@ function p(e) {
 }
 t.Z = a.memo(function() {
   return ! function() {
-let e = (0, s.e7)([d.Z], () => d.Z.isConnected()) ? [] : [],
+let e = (0, s.e7)([u.Z], () => u.Z.isConnected()) ? [] : [],
   [t, m] = (0, c.U)(e, h.R.GUILD_TAKEOVER_MODAL),
   _ = (0, r.f9)(),
   f = a.useRef(null);
@@ -32,7 +32,7 @@ a.useEffect(() => {
       } = e, s = {
         onCloseCallback: e => a(null != e ? e : h.L.UNKNOWN),
         modalKey: p(t)
-      }, r = u.Z.getGuildId();
+      }, r = d.Z.getGuildId();
       if (t === l.z.SERVER_SHOP_UPSELL)
         null != r && (0, o.openModalLazy)(async () => {
           let {

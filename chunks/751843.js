@@ -4,9 +4,9 @@ var l = n(120356),
   r = n.n(l),
   o = n(481060),
   c = n(871499),
-  d = n(636755);
+  u = n(636755);
 
-function u(e) {
+function d(e) {
   let {
 direction: t,
 className: n,
@@ -14,12 +14,12 @@ themeable: i,
 ...a
   } = e;
   return (0, s.jsx)(c.Z, {
-className: r()(n, d.arrow, {
-  [d.up]: 0 === t
+className: r()(n, u.arrow, {
+  [u.up]: 0 === t
 }),
 iconComponent: o.ChevronSmallDownIcon,
 themeable: i,
 ...a
   });
 }
-(i = a || (a = {}))[i.UP = 0] = 'UP', i[i.DOWN = 1] = 'DOWN', u.Directions = a, t.Z = u;
+(i = a || (a = {}))[i.UP = 0] = 'UP', i[i.DOWN = 1] = 'DOWN', d.Directions = a, t.Z = d;

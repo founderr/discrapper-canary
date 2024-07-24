@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(338545),
   o = n(442837),
   c = n(481060),
-  d = n(393238),
-  u = n(607070),
+  u = n(393238),
+  d = n(607070),
   h = n(44315),
   p = n(314897),
   m = n(111583),
@@ -23,7 +23,7 @@ let N = a.memo(function(e) {
 let {
   channelId: t,
   width: n
-} = e, s = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), l = (0, o.e7)([C.ZP], () => C.ZP.getMostRecentMessageCombo(t), [t]), [d, h] = a.useState(!1);
+} = e, s = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), l = (0, o.e7)([C.ZP], () => C.ZP.getMostRecentMessageCombo(t), [t]), [u, h] = a.useState(!1);
 a.useEffect(() => {
   if (null == l ? void 0 : l.displayed)
     return;
@@ -37,8 +37,8 @@ a.useEffect(() => {
 }, [l]);
 let p = null != l ? '100%' : '200%',
   m = (0, c.useSpring)({
-    opacity: d ? 1 : 0,
-    translateY: d ? '0' : p,
+    opacity: u ? 1 : 0,
+    translateY: u ? '0' : p,
     pointerEvents: 'none',
     width: n,
     config: s ? r.config.stiff : r.config.slow
@@ -63,7 +63,7 @@ let {
   color: s,
   square: r,
   flair: o
-} = a.useMemo(() => (0, g.yz)(n), [n]), d = (0, h.Lq)(s);
+} = a.useMemo(() => (0, g.yz)(n), [n]), u = (0, h.Lq)(s);
 return (0, i.jsxs)(i.Fragment, {
   children: [
     (0, i.jsx)(c.Text, {
@@ -74,13 +74,13 @@ return (0, i.jsxs)(i.Fragment, {
     (0, i.jsxs)('div', {
       className: T.comboNameplate,
       style: {
-        color: d
+        color: u
       },
       children: [
         (0, i.jsx)(c.Text, {
           className: T.comboMultiplier,
           style: {
-            color: d
+            color: u
           },
           variant: 'text-sm/bold',
           children: x.Z.Messages.POGGERMODE_COMBO.format({
@@ -92,13 +92,13 @@ return (0, i.jsxs)(i.Fragment, {
             (0, i.jsx)('div', {
               className: l()(T.comboSquare, T.left),
               style: {
-                backgroundColor: d
+                backgroundColor: u
               }
             }),
             (0, i.jsx)('div', {
               className: l()(T.comboSquare, T.right),
               style: {
-                backgroundColor: d
+                backgroundColor: u
               }
             })
           ]
@@ -137,13 +137,13 @@ channelId: t
   } = e, n = (0, o.e7)([p.default], () => p.default.getId()), s = (0, o.e7)([m.Z], () => m.Z.isTyping(t, n), [
 t,
 n
-  ]), l = (0, o.e7)([E.Z], () => E.Z.isEnabled()), u = (0, o.e7)([C.ZP], () => C.ZP.isComboing(n, t), [
+  ]), l = (0, o.e7)([E.Z], () => E.Z.isEnabled()), d = (0, o.e7)([C.ZP], () => C.ZP.isComboing(n, t), [
 t,
 n
   ]), {
 ref: h,
 width: _ = 0
-  } = (0, d.Z)(), [f, g] = a.useState(!1), x = (0, I.Z)(t), S = l && u && s;
+  } = (0, u.Z)(), [f, g] = a.useState(!1), x = (0, I.Z)(t), S = l && d && s;
   a.useEffect(() => {
 S && g(!0);
 let e = setTimeout(() => g(S), 1000);

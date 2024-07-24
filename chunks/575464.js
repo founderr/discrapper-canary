@@ -11,8 +11,8 @@ var a = n(120356),
   r = n(442837),
   o = n(481060),
   c = n(129861),
-  d = n(700582),
-  u = n(158776),
+  u = n(700582),
+  d = n(158776),
   h = n(285952),
   p = n(51144),
   m = n(808794);
@@ -29,7 +29,7 @@ onClick: C,
 onMouseEnter: g,
 'aria-setsize': I,
 'aria-posinset': x
-  } = e, T = (0, r.e7)([u.Z], () => u.Z.getStatus(t.id)), N = (0, l.JA)(String(t.id));
+  } = e, T = (0, r.e7)([d.Z], () => d.Z.getStatus(t.id)), N = (0, l.JA)(String(t.id));
   return (0, i.jsx)(o.Clickable, {
 id: 'user-row-'.concat(n),
 className: m.friendWrapper,
@@ -50,7 +50,7 @@ children: (0, i.jsxs)(h.Z, {
     [m.friendSelected]: f
   }),
   children: [
-    (0, i.jsx)(d.Z, {
+    (0, i.jsx)(u.Z, {
       user: t,
       status: T,
       className: m.avatar

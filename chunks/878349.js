@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(442837),
   o = n(780384),
   c = n(481060),
-  d = n(393238),
-  u = n(410030),
+  u = n(393238),
+  d = n(410030),
   h = n(607070),
   p = n(466794),
   m = n(306615),
@@ -32,13 +32,13 @@ id: T = 'fancybutton-toggle',
 collapseWhenChecked: N = !0,
 onClick: v,
 disabled: S
-  } = e, Z = (0, r.e7)([h.Z], () => h.Z.useReducedMotion), [A, M] = a.useState(!1), b = (0, u.ZP)(), R = (0, o.wj)(b) || t ? f : _, {
+  } = e, Z = (0, r.e7)([h.Z], () => h.Z.useReducedMotion), [A, M] = a.useState(!1), b = (0, d.ZP)(), R = (0, o.wj)(b) || t ? f : _, {
 width: j = 0,
 ref: L
-  } = (0, d.Z)(), {
+  } = (0, u.Z)(), {
 width: P = 0,
 ref: O
-  } = (0, d.Z)();
+  } = (0, u.Z)();
   return (0, i.jsxs)(c.TooltipContainer, {
 text: (0, i.jsx)(p.X, {
   textColor: 'always-white',

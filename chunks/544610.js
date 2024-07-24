@@ -2,8 +2,8 @@ let i;
 n(47120), n(724458), n(653041);
 var a, s, l, r, o = n(392711),
   c = n.n(o),
-  d = n(442837),
-  u = n(570140),
+  u = n(442837),
+  d = n(570140),
   h = n(279779),
   p = n(353926),
   m = n(60349),
@@ -130,7 +130,7 @@ return !1;
 function H() {
   null != i && (i.destroy(), i = null), L();
 }
-class G extends(a = d.ZP.Store) {
+class G extends(a = u.ZP.Store) {
   initialize() {
 this.waitFor(N.default, I.Z, T.Z, p.Z), this.syncWith([
   N.default,
@@ -165,7 +165,7 @@ r = 'PrivateChannelRecipientsInviteStore', (l = 'displayName') in(s = G) ? Objec
   configurable: !0,
   writable: !0
 }) : s[l] = r;
-let V = new G(u.Z, {
+let V = new G(d.Z, {
   CONNECTION_OPEN: function() {
 L();
   },

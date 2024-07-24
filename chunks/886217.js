@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(442837),
   o = n(18323),
   c = n(594174),
-  d = n(908841),
-  u = n(823379),
+  u = n(908841),
+  d = n(823379),
   h = n(5192),
   p = n(561308),
   m = n(256726),
@@ -48,7 +48,7 @@ image_url: Z
 primaryColor: b,
 secondaryColor: R
   } = (0, _.Z)(Z), j = (0, p.Nq)(n), L = a.useCallback(() => {
-if (null == M || !(0, u.Hi)(j, f.y9))
+if (null == M || !(0, d.Hi)(j, f.y9))
   return;
 let e = T(n, t, M, j);
 return (0, m.CR)({
@@ -73,7 +73,7 @@ j,
 R,
 M
   ]);
-  if (null == M || !(0, u.Hi)(j, f.y9))
+  if (null == M || !(0, d.Hi)(j, f.y9))
 return null;
   let P = () => {
 let e = I.Hw.ALBUM,
@@ -94,7 +94,7 @@ children: [
     channel: t,
     entry: n,
     headerIcons: S === l.p.SPOTIFY ? (0, i.jsx)(g.Z, {
-      Icon: d.Z,
+      Icon: u.Z,
       'aria-label': x.Z.Messages.SPOTIFY
     }) : null,
     userDescription: x.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,

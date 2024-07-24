@@ -19,7 +19,7 @@ searchByMode: n
   return (0, i.jsxs)('header', {
 className: o.searchHeader,
 children: [
-  (0, i.jsx)(d, {
+  (0, i.jsx)(u, {
     ...e
   }),
   (0, i.jsxs)(a.TabBar, {
@@ -46,7 +46,7 @@ children: [
   });
 }
 
-function d(e) {
+function u(e) {
   let t;
   let {
 isSearching: n,
@@ -74,13 +74,13 @@ children: [
       className: o.totalResultsWrapper,
       ...n,
       children: [
-        (0, i.jsx)(u, {
+        (0, i.jsx)(d, {
           ...e
         }),
         t
       ]
     })
-  }) : (0, i.jsx)(u, {
+  }) : (0, i.jsx)(d, {
     ...e
   }),
   c ? null : t
@@ -88,7 +88,7 @@ children: [
   });
 }
 
-function u(e) {
+function d(e) {
   let {
 isSearching: t,
 isIndexing: n,

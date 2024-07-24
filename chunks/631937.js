@@ -10,18 +10,18 @@ var i = n(470079),
   r = n(306680),
   o = n(626135),
   c = n(802098),
-  d = n(193701),
-  u = n(702321),
+  u = n(193701),
+  d = n(702321),
   h = n(981631);
 
 function p(e) {
-  let t = (0, d.Z)(e),
+  let t = (0, u.Z)(e),
 n = (0, a.e7)([l.default], () => l.default.locale),
 p = (0, a.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : '', n), [
   t,
   n
 ]),
-m = (0, u.Z)(e),
+m = (0, d.Z)(e),
 _ = i.useRef(m ? Date.now() : null),
 f = (0, a.e7)([r.ZP], () => r.ZP.getUnreadCount(e), [e]);
   i.useEffect(() => {

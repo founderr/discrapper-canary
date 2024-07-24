@@ -5,30 +5,30 @@ var i, s, a, r, l = n(442837),
   u = n(981631);
 let _ = null;
 
-function E() {
+function h() {
   let e = d.default.getCurrentUser();
   if (null == e || e.mfaEnabled === _)
 return !1;
   _ = e.mfaEnabled;
 }
-class h extends(r = l.ZP.Store) {
+class E extends(r = l.ZP.Store) {
   initialize() {
 this.waitFor(d.default, c.ZP), this.syncWith([
   d.default,
   c.ZP
-], E);
+], h);
   }
   isVisible(e) {
 return null != e && e.mfaLevel === u.BpS.ELEVATED && !1 === _ && c.ZP.hasElevatedPermissions(e.id);
   }
 }
-a = 'GuildMFAWarningStore', (s = 'displayName') in(i = h) ? Object.defineProperty(i, s, {
+a = 'GuildMFAWarningStore', (s = 'displayName') in(i = E) ? Object.defineProperty(i, s, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = a, t.Z = new h(o.Z, {
-  CONNECTION_OPEN: E,
+}) : i[s] = a, t.Z = new E(o.Z, {
+  CONNECTION_OPEN: h,
   GUILD_UPDATE: function() {
 return !0;
   }

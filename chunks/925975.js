@@ -10,15 +10,15 @@ var i = n(302454),
   r = n(367907),
   o = n(339085),
   c = n(222677),
-  d = n(995774),
-  u = n(695346),
+  u = n(995774),
+  d = n(695346),
   h = n(375954),
   p = n(981631);
 let m = /\\([*?+/])/g,
   _ = {
 tts: {
   action: () => ({
-    tts: u.OW.getSetting()
+    tts: d.OW.getSetting()
   })
 },
 me: {
@@ -66,7 +66,7 @@ reaction: {
       return;
     let s = o.Z.getDisambiguatedEmojiContext(i.guild_id).getByName(e.trim().slice(2, -1));
     if (null != s)
-      return (0, c.rU)(i.id, a.id, (0, d.g1)(s)), {
+      return (0, c.rU)(i.id, a.id, (0, u.g1)(s)), {
         content: ''
       };
   }
@@ -118,7 +118,7 @@ if (null != a.match) {
     return f(i, a, e, t);
   continue;
 }
-if (u.dN.getSetting() && '/' === e[0]) {
+if (d.dN.getSetting() && '/' === e[0]) {
   let n = e.split(' ');
   if (i === n[0].slice(1) && null != a.action)
     return f(i, a, n.slice(1).join(' '), t);

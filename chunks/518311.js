@@ -9,8 +9,8 @@ var i, a = n(735250),
   r = n.n(l),
   o = n(392711),
   c = n.n(o),
-  d = n(913527),
-  u = n.n(d),
+  u = n(913527),
+  d = n.n(u),
   h = n(873546),
   p = n(442837),
   m = n(481060),
@@ -89,7 +89,7 @@ children: [
 ]
   });
 }
-let ed = e => {
+let eu = e => {
 var t;
 let {
   channel: n,
@@ -116,13 +116,13 @@ return (0, a.jsx)(m.Clickable, {
       }),
       (0, a.jsx)('span', {
         className: ei.lastActiveTimestamp,
-        children: u()(X.default.extractTimestamp(l)).fromNow()
+        children: d()(X.default.extractTimestamp(l)).fromNow()
       })
     ]
   })
 });
   },
-  eu = e => {
+  ed = e => {
 let {
   onConfirm: t,
   channelIds: n,
@@ -151,7 +151,7 @@ return (0, a.jsxs)(m.ConfirmModal, {
         let a = null !== (n = e.lastMessageId) && void 0 !== n ? n : e.id,
           s = null !== (i = t.lastMessageId) && void 0 !== i ? i : t.id;
         return X.default.compare(s, a);
-      }).map(e => (0, a.jsx)(ed, {
+      }).map(e => (0, a.jsx)(eu, {
         onClose: i.onClose,
         channel: e
       }, e.id))
@@ -618,14 +618,14 @@ super(...e), el(this, 'state', {
     return null;
   let {
     user: c,
-    comparator: d
-  } = o, u = s.has(c.id);
+    comparator: u
+  } = o, d = s.has(c.id);
   return (0, a.jsx)(ee.Z, {
     row: n,
     user: c,
     hideDiscriminator: r,
-    comparator: d,
-    checked: u,
+    comparator: u,
+    checked: d,
     selected: n === l,
     onClick: this.handleClick,
     onMouseEnter: this.focusResult,
@@ -728,14 +728,14 @@ super(...e), el(this, 'state', {
       ...e.recipients,
       ...i
     ])));
-    t.size > 0 ? (0, m.openModal)(n => (0, a.jsx)(eu, {
+    t.size > 0 ? (0, m.openModal)(n => (0, a.jsx)(ed, {
       ...n,
       onConfirm: () => this.pushToExistingDM(e, i),
       channelIds: t
     }), {}, (0, m.modalContextFromAppContext)(this.context.appContext)) : this.pushToExistingDM(e, i);
   } else {
     let e = e_(i);
-    i.length > 1 && e.size > 0 ? (0, m.openModal)(t => (0, a.jsx)(eu, {
+    i.length > 1 && e.size > 0 ? (0, m.openModal)(t => (0, a.jsx)(ed, {
       ...t,
       onConfirm: () => this.createNewDM(i),
       channelIds: e
@@ -801,12 +801,12 @@ tooltip: l,
 tooltipPosition: r = 'bottom',
 popoutPosition: o = 'bottom',
 popoutAlign: c = 'right',
-subscribeToGlobalHotkey: d = !1
-  } = e, [u, h] = s.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), p = (0, Z.Dd)(null == t ? void 0 : t.id), _ = s.useCallback(() => h(e => !e), []);
-  s.useEffect(() => (d && K.S.subscribe(et.CkL.TOGGLE_DM_CREATE, _), () => {
+subscribeToGlobalHotkey: u = !1
+  } = e, [d, h] = s.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), p = (0, Z.Dd)(null == t ? void 0 : t.id), _ = s.useCallback(() => h(e => !e), []);
+  s.useEffect(() => (u && K.S.subscribe(et.CkL.TOGGLE_DM_CREATE, _), () => {
 K.S.unsubscribe(et.CkL.TOGGLE_DM_CREATE, _);
   }), [
-d,
+u,
 _
   ]);
   let {
@@ -829,7 +829,7 @@ renderPopout: e => (0, a.jsx)(ep, {
   channel: t
 }),
 position: o,
-shouldShow: u,
+shouldShow: d,
 align: c,
 onRequestClose: () => h(!1),
 animation: m.Popout.Animation.NONE,

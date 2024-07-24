@@ -13,8 +13,8 @@ var i = n(392711),
   r = n(125268),
   o = n(673125),
   c = n(292793),
-  d = n(88315),
-  u = n(199766),
+  u = n(88315),
+  d = n(199766),
   h = n(813900);
 let p = {
 X_OFFSET: 2 * h.qh,
@@ -53,11 +53,11 @@ deadDrawables: v
   } = e;
   E.save();
   let S = o.Z.getEmojiImage(null !== (n = null !== (t = f.emojiId) && void 0 !== t ? t : f.emojiName) && void 0 !== n ? n : ''),
-Z = (0, d.np)(f.x, C),
-A = (0, d.np)(f.y, g),
+Z = (0, u.np)(f.x, C),
+A = (0, u.np)(f.y, g),
 {
   outlineColor: M
-} = (0, d.bg)(f.userId, x, T, I);
+} = (0, u.bg)(f.userId, x, T, I);
   if (_(f, e => {
   var t, n;
   return t = f, n = e, void(n.x += n.xSpeed * window.devicePixelRatio, n.y += n.ySpeed * window.devicePixelRatio, n.opacity -= n.opacitySpeed, n.opacity <= 0 && m.setState(e => (delete e.particles[t.id][n.id], 0 === Object.keys(e.particles[t.id]).length && delete e.particles[t.id], e)));
@@ -69,8 +69,8 @@ A = (0, d.np)(f.y, g),
     m.setState(i => {
       var l, r, o;
       let c = null !== (l = i.particles[e.id]) && void 0 !== l ? l : {},
-        d = a().random(1, 2);
-      for (let e = 0; e < d; e++) {
+        u = a().random(1, 2);
+      for (let e = 0; e < u; e++) {
         ;
         let e = (r = t, o = n, {
           id: (0, s.Z)(),
@@ -86,7 +86,7 @@ A = (0, d.np)(f.y, g),
       }
       return i.particles[e.id] = c, i.lastSpawned[e.id] = Date.now(), i;
     });
-}(f, Z, A), (0, u.I)(E, Z, A, M, h.q2), (0, u.T)(E, Z, A, f.userId), _(f, e => function(e, t, n) {
+}(f, Z, A), (0, d.I)(E, Z, A, M, h.q2), (0, d.T)(E, Z, A, f.userId), _(f, e => function(e, t, n) {
   if (null == t)
     return;
   let i = n.size * window.devicePixelRatio,

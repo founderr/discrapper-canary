@@ -13,8 +13,8 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(475179),
-  d = n(872810),
-  u = n(763520),
+  u = n(872810),
+  d = n(763520),
   h = n(710845),
   p = n(590293),
   m = n(863908),
@@ -53,7 +53,7 @@ focused: a,
 idle: s,
 width: l,
 premiumIndicator: o
-  } = e, c = (0, r.e7)([g.Z], () => g.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)), d = (0, O.K)(l);
+  } = e, c = (0, r.e7)([g.Z], () => g.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)), u = (0, O.K)(l);
   return (0, i.jsxs)(i.Fragment, {
 children: [
   n ? null : (0, i.jsx)(P.Z, {
@@ -63,7 +63,7 @@ children: [
     size: S.ZP.Sizes.SMALL,
     className: w.liveIndicator,
     participant: t,
-    showQuality: !d && !s,
+    showQuality: !u && !s,
     isUpsellEnabled: !1,
     premiumIndicator: o
   })
@@ -90,7 +90,7 @@ W.id,
 F.guildId
   ]), q = (0, r.e7)([g.Z], () => g.Z.getAllActiveStreams().length > 0), X = (0, r.e7)([N.Z], () => N.Z.isFocused()), Q = (null == K ? void 0 : K.ownerId) === G, J = Q && !X && !S, $ = null != K ? (0, m.Z)(K, W, W.id === G, J) : null, ee = P < 195;
   if (a.useEffect(() => {
-  !q && (null == Y ? void 0 : Y.isGuildStageVoice()) && !Q && ((0, d.rn)(F), c.Z.updateStageStreamSize(F.channelId, !1));
+  !q && (null == Y ? void 0 : Y.isGuildStageVoice()) && !Q && ((0, u.rn)(F), c.Z.updateStageStreamSize(F.channelId, !1));
 }, []), a.useEffect(() => {
   B.info('Stream Tile State - activeStream: '.concat(null != K, ' | selected: ').concat(n, ' | Video: ').concat(null != H, ' | MediaEngine: ').concat(T.Z.supports(k.AN.VIDEO)));
 }, [
@@ -141,7 +141,7 @@ return (0, i.jsxs)(i.Fragment, {
       videoComponent: H,
       fit: f,
       paused: h || J,
-      videoSpinnerContext: Q ? u.m.SELF_STREAM : u.m.REMOTE_STREAM,
+      videoSpinnerContext: Q ? d.m.SELF_STREAM : d.m.REMOTE_STREAM,
       userId: W.id
     }, z),
     null != $ ? (0, i.jsx)(C.Z, {
@@ -181,7 +181,7 @@ return (0, i.jsxs)('div', {
           className: w.addCTA,
           tooltip: U.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
           onClick: e => {
-            e.stopPropagation(), (0, d.rn)(F, {
+            e.stopPropagation(), (0, u.rn)(F, {
               forceMultiple: !0
             });
           },

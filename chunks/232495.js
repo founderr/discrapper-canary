@@ -11,7 +11,7 @@ var a = n(442837),
   r = n(914010),
   o = n(689938),
   c = n(569234);
-let d = () => (0, i.jsx)(i.Fragment, {
+let u = () => (0, i.jsx)(i.Fragment, {
 children: o.Z.Messages.TIP_INSTANT_INVITE_BODY3.format({
   shareIcon: o.Z.Messages.INSTANT_INVITE,
   shareIconHook: () => (0, i.jsx)(s.GroupPlusIcon, {
@@ -19,7 +19,7 @@ children: o.Z.Messages.TIP_INSTANT_INVITE_BODY3.format({
   }, 'icon')
 })
   }),
-  u = () => {
+  d = () => {
 let e = (0, a.e7)([
     l.Z,
     r.Z
@@ -46,7 +46,7 @@ let a = {
         className: c.writingMessagesTitle,
         children: o.Z.Messages.TIP_WRITING_MESSAGES_TITLE3
       }),
-      body: (0, i.jsx)(u, {})
+      body: (0, i.jsx)(d, {})
     },
     ORGANIZE_BY_TOPIC: {
       title: (0, i.jsx)('div', {
@@ -61,7 +61,7 @@ let a = {
     },
     INSTANT_INVITE: {
       title: o.Z.Messages.TIP_INSTANT_INVITE_TITLE3,
-      body: (0, i.jsx)(d, {})
+      body: (0, i.jsx)(u, {})
     },
     SERVER_SETTINGS: {
       title: o.Z.Messages.TIP_SERVER_SETTINGS_TITLE3,

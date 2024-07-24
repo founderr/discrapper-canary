@@ -4,11 +4,11 @@ return m;
   }
 });
 var i = t(735250),
-  l = t(470079),
-  a = t(120356),
-  r = t.n(a),
-  s = t(442837),
-  o = t(481060),
+  a = t(470079),
+  l = t(120356),
+  r = t.n(l),
+  o = t(442837),
+  s = t(481060),
   c = t(607070),
   u = t(98880),
   d = t(202558);
@@ -16,10 +16,10 @@ var i = t(735250),
 function m(e) {
   let {
 look: n = u.U4.LARGE_BANNER
-  } = e, t = (0, s.e7)([c.Z], () => c.Z.useReducedMotion), {
-styleLarge: a,
+  } = e, t = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), {
+styleLarge: l,
 styleSmall: m
-  } = l.useMemo(() => ({
+  } = a.useMemo(() => ({
 styleLarge: {
   width: ''.concat(10 + 50 * Math.random(), '%')
 },
@@ -49,8 +49,8 @@ children: [
         children: [
           (0, i.jsx)('div', {
             className: d.textPlaceholder,
-            style: a,
-            children: (0, i.jsx)(o.Heading, {
+            style: l,
+            children: (0, i.jsx)(s.Heading, {
               className: d.hidden,
               variant: 'heading-md/semibold',
               color: 'header-primary',
@@ -61,7 +61,7 @@ children: [
           (0, i.jsx)('div', {
             className: d.textPlaceholder,
             style: m,
-            children: (0, i.jsx)(o.Text, {
+            children: (0, i.jsx)(s.Text, {
               className: d.hidden,
               variant: 'text-sm/normal',
               color: 'text-secondary',

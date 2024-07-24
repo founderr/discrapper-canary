@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(475179),
-  d = n(239091),
-  u = n(872810),
+  u = n(239091),
+  d = n(872810),
   h = n(40851),
   p = n(358221),
   m = n(258609),
@@ -39,8 +39,8 @@ let {
   guildId: l,
   user: r,
   width: c,
-  isModerator: d,
-  onContextMenu: u,
+  isModerator: u,
+  onContextMenu: d,
   inPopout: h
 } = e, {
   reducedMotion: p
@@ -63,7 +63,7 @@ return (0, i.jsx)(o.Popout, {
   position: 'right',
   spacing: 8,
   children: e => (0, i.jsx)(o.Clickable, {
-    onContextMenu: e => u(n, e),
+    onContextMenu: e => d(n, e),
     ...e,
     children: (0, i.jsx)(S.Z, {
       participant: n,
@@ -76,7 +76,7 @@ return (0, i.jsx)(o.Popout, {
       paused: !1,
       pulseSpeakingIndicator: !p.enabled,
       width: c,
-      children: d && (0, i.jsx)(Z.Z, {})
+      children: u && (0, i.jsx)(Z.Z, {})
     }, _)
   })
 });
@@ -87,7 +87,7 @@ let {
   rtcParticipant: n,
   channel: s,
   width: l,
-  isModerator: d,
+  isModerator: u,
   onContextMenu: h,
   inPopout: E
 } = e, {
@@ -105,7 +105,7 @@ let {
   if (e.type === M.fO.STREAM && 0 === L.filter(t => (0, _.V9)(t) === e.id && t.state !== A.jm8.ENDED).length) {
     if (!(0, f.p9)(s, T.Z, I.Z, x.Z, m.Z)[0])
       return;
-    (0, u.rn)((0, _.my)(e.id), {
+    (0, d.rn)((0, _.my)(e.id), {
       forceMultiple: t.shiftKey
     });
   }
@@ -130,7 +130,7 @@ return (0, i.jsx)(S.Z, {
   paused: !1,
   pulseSpeakingIndicator: !C.enabled,
   width: l,
-  children: d && n.type === M.fO.USER && (0, i.jsx)(Z.Z, {})
+  children: u && n.type === M.fO.USER && (0, i.jsx)(Z.Z, {})
 }, v);
   };
 t.Z = a.memo(function(e) {
@@ -139,8 +139,8 @@ t.Z = a.memo(function(e) {
 participant: a,
 channel: s,
 width: o
-  } = e, c = (0, h.bp)(), u = s.getGuildId();
-  l()(null != u, 'Channel cannot be guildless');
+  } = e, c = (0, h.bp)(), d = s.getGuildId();
+  l()(null != d, 'Channel cannot be guildless');
   let {
 user: m
   } = a, _ = (0, r.e7)([p.Z], () => p.Z.getParticipant(s.id, a.id), [
@@ -156,7 +156,7 @@ return null;
   switch (e.type) {
     case M.fO.HIDDEN_STREAM:
     case M.fO.STREAM:
-      (0, d.jW)(t, async () => {
+      (0, u.jW)(t, async () => {
         let {
           default: t
         } = await n.e('22183').then(n.bind(n, 987281));
@@ -172,7 +172,7 @@ return null;
       return;
     case M.fO.USER:
     default:
-      (0, d.jW)(t, async () => {
+      (0, u.jW)(t, async () => {
         let {
           default: e
         } = await Promise.all([
@@ -184,7 +184,7 @@ return null;
         return t => (0, i.jsx)(e, {
           ...t,
           user: m,
-          guildId: u,
+          guildId: d,
           channel: s,
           showMediaItems: !0,
           showStageChannelItems: !0,
@@ -201,7 +201,7 @@ children: C ? (0, i.jsx)(j, {
   stageParticipant: a,
   rtcParticipant: _,
   channel: s,
-  guildId: u,
+  guildId: d,
   user: m,
   width: o,
   isModerator: f,
@@ -211,7 +211,7 @@ children: C ? (0, i.jsx)(j, {
   stageParticipant: a,
   rtcParticipant: _,
   channel: s,
-  guildId: u,
+  guildId: d,
   user: m,
   width: o,
   isModerator: f,

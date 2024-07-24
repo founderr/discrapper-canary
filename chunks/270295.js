@@ -13,13 +13,13 @@ function o(e) {
   let t = (0, a.e7)([s.default], () => s.default.getId()),
 n = (0, r.ZP)(t, e.id),
 o = n === r.xO.REQUESTED_TO_SPEAK || n === r.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-[c, d] = i.useState(o);
+[c, u] = i.useState(o);
   return i.useEffect(() => {
-d(o);
+u(o);
   }, [o]), [
 c,
 function() {
-  n === r.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ? (0, l.RK)(e, !0) : (0, l.Q1)(e, !c), d(!c);
+  n === r.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ? (0, l.RK)(e, !0) : (0, l.Q1)(e, !c), u(!c);
 }
   ];
 }

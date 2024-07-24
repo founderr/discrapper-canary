@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(239091),
-  d = n(749210),
-  u = n(565138),
+  u = n(749210),
+  d = n(565138),
   h = n(372769),
   p = n(134432),
   m = n(769654),
@@ -136,7 +136,7 @@ entry: s
   } = e, [l, C] = a.useState(!1), I = null != (0, r.e7)([f.Z], () => f.Z.getGuild(s.guildId)), x = async () => {
 C(!0);
 try {
-  I ? (0, m.X)(s.guildId) : await d.Z.joinGuild(s.guildId, {
+  I ? (0, m.X)(s.guildId) : await u.Z.joinGuild(s.guildId, {
     source: T.vtS.DIRECTORY_ENTRY
   });
 } finally {
@@ -184,11 +184,11 @@ children: [
           height: 48,
           children: (0, i.jsx)('div', {
             className: v.iconMask,
-            children: (0, i.jsx)(u.Z, {
+            children: (0, i.jsx)(d.Z, {
               className: v.icon,
               iconSrc: Z,
               guild: new _.ZP(s),
-              size: u.Z.Sizes.MEDIUM,
+              size: d.Z.Sizes.MEDIUM,
               active: !0
             })
           })

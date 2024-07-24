@@ -14,11 +14,11 @@ hovered: n,
 subText: s,
 showAccountIdentifier: u,
 status: _,
-isMobile: E,
-className: h
+isMobile: h,
+className: E
   } = e, I = (0, r.e7)([c.Z], () => c.Z.getNickname(t.id));
   return (0, i.jsxs)('div', {
-className: a()(d.userInfo, h, {
+className: a()(d.userInfo, E, {
   [d.hovered]: n
 }),
 children: [
@@ -27,7 +27,7 @@ children: [
     className: d.avatar,
     animate: n,
     status: _,
-    isMobile: E
+    isMobile: h
   }),
   (0, i.jsxs)('div', {
     className: d.text,

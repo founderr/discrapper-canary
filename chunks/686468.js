@@ -11,8 +11,8 @@ var a = n(442837),
   r = n(884338),
   o = n(688641),
   c = n(596449),
-  d = n(459502),
-  u = n(856691),
+  u = n(459502),
+  d = n(856691),
   h = n(889161),
   p = n(496675),
   m = n(146085),
@@ -123,10 +123,10 @@ children: [
       })
     ]
   }),
-  T ? null : (0, i.jsx)(d.Z, {
+  T ? null : (0, i.jsx)(u.Z, {
     channelId: t.id
   }),
-  s ? (0, i.jsx)(u.Z, {
+  s ? (0, i.jsx)(d.Z, {
     className: g.eventPrompt,
     channel: t
   }) : null,

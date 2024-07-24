@@ -13,8 +13,8 @@ var i = n(735250),
   r = n(392711),
   o = n(338545),
   c = n(442837),
-  d = n(481060),
-  u = n(570140),
+  u = n(481060),
+  d = n(570140),
   h = n(475179),
   p = n(904245),
   m = n(372900),
@@ -39,7 +39,7 @@ function j(e) {
   var t;
   let {
 message: n
-  } = e, s = (0, c.e7)([T.Z], () => T.Z.isBlockedForMessage(n)), r = (0, E.Uj)(n), o = a.useContext(m.Z), [u, x] = a.useState(!1), v = (0, _.p)(), S = a.useCallback(e => {
+  } = e, s = (0, c.e7)([T.Z], () => T.Z.isBlockedForMessage(n)), r = (0, E.Uj)(n), o = a.useContext(m.Z), [d, x] = a.useState(!1), v = (0, _.p)(), S = a.useCallback(e => {
 if ('A' !== e.target.nodeName)
   h.Z.updateChatOpen(n.channel_id, !0), p.Z.jumpToMessage({
     channelId: n.channel_id,
@@ -50,7 +50,7 @@ if ('A' !== e.target.nodeName)
 n.channel_id,
 n.id
   ]), Z = null != n.content && '' !== n.content ? (0, f.ZP)(n, {
-isInteracting: u,
+isInteracting: d,
 shouldFilterKeywords: v
   }).content : null, {
 contentPlaceholder: A,
@@ -65,9 +65,9 @@ iconSize: M.WW
 className: b.sticker,
 size: 128,
 sticker: e,
-isInteracting: u
+isInteracting: d
   }, e.id)) : null;
-  return (0, i.jsxs)(d.Clickable, {
+  return (0, i.jsxs)(u.Clickable, {
 className: b.toast,
 onMouseEnter: () => {
   x(!0);
@@ -116,7 +116,7 @@ let {
   isFrozen: i,
   count: s,
   lingerMs: l
-} = e, [r, o] = a.useState([]), [d, h] = a.useState(!1), p = a.useRef(null), m = a.useRef(), _ = a.useCallback(() => {
+} = e, [r, o] = a.useState([]), [u, h] = a.useState(!1), p = a.useRef(null), m = a.useRef(), _ = a.useCallback(() => {
   o([]), h(!0);
 }, []);
 a.useEffect(() => {
@@ -131,8 +131,8 @@ a.useEffect(() => {
         i.id
       ]);
   }
-  return u.Z.subscribe('MESSAGE_CREATE', e), () => {
-    u.Z.unsubscribe('MESSAGE_CREATE', e);
+  return d.Z.subscribe('MESSAGE_CREATE', e), () => {
+    d.Z.unsubscribe('MESSAGE_CREATE', e);
   };
 }, [
   n,
@@ -149,7 +149,7 @@ a.useEffect(() => {
 }, [r]), i && null == p.current ? p.current = r : !i && null != p.current && (p.current = null);
 let f = null !== (t = p.current) && void 0 !== t ? t : r;
 return {
-  toastsHidden: d,
+  toastsHidden: u,
   toastMessages: (0, c.Wu)([x.Z], () => f.map(e => x.Z.getMessage(n, e)), [
     n,
     f
@@ -177,7 +177,7 @@ for (let i of m) {
   height: _.current[e.id],
   y: f[e.id]
 })),
-I = (0, d.useTransition)(g, {
+I = (0, u.useTransition)(g, {
   keys: e => e.message.id,
   from: () => ({
     opacity: 0

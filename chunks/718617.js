@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(186325),
   o = n(481060),
   c = n(110924),
-  d = n(714338),
-  u = n(433355),
+  u = n(714338),
+  d = n(433355),
   h = n(863840),
   p = n(189432),
   m = n(727381),
@@ -39,7 +39,7 @@ guildId: x,
 onClose: T,
 analyticsLocation: N,
 className: v
-  } = e, S = (0, l.e7)([u.ZP], () => u.ZP.getGuildSidebarState(x), [x]), Z = null !== (t = null == S ? void 0 : S.details.modViewPanel) && void 0 !== t ? t : E.k.INFO, A = (0, c.Z)(I);
+  } = e, S = (0, l.e7)([d.ZP], () => d.ZP.getGuildSidebarState(x), [x]), Z = null !== (t = null == S ? void 0 : S.details.modViewPanel) && void 0 !== t ? t : E.k.INFO, A = (0, c.Z)(I);
   let M = null == (n = Z) ? null : n === E.k.INFO ? 'backwards' : 'forwards',
 b = (0, h.Z)(M),
 {
@@ -69,7 +69,7 @@ L = a.useMemo(() => ({
   Z,
   j
 ]);
-  a.useEffect(() => (d.Z.enable(), d.Z.enableTemp(L), () => d.Z.disableTemp()), [L]);
+  a.useEffect(() => (u.Z.enable(), u.Z.enableTemp(L), () => u.Z.disableTemp()), [L]);
   let P = (0, o.useTransition)(Z, {
 value: 0,
 from: {

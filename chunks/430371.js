@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(338545),
   o = n(481060),
   c = n(110924),
-  d = n(988980),
-  u = n(157813),
+  u = n(988980),
+  d = n(157813),
   h = n(314897),
   p = n(131951),
   m = n(585483),
@@ -53,7 +53,7 @@ G = h.default.getId(),
 [W, z] = a.useState(!0),
 [Y, K] = a.useState(!1),
 q = L.type === x.fO.ACTIVITY,
-X = (0, d.Z)(L.id),
+X = (0, u.Z)(L.id),
 Q = !q && null != L.streamId,
 J = k <= 2 * S + 144,
 $ = P && !J,
@@ -84,7 +84,7 @@ return () => {
   clearTimeout(e);
 };
   }, []);
-  let ed = (0, o.useSpring)({
+  let eu = (0, o.useSpring)({
   value: $ ? 1 : 0,
   delay: ec || !$ ? 0 : 100,
   config: {
@@ -97,7 +97,7 @@ return () => {
     K(!1), m.S.dispatch(I.CkL.REMEASURE_TARGET);
   }
 }, 'animate-always'),
-eu = (0, o.useSpring)({
+ed = (0, o.useSpring)({
   value: $ ? 1 : 0,
   config: {
     ...r.config.stiff,
@@ -110,7 +110,7 @@ eh = (0, o.useSpring)({
     ...r.config.stiff,
     clamp: !0
   }
-}, ee === $ && eu.value.idle && !ei ? 'animate-never' : 'animate-always'),
+}, ee === $ && ed.value.idle && !ei ? 'animate-never' : 'animate-always'),
 ep = (0, o.useSpring)({
   value: t,
   config: {
@@ -155,7 +155,7 @@ children: [
       (0, i.jsxs)(r.animated.div, {
         className: N.videoFrame,
         style: {
-          top: eu.value.to(e => -e * S / 2)
+          top: ed.value.to(e => -e * S / 2)
         },
         children: [
           (0, i.jsx)(r.animated.div, {
@@ -202,7 +202,7 @@ children: [
             style: {
               bottom: ep.value
             },
-            children: (0, i.jsx)(u.Z, {
+            children: (0, i.jsx)(d.Z, {
               channelId: j.id,
               isParticipantsOpen: P,
               isVertical: !0
@@ -213,9 +213,9 @@ children: [
       (0, i.jsx)(r.animated.div, {
         className: N.participantsWrapperAnimated,
         style: {
-          translateY: ed.value.to(e => e * S / 2),
-          opacity: ed.value,
-          visibility: ed.value.to(e => 0 === e ? 'hidden' : 'visible')
+          translateY: eu.value.to(e => e * S / 2),
+          opacity: eu.value,
+          visibility: eu.value.to(e => 0 === e ? 'hidden' : 'visible')
         },
         children: (0, i.jsx)(g.ZP, {
           channel: j,

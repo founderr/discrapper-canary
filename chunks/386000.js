@@ -15,11 +15,11 @@ selfMute: t,
 serverMute: n,
 suppress: o,
 centerButton: c = !1,
-awaitingRemote: d,
-onMouseEnter: u,
+awaitingRemote: u,
+onMouseEnter: d,
 onMouseLeave: h,
 ...p
-  } = e, m = t || n || o, _ = c ? r.d : r.Z, f = (0, l.Z)(t, n, o, d), {
+  } = e, m = t || n || o, _ = c ? r.d : r.Z, f = (0, l.Z)(t, n, o, u), {
 Component: E,
 play: C,
 events: g
@@ -32,7 +32,7 @@ isActive: !m,
 iconComponent: E,
 label: f,
 onMouseEnter: e => {
-  null == u || u(e), g.onMouseEnter();
+  null == d || d(e), g.onMouseEnter();
 },
 onMouseLeave: e => {
   null == h || h(e), g.onMouseLeave();

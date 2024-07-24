@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(230711),
   u = n(210887),
   _ = n(617136),
-  E = n(272008),
-  h = n(113434),
+  h = n(272008),
+  E = n(113434),
   I = n(569984),
   m = n(497505),
   g = n(918701),
@@ -30,7 +30,7 @@ function R(e) {
   var t;
   let {
 quest: n
-  } = e, s = (0, h.B6)(n.config.expiresAt), a = (0, h.B6)(T.r.build(n.config).rewardsExpireAt), r = (0, l.e7)([u.Z], () => u.Z.getState().theme), d = (0, o.w)(r) ? Z.BRd.DARK : Z.BRd.LIGHT, _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
+  } = e, s = (0, E.B6)(n.config.expiresAt), a = (0, E.B6)(T.r.build(n.config).rewardsExpireAt), r = (0, l.e7)([u.Z], () => u.Z.getState().theme), d = (0, o.w)(r) ? Z.BRd.DARK : Z.BRd.LIGHT, _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, i.jsxs)('div', {
 className: O.heading,
 children: [
@@ -70,7 +70,7 @@ quest: o
   } = e, u = (0, l.e7)([I.Z], () => I.Z.isEnrolling(o.id), [o]), [T, x] = s.useState(!1), b = s.useCallback(() => x(!0), []), P = s.useCallback(() => x(!1), []), M = s.useCallback(e => {
 e.stopPropagation();
   }, []), D = s.useCallback(() => {
-(0, E.AH)(o.id, {
+(0, h.AH)(o.id, {
   questContent: m.jn.ACTIVITY_PANEL,
   questContentCTA: _.jZ.ACCEPT_QUEST
 });
@@ -89,7 +89,7 @@ null != o && ((0, _._3)({
   }, [o]), U = (0, N.hf)({
 quest: o,
 location: m.jn.ACTIVITY_PANEL
-  }), G = (0, h.tP)(o), w = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, k = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, B = (null === (a = o.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, H = (null == o ? void 0 : o.userStatus) == null || (0, g.zE)(o.userStatus, m.jn.ACTIVITY_PANEL), V = (0, h.Rf)(o), F = (0, p.D)({
+  }), G = (0, E.tP)(o), w = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, k = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, B = (null === (a = o.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, H = (null == o ? void 0 : o.userStatus) == null || (0, g.zE)(o.userStatus, m.jn.ACTIVITY_PANEL), V = (0, E.Rf)(o), F = (0, p.D)({
 quest: o,
 taskDetails: V,
 location: v.dr.ACTIVITY_PANEL,

@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(481060),
   o = n(239091),
   c = n(706140),
-  d = n(242291),
-  u = n(792165),
+  u = n(242291),
+  d = n(792165),
   h = n(603074),
   p = n(294629),
   m = n(390322),
@@ -29,7 +29,7 @@ themeable: x
   } = e, T = t.getGuildId(), {
 mute: N,
 suppress: v
-  } = (0, p.Z)(t), S = (0, s.e7)([f.Z], () => f.Z.isDeaf()), Z = N || v || S, A = (0, d.sR)({
+  } = (0, p.Z)(t), S = (0, s.e7)([f.Z], () => f.Z.isDeaf()), Z = N || v || S, A = (0, u.sR)({
 isSoundboardButtonDisabled: Z
   }), [M, b] = (0, c.c)(A);
 
@@ -63,7 +63,7 @@ renderPopout: e => {
       guildId: T,
       channel: t,
       onClose: n,
-      gridNotice: M === l.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, i.jsx)(u.o, {
+      gridNotice: M === l.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, i.jsx)(d.o, {
         onClose: n,
         markAsDismissed: b
       }),

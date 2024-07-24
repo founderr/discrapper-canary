@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(714759),
   u = n(285952),
   _ = n(424218),
-  E = n(358085),
-  h = n(998502),
+  h = n(358085),
+  E = n(998502),
   I = n(689938),
   m = n(275435),
   g = n(224499);
@@ -268,7 +268,7 @@ return (0, i.jsxs)(r.FormSection, {
     (0, i.jsx)('div', {
       className: m.buttonRowWrapper,
       children: (0, i.jsx)(r.Button, {
-        disabled: !E.isPlatformEmbedded,
+        disabled: !h.isPlatformEmbedded,
         onClick: this.handleAddInstallationLocation,
         size: r.Button.Sizes.SMALL,
         children: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD
@@ -281,7 +281,7 @@ return (0, i.jsxs)(r.FormSection, {
 super(...e), p(this, 'state', {
   editingPath: null
 }), p(this, 'handleAddInstallationLocation', () => {
-  h.ZP.showOpenDialog(['openDirectory']).then(e => {
+  E.ZP.showOpenDialog(['openDirectory']).then(e => {
     if (null != e && 0 !== e.length && null != e[0] && 'undefined' !== e[0])
       (0, l.RY)(e[0]);
   });

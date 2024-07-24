@@ -17,9 +17,9 @@ setPopout: t,
 messagePopouts: {
   emojiPicker: n,
   emojiBurstPicker: c,
-  moreUtilities: d
+  moreUtilities: u
 },
-isFocused: u,
+isFocused: d,
 buttonProps: {
   message: h,
   channel: p,
@@ -36,7 +36,7 @@ message: h,
 setPopout: t,
 showEmojiPicker: n,
 showEmojiBurstPicker: c,
-showMoreUtilities: d,
-isFocused: u
+showMoreUtilities: u,
+isFocused: d
   });
 }

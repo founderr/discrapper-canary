@@ -23,19 +23,19 @@ c = i.useCallback((i, a) => {
   n,
   e
 ]),
-d = i.useCallback((e, t, n) => {
+u = i.useCallback((e, t, n) => {
   r.current = (0, a.Z)(), o.current = Date.now(), c(t, n);
 }, [c]),
-u = i.useCallback((e, t, n) => c(t, n), [c]),
-h = i.useCallback((e, t, n) => d(e, t, n), [d]);
+d = i.useCallback((e, t, n) => c(t, n), [c]),
+h = i.useCallback((e, t, n) => u(e, t, n), [u]);
   return i.useMemo(() => ({
-handleMouseDown: d,
-handleMouseMove: u,
+handleMouseDown: u,
+handleMouseMove: d,
 handleMouseUp: l,
 handleMouseEnter: h
   }), [
-d,
+u,
 h,
-u
+d
   ]);
 }

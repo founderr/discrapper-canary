@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250);
@@ -12,12 +12,12 @@ var a = n(481060),
   o = n(868807),
   c = n(689938);
 
-function d(e) {
+function u(e) {
   let {
 channel: t,
 buttonSize: n = a.ButtonSizes.TINY,
-className: d,
-onReportClick: u,
+className: u,
+onReportClick: d,
 onReportSubmit: h,
 onMouseEnter: p,
 onMouseLeave: m
@@ -31,12 +31,12 @@ return null;
 null == h || h(), s.Z.closePrivateChannel(t.id);
   };
   return (0, i.jsx)(a.Button, {
-className: d,
+className: u,
 size: n,
 color: a.Button.Colors.RED,
 disabled: null == C,
 onClick: e => {
-  e.stopPropagation(), null == u || u(), null != C && (0, l.WL)(C, g);
+  e.stopPropagation(), null == d || d(), null != C && (0, l.WL)(C, g);
 },
 onMouseEnter: p,
 onMouseLeave: m,

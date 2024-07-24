@@ -11,8 +11,8 @@ var a = n(442837),
   r = n(5192),
   o = n(621853),
   c = n(910128),
-  d = n(741308),
-  u = n(588822),
+  u = n(741308),
+  d = n(588822),
   h = n(940730),
   p = n(681837),
   m = n(91433),
@@ -52,7 +52,7 @@ children: [
     nickname: r.ZP.getName(null, Z.id, t),
     pronouns: null == n ? void 0 : n.pronouns,
     onOpenProfile: M,
-    tags: (0, i.jsx)(d.Z, {
+    tags: (0, i.jsx)(u.Z, {
       displayProfile: n,
       profileType: T.y0.PANEL
     }),
@@ -88,7 +88,7 @@ children: [
       !j && (null == n ? void 0 : n.bio) != null && (null == n ? void 0 : n.bio) !== '' && (0, i.jsx)(f.Z, {
         title: v.Z.Messages.USER_POPOUT_ABOUT_ME,
         headingColor: 'header-primary',
-        children: (0, i.jsx)(u.Z, {
+        children: (0, i.jsx)(d.Z, {
           userBio: n.bio,
           animateOnHover: !0,
           isHovering: A,

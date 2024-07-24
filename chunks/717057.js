@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(913527),
   o = n.n(r),
   c = n(442837),
-  d = n(481060),
-  u = n(410030),
+  u = n(481060),
+  d = n(410030),
   h = n(271383),
   p = n(430824),
   m = n(594174),
@@ -39,7 +39,7 @@ onSignCharter: r
   } = e, c = a.useMemo(() => {
 let e = f.default.extractTimestamp(n);
 return o()(new Date(e)).format('MMMM YYYY');
-  }, [n]), u = a.useMemo(() => new Set(s.games), [s.games]);
+  }, [n]), d = a.useMemo(() => new Set(s.games), [s.games]);
   return (0, i.jsx)(I.Z, {
 guildId: n,
 signHintPosition: I.p.LEFT,
@@ -58,19 +58,19 @@ children: (0, i.jsxs)('div', {
     }),
     (0, i.jsxs)('div', {
       children: [
-        (0, i.jsx)(d.Heading, {
+        (0, i.jsx)(u.Heading, {
           variant: 'heading-xxl/normal',
           color: 'text-muted',
           className: M.charterHeaderText,
           children: A.Z.Messages.CLAN_SETUP_OVERVIEW_TITLE
         }),
-        (0, i.jsx)(d.Heading, {
+        (0, i.jsx)(u.Heading, {
           variant: 'heading-xxl/bold',
           color: 'interactive-active',
           className: M.charterHeaderText,
           children: s.name
         }),
-        (0, i.jsx)(d.Text, {
+        (0, i.jsx)(u.Text, {
           variant: 'text-md/normal',
           color: 'text-muted',
           className: M.establishedDate,
@@ -81,11 +81,11 @@ children: (0, i.jsxs)('div', {
       ]
     }),
     (0, i.jsx)(N.p, {
-      applicationIds: u,
+      applicationIds: d,
       playstyle: s.playstyle,
       className: l()(M.charterBodyText, M.gameSection)
     }),
-    (0, i.jsx)(d.Text, {
+    (0, i.jsx)(u.Text, {
       variant: 'text-sm/normal',
       color: 'text-muted',
       className: M.charterBodyText,
@@ -129,23 +129,23 @@ O = a.useCallback(() => {
 y = (0, c.e7)([p.Z], () => p.Z.getGuild(n)),
 D = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
 k = (0, c.e7)([h.ZP], () => null != D ? h.ZP.getMember(n, D.id) : null),
-U = (0, u.ZP)(),
+U = (0, d.ZP)(),
 w = (0, g.nP)(null == I ? void 0 : null === (t = I.branding) || void 0 === t ? void 0 : t.primaryColor, [
-  d.tokens.colors.BG_BRAND,
+  u.tokens.colors.BG_BRAND,
   0.7
 ]),
-B = d.tokens.colors.BG_SURFACE_OVERLAY.resolve({
+B = u.tokens.colors.BG_SURFACE_OVERLAY.resolve({
   theme: U,
   saturation: 1
 }).hex(),
 H = (0, g.nj)(w, B, 'top center');
-  return null == y || null == D || null == k || null == I ? null : (0, i.jsx)(d.ModalRoot, {
+  return null == y || null == D || null == k || null == I ? null : (0, i.jsx)(u.ModalRoot, {
 ...o,
 transitionState: o.transitionState,
 'aria-labelledby': f,
 className: M.modal,
-size: d.ModalSize.DYNAMIC,
-children: (0, i.jsxs)(d.ModalContent, {
+size: u.ModalSize.DYNAMIC,
+children: (0, i.jsxs)(u.ModalContent, {
   className: M.content,
   style: H,
   children: [
@@ -157,14 +157,14 @@ children: (0, i.jsxs)(d.ModalContent, {
           children: [
             (0, i.jsx)('div', {
               className: M.title,
-              children: (0, i.jsx)(d.Heading, {
+              children: (0, i.jsx)(u.Heading, {
                 variant: 'heading-xxl/medium',
                 children: A.Z.Messages.CLAN_JOIN_SUCCESS_TITLE.format({
                   name: y.name
                 })
               })
             }),
-            (0, i.jsx)(d.Text, {
+            (0, i.jsx)(u.Text, {
               className: M.subtitle,
               variant: 'text-md/normal',
               children: A.Z.Messages.CLAN_JOIN_SUCCESS_SUBTITLE
@@ -188,19 +188,19 @@ children: (0, i.jsxs)(d.ModalContent, {
     }),
     (0, i.jsx)(v.Z, {
       onClick: P,
-      color: d.Button.Colors.BRAND,
+      color: u.Button.Colors.BRAND,
       themeColor: w,
       fullWidth: !1,
       className: l()(M.ctaButton, R ? M.ctaButtonSigned : null),
       children: (0, i.jsxs)('div', {
         className: M.ctaButtonInner,
         children: [
-          (0, i.jsx)(d.Text, {
+          (0, i.jsx)(u.Text, {
             color: 'currentColor',
             variant: 'text-md/medium',
             children: A.Z.Messages.CLAN_JOIN_SUCCESS_MAIN_CTA
           }),
-          (0, i.jsx)(d.ArrowLargeRightIcon, {
+          (0, i.jsx)(u.ArrowLargeRightIcon, {
             size: 'custom',
             width: 20,
             height: 20,

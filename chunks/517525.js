@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(338545),
   o = n(468194),
   c = n(442837),
-  d = n(692547),
-  u = n(477690),
+  u = n(692547),
+  d = n(477690),
   h = n(481060),
   p = n(2052),
   m = n(906732),
@@ -22,7 +22,7 @@ var i = n(735250),
   N = n(474936),
   v = n(689938),
   S = n(517103);
-let Z = (0, o.Mg)(u.Z.LIVE_INDICATOR_BORDER_RADIUS),
+let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
   A = {
 opacity: 0,
 transform: 'translate3d(100%, 0, 0)'
@@ -53,7 +53,7 @@ clamp: !0
 let t, s, {
     participant: r,
     isUpsellEnabled: o,
-    shape: u,
+    shape: d,
     size: _,
     didTrackUpsellViewed: Z,
     setDidTrackUpsellViewed: A,
@@ -119,7 +119,7 @@ let U = (0, i.jsx)(h.Tooltip, {
   children: e => (0, i.jsxs)(h.Clickable, {
     ...e,
     onClick: k,
-    className: l()(S.qualityIndicator, _, E.eE[u], L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, {
+    className: l()(S.qualityIndicator, _, E.eE[d], L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, {
       [S.clickable]: D && P
     }),
     children: [
@@ -143,8 +143,8 @@ return (0, i.jsx)(h.TextBadge, {
   className: l()(M, S.qualityIndicatorBadge, {
     [S.qualityIndicatorBadgePremium]: b
   }),
-  color: d.Z.unsafe_rawColors.PRIMARY_500.css,
-  shape: u
+  color: u.Z.unsafe_rawColors.PRIMARY_500.css,
+  shape: d
 });
   };
 t.Z = e => {
@@ -154,8 +154,8 @@ showQuality: n,
 isUpsellEnabled: s = !0,
 size: o,
 className: c,
-premiumIndicator: d
-  } = e, [u, p] = a.useState(!1), m = (0, I.Wc)(t), {
+premiumIndicator: u
+  } = e, [d, p] = a.useState(!1), m = (0, I.Wc)(t), {
 reducedMotion: f
   } = a.useContext(h.AccessibilityPreferencesContext), C = n && null != m;
   a.useEffect(() => {
@@ -192,9 +192,9 @@ return (0, i.jsxs)('div', {
         size: o,
         shape: h.BadgeShapes.ROUND_LEFT,
         isUpsellEnabled: s,
-        didTrackUpsellViewed: u,
+        didTrackUpsellViewed: d,
         setDidTrackUpsellViewed: p,
-        premiumIndicator: d
+        premiumIndicator: u
       })
     }) : null),
     (0, i.jsx)(r.animated.div, {

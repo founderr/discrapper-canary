@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250);
@@ -12,14 +12,14 @@ var a = n(120356),
   o = n(470134),
   c = n(722980);
 
-function d(e) {
+function u(e) {
   let {
 guildId: t,
 children: n,
 className: a
   } = e, {
-horizontalScrollNotice: d,
-handleScroll: u,
+horizontalScrollNotice: u,
+handleScroll: d,
 handleSetScrollerRef: h,
 handleSetContainerRef: p
   } = (0, o.Z)(t), m = (0, i.jsx)('div', {
@@ -31,12 +31,12 @@ children: (0, i.jsx)('div', {
   });
   return !l.tq && (m = (0, i.jsxs)(i.Fragment, {
 children: [
-  d,
+  u,
   (0, i.jsx)(r.AdvancedScroller, {
     className: c.scroller,
     orientation: 'horizontal',
     ref: h,
-    onScroll: u,
+    onScroll: d,
     children: m
   })
 ]

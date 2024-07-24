@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(481060),
   o = n(367907),
   c = n(626135),
-  d = n(152376),
-  u = n(981631),
+  u = n(152376),
+  d = n(981631),
   h = n(689938),
   p = n(499256);
 
@@ -21,7 +21,7 @@ channel: t,
 narrow: n
   } = e;
   return a.useEffect(() => {
-c.default.track(u.rMx.CHANNEL_BANNER_VIEWED, {
+c.default.track(d.rMx.CHANNEL_BANNER_VIEWED, {
   ...(0, o.hH)(t.getGuildId()),
   ...(0, o.v_)(t),
   banner_type: 'channel_opt_in'
@@ -43,13 +43,13 @@ children: [
     innerClassName: p.chatHeaderBarButtonInner,
     color: r.Button.Colors.BRAND,
     onClick: () => {
-      c.default.track(u.rMx.CHANNEL_BANNER_CTA_CLICKED, {
+      c.default.track(d.rMx.CHANNEL_BANNER_CTA_CLICKED, {
         ...(0, o.hH)(t.getGuildId()),
         ...(0, o.v_)(t),
         banner_type: 'channel_opt_in',
         cta_type: 'add channel'
-      }), (0, d.XQ)(t.guild_id, t.id, !0, {
-        section: u.jXE.CHANNEL
+      }), (0, u.XQ)(t.guild_id, t.id, !0, {
+        section: d.jXE.CHANNEL
       });
     },
     children: [

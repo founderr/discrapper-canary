@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(772848),
   o = n(481060),
   c = n(871499),
-  d = n(689938),
-  u = n(499442);
+  u = n(689938),
+  d = n(499442);
 
 function h(e) {
   let {
@@ -62,13 +62,13 @@ className: t,
 numRequestToSpeak: n
   } = e, a = n > 0;
   return (0, i.jsxs)('div', {
-className: l()(u.raisedHandIcon, t),
+className: l()(d.raisedHandIcon, t),
 children: [
   (0, i.jsx)(h, {
     isBadged: a
   }),
   a ? (0, i.jsx)(o.Text, {
-    className: u.raisedHandCount,
+    className: d.raisedHandCount,
     variant: 'text-xs/semibold',
     children: n > 99 ? '99+' : n
   }) : null
@@ -84,15 +84,15 @@ className: s,
 numRequestToSpeak: l,
 onClick: r,
 ...o
-  } = e, u = a.useCallback(() => {
+  } = e, d = a.useCallback(() => {
 null == r || r(), t();
   }, [
 r,
 t
   ]);
   return (0, i.jsx)(c.Z, {
-onClick: u,
-label: n ? d.Z.Messages.REQUEST_TO_SPEAK_AREA_CLOSE : d.Z.Messages.REQUEST_TO_SPEAK_AREA_OPEN,
+onClick: d,
+label: n ? u.Z.Messages.REQUEST_TO_SPEAK_AREA_CLOSE : u.Z.Messages.REQUEST_TO_SPEAK_AREA_OPEN,
 className: s,
 iconComponent: () => (0, i.jsx)(p, {
   numRequestToSpeak: l,

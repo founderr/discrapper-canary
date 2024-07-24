@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250),
@@ -27,7 +27,7 @@ s
   ]), null;
 }
 
-function d(e) {
+function u(e) {
   return (0, i.jsx)(s.Z, {
 confettiLocation: o.Hn.CALL_TILE,
 children: (0, i.jsx)(c, {

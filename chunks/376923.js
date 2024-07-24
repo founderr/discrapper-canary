@@ -23,8 +23,8 @@ var i, a, s = n(470079),
   r = n.n(l),
   o = n(399606),
   c = n(271383),
-  d = n(430824),
-  u = n(594174),
+  u = n(430824),
+  d = n(594174),
   h = n(630388),
   p = n(709054);
 n(893966), n(527379);
@@ -32,18 +32,18 @@ var m = n(372897);
 
 function _(e, t) {
   var n, i;
-  let a = (0, o.e7)([u.default], () => u.default.getUser(e), [e]),
+  let a = (0, o.e7)([d.default], () => d.default.getUser(e), [e]),
 s = (0, o.e7)([c.ZP], () => c.ZP.getMember(t, e), [
   t,
   e
 ]),
-l = (0, o.e7)([d.Z], () => d.Z.getGuild(t), [t]);
+l = (0, o.e7)([u.Z], () => u.Z.getGuild(t), [t]);
   return (null == l ? void 0 : l.hasVerificationGate()) ? null == a || null == s || null == l ? 1 : (0, h.yE)(null !== (n = s.flags) && void 0 !== n ? n : 0, m.q.BYPASSES_VERIFICATION) || (0, h.yE)(null !== (i = s.flags) && void 0 !== i ? i : 0, m.q.COMPLETED_ONBOARDING) ? 2 : 1 : 0;
 }
 
 function f(e, t) {
   var n;
-  let i = (0, o.e7)([u.default], () => u.default.getUser(e), [e]),
+  let i = (0, o.e7)([d.default], () => d.default.getUser(e), [e]),
 a = (0, o.e7)([c.ZP], () => c.ZP.getMember(t, e), [
   t,
   e

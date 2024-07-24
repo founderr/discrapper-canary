@@ -11,8 +11,8 @@ var a = n(442837),
   r = n(853856),
   o = n(117984),
   c = n(593214),
-  d = n(362658),
-  u = n(916069),
+  u = n(362658),
+  d = n(916069),
   h = n(689938);
 
 function p(e) {
@@ -20,7 +20,7 @@ function p(e) {
 channel: t
   } = e, {
 isFavoritesPerk: n
-  } = (0, d.z)('ChannelFavoritesHeaderButton'), p = (0, u.Z)(), {
+  } = (0, u.z)('ChannelFavoritesHeaderButton'), p = (0, d.Z)(), {
 notifyFavoriteAdded: m
   } = (0, c.up)(), _ = (0, a.e7)([r.Z], () => r.Z.isFavorite(t.id));
   if (!n || p)

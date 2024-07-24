@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(706454),
   o = n(49012),
   c = n(5192),
-  d = n(591759),
-  u = n(561308),
+  u = n(591759),
+  d = n(561308),
   h = n(644810),
   p = n(206295),
   m = n(335326),
@@ -49,7 +49,7 @@ if (null != T && null != N)
     mediaImageSrc: N,
     avatarSrc: T.getAvatarURL(t.guild_id, 128),
     description: g(n, t, T),
-    timestamp: (0, u.yh)(n, A),
+    timestamp: (0, d.yh)(n, A),
     episodeDescription: v,
     colors: [
       S,
@@ -69,10 +69,10 @@ T
   ]), b = () => {
 if (null == n.extra.url)
   return;
-let e = d.Z.safeParseWithQuery(n.extra.url);
+let e = u.Z.safeParseWithQuery(n.extra.url);
 if (null != e && null != e.protocol && null != e.hostname)
   (0, o.q)({
-    href: d.Z.format(e),
+    href: u.Z.format(e),
     trusted: !1
   });
   };
@@ -82,7 +82,7 @@ children: [
     thumbnailSrc: N,
     channel: t,
     entry: n,
-    userDescription: (0, u.kr)(n) ? C.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING : C.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,
+    userDescription: (0, d.kr)(n) ? C.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING : C.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,
     title: n.extra.media_title,
     subtitle: n.extra.media_subtitle,
     headerIcons: (0, i.jsx)(E.Z, {

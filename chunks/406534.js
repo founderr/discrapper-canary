@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(966390),
   o = n(902840),
   c = n(607070),
-  d = n(367907),
-  u = n(858644),
+  u = n(367907),
+  d = n(858644),
   h = n(600084),
   p = n(62764),
   m = n(79712),
@@ -75,7 +75,7 @@ message: new A.ZP({
   channel_id: n.id,
   customRenderedContent: {
     hasSpoilerEmbeds: !1,
-    content: (0, i.jsx)(u.g, {
+    content: (0, i.jsx)(d.g, {
       filename: t.name,
       progress: null != t.progress ? t.progress : 0,
       size: t.currentSize,
@@ -92,7 +92,7 @@ function et(e) {
   var t;
   let n, a, {
   channel: r,
-  messages: u,
+  messages: d,
   unreadCount: B,
   showNewMessagesBar: et,
   messageDisplayCompact: en,
@@ -104,10 +104,10 @@ function et(e) {
   showingQuarantineBanner: eo,
   hideSummaries: ec
 } = e,
-ed = j.default.getCurrentUser(),
-eu = () => es.isInitialized() || u.ready,
+eu = j.default.getCurrentUser(),
+ed = () => es.isInitialized() || d.ready,
 eh = (0, w.$)(r),
-ep = u.length > 0 && (null === (t = u.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(r)),
+ep = d.length > 0 && (null === (t = d.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(r)),
 em = (0, o.ts)(r),
 e_ = (0, s.e7)([v.Z], () => v.Z.shouldShowTopicsBar() && !ec),
 ef = (0, I.P)(r.id, Q.zr),
@@ -189,19 +189,19 @@ ev = ei.map((e, t) => {
 });
   eN.push(...ev);
   let eS = ei[ei.length - 1];
-  if (null != ed && ea.forEach((e, t) => {
+  if (null != eu && ea.forEach((e, t) => {
   let n = 0 === t && (0, k.J)(r, eS, new A.ZP({
     type: X.uaV.DEFAULT,
-    author: ed
+    author: eu
   }));
   eN.push((0, i.jsx)(ee, {
     file: e,
     channel: r,
-    user: ed,
+    user: eu,
     isGroupStart: n
   }, 'upload-'.concat(e.id)));
-}), u.hasMoreBefore && null == er) {
-u.length > 0 && eN.unshift((0, i.jsx)('div', {
+}), d.hasMoreBefore && null == er) {
+d.length > 0 && eN.unshift((0, i.jsx)('div', {
   style: {
     height: q.D4,
     flex: '0 0 auto'
@@ -210,20 +210,20 @@ u.length > 0 && eN.unshift((0, i.jsx)('div', {
 let {
   useReducedMotion: e
 } = c.Z;
-(e && eu() || !e) && eN.unshift((0, i.jsx)(W.ZP, {
+(e && ed() || !e) && eN.unshift((0, i.jsx)(W.ZP, {
   compact: en,
   ...el
 }, 'has-more'));
   }
-  if ((!u.hasMoreBefore || null != er) && eN.unshift((0, i.jsx)(h.Z, {
+  if ((!d.hasMoreBefore || null != er) && eN.unshift((0, i.jsx)(h.Z, {
   channel: r,
   showingBanner: eo
-}, 'empty-message')), u.hasMoreAfter && eN.push((0, i.jsx)(W.ZP, {
+}, 'empty-message')), d.hasMoreAfter && eN.push((0, i.jsx)(W.ZP, {
   compact: en,
   ...el
-}, 'has-more-after')), !eo && eh && eu() && eN.push((0, i.jsx)(z.Z, {
+}, 'has-more-after')), !eo && eh && ed() && eN.push((0, i.jsx)(z.Z, {
   channel: r
-})), B > 0 && et && eu()) {
+})), B > 0 && et && ed()) {
 let e, t;
 let a = b.ZP.getOldestUnreadTimestamp(r.id),
   s = 0 !== a ? a : O.default.extractTimestamp(r.id),
@@ -231,7 +231,7 @@ let a = b.ZP.getOldestUnreadTimestamp(r.id),
 if (b.ZP.isEstimated(r.id) ? (e = l ? J.Z.Messages.NEW_MESSAGES_ESTIMATED : J.Z.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = J.Z.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = l ? J.Z.Messages.NEW_MESSAGES : J.Z.Messages.NEW_MESSAGES_WITH_DATE, t = J.Z.Messages.NEW_MESSAGES_SUMMARIES), em && (0, o.tW)(r) && eC.includes(K.E.SUMMARIES)) {
   let a = b.ZP.ackMessageId(r.id),
     l = (0, S.q)(r.id, b.ZP.getOldestUnreadMessageId(r.id));
-  if ((0, d.yw)(X.rMx.SUMMARIES_UNREAD_BAR_VIEWED, {
+  if ((0, u.yw)(X.rMx.SUMMARIES_UNREAD_BAR_VIEWED, {
       num_unread_summaries: l,
       num_unread_messages: B,
       last_ack_message_id: a,
@@ -330,9 +330,9 @@ if (b.ZP.isEstimated(r.id) ? (e = l ? J.Z.Messages.NEW_MESSAGES_ESTIMATED : J.Z.
   if (null == n && (0, o.Lp)(r) && e_ && eC.includes(K.E.SUMMARIES) && (n = (0, i.jsx)(F.BO, {
   channel: r,
   scrollManager: es
-})), u.error)
+})), d.error)
 a = (0, i.jsx)(F.Rp, {
-  loading: u.loadingMore,
+  loading: d.loadingMore,
   onClick: () => {
     var e;
     return e = r.id, void l.Z.fetchMessages({
@@ -342,11 +342,11 @@ a = (0, i.jsx)(F.Rp, {
     });
   }
 });
-  else if (u.hasMoreAfter && eu()) {
+  else if (d.hasMoreAfter && ed()) {
 let {
   jumpReturnTargetId: e
-} = u;
-a = u.loadingMore && u.jumpedToPresent ? (0, i.jsx)(F.DR, {}) : null != e ? (0, i.jsx)(F.DR, {
+} = d;
+a = d.loadingMore && d.jumpedToPresent ? (0, i.jsx)(F.DR, {}) : null != e ? (0, i.jsx)(F.DR, {
   type: F.A7.REPLY,
   onClick: () => {
     var t, n;

@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(748780),
   o = n(399606),
   c = n(481060),
-  d = n(607070),
-  u = n(933557),
+  u = n(607070),
+  d = n(933557),
   h = n(471445),
   p = n(592125),
   m = n(271383),
@@ -26,7 +26,7 @@ var i = n(735250),
 function T(e) {
   let {
 action: t
-  } = e, n = (0, o.e7)([p.Z], () => p.Z.getChannel(t.channelId)), a = (0, u.ZP)(n, !0);
+  } = e, n = (0, o.e7)([p.Z], () => p.Z.getChannel(t.channelId)), a = (0, d.ZP)(n, !0);
   return null == n ? (0, i.jsx)(c.Text, {
 variant: 'text-xxs/normal',
 color: 'header-secondary',
@@ -63,7 +63,7 @@ defaultComponent: (0, i.jsx)(r, {
 }
 
 function v(e) {
-  var t, n, s, u;
+  var t, n, s, d;
   let {
 guildId: h,
 channel: p,
@@ -71,7 +71,7 @@ className: m
   } = e, {
 channelAction: C,
 completed: g
-  } = (0, E.P3)(h, p), v = (0, E.K_)(h, null == C ? void 0 : C.channelId), S = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), Z = (null == C ? void 0 : C.actionType) === f.oi.VIEW, A = (0, c.useToken)(c.tokens.colors.WHITE), [M, b] = a.useState(!1), [R] = a.useState(new r.Z.Value(0)), [j] = a.useState(new r.Z.Value(0));
+  } = (0, E.P3)(h, p), v = (0, E.K_)(h, null == C ? void 0 : C.channelId), S = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), Z = (null == C ? void 0 : C.actionType) === f.oi.VIEW, A = (0, c.useToken)(c.tokens.colors.WHITE), [M, b] = a.useState(!1), [R] = a.useState(new r.Z.Value(0)), [j] = a.useState(new r.Z.Value(0));
   a.useEffect(() => {
 g ? r.Z.timing(R, {
   toValue: 0,
@@ -175,7 +175,7 @@ children: M && null != v ? (0, i.jsx)(r.Z.div, {
     (0, i.jsx)(N, {
       channelId: C.channelId,
       emojiId: null === (s = C.emoji) || void 0 === s ? void 0 : s.id,
-      emojiName: null == C ? void 0 : null === (u = C.emoji) || void 0 === u ? void 0 : u.name
+      emojiName: null == C ? void 0 : null === (d = C.emoji) || void 0 === d ? void 0 : d.name
     }),
     (0, i.jsxs)('div', {
       className: x.text,

@@ -5,8 +5,8 @@ var i = n(735250),
   r = n(946050),
   o = n(256413),
   c = n(292853),
-  d = n(359565),
-  u = n(226027);
+  u = n(359565),
+  d = n(226027);
 t.Z = a.memo(function(e) {
   let {
 channel: t,
@@ -15,13 +15,13 @@ narrow: n
 canRenderNotice: p,
 recordNoticeRender: m
   } = (0, l.Z)(t);
-  return t.isArchivedLockedThread() ? (0, i.jsx)(d.s, {
+  return t.isArchivedLockedThread() ? (0, i.jsx)(u.s, {
 channel: t,
 narrow: n
-  }) : t.isLockedThread() ? (0, i.jsx)(d.q, {
+  }) : t.isLockedThread() ? (0, i.jsx)(u.q, {
 channel: t,
 narrow: n
-  }) : a && h.includes(u.E.OPT_IN_CHANNEL) ? (0, i.jsx)(c.Z, {
+  }) : a && h.includes(d.E.OPT_IN_CHANNEL) ? (0, i.jsx)(c.Z, {
 channel: t,
 narrow: n
   }) : p ? (0, i.jsx)(r.Z, {

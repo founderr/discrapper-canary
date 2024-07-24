@@ -5,8 +5,8 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(557135),
-  d = n(590293),
-  u = n(66999),
+  u = n(590293),
+  d = n(66999),
   h = n(665906),
   p = n(496675),
   m = n(979651),
@@ -17,9 +17,9 @@ var i = n(735250),
 t.Z = a.memo(function(e) {
   let {
 channel: t
-  } = e, n = (0, d.Z)(), s = (0, r.e7)([m.Z], () => m.Z.isInChannel(t.id)), g = (0, r.e7)([m.Z], () => !l().isEmpty(m.Z.getVoiceStatesForChannel(t.id))), I = (0, r.e7)([p.Z], () => p.Z.can(E.Plq.CONNECT, t)), {
+  } = e, n = (0, u.Z)(), s = (0, r.e7)([m.Z], () => m.Z.isInChannel(t.id)), g = (0, r.e7)([m.Z], () => !l().isEmpty(m.Z.getVoiceStatesForChannel(t.id))), I = (0, r.e7)([p.Z], () => p.Z.can(E.Plq.CONNECT, t)), {
 needSubscriptionToAccess: x
-  } = (0, u.Z)(t.id), T = (0, h.$R)(t), N = a.useCallback(() => {
+  } = (0, d.Z)(t.id), T = (0, h.$R)(t), N = a.useCallback(() => {
 c.Z.handleVoiceConnect({
   channel: t,
   connected: s,

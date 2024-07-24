@@ -12,8 +12,8 @@ var i, a = n(735250),
   r = n.n(l),
   o = n(149765),
   c = n(846519),
-  d = n(481060),
-  u = n(475179),
+  u = n(481060),
+  d = n(475179),
   h = n(239091),
   p = n(287734),
   m = n(872810),
@@ -54,7 +54,7 @@ numUsers: t
   } = e;
   return (0, a.jsx)('div', {
 className: y.moreContainer,
-children: (0, a.jsxs)(d.Text, {
+children: (0, a.jsxs)(u.Text, {
   color: 'text-muted',
   variant: 'text-sm/medium',
   children: [
@@ -79,13 +79,13 @@ className: r()(y.audienceContainer, {
 children: [
   (0, a.jsx)('div', {
     className: y.audienceIconContainer,
-    children: (0, a.jsx)(d.HeadphonesIcon, {
+    children: (0, a.jsx)(u.HeadphonesIcon, {
       size: 'md',
       color: 'currentColor',
       className: y.audienceIcon
     })
   }),
-  (0, a.jsx)(d.Text, {
+  (0, a.jsx)(u.Text, {
     color: 'text-muted',
     variant: 'text-sm/medium',
     children: i
@@ -115,7 +115,7 @@ let {
   'data-dnd-name': l.name,
   onMouseEnter: i ? void 0 : this.handleMouseEnter,
   onMouseLeave: i ? void 0 : this.handleHidePreview,
-  children: (0, a.jsx)(d.Popout, {
+  children: (0, a.jsx)(u.Popout, {
     preload: () => (0, v.W)(s.id, s.getAvatarURL(l.guild_id, 80), {
       guildId: l.guild_id,
       channelId: l.id
@@ -187,7 +187,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     channelId: t.id,
     guildId: t.guild_id
   };
-  Z.default.getId() !== e.id && p.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(a), u.Z.selectParticipant(a.channelId, (0, g.V9)(a))) : (0, m.iV)(a), null == i || i(e.id);
+  Z.default.getId() !== e.id && p.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(a), d.Z.selectParticipant(a.channelId, (0, g.V9)(a))) : (0, m.iV)(a), null == i || i(e.id);
 }), D(this, 'handleJoinVoice', () => {
   let {
     user: e,
@@ -267,7 +267,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     mute: l,
     localMute: o,
     localVideoDisabled: c,
-    speaking: u,
+    speaking: d,
     disconnected: h,
     user: p,
     deaf: m,
@@ -291,7 +291,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     isHoveringHangStatus: D
   } = this.state, k = L.al.has(null != n ? n : ''), U = {
     user: p,
-    speaking: u,
+    speaking: d,
     disconnected: h,
     mute: l,
     localMute: o,
@@ -327,7 +327,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
   };
   if (t) {
     var w;
-    return (0, a.jsx)(d.Tooltip, {
+    return (0, a.jsx)(u.Tooltip, {
       text: null !== (w = (0, C.Z)(n)) && void 0 !== w ? w : O.Z.Messages.CONNECTED_ON_ANOTHER_CLIENT,
       children: e => {
         let {
@@ -342,7 +342,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
       }
     });
   }
-  return (0, a.jsx)(d.Popout, {
+  return (0, a.jsx)(u.Popout, {
     position: 'right',
     renderPopout: M && D || !E ? this.renderHangStatusPopout : this.renderStreamPopout,
     shouldShow: s && !P,

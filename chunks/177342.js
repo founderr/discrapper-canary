@@ -15,8 +15,8 @@ function c(e) {
 channelId: t,
 warningId: n,
 senderId: c,
-warningType: d,
-header: u,
+warningType: u,
+header: d,
 description: h,
 onDismiss: p,
 buttons: m
@@ -31,7 +31,7 @@ null == p || p(), (0, o.qc)({
   channelId: t,
   warningId: n,
   senderId: c,
-  warningType: d,
+  warningType: u,
   cta: o.NM.USER_BANNER_DISMISS
 });
   }, [
@@ -39,12 +39,12 @@ p,
 t,
 n,
 c,
-d
+u
   ]);
   return (0, i.jsx)(r.W, {
 buttons: m,
 description: h,
-header: u,
+header: d,
 onDismiss: _
   });
 }

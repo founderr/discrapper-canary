@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(392711),
   o = n.n(r),
   c = n(848246),
-  d = n(442837),
-  u = n(481060),
+  u = n(442837),
+  d = n(481060),
   h = n(320007),
   p = n(236091),
   m = n(569545),
@@ -48,14 +48,14 @@ function V(e) {
   let {
 channelId: t,
 guildId: n
-  } = e, a = Date.now(), s = (0, d.e7)([
+  } = e, a = Date.now(), s = (0, u.e7)([
 R.Z,
 y.Z
   ], () => o()(R.Z.getSpeakers()).map(e => y.Z.getParticipant(t, e)).filter(e => null != e && e.type === w.fO.USER && e.speaking && !(0, I.ZP)(e)).sortBy(e => -R.Z.getSpeakingDuration(e.user.id, a)).slice(0, 3).value());
   return 0 === s.length ? null : (0, i.jsx)(i.Fragment, {
-children: s.map((e, t) => (0, i.jsx)(u.Tooltip, {
+children: s.map((e, t) => (0, i.jsx)(d.Tooltip, {
   position: 'bottom',
-  color: u.Tooltip.Colors.GREY,
+  color: d.Tooltip.Colors.GREY,
   text: H.Z.Messages.CHANNEL_CALL_CURRENT_SPEAKER.format({
     username: e.user.username
   }),
@@ -85,11 +85,11 @@ exitFullScreen: o
 voiceParticipantsHidden: R,
 selectedParticipant: L,
 userParticipantCount: H
-  } = (0, d.cj)([y.Z], () => ({
+  } = (0, u.cj)([y.Z], () => ({
 selectedParticipant: y.Z.getSelectedParticipant(I),
 voiceParticipantsHidden: y.Z.getVoiceParticipantsHidden(I),
 userParticipantCount: y.Z.getUserParticipantCount(I)
-  }), [I]), F = (0, d.e7)([j.default], () => j.default.getCurrentUser()), W = (0, D.Z)(n), z = (0, O.So)(c.q.STREAM_HIGH_QUALITY), Y = (0, C.o)(L, F), K = (0, E.lL)('CallHeader', !0, F, Y), {
+  }), [I]), F = (0, u.e7)([j.default], () => j.default.getCurrentUser()), W = (0, D.Z)(n), z = (0, O.So)(c.q.STREAM_HIGH_QUALITY), Y = (0, C.o)(L, F), K = (0, E.lL)('CallHeader', !0, F, Y), {
 preventIdle: q,
 allowIdle: X
   } = (0, T.Y)('popup'), Q = [];
@@ -120,7 +120,7 @@ className: G.button,
 participant: L,
 showQuality: !0,
 premiumIndicator: z || K.enabled
-  }, 'live-indicator'))), R && Q.push((0, i.jsx)(u.Popout, {
+  }, 'live-indicator'))), R && Q.push((0, i.jsx)(d.Popout, {
 position: 'bottom',
 renderPopout: () => (0, i.jsx)(N.Z, {
   children: (0, i.jsx)(U.Z, {
@@ -152,7 +152,7 @@ className: G.button
 onOpen: q,
 onClose: X,
 className: G.button
-  }, 'recents')), Q.push((0, i.jsx)(u.Popout, {
+  }, 'recents')), Q.push((0, i.jsx)(d.Popout, {
 position: 'bottom',
 renderPopout: e => {
   let {

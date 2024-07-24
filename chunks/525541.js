@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250);
@@ -12,12 +12,12 @@ var a = n(481060),
   o = n(718538),
   c = n(689938);
 
-function d(e) {
+function u(e) {
   let {
 otherUserId: t,
 channel: n,
-buttonSize: d = a.ButtonSizes.TINY,
-className: u,
+buttonSize: u = a.ButtonSizes.TINY,
+className: d,
 buttonText: h,
 navigateAwayOnReportSuccess: p = !0,
 onReportClick: m,
@@ -31,8 +31,8 @@ return null;
 null == _ || _(), s.Z.closePrivateChannel(n.id, p);
   };
   return (0, i.jsx)(a.Button, {
-className: u,
-size: d,
+className: d,
+size: u,
 color: a.Button.Colors.RED,
 disabled: null == g,
 onClick: () => {

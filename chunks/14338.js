@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(481060),
   o = n(239091),
   c = n(586902),
-  d = n(40851),
-  u = n(484459),
+  u = n(40851),
+  d = n(484459),
   h = n(103575),
   p = n(409216),
   m = n(768581),
@@ -22,7 +22,7 @@ function f(e) {
 channel: t,
 speaker: s,
 className: p
-  } = e, f = (0, d.bp)(), {
+  } = e, f = (0, u.bp)(), {
 reducedMotion: E
   } = a.useContext(r.AccessibilityPreferencesContext), C = (0, c.Z)({
 userId: s.id
@@ -50,7 +50,7 @@ userId: s.id
 });
   };
   return (0, i.jsx)(r.Popout, {
-preload: () => (0, u.W)(s.user, {
+preload: () => (0, d.W)(s.user, {
   guildId: t.guild_id,
   channelId: t.id
 }),

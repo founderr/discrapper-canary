@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(434650),
   o = n(393903),
   c = n(353093),
-  d = n(979264),
-  u = n(792059);
+  u = n(979264),
+  d = n(792059);
 t.Z = a.memo(function(e) {
   let {
 children: t,
@@ -50,24 +50,24 @@ if (null != E.current)
   }, [C]);
   let g = (0, r.O)(f);
   return (0, i.jsxs)('div', {
-className: l()(u.container, n && u.isOverlayContainer),
+className: l()(d.container, n && d.isOverlayContainer),
 ref: E,
 children: [
   (0, i.jsx)('div', {
-    className: u.usernameContainer,
+    className: d.usernameContainer,
     children: t
   }),
   (0, i.jsx)('div', {
-    className: u.chipletParent,
+    className: d.chipletParent,
     ref: g,
     children: (0, i.jsx)('span', {
-      className: l()(u.chipletContainer, !C && n && u.noPadding),
+      className: l()(d.chipletContainer, !C && n && d.noPadding),
       ref: p,
       style: m,
-      children: (0, i.jsx)(d.ZP, {
+      children: (0, i.jsx)(u.ZP, {
         ...h,
         contextGuildId: s,
-        className: l()(h.className, n && u.isOverlayTag)
+        className: l()(h.className, n && d.isOverlayTag)
       })
     })
   })

@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(91192),
   o = n(442837),
   c = n(481060),
-  d = n(904245),
-  u = n(902840),
+  u = n(904245),
+  d = n(902840),
   h = n(607070),
   p = n(580747),
   m = n(135938),
@@ -37,7 +37,7 @@ let k = a.memo(function(e) {
   var t, n;
   let {
 className: s,
-messageGroupSpacing: u,
+messageGroupSpacing: d,
 scrollerClassName: p,
 channel: m,
 messages: f,
@@ -59,18 +59,18 @@ messageGroups: 30,
 groupRange: 4,
 attachments: 8,
 fontSize: S,
-groupSpacing: u
+groupSpacing: d
   }) : (0, R.aJ)({
 compact: !1,
 messageGroups: 26,
 groupRange: 4,
 attachments: 8,
 fontSize: S,
-groupSpacing: u
+groupSpacing: d
   }), [
 g,
 S,
-u
+d
   ]), H = (0, L.ZP)({
 messages: f,
 channel: m,
@@ -116,7 +116,7 @@ hasMoreAfter: f.hasMoreAfter
         animate: !h.Z.useReducedMotion
       });
     } else
-      d.Z.jumpToPresent(m.id, O.AQB);
+      u.Z.jumpToPresent(m.id, O.AQB);
   }
 });
   ! function(e) {
@@ -161,7 +161,7 @@ navigator: G,
 children: [
   null != K && K,
   (0, i.jsxs)('div', {
-    className: l()(D.messagesWrapper, s, 'group-spacing-'.concat(u)),
+    className: l()(D.messagesWrapper, s, 'group-spacing-'.concat(d)),
     children: [
       null == K && W,
       (0, i.jsxs)(c.PinToBottomScrollerAuto, {
@@ -218,7 +218,7 @@ forceCompact: l = !1,
 forceCozy: r = !1,
 ...c
   } = e, {
-canManageMessages: d,
+canManageMessages: u,
 permissionVersion: _,
 canChat: A
   } = function(e) {
@@ -291,15 +291,15 @@ let i = (0, o.e7)([x.Z], () => x.Z.getMessages(e.id), [e.id]),
     autoTrackExposure: !1
   }),
   r = null !== (n = null === (t = S.default.getUser(C.default.getId())) || void 0 === t ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && void 0 !== n && n,
-  c = (0, u.ts)(e),
-  d = (0, p.Z)('use_topic_dividers_in_chat'),
+  c = (0, d.ts)(e),
+  u = (0, p.Z)('use_topic_dividers_in_chat'),
   h = (0, o.Wu)([f.Z], () => {
     var t;
-    return c && d && null !== (t = f.Z.summaries(e.id)) && void 0 !== t ? t : [];
+    return c && u && null !== (t = f.Z.summaries(e.id)) && void 0 !== t ? t : [];
   }, [
     c,
     e.id,
-    d
+    u
   ]),
   _ = (0, o.e7)([f.Z], () => c ? f.Z.selectedSummary(e.id) : null, [
     c,
@@ -331,7 +331,7 @@ return {
 };
   }(t);
   return (0, i.jsx)(Z.a.Provider, {
-value: (0, M.Z)(P, d),
+value: (0, M.Z)(P, u),
 children: (0, i.jsx)(k, {
   ...c,
   messageGroupSpacing: R,

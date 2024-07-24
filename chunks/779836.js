@@ -11,8 +11,8 @@ var a = n(120356),
   r = n(399606),
   o = n(481060),
   c = n(511010),
-  d = n(446183),
-  u = n(677281),
+  u = n(446183),
+  d = n(677281),
   h = n(765104),
   p = n(477291),
   m = n(531578),
@@ -63,7 +63,7 @@ children: c((e, t) => t ? (0, i.jsx)('div', {
       }),
       (0, i.jsx)(o.Clickable, {
         onClick: e => s(e, m.aZ.GOOD),
-        children: (0, i.jsx)(u.Z, {
+        children: (0, i.jsx)(d.Z, {
           className: E.thumbIcon,
           width: 12,
           height: 12
@@ -71,7 +71,7 @@ children: c((e, t) => t ? (0, i.jsx)('div', {
       }),
       (0, i.jsx)(o.Clickable, {
         onClick: e => s(e, m.aZ.BAD),
-        children: (0, i.jsx)(d.Z, {
+        children: (0, i.jsx)(u.Z, {
           className: E.thumbIcon,
           width: 12,
           height: 12
@@ -87,10 +87,10 @@ function g(e) {
   var t, n;
   let a, {
   item: l,
-  channel: d,
-  index: u
+  channel: u,
+  index: d
 } = e,
-p = (0, r.e7)([h.Z], () => h.Z.selectedSummary(d.id));
+p = (0, r.e7)([h.Z], () => h.Z.selectedSummary(u.id));
   if (null == p)
 return null;
   let m = null != l.unreadId,
@@ -108,7 +108,7 @@ children: [
 children: [
   (0, i.jsx)(C, {
     summary: p,
-    channel: d
+    channel: u
   }),
   (0, i.jsx)(o.TopicsIcon, {
     size: 'xs',
@@ -122,5 +122,5 @@ contentClassName: f ? E.summaryStartContent : E.summaryEndContent,
 isUnread: m,
 id: m ? _.j1 : void 0,
 children: a
-  }, 'divider-'.concat(null !== (n = null !== (t = l.contentKey) && void 0 !== t ? t : l.unreadId) && void 0 !== n ? n : u));
+  }, 'divider-'.concat(null !== (n = null !== (t = l.contentKey) && void 0 !== t ? t : l.unreadId) && void 0 !== n ? n : d));
 }

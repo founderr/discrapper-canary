@@ -40,7 +40,7 @@ let t = a.useRef(null),
     let n = 'mute' === e ? 'hover_unmuted' : 'hover_muted';
     t.current.play(n);
   }, [e]),
-  d = a.useCallback(() => {
+  u = a.useCallback(() => {
     if (null == t.current)
       return;
     let n = 'mute' === e ? 'hover_unmuted' : 'hover_muted';
@@ -50,7 +50,7 @@ return {
   events: {
     onClick: o,
     onMouseEnter: c,
-    onMouseLeave: d
+    onMouseLeave: u
   },
   play: o,
   Component: a.useCallback(e => (0, i.jsx)(s.L, {

@@ -8,8 +8,8 @@ var i, a, s = n(735250),
   r = n(120356),
   o = n.n(r),
   c = n(338545),
-  d = n(442837),
-  u = n(481060),
+  u = n(442837),
+  d = n(481060),
   h = n(393238),
   p = n(434650),
   m = n(607070),
@@ -40,7 +40,7 @@ e.preventDefault(), e.stopPropagation(), null == r || r(), R(!0);
 e && (D.current = setTimeout(() => {
   y(!0);
 }, T));
-  }, [T]), U = (0, p.O)(k), w = (0, d.e7)([m.Z], () => m.Z.useReducedMotion), B = (0, d.e7)([_.default], () => _.default.getCurrentUser()), [H, G] = (0, u.useSpring)(() => {
+  }, [T]), U = (0, p.O)(k), w = (0, u.e7)([m.Z], () => m.Z.useReducedMotion), B = (0, u.e7)([_.default], () => _.default.getCurrentUser()), [H, G] = (0, d.useSpring)(() => {
 var e, t;
 return e = S, t = w, 'left' === e ? {
   right: t ? 68 : 0,
@@ -49,7 +49,7 @@ return e = S, t = w, 'left' === e ? {
   left: t ? 68 : 0,
   config: c.config.stiff
 };
-  }), [V, F] = (0, u.useSpring)(() => ({
+  }), [V, F] = (0, d.useSpring)(() => ({
 opacity: 0,
 top: -24,
 onRest: () => {
@@ -82,15 +82,15 @@ S
 null != D.current && clearTimeout(D.current);
   }, []);
   let W = o()(x.signHintAnimationContainer, L && x.noDisplay, 'left' === S ? x.signTextLeft : x.signTextRight),
-z = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY),
-Y = (0, u.useToken)(u.tokens.colors.BG_BRAND),
+z = (0, d.useToken)(d.tokens.colors.BG_SURFACE_OVERLAY),
+Y = (0, d.useToken)(d.tokens.colors.BG_BRAND),
 K = null != n ? n : Y.hex(),
 q = (0, E.j1)(K, z.hex()),
 {
   height: X = 87,
   ref: Q
 } = (0, h.Z)(a),
-J = (0, u.useTransition)(a, {
+J = (0, d.useTransition)(a, {
   from: {
     opacity: 0,
     height: 0
@@ -109,7 +109,7 @@ children: (0, s.jsx)(C.Z, {
   children: (0, s.jsxs)('div', {
     className: o()(x.overviewSidebarWrapper, A && x.fullHeight),
     children: [
-      (0, s.jsx)(u.ScrollerNone, {
+      (0, s.jsx)(d.ScrollerNone, {
         fade: !0,
         className: x.overviewSidebarContent,
         children: (0, s.jsx)('div', {
@@ -122,7 +122,7 @@ children: (0, s.jsx)(C.Z, {
         style: e,
         children: (0, s.jsx)('div', {
           ref: Q,
-          children: (0, s.jsxs)(u.Clickable, {
+          children: (0, s.jsxs)(d.Clickable, {
             onClick: j,
             className: o()(x.signatureBlock, {
               [x.clickable]: null != r
@@ -143,7 +143,7 @@ children: (0, s.jsx)(C.Z, {
                       children: (0, s.jsxs)(g.Z, {
                         themeColor: K,
                         className: x.signButton,
-                        size: u.Button.Sizes.SMALL,
+                        size: d.Button.Sizes.SMALL,
                         onClick: e => {
                           var t;
                           null === (t = M.current) || void 0 === t || t.scrollIntoView({
@@ -163,7 +163,7 @@ children: (0, s.jsx)(C.Z, {
                         ]
                       })
                     }),
-                    (0, s.jsx)(u.Text, {
+                    (0, s.jsx)(d.Text, {
                       variant: 'text-xs/normal',
                       color: 'text-muted',
                       className: x.signHintHelperText,
@@ -172,17 +172,17 @@ children: (0, s.jsx)(C.Z, {
                   ]
                 })
               }),
-              (0, s.jsx)(u.Text, {
+              (0, s.jsx)(d.Text, {
                 variant: 'text-md/normal',
                 color: 'none',
                 children: 'x'
               }),
-              b ? (0, s.jsx)(u.Text, {
+              b ? (0, s.jsx)(d.Text, {
                 variant: 'text-lg/normal',
                 color: 'header-primary',
                 className: x.signatureText,
                 children: f.ZP.getName(t, null, B)
-              }) : (0, s.jsx)(u.Text, {
+              }) : (0, s.jsx)(d.Text, {
                 variant: 'text-lg/normal',
                 color: 'none',
                 className: x.signatureText,

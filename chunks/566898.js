@@ -30,11 +30,11 @@ var a = n(120356),
   o = n(481060),
   c = n(928054);
 
-function d(e) {
+function u(e) {
   return ''.concat(e / 16, 'rem');
 }
 
-function u() {
+function d() {
   return (0, i.jsx)('div', {
 className: c.avatar,
 style: {
@@ -54,7 +54,7 @@ className: s()(a, {
   [c.blob]: !0
 }),
 style: {
-  width: d(t),
+  width: u(t),
   opacity: null != n ? n : r().random(0.02, 0.08)
 }
   });
@@ -65,7 +65,7 @@ function p(e) {
   groupStart: n = !1,
   compact: a = !1,
   attachmentSpecs: l,
-  usernameWidth: d,
+  usernameWidth: u,
   usernameOpacity: p,
   className: m,
   style: _
@@ -73,11 +73,11 @@ function p(e) {
 f = a ? 50 : r().random(40, 50);
   return !a && n ? t = (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsx)(u, {}),
+  (0, i.jsx)(d, {}),
   (0, i.jsx)(o.H, {
     className: c.header,
     children: (0, i.jsx)(h, {
-      width: d,
+      width: u,
       opacity: p,
       className: c.__invalid_username
     })
@@ -95,7 +95,7 @@ children: [
   (0, i.jsx)(o.H, {
     className: c.header,
     children: (0, i.jsx)(h, {
-      width: d,
+      width: u,
       opacity: p
     })
   })
@@ -148,17 +148,17 @@ groupSpacing: n = 0,
 compact: a = !1,
 attachmentSpecs: s,
 className: l
-  } = e, o = null != s ? s.last ? t - 1 : r().random(0, t - 1) : -1, c = r().random(80, 120), u = r().random(0.1, 0.2);
+  } = e, o = null != s ? s.last ? t - 1 : r().random(0, t - 1) : -1, c = r().random(80, 120), d = r().random(0.1, 0.2);
   return (0, i.jsx)(i.Fragment, {
 children: Array(t).fill(null).map((e, t) => (0, i.jsx)(p, {
   compact: a,
   className: l,
   usernameWidth: c,
-  usernameOpacity: u,
+  usernameOpacity: d,
   groupStart: 0 === t,
   attachmentSpecs: t === o ? s : void 0,
   style: 0 === t ? {
-    marginTop: d(n)
+    marginTop: u(n)
   } : void 0
 }, t))
   });

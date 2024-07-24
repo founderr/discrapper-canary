@@ -16,7 +16,7 @@ className: n,
 children: a,
 verified: o,
 roleColor: c,
-roleName: d
+roleName: u
   } = e;
   return t = o ? (0, i.jsx)(l.Z, {
 size: 12,
@@ -31,7 +31,7 @@ style: {
 className: s()(n, r.role),
 children: [
   t,
-  d,
+  u,
   a
 ]
   });

@@ -1,6 +1,6 @@
 n.d(t, {
   ZP: function() {
-return u;
+return d;
   }
 }), n(47120);
 var i = n(470079),
@@ -21,16 +21,16 @@ function c(e) {
   return document.querySelector(e);
 }
 
-function d(e) {
+function u(e) {
   var t;
   null === (t = document.getElementById(e)) || void 0 === t || t.focus();
 }
 
-function u(e) {
+function d(e) {
   let {
 navId: t,
 itemCount: n,
-focusedIndex: u = 0,
+focusedIndex: d = 0,
 onSelect: h,
 setFocus: p,
 getNewFocusIndex: m,
@@ -43,7 +43,7 @@ onDispatch: g
 let n = (0, a.Z)(e, t);
 return null != g && g(e, n, t), n;
   }, [g]), [x, T] = i.useReducer(I, {
-focusedIndex: u,
+focusedIndex: d,
 itemCount: n
   }), {
 itemCount: N,
@@ -59,9 +59,9 @@ function(e) {
   let {
     navId: t,
     itemCount: n,
-    focusedIndex: u,
+    focusedIndex: d,
     onSelect: h,
-    setFocus: p = d,
+    setFocus: p = u,
     getNewFocusIndex: m,
     dispatch: _,
     maintainFocusPosition: f,
@@ -93,18 +93,18 @@ function(e) {
       R(!1);
       return;
     }
-    M(I(t, u), u);
-  }, [u]);
+    M(I(t, d), d);
+  }, [d]);
   let j = i.useCallback(function() {
       let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        n = null != m ? m(u) : u;
-      n !== u && _({
+        n = null != m ? m(d) : d;
+      n !== d && _({
         type: a.G.SET_FOCUSED_INDEX,
         index: n
       }), e && M(I(t, n), n);
     }, [
       I,
-      u,
+      d,
       m,
       _,
       t,
@@ -143,13 +143,13 @@ function(e) {
           return;
         case s.Us.SELECT_FOCUSED_ITEM:
           var i;
-          let a = c(o(I, t, u));
+          let a = c(o(I, t, d));
           if ((null == (i = a) ? void 0 : i.ownerDocument.activeElement) !== i || e.repeat)
             return;
           if (e.preventDefault(), e.stopPropagation(), _({
               type: n
             }), null != h) {
-            h(u);
+            h(d);
             return;
           }
           null == a || a.click();
@@ -158,7 +158,7 @@ function(e) {
       I,
       t,
       _,
-      u,
+      d,
       j,
       h
     ]),
@@ -167,20 +167,20 @@ function(e) {
     }, [S]),
     O = i.useCallback(() => {
       if (!S)
-        f ? M(I(t, u), u) : j(!0);
+        f ? M(I(t, d), d) : j(!0);
     }, [
       I,
       t,
       M,
       f,
       S,
-      u,
+      d,
       j
     ]),
     y = i.useCallback(e => {
       if (!e.currentTarget.contains(e.relatedTarget))
         requestAnimationFrame(() => {
-          if (null == c(o(I, t, u))) {
+          if (null == c(o(I, t, d))) {
             M(t);
             return;
           }
@@ -189,7 +189,7 @@ function(e) {
     }, [
       I,
       t,
-      u,
+      d,
       M
     ]),
     D = i.useRef(null);
@@ -225,13 +225,13 @@ function(e) {
         'aria-setsize': E ? T.current : void 0,
         'aria-posinset': E ? n + 1 : void 0,
         id: I(t, n),
-        tabIndex: f && n === u ? 0 : -1,
+        tabIndex: f && n === d ? 0 : -1,
         onFocus: A.get(null != N.current ? I(t, n) : n)
       };
     }, [
       I,
       t,
-      u,
+      d,
       f,
       A,
       E

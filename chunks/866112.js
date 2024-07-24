@@ -2,20 +2,20 @@ n(653041);
 var i, a, s, l, r = n(442837),
   o = n(570140),
   c = n(975984);
-let d = [],
-  u = {},
+let u = [],
+  d = {},
   h = {};
 class p extends(i = r.ZP.Store) {
   getSearchState(e) {
 var t;
-return null !== (t = u[e]) && void 0 !== t ? t : {
+return null !== (t = d[e]) && void 0 !== t ? t : {
   mostRecentQuery: '',
   fetching: !1
 };
   }
   getSearchResults(e, t) {
 var n, i, a;
-return null !== (a = null === (i = h[e]) || void 0 === i ? void 0 : null === (n = i[t]) || void 0 === n ? void 0 : n.results) && void 0 !== a ? a : d;
+return null !== (a = null === (i = h[e]) || void 0 === i ? void 0 : null === (n = i[t]) || void 0 === n ? void 0 : n.results) && void 0 !== a ? a : u;
   }
   shouldFetch(e, t) {
 var n, i;
@@ -34,7 +34,7 @@ let {
   channelId: t,
   query: n
 } = e;
-u[t] = {
+d[t] = {
   fetching: !0,
   mostRecentQuery: n
 };
@@ -45,8 +45,8 @@ let {
   query: n,
   results: i
 } = e;
-u[t] = {
-  ...u[t],
+d[t] = {
+  ...d[t],
   fetching: !1
 };
 let a = [];
@@ -65,8 +65,8 @@ i.forEach(e => {
 let {
   channelId: t
 } = e;
-u[t] = {
-  ...u[t],
+d[t] = {
+  ...d[t],
   fetching: !1
 };
   },
@@ -74,7 +74,7 @@ u[t] = {
 let {
   channelId: t
 } = e;
-u[t] = {
+d[t] = {
   fetching: !1,
   mostRecentQuery: ''
 };
@@ -84,7 +84,7 @@ let {
   channelId: t,
   query: n
 } = e;
-u[t] = {
+d[t] = {
   fetching: !1,
   mostRecentQuery: n
 };
@@ -94,7 +94,7 @@ var t;
 let {
   channelId: n,
   guildId: i
-} = e, a = null === (t = u[n]) || void 0 === t ? void 0 : t.mostRecentQuery;
+} = e, a = null === (t = d[n]) || void 0 === t ? void 0 : t.mostRecentQuery;
 if (null == a)
   return;
 let s = h[n][a];
@@ -103,7 +103,7 @@ if (null == s)
 let l = s.results.filter(e => e.guildId !== i);
 h[n] = {
   ...h[n],
-  [u[n].mostRecentQuery]: {
+  [d[n].mostRecentQuery]: {
     ...s,
     results: l
   }

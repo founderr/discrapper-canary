@@ -8,8 +8,8 @@ var i, a, s = n(735250),
   r = n(120356),
   o = n.n(r),
   c = n(512722),
-  d = n.n(c),
-  u = n(442837),
+  u = n.n(c),
+  d = n(442837),
   h = n(481060),
   p = n(239091),
   m = n(99690),
@@ -68,14 +68,14 @@ l.useEffect(() => {
   return () => clearTimeout(e);
 }, []);
 let f = t.getGuildId();
-d()(null != f, 'Channel cannot be guildless');
+u()(null != f, 'Channel cannot be guildless');
 let {
   isMobile: I,
   status: N
-} = (0, u.cj)([x.Z], () => ({
+} = (0, d.cj)([x.Z], () => ({
   isMobile: x.Z.isMobileOnline(i.user.id),
   status: x.Z.getStatus(i.user.id, f)
-})), Z = (0, u.e7)([g.ZP], () => g.ZP.getMember(f, i.user.id)), A = l.useMemo(() => ({
+})), Z = (0, d.e7)([g.ZP], () => g.ZP.getMember(f, i.user.id)), A = l.useMemo(() => ({
   [f]: [i.user.id]
 }), [
   f,
@@ -230,7 +230,7 @@ channel: t,
 toggleRequestToSpeakSidebar: n,
 chatOpen: i
   } = e, a = (0, N.Fd)(t.id), l = [
-(0, u.e7)([I.Z], () => I.Z.can(M.Pl.MANAGE_CHANNELS, t) || I.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0,
+(0, d.e7)([I.Z], () => I.Z.can(M.Pl.MANAGE_CHANNELS, t) || I.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0,
 Math.max(1, a.length)
   ];
   return (0, s.jsxs)('div', {

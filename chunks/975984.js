@@ -1,6 +1,6 @@
 n.d(t, {
   Lz: function() {
-return u;
+return d;
   },
   MQ: function() {
 return o;
@@ -9,7 +9,7 @@ return o;
 return h;
   },
   Th: function() {
-return d;
+return u;
   },
   _N: function() {
 return c;
@@ -45,17 +45,17 @@ featurableInDirectory: null === (c = e.guild) || void 0 === c ? void 0 : c.featu
 }
 let c = 5;
 
-function d(e) {
+function u(e) {
   return l().orderBy(e, [e => e.approximateMemberCount], ['desc']);
 }
 
-function u(e) {
+function d(e) {
   var t;
   return (t = e.filter(e => e.featurableInDirectory && p(e)), l().orderBy(t, [e => e.createdAt], ['desc'])).slice(0, c);
 }
 
 function h(e) {
-  return d(e);
+  return u(e);
 }
 
 function p(e) {

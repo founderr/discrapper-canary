@@ -2,8 +2,8 @@ n(47120);
 var s = n(735250),
   r = n(470079),
   a = n(120356),
-  i = n.n(a),
-  o = n(338545),
+  o = n.n(a),
+  i = n(338545),
   c = n(442837),
   l = n(481060),
   d = n(100527),
@@ -20,12 +20,12 @@ className: t,
 products: n,
 user: a,
 productToCategoryMap: b
-  } = e, [h, x] = r.useState(0), I = n.length, {
-analyticsLocations: E
+  } = e, [h, x] = r.useState(0), E = n.length, {
+analyticsLocations: I
   } = (0, c.cj)([p.Z], () => p.Z.getAnalytics()), {
 analyticsLocations: v
   } = (0, u.ZP)([
-...E,
+...I,
 d.Z.COLLECTIBLES_SHOP_POPULAR_PICKS_CAROUSEL
   ]), {
 trackPagination: L
@@ -45,7 +45,7 @@ children: (0, s.jsxs)('div', {
     (0, s.jsx)(l.Button, {
       look: l.Button.Looks.FILLED,
       color: l.Button.Colors.PRIMARY,
-      className: i()(m.caretButton, m.leftCaret),
+      className: o()(m.caretButton, m.leftCaret),
       onClick: () => {
         x(e => {
           let t = e - 4;
@@ -63,16 +63,16 @@ children: (0, s.jsxs)('div', {
       children: T.map((e, t) => {
         let {
           x: r
-        } = e, i = b.get(n[t].skuId);
-        if (null != i)
-          return (0, s.jsx)(o.animated.div, {
+        } = e, o = b.get(n[t].skuId);
+        if (null != o)
+          return (0, s.jsx)(i.animated.div, {
             className: m.card,
             style: {
               transform: null == r ? void 0 : r.to(e => 'translate3d('.concat(e, '%,0,0)'))
             },
             children: (0, s.jsx)(g.Z, {
               product: n[t],
-              category: i,
+              category: o,
               user: a,
               isPopularPicksRow: !0
             }, ''.concat(n[t].name, '_').concat(t, '_perks_card'))
@@ -82,14 +82,14 @@ children: (0, s.jsxs)('div', {
     (0, s.jsx)(l.Button, {
       look: l.Button.Looks.FILLED,
       color: l.Button.Colors.PRIMARY,
-      className: i()(m.caretButton, m.rightCaret),
+      className: o()(m.caretButton, m.rightCaret),
       onClick: () => {
         x(e => {
           let t = e + 4;
           return L(t / 4, h / 4), t;
         });
       },
-      disabled: h + 4 >= I,
+      disabled: h + 4 >= E,
       'aria-label': _.Z.Messages.PAGINATION_NEXT,
       children: (0, s.jsx)(f.Z, {
         direction: f.Z.Directions.RIGHT

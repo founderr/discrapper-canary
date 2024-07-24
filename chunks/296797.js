@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return u;
+return d;
   }
 });
 var i = n(470079),
@@ -10,9 +10,9 @@ var i = n(470079),
   r = n(917107),
   o = n(89425),
   c = n(197386),
-  d = n(981631);
+  u = n(981631);
 
-function u(e) {
+function d(e) {
   let {
 onTransition: t
   } = e;
@@ -32,8 +32,8 @@ async function e(e) {
     (0, c.Z)(l, n), null == t || t();
   }, 0);
 }
-return l.S.subscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e), () => {
-  l.S.unsubscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e);
+return l.S.subscribe(u.CkL.OPEN_EMBEDDED_ACTIVITY, e), () => {
+  l.S.unsubscribe(u.CkL.OPEN_EMBEDDED_ACTIVITY, e);
 };
   }, [t]);
 }

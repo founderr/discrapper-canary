@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(481060),
   o = n(702346),
   c = n(492593),
-  d = n(534469),
-  u = n(511010),
+  u = n(534469),
+  d = n(511010),
   h = n(981631),
   p = n(689938),
   m = n(392997),
@@ -72,7 +72,7 @@ className: l()({
   [m.expanded]: E
 }),
 children: [
-  n.hasUnread && (!E || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ys_.DIVIDER) ? (0, i.jsx)(u.Z, {
+  n.hasUnread && (!E || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ys_.DIVIDER) ? (0, i.jsx)(d.Z, {
     isUnread: !0,
     id: o
   }, 'divider') : null,
@@ -87,14 +87,14 @@ children: [
     if (e.type === h.ys_.DIVIDER && t > 0) {
       var a, l;
       let e = null !== (l = null === (a = n.content[t + 1]) || void 0 === a ? void 0 : a.isGroupStart) && void 0 !== l && l;
-      return (0, i.jsx)(u.Z, {
+      return (0, i.jsx)(d.Z, {
         isUnread: !0,
         isBeforeGroup: e,
         id: o
       }, 'divider');
     }
     if (e.type === h.ys_.MESSAGE || e.type === h.ys_.THREAD_STARTER_MESSAGE) {
-      let t = e.type === h.ys_.THREAD_STARTER_MESSAGE ? d.Ru : d.ZP;
+      let t = e.type === h.ys_.THREAD_STARTER_MESSAGE ? u.Ru : u.ZP;
       return (0, i.jsx)(t, {
         className: m.__invalid_blocked,
         compact: r,

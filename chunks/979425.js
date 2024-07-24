@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250);
@@ -12,12 +12,12 @@ var a = n(120356),
   o = n(689938),
   c = n(149050);
 
-function d(e) {
+function u(e) {
   let {
 stream: t,
 isSmall: n,
 selected: a,
-isSelfStream: d
+isSelfStream: u
   } = e;
   return (0, i.jsxs)(i.Fragment, {
 children: [
@@ -35,10 +35,10 @@ children: [
         className: c.streamUnavailableText,
         color: 'always-white',
         variant: n ? 'text-sm/semibold' : 'text-md/semibold',
-        children: d ? o.Z.Messages.CONSOLE_STREAMING : o.Z.Messages.CONSOLE_STREAM_UNAVAILABLE
+        children: u ? o.Z.Messages.CONSOLE_STREAMING : o.Z.Messages.CONSOLE_STREAM_UNAVAILABLE
       }),
       (0, i.jsx)(l.TooltipContainer, {
-        text: d ? o.Z.Messages.CONSOLE_STREAMING_TOOLTIP : o.Z.Messages.CONSOLE_STREAM_UNAVAILABLE_TOOLTIP,
+        text: u ? o.Z.Messages.CONSOLE_STREAMING_TOOLTIP : o.Z.Messages.CONSOLE_STREAM_UNAVAILABLE_TOOLTIP,
         className: c.darkCircle,
         children: (0, i.jsx)('div', {
           children: (0, i.jsx)(l.ScreenSlashIcon, {

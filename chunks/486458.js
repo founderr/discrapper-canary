@@ -11,8 +11,8 @@ return i;
 }), n(47120);
 var i, a, s, l, r, o = n(735250),
   c = n(470079),
-  d = n(120356),
-  u = n.n(d),
+  u = n(120356),
+  d = n.n(u),
   h = n(780384),
   p = n(481060),
   m = n(626135),
@@ -56,9 +56,9 @@ let {
   className: s,
   forceTheme: l,
   onClickSkipAll: r
-} = this.props, c = 'left' === t || n, d = 'center' === t || !c;
+} = this.props, c = 'left' === t || n, u = 'center' === t || !c;
 return (0, o.jsxs)(p.Dialog, {
-  className: u()(g.popoutRoot, s),
+  className: d()(g.popoutRoot, s),
   children: [
     null != e && (0, o.jsx)(f.Z, {
       className: g.mediaContainer,
@@ -66,15 +66,15 @@ return (0, o.jsxs)(p.Dialog, {
       children: e()
     }),
     (0, o.jsx)(p.H, {
-      className: u()({
-        [g.titleCenter]: d,
+      className: d()({
+        [g.titleCenter]: u,
         [g.titleLeft]: c
       }),
       children: i
     }),
     (0, o.jsx)('string' == typeof a ? 'p' : 'div', {
-      className: u()({
-        [g.bodyCenter]: d,
+      className: d()({
+        [g.bodyCenter]: u,
         [g.bodyLeft]: c
       }),
       children: a
@@ -126,11 +126,11 @@ let {
   body: l,
   children: r,
   spacing: c,
-  forceTheme: d,
-  ...u
-} = this.props, h = 'top' === u.position || 'bottom' === u.position ? 'center' : 'top';
+  forceTheme: u,
+  ...d
+} = this.props, h = 'top' === d.position || 'bottom' === d.position ? 'center' : 'top';
 return (0, o.jsx)(p.Popout, {
-  ...u,
+  ...d,
   align: h,
   spacing: null != c ? c : 0,
   renderPopout: this.renderPopoutContent,
@@ -161,7 +161,7 @@ super(...e), I(this, 'onClickComplete', e => {
   } = this.props, r = null != l;
   return (0, o.jsx)(x, {
     ...this.props,
-    className: u()({
+    className: d()({
       [g.bottom]: 'bottom' === n,
       [g.contentNarrowNoMedia]: !a && !r,
       [g.contentNarrowWithMedia]: !a && r,

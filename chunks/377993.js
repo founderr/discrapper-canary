@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(481060),
   o = n(239091),
   c = n(144144),
-  d = n(100527),
-  u = n(906732),
+  u = n(100527),
+  d = n(906732),
   h = n(385499),
   p = n(556084),
   m = n(484459),
@@ -40,8 +40,8 @@ function y(e) {
   let {
 user: t,
 channel: a,
-status: d,
-activities: u
+status: u,
+activities: d
   } = e, h = (0, l.e7)([C.Z], () => null != C.Z.getTypingUsers(a.id)[t.id]), p = (0, l.e7)([g.default], () => g.default.getCurrentUser()), I = (0, l.e7)([f.Z], () => f.Z.isMobileOnline(t.id)), x = (0, l.e7)([E.Z], () => E.Z.getNickname(t.id)), T = e => {
 (0, o.jW)(e, async () => {
   let {
@@ -87,8 +87,8 @@ children: e => (0, i.jsx)(M.Z, {
   ownerTooltipText: R.Z.Messages.GROUP_OWNER,
   shouldAnimateStatus: O,
   isTyping: h,
-  status: d,
-  activities: u,
+  status: u,
+  activities: d,
   channel: a,
   onContextMenu: T,
   isMobile: I,
@@ -103,7 +103,7 @@ function D(e) {
   let {
 integration: l,
 channel: c
-  } = e, d = a.useCallback(e => {
+  } = e, u = a.useCallback(e => {
 (0, o.jW)(e, async () => {
   let {
     default: e
@@ -117,26 +117,26 @@ channel: c
   }, [
 l,
 c
-  ]), u = l.application.bot, p = N.ZP.getApplicationIconURL({
+  ]), d = l.application.bot, p = N.ZP.getApplicationIconURL({
 id: l.application.id,
 icon: l.application.icon,
 bot: null === (t = l.application) || void 0 === t ? void 0 : t.bot,
 botIconFirst: !0
   });
-  return null != u ? (0, i.jsx)(r.Popout, {
-preload: () => (0, m.W)(u.id, p, {
+  return null != d ? (0, i.jsx)(r.Popout, {
+preload: () => (0, m.W)(d.id, p, {
   channelId: c.id
 }),
 renderPopout: e => (0, i.jsx)(_.Z, {
   ...e,
   location: 'PrivateChannelRecipients',
-  userId: u.id,
+  userId: d.id,
   channelId: c.id
 }),
 position: s.tq ? 'window_center' : 'left',
 spacing: 16,
 children: e => (0, i.jsx)(I.Z, {
-  onContextMenu: d,
+  onContextMenu: u,
   className: j.member,
   name: (0, i.jsx)('span', {
     className: j.username,
@@ -150,7 +150,7 @@ children: e => (0, i.jsx)(I.Z, {
   }),
   decorators: (0, i.jsx)(h.Z, {
     className: j.botTag,
-    verified: null == u ? void 0 : u.isVerifiedBot()
+    verified: null == d ? void 0 : d.isVerifiedBot()
   }),
   id: l.application.id,
   focusProps: {
@@ -184,7 +184,7 @@ function U(e) {
 channel: s
   } = e, o = g.default.getCurrentUser(), c = null == o ? void 0 : o.isStaff(), {
 analyticsLocations: _
-  } = (0, u.ZP)(d.Z.MEMBER_LIST);
+  } = (0, d.ZP)(u.Z.MEMBER_LIST);
   let {
 listItems: C
   } = (t = s, (0, l.e7)([
@@ -248,7 +248,7 @@ s.id,
 s.type
   ]);
   let O = c && C.every(e => e.user.isStaff());
-  return (0, i.jsx)(u.Gt, {
+  return (0, i.jsx)(d.Gt, {
 value: _,
 children: (0, i.jsx)('div', {
   className: L.membersWrap,

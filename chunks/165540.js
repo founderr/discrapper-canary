@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(149765),
   o = n(442837),
   c = n(704215),
-  d = n(481060),
-  u = n(367907),
+  u = n(481060),
+  d = n(367907),
   h = n(499254),
   p = n(424602),
   m = n(541099),
@@ -29,7 +29,7 @@ let b = a.forwardRef(function(e, t) {
   let {
 type: n
   } = e, [s, r] = a.useState(!1), p = (0, o.e7)([m.Z], () => m.Z.shouldShowPopup()), f = a.useCallback(() => {
-(0, u.yw)(v.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.y(_.ti.DISMISSED) : ((0, C.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
+(0, d.yw)(v.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.y(_.ti.DISMISSED) : ((0, C.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
   dismissAction: Z.L.TAKE_ACTION
 }), h._(_._b.TEXT, n));
   }, [
@@ -43,9 +43,9 @@ r(!1);
   return (0, i.jsx)('div', {
 className: l()(M.buttonContainer, S.t4),
 ref: t,
-children: (0, i.jsx)(d.Button, {
-  look: d.Button.Looks.BLANK,
-  size: d.Button.Sizes.NONE,
+children: (0, i.jsx)(u.Button, {
+  look: u.Button.Looks.BLANK,
+  size: u.Button.Sizes.NONE,
   tabIndex: 0,
   className: M.button,
   onClick: f,
@@ -64,7 +64,7 @@ children: (0, i.jsx)(d.Button, {
     }
   },
   innerClassName: M.buttonContents,
-  children: (0, i.jsx)(d.AppsIcon, {
+  children: (0, i.jsx)(u.AppsIcon, {
     className: l()(s || p ? M.iconActive : M.iconInactive)
   })
 })
@@ -92,9 +92,9 @@ let n = e.getGuildId(),
       l = x.Z.computePermissions(e),
       o = r.e$(l, v.Plq.CREATE_PUBLIC_THREADS) || r.e$(l, v.Plq.CREATE_PRIVATE_THREADS),
       c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(l, v.Plq.SEND_MESSAGES)),
-      d = (0, g.xl)(e);
+      u = (0, g.xl)(e);
     return {
-      messagesDisabled: i || !s && !c || d
+      messagesDisabled: i || !s && !c || u
     };
   }, [
     e,
@@ -110,15 +110,15 @@ var e;
 return {
   activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? E.Z.getActiveCommand(t.id) : null
 };
-  }), d = p.T.useExperiment({
+  }), u = p.T.useExperiment({
 location: 'chat_input'
   }, {
 autoTrackExposure: !0
-  }).enabled, u = (0, o.e7)([m.Z], () => {
+  }).enabled, d = (0, o.e7)([m.Z], () => {
 let e = m.Z.activeViewType();
 return null != e && e === n && m.Z.shouldShowPopup();
   }, [n]);
-  return d && null == c && !l ? (0, i.jsxs)('div', {
+  return u && null == c && !l ? (0, i.jsxs)('div', {
 className: M.channelAppLauncher,
 children: [
   (0, i.jsx)(N.Z, {
@@ -131,7 +131,7 @@ children: [
       ref: s
     })
   }),
-  u ? (0, i.jsx)(f.Z, {
+  d ? (0, i.jsx)(f.Z, {
     positionTargetRef: s,
     channel: t
   }) : null

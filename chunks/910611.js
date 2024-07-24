@@ -16,8 +16,8 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(385499),
-  d = n(933557),
-  u = n(471445),
+  u = n(933557),
+  d = n(471445),
   h = n(266076),
   p = n(565138),
   m = n(703656),
@@ -45,7 +45,7 @@ handleContextMenu: m,
 handleParentClick: f,
 handleParentContextMenu: C,
 renderFollowButton: I
-  } = e, Z = (0, u.KS)(t, r), {
+  } = e, Z = (0, d.KS)(t, r), {
 prefix: A,
 level: M
   } = function(e, t) {
@@ -177,7 +177,7 @@ case N.d4z.PUBLIC_THREAD:
 case N.d4z.PRIVATE_THREAD:
   let j = null;
   if (!c && null != s) {
-    let e = (0, u.KS)(s, r);
+    let e = (0, d.KS)(s, r);
     j = (0, i.jsxs)(a.Fragment, {
       children: [
         b(e, v.Z.Messages.TEXT_CHANNEL),
@@ -186,7 +186,7 @@ case N.d4z.PRIVATE_THREAD:
           onContextMenu: C,
           onClick: f,
           className: l()(S.parentChannelName, S.cursorPointer),
-          children: (0, d.F6)(s, E.default, _.Z)
+          children: (0, u.F6)(s, E.default, _.Z)
         }),
         (0, i.jsx)(x.Z.Caret, {})
       ]

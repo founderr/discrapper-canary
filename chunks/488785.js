@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(392711),
   o = n(772848),
   c = n(442837),
-  d = n(570140),
-  u = n(596454),
+  u = n(570140),
+  d = n(596454),
   h = n(607070),
   p = n(377107);
 let m = [
@@ -34,7 +34,7 @@ let {
 return (0, i.jsx)('div', {
   className: l()(p.emoji, o),
   onAnimationEnd: c,
-  children: (0, i.jsx)(u.Z, {
+  children: (0, i.jsx)(d.Z, {
     emojiId: n.id,
     emojiName: n.name,
     animated: null !== (t = n.animated) && void 0 !== t && t
@@ -62,14 +62,14 @@ function e(e) {
       }
     ]);
 }
-return d.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e), () => {
-  d.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
+return u.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e), () => {
+  u.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
 };
   }, [
 t,
 s
   ]);
-  let u = a.useCallback(e => {
+  let d = a.useCallback(e => {
 r(t => t.filter(t => t.key !== e));
   }, []);
   return s ? null : (0, i.jsx)('div', {
@@ -80,7 +80,7 @@ style: {
 'aria-hidden': !0,
 children: l.map(e => (0, i.jsx)(_, {
   emoji: e,
-  onAnimationEnd: u
+  onAnimationEnd: d
 }, e.key))
   });
 }

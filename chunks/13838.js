@@ -9,8 +9,8 @@ var i = n(392711),
   d = n(592125),
   u = n(271383),
   _ = n(430824),
-  E = n(131951),
-  h = n(19780),
+  h = n(131951),
+  E = n(19780),
   I = n(594174),
   m = n(979651),
   g = n(996106),
@@ -215,11 +215,11 @@ handler: () => e => {
     prevState: t,
     dispatch: n
   } = e, i = {
-    state: (0, p.zy)(h.Z.getState()),
-    hostname: h.Z.getHostname(),
-    pings: h.Z.getPings(),
-    average_ping: h.Z.getAveragePing(),
-    last_ping: h.Z.getLastPing()
+    state: (0, p.zy)(E.Z.getState()),
+    hostname: E.Z.getHostname(),
+    pings: E.Z.getPings(),
+    average_ping: E.Z.getAveragePing(),
+    last_ping: E.Z.getLastPing()
   };
   return !s().isEqual(i, t) && n(i), i;
 }
@@ -450,14 +450,14 @@ handler: () => e => {
   let {
     prevState: i,
     dispatch: a
-  } = e, r = c.Z.getStreamerActiveStreamMetadata(), d = (null == r ? void 0 : r.pid) != null ? o.ZP.getGameForPID(r.pid) : null, u = (null == d ? void 0 : d.id) != null ? l.Z.getApplication(d.id) : null, _ = null != u ? (0, S.Z)(u) : null, E = null == r ? void 0 : r.sourceName, h = {
+  } = e, r = c.Z.getStreamerActiveStreamMetadata(), d = (null == r ? void 0 : r.pid) != null ? o.ZP.getGameForPID(r.pid) : null, u = (null == d ? void 0 : d.id) != null ? l.Z.getApplication(d.id) : null, _ = null != u ? (0, S.Z)(u) : null, h = null == r ? void 0 : r.sourceName, E = {
     active: null != r,
     pid: null !== (t = null == r ? void 0 : r.pid) && void 0 !== t ? t : null,
     application: (n = null != _, n) ? {
-      name: E
+      name: h
     } : null
   };
-  return !s().isEqual(h, i) && a(h), h;
+  return !s().isEqual(E, i) && a(E), E;
 }
   },
   [v.zMe.VIDEO_STATE_UPDATE]: {
@@ -472,7 +472,7 @@ handler: () => e => {
     prevState: t,
     dispatch: n
   } = e, i = {
-    active: E.Z.isVideoEnabled()
+    active: h.Z.isVideoEnabled()
   };
   return !s().isEqual(i, t) && n(i), i;
 }

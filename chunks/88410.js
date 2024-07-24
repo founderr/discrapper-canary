@@ -1,19 +1,19 @@
 t.d(n, {
   Z: function() {
-return a;
+return l;
   }
 }), t(627494), t(757143);
 var i = t(470079),
-  l = t(812236);
+  a = t(812236);
 
-function a(e) {
+function l(e) {
   let {
 applicationId: n,
 channel: t
-  } = e, a = (0, l.SY)(t, n).commands[0];
+  } = e, l = (0, a.SY)(t, n).commands[0];
   return i.useMemo(() => {
-let e = null == a ? void 0 : a.name;
+let e = null == l ? void 0 : l.name;
 if (null != e)
   return (e.charAt(0).toLocaleUpperCase() + e.slice(1)).replaceAll('_', ' ');
-  }, [a]);
+  }, [l]);
 }

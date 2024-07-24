@@ -8,8 +8,8 @@ var i = n(735250),
 t.Z = e => {
   let {
 guild: t,
-onAddGuild: d
-  } = e, u = a.useCallback(() => {
+onAddGuild: u
+  } = e, d = a.useCallback(() => {
 (0, s.openModalLazy)(async () => {
   let {
     default: e
@@ -47,19 +47,19 @@ children: [
     className: c.emptySubtitle,
     children: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_SUBTITLE
   }),
-  null != d ? (0, i.jsx)(l.i, {
+  null != u ? (0, i.jsx)(l.i, {
     className: c.emptyCTA,
     iconUrl: n(362827),
     header: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_ADD_SERVER,
     completed: !1,
-    onClick: d
+    onClick: u
   }) : null,
   (0, i.jsx)(l.i, {
     className: c.emptyCTA,
     iconUrl: n(538548),
     header: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_INVITE,
     completed: !1,
-    onClick: u
+    onClick: d
   })
 ]
   });

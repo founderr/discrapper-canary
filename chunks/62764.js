@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(852229),
   o = n(442837),
   c = n(481060),
-  d = n(393238),
-  u = n(330726),
+  u = n(393238),
+  d = n(330726),
   h = n(48929),
   p = n(333535),
   m = n(566006),
@@ -41,7 +41,7 @@ parentChannelId: j
   } = e, {
 ref: L,
 width: P
-  } = (0, d.Z)(), [O, y] = a.useState(3), [D, k] = a.useState(!n), [U, w] = (0, u.Z)(!1, 2000), B = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]), {
+  } = (0, u.Z)(), [O, y] = a.useState(3), [D, k] = a.useState(!n), [U, w] = (0, d.Z)(!1, 2000), B = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]), {
 firstMessage: H
   } = (0, S.cl)(B), G = (0, o.e7)([I.Z], () => I.Z.hasJoined(t)), {
 disableReactionUpdates: V,

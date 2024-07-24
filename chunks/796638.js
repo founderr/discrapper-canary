@@ -16,8 +16,8 @@ var i = n(735250),
   r = n(314897),
   o = n(70956),
   c = n(823379),
-  d = n(27457),
-  u = n(354459),
+  u = n(27457),
+  d = n(354459),
   h = n(835894);
 let p = 112,
   m = 16 / 9 * p + 8,
@@ -26,7 +26,7 @@ let p = 112,
 function f(e) {
   var t;
   let n = r.default.getId();
-  return e.type === u.fO.USER && e.user.id === n && (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo);
+  return e.type === d.fO.USER && e.user.id === n && (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo);
 }
 
 function E(e, t) {
@@ -42,18 +42,18 @@ return () => {
   let r = a.useRef({}),
 {
   visibleParticipants: o,
-  participantTileWidth: d
+  participantTileWidth: u
 } = a.useMemo(() => {
   let n = Date.now(),
     i = (0, s.sortBy)(t, e => function(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
       switch (e.type) {
-        case u.fO.ACTIVITY:
+        case d.fO.ACTIVITY:
           return '\0'.concat(e.sortKey);
-        case u.fO.HIDDEN_STREAM:
-        case u.fO.STREAM:
+        case d.fO.HIDDEN_STREAM:
+        case d.fO.STREAM:
           return '\x01'.concat((0, l.Z)(e.userNick, e.user));
-        case u.fO.USER:
+        case d.fO.USER:
           var n;
           let i = '\x05';
           return e.speaking ? i = '\x02' : t - e.lastSpoke < _ ? i = '\x03' : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfVideo) && (i = '\x04'), ''.concat(i).concat(function(e) {
@@ -62,10 +62,10 @@ return () => {
           }(e.lastSpoke)).concat((0, l.Z)(e.userNick, e.user));
       }
     }(e, n)),
-    [a, o] = (0, s.partition)(i, u.Io),
-    d = a.findIndex(f),
+    [a, o] = (0, s.partition)(i, d.Io),
+    u = a.findIndex(f),
     h = null; -
-  1 !== d && (h = a[d], a.splice(d, 1));
+  1 !== u && (h = a[u], a.splice(u, 1));
   let p = null != h ? e - m - 8 : e,
     E = Math.max(0, Math.min(Math.floor((p - 8) / 132), 12, t.length)),
     C = Math.min((p - 8) / E - 8, m),
@@ -106,7 +106,7 @@ return () => {
 ]);
   return {
 visibleParticipants: o,
-participantTileWidth: d
+participantTileWidth: u
   };
 }
 
@@ -120,9 +120,9 @@ onContextMenu: l,
 onClick: r,
 channel: o,
 inCall: c,
-popoutWindow: u,
+popoutWindow: d,
 paused: p = !1
-  } = e, _ = null != u;
+  } = e, _ = null != d;
   return (0, i.jsx)('div', {
 className: h.root,
 children: t.map(e => {
@@ -134,12 +134,12 @@ children: t.map(e => {
     style: t ? {
       flexShrink: 0
     } : void 0,
-    children: (0, i.jsx)(d.ZP, {
+    children: (0, i.jsx)(u.ZP, {
       participant: e,
       selected: a === e.id,
       channel: o,
       className: h.tile,
-      fit: d.BP.COVER,
+      fit: u.BP.COVER,
       onClick: r,
       onDoubleClick: s,
       onContextMenu: l,

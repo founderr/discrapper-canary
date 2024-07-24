@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(717881),
-  d = n(58540),
-  u = n(850827),
+  u = n(58540),
+  d = n(850827),
   h = n(258609),
   p = n(199902),
   m = n(314897),
@@ -102,7 +102,7 @@ return null == n ? null : (0, i.jsx)('div', {
                 section: S.jXE.STREAM_VIEWER_POPOUT
               }
             }
-          }) : (0, i.jsx)(u.Z, {
+          }) : (0, i.jsx)(d.Z, {
             type: c.P.STREAM_PREVIEW,
             applicationStream: n,
             user: t,
@@ -134,20 +134,20 @@ C.Z,
 _.Z,
 f.Z,
 h.Z
-  ], () => (0, x.p9)(n, C.Z, _.Z, f.Z, h.Z)), c = (0, r.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())), u = (0, r.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)), g = (0, r.e7)([m.default], () => m.default.getId()), I = (0, T.Cf)(c), N = (0, r.e7)([E.Z], () => (0, T.Um)(c, E.Z)), v = a.useMemo(() => ({
+  ], () => (0, x.p9)(n, C.Z, _.Z, f.Z, h.Z)), c = (0, r.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())), d = (0, r.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)), g = (0, r.e7)([m.default], () => m.default.getId()), I = (0, T.Cf)(c), N = (0, r.e7)([E.Z], () => (0, T.Um)(c, E.Z)), v = a.useMemo(() => ({
 [n.guild_id]: [t.id]
   }), [
 n.guild_id,
 t.id
   ]);
-  return (0, d.$)(v), (0, i.jsx)(M, {
+  return (0, u.$)(v), (0, i.jsx)(M, {
 ...s,
 canWatch: l,
 unavailableReason: o,
 user: t,
 streamApplication: I,
 stream: c,
-activeStream: u,
+activeStream: d,
 currentUserId: g,
 activity: N
   });

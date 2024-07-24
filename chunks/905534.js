@@ -42,10 +42,10 @@ async handler(e) {
       args: d,
       socket: n
     }),
-    E = await (0, l.V)(n, c, d);
+    h = await (0, l.V)(n, c, d);
   return new Promise(e => {
     setImmediate(() => {
-      t.addSubscription(n, c, d, _), null != E && t.dispatchToSubscriptions(c, e => e.socket.id === n.id, E);
+      t.addSubscription(n, c, d, _), null != h && t.dispatchToSubscriptions(c, e => e.socket.id === n.id, h);
     }), e({
       evt: c
     });

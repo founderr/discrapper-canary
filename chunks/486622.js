@@ -10,8 +10,8 @@ var i = n(470079),
   r = n(726521),
   o = n(621853),
   c = n(484459),
-  d = n(695346),
-  u = n(626135),
+  u = n(695346),
+  d = n(626135),
   h = n(823162),
   p = n(268699),
   m = n(9389),
@@ -92,7 +92,7 @@ if (null != t && null == o.Z.getMutualGuilds(t.id)) {
 let n = async () => {
   var n;
   let i = null != t ? null === (n = o.Z.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map(e => e.guild.id) : [];
-  u.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
+  d.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
     action: _.cl.ACCEPT_CONFIRMATION_PROMPT,
     channel_id: e,
     mutual_guild_ids: null != i ? i : [],
@@ -105,7 +105,7 @@ let n = async () => {
   onCancel: () => {
     var n;
     let i = null != t ? null === (n = o.Z.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map(e => e.guild.id) : [];
-    u.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
+    d.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
       action: _.cl.DISMISS_CONFIRMATION_PROMPT,
       channel_id: e,
       mutual_guild_ids: null != i ? i : [],
@@ -119,19 +119,19 @@ b,
 t
   ]), O = i.useCallback((e, t, n) => {
 let i = (i, a) => {
-    a && d.kJ.updateSetting(i), i && null != t && (0, r.zd)(t), R(e.id), u.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
+    a && u.kJ.updateSetting(i), i && null != t && (0, r.zd)(t), R(e.id), d.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
       action: _.cl.ACCEPT_HAM_CONFIRMATION_PROMPT,
       channel_id: e.id,
       is_dont_show_again_checked: a,
       non_spam_retraining_opt_in: i
     }), null != n && n();
   },
-  a = d.kJ.getSetting();
+  a = u.kJ.getSetting();
 null == a ? (0, p.V)({
   channel: e,
   onConfirm: i,
   onCancel: () => {
-    u.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
+    d.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
       action: _.cl.DISMISS_HAM_CONFIRMATION_PROMPT,
       channel_id: e.id
     });

@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(481060),
   u = n(2052),
   _ = n(393238),
-  E = n(727637),
-  h = n(100527),
+  h = n(727637),
+  E = n(100527),
   I = n(906732),
   m = n(676035),
   g = n(521868),
@@ -170,7 +170,7 @@ onClose: n,
 setPopoutRef: a
   } = e, V = __OVERLAY__, W = (0, Z.ZP)(t.id), ei = (0, u.O)(), {
 analyticsLocations: es
-  } = (0, I.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT), ea = (0, A.Q1)({
+  } = (0, I.ZP)(E.Z.ACCOUNT_PROFILE_POPOUT), ea = (0, A.Q1)({
 layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
 userId: t.id
   }), er = (0, m.a)(), el = (0, c.e7)([B.Z], () => B.Z.getStatus(t.id)), eo = function(e, t) {
@@ -275,7 +275,7 @@ return (0, i.jsxs)(i.Fragment, {
 });
   }(el, ei), {
 ref: ec
-  } = (0, _.Z)(), ed = (0, E.Z)(ec);
+  } = (0, _.Z)(), ed = (0, h.Z)(ec);
   s.useEffect(() => {
 null == a || a(ec.current);
   }, [
@@ -294,10 +294,10 @@ a
 } = (0, v.K)({
   location: 'AccountProfilePopout'
 }),
-eE = (0, C.Z)({
+eh = (0, C.Z)({
   analyticsLocations: es
 }),
-eh = (0, f.p)(),
+eE = (0, f.p)(),
 eI = el === q.Skl.DND,
 em = (0, z.g)(),
 eg = (0, g.o)({
@@ -420,7 +420,7 @@ children: (0, i.jsx)(A.Mt, {
                             ea({
                               action: 'EDIT_PROFILE',
                               analyticsLocations: es
-                            }), eE();
+                            }), eh();
                           },
                           showIconFirst: !0,
                           focusedClassName: J.menuItemFocused,
@@ -438,7 +438,7 @@ children: (0, i.jsx)(A.Mt, {
                             },
                             children: [
                               (0, Y.u5)(el),
-                              eh || eI ? (0, i.jsx)(d.BellSlashIcon, {
+                              eE || eI ? (0, i.jsx)(d.BellSlashIcon, {
                                 size: 'xxs'
                               }) : null
                             ]

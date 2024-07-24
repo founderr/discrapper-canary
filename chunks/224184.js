@@ -5,8 +5,8 @@ var i = n(735250),
   r = n(399606),
   o = n(481060),
   c = n(287734),
-  d = n(654904),
-  u = n(314897),
+  u = n(654904),
+  d = n(314897),
   h = n(271383),
   p = n(496675),
   m = n(19780),
@@ -32,7 +32,7 @@ enableHangStatus: M
   } = C.n.useExperiment({
 guildId: Z.guild_id,
 location: 'HangStatusPopout'
-  }), b = (0, r.e7)([u.default], () => u.default.getId()), R = (0, r.e7)([_.default], () => _.default.getUser(s)), j = (0, r.e7)([m.Z], () => m.Z.getChannelId() === Z.id), L = (0, r.e7)([p.Z], () => p.Z.can(N.Plq.CONNECT, Z)), P = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, Z), O = (0, r.e7)([h.ZP], () => null != Z.guild_id && null != R ? h.ZP.getMember(Z.guild_id, s) : null), y = a.useMemo(() => null != R ? (0, d.SG)(void 0, O, R, {
+  }), b = (0, r.e7)([d.default], () => d.default.getId()), R = (0, r.e7)([_.default], () => _.default.getUser(s)), j = (0, r.e7)([m.Z], () => m.Z.getChannelId() === Z.id), L = (0, r.e7)([p.Z], () => p.Z.can(N.Plq.CONNECT, Z)), P = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, Z), O = (0, r.e7)([h.ZP], () => null != Z.guild_id && null != R ? h.ZP.getMember(Z.guild_id, s) : null), y = a.useMemo(() => null != R ? (0, u.SG)(void 0, O, R, {
 size: 40
   }) : void 0, [
 O,

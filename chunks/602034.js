@@ -13,8 +13,8 @@ var i = n(735250),
   r = n(570140),
   o = n(668781),
   c = n(966390),
-  d = n(680287),
-  u = n(470623),
+  u = n(680287),
+  d = n(470623),
   h = n(957730),
   p = n(48854),
   m = n(703558),
@@ -32,7 +32,7 @@ privateThreadMode: s,
 location: l,
 onThreadCreated: r,
 useDefaultThreadName: o
-  } = e, d = a.useCallback((e, t, n, i) => {
+  } = e, u = a.useCallback((e, t, n, i) => {
 c.Z.uploadFiles({
   channelId: e.id,
   uploads: t,
@@ -51,7 +51,7 @@ privateThreadMode: s,
 location: l,
 onThreadCreated: r,
 useDefaultThreadName: o,
-uploadHandler: d
+uploadHandler: u
   });
 }
 
@@ -61,7 +61,7 @@ parentChannel: t
   } = e, {
 name: a,
 appliedTags: c
-  } = (0, u.xH)(e => {
+  } = (0, d.xH)(e => {
 let {
   name: t,
   appliedTags: n
@@ -76,8 +76,8 @@ parentChannel: t,
 name: a,
 appliedTags: c,
 upload: function(e, a, s) {
-  return new Promise((c, u) => {
-    let h = new d.Z(e);
+  return new Promise((c, d) => {
+    let h = new u.Z(e);
     h.on('error', (e, a, s) => {
       if (a === E.evJ.EXPLICIT_CONTENT) {
         let e = (0, p.r)();
@@ -111,7 +111,7 @@ upload: function(e, a, s) {
             limit: E.dN1
           })
         });
-      u({
+      d({
         body: s
       });
     }), h.on('complete', (e, t) => {

@@ -5,8 +5,8 @@ var i = n(735250),
   r = n(607070),
   o = n(665906),
   c = n(314897),
-  d = n(496675),
-  u = n(981631),
+  u = n(496675),
+  d = n(981631),
   h = n(689938),
   p = n(322699);
 let m = () => n.e('26176').then(n.t.bind(n, 737848, 19)).then(e => {
@@ -19,7 +19,7 @@ t.Z = a.memo(function(e) {
   let {
 channel: t,
 isLastItem: n
-  } = e, a = (0, s.e7)([r.Z], () => r.Z.useReducedMotion), _ = (0, s.e7)([d.Z], () => d.Z.can(u.Plq.SEND_MESSAGES_IN_THREADS, t)), f = (0, o.Gu)(t), E = (0, s.e7)([c.default], () => c.default.getId());
+  } = e, a = (0, s.e7)([r.Z], () => r.Z.useReducedMotion), _ = (0, s.e7)([u.Z], () => u.Z.can(d.Plq.SEND_MESSAGES_IN_THREADS, t)), f = (0, o.Gu)(t), E = (0, s.e7)([c.default], () => c.default.getId());
   return n ? _ && !f && t.ownerId !== E ? (0, i.jsxs)('div', {
 className: p.box,
 children: [

@@ -7,8 +7,8 @@ var a = n(442837),
   r = n(735336),
   o = n(184325),
   c = n(131640),
-  d = n(228168),
-  u = n(424344);
+  u = n(228168),
+  d = n(424344);
 t.Z = e => {
   let {
 user: t,
@@ -25,7 +25,7 @@ children: [
   (0, i.jsx)(r.Z, {
     user: t,
     displayProfile: n,
-    profileType: d.y0.PANEL,
+    profileType: u.y0.PANEL,
     showPremiumBadgeUpsell: !0,
     isHovering: m,
     animateOnHover: !p
@@ -38,13 +38,13 @@ children: [
     channelId: h.id,
     disableUserProfileLink: !0,
     hasBanner: (null == n ? void 0 : n.banner) != null,
-    profileType: d.y0.PANEL,
+    profileType: u.y0.PANEL,
     animateOnHover: !p
   }),
   (0, i.jsx)('div', {
-    className: u.badgelistGroup,
+    className: d.badgelistGroup,
     children: (0, i.jsx)(o.Z, {
-      className: u.badgeList,
+      className: d.badgeList,
       user: t,
       size: o.V.SIZE_22
     })

@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(213609),
   o = n(536442),
   c = n(39604),
-  d = n(176127),
-  u = n(689938),
+  u = n(176127),
+  d = n(689938),
   h = n(823472);
 
 function p(e) {
@@ -33,13 +33,13 @@ className: h.recentClipsPopout,
 children: [
   (0, i.jsx)('div', {
     className: h.thumbnailStackContainer,
-    children: (0, i.jsx)(d.Z, {})
+    children: (0, i.jsx)(u.Z, {})
   }),
   (0, i.jsx)(l.Heading, {
     className: h.header,
     color: 'header-primary',
     variant: 'heading-md/extrabold',
-    children: u.Z.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({
+    children: d.Z.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({
       count: n.newClipIds.length
     })
   }),
@@ -47,7 +47,7 @@ children: [
     color: 'text-normal',
     className: h.__invalid_content,
     variant: 'text-sm/medium',
-    children: u.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_BODY.format({
+    children: d.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_BODY.format({
       applicationName: n.applicationName
     })
   }),
@@ -60,12 +60,12 @@ children: [
         onClick: function() {
           (0, o.Kw)(o.v6.CLIPS_CHANNEL_ATTACH_REMINDER), p();
         },
-        children: u.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_SECONDARY_CTA
+        children: d.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_SECONDARY_CTA
       }),
       (0, i.jsx)(l.Button, {
         color: l.Button.Colors.BRAND,
         onClick: t,
-        children: u.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_PRIMARY_CTA
+        children: d.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_PRIMARY_CTA
       })
     ]
   })

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 }), n(653041), n(47120);
 var i = n(275726),
@@ -11,9 +11,9 @@ var i = n(275726),
   o = n(493892),
   c = n(981631);
 
-function d(e) {
-  let t, n, d, {
-  channel: u,
+function u(e) {
+  let t, n, u, {
+  channel: d,
   messages: h,
   oldestUnreadMessageId: p,
   treatSpam: m,
@@ -63,7 +63,7 @@ let L = function(e, t, n) {
   else if ((0, o.P1)(e) && n)
     return c.ys_.MESSAGE_GROUP_SPAMMER;
   return null;
-}(u, e, j && m);
+}(d, e, j && m);
 if (null !== L) {
   ;
   let t, n;
@@ -81,28 +81,28 @@ if (p === e.id && null != g) {
     b.unreadId = e.id, g = null;
   else if (null !== R) {
     ;
-    S = R, Z = u, (A = e).isFirstMessageInForumPost(Z) || S.content.push({
+    S = R, Z = d, (A = e).isFirstMessageInForumPost(Z) || S.content.push({
       type: c.ys_.DIVIDER,
       unreadId: A.id
     }), S.hasUnread = !0, g = null;
   } else
-    !e.isFirstMessageInForumPost(u) && E.push({
+    !e.isFirstMessageInForumPost(d) && E.push({
       type: c.ys_.DIVIDER,
       unreadId: e.id
     }), g = null;
 } else
-  null != g && l.default.extractTimestamp(e.id) > g && (!e.isFirstMessageInForumPost(u) && E.push({
+  null != g && l.default.extractTimestamp(e.id) > g && (!e.isFirstMessageInForumPost(d) && E.push({
     type: c.ys_.DIVIDER,
     unreadId: e.id
   }), g = null);
-let P = (null == b ? void 0 : b.type) === c.ys_.MESSAGE ? d : b;
-(0, r.J)(u, P, e) && (n = e.id);
+let P = (null == b ? void 0 : b.type) === c.ys_.MESSAGE ? u : b;
+(0, r.J)(d, P, e) && (n = e.id);
 let O = {
   type: e.type === c.uaV.THREAD_STARTER_MESSAGE ? c.ys_.THREAD_STARTER_MESSAGE : c.ys_.MESSAGE,
   content: e,
   groupId: n
 };
-n === e.id && (d = O);
+n === e.id && (u = O);
 let {
   jumpSequenceId: y,
   jumpFlash: D,
@@ -113,14 +113,14 @@ D && e.id === k && null != y && (O.flashKey = y), h.jumpTargetId === e.id && (O.
   content: f.topic,
   contentKey: f.startId,
   isSummaryDivider: !0
-}), null !== R ? (R.content.push(O), O.jumpTarget && (R.hasJumpTarget = !0)) : E.push(O), e.isFirstMessageInForumPost(u) && E.push({
+}), null !== R ? (R.content.push(O), O.jumpTarget && (R.hasJumpTarget = !0)) : E.push(O), e.isFirstMessageInForumPost(d) && E.push({
   type: c.ys_.FORUM_POST_ACTION_BAR
 }), null != f && e.id === f.endId && f.count > 1 && E.push({
   type: c.ys_.DIVIDER,
   contentKey: f.endId,
   isSummaryDivider: !0
 });
-  }), C && (0, o.P1)(u) && a.Z.trackExposure({
+  }), C && (0, o.P1)(d) && a.Z.trackExposure({
 location: '416cc9_1'
   }), E;
 }

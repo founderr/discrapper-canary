@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(613828),
   o = n(772848),
   c = n(442837),
-  d = n(481060),
-  u = n(2052),
+  u = n(481060),
+  d = n(2052),
   h = n(40851),
   p = n(607070),
   m = n(100527),
@@ -91,7 +91,7 @@ let K = (0, h.bp)(),
     m.Z.ACTIVITIES_MINI_SHELF_BANNER
   ]),
   Q = K === b.IlC.POPOUT,
-  J = (0, u.O)(),
+  J = (0, d.O)(),
   $ = function(e, t) {
     return (0, v.Z)({
       guildId: e,
@@ -141,7 +141,7 @@ let ee = a.useCallback(() => {
         className: j.posterDivider
       })
     ]
-  }) : G ? (0, i.jsxs)(d.Clickable, {
+  }) : G ? (0, i.jsxs)(u.Clickable, {
     className: l()(j.clickableBanner),
     onClick: () => {
       w(), o(), (0, f.uL)(b.Z5c.ACTIVITY_DETAILS(M.Fu), {
@@ -158,7 +158,7 @@ let ee = a.useCallback(() => {
         className: j.posterDivider
       })
     ]
-  }) : V ? (0, i.jsxs)(d.Clickable, {
+  }) : V ? (0, i.jsxs)(u.Clickable, {
     className: l()(j.clickableBanner),
     onClick: () => {
       w(), o(), (0, f.uL)(b.Z5c.ACTIVITY_DETAILS(M.lj), {
@@ -179,15 +179,15 @@ let ee = a.useCallback(() => {
 return (0, i.jsx)(_.Gt, {
   value: q,
   children: (0, i.jsx)(C.Z, {
-    children: (0, i.jsxs)(d.Dialog, {
+    children: (0, i.jsxs)(u.Dialog, {
       ref: t,
       'aria-labelledby': D,
       className: B,
       children: [
-        (0, i.jsx)(d.HeadingLevel, {
+        (0, i.jsx)(u.HeadingLevel, {
           forceLevel: 2,
-          children: (0, i.jsx)(d.HiddenVisually, {
-            children: (0, i.jsx)(d.H, {
+          children: (0, i.jsx)(u.HiddenVisually, {
+            children: (0, i.jsx)(u.H, {
               id: D,
               children: R.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
             })
@@ -204,26 +204,26 @@ return (0, i.jsx)(_.Gt, {
                 (0, i.jsxs)('div', {
                   className: j.titleLeft,
                   children: [
-                    (0, i.jsx)(d.ActivitiesIcon, {
+                    (0, i.jsx)(u.ActivitiesIcon, {
                       size: 'md',
                       className: j.titleLeftIcon,
                       color: 'var(--interactive-active)'
                     }),
-                    (0, i.jsx)(d.Text, {
+                    (0, i.jsx)(u.Text, {
                       variant: 'eyebrow',
                       children: R.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
                     })
                   ]
                 }),
-                (0, i.jsxs)(d.Clickable, {
+                (0, i.jsxs)(u.Clickable, {
                   className: j.titleRight,
                   onClick: ee,
                   children: [
-                    (0, i.jsx)(d.Text, {
+                    (0, i.jsx)(u.Text, {
                       variant: 'eyebrow',
                       children: R.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
                     }),
-                    (0, i.jsx)(d.ChevronSmallRightIcon, {
+                    (0, i.jsx)(u.ChevronSmallRightIcon, {
                       size: 'custom',
                       width: 12,
                       height: 12,

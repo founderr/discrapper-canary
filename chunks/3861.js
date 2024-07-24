@@ -5,8 +5,8 @@ var i = n(735250),
   r = n(112724),
   o = n(613611),
   c = n(351248),
-  d = n(285952),
-  u = n(585483),
+  u = n(285952),
+  d = n(585483),
   h = n(340295),
   p = n(171277),
   m = n(677845),
@@ -39,7 +39,7 @@ popoutWindow: O,
 awaitingRemoteSessionInfo: y
   } = e;
   a.useEffect(() => {
-u.S.dispatch(E.CkL.REMEASURE_TARGET);
+d.S.dispatch(E.CkL.REMEASURE_TARGET);
   }, [
 R,
 j
@@ -71,10 +71,10 @@ return 0 === n.length ? (0, i.jsx)(f.Z, {
   className: l()(g.videoGrid, g.hiddenParticipants),
   channelId: v.id,
   width: R
-}) : (0, i.jsx)(d.Z, {
+}) : (0, i.jsx)(u.Z, {
   className: g.videoGridWrapper,
-  justify: d.Z.Justify.CENTER,
-  align: d.Z.Align.CENTER,
+  justify: u.Z.Justify.CENTER,
+  align: u.Z.Align.CENTER,
   children: (0, i.jsx)(m.Z, {
     channel: v,
     className: g.videoGrid,

@@ -5,8 +5,8 @@ var i, a = n(392711),
   r = n(570140),
   o = n(592125),
   c = n(271383),
-  d = n(797316),
-  u = n(158776),
+  u = n(797316),
+  d = n(158776),
   h = n(885110),
   p = n(594174),
   m = n(823379),
@@ -130,16 +130,16 @@ var n, i;
 let a = c.ZP.getMember(this.guildId, e),
   s = p.default.getUser(e),
   l = p.default.getCurrentUser(),
-  r = (null == s ? void 0 : s.id) === (null == l ? void 0 : l.id) ? h.Z.getStatus() : u.Z.getStatus(e, this.guildId),
+  r = (null == s ? void 0 : s.id) === (null == l ? void 0 : l.id) ? h.Z.getStatus() : d.Z.getStatus(e, this.guildId),
   o = null != s && null != t && _.BT({
     permission: C.Plq.VIEW_CHANNEL,
     user: s,
     context: t
   }),
-  d = r !== C.Skl.OFFLINE && r !== C.Skl.INVISIBLE && r !== C.Skl.UNKNOWN ? null !== (n = null == a ? void 0 : a.hoistRoleId) && void 0 !== n ? n : 'online' : 'offline',
+  u = r !== C.Skl.OFFLINE && r !== C.Skl.INVISIBLE && r !== C.Skl.UNKNOWN ? null !== (n = null == a ? void 0 : a.hoistRoleId) && void 0 !== n ? n : 'online' : 'offline',
   m = null !== (i = null == a ? void 0 : a.nick) && void 0 !== i ? i : E.ZP.getName(s);
 return [
-  d,
+  u,
   null == m ? void 0 : m.toLowerCase(),
   o
 ];
@@ -172,8 +172,8 @@ I[e].guildId === t && (I[e].rebuild(), n = !0);
 }
 class S extends(i = l.ZP.Store) {
   initialize() {
-this.waitFor(o.Z, c.ZP, d.Z, u.Z, h.Z, p.default), this.syncWith([d.Z], () => {
-  let e = d.Z.getSubscribedThreadIds(),
+this.waitFor(o.Z, c.ZP, u.Z, d.Z, h.Z, p.default), this.syncWith([u.Z], () => {
+  let e = u.Z.getSubscribedThreadIds(),
     t = !1;
   for (let n in I)
     !e.has(n) && (delete I[n], t = !0);

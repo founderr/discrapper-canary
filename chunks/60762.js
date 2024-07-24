@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return E;
+return h;
   }
 });
 var i = n(735250);
@@ -19,20 +19,20 @@ let _ = (e, t) => ({
   imgStyle: u.defaultDropImage
 });
 
-function E(e) {
+function h(e) {
   let {
 markAsDismissed: t,
 partnerGame: n
   } = e;
   (0, l.hs)(n, s.ImpressionTypes.POPOUT, s.ImpressionNames.DROPS_QUEST_COMPLETION);
-  let E = (0, l.au)(n);
-  if (null == E)
+  let h = (0, l.au)(n);
+  if (null == h)
 return null;
   let {
-body: h,
+body: E,
 imgSrc: I,
 imgStyle: m
-  } = _(E.drop, E.config.streamLengthRequirement), g = () => {
+  } = _(h.drop, h.config.streamLengthRequirement), g = () => {
 t(c.L.DISMISS);
   };
   return (0, i.jsxs)('div', {
@@ -61,7 +61,7 @@ children: [
   (0, i.jsx)(a.Text, {
     variant: 'text-sm/medium',
     className: u.subTitle,
-    children: h
+    children: E
   }),
   (0, i.jsx)(a.Button, {
     color: a.Button.Colors.BRAND_INVERTED,

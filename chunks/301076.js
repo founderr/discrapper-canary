@@ -17,21 +17,21 @@ function l(e) {
   ...c
 } = e,
 {
-  Component: d,
-  events: u
+  Component: u,
+  events: d
 } = (0, a.s)();
   return (0, i.jsx)(s.d, {
 isActive: n,
 color: t,
-iconComponent: d,
+iconComponent: u,
 onMouseEnter: e => {
-  null == l || l(e), u.onMouseEnter();
+  null == l || l(e), d.onMouseEnter();
 },
 onMouseLeave: e => {
-  null == r || r(e), u.onMouseLeave();
+  null == r || r(e), d.onMouseLeave();
 },
 onClick: e => {
-  null == o || o(e), u.onClick();
+  null == o || o(e), d.onClick();
 },
 ...c
   });

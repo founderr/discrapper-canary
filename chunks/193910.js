@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(704215),
   o = n(481060),
   c = n(538239),
-  d = n(566620),
-  u = n(403404),
+  u = n(566620),
+  d = n(403404),
   h = n(906732),
   p = n(605236),
   m = n(706140),
@@ -129,7 +129,7 @@ C.default.track(v.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
   channel_type: t.type,
   channel_id: t.id,
   guild_id: t.guild_id
-}), (0, u.Z)({
+}), (0, d.Z)({
   channel: t,
   guildId: t.guild_id,
   locationObject: {
@@ -141,7 +141,7 @@ C.default.track(v.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
   openInPopout: !1,
   enableSelectedTextChannelInvite: !0,
   analyticsLocations: y
-}), (0, d.w1)({
+}), (0, u.w1)({
   guildId: t.guild_id
 });
   }

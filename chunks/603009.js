@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(338545),
   o = n(704215),
   c = n(481060),
-  d = n(442837),
-  u = n(410030),
+  u = n(442837),
+  d = n(410030),
   h = n(607070),
   p = n(645041),
   m = n(430824),
@@ -37,13 +37,13 @@ guild: n,
 showToast: s,
 onConfirm: o,
 onDismiss: p
-  } = e, [m, _] = a.useState(!1), E = a.useRef(null), g = (0, C.Cc)(n.id), T = (0, u.ZP)(), S = (0, d.e7)([h.Z], () => h.Z.useReducedMotion), Z = (0, I.nP)(null == g ? void 0 : null === (t = g.branding) || void 0 === t ? void 0 : t.primaryColor, [
+  } = e, [m, _] = a.useState(!1), E = a.useRef(null), g = (0, C.Cc)(n.id), T = (0, d.ZP)(), S = (0, u.e7)([h.Z], () => h.Z.useReducedMotion), Z = (0, I.nP)(null == g ? void 0 : null === (t = g.branding) || void 0 === t ? void 0 : t.primaryColor, [
 c.tokens.colors.BG_BRAND,
 0.5
   ]), b = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
 theme: T,
 saturation: 1
-  }).hex(), R = (0, I.nj)(Z, b, 'top left', 0.3, '30%'), j = (0, d.e7)([f.default], () => {
+  }).hex(), R = (0, I.nj)(Z, b, 'top left', 0.3, '30%'), j = (0, u.e7)([f.default], () => {
 var e;
 return null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan;
   }, []);
@@ -171,7 +171,7 @@ return t && (0, i.jsx)(r.animated.div, {
 }
 
 function R(e) {
-  let {} = e, t = (0, d.e7)([_.Z], () => _.Z.getGuildId()), n = (0, T.h)(t, 'clan_tag_upsell_toast'), s = (0, d.e7)([m.Z], () => m.Z.getGuild(t), [t]), [l, r] = a.useState(!1), c = a.useRef(null);
+  let {} = e, t = (0, u.e7)([_.Z], () => _.Z.getGuildId()), n = (0, T.h)(t, 'clan_tag_upsell_toast'), s = (0, u.e7)([m.Z], () => m.Z.getGuild(t), [t]), [l, r] = a.useState(!1), c = a.useRef(null);
   a.useEffect(() => (n && (c.current = window.setTimeout(() => {
 r(!0), E.default.track(S.rMx.DISMISSIBLE_CONTENT_SHOWN, {
   type: o.C[o.C.ADOPT_CLAN_IDENTITY_NOTICE],
@@ -180,7 +180,7 @@ r(!0), E.default.track(S.rMx.DISMISSIBLE_CONTENT_SHOWN, {
   }, 2500)), () => {
 null != c.current && window.clearTimeout(c.current);
   }), []);
-  let u = a.useCallback(() => {
+  let d = a.useCallback(() => {
   if (r(!1), null != t)
     (0, g.S)(t);
 }, [,
@@ -192,7 +192,7 @@ h = a.useCallback(() => {
 }, [t]);
   return n && null != t && null != s ? (0, i.jsx)(b, {
 guild: s,
-onConfirm: u,
+onConfirm: d,
 onDismiss: h,
 showToast: l
   }) : null;

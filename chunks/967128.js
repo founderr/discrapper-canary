@@ -1,9 +1,9 @@
 n.d(t, {
   Kq: function() {
-return d;
+return u;
   },
   Ot: function() {
-return u;
+return d;
   },
   jz: function() {
 return h;
@@ -18,7 +18,7 @@ var a = n(120356),
   o = n(981631),
   c = n(337928);
 
-function d(e) {
+function u(e) {
   let {
 locked: t = !1,
 channelType: n
@@ -44,7 +44,7 @@ return (0, i.jsx)('div', {
   }
 }
 
-function u(e) {
+function d(e) {
   let {
 children: t,
 className: n

@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(392711),
   o = n(442837),
   c = n(475179),
-  d = n(358221),
-  u = n(306680),
+  u = n(358221),
+  d = n(306680),
   h = n(944486),
   p = n(111583),
   m = n(459273),
@@ -27,9 +27,9 @@ n = (0, o.e7)([h.Z], () => h.Z.getVoiceChannelId() === e, [e]),
 {
   unreadCount: i,
   mentionCount: a
-} = (0, o.cj)([u.ZP], () => ({
-  unreadCount: u.ZP.getUnreadCount(e),
-  mentionCount: u.ZP.getMentionCount(e)
+} = (0, o.cj)([d.ZP], () => ({
+  unreadCount: d.ZP.getUnreadCount(e),
+  mentionCount: d.ZP.getMentionCount(e)
 }), [e]);
   return {
 unreadCount: i,
@@ -63,7 +63,7 @@ function T(e) {
   channelId: n,
   className: s,
   showingClassName: r,
-  onClick: u,
+  onClick: d,
   inPopout: h,
   showRequestToSpeakSidebar: p,
   toggleRequestToSpeakSidebar: f,
@@ -73,7 +73,7 @@ function T(e) {
   disabled: N
 } = T,
 v = a.useRef(null),
-S = (0, o.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
+S = (0, o.e7)([u.Z], () => u.Z.getChatOpen(n), [n]),
 {
   isShowing: Z,
   unreadCount: A,
@@ -99,11 +99,11 @@ S = (0, o.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
   };
 }(n),
 b = a.useCallback(() => {
-  null == u || u(), !S && p && (null == f || f()), c.Z.updateChatOpen(n, !S);
+  null == d || d(), !S && p && (null == f || f()), c.Z.updateChatOpen(n, !S);
 }, [
   n,
   S,
-  u,
+  d,
   p,
   f
 ]),

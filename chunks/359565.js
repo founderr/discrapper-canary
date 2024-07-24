@@ -13,8 +13,8 @@ var i = n(735250),
   r = n(481060),
   o = n(367907),
   c = n(626135),
-  d = n(346479),
-  u = n(665906),
+  u = n(346479),
+  d = n(665906),
   h = n(981631),
   p = n(689938),
   m = n(107002);
@@ -23,7 +23,7 @@ function _(e) {
   let {
 channel: t,
 narrow: n
-  } = e, s = (0, u.tc)(t);
+  } = e, s = (0, d.tc)(t);
   return a.useEffect(() => {
 c.default.track(h.rMx.CHANNEL_BANNER_VIEWED, {
   ...(0, o.hH)(t.getGuildId()),
@@ -51,7 +51,7 @@ children: [
         ...(0, o.v_)(t),
         banner_type: 'thread',
         cta_type: 'unarchive'
-      }), d.Z.unarchiveThread(t, !1);
+      }), u.Z.unarchiveThread(t, !1);
     },
     children: p.Z.Messages.UNARCHIVE
   }) : null
@@ -63,7 +63,7 @@ function f(e) {
   let {
 channel: t,
 narrow: n
-  } = e, s = (0, u.Xb)(t);
+  } = e, s = (0, d.Xb)(t);
   return a.useEffect(() => {
 c.default.track(h.rMx.CHANNEL_BANNER_VIEWED, {
   ...(0, o.hH)(t.getGuildId()),
@@ -91,7 +91,7 @@ children: [
         ...(0, o.v_)(t),
         banner_type: 'thread',
         cta_type: 'unlock'
-      }), d.Z.unlockThread(t);
+      }), u.Z.unlockThread(t);
     },
     children: p.Z.Messages.UNLOCK
   }) : null

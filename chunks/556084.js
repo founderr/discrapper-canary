@@ -18,8 +18,8 @@ channelId: t
   let n = (0, s.o)(t),
 {
   installedIntegrations: c,
-  applicationsShelf: d,
-  integrationsFetchState: u,
+  applicationsShelf: u,
+  integrationsFetchState: d,
   applicationsShelfFetchState: h
 } = (0, a.cj)([o.Z], () => ({
   installedIntegrations: o.Z.getIntegrations(t),
@@ -28,19 +28,19 @@ channelId: t
   applicationsShelfFetchState: o.Z.getApplicationsShelfFetchState()
 }));
   i.useEffect(() => {
-n && ((u === o.M.NOT_FETCHED || u === o.M.FETCH_FAILED) && (0, r.Yz)(t), (h === o.M.NOT_FETCHED || h === o.M.FETCH_FAILED) && (0, r.Rh)());
+n && ((d === o.M.NOT_FETCHED || d === o.M.FETCH_FAILED) && (0, r.Yz)(t), (h === o.M.NOT_FETCHED || h === o.M.FETCH_FAILED) && (0, r.Rh)());
   }, [
 n,
 t,
-u,
+d,
 h
   ]);
   let p = new Set(c.map(e => e.application.id));
   return {
 installedIntegrations: c,
-availableApplications: d.filter(e => !p.has(e.id)),
-applicationsShelf: d,
-fetched: u !== o.M.NOT_FETCHED && u !== o.M.FETCHING && h !== o.M.NOT_FETCHED && h !== o.M.FETCHING,
+availableApplications: u.filter(e => !p.has(e.id)),
+applicationsShelf: u,
+fetched: d !== o.M.NOT_FETCHED && d !== o.M.FETCHING && h !== o.M.NOT_FETCHED && h !== o.M.FETCHING,
 appsInGDMEnabled: n
   };
 }

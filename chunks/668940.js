@@ -9,8 +9,8 @@ var s = n(948789),
   d = n(677277),
   u = n(285865),
   _ = n(918701),
-  E = n(702428),
-  h = n(709158),
+  h = n(702428),
+  E = n(709158),
   I = n(683301),
   m = n(150192),
   g = n(889010),
@@ -43,7 +43,7 @@ let {
 } = (0, a.cj)([I.ZP], () => ({
   currentCategoryId: I.ZP.getCurrentCategoryId(),
   isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0
-})), n = (0, h.Z)(o.Z.QUEST_HOME_PAGE), c = (0, a.e7)([m.Z], () => m.Z.getDiscoveryCategories(), [], m.j), T = null == c ? void 0 : c.map(e => ({
+})), n = (0, E.Z)(o.Z.QUEST_HOME_PAGE), c = (0, a.e7)([m.Z], () => m.Z.getDiscoveryCategories(), [], m.j), T = null == c ? void 0 : c.map(e => ({
   ...e,
   icon: A(e.categoryId)
 })), v = e => {
@@ -66,7 +66,7 @@ return (0, i.jsxs)(r.Scroller, {
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t
     }),
-    n && (0, i.jsx)(E.Z, {
+    n && (0, i.jsx)(h.Z, {
       onClick: () => v(f.Gj.Quests),
       isSelected: e === f.Gj.Quests
     })

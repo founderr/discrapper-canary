@@ -14,8 +14,8 @@ var s = n(442837),
   d = n(243778),
   u = n(352455),
   _ = n(480294),
-  E = n(153124),
-  h = n(791359),
+  h = n(153124),
+  E = n(791359),
   I = n(981631),
   m = n(689938),
   g = n(205692);
@@ -23,7 +23,7 @@ var s = n(442837),
 function p() {
   let {
 analyticsLocations: e
-  } = (0, c.ZP)(o.Z.ACTIVE_NOW_COLUMN), t = (0, s.e7)([_.Z], () => _.Z.hasConsented(I.pjP.PERSONALIZATION)) ? [] : [a.z.NOW_PLAYING_CONSENT_CARD], n = (0, E.Dt)();
+  } = (0, c.ZP)(o.Z.ACTIVE_NOW_COLUMN), t = (0, s.e7)([_.Z], () => _.Z.hasConsented(I.pjP.PERSONALIZATION)) ? [] : [a.z.NOW_PLAYING_CONSENT_CARD], n = (0, h.Dt)();
   return (0, i.jsx)(c.Gt, {
 value: e,
 children: (0, i.jsx)(l.Z, {
@@ -54,7 +54,7 @@ children: (0, i.jsx)(l.Z, {
               });
           }
         }),
-        (0, i.jsx)(h.Z, {})
+        (0, i.jsx)(E.Z, {})
       ]
     })
   })

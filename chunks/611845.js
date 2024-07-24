@@ -11,8 +11,8 @@ var a = n(120356),
   r = n(170671),
   o = n(738672),
   c = n(689938),
-  d = n(487365),
-  u = n(946790);
+  u = n(487365),
+  d = n(946790);
 
 function h(e) {
   let {
@@ -20,16 +20,16 @@ hidden: t,
 onDismiss: n
   } = e;
   return (0, i.jsxs)('div', {
-className: s()(d.demoCta, {
-  [d.hidden]: t
+className: s()(u.demoCta, {
+  [u.hidden]: t
 }),
 children: [
   (0, i.jsxs)('div', {
     children: [
       (0, i.jsx)('div', {
-        className: d.wumpusContainer,
+        className: u.wumpusContainer,
         children: (0, i.jsx)(l.Image, {
-          src: u,
+          src: d,
           width: 72,
           height: 52,
           zoomable: !1
@@ -40,17 +40,17 @@ children: [
         look: l.Button.Looks.BLANK,
         size: l.Button.Sizes.NONE,
         onClick: () => n(),
-        className: d.closeButton,
+        className: u.closeButton,
         children: (0, i.jsx)(l.CloseSmallIcon, {
           size: 'md',
-          className: d.closeIcon,
+          className: u.closeIcon,
           color: 'white'
         })
       })
     ]
   }),
   (0, i.jsx)('div', {
-    className: d.textContainer,
+    className: u.textContainer,
     children: (0, i.jsx)(l.Text, {
       variant: 'text-md/semibold',
       color: 'always-white',
@@ -58,7 +58,7 @@ children: [
     })
   }),
   (0, i.jsxs)('div', {
-    className: d.nitroTextAndBadge,
+    className: u.nitroTextAndBadge,
     children: [
       (0, i.jsx)(r.Z, {
         isSelected: !0

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return u;
+return d;
   }
 });
 var i = n(470079),
@@ -10,17 +10,17 @@ var i = n(470079),
   r = n(88315),
   o = n(179295),
   c = n(370663),
-  d = n(743597);
+  u = n(743597);
 
-function u(e) {
+function d(e) {
   let {
 user: t,
 channelId: n,
-streamerId: u,
+streamerId: d,
 stream: h,
 focused: p,
 canvas: m
-  } = e, _ = i.useRef(!1), f = (0, a.e7)([s.Z], () => s.Z.getDrawMode()), E = (0, o.Z)((0, c.Z)(t.id, n, u), h), C = (0, o.Z)((0, d.Z)(t.id, n, u), h), g = i.useCallback((e, t, n) => {
+  } = e, _ = i.useRef(!1), f = (0, a.e7)([s.Z], () => s.Z.getDrawMode()), E = (0, o.Z)((0, c.Z)(t.id, n, d), h), C = (0, o.Z)((0, u.Z)(t.id, n, d), h), g = i.useCallback((e, t, n) => {
 if (null == m)
   return;
 let {

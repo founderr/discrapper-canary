@@ -6,8 +6,8 @@ return b;
 var s = n(735250),
   r = n(470079),
   a = n(120356),
-  i = n.n(a),
-  o = n(425493),
+  o = n.n(a),
+  i = n(425493),
   c = n(410030),
   l = n(984370),
   d = n(471731),
@@ -25,7 +25,7 @@ onClose: n,
 isFullScreen: a = !1
   } = e;
   return (0, s.jsxs)(l.Z, {
-className: i()(_.headerBar, {
+className: o()(_.headerBar, {
   [_.fullscreenHeaderBar]: a
 }),
 innerClassname: _.shopLogoContainer,
@@ -34,7 +34,7 @@ children: [
   (0, s.jsx)(u.Z, {
     className: _.shopLogo
   }),
-  a && (0, s.jsx)(o.Z, {
+  a && (0, s.jsx)(i.Z, {
     className: _.closeIcon,
     closeAction: t ? p.DR : n,
     keybind: 'ESC'
@@ -58,7 +58,7 @@ isLayer: n,
 onClose: a,
 isFullScreen: t
   }) : (0, s.jsxs)(l.Z, {
-className: i()((0, f.Q)(b), _.headerBar, {
+className: o()((0, f.Q)(b), _.headerBar, {
   [_.fullscreenHeaderBar]: t
 }),
 toolbar: t ? null : (0, s.jsx)(r.Fragment, {}),
@@ -69,7 +69,7 @@ children: [
   (0, s.jsx)(l.Z.Title, {
     children: C.Z.Messages.COLLECTIBLES_SHOP
   }),
-  t && (0, s.jsx)(o.Z, {
+  t && (0, s.jsx)(i.Z, {
     className: _.closeIcon,
     closeAction: n ? p.DR : a,
     keybind: 'ESC'

@@ -11,8 +11,8 @@ var a = n(512722),
   r = n(481060),
   o = n(40851),
   c = n(430824),
-  d = n(496675),
-  u = n(871499),
+  u = n(496675),
+  d = n(871499),
   h = n(981631),
   p = n(689938);
 
@@ -28,7 +28,7 @@ analyticsLocation: g,
 guildScheduledEvent: I,
 ...x
   } = e, T = (0, o.bp)(), N = null == f ? void 0 : f.getGuildId(), v = (0, l.e7)([c.Z], () => null != N ? c.Z.getGuild(N) : null, [N]);
-  return (t = v, a = f, null != t && null != a && d.Z.can(h.Plq.CREATE_INSTANT_INVITE, a)) ? (0, i.jsx)(u.Z, {
+  return (t = v, a = f, null != t && null != a && u.Z.can(h.Plq.CREATE_INSTANT_INVITE, a)) ? (0, i.jsx)(d.Z, {
 onClick: () => {
   s()(null != v, 'guild cannot be null'), s()(null != f, 'channel cannot be null'), ! function(e) {
     let {
@@ -38,8 +38,8 @@ onClick: () => {
       applicationId: l,
       appContext: o,
       exitFullScreen: c,
-      analyticsLocation: d,
-      guildScheduledEvent: u
+      analyticsLocation: u,
+      guildScheduledEvent: d
     } = e;
     null == c || c(), (0, r.openModalLazy)(async () => {
       let {
@@ -54,9 +54,9 @@ onClick: () => {
         channel: a,
         streamUserId: s,
         applicationId: l,
-        analyticsLocation: d,
+        analyticsLocation: u,
         source: a.isGuildStageVoice() ? h.t4x.STAGE_CHANNEL : h.t4x.STREAM_INVITE,
-        guildScheduledEvent: u
+        guildScheduledEvent: d
       });
     }, {
       modalKey: 'stream-invite-modal',

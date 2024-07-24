@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(585483),
   o = n(723170),
   c = n(64247),
-  d = n(124368),
-  u = n(981631),
+  u = n(124368),
+  d = n(981631),
   h = n(689938),
   p = n(423262);
 
@@ -21,8 +21,8 @@ channel: t
   } = e, n = (0, o.B)(t), [m, _] = a.useState(!1), f = (0, s.useRedesignIconContext)().enabled;
   a.useEffect(() => {
 let e = () => _(!0);
-return r.S.subscribe(u.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
-  r.S.unsubscribe(u.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
+return r.S.subscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
+  r.S.unsubscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
 };
   }, []);
   let E = h.Z.Messages.NOTIFICATION_SETTINGS;
@@ -47,8 +47,8 @@ children: (e, t) => {
     ...e,
     onClick: () => _(e => !e),
     tooltip: a ? null : E,
-    icon: n === d.iN.NO_MESSAGES ? s.BellSlashIcon : s.BellIcon,
-    foreground: n !== d.iN.NO_MESSAGES || f ? null : p.strikethrough,
+    icon: n === u.iN.NO_MESSAGES ? s.BellSlashIcon : s.BellIcon,
+    foreground: n !== u.iN.NO_MESSAGES || f ? null : p.strikethrough,
     'aria-label': E,
     selected: a
   });

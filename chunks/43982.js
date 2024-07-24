@@ -11,8 +11,8 @@ var a = n(512722),
   r = n.n(l),
   o = n(970731),
   c = n(981631),
-  d = n(689938),
-  u = n(213738),
+  u = n(689938),
+  d = n(213738),
   h = n(480032),
   p = n(699352);
 let m = null;
@@ -29,25 +29,25 @@ gameConsoleAccounts: l
 f = null;
   switch (m) {
 case c.ABu.XBOX:
-  _ = d.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_XBOX, f = p;
+  _ = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_XBOX, f = p;
   break;
 case c.ABu.PLAYSTATION:
 case c.ABu.PLAYSTATION_STAGING:
-  _ = d.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_PS5, f = h;
+  _ = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_PS5, f = h;
   }
   return (0, i.jsx)(o.ZP, {
-header: d.Z.Messages.CONSOLE_NUX_TOOLTIP_HEADER,
+header: u.Z.Messages.CONSOLE_NUX_TOOLTIP_HEADER,
 content: _,
 asset: (0, i.jsx)('img', {
   src: f,
   alt: '',
-  className: u.art
+  className: d.art
 }),
 onClick: n,
 onSecondaryClick: t,
 markAsDismissed: t,
-buttonCTA: d.Z.Messages.CONSOLE_NUX_TOOLTIP_ACCEPT,
-secondaryButtonCTA: d.Z.Messages.CONSOLE_NUX_TOOLTIP_DISMISS,
+buttonCTA: u.Z.Messages.CONSOLE_NUX_TOOLTIP_ACCEPT,
+secondaryButtonCTA: u.Z.Messages.CONSOLE_NUX_TOOLTIP_DISMISS,
 caretPosition: 'top' === a ? o.DF.BOTTOM_LEFT : o.DF.TOP_LEFT
   });
 }

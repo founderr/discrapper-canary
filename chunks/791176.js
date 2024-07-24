@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(399606),
   o = n(481060),
   c = n(285173),
-  d = n(422559),
-  u = n(430824),
+  u = n(422559),
+  d = n(430824),
   h = n(233608),
   p = n(776767),
   m = n(351127),
@@ -23,7 +23,7 @@ permission: a,
 roleIds: s,
 guild: h,
 specMap: p
-  } = e, _ = f.Plq[a], g = null !== (n = null === (t = p[_.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, d.wt)(_), I = m._o.has(_), x = (0, r.e7)([u.Z], () => u.Z.getRoles(h.id));
+  } = e, _ = f.Plq[a], g = null !== (n = null === (t = p[_.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, u.wt)(_), I = m._o.has(_), x = (0, r.e7)([d.Z], () => d.Z.getRoles(h.id));
   return (0, i.jsx)(o.Tooltip, {
 'aria-label': E.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
 tooltipClassName: C.roleTooltipContainer,
@@ -76,7 +76,7 @@ t.Z = a.memo(function(e) {
   let {
 member: t,
 onNavigate: n
-  } = e, s = (0, r.e7)([u.Z], () => u.Z.getGuild(t.guildId), [t.guildId]), c = (0, m.B2)(t.userId, t.guildId, m.Qn), d = (0, m.B2)(t.userId, t.guildId, m.pd), I = Object.keys(c).length, x = Object.keys(d).length, T = a.useMemo(() => null != s ? h.Z.getGuildPermissionSpecMap(s) : null, [s]), N = a.useMemo(() => null != s ? h.Z.generateGuildPermissionSpec(s) : null, [s]), v = a.useMemo(() => {
+  } = e, s = (0, r.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]), c = (0, m.B2)(t.userId, t.guildId, m.Qn), u = (0, m.B2)(t.userId, t.guildId, m.pd), I = Object.keys(c).length, x = Object.keys(u).length, T = a.useMemo(() => null != s ? h.Z.getGuildPermissionSpecMap(s) : null, [s]), N = a.useMemo(() => null != s ? h.Z.generateGuildPermissionSpec(s) : null, [s]), v = a.useMemo(() => {
 if (null == s || null == T)
   return null;
 if (0 === I)

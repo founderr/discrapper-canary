@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(410030),
   o = n(100527),
   c = n(906732),
-  d = n(580552),
-  u = n(680295),
+  u = n(580552),
+  d = n(680295),
   h = n(5192),
   p = n(785717),
   m = n(318661),
@@ -37,7 +37,7 @@ function L(e) {
   let {
 user: t,
 channel: n
-  } = e, L = __OVERLAY__ || !(0, d.Z)(t.id), {
+  } = e, L = __OVERLAY__ || !(0, u.Z)(t.id), {
 analyticsLocations: P
   } = (0, c.ZP)(o.Z.PROFILE_PANEL), O = (0, m.ZP)(t.id), y = (0, r.ZP)(), D = a.useRef(null), k = (0, l.Z)(D), U = e => {
 (0, Z.openUserProfileModal)({
@@ -134,7 +134,7 @@ children: (0, i.jsx)(p.Mt, {
         user: t,
         channelId: n.id
       }),
-      (null == O ? void 0 : O.profileEffectId) != null && (0, i.jsx)(u.Z, {
+      (null == O ? void 0 : O.profileEffectId) != null && (0, i.jsx)(d.Z, {
         profileEffectId: null == O ? void 0 : O.profileEffectId,
         isHovering: k
       })

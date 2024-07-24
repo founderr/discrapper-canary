@@ -1,71 +1,71 @@
 t.d(n, {
   Bm: function() {
-return C;
+return N;
   },
   L_: function() {
 return v;
   },
   P7: function() {
-return N;
+return E;
   }
 });
 var i = t(470079),
-  l = t(392711),
-  a = t(373793),
+  a = t(392711),
+  l = t(373793),
   r = t(481060),
-  s = t(2052),
-  o = t(542094),
+  o = t(2052),
+  s = t(542094),
   c = t(513202),
   u = t(367907),
   d = t(812206),
   m = t(69580),
   p = t(499254),
   _ = t(541099),
-  E = t(827498),
-  A = t(981631),
+  f = t(827498),
+  C = t(981631),
   h = t(689079),
-  f = t(689938);
+  A = t(689938);
 
-function N(e, n, t, i) {
-  var l;
-  let a = (0, s.O)(),
-d = (0, o.Qv)({
+function E(e, n, t, i) {
+  var a;
+  let l = (0, o.O)(),
+d = (0, s.Qv)({
   applicationId: n.id,
   channelId: e.id
 }),
-m = (0, o.w1)({
+m = (0, s.w1)({
   applicationId: n.id,
   embeddedActivitiesManager: c.Z,
   channelId: e.id,
-  guildId: null !== (l = e.getGuildId()) && void 0 !== l ? l : void 0,
-  locationObject: a.location,
+  guildId: null !== (a = e.getGuildId()) && void 0 !== a ? a : void 0,
+  locationObject: l.location,
   onActivityItemSelectedProp: e => {
     let {
       applicationId: n
-    } = e, l = _.Z.entrypoint();
-    p.y(E.ti.ACTIVITY), (0, u.yw)(A.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+    } = e, a = _.Z.entrypoint();
+    p.y(f.ti.ACTIVITY), (0, u.yw)(C.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
       location: t,
       application_id: n,
       section_name: i,
       action: d,
-      source: l
+      source: a
     });
   }
 }),
 h = r.ButtonColors.BRAND,
-N = f.Z.Messages.LAUNCH;
-  return d === o.JS.JOIN ? (h = r.ButtonColors.GREEN, N = f.Z.Messages.JOIN_ACTIVITY) : d === o.JS.LEAVE && (h = r.ButtonColors.RED, N = f.Z.Messages.LEAVE), {
+E = A.Z.Messages.LAUNCH;
+  return d === s.JS.JOIN ? (h = r.ButtonColors.GREEN, E = A.Z.Messages.JOIN_ACTIVITY) : d === s.JS.LEAVE && (h = r.ButtonColors.RED, E = A.Z.Messages.LEAVE), {
 onActivityItemSelected: m,
 activityAction: d,
 buttonColor: h,
-buttonText: N
+buttonText: E
   };
 }
 
-function C(e, n) {
+function N(e, n) {
   let t = _.Z.entrypoint(),
-a = i.useMemo(() => (0, l.debounce)((e, n) => {
-  (0, u.yw)(A.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+l = i.useMemo(() => (0, a.debounce)((e, n) => {
+  (0, u.yw)(C.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
     type: e,
     source: n
   });
@@ -74,50 +74,50 @@ a = i.useMemo(() => (0, l.debounce)((e, n) => {
   trailing: !0
 }), []);
   i.useEffect(() => {
-null != e && a(e, t);
+null != e && l(e, t);
   }, [
 e,
 n,
 t,
-a
+l
   ]);
 }
 
 function v(e) {
-  var n, t, i, l, r;
+  var n, t, i, a, r;
   let {
-applicationId: s,
-userIndexState: o,
+applicationId: o,
+userIndexState: s,
 guildIndexState: c,
 sectionName: p,
-location: E
+location: f
   } = e;
-  if (s === h.bi.BUILT_IN || (null === (n = o.result) || void 0 === n ? void 0 : n.sections[s]) != null || (null === (t = c.result) || void 0 === t ? void 0 : t.sections[s]) != null)
+  if (o === h.bi.BUILT_IN || (null === (n = s.result) || void 0 === n ? void 0 : n.sections[o]) != null || (null === (t = c.result) || void 0 === t ? void 0 : t.sections[o]) != null)
 return Promise.resolve(!0);
-  let f = _.Z.lastShownEntrypoint();
-  (0, u.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
-location: E,
-application_id: s,
+  let A = _.Z.lastShownEntrypoint();
+  (0, u.yw)(C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
+location: f,
+application_id: o,
 section_name: p,
-source: f
+source: A
   });
-  let N = d.Z.getApplication(s),
-C = a.Y.USER_INSTALL,
-v = null == N ? void 0 : null === (r = N.integrationTypesConfig) || void 0 === r ? void 0 : null === (l = r[C]) || void 0 === l ? void 0 : null === (i = l.oauth2InstallParams) || void 0 === i ? void 0 : i.scopes;
+  let E = d.Z.getApplication(o),
+N = l.Y.USER_INSTALL,
+v = null == E ? void 0 : null === (r = E.integrationTypesConfig) || void 0 === r ? void 0 : null === (a = r[N]) || void 0 === a ? void 0 : null === (i = a.oauth2InstallParams) || void 0 === i ? void 0 : i.scopes;
   return new Promise(e => {
 (0, m.openOAuth2Modal)({
-  clientId: s,
-  integrationType: C,
+  clientId: o,
+  integrationType: N,
   scopes: v,
   callback: n => {
     let {
       location: t
     } = n;
-    null != t && ((0, u.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
-      location: E,
-      application_id: s,
+    null != t && ((0, u.yw)(C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
+      location: f,
+      application_id: o,
       section_name: p,
-      source: f
+      source: A
     }), e(!0));
   }
 }, () => {

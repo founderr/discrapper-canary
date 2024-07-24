@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return u;
+return d;
   }
 });
 var i = n(735250);
@@ -12,7 +12,7 @@ var a = n(120356),
   o = n(689938),
   c = n(461245);
 
-function d(e) {
+function u(e) {
   let {
 className: t,
 count: n
@@ -35,7 +35,7 @@ children: [
   });
 }
 
-function u(e) {
+function d(e) {
   let {
 count: t,
 ...n
@@ -46,7 +46,7 @@ iconComponent: e => {
   let {
     className: n
   } = e;
-  return (0, i.jsx)(d, {
+  return (0, i.jsx)(u, {
     className: n,
     count: t
   });

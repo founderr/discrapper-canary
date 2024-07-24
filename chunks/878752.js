@@ -11,8 +11,8 @@ var a = n(512722),
   r = n(779618),
   o = n(446226),
   c = n(441167),
-  d = n(822183),
-  u = n(641015),
+  u = n(822183),
+  d = n(641015),
   h = n(131951),
   p = n(594174),
   m = n(700785),
@@ -35,7 +35,7 @@ let e = p.default.getCurrentUser();
 return s()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
   }), v = (0, o.Z)(), {
 isSharedCanvasEnabled: S
-  } = d.Z.useExperiment({
+  } = u.Z.useExperiment({
 guildId: null == t ? void 0 : t.guild_id,
 location: 'b7309a_1'
   }), {
@@ -47,7 +47,7 @@ autoTrackExposure: !1
   }), A = (0, r.Z)(h.Z);
   if (null == t || null != v)
 return null;
-  let M = (0, u.Z)(t),
+  let M = (0, d.Z)(t),
 b = m.BT({
   permission: x.Plq.ADD_REACTIONS,
   user: N,

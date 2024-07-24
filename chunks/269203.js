@@ -11,8 +11,8 @@ var a = n(442837),
   r = n(565138),
   o = n(246364),
   c = n(705563),
-  d = n(594174),
-  u = n(967128),
+  u = n(594174),
+  d = n(967128),
   h = n(689938),
   p = n(422226);
 
@@ -21,7 +21,7 @@ function m(e) {
   let {
 joinRequest: n,
 guild: l
-  } = e, c = (0, a.e7)([d.default], () => d.default.getUser(n.userId));
+  } = e, c = (0, a.e7)([u.default], () => u.default.getUser(n.userId));
   return (0, i.jsxs)('div', {
 className: p.summaryContainer,
 children: [
@@ -90,10 +90,10 @@ loading: n,
 joinRequest: a,
 joinRequestGuild: r
   } = (0, l.Z)(t.id);
-  return (0, i.jsx)(u.ZP, {
+  return (0, i.jsx)(d.ZP, {
 channelId: t.id,
 className: p.container,
-children: (0, i.jsx)(u.jz, {
+children: (0, i.jsx)(d.jz, {
   children: null != a && null != a.formResponses ? (0, i.jsxs)('div', {
     className: p.formContainer,
     children: [

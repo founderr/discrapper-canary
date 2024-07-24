@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(904245),
-  d = n(654030),
-  u = n(744061),
+  u = n(654030),
+  d = n(744061),
   h = n(367907),
   p = n(728345),
   m = n(812206),
@@ -101,7 +101,7 @@ return (0, i.jsxs)(o.ModalRoot, {
           className: v.subHeader,
           children: N.Z.Messages.MESSAGE_PREVIEW
         }),
-        (0, i.jsx)(d.Z, {
+        (0, i.jsx)(u.Z, {
           activityActionType: h,
           activity: s,
           className: v.preview,
@@ -127,7 +127,7 @@ return (0, i.jsxs)(o.ModalRoot, {
             let {
               closePopout: t
             } = e;
-            return l()(null != a, 'ActivityInvite.render - renderPopout: contentWarningProps cannot be null'), (0, i.jsx)(u.Z, {
+            return l()(null != a, 'ActivityInvite.render - renderPopout: contentWarningProps cannot be null'), (0, i.jsx)(d.Z, {
               onClose: t,
               ...a
             });

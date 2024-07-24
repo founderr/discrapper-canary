@@ -11,8 +11,8 @@ var a = n(442837),
   r = n(933557),
   o = n(454585),
   c = n(131704),
-  d = n(496675),
-  u = n(396769),
+  u = n(496675),
+  d = n(396769),
   h = n(967128),
   p = n(981631),
   m = n(689938),
@@ -21,7 +21,7 @@ var a = n(442837),
 function f(e) {
   let {
 channel: t
-  } = e, n = (0, r.ZP)(t, !0), f = (0, a.e7)([d.Z], () => d.Z.can(p.Plq.MANAGE_CHANNELS, t) && c.dF.has(t.type));
+  } = e, n = (0, r.ZP)(t, !0), f = (0, a.e7)([u.Z], () => u.Z.can(p.Plq.MANAGE_CHANNELS, t) && c.dF.has(t.type));
   return (0, i.jsxs)(h.ZP, {
 channelId: t.id,
 children: [
@@ -43,7 +43,7 @@ children: [
   }),
   f ? (0, i.jsx)('div', {
     className: _.buttonContainer,
-    children: (0, i.jsx)(u.Z, {
+    children: (0, i.jsx)(d.Z, {
       label: m.Z.Messages.EDIT_CHANNEL,
       onClick: () => {
         l.ZP.open(t.id);

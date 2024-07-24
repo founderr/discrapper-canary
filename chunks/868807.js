@@ -10,8 +10,8 @@ var i = n(392711),
   r = n(570140),
   o = n(375954),
   c = n(306680),
-  d = n(748902),
-  u = n(981631);
+  u = n(748902),
+  d = n(981631);
 let h = new Set(),
   p = null;
 
@@ -23,12 +23,12 @@ loaded: n,
 message: i,
 error: a
   } = (0, s.cj)([
-d.Z,
+u.Z,
 o.Z,
 c.ZP
   ], () => {
 let e = c.ZP.lastMessageId(t),
-  n = d.Z.getMessageRequestPreview(t);
+  n = u.Z.getMessageRequestPreview(t);
 if (null == n.message && null != e) {
   let n = o.Z.getMessage(t, e);
   if (null != n)
@@ -39,7 +39,7 @@ if (null == n.message && null != e) {
     };
 }
 return n;
-  }, [t]), l = (0, s.e7)([d.Z], () => d.Z.shouldLoadMessageRequestPreview(t), [t]);
+  }, [t]), l = (0, s.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(t), [t]);
   return !n && null == i && l && function(e) {
 h.add(e), null == p && (p = setTimeout(_, 0));
   }(t), {
@@ -60,7 +60,7 @@ async function f() {
   let e = Array.from(h).slice(0, 25);
   try {
 let t = await l.tn.get({
-  url: u.ANM.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA,
+  url: d.ANM.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA,
   query: {
     channel_ids: e
   }

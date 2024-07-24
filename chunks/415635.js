@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(570140),
   o = n(607070),
   c = n(367907),
-  d = n(37091),
-  u = n(721264),
+  u = n(37091),
+  d = n(721264),
   h = n(963838),
   p = n(39127),
   m = n(981631),
@@ -34,7 +34,7 @@ function e(e) {
     animationType: o,
     animationId: p
   } = e;
-  if (null != f && f !== l || d.Z.getEnabled() && (0, u.Z)(null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : ''))
+  if (null != f && f !== l || u.Z.getEnabled() && (0, d.Z)(null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : ''))
     return;
   let _ = null != r && null != o && null != p;
   if (a === t && !C && x && _) {

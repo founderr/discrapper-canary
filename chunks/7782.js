@@ -5,8 +5,8 @@ var i = n(735250),
   r = n(481060),
   o = n(194359),
   c = n(333984),
-  d = n(486622),
-  u = n(922409),
+  u = n(486622),
+  d = n(922409),
   h = n(86203),
   p = n(6025),
   m = n(621853),
@@ -95,7 +95,7 @@ let {
       location: T.ZY5.DM_CHANNEL
     }
   });
-}, d = (0, i.jsx)(r.Button, {
+}, u = (0, i.jsx)(r.Button, {
   className: Z.action,
   size: r.Button.Sizes.TINY,
   color: r.Button.Colors.PRIMARY,
@@ -120,7 +120,7 @@ switch (n) {
           onClick: c,
           children: S.Z.Messages.ADD_FRIEND
         }),
-        d
+        u
       ]
     });
   case T.OGo.FRIEND:
@@ -137,7 +137,7 @@ switch (n) {
           color: r.Button.Colors.PRIMARY,
           children: S.Z.Messages.REMOVE_FRIEND
         }),
-        d
+        u
       ]
     });
   case T.OGo.BLOCKED:
@@ -178,7 +178,7 @@ switch (n) {
           },
           children: S.Z.Messages.FRIEND_REQUEST_IGNORE
         }),
-        d
+        u
       ]
     });
   case T.OGo.PENDING_OUTGOING:
@@ -190,7 +190,7 @@ switch (n) {
           disabled: !0,
           children: S.Z.Messages.ADD_FRIEND_BUTTON_AFTER
         }),
-        d
+        u
       ]
     });
   default:
@@ -209,12 +209,12 @@ let {
   p.Z.closeChannelSidebar(f.uZ);
 }, []), {
   acceptMessageRequest: c,
-  rejectMessageRequest: u,
+  rejectMessageRequest: d,
   isAcceptLoading: h,
   isRejectLoading: m,
   isOptimisticAccepted: _,
   isOptimisticRejected: E
-} = (0, d.m)({
+} = (0, u.m)({
   user: C.default.getUser(n),
   onError: s,
   onAcceptSuccess: o,
@@ -233,7 +233,7 @@ return (0, i.jsxs)(i.Fragment, {
     (0, i.jsx)(r.Button, {
       className: Z.action,
       size: r.Button.Sizes.TINY,
-      onClick: () => u(t),
+      onClick: () => d(t),
       color: r.Button.Colors.PRIMARY,
       disabled: g,
       submitting: m,
@@ -249,7 +249,7 @@ channel: n,
 showingBanner: a
   } = e, {
 channelId: r
-  } = (0, u._)(), o = (0, l.e7)([c.Z], () => null != r && c.Z.isSpam(r), [r]), d = (0, l.e7)([E.Z], () => E.Z.getRelationshipType(t), [t]), p = n.id === r;
+  } = (0, d._)(), o = (0, l.e7)([c.Z], () => null != r && c.Z.isSpam(r), [r]), u = (0, l.e7)([E.Z], () => E.Z.getRelationshipType(t), [t]), p = n.id === r;
   return t === N.fL ? null : o || p ? (0, i.jsxs)('div', {
 className: Z.mobileContainer,
 children: [
@@ -287,7 +287,7 @@ children: [
     className: Z.mobileButtons,
     children: [
       (0, i.jsx)(M, {
-        relationshipType: d,
+        relationshipType: u,
         userId: t,
         showingBanner: a
       }),
@@ -310,7 +310,7 @@ children: [
     className: Z.divider
   }),
   (0, i.jsx)(M, {
-    relationshipType: d,
+    relationshipType: u,
     userId: t,
     showingBanner: a
   }),

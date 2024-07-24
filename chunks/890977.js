@@ -8,19 +8,19 @@ var i, a, s = n(735250),
   r = n(120356),
   o = n.n(r),
   c = n(500923),
-  d = n.n(c),
-  u = n(442837),
+  u = n.n(c),
+  d = n(442837),
   h = n(607070),
   p = n(484334),
   m = n(158877),
   _ = n(178408);
 
 function f(e) {
-  let t = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
+  let t = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
 n = l.useRef(null);
   return l.useEffect(() => {
 let i;
-return null != n.current && (i = d().loadAnimation({
+return null != n.current && (i = u().loadAnimation({
   container: n.current,
   renderer: 'svg',
   loop: !0,

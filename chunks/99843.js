@@ -9,11 +9,11 @@ var a = n(493683),
 t.Z = e => {
   let {
 channel: t
-  } = e, n = (0, r.ZP)(t), d = (0, l.Dd)(t.id);
+  } = e, n = (0, r.ZP)(t), u = (0, l.Dd)(t.id);
   return (0, i.jsx)('div', {
 className: c.container,
 onDoubleClick: e => e.stopPropagation(),
-children: d ? (0, i.jsx)('div', {
+children: u ? (0, i.jsx)('div', {
   className: c.channelName,
   children: n
 }) : (0, i.jsx)(s.Z, {

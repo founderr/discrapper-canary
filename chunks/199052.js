@@ -11,11 +11,11 @@ var i = n(735250),
   o = n(676649);
 let c = 16 / 9;
 
-function d(e, t) {
+function u(e, t) {
   return Math.max(1, Math.floor((t - e) / (8 + e)) + 1);
 }
 
-function u(e, t, n) {
+function d(e, t, n) {
   let i = t - e;
   for (; i > 0;) {
 let t = e,
@@ -52,22 +52,22 @@ let {
 } = function(e, t, n) {
   let i;
   let a = Math.floor(t / 25);
-  i = e > 25 ? u(a, t, e => {
-    let i = d(e, t),
+  i = e > 25 ? d(a, t, e => {
+    let i = u(e, t),
       a = function(e, t) {
         let n = e / c;
         return Math.ceil((t - n) / (8 + n)) + 1;
       }(e, n);
     return i * a > 25;
-  }) : u(a, t, i => {
-    let a = d(i, t),
+  }) : d(a, t, i => {
+    let a = u(i, t),
       s = function(e, t) {
         let n = e / c;
         return Math.floor((t - n) / (8 + n)) + 1;
       }(i, n);
     return a * s >= e;
   }) - 1;
-  let s = d(i, t),
+  let s = u(i, t),
     l = Math.ceil(e / s);
   return {
     tileWidth: i,

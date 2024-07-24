@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(848246),
   o = n(442837),
   c = n(692547),
-  d = n(481060),
-  u = n(846027),
+  u = n(481060),
+  d = n(846027),
   h = n(410575),
   p = n(812206),
   m = n(835473),
@@ -71,8 +71,8 @@ style: el,
 channel: er,
 width: eo,
 inPopout: ec,
-onVideoResize: ed,
-inCall: eu = !1,
+onVideoResize: eu,
+inCall: ed = !1,
 selected: eh = !1,
 noBorder: ep = !1,
 noVideoRender: em = !1,
@@ -156,7 +156,7 @@ location: 'CallTile'
 eT(e_);
   }, [e_]);
   let eJ = a.useCallback(() => {
-  null != eS && u.Z.toggleLocalMute(eS, ee.Yn.STREAM);
+  null != eS && d.Z.toggleLocalMute(eS, ee.Yn.STREAM);
 }, [eS]),
 e$ = a.useCallback(() => {
   (0, M.hP)(!0);
@@ -191,7 +191,7 @@ case J.fO.STREAM:
     selected: eh,
     width: eo,
     fit: eE,
-    onVideoResize: ed,
+    onVideoResize: eu,
     paused: eC,
     inPopout: ec,
     focused: e_
@@ -209,10 +209,10 @@ case J.fO.STREAM:
 case J.fO.USER:
   e4 = (0, i.jsx)(K.Z, {
     channel: er,
-    inCall: eu,
+    inCall: ed,
     participant: I,
     fit: eE,
-    onVideoResize: ed,
+    onVideoResize: eu,
     paused: eC,
     selected: eh,
     width: eo,
@@ -243,14 +243,14 @@ case J.fO.HIDDEN_STREAM:
     selected: eh,
     width: eo,
     fit: eE,
-    onVideoResize: ed,
+    onVideoResize: eu,
     paused: eC,
     inPopout: ec,
     focused: e_
   });
   }
   let e6 = a.useRef(null),
-e9 = I.type === J.fO.STREAM ? d.ScreenIcon : d.VideoIcon;
+e9 = I.type === J.fO.STREAM ? u.ScreenIcon : u.VideoIcon;
   return (0, i.jsx)(h.Z, {
 section: Q.jXE.VOICE_CHANNEL_TILE,
 children: (0, i.jsx)('div', {
@@ -272,7 +272,7 @@ children: (0, i.jsx)('div', {
         noBorder: ep,
         style: el,
         participantUserId: eS,
-        children: (0, i.jsxs)(d.ClickableContainer, {
+        children: (0, i.jsxs)(u.ClickableContainer, {
           'aria-label': e5,
           className: en.tileChild,
           onDoubleClick: e1,
@@ -321,7 +321,7 @@ children: (0, i.jsx)('div', {
             I.type !== J.fO.ACTIVITY ? (0, i.jsx)(es, {
               focused: e_,
               width: eo,
-              inCall: eu,
+              inCall: ed,
               participantType: I.type,
               hasVideo: null != eP && eP,
               ...eO,
@@ -344,7 +344,7 @@ children: (0, i.jsx)('div', {
               userId: I.id,
               channelId: er.id
             }) : null,
-            eu && !ep ? (0, i.jsx)('div', {
+            ed && !ep ? (0, i.jsx)('div', {
               className: l()(en.border, {
                 [en.voiceChannelEffect]: !e_ && null != eG,
                 [en.speaking]: ej && !e_
@@ -372,14 +372,14 @@ className: a
   if (t === J.fO.STREAM)
 return n === J.wR.XBOX ? (0, i.jsx)(G.Z, {
   className: a
-}) : (0, i.jsx)(d.ScreenIcon, {
+}) : (0, i.jsx)(u.ScreenIcon, {
   size: 'md',
   color: 'currentColor',
   className: a
 });
   switch (n) {
 case J.wR.MOBILE:
-  return (0, i.jsx)(d.MobilePhoneIcon, {
+  return (0, i.jsx)(u.MobilePhoneIcon, {
     size: 'xs',
     color: 'currentColor',
     className: a
@@ -404,7 +404,7 @@ deafened: n,
 localMuted: a,
 serverMuted: s,
 serverDeafened: r,
-idle: u,
+idle: d,
 title: h,
 width: p,
 hasVideo: m,
@@ -426,23 +426,23 @@ secureFramesVerified: P
   } = e, O = null, y = null, k = null, U = null, w = (0, q.K)(p), B = (0, q.N)(p), H = (0, o.e7)([D.Z], () => null != Z && D.Z.isLocalVideoAutoDisabled(Z, (0, _.Z)(S)), [
 Z,
 S
-  ]), G = (0, d.useRedesignIconContext)().enabled;
+  ]), G = (0, u.useRedesignIconContext)().enabled;
   if (!v) {
 if (a && S === J.fO.STREAM && m && !T)
-  O = (0, i.jsx)(d.Tooltip, {
+  O = (0, i.jsx)(u.Tooltip, {
     text: et.Z.Messages.UNMUTE,
     children: e => {
       let {
         onClick: t,
         ...n
       } = e;
-      return (0, i.jsx)(d.Clickable, {
+      return (0, i.jsx)(u.Clickable, {
         ...n,
         onClick: e => {
           e.stopPropagation(), null == t || t(), M();
         },
         className: l()(en.interactive, en.toggleMute),
-        children: (0, i.jsx)(d.VoiceXIcon, {
+        children: (0, i.jsx)(u.VoiceXIcon, {
           size: 'md',
           color: 'currentColor'
         })
@@ -452,30 +452,30 @@ if (a && S === J.fO.STREAM && m && !T)
 else if (a || S !== J.fO.STREAM || !m || w || T) {
   if (G) {
     let e;
-    r ? e = d.HeadphonesDenyIcon : s ? e = d.MicrophoneDenyIcon : n ? e = d.HeadphonesSlashIcon : a ? e = d.MicrophoneDenyIcon : t && (e = d.MicrophoneSlashIcon), O = null != e ? (0, i.jsx)(e, {
+    r ? e = u.HeadphonesDenyIcon : s ? e = u.MicrophoneDenyIcon : n ? e = u.HeadphonesSlashIcon : a ? e = u.MicrophoneDenyIcon : t && (e = u.MicrophoneSlashIcon), O = null != e ? (0, i.jsx)(e, {
       color: c.Z.colors.WHITE
     }) : null;
   } else if (n || t || a) {
-    let e = n ? d.HeadphonesSlashIcon : d.MicrophoneSlashIcon;
+    let e = n ? u.HeadphonesSlashIcon : u.MicrophoneSlashIcon;
     O = (0, i.jsx)(e, {
       color: 'currentColor'
     });
   }
 } else
-  O = (0, i.jsx)(d.Tooltip, {
+  O = (0, i.jsx)(u.Tooltip, {
     text: et.Z.Messages.MUTE,
     children: e => {
       let {
         onClick: t,
         ...n
       } = e;
-      return (0, i.jsx)(d.Clickable, {
+      return (0, i.jsx)(u.Clickable, {
         ...n,
         onClick: e => {
           e.stopPropagation(), null == t || t(), M();
         },
         className: l()(en.interactive, en.toggleMute),
-        children: (0, i.jsx)(d.VoiceNormalIcon, {
+        children: (0, i.jsx)(u.VoiceNormalIcon, {
           size: 'md',
           color: 'currentColor'
         })
@@ -483,33 +483,33 @@ else if (a || S !== J.fO.STREAM || !m || w || T) {
     }
   });
   }
-  return f && D.Z.supports(ee.AN.VIDEO) || !m ? f && m && C && !H && (y = (0, i.jsx)(d.VideoSlashIcon, {
+  return f && D.Z.supports(ee.AN.VIDEO) || !m ? f && m && C && !H && (y = (0, i.jsx)(u.VideoSlashIcon, {
 size: 'md',
 color: 'currentColor',
 colorClass: en.localMuteStrikethrough
-  })) : y = (0, i.jsx)(d.VideoIcon, {
+  })) : y = (0, i.jsx)(u.VideoIcon, {
 size: 'md',
 color: 'currentColor'
-  }), S === J.fO.STREAM && !T && m && (k = (0, i.jsx)(d.Tooltip, {
+  }), S === J.fO.STREAM && !T && m && (k = (0, i.jsx)(u.Tooltip, {
 text: et.Z.Messages.OPTIONS,
 children: e => {
   let {
     onClick: t,
     ...n
   } = e;
-  return (0, i.jsx)(d.Clickable, {
+  return (0, i.jsx)(u.Clickable, {
     ...n,
     onClick: e => {
       e.stopPropagation(), null == t || t(), A(e);
     },
     className: l()(en.status, en.interactive),
-    children: (0, i.jsx)(d.MoreHorizontalIcon, {
+    children: (0, i.jsx)(u.MoreHorizontalIcon, {
       size: 'md',
       color: 'currentColor'
     })
   });
 }
-  })), S === J.fO.USER && null != R ? U = (0, i.jsx)(d.Tooltip, {
+  })), S === J.fO.USER && null != R ? U = (0, i.jsx)(u.Tooltip, {
 text: (0, I.O8)(R),
 children: e => (0, i.jsx)('div', {
   ...e,
@@ -522,7 +522,7 @@ children: e => (0, i.jsx)('div', {
     animate: L
   })
 })
-  }) : S === J.fO.USER && null != j && (U = (0, i.jsx)(d.Tooltip, {
+  }) : S === J.fO.USER && null != j && (U = (0, i.jsx)(u.Tooltip, {
 text: et.Z.Messages.UNFORMATTED_PLAYING_GAME.format({
   game: j.name
 }),
@@ -544,9 +544,9 @@ children: [
     className: l()(en.overlayTop, {
       [en.small]: p < 195
     }),
-    children: H || g === Q.ZUi.AUTO_PROBING ? u ? (0, i.jsx)('div', {
+    children: H || g === Q.ZUi.AUTO_PROBING ? d ? (0, i.jsx)('div', {
       className: en.status,
-      children: (0, i.jsx)(d.VideoSlashIcon, {
+      children: (0, i.jsx)(u.VideoSlashIcon, {
         size: 'md',
         color: 'currentColor'
       })
@@ -555,12 +555,12 @@ children: [
       children: [
         (0, i.jsx)('div', {
           className: en.status,
-          children: (0, i.jsx)(d.VideoSlashIcon, {
+          children: (0, i.jsx)(u.VideoSlashIcon, {
             size: 'md',
             color: 'currentColor'
           })
         }),
-        (0, i.jsx)(d.Text, {
+        (0, i.jsx)(u.Text, {
           variant: 'text-sm/normal',
           className: en.overlayTitleText,
           children: et.Z.Messages.UNSTABLE_CONNECTION
@@ -573,16 +573,16 @@ children: [
       [en.small]: p < 195
     }),
     children: [
-      B ? (0, i.jsx)('div', {}) : (0, i.jsxs)(d.Text, {
+      B ? (0, i.jsx)('div', {}) : (0, i.jsxs)(u.Text, {
         className: l()(en.overlayTitle, {
-          [en.idle]: u
+          [en.idle]: d
         }),
         color: 'none',
         variant: 'text-md/normal',
         children: [
           N ? (0, i.jsx)('div', {
             className: en.blocked,
-            children: (0, i.jsx)(d.DenyIcon, {
+            children: (0, i.jsx)(u.DenyIcon, {
               size: 'lg',
               className: en.blockedIcon,
               color: c.Z.unsafe_rawColors.RED_400.css
@@ -597,7 +597,7 @@ children: [
             className: en.overlayTitleText,
             children: h
           }) : null,
-          P && (0, i.jsx)(d.ShieldLockIcon, {
+          P && (0, i.jsx)(u.ShieldLockIcon, {
             className: en.secureFramesIcon,
             size: 'xxs',
             color: c.Z.colors.HEADER_PRIMARY,

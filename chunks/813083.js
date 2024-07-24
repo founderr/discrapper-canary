@@ -1,8 +1,8 @@
 n(627341);
 var s, r, a = n(735250);
 n(470079);
-var i = n(120356),
-  o = n.n(i),
+var o = n(120356),
+  i = n.n(o),
   c = n(278074),
   l = n(780384),
   d = n(481060),
@@ -19,18 +19,18 @@ className: s
   } = e, r = (0, u.ZP)();
   if (null == t.unpublishedAt)
 return null;
-  let i = (0, f.OT)(t.unpublishedAt);
+  let o = (0, f.OT)(t.unpublishedAt);
 
   function C(e) {
 return (0, a.jsx)(d.TextBadge, {
   disableColor: !0,
   text: e,
-  className: o()((0, l.wj)(r) ? g.badgeDark : g.badgeLight, s)
+  className: i()((0, l.wj)(r) ? g.badgeDark : g.badgeLight, s)
 });
   }
   return (0, c.EQ)([
 n,
-i > 1
+o > 1
   ]).with([
 'card',
 !0
@@ -38,11 +38,11 @@ i > 1
 'banner',
 !0
   ], () => C(p.Z.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({
-days: i
+days: o
   }))).with([
 'modal',
 !0
   ], () => C(p.Z.Messages.COLLECTIBLES_DAYS_LEFT.format({
-days: i
+days: o
   }))).otherwise(() => C(p.Z.Messages.COLLECTIBLES_LAST_DAY));
 };

@@ -9,7 +9,7 @@ closePopout: n,
 onMouseEnter: r,
 onMouseLeave: o,
 onFocus: c,
-channel: d
+channel: u
   } = e;
   return a.useEffect(() => {
 !t && n();
@@ -21,7 +21,7 @@ children: (0, i.jsx)('div', {
   onMouseEnter: r,
   onMouseLeave: o,
   children: (0, i.jsx)(l.Z, {
-    channel: d,
+    channel: u,
     closePopout: n,
     onFocus: c
   })

@@ -4,11 +4,11 @@ return d;
   }
 });
 var i = t(735250),
-  l = t(470079),
-  a = t(481060),
+  a = t(470079),
+  l = t(481060),
   r = t(783097),
-  s = t(753972),
-  o = t(532309),
+  o = t(753972),
+  s = t(532309),
   c = t(728021),
   u = t(413097);
 
@@ -21,26 +21,26 @@ onClick: m,
 query: p,
 searchResultsPosition: _
   } = e, {
-iconURL: E,
-name: A,
+iconURL: f,
+name: C,
 description: h
-  } = l.useMemo(() => (0, r.sl)(d, {
+  } = a.useMemo(() => (0, r.sl)(d, {
 fakeAppIconURL: u
   }), [d]), {
-trackSearchResultsItemImpressionRef: f
-  } = (0, o.Z)({
+trackSearchResultsItemImpressionRef: A
+  } = (0, s.Z)({
 applicationId: d.id,
 commandId: null == t ? void 0 : t.id,
 query: p,
 searchResultsPosition: _
   });
-  return (0, i.jsxs)(a.Clickable, {
-innerRef: e => f.current = e,
+  return (0, i.jsxs)(l.Clickable, {
+innerRef: e => A.current = e,
 className: c.container,
 onClick: m,
 children: [
-  (0, i.jsx)(s.Z, {
-    src: E,
+  (0, i.jsx)(o.Z, {
+    src: f,
     className: c.icon,
     'aria-hidden': !0,
     rendersPlaceholder: !0
@@ -48,13 +48,13 @@ children: [
   (0, i.jsxs)('div', {
     className: c.cmdDetails,
     children: [
-      (0, i.jsx)(a.Heading, {
+      (0, i.jsx)(l.Heading, {
         variant: 'heading-md/semibold',
         color: 'header-primary',
         lineClamp: 1,
-        children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : A
+        children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : C
       }),
-      (0, i.jsx)(a.Text, {
+      (0, i.jsx)(l.Text, {
         variant: 'text-sm/normal',
         color: 'text-secondary',
         lineClamp: 1,
@@ -62,11 +62,11 @@ children: [
       })
     ]
   }),
-  null != t ? (0, i.jsx)(a.Text, {
+  null != t ? (0, i.jsx)(l.Text, {
     className: c.cmdAppName,
     variant: 'text-sm/normal',
     color: 'text-secondary',
-    children: A
+    children: C
   }) : null,
   (0, i.jsx)('div', {
     className: c.underline

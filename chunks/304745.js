@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(481060),
   o = n(2052),
   c = n(40851),
-  d = n(317381),
-  u = n(683921),
+  u = n(317381),
+  d = n(683921),
   h = n(588580),
   p = n(374065),
   m = n(451576),
@@ -30,12 +30,12 @@ var i = n(735250),
 function Z(e) {
   let {
 channel: t
-  } = e, n = (0, s.e7)([d.ZP], () => d.ZP.isLaunchingActivity()), Z = (0, p.KF)(t.id), A = (0, p.g5)(Z), M = Z !== p.jy.CAN_LAUNCH || n, {
+  } = e, n = (0, s.e7)([u.ZP], () => u.ZP.isLaunchingActivity()), Z = (0, p.KF)(t.id), A = (0, p.g5)(Z), M = Z !== p.jy.CAN_LAUNCH || n, {
 isHovered: b,
 setIsHovered: R,
 onMouseEnter: j,
 onMouseLeave: L
-  } = (0, x.Z)(200, 300), P = (0, h.a)(), O = (0, u.Z)({
+  } = (0, x.Z)(200, 300), P = (0, h.a)(), O = (0, d.Z)({
 channelId: t.id
   }), y = !M, D = a.useCallback(e => {
 'focus' !== e.type && j();

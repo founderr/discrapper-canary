@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(372769),
   u = n(134432),
   _ = n(451603),
-  E = n(885714),
-  h = n(806519),
+  h = n(885714),
+  E = n(806519),
   I = n(768581),
   m = n(900849),
   g = n(556017),
@@ -68,7 +68,7 @@ let {
 } = e.target;
 if (!t.includes('Menu')) {
   if ((0, _.yU)()) {
-    (0, E.Z)({
+    (0, h.Z)({
       analyticsSource: {
         page: S.ZY5.GUILD_DISCOVERY
       },
@@ -146,8 +146,8 @@ children: [
               (0, i.jsxs)('div', {
                 className: N.header,
                 children: [
-                  (0, i.jsx)(h.ZP, {
-                    mask: h.ZP.Masks.SQUIRCLE,
+                  (0, i.jsx)(E.ZP, {
+                    mask: E.ZP.Masks.SQUIRCLE,
                     width: 32,
                     height: 32,
                     children: (0, i.jsx)('img', {

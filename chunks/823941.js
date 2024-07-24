@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return k;
+return j;
   },
   n: function() {
 return T;
@@ -9,8 +9,8 @@ return T;
 var s = n(735250),
   r = n(470079),
   a = n(120356),
-  i = n.n(a),
-  o = n(180650),
+  o = n.n(a),
+  i = n(180650),
   c = n(399606),
   l = n(481060),
   d = n(906732),
@@ -24,32 +24,32 @@ var s = n(735250),
   b = n(813083),
   h = n(67938),
   x = n(372654),
-  I = n(994896),
-  E = n(215023),
+  E = n(994896),
+  I = n(215023),
   v = n(474936),
   L = n(689938),
   S = n(291256);
 let T = (0, C.IC)(96),
   N = {
-[o.T.DISXCORE]: {
+[i.T.DISXCORE]: {
   left: () => n(136648),
   right: () => n(850298),
   leftLogo: () => n(407848),
   rightLogo: () => n(457734)
 },
-[o.T.FANTASY]: {
+[i.T.FANTASY]: {
   left: () => n(44602),
   right: () => n(862392),
   leftLogo: () => n(150218),
   rightLogo: () => n(625591)
 },
-[o.T.CYBERPUNK]: {
+[i.T.CYBERPUNK]: {
   left: () => n(862358),
   right: () => n(604083),
   leftLogo: () => n(519293),
   rightLogo: () => n(769307)
 },
-[o.T.ELEMENTS]: {
+[i.T.ELEMENTS]: {
   left: () => n(534572),
   right: () => n(905911),
   leftOverflow: () => n(149653),
@@ -57,49 +57,49 @@ let T = (0, C.IC)(96),
   leftLogo: () => n(201651),
   rightLogo: () => n(47227)
 },
-[o.T.ANIME_V2]: {
+[i.T.ANIME_V2]: {
   left: () => n(607668),
   right: () => n(381436),
   leftLogo: () => n(384970),
   rightLogo: () => n(906935)
 },
-[o.T.SPRINGTOONS]: {
+[i.T.SPRINGTOONS]: {
   left: () => n(138272),
   right: () => n(392425),
   leftLogo: () => n(547470),
   rightLogo: () => n(204641)
 },
-[o.T.LOFI_VIBES]: {
+[i.T.LOFI_VIBES]: {
   left: () => n(659813),
   right: () => n(722603),
   leftLogo: () => n(678747),
   rightLogo: () => n(178466)
 },
-[o.T.GALAXY]: {
+[i.T.GALAXY]: {
   left: () => n(236801),
   right: () => n(537085),
   leftLogo: () => n(818198),
   rightLogo: () => n(959177)
 },
-[o.T.FEELIN_RETRO]: {
+[i.T.FEELIN_RETRO]: {
   left: () => n(616442),
   right: () => n(250440),
   leftLogo: () => n(662232),
   rightLogo: () => n(226107)
 },
-[o.T.PIRATES]: {
+[i.T.PIRATES]: {
   left: () => n(519741),
   right: () => n(980112),
   leftLogo: () => n(379545),
   rightLogo: () => n(31847)
 },
-[o.T.ARCADE]: {
+[i.T.ARCADE]: {
   left: () => n(6414),
   right: () => n(959436),
   leftLogo: () => n(23695),
   rightLogo: () => n(2235)
 },
-[o.T.TIDE]: {
+[i.T.TIDE]: {
   left: () => n(960088),
   right: () => n(402313),
   leftOverflow: () => n(757631),
@@ -113,8 +113,8 @@ let {
   category: t
 } = e, {
   analyticsLocations: n
-} = (0, d.ZP)(), a = r.useRef(null), i = (0, c.e7)([f.default], () => f.default.getCurrentUser());
-return g.ZP.canUseCollectibles(i) ? (0, s.jsx)(s.Fragment, {
+} = (0, d.ZP)(), a = r.useRef(null), o = (0, c.e7)([f.default], () => f.default.getCurrentUser());
+return g.ZP.canUseCollectibles(o) ? (0, s.jsx)(s.Fragment, {
   children: t.summary
 }) : (0, s.jsx)(s.Fragment, {
   children: L.Z.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
@@ -140,7 +140,7 @@ return g.ZP.canUseCollectibles(i) ? (0, s.jsx)(s.Fragment, {
 });
   };
 
-function j(e) {
+function k(e) {
   var t, n, r;
   let {
 config: a,
@@ -158,7 +158,7 @@ background: null != m ? ''.concat((0, x.nH)(m), ' border-box border-box') : void
 outlineColor: null != m ? m.border.toHslString() : void 0
   };
   return (0, s.jsxs)('div', {
-className: i()(S.condensedBannerContainer),
+className: o()(S.condensedBannerContainer),
 children: [
   (0, s.jsx)('img', {
     src: f,
@@ -168,14 +168,14 @@ children: [
   }),
   null != p && (0, s.jsx)('img', {
     src: p,
-    className: i()(S.overflowImage, {
+    className: o()(S.overflowImage, {
       [S.overflowImageLeft]: u,
-      [S.tideOverflowImage]: c.skuId === o.T.TIDE
+      [S.tideOverflowImage]: c.skuId === i.T.TIDE
     }),
     alt: ''
   }),
   (0, s.jsx)('img', {
-    className: i()(S.condensedCategoryLogo, {
+    className: o()(S.condensedCategoryLogo, {
       [S.condensedCategoryLogoLeft]: !u
     }),
     src: g,
@@ -183,7 +183,7 @@ children: [
   }),
   !d && (0, s.jsx)(b.Z, {
     category: c,
-    className: i()(S.limitedTimeBadge, {
+    className: o()(S.limitedTimeBadge, {
       [S.limitedTimeBadgeLeft]: u
     }),
     display: 'banner'
@@ -192,7 +192,7 @@ children: [
   });
 }
 
-function k(e) {
+function j(e) {
   var t, n, r, a;
   let {
 category: c,
@@ -201,32 +201,32 @@ hideLimitedTimeBadge: u = !1,
 index: f = 0
   } = e, {
 backgroundColors: g
-  } = (0, _.Z)(c.styles), v = !!(null === (t = E.Ve[c.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
+  } = (0, _.Z)(c.styles), v = !!(null === (t = I.Ve[c.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
 condensedBannersEnabled: L
-  } = (0, I.O)({
+  } = (0, E.O)({
 location: 'Collectibles Shop Banner'
   });
   if (L) {
 let e = N[c.skuId];
 if (null != e)
-  return (0, s.jsx)(j, {
+  return (0, s.jsx)(k, {
     config: e,
     category: c,
     index: f,
     hideLimitedTimeBadge: u
   });
   }
-  return c.skuId === o.T.TIDE ? (0, s.jsx)(h.G, {
+  return c.skuId === i.T.TIDE ? (0, s.jsx)(h.G, {
 category: c
   }) : (0, s.jsxs)(m.Z, {
 asset: c.banner,
-className: i()(S.shopBanner, d),
+className: o()(S.shopBanner, d),
 style: null != g ? {
   background: ''.concat((0, x.nH)(g), ' border-box border-box'),
   outlineColor: g.border.toHslString()
 } : void 0,
 children: [
-  (null === (n = E.Ve[c.skuId]) || void 0 === n ? void 0 : n.hideAttributionLogos) === !0 ? (0, s.jsx)(l.Spacer, {
+  (null === (n = I.Ve[c.skuId]) || void 0 === n ? void 0 : n.hideAttributionLogos) === !0 ? (0, s.jsx)(l.Spacer, {
     size: 28
   }) : (0, s.jsxs)('div', {
     className: S.discordLogo,
@@ -243,7 +243,7 @@ children: [
       })
     ]
   }),
-  (null === (r = E.Ve[c.skuId]) || void 0 === r ? void 0 : r.hideLogoOnBanner) === !0 ? (0, s.jsx)(l.Spacer, {
+  (null === (r = I.Ve[c.skuId]) || void 0 === r ? void 0 : r.hideLogoOnBanner) === !0 ? (0, s.jsx)(l.Spacer, {
     size: 96
   }) : (0, s.jsx)('img', {
     className: S.categoryLogo,
@@ -252,15 +252,15 @@ children: [
     }),
     alt: c.name,
     style: {
-      maxWidth: null === (a = E.Ve[c.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
+      maxWidth: null === (a = I.Ve[c.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
     }
   }),
   (0, s.jsx)(l.Text, {
-    className: i()(S.summary, {
+    className: o()(S.summary, {
       [S.blackSummary]: v
     }),
     variant: 'text-md/normal',
-    children: c.skuId === o.T.DISXCORE ? (0, s.jsx)(O, {
+    children: c.skuId === i.T.DISXCORE ? (0, s.jsx)(O, {
       category: c
     }) : c.summary
   }),

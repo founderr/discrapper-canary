@@ -5,8 +5,8 @@ var i = n(735250),
   r = n(287734),
   o = n(358221),
   c = n(305325),
-  d = n(281956),
-  u = n(27457),
+  u = n(281956),
+  d = n(27457),
   h = n(823379),
   p = n(5192),
   m = n(501655),
@@ -19,7 +19,7 @@ t.Z = function(e) {
 participants: p,
 channel: C,
 hasConnectPermission: g
-  } = e, I = (0, d.J)(C.guild_id), x = a.useCallback(() => {
+  } = e, I = (0, u.J)(C.guild_id), x = a.useCallback(() => {
 I ? (0, c.hk)(C.guild_id, () => r.default.selectVoiceChannel(C.id)) : r.default.selectVoiceChannel(C.id);
   }, [
 C.id,
@@ -37,7 +37,7 @@ children: [
     style: {
       maxWidth: 168 * N
     },
-    children: v.slice(0, 5).map(e => (0, i.jsx)(u.ZP, {
+    children: v.slice(0, 5).map(e => (0, i.jsx)(d.ZP, {
       participant: e,
       channel: C,
       className: f.tile,

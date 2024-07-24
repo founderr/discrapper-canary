@@ -20,14 +20,14 @@ right: i = 0,
 bottom: a,
 size: l = 8,
 alert: c = !1,
-maskColor: d = 1
+maskColor: u = 1
   } = e;
   return (0, s.jsx)('span', {
 className: r()(o.dot, {
   [o.alert]: c,
-  [o.maskPopout]: 0 === d,
-  [o.maskSecondary]: 1 === d,
-  [o.maskBlack]: 2 === d
+  [o.maskPopout]: 0 === u,
+  [o.maskSecondary]: 1 === u,
+  [o.maskBlack]: 2 === u
 }),
 style: {
   height: l,

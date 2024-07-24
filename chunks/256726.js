@@ -6,7 +6,7 @@ return m;
 return h;
   },
   jE: function() {
-return u;
+return d;
   }
 }), n(627494), n(757143);
 var i = n(884439),
@@ -16,8 +16,8 @@ var i = n(884439),
   r = n(561308),
   o = n(737583),
   c = n(169040),
-  d = n(689938);
-let u = e => {
+  u = n(689938);
+let d = e => {
 let {
   timestamp: t
 } = e;
@@ -31,7 +31,7 @@ var t;
 let n = null === (t = (0, r.PJ)(e, i.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
 return null == n ? [] : [{
   iconPath: c.eF,
-  text: d.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({
+  text: u.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({
     count: n
   })
 }];
@@ -54,8 +54,8 @@ let {
   channel: n,
   mediaImageSrc: i,
   artist: r,
-  description: d,
-  colors: u,
+  description: u,
+  colors: d,
   badges: h
 } = e, m = p({
   avatarSrc: t.getAvatarURL(n.guild_id, 128),
@@ -84,7 +84,7 @@ return await (0, l.f)({
         h: c.bg,
         w: c.nx
       }, 8);
-    }(e, u), function(e) {
+    }(e, d), function(e) {
       e.drawRoundedImage('MediaImage', {
         x: c.sB,
         y: c.sB
@@ -117,7 +117,7 @@ return await (0, l.f)({
         h: 32,
         w: c.kC
       }, !0);
-    }(e, d), (0, o.J)({
+    }(e, u), (0, o.J)({
       canvas: e,
       badges: h,
       startPosition: c.Iq,

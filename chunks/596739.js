@@ -15,8 +15,8 @@ function c(e) {
 header: t,
 description: n,
 onDismiss: c,
-buttons: d,
-dismissible: u = !0
+buttons: u,
+dismissible: d = !0
   } = e, h = a.useCallback(() => {
 null == c || c();
   }, [c]);
@@ -49,7 +49,7 @@ children: [
   }),
   (0, i.jsx)('div', {
     className: r.buttons,
-    children: null == d ? void 0 : d.map((e, t) => {
+    children: null == u ? void 0 : u.map((e, t) => {
       var n;
       return (0, i.jsx)(s.Button, {
         size: null !== (n = e.size) && void 0 !== n ? n : s.Button.Sizes.SMALL,
@@ -61,7 +61,7 @@ children: [
       }, t);
     })
   }),
-  u ? (0, i.jsx)(s.Clickable, {
+  d ? (0, i.jsx)(s.Clickable, {
     className: r.closeButton,
     onClick: h,
     role: 'button',

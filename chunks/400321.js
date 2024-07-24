@@ -15,13 +15,13 @@ canvasWidth: l,
 canvasHeight: r,
 fallbackColor: o,
 outlineColorDark: c,
-outlineColorLight: d,
-linesDrawnAt: u,
+outlineColorLight: u,
+linesDrawnAt: d,
 deadDrawables: h
   } = e;
-  null == u.current[t.id] && (u.current[t.id] = Date.now()), n.lineCap = 'round', n.lineJoin = 'round';
+  null == d.current[t.id] && (d.current[t.id] = Date.now()), n.lineCap = 'round', n.lineJoin = 'round';
   let p = t.points.map(e => (0, i.RR)(e, l, r)),
-m = u.current[t.id],
+m = d.current[t.id],
 _ = e => m + e.deltaTime,
 f = e => _(e) + 1500 >= Date.now(),
 E = e => _(e) <= Date.now() && f(e),
@@ -42,7 +42,7 @@ return;
 {
   fillColor: I,
   outlineColor: x
-} = (0, i.bg)(t.userId, c, d, o),
+} = (0, i.bg)(t.userId, c, u, o),
 T = g(x, 6 + s.q2),
 N = null != T && E(T);
   N && (0, a.I)(n, T.x, T.y, x, s.q2), g(I, 6), N && (0, a.T)(n, T.x, T.y, t.userId);

@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(359380),
   u = n(480222),
   _ = n(207796),
-  E = n(316553),
-  h = n(689938);
+  h = n(316553),
+  E = n(689938);
 let I = {
 mass: 1,
 tension: 280,
@@ -25,8 +25,8 @@ clamp: !0
   return (0, i.jsx)(u.Z, {
     onClose: n,
     children: (0, i.jsx)(c.Z, {
-      title: h.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
-      description: h.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
+      title: E.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
+      description: E.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
       handleUpdate: t,
       playstyle: e
     })
@@ -34,7 +34,7 @@ clamp: !0
 },
 [_.v0.TRAITS]: function() {
   let e = (0, _.GN)(e => e.game, r.Z),
-    t = (0, E.J)({
+    t = (0, h.J)({
       selectedGame: e
     }),
     [n, a] = s.useState(new Set(_.GN.getState().selectedTraits)),
@@ -44,8 +44,8 @@ clamp: !0
   return (0, i.jsx)(u.Z, {
     onClose: l,
     children: (0, i.jsx)(d.Z, {
-      title: h.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
-      description: h.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
+      title: E.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
+      description: E.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
       handleUpdate: a,
       interests: n,
       requiredGameId: t,
@@ -55,7 +55,7 @@ clamp: !0
 },
 [_.v0.GAMES]: function() {
   let e = (0, _.GN)(e => e.game, r.Z),
-    t = (0, E.J)({
+    t = (0, h.J)({
       selectedGame: e
     }),
     [n, a] = s.useState(new Set(_.GN.getState().selectedGames)),
@@ -65,8 +65,8 @@ clamp: !0
   return (0, i.jsx)(u.Z, {
     onClose: l,
     children: (0, i.jsx)(o.Z, {
-      title: h.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
-      description: h.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
+      title: E.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
+      description: E.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
       requiredGameId: t,
       handleUpdate: a,
       gameApplicationIds: n

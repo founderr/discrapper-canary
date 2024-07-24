@@ -5,8 +5,8 @@ var i = n(735250),
   r = n(475179),
   o = n(561472),
   c = n(287746),
-  d = n(325708),
-  u = n(541716),
+  u = n(325708),
+  d = n(541716),
   h = n(605236),
   p = n(665149),
   m = n(703558),
@@ -35,8 +35,8 @@ N = (0, i.jsx)(p.ZP.Icon, {
   tooltip: g.Z.Messages.CLOSE,
   onClick: T
 });
-  return (0, i.jsxs)(d.Z, {
-sidebarType: d.y.CallChatSidebar,
+  return (0, i.jsxs)(u.Z, {
+sidebarType: u.y.CallChatSidebar,
 maxWidth: x,
 floatingLayer: f.ZP,
 children: [
@@ -63,7 +63,7 @@ children: [
     children: (0, i.jsx)(c.Z, {
       channel: t,
       guild: n,
-      chatInputType: u.I.SIDEBAR
+      chatInputType: d.I.SIDEBAR
     }, t.id)
   })
 ]

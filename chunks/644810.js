@@ -1,6 +1,6 @@
 n.d(t, {
   B: function() {
-return d;
+return u;
   }
 }), n(653041);
 var i = n(55000),
@@ -27,17 +27,17 @@ return null != t && n.push({
   text: t
 }), n;
   },
-  d = async e => {
+  u = async e => {
 let {
   mediaImageSrc: t,
   entry: n,
-  avatarSrc: d,
-  description: u,
+  avatarSrc: u,
+  description: d,
   timestamp: h,
   episodeDescription: p,
   colors: m,
   channelId: _
-} = e, f = n.extra.media_title, E = o(d, t);
+} = e, f = n.extra.media_title, E = o(u, t);
 return await (0, s.f)({
   assetsToLoad: E,
   drawImage: e => {
@@ -89,7 +89,7 @@ return await (0, s.f)({
       family: r.I8,
       weight: r.Ue,
       truncate: a.GX.Wrap
-    }), e.drawText(u, {
+    }), e.drawText(d, {
       x: r.Iq,
       y: 64,
       h: 32,

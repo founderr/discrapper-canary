@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(433517),
   o = n(241915),
   c = n(27457),
-  d = n(981631),
-  u = n(310402),
+  u = n(981631),
+  d = n(310402),
   h = n(256507);
 let p = 'CameraPreviewPosition';
 
@@ -23,7 +23,7 @@ height: s,
 channel: m,
 participants: _
   } = e, [f, E] = function() {
-let [e, t] = a.useState(() => r.K.get(p, d.VD2.BOTTOM_RIGHT));
+let [e, t] = a.useState(() => r.K.get(p, u.VD2.BOTTOM_RIGHT));
 return [
   e,
   a.useCallback(e => {
@@ -35,7 +35,7 @@ return [
 var e;
 null === (e = C.current) || void 0 === e || e.ensureIsInPosition();
   }, [_.length]), (0, i.jsx)('div', {
-className: u.container,
+className: d.container,
 children: (0, i.jsx)(o._, {
   position: f,
   id: 0,
@@ -48,12 +48,12 @@ children: (0, i.jsx)(o._, {
   edgeOffsetLeft: 16,
   edgeOffsetRight: 16,
   children: (0, i.jsx)('div', {
-    className: u.tileContainer,
+    className: d.tileContainer,
     children: _.map(e => (0, i.jsx)(c.ZP, {
       participant: e,
       channel: m,
       onContextMenu: n,
-      className: l()(u.tile, h.elevationHigh),
+      className: l()(d.tile, h.elevationHigh),
       fit: c.BP.COVER,
       inCall: !0,
       inPopout: !1,

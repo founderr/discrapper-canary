@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(442837),
   u = n(704215),
   _ = n(952265),
-  E = n(481060),
-  h = n(493683),
+  h = n(481060),
+  E = n(493683),
   I = n(348600),
   m = n(257968),
   g = n(367907),
@@ -61,7 +61,7 @@ let {
 return (0, i.jsxs)(V.Qj, {
   selected: t,
   route: W.Z5c.FRIENDS,
-  icon: E.FriendsIcon,
+  icon: h.FriendsIcon,
   text: z.Z.Messages.FRIENDS,
   onClick: () => {
     g.ZP.trackWithMetadata(W.rMx.BROADCAST_LIST_VISITED, {
@@ -73,7 +73,7 @@ return (0, i.jsxs)(V.Qj, {
   ...n,
   ...s,
   children: [
-    r.length > 0 && l && (0, i.jsx)(E.TextBadge, {
+    r.length > 0 && l && (0, i.jsx)(h.TextBadge, {
       color: C.Z.BG_BRAND,
       text: (0, i.jsxs)('div', {
         className: K.broadcastingBadge,
@@ -81,7 +81,7 @@ return (0, i.jsxs)(V.Qj, {
           (0, i.jsx)(B.Z, {
             className: K.broadcastingIcon
           }),
-          (0, i.jsx)(E.Text, {
+          (0, i.jsx)(h.Text, {
             variant: 'text-xs/semibold',
             color: 'always-white',
             children: r.length.toLocaleString()
@@ -89,7 +89,7 @@ return (0, i.jsxs)(V.Qj, {
         ]
       })
     }),
-    a > 0 ? (0, i.jsx)(E.NumberBadge, {
+    a > 0 ? (0, i.jsx)(h.NumberBadge, {
       count: a
     }) : null
   ]
@@ -104,7 +104,7 @@ let {
 return (0, i.jsx)(V.Qj, {
   selected: t,
   route: W.Z5c.APPLICATION_LIBRARY,
-  icon: E.InventoryIcon,
+  icon: h.InventoryIcon,
   text: z.Z.Messages.LIBRARY,
   ...s,
   ...a,
@@ -125,7 +125,7 @@ let {
 return (0, i.jsx)(V.Qj, {
   selected: t,
   route: n,
-  icon: (0, E.makeIconCompat)(k.Z),
+  icon: (0, h.makeIconCompat)(k.Z),
   iconClassName: r()(K.activitiesBirthdayIcon, {
     [K.activitiesBirthdayIconLight]: 'light' === c
   }),
@@ -133,7 +133,7 @@ return (0, i.jsx)(V.Qj, {
   locationState: s,
   ...a,
   ...l,
-  children: u > 0 ? (0, i.jsx)(E.NumberBadge, {
+  children: u > 0 ? (0, i.jsx)(h.NumberBadge, {
     count: u
   }) : null
 });
@@ -141,7 +141,7 @@ return (0, i.jsx)(V.Qj, {
   J = () => {
 let e = (0, v.q)(),
   t = (0, v.T)();
-return e > 0 ? (0, i.jsx)(E.NumberBadge, {
+return e > 0 ? (0, i.jsx)(h.NumberBadge, {
   count: e,
   color: 0 === t ? C.Z.ICON_MUTED : void 0
 }) : null;
@@ -154,11 +154,11 @@ let {
 } = (0, A._)();
 if (!(0, Z.a)())
   return null;
-let a = null == s ? void 0 : () => h.Z.preload(W.ME, s);
+let a = null == s ? void 0 : () => E.Z.preload(W.ME, s);
 return (0, i.jsx)(V.Qj, {
   selected: t,
   route: W.Z5c.MESSAGE_REQUESTS,
-  icon: E.EnvelopeIcon,
+  icon: h.EnvelopeIcon,
   text: z.Z.Messages.MESSAGE_REQUESTS,
   onClick: a,
   ...n,
@@ -172,7 +172,7 @@ let {
 return r && l ? (0, i.jsx)(V.Qj, {
   selected: t,
   route: W.Z5c.FAMILY_CENTER,
-  icon: E.GroupIcon,
+  icon: h.GroupIcon,
   text: n,
   onMouseEnter: () => {
     d(!0);
@@ -205,7 +205,7 @@ return t ? (0, i.jsx)(V.PZ, {
   'aria-label': z.Z.Messages.CLOSE
 }) : s > 0 ? (0, i.jsx)('div', {
   className: K.familyCenterPendingBadge,
-  children: (0, i.jsx)(E.NumberBadge, {
+  children: (0, i.jsx)(h.NumberBadge, {
     count: s
   })
 }) : (0, i.jsx)(N.Z, {
@@ -214,7 +214,7 @@ return t ? (0, i.jsx)(V.PZ, {
     let {
       visibleContent: t
     } = e;
-    return t === u.z.FAMILY_CENTER_NEW_BADGE ? (0, i.jsx)(E.TextBadge, {
+    return t === u.z.FAMILY_CENTER_NEW_BADGE ? (0, i.jsx)(h.TextBadge, {
       text: z.Z.Messages.NEW,
       color: C.Z.BG_BRAND
     }) : null;

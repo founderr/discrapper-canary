@@ -4,25 +4,25 @@ return h;
   }
 });
 var i = t(735250),
-  l = t(470079),
-  a = t(780384),
+  a = t(470079),
+  l = t(780384),
   r = t(481060),
-  s = t(410030),
-  o = t(782568),
+  o = t(410030),
+  s = t(782568),
   c = t(63063),
   u = t(827498),
   d = t(888617),
   m = t(981631),
   p = t(689938),
   _ = t(778762),
-  E = t(983008),
-  A = t(478408);
+  f = t(983008),
+  C = t(478408);
 
 function h() {
-  let e = (0, s.ZP)(),
-n = (0, a.ap)(e) ? A : E,
-t = l.useCallback(() => {
-  (0, o.Z)(c.Z.getArticleURL(m.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON));
+  let e = (0, o.ZP)(),
+n = (0, l.ap)(e) ? C : f,
+t = a.useCallback(() => {
+  (0, s.Z)(c.Z.getArticleURL(m.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON));
 }, []),
 {
   trackSectionImpressionRef: h

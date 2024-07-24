@@ -1,9 +1,9 @@
 n.d(t, {
   ZP: function() {
-return u;
+return d;
   },
   aJ: function() {
-return d;
+return u;
   }
 }), n(411104), n(653041), n(47120);
 var i = n(735250),
@@ -14,7 +14,7 @@ var i = n(735250),
   o = n(981631),
   c = n(87359);
 
-function d(e) {
+function u(e) {
   let {
 compact: t,
 messageGroups: n,
@@ -25,13 +25,13 @@ groupSpacing: c
   } = e;
   if (a > n)
 throw Error('generateMessageSpecs: too many attachments relative to messageGroups: '.concat(n, ', ').concat(a));
-  let d = s / o.yqN.FONT_SIZE_DEFAULT,
-u = t ? r.iv : r.pk,
+  let u = s / o.yqN.FONT_SIZE_DEFAULT,
+d = t ? r.iv : r.pk,
 h = t ? r.Pb : r.XX,
 p = 0,
 m = Array(n).fill(null).map(() => {
   let e = l().random(1, i);
-  return p += c * d + u * d + (e - 1) * h * d, e;
+  return p += c * u + d * u + (e - 1) * h * u, e;
 }),
 _ = m.map((e, t) => t),
 f = [];
@@ -43,7 +43,7 @@ let e = {
 f.push([
   _.splice(l().random(0, _.length - 1), 1)[0],
   e
-]), p += e.height + r.M9 * d;
+]), p += e.height + r.M9 * u;
   }
   return {
 messages: m,
@@ -53,7 +53,7 @@ groupSpacing: c
   };
 }
 
-function u(e) {
+function d(e) {
   let {
 compact: t,
 messages: n,

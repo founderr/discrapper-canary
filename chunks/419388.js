@@ -10,8 +10,8 @@ var i = n(470079),
   r = n(925549),
   o = n(904245),
   c = n(45114),
-  d = n(40851),
-  u = n(607070),
+  u = n(40851),
+  d = n(607070),
   h = n(703656),
   p = n(479313),
   m = n(796974),
@@ -419,7 +419,7 @@ let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
   i = arguments.length > 2 ? arguments[2] : void 0;
 null === (t = this.ref.current) || void 0 === t || t.scrollTo({
   to: e,
-  animate: !u.Z.useReducedMotion && n,
+  animate: !d.Z.useReducedMotion && n,
   callback: i
 }), this.isPinned() ? this.updateStoreDimensions() : this.updateStoreDimensionsDebounced();
   }
@@ -488,9 +488,9 @@ if (e === this.props.channel.id) {
   return;
 }
 let i = this.getElementFromMessageId(e);
-!this.isJumping() && t && null != n && !u.Z.useReducedMotion && (_.default.extractTimestamp(e) > n ? this.scrollTo(0) : this.scrollTo(Number.MAX_SAFE_INTEGER)), this.pinned = !1, this.jumping = !0;
+!this.isJumping() && t && null != n && !d.Z.useReducedMotion && (_.default.extractTimestamp(e) > n ? this.scrollTo(0) : this.scrollTo(Number.MAX_SAFE_INTEGER)), this.pinned = !1, this.jumping = !0;
 let a = () => {
-  this.jumping = !1, (0, l.k)(i) && u.Z.keyboardModeEnabled && i.focus({
+  this.jumping = !1, (0, l.k)(i) && d.Z.keyboardModeEnabled && i.focus({
     preventScroll: !0
   }), this.scrollCounter = 0, this.handleScroll(), this._scrollCompleteCallbacks.forEach(e => e());
 };
@@ -612,10 +612,10 @@ focusId: l,
 placeholderHeight: r,
 canLoadMore: o = !0,
 handleScrollToBottom: c,
-handleScrollFromBottom: u
+handleScrollFromBottom: d
   } = e, {
 windowId: h
-  } = i.useContext(d.ZP), [p] = i.useState(() => new N({
+  } = i.useContext(u.ZP), [p] = i.useState(() => new N({
 messages: t,
 channel: n,
 compact: a,
@@ -625,7 +625,7 @@ placeholderHeight: r,
 canLoadMore: o,
 windowId: h,
 handleScrollToBottom: c,
-handleScrollFromBottom: u
+handleScrollFromBottom: d
   }));
   return p.getSnapshotBeforeUpdate(l), i.useLayoutEffect(() => p.mergePropsAndUpdate({
 messages: t,
@@ -637,6 +637,6 @@ placeholderHeight: r,
 canLoadMore: o,
 windowId: h,
 handleScrollToBottom: c,
-handleScrollFromBottom: u
+handleScrollFromBottom: d
   })), i.useLayoutEffect(() => () => p.cleanup(), [p]), p;
 }

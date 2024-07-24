@@ -13,8 +13,8 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(475179),
-  d = n(763520),
-  u = n(358221),
+  u = n(763520),
+  d = n(358221),
   h = n(414910),
   p = n(928518),
   m = n(204197),
@@ -81,7 +81,7 @@ user: U,
 guildId: n.guild_id,
 size: q,
 animateOnHover: !K
-  }), J = (0, r.e7)([u.Z], () => u.Z.getSelectedParticipant(n.id));
+  }), J = (0, r.e7)([d.Z], () => d.Z.getSelectedParticipant(n.id));
   return (a.useEffect(() => {
 n.isGuildStageVoice() && !G && (null == J ? void 0 : J.id) === U.id && c.Z.selectParticipant(n.id, null);
   }, [G]), s && !W && !O && G && !R && null != D && C.Z.supports(S.AN.VIDEO)) ? (0, i.jsx)(x.Z, {
@@ -93,7 +93,7 @@ streamId: w,
 videoComponent: D,
 fit: j,
 paused: _,
-videoSpinnerContext: U.id === k ? d.m.SELF_VIDEO : d.m.REMOTE_VIDEO,
+videoSpinnerContext: U.id === k ? u.m.SELF_VIDEO : u.m.REMOTE_VIDEO,
 userId: U.id
   }, w) : (0, i.jsx)('div', {
 className: l()(A.content, {

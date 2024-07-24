@@ -14,9 +14,9 @@ var s = n(685072),
   d = n(881824),
   u = n(719100),
   _ = n(976401),
-  E = n(689938);
+  h = n(689938);
 
-function h(e) {
+function E(e) {
   let {
 tooltipText: t,
 onClick: n
@@ -30,8 +30,8 @@ icon: a.Component
 }
 
 function I() {
-  return (0, i.jsx)(h, {
-tooltipText: E.Z.Messages.DISCONNECT_SELF,
+  return (0, i.jsx)(E, {
+tooltipText: h.Z.Messages.DISCONNECT_SELF,
 onClick: () => {
   (0, r.b_)(), a.default.disconnect();
 }
@@ -42,8 +42,8 @@ function m(e) {
   let {
 channel: t
   } = e;
-  return (0, i.jsx)(h, {
-tooltipText: E.Z.Messages.AUDIENCE_DISCONNECT,
+  return (0, i.jsx)(E, {
+tooltipText: h.Z.Messages.AUDIENCE_DISCONNECT,
 onClick: () => {
   if ((0, u.Z)(t)) {
     (0, d.Us)(t);
@@ -58,8 +58,8 @@ function g(e) {
   let {
 channel: t
   } = e;
-  return (0, i.jsx)(h, {
-tooltipText: E.Z.Messages.DISCONNECT_SELF,
+  return (0, i.jsx)(E, {
+tooltipText: h.Z.Messages.DISCONNECT_SELF,
 onClick: () => {
   if ((0, c.Z)(t)) {
     (0, o.lC)(t);

@@ -4,18 +4,18 @@ var i, s, a, r, l = n(442837),
   d = n(998502),
   u = n(869614),
   _ = n(281083),
-  E = n(672598);
-let h = !1,
+  h = n(672598);
+let E = !1,
   I = !0,
   m = !1;
 class g extends(r = l.ZP.Store) {
   initialize() {
 !(!c.isPlatformEmbedded || __OVERLAY__) && d.ZP.getGPUDriverVersions().then(e => {
-  h = (0, E.Z)(e), I = (0, u.Z)(e), m = (0, _.Z)(e), this.emitChange();
+  E = (0, h.Z)(e), I = (0, u.Z)(e), m = (0, _.Z)(e), this.emitChange();
 });
   }
   get GPUDriversOutdated() {
-return h;
+return E;
   }
   get canUseHardwareAcceleration() {
 return I;
@@ -25,7 +25,7 @@ return m;
   }
   getState() {
 return {
-  GPUDriversOutdated: h,
+  GPUDriversOutdated: E,
   canUseHardwareAcceleration: I,
   problematicGPUDriver: m
 };
@@ -41,6 +41,6 @@ a = 'StreamingCapabilitiesStore', (s = 'displayName') in(i = g) ? Object.defineP
 let {
   streamingCapabilitiesStoreState: t
 } = e;
-h = t.GPUDriversOutdated, I = t.canUseHardwareAcceleration;
+E = t.GPUDriversOutdated, I = t.canUseHardwareAcceleration;
   }
 });

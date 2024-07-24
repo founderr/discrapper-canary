@@ -1,6 +1,6 @@
 n.r(t), n.d(t, {
   MemberListContentSettingsMenu: function() {
-return d;
+return u;
   }
 });
 var i = n(735250);
@@ -11,10 +11,10 @@ var a = n(442837),
   r = n(146282),
   o = n(981631),
   c = n(689938);
-let d = e => {
+let u = e => {
   let {
 closePopout: t
-  } = e, d = (0, a.e7)([r.Z], () => r.Z.hidden);
+  } = e, u = (0, a.e7)([r.Z], () => r.Z.hidden);
   return (0, i.jsx)(s.Menu, {
 onSelect: () => {},
 navId: 'member-list-settings-menu',
@@ -41,7 +41,7 @@ children: (0, i.jsxs)(s.MenuGroup, {
     (0, i.jsx)(s.MenuCheckboxItem, {
       id: 'hide',
       label: c.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_HIDE,
-      checked: d,
+      checked: u,
       action: () => {
         (0, l.lY)(), null == t || t();
       }
@@ -58,7 +58,7 @@ t.default = () => (0, i.jsx)(s.Popout, {
 let {
   closePopout: t
 } = e;
-return (0, i.jsx)(d, {
+return (0, i.jsx)(u, {
   closePopout: t
 });
   },

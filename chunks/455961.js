@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(848246),
   o = n(793030),
   c = n(442837),
-  d = n(46973),
-  u = n(481060),
+  u = n(46973),
+  d = n(481060),
   h = n(846027),
   p = n(607070),
   m = n(361291),
@@ -39,13 +39,13 @@ function M(e) {
 className: t,
 onDismiss: n
   } = e;
-  return (0, i.jsx)(u.Button, {
+  return (0, i.jsx)(d.Button, {
 className: t,
 'aria-label': S.Z.Messages.CLOSE,
-look: u.Button.Looks.BLANK,
-size: u.Button.Sizes.NONE,
+look: d.Button.Looks.BLANK,
+size: d.Button.Sizes.NONE,
 onClick: n,
-children: (0, i.jsx)(u.CloseSmallIcon, {
+children: (0, i.jsx)(d.CloseSmallIcon, {
   size: 'xs',
   className: Z.closeIcon,
   color: 'white'
@@ -77,7 +77,7 @@ l(!0), (0, E.S)(r.q.STREAM_HIGH_QUALITY).then(e => {
         resolution: b,
         frameRate: R
       },
-      context: d.Yn.STREAM
+      context: u.Yn.STREAM
     };
     null != C.desktopSource ? e.desktopSettings = {
       sourceId: C.desktopSource.id,
@@ -95,11 +95,11 @@ o,
 t,
 C
   ]);
-  return (0, i.jsx)(u.ShinyButton, {
+  return (0, i.jsx)(d.ShinyButton, {
 fullWidth: !0,
 pauseAnimation: n,
-color: u.Button.Colors.GREEN,
-size: u.Button.Sizes.SMALL,
+color: d.Button.Colors.GREEN,
+size: d.Button.Sizes.SMALL,
 className: Z.optInButton,
 onClick: x,
 submitting: s,
@@ -124,7 +124,7 @@ children: [
       (0, i.jsxs)('div', {
         className: Z.variant1InfoContainer,
         children: [
-          (0, i.jsx)(u.LottieAnimation, {
+          (0, i.jsx)(d.LottieAnimation, {
             importData: A,
             shouldAnimate: !s,
             className: Z.lottie,
@@ -221,10 +221,10 @@ disable: !s
   t
 ]), !s || !l)
 return null;
-  let d = o ? L : P;
+  let u = o ? L : P;
   return (0, i.jsx)(T.h, {
 ...n,
-renderComponent: e => (0, i.jsx)(d, {
+renderComponent: e => (0, i.jsx)(u, {
   ...e,
   channel: t
 })

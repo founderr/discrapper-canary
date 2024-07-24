@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(481060),
   o = n(243778),
   c = n(261892),
-  d = n(197115),
-  u = n(703656),
+  u = n(197115),
+  d = n(703656),
   h = n(594174),
   p = n(626135),
   m = n(74538),
@@ -23,7 +23,7 @@ function T() {
   p.default.track(E.rMx.PREMIUM_UPSELL_INTERACTED, {
 cta_type: 'Learn more button',
 target: 'premium marketing page'
-  }), (0, u.uL)(E.Z5c.APPLICATION_STORE);
+  }), (0, d.uL)(E.Z5c.APPLICATION_STORE);
 }
 
 function N(e) {
@@ -72,7 +72,7 @@ children: [
         onClick: T,
         children: I.Z.Messages.LEARN_MORE
       }),
-      (0, i.jsx)(d.Z, {
+      (0, i.jsx)(u.Z, {
         className: x.getNitroButton,
         size: r.Button.Sizes.TINY,
         color: r.Button.Colors.CUSTOM,
@@ -186,7 +186,7 @@ user: t,
 size: r.AvatarSizes.SIZE_32
   }), s = h.default.getCurrentUser(), l = m.ZP.isPremium(s) || null == n || !m.ZP.isPremiumAtLeast(n.premiumType, g.p9.TIER_2), {
 enabled: o,
-variant: d
+variant: u
   } = c.f.useExperiment({
 location: 'SimplifiedProfilePanelPremiumUpsell'
   }, {
@@ -194,7 +194,7 @@ disable: l,
 autoTrackExposure: !l
   });
   return o ? (0, i.jsx)(Z, {
-variant: d,
+variant: u,
 avatarSrc: a,
 username: t.username
   }) : null;

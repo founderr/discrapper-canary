@@ -1,5 +1,5 @@
-var i, l, a, r, s = t(442837),
-  o = t(570140),
+var i, a, l, r, o = t(442837),
+  s = t(570140),
   c = t(827498);
 let u = {
   show: !1,
@@ -15,7 +15,7 @@ closeReason: n = c.ti.DISMISSED
   } = e;
   return u.show = !1, u.entrypoint = c._b.NONE, u.closeReason = n, !0;
 }
-class m extends(r = s.ZP.Store) {
+class m extends(r = o.ZP.Store) {
   initialize() {}
   shouldShowPopup() {
 return u.show && u.entrypoint === c._b.TEXT;
@@ -48,12 +48,12 @@ function _() {
 closeReason: c.ti.COMMAND
   });
 }
-a = 'AppLauncherStore', (l = 'displayName') in(i = m) ? Object.defineProperty(i, l, {
-  value: a,
+l = 'AppLauncherStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[l] = a, n.Z = new m(o.Z, {
+}) : i[a] = l, n.Z = new m(s.Z, {
   APP_LAUNCHER_SHOW: function(e) {
 let {
   entrypoint: n,

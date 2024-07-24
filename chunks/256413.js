@@ -14,9 +14,9 @@ function c(e) {
   var t;
   let n = (0, l.DM)((null == e ? void 0 : e.getGuildId()) != null ? e.guild_id : r.kod),
 c = (0, i.e7)([s.ZP], () => null != e && s.ZP.isChannelRecordOrParentOptedIn(e)),
-d = (0, a.g)(null !== (t = null == e ? void 0 : e.guild_id) && void 0 !== t ? t : r.kod);
+u = (0, a.g)(null !== (t = null == e ? void 0 : e.guild_id) && void 0 !== t ? t : r.kod);
   if (null == e)
 return !1;
-  let u = d && e.hasFlag(o.zZ.IS_GUILD_RESOURCE_CHANNEL);
-  return n && !u && !c && !e.isThread();
+  let d = u && e.hasFlag(o.zZ.IS_GUILD_RESOURCE_CHANNEL);
+  return n && !d && !c && !e.isThread();
 }

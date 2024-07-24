@@ -5,46 +5,46 @@ var i = n(735250),
   r = n(481060),
   o = n(368666),
   c = n(14338),
-  d = n(327799);
+  u = n(327799);
 t.Z = a.memo(function(e) {
   let {
 label: t,
 participantCount: n,
 onClick: a,
 className: s,
-collapsed: u,
+collapsed: d,
 speakers: h,
 channel: p,
 isStreamLive: m
   } = e;
   return (0, i.jsxs)(r.Clickable, {
 onClick: a,
-className: l()(d.container, s),
+className: l()(u.container, s),
 children: [
   null == h ? (0, i.jsx)(r.GroupIcon, {
     size: 'custom',
     color: 'currentColor',
     width: 20,
     height: 20,
-    className: d.micIcon
+    className: u.micIcon
   }) : (0, i.jsx)(r.MicrophoneIcon, {
     size: 'custom',
     color: 'currentColor',
     width: 20,
     height: 20,
-    className: d.micIcon
+    className: u.micIcon
   }),
   (0, i.jsxs)(r.Text, {
     color: 'header-primary',
     variant: 'text-md/semibold',
-    className: d.text,
+    className: u.text,
     children: [
       t,
       ' \u2014 ',
       n
     ]
   }),
-  u && null != p && null != h && h.length > 0 && (0, i.jsxs)(i.Fragment, {
+  d && null != p && null != h && h.length > 0 && (0, i.jsxs)(i.Fragment, {
     children: [
       (0, i.jsx)(c.Z, {
         channel: p,
@@ -58,8 +58,8 @@ children: [
     color: 'currentColor',
     width: 20,
     height: 20,
-    className: l()(d.downIcon, {
-      [d.upIcon]: u
+    className: l()(u.downIcon, {
+      [u.upIcon]: d
     })
   })
 ]

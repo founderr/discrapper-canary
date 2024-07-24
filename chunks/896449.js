@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(299206),
   o = n(810568),
   c = n(168524),
-  d = n(725119),
-  u = n(26033),
+  u = n(725119),
+  d = n(26033),
   h = n(689938),
   p = n(243113);
 
@@ -23,10 +23,10 @@ guildId: m,
 channel: _,
 entry: f,
 onSelect: E
-  } = e, C = (0, d.Z)(n.id, m, _.id), g = (0, r.Z)({
+  } = e, C = (0, u.Z)(n.id, m, _.id), g = (0, r.Z)({
 id: n.id,
 label: h.Z.Messages.COPY_ID_USER
-  }), I = (0, u.dX)(f), x = (0, c.Z)({
+  }), I = (0, d.dX)(f), x = (0, c.Z)({
 location: 'ContentPopoutContextMenu',
 applicationId: I ? null === (t = f.extra) || void 0 === t ? void 0 : t.application_id : void 0,
 source: o.m1.ActivityCardContextMenu,

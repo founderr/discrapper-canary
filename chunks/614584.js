@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(39154),
   o = n(35125),
   c = n(905405),
-  d = n(628238),
-  u = n(499401),
+  u = n(628238),
+  d = n(499401),
   h = n(693912),
   p = n(869765),
   m = n(699516),
@@ -33,7 +33,7 @@ compact: S = !1,
 referencedUsernameProfile: Z,
 referencedAvatarProfile: A,
 setPopout: M
-  } = e, b = N.state === p.Y.LOADED ? N.message : void 0, R = (0, E.Uj)(b), j = (0, c.p)(), L = (0, d.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = a.useMemo(() => {
+  } = e, b = N.state === p.Y.LOADED ? N.message : void 0, R = (0, E.Uj)(b), j = (0, c.p)(), L = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = a.useMemo(() => {
 if (null == b)
   return null;
 let e = (0, r.Z)(b);
@@ -51,7 +51,7 @@ if (e.type === x.uaV.ROLE_SUBSCRIPTION_PURCHASE)
     roleSubscriptionData: e.roleSubscriptionData
   }));
 if (e.type === x.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
-  return (0, l.Rp)((0, u.Y)({
+  return (0, l.Rp)((0, d.Y)({
     application: null == e ? void 0 : e.application,
     username: null == R ? void 0 : R.nick
   }));
@@ -124,8 +124,8 @@ channel: r,
 compact: o
   } = e, {
 referencedUsernameProfile: c,
-referencedAvatarProfile: d
-  } = n, u = l.type === x.uaV.REPLY && null != a && (0, i.jsx)(N, {
+referencedAvatarProfile: u
+  } = n, d = l.type === x.uaV.REPLY && null != a && (0, i.jsx)(N, {
 baseMessage: l,
 replyReference: a,
 referencedMessage: s,
@@ -133,9 +133,9 @@ channel: r,
 compact: o,
 setPopout: t,
 referencedUsernameProfile: c,
-referencedAvatarProfile: d
+referencedAvatarProfile: u
   });
   return (0, i.jsx)(i.Fragment, {
-children: u
+children: d
   });
 }

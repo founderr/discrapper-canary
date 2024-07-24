@@ -5,9 +5,9 @@ var i, a = n(735250),
   r = n.n(l),
   o = n(481060),
   c = n(285952),
-  d = n(47964);
+  u = n(47964);
 
-function u(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -24,7 +24,7 @@ let {
   renderHeader: i,
   className: s,
   onClose: l,
-  children: u
+  children: d
 } = this.props;
 return null != t && (e = (0, a.jsx)(o.ModalFooter, {
   direction: c.Z.Direction.HORIZONTAL,
@@ -37,7 +37,7 @@ return null != t && (e = (0, a.jsx)(o.ModalFooter, {
       ...p
     } = t;
     return (0, a.jsxs)(o.ModalRoot, {
-      className: d.modal,
+      className: u.modal,
       ...p,
       children: [
         (0, a.jsxs)(o.ModalHeader, {
@@ -56,12 +56,12 @@ return null != t && (e = (0, a.jsx)(o.ModalFooter, {
           ]
         }),
         (0, a.jsx)(o.ModalContent, {
-          className: r()(s, d.content, {
+          className: r()(s, u.content, {
             selectable: n
           }),
           scrollerRef: this.scrollerRef,
           onScroll: this.handleScroll,
-          children: u
+          children: d
         }),
         e
       ]
@@ -70,7 +70,7 @@ return null != t && (e = (0, a.jsx)(o.ModalFooter, {
 });
   }
   constructor(...e) {
-super(...e), u(this, 'scrollerRef', s.createRef()), u(this, 'handleScroll', () => {
+super(...e), d(this, 'scrollerRef', s.createRef()), d(this, 'handleScroll', () => {
   let {
     current: e
   } = this.scrollerRef;
@@ -81,6 +81,6 @@ super(...e), u(this, 'scrollerRef', s.createRef()), u(this, 'handleScroll', () =
 });
   }
 }
-u(h, 'defaultProps', {
+d(h, 'defaultProps', {
   selectable: !1
 }), t.Z = h;

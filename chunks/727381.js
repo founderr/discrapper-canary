@@ -11,8 +11,8 @@ var a = n(120356),
   r = n(481060),
   o = n(271383),
   c = n(594174),
-  d = n(777288),
-  u = n(991570),
+  u = n(777288),
+  d = n(991570),
   h = n(753042),
   p = n(787469),
   m = n(477718),
@@ -26,7 +26,7 @@ function I(e) {
   let {
 userId: t,
 guildId: n
-  } = e, a = (0, u.f)(t, n, 0.8, r.tokens.colors.BACKGROUND_SECONDARY);
+  } = e, a = (0, d.f)(t, n, 0.8, r.tokens.colors.BACKGROUND_SECONDARY);
   return (0, i.jsxs)('div', {
 className: s()(g.header),
 style: {
@@ -36,7 +36,7 @@ children: [
   (0, i.jsxs)('div', {
     className: s()(g.headerTitle),
     children: [
-      (0, i.jsx)(d.Z, {
+      (0, i.jsx)(u.Z, {
         width: 16,
         height: 16
       }),
@@ -62,14 +62,14 @@ function x(e) {
 userId: t,
 guildId: n,
 location: a,
-className: d,
+className: u,
 onNavigate: C
   } = e, x = (0, l.e7)([c.default], () => c.default.getUser(t), [t]), T = (0, l.e7)([o.ZP], () => o.ZP.getMember(n, t), [
 n,
 t
-  ]), N = (0, u.f)(t, n);
+  ]), N = (0, d.f)(t, n);
   return null == x || null == T ? null : (0, i.jsxs)(r.Scroller, {
-className: s()(g.container, d),
+className: s()(g.container, u),
 style: {
   backgroundColor: N
 },

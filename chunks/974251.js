@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(442837),
   o = n(704215),
   c = n(481060),
-  d = n(53281),
-  u = n(110924),
+  u = n(53281),
+  d = n(110924),
   h = n(40851),
   p = n(595519),
   m = n(620662),
@@ -74,10 +74,10 @@ es = (0, c.useModalsStore)(e => (0, c.hasModalOpenSelector)(e, U.Qr)),
 el = (0, r.e7)([S.Z], () => S.Z.hasLayers()),
 er = (0, r.e7)([E.Z], () => E.Z.hasClips()),
 [eo, ec] = a.useState(null),
-ed = (0, f.Go)() && (J || er),
-eu = F.isPrivate(),
-eh = (0, r.e7)([A.Z], () => eu || A.Z.can(k.Plq.ATTACH_FILES, F) && A.Z.can(k.Plq.SEND_MESSAGES, F)),
-ep = (0, u.Z)($);
+eu = (0, f.Go)() && (J || er),
+ed = F.isPrivate(),
+eh = (0, r.e7)([A.Z], () => ed || A.Z.can(k.Plq.ATTACH_FILES, F) && A.Z.can(k.Plq.SEND_MESSAGES, F)),
+ep = (0, d.Z)($);
   (null == ep ? void 0 : ep.newClipIds.length) !== (null == $ ? void 0 : $.newClipIds.length) && (null !== (t = null == $ ? void 0 : $.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == eo && ea && et && !es && !en && !el && ec('recentClips');
   let em = (e, t, n) => {
   null != t && 'ETOOLARGE' === t.code ? (0, P.G)(F, []) : (0, P.d)(e, F, W, {
@@ -123,7 +123,7 @@ ev = (0, D.Z)({
   canAttachFiles: eh,
   canStartThreads: eE || eC,
   useSlate: eg,
-  hasClips: ed,
+  hasClips: eu,
   canUseApplicationCommands: !K && !ei,
   channel: F,
   activities: Q,
@@ -218,7 +218,7 @@ children: e => (0, i.jsx)(c.Button, {
 children: [
   (0, i.jsx)('div', {
     className: H.uploadInput,
-    children: (0, i.jsx)(d.Z, {
+    children: (0, i.jsx)(u.Z, {
       ref: X,
       onChange: e => {
         em(e.currentTarget.files, e.currentTarget.err), e.currentTarget.value = '';

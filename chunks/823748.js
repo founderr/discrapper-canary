@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(512722),
   o = n.n(r),
   c = n(392711),
-  d = n.n(c),
-  u = n(266067),
+  u = n.n(c),
+  d = n(266067),
   h = n(848246),
   p = n(442837),
   m = n(704215),
@@ -60,8 +60,8 @@ var i = n(735250),
   er = n(41776),
   eo = n(6242),
   ec = n(757692),
-  ed = n(134483),
-  eu = n(703656),
+  eu = n(134483),
+  ed = n(703656),
   eh = n(359110),
   ep = n(854709),
   em = n(14091),
@@ -306,11 +306,11 @@ else if (l === eJ.ULH.MEMBERS)
     case eJ.d4z.GUILD_MEDIA:
     case eJ.d4z.GUILD_ANNOUNCEMENT:
     case eJ.d4z.GUILD_TEXT:
-      var d;
-      let u = !0 === eJ.TPd.GUILD_THREADS_ONLY.has(t.type) ? t.id : null !== (d = t.guild_id) && void 0 !== d ? d : t.id;
+      var u;
+      let d = !0 === eJ.TPd.GUILD_THREADS_ONLY.has(t.type) ? t.id : null !== (u = t.guild_id) && void 0 !== u ? u : t.id;
       return (0, i.jsx)(eK.Z, {
         channel: t
-      }, 'channel-members-'.concat(u));
+      }, 'channel-members-'.concat(d));
     case eJ.d4z.ANNOUNCEMENT_THREAD:
       if (null != n)
         return (0, i.jsx)(eK.Z, {
@@ -426,10 +426,10 @@ if (null != s && null == e) {
 if (null == e)
   return null;
 let c = (null == t ? void 0 : t.type) != null && eJ.TPd.GUILD_THREADS_ONLY.has(t.type) ? 528 : 450,
-  d = o - eJ.PrS - c;
+  u = o - eJ.PrS - c;
 return (0, i.jsx)(eY.Z, {
   sidebarType: (null == t ? void 0 : t.type) != null && eJ.TPd.GUILD_THREADS_ONLY.has(t.type) ? eY.y.PostSidebar : eY.y.ThreadSidebar,
-  maxWidth: d,
+  maxWidth: u,
   onWidthChange: this.handleThreadSidebarResize,
   children: e
 });
@@ -444,9 +444,9 @@ let {
   section: r,
   hasModalOpen: o,
   guildSidebarState: c,
-  hasTextActivityInPanelMode: d
+  hasTextActivityInPanelMode: u
 } = this.props, {
-  threadSidebarWidth: u,
+  threadSidebarWidth: d,
   isThreadSidebarFloating: h
 } = this.state, p = this.shouldRenderCall();
 if (a)
@@ -473,13 +473,13 @@ return (0, i.jsxs)(i.Fragment, {
       children: [
         f ? (0, i.jsx)(I.Z, {
           style: {
-            right: m ? u : void 0
+            right: m ? d : void 0
           },
           className: e3.uploadArea,
           channel: e,
           draftType: eL.d.ChannelMessage
         }) : null,
-        p || d ? null : this.renderHeaderBar(),
+        p || u ? null : this.renderHeaderBar(),
         this.renderCall(),
         this.renderEmbeddedActivityPanel(),
         (0, i.jsxs)('div', {
@@ -736,8 +736,8 @@ super(...e), e5(this, 'state', {
     guildId: s,
     showCall: r,
     showActivityPanel: c,
-    hasVideo: d,
-    headerGuildBreadcrumbPosition: u,
+    hasVideo: u,
+    headerGuildBreadcrumbPosition: d,
     isFavorites: h
   } = this.props;
   o()(null != e, 'Missing channel in Channel.renderHeaderBar'), o()(null != t, 'Should not be null if channel is not null.');
@@ -754,11 +754,11 @@ super(...e), e5(this, 'state', {
         showDivider: h && !(0, ep.X)(),
         toolbar: this.renderHeaderToolbar(),
         mobileToolbar: this.renderMobileToolbar(),
-        className: l()(e3.title, d && r ? (0, eF.Q)(eJ.BRd.DARK) : null),
+        className: l()(e3.title, u && r ? (0, eF.Q)(eJ.BRd.DARK) : null),
         transparent: r || c,
         'aria-label': e4.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
         children: [
-          'left' === u && (0, i.jsx)($.TS, {
+          'left' === d && (0, i.jsx)($.TS, {
             channel: e,
             guild: a,
             caretPosition: 'right'
@@ -768,14 +768,14 @@ super(...e), e5(this, 'state', {
             channelName: t,
             parentChannel: n,
             guild: a,
-            hasVideo: d,
+            hasVideo: u,
             handleContextMenu: this.handleContextMenu,
             handleParentContextMenu: this.handleParentContextMenu,
             handleClick: p,
             handleParentClick: m,
             renderFollowButton: this.renderFollowButton
           }),
-          'right' === u && (0, i.jsx)($.TS, {
+          'right' === d && (0, i.jsx)($.TS, {
             channel: e,
             guild: a,
             caretPosition: 'left'
@@ -783,7 +783,7 @@ super(...e), e5(this, 'state', {
           (0, $.v0)(e, a)
         ]
       }, 'header-'.concat(e.id)),
-      (0, i.jsx)(ed.Z, {
+      (0, i.jsx)(eu.Z, {
         channelId: e.id
       })
     ]
@@ -808,9 +808,9 @@ return e.length - t.length > 0;
   }, [r]), T = (0, p.e7)([S.ZP], () => {
 var e;
 return S.ZP.getSelfEmbeddedActivityForChannel(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : eJ.lds);
-  }), Z = (0, p.e7)([S.ZP], () => S.ZP.getActivityPanelMode()), b = null != T && !(0, A.Z)(null == c ? void 0 : c.id) && Z === e$.Ez.PANEL, R = (0, p.e7)([eH.Z], () => null != c && c.isVocalThread() && !d().isEmpty(eH.Z.getVoiceStatesForChannel(c.id)), [c]), j = null != c && c.isPrivate() && !b && x, L = (null == c ? void 0 : c.isGuildVocal()) || j || R, {
+  }), Z = (0, p.e7)([S.ZP], () => S.ZP.getActivityPanelMode()), b = null != T && !(0, A.Z)(null == c ? void 0 : c.id) && Z === e$.Ez.PANEL, R = (0, p.e7)([eH.Z], () => null != c && c.isVocalThread() && !u().isEmpty(eH.Z.getVoiceStatesForChannel(c.id)), [c]), j = null != c && c.isPrivate() && !b && x, L = (null == c ? void 0 : c.isGuildVocal()) || j || R, {
 welcomeModalChannelId: P
-  } = (0, u.TH)(), O = (0, p.e7)([er.Z], () => null != c && er.Z.isLurking(c.guild_id), [c]), D = (0, p.e7)([eM.Z], () => eM.Z.hasSeen(null == c ? void 0 : c.guild_id, O), [
+  } = (0, d.TH)(), O = (0, p.e7)([er.Z], () => null != c && er.Z.isLurking(c.guild_id), [c]), D = (0, p.e7)([eM.Z], () => eM.Z.hasSeen(null == c ? void 0 : c.guild_id, O), [
 c,
 O
   ]), k = (0, p.e7)([
@@ -828,7 +828,7 @@ c
   ]), W = null == g ? void 0 : g.id, z = (0, p.e7)([eR.ZP], () => eR.ZP.getGuildSidebarState(W), [W]), Y = (0, p.e7)([ew.Z], () => ew.Z.getGuildId()) === eJ.I_8, K = (0, eV.So)(h.q.STREAM_HIGH_QUALITY), q = (0, ec.o)(U, w), X = (0, eo.lL)('Channel', !0, w, q), Q = (0, eW.ZP)(c), J = (0, eW.ZP)(c, !0), $ = null != c && o === c.id, ee = null != c && c.isGuildStageVoice();
   a.useEffect(() => {
 var e, t, n;
-let i = (0, eu.s1)();
+let i = (0, ed.s1)();
 if ((null == i ? void 0 : null === (e = i.location) || void 0 === e ? void 0 : e.state) === e7.Df) {
   let {
     channelId: e
@@ -857,7 +857,7 @@ ea,
 en,
 ei
   ]);
-  let ed = (0, _.f9)();
+  let eu = (0, _.f9)();
   return (0, i.jsx)(e8, {
 guildId: null == c ? void 0 : c.guild_id,
 channelId: r,
@@ -869,7 +869,7 @@ voiceChannel: f,
 layout: k,
 needSubscriptionToAccess: I,
 isLurking: O,
-hasModalOpen: ed,
+hasModalOpen: eu,
 section: G,
 channelSidebarState: F,
 guildSidebarState: z,

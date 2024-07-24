@@ -9,8 +9,8 @@ var i, a = n(735250),
   r = n.n(l),
   o = n(481060),
   c = n(434650),
-  d = n(657305),
-  u = n(367907),
+  u = n(657305),
+  d = n(367907),
   h = n(282256),
   p = n(925329),
   m = n(833858),
@@ -115,8 +115,8 @@ let {
   mute: l,
   serverMute: o,
   isGuest: c,
-  isOverlay: d,
-  guildId: u
+  isOverlay: u,
+  guildId: d
 } = this.props, p = (0, a.jsxs)('div', {
   className: r()(s, {
     [S.username]: !0,
@@ -135,16 +135,16 @@ let {
 }), m = {
   clan: t.clan,
   userId: t.id,
-  contextGuildId: u,
-  isOverlay: d,
+  contextGuildId: d,
+  isOverlay: u,
   disableTooltip: !0,
-  className: r()(S.clanTag, d && S.isOverlay),
+  className: r()(S.clanTag, u && S.isOverlay),
   profileViewedAnalytics: {
-    source: d ? x.jXE.OVERLAY : x.Sbl.VOICE_PANEL,
+    source: u ? x.jXE.OVERLAY : x.Sbl.VOICE_PANEL,
     tagUserId: t.id
   }
 };
-return !n || d ? (0, a.jsx)(a.Fragment, {
+return !n || u ? (0, a.jsx)(a.Fragment, {
   children: (0, a.jsx)(h.Z, {
     ...m,
     children: p
@@ -160,7 +160,7 @@ let {
   deaf: s,
   serverDeaf: l,
   collapsed: c,
-  video: u,
+  video: d,
   isStreaming: h,
   disabled: p,
   isWatching: m,
@@ -190,7 +190,7 @@ let H = [],
     deaf: s,
     serverDeaf: l
   });
-u && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
+d && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
   text: v.Z.Messages.LOCAL_VIDEO_DISABLED,
   children: (0, a.jsx)(o.VideoSlashIcon, {
@@ -215,7 +215,7 @@ u && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
     color: o.tokens.colors.STATUS_WARNING_BACKGROUND
   })
 }, 'disconnected')), null != I && H.push((0, a.jsx)(o.TooltipContainer, {
-  text: (0, d.Z)(I.name),
+  text: (0, u.Z)(I.name),
   className: S.iconSpacing,
   children: (0, a.jsx)(o.ActivitiesIcon, {
     size: 'md',
@@ -288,14 +288,14 @@ let {
   className: s,
   selected: l,
   disabled: c,
-  overlap: d,
-  'aria-label': u,
+  overlap: u,
+  'aria-label': d,
   tabIndex: h
 } = this.props;
 return (0, a.jsx)(o.Clickable, {
   className: r()(s, {
     [S.voiceUser]: !0,
-    [S.overlap]: d,
+    [S.overlap]: u,
     [S.selected]: l,
     [S.clickable]: null != e,
     [S.userSmall]: i === x.ipw.SMALL,
@@ -309,7 +309,7 @@ return (0, a.jsx)(o.Clickable, {
   onMouseLeave: this.handleMouseLeave,
   onMouseDown: this.handleMouseDown,
   onKeyDown: t,
-  'aria-label': u,
+  'aria-label': d,
   tabIndex: h,
   children: (0, a.jsxs)('div', {
     className: r()(S.content, {
@@ -371,19 +371,19 @@ application: t,
 iconClassName: n,
 guildId: i,
 channelId: l,
-userId: d
+userId: u
   } = e, [h, m] = s.useState(!1), _ = (0, c.O)(e => m(e));
   return s.useEffect(() => {
-h && u.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
+h && d.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
   channel_id: l,
   guild_id: i,
-  user_id: d
+  user_id: u
 });
   }, [
 t.id,
 l,
 i,
-d,
+u,
 h
   ]), (0, a.jsx)(o.TooltipContainer, {
 text: v.Z.Messages.UNFORMATTED_PLAYING_GAME.format({
@@ -400,11 +400,11 @@ children: (0, a.jsx)('div', {
     game: t,
     size: p.Z.Sizes.XSMALL,
     onMouseEnter: () => {
-      u.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
+      d.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
         channel_id: l,
         guild_id: i,
         game_name: t.name,
-        user_id: d
+        user_id: u
       });
     }
   })
@@ -420,10 +420,10 @@ localMute: i,
 serverMute: s,
 deaf: l,
 serverDeaf: c
-  } = e, d = (0, o.useRedesignIconContext)().enabled, u = [];
+  } = e, u = (0, o.useRedesignIconContext)().enabled, d = [];
   if (n) {
 let e;
-if (d) {
+if (u) {
   let n;
   n = s ? o.MicrophoneDenyIcon : i ? o.MicrophoneDenyIcon : o.MicrophoneSlashIcon, e = (0, a.jsx)(n, {
     className: r()(S.icon, t, {
@@ -440,7 +440,7 @@ if (d) {
     }),
     colorClass: i ? S.strikethrough : void 0
   });
-u.push((0, a.jsx)(o.TooltipContainer, {
+d.push((0, a.jsx)(o.TooltipContainer, {
   text: i ? v.Z.Messages.LOCAL_MUTED : s ? v.Z.Messages.SERVER_MUTED : v.Z.Messages.VOICE_CHANNEL_MUTED,
   className: S.iconSpacing,
   children: e
@@ -448,7 +448,7 @@ u.push((0, a.jsx)(o.TooltipContainer, {
   }
   if (c || l) {
 let e;
-if (d) {
+if (u) {
   let n = c ? o.HeadphonesDenyIcon : o.HeadphonesSlashIcon;
   e = (0, a.jsx)(n, {
     className: r()(S.icon, t, {
@@ -464,14 +464,14 @@ if (d) {
       [S.iconServer]: c
     })
   });
-u.push((0, a.jsx)(o.TooltipContainer, {
+d.push((0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
   text: c ? v.Z.Messages.SERVER_DEAFENED : v.Z.Messages.VOICE_CHANNEL_DEAFENED,
   children: e
 }, 'deaf'));
   }
-  return 0 === u.length ? null : (0, a.jsx)(a.Fragment, {
-children: u
+  return 0 === d.length ? null : (0, a.jsx)(a.Fragment, {
+children: d
   });
 }
 Z(b, 'defaultProps', {

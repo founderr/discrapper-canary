@@ -6,8 +6,8 @@ return h;
 var s = n(735250),
   r = n(470079),
   a = n(442837),
-  i = n(481060),
-  o = n(607070),
+  o = n(481060),
+  i = n(607070),
   c = n(100527),
   l = n(906732),
   d = n(44315),
@@ -23,7 +23,7 @@ function b(e) {
   var t, n;
   let {
 config: a,
-index: o,
+index: i,
 handleCTAClick: c,
 text: l,
 reducedMotion: f = !1
@@ -64,7 +64,7 @@ children: [
             style: {
               visibility: null != a.badge ? 'visible' : 'hidden'
             },
-            children: null != a.badge && (0, s.jsx)(i.Text, {
+            children: null != a.badge && (0, s.jsx)(o.Text, {
               variant: 'text-xs/semibold',
               className: m.badge,
               children: a.badge.label()
@@ -78,7 +78,7 @@ children: [
                 alt: '',
                 className: m.logo
               }),
-              (null != a.description || null != l) && (0, s.jsx)(i.Text, {
+              (null != a.description || null != l) && (0, s.jsx)(o.Text, {
                 variant: 'text-md/normal',
                 color: 'currentColor',
                 children: null !== (n = a.description) && void 0 !== n ? n : l
@@ -86,8 +86,8 @@ children: [
             ]
           }),
           (0, s.jsx)('div', {
-            children: null != a.cta && (0, s.jsx)(i.Button, {
-              onClick: () => c(a, o),
+            children: null != a.cta && (0, s.jsx)(o.Button, {
+              onClick: () => c(a, i),
               children: a.cta.label()
             })
           })
@@ -108,12 +108,12 @@ function h(e) {
   let {
 categories: t,
 handleScrollToCategory: n
-  } = e, i = r.useMemo(() => {
+  } = e, o = r.useMemo(() => {
 let e = {};
 for (let n of t)
   e[n.skuId] = n;
 return e;
-  }, [t]), d = r.useMemo(() => (0, C.yc)(i), [i]), {
+  }, [t]), d = r.useMemo(() => (0, C.yc)(o), [o]), {
 analyticsLocations: u
   } = (0, a.cj)([p.Z], () => p.Z.getAnalytics()), {
 analyticsLocations: h
@@ -131,21 +131,21 @@ f.default.track(_.rMx.SHOP_HEADER_CAROUSEL_CTA_CLICKED, {
   }, [
 h,
 n
-  ]), I = (0, a.e7)([o.Z], () => o.Z.useReducedMotion), E = r.useCallback((e, t) => {
+  ]), E = (0, a.e7)([i.Z], () => i.Z.useReducedMotion), I = r.useCallback((e, t) => {
 var n, r;
 let a = null === (n = e.cta) || void 0 === n ? void 0 : n.categorySkuId,
-  o = null != a ? null === (r = i[a]) || void 0 === r ? void 0 : r.summary : void 0;
+  i = null != a ? null === (r = o[a]) || void 0 === r ? void 0 : r.summary : void 0;
 return (0, s.jsx)(b, {
   config: e,
-  text: o,
+  text: i,
   handleCTAClick: x,
-  reducedMotion: I,
+  reducedMotion: E,
   index: t
 });
   }, [
-i,
+o,
 x,
-I
+E
   ]), v = r.useCallback(e => {
 var t;
 return null === (t = d[e]) || void 0 === t ? void 0 : t.id;
@@ -156,7 +156,7 @@ children: (0, s.jsx)(g.U, {
   carouselId: 'collectibles_shop_header_carousel',
   className: m.carousel,
   items: d,
-  renderItem: E,
+  renderItem: I,
   getItemId: v,
   controlsClassName: m.paginationControls,
   paginationButtonClassName: m.paginationButton,

@@ -1,5 +1,5 @@
-var i, l = t(442837),
-  a = t(570140);
+var i, a = t(442837),
+  l = t(570140);
 
 function r(e, n, t) {
   return n in e ? Object.defineProperty(e, n, {
@@ -9,28 +9,28 @@ configurable: !0,
 writable: !0
   }) : e[n] = t, e;
 }
-let s = 10 * t(70956).Z.Millis.MINUTE,
-  o = {
+let o = 10 * t(70956).Z.Millis.MINUTE,
+  s = {
 lastUsedCommandId: null,
 lastUsedTimeMs: null
   };
-class c extends(i = l.ZP.PersistedStore) {
+class c extends(i = a.ZP.PersistedStore) {
   initialize(e) {
-null != e && (o.lastUsedCommandId = e.lastUsedCommandId, o.lastUsedTimeMs = e.lastUsedTimeMs);
+null != e && (s.lastUsedCommandId = e.lastUsedCommandId, s.lastUsedTimeMs = e.lastUsedTimeMs);
   }
   getState() {
-return o;
+return s;
   }
   getLastUsedCommandId() {
 let e = Date.now();
-return null == o.lastUsedTimeMs || null == o.lastUsedCommandId ? null : (e > o.lastUsedTimeMs + s && (o.lastUsedCommandId = null, o.lastUsedTimeMs = null), o.lastUsedCommandId);
+return null == s.lastUsedTimeMs || null == s.lastUsedCommandId ? null : (e > s.lastUsedTimeMs + o && (s.lastUsedCommandId = null, s.lastUsedTimeMs = null), s.lastUsedCommandId);
   }
 }
-r(c, 'displayName', 'AppLauncherLastUsedCommandStore'), r(c, 'persistKey', 'AppLauncherLastUsedCommandStore'), new c(a.Z, {
+r(c, 'displayName', 'AppLauncherLastUsedCommandStore'), r(c, 'persistKey', 'AppLauncherLastUsedCommandStore'), new c(l.Z, {
   APPLICATION_COMMAND_USED: function(e) {
 let {
   command: n
 } = e;
-o.lastUsedCommandId = n.id, o.lastUsedTimeMs = Date.now();
+s.lastUsedCommandId = n.id, s.lastUsedTimeMs = Date.now();
   }
 });

@@ -7,8 +7,8 @@ var s = n(735250);
 n(470079);
 var r = n(120356),
   a = n.n(r),
-  i = n(481060),
-  o = n(937615),
+  o = n(481060),
+  i = n(937615),
   c = n(884697),
   l = n(222541);
 let d = e => e.length > 5 ? e.replace(/\.00$/, '') : e,
@@ -24,10 +24,10 @@ let {
   className: p,
   discount: g = c.f_,
   variant: C = 'heading-md/semibold'
-} = e, _ = d((0, o.T4)(n, r)), m = g !== c.f_ && g.discountPercentage >= 5 ? (0, s.jsxs)(s.Fragment, {
+} = e, _ = d((0, i.T4)(n, r)), m = g !== c.f_ && g.discountPercentage >= 5 ? (0, s.jsxs)(s.Fragment, {
   children: [
     _,
-    (0, s.jsx)(i.Heading, {
+    (0, s.jsx)(o.Heading, {
       variant: C,
       color: 'text-positive',
       className: l.discount,
@@ -36,7 +36,7 @@ let {
   ]
 }) : _;
 return (0, s.jsx)(s.Fragment, {
-  children: (0, s.jsxs)(i.Heading, {
+  children: (0, s.jsxs)(o.Heading, {
     variant: C,
     className: a()(l.container, p),
     children: [

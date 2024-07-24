@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(543882),
-  d = n(592125),
-  u = n(496675),
+  u = n(592125),
+  d = n(496675),
   h = n(981631),
   p = n(689938),
   m = n(375387);
@@ -46,7 +46,7 @@ function f(e) {
 stream: t,
 className: n,
 noText: s = !1
-  } = e, o = (0, r.e7)([d.Z], () => d.Z.getBasicChannel(t.channelId)), f = (0, r.e7)([u.Z], () => null != o && u.Z.canBasicChannel(h.S7T.CONNECT, o)), {
+  } = e, o = (0, r.e7)([u.Z], () => u.Z.getBasicChannel(t.channelId)), f = (0, r.e7)([d.Z], () => null != o && d.Z.canBasicChannel(h.S7T.CONNECT, o)), {
 url: E,
 isLoading: C
   } = (0, r.cj)([c.Z], () => ({

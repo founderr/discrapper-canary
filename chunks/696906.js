@@ -52,25 +52,25 @@ P = (0, C._k)(S, {
   activeSubscription: F,
   activeEntitlement: D
 } = (0, C.F5)(A, a),
-H = (0, C.CR)(A, a),
-W = (0, u.Z)(),
+W = (0, C.CR)(A, a),
+H = (0, u.Z)(),
 V = null != N && (0, g.KW)(N.flags),
 z = null != D && D.userId === (null === (n = m.default.getCurrentUser()) || void 0 === n ? void 0 : n.id),
 K = null == D || z,
 Y = null == D || P.length > 1,
-q = null != a || H.length > 0,
+q = null != a || W.length > 0,
 J = V && z,
 X = null != j && null != R && K && Y && (q || V) && !J;
   return K ? q ? J && null != j && (o = x.Z.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
 tierName: j.name
   })) : o = x.Z.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : o = x.Z.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, i.useEffect(() => {
-Z && null != E && W && !(p.Z.isFetchingForSKU(E) || p.Z.isLoadedForSKU(E)) && c.Z.wait(() => {
+Z && null != E && H && !(p.Z.isFetchingForSKU(E) || p.Z.isLoadedForSKU(E)) && c.Z.wait(() => {
   (0, d.GZ)(E);
 });
   }, [
 Z,
 E,
-W
+H
   ]), {
 openModal: i.useCallback(() => {
   r()(null != R, 'No application'), r()(null != j, 'No subscription plan'), r()(Z, 'Cannot purchase this unpublished plan');
@@ -87,7 +87,7 @@ openModal: i.useCallback(() => {
       initialPlanId: j.id,
       skuId: j.skuId,
       guildId: a,
-      eligibleApplicationSubscriptionGuilds: H,
+      eligibleApplicationSubscriptionGuilds: W,
       planGroup: P,
       applicationId: R.id,
       showBenefitsFirst: w,
@@ -112,7 +112,7 @@ openModal: i.useCallback(() => {
   M,
   F,
   w,
-  H,
+  W,
   L,
   G
 ]),

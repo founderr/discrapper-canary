@@ -6,11 +6,11 @@ var a = n(481060),
   r = n(689938),
   o = n(125803),
   c = n(279913),
-  d = n(176480);
+  u = n(176480);
 t.Z = e => {
   let t, {
 searchQuery: n,
-setSearchQuery: u,
+setSearchQuery: d,
 mostRecentQuery: h,
 handleClearSearch: p,
 handleSearchKeyPress: m,
@@ -40,7 +40,7 @@ t = (0, i.jsxs)('div', {
     (0, i.jsx)('img', {
       className: c.emptySearchImage,
       alt: '',
-      src: d
+      src: u
     }),
     (0, i.jsx)(a.Heading, {
       variant: 'heading-xl/semibold',
@@ -97,7 +97,7 @@ children: (0, i.jsxs)(a.ScrollerAuto, {
           inputClassName: c.searchPageInput,
           label: r.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
           placeholder: r.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
-          onChange: u,
+          onChange: d,
           onClear: p,
           onKeyPress: m,
           cta: null != n && n.length > 0 ? r.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null

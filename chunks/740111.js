@@ -155,7 +155,7 @@ super('discord_protos.premium_marketing.v1.SubscriptionButton', [{
   }
 }
 let _ = new u();
-class E extends o.C {
+class h extends o.C {
   create(e) {
 let t = {
   heroArtLocalizedVideoLinksDarkTheme: {},
@@ -293,7 +293,7 @@ super('discord_protos.premium_marketing.v1.Variant1Storage', [{
 ]);
   }
 }
-let h = new E();
+let E = new h();
 class I extends o.C {
   create(e) {
 let t = {
@@ -426,7 +426,7 @@ for (; e.pos < r;) {
       s.heroArtVideoSubtitles.push(m.internalBinaryRead(e, e.uint32(), n));
       break;
     case 14:
-      s.storage = h.internalBinaryRead(e, e.uint32(), n, s.storage);
+      s.storage = E.internalBinaryRead(e, e.uint32(), n, s.storage);
       break;
     default:
       let r = n.readUnknownField;
@@ -445,7 +445,7 @@ for (let i = 0; i < e.featureCards.length; i++)
 e.button && _.internalBinaryWrite(e.button, t.tag(6, a.TD.LengthDelimited).fork(), n).join(), '' !== e.dismissKey && t.tag(7, a.TD.LengthDelimited).string(e.dismissKey), '' !== e.heroArtVideoLinkLightTheme && t.tag(8, a.TD.LengthDelimited).string(e.heroArtVideoLinkLightTheme), '' !== e.heroArtImageLinkDarkTheme && t.tag(9, a.TD.LengthDelimited).string(e.heroArtImageLinkDarkTheme), '' !== e.heroArtImageLinkLightTheme && t.tag(10, a.TD.LengthDelimited).string(e.heroArtImageLinkLightTheme), '' !== e.modalTopPill && t.tag(11, a.TD.LengthDelimited).string(e.modalTopPill), '' !== e.body && t.tag(12, a.TD.LengthDelimited).string(e.body);
 for (let i = 0; i < e.heroArtVideoSubtitles.length; i++)
   m.internalBinaryWrite(e.heroArtVideoSubtitles[i], t.tag(13, a.TD.LengthDelimited).fork(), n).join();
-e.storage && h.internalBinaryWrite(e.storage, t.tag(14, a.TD.LengthDelimited).fork(), n).join();
+e.storage && E.internalBinaryWrite(e.storage, t.tag(14, a.TD.LengthDelimited).fork(), n).join();
 let i = n.writeUnknownFields;
 return !1 !== i && (!0 == i ? a.z.onWrite : i)(this.typeName, e, t), t;
   }
@@ -534,7 +534,7 @@ super('discord_protos.premium_marketing.v1.AnnouncementModalVariant1Properties',
     no: 14,
     name: 'storage',
     kind: 'message',
-    T: () => h
+    T: () => E
   }
 ]);
   }

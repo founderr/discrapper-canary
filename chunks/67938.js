@@ -7,8 +7,8 @@ var s = n(735250);
 n(470079);
 var r = n(120356),
   a = n.n(r),
-  i = n(442837),
-  o = n(481060),
+  o = n(442837),
+  i = n(481060),
   c = n(607070),
   l = n(372047),
   d = n(731782),
@@ -24,13 +24,13 @@ function m() {
 className: d.attributionLogos,
 'aria-label': 'Discord x Pocketpair',
 children: [
-  (0, s.jsx)(o.ClydeIcon, {
+  (0, s.jsx)(i.ClydeIcon, {
     size: 'custom',
     color: 'currentColor',
     height: 22,
     'aria-hidden': !0
   }),
-  (0, s.jsx)(o.Text, {
+  (0, s.jsx)(i.Text, {
     variant: 'heading-sm/extrabold',
     tag: 'div',
     children: '|'
@@ -47,7 +47,7 @@ children: [
 function b(e) {
   let {
 category: t
-  } = e, n = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), {
+  } = e, n = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), {
 enabled: r
   } = (0, l.Z)({
 location: 'CollectiblesShop'
@@ -80,7 +80,7 @@ children: [
         alt: '',
         'aria-hidden': !0
       }),
-      (0, s.jsx)(o.Text, {
+      (0, s.jsx)(i.Text, {
         className: d.summary,
         variant: 'text-md/normal',
         children: t.summary

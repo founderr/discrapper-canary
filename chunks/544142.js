@@ -11,8 +11,8 @@ var a = n(120356),
   r = n(481060),
   o = n(239091),
   c = n(100527),
-  d = n(906732),
-  u = n(471445),
+  u = n(906732),
+  d = n(471445),
   h = n(484459),
   p = n(103575),
   m = n(271383),
@@ -26,11 +26,11 @@ var a = n(120356),
 function x(e) {
   var t, a;
   let {
-userId: u,
+userId: d,
 channel: E
   } = e, {
 analyticsLocations: C
-  } = (0, d.ZP)(c.Z.USERNAME), g = (0, l.e7)([_.default], () => _.default.getUser(u)), x = (0, l.e7)([m.ZP], () => null != u ? m.ZP.getMember(E.guild_id, u) : null);
+  } = (0, u.ZP)(c.Z.USERNAME), g = (0, l.e7)([_.default], () => _.default.getUser(d)), x = (0, l.e7)([m.ZP], () => null != d ? m.ZP.getMember(E.guild_id, d) : null);
 
   function T(e) {
 if (null == g)
@@ -55,7 +55,7 @@ v = null == x ? void 0 : x.colorString;
   return null == g ? (0, i.jsx)('span', {
 className: s()(I.threadCreatorName, I.unknownCreatorName),
 children: N
-  }) : (0, i.jsx)(d.Gt, {
+  }) : (0, i.jsx)(u.Gt, {
 value: C,
 children: (0, i.jsx)(r.Popout, {
   preload: () => (0, h.W)(g, {
@@ -123,7 +123,7 @@ function N(e) {
   var t;
   let {
 channel: n
-  } = e, a = null !== (t = (0, u.KS)(n)) && void 0 !== t ? t : r.ThreadIcon;
+  } = e, a = null !== (t = (0, d.KS)(n)) && void 0 !== t ? t : r.ThreadIcon;
   return (0, i.jsxs)(E.ZP, {
 channelId: n.id,
 children: [

@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(338545),
   o = n(442837),
   c = n(481060),
-  d = n(596454),
-  u = n(607070),
+  u = n(596454),
+  d = n(607070),
   h = n(70956),
   p = n(456631),
   m = n(245285);
@@ -28,7 +28,7 @@ onComplete: s
   } = e, {
 emoji: h,
 sentAt: g
-  } = n, I = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), [x, T] = a.useState(!0), N = !I, v = (0, c.useTransition)(x, {
+  } = n, I = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), [x, T] = a.useState(!0), N = !I, v = (0, c.useTransition)(x, {
 from: {
   rotate: -120
 },
@@ -67,7 +67,7 @@ return t && (0, i.jsx)(r.animated.div, {
   style: {
     transform: a.to(C)
   },
-  children: (0, i.jsx)(d.Z, {
+  children: (0, i.jsx)(u.Z, {
     className: l()(m.voiceChannelEffectEmoji),
     emojiId: h.id,
     emojiName: h.name,

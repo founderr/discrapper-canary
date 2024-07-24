@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(481060),
   o = n(332148),
   c = n(796798),
-  d = n(198620),
-  u = n(624453),
+  u = n(198620),
+  d = n(624453),
   h = n(306680),
   p = n(494404),
   m = n(257559),
@@ -25,8 +25,8 @@ onJump: E
   } = e, {
 messages: C,
 loading: g
-  } = (0, s.cj)([u.Z], () => {
-let e = u.Z.getPinnedMessages(t.id),
+  } = (0, s.cj)([d.Z], () => {
+let e = d.Z.getPinnedMessages(t.id),
   n = null != e ? e.messages : f;
 return {
   messages: n,
@@ -36,7 +36,7 @@ return {
   return a.useEffect(() => {
 c.l.getCurrentConfig({
   location: 'pins'
-}).enabled && C.some(d.k5) && o.Z.fetchPins(t.id, !0);
+}).enabled && C.some(u.k5) && o.Z.fetchPins(t.id, !0);
   }, []), a.useEffect(() => {
 I && o.Z.ackPins(t.id);
   }, [

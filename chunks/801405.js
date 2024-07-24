@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(475179),
   o = n(367907),
   c = n(358221),
-  d = n(788983),
-  u = n(268353),
+  u = n(788983),
+  d = n(268353),
   h = n(944486),
   p = n(626135),
   m = n(585483),
@@ -20,7 +20,7 @@ var i = n(735250),
   E = n(981631),
   C = n(394738);
 let g = () => {
-  l.Z.wait(() => d.xv(E.KJ3.CHANNEL_CALL_POPOUT));
+  l.Z.wait(() => u.xv(E.KJ3.CHANNEL_CALL_POPOUT));
 };
 
 function I(e) {
@@ -28,7 +28,7 @@ function I(e) {
 channel: t,
 appContext: n,
 popoutOpen: l,
-popoutWindow: d,
+popoutWindow: u,
 currentWindow: I
   } = e, x = n === E.IlC.POPOUT, T = a.useRef(null), {
 currentLayout: N,
@@ -54,7 +54,7 @@ T.current = v;
   currentDocument: A,
   rootNode: M
 } = a.useMemo(() => {
-  let e = null != d && x ? d.document : document,
+  let e = null != u && x ? u.document : document,
     t = I.document.getElementById('app-mount');
   return {
     currentWindow: I,
@@ -62,7 +62,7 @@ T.current = v;
     rootNode: t
   };
 }, [
-  d,
+  u,
   x,
   I
 ]),
@@ -123,10 +123,10 @@ M
   }, [
 S,
 x
-  ]), R) ? (0, i.jsx)(u.Z, {
+  ]), R) ? (0, i.jsx)(d.Z, {
 themeable: !1,
 node: M,
-guestWindow: d,
+guestWindow: u,
 className: C.rightTrayIcon,
 onClick: P(N)
   }) : null;

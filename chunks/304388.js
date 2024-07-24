@@ -32,8 +32,8 @@ children: t({
 t.Z = a.forwardRef(function(e, t) {
   let {
 renderPopout: n,
-children: d
-  } = e, [u, h] = a.useState(!1), {
+children: u
+  } = e, [d, h] = a.useState(!1), {
 isHovered: p,
 setIsHovered: m,
 onMouseEnter: _,
@@ -42,15 +42,15 @@ cancelTimers: E
   } = (0, l.Z)(200, 300);
 
   function C(e) {
-'focus' !== e.type && !u && _();
+'focus' !== e.type && !d && _();
   }
 
   function g() {
-!u && f();
+!d && f();
   }
 
   function I(e) {
-E(), h(!u), (!p || u) && e();
+E(), h(!d), (!p || d) && e();
   }
   a.useImperativeHandle(t, () => ({
 hidePopout() {
@@ -60,7 +60,7 @@ hidePopout() {
 m,
 h
   ]);
-  let x = p || u;
+  let x = p || d;
   return (0, i.jsx)(s.Popout, {
 animation: s.Popout.Animation.FADE,
 shouldShow: x,
@@ -85,7 +85,7 @@ children: e => {
     onKeyDown: n
   } = e;
   return (0, i.jsx)(i.Fragment, {
-    children: d({
+    children: u({
       onClick: e => I(() => t(e)),
       onKeyDown: e => {
         var t, i;

@@ -10,15 +10,15 @@ var i = n(735250),
   r = n(346486),
   o = n(69882),
   c = n(815790),
-  d = n(893966),
-  u = n(776767),
+  u = n(893966),
+  d = n(776767),
   h = n(689938),
   p = n(446926);
 
 function m(e) {
   let {
 member: t
-  } = e, n = t.userId, m = t.guildId, _ = (0, s.e7)([d.Z], () => d.Z.getEnhancedMember(m, n), [
+  } = e, n = t.userId, m = t.guildId, _ = (0, s.e7)([u.Z], () => u.Z.getEnhancedMember(m, n), [
 n,
 m
   ]), f = (null != _ ? _ : t).unusualDMActivityUntil, E = a.useCallback(e => {
@@ -34,14 +34,14 @@ f
   return null != f || g ? (0, i.jsx)(l.FormItem, {
 title: h.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
 titleClassName: p.infoTitle,
-children: (0, i.jsxs)(u.WM, {
+children: (0, i.jsxs)(d.WM, {
   children: [
-    null != f && (0, i.jsx)(u._2, {
+    null != f && (0, i.jsx)(d._2, {
       icon: (0, i.jsx)(l.ChatAlertIcon, {
         size: 'custom',
         color: 'currentColor',
-        width: u.Mn,
-        height: u.Mn,
+        width: d.Mn,
+        height: d.Mn,
         className: p.__invalid_unusualDMLabelIcon
       }),
       name: (0, i.jsx)(l.Text, {
@@ -55,12 +55,12 @@ children: (0, i.jsxs)(u.WM, {
         children: C
       })
     }),
-    g && null != I && (0, i.jsx)(u._2, {
+    g && null != I && (0, i.jsx)(d._2, {
       icon: (0, i.jsx)(l.ClockWarningIcon, {
         size: 'custom',
         color: 'currentColor',
-        width: u.Mn,
-        height: u.Mn,
+        width: d.Mn,
+        height: d.Mn,
         className: p.__invalid_unusualDMLabelIcon
       }),
       name: (0, i.jsx)(l.Text, {

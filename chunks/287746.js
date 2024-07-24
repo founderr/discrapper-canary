@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(873546),
   o = n(106351),
   c = n(442837),
-  d = n(481060),
-  u = n(430742),
+  u = n(481060),
+  d = n(430742),
   h = n(904245),
   p = n(144144),
   m = n(166459),
@@ -60,8 +60,8 @@ var i = n(735250),
   er = n(703558),
   eo = n(323873),
   ec = n(271383),
-  ed = n(375954),
-  eu = n(496675),
+  eu = n(375954),
+  ed = n(496675),
   eh = n(944486),
   ep = n(117530),
   em = n(594174),
@@ -179,7 +179,7 @@ let {
   highlighted: r,
   pendingReply: o,
   chatInputType: c,
-  placeholder: u,
+  placeholder: d,
   accessibilityLabel: h,
   shakeIntensity: p,
   poggermodeEnabled: m
@@ -191,7 +191,7 @@ let {
   focused: t,
   className: eL.channelTextArea,
   channel: e,
-  placeholder: u,
+  placeholder: d,
   accessibilityLabel: h,
   pendingReply: o,
   type: c,
@@ -207,7 +207,7 @@ let {
   highlighted: r,
   setEditorRef: e => this.editorRef = e
 });
-return (0, i.jsx)(d.Popout, {
+return (0, i.jsx)(u.Popout, {
   position: 'top',
   onRequestClose: () => {
     var e;
@@ -225,7 +225,7 @@ return (0, i.jsx)(d.Popout, {
       ..._
     });
   },
-  children: () => m ? (0, i.jsx)(d.Shaker, {
+  children: () => m ? (0, i.jsx)(u.Shaker, {
     isShaking: p > 0,
     intensity: p,
     className: eL.shaker,
@@ -273,7 +273,7 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
       else {
         let {
           channel: e
-        } = this.props, t = ed.Z.getLastCommandMessage(e.id), n = ed.Z.getLastEditableMessage(e.id);
+        } = this.props, t = eu.Z.getLastCommandMessage(e.id), n = eu.Z.getLastEditableMessage(e.id);
         null != t && null != n ? eg.default.compare(n.id, t.id) > 0 ? this.handleEditLastMessage(n) : this.handleRecallLastCommand(t) : null != t ? this.handleRecallLastCommand(t) : null != n && this.handleEditLastMessage(n);
       }
       return;
@@ -311,7 +311,7 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
       id: a
     }
   } = this.props;
-  u.Z.changeDraft(a, t, er.d.ChannelMessage);
+  d.Z.changeDraft(a, t, er.d.ChannelMessage);
   let s = '' !== t && n !== this.state.richValue,
     l = s && !ey.test(t) && !t.startsWith('/') && (!this.isFirstChange || t !== this.state.textValue);
   this.isFirstChange = !1, l && this.state.textValue.length < t.length && this.handleIncrementCombo(), l ? p.Z.startTyping(a) : '' === t && p.Z.stopTyping(a), s && i && (0, g.rf)(), this.setState({
@@ -336,8 +336,8 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
     guild: r,
     channel: o,
     pendingReply: c,
-    chatInputType: d
-  } = this.props, u = !1;
+    chatInputType: u
+  } = this.props, d = !1;
   if (null != a) {
     if (a.inputType === M.iw.BUILT_IN_INTEGRATION)
       return eC.S.dispatch(eR.CkL.SHAKE_APP, {
@@ -379,7 +379,7 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
         shouldClear: !0,
         shouldRefocus: !0
       });
-    null != e && (t = null != e.content && '' !== e.content ? e.content : t, u = !0 === e.tts);
+    null != e && (t = null != e.content && '' !== e.content ? e.content : t, d = !0 === e.tts);
   }
   return (0, eI.v)({
     openWarningPopout: e => this.setState({
@@ -410,9 +410,9 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
       channel: o,
       isEdit: !1
     });
-    null != p && (null != p.content && (t = p.content), null != p.tts && (u = p.tts));
+    null != p && (null != p.content && (t = p.content), null != p.tts && (d = p.tts));
     let f = Y.ZP.parse(o, t);
-    f.tts = f.tts || u;
+    f.tts = f.tts || d;
     let E = h.Z.getSendMessageOptionsForReply(c);
     if (l)
       return h.Z.sendMessage(o.id, f, void 0, E), (0, et.A6)(o.id), {
@@ -441,7 +441,7 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
         ...E,
         stickerIds: i
       }) : h.Z.sendStickers(o.id, i, t, E, f.tts) : h.Z.sendMessage(o.id, f, void 0, E);
-    return this.setState((0, L.H2)()), (0, et.A6)(o.id), (0, ei.qB)(o.id, d.drafts.type), {
+    return this.setState((0, L.H2)()), (0, et.A6)(o.id), (0, ei.qB)(o.id, u.drafts.type), {
       shouldClear: !0,
       shouldRefocus: !0
     };
@@ -473,7 +473,7 @@ let {
   currentChannelId: i
 } = t;
 return n.id !== i ? {
-  textAreaFocused: null != n && !r.tq && eu.Z.can(eR.Plq.SEND_MESSAGES, n),
+  textAreaFocused: null != n && !r.tq && ed.Z.can(eR.Plq.SEND_MESSAGES, n),
   currentChannelId: n.id
 } : null;
   }
@@ -496,7 +496,7 @@ let {
   hasModalOpen: l,
   pendingReply: r,
   chatInputType: c,
-  placeholder: u,
+  placeholder: d,
   accessibilityLabel: h,
   showQuarantinedUserBanner: p,
   filterAfterTimestamp: m,
@@ -529,7 +529,7 @@ let S = (0, i.jsxs)('div', {
         hasModalOpen: l,
         pendingReply: r,
         chatInputType: c,
-        placeholder: u,
+        placeholder: d,
         accessibilityLabel: h,
         shakeIntensity: C,
         poggermodeEnabled: g
@@ -574,9 +574,9 @@ return (0, i.jsx)(E.Z, {
               guild: a,
               narrow: v
             }),
-            (0, i.jsxs)(d.HeadingLevel, {
-              component: (0, i.jsx)(d.HiddenVisually, {
-                children: (0, i.jsx)(d.H, {
+            (0, i.jsxs)(u.HeadingLevel, {
+              component: (0, i.jsx)(u.HiddenVisually, {
+                children: (0, i.jsx)(u.H, {
                   children: ej.Z.Messages.CHANNEL_CHAT_HEADING.format({
                     channelName: n.name
                   })
@@ -714,7 +714,7 @@ super(...e), eP(this, 'inputFormRef', a.createRef()), eP(this, 'state', {
     communicationDisabledUntil: s,
     showAutomodUserProfileChatBlocker: l
   } = e;
-  return t.type === eR.d4z.DM && n ? (0, i.jsx)(ee.Z, {}) : null != s && (0, H.J)(s) && null != a && !eu.Z.can(eR.Plq.ADMINISTRATOR, a) ? (0, i.jsx)(V.T, {
+  return t.type === eR.d4z.DM && n ? (0, i.jsx)(ee.Z, {}) : null != s && (0, H.J)(s) && null != a && !ed.Z.can(eR.Plq.ADMINISTRATOR, a) ? (0, i.jsx)(V.T, {
     guild: a,
     disabledUntil: s
   }) : l ? (0, i.jsx)(B.h, {
@@ -732,14 +732,14 @@ filterAfterTimestamp: s
   } = e, {
 placeholder: l,
 accessibilityLabel: r
-  } = (0, ev.Z)(t), o = (0, ee.S)(em.default.getCurrentUser(), t), [u] = (0, G.AB)(null == n ? void 0 : n.id), h = (0, w.Ux)(null == n ? void 0 : n.id), p = (0, c.e7)([em.default], () => em.default.getCurrentUser()), m = (0, c.e7)([ec.ZP], () => {
+  } = (0, ev.Z)(t), o = (0, ee.S)(em.default.getCurrentUser(), t), [d] = (0, G.AB)(null == n ? void 0 : n.id), h = (0, w.Ux)(null == n ? void 0 : n.id), p = (0, c.e7)([em.default], () => em.default.getCurrentUser()), m = (0, c.e7)([ec.ZP], () => {
 var e, t, i;
 return null != p && null !== (i = null === (e = ec.ZP.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eR.lds, null == p ? void 0 : p.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== i && i;
   }), _ = (0, c.e7)([X.Z], () => X.Z.isEnabled()), f = (0, $.Z)(t.id), E = (0, F.Z)(t.id);
   return (0, i.jsx)(eU, {
 channel: t,
 isEditing: null != (0, c.e7)([eo.Z], () => eo.Z.getEditingMessageId(t.id)),
-hasModalOpen: (0, d.useModalsStore)(d.hasAnyModalOpenSelector),
+hasModalOpen: (0, u.useModalsStore)(u.hasAnyModalOpenSelector),
 guild: n,
 keyboardModeEnabled: (0, c.e7)([I.Z], () => I.Z.keyboardModeEnabled),
 pendingReply: (0, c.e7)([en.Z], () => en.Z.getPendingReply(t.id)),
@@ -748,7 +748,7 @@ placeholder: l,
 accessibilityLabel: r,
 filterAfterTimestamp: s,
 showQuarantinedUserBanner: o,
-communicationDisabledUntil: u,
+communicationDisabledUntil: d,
 shakeIntensity: f,
 poggermodeEnabled: _,
 isSelectedResourceChannel: E,

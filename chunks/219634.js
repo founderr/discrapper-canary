@@ -10,8 +10,8 @@ var i = n(470079),
   r = n(592125),
   o = n(720202),
   c = n(271383),
-  d = n(700785),
-  u = n(231338);
+  u = n(700785),
+  d = n(231338);
 let h = [],
   p = new Set();
 
@@ -48,11 +48,11 @@ g = i.useMemo(() => {
     return p;
   let e = new Set();
   for (let t of C) {
-    let n = d.uB({
+    let n = u.uB({
       user: t,
       context: m
     });
-    a.e$(n, u.Pl.VIEW_CHANNEL) && e.add(t);
+    a.e$(n, d.Pl.VIEW_CHANNEL) && e.add(t);
   }
   return e;
 }, [

@@ -10,8 +10,8 @@ var i = n(735250),
   r = n(481060),
   o = n(26151),
   c = n(287734),
-  d = n(40851),
-  u = n(607070),
+  u = n(40851),
+  d = n(607070),
   h = n(451576),
   p = n(358221),
   m = n(605236),
@@ -63,14 +63,14 @@ let {
 } = this.props;
 if (n || a && c === R.WtW.VOICE)
   return null;
-let d = o.isManaged(),
-  u = null,
+let u = o.isManaged(),
+  d = null,
   h = !1;
-return T.Z.supports(L.AN.VIDEO) ? l ? (u = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, h = !0) : a && c === R.WtW.VIDEO ? (t = this.handleJoinVideoCall, u = d ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, u = d ? P.Z.Messages.CONNECT : P.Z.Messages.START_VIDEO_CALL) : (h = !0, t = this.handleBrowserNotSupported, u = P.Z.Messages.BROWSER_NOT_SUPPORTED), (0, i.jsx)(b.ZP.Icon, {
+return T.Z.supports(L.AN.VIDEO) ? l ? (d = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, h = !0) : a && c === R.WtW.VIDEO ? (t = this.handleJoinVideoCall, d = u ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, d = u ? P.Z.Messages.CONNECT : P.Z.Messages.START_VIDEO_CALL) : (h = !0, t = this.handleBrowserNotSupported, d = P.Z.Messages.BROWSER_NOT_SUPPORTED), (0, i.jsx)(b.ZP.Icon, {
   icon: r.VideoIcon,
   onClick: t,
   disabled: h || s,
-  tooltip: u,
+  tooltip: d,
   tooltipColor: e
 });
   }
@@ -83,8 +83,8 @@ let {
   callUnavailable: s,
   isBlocked: o,
   channel: c,
-  canShowActivityGdmTooltip: d,
-  dismissibleContentTypes: u,
+  canShowActivityGdmTooltip: u,
+  dismissibleContentTypes: d,
   useReducedMotion: h
 } = this.props;
 if (t)
@@ -101,7 +101,7 @@ let C = (0, i.jsx)(b.ZP.Icon, {
   tooltipColor: e
 });
 return (0, i.jsx)(_.Z, {
-  contentTypes: u,
+  contentTypes: d,
   children: e => {
     let {
       visibleContent: a,
@@ -112,7 +112,7 @@ return (0, i.jsx)(_.Z, {
         position: 'bottom',
         align: 'center',
         animation: r.Popout.Animation.TRANSLATE,
-        shouldShow: n && d && !t,
+        shouldShow: n && u && !t,
         renderPopout: e => {
           let {
             closePopout: t
@@ -209,7 +209,7 @@ super(...e), y(this, 'handleStartCall', (e, t) => {
 function k(e) {
   let {
 channel: t
-  } = e, n = (0, f.Z)(), r = (0, s.e7)([p.Z], () => p.Z.getMode(t.id)), o = (0, s.e7)([S.Z], () => S.Z.isInChannel(t.id)), c = (0, s.e7)([u.Z], () => u.Z.useReducedMotion), {
+  } = e, n = (0, f.Z)(), r = (0, s.e7)([p.Z], () => p.Z.getMode(t.id)), o = (0, s.e7)([S.Z], () => S.Z.isInChannel(t.id)), c = (0, s.e7)([d.Z], () => d.Z.useReducedMotion), {
 callActive: m,
 callUnavailable: _
   } = (0, s.cj)([I.Z], () => ({
@@ -221,7 +221,7 @@ isBlocked: g
   } = (0, s.cj)([N.Z], () => ({
 notFriend: t.type === R.d4z.DM && null != E && !N.Z.isFriend(E),
 isBlocked: t.type === R.d4z.DM && null != E && N.Z.isBlocked(E)
-  })), T = (0, s.e7)([v.default], () => v.default.getUser(E)), Z = (0, d.bp)(), A = [], M = (0, h.Z)(t.id), b = (0, s.e7)([x.Z], () => x.Z.hasLayers());
+  })), T = (0, s.e7)([v.default], () => v.default.getUser(E)), Z = (0, u.bp)(), A = [], M = (0, h.Z)(t.id), b = (0, s.e7)([x.Z], () => x.Z.hasLayers());
   M && !b && A.push(l.z.ACTIVITY_GDM_CALL_TOOLTIP);
   let [j, L] = a.useState(!1);
   return (a.useEffect(() => {
