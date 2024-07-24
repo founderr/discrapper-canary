@@ -617,6 +617,9 @@ return tv.alO;
   ExperimentalLootboxIcon: function() {
 return tv.Q4k;
   },
+  ExperimentalPineappleSpongebobIcon: function() {
+return tv.aW3;
+  },
   EyeDropperIcon: function() {
 return tv.ilE;
   },
