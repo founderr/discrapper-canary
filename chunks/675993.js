@@ -1,63 +1,80 @@
 t.d(n, {
   Z: function() {
-return C;
+return I;
   }
 }), t(47120);
 var i = t(735250),
-  l = t(470079),
-  a = t(581051),
-  r = t(353381),
-  s = t(993365),
-  o = t(481060),
-  c = t(147865),
-  u = t(240991),
-  d = t(810090),
-  m = t(88410),
-  p = t(783097),
-  _ = t(520315),
-  E = t(29380),
-  A = t(689938),
-  h = t(655863),
-  f = t(910212),
-  N = t(194271);
+  a = t(470079),
+  l = t(120356),
+  r = t.n(l),
+  o = t(581051),
+  s = t(353381),
+  c = t(993365),
+  u = t(481060),
+  d = t(147865),
+  m = t(240991),
+  p = t(810090),
+  _ = t(88410),
+  f = t(783097),
+  C = t(695676),
+  h = t(520315),
+  A = t(29380),
+  E = t(689938),
+  N = t(655863),
+  v = t(910212),
+  x = t(194271);
 
-function C(e) {
+function I(e) {
   let {
 channel: n,
 application: t,
-videoUrl: a,
-imageCoverUrl: r,
+videoUrl: l,
+imageCoverUrl: o,
 sectionName: s
-  } = e, o = l.useMemo(() => {
+  } = e, c = a.useMemo(() => {
 var e;
-return null !== (e = (0, p.jD)(t)) && void 0 !== e ? e : '';
-  }, [t]), c = null != a || null != r;
-  return (0, i.jsx)('div', {
-className: h.container,
+return null !== (e = (0, f.jD)(t)) && void 0 !== e ? e : '';
+  }, [t]), u = null != l || null != o, {
+isSlideReady: d
+  } = (0, C.hH)(), [m, _] = a.useState(!1);
+  return a.useEffect(() => {
+d && _(!0);
+  }, [d]), (0, i.jsx)('div', {
+className: N.container,
 children: (0, i.jsxs)('div', {
-  className: h.profileAndVideoContainer,
+  className: N.profileAndVideoContainer,
   children: [
-    c ? (0, i.jsx)(d.Z, {
-      loop: !0,
-      autoPlay: !0,
-      muted: !0,
-      className: h.videoWithOverview,
-      src: a,
-      poster: r
+    u ? (0, i.jsxs)('div', {
+      className: N.videoContainer,
+      children: [
+        m ? (0, i.jsx)(p.Z, {
+          className: r()(N.videoCover, N.video),
+          loop: !0,
+          muted: !0,
+          autoPlay: !0,
+          src: l,
+          poster: o
+        }) : null,
+        (0, i.jsx)('img', {
+          className: N.videoCover,
+          src: o,
+          'aria-label': E.Z.Messages.IMAGE
+        })
+      ]
     }) : null,
     (0, i.jsxs)('div', {
-      className: c ? h.overviewContainerWithVideo : h.overviewContainerNoVideo,
+      className: u ? N.overviewContainerWithVideo : N.overviewContainerNoVideo,
       children: [
-        (0, i.jsx)(v, {
+        (0, i.jsx)(g, {
           application: t
         }),
-        (0, i.jsx)(I, {
-          application: t
-        }),
-        o.length > 0 ? (0, i.jsx)(T, {
-          description: o
-        }) : null,
         (0, i.jsx)(P, {
+          application: t
+        }),
+        c.length > 0 ? (0, i.jsx)(T, {
+          description: c
+        }) : null,
+        (0, i.jsx)(S, {
           channel: n,
           application: t,
           sectionName: s
@@ -69,41 +86,41 @@ children: (0, i.jsxs)('div', {
   });
 }
 
-function v(e) {
+function g(e) {
   var n;
   let {
 application: t
-  } = e, l = (0, p.BQ)(t) ? t.name : null !== (n = (0, p.$d)(t)) && void 0 !== n ? n : '';
+  } = e, a = (0, f.BQ)(t) ? t.name : null !== (n = (0, f.$d)(t)) && void 0 !== n ? n : '';
   return (0, i.jsx)('div', {
-className: h.titleContainer,
+className: N.titleContainer,
 children: (0, i.jsx)('div', {
-  className: h.titleInnerContainer,
-  children: (0, i.jsx)(o.Heading, {
+  className: N.titleInnerContainer,
+  children: (0, i.jsx)(u.Heading, {
     variant: 'heading-xl/extrabold',
-    children: l
+    children: a
   })
 })
   });
 }
 
-function I(e) {
+function P(e) {
   let {
 application: n
-  } = e, t = l.useMemo(() => {
+  } = e, t = a.useMemo(() => {
 var e;
-return (0, p.BQ)(n) && null !== (e = null == n ? void 0 : n.tags) && void 0 !== e ? e : [];
+return (0, f.BQ)(n) && null !== (e = null == n ? void 0 : n.tags) && void 0 !== e ? e : [];
   }, [n]);
-  return (0, p.ye)({
+  return (0, f.ye)({
 application: n
   }) ? (0, i.jsxs)('div', {
-className: h.tagsContainer,
+className: N.tagsContainer,
 children: [
-  (0, i.jsx)(x, {
+  (0, i.jsx)(L, {
     application: n
   }),
   t.map((e, n) => (0, i.jsx)('div', {
-    className: h.tagContainer,
-    children: (0, i.jsx)(s.x, {
+    className: N.tagContainer,
+    children: (0, i.jsx)(c.x, {
       variant: 'text-sm/semibold',
       color: 'interactive-normal',
       children: e
@@ -113,53 +130,53 @@ children: [
   }) : null;
 }
 
-function x(e) {
+function L(e) {
   var n;
   let {
 application: t
   } = e;
-  if (!(0, p.ye)({
+  if (!(0, f.ye)({
   application: t
 }))
 return null;
-  let l = null !== (n = 'maxParticipants' in t ? t.maxParticipants : 'max_participants' in t ? t.max_participants : 0) && void 0 !== n ? n : 0;
+  let a = null !== (n = 'maxParticipants' in t ? t.maxParticipants : 'max_participants' in t ? t.max_participants : 0) && void 0 !== n ? n : 0;
   return (0, i.jsxs)('div', {
-className: h.tagContainer,
+className: N.tagContainer,
 children: [
   (0, i.jsx)('img', {
     className: void 0,
-    src: N,
+    src: x,
     alt: '',
     'aria-hidden': !0
   }),
-  (0, i.jsx)(s.x, {
+  (0, i.jsx)(c.x, {
     variant: 'text-sm/semibold',
     color: 'interactive-normal',
-    children: (0, c.lY)(l)
+    children: (0, d.lY)(a)
   })
 ]
   });
 }
 
-function P(e) {
+function S(e) {
   let {
 channel: n,
 application: t,
-sectionName: l
-  } = e, a = (0, m.Z)({
+sectionName: a
+  } = e, l = (0, _.Z)({
 applicationId: t.id,
 channel: n
   });
-  return (0, p.BQ)(t) && (0, p.ye)({
+  return (0, f.BQ)(t) && (0, f.ye)({
 application: t
   }) ? (0, i.jsx)('div', {
-className: h.entrypointContainer,
-children: null != t ? (0, i.jsx)(E.Z, {
+className: N.entrypointContainer,
+children: null != t ? (0, i.jsx)(A.Z, {
   channel: n,
   application: t,
-  sectionName: l,
-  commandName: a,
-  buttonSize: o.ButtonSizes.MAX
+  sectionName: a,
+  commandName: l,
+  buttonSize: u.ButtonSizes.MAX
 }) : null
   }) : null;
 }
@@ -167,87 +184,87 @@ children: null != t ? (0, i.jsx)(E.Z, {
 function T(e) {
   let {
 description: n
-  } = e, [t, c] = l.useState(!0);
-  l.useLayoutEffect(() => c(!1), []);
-  let d = l.useMemo(() => (0, u.YP)(n), [n]),
+  } = e, [t, l] = a.useState(!0);
+  a.useLayoutEffect(() => l(!1), []);
+  let r = a.useMemo(() => (0, m.YP)(n), [n]),
 {
-  ref: m,
+  ref: d,
   lineHeight: p,
-  lineCount: E
+  lineCount: _
 } = function() {
-  let e = l.useRef(null),
-    [n, t] = l.useState(null),
-    [i, a] = l.useState(null);
-  return l.useLayoutEffect(() => {
+  let e = a.useRef(null),
+    [n, t] = a.useState(null),
+    [i, l] = a.useState(null);
+  return a.useLayoutEffect(() => {
     let n = e.current;
     if (null === n || 0 === n.clientHeight)
       return;
     let i = parseInt(getComputedStyle(n).lineHeight);
     if (!isNaN(i))
-      t(i), a(Math.floor(n.clientHeight / i));
+      t(i), l(Math.floor(n.clientHeight / i));
   }, []), {
     ref: e,
     lineHeight: n,
     lineCount: i
   };
 }(),
-N = l.useMemo(() => {
-  if (null == p || null == E)
+f = a.useMemo(() => {
+  if (null == p || null == _)
     return {
       key: 0
     };
-  let e = p * E;
+  let e = p * _;
   return {
     key: 1,
     minHeightOverride: Math.min(e, 1 * p),
     maxHeightOverride: e
   };
 }, [
-  E,
+  _,
   p
 ]),
 {
   ref: C,
-  isTransitioning: v,
-  onTransitionEnd: I
-} = (0, _.Z)({
+  isTransitioning: A,
+  onTransitionEnd: x
+} = (0, h.Z)({
   isExpanded: t,
-  ...N
+  ...f
 }),
-x = t || v;
+I = t || A;
   return (0, i.jsxs)('div', {
-className: h.descriptionContainer,
+className: N.descriptionContainer,
 children: [
   (0, i.jsx)('div', {
     ref: C,
-    className: h.overflowHidden,
-    onTransitionEnd: I,
-    children: (0, i.jsx)(s.x, {
-      ref: m,
-      className: f.markup,
+    className: N.overflowHidden,
+    onTransitionEnd: x,
+    children: (0, i.jsx)(c.x, {
+      ref: d,
+      className: v.markup,
       variant: 'text-sm/medium',
-      lineClamp: x ? void 0 : 1,
+      lineClamp: I ? void 0 : 1,
       style: {
-        maxHeight: x ? void 0 : N.minHeightOverride
+        maxHeight: I ? void 0 : f.minHeightOverride
       },
-      children: d
+      children: r
     })
   }),
-  null != E && E > 1 ? (0, i.jsxs)(o.Clickable, {
-    className: h.expandableDescriptionClickable,
-    onClick: () => c(e => !e),
+  null != _ && _ > 1 ? (0, i.jsxs)(u.Clickable, {
+    className: N.expandableDescriptionClickable,
+    onClick: () => l(e => !e),
     children: [
-      (0, i.jsx)(s.x, {
+      (0, i.jsx)(c.x, {
         variant: 'text-sm/semibold',
         color: 'text-brand',
-        children: x ? A.Z.Messages.APP_LAUNCHER_SHOW_LESS : A.Z.Messages.APP_LAUNCHER_SHOW_MORE
+        children: I ? E.Z.Messages.APP_LAUNCHER_SHOW_LESS : E.Z.Messages.APP_LAUNCHER_SHOW_MORE
       }),
-      x ? (0, i.jsx)(r.u, {
+      I ? (0, i.jsx)(s.u, {
         size: 'sm',
-        color: o.tokens.colors.TEXT_BRAND
-      }) : (0, i.jsx)(a.C, {
+        color: u.tokens.colors.TEXT_BRAND
+      }) : (0, i.jsx)(o.C, {
         size: 'sm',
-        color: o.tokens.colors.TEXT_BRAND
+        color: u.tokens.colors.TEXT_BRAND
       })
     ]
   }) : null

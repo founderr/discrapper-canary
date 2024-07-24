@@ -1,7 +1,9 @@
 e.exports = {
   container: 'container_e80fe9',
   profileAndVideoContainer: 'profileAndVideoContainer_e80fe9',
-  videoWithOverview: 'videoWithOverview_e80fe9',
+  videoContainer: 'videoContainer_e80fe9',
+  videoCover: 'videoCover_e80fe9',
+  video: 'video_e80fe9',
   overviewContainerWithVideo: 'overviewContainerWithVideo_e80fe9',
   overviewContainerNoVideo: 'overviewContainerNoVideo_e80fe9',
   titleContainer: 'titleContainer_e80fe9',
