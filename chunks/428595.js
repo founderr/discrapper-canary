@@ -381,6 +381,7 @@ A.Z
 'codeBlock',
 'br',
 'blockQuote',
+'autolink',
 'url',
 'attachmentLink',
 'mention',
