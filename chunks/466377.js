@@ -28,15 +28,15 @@ var r, i, a = n(735250),
   u = n(338545),
   c = n(990547),
   d = n(748780),
-  _ = n(186325),
-  E = n(693789),
-  f = n(507274),
-  h = n(84735),
-  p = n(337033),
-  m = n(788698),
-  I = n(742746),
-  T = n(147479),
-  g = n(481060),
+  _ = n(143450),
+  E = n(186325),
+  f = n(693789),
+  h = n(507274),
+  p = n(84735),
+  m = n(337033),
+  I = n(788698),
+  T = n(742746),
+  g = n(147479),
   S = n(285952),
   A = n(602091),
   N = n(231338),
@@ -57,15 +57,15 @@ transitionState: n,
 children: r,
 size: i = 'small',
 role: o = 'dialog',
-className: E,
-fullscreenOnMobile: p = !0,
-hideShadow: m = !1,
-onAnimationEnd: I = N.dG,
-returnRef: T,
+className: f,
+fullscreenOnMobile: m = !0,
+hideShadow: I = !1,
+onAnimationEnd: T = N.dG,
+returnRef: g,
 ...S
   } = e, v = n === A.Dv.ENTERING || n === A.Dv.ENTERED, {
 reducedMotion: C
-  } = s.useContext(_.S), y = (0, g.useSpring)({
+  } = s.useContext(E.S), y = (0, _.q)({
 opacity: v ? 1 : 0,
 transform: v || C.enabled ? 'scale(1)' : 'scale(0.7)',
 config: {
@@ -73,7 +73,7 @@ config: {
   easing: v ? d.Z.Easing.inOut(d.Z.Easing.back()) : d.Z.Easing.quad,
   clamp: !0
 },
-onRest: I
+onRest: T
   }, 'animate-always'), D = s.useRef(null), L = null != S['aria-label'], b = null != S['aria-labelledby'], M = s.useId(), P = null !== (t = S['aria-labelledby']) && void 0 !== t ? t : M, U = s.useMemo(() => ({
 headerId: P,
 headerIdIsManaged: b
@@ -83,21 +83,21 @@ b
   ]);
   return (0, a.jsx)(A.zM.Provider, {
 value: U,
-children: (0, a.jsx)(f.V, {
+children: (0, a.jsx)(h.V, {
   className: O.focusLock,
   role: o,
-  returnRef: T,
+  returnRef: g,
   impressionType: c.ImpressionTypes.MODAL,
   'aria-labelledby': L ? void 0 : U.headerId,
   ...S,
   children: (0, a.jsx)(u.animated.div, {
-    className: l()(E, O.root, R[i], {
-      [O.fullscreenOnMobile]: p,
-      [O.rootWithShadow]: !m
+    className: l()(f, O.root, R[i], {
+      [O.fullscreenOnMobile]: m,
+      [O.rootWithShadow]: !I
     }),
     ref: D,
     style: y,
-    children: (0, a.jsx)(h.J, {
+    children: (0, a.jsx)(p.J, {
       containerRef: D,
       children: r
     })
@@ -137,18 +137,18 @@ scrollbarType: i,
   } = e, o = function(e) {
 switch (null != e ? e : 'thin') {
   case 'auto':
-    return T.yW;
+    return g.yW;
   case 'none':
-    return T.xV;
+    return g.xV;
   default:
-    return T.h2;
+    return g.h2;
 }
   }(i);
   return (0, a.jsx)(o, {
 className: l()(O.content, t),
 ref: r,
 ...s,
-children: (0, a.jsx)(p.y, {
+children: (0, a.jsx)(m.y, {
   children: n
 })
   });
@@ -166,18 +166,18 @@ wrap: null !== (i = e.wrap) && void 0 !== i ? i : S.Z.Wrap.NO_WRAP,
 className: l()(O.footer, e.className, {
   [O.footerSeparator]: null === (s = e.separator) || void 0 === s || s
 }),
-children: (0, a.jsx)(p.y, {
+children: (0, a.jsx)(m.y, {
   children: e.children
 })
   });
 }
 
 function b(e) {
-  return (0, a.jsx)(E.zx, {
+  return (0, a.jsx)(f.zx, {
 focusProps: e.focusProps,
 'aria-label': v.Z.Messages.CLOSE,
-look: E.zx.Looks.BLANK,
-size: E.zx.Sizes.NONE,
+look: f.zx.Looks.BLANK,
+size: f.zx.Sizes.NONE,
 onClick: e.onClick,
 innerClassName: l()(e.innerClassName, {
   [O.closeWithCircleBackground]: e.withCircleBackground
@@ -186,7 +186,7 @@ className: l()(e.className, {
   [O.hideOnFullscreen]: e.hideOnFullscreen,
   [O.close]: !e.withCircleBackground
 }),
-children: (0, a.jsx)(m.F, {
+children: (0, a.jsx)(I.F, {
   size: 'md',
   color: 'currentColor',
   className: l()(e.innerClassName, O.closeIcon)
@@ -200,7 +200,7 @@ className: t,
 scrollerRef: n,
 ...r
   } = e;
-  return (0, a.jsx)(I.Tv, {
+  return (0, a.jsx)(T.Tv, {
 className: t,
 ref: n,
 ...r
