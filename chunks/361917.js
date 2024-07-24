@@ -66,7 +66,7 @@ searchQuery: l,
 setSearchQuery: r,
 setScroller: o,
 isScrollCloseToBottom: s
-  } = e, d = (0, c.e7)([m.Z], () => m.Z.getIsEnabled(), []), _ = t === S._b.TEXT, f = t === S._b.TEXT, C = t === S._b.TEXT, h = t === S._b.VOICE, A = t === S._b.TEXT, [E, N] = K(_), [v, x] = K(f), [I, g] = K(C), [P, L] = K(h), T = E && v && I && P, R = (C || f) && !T, b = h && d;
+  } = e, d = (0, c.e7)([m.Z], () => m.Z.getIsEnabled(), []), _ = t === S._b.TEXT, f = t === S._b.TEXT, C = t === S._b.TEXT, h = t === S._b.VOICE, A = t === S._b.TEXT, [E, N] = $(_), [v, x] = $(f), [I, g] = $(C), [P, L] = $(h), T = E && v && I && P, R = (C || f) && !T, b = h && d;
   a.useEffect(() => {
 (0, p.w1)({
   guildId: n.getGuildId(),
@@ -520,7 +520,7 @@ children: m ? F.map((e, n) => {
       })
     ]
   }, n);
-}) : r.map(e => (0, i.jsx)($, {
+}) : r.map(e => (0, i.jsx)(K, {
   recommendationsSection: e,
   remainingActivities: u,
   isInstallOnDemand: s
@@ -528,7 +528,7 @@ children: m ? F.map((e, n) => {
   });
 }
 
-function $(e) {
+function K(e) {
   let n, t, {
   recommendationsSection: l,
   remainingActivities: r,
@@ -627,7 +627,7 @@ children: [
   });
 }
 
-function K(e) {
+function $(e) {
   let [n, t] = a.useState(!e);
   return [
 n,

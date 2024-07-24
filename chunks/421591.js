@@ -81,7 +81,7 @@ return a.useEffect(() => {
 
   function e() {
     if (null != n)
-      r.current = n.scrollTop, l(n.scrollHeight - (n.scrollTop + n.clientHeight) < 0.5 * _.lv);
+      r.current = n.scrollTop, l(n.scrollHeight - (n.scrollTop + n.clientHeight) < 0.5 * _.K7);
   }
 }, [n]), {
   setScroller: t,

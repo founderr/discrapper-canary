@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-return c;
+return d;
   }
 }), t(47120);
 var n = t(735250),
@@ -11,64 +11,64 @@ var n = t(735250),
   i = t(393869),
   E = t(594174),
   _ = t(689938),
-  d = t(660817);
+  N = t(660817);
 
-function c(e) {
+function d(e) {
   let {
 onNext: s,
 onClose: t
-  } = e, [c, N] = o.useState(!1), u = (0, a.e7)([E.default], () => E.default.getCurrentUser()), A = async e => {
-e.preventDefault(), N(!0);
+  } = e, [d, c] = o.useState(!1), A = (0, a.e7)([E.default], () => E.default.getCurrentUser()), u = async e => {
+e.preventDefault(), c(!0);
 try {
   await (0, i.i)(), s();
 } catch (s) {
   let e = new r.Z(s).getAnyErrorMessage();
   null != e && (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));
 } finally {
-  N(!1);
+  c(!1);
 }
   };
   return (0, n.jsxs)('form', {
-onSubmit: A,
+onSubmit: u,
 children: [
   (0, n.jsxs)(l.ModalHeader, {
     separator: !1,
-    className: d.header,
+    className: N.header,
     children: [
       (0, n.jsx)(l.Heading, {
-        className: d.title,
+        className: N.title,
         variant: 'heading-xl/extrabold',
         children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_TITLE
       }),
       (0, n.jsx)(l.ModalCloseButton, {
         onClick: t,
-        className: d.modalCloseButton
+        className: N.modalCloseButton
       })
     ]
   }),
   (0, n.jsx)(l.ModalContent, {
-    className: d.content,
+    className: N.content,
     children: (0, n.jsx)(l.Text, {
-      className: d.description,
+      className: N.description,
       variant: 'text-md/normal',
       children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_DESCRIPTION_NO_LINK.format({
-        oldEmail: null == u ? void 0 : u.email
+        oldEmail: null == A ? void 0 : A.email
       })
     })
   }),
   (0, n.jsxs)(l.ModalFooter, {
-    className: d.modalFooter,
+    className: N.modalFooter,
     children: [
       (0, n.jsx)(l.Button, {
         type: 'submit',
         color: l.Button.Colors.BRAND,
         size: l.Button.Sizes.MEDIUM,
-        submitting: c,
-        className: d.__invalid_submit,
+        submitting: d,
+        className: N.__invalid_submit,
         children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_BUTTON
       }),
       (0, n.jsx)(l.Button, {
-        className: d.__invalid_cancel,
+        className: N.__invalid_cancel,
         look: l.Button.Looks.LINK,
         color: l.Button.Colors.PRIMARY,
         onClick: t,

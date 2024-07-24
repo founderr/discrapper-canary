@@ -187,7 +187,7 @@ onTransitionEnd: O
 key: o,
 isExpanded: M,
 durationMs: 200,
-maxAnimationHeight: L.lv
+maxAnimationHeight: L.K7
   });
   a.useEffect(() => {
 !x && E && (0, c.yw)(S.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
