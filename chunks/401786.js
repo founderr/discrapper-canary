@@ -25,12 +25,12 @@ var n, a, i = s(735250),
   p = s(285952),
   R = s(267642),
   x = s(74538),
-  f = s(937615),
-  M = s(518062),
+  M = s(937615),
+  f = s(518062),
   D = s(474936),
   P = s(231338),
   L = s(689938),
-  b = s(637815);
+  b = s(326785);
 
 function Z(e) {
   let {
@@ -183,7 +183,7 @@ V = F || y ? G.total - B.total : -B.total,
 } = P;
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsx)(M.Z, {
+  (0, i.jsx)(f.Z, {
     onClose: E
   }),
   (0, i.jsxs)(d.ModalContent, {
@@ -204,7 +204,7 @@ children: [
             label: L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_INVOICE_SUBSCRIPTION_CANCELLED.format({
               subscriptionCount: 1
             }),
-            value: (0, f.og)((0, f.T4)(V, a.currency), Y, w),
+            value: (0, M.og)((0, M.T4)(V, a.currency), Y, w),
             className: b.invoiceCancelRow
           }),
           null != U && U.length > 0 ? (0, i.jsxs)('div', {

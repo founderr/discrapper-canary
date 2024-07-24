@@ -9,7 +9,7 @@ return s;
 var r = n(735250);
 n(470079);
 var i = n(772848),
-  a = n(587310);
+  a = n(944516);
 
 function s() {
   return (0, r.jsx)('svg', {

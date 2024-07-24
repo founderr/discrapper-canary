@@ -12,7 +12,7 @@ var s = n(481060),
   l = n(981631),
   c = n(987650),
   d = n(689938),
-  u = n(471961);
+  u = n(482765);
 
 function h() {
   return (0, i.jsx)('div', {
@@ -57,7 +57,7 @@ case c.nc.GO_LIVE_VOICE: {
           default: e
         } = await Promise.all([
           n.e('79477'),
-          n.e('42619')
+          n.e('99293')
         ]).then(n.bind(n, 60594));
         return t => (0, i.jsx)(e, {
           ...t,
@@ -99,7 +99,7 @@ case c.nc.GO_LIVE_NON_VOICE: {
           default: e
         } = await Promise.all([
           n.e('79477'),
-          n.e('42619')
+          n.e('99293')
         ]).then(n.bind(n, 60594));
         return t => (0, i.jsx)(e, {
           ...t,

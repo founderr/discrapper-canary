@@ -10,7 +10,7 @@ var a = n(120356),
   T = n(113434),
   E = n(524824),
   I = n(330039),
-  c = n(601084);
+  c = n(260370);
 t.Z = function(e) {
   let {
 className: t,

@@ -17,7 +17,7 @@ var n = s(735250),
   T = s(107828),
   I = s(727785),
   S = s(689938),
-  N = s(741632);
+  N = s(183500);
 
 function C() {}
 let m = [I.h8.VOICE_CHANNEL];
@@ -90,7 +90,7 @@ children: (0, n.jsxs)(u.Z, {
   children: [
     (0, n.jsx)('div', {
       className: N.selectedVoiceChannel,
-      children: (0, n.jsx)(f, {
+      children: (0, n.jsx)(M, {
         channelId: c
       })
     }),
@@ -130,8 +130,8 @@ return {
   disableMouseFocus: s
 };
   }(), {
-query: f,
-updateQuery: M,
+query: M,
+updateQuery: f,
 queryResults: D
   } = (0, l.Z)({
 visible: !0,
@@ -155,7 +155,7 @@ let t = '' !== e,
     return s;
   }, [t]);
 return t ? null : s;
-  }(f), {
+  }(M), {
 focusedIndex: L,
 setFocusedIndex: b
   } = function(e) {
@@ -164,7 +164,7 @@ return e !== n.current && 0 !== t && s(0), a.useEffect(() => void(n.current = e)
   focusedIndex: t,
   setFocusedIndex: s
 };
-  }(f);
+  }(M);
   a.useEffect(() => {
 let {
   current: e
@@ -195,8 +195,8 @@ children: (0, n.jsxs)(r.ModalRoot, {
     (0, n.jsx)('div', {
       className: N.inputWrapper,
       children: (0, n.jsx)(r.TextInput, {
-        value: f,
-        onChange: M,
+        value: M,
+        onChange: f,
         onKeyDown: function(e) {
           x();
           let t = e.key.toLowerCase();
@@ -232,8 +232,8 @@ children: (0, n.jsxs)(r.ModalRoot, {
         spellCheck: !1
       })
     }),
-    0 === Z && '' !== f && (0, n.jsx)(p, {}),
-    (Z > 0 || '' === f) && (0, n.jsx)(r.ListThin, {
+    0 === Z && '' !== M && (0, n.jsx)(p, {}),
+    (Z > 0 || '' === M) && (0, n.jsx)(r.ListThin, {
       innerId: u,
       innerRole: 'listbox',
       'aria-label': S.Z.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
@@ -282,7 +282,7 @@ children: (0, n.jsxs)(r.ModalRoot, {
   });
 }
 
-function f(e) {
+function M(e) {
   let {
 channelId: t
   } = e, {

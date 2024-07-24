@@ -1,4 +1,4 @@
-let a = (0, t(818083).B)({
+let l = (0, n(818083).B)({
   kind: 'user',
   id: '2024-04_gdm_presence',
   label: 'Group DM Presence',
@@ -72,4 +72,4 @@ isTypingIndicatorEnabled: !1
 }
   ]
 });
-i.Z = a;
+t.Z = l;

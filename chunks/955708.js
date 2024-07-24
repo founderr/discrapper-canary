@@ -12,7 +12,7 @@ var s, o, r = n(735250),
   N = n(745982),
   l = n(463439),
   T = n(689938),
-  I = n(303690);
+  I = n(567214);
 (o = s || (s = {}))[o.INTRO = 0] = 'INTRO', o[o.SAFETY_TIPS = 1] = 'SAFETY_TIPS', o[o.TAKE_ACTION = 2] = 'TAKE_ACTION';
 t.default = e => {
   let {

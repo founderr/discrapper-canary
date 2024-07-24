@@ -6,7 +6,7 @@ return l;
 var r = n(735250),
   i = n(470079),
   a = n(561779),
-  s = n(575502);
+  s = n(251100);
 let o = e => ''.concat(e.toFixed(0), '%'),
   l = i.forwardRef(function(e, t) {
 let {

@@ -1,47 +1,47 @@
-let o;
-t(653041);
-var r, a = t(442837),
-  i = t(570140);
+let t;
+a(653041);
+var o, r = a(442837),
+  i = a(570140);
 
-function c(e, n, t) {
+function c(e, n, a) {
   return n in e ? Object.defineProperty(e, n, {
-value: t,
+value: a,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[n] = t, e;
+  }) : e[n] = a, e;
 }
-let l = {
+let s = {
   hasAcceptedStoreTerms: !1,
   hasAcceptedEulaIds: []
 };
-class s extends(r = a.ZP.PersistedStore) {
+class l extends(o = r.ZP.PersistedStore) {
   initialize(e) {
-o = null != e ? e : l;
+t = null != e ? e : s;
   }
   getState() {
-return o;
+return t;
   }
   get hasAcceptedStoreTerms() {
-return o.hasAcceptedStoreTerms;
+return t.hasAcceptedStoreTerms;
   }
   hasAcceptedEULA(e) {
-return o.hasAcceptedEulaIds.includes(e);
+return t.hasAcceptedEulaIds.includes(e);
   }
 }
-c(s, 'displayName', 'ApplicationStoreUserSettingsStore'), c(s, 'persistKey', 'ApplicationStoreUserSettingsStore'), c(s, 'migrations', [e => null == e.hasAcceptedEulaIds ? {
+c(l, 'displayName', 'ApplicationStoreUserSettingsStore'), c(l, 'persistKey', 'ApplicationStoreUserSettingsStore'), c(l, 'migrations', [e => null == e.hasAcceptedEulaIds ? {
   ...e,
   hasAcceptedEulaIds: []
-} : e]), n.Z = new s(i.Z, {
+} : e]), n.Z = new l(i.Z, {
   APPLICATION_STORE_ACCEPT_STORE_TERMS: function() {
-o.hasAcceptedStoreTerms = !0;
+t.hasAcceptedStoreTerms = !0;
   },
   APPLICATION_STORE_ACCEPT_EULA: function(e) {
 let {
   eulaId: n
 } = e;
-if (o.hasAcceptedEulaIds.includes(n))
+if (t.hasAcceptedEulaIds.includes(n))
   return !1;
-o.hasAcceptedEulaIds.push(n);
+t.hasAcceptedEulaIds.push(n);
   }
 });

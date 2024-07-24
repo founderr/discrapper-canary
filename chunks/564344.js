@@ -25,7 +25,7 @@ var n = s(735250),
   h = s(526761),
   O = s(726985),
   p = s(689938),
-  R = s(798042);
+  R = s(537865);
 
 function x() {
   c.Z.useExperiment({
@@ -38,9 +38,9 @@ s = (0, i.e7)([
   S.Z
 ], () => _.Z.showNotice() || S.Z.showNotice()),
 x = null != e ? e : t,
-f = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
+M = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
 {
-  subsection: M,
+  subsection: f,
   setSubsection: D
 } = (0, A.Z)(),
 {
@@ -52,7 +52,7 @@ f = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
 } = (0, I.E)();
 
   function Z(t) {
-if (M !== t) {
+if (f !== t) {
   if (s) {
     C.S.dispatch(g.CkL.SHAKE_APP, {
       duration: 300,
@@ -64,12 +64,12 @@ if (M !== t) {
 }
   }
   a.useEffect(() => {
-null != f && (0, u.Z)(f.id, f.getAvatarURL(null == x ? void 0 : x.id, 80), {
+null != M && (0, u.Z)(M.id, M.getAvatarURL(null == x ? void 0 : x.id, 80), {
   guildId: null == x ? void 0 : x.id
 });
   }, [
 null == x ? void 0 : x.id,
-f
+M
   ]);
   let v = !0,
 j = !0;
@@ -85,7 +85,7 @@ children: (0, n.jsxs)(r.HeadingLevel, {
       className: R.tabBar,
       type: 'top',
       look: 'brand',
-      selectedItem: M,
+      selectedItem: f,
       onItemSelect: Z,
       children: [
         j ? (0, n.jsx)(r.TabBar.Item, {
@@ -100,7 +100,7 @@ children: (0, n.jsxs)(r.HeadingLevel, {
         }, h.NB.GUILD) : null
       ]
     }),
-    M === h.NB.GUILD ? (0, n.jsx)(E.Z, {
+    f === h.NB.GUILD ? (0, n.jsx)(E.Z, {
       selectedGuild: x
     }) : (0, n.jsx)(T.Z, {})
   ]

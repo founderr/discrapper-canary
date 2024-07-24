@@ -1,4 +1,4 @@
-i.d(n, {
+o.d(n, {
   q: function() {
 return t;
   }
@@ -7,7 +7,7 @@ return t;
 function t(e) {
   let {
 proxyURL: n,
-url: i
+url: o
   } = e;
-  return null != n && '' !== n ? n : i;
+  return null != n && '' !== n ? n : o;
 }

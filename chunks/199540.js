@@ -18,7 +18,7 @@ var i = n(735250),
   f = n(674552),
   m = n(981631),
   g = n(689938),
-  C = n(325093);
+  C = n(524343);
 let I = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
   E = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE);
 

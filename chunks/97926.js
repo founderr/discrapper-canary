@@ -14,7 +14,7 @@ var n = s(735250),
   I = s(46140),
   S = s(981631),
   N = s(689938),
-  C = s(299021);
+  C = s(165549);
 
 function m(e) {
   if (null == e)
@@ -33,7 +33,7 @@ isFetchingCurrentQuests: t
 fetchPolicy: 'cache-and-network'
   }), s = (0, c.EH)(), A = (0, l.q)({
 location: I.dr.USER_SETTINGS_GIFT_INVENTORY
-  }), g = (0, T.Z)(r.Z.USER_SETTINGS_GIFT_INVENTORY), [h, O] = a.useState(!0), [p, R] = a.useState([]), [x, f] = a.useState([]), M = a.useMemo(() => h ? t ? 'unsorted' : 'pending_sort' : 'sorted', [
+  }), g = (0, T.Z)(r.Z.USER_SETTINGS_GIFT_INVENTORY), [h, O] = a.useState(!0), [p, R] = a.useState([]), [x, M] = a.useState([]), f = a.useMemo(() => h ? t ? 'unsorted' : 'pending_sort' : 'sorted', [
 h,
 t
   ]);
@@ -43,7 +43,7 @@ O(!0);
 t,
 s
   ]), a.useEffect(() => {
-if ('pending_sort' === M) {
+if ('pending_sort' === f) {
   let {
     sortedQuestIds: t,
     sections: n
@@ -118,12 +118,12 @@ if ('pending_sort' === M) {
     let a = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return !(null !== (n = s.get(e.id)) && void 0 !== n && n) || a;
   }));
-  R(t), f(n), O(!1);
+  R(t), M(n), O(!1);
 }
   }, [
 e,
 s,
-M
+f
   ]);
   let D = x.every(e => {
 let {
@@ -131,7 +131,7 @@ let {
 } = e;
 return t.length > 0;
   });
-  return t || 'sorted' !== M ? (0, n.jsx)(i.Spinner, {
+  return t || 'sorted' !== f ? (0, n.jsx)(i.Spinner, {
 className: C.spinner
   }) : 0 === p.length ? null : (0, n.jsxs)(i.FormSection, {
 className: C.questsContainer,

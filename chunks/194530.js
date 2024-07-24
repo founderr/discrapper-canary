@@ -13,7 +13,7 @@ var n = s(735250),
   d = s(155433),
   _ = s(981631),
   E = s(689938),
-  u = s(312254);
+  u = s(440478);
 
 function T(e) {
   var t, s, T, I;
@@ -23,11 +23,11 @@ onSuccess: N,
 onClose: C,
 requirementsUpdated: m,
 noSkip: A = !1
-  } = e, [g, h] = a.useState(''), [O, p] = a.useState(''), [R, x] = a.useState(''), [f, M] = a.useState(null), [D, P] = a.useState(null), L = (0, i.e7)([l.Z], () => l.Z.getErrors()), b = (0, i.e7)([l.Z], () => l.Z.getFormState()), Z = a.useRef(null);
+  } = e, [g, h] = a.useState(''), [O, p] = a.useState(''), [R, x] = a.useState(''), [M, f] = a.useState(null), [D, P] = a.useState(null), L = (0, i.e7)([l.Z], () => l.Z.getErrors()), b = (0, i.e7)([l.Z], () => l.Z.getFormState()), Z = a.useRef(null);
   async function v(e) {
 e.preventDefault(), (0, o.b9)();
 let t = !1;
-if ('' === O ? (M(E.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), t = !0) : M(null), O !== R ? (P(E.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), t = !0) : P(null), t)
+if ('' === O ? (f(E.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), t = !0) : f(null), O !== R ? (P(E.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), t = !0) : P(null), t)
   return;
 let s = await (0, o.Mn)({
   password: g,
@@ -89,7 +89,7 @@ children: [
           (0, n.jsx)(r.FormItem, {
             className: u.newPassword,
             title: E.Z.Messages.FORM_LABEL_NEW_PASSWORD,
-            error: null !== (I = null !== (T = null == L ? void 0 : null === (s = L.new_password) || void 0 === s ? void 0 : s[0]) && void 0 !== T ? T : f) && void 0 !== I ? I : void 0,
+            error: null !== (I = null !== (T = null == L ? void 0 : null === (s = L.new_password) || void 0 === s ? void 0 : s[0]) && void 0 !== T ? T : M) && void 0 !== I ? I : void 0,
             children: (0, n.jsx)(r.TextInput, {
               type: 'password',
               value: O,

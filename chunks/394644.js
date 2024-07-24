@@ -39,8 +39,8 @@ var n = s(470079),
   p = s(202527),
   R = s(695346),
   x = s(620163),
-  f = s(295545),
-  M = s(168308),
+  M = s(295545),
+  f = s(168308),
   D = s(839469),
   P = s(726985),
   L = s(46140),
@@ -141,7 +141,7 @@ function v() {
 n = (0, S.U)(),
 r = (0, a.e7)([h.Z], () => h.Z.getProps().impressionSource),
 D = (0, T.gU)(),
-P = (0, M.bC)(),
+P = (0, f.bC)(),
 b = (0, d.Go)(),
 [Z] = (0, _.c)(b ? [i.z.CLIPS_SETTINGS_BETA_TAG] : []),
 v = 'useGenerateUserSettingsSections';
@@ -156,7 +156,7 @@ autoTrackExposure: !1
 shouldMergeGameSettings: j
   } = p.b.useExperiment({
 location: 'settings'
-  }), B = (0, f.eA)({
+  }), B = (0, M.eA)({
 location: 'settings'
   }), U = (0, E.Xo)({
 location: 'settings'
@@ -204,7 +204,7 @@ function j(e) {
   let {
 searchResults: t
   } = (0, D.E)(), s = v();
-  if (!(0, f.eA)({
+  if (!(0, M.eA)({
   location: 'settings'
 }))
 return new Set();
@@ -330,7 +330,7 @@ s = function() {
     ]
   }], [t]);
 }(),
-a = (0, f.c3)({
+a = (0, M.c3)({
   location: 'settings'
 });
   return n.useMemo(() => B(s, t, a, new Set(e)), [

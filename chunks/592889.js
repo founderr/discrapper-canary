@@ -22,7 +22,7 @@ var n = s(735250),
   m = s(74538),
   A = s(937615),
   g = s(689938),
-  h = s(981129);
+  h = s(288911);
 
 function O(e) {
   let {
@@ -43,7 +43,7 @@ await (0, E.dP)(t, t.planId, O, r), i();
   paymentSourceId: t.paymentSourceId,
   currency: t.currency
 }),
-f = (0, A.og)((0, A.T4)(x.amount, x.currency), R.interval, R.intervalCount);
+M = (0, A.og)((0, A.T4)(x.amount, x.currency), R.interval, R.intervalCount);
   return (0, n.jsxs)(_.ModalRoot, {
 transitionState: a,
 'aria-label': g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
@@ -65,11 +65,11 @@ children: [
     className: h.modalBody,
     children: (0, S.Q0)(t.planId) ? g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
       downgradedPlan: m.ZP.getDisplayName(s.planId),
-      existingRate: f
+      existingRate: M
     }) : g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format({
       existingPlan: m.ZP.getDisplayName(t.planId),
       downgradedPlan: m.ZP.getDisplayName(s.planId),
-      existingRate: f
+      existingRate: M
     })
   }),
   (0, n.jsxs)(_.ModalFooter, {

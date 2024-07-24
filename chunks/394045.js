@@ -9,7 +9,7 @@ var a = n(735250),
   d = n(981631),
   u = n(176505),
   T = n(689938),
-  x = n(662015);
+  x = n(841139);
 e.default = function(t) {
   let {
 guildId: e,

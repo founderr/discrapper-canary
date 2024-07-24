@@ -16,7 +16,7 @@ var i = n(735250),
   p = n(145604),
   T = n(718813),
   f = n(981631),
-  S = n(396386);
+  S = n(582614);
 t.Z = s.memo(function() {
   let e = s.useRef(null),
 t = s.useCallback(t => {

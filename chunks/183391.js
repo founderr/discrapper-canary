@@ -12,7 +12,7 @@ var n = s(735250),
   A = s(810568),
   u = s(981631),
   d = s(689938),
-  O = s(707443);
+  O = s(421377);
 let N = [
 i.p.OFFICIAL,
 i.p.TWITTER,

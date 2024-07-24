@@ -52,7 +52,7 @@ children: (0, t.jsx)(a.PU, {
           default: e
         } = await Promise.all([
           n.e('76540'),
-          n.e('24558')
+          n.e('67422')
         ]).then(n.bind(n, 607018));
         return s => (0, t.jsx)(e, {
           reason: i.L.GUILD_PHONE_REQUIRED,

@@ -4,7 +4,7 @@ var n = s(735250),
   r = s(707558),
   o = s(577720),
   l = s(689938),
-  c = s(815420);
+  c = s(772258);
 let d = () => [{
 icon: c.perkNewsletter,
 title: l.Z.Messages.HYPESQUAD_PERK_TITLE_NEWSLETTER,

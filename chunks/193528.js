@@ -16,7 +16,7 @@ var n = s(735250),
   u = s(654904),
   T = s(981631),
   I = s(689938),
-  S = s(562476);
+  S = s(519829);
 
 function N(e) {
   let {
@@ -29,7 +29,7 @@ label: m,
 colorPickerMiddle: A,
 colorPickerFooter: g,
 showEyeDropper: h
-  } = e, O = a.useRef(null), p = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(), R = c.Z.colors.BACKGROUND_ACCENT.css, x = (0, u.DP)(i), f = (0, l.Rf)(i), M = f === p ? R : f, D = (0, E.Lq)(x ? T.Ilk.WHITE_500 : T.Ilk.PRIMARY_530), P = (0, _.Z)(A), L = (0, _.Z)(g), [b, Z] = a.useState((0, o.Z)());
+  } = e, O = a.useRef(null), p = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(), R = c.Z.colors.BACKGROUND_ACCENT.css, x = (0, u.DP)(i), M = (0, l.Rf)(i), f = M === p ? R : M, D = (0, E.Lq)(x ? T.Ilk.WHITE_500 : T.Ilk.PRIMARY_530), P = (0, _.Z)(A), L = (0, _.Z)(g), [b, Z] = a.useState((0, o.Z)());
   return a.useEffect(() => {
 (P !== A || L !== g) && Z((0, o.Z)());
   }, [
@@ -65,8 +65,8 @@ children: e => {
         tabIndex: C ? -1 : 0,
         onClick: C ? T.dG4 : t,
         style: {
-          backgroundColor: f,
-          borderColor: M
+          backgroundColor: M,
+          borderColor: f
         },
         className: S.swatch,
         'aria-label': I.Z.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,

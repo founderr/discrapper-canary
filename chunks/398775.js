@@ -21,7 +21,7 @@ var n = s(735250),
   I = s(798769),
   S = s(981631),
   N = s(689938),
-  C = s(391717);
+  C = s(514846);
 async function m(e) {
   let {
 premiumSubscription: t,
@@ -130,26 +130,26 @@ pauseDuration: o,
 analyticsLocation: d
   } = e, [T, A] = a.useState(!1), {
 analyticsLocations: g
-  } = (0, E.ZP)(), [h, O] = a.useState(!1), p = (0, _.ZP)(), R = null, x = null, f = [
+  } = (0, E.ZP)(), [h, O] = a.useState(!1), p = (0, _.ZP)(), R = null, x = null, M = [
 S.O0b.PAST_DUE,
 S.O0b.PAUSED
-  ].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, M = r()(f).add(o, 'days').toDate();
+  ].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, f = r()(M).add(o, 'days').toDate();
   switch (t.status) {
 case S.O0b.PAST_DUE:
   x = N.Z.Messages.PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY.format({
     pauseDuration: o,
-    resumeDate: M
+    resumeDate: f
   });
   break;
 case S.O0b.PAUSED:
   x = N.Z.Messages.PREMIUM_PAUSE_EXTEND_CONFIRM_BODY.format({
-    resumeDate: M
+    resumeDate: f
   });
   break;
 default:
   x = N.Z.Messages.PREMIUM_PAUSE_CONFIRM_BODY.format({
-    pauseDate: f,
-    resumeDate: M,
+    pauseDate: M,
+    resumeDate: f,
     pauseDuration: o
   });
   }

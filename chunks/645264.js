@@ -11,7 +11,7 @@ var o = t(735250),
   m = t(200305),
   f = t(592286),
   _ = t(689938),
-  b = t(807907);
+  b = t(920691);
 let h = () => (0, o.jsx)(l.Z, {
   submitting: !1,
   message: _.Z.Messages.MEMBER_VERIFICATION_PROGRESS_LOST_TITLE,

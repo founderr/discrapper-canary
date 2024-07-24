@@ -23,11 +23,11 @@ var n = s(735250),
   p = s(755596),
   R = s(153124),
   x = s(171246),
-  f = s(41959),
-  M = s(650919),
+  M = s(41959),
+  f = s(650919),
   D = s(981631),
   P = s(689938),
-  L = s(933361);
+  L = s(857367);
 let b = e => {
 let {
   label: t,
@@ -128,7 +128,7 @@ expanded: u,
 handleToggleExpanded: m,
 subscriptionInfo: A,
 application: O
-  } = (0, M.Z)(t), p = (0, R.Dt)(), [j, B] = a.useState(!1), {
+  } = (0, f.Z)(t), p = (0, R.Dt)(), [j, B] = a.useState(!1), {
 analyticsLocations: U
   } = (0, T.ZP)();
   if (null == o || null == i || null == A)
@@ -222,8 +222,8 @@ children: [
       } = e;
       return (0, n.jsxs)(n.Fragment, {
         children: [
-          null != O && (0, n.jsx)(f.Z, {
-            size: f.H.SMALL,
+          null != O && (0, n.jsx)(M.Z, {
+            size: M.H.SMALL,
             className: L.applicationIcon,
             application: O,
             asset: null != i.image_asset ? (0, I.m)(i.image_asset) : null

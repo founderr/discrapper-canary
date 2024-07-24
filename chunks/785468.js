@@ -25,7 +25,7 @@ var s = l(735250),
   S = l(765305),
   C = l(981631),
   L = l(689938),
-  A = l(969032);
+  A = l(319840);
 let Z = e => e === S.WX.EXTERNAL,
   f = (e, n) => {
 let l = c.Z.getChannel(e);
@@ -262,7 +262,7 @@ children: [
           l.e('90508'),
           l.e('7590'),
           l.e('45094'),
-          l.e('96990')
+          l.e('83079')
         ]).then(l.bind(l, 218613));
         return l => (0, s.jsx)(e, {
           ...l,

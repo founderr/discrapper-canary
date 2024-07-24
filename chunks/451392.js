@@ -18,7 +18,7 @@ var a = s(120356),
   T = s(193528),
   I = s(993413),
   S = s(689938),
-  N = s(798721);
+  N = s(436989);
 
 function C(e) {
   let {
@@ -40,7 +40,7 @@ user: t,
 displayProfile: p,
 pendingThemeColors: a,
 isPreview: !0
-  }), f = u.ZP.canUsePremiumProfileCustomization(t), M = null != s ? s : t.getAvatarURL(m, 80), D = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(), P = (0, d.Cf)(M, D, !1);
+  }), M = u.ZP.canUsePremiumProfileCustomization(t), f = null != s ? s : t.getAvatarURL(m, 80), D = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(), P = (0, d.Cf)(f, D, !1);
   if (null == R || null == x)
 return null;
   let L = e => {
@@ -48,7 +48,7 @@ r(o()(e, null == p ? void 0 : p.themeColors) ? void 0 : e);
   };
   return (0, n.jsx)(I.Z, {
 title: S.Z.Messages.USER_SETTINGS_PROFILE_THEME,
-disabled: !f && !C,
+disabled: !M && !C,
 className: i()(N.__invalid_profileThemesSection, A),
 showPremiumIcon: g,
 forcedDivider: O,

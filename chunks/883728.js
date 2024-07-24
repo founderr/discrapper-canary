@@ -19,7 +19,7 @@ handleRightClick: e => (0, o.jW)(e, async () => {
   } = await Promise.all([
     n.e('39285'),
     n.e('48800'),
-    n.e('18268')
+    n.e('20101')
   ]).then(n.bind(n, 422200));
   return t => (0, i.jsx)(e, {
     ...t,

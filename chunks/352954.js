@@ -1,42 +1,42 @@
-t(411104);
-var a = t(735250);
-t(470079);
-var i = t(481060),
-  s = t(689938);
-n.Z = {
-  openSecureFramesUserVerificationModal: function(e, n) {
-(0, i.openModalLazy)(async () => {
-  let i = (await Promise.all([
-    t.e('95437'),
-    t.e('33397')
-  ]).then(t.bind(t, 963410))).default;
-  return t => (0, a.jsx)(i, {
+s(411104);
+var n = s(735250);
+s(470079);
+var a = s(481060),
+  i = s(689938);
+t.Z = {
+  openSecureFramesUserVerificationModal: function(e, t) {
+(0, a.openModalLazy)(async () => {
+  let a = (await Promise.all([
+    s.e('95437'),
+    s.e('33397')
+  ]).then(s.bind(s, 963410))).default;
+  return s => (0, n.jsx)(a, {
     userId: e,
-    channelId: n,
-    ...t
+    channelId: t,
+    ...s
   });
 });
   },
   openSecureFramesUpdateConfirmation: function(e) {
 let {
-  title: n,
-  subtitle: l,
+  title: t,
+  subtitle: r,
   onConfirm: o
 } = e;
-(0, i.openModalLazy)(async () => {
+(0, a.openModalLazy)(async () => {
   let {
     ConfirmModal: e
-  } = await Promise.resolve().then(t.bind(t, 481060));
-  return t => (0, a.jsx)(e, {
-    header: n,
-    confirmText: s.Z.Messages.CONFIRM,
-    cancelText: s.Z.Messages.CANCEL,
+  } = await Promise.resolve().then(s.bind(s, 481060));
+  return s => (0, n.jsx)(e, {
+    header: t,
+    confirmText: i.Z.Messages.CONFIRM,
+    cancelText: i.Z.Messages.CANCEL,
     onConfirm: o,
-    ...t,
-    children: (0, a.jsx)(i.Text, {
+    ...s,
+    children: (0, n.jsx)(a.Text, {
       variant: 'text-sm/normal',
       color: 'header-secondary',
-      children: l
+      children: r
     })
   });
 });

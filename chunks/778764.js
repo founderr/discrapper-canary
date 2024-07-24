@@ -21,7 +21,7 @@ var n = s(735250),
   C = s(755733),
   m = s(981631),
   A = s(689938),
-  g = s(824901);
+  g = s(553687);
 
 function h(e) {
   let {
@@ -29,7 +29,7 @@ transitionState: t,
 onClose: r,
 ticket: l,
 challenge: _
-  } = e, E = (0, d.Dt)(), [N, h] = a.useState(''), [O, p] = a.useState(!0), [R, x] = a.useState(C.x.INIT), [f, M] = a.useState(''), [D, P] = a.useState(null), L = async () => {
+  } = e, E = (0, d.Dt)(), [N, h] = a.useState(''), [O, p] = a.useState(!0), [R, x] = a.useState(C.x.INIT), [M, f] = a.useState(''), [D, P] = a.useState(null), L = async () => {
 let e;
 x(C.x.REGISTER);
 let t = u.isPlatformEmbedded && I.ZP.supportsFeature(m.eRX.WEBAUTHN) ? I.ZP.webAuthnRegister(_) : i.Ue(JSON.parse(_)).then(e => JSON.stringify(e));
@@ -39,7 +39,7 @@ try {
   T.Z.captureException(e), P(A.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(C.x.INIT);
   return;
 }
-M(e), x(C.x.NAME);
+f(e), x(C.x.NAME);
   };
   return (0, n.jsxs)(o.ModalRoot, {
 transitionState: t,
@@ -136,7 +136,7 @@ children: [
         id: C.x.NAME,
         children: (0, n.jsxs)('form', {
           onSubmit: e => {
-            e.preventDefault(), (0, S.Sr)(N, l, f).then(async () => {
+            e.preventDefault(), (0, S.Sr)(N, l, M).then(async () => {
               await (0, c.Yn)(!1);
             }).then(() => r()).catch(() => {
               P(A.Z.Messages.ERROR_OCCURRED_TRY_AGAIN), x(C.x.INIT);

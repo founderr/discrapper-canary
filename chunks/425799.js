@@ -16,7 +16,7 @@ var n = s(735250),
   u = s(594174),
   T = s(572004),
   I = s(590259),
-  S = s(907183),
+  S = s(160482),
   N = s(334428),
   C = s(844593);
 
@@ -27,8 +27,8 @@ function m() {
 g = a.useRef(null),
 [h, O] = a.useState(!1),
 [p, R] = a.useState(!1),
-[x, f] = a.useState(!1),
-M = (0, o.wj)((0, d.ZP)());
+[x, M] = a.useState(!1),
+f = (0, o.wj)((0, d.ZP)());
   return null == e ? (0, n.jsx)('div', {}) : (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)('div', {
@@ -113,7 +113,7 @@ children: [
         checked: x,
         className: S.checkBox,
         onChange: () => {
-          f(!x);
+          M(!x);
         }
       })
     ]
@@ -159,7 +159,7 @@ children: [
   m.map((e, t) => (0, n.jsxs)('div', {
     style: {
       marginBottom: 8,
-      color: M ? 'white' : 'black'
+      color: f ? 'white' : 'black'
     },
     children: [
       (0, n.jsxs)('div', {

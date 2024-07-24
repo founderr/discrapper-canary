@@ -1654,7 +1654,7 @@ t3 = function(t) {
     }), n);
   };
 },
-t6 = function(t) {
+t8 = function(t) {
   return function(r, n) {
     var i = r.map(function(t) {
       return e(e({}, t), {}, {
@@ -1672,7 +1672,7 @@ t6 = function(t) {
     }, n);
   };
 },
-t8 = function(t) {
+t6 = function(t) {
   return function(r, n) {
     var i = r.map(function(t) {
       return e(e({}, t), {}, {
@@ -2069,8 +2069,8 @@ return P = (_ = e(e({}, t0), {}, {
     getLookingSimilar: t5,
     getRecommendedForYou: t7,
     getRelatedProducts: t3,
-    getTrendingFacets: t6,
-    getTrendingItems: t8
+    getTrendingFacets: t8,
+    getTrendingItems: t6
   }
 })).appId, x = o(void 0 !== _.authMode ? _.authMode : l.WithinHeaders, P, _.apiKey), c({
   transporter: k = b(e(e({

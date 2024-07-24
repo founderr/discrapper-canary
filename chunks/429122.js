@@ -14,7 +14,7 @@ var i = n(735250),
   o = n(700026),
   c = n(301342),
   u = n(327530),
-  d = n(756901);
+  d = n(222625);
 let h = l.memo(function(e) {
   let {
 guildChannels: t,

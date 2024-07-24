@@ -45,8 +45,8 @@ var r = n(735250),
   B = n(718582),
   F = n(981631),
   V = n(689938),
-  H = n(416590),
-  Z = n(403614);
+  H = n(452670),
+  Z = n(275024);
 let Y = (0, w.Mg)(c.Z.GUILD_TOOLTIP_ICON_SIZE),
   j = (0, w.Mg)(c.Z.GUILD_TOOLTIP_ICON_SIZE_V_2);
 

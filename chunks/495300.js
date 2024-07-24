@@ -28,7 +28,7 @@ var s = n(735250),
   f = n(707076),
   L = n(213956),
   O = n(689938),
-  A = n(732446);
+  A = n(236169);
 
 function M() {
   let e = (0, l.e7)([I.Z], () => I.Z.getGuildId());

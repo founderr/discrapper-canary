@@ -12,7 +12,7 @@ var i = n(735250),
   c = n(607070),
   d = n(768943),
   u = n(742989),
-  _ = n(929792);
+  _ = n(862479);
 class E extends a.PureComponent {
   componentDidUpdate(e) {
 e.count < this.props.count && !this.props.reducedMotion && l.Z.sequence([

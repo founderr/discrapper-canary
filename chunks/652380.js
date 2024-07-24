@@ -21,7 +21,7 @@ var n = s(735250),
   h = s(916028),
   O = s(15033),
   p = s(899457),
-  R = s(673105);
+  R = s(452693);
 
 function x(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -31,19 +31,19 @@ configurable: !0,
 writable: !0
   }) : e[t] = s, e;
 }
-let f = [
+let M = [
 'svg',
 'png',
 'gif',
 'webp'
   ],
-  M = [
-...f,
+  f = [
+...M,
 'jpg',
 'jpeg'
   ],
   D = Array.from(new Set([
-...M,
+...f,
 'gif',
 'mp4',
 'webm'
@@ -300,14 +300,14 @@ children: [
         title: 'Game Tile Asset',
         assetKey: 'gameTile',
         onFileChange: G,
-        filters: M,
+        filters: f,
         initialValue: r.config.assets.gameTile
       }),
       (0, n.jsx)(A.Z, {
         title: 'Logotype',
         assetKey: 'logotype',
         onFileChange: G,
-        filters: f,
+        filters: M,
         initialValue: r.config.assets.logotype
       }),
       (0, n.jsx)(A.Z, {

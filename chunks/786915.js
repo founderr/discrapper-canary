@@ -46,7 +46,7 @@ onClick: () => {
         default: e
       } = await Promise.all([
         n.e('7654'),
-        n.e('66633')
+        n.e('21026')
       ]).then(n.bind(n, 560114));
       return n => (0, i.jsx)(e, {
         ...n,

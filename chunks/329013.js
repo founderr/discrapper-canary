@@ -29,9 +29,9 @@ var n = s(735250),
   O = s(921944),
   p = s(474936),
   R = s(689938),
-  x = s(582889),
-  f = s(224499);
-let M = () => {
+  x = s(823749),
+  M = s(549856);
+let f = () => {
 (0, T.EW)(r.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
   dismissAction: O.L.PRIMARY,
   forceTrack: !0
@@ -53,7 +53,7 @@ let {
   children: [
     (0, n.jsx)(o.Button, {
       color: D ? o.Button.Colors.BRAND : o.Button.Colors.PRIMARY,
-      onClick: () => M(),
+      onClick: () => f(),
       children: D ? R.Z.Messages.PREVIEW : R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
     }),
     (0, n.jsx)(m.Z, {
@@ -100,7 +100,7 @@ return a.useEffect(() => {
                   (0, n.jsx)(o.Button, {
                     className: x.previewThemeButtonWide,
                     color: o.Button.Colors.PRIMARY,
-                    onClick: () => M(),
+                    onClick: () => f(),
                     children: R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
                   }),
                   (0, n.jsx)('div', {
@@ -118,13 +118,13 @@ return a.useEffect(() => {
       })
     }),
     (0, n.jsx)(o.FormDivider, {
-      className: f.marginTop20
+      className: M.marginTop20
     })
   ]
 });
   },
   P = () => (0, i.e7)([E.Z], () => E.Z.isPreview) ? null : (0, n.jsx)(o.Button, {
 size: o.ButtonSizes.SMALL,
-onClick: () => M(),
+onClick: () => f(),
 children: R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEMES_TITLE
   });

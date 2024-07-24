@@ -16,7 +16,7 @@ var a = n(120356),
   C = n(474936),
   g = n(981631),
   p = n(689938),
-  A = n(983152);
+  A = n(482101);
 t.Z = function(e) {
   let {
 isFullScreen: t,

@@ -32,7 +32,7 @@ var a = n(613828),
   M = n(701488),
   v = n(981631),
   L = n(689938),
-  Z = n(671487);
+  Z = n(615010);
 let P = (0, f.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 
 function b(e) {

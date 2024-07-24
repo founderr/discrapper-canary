@@ -25,8 +25,8 @@ var n, a, i = s(735250),
   p = s(294602),
   R = s(778825),
   x = s(856768),
-  f = s(592204),
-  M = s(712950),
+  M = s(592204),
+  f = s(712950),
   D = s(880257),
   P = s(16703),
   L = s(977059),
@@ -60,8 +60,8 @@ var n, a, i = s(735250),
   ei = s(981631),
   er = s(800530),
   eo = s(689938),
-  el = s(630785),
-  ec = s(224499);
+  el = s(339582),
+  ec = s(549856);
 
 function ed(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -1014,14 +1014,14 @@ t = (0, u.cj)([G.Z], () => ({
 s = (0, u.e7)([b.Z], () => b.Z.getFetchError()),
 n = (0, u.e7)([y.Z], () => y.Z.getSubsection()),
 a = (0, h.yh)(),
-r = (0, f.Xo)({
+r = (0, M.Xo)({
   location: 'web_user_privacy_and_safety_settings'
 }),
 {
   hasSearchResults: o,
   searchResults: l
 } = (0, ee.E)(),
-c = (0, M.p)(),
+c = (0, f.p)(),
 _ = (0, D.Z)(),
 E = (0, z.H)({
   location: 'user_settings_privacy_safety'

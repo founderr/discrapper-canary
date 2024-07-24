@@ -23,8 +23,8 @@ var n = s(735250),
   p = s(565138),
   R = s(297700),
   x = s(553795),
-  f = s(430824),
-  M = s(771845),
+  M = s(430824),
+  f = s(771845),
   D = s(246946),
   P = s(626135),
   L = s(63063),
@@ -37,8 +37,8 @@ var n = s(735250),
   G = s(856651),
   F = s(921944),
   y = s(689938),
-  V = s(886185),
-  Y = s(224499);
+  V = s(374265),
+  Y = s(549856);
 let w = e => {
   var t, s;
   let a, {
@@ -53,7 +53,7 @@ let w = e => {
   joinErrorMessage: '' === x.Z.joinErrorMessage(i.id) ? y.Z.Messages.ERROR : x.Z.joinErrorMessage(i.id),
   showJoinErrorMessage: void 0 !== x.Z.joinErrorMessage(i.id)
 }), [i.id]),
-d = null != (0, o.e7)([f.Z], () => f.Z.getGuild(i.guild.id), [i.guild.id]);
+d = null != (0, o.e7)([M.Z], () => M.Z.getGuild(i.guild.id), [i.guild.id]);
   return !d && (a = (0, n.jsx)(_.Button, {
 size: _.ButtonSizes.SMALL,
 onClick: function() {
@@ -114,8 +114,8 @@ function k(e) {
   locale: N
 } = e,
 [O, p] = a.useState(T.friendSync),
-[x, f] = a.useState(T.visibility),
-[M, D] = a.useState(T.metadataVisibility),
+[x, M] = a.useState(T.visibility),
+[f, D] = a.useState(T.metadataVisibility),
 [P, b] = a.useState(T.showActivity),
 [F, Y] = a.useState(null),
 [k, H] = a.useState(null),
@@ -124,10 +124,10 @@ function k(e) {
 X = (0, m.rR)(T.type),
 q = C.Z.get(X);
   a.useEffect(() => {
-p(T.friendSync), f(T.visibility), D(T.metadataVisibility), b(T.showActivity);
+p(T.friendSync), M(T.visibility), D(T.metadataVisibility), b(T.showActivity);
   }, [T]), a.useEffect(() => {
 if (!1 !== T.verified)
-  null != F && (f(F), u.Z.setVisibility(T.type, T.id, F), Y(null)), null != k && (D(k), u.Z.setMetadataVisibility(T.type, T.id, k), H(null));
+  null != F && (M(F), u.Z.setVisibility(T.type, T.id, F), Y(null)), null != k && (D(k), u.Z.setMetadataVisibility(T.type, T.id, k), H(null));
   }, [T]);
 
   function J() {
@@ -173,7 +173,7 @@ if (e && !t) {
   });
   return;
 }
-f(s), u.Z.setVisibility(T.type, T.id, s);
+M(s), u.Z.setVisibility(T.type, T.id, s);
   }
 
   function et(e) {
@@ -366,7 +366,7 @@ children: [
   })), (null === (i = C.Z.get(T.type)) || void 0 === i ? void 0 : i.hasMetadata) === !0 && (l = (0, n.jsx)(_.FormSwitch, {
     className: V.connectionOptionSwitch,
     hideBorder: !0,
-    value: 1 === M,
+    value: 1 === f,
     onChange: et,
     disabled: 1 !== x || null == T.metadata,
     children: (0, n.jsx)(_.Text, {
@@ -562,7 +562,7 @@ t.Z = () => {
 t = (0, o.e7)([x.Z], () => x.Z.isFetching()),
 s = (0, o.e7)([x.Z], () => x.Z.getAccounts()),
 i = (0, N.ZP)();
-  (0, o.e7)([M.ZP], () => M.ZP.getFlattenedGuildIds());
+  (0, o.e7)([f.ZP], () => f.ZP.getFlattenedGuildIds());
   let r = (0, o.e7)([b.default], () => b.default.locale);
   return (a.useEffect(() => {
 u.Z.fetch();

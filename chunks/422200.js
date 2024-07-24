@@ -6,8 +6,8 @@ var r = i(481060),
   l = i(108843),
   u = i(100527),
   s = i(299206),
-  d = i(895563),
-  o = i(32750),
+  o = i(895563),
+  d = i(32750),
   c = i(109764),
   Z = i(323597),
   h = i(461535),
@@ -16,23 +16,23 @@ var r = i(481060),
   _ = i(193987),
   p = i(933793),
   E = i(13736),
-  A = i(732393),
-  I = i(214906),
+  j = i(732393),
+  m = i(214906),
   x = i(612856),
-  C = i(137591),
-  G = i(689938);
+  A = i(137591),
+  I = i(689938);
 e.default = (0, l.Z)(function(n) {
   let {
 channel: e,
 onSelect: i
-  } = n, l = (0, c.Z)(e), u = (0, h.Z)(e), j = (0, I.Z)(e), m = (0, o.Z)(e), g = (0, _.Z)(e), v = (0, Z.Z)(e), O = (0, s.Z)({
+  } = n, l = (0, c.Z)(e), u = (0, h.Z)(e), C = (0, m.Z)(e), G = (0, d.Z)(e), g = (0, _.Z)(e), v = (0, Z.Z)(e), O = (0, s.Z)({
 id: e.id,
-label: G.Z.Messages.COPY_ID_THREAD
-  }), T = (0, M.Z)(e, 'Context Menu'), R = (0, p.Z)(e), U = (0, x.Z)(e), D = (0, E.Z)(e), N = (0, A.Z)(e.id), P = (0, f.Z)(e), b = (0, C.Z)(e), L = (0, d.l)(e), F = (0, d.P)(e);
+label: I.Z.Messages.COPY_ID_THREAD
+  }), T = (0, M.Z)(e, 'Context Menu'), R = (0, p.Z)(e), U = (0, x.Z)(e), D = (0, E.Z)(e), N = (0, j.Z)(e.id), P = (0, f.Z)(e), b = (0, A.Z)(e), L = (0, o.l)(e), F = (0, o.P)(e);
   return (0, t.jsxs)(r.Menu, {
 navId: 'thread-context',
 onClose: a.Zy,
-'aria-label': G.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
+'aria-label': I.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
 onSelect: i,
 children: [
   (0, t.jsxs)(r.MenuGroup, {
@@ -45,7 +45,7 @@ children: [
     children: [
       T,
       P,
-      m,
+      G,
       g,
       D,
       N,
@@ -54,7 +54,7 @@ children: [
   }, 'thread-actions'),
   (0, t.jsxs)(r.MenuGroup, {
     children: [
-      j,
+      C,
       U
     ]
   }, 'notifications'),

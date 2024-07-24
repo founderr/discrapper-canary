@@ -5,7 +5,7 @@ var t = n(735250),
   i = n(481060),
   a = n(378233),
   c = n(689938),
-  d = n(120437);
+  d = n(294356);
 let u = e => {
   let {
 stickerPack: r

@@ -36,7 +36,7 @@ children: (0, t.jsx)(i.MenuItem, {
       default: n
     } = await Promise.all([
       a.e('45094'),
-      a.e('58983')
+      a.e('33574')
     ]).then(a.bind(a, 218613));
     return a => (0, t.jsx)(n, {
       ...a,
@@ -53,7 +53,7 @@ children: (0, t.jsx)(i.MenuItem, {
       default: n
     } = await Promise.all([
       a.e('45094'),
-      a.e('58983')
+      a.e('33574')
     ]).then(a.bind(a, 218613));
     return a => (0, t.jsx)(n, {
       ...a,

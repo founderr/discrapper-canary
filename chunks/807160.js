@@ -24,8 +24,8 @@ var n, a, i, r = s(735250),
   p = s(240864),
   R = s(942833),
   x = s(400916),
-  f = s(916001),
-  M = s(539290),
+  M = s(916001),
+  f = s(539290),
   D = s(336197),
   P = s(690221),
   L = s(219929),
@@ -51,7 +51,7 @@ var n, a, i, r = s(735250),
   q = s(474936),
   J = s(231338),
   $ = s(689938),
-  ee = s(495018);
+  ee = s(450770);
 
 function et(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -222,7 +222,7 @@ children: [
         className: ee.guildProductBenefitLabel,
         children: $.Z.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_ROLE_UNLOCKED
       }),
-      (0, r.jsx)(f.Z, {
+      (0, r.jsx)(M.Z, {
         role: c
       })
     ]
@@ -675,9 +675,9 @@ return e.isGuildProductPurchase ? (0, r.jsxs)(r.Fragment, {
     (0, r.jsx)('div', {
       className: ee.sectionDivider
     }),
-    e.isSoftDeletedProduct ? (0, r.jsx)(M.Z, {
+    e.isSoftDeletedProduct ? (0, r.jsx)(f.Z, {
       className: ee.warningBlock,
-      buttonPosition: M.E.RIGHT,
+      buttonPosition: f.E.RIGHT,
       notice: $.Z.Messages.GUILD_PRODUCT_BILLING_PRODUCT_UNAVAILABLE,
       ctaLabel: $.Z.Messages.GUILD_PRODUCT_BILLING_CONTACT_SUPPORT,
       onClick: () => (0, m.Z)(es(s))

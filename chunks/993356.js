@@ -140,7 +140,7 @@ action: () => (0, a.openModalLazy)(async () => {
     default: n
   } = await Promise.all([
     t.e('5863'),
-    t.e('48857')
+    t.e('70192')
   ]).then(t.bind(t, 751212));
   return t => (0, s.jsx)(n, {
     ...t,

@@ -28,8 +28,8 @@ var a = s(990547),
   p = s(665166),
   R = s(351780),
   x = s(231765),
-  f = s(837741),
-  M = s(813732),
+  M = s(837741),
+  f = s(813732),
   D = s(398140),
   P = s(564344),
   L = s(977156),
@@ -82,20 +82,20 @@ var a = s(990547),
   ep = s(200645),
   eR = s(287490),
   ex = s(168308),
-  ef = s(277329),
-  eM = s(674116),
+  eM = s(277329),
+  ef = s(674116),
   eD = s(726985),
   eP = s(981631),
   eL = s(46140),
   eb = s(65154),
   eZ = s(689938),
-  ev = s(54048);
+  ev = s(82388);
 let ej = () => {
 let e = [
   i.z.CLIENT_THEMES_SETTINGS_BADGE,
   i.z.DEKSTOP_CUSTOM_APP_ICON_BADGE
 ];
-return f.F.getCurrentConfig({
+return M.F.getCurrentConfig({
   location: 'Settings list view'
 }).enabled && e.push(i.z.BRAND_REFRESH_NEW_BADGE), e;
   },
@@ -103,7 +103,7 @@ return f.F.getCurrentConfig({
   eU = e => {
 let {
   unseenGiftCount: t,
-  showPrepaidPaymentPastDueWarning: f,
+  showPrepaidPaymentPastDueWarning: M,
   impressionSource: eU,
   numOfPendingFamilyRequests: eG,
   isOverlaySupported: eF,
@@ -227,7 +227,7 @@ return Object.freeze({
     searchableTitles: [eZ.Z.Messages.GAMES],
     label: eZ.Z.Messages.GAMES,
     ariaLabel: eZ.Z.Messages.GAMES,
-    element: ef.Z,
+    element: eM.Z,
     predicate: () => eV
   },
   [eD.s6.GAMES_MY_GAMES]: {
@@ -539,8 +539,8 @@ return Object.freeze({
     ariaLabel: eZ.Z.Messages.SUBSCRIPTIONS_TITLE,
     searchableTitles: [eZ.Z.Messages.SUBSCRIPTIONS_TITLE],
     label: eZ.Z.Messages.SUBSCRIPTIONS_TITLE,
-    element: M.Z,
-    icon: f ? (0, n.jsx)(o.CircleExclamationPointIcon, {
+    element: f.Z,
+    icon: M ? (0, n.jsx)(o.CircleExclamationPointIcon, {
       size: 'xs',
       color: r.Z.unsafe_rawColors.YELLOW_300.css
     }) : null
@@ -703,7 +703,7 @@ return Object.freeze({
     searchableTitles: [eZ.Z.Messages.VOICE_AND_VIDEO],
     label: eZ.Z.Messages.VOICE_AND_VIDEO,
     ariaLabel: eZ.Z.Messages.VOICE_AND_VIDEO,
-    element: eM.Z,
+    element: ef.Z,
     predicate: () => j.Z.isSupported()
   },
   [eD.s6.VOICE_AND_VIDEO_DEVICES]: {

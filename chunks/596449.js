@@ -34,7 +34,7 @@ onClick: function() {
     } = await Promise.all([
       n.e('22347'),
       n.e('58023'),
-      n.e('99562')
+      n.e('94354')
     ]).then(n.bind(n, 779250));
     return t => (0, i.jsx)(e, {
       ...t,

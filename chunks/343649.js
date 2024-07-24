@@ -52,7 +52,7 @@ var o, r = t(735250),
   K = t(474936),
   z = t(231338),
   X = t(689938),
-  q = t(55417);
+  q = t(17764);
 (o || (o = {})).PREMIUM = 'discord://app/settings/nitro';
 let J = K.Xh.NONE_MONTH,
   Q = [
@@ -225,21 +225,21 @@ ep,
 eW
   ]), (0, C.bp)(eH, ey, eJ, eK), (0, x.dZ)(eH, eV, eK);
   let e0 = a.useRef(null),
-[e1, e7] = (0, S.Z)(!1, 500),
-[e2, e8] = a.useState(null),
-[e4, e6] = a.useState([]),
-[e5, e3] = a.useState(!1);
+[e7, e1] = (0, S.Z)(!1, 500),
+[e2, e4] = a.useState(null),
+[e8, e6] = a.useState([]),
+[e5, e9] = a.useState(!1);
   a.useEffect(() => {
 let e;
 if (!!eU)
-  null != B.Z.get(K.Xh.PREMIUM_MONTH_GUILD) && e6(e = (0, F.DE)(K.Xh.PREMIUM_MONTH_GUILD, eP, !1)), null == eP && null != es && null != es.paymentSourceId ? e8(es.currency) : null != e && e8(e[0]);
+  null != B.Z.get(K.Xh.PREMIUM_MONTH_GUILD) && e6(e = (0, F.DE)(K.Xh.PREMIUM_MONTH_GUILD, eP, !1)), null == eP && null != es && null != es.paymentSourceId ? e4(es.currency) : null != e && e4(e[0]);
   }, [
 eP,
 es,
 eU,
-JSON.stringify(e4)
+JSON.stringify(e8)
   ]);
-  let e9 = (0, N.vP)({
+  let e3 = (0, N.vP)({
 paymentModalArgs: eE,
 initialStep: x.h8.PAYMENT_TYPE,
 prependSteps: [x.h8.PLAN_SELECT],
@@ -383,7 +383,7 @@ else if (eH === x.h8.PREMIUM_UPSELL) {
         },
         onPurchaseTermsChange: eO,
         legalTermsNodeRef: e0,
-        hasLegalTermsFlash: e1
+        hasLegalTermsFlash: e7
       }), t = x.h8.PLAN_SELECT, a = ek ? (0, r.jsx)(_.Button, {
         color: _.Button.Colors.GREEN,
         type: 'submit',
@@ -408,7 +408,7 @@ else if (eH === x.h8.PREMIUM_UPSELL) {
                 currency: l.currency
               });
               if (n.redirectConfirmation) {
-                e3(null != n.redirectURL);
+                e9(null != n.redirectURL);
                 return;
               }
             } else {
@@ -418,7 +418,7 @@ else if (eH === x.h8.PREMIUM_UPSELL) {
               n.currency = es.currency, null == n.currency && (n.currency = l.currency), n.paymentSource = null != ep ? eg[ep] : void 0, null == n.paymentSource && (c()(null != e, 'Missing paymentSource'), n.paymentSource = e, n.currency = l.currency);
               let t = await (0, f.Mg)(es, n, eZ);
               if (t.redirectConfirmation) {
-                e3(null != t.redirectURL);
+                e9(null != t.redirectURL);
                 return;
               }
             }
@@ -444,7 +444,7 @@ else if (eH === x.h8.PREMIUM_UPSELL) {
           onClick: () => {
             null != e0.current && (e0.current.scrollIntoView({
               behavior: 'smooth'
-            }), e7(!0));
+            }), e1(!0));
           },
           type: 'submit',
           children: X.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_SUBMIT
@@ -463,13 +463,13 @@ else if (eH === x.h8.PREMIUM_UPSELL) {
       });
   }
   let u = null != eC && null == (0, x.ly)(eC) ? eC : eN;
-  n = eH === x.h8.ADD_PAYMENT_STEPS ? e9 : (0, r.jsx)(T.Z, {
+  n = eH === x.h8.ADD_PAYMENT_STEPS ? e3 : (0, r.jsx)(T.Z, {
     hideBreadcrumbs: eH === x.h8.CONFIRM,
     steps: eW,
     currentStep: eH,
     paymentError: u,
     purchaseErrorBlockRef: eT,
-    hasCurrencies: e4.length > 1,
+    hasCurrencies: e8.length > 1,
     body: e,
     footer: eH !== x.h8.CONFIRM ? (0, r.jsxs)(_.ModalFooter, {
       direction: w.Z.Direction.HORIZONTAL,

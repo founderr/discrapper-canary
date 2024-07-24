@@ -18,7 +18,7 @@ var n = s(735250),
   I = s(981631),
   S = s(474936),
   N = s(689938),
-  C = s(733691);
+  C = s(289270);
 
 function m(e) {
   let {
@@ -32,30 +32,30 @@ showBorder: h = !1,
 isTryItOutFlow: O = !1,
 initialSelectedEffectId: p
   } = e, R = (0, E.Kg)(t, s), x = _.ZP.canUsePremiumProfileCustomization(t), {
-analyticsLocations: f
+analyticsLocations: M
   } = (0, l.ZP)(), {
-pendingProfileEffectId: M,
+pendingProfileEffectId: f,
 errors: D
   } = (0, E.bd)(s), P = a.useCallback(() => (0, c.H)({
-analyticsLocations: f,
+analyticsLocations: M,
 initialSelectedEffectId: p,
 guild: s
   }), [
-f,
+M,
 p,
 s
   ]);
   a.useEffect(() => {
 x && d.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
   type: S.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
-  location_stack: f
+  location_stack: M
 });
   }, [
 x,
-f
+M
   ]);
   let L = null != s,
-b = O || void 0 !== M ? null != M : null != R,
+b = O || void 0 !== f ? null != f : null != R,
 Z = g ? o.ShinyButton : o.Button;
   return (0, n.jsx)(u.Z, {
 forcedDivider: A,

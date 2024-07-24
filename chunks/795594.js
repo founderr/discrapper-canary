@@ -23,15 +23,15 @@ var n = s(735250),
   p = s(285952),
   R = s(768581),
   x = s(49012),
-  f = s(210887),
-  M = s(436267),
+  M = s(210887),
+  f = s(436267),
   D = s(494620),
   P = s(981631),
   L = s(689938),
-  b = s(102507),
-  Z = s(224499);
-let v = d.ZP.connectStores([f.Z], () => ({
-  theme: f.Z.theme
+  b = s(756576),
+  Z = s(549856);
+let v = d.ZP.connectStores([M.Z], () => ({
+  theme: M.Z.theme
 }))(u.EmptyState);
 
 function j(e) {
@@ -88,7 +88,7 @@ let {
   disclosures: i
 } = e, o = () => {
   let e = L.Z.Messages.DELETE_APP_CONFIRM_MSG;
-  return (0, M.Z)(s.id) && (e = (0, n.jsxs)(n.Fragment, {
+  return (0, f.Z)(s.id) && (e = (0, n.jsxs)(n.Fragment, {
     children: [
       e,
       (0, n.jsx)(D.Z, {
@@ -116,7 +116,7 @@ let {
     href: s.privacy_policy_url,
     shouldConfirm: !0
   });
-}, _ = (0, M.O)(s.id);
+}, _ = (0, f.O)(s.id);
 return (0, n.jsx)(u.Card, {
   className: r()(b.authedApp, Z.marginBottom8),
   outline: !0,

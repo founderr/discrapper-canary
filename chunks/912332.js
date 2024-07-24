@@ -29,7 +29,7 @@ let {
   ForwardModal: e
 } = await Promise.all([
   i.e('6380'),
-  i.e('18499')
+  i.e('89900')
 ]).then(i.bind(i, 930864));
 return i => (0, t.jsx)(e, {
   ...i,

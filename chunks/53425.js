@@ -8,7 +8,7 @@ var i = n(735250),
   u = n(823379),
   d = n(734190),
   h = n(689938),
-  p = n(645829);
+  p = n(807633);
 t.Z = l.memo(function(e) {
   let {
 channel: t,

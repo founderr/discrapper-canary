@@ -6,7 +6,7 @@ var a = t(735250),
   o = t(484455),
   l = t(592286),
   c = t(689938),
-  d = t(944309);
+  d = t(672060);
 n.Z = function(e) {
   let {
 guildId: n,

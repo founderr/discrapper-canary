@@ -10,7 +10,7 @@ var a = n(442837),
   l = n(430824),
   r = n(914010),
   o = n(689938),
-  c = n(569234);
+  c = n(591574);
 let u = () => (0, i.jsx)(i.Fragment, {
 children: o.Z.Messages.TIP_INSTANT_INVITE_BODY3.format({
   shareIcon: o.Z.Messages.INSTANT_INVITE,

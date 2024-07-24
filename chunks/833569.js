@@ -28,8 +28,8 @@ var n, a, i = s(735250),
   p = s(63063),
   R = s(74538),
   x = s(937615),
-  f = s(374649),
-  M = s(140465),
+  M = s(374649),
+  f = s(140465),
   D = s(314684),
   P = s(653798),
   L = s(625881),
@@ -44,7 +44,7 @@ var n, a, i = s(735250),
   y = s(474936),
   V = s(981631),
   Y = s(689938),
-  w = s(758294);
+  w = s(983746);
 (a = n || (n = {}))[a.WHAT_YOU_LOSE = 1] = 'WHAT_YOU_LOSE', a[a.CONFIRM = 2] = 'CONFIRM', a[a.PREVIEW = 3] = 'PREVIEW', a[a.CONFIRM_DISCOUNT = 4] = 'CONFIRM_DISCOUNT', a[a.DISCOUNT_APPLIED = 5] = 'DISCOUNT_APPLIED', a[a.PAUSE_SELECT = 6] = 'PAUSE_SELECT', a[a.PAUSE_CONFIRM = 7] = 'PAUSE_CONFIRM';
 async function k(e) {
   let {
@@ -131,7 +131,7 @@ default:
   } = e;
   return !y.dJ.has(t);
 })) != null,
-f = x ? (0, i.jsx)(T.Button, {
+M = x ? (0, i.jsx)(T.Button, {
   onClick: () => a(3),
   children: Y.Z.Messages.NEXT
 }) : (0, i.jsx)(T.Button, {
@@ -151,7 +151,7 @@ f = x ? (0, i.jsx)(T.Button, {
     planPremiumType: R.ZP.getDisplayPremiumType(s.planId)
   })
 }),
-M = (0, i.jsx)(T.Button, {
+f = (0, i.jsx)(T.Button, {
   look: T.Button.Looks.LINK,
   color: (0, u.ap)(A) ? T.Button.Colors.PRIMARY : T.Button.Colors.WHITE,
   onClick: o,
@@ -195,8 +195,8 @@ children: [
   (0, i.jsxs)(T.ModalFooter, {
     justify: g.Z.Justify.START,
     children: [
-      f,
-      M
+      M,
+      f
     ]
   })
 ]
@@ -209,7 +209,7 @@ function W(e) {
 premiumSubscription: n
   } = e, {
 analyticsLocations: a
-  } = (0, C.ZP)(), [r] = (0, f.ED)({
+  } = (0, C.ZP)(), [r] = (0, M.ED)({
 subscriptionId: n.id,
 items: (0, R.Ue)(null !== (s = null === (t = n.renewalMutations) || void 0 === t ? void 0 : t.items) && void 0 !== s ? s : n.items),
 renewal: !0,
@@ -353,13 +353,13 @@ I = r.useRef(new c.qA()),
 g = (0, D.yQ)(),
 p = (null == g ? void 0 : g.showCard) === !0,
 x = null === (t = (0, R.Af)(n)) || void 0 === t ? void 0 : t.planId,
-f = null != x ? R.ZP.getPremiumType(x) : null;
-  _()(null != f, 'Should not be cancelling Nitro without premiumType');
+M = null != x ? R.ZP.getPremiumType(x) : null;
+  _()(null != M, 'Should not be cancelling Nitro without premiumType');
   let P = (0, S.ZP)();
   r.useEffect(() => {
 h.default.track(V.rMx.CANCELLATION_FLOW_STARTED, z(n));
   }, [n]);
-  let j = f === y.p9.TIER_0 || f === y.p9.TIER_1 || f === y.p9.TIER_2;
+  let j = M === y.p9.TIER_0 || M === y.p9.TIER_1 || M === y.p9.TIER_2;
   null == E && (E = j ? 1 : 2);
   let {
 analyticsLocations: B
@@ -398,16 +398,16 @@ return [
     ...z(n)
   });
 },
-ee = (0, M.UV)(),
+ee = (0, f.UV)(),
 {
   churnUserDiscountOffer: et,
   isFetchingChurnDiscountOffer: es
-} = (0, M.WR)(!ee || 1 !== U);
+} = (0, f.WR)(!ee || 1 !== U);
   switch (U) {
 case 6:
   s = (0, i.jsx)(Z.of, {
     premiumSubscription: n,
-    premiumType: f,
+    premiumType: M,
     setStep: k,
     onClose: () => $(U),
     pauseDuration: q,
@@ -445,7 +445,7 @@ case 7:
   }
   s = (0, i.jsx)(Z.Sz, {
     premiumSubscription: n,
-    premiumType: f,
+    premiumType: M,
     setStep: k,
     onClose: () => $(U),
     analyticsLocation: d,
@@ -454,7 +454,7 @@ case 7:
   break;
 case 1:
   s = (0, i.jsx)(v.Z, {
-    premiumType: f,
+    premiumType: M,
     titleText: Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_TITLE,
     subtitleText: p ? Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD_V2 : Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
     subtitleClassName: p ? w.subtitleSection : void 0,
@@ -495,7 +495,7 @@ case 1:
 case 2:
   s = (0, i.jsx)(H, {
     premiumSubscription: n,
-    premiumType: f,
+    premiumType: M,
     setStep: k,
     onClose: () => $(U),
     whatYouLoseExperienceEnabled: j,
@@ -505,7 +505,7 @@ case 2:
 case 3:
   s = (0, i.jsx)(K, {
     premiumSubscription: n,
-    premiumType: f,
+    premiumType: M,
     onBack: () => k(2),
     onClose: () => $(U),
     analyticsLocation: d
@@ -514,7 +514,7 @@ case 3:
 case 4:
   s = (0, i.jsx)(L.Z, {
     premiumSubscription: n,
-    premiumType: f,
+    premiumType: M,
     onClose: () => $(U),
     onConfirm: () => k(5),
     userDiscountOffer: et
@@ -523,7 +523,7 @@ case 4:
 case 5:
   s = (0, i.jsx)(b.D, {
     premiumSubscription: n,
-    premiumType: f,
+    premiumType: M,
     onClose: () => $(U),
     confettiCanvas: m,
     userDiscountOffer: et

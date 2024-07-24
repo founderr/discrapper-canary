@@ -22,7 +22,7 @@ var n = o(735250),
   O = o(957115),
   C = o(531578),
   h = o(689938),
-  A = o(940256);
+  A = o(487448);
 let p = [{
 className: A.emojiSad,
 rating: C.aZ.BAD,

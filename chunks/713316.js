@@ -1,55 +1,55 @@
-n.d(t, {
+t.d(n, {
   w: function() {
-return f;
+return E;
   }
 });
-var r = n(735250);
-n(470079);
-var a = n(512722),
-  i = n.n(a),
-  o = n(481060),
-  s = n(598),
-  l = n(698708),
-  c = n(614277),
-  d = n(689938),
-  u = n(642852);
+var a = t(735250);
+t(470079);
+var s = t(512722),
+  i = t.n(s),
+  l = t(481060),
+  r = t(598),
+  o = t(698708),
+  d = t(614277),
+  u = t(689938),
+  c = t(811586);
 
-function f(e) {
+function E(e) {
   let {
-handleClose: t
+handleClose: n
   } = e, {
-skusById: n,
-selectedSkuId: a,
-application: f
-  } = (0, s.usePaymentContext)();
-  i()(null != a, 'Expected selectedSkuId'), i()(null != f, 'Expected application');
-  let h = n[a];
-  i()(null != h, 'Expected sku');
-  let p = d.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
-applicationName: f.name,
-itemName: h.name
+skusById: t,
+selectedSkuId: s,
+application: E
+  } = (0, r.usePaymentContext)();
+  i()(null != s, 'Expected selectedSkuId'), i()(null != E, 'Expected application');
+  let f = t[s];
+  i()(null != f, 'Expected sku');
+  let h = u.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+applicationName: E.name,
+itemName: f.name
   });
-  return (0, r.jsxs)(c.C3, {
+  return (0, a.jsxs)(d.C3, {
 children: [
-  (0, r.jsx)(l.Z, {}),
-  (0, r.jsxs)('div', {
-    className: u.confirmation,
+  (0, a.jsx)(o.Z, {}),
+  (0, a.jsxs)('div', {
+    className: c.confirmation,
     children: [
-      (0, r.jsx)(o.Heading, {
+      (0, a.jsx)(l.Heading, {
         variant: 'heading-xxl/bold',
-        className: u.confirmationHeader,
+        className: c.confirmationHeader,
         children: 'Success!'
       }),
-      (0, r.jsx)(o.Text, {
+      (0, a.jsx)(l.Text, {
         variant: 'text-md/normal',
-        children: p
+        children: h
       }),
-      (0, r.jsx)('div', {
-        className: u.divider
+      (0, a.jsx)('div', {
+        className: c.divider
       }),
-      (0, r.jsx)(o.Button, {
-        onClick: t,
-        children: d.Z.Messages.CLOSE
+      (0, a.jsx)(l.Button, {
+        onClick: n,
+        children: u.Z.Messages.CLOSE
       })
     ]
   })

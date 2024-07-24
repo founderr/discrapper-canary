@@ -1,24 +1,24 @@
-t.d(e, {
+t.d(n, {
   Z: function() {
-return r;
+return l;
   }
 });
-var u = t(735250);
+var o = t(735250);
 t(470079);
-var i = t(481060),
-  s = t(453925),
+var r = t(481060),
+  a = t(619031),
   c = t(821564),
-  o = t(632304);
+  i = t(632304);
 
-function r() {
+function l() {
   return [
-(0, u.jsx)(i.MenuGroup, {
+(0, o.jsx)(r.MenuGroup, {
   children: (0, c.Z)()
 }, 'input-mode-items'),
-(0, u.jsxs)(i.MenuGroup, {
+(0, o.jsxs)(r.MenuGroup, {
   children: [
-    (0, s.Z)(),
-    (0, o.Z)()
+    (0, a.Z)(),
+    (0, i.Z)()
   ]
 }, 'input-output')
   ];

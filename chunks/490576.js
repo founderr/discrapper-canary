@@ -17,7 +17,7 @@ var r = n(512722),
   f = n(598952),
   x = n(596211),
   _ = n(689938),
-  g = n(733648);
+  g = n(492810);
 let h = (0, o.Mg)(l.Z.GUILD_PRODUCT_DOWNLOAD_MODAL_HEADER_IMAGE_WIDTH);
 
 function v(e) {

@@ -52,7 +52,7 @@ allowIdle: Z
     default: e
   } = await Promise.all([
     n.e('2668'),
-    n.e('18624')
+    n.e('50779')
   ]).then(n.bind(n, 542055));
   return t => (0, i.jsx)(e, {
     ...t

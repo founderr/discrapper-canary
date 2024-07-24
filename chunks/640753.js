@@ -10,8 +10,8 @@ var i = n(735250),
   d = n(347904),
   h = n(620652),
   m = n(815605),
-  p = n(610176),
-  g = n(968651);
+  p = n(411784),
+  g = n(839473);
 t.Z = s.memo(function(e) {
   let {
 channelId: t,

@@ -16,7 +16,7 @@ var r = n(735250),
   E = n(441319),
   f = n(981631),
   h = n(689938),
-  p = n(362214);
+  p = n(130217);
 let m = () => [
 h.Z.Messages.APP_ICON_PIRATE,
 h.Z.Messages.APP_ICON_PIRATE_1,

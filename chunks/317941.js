@@ -23,9 +23,9 @@ var n = s(735250),
   p = s(296848),
   R = s(474936),
   x = s(689938),
-  f = s(286748);
+  M = s(105953);
 
-function M(e, t, s) {
+function f(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
 value: s,
 enumerable: !0,
@@ -59,10 +59,10 @@ let {
 } = this.state;
 return (0, n.jsxs)(A.Z, {
   direction: A.Z.Direction.VERTICAL,
-  className: f.giftCodeRow,
+  className: M.giftCodeRow,
   children: [
     (0, n.jsx)(c.CopyInput, {
-      className: f.codeText,
+      className: M.codeText,
       value: (0, O.Nz)(t.code),
       text: this.copyButtonText,
       mode: s,
@@ -73,7 +73,7 @@ return (0, n.jsxs)(A.Z, {
       buttonLook: c.ButtonLooks.FILLED
     }),
     (0, n.jsxs)('div', {
-      className: f.subTextRow,
+      className: M.subTextRow,
       children: [
         null != t.expiresAt ? (0, n.jsxs)(a.Fragment, {
           children: [
@@ -95,9 +95,9 @@ return (0, n.jsxs)(A.Z, {
 });
   }
   constructor(...e) {
-super(...e), M(this, '_copyModeTimeout', new l.V7()), M(this, 'state', {
+super(...e), f(this, '_copyModeTimeout', new l.V7()), f(this, 'state', {
   copyMode: c.CopyInputModes.DEFAULT
-}), M(this, 'handleCopy', e => {
+}), f(this, 'handleCopy', e => {
   let {
     giftCode: t,
     sku: s
@@ -138,7 +138,7 @@ return e = a === R.m8 ? x.Z.Messages.BLACK_FRIDAY_PROMOTION_GIFT_INVENTORY_TITLE
   skuName: t.name,
   intervalCount: s.intervalCount
 }), (0, n.jsx)('div', {
-  className: f.gameName,
+  className: M.gameName,
   children: e
 });
   }
@@ -146,10 +146,10 @@ return e = a === R.m8 ? x.Z.Messages.BLACK_FRIDAY_PROMOTION_GIFT_INVENTORY_TITLE
 return (0, n.jsxs)(A.Z, {
   justify: A.Z.Justify.BETWEEN,
   align: A.Z.Align.CENTER,
-  className: f.generateCodeRow,
+  className: M.generateCodeRow,
   children: [
     (0, n.jsx)('div', {
-      className: f.codeText,
+      className: M.codeText,
       children: x.Z.Messages.GIFT_INVENTORY_GENERATE_HELP
     }),
     (0, n.jsx)(c.Button, {
@@ -185,20 +185,20 @@ return (0, n.jsxs)(_.Z, {
   children: [
     (0, n.jsx)(c.Clickable, {
       onClick: this.handleToggleOpen,
-      className: f.card,
+      className: M.card,
       onMouseEnter: () => this.setIsHovered(!0),
       onMouseLeave: () => this.setIsHovered(!1),
       children: (0, n.jsx)(_.Z.Header, {
         splashArtURL: t.getSplashURL(512),
         children: (0, n.jsxs)('div', {
-          className: f.cardHeader,
+          className: M.cardHeader,
           children: [
             (0, n.jsxs)(A.Z, {
               align: A.Z.Align.CENTER,
               children: [
                 null != d ? (0, n.jsx)(T.Z, {
                   giftStyle: d,
-                  className: f.seasonalGiftBox,
+                  className: M.seasonalGiftBox,
                   shouldAnimate: this.state.isHovered
                 }) : (0, n.jsx)(u.Z, {
                   game: t,
@@ -206,11 +206,11 @@ return (0, n.jsxs)(_.Z, {
                   skuId: r.id
                 }),
                 (0, n.jsxs)('div', {
-                  className: f.headerText,
+                  className: M.headerText,
                   children: [
                     this.renderTitle(),
                     (0, n.jsx)('div', {
-                      className: f.subTextHeader,
+                      className: M.subTextHeader,
                       children: x.Z.Messages.GIFT_INVENTORY_COPIES.format({
                         copies: e.length
                       })
@@ -221,7 +221,7 @@ return (0, n.jsxs)(_.Z, {
             }),
             (0, n.jsx)(g.Z, {
               direction: E ? g.Z.Directions.UP : g.Z.Directions.DOWN,
-              className: f.expandIcon
+              className: M.expandIcon
             })
           ]
         })
@@ -229,7 +229,7 @@ return (0, n.jsxs)(_.Z, {
     }),
     E ? (0, n.jsx)(_.Z.Body, {
       children: o ? (0, n.jsx)(c.Spinner, {
-        className: f.spinner
+        className: M.spinner
       }) : (0, n.jsxs)(a.Fragment, {
         children: [
           s.length < e.length ? this.renderGenerateGiftCodeRow() : null,
@@ -245,11 +245,11 @@ return (0, n.jsxs)(_.Z, {
 });
   }
   constructor(...e) {
-super(...e), M(this, '_loadedAt', null), M(this, 'state', {
+super(...e), f(this, '_loadedAt', null), f(this, 'state', {
   isOpen: !1,
   isCreating: !1,
   isHovered: !1
-}), M(this, 'handleGenerateGiftCode', async e => {
+}), f(this, 'handleGenerateGiftCode', async e => {
   e.stopPropagation();
   let {
     skuId: t,
@@ -262,7 +262,7 @@ super(...e), M(this, '_loadedAt', null), M(this, 'state', {
     isCreating: !1,
     isOpen: !0
   });
-}), M(this, 'handleToggleOpen', () => {
+}), f(this, 'handleToggleOpen', () => {
   let {
     skuId: e,
     subscriptionPlanId: t,

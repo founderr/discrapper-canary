@@ -10,7 +10,7 @@ var n = s(735250),
   E = s(285952),
   u = s(418632),
   T = s(689938),
-  I = s(116536);
+  I = s(619735);
 class S extends a.Component {
   renderNotice() {
 let {
@@ -69,7 +69,7 @@ return this.props.isClaimed && this.props.hasEmail ? (0, n.jsx)(E.Z.Child, {
     default: e
   } = await Promise.all([
     s.e('9343'),
-    s.e('12409')
+    s.e('45863')
   ]).then(s.bind(s, 642298));
   return t => (0, n.jsx)(e, {
     ...t

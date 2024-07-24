@@ -1,6 +1,6 @@
 s.d(t, {
   Z: function() {
-return M;
+return f;
   }
 }), s(47120);
 var n = s(735250),
@@ -25,10 +25,10 @@ var n = s(735250),
   h = s(981631),
   O = s(710111),
   p = s(689938),
-  R = s(484090),
-  x = s(224499);
+  R = s(278720),
+  x = s(549856);
 
-function f(e) {
+function M(e) {
   return (0, i.e7)([u.Z], () => {
 if (null == e)
   return null;
@@ -40,10 +40,10 @@ return u.Z.getSound(t === O.hY ? O.X8 : t, s);
   });
 }
 
-function M() {
+function f() {
   let {
 analyticsLocations: e
-  } = (0, l.ZP)(), [t, s] = a.useState(O.hY), o = (0, I.tT)(t), m = f(o), M = (0, i.e7)([u.Z], () => u.Z.hasFetchedAllSounds()), P = (null == o ? void 0 : o.type) === I.zx.GLOBAL, L = M && null != o && null == m;
+  } = (0, l.ZP)(), [t, s] = a.useState(O.hY), o = (0, I.tT)(t), m = M(o), f = (0, i.e7)([u.Z], () => u.Z.hasFetchedAllSounds()), P = (null == o ? void 0 : o.type) === I.zx.GLOBAL, L = f && null != o && null == m;
   a.useEffect(() => {
 L && (0, T.tt)({
   location: e
@@ -139,7 +139,7 @@ guildId: t
   } = e, s = (0, i.e7)([m.Z], () => {
 var e, s, n;
 return null === (n = m.Z.settings.guilds) || void 0 === n ? void 0 : null === (s = n.guilds) || void 0 === s ? void 0 : null === (e = s[t]) || void 0 === e ? void 0 : e.joinSound;
-  }), a = f(s);
+  }), a = M(s);
   if (null == s || null == a)
 return null;
   let {

@@ -29,7 +29,7 @@ var s = n(735250),
   P = n(132547),
   L = n(474936),
   v = n(981631),
-  Z = n(874296);
+  Z = n(370070);
 t.Z = function(e) {
   let {
 entrypoint: t = L.EZ.UserSettings

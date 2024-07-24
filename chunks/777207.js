@@ -10,8 +10,8 @@ var r = n(735250),
   o = n(696689),
   l = n.n(o),
   u = n(692547),
-  c = n(715186),
-  d = n(906998);
+  c = n(181375),
+  d = n(860857);
 let _ = Object.fromEntries(Object.keys(u.Z.colors).map(e => [
 l()(e),
 e

@@ -1,22 +1,22 @@
-r.d(t, {
+t.d(n, {
   Z: function() {
-return l;
+return c;
   }
 });
-var a = r(735250);
-r(470079);
-var n = r(120356),
-  i = r.n(n),
-  o = r(161993);
+var r = t(735250);
+t(470079);
+var l = t(120356),
+  a = t.n(l),
+  o = t(377790);
 
-function l(e) {
+function c(e) {
   let {
-children: t,
-tag: r,
-className: n
+children: n,
+tag: t,
+className: l
   } = e;
-  return r = null != r ? r : 'h3', (0, a.jsx)(r, {
-className: i()(o.title, n),
-children: t
+  return t = null != t ? t : 'h3', (0, r.jsx)(t, {
+className: a()(o.title, l),
+children: n
   });
 }

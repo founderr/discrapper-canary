@@ -1,7 +1,7 @@
-var s = n(160739),
-  a = n(988513),
-  i = n(263604),
-  r = n(519342);
+var i = n(160739),
+  s = n(988513),
+  a = n(263604),
+  o = n(519342);
 e.exports = function(e, t, n) {
-  return (e = i(e), void 0 === (t = n ? void 0 : t)) ? a(e) ? r(e) : s(e) : e.match(t) || [];
+  return (e = a(e), void 0 === (t = n ? void 0 : t)) ? s(e) ? o(e) : i(e) : e.match(t) || [];
 };

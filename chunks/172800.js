@@ -17,7 +17,7 @@ var r = n(735250),
   I = n(149203),
   T = n(981631),
   g = n(689938),
-  S = n(269003);
+  S = n(531784);
 t.Z = e => {
   let {
 emojiDescriptors: t,

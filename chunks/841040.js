@@ -10,7 +10,7 @@ var i = n(481060),
   s = n(785717),
   o = n(981631),
   l = n(689938),
-  u = n(311960);
+  u = n(914338);
 let c = {
 page: o.ZY5.GUILD_CHANNEL,
 section: o.jXE.PROFILE_POPOUT,

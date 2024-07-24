@@ -16,7 +16,7 @@ var n = s(735250),
   u = s(150039),
   T = s(993413),
   I = s(689938),
-  S = s(539523);
+  S = s(566091);
 
 function N(e) {
   let {
@@ -34,7 +34,7 @@ userAvatarDecoration: O,
 guildAvatarDecoration: p,
 pendingAvatarDecoration: R,
 pendingErrors: x
-  } = (0, u.$U)(t, s), f = (0, _.Z)('enable_avatar_decoration_uploads'), M = a.useCallback(() => (0, d.ps)({
+  } = (0, u.$U)(t, s), M = (0, _.Z)('enable_avatar_decoration_uploads'), f = a.useCallback(() => (0, d.ps)({
 analyticsLocations: g,
 isTryItOutFlow: A,
 guild: s
@@ -55,7 +55,7 @@ children: [
     children: [
       (0, n.jsx)(P, {
         size: o.Button.Sizes.SMALL,
-        onClick: M,
+        onClick: f,
         className: r()({
           [S.buttonHighlighted]: m
         }),
@@ -73,7 +73,7 @@ children: [
       })
     ]
   }),
-  t.isStaff() && f && (0, n.jsx)(C, {
+  t.isStaff() && M && (0, n.jsx)(C, {
     user: t
   })
 ]

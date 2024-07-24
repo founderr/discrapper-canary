@@ -1,16 +1,16 @@
 var o = n(652874),
-  s = n(433517),
-  l = n(710845),
-  r = n(626135),
-  a = n(630724),
-  i = n(981631);
-let c = 'UserFlowAnalyticsStore_current',
+  r = n(433517),
+  i = n(710845),
+  a = n(626135),
+  c = n(630724),
+  l = n(981631);
+let _ = 'UserFlowAnalyticsStore_current',
   u = 'UserFlowAnalyticsStore';
 
-function d(e) {
-  if (e === a.MK.UNKNOWN)
+function s(e) {
+  if (e === c.MK.UNKNOWN)
 return null;
-  let t = s.K.get(''.concat(u, '-').concat(e));
+  let t = r.K.get(''.concat(u, '-').concat(e));
   if (null == t)
 return null;
   let {
@@ -19,19 +19,19 @@ version: n,
   } = t;
   return 1 !== n ? null : o;
 }
-new l.Z('UserFlowAnalytics');
-let m = (0, o.Z)((e, t) => ({
+new i.Z('UserFlowAnalytics');
+let d = (0, o.Z)((e, t) => ({
   flows: {},
   currentFlow: null,
   activeFlow: () => {
 var e;
-let n = null !== (e = t().currentFlow) && void 0 !== e ? e : s.K.get(c);
+let n = null !== (e = t().currentFlow) && void 0 !== e ? e : r.K.get(_);
 if (null == n)
   return null;
 let {
   [n]: o
-} = t().flows, l = null != o ? o : d(n);
-return (null == l ? void 0 : l.currentStep) != null ? n : null;
+} = t().flows, i = null != o ? o : s(n);
+return (null == i ? void 0 : i.currentStep) != null ? n : null;
   }
 }));
 
@@ -39,9 +39,9 @@ function f(e, t) {
   let {
 [e]: n,
 ...o
-  } = m.getState().flows, s = null != n ? n : d(e);
-  if ((null == s ? void 0 : s.currentStep) == null || s.currentStep !== t)
-m.setState({
+  } = d.getState().flows, r = null != n ? n : s(e);
+  if ((null == r ? void 0 : r.currentStep) == null || r.currentStep !== t)
+d.setState({
   flows: {
     ...o,
     [e]: {
@@ -57,25 +57,25 @@ m.setState({
 });
 }
 
-function _(e, t) {
+function p(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
 o = e;
-  if (e === a.MK.ANY) {
-var s;
-o = null !== (s = m.getState().activeFlow()) && void 0 !== s ? s : a.MK.UNKNOWN;
+  if (e === c.MK.ANY) {
+var r;
+o = null !== (r = d.getState().activeFlow()) && void 0 !== r ? r : c.MK.UNKNOWN;
   }
   let {
-[o]: l,
-...r
-  } = m.getState().flows, i = null != l ? l : d(o);
-  if (null != i && null != i.currentStep && i.currentStep !== t)
-m.setState({
+[o]: i,
+...a
+  } = d.getState().flows, l = null != i ? i : s(o);
+  if (null != l && null != l.currentStep && l.currentStep !== t)
+d.setState({
   flows: {
-    ...r,
+    ...a,
     [o]: {
-      ...i,
-      lastStep: i.currentStep,
-      lastTimestamp: i.currentTimestamp,
+      ...l,
+      lastStep: l.currentStep,
+      lastTimestamp: l.currentTimestamp,
       currentStep: t,
       currentTimestamp: new Date(),
       ended: n
@@ -84,18 +84,18 @@ m.setState({
   currentFlow: o
 });
 }
-m.subscribe(e => {
+d.subscribe(e => {
   var t;
   if (null != e) {
 if (! function(e) {
-    if (e.type === a.MK.UNKNOWN)
+    if (e.type === c.MK.UNKNOWN)
       return;
     let t = ''.concat(u, '-').concat(e.type);
-    e.ended ? (s.K.remove(t), s.K.remove(c)) : (s.K.set(''.concat(u, '-').concat(e.type), {
+    e.ended ? (r.K.remove(t), r.K.remove(_)) : (r.K.set(''.concat(u, '-').concat(e.type), {
       ...e,
       version: 1
-    }), s.K.set(c, e.type));
-  }(e), r.default.track(i.rMx.NUO_TRANSITION, {
+    }), r.K.set(_, e.type));
+  }(e), a.default.track(l.rMx.NUO_TRANSITION, {
     flow_type: e.type,
     from_step: e.lastStep,
     to_step: e.currentStep,
@@ -104,9 +104,9 @@ if (! function(e) {
     flush: !0
   }), e.ended) {
   let t = {
-    ...m.getState().flows
+    ...d.getState().flows
   };
-  delete t[e.type], m.setState({
+  delete t[e.type], d.setState({
     flows: t,
     currentFlow: null
   });
@@ -114,14 +114,14 @@ if (! function(e) {
   }
 }, e => null != e.currentFlow ? e.flows[e.currentFlow] : void 0);
 
-function p() {
-  return null != m.getState().activeFlow();
+function I() {
+  return null != d.getState().activeFlow();
 }
 t.Z = {
   flowStart: f,
   flowStepOrStart: function(e, t) {
-p() ? _(e, t) : f(e, t);
+I() ? p(e, t) : f(e, t);
   },
-  flowStep: _,
-  hasActiveFlow: p
+  flowStep: p,
+  hasActiveFlow: I
 };

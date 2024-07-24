@@ -15,7 +15,7 @@ a()(i.shouldOpenGameProfile, 'Passed a false value for [gameProfileModalChecks].
     default: e
   } = await Promise.all([
     n.e('80176'),
-    n.e('13310')
+    n.e('50887')
   ]).then(n.bind(n, 644941));
   return n => (0, r.jsx)(e, {
     applicationId: t,

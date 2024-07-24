@@ -1,34 +1,34 @@
-i.d(n, {
+t.d(n, {
   Z: function() {
-return l;
+return a;
   }
 });
-var t = i(735250),
-  o = i(470079),
-  a = i(901461),
-  c = i(464891);
-let r = o.memo(c.ZP);
+var r = t(735250),
+  i = t(470079),
+  o = t(901461),
+  l = t(464891);
+let u = i.memo(l.ZP);
 
-function l(e) {
+function a(e) {
   let {
 message: n,
-channel: i,
-author: o,
-compact: c,
-animateAvatar: l,
-guildId: d,
-isGroupStart: s = !0,
-roleIcon: u,
+channel: t,
+author: i,
+compact: l,
+animateAvatar: a,
+guildId: s,
+isGroupStart: c = !0,
+roleIcon: d,
 hideTimestamp: _
   } = e;
-  return !(0, a.Z)(n) && (s || c) ? (0, t.jsx)(r, {
+  return !(0, o.Z)(n) && (c || l) ? (0, r.jsx)(u, {
 message: n,
-channel: i,
-author: o,
-guildId: d,
-compact: c,
-animate: l,
-roleIcon: u,
+channel: t,
+author: i,
+guildId: s,
+compact: l,
+animate: a,
+roleIcon: d,
 hideTimestamp: _
   }) : void 0;
 }

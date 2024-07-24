@@ -28,11 +28,11 @@ var a = s(120356),
   p = s(104494),
   R = s(987997),
   x = s(833569),
-  f = s(823188),
-  M = s(474936),
+  M = s(823188),
+  f = s(474936),
   D = s(981631),
   P = s(689938),
-  L = s(899482);
+  L = s(464165);
 let b = new E.Z('SubscriptionHeader.tsx'),
   Z = {
 page: D.ZY5.USER_SETTINGS,
@@ -73,12 +73,12 @@ children: [
             className: L.headerLabel,
             children: [
               t,
-              o && null != l && (0, n.jsx)(f.Cy, {
+              o && null != l && (0, n.jsx)(M.Cy, {
                 text: P.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
                   percent: l
                 }),
                 className: L.discountPill,
-                colorOptions: f.VE.PREMIUM_TIER_2_WHITE_FILL,
+                colorOptions: M.VE.PREMIUM_TIER_2_WHITE_FILL,
                 isPillOnBorder: !1
               })
             ]
@@ -125,12 +125,12 @@ children: [
             className: L.headerColumnB,
             children: [
               t,
-              o && null != l && (0, n.jsx)(f.Cy, {
+              o && null != l && (0, n.jsx)(M.Cy, {
                 text: P.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
                   percent: l
                 }),
                 className: L.discountPill,
-                colorOptions: f.VE.PREMIUM_TIER_2_WHITE_FILL,
+                colorOptions: M.VE.PREMIUM_TIER_2_WHITE_FILL,
                 isPillOnBorder: !1
               }),
               s
@@ -176,7 +176,7 @@ subscriptionInfo: (0, n.jsx)('div', {
 buttons: (0, n.jsx)(R.Z, {
   className: L.toolsButton,
   onClick: () => (0, u.Z)({
-    subscriptionTier: M.Si.TIER_1,
+    subscriptionTier: f.Si.TIER_1,
     analyticsLocations: e,
     analyticsObject: Z
   }),
@@ -192,7 +192,7 @@ t.Z = function(e) {
   let {
 subscription: r,
 renewalInvoicePreview: E,
-paymentSource: f,
+paymentSource: M,
 busy: G,
 analyticsLocation: F
   } = e, {
@@ -202,7 +202,7 @@ enabled: V
   } = (0, O.ZP)({
 location: 'subscription_header'
   });
-  (!M.pj.has(r.planId) || !D.JwP.ALL_PAUSEABLE.has(r.status)) && (V = !1);
+  (!f.pj.has(r.planId) || !D.JwP.ALL_PAUSEABLE.has(r.status)) && (V = !1);
   let Y = (0, p.Ng)(),
 w = null == Y ? void 0 : null === (t = Y.discount) || void 0 === t ? void 0 : t.amount,
 k = (0, h.t7)(),
@@ -240,10 +240,10 @@ X = () => {
       b.info('Plan not fetched for plan id: '.concat(r.planIdFromItems));
       return;
     }
-    let t = (0, A.DE)(e, null == f ? void 0 : f.id, !1),
+    let t = (0, A.DE)(e, null == M ? void 0 : M.id, !1),
       s = t.length > 0 ? t[0] : r.currency,
       n = !1;
-    1 === t.length && (null == f ? void 0 : f.id) === r.paymentSourceId && (0, A.tD)(e.id, s, null == f ? void 0 : f.id) && (n = !0), n ? c.O5(r, y) : (0, u.Z)({
+    1 === t.length && (null == M ? void 0 : M.id) === r.paymentSourceId && (0, A.tD)(e.id, s, null == M ? void 0 : M.id) && (n = !0), n ? c.O5(r, y) : (0, u.Z)({
       initialPlanId: r.planIdFromItems,
       analyticsLocations: y,
       analyticsLocation: F,
@@ -285,9 +285,9 @@ return null;
   let et = m.ZP.getStatusFromInvoice(r, E),
 es = m.ZP.getPremiumType(ee),
 en = {
-  [L.tier0]: es === M.p9.TIER_0,
-  [L.tier1]: es === M.p9.TIER_1,
-  [L.tier2]: es === M.p9.TIER_2,
+  [L.tier0]: es === f.p9.TIER_0,
+  [L.tier1]: es === f.p9.TIER_1,
+  [L.tier2]: es === f.p9.TIER_2,
   [L.canceled]: et === D.O0b.CANCELED,
   [L.pausePending]: et === D.O0b.PAUSE_PENDING,
   [L.paused]: et === D.O0b.PAUSED,
@@ -295,7 +295,7 @@ en = {
 },
 ea = null;
   switch (es) {
-case M.p9.TIER_0:
+case f.p9.TIER_0:
   ea = (0, n.jsxs)('div', {
     className: L.wordMark,
     children: [
@@ -309,10 +309,10 @@ case M.p9.TIER_0:
     ]
   });
   break;
-case M.p9.TIER_1:
+case f.p9.TIER_1:
   ea = (0, n.jsx)(U, {});
   break;
-case M.p9.TIER_2:
+case f.p9.TIER_2:
   ea = (0, n.jsx)(S.Z, {
     className: L.planName,
     'aria-label': P.Z.Messages.PREMIUM_TITLE

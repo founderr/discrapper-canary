@@ -8,7 +8,7 @@ var n = s(735250),
   i = s(120356),
   r = s.n(i),
   o = s(981631),
-  l = s(946304);
+  l = s(690476);
 class c extends a.Component {
   render() {
 let {

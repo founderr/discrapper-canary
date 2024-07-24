@@ -26,7 +26,7 @@ var i = n(735250),
   f = n(490610),
   S = n(981631),
   C = n(689938),
-  N = n(145745);
+  N = n(813580);
 let A = (e, t) => {
   switch (e) {
 case m.hz.GENSHIN:

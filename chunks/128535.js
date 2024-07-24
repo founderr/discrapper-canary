@@ -12,7 +12,7 @@ var a = n(120356),
   _ = n(566078),
   E = n(667105),
   m = n(689938),
-  I = n(410301);
+  I = n(787248);
 let T = e => 0 === e.length ? I.warning : I.danger,
   h = (e, t) => 0 === e.length ? m.Z.Messages.QUESTS_LAUNCHED_GAME.format({
 gameTitle: t

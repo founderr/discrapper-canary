@@ -10,7 +10,7 @@ var l = o(735250),
   r = o(690221),
   i = o(557177),
   d = o(689938),
-  u = o(425966);
+  u = o(585865);
 let c = [{
 preBold: 'That\'s pretty...',
 bold: 'fly!'

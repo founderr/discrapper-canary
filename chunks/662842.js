@@ -36,7 +36,7 @@ var i, s, a = n(735250),
   y = n(981631),
   j = n(765305),
   U = n(689938),
-  G = n(167555);
+  G = n(366846);
 (s = i || (i = {}))[s.STAGE = 0] = 'STAGE', s[s.EVENT_EXTERNAL = 1] = 'EVENT_EXTERNAL', s[s.EVENT_VOICE = 2] = 'EVENT_VOICE', s[s.STUDY_ROOM = 3] = 'STUDY_ROOM';
 
 function w(e) {

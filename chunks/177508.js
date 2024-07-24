@@ -9,7 +9,7 @@ var n = s(735250),
   r = s.n(i),
   o = s(971809),
   l = s(481060),
-  c = s(522967);
+  c = s(504503);
 let d = Object.keys(l.Button.Colors).filter(e => 'CUSTOM' !== e),
   _ = Object.keys(l.Button.Looks).filter(e => 'BLANK' !== e);
 

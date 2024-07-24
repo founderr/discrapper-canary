@@ -19,7 +19,7 @@ var s = n(735250),
   C = n(957115),
   f = n(531578),
   m = n(689938),
-  A = n(940256);
+  A = n(487448);
 
 function N() {
   return (0, s.jsx)(r.Text, {

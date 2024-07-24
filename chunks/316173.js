@@ -10,7 +10,7 @@ var i = n(735250),
   u = n(865427),
   _ = n(820254),
   E = n(689938),
-  h = n(514990);
+  h = n(906515);
 let I = 'isHideDevBanner';
 t.Z = () => {
   var e;
@@ -49,7 +49,7 @@ children: [
     className: h.icon
   }),
   E.Z.Messages.DEV_NOTICE_STAGING.format({
-    buildNumber: '312607'
+    buildNumber: '312658'
   }),
   (0, i.jsx)(g, {})
 ]

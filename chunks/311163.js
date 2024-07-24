@@ -1,30 +1,30 @@
-r.d(t, {
+n.d(t, {
   Z: function() {
-return i;
+return r;
   }
 });
-var a = r(272423),
-  n = r(378788);
+var i = n(272423),
+  o = n(378788);
 
-function i(e) {
+function r(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-r = (0, a.kf)(e);
-  if (null != r)
+n = (0, i.kf)(e);
+  if (null != n)
 return [
-  r.params.guildId,
-  r.params.channelId
+  n.params.guildId,
+  n.params.channelId
 ];
-  if ((0, n.z)() && !t)
+  if ((0, o.z)() && !t)
 return [
   void 0,
   void 0
 ];
-  let i = (0, a.B3)(e);
-  if (null != i) {
-var o, l;
+  let r = (0, i.B3)(e);
+  if (null != r) {
+var a, s;
 return [
-  null === (o = i.params) || void 0 === o ? void 0 : o.guildId,
-  null === (l = i.params) || void 0 === l ? void 0 : l.channelId
+  null === (a = r.params) || void 0 === a ? void 0 : a.guildId,
+  null === (s = r.params) || void 0 === s ? void 0 : s.channelId
 ];
   }
   return [

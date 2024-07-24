@@ -12,7 +12,7 @@ var s = n(990547),
   o = n(981631),
   c = n(921944),
   d = n(689938),
-  u = n(843064);
+  u = n(157460);
 let _ = (e, t) => ({
   body: e.messages.completionTooltip(t),
   imgSrc: e.assets.tooltipSrc,

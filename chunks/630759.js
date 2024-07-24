@@ -131,7 +131,7 @@ return (await o.tn.post({
 throw E.Z.captureException(e), e;
   }
 }
-async function f(e) {
+async function M(e) {
   let {
 key: t,
 signature: s
@@ -147,15 +147,15 @@ throw E.Z.captureException(e), e;
   }
 }
 
-function M(e) {
+function f(e) {
   return I.Z.getUploadedKeyVersionsCached().includes(e);
 }
 async function D(e) {
-  !M(e) && await f(e);
+  !f(e) && await M(e);
 }
 async function P(e) {
-  if (!M(e))
-return await f(e), !0;
+  if (!f(e))
+return await M(e), !0;
   let t = l.default.getId(),
 {
   key: s
