@@ -204,7 +204,8 @@ eo = () => a.id === B.id ? null : (0, r.jsx)('div', {
     activity: ee,
     user: a,
     currentUser: B,
-    onAction: j
+    onAction: j,
+    onClose: W
   })
 });
   return (0, r.jsxs)('div', {
