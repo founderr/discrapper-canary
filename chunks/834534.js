@@ -14,8 +14,8 @@ var l = i(442837),
   c = i(785717),
   u = i(532776),
   I = i(648067),
-  _ = i(588822),
-  f = i(900927),
+  f = i(588822),
+  _ = i(900927),
   E = i(678738),
   m = i(652853),
   S = i(335191),
@@ -40,7 +40,7 @@ trackUserProfileAction: C
 fade: !0,
 className: h.scroller,
 children: [
-  (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' && (0, s.jsx)(_.Z, {
+  (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' && (0, s.jsx)(f.Z, {
     userBio: p.bio,
     setLineClamp: !1
   }),
@@ -52,7 +52,7 @@ children: [
   }),
   (0, s.jsx)(E.Z, {
     title: x.Z.Messages.USER_PROFILE_MEMBER_SINCE,
-    children: (0, s.jsx)(f.Z, {
+    children: (0, s.jsx)(_.Z, {
       userId: n.id,
       guildId: null == p ? void 0 : p.guildId,
       tooltipDelay: v.vB

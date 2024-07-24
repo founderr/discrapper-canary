@@ -8,8 +8,8 @@ var i = n(735250),
   d = n(612226),
   u = n(714338),
   _ = n(607070),
-  h = n(317858),
-  E = n(635395),
+  E = n(317858),
+  h = n(635395),
   I = n(5560),
   m = n(451478),
   g = n(585483),
@@ -33,7 +33,7 @@ t = s.useCallback(t => {
 }, []);
   return s.useEffect(() => (u.Z.setLayout(d.ZP), u.Z.enable(), () => u.Z.disable()), []), s.useEffect(() => (g.S.subscribe(f.CkL.SHAKE_APP, t), () => {
 g.S.unsubscribe(f.CkL.SHAKE_APP, t);
-  }), [t]), (0, h.Z)(), (0, i.jsxs)(l.Shakeable, {
+  }), [t]), (0, E.Z)(), (0, i.jsxs)(l.Shakeable, {
 ref: e,
 className: S.app,
 children: [
@@ -41,7 +41,7 @@ children: [
     className: S.layers,
     children: (0, i.jsx)(o.Z, {})
   }),
-  (0, i.jsx)(E.Z, {}),
+  (0, i.jsx)(h.Z, {}),
   (0, i.jsx)(c.Z, {}),
   (0, i.jsx)(p.Z, {}),
   (0, i.jsx)(I.Z, {}),

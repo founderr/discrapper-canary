@@ -9,8 +9,8 @@ var i = n(846519),
   d = n(517100),
   u = n(19780),
   _ = n(70956),
-  h = n(358085),
-  E = n(981631);
+  E = n(358085),
+  h = n(981631);
 let I = new i.V7(),
   m = new i.V7();
 class g extends r.Z {
@@ -22,10 +22,10 @@ I.stop(), m.stop(), s.Z.unsubscribe('IDLE', this.handleIdleUpdate);
   }
   handleIdleUpdate() {
 let e = d.Z.getIdleSince();
-if (!h.isPlatformEmbedded)
+if (!E.isPlatformEmbedded)
   return;
 for (let e of (I.stop(), m.stop(), l.Z.getAllActiveStreams()))
-  if (e.state !== E.jm8.ENDED)
+  if (e.state !== h.jm8.ENDED)
     return;
 if (null == e)
   return;

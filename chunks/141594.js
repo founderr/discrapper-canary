@@ -9,10 +9,10 @@ var i = n(470079),
   d = n(683167),
   u = n(302800),
   _ = n(921944);
-let h = 'useCollectiblesShopTabNewBadge';
+let E = 'useCollectiblesShopTabNewBadge';
 t.Z = () => {
   let e = (0, s.e7)([l.default], () => l.default.getCurrentUser()),
-t = (0, d.I)(h),
+t = (0, d.I)(E),
 n = i.useMemo(() => {
   if ((0, o.Fc)(e)) {
     if (t === u.LM.ROBERT)
@@ -27,10 +27,10 @@ n = i.useMemo(() => {
   e,
   t
 ]),
-[E, I] = (0, r.U)(n, void 0, !0),
-m = (0, c.E)(h),
+[h, I] = (0, r.U)(n, void 0, !0),
+m = (0, c.E)(E),
 g = null;
-  return null != E && (m === u.k2.COACHTIP ? g = u.fY[E] : m === u.k2.COACHTIP_HEADLINE_ONLY ? g = u.zM[E] : m === u.k2.BADGE && (g = {
+  return null != h && (m === u.k2.COACHTIP ? g = u.fY[h] : m === u.k2.COACHTIP_HEADLINE_ONLY ? g = u.zM[h] : m === u.k2.BADGE && (g = {
 type: u.k2.BADGE
   })), {
 collectiblesShopTabNewBadgeDisplayOptions: g,

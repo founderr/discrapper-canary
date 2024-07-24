@@ -17,14 +17,14 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let h = new Set(),
-  E = new Set(),
+let E = new Set(),
+  h = new Set(),
   I = null;
 
 function m() {
-  for (let e of h)
+  for (let e of E)
 s.Z.setDisableLocalVideo(e, d.ZUi.MANUAL_ENABLED, u.Yn.DEFAULT, !1);
-  E.clear(), h.clear();
+  h.clear(), E.clear();
 }
 class g extends a.Z {
   _initialize() {
@@ -45,15 +45,15 @@ let a = null != r.ZP.getVisibleGame(),
   _ = c.Z.isVisible(),
   I = l.Z.getWindowVisible(d.KJ3.CHANNEL_CALL_POPOUT),
   m = o.Z.isLocalVideoDisabled(t, n),
-  g = E.has(t);
-a && !_ && !I && !m && !g && (h.add(t), s.Z.setDisableLocalVideo(t, d.ZUi.DISABLED, n, !1));
+  g = h.has(t);
+a && !_ && !I && !m && !g && (E.add(t), s.Z.setDisableLocalVideo(t, d.ZUi.DISABLED, n, !1));
   }
   handleManualLocalVideoToggle(e) {
 let {
   userId: t,
   persist: n
 } = e;
-n && (E.add(t), h.delete(t));
+n && (h.add(t), E.delete(t));
   }
   constructor(...e) {
 super(...e), _(this, 'handleWindowVisibilityChange', e => {

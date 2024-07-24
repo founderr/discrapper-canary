@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(594174),
   u = n(626135),
   _ = n(321488),
-  h = n(417183),
-  E = n(170245),
+  E = n(417183),
+  h = n(170245),
   I = n(981631),
   m = n(689938),
   g = n(739508);
@@ -39,7 +39,7 @@ e.stopPropagation(), l.Z.addRelationship({
   }
 });
   }, A = p === I.Skl.OFFLINE ? I.Skl.UNKNOWN : p, v = n === I.OGo.PENDING_INCOMING ? m.Z.Messages.INCOMING_FRIEND_REQUEST : m.Z.Messages.OUTGOING_FRIEND_REQUEST;
-  return (0, i.jsx)(h.Z, {
+  return (0, i.jsx)(E.Z, {
 isFocused: T,
 user: t,
 onClick: () => (0, c.openUserProfileModal)({
@@ -83,7 +83,7 @@ children: e => {
   return (0, i.jsxs)('div', {
     className: g.listItemContents,
     children: [
-      (0, i.jsx)(E.Z, {
+      (0, i.jsx)(h.Z, {
         user: t,
         hovered: e,
         showAccountIdentifier: !0,

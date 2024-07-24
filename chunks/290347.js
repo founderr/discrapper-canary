@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(607070),
   u = n(446411),
   _ = n(468846),
-  h = n(605236),
-  E = n(524444),
+  E = n(605236),
+  h = n(524444),
   I = n(153124),
   m = n(810090),
   g = n(626135),
@@ -163,7 +163,7 @@ if ('video' === a.type || 'embed' === a.type) {
 M,
 a.type
   ]), s.useEffect(() => {
-null != Z && (0, h.kk)(Z);
+null != Z && (0, E.kk)(Z);
 let e = Date.now();
 return g.default.track(f.rMx.CHANGE_LOG_OPENED, {
   change_log_id: M
@@ -171,7 +171,7 @@ return g.default.track(f.rMx.CHANGE_LOG_OPENED, {
   g.default.track(f.rMx.CHANGE_LOG_CLOSED, {
     change_log_id: M,
     seconds_open: Math.round((Date.now() - e) / 1000)
-  }), null != Z && (0, h.EW)(Z, {
+  }), null != Z && (0, E.EW)(Z, {
     dismissAction: S.L.DISMISS
   });
 };
@@ -242,9 +242,9 @@ children: [
         provider: _.pn.YOUTUBE,
         maxWidth: a.embed.width,
         maxHeight: a.embed.height,
-        renderVideoComponent: E.lV,
-        renderImageComponent: E.Yi,
-        renderLinkComponent: E.iT,
+        renderVideoComponent: h.lV,
+        renderImageComponent: h.Yi,
+        renderLinkComponent: h.iT,
         renderForwardComponent: f.VqG,
         onPlay: () => {
           g.default.track(f.rMx.CHANGE_LOG_VIDEO_INTERACTED, {

@@ -13,8 +13,8 @@ var s = i(735250),
   c = i(906732),
   u = i(199902),
   I = i(158776),
-  _ = i(785717),
-  f = i(221292),
+  f = i(785717),
+  _ = i(221292),
   E = i(989964),
   m = i(981631),
   S = i(711298),
@@ -38,7 +38,7 @@ newestAnalyticsLocation: C
   } = (0, c.ZP)(), {
 trackUserProfileAction: j,
 ...A
-  } = (0, _.KZ)(), O = {
+  } = (0, f.KZ)(), O = {
 location: {
   page: m.ZY5.USER_PROFILE,
   section: m.jXE.PROFILE_MODAL
@@ -63,7 +63,7 @@ children: [
     onAction: () => {
       j({
         action: 'JOIN_ACTIVITY'
-      }), (0, f.Ac)({
+      }), (0, _.Ac)({
         activityType: m.IIU.STREAMING,
         activityName: null == T ? void 0 : T.name,
         activityPlatform: null == T ? void 0 : T.platform,
@@ -90,7 +90,7 @@ children: [
     onAction: () => {
       j({
         action: 'JOIN_ACTIVITY'
-      }), (0, f.Ac)({
+      }), (0, _.Ac)({
         activityType: e.type,
         activityName: e.name,
         activityPlatform: e.platform,

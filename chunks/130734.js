@@ -5,7 +5,7 @@ let d = 'hasSeenGuildTemplatePromotionTooltip',
   u = {},
   _ = !0 === o.K.get(d);
 
-function h(e) {
+function E(e) {
   let {
 guildId: t
   } = e;
@@ -14,7 +14,7 @@ guildId: t
 [t]: !1
   };
 }
-class E extends(r = l.ZP.Store) {
+class h extends(r = l.ZP.Store) {
   shouldShowGuildTemplateDirtyTooltip(e) {
 var t;
 return null !== (t = u[e]) && void 0 !== t && t;
@@ -23,12 +23,12 @@ return null !== (t = u[e]) && void 0 !== t && t;
 return !_;
   }
 }
-a = 'GuildTemplateTooltipStore', (s = 'displayName') in(i = E) ? Object.defineProperty(i, s, {
+a = 'GuildTemplateTooltipStore', (s = 'displayName') in(i = h) ? Object.defineProperty(i, s, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = a, t.Z = new E(c.Z, {
+}) : i[s] = a, t.Z = new h(c.Z, {
   GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH: function(e) {
 let {
   guildTemplate: t
@@ -47,6 +47,6 @@ u = {
   [e.guildTemplate.source_guild_id]: !1
 };
   },
-  GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE: h,
-  GUILD_TEMPLATE_DELETE_SUCCESS: h
+  GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE: E,
+  GUILD_TEMPLATE_DELETE_SUCCESS: E
 });

@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(481060),
   u = n(570140),
   _ = n(569984),
-  h = n(918701),
-  E = n(93127),
+  E = n(918701),
+  h = n(93127),
   I = n(814443),
   m = n(594174),
   g = n(801077),
@@ -47,10 +47,10 @@ let {
 }), {
   partiedMembers: u,
   applicationStreams: _,
-  currentActivities: h,
-  voiceChannels: E
-} = t, I = u.length, m = _.length, g = h.length, T = E.length > 0, f = s.useCallback(() => {
-  let e = h.filter(e => {
+  currentActivities: E,
+  voiceChannels: h
+} = t, I = u.length, m = _.length, g = E.length, T = h.length > 0, f = s.useCallback(() => {
+  let e = E.filter(e => {
     var t, n;
     return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.wW.GAME;
   }).map(e => e.game.name);
@@ -66,7 +66,7 @@ let {
   m,
   g,
   T,
-  h
+  E
 ]), v = o()(f, x);
 return null != l || null != c ? (0, i.jsx)(d.Popout, {
   position: 'left',
@@ -100,7 +100,7 @@ return null != l || null != c ? (0, i.jsx)(d.Popout, {
   }
 }) : null;
   }),
-  P = r().throttle(() => E.W(!1), 300000);
+  P = r().throttle(() => h.W(!1), 300000);
 
 function M() {
   let {
@@ -135,7 +135,7 @@ a
         activity: s
       } = e;
       if (null != s) {
-        let e = (0, h.ZZ)(l, s);
+        let e = (0, E.ZZ)(l, s);
         null != e && !n.has(e.id) && (t.set(i.party.id, e), n.add(e.id));
       }
     });
@@ -144,8 +144,8 @@ a
   e,
   l
 ]),
-E = null;
-  return t ? (E = e.length > 0 ? e.map(e => {
+h = null;
+  return t ? (h = e.length > 0 ? e.map(e => {
 let {
   party: t
 } = e;
@@ -169,7 +169,7 @@ children: [
   })
 ]
   }), (0, i.jsx)(i.Fragment, {
-children: E
+children: h
   })) : (0, i.jsx)('div', {
 className: R.emptyCard,
 children: (0, i.jsx)(d.Spinner, {})

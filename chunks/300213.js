@@ -18,7 +18,7 @@ d = (0, i.e7)([s.Z], () => s.Z.getStageInstanceByChannel(null == c ? void 0 : c.
 u = (0, o.k5)(e),
 {
   isStageNoticeHidden: _,
-  isEventNoticeHidden: h
+  isEventNoticeHidden: E
 } = (0, i.cj)([l.Z], () => ({
   isStageNoticeHidden: l.Z.isLiveChannelNoticeHidden({
     stageId: null == d ? void 0 : d.id
@@ -31,6 +31,6 @@ u = (0, o.k5)(e),
   u
 ]);
   if (null != u)
-return null != d ? !_ : !h;
+return null != d ? !_ : !E;
   return null != d && !_;
 }

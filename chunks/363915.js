@@ -27,9 +27,9 @@ function d(e) {
 state: d,
 direction: u,
 cleanUp: _,
-children: h
+children: E
   } = e;
-  let E = (0, r.useSpring)((t = d, n = u, s = _, t === r.TransitionStates.MOUNTED ? {
+  let h = (0, r.useSpring)((t = d, n = u, s = _, t === r.TransitionStates.MOUNTED ? {
 from: {
   opacity: 0,
   transform: 'translateY(40px) translateX(0px)'
@@ -66,11 +66,11 @@ onRest: () => {
 }
   }));
   return (0, i.jsx)(a.animated.div, {
-style: E,
+style: h,
 className: l.step,
 children: (0, i.jsx)(r.ScrollerThin, {
   className: l.scroller,
-  children: h
+  children: E
 })
   });
 }

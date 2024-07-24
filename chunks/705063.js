@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(526383),
   u = n(210887),
   _ = n(900849),
-  h = n(374939),
-  E = n(731455),
+  E = n(374939),
+  h = n(731455),
   I = n(689938),
   m = n(849116);
 
@@ -28,9 +28,9 @@ _.Zt({
   loadId: t,
   gamesYouPlayGuilds: [],
   allGuilds: [],
-  categoryId: E.U
+  categoryId: h.U
 });
-  }, [t]), (0, i.jsx)(h.Z, {
+  }, [t]), (0, i.jsx)(E.Z, {
 title: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
 description: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
 onScroll: n,

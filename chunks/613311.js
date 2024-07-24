@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(481060),
   u = n(570140),
   _ = n(659429),
-  h = n(496929),
-  E = n(558381),
+  E = n(496929),
+  h = n(558381),
   I = n(410575),
   m = n(224336),
   g = n(730749),
@@ -89,7 +89,7 @@ if (null != a.state) {
   this._analyticsSource = e, this._extraAnalyticsProperties = t;
 } else
   this._analyticsSource = es.SaU;
-(null == t || t.isSlimDirectoryVersion()) && r(), null != e && (!n && !s && (0, h.yD)(e.applicationId), i && u.Z.wait(() => (0, _.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug();
+(null == t || t.isSlimDirectoryVersion()) && r(), null != e && (!n && !s && (0, E.yD)(e.applicationId), i && u.Z.wait(() => (0, _.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug();
   }
   componentDidUpdate(e) {
 let {
@@ -592,7 +592,7 @@ super(...e), eo(this, 'showCopyLinkTextTimeout', new o.V7()), eo(this, '_tracked
           className: el.testModeSelectButton,
           currentStoreListingId: null != a ? a.id : null,
           onStoreListingSelect: e => {
-            null != t && (0, E.yt)(t.id, {
+            null != t && (0, h.yt)(t.id, {
               slug: s,
               analyticsSource: {
                 page: l.page,

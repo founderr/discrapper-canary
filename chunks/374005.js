@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(746508),
   u = n(210724),
   _ = n(905423),
-  h = n(410575),
-  E = n(981631),
+  E = n(410575),
+  h = n(981631),
   I = n(689938),
   m = n(264044);
 
@@ -46,18 +46,18 @@ className: m.panels,
 children: [
   (0, i.jsx)(u.Z, {}),
   (0, i.jsx)(c.Z, {}),
-  (0, i.jsx)(h.Z, {
-    section: E.jXE.ACTIVITY_PANEL,
+  (0, i.jsx)(E.Z, {
+    section: h.jXE.ACTIVITY_PANEL,
     children: (0, i.jsx)(g, {
       className: m.activityPanel
     })
   }),
-  (0, i.jsx)(h.Z, {
-    section: E.jXE.RTC_CONNECTION_PANEL,
+  (0, i.jsx)(E.Z, {
+    section: h.jXE.RTC_CONNECTION_PANEL,
     children: (0, i.jsx)(d.Z, {})
   }),
-  (0, i.jsx)(h.Z, {
-    section: E.jXE.ACCOUNT_PANEL,
+  (0, i.jsx)(E.Z, {
+    section: h.jXE.ACCOUNT_PANEL,
     children: (0, i.jsx)(l.Z, {})
   })
 ]

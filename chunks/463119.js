@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(481060),
   u = n(596454),
   _ = n(515753),
-  h = n(410030),
-  E = n(607070),
+  E = n(410030),
+  h = n(607070),
   I = n(100527),
   m = n(906732),
   g = n(821982),
@@ -46,14 +46,14 @@ let {
   onMouseLeave: o,
   children: c,
   ...u
-} = e, h = (0, l.JA)('shop'), E = I.Z.HOME_PAGE_SHOP_TAB, {
+} = e, E = (0, l.JA)('shop'), h = I.Z.HOME_PAGE_SHOP_TAB, {
   analyticsLocations: g
-} = (0, m.ZP)(E), p = s.useCallback(() => (0, S.mK)({
+} = (0, m.ZP)(h), p = s.useCallback(() => (0, S.mK)({
   openInLayer: !1,
-  analyticsSource: E,
+  analyticsSource: h,
   analyticsLocations: g
 }), [
-  E,
+  h,
   g
 ]);
 return (0, i.jsx)(_.Qj, {
@@ -62,7 +62,7 @@ return (0, i.jsx)(_.Qj, {
   icon: null != a ? a : d.ShopIcon,
   text: v.Z.Messages.COLLECTIBLES_SHOP,
   locationState: n,
-  ...h,
+  ...E,
   ...u,
   onMouseEnter: r,
   onMouseLeave: o,
@@ -122,7 +122,7 @@ let {
   selected: t,
   locationState: n,
   displayOptions: a
-} = e, l = (0, o.e7)([E.Z], () => E.Z.useReducedMotion), [u, _] = s.useState(0), [I, m] = s.useState(!1), g = (0, h.ZP)(), p = a.entrypointDecorationAssets, T = a.entryPointBackgroundAssets, S = s.useCallback(e => {
+} = e, l = (0, o.e7)([h.Z], () => h.Z.useReducedMotion), [u, _] = s.useState(0), [I, m] = s.useState(!1), g = (0, E.ZP)(), p = a.entrypointDecorationAssets, T = a.entryPointBackgroundAssets, S = s.useCallback(e => {
   _(e => (e + 1) % a.assetIds.length), m(!0), null == e || e();
 }, [a.assetIds]), C = s.useCallback(e => {
   m(!1), null == e || e();

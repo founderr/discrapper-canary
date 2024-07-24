@@ -19,24 +19,24 @@ displayProfile: n,
 user: i,
 selectedSection: u,
 autoFocusNote: I,
-onClose: _
+onClose: f
   } = e;
   switch (u) {
 case c.oh.ACTIVITY:
   return (0, s.jsx)(o.Z, {
     user: i,
     type: l.Y.PROFILE_V2,
-    onClose: _
+    onClose: f
   });
 case c.oh.MUTUAL_GUILDS:
   return (0, s.jsx)(d.Z, {
     user: i,
-    onClose: _
+    onClose: f
   });
 case c.oh.MUTUAL_FRIENDS:
   return (0, s.jsx)(a.Z, {
     user: i,
-    onClose: _
+    onClose: f
   });
 case c.oh.BOT_DATA_ACCESS:
   return (0, s.jsx)(t.Z, {

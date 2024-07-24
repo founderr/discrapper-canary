@@ -8,7 +8,7 @@ var i = n(735250),
   d = n(428695),
   u = n(981631),
   _ = n(921944),
-  h = n(689938);
+  E = n(689938);
 t.Z = e => {
   let {
 guild: t,
@@ -17,7 +17,7 @@ markAsDismissed: n
   s.useEffect(() => {
 (0, r.kk)(a.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE);
   }, []);
-  let E = s.useCallback(() => {
+  let h = s.useCallback(() => {
   o.Z.open(t.id, u.pNK.ONBOARDING), c.default.track(u.rMx.UPSELL_CLICKED, {
     type: a.z[a.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
     action: 'primary'
@@ -37,10 +37,10 @@ I = s.useCallback(() => {
   return (0, i.jsx)(d.Z, {
 guild: t,
 onDismissed: I,
-onClick: E,
-title: h.Z.Messages.GUILD_ONBOARDING_CHANNEL_NOTICE_TITLE,
-message: h.Z.Messages.GUILD_ONBOARDING_CHANNEL_NOTICE_MESSAGE,
-cta: h.Z.Messages.CHECK_IT_OUT,
+onClick: h,
+title: E.Z.Messages.GUILD_ONBOARDING_CHANNEL_NOTICE_TITLE,
+message: E.Z.Messages.GUILD_ONBOARDING_CHANNEL_NOTICE_MESSAGE,
+cta: E.Z.Messages.CHECK_IT_OUT,
 trackingSource: u.PsQ.GUILD_ONBOARDING_UPSELL_NOTICE,
 type: u.vID.GUILD_ONBOARDING_UPSELL
   });

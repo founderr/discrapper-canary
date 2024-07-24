@@ -19,7 +19,7 @@ interests: c,
 description: d,
 tag: u,
 verificationForm: _
-  } = t, h = i.useMemo(() => null != _ && _.formFields.some(e => !(0, s.J)(e)), [_]), E = i.useMemo(() => Array.from(c).filter(e => !a.WZ.has(e) && !a.gh.has(e)), [c]), I = i.useCallback(() => {
+  } = t, E = i.useMemo(() => null != _ && _.formFields.some(e => !(0, s.J)(e)), [_]), h = i.useMemo(() => Array.from(c).filter(e => !a.WZ.has(e) && !a.gh.has(e)), [c]), I = i.useCallback(() => {
 n(r + 1);
   }, [
 r,
@@ -36,13 +36,13 @@ switch (r) {
   case a.Wy.PLAYSTYLE:
     return o === a.zv.NONE;
   case a.Wy.INTERESTS:
-    return E.length < 3;
+    return h.length < 3;
   case a.Wy.DESCRIPTION:
     return 0 === d.length;
   case a.Wy.CUSTOMIZE_TAG_BADGE:
     return u.length < 2;
   case a.Wy.MEMBER_APPLICATION:
-    return !h;
+    return !E;
   default:
     return !1;
 }
@@ -50,8 +50,8 @@ switch (r) {
 r,
 d.length,
 l.size,
-h,
-E.length,
+E,
+h.length,
 o,
 u.length
   ]), T = 0 === r;

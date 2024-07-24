@@ -16,8 +16,8 @@ var i = n(470079),
   d = n(900849),
   u = n(540742),
   _ = n(731455);
-let h = [],
-  E = (0, c.oH)(() => {
+let E = [],
+  h = (0, c.oH)(() => {
 var e;
 let t = _.dU,
   n = o.default.locale;
@@ -41,15 +41,15 @@ searchCategoryId: o
   } = u.B.getState(), {
 guilds: c,
 total: _,
-loading: h,
+loading: E,
 initialized: I
   } = l.Z.getResults(s, o);
-  if (h || I && c.length >= _)
+  if (E || I && c.length >= _)
 return;
   u.B.setState({
 searchResultsQuery: a
   });
-  let m = E();
+  let m = h();
   d.tI(t, o), r.bR(a, {
 categoryId: n,
 preferredLocale: m.code,
@@ -78,7 +78,7 @@ return t;
 guilds: o,
 loading: c
   } = (0, a.e7)([l.Z], () => null == n ? {
-guilds: h,
+guilds: E,
 loading: !0
   } : l.Z.getResults(n, r)), d = i.useCallback(() => I({
 loadId: t,

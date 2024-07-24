@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(410030),
   u = n(810090),
   _ = n(113434),
-  h = n(497505),
-  E = n(918701),
+  E = n(497505),
+  h = n(918701),
   I = n(78826),
   m = n(670638),
   g = n(981631),
@@ -29,7 +29,7 @@ isHovering: a,
 onCtxMenuClose: f,
 onCtxMenuOpen: S,
 onCtxMenuSelect: C
-  } = e, N = (0, E.j8)(n), A = (0, d.ZP)(), v = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, Z = v === g.BRd.DARK, L = s.useMemo(() => (0, E.nP)(n.config.assets.hero), [n]), O = s.useContext(l.S).reducedMotion.enabled, R = (0, E.Mi)(n, h.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = s.useRef(a), M = s.useRef(null), D = (0, _.B6)(n.config.expiresAt, {
+  } = e, N = (0, h.j8)(n), A = (0, d.ZP)(), v = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, Z = v === g.BRd.DARK, L = s.useMemo(() => (0, h.nP)(n.config.assets.hero), [n]), O = s.useContext(l.S).reducedMotion.enabled, R = (0, h.Mi)(n, E.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = s.useRef(a), M = s.useRef(null), D = (0, _.B6)(n.config.expiresAt, {
 month: 'numeric',
 day: '2-digit'
   });
@@ -58,7 +58,7 @@ children: [
         controls: !1,
         children: (0, i.jsx)('source', {
           src: N,
-          type: (0, E.mN)(N)
+          type: (0, h.mN)(N)
         })
       }))
     }) : (0, i.jsx)(I.Fl, {
@@ -98,7 +98,7 @@ children: [
               onOpen: S,
               onClose: f,
               onSelect: C,
-              questContent: h.jn.QUEST_HOME_DESKTOP,
+              questContent: E.jn.QUEST_HOME_DESKTOP,
               quest: n,
               hideLearnMore: !0,
               shouldShowDisclosure: !0,
@@ -122,7 +122,7 @@ children: [
             ref: e,
             className: T.partnerBranding,
             alt: n.config.messages.gameTitle,
-            src: (0, E.Gs)(n, v)
+            src: (0, h.Gs)(n, v)
           })
         }),
         (0, i.jsxs)('div', {

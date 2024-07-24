@@ -13,8 +13,8 @@ var s = i(735250),
   c = i(314897),
   u = i(158776),
   I = i(699516),
-  _ = i(998502),
-  f = i(785717),
+  f = i(998502),
+  _ = i(785717),
   E = i(621853),
   m = i(204197),
   S = i(735336),
@@ -27,12 +27,12 @@ var s = i(735250),
   g = i(689938),
   N = i(88952);
 let C = r.AvatarSizes.SIZE_120,
-  j = _.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
+  j = f.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
 function A(e) {
   let {
 displayProfile: n,
-user: _,
+user: f,
 guildId: A,
 channelId: O,
 friendToken: L,
@@ -40,19 +40,19 @@ className: U,
 isStreaming: M,
 hasProfileEffect: R,
 onClose: P
-  } = e, b = (0, o.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), y = (0, o.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, o.e7)([u.Z], () => u.Z.getStatus(_.id)), B = (0, o.e7)([E.Z], () => E.Z.getUserProfile(_.id)), F = (0, o.e7)([c.default], () => c.default.getId() === _.id), {
+  } = e, b = (0, o.e7)([I.Z], () => I.Z.getRelationshipType(f.id)), y = (0, o.e7)([u.Z], () => u.Z.isMobileOnline(f.id)), D = (0, o.e7)([u.Z], () => u.Z.getStatus(f.id)), B = (0, o.e7)([E.Z], () => E.Z.getUserProfile(f.id)), F = (0, o.e7)([c.default], () => c.default.getId() === f.id), {
 theme: G
   } = (0, x.z)(), {
 trackUserProfileAction: w
-  } = (0, f.KZ)(), {
+  } = (0, _.KZ)(), {
 avatarSrc: k,
 eventHandlers: V,
 avatarDecorationSrc: Y
   } = (0, m.Z)({
-user: _,
+user: f,
 size: C
-  }), H = l.useMemo(() => (0, d.W)(_, O), [
-_,
+  }), H = l.useMemo(() => (0, d.W)(f, O), [
+f,
 O
   ]);
   return (0, s.jsxs)('header', {
@@ -61,7 +61,7 @@ children: [
   (0, s.jsx)(S.Z, {
     displayProfile: n,
     onClose: P,
-    user: _,
+    user: f,
     profileType: p.y0.MODAL,
     hasProfileEffect: R
   }),
@@ -79,13 +79,13 @@ children: [
           statusBackdropColor: (0, r.getStatusBackdropColor)(G),
           isMobile: y,
           statusTooltip: !0,
-          'aria-label': _.username
+          'aria-label': f.username
         })
       }),
       (0, s.jsxs)('div', {
         className: N.headerTop,
         children: [
-          (null == B ? void 0 : B.profileFetchFailed) && !_.isClyde() ? (0, s.jsx)(r.Tooltip, {
+          (null == B ? void 0 : B.profileFetchFailed) && !f.isClyde() ? (0, s.jsx)(r.Tooltip, {
             text: g.Z.Messages.USER_PROFILE_LOAD_ERROR,
             spacing: 20,
             children: e => (0, s.jsx)(r.CircleExclamationPointIcon, {
@@ -97,7 +97,7 @@ children: [
               color: t.Z.unsafe_rawColors.YELLOW_300.css
             })
           }) : (0, s.jsx)(v.Z, {
-            user: _,
+            user: f,
             className: N.badgeList,
             guildId: A,
             size: v.V.SIZE_24,
@@ -113,13 +113,13 @@ children: [
                 application: B.application
               }),
               (0, s.jsx)(h.Z, {
-                user: _,
+                user: f,
                 isCurrentUser: F,
                 relationshipType: b,
                 friendToken: L,
                 onClose: P
               }),
-              F || _.isNonUserBot() ? null : (0, s.jsx)(r.Clickable, {
+              F || f.isNonUserBot() ? null : (0, s.jsx)(r.Clickable, {
                 focusProps: {
                   offset: {
                     left: 8
@@ -134,7 +134,7 @@ children: [
                     } = await i.e('29136').then(i.bind(i, 193646));
                     return n => (0, s.jsx)(e, {
                       ...n,
-                      user: _,
+                      user: f,
                       isCurrentUser: F,
                       guildId: A,
                       relationshipType: b,

@@ -8,8 +8,8 @@ var i = n(735250),
   d = n(570938),
   u = n(677277),
   _ = n(285865),
-  h = n(918701),
-  E = n(702428),
+  E = n(918701),
+  h = n(702428),
   I = n(709158),
   m = n(683301),
   g = n(360048),
@@ -48,7 +48,7 @@ isViewingSearchResults: m.ZP.getMostRecentQuery().length > 0
 ...e,
 icon: Z(e.categoryId)
   })), R = e => {
-(0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, h.OG)() && e !== C.Gj.Quests && (0, a.uL)(N.Z5c.GUILD_DISCOVERY), !(0, h.OG)() && e === C.Gj.Quests && (0, a.uL)(N.Z5c.QUEST_HOME);
+(0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, E.OG)() && e !== C.Gj.Quests && (0, a.uL)(N.Z5c.GUILD_DISCOVERY), !(0, E.OG)() && e === C.Gj.Quests && (0, a.uL)(N.Z5c.QUEST_HOME);
   };
   return s.useEffect(() => {
 (0, p.le)(!1, !0);
@@ -85,7 +85,7 @@ children: [
     currentCategoryId: e,
     shouldDisplaySelectedCategory: !t
   }),
-  n && (0, i.jsx)(E.Z, {
+  n && (0, i.jsx)(h.Z, {
     onClick: () => R(C.Gj.Quests),
     isSelected: e === C.Gj.Quests
   })

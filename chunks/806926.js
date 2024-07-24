@@ -14,8 +14,8 @@ var l = i(442837),
   c = i(502762),
   u = i(530),
   I = i(616140),
-  _ = i(107194),
-  f = i(228168),
+  f = i(107194),
+  _ = i(228168),
   E = i(981631),
   m = i(392214);
 
@@ -30,7 +30,7 @@ initialSection: x,
 initialSubsection: h,
 friendToken: p,
 onClose: T
-  } = e, g = (0, l.e7)([o.Z], () => o.Z.getRelationshipType(i.id)), N = (0, _.Z)({
+  } = e, g = (0, l.e7)([o.Z], () => o.Z.getRelationshipType(i.id)), N = (0, f.Z)({
 user: i,
 currentUser: S
   });
@@ -39,7 +39,7 @@ className: m.body,
 children: [
   (0, s.jsx)(u.Z, {
     user: i,
-    profileType: f.y0.FULL_SIZE,
+    profileType: _.y0.FULL_SIZE,
     nickname: t.ZP.getName(null == v ? void 0 : v.guildId, Z, i),
     pronouns: null == v ? void 0 : v.pronouns,
     nicknameVariant: 'heading-xl/bold',
@@ -48,7 +48,7 @@ children: [
     }),
     tags: (0, s.jsx)(r.Z, {
       displayProfile: v,
-      profileType: f.y0.FULL_SIZE,
+      profileType: _.y0.FULL_SIZE,
       onClose: T
     })
   }),

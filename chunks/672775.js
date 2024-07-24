@@ -20,8 +20,8 @@ animationClassName: c
 onStepClick: d,
 onNextClick: u,
 onBackClick: _,
-isNextDisabled: h,
-isBackDisabled: E
+isNextDisabled: E,
+isBackDisabled: h
   } = (0, s.Z)({
 progress: n,
 updateCurrentStep: l
@@ -43,8 +43,8 @@ children: [
     stepFillColor: g
   }),
   (0, i.jsx)(a.i, {
-    isBackDisabled: E,
-    isNextDisabled: h,
+    isBackDisabled: h,
+    isNextDisabled: E,
     onNextClick: u,
     onBackClick: _,
     nextButtonBackgroundColor: g,

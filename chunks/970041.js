@@ -56,8 +56,8 @@ var e;
 return null === (e = a.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
   }), {
 hasMessageContent: I,
-hasGuildPresences: _,
-hasGuildMembers: f
+hasGuildPresences: f,
+hasGuildMembers: _
   } = (0, r.w)({
 flags: null == i ? void 0 : i.flags
   });
@@ -70,12 +70,12 @@ children: [
     title: d.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
     description: d.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
   }),
-  _ && (0, s.jsx)(u, {
+  f && (0, s.jsx)(u, {
     icon: t.GameControllerIcon,
     title: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
     description: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
   }),
-  f && (0, s.jsx)(u, {
+  _ && (0, s.jsx)(u, {
     icon: t.GroupIcon,
     title: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
     description: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY

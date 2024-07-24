@@ -1,8 +1,8 @@
 n(411104);
 var i, s, a, r, l, o, c, d, u, _ = n(735250),
-  h = n(470079);
+  E = n(470079);
 
-function E(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -53,7 +53,7 @@ function T(e) {
   return I('QuantitativeValue', e);
 }
 (c = s || (s = {})).DAMAGED = 'http://schema.org/DamagedCondition', c.NEW = 'http://schema.org/NewCondition', c.REFURBISHED = 'http://schema.org/RefurbishedCondition', c.USED = 'http://schema.org/UsedCondition', (d = a || (a = {})).DISCONTINUED = 'http://schema.org/Discontinued', d.IN_STOCK = 'http://schema.org/InStock', d.IN_STORE_ONLY = 'http://schema.org/InStoreOnly', d.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability', d.ONLINE_ONLY = 'http://schema.org/OnlineOnly', d.OUT_OF_STOCK = 'http://schema.org/OutOfStock', d.PREORDER = 'http://schema.org/PreOrder', d.PRESALE = 'http://schema.org/PreSale', d.SOLD_OUT = 'http://schema.org/SoldOut', p.ItemConditions = s, p.ItemAvailability = a, (u = r || (r = {})).YEARLY = 'ANN', u.MONTHLY = 'MON', T.UnitCodes = r;
-class f extends(l = h.Component) {
+class f extends(l = E.Component) {
   render() {
 let {
   debug: e,
@@ -68,18 +68,18 @@ return (0, _.jsx)('script', {
 });
   }
 }
-E(f, 'Thing', m), E(f, 'Brand', m), E(f, 'Person', function(e) {
+h(f, 'Thing', m), h(f, 'Brand', m), h(f, 'Person', function(e) {
   return I('Person', e);
-}), E(f, 'Organization', function(e) {
+}), h(f, 'Organization', function(e) {
   return I('Organization', e);
-}), E(f, 'ItemPage', function(e) {
+}), h(f, 'ItemPage', function(e) {
   return I('ItemPage', e);
-}), E(f, 'Product', g), E(f, 'Offer', p), E(f, 'Rating', function(e) {
+}), h(f, 'Product', g), h(f, 'Offer', p), h(f, 'Rating', function(e) {
   return I('Rating', e);
-}), E(f, 'AggregateRating', function(e) {
+}), h(f, 'AggregateRating', function(e) {
   return I('AggregateRating', e);
-}), E(f, 'AggregateOffer', function(e) {
+}), h(f, 'AggregateOffer', function(e) {
   return I('AggregateOffer', e);
-}), E(f, 'QuantitativeValue', T), E(f, 'UnitPriceSpecification', function(e) {
+}), h(f, 'QuantitativeValue', T), h(f, 'UnitPriceSpecification', function(e) {
   return I('UnitPriceSpecification', e);
 }), t.Z = f;

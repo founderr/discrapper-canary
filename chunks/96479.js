@@ -19,8 +19,8 @@ function _(e) {
 index: t,
 className: n,
 channel: _,
-user: h,
-hasSingleMessageRequest: E
+user: E,
+hasSingleMessageRequest: h
   } = e, {
 channelId: I
   } = (0, o._)();
@@ -29,16 +29,16 @@ index: t,
 className: n,
 isFocused: I === _.id,
 channel: _,
-user: h,
+user: E,
 onClick: e => {
   e.stopPropagation(), s.Z.openPrivateChannelAsSidebar({
     channelId: _.id,
     baseChannelId: a.uZ,
-    hasSingleMessageRequest: E
+    hasSingleMessageRequest: h
   }), r.default.track(u.rMx.MESSAGE_REQUEST_PREVIEW_VIEWED, {
     is_spam: !1,
     channel_id: _.id,
-    other_user_id: h.id
+    other_user_id: E.id
   }), setTimeout(() => {
     l.S.dispatch(u.CkL.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: _.id
@@ -47,7 +47,7 @@ onClick: e => {
 },
 children: e => (0, i.jsx)(d.C, {
   active: e,
-  user: h,
+  user: E,
   channel: _
 })
   });

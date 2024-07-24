@@ -8,8 +8,8 @@ var i = n(735250),
   d = n(594174),
   u = n(525395),
   _ = n(55563),
-  h = n(551428),
-  E = n(912739),
+  E = n(551428),
+  h = n(912739),
   I = n(73346),
   m = n(733789),
   g = n(4962),
@@ -31,7 +31,7 @@ return 0 === e.length && 0 === t.length ? null : (0, i.jsx)('div', {
       }, e.type)),
       t.map(e => (0, i.jsx)('div', {
         className: T.unit,
-        children: (0, i.jsx)(E.Z, {
+        children: (0, i.jsx)(h.Z, {
           reason: e
         })
       }, e.type))
@@ -78,7 +78,7 @@ return (0, i.jsxs)('div', {
 t.Z = l.ZP.connectStores([
   _.Z,
   d.default,
-  h.Z,
+  E.Z,
   o.Z,
   u.Z,
   c.Z
@@ -88,7 +88,7 @@ sku: t
   } = e;
   return {
 socialReasons: (0, I.Gg)(t.id, _.Z, d.default, o.Z, u.Z),
-nonSocialReasons: (0, I.Ww)(t.id, _.Z, h.Z),
+nonSocialReasons: (0, I.Ww)(t.id, _.Z, E.Z),
 hidePersonalInformation: c.Z.hidePersonalInformation
   };
 })(f);

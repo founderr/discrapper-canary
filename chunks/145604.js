@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(731429),
   u = n(188471),
   _ = n(176881),
-  h = n(318885),
-  E = n(358221),
+  E = n(318885),
+  h = n(358221),
   I = n(710845),
   m = n(581567),
   g = n(594190),
@@ -105,7 +105,7 @@ if (e.voiceChannelId !== s && null != e.voiceChannelId) {
     guild_scheduled_event_id: null == s ? void 0 : s.id,
     ...(0, c.kO)(e.voiceChannelGuildId, e.voiceChannelId, e.videoEnabled),
     ...b.Z.getVoiceStateStats(),
-    ...E.Z.getSelectedParticipantStats(e.voiceChannelId)
+    ...h.Z.getSelectedParticipantStats(e.voiceChannelId)
   });
 }
 if (e.voiceChannelId !== s && null != s) {
@@ -147,7 +147,7 @@ if (e.runningGame !== L && null != L && !L.isLauncher) {
           gameName: i,
           gameId: r,
           exe: _,
-          distributor: h
+          distributor: E
         } = (0, m.G8)(L);
       k.default.track(F.rMx.LAUNCH_GAME, {
         game: i,
@@ -157,7 +157,7 @@ if (e.runningGame !== L && null != L && !L.isLauncher) {
         is_launcher: null !== (t = null == L ? void 0 : L.isLauncher) && void 0 !== t && t,
         game_platform: F.M7m.DESKTOP,
         detection_method: d,
-        distributor: h,
+        distributor: E,
         is_overlay_enabled: w.Z.enabled,
         is_overlay_game_enabled: u.enabled,
         is_overlay_game_source: u.source,
@@ -185,7 +185,7 @@ if ((e.videoEnabled !== T || e.isScreenSharing !== C) && null != s) {
       T ? 'camera' : null
     ].filter(H.lm),
     n = null;
-  C ? (e = 'screen', n = (0, h.t)()) : T && (e = 'camera'), k.default.track(F.rMx.VIDEO_INPUT_TOGGLED, {
+  C ? (e = 'screen', n = (0, E.t)()) : T && (e = 'camera'), k.default.track(F.rMx.VIDEO_INPUT_TOGGLED, {
     video_input_type: e,
     video_toggle_source: __OVERLAY__ ? 'overlay' : 'app',
     enabled_inputs: t,
@@ -270,20 +270,20 @@ function z() {
   let [e, t] = (0, a.Wu)([P.Z], () => [
 P.Z.getVoiceChannelId(),
 P.Z.getChannelId()
-  ], []), n = (0, a.e7)([v.Z], () => v.Z.getChannel(t), [t]), s = (0, a.e7)([E.Z], () => (null == n ? void 0 : n.id) != null && E.Z.getChatOpen(n.id), [n]), r = null == n ? void 0 : n.nsfw, l = (0, a.e7)([v.Z], () => v.Z.getChannel(e), [e]), c = (0, a.e7)([M.Z], () => M.Z.getGuildId(), []), d = (0, a.e7)([O.Z], () => O.Z.getGuild(c), [c]), u = (0, a.e7)([j.default], () => j.default.getCurrentUser(), []), _ = (0, a.e7)([L.ZP], () => {
+  ], []), n = (0, a.e7)([v.Z], () => v.Z.getChannel(t), [t]), s = (0, a.e7)([h.Z], () => (null == n ? void 0 : n.id) != null && h.Z.getChatOpen(n.id), [n]), r = null == n ? void 0 : n.nsfw, l = (0, a.e7)([v.Z], () => v.Z.getChannel(e), [e]), c = (0, a.e7)([M.Z], () => M.Z.getGuildId(), []), d = (0, a.e7)([O.Z], () => O.Z.getGuild(c), [c]), u = (0, a.e7)([j.default], () => j.default.getCurrentUser(), []), _ = (0, a.e7)([L.ZP], () => {
 var e, t;
 return null != u && null != c && null !== (t = null === (e = L.ZP.getMember(c, u.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t;
   }, [
 u,
 c
-  ]), h = (0, a.e7)([G.ZP], () => G.ZP.getState().section, []), I = (0, a.e7)([U.Z], () => U.Z.getHomeLink(), []), m = (0, a.e7)([p.Z], () => p.Z.isConnected(), []), [f, S] = (0, a.Wu)([R.Z], () => [
+  ]), E = (0, a.e7)([G.ZP], () => G.ZP.getState().section, []), I = (0, a.e7)([U.Z], () => U.Z.getHomeLink(), []), m = (0, a.e7)([p.Z], () => p.Z.isConnected(), []), [f, S] = (0, a.Wu)([R.Z], () => [
 R.Z.isVideoEnabled(),
 R.Z.isScreenSharing()
   ], []), N = (0, a.e7)([D.Z], () => D.Z.getPrimaryActivity(), []), A = (0, a.e7)([g.ZP], () => g.ZP.getCurrentGameForAnalytics(), []), Z = (0, T.Z)(c), x = (0, a.e7)([C.Z], () => C.Z.getMessageRequestsCount(), []), b = {
 selectedChannelId: t,
 isNSFWChannel: r,
 selectedGuildId: c,
-friendsTabSection: h,
+friendsTabSection: E,
 homeLink: I,
 connected: m,
 videoEnabled: f,

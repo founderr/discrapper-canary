@@ -19,15 +19,15 @@ description: n,
 button: a,
 backgroundImageUrl: u,
 className: _,
-bannerImageClassName: h,
-headerTextColor: E,
+bannerImageClassName: E,
+headerTextColor: h,
 descriptionTextColor: I
   } = e, m = (0, l.wj)((0, c.ZP)()), g = s.useMemo(() => null != u ? u : m ? 'https://cdn.discordapp.com/assets/discovery/generic-hero-background.png' : 'https://cdn.discordapp.com/assets/discovery/generic-banner-background-light-mode.png', [
 m,
 u
   ]), p = s.useMemo(() => ({
 backgroundImage: 'url('.concat(g, ')')
-  }), [g]), T = null != E ? E : m ? 'always-white' : 'header-primary', f = null != I ? I : m ? 'text-muted' : 'header-primary';
+  }), [g]), T = null != h ? h : m ? 'always-white' : 'header-primary', f = null != I ? I : m ? 'text-muted' : 'header-primary';
   return (0, i.jsxs)('div', {
 className: r()(d.imageContainer, _),
 children: [
@@ -51,7 +51,7 @@ children: [
     })
   }),
   (0, i.jsx)('div', {
-    className: r()(d.imageBackground, h),
+    className: r()(d.imageBackground, E),
     style: p,
     children: (0, i.jsx)('div', {
       className: d.imageBackgroundOverlay

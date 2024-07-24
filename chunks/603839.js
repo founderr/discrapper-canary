@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(481060),
   u = n(207796),
   _ = n(889711),
-  h = n(931240),
-  E = n(970606),
+  E = n(931240),
+  h = n(970606),
   I = n(963202),
   m = n(650461),
   g = n(432632),
@@ -78,12 +78,12 @@ leave: {
 config: Z
   }), Y = s.useCallback(e => {
 if (e === b.length)
-  U(0), (0, E.Lp)(t, 'signature');
+  U(0), (0, h.Lp)(t, 'signature');
 else if (0 === j)
   U(1);
 else {
   var n;
-  h._9(t, {
+  E._9(t, {
     currentStep: e,
     furthestStep: Math.max(null !== (n = L.furthestStep) && void 0 !== n ? n : 0, e)
   });
@@ -95,7 +95,7 @@ L.furthestStep,
 b.length
   ]);
   s.useEffect(() => {
-(0, E.Lp)(t, (0, E.Qh)(L.currentStep));
+(0, h.Lp)(t, (0, h.Qh)(L.currentStep));
   }, [
 t,
 L.currentStep
@@ -106,7 +106,7 @@ return (0, _.YP)(e, document.body), () => (0, _.UC)(e, document.body);
 j,
 G
   ]), s.useEffect(() => {
-null != x && (0, h._9)(t, {
+null != x && (0, E._9)(t, {
   requiredGameId: x
 });
   }, [
@@ -116,7 +116,7 @@ t
   let W = s.useMemo(() => null != O && Object.values(O).some(e => null != e), [O]),
 z = s.useMemo(() => null != O && Object.values(O).length > 0 ? (0, N.G)(O).find(e => e.hasError) : null, [O]),
 K = s.useCallback(() => {
-  U(1), h._9(t, {
+  U(1), E._9(t, {
     currentStep: null == z ? void 0 : z.index
   });
 }, [

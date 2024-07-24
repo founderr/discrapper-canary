@@ -13,8 +13,8 @@ var s = i(735250),
   c = i(420660),
   u = i(100527),
   I = i(906732),
-  _ = i(580552),
-  f = i(680295),
+  f = i(580552),
+  _ = i(680295),
   E = i(199902),
   m = i(314897),
   S = i(158776),
@@ -44,7 +44,7 @@ hasActivity: c
   } = e, u = (0, o.e7)([x.Z], () => {
 var e, n;
 return (null === (n = x.Z.getUserProfile(l.id)) || void 0 === n ? void 0 : null === (e = n.application) || void 0 === e ? void 0 : e.id) != null;
-  }), I = null === (n = (0, p.Z)(l.id, !l.bot && !r).mutualFriends) || void 0 === n ? void 0 : n.length, f = null === (i = (0, T.Z)(l.id, !l.bot && !r).mutualGuilds) || void 0 === i ? void 0 : i.length;
+  }), I = null === (n = (0, p.Z)(l.id, !l.bot && !r).mutualFriends) || void 0 === n ? void 0 : n.length, _ = null === (i = (0, T.Z)(l.id, !l.bot && !r).mutualGuilds) || void 0 === i ? void 0 : i.length;
   return (0, s.jsx)('div', {
 className: U.tabBarContainer,
 children: (0, s.jsxs)(t.TabBar, {
@@ -53,7 +53,7 @@ children: (0, s.jsxs)(t.TabBar, {
   onItemSelect: d,
   className: U.tabBar,
   children: [
-    !l.isNonUserBot() || l.isClyde() || (0, _.Z)(l.id) ? (0, s.jsx)(t.TabBar.Item, {
+    !l.isNonUserBot() || l.isClyde() || (0, f.Z)(l.id) ? (0, s.jsx)(t.TabBar.Item, {
       className: U.tabBarItem,
       id: A.oh.USER_INFO,
       children: L.Z.Messages.USER_INFO
@@ -70,11 +70,11 @@ children: (0, s.jsxs)(t.TabBar, {
         count: ''.concat(I)
       })
     }),
-    r || l.isClyde() || (0, _.Z)(l.id) ? null : (0, s.jsx)(t.TabBar.Item, {
+    r || l.isClyde() || (0, f.Z)(l.id) ? null : (0, s.jsx)(t.TabBar.Item, {
       className: U.tabBarItem,
       id: A.oh.MUTUAL_GUILDS,
-      children: null == f ? L.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER : L.Z.Messages.MUTUAL_GUILDS_WITH_END_COUNT.format({
-        count: ''.concat(f)
+      children: null == _ ? L.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER : L.Z.Messages.MUTUAL_GUILDS_WITH_END_COUNT.format({
+        count: ''.concat(_)
       })
     }),
     l.bot && u ? (0, s.jsx)(t.TabBar.Item, {
@@ -121,7 +121,7 @@ roleId: P
   let H = (0, o.e7)([E.Z], () => null != E.Z.getAnyStreamForUser(w.id)),
 W = (0, o.e7)([S.Z], () => S.Z.findActivity(w.id, e => e.type !== O.IIU.CUSTOM_STATUS)),
 [z, K] = l.useState(!1),
-[q, J] = l.useState(!w.isNonUserBot() || w.isClyde() || (0, _.Z)(w.id) ? y : A.oh.MUTUAL_GUILDS),
+[q, J] = l.useState(!w.isNonUserBot() || w.isClyde() || (0, f.Z)(w.id) ? y : A.oh.MUTUAL_GUILDS),
 Q = (0, o.e7)([m.default], () => m.default.getId() === w.id),
 X = null != W || H,
 $ = !Q || X,
@@ -203,7 +203,7 @@ children: (0, s.jsx)(v.Mt, {
             })
           ]
         }),
-        null != es && (0, s.jsx)(f.Z, {
+        null != es && (0, s.jsx)(_.Z, {
           profileEffectId: es,
           bannerAdjustment: 0,
           isHovering: en

@@ -13,8 +13,8 @@ var s = i(735250),
   c = i(369077),
   u = i(706454),
   I = i(246946),
-  _ = i(785717),
-  f = i(648067),
+  f = i(785717),
+  _ = i(648067),
   E = i(588822),
   m = i(900927),
   S = i(652853),
@@ -32,9 +32,9 @@ autoFocusNote: T = !1,
 scrollToConnections: g = !1
   } = e, {
 trackUserProfileAction: N
-  } = (0, _.KZ)(), C = (0, o.e7)([I.Z], () => I.Z.hidePersonalInformation), {
+  } = (0, f.KZ)(), C = (0, o.e7)([I.Z], () => I.Z.hidePersonalInformation), {
 theme: j
-  } = (0, S.z)(), A = (0, o.e7)([u.default], () => u.default.locale), O = (0, d.Z)('user_profile'), L = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, a.Z)(i.id), U = (0, f.Z)(i.id), M = l.useRef(null);
+  } = (0, S.z)(), A = (0, o.e7)([u.default], () => u.default.locale), O = (0, d.Z)('user_profile'), L = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, a.Z)(i.id), U = (0, _.Z)(i.id), M = l.useRef(null);
   return (l.useLayoutEffect(() => {
 if (g) {
   var e;

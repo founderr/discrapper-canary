@@ -13,8 +13,8 @@ var s = i(735250),
   c = i(785717),
   u = i(100849),
   I = i(944546),
-  _ = i(470900),
-  f = i(988246),
+  f = i(470900),
+  _ = i(988246),
   E = i(970041),
   m = i(715388),
   S = i(834534),
@@ -38,7 +38,7 @@ onClose: r
   }) : n === Z.oh.MUTUAL_FRIENDS ? (0, s.jsx)(I.Z, {
 user: l,
 onClose: r
-  }) : n === Z.oh.MUTUAL_GUILDS ? (0, s.jsx)(_.Z, {
+  }) : n === Z.oh.MUTUAL_GUILDS ? (0, s.jsx)(f.Z, {
 user: l,
 onClose: r
   }) : n === Z.oh.BOT_DATA_ACCESS ? (0, s.jsx)(E.Z, {
@@ -63,7 +63,7 @@ function h(e) {
   let {
 user: u,
 currentUser: I,
-displayProfile: _,
+displayProfile: f,
 items: E,
 initialSection: m = Z.oh.USER_INFO,
 initialSubsection: S,
@@ -95,7 +95,7 @@ C
   ]);
   return T ? (0, s.jsx)('div', {
 className: v.container,
-children: (0, s.jsx)(f.Z, {})
+children: (0, s.jsx)(_.Z, {})
   }) : (0, s.jsxs)('div', {
 className: v.container,
 children: [
@@ -126,7 +126,7 @@ children: [
     subsection: N,
     user: u,
     currentUser: I,
-    displayProfile: _,
+    displayProfile: f,
     onClose: h
   })
 ]

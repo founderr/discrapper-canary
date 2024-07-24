@@ -14,8 +14,8 @@ var l = i(481060),
   c = i(78675),
   u = i(741308),
   I = i(899007),
-  _ = i(438163),
-  f = i(681837),
+  f = i(438163),
+  _ = i(681837),
   E = i(502762),
   m = i(530),
   S = i(645410),
@@ -117,7 +117,7 @@ children: (0, s.jsx)(a.Mt, {
                     })
                   ]
                 }),
-                (0, s.jsx)(_.Z, {
+                (0, s.jsx)(f.Z, {
                   user: n,
                   profileType: g.y0.FULL_SIZE,
                   hasEntered: b === l.ModalTransitionState.ENTERED,
@@ -136,7 +136,7 @@ children: (0, s.jsx)(a.Mt, {
               nickname: r.ZP.getName(B, L, n),
               pronouns: null == F ? void 0 : F.pronouns,
               nicknameVariant: 'heading-xl/bold',
-              nicknameIcons: (0, s.jsx)(f.Z, {
+              nicknameIcons: (0, s.jsx)(_.Z, {
                 userId: n.id
               }),
               tags: (0, s.jsx)(u.Z, {

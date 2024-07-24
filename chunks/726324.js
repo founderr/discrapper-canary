@@ -19,7 +19,7 @@ title: n,
 guild: d,
 description: u,
 children: _
-  } = e, h = r.QK.useSetting(), E = (0, l.n)(), [I, m] = (0, o.Z)(t, E && h);
+  } = e, E = r.QK.useSetting(), h = (0, l.n)(), [I, m] = (0, o.Z)(t, h && E);
   return (0, i.jsxs)('div', {
 className: c.container,
 children: [

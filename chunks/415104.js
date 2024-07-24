@@ -18,14 +18,14 @@ className: n,
 questContent: a
   } = e, [d, u] = s.useState(!1), _ = s.useCallback(() => {
 u(!0);
-  }, [u]), h = s.useCallback(() => {
+  }, [u]), E = s.useCallback(() => {
 u(!1);
   }, [u]);
   return (0, i.jsxs)('div', {
 id: 'quest-tile-'.concat(t.id),
 className: r()(c.container, n),
 onMouseEnter: _,
-onMouseLeave: h,
+onMouseLeave: E,
 children: [
   (0, i.jsx)(l.Z, {
     quest: t,

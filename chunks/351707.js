@@ -13,8 +13,8 @@ var s = i(735250),
   c = i(434404),
   u = i(271383),
   I = i(430824),
-  _ = i(496675),
-  f = i(700785),
+  f = i(496675),
+  _ = i(700785),
   E = i(785717),
   m = i(256226),
   S = i(678738),
@@ -32,7 +32,7 @@ guildMember: d,
 roles: c,
 highestRole: u,
 canManageRoles: I,
-onAddRole: _,
+onAddRole: f,
 onRemoveRole: E
   } = e, S = I && null != d, p = l.useMemo(() => 'roles-'.concat((0, o.Z)()), []), T = (0, t.ZP)({
 id: p,
@@ -49,7 +49,7 @@ return (0, s.jsx)(m.Z, {
   guildId: a.id,
   disableBorderColor: !0,
   onRemove: () => E(e),
-  canRemove: I ? f.r6(a, i.id, u, e) : (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) === null && n.id === i.id
+  canRemove: I ? _.r6(a, i.id, u, e) : (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) === null && n.id === i.id
 }, e.id);
   });
   return (0, s.jsx)(r.bG, {
@@ -72,7 +72,7 @@ children: (0, s.jsx)(r.SJ, {
           guildMember: d,
           numRoles: g,
           highestRole: u,
-          onAddRole: _
+          onAddRole: f
         })
       ]
     });
@@ -97,9 +97,9 @@ return l && !o ? 1 : !l && o ? -1 : 0;
   }), [
 Z,
 h
-  ]), g = f.e9(o, i.id), [N] = (0, a.Wu)([_.Z], () => [
-_.Z.can(v.Plq.MANAGE_ROLES, o),
-null != o ? _.Z.getGuildVersion(o.id) : null
+  ]), g = _.e9(o, i.id), [N] = (0, a.Wu)([f.Z], () => [
+f.Z.can(v.Plq.MANAGE_ROLES, o),
+null != o ? f.Z.getGuildVersion(o.id) : null
   ]), C = l.useCallback(e => {
 var i, s;
 r({

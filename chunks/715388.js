@@ -14,8 +14,8 @@ var l = i(442837),
   c = i(785717),
   u = i(621853),
   I = i(588822),
-  _ = i(940730),
-  f = i(900927),
+  f = i(940730),
+  _ = i(900927),
   E = i(678738),
   m = i(351707),
   S = i(228168),
@@ -47,7 +47,7 @@ children: [
     userBio: h.bio,
     setLineClamp: !1
   }),
-  (null == C ? void 0 : C.popularApplicationCommandIds) != null && null != j && (0, s.jsx)(_.Z, {
+  (null == C ? void 0 : C.popularApplicationCommandIds) != null && null != j && (0, s.jsx)(f.Z, {
     applicationId: C.id,
     commandIds: C.popularApplicationCommandIds,
     channel: j,
@@ -62,7 +62,7 @@ children: [
   }),
   (0, s.jsx)(E.Z, {
     title: Z.Z.Messages.BOT_PROFILE_CREATED_ON,
-    children: (0, s.jsx)(f.Z, {
+    children: (0, s.jsx)(_.Z, {
       userId: i.id,
       guildId: null == h ? void 0 : h.guildId,
       tooltipDelay: S.vB

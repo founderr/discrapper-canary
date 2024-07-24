@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(950279),
   u = n(741595),
   _ = n(754961),
-  h = n(363915),
-  E = n(359380),
+  E = n(363915),
+  h = n(359380),
   I = n(207796),
   m = n(316553),
   g = n(689938),
@@ -53,7 +53,7 @@ selectedGame: t
   } = e, n = (0, m.J)({
 selectedGame: t
   }), a = (0, I.GN)(e => e.selectedTraits, r.Z), l = s.useMemo(() => new Set(a), [a]), o = s.useCallback(e => I.GN.getState().setSelectedTraits([...e]), []);
-  return (0, i.jsx)(E.Z, {
+  return (0, i.jsx)(h.Z, {
 title: g.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
 description: g.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
 handleUpdate: o,
@@ -70,7 +70,7 @@ t.Z = s.memo(function(e) {
   let {
 selectedGame: t,
 setScreen: n
-  } = e, d = s.useRef(null), u = s.useRef(null), E = s.useRef(null), m = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), [A, v] = s.useState(0), [Z, L] = s.useState(0), O = (0, I.GN)(e => e.selectedPlaystyle, r.Z), R = (0, I.GN)(e => e.previousMode, r.Z), x = s.useCallback(e => {
+  } = e, d = s.useRef(null), u = s.useRef(null), h = s.useRef(null), m = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), [A, v] = s.useState(0), [Z, L] = s.useState(0), O = (0, I.GN)(e => e.selectedPlaystyle, r.Z), R = (0, I.GN)(e => e.previousMode, r.Z), x = s.useCallback(e => {
 v(e), Z < e && L(e);
   }, [Z]), b = s.useCallback(() => {
 0 === A ? (n(I.o2.USER_UPSELL), (0, I.fH)(R)) : x(A - 1);
@@ -120,7 +120,7 @@ to: {
 },
 config: T
   }, 'animate-always'), U = (0, o.useSpring)({
-ref: E,
+ref: h,
 from: {
   opacity: 0,
   transform: m ? 'translateY(0px)' : 'translateY(40px)'
@@ -134,7 +134,7 @@ config: T
   (0, a.useChain)([
 d,
 u,
-E
+h
   ], [
 0,
 0.2,
@@ -162,7 +162,7 @@ children: [
   (0, i.jsx)(a.animated.div, {
     className: p.sequencer,
     style: j,
-    children: (0, i.jsx)(h.Z, {
+    children: (0, i.jsx)(E.Z, {
       currentStep: A,
       items: G,
       renderItem: w,
