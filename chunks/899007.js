@@ -13,25 +13,25 @@ var r = n(735250),
   c = n(100527),
   d = n(906732),
   _ = n(233440),
-  E = n(199902),
-  f = n(158776),
-  h = n(74538),
-  p = n(998502),
-  m = n(785717),
-  I = n(204197),
+  E = n(158776),
+  f = n(74538),
+  h = n(998502),
+  p = n(785717),
+  m = n(204197),
+  I = n(929498),
   T = n(652853),
   g = n(228168),
   S = n(981631),
   A = n(474936),
   N = n(234328);
-let v = p.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+let v = h.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 
 function O(e) {
   let {
 user: t,
 displayProfile: n,
 guildId: a,
-channelId: p,
+channelId: h,
 profileType: O,
 animateOnHover: R,
 onOpenProfile: C
@@ -41,65 +41,55 @@ theme: y
 analyticsLocations: D
   } = (0, d.ZP)(c.Z.AVATAR), {
 trackUserProfileAction: L
-  } = (0, m.KZ)(), b = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, A.p9.TIER_2), M = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [
+  } = (0, p.KZ)(), b = f.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, A.p9.TIER_2), M = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, h), [
 t,
-p
+h
   ]), {
-status: P,
-isMobileOnline: U
-  } = (0, o.cj)([
-E.Z,
-f.Z
-  ], () => {
-let e = null != E.Z.getAnyStreamForUser(t.id),
-  n = f.Z.findActivity(t.id, t => {
-    let {
-      type: n
-    } = t;
-    return e ? n === S.IIU.PLAYING : n !== S.IIU.CUSTOM_STATUS;
-  });
-return {
-  status: (0, u.Z)(n) ? S.Skl.STREAMING : f.Z.getStatus(t.id),
-  isMobileOnline: f.Z.isMobileOnline(t.id)
-};
-  }), w = O === g.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, x = s()(N.avatar, {
+featured: P
+  } = (0, I.Z)(t.id), {
+status: U,
+isMobileOnline: w
+  } = (0, o.cj)([E.Z], () => ({
+status: (0, u.Z)(P) ? S.Skl.STREAMING : E.Z.getStatus(t.id),
+isMobileOnline: E.Z.isMobileOnline(t.id)
+  })), x = O === g.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, G = s()(N.avatar, {
 [N.biteSize]: O === g.y0.BITE_SIZE,
 [N.fullSize]: O === g.y0.FULL_SIZE,
 [N.panel]: O === g.y0.PANEL
   }), {
-avatarDecorationSrc: G,
-avatarSrc: k,
-eventHandlers: B
-  } = (0, I.Z)({
+avatarDecorationSrc: k,
+avatarSrc: B,
+eventHandlers: F
+  } = (0, m.Z)({
 user: t,
 guildId: a,
-size: w,
+size: x,
 animateOnHover: R
-  }), F = (0, r.jsx)(v, {
-src: k,
-avatarDecoration: G,
-size: w,
+  }), V = (0, r.jsx)(v, {
+src: B,
+avatarDecoration: k,
+size: x,
 'aria-label': t.username,
 imageClassName: null != C ? N.overlay : void 0,
-status: M ? S.Skl.UNKNOWN : P,
+status: M ? S.Skl.UNKNOWN : U,
 statusBackdropColor: b && !M ? (0, l.getStatusBackdropColor)(y) : void 0,
-isMobile: U,
+isMobile: w,
 statusTooltip: !0,
 statusTooltipDelay: g.vB
   });
   return null == C ? (0, r.jsx)('div', {
-...B,
-className: x,
-children: F
+...F,
+className: G,
+children: V
   }) : (0, r.jsx)(l.Clickable, {
-...B,
-className: s()(x, N.clickable),
+...F,
+className: s()(G, N.clickable),
 onClick: () => {
   L({
     action: 'PRESS_VIEW_PROFILE',
     analyticsLocations: D
   }), null == C || C();
 },
-children: F
+children: V
   });
 }

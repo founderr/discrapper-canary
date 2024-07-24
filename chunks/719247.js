@@ -1,5 +1,8 @@
 n.d(t, {
-  T: function() {
+  RL: function() {
+return O;
+  },
+  TA: function() {
 return A;
   }
 }), n(47120);
@@ -44,7 +47,11 @@ function v(e, t) {
   return (null === (r = e.extra.entries[0]) || void 0 === r ? void 0 : null === (n = r.media) || void 0 === n ? void 0 : n.provider) === l.p.SPOTIFY && (0, p.Ps)(null === (i = t.party) || void 0 === i ? void 0 : i.id);
 }
 
-function O(e) {
+function O(e, t) {
+  return t.application_id === m.sp && e.extra.application_id === m.sp && e.extra.media_title === t.details && e.extra.media_subtitle === t.state;
+}
+
+function R(e) {
   let t = new Set(),
 n = new Set();
   for (let r of e) {
@@ -62,7 +69,7 @@ matchedKeys: n
   };
 }
 
-function R() {
+function C() {
   let e = !1,
 t = Array.from(g.keys()),
 n = new Set(),
@@ -71,7 +78,7 @@ r = new Set();
 let {
   updatedKeys: i,
   matchedKeys: a
-} = O(n.size > 0 ? t.entries.filter(e => !n.has(A(e.content))) : t.entries);
+} = R(n.size > 0 ? t.entries.filter(e => !n.has(A(e.content))) : t.entries);
 for (let e of i)
   n.add(e);
 for (let e of a)
@@ -82,9 +89,9 @@ e = e || i.size > 0;
 g.delete(n), e = !0;
   return e;
 }
-class C extends(r = u.ZP.Store) {
+class y extends(r = u.ZP.Store) {
   initialize() {
-this.waitFor(_.Z, d.Z), this.syncWith([d.Z], R);
+this.waitFor(_.Z, d.Z), this.syncWith([d.Z], C);
   }
   getMatchingActivity(e) {
 return (0, f.n2)(e) ? null : g.get(A(e));
@@ -94,10 +101,7 @@ let n = S.get(t);
 if (null == n || null == e)
   return;
 let r = n.entries.filter(f.kr);
-return e.type === h.IIU.PLAYING ? r.filter(E.dX).find(t => N(t, e)) : e.type === h.IIU.LISTENING ? r.filter(E.kx).find(t => v(t, e)) : e.type === h.IIU.WATCHING ? n.entries.filter(E.r5).find(t => {
-  var n, r;
-  return n = t, (r = e).application_id === m.sp && n.extra.application_id === m.sp && n.extra.media_title === r.details && n.extra.media_subtitle === r.state;
-}) : void 0;
+return e.type === h.IIU.PLAYING ? r.filter(E.dX).find(t => N(t, e)) : e.type === h.IIU.LISTENING ? r.filter(E.kx).find(t => v(t, e)) : e.type === h.IIU.WATCHING ? n.entries.filter(E.r5).find(t => O(t, e)) : void 0;
   }
   getUserOutbox(e) {
 return S.get(e);
@@ -106,7 +110,7 @@ return S.get(e);
 super(...e), I(this, 'canRenderContent', e => !(0, f.n2)(e) && (!T.has(e.content_type) || null != this.getMatchingActivity(e)));
   }
 }
-I(C, 'displayName', 'ContentInventoryActivityStore'), t.Z = new C(c.Z, {
+I(y, 'displayName', 'ContentInventoryActivityStore'), t.ZP = new y(c.Z, {
   CONNECTION_OPEN: function() {
 g.clear();
   },
@@ -115,7 +119,7 @@ let {
   feed: t
 } = e, {
   updatedKeys: n
-} = O(t.entries);
+} = R(t.entries);
 return n.size > 0;
   },
   CONTENT_INVENTORY_SET_USER_OUTBOX: function(e) {

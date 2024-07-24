@@ -265,7 +265,7 @@ function U(e) {
 }
 
 function w(e) {
-  let t = (0, o.e7)([_.Z], () => _.Z.getMatchingActivity(e)),
+  let t = (0, o.e7)([_.ZP], () => _.ZP.getMatchingActivity(e)),
 [n, r] = (0, u.Z)([
   null == t ? void 0 : t.application_id,
   'application_id' in e.extra ? e.extra.application_id : void 0

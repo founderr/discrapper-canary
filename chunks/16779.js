@@ -20,10 +20,13 @@ var i = n(278074),
   c = n(981631);
 
 function d(e) {
-  var t, n, u, d;
+  var t, n, u;
   let {
-activity: _
-  } = e, E = (0, i.EQ)(_).when(s.Z, () => a.ActivitiesIcon).with({
+activity: d
+  } = e, _ = null !== (u = null === (t = d.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== u ? u : d.created_at;
+  if (null == _)
+return null;
+  let E = (0, i.EQ)(d).when(s.Z, () => a.ActivitiesIcon).with({
 type: c.IIU.WATCHING
   }, () => a.TvIcon).otherwise(() => a.GameControllerIcon);
   return (0, r.jsxs)(o.m7, {
@@ -34,8 +37,8 @@ children: [
   }),
   (0, r.jsx)(l.x3, {
     entry: {
-      start: null !== (d = null !== (u = null === (t = _.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== u ? u : _.created_at) && void 0 !== d ? d : 0,
-      end: null === (n = _.timestamps) || void 0 === n ? void 0 : n.end
+      start: _,
+      end: null === (n = d.timestamps) || void 0 === n ? void 0 : n.end
     },
     textColor: 'text-positive',
     bold: !0

@@ -40,11 +40,11 @@ function f() {
   var e;
   let t = (0, n.e7)([u.Z], () => u.Z.getFeed(g.YN.GLOBAL_FEED)),
 r = (0, n.e7)([u.Z], () => u.Z.getFilters()),
-o = (0, n.cj)([s.Z], () => {
+o = (0, n.cj)([s.ZP], () => {
   var e;
   let r = {};
   for (let a of null !== (e = null == t ? void 0 : t.entries) && void 0 !== e ? e : [])
-    r[(0, s.T)(a.content)] = s.Z.canRenderContent(a.content);
+    r[(0, s.TA)(a.content)] = s.ZP.canRenderContent(a.content);
   return r;
 }, [t]),
 l = (0, n.e7)([d.Z], () => d.Z.getImpressionCappedItemIds());
@@ -56,7 +56,7 @@ let {
 } = e;
 if (!(0, h.g)(r, t))
   return [];
-let n = o[(0, s.T)(t)];
+let n = o[(0, s.TA)(t)];
 return (0, a.jsxs)('li', {
   className: p.locatorEntry,
   children: [

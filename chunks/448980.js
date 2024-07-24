@@ -1,59 +1,94 @@
 n.d(t, {
   Z: function() {
-return u;
+return f;
   }
 }), n(627341);
 var r = n(735250);
 n(470079);
 var i = n(278074),
   a = n(876215),
-  s = n(297781),
-  o = n(16779),
-  l = n(981631);
+  s = n(442837),
+  o = n(719247),
+  l = n(297781),
+  u = n(16779),
+  c = n(981631);
 
-function u(e) {
+function d(e) {
   let {
-activity: t,
-entry: n,
-className: u
-  } = e, c = (0, i.EQ)(t).with({
-type: l.IIU.PLAYING
-  }, () => [
-o.ho,
-o.Xh
-  ]).with({
-type: l.IIU.WATCHING
-  }, () => [
-o.ho,
-o.Rg
-  ]).otherwise(() => []);
-  return 0 === c.length ? null : (0, r.jsxs)(s.Gk, {
-location: s.Gt.USER_PROFILE,
-className: u,
+entry: t
+  } = e;
+  return (0, r.jsx)(r.Fragment, {
 children: [
-  c.map((e, n) => (0, r.jsx)(e, {
-    activity: t
-  }, 'activity-'.concat(n))),
-  (0, i.EQ)(n).with({
+  l.U9,
+  l.gj,
+  l.f,
+  l.n8,
+  l.v1,
+  l.pQ
+].map((e, n) => (0, r.jsx)(e, {
+  entry: t
+}, 'entry-'.concat(n)))
+  });
+}
+
+function _(e) {
+  let {
+entry: t
+  } = e;
+  return (0, r.jsx)(r.Fragment, {
+children: [l.E6].map((e, n) => (0, r.jsx)(e, {
+  entry: t
+}, 'entry-'.concat(n)))
+  });
+}
+
+function E(e) {
+  let {
+entry: t
+  } = e;
+  return (0, r.jsx)(r.Fragment, {
+children: [l.An].map((e, n) => (0, r.jsx)(e, {
+  entry: t
+}, 'entry-'.concat(n)))
+  });
+}
+
+function f(e) {
+  let {
+user: t,
+activity: n,
+className: f
+  } = e, h = (0, s.e7)([o.ZP], () => o.ZP.getMatchingOutboxEntry(n, t.id)), p = (0, i.EQ)(n).with({
+type: c.IIU.PLAYING
+  }, () => [
+u.ho,
+u.Xh
+  ]).with({
+type: c.IIU.WATCHING
+  }, () => [
+u.ho,
+u.Rg
+  ]).otherwise(() => []);
+  return 0 === p.length ? null : (0, r.jsxs)(l.Gk, {
+location: l.Gt.USER_PROFILE,
+className: f,
+children: [
+  p.map((e, t) => (0, r.jsx)(e, {
+    activity: n
+  }, 'activity-'.concat(t))),
+  (0, i.EQ)(h).with({
     content_type: a.s.PLAYED_GAME
-  }, e => [
-    s.U9,
-    s.gj,
-    s.f,
-    s.n8,
-    s.v1,
-    s.pQ
-  ].map((t, n) => (0, r.jsx)(t, {
+  }, e => (0, r.jsx)(d, {
     entry: e
-  }, 'entry-'.concat(n)))).with({
+  })).with({
     content_type: a.s.TOP_GAME
-  }, e => [s.E6].map((t, n) => (0, r.jsx)(t, {
+  }, e => (0, r.jsx)(_, {
     entry: e
-  }, 'entry-'.concat(n)))).with({
+  })).with({
     content_type: a.s.TOP_ARTIST
-  }, e => [s.An].map((t, n) => (0, r.jsx)(t, {
+  }, e => (0, r.jsx)(E, {
     entry: e
-  }, 'entry-'.concat(n)))).otherwise(() => [])
+  })).otherwise(() => null)
 ]
   });
 }
