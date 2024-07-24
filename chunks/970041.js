@@ -1,44 +1,44 @@
-s.d(n, {
+i.d(n, {
   Z: function() {
 return I;
   }
-}), s(789020);
-var i = s(735250);
-s(470079);
-var l = s(597312),
-  o = s(442837),
-  t = s(481060),
-  r = s(860719),
-  a = s(621853),
-  d = s(689938),
-  c = s(116604);
+}), i(789020);
+var s = i(735250);
+i(470079);
+var l = i(597312),
+  o = i(442837),
+  t = i(481060),
+  r = i(860719),
+  a = i(621853),
+  d = i(689938),
+  c = i(116604);
 
 function u(e) {
   let {
 icon: n,
-title: s,
+title: i,
 description: l
   } = e;
-  return (0, i.jsxs)('div', {
+  return (0, s.jsxs)('div', {
 className: c.row,
 children: [
-  (0, i.jsx)('div', {
+  (0, s.jsx)('div', {
     className: c.rowIcon,
-    children: (0, i.jsx)(n, {
+    children: (0, s.jsx)(n, {
       size: 'custom',
       width: 20,
       height: 20,
       color: 'currentColor'
     })
   }),
-  (0, i.jsxs)('div', {
+  (0, s.jsxs)('div', {
     className: c.rowText,
     children: [
-      (0, i.jsx)(t.Heading, {
+      (0, s.jsx)(t.Heading, {
         variant: 'text-xs/semibold',
-        children: s
+        children: i
       }),
-      (0, i.jsx)(t.Text, {
+      (0, s.jsx)(t.Text, {
         variant: 'text-sm/normal',
         children: l
       })
@@ -51,7 +51,7 @@ children: [
 function I(e) {
   let {
 user: n
-  } = e, s = (0, o.e7)([a.Z], () => {
+  } = e, i = (0, o.e7)([a.Z], () => {
 var e;
 return null === (e = a.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
   }), {
@@ -59,28 +59,28 @@ hasMessageContent: I,
 hasGuildPresences: _,
 hasGuildMembers: f
   } = (0, r.w)({
-flags: null == s ? void 0 : s.flags
+flags: null == i ? void 0 : i.flags
   });
-  return (0, i.jsxs)(l.zJ, {
+  return (0, s.jsxs)(l.zJ, {
 fade: !0,
 className: c.scroller,
 children: [
-  I && (0, i.jsx)(u, {
+  I && (0, s.jsx)(u, {
     icon: t.ChatIcon,
     title: d.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
     description: d.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
   }),
-  _ && (0, i.jsx)(u, {
+  _ && (0, s.jsx)(u, {
     icon: t.GameControllerIcon,
     title: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
     description: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
   }),
-  f && (0, i.jsx)(u, {
+  f && (0, s.jsx)(u, {
     icon: t.GroupIcon,
     title: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
     description: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
   }),
-  (0, i.jsx)(t.Text, {
+  (0, s.jsx)(t.Text, {
     variant: 'text-xs/normal',
     children: d.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({
       helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975'

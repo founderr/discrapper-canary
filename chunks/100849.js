@@ -1,29 +1,29 @@
-s.d(n, {
+i.d(n, {
   Z: function() {
 return v;
   }
 });
-var i = s(735250),
-  l = s(470079),
-  o = s(120356),
-  t = s.n(o),
-  r = s(442837),
-  a = s(481060),
-  d = s(387903),
-  c = s(906732),
-  u = s(199902),
-  I = s(158776),
-  _ = s(785717),
-  f = s(221292),
-  E = s(989964),
-  m = s(981631),
-  S = s(711298),
-  Z = s(431776);
+var s = i(735250),
+  l = i(470079),
+  o = i(120356),
+  t = i.n(o),
+  r = i(442837),
+  a = i(481060),
+  d = i(387903),
+  c = i(906732),
+  u = i(199902),
+  I = i(158776),
+  _ = i(785717),
+  f = i(221292),
+  E = i(989964),
+  m = i(981631),
+  S = i(711298),
+  Z = i(431776);
 
 function v(e) {
   let {
 user: n,
-type: s,
+type: i,
 showActions: o,
 onClose: v
   } = e, x = (0, r.e7)([u.Z], () => null != u.Z.getAnyStreamForUser(n.id)), h = (0, r.e7)([I.Z], () => I.Z.getActivities(n.id)), p = l.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), T = l.useMemo(() => x ? p.find(e => e.type === m.IIU.PLAYING) : null, [
@@ -44,17 +44,17 @@ location: {
   section: m.jXE.PROFILE_MODAL
 }
   };
-  return (0, i.jsxs)(a.ScrollerThin, {
+  return (0, s.jsxs)(a.ScrollerThin, {
 className: Z.listScroller,
 fade: !0,
 children: [
-  x ? (0, i.jsx)(E.Z, {
+  x ? (0, s.jsx)(E.Z, {
     location: 'UserProfileActivity',
-    type: s,
+    type: i,
     user: n,
     source: C,
     className: S.userProfileActivity,
-    showChannelDetails: s === d.Y.SIMPLIFIED_PROFILE,
+    showChannelDetails: i === d.Y.SIMPLIFIED_PROFILE,
     activity: T,
     actionColor: S.actionColor,
     analyticsParams: O,
@@ -74,15 +74,15 @@ children: [
       });
     }
   }) : null,
-  g.map(e => (0, i.jsx)(E.Z, {
+  g.map(e => (0, s.jsx)(E.Z, {
     location: 'UserProfileActivity',
-    type: s,
+    type: i,
     activity: e,
     user: n,
     useStoreStream: !1,
     source: C,
-    className: t()(S.userProfileActivity, s === d.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
-    showChannelDetails: s === d.Y.SIMPLIFIED_PROFILE,
+    className: t()(S.userProfileActivity, i === d.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
+    showChannelDetails: i === d.Y.SIMPLIFIED_PROFILE,
     actionColor: S.actionColor,
     analyticsParams: O,
     showActions: o,

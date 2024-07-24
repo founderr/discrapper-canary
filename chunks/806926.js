@@ -1,28 +1,28 @@
-s.d(n, {
+i.d(n, {
   Z: function() {
 return S;
   }
 });
-var i = s(735250);
-s(470079);
-var l = s(442837),
-  o = s(699516),
-  t = s(5192),
-  r = s(741308),
-  a = s(681837),
-  d = s(91433),
-  c = s(502762),
-  u = s(530),
-  I = s(616140),
-  _ = s(107194),
-  f = s(228168),
-  E = s(981631),
-  m = s(392214);
+var s = i(735250);
+i(470079);
+var l = i(442837),
+  o = i(699516),
+  t = i(5192),
+  r = i(741308),
+  a = i(681837),
+  d = i(91433),
+  c = i(502762),
+  u = i(530),
+  I = i(616140),
+  _ = i(107194),
+  f = i(228168),
+  E = i(981631),
+  m = i(392214);
 
 function S(e) {
   var n;
   let {
-user: s,
+user: i,
 currentUser: S,
 channelId: Z,
 displayProfile: v,
@@ -30,42 +30,42 @@ initialSection: x,
 initialSubsection: h,
 friendToken: p,
 onClose: T
-  } = e, g = (0, l.e7)([o.Z], () => o.Z.getRelationshipType(s.id)), N = (0, _.Z)({
-user: s,
+  } = e, g = (0, l.e7)([o.Z], () => o.Z.getRelationshipType(i.id)), N = (0, _.Z)({
+user: i,
 currentUser: S
   });
-  return (0, i.jsxs)('div', {
+  return (0, s.jsxs)('div', {
 className: m.body,
 children: [
-  (0, i.jsx)(u.Z, {
-    user: s,
+  (0, s.jsx)(u.Z, {
+    user: i,
     profileType: f.y0.FULL_SIZE,
-    nickname: t.ZP.getName(null == v ? void 0 : v.guildId, Z, s),
+    nickname: t.ZP.getName(null == v ? void 0 : v.guildId, Z, i),
     pronouns: null == v ? void 0 : v.pronouns,
     nicknameVariant: 'heading-xl/bold',
-    nicknameIcons: (0, i.jsx)(a.Z, {
-      userId: s.id
+    nicknameIcons: (0, s.jsx)(a.Z, {
+      userId: i.id
     }),
-    tags: (0, i.jsx)(r.Z, {
+    tags: (0, s.jsx)(r.Z, {
       displayProfile: v,
       profileType: f.y0.FULL_SIZE,
       onClose: T
     })
   }),
-  g === E.OGo.PENDING_INCOMING && (0, i.jsx)(c.Z.Overlay, {
+  g === E.OGo.PENDING_INCOMING && (0, s.jsx)(c.Z.Overlay, {
     className: m.friendRequestBannerOverlay,
-    children: (0, i.jsx)(d.Z, {
-      user: s,
+    children: (0, s.jsx)(d.Z, {
+      user: i,
       guildId: null !== (n = null == v ? void 0 : v.guildId) && void 0 !== n ? n : void 0,
       channelId: Z,
       friendToken: p,
       className: m.friendRequestBanner
     })
   }),
-  (0, i.jsx)(c.Z.Overlay, {
+  (0, s.jsx)(c.Z.Overlay, {
     className: m.overlay,
-    children: (0, i.jsx)(I.Z, {
-      user: s,
+    children: (0, s.jsx)(I.Z, {
+      user: i,
       currentUser: S,
       displayProfile: v,
       items: N,

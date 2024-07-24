@@ -1,6 +1,6 @@
 r.d(t, {
   Z: function() {
-return Z;
+return E;
   }
 }), r(47120), r(724458), r(757143), r(390547), r(653041);
 var a = r(735250),
@@ -40,16 +40,16 @@ return e;
   }, e;
 }
 
-function w() {
+function C() {
   let e = v([
 '\n      export const rawPalette = {\n        ',
 '\n      } as const;\n    '
   ]);
-  return w = function() {
+  return C = function() {
 return e;
   }, e;
 }
-let C = {
+let w = {
 ...b.K,
 ...m.J,
 ...g.c
@@ -107,7 +107,7 @@ function I(e) {
 let a = e[r];
 if ('name' in a)
   a = function e(t) {
-    let r = C[t.name];
+    let r = w[t.name];
     return 'name' in r ? e(r) : r;
   }(a);
 t[r] = {
@@ -119,7 +119,7 @@ t[r] = {
   }), t;
 }
 
-function E(e, t) {
+function Z(e, t) {
   let [r, a] = n.useState(() => {
 let r = h.K.get(e);
 return null != r ? r : t;
@@ -135,13 +135,13 @@ a
   ];
 }
 
-function Z() {
+function E() {
   let e = (0, x.Fg)(),
 [{
   rawPalette: t,
   semanticTokens: r
 }, i, l, s, h, m] = function(e, t) {
-  let [r, a] = E(''.concat(e, '-states'), [t]), [i, o] = E(''.concat(e, '-index'), 0), l = r[i], c = n.useCallback(e => {
+  let [r, a] = Z(''.concat(e, '-states'), [t]), [i, o] = Z(''.concat(e, '-index'), 0), l = r[i], c = n.useCallback(e => {
     a([
       e,
       ...r
@@ -175,7 +175,7 @@ function Z() {
   semanticTokens: j
 }),
 [g, b] = n.useState(''),
-[v, C] = n.useState({}),
+[v, w] = n.useState({}),
 [S, T] = n.useState({}),
 I = n.useMemo(() => Object.keys(t).reduce((e, t) => [
   ...e,
@@ -184,7 +184,7 @@ I = n.useMemo(() => Object.keys(t).reduce((e, t) => [
     label: t
   }
 ], []), [t]),
-Z = n.useCallback((e, a, n, o) => {
+E = n.useCallback((e, a, n, o) => {
   let l = d().cloneDeep(r);
   l[e][a] = {
     color: n,
@@ -273,7 +273,7 @@ O = n.useCallback(e => {
     return ''.concat(a ? '\n' : '').concat(u);
   }).join(',\n'));
 }, []),
-B = n.useCallback(e => c()(w(), Object.keys(e).map(t => '"'.concat(t, '": {hex: "').concat(e[t].hex, '"}'))), []),
+B = n.useCallback(e => c()(C(), Object.keys(e).map(t => '"'.concat(t, '": {hex: "').concat(e[t].hex, '"}'))), []),
 P = n.useCallback(e => {
   let t = {};
   Object.keys(e).forEach(r => {
@@ -443,7 +443,7 @@ children: [
               children: (0, a.jsx)(f.Checkbox, {
                 value: v[t],
                 onChange: () => {
-                  C(e => ({
+                  w(e => ({
                     ...e,
                     [t]: !e[t]
                   }));
@@ -457,7 +457,7 @@ children: [
               value: l.color,
               options: I,
               onChange: r => {
-                Z(t, e, r, l.opacity);
+                E(t, e, r, l.opacity);
               },
               renderOptionPrefix: t => null == t ? null : (0, a.jsx)('div', {
                 style: {
@@ -477,7 +477,7 @@ children: [
               },
               value: null === (i = l.opacity) || void 0 === i ? void 0 : i.toString(),
               onChange: r => {
-                '' !== r && Z(t, e, l.color, parseFloat(r));
+                '' !== r && E(t, e, l.color, parseFloat(r));
               }
             }),
             (0, a.jsx)(f.Clickable, {
@@ -487,7 +487,7 @@ children: [
               },
               onClick: () => {
                 var r;
-                c && Z(t, e, o.color, null !== (r = o.opacity) && void 0 !== r ? r : 1);
+                c && E(t, e, o.color, null !== (r = o.opacity) && void 0 !== r ? r : 1);
               },
               children: (0, a.jsx)(f.CloseSmallIcon, {
                 size: 'xs',

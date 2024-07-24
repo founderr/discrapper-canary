@@ -23,7 +23,7 @@ writable: !0
 let y = new RegExp('https?://'.concat(null !== (a = window.GLOBAL_ENV.CDN_HOST) && void 0 !== a ? a : ''));
 
 function k(e) {
-  return 'string' == typeof e.content ? e.content : w(e.content);
+  return 'string' == typeof e.content ? e.content : C(e.content);
 }
 let v = {
 ...d().defaultRules,
@@ -131,8 +131,8 @@ codeBlock: {
 }
   },
   _ = d().parserFor(v),
-  w = d().reactFor(d().ruleOutput(v, 'react'));
-class C extends(n = o.PureComponent) {
+  C = d().reactFor(d().ruleOutput(v, 'react'));
+class w extends(n = o.PureComponent) {
   render() {
 let {
   className: e,
@@ -150,7 +150,7 @@ return (0, i.jsx)('div', {
 });
   }
 }
-x(C, 'rules', v), x(C, 'defaultProps', {
+x(w, 'rules', v), x(w, 'defaultProps', {
   parser: _,
-  output: w
-}), t.Z = C;
+  output: C
+}), t.Z = w;

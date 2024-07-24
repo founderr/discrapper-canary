@@ -1,24 +1,24 @@
-s.d(a, {
+t.d(n, {
   b: function() {
-return t;
+return i;
   }
-}), s(47120);
-var n = s(470079);
+}), t(47120);
+var a = t(470079);
 
-function t() {
-  var e, a;
-  let [s, t] = n.useState({
+function i() {
+  var e, n;
+  let [t, i] = a.useState({
 width: null !== (e = window.innerWidth) && void 0 !== e ? e : 1080,
-height: null !== (a = window.innerHeight) && void 0 !== a ? a : 1080
+height: null !== (n = window.innerHeight) && void 0 !== n ? n : 1080
   });
-  return n.useLayoutEffect(() => {
+  return a.useLayoutEffect(() => {
 function e() {
   let e = window.innerWidth;
-  t({
+  i({
     width: e,
     height: window.innerHeight
   });
 }
 return e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
-  }, []), s;
+  }, []), t;
 }

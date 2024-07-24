@@ -113,8 +113,8 @@ var s = E(654861),
   Z = E(971130),
   P = E(709054),
   H = E(981631),
-  h = E(176505),
-  p = E(273504),
+  p = E(176505),
+  h = E(273504),
   m = E(765305),
   F = E(689938);
 let v = new S.Z('AuditLogUtils'),
@@ -915,7 +915,7 @@ case H.rsA.AUTO_MODERATION_BLOCK_MESSAGE:
   return F.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_BLOCK_MESSAGE;
 case H.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL:
   var s;
-  if ((null === (s = e.options) || void 0 === s ? void 0 : s.auto_moderation_rule_trigger_type) === p.fX.USER_PROFILE.toString())
+  if ((null === (s = e.options) || void 0 === s ? void 0 : s.auto_moderation_rule_trigger_type) === h.fX.USER_PROFILE.toString())
     return F.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAGGED_USER_PROFILE;
   return F.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAG_TO_CHANNEL_MESSAGE;
 case H.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
@@ -977,11 +977,11 @@ default:
 
 function et(e) {
   switch (e) {
-case h.zZ.GUILD_FEED_REMOVED:
+case p.zZ.GUILD_FEED_REMOVED:
   return F.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_REMOVE_CHANNEL;
-case h.zZ.ACTIVE_CHANNELS_REMOVED:
+case p.zZ.ACTIVE_CHANNELS_REMOVED:
   return F.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ACTIVE_CHANNELS_REMOVE_CHANNEL;
-case h.zZ.PINNED:
+case p.zZ.PINNED:
   return F.Z.Messages.PINNED_POST;
   }
   return null;
@@ -989,11 +989,11 @@ case h.zZ.PINNED:
 
 function ea(e) {
   switch (e) {
-case h.zZ.GUILD_FEED_REMOVED:
+case p.zZ.GUILD_FEED_REMOVED:
   return F.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_UNREMOVE_CHANNEL;
-case h.zZ.ACTIVE_CHANNELS_REMOVED:
+case p.zZ.ACTIVE_CHANNELS_REMOVED:
   return F.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ACTIVE_CHANNELS_UNREMOVE_CHANNEL;
-case h.zZ.PINNED:
+case p.zZ.PINNED:
   return F.Z.Messages.UNPINNED_POST;
   }
   return null;
@@ -1285,8 +1285,8 @@ if (null != s || !![
                   I = d.Ge(E, s),
                   n = [],
                   A = [];
-                for (let e in h.zZ) {
-                  let _ = h.zZ[e];
+                for (let e in p.zZ) {
+                  let _ = p.zZ[e];
                   d.yE(T, _) && n.push(_), d.yE(I, _) && A.push(_);
                 }
                 return {

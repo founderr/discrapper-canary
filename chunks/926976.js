@@ -23,8 +23,8 @@ var a = r(735250),
   k = r(621060),
   v = r(689938),
   _ = r(408126),
-  w = r(535271);
-let C = [{
+  C = r(535271);
+let w = [{
 key: 'event',
 cellClassName: _.eventColumn,
 render(e) {
@@ -91,7 +91,7 @@ render: e => {
   return (0, a.jsxs)(a.Fragment, {
     children: [
       (0, a.jsxs)(h.ZP, {
-        className: o()(w.headerBar, _.subPanelHeaderBar),
+        className: o()(C.headerBar, _.subPanelHeaderBar),
         children: [
           (0, a.jsx)(h.ZP.Icon, {
             icon: d.AnalyticsIcon,
@@ -195,7 +195,7 @@ h = l.find(e => e.key === c),
 }, []);
   return (0, a.jsxs)('div', {
 ref: e,
-className: o()(w.panel, _.panel),
+className: o()(C.panel, _.panel),
 children: [
   (0, a.jsxs)('div', {
     className: _.toolbar,
@@ -239,7 +239,7 @@ children: [
   (0, a.jsx)(d.ScrollerThin, {
     className: _.tableContainer,
     children: (0, a.jsx)(y.Z, {
-      columns: C,
+      columns: w,
       data: l,
       selectedRowKey: c,
       onClickRow: u

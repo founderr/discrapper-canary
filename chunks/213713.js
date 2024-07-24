@@ -23,11 +23,11 @@ var a = r(735250),
   k = r(650613),
   v = r(789086),
   _ = r(206583),
-  w = r(787524),
-  C = r(535271);
+  C = r(787524),
+  w = r(535271);
 let j = [{
 key: 'type',
-cellClassName: o()(w.cell, w.cellType),
+cellClassName: o()(C.cell, C.cellType),
 render(e) {
   let {
     type: t
@@ -40,7 +40,7 @@ render(e) {
   },
   {
 key: 'count',
-cellClassName: o()(w.cell, w.cellCount),
+cellClassName: o()(C.cell, C.cellCount),
 render(e) {
   let {
     entries: t
@@ -55,7 +55,7 @@ render(e) {
   },
   {
 key: 'only?',
-cellClassName: w.cell,
+cellClassName: C.cell,
 render(e) {
   let {
     type: t
@@ -122,9 +122,9 @@ I = (0, b.Z)({
   source: p.m1.DevTools
 });
   return (0, a.jsx)('div', {
-className: o()(C.panel),
+className: o()(w.panel),
 children: (0, a.jsxs)(u.ScrollerThin, {
-  className: w.content,
+  className: C.content,
   children: [
     (0, a.jsxs)(u.FormSection, {
       children: [

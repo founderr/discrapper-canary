@@ -12,7 +12,7 @@ return Z;
 return H;
   },
   qw: function() {
-return h;
+return p;
   },
   tn: function() {
 return P;
@@ -139,7 +139,7 @@ return 0;
   return null == n ? 0 : 0 === n.length ? I.index + 2 - T : n[n.length - 1].index + 2 - T;
 }
 
-function h(e) {
+function p(e) {
   var _;
   return C.Z.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
 timeAgo: A()(M.default.extractTimestamp(null !== (_ = i.ZP.lastMessageId(e)) && void 0 !== _ ? _ : e)).fromNow()

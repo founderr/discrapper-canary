@@ -38,8 +38,8 @@ U.Plq.DEAFEN_MEMBERS
   Z = !1,
   P = !0,
   H = !1,
-  h = null,
-  p = U.rsA.ALL,
+  p = null,
+  h = U.rsA.ALL,
   m = null,
   F = {},
   v = 0;
@@ -156,13 +156,13 @@ return H;
 return R;
   }
   get userIdFilter() {
-return h;
+return p;
   }
   get targetIdFilter() {
 return m;
   }
   get actionFilter() {
-return p;
+return h;
   }
   get deletedTargets() {
 return F;
@@ -218,13 +218,13 @@ Z = !1;
 let {
   action: _
 } = e;
-p = _;
+h = _;
   },
   AUDIT_LOG_FILTER_BY_USER: function(e) {
 let {
   userId: _
 } = e;
-h = _;
+p = _;
   },
   AUDIT_LOG_FILTER_BY_TARGET: function(e) {
 let {
@@ -243,6 +243,6 @@ return O = _, m = null, B({
 });
   },
   GUILD_SETTINGS_CLOSE: function() {
-i = [], R = [], p = U.rsA.ALL, h = null, m = null, F = {}, v = 0, d = !0, M = [], u = [], o = [], c = [], C = [];
+i = [], R = [], h = U.rsA.ALL, p = null, m = null, F = {}, v = 0, d = !0, M = [], u = [], o = [], c = [], C = [];
   }
 });

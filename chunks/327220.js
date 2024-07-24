@@ -1,35 +1,35 @@
-e.d(t, {
+t.d(n, {
   Z: function() {
-return E;
+return o;
   }
-}), e(47120);
-var r = e(470079),
-  u = e(442837),
-  i = e(592125),
-  o = e(9156);
+}), t(47120);
+var a = t(470079),
+  l = t(442837),
+  r = t(592125),
+  i = t(9156);
 
-function E(n) {
-  let t = (0, u.e7)([i.Z], () => i.Z.getPrivateChannelsVersion()),
-e = (0, u.e7)([i.Z], () => i.Z.getMutableDMsByUserIds(), [t]),
-E = (0, u.e7)([o.ZP], () => o.ZP.getMutedChannels(null)),
-l = r.useMemo(() => {
-  let n = new Set();
-  for (let t in e) {
-    let r = e[t];
-    null != r && E.has(r) && n.add(t);
+function o(e) {
+  let n = (0, l.e7)([r.Z], () => r.Z.getPrivateChannelsVersion()),
+t = (0, l.e7)([r.Z], () => r.Z.getMutableDMsByUserIds(), [n]),
+o = (0, l.e7)([i.ZP], () => i.ZP.getMutedChannels(null)),
+u = a.useMemo(() => {
+  let e = new Set();
+  for (let n in t) {
+    let a = t[n];
+    null != a && o.has(a) && e.add(n);
   }
-  return n;
+  return e;
 }, [
-  e,
-  E
+  t,
+  o
 ]);
-  return r.useMemo(() => null == n ? void 0 : n.filter(n => {
-for (let t of n.participants)
-  if (l.has(t))
+  return a.useMemo(() => null == e ? void 0 : e.filter(e => {
+for (let n of e.participants)
+  if (u.has(n))
     return !1;
 return !0;
   }), [
-n,
-l
+e,
+u
   ]);
 }

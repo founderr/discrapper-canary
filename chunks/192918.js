@@ -3,35 +3,35 @@ t.d(n, {
 return u;
   }
 }), t(47120);
-var l = t(470079),
-  r = t(442837),
-  a = t(594174),
-  o = t(823379);
-let i = [];
+var a = t(470079),
+  l = t(442837),
+  r = t(594174),
+  i = t(823379);
+let o = [];
 
 function u(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3,
-t = (0, r.Wu)([a.default], () => {
-  let n = e.participants.map(e => a.default.getUser(e)).filter(o.lm),
+t = (0, l.Wu)([r.default], () => {
+  let n = e.participants.map(e => r.default.getUser(e)).filter(i.lm),
     t = n.find(n => n.id === e.author_id),
-    l = n.filter(n => n.id !== e.author_id);
-  return null == t ? i : [
-    ...l,
+    a = n.filter(n => n.id !== e.author_id);
+  return null == t ? o : [
+    ...a,
     t
   ];
 }, [e]),
-u = l.useMemo(() => t.slice(-n), [
+u = a.useMemo(() => t.slice(-n), [
   n,
   t
 ]),
-s = u[u.length - 1],
-c = u[u.length - 2],
+c = u[u.length - 1],
+s = u[u.length - 2],
 d = t.length - 1;
   return {
 orderedParticipants: t,
 displayParticipants: u,
-participant1: s,
-participant2: c,
+participant1: c,
+participant2: s,
 numOtherParticipants: d
   };
 }

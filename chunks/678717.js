@@ -24,15 +24,15 @@ var y = r(392750),
   k = r(926976),
   v = r(592197),
   _ = r(860337),
-  w = r(789654),
-  C = r(691867),
+  C = r(789654),
+  w = r(691867),
   j = r(916790),
   N = r(912072),
   S = r(246992),
   T = r(442954),
   I = r(702904),
-  E = r(178821),
-  Z = r(248526),
+  Z = r(178821),
+  E = r(248526),
   R = r(958328),
   O = r(514866),
   B = r(678639),
@@ -44,7 +44,7 @@ var y = r(392750),
   G = r(941735),
   H = r(535271);
 
-function z(e) {
+function F(e) {
   let {
 resizableNode: t,
 onResize: r,
@@ -62,7 +62,7 @@ className: G.resizeHandle
   });
 }
 
-function F() {
+function z() {
   var e;
   let t = n.useMemo(() => {
   let e = [{
@@ -93,7 +93,7 @@ function F() {
   }), e.push({
     id: 'perks_demos',
     name: 'Perks Demos',
-    render: () => (0, a.jsx)(Z.Z, {})
+    render: () => (0, a.jsx)(E.Z, {})
   })), g.Z.isDeveloper && (e.push({
     id: 'clans',
     name: 'Clans',
@@ -101,15 +101,15 @@ function F() {
   }), e.push({
     id: 'performance',
     name: 'Performance',
-    render: () => (0, a.jsx)(E.Z, {})
+    render: () => (0, a.jsx)(Z.Z, {})
   })), e.push({
     id: 'colors',
     name: 'Colors',
-    render: () => (0, a.jsx)(w.Z, {})
+    render: () => (0, a.jsx)(C.Z, {})
   }), e.push({
     id: 'design_toggles',
     name: 'Design Toggles',
-    render: () => (0, a.jsx)(C.Z, {})
+    render: () => (0, a.jsx)(w.Z, {})
   }), e.push({
     id: 'overlays',
     name: 'Dev Overlays',
@@ -223,14 +223,14 @@ style: {
   width: r
 },
 children: [
-  (0, a.jsx)(z, {
+  (0, a.jsx)(F, {
     resizableNode: e,
     onResize: i,
     onResizeEnd: l
   }),
   (0, a.jsx)('div', {
     className: G.sidebarContent,
-    children: (0, a.jsx)(F, {})
+    children: (0, a.jsx)(z, {})
   })
 ]
   });
@@ -242,7 +242,7 @@ function V() {
 className: o()(G.container, G.mobileContainerExpanded),
 children: (0, a.jsx)('div', {
   className: G.sidebarContent,
-  children: (0, a.jsx)(F, {})
+  children: (0, a.jsx)(z, {})
 })
   }) : (0, a.jsx)('div', {
 className: G.container,

@@ -1,27 +1,27 @@
-s.d(n, {
+i.d(n, {
   Z: function() {
 return d;
   }
 });
-var i = s(470079),
-  l = s(442837),
-  o = s(726542),
-  t = s(122021),
-  r = s(621853);
+var s = i(470079),
+  l = i(442837),
+  o = i(726542),
+  t = i(122021),
+  r = i(621853);
 let a = [];
 
 function d(e) {
   let n = (0, t.Xj)({
   forUserProfile: !0
 }),
-s = (0, l.e7)([r.Z], () => r.Z.getUserProfile(e));
-  return (0, i.useMemo)(() => (null == s ? void 0 : s.connectedAccounts) == null ? a : s.connectedAccounts.filter(e => {
+i = (0, l.e7)([r.Z], () => r.Z.getUserProfile(e));
+  return (0, s.useMemo)(() => (null == i ? void 0 : i.connectedAccounts) == null ? a : i.connectedAccounts.filter(e => {
 let {
-  type: s
-} = e, i = o.Z.get(s);
-return null != i && n(i);
+  type: i
+} = e, s = o.Z.get(i);
+return null != s && n(s);
   }), [
-null == s ? void 0 : s.connectedAccounts,
+null == i ? void 0 : i.connectedAccounts,
 n
   ]);
 }

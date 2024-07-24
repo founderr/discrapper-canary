@@ -52,8 +52,8 @@ return () => {
   }, []);
   let v = 0 === o.current ? 0 : i.current / o.current,
 _ = c.Z.getSocket(),
-w = _.dispatcher.getDispatchTimings(),
-C = _.dispatcher.getSchedulerTelemetry(),
+C = _.dispatcher.getDispatchTimings(),
+w = _.dispatcher.getSchedulerTelemetry(),
 j = 0 === v ? 0 : u / v * 60;
   return (0, a.jsxs)('div', {
 children: [
@@ -149,7 +149,7 @@ children: [
       }),
       (0, a.jsx)('table', {
         cellPadding: 4,
-        children: Object.entries(w).map(e => {
+        children: Object.entries(C).map(e => {
           let [t, [r, n]] = e;
           return (0, a.jsxs)('tr', {
             children: [
@@ -211,7 +211,7 @@ children: [
       }),
       (0, a.jsx)('table', {
         cellPadding: 4,
-        children: Object.entries(C.generateTelemetry()).map(e => {
+        children: Object.entries(w.generateTelemetry()).map(e => {
           let [t, r] = e;
           return (0, a.jsxs)('tr', {
             children: [
@@ -237,7 +237,7 @@ children: [
       (0, a.jsx)(l.Button, {
         size: l.Button.Sizes.SMALL,
         onClick: () => {
-          C.reset();
+          w.reset();
         },
         children: 'Reset Scheduler Telemetry'
       })

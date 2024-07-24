@@ -1,63 +1,63 @@
 t.d(n, {
   W: function() {
-return c;
+return s;
   }
 });
-var l = t(735250),
-  r = t(470079),
-  a = t(297781),
-  o = t(443487),
-  i = t(43205),
+var a = t(735250),
+  l = t(470079),
+  r = t(297781),
+  i = t(443487),
+  o = t(43205),
   u = t(797342),
-  s = t(182022);
-let c = [
-  a.OV,
-  a.EE,
-  a.Af,
-  a.U9,
-  a.gj,
-  a.f,
-  a.n8,
-  a.v1,
-  a.pQ
+  c = t(182022);
+let s = [
+  r.OV,
+  r.EE,
+  r.Af,
+  r.U9,
+  r.gj,
+  r.f,
+  r.n8,
+  r.v1,
+  r.pQ
 ];
-n.Z = r.memo(e => {
+n.Z = l.memo(e => {
   let {
 entry: n,
 channel: t,
-selected: r,
+selected: l,
 hovered: d
   } = e, {
-iconUrl: E,
-iconTitle: _
+iconUrl: f,
+iconTitle: h
   } = (0, u.n)(n);
-  return (0, l.jsxs)(o.Zb, {
-selected: r,
+  return (0, a.jsxs)(i.Zb, {
+selected: l,
 children: [
-  (0, l.jsxs)(o.e$, {
+  (0, a.jsxs)(i.e$, {
     children: [
-      (0, l.jsx)(o.F9, {
+      (0, a.jsx)(i.F9, {
         entry: n,
         channelId: t.id,
         guildId: t.guild_id
       }),
-      (0, l.jsx)(o.ll, {
+      (0, a.jsx)(i.ll, {
         children: n.extra.game_name
       }),
-      (0, l.jsx)(a.Gk, {
-        location: a.Gt.CARD,
-        children: c.map((e, t) => (0, l.jsx)(e, {
+      (0, a.jsx)(r.Gk, {
+        location: r.Gt.CARD,
+        children: s.map((e, t) => (0, a.jsx)(e, {
           entry: n,
           hovered: d
         }, t))
       })
     ]
   }),
-  (0, l.jsx)(i.f, {
-    alt: _,
-    src: E,
+  (0, a.jsx)(o.f, {
+    alt: h,
+    src: f,
     size: 48,
-    className: s.thumbnail
+    className: c.thumbnail
   })
 ]
   });
