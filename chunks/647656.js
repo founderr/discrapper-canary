@@ -55,7 +55,7 @@ validation: e => (0, _.Z)(e).required().keys({
     })).min(1).max(2),
     instance: e.boolean(),
     supported_platforms: e.array().items(e.string().min(1).max(32)).min(1).max(3),
-    type: e.number().default(E.IIU.PLAYING).valid(E.IIU.PLAYING, E.IIU.LISTENING, E.IIU.WATCHING)
+    type: e.number().default(E.IIU.PLAYING).valid(E.IIU.PLAYING, E.IIU.LISTENING, E.IIU.WATCHING, E.IIU.COMPETING)
   }).allow(null)
 }),
 handler(e) {
@@ -99,7 +99,7 @@ handler(e) {
     buttons: N,
     type: A
   } = _;
-  if ((null == A || A !== E.IIU.PLAYING && !g) && (_.type = E.IIU.PLAYING), null != S) {
+  if (null == A && (_.type = E.IIU.PLAYING), null != S) {
     let e = s().values(S).filter(e => !!e);
     if (null != f && s().intersection(e, [f.id]).length > 0 && !I.includes(i.application.id))
       throw new d.Z({
