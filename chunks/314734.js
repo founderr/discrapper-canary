@@ -6,6 +6,9 @@ return o;
   Jh: function() {
 return s;
   },
+  K7: function() {
+return c;
+  },
   bS: function() {
 return i;
   },
@@ -13,13 +16,13 @@ return i;
 return r;
   },
   lv: function() {
-return c;
+return d;
   },
   t4: function() {
 return l;
   },
   u$: function() {
-return d;
+return u;
   }
 }), (a = i || (i = {}))[a.POPULAR = 0] = 'POPULAR', a[a.ALPHABETICAL = 1] = 'ALPHABETICAL';
 let s = 'app-launcher-element',
@@ -27,7 +30,8 @@ let s = 'app-launcher-element',
   l = 'app-launcher-entrypoint',
   o = 500,
   c = 650,
-  d = {
+  d = 'min(100vh, '.concat(c, 'px)'),
+  u = {
 '--custom-app-launcher-width': ''.concat(o, 'px'),
-'--custom-app-launcher-height': ''.concat(c, 'px')
+'--custom-app-launcher-height': d
   };
