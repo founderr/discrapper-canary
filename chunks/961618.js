@@ -1,1 +1,6 @@
-e.exports = '/assets/80ea9ac2ca81eb32b67f.svg';
+e.exports = {
+  wrapper: 'wrapper_e8db51',
+  icon: 'icon_e8db51',
+  close: 'close_e8db51',
+  content: 'content_e8db51'
+};

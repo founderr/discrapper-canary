@@ -20,7 +20,7 @@ var a = n(120356),
   T = n(488131),
   h = n(981631),
   N = n(689938),
-  f = n(384880);
+  f = n(265940);
 
 function p(e) {
   let {
@@ -92,7 +92,7 @@ children: [
         } = await Promise.all([
           n.e('39285'),
           n.e('48800'),
-          n.e('4985')
+          n.e('84248')
         ]).then(n.bind(n, 422200));
         return n => (0, i.jsx)(e, {
           channel: t,

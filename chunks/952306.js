@@ -10,7 +10,7 @@ t.Z = {
     default: e
   } = await Promise.all([
     s.e('20727'),
-    s.e('69790')
+    s.e('4854')
   ]).then(s.bind(s, 298237));
   return t => (0, n.jsx)(e, {
     ...t

@@ -21,7 +21,7 @@ var i, s = n(735250),
   T = n(585483),
   f = n(792125),
   S = n(981631),
-  C = n(600753);
+  C = n(821636);
 
 function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -34,13 +34,13 @@ writable: !0
 let A = (0, I.Un)({
 createPromise: () => Promise.all([
   n.e('96427'),
-  n.e('1337'),
+  n.e('19503'),
   n.e('15972'),
   n.e('13682'),
   n.e('15685'),
   n.e('47006'),
   n.e('32776'),
-  n.e('18209'),
+  n.e('94915'),
   n.e('33053'),
   n.e('8016'),
   n.e('50654'),
@@ -53,8 +53,8 @@ createPromise: () => Promise.all([
   n.e('30419'),
   n.e('18824'),
   n.e('52619'),
-  n.e('66436'),
-  n.e('78130')
+  n.e('83760'),
+  n.e('59579')
 ]).then(n.bind(n, 989804)),
 webpackId: 989804,
 name: 'UserSettings'
@@ -63,7 +63,7 @@ name: 'UserSettings'
 createPromise: () => Promise.all([
   n.e('33053'),
   n.e('7654'),
-  n.e('16435'),
+  n.e('71700'),
   n.e('75116')
 ]).then(n.bind(n, 869779)),
 webpackId: 869779,
@@ -77,10 +77,10 @@ createPromise: () => Promise.all([
   n.e('15685'),
   n.e('47006'),
   n.e('32776'),
-  n.e('18209'),
+  n.e('94915'),
   n.e('87624'),
   n.e('43331'),
-  n.e('67795')
+  n.e('97006')
 ]).then(n.bind(n, 838819)),
 webpackId: 838819,
 name: 'CollectiblesShop'
@@ -92,10 +92,10 @@ createPromise: () => Promise.all([
   n.e('50654'),
   n.e('7654'),
   n.e('44156'),
-  n.e('16435'),
+  n.e('71700'),
   n.e('85552'),
   n.e('58227'),
-  n.e('45361')
+  n.e('10926')
 ]).then(n.bind(n, 994763)),
 webpackId: 994763,
 name: 'GuildSettings'

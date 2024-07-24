@@ -45,7 +45,7 @@ var i = n(735250),
   w = n(788307),
   k = n(981631),
   B = n(689938),
-  V = n(494954);
+  V = n(17147);
 let H = G.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
   F = {
 offset: {
@@ -197,7 +197,7 @@ t.isMultiUserDM() ? (0, f.jW)(e, async () => {
     n.e('79695'),
     n.e('70474'),
     n.e('56826'),
-    n.e('38834')
+    n.e('80991')
   ]).then(n.bind(n, 131404));
   return n => (0, i.jsx)(e, {
     ...n,

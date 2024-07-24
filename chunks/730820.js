@@ -27,11 +27,11 @@ var n = s(735250),
   p = s(714565),
   R = s(202858),
   x = s(726985),
-  f = s(981631),
-  M = s(815660),
+  M = s(981631),
+  f = s(815660),
   D = s(689938),
-  P = s(78075),
-  L = s(224499);
+  P = s(363210),
+  L = s(549856);
 
 function b(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -84,7 +84,7 @@ let {
 } = this.state, {
   currentUser: a,
   togglingSMS: i
-} = this.props, r = null != a.phone, o = a.hasFlag(f.xW$.MFA_SMS);
+} = this.props, r = null != a.phone, o = a.hasFlag(M.xW$.MFA_SMS);
 if (r || o) {
   let e = s ? a.phone : this.maskPhoneNumber(a.phone);
   t = (0, n.jsxs)(l.FormText, {
@@ -313,7 +313,7 @@ let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   ...t,
   ...e
 }), {
-  modalKey: M.M
+  modalKey: f.M
 });
   }
   constructor(...e) {

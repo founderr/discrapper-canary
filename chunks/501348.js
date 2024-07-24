@@ -27,8 +27,8 @@ var n = s(735250),
   p = s(311476),
   R = s(921801),
   x = s(594174),
-  f = s(285952),
-  M = s(153124),
+  M = s(285952),
+  f = s(153124),
   D = s(358085),
   P = s(210887),
   L = s(740492),
@@ -40,8 +40,8 @@ var n = s(735250),
   U = s(921944),
   G = s(959517),
   F = s(689938),
-  y = s(45031),
-  V = s(224499);
+  y = s(704803),
+  V = s(549856);
 
 function Y(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -55,9 +55,9 @@ let w = {
 COZY: 'cozy',
 COMPACT: 'compact'
   },
-  k = (0, M.hQ)(),
-  H = (0, M.hQ)(),
-  W = (0, M.hQ)(),
+  k = (0, f.hQ)(),
+  H = (0, f.hQ)(),
+  W = (0, f.hQ)(),
   K = '1337',
   z = e => {
 let t = 0;
@@ -165,8 +165,8 @@ return (0, n.jsxs)(d.FormItem, {
       className: V.marginBottom8,
       children: F.Z.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
     }),
-    (0, n.jsx)(f.Z, {
-      align: f.Z.Align.CENTER,
+    (0, n.jsx)(M.Z, {
+      align: M.Z.Align.CENTER,
       children: (0, n.jsx)(d.Slider, {
         className: r()(V.marginTop20, V.marginBottom4),
         initialValue: this.props.fontSize,

@@ -9,7 +9,7 @@ var s = n(735250),
   d = n(268350),
   u = n(419922),
   _ = n(689938),
-  I = n(405385);
+  I = n(34024);
 t.Z = e => {
   let {
 className: t,
@@ -22,7 +22,7 @@ canManageSticker: T
     default: e
   } = await Promise.all([
     n.e('93626'),
-    n.e('33625')
+    n.e('94548')
   ]).then(n.bind(n, 136735));
   return t => (0, s.jsx)(e, {
     sticker: E,

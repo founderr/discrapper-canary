@@ -6,7 +6,7 @@ var n = s(735250),
   o = s(153867),
   l = s(706454),
   c = s(689938),
-  d = s(311929),
+  d = s(21105),
   _ = s(444675);
 t.Z = i.ZP.connectStores([l.default], () => ({
   currentLocale: l.default.locale

@@ -28,16 +28,16 @@ var a = s(512722),
   p = s(350327),
   R = s(621853),
   x = s(318661),
-  f = s(25990),
-  M = s(594174),
+  M = s(25990),
+  f = s(594174),
   D = s(74538),
   P = s(689938),
-  L = s(55481);
+  L = s(121223);
 
 function b() {
   var e, t, s, a, b, Z, v, j;
-  let B = (0, r.e7)([M.default], () => {
-  let e = M.default.getCurrentUser();
+  let B = (0, r.e7)([f.default], () => {
+  let e = f.default.getCurrentUser();
   return i()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
 }),
 U = (0, r.e7)([R.Z], () => R.Z.getUserProfile(B.id)),
@@ -50,9 +50,9 @@ U = (0, r.e7)([R.Z], () => R.Z.getUserProfile(B.id)),
   pendingAccentColor: w,
   pendingThemeColors: k,
   errors: H
-} = (0, r.cj)([f.Z], () => {
-  let e = f.Z.getAllPending(),
-    t = f.Z.getErrors();
+} = (0, r.cj)([M.Z], () => {
+  let e = M.Z.getAllPending(),
+    t = M.Z.getErrors();
   return {
     ...e,
     errors: t

@@ -4,7 +4,7 @@ var n = s(735250),
   r = s.n(i),
   o = s(481060),
   l = s(689938),
-  c = s(927256);
+  c = s(59150);
 t.Z = a.forwardRef(function(e, t) {
   let {
 currentPageIndex: s,

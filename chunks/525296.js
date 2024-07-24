@@ -31,7 +31,7 @@ handleUserContextMenu(e, t, s) {
     } = await Promise.all([
       n.e('79695'),
       n.e('69220'),
-      n.e('740')
+      n.e('86541')
     ]).then(n.bind(n, 881351));
     return n => (0, i.jsx)(e, {
       ...n,
@@ -51,12 +51,12 @@ handleGuildContextMenu(e, t) {
       n.e('50654'),
       n.e('7654'),
       n.e('44156'),
-      n.e('16435'),
+      n.e('71700'),
       n.e('85552'),
       n.e('58227'),
-      n.e('45361'),
+      n.e('10926'),
       n.e('33213'),
-      n.e('12303')
+      n.e('41292')
     ]).then(n.bind(n, 545135));
     return n => (0, i.jsx)(e, {
       ...n,

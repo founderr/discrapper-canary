@@ -27,8 +27,8 @@ var n = s(735250),
   p = s(80132),
   R = s(735336),
   x = s(204197),
-  f = s(25990),
-  M = s(594174),
+  M = s(25990),
+  f = s(594174),
   D = s(572004),
   P = s(51144),
   L = s(998502),
@@ -40,7 +40,7 @@ var n = s(735250),
   U = s(801461),
   G = s(228168),
   F = s(689938),
-  y = s(523193);
+  y = s(900168);
 let V = L.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
 
 function Y(e) {
@@ -133,7 +133,7 @@ children: [
             default: e
           } = await Promise.all([
             s.e('85342'),
-            s.e('2137')
+            s.e('51695')
           ]).then(s.bind(s, 193049));
           return t => (0, n.jsx)(e, {
             source: U.Kq.USER_SETTINGS_EDIT,
@@ -257,7 +257,7 @@ if (null == i.email)
         default: e
       } = await Promise.all([
         s.e('9343'),
-        s.e('12409')
+        s.e('45863')
       ]).then(s.bind(s, 642298));
       return t => (0, n.jsx)(e, {
         ...t
@@ -283,7 +283,7 @@ else {
         default: e
       } = await Promise.all([
         s.e('9343'),
-        s.e('12409')
+        s.e('45863')
       ]).then(s.bind(s, 642298));
       return t => (0, n.jsx)(e, {
         ...t
@@ -456,14 +456,14 @@ function z() {
 
 function Q() {
   var e;
-  let t = (0, c.e7)([M.default], () => {
-  let e = M.default.getCurrentUser();
+  let t = (0, c.e7)([f.default], () => {
+  let e = f.default.getCurrentUser();
   return l()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e;
 }),
 s = (0, O.ZP)(t.id),
 a = (0, h.Z)(s),
 i = b.co.useSetting(),
-r = (0, c.e7)([f.Z], () => f.Z.getErrors()),
+r = (0, c.e7)([M.Z], () => M.Z.getErrors()),
 o = null == r ? void 0 : null === (e = r.avatar) || void 0 === e ? void 0 : e[0],
 {
   avatarSrc: d,

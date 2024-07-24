@@ -1,22 +1,22 @@
-n.d(t, {
+i.d(n, {
   n: function() {
 return a;
   }
 });
-var s, a, r = n(735250),
-  i = n(470079),
-  l = n(120356),
-  o = n.n(l),
-  c = n(748780),
-  d = n(215569),
-  _ = n(77609);
-(s = a || (a = {}))[s.RIGHT = -1] = 'RIGHT', s[s.LEFT = 1] = 'LEFT';
-let u = {
+var t, a, r = i(735250),
+  o = i(470079),
+  l = i(120356),
+  s = i.n(l),
+  c = i(748780),
+  d = i(215569),
+  u = i(390837);
+(t = a || (a = {}))[t.RIGHT = -1] = 'RIGHT', t[t.LEFT = 1] = 'LEFT';
+let _ = {
   friction: 7,
   tension: 40,
   clamp: !0
 };
-class E extends i.PureComponent {
+class p extends o.PureComponent {
   componentWillEnter(e) {
 this._animated.setValue(-this.props.direction), c.Z.spring(this._animated, {
   toValue: 0,
@@ -63,37 +63,37 @@ return this.props.fadeInOut && (e.opacity = this._animated.interpolate({
   render() {
 return (0, r.jsx)(c.Z.div, {
   style: this.getStyle(),
-  className: _.item,
+  className: u.item,
   children: this.props.children
 });
   }
   constructor(e) {
-var t, n, s;
-super(e), t = this, s = void 0, (n = '_animated') in t ? Object.defineProperty(t, n, {
-  value: s,
+var n, i, t;
+super(e), n = this, t = void 0, (i = '_animated') in n ? Object.defineProperty(n, i, {
+  value: t,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : t[n] = s, this._animated = new c.Z.Value(-1 * e.direction);
+}) : n[i] = t, this._animated = new c.Z.Value(-1 * e.direction);
   }
 }
-t.Z = e => {
+n.Z = e => {
   let {
-children: t,
-step: n,
-direction: s,
+children: n,
+step: i,
+direction: t,
 className: a,
-springSettings: i = u,
+springSettings: o = _,
 fadeInOut: l = !1
   } = e;
   return (0, r.jsx)(d.W, {
 component: 'div',
-className: o()(_.animator, a),
-children: (0, r.jsx)(E, {
-  direction: s,
-  springSettings: i,
+className: s()(u.animator, a),
+children: (0, r.jsx)(p, {
+  direction: t,
+  springSettings: o,
   fadeInOut: l,
-  children: t
-}, n)
+  children: n
+}, i)
   });
 };

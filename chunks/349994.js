@@ -12,7 +12,7 @@ var a = n(735250),
   c = n(981631),
   d = n(531578),
   u = n(689938),
-  m = n(551315);
+  m = n(51394);
 let b = [{
 className: m.emojiThumbsUp,
 rating: d.aZ.GOOD,

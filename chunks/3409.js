@@ -35,7 +35,7 @@ var s = t(735250),
   M = t(51499),
   b = t(586585),
   O = t(614277),
-  g = t(737143),
+  g = t(189877),
   y = t(35248),
   L = t(698708),
   v = t(351402),
@@ -52,8 +52,8 @@ var s = t(735250),
   w = t(850228),
   G = t(231338),
   W = t(689938),
-  V = t(260173),
-  Q = t(83644);
+  V = t(939769),
+  Q = t(492124);
 let K = new P.Z('AddPaymentStep.tsx'),
   z = [f.h8.PAYMENT_TYPE],
   X = [
@@ -567,15 +567,15 @@ case f.h8.AWAITING_BROWSER_CHECKOUT:
   });
   break;
 case f.h8.SOFORT_INFORMATION:
-  let e1 = eY.info;
+  let e8 = eY.info;
   a = (0, s.jsx)('div', {
     className: V.body,
     children: (0, s.jsx)(_.Z, {
-      billingAddressInfo: e1,
+      billingAddressInfo: e8,
       onChange: e => {
         eU({
           info: {
-            ...e1,
+            ...e8,
             ...e
           },
           isValid: !1
@@ -587,7 +587,7 @@ case f.h8.SOFORT_INFORMATION:
     onBack: () => eg(f.h8.PAYMENT_TYPE),
     primaryCTA: b.Z.CTAType.CONTINUE,
     primaryText: W.Z.Messages.NEXT,
-    primaryDisabled: '' === e1.name || '' === e1.email || void 0 === e1.email,
+    primaryDisabled: '' === e8.name || '' === e8.email || void 0 === e8.email,
     onPrimary: () => eg(f.h8.ADDRESS)
   });
   break;
@@ -664,12 +664,12 @@ case f.h8.PRZELEWY24_INFORMATION:
   });
   break;
 case f.h8.PAYPAL_INFORMATION:
-  let e8 = 0 !== eF.length && null != ek;
+  let e1 = 0 !== eF.length && null != ek;
   a = (0, s.jsx)(ec, {}), t = (0, s.jsx)(e_, {
     onBack: () => eg(f.h8.PAYMENT_TYPE),
     primaryCTA: b.Z.CTAType.CONTINUE,
-    primaryText: e8 ? W.Z.Messages.NEXT : W.Z.Messages.PAYMENT_SOURCE_CONNECT_TO_PAYPAL,
-    onPrimary: () => e8 ? eg(f.h8.ADDRESS) : (0, E.i0)()
+    primaryText: e1 ? W.Z.Messages.NEXT : W.Z.Messages.PAYMENT_SOURCE_CONNECT_TO_PAYPAL,
+    onPrimary: () => e1 ? eg(f.h8.ADDRESS) : (0, E.i0)()
   });
   break;
 case f.h8.VENMO_INFORMATION:
@@ -696,7 +696,7 @@ case f.h8.CASH_APP_INFORMATION:
   });
   break;
 case f.h8.ADDRESS:
-  let e5 = async () => {
+  let e9 = async () => {
     eH(!0);
     let e = ef.methodType;
     switch (e) {
@@ -842,7 +842,7 @@ case f.h8.ADDRESS:
     primaryText: W.Z.Messages.NEXT,
     primarySubmitting: eZ,
     primaryDisabled: !eY.isValid || eW,
-    onPrimary: e5
+    onPrimary: e9
   });
   break;
 case f.h8.AWAITING_AUTHENTICATION:
@@ -851,7 +851,7 @@ case f.h8.AWAITING_AUTHENTICATION:
 default:
   throw Error('Unexpected step: '.concat(eP));
   }
-  let e7 = (0, s.jsx)(c.Sequencer, {
+  let e5 = (0, s.jsx)(c.Sequencer, {
   className: Q.sequencer,
   staticClassName: Q.sequencerStatic,
   animatedNodeClassName: Q.sequencerAnimatedNode,
@@ -861,7 +861,7 @@ default:
   sideMargin: 20,
   children: a
 }),
-e9 = eP === f.h8.PAYMENT_TYPE && 0 === p.length ? null : t;
+e7 = eP === f.h8.PAYMENT_TYPE && 0 === p.length ? null : t;
   return H ? (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsx)(L.Z, {
@@ -872,10 +872,10 @@ children: [
     isEligibleForTrial: j
   }),
   (0, s.jsx)(O.C3, {
-    children: e7
+    children: e5
   }),
   (0, s.jsx)(O.O3, {
-    children: e9
+    children: e7
   })
 ]
   }) : (0, s.jsx)(B.Z, {
@@ -884,8 +884,8 @@ currentStep: null != v ? v : eP,
 paymentError: N.paymentError,
 header: x,
 hideBreadcrumbs: U,
-body: e7,
-footer: e9
+body: e5,
+footer: e7
   });
 }
 
