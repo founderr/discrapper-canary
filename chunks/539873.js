@@ -34,26 +34,25 @@ className: t,
 disabled: a,
 isEditor: C,
 renderCTAButtons: y
-  } = e, [D, L, b] = (0, o.Wu)([I.Z], () => [
+  } = e, [D, L] = (0, o.Wu)([I.Z], () => [
 I.Z.getCurrentDesktopIcon(),
-I.Z.isEditorOpen,
 I.Z.isUpsellPreview
   ]), {
-enabled: M
+enabled: b
   } = f.Z.getCurrentConfig({
 location: 'UserSettingsAppearanceInAppIcon'
   }, {
-autoTrackExposure: b,
-disable: !b
-  }), P = i.useRef(null);
-  (0, p.Z)(P, v.h1.CUSTOM_APP_ICONS);
-  let U = (0, m.Dt)(),
-w = (0, l.useRadioGroup)({
+autoTrackExposure: L,
+disable: !L
+  }), M = i.useRef(null);
+  (0, p.Z)(M, v.h1.CUSTOM_APP_ICONS);
+  let P = (0, m.Dt)(),
+U = (0, l.useRadioGroup)({
   orientation: 'horizontal',
-  labelledBy: U
+  labelledBy: P
 }),
-x = e => {
-  if (M && !C && e !== T.aH.DEFAULT) {
+w = e => {
+  if (b && !C && e !== T.aH.DEFAULT) {
     (0, l.openModalLazy)(async () => {
       let {
         default: e
@@ -79,19 +78,19 @@ x = e => {
   });
 },
 {
-  enabled: G
+  enabled: x
 } = (0, _.J)({
   location: 'AppIconSelectionGroup'
 }),
-k = (e, t) => {
+G = (e, t) => {
   let n = !1;
   if (t === T.Ru.BLURPLE_TWILIGHT)
-    n = G;
+    n = x;
   else
     n = !0;
   return n && !0 !== e;
 },
-B = i.useMemo(() => e => {
+k = i.useMemo(() => e => {
   let t = T.Mw.get(e),
     n = null != t && !(0, d.un)(t);
   return a && n && setTimeout(() => (0, d.EW)(t, {
@@ -99,9 +98,9 @@ B = i.useMemo(() => e => {
   }), 5000), n;
 }, [a]);
   return (0, r.jsx)('div', {
-ref: P,
+ref: M,
 children: (0, r.jsx)('div', {
-  ...w,
+  ...U,
   className: R.__invalid_container,
   children: (0, r.jsxs)('div', {
     className: t,
@@ -112,19 +111,19 @@ children: (0, r.jsx)('div', {
           (0, r.jsxs)('div', {
             className: R.headings,
             children: [
-              !L && (0, r.jsxs)('div', {
+              !C && (0, r.jsxs)('div', {
                 className: R.title,
                 children: [
                   (0, r.jsx)(l.Heading, {
                     variant: 'text-md/medium',
                     children: O.Z.Messages.APP_ICON_SETTINGS_TITLE
                   }),
-                  !M && (0, r.jsx)(h.Z, {
+                  !b && (0, r.jsx)(h.Z, {
                     className: R.premiumIcon
                   })
                 ]
               }),
-              M ? L ? null : (0, r.jsxs)('div', {
+              b ? C ? null : (0, r.jsxs)('div', {
                 className: R.description,
                 children: [
                   (0, r.jsx)(l.NitroWheelIcon, {
@@ -152,22 +151,22 @@ children: (0, r.jsx)('div', {
       }),
       (0, r.jsx)('div', {
         className: s()(R.presets, {
-          [R.presetsJustified]: M && C
+          [R.presetsJustified]: b && C
         }),
         children: S.UZ.filter(e => {
           let {
             isHidden: t,
             id: n
           } = e;
-          return k(t, n);
+          return G(t, n);
         }).map((e, t) => (0, r.jsx)(g.Z, {
           icon: e,
           isSelected: D === e.id,
-          onSelect: e => x(e),
+          onSelect: e => w(e),
           disabled: a,
           tabIndex: 0 !== t || a ? void 0 : 0,
-          isNew: B(e.id),
-          locked: M && !C && e.id !== T.aH.DEFAULT
+          isNew: k(e.id),
+          locked: b && !C && e.id !== T.aH.DEFAULT
         }, e.id))
       })
     ]
