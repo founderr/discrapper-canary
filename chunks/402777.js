@@ -94,6 +94,7 @@ children: (0, i.jsx)(d.Mt, {
               (0, i.jsx)(_.Z, {
                 location: 'SimplifiedProfilePanel',
                 user: t,
+                channelId: n.id,
                 profileType: A.y0.PANEL
               }),
               (0, i.jsx)(E.Z, {

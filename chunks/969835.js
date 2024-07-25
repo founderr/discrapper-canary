@@ -159,6 +159,8 @@ children: (0, r.jsx)(f.Mt, {
               (0, r.jsx)(g.Z, {
                 location: 'BiteSizeProfilePopout',
                 user: t,
+                guildId: M,
+                channelId: P,
                 profileType: D.y0.BITE_SIZE,
                 editEnabled: j,
                 isReplying: W,

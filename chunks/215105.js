@@ -1,81 +1,133 @@
 n.d(t, {
   Z: function() {
-return I;
+return g;
   }
 }), n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(106351),
   s = n(507274),
-  o = n(906732),
-  l = n(541716),
-  u = n(752305),
-  c = n(893718),
-  d = n(131704),
+  o = n(541716),
+  l = n(752305),
+  u = n(893718),
+  c = n(131704),
+  d = n(823379),
   _ = n(5192),
   E = n(785717),
   f = n(485216),
-  h = n(689938),
-  p = n(628372);
-let m = (0, d.kt)({
-  id: '1',
-  type: a.d.DM
-});
+  h = n(228168),
+  p = n(689938),
+  m = n(628372);
+let I = (0, c.kt)({
+id: '1',
+type: a.d.DM
+  }),
+  T = e => {
+let {
+  input: t,
+  username: n,
+  sourceType: r,
+  sourceDetails: i
+} = e;
+switch (r) {
+  case h.N9.ACTIVITY:
+    let a = p.Z.Messages.USER_PROFILE_REACTED_TO_ACTIVITY.format({
+      username: n
+    });
+    return '> -# *'.concat(a, '*\n').concat(t);
+  case h.N9.AVATAR:
+    let s = p.Z.Messages.USER_PROFILE_REACTED_TO_AVATAR.format({
+      username: n
+    });
+    return '> -# *'.concat(s, '*\n').concat(t);
+  case h.N9.STATUS:
+    let o = p.Z.Messages.USER_PROFILE_REACTED_TO_STATUS.format({
+      username: n
+    });
+    return null != i ? '> -# *'.concat(o, '*').concat('\n > '.concat(i), '\n').concat(t) : '> -# *'.concat(o, '*\n').concat(t);
+  default:
+    (0, d.vE)(r);
+}
+  };
 
-function I(e) {
+function g(e) {
   let {
 user: t,
 guildId: n,
 channelId: a,
-onReply: d,
-setPopoutRef: I
+sourceType: c,
+sourceDetails: d,
+onReply: h,
+setPopoutRef: g,
+modalKey: S,
+onClose: A
   } = e, {
-newestAnalyticsLocation: T
-  } = (0, o.ZP)(), {
-trackUserProfileAction: g
-  } = (0, E.KZ)(), [S, A] = i.useState(''), [N, v] = i.useState((0, u.JM)(S)), O = i.useRef(!1), R = i.useRef(null);
-  return i.useEffect(() => {
-null == I || I(null == R ? void 0 : R.current);
+trackUserProfileAction: N
+  } = (0, E.KZ)(), [v, O] = i.useState(''), [R, C] = i.useState((0, l.JM)(v)), y = i.useRef(!1), D = i.useRef(null), L = _.ZP.getName(n, a, t);
+  i.useEffect(() => {
+null == g || g(null == D ? void 0 : D.current);
   }, [
-R,
-I
-  ]), (0, r.jsx)(s.V, {
-ref: R,
+D,
+g
+  ]);
+  let b = async e => {
+if (null == e)
+  return;
+N({
+  action: 'PRESS_REPLY'
+});
+let n = T({
+  input: e,
+  username: L,
+  sourceType: c,
+  sourceDetails: d
+});
+await (0, f.Z)({
+  userId: t.id,
+  content: n,
+  location: 'UserProfileReplyPopout'
+});
+  };
+  return (0, r.jsx)(s.V, {
+ref: D,
 children: (0, r.jsx)('div', {
-  className: p.container,
-  children: (0, r.jsx)(c.Z, {
-    innerClassName: p.inner,
-    editorClassName: p.editor,
-    type: l.I.USER_PROFILE,
-    placeholder: h.Z.Messages.QUICK_DM_USER.format({
+  className: m.container,
+  children: (0, r.jsx)(u.Z, {
+    parentModalKey: S,
+    emojiPickerCloseOnModalOuterClick: !0,
+    innerClassName: m.inner,
+    editorClassName: m.editor,
+    type: o.I.USER_PROFILE,
+    placeholder: p.Z.Messages.QUICK_DM_USER.format({
       name: _.ZP.getName(n, a, t)
     }),
-    channel: m,
-    textValue: S,
-    richValue: N,
+    channel: I,
+    textValue: v,
+    richValue: R,
     onChange: (e, t, n) => {
-      if (t !== S)
-        A(t), v(n);
+      if (t !== v)
+        O(t), C(n);
     },
-    focused: O.current,
+    focused: y.current,
     onFocus: () => {
-      O.current = !0;
+      y.current = !0;
     },
-    onBlur: () => {
-      null !== R.current && (O.current = !1, null == d || d(!1));
+    onBlur: e => {
+      var t;
+      if (null === (t = D.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
+        y.current = !1;
+        return;
+      }
+      null !== D.current && (y.current = !1, null == h || h(!1));
     },
     onSubmit: async e => {
       let {
-        value: n
+        value: t
       } = e;
       try {
-        return g({
+        return N({
           action: 'SEND_STATUS_REPLY'
-        }), await (0, f.Z)({
-          userId: t.id,
-          content: n.trim(),
-          location: T
-        }), null == d || d(!1), {
+        }), await b(t.trim()), null == h || h(!1), null == A || A(), {
           shouldClear: !0,
           shouldRefocus: !1
         };

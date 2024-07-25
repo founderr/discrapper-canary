@@ -165,7 +165,7 @@ children: [
         action: () => (0, d.openModalLazy)(async () => {
           let {
             default: e
-          } = await t.e('1812').then(t.bind(t, 477782));
+          } = await t.e('33356').then(t.bind(t, 477782));
           return n => (0, a.jsx)(e, {
             ...n
           });

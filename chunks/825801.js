@@ -76,7 +76,7 @@ L = async e => {
   });
   let r = S({
     emoji: e,
-    username: E.ZP.getName(null, null == n ? void 0 : n.id, t),
+    username: E.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, t),
     sourceType: i,
     sourceDetails: _
   });
