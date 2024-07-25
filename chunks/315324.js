@@ -65,7 +65,8 @@ children: [
     guildId: t.id,
     maxUsers: 3,
     size: a.AvatarSizes.SIZE_16,
-    disableUsernameTooltip: !0
+    disableUsernameTooltip: !0,
+    overflowCountVariant: 'text-xs/normal'
   })
 ]
   });
