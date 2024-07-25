@@ -1,165 +1,179 @@
 s.d(t, {
-  Dz: function() {
-return g;
-  },
   J6: function() {
-return x;
+return M;
   },
-  KF: function() {
+  LO: function() {
 return h;
   },
   TQ: function() {
+return g;
+  },
+  Wg: function() {
+return x;
+  },
+  ZU: function() {
 return O;
   },
-  bo: function() {
+  Zn: function() {
 return p;
   },
+  bo: function() {
+return R;
+  },
   om: function() {
-return D;
+return P;
   },
   uX: function() {
-return P;
+return L;
   }
-});
+}), s(518263), s(970173), s(520712), s(268111), s(941497), s(32026), s(480839), s(744285), s(492257), s(873817);
 var n = s(512722),
   a = s.n(n),
   i = s(913527),
   r = s.n(i),
   o = s(544891),
-  l = s(314897),
-  c = s(131951),
-  d = s(594174),
-  _ = s(70956),
-  E = s(960048),
-  u = s(51144),
-  T = s(718629),
-  I = s(615830),
-  S = s(352954),
-  N = s(571826);
+  l = s(253135),
+  c = s(314897),
+  d = s(131951),
+  _ = s(594174),
+  E = s(70956),
+  u = s(960048),
+  T = s(51144),
+  I = s(718629),
+  S = s(615830),
+  N = s(352954),
+  C = s(571826);
 s(760373);
-var C = s(981631),
-  m = s(231338),
+var m = s(981631),
   A = s(689938);
 
-function g(e) {
-  let t = d.default.getUser(e),
-s = u.ZP.getName(t);
-  S.Z.openSecureFramesUpdateConfirmation({
+function g(e, t, s, n, a) {
+  s ? I.Z.createVerifiedKey(e, t) : I.Z.createSecureFramesTransientKey(e, t), (0, C.M1)({
+channelId: n,
+userId: e,
+analyticsLocation: a
+  });
+}
+
+function h(e, t, s) {
+  if (s) {
+let s = (0, l.MK)(new Uint8Array(t));
+I.Z.deleteVerifiedKey(e, s);
+  } else
+I.Z.deleteSecureFramesTransientKey(e);
+}
+
+function O(e, t) {
+  N.Z.openSecureFramesUpdateConfirmation({
+title: A.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_TITLE,
+subtitle: A.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_SUBTITLE,
+onConfirm: () => {
+  I.Z.deleteVerifiedKey(e, t), (0, C.Pn)();
+}
+  });
+}
+
+function p(e) {
+  let t = _.default.getUser(e),
+s = T.ZP.getName(t);
+  N.Z.openSecureFramesUpdateConfirmation({
 title: A.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_TITLE.format({
   username: s
 }),
 subtitle: A.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_SUBTITLE,
 onConfirm: () => {
-  (0, N.DF)();
+  I.Z.deleteAllUserVerifiedKeys(e), (0, C.DF)();
 }
   });
 }
 
-function h(e, t) {
-  S.Z.openSecureFramesUpdateConfirmation({
-title: A.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_TITLE,
-subtitle: A.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_SUBTITLE,
-onConfirm: () => {
-  (0, N.Pn)();
-}
-  });
-}
-
-function O(e, t, s, n) {
-  return (0, N.M1)({
-channelId: s,
-userId: e,
-analyticsLocation: n
-  }), m.dG;
-}
-
-function p(e) {
+function R(e) {
   let t = r()(e),
 s = r()().diff(t, 's');
-  if (s > 12 * _.Z.Seconds.DAYS_30) {
-let e = Math.round(s / (12 * _.Z.Seconds.DAYS_30));
+  if (s > 12 * E.Z.Seconds.DAYS_30) {
+let e = Math.round(s / (12 * E.Z.Seconds.DAYS_30));
 return A.Z.Messages.E2EE_USER_VERIFIED_YEARS_AGO.format({
   count: e
 });
   }
-  if (s > _.Z.Seconds.DAYS_30) {
-let e = Math.round(s / _.Z.Seconds.DAYS_30);
+  if (s > E.Z.Seconds.DAYS_30) {
+let e = Math.round(s / E.Z.Seconds.DAYS_30);
 return A.Z.Messages.E2EE_USER_VERIFIED_MONTHS_AGO.format({
   count: e
 });
   }
-  if (s > 7 * _.Z.Seconds.DAY) {
-let e = Math.round(s / (7 * _.Z.Seconds.DAY));
+  if (s > 7 * E.Z.Seconds.DAY) {
+let e = Math.round(s / (7 * E.Z.Seconds.DAY));
 return A.Z.Messages.E2EE_USER_VERIFIED_WEEKS_AGO.format({
   count: e
 });
-  } else if (s > _.Z.Seconds.DAY) {
-let e = Math.round(s / _.Z.Seconds.DAY);
+  } else if (s > E.Z.Seconds.DAY) {
+let e = Math.round(s / E.Z.Seconds.DAY);
 return A.Z.Messages.E2EE_USER_VERIFIED_DAYS_AGO.format({
   count: e
 });
-  } else if (s > _.Z.Seconds.HOUR) {
-let e = Math.round(s / _.Z.Seconds.HOUR);
+  } else if (s > E.Z.Seconds.HOUR) {
+let e = Math.round(s / E.Z.Seconds.HOUR);
 return A.Z.Messages.E2EE_USER_VERIFIED_HOURS_AGO.format({
   count: e
 });
   } else {
-if (!(s > _.Z.Seconds.MINUTE))
+if (!(s > E.Z.Seconds.MINUTE))
   return A.Z.Messages.E2EE_USER_VERIFIED_SECONDS_AGO.format({
     count: s
   });
-let e = Math.round(s / _.Z.Seconds.MINUTE);
+let e = Math.round(s / E.Z.Seconds.MINUTE);
 return A.Z.Messages.E2EE_USER_VERIFIED_MINUTES_AGO.format({
   count: e
 });
   }
 }
-async function R(e) {
-  let t = l.default.getStaticAuthSessionId();
-  return a()(null != t, '[getCurrentUserPublicKey] session id should not be null'), await c.Z.getMLSSigningKey(t, e);
+async function x(e) {
+  let t = c.default.getStaticAuthSessionId();
+  return a()(null != t, '[getCurrentUserPublicKey] session id should not be null'), await d.Z.getMLSSigningKey(t, e);
 }
-async function x(e, t, s) {
+async function M(e, t, s) {
   let n = new File([t], 'public_key'),
 a = new FormData();
   a.append('public_key', n), a.append('key_version', ''.concat(s));
   try {
 return (await o.tn.post({
-  url: C.ANM.VOICE_MATCH_PUBLIC_KEY(e),
+  url: m.ANM.VOICE_MATCH_PUBLIC_KEY(e),
   body: a
 })).body.is_match;
   } catch (e) {
-throw E.Z.captureException(e), e;
+throw u.Z.captureException(e), e;
   }
 }
-async function M(e) {
+async function f(e) {
   let {
 key: t,
 signature: s
-  } = await R(e), n = new File([t], 'public_key'), a = new File([s], 'signature'), i = new FormData();
+  } = await x(e), n = new File([t], 'public_key'), a = new File([s], 'signature'), i = new FormData();
   i.append('public_key', n), i.append('signature', a), i.append('key_version', ''.concat(e));
   try {
 await o.tn.put({
-  url: C.ANM.VOICE_PUBLIC_KEYS(),
+  url: m.ANM.VOICE_PUBLIC_KEYS(),
   body: i
-}), T.Z.addCurrentUserUploadedKeyVersionCached(e);
+}), I.Z.addCurrentUserUploadedKeyVersionCached(e);
   } catch (e) {
-throw E.Z.captureException(e), e;
+throw u.Z.captureException(e), e;
   }
 }
 
-function f(e) {
-  return I.Z.getUploadedKeyVersionsCached().includes(e);
-}
-async function D(e) {
-  !f(e) && await M(e);
+function D(e) {
+  return S.Z.getUploadedKeyVersionsCached().includes(e);
 }
 async function P(e) {
-  if (!f(e))
-return await M(e), !0;
-  let t = l.default.getId(),
-{
-  key: s
-} = await R(e),
-n = await x(t, s, e);
-  return !n && (0, N.KA)(e), n;
+  !D(e) && await f(e);
+}
+async function L(e) {
+  let {
+key: t
+  } = await x(e);
+  if (!D(e))
+return await f(e), !0;
+  let s = c.default.getId(),
+n = await M(s, t, e);
+  return !n && (0, C.KA)(e), n;
 }
