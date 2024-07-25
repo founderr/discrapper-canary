@@ -1,10 +1,10 @@
 n.d(t, {
   L: function() {
-return r;
+return a;
   }
 });
-var a = n(782568);
+var i = n(782568);
 
-function r(e) {
-  return (0, a.Z)(e);
+function a(e) {
+  return (0, i.Z)(e);
 }

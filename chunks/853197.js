@@ -46,8 +46,8 @@ var i = n(913527),
   l = n(77498),
   o = n(70956),
   c = n(346114),
-  d = n(702512),
-  u = n(689938);
+  u = n(702512),
+  d = n(689938);
 
 function _(e) {
   let t = g(e);
@@ -55,7 +55,7 @@ function _(e) {
 }
 
 function E(e) {
-  if (e.dropsQuestId === d.oL)
+  if (e.dropsQuestId === u.oL)
 return c.a;
   return null;
 }
@@ -71,14 +71,14 @@ return e.toLowerCase() === (null == n ? void 0 : null === (t = n.name) || void 0
 }
 
 function m() {
-  return Math.floor(Date.now() / 1000) - d.kS;
+  return Math.floor(Date.now() / 1000) - u.kS;
 }
 
 function T(e, t, n) {
   var i, a, s, r;
   if (null == g(e))
 return !1;
-  let l = (i = t, a = d.RN[e], null !== (s = i.find(e => I(e.name, a))) && void 0 !== s ? s : null);
+  let l = (i = t, a = u.RN[e], null !== (s = i.find(e => I(e.name, a))) && void 0 !== s ? s : null);
   if (null != l) {
 ;
 let e = null !== (r = null == l ? void 0 : l.lastLaunched) && void 0 !== r ? r : 0;
@@ -94,7 +94,7 @@ function h(e) {
 function N(e, t) {
   let {
 endDate: n
-  } = e, i = a()(), s = a()(n, d.fS), r = a()(i.clone().add(e.dropsNoticeBannerDurationDays, 'days').format(d.fS)), l = s.isSameOrBefore(r), o = s.isBefore(i, 'minute');
+  } = e, i = a()(), s = a()(n, u.fS), r = a()(i.clone().add(e.dropsNoticeBannerDurationDays, 'days').format(u.fS)), l = s.isSameOrBefore(r), o = s.isBefore(i, 'minute');
   return l && (t && !o || !t && o);
 }
 
@@ -134,27 +134,27 @@ endDate: t
 }
 
 function g(e) {
-  return d.Zv[e];
+  return u.Zv[e];
 }
 
 function S(e) {
-  return Object.values(d.Zv).find(t => t.dropsQuestId === e);
+  return Object.values(u.Zv).find(t => t.dropsQuestId === e);
 }
 
 function A(e) {
-  return Object.keys(d.Zv).find(t => d.Zv[t].dropsQuestId === e);
+  return Object.keys(u.Zv).find(t => u.Zv[t].dropsQuestId === e);
 }
 
 function R(e) {
   switch (e) {
 case 'SWITCH':
-  return u.Z.Messages.DROPS_PLATFORM_SWITCH;
+  return d.Z.Messages.DROPS_PLATFORM_SWITCH;
 case 'PC':
-  return u.Z.Messages.DROPS_PLATFORM_PC;
+  return d.Z.Messages.DROPS_PLATFORM_PC;
 case 'PLAYSTATION':
-  return u.Z.Messages.DROPS_PLATFORM_PLAYSTATION;
+  return d.Z.Messages.DROPS_PLATFORM_PLAYSTATION;
 case 'XBOX':
-  return u.Z.Messages.DROPS_PLATFORM_XBOX;
+  return d.Z.Messages.DROPS_PLATFORM_XBOX;
 default:
   return '';
   }

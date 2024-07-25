@@ -22,8 +22,8 @@ var i = n(990547),
   l = n(695346),
   o = n(573261),
   c = n(140155),
-  d = n(178480),
-  u = n(981631);
+  u = n(178480),
+  d = n(981631);
 
 function _(e) {
   r.Z.dispatch({
@@ -46,7 +46,7 @@ type: 'LOAD_NOTIFICATION_CENTER_ITEMS'
   let n = Math.ceil(c.Z.items.length / e.limit);
   try {
 let a = await o.Z.get({
-  url: u.ANM.NOTIF_CENTER_ITEMS(),
+  url: d.ANM.NOTIF_CENTER_ITEMS(),
   trackedActionData: {
     event: i.NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,
     properties: e => {
@@ -82,7 +82,7 @@ r.Z.dispatch({
   type: 'NOTIFICATION_CENTER_ITEMS_LOCAL_ACK',
   localIds: e
 });
-  }([e.local_id]) : (0, d.RB)(e) ? function(e) {
+  }([e.local_id]) : (0, u.RB)(e) ? function(e) {
 r.Z.dispatch({
   type: 'NOTIFICATION_CENTER_ITEMS_ACK',
   optimistic: !0,
@@ -97,7 +97,7 @@ r.Z.dispatch({
   optimistic: !0,
   ids: [e]
 }), await a.tn.post({
-  url: u.ANM.NOTIF_CENTER_ITEMS_ACK(e)
+  url: d.ANM.NOTIF_CENTER_ITEMS_ACK(e)
 });
   } catch (t) {
 r.Z.dispatch({
@@ -113,15 +113,15 @@ r.Z.dispatch({
   type: 'NOTIFICATION_CENTER_ITEM_DELETE',
   id: e.id
 }), await o.Z.delete({
-  url: u.ANM.NOTIF_CENTER_ITEMS(e.id),
+  url: d.ANM.NOTIF_CENTER_ITEMS(e.id),
   body: {
-    item_type: (0, d.RB)(e) ? 'mention' : 'regular'
+    item_type: (0, u.RB)(e) ? 'mention' : 'regular'
   },
   trackedActionData: {
     event: i.NetworkActionNames.NOTIFICATION_CENTER_ITEM_DELETE,
     properties: {
       notification_center_id: e.id,
-      acked: (0, d.r)(e, t),
+      acked: (0, u.r)(e, t),
       item_type: e.type
     }
   }

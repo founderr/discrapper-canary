@@ -8,8 +8,8 @@ var l = n(735250),
   o = n(806519),
   d = n(3682),
   _ = n(976249);
-let f = {},
-  h = 1 / 4;
+let h = {},
+  f = 1 / 4;
 
 function E(e) {
   let {
@@ -28,7 +28,7 @@ style: {
 },
 children: (0, l.jsx)(c.b, {
   className: _.dots,
-  dotRadius: t * h
+  dotRadius: t * f
 })
   });
 }
@@ -124,24 +124,24 @@ t.Z = function(e) {
   var t, n, i;
   let {
 backSrc: c,
-frontSrc: h,
+frontSrc: f,
 size: E,
 isTyping: A,
 status: p,
 style: m,
 className: C,
-...L
+...N
   } = e, {
-size: b
+size: L
   } = u.AvatarSizeSpecs[E], {
-statusCoords: N,
+statusCoords: b,
 frontAvatarOffsetPx: T,
 frontAvatarSizePx: Z,
 backAvatarSizePx: y
   } = a.useMemo(() => {
 var e;
-let t = ''.concat(b, '-').concat(A);
-return null !== (e = f[t]) && void 0 !== e ? e : function(e, t, n) {
+let t = ''.concat(L, '-').concat(A);
+return null !== (e = h[t]) && void 0 !== e ? e : function(e, t, n) {
   let l = u.AvatarSizeSpecs[e],
     a = l.size / (d.z3 + d.o),
     i = a * d.z3,
@@ -153,28 +153,28 @@ return null !== (e = f[t]) && void 0 !== e ? e : function(e, t, n) {
       frontAvatarOffsetPx: s,
       frontAvatarCenter: s + i / 2
     };
-  return f[n] = c, c;
+  return h[n] = c, c;
 }(E, A, t);
   }, [
-b,
+L,
 A,
 E
   ]);
   let x = (t = null != p, n = A, i = E, n ? I[i].typing : t ? I[i].status : I[i].default);
   return (0, l.jsxs)('div', {
 style: {
-  width: b,
-  height: b,
+  width: L,
+  height: L,
   ...m
 },
-'aria-label': L['aria-label'],
-'aria-hidden': L['aria-hidden'],
+'aria-label': N['aria-label'],
+'aria-hidden': N['aria-hidden'],
 className: s()(_.container, C),
 children: [
   (0, l.jsxs)(o.ZP, {
     mask: x,
-    height: b,
-    width: b,
+    height: L,
+    width: L,
     children: [
       (0, l.jsx)('img', {
         src: c,
@@ -189,7 +189,7 @@ children: [
           left: T
         },
         children: (0, l.jsx)(S, {
-          src: h,
+          src: f,
           size: Z,
           isTyping: A,
           status: p
@@ -198,7 +198,7 @@ children: [
     ]
   }),
   (0, l.jsx)(g, {
-    statusCoords: N,
+    statusCoords: b,
     status: p,
     isTyping: A
   })

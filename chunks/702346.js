@@ -13,8 +13,8 @@ iconNode: n,
 timestamp: a,
 className: r,
 children: c,
-contentClassName: d,
-iconClassName: u,
+contentClassName: u,
+iconClassName: d,
 iconContainerClassName: _,
 compact: E = !1
   } = e;
@@ -33,14 +33,14 @@ children: [
     className: o.iconContainer,
     children: (0, i.jsx)('div', {
       'data-accessibility': 'desaturate',
-      className: s()(o.icon, o.iconSize, u),
+      className: s()(o.icon, o.iconSize, d),
       style: {
         backgroundImage: 'url(\''.concat(t, '\')')
       }
     })
   }),
   (0, i.jsxs)('div', {
-    className: s()(d, o.content),
+    className: s()(u, o.content),
     children: [
       c,
       null != a && (0, i.jsx)(l.Z, {

@@ -15,8 +15,8 @@ function c(e) {
   let {
 message: t,
 usernameHook: c,
-onClickPins: d,
-compact: u
+onClickPins: u,
+compact: d
   } = e, _ = (0, l.ZP)(t), E = _.nick, I = c(_), m = () => {
 if (null == t.messageReference)
   return;
@@ -40,23 +40,23 @@ icon: n(879066)
   return (0, i.jsx)(r.Z, {
 ...T,
 timestamp: t.timestamp,
-compact: u,
-children: null != t.messageReference ? null == d ? o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_WITH_MESSAGE_HOOK.format({
+compact: d,
+children: null != t.messageReference ? null == u ? o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_WITH_MESSAGE_HOOK.format({
   usernameHook: I,
   username: E,
   messageOnClick: m
 }) : o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_WITH_MESSAGE.format({
   usernameHook: I,
   username: E,
-  pinsActionOnClick: d,
+  pinsActionOnClick: u,
   messageOnClick: m
-}) : null == d ? o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_HOOK.format({
+}) : null == u ? o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_HOOK.format({
   usernameHook: I,
   username: E
 }) : o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE.format({
   usernameHook: I,
   username: E,
-  pinsActionOnClick: d
+  pinsActionOnClick: u
 })
   });
 }

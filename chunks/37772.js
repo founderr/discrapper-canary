@@ -6,8 +6,8 @@ var i = n(735250),
   l = n(442837),
   o = n(481060),
   c = n(25610),
-  d = n(703751),
-  u = n(628238),
+  u = n(703751),
+  d = n(628238),
   _ = n(976853),
   E = n(977683),
   I = n(869765),
@@ -72,11 +72,11 @@ message: o,
 compact: N = !1,
 className: U,
 onContextMenu: k,
-onClick: G,
-disableInteraction: F = !1,
+onClick: F,
+disableInteraction: G = !1,
 hasThread: w,
 treatSpam: V
-  } = t, H = b.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, l.e7)([I.Z], () => I.Z.getMessageByReference(H)), W = (0, l.e7)([T.Z], () => o.type === b.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null), K = m.x4.useSetting(), z = m.RS.useSetting(), Q = m.NA.useSetting(), q = m.QK.useSetting(), X = (0, u.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, _.Z)(null == s ? void 0 : s.id), {
+  } = t, H = b.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, l.e7)([I.Z], () => I.Z.getMessageByReference(H)), W = (0, l.e7)([T.Z], () => o.type === b.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null), K = m.x4.useSetting(), z = m.RS.useSetting(), Q = m.NA.useSetting(), q = m.QK.useSetting(), X = (0, d.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, _.Z)(null == s ? void 0 : s.id), {
 disableReactionCreates: $
   } = (0, A.Z)(s), {
 content: ee,
@@ -91,7 +91,7 @@ previewLinkTarget: !0
 message: o,
 channel: s,
 enabled: es
-  }), el = (0, c.V)(s.id, o.author.id), eo = (0, d.r)(o.id), ec = (0, E.Z)(o);
+  }), el = (0, c.V)(s.id, o.author.id), eo = (0, u.r)(o.id), ec = (0, E.Z)(o);
   return ea ? (0, i.jsx)(e, {
 ...t,
 message: Y.message,
@@ -106,7 +106,7 @@ collapsedReason: a
 compact: N,
 className: r()(U, {
   [y.ephemeral]: (0, f.yE)(o.flags, b.iLy.EPHEMERAL),
-  [y.disableInteraction]: F,
+  [y.disableInteraction]: G,
   [y.groupStart]: t.isGroupStart
 }),
 childrenRepliedMessage: (0, D.Z)(o, s, H, Y, N),
@@ -143,7 +143,7 @@ childrenExecutedCommand: (0, P.Z)(o, s, N),
 childrenMessageContent: (0, v.Z)(t, ee),
 childrenSystemMessage: (0, Z.Z)(t),
 onContextMenu: k,
-onClick: G,
+onClick: F,
 hasThread: !1 !== w && null != ei && o.hasFlag(b.iLy.HAS_THREAD),
 hasReply: o.type === b.uaV.REPLY,
 isSystemMessage: (0, g.Z)(o),

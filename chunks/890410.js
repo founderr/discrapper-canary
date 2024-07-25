@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return u;
+return d;
   }
 });
 var i = n(735250);
@@ -11,14 +11,14 @@ var a = n(120356),
   l = n(492593),
   o = n(930282),
   c = n(464891),
-  d = n(444190);
+  u = n(444190);
 
-function u(e) {
+function d(e) {
   let {
 message: t,
 channel: n,
 content: a,
-className: u,
+className: d,
 compact: _,
 popoutProps: E,
 hideTimestamp: I = !1,
@@ -27,18 +27,18 @@ withFooter: m = !1,
   } = e, h = (0, r.ZP)(t);
   return (0, i.jsx)('div', {
 className: s()({
-  [d.withFooter]: m
-}, d.embedCard, {
-  [d.compact]: _
-}, u),
+  [u.withFooter]: m
+}, u.embedCard, {
+  [u.compact]: _
+}, d),
 children: (0, i.jsx)(l.Z, {
   ...T,
-  className: s()(d.messageContainer, {
-    [d.compact]: _
+  className: s()(u.messageContainer, {
+    [u.compact]: _
   }),
   childrenMessageContent: (0, i.jsx)(o.ZP, {
-    className: s()(d.__invalid_messageContent, {
-      [d.compact]: _
+    className: s()(u.__invalid_messageContent, {
+      [u.compact]: _
     }),
     message: t,
     content: a
@@ -50,8 +50,8 @@ children: (0, i.jsx)(l.Z, {
     guildId: null == n ? void 0 : n.guild_id,
     compact: _,
     hideTimestamp: I,
-    className: s()(d.header, {
-      [d.compact]: _
+    className: s()(u.header, {
+      [u.compact]: _
     }),
     ...null != E ? E : {}
   }),

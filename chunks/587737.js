@@ -15,9 +15,9 @@ message: t,
 channel: l,
 targetUser: o,
 actorUsernameHook: c,
-targetUsernameHook: d,
-compact: u
-  } = e, _ = (0, s.ZP)(t), E = (0, s.Sw)(o, l), I = c(_), m = d(null != E ? E : void 0), T = r.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
+targetUsernameHook: u,
+compact: d
+  } = e, _ = (0, s.ZP)(t), E = (0, s.Sw)(o, l), I = c(_), m = u(null != E ? E : void 0), T = r.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
 actorName: _.nick,
 actorHook: I,
 targetName: null == E ? void 0 : E.nick,
@@ -26,7 +26,7 @@ targetHook: m
   return (0, i.jsx)(a.Z, {
 icon: n(570111),
 timestamp: t.timestamp,
-compact: u,
+compact: d,
 children: T
   });
 }

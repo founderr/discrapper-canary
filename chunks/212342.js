@@ -2,8 +2,8 @@ n(47120), n(789020);
 var i, a, s, r, l = n(442837),
   o = n(433517),
   c = n(570140),
-  d = n(314897),
-  u = n(592125),
+  u = n(314897),
+  d = n(592125),
   _ = n(496675),
   E = n(594174),
   I = n(630388),
@@ -14,7 +14,7 @@ let h = 'ChannelFollowingBumpChannels',
   f = new Set();
 class C extends(i = l.ZP.Store) {
   initialize() {
-this.waitFor(d.default), N = new Set(o.K.get(h));
+this.waitFor(u.default), N = new Set(o.K.get(h));
   }
   shouldShowBump(e) {
 return f.has(e);
@@ -35,7 +35,7 @@ let {
 } = e;
 if (a || N.has(n))
   return !1;
-let s = u.Z.getChannel(n),
+let s = d.Z.getChannel(n),
   r = E.default.getCurrentUser();
 if (!(null != s && s.type === T.d4z.GUILD_ANNOUNCEMENT && (0, m.Z)(i) && (null != r && (null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.id ? _.Z.can(T.Plq.SEND_MESSAGES, s) : _.Z.can(T.Plq.MANAGE_MESSAGES, s)) && !I.yE(Number(i.flags), T.iLy.CROSSPOSTED)))
   return !1;

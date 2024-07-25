@@ -15,15 +15,15 @@ function o(e) {
 message: t,
 usernameHook: o,
 compact: c,
-isForumPost: d
-  } = e, u = (0, s.ZP)(t), _ = o(u);
+isForumPost: u
+  } = e, d = (0, s.ZP)(t), _ = o(d);
   return (0, i.jsx)(a.Z, {
 compact: c,
 className: l.channelNameChange,
 icon: n(819373),
 timestamp: t.timestamp,
-children: (d ? r.Z.Messages.SYSTEM_MESSAGE_FORUM_POST_TITLE_CHANGE2 : r.Z.Messages.SYSTEM_MESSAGE_CHANNEL_NAME_CHANGE2).format({
-  username: u.nick,
+children: (u ? r.Z.Messages.SYSTEM_MESSAGE_FORUM_POST_TITLE_CHANGE2 : r.Z.Messages.SYSTEM_MESSAGE_CHANNEL_NAME_CHANGE2).format({
+  username: d.nick,
   usernameHook: _,
   channelName: t.content
 })

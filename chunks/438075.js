@@ -21,15 +21,15 @@ channelMessageProps: {
 hasSpoilerEmbeds: l,
 handleContextMenu: o,
 isInteracting: c,
-isAutomodBlockedMessage: d,
-isMessageSnapshot: u,
+isAutomodBlockedMessage: u,
+isMessageSnapshot: d,
 renderThreadAccessory: _,
 renderComponentAccessory: E,
 renderSuppressEmbeds: I,
 forceAddReactions: m,
 className: T
   } = e;
-  return d ? null : (0, i.jsx)(a.Z, {
+  return u ? null : (0, i.jsx)(a.Z, {
 message: t,
 children: (0, i.jsx)(s.ZP, {
   className: T,
@@ -38,7 +38,7 @@ children: (0, i.jsx)(s.ZP, {
   channel: n,
   compact: r,
   hasSpoilerEmbeds: l,
-  isMessageSnapshot: u,
+  isMessageSnapshot: d,
   onMediaItemContextMenu: o,
   renderThreadAccessory: _,
   renderComponentAccessory: E,

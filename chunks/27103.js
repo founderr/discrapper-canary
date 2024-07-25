@@ -11,8 +11,8 @@ var a = n(120356),
   l = n(385499),
   o = n(702346),
   c = n(739566),
-  d = n(464891),
-  u = n(83561),
+  u = n(464891),
+  d = n(83561),
   _ = n(674563),
   E = n(689938),
   I = n(713389);
@@ -28,7 +28,7 @@ eventHandlers: {
   onMouseEnter: N,
   onMouseLeave: f
 }
-  } = (0, u.m)(!0);
+  } = (0, d.m)(!0);
   return (0, i.jsx)('div', {
 onMouseEnter: N,
 onMouseLeave: f,
@@ -36,7 +36,7 @@ children: (0, i.jsx)(o.Z, {
   className: s()(I.mainContainer, {
     [I.compact]: n
   }),
-  iconNode: n ? null : (0, i.jsx)(u.S, {
+  iconNode: n ? null : (0, i.jsx)(d.S, {
     src: h
   }),
   iconContainerClassName: I.iconContainer,
@@ -46,7 +46,7 @@ children: (0, i.jsx)(o.Z, {
       [I.compact]: n
     }),
     children: [
-      (0, i.jsx)(d.nD, {
+      (0, i.jsx)(u.nD, {
         message: t,
         messageClassname: I.spanCorrection,
         className: s()(I.usernameContainer, I.spanCorrection, {

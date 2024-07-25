@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(442837),
   o = n(570140),
   c = n(45114),
-  d = n(404616),
-  u = n(470623),
+  u = n(404616),
+  d = n(470623),
   _ = n(344185),
   E = n(488131),
   I = n(592125),
@@ -51,9 +51,9 @@ null != n && t.isFullyLoaded && !t.hasError && !t.collapsed && 0 === f.length &&
 });
   }), (0, i.jsx)('div', {
 className: N.container,
-children: f.map(e => (0, i.jsx)(u.oL, {
-  createStore: () => (0, u.NU)(n),
-  children: (0, i.jsx)(d.ZP, {
+children: f.map(e => (0, i.jsx)(d.oL, {
+  createStore: () => (0, d.NU)(n),
+  children: (0, i.jsx)(u.ZP, {
     className: N.forumPost,
     threadId: e.id,
     goToThread: C

@@ -1,6 +1,6 @@
 n.d(t, {
   U: function() {
-return d;
+return u;
   }
 });
 var i = n(735250),
@@ -25,7 +25,7 @@ return null == t ? null : (0, i.jsx)('div', {
   })
 });
   },
-  d = a.memo(function(e) {
+  u = a.memo(function(e) {
 let {
   item: t
 } = e, n = null, a = !1;
@@ -50,12 +50,12 @@ else if (null != t.other_user) {
     alt: '',
     src: l.VH[(0, l.q7)(t)]
   });
-let d = (0, l.Vi)(t.type);
+let u = (0, l.Vi)(t.type);
 return (0, i.jsxs)('div', {
   className: o.container,
   children: [
     (0, i.jsx)(r.ZP, {
-      mask: null == d ? r.QS.AVATAR_DEFAULT : r.QS.AVATAR_STATUS_ROUND_16,
+      mask: null == u ? r.QS.AVATAR_DEFAULT : r.QS.AVATAR_STATUS_ROUND_16,
       width: 40,
       height: 40,
       rightOverhang: 3,
@@ -70,7 +70,7 @@ return (0, i.jsxs)('div', {
       })
     }),
     (0, i.jsx)(c, {
-      mask: d
+      mask: u
     })
   ]
 });

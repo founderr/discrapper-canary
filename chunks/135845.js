@@ -11,8 +11,8 @@ var a = n(512722),
   l = n(955415),
   o = n(131704),
   c = n(601964),
-  d = n(199902),
-  u = n(914010),
+  u = n(199902),
+  d = n(914010),
   _ = n(358595),
   E = n(981631),
   I = n(245335),
@@ -28,12 +28,12 @@ function h(e) {
   onAcceptInstantInvite: p
 } = e,
 g = null == f ? void 0 : f.id,
-S = (0, r.e7)([u.Z], () => u.Z.getGuildId()),
-A = (0, r.e7)([d.Z], () => null != h && null != h.target_user ? d.Z.getActiveStreamForUser(h.target_user.id, g) : null, [
+S = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
+A = (0, r.e7)([u.Z], () => null != h && null != h.target_user ? u.Z.getActiveStreamForUser(h.target_user.id, g) : null, [
   h,
   g
 ]),
-R = (0, r.e7)([d.Z], () => null != h && null != h.target_user ? d.Z.getStreamForUser(h.target_user.id, g) : null, [
+R = (0, r.e7)([u.Z], () => null != h && null != h.target_user ? u.Z.getStreamForUser(h.target_user.id, g) : null, [
   h,
   g
 ]),

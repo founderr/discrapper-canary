@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(410575),
   o = n(906732),
   c = n(924301),
-  d = n(11868),
-  u = n(413605),
+  u = n(11868),
+  d = n(413605),
   _ = n(451603),
   E = n(885714),
   I = n(314897),
@@ -100,8 +100,8 @@ case x.r2o.ERROR:
   });
   break;
 default:
-  switch ((0, u.VR)(L)) {
-    case u.wx.GROUP_DM:
+  switch ((0, d.VR)(L)) {
+    case d.wx.GROUP_DM:
       y = (0, i.jsx)(C.Z, {
         onTransitionToInviteChannel: j,
         onAcceptInstantInvite: U,
@@ -110,7 +110,7 @@ default:
         author: n
       });
       break;
-    case u.wx.FRIEND:
+    case d.wx.FRIEND:
       y = (0, i.jsx)(f.Z, {
         invite: L,
         author: n,
@@ -118,7 +118,7 @@ default:
       });
       break;
     default:
-      if ((0, u.TY)(L)) {
+      if ((0, d.TY)(L)) {
         y = (0, i.jsx)(R.Z, {
           onTransitionToInviteChannel: j,
           onAcceptInstantInvite: U,
@@ -128,8 +128,8 @@ default:
         });
         break;
       }
-      if ((0, u.Tx)(L)) {
-        y = (0, i.jsx)(d.ZP, {
+      if ((0, d.Tx)(L)) {
+        y = (0, i.jsx)(u.ZP, {
           guildScheduledEvent: b,
           guild: L.guild,
           channel: L.channel,
@@ -139,7 +139,7 @@ default:
         });
         break;
       }
-      if ((0, u.$P)(L)) {
+      if ((0, d.$P)(L)) {
         y = (0, i.jsx)(A.Z, {
           stageInstance: L.stage_instance,
           guild: L.guild,
@@ -149,7 +149,7 @@ default:
         });
         break;
       }
-      (0, u.P1)(L) && (y = (0, i.jsx)(h.Z, {
+      (0, d.P1)(L) && (y = (0, i.jsx)(h.Z, {
         invite: L,
         getAcceptInviteContext: O
       }));

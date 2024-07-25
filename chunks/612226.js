@@ -26,8 +26,8 @@ var i, l, o = t(346610),
   c = t(360038),
   C = t(175724),
   I = t(705371),
-  S = t(138976),
-  A = t(296805),
+  A = t(138976),
+  S = t(296805),
   T = t(561716),
   L = t(239748),
   N = t(337482),
@@ -126,7 +126,7 @@ let Y = {
   [y.EkH.SEARCH_GIFS]: h.O,
   [y.EkH.SEARCH_STICKERS]: D.U,
   [y.EkH.TOGGLE_HOTKEYS]: b._,
-  [y.EkH.JUMP_TO_FIRST_UNREAD]: S.O,
+  [y.EkH.JUMP_TO_FIRST_UNREAD]: A.O,
   [y.EkH.CREATE_GUILD]: u.r,
   [y.EkH.UPLOAD_FILE]: v.U,
   [y.EkH.RETURN_TO_AUDIO_CHANNEL]: L.F,
@@ -137,7 +137,7 @@ let Y = {
   [y.EkH.ZOOM_IN]: K.UF,
   [y.EkH.ZOOM_OUT]: K.RC,
   [y.EkH.ZOOM_RESET]: K.MY,
-  [y.EkH.OPEN_APP_DIRECTORY]: A.T,
+  [y.EkH.OPEN_APP_DIRECTORY]: S.T,
   [y.EkH.BROWSER_DEVTOOLS]: s.p
 };
 

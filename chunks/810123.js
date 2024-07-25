@@ -29,8 +29,8 @@ t.Z = function(e) {
   var t, n, l;
   let {
 className: i,
-iconClassName: f,
-size: h,
+iconClassName: h,
+size: f,
 channel: E,
 guild: g,
 locked: S,
@@ -39,15 +39,15 @@ hasActiveThreads: I
   if (null == g)
 return null;
   let A = g.getIconURL(48),
-p = _[h],
-m = d[h],
+p = _[f],
+m = d[f],
 C = (0, c.KS)(E, g, {
   locked: S,
   hasActiveThreads: I
 });
   if (null == C)
 return null;
-  let L = (0, r.Zg)(null !== (t = null == g ? void 0 : g.toString()) && void 0 !== t ? t : null);
+  let N = (0, r.Zg)(null !== (t = null == g ? void 0 : g.toString()) && void 0 !== t ? t : null);
   return (0, a.jsxs)('div', {
 role: 'img',
 className: i,
@@ -65,15 +65,15 @@ children: [
     }) : (0, a.jsx)('div', {
       className: s()(o.channelGuildIcon, o.acronym),
       style: {
-        fontSize: (n = p, (l = L).length - 1 > n.length ? n[n.length - 1] : n[l.length - 1]),
+        fontSize: (n = p, (l = N).length - 1 > n.length ? n[n.length - 1] : n[l.length - 1]),
         width: m,
         height: m
       },
-      children: L
+      children: N
     })
   }),
   (0, a.jsx)(C, {
-    className: s()(o.icon, o.iconWithGuildIcon, f),
+    className: s()(o.icon, o.iconWithGuildIcon, h),
     color: 'currentColor'
   })
 ]

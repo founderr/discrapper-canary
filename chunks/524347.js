@@ -1,8 +1,8 @@
 var i, a, s, r, l = n(913527),
   o = n.n(l),
   c = n(442837),
-  d = n(846519),
-  u = n(570140),
+  u = n(846519),
+  d = n(570140),
   _ = n(594190),
   E = n(569545),
   I = n(314897),
@@ -15,7 +15,7 @@ let f = null,
   p = {},
   g = {},
   S = N._e.LOADING_INITIAL_PROGRESS,
-  A = new d.V7(),
+  A = new u.V7(),
   R = {
 completed: !1,
 initialProgressFetched: !1,
@@ -97,7 +97,7 @@ s = 'DropsStore', (a = 'displayName') in(i = v) ? Object.defineProperty(i, a, {
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new v(u.Z, {
+}) : i[a] = s, t.Z = new v(d.Z, {
   DROPS_ELIGIBILITY_FETCH_SUCCESS: e => {
 p[e.dropsQuestId] = e.isEligible;
   },
@@ -182,8 +182,8 @@ let c = null === (t = (0, h.j7)(o)) || void 0 === t ? void 0 : t.getCurrentConfi
 });
 if (null == c || !c.dropsEnabled)
   return;
-let d = c.autoEnrollment;
-null != g[o.dropsQuestId] && g[o.dropsQuestId].isEnrolled || d ? M(o, l, r) : u.Z.wait(async () => {
+let u = c.autoEnrollment;
+null != g[o.dropsQuestId] && g[o.dropsQuestId].isEnrolled || u ? M(o, l, r) : d.Z.wait(async () => {
   var e;
   await (0, T.BE)(o.dropsQuestId), (null === (e = g[o.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && M(o, l, r);
 });

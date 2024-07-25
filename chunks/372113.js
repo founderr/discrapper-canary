@@ -6,8 +6,8 @@ var a = n(120356),
   l = n(481060),
   o = n(230711),
   c = n(607070),
-  d = n(706454),
-  u = n(63063),
+  u = n(706454),
+  d = n(63063),
   _ = n(930153),
   E = n(617136),
   I = n(113434),
@@ -61,16 +61,16 @@ progressState: n,
 isCollectibleQuest: a,
 location: s,
 questContentPosition: o,
-inGiftInventory: d
-  } = e, u = n >= I.OH.COMPLETED, _ = (0, r.e7)([c.Z], () => c.Z.useReducedMotion), E = (0, r.e7)([m.Z], () => m.Z.isEnrolling(t.id)), T = (0, h.zK)(t, R.S7.IN_HOUSE_CONSOLE_QUEST), N = (0, p.Ks)({
+inGiftInventory: u
+  } = e, d = n >= I.OH.COMPLETED, _ = (0, r.e7)([c.Z], () => c.Z.useReducedMotion), E = (0, r.e7)([m.Z], () => m.Z.isEnrolling(t.id)), T = (0, h.zK)(t, R.S7.IN_HOUSE_CONSOLE_QUEST), N = (0, p.Ks)({
 progressState: n,
 quest: t,
 isInHouseQuest: T,
 location: s,
 isCollectibleQuest: a,
 questContentPosition: o,
-inGiftInventory: d
-  }), f = T && d && u, C = f ? M.inHouseButton : l.ButtonColors.BRAND, g = u && !_ ? l.ShinyButton : l.Button;
+inGiftInventory: u
+  }), f = T && u && d, C = f ? M.inHouseButton : l.ButtonColors.BRAND, g = d && !_ ? l.ShinyButton : l.Button;
   return (0, i.jsx)(l.Tooltip, {
 text: N.tooltipText,
 tooltipContentClassName: M.ctaTooltipText,
@@ -108,13 +108,13 @@ isQuestExpired: m,
 isExpanded: p,
 isAnimating: v,
 contentPosition: D
-  } = e, b = (0, I._Q)(t), j = b >= I.OH.ACCEPTED, U = b >= I.OH.COMPLETED, y = b >= I.OH.CLAIMED, B = (0, h.Xv)(t.config), k = (0, S.uq)(n), G = n === T.jn.QUESTS_EMBED, F = p || v, w = j && !y && k, V = (0, I.t5)(t, R.dr.QUESTS_CARD, n), {
+  } = e, b = (0, I._Q)(t), j = b >= I.OH.ACCEPTED, U = b >= I.OH.COMPLETED, y = b >= I.OH.CLAIMED, B = (0, h.Xv)(t.config), k = (0, S.uq)(n), F = n === T.jn.QUESTS_EMBED, G = p || v, w = j && !y && k, V = (0, I.t5)(t, R.dr.QUESTS_CARD, n), {
 xboxAndPlaystationAccounts: H
-  } = (0, I.z6)(), Y = (0, r.e7)([d.default], () => d.default.locale), W = (0, I.z)(t), K = k && B, z = m && !U, Q = H.length > 0 && k && (0, h.$J)(t) && j && !U && !W, q = (0, i.jsx)(C.Z, {
+  } = (0, I.z6)(), Y = (0, r.e7)([u.default], () => u.default.locale), W = (0, I.z)(t), K = k && B, z = m && !U, Q = H.length > 0 && k && (0, h.$J)(t) && j && !U && !W, q = (0, i.jsx)(C.Z, {
 autoplay: c,
 className: s()(M.gridImg, {
   [M.questRewardGiftInventory]: k && 'lg' === a,
-  [M.questRewardEmbed]: G && 'lg' === a,
+  [M.questRewardEmbed]: F && 'lg' === a,
   [M.questRewardEmbedSm]: 'sm' === a,
   [M.questRewardEmbedXs]: 'xs' === a
 }),
@@ -133,9 +133,9 @@ children: [
       [M.outerContainerNoProgress]: !w
     }),
     style: {
-      visibility: F ? 'visible' : 'hidden'
+      visibility: G ? 'visible' : 'hidden'
     },
-    'aria-hidden': !F,
+    'aria-hidden': !G,
     children: [
       (0, i.jsx)(l.Tooltip, {
         text: z ? O.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
@@ -178,7 +178,7 @@ children: [
                 quest: l,
                 location: o,
                 locale: c,
-                isQuestExpired: d
+                isQuestExpired: u
               } = e, E = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, m = E && (null === (n = l.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, T = (0, h.zK)(l, R.S7.IN_HOUSE_CONSOLE_QUEST), f = (0, S.uq)(o), C = (0, I.B6)(null === (i = l.userStatus) || void 0 === i ? void 0 : i.completedAt, {
                 year: 'numeric',
                 month: 'long',
@@ -215,12 +215,12 @@ children: [
                 quest: l,
                 idx: 0
               }) : null;
-              return d ? O.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({
+              return u ? O.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({
                 reward: null !== (r = null == M ? void 0 : M.messages.nameWithArticle) && void 0 !== r ? r : g
               }) : null != M && null != M.approximateCount ? O.Z.Messages.QUEST_REWARD_TIERED.format({
                 maxReward: M.messages.nameWithArticle,
                 maxRewardCount: (0, _.Bs)(M.approximateCount, c),
-                helpCenterLink: u.Z.getArticleURL(x.BhN.QUESTS_LEARN_MORE)
+                helpCenterLink: d.Z.getArticleURL(x.BhN.QUESTS_LEARN_MORE)
               }) : null != A ? O.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
                 reward: g,
                 duration: A

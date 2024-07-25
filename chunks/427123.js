@@ -2,8 +2,8 @@ n(47120), n(653041);
 var i, a, s, r, l = n(392711),
   o = n.n(l),
   c = n(442837),
-  d = n(433517),
-  u = n(570140),
+  u = n(433517),
+  d = n(570140),
   _ = n(496929),
   E = n(16084),
   I = n(728345),
@@ -47,7 +47,7 @@ N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrent
 class x extends(i = c.ZP.Store) {
   initialize() {
 var e;
-this.waitFor(T.ZP, f.Z, N.Z), A = null !== (e = d.K.get(p)) && void 0 !== e ? e : A;
+this.waitFor(T.ZP, f.Z, N.Z), A = null !== (e = u.K.get(p)) && void 0 !== e ? e : A;
   }
   getDetectedOffPlatformPremiumPerks() {
 return o().values(g);
@@ -58,7 +58,7 @@ r = 'DetectedOffPlatformPremiumPerksStore', (s = 'displayName') in(a = x) ? Obje
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = r, t.Z = new x(u.Z, {
+}) : a[s] = r, t.Z = new x(d.Z, {
   LOGOUT: function() {
 g = {}, S = {};
   },
@@ -72,7 +72,7 @@ let {
 } = e;
 if (delete g[t], A.includes(t))
   return !1;
-A.push(t), d.K.set(p, A);
+A.push(t), u.K.set(p, A);
   },
   RUNNING_GAMES_CHANGE: function() {
 let e = !1;

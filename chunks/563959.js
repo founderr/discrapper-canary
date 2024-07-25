@@ -13,8 +13,8 @@ var i = n(735250),
   l = n(739566),
   o = n(942951),
   c = n(484459),
-  d = n(103575),
-  u = n(594174),
+  u = n(103575),
+  d = n(594174),
   _ = n(702346),
   E = n(768581),
   I = n(91047),
@@ -31,7 +31,7 @@ let T = E.ZP.getApplicationIconURL({
     bot: a.bot,
     botIconFirst: !0
   }),
-  h = u.default.getUser(null === (_ = a.bot) || void 0 === _ ? void 0 : _.id),
+  h = d.default.getUser(null === (_ = a.bot) || void 0 === _ ? void 0 : _.id),
   N = m.Z.getIntegration(e.id, a.id),
   f = e.isPrivate() && null != N ? t => {
     (0, r.jW)(t, async () => {
@@ -54,7 +54,7 @@ return null == C ? l : (0, i.jsx)(s.Popout, {
     guildId: e.guild_id,
     channelId: e.id
   }),
-  renderPopout: n => (0, i.jsx)(d.Z, {
+  renderPopout: n => (0, i.jsx)(u.Z, {
     ...n,
     location: 'PrivateChannelIntegrationSystemMessage',
     userId: C.id,
@@ -79,12 +79,12 @@ function f(e) {
 message: t,
 channel: a,
 compact: s
-  } = e, r = (0, l.ZP)(t), c = t.application, d = (0, o.l)({
+  } = e, r = (0, l.ZP)(t), c = t.application, u = (0, o.l)({
 user: t.author,
 channelId: a.id,
 guildId: a.guild_id,
 messageId: t.id
-  }), u = N(a, t);
+  }), d = N(a, t);
   return (0, i.jsx)(_.Z, {
 icon: n(570111),
 timestamp: t.timestamp,
@@ -92,8 +92,8 @@ compact: s,
 children: (0, T.DS)({
   application: c,
   username: r.nick,
-  usernameHook: d(r),
-  applicationNameHook: null != c ? u(c) : h.dG4
+  usernameHook: u(r),
+  applicationNameHook: null != c ? d(c) : h.dG4
 })
   });
 }
@@ -103,12 +103,12 @@ function C(e) {
 message: t,
 channel: a,
 compact: s
-  } = e, r = (0, l.ZP)(t), c = t.application, d = (0, o.l)({
+  } = e, r = (0, l.ZP)(t), c = t.application, u = (0, o.l)({
 user: t.author,
 channelId: a.id,
 guildId: a.guild_id,
 messageId: t.id
-  }), u = N(a, t);
+  }), d = N(a, t);
   return (0, i.jsx)(_.Z, {
 icon: n(474019),
 timestamp: t.timestamp,
@@ -116,8 +116,8 @@ compact: s,
 children: (0, T.nh)({
   application: c,
   username: r.nick,
-  usernameHook: d(r),
-  applicationNameHook: null != c ? u(c) : h.dG4
+  usernameHook: u(r),
+  applicationNameHook: null != c ? d(c) : h.dG4
 })
   });
 }

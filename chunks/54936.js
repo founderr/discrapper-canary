@@ -11,21 +11,21 @@ var a = n(120356),
   l = n(910111),
   o = n(732559),
   c = n(723851),
-  d = n(981631),
-  u = n(689938),
+  u = n(981631),
+  d = n(689938),
   _ = n(317523);
 let E = {
-  [d.TaA.WINDOWS]: {
+  [u.TaA.WINDOWS]: {
 icon: c.Z,
-getLabel: () => u.Z.Messages.WINDOWS
+getLabel: () => d.Z.Messages.WINDOWS
   },
-  [d.TaA.MACOS]: {
+  [u.TaA.MACOS]: {
 icon: o.Z,
-getLabel: () => u.Z.Messages.MACOS
+getLabel: () => d.Z.Messages.MACOS
   },
-  [d.TaA.LINUX]: {
+  [u.TaA.LINUX]: {
 icon: l.Z,
-getLabel: () => u.Z.Messages.LINUX
+getLabel: () => d.Z.Messages.LINUX
   }
 };
 

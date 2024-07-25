@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(442837),
   o = n(481060),
   c = n(623292),
-  d = n(926491),
-  u = n(419922),
+  u = n(926491),
+  d = n(419922),
   _ = n(702346),
   E = n(626135),
   I = n(585483),
@@ -25,7 +25,7 @@ function f(e) {
 message: t,
 channel: s,
 compact: f
-  } = e, C = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20), [p, g] = a.useState(null);
+  } = e, C = (0, l.Wu)([u.Z], () => Array.from(u.Z.getAllGuildStickers().values()).flat()).slice(0, 20), [p, g] = a.useState(null);
   return (a.useEffect(() => {
 let e = setInterval(() => {
   C.length > 0 && g(C[Math.floor(Math.random() * C.length)]);
@@ -88,7 +88,7 @@ children: [
               action_type: 'sticker'
             }), (0, m.O)(t.id, s);
           },
-          children: null != p ? (0, i.jsx)(u.ZP, {
+          children: null != p ? (0, i.jsx)(d.ZP, {
             size: 32,
             sticker: p
           }) : (0, i.jsx)(o.ReactionIcon, {

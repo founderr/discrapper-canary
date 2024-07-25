@@ -13,8 +13,8 @@ var i = n(735250),
   l = n(399606),
   o = n(704215),
   c = n(367907),
-  d = n(605236),
-  u = n(584825),
+  u = n(605236),
+  d = n(584825),
   _ = n(994592),
   E = n(160404),
   I = n(703656),
@@ -40,7 +40,7 @@ function x(e) {
 children: n,
 initialTab: s,
 guildId: r
-  } = e, R = (0, l.e7)([T.Z], () => T.Z.getGuild(r)), x = (0, l.e7)([E.Z], () => E.Z.isViewingServerShop(r)), O = (0, f.g)(R, 'guild_shop_page'), M = (0, N.RF)(r, 'guild_shop_page'), v = (null == R ? void 0 : R.hasFeature(S.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0, L = (0, _.mY)(null == R ? void 0 : R.id), Z = null === (t = (0, u.YB)(r)) || void 0 === t ? void 0 : t.server_shop_tab_order, P = [], D = C.y.GUILD_SHOP_FULL_PREVIEW;
+  } = e, R = (0, l.e7)([T.Z], () => T.Z.getGuild(r)), x = (0, l.e7)([E.Z], () => E.Z.isViewingServerShop(r)), O = (0, f.g)(R, 'guild_shop_page'), M = (0, N.RF)(r, 'guild_shop_page'), v = (null == R ? void 0 : R.hasFeature(S.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0, L = (0, _.mY)(null == R ? void 0 : R.id), Z = null === (t = (0, d.YB)(r)) || void 0 === t ? void 0 : t.server_shop_tab_order, P = [], D = C.y.GUILD_SHOP_FULL_PREVIEW;
   x || v && L ? (P.push(Z === p.a3.PRODUCTS_FIRST ? C.y.GUILD_PRODUCTS : C.y.GUILD_ROLE_SUBSCRIPTIONS), P.push(Z === p.a3.PRODUCTS_FIRST ? C.y.GUILD_ROLE_SUBSCRIPTIONS : C.y.GUILD_PRODUCTS), D = P[0]) : v && !L ? (P.push(C.y.GUILD_PRODUCTS), D = C.y.GUILD_PRODUCTS) : !v && L && (P.push(C.y.GUILD_ROLE_SUBSCRIPTIONS), D = C.y.GUILD_ROLE_SUBSCRIPTIONS, O && P.push(C.y.GUILD_PRODUCTS_PREVIEW)), s = null != s ? s : D;
   let [b, j] = a.useState(s), U = O && !(L && M) || b === C.y.GUILD_PRODUCTS_PREVIEW;
   return a.useEffect(() => {
@@ -52,7 +52,7 @@ value: {
   categoryTabs: P,
   isPhantomPreview: U,
   handlePreviewDismiss: e => {
-    (0, d.EW)(o.z.SERVER_SHOP_PHANTOM_PREVIEW);
+    (0, u.EW)(o.z.SERVER_SHOP_PHANTOM_PREVIEW);
     let t = {
       ...(0, c.hH)(r)
     };

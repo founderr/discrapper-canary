@@ -17,8 +17,8 @@ source: r,
   } = e, {
 label: o,
 tooltip: c,
-loading: d,
-disabled: u,
+loading: u,
+disabled: d,
 onClick: _
   } = (0, s.Lz)(t, n, r);
   return (0, i.jsx)(a.Tooltip, {
@@ -30,12 +30,12 @@ children: e => {
   } = e;
   return (0, i.jsx)(a.Button, {
     ...l,
-    color: u ? a.Button.Colors.PRIMARY : a.Button.Colors.GREEN,
+    color: d ? a.Button.Colors.PRIMARY : a.Button.Colors.GREEN,
     onClick: _,
     onMouseEnter: t,
     onMouseLeave: n,
-    disabled: !d && u,
-    submitting: d,
+    disabled: !u && d,
+    submitting: u,
     children: o
   });
 }

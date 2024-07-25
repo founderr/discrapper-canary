@@ -11,8 +11,8 @@ var a = n(120356),
   l = n(481060),
   o = n(239091),
   c = n(901461),
-  d = n(592125),
-  u = n(709054),
+  u = n(592125),
+  d = n(709054),
   _ = n(723774),
   E = n(144140),
   I = n(91159),
@@ -26,7 +26,7 @@ function C(e) {
   let {
 message: t,
 compact: n
-  } = e, a = (0, r.e7)([d.Z], () => d.Z.getChannel(u.default.castMessageIdAsChannelId(t.id)));
+  } = e, a = (0, r.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
   return null == a ? null : (0, i.jsx)(p, {
 channel: a,
 compact: n,
@@ -39,7 +39,7 @@ function p(e) {
 channel: t,
 compact: a,
 isSystemMessage: c
-  } = e, d = (0, r.e7)([E.Z], () => E.Z.getCount(t.id)), u = function(e) {
+  } = e, u = (0, r.e7)([E.Z], () => E.Z.getCount(t.id)), d = function(e) {
 var t;
 let n = (0, r.e7)([E.Z], () => E.Z.getMostRecentMessage(e.id)),
   a = (0, r.e7)([E.Z], () => E.Z.getCount(e.id)),
@@ -66,7 +66,7 @@ return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived) ?
     })
   ]
 });
-  }(t), C = null != d && d > 0;
+  }(t), C = null != u && u > 0;
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)('div', {
@@ -119,14 +119,14 @@ children: [
             (0, i.jsx)('span', {
               className: f.cta,
               'aria-hidden': !C,
-              children: (0, _.WE)(d, t.id)
+              children: (0, _.WE)(u, t.id)
             })
           ]
         }),
         (0, i.jsx)('span', {
           'aria-hidden': !0,
           className: s()(f.bottomLine),
-          children: u
+          children: d
         })
       ]
     })

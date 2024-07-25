@@ -15,11 +15,11 @@ function c(e) {
   var t;
   let n, {
   message: c,
-  onDeleteMessage: d,
-  children: u
+  onDeleteMessage: u,
+  children: d
 } = e,
 _ = null === (t = c.interactionMetadata) || void 0 === t ? void 0 : t.ephemerality_reason,
-E = () => d(c, !0);
+E = () => u(c, !0);
   if (null != _) {
 let e = (0, s.in)(_);
 n = (0, i.jsx)('div', {
@@ -47,7 +47,7 @@ children: [
     className: o.icon
   }),
   n,
-  u
+  d
 ]
   });
 }

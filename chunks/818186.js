@@ -11,8 +11,8 @@ var a = n(442837),
   l = n(377171),
   o = n(497089),
   c = n(703656),
-  d = n(699516),
-  u = n(626135),
+  u = n(699516),
+  d = n(626135),
   _ = n(981631),
   E = n(689938),
   I = n(600021);
@@ -20,13 +20,13 @@ var a = n(442837),
 function m(e) {
   let {
 closePopout: t
-  } = e, n = (0, a.e7)([d.Z], () => d.Z.getPendingCount());
+  } = e, n = (0, a.e7)([u.Z], () => u.Z.getPendingCount());
   return (0, i.jsx)(s.TooltipContainer, {
 text: E.Z.Messages.VIEW_FRIEND_REQUESTS,
 children: (0, i.jsxs)(s.Clickable, {
   className: I.friendRequestsButton,
   onClick: () => {
-    u.default.track(_.rMx.NOTIFICATION_CENTER_ACTION, {
+    d.default.track(_.rMx.NOTIFICATION_CENTER_ACTION, {
       action_type: o.ud.FRIEND_REQUESTS_BUTTON_CLICK
     }), (0, c.uL)(_.Z5c.FRIENDS), r.Z.setSection(_.pJs.PENDING), t();
   },

@@ -19,8 +19,8 @@ var i = t(470079),
   c = t(131704),
   C = t(680089),
   I = t(592125),
-  S = t(58468),
-  A = t(77498),
+  A = t(58468),
+  S = t(77498),
   T = t(496675),
   L = t(306680),
   N = t(944486),
@@ -37,7 +37,7 @@ let R = 12633 == t.j ? [
   _.Z,
   C.Z,
   I.Z,
-  A.Z,
+  S.Z,
   T.Z,
   L.ZP,
   N.Z,
@@ -85,7 +85,7 @@ return o()(t).map(t => {
     _ = null != i && i.isThread() && i.parent_id === t.id,
     C = null !== (u = s || _ || !E ? d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id) : d.Z.getActiveJoinedUnreadThreadsForParent(t.guild_id, t.id)) && void 0 !== u ? u : {},
     I = (0, g.zR)(t, C, i, l, n),
-    A = S.Z.isCollapsed(t.id),
+    S = A.Z.isCollapsed(t.id),
     N = O.ZP.isChannelMuted(t.guild_id, t.id),
     h = {
       id: t.id,
@@ -94,10 +94,10 @@ return o()(t).map(t => {
       position: e[t.id].order,
       threadIds: I,
       threadCount: o().size(I),
-      isCollapsed: A,
+      isCollapsed: S,
       isMuted: N,
       isFirstVoiceChannel: !1,
-      subtitle: (0, g.Bz)(t, A, !1)
+      subtitle: (0, g.Bz)(t, S, !1)
     };
   return s || _ || L.ZP.getMentionCount(t.id) > 0 ? h : n && N || E && (N || a || (0, c.vd)(t.type) || (0, c.vc)(t.type) && !1 === L.ZP.hasUnread(t.id)) ? null : h;
 }).filter(h.lm).sortBy(e => {
@@ -107,7 +107,7 @@ return o()(t).map(t => {
   return n.isGuildVocal() ? n.position + 10000 : n.position;
 }).value();
   }
-  let A = null,
+  let S = null,
 R = {
   isMuted: !1,
   isCollapsed: !1,
@@ -117,7 +117,7 @@ R = {
   getShownChannelAndThreadIds: () => E.map(e => e.id),
   isEmpty: () => 0 === E.length,
   get channelList() {
-    return null == A && (A = _(E, this)), A;
+    return null == S && (S = _(E, this)), S;
   }
 },
 p = o()(e).values().filter(e => e.type === r.Dd.CATEGORY).sortBy(e => e.order).map(e => {

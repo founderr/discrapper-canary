@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(317632),
   o = n(602478),
   c = n(665149),
-  d = n(306680),
-  u = n(594174),
+  u = n(306680),
+  d = n(594174),
   _ = n(280763),
   E = n(178088),
   I = n(222940),
@@ -24,7 +24,7 @@ function N(e) {
 onOpen: t,
 onClose: n,
 className: N
-  } = e, f = (0, s.e7)([u.default], () => u.default.getCurrentUser()), C = a.useRef(null), p = (0, s.e7)([d.ZP], () => (null == f ? void 0 : f.id) != null && d.ZP.getMentionCount(f.id, m.W.NOTIFICATION_CENTER) > 0), {
+  } = e, f = (0, s.e7)([d.default], () => d.default.getCurrentUser()), C = a.useRef(null), p = (0, s.e7)([u.ZP], () => (null == f ? void 0 : f.id) != null && u.ZP.getMentionCount(f.id, m.W.NOTIFICATION_CENTER) > 0), {
 enabled: g
   } = o.Z.useExperiment({
 location: 'RecentsButton'

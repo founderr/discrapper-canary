@@ -15,11 +15,11 @@ message: t,
 otherUsername: l,
 usernameHook: o,
 otherUsernameHook: c,
-compact: d
+compact: u
   } = e, {
-nick: u
+nick: d
   } = (0, s.ZP)(t), _ = o(), E = c(), I = r.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD_HOOK.format({
-username: u,
+username: d,
 usernameHook: _,
 otherUsername: l,
 otherUsernameHook: E
@@ -27,7 +27,7 @@ otherUsernameHook: E
   return (0, i.jsx)(a.Z, {
 icon: n(570111),
 timestamp: t.timestamp,
-compact: d,
+compact: u,
 children: I
   });
 }

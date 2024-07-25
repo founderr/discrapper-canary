@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(481060),
   o = n(230711),
   c = n(2052),
-  d = n(906732),
-  u = n(963249),
+  u = n(906732),
+  d = n(963249),
   _ = n(594174),
   E = n(626135),
   I = n(74538),
@@ -38,9 +38,9 @@ function p() {
 } = (0, c.O)(),
 {
   analyticsLocations: g
-} = (0, d.ZP)(),
+} = (0, u.ZP)(),
 S = a.useCallback(() => {
-  (0, u.Z)({
+  (0, d.Z)({
     subscriptionTier: I.ZP.getSkuIdForPremiumType(h.p9.TIER_2),
     analyticsLocations: g,
     analyticsObject: {

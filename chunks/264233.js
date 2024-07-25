@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(442837),
   o = n(524437),
   c = n(481060),
-  d = n(317632),
-  u = n(174767),
+  u = n(317632),
+  d = n(174767),
   _ = n(240126),
   E = n(791914),
   I = n(326838),
@@ -23,7 +23,7 @@ function h(e) {
 setTab: t,
 badgeState: s,
 closePopout: h
-  } = e, f = (0, l.Wu)([d.Z], () => d.Z.getInvites()), C = (0, l.e7)([d.Z], () => d.Z.getInviteStatuses()), [p, g] = a.useMemo(() => r().partition(f, e => {
+  } = e, f = (0, l.Wu)([u.Z], () => u.Z.getInvites()), C = (0, l.e7)([u.Z], () => u.Z.getInviteStatuses()), [p, g] = a.useMemo(() => r().partition(f, e => {
 var t;
 return (null === (t = C[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
   }), [
@@ -31,7 +31,7 @@ f,
 C
   ]);
   return (a.useEffect(() => {
-(0, u.sJ)();
+(0, d.sJ)();
   }), 0 === f.length) ? (0, i.jsxs)('div', {
 className: T.container,
 children: [

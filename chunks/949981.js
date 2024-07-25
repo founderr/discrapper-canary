@@ -11,8 +11,8 @@ var a = n(512722),
   l = n(955415),
   o = n(131704),
   c = n(592125),
-  d = n(594174),
-  u = n(823379),
+  u = n(594174),
+  d = n(823379),
   _ = n(358595),
   E = n(981631),
   I = n(689938),
@@ -37,14 +37,14 @@ if (null == n.channel)
 p = (0, o.jD)(n.channel), t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : [];
   } else {
 t = p.recipients.reduce((e, t) => {
-  let n = d.default.getUser(t);
+  let n = u.default.getUser(t);
   return null != n && e.push(n), e;
 }, []);
-let e = d.default.getCurrentUser();
+let e = u.default.getCurrentUser();
 g && null != e && t.push(e);
   }
   let S = p.name;
-  (null == S || '' === S) && (S = t.length > 0 ? t.filter(u.lm).map(e => e.username).join(', ') : I.Z.Messages.UNNAMED);
+  (null == S || '' === S) && (S = t.length > 0 ? t.filter(d.lm).map(e => e.username).join(', ') : I.Z.Messages.UNNAMED);
   let A = g ? h : N,
 R = I.Z.Messages.JOIN_GUILD,
 x = l.Z.Button.Colors.GREEN;

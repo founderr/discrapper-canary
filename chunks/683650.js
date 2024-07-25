@@ -11,20 +11,20 @@ var a = n(120356),
   l = n(230711),
   o = n(266843),
   c = n(981631),
-  d = n(689938),
-  u = n(687133),
+  u = n(689938),
+  d = n(687133),
   _ = n(87181);
 
 function E() {
   return (0, i.jsx)('div', {
-className: u.buttonContainer,
+className: d.buttonContainer,
 children: (0, i.jsx)(r.Button, {
-  className: u.button,
+  className: d.button,
   color: r.ButtonColors.BRAND,
   onClick: () => {
     l.Z.open(c.oAB.INVENTORY);
   },
-  children: d.Z.Messages.GIFT_INVENTORY
+  children: u.Z.Messages.GIFT_INVENTORY
 })
   });
 }
@@ -36,34 +36,34 @@ size: t
   } = (0, o.h)();
   return (0, i.jsxs)('div', {
 ref: t => e.current = t,
-className: s()(u.container, {
-  [u.wide]: 'lg' === t,
-  [u.tall]: 'lg' !== t
+className: s()(d.container, {
+  [d.wide]: 'lg' === t,
+  [d.tall]: 'lg' !== t
 }),
 children: [
   (0, i.jsxs)('div', {
-    className: u.contentContainer,
+    className: d.contentContainer,
     children: [
       (0, i.jsx)(r.Heading, {
         variant: 'lg' === t ? 'heading-xl/bold' : 'heading-lg/bold',
         color: 'header-primary',
-        children: d.Z.Messages.QUESTS_EMBED_INVALID_HEADING
+        children: u.Z.Messages.QUESTS_EMBED_INVALID_HEADING
       }),
       (0, i.jsx)(r.Text, {
         variant: 'lg' === t ? 'text-sm/medium' : 'text-xs/medium',
         color: 'text-normal',
-        className: u.__invalid_mobileWebCopy,
-        children: d.Z.Messages.QUESTS_EMBED_INVALID_BODY_2
+        className: d.__invalid_mobileWebCopy,
+        children: u.Z.Messages.QUESTS_EMBED_INVALID_BODY_2
       }),
       (0, i.jsx)(E, {})
     ]
   }),
   (0, i.jsx)('div', {
-    className: u.imgContainer,
+    className: d.imgContainer,
     children: (0, i.jsx)('img', {
       src: _,
       alt: '',
-      className: u.missingQuestImage
+      className: d.missingQuestImage
     })
   })
 ]

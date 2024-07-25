@@ -6,8 +6,8 @@ var a = n(481060),
   l = n(91802),
   o = n(222727),
   c = n(981631),
-  d = n(921944),
-  u = n(689938),
+  u = n(921944),
+  d = n(689938),
   _ = n(708522);
 t.Z = e => {
   let {
@@ -24,7 +24,7 @@ N = m.paymentSourceTypes.length > 0;
 color: I ? a.NoticeColors.BRAND : a.NoticeColors.PREMIUM_TIER_2,
 children: [
   (0, i.jsx)(a.NoticeCloseButton, {
-    onClick: () => E(d.L.UNKNOWN),
+    onClick: () => E(u.L.UNKNOWN),
     noticeType: n
   }),
   !I && (0, i.jsx)(a.NitroWheelIcon, {
@@ -35,10 +35,10 @@ children: [
   (0, r.Gv)(T, h, N, I),
   (0, i.jsx)(a.PrimaryCTANoticeButton, {
     onClick: () => {
-      E(d.L.UNKNOWN), s.Z.open(c.oAB.PREMIUM);
+      E(u.L.UNKNOWN), s.Z.open(c.oAB.PREMIUM);
     },
     noticeType: n,
-    children: u.Z.Messages.LEARN_MORE
+    children: d.Z.Messages.LEARN_MORE
   })
 ]
   });

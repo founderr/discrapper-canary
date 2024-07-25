@@ -10,8 +10,8 @@ var i = n(512722),
   l = n(263568),
   o = n(442837),
   c = n(570140),
-  d = n(668781),
-  u = n(749210),
+  u = n(668781),
+  d = n(749210),
   _ = n(904245),
   E = n(881052),
   I = n(367907),
@@ -55,13 +55,13 @@ guildId: t,
 title: n,
 body: i
   } = e;
-  d.Z.show({
+  u.Z.show({
 title: n,
 body: i,
 confirmText: Z.Z.Messages.LURKER_MODE_POPOUT_JOIN,
 cancelText: Z.Z.Messages.LURKER_MODE_POPOUT_CANCEL,
 onConfirm: () => {
-  u.Z.joinGuild(t, {
+  d.Z.joinGuild(t, {
     source: L.vtS.POLL_ALERT
   });
 }
@@ -127,7 +127,7 @@ answerIds: i
   } = e, a = U({
 channelId: t,
 messageId: n
-  }), s = r().difference(a, i), l = r().difference(i, a), d = f.default.getId(), u = [
+  }), s = r().difference(a, i), l = r().difference(i, a), u = f.default.getId(), d = [
 ...s.map(e => ({
   type: 'MESSAGE_REACTION_REMOVE',
   id: e
@@ -142,7 +142,7 @@ for (let {
     id: i,
     type: a
   }
-  of u)
+  of d)
   e = c.Z.dispatch({
     type: a,
     channelId: t,
@@ -151,7 +151,7 @@ for (let {
       id: i,
       name: i
     },
-    userId: d,
+    userId: u,
     optimistic: !0,
     reactionType: T.O.VOTE
   });
@@ -175,7 +175,7 @@ D({
 return;
   }
   if (!g.Z.canChatInGuild(i.guild_id)) {
-d.Z.show({
+u.Z.show({
   title: Z.Z.Messages.POLL_GUILD_MEMBER_UNVERIFIED_TITLE,
   body: Z.Z.Messages.POLL_GUILD_MEMBER_UNVERIFIED_SUBTITLE
 });
@@ -204,7 +204,7 @@ let e = [...s.selectedAnswerIds.values()];
 }), (0, M.eu)(t, n, () => void 0);
   } catch (e) {
 var l, o, c;
-d.Z.show({
+u.Z.show({
   title: Z.Z.Messages.GENERIC_ERROR_TITLE,
   body: null !== (c = null !== (o = null === (l = e.getAnyErrorMessage) || void 0 === l ? void 0 : l.call(e)) && void 0 !== o ? o : e.message) && void 0 !== c ? c : Z.Z.Messages.GENERIC_ERROR_BODY
 }), await y({
@@ -250,7 +250,7 @@ return (0, M.eu)(t, n, e => {
 });
   }
 }
-async function G(e) {
+async function F(e) {
   let {
 channelId: t,
 messageId: n,
@@ -318,7 +318,7 @@ default:
   a()(!1, 'Unknown poll action type: '.concat(i));
   }
 }
-async function F(e) {
+async function G(e) {
   let {
 channel: t,
 question: n,
@@ -327,7 +327,7 @@ allowMultiSelect: a,
 duration: s,
 layout: r,
 onClose: o
-  } = e, c = A.Z.getUploads(t.id, p.d.Poll), d = i.map(e => {
+  } = e, c = A.Z.getUploads(t.id, p.d.Poll), u = i.map(e => {
 var t, n;
 let i = null == c ? void 0 : c.findIndex(t => t.id === e.localCreationAnswerId),
   a = {
@@ -343,11 +343,11 @@ return null != s && (null != s.id ? a.emoji = {
 })), {
   poll_media: a
 };
-  }), u = {
+  }), d = {
 question: {
   text: n.trim()
 },
-answers: d,
+answers: u,
 allow_multiselect: a,
 duration: s,
 layout_type: r
@@ -360,12 +360,12 @@ if (null != c && c.length > 0) {
     channel: t,
     items: c,
     token: e,
-    poll: u,
+    poll: d,
     nonce: (0, h.r)(),
     maxSizeCallback: () => {}
   });
 } else
-  await _.Z.sendPollMessage(t.id, u);
+  await _.Z.sendPollMessage(t.id, d);
 null == o || o();
   } catch (e) {
 if ('poll' === (e instanceof E.Hx ? e : new E.Hx(e)).getAnyErrorMessage() && null != e.text)
@@ -381,7 +381,7 @@ async function w(e) {
 channelId: t,
 messageId: n
   } = e;
-  await d.Z.confirm({
+  await u.Z.confirm({
 title: Z.Z.Messages.POLL_END_EARLY_CONFIRMATION_TITLE,
 body: Z.Z.Messages.POLL_END_EARLY_CONFIRMATION_TEXT
   }) && await O.W({
@@ -429,7 +429,7 @@ if (!0 === c) {
   });
   return;
 }
-let d = null === (t = o.poll) || void 0 === t ? void 0 : t.allow_multiselect;
+let u = null === (t = o.poll) || void 0 === t ? void 0 : t.allow_multiselect;
 (0, M.eu)(r, l, e => {
   var t, n;
   if (null == e) {
@@ -460,28 +460,28 @@ let d = null === (t = o.poll) || void 0 === t ? void 0 : t.allow_multiselect;
   if (a.selectedAnswerIds = s, s.has(i))
     s.delete(i);
   else {
-    if (!d)
+    if (!u)
       for (let e of s)
         s.delete(e);
     s.add(i);
   }
   let {
     analyticsSelectedAnswerIds: c,
-    selectedTextAnswersCount: u,
+    selectedTextAnswersCount: d,
     selectedEmojiAnswersCount: _
   } = P(null === (t = o.poll) || void 0 === t ? void 0 : t.answers, s);
   return I.ZP.trackWithMetadata(L.rMx.POLL_VOTE_SELECTED, {
     channel_id: r,
     message_id: l,
     selected_answer_ids: c,
-    selected_text_answers_count: u,
+    selected_text_answers_count: d,
     selected_emoji_answers_count: _
   }), a;
 });
   },
   handlePollSubmitVote: B,
   handleUpdateVoteEditingState: j,
-  handlePollActionTapped: G,
-  createPoll: F,
+  handlePollActionTapped: F,
+  createPoll: G,
   endPollEarly: w
 };

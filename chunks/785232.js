@@ -12,7 +12,7 @@ status: c,
 isTyping: u,
 className: o,
 ...d
-  } = e, _ = i.AvatarSizeSpecs[n], f = (0, a.Wu)([r.default], () => t.slice(0, 2).map(e => {
+  } = e, _ = i.AvatarSizeSpecs[n], h = (0, a.Wu)([r.default], () => t.slice(0, 2).map(e => {
 let t = r.default.getUser(e);
 if (null != t)
   return t.getAvatarURL(void 0, _.size, !1);
@@ -23,8 +23,8 @@ _.size
   return (0, l.jsx)(s.Z, {
 'aria-label': d['aria-label'],
 'aria-hidden': d['aria-hidden'],
-backSrc: f[0],
-frontSrc: f[1],
+backSrc: h[0],
+frontSrc: h[1],
 size: n,
 status: c,
 isTyping: null != u && u,

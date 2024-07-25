@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(902704),
   o = n(692547),
   c = n(481060),
-  d = n(356264),
-  u = n(628238),
+  u = n(356264),
+  d = n(628238),
   _ = n(930282),
   E = n(25015),
   I = n(438075),
@@ -51,19 +51,19 @@ function M(e) {
   let {
 message: t,
 snapshot: n,
-index: u
-  } = e, _ = a.useMemo(() => new g.r(t, n, u), [
+index: d
+  } = e, _ = a.useMemo(() => new g.r(t, n, d), [
 t,
 n,
-u
+d
   ]), E = (0, r.e7)([
 T.Z,
 p.default,
 C.Z,
 f.Z,
 N.Z,
-d.Z
-  ], () => _.getForwardInfo(T.Z, p.default, C.Z, f.Z, N.Z, d.Z).footerInfo, [_], l.Z), I = a.useCallback(() => {
+u.Z
+  ], () => _.getForwardInfo(T.Z, p.default, C.Z, f.Z, N.Z, u.Z).footerInfo, [_], l.Z), I = a.useCallback(() => {
 (0, S.Z)(t);
   }, [t]);
   return null == E ? null : (0, i.jsxs)(c.Clickable, {
@@ -98,11 +98,11 @@ index: l
   } = e, o = a.useMemo(() => (0, A.Z)(n, s), [
 n,
 s
-  ]), c = m.RS.useSetting(), d = m.NA.useSetting(), N = (0, r.e7)([h.Z], () => h.Z.isDeveloper), f = (0, u.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
+  ]), c = m.RS.useSetting(), u = m.NA.useSetting(), N = (0, r.e7)([h.Z], () => h.Z.isDeveloper), f = (0, d.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
 content: C,
 hasSpoilerEmbeds: p
   } = (0, E.Z)(o, {
-hideSimpleEmbedContent: c && d,
+hideSimpleEmbedContent: c && u,
 isInteracting: !1,
 formatInline: !1,
 allowList: f,

@@ -15,9 +15,9 @@ message: t,
 compact: l,
 missed: o,
 joinable: c,
-usernameHook: d,
-onClickJoinCall: u
-  } = e, _ = (0, s.ZP)(t), E = _.nick, I = d(_), m = function(e) {
+usernameHook: u,
+onClickJoinCall: d
+  } = e, _ = (0, s.ZP)(t), E = _.nick, I = u(_), m = function(e) {
 let t = null != e.call ? e.call.duration : null;
 return null != t ? t.humanize() : null;
   }(t);
@@ -47,7 +47,7 @@ children: [
     usernameHook: I
   }),
   c ? (0, i.jsx)(a.Z.Action, {
-    onClick: u,
+    onClick: d,
     children: r.Z.Messages.SYSTEM_MESSAGE_JOIN_CALL
   }) : null
 ]

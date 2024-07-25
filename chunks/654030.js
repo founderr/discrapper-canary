@@ -5,8 +5,8 @@ var i, a = n(735250),
   l = n(481060),
   o = n(278323),
   c = n(224706),
-  d = n(763472),
-  u = n(498179),
+  u = n(763472),
+  d = n(498179),
   _ = n(276852),
   E = n(994339),
   I = n(275920),
@@ -45,7 +45,7 @@ writable: !0
 let k = {
   spotify: 'Spotify'
 };
-class G extends(i = s.PureComponent) {
+class F extends(i = s.PureComponent) {
   getCoverImage() {
 let {
   activity: e,
@@ -141,7 +141,7 @@ super(...e), B(this, 'state', {
     activity: e,
     userId: t
   } = this.props;
-  null != e && null != t && d.Z_(e, t);
+  null != e && null != t && u.Z_(e, t);
 }), B(this, 'handleDownloadApp', () => {
   (0, l.openModal)(e => (0, a.jsx)(T.default, {
     source: 'Game Invite',
@@ -178,7 +178,7 @@ super(...e), B(this, 'state', {
   let {
     application: t
   } = this.props;
-  return (0, a.jsx)(u.Z, {
+  return (0, a.jsx)(d.Z, {
     ...e,
     source: U.Sbl.MESSAGE_EMBED,
     application: t
@@ -194,8 +194,8 @@ super(...e), B(this, 'state', {
     isPreview: l,
     isLaunching: o,
     isSender: c,
-    activityActionType: d,
-    className: u,
+    activityActionType: u,
+    className: d,
     channelId: _,
     message: E,
     hideParty: I,
@@ -216,12 +216,12 @@ super(...e), B(this, 'state', {
     applicationId: null != s ? s.id : null,
     name: e,
     partyMembers: r,
-    className: u,
+    className: d,
     coverImage: this.getCoverImage(),
     isPreview: l,
     isGameLaunchable: h,
     isLoading: o || this.state.sending,
-    activityActionType: d,
+    activityActionType: u,
     isInBrowser: !D.isPlatformEmbedded,
     isSyncable: T,
     isSender: c,
@@ -243,7 +243,7 @@ super(...e), B(this, 'state', {
 });
   }
 }
-B(G, 'defaultProps', {
+B(F, 'defaultProps', {
   isPreview: !1
 }), t.Z = r.ZP.connectStores([
   f.Z,
@@ -266,9 +266,9 @@ userId: s,
 guildId: r
   } = e, {
 id: l
-  } = null != i ? i : {}, o = null != t && null != t.party && t.party.id === a ? R.Z.getParty(t.party.id) : null, c = null != l ? M.Z.getApplicationActivity(l) : M.Z.findActivity(e => e.type === U.IIU.LISTENING), d = !1;
-  null != l && (d = L.Z.getState(l, U.mFx.JOIN) === U.OcF.LOADING);
-  let u = Array.from(null != o ? o : []).map(e => {
+  } = null != i ? i : {}, o = null != t && null != t.party && t.party.id === a ? R.Z.getParty(t.party.id) : null, c = null != l ? M.Z.getApplicationActivity(l) : M.Z.findActivity(e => e.type === U.IIU.LISTENING), u = !1;
+  null != l && (u = L.Z.getState(l, U.mFx.JOIN) === U.OcF.LOADING);
+  let d = Array.from(null != o ? o : []).map(e => {
   let t = null != r ? x.ZP.getMember(r, e) : null,
     n = null != t ? t.nick : null,
     i = v.default.getUser(e),
@@ -286,10 +286,10 @@ E = f.Z.getSyncingWith(),
 I = null != E && null != s && E.userId === s;
   return {
 analyticsLocations: n,
-partyMembers: u,
+partyMembers: d,
 connectedApplication: null != l ? A.Z.getApplication(l) : null,
 myPartyId: null != c && null != c.party ? c.party.id : null,
-isLaunching: d,
+isLaunching: u,
 isSyncable: _ && !I,
 isLaunchable: null != l && (0, b.t)({
   LibraryApplicationStore: O.Z,
@@ -299,4 +299,4 @@ isLaunchable: null != l && (0, b.t)({
   applicationId: l
 })
   };
-})(G);
+})(F);

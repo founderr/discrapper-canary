@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(905405),
   o = n(937889),
   c = n(267128),
-  d = n(123145),
-  u = n(699516),
+  u = n(123145),
+  d = n(699516),
   _ = n(217702),
   E = n(475525);
 
@@ -19,7 +19,7 @@ function I(e) {
   let {
 message: t,
 channel: n
-  } = e, I = (0, s.e7)([u.Z], () => u.Z.isBlockedForMessage(t)), m = (0, l.p)(), T = a.useMemo(() => ({
+  } = e, I = (0, s.e7)([d.Z], () => d.Z.isBlockedForMessage(t)), m = (0, l.p)(), T = a.useMemo(() => ({
 [n.guild_id]: [t.author.id]
   }), [
 n.guild_id,
@@ -41,7 +41,7 @@ children: [
     src: t.author.getAvatarURL(n.guild_id, 16),
     className: E.threadMessageAccessoryAvatar
   }),
-  (0, i.jsx)(d.Z, {
+  (0, i.jsx)(u.Z, {
     message: t,
     channel: n,
     compact: !0

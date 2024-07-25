@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(91192),
   o = n(442837),
   c = n(481060),
-  d = n(135938),
-  u = n(900164),
+  u = n(135938),
+  d = n(900164),
   _ = n(554838),
   E = n(493892),
   I = n(661824),
@@ -38,8 +38,8 @@ channel: n,
 message: s,
 compact: r,
 isGroupStart: o,
-treatSpam: d,
-gotoChannel: u
+treatSpam: u,
+gotoChannel: d
   } = e, _ = (0, l.JA)(null !== (t = s.id) && void 0 !== t ? t : ''), E = a.useCallback(e => {
 if ('ArrowLeft' === e.key) {
   var t;
@@ -55,7 +55,7 @@ children: (0, i.jsxs)('div', {
   children: [
     (0, i.jsx)(p.Z, {
       className: R.jumpButton,
-      onJump: e => u(e, s.id)
+      onJump: e => d(e, s.id)
     }),
     (0, i.jsx)(m.Z, {
       id: s.id,
@@ -66,7 +66,7 @@ children: (0, i.jsxs)('div', {
       animateAvatar: !1,
       isGroupStart: o,
       onKeyDown: E,
-      treatSpam: d
+      treatSpam: u
     })
   ]
 }, s.id)
@@ -81,7 +81,7 @@ channelRecord: s,
 gotoChannel: l
   } = e, {
 enabled: m
-  } = d.Z.useExperiment({
+  } = u.Z.useExperiment({
 location: '20e3b0_1'
   }, {
 autoTrackExposure: !1
@@ -91,7 +91,7 @@ let e = null,
   t = null,
   n = a.messages.slice(0, g.hC);
 n.forEach(n => {
-  if (!(0, u.Z)(n, x)) {
+  if (!(0, d.Z)(n, x)) {
     if (!L && (null == e || !e.isSame(n.timestamp, 'day'))) {
       let t = (0, C.vc)(n.timestamp, 'LL');
       P.push((0, i.jsx)(I.Z, {
@@ -119,7 +119,7 @@ n.forEach(n => {
   ]
 }, 'view-all')), 0 === P.length && (P = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
   }
-  return v && M && d.Z.trackExposure({
+  return v && M && u.Z.trackExposure({
 location: '20e3b0_2'
   }), (0, i.jsx)('div', {
 className: R.messages,

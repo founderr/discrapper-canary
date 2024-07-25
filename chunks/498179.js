@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return u;
+return d;
   }
 });
 var i = n(735250);
@@ -11,13 +11,13 @@ var a = n(442837),
   l = n(55563),
   o = n(780570),
   c = n(701560),
-  d = n(785547);
+  u = n(785547);
 
-function u(e) {
+function d(e) {
   let {
 application: t,
 fullWidth: n = !1,
-size: u = s.Button.Sizes.LARGE,
+size: d = s.Button.Sizes.LARGE,
 color: _,
 customDisabledColor: E,
 hideNotLaunchable: I,
@@ -29,7 +29,7 @@ hover: f,
 innerClassName: C
   } = e, p = {
 fullWidth: n,
-size: u,
+size: d,
 color: _,
 customDisabledColor: E,
 tooltipPosition: m,
@@ -38,7 +38,7 @@ className: h,
 hover: f,
 innerClassName: C
   }, g = (0, a.e7)([r.Z], () => r.Z.getActiveLibraryApplication(t.id)), S = null != g ? g.sku.id : null, A = null != S ? S : t.primarySkuId, R = (0, a.e7)([l.Z], () => null != A && !l.Z.didFetchingSkuFail(A));
-  return null != g && (0, o.Je)(g) ? (0, i.jsx)(d.Z, {
+  return null != g && (0, o.Je)(g) ? (0, i.jsx)(u.Z, {
 ...p,
 libraryApplication: g,
 source: N

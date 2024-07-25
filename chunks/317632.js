@@ -2,8 +2,8 @@ n(47120);
 var i, a, s, r, l = n(442837),
   o = n(570140),
   c = n(823379),
-  d = n(981631);
-let u = [],
+  u = n(981631);
+let d = [],
   _ = {},
   E = null,
   I = 0;
@@ -15,7 +15,7 @@ t = JSON.parse(e.launch_parameters);
   } catch {
 return null;
   }
-  if (e.platform_type === d.ABu.XBOX) {
+  if (e.platform_type === u.ABu.XBOX) {
 let n = null == t ? void 0 : t.titleId,
   i = null == t ? void 0 : t.inviteToken;
 return null == n || null == i ? null : {
@@ -30,7 +30,7 @@ return null == n || null == i ? null : {
 }
 class T extends(i = l.ZP.Store) {
   getInvites() {
-return u;
+return d;
   }
   getInviteStatuses() {
 return _;
@@ -60,28 +60,28 @@ r = 'GameInviteStore', (s = 'displayName') in(a = T) ? Object.defineProperty(a, 
 let {
   gameInvites: t
 } = e;
-u = t.map(m).filter(c.lm);
+d = t.map(m).filter(c.lm);
   },
   GAME_INVITE_CREATE: function(e) {
 let {
   gameInvite: t
 } = e, n = m(t);
-null != n && (u = [
+null != n && (d = [
   n,
-  ...u
+  ...d
 ], E = t, I += 1);
   },
   GAME_INVITE_DELETE: function(e) {
 let {
   inviteId: t
 } = e;
-u = u.filter(e => e.invite_id !== t);
+d = d.filter(e => e.invite_id !== t);
   },
   GAME_INVITE_DELETE_MANY: function(e) {
 let {
   inviteIds: t
 } = e;
-u = u.filter(e => !t.includes(e.invite_id));
+d = d.filter(e => !t.includes(e.invite_id));
   },
   GAME_INVITE_UPDATE_STATUS: function(e) {
 (_ = {

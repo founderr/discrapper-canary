@@ -7,8 +7,8 @@ var a = n(120356),
   l = n(481060),
   o = n(607070),
   c = n(358085),
-  d = n(617136),
-  u = n(113434),
+  u = n(617136),
+  d = n(113434),
   _ = n(566078),
   E = n(667105),
   I = n(689938),
@@ -57,13 +57,13 @@ c = (0, E.g2)({
   errorHints: f,
   startingConsoleQuest: C,
   startConsoleQuest: p
-} = (0, u.GI)({
+} = (0, d.GI)({
   questId: e.quest.id,
   beforeRequest: () => {
-    c.startAnimation(), (0, d._3)({
+    c.startAnimation(), (0, u._3)({
       questId: e.quest.id,
       questContent: e.location,
-      questContentCTA: d.jZ.DEFIBRILLATOR
+      questContentCTA: u.jZ.DEFIBRILLATOR
     });
   },
   afterRequest: c.stopAnimation

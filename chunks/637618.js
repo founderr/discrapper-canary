@@ -11,15 +11,15 @@ var a = n(990547),
   l = n(213609),
   o = n(914010),
   c = n(267101),
-  d = n(675297),
-  u = n(20281);
+  u = n(675297),
+  d = n(20281);
 
 function _(e) {
   let {
 code: t
   } = e, [n, _] = t.split('-'), E = (0, c.hO)(n, _), I = (0, s.e7)([o.Z], () => o.Z.getGuildId());
   return ((0, l.Z)({
-type: u.n.VIEW,
+type: d.n.VIEW,
 name: a.ImpressionNames.GUILD_PRODUCT_LISTING_EMBED,
 properties: {
   guild_product_listing_id: _,
@@ -27,7 +27,7 @@ properties: {
 }
   }, {
 disableTrack: null == E
-  }), null == E || I !== n) ? null : (0, i.jsx)(d.H, {
+  }), null == E || I !== n) ? null : (0, i.jsx)(u.H, {
 guildProductListing: E,
 guildId: n,
 location: r.Z.GUILD_PRODUCT_EMBED_CARD,

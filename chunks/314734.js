@@ -16,13 +16,13 @@ return i;
 return r;
   },
   lv: function() {
-return d;
+return u;
   },
   t4: function() {
 return l;
   },
   u$: function() {
-return u;
+return d;
   }
 }), (a = i || (i = {}))[a.POPULAR = 0] = 'POPULAR', a[a.ALPHABETICAL = 1] = 'ALPHABETICAL';
 let s = 'app-launcher-element',
@@ -30,8 +30,8 @@ let s = 'app-launcher-element',
   l = 'app-launcher-entrypoint',
   o = 500,
   c = 650,
-  d = 'min(100vh, '.concat(c, 'px)'),
-  u = {
+  u = 'min(100vh, '.concat(c, 'px)'),
+  d = {
 '--custom-app-launcher-width': ''.concat(o, 'px'),
-'--custom-app-launcher-height': d
+'--custom-app-launcher-height': u
   };

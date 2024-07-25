@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(481060),
   o = n(976255),
   c = n(230711),
-  d = n(409813),
-  u = n(594174),
+  u = n(409813),
+  d = n(594174),
   _ = n(74538),
   E = n(212895),
   I = n(559725),
@@ -22,7 +22,7 @@ var i = n(735250),
 function N(e) {
   let {
 onClose: t
-  } = e, s = u.default.getCurrentUser();
+  } = e, s = d.default.getCurrentUser();
   r()(void 0 !== s, 'User must not be null');
   let N = (0, _.I5)(s),
 f = N ? T.oAB.SUBSCRIPTIONS : T.oAB.BILLING;
@@ -50,7 +50,7 @@ children: [
           ]).then(n.bind(n, 623573));
           return t => (0, i.jsx)(e, {
             ...t,
-            initialStep: d.h8.CASH_APP_INFORMATION,
+            initialStep: u.h8.CASH_APP_INFORMATION,
             onAddPaymentSource: e => (0, E.i1)(e.id)
           });
         }, {

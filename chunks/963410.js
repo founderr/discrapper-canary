@@ -42,10 +42,10 @@ transitionState: t,
 userId: n,
 channelId: p,
 onClose: Z
-  } = e, U = (0, c.Dt)(), m = (0, a.e7)([u.default], () => u.default.getUser(n)), N = (0, a.e7)([E.Z], () => {
+  } = e, m = (0, c.Dt)(), U = (0, a.e7)([u.default], () => u.default.getUser(n)), N = (0, a.e7)([E.Z], () => {
 var e;
 return null === (e = E.Z.getChannel(p)) || void 0 === e ? void 0 : e.getGuildId();
-  }), D = l.ZP.useName(N, null, m), {
+  }), D = l.ZP.useName(N, null, U), {
 fingerprint: F,
 userKey: L,
 loading: x
@@ -113,7 +113,7 @@ p,
 n
   ]), (0, r.jsxs)(s.ModalRoot, {
 transitionState: t,
-'aria-labelledby': U,
+'aria-labelledby': m,
 children: [
   (0, r.jsx)('div', {
     className: T.shieldIconContainer,

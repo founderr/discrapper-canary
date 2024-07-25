@@ -11,8 +11,8 @@ var a = n(913527),
   l = n(481060),
   o = n(800530),
   c = n(689938),
-  d = n(429576);
-let u = e => s()().diff(s().unix(e), 'days');
+  u = n(429576);
+let d = e => s()().diff(s().unix(e), 'days');
 
 function _(e) {
   var t, a, s, _, E;
@@ -40,16 +40,16 @@ onClick: () => {
     });
   });
 },
-className: d.safetyPolicyNoticeContainer,
+className: u.safetyPolicyNoticeContainer,
 children: [
   (0, i.jsxs)('div', {
-    className: d.noticeContent,
+    className: u.noticeContent,
     children: [
       (0, i.jsxs)('div', {
-        className: d.headerRow,
+        className: u.headerRow,
         children: [
           (0, i.jsx)(l.WarningIcon, {
-            className: d.warningIcon,
+            className: u.warningIcon,
             color: r.Z.colors.STATUS_DANGER
           }),
           (0, i.jsx)(l.Text, {
@@ -59,16 +59,16 @@ children: [
         ]
       }),
       (0, i.jsx)('div', {
-        className: d.incidentTiming,
+        className: u.incidentTiming,
         children: (0, i.jsx)(l.Text, {
           variant: 'text-xs/medium',
           children: c.Z.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
-            daysAgo: u(N)
+            daysAgo: d(N)
           })
         })
       }),
       (0, i.jsx)('div', {
-        className: d.noticeBody,
+        className: u.noticeBody,
         children: (0, i.jsx)(l.Text, {
           variant: 'text-md/normal',
           color: 'text-muted',
@@ -78,10 +78,10 @@ children: [
     ]
   }),
   (0, i.jsx)('div', {
-    className: d.footerContainer,
+    className: u.footerContainer,
     children: (0, i.jsx)(l.Button, {
       look: l.Button.Looks.BLANK,
-      className: d.detailsButton,
+      className: u.detailsButton,
       color: l.Button.Colors.WHITE,
       children: c.Z.Messages.SAFETY_POLICY_NOTICE_BUTTON
     })

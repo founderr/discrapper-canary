@@ -15,17 +15,17 @@ function r(e) {
 applicationId: t,
 size: n,
 names: r = s
-  } = e, [l, o] = i.useState(null), [c, d] = i.useState(!0), u = (0, a.getAssetImage)(t, l, n);
+  } = e, [l, o] = i.useState(null), [c, u] = i.useState(!0), d = (0, a.getAssetImage)(t, l, n);
   return i.useEffect(() => {
 (0, a.getAssets)(t).then(e => {
-  for (let [t, n] of(d(!1), Object.entries(e)))
+  for (let [t, n] of(u(!1), Object.entries(e)))
     if (null != n && '' !== n.id && r.includes(n.name)) {
       o(n.id);
       return;
     }
 });
   }, [t]), {
-url: u,
-state: c ? 'loading' : null != u ? 'fetched' : 'not-found'
+url: d,
+state: c ? 'loading' : null != d ? 'fetched' : 'not-found'
   };
 }

@@ -1,15 +1,15 @@
 s(47120);
 var n = s(735250),
   t = s(470079),
-  r = s(120356),
-  l = s.n(r),
+  l = s(120356),
+  r = s.n(l),
   i = s(643872),
-  c = s(481060),
-  o = s(570140),
+  o = s(481060),
+  c = s(570140),
   E = s(652898),
   _ = s(93093),
-  u = s(768581),
-  d = s(810568),
+  d = s(768581),
+  u = s(810568),
   I = s(981631),
   A = s(689938),
   N = s(421377);
@@ -24,43 +24,43 @@ let {
   trackClick: s
 } = e, {
   approximate_member_count: t,
-  guild: r
+  guild: l
 } = a;
-if (null == r)
+if (null == l)
   return null;
-let i = _.Z.isMember(r.id);
-if (!(null == r ? void 0 : r.features.includes('VERIFIED')) && !(null == r ? void 0 : r.features.includes('PARTNER')))
+let i = _.Z.isMember(l.id);
+if (!(null == l ? void 0 : l.features.includes('VERIFIED')) && !(null == l ? void 0 : l.features.includes('PARTNER')))
   return null;
-let E = u.ZP.getGuildIconURL({
-  id: r.id,
-  icon: r.icon,
+let E = d.ZP.getGuildIconURL({
+  id: l.id,
+  icon: l.icon,
   size: 32
 });
 return (0, n.jsxs)('div', {
-  className: l()(N.column),
+  className: r()(N.column),
   children: [
-    (0, n.jsx)(c.Text, {
+    (0, n.jsx)(o.Text, {
       variant: 'text-xs/semibold',
       children: A.Z.Messages.GAME_PROFILE_OFFICIAL_GUILD
     }),
     (0, n.jsxs)('div', {
-      className: l()(N.row, N.gapMd),
+      className: r()(N.row, N.gapMd),
       children: [
         (0, n.jsx)('img', {
           className: N.icon,
           src: E,
           alt: A.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({
-            guildName: r.name
+            guildName: l.name
           })
         }),
         (0, n.jsxs)('div', {
-          className: l()(N.gapNone),
+          className: r()(N.gapNone),
           children: [
-            (0, n.jsx)(c.Text, {
+            (0, n.jsx)(o.Text, {
               variant: 'text-sm/normal',
-              children: r.name
+              children: l.name
             }),
-            null != t && (0, n.jsx)(c.Text, {
+            null != t && (0, n.jsx)(o.Text, {
               variant: 'text-xxs/normal',
               children: A.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                 count: t
@@ -70,10 +70,10 @@ return (0, n.jsxs)('div', {
         })
       ]
     }),
-    (0, n.jsx)(c.Button, {
-      color: c.ButtonColors.PRIMARY,
+    (0, n.jsx)(o.Button, {
+      color: o.ButtonColors.PRIMARY,
       onClick: () => {
-        s(d.as.JoinOfficialServer), o.Z.dispatch({
+        s(u.as.JoinOfficialServer), c.Z.dispatch({
           type: 'INVITE_MODAL_OPEN',
           invite: a,
           code: a.code,
@@ -89,12 +89,12 @@ a.Z = e => {
   let {
 websites: a,
 trackClick: s
-  } = e, r = null == a ? void 0 : a.find(e => {
+  } = e, l = null == a ? void 0 : a.find(e => {
 let {
   category: a
 } = e;
 return a === i.p.DISCORD;
-  }), [o, _] = t.useState();
+  }), [c, _] = t.useState();
   if (t.useEffect(() => {
   let e = async e => {
     let a = e.split('/').pop();
@@ -103,55 +103,55 @@ return a === i.p.DISCORD;
       !0 !== e.banned && _(e.invite);
     }
   };
-  null != r && e(r.url);
-}, [r]), null == a || 0 === a.length)
+  null != l && e(l.url);
+}, [l]), null == a || 0 === a.length)
 return null;
-  let u = a.filter(e => {
+  let d = a.filter(e => {
 let {
   category: a
 } = e;
 return O.includes(a);
   }).sort((e, a) => e.category - a.category);
   return (0, n.jsxs)('div', {
-className: l()(N.column),
+className: r()(N.column),
 children: [
-  null != o && (0, n.jsx)(R, {
-    invite: o,
+  null != c && (0, n.jsx)(R, {
+    invite: c,
     trackClick: s
   }),
   (0, n.jsxs)('div', {
-    className: l()(N.column, N.gapSm),
+    className: r()(N.column, N.gapSm),
     children: [
-      (0, n.jsx)(c.Text, {
+      (0, n.jsx)(o.Text, {
         variant: 'text-xs/semibold',
         children: A.Z.Messages.GAME_PROFILE_LINKS
       }),
       (0, n.jsx)('div', {
         className: N.row,
-        children: u.map(e => {
+        children: d.map(e => {
           let a, {
               category: t,
-              url: r
+              url: l
             } = e,
-            l = null;
+            r = null;
           switch (t) {
             case i.p.OFFICIAL:
-              l = (0, n.jsx)(c.GlobeEarthIcon, {}), a = d.as.WebsiteLink;
+              r = (0, n.jsx)(o.GlobeEarthIcon, {}), a = u.as.WebsiteLink;
               break;
             case i.p.TWITTER:
-              l = (0, n.jsx)(c.XNeutralIcon, {}), a = d.as.XLink;
+              r = (0, n.jsx)(o.XNeutralIcon, {}), a = u.as.XLink;
               break;
             case i.p.YOUTUBE:
-              a = d.as.YouTubeLink, l = (0, n.jsx)(c.YouTubeIcon, {});
+              a = u.as.YouTubeLink, r = (0, n.jsx)(o.YouTubeIcon, {});
           }
-          return null != l ? (0, n.jsx)(c.Anchor, {
-            href: r,
+          return null != r ? (0, n.jsx)(o.Anchor, {
+            href: l,
             onClick: () => {
               s(a);
             },
             target: '_blank',
-            children: l
-          }, r) : null;
+            children: r
+          }, l) : null;
         })
       })
     ]

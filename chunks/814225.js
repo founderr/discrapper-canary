@@ -1,6 +1,6 @@
 s.d(a, {
   P3: function() {
-return u;
+return d;
   },
   ZK: function() {
 return _;
@@ -12,163 +12,163 @@ return I;
 var n = s(913527),
   t = s.n(n);
 if (12633 == s.j)
-  var r = s(266067);
+  var l = s(266067);
 s(358085), s(73346);
-var l = s(981631),
+var r = s(981631),
   i = s(689938);
-let c = {},
-  o = {},
+let o = {},
+  c = {},
   E = Object.freeze({
 ALL: -1,
-...l.EKQ
+...r.EKQ
   });
 
 function _(e) {
-  let a = (0, r.LX)(e, {
-path: l.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug')
+  let a = (0, l.LX)(e, {
+path: r.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug')
   });
   return null != a ? a.params.skuId : null;
 }
 
-function u(e) {
+function d(e) {
   switch (e) {
-case l.EKQ.ACTION:
+case r.EKQ.ACTION:
   return i.Z.Messages.APPLICATION_STORE_GENRE_ACTION;
-case l.EKQ.ACTION_RPG:
+case r.EKQ.ACTION_RPG:
   return i.Z.Messages.APPLICATION_STORE_GENRE_ACTION_RPG;
-case l.EKQ.BRAWLER:
+case r.EKQ.BRAWLER:
   return i.Z.Messages.APPLICATION_STORE_GENRE_BRAWLER;
-case l.EKQ.HACK_AND_SLASH:
+case r.EKQ.HACK_AND_SLASH:
   return i.Z.Messages.APPLICATION_STORE_GENRE_HACK_AND_SLASH;
-case l.EKQ.PLATFORMER:
+case r.EKQ.PLATFORMER:
   return i.Z.Messages.APPLICATION_STORE_GENRE_PLATFORMER;
-case l.EKQ.STEALTH:
+case r.EKQ.STEALTH:
   return i.Z.Messages.APPLICATION_STORE_GENRE_STEALTH;
-case l.EKQ.SURVIVAL:
+case r.EKQ.SURVIVAL:
   return i.Z.Messages.APPLICATION_STORE_GENRE_SURVIVAL;
-case l.EKQ.ADVENTURE:
+case r.EKQ.ADVENTURE:
   return i.Z.Messages.APPLICATION_STORE_GENRE_ADVENTURE;
-case l.EKQ.ACTION_ADVENTURE:
+case r.EKQ.ACTION_ADVENTURE:
   return i.Z.Messages.APPLICATION_STORE_GENRE_ACTION_ADVENTURE;
-case l.EKQ.METROIDVANIA:
+case r.EKQ.METROIDVANIA:
   return i.Z.Messages.APPLICATION_STORE_GENRE_METROIDVANIA;
-case l.EKQ.OPEN_WORLD:
+case r.EKQ.OPEN_WORLD:
   return i.Z.Messages.APPLICATION_STORE_GENRE_OPEN_WORLD;
-case l.EKQ.PSYCHOLOGICAL_HORROR:
+case r.EKQ.PSYCHOLOGICAL_HORROR:
   return i.Z.Messages.APPLICATION_STORE_GENRE_PSYCHOLOGICAL_HORROR;
-case l.EKQ.SANDBOX:
+case r.EKQ.SANDBOX:
   return i.Z.Messages.APPLICATION_STORE_GENRE_SANDBOX;
-case l.EKQ.SURVIVAL_HORROR:
+case r.EKQ.SURVIVAL_HORROR:
   return i.Z.Messages.APPLICATION_STORE_GENRE_SURVIVAL_HORROR;
-case l.EKQ.VISUAL_NOVEL:
+case r.EKQ.VISUAL_NOVEL:
   return i.Z.Messages.APPLICATION_STORE_GENRE_VISUAL_NOVEL;
-case l.EKQ.DRIVING_RACING:
+case r.EKQ.DRIVING_RACING:
   return i.Z.Messages.APPLICATION_STORE_GENRE_DRIVING_RACING;
-case l.EKQ.VEHICULAR_COMBAT:
+case r.EKQ.VEHICULAR_COMBAT:
   return i.Z.Messages.APPLICATION_STORE_GENRE_VEHICULAR_COMBAT;
-case l.EKQ.MASSIVELY_MULTIPLAYER:
+case r.EKQ.MASSIVELY_MULTIPLAYER:
   return i.Z.Messages.APPLICATION_STORE_GENRE_MASSIVELY_MULTIPLAYER;
-case l.EKQ.MMORPG:
+case r.EKQ.MMORPG:
   return i.Z.Messages.APPLICATION_STORE_GENRE_MMORPG;
-case l.EKQ.ROLE_PLAYING:
+case r.EKQ.ROLE_PLAYING:
   return i.Z.Messages.APPLICATION_STORE_GENRE_ROLE_PLAYING;
-case l.EKQ.DUNGEON_CRAWLER:
+case r.EKQ.DUNGEON_CRAWLER:
   return i.Z.Messages.APPLICATION_STORE_GENRE_DUNGEON_CRAWLER;
-case l.EKQ.ROGUELIKE:
+case r.EKQ.ROGUELIKE:
   return i.Z.Messages.APPLICATION_STORE_GENRE_ROGUELIKE;
-case l.EKQ.SHOOTER:
+case r.EKQ.SHOOTER:
   return i.Z.Messages.APPLICATION_STORE_GENRE_SHOOTER;
-case l.EKQ.LIGHT_GUN:
+case r.EKQ.LIGHT_GUN:
   return i.Z.Messages.APPLICATION_STORE_GENRE_LIGHT_GUN;
-case l.EKQ.SHOOT_EM_UP:
+case r.EKQ.SHOOT_EM_UP:
   return i.Z.Messages.APPLICATION_STORE_GENRE_SHOOT_EM_UP;
-case l.EKQ.FPS:
+case r.EKQ.FPS:
   return i.Z.Messages.APPLICATION_STORE_GENRE_FPS;
-case l.EKQ.DUAL_JOYSTICK_SHOOTER:
+case r.EKQ.DUAL_JOYSTICK_SHOOTER:
   return i.Z.Messages.APPLICATION_STORE_GENRE_DUAL_JOYSTICK_SHOOTER;
-case l.EKQ.SIMULATION:
+case r.EKQ.SIMULATION:
   return i.Z.Messages.APPLICATION_STORE_GENRE_SIMULATION;
-case l.EKQ.FLIGHT_SIMULATOR:
+case r.EKQ.FLIGHT_SIMULATOR:
   return i.Z.Messages.APPLICATION_STORE_GENRE_FLIGHT_SIMULATOR;
-case l.EKQ.TRAIN_SIMULATOR:
+case r.EKQ.TRAIN_SIMULATOR:
   return i.Z.Messages.APPLICATION_STORE_GENRE_TRAIN_SIMULATOR;
-case l.EKQ.LIFE_SIMULATOR:
+case r.EKQ.LIFE_SIMULATOR:
   return i.Z.Messages.APPLICATION_STORE_GENRE_LIFE_SIMULATOR;
-case l.EKQ.FISHING:
+case r.EKQ.FISHING:
   return i.Z.Messages.APPLICATION_STORE_GENRE_FISHING;
-case l.EKQ.SPORTS:
+case r.EKQ.SPORTS:
   return i.Z.Messages.APPLICATION_STORE_GENRE_SPORTS;
-case l.EKQ.BASEBALL:
+case r.EKQ.BASEBALL:
   return i.Z.Messages.APPLICATION_STORE_GENRE_BASEBALL;
-case l.EKQ.BASKETBALL:
+case r.EKQ.BASKETBALL:
   return i.Z.Messages.APPLICATION_STORE_GENRE_BASKETBALL;
-case l.EKQ.BILLIARDS:
+case r.EKQ.BILLIARDS:
   return i.Z.Messages.APPLICATION_STORE_GENRE_BILLIARDS;
-case l.EKQ.BOWLING:
+case r.EKQ.BOWLING:
   return i.Z.Messages.APPLICATION_STORE_GENRE_BOWLING;
-case l.EKQ.BOXING:
+case r.EKQ.BOXING:
   return i.Z.Messages.APPLICATION_STORE_GENRE_BOXING;
-case l.EKQ.FOOTBALL:
+case r.EKQ.FOOTBALL:
   return i.Z.Messages.APPLICATION_STORE_GENRE_FOOTBALL;
-case l.EKQ.GOLF:
+case r.EKQ.GOLF:
   return i.Z.Messages.APPLICATION_STORE_GENRE_GOLF;
-case l.EKQ.HOCKEY:
+case r.EKQ.HOCKEY:
   return i.Z.Messages.APPLICATION_STORE_GENRE_HOCKEY;
-case l.EKQ.SKATEBOARDING_SKATING:
+case r.EKQ.SKATEBOARDING_SKATING:
   return i.Z.Messages.APPLICATION_STORE_GENRE_SKATEBOARDING_SKATING;
-case l.EKQ.SNOWBOARDING_SKIING:
+case r.EKQ.SNOWBOARDING_SKIING:
   return i.Z.Messages.APPLICATION_STORE_GENRE_SNOWBOARDING_SKIING;
-case l.EKQ.SOCCER:
+case r.EKQ.SOCCER:
   return i.Z.Messages.APPLICATION_STORE_GENRE_SOCCER;
-case l.EKQ.TRACK_FIELD:
+case r.EKQ.TRACK_FIELD:
   return i.Z.Messages.APPLICATION_STORE_GENRE_TRACK_FIELD;
-case l.EKQ.SURFING_WAKEBOARDING:
+case r.EKQ.SURFING_WAKEBOARDING:
   return i.Z.Messages.APPLICATION_STORE_GENRE_SURFING_WAKEBOARDING;
-case l.EKQ.WRESTLING:
+case r.EKQ.WRESTLING:
   return i.Z.Messages.APPLICATION_STORE_GENRE_WRESTLING;
-case l.EKQ.STRATEGY:
+case r.EKQ.STRATEGY:
   return i.Z.Messages.APPLICATION_STORE_GENRE_STRATEGY;
-case l.EKQ.FOUR_X:
+case r.EKQ.FOUR_X:
   return i.Z.Messages.APPLICATION_STORE_GENRE_FOUR_X;
-case l.EKQ.ARTILLERY:
+case r.EKQ.ARTILLERY:
   return i.Z.Messages.APPLICATION_STORE_GENRE_ARTILLERY;
-case l.EKQ.RTS:
+case r.EKQ.RTS:
   return i.Z.Messages.APPLICATION_STORE_GENRE_RTS;
-case l.EKQ.TOWER_DEFENSE:
+case r.EKQ.TOWER_DEFENSE:
   return i.Z.Messages.APPLICATION_STORE_GENRE_TOWER_DEFENSE;
-case l.EKQ.TURN_BASED_STRATEGY:
+case r.EKQ.TURN_BASED_STRATEGY:
   return i.Z.Messages.APPLICATION_STORE_GENRE_TURN_BASED_STRATEGY;
-case l.EKQ.WARGAME:
+case r.EKQ.WARGAME:
   return i.Z.Messages.APPLICATION_STORE_GENRE_WARGAME;
-case l.EKQ.MOBA:
+case r.EKQ.MOBA:
   return i.Z.Messages.APPLICATION_STORE_GENRE_MOBA;
-case l.EKQ.FIGHTING:
+case r.EKQ.FIGHTING:
   return i.Z.Messages.APPLICATION_STORE_GENRE_FIGHTING;
-case l.EKQ.PUZZLE:
+case r.EKQ.PUZZLE:
   return i.Z.Messages.APPLICATION_STORE_GENRE_PUZZLE;
-case l.EKQ.CARD_GAME:
+case r.EKQ.CARD_GAME:
   return i.Z.Messages.APPLICATION_STORE_GENRE_CARD_GAME;
-case l.EKQ.EDUCATION:
+case r.EKQ.EDUCATION:
   return i.Z.Messages.APPLICATION_STORE_GENRE_EDUCATION;
-case l.EKQ.FITNESS:
+case r.EKQ.FITNESS:
   return i.Z.Messages.APPLICATION_STORE_GENRE_FITNESS;
-case l.EKQ.GAMBLING:
+case r.EKQ.GAMBLING:
   return i.Z.Messages.APPLICATION_STORE_GENRE_GAMBLING;
-case l.EKQ.MUSIC_RHYTHM:
+case r.EKQ.MUSIC_RHYTHM:
   return i.Z.Messages.APPLICATION_STORE_GENRE_MUSIC_RHYTHM;
-case l.EKQ.PARTY_MINI_GAME:
+case r.EKQ.PARTY_MINI_GAME:
   return i.Z.Messages.APPLICATION_STORE_GENRE_PARTY_MINI_GAME;
-case l.EKQ.PINBALL:
+case r.EKQ.PINBALL:
   return i.Z.Messages.APPLICATION_STORE_GENRE_PINBALL;
-case l.EKQ.TRIVIA_BOARD_GAME:
+case r.EKQ.TRIVIA_BOARD_GAME:
   return i.Z.Messages.APPLICATION_STORE_GENRE_TRIVIA_BOARD_GAME;
-case l.EKQ.TACTICAL:
+case r.EKQ.TACTICAL:
   return i.Z.Messages.APPLICATION_STORE_GENRE_TACTICAL;
-case l.EKQ.INDIE:
+case r.EKQ.INDIE:
   return i.Z.Messages.APPLICATION_STORE_GENRE_INDIE;
-case l.EKQ.ARCADE:
+case r.EKQ.ARCADE:
   return i.Z.Messages.APPLICATION_STORE_GENRE_ARCADE;
-case l.EKQ.POINT_AND_CLICK:
+case r.EKQ.POINT_AND_CLICK:
   return i.Z.Messages.APPLICATION_STORE_GENRE_POINT_AND_CLICK;
 default:
   return i.Z.Messages.APPLICATION_STORE_GENRE_MISCELLANEOUS;
@@ -177,9 +177,9 @@ default:
 Object.keys(E).forEach(e => {
   let a = e.toLowerCase().replace(/_/g, '-'),
 s = E[e];
-  c[a] = s, o[s] = a;
+  o[a] = s, c[s] = a;
 });
-let d = [
+let u = [
   [
 'YYYY-MM-DD',
 'MMMM DD, Y'
@@ -211,10 +211,10 @@ preorderApproximateReleaseDate: s
 return a.format('MMMM DD');
   if (null == s)
 return null;
-  for (let e = 0; e < d.length; e++) {
-let [a, n] = d[e], r = t()(s, a, !0);
-if (r.isValid())
-  return r.format(n);
+  for (let e = 0; e < u.length; e++) {
+let [a, n] = u[e], l = t()(s, a, !0);
+if (l.isValid())
+  return l.format(n);
   }
   return s;
 }

@@ -14,14 +14,14 @@ function l(e) {
 message: t,
 usernameHook: l,
 compact: o
-  } = e, c = (0, s.ZP)(t), d = l(c);
+  } = e, c = (0, s.ZP)(t), u = l(c);
   return (0, i.jsx)(a.Z, {
 icon: n(819373),
 timestamp: t.timestamp,
 compact: o,
 children: r.Z.Messages.SYSTEM_MESSAGE_CHANNEL_ICON_CHANGE_HOOK.format({
   username: c.nick,
-  usernameHook: d
+  usernameHook: u
 })
   });
 }

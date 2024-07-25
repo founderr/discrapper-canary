@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250);
@@ -12,13 +12,13 @@ var a = n(692547),
   o = n(689938),
   c = n(118496);
 
-function d(e) {
+function u(e) {
   let {
 message: t,
 compact: n,
-usernameHook: d
-  } = e, u = (0, l.ZP)(t), _ = d(u), E = o.Z.Messages.SYSTEM_MESSAGE_STAGE_START_HOOK.format({
-username: u.nick,
+usernameHook: u
+  } = e, d = (0, l.ZP)(t), _ = u(d), E = o.Z.Messages.SYSTEM_MESSAGE_STAGE_START_HOOK.format({
+username: d.nick,
 usernameHook: _,
 topic: t.content
   });

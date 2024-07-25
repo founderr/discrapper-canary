@@ -10,8 +10,8 @@ var i = n(470079),
   l = n(455199),
   o = n(833592),
   c = n(140155),
-  d = n(774807),
-  u = n(490897);
+  u = n(774807),
+  d = n(490897);
 let _ = e => {
 let {
   isFocused: t,
@@ -19,7 +19,7 @@ let {
   isDesktop: _,
   withMentions: E = !1,
   initialPageSize: I
-} = e, m = (0, a.e7)([d.Z], () => d.Z.shouldReload()), T = i.useRef(!1), [h, N] = i.useState(!1), {
+} = e, m = (0, a.e7)([u.Z], () => u.Z.shouldReload()), T = i.useRef(!1), [h, N] = i.useState(!1), {
   initialized: f,
   loading: C,
   items: p,
@@ -41,7 +41,7 @@ let {
   roleFilter: l.Z.roleFilter
 }));
 i.useEffect(() => ((0, o.Vk)(!0), () => (0, o.Vk)(!1)), []), i.useEffect(() => {
-  f && t && (0, s.FT)(u.W.NOTIFICATION_CENTER);
+  f && t && (0, s.FT)(d.W.NOTIFICATION_CENTER);
 }, [
   t,
   f

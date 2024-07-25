@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250),
@@ -11,11 +11,11 @@ var i = n(735250),
   o = n(774863),
   c = n(689938);
 
-function d(e) {
+function u(e) {
   let {
 messageId: t,
 channelId: n
-  } = e, d = (0, s.e7)([o.Z], () => o.Z.canSubmitFpReport(t)), u = a.useCallback(() => {
+  } = e, u = (0, s.e7)([o.Z], () => o.Z.canSubmitFpReport(t)), d = a.useCallback(() => {
 (0, l.e)(n, t);
   }, [
 n,
@@ -24,8 +24,8 @@ t
   return (0, i.jsx)(r.Button, {
 size: r.Button.Sizes.MEDIUM,
 color: r.Button.Colors.PRIMARY,
-onClick: u,
-disabled: !d,
+onClick: d,
+disabled: !u,
 children: c.Z.Messages.SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE
   });
 }

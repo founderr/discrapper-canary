@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(913527),
   o = n.n(l),
   c = n(722770),
-  d = n(320285),
-  u = n(688813),
+  u = n(320285),
+  d = n(688813),
   _ = n(442837),
   E = n(692547),
   I = n(481060),
@@ -53,23 +53,23 @@ notificationType: a
   } = (0, C.FL)(t);
   switch (a) {
 case C.nj:
-case d.p.RAID:
+case u.p.RAID:
   return (0, i.jsx)(w, {
     message: t,
     compact: n
   });
-case d.p.MENTION_RAID:
+case u.p.MENTION_RAID:
   return (0, i.jsx)(V, {
     message: t,
     compact: n
   });
-case d.p.ACTIVITY_ALERTS_ENABLED:
-  return (0, i.jsx)(F, {
+case u.p.ACTIVITY_ALERTS_ENABLED:
+  return (0, i.jsx)(G, {
     message: t,
     compact: n
   });
-case d.p.INTERACTION_BLOCKED:
-  return (0, i.jsx)(G, {
+case u.p.INTERACTION_BLOCKED:
+  return (0, i.jsx)(F, {
     compact: n
   });
 default:
@@ -106,7 +106,7 @@ content: (0, i.jsx)(I.Text, {
   });
 }
 
-function G(e) {
+function F(e) {
   let {
 compact: t
   } = e;
@@ -133,14 +133,14 @@ content: (0, i.jsx)(I.Text, {
   });
 }
 
-function F(e) {
+function G(e) {
   var t;
   let {
 message: n,
 compact: s
   } = e, r = M.default.getUser((0, C.Sw)(n)), l = null === (t = x.Z.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, c = null != l && null != r ? O.ZP.getMember(l, r.id) : null, {
-avatarSrc: d,
-avatarDecorationSrc: u,
+avatarSrc: u,
+avatarDecorationSrc: d,
 eventHandlers: _
   } = (0, R.Z)({
 user: r,
@@ -193,8 +193,8 @@ subheader: (0, i.jsxs)('div', {
                 (0, i.jsx)('div', {
                   ..._,
                   children: (0, i.jsx)(I.Avatar, {
-                    src: d,
-                    avatarDecoration: u,
+                    src: u,
+                    avatarDecoration: d,
                     size: I.AvatarSizes.SIZE_16,
                     'aria-label': 'TODO'
                   })
@@ -239,7 +239,7 @@ message: s,
 compact: r
   } = e, {
 joinAttempts: l,
-raidDatetime: d,
+raidDatetime: u,
 dmsSent: m,
 raidType: T,
 resolvedReason: g
@@ -252,7 +252,7 @@ null != e && (0, p.kW)(s.id, e);
   }, [
 s.id,
 S
-  ]), L = T === u.$.DM_RAID, P = L ? I.CircleExclamationPointIcon : I.ChatAlertIcon;
+  ]), L = T === d.$.DM_RAID, P = L ? I.CircleExclamationPointIcon : I.ChatAlertIcon;
   return (0, i.jsx)(H, {
 compact: r,
 header: (0, i.jsxs)(a.Fragment, {
@@ -285,23 +285,23 @@ subheader: (0, i.jsxs)('div', {
         dmsSent: m
       })
     }),
-    null != d && (0, i.jsxs)(a.Fragment, {
+    null != u && (0, i.jsxs)(a.Fragment, {
       children: [
         (0, i.jsx)(y, {}),
         (0, i.jsx)(I.Text, {
           variant: 'text-xs/medium',
           color: 'text-normal',
-          children: o()(d).fromNow()
+          children: o()(u).fromNow()
         })
       ]
     })
   ]
 }),
-content: null != d ? (0, i.jsx)(I.Text, {
+content: null != u ? (0, i.jsx)(I.Text, {
   variant: 'text-md/normal',
   color: 'text-muted',
   children: j.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({
-    dateTime: d.toLocaleString(j.Z.getLocale(), f.pQ)
+    dateTime: u.toLocaleString(j.Z.getLocale(), f.pQ)
   })
 }) : null,
 footerButtons: (0, i.jsxs)('div', {
@@ -392,7 +392,7 @@ compact: s
   } = e, r = null === (t = x.Z.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, {
 raidDatetime: l,
 decisionId: c,
-suspiciousMentionActivityUntil: d
+suspiciousMentionActivityUntil: u
   } = (0, C.FL)(n);
   return (0, i.jsx)(H, {
 compact: s,
@@ -428,7 +428,7 @@ footerButtons: (0, i.jsxs)('div', {
     (0, i.jsx)(I.Button, {
       onClick: function() {
         null != r && null != c && (0, g.UE)(r, c, () => {
-          (0, m.c)(d), (0, g.T9)(r);
+          (0, m.c)(u), (0, g.T9)(r);
         });
       },
       color: I.Button.Colors.LINK,
@@ -524,8 +524,8 @@ eventHandlers: {
   onMouseLeave: c
 }
   } = (0, P.m)(!0), {
-notificationType: u
-  } = (0, C.FL)(a), _ = null == u || u === d.p.RAID;
+notificationType: d
+  } = (0, C.FL)(a), _ = null == d || d === u.p.RAID;
   return (0, i.jsx)('div', {
 onMouseEnter: o,
 onMouseLeave: c,

@@ -11,14 +11,14 @@ t.Z = function(e) {
 className: t,
 autoplay: n,
 quest: a,
-questContent: d,
-taskDetails: u,
+questContent: u,
+taskDetails: d,
 location: _
   } = e, E = (0, l.D)({
 quest: a,
-taskDetails: u,
+taskDetails: d,
 location: _,
-questContent: d
+questContent: u
   });
   return (0, i.jsxs)('div', {
 className: s()(c.wrapper, t),
@@ -30,7 +30,7 @@ children: [
     autoplay: n,
     className: c.rewardTile,
     quest: a,
-    questContent: d
+    questContent: u
   }),
   (0, i.jsx)(r.Text, {
     className: c.instructions,

@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(869765),
   o = n(699516),
   c = n(937889),
-  d = n(739566),
-  u = n(267128),
+  u = n(739566),
+  d = n(267128),
   _ = n(981631);
 let E = a.memo(function(e) {
   let {
@@ -25,8 +25,8 @@ shouldFilterKeywords: m
   }).content : null, [
 I,
 m
-  ]), h = (0, s.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]), N = (0, d.Uj)(I), f = (0, d.Uj)(t);
-  return (0, i.jsx)(u.Z, {
+  ]), h = (0, s.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]), N = (0, u.Uj)(I), f = (0, u.Uj)(t);
+  return (0, i.jsx)(d.Z, {
 repliedAuthor: N,
 baseAuthor: f,
 baseMessage: t,

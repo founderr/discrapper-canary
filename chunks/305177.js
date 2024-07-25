@@ -6,8 +6,8 @@ var i = n(735250),
   l = n(748780),
   o = n(873546),
   c = n(846519),
-  d = n(215569),
-  u = n(481060),
+  u = n(215569),
+  d = n(481060),
   _ = n(679056),
   E = n(810090),
   I = n(243592);
@@ -57,10 +57,10 @@ return null == n || a ? (0, i.jsx)(l.Z.div, {
   className: r()(s ? I.loadingContainer : null, e),
   style: this.getImageStyle(),
   children: [
-    s ? (0, i.jsx)(u.Spinner, {
+    s ? (0, i.jsx)(d.Spinner, {
       className: I.spinner,
       itemClassName: I.spinnerItem,
-      type: u.Spinner.Type.PULSING_ELLIPSIS,
+      type: d.Spinner.Type.PULSING_ELLIPSIS,
       animated: !0
     }) : null,
     this.renderMedia()
@@ -133,7 +133,7 @@ return null == t ? (0, i.jsx)(T, {
   interval: 2000,
   className: I.slideshowWrapper,
   disable: !e,
-  children: (0, i.jsx)(d.W, {
+  children: (0, i.jsx)(u.W, {
     children: this.renderSlideItem(t)
   })
 });
@@ -190,7 +190,7 @@ super(...e), m(this, 'state', {
     splashClassName: _,
     splashPlaceholderClassName: m,
     renderMediaOverlay: h
-  } = this.props, N = c ? u.VoiceXIcon : u.VoiceNormalIcon;
+  } = this.props, N = c ? d.VoiceXIcon : d.VoiceNormalIcon;
   return (0, i.jsxs)(a.Fragment, {
     children: [
       o.tq ? null : (0, i.jsx)(E.Z, {
@@ -206,14 +206,14 @@ super(...e), m(this, 'state', {
           type: 'video/mp4'
         })
       }),
-      (0, i.jsx)(d.W, {
+      (0, i.jsx)(u.W, {
         children: l && e ? null : (0, i.jsx)(T, {
           className: r()(I.splashPlaceholder, m),
           src: n,
           title: s
         }, 0)
       }),
-      (0, i.jsx)(u.Clickable, {
+      (0, i.jsx)(d.Clickable, {
         className: r()(I.muteContainer, {
           [I.muteContainerPlaying]: l && e,
           [I.muteContainerMediaOverlay]: null != h

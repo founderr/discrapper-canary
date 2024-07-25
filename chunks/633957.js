@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(2052),
   o = n(317381),
   c = n(638880),
-  d = n(146936),
-  u = n(527805),
+  u = n(146936),
+  d = n(527805),
   _ = n(952561),
   E = n(513202),
   I = n(884338),
@@ -45,17 +45,17 @@ currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity()
   })), k = (0, s.Wu)([p.default], () => {
 var e;
 return Array.from(null !== (e = null == y ? void 0 : y.userIds) && void 0 !== e ? e : []).map(e => p.default.getUser(e)).filter(g.lm);
-  }), G = (0, s.e7)([C.Z], () => {
+  }), F = (0, s.e7)([C.Z], () => {
 var e;
 let t = null == y ? void 0 : y.userIds.values().next().value;
 return null == t ? null : null === (e = C.Z.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
-  }), F = a.useMemo(() => {
+  }), G = a.useMemo(() => {
 let e = new h.Z(n);
 return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.wT), e;
-  }, [n]), w = (0, u.s5)({
+  }, [n]), w = (0, d.s5)({
 userId: U,
 channelId: O,
-application: F
+application: G
   }), V = null == y, H = (0, S.NL)({
 embeddedActivity: y,
 joinability: w,
@@ -64,7 +64,7 @@ channel: b
   }), Y = async () => {
 L(!0);
 try {
-  V ? await (0, d.Z)({
+  V ? await (0, u.Z)({
     targetApplicationId: n.id,
     currentEmbeddedApplication: D,
     channelId: O,
@@ -101,7 +101,7 @@ children: (0, i.jsxs)('div', {
         variant: 'text-md/medium',
         lineClamp: 1,
         color: 'text-normal',
-        children: null != G ? G : R.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
+        children: null != F ? F : R.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
       })
     }),
     (0, i.jsxs)('div', {

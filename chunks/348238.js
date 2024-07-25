@@ -1,6 +1,6 @@
 n.d(t, {
   $3: function() {
-return G;
+return F;
   },
   Go: function() {
 return y;
@@ -24,7 +24,7 @@ return O;
 return x;
   },
   Xn: function() {
-return F;
+return G;
   },
   bb: function() {
 return k;
@@ -52,8 +52,8 @@ var i = n(735250),
   l = n(904245),
   o = n(144144),
   c = n(40851),
-  d = n(592125),
-  u = n(323873),
+  u = n(592125),
+  d = n(323873),
   _ = n(375954),
   E = n(594174),
   I = n(585483),
@@ -154,9 +154,9 @@ if (!h.isPlatformEmbedded) {
   if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode)))
     return;
 }
-let a = d.Z.getChannel(o),
+let a = u.Z.getChannel(o),
   c = _.Z.getMessage(o, E),
-  I = u.Z.isEditing(o, E);
+  I = d.Z.isEditing(o, E);
 if (null != a && null != c && !I)
   s({
     contextMenu: !0
@@ -211,7 +211,7 @@ l
 function b(e, t) {
   return a.useCallback(n => {
 let i = E.default.getUser(e),
-  a = d.Z.getChannel(t);
+  a = u.Z.getChannel(t);
 null != i && null != a && (n.stopPropagation(), (0, f.Pv)(n, i, a));
   }, [
 e,
@@ -222,7 +222,7 @@ t
 function j(e, t, n) {
   return a.useCallback(i => {
 let a = E.default.getUser(e),
-  s = d.Z.getChannel(t);
+  s = u.Z.getChannel(t);
 null != a && null != s && (i.stopPropagation(), (0, f._j)(i, {
   user: a,
   channel: s,
@@ -238,7 +238,7 @@ n
 function U(e, t) {
   return a.useCallback(n => {
 let i = E.default.getUser(e),
-  a = d.Z.getChannel(t);
+  a = u.Z.getChannel(t);
 null != i && null != a && (n.stopPropagation(), (0, f.xS)(n, i, a.guild_id));
   }, [
 e,
@@ -300,7 +300,7 @@ hasFocused: s
   };
 }
 
-function G(e, t) {
+function F(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   return a.useCallback(() => {
 null != t && (n ? s.Z.show({
@@ -322,7 +322,7 @@ t
   ]);
 }
 
-function F(e, t) {
+function G(e, t) {
   let n = A('interactionData', e, t);
   return a.useCallback(e => {
 e.preventDefault(), e.stopPropagation(), n();

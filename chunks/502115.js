@@ -3,10 +3,10 @@ n.d(t, {
 return o;
   },
   HL: function() {
-return d;
+return u;
   },
   Yc: function() {
-return u;
+return d;
   },
   xe: function() {
 return c;
@@ -50,7 +50,7 @@ children: r.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_REQUALIFIED
   });
 }
 
-function d(e) {
+function u(e) {
   let {
 message: t,
 compact: n
@@ -70,7 +70,7 @@ children: r.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNI
   });
 }
 
-function u(e) {
+function d(e) {
   let {
 message: t,
 compact: n

@@ -4,8 +4,8 @@ return i;
   }
 }), n(47120), n(653041);
 var i, a, s, r, l, o, c = n(442837),
-  d = n(570140),
-  u = n(973616),
+  u = n(570140),
+  d = n(973616),
   _ = n(911955);
 (s = i || (i = {}))[s.NOT_FETCHED = 0] = 'NOT_FETCHED', s[s.FETCHING = 1] = 'FETCHING', s[s.FETCHED = 2] = 'FETCHED', s[s.FETCH_FAILED = 3] = 'FETCH_FAILED';
 let E = new Map(),
@@ -46,7 +46,7 @@ o = 'PrivateChannelIntegrationStore', (l = 'displayName') in(r = N) ? Object.def
   configurable: !0,
   writable: !0
 }) : r[l] = o;
-let C = new N(d.Z, {
+let C = new N(u.Z, {
   LOGOUT() {
 E.clear();
   },
@@ -68,7 +68,7 @@ T = 1;
 let {
   applications: t
 } = e;
-m = t.map(u.Z.createFromServer).sort((e, t) => e.name.localeCompare(t.name)), T = 2;
+m = t.map(d.Z.createFromServer).sort((e, t) => e.name.localeCompare(t.name)), T = 2;
   },
   APPLICATIONS_SHELF_FETCH_FAIL() {
 T = 3;

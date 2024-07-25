@@ -3,7 +3,7 @@ n.d(t, {
 return p;
   },
   dL: function() {
-return h;
+return f;
   },
   hC: function() {
 return E;
@@ -22,12 +22,12 @@ var l = n(392711),
   o = n(594174),
   d = n(823379),
   _ = n(41837),
-  f = n(981631);
+  h = n(981631);
 n(689938);
 
-function h(e) {
+function f(e) {
   let t = c.Z.getChannel(e);
-  return (null == t ? void 0 : t.type) === f.d4z.DM ? {
+  return (null == t ? void 0 : t.type) === h.d4z.DM ? {
 type: 'user',
 id: t.recipients[0]
   } : {
@@ -89,7 +89,7 @@ if (null != t)
 function A(e, t) {
   return e.filter(e => {
 var n, l;
-return (0, d.lm)(e) && (e.type === i.h8.HEADER || (0, _.o)(e) && (n = e, l = t, n.type === i.h8.USER ? l || null != c.Z.getDMChannelFromUserId(n.record.id) : n.type === i.h8.GROUP_DM || n.record.type !== f.d4z.GUILD_FORUM && n.record.type !== f.d4z.GUILD_MEDIA && u.Z.can(f.Plq.VIEW_CHANNEL, n.record) && u.Z.can(f.Plq.SEND_MESSAGES, n.record)));
+return (0, d.lm)(e) && (e.type === i.h8.HEADER || (0, _.o)(e) && (n = e, l = t, n.type === i.h8.USER ? l || null != c.Z.getDMChannelFromUserId(n.record.id) : n.type === i.h8.GROUP_DM || n.record.type !== h.d4z.GUILD_FORUM && n.record.type !== h.d4z.GUILD_MEDIA && u.Z.can(h.Plq.VIEW_CHANNEL, n.record) && u.Z.can(h.Plq.SEND_MESSAGES, n.record)));
   });
 }
 
@@ -107,12 +107,12 @@ includeMissingDMs: _
   } = e;
   if (n)
 return I(A(t, _));
-  let f = null != o && o.length > 0 ? o.map(e => S(e)) : [],
-h = r.Z.getChannelHistory(),
-E = h.length > 0 ? h.map(e => (0, s.Z)(e)) : [],
+  let h = null != o && o.length > 0 ? o.map(e => S(e)) : [],
+f = r.Z.getChannelHistory(),
+E = f.length > 0 ? f.map(e => (0, s.Z)(e)) : [],
 g = i.length > 0 ? i.map(e => (0, s.Z)(e.id)) : [],
 p = A([
-  ...f,
+  ...h,
   null != c ? S(c) : null,
   ...E,
   ...g

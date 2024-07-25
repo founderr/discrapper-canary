@@ -6,8 +6,8 @@ var i = n(735250),
   l = n(442837),
   o = n(481060),
   c = n(749210),
-  d = n(367907),
-  u = n(231053),
+  u = n(367907),
+  d = n(231053),
   _ = n(697568),
   E = n(183023),
   I = n(524444),
@@ -91,7 +91,7 @@ let {
   sticker: n,
   channel: s,
   refreshPositionKey: r
-} = e, [c, u, _] = (0, l.Wu)([A.Z], () => [
+} = e, [c, d, _] = (0, l.Wu)([A.Z], () => [
   A.Z.getStickerPack(n.pack_id),
   !A.Z.hasLoadedStickerPacks,
   A.Z.isPremiumPack(n.pack_id)
@@ -103,14 +103,14 @@ let {
 let m = (0, S.Sd)(s);
 return (a.useEffect(() => {
   r();
-}, [u]), a.useEffect(() => {
+}, [d]), a.useEffect(() => {
   p.default.track(M.rMx.OPEN_POPOUT, {
     type: M.jXE.STICKER_POPOUT,
     guild_id: s.getGuildId(),
     sticker_pack_id: n.pack_id,
-    ...(0, d.v_)(s)
+    ...(0, u.v_)(s)
   });
-}, [n.pack_id]), u || null == c) ? (0, i.jsx)(I.SE, {
+}, [n.pack_id]), d || null == c) ? (0, i.jsx)(I.SE, {
   className: Z.popoutLoader
 }) : (0, i.jsxs)(I.W_, {
   className: Z.popoutContent,
@@ -161,8 +161,8 @@ let t, {
   b = g.ZP.canUseCustomStickersEverywhere(D),
   y = (0, l.e7)([h.Z], () => h.Z.getGuild(n.guild_id)),
   B = null != y,
-  [k, G] = a.useState(!1),
-  [F, w] = a.useState(null),
+  [k, F] = a.useState(!1),
+  [G, w] = a.useState(null),
   V = a.useMemo(() => ({
     page: null != s.guild_id ? M.ZY5.GUILD_CHANNEL : M.ZY5.DM_CHANNEL,
     section: M.jXE.STICKER_POPOUT
@@ -171,7 +171,7 @@ let t, {
     current: H
   } = a.useRef({
     guild_id: s.getGuildId(),
-    ...(0, d.v_)(s)
+    ...(0, u.v_)(s)
   });
 a.useEffect(() => {
   (async () => {
@@ -246,7 +246,7 @@ return (a.useEffect(() => {
       if (!W && !B)
         return;
       let t = (null !== (e = null == S ? void 0 : S.stickers) && void 0 !== e ? e : []).slice(0, 13).filter(e => e.id !== n.id).slice(0, 12),
-        a = null != S ? u.JO.createFromDiscoverableGuild(S) : u.JO.createFromGuildRecord(y);
+        a = null != S ? d.JO.createFromDiscoverableGuild(S) : d.JO.createFromGuildRecord(y);
       return (0, i.jsxs)('div', {
         className: P.guildSection,
         children: [
@@ -263,7 +263,7 @@ return (a.useEffect(() => {
             children: [
               (0, i.jsx)(o.Clickable, {
                 onClick: () => {
-                  C(), G(!k);
+                  C(), F(!k);
                 },
                 className: P.showMoreEmojis,
                 children: (0, i.jsxs)(f.Z, {
@@ -300,7 +300,7 @@ return (a.useEffect(() => {
                     } = t;
                     return (0, i.jsx)('div', {
                       className: r()(P.otherEmoji, {
-                        [Z.nonInteractingSticker]: null != F && F !== e.id
+                        [Z.nonInteractingSticker]: null != G && G !== e.id
                       }),
                       onMouseEnter: () => {
                         null == n || n(), w(e.id);
@@ -314,7 +314,7 @@ return (a.useEffect(() => {
                         enlargeOnInteraction: !0,
                         enlargeWithName: !1,
                         enlargeScaleFactor: 2,
-                        isInteracting: F === e.id,
+                        isInteracting: G === e.id,
                         sticker: e
                       })
                     }, e.id);

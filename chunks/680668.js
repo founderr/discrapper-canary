@@ -11,8 +11,8 @@ var a = n(533800),
   l = n(955415),
   o = n(131704),
   c = n(630388),
-  d = n(267642),
-  u = n(411198),
+  u = n(267642),
+  d = n(411198),
   _ = n(277707),
   E = n(358595),
   I = n(981631),
@@ -46,12 +46,12 @@ B = null !== (h = null == S ? void 0 : S.hasFeature(I.oNc.HUB)) && void 0 !== h 
   if (null == S) {
 if (null == A.guild)
   return (0, i.jsx)(E.Z, {});
-S = u.Qs(A.guild);
-let e = (0, d.rF)(A.guild.premium_subscription_count, A.guild.id);
+S = d.Qs(A.guild);
+let e = (0, u.rF)(A.guild.premium_subscription_count, A.guild.id);
 S.premiumTier = e;
   }
   let k = D ? p : g,
-G = (0, _.e)({
+F = (0, _.e)({
   isVoiceChannel: j,
   isOwnInvite: O,
   isGuest: y,
@@ -110,7 +110,7 @@ children: [
     guild: S
   }),
   (0, i.jsx)(l.Z.Header, {
-    text: G,
+    text: F,
     extra: C
   }),
   (0, i.jsxs)(l.Z.Body, {

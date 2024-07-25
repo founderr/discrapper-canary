@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(512722),
   o = n.n(l),
   c = n(772848),
-  d = n(831209),
-  u = n(399606),
+  u = n(831209),
+  d = n(399606),
   _ = n(481060),
   E = n(607070),
   I = n(100527),
@@ -45,14 +45,14 @@ embedUrl: l,
 message: y,
 channel: B
   } = e, k = (0, Z.J)(l, y), {
-setPopout: G
-  } = (0, p.Z)(y.id, D.d$), F = (0, C.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = a.useState(!1), [W, K] = a.useState((null == k ? void 0 : k.coverImage) == null), z = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, u.e7)([
+setPopout: F
+  } = (0, p.Z)(y.id, D.d$), G = (0, C.qo)(y, B, F, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = a.useState(!1), [W, K] = a.useState((null == k ? void 0 : k.coverImage) == null), z = (0, d.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, d.e7)([
 R.ZP,
 x.default
   ], () => {
 var e;
 return R.ZP.isMember(null == k ? void 0 : k.guildId, null === (e = x.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
-  }, [k]), q = (0, u.e7)([R.ZP], () => (null == k ? void 0 : k.authorId) != null ? R.ZP.getMember(k.guildId, k.authorId) : null), [X, J] = a.useMemo(() => {
+  }, [k]), q = (0, d.e7)([R.ZP], () => (null == k ? void 0 : k.authorId) != null ? R.ZP.getMember(k.guildId, k.authorId) : null), [X, J] = a.useMemo(() => {
 var e;
 return [
   null !== (e = null == q ? void 0 : q.colorString) && void 0 !== e ? e : 'inherit',
@@ -106,8 +106,8 @@ ec = () => {
   if (!$.enabled)
     et(e => !e);
 },
-ed = k.coverImage,
-eu = null != ed && (0, f.d$)(ed);
+eu = k.coverImage,
+ed = null != eu && (0, f.d$)(eu);
   return (0, i.jsxs)('div', {
 className: j.postPreviewContainer,
 children: [
@@ -122,18 +122,18 @@ children: [
         className: r()(j.thumbnail, {
           [j.spoiler]: k.shouldSpoiler
         }),
-        onContextMenu: F,
+        onContextMenu: G,
         onError: () => K(!0)
       }) : (0, i.jsx)(h.Z, {
-        src: !(V && (w || H)) && eu ? ''.concat(ed, '?format=png') : ed,
-        backgroundSrc: ''.concat(ed, '?format=png'),
+        src: !(V && (w || H)) && ed ? ''.concat(eu, '?format=png') : eu,
+        backgroundSrc: ''.concat(eu, '?format=png'),
         alt: b.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         aspectRatio: 16 / 9,
         className: r()(j.thumbnail, {
           [j.spoiler]: k.shouldSpoiler
         }),
         imageChildClassName: j.thumbnailImage,
-        onContextMenu: F,
+        onContextMenu: G,
         onError: () => K(!0)
       })),
       null != k.coverImageOverlayText && (0, i.jsx)(_.Clickable, {
@@ -144,7 +144,7 @@ children: [
             className: j.thumbnailOverlayCta,
             children: [
               (0, i.jsx)(L.Z, {
-                color: d.Z.WHITE
+                color: u.Z.WHITE
               }),
               (0, i.jsx)(_.Text, {
                 variant: 'text-sm/semibold',

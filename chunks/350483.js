@@ -13,13 +13,13 @@ var l = t(392711),
   c = t(585483),
   C = t(475468),
   I = t(981631),
-  S = t(490897);
+  A = t(490897);
 
-function A(e, n) {
+function S(e, n) {
   var t, i;
   return [{
   resourceId: e,
-  type: S.W.GUILD_EVENT
+  type: A.W.GUILD_EVENT
 },
 ...(t = e, i = n, t === I.ME ? _.Z.getPrivateChannelIds() : (0, E.Z)(t, {
   withVoiceChannels: i,
@@ -31,7 +31,7 @@ n.Z = o().throttle(function(e, n) {
   var l, o;
   let E, {
   channelPredicate: _ = () => !0,
-  guildPredicate: S = () => !0,
+  guildPredicate: A = () => !0,
   guildFeaturePredicate: T = () => !1,
   ensureChatIsVisible: L = () => !1,
   withVoiceChannels: N = !1
@@ -47,10 +47,10 @@ g = function(e, n) {
   return n > 0 ? t.slice(i).concat(t.slice(0, i), e) : (t.splice(i, 0, e), t.slice(i + 1).concat(t.slice(0, i + 1)));
 }(O, e),
 D = e > 0 ? 0 : g.length - 1,
-f = A(O, N),
+f = S(O, N),
 R = f.indexOf(h) + e;
   for (; null != O && '' !== O;) {
-if (E = f[R], S(O))
+if (E = f[R], A(O))
   for (; null != E && '' !== E;) {
     if ('string' == typeof E) {
       if (_(O, E))
@@ -75,7 +75,7 @@ if (E = f[R], S(O))
   }
 if (D += e, null == (O = g[D]) || '' === O)
   break;
-f = A(O, N), R = e < 0 ? f.length - 1 : 0;
+f = S(O, N), R = e < 0 ? f.length - 1 : 0;
   }
   c.S.dispatch(I.CkL.SHAKE_APP, {
 duration: 200,

@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(512722),
   o = n.n(l),
   c = n(442837),
-  d = n(477690),
-  u = n(481060),
+  u = n(477690),
+  d = n(481060),
   _ = n(447543),
   E = n(317381),
   I = n(778569),
@@ -34,9 +34,9 @@ var i = n(735250),
   Z = n(245335),
   P = n(689938),
   D = n(556849);
-let b = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
-  j = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
-  U = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
+let b = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+  j = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
+  U = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 
 function y(e) {
   let {
@@ -51,7 +51,7 @@ children: [
   (0, i.jsx)('i', {
     className: D.statusOnline
   }),
-  (0, i.jsx)(u.Text, {
+  (0, i.jsx)(d.Text, {
     variant: 'text-xs/normal',
     className: D.count,
     children: P.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
@@ -65,7 +65,7 @@ children: [
   (0, i.jsx)('i', {
     className: D.statusOffline
   }),
-  (0, i.jsx)(u.Text, {
+  (0, i.jsx)(d.Text, {
     variant: 'text-xs/normal',
     className: D.count,
     children: P.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
@@ -103,7 +103,7 @@ return (0, i.jsxs)('div', {
       color: 'currentColor'
     }) : null,
     (0, i.jsx)(O.Z, {
-      children: (0, i.jsx)(u.Text, {
+      children: (0, i.jsx)(d.Text, {
         variant: 'text-xs/normal',
         children: P.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
           channelName: t.name,
@@ -120,7 +120,7 @@ className: r()(D.channel, {
   [D.ended]: s
 }),
 children: (0, i.jsx)(O.Z, {
-  children: (0, i.jsx)(u.Text, {
+  children: (0, i.jsx)(d.Text, {
     variant: 'text-xs/normal',
     children: P.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
       guildName: n.name
@@ -133,82 +133,82 @@ children: (0, i.jsx)(O.Z, {
 function k(e) {
   var t, n;
   let s, l, {
-  invite: d,
+  invite: u,
   getAcceptInviteContext: C
 } = e,
 {
   approximate_member_count: O,
   approximate_presence_count: M,
   target_type: k,
-  target_application: G
-} = d;
-  o()(k === Z.Iq.EMBEDDED_APPLICATION && null != G, 'invalid application invite');
-  let F = a.useRef(null),
+  target_application: F
+} = u;
+  o()(k === Z.Iq.EMBEDDED_APPLICATION && null != F, 'invalid application invite');
+  let G = a.useRef(null),
 [w, V] = a.useState(!1),
 [H, Y] = a.useState(!1);
   a.useEffect(() => {
 let e = new ResizeObserver(() => function() {
     var e;
-    let t = null === (e = F.current) || void 0 === e ? void 0 : e.offsetWidth;
+    let t = null === (e = G.current) || void 0 === e ? void 0 : e.offsetWidth;
     null != t && (V(t < U + j), Y(t <= 2 * b));
   }()),
-  t = F.current;
+  t = G.current;
 return null != t && e.observe(t), () => {
   e.disconnect();
 };
   }, [
-F,
+G,
 V,
 Y
   ]);
-  let W = (0, c.e7)([A.Z], () => null != d.guild ? A.Z.getGuild(d.guild.id) : null, [d]),
-K = (0, f.Z)([G.id])[0],
+  let W = (0, c.e7)([A.Z], () => null != u.guild ? A.Z.getGuild(u.guild.id) : null, [u]),
+K = (0, f.Z)([F.id])[0],
 z = (0, c.e7)([E.ZP], () => {
   var e;
-  return (null == d ? void 0 : d.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === G.id;
+  return (null == u ? void 0 : u.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(u.channel.id)) || void 0 === e ? void 0 : e.applicationId) === F.id;
 }),
 Q = (0, c.e7)([E.ZP], () => {
   var e;
-  return ((null === (e = d.channel) || void 0 === e ? void 0 : e.id) != null ? E.ZP.getEmbeddedActivitiesForChannel(d.channel.id) : []).some(e => {
+  return ((null === (e = u.channel) || void 0 === e ? void 0 : e.id) != null ? E.ZP.getEmbeddedActivitiesForChannel(u.channel.id) : []).some(e => {
     let {
       applicationId: t
     } = e;
-    return G.id === t;
+    return F.id === t;
   });
 }),
-q = S.Z.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
+q = S.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
 X = (0, c.e7)([R.Z], () => null != q && R.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]),
 {
   analyticsLocations: J
 } = (0, N.ZP)(h.Z.INVITE_EMBED),
 $ = (0, I.Z)({
-  applicationId: G.id,
+  applicationId: F.id,
   size: b,
   names: ['embedded_cover']
 }),
-ee = (0, c.Wu)([E.ZP], () => null != q ? E.ZP.getEmbeddedActivitiesForChannel(q.id).filter(e => e.applicationId === G.id).flatMap(e => Array.from(e.userIds)) : [], [
+ee = (0, c.Wu)([E.ZP], () => null != q ? E.ZP.getEmbeddedActivitiesForChannel(q.id).filter(e => e.applicationId === F.id).flatMap(e => Array.from(e.userIds)) : [], [
   q,
-  G.id
+  F.id
 ]),
 et = (0, c.Wu)([x.default], () => ee.map(e => x.default.getUser(e)), [ee]),
-en = d.state === L.r2o.ACCEPTING,
+en = u.state === L.r2o.ACCEPTING,
 ei = null != W;
   if (null == W) {
-if (null == d.guild)
+if (null == u.guild)
   return (0, i.jsx)(v.Z, {});
-W = new g.ZP(d.guild);
+W = new g.ZP(u.guild);
   }
   let ea = ei && !X || ei && z,
 es = () => {
   _.Z.acceptInviteAndTransitionToInviteChannel({
-    inviteKey: d.code,
+    inviteKey: u.code,
     context: C('Invite Button Embed'),
     analyticsLocations: J
   });
 };
-  return (ei && z && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), l = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START, null == d.code || '' === d.code) ? null : (0, i.jsxs)('div', {
+  return (ei && z && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), l = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START, null == u.code || '' === u.code) ? null : (0, i.jsxs)('div', {
 className: D.container,
-ref: F,
+ref: G,
 children: [
   (0, i.jsx)('div', {
     className: r()(D.imgContainer, {
@@ -237,10 +237,10 @@ children: [
       (0, i.jsxs)('div', {
         className: D.info,
         children: [
-          (0, i.jsx)(u.FormTitle, {
+          (0, i.jsx)(d.FormTitle, {
             children: ei ? P.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_TITLE_INVITED_TO_JOIN : P.Z.Messages.INVITE_BUTTON_TITLE_INVITED
           }),
-          (0, i.jsx)(u.Heading, {
+          (0, i.jsx)(d.Heading, {
             className: D.heading,
             variant: 'heading-xl/semibold',
             children: null == K ? void 0 : K.name
@@ -264,11 +264,11 @@ children: [
               [D.large]: w
             }),
             children: [
-              (0, i.jsx)(u.Text, {
+              (0, i.jsx)(d.Text, {
                 variant: 'text-xs/medium',
                 children: P.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED
               }),
-              (0, i.jsx)(u.Text, {
+              (0, i.jsx)(d.Text, {
                 variant: 'text-xs/medium',
                 children: P.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_START
               })
@@ -291,14 +291,14 @@ children: [
                   max: 4
                 })
               }) : null,
-              (0, i.jsx)(u.Tooltip, {
+              (0, i.jsx)(d.Tooltip, {
                 text: s,
                 children: e => {
                   let {
                     onClick: t,
                     ...n
                   } = e;
-                  return (0, i.jsx)(u.Button, {
+                  return (0, i.jsx)(d.Button, {
                     className: D.actionButton,
                     onClick: () => {
                       es(), null == t || t();
@@ -307,7 +307,7 @@ children: [
                     ...n,
                     submitting: en,
                     disabled: ea,
-                    color: u.ButtonColors.GREEN,
+                    color: d.ButtonColors.GREEN,
                     children: l
                   });
                 }

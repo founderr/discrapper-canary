@@ -3,13 +3,13 @@ t.d(n, {
 return L;
   },
   pd: function() {
-return S;
+return A;
   },
   uX: function() {
 return N;
   },
   wk: function() {
-return A;
+return S;
   }
 });
 var i = t(350483),
@@ -35,7 +35,7 @@ return a.ZP.hasUnread(e, n);
 let t = E.Z.getChannel(n);
 return !!(null != t && d.TPd.GUILD_VOCAL.has(t.type)) && (!!(a.ZP.getMentionCount(n) > 0) || u.Z.getVoiceChannelId() === n && a.ZP.getUnreadCount(n) > 0);
   },
-  S = {
+  A = {
 binds: ['alt+shift+down'],
 comboKeysBindGlobal: !0,
 action() {
@@ -50,7 +50,7 @@ action() {
   }), !1;
 }
   },
-  A = {
+  S = {
 binds: ['alt+shift+up'],
 comboKeysBindGlobal: !0,
 action() {

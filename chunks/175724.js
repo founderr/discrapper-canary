@@ -16,8 +16,8 @@ var i = t(374470),
   c = t(913663),
   C = t(268350),
   I = t(433355),
-  S = t(592125),
-  A = t(703558),
+  A = t(592125),
+  S = t(703558),
   T = t(323873),
   L = t(375954),
   N = t(306680),
@@ -55,7 +55,7 @@ if (f.S.hasSubscribers(R.CkL.SEARCH_RESULTS_CLOSE))
   return f.S.dispatch(R.CkL.SEARCH_RESULTS_CLOSE), !1;
 let n = h.Z.getGuildId(),
   t = O.Z.getChannelId(n),
-  o = S.Z.getChannel(t),
+  o = A.Z.getChannel(t),
   r = I.ZP.getSection(t, null == o ? void 0 : o.isDM()) === R.ULH.SIDEBAR_CHAT ? I.ZP.getSidebarState(t) : null,
   u = (null == r ? void 0 : r.type) === _.tI.VIEW_THREAD || (null == r ? void 0 : r.type) === _.tI.VIEW_CHANNEL ? r.channelId : null;
 if (!1 === P(t) || !1 === P(u))
@@ -74,8 +74,8 @@ if (T.Z.isEditingAny(e))
   return o.Z.endEditMessage(e), !1;
 if (null != s.Z.getPendingReply(e))
   return (0, u.A6)(e), !1;
-if (null != c.Z.getStickerPreview(e, A.d.ChannelMessage))
-  return (0, C.qB)(e, A.d.ChannelMessage), !1;
+if (null != c.Z.getStickerPreview(e, S.d.ChannelMessage))
+  return (0, C.qB)(e, S.d.ChannelMessage), !1;
   }
 }
 

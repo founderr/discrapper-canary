@@ -15,9 +15,9 @@ message: t,
 usernameHook: l,
 compact: o,
 guildId: c
-  } = e, d = (0, r.ZP)(t), u = l(d), _ = s.Z.getWelcomeMessageKind(c), E = s.Z.getSystemMessageUserJoin(t.id, _).format({
-username: d.nick,
-usernameHook: u
+  } = e, u = (0, r.ZP)(t), d = l(u), _ = s.Z.getWelcomeMessageKind(c), E = s.Z.getSystemMessageUserJoin(t.id, _).format({
+username: u.nick,
+usernameHook: d
   });
   return (0, i.jsx)(a.Z, {
 icon: n(570111),

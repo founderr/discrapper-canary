@@ -10,8 +10,8 @@ var i = n(470079),
   l = n(314897),
   o = n(592125),
   c = n(271383),
-  d = n(430824),
-  u = n(914010),
+  u = n(430824),
+  d = n(914010),
   _ = n(594174),
   E = n(158222),
   I = n(312146),
@@ -40,17 +40,17 @@ p = t.hasFlag(h.iLy.IS_CROSSPOST),
   canAccess: O
 } = (0, a.cj)([
   m.Z,
-  d.Z,
+  u.Z,
   o.Z,
   _.default,
-  u.Z
+  d.Z
 ], () => {
   var e;
   let t = null === (e = m.Z.getMediaPostEmbed(null == N ? void 0 : N.threadId)) || void 0 === e ? void 0 : e.media,
-    n = d.Z.getGuild(null == N ? void 0 : N.guildId),
+    n = u.Z.getGuild(null == N ? void 0 : N.guildId),
     i = o.Z.getChannel(null == N ? void 0 : N.channelId),
     a = _.default.getUser(null == t ? void 0 : t.author_id),
-    s = u.Z.getGuildId(),
+    s = d.Z.getGuildId(),
     l = null != i && (0, r.YO)(i);
   return {
     rawMediaPostEmbedData: t,

@@ -3,7 +3,7 @@ n.d(t, {
 return c;
   },
   OR: function() {
-return d;
+return u;
   },
   aL: function() {
 return o;
@@ -23,7 +23,7 @@ className: s()(e.className, {
   [l.embedHorizontal]: e.isHorizontal
 })
   }),
-  d = e => {
+  u = e => {
 let {
   isHorizontal: t
 } = e;

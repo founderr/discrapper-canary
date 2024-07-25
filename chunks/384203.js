@@ -15,10 +15,10 @@ function c(e) {
   let {
 code: t,
 messageData: n
-  } = e, [c, d] = t.split('/'), u = a.Z.getChannel(d), _ = s.Z.getGuild(c);
-  return null != u && u.isGuildVocal() && null != _ && r.Z.can(o.Plq.VIEW_CHANNEL, u) && r.Z.can(o.Plq.CONNECT, u) ? (0, i.jsx)(l.Z, {
+  } = e, [c, u] = t.split('/'), d = a.Z.getChannel(u), _ = s.Z.getGuild(c);
+  return null != d && d.isGuildVocal() && null != _ && r.Z.can(o.Plq.VIEW_CHANNEL, d) && r.Z.can(o.Plq.CONNECT, d) ? (0, i.jsx)(l.Z, {
 guild: _,
-channel: u,
+channel: d,
 messageData: n
   }) : null;
 }

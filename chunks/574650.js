@@ -7,8 +7,8 @@ var a = n(120356),
   l = n(442837),
   o = n(481060),
   c = n(430824),
-  d = n(914010),
-  u = n(693546),
+  u = n(914010),
+  d = n(693546),
   _ = n(305325),
   E = n(246364),
   I = n(937111),
@@ -19,7 +19,7 @@ var a = n(120356),
   f = n(581611);
 t.Z = () => {
   var e, t;
-  let a = (0, l.e7)([d.Z], () => d.Z.getGuildId(), []),
+  let a = (0, l.e7)([u.Z], () => u.Z.getGuildId(), []),
 C = (0, l.e7)([c.Z], () => c.Z.getGuild(a), [a]),
 p = (0, l.e7)([I.Z], () => null != a ? I.Z.getRequest(a) : null, [a]),
 g = (0, r.TH)(),
@@ -41,7 +41,7 @@ case E.wB.SUBMITTED:
       header: h.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
       confirmText: h.Z.Messages.CONFIRM,
       cancelText: h.Z.Messages.CANCEL,
-      onConfirm: () => u.Z.removeGuildJoinRequest(C.id),
+      onConfirm: () => d.Z.removeGuildJoinRequest(C.id),
       confirmButtonColor: o.Button.Colors.BRAND,
       ...e,
       children: (0, i.jsx)(o.Text, {

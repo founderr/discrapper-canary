@@ -15,8 +15,8 @@ initialPlanId: t,
 activeSubscription: l,
 trialId: o,
 trialFooterMessageOverride: c,
-onClose: d,
-analyticsObject: u,
+onClose: u,
+analyticsObject: d,
 analyticsLocation: _,
 analyticsLocations: E,
 analyticsSubscriptionType: I,
@@ -65,10 +65,10 @@ return n => {
         ...p,
         initialPlanId: t,
         onClose: e => {
-          C(), null == d || d(e);
+          C(), null == u || u(e);
         },
         analyticsLocations: E,
-        analyticsObject: u,
+        analyticsObject: d,
         analyticsLocation: _,
         analyticsSubscriptionType: I,
         skuId: f,
@@ -84,7 +84,7 @@ return n => {
 };
   }, {
 onCloseCallback: () => {
-  null == d || d(!1);
+  null == u || u(!1);
 },
 onCloseRequest: r.dG4
   });

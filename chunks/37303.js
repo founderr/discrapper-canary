@@ -13,8 +13,8 @@ var i = n(735250),
   l = n(686777),
   o = n(113434),
   c = n(569984),
-  d = n(497505),
-  u = n(602667),
+  u = n(497505),
+  d = n(602667),
   _ = n(87894),
   E = n(372113),
   I = n(206044),
@@ -63,15 +63,15 @@ initiallyExpanded: !x || r || (0, _.iM)({
   quest: t
 })
   }), Z = null != R ? R : _.U0;
-  return (0, i.jsx)(u.A, {
+  return (0, i.jsx)(d.A, {
 questOrQuests: t,
 questContent: n,
 questContentPosition: c,
-trackGuildAndChannelMetadata: n === d.jn.QUESTS_EMBED,
+trackGuildAndChannelMetadata: n === u.jn.QUESTS_EMBED,
 children: e => (0, i.jsx)(i.Fragment, {
   children: (0, i.jsx)(s.animated.div, {
     style: {
-      maxHeight: n === d.jn.QUESTS_EMBED ? void 0 : O.to({
+      maxHeight: n === u.jn.QUESTS_EMBED ? void 0 : O.to({
         range: [
           0,
           1

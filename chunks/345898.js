@@ -11,16 +11,16 @@ renderTagline: n,
 renderActions: a,
 renderMedia: o,
 className: c,
-isHorizontal: d = !1
+isHorizontal: u = !1
   } = e;
   return (0, i.jsxs)('div', {
 className: s()(l.tile, {
-  [l.tileHorizontal]: d
+  [l.tileHorizontal]: u
 }, c),
 children: [
   (0, i.jsx)('div', {
     className: s()(l.media, {
-      [l.mediaHorizontal]: d
+      [l.mediaHorizontal]: u
     }),
     children: null == o ? void 0 : o()
   }),

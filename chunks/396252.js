@@ -11,8 +11,8 @@ var a = n(120356),
   l = n(481060),
   o = n(385499),
   c = n(430824),
-  d = n(702346),
-  u = n(739566),
+  u = n(702346),
+  d = n(739566),
   _ = n(464891),
   E = n(83561),
   I = n(674563),
@@ -26,7 +26,7 @@ message: n,
 compact: a,
 usernameHook: h,
 channel: N
-  } = e, f = (0, r.e7)([c.Z], () => c.Z.getGuild(N.guild_id)), C = (0, u.ZP)(n), p = h(C), {
+  } = e, f = (0, r.e7)([c.Z], () => c.Z.getGuild(N.guild_id)), C = (0, d.ZP)(n), p = h(C), {
 avatarSrc: g,
 eventHandlers: {
   onMouseEnter: S,
@@ -36,7 +36,7 @@ eventHandlers: {
   return (0, i.jsx)('div', {
 onMouseEnter: S,
 onMouseLeave: A,
-children: (0, i.jsx)(d.Z, {
+children: (0, i.jsx)(u.Z, {
   className: s()(T.mainContainer, {
     [T.compact]: a
   }),

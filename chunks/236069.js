@@ -15,17 +15,17 @@ function o(e) {
 guildId: t,
 analyticsLocations: n,
 analyticsLocation: o
-  } = e, [c, d] = (0, s.ww)({
+  } = e, [c, u] = (0, s.ww)({
 guildId: t,
 analyticsLocations: n,
 analyticsLocation: o,
 openWithoutBackstack: !0
-  }), u = d ? r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE : r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE_NO_PERMS, _ = d ? r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE_CTA : r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_ACCOUNT_USERNAME_CTA;
+  }), d = u ? r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE : r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE_NO_PERMS, _ = u ? r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE_CTA : r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_ACCOUNT_USERNAME_CTA;
   return (0, i.jsxs)(a.Notice, {
 color: a.NoticeColors.CUSTOM,
 className: l.quarantineNotice,
 children: [
-  u,
+  d,
   (0, i.jsx)(a.NoticeButton, {
     onClick: c,
     children: _

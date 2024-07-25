@@ -1,6 +1,6 @@
 n.d(t, {
   s: function() {
-return f;
+return h;
   }
 }), n(47120);
 var l = n(470079),
@@ -14,12 +14,12 @@ var l = n(470079),
   d = n(601565),
   _ = n(41837);
 
-function f(e) {
+function h(e) {
   let {
 searchText: t,
 targetDestination: n,
-selectedDestinations: f,
-originDestination: h,
+selectedDestinations: h,
+originDestination: f,
 includeMissingDMs: E = !1
   } = e, g = (0, a.e7)([c.default], () => c.default.getId()), S = l.useMemo(() => ({
 searchOptions: {
@@ -43,7 +43,7 @@ return null != n && _.M.includes(n) && (l = [n], a = n), {
 };
   }(t), [t]), {
 queryMode: C
-  } = m, [L, b] = l.useState(null != f ? f : []);
+  } = m, [N, L] = l.useState(null != h ? h : []);
   l.useLayoutEffect(() => {
 let {
   query: e,
@@ -52,12 +52,12 @@ let {
 I({
   query: e,
   resultTypes: t
-}), b(null != f ? f : []);
+}), L(null != h ? h : []);
   }, [
 I,
 m
   ]), (0, r.D)();
-  let N = (0, a.e7)([u.Z], () => u.Z.getFrequentlyWithoutFetchingLatest()),
+  let b = (0, a.e7)([u.Z], () => u.Z.getFrequentlyWithoutFetchingLatest()),
 T = (0, a.e7)([i.Z], () => i.Z.isConnected()),
 Z = '' !== A;
   return l.useMemo(() => (0, o.ZP)({
@@ -65,10 +65,10 @@ results: p,
 hasQuery: Z,
 queryMode: C,
 targetDestination: n,
-frequentChannels: N,
-selectedDestinations: f,
-pinnedDestinations: L,
-originDestination: h,
+frequentChannels: b,
+selectedDestinations: h,
+pinnedDestinations: N,
+originDestination: f,
 includeMissingDMs: E,
 isConnected: T
   }), [
@@ -76,10 +76,10 @@ p,
 Z,
 C,
 n,
+b,
+h,
 N,
 f,
-L,
-h,
 E,
 T
   ]);

@@ -9,16 +9,16 @@ SMALL: o.dropdownSmall,
 MEDIUM: o.dropdownMedium,
 LARGE: o.dropdownLarge
   },
-  d = e => {
+  u = e => {
 let {
   onDropdownClick: t,
   children: n,
   contentClassName: i,
   dropdownSize: a = 'MEDIUM',
-  ...d
+  ...u
 } = e;
 return (0, s.jsx)(r.Button, {
-  ...d,
+  ...u,
   children: (0, s.jsxs)(l.Z, {
     align: l.Z.Align.CENTER,
     children: [
@@ -46,4 +46,4 @@ return (0, s.jsx)(r.Button, {
   })
 });
   };
-d.DropdownSizes = a, d.Sizes = r.Button.Sizes, d.Colors = r.Button.Colors, d.Looks = r.Button.Looks, t.Z = d;
+u.DropdownSizes = a, u.Sizes = r.Button.Sizes, u.Colors = r.Button.Colors, u.Looks = r.Button.Looks, t.Z = u;

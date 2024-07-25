@@ -11,8 +11,8 @@ var a = n(120356),
   l = n(385499),
   o = n(702346),
   c = n(739566),
-  d = n(464891),
-  u = n(83561),
+  u = n(464891),
+  d = n(83561),
   _ = n(981631),
   E = n(674563),
   I = n(689938),
@@ -29,7 +29,7 @@ eventHandlers: {
   onMouseEnter: f,
   onMouseLeave: C
 }
-  } = (0, u.m)(!0), p = '' !== t.content ? new Date(t.content).toLocaleString(I.Z.getLocale(), {
+  } = (0, d.m)(!0), p = '' !== t.content ? new Date(t.content).toLocaleString(I.Z.getLocale(), {
 hour: 'numeric',
 minute: '2-digit',
 month: '2-digit',
@@ -43,7 +43,7 @@ children: (0, i.jsx)(o.Z, {
   className: s()(m.mainContainer, {
     [m.compact]: n
   }),
-  iconNode: n ? null : (0, i.jsx)(u.S, {
+  iconNode: n ? null : (0, i.jsx)(d.S, {
     src: N
   }),
   iconContainerClassName: m.iconContainer,
@@ -53,7 +53,7 @@ children: (0, i.jsx)(o.Z, {
       [m.compact]: n
     }),
     children: [
-      (0, i.jsx)(d.nD, {
+      (0, i.jsx)(u.nD, {
         message: t,
         messageClassname: m.spanCorrection,
         className: s()(m.usernameContainer, m.spanCorrection, {

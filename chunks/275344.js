@@ -13,12 +13,12 @@ var i = n(735250),
   l = n(399606),
   o = n(904245),
   c = n(375954),
-  d = n(918088);
-let u = a.createContext(void 0);
+  u = n(918088);
+let d = a.createContext(void 0);
 
 function _(e) {
   var t;
-  let n = null !== (t = a.useContext(u)) && void 0 !== t ? t : e;
+  let n = null !== (t = a.useContext(d)) && void 0 !== t ? t : e;
   return r()(null != n, 'Using PollReferenceMessageContext without a provider (or a fallback)'), n;
 }
 
@@ -39,7 +39,7 @@ t.id
 r,
 t.channel_id,
 t.id
-  ]), (0, i.jsx)(u.Provider, {
+  ]), (0, i.jsx)(d.Provider, {
 value: null != s ? s : t,
 children: n
   });
@@ -50,7 +50,7 @@ function I(e) {
 message: t,
 children: n
   } = e;
-  return (0, d.r8)(t) ? (0, i.jsx)(i.Fragment, {
+  return (0, u.r8)(t) ? (0, i.jsx)(i.Fragment, {
 children: n
   }) : (0, i.jsx)(E, {
 message: t,

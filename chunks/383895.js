@@ -1,15 +1,15 @@
 s(47120);
 var n = s(735250),
   t = s(470079),
-  r = s(120356),
-  l = s.n(r),
+  l = s(120356),
+  r = s.n(l),
   i = s(512722),
-  c = s.n(i),
-  o = s(442837),
+  o = s.n(i),
+  c = s(442837),
   E = s(481060),
   _ = s(493683),
-  u = s(220779),
-  d = s(142550),
+  d = s(220779),
+  u = s(142550),
   I = s(201133),
   A = s(693824),
   N = s(919394),
@@ -22,37 +22,37 @@ var n = s(735250),
   L = s(5192),
   M = s(810568),
   S = s(689938),
-  G = s(340672),
-  h = s(421377);
-let f = e => {
+  f = s(340672),
+  G = s(421377);
+let h = e => {
   let {
 entry: a,
 setGeneratedImage: s,
-nickName: r
-  } = e, [i, o] = t.useState();
+nickName: l
+  } = e, [i, c] = t.useState();
   return t.useEffect(() => {
 (async () => {
   let e = await _.Z.getOrEnsurePrivateChannel(a.author_id),
     n = T.Z.getChannel(e);
-  c()(null != n, 'DM channel cannot be null');
+  o()(null != n, 'DM channel cannot be null');
   let t = await (0, N.QC)(a, n, A.kH.Base64),
-    r = await (0, N.QC)(a, n, A.kH.CloudUpload);
-  o(t), s(r);
+    l = await (0, N.QC)(a, n, A.kH.CloudUpload);
+  c(t), s(l);
 })();
   }, [
 a,
 s
   ]), (0, n.jsxs)('div', {
-className: G.reactReplyPreviewWrapper,
+className: f.reactReplyPreviewWrapper,
 children: [
   (0, n.jsx)('div', {
-    className: l()(G.placeholderImage, null != i && G.in)
+    className: r()(f.placeholderImage, null != i && f.in)
   }),
   null != i && (0, n.jsx)('img', {
-    className: G.reactReplyPreview,
+    className: f.reactReplyPreview,
     src: i,
     alt: S.Z.Messages.GAME_PROFILE_GAME_REACT_REPLY_ALT.format({
-      userName: r,
+      userName: l,
       gameName: a.extra.game_name
     })
   })
@@ -63,14 +63,14 @@ a.Z = e => {
   let {
 entry: a,
 viewId: s,
-style: r = {},
+style: l = {},
 onClose: i
-  } = e, A = (0, o.e7)([
+  } = e, A = (0, c.e7)([
 g.Z,
 T.Z
-  ], () => T.Z.getChannel(g.Z.getChannelId())), N = (0, o.e7)([P.default], () => P.default.getUser(a.author_id)), {
-nick: x,
-avatar: p
+  ], () => T.Z.getChannel(g.Z.getChannelId())), N = (0, c.e7)([P.default], () => P.default.getUser(a.author_id)), {
+nick: v,
+avatar: C
   } = t.useMemo(() => {
 let e = L.ZP.getName(null == A ? void 0 : A.guild_id, null == A ? void 0 : A.id, N);
 return {
@@ -80,35 +80,35 @@ return {
   }, [
 N,
 A
-  ]), [C, v] = t.useState();
+  ]), [x, p] = t.useState();
   return null == N ? null : (0, n.jsxs)('div', {
-className: G.profileEntryCard,
-style: r,
+className: f.profileEntryCard,
+style: l,
 children: [
   (0, n.jsxs)('div', {
-    className: l()(h.row, h.gapSm),
-    style: r,
+    className: r()(G.row, G.gapSm),
+    style: l,
     children: [
       (0, n.jsx)('img', {
-        className: G.avatar,
-        src: p,
+        className: f.avatar,
+        src: C,
         alt: S.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({
-          userName: x
+          userName: v
         })
       }),
       (0, n.jsx)('div', {
-        className: l()(G.playerInfo),
+        className: r()(f.playerInfo),
         children: (0, n.jsxs)('div', {
-          className: l()(h.column, h.gapNone),
+          className: r()(G.column, G.gapNone),
           children: [
             (0, n.jsxs)(E.Text, {
               variant: 'text-sm/bold',
               color: 'text-normal',
               lineClamp: 1,
               children: [
-                x.slice(0, 18),
+                v.slice(0, 18),
                 ' ',
-                x.length > 18 ? '...' : ''
+                v.length > 18 ? '...' : ''
               ]
             }),
             (0, n.jsx)(R.Gk, {
@@ -123,8 +123,8 @@ children: [
     ]
   }),
   (0, n.jsx)('div', {
-    className: G.reactions,
-    children: (0, n.jsx)(u.ZP, {
+    className: f.reactions,
+    children: (0, n.jsx)(d.ZP, {
       showReply: !0,
       showReact: !1,
       onInteraction: async e => {
@@ -132,13 +132,13 @@ children: [
           interactionType: n,
           reply: t
         } = e;
-        if (n === d.L.ReplyBegin && (0, M.UE)({
+        if (n === u.L.ReplyBegin && (0, M.UE)({
             action: M.as.ClickMessageUser,
             applicationId: a.extra.application_id,
             gameName: a.extra.game_name,
             recipientUserId: a.author_id,
             viewId: s
-          }), n === d.L.ReplySubmit) {
+          }), n === u.L.ReplySubmit) {
           (0, M.UE)({
             action: M.as.SendMessageUser,
             applicationId: a.extra.application_id,
@@ -148,8 +148,8 @@ children: [
           });
           let e = await _.Z.getOrEnsurePrivateChannel(a.author_id),
             n = T.Z.getChannel(e);
-          c()(null != n, 'GameProfile ReactReply - DM channel cannot be null'), c()(null != C, 'GameProfile ReactReply - Reaction Image cannot be null'), (0, I.B)({
-            file: C,
+          o()(null != n, 'GameProfile ReactReply - DM channel cannot be null'), o()(null != x, 'GameProfile ReactReply - Reaction Image cannot be null'), (0, I.B)({
+            file: x,
             channel: n,
             altText: '',
             reply: null != t ? t : ''
@@ -157,14 +157,14 @@ children: [
         }
       },
       popoutProps: {
-        popoutBody: (0, n.jsx)(f, {
+        popoutBody: (0, n.jsx)(h, {
           entry: a,
-          setGeneratedImage: v,
-          nickName: x
+          setGeneratedImage: p,
+          nickName: v
         }),
         replyHeaderText: '',
         replyPlaceholder: S.Z.Messages.QUICK_DM_USER.format({
-          name: x
+          name: v
         })
       }
     })

@@ -6,8 +6,8 @@ return m;
 var i, a, s, r, l = n(735250),
   o = n(470079),
   c = n(120356),
-  d = n.n(c),
-  u = n(481060),
+  u = n.n(c),
+  d = n(481060),
   _ = n(689938),
   E = n(452822);
 
@@ -40,8 +40,8 @@ if (e || o)
 let I = -1 === i;
 return (0, l.jsxs)(l.Fragment, {
   children: [
-    (0, l.jsxs)(u.Clickable, {
-      className: d()(E.queryContainer, {
+    (0, l.jsxs)(d.Clickable, {
+      className: u()(E.queryContainer, {
         [E.focused]: I
       }),
       ...m(n, -1, I),
@@ -57,7 +57,7 @@ return (0, l.jsxs)(l.Fragment, {
         (0, l.jsx)('div', {
           className: E.queryShortcut,
           'aria-hidden': !0,
-          children: (0, l.jsx)(u.KeyCombo, {
+          children: (0, l.jsx)(d.KeyCombo, {
             shortcut: 'return',
             dim: !0,
             className: E.keyCombo
@@ -65,8 +65,8 @@ return (0, l.jsxs)(l.Fragment, {
         })
       ]
     }),
-    c && (0, l.jsxs)(u.Clickable, {
-      className: d()(E.queryContainer, {
+    c && (0, l.jsxs)(d.Clickable, {
+      className: u()(E.queryContainer, {
         [E.focused]: I
       }),
       ...m(n, -1, I),
@@ -80,7 +80,7 @@ return (0, l.jsxs)(l.Fragment, {
         (0, l.jsx)('div', {
           className: E.queryShortcut,
           'aria-hidden': !0,
-          children: (0, l.jsx)(u.KeyCombo, {
+          children: (0, l.jsx)(d.KeyCombo, {
             shortcut: 'shift+return',
             dim: !0,
             className: E.keyCombo

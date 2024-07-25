@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(665149),
   o = n(618158),
   c = n(819640),
-  d = n(131951),
-  u = n(924557),
+  u = n(131951),
+  d = n(924557),
   _ = n(435064),
   E = n(779618),
   I = n(175470),
@@ -23,9 +23,9 @@ function N(e) {
   let {
 canShowReminder: t = !1,
 className: N
-  } = e, f = (0, E.Z)(d.Z), {
+  } = e, f = (0, E.Z)(u.Z), {
 showClipsHeaderEntrypoint: C
-  } = u.NV.useExperiment({
+  } = d.NV.useExperiment({
 location: 'ClipsButton'
   }, {
 autoTrackExposure: !1

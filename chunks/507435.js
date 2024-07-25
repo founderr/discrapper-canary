@@ -8,8 +8,8 @@ var i, a, s = n(735250),
   l = n(120356),
   o = n.n(l),
   c = n(468194),
-  d = n(481060),
-  u = n(904245),
+  u = n(481060),
+  d = n(904245),
   _ = n(596454),
   E = n(377171),
   I = n(702346),
@@ -64,7 +64,7 @@ type: n,
   } = e;
   switch (n) {
 case 'NO_VOTES':
-  t = (0, s.jsx)(d.Text, {
+  t = (0, s.jsx)(u.Text, {
     variant: 'text-sm/semibold',
     color: 'text-normal',
     scaleFontToUserSetting: !0,
@@ -81,7 +81,7 @@ case 'VICTOR':
       (0, s.jsxs)('div', {
         className: f.victorAnswer,
         children: [
-          (0, s.jsx)(d.Text, {
+          (0, s.jsx)(u.Text, {
             variant: 'text-sm/semibold',
             color: 'text-normal',
             className: f.victorAnswerText,
@@ -96,7 +96,7 @@ case 'VICTOR':
           })
         ]
       }),
-      (0, s.jsxs)(d.Text, {
+      (0, s.jsxs)(u.Text, {
         variant: 'text-xs/medium',
         color: 'input-placeholder-text',
         scaleFontToUserSetting: !0,
@@ -116,13 +116,13 @@ case 'TIE':
   } = i;
   t = (0, s.jsxs)(s.Fragment, {
     children: [
-      (0, s.jsx)(d.Text, {
+      (0, s.jsx)(u.Text, {
         variant: 'text-sm/semibold',
         color: 'text-normal',
         scaleFontToUserSetting: !0,
         children: N.Z.Messages.POLL_RESULT_TIED
       }),
-      (0, s.jsxs)(d.Text, {
+      (0, s.jsxs)(u.Text, {
         variant: 'text-xs/medium',
         color: 'input-placeholder-text',
         scaleFontToUserSetting: !0,
@@ -171,12 +171,12 @@ children: [
   (0, s.jsx)(g, {
     ...a
   }),
-  null != i && (0, s.jsx)(d.Button, {
+  null != i && (0, s.jsx)(u.Button, {
     className: f.button,
-    size: d.Button.Sizes.TINY,
+    size: u.Button.Sizes.TINY,
     onClick: i,
-    color: d.Button.Colors.PRIMARY,
-    children: (0, s.jsx)(d.Text, {
+    color: u.Button.Colors.PRIMARY,
+    children: (0, s.jsx)(u.Text, {
       variant: 'text-sm/medium',
       color: 'none',
       scaleFontToUserSetting: !0,
@@ -194,7 +194,7 @@ message: n,
 compact: i,
 disableInteraction: a = !1
   } = e, l = n.embeds[0], o = r.useMemo(() => (0, m.Z)(l), [l]), _ = (0, c.aF)(null !== (t = null == o ? void 0 : o.questionText) && void 0 !== t ? t : '', h.Dv), E = n.messageReference, T = r.useCallback(() => {
-null != E && u.Z.jumpToMessage({
+null != E && d.Z.jumpToMessage({
   channelId: E.channel_id,
   messageId: E.message_id,
   flash: !0,
@@ -207,7 +207,7 @@ E
   return null == o ? null : (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsx)(I.Z, {
-    iconNode: (0, s.jsx)(d.PollsIcon, {
+    iconNode: (0, s.jsx)(u.PollsIcon, {
       size: 'xs'
     }),
     timestamp: n.timestamp,

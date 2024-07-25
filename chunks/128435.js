@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(278074),
   o = n(263568),
   c = n(481060),
-  d = n(203143),
-  u = n(365206),
+  u = n(203143),
+  d = n(365206),
   _ = n(294608),
   E = n(65145),
   I = n(920557),
@@ -94,11 +94,11 @@ messageId: s,
 isInteractive: l,
 className: o
   } = e, {
-actionButtonRef: u,
+actionButtonRef: d,
 manageFocusOnAction: _
   } = (0, E.dv)(), I = a.useCallback(async () => {
 if ((null == t ? void 0 : t.type) != null)
-  await d.Z.handlePollActionTapped({
+  await u.Z.handlePollActionTapped({
     channelId: n,
     messageId: s,
     type: t.type
@@ -110,7 +110,7 @@ s,
 _
   ]);
   return null == t ? null : 'button' === t.presentation || 'secondaryButton' === t.presentation ? (0, i.jsx)(c.Button, {
-buttonRef: u,
+buttonRef: d,
 onClick: I,
 disabled: !t.enabled,
 color: 'secondaryButton' === t.presentation ? c.Button.Colors.CUSTOM : c.Button.Colors.BRAND,
@@ -123,7 +123,7 @@ children: (0, i.jsx)(c.Text, {
   children: t.label
 })
   }, t.presentation) : 'textButton' === t.presentation ? (0, i.jsx)(h, {
-buttonRef: u,
+buttonRef: d,
 onClick: I,
 className: o,
 children: t.label
@@ -141,7 +141,7 @@ function C(e) {
 message: t,
 poll: n,
 className: a
-  } = e, s = (0, _.$B)(n.containerStyle), d = function(e, t) {
+  } = e, s = (0, _.$B)(n.containerStyle), u = function(e, t) {
 let n = {
   answers: t.answers,
   answersInteraction: t.answersInteraction,
@@ -154,11 +154,11 @@ let n = {
 };
 return (0, l.EQ)(t.layoutType).with(o.C.DEFAULT, () => (0, i.jsx)(I.K, {
   ...n
-})).with(o.C.IMAGE_ONLY_ANSWERS, () => (0, i.jsx)(u.Z, {
+})).with(o.C.IMAGE_ONLY_ANSWERS, () => (0, i.jsx)(d.Z, {
   ...n
 })).otherwise(() => null);
   }(0, n);
-  return null == d ? null : (0, i.jsx)('div', {
+  return null == u ? null : (0, i.jsx)('div', {
 className: r()(m.container, s, a),
 children: (0, i.jsxs)(c.HeadingLevel, {
   children: [
@@ -177,7 +177,7 @@ children: (0, i.jsxs)(c.HeadingLevel, {
         })
       ]
     }),
-    d,
+    u,
     (0, i.jsxs)('div', {
       className: m.bottomBar,
       children: [

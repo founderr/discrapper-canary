@@ -16,7 +16,7 @@ var i = t(718528),
   c = t(475468),
   C = t(981631),
   I = t(176505);
-let S = () => {
+let A = () => {
   let e = o.Z.getMessageRequestsCount() > 0 || r.Z.getSpamChannelsCount() > 0;
   return [
 C.Z5c.FRIENDS,
@@ -28,7 +28,7 @@ a.Ex.getSetting() ? C.Z5c.FAMILY_CENTER : null
   ].filter(_.lm);
 };
 
-function A(e, n) {
+function S(e, n) {
   (0, c.K)(e, n);
 }
 
@@ -42,13 +42,13 @@ let {
   path: o,
   basePath: r
 } = E.Z.getState(), a = d.Z.getPrivateChannelIds(), u = __OVERLAY__ ? a : [
-  ...S(),
+  ...A(),
   ...a
 ];
-let _ = (null == l ? (n = null != o ? o : r, S().findIndex(e => n.startsWith(e))) : null != l ? u.indexOf(l) : 0) + e;
+let _ = (null == l ? (n = null != o ? o : r, A().findIndex(e => n.startsWith(e))) : null != l ? u.indexOf(l) : 0) + e;
 _ >= u.length ? _ = 0 : _ < 0 && (_ = u.length - 1);
 let I = u[_];
-if (S().includes(I))
+if (A().includes(I))
   ! function(e) {
     let n = s.Z.getCurrentRoute();
     e === C.Z5c.APPLICATION_STORE && null != n ? (0, c.z)(n) : (0, c.z)(e);

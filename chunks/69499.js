@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(239091),
   o = n(585237),
   c = n(812206),
-  d = n(55563),
-  u = n(73346),
+  u = n(55563),
+  d = n(73346),
   _ = n(689938);
 
 function E(e, t, n) {
@@ -78,15 +78,15 @@ super(...e), E(this, 'renderContextMenu', () => {
   }
 }
 t.Z = s.ZP.connectStores([
-  d.Z,
+  u.Z,
   c.Z
 ], e => {
   var t;
   let {
 applicationId: n
-  } = e, i = (0, u.uF)(n, c.Z, d.Z);
+  } = e, i = (0, d.uF)(n, c.Z, u.Z);
   return {
-skus: (null !== (t = d.Z.getForApplication(n)) && void 0 !== t ? t : []).sort((e, t) => null != i && e.id === i.id ? -1 : null != i && t.id === i.id ? 1 : e.name >= t.name ? -1 : 1),
+skus: (null !== (t = u.Z.getForApplication(n)) && void 0 !== t ? t : []).sort((e, t) => null != i && e.id === i.id ? -1 : null != i && t.id === i.id ? 1 : e.name >= t.name ? -1 : 1),
 primarySKU: i
   };
 })(m);

@@ -1,9 +1,9 @@
 n.d(t, {
   J: function() {
-return d;
+return u;
   },
   Z: function() {
-return u;
+return d;
   }
 });
 var i = n(55935),
@@ -14,11 +14,11 @@ var i = n(55935),
   o = n(981631);
 let c = 7 * a.Z.Millis.MINUTE;
 
-function d(e, t, n) {
-  return null == t || t.type === o.ys_.MESSAGE && t.content.id === t.content.channel_id || t.type !== o.ys_.MESSAGE && t.type !== o.ys_.THREAD_STARTER_MESSAGE || u(e, t.content, n);
+function u(e, t, n) {
+  return null == t || t.type === o.ys_.MESSAGE && t.content.id === t.content.channel_id || t.type !== o.ys_.MESSAGE && t.type !== o.ys_.THREAD_STARTER_MESSAGE || d(e, t.content, n);
 }
 
-function u(e, t, n) {
+function d(e, t, n) {
   if (n.hasFlag(o.iLy.HAS_THREAD) || n.isCommandType())
 return !0;
   if (n.type > o.uaV.DEFAULT)

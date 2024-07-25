@@ -11,8 +11,8 @@ var a = n(120356),
   l = n(442837),
   o = n(481060),
   c = n(788307),
-  d = n(43267),
-  u = n(933557),
+  u = n(43267),
+  d = n(933557),
   _ = n(471445),
   E = n(565138),
   I = n(199902),
@@ -39,12 +39,12 @@ gotoChannel: a,
 mentionCount: s,
 channelState: l,
 toggleCollapsed: c
-  } = e, d = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, C.Dt)()));
+  } = e, u = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, C.Dt)()));
   return (0, i.jsx)(o.FocusRing, {
 offset: S,
 children: (0, i.jsxs)('div', {
   className: g.channelHeader,
-  ...d,
+  ...u,
   tabIndex: 0,
   'data-recents-channel': t.id,
   onKeyDown: function(e) {
@@ -84,7 +84,7 @@ function x(e) {
   let {
 channel: t,
 gotoChannel: n
-  } = e, a = (0, l.e7)([N.default], () => t.isDM() ? N.default.getUser(t.getRecipientId()) : null), s = null == a ? (0, d.x)(t) : a.getAvatarURL(void 0, 40);
+  } = e, a = (0, l.e7)([N.default], () => t.isDM() ? N.default.getUser(t.getRecipientId()) : null), s = null == a ? (0, u.x)(t) : a.getAvatarURL(void 0, 40);
   return (0, i.jsx)(o.Clickable, {
 onClick: n,
 tabIndex: -1,
@@ -118,7 +118,7 @@ function M(e) {
 channel: t,
 gotoChannel: n,
 mentionCount: a
-  } = e, r = (0, l.e7)([T.Z], () => T.Z.getGuild(t.guild_id)), c = (0, l.e7)([m.Z], () => m.Z.getChannel(t.parent_id)), d = (0, _.KS)(t, r), E = (0, u.ZP)(t, !1), I = null == c ? null == r ? void 0 : r.name : ''.concat(null == r ? void 0 : r.name, ' \u203A ').concat(c.name), h = t.isMultiUserDM() ? p.Z.Messages.MEMBERS_HEADER.format({
+  } = e, r = (0, l.e7)([T.Z], () => T.Z.getGuild(t.guild_id)), c = (0, l.e7)([m.Z], () => m.Z.getChannel(t.parent_id)), u = (0, _.KS)(t, r), E = (0, d.ZP)(t, !1), I = null == c ? null == r ? void 0 : r.name : ''.concat(null == r ? void 0 : r.name, ' \u203A ').concat(c.name), h = t.isMultiUserDM() ? p.Z.Messages.MEMBERS_HEADER.format({
 members: t.recipients.length + 1
   }) : t.isPrivate() ? (0, i.jsx)(v, {
 channel: t
@@ -137,7 +137,7 @@ children: [
       className: g.channelName,
       onClick: n,
       children: [
-        t.isThread() || t.isGroupDM() || null == d ? null : (0, i.jsx)(d, {
+        t.isThread() || t.isGroupDM() || null == u ? null : (0, i.jsx)(u, {
           className: t.isForumLikeChannel() ? g.forumIcon : void 0,
           width: 18,
           height: 18,

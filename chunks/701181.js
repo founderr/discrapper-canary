@@ -16,9 +16,9 @@ function c(e) {
 message: t,
 compact: n,
 usernameHook: c
-  } = e, d = (0, r.ZP)(t), u = c(d), _ = l.Z.Messages.SYSTEM_MESSAGE_STAGE_SPEAKER_HOOK.format({
-username: d.nick,
-usernameHook: u
+  } = e, u = (0, r.ZP)(t), d = c(u), _ = l.Z.Messages.SYSTEM_MESSAGE_STAGE_SPEAKER_HOOK.format({
+username: u.nick,
+usernameHook: d
   });
   return (0, i.jsx)(s.Z, {
 className: o.stageSystemMessage,

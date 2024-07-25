@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(904245),
   o = n(541716),
   c = n(419922),
-  d = n(665906),
-  u = n(271383),
+  u = n(665906),
+  d = n(271383),
   _ = n(496675),
   E = n(594174),
   I = n(626135),
@@ -34,24 +34,24 @@ function C(e) {
 currentUser: t,
 channel: n,
 message: s,
-buttonLabels: d,
-stickers: u,
+buttonLabels: u,
+stickers: d,
 event: _,
 eventProperties: E
   } = e, [m, h] = a.useState(!1), C = a.useMemo(() => f({
-assets: u,
-currentUser: t,
-message: s
-  }), [
-u,
-t,
-s
-  ]), p = a.useMemo(() => f({
 assets: d,
 currentUser: t,
 message: s
   }), [
 d,
+t,
+s
+  ]), p = a.useMemo(() => f({
+assets: u,
+currentUser: t,
+message: s
+  }), [
+u,
 t,
 s
   ]), g = a.useCallback(async () => {
@@ -135,15 +135,15 @@ let {
 } = e;
 return (0, s.e7)([
   _.Z,
-  u.ZP
+  d.ZP
 ], () => {
   var e;
   let a = t.guild_id;
   if (null == i || null == a)
     return !1;
-  let s = (0, d.xl)(t),
+  let s = (0, u.xl)(t),
     r = _.Z.can(h.Plq.SEND_MESSAGES, t),
-    l = null === (e = u.ZP.getMember(a, i.id)) || void 0 === e ? void 0 : e.isPending,
+    l = null === (e = d.ZP.getMember(a, i.id)) || void 0 === e ? void 0 : e.isPending,
     o = n.author.bot;
   return r && !s && !l && !o;
 });

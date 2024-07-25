@@ -9,8 +9,8 @@ var i, a = n(735250),
   l = n.n(r),
   o = n(442837),
   c = n(481060),
-  d = n(239091),
-  u = n(2052),
+  u = n(239091),
+  d = n(2052),
   _ = n(594190),
   E = n(592745),
   I = n(757266),
@@ -95,14 +95,14 @@ let {
   isLaunchable: s,
   isLaunching: r,
   isRunning: o,
-  isShiny: d,
-  hideNotLaunchable: u
+  isShiny: u,
+  hideNotLaunchable: d
 } = this.props;
 if (!s)
-  return u ? null : this.renderDisabledButton(f.Z.Messages.GAME_ACTION_BUTTON_PLAY, T.isPlatformEmbedded ? f.Z.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : f.Z.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
+  return d ? null : this.renderDisabledButton(f.Z.Messages.GAME_ACTION_BUTTON_PLAY, T.isPlatformEmbedded ? f.Z.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : f.Z.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
 if (o)
   return this.renderDisabledButton(f.Z.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
-let _ = d ? c.ShinyButton : c.Button;
+let _ = u ? c.ShinyButton : c.Button;
 return (0, a.jsxs)(_, {
   className: l()(C.playButton, e),
   innerClassName: C.playButtonContents,
@@ -130,7 +130,7 @@ super(...e), p(this, 'handleDropdownClick', e => {
   } = this.props;
   if (null == i || i(e), null == t)
     throw Error('Unexpected missing libraryApplication');
-  d.jW(e, async () => {
+  u.jW(e, async () => {
     let {
       default: e
     } = await n.e('53195').then(n.bind(n, 918306));
@@ -164,7 +164,7 @@ function S(e) {
   let {
 applicationId: t,
 libraryApplication: n
-  } = e, i = (0, u.O)(), [s, r] = (0, o.Wu)([
+  } = e, i = (0, d.O)(), [s, r] = (0, o.Wu)([
 I.Z,
 E.Z,
 m.Z

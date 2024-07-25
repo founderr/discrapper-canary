@@ -13,8 +13,8 @@ experimentLocation: u,
 isTyping: o,
 status: d,
 className: _,
-animated: f = !1,
-...h
+animated: h = !1,
+...f
   } = e, {
 isFacepileEnabled: E
   } = r.Z.useExperiment({
@@ -23,18 +23,18 @@ location: u
 autoTrackExposure: !0
   });
   return t.recipients.length >= 2 && E && null == t.icon ? (0, l.jsx)(c.Z, {
-'aria-label': h['aria-label'],
-'aria-hidden': h['aria-hidden'],
+'aria-label': f['aria-label'],
+'aria-hidden': f['aria-hidden'],
 className: _,
 recipients: t.recipients,
 size: null != a ? a : n,
 isTyping: o,
 status: d
   }) : (0, l.jsx)(i.Avatar, {
-'aria-hidden': h['aria-hidden'],
-'aria-label': h['aria-label'],
+'aria-hidden': f['aria-hidden'],
+'aria-label': f['aria-label'],
 className: _,
 size: n,
-src: (0, s.x)(t, 80, f)
+src: (0, s.x)(t, 80, h)
   });
 });

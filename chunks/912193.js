@@ -1,6 +1,6 @@
 n.d(t, {
   b: function() {
-return u;
+return d;
   }
 });
 var i = n(735250);
@@ -15,16 +15,16 @@ function c() {
   null !== o && (0, a.closeModal)(o), o = null;
 }
 
-function d() {
+function u() {
   s.Z.setSilenceWarning(!1), c();
 }
 
-function u() {
+function d() {
   o = (0, a.openModal)(e => (0, i.jsx)(r.default, {
 title: l.Z.Messages.CONFIRM_DISABLE_SILENCE_TITLE,
 body: l.Z.Messages.CONFIRM_DISABLE_SILENCE_BODY,
 secondaryConfirmText: l.Z.Messages.CONFIRM_DISABLE_SILENCE_DONT_SHOW,
-onConfirmSecondary: d,
+onConfirmSecondary: u,
 onConfirm: c,
 confirmText: l.Z.Messages.OKAY,
 ...e

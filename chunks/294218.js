@@ -6,8 +6,8 @@ var i = n(735250),
   l = n(91192),
   o = n(442837),
   c = n(518738),
-  d = n(628238),
-  u = n(869765),
+  u = n(628238),
+  d = n(869765),
   _ = n(592125),
   E = n(496675),
   I = n(630388),
@@ -41,8 +41,8 @@ animateAvatar: U,
 subscribeToComponentDispatch: y,
 renderThreadAccessory: B,
 trackAnnouncementViews: k = !1,
-...G
-  } = e, F = a.type === M.uaV.POLL_RESULT || null !== (t = e.disableInteraction) && void 0 !== t && t, w = a.isFirstMessageInForumPost(b), V = (0, d.A)((null !== (n = a.editedTimestamp) && void 0 !== n ? n : a.timestamp).valueOf()), {
+...F
+  } = e, G = a.type === M.uaV.POLL_RESULT || null !== (t = e.disableInteraction) && void 0 !== t && t, w = a.isFirstMessageInForumPost(b), V = (0, u.A)((null !== (n = a.editedTimestamp) && void 0 !== n ? n : a.timestamp).valueOf()), {
 content: H,
 hasSpoilerEmbeds: Y
   } = (0, C.Z)(a, {
@@ -51,7 +51,7 @@ allowList: w || V,
 allowHeading: w || V,
 allowLinks: !0,
 previewLinkTarget: !0
-  }), W = a.type === M.uaV.REPLY ? a.messageReference : void 0, K = (0, o.e7)([u.Z], () => u.Z.getMessageByReference(W)), z = (0, l.JA)(a.id), Q = (0, h.ZP)(a), q = (0, o.e7)([_.Z], () => a.hasFlag(M.iLy.HAS_THREAD) && _.Z.getChannel(m.default.castMessageIdAsChannelId(a.id))), X = (0, c.p9)({
+  }), W = a.type === M.uaV.REPLY ? a.messageReference : void 0, K = (0, o.e7)([d.Z], () => d.Z.getMessageByReference(W)), z = (0, l.JA)(a.id), Q = (0, h.ZP)(a), q = (0, o.e7)([_.Z], () => a.hasFlag(M.iLy.HAS_THREAD) && _.Z.getChannel(m.default.castMessageIdAsChannelId(a.id))), X = (0, c.p9)({
 guildId: b.guild_id,
 roleId: Q.iconRoleId
   }), J = (0, o.e7)([E.Z], () => E.Z.can(M.Plq.CREATE_INSTANT_INVITE, b)), $ = (0, p.Z)({
@@ -67,9 +67,9 @@ et = (0, f.Gx)(a);
 compact: s,
 className: r()(L, {
   [v.ephemeral]: (0, I.yE)(a.flags, M.iLy.EPHEMERAL),
-  [v.disableInteraction]: F
+  [v.disableInteraction]: G
 }),
-disableInteraction: F,
+disableInteraction: G,
 childrenRepliedMessage: (0, O.Z)(a, b, W, K, s),
 childrenExecutedCommand: (0, x.Z)(a, b, s),
 childrenHeader: (0, A.Z)({
@@ -82,7 +82,7 @@ childrenAccessories: e.hideAccessories ? void 0 : (0, g.Q)(e, Y),
 childrenMessageContent: (0, S.Z)(e, H),
 childrenSystemMessage: (0, R.Z)({
   ...e,
-  disableInteraction: F
+  disableInteraction: G
 }),
 onContextMenu: Z,
 onClick: P,
@@ -92,6 +92,6 @@ hasReply: a.type === M.uaV.REPLY,
 'aria-describedby': et,
 messageRef: $,
 ...z,
-...G
+...F
   });
 });

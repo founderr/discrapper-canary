@@ -6,8 +6,8 @@ var i = n(735250),
   l = n(338545),
   o = n(442837),
   c = n(481060),
-  d = n(570140),
-  u = n(45114),
+  u = n(570140),
+  d = n(45114),
   _ = n(367907),
   E = n(717680),
   I = n(703656),
@@ -25,17 +25,17 @@ let A = a.memo(function(e) {
 channel: t,
 deleteChannel: n
   } = e, s = a.useRef(null), [
-[r, o], d
+[r, o], u
   ] = a.useState([
 0,
 0
-  ]), u = t.deleted && r > 0;
+  ]), d = t.deleted && r > 0;
   if (t.deleted && 0 === r && null != s.current) {
 let e = s.current.offsetHeight,
   t = s.current.offsetTop,
   n = s.current.parentElement.scrollTop,
   i = n > t ? e - (n - t) : e;
-d([
+u([
   e,
   e - i
 ]);
@@ -49,14 +49,14 @@ config: {
   friction: 18,
   tension: 200
 },
-opacity: u ? 0 : 1,
-size: u ? 0 : 1,
+opacity: d ? 0 : 1,
+size: d ? 0 : 1,
 onRest: () => {
   n(t.channelId);
 }
   }, 'animate-always'), I = {
 opacity: _,
-height: E.to(e => u ? function(e, t, n) {
+height: E.to(e => d ? function(e, t, n) {
   return t + (e - t) * n;
 }(r, o, e) : 'auto')
   };
@@ -77,8 +77,8 @@ deleteChannel: s,
 toggle: r
   } = e, l = (0, o.e7)([m.Z], () => m.Z.getChannel(t.channelId));
   if (a.useEffect(() => {
-  null != l && t.isFullyLoaded && !t.hasError && !t.collapsed && 'messages' === t.type && 0 === t.messages.length && d.Z.wait(() => {
-    (0, u.In)(t.channelId, !0), s(t.channelId);
+  null != l && t.isFullyLoaded && !t.hasError && !t.collapsed && 'messages' === t.type && 0 === t.messages.length && u.Z.wait(() => {
+    (0, d.In)(t.channelId, !0), s(t.channelId);
   });
 }), null == l || !t.hasLoadedAnything)
 return null;

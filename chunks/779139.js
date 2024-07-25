@@ -1,6 +1,6 @@
 n.d(t, {
   TZ: function() {
-return d;
+return u;
   },
   y6: function() {
 return c;
@@ -18,7 +18,7 @@ let n = null === (t = a.default.getCurrentUser()) || void 0 === t ? void 0 : t.i
   i = ((null != n ? r.default.extractTimestamp(n) : 0) + r.default.extractTimestamp(e)) % l.m.length;
 return l.m[i];
   },
-  d = (e, t, n) => {
+  u = (e, t, n) => {
 var r;
 i.Z.sendGreetMessage(e.id, n, i.Z.getSendMessageOptionsForReply({
   channel: e,

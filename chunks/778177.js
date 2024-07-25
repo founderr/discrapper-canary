@@ -6,9 +6,9 @@ var i = n(735250),
   l = n(512722),
   o = n.n(l),
   c = n(392711),
-  d = n.n(c),
-  u = n(913527),
-  _ = n.n(u),
+  u = n.n(c),
+  d = n(913527),
+  _ = n.n(d),
   E = n(608787),
   I = n(442837),
   m = n(481060),
@@ -44,11 +44,11 @@ writable: !0
   }) : e[t] = n, e;
 }
 let k = _()('2015-05-15').local(),
-  G = (0, E.Un)({
+  F = (0, E.Un)({
 createPromise: () => Promise.resolve().then(n.bind(n, 547800)),
 webpackId: 547800
   }),
-  F = (e, t, n) => {
+  G = (e, t, n) => {
 var a, s, r;
 let {
   user: l,
@@ -59,10 +59,10 @@ if (null == l)
     children: o
   });
 let c = v.default.getUser(l.id),
-  d = g.Z.getChannel(e),
-  u = (null == d ? void 0 : d.isPrivate()) ? A.Z.getNickname(l.id) : null,
-  _ = null !== (s = null !== (a = S.ZP.getNick(e, l.id)) && void 0 !== a ? a : u) && void 0 !== s ? s : D.ZP.getName(l),
-  E = null !== (r = null == c ? void 0 : c.getAvatarURL(e, 20)) && void 0 !== r ? r : l.getAvatarURL(null == d ? void 0 : d.guild_id, 20);
+  u = g.Z.getChannel(e),
+  d = (null == u ? void 0 : u.isPrivate()) ? A.Z.getNickname(l.id) : null,
+  _ = null !== (s = null !== (a = S.ZP.getNick(e, l.id)) && void 0 !== a ? a : d) && void 0 !== s ? s : D.ZP.getName(l),
+  E = null !== (r = null == c ? void 0 : c.getAvatarURL(e, 20)) && void 0 !== r ? r : l.getAvatarURL(null == u ? void 0 : u.guild_id, 20);
 return [
   (0, i.jsx)('img', {
     alt: '',
@@ -115,8 +115,8 @@ let t, n, {
   result: l,
   group: o,
   className: c,
-  role: d,
-  tabIndex: u,
+  role: u,
+  tabIndex: d,
   'aria-selected': _,
   onSelect: E,
   onFocus: I,
@@ -138,8 +138,8 @@ return n = null != h ? h(s, o, l) : (0, i.jsx)('strong', {
   onClick: E,
   onFocus: I,
   id: a,
-  role: d,
-  tabIndex: u,
+  role: u,
+  tabIndex: d,
   'aria-selected': _,
   children: [
     t,
@@ -155,7 +155,7 @@ return n = null != h ? h(s, o, l) : (0, i.jsx)('strong', {
   H = e => (0, i.jsx)(V, {
 ...e,
 className: y.user,
-renderResult: F
+renderResult: G
   }),
   Y = {
 [j.dCx.FILTER_FROM]: {
@@ -219,8 +219,8 @@ renderResult: F
       showFilter: l,
       searchId: o,
       renderResult: c,
-      group: d,
-      ...u
+      group: u,
+      ...d
     } = e, _ = '', E = a.useMemo(() => {
       var e;
       return e = s.text, P.kG(e).map((e, t, n) => P.Fr(e, n[t + 1]) ? e : new N.WU(e.getFullMatch(), N.Xe));
@@ -243,7 +243,7 @@ renderResult: F
       className: r()(y.option, y.__invalid_history),
       onClick: t,
       onFocus: n,
-      ...u,
+      ...d,
       'aria-label': U.Z.Messages.SEARCH_FROM_SUGGESTIONS.format({
         suggestion: _
       }),
@@ -285,7 +285,7 @@ renderResult: F
       showFilter: l,
       searchId: o,
       ...c
-    } = e, d = P.Ko(null !== (t = n.token) && void 0 !== t ? t : '');
+    } = e, u = P.Ko(null !== (t = n.token) && void 0 !== t ? t : '');
     return (0, i.jsxs)(m.Clickable, {
       className: r()(y.option, y.searchOption),
       onClick: a,
@@ -298,9 +298,9 @@ renderResult: F
         }),
         (0, i.jsx)('span', {
           className: r()({
-            [y.answer]: d
+            [y.answer]: u
           }),
-          children: d
+          children: u
         }),
         (0, i.jsx)(m.PlusSmallIcon, {
           size: 'sm',
@@ -417,7 +417,7 @@ super(...e), t = this, B(this, 'state', {
     r = function(e) {
       let t = !0,
         n = e.trim();
-      return d()(f.ZP).forOwn(e => {
+      return u()(f.ZP).forOwn(e => {
         '' !== e.key && null != e.key && n === e.key && (t = !1);
       }), t;
     }(s);
@@ -445,7 +445,7 @@ super(...e), t = this, B(this, 'state', {
 }), B(this, 'renderDatePicker', () => (0, i.jsxs)('div', {
   className: y.datePicker,
   children: [
-    (0, i.jsx)(G, {
+    (0, i.jsx)(F, {
       onSelect: this.handleDateChange,
       maxDate: _()().local(),
       minDate: k
@@ -488,12 +488,12 @@ super(...e), t = this, B(this, 'state', {
   let r = -1;
   return a.map(a => {
     var l, o, c;
-    let d, u;
+    let u, d;
     if (null == a || 0 === a.results.length)
       return null;
     let _ = null !== (l = Y[a.group]) && void 0 !== l ? l : {};
-    null != _.titleText && (u = ''.concat(a.group, '-header'), d = (0, i.jsx)('div', {
-      id: u,
+    null != _.titleText && (d = ''.concat(a.group, '-header'), u = (0, i.jsx)('div', {
+      id: d,
       className: y.header,
       children: _.titleText()
     }));
@@ -505,10 +505,10 @@ super(...e), t = this, B(this, 'state', {
       T = s.type === j.Sap.FILTER_ALL;
     return (0, i.jsxs)('ul', {
       role: 'group',
-      'aria-labelledby': u,
+      'aria-labelledby': d,
       className: y.resultsGroup,
       children: [
-        d,
+        u,
         I,
         a.results.map(s => {
           var l, o;

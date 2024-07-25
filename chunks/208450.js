@@ -6,8 +6,8 @@ var i = n(735250),
   l = n(371917),
   o = n(299608),
   c = n.n(o),
-  d = n(442837),
-  u = n(481060),
+  u = n(442837),
+  d = n(481060),
   _ = n(603263),
   E = n(461745),
   I = n(349033),
@@ -115,16 +115,16 @@ let {
 } = this.props, {
   focused: s
 } = this.state, l = R.Sq(t).length > 0;
-return null == e ? null : (0, i.jsx)(u.Popout, {
+return null == e ? null : (0, i.jsx)(d.Popout, {
   renderPopout: this.renderPopout,
   position: 'bottom',
-  animation: u.Popout.Animation.NONE,
+  animation: d.Popout.Animation.NONE,
   shouldShow: s,
   autoInvert: !1,
   children: (t, o) => {
     var c;
     let {
-      isShown: d
+      isShown: u
     } = o;
     return (0, i.jsx)('div', {
       className: a,
@@ -133,7 +133,7 @@ return null == e ? null : (0, i.jsx)(u.Popout, {
           [P.open]: l || s,
           [P.focused]: s
         }),
-        children: (0, i.jsx)(u.FocusRing, {
+        children: (0, i.jsx)(d.FocusRing, {
           focusTarget: {
             current: null === (c = this._editorRef) || void 0 === c ? void 0 : c.editor
           },
@@ -142,7 +142,7 @@ return null == e ? null : (0, i.jsx)(u.Popout, {
             className: P.searchBar,
             ref: this._searchBarRef,
             children: [
-              this.renderInput(d),
+              this.renderInput(u),
               (0, i.jsx)(E.BK, {
                 onClear: this.handleClearSearch,
                 hasContent: l || n,
@@ -205,7 +205,7 @@ super(e), D(this, 'state', {
       !x.Fr(e[t], e[t + 1]) && (i = i.substring(0, e[t].start) + i.substring(e[t].end));
     if (0 === e.length || 0 === Object.keys(n).length)
       return !1;
-    j(t, n, i, !!a), u.AccessibilityAnnouncer.announce(Z.Z.Messages.SEARCH_STARTED_A11Y_ANNOUNCE), this.onBlur();
+    j(t, n, i, !!a), d.AccessibilityAnnouncer.announce(Z.Z.Messages.SEARCH_STARTED_A11Y_ANNOUNCE), this.onBlur();
   }
   return !0;
 }), D(this, 'handleClearSearch', e => {
@@ -375,7 +375,7 @@ super(e), D(this, 'state', {
 }), x.WU();
   }
 }
-t.Z = d.ZP.connectStores([
+t.Z = u.ZP.connectStores([
   h.Z,
   p.Z
 ], () => {

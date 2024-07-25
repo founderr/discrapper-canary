@@ -11,8 +11,8 @@ var a = n(442837),
   l = n(232567),
   o = n(230711),
   c = n(726542),
-  d = n(100527),
-  u = n(231757),
+  u = n(100527),
+  d = n(231757),
   _ = n(674525),
   E = n(29458),
   I = n(636629),
@@ -103,7 +103,7 @@ children: e => {
           }),
           P.Z.Messages.NOTICE_CONNECT_SPOTIFY,
           (0, i.jsx)(r.PrimaryCTANoticeButton, {
-            onClick: () => (0, u.Z)({
+            onClick: () => (0, d.Z)({
               platformType: v.ABu.SPOTIFY,
               location: 'Notice Bar'
             }),
@@ -126,7 +126,7 @@ children: e => {
           }),
           P.Z.Messages.NOTICE_CONNECT_PLAYSTATION,
           (0, i.jsx)(r.NoticeButton, {
-            onClick: () => (0, u.Z)({
+            onClick: () => (0, d.Z)({
               platformType: v.ABu.PLAYSTATION,
               location: 'Notice Bar'
             }),
@@ -312,7 +312,7 @@ children: e => {
             onClick: () => {
               (0, T.Z)({
                 subscriptionTier: Z.Si.TIER_2,
-                analyticsLocations: [d.Z.CHECKOUT_RECOVERY_NAGBAR],
+                analyticsLocations: [u.Z.CHECKOUT_RECOVERY_NAGBAR],
                 analyticsLocation: v.Sbl.CHECKOUT_RECOVERY_NAGBAR,
                 onClose: () => A(M.L.UNKNOWN)
               });

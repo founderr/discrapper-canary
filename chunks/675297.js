@@ -11,8 +11,8 @@ var a = n(399606),
   l = n(674180),
   o = n(430824),
   c = n(572004),
-  d = n(267101),
-  u = n(863663),
+  u = n(267101),
+  d = n(863663),
   _ = n(676651),
   E = n(623488),
   I = n(942833),
@@ -37,7 +37,7 @@ showOpaqueBackground: O = !1
   } = e, M = (0, a.e7)([o.Z], () => o.Z.getGuild(n), [n]), v = (0, a.e7)([o.Z], () => {
 var e;
 return o.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : N.lds);
-  }), L = (0, s.U)(t, 600), Z = (0, I.C)(t), P = (0, d.SO)(M), {
+  }), L = (0, s.U)(t, 600), Z = (0, I.C)(t), P = (0, u.SO)(M), {
 shouldHideGuildPurchaseEntryPoints: D
   } = (0, l.uP)(n), b = (0, I.k)(t);
   if (null == M || D)
@@ -67,7 +67,7 @@ U = (0, i.jsx)(m.m, {
     });
   },
   onCopyProductLink: () => {
-    (0, c.JG)((0, u.ar)(n, t.id));
+    (0, c.JG)((0, d.ar)(n, t.id));
   },
   onTestDownload: () => {}
 });

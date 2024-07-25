@@ -13,8 +13,8 @@ var i = n(735250),
   l = n(442837),
   o = n(481060),
   c = n(131388),
-  d = n(357352),
-  u = n(565138),
+  u = n(357352),
+  d = n(565138),
   _ = n(353254),
   E = n(695346),
   I = n(271383),
@@ -64,10 +64,10 @@ autoPlay: !0,
 loop: !0,
 className: R.coverImage,
 width: 655,
-poster: (0, d.b)('server_products/storefront/default-header.png'),
-src: (0, d.b)('server_products/storefront/default-header.mov')
+poster: (0, u.b)('server_products/storefront/default-header.png'),
+src: (0, u.b)('server_products/storefront/default-header.mov')
   }) : (0, i.jsx)('img', {
-src: (0, d.b)('server_products/storefront/default-header.png'),
+src: (0, u.b)('server_products/storefront/default-header.png'),
 alt: '',
 className: R.coverImage
   });
@@ -144,10 +144,10 @@ children: [
     className: R.infoContainer,
     children: [
       (0, i.jsx)('div', {
-        children: (0, i.jsx)(u.Z, {
+        children: (0, i.jsx)(d.Z, {
           guild: _,
-          size: u.Z.Sizes.LARGER,
-          iconSrc: null == _.icon || j ? (0, d.b)('server_products/storefront/default-guild-icon.jpg') : void 0
+          size: d.Z.Sizes.LARGER,
+          iconSrc: null == _.icon || j ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
         })
       }),
       (0, i.jsx)(o.Spacer, {

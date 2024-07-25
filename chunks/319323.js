@@ -11,8 +11,8 @@ var a = n(442837),
   l = n(488915),
   o = n(171246),
   c = n(696906),
-  d = n(981631),
-  u = n(689938),
+  u = n(981631),
+  d = n(689938),
   _ = n(40896);
 
 function E(e) {
@@ -28,7 +28,7 @@ canOpenModal: N
 guildId: n,
 groupListingId: null == m ? void 0 : m.id,
 showBenefitsFirst: !0,
-analyticsLocation: d.Sbl.INTERACTION_RESPONSE,
+analyticsLocation: u.Sbl.INTERACTION_RESPONSE,
 skuId: null == T ? void 0 : T.id
   });
   return (0, i.jsx)(s.Button, {
@@ -43,7 +43,7 @@ children: (0, i.jsxs)('div', {
       size: 'xs',
       color: 'white'
     }),
-    u.Z.Messages.INTERACTION_PREMIUM_UPSELL_CTA
+    d.Z.Messages.INTERACTION_PREMIUM_UPSELL_CTA
   ]
 })
   });

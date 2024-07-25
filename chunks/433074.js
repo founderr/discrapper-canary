@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(481060),
   o = n(434650),
   c = n(955415),
-  d = n(706454),
-  u = n(973616),
+  u = n(706454),
+  d = n(973616),
   _ = n(914010),
   E = n(594174),
   I = n(626135),
@@ -33,7 +33,7 @@ message: A
 h.Z.getApplication(S),
 h.Z.isInvalidApplication(S),
 h.Z.getApplicationFetchState(S)
-  ], [S]), M = (0, r.e7)([d.default], () => d.default.locale), v = (0, r.e7)([_.Z], () => {
+  ], [S]), M = (0, r.e7)([u.default], () => u.default.locale), v = (0, r.e7)([_.Z], () => {
 var e;
 return null !== (e = _.Z.getGuildId()) && void 0 !== e ? e : void 0;
   }), L = (0, r.e7)([E.default], () => E.default.getCurrentUser()), [Z, P] = a.useState(!1), D = a.useCallback(e => {
@@ -139,7 +139,7 @@ children: [
         className: g.applicationInfoContainer,
         children: [
           (0, i.jsx)(c.Z.Icon, {
-            application: u.Z.createFromServer(R),
+            application: d.Z.createFromServer(R),
             className: g.applicationIcon,
             onClick: () => j('application_icon')
           }),

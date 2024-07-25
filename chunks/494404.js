@@ -16,8 +16,8 @@ var i = n(735250),
   l = n(392711),
   o = n.n(l),
   c = n(91192),
-  d = n(442837),
-  u = n(481060),
+  u = n(442837),
+  d = n(481060),
   _ = n(668781),
   E = n(904245),
   I = n(724757),
@@ -57,7 +57,7 @@ let {
 return (0, i.jsxs)('div', {
   className: r()(a, M.header),
   children: [
-    null == t ? null : (0, i.jsx)(u.Heading, {
+    null == t ? null : (0, i.jsx)(d.Heading, {
       variant: 'heading-md/medium',
       children: t
     }),
@@ -91,7 +91,7 @@ class D extends a.PureComponent {
 let {
   jumping: e
 } = this.props;
-return (0, i.jsxs)(u.Clickable, {
+return (0, i.jsxs)(d.Clickable, {
   className: M.jumpButton,
   onClick: this.handleClickJump,
   children: [
@@ -101,8 +101,8 @@ return (0, i.jsxs)(u.Clickable, {
       }),
       children: O.Z.Messages.JUMP
     }),
-    (0, i.jsx)(u.Spinner, {
-      type: u.Spinner.Type.PULSING_ELLIPSIS,
+    (0, i.jsx)(d.Spinner, {
+      type: d.Spinner.Type.PULSING_ELLIPSIS,
       className: r()(M.loading, {
         [M.visible]: e
       })
@@ -117,11 +117,11 @@ let {
   canManageMessages: n,
   channel: a
 } = this.props;
-return null != e && (t || n || null != a && a.isPrivate()) ? (0, i.jsx)(u.Button, {
-  look: u.Button.Looks.BLANK,
-  size: u.Button.Sizes.NONE,
+return null != e && (t || n || null != a && a.isPrivate()) ? (0, i.jsx)(d.Button, {
+  look: d.Button.Looks.BLANK,
+  size: d.Button.Sizes.NONE,
   onClick: this.handleClickClose,
-  children: (0, i.jsx)(u.CloseSmallIcon, {
+  children: (0, i.jsx)(d.CloseSmallIcon, {
     size: 'md',
     color: 'currentColor',
     className: M.closeIcon
@@ -153,7 +153,7 @@ super(...e), v(this, 'handleClickJump', e => {
 });
   }
 }
-let b = d.ZP.connectStores([C.Z], e => {
+let b = u.ZP.connectStores([C.Z], e => {
   let {
 channel: t
   } = e;
@@ -176,7 +176,7 @@ getProTip: N,
 scrollerClassName: f,
 className: C,
 listName: v
-  } = e, Z = a.useRef(null), P = (0, I.Z)(v, Z), D = (0, d.e7)([p.Z], () => p.Z.hasNotice()), b = (0, d.e7)([g.Z], () => g.Z.windowSize());
+  } = e, Z = a.useRef(null), P = (0, I.Z)(v, Z), D = (0, u.e7)([p.Z], () => p.Z.hasNotice()), b = (0, u.e7)([g.Z], () => g.Z.windowSize());
   a.useEffect(() => {
 A.default.track(x.rMx.OPEN_POPOUT, {
   type: t
@@ -212,7 +212,7 @@ U = [],
 y = !0;
   null == n ? U = [(0, i.jsx)('div', {
 className: r()(M.emptyPlaceholder, M.loadingPlaceholder),
-children: (0, i.jsx)(u.Spinner, {})
+children: (0, i.jsx)(d.Spinner, {})
   }, 'spinner')] : 0 === n.length ? U.push((0, i.jsx)(a.Fragment, {
 children: m(h.Z.theme)
   }, 'empty-state')) : (y = !1, U = [], o().each(n, e => {
@@ -221,13 +221,13 @@ U.push(...T(e));
   let B = null;
   null != n && n.length > 0 && null != _ && (B = l ? (0, i.jsx)('div', {
 className: M.loadingMore,
-children: (0, i.jsx)(u.Spinner, {})
+children: (0, i.jsx)(d.Spinner, {})
   }, 'loading-more-after') : s ? (0, i.jsx)('div', {
 className: M.hasMore,
-children: (0, i.jsx)(u.Button, {
-  look: u.Button.Looks.FILLED,
-  color: u.Button.Colors.PRIMARY,
-  size: u.Button.Sizes.MAX,
+children: (0, i.jsx)(d.Button, {
+  look: d.Button.Looks.FILLED,
+  color: d.Button.Colors.PRIMARY,
+  size: d.Button.Sizes.MAX,
   onClick: _,
   children: O.Z.Messages.LOAD_MORE_MESSAGES
 })
@@ -236,7 +236,7 @@ className: M.scrollingFooterWrap,
 children: m(h.Z.theme)
   }));
   let k = null == N ? void 0 : N(),
-G = y && null != k ? (0, i.jsx)('div', {
+F = y && null != k ? (0, i.jsx)('div', {
   className: M.footer,
   children: (0, i.jsx)(S.Z, {
     style: {
@@ -247,21 +247,21 @@ G = y && null != k ? (0, i.jsx)('div', {
     children: k
   })
 }) : null,
-F = {
+G = {
   maxHeight: b.height - 43 - 25
 };
-  D && (F.maxHeight -= 40);
+  D && (G.maxHeight -= 40);
   let w = null != _ && s;
   return (0, i.jsx)('div', {
 className: r()(C, M.messagesPopoutWrap),
-style: F,
+style: G,
 onClick: L,
 onDoubleClick: L,
 'aria-label': e['aria-label'],
-children: (0, i.jsxs)(u.HeadingLevel, {
+children: (0, i.jsxs)(d.HeadingLevel, {
   component: E(),
   children: [
-    (0, i.jsxs)(u.AdvancedScroller, {
+    (0, i.jsxs)(d.AdvancedScroller, {
       className: r()(M.messagesPopout, f),
       onScroll: w ? j : void 0,
       ref: Z,
@@ -285,7 +285,7 @@ children: (0, i.jsxs)(u.HeadingLevel, {
         B
       ]
     }),
-    G
+    F
   ]
 })
   });
@@ -300,7 +300,7 @@ messages: r,
 hasMore: l,
 loading: o,
 loadMore: c,
-onJump: u,
+onJump: d,
 canCloseAllMessages: I = !1,
 renderHeader: h,
 renderEmptyState: C,
@@ -310,7 +310,7 @@ scrollerClassName: S,
 className: A,
 onCloseMessage: R,
 listName: v
-  } = e, L = (0, d.e7)([f.Z], () => {
+  } = e, L = (0, u.e7)([f.Z], () => {
 let e = null != s ? f.Z.getMessages(s.id) : null;
 return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
   });
@@ -332,7 +332,7 @@ if (a)
   });
 else if (!L) {
   let e = N.Z.getChannel(r);
-  null != e && (E.Z.trackJump(r, i, t), (0, T.uL)(x.Z5c.CHANNEL(e.getGuildId(), r, i))), null == u || u(n);
+  null != e && (E.Z.trackJump(r, i, t), (0, T.uL)(x.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
 }
   }
   a.useEffect(() => {

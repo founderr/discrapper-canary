@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(782568),
   o = n(31336),
   c = n(906467),
-  d = n(63063),
-  u = n(665149),
+  u = n(63063),
+  d = n(665149),
   _ = n(689938);
 
 function E() {
@@ -70,7 +70,7 @@ children: (0, i.jsx)(r.Popout, {
             id: 'staff-help-center',
             label: 'Go to Help Center',
             icon: r.WindowLaunchIcon,
-            action: () => (0, l.Z)(d.w)
+            action: () => (0, l.Z)(u.w)
           })
         ]
       })
@@ -83,7 +83,7 @@ children: (0, i.jsx)(r.Popout, {
     let {
       isShown: n
     } = t;
-    return (0, i.jsx)(u.JO, {
+    return (0, i.jsx)(d.JO, {
       ...e,
       icon: r.BugIcon,
       'aria-label': _.Z.Messages.HELP,

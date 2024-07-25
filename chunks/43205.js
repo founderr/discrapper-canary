@@ -1,45 +1,45 @@
-n.d(t, {
+s.d(a, {
   f: function() {
-return d;
+return E;
   }
-}), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
-  r = n(481060),
-  c = n(410030),
-  o = n(906044);
+}), s(47120);
+var n = s(735250),
+  t = s(470079),
+  l = s(120356),
+  r = s.n(l),
+  i = s(481060),
+  o = s(410030),
+  c = s(906044);
 
-function d(e) {
+function E(e) {
   let {
-src: t,
-size: n,
-constrain: s = 'height',
-className: d,
-alt: u = 'icon',
-fallbackSrc: m
-  } = e, x = (0, c.ZP)(), [h, f] = i.useState(!1), [v, g] = i.useState(!1), j = null == m || v;
-  if (null == t || h && j)
-return (0, l.jsx)(r.UnknownGameIcon, {
+src: a,
+size: s,
+constrain: l = 'height',
+className: E,
+alt: _ = 'icon',
+fallbackSrc: d
+  } = e, u = (0, o.ZP)(), [I, A] = t.useState(!1), [N, O] = t.useState(!1), R = null == d || N;
+  if (null == a || I && R)
+return (0, n.jsx)(i.UnknownGameIcon, {
   size: 'custom',
-  width: n,
-  height: n,
-  color: 'dark' === x ? 'white' : 'black',
-  className: a()(o.contentImage, d)
+  width: s,
+  height: s,
+  color: 'dark' === u ? 'white' : 'black',
+  className: r()(c.contentImage, E)
 });
-  let p = 'height' === s ? {
-maxWidth: ''.concat(n, 'px'),
-height: ''.concat(n, 'px')
+  let m = 'height' === l ? {
+maxWidth: ''.concat(s, 'px'),
+height: ''.concat(s, 'px')
   } : {
-maxWidth: ''.concat(n, 'px'),
-minHeight: ''.concat(n, 'px')
+maxWidth: ''.concat(s, 'px'),
+minHeight: ''.concat(s, 'px')
   };
-  return (0, l.jsx)('img', {
-style: p,
-className: a()(o.contentImage, d),
-src: h && null != m ? m : t,
-alt: u,
-onError: e => h ? g(!0) : f(!0)
+  return (0, n.jsx)('img', {
+style: m,
+className: r()(c.contentImage, E),
+src: I && null != d ? d : a,
+alt: _,
+onError: e => I ? O(!0) : A(!0)
   });
 }

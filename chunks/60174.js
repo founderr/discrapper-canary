@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(954955),
   o = n.n(l),
   c = n(507274),
-  d = n(481060),
-  u = n(130402),
+  u = n(481060),
+  d = n(130402),
   _ = n(466794),
   E = n(659215),
   I = n(222677),
@@ -56,7 +56,7 @@ let E = h.default.getCurrentUser(),
   tooltipText: A.Z.Messages.ADD_BURST_REACTION
 }));
 let T = s ? x : R;
-return (0, i.jsx)(d.Popout, {
+return (0, i.jsx)(u.Popout, {
   shouldShow: l,
   onRequestClose: this.handleReactionPickerToggle,
   renderPopout: this.renderReactionPopout,
@@ -65,30 +65,30 @@ return (0, i.jsx)(d.Popout, {
     let {
       isShown: s
     } = t;
-    return (0, i.jsx)(d.TooltipContainer, {
+    return (0, i.jsx)(u.TooltipContainer, {
       text: m,
-      color: d.TooltipColors.PRIMARY,
+      color: u.TooltipColors.PRIMARY,
       'aria-label': c ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION,
       tooltipClassName: T.__invalid_addReactionTooltip,
-      children: (0, i.jsxs)(d.Clickable, {
+      children: (0, i.jsxs)(u.Clickable, {
         ...e,
         onClick: e => {
           this.handleAddReactionClick(e);
         },
-        onMouseEnter: () => (0, u.x)(g.qR.AddReactionPopoutMouseEntered),
-        onFocus: () => (0, u.x)(g.qR.AddReactionPopoutFocused),
+        onMouseEnter: () => (0, d.x)(g.qR.AddReactionPopoutMouseEntered),
+        onFocus: () => (0, d.x)(g.qR.AddReactionPopoutFocused),
         className: r()(T.reactionBtn, {
           [T.active]: s
         }, n),
         children: [
           c ? (0, i.jsx)(i.Fragment, {
-            children: (0, i.jsx)(d.SuperReactionIcon, {
+            children: (0, i.jsx)(u.SuperReactionIcon, {
               size: 'sm',
               color: 'currentColor',
               className: T.icon
             })
           }) : (0, i.jsx)(i.Fragment, {
-            children: (0, i.jsx)(d.ReactionIcon, {
+            children: (0, i.jsx)(u.ReactionIcon, {
               size: 'sm',
               color: 'currentColor',
               className: T.icon
@@ -159,7 +159,7 @@ super(...e), O(this, 'state', {
     messageId: s.id
   });
   return (0, i.jsx)(c.M.Consumer, {
-    children: e => e ? (0, i.jsx)(d.Dialog, {
+    children: e => e ? (0, i.jsx)(u.Dialog, {
       'aria-label': A.Z.Messages.REACTION_PICKER,
       children: l
     }) : l

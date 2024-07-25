@@ -31,8 +31,8 @@ var x = t(392750),
   S = t(246992),
   T = t(442954),
   E = t(702904),
-  Z = t(178821),
-  I = t(248526),
+  I = t(178821),
+  Z = t(248526),
   R = t(958328),
   O = t(514866),
   B = t(678639),
@@ -62,7 +62,7 @@ className: G.resizeHandle
   });
 }
 
-function F() {
+function z() {
   var e;
   let r = n.useMemo(() => {
   let e = [{
@@ -93,7 +93,7 @@ function F() {
   }), e.push({
     id: 'perks_demos',
     name: 'Perks Demos',
-    render: () => (0, a.jsx)(I.Z, {})
+    render: () => (0, a.jsx)(Z.Z, {})
   })), g.Z.isDeveloper && (e.push({
     id: 'clans',
     name: 'Clans',
@@ -101,7 +101,7 @@ function F() {
   }), e.push({
     id: 'performance',
     name: 'Performance',
-    render: () => (0, a.jsx)(Z.Z, {})
+    render: () => (0, a.jsx)(I.Z, {})
   })), e.push({
     id: 'colors',
     name: 'Colors',
@@ -203,7 +203,7 @@ children: [
   });
 }
 
-function z() {
+function F() {
   let e = n.useRef(null),
 r = (0, c.e7)([f.Z], () => f.Z.sidebarWidth),
 [t, i] = n.useState(null),
@@ -230,7 +230,7 @@ children: [
   }),
   (0, a.jsx)('div', {
     className: G.sidebarContent,
-    children: (0, a.jsx)(F, {})
+    children: (0, a.jsx)(z, {})
   })
 ]
   });
@@ -242,7 +242,7 @@ function V() {
 className: o()(G.container, G.mobileContainerExpanded),
 children: (0, a.jsx)('div', {
   className: G.sidebarContent,
-  children: (0, a.jsx)(F, {})
+  children: (0, a.jsx)(z, {})
 })
   }) : (0, a.jsx)('div', {
 className: G.container,
@@ -271,5 +271,5 @@ function Y(e) {
   let {
 mobile: r
   } = e;
-  return r ? (0, a.jsx)(V, {}) : (0, a.jsx)(z, {});
+  return r ? (0, a.jsx)(V, {}) : (0, a.jsx)(F, {});
 }

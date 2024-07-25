@@ -10,16 +10,16 @@ var i = n(735250),
   l = n(524437),
   o = n(481060),
   c = n(100527),
-  d = n(906732),
-  u = n(602478),
+  u = n(906732),
+  d = n(602478),
   _ = n(121254),
   E = n(742989),
   I = n(675478),
   m = n(581883),
   T = n(585483),
   h = n(153209),
-  N = n(349643),
-  f = n(881591),
+  N = n(180173),
+  f = n(956961),
   C = n(903672),
   p = n(946443),
   g = n(264233),
@@ -36,7 +36,7 @@ popoutPosition: O,
 popoutAlign: M
   } = e, {
 analyticsLocations: v
-  } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER), [L, Z] = a.useState(!1), [P, D] = function() {
+  } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER), [L, Z] = a.useState(!1), [P, D] = function() {
 let e = (0, r.e7)([m.Z], () => {
   var e, t;
   return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : l.X.UNREADS;
@@ -93,23 +93,23 @@ location: 'RecentsPopout'
   }, {
 autoTrackExposure: !1
   }), {
-enabled: G
+enabled: F
   } = _.Z.useExperiment({
 location: 'RecentsPopout'
   }, {
 autoTrackExposure: !1
   }), {
-enabled: F
-  } = u.Z.useExperiment({
+enabled: G
+  } = d.Z.useExperiment({
 location: 'RecentsPopout'
   });
   a.useEffect(() => {
-(!k && P === l.X.TODOS || !G && P === l.X.BOOKMARKS) && D(l.X.MENTIONS);
+(!k && P === l.X.TODOS || !F && P === l.X.BOOKMARKS) && D(l.X.MENTIONS);
   });
   let w = a.useCallback(e => {
 !e.shiftKey && U();
   }, [U]);
-  return (0, i.jsx)(d.Gt, {
+  return (0, i.jsx)(u.Gt, {
 value: v,
 children: (0, i.jsx)(o.Popout, {
   animation: o.Popout.Animation.NONE,
@@ -130,11 +130,11 @@ children: (0, i.jsx)(o.Popout, {
         onJump: w,
         badgeState: x,
         closePopout: U
-      }) : F && P === l.X.GAME_INVITES ? (0, i.jsx)(g.Z, {
+      }) : G && P === l.X.GAME_INVITES ? (0, i.jsx)(g.Z, {
         setTab: D,
         badgeState: x,
         closePopout: U
-      }) : G && P === l.X.BOOKMARKS ? (0, i.jsx)(N.Z, {
+      }) : F && P === l.X.BOOKMARKS ? (0, i.jsx)(N.Z, {
         setTab: D,
         onJump: w,
         closePopout: U

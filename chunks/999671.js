@@ -12,8 +12,8 @@ var a = n(442837),
   o = n(944486),
   c = n(455199);
 n(288552);
-var d = n(981631),
-  u = n(689938);
+var u = n(981631),
+  d = n(689938);
 
 function _(e) {
   let {
@@ -40,13 +40,13 @@ return {
   });
   return (0, i.jsxs)(s.Menu, {
 navId: 'mentions-filter',
-'aria-label': u.Z.Messages.FILTER,
+'aria-label': d.Z.Messages.FILTER,
 onClose: t,
 onSelect: n,
 children: [
   (0, i.jsx)(s.MenuCheckboxItem, {
     id: 'Everyone',
-    label: u.Z.Messages.RECENT_MENTIONS_FILTER_EVERYONE,
+    label: d.Z.Messages.RECENT_MENTIONS_FILTER_EVERYONE,
     action: function() {
       r.Z.setGuildFilter({
         everyoneFilter: !E
@@ -56,7 +56,7 @@ children: [
   }),
   (0, i.jsx)(s.MenuCheckboxItem, {
     id: 'Roles',
-    label: u.Z.Messages.RECENT_MENTIONS_FILTER_ROLES,
+    label: d.Z.Messages.RECENT_MENTIONS_FILTER_ROLES,
     action: function() {
       r.Z.setGuildFilter({
         roleFilter: !I
@@ -66,13 +66,13 @@ children: [
   }),
   null == _ || _.isPrivate() ? null : (0, i.jsx)(s.MenuCheckboxItem, {
     id: 'All Servers',
-    label: u.Z.Messages.RECENT_MENTIONS_FILTER_ALL_SERVERS,
+    label: d.Z.Messages.RECENT_MENTIONS_FILTER_ALL_SERVERS,
     action: function() {
       r.Z.setGuildFilter({
-        guildFilter: m === d.NgX.THIS_SERVER ? d.NgX.ALL_SERVERS : d.NgX.THIS_SERVER
+        guildFilter: m === u.NgX.THIS_SERVER ? u.NgX.ALL_SERVERS : u.NgX.THIS_SERVER
       });
     },
-    checked: m === d.NgX.ALL_SERVERS
+    checked: m === u.NgX.ALL_SERVERS
   })
 ]
   });
@@ -96,7 +96,7 @@ children: e => {
     onClick: t
   } = e;
   return (0, i.jsx)(s.CircleIconButton, {
-    tooltip: u.Z.Messages.FILTER,
+    tooltip: d.Z.Messages.FILTER,
     color: s.CircleIconButtonColors.SECONDARY,
     icon: (0, i.jsx)(s.FiltersHorizontalIcon, {
       size: 'xs',

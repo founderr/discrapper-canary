@@ -1,18 +1,18 @@
 n.d(e, {
   J: function() {
-return r;
+return l;
   },
   l: function() {
 return u;
   }
 }), n(47120);
 var a = n(693824),
-  l = n(169040);
+  r = n(169040);
 
-function r(t) {
+function l(t) {
   let e, {
 canvas: n,
-badges: r,
+badges: l,
 startPosition: u,
 maxWidth: i
   } = t;
@@ -22,18 +22,18 @@ maxWidth: i
 }
 of(n.setFont({
   size: 12,
-  family: l.I8,
-  weight: l.Ue,
+  family: r.I8,
+  weight: r.Ue,
   truncate: a.GX.None
-}), r)) {
-let a = null != e ? e.w + e.x + l.PW : u,
-  r = null != e ? e.w + e.x + l.PW + l.NC : u + l.NC;
+}), l)) {
+let a = null != e ? e.w + e.x + r.PW : u,
+  l = null != e ? e.w + e.x + r.PW + r.NC : u + r.NC;
 n.drawPath(t, {
   x: a,
-  y: l.f0
+  y: r.f0
 }, !0, 0.6), e = n.drawText(o, {
-  x: r,
-  y: l.m2,
+  x: l,
+  y: r.m2,
   w: i
 }, !0);
   }
@@ -44,20 +44,20 @@ function u(t) {
 canvas: e,
 avatarSrcs: n,
 position: {
-  x: l,
-  y: r
+  x: r,
+  y: l
 },
 avatarImageSize: u
   } = t;
   for (let t = 0; t < n.length; t++)
 t < n.length - 1 && e.clipRoundedRect({
-  x: l + (t + 1) * (u - 8) - 2,
-  y: r - 1,
+  x: r + (t + 1) * (u - 8) - 2,
+  y: l - 1,
   w: u + 2,
   h: u + 2
 }, u / 2, !0), e.drawRoundedImage(n[t], {
-  x: l + t * (u - 8),
-  y: r
+  x: r + t * (u - 8),
+  y: l
 }, {
   w: u,
   h: u

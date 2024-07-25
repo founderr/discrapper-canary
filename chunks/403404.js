@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250);
@@ -12,11 +12,11 @@ var a = n(481060),
   o = n(701488),
   c = n(981631);
 
-function d(e) {
+function u(e) {
   let {
 channel: t,
-guildId: d,
-locationObject: u,
+guildId: u,
+locationObject: d,
 openInPopout: _,
 initialSelectedApplicationId: E,
 initialSlide: I = o.ag.DIRECTORY,
@@ -50,8 +50,8 @@ let {
 return n => (0, i.jsx)(e, {
   ...n,
   channel: t,
-  guildId: d,
-  locationObject: u,
+  guildId: u,
+  locationObject: d,
   initialSlide: I,
   initialSelectedApplicationId: E,
   enableSelectedTextChannelInvite: m,

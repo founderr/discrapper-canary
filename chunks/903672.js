@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(481060),
   o = n(235820),
   c = n(494404),
-  d = n(110924),
-  u = n(796798),
+  u = n(110924),
+  d = n(796798),
   _ = n(198620),
   E = n(294218),
   I = n(695346),
@@ -65,7 +65,7 @@ loading: N.Z.loading,
 guildFilter: N.Z.guildFilter,
 roleFilter: N.Z.roleFilter,
 everyoneFilter: N.Z.everyoneFilter
-  })), L = (0, d.Z)(g), P = (0, d.Z)(O), b = (0, d.Z)(v);
+  })), L = (0, u.Z)(g), P = (0, u.Z)(O), b = (0, u.Z)(v);
   a.useEffect(() => {
 if (!N.Z.hasLoadedEver) {
   M(I, !0);
@@ -83,7 +83,7 @@ I,
 !0
   ]);
   a.useEffect(() => {
-u.l.getCurrentConfig({
+d.l.getCurrentConfig({
   location: 'mentions'
 }).enabled && (null == T ? void 0 : T.some(_.k5)) && (o.Z.clearMentions(), M(I, !0));
   }, []), a.useEffect(() => () => {

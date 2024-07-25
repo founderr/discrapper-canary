@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 }), n(47120);
 var i = n(735250),
@@ -11,15 +11,15 @@ var i = n(735250),
   o = n(689938),
   c = n(645438);
 
-function d(e) {
+function u(e) {
   let {
 className: t,
 onJump: n
-  } = e, [s, d] = a.useState(!1);
+  } = e, [s, u] = a.useState(!1);
   return (0, i.jsx)(l.Clickable, {
 className: r()(c.jumpButton, t),
 onClick: e => {
-  d(!0), n(e);
+  u(!0), n(e);
 },
 children: s ? (0, i.jsx)(l.Spinner, {
   type: l.Spinner.Type.PULSING_ELLIPSIS

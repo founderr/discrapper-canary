@@ -15,9 +15,9 @@ return a;
 var i, a, s, r, l = n(470079),
   o = n(836560),
   c = n(512722),
-  d = n.n(c),
-  u = n(392711),
-  _ = n.n(u),
+  u = n.n(c),
+  d = n(392711),
+  _ = n.n(d),
   E = n(570140),
   I = n(904245),
   m = n(45114),
@@ -45,9 +45,9 @@ var i, a, s, r, l = n(470079),
   y = n(823379),
   B = n(709054),
   k = n(981631),
-  G = n(124368);
+  F = n(124368);
 
-function F(e, t, n) {
+function G(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -74,7 +74,7 @@ let n = !1,
         ...e,
         hasLoadedAnything: !0
       };
-    return (e = this.populateInitialStateFromStore(e)).isFullyLoaded ? e : (d()('nsfw' !== e.type, 'this channel should already be loaded'), 'messages' === e.type && this.loadChannelMessages(e) && (n = !0), e);
+    return (e = this.populateInitialStateFromStore(e)).isFullyLoaded ? e : (u()('nsfw' !== e.type, 'this channel should already be loaded'), 'messages' === e.type && this.loadChannelMessages(e) && (n = !0), e);
   });
 (!n || i.some((e, n) => e !== t[n])) && this.setState({
   channels: i,
@@ -121,7 +121,7 @@ return null != t && !1 !== t && (this.setState({
   this.setState({
     loadState: 'loaded',
     channels: this.updateChannel(e.channelId, e => {
-      d()('messages' === e.type, 'channel cannot change type');
+      u()('messages' === e.type, 'channel cannot change type');
       let n = H(e, !0);
       return (0 === n.messages.length || n.messages.length === e.messages.length) && (n = {
         ...n,
@@ -136,7 +136,7 @@ return null != t && !1 !== t && (this.setState({
     loadState: 'loaded',
     channels: this.updateChannel(e.channelId, e => {
       var t;
-      return d()('messages' === e.type, 'channel cannot change type'), {
+      return u()('messages' === e.type, 'channel cannot change type'), {
         ...H(e, !0),
         isFullyLoaded: !0,
         hasError: !0,
@@ -161,7 +161,7 @@ for (let t in e)
   }
   }
   constructor(e, t) {
-super(), F(this, 'state', void 0), F(this, 'scrollerRef', void 0), F(this, 'maybeLoadMore', void 0), F(this, 'reloadMessages', void 0), F(this, 'getNumUnreadChannels', void 0), F(this, 'markChannelRead', void 0), F(this, 'markGuildRead', void 0), F(this, 'deleteChannel', void 0), F(this, 'markAllRead', void 0), F(this, 'toggle', void 0), F(this, 'handleUserGuildSettingsStoreChange', void 0), F(this, 'handleJoinedThreadsStoreChange', void 0), F(this, 'handleActiveThreadsStoreChange', void 0), this.state = e, this.scrollerRef = t, this.maybeLoadMore = () => {
+super(), G(this, 'state', void 0), G(this, 'scrollerRef', void 0), G(this, 'maybeLoadMore', void 0), G(this, 'reloadMessages', void 0), G(this, 'getNumUnreadChannels', void 0), G(this, 'markChannelRead', void 0), G(this, 'markGuildRead', void 0), G(this, 'deleteChannel', void 0), G(this, 'markAllRead', void 0), G(this, 'toggle', void 0), G(this, 'handleUserGuildSettingsStoreChange', void 0), G(this, 'handleJoinedThreadsStoreChange', void 0), G(this, 'handleActiveThreadsStoreChange', void 0), this.state = e, this.scrollerRef = t, this.maybeLoadMore = () => {
   var e;
   let t = null === (e = this.scrollerRef.current) || void 0 === e ? void 0 : e.getScrollerState();
   if (null != t)
@@ -338,7 +338,7 @@ o = D.ZP.getMentionCount(i),
 c = o > 0 || a.isPrivate();
   if (null == l || B.default.compare(s, l) >= 0)
 return;
-  let d = {
+  let u = {
 guildId: n,
 channelId: i,
 oldestReadMessageId: s,
@@ -368,7 +368,7 @@ sortOrder: function(e, t, n) {
   }
   if (i.isThread()) {
     let e = (0, S.J)(i);
-    return e === G.iN.ALL_MESSAGES ? 3 : e === G.iN.NO_MESSAGES ? 6 : 4;
+    return e === F.iN.ALL_MESSAGES ? 3 : e === F.iN.NO_MESSAGES ? 6 : 4;
   } {
     let n = j.ZP.getChannelMessageNotifications(e, t),
       i = n === k.bL.NULL ? j.ZP.getMessageNotifications(e) : n;
@@ -377,13 +377,13 @@ sortOrder: function(e, t, n) {
 }(n, i, l)
   };
   a.isNSFW() && !v.Z.didAgree(a.guild_id) ? t.push({
-...d,
+...u,
 type: 'nsfw'
   }) : a.isForumLikeChannel() ? t.push({
-...d,
+...u,
 type: 'forum'
   }) : t.push({
-...d,
+...u,
 type: 'messages',
 messages: []
   });

@@ -11,8 +11,8 @@ var a = n(442837),
   l = n(218035),
   o = n(775666),
   c = n(858822),
-  d = n(423589),
-  u = n(131704),
+  u = n(423589),
+  d = n(131704),
   _ = n(430824);
 
 function E(e) {
@@ -24,7 +24,7 @@ navId: I,
 label: m,
 location: T,
 includeGuildMute: h
-  } = e, N = (0, l.c)(t), f = (0, o.EQ)(t), C = (0, a.e7)([_.Z], () => _.Z.getGuild(t.guild_id)), p = (0, c.Z)(C), g = (0, d.Mn)('ChannelNotificationSettingsPopoutMenu') && u.$N.has(t.type);
+  } = e, N = (0, l.c)(t), f = (0, o.EQ)(t), C = (0, a.e7)([_.Z], () => _.Z.getGuild(t.guild_id)), p = (0, c.Z)(C), g = (0, u.Mn)('ChannelNotificationSettingsPopoutMenu') && d.$N.has(t.type);
   return (0, i.jsxs)(s.Menu, {
 navId: I,
 onClose: n,

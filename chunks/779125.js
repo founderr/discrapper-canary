@@ -11,8 +11,8 @@ var a = n(442837),
   l = n(287734),
   o = n(933557),
   c = n(124072),
-  d = n(703656),
-  u = n(131704),
+  u = n(703656),
+  d = n(131704),
   _ = n(592125),
   E = n(430824),
   I = n(699516),
@@ -56,15 +56,15 @@ children: e => {
           return;
         }
         let a = _.Z.getChannel(t);
-        if (null != a && (0, u.bw)(a.type)) {
+        if (null != a && (0, d.bw)(a.type)) {
           if (n) {
-            r.Z.updateChatOpen(a.id, !0), (0, d.uL)(N.Z5c.CHANNEL(e, t));
+            r.Z.updateChatOpen(a.id, !0), (0, u.uL)(N.Z5c.CHANNEL(e, t));
             return;
           }
           l.default.selectVoiceChannel(a.id);
           return;
         }
-        (0, d.uL)(N.Z5c.CHANNEL(e, t));
+        (0, u.uL)(N.Z5c.CHANNEL(e, t));
       }(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, p));
     },
     onMouseEnter: a,

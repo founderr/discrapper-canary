@@ -7,8 +7,8 @@ var i, a, s, r = n(735250),
   l = n(470079),
   o = n(442837),
   c = n(692547),
-  d = n(481060),
-  u = n(58642),
+  u = n(481060),
+  d = n(58642),
   _ = n(2052),
   E = n(710845),
   I = n(703656),
@@ -112,7 +112,7 @@ let {
   onDropdownOpen: l,
   onDropdownClose: o,
   analyticsListSort: c,
-  analyticsListIndex: d
+  analyticsListIndex: u
 } = this.props;
 return (0, r.jsx)(A.Z, {
   applicationId: e.id,
@@ -125,7 +125,7 @@ return (0, r.jsx)(A.Z, {
   onDropdownOpen: l,
   onDropdownClose: o,
   analyticsListSort: c,
-  analyticsListIndex: d
+  analyticsListIndex: u
 });
   }
   renderDisabledButton(e, t) {
@@ -139,7 +139,7 @@ let {
 return (0, r.jsxs)('div', {
   className: O.disabledButtonWrapper,
   children: [
-    (0, r.jsxs)(d.Button, {
+    (0, r.jsxs)(u.Button, {
       className: n,
       fullWidth: i,
       size: a,
@@ -150,7 +150,7 @@ return (0, r.jsxs)('div', {
         this.renderProgressBar()
       ]
     }),
-    (0, r.jsx)(d.Tooltip, {
+    (0, r.jsx)(u.Tooltip, {
       text: t,
       position: l,
       children: e => (0, r.jsx)('div', {
@@ -171,10 +171,10 @@ if (e)
 let n = C.KJ(t);
 if (null == n)
   return null;
-let i = n.type === R.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : C.xI(Number(n.progress), Number(n.total));
-return (0, r.jsx)(d.Progress, {
+let i = n.type === R.vxO.UNINSTALLING ? u.Progress.INDETERMINATE : C.xI(Number(n.progress), Number(n.total));
+return (0, r.jsx)(u.Progress, {
   percent: i,
-  size: d.Progress.Sizes.XSMALL,
+  size: u.Progress.Sizes.XSMALL,
   foregroundColor: n.paused ? c.Z.unsafe_rawColors.PRIMARY_500.css : c.Z.unsafe_rawColors.GREEN_360.css,
   backgroundColor: c.Z.unsafe_rawColors.TRANSPARENT.css,
   className: O.progress
@@ -188,11 +188,11 @@ let {
   color: s,
   isCloudSyncing: l
 } = this.props;
-return (0, r.jsxs)(d.Button, {
+return (0, r.jsxs)(u.Button, {
   className: n,
   fullWidth: i,
   size: a,
-  color: null != s ? s : d.Button.Colors.GREEN,
+  color: null != s ? s : u.Button.Colors.GREEN,
   submitting: 'uninstalling' === e || l,
   onClick: e => this.handleClick(e, t),
   children: [
@@ -230,7 +230,7 @@ super(...e), M(this, '_uninstallStringIndex', null), M(this, 'handleAddToLibrary
     let {
       libraryApplication: e
     } = this.props;
-    await u.h(e.id, e.branchId, e.getFlags() & ~R.eHb.HIDDEN), (0, I.uL)(R.Z5c.APPLICATION_LIBRARY);
+    await d.h(e.id, e.branchId, e.getFlags() & ~R.eHb.HIDDEN), (0, I.uL)(R.Z5c.APPLICATION_LIBRARY);
   } catch (e) {
     new E.Z('LibraryApplicationButton').error(e);
   }
@@ -279,7 +279,7 @@ hasNoBuild: l
 }
 M(Z, 'defaultProps', {
   fullWidth: !1,
-  size: d.Button.Sizes.LARGE,
+  size: u.Button.Sizes.LARGE,
   hideProgress: !1,
   isPlayShiny: !1,
   tooltipPosition: 'top'

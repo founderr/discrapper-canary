@@ -6,8 +6,8 @@ var i = n(735250),
   l = n(100527),
   o = n(367907),
   c = n(906732),
-  d = n(524444),
-  u = n(624138),
+  u = n(524444),
+  d = n(624138),
   _ = n(453070),
   E = n(373228),
   I = n(419922),
@@ -15,7 +15,7 @@ var i = n(735250),
   T = n(981631),
   h = n(474936),
   N = n(467481);
-let f = (0, u.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+let f = (0, d.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
   C = e => {
 if (null != e)
   o.ZP.trackWithMetadata(T.rMx.EXPRESSION_TOOLTIP_VIEWED, {
@@ -31,7 +31,7 @@ t.Z = e => {
 renderableSticker: t,
 channel: n,
 isInteracting: s
-  } = e, [o, u] = a.useState(!0), [E, T] = a.useState(String(Date.now())), [h] = (0, _.XW)(t, s), {
+  } = e, [o, d] = a.useState(!0), [E, T] = a.useState(String(Date.now())), [h] = (0, _.XW)(t, s), {
 analyticsLocations: p
   } = (0, c.ZP)(l.Z.STICKER_MESSAGE), g = (0, i.jsxs)('span', {
 className: N.stickerName,
@@ -51,7 +51,7 @@ children: (0, i.jsx)(r.Popout, {
   animation: r.Popout.Animation.TRANSLATE,
   positionKey: E,
   onRequestClose: () => {
-    u(!0);
+    d(!0);
   },
   renderPopout: e => (0, i.jsx)(m.Z, {
     ...e,
@@ -64,9 +64,9 @@ children: (0, i.jsx)(r.Popout, {
       onClick: n
     } = e;
     return (0, i.jsx)(r.Tooltip, {
-      ...d.b_,
+      ...u.b_,
       shouldShow: o,
-      text: (0, d.Y)(g),
+      text: (0, u.Y)(g),
       'aria-label': !1,
       onTooltipShow: () => {
         C(h);
@@ -75,7 +75,7 @@ children: (0, i.jsx)(r.Popout, {
         ...e,
         className: N.clickableSticker,
         onClick: e => {
-          u(!o), n(e);
+          d(!o), n(e);
         },
         tag: 'span',
         children: (0, i.jsx)(I.ZP, {

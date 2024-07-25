@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250);
@@ -45,19 +45,19 @@ children: e => {
   });
 }
 
-function d(e) {
+function u(e) {
   let {
 usernameHook: t,
 message: a,
 compact: s
   } = e, {
-content: d,
-timestamp: u,
+content: u,
+timestamp: d,
 messageReference: _
   } = a, E = (0, l.ZP)(a), I = t(E), m = o.Z.Messages.SYSTEM_MESSAGE_CHANNEL_FOLLOW_ADD_HOOK.format({
 username: E.nick,
 usernameHook: I,
-webhookName: d,
+webhookName: u,
 webhookNameHook: (e, t) => (0, i.jsx)(c, {
   messageReference: _,
   children: e
@@ -65,7 +65,7 @@ webhookNameHook: (e, t) => (0, i.jsx)(c, {
   });
   return (0, i.jsx)(r.Z, {
 icon: n(570111),
-timestamp: u,
+timestamp: d,
 compact: s,
 children: m
   });

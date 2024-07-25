@@ -13,8 +13,8 @@ var i = n(735250),
   l = n(607070),
   o = n(426563),
   c = n(998502),
-  d = n(689938),
-  u = n(117414);
+  u = n(689938),
+  d = n(117414);
 let _ = c.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
 function E() {
@@ -44,11 +44,11 @@ function I(e) {
 src: t
   } = e;
   return (0, i.jsx)('div', {
-className: u.avatarContainer,
+className: d.avatarContainer,
 children: (0, i.jsx)(_, {
   src: t,
   size: r.AvatarSizes.SIZE_40,
-  'aria-label': d.Z.Messages.GUILD_AUTOMOD_USERNAME
+  'aria-label': u.Z.Messages.GUILD_AUTOMOD_USERNAME
 })
   });
 }

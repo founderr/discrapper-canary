@@ -11,8 +11,8 @@ var a = n(120356),
   l = n(446411),
   o = n(454585),
   c = n(702346),
-  d = n(553385),
-  u = n(981631),
+  u = n(553385),
+  d = n(981631),
   _ = n(689938),
   E = n(969361);
 
@@ -55,7 +55,7 @@ children: [
     children: (0, i.jsx)(r.Button, {
       color: r.Button.Colors.PRIMARY,
       onClick: () => {
-        o ? (0, d.z$)(t) : (0, d.XP)(a.guild_id, a.id, t.id);
+        o ? (0, u.z$)(t) : (0, u.XP)(a.guild_id, a.id, t.id);
       },
       children: _.Z.Messages.SYSTEM_MESSAGE_GET_GAMING_STATS
     })
@@ -79,9 +79,9 @@ renderDescription: (e, t, i) => o.Z.parse(t, !0, {
   channelId: n.channel_id
 }),
 autoPlayGif: !1,
-renderImageComponent: u.VqG,
-renderVideoComponent: u.VqG,
-renderLinkComponent: u.VqG,
-renderForwardComponent: u.VqG
+renderImageComponent: d.VqG,
+renderVideoComponent: d.VqG,
+renderLinkComponent: d.VqG,
+renderForwardComponent: d.VqG
   });
 }

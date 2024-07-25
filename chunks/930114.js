@@ -11,8 +11,8 @@ var a = n(481060),
   l = n(585483),
   o = n(74538),
   c = n(138464),
-  d = n(474936),
-  u = n(981631);
+  u = n(474936),
+  d = n(981631);
 
 function _(e) {
   let {
@@ -20,7 +20,7 @@ processedCode: t,
 channelContext: _,
 customGiftMessage: E,
 giftInfo: I
-  } = e, m = !1, T = null, h = s.default.getCurrentUser(), N = (0, o.yd)(null == h ? void 0 : h.premiumType, d.p9.TIER_0);
+  } = e, m = !1, T = null, h = s.default.getCurrentUser(), N = (0, o.yd)(null == h ? void 0 : h.premiumType, u.p9.TIER_0);
   (0, a.openModalLazy)(async () => {
 let {
   default: e
@@ -45,7 +45,7 @@ return n => {
   }, {
 onCloseCallback: () => {
   var e;
-  m && null != T && !N && T.isSubscription && (null == T ? void 0 : null === (e = T.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === d.p9.TIER_2 && l.S.dispatch(u.CkL.PREMIUM_SUBSCRIPTION_CREATED);
+  m && null != T && !N && T.isSubscription && (null == T ? void 0 : null === (e = T.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && l.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
 }
   });
 }

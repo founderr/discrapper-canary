@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250);
@@ -12,12 +12,12 @@ var a = n(481060),
   o = n(981791),
   c = n(405394);
 
-function d(e) {
+function u(e) {
   let {
 message: t,
 channel: n,
-compact: d
-  } = e, u = (0, s.ZP)(t), _ = t.application, E = (0, r.l)({
+compact: u
+  } = e, d = (0, s.ZP)(t), _ = t.application, E = (0, r.l)({
 user: t.author,
 channelId: n.id,
 guildId: n.guild_id,
@@ -30,11 +30,11 @@ iconNode: (0, i.jsx)(a.TicketIcon, {
   className: c.ticketIcon
 }),
 timestamp: t.timestamp,
-compact: d,
+compact: u,
 children: (0, o.A)({
   application: _,
-  username: u.nick,
-  usernameHook: E(u)
+  username: d.nick,
+  usernameHook: E(d)
 })
   });
 }

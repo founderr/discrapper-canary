@@ -6,8 +6,8 @@ var i = n(735250),
   l = n(239091),
   o = n(904245),
   c = n(287734),
-  d = n(872810),
-  u = n(911969),
+  u = n(872810),
+  d = n(911969),
   _ = n(376484),
   E = n(362604),
   I = n(710845),
@@ -36,8 +36,8 @@ var i = n(735250),
   y = n(158776),
   B = n(944486),
   k = n(594174),
-  G = n(979651),
-  F = n(585483),
+  F = n(979651),
+  G = n(585483),
   w = n(5192),
   V = n(960048),
   H = n(709054),
@@ -60,8 +60,8 @@ var i = n(735250),
   el = n(73352),
   eo = n(507962),
   ec = n(857640),
-  ed = n(614972),
-  eu = n(701181),
+  eu = n(614972),
+  ed = n(701181),
   e_ = n(29338),
   eE = n(461135),
   eI = n(296571),
@@ -84,16 +84,16 @@ compact: r
 author: l
   } = t, {
 guild_id: o
-  } = n, c = t.getChannelId(), d = (0, s.e7)([j.Z], () => j.Z.getGuild(o), [o]), u = a.useCallback(() => {
-if (null != d)
+  } = n, c = t.getChannelId(), u = (0, s.e7)([j.Z], () => j.Z.getGuild(o), [o]), d = a.useCallback(() => {
+if (null != u)
   (0, T.f)({
-    guildId: d.id,
+    guildId: u.id,
     location: {
       section: eC.jXE.CHANNEL_TEXT_AREA,
       object: eC.qAy.BOOST_ANNOUNCEMENT_UPSELL
     }
   });
-  }, [d]), _ = (0, z.l)({
+  }, [u]), _ = (0, z.l)({
 user: l,
 channelId: c,
 guildId: n.guild_id,
@@ -103,9 +103,9 @@ stopPropagation: !0
   return (0, i.jsx)(ef.ZP, {
 message: t,
 compact: r,
-guild: d,
+guild: u,
 usernameHook: _,
-onClickMessage: u
+onClickMessage: d
   });
 }
 
@@ -138,12 +138,12 @@ let {
   compact: a
 } = e, {
   author: r
-} = t, l = t.getChannelId(), o = (0, s.e7)([k.default], () => k.default.getUser(t.mentions[0]), [t]), c = w.ZP.getName(null, l, o), d = (0, z.l)({
+} = t, l = t.getChannelId(), o = (0, s.e7)([k.default], () => k.default.getUser(t.mentions[0]), [t]), c = w.ZP.getName(null, l, o), u = (0, z.l)({
   user: r,
   channelId: l,
   guildId: n.guild_id,
   messageId: t.id
-}), u = (0, z.l)({
+}), d = (0, z.l)({
   user: o,
   channelId: l,
   guildId: n.guild_id,
@@ -154,14 +154,14 @@ return n.isThread() ? (0, i.jsx)(em.Z, {
   channel: n,
   compact: a,
   targetUser: o,
-  actorUsernameHook: d,
-  targetUsernameHook: u
+  actorUsernameHook: u,
+  targetUsernameHook: d
 }) : (0, i.jsx)(el.Z, {
   message: t,
   compact: a,
   otherUsername: c,
-  usernameHook: d,
-  otherUsernameHook: u
+  usernameHook: u,
+  otherUsernameHook: d
 });
   },
   [eC.uaV.RECIPIENT_REMOVE]: function(e) {
@@ -176,7 +176,7 @@ let {
   channelId: l,
   guildId: n.guild_id,
   messageId: t.id
-}), d = (0, z.l)({
+}), u = (0, z.l)({
   user: o,
   channelId: l,
   guildId: n.guild_id,
@@ -188,14 +188,14 @@ return n.isThread() ? (0, i.jsx)(eT.Z, {
   compact: a,
   targetUser: o,
   actorUsernameHook: c,
-  targetUsernameHook: d
+  targetUsernameHook: u
 }) : null != o && o.id !== r.id ? (0, i.jsx)(eo.Z, {
   message: t,
   channel: n,
   compact: a,
   usernameHook: c,
   otherUser: o,
-  otherUsernameHook: d
+  otherUsernameHook: u
 }) : (0, i.jsx)(eo.Z, {
   message: t,
   channel: n,
@@ -210,12 +210,12 @@ let {
 } = e, {
   id: l,
   author: o
-} = t, d = P.default.getId(), u = t.getChannelId(), _ = (0, s.e7)([D.Z], () => D.Z.isCallActive(u, l), [
-  u,
+} = t, u = P.default.getId(), d = t.getChannelId(), _ = (0, s.e7)([D.Z], () => D.Z.isCallActive(d, l), [
+  d,
   l
-]), E = (0, s.e7)([G.Z], () => G.Z.getVoiceState(eC.ME, d)), I = !_ && null != t.call && !t.call.participants.includes(d), m = _ && (null == E || E.channelId !== u), T = a.useCallback(() => c.default.selectVoiceChannel(u), [u]), h = (0, z.l)({
+]), E = (0, s.e7)([F.Z], () => F.Z.getVoiceState(eC.ME, u)), I = !_ && null != t.call && !t.call.participants.includes(u), m = _ && (null == E || E.channelId !== d), T = a.useCallback(() => c.default.selectVoiceChannel(d), [d]), h = (0, z.l)({
   user: o,
-  channelId: u,
+  channelId: d,
   guildId: r.guild_id,
   messageId: t.id
 });
@@ -279,7 +279,7 @@ let {
     let e = b.Z.getChannel(l);
     null != e && (0, R.XU)(e.guild_id, e.id);
   }
-  setTimeout(() => F.S.dispatch(eC.CkL.TOGGLE_CHANNEL_PINS), 0);
+  setTimeout(() => G.S.dispatch(eC.CkL.TOGGLE_CHANNEL_PINS), 0);
 }, [l]), c = (0, z.l)({
   user: r,
   channelId: l,
@@ -355,14 +355,14 @@ let {
     id: o
   },
   messageReference: c
-} = t, u = t.getChannelId(), _ = (0, s.e7)([y.Z], () => y.Z.findActivity(o, e => e.type === eC.IIU.PLAYING), [o]), E = (0, s.e7)([b.Z], () => null != c ? b.Z.getChannel(c.channel_id) : null, [c]), I = null == c ? void 0 : c.guild_id, m = (0, z.l)({
+} = t, d = t.getChannelId(), _ = (0, s.e7)([y.Z], () => y.Z.findActivity(o, e => e.type === eC.IIU.PLAYING), [o]), E = (0, s.e7)([b.Z], () => null != c ? b.Z.getChannel(c.channel_id) : null, [c]), I = null == c ? void 0 : c.guild_id, m = (0, z.l)({
   user: l,
-  channelId: u,
+  channelId: d,
   guildId: r.guild_id,
   messageId: t.id
 }), T = a.useCallback(() => {
   if (null != E && null != I)
-    (0, d.iV)({
+    (0, u.iV)({
       streamType: ep.lo.GUILD,
       ownerId: o,
       channelId: E.id,
@@ -408,7 +408,7 @@ let {
   channelId: t.channel_id,
   guildId: s.guild_id,
   messageId: t.id
-}), d = a.useCallback(async e => {
+}), u = a.useCallback(async e => {
   var n;
   let i = null === (n = t.messageReference) || void 0 === n ? void 0 : n.channel_id;
   if (null != i) {
@@ -416,7 +416,7 @@ let {
     let t = b.Z.getChannel(i);
     null != t && (0, L.ok)(t, e.shiftKey);
   }
-}, [t]), u = a.useCallback(() => {
+}, [t]), d = a.useCallback(() => {
   (0, r.openModalLazy)(async () => {
     let {
       default: e
@@ -450,8 +450,8 @@ return (0, i.jsx)(eI.Z, {
   message: t,
   compact: o,
   usernameHook: c,
-  onClickThread: d,
-  onClickViewThreads: u,
+  onClickThread: u,
+  onClickViewThreads: d,
   onContextMenuThread: _
 });
   },
@@ -530,7 +530,7 @@ let {
   channel: a,
   compact: s
 } = e;
-return (null === (t = n.purchaseNotification) || void 0 === t ? void 0 : t.type) === u.Eh.GUILD_PRODUCT ? (0, i.jsx)(h.Z, {
+return (null === (t = n.purchaseNotification) || void 0 === t ? void 0 : t.type) === d.Eh.GUILD_PRODUCT ? (0, i.jsx)(h.Z, {
   message: n,
   channel: a,
   compact: s
@@ -589,7 +589,7 @@ let {
   guildId: n.guild_id,
   messageId: t.id
 });
-return (0, i.jsx)(eu.Z, {
+return (0, i.jsx)(ed.Z, {
   message: t,
   compact: a,
   usernameHook: s
@@ -601,18 +601,18 @@ let {
   message: a,
   channel: l,
   compact: c
-} = e, d = (0, z.l)({
+} = e, u = (0, z.l)({
   user: a.author,
   channelId: l.id,
   guildId: l.guild_id,
   messageId: a.id
-}), u = (0, s.e7)([U.Z], () => U.Z.can(eC.Plq.MUTE_MEMBERS, l)), _ = (0, s.e7)([O.Z], () => O.Z.getParticipant(l.id, a.author.id)), E = new Date(H.default.extractTimestamp(a.id)).toISOString() === new Date(null !== (n = null == _ ? void 0 : null === (t = _.voiceState) || void 0 === t ? void 0 : t.requestToSpeakTimestamp) && void 0 !== n ? n : 0).toISOString(), I = u && (null == _ ? void 0 : _.rtsState) === M.xO.REQUESTED_TO_SPEAK && E;
+}), d = (0, s.e7)([U.Z], () => U.Z.can(eC.Plq.MUTE_MEMBERS, l)), _ = (0, s.e7)([O.Z], () => O.Z.getParticipant(l.id, a.author.id)), E = new Date(H.default.extractTimestamp(a.id)).toISOString() === new Date(null !== (n = null == _ ? void 0 : null === (t = _.voiceState) || void 0 === t ? void 0 : t.requestToSpeakTimestamp) && void 0 !== n ? n : 0).toISOString(), I = d && (null == _ ? void 0 : _.rtsState) === M.xO.REQUESTED_TO_SPEAK && E;
 return (0, i.jsxs)(i.Fragment, {
   children: [
-    (0, i.jsx)(ed.Z, {
+    (0, i.jsx)(eu.Z, {
       message: a,
       compact: c,
-      usernameHook: d
+      usernameHook: u
     }),
     I ? (0, i.jsxs)(r.Button, {
       wrapperClassName: eS.inviteToSpeakButtonWrapper,

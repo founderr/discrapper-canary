@@ -6,8 +6,8 @@ var i = n(735250),
   l = n(215569),
   o = n(481060),
   c = n(566006),
-  d = n(60174),
-  u = n(453687),
+  u = n(60174),
+  d = n(453687),
   _ = n(434624),
   E = n(287151),
   I = n(689938),
@@ -62,7 +62,7 @@ return L || p ? (0, i.jsxs)(l.W, {
   transitionAppear: !M,
   role: 'group',
   transitionLeave: !1,
-  id: (0, u.bY)(e),
+  id: (0, d.bY)(e),
   onMouseEnter: () => this.setState({
     isHovered: !0
   }),
@@ -96,7 +96,7 @@ return L || p ? (0, i.jsxs)(l.W, {
         ]
       })
     }),
-    !t && !A && (0, i.jsx)(d.X, {
+    !t && !A && (0, i.jsx)(u.X, {
       type: c.O.NORMAL,
       message: e,
       channel: f,

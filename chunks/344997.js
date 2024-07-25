@@ -11,8 +11,8 @@ var a = n(913527),
   l = n(481060),
   o = n(788080),
   c = n(800530),
-  d = n(689938),
-  u = n(454777);
+  u = n(689938),
+  d = n(454777);
 let _ = e => s()().diff(s().unix(e), 'days');
 
 function E(e) {
@@ -36,8 +36,8 @@ onClick: () => {
     });
   });
 },
-className: u.detailsButton,
-children: d.Z.Messages.SAFETY_SYSTEM_NOTIFICATION_SEE_DETAILS_BUTTON
+className: d.detailsButton,
+children: u.Z.Messages.SAFETY_SYSTEM_NOTIFICATION_SEE_DETAILS_BUTTON
   });
 }
 
@@ -46,9 +46,9 @@ function I(e) {
 learnMoreLink: t
   } = e;
   return (0, i.jsx)(l.Anchor, {
-className: u.detailsButton,
+className: d.detailsButton,
 href: t,
-children: d.Z.Messages.SAFETY_SYSTEM_NOTIFICATION_LEARN_MORE_BUTTON
+children: u.Z.Messages.SAFETY_SYSTEM_NOTIFICATION_LEARN_MORE_BUTTON
   });
 }
 
@@ -89,7 +89,7 @@ danger: (0, i.jsx)(l.WarningIcon, {
 })
   };
   return null != t && t in n ? (0, i.jsx)('div', {
-className: u.icon,
+className: d.icon,
 children: n[t]
   }) : null;
 }
@@ -99,8 +99,8 @@ function h(e) {
 children: t,
 theme: n
   } = e, a = {
-default: u.defaultFooterContainer,
-danger: u.dangerFooterContainer
+default: d.defaultFooterContainer,
+danger: d.dangerFooterContainer
   };
   return (0, i.jsx)('div', {
 className: a[null != n ? n : 'default'],
@@ -114,13 +114,13 @@ function N(e) {
 return null;
   let a = (0, o.fr)(e.embed);
   return null == a ? null : (0, i.jsxs)(l.Clickable, {
-className: u.safetyPolicyNoticeContainer,
+className: d.safetyPolicyNoticeContainer,
 children: [
   (0, i.jsxs)('div', {
-    className: u.noticeContent,
+    className: d.noticeContent,
     children: [
       (0, i.jsxs)('div', {
-        className: u.headerRow,
+        className: d.headerRow,
         children: [
           (0, i.jsx)(T, {
             iconType: a.icon
@@ -132,16 +132,16 @@ children: [
         ]
       }),
       (0, i.jsx)('div', {
-        className: u.incidentTiming,
+        className: d.incidentTiming,
         children: (0, i.jsx)(l.Text, {
           variant: 'text-xs/medium',
-          children: d.Z.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
+          children: u.Z.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
             daysAgo: _(null !== (n = a.timestamp) && void 0 !== n ? n : 0)
           })
         })
       }),
       (0, i.jsx)('div', {
-        className: u.noticeBody,
+        className: d.noticeBody,
         children: (0, i.jsx)(l.Text, {
           variant: 'text-md/normal',
           color: 'text-muted',

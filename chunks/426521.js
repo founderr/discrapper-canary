@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(906732),
   o = n(336197),
   c = n(454585),
-  d = n(171368),
-  u = n(695346),
+  u = n(171368),
+  d = n(695346),
   _ = n(598077),
   E = n(594174),
   I = n(626135),
@@ -38,20 +38,20 @@ item: l
   } = e, o = null === (t = l.message) || void 0 === t ? void 0 : t.content;
   if (null == o)
 return (0, i.jsx)('div', {});
-  let d = null !== (a = E.default.getUser(null === (n = l.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== a ? a : new _.Z(l.other_user),
-u = c.Z.parse(o);
+  let u = null !== (a = E.default.getUser(null === (n = l.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== a ? a : new _.Z(l.other_user),
+d = c.Z.parse(o);
   return (0, i.jsxs)('div', {
 className: O.messagePreviewContainer,
 children: [
   (0, i.jsx)(r.Z, {
-    user: d,
+    user: u,
     size: s.AvatarSizes.SIZE_24
   }),
   (0, i.jsx)(s.Text, {
     className: O.messagePreviewText,
     variant: 'text-sm/normal',
     lineClamp: 2,
-    children: u
+    children: d
   })
 ]
   });
@@ -101,10 +101,10 @@ let D = a.memo(function(e) {
 var t;
 let {
   item: r,
-  ackedBeforeId: u
+  ackedBeforeId: d
 } = e, {
   analyticsLocations: _
-} = (0, l.ZP)(), E = (0, p.I)(r, u), x = a.useCallback(async () => {
+} = (0, l.ZP)(), E = (0, p.I)(r, d), x = a.useCallback(async () => {
   if (!E && (0, h.wt)(r), null != r.item_enum && r.item_enum === N.AM.FIND_FRIENDS) {
     (0, s.openModalLazy)(async () => {
       let {
@@ -129,7 +129,7 @@ let {
       let t = i.match('^/users/(\\d+)');
       if (null != t && 2 === t.length) {
         var e;
-        (0, d.openUserProfileModal)({
+        (0, u.openUserProfileModal)({
           userId: t[1],
           messageId: null === (e = r.message) || void 0 === e ? void 0 : e.id,
           sourceAnalyticsLocations: _,
@@ -210,7 +210,7 @@ return (0, i.jsxs)('div', {
   b = a.memo(function(e) {
 let {
   items: t
-} = e, n = u.d$.useSetting();
+} = e, n = d.d$.useSetting();
 return (0, i.jsx)(i.Fragment, {
   children: t.map(e => (0, i.jsx)(D, {
     item: e,

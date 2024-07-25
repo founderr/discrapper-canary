@@ -10,8 +10,8 @@ var i = n(735250),
   l = n(447543),
   o = n(955415),
   c = n(598077),
-  d = n(314897),
-  u = n(592125),
+  u = n(314897),
+  d = n(592125),
   _ = n(699516),
   E = n(51144),
   I = n(981631),
@@ -23,11 +23,11 @@ function h(e) {
   let {
 invite: n,
 getAcceptInviteContext: h
-  } = e, N = (0, s.e7)([d.default], () => d.default.getId()), f = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === N, C = n.state === I.r2o.ACCEPTING, p = (0, s.e7)([_.Z], () => {
+  } = e, N = (0, s.e7)([u.default], () => u.default.getId()), f = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === N, C = n.state === I.r2o.ACCEPTING, p = (0, s.e7)([_.Z], () => {
 var e;
 return null != n.inviter && _.Z.isFriend(null === (e = n.inviter) || void 0 === e ? void 0 : e.id);
   }), g = a.useCallback(() => {
-null != n.inviter && null != u.Z.getDMFromUserId(n.inviter.id) && r.Z.openPrivateChannel([n.inviter.id]);
+null != n.inviter && null != d.Z.getDMFromUserId(n.inviter.id) && r.Z.openPrivateChannel([n.inviter.id]);
   }, [n.inviter]), S = a.useCallback(() => {
 let e = h('Invite Button Embed');
 l.Z.acceptInviteAndTransitionToInviteChannel({

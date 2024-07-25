@@ -26,7 +26,7 @@ let {
   isJoinAction: !s,
   text: s ? o.Z.Messages.START : o.Z.Messages.EMBEDDED_ACTIVITIES_JOIN,
   tooltip: void 0
-}, d = (0, r.WS)(a, s);
+}, u = (0, r.WS)(a, s);
 if (null != t && null != i && t.launchId === i.launchId)
   return {
     ...c,
@@ -37,8 +37,8 @@ if (null != t && null != i && t.launchId === i.launchId)
 if (s)
   return {
     ...c,
-    disabled: !d,
-    tooltip: d ? void 0 : o.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START
+    disabled: !u,
+    tooltip: u ? void 0 : o.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START
   };
 if (null != n && n !== l.Fw.CAN_JOIN) {
   let e;

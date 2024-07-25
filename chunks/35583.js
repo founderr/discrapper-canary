@@ -6,8 +6,8 @@ var i = n(735250),
   l = n(668781),
   o = n(431583),
   c = n(91372),
-  d = n(19780),
-  u = n(35818),
+  u = n(19780),
+  d = n(35818),
   _ = n(665149),
   E = n(689938),
   I = n(139715);
@@ -60,7 +60,7 @@ super(...e), m(this, 'state', {
   memoizedMode: this.props.mode,
   clicked: !1
 }), m(this, 'handleInstallDownload', () => {
-  d.Z.isConnected() ? l.Z.show({
+  u.Z.isConnected() ? l.Z.show({
     title: E.Z.Messages.UPDATE_DURING_CALL_TITLE,
     body: E.Z.Messages.UPDATE_DURING_CALL_BODY,
     onConfirm: this.doUpdate,
@@ -70,7 +70,7 @@ super(...e), m(this, 'state', {
 }), m(this, 'doUpdate', () => {
   !this.state.clicked && (this.setState({
     clicked: !0
-  }), (0, u.Q)());
+  }), (0, d.Q)());
 });
   }
 }

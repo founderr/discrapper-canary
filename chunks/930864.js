@@ -1,6 +1,6 @@
 n.r(t), n.d(t, {
   ForwardModal: function() {
-return b;
+return L;
   }
 }), n(47120);
 var l = n(735250),
@@ -13,8 +13,8 @@ var l = n(735250),
   o = n(592125),
   d = n(375954),
   _ = n(934415),
-  f = n(572004),
-  h = n(823379),
+  h = n(572004),
+  f = n(823379),
   E = n(859155),
   g = n(822869),
   S = n(895442),
@@ -23,63 +23,63 @@ var l = n(735250),
   p = n(819727),
   m = n(689938),
   C = n(803519),
-  L = n(621054);
+  N = n(621054);
 
-function b(e) {
+function L(e) {
   let {
 channelId: t,
-messageId: b,
-initialSelectedDestinations: N,
+messageId: L,
+initialSelectedDestinations: b,
 forwardOptions: T,
 onClose: Z,
 onRequestSent: y,
 ...x
-  } = e, v = a.useMemo(() => (0, c.dL)(t), [t]), [R, M] = a.useState(!1), D = (0, i.e7)([d.Z], () => d.Z.getMessage(t, b), [
+  } = e, v = a.useMemo(() => (0, c.dL)(t), [t]), [R, P] = a.useState(!1), M = (0, i.e7)([d.Z], () => d.Z.getMessage(t, L), [
 t,
-b
-  ]), P = (0, i.e7)([o.Z], () => o.Z.getChannel(t), [t]), O = (0, g.ZF)(), F = (0, g.mh)(), G = a.useRef(0), U = a.useRef(0), [j, k] = a.useState(N), H = j.length, Q = H >= p.G, [w, z] = a.useState(''), W = a.useCallback(e => {
-z(e), U.current += 1, '' !== e && F(t, b);
+L
+  ]), D = (0, i.e7)([o.Z], () => o.Z.getChannel(t), [t]), O = (0, g.ZF)(), G = (0, g.mh)(), F = a.useRef(0), U = a.useRef(0), [k, j] = a.useState(b), H = k.length, Q = H >= p.G, [w, z] = a.useState(''), W = a.useCallback(e => {
+z(e), U.current += 1, '' !== e && G(t, L);
   }, [
 t,
-b,
-F
+L,
+G
   ]), B = (0, u.s)({
 searchText: w,
-selectedDestinations: j,
+selectedDestinations: k,
 originDestination: v,
 includeMissingDMs: !0
   }), K = a.useCallback(() => {
 (0, g.sF)({
   channelId: t,
-  messageId: b,
-  numDestinationChanges: G.current,
+  messageId: L,
+  numDestinationChanges: F.current,
   numQueryChanges: U.current
 }), Z();
   }, [
 t,
-b,
+L,
 Z
   ]), Y = a.useCallback(() => {
 var e;
 let n = null === (e = o.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
 if (null == n)
   return;
-let l = (0, _.wR)(n, t, b);
-(0, s.showToast)((0, s.createToast)(m.Z.Messages.COPIED_LINK, s.ToastType.LINK)), (0, f.JG)(l), (0, g.xp)(t, b);
+let l = (0, _.wR)(n, t, L);
+(0, s.showToast)((0, s.createToast)(m.Z.Messages.COPIED_LINK, s.ToastType.LINK)), (0, h.JG)(l), (0, g.xp)(t, L);
   }, [
 t,
-b
+L
   ]), q = a.useCallback(() => {
 z('');
-  }, [z]), X = a.useRef(null);
+  }, [z]), V = a.useRef(null);
   a.useEffect(() => {
 if ('' === w) {
   var e;
-  null === (e = X.current) || void 0 === e || e.focus();
+  null === (e = V.current) || void 0 === e || e.focus();
 }
   }, [w]);
-  let V = a.useCallback(e => {
-  O(t, b, '' !== w), k(t => {
+  let X = a.useCallback(e => {
+  O(t, L, '' !== w), j(t => {
     let n = t.findIndex(t => {
       let {
         type: n,
@@ -88,28 +88,28 @@ if ('' === w) {
       return n === e.type && l === e.id;
     });
     if (-1 === n)
-      return Q ? t : (z(''), G.current += 1, [
+      return Q ? t : (z(''), F.current += 1, [
         e,
         ...t
       ]);
     let l = [...t];
-    return l.splice(n, 1), G.current += 1, l;
+    return l.splice(n, 1), F.current += 1, l;
   });
 }, [
   t,
   Q,
-  b,
+  L,
   w,
   O
 ]),
 J = a.useCallback(async () => {
-  let e = d.Z.getMessage(t, b);
+  let e = d.Z.getMessage(t, L);
   if (null == e) {
     (0, s.showToast)((0, s.createToast)(m.Z.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE));
     return;
   }
-  M(!0);
-  let a = (await Promise.all(j.map(c.qx))).filter(h.lm);
+  P(!0);
+  let a = (await Promise.all(k.map(c.qx))).filter(f.lm);
   if ((0, S.Z)(e, a) && !await new Promise(e => {
       (0, s.openModalLazy)(async () => {
         let {
@@ -122,7 +122,7 @@ J = a.useCallback(async () => {
         });
       });
     })) {
-    M(!1);
+    P(!1);
     return;
   }
   (0, A.mc)(), null == y || y(), 1 === a.length && (0, r.Kh)(a[0]);
@@ -135,25 +135,25 @@ J = a.useCallback(async () => {
     })) {
     (0, g.gP)({
       channelId: t,
-      messageId: b,
+      messageId: L,
       hasError: !1,
       numDestinations: a.length,
-      numDestinationChanges: G.current,
+      numDestinationChanges: F.current,
       numQueryChanges: U.current
     }), (0, s.showToast)((0, s.createToast)(m.Z.Messages.MESSAGE_FORWARD_SUCCESS, s.ToastType.FORWARD));
     return;
   }
   (0, g.gP)({
     channelId: t,
-    messageId: b,
+    messageId: L,
     hasError: !0,
     numDestinations: a.length,
-    numDestinationChanges: G.current,
+    numDestinationChanges: F.current,
     numQueryChanges: U.current
   });
-  let u = j.filter((e, t) => 'rejected' === i[t].status);
+  let u = k.filter((e, t) => 'rejected' === i[t].status);
   (0, A.Np)({
-    messageId: b,
+    messageId: L,
     channelId: t,
     failedDestinations: u,
     forwardOptions: T
@@ -161,27 +161,27 @@ J = a.useCallback(async () => {
 }, [
   t,
   T,
-  b,
-  j,
+  L,
+  k,
   y
 ]);
-  if (null == D || null == P)
+  if (null == M || null == D)
 return null;
   let $ = B.length > 0 ? (0, l.jsx)(I.F, {
   paddingBottom: 16,
   paddingTop: 16,
   rowData: B,
-  message: D,
-  originChannel: P,
-  handleToggleDestination: V,
-  selectedDestinations: j,
+  message: M,
+  originChannel: D,
+  handleToggleDestination: X,
+  selectedDestinations: k,
   disableSelection: Q
 }) : (0, l.jsxs)(s.ModalContent, {
   className: C.noResults,
   children: [
     (0, l.jsx)('img', {
       className: C.noResultsImg,
-      src: L,
+      src: N,
       alt: ''
     }),
     (0, l.jsx)(s.Text, {
@@ -228,7 +228,7 @@ children: [
         ]
       }),
       (0, l.jsx)(s.SearchBar, {
-        ref: X,
+        ref: V,
         size: s.SearchBar.Sizes.MEDIUM,
         query: w,
         onChange: W,

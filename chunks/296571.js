@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return u;
+return d;
   }
 });
 var i = n(735250);
@@ -11,13 +11,13 @@ var a = n(442837),
   l = n(702346),
   o = n(739566),
   c = n(689938),
-  d = n(9406);
+  u = n(9406);
 
-function u(e) {
+function d(e) {
   var t;
   let {
 message: n,
-compact: u,
+compact: d,
 usernameHook: _,
 onClickThread: E,
 onClickViewThreads: I,
@@ -39,10 +39,10 @@ viewThreadsOnClick: I
 iconNode: (0, i.jsx)(s.ThreadIcon, {
   size: 'md',
   color: 'currentColor',
-  className: d.icon
+  className: u.icon
 }),
 timestamp: n.timestamp,
-compact: u,
+compact: d,
 children: f
   });
 }

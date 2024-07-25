@@ -6,8 +6,8 @@ var a = n(442837),
   l = n(973616),
   o = n(789407),
   c = n(314897),
-  d = n(158776),
-  u = n(981631),
+  u = n(158776),
+  d = n(981631),
   _ = n(616922),
   E = n(778973);
 t.Z = e => {
@@ -18,13 +18,13 @@ message: I,
 hideParty: m
   } = e, {
 analyticsLocations: T
-  } = (0, r.ZP)(), h = (0, a.e7)([c.default], () => c.default.getId()), N = (0, a.e7)([d.Z], () => {
+  } = (0, r.ZP)(), h = (0, a.e7)([c.default], () => c.default.getId()), N = (0, a.e7)([u.Z], () => {
 if (null == I.application)
-  return d.Z.findActivity(I.author.id, e => e.type === u.IIU.LISTENING);
+  return u.Z.findActivity(I.author.id, e => e.type === d.IIU.LISTENING);
 {
   var e;
   let t = I.author.id;
-  return (null === (e = I.activity) || void 0 === e ? void 0 : e.type) === u.mFx.JOIN_REQUEST && (t = t === h && n.isPrivate() ? n.getRecipientId() : h), d.Z.getApplicationActivity(t, I.application.id);
+  return (null === (e = I.activity) || void 0 === e ? void 0 : e.type) === d.mFx.JOIN_REQUEST && (t = t === h && n.isPrivate() ? n.getRecipientId() : h), u.Z.getApplicationActivity(t, I.application.id);
 }
   }, [
 I,

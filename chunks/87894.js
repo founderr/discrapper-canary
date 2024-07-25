@@ -9,7 +9,7 @@ return _;
 return l;
   },
   Z$: function() {
-return u;
+return d;
   },
   Z0: function() {
 return I;
@@ -21,7 +21,7 @@ return o;
 return E;
   },
   jc: function() {
-return d;
+return u;
   },
   uq: function() {
 return r;
@@ -51,8 +51,8 @@ userStatus: i
 }
 (i = a || (a = {}))[i.FOR_YOU = 0] = 'FOR_YOU', i[i.OTHER = 1] = 'OTHER';
 let c = 100,
-  d = 20,
-  u = 32,
+  u = 20,
+  d = 32,
   _ = 1000,
   E = 460,
   I = 280;

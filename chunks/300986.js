@@ -11,8 +11,8 @@ var a = n(442837),
   l = n(706454),
   o = n(594174),
   c = n(626135),
-  d = n(63063),
-  u = n(51144),
+  u = n(63063),
+  d = n(51144),
   _ = n(665149),
   E = n(981631),
   I = n(689938);
@@ -24,9 +24,9 @@ let m = new Set([
 function T() {
   let e = (0, a.e7)([o.default], () => o.default.getCurrentUser()),
 t = (0, a.e7)([l.default], () => l.default.locale),
-n = (0, u.EO)(e);
+n = (0, d.EO)(e);
   return (0, i.jsx)(r.Anchor, {
-href: d.w,
+href: u.w,
 target: '_blank',
 tabIndex: -1,
 children: (0, i.jsx)(_.JO, {

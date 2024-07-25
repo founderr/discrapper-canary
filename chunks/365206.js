@@ -11,8 +11,8 @@ var a = n(120356),
   l = n(481060),
   o = n(839963),
   c = n(139256),
-  d = n(689938),
-  u = n(622264);
+  u = n(689938),
+  d = n(622264);
 
 function _(e) {
   let {
@@ -21,10 +21,10 @@ label: n,
 percentage: a
   } = e;
   return (0, i.jsxs)('div', {
-className: u.votesData,
+className: d.votesData,
 children: [
   t && (0, i.jsx)(r.T, {
-    children: d.Z.Messages.POLL_ANSWER_VOTED_ARIA
+    children: u.Z.Messages.POLL_ANSWER_VOTED_ARIA
   }),
   (0, i.jsxs)(l.Text, {
     variant: 'text-md/semibold',
@@ -49,24 +49,24 @@ answer: t,
 isExpired: n,
 myAvatarUrl: a,
 canShowVoteCounts: r
-  } = e, l = !0 === t.isSelected, o = !0 === t.didSelfVote, d = !0 === t.isVictor;
+  } = e, l = !0 === t.isSelected, o = !0 === t.didSelfVote, u = !0 === t.isVictor;
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(c.$w, {
-    attachmentClassName: s()(u.attachment, {
-      [u.attachmentWithResults]: r
+    attachmentClassName: s()(d.attachment, {
+      [d.attachmentWithResults]: r
     }),
-    emojiClassName: u.emoji,
+    emojiClassName: d.emoji,
     media: t.pollMedia,
     fallback: (0, i.jsx)('div', {
-      className: s()(u.attachment, u.mediaMissing)
+      className: s()(d.attachment, d.mediaMissing)
     })
   }),
   l && (0, i.jsx)(c.ZY, {
     size: 40,
-    isVictor: d,
+    isVictor: u,
     isExpired: n,
-    className: u.selectedIcon
+    className: d.selectedIcon
   }),
   r && (0, i.jsxs)(i.Fragment, {
     children: [
@@ -76,11 +76,11 @@ children: [
         label: t.votes,
         myAvatarUrl: o ? a : void 0
       }),
-      (!n && o || d) && (0, i.jsx)(c.ZY, {
+      (!n && o || u) && (0, i.jsx)(c.ZY, {
         size: 18,
-        isVictor: d,
+        isVictor: u,
         isExpired: n,
-        className: u.pollAnswerIcon
+        className: d.pollAnswerIcon
       })
     ]
   })
@@ -97,9 +97,9 @@ canShowVoteCounts: r,
 ...l
   } = e;
   return (0, i.jsx)(c.$e, {
-className: u.answersContainer,
-answerClassName: s()(u.answer, {
-  [u.currentlyVoting]: a !== o.Y7.LIST
+className: d.answersContainer,
+answerClassName: s()(d.answer, {
+  [d.currentlyVoting]: a !== o.Y7.LIST
 }),
 myAvatarUrl: n,
 answersInteraction: a,

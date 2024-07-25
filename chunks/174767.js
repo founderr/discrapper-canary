@@ -6,7 +6,7 @@ return o;
 return c;
   },
   Ol: function() {
-return d;
+return u;
   },
   TG: function() {
 return E;
@@ -15,7 +15,7 @@ return E;
 return _;
   },
   sJ: function() {
-return u;
+return d;
   }
 }), n(411104);
 var i = n(544891),
@@ -47,7 +47,7 @@ return !!(0, r.isWindows)() && null != t && await m(t);
   }
   throw Error('Unsupported invite platform ' + e.platform_type);
 }
-async function d(e) {
+async function u(e) {
   if (e.platform_type === l.ABu.XBOX) {
 let t = e.parsed_launch_parameters.inviteToken;
 return !!(0, r.isWindows)() && null != t && await h(t);
@@ -55,7 +55,7 @@ return !!(0, r.isWindows)() && null != t && await h(t);
   throw Error('Unsupported invite platform ' + e.platform_type);
 }
 
-function u() {
+function d() {
   a.Z.dispatch({
 type: 'GAME_INVITE_CLEAR_UNSEEN'
   });

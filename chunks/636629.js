@@ -6,8 +6,8 @@ var a = n(913527),
   l = n(730417),
   o = n(921944),
   c = n(689938),
-  d = n(478752);
-let u = (e, t) => ({
+  u = n(478752);
+let d = (e, t) => ({
   bodyText: c.Z.Messages.DROPS_BANNER_NOTICE.format({
 gameName: e.title,
 endDate: s()(e.endDate, 'YYYY-MM-DD HH:mm').format('MMM Do'),
@@ -26,9 +26,9 @@ return null;
   let {
 bodyText: _,
 articleUrl: E
-  } = u(s.drop, s.config.streamLengthRequirement);
+  } = d(s.drop, s.config.streamLengthRequirement);
   return (0, i.jsxs)(r.Notice, {
-className: d.colorGuildBlue,
+className: u.colorGuildBlue,
 children: [
   _,
   (0, i.jsx)(r.NoticeButtonAnchor, {

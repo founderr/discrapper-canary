@@ -16,14 +16,14 @@ function c(e) {
   let {
 message: n,
 channel: c,
-playingActivity: d,
-onJoinStream: u,
+playingActivity: u,
+onJoinStream: d,
 usernameHook: _,
 compact: E
   } = e, I = (0, l.ZP)(n), m = null === (t = n.call) || void 0 === t ? void 0 : t.duration, T = _(I), h = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
 username: I.nick,
-activityName: null != d ? d.name : 'unknown',
-onJoinStream: u,
+activityName: null != u ? u.name : 'unknown',
+onJoinStream: d,
 usernameHook: T
   });
   return null != m && (h = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({

@@ -11,8 +11,8 @@ var a = n(120356),
   l = n(524437),
   o = n(481060),
   c = n(494404),
-  d = n(377171),
-  u = n(317632),
+  u = n(377171),
+  d = n(317632),
   _ = n(602478),
   E = n(768943),
   I = n(121254),
@@ -44,7 +44,7 @@ autoTrackExposure: !1
 enabled: S
   } = _.Z.useExperiment({
 location: 'RecentsHeader'
-  }), A = (0, r.e7)([u.Z], () => u.Z.getUnseenInviteCount()), R = (0, r.e7)([E.Z], () => E.Z.getMessageReminders()).length;
+  }), A = (0, r.e7)([d.Z], () => d.Z.getUnseenInviteCount()), R = (0, r.e7)([E.Z], () => E.Z.getMessageReminders()).length;
   return (0, i.jsxs)(c.h4, {
 className: s()(N.header, N.expanded),
 children: [
@@ -83,7 +83,7 @@ children: [
             children: [
               h.Z.Messages.FOR_YOU,
               (null == f ? void 0 : f.badgeForYou) ? (0, i.jsx)(o.CircleBadge, {
-                color: d.Z.STATUS_DANGER,
+                color: u.Z.STATUS_DANGER,
                 className: s()(N.iconBadge)
               }) : null
             ]
@@ -112,7 +112,7 @@ children: [
             children: [
               h.Z.Messages.GAME_INVITES,
               A > 0 ? (0, i.jsx)(o.CircleBadge, {
-                color: d.Z.STATUS_DANGER,
+                color: u.Z.STATUS_DANGER,
                 className: s()(N.iconBadge)
               }) : null
             ]
@@ -134,7 +134,7 @@ children: [
             children: [
               h.Z.Messages.MESSAGE_REMINDERS_HEADER,
               R > 0 ? (0, i.jsx)(o.CircleBadge, {
-                color: d.Z.STATUS_DANGER,
+                color: u.Z.STATUS_DANGER,
                 className: s()(N.iconBadge)
               }) : null
             ]
