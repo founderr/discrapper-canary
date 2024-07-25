@@ -1,162 +1,162 @@
-n.d(t, {
+t.d(n, {
   PA: function() {
 return d;
   },
   Tn: function() {
-return l;
+return s;
   },
   _i: function() {
 return N;
   },
   eI: function() {
-return _;
+return I;
   },
   vp: function() {
-return I;
+return _;
   },
   y8: function() {
 return T;
   }
 });
-var i = n(367907),
-  r = n(200876),
-  a = n(430824),
-  o = n(594174);
-n(709054), n(523361);
-var s = n(981631),
-  u = n(689938);
+var i = t(367907),
+  r = t(200876),
+  u = t(430824),
+  o = t(594174);
+t(709054), t(523361);
+var a = t(981631),
+  l = t(689938);
 
-function l(e) {
+function s(e) {
   let {
-username: t,
-usernameOnClickHandler: n,
+username: n,
+usernameOnClickHandler: t,
 roleSubscriptionOnClickHandler: i,
 guildId: r,
-roleSubscriptionData: a
+roleSubscriptionData: u
   } = e, {
 content: o,
-formatParams: s
-  } = c({
-username: t,
-usernameOnClickHandler: n,
+formatParams: a
+  } = E({
+username: n,
+usernameOnClickHandler: t,
 roleSubscriptionOnClickHandler: i,
 guildId: r,
-roleSubscriptionData: a
+roleSubscriptionData: u
   });
-  return o.format(s);
+  return o.format(a);
 }
 
 function d(e) {
   let {
-username: t,
-usernameOnClickHandler: n,
+username: n,
+usernameOnClickHandler: t,
 roleSubscriptionOnClickHandler: i,
 guildId: r,
-roleSubscriptionData: a
+roleSubscriptionData: u
   } = e, {
 content: o,
-formatParams: s
-  } = c({
-username: t,
-usernameOnClickHandler: n,
+formatParams: a
+  } = E({
+username: n,
+usernameOnClickHandler: t,
 roleSubscriptionOnClickHandler: i,
 guildId: r,
-roleSubscriptionData: a
+roleSubscriptionData: u
   });
-  return o.astFormat(s);
+  return o.astFormat(a);
 }
 
-function E(e, t) {
-  var n, i;
-  let r = a.Z.getGuild(e),
-o = null !== (n = null == t ? void 0 : t.total_months_subscribed) && void 0 !== n ? n : 0;
+function c(e, n) {
+  var t, i;
+  let r = u.Z.getGuild(e),
+o = null !== (t = null == n ? void 0 : n.total_months_subscribed) && void 0 !== t ? t : 0;
   return {
 guild: r,
 totalMonthsSubscribed: o,
 showWithDuration: o > 0,
-isRenewal: null !== (i = null == t ? void 0 : t.is_renewal) && void 0 !== i && i
+isRenewal: null !== (i = null == n ? void 0 : n.is_renewal) && void 0 !== i && i
   };
 }
 
-function c(e) {
-  let t, {
-  username: n,
+function E(e) {
+  let n, {
+  username: t,
   usernameOnClickHandler: i,
   roleSubscriptionOnClickHandler: r,
-  guildId: a,
+  guildId: u,
+  roleSubscriptionData: o
+} = e,
+{
+  guild: a,
+  totalMonthsSubscribed: s,
+  showWithDuration: d,
+  isRenewal: E
+} = c(u, o);
+  return n = d ? E ? l.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION : l.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_WITH_DURATION : E ? l.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW : l.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN, {
+content: n,
+formatParams: {
+  username: t,
+  usernameHook: i,
+  guildName: null == a ? void 0 : a.name,
+  handleGuildNameClick: r,
+  tierName: null == o ? void 0 : o.tier_name,
+  months: s
+}
+  };
+}
+
+function _(e) {
+  let n, {
+  username: t,
+  usernameOnClickHandler: i = a.dG4,
+  roleSubscriptionOnClickHandler: r = a.dG4,
+  guildId: u,
   roleSubscriptionData: o
 } = e,
 {
   guild: s,
-  totalMonthsSubscribed: l,
-  showWithDuration: d,
-  isRenewal: c
-} = E(a, o);
-  return t = d ? c ? u.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION : u.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_WITH_DURATION : c ? u.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW : u.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN, {
-content: t,
-formatParams: {
-  username: n,
-  usernameHook: i,
-  guildName: null == s ? void 0 : s.name,
-  handleGuildNameClick: r,
-  tierName: null == o ? void 0 : o.tier_name,
-  months: l
-}
-  };
-}
-
-function I(e) {
-  let t, {
-  username: n,
-  usernameOnClickHandler: i = s.dG4,
-  roleSubscriptionOnClickHandler: r = s.dG4,
-  guildId: a,
-  roleSubscriptionData: o
-} = e,
-{
-  guild: l,
   totalMonthsSubscribed: d,
-  showWithDuration: c,
-  isRenewal: I
-} = E(a, o),
-_ = {
-  guildName: null == l ? void 0 : l.name,
+  showWithDuration: E,
+  isRenewal: _
+} = c(u, o),
+I = {
+  guildName: null == s ? void 0 : s.name,
   tierName: null == o ? void 0 : o.tier_name,
-  username: n,
+  username: t,
   usernameOnClick: i,
   roleSubscriptionOnClick: r
 };
-  return t = c ? I ? u.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION_MOBILE.astFormat({
-..._,
+  return n = E ? _ ? l.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION_MOBILE.astFormat({
+...I,
 months: d
-  }) : u.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_WITH_DURATION_MOBILE.astFormat({
-..._,
+  }) : l.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_WITH_DURATION_MOBILE.astFormat({
+...I,
 months: d
-  }) : I ? u.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_MOBILE.astFormat(_) : u.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_MOBILE.astFormat(_);
+  }) : _ ? l.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_MOBILE.astFormat(I) : l.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_MOBILE.astFormat(I);
 }
 
-function _(e) {
+function I(e) {
   return (0, r.l)(e);
 }
 
-function T(e, t, n, r) {
-  var a;
-  i.ZP.trackWithMetadata(s.rMx.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, {
+function T(e, n, t, r) {
+  var u;
+  i.ZP.trackWithMetadata(a.rMx.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, {
 guild_id: e,
-user_id: null === (a = o.default.getCurrentUser()) || void 0 === a ? void 0 : a.id,
-channel_id: t,
-message_id: n,
+user_id: null === (u = o.default.getCurrentUser()) || void 0 === u ? void 0 : u.id,
+channel_id: n,
+message_id: t,
 role_subscription_listing_id: r
   });
 }
 
-function N(e, t) {
-  var n;
+function N(e, n) {
+  var t;
   return {
 guild_id: e.guild_id,
-sender: null === (n = o.default.getCurrentUser()) || void 0 === n ? void 0 : n.id,
-target_user: t.author.id,
+sender: null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
+target_user: n.author.id,
 channel_id: e.id,
-message_id: t.id
+message_id: n.id
   };
 }

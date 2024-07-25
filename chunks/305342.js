@@ -1,6 +1,6 @@
 n.d(t, {
   c: function() {
-return D;
+return b;
   }
 }), n(47120);
 var i = n(735250),
@@ -14,14 +14,14 @@ var i = n(735250),
   u = n(351402),
   _ = n(153124),
   E = n(768581),
-  m = n(817460),
-  I = n(584825),
+  I = n(817460),
+  m = n(584825),
   T = n(290348),
   h = n(934826),
   N = n(768318),
   f = n(570533),
-  p = n(971792),
-  C = n(629262),
+  C = n(971792),
+  p = n(629262),
   g = n(761966),
   S = n(893729),
   A = n(838940),
@@ -39,7 +39,7 @@ let {
   guildId: s
 } = e, [r, l] = a.useState(!1), c = r ? t : t.slice(0, 5), d = t.length > 5, u = t.length - 5, E = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION_WITH_ITEMS.format({
   numTruncated: u
-}), I = (0, _.Dt)();
+}), m = (0, _.Dt)();
 return 0 === t.length ? null : (0, i.jsxs)('div', {
   className: Z.benefitsSection,
   children: [
@@ -47,7 +47,7 @@ return 0 === t.length ? null : (0, i.jsxs)('div', {
       variant: 'text-xs/bold',
       color: 'header-secondary',
       className: Z.sectionHeader,
-      id: I,
+      id: m,
       children: n
     }),
     (0, i.jsx)(o.Spacer, {
@@ -55,12 +55,12 @@ return 0 === t.length ? null : (0, i.jsxs)('div', {
     }),
     (0, i.jsx)('ul', {
       className: Z.benefitsList,
-      'aria-labelledby': I,
+      'aria-labelledby': m,
       children: c.map((e, t) => (0, i.jsx)('li', {
         children: (0, i.jsx)(A.Z, {
           guildId: s,
           benefit: e
-        }, (0, m.ab)(e))
+        }, (0, I.ab)(e))
       }, t))
     }),
     d && (0, i.jsx)(j, {
@@ -71,7 +71,7 @@ return 0 === t.length ? null : (0, i.jsxs)('div', {
   ]
 });
   },
-  b = e => {
+  D = e => {
 let {
   guildId: t,
   listingId: n
@@ -118,12 +118,12 @@ return 0 === r.length ? null : (0, i.jsxs)('div', {
   ]
 });
   },
-  D = e => {
+  b = e => {
 let {
   listingId: t,
   guildId: n,
   className: a
-} = e, s = (0, p.Z)(n, t), [l] = T.UE(t), c = (0, C.Z)(l), [d] = T.R7(t), u = T.qs(t, n), [_] = T.XZ(t, n);
+} = e, s = (0, C.Z)(n, t), [l] = T.UE(t), c = (0, p.Z)(l), [d] = T.R7(t), u = T.qs(t, n), [_] = T.XZ(t, n);
 return null == s && 0 === c.length && 0 === d.length && 0 === _.size ? null : (0, i.jsxs)('div', {
   className: r()(Z.subscriptionPerks, a),
   children: [
@@ -155,7 +155,7 @@ return null == s && 0 === c.length && 0 === d.length && 0 === _.size ? null : (0
       benefits: d,
       guildId: n
     }),
-    (0, i.jsx)(b, {
+    (0, i.jsx)(D, {
       guildId: n,
       listingId: t
     })
@@ -202,18 +202,18 @@ listingId: n,
 guildId: s,
 groupListingId: _,
 analyticsLocation: E
-  } = e, f = (0, I.jO)(n), {
-openModal: p,
-canOpenModal: C,
+  } = e, f = (0, m.jO)(n), {
+openModal: C,
+canOpenModal: p,
 cannotOpenReason: S,
 isCheckingTrialEligibility: A
   } = (0, O.Z)(f, s, _, E), P = (0, l.e7)([u.Z], () => u.Z.isSyncing), {
-activeSubscription: b,
+activeSubscription: D,
 activeSubscriptionListing: U
-  } = (0, h.Z)(_), y = (null == U ? void 0 : U.id) === n, B = (null == b ? void 0 : b.status) === v.O0b.CANCELED, [k, G] = a.useState(!1), [F, w] = a.useState(!1), V = a.useCallback(e => {
+  } = (0, h.Z)(_), y = (null == U ? void 0 : U.id) === n, B = (null == D ? void 0 : D.status) === v.O0b.CANCELED, [k, G] = a.useState(!1), [F, w] = a.useState(!1), V = a.useCallback(e => {
 let t = !1;
 null != e && (t = e.scrollHeight - e.clientHeight > 1), w(t);
-  }, []), [H] = T._T(n), [Y] = T.PK(n), [W] = T.TT(n), [z] = T.F2(n), K = (0, N.Z)(s, n), Q = null != W && null == b && K, q = (0, c.Z)(M.iP), [X, J] = a.useState(!1), $ = X || !q, ee = (0, l.e7)([d.Z], () => d.Z.isViewingServerShop(s)), et = (null == f ? void 0 : f.published) === !0, en = (null == f ? void 0 : f.soft_deleted) === !0, ei = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
+  }, []), [H] = T._T(n), [Y] = T.PK(n), [W] = T.TT(n), [K] = T.F2(n), z = (0, N.Z)(s, n), Q = null != W && null == D && z, q = (0, c.Z)(M.iP), [X, J] = a.useState(!1), $ = X || !q, ee = (0, l.e7)([d.Z], () => d.Z.isViewingServerShop(s)), et = (null == f ? void 0 : f.published) === !0, en = (null == f ? void 0 : f.soft_deleted) === !0, ei = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
   return (et || ee) && !en ? (0, i.jsxs)('article', {
 className: Z.container,
 'aria-label': H,
@@ -222,7 +222,7 @@ children: [
     className: r()(Z.tierTrialIndicator, Z.tierTopIndicator),
     children: [
       L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_PERIOD.format({
-        trialPeriodDuration: (0, m.iG)({
+        trialPeriodDuration: (0, I.iG)({
           interval: W.interval,
           interval_count: W.interval_count
         })
@@ -230,7 +230,7 @@ children: [
       (0, i.jsx)(o.Tooltip, {
         clickableOnMobile: !0,
         text: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({
-          activeTrialUserLimit: null != z ? z : 0
+          activeTrialUserLimit: null != K ? K : 0
         }),
         children: e => (0, i.jsx)(o.CircleInformationIcon, {
           size: 'xs',
@@ -268,14 +268,14 @@ children: [
                 disabled: !0,
                 children: B ? L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
               }) : (0, i.jsx)(o.Tooltip, {
-                text: C ? null : S,
-                'aria-label': null !== (t = C && S) && void 0 !== t && t,
+                text: p ? null : S,
+                'aria-label': null !== (t = p && S) && void 0 !== t && t,
                 children: e => (0, i.jsx)(g.Z, {
                   ...e,
                   fullWidth: !0,
-                  disabled: !C || P,
+                  disabled: !p || P,
                   submitting: A,
-                  onClick: p,
+                  onClick: C,
                   onlyShineOnHover: !0,
                   children: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
                 })
@@ -302,7 +302,7 @@ children: [
         ]
       }),
       $ && (0, i.jsx)(o.HeadingLevel, {
-        children: (0, i.jsx)(D, {
+        children: (0, i.jsx)(b, {
           listingId: n,
           guildId: s
         })

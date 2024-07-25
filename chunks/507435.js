@@ -12,14 +12,14 @@ var i, a, s = n(735250),
   u = n(904245),
   _ = n(596454),
   E = n(377171),
-  m = n(702346),
-  I = n(809026),
+  I = n(702346),
+  m = n(809026),
   T = n(139256),
   h = n(489887),
   N = n(689938),
   f = n(619260);
 
-function p() {
+function C() {
   return (0, s.jsx)('svg', {
 width: '24',
 height: '24',
@@ -35,13 +35,13 @@ children: (0, s.jsx)('path', {
   });
 }
 
-function C(e) {
+function p(e) {
   let t, {
 hasNoVotes: n,
 victorEmoji: i
   } = e;
   if (n)
-t = (0, s.jsx)(p, {});
+t = (0, s.jsx)(C, {});
   else if (null != i) {
 let e = '' !== i.name ? i.name : i.displayName;
 t = (0, s.jsx)(_.Z, {
@@ -164,7 +164,7 @@ return t ? {
   return (0, s.jsxs)('div', {
 className: o()(f.container, t),
 children: [
-  (0, s.jsx)(C, {
+  (0, s.jsx)(p, {
     hasNoVotes: 'NO_VOTES' === a.type,
     victorEmoji: n.victorEmoji
   }),
@@ -193,7 +193,7 @@ function A(e) {
 message: n,
 compact: i,
 disableInteraction: a = !1
-  } = e, l = n.embeds[0], o = r.useMemo(() => (0, I.Z)(l), [l]), _ = (0, c.aF)(null !== (t = null == o ? void 0 : o.questionText) && void 0 !== t ? t : '', h.Dv), E = n.messageReference, T = r.useCallback(() => {
+  } = e, l = n.embeds[0], o = r.useMemo(() => (0, m.Z)(l), [l]), _ = (0, c.aF)(null !== (t = null == o ? void 0 : o.questionText) && void 0 !== t ? t : '', h.Dv), E = n.messageReference, T = r.useCallback(() => {
 null != E && u.Z.jumpToMessage({
   channelId: E.channel_id,
   messageId: E.message_id,
@@ -206,7 +206,7 @@ E
   ]);
   return null == o ? null : (0, s.jsxs)(s.Fragment, {
 children: [
-  (0, s.jsx)(m.Z, {
+  (0, s.jsx)(I.Z, {
     iconNode: (0, s.jsx)(d.PollsIcon, {
       size: 'xs'
     }),

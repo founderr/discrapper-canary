@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(100527),
   u = n(252618),
   _ = n(353926),
-  E = n(212476),
-  h = n(374939),
+  h = n(212476),
+  E = n(374939),
   I = n(611928),
   m = n(791734),
   g = n(63063),
@@ -30,7 +30,7 @@ onSelectTab: O
   } = (0, C.z)(), {
 onScroll: R,
 scrollPosition: x
-  } = (0, E.c)(), b = (0, l.wj)((0, c.ZP)()), P = (0, r.e7)([_.Z], () => _.Z.hasLoadedExperiments), {
+  } = (0, h.c)(), b = (0, l.wj)((0, c.ZP)()), P = (0, r.e7)([_.Z], () => _.Z.hasLoadedExperiments), {
 quests: M,
 isFetchingCurrentQuests: D
   } = (0, p.bA)(L), y = (0, S.Z)(), j = null;
@@ -74,7 +74,7 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(h.Z, {
+  (0, i.jsx)(E.Z, {
     title: A.Z.Messages.QUESTS_HOME_HERO_TITLE,
     description: A.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
     backgroundImageUrl: y,

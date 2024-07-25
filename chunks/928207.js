@@ -9,15 +9,15 @@ var s = n(266067),
   d = n(100527),
   u = n(906732),
   _ = n(984370),
-  E = n(299657),
-  h = n(594174),
+  h = n(299657),
+  E = n(594174),
   I = n(285952),
   m = n(981631),
   g = n(474936),
   p = n(689938),
   T = n(314974);
-let f = a.ZP.connectStores([h.default], () => ({
-  user: h.default.getCurrentUser()
+let f = a.ZP.connectStores([E.default], () => ({
+  user: E.default.getCurrentUser()
 }))((0, c.Z)((0, o.Z)(e => {
   let {
 analyticsLocations: t
@@ -52,7 +52,7 @@ children: [
       children: (0, i.jsx)(r.Spinner, {
         className: T.spinner
       })
-    }) : (0, i.jsx)(E.Z, {
+    }) : (0, i.jsx)(h.Z, {
       entrypoint: g.EZ.ApplicationStoreHome
     })
   })

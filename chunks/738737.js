@@ -19,8 +19,8 @@ onClose: d,
 analyticsObject: u,
 analyticsLocation: _,
 analyticsLocations: E,
-analyticsSubscriptionType: m,
-renderHeader: I,
+analyticsSubscriptionType: I,
+renderHeader: m,
 renderPurchaseConfirmation: T,
 planGroup: h,
 reviewWarningMessage: N,
@@ -53,8 +53,8 @@ let {
 ]).then(n.bind(n, 7305));
 return n => {
   let {
-    onClose: p,
-    ...C
+    onClose: C,
+    ...p
   } = n;
   return (0, i.jsx)(e, {
     activeSubscription: l,
@@ -62,17 +62,17 @@ return n => {
     skuIDs: [f],
     children: (0, i.jsx)(s.KB, {
       children: (0, i.jsx)(a, {
-        ...C,
+        ...p,
         initialPlanId: t,
         onClose: e => {
-          p(), null == d || d(e);
+          C(), null == d || d(e);
         },
         analyticsLocations: E,
         analyticsObject: u,
         analyticsLocation: _,
-        analyticsSubscriptionType: m,
+        analyticsSubscriptionType: I,
         skuId: f,
-        renderHeader: I,
+        renderHeader: m,
         renderPurchaseConfirmation: T,
         planGroup: h,
         trialId: o,

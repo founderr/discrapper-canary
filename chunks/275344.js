@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return I;
   },
   v: function() {
 return _;
@@ -45,7 +45,7 @@ children: n
   });
 }
 
-function m(e) {
+function I(e) {
   let {
 message: t,
 children: n

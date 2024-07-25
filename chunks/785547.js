@@ -11,14 +11,14 @@ var i, a, s, r = n(735250),
   u = n(58642),
   _ = n(2052),
   E = n(710845),
-  m = n(703656),
-  I = n(173747),
+  I = n(703656),
+  m = n(173747),
   T = n(7956),
   h = n(293245),
   N = n(417363),
   f = n(941128),
-  p = n(780570),
-  C = n(358085),
+  C = n(780570),
+  p = n(358085),
   g = n(814225),
   S = n(346329),
   A = n(701560),
@@ -99,7 +99,7 @@ if (e.isHidden())
 if (e.isPreorder())
   return 'preorder_wait';
 let i = null != n ? v[n] : null;
-return null != i ? i : null != t && t.type === R.vxO.UNINSTALLING ? 'uninstalling' : (0, C.isWeb)() ? 'play' : 'unsupported_os';
+return null != i ? i : null != t && t.type === R.vxO.UNINSTALLING ? 'uninstalling' : (0, p.isWeb)() ? 'play' : 'unsupported_os';
   }
   renderPlayButton() {
 let {
@@ -168,10 +168,10 @@ let {
 } = this.props;
 if (e)
   return null;
-let n = p.KJ(t);
+let n = C.KJ(t);
 if (null == n)
   return null;
-let i = n.type === R.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : p.xI(Number(n.progress), Number(n.total));
+let i = n.type === R.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : C.xI(Number(n.progress), Number(n.total));
 return (0, r.jsx)(d.Progress, {
   percent: i,
   size: d.Progress.Sizes.XSMALL,
@@ -230,7 +230,7 @@ super(...e), M(this, '_uninstallStringIndex', null), M(this, 'handleAddToLibrary
     let {
       libraryApplication: e
     } = this.props;
-    await u.h(e.id, e.branchId, e.getFlags() & ~R.eHb.HIDDEN), (0, m.uL)(R.Z5c.APPLICATION_LIBRARY);
+    await u.h(e.id, e.branchId, e.getFlags() & ~R.eHb.HIDDEN), (0, I.uL)(R.Z5c.APPLICATION_LIBRARY);
   } catch (e) {
     new E.Z('LibraryApplicationButton').error(e);
   }
@@ -267,7 +267,7 @@ f.Z
   ], () => [
 (0, T.i)(t, N.Z, f.Z),
 N.Z.getState(t.id, t.branchId)
-  ], [t]), s = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]), l = (0, o.e7)([I.Z], () => I.Z.hasNoBuild(t.id, t.branchId), [t]);
+  ], [t]), s = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]), l = (0, o.e7)([m.Z], () => m.Z.hasNoBuild(t.id, t.branchId), [t]);
   return (0, r.jsx)(Z, {
 ...e,
 analyticsContext: n,

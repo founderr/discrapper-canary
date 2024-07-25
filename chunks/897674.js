@@ -1,37 +1,37 @@
-t.d(n, {
+t.d(r, {
   Z: function() {
-return c;
+return s;
   },
   g: function() {
-return u;
+return c;
   }
 }), t(47120);
 var a = t(470079),
-  l = t(442837),
-  r = t(146282),
-  i = t(327220),
-  o = t(959580);
+  n = t(442837),
+  i = t(146282),
+  o = t(327220),
+  l = t(959580);
 
-function u(e, n) {
+function c(e, r) {
   let {
 types: t
   } = e;
-  return !!(null == t || t.has(n.content_type)) || !1;
+  return !!(null == t || t.has(r.content_type)) || !1;
 }
 
-function c(e) {
+function s(e) {
   let {
-feed: n,
+feed: r,
 filters: t
-  } = (0, l.cj)([r.Z], () => ({
-feed: r.Z.getFeed(e),
-filters: r.Z.getFilters()
-  })), c = a.useMemo(() => {
-let e = null == n ? void 0 : n.entries.map(e => e.content);
-return null != t ? null == e ? void 0 : e.filter(e => u(t, e)) : e;
+  } = (0, n.cj)([i.Z], () => ({
+feed: i.Z.getFeed(e),
+filters: i.Z.getFilters()
+  })), s = a.useMemo(() => {
+let e = null == r ? void 0 : r.entries.map(e => e.content);
+return null != t ? null == e ? void 0 : e.filter(e => c(t, e)) : e;
   }, [
-n,
+r,
 t
   ]);
-  return c = (0, i.Z)(c), c = (0, o.Z)(c);
+  return s = (0, o.Z)(s), s = (0, l.Z)(s);
 }

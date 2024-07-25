@@ -14,14 +14,14 @@ var i = n(735250),
   u = n(602478),
   _ = n(121254),
   E = n(742989),
-  m = n(675478),
-  I = n(581883),
+  I = n(675478),
+  m = n(581883),
   T = n(585483),
   h = n(153209),
   N = n(349643),
   f = n(881591),
-  p = n(903672),
-  C = n(946443),
+  C = n(903672),
+  p = n(946443),
   g = n(264233),
   S = n(981631),
   A = n(689938);
@@ -36,33 +36,33 @@ popoutPosition: O,
 popoutAlign: M
   } = e, {
 analyticsLocations: v
-  } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER), [L, Z] = a.useState(!1), [P, b] = function() {
-let e = (0, r.e7)([I.Z], () => {
+  } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER), [L, Z] = a.useState(!1), [P, D] = function() {
+let e = (0, r.e7)([m.Z], () => {
   var e, t;
-  return null !== (t = null === (e = I.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : l.X.UNREADS;
+  return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : l.X.UNREADS;
 });
 return [
   e,
   a.useCallback(e => {
-    m.hW.updateAsync('inbox', t => {
+    I.hW.updateAsync('inbox', t => {
       if (t.currentTab === e)
         return !1;
       t.currentTab = e;
-    }, m.fy.FREQUENT_USER_ACTION);
+    }, I.fy.FREQUENT_USER_ACTION);
   }, [])
 ];
   }(), {
-showTutorial: D,
+showTutorial: b,
 setSeenTutorial: j
   } = function(e) {
-let t = (0, r.e7)([I.Z], () => {
+let t = (0, r.e7)([m.Z], () => {
     var e, t;
-    return null !== (t = null === (e = I.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t;
+    return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t;
   }),
   n = a.useCallback(() => {
-    m.hW.updateAsync('inbox', e => {
+    I.hW.updateAsync('inbox', e => {
       e.viewedTutorial = !0;
-    }, m.fy.INFREQUENT_USER_ACTION);
+    }, I.fy.INFREQUENT_USER_ACTION);
   }, []);
 return {
   showTutorial: !t && e === l.X.UNREADS,
@@ -80,9 +80,9 @@ n,
 t,
 L
   ]), B = a.useCallback(() => {
-y(), b(l.X.UNREADS);
+y(), D(l.X.UNREADS);
   }, [
-b,
+D,
 y
   ]);
   a.useEffect(() => (T.S.subscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B), () => void T.S.unsubscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B)), [B]);
@@ -104,7 +104,7 @@ enabled: F
 location: 'RecentsPopout'
   });
   a.useEffect(() => {
-(!k && P === l.X.TODOS || !G && P === l.X.BOOKMARKS) && b(l.X.MENTIONS);
+(!k && P === l.X.TODOS || !G && P === l.X.BOOKMARKS) && D(l.X.MENTIONS);
   });
   let w = a.useCallback(e => {
 !e.shiftKey && U();
@@ -122,36 +122,36 @@ children: (0, i.jsx)(o.Popout, {
     return (0, i.jsx)(o.Dialog, {
       'aria-label': A.Z.Messages.INBOX,
       children: P === l.X.FOR_YOU ? (0, i.jsx)(h.Z, {
-        setTab: b,
+        setTab: D,
         badgeState: x,
         closePopout: U
-      }) : P === l.X.MENTIONS ? (0, i.jsx)(p.Z, {
-        setTab: b,
+      }) : P === l.X.MENTIONS ? (0, i.jsx)(C.Z, {
+        setTab: D,
         onJump: w,
         badgeState: x,
         closePopout: U
       }) : F && P === l.X.GAME_INVITES ? (0, i.jsx)(g.Z, {
-        setTab: b,
+        setTab: D,
         badgeState: x,
         closePopout: U
       }) : G && P === l.X.BOOKMARKS ? (0, i.jsx)(N.Z, {
-        setTab: b,
+        setTab: D,
         onJump: w,
         closePopout: U
       }) : k && P === l.X.TODOS ? (0, i.jsx)(f.Z, {
-        setTab: b,
+        setTab: D,
         onJump: w,
         closePopout: U
       }) : (0, i.jsx)(s.SV, {
-        fallback: (0, i.jsx)(C.h, {
-          setTab: b,
+        fallback: (0, i.jsx)(p.h, {
+          setTab: D,
           closePopout: U,
           badgeState: x
         }),
-        children: (0, i.jsx)(C.Z, {
-          setTab: b,
+        children: (0, i.jsx)(p.Z, {
+          setTab: D,
           onJump: w,
-          showTutorial: D,
+          showTutorial: b,
           setSeenTutorial: j,
           closePopout: U,
           badgeState: x

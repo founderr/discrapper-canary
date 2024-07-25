@@ -10,8 +10,8 @@ var s = n(481060),
   d = n(944486),
   u = n(556296),
   _ = n(131468),
-  E = n(208049),
-  h = n(763296),
+  h = n(208049),
+  E = n(763296),
   I = n(641015),
   m = n(22382),
   g = n(747071),
@@ -47,20 +47,20 @@ super(...e), t = this, S(this, 'playingSoundsWeb', new Map()), S(this, '_stopAnd
     i = arguments.length > 2 ? arguments[2] : void 0,
     s = arguments.length > 3 ? arguments[3] : void 0,
     a = null != s && d.Z.getVoiceChannelId() === s;
-  if ((null == s || a) && !c.Z.isDeaf() && !h.Z.isLocalSoundboardMuted(i))
+  if ((null == s || a) && !c.Z.isDeaf() && !E.Z.isLocalSoundboardMuted(i))
     try {
       let s = {
         soundKey: ''.concat(i, '-').concat(e),
         soundURL: (0, m.Z)(e),
         soundVolume: (0, g.Z)(n),
-        reportSoundStartedPlaying: () => (0, E.xR)(e, i)
+        reportSoundStartedPlaying: () => (0, h.xR)(e, i)
       };
       c.Z.supports(f.AN.SAMPLE_PLAYBACK) ? await (0, p.$)(s) : await (0, p.h)(s, t.playingSoundsWeb);
     } finally {
-      (0, E.R)(e, i);
+      (0, h.R)(e, i);
     }
 }), S(this, '_handleOverlaySoundboardSoundsFetchRequest', () => {
-  (0, E.w)();
+  (0, h.w)();
 }), S(this, '_handleOpenEducationModal', (e, t) => {
   if (null == e)
     return;

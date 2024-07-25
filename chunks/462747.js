@@ -18,27 +18,27 @@ var a = t(120356),
   v = t(158776),
   h = t(885110),
   f = t(594174),
-  m = t(315416),
-  I = t(765305),
+  I = t(315416),
+  m = t(765305),
   p = t(689938),
-  x = t(918831);
+  E = t(918831);
 
-function b(e) {
+function x(e) {
   let {
 children: n
   } = e;
   return (0, i.jsxs)('div', {
-className: x.emptyContainer,
+className: E.emptyContainer,
 children: [
   (0, i.jsx)(d.Z, {
     children: (0, i.jsx)('div', {
-      className: x.circle,
+      className: E.circle,
       children: (0, i.jsx)(o.GroupIcon, {
         size: 'custom',
         color: 'currentColor',
         height: 40,
         width: 40,
-        className: x.icon
+        className: E.icon
       })
     })
   }),
@@ -47,44 +47,44 @@ children: [
   });
 }
 
-function E() {
-  return (0, i.jsx)(b, {
+function b() {
+  return (0, i.jsx)(x, {
 children: (0, i.jsx)(o.Heading, {
   color: 'header-primary',
   variant: 'heading-xl/semibold',
-  className: x.title,
+  className: E.title,
   children: p.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_EMPTY_TITLE
 })
   });
 }
 
-function N() {
-  return (0, i.jsx)(b, {
+function C() {
+  return (0, i.jsx)(x, {
 children: (0, i.jsx)(o.Heading, {
   color: 'header-secondary',
   variant: 'heading-md/semibold',
-  className: x.errorTitle,
+  className: E.errorTitle,
   children: p.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_FETCH_ERROR
 })
   });
 }
 
-function C(e) {
+function N(e) {
   let {
 count: n
   } = e;
   return (0, i.jsx)(i.Fragment, {
 children: (0, i.jsxs)('div', {
-  className: x.listRow,
+  className: E.listRow,
   children: [
     (0, i.jsx)('div', {
-      className: l()(x.listRowCircle, x.listAvatar),
+      className: l()(E.listRowCircle, E.listAvatar),
       children: (0, i.jsx)(o.GroupIcon, {
         size: 'custom',
         color: 'currentColor',
         height: 14,
         width: 14,
-        className: x.icon
+        className: E.icon
       })
     }),
     (0, i.jsx)(o.Text, {
@@ -99,7 +99,7 @@ children: (0, i.jsxs)('div', {
   });
 }
 
-function Z(e) {
+function T(e) {
   let {
 eventUser: n,
 guildId: t,
@@ -130,8 +130,8 @@ children: (e, r) => {
     isShown: _
   } = r;
   return (0, i.jsxs)(o.Clickable, {
-    className: l()(x.listRow, x.interactiveRow, {
-      [x.selected]: _
+    className: l()(E.listRow, E.interactiveRow, {
+      [E.selected]: _
     }),
     onContextMenu: e => a(e, c),
     ...e,
@@ -140,13 +140,13 @@ children: (e, r) => {
         src: c.getAvatarURL(t, 24),
         'aria-label': c.username,
         size: o.AvatarSizes.SIZE_24,
-        className: x.listAvatar,
+        className: E.listAvatar,
         status: d
       }),
       (0, i.jsx)(s.Z, {
         user: c,
-        className: x.listName,
-        discriminatorClass: x.listDiscriminator,
+        className: E.listName,
+        discriminatorClass: E.listDiscriminator,
         nick: null === (u = n.member) || void 0 === u ? void 0 : u.nick
       })
     ]
@@ -155,7 +155,7 @@ children: (e, r) => {
   });
 }
 
-function T(e) {
+function Z(e) {
   let {
 eventUsers: n,
 guildId: t,
@@ -163,14 +163,14 @@ usersNotShownCount: a = 0,
 onContextMenu: l
   } = e;
   return (0, i.jsxs)(o.ScrollerThin, {
-className: x.listScroller,
+className: E.listScroller,
 children: [
-  n.map(e => (0, i.jsx)(Z, {
+  n.map(e => (0, i.jsx)(T, {
     guildId: t,
     eventUser: e,
     onContextMenu: l
   }, e.user_id)),
-  a > 0 && (0, i.jsx)(C, {
+  a > 0 && (0, i.jsx)(N, {
     count: a
   })
 ]
@@ -183,7 +183,7 @@ children: n,
 style: t
   } = e;
   return (0, i.jsx)('div', {
-className: x.container,
+className: E.container,
 style: null != t ? t : {},
 children: n
   });
@@ -210,26 +210,26 @@ eventUsers: l,
 loading: r,
 error: s,
 containerHeight: d
-  } = e, u = (0, m.Z)(n.guild_id, n.id, a);
+  } = e, u = (0, I.Z)(n.guild_id, n.id, a);
   if (r && 0 === l.length)
 return (0, i.jsx)(S, {
   height: d,
   children: (0, i.jsx)(o.Spinner, {
     type: o.Spinner.Type.SPINNING_CIRCLE,
-    className: x.spinner
+    className: E.spinner
   })
 });
   if (null != s && 0 === l.length)
 return (0, i.jsx)(S, {
   height: d,
-  children: (0, i.jsx)(N, {})
+  children: (0, i.jsx)(C, {})
 });
   let _ = 0;
-  return l.length >= I.rC && u > I.rC && (_ = Math.max(u - l.length, 0)), 0 === l.length ? (0, i.jsx)(S, {
+  return l.length >= m.rC && u > m.rC && (_ = Math.max(u - l.length, 0)), 0 === l.length ? (0, i.jsx)(S, {
 height: d,
-children: (0, i.jsx)(E, {})
+children: (0, i.jsx)(b, {})
   }) : (0, i.jsx)(j, {
-children: (0, i.jsx)(T, {
+children: (0, i.jsx)(Z, {
   eventUsers: l,
   guildId: n.guild_id,
   onContextMenu: function(e, n) {

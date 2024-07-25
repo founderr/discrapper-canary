@@ -9,21 +9,21 @@ var i = n(735250),
   d = n(701190),
   u = n(449934),
   _ = n(650233),
-  E = n(981631),
-  h = n(898625),
+  h = n(981631),
+  E = n(898625),
   I = n(625994);
 t.Z = e => {
   let {
 guildId: t,
 inviteCode: n
-  } = e, [m, g] = s.useState(h.hO.INITIAL), [p, T] = s.useState(null != n);
+  } = e, [m, g] = s.useState(E.hO.INITIAL), [p, T] = s.useState(null != n);
   s.useEffect(() => {
 null != n && r.Z.resolveInvite(n, 'Hub').finally(() => T(!1));
   }, [n]);
   let f = (0, a.e7)([d.Z], () => null != n ? d.Z.getInvite(n) : null),
 S = (0, a.e7)([c.Z], () => c.Z.getGuild(t));
   s.useEffect(() => {
-null != S && (0, o.uL)(E.Z5c.CHANNEL(t));
+null != S && (0, o.uL)(h.Z5c.CHANNEL(t));
   }, [
 S,
 t

@@ -15,8 +15,8 @@ var a = n(399606),
   u = n(863663),
   _ = n(676651),
   E = n(623488),
-  m = n(942833),
-  I = n(391181),
+  I = n(942833),
+  m = n(391181),
   T = n(964793),
   h = n(226060),
   N = n(981631);
@@ -26,8 +26,8 @@ function f(e) {
 guildProductListing: t,
 guildId: n,
 location: f,
-shouldShowFullDescriptionButton: p = !0,
-hideRoleTag: C = !1,
+shouldShowFullDescriptionButton: C = !0,
+hideRoleTag: p = !1,
 lineClamp: g = 1,
 cardWidth: S,
 cardHeight: A,
@@ -37,17 +37,17 @@ showOpaqueBackground: O = !1
   } = e, M = (0, a.e7)([o.Z], () => o.Z.getGuild(n), [n]), v = (0, a.e7)([o.Z], () => {
 var e;
 return o.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : N.lds);
-  }), L = (0, s.U)(t, 600), Z = (0, m.C)(t), P = (0, d.SO)(M), {
-shouldHideGuildPurchaseEntryPoints: b
-  } = (0, l.uP)(n), D = (0, m.k)(t);
-  if (null == M || b)
+  }), L = (0, s.U)(t, 600), Z = (0, I.C)(t), P = (0, d.SO)(M), {
+shouldHideGuildPurchaseEntryPoints: D
+  } = (0, l.uP)(n), b = (0, I.k)(t);
+  if (null == M || D)
 return null;
   let j = () => (0, T.e)({
   guildId: n,
   guildProductListingId: t.id,
   analyticsLocation: f
 }),
-U = (0, i.jsx)(I.m, {
+U = (0, i.jsx)(m.m, {
   product: t,
   guildId: n,
   showEditProduct: P,
@@ -75,7 +75,7 @@ U = (0, i.jsx)(I.m, {
 imageUrl: L,
 name: t.name,
 description: t.description,
-formattedPrice: D,
+formattedPrice: b,
 role: v,
 ctaComponent: (0, i.jsx)(h.Z, {
   guildId: n,
@@ -83,12 +83,12 @@ ctaComponent: (0, i.jsx)(h.Z, {
   sourceAnalyticsLocations: f
 }),
 productType: Z,
-shouldShowFullDescriptionButton: p,
+shouldShowFullDescriptionButton: C,
 onShowFullDescription: j,
 onTapCard: j,
 actionMenu: U,
 showOpaqueBackground: O,
-hideRoleTag: C,
+hideRoleTag: p,
 lineClamp: g,
 cardWidth: S,
 cardHeight: A,

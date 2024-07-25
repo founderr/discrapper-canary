@@ -1,45 +1,45 @@
-t.d(n, {
+n.d(e, {
   HV: function() {
-return u;
+return o;
   },
   IS: function() {
-return i;
+return u;
   },
   VY: function() {
 return c;
   }
-}), t(627494), t(757143), t(201133);
-var a = t(5192),
-  l = t(561308),
-  r = t(689938);
-let i = (e, n) => r.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
-username: n.username,
-activity: e.extra.game_name
+}), n(627494), n(757143), n(201133);
+var a = n(5192),
+  l = n(561308),
+  r = n(689938);
+let u = (t, e) => r.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+username: e.username,
+activity: t.extra.game_name
   }),
-  o = e => {
-let n = (0, l.kr)(e);
-return (0, l.Ol)(e) ? n ? r.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME : r.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME : n ? r.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME : r.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME;
+  i = t => {
+let e = (0, l.kr)(t);
+return (0, l.Ol)(t) ? e ? r.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME : r.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME : e ? r.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME : r.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME;
   },
-  u = (e, n, t) => {
-let l = o(e),
-  r = a.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, t),
-  i = e.extra.game_name;
+  o = (t, e, n) => {
+let l = i(t),
+  r = a.ZP.getName(null == e ? void 0 : e.guild_id, null == e ? void 0 : e.id, n),
+  u = t.extra.game_name;
 return l.plainFormat({
-  gameName: i,
+  gameName: u,
   userName: r
 }).replaceAll('*', '');
   },
-  c = e => {
+  c = t => {
 let {
-  entry: n,
-  channel: t,
-  users: i,
-  countOthers: o
-} = e;
-return ((0, l.kr)(n) ? r.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYING : r.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYED).plainFormat({
-  gameName: n.extra.game_name,
-  user1: a.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, i[0]),
-  user2: a.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, i[1]),
-  countOthers: o
+  entry: e,
+  channel: n,
+  users: u,
+  countOthers: i
+} = t;
+return ((0, l.kr)(e) ? r.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYING : r.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYED).plainFormat({
+  gameName: e.extra.game_name,
+  user1: a.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, u[0]),
+  user2: a.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, u[1]),
+  countOthers: i
 }).replaceAll('*', '');
   };

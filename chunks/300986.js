@@ -15,8 +15,8 @@ var a = n(442837),
   u = n(51144),
   _ = n(665149),
   E = n(981631),
-  m = n(689938);
-let I = new Set([
+  I = n(689938);
+let m = new Set([
   'ko',
   'ja'
 ]);
@@ -35,8 +35,8 @@ children: (0, i.jsx)(_.JO, {
     highlighted: n
   }),
   icon: r.CircleQuestionIcon,
-  tooltipPosition: I.has(t) ? 'left' : void 0,
-  tooltip: m.Z.Messages.HELP
+  tooltipPosition: m.has(t) ? 'left' : void 0,
+  tooltip: I.Z.Messages.HELP
 })
   });
 }

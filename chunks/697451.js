@@ -14,14 +14,14 @@ var i = n(735250),
   u = n(481060),
   _ = n(595519),
   E = n(566620),
-  m = n(403404),
-  I = n(100527),
+  I = n(403404),
+  m = n(100527),
   T = n(906732),
   h = n(103575),
   N = n(768581),
   f = n(55935),
-  p = n(739566),
-  C = n(421399),
+  C = n(739566),
+  p = n(421399),
   g = n(310423),
   S = n(223021),
   A = n(981631),
@@ -59,7 +59,7 @@ message: s,
 channel: l
   } = e, {
 analyticsLocations: c
-  } = (0, T.ZP)(I.Z.EXECUTED_COMMAND), M = a.useMemo(() => (e, t, n) => (o()(null != l && null != t, 'ExecuteCommand: user and channel cannot be undefined'), (0, i.jsx)(h.Z, {
+  } = (0, T.ZP)(m.Z.EXECUTED_COMMAND), M = a.useMemo(() => (e, t, n) => (o()(null != l && null != t, 'ExecuteCommand: user and channel cannot be undefined'), (0, i.jsx)(h.Z, {
 ...e,
 location: 'ExecutedCommand',
 channelId: l.id,
@@ -79,10 +79,10 @@ interactionData: s.interactionData
 l,
 s.id,
 s.interactionData
-  ]), L = (0, p.Sw)(null === (t = s.interaction) || void 0 === t ? void 0 : t.user, l), Z = a.useMemo(() => e.compact ? (0, S.Z)((0, f.vc)(d()(), 'LT')) : null, [e.compact]), P = (0, _.NX)(l.id, !0), b = s.interaction;
-  if (null == b || null == L)
+  ]), L = (0, C.Sw)(null === (t = s.interaction) || void 0 === t ? void 0 : t.user, l), Z = a.useMemo(() => e.compact ? (0, S.Z)((0, f.vc)(d()(), 'LT')) : null, [e.compact]), P = (0, _.NX)(l.id, !0), D = s.interaction;
+  if (null == D || null == L)
 return null;
-  let D = () => {
+  let b = () => {
 let t = function(e, t) {
     let n, {
       message: a,
@@ -102,12 +102,12 @@ let t = function(e, t) {
         })
       });
     if (null != a.interaction) {
-      var m, I, T;
-      let e = (0, p.ij)(a.interaction.user, l);
+      var I, m, T;
+      let e = (0, C.ij)(a.interaction.user, l);
       n = null !== (T = N.ZP.getGuildMemberAvatarURL({
-        avatar: null !== (m = e.guildMemberAvatar) && void 0 !== m ? m : void 0,
+        avatar: null !== (I = e.guildMemberAvatar) && void 0 !== I ? I : void 0,
         userId: a.interaction.user.id,
-        guildId: null !== (I = null == l ? void 0 : l.guild_id) && void 0 !== I ? I : ''
+        guildId: null !== (m = null == l ? void 0 : l.guild_id) && void 0 !== m ? m : ''
       })) && void 0 !== T ? T : void 0;
     }
     let h = () => null != a.interaction && function(e) {
@@ -144,7 +144,7 @@ let t = function(e, t) {
       onRequestClose: E,
       children: h
     }) : h();
-  }(e, e => M(e, b.user, [I.Z.AVATAR])),
+  }(e, e => M(e, D.user, [m.Z.AVATAR])),
   n = function(e, t, n) {
     var a;
     let {
@@ -155,7 +155,7 @@ let t = function(e, t) {
       onUserContextMenu: c,
       onPopoutRequestClose: d
     } = e;
-    return (0, i.jsx)(C.Z, {
+    return (0, i.jsx)(p.Z, {
       compact: !0,
       author: t,
       message: s,
@@ -167,7 +167,7 @@ let t = function(e, t) {
       onContextMenu: c,
       onPopoutRequestClose: d
     });
-  }(e, L, e => M(e, b.user));
+  }(e, L, e => M(e, D.user));
 return (0, i.jsxs)(a.Fragment, {
   children: [
     t,
@@ -177,7 +177,7 @@ return (0, i.jsxs)(a.Fragment, {
   };
   if ((null == s ? void 0 : s.activityInstance) !== null) {
 let e = () => {
-  (0, m.Z)({
+  (0, I.Z)({
     channel: l,
     guildId: l.guild_id,
     locationObject: {
@@ -194,7 +194,7 @@ let e = () => {
   });
 };
 n = P ? R.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
-  userHook: D,
+  userHook: b,
   activityHook: () => (0, i.jsx)(u.Clickable, {
     tag: 'span',
     onClick: e,
@@ -204,11 +204,11 @@ n = P ? R.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
     })
   })
 }) : R.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({
-  userHook: D
+  userHook: b
 });
   } else
 n = R.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
-  userHook: D,
+  userHook: b,
   commandHook: () => {
     let t = function(e, t) {
       let {

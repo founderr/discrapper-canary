@@ -16,15 +16,15 @@ collapsed: l,
 onTextChange: o,
 onClear: c,
 onSubmit: d
-  } = e, u = s.useRef(null), [_, E] = s.useState(!1);
+  } = e, u = s.useRef(null), [_, h] = s.useState(!1);
   s.useEffect(() => {
-!l && E(!1);
+!l && h(!1);
   }, [l]);
-  let h = s.useCallback(() => {
-  E(!1), c();
+  let E = s.useCallback(() => {
+  h(!1), c();
 }, [c]),
 I = s.useCallback(() => {
-  E(!0), setTimeout(() => {
+  h(!0), setTimeout(() => {
     var e;
     return null === (e = u.current) || void 0 === e ? void 0 : e.focus();
   });
@@ -46,7 +46,7 @@ size: a.SearchBar.Sizes.MEDIUM,
 query: t,
 placeholder: n,
 onChange: o,
-onClear: h,
+onClear: E,
 onKeyDown: m
   });
 }

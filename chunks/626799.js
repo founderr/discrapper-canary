@@ -13,14 +13,14 @@ var i, a = n(735250),
   u = n(498179),
   _ = n(86357),
   E = n(914602),
-  m = n(568836),
-  I = n(730749),
+  I = n(568836),
+  m = n(730749),
   T = n(112724),
   h = n(812206),
   N = n(283595),
   f = n(558314),
-  p = n(55563),
-  C = n(551428),
+  C = n(55563),
+  p = n(551428),
   g = n(73346),
   S = n(981631),
   A = n(689938),
@@ -72,9 +72,9 @@ let {
   width: n,
   fetchFailed: i,
   renderFallback: s
-} = this.props, l = n > m.aL;
+} = this.props, l = n > I.aL;
 if (null == e || null == t)
-  return i ? s() : (0, a.jsx)(m.OR, {
+  return i ? s() : (0, a.jsx)(I.OR, {
     isHorizontal: l
   });
 return e.productLine === S.POd.COLLECTIBLES ? (0, a.jsx)(d.Z, {
@@ -132,7 +132,7 @@ super(...e), x(this, 'state', {
   } = this.props, {
     playing: o,
     muted: c
-  } = this.state, d = i > m.aL;
+  } = this.state, d = i > I.aL;
   return (0, a.jsx)(E.Z, {
     sku: e,
     storeListing: t,
@@ -189,25 +189,25 @@ x(O, 'defaultProps', {
   renderFallback: S.dG4
 });
 let M = [
-  p.Z,
+  C.Z,
   f.Z,
   N.Z,
-  C.Z
+  p.Z
 ];
 
 function v(e) {
   let {
 skuId: t
-  } = e, n = p.Z.get(t), i = null != n ? h.Z.getApplication(n.applicationId) : null;
+  } = e, n = C.Z.get(t), i = null != n ? h.Z.getApplication(n.applicationId) : null;
   return {
 sku: n,
 application: i,
-fetchFailed: p.Z.didFetchingSkuFail(t),
+fetchFailed: C.Z.didFetchingSkuFail(t),
 inLibrary: null != n && N.Z.hasApplication(n.applicationId, n.applicationId, !0),
-storeListing: null != n ? C.Z.getForSKU(n.id) : null,
+storeListing: null != n ? p.Z.getForSKU(n.id) : null,
 libraryApplication: null != n ? N.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
   };
 }
-let L = (0, T.Z)((0, I.Z)(O));
+let L = (0, T.Z)((0, m.Z)(O));
 t.Z = l.ZP.connectStores(M, v)(L);
-let Z = (0, I.Z)(l.ZP.connectStores(M, v)(O));
+let Z = (0, m.Z)(l.ZP.connectStores(M, v)(O));

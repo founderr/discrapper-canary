@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(174767),
   _ = n(240126),
   E = n(791914),
-  m = n(326838),
-  I = n(689938),
+  I = n(326838),
+  m = n(689938),
   T = n(13812);
 
 function h(e) {
@@ -23,12 +23,12 @@ function h(e) {
 setTab: t,
 badgeState: s,
 closePopout: h
-  } = e, f = (0, l.Wu)([d.Z], () => d.Z.getInvites()), p = (0, l.e7)([d.Z], () => d.Z.getInviteStatuses()), [C, g] = a.useMemo(() => r().partition(f, e => {
+  } = e, f = (0, l.Wu)([d.Z], () => d.Z.getInvites()), C = (0, l.e7)([d.Z], () => d.Z.getInviteStatuses()), [p, g] = a.useMemo(() => r().partition(f, e => {
 var t;
-return (null === (t = p[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
+return (null === (t = C[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
   }), [
 f,
-p
+C
   ]);
   return (a.useEffect(() => {
 (0, u.sJ)();
@@ -45,8 +45,8 @@ children: [
     className: T.__invalid_emptyStateContainer,
     children: (0, i.jsx)(_.Z, {
       Icon: c.GameControllerIcon,
-      header: I.Z.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
-      tip: I.Z.Messages.GAME_INVITES_EMPTY_STATE_SUBTITLE
+      header: m.Z.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
+      tip: m.Z.Messages.GAME_INVITES_EMPTY_STATE_SUBTITLE
     })
   })
 ]
@@ -60,7 +60,7 @@ children: [
     closePopout: h,
     children: (0, i.jsx)(c.CircleIconButton, {
       className: T.__invalid_deleteButton,
-      tooltip: I.Z.Messages.GAME_INVITES_DELETE_ALL,
+      tooltip: m.Z.Messages.GAME_INVITES_DELETE_ALL,
       color: c.CircleIconButtonColors.SECONDARY,
       icon: (0, i.jsx)(c.TrashIcon, {
         size: 'xs'
@@ -84,13 +84,13 @@ children: [
     children: (0, i.jsxs)('div', {
       className: T.invitesContainer,
       children: [
-        C.length > 0 && (0, i.jsxs)(i.Fragment, {
+        p.length > 0 && (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)(N, {
-              title: I.Z.Messages.GAME_INVITES_RECENT_HEADER
+              title: m.Z.Messages.GAME_INVITES_RECENT_HEADER
             }),
             (0, i.jsx)(i.Fragment, {
-              children: C.map(e => (0, i.jsx)(m.Z, {
+              children: p.map(e => (0, i.jsx)(I.Z, {
                 invite: e,
                 expired: !1
               }, e.invite_id))
@@ -100,10 +100,10 @@ children: [
         g.length > 0 && (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)(N, {
-              title: I.Z.Messages.GAME_INVITES_EXPIRED_HEADER
+              title: m.Z.Messages.GAME_INVITES_EXPIRED_HEADER
             }),
             (0, i.jsx)(i.Fragment, {
-              children: g.map(e => (0, i.jsx)(m.Z, {
+              children: g.map(e => (0, i.jsx)(I.Z, {
                 invite: e,
                 expired: !0
               }, e.invite_id))

@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(607070),
   u = n(113434),
   _ = n(497505),
-  E = n(585500),
-  h = n(566078),
+  h = n(585500),
+  E = n(566078),
   I = n(472144),
   m = n(644646),
   g = n(69439),
@@ -29,7 +29,7 @@ function C(e) {
 quest: C,
 questContent: N,
 isHovering: A
-  } = e, v = h.r.build(C.config).defaultReward.messages.name, Z = (0, u.Rf)(C), L = Z.percentComplete >= 0, [O, R] = s.useState(!1), x = s.useRef(null);
+  } = e, v = E.r.build(C.config).defaultReward.messages.name, Z = (0, u.Rf)(C), L = Z.percentComplete >= 0, [O, R] = s.useState(!1), x = s.useRef(null);
   (0, c.P)(x, e => {
 let {
   height: t
@@ -45,7 +45,7 @@ let {
 } = e;
 null != t && null != n && n > t && M(!0);
   }, [M]);
-  let D = (0, E.D)({
+  let D = (0, h.D)({
   quest: C,
   taskDetails: Z,
   location: p.dr.QUEST_HOME_DESKTOP,

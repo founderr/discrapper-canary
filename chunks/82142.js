@@ -13,8 +13,8 @@ var i, r, s, l, a = n(392711),
 let m = {},
   I = {},
   b = [],
-  g = [],
   C = [],
+  g = [],
   O = new Set(),
   A = {},
   v = {},
@@ -51,7 +51,7 @@ function T(e) {
 return !1;
   let n = (0, f.Fp)(e) ? (0, f.Q_)((null == e ? void 0 : e.embeds) != null ? null == e ? void 0 : e.embeds[0].url : void 0) : (0, f.Q_)(e.content);
   return 0 !== n.length && (n.forEach(e => {
-!b.includes(e) && !C.includes(e) && (y({
+!b.includes(e) && !g.includes(e) && (y({
   code: e
 }), E.Z.wait(() => h.Z.resolveGiftCode(e, !1, !0).catch(S.VqG)));
   }), !1);
@@ -82,7 +82,7 @@ messages: n
   R.add(t), n.forEach(e => T(e, !0));
 }
 
-function P(e) {
+function F(e) {
   let {
 firstMessages: t
   } = e;
@@ -90,7 +90,7 @@ firstMessages: t
 return !1;
   null == t || t.forEach(e => T(e));
 }
-class F extends(i = c.ZP.Store) {
+class P extends(i = c.ZP.Store) {
   get(e) {
 let t = I[e];
 return null == t || t.isExpired() ? null : t;
@@ -105,10 +105,10 @@ return o().values(I).filter(i => i.userId === e && i.skuId === t && (null == n |
 return b.includes(e);
   }
   getIsResolved(e) {
-return C.includes(e);
+return g.includes(e);
   }
   getIsAccepting(e) {
-return g.includes(e);
+return C.includes(e);
   }
   getUserGiftCodesFetchingForSKUAndPlan(e, t) {
 return O.has((0, f.Bg)(e, t));
@@ -120,19 +120,19 @@ return A[(0, f.Bg)(e, t)];
 return b;
   }
   getResolvedCodes() {
-return C;
-  }
-  getAcceptingCodes() {
 return g;
   }
+  getAcceptingCodes() {
+return C;
+  }
 }
-l = 'GiftCodeStore', (s = 'displayName') in(r = F) ? Object.defineProperty(r, s, {
+l = 'GiftCodeStore', (s = 'displayName') in(r = P) ? Object.defineProperty(r, s, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : r[s] = l;
-let Z = new F(E.Z, {
+let Z = new P(E.Z, {
   CONNECTION_OPEN: function() {
 return R.clear(), !1;
   },
@@ -147,8 +147,8 @@ return null != t && R.add(t), !1;
 let {
   giftCode: t
 } = e;
-return b = b.filter(e => e !== t.code), !C.includes(t.code) && (C = [
-  ...C,
+return b = b.filter(e => e !== t.code), !g.includes(t.code) && (g = [
+  ...g,
   t.code
 ]), N(t);
   },
@@ -156,8 +156,8 @@ return b = b.filter(e => e !== t.code), !C.includes(t.code) && (C = [
 let {
   code: t
 } = e;
-b = b.filter(e => e !== t), !C.includes(t) && (C = [
-  ...C,
+b = b.filter(e => e !== t), !g.includes(t) && (g = [
+  ...g,
   t
 ]);
   },
@@ -165,8 +165,8 @@ b = b.filter(e => e !== t), !C.includes(t) && (C = [
 let {
   code: t
 } = e;
-!g.includes(t) && (g = [
-  ...g,
+!C.includes(t) && (C = [
+  ...C,
   t
 ]);
   },
@@ -174,7 +174,7 @@ let {
 let {
   code: t
 } = e;
-g = g.filter(e => e !== t);
+C = C.filter(e => e !== t);
 let n = I[t];
 null != n && (I[t] = n.merge({
   redeemed: !0,
@@ -186,7 +186,7 @@ let {
   code: t,
   error: n
 } = e;
-g = g.filter(e => e !== t);
+C = C.filter(e => e !== t);
 let i = I[t];
 if (v[t] = n, null != i)
   switch (n.code) {
@@ -203,8 +203,8 @@ let {
 } = e;
 delete I[t];
 let n = m[t];
-null != n && (n.stop(), delete m[t]), !C.includes(t) && (C = [
-  ...C,
+null != n && (n.stop(), delete m[t]), !g.includes(t) && (g = [
+  ...g,
   t
 ]);
   },
@@ -267,8 +267,8 @@ let {
 } = e, i = I[n];
 null != i && (I[n] = i.set('uses', Math.max(i.uses, t)));
   },
-  LOAD_THREADS_SUCCESS: P,
-  LOAD_ARCHIVED_THREADS_SUCCESS: P,
+  LOAD_THREADS_SUCCESS: F,
+  LOAD_ARCHIVED_THREADS_SUCCESS: F,
   LOAD_FORUM_POSTS: function(e) {
 let {
   threads: t

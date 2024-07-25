@@ -20,18 +20,18 @@ var a = s(990547),
   S = s(163379),
   N = s(703288),
   C = s(574755),
-  m = s(425799),
-  A = s(377171),
-  g = s(621628),
-  h = s(18438),
-  O = s(778825),
-  p = s(665166),
-  R = s(351780),
-  x = s(231765),
-  M = s(837741),
-  f = s(813732),
-  D = s(398140),
-  P = s(564344),
+  m = s(377171),
+  A = s(621628),
+  g = s(18438),
+  h = s(778825),
+  O = s(665166),
+  p = s(351780),
+  R = s(231765),
+  x = s(837741),
+  M = s(813732),
+  f = s(398140),
+  D = s(564344),
+  P = s(746263),
   L = s(977156),
   b = s(652380),
   Z = s(171156),
@@ -95,7 +95,7 @@ let e = [
   i.z.CLIENT_THEMES_SETTINGS_BADGE,
   i.z.DEKSTOP_CUSTOM_APP_ICON_BADGE
 ];
-return M.F.getCurrentConfig({
+return x.F.getCurrentConfig({
   location: 'Settings list view'
 }).enabled && e.push(i.z.BRAND_REFRESH_NEW_BADGE), e;
   },
@@ -103,7 +103,7 @@ return M.F.getCurrentConfig({
   eU = e => {
 let {
   unseenGiftCount: t,
-  showPrepaidPaymentPastDueWarning: M,
+  showPrepaidPaymentPastDueWarning: x,
   impressionSource: eU,
   numOfPendingFamilyRequests: eG,
   isOverlaySupported: eF,
@@ -256,20 +256,20 @@ return Object.freeze({
     searchableTitles: [eZ.Z.Messages.USER_SETTINGS_PROFILES],
     label: eZ.Z.Messages.USER_SETTINGS_PROFILES,
     ariaLabel: eZ.Z.Messages.USER_SETTINGS_PROFILES,
-    element: P.Z,
+    element: D.Z,
     newIndicator: (0, n.jsx)(o.PremiumBadge, {
       text: eZ.Z.Messages.NEW
     }),
     notice: {
       stores: [
         B.Z,
-        O.Z
+        h.Z
       ],
-      element: D.Z
+      element: f.Z
     },
     onSettingsClose: () => {
       l.Z.wait(() => {
-        (0, h.It)(), (0, d.P6)(), _.Z.clearSubsection(eP.oAB.PROFILE_CUSTOMIZATION);
+        (0, g.It)(), (0, d.P6)(), _.Z.clearSubsection(eP.oAB.PROFILE_CUSTOMIZATION);
       });
     }
   },
@@ -464,7 +464,7 @@ return Object.freeze({
     badgeCount: eG,
     newIndicator: (0, n.jsx)(o.TextBadge, {
       text: eZ.Z.Messages.NEW,
-      color: A.Z.BG_BRAND
+      color: m.Z.BG_BRAND
     }),
     newIndicatorDismissibleContentTypes: [i.z.FAMILY_CENTER_NEW_BADGE]
   },
@@ -539,8 +539,8 @@ return Object.freeze({
     ariaLabel: eZ.Z.Messages.SUBSCRIPTIONS_TITLE,
     searchableTitles: [eZ.Z.Messages.SUBSCRIPTIONS_TITLE],
     label: eZ.Z.Messages.SUBSCRIPTIONS_TITLE,
-    element: f.Z,
-    icon: M ? (0, n.jsx)(o.CircleExclamationPointIcon, {
+    element: M.Z,
+    icon: x ? (0, n.jsx)(o.CircleExclamationPointIcon, {
       size: 'xs',
       color: r.Z.unsafe_rawColors.YELLOW_300.css
     }) : null
@@ -898,8 +898,8 @@ return Object.freeze({
     searchableTitles: [eZ.Z.Messages.POGGERMODE],
     label: eZ.Z.Messages.POGGERMODE,
     ariaLabel: eZ.Z.Messages.POGGERMODE,
-    element: x.Z,
-    predicate: () => R.Z.settingsVisible,
+    element: R.Z,
+    predicate: () => p.Z.settingsVisible,
     icon: (0, n.jsx)('img', {
       alt: '',
       src: s(348621),
@@ -1461,7 +1461,7 @@ return Object.freeze({
     section: eP.oAB.DISMISSIBLE_CONTENT_OPTIONS,
     searchableTitles: ['Dismissible Contents'],
     label: 'Dismissible Contents',
-    element: g.Z,
+    element: A.Z,
     predicate: () => v.Z.isDeveloper
   },
   [eD.s6.PAYMENT_FLOW_MODALS]: {
@@ -1499,14 +1499,14 @@ return Object.freeze({
       'i18n'
     ],
     label: 'Intl Testing',
-    element: p.Z,
+    element: O.Z,
     predicate: () => ek || v.Z.isDeveloper
   },
   [eD.s6.PROFILE_EFFECTS_PREVIEW_TOOL]: {
     section: eP.oAB.PROFILE_EFFECTS_PREVIEW_TOOL,
     searchableTitles: ['Profile Effects Preview Tool'],
     label: 'Profile Effects Preview Tool',
-    element: m.Z,
+    element: P.Z,
     predicate: () => v.Z.isDeveloper
   },
   [eD.s6.QUEST_PREVIEW_TOOL]: {

@@ -15,7 +15,7 @@ return E;
 return u;
   },
   Vb: function() {
-return I;
+return m;
   },
   Vt: function() {
 return l;
@@ -24,7 +24,7 @@ return l;
 return o;
   },
   m0: function() {
-return m;
+return I;
   }
 });
 var i = n(544891),
@@ -126,7 +126,7 @@ query: {
   }), a.Z.dispatch({
 type: 'DROPS_ENROLL_SUCCESS'
   });
-}, m = async (e, t, n) => {
+}, I = async (e, t, n) => {
   let l = s.Z.getViewerIds(t);
   try {
 let s = await i.tn.post({
@@ -151,7 +151,7 @@ a.Z.dispatch({
   statusCode: null == t ? void 0 : t.status
 });
   }
-}, I = async e => {
+}, m = async e => {
   try {
 let t = await i.tn.get({
   url: r.ANM.DROPS_PROGRESS(e)

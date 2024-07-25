@@ -19,7 +19,7 @@ channelId: n,
 messageId: u,
 targetKind: _,
 embedIndex: E
-  } = e, m = a.useCallback(() => {
+  } = e, I = a.useCallback(() => {
 let e = l.Z.getMessage(n, u);
 if (null == e)
   return;
@@ -47,6 +47,6 @@ icon: (0, i.jsx)(r.ChatArrowRightIcon, {
   size: 'xs',
   color: s.Z.colors.INTERACTIVE_NORMAL
 }),
-onClick: m
+onClick: I
   });
 }

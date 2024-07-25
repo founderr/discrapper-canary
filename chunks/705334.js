@@ -13,9 +13,9 @@ var i = n(735250),
   d = n(766219),
   u = n(49898),
   _ = n(689938),
-  E = n(876425);
+  h = n(876425);
 
-function h(e) {
+function E(e) {
   let {
 tab: t
   } = e, n = (0, c.d)(e => e.selectedPage === t, l.Z), a = s.useMemo(() => function(e) {
@@ -29,19 +29,19 @@ switch (e) {
       color: 'currentColor'
     });
 }
-  }(t), [t]), _ = s.useMemo(() => (0, d.sm)(t), [t]), h = s.useCallback(() => {
+  }(t), [t]), _ = s.useMemo(() => (0, d.sm)(t), [t]), E = s.useCallback(() => {
 c.d.setState({
   selectedPage: t
 });
   }, [t]);
   return (0, i.jsxs)(o.Clickable, {
-onClick: h,
-className: r()(E.navItem, {
-  [E.selectedNavItem]: n
+onClick: E,
+className: r()(h.navItem, {
+  [h.selectedNavItem]: n
 }),
 children: [
   (0, i.jsx)('div', {
-    className: E.navItemIcon,
+    className: h.navItemIcon,
     children: a
   }),
   (0, i.jsx)(o.Text, {
@@ -55,18 +55,18 @@ children: [
 
 function I() {
   return (0, i.jsxs)('div', {
-className: E.container,
+className: h.container,
 children: [
   (0, i.jsx)('div', {
-    className: E.header,
+    className: h.header,
     children: (0, i.jsx)(o.Heading, {
       variant: 'text-lg/semibold',
       children: _.Z.Messages.GLOBAL_DISCOVERY_TITLE
     })
   }),
   (0, i.jsx)('nav', {
-    className: E.nav,
-    children: u.mc.map(e => (0, i.jsx)(h, {
+    className: h.nav,
+    children: u.mc.map(e => (0, i.jsx)(E, {
       tab: e
     }, e))
   })

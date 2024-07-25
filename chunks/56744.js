@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return I;
   }
 });
 var i = n(735250),
@@ -19,13 +19,13 @@ baseMessage: t,
 channel: n,
 referencedMessage: _,
 compact: E = !1
-  } = e, m = _.state === l.Y.LOADED ? _.message : void 0, I = (0, r.p)(), T = a.useMemo(() => (null == m ? void 0 : m.content) != null && '' !== m.content ? (0, c.ZP)(m, {
+  } = e, I = _.state === l.Y.LOADED ? _.message : void 0, m = (0, r.p)(), T = a.useMemo(() => (null == I ? void 0 : I.content) != null && '' !== I.content ? (0, c.ZP)(I, {
 formatInline: !0,
-shouldFilterKeywords: I
+shouldFilterKeywords: m
   }).content : null, [
-m,
-I
-  ]), h = (0, s.e7)([o.Z], () => null != m && o.Z.isBlockedForMessage(m), [m]), N = (0, d.Uj)(m), f = (0, d.Uj)(t);
+I,
+m
+  ]), h = (0, s.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]), N = (0, d.Uj)(I), f = (0, d.Uj)(t);
   return (0, i.jsx)(u.Z, {
 repliedAuthor: N,
 baseAuthor: f,
@@ -38,7 +38,7 @@ isReplyAuthorBlocked: h
   });
 });
 
-function m(e, t, n, a, s) {
+function I(e, t, n, a, s) {
   return e.type !== _.uaV.REPLY || null == n ? null : (0, i.jsx)(E, {
 baseMessage: e,
 channel: t,

@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(470623),
   _ = n(344185),
   E = n(488131),
-  m = n(592125),
-  I = n(823379),
+  I = n(592125),
+  m = n(823379),
   T = n(709054),
   h = n(124368),
   N = n(735501);
@@ -27,7 +27,7 @@ channelRecord: n,
 deleteChannel: s
   } = e, f = (0, l.Wu)([
 _.Z,
-m.Z
+I.Z
   ], () => r()(_.Z.getThreadsForParent(n.guild_id, n.id)).values().filter(e => {
 let {
   id: n
@@ -37,12 +37,12 @@ return T.default.compare(n, t.oldestReadMessageId) > 0;
 let {
   id: t
 } = e;
-return m.Z.getChannel(t);
-  }).filter(I.lm).sort((e, t) => T.default.compare(e.id, t.id)).value(), [
+return I.Z.getChannel(t);
+  }).filter(m.lm).sort((e, t) => T.default.compare(e.id, t.id)).value(), [
 t.oldestReadMessageId,
 n.guild_id,
 n.id
-  ]), p = a.useCallback((e, t) => {
+  ]), C = a.useCallback((e, t) => {
 (0, E.ok)(e, t, h.on.INBOX);
   }, []);
   return a.useEffect(() => {
@@ -56,7 +56,7 @@ children: f.map(e => (0, i.jsx)(u.oL, {
   children: (0, i.jsx)(d.ZP, {
     className: N.forumPost,
     threadId: e.id,
-    goToThread: p
+    goToThread: C
   })
 }, e.id))
   });

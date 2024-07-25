@@ -1,6 +1,6 @@
 n.d(t, {
   S: function() {
-return m;
+return I;
   },
   m: function() {
 return E;
@@ -39,7 +39,7 @@ eventHandlers: {
   };
 }
 
-function m(e) {
+function I(e) {
   let {
 src: t
   } = e;

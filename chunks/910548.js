@@ -10,14 +10,14 @@ var i, a, s, r, l = n(735250),
   u = n(887024),
   _ = n(772848),
   E = n(468194),
-  m = n(477690),
-  I = n(481060),
+  I = n(477690),
+  m = n(481060),
   T = n(230711),
   h = n(745510),
   N = n(64078),
   f = n(29270),
-  p = n(709586),
-  C = n(482207),
+  C = n(709586),
+  p = n(482207),
   g = n(702346),
   S = n(267642),
   A = n(739566),
@@ -52,7 +52,7 @@ let v = [
 'TOP_LEFT',
 'TOP_RIGHT'
   ],
-  L = (0, E.Mg)(m.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
+  L = (0, E.Mg)(I.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
   Z = {
 leafPosition: {
   x: 85,
@@ -114,8 +114,8 @@ BOTTOM_RIGHT: {
   }
 }
   }),
-  b = 'falling-leaf',
-  D = ['#61D5B2'],
+  D = 'falling-leaf',
+  b = ['#61D5B2'],
   j = n(303893),
   U = n(808392),
   y = [
@@ -138,7 +138,7 @@ onAnimationComplete: t,
 onClick: n,
 position: i,
 size: s
-  } = e, r = o.useRef(null), [c, E] = o.useState(null), [m] = o.useState(null != i ? i : function() {
+  } = e, r = o.useRef(null), [c, E] = o.useState(null), [I] = o.useState(null != i ? i : function() {
 switch (Math.floor(Math.random() * Object.keys(a).length)) {
   case 0:
     return 'TOP_LEFT';
@@ -152,7 +152,7 @@ switch (Math.floor(Math.random() * Object.keys(a).length)) {
   }()), {
 createMultipleConfettiAt: T,
 confettiCanvas: N
-  } = o.useContext(h.h), [f, p] = o.useState(null), C = (0, u.uR)(N, f), g = function(e, t) {
+  } = o.useContext(h.h), [f, C] = o.useState(null), p = (0, u.uR)(N, f), g = function(e, t) {
 if (null == e)
   return 'enter';
 switch (e) {
@@ -169,7 +169,7 @@ switch (e) {
   case 'exit':
     return 'enter';
 }
-  }(c, m), S = v.includes(m), A = S && 'exit' === c, R = o.useCallback(e => {
+  }(c, I), S = v.includes(I), A = S && 'exit' === c, R = o.useCallback(e => {
 E(e);
   }, []), x = o.useCallback(() => {
 'exit' === c && (null == t || t());
@@ -183,7 +183,7 @@ r.current = e;
 if ('confetti' === c) {
   let {
     confettiVelocityDirection: e
-  } = P[m], t = function(e, t) {
+  } = P[I], t = function(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : L,
       i = null == e ? void 0 : e.getBoundingClientRect();
     if (null == i)
@@ -196,7 +196,7 @@ if ('confetti' === c) {
       x: i.left + a.x,
       y: i.top + a.y
     };
-  }(r.current, m, s);
+  }(r.current, I, s);
   T(t.x, t.y, {
     velocity: {
       type: 'static-random',
@@ -213,14 +213,14 @@ if ('confetti' === c) {
 }
   }, [
 T,
-m,
+I,
 c,
 s
   ]), o.useEffect(() => {
 if (S && 'leaf_fall' === c) {
-  let e = P[m].leafRotationDirection;
-  C.createConfetti({
-    id: ''.concat(b, '-').concat((0, _.Z)()),
+  let e = P[I].leafRotationDirection;
+  p.createConfetti({
+    id: ''.concat(D, '-').concat((0, _.Z)()),
     position: {
       type: 'static',
       value: function(e, t) {
@@ -235,7 +235,7 @@ if (S && 'leaf_fall' === c) {
           x: n.left + i.leafPosition.x,
           y: n.top + i.leafPosition.y
         };
-      }(r.current, m)
+      }(r.current, I)
     },
     size: {
       type: 'static',
@@ -265,32 +265,32 @@ if (S && 'leaf_fall' === c) {
       }
     }
   }, {
-    sprite: 'TOP_LEFT' === m ? j : U
+    sprite: 'TOP_LEFT' === I ? j : U
   });
 }
   }, [
 S,
-C,
-m,
+p,
+I,
 c
   ]), (0, l.jsxs)(l.Fragment, {
 children: [
   (0, l.jsx)(u.Ji, {
-    ref: p,
+    ref: C,
     sprites: y,
-    colors: D,
+    colors: b,
     spriteWidth: 45,
     spriteHeight: 45
   }),
-  (0, l.jsx)(I.Clickable, {
+  (0, l.jsx)(m.Clickable, {
     onClick: n,
     className: d()(O.easterEggAnimationClickTarget, {
-      [O.easterEggAnimationClickTargetTopLeft]: 'TOP_LEFT' === m,
-      [O.easterEggAnimationClickTargetTopRight]: 'TOP_RIGHT' === m,
-      [O.easterEggAnimationClickTargetBottomLeft]: 'BOTTOM_LEFT' === m,
-      [O.easterEggAnimationClickTargetBottomRight]: 'BOTTOM_RIGHT' === m
+      [O.easterEggAnimationClickTargetTopLeft]: 'TOP_LEFT' === I,
+      [O.easterEggAnimationClickTargetTopRight]: 'TOP_RIGHT' === I,
+      [O.easterEggAnimationClickTargetBottomLeft]: 'BOTTOM_LEFT' === I,
+      [O.easterEggAnimationClickTargetBottomRight]: 'BOTTOM_RIGHT' === I
     }),
-    children: (0, l.jsx)(I.SequencedLottieAnimation, {
+    children: (0, l.jsx)(m.SequencedLottieAnimation, {
       animationRef: Z,
       className: d()(O.easterEggAnimation, {
         [O.easterEggAnimationHideLeaf]: A
@@ -331,11 +331,11 @@ d = (0, f.Z)(n),
   createMultipleConfettiAt: u,
   addClickListener: _
 } = o.useContext(h.h),
-[E, m] = o.useState(!1),
+[E, I] = o.useState(!1),
 M = o.useRef(null),
 {
   reducedMotion: v
-} = o.useContext(I.AccessibilityPreferencesContext),
+} = o.useContext(m.AccessibilityPreferencesContext),
 L = (0, A.ZH)(n),
 Z = L.nick,
 P = s(L);
@@ -358,7 +358,7 @@ usernameHook: P,
 guildName: a.name,
 newTierName: (0, S.nW)(c)
   });
-  let D = o.useCallback(() => {
+  let b = o.useCallback(() => {
   if (!v.enabled)
     if (E || 0 !== Math.floor(50 * Math.random())) {
       var e;
@@ -367,31 +367,31 @@ newTierName: (0, S.nW)(c)
         return;
       u(t.left + t.width / 2, t.top + t.height / 2);
     } else
-      m(!0);
+      I(!0);
 }, [
   u,
   v,
   E
 ]),
 j = o.useCallback(() => {
-  m(!1);
+  I(!1);
 }, []),
 U = o.useCallback(() => {
   (0, N.AI)({
     settingsVisible: !0
-  }), T.Z.open(R.oAB.POGGERMODE), m(!1);
+  }), T.Z.open(R.oAB.POGGERMODE), I(!1);
 }, []),
 y = o.useCallback((e, t) => {
-  (null == t ? void 0 : t.id.startsWith(b)) && U();
+  (null == t ? void 0 : t.id.startsWith(D)) && U();
 }, [U]);
   o.useEffect(() => _(y));
-  let B = (0, l.jsx)(I.Clickable, {
+  let B = (0, l.jsx)(m.Clickable, {
 className: O.iconWrapper,
 innerRef: M,
 onClick: r,
-children: (0, l.jsx)(p.Z, {
+children: (0, l.jsx)(C.Z, {
   className: O.icon,
-  onMouseEnter: D
+  onMouseEnter: b
 })
   });
   return (0, l.jsxs)(g.Z, {
@@ -404,7 +404,7 @@ children: [
     className: O.message,
     children: t
   }),
-  E ? (0, l.jsx)(C.ZP, {
+  E ? (0, l.jsx)(p.ZP, {
     children: (0, l.jsx)('div', {
       className: O.cannonWrapper,
       children: (0, l.jsx)(k, {

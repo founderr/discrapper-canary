@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(704215),
   u = n(481060),
   _ = n(150063),
-  E = n(45114),
-  h = n(230711),
+  h = n(45114),
+  E = n(230711),
   I = n(112724),
   m = n(183126),
   g = n(607070),
@@ -67,18 +67,18 @@ _ = (0, G.e)({
 });
   s.useEffect(() => {
 if (!!_ && null != d)
-  (0, E.ES)(d);
+  (0, h.ES)(d);
   }, [
 d,
 _
   ]);
-  let h = s.useCallback(() => {
+  let E = s.useCallback(() => {
   (0, u.showToast)((0, u.createToast)(et.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE));
 }, []),
 {
   rejectAll: I
 } = (0, V.m)({
-  onError: h
+  onError: E
 }),
 g = (0, p.Z)('message-requests-list'),
 {
@@ -236,7 +236,7 @@ return s.useEffect(() => {
           secondaryButtonCTA: et.Z.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
           className: en.messageRequestCoachmark,
           onClick: e => {
-            e.stopPropagation(), h.Z.open(J.oAB.PRIVACY_AND_SAFETY, null, {
+            e.stopPropagation(), E.Z.open(J.oAB.PRIVACY_AND_SAFETY, null, {
               scrollPosition: ee.to.MESSAGE_REQUESTS
             });
           },
@@ -275,13 +275,13 @@ _.Y(J.Z5c.MESSAGE_REQUESTS), (0, R.e)('message-requests'), j.default.track(J.rMx
   }, []);
   let a = (0, c.e7)([b.Z], () => b.Z.theme),
 l = (0, z.w)(),
-[d, E] = s.useState(!1),
-h = (0, c.e7)([P.ZP], () => {
+[d, h] = s.useState(!1),
+E = (0, c.e7)([P.ZP], () => {
   let e = P.ZP.getSidebarState(P.uZ);
   return null != e && e.type === O.tI.VIEW_MESSAGE_REQUEST ? e : null;
 }),
-I = null == h ? void 0 : h.channelId,
-m = null != h,
+I = null == E ? void 0 : E.channelId,
+m = null != E,
 g = (0, k.T)(I),
 p = (0, w.J)(I);
   s.useEffect(() => {
@@ -353,7 +353,7 @@ children: [
   m && (0, i.jsx)(ea, {
     pageWidth: t,
     onSidebarResize: (e, t) => {
-      E(t);
+      h(t);
     }
   })
 ]

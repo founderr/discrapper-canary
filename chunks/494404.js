@@ -20,14 +20,14 @@ var i = n(735250),
   u = n(481060),
   _ = n(668781),
   E = n(904245),
-  m = n(724757),
-  I = n(294218),
+  I = n(724757),
+  m = n(294218),
   T = n(703656),
   h = n(210887),
   N = n(592125),
   f = n(375954),
-  p = n(496675),
-  C = n(933429),
+  C = n(496675),
+  p = n(933429),
   g = n(451478),
   S = n(387204),
   A = n(626135),
@@ -86,7 +86,7 @@ return (0, i.jsxs)('div', {
   ]
 });
   };
-class b extends a.PureComponent {
+class D extends a.PureComponent {
   renderJumpButton() {
 let {
   jumping: e
@@ -153,14 +153,14 @@ super(...e), v(this, 'handleClickJump', e => {
 });
   }
 }
-let D = d.ZP.connectStores([p.Z], e => {
+let b = d.ZP.connectStores([C.Z], e => {
   let {
 channel: t
   } = e;
   return {
-canManageMessages: null != t && p.Z.can(x.Plq.MANAGE_MESSAGES, t)
+canManageMessages: null != t && C.Z.can(x.Plq.MANAGE_MESSAGES, t)
   };
-})(b);
+})(D);
 
 function j(e) {
   let {
@@ -170,13 +170,13 @@ hasMore: s,
 loading: l,
 loadMore: _,
 renderHeader: E,
-renderEmptyState: I,
+renderEmptyState: m,
 renderItem: T,
 getProTip: N,
 scrollerClassName: f,
-className: p,
+className: C,
 listName: v
-  } = e, Z = a.useRef(null), P = (0, m.Z)(v, Z), b = (0, d.e7)([C.Z], () => C.Z.hasNotice()), D = (0, d.e7)([g.Z], () => g.Z.windowSize());
+  } = e, Z = a.useRef(null), P = (0, I.Z)(v, Z), D = (0, d.e7)([p.Z], () => p.Z.hasNotice()), b = (0, d.e7)([g.Z], () => g.Z.windowSize());
   a.useEffect(() => {
 A.default.track(x.rMx.OPEN_POPOUT, {
   type: t
@@ -214,7 +214,7 @@ y = !0;
 className: r()(M.emptyPlaceholder, M.loadingPlaceholder),
 children: (0, i.jsx)(u.Spinner, {})
   }, 'spinner')] : 0 === n.length ? U.push((0, i.jsx)(a.Fragment, {
-children: I(h.Z.theme)
+children: m(h.Z.theme)
   }, 'empty-state')) : (y = !1, U = [], o().each(n, e => {
 U.push(...T(e));
   }));
@@ -233,7 +233,7 @@ children: (0, i.jsx)(u.Button, {
 })
   }) : (0, i.jsx)('div', {
 className: M.scrollingFooterWrap,
-children: I(h.Z.theme)
+children: m(h.Z.theme)
   }));
   let k = null == N ? void 0 : N(),
 G = y && null != k ? (0, i.jsx)('div', {
@@ -248,12 +248,12 @@ G = y && null != k ? (0, i.jsx)('div', {
   })
 }) : null,
 F = {
-  maxHeight: D.height - 43 - 25
+  maxHeight: b.height - 43 - 25
 };
-  b && (F.maxHeight -= 40);
+  D && (F.maxHeight -= 40);
   let w = null != _ && s;
   return (0, i.jsx)('div', {
-className: r()(p, M.messagesPopoutWrap),
+className: r()(C, M.messagesPopoutWrap),
 style: F,
 onClick: L,
 onDoubleClick: L,
@@ -301,10 +301,10 @@ hasMore: l,
 loading: o,
 loadMore: c,
 onJump: u,
-canCloseAllMessages: m = !1,
+canCloseAllMessages: I = !1,
 renderHeader: h,
-renderEmptyState: p,
-renderMessage: C,
+renderEmptyState: C,
+renderMessage: p,
 getProTip: g,
 scrollerClassName: S,
 className: A,
@@ -354,7 +354,7 @@ scrollerClassName: S,
 items: P,
 loading: o,
 analyticsName: t,
-renderEmptyState: p,
+renderEmptyState: C,
 renderHeader: h,
 hasMore: l,
 loadMore: c,
@@ -366,22 +366,22 @@ renderItem: function(e) {
   } = e;
   if (null == t)
     return [];
-  if (null != C)
-    return C(t, e => Z(t, e));
+  if (null != p)
+    return p(t, e => Z(t, e));
   let a = [];
   return null == n ? [] : (a.push((0, i.jsxs)('div', {
     className: M.messageGroupWrapper,
     children: [
-      (0, i.jsx)(I.Z, {
+      (0, i.jsx)(m.Z, {
         className: M.messageGroupCozy,
         message: t,
         channel: n
       }),
-      (0, i.jsx)(D, {
+      (0, i.jsx)(b, {
         channel: s,
         message: t,
         jumping: L,
-        canCloseAllMessages: m,
+        canCloseAllMessages: I,
         jumpTo: Z,
         onCloseMessage: R
       })

@@ -15,8 +15,8 @@ var a = n(512722),
   u = n(823379),
   _ = n(358595),
   E = n(981631),
-  m = n(689938),
-  I = n(182578);
+  I = n(689938),
+  m = n(182578);
 
 function T(e) {
   let t, {
@@ -27,30 +27,30 @@ function T(e) {
   onAcceptInstantInvite: N
 } = e,
 f = T === a.id,
-p = n.state === E.r2o.ACCEPTING,
-C = (0, r.e7)([c.Z], () => null != n.channel ? c.Z.getChannel(n.channel.id) : null, [n]);
-  s()(null == C || C.isPrivate(), 'must be a private channel');
-  let g = null != C;
-  if (null == C) {
+C = n.state === E.r2o.ACCEPTING,
+p = (0, r.e7)([c.Z], () => null != n.channel ? c.Z.getChannel(n.channel.id) : null, [n]);
+  s()(null == p || p.isPrivate(), 'must be a private channel');
+  let g = null != p;
+  if (null == p) {
 if (null == n.channel)
   return (0, i.jsx)(_.Z, {});
-C = (0, o.jD)(n.channel), t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : [];
+p = (0, o.jD)(n.channel), t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : [];
   } else {
-t = C.recipients.reduce((e, t) => {
+t = p.recipients.reduce((e, t) => {
   let n = d.default.getUser(t);
   return null != n && e.push(n), e;
 }, []);
 let e = d.default.getCurrentUser();
 g && null != e && t.push(e);
   }
-  let S = C.name;
-  (null == S || '' === S) && (S = t.length > 0 ? t.filter(u.lm).map(e => e.username).join(', ') : m.Z.Messages.UNNAMED);
+  let S = p.name;
+  (null == S || '' === S) && (S = t.length > 0 ? t.filter(u.lm).map(e => e.username).join(', ') : I.Z.Messages.UNNAMED);
   let A = g ? h : N,
-R = m.Z.Messages.JOIN_GUILD,
+R = I.Z.Messages.JOIN_GUILD,
 x = l.Z.Button.Colors.GREEN;
-  g && (R = m.Z.Messages.JOINED_GUILD, x = l.Z.Button.Colors.PRIMARY);
-  let O = m.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
-  return f && (O = m.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, i.jsxs)(l.Z, {
+  g && (R = I.Z.Messages.JOINED_GUILD, x = l.Z.Button.Colors.PRIMARY);
+  let O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
+  return f && (O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, i.jsxs)(l.Z, {
 children: [
   (0, i.jsx)(l.Z.Header, {
     text: O
@@ -58,10 +58,10 @@ children: [
   (0, i.jsxs)(l.Z.Body, {
     children: [
       (0, i.jsxs)('div', {
-        className: I.headerLine,
+        className: m.headerLine,
         children: [
           (0, i.jsx)(l.Z.Icon, {
-            channel: C,
+            channel: p,
             onClick: g ? A : void 0
           }),
           (0, i.jsx)(l.Z.Info, {
@@ -75,7 +75,7 @@ children: [
       }),
       (0, i.jsx)(l.Z.Button, {
         onClick: A,
-        submitting: p,
+        submitting: C,
         isDisabled: g,
         color: x,
         children: R

@@ -10,8 +10,8 @@ var s = n(243814),
   d = n(45114),
   u = n(479531),
   _ = n(40851),
-  E = n(566620),
-  h = n(596223),
+  h = n(566620),
+  E = n(596223),
   I = n(838195),
   m = n(928518),
   g = n(592125),
@@ -37,7 +37,7 @@ a = p.Z.getApplicationActivity(t);
 throw new v.Z({
   errorCode: P.lTL.NO_ELIGIBLE_ACTIVITY
 }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
-  let r = (0, h.Z)(a, T.Z);
+  let r = (0, E.Z)(a, T.Z);
   if (r) {
 let {
   lock: t
@@ -252,7 +252,7 @@ handler(e) {
         r();
       }), s.document.body.addEventListener('focus', r, !0), s.document.body.appendChild(a), a.click();
     }(async n => {
-      let a = await (0, E.kv)(i, s, n);
+      let a = await (0, h.kv)(i, s, n);
       (0, C.lm)(a) && (0, C.lm)(a.url) && !(a instanceof u.Z) ? e({
         image_url: a.url
       }): t(a);

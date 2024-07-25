@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(410030),
   u = n(355932),
   _ = n(871025),
-  E = n(689938),
-  h = n(278560);
+  h = n(689938),
+  E = n(278560);
 
 function I(e) {
   let {
@@ -48,15 +48,15 @@ children: (e, t) => {
     ...e,
     id: 'more',
     color: 'text-muted',
-    className: r()(h.tab, h.more, {
-      [h.selected]: I
+    className: r()(E.tab, E.more, {
+      [E.selected]: I
     }),
-    'aria-label': E.Z.Messages.MORE,
+    'aria-label': h.Z.Messages.MORE,
     children: [
       (0, i.jsx)(o.Text, {
         variant: 'text-md/medium',
         color: m,
-        children: E.Z.Messages.MORE
+        children: h.Z.Messages.MORE
       }),
       n ? (0, i.jsx)(o.ChevronSmallUpIcon, {
         size: 'sm',
@@ -75,7 +75,7 @@ t.Z = s.forwardRef(function(e, t) {
 selectedTab: n,
 tabs: a,
 onTabSelect: _,
-onAvailableWidthChange: E
+onAvailableWidthChange: h
   } = e, m = (0, d.ZP)(), g = (0, l.wj)(m), [p, T] = s.useState(0), {
 lastVisibleIndex: f,
 onItemLayout: S,
@@ -99,7 +99,7 @@ if (null == t)
 T(t.width);
 let n = N.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
   i = t.width - n;
-null == E || E(i);
+null == h || h(i);
   });
   return s.useImperativeHandle(t, () => ({
 getBoundingClientRect: () => {
@@ -107,11 +107,11 @@ getBoundingClientRect: () => {
   return null === (e = Z.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
 }
   })), (0, i.jsxs)('div', {
-className: h.container,
+className: E.container,
 ref: Z,
 children: [
   (0, i.jsxs)('div', {
-    className: h.measurements,
+    className: E.measurements,
     children: [
       a.map((e, t) => (0, i.jsx)(u.AJ, {
         index: t,
@@ -119,7 +119,7 @@ children: [
         children: (0, i.jsx)(o.TabBar.Item, {
           id: e.id,
           'aria-label': e.label,
-          className: h.tab,
+          className: E.tab,
           children: (0, i.jsx)(o.Text, {
             variant: 'text-md/medium',
             children: e.label
@@ -140,7 +140,7 @@ children: [
     type: 'top',
     selectedItem: n,
     onItemSelect: _,
-    className: h.tabs,
+    className: E.tabs,
     children: [
       A.map(e => {
         let t = n === e.id;
@@ -148,8 +148,8 @@ children: [
           id: e.id,
           color: 'text-muted',
           'aria-label': e.label,
-          className: r()(h.tab, {
-            [h.selected]: t
+          className: r()(E.tab, {
+            [E.selected]: t
           }),
           children: (0, i.jsx)(o.Text, {
             variant: 'text-md/medium',

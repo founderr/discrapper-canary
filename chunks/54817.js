@@ -15,8 +15,8 @@ var a = n(120356),
   u = n(83561),
   _ = n(981631),
   E = n(674563),
-  m = n(689938),
-  I = n(713389);
+  I = n(689938),
+  m = n(713389);
 
 function T(e) {
   let {
@@ -27,9 +27,9 @@ usernameHook: a
 avatarSrc: N,
 eventHandlers: {
   onMouseEnter: f,
-  onMouseLeave: p
+  onMouseLeave: C
 }
-  } = (0, u.m)(!0), C = '' !== t.content ? new Date(t.content).toLocaleString(m.Z.getLocale(), {
+  } = (0, u.m)(!0), p = '' !== t.content ? new Date(t.content).toLocaleString(I.Z.getLocale(), {
 hour: 'numeric',
 minute: '2-digit',
 month: '2-digit',
@@ -38,40 +38,40 @@ year: 'numeric'
   }) : '';
   return (0, i.jsx)('div', {
 onMouseEnter: f,
-onMouseLeave: p,
+onMouseLeave: C,
 children: (0, i.jsx)(o.Z, {
-  className: s()(I.mainContainer, {
-    [I.compact]: n
+  className: s()(m.mainContainer, {
+    [m.compact]: n
   }),
   iconNode: n ? null : (0, i.jsx)(u.S, {
     src: N
   }),
-  iconContainerClassName: I.iconContainer,
+  iconContainerClassName: m.iconContainer,
   compact: n,
   children: (0, i.jsxs)('div', {
-    className: s()(I.content, {
-      [I.compact]: n
+    className: s()(m.content, {
+      [m.compact]: n
     }),
     children: [
       (0, i.jsx)(d.nD, {
         message: t,
-        messageClassname: I.spanCorrection,
-        className: s()(I.usernameContainer, I.spanCorrection, {
-          [I.compact]: n
+        messageClassname: m.spanCorrection,
+        className: s()(m.usernameContainer, m.spanCorrection, {
+          [m.compact]: n
         }),
         username: (0, i.jsxs)('div', {
-          className: I.spanCorrection,
+          className: m.spanCorrection,
           children: [
             (0, i.jsx)(r.Text, {
               variant: 'text-md/normal',
               color: 'text-brand',
               tag: 'span',
-              className: I.username,
-              children: m.Z.Messages.GUILD_AUTOMOD_USERNAME
+              className: m.username,
+              children: I.Z.Messages.GUILD_AUTOMOD_USERNAME
             }),
             (0, i.jsx)(l.Z, {
               type: E.Hb.SYSTEM_DM,
-              className: I.systemTag
+              className: m.systemTag
             })
           ]
         }),
@@ -79,14 +79,14 @@ children: (0, i.jsx)(o.Z, {
         showTimestamp: !0
       }),
       (0, i.jsx)('div', {
-        className: s()(I.__invalid_messageContent, {
-          [I.compact]: n
+        className: s()(m.__invalid_messageContent, {
+          [m.compact]: n
         }),
-        children: t.type === _.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED ? m.Z.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
+        children: t.type === _.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED ? I.Z.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
           username: T.nick,
           usernameHook: h,
-          time: C
-        }) : m.Z.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
+          time: p
+        }) : I.Z.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
           username: T.nick,
           usernameHook: h
         })

@@ -17,14 +17,14 @@ var i = n(735250),
   u = n(565138),
   _ = n(353254),
   E = n(695346),
-  m = n(271383),
-  I = n(594174),
+  I = n(271383),
+  m = n(594174),
   T = n(671533),
   h = n(810090),
   N = n(51144),
   f = n(506071),
-  p = n(696014),
-  C = n(847033),
+  C = n(696014),
+  p = n(847033),
   g = n(544978),
   S = n(893182),
   A = n(689938),
@@ -92,13 +92,13 @@ subscriptionsSettings: E
 nickname: h,
 nickcolor: f
   } = (s = T, (0, l.cj)([
-m.ZP,
-I.default
+I.ZP,
+m.default
   ], () => {
 var e, t;
-let n = I.default.getCurrentUser();
+let n = m.default.getCurrentUser();
 r()(null != n, 'user cannot be null');
-let i = m.ZP.getMember(s, n.id);
+let i = I.ZP.getMember(s, n.id);
 return {
   nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : N.ZP.getName(n),
   nickcolor: null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : void 0
@@ -106,13 +106,13 @@ return {
   }, [s])), {
 isTruncated: M,
 ExpandableTextContainer: v
-  } = (0, p.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = a.useState(1), b = (0, c.Z)('(max-width: 1439px)'), {
-selectedTab: D,
+  } = (0, C.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = a.useState(1), D = (0, c.Z)('(max-width: 1439px)'), {
+selectedTab: b,
 isPhantomPreview: j
-  } = (0, C.m)(), U = D === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, i.jsxs)(i.Fragment, {
+  } = (0, p.m)(), U = b === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(v, {
-    lineClamp: b || 2 === Z ? 2 : 3,
+    lineClamp: D || 2 === Z ? 2 : 3,
     children: (0, i.jsx)(o.Text, {
       variant: 'text-sm/normal',
       color: 'text-normal',

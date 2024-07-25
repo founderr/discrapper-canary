@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 });
 var i = n(735250);
@@ -15,16 +15,16 @@ var a = n(442837),
   u = n(626135),
   _ = n(981631),
   E = n(689938),
-  m = n(600021);
+  I = n(600021);
 
-function I(e) {
+function m(e) {
   let {
 closePopout: t
   } = e, n = (0, a.e7)([d.Z], () => d.Z.getPendingCount());
   return (0, i.jsx)(s.TooltipContainer, {
 text: E.Z.Messages.VIEW_FRIEND_REQUESTS,
 children: (0, i.jsxs)(s.Clickable, {
-  className: m.friendRequestsButton,
+  className: I.friendRequestsButton,
   onClick: () => {
     u.default.track(_.rMx.NOTIFICATION_CENTER_ACTION, {
       action_type: o.ud.FRIEND_REQUESTS_BUTTON_CLICK

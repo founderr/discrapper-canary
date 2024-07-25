@@ -15,8 +15,8 @@ var a = n(442837),
   u = n(131704),
   _ = n(592125),
   E = n(430824),
-  m = n(699516),
-  I = n(594174),
+  I = n(699516),
+  m = n(594174),
   T = n(934415),
   h = n(900849),
   N = n(981631);
@@ -26,12 +26,12 @@ function f(e) {
 channel: t,
 onClick: n,
 beforeTransition: f,
-className: p,
-openChatWithoutConnecting: C
+className: C,
+openChatWithoutConnecting: p
   } = e, g = (0, a.e7)([
-I.default,
-m.Z
-  ], () => null == t ? '' : (0, o.F6)(t, I.default, m.Z), [t]);
+m.default,
+I.Z
+  ], () => null == t ? '' : (0, o.F6)(t, m.default, I.Z), [t]);
   return (0, i.jsx)(s.Tooltip, {
 text: g,
 position: 'top',
@@ -42,7 +42,7 @@ children: e => {
   } = e;
   return (0, i.jsx)(c.Z, {
     role: 'link',
-    className: p,
+    className: C,
     onClick: e => {
       e.stopPropagation(), null != n ? n() : (null != f && f(), (0, s.closeAllModals)(), ! function(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -65,7 +65,7 @@ children: e => {
           return;
         }
         (0, d.uL)(N.Z5c.CHANNEL(e, t));
-      }(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, C));
+      }(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, p));
     },
     onMouseEnter: a,
     onMouseLeave: o,

@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(594174),
   _ = n(74538),
   E = n(212895),
-  m = n(559725),
-  I = n(439041),
+  I = n(559725),
+  m = n(439041),
   T = n(981631),
   h = n(689938);
 
@@ -27,7 +27,7 @@ onClose: t
   let N = (0, _.I5)(s),
 f = N ? T.oAB.SUBSCRIPTIONS : T.oAB.BILLING;
   return a.useEffect(() => {
-null == I.Z.cashAppPayComponent && (0, m.eI)();
+null == m.Z.cashAppPayComponent && (0, I.eI)();
   }, []), (0, i.jsxs)(l.Notice, {
 color: l.NoticeColors.SPOTIFY,
 children: [

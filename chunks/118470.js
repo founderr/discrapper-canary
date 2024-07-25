@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return h;
+return E;
   }
 }), n(47120), n(653041);
 var i = n(735250),
@@ -13,12 +13,12 @@ var i = n(735250),
   d = n(270144),
   u = n(981631),
   _ = n(689938),
-  E = n(466389);
+  h = n(466389);
 
-function h(e) {
+function E(e) {
   let {
 guild: t
-  } = e, n = (0, d.h6)(t), h = () => (0, c.sB)(t.id), I = s.useMemo(() => new Set(n.map(e => e.applicationId)), [n]), m = (0, a.Wu)([r.Z], () => {
+  } = e, n = (0, d.h6)(t), E = () => (0, c.sB)(t.id), I = s.useMemo(() => new Set(n.map(e => e.applicationId)), [n]), m = (0, a.Wu)([r.Z], () => {
 let e = [];
 for (let t of I) {
   let n = r.Z.getApplication(t);
@@ -40,12 +40,12 @@ b: m[1].name,
 c: m[2].name
   }) : _.Z.Messages.MORE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT, (0, i.jsx)(l.Z, {
 guild: t,
-onDismissed: h,
+onDismissed: E,
 message: g,
 type: u.vID.APPLICATION_SUBSCRIPTION_EXPIRATION,
-image: E,
+image: h,
 onClick: () => {
-  h(), o.Z.open(t.id, u.pNK.INTEGRATIONS);
+  E(), o.Z.open(t.id, u.pNK.INTEGRATIONS);
 },
 imageMarginTop: 6,
 imageMarginX: 46,

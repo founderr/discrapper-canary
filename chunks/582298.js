@@ -19,7 +19,7 @@ function u(e) {
   isOwner: _,
   channel: E
 } = e,
-m = () => {
+I = () => {
   let e = s.Z.getGuild(E.getGuildId());
   null != e && ((0, a.openModalLazy)(async () => {
     let {
@@ -37,17 +37,17 @@ m = () => {
     });
   }), (0, l.w)());
 },
-I = (e, t) => (0, i.jsx)(a.Anchor, {
+m = (e, t) => (0, i.jsx)(a.Anchor, {
   className: d.inviteLink,
-  onClick: m,
+  onClick: I,
   children: e
 }, t);
   return t = u ? (0, i.jsx)('div', {
 className: d.inviteContent,
 children: _ ? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT.format({
-  inviteHook: I
+  inviteHook: m
 }) : c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_COMPACT.format({
-  inviteHook: I
+  inviteHook: m
 })
   }) : (0, i.jsxs)('div', {
 className: d.content,
@@ -61,7 +61,7 @@ children: [
     children: _ ? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION_OWNER : c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION
   }),
   (0, i.jsx)(a.Button, {
-    onClick: m,
+    onClick: I,
     size: a.Button.Sizes.SMALL,
     className: d.inviteButton,
     children: c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_BUTTON

@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(950279),
   u = n(741595),
   _ = n(754961),
-  E = n(363915),
-  h = n(359380),
+  h = n(363915),
+  E = n(359380),
   I = n(207796),
   m = n(689938),
   g = n(270590);
@@ -47,7 +47,7 @@ function S() {
   let e = (0, I.GN)(e => e.selectedTraits, r.Z),
 t = s.useMemo(() => new Set(e), [e]),
 n = s.useCallback(e => I.GN.getState().setSelectedTraits([...e]), []);
-  return (0, i.jsx)(h.Z, {
+  return (0, i.jsx)(E.Z, {
 title: m.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
 description: m.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
 handleUpdate: n,
@@ -62,7 +62,7 @@ function C(e) {
 t.Z = s.memo(function(e) {
   let {
 setScreen: t
-  } = e, n = s.useRef(null), d = s.useRef(null), u = s.useRef(null), h = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), [N, A] = s.useState(0), [v, Z] = s.useState(0), L = (0, I.GN)(e => e.selectedPlaystyle, r.Z), O = (0, I.GN)(e => e.previousMode, r.Z), R = s.useCallback(e => {
+  } = e, n = s.useRef(null), d = s.useRef(null), u = s.useRef(null), E = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), [N, A] = s.useState(0), [v, Z] = s.useState(0), L = (0, I.GN)(e => e.selectedPlaystyle, r.Z), O = (0, I.GN)(e => e.previousMode, r.Z), R = s.useCallback(e => {
 A(e), v < e && Z(e);
   }, [v]), x = s.useCallback(() => {
 0 === N ? (t(I.o2.USER_UPSELL), (0, I.fH)(O)) : R(N - 1);
@@ -104,7 +104,7 @@ config: p
 ref: d,
 from: {
   opacity: 0,
-  transform: h ? 'translateY(0px)' : 'translateY(40px)'
+  transform: E ? 'translateY(0px)' : 'translateY(40px)'
 },
 to: {
   opacity: 1,
@@ -115,7 +115,7 @@ config: p
 ref: u,
 from: {
   opacity: 0,
-  transform: h ? 'translateY(0px)' : 'translateY(40px)'
+  transform: E ? 'translateY(0px)' : 'translateY(40px)'
 },
 to: {
   opacity: 1,
@@ -150,7 +150,7 @@ children: [
   (0, i.jsx)(a.animated.div, {
     className: g.sequencer,
     style: y,
-    children: (0, i.jsx)(E.Z, {
+    children: (0, i.jsx)(h.Z, {
       currentStep: N,
       items: U,
       renderItem: G,

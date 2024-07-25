@@ -15,8 +15,8 @@ var a = n(120356),
   u = n(317632),
   _ = n(602478),
   E = n(768943),
-  m = n(121254),
-  I = n(742989),
+  I = n(121254),
+  m = n(742989),
   T = n(818186),
   h = n(689938),
   N = n(39767);
@@ -27,16 +27,16 @@ tab: t,
 setTab: n,
 children: a,
 badgeState: f,
-closePopout: p
+closePopout: C
   } = e, {
-showReminders: C
-  } = I.Z.useExperiment({
+showReminders: p
+  } = m.Z.useExperiment({
 location: 'RecentsHeader'
   }, {
 autoTrackExposure: !1
   }), {
 enabled: g
-  } = m.Z.useExperiment({
+  } = I.Z.useExperiment({
 location: 'RecentsPopout'
   }, {
 autoTrackExposure: !1
@@ -62,7 +62,7 @@ children: [
         children: h.Z.Messages.INBOX
       }),
       (0, i.jsx)(T.Z, {
-        closePopout: p
+        closePopout: C
       })
     ]
   }),
@@ -125,7 +125,7 @@ children: [
             }),
             children: h.Z.Messages.MESSAGE_BOOKMARKS_HEADER
           }) : null,
-          C ? (0, i.jsxs)(o.TabBar.Item, {
+          p ? (0, i.jsxs)(o.TabBar.Item, {
             'aria-label': 'todos',
             id: l.X.TODOS,
             className: s()(N.tab, N.expanded, {

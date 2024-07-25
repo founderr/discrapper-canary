@@ -10,23 +10,23 @@ var i = n(735250),
   u = n(430824),
   _ = n(914010),
   E = n(900849),
-  m = n(41776),
-  I = n(981631),
+  I = n(41776),
+  m = n(981631),
   T = n(689938),
   h = n(736140),
   N = n(581611);
 t.Z = () => {
   let e = (0, l.e7)([_.Z], () => _.Z.getGuildId(), []),
 t = (0, l.e7)([u.Z], () => u.Z.getGuild(e), [e]),
-n = (0, l.e7)([m.Z], () => m.Z.getHistorySnapshot(), []),
+n = (0, l.e7)([I.Z], () => I.Z.getHistorySnapshot(), []),
 [s, f] = a.useState(!1);
   if (null == t)
 return null;
-  let p = async () => {
+  let C = async () => {
 f(!0);
 try {
   E.mT(t.id), await c.Z.joinGuild(t.id, {
-    source: I.vtS.NOTICE_BAR
+    source: m.vtS.NOTICE_BAR
   });
 } catch {
   f(!1);
@@ -67,7 +67,7 @@ children: [
     color: o.Button.Colors.WHITE,
     size: o.Button.Sizes.NONE,
     submitting: s,
-    onClick: p,
+    onClick: C,
     children: T.Z.Messages.LURKER_MODE_NAG_BAR_BUTTON.format({
       guild: t.name
     })

@@ -10,14 +10,14 @@ var i = n(735250),
   u = n(231053),
   _ = n(697568),
   E = n(183023),
-  m = n(524444),
-  I = n(98278),
+  I = n(524444),
+  m = n(98278),
   T = n(197115),
   h = n(430824),
   N = n(594174),
   f = n(285952),
-  p = n(514342),
-  C = n(626135),
+  C = n(514342),
+  p = n(626135),
   g = n(74538),
   S = n(453070),
   A = n(926491),
@@ -29,12 +29,12 @@ var i = n(735250),
   L = n(689938),
   Z = n(379157),
   P = n(830645);
-let b = (e, t) => t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({
+let D = (e, t) => t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({
 stickerPackName: e.name
   }) : L.Z.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({
 stickerPackName: e.name
   }),
-  D = e => {
+  b = e => {
 let {
   sticker: t,
   stickerPack: n
@@ -46,10 +46,10 @@ return a.useMemo(() => null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => 
   };
 
 function j(e) {
-  C.default.track(M.rMx.PREMIUM_PROMOTION_OPENED, {
+  p.default.track(M.rMx.PREMIUM_PROMOTION_OPENED, {
 location_page: null != e.guild_id ? M.ZY5.GUILD_CHANNEL : M.ZY5.DM_CHANNEL,
 location_section: M.jXE.STICKER_POPOUT
-  }), (0, I.z)();
+  }), (0, m.z)();
 }
 
 function U(e) {
@@ -72,7 +72,7 @@ children: [
       (0, i.jsx)(o.Text, {
         className: P.__invalid_emojiName,
         variant: 'text-md/semibold',
-        children: (0, i.jsx)(p.Z, {
+        children: (0, i.jsx)(C.Z, {
           children: t.name
         })
       }),
@@ -95,24 +95,24 @@ let {
   A.Z.getStickerPack(n.pack_id),
   !A.Z.hasLoadedStickerPacks,
   A.Z.isPremiumPack(n.pack_id)
-], [n]), E = D({
+], [n]), E = b({
   sticker: n,
   stickerPack: c
 });
 (0, S.Pq)(n.pack_id);
-let I = (0, S.Sd)(s);
+let m = (0, S.Sd)(s);
 return (a.useEffect(() => {
   r();
 }, [u]), a.useEffect(() => {
-  C.default.track(M.rMx.OPEN_POPOUT, {
+  p.default.track(M.rMx.OPEN_POPOUT, {
     type: M.jXE.STICKER_POPOUT,
     guild_id: s.getGuildId(),
     sticker_pack_id: n.pack_id,
     ...(0, d.v_)(s)
   });
-}, [n.pack_id]), u || null == c) ? (0, i.jsx)(m.SE, {
+}, [n.pack_id]), u || null == c) ? (0, i.jsx)(I.SE, {
   className: Z.popoutLoader
-}) : (0, i.jsxs)(m.W_, {
+}) : (0, i.jsxs)(I.W_, {
   className: Z.popoutContent,
   children: [
     (0, i.jsx)(o.Heading, {
@@ -121,7 +121,7 @@ return (a.useEffect(() => {
     }),
     (0, i.jsx)(o.Text, {
       variant: 'text-sm/normal',
-      children: b(c, _)
+      children: D(c, _)
     }),
     (0, i.jsx)('ul', {
       className: Z.stickersList,
@@ -139,7 +139,7 @@ return (a.useEffect(() => {
         onClick: () => {
           _ && (0, O.m)({
             stickerPack: c,
-            stickerPickerCategories: I
+            stickerPickerCategories: m
           }), t();
         },
         children: L.Z.Messages.STICKER_VIEW_MORE_STICKERS
@@ -152,13 +152,13 @@ return (a.useEffect(() => {
 let t, {
     sticker: n,
     channel: s,
-    closePopout: I,
-    refreshPositionKey: p
+    closePopout: m,
+    refreshPositionKey: C
   } = e,
   [S, A] = a.useState(null),
   [R, O] = a.useState(!1),
-  b = N.default.getCurrentUser(),
-  D = g.ZP.canUseCustomStickersEverywhere(b),
+  D = N.default.getCurrentUser(),
+  b = g.ZP.canUseCustomStickersEverywhere(D),
   y = (0, l.e7)([h.Z], () => h.Z.getGuild(n.guild_id)),
   B = null != y,
   [k, G] = a.useState(!1),
@@ -183,32 +183,32 @@ a.useEffect(() => {
 ]);
 let Y = n.guild_id === s.getGuildId(),
   W = null != S,
-  z = !1,
-  K = 'Custom Sticker Popout';
-D ? t = B ? Y ? L.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : W ? L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : B ? (Y ? t = L.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, z = !0, K = 'Custom Sticker Popout (Upsell)') : W ? (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, z = !0, K = 'Custom Sticker Popout (Upsell)') : (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
+  K = !1,
+  z = 'Custom Sticker Popout';
+b ? t = B ? Y ? L.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : W ? L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : B ? (Y ? t = L.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, K = !0, z = 'Custom Sticker Popout (Upsell)') : W ? (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, K = !0, z = 'Custom Sticker Popout (Upsell)') : (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
   openPremiumSettings: () => {
-    j(s), I();
+    j(s), m();
   }
-}), K = 'Custom Sticker Popout (Soft Upsell)');
-let Q = !z && !B && W && D;
+}), z = 'Custom Sticker Popout (Soft Upsell)');
+let Q = !K && !B && W && b;
 return (a.useEffect(() => {
-  p();
+  C();
 }, [
   R,
   S
 ]), a.useEffect(() => {
-  C.default.track(M.rMx.OPEN_POPOUT, {
-    type: K,
+  p.default.track(M.rMx.OPEN_POPOUT, {
+    type: z,
     ...H
   });
-}, []), R) ? (0, i.jsxs)(m.W_, {
+}, []), R) ? (0, i.jsxs)(I.W_, {
   className: P.popoutContent,
   children: [
     (() => {
       let e = async () => {
         if (null == S || B)
           return;
-        I();
+        m();
         let e = S.id;
         try {
           await c.Z.joinGuild(e), c.Z.transitionToGuildSync(e);
@@ -221,13 +221,13 @@ return (a.useEffect(() => {
             description: t,
             sticker: n
           }),
-          z && (0, i.jsx)(T.Z, {
+          K && (0, i.jsx)(T.Z, {
             className: P.ctaButton,
             subscriptionTier: v.Si.TIER_2,
             size: o.Button.Sizes.SMALL,
             fullWidth: !0,
             buttonText: L.Z.Messages.EMOJI_POPOUT_PREMIUM_CTA,
-            onSubscribeModalClose: t => t ? e() : I(),
+            onSubscribeModalClose: t => t ? e() : m(),
             postSuccessGuild: B || null == S ? void 0 : S,
             premiumModalAnalyticsLocation: V
           }),
@@ -263,7 +263,7 @@ return (a.useEffect(() => {
             children: [
               (0, i.jsx)(o.Clickable, {
                 onClick: () => {
-                  p(), G(!k);
+                  C(), G(!k);
                 },
                 className: P.showMoreEmojis,
                 children: (0, i.jsxs)(f.Z, {
@@ -291,7 +291,7 @@ return (a.useEffect(() => {
                 className: P.otherEmojisContainer,
                 children: t.map(e => (0, i.jsx)(o.Tooltip, {
                   text: e.name,
-                  ...m.b_,
+                  ...I.b_,
                   children: t => {
                     let {
                       onMouseEnter: n,
@@ -327,7 +327,7 @@ return (a.useEffect(() => {
       });
     })()
   ]
-}) : (0, i.jsx)(m.SE, {
+}) : (0, i.jsx)(I.SE, {
   className: Z.popoutLoader
 });
   };
@@ -338,7 +338,7 @@ channel: t,
 closePopout: n,
 sticker: a
   } = e;
-  return (0, i.jsx)(m.W_, {
+  return (0, i.jsx)(I.W_, {
 className: Z.popoutContent,
 children: (0, i.jsx)(U, {
   sticker: a,
@@ -372,7 +372,7 @@ return (0, i.jsx)(B, {
   refreshPositionKey: s
 });
   if (!l)
-return (0, i.jsx)(m.SE, {});
+return (0, i.jsx)(I.SE, {});
   else if (l && null == r)
 return (0, i.jsx)(k, {
   channel: n,

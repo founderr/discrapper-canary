@@ -18,10 +18,10 @@ className: n,
 shouldAnimate: d = !0,
 defaultAnimationState: c,
 idleAnimationState: _
-  } = e, E = (0, s.e7)([a.Z], () => a.Z.useReducedMotion), [h, p] = r.useState(c), f = r.useRef((0, o._)(t, h)), [S, m] = r.useState(null == _), [I, b] = r.useState(!1), [g, C] = r.useState(-1), O = () => {
-f.current = (0, o._)(t, h), C(e => e + 1);
+  } = e, E = (0, s.e7)([a.Z], () => a.Z.useReducedMotion), [h, p] = r.useState(c), f = r.useRef((0, o._)(t, h)), [S, m] = r.useState(null == _), [I, b] = r.useState(!1), [C, g] = r.useState(-1), O = () => {
+f.current = (0, o._)(t, h), g(e => e + 1);
   }, A = () => {
-m(!1), b(!0), C(-1), p(c);
+m(!1), b(!0), g(-1), p(c);
   };
   r.useEffect(() => {
 null == _ && p(c);
@@ -29,7 +29,7 @@ null == _ && p(c);
 _,
 c
   ]), r.useEffect(() => {
-if (null != _ && g >= 0) {
+if (null != _ && C >= 0) {
   A();
   return;
 }
@@ -48,7 +48,7 @@ throw Error('Unexpected giftStyle '.concat(t));
 importData: f.current,
 shouldAnimate: !E && d,
 className: n,
-versionKey: g,
+versionKey: C,
 onComplete: null != _ ? () => {
   null != _ && (p(_), m(!0));
 } : void 0,

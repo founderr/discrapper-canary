@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(484459),
   u = n(103575),
   _ = n(409216),
-  E = n(51144),
-  h = n(981631),
+  h = n(51144),
+  E = n(981631),
   I = n(689938),
   m = n(287644);
 
@@ -23,7 +23,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let p = {
-  [h.AzA.NOW_PLAYING]: {
+  [E.AzA.NOW_PLAYING]: {
 single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
   user1: e.username,
   user1Hook: () => t(e)
@@ -38,7 +38,7 @@ other: e => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_OTHER.form
   count: e
 })
   },
-  [h.AzA.RECENTLY_PLAYED]: {
+  [E.AzA.RECENTLY_PLAYED]: {
 single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_SINGLE.format({
   user1: e.username,
   user1Hook: () => t(e)
@@ -53,7 +53,7 @@ other: e => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_OTHER.
   count: e
 })
   },
-  [h.AzA.EVER_PLAYED]: {
+  [E.AzA.EVER_PLAYED]: {
 single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_SINGLE.format({
   user1: e.username,
   user1Hook: () => t(e)
@@ -126,7 +126,7 @@ super(...e), g(this, 'renderUserTooltip', (e, t, n) => (0, i.jsxs)('div', {
   className: m.tooltip,
   children: [
     (0, i.jsx)('div', {
-      children: E.ZP.getUserTag(e)
+      children: h.ZP.getUserTag(e)
     }),
     (0, i.jsx)(c.ZP, {
       className: m.tooltipTimestamp,
@@ -150,7 +150,7 @@ super(...e), g(this, 'renderUserTooltip', (e, t, n) => (0, i.jsxs)('div', {
     position: 'right',
     children: t => (0, i.jsx)(l.Tooltip, {
       text: this.renderUserTooltip(e, a.startTime, a.endTime),
-      'aria-label': (0, E.W5)(e, {
+      'aria-label': (0, h.W5)(e, {
         decoration: 'never'
       }),
       children: n => (0, i.jsx)(l.Avatar, {

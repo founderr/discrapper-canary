@@ -3,7 +3,7 @@ n.d(t, {
 return _;
   },
   h: function() {
-return E;
+return h;
   }
 }), n(47120);
 var i = n(512722),
@@ -43,7 +43,7 @@ null == o && e(), l.Z.getMediaEngine().eachConnection(n => {
   });
 }
 
-function E(e, t) {
+function h(e, t) {
   let {
 soundKey: n,
 soundURL: i,

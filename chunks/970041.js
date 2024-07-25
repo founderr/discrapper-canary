@@ -1,44 +1,44 @@
-i.d(s, {
+n.d(i, {
   Z: function() {
 return I;
   }
-}), i(789020);
-var n = i(735250);
-i(470079);
-var l = i(597312),
-  t = i(442837),
-  o = i(481060),
-  a = i(860719),
-  r = i(621853),
-  d = i(689938),
-  c = i(21232);
+}), n(789020);
+var s = n(735250);
+n(470079);
+var l = n(597312),
+  t = n(442837),
+  o = n(481060),
+  a = n(860719),
+  r = n(621853),
+  d = n(689938),
+  c = n(21232);
 
 function u(e) {
   let {
-icon: s,
-title: i,
+icon: i,
+title: n,
 description: l
   } = e;
-  return (0, n.jsxs)('div', {
+  return (0, s.jsxs)('div', {
 className: c.row,
 children: [
-  (0, n.jsx)('div', {
+  (0, s.jsx)('div', {
     className: c.rowIcon,
-    children: (0, n.jsx)(s, {
+    children: (0, s.jsx)(i, {
       size: 'custom',
       width: 20,
       height: 20,
       color: 'currentColor'
     })
   }),
-  (0, n.jsxs)('div', {
+  (0, s.jsxs)('div', {
     className: c.rowText,
     children: [
-      (0, n.jsx)(o.Heading, {
+      (0, s.jsx)(o.Heading, {
         variant: 'text-xs/semibold',
-        children: i
+        children: n
       }),
-      (0, n.jsx)(o.Text, {
+      (0, s.jsx)(o.Text, {
         variant: 'text-sm/normal',
         children: l
       })
@@ -50,37 +50,37 @@ children: [
 
 function I(e) {
   let {
-user: s
-  } = e, i = (0, t.e7)([r.Z], () => {
+user: i
+  } = e, n = (0, t.e7)([r.Z], () => {
 var e;
-return null === (e = r.Z.getUserProfile(s.id)) || void 0 === e ? void 0 : e.application;
+return null === (e = r.Z.getUserProfile(i.id)) || void 0 === e ? void 0 : e.application;
   }), {
 hasMessageContent: I,
 hasGuildPresences: _,
 hasGuildMembers: f
   } = (0, a.w)({
-flags: null == i ? void 0 : i.flags
+flags: null == n ? void 0 : n.flags
   });
-  return (0, n.jsxs)(l.zJ, {
+  return (0, s.jsxs)(l.zJ, {
 fade: !0,
 className: c.scroller,
 children: [
-  I && (0, n.jsx)(u, {
+  I && (0, s.jsx)(u, {
     icon: o.ChatIcon,
     title: d.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
     description: d.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
   }),
-  _ && (0, n.jsx)(u, {
+  _ && (0, s.jsx)(u, {
     icon: o.GameControllerIcon,
     title: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
     description: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
   }),
-  f && (0, n.jsx)(u, {
+  f && (0, s.jsx)(u, {
     icon: o.GroupIcon,
     title: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
     description: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
   }),
-  (0, n.jsx)(o.Text, {
+  (0, s.jsx)(o.Text, {
     variant: 'text-xs/normal',
     children: d.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({
       helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975'

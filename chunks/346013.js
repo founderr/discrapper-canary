@@ -14,14 +14,14 @@ var i = n(735250),
   u = n(399606),
   _ = n(481060),
   E = n(607070),
-  m = n(100527),
-  I = n(367907),
+  I = n(100527),
+  m = n(367907),
   T = n(1585),
   h = n(841762),
   N = n(336197),
   f = n(406432),
-  p = n(348238),
-  C = n(38267),
+  C = n(348238),
+  p = n(38267),
   g = n(484459),
   S = n(103575),
   A = n(695346),
@@ -33,8 +33,8 @@ var i = n(735250),
   L = n(495114),
   Z = n(170140),
   P = n(981631),
-  b = n(959517),
-  D = n(689938),
+  D = n(959517),
+  b = n(689938),
   j = n(730752),
   U = n(527455);
 
@@ -46,7 +46,7 @@ message: y,
 channel: B
   } = e, k = (0, Z.J)(l, y), {
 setPopout: G
-  } = (0, C.Z)(y.id, b.d$), F = (0, p.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = a.useState(!1), [W, z] = a.useState((null == k ? void 0 : k.coverImage) == null), K = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, u.e7)([
+  } = (0, p.Z)(y.id, D.d$), F = (0, C.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = a.useState(!1), [W, K] = a.useState((null == k ? void 0 : k.coverImage) == null), z = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, u.e7)([
 R.ZP,
 x.default
   ], () => {
@@ -65,7 +65,7 @@ Y(!0);
   }, [Y]), ei = a.useCallback(() => {
 Y(!1);
   }, [Y]), ea = a.useCallback(async () => {
-null != k && ((0, I.yw)(P.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
+null != k && ((0, m.yw)(P.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
   media_post_id: k.threadId,
   channel_id: B.id,
   can_access: k.canAccess,
@@ -118,23 +118,23 @@ children: [
     children: [
       !W && (!0 === k.shouldShowBlurredThumbnailImage ? (0, i.jsx)('img', {
         src: U,
-        alt: D.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
+        alt: b.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         className: r()(j.thumbnail, {
           [j.spoiler]: k.shouldSpoiler
         }),
         onContextMenu: F,
-        onError: () => z(!0)
+        onError: () => K(!0)
       }) : (0, i.jsx)(h.Z, {
         src: !(V && (w || H)) && eu ? ''.concat(ed, '?format=png') : ed,
         backgroundSrc: ''.concat(ed, '?format=png'),
-        alt: D.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
+        alt: b.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         aspectRatio: 16 / 9,
         className: r()(j.thumbnail, {
           [j.spoiler]: k.shouldSpoiler
         }),
         imageChildClassName: j.thumbnailImage,
         onContextMenu: F,
-        onError: () => z(!0)
+        onError: () => K(!0)
       })),
       null != k.coverImageOverlayText && (0, i.jsx)(_.Clickable, {
         onClick: ea,
@@ -181,7 +181,7 @@ children: [
         className: j.descriptionFooter,
         children: [
           null != eo && (0, i.jsx)(_.Popout, {
-            renderPopout: e => er(e, [m.Z.AVATAR]),
+            renderPopout: e => er(e, [I.Z.AVATAR]),
             position: 'right',
             spacing: 12,
             preload: null == k.authorId ? void 0 : es,
@@ -192,7 +192,7 @@ children: [
                 ...e,
                 size: _.AvatarSizes.SIZE_40,
                 src: eo,
-                'aria-label': D.Z.Messages.MEDIA_POST_EMBED_AUTHOR_AVATAR_ALT,
+                'aria-label': b.Z.Messages.MEDIA_POST_EMBED_AUTHOR_AVATAR_ALT,
                 avatarDecoration: el
               })
             })
@@ -223,10 +223,10 @@ children: [
                 variant: 'text-sm/medium',
                 color: 'text-muted',
                 className: j.descriptionFooterAuthorContainer,
-                children: D.Z.Messages.MEDIA_POST_EMBED_FOOTER_WEB.format({
+                children: b.Z.Messages.MEDIA_POST_EMBED_FOOTER_WEB.format({
                   authorName: k.authorName,
                   authorNameHook: () => (0, i.jsx)(_.Popout, {
-                    renderPopout: e => er(e, [m.Z.USERNAME]),
+                    renderPopout: e => er(e, [I.Z.USERNAME]),
                     position: 'right',
                     preload: null == k.authorId ? void 0 : es,
                     children: e => (0, i.jsx)(_.NameWithRoleAnchor, {
@@ -249,7 +249,7 @@ children: [
               children: k.ctaText
             })
           }) : (0, i.jsx)(_.ShinyButton, {
-            pauseAnimation: K,
+            pauseAnimation: z,
             onClick: ea,
             className: r()(j.__invalid_ctaButtonContent, j.subscribeButton),
             color: _.Button.Colors.CUSTOM,

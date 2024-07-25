@@ -17,14 +17,14 @@ var i = n(735250),
   u = n(524437),
   _ = n(481060),
   E = n(570140),
-  m = n(607070),
-  I = n(724757),
+  I = n(607070),
+  m = n(724757),
   T = n(626135),
   h = n(585483),
   N = n(143316),
   f = n(240126),
-  p = n(791914),
-  C = n(147522),
+  C = n(791914),
+  p = n(147522),
   g = n(809780),
   S = n(981631),
   A = n(689938),
@@ -40,9 +40,9 @@ closePopout: x,
 badgeState: M
   } = e, v = a.useRef(null), [L, Z] = (0, g.ZP)(v), {
 loadState: P,
-channels: b
+channels: D
   } = L, {
-maybeLoadMore: D,
+maybeLoadMore: b,
 markAllRead: j
   } = Z;
   (function(e, t, n) {
@@ -91,14 +91,14 @@ T.default.track(S.rMx.OPEN_POPOUT, {
   }, []), a.useEffect(() => (E.Z.subscribe('CONNECTION_OPEN', x), () => {
 E.Z.unsubscribe('CONNECTION_OPEN', x);
   }), [x]));
-  let U = (0, d.e7)([m.Z], () => m.Z.messageGroupSpacing),
-y = (0, I.Z)('unreads', v);
-  if (0 === b.length) {
+  let U = (0, d.e7)([I.Z], () => I.Z.messageGroupSpacing),
+y = (0, m.Z)('unreads', v);
+  if (0 === D.length) {
 var B;
 return (0, i.jsxs)('div', {
   className: R.container,
   children: [
-    (0, i.jsx)(p.Z, {
+    (0, i.jsx)(C.Z, {
       tab: u.X.UNREADS,
       setTab: t,
       badgeState: M,
@@ -116,7 +116,7 @@ return (0, i.jsxs)('div', {
 className: r()(R.container, 'group-spacing-'.concat(U)),
 'aria-label': A.Z.Messages.UNREADS_TAB_LABEL,
 children: [
-  (0, i.jsx)(p.Z, {
+  (0, i.jsx)(C.Z, {
     tab: u.X.UNREADS,
     setTab: t,
     badgeState: M,
@@ -140,13 +140,13 @@ children: [
             v.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null;
           },
           ...a,
-          onScroll: P === g.jd.Done ? void 0 : D,
+          onScroll: P === g.jd.Done ? void 0 : b,
           className: R.scroller,
           children: [
             s ? (0, i.jsx)(O, {
               setSeenTutorial: l
             }) : null,
-            (0, C.Z)(b, Z, n),
+            (0, p.Z)(D, Z, n),
             P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, {
               className: R.spinner
             })
@@ -206,7 +206,7 @@ closePopout: a
   return (0, i.jsxs)('div', {
 className: R.container,
 children: [
-  (0, i.jsx)(p.Z, {
+  (0, i.jsx)(C.Z, {
     tab: u.X.UNREADS,
     setTab: t,
     badgeState: n,

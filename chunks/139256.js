@@ -27,14 +27,14 @@ var i, a, s = n(735250),
   u = n(596454),
   _ = n(44315),
   E = n(377171),
-  m = n(124347),
-  I = n(695346),
+  I = n(124347),
+  m = n(695346),
   T = n(186523),
   h = n(553826),
   N = n(506071),
   f = n(203143),
-  p = n(79390),
-  C = n(839963),
+  C = n(79390),
+  p = n(839963),
   g = n(294608),
   S = n(65145),
   A = n(981631),
@@ -142,18 +142,18 @@ answerElementType: E
 canTapAnswers: a,
 answersInteraction: n
   }).with({
-answersInteraction: C.Y7.RADIO_BUTTONS
+answersInteraction: p.Y7.RADIO_BUTTONS
   }, () => ({
 ContainerComponent: v,
 answerElementType: 1
   })).with({
-answersInteraction: C.Y7.CHECKBOXES
+answersInteraction: p.Y7.CHECKBOXES
   }, () => ({
 ContainerComponent: M,
 answerElementType: 2
   })).with({
 canTapAnswers: !0,
-answersInteraction: C.Y7.LIST
+answersInteraction: p.Y7.LIST
   }, () => ({
 ContainerComponent: O,
 answerElementType: 3
@@ -163,7 +163,7 @@ answerElementType: 0
   }));
   return (0, s.jsx)(_, {
 className: l,
-children: t.map((e, t) => (0, s.jsx)(b, {
+children: t.map((e, t) => (0, s.jsx)(D, {
   className: o()(x.__invalid_answer, d),
   answer: e,
   isFirstAnswer: 0 === t,
@@ -175,7 +175,7 @@ children: t.map((e, t) => (0, s.jsx)(b, {
   });
 }
 
-function b(e) {
+function D(e) {
   let {
 className: t,
 answer: n,
@@ -186,7 +186,7 @@ elementType: c
   } = e, {
 channelId: d,
 messageId: u
-  } = (0, g.pE)(), _ = (0, g.$B)(n.style), E = !0 === n.isSelected, m = r.useCallback(() => {
+  } = (0, g.pE)(), _ = (0, g.$B)(n.style), E = !0 === n.isSelected, I = r.useCallback(() => {
 f.Z.handlePollAnswerTapped({
   channelId: d,
   messageId: u,
@@ -207,7 +207,7 @@ case 3:
 case 1:
   return (0, s.jsx)(Z, {
     className: o()(t, _),
-    onClick: m,
+    onClick: I,
     isSelected: E,
     hasSelectedAnyAnswer: a,
     isFirstAnswer: l,
@@ -216,7 +216,7 @@ case 1:
 case 2:
   return (0, s.jsx)(L, {
     className: o()(t, _),
-    onClick: m,
+    onClick: I,
     isSelected: E,
     isFirstAnswer: l,
     children: i
@@ -224,17 +224,17 @@ case 2:
   }
 }
 
-function D(e) {
+function b(e) {
   var t;
   let {
 attachment: n,
 className: i
-  } = e, a = (0, N.n)(), r = I.QK.useSetting();
-  return (0, s.jsx)(m.Z, {
+  } = e, a = (0, N.n)(), r = m.QK.useSetting();
+  return (0, s.jsx)(I.Z, {
 className: i,
 imageClassName: x.attachmentImage,
 src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,
-alt: null !== (t = n.description) && void 0 !== t ? t : (0, p.fw)(n.filename),
+alt: null !== (t = n.description) && void 0 !== t ? t : (0, C.fw)(n.filename),
 responsive: !0,
 width: 212,
 height: 212,
@@ -282,7 +282,7 @@ let e = l.attachments.find(e => {
   return e.id === (null === (n = t.attachmentIds) || void 0 === n ? void 0 : n[0]);
 });
 if (null != e)
-  return U(n, (0, s.jsx)(D, {
+  return U(n, (0, s.jsx)(b, {
     className: i,
     attachment: e
   }));

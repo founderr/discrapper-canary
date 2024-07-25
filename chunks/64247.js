@@ -19,7 +19,7 @@ closePopout: n,
 onSelect: d,
 navId: u,
 label: _
-  } = e, E = (0, s.Z)(t, 'Notifications Bell'), m = (0, r.Z)(t), I = (0, o.B)(t);
+  } = e, E = (0, s.Z)(t, 'Notifications Bell'), I = (0, r.Z)(t), m = (0, o.B)(t);
   return (0, i.jsxs)(a.Menu, {
 navId: u,
 onClose: n,
@@ -29,7 +29,7 @@ children: [
   (0, i.jsxs)(a.MenuGroup, {
     children: [
       t.isForumPost() ? E : null,
-      m
+      I
     ]
   }),
   (0, i.jsx)(a.MenuGroup, {
@@ -45,7 +45,7 @@ children: [
         action: () => l.Z.setNotificationSettings(t, {
           flags: n
         }),
-        checked: n === I
+        checked: n === m
       }, n);
     })
   })

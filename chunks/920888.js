@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(453687),
   _ = n(434624),
   E = n(287151),
-  m = n(689938),
-  I = n(716862),
+  I = n(689938),
+  m = n(716862),
   T = n(372178);
 let h = (e, t) => null == e && null == t || e === t,
   N = (e, t) => e.findIndex(e => h(e.emoji.id, null == t ? void 0 : t.id) && h(e.emoji.name, null == t ? void 0 : t.name)),
@@ -25,7 +25,7 @@ return n < 0 ? e : [
   ...e.slice(n + 1)
 ];
   };
-class p extends a.PureComponent {
+class C extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
 let n = e.message.reactions.length;
 return 0 === t.reactionsCount && n > 0 ? {
@@ -45,8 +45,8 @@ let {
   isPendingMember: h,
   isForumToolbar: N,
   channel: f,
-  className: p,
-  forceAddReactions: C,
+  className: C,
+  forceAddReactions: p,
   reactionClassName: g,
   useChatFontScaling: S,
   forceHideReactionCreates: A,
@@ -55,10 +55,10 @@ let {
   visibleReactionsCount: O
 } = this.props, {
   disableTransitionAppear: M
-} = this.state, v = S ? T : I, L = O > 0;
-return L || C ? (0, i.jsxs)(l.W, {
+} = this.state, v = S ? T : m, L = O > 0;
+return L || p ? (0, i.jsxs)(l.W, {
   component: 'div',
-  className: r()(v.reactions, p),
+  className: r()(v.reactions, C),
   transitionAppear: !M,
   role: 'group',
   transitionLeave: !1,
@@ -86,7 +86,7 @@ return L || C ? (0, i.jsxs)(l.W, {
         t.stopPropagation(), (0, E.op)(f, e);
       },
       className: r()(v.reaction, g, v.remainingReactions),
-      'aria-label': m.Z.Messages.ADD_REACTION,
+      'aria-label': I.Z.Messages.ADD_REACTION,
       children: (0, i.jsxs)(o.Text, {
         className: v.reactionInner,
         variant: 'text-sm/normal',
@@ -103,8 +103,8 @@ return L || C ? (0, i.jsxs)(l.W, {
       useChatFontScaling: S,
       isHovered: this.state.isHovered,
       className: r()({
-        [v.forceShow]: C && !L,
-        [v.forceShowLook]: C
+        [v.forceShow]: p && !L,
+        [v.forceShowLook]: p
       })
     })
   ]
@@ -157,7 +157,7 @@ s,
 n,
 t.reactions
   ]);
-  return (0, i.jsx)(p, {
+  return (0, i.jsx)(C, {
 ...e,
 visibleReactionsCount: o,
 combinedReactions: r,

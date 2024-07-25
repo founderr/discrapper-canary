@@ -1,16 +1,16 @@
-n(47120);
-var i, o = n(442837),
-  r = n(570140);
+t(47120);
+var a, n = t(442837),
+  i = t(570140);
 
-function a(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-value: n,
+function o(e, r, t) {
+  return r in e ? Object.defineProperty(e, r, {
+value: t,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[t] = n, e;
+  }) : e[r] = t, e;
 }
-let s = {
+let l = {
 disable_alpha_voice_panel: 'Disable new Voice Panel UI: Currently the new voice ui is defaulted ON for staff.  It\'s not feature complete so if there\'s something you are missing, or you find a problem, you can disable it here.',
 enable_recently_active: 'Enable recently active channels',
 happening_main_tab: 'Enable Happening tab containing summaries',
@@ -31,41 +31,41 @@ show_icymi_debug_scores: 'Show ICYMI debug scores',
 only_channel_screen: 'Down with PanelsView, rely on only ChannelScreen!'
   },
   c = {};
-class l extends(i = o.ZP.DeviceSettingsStore) {
+class s extends(a = n.ZP.DeviceSettingsStore) {
   getUserAgnosticState() {
 return {
   toggleStates: c
 };
   }
   initialize(e) {
-for (var t in s) {
-  var n, i;
-  let o = null !== (i = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== i && i;
-  c[t] = o;
+for (var r in l) {
+  var t, a;
+  let n = null !== (a = null == e ? void 0 : null === (t = e.toggleStates) || void 0 === t ? void 0 : t[r]) && void 0 !== a && a;
+  c[r] = n;
 }
   }
   get(e) {
-var t;
-return null !== (t = c[e]) && void 0 !== t && t;
+var r;
+return null !== (r = c[e]) && void 0 !== r && r;
   }
-  set(e, t) {
-return c[e] = t, t;
+  set(e, r) {
+return c[e] = r, r;
   }
   all() {
 return c;
   }
   allWithDescriptions() {
 return Object.entries(c).map(e => {
-  let [t, n] = e;
+  let [r, t] = e;
   return [
+    r,
     t,
-    n,
-    s[t]
+    l[r]
   ];
 });
   }
 }
-a(l, 'displayName', 'DevToolsDesignTogglesStore'), a(l, 'persistKey', 'DevToolsDesignTogglesStore'), t.Z = new l(r.Z, {
+o(s, 'displayName', 'DevToolsDesignTogglesStore'), o(s, 'persistKey', 'DevToolsDesignTogglesStore'), r.Z = new s(i.Z, {
   DEV_TOOLS_DESIGN_TOGGLE_SET: function(e) {
 c[e.toggle] = e.value;
   }

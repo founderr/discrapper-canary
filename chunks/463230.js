@@ -14,25 +14,25 @@ t.Z = e => {
 notice: t,
 noticeType: n,
 dismissCurrentNotice: E
-  } = e, m = (null == t ? void 0 : t.metadata.premiumSubscription) != null, I = (0, l.n)();
-  if ((0, o.U)(c.jXE.NOTIFICATION_BAR, null == I ? void 0 : I.countryCode), null == I)
+  } = e, I = (null == t ? void 0 : t.metadata.premiumSubscription) != null, m = (0, l.n)();
+  if ((0, o.U)(c.jXE.NOTIFICATION_BAR, null == m ? void 0 : m.countryCode), null == m)
 return null;
-  let T = I.countryCode,
-h = I.currency,
-N = I.paymentSourceTypes.length > 0;
+  let T = m.countryCode,
+h = m.currency,
+N = m.paymentSourceTypes.length > 0;
   return (0, i.jsxs)(a.Notice, {
-color: m ? a.NoticeColors.BRAND : a.NoticeColors.PREMIUM_TIER_2,
+color: I ? a.NoticeColors.BRAND : a.NoticeColors.PREMIUM_TIER_2,
 children: [
   (0, i.jsx)(a.NoticeCloseButton, {
     onClick: () => E(d.L.UNKNOWN),
     noticeType: n
   }),
-  !m && (0, i.jsx)(a.NitroWheelIcon, {
+  !I && (0, i.jsx)(a.NitroWheelIcon, {
     size: 'md',
     color: 'currentColor',
     className: _.premiumIcon
   }),
-  (0, r.Gv)(T, h, N, m),
+  (0, r.Gv)(T, h, N, I),
   (0, i.jsx)(a.PrimaryCTANoticeButton, {
     onClick: () => {
       E(d.L.UNKNOWN), s.Z.open(c.oAB.PREMIUM);

@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(594174),
   _ = n(280763),
   E = n(178088),
-  m = n(222940),
-  I = n(490897),
+  I = n(222940),
+  m = n(490897),
   T = n(689938),
   h = n(423493);
 
@@ -24,7 +24,7 @@ function N(e) {
 onOpen: t,
 onClose: n,
 className: N
-  } = e, f = (0, s.e7)([u.default], () => u.default.getCurrentUser()), p = a.useRef(null), C = (0, s.e7)([d.ZP], () => (null == f ? void 0 : f.id) != null && d.ZP.getMentionCount(f.id, I.W.NOTIFICATION_CENTER) > 0), {
+  } = e, f = (0, s.e7)([u.default], () => u.default.getCurrentUser()), C = a.useRef(null), p = (0, s.e7)([d.ZP], () => (null == f ? void 0 : f.id) != null && d.ZP.getMentionCount(f.id, m.W.NOTIFICATION_CENTER) > 0), {
 enabled: g
   } = o.Z.useExperiment({
 location: 'RecentsButton'
@@ -35,16 +35,16 @@ autoTrackExposure: !1
 onOpen: t,
 onClose: n,
 badgeState: {
-  badgeForYou: C
+  badgeForYou: p
 },
 popoutPosition: 'bottom',
 popoutAlign: 'right',
 children: (e, t, n) => (0, i.jsxs)('div', {
-  ref: p,
+  ref: C,
   className: h.recentsIcon,
   children: [
-    g && (0, i.jsx)(m.Z, {
-      inboxIconRef: p,
+    g && (0, i.jsx)(I.Z, {
+      inboxIconRef: C,
       recentsPopoutShown: t
     }),
     (0, i.jsx)(c.JO, {
@@ -55,7 +55,7 @@ children: (e, t, n) => (0, i.jsxs)('div', {
       'aria-label': T.Z.Messages.INBOX,
       tooltip: t ? null : T.Z.Messages.INBOX,
       selected: t,
-      showBadge: C || S,
+      showBadge: p || S,
       children: (0, i.jsx)(_.Z, {
         className: h.todoBadge
       })

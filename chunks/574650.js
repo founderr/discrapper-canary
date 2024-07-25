@@ -11,8 +11,8 @@ var a = n(120356),
   u = n(693546),
   _ = n(305325),
   E = n(246364),
-  m = n(937111),
-  I = n(981631),
+  I = n(937111),
+  m = n(981631),
   T = n(176505),
   h = n(689938),
   N = n(103809),
@@ -20,13 +20,13 @@ var a = n(120356),
 t.Z = () => {
   var e, t;
   let a = (0, l.e7)([d.Z], () => d.Z.getGuildId(), []),
-p = (0, l.e7)([c.Z], () => c.Z.getGuild(a), [a]),
-C = (0, l.e7)([m.Z], () => null != a ? m.Z.getRequest(a) : null, [a]),
+C = (0, l.e7)([c.Z], () => c.Z.getGuild(a), [a]),
+p = (0, l.e7)([I.Z], () => null != a ? I.Z.getRequest(a) : null, [a]),
 g = (0, r.TH)(),
-S = (null === (e = (0, r.LX)(g.pathname, I.Z5c.CHANNEL(null == p ? void 0 : p.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
-  if (null == p || !p.hasVerificationGate() || S)
+S = (null === (e = (0, r.LX)(g.pathname, m.Z5c.CHANNEL(null == C ? void 0 : C.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+  if (null == C || !C.hasVerificationGate() || S)
 return null;
-  let A = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,
+  let A = null !== (t = null == p ? void 0 : p.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,
 R = null,
 x = null,
 O = null,
@@ -41,7 +41,7 @@ case E.wB.SUBMITTED:
       header: h.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
       confirmText: h.Z.Messages.CONFIRM,
       cancelText: h.Z.Messages.CANCEL,
-      onConfirm: () => u.Z.removeGuildJoinRequest(p.id),
+      onConfirm: () => u.Z.removeGuildJoinRequest(C.id),
       confirmButtonColor: o.Button.Colors.BRAND,
       ...e,
       children: (0, i.jsx)(o.Text, {
@@ -58,7 +58,7 @@ case E.wB.REJECTED:
         default: e
       } = await n.e('3378').then(n.bind(n, 76075));
       return t => (0, i.jsx)(e, {
-        guildId: p.id,
+        guildId: C.id,
         ...t
       });
     });
@@ -66,7 +66,7 @@ case E.wB.REJECTED:
   break;
 default:
   R = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, x = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA, O = () => {
-    (0, _.hk)(p.id);
+    (0, _.hk)(C.id);
   };
   }
   return (0, i.jsxs)('div', {

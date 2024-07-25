@@ -1,92 +1,92 @@
-i.d(n, {
+n.d(t, {
   Lb: function() {
-return r;
+return l;
   },
   ZF: function() {
 return u;
   },
   gP: function() {
-return s;
+return c;
   },
   mh: function() {
 return _;
   },
   sF: function() {
-return l;
+return o;
   },
   xp: function() {
 return d;
   }
 });
-var t = i(470079),
-  o = i(392711),
-  a = i(626135),
-  c = i(981631);
+var i = n(470079),
+  a = n(392711),
+  s = n(626135),
+  r = n(981631);
 
-function r(e, n, i) {
-  a.default.track(c.rMx.FORWARD_MESSAGE_STARTED, {
+function l(e, t, n) {
+  s.default.track(r.rMx.FORWARD_MESSAGE_STARTED, {
 channel_id: e,
-message_id: n,
-source: i
+message_id: t,
+source: n
   });
 }
 
-function l(e) {
+function o(e) {
   let {
-channelId: n,
-messageId: i,
-numDestinationChanges: t,
+channelId: t,
+messageId: n,
+numDestinationChanges: i,
+numQueryChanges: a
+  } = e;
+  s.default.track(r.rMx.FORWARD_MESSAGE_CANCELLED, {
+channel_id: t,
+message_id: n,
+num_destination_changes: i,
+num_query_changes: a
+  });
+}
+
+function c(e) {
+  let {
+channelId: t,
+messageId: n,
+hasError: i,
+numDestinations: a,
+numDestinationChanges: l,
 numQueryChanges: o
   } = e;
-  a.default.track(c.rMx.FORWARD_MESSAGE_CANCELLED, {
-channel_id: n,
-message_id: i,
-num_destination_changes: t,
+  s.default.track(r.rMx.FORWARD_MESSAGE_SENT, {
+channel_id: t,
+message_id: n,
+has_error: i,
+num_destinations: a,
+num_destination_changes: l,
 num_query_changes: o
   });
 }
 
-function s(e) {
-  let {
-channelId: n,
-messageId: i,
-hasError: t,
-numDestinations: o,
-numDestinationChanges: r,
-numQueryChanges: l
-  } = e;
-  a.default.track(c.rMx.FORWARD_MESSAGE_SENT, {
-channel_id: n,
-message_id: i,
-has_error: t,
-num_destinations: o,
-num_destination_changes: r,
-num_query_changes: l
-  });
-}
-
-function d(e, n) {
-  a.default.track(c.rMx.FORWARD_COPY_LINK, {
+function d(e, t) {
+  s.default.track(r.rMx.FORWARD_COPY_LINK, {
 channel_id: e,
-message_id: n
+message_id: t
   });
 }
 
 function u() {
-  return t.useMemo(() => (0, o.once)((e, n, i) => {
-a.default.track(c.rMx.FORWARD_ADD_RECIPIENT, {
+  return i.useMemo(() => (0, a.once)((e, t, n) => {
+s.default.track(r.rMx.FORWARD_ADD_RECIPIENT, {
   channel_id: e,
-  message_id: n,
-  has_query: i
+  message_id: t,
+  has_query: n
 });
   }), []);
 }
 
 function _() {
-  return t.useMemo(() => (0, o.once)((e, n) => {
-a.default.track(c.rMx.FORWARD_EDIT_SEARCH, {
+  return i.useMemo(() => (0, a.once)((e, t) => {
+s.default.track(r.rMx.FORWARD_EDIT_SEARCH, {
   channel_id: e,
-  message_id: n
+  message_id: t
 });
   }), []);
 }

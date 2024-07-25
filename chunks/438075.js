@@ -25,8 +25,8 @@ isAutomodBlockedMessage: d,
 isMessageSnapshot: u,
 renderThreadAccessory: _,
 renderComponentAccessory: E,
-renderSuppressEmbeds: m,
-forceAddReactions: I,
+renderSuppressEmbeds: I,
+forceAddReactions: m,
 className: T
   } = e;
   return d ? null : (0, i.jsx)(a.Z, {
@@ -42,8 +42,8 @@ children: (0, i.jsx)(s.ZP, {
   onMediaItemContextMenu: o,
   renderThreadAccessory: _,
   renderComponentAccessory: E,
-  renderSuppressEmbeds: m,
-  forceAddReactions: I
+  renderSuppressEmbeds: I,
+  forceAddReactions: m
 })
   });
 }

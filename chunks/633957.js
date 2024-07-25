@@ -14,14 +14,14 @@ var i = n(735250),
   u = n(527805),
   _ = n(952561),
   E = n(513202),
-  m = n(884338),
-  I = n(100527),
+  I = n(884338),
+  m = n(100527),
   T = n(906732),
   h = n(973616),
   N = n(314897),
   f = n(592125),
-  p = n(158776),
-  C = n(594174),
+  C = n(158776),
+  p = n(594174),
   g = n(823379),
   S = n(226378),
   A = n(701488),
@@ -36,19 +36,19 @@ channelId: O,
 guildId: M
   } = e, [v, L] = a.useState(!1), {
 analyticsLocations: Z
-  } = (0, T.ZP)(I.Z.ACTIVITY_INSTANCE_EMBED), P = (0, l.O)(), b = (0, _.Z)(), D = (0, s.e7)([f.Z], () => f.Z.getChannel(O)), j = (null == D ? void 0 : null === (t = D.isThread) || void 0 === t ? void 0 : t.call(D)) ? null == D ? void 0 : D.parent_id : O, U = (0, s.e7)([N.default], () => N.default.getId()), {
+  } = (0, T.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED), P = (0, l.O)(), D = (0, _.Z)(), b = (0, s.e7)([f.Z], () => f.Z.getChannel(O)), j = (null == b ? void 0 : null === (t = b.isThread) || void 0 === t ? void 0 : t.call(b)) ? null == b ? void 0 : b.parent_id : O, U = (0, s.e7)([N.default], () => N.default.getId()), {
 embeddedActivity: y,
 currentEmbeddedActivity: B
   } = (0, s.cj)([o.ZP], () => ({
 embeddedActivity: o.ZP.getEmbeddedActivitiesForChannel(null != j ? j : '').find(e => e.applicationId === n.id),
 currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity()
-  })), k = (0, s.Wu)([C.default], () => {
+  })), k = (0, s.Wu)([p.default], () => {
 var e;
-return Array.from(null !== (e = null == y ? void 0 : y.userIds) && void 0 !== e ? e : []).map(e => C.default.getUser(e)).filter(g.lm);
-  }), G = (0, s.e7)([p.Z], () => {
+return Array.from(null !== (e = null == y ? void 0 : y.userIds) && void 0 !== e ? e : []).map(e => p.default.getUser(e)).filter(g.lm);
+  }), G = (0, s.e7)([C.Z], () => {
 var e;
 let t = null == y ? void 0 : y.userIds.values().next().value;
-return null == t ? null : null === (e = p.Z.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
+return null == t ? null : null === (e = C.Z.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
   }), F = a.useMemo(() => {
 let e = new h.Z(n);
 return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.wT), e;
@@ -60,13 +60,13 @@ application: F
 embeddedActivity: y,
 joinability: w,
 currentEmbeddedActivity: B,
-channel: D
+channel: b
   }), Y = async () => {
 L(!0);
 try {
   V ? await (0, d.Z)({
     targetApplicationId: n.id,
-    currentEmbeddedApplication: b,
+    currentEmbeddedApplication: D,
     channelId: O,
     guildId: M,
     locationObject: P.location,
@@ -74,7 +74,7 @@ try {
     analyticsLocations: Z
   }) : await (0, c.Z)({
     applicationId: y.applicationId,
-    currentEmbeddedApplication: b,
+    currentEmbeddedApplication: D,
     activityChannelId: O,
     locationObject: P.location,
     embeddedActivitiesManager: E.Z,
@@ -127,11 +127,11 @@ children: (0, i.jsxs)('div', {
             }, H.text);
           }
         }),
-        !V && (0, i.jsx)(m.Z, {
+        !V && (0, i.jsx)(I.Z, {
           guildId: M,
           users: k,
           max: 4,
-          size: m.u.SIZE_32
+          size: I.u.SIZE_32
         })
       ]
     })

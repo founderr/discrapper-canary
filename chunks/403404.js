@@ -19,8 +19,8 @@ guildId: d,
 locationObject: u,
 openInPopout: _,
 initialSelectedApplicationId: E,
-initialSlide: m = o.ag.DIRECTORY,
-enableSelectedTextChannelInvite: I = !1,
+initialSlide: I = o.ag.DIRECTORY,
+enableSelectedTextChannelInvite: m = !1,
 analyticsLocations: T,
 opensAppLauncherModal: h = !1
   } = e, N = T.length > 0 ? T[T.length - 1] : 'open-activity-shelf', {
@@ -39,7 +39,7 @@ null != t && (0, r.Z)({
 return;
   }
   _ && (0, l.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
-  let p = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+  let C = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
   return (0, a.openModalLazy)(async () => {
 let {
   default: e
@@ -52,13 +52,13 @@ return n => (0, i.jsx)(e, {
   channel: t,
   guildId: d,
   locationObject: u,
-  initialSlide: m,
+  initialSlide: I,
   initialSelectedApplicationId: E,
-  enableSelectedTextChannelInvite: I,
+  enableSelectedTextChannelInvite: m,
   analyticsLocations: T
 });
   }, {
 modalKey: o.AC,
-contextKey: p
+contextKey: C
   });
 }

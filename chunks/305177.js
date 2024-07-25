@@ -10,9 +10,9 @@ var i = n(735250),
   u = n(481060),
   _ = n(679056),
   E = n(810090),
-  m = n(243592);
+  I = n(243592);
 
-function I(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -31,7 +31,7 @@ let {
 } = this.state;
 return (0, i.jsx)(l.Z.img, {
   className: r()({
-    [m.imageLoading]: a
+    [I.imageLoading]: a
   }, t),
   src: e,
   alt: n,
@@ -50,16 +50,16 @@ let {
   imageLoading: s
 } = this.state;
 return null == n || a ? (0, i.jsx)(l.Z.div, {
-  className: r()(m.titleContainer, e),
+  className: r()(I.titleContainer, e),
   style: this.getImageStyle(),
   children: t
 }) : (0, i.jsxs)(l.Z.div, {
-  className: r()(s ? m.loadingContainer : null, e),
+  className: r()(s ? I.loadingContainer : null, e),
   style: this.getImageStyle(),
   children: [
     s ? (0, i.jsx)(u.Spinner, {
-      className: m.spinner,
-      itemClassName: m.spinnerItem,
+      className: I.spinner,
+      itemClassName: I.spinnerItem,
       type: u.Spinner.Type.PULSING_ELLIPSIS,
       animated: !0
     }) : null,
@@ -68,27 +68,27 @@ return null == n || a ? (0, i.jsx)(l.Z.div, {
 });
   }
   constructor(...e) {
-super(...e), I(this, '_animatedValue', new l.Z.Value(1)), I(this, 'state', {
+super(...e), m(this, '_animatedValue', new l.Z.Value(1)), m(this, 'state', {
   imageLoadError: !1,
   imageLoading: !0
-}), I(this, 'componentWillEnter', e => {
+}), m(this, 'componentWillEnter', e => {
   this._animatedValue.setValue(0), l.Z.timing(this._animatedValue, {
     toValue: 1,
     duration: 400
   }).start(e);
-}), I(this, 'componentWillLeave', e => {
+}), m(this, 'componentWillLeave', e => {
   l.Z.timing(this._animatedValue, {
     toValue: 0,
     duration: 400
   }).start(e);
-}), I(this, 'getImageStyle', () => ({
+}), m(this, 'getImageStyle', () => ({
   opacity: this._animatedValue
-})), I(this, 'handleImageError', () => {
+})), m(this, 'handleImageError', () => {
   this.setState({
     imageLoadError: !0,
     imageLoading: !1
   });
-}), I(this, 'handleImageLoaded', () => {
+}), m(this, 'handleImageLoaded', () => {
   this.setState({
     imageLoading: !1
   });
@@ -125,13 +125,13 @@ let {
   splashClassName: s
 } = this.props;
 return null == t ? (0, i.jsx)(T, {
-  className: r()(m.splash, s),
+  className: r()(I.splash, s),
   src: n,
   title: a
 }, 'image') : (0, i.jsx)(_.Z, {
   onInterval: this.nextItem,
   interval: 2000,
-  className: m.slideshowWrapper,
+  className: I.slideshowWrapper,
   disable: !e,
   children: (0, i.jsx)(d.W, {
     children: this.renderSlideItem(t)
@@ -152,7 +152,7 @@ let {
 return n ? (0, i.jsx)('div', {
   className: t
 }) : (0, i.jsxs)('figure', {
-  className: r()(m.__invalid_tileMedia, t),
+  className: r()(I.__invalid_tileMedia, t),
   children: [
     null == e || l ? this.renderTypeImage() : this.renderTypeVideo(),
     null != a && a(s && o)
@@ -160,25 +160,25 @@ return n ? (0, i.jsx)('div', {
 });
   }
   constructor(...e) {
-super(...e), I(this, 'state', {
+super(...e), m(this, 'state', {
   currentIndex: 0,
   videoLoadError: !1,
   videoLoaded: !1
-}), I(this, '_video', a.createRef()), I(this, 'videoTimeout', new c.V7()), I(this, 'videoPlaying', !1), I(this, 'handleToggleMute', e => {
+}), m(this, '_video', a.createRef()), m(this, 'videoTimeout', new c.V7()), m(this, 'videoPlaying', !1), m(this, 'handleToggleMute', e => {
   e.stopPropagation(), e.preventDefault();
   let {
     onToggleMute: t
   } = this.props;
   null == t || t(e);
-}), I(this, 'handleVideoError', () => {
+}), m(this, 'handleVideoError', () => {
   this.setState({
     videoLoadError: !0
   });
-}), I(this, 'handleVideoLoaded', () => {
+}), m(this, 'handleVideoLoaded', () => {
   this.setState({
     videoLoaded: !0
   });
-}), I(this, 'renderTypeVideo', () => {
+}), m(this, 'renderTypeVideo', () => {
   let {
     videoLoaded: e
   } = this.state, {
@@ -188,13 +188,13 @@ super(...e), I(this, 'state', {
     playing: l,
     muted: c,
     splashClassName: _,
-    splashPlaceholderClassName: I,
+    splashPlaceholderClassName: m,
     renderMediaOverlay: h
   } = this.props, N = c ? u.VoiceXIcon : u.VoiceNormalIcon;
   return (0, i.jsxs)(a.Fragment, {
     children: [
       o.tq ? null : (0, i.jsx)(E.Z, {
-        className: r()(m.splash, _),
+        className: r()(I.splash, _),
         muted: c,
         loop: !0,
         preload: 'none',
@@ -208,31 +208,31 @@ super(...e), I(this, 'state', {
       }),
       (0, i.jsx)(d.W, {
         children: l && e ? null : (0, i.jsx)(T, {
-          className: r()(m.splashPlaceholder, I),
+          className: r()(I.splashPlaceholder, m),
           src: n,
           title: s
         }, 0)
       }),
       (0, i.jsx)(u.Clickable, {
-        className: r()(m.muteContainer, {
-          [m.muteContainerPlaying]: l && e,
-          [m.muteContainerMediaOverlay]: null != h
+        className: r()(I.muteContainer, {
+          [I.muteContainerPlaying]: l && e,
+          [I.muteContainerMediaOverlay]: null != h
         }),
         onClick: this.handleToggleMute,
         children: l && e ? (0, i.jsx)(N, {
-          className: m.mute
+          className: I.mute
         }) : null
       })
     ]
   });
-}), I(this, 'nextItem', () => {
+}), m(this, 'nextItem', () => {
   let {
     slideImages: e
   } = this.props;
   null != e && this.setState({
     currentIndex: (this.state.currentIndex + 1) % e.length
   });
-}), I(this, 'renderSlideItem', e => {
+}), m(this, 'renderSlideItem', e => {
   let {
     image: t,
     title: n,
@@ -242,11 +242,11 @@ super(...e), I(this, 'state', {
     currentIndex: l
   } = this.state;
   return a ? (0, i.jsx)(T, {
-    className: r()(m.splash, s),
+    className: r()(I.splash, s),
     src: e[l],
     title: n
   }, l) : (0, i.jsx)(T, {
-    className: r()(m.splash, s),
+    className: r()(I.splash, s),
     src: t,
     title: n
   }, 'image');

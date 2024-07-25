@@ -22,8 +22,8 @@ writable: !0
   }) : e[t] = n, e;
 }
 let E = 1 * o.Z.Millis.HOUR,
-  m = 7 * o.Z.Millis.DAY,
-  I = 1 * o.Z.Millis.DAY,
+  I = 7 * o.Z.Millis.DAY,
+  m = 1 * o.Z.Millis.DAY,
   T = a.K.get('lastNonRequiredUpdateShown', Date.now()),
   h = new l.Z('AutoUpdateManager');
 class N {
@@ -70,11 +70,11 @@ _(this, 'updateAvailable', !1), _(this, 'hasNativeUpdate', !1), _(this, '_checkI
     },
     oldFormErrors: !0
   }).then(e => {
-    if (null == e.body || '6e2869e7f759ccaaa0cef491f4a8d7d0c1f523de' === e.body.hash)
+    if (null == e.body || '115d600624ed700d751ac4c01c5745a618f4ab12' === e.body.hash)
       return this._handleUpdateNotAvailable();
     if (e.body.required || (0, r.fD)())
       return this._handleUpdateDownloaded(!1);
-    let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? m : I;
+    let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? I : m;
     if (Date.now() - T > t)
       return a.K.set('lastNonRequiredUpdateShown', Date.now()), this._handleUpdateDownloaded(!1);
   }, () => this._handleUpdateError());

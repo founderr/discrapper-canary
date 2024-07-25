@@ -15,20 +15,20 @@ var a = n(120356),
   u = n(141321),
   _ = n(208450),
   E = n(594174),
-  m = n(358085),
-  I = n(998502),
+  I = n(358085),
+  m = n(998502),
   T = n(665149),
   h = n(300986),
   N = n(314451),
   f = n(35583),
-  p = n(981631),
-  C = n(176505),
+  C = n(981631),
+  p = n(176505),
   g = n(139715);
 async function S() {
-  if ((0, m.isMac)() && m.isPlatformEmbedded) {
+  if ((0, I.isMac)() && I.isPlatformEmbedded) {
 var e, t, n;
 let i = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e ? void 0 : e.call(t))) && void 0 !== n ? n : 'Maximize';
-'Minimize' === i ? I.ZP.minimize() : 'Maximize' === i && I.ZP.maximize();
+'Minimize' === i ? m.ZP.minimize() : 'Maximize' === i && m.ZP.maximize();
   }
 }
 
@@ -40,10 +40,10 @@ channelId: a,
 guildId: s,
 innerClassname: o,
 transparent: c = !1,
-toolbar: m,
-mobileToolbar: I,
-'aria-label': p,
-'aria-labelledby': C,
+toolbar: I,
+mobileToolbar: m,
+'aria-label': C,
+'aria-labelledby': p,
 scrollable: A,
 role: R,
 hideSearch: x,
@@ -53,12 +53,12 @@ showDivider: O
 className: n,
 innerClassName: o,
 toolbar: function() {
-  if (null == m)
+  if (null == I)
     return null;
   let e = null != a && !x;
-  return r.tq ? I : (0, i.jsxs)(i.Fragment, {
+  return r.tq ? m : (0, i.jsxs)(i.Fragment, {
     children: [
-      m,
+      I,
       e ? (0, i.jsx)(_.Z, {
         className: g.search
       }, null != s ? s : a) : null,
@@ -74,8 +74,8 @@ toolbar: function() {
 }(),
 transparent: c,
 onDoubleClick: S,
-'aria-label': p,
-'aria-labelledby': C,
+'aria-label': C,
+'aria-labelledby': p,
 role: R,
 scrollable: A,
 children: t
@@ -107,7 +107,7 @@ isAuthenticated: t = !0,
   } = e, {
 analyticsLocations: a
   } = (0, c.ZP)(o.Z.HEADER_BAR), r = s()(n.className, {
-[g.forumOrHome]: null != n.channelType && p.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === C.oC.GUILD_HOME
+[g.forumOrHome]: null != n.channelType && C.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === p.oC.GUILD_HOME
   });
   return (0, i.jsx)(c.Gt, {
 value: a,

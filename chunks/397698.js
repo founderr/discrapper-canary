@@ -21,10 +21,10 @@ openInPopout: _,
 analyticsLocation: E
   } = e;
   _ && (0, s.Z)(u.KJ3.CHANNEL_CALL_POPOUT);
-  let m = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+  let I = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
   (0, o.y)(c.ti.DISMISSED), (0, o._)(c._b.VOICE);
-  let I = t.id,
-T = r.ZP.hasUnread(I) || r.ZP.getMentionCount(I) > 0;
+  let m = t.id,
+T = r.ZP.hasUnread(m) || r.ZP.getMentionCount(m) > 0;
   return l.default.track(u.rMx.VOICE_PANEL_TAB_OPENED, {
 tab: 'activities',
 location: E,
@@ -44,6 +44,6 @@ return n => (0, i.jsx)(e, {
 });
   }, {
 modalKey: d.e9,
-contextKey: m
+contextKey: I
   });
 }

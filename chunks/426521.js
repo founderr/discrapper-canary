@@ -1,6 +1,6 @@
 n.d(t, {
   U: function() {
-return D;
+return b;
   }
 });
 var i = n(735250),
@@ -14,14 +14,14 @@ var i = n(735250),
   u = n(695346),
   _ = n(598077),
   E = n(594174),
-  m = n(626135),
-  I = n(709054),
+  I = n(626135),
+  m = n(709054),
   T = n(591759),
   h = n(833592),
   N = n(497089),
   f = n(178480),
-  p = n(418316),
-  C = n(526146),
+  C = n(418316),
+  p = n(526146),
   g = n(400565),
   S = n(148789),
   A = n(11825),
@@ -97,14 +97,14 @@ children: [
 ]
   });
 }
-let b = a.memo(function(e) {
+let D = a.memo(function(e) {
 var t;
 let {
   item: r,
   ackedBeforeId: u
 } = e, {
   analyticsLocations: _
-} = (0, l.ZP)(), E = (0, C.I)(r, u), x = a.useCallback(async () => {
+} = (0, l.ZP)(), E = (0, p.I)(r, u), x = a.useCallback(async () => {
   if (!E && (0, h.wt)(r), null != r.item_enum && r.item_enum === N.AM.FIND_FRIENDS) {
     (0, s.openModalLazy)(async () => {
       let {
@@ -140,7 +140,7 @@ let {
       } else
         await (0, o.Z)(i);
     }
-    m.default.track(R.rMx.NOTIFICATION_CENTER_ACTION, {
+    I.default.track(R.rMx.NOTIFICATION_CENTER_ACTION, {
       action_type: N.ud.CLICKED,
       notification_center_id: r.id,
       item_type: r.type,
@@ -156,7 +156,7 @@ r.type === N.O7.INCOMING_FRIEND_REQUESTS && null != r.other_user && (M = (0, i.j
   userId: r.other_user.id
 }));
 let v = null != r.local_id,
-  b = (0, p.Z)(r);
+  D = (0, C.Z)(r);
 return (0, i.jsxs)('div', {
   className: O.row,
   children: [
@@ -165,7 +165,7 @@ return (0, i.jsxs)('div', {
       focusProps: {
         offset: 4
       },
-      'aria-label': b,
+      'aria-label': D,
       onClick: x,
       children: [
         E ? null : (0, i.jsx)('div', {
@@ -183,7 +183,7 @@ return (0, i.jsxs)('div', {
             (0, i.jsx)(s.Text, {
               variant: 'text-md/normal',
               color: E ? 'text-muted' : 'text-normal',
-              children: 'string' != typeof b ? b : c.Z.parse(b)
+              children: 'string' != typeof D ? D : c.Z.parse(D)
             }),
             (null === (t = r.message) || void 0 === t ? void 0 : t.content) != null ? (0, i.jsx)(L, {
               item: r
@@ -194,7 +194,7 @@ return (0, i.jsxs)('div', {
             (0, i.jsx)(s.Text, {
               variant: 'text-xs/medium',
               color: E ? 'text-muted' : 'header-secondary',
-              children: (0, f.a3)(I.default.extractTimestamp(r.id))
+              children: (0, f.a3)(m.default.extractTimestamp(r.id))
             }),
             M
           ]
@@ -207,12 +207,12 @@ return (0, i.jsxs)('div', {
   ]
 });
   }),
-  D = a.memo(function(e) {
+  b = a.memo(function(e) {
 let {
   items: t
 } = e, n = u.d$.useSetting();
 return (0, i.jsx)(i.Fragment, {
-  children: t.map(e => (0, i.jsx)(b, {
+  children: t.map(e => (0, i.jsx)(D, {
     item: e,
     ackedBeforeId: n
   }, e.id))

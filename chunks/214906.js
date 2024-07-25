@@ -22,7 +22,7 @@ c.Z.getMuteConfig(e.id),
 c.Z.hasJoined(e.id)
   ]), E = (0, o.U)(n);
 
-  function m(t) {
+  function I(t) {
 d.Z.setNotificationSettings(e, {
   muted: t
 });
@@ -31,11 +31,11 @@ d.Z.setNotificationSettings(e, {
 id: 'unmute-channel',
 label: e.isForumPost() ? _.Z.Messages.UNMUTE_FORUM_POST : _.Z.Messages.UNMUTE_THREAD,
 subtext: E,
-action: () => m(!1)
+action: () => I(!1)
   }) : (0, i.jsx)(l.MenuItem, {
 id: 'mute-channel',
 label: e.isForumPost() ? _.Z.Messages.MUTE_FORUM_POST : _.Z.Messages.MUTE_THREAD,
-action: () => m(!0),
+action: () => I(!0),
 children: (0, u.k)().map(t => {
   let {
     value: n,

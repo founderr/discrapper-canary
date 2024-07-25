@@ -9,14 +9,14 @@ var i, a = n(735250),
   u = n(498179),
   _ = n(276852),
   E = n(994339),
-  m = n(275920),
-  I = n(917621),
+  I = n(275920),
+  m = n(917621),
   T = n(431583),
   h = n(592745),
   N = n(952164),
   f = n(768419),
-  p = n(456432),
-  C = n(103575),
+  C = n(456432),
+  p = n(103575),
   g = n(789407),
   S = n(598077),
   A = n(757266),
@@ -28,8 +28,8 @@ var i, a = n(735250),
   L = n(181106),
   Z = n(417363),
   P = n(768581),
-  b = n(358085),
-  D = n(804739),
+  D = n(358085),
+  b = n(804739),
   j = n(410575),
   U = n(981631),
   y = n(701488);
@@ -79,7 +79,7 @@ let {
   isLaunchable: e,
   application: t
 } = this.props;
-return null != t && null != t.primarySkuId && !e && b.isPlatformEmbedded;
+return null != t && null != t.primarySkuId && !e && D.isPlatformEmbedded;
   }
   render() {
 return (0, a.jsx)(j.Z, {
@@ -106,7 +106,7 @@ super(...e), B(this, 'state', {
       applicationId: e.application_id,
       channelId: a,
       messageId: i.id
-    }), (0, m.Z)({
+    }), (0, I.Z)({
       type: U.q5t.JOIN,
       source: U.Sbl.MESSAGE_EMBED,
       userId: n,
@@ -154,7 +154,7 @@ super(...e), B(this, 'state', {
     message: s,
     analyticsLocations: r
   } = this.props;
-  return null == n ? null : (0, a.jsx)(C.Z, {
+  return null == n ? null : (0, a.jsx)(p.Z, {
     ...t,
     location: 'ActivityInviteEmbed',
     userId: e.id,
@@ -168,7 +168,7 @@ super(...e), B(this, 'state', {
     channelId: t,
     guildId: n
   } = this.props;
-  return (0, a.jsx)(p.Z, {
+  return (0, a.jsx)(C.Z, {
     guildId: null != n ? n : void 0,
     channelId: t,
     source: 'Invite Embed',
@@ -198,7 +198,7 @@ super(...e), B(this, 'state', {
     className: u,
     channelId: _,
     message: E,
-    hideParty: m,
+    hideParty: I,
     isSyncable: T,
     isLaunchable: h,
     guildId: N
@@ -209,7 +209,7 @@ super(...e), B(this, 'state', {
     let [t] = n.split(':');
     e = k[t];
   }
-  return (0, a.jsx)(I.Z, {
+  return (0, a.jsx)(m.Z, {
     activity: t,
     partyId: n,
     myPartyId: i,
@@ -222,13 +222,13 @@ super(...e), B(this, 'state', {
     isGameLaunchable: h,
     isLoading: o || this.state.sending,
     activityActionType: d,
-    isInBrowser: !b.isPlatformEmbedded,
+    isInBrowser: !D.isPlatformEmbedded,
     isSyncable: T,
     isSender: c,
     channelId: _,
     guildId: null != N ? N : void 0,
     message: E,
-    hideParty: m,
+    hideParty: I,
     onJoin: this.handleJoin,
     onInvite: this.handleInvite,
     onSync: this.handleSync,
@@ -283,15 +283,15 @@ id: l
 }),
 _ = null != t && f.Z.canPlay(t),
 E = f.Z.getSyncingWith(),
-m = null != E && null != s && E.userId === s;
+I = null != E && null != s && E.userId === s;
   return {
 analyticsLocations: n,
 partyMembers: u,
 connectedApplication: null != l ? A.Z.getApplication(l) : null,
 myPartyId: null != c && null != c.party ? c.party.id : null,
 isLaunching: d,
-isSyncable: _ && !m,
-isLaunchable: null != l && (0, D.t)({
+isSyncable: _ && !I,
+isLaunchable: null != l && (0, b.t)({
   LibraryApplicationStore: O.Z,
   LaunchableGameStore: h.Z,
   DispatchApplicationStore: Z.Z,

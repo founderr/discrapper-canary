@@ -121,9 +121,9 @@ onClick: m
 return null;
   let {
 topic: b,
-speaker_count: g,
-participant_count: C
-  } = n, O = null !== (t = n.members) && void 0 !== t ? t : [], A = S ? O.slice(0, 3) : O, v = g - A.length;
+speaker_count: C,
+participant_count: g
+  } = n, O = null !== (t = n.members) && void 0 !== t ? t : [], A = S ? O.slice(0, 3) : O, v = C - A.length;
   return S && (v += O.length - A.length), (0, i.jsxs)('div', {
 children: [
   (0, i.jsxs)('div', {
@@ -159,7 +159,7 @@ children: [
           (0, i.jsx)(a.Heading, {
             className: l()(p.__invalid_label, p.listeners),
             variant: 'heading-sm/semibold',
-            children: C
+            children: g
           })
         ]
       })

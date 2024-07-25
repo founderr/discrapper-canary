@@ -1,67 +1,67 @@
-t.d(n, {
+n.d(e, {
   J: function() {
 return r;
   },
   l: function() {
-return i;
+return u;
   }
-}), t(47120);
-var a = t(693824),
-  l = t(169040);
+}), n(47120);
+var a = n(693824),
+  l = n(169040);
 
-function r(e) {
-  let n, {
-canvas: t,
+function r(t) {
+  let e, {
+canvas: n,
 badges: r,
-startPosition: i,
-maxWidth: o
-  } = e;
+startPosition: u,
+maxWidth: i
+  } = t;
   for (let {
-  iconPath: e,
-  text: u
+  iconPath: t,
+  text: o
 }
-of(t.setFont({
+of(n.setFont({
   size: 12,
   family: l.I8,
   weight: l.Ue,
   truncate: a.GX.None
 }), r)) {
-let a = null != n ? n.w + n.x + l.PW : i,
-  r = null != n ? n.w + n.x + l.PW + l.NC : i + l.NC;
-t.drawPath(e, {
+let a = null != e ? e.w + e.x + l.PW : u,
+  r = null != e ? e.w + e.x + l.PW + l.NC : u + l.NC;
+n.drawPath(t, {
   x: a,
   y: l.f0
-}, !0, 0.6), n = t.drawText(u, {
+}, !0, 0.6), e = n.drawText(o, {
   x: r,
   y: l.m2,
-  w: o
+  w: i
 }, !0);
   }
 }
 
-function i(e) {
+function u(t) {
   let {
-canvas: n,
-avatarSrcs: t,
+canvas: e,
+avatarSrcs: n,
 position: {
   x: l,
   y: r
 },
-avatarImageSize: i
-  } = e;
-  for (let e = 0; e < t.length; e++)
-e < t.length - 1 && n.clipRoundedRect({
-  x: l + (e + 1) * (i - 8) - 2,
+avatarImageSize: u
+  } = t;
+  for (let t = 0; t < n.length; t++)
+t < n.length - 1 && e.clipRoundedRect({
+  x: l + (t + 1) * (u - 8) - 2,
   y: r - 1,
-  w: i + 2,
-  h: i + 2
-}, i / 2, !0), n.drawRoundedImage(t[e], {
-  x: l + e * (i - 8),
+  w: u + 2,
+  h: u + 2
+}, u / 2, !0), e.drawRoundedImage(n[t], {
+  x: l + t * (u - 8),
   y: r
 }, {
-  w: i,
-  h: i
+  w: u,
+  h: u
 }, 50, {
   fillMode: a.JU.Cover
-}), n.restoreContext();
+}), e.restoreContext();
 }

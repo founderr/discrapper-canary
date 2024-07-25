@@ -9,8 +9,8 @@ var s = n(481060),
   d = n(725568),
   u = n(78415),
   _ = n(374023),
-  E = n(886162),
-  h = n(981631),
+  h = n(886162),
+  E = n(981631),
   I = n(815660),
   m = n(231338);
 let g = 'AGREEMENTS_MODAL_KEY';
@@ -21,10 +21,10 @@ a.Z.subscribe('CONNECTION_OPEN', this.handleRequiredAction), a.Z.subscribe('USER
   handleRequiredAction(e) {
 let t = e.requiredAction;
 if (!_.s.isDisallowPopupsSet() && null != c.default.getCurrentUser())
-  t === h.c2C.REQUIRE_CAPTCHA || t === h.c2C.REQUIRE_VERIFIED_EMAIL || t === h.c2C.REQUIRE_VERIFIED_PHONE || t === h.c2C.REQUIRE_REVERIFIED_PHONE || t === h.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === h.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || r.Z.isEmailReverification(t) ? (0, d.q4)(() => (0, i.jsx)(l.ZP, {}), {
+  t === E.c2C.REQUIRE_CAPTCHA || t === E.c2C.REQUIRE_VERIFIED_EMAIL || t === E.c2C.REQUIRE_VERIFIED_PHONE || t === E.c2C.REQUIRE_REVERIFIED_PHONE || t === E.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === E.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || r.Z.isEmailReverification(t) ? (0, d.q4)(() => (0, i.jsx)(l.ZP, {}), {
     layerKey: 'verification',
     Layer: u.ZP
-  }) : t === h.c2C.AGREEMENTS ? (0, s.openModal)(e => (0, i.jsx)(E.Z, {
+  }) : t === E.c2C.AGREEMENTS ? (0, s.openModal)(e => (0, i.jsx)(h.Z, {
     ...e
   }), {
     modalKey: g,

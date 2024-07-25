@@ -1,6 +1,6 @@
 n.d(t, {
   M: function() {
-return I;
+return m;
   }
 }), n(411104);
 var i, a, s, r, l = n(735250),
@@ -11,11 +11,11 @@ var i, a, s, r, l = n(735250),
   _ = n(689938),
   E = n(452822);
 
-function m(e) {
+function I(e) {
   e.stopPropagation(), e.preventDefault();
 }
 
-function I(e, t, n) {
+function m(e, t, n) {
   return {
 id: ''.concat(e, '-').concat(t),
 role: 'option',
@@ -37,14 +37,14 @@ let {
 } = this.props;
 if (e || o)
   return null;
-let m = -1 === i;
+let I = -1 === i;
 return (0, l.jsxs)(l.Fragment, {
   children: [
     (0, l.jsxs)(u.Clickable, {
       className: d()(E.queryContainer, {
-        [E.focused]: m
+        [E.focused]: I
       }),
-      ...I(n, -1, m),
+      ...m(n, -1, I),
       onMouseEnter: r,
       onClick: a,
       children: [
@@ -67,9 +67,9 @@ return (0, l.jsxs)(l.Fragment, {
     }),
     c && (0, l.jsxs)(u.Clickable, {
       className: d()(E.queryContainer, {
-        [E.focused]: m
+        [E.focused]: I
       }),
-      ...I(n, -1, m),
+      ...m(n, -1, I),
       onMouseEnter: r,
       onClick: s,
       children: [
@@ -123,7 +123,7 @@ return (0, l.jsxs)('div', {
   style: {
     width: i
   },
-  onMouseDown: m,
+  onMouseDown: I,
   role: 'listbox',
   id: n,
   tabIndex: -1,

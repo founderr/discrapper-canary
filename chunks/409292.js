@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(184107),
   u = n(410575),
   _ = n(613311),
-  E = n(601564),
-  h = n(981631),
+  h = n(601564),
+  E = n(981631),
   I = n(256964);
 
 function m(e, t, n) {
@@ -27,7 +27,7 @@ this.fetchStoreListing(), (0, c.e)('channel_store_listing');
   }
   render() {
 return null != this.props.skuId ? (0, i.jsx)(u.Z, {
-  page: h.ZY5.CHANNEL_STORE_LISTING,
+  page: E.ZY5.CHANNEL_STORE_LISTING,
   root: !0,
   children: (0, i.jsx)('div', {
     className: I.applicationStore,
@@ -58,7 +58,7 @@ super(...e), m(this, 'fetchStoreListing', e => {
     inputSkuId: s,
     fetchStoreListing: this.fetchStoreListing,
     location: t,
-    pageSize: (0, E.getPageSize)(a)
+    pageSize: (0, h.getPageSize)(a)
   });
 });
   }

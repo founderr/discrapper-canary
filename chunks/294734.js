@@ -14,14 +14,14 @@ var i = n(735250),
   u = n(628238),
   _ = n(930282),
   E = n(25015),
-  m = n(438075),
-  I = n(695346),
+  I = n(438075),
+  m = n(695346),
   T = n(592125),
   h = n(906467),
   N = n(430824),
   f = n(496675),
-  p = n(699516),
-  C = n(594174),
+  C = n(699516),
+  p = n(594174),
   g = n(100604),
   S = n(694784),
   A = n(39154),
@@ -58,17 +58,17 @@ n,
 u
   ]), E = (0, r.e7)([
 T.Z,
-C.default,
-p.Z,
+p.default,
+C.Z,
 f.Z,
 N.Z,
 d.Z
-  ], () => _.getForwardInfo(T.Z, C.default, p.Z, f.Z, N.Z, d.Z).footerInfo, [_], l.Z), m = a.useCallback(() => {
+  ], () => _.getForwardInfo(T.Z, p.default, C.Z, f.Z, N.Z, d.Z).footerInfo, [_], l.Z), I = a.useCallback(() => {
 (0, S.Z)(t);
   }, [t]);
   return null == E ? null : (0, i.jsxs)(c.Clickable, {
 className: x.footerContainer,
-onClick: m,
+onClick: I,
 children: [
   null != E.originIconUrl ? (0, i.jsx)('img', {
     className: x.originIcon,
@@ -98,9 +98,9 @@ index: l
   } = e, o = a.useMemo(() => (0, A.Z)(n, s), [
 n,
 s
-  ]), c = I.RS.useSetting(), d = I.NA.useSetting(), N = (0, r.e7)([h.Z], () => h.Z.isDeveloper), f = (0, u.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
-content: p,
-hasSpoilerEmbeds: C
+  ]), c = m.RS.useSetting(), d = m.NA.useSetting(), N = (0, r.e7)([h.Z], () => h.Z.isDeveloper), f = (0, u.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
+content: C,
+hasSpoilerEmbeds: p
   } = (0, E.Z)(o, {
 hideSimpleEmbedContent: c && d,
 isInteracting: !1,
@@ -110,7 +110,7 @@ allowHeading: f,
 allowLinks: !0,
 allowDevLinks: N,
 previewLinkTarget: !0
-  }), g = (0, r.e7)([T.Z], () => T.Z.getChannel(n.channel_id)), S = I.jU.useSetting();
+  }), g = (0, r.e7)([T.Z], () => T.Z.getChannel(n.channel_id)), S = m.jU.useSetting();
   return null == g ? null : (0, i.jsxs)('div', {
 className: x.container,
 children: [
@@ -123,15 +123,15 @@ children: [
       (0, i.jsx)(O, {}),
       (0, i.jsx)(_.ZP, {
         message: o,
-        content: p
+        content: C
       }),
-      (0, m.Z)({
+      (0, I.Z)({
         channelMessageProps: {
           message: o,
           channel: g,
           compact: S
         },
-        hasSpoilerEmbeds: C,
+        hasSpoilerEmbeds: p,
         isInteracting: !1,
         isMessageSnapshot: !0,
         renderThreadAccessory: !1

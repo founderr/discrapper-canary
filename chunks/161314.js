@@ -14,14 +14,14 @@ var i = n(735250),
   u = n(367907),
   _ = n(213609),
   E = n(565138),
-  m = n(267101),
-  I = n(336197),
+  I = n(267101),
+  m = n(336197),
   T = n(661824),
   h = n(430824),
   N = n(626135),
   f = n(76535),
-  p = n(866104),
-  C = n(886176),
+  C = n(866104),
+  p = n(886176),
   g = n(981631),
   S = n(689938),
   A = n(638948);
@@ -35,12 +35,12 @@ loading: R,
 subscriptionsSettings: x
   } = (0, f.H)(n), {
 listingsLoaded: O
-  } = (0, m.eD)(n), M = (0, m.ue)(n, {
+  } = (0, I.eD)(n), M = (0, I.ue)(n, {
 publishedOnly: !0
   }), v = a.useCallback(async () => {
 N.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, {
   ...(0, u.hH)(n)
-}), await (0, I.Z)(g.Z5c.SERVER_SHOP(n));
+}), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
   }, [n]);
   (0, _.Z)({
 type: l.ImpressionTypes.VIEW,
@@ -55,7 +55,7 @@ children: (0, i.jsx)(d.Spinner, {})
   }) : null == s || null == x ? null : (0, i.jsxs)('div', {
 className: A.guildShopEmbed,
 children: [
-  (0, i.jsx)(p.Z, {
+  (0, i.jsx)(C.Z, {
     coverImageAsset: null !== (t = x.cover_image_asset) && void 0 !== t ? t : null
   }),
   (0, i.jsx)(d.Spacer, {
@@ -64,7 +64,7 @@ children: [
   (0, i.jsxs)('div', {
     className: A.serverShopLabel,
     children: [
-      (0, i.jsx)(C.Z, {
+      (0, i.jsx)(p.Z, {
         height: '16px',
         width: '16px',
         color: o.Z.INTERACTIVE_NORMAL
@@ -138,7 +138,7 @@ children: [
         children: (0, i.jsxs)('div', {
           className: A.guildShopEmbedCtaContent,
           children: [
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(p.Z, {
               height: '18px',
               width: '18px'
             }),

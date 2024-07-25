@@ -15,8 +15,8 @@ var a = n(120356),
   u = n(739566),
   _ = n(464891),
   E = n(83561),
-  m = n(674563),
-  I = n(689938),
+  I = n(674563),
+  m = n(689938),
   T = n(713389);
 
 function h(e) {
@@ -26,7 +26,7 @@ message: n,
 compact: a,
 usernameHook: h,
 channel: N
-  } = e, f = (0, r.e7)([c.Z], () => c.Z.getGuild(N.guild_id)), p = (0, u.ZP)(n), C = h(p), {
+  } = e, f = (0, r.e7)([c.Z], () => c.Z.getGuild(N.guild_id)), C = (0, u.ZP)(n), p = h(C), {
 avatarSrc: g,
 eventHandlers: {
   onMouseEnter: S,
@@ -64,10 +64,10 @@ children: (0, i.jsx)(d.Z, {
               color: 'text-brand',
               tag: 'span',
               className: T.username,
-              children: I.Z.Messages.GUILD_AUTOMOD_USERNAME
+              children: m.Z.Messages.GUILD_AUTOMOD_USERNAME
             }),
             (0, i.jsx)(o.Z, {
-              type: m.Hb.SYSTEM_DM,
+              type: I.Hb.SYSTEM_DM,
               className: T.systemTag
             })
           ]
@@ -79,9 +79,9 @@ children: (0, i.jsx)(d.Z, {
         className: s()(T.__invalid_messageContent, {
           [T.compact]: a
         }),
-        children: I.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
-          username: p.nick,
-          usernameHook: C,
+        children: m.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
+          username: C.nick,
+          usernameHook: p,
           guildName: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : ''
         })
       })

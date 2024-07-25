@@ -1,24 +1,24 @@
-i.d(s, {
+n.d(i, {
   Z: function() {
 return d;
   }
-}), i(653041), i(627341);
-var n = i(278074),
-  l = i(726059),
-  t = i(162267),
-  o = i(929498),
-  a = i(228168),
-  r = i(689938);
+}), n(653041), n(627341);
+var s = n(278074),
+  l = n(726059),
+  t = n(162267),
+  o = n(929498),
+  a = n(228168),
+  r = n(689938);
 
 function d(e) {
-  var s, i;
+  var i, n;
   let {
 user: d,
 currentUser: c
   } = e, {
 live: u,
 recent: I
-  } = (0, o.Z)(d.id), _ = null === (s = (0, l.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualFriends) || void 0 === s ? void 0 : s.length, f = null === (i = (0, t.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualGuilds) || void 0 === i ? void 0 : i.length, m = [{
+  } = (0, o.Z)(d.id), _ = null === (i = (0, l.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualFriends) || void 0 === i ? void 0 : i.length, f = null === (n = (0, t.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualGuilds) || void 0 === n ? void 0 : n.length, m = [{
 section: a.oh.USER_INFO,
 text: r.Z.Messages.USER_PROFILE_ABOUT_ME
   }];
@@ -27,12 +27,12 @@ section: a.oh.ACTIVITY,
 text: r.Z.Messages.USER_PROFILE_ACTIVITY
   }), d.id !== (null == c ? void 0 : c.id) && (m.push({
 section: a.oh.MUTUAL_FRIENDS,
-text: (0, n.EQ)(_).with(void 0, () => r.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => r.Z.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => r.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
+text: (0, s.EQ)(_).with(void 0, () => r.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => r.Z.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => r.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
   count: e
 }))
   }), m.push({
 section: a.oh.MUTUAL_GUILDS,
-text: (0, n.EQ)(f).with(void 0, () => r.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => r.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => r.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
+text: (0, s.EQ)(f).with(void 0, () => r.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => r.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => r.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
   count: e
 }))
   })), m;

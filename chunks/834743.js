@@ -9,7 +9,7 @@ var i = n(735250),
   d = n(921944),
   u = n(689938),
   _ = n(241626);
-class E extends s.PureComponent {
+class h extends s.PureComponent {
   render() {
 let {
   guild: e,
@@ -56,4 +56,4 @@ guild: t
   return {
 memberCount: o.Z.getMemberCount(t.id)
   };
-})(E);
+})(h);

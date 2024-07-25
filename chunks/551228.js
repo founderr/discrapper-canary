@@ -1,79 +1,79 @@
 n.d(t, {
   pi: function() {
-return f;
+return v;
   },
   te: function() {
-return _;
+return f;
   }
 }), n(47120);
-var i = n(735250),
-  a = n(470079),
+var l = n(735250),
+  i = n(470079),
   s = n(512722),
-  l = n.n(s),
+  a = n.n(s),
   r = n(442837),
-  o = n(276852),
-  c = n(594174),
-  u = n(719247),
-  d = n(297781),
-  h = n(443487),
-  p = n(43205),
-  m = n(827418);
-let _ = [d.XF];
+  c = n(276852),
+  o = n(594174),
+  d = n(719247),
+  u = n(297781),
+  m = n(443487),
+  x = n(43205),
+  h = n(827418);
+let f = [u.XF];
 
-function f(e) {
-  var t, n, i, a, s, l, d;
-  let h = (0, r.e7)([u.ZP], () => u.ZP.getMatchingActivity(e)),
-p = (0, r.e7)([c.default], () => c.default.getUser(e.author_id));
-  if (null == h || null == p)
+function v(e) {
+  var t, n, l, i, s, a, u;
+  let m = (0, r.e7)([d.ZP], () => d.ZP.getMatchingActivity(e)),
+x = (0, r.e7)([o.default], () => o.default.getUser(e.author_id));
+  if (null == m || null == x)
 return {};
-  let m = e.extra.entries[0],
-_ = null !== (a = null !== (i = (0, o.Z)(h)) && void 0 !== i ? i : null === (t = h.assets) || void 0 === t ? void 0 : t.small_image) && void 0 !== a ? a : m.media.image_url,
-f = null !== (l = null !== (s = h.state) && void 0 !== s ? s : null === (n = m.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== l ? l : m.media.title,
-E = null !== (d = h.details) && void 0 !== d ? d : m.media.title;
+  let h = e.extra.entries[0],
+f = null !== (i = null !== (l = (0, c.Z)(m)) && void 0 !== l ? l : null === (t = m.assets) || void 0 === t ? void 0 : t.small_image) && void 0 !== i ? i : h.media.image_url,
+v = null !== (a = null !== (s = m.state) && void 0 !== s ? s : null === (n = h.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : h.media.title,
+g = null !== (u = m.details) && void 0 !== u ? u : h.media.title;
   return {
-activity: h,
-artist: f,
-currentEntry: m,
-imageUrl: _,
-title: E,
-user: p
+activity: m,
+artist: v,
+currentEntry: h,
+imageUrl: f,
+title: g,
+user: x
   };
 }
-t.ZP = a.memo(function(e) {
+t.ZP = i.memo(function(e) {
   let {
 entry: t,
 channel: n,
-selected: a
+selected: i
   } = e, {
 activity: s,
 artist: r,
-imageUrl: o
-  } = f(t);
-  return l()(null != s, 'There must be a matching live Activity for LISTENED_SESSION'), (0, i.jsxs)(h.Zb, {
-selected: a,
+imageUrl: c
+  } = v(t);
+  return a()(null != s, 'There must be a matching live Activity for LISTENED_SESSION'), (0, l.jsxs)(m.Zb, {
+selected: i,
 children: [
-  (0, i.jsxs)(h.e$, {
+  (0, l.jsxs)(m.e$, {
     children: [
-      (0, i.jsx)(h.F9, {
+      (0, l.jsx)(m.F9, {
         entry: t,
         channelId: n.id,
         guildId: n.guild_id
       }),
-      (0, i.jsx)(h.ll, {
+      (0, l.jsx)(m.ll, {
         children: r
       }),
-      (0, i.jsx)(d.Gk, {
-        location: d.Gt.CARD,
-        children: _.map((e, n) => (0, i.jsx)(e, {
+      (0, l.jsx)(u.Gk, {
+        location: u.Gt.CARD,
+        children: f.map((e, n) => (0, l.jsx)(e, {
           entry: t
         }, n))
       })
     ]
   }),
-  (0, i.jsx)(p.f, {
-    src: o,
+  (0, l.jsx)(x.f, {
+    src: c,
     size: 48,
-    className: m.thumbnail
+    className: h.thumbnail
   })
 ]
   });

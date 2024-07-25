@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 });
 var i = n(735250);
@@ -16,7 +16,7 @@ var a = n(120356),
   _ = n(689938),
   E = n(503760);
 
-function m(e) {
+function I(e) {
   let t = o.Z.getVoiceChannelId();
   if (null == t)
 return;
@@ -25,7 +25,7 @@ return;
 (0, c.RK)(n, e);
 }
 
-function I() {
+function m() {
   var e;
   let t = (0, d.Z)(),
 n = null !== (e = (0, u._d)(null == t ? void 0 : t.id)) && void 0 !== e ? e : 0;
@@ -56,7 +56,7 @@ children: [
     className: s()(E.__invalid_button, E.acceptButton),
     size: r.Button.Sizes.MIN,
     color: r.Button.Colors.WHITE,
-    onClick: () => m(!1),
+    onClick: () => I(!1),
     children: (0, i.jsx)(r.Text, {
       className: E.acceptText,
       variant: 'text-xs/normal',
@@ -69,7 +69,7 @@ children: [
     look: r.Button.Looks.OUTLINED,
     size: r.Button.Sizes.MIN,
     color: r.Button.Colors.WHITE,
-    onClick: () => m(!0),
+    onClick: () => I(!0),
     children: (0, i.jsx)(r.Text, {
       className: E.declineText,
       variant: 'text-xs/normal',

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return C;
+return p;
   }
 }), n(47120);
 var i = n(735250),
@@ -14,14 +14,14 @@ var i = n(735250),
   u = n(11799),
   _ = n(632523),
   E = n(695346),
-  m = n(626135),
-  I = n(709054),
+  I = n(626135),
+  m = n(709054),
   T = n(791914),
   h = n(981631),
   N = n(689938),
   f = n(557032);
 
-function p(e) {
+function C(e) {
   let {
 onClick: t
   } = e;
@@ -36,27 +36,27 @@ onClick: t
   });
 }
 
-function C(e) {
+function p(e) {
   let {
 setTab: t,
 badgeState: n,
 closePopout: l
   } = e, {
 initialized: N,
-items: C,
+items: p,
 loading: g,
 loadMore: S
   } = (0, u.y6)(), A = (0, s.e7)([o.Z], () => o.Z.localItems), R = a.useMemo(() => [...[
-...C,
+...p,
 ...A
-  ].sort((e, t) => -1 * I.default.compare(e.id, t.id))], [
-C,
+  ].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [
+p,
 A
-  ]), x = C.length > 0 ? C[0] : null, O = E.d$.useSetting(), M = a.useMemo(() => {
-if (null != x && 0 >= I.default.compare(x.id, O))
+  ]), x = p.length > 0 ? p[0] : null, O = E.d$.useSetting(), M = a.useMemo(() => {
+if (null != x && 0 >= m.default.compare(x.id, O))
   return !1;
 for (let e of R) {
-  if (0 >= I.default.compare(e.id, O))
+  if (0 >= m.default.compare(e.id, O))
     break;
   if (!(0, d.r)(e, O))
     return !0;
@@ -75,9 +75,9 @@ children: [
     setTab: t,
     badgeState: n,
     closePopout: l,
-    children: M ? (0, i.jsx)(p, {
+    children: M ? (0, i.jsx)(C, {
       onClick: () => {
-        null != x && (E.d$.updateSetting(x.id), m.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, {
+        null != x && (E.d$.updateSetting(x.id), I.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, {
           action_type: c.ud.MARK_ALL_READ
         }));
       }

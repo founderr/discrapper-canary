@@ -3,12 +3,12 @@ n.d(t, {
 return s;
   }
 });
-var i = n(81063),
-  a = n(701488);
+var l = n(81063),
+  i = n(701488);
 
 function s(e, t) {
-  return null == e || null == e.assets || null == e.assets.large_image ? null : (0, i.getAssetImage)(t, e.assets.large_image, [
-a.cc,
-a.cc
+  return null == e || null == e.assets || null == e.assets.large_image ? null : (0, l.getAssetImage)(t, e.assets.large_image, [
+i.cc,
+i.cc
   ]);
 }

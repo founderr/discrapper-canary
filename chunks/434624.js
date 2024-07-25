@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(56314),
   _ = n(566006),
   E = n(287151),
-  m = n(716862),
-  I = n(372178);
+  I = n(716862),
+  m = n(372178);
 let T = a.memo(function(e) {
 let t, n, {
     useChatFontScaling: a,
@@ -25,8 +25,8 @@ let t, n, {
     count: h,
     me: N,
     me_burst: f,
-    burst_count: p,
-    burst_colors: C,
+    burst_count: C,
+    burst_colors: p,
     readOnly: g,
     isLurking: S,
     isGuest: A,
@@ -35,19 +35,19 @@ let t, n, {
   } = e,
   O = x === _.O.BURST,
   M = (0, E.y4)(N, f, x),
-  v = (0, u.v)(O && null != C ? C : []),
-  L = a ? I : m,
-  Z = O ? p : h,
+  v = (0, u.v)(O && null != p ? p : []),
+  L = a ? m : I,
+  Z = O ? C : h,
   P = (0, d.y)(Z, E.aO),
-  b = {};
+  D = {};
 if (O && null != v) {
-  var D;
+  var b;
   let {
     accentColor: e,
     backgroundColor: i,
     opacity: a
-  } = v, s = null !== (D = (0, l.wK)(null != i ? i : '', a)) && void 0 !== D ? D : '';
-  M && (b.borderColor = i), b.background = s, t = e, n = e;
+  } = v, s = null !== (b = (0, l.wK)(null != i ? i : '', a)) && void 0 !== b ? b : '';
+  M && (D.borderColor = i), D.background = s, t = e, n = e;
 }
 let j = {
   minWidth: P,
@@ -59,7 +59,7 @@ return (0, i.jsxs)('div', {
     [L.reactionMe]: M,
     [L.reactionReadOnly]: g && !S && !R && !A
   }),
-  style: b,
+  style: D,
   children: [
     (0, i.jsx)(o.Z, {
       className: r()({
@@ -90,15 +90,15 @@ let {
 }, [
   r,
   o
-]), m = (0, c.O)(u), I = r && !o || t ? E.le : T;
+]), I = (0, c.O)(u), m = r && !o || t ? E.le : T;
 return (0, i.jsxs)(i.Fragment, {
   children: [
     (0, i.jsx)('div', {
-      ref: m
+      ref: I
     }),
     n.map(e => {
       var t, n;
-      return (0, i.jsx)(I, {
+      return (0, i.jsx)(m, {
         ...s,
         ...e
       }, (t = e, ''.concat(t.type === _.O.BURST ? 'burst:' : '').concat(null !== (n = t.emoji.id) && void 0 !== n ? n : 0, ':').concat(t.emoji.name)));

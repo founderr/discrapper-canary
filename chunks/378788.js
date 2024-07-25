@@ -1,11 +1,11 @@
 n.d(t, {
   z: function() {
-return o;
+return r;
   }
 });
 var i = n(863750);
 
-function o() {
+function r() {
   return i.Z.get('only_channel_screen');
 }
 n(238428);

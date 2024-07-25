@@ -18,11 +18,11 @@ let {
   navigatedAway: n,
   isDesktop: _,
   withMentions: E = !1,
-  initialPageSize: m
-} = e, I = (0, a.e7)([d.Z], () => d.Z.shouldReload()), T = i.useRef(!1), [h, N] = i.useState(!1), {
+  initialPageSize: I
+} = e, m = (0, a.e7)([d.Z], () => d.Z.shouldReload()), T = i.useRef(!1), [h, N] = i.useState(!1), {
   initialized: f,
-  loading: p,
-  items: C,
+  loading: C,
+  items: p,
   hasMore: g,
   cursor: S,
   errored: A
@@ -48,29 +48,29 @@ i.useEffect(() => ((0, o.Vk)(!0), () => (0, o.Vk)(!1)), []), i.useEffect(() => {
 ]);
 let O = (0, r.Z)();
 i.useEffect(() => () => {
-  _ ? !O() && (A || C.length > 100) && (0, o.jF)() : n && C.length > 100 && (0, o.jF)();
+  _ ? !O() && (A || p.length > 100) && (0, o.jF)() : n && p.length > 100 && (0, o.jF)();
 }, [
   n,
-  C,
+  p,
   _,
   O,
   A
 ]), i.useEffect(() => {
-  let e = I && t;
+  let e = m && t;
   (!f || e) && (0, o.jk)({
-    limit: null != m ? m : E ? 8 : 20,
+    limit: null != I ? I : E ? 8 : 20,
     with_mentions: E,
     roles_filter: R,
     everyone_filter: x
   });
 }, [
   f,
-  I,
+  m,
   t,
   E,
   R,
   x,
-  m
+  I
 ]);
 let M = i.useCallback(async e => {
   !T.current && f && g && null != S && (e || !A) && (T.current = !0, N(!0), await (0, o.jk)({
@@ -93,8 +93,8 @@ let M = i.useCallback(async e => {
 ]);
 return {
   initialized: f,
-  loading: p,
-  items: C,
+  loading: C,
+  items: p,
   hasMore: g,
   loadMore: M,
   loadingMore: h,

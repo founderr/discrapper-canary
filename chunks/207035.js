@@ -1,6 +1,6 @@
 t.d(n, {
   P: function() {
-return a;
+return i;
   }
 });
 let l = (0, t(818083).B)({
@@ -19,7 +19,7 @@ config: {
   }]
 });
 
-function a(e) {
+function i(e) {
   return l.useExperiment({
 location: e
   }, {

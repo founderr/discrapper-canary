@@ -1,39 +1,39 @@
-var t = a(735250),
-  c = a(470079),
-  i = a(481060),
-  o = a(703656),
-  r = a(981631);
-n.Z = c.forwardRef(function(e, n) {
+var i = t(735250),
+  a = t(470079),
+  c = t(481060),
+  s = t(703656),
+  o = t(981631);
+n.Z = a.forwardRef(function(e, n) {
   let {
-href: a,
-children: l,
-onClick: s,
+href: t,
+children: r,
+onClick: _,
 onKeyPress: d,
-focusProps: _,
+focusProps: l,
 ...u
-  } = e, b = c.useCallback(e => {
+  } = e, S = a.useCallback(e => {
 if (!e.repeat)
-  (e.charCode === r.yXg.SPACE || e.charCode === r.yXg.ENTER) && (e.preventDefault(), null != a && (0, o.uL)(a), null == s || s()), null == d || d(e);
+  (e.charCode === o.yXg.SPACE || e.charCode === o.yXg.ENTER) && (e.preventDefault(), null != t && (0, s.uL)(t), null == _ || _()), null == d || d(e);
   }, [
-a,
+t,
 d,
-s
-  ]), h = c.useCallback(e => {
+_
+  ]), g = a.useCallback(e => {
 if (!e.metaKey && !e.shiftKey && 0 === e.button)
-  e.preventDefault(), e.stopPropagation(), null != a && (0, o.uL)(a), null == s || s();
+  e.preventDefault(), e.stopPropagation(), null != t && (0, s.uL)(t), null == _ || _();
   }, [
-a,
-s
-  ]), f = (0, t.jsx)('a', {
+t,
+_
+  ]), N = (0, i.jsx)('a', {
 ref: n,
-href: a,
-onClick: h,
-onKeyPress: b,
+href: t,
+onClick: g,
+onKeyPress: S,
 ...u,
-children: l
+children: r
   });
-  return (0, t.jsx)(i.FocusRing, {
-..._,
-children: f
+  return (0, i.jsx)(c.FocusRing, {
+...l,
+children: N
   });
 });

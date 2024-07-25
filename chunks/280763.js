@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return I;
   }
 }), n(47120);
 var i = n(735250),
@@ -52,7 +52,7 @@ super(...e), t = this, n = 'animationScale', i = new l.Z.Value(1), n in t ? Obje
   }
 }
 
-function m(e) {
+function I(e) {
   let {
 className: t
   } = e, {

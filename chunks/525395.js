@@ -7,7 +7,7 @@ function _() {
   s = {}, i = {}, a = new Set();
 }
 _();
-class E extends(r = d.ZP.Store) {
+class h extends(r = d.ZP.Store) {
   getStatisticsForApplication(e) {
 return i[e];
   }
@@ -16,12 +16,12 @@ let t = s[e];
 return !a.has(e) && (null == t || Date.now() - t > 3600000);
   }
 }
-c = 'ApplicationStatisticsStore', (o = 'displayName') in(l = E) ? Object.defineProperty(l, o, {
+c = 'ApplicationStatisticsStore', (o = 'displayName') in(l = h) ? Object.defineProperty(l, o, {
   value: c,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[o] = c, t.Z = new E(u.Z, {
+}) : l[o] = c, t.Z = new h(u.Z, {
   APPLICATION_ACTIVITY_STATISTICS_FETCH_START: function(e) {
 let {
   applicationId: t

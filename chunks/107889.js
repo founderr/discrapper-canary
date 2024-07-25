@@ -19,9 +19,9 @@ var s = n(735250),
   E = n(910128),
   x = n(27144),
   v = n(318661),
-  S = n(78675),
-  Z = n(113557),
-  h = n(169979),
+  h = n(78675),
+  S = n(113557),
+  Z = n(169979),
   p = n(502762),
   g = n(544989),
   j = n(481932),
@@ -29,9 +29,9 @@ var s = n(735250),
   N = n(272510),
   C = n(171368),
   A = n(900687),
-  y = n(806926),
-  R = n(228168),
-  L = n(981631),
+  R = n(806926),
+  L = n(228168),
+  y = n(981631),
   O = n(689938),
   U = n(505451);
 
@@ -50,7 +50,7 @@ transitionState: w,
 onClose: k,
 showGuildProfile: Y = !0,
 sourceAnalyticsLocations: V = []
-  } = e, H = P === L.ME ? void 0 : P, {
+  } = e, H = P === y.ME ? void 0 : P, {
 analyticsLocations: W
   } = (0, d.ZP)([
 ...V,
@@ -147,11 +147,11 @@ children: (0, s.jsx)(f.Mt, {
       (0, s.jsxs)(p.Z, {
         user: i,
         displayProfile: ee,
-        profileType: R.y0.FULL_SIZE,
+        profileType: L.y0.FULL_SIZE,
         ref: es,
         children: [
           (0, s.jsxs)(g.Z, {
-            profileType: R.y0.FULL_SIZE,
+            profileType: L.y0.FULL_SIZE,
             children: [
               (0, s.jsx)(T.Z, {
                 user: i,
@@ -160,7 +160,7 @@ children: (0, s.jsx)(f.Mt, {
                 onClose: k
               }),
               (0, s.jsx)(j.Z, {
-                profileType: R.y0.FULL_SIZE,
+                profileType: L.y0.FULL_SIZE,
                 user: i,
                 friendToken: F
               }),
@@ -173,22 +173,22 @@ children: (0, s.jsx)(f.Mt, {
           }),
           (0, s.jsxs)('header', {
             children: [
-              (0, s.jsx)(S.Z, {
+              (0, s.jsx)(h.Z, {
                 user: i,
                 displayProfile: ee,
-                profileType: R.y0.FULL_SIZE,
+                profileType: L.y0.FULL_SIZE,
                 hasProfileEffect: (null == ee ? void 0 : ee.profileEffectId) != null
               }),
               (0, s.jsxs)('div', {
                 className: U.headerInner,
                 children: [
-                  (0, s.jsx)(Z.Z, {
+                  (0, s.jsx)(S.Z, {
                     location: 'SimplifiedUserProfileModal',
                     user: i,
                     displayProfile: ee,
                     guildId: H,
                     channelId: M,
-                    profileType: R.y0.FULL_SIZE
+                    profileType: L.y0.FULL_SIZE
                   }),
                   (0, s.jsx)(A.Z, {
                     user: i,
@@ -200,12 +200,12 @@ children: (0, s.jsx)(f.Mt, {
                     viewProfileItem: et(),
                     onClose: k
                   }),
-                  (0, s.jsx)(h.Z, {
+                  (0, s.jsx)(Z.Z, {
                     location: 'SimplifiedUserProfileModal',
                     user: i,
                     guildId: H,
                     channelId: M,
-                    profileType: R.y0.FULL_SIZE,
+                    profileType: L.y0.FULL_SIZE,
                     editEnabled: K,
                     hasEntered: w === o.ModalTransitionState.ENTERED,
                     isReplying: X,
@@ -218,7 +218,7 @@ children: (0, s.jsx)(f.Mt, {
               })
             ]
           }),
-          (0, s.jsx)(y.Z, {
+          (0, s.jsx)(R.Z, {
             user: i,
             currentUser: n,
             channelId: M,

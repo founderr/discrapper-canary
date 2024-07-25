@@ -20,33 +20,33 @@ fullWidth: n = !1,
 size: u = s.Button.Sizes.LARGE,
 color: _,
 customDisabledColor: E,
-hideNotLaunchable: m,
-tooltipPosition: I,
+hideNotLaunchable: I,
+tooltipPosition: m,
 onClick: T,
 className: h,
 source: N,
 hover: f,
-innerClassName: p
-  } = e, C = {
+innerClassName: C
+  } = e, p = {
 fullWidth: n,
 size: u,
 color: _,
 customDisabledColor: E,
-tooltipPosition: I,
+tooltipPosition: m,
 onClick: T,
 className: h,
 hover: f,
-innerClassName: p
+innerClassName: C
   }, g = (0, a.e7)([r.Z], () => r.Z.getActiveLibraryApplication(t.id)), S = null != g ? g.sku.id : null, A = null != S ? S : t.primarySkuId, R = (0, a.e7)([l.Z], () => null != A && !l.Z.didFetchingSkuFail(A));
   return null != g && (0, o.Je)(g) ? (0, i.jsx)(d.Z, {
-...C,
+...p,
 libraryApplication: g,
 source: N
   }) : R ? (0, i.jsx)('div', {
 children: 'deprecated!'
   }) : (0, i.jsx)(c.Z, {
-...C,
-hideNotLaunchable: m,
+...p,
+hideNotLaunchable: I,
 applicationId: t.id
   });
 }

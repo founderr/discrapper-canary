@@ -14,8 +14,8 @@ var i, s, a = n(735250),
   d = n(566620),
   u = n(403404),
   _ = n(100527),
-  E = n(906732),
-  h = n(592125),
+  h = n(906732),
+  E = n(592125),
   I = n(810090),
   m = n(626135),
   g = n(981631),
@@ -106,15 +106,15 @@ let {
   }
 }(i), {
   analyticsLocations: P
-} = (0, E.ZP)(s);
+} = (0, h.ZP)(s);
 r.useEffect(() => {
   m.default.track(g.rMx.TOOLTIP_VIEWED, {
     type: N
   });
 }, [N]);
 let M = (0, c.bp)() === g.IlC.POPOUT,
-  D = (0, l.e7)([h.Z], () => h.Z.getChannel(t), [t]);
-return (0, a.jsx)(E.Gt, {
+  D = (0, l.e7)([E.Z], () => E.Z.getChannel(t), [t]);
+return (0, a.jsx)(h.Gt, {
   value: P,
   children: (0, a.jsx)('div', {
     className: f.wrapper,

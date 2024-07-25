@@ -24,8 +24,8 @@ l.Z,
 o.Z
   ], () => l.Z.getChannel(o.Z.getChannelId())), {
 everyoneFilter: E,
-roleFilter: m,
-guildFilter: I
+roleFilter: I,
+guildFilter: m
   } = (0, a.cj)([c.Z], () => {
 let {
   everyoneFilter: e,
@@ -59,20 +59,20 @@ children: [
     label: u.Z.Messages.RECENT_MENTIONS_FILTER_ROLES,
     action: function() {
       r.Z.setGuildFilter({
-        roleFilter: !m
+        roleFilter: !I
       });
     },
-    checked: m
+    checked: I
   }),
   null == _ || _.isPrivate() ? null : (0, i.jsx)(s.MenuCheckboxItem, {
     id: 'All Servers',
     label: u.Z.Messages.RECENT_MENTIONS_FILTER_ALL_SERVERS,
     action: function() {
       r.Z.setGuildFilter({
-        guildFilter: I === d.NgX.THIS_SERVER ? d.NgX.ALL_SERVERS : d.NgX.THIS_SERVER
+        guildFilter: m === d.NgX.THIS_SERVER ? d.NgX.ALL_SERVERS : d.NgX.THIS_SERVER
       });
     },
-    checked: I === d.NgX.ALL_SERVERS
+    checked: m === d.NgX.ALL_SERVERS
   })
 ]
   });
