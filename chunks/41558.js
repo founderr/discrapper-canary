@@ -30,7 +30,7 @@ children: [
       title: n
     }),
     children: (0, l.jsx)(o.Text, {
-      variant: 'text-md/semibold',
+      variant: 'text-md/medium',
       color: 'text-brand',
       children: 0 === t ? s.Z.Messages.APP_LAUNCHER_VIEW_MORE_ROW : s.Z.Messages.APP_LAUNCHER_VIEW_LESS_ROW
     })
