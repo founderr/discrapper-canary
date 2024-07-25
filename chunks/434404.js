@@ -356,12 +356,6 @@ bulkAddMemberRoles: (e, t, n) => i.tn.patch({
     added: n.body
   });
 }),
-updateRolesEditSection(e) {
-  a.Z.dispatch({
-    type: 'GUILD_SETTINGS_ROLES_EDIT_SECTION_UPDATE',
-    section: e
-  });
-},
 enableIntegration: (e, t, n) => i.tn.post({
   url: T.ANM.GUILD_INTEGRATIONS(e),
   body: {
