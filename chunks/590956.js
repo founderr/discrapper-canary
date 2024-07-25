@@ -111,10 +111,10 @@ let {
       var t;
       null == e || null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
     },
-    onClick: t => {
+    onClick: c ? t => {
       var n;
       A(!1), v(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
-    },
+    } : void 0,
     onMouseLeave: () => {
       g && (_.default.track(h.rMx.CLOSE_POPOUT, {
         nonce: R
