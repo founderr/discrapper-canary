@@ -14,8 +14,8 @@ var r = n(735250),
 
 function d(e) {
   let {
-title: t,
-children: n,
+children: t,
+heading: n,
 className: a,
 scrollIntoView: d = !1,
 headingColor: _ = 'header-secondary'
@@ -34,13 +34,13 @@ return () => cancelAnimationFrame(t);
 ref: d ? f : void 0,
 className: s()(c.section, a),
 children: [
-  (0, r.jsx)(l.Heading, {
+  null != n && (0, r.jsx)(l.Heading, {
     variant: 'text-xs/semibold',
     color: _,
     className: c.heading,
-    children: t
+    children: n
   }),
-  n
+  t
 ]
   });
 }

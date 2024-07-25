@@ -45,7 +45,7 @@ null == p || p(), m({
 });
   };
   return (0, r.jsx)(c.Z, {
-title: _.Z.Messages.COMMANDS,
+heading: _.Z.Messages.COMMANDS,
 children: (0, r.jsx)('ul', {
   className: E.list,
   children: T.map(e => (0, r.jsx)('li', {

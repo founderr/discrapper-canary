@@ -108,7 +108,7 @@ children: (0, i.jsx)(p.Mt, {
                 className: j.overlay,
                 children: [
                   (0, i.jsx)(I.Z, {
-                    title: b.Z.Messages.USER_POPOUT_ABOUT_ME,
+                    heading: b.Z.Messages.USER_POPOUT_ABOUT_ME,
                     headingColor: 'header-primary',
                     children: (0, i.jsx)(E.Z, {
                       userBio: null == O ? void 0 : O.bio,
@@ -118,7 +118,7 @@ children: (0, i.jsx)(p.Mt, {
                     })
                   }),
                   (0, i.jsx)(I.Z, {
-                    title: b.Z.Messages.BOT_PROFILE_CREATED_ON,
+                    heading: b.Z.Messages.BOT_PROFILE_CREATED_ON,
                     headingColor: 'header-primary',
                     children: (0, i.jsx)(g.Z, {
                       userId: t.id

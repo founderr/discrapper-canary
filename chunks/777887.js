@@ -114,7 +114,7 @@ children: [
     onClick: M
   }),
   null != y && (0, r.jsx)(f.Z, {
-    title: v.Z.Messages.ROLES,
+    heading: v.Z.Messages.ROLES,
     children: (0, r.jsx)(S.Z, {
       user: t,
       currentUser: n,

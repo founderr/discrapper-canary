@@ -34141,6 +34141,7 @@ h3.improved_f017d0:after {
     gap: 8px
 }
 
+.section_ba4d80:empty,
 .section_ba4d80:has(>.heading_ba4d80:only-child) {
     display: none
 }

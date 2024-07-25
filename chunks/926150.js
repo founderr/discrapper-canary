@@ -86,7 +86,7 @@ children: [
     className: S.overlay,
     children: [
       !j && (null == n ? void 0 : n.bio) != null && (null == n ? void 0 : n.bio) !== '' && (0, i.jsx)(f.Z, {
-        title: v.Z.Messages.USER_POPOUT_ABOUT_ME,
+        heading: v.Z.Messages.USER_POPOUT_ABOUT_ME,
         headingColor: 'header-primary',
         children: (0, i.jsx)(d.Z, {
           userBio: n.bio,
@@ -101,7 +101,7 @@ children: [
         channel: Z
       }),
       (0, i.jsx)(f.Z, {
-        title: t.bot ? v.Z.Messages.BOT_PROFILE_CREATED_ON : v.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+        heading: t.bot ? v.Z.Messages.BOT_PROFILE_CREATED_ON : v.Z.Messages.USER_PROFILE_MEMBER_SINCE,
         headingColor: 'header-primary',
         children: (0, i.jsx)(_.Z, {
           userId: t.id
