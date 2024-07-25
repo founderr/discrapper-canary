@@ -49,8 +49,8 @@ t.Z = e => {
 className: n,
 variant: r = T.R0.PERKS_DISCOVERABILITY,
 noBackground: p = !1,
-leftAlignHeaders: A = !1,
-showAllPerksButton: m,
+leftAlignHeaders: m = !1,
+showAllPerksButton: A,
 headerClassname: N,
 isFullScreen: f = !0
   } = e, S = a.useRef(null), h = (0, _.yQ)(), M = (0, u.Ag)(h), x = (0, c.ZP)('perks-discoverability');
@@ -84,11 +84,11 @@ M,
 O,
 P
   ]);
-  let L = (0, I.Op)(O),
-v = (0, E.Z)(),
+  let v = (0, I.Op)(O),
+L = (0, E.Z)(),
 Z = (0, I.mN)(),
 D = (0, I.sP)({
-  perksCards: v,
+  perksCards: L,
   variant: r,
   shopMarketingVariation: x,
   isFullScreen: f,
@@ -101,7 +101,7 @@ B = D.some(e => null != e.pillText),
 G = a.useRef(new l.qA());
   return (0, s.jsxs)(s.Fragment, {
 children: [
-  (null == v ? void 0 : null === (t = v.freeBoost) || void 0 === t ? void 0 : t.name) === E.u.FREE_BOOST && (0, s.jsx)(l.O_, {
+  (null == L ? void 0 : null === (t = L.freeBoost) || void 0 === t ? void 0 : t.name) === E.u.FREE_BOOST && (0, s.jsx)(l.O_, {
     ref: U,
     className: C.confettiCanvas,
     environment: G.current
@@ -109,32 +109,32 @@ children: [
   (0, s.jsxs)('div', {
     ref: S,
     className: i()(C.section, {
-      [C.centerAlignSection]: !A,
-      [C.leftAlignSection]: A
+      [C.centerAlignSection]: !m,
+      [C.leftAlignSection]: m
     }, n),
     children: [
       (0, s.jsx)(g, {
-        showAllPerksButton: m,
-        leftAlignHeaders: A,
-        title: L.title,
+        showAllPerksButton: A,
+        leftAlignHeaders: m,
+        title: v.title,
         headerClassname: N
       }),
       (0, s.jsx)(o.Text, {
         variant: 'text-lg/normal',
         color: 'header-primary',
         className: i()(C.subtitle, {
-          [C.subtitle]: null == m || A,
-          [C.subtitleWithButton]: null != m && !A,
-          [C.fullWidth]: O || A,
+          [C.subtitle]: null == A || m,
+          [C.subtitleWithButton]: null != A && !m,
+          [C.fullWidth]: O || m,
           [C.moreSubtitleMargin]: B,
-          [C.leftAlignSubtitle]: A,
-          [C.centerAlignSubtitle]: !A
+          [C.leftAlignSubtitle]: m,
+          [C.centerAlignSubtitle]: !m
         }),
-        children: L.subtitle
+        children: v.subtitle
       }),
-      !A && null != m && (0, s.jsx)('div', {
+      !m && null != A && (0, s.jsx)('div', {
         className: i()(C.showAllPerksButtonCenter),
-        children: m
+        children: A
       }),
       (0, s.jsx)('div', {
         className: i()({

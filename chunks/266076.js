@@ -9,30 +9,30 @@ t.Z = a.memo(function(e) {
 channel: t,
 size: n,
 facepileSizeOverride: a,
-experimentLocation: o,
-isTyping: u,
+experimentLocation: u,
+isTyping: o,
 status: d,
 className: _,
 animated: f = !1,
-...E
+...h
   } = e, {
-isFacepileEnabled: h
+isFacepileEnabled: E
   } = r.Z.useExperiment({
-location: o
+location: u
   }, {
 autoTrackExposure: !0
   });
-  return t.recipients.length >= 2 && h && null == t.icon ? (0, l.jsx)(c.Z, {
-'aria-label': E['aria-label'],
-'aria-hidden': E['aria-hidden'],
+  return t.recipients.length >= 2 && E && null == t.icon ? (0, l.jsx)(c.Z, {
+'aria-label': h['aria-label'],
+'aria-hidden': h['aria-hidden'],
 className: _,
 recipients: t.recipients,
 size: null != a ? a : n,
-isTyping: u,
+isTyping: o,
 status: d
   }) : (0, l.jsx)(i.Avatar, {
-'aria-hidden': E['aria-hidden'],
-'aria-label': E['aria-label'],
+'aria-hidden': h['aria-hidden'],
+'aria-label': h['aria-label'],
 className: _,
 size: n,
 src: (0, s.x)(t, 80, f)

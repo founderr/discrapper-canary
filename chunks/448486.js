@@ -1,6 +1,6 @@
 n.d(t, {
   _: function() {
-return o;
+return u;
   }
 });
 var l = n(470079),
@@ -10,7 +10,7 @@ var l = n(470079),
   r = n(51144),
   c = n(689938);
 
-function o(e) {
+function u(e) {
   let t = (0, a.Wu)([i.default], () => e.recipients.map(e => i.default.getUser(e)).filter(s.lm).map(e => r.ZP.getName(e)));
   return l.useMemo(() => '' === e.name ? null : function(e) {
 if (0 === e.length)

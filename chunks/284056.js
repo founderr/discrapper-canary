@@ -28,7 +28,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class A extends a.PureComponent {
+class m extends a.PureComponent {
   componentDidMount() {
 this._initTimeout.start(1000, this.setupVoiceActivity);
   }
@@ -218,4 +218,4 @@ vadAutoThreshold: l.autoThreshold,
 inputDeviceName: null != n ? n.name : '',
 outputDeviceName: null != r ? r.name : ''
   };
-})(A);
+})(m);

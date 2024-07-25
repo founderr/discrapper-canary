@@ -1,6 +1,6 @@
 i.d(n, {
   Np: function() {
-return d;
+return s;
   },
   l8: function() {
 return r;
@@ -20,8 +20,8 @@ function r(e) {
 messageId: n,
 channelId: r,
 source: l,
-initialSelectedDestinations: d = [],
-forwardOptions: s,
+initialSelectedDestinations: s = [],
+forwardOptions: d,
 onRequestSent: u
   } = e;
   (0, a.Lb)(r, n, l), (0, o.openModalLazy)(async () => {
@@ -35,8 +35,8 @@ return i => (0, t.jsx)(e, {
   ...i,
   channelId: r,
   messageId: n,
-  initialSelectedDestinations: d,
-  forwardOptions: s,
+  initialSelectedDestinations: s,
+  forwardOptions: d,
   onRequestSent: u
 });
   }, {
@@ -48,7 +48,7 @@ function l() {
   (0, o.closeModal)(c);
 }
 
-function d(e) {
+function s(e) {
   let {
 messageId: n,
 channelId: a,

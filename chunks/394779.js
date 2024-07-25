@@ -1,6 +1,6 @@
 i.d(n, {
   s: function() {
-return p;
+return h;
   }
 });
 var t = i(735250),
@@ -9,8 +9,8 @@ var t = i(735250),
   c = i.n(a),
   r = i(481060),
   l = i(346610),
-  d = i(868643),
-  s = i(912332),
+  s = i(868643),
+  d = i(912332),
   u = i(503349),
   _ = i(689938),
   f = i(691523);
@@ -25,9 +25,9 @@ className: n,
 channelId: i,
 messageId: a,
 target: l
-  } = e, d = o.useCallback(() => {
+  } = e, s = o.useCallback(() => {
 if ('embed' === l.type) {
-  (0, s.l8)({
+  (0, d.l8)({
     messageId: a,
     channelId: i,
     source: 'media-viewer',
@@ -38,7 +38,7 @@ if ('embed' === l.type) {
   });
   return;
 }
-(0, s.l8)({
+(0, d.l8)({
   messageId: a,
   channelId: i,
   source: 'media-viewer',
@@ -54,7 +54,7 @@ l
   ]);
   return (0, t.jsx)(r.Clickable, {
 className: c()(f.container, n),
-onClick: d,
+onClick: s,
 children: (0, t.jsx)(r.Text, {
   className: f.text,
   variant: 'text-sm/medium',
@@ -64,7 +64,7 @@ children: (0, t.jsx)(r.Text, {
   });
 }
 
-function p(e, n) {
+function h(e, n) {
   let {
 canForwardMessages: i
   } = l.w.getCurrentConfig({
@@ -72,7 +72,7 @@ location: 'ForwardLink'
   }, {
 autoTrackExposure: !1
   });
-  return i && (0, d.h)(e) ? i => {
+  return i && (0, s.h)(e) ? i => {
 let {
   className: o
 } = i;

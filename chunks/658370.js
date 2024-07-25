@@ -21,8 +21,8 @@ title: a,
 titleClassName: C = '',
 buttonClassName: g = '',
 subtitle: p = '',
-description: A = '',
-descriptionCta: m = '',
+description: m = '',
+descriptionCta: A = '',
 isPremiumGetCta: N,
 onCtaClick: f,
 cardVariant: S
@@ -46,7 +46,7 @@ children: [
     cardVariantStyleInfo: P,
     titleClassName: C,
     subtitle: p,
-    description: A
+    description: m
   }),
   N && (0, s.jsx)(E.Z, {
     className: g,
@@ -55,10 +55,10 @@ children: [
     color: i.Button.Colors.GREEN,
     look: i.Button.Looks.FILLED
   }),
-  0 !== m.length && (null == (n = null == P ? void 0 : P.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 && null != f && (0, s.jsx)(i.Button, {
+  0 !== A.length && (null == (n = null == P ? void 0 : P.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 && null != f && (0, s.jsx)(i.Button, {
     className: g,
     onClick: f,
-    children: m
+    children: A
   })
 ]
   });

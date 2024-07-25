@@ -35,7 +35,7 @@ i()(void 0 !== g, 'User must be logged in to accept a link request'), (0, o.open
   }, [
 g,
 t
-  ]), A = a.useCallback(() => {
+  ]), m = a.useCallback(() => {
 i()(void 0 !== g, 'User must be logged in to decline a link request'), (0, o.openModalLazy)(async () => {
   let {
     default: e
@@ -49,7 +49,7 @@ i()(void 0 !== g, 'User must be logged in to decline a link request'), (0, o.ope
   }, [
 g,
 t
-  ]), m = a.useCallback(() => {
+  ]), A = a.useCallback(() => {
 i()(void 0 !== g, 'User must be logged in to decline a link request'), (0, o.openModalLazy)(async () => {
   let {
     default: e
@@ -80,7 +80,7 @@ children: [
       icon: o.CloseSmallIcon,
       className: R.__invalid_actionDeny,
       tooltip: I.Z.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
-      onClick: m
+      onClick: A
     }) : (0, s.jsxs)(s.Fragment, {
       children: [
         C ? null : (0, s.jsx)(u.Z, {
@@ -93,7 +93,7 @@ children: [
           icon: o.CloseSmallIcon,
           className: R.__invalid_actionDeny,
           tooltip: I.Z.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
-          onClick: A
+          onClick: m
         })
       ]
     })

@@ -18,7 +18,7 @@ c = l.useCallback(e => {
     padding: 80
   }));
 }, [t]),
-o = l.useCallback(() => new Promise(e => {
+u = l.useCallback(() => new Promise(e => {
   let n = t.current;
   if (null == n)
     return e();
@@ -27,7 +27,7 @@ o = l.useCallback(() => new Promise(e => {
     callback: () => requestAnimationFrame(() => e())
   });
 }), [t]),
-u = l.useCallback(() => new Promise(e => {
+o = l.useCallback(() => new Promise(e => {
   let n = t.current;
   if (null == n)
     return e();
@@ -40,8 +40,8 @@ u = l.useCallback(() => new Promise(e => {
 id: e,
 isEnabled: r,
 setFocus: c,
-scrollToStart: o,
-scrollToEnd: u,
+scrollToStart: u,
+scrollToEnd: o,
 orientation: null == n ? void 0 : n.orientation
   });
 }

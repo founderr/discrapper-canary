@@ -22,13 +22,13 @@ smallGap: n
   let g = (0, i.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
 {
   localizedPricingBannerHeader: p,
-  localizedPricingBannerBody: A
+  localizedPricingBannerBody: m
 } = (0, d.vB)({
   localizedPricingPromo: t,
   subscription: g,
   userLocale: C
 }),
-m = a.toLowerCase() + 'Banner';
+A = a.toLowerCase() + 'Banner';
   return (0, s.jsxs)('div', {
 className: r()(R.bannerContainer, {
   [R.smallGap]: n,
@@ -36,7 +36,7 @@ className: r()(R.bannerContainer, {
 }),
 children: [
   (0, s.jsx)('div', {
-    className: r()(R[m], R.bannerImageContainer)
+    className: r()(R[A], R.bannerImageContainer)
   }),
   (0, s.jsx)(l.Heading, {
     className: R.bannerHeading,
@@ -49,7 +49,7 @@ children: [
       color: 'none',
       variant: 'text-md/normal',
       className: R.bannerBody,
-      children: A
+      children: m
     })
   }),
   (0, s.jsxs)('div', {

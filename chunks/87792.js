@@ -16,8 +16,8 @@ var s = n(735250),
   C = n(780985),
   g = n(880257),
   p = n(631885),
-  A = n(240351),
-  m = n(792258),
+  m = n(240351),
+  A = n(792258),
   N = n(657825),
   f = n(198952),
   S = n(329242),
@@ -51,7 +51,7 @@ children: (0, s.jsx)(o.CircleInformationIcon, {
   });
 }
 
-function L(e) {
+function v(e) {
   let {
 displayType: t
   } = e, n = a.useCallback(() => {
@@ -61,10 +61,10 @@ loadMore: _,
 isMoreLoading: T
   } = (0, I.G)({
 onError: n
-  }), C = M.tx.get(t), [p, A] = a.useState(M.iB), f = (0, E.Xi)({
+  }), C = M.tx.get(t), [p, m] = a.useState(M.iB), f = (0, E.Xi)({
 location: 'family_center_activity_section_web'
   }), S = a.useCallback(() => {
-A(e => e + M.iB), _(t);
+m(e => e + M.iB), _(t);
   }, [
 t,
 _
@@ -79,7 +79,7 @@ x = a.useCallback(e => {
     userId: n.entity_id,
     timestamp: d.default.extractTimestamp(n.event_id),
     timestampFormatter: C.timestampFormatter
-  }, n.event_id) : (0, u.f0)(n) ? (0, s.jsx)(m.Z, {
+  }, n.event_id) : (0, u.f0)(n) ? (0, s.jsx)(A.Z, {
     guildId: n.entity_id
   }, n.event_id) : void 0;
 }, [
@@ -109,7 +109,7 @@ P = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
 ]);
   if (0 === l.length)
 return null;
-  let L = l.slice(0, p);
+  let v = l.slice(0, p);
   return (0, s.jsxs)('div', {
 className: O.actionSection,
 children: [
@@ -117,13 +117,13 @@ children: [
   (0, s.jsx)('div', {
     className: O.actions,
     style: {
-      maxHeight: 65 * L.length
+      maxHeight: 65 * v.length
     },
-    children: L.map((e, t) => x({
+    children: v.map((e, t) => x({
       row: t
     }))
   }),
-  L.length !== c ? (0, s.jsx)(o.Clickable, {
+  v.length !== c ? (0, s.jsx)(o.Clickable, {
     className: O.loadMoreBar,
     onClick: S,
     role: 'button',
@@ -134,14 +134,14 @@ children: [
       className: O.loadMore,
       variant: 'text-sm/bold',
       children: b.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
-        pageSize: Math.min(c - L.length, M.iB)
+        pageSize: Math.min(c - v.length, M.iB)
       })
     })
   }) : null
 ]
   });
 }
-let v = () => {
+let L = () => {
 let e = (0, g.Z)(),
   t = (0, p.mq)(M.ne.ACTIVE),
   n = (0, T.o)(b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
@@ -245,7 +245,7 @@ children: [
   (0, s.jsxs)('div', {
     className: O.connectedCounter,
     children: [
-      (0, s.jsx)(v, {}),
+      (0, s.jsx)(L, {}),
       (0, s.jsx)(P, {})
     ]
   }),
@@ -265,7 +265,7 @@ children: [
             className: O.activityCounterRow,
             children: n.map(e => {
               let [t, n] = e;
-              return (0, s.jsx)(A.Z, {
+              return (0, s.jsx)(m.Z, {
                 displayType: t,
                 header: n.tooltipHeader()
               }, 'counter-'.concat(t));
@@ -275,7 +275,7 @@ children: [
             className: O.activityOverview,
             children: a ? n.map(e => {
               let [t] = e;
-              return (0, s.jsx)(L, {
+              return (0, s.jsx)(v, {
                 displayType: t
               }, ''.concat(t, '-list'));
             }) : (0, s.jsx)(h.Z, {

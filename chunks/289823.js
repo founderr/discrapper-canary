@@ -4,14 +4,14 @@ var l = n(735250),
   s = n.n(i),
   r = n(974674),
   c = n(438784),
-  o = n(481060),
-  u = n(806519),
+  u = n(481060),
+  o = n(806519),
   d = n(3682),
   _ = n(976249);
 let f = {},
-  E = 1 / 4;
+  h = 1 / 4;
 
-function h(e) {
+function E(e) {
   let {
 height: t,
 fillColor: n
@@ -28,28 +28,28 @@ style: {
 },
 children: (0, l.jsx)(c.b, {
   className: _.dots,
-  dotRadius: t * E
+  dotRadius: t * h
 })
   });
 }
 
-function S(e) {
+function g(e) {
   let {
 isTyping: t,
 statusCoords: n,
 status: a
-  } = e, i = (0, o.useStatusFillColor)(o.StatusTypes.ONLINE);
+  } = e, i = (0, u.useStatusFillColor)(u.StatusTypes.ONLINE);
   return t ? (0, l.jsx)('div', {
 style: {
   position: 'absolute',
   top: n.y,
   left: n.x
 },
-children: (0, l.jsx)(h, {
+children: (0, l.jsx)(E, {
   height: n.height,
   fillColor: i
 })
-  }) : null != a ? (0, l.jsx)(o.Status, {
+  }) : null != a ? (0, l.jsx)(u.Status, {
 size: n.height,
 status: a,
 style: {
@@ -60,7 +60,7 @@ style: {
   }) : null;
 }
 
-function g(e) {
+function S(e) {
   let {
 src: t,
 size: n
@@ -74,58 +74,58 @@ height: n
   });
 }
 let I = {
-  [o.AvatarSizes.SIZE_16]: {
-default: u.QS.DIAGONAL_FACEPILE_16,
-typing: u.QS.DIAGONAL_FACEPILE_TYPING_16,
-status: u.QS.DIAGONAL_FACEPILE_STATUS_16
+  [u.AvatarSizes.SIZE_16]: {
+default: o.QS.DIAGONAL_FACEPILE_16,
+typing: o.QS.DIAGONAL_FACEPILE_TYPING_16,
+status: o.QS.DIAGONAL_FACEPILE_STATUS_16
   },
-  [o.AvatarSizes.SIZE_20]: {
-default: u.QS.DIAGONAL_FACEPILE_20,
-typing: u.QS.DIAGONAL_FACEPILE_TYPING_20,
-status: u.QS.DIAGONAL_FACEPILE_STATUS_20
+  [u.AvatarSizes.SIZE_20]: {
+default: o.QS.DIAGONAL_FACEPILE_20,
+typing: o.QS.DIAGONAL_FACEPILE_TYPING_20,
+status: o.QS.DIAGONAL_FACEPILE_STATUS_20
   },
-  [o.AvatarSizes.SIZE_24]: {
-default: u.QS.DIAGONAL_FACEPILE_24,
-typing: u.QS.DIAGONAL_FACEPILE_TYPING_24,
-status: u.QS.DIAGONAL_FACEPILE_STATUS_24
+  [u.AvatarSizes.SIZE_24]: {
+default: o.QS.DIAGONAL_FACEPILE_24,
+typing: o.QS.DIAGONAL_FACEPILE_TYPING_24,
+status: o.QS.DIAGONAL_FACEPILE_STATUS_24
   },
-  [o.AvatarSizes.SIZE_32]: {
-default: u.QS.DIAGONAL_FACEPILE_32,
-typing: u.QS.DIAGONAL_FACEPILE_TYPING_32,
-status: u.QS.DIAGONAL_FACEPILE_STATUS_32
+  [u.AvatarSizes.SIZE_32]: {
+default: o.QS.DIAGONAL_FACEPILE_32,
+typing: o.QS.DIAGONAL_FACEPILE_TYPING_32,
+status: o.QS.DIAGONAL_FACEPILE_STATUS_32
   },
-  [o.AvatarSizes.SIZE_40]: {
-default: u.QS.DIAGONAL_FACEPILE_32,
-typing: u.QS.DIAGONAL_FACEPILE_TYPING_32,
-status: u.QS.DIAGONAL_FACEPILE_STATUS_32
+  [u.AvatarSizes.SIZE_40]: {
+default: o.QS.DIAGONAL_FACEPILE_32,
+typing: o.QS.DIAGONAL_FACEPILE_TYPING_32,
+status: o.QS.DIAGONAL_FACEPILE_STATUS_32
   },
-  [o.AvatarSizes.SIZE_48]: {
-default: u.QS.DIAGONAL_FACEPILE_40,
-typing: u.QS.DIAGONAL_FACEPILE_TYPING_40,
-status: u.QS.DIAGONAL_FACEPILE_STATUS_40
+  [u.AvatarSizes.SIZE_48]: {
+default: o.QS.DIAGONAL_FACEPILE_40,
+typing: o.QS.DIAGONAL_FACEPILE_TYPING_40,
+status: o.QS.DIAGONAL_FACEPILE_STATUS_40
   },
-  [o.AvatarSizes.SIZE_56]: {
-default: u.QS.DIAGONAL_FACEPILE_56,
-typing: u.QS.DIAGONAL_FACEPILE_TYPING_56,
-status: u.QS.DIAGONAL_FACEPILE_STATUS_56
+  [u.AvatarSizes.SIZE_56]: {
+default: o.QS.DIAGONAL_FACEPILE_56,
+typing: o.QS.DIAGONAL_FACEPILE_TYPING_56,
+status: o.QS.DIAGONAL_FACEPILE_STATUS_56
   },
-  [o.AvatarSizes.SIZE_80]: {
-default: u.QS.DIAGONAL_FACEPILE_80,
-typing: u.QS.DIAGONAL_FACEPILE_TYPING_80,
-status: u.QS.DIAGONAL_FACEPILE_STATUS_80
+  [u.AvatarSizes.SIZE_80]: {
+default: o.QS.DIAGONAL_FACEPILE_80,
+typing: o.QS.DIAGONAL_FACEPILE_TYPING_80,
+status: o.QS.DIAGONAL_FACEPILE_STATUS_80
   },
-  [o.AvatarSizes.SIZE_120]: {
-default: u.QS.DIAGONAL_FACEPILE_120,
-typing: u.QS.DIAGONAL_FACEPILE_TYPING_120,
-status: u.QS.DIAGONAL_FACEPILE_STATUS_120
+  [u.AvatarSizes.SIZE_120]: {
+default: o.QS.DIAGONAL_FACEPILE_120,
+typing: o.QS.DIAGONAL_FACEPILE_TYPING_120,
+status: o.QS.DIAGONAL_FACEPILE_STATUS_120
   }
 };
 t.Z = function(e) {
   var t, n, i;
   let {
 backSrc: c,
-frontSrc: E,
-size: h,
+frontSrc: h,
+size: E,
 isTyping: A,
 status: p,
 style: m,
@@ -133,7 +133,7 @@ className: C,
 ...L
   } = e, {
 size: b
-  } = o.AvatarSizeSpecs[h], {
+  } = u.AvatarSizeSpecs[E], {
 statusCoords: N,
 frontAvatarOffsetPx: T,
 frontAvatarSizePx: Z,
@@ -142,25 +142,25 @@ backAvatarSizePx: y
 var e;
 let t = ''.concat(b, '-').concat(A);
 return null !== (e = f[t]) && void 0 !== e ? e : function(e, t, n) {
-  let l = o.AvatarSizeSpecs[e],
+  let l = u.AvatarSizeSpecs[e],
     a = l.size / (d.z3 + d.o),
     i = a * d.z3,
     s = a * d.o,
     c = {
-      statusCoords: (0, r.Vq)(l, o.StatusTypes.ONLINE, !1, t),
+      statusCoords: (0, r.Vq)(l, u.StatusTypes.ONLINE, !1, t),
       frontAvatarSizePx: i,
       backAvatarSizePx: a,
       frontAvatarOffsetPx: s,
       frontAvatarCenter: s + i / 2
     };
   return f[n] = c, c;
-}(h, A, t);
+}(E, A, t);
   }, [
 b,
 A,
-h
+E
   ]);
-  let x = (t = null != p, n = A, i = h, n ? I[i].typing : t ? I[i].status : I[i].default);
+  let x = (t = null != p, n = A, i = E, n ? I[i].typing : t ? I[i].status : I[i].default);
   return (0, l.jsxs)('div', {
 style: {
   width: b,
@@ -171,7 +171,7 @@ style: {
 'aria-hidden': L['aria-hidden'],
 className: s()(_.container, C),
 children: [
-  (0, l.jsxs)(u.ZP, {
+  (0, l.jsxs)(o.ZP, {
     mask: x,
     height: b,
     width: b,
@@ -188,8 +188,8 @@ children: [
           top: T,
           left: T
         },
-        children: (0, l.jsx)(g, {
-          src: E,
+        children: (0, l.jsx)(S, {
+          src: h,
           size: Z,
           isTyping: A,
           status: p
@@ -197,7 +197,7 @@ children: [
       })
     ]
   }),
-  (0, l.jsx)(S, {
+  (0, l.jsx)(g, {
     statusCoords: N,
     status: p,
     isTyping: A

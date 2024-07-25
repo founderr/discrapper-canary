@@ -24,15 +24,15 @@ var l = n(570140),
   s = n(925549),
   r = n(287734),
   c = n(212819),
-  o = n(336197),
-  u = n(359110),
+  u = n(336197),
+  o = n(359110),
   d = n(769654),
   _ = n(131704),
   f = n(592125),
-  E = n(283595),
-  h = n(944486),
-  S = n(914010),
-  g = n(626135),
+  h = n(283595),
+  E = n(944486),
+  g = n(914010),
+  S = n(626135),
   I = n(777754),
   A = n(823385),
   p = n(981631),
@@ -67,19 +67,19 @@ results: n,
 queryMode: l,
 query: a,
 maxQueryLength: i
-  } = A.Z.getProps(), s = S.Z.getGuildId(), r = h.Z.getChannelId(s), o = n[(0, c.gJ)(c.a8.DOWN, -1, n)], u = I.Z.isEmail(a), d = I.Z.isPhoneNumber(a), E = I.Z.isUserTagLike(a), p = null != r && (0, m.AB)(r), C = {
+  } = A.Z.getProps(), s = g.Z.getGuildId(), r = E.Z.getChannelId(s), u = n[(0, c.gJ)(c.a8.DOWN, -1, n)], o = I.Z.isEmail(a), d = I.Z.isPhoneNumber(a), h = I.Z.isUserTagLike(a), p = null != r && (0, m.AB)(r), C = {
 current_channel_id: p ? void 0 : r,
 current_channel_static_route: p ? r : void 0,
 current_guild_id: s,
 query_mode: null != l ? l : 'GENERAL',
 query_length: a.length,
 max_query_length: i,
-is_email_like: u,
+is_email_like: o,
 is_phone_like: d,
-is_username_like: E,
-query: u || d || E ? null : a,
-top_result_type: null != o ? o.type : null,
-top_result_score: null != o ? o.score : null,
+is_username_like: h,
+query: o || d || h ? null : a,
+top_result_type: null != u ? u.type : null,
+top_result_score: null != u ? u.score : null,
 num_results_total: A.Z.getResultTotals(),
 num_results_users: A.Z.getResultTotals(c.h8.USER),
 num_results_text_channels: A.Z.getResultTotals(c.h8.TEXT_CHANNEL),
@@ -112,7 +112,7 @@ switch (C.selected_type = e, C.selected_score = l, C.selected_index = n.indexOf(
     C.selected_user_id = a.id;
 }
   }
-  g.default.track(e, C);
+  S.default.track(e, C);
 }
 
 function Z() {
@@ -128,13 +128,13 @@ t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '';
 let t;
 if (A.Z.isOpen())
   return;
-let n = S.Z.getGuildId(),
-  l = h.Z.getChannelId(n);
+let n = g.Z.getGuildId(),
+  l = E.Z.getChannelId(n);
 if (null != l) {
   let e = f.Z.getChannel(l);
   t = null != e ? e.type : null;
 }
-g.default.track(p.rMx.QUICKSWITCHER_OPENED, {
+S.default.track(p.rMx.QUICKSWITCHER_OPENED, {
   source: e,
   current_guild_id: n,
   current_channel_id: l,
@@ -169,43 +169,43 @@ function M(e) {
   Z(), T(p.rMx.QUICKSWITCHER_RESULT_SELECTED, e);
   let {
 type: _,
-record: h
-  } = e, S = {
+record: E
+  } = e, g = {
 page: p.ZY5.QUICK_SWITCHER
   };
   switch (_) {
 case c.h8.GUILD:
-  (0, d.X)(h.id, {
+  (0, d.X)(E.id, {
     navigationReplace: !0
   });
   break;
 case c.h8.TEXT_CHANNEL:
-  null != (t = f.Z.getChannel(h.id)) && (0, u.Kh)(t.id, {
+  null != (t = f.Z.getChannel(E.id)) && (0, o.Kh)(t.id, {
     state: {
-      analyticsSource: S
+      analyticsSource: g
     },
     navigationReplace: !0
   });
   break;
 case c.h8.VOICE_CHANNEL:
-  null != (t = f.Z.getChannel(h.id)) && (n ? i.Z.updateChatOpen(h.id, !0) : r.default.selectVoiceChannel(h.id), (0, u.Kh)(t.id, {
+  null != (t = f.Z.getChannel(E.id)) && (n ? i.Z.updateChatOpen(E.id, !0) : r.default.selectVoiceChannel(E.id), (0, o.Kh)(t.id, {
     state: {
-      analyticsSource: S
+      analyticsSource: g
     },
     navigationReplace: !0
   }));
   break;
 case c.h8.USER:
-  a.Z.openPrivateChannel([h.id], !1, !1, 'Quickswitcher'), s.Z.channelListScrollTo(p.ME, f.Z.getDMFromUserId(h.id));
+  a.Z.openPrivateChannel([E.id], !1, !1, 'Quickswitcher'), s.Z.channelListScrollTo(p.ME, f.Z.getDMFromUserId(E.id));
   break;
 case c.h8.GROUP_DM:
-  (0, u.Kh)(h.id, {
+  (0, o.Kh)(E.id, {
     navigationReplace: !0
-  }), s.Z.channelListScrollTo(p.ME, h.id);
+  }), s.Z.channelListScrollTo(p.ME, E.id);
   break;
 case c.h8.APPLICATION:
-  let g = E.Z.getActiveLibraryApplication(h.id);
-  C(h.id, g, {
+  let S = h.Z.getActiveLibraryApplication(E.id);
+  C(E.id, S, {
     analyticsParams: {
       source: p.Sbl.QUICK_SWITCHER,
       location: p.Sbl.QUICK_SWITCHER
@@ -213,7 +213,7 @@ case c.h8.APPLICATION:
   });
   break;
 case c.h8.LINK:
-  (0, o.Z)(h.path, {
+  (0, u.Z)(E.path, {
     navigationReplace: !0
   });
   }

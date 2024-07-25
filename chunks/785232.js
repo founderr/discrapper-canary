@@ -9,8 +9,8 @@ t.Z = function(e) {
 recipients: t,
 size: n,
 status: c,
-isTyping: o,
-className: u,
+isTyping: u,
+className: o,
 ...d
   } = e, _ = i.AvatarSizeSpecs[n], f = (0, a.Wu)([r.default], () => t.slice(0, 2).map(e => {
 let t = r.default.getUser(e);
@@ -27,7 +27,7 @@ backSrc: f[0],
 frontSrc: f[1],
 size: n,
 status: c,
-isTyping: null != o && o,
-className: u
+isTyping: null != u && u,
+className: o
   });
 };

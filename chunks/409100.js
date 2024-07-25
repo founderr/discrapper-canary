@@ -45,8 +45,8 @@ subscriptionTier: n,
 isEligibleForBogoPromotion: C = !1,
 isPersistentCTA: g = !1,
 useShorterCTA: p = !1,
-...A
-  } = e, m = (0, i.ZP)(), N = (0, a.wj)(m) || t, f = (0, d.N)(), S = null == f ? void 0 : f.subscription_trial, h = (0, l.a5)({
+...m
+  } = e, A = (0, i.ZP)(), N = (0, a.wj)(A) || t, f = (0, d.N)(), S = null == f ? void 0 : f.subscription_trial, h = (0, l.a5)({
 intervalType: null == S ? void 0 : S.interval,
 intervalCount: null == S ? void 0 : S.interval_count
   }), M = (0, c.Ng)(), x = null != S && n === S.sku_id, {
@@ -66,11 +66,11 @@ subscriptionTrial: S
   });
   return (0, s.jsx)(_.Z, {
 color: N ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,
-buttonShineClassName: 'buttonShineClassName' in A ? A.buttonShineClassName : N ? T.brandShine : void 0,
+buttonShineClassName: 'buttonShineClassName' in m ? m.buttonShineClassName : N ? T.brandShine : void 0,
 buttonText: P,
 buttonTextClassName: x ? T.freeTrialText : void 0,
 onlyShineOnHover: !0,
 subscriptionTier: n,
-...A
+...m
   });
 };

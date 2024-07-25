@@ -1,6 +1,6 @@
 n.d(t, {
   H: function() {
-return o;
+return u;
   }
 }), n(47120), n(390547);
 var l = n(926491),
@@ -10,13 +10,13 @@ var l = n(926491),
   r = n(981631),
   c = n(689938);
 
-function o(e, t, n) {
-  let o = n instanceof i.Sf;
-  if (t.isNSFW() && !(o && n.isNSFW()))
+function u(e, t, n) {
+  let u = n instanceof i.Sf;
+  if (t.isNSFW() && !(u && n.isNSFW()))
 return {
   label: c.Z.Messages.MESSAGE_FORWARDING_NSFW_NOT_ALLOWED
 };
-  if (o && (0, i.Km)(n.type)) {
+  if (u && (0, i.Km)(n.type)) {
 if ((e.attachments.length > 0 || e.messageSnapshots.some(e => e.message.attachments.length > 0)) && !s.Z.can(r.Plq.ATTACH_FILES, n))
   return {
     label: c.Z.Messages.MESSAGE_CHANNEL_ATTACHMENTS_DISABLED
