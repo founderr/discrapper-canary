@@ -1,21 +1,21 @@
 n.d(t, {
   An: function() {
-return m;
+return I;
   },
   C3: function() {
-return h;
-  },
-  Fg: function() {
-return _;
-  },
-  It: function() {
-return A;
-  },
-  St: function() {
 return p;
   },
+  Fg: function() {
+return E;
+  },
+  It: function() {
+return N;
+  },
+  St: function() {
+return m;
+  },
   nk: function() {
-return g;
+return S;
   }
 }), n(653041);
 var r = n(442837),
@@ -25,6 +25,32 @@ var r = n(442837),
   o = n(308083),
   l = n(981631);
 let u = (0, i.B)({
+kind: 'guild',
+id: '2024-07_rapidash_m3_guilds',
+label: 'Rapidash M3 Guilds',
+defaultConfig: {
+  enableClanCreation: !1,
+  requireTargeting: !1
+},
+treatments: [{
+    id: 1,
+    label: 'Targeted guilds',
+    config: {
+      enableClanCreation: !0,
+      requireTargeting: !0
+    }
+  },
+  {
+    id: 2,
+    label: 'Untargeted guilds',
+    config: {
+      enableClanCreation: !0,
+      requireTargeting: !1
+    }
+  }
+]
+  }),
+  c = (0, i.B)({
 kind: 'user',
 id: '2024-05_clans_valorant_prepilot',
 label: 'Clans Valorant Prepilot',
@@ -41,7 +67,7 @@ treatments: [{
   }
 }]
   }),
-  c = (0, i.B)({
+  d = (0, i.B)({
 kind: 'user',
 id: '2024-05_clans_genshin_prepilot',
 label: 'Clans Genshin Prepilot',
@@ -58,7 +84,7 @@ treatments: [{
   }
 }]
   }),
-  d = (0, i.B)({
+  _ = (0, i.B)({
 kind: 'user',
 id: '2024-05_rapidash_prepilot_applications',
 label: 'Rapidash Prepilot Application Gate',
@@ -74,15 +100,15 @@ treatments: [{
 }]
   });
 
-function _(e) {
-  return d.useExperiment({
+function E(e) {
+  return _.useExperiment({
 location: e
   }, {
 autoTrackExposure: !1
   });
 }
 
-function E(e) {
+function f(e) {
   var t, n;
   let {
 valorantConfig: r,
@@ -91,43 +117,52 @@ genshinConfig: i
   return null !== (n = null !== (t = null == i ? void 0 : i.defaultGameId) && void 0 !== t ? t : null == r ? void 0 : r.defaultGameId) && void 0 !== n ? n : null;
 }
 
-function f(e) {
+function h(e) {
   let {
 guilds: t,
 valorantConfig: n,
 genshinConfig: i,
-includeConverted: a
-  } = e, o = (0, r.Wu)([s.Z], () => t.filter(e => s.Z.can(l.Plq.ADMINISTRATOR, e))), u = o.filter(e => function(e) {
+m3GuildConfig: a,
+includeConverted: o
+  } = e, u = (0, r.Wu)([s.Z], () => t.filter(e => s.Z.can(l.Plq.ADMINISTRATOR, e))), c = u.filter(e => function(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 return null != e && e.hasFeature(l.oNc.CLAN_PILOT_GENSHIN) && (t || !e.hasFeature(l.oNc.CLAN));
-  }(e, a)), c = o.filter(e => function(e) {
+  }(e, o)), d = u.filter(e => function(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 return null != e && e.hasFeature(l.oNc.CLAN_PILOT_VALORANT) && (t || !e.hasFeature(l.oNc.CLAN));
-  }(e, a)), d = u.length > 0 && i.enableClanCreation, _ = c.length > 0 && n.enableClanCreation, f = [];
-  return d && u.forEach(e => f.push(e)), _ && c.forEach(e => f.push(e)), {
-guilds: f,
-enableClanCreation: d || _,
-defaultGameId: E({
-  genshinConfig: d ? i : void 0,
-  valorantConfig: _ ? n : void 0
+  }(e, o)), _ = a.requireTargeting ? u.filter(e => function(e) {
+let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+return null != e && e.hasFeature(l.oNc.RAPIDASH_TEST) && (t || !e.hasFeature(l.oNc.CLAN));
+  }(e, o)) : u, E = c.length > 0 && i.enableClanCreation, h = d.length > 0 && n.enableClanCreation, p = _.length > 0 && a.enableClanCreation, m = [];
+  return E && c.forEach(e => m.push(e)), h && d.forEach(e => m.push(e)), p && _.forEach(e => m.push(e)), {
+guilds: m,
+enableClanCreation: E || h,
+defaultGameId: f({
+  genshinConfig: E ? i : void 0,
+  valorantConfig: h ? n : void 0
 })
   };
 }
 
-function h(e) {
+function p(e) {
   let {
 location: t,
 includeConverted: n,
 autoTrackExposure: i = !0
-  } = e, s = (0, r.Wu)([a.Z], () => Object.values(a.Z.getGuilds())), o = u.useExperiment({
+  } = e, s = (0, r.Wu)([a.Z], () => Object.values(a.Z.getGuilds())), o = c.useExperiment({
+location: t
+  }, {
+autoTrackExposure: i
+  }), l = d.useExperiment({
 location: t
   }, {
 autoTrackExposure: i
   });
-  return f({
+  return h({
 guilds: s,
 valorantConfig: o,
-genshinConfig: c.useExperiment({
+genshinConfig: l,
+m3GuildConfig: u.useExperiment({
   location: t
 }, {
   autoTrackExposure: i
@@ -136,21 +171,26 @@ includeConverted: n
   });
 }
 
-function p(e) {
+function m(e) {
   let {
 guild: t,
 location: n,
 includeConverted: r,
 autoTrackExposure: i = !0
-  } = e, a = u.useExperiment({
+  } = e, a = c.useExperiment({
+location: n
+  }, {
+autoTrackExposure: i
+  }), s = d.useExperiment({
 location: n
   }, {
 autoTrackExposure: i
   });
-  return f({
+  return h({
 guilds: [t],
 valorantConfig: a,
-genshinConfig: c.useExperiment({
+genshinConfig: s,
+m3GuildConfig: u.useExperiment({
   location: n
 }, {
   autoTrackExposure: i
@@ -159,25 +199,25 @@ includeConverted: r
   });
 }
 
-function m(e) {
+function I(e) {
   let {
 location: t,
 autoTrackExposure: n = !0
-  } = e, r = u.useExperiment({
+  } = e, r = c.useExperiment({
 location: t
   }, {
 autoTrackExposure: n
   });
-  return E({
+  return f({
 valorantConfig: r,
-genshinConfig: c.useExperiment({
+genshinConfig: d.useExperiment({
   location: t
 }, {
   autoTrackExposure: n
 })
   });
 }
-let I = (0, i.B)({
+let T = (0, i.B)({
 kind: 'user',
 id: '2024-05_clans_valorant_pilot',
 label: 'Clans Valorant Pilot',
@@ -194,7 +234,7 @@ treatments: [{
   }
 }]
   }),
-  T = (0, i.B)({
+  g = (0, i.B)({
 kind: 'user',
 id: '2024-05_clans_genshin_pilot',
 label: 'Clans Genshin Pilot',
@@ -212,15 +252,15 @@ treatments: [{
 }]
   });
 
-function g(e) {
+function S(e) {
   var t, n;
   let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-i = I.useExperiment({
+i = T.useExperiment({
   location: e
 }, {
   autoTrackExposure: r
 }),
-a = T.useExperiment({
+a = g.useExperiment({
   location: e
 }, {
   autoTrackExposure: r
@@ -230,7 +270,7 @@ clanDiscoveryEnabled: i.clanDiscoveryEnabled || a.clanDiscoveryEnabled,
 defaultGameId: null !== (n = null !== (t = i.defaultGameId) && void 0 !== t ? t : a.defaultGameId) && void 0 !== n ? n : null
   };
 }
-let S = (0, i.B)({
+let A = (0, i.B)({
   kind: 'user',
   id: '2024-05_clans_general',
   label: 'Clans General',
@@ -246,9 +286,9 @@ config: {
   }]
 });
 
-function A(e) {
+function N(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  return S.useExperiment({
+  return A.useExperiment({
 location: e
   }, {
 autoTrackExposure: t
