@@ -290,9 +290,8 @@ return !1;
 function y(e) {
   switch (e) {
 case f.bB.CHAT:
-  return E.d.SlashCommand;
 case f.bB.APPLICATION_LAUNCHER:
-  return E.d.ApplicationLauncherCommand;
+  return E.d.SlashCommand;
   }
 }
 
