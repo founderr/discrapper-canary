@@ -575,6 +575,17 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
         score: r ? n.score : void 0,
         id: this.getRowId(t)
       }, ''.concat(n.type, '-').concat(n.record.id));
+    case _.h8.IN_APP_NAVIGATION:
+      return (0, l.jsx)(S.s8, {
+        focused: i >= 0 && t === i,
+        onClick: () => this.selectResult(n),
+        onMouseEnter: () => this.focusResult(n),
+        onFocus: this.focusNode,
+        onContextMenu: this.handleContextMenu,
+        navigationRecord: n.record,
+        score: r ? n.score : void 0,
+        id: this.getRowId(t)
+      }, ''.concat(n.type, '-').concat(n.record.id));
     default:
       return null;
   }

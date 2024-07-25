@@ -41,7 +41,8 @@ c.h8.GROUP_DM,
 c.h8.TEXT_CHANNEL,
 c.h8.GUILD,
 c.h8.APPLICATION,
-c.h8.LINK
+c.h8.LINK,
+c.h8.IN_APP_NAVIGATION
   ],
   P = 0,
   U = !1,
