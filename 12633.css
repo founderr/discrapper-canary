@@ -33625,15 +33625,8 @@ h3.improved_f017d0:after {
     display: flex;
     flex-direction: column;
     align-self: center;
+    gap: 8px;
     width: 100%
-}
-
-.subdetails_ae1fa2 {
-    margin-bottom: 8px
-}
-
-.subdetails_ae1fa2:empty {
-    display: none
 }
 
 .actions_ae1fa2 {

@@ -319,10 +319,9 @@ children: [
           null == et ? (0, r.jsxs)('div', {
             className: k.details,
             children: [
-              en(),
               (0, r.jsxs)('div', {
-                className: k.subdetails,
                 children: [
+                  en(),
                   er(),
                   ei()
                 ]
@@ -344,13 +343,8 @@ children: [
                 },
                 children: [
                   en(),
-                  (0, r.jsxs)('div', {
-                    className: k.subdetails,
-                    children: [
-                      er(),
-                      ei()
-                    ]
-                  })
+                  er(),
+                  ei()
                 ]
               }),
               (0, r.jsx)(D.Z, {

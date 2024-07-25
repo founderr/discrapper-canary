@@ -6,7 +6,6 @@ e.exports = {
   content: 'content_ae1fa2',
   fullSize: 'fullSize_ae1fa2',
   details: 'details_ae1fa2',
-  subdetails: 'subdetails_ae1fa2',
   actions: 'actions_ae1fa2',
   badges: 'badges_ae1fa2',
   clickable: 'clickable_ae1fa2',
