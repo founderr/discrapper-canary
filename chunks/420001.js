@@ -58,7 +58,7 @@ let d = (0, o.hV)(e, c.cleanedQuery),
   });
 if (null == _)
   return h.K;
-let p = _;
+let p = _.filter(e => e.section.botId === c.user.id);
 if (d.hasSpaceTerminator) {
   let e = d.text.trim(),
     t = e + ' ';
