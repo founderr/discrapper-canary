@@ -9,15 +9,15 @@ var l = n(735250),
   s = n(481060),
   r = n(359110),
   c = n(987509),
-  o = n(72214),
-  u = n(592125),
+  u = n(72214),
+  o = n(592125),
   d = n(375954),
   _ = n(934415),
   f = n(572004),
-  E = n(823379),
-  h = n(859155),
-  S = n(822869),
-  g = n(895442),
+  h = n(823379),
+  E = n(859155),
+  g = n(822869),
+  S = n(895442),
   I = n(757853),
   A = n(912332),
   p = n(819727),
@@ -34,41 +34,52 @@ forwardOptions: T,
 onClose: Z,
 onRequestSent: y,
 ...x
-  } = e, [v, R] = a.useState(''), M = a.useMemo(() => (0, c.dL)(t), [t]), [P, D] = a.useState(N), [O, F] = a.useState(!1), G = P.length, U = G >= p.G, j = (0, i.e7)([d.Z], () => d.Z.getMessage(t, b), [
+  } = e, v = a.useMemo(() => (0, c.dL)(t), [t]), [R, M] = a.useState(!1), D = (0, i.e7)([d.Z], () => d.Z.getMessage(t, b), [
 t,
 b
-  ]), k = (0, i.e7)([u.Z], () => u.Z.getChannel(t), [t]), H = (0, o.s)({
-searchText: v,
-selectedDestinations: P,
-originDestination: M,
+  ]), P = (0, i.e7)([o.Z], () => o.Z.getChannel(t), [t]), O = (0, g.ZF)(), F = (0, g.mh)(), G = a.useRef(0), U = a.useRef(0), [j, k] = a.useState(N), H = j.length, Q = H >= p.G, [w, z] = a.useState(''), W = a.useCallback(e => {
+z(e), U.current += 1, '' !== e && F(t, b);
+  }, [
+t,
+b,
+F
+  ]), B = (0, u.s)({
+searchText: w,
+selectedDestinations: j,
+originDestination: v,
 includeMissingDMs: !0
-  }), Q = a.useCallback(() => {
-(0, S.sF)(t, b), Z();
+  }), K = a.useCallback(() => {
+(0, g.sF)({
+  channelId: t,
+  messageId: b,
+  numDestinationChanges: G.current,
+  numQueryChanges: U.current
+}), Z();
   }, [
 t,
 b,
 Z
-  ]), w = a.useCallback(() => {
+  ]), Y = a.useCallback(() => {
 var e;
-let n = null === (e = u.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
+let n = null === (e = o.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
 if (null == n)
   return;
 let l = (0, _.wR)(n, t, b);
-(0, s.showToast)((0, s.createToast)(m.Z.Messages.COPIED_LINK, s.ToastType.LINK)), (0, f.JG)(l);
+(0, s.showToast)((0, s.createToast)(m.Z.Messages.COPIED_LINK, s.ToastType.LINK)), (0, f.JG)(l), (0, g.xp)(t, b);
   }, [
 t,
 b
-  ]), z = a.useCallback(() => {
-R('');
-  }, [R]), W = a.useRef(null);
+  ]), q = a.useCallback(() => {
+z('');
+  }, [z]), X = a.useRef(null);
   a.useEffect(() => {
-if ('' === v) {
+if ('' === w) {
   var e;
-  null === (e = W.current) || void 0 === e || e.focus();
+  null === (e = X.current) || void 0 === e || e.focus();
 }
-  }, [v]);
-  let B = a.useCallback(e => {
-  D(t => {
+  }, [w]);
+  let V = a.useCallback(e => {
+  O(t, b, '' !== w), k(t => {
     let n = t.findIndex(t => {
       let {
         type: n,
@@ -77,23 +88,29 @@ if ('' === v) {
       return n === e.type && l === e.id;
     });
     if (-1 === n)
-      return U ? t : (R(''), [
+      return Q ? t : (z(''), G.current += 1, [
         e,
         ...t
       ]);
     let l = [...t];
-    return l.splice(n, 1), l;
+    return l.splice(n, 1), G.current += 1, l;
   });
-}, [U]),
-K = a.useCallback(async () => {
+}, [
+  t,
+  Q,
+  b,
+  w,
+  O
+]),
+J = a.useCallback(async () => {
   let e = d.Z.getMessage(t, b);
   if (null == e) {
     (0, s.showToast)((0, s.createToast)(m.Z.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE));
     return;
   }
-  F(!0);
-  let a = (await Promise.all(P.map(c.qx))).filter(E.lm);
-  if ((0, g.Z)(e, a) && !await new Promise(e => {
+  M(!0);
+  let a = (await Promise.all(j.map(c.qx))).filter(h.lm);
+  if ((0, S.Z)(e, a) && !await new Promise(e => {
       (0, s.openModalLazy)(async () => {
         let {
           default: t
@@ -105,46 +122,60 @@ K = a.useCallback(async () => {
         });
       });
     })) {
-    F(!1);
+    M(!1);
     return;
   }
   (0, A.mc)(), null == y || y(), 1 === a.length && (0, r.Kh)(a[0]);
-  let i = await h.Z.sendForwards(e, a, T);
+  let i = await E.Z.sendForwards(e, a, T);
   if (i.every(e => {
       let {
         status: t
       } = e;
       return 'fulfilled' === t;
     })) {
-    (0, S.gP)(t, b, !1, a.length), (0, s.showToast)((0, s.createToast)(m.Z.Messages.MESSAGE_FORWARD_SUCCESS, s.ToastType.FORWARD));
+    (0, g.gP)({
+      channelId: t,
+      messageId: b,
+      hasError: !1,
+      numDestinations: a.length,
+      numDestinationChanges: G.current,
+      numQueryChanges: U.current
+    }), (0, s.showToast)((0, s.createToast)(m.Z.Messages.MESSAGE_FORWARD_SUCCESS, s.ToastType.FORWARD));
     return;
   }
-  (0, S.gP)(t, b, !0, a.length);
-  let o = P.filter((e, t) => 'rejected' === i[t].status);
+  (0, g.gP)({
+    channelId: t,
+    messageId: b,
+    hasError: !0,
+    numDestinations: a.length,
+    numDestinationChanges: G.current,
+    numQueryChanges: U.current
+  });
+  let u = j.filter((e, t) => 'rejected' === i[t].status);
   (0, A.Np)({
     messageId: b,
     channelId: t,
-    failedDestinations: o,
+    failedDestinations: u,
     forwardOptions: T
   });
 }, [
   t,
   T,
   b,
-  P,
+  j,
   y
 ]);
-  if (null == j || null == k)
+  if (null == D || null == P)
 return null;
-  let Y = H.length > 0 ? (0, l.jsx)(I.F, {
+  let $ = B.length > 0 ? (0, l.jsx)(I.F, {
   paddingBottom: 16,
   paddingTop: 16,
-  rowData: H,
-  message: j,
-  originChannel: k,
-  handleToggleDestination: B,
-  selectedDestinations: P,
-  disableSelection: U
+  rowData: B,
+  message: D,
+  originChannel: P,
+  handleToggleDestination: V,
+  selectedDestinations: j,
+  disableSelection: Q
 }) : (0, l.jsxs)(s.ModalContent, {
   className: C.noResults,
   children: [
@@ -160,8 +191,8 @@ return null;
     })
   ]
 }),
-q = G <= 1 ? m.Z.Messages.SEND : m.Z.Messages.MESSAGES_SEND_SEPARATELY.format({
-  count: G
+ee = H <= 1 ? m.Z.Messages.SEND : m.Z.Messages.MESSAGES_SEND_SEPARATELY.format({
+  count: H
 });
   return (0, l.jsxs)(s.ModalRoot, {
 className: C.modal,
@@ -181,7 +212,7 @@ children: [
                 variant: 'heading-lg/semibold',
                 children: m.Z.Messages.MESSAGE_ACTION_FORWARD_TO
               }),
-              U ? (0, l.jsx)(s.Text, {
+              Q ? (0, l.jsx)(s.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-warning',
                 children: m.Z.Messages.MESSAGES_FORWARD_MAX_DESTINATION_COUNT.format({
@@ -192,34 +223,34 @@ children: [
           }),
           (0, l.jsx)(s.ModalCloseButton, {
             className: C.closeButton,
-            onClick: Q
+            onClick: K
           })
         ]
       }),
       (0, l.jsx)(s.SearchBar, {
-        ref: W,
+        ref: X,
         size: s.SearchBar.Sizes.MEDIUM,
-        query: v,
-        onChange: R,
-        onClear: z,
+        query: w,
+        onChange: W,
+        onClear: q,
         placeholder: m.Z.Messages.SEARCH,
         'aria-label': m.Z.Messages.SEARCH,
         autoFocus: !0
       })
     ]
   }),
-  Y,
+  $,
   (0, l.jsxs)(s.ModalFooter, {
     className: C.footer,
     children: [
       (0, l.jsx)(s.Button, {
-        submitting: O,
-        disabled: 0 === G,
-        onClick: K,
-        children: q
+        submitting: R,
+        disabled: 0 === H,
+        onClick: J,
+        children: ee
       }),
       (0, l.jsx)(s.Button, {
-        onClick: w,
+        onClick: Y,
         look: s.Button.Looks.OUTLINED,
         color: s.Button.Colors.PRIMARY,
         children: m.Z.Messages.COPY_LINK
