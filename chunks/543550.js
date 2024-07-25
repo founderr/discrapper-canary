@@ -168,32 +168,27 @@ case m.o2.USER_ONBOARDING:
 }
 
 function Z() {
-  let e = (0, m.GN)(e => e.started, o.Z),
-t = (0, m.GN)(e => e.game, o.Z),
+  let e = (0, m.GN)(e => e.game, o.Z),
 {
-  enableApplication: n
-} = (0, h.Fg)('ClanDiscoveryAdminContainer'),
-{
-  guilds: a
+  guilds: t
 } = (0, h.C3)({
   location: 'ClanDiscoveryAdminContainer',
   includeConverted: !0
 }),
-l = s.useMemo(() => a.filter(e => !(0, E.EJ)(e)), [a]),
-d = (0, _.ZP)(),
-u = s.useMemo(() => A(t, d), [
-  t,
-  d
-]),
-I = !e && n;
-  return 0 === a.length ? null : (0, i.jsx)('div', {
+n = s.useMemo(() => t.filter(e => !(0, E.EJ)(e)), [t]),
+a = (0, _.ZP)(),
+l = s.useMemo(() => A(e, a), [
+  e,
+  a
+]);
+  return 0 === t.length ? null : (0, i.jsx)('div', {
 className: N.container,
 children: (0, i.jsxs)(c.u2, {
   className: N.upsellScroller,
   fade: !0,
   children: [
     (0, i.jsxs)('div', {
-      className: r()(u, N.adminUpsell),
+      className: r()(l, N.adminUpsell),
       children: [
         (0, i.jsx)('div', {
           className: N.backgroundImageBlur
@@ -201,17 +196,15 @@ children: (0, i.jsxs)(c.u2, {
         (0, i.jsx)('div', {
           className: N.backgroundImageContent,
           children: (0, i.jsx)(g.Z, {
-            isBrowseButtonVisible: I,
-            selectedGame: t,
-            eligibleGuilds: l,
-            eligibleGuildsIncludingConverted: a
+            selectedGame: e,
+            eligibleGuilds: n,
+            eligibleGuildsIncludingConverted: t
           })
         })
       ]
     }),
     (0, i.jsx)(f.Z, {
-      title: C.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
-      subtitle: I ? C.Z.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
+      title: C.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE
     })
   ]
 })
