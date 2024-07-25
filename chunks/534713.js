@@ -15,11 +15,11 @@ c = null == e ? void 0 : e.get('response_type'),
 d = null !== (n = null == e ? void 0 : e.get('nonce')) && void 0 !== n ? n : void 0,
 _ = null !== (i = null == e ? void 0 : e.get('code_challenge')) && void 0 !== i ? i : void 0,
 E = null !== (a = null == e ? void 0 : e.get('code_challenge_method')) && void 0 !== a ? a : void 0;
-  return null == s || null == o || null == l || null == u || null == c || ((0, r.openOAuth2Modal)({
+  return null == s || null == o || null == u || null == c || ((0, r.openOAuth2Modal)({
 clientId: s,
 scopes: o,
 redirectUri: u,
-state: l,
+state: null != l ? l : void 0,
 responseType: c,
 nonce: d,
 codeChallenge: _,
