@@ -1,27 +1,27 @@
 n.d(t, {
   A9: function() {
-return X;
+return Q;
   },
   CT: function() {
 return G;
   },
   DA: function() {
-return $;
+return X;
   },
   Dd: function() {
-return q;
+return z;
   },
   Du: function() {
 return m;
   },
   HR: function() {
-return V;
+return F;
   },
   K_: function() {
-return W;
+return j;
   },
   LD: function() {
-return K;
+return W;
   },
   LK: function() {
 return D;
@@ -32,11 +32,8 @@ return a;
   NC: function() {
 return s;
   },
-  O6: function() {
-return F;
-  },
   OH: function() {
-return j;
+return Y;
   },
   Pv: function() {
 return T;
@@ -69,22 +66,22 @@ return I;
 return S;
   },
   dt: function() {
-return z;
+return K;
   },
   f4: function() {
 return b;
   },
   gQ: function() {
-return J;
+return $;
   },
   gh: function() {
 return B;
   },
   i1: function() {
-return Z;
+return H;
   },
   i6: function() {
-return H;
+return V;
   },
   jK: function() {
 return x;
@@ -111,10 +108,10 @@ return R;
 return P;
   },
   yi: function() {
-return Q;
+return q;
   },
   ym: function() {
-return Y;
+return Z;
   },
   zv: function() {
 return h.z;
@@ -277,15 +274,14 @@ let M = '700136079562375258',
 'Vietnamese'
   ]);
 
-function F(e) {
-  return !k.has(e) && !H.has(e) && !B.has(e);
-}
-
-function V(e, t) {
+function F(e, t) {
   var n;
-  return _().sortBy(e, (n = t, e => -(((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4 | (F(e) ? 1 : 0) << 3 | (w.has(e) ? 1 : 0) << 2 | (x.includes(e) ? 1 : 0) << 1 | (G.includes(e) ? 1 : 0) << 0)));
+  return _().sortBy(e, (n = t, e => {
+var t;
+return -(((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4 | ((t = e, k.has(t) || V.has(t) || B.has(t)) ? 0 : 1) << 3 | (w.has(e) ? 1 : 0) << 2 | (x.includes(e) ? 1 : 0) << 1 | (G.includes(e) ? 1 : 0) << 0);
+  }));
 }
-let H = new Set([
+let V = new Set([
   'anime',
   'fanart',
   'venting',
@@ -391,12 +387,12 @@ let H = new Set([
   'FNAF'
 ]);
 
-function Z() {
+function H() {
   let e = Object.keys(i).filter(e => isNaN(Number(e)));
   return i[e[Math.round(Math.random() * e.length - 1)]];
 }
 (l = i || (i = {}))[l.NIGHT_SKY = 0] = 'NIGHT_SKY', l[l.CASTLE = 1] = 'CASTLE', l[l.WORLD_MAP = 2] = 'WORLD_MAP', l[l.SEA_FOAM = 3] = 'SEA_FOAM', l[l.WARP_TUNNEL = 4] = 'WARP_TUNNEL', l[l.HOUSE = 5] = 'HOUSE', l[l.HEIGHTMAP = 6] = 'HEIGHTMAP', l[l.MESH = 7] = 'MESH', l[l.SPATTER = 8] = 'SPATTER', (u = a || (a = {})).BOULDER = 'Boulder', u.CASCADE = 'Cascade', u.THUNDER = 'Thunder', u.SOUL = 'Soul', u.MARSH = 'Marsh', u.VOLCANO = 'Volcano', u.EARTH = 'Earth', u.ZEPHYR = 'Zephyr';
-let Y = [{
+let Z = [{
   name: 'Boulder',
   primary: '#8c8d8d',
   secondary: '#d0d0d1'
@@ -437,9 +433,9 @@ let Y = [{
   secondary: '#78b6f0'
 }
   ],
-  j = Y[0].primary,
-  W = Y[0].secondary,
-  K = Object.fromEntries(Y.map(e => [
+  Y = Z[0].primary,
+  j = Z[0].secondary,
+  W = Object.fromEntries(Z.map(e => [
 e.name,
 {
   primary: e.primary,
@@ -447,15 +443,15 @@ e.name,
 }
   ]));
 
-function z() {
-  return Y[Math.floor(Math.random() * Y.length)];
+function K() {
+  return Z[Math.floor(Math.random() * Z.length)];
 }
 
-function q(e, t) {
+function z(e, t) {
   return null == e || null == t ? e === t : e.identityGuildId === t.identityGuildId && e.identityEnabled === t.identityEnabled && e.tag === t.tag && e.badge === t.badge;
 }
 
-function Q(e) {
+function q(e) {
   return null == e ? null : 'identityGuildId' in e ? e : {
 identityGuildId: e.identity_guild_id,
 identityEnabled: e.identity_enabled,
@@ -464,12 +460,12 @@ badge: e.badge
   };
 }
 
-function X(e) {
+function Q(e) {
   return {
 tag: e.tag
   };
 }
-let $ = {
+let X = {
 AGE_OF_EMPIRES_2: '720771660768084008',
 VALORANT: '700136079562375258',
 HELLDIVERS_2: '1205090671527071784',
@@ -481,7 +477,7 @@ BALDURS_GATE_3: '1137125502985961543',
 AIMLAB: '506950362461110273',
 HONKAI_STAR_RAIL: '1121201675240210523'
   },
-  J = new Map([
+  $ = new Map([
 '432980957394370572',
 '363445589247131668',
 '356869127241072640',
