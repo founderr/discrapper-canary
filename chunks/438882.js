@@ -12,12 +12,12 @@ throw Error('desiredLength must be a multiple of groupSize');
   if (n > 8)
 throw Error('groupSize must be less than or equal to '.concat(8));
   let r = BigInt(10 ** n),
-a = '';
-  for (let o = 0; o < t; o += n) {
+i = '';
+  for (let a = 0; a < t; a += n) {
 let t = BigInt(0);
 for (let r = n; r > 0; --r)
-  t = t << 8n | BigInt(e[o + (n - r)]);
-t %= r, a += t.toString().padStart(n, '0');
+  t = t << 8n | BigInt(e[a + (n - r)]);
+t %= r, i += t.toString().padStart(n, '0');
   }
-  return a;
+  return i;
 }

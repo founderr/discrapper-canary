@@ -1,9 +1,9 @@
-t.d(s, {
+n.d(s, {
   d: function() {
 return o;
   }
 });
-let n = (0, t(818083).B)({
+let t = (0, n(818083).B)({
   kind: 'user',
   id: '2024-07_email_change_reasoning_buttons',
   label: 'Email Change Reasoning Buttons',
@@ -20,7 +20,7 @@ config: {
 });
 
 function o(e) {
-  return !!n.useExperiment({
+  return !!t.useExperiment({
 location: e
   }, {
 autoTrackExposure: !0

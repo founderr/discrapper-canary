@@ -9,48 +9,48 @@ var a = t(735250),
   d = t(308083),
   u = t(689938),
   m = t(832116),
-  f = t(363778);
+  _ = t(363778);
 n.Z = e => {
   let {
 title: n,
 description: t,
 handleUpdate: i,
-gameApplicationIds: _,
-error: C
+gameApplicationIds: C,
+error: f
   } = e, {
 options: h,
 matchSorterOptions: x
-  } = (0, l.P)(), g = r.useMemo(() => Array.from(_), [_]), p = r.useCallback(e => {
+  } = (0, l.P)(), g = r.useMemo(() => Array.from(C), [C]), p = r.useCallback(e => {
 if (0 !== e.length)
   i(new Set(e));
-  }, [i]), T = _.size <= 1;
+  }, [i]), T = C.size <= 1;
   return (0, a.jsxs)('div', {
-className: s()(f.slideContent, m.container),
+className: s()(_.slideContent, m.container),
 children: [
   (0, a.jsx)(o.Heading, {
     variant: 'heading-xxl/medium',
-    className: f.title,
+    className: _.title,
     children: n
   }),
   (0, a.jsx)(o.Text, {
     variant: 'text-md/normal',
     color: 'header-secondary',
-    className: f.subtitle,
+    className: _.subtitle,
     children: t
   }),
   (0, a.jsx)('div', {
     className: m.inputContainer,
     children: (0, a.jsx)(o.FormItem, {
-      error: C,
+      error: f,
       children: (0, a.jsx)(o.SearchableSelect, {
         multi: !0,
         hidePills: !0,
-        wrapperClassName: s()(f.input, m.input),
+        wrapperClassName: s()(_.input, m.input),
         options: h,
         value: g,
         placeholder: u.Z.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
         onChange: p,
-        isDisabled: _.size === d.cm,
+        isDisabled: C.size === d.cm,
         matchSorterOptions: x,
         clearQueryOnSelect: !0,
         customPillContainerClassName: m.pills,
@@ -62,7 +62,7 @@ children: [
             ...n,
             children: (0, a.jsx)(c.Z, {
               applicationId: e.value,
-              imageContainerClassName: _.size > 1 ? m.clickableGame : void 0,
+              imageContainerClassName: C.size > 1 ? m.clickableGame : void 0,
               selected: !0,
               locked: T
             }, e.value)

@@ -52,7 +52,7 @@ let b = [{
 [m.O0b.PAUSED]: 'Paused',
 [m.O0b.PAUSE_PENDING]: 'Pause Pending'
   },
-  x = [{
+  y = [{
   label: 'Unpaid',
   value: m.O0b.UNPAID
 },
@@ -89,7 +89,7 @@ let b = [{
   value: m.O0b.PAUSE_PENDING
 }
   ],
-  y = {
+  x = {
 '511651880837840896': 'Nitro Monthly',
 '511651885459963904': 'Nitro Yearly',
 '511651871736201216': 'Nitro Classic Monthly',
@@ -197,8 +197,8 @@ children: [
             let e = r.planIdFromItems;
             if (null == e)
               throw Error('No plan id');
-            if (e in y)
-              return y[e];
+            if (e in x)
+              return x[e];
             throw Error('Unknown plan id');
           })(),
           ' '
@@ -225,7 +225,7 @@ children: [
       (0, a.jsx)(s.Select, {
         serialize: e => t(e),
         isSelected: e => e === r.status,
-        options: x,
+        options: y,
         select: n,
         popoutLayerContext: h.O$
       })

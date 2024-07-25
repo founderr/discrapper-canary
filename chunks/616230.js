@@ -13,9 +13,9 @@ var a = t(735250),
   d = t(863249),
   u = t(944163),
   m = t(246364),
-  f = t(571728),
-  _ = t(755340),
-  C = t(449226),
+  _ = t(571728),
+  C = t(755340),
+  f = t(449226),
   h = t(689938),
   x = t(941377),
   g = t(301660);
@@ -26,9 +26,9 @@ guild: n,
 isExpanded: i,
 emptyFormFields: s,
 hasTermsField: o
-  } = e, c = n.hasVerificationGate(), [u, m] = r.useState(c), f = e => {
+  } = e, c = n.hasVerificationGate(), [u, m] = r.useState(c), _ = e => {
 e.preventDefault(), e.stopPropagation();
-  }, _ = async e => {
+  }, C = async e => {
 try {
   m(e), await d.Z.enableVerificationForm(n.id, e);
 } catch {
@@ -44,13 +44,13 @@ e && s ? (0, l.openModalLazy)(async () => {
     header: h.Z.Messages.MEMBER_VERIFICATION_WARNING_TITLE,
     cancelText: h.Z.Messages.MEMBER_VERIFICATION_WARNING_CANCEL,
     confirmText: h.Z.Messages.MEMBER_VERIFICATION_WARNING_CONFIRM,
-    onConfirm: () => _(e),
+    onConfirm: () => C(e),
     children: (0, a.jsx)(l.Text, {
       variant: 'text-md/normal',
       children: h.Z.Messages.MEMBER_VERIFICATION_AUTOMATIC_WARNING
     })
   });
-}) : _(e);
+}) : C(e);
   }, T = () => {
 (0, l.openModalLazy)(async () => {
   let {
@@ -106,10 +106,10 @@ children: [
     children: i || u || !s ? (0, a.jsxs)(a.Fragment, {
       children: [
         (0, a.jsx)(l.Clickable, {
-          onMouseDown: f,
-          onMouseUp: f,
+          onMouseDown: _,
+          onMouseUp: _,
           onClick: e => {
-            f(e), T();
+            _(e), T();
           },
           children: (0, a.jsx)(l.Tooltip, {
             tooltipContentClassName: g.__invalid_tooltip,
@@ -122,7 +122,7 @@ children: [
             })
           })
         }),
-        (0, a.jsx)(C.Z, {
+        (0, a.jsx)(f.Z, {
           checked: u,
           onChange: () => p(!u)
         })
@@ -146,20 +146,20 @@ function I(e) {
   var n, t, i;
   let {
 guild: l,
-isClanContext: C = !1,
+isClanContext: f = !1,
 onFieldsSave: h,
 onDescriptionSave: I,
 verificationForm: b
-  } = e, [N, v] = r.useState(C), y = r.useRef(!1), S = r.useCallback(() => {
+  } = e, [N, v] = r.useState(f), y = r.useRef(!1), S = r.useCallback(() => {
 y.current = !0;
-  }, []), A = null !== (n = (0, f.A)({
+  }, []), A = null !== (n = (0, _.A)({
 guildId: l.id
   })) && void 0 !== n ? n : 0, M = (0, o.e7)([u.Z], () => null != b ? b : u.Z.get(l.id)), j = null !== (t = null == M ? void 0 : M.formFields) && void 0 !== t ? t : [];
   r.useEffect(() => {
 d.Z.fetchVerificationForm(l.id);
   }, [l.id]);
   let R = null != M,
-L = !C;
+L = !f;
   return (0, a.jsx)(c.Z, {
 renderHeader: L ? (0, a.jsx)(p, {
   guild: l,
@@ -169,20 +169,20 @@ renderHeader: L ? (0, a.jsx)(p, {
 }) : null,
 isExpanded: N,
 onExpand: () => v(!N),
-disableAnimation: C,
+disableAnimation: f,
 disableBackground: !L,
 children: (0, a.jsx)('div', {
   className: s()(x.itemBodyContainer, {
     [x.noPadding]: !L,
     [g.rulesScreeningItemsNoBorder]: !L
   }),
-  children: R && (0, a.jsx)(_.Z, {
+  children: R && (0, a.jsx)(C.Z, {
     guild: l,
     submittedGuildJoinRequestsCount: A,
     formFields: j,
     onFormFieldUpdate: S,
     hideVerificationLevelField: !0,
-    isClanContext: C,
+    isClanContext: f,
     onFieldsSave: null != h ? h : T,
     onDescriptionSave: null != I ? I : E,
     formDescription: null !== (i = null == M ? void 0 : M.description) && void 0 !== i ? i : ''

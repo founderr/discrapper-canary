@@ -20,7 +20,7 @@ n.delete(e), u(n);
   }, [
 u,
 c
-  ]), f = r.useCallback(e => {
+  ]), _ = r.useCallback(e => {
 if (c.size === l.c4)
   return;
 let n = new Set(c);
@@ -47,7 +47,7 @@ children: [
         icon: t,
         text: e,
         selected: n,
-        onClick: n ? m : f
+        onClick: n ? m : _
       }, e);
     })
   })
@@ -60,9 +60,9 @@ guildId: n,
 title: t,
 description: s,
 handleUpdate: m,
-progress: f,
-interests: _,
-optional: C = !1,
+progress: _,
+interests: C,
+optional: f = !1,
 hidePreview: h = !1
   } = e, x = r.useMemo(() => {
 let e = [];
@@ -72,10 +72,10 @@ return l.gh.forEach(n => e.push({
 })), e;
   }, []), g = r.useMemo(() => {
 var e;
-return null !== (e = null != _ ? _ : null == f ? void 0 : f.interests) && void 0 !== e ? e : new Set();
+return null !== (e = null != C ? C : null == _ ? void 0 : _.interests) && void 0 !== e ? e : new Set();
   }, [
-_,
-null == f ? void 0 : f.interests
+C,
+null == _ ? void 0 : _.interests
   ]), p = r.useMemo(() => Array.from(g), [g]), T = r.useMemo(() => p.filter(e => l.gh.has(e)), [p]), E = r.useCallback(e => {
 m(new Set([
   ...p.filter(e => !l.gh.has(e)),
@@ -94,7 +94,7 @@ g
   return (0, a.jsxs)('div', {
 className: d.slideContent,
 children: [
-  C && (0, a.jsx)(i.Text, {
+  f && (0, a.jsx)(i.Text, {
     variant: 'text-sm/medium',
     color: 'header-secondary',
     className: d.optionalTag,
@@ -152,9 +152,9 @@ children: [
       }),
       (0, a.jsx)('div', {
         className: d.fixedWidthSidebar,
-        children: null != f && p.length > 0 && !h && (0, a.jsx)(o.Z, {
+        children: null != _ && p.length > 0 && !h && (0, a.jsx)(o.Z, {
           guildId: n,
-          progress: f,
+          progress: _,
           traitsToHighlight: I,
           maskDescription: !0,
           onTraitClick: b

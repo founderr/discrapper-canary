@@ -57,9 +57,9 @@ user: t
 userId: t.id,
 channelId: s.id,
 location: 'GroupDMUserContextMenu'
-  }), $ = (0, Z.Z)(t.id, s.id), J = (0, m.Z)({
+  }), $ = (0, Z.Z)(t.id, s.id), X = (0, m.Z)({
 user: t
-  }), X = (0, u.Z)(null, t), ee = (0, S.Z)(t), en = (0, O.Z)({
+  }), J = (0, u.Z)(null, t), ee = (0, S.Z)(t), en = (0, O.Z)({
 user: t
   }), et = (0, T.Z)({
 id: t.id,
@@ -104,7 +104,7 @@ children: [
         ]
       }),
       (0, i.jsx)(r.MenuGroup, {
-        children: H && X
+        children: H && J
       }),
       (0, i.jsxs)(r.MenuGroup, {
         children: [
@@ -112,7 +112,7 @@ children: [
           U && Q,
           U && $,
           el,
-          H && J,
+          H && X,
           ee,
           H && en,
           U && eo

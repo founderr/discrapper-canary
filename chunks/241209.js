@@ -12,7 +12,7 @@ var a, n, i = t(735250),
   b = t(277634),
   f = t(986095);
 
-function x(e, r, t) {
+function y(e, r, t) {
   return r in e ? Object.defineProperty(e, r, {
 value: t,
 enumerable: !0,
@@ -20,7 +20,7 @@ configurable: !0,
 writable: !0
   }) : e[r] = t, e;
 }
-let y = new RegExp('https?://'.concat(null !== (a = window.GLOBAL_ENV.CDN_HOST) && void 0 !== a ? a : ''));
+let x = new RegExp('https?://'.concat(null !== (a = window.GLOBAL_ENV.CDN_HOST) && void 0 !== a ? a : ''));
 
 function k(e) {
   return 'string' == typeof e.content ? e.content : j(e.content);
@@ -85,7 +85,7 @@ image: {
     if (null != n && Array.isArray(n) && n.length >= 3) {
       let e = n[2];
       if ('string' == typeof e)
-        return null != e.match(y) ? n : null;
+        return null != e.match(x) ? n : null;
     }
     return !1;
   }
@@ -150,7 +150,7 @@ return (0, i.jsx)('div', {
 });
   }
 }
-x(w, 'rules', v), x(w, 'defaultProps', {
+y(w, 'rules', v), y(w, 'defaultProps', {
   parser: _,
   output: j
 }), r.Z = w;

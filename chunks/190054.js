@@ -4,36 +4,36 @@ return l;
   }
 }), n(47120);
 var r = n(735250),
-  a = n(470079),
-  o = n(120356),
-  s = n.n(o),
-  i = n(481060),
-  c = n(572004),
-  E = n(689938),
-  u = n(942955);
+  i = n(470079),
+  a = n(120356),
+  s = n.n(a),
+  o = n(481060),
+  E = n(572004),
+  u = n(689938),
+  c = n(942955);
 
 function l(e) {
   let {
 chunks: t,
 className: n,
-onCopy: o,
+onCopy: a,
 ...l
-  } = e, d = a.useMemo(() => null == t ? void 0 : t.join(' '), [t]), [_, f] = a.useState(!1), I = a.useCallback(() => {
-f(!0), (0, c.JG)(d), null == o || o();
+  } = e, d = i.useMemo(() => null == t ? void 0 : t.join(' '), [t]), [_, f] = i.useState(!1), I = i.useCallback(() => {
+f(!0), (0, E.JG)(d), null == a || a();
   }, [
-o,
+a,
 d
-  ]), S = _ ? i.CircleCheckIcon : i.CopyIcon;
-  return (0, r.jsx)(i.Clickable, {
-className: s()(u.container, n),
+  ]), S = _ ? o.CircleCheckIcon : o.CopyIcon;
+  return (0, r.jsx)(o.Clickable, {
+className: s()(c.container, n),
 onClick: I,
-children: (0, r.jsx)(i.Tooltip, {
-  text: _ ? E.Z.Messages.COPIED : E.Z.Messages.COPY,
+children: (0, r.jsx)(o.Tooltip, {
+  text: _ ? u.Z.Messages.COPIED : u.Z.Messages.COPY,
   children: e => (0, r.jsx)(S, {
     ...l,
     ...e,
     size: 'xxs',
-    color: _ ? i.tokens.colors.TEXT_POSITIVE : i.tokens.colors.INTERACTIVE_NORMAL
+    color: _ ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.INTERACTIVE_NORMAL
   })
 })
   });

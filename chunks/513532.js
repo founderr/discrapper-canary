@@ -14,21 +14,21 @@ n.Z = e => {
   let {
 guildId: n,
 error: t,
-inSettings: f = !1
-  } = e, _ = (0, r.e7)([l.Z], () => l.Z.getGuild(n)), C = (0, r.e7)([
+inSettings: _ = !1
+  } = e, C = (0, r.e7)([l.Z], () => l.Z.getGuild(n)), f = (0, r.e7)([
 c.Z,
 d.ZP
   ], () => {
 var e, t;
-return f ? c.Z.getState().settings.verificationForm : null === (t = d.ZP.getStateForGuild(n)) || void 0 === t ? void 0 : null === (e = t.progress) || void 0 === e ? void 0 : e.verificationForm;
+return _ ? c.Z.getState().settings.verificationForm : null === (t = d.ZP.getStateForGuild(n)) || void 0 === t ? void 0 : null === (e = t.progress) || void 0 === e ? void 0 : e.verificationForm;
   });
-  return null == _ ? null : (0, a.jsxs)('div', {
+  return null == C ? null : (0, a.jsxs)('div', {
 className: m.slideContent,
 children: [
   (0, a.jsx)(i.Heading, {
     variant: 'heading-xxl/medium',
     className: m.title,
-    children: f ? u.Z.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP : u.Z.Messages.CLAN_SETUP_APPLICATION_TITLE
+    children: _ ? u.Z.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP : u.Z.Messages.CLAN_SETUP_APPLICATION_TITLE
   }),
   (0, a.jsx)(i.Text, {
     variant: 'text-md/normal',
@@ -46,10 +46,10 @@ children: [
         children: t
       }),
       (0, a.jsx)(o.Z, {
-        guild: _,
+        guild: C,
         isClanContext: !0,
         onFieldsSave: (e, n) => (s.Z.updateVerificationFormFieldsLocal(e, [...n]), Promise.resolve()),
-        verificationForm: C
+        verificationForm: f
       })
     ]
   })

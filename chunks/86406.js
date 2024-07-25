@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return _;
+return C;
   }
 });
 var a = t(735250);
@@ -23,7 +23,7 @@ tint: 2
 0,
 0.2
   ],
-  f = [{
+  _ = [{
   base: 1,
   tint: 0
 },
@@ -33,25 +33,25 @@ tint: 2
 }
   ];
 
-function _(e) {
+function C(e) {
   let {
 width: n,
 height: t,
-primaryTintColor: _,
-secondaryTintColor: C,
+primaryTintColor: C,
+secondaryTintColor: f,
 ...h
   } = e, {
 primaryColorsTransformed: x,
 secondaryColorsTransformed: g
   } = (0, r.s)({
 primaryBaseColors: l,
-primaryTintColor: _,
+primaryTintColor: C,
 primaryTintLuminances: d,
 primaryLuminanceWeights: u,
 secondaryBaseColors: c,
-secondaryTintColor: C,
+secondaryTintColor: f,
 secondaryTintLuminances: m,
-secondaryLuminanceWeights: f
+secondaryLuminanceWeights: _
   }), {
 styleContent: p,
 containerId: T

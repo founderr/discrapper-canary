@@ -1,92 +1,92 @@
-n.d(t, {
+i.d(n, {
   Lb: function() {
-return l;
+return r;
   },
   ZF: function() {
 return u;
   },
   gP: function() {
-return c;
+return s;
   },
   mh: function() {
 return _;
   },
   sF: function() {
-return o;
+return l;
   },
   xp: function() {
 return d;
   }
 });
-var i = n(470079),
-  a = n(392711),
-  s = n(626135),
-  r = n(981631);
+var t = i(470079),
+  o = i(392711),
+  a = i(626135),
+  c = i(981631);
 
-function l(e, t, n) {
-  s.default.track(r.rMx.FORWARD_MESSAGE_STARTED, {
+function r(e, n, i) {
+  a.default.track(c.rMx.FORWARD_MESSAGE_STARTED, {
 channel_id: e,
-message_id: t,
-source: n
-  });
-}
-
-function o(e) {
-  let {
-channelId: t,
-messageId: n,
-numDestinationChanges: i,
-numQueryChanges: a
-  } = e;
-  s.default.track(r.rMx.FORWARD_MESSAGE_CANCELLED, {
-channel_id: t,
 message_id: n,
-num_destination_changes: i,
-num_query_changes: a
+source: i
   });
 }
 
-function c(e) {
+function l(e) {
   let {
-channelId: t,
-messageId: n,
-hasError: i,
-numDestinations: a,
-numDestinationChanges: l,
+channelId: n,
+messageId: i,
+numDestinationChanges: t,
 numQueryChanges: o
   } = e;
-  s.default.track(r.rMx.FORWARD_MESSAGE_SENT, {
-channel_id: t,
-message_id: n,
-has_error: i,
-num_destinations: a,
-num_destination_changes: l,
+  a.default.track(c.rMx.FORWARD_MESSAGE_CANCELLED, {
+channel_id: n,
+message_id: i,
+num_destination_changes: t,
 num_query_changes: o
   });
 }
 
-function d(e, t) {
-  s.default.track(r.rMx.FORWARD_COPY_LINK, {
+function s(e) {
+  let {
+channelId: n,
+messageId: i,
+hasError: t,
+numDestinations: o,
+numDestinationChanges: r,
+numQueryChanges: l
+  } = e;
+  a.default.track(c.rMx.FORWARD_MESSAGE_SENT, {
+channel_id: n,
+message_id: i,
+has_error: t,
+num_destinations: o,
+num_destination_changes: r,
+num_query_changes: l
+  });
+}
+
+function d(e, n) {
+  a.default.track(c.rMx.FORWARD_COPY_LINK, {
 channel_id: e,
-message_id: t
+message_id: n
   });
 }
 
 function u() {
-  return i.useMemo(() => (0, a.once)((e, t, n) => {
-s.default.track(r.rMx.FORWARD_ADD_RECIPIENT, {
+  return t.useMemo(() => (0, o.once)((e, n, i) => {
+a.default.track(c.rMx.FORWARD_ADD_RECIPIENT, {
   channel_id: e,
-  message_id: t,
-  has_query: n
+  message_id: n,
+  has_query: i
 });
   }), []);
 }
 
 function _() {
-  return i.useMemo(() => (0, a.once)((e, t) => {
-s.default.track(r.rMx.FORWARD_EDIT_SEARCH, {
+  return t.useMemo(() => (0, o.once)((e, n) => {
+a.default.track(c.rMx.FORWARD_EDIT_SEARCH, {
   channel_id: e,
-  message_id: t
+  message_id: n
 });
   }), []);
 }

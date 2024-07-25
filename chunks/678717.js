@@ -18,17 +18,17 @@ var a = t(735250),
   p = t(259580),
   b = t(31336),
   f = t(19759),
-  x = t(432877);
+  y = t(432877);
 t(381996);
-var y = t(392750),
+var x = t(392750),
   k = t(926976),
   v = t(592197),
   _ = t(860337),
   j = t(789654),
   w = t(691867),
   C = t(916790),
-  S = t(912072),
-  N = t(246992),
+  N = t(912072),
+  S = t(246992),
   T = t(442954),
   E = t(702904),
   Z = t(178821),
@@ -38,9 +38,9 @@ var y = t(392750),
   B = t(678639),
   P = t(351930),
   A = t(771751),
-  D = t(596768),
+  M = t(596768),
   L = t(621060),
-  M = t(689938),
+  D = t(689938),
   G = t(683597),
   U = t(979756);
 
@@ -62,7 +62,7 @@ className: G.resizeHandle
   });
 }
 
-function z() {
+function F() {
   var e;
   let r = n.useMemo(() => {
   let e = [{
@@ -73,7 +73,7 @@ function z() {
     {
       id: 'triggers',
       name: 'Triggers',
-      render: () => (0, a.jsx)(D.Z, {})
+      render: () => (0, a.jsx)(M.Z, {})
     },
     {
       id: 'stores',
@@ -113,14 +113,14 @@ function z() {
   }), e.push({
     id: 'overlays',
     name: 'Dev Overlays',
-    render: () => (0, a.jsx)(S.Z, {
-      devSettingsCategory: x.zU.OVERLAYS
+    render: () => (0, a.jsx)(N.Z, {
+      devSettingsCategory: y.zU.OVERLAYS
     })
   }), e.push({
     id: 'messaging',
     name: 'Messaging',
-    render: () => (0, a.jsx)(S.Z, {
-      devSettingsCategory: x.zU.MESSAGING
+    render: () => (0, a.jsx)(N.Z, {
+      devSettingsCategory: y.zU.MESSAGING
     })
   }), e.push({
     id: 'permissions',
@@ -133,7 +133,7 @@ function z() {
   }), e.push({
     id: 'affinity',
     name: 'Affinity',
-    render: () => (0, a.jsx)(y.Z, {})
+    render: () => (0, a.jsx)(x.Z, {})
   }), g.Z.isDeveloper && e.push({
     id: 'content_inventory',
     name: 'Content Inventory',
@@ -175,13 +175,13 @@ name: l.ImpressionNames.VIEW_PANEL_DEVTOOLS,
 properties: {
   panel: o
 }
-  }), (0, a.jsxs)(N.Gk, {
+  }), (0, a.jsxs)(S.Gk, {
 children: [
   (0, a.jsxs)(m.ZP, {
     className: U.headerBar,
     toolbar: (0, a.jsx)(m.ZP.Icon, {
       icon: s.CloseSmallIcon,
-      tooltip: M.Z.Messages.CLOSE,
+      tooltip: D.Z.Messages.CLOSE,
       onClick: b.SO
     }),
     children: [
@@ -196,14 +196,14 @@ children: [
   }),
   (0, a.jsx)(t, {}),
   i(),
-  (0, a.jsx)(N.Br, {
+  (0, a.jsx)(S.Br, {
     className: G.layerContainer
   })
 ]
   });
 }
 
-function F() {
+function z() {
   let e = n.useRef(null),
 r = (0, c.e7)([f.Z], () => f.Z.sidebarWidth),
 [t, i] = n.useState(null),
@@ -230,7 +230,7 @@ children: [
   }),
   (0, a.jsx)('div', {
     className: G.sidebarContent,
-    children: (0, a.jsx)(z, {})
+    children: (0, a.jsx)(F, {})
   })
 ]
   });
@@ -242,7 +242,7 @@ function V() {
 className: o()(G.container, G.mobileContainerExpanded),
 children: (0, a.jsx)('div', {
   className: G.sidebarContent,
-  children: (0, a.jsx)(z, {})
+  children: (0, a.jsx)(F, {})
 })
   }) : (0, a.jsx)('div', {
 className: G.container,
@@ -271,5 +271,5 @@ function Y(e) {
   let {
 mobile: r
   } = e;
-  return r ? (0, a.jsx)(V, {}) : (0, a.jsx)(F, {});
+  return r ? (0, a.jsx)(V, {}) : (0, a.jsx)(z, {});
 }

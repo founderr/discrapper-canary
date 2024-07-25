@@ -41,7 +41,7 @@ children: (0, a.jsx)(d.Z, {
 })
   });
 }
-let x = [{
+let y = [{
 key: 'name',
 cellClassName: p.__invalid_eventColumn,
 render(e) {
@@ -51,7 +51,7 @@ render(e) {
   return r.getName();
 }
   }],
-  y = [{
+  x = [{
   id: 'local',
   name: 'Local Variables',
   render(e) {
@@ -96,7 +96,7 @@ initialHeight: t
 TabBar: n,
 renderSelectedTab: i
   } = (0, m.Z)({
-tabs: y
+tabs: x
   }, []);
   return (0, a.jsxs)(u.Z, {
 className: p.subPanel,
@@ -157,7 +157,7 @@ children: [
   (0, a.jsx)(c.ScrollerThin, {
     className: p.tableContainer,
     children: (0, a.jsx)(h.Z, {
-      columns: x,
+      columns: y,
       data: s,
       selectedRowKey: d,
       onClickRow: u

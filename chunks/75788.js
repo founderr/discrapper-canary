@@ -1,43 +1,43 @@
-t.d(s, {
+n.d(s, {
   Z: function() {
-return d;
+return N;
   }
-}), t(47120);
-var n = t(735250),
-  o = t(470079),
-  a = t(442837),
-  l = t(481060),
-  r = t(479531),
-  i = t(393869),
-  E = t(25990),
-  _ = t(689938),
-  N = t(660817);
+}), n(47120);
+var t = n(735250),
+  o = n(470079),
+  a = n(442837),
+  l = n(481060),
+  r = n(479531),
+  i = n(393869),
+  E = n(25990),
+  _ = n(689938),
+  d = n(660817);
 
-function d(e) {
+function N(e) {
   var s;
   let {
-isSlideReady: t,
-error: d,
+isSlideReady: n,
+error: N,
 setEmailToken: c,
-setError: A,
-onNext: u,
+setError: u,
+onNext: A,
 onClose: C
   } = e, [M, S] = o.useState(!1), [m, I] = o.useState(''), [x, T] = o.useState(!1), R = (0, a.e7)([E.Z], () => E.Z.getErrors()), O = o.useRef(null);
   o.useEffect(() => {
-if (t) {
+if (n) {
   var e;
   null === (e = O.current) || void 0 === e || e.focus();
 }
-  }, [t]);
+  }, [n]);
   let h = async e => {
-e.preventDefault(), A(null), S(!0);
+e.preventDefault(), u(null), S(!0);
 try {
   let {
     token: e
   } = await (0, i.w)(m);
-  c(e), u();
+  c(e), A();
 } catch (e) {
-  A(new r.Z(e).getAnyErrorMessage());
+  u(new r.Z(e).getAnyErrorMessage());
 } finally {
   S(!1);
 }
@@ -54,44 +54,44 @@ if (!x) {
   }
 }
   };
-  return (0, n.jsxs)('form', {
+  return (0, t.jsxs)('form', {
 onSubmit: h,
 children: [
-  (0, n.jsxs)(l.ModalHeader, {
+  (0, t.jsxs)(l.ModalHeader, {
     separator: !1,
-    className: N.header,
+    className: d.header,
     children: [
-      (0, n.jsx)(l.Heading, {
-        className: N.title,
+      (0, t.jsx)(l.Heading, {
+        className: d.title,
         variant: 'heading-xl/extrabold',
         children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_TITLE_DESKTOP
       }),
-      (0, n.jsx)(l.Text, {
+      (0, t.jsx)(l.Text, {
         color: 'header-secondary',
         variant: 'text-md/normal',
-        className: N.subtitle,
+        className: d.subtitle,
         children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_SUBTITLE
       }),
-      (0, n.jsx)(l.ModalCloseButton, {
+      (0, t.jsx)(l.ModalCloseButton, {
         onClick: C,
-        className: N.modalCloseButton
+        className: d.modalCloseButton
       })
     ]
   }),
-  (0, n.jsxs)(l.ModalContent, {
-    className: N.content,
+  (0, t.jsxs)(l.ModalContent, {
+    className: d.content,
     children: [
-      (0, n.jsx)(l.FormItem, {
+      (0, t.jsx)(l.FormItem, {
         title: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_PROMPT,
-        error: null != d ? d : null == R ? void 0 : null === (s = R.email_token) || void 0 === s ? void 0 : s[0],
-        children: (0, n.jsx)(l.TextInput, {
+        error: null != N ? N : null == R ? void 0 : null === (s = R.email_token) || void 0 === s ? void 0 : s[0],
+        children: (0, t.jsx)(l.TextInput, {
           value: m,
           onChange: I,
           inputRef: O
         })
       }),
-      (0, n.jsx)(l.Text, {
-        className: N.help,
+      (0, t.jsx)(l.Text, {
+        className: d.help,
         variant: 'text-sm/normal',
         children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_RESEND.format({
           onResend: L
@@ -99,8 +99,8 @@ children: [
       })
     ]
   }),
-  (0, n.jsx)(l.ModalFooter, {
-    children: (0, n.jsx)(l.Button, {
+  (0, t.jsx)(l.ModalFooter, {
+    children: (0, t.jsx)(l.Button, {
       type: 'submit',
       color: l.Button.Colors.BRAND,
       size: l.Button.Sizes.MEDIUM,

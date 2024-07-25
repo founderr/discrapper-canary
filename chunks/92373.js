@@ -13,9 +13,9 @@ n.Z = function(e) {
 applicationId: n,
 imageContainerClassName: t,
 onClick: i,
-selected: f,
-locked: _ = !1,
-otherGamesCount: C = 0
+selected: _,
+locked: C = !1,
+otherGamesCount: f = 0
   } = e, h = (0, o.useToken)(o.tokens.colors.WHITE), {
 isFetching: x,
 coverImageUrl: g
@@ -51,25 +51,25 @@ children: [
     onClick: T,
     className: s()(t, x ? m.gameImageLoading : void 0, m.gameImageBackground),
     children: [
-      f && (0, a.jsx)('div', {
+      _ && (0, a.jsx)('div', {
         className: m.checkBackground,
         children: (0, a.jsx)(o.CircleCheckIcon, {
           size: 'md',
           color: 'currentColor',
           secondaryColor: h.hex(),
           className: s()(m.selectedGameCheck, {
-            [m.selectedGameCheckLocked]: _
+            [m.selectedGameCheckLocked]: C
           })
         })
       }),
       E,
-      C > 0 && (0, a.jsx)('div', {
+      f > 0 && (0, a.jsx)('div', {
         className: m.remainingGame,
         children: (0, a.jsx)(o.Text, {
           variant: 'text-xs/normal',
           color: 'always-white',
           children: u.Z.Messages.COUNT_REMAINING.format({
-            count: C
+            count: f
           })
         })
       })
@@ -81,7 +81,7 @@ children: [
     color: 'header-primary',
     children: [
       p,
-      _ && (0, a.jsx)(o.LockIcon, {
+      C && (0, a.jsx)(o.LockIcon, {
         size: 'xxs'
       })
     ]

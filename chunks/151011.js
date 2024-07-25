@@ -19,7 +19,7 @@ let m = e => (0, r.jsx)('div', {
   className: e.className,
   children: e.children
 });
-class f extends(a = i.PureComponent) {
+class _ extends(a = i.PureComponent) {
   isSortable(e) {
 return null != e.sort && !1 !== e.sort;
   }
@@ -39,8 +39,8 @@ let {
   headerCellClassName: i,
   headerClassName: s,
   sortedHeaderCellClassName: u,
-  stickyHeader: f
-} = this.props, _ = e.map(e => {
+  stickyHeader: _
+} = this.props, C = e.map(e => {
   let s = null != e.renderHeader ? e.renderHeader(e, n) : e.key,
     m = t === c.sHY.ASCENDING ? l.ChevronSmallUpIcon : l.ChevronSmallDownIcon;
   return (0, r.jsx)(l.Clickable, {
@@ -61,9 +61,9 @@ let {
 });
 return (0, r.jsx)(m, {
   className: o()(s, d.row, {
-    [d.stickyHeader]: f
+    [d.stickyHeader]: _
   }),
-  children: _
+  children: C
 });
   }
   renderBody() {
@@ -77,9 +77,9 @@ let {
   rowClassName: l,
   cellProps: u,
   rowProps: m,
-  rowComponent: f,
-  cellComponent: _
-} = this.props, C = n;
+  rowComponent: _,
+  cellComponent: C
+} = this.props, f = n;
 if (t) {
   let t = null != a ? e.find(e => {
       let {
@@ -90,16 +90,16 @@ if (t) {
     i = [...n],
     s = null != t && t.sort,
     o = null != t && null != a && this.isSortable(t) ? i.sort('function' == typeof s ? (e, n) => s(e, n, r) : this.getDefaultSort(a)) : i;
-  C = null != t && r === c.sHY.DESCENDING ? o.reverse() : o;
+  f = null != t && r === c.sHY.DESCENDING ? o.reverse() : o;
 }
-return C.map((n, t) => {
-  let a = e.map(e => (0, i.createElement)(_, {
+return f.map((n, t) => {
+  let a = e.map(e => (0, i.createElement)(C, {
     ...u,
     key: e.key,
     item: n,
     className: o()(s, e.bodyCellClassName, e.cellClassName)
   }, null != e.render ? e.render(n, u, t) : n[e.key]));
-  return (0, i.createElement)(f, {
+  return (0, i.createElement)(_, {
     ...m,
     key: n.key,
     item: n,
@@ -132,7 +132,7 @@ super(...e), u(this, 'handleSort', e => {
 });
   }
 }
-u(f, 'SortDirection', c.sHY), u(f, 'defaultProps', {
+u(_, 'SortDirection', c.sHY), u(_, 'defaultProps', {
   initialSortDirection: c.sHY.ASCENDING,
   rowHeaderComponent: m,
   rowComponent: e => (0, r.jsx)('div', {
@@ -146,4 +146,4 @@ children: e.children
   hasHeader: !0,
   sortData: !0,
   stickyHeader: !1
-}), n.Z = f;
+}), n.Z = _;

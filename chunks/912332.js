@@ -1,70 +1,70 @@
-n.d(t, {
+i.d(n, {
   Np: function() {
-return c;
+return s;
   },
   l8: function() {
-return l;
+return r;
   },
   mc: function() {
-return o;
+return l;
   }
 });
-var i = n(735250);
-n(470079);
-var a = n(481060),
-  s = n(822869);
-let r = 'forward-modal';
+var t = i(735250);
+i(470079);
+var o = i(481060),
+  a = i(822869);
+let c = 'forward-modal';
 
-function l(e) {
+function r(e) {
   let {
-messageId: t,
-channelId: l,
-source: o,
-initialSelectedDestinations: c = [],
+messageId: n,
+channelId: r,
+source: l,
+initialSelectedDestinations: s = [],
 forwardOptions: d,
 onRequestSent: u
   } = e;
-  (0, s.Lb)(l, t, o), (0, a.openModalLazy)(async () => {
+  (0, a.Lb)(r, n, l), (0, o.openModalLazy)(async () => {
 let {
   ForwardModal: e
 } = await Promise.all([
-  n.e('6380'),
-  n.e('89900')
-]).then(n.bind(n, 930864));
-return n => (0, i.jsx)(e, {
-  ...n,
-  channelId: l,
-  messageId: t,
-  initialSelectedDestinations: c,
+  i.e('6380'),
+  i.e('89900')
+]).then(i.bind(i, 930864));
+return i => (0, t.jsx)(e, {
+  ...i,
+  channelId: r,
+  messageId: n,
+  initialSelectedDestinations: s,
   forwardOptions: d,
   onRequestSent: u
 });
   }, {
-modalKey: r
+modalKey: c
   });
 }
 
-function o() {
-  (0, a.closeModal)(r);
+function l() {
+  (0, o.closeModal)(c);
 }
 
-function c(e) {
+function s(e) {
   let {
-messageId: t,
-channelId: s,
-failedDestinations: r,
-forwardOptions: l
+messageId: n,
+channelId: a,
+failedDestinations: c,
+forwardOptions: r
   } = e;
-  (0, a.openModalLazy)(async () => {
+  (0, o.openModalLazy)(async () => {
 let {
   ForwardFailedAlertModal: e
-} = await n.e('86590').then(n.bind(n, 384331));
-return n => (0, i.jsx)(e, {
-  ...n,
-  messageId: t,
-  channelId: s,
-  failedDestinations: r,
-  forwardOptions: l
+} = await i.e('86590').then(i.bind(i, 384331));
+return i => (0, t.jsx)(e, {
+  ...i,
+  messageId: n,
+  channelId: a,
+  failedDestinations: c,
+  forwardOptions: r
 });
   });
 }

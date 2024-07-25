@@ -19,9 +19,9 @@ var n = t(120356),
   p = t(233608),
   b = t(71080),
   f = t(650679),
-  x = t(979756);
+  y = t(979756);
 
-function y(e) {
+function x(e) {
   let {
 title: r,
 can: t
@@ -61,23 +61,23 @@ C = Object.values(null != j ? j : {}).map(e => {
     title: r,
     flag: t
   } = e, n = o.e$(k, t);
-  return (0, a.jsx)(y, {
+  return (0, a.jsx)(x, {
     title: r,
     can: n
   }, r);
 }),
-S = Object.values(null != w ? w : {}).map(e => {
+N = Object.values(null != w ? w : {}).map(e => {
   let {
     title: r,
     flag: t
   } = e, n = o.e$(v, t);
-  return (0, a.jsx)(y, {
+  return (0, a.jsx)(x, {
     title: r,
     can: n
   }, r);
 });
   return (0, a.jsx)('div', {
-className: i()(x.panel, f.panel),
+className: i()(y.panel, f.panel),
 children: (0, a.jsxs)('div', {
   className: f.panelInner,
   children: [
@@ -98,7 +98,7 @@ children: (0, a.jsxs)('div', {
           variant: 'heading-md/semibold',
           children: null != n ? 'Permissions in '.concat(n.name) : 'No guild selected'
         }),
-        S
+        N
       ]
     })
   ]

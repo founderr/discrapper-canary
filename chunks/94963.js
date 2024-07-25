@@ -9,9 +9,9 @@ var a = t(735250),
   d = t(442837),
   u = t(481060),
   m = t(231467),
-  f = t(650774),
-  _ = t(430824),
-  C = t(175557),
+  _ = t(650774),
+  C = t(430824),
+  f = t(175557),
   h = t(688298),
   x = t(995119),
   g = t(116175),
@@ -103,13 +103,13 @@ brandPrimaryColor: M,
 brandSecondaryColor: j,
 badgePrimaryColor: R,
 badgeSecondaryColor: L
-  } = y, O = (0, d.e7)([_.Z], () => _.Z.getGuild(S)), Z = null !== (n = (0, d.e7)([f.Z], () => f.Z.getMemberCount(S))) && void 0 !== n ? n : 0, D = r.useMemo(() => ({
+  } = y, O = (0, d.e7)([C.Z], () => C.Z.getGuild(S)), Z = null !== (n = (0, d.e7)([_.Z], () => _.Z.getMemberCount(S))) && void 0 !== n ? n : 0, k = r.useMemo(() => ({
 primary: null != M ? M : p.OH,
 secondary: null != j ? j : p.K_
   }), [
 M,
 j
-  ]), k = r.useMemo(() => {
+  ]), D = r.useMemo(() => {
 if (M === R && j === L)
   return 1;
 for (let e = 0; e < p.ym.length; e++)
@@ -123,28 +123,28 @@ R,
 L,
 y.brandPrimaryColor,
 y.brandSecondaryColor
-  ]), [P, w] = r.useState(!1), F = 0 === k, B = 1 === k, G = r.useMemo(() => {
+  ]), [P, w] = r.useState(!1), F = 0 === D, B = 1 === D, G = r.useMemo(() => {
 if (F)
-  return D;
+  return k;
 if (B)
   return {
     primary: null != R ? R : g.Nh,
     secondary: null != L ? L : g.vY
   };
 {
-  let e = p.ym[k - 2];
+  let e = p.ym[D - 2];
   return {
     primary: e.primary,
     secondary: e.secondary
   };
 }
   }, [
-D,
+k,
 B,
 F,
 R,
 L,
-k
+D
   ]), U = r.useCallback(() => {
 let e = b[Math.floor(Math.random() * b.length)].bannerKind,
   n = s().random().hex();
@@ -203,7 +203,7 @@ children: [
                   children: [
                     (0, a.jsx)(h.Z, {
                       showSecondaryColor: !0,
-                      palette: D,
+                      palette: k,
                       onPrimaryColorChange: e => {
                         v({
                           brandPrimaryColor: (0, c.Rf)(e)
@@ -222,7 +222,7 @@ children: [
                           w(e => !e);
                         },
                         className: l()(E.brandItemContainer, {
-                          [E.brandItemContainerSelected]: 0 === k
+                          [E.brandItemContainerSelected]: 0 === D
                         }),
                         children: (0, a.jsx)(N, {
                           name: T.Z.Messages.CLAN_LOOK_PRESET_CUSTOM,
@@ -238,7 +238,7 @@ children: [
                         });
                       },
                       className: l()(E.brandItemContainer, {
-                        [E.brandItemContainerSelected]: 1 === k
+                        [E.brandItemContainerSelected]: 1 === D
                       }),
                       children: (0, a.jsx)(N, {
                         name: T.Z.Messages.CLAN_LOOK_PRESET_BADGE,
@@ -255,7 +255,7 @@ children: [
                         });
                       },
                       className: l()(E.brandItemContainer, {
-                        [E.brandItemContainerSelected]: k === n + 2
+                        [E.brandItemContainerSelected]: D === n + 2
                       }),
                       children: (0, a.jsx)(N, {
                         name: e.name,
@@ -308,7 +308,7 @@ children: [
       (0, a.jsx)('div', {
         className: E.clanCardWrapper,
         children: (0, a.jsx)(m.xV, {
-          bannerComponent: (0, a.jsx)(C.Z, {
+          bannerComponent: (0, a.jsx)(f.Z, {
             banner: A,
             primaryTintColor: G.primary,
             secondaryTintColor: G.secondary,

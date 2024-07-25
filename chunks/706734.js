@@ -1,54 +1,54 @@
-t.d(s, {
+n.d(s, {
   Z: function() {
-return d;
+return N;
   }
 });
-var n = t(735250);
-t(470079);
-var o = t(481060),
-  a = t(488889),
-  l = t(626135),
-  r = t(981631),
-  i = t(259076),
-  E = t(689938),
-  _ = t(103877),
-  N = t(660817);
+var t = n(735250);
+n(470079);
+var o = n(481060),
+  a = n(488889),
+  l = n(626135),
+  r = n(981631),
+  i = n(259076),
+  E = n(689938),
+  _ = n(103877),
+  d = n(660817);
 
-function d(e) {
+function N(e) {
   let {
 onNext: s,
-onClose: t,
-reason: d,
+onClose: n,
+reason: N,
 onReasonChange: c
-  } = e, A = i.zf.map(e => ({
+  } = e, u = i.zf.map(e => ({
 value: e,
 name: (0, a.S)(e)
   }));
-  return (0, n.jsxs)('form', {
+  return (0, t.jsxs)('form', {
 onSubmit: s,
 children: [
-  (0, n.jsxs)(o.ModalHeader, {
+  (0, t.jsxs)(o.ModalHeader, {
     separator: !1,
-    className: N.header,
+    className: d.header,
     children: [
-      (0, n.jsx)(o.Heading, {
+      (0, t.jsx)(o.Heading, {
         variant: 'heading-xl/extrabold',
         children: E.Z.Messages.EMAIL_CHANGE_REASONING_HEADER
       }),
-      (0, n.jsx)(o.ModalCloseButton, {
-        onClick: t,
-        className: N.modalCloseButton
+      (0, t.jsx)(o.ModalCloseButton, {
+        onClick: n,
+        className: d.modalCloseButton
       })
     ]
   }),
-  (0, n.jsx)(o.ModalContent, {
+  (0, t.jsx)(o.ModalContent, {
     className: _.content,
-    children: (0, n.jsx)(o.RadioGroup, {
+    children: (0, t.jsx)(o.RadioGroup, {
       radioPosition: 'right',
       radioItemClassName: _.radioItem,
       size: o.RadioGroup.Sizes.NOT_SET,
-      value: d,
-      options: A,
+      value: N,
+      options: u,
       onChange: e => {
         let {
           value: s
@@ -59,20 +59,20 @@ children: [
       }
     })
   }),
-  (0, n.jsxs)(o.ModalFooter, {
-    className: N.modalFooter,
+  (0, t.jsxs)(o.ModalFooter, {
+    className: d.modalFooter,
     children: [
-      (0, n.jsx)(o.Button, {
+      (0, t.jsx)(o.Button, {
         color: o.Button.Colors.BRAND,
-        disabled: null == d,
+        disabled: null == N,
         size: o.Button.Sizes.MEDIUM,
         onClick: s,
         children: E.Z.Messages.CONTINUE
       }),
-      (0, n.jsx)(o.Button, {
+      (0, t.jsx)(o.Button, {
         look: o.Button.Looks.LINK,
         color: o.Button.Colors.PRIMARY,
-        onClick: t,
+        onClick: n,
         children: E.Z.Messages.CANCEL
       })
     ]

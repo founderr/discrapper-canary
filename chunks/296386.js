@@ -1,6 +1,6 @@
 t.d(n, {
   J9: function() {
-return _;
+return C;
   },
   K0: function() {
 return E;
@@ -18,7 +18,7 @@ return m;
 return p;
   },
   W1: function() {
-return C;
+return f;
   },
   aC: function() {
 return d;
@@ -36,7 +36,7 @@ return h;
 return g;
   },
   zH: function() {
-return f;
+return _;
   }
 });
 var a = t(544891),
@@ -79,11 +79,11 @@ let {
   is_published: d,
   reasons_to_join: u,
   social_links: m,
-  about: f
+  about: _
 } = (await a.tn.get({
   url: l.ANM.GUILD_DISCOVERY_METADATA(e),
   oldFormErrors: !0
-})).body, _ = {
+})).body, C = {
   primaryCategoryId: n,
   secondaryCategoryIds: t,
   keywords: i,
@@ -93,13 +93,13 @@ let {
   isPublished: d,
   reasonsToJoin: u,
   socialLinks: m,
-  about: f
+  about: _
 };
 return r.Z.dispatch({
   type: 'GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER',
   guildId: e,
-  metadata: _
-}), _;
+  metadata: C
+}), C;
   } catch (e) {
 r.Z.dispatch({
   type: 'GUILD_DISCOVERY_METADATA_FETCH_FAIL'
@@ -131,7 +131,7 @@ primaryCategoryId: n
   });
 }
 
-function f(e, n) {
+function _(e, n) {
   r.Z.dispatch({
 type: 'GUILD_UPDATE_DISCOVERY_METADATA',
 guildId: e,
@@ -139,7 +139,7 @@ keywords: n
   });
 }
 
-function _(e, n) {
+function C(e, n) {
   r.Z.dispatch({
 type: 'GUILD_UPDATE_DISCOVERY_METADATA',
 guildId: e,
@@ -147,7 +147,7 @@ emojiDiscoverabilityEnabled: n
   });
 }
 
-function C(e, n) {
+function f(e, n) {
   r.Z.dispatch({
 type: 'GUILD_UPDATE_DISCOVERY_METADATA',
 guildId: e,
@@ -189,13 +189,13 @@ partnerApplicationTimestamp: c,
 isPublished: d,
 reasonsToJoin: u,
 socialLinks: m,
-about: f
+about: _
   } = e;
   try {
 let {
   primary_category_id: e,
-  category_ids: _,
-  keywords: C,
+  category_ids: C,
+  keywords: f,
   emoji_discoverability_enabled: h,
   partner_actioned_timestamp: x,
   partner_application_timestamp: g,
@@ -214,7 +214,7 @@ let {
     is_published: d,
     reasons_to_join: u,
     social_links: m,
-    about: f
+    about: _
   },
   oldFormErrors: !0
 })).body;
@@ -223,8 +223,8 @@ r.Z.dispatch({
   guildId: n,
   metadata: {
     primaryCategoryId: e,
-    secondaryCategoryIds: _,
-    keywords: C,
+    secondaryCategoryIds: C,
+    keywords: f,
     emojiDiscoverabilityEnabled: h,
     partnerActionedTimestamp: x,
     partnerApplicationTimestamp: g,

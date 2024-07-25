@@ -13,10 +13,10 @@ var a = t(735250),
   d = t(430824),
   u = t(214715),
   m = t(308083),
-  f = t(689938),
-  _ = t(120713);
+  _ = t(689938),
+  C = t(120713);
 
-function C(e) {
+function f(e) {
   let {
 trait: n,
 selected: t,
@@ -25,8 +25,8 @@ onClick: i
   return (0, a.jsx)(u.Z, {
 variant: 'text-xs/semibold',
 color: o ? 'text-muted' : 'interactive-active',
-className: s()(_.trait, {
-  [_.strikethrough]: o
+className: s()(C.trait, {
+  [C.strikethrough]: o
 }),
 text: n,
 selected: t,
@@ -55,10 +55,10 @@ brandPrimaryColor: N
   return (0, a.jsxs)('div', {
 children: [
   (0, a.jsxs)('div', {
-    className: s()(_.description, h ? _.descriptionBorderMask : void 0),
+    className: s()(C.description, h ? C.descriptionBorderMask : void 0),
     children: [
       (0, a.jsx)('div', {
-        className: h ? _.descriptionMask : void 0
+        className: h ? C.descriptionMask : void 0
       }),
       (0, a.jsx)(l.Heading, {
         variant: 'heading-md/medium',
@@ -67,22 +67,22 @@ children: [
         children: null == p ? void 0 : p.name
       }),
       (0, a.jsxs)('div', {
-        className: _.clanInfoRow,
+        className: C.clanInfoRow,
         children: [
           (0, a.jsx)(l.Text, {
             variant: 'text-xxs/normal',
-            className: _.clanInfoItem,
+            className: C.clanInfoItem,
             children: (0, a.jsx)('span', {
               role: 'img',
-              'aria-label': f.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
+              'aria-label': _.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
               children: '\uD83C\uDFAE'
             })
           }),
           (0, a.jsx)(l.Text, {
             variant: 'text-xs/normal',
             color: 'text-secondary',
-            className: _.clanInfoItem,
-            children: null !== (n = (0, m.mv)(I)) && void 0 !== n ? n : f.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
+            className: C.clanInfoItem,
+            children: null !== (n = (0, m.mv)(I)) && void 0 !== n ? n : _.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
           }),
           null != p && (0, a.jsx)(c.cS, {
             wildcardDescriptors: b,
@@ -93,36 +93,36 @@ children: [
       (0, a.jsx)(l.Text, {
         variant: 'text-xs/medium',
         color: 'header-secondary',
-        className: _.descriptionText,
-        children: (null == E ? void 0 : E.length) > 0 ? E : f.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
+        className: C.descriptionText,
+        children: (null == E ? void 0 : E.length) > 0 ? E : _.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
       })
     ]
   }),
   (0, a.jsxs)('div', {
-    className: s()(_.tagsContainer, x ? _.traitsBorderMask : void 0),
+    className: s()(C.tagsContainer, x ? C.traitsBorderMask : void 0),
     children: [
       (0, a.jsx)('div', {
-        className: x ? _.traitsMask : void 0
+        className: x ? C.traitsMask : void 0
       }),
       (0, a.jsxs)('div', {
-        className: _.tagsCount,
+        className: C.tagsCount,
         children: [
           (0, a.jsx)(l.TagsIcon, {
             size: 'xxs',
-            className: _.tags
+            className: C.tags
           }),
           (0, a.jsx)(l.Text, {
             variant: 'text-xs/semibold',
             color: 'text-muted',
-            children: f.Z.Messages.CLAN_SETUP_NUM_TRAITS.format({
+            children: _.Z.Messages.CLAN_SETUP_NUM_TRAITS.format({
               n: y.length
             })
           })
         ]
       }),
       (0, a.jsx)('div', {
-        className: _.traits,
-        children: y.map(e => (0, a.jsx)(C, {
+        className: C.traits,
+        children: y.map(e => (0, a.jsx)(f, {
           trait: e,
           selected: S.has(e),
           onClick: g

@@ -18,8 +18,8 @@ var a = t(735250),
   p = t(120816),
   b = t(31336),
   f = t(257785),
-  x = t(484036),
-  y = t(681619),
+  y = t(484036),
+  x = t(681619),
   k = t(621060),
   v = t(689938),
   _ = t(813064),
@@ -58,7 +58,7 @@ children: (0, a.jsx)('dl', {
   });
 }
 
-function S(e) {
+function N(e) {
   let {
 name: r,
 children: t
@@ -76,7 +76,7 @@ children: [
 ]
   });
 }
-let N = [{
+let S = [{
 id: 'details',
 name: 'Details',
 render: e => {
@@ -130,7 +130,7 @@ render: e => {
       (0, a.jsx)(C, {
         children: Object.entries(t).map(e => {
           let [r, t] = e;
-          return (0, a.jsx)(S, {
+          return (0, a.jsx)(N, {
             name: ''.concat(r, ':'),
             children: null != t ? (0, a.jsx)('code', {
               children: JSON.stringify(t)
@@ -191,7 +191,7 @@ h = l.find(e => e.key === c),
   TabBar: m,
   renderSelectedTab: g
 } = (0, k.Z)({
-  tabs: N
+  tabs: S
 }, []);
   return (0, a.jsxs)('div', {
 ref: e,
@@ -238,14 +238,14 @@ children: [
   }),
   (0, a.jsx)(d.ScrollerThin, {
     className: _.tableContainer,
-    children: (0, a.jsx)(y.Z, {
+    children: (0, a.jsx)(x.Z, {
       columns: w,
       data: l,
       selectedRowKey: c,
       onClickRow: u
     })
   }),
-  null != h && (0, a.jsxs)(x.Z, {
+  null != h && (0, a.jsxs)(y.Z, {
     className: _.subPanel,
     minHeight: 100,
     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,

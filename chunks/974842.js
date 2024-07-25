@@ -9,34 +9,34 @@ var a = t(735250),
   d = t(481060),
   u = t(550271),
   m = t(688298),
-  f = t(995119),
-  _ = t(116175),
-  C = t(308083),
+  _ = t(995119),
+  C = t(116175),
+  f = t(308083),
   h = t(689938),
   x = t(885837),
   g = t(363778);
 let p = [
-  _.ZD.SWORD,
-  _.ZD.WATER_DROP,
-  _.ZD.SKULL,
-  _.ZD.TOADSTOOL,
-  _.ZD.MOON,
-  _.ZD.LIGHTNING,
-  _.ZD.LEAF,
-  _.ZD.HEART,
-  _.ZD.FIRE,
-  _.ZD.COMPASS,
-  _.ZD.CROSSHAIRS,
-  _.ZD.FLOWER,
-  _.ZD.FORCE,
-  _.ZD.GEM,
-  _.ZD.LAVA,
-  _.ZD.PSYCHIC,
-  _.ZD.SMOKE,
-  _.ZD.SNOW,
-  _.ZD.SOUND,
-  _.ZD.SUN,
-  _.ZD.WIND
+  C.ZD.SWORD,
+  C.ZD.WATER_DROP,
+  C.ZD.SKULL,
+  C.ZD.TOADSTOOL,
+  C.ZD.MOON,
+  C.ZD.LIGHTNING,
+  C.ZD.LEAF,
+  C.ZD.HEART,
+  C.ZD.FIRE,
+  C.ZD.COMPASS,
+  C.ZD.CROSSHAIRS,
+  C.ZD.FLOWER,
+  C.ZD.FORCE,
+  C.ZD.GEM,
+  C.ZD.LAVA,
+  C.ZD.PSYCHIC,
+  C.ZD.SMOKE,
+  C.ZD.SNOW,
+  C.ZD.SOUND,
+  C.ZD.SUN,
+  C.ZD.WIND
 ];
 n.Z = e => {
   let {
@@ -49,7 +49,7 @@ error: E,
 furthestStep: I,
 inSettings: b
   } = e, N = r.useMemo(() => {
-let e = (0, _.yf)();
+let e = (0, C.yf)();
 return {
   primary: null != i ? i : e.primary,
   secondary: null != o ? o : e.secondary
@@ -71,8 +71,8 @@ i,
 o
   ]);
   let v = r.useMemo(() => {
-  for (let e = 0; e < _.sg.length; e++)
-    if (_.sg[e].primary === N.primary && _.sg[e].secondary === N.secondary)
+  for (let e = 0; e < C.sg.length; e++)
+    if (C.sg[e].primary === N.primary && C.sg[e].secondary === N.secondary)
       return 1 + e;
   return 0;
 }, [
@@ -90,7 +90,7 @@ A = r.useCallback(() => {
   });
 }, [n]);
   return r.useEffect(() => {
-I === C.Wy.CUSTOMIZE_TAG_BADGE && !b && n({
+I === f.Wy.CUSTOMIZE_TAG_BADGE && !b && n({
   brandPrimaryColor: N.primary,
   brandSecondaryColor: N.secondary
 });
@@ -116,7 +116,7 @@ children: [
     className: g.subtitle,
     children: h.Z.Messages.CLAN_SETUP_CUSTOMIZE_SUBTITLE
   }),
-  (0, a.jsx)(f.Z, {
+  (0, a.jsx)(_.Z, {
     onClick: A
   }),
   (0, a.jsxs)('div', {
@@ -163,7 +163,7 @@ children: [
                 className: x.pickerGrid,
                 children: [
                   (0, a.jsx)(m.Z, {
-                    showSecondaryColor: _.ME[t] >= 2,
+                    showSecondaryColor: C.ME[t] >= 2,
                     palette: N,
                     onPrimaryColorChange: e => {
                       n({
@@ -192,11 +192,11 @@ children: [
                       })
                     })
                   }),
-                  _.sg.map((e, r) => (0, a.jsx)(d.Clickable, {
+                  C.sg.map((e, r) => (0, a.jsx)(d.Clickable, {
                     onClick: () => {
                       n({
-                        badgePrimaryColor: _.sg[r].primary,
-                        badgeSecondaryColor: _.sg[r].secondary
+                        badgePrimaryColor: C.sg[r].primary,
+                        badgeSecondaryColor: C.sg[r].secondary
                       });
                     },
                     className: l()(x.badgeAssetContainer, {
@@ -237,7 +237,7 @@ children: [
             onChange: e => n({
               tag: e
             }),
-            maxLength: C.cG,
+            maxLength: f.cG,
             placeholder: h.Z.Messages.CLAN_SETUP_TAG_PLACEHOLDER,
             autoFocus: !0,
             prefixElement: (0, a.jsx)(u.A, {

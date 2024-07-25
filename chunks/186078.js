@@ -6,7 +6,7 @@ return u;
 return m;
   },
   sp: function() {
-return f;
+return _;
   }
 });
 var a = t(735250),
@@ -28,7 +28,7 @@ radioItemIconClassName: c,
 onChange: u
   } = e, {
 choices: m
-  } = t, f = r.useMemo(() => m.map((e, n) => ({
+  } = t, _ = r.useMemo(() => m.map((e, n) => ({
 name: e,
 value: n,
 radioItemIconClassName: s()(d.multipleChoiceIcon, c)
@@ -38,7 +38,7 @@ c
   ]);
   return (0, a.jsx)(o.RadioGroup, {
 disabled: n,
-options: f,
+options: _,
 value: i,
 onChange: u,
 radioItemClassName: l,
@@ -60,7 +60,7 @@ children: (0, a.jsx)(c.Gi, {
   });
 }
 
-function f(e) {
+function _(e) {
   let {
 formField: n,
 onChange: t

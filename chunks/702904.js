@@ -122,7 +122,7 @@ children: (0, a.jsxs)('div', {
       variant: 'text-md/normal',
       children: 'Existing Payment Sources'
     }),
-    t.map(e => (0, a.jsx)(x, {
+    t.map(e => (0, a.jsx)(y, {
       paymentSource: e
     }, e.id))
   ]
@@ -130,7 +130,7 @@ children: (0, a.jsxs)('div', {
   });
 }
 
-function x(e) {
+function y(e) {
   let {
 paymentSource: r
   } = e;
@@ -154,7 +154,7 @@ children: [
 ]
   });
 }
-let y = [
+let x = [
 'AN',
 'MI',
 'TP'
@@ -162,7 +162,7 @@ let y = [
   k = e => {
 if (null == e)
   return '';
-if (y.includes(e))
+if (x.includes(e))
   return 'https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f30e.svg';
 let r = e.toUpperCase().split('').map(e => (127397 + e.charCodeAt(0)).toString(16)).join('-');
 return 'https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/'.concat(r, '.svg');

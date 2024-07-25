@@ -6,10 +6,10 @@ return u;
 return m;
   },
   QC: function() {
-return f;
+return _;
   },
   dd: function() {
-return _;
+return C;
   }
 }), t(47120);
 var a = t(735250);
@@ -73,7 +73,7 @@ children: (0, a.jsx)(s.Text, {
   });
 }
 
-function f(e) {
+function _(e) {
   let {
 formField: n
   } = e;
@@ -83,7 +83,7 @@ text: c.Z.Messages.MEMBER_VERIFICATION_AGREED_TO_RULES,
 meetsRequirement: !!n.response
   });
 }
-let _ = e => {
+let C = e => {
   let {
 channelId: n,
 formField: t,

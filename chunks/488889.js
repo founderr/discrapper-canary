@@ -1,15 +1,15 @@
-t.d(s, {
+n.d(s, {
   S: function() {
 return l;
   }
 });
-var n = t(259076),
-  o = t(689938);
+var t = n(259076),
+  o = n(689938);
 let a = {
-  [n.pw.DISCORD_EMPLOYEE_ASKED_ME_TO]: () => o.Z.Messages.EMAIL_CHANGE_REASONING_DISCORD_EMPLOYEE_ASKED,
-  [n.pw.SOMEONE_ASKED_ME_TO]: () => o.Z.Messages.EMAIL_CHANGE_REASONING_SOMEONE_ASKED,
-  [n.pw.NEW_EMAIL]: () => o.Z.Messages.EMAIL_CHANGE_REASONING_NEW_EMAIL,
-  [n.pw.SOMETHING_ELSE]: () => o.Z.Messages.EMAIL_CHANGE_REASONING_SOMETHING_ELSE
+  [t.pw.DISCORD_EMPLOYEE_ASKED_ME_TO]: () => o.Z.Messages.EMAIL_CHANGE_REASONING_DISCORD_EMPLOYEE_ASKED,
+  [t.pw.SOMEONE_ASKED_ME_TO]: () => o.Z.Messages.EMAIL_CHANGE_REASONING_SOMEONE_ASKED,
+  [t.pw.NEW_EMAIL]: () => o.Z.Messages.EMAIL_CHANGE_REASONING_NEW_EMAIL,
+  [t.pw.SOMETHING_ELSE]: () => o.Z.Messages.EMAIL_CHANGE_REASONING_SOMETHING_ELSE
 };
 
 function l(e) {

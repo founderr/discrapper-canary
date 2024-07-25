@@ -31,17 +31,17 @@ let {
 } = e;
 switch (r) {
   case h.N9.ACTIVITY:
-    let a = p.Z.Messages.USER_PROFILE_REACTED_TO_ACTIVITY.format({
+    let a = p.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({
       username: n
     });
     return '> -# *'.concat(a, '*\n').concat(t);
   case h.N9.AVATAR:
-    let s = p.Z.Messages.USER_PROFILE_REACTED_TO_AVATAR.format({
+    let s = p.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({
       username: n
     });
     return '> -# *'.concat(s, '*\n').concat(t);
   case h.N9.STATUS:
-    let o = p.Z.Messages.USER_PROFILE_REACTED_TO_STATUS.format({
+    let o = p.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({
       username: n
     });
     return null != i ? '> -# *'.concat(o, '*').concat('\n > '.concat(i), '\n').concat(t) : '> -# *'.concat(o, '*\n').concat(t);

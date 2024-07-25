@@ -14,9 +14,9 @@ renderHeader: n,
 children: t,
 isExpanded: i,
 isStuck: m,
-onExpand: f,
-disableAnimation: _,
-disableBackground: C
+onExpand: _,
+disableAnimation: C,
+disableBackground: f
   } = e, [h, x] = r.useState(!0), [g, p] = r.useState(!1), {
 ref: T,
 height: E = 0
@@ -35,7 +35,7 @@ onStart: () => {
 onRest: () => {
   p(!0);
 }
-  }, h || _ ? 'animate-never' : 'respect-motion-settings');
+  }, h || C ? 'animate-never' : 'respect-motion-settings');
   return r.useLayoutEffect(() => {
 p(!1), v(i);
   }, [i]), r.useLayoutEffect(() => {
@@ -46,7 +46,7 @@ return () => clearTimeout(e);
   }, []), (0, a.jsx)(l.Clickable, {
 className: s()(u.editCard, {
   [u.toggled]: i,
-  [u.noBackground]: C
+  [u.noBackground]: f
 }),
 children: (0, a.jsxs)(o.animated.div, {
   className: s()(u.contentExpandContainer, {
@@ -56,7 +56,7 @@ children: (0, a.jsxs)(o.animated.div, {
   children: [
     (0, a.jsx)(l.Clickable, {
       innerRef: T,
-      onClick: m ? void 0 : f,
+      onClick: m ? void 0 : _,
       className: s()(u.innerHeader, {
         [u.toggled]: i && m
       }),
