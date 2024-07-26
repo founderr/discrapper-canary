@@ -40,10 +40,10 @@ null != t && t > 20 && x(!0);
 [M, D] = s.useState(!1);
   (0, c.P)(P, e => {
 let {
-  width: t,
-  scrollWidth: n
+  height: t,
+  scrollHeight: n
 } = e;
-null != t && null != n && n > t && D(!0);
+null != t && null != n && t < n && D(!0);
   }, [D]);
   let y = (0, h.D)({
   quest: N,
