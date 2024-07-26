@@ -41,7 +41,8 @@ commandType: r.yU.PRIMARY_ENTRY_POINT
 placeholderCount: 1,
 scoreMethod: o.p.COMMAND_ONLY,
 applicationId: t,
-allowFetch: !1
+allowFetch: !1,
+allowApplicationState: !0
   });
 }
 
@@ -52,6 +53,7 @@ commandType: r.yU.PRIMARY_ENTRY_POINT
 placeholderCount: 1,
 scoreMethod: o.p.COMMAND_ONLY,
 applicationId: t,
-allowFetch: !1
+allowFetch: !1,
+allowApplicationState: !0
   });
 }

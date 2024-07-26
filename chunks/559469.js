@@ -41,13 +41,12 @@ wildcardDescriptors: a.LK,
   };
 }
 
-function l(e) {
+function l() {
   return i.useMemo(() => [
 r({
   id: '1239910082150400001',
   icon: 'bea185f5c9dbde7ba2f0c50363c16ec6',
   games: [
-    e,
     a.DA.AGE_OF_EMPIRES_2,
     a.DA.APEX
   ],
@@ -75,10 +74,7 @@ r({
 r({
   id: '1239910082150400002',
   icon: 'fe5e3c39b398965133d24d3c5d72b06c',
-  games: [
-    e,
-    a.DA.HONKAI_STAR_RAIL
-  ],
+  games: [a.DA.HONKAI_STAR_RAIL],
   preset: a.N.THUNDER,
   banner: a.qC.CASTLE,
   bannerHash: '3c8e6496a598b9a563dffbc87d65f6f8',
@@ -103,7 +99,6 @@ r({
   id: '1239910082150400003',
   icon: 'fc7bdf17dadd9a59014fc2a41dd88613',
   games: [
-    e,
     a.DA.LETHAL_COMPANY,
     a.DA.HELLDIVERS_2
   ],
@@ -132,10 +127,7 @@ r({
 r({
   id: '1239910082150400004',
   icon: '7b7a2a06e7852e7cdb7f301fb86c3e18',
-  games: [
-    e,
-    a.DA.SIMS_4
-  ],
+  games: [a.DA.SIMS_4],
   preset: a.N.EARTH,
   banner: a.qC.SEA_FOAM,
   bannerHash: 'c01388993ca324a6de870f805cc30bd3',
@@ -162,10 +154,7 @@ r({
 r({
   id: '1239910082150400005',
   icon: '5ca93390d20f7b96a0f0c3702fceec8e',
-  games: [
-    e,
-    a.DA.SIMS_4
-  ],
+  games: [a.DA.SIMS_4],
   preset: a.N.CASCADE,
   banner: a.qC.NIGHT_SKY,
   bannerHash: '37cd6a7f90faafeb8c54e5ea5163407b',
@@ -188,5 +177,5 @@ r({
   ],
   memberCount: 94
 })
-  ], [e]);
+  ], []);
 }

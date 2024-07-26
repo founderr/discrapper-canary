@@ -347,7 +347,7 @@ children: (0, i.jsx)('nav', {
           })
         ]
       }),
-      n || null == eN || null == ex ? !n && eg ? (0, i.jsx)(W.LW, {
+      n || null == eN ? !n && eg ? (0, i.jsx)(W.LW, {
         hideGradient: ep,
         children: (0, i.jsx)(F.Z, {
           ref: eM.guildDiscoveryRef,

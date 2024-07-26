@@ -196,7 +196,6 @@ children: (0, i.jsxs)(c.u2, {
         (0, i.jsx)('div', {
           className: N.backgroundImageContent,
           children: (0, i.jsx)(g.Z, {
-            selectedGame: e,
             eligibleGuilds: n,
             eligibleGuildsIncludingConverted: t
           })

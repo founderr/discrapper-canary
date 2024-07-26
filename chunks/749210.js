@@ -352,6 +352,8 @@ s.Z.dispatch({
   moveById(e, t) {
 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
   r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+if (e === t)
+  throw Error('GuildActionCreators.moveById: `sourceId` and `targetId` cannot be the same value: '.concat(e));
 s.Z.dispatch({
   type: 'GUILD_MOVE_BY_ID',
   sourceId: e,

@@ -203,6 +203,7 @@ let {
     });
   } : void 0,
   onMouseEnter: this.onMouseEnter,
+  onMouseLeave: this.onMouseLeave,
   onFocus: this.onFocus,
   onBlur: this.onBlur
 };
@@ -312,9 +313,17 @@ super(e), N(this, 'imageLoadAnalyticsEnabled', !1), N(this, 'state', {
   let {
     onMouseEnter: t
   } = this.props;
-  null != t && t(e, {
+  null == t || t(e, {
     preloadImage: this.preloadImage
   });
+}), N(this, 'onMouseLeave', e => {
+  R.isAnimated(this.props) && this.setState({
+    hasMouseOver: !1
+  });
+  let {
+    onMouseLeave: t
+  } = this.props;
+  null == t || t(e);
 }), N(this, 'onFocus', e => {
   R.isAnimated(this.props) && this.setState({
     hasFocus: !0
@@ -327,9 +336,7 @@ super(e), N(this, 'imageLoadAnalyticsEnabled', !1), N(this, 'state', {
   !t.contains(n) && this.setState({
     hasFocus: !1
   });
-}), N(this, 'onMouseLeave', () => this.setState({
-  hasMouseOver: !1
-})), N(this, 'onClick', e => {
+}), N(this, 'onClick', e => {
   let {
     onZoom: t,
     onClick: n

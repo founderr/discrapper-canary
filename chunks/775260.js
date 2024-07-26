@@ -1,37 +1,48 @@
 n.d(t, {
   Y: function() {
-return c;
+return d;
   }
 }), n(733860);
 var i = n(470079),
   s = n(143927),
-  a = n(169559),
-  r = n(836768),
-  l = n(766219),
-  o = n(49898);
+  a = n(963202),
+  r = n(169559),
+  l = n(836768),
+  o = n(766219),
+  c = n(49898);
 
-function c() {
-  let e = (0, a.Z)('global_discovery'),
-t = (0, r.d)(e => e.selectedServerTab, s.Z),
-n = i.useMemo(() => {
-  let t = [
-    o.vf.GAMING,
-    o.vf.MUSIC,
-    o.vf.ENTERTAINMENT,
-    o.vf.TECH,
-    o.vf.EDUCATION,
-    o.vf.HUBS
+function d() {
+  let e = (0, r.Z)('global_discovery'),
+{
+  enableClanCreation: t
+} = (0, a.C3)({
+  location: 'global_discovery',
+  includeConverted: !0,
+  autoTrackExposure: !0
+}),
+n = (0, l.d)(e => e.selectedServerTab, s.Z),
+d = i.useMemo(() => {
+  let n = [
+    c.vf.GAMING,
+    c.vf.MUSIC,
+    c.vf.ENTERTAINMENT,
+    c.vf.TECH,
+    c.vf.EDUCATION,
+    c.vf.HUBS
   ];
-  return e ? t.unshift(o.vf.GUILDS) : t.unshift(o.vf.FEATURED), t.map(e => ({
+  return e || t ? n.unshift(c.vf.GUILDS) : n.unshift(c.vf.FEATURED), n.map(e => ({
     id: e,
-    label: (0, l.vb)(e)
+    label: (0, o.vb)(e)
   }));
-}, [e]);
+}, [
+  t,
+  e
+]);
   return {
-tabs: n,
-selectedTab: t,
+tabs: d,
+selectedTab: n,
 onSelectTab: i.useCallback(e => {
-  r.d.setState({
+  l.d.setState({
     selectedServerTab: e
   });
 }, [])

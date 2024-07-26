@@ -46,9 +46,12 @@ super(...e), I(this, 'onMouseEnter', (e, t) => {
     preloadImage: n
   } = t, {
     width: r,
-    height: i
+    height: i,
+    onMouseEnter: a
   } = this.props;
-  n((0, _.zp)(r, i));
+  null == a || a(e, {
+    preloadImage: n
+  }), n((0, _.zp)(r, i));
 }), I(this, 'modalContext', (0, o.modalContextFromAppContext)(this.props.appContext)), I(this, 'onCloseImage', () => {
   (0, o.closeModal)(h.c, this.modalContext);
 }), I(this, 'onZoom', (e, t) => {

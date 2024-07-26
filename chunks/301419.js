@@ -14,22 +14,20 @@ function s(e) {
   entry: t
 } = e,
 {
-  parent_title: s,
-  provider: c,
-  image_url: u
+  provider: s,
+  image_url: c
 } = t.extra.media,
-d = t.extra.artist.name,
-m = () => (0, r.o)(a.Hw.ALBUM, t.extra.media.external_parent_id);
-  return c === l.p.SPOTIFY && (n = {
+u = t.extra.artist.name,
+d = () => (0, r.o)(a.Hw.ALBUM, t.extra.media.external_parent_id);
+  return s === l.p.SPOTIFY && (n = {
 type: i.kG.SPOTIFY,
 'aria-label': o.Z.Messages.SPOTIFY
   }), {
-title: d,
-subtitle: s,
-thumbnailUrl: u,
+title: u,
+thumbnailUrl: c,
 onClickTitle: () => (0, r.o)(a.Hw.ARTIST, t.extra.artist.external_id),
-onClickSubtitle: m,
-onClickThumbnail: m,
+onClickSubtitle: d,
+onClickThumbnail: d,
 userDescription: o.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
 providerIconProps: n
   };

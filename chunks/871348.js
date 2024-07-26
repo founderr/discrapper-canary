@@ -1,6 +1,6 @@
 n.d(t, {
   U: function() {
-return E;
+return S;
   }
 }), n(47120);
 var i = n(735250),
@@ -9,21 +9,63 @@ var i = n(735250),
   r = n(143927),
   l = n(481060),
   o = n(393238),
-  c = n(931515),
-  d = n(807933),
-  u = n(207796),
-  _ = n(895068),
-  h = n(207462);
+  c = n(963202),
+  d = n(353093),
+  u = n(931515),
+  _ = n(807933),
+  h = n(207796),
+  E = n(497189),
+  I = n(895068),
+  m = n(490610),
+  g = n(689938),
+  p = n(207462);
 
-function E(e) {
+function T(e) {
   let {
 onScroll: t
   } = e, {
-loading: n
-  } = (0, c.LE)(), {
-ref: E,
-width: I
-  } = (0, o.Z)(), m = (0, u.GN)(e => e.mode, r.Z), [g, p] = s.useState(!0), T = (0, l.useSpring)({
+guilds: n
+  } = (0, c.C3)({
+location: 'ClanDiscoveryAdminContainer',
+includeConverted: !0
+  }), a = s.useMemo(() => n.filter(e => !(0, d.EJ)(e)), [n]);
+  return (0, i.jsx)('section', {
+className: p.guilds,
+children: (0, i.jsxs)(l.AdvancedScrollerNone, {
+  onScroll: t,
+  className: p.upsellScroller,
+  fade: !0,
+  children: [
+    (0, i.jsxs)('div', {
+      className: p.adminUpsell,
+      children: [
+        (0, i.jsx)('div', {
+          className: p.backgroundImageBlur
+        }),
+        (0, i.jsx)('div', {
+          className: p.backgroundImageContent,
+          children: (0, i.jsx)(E.Z, {
+            eligibleGuilds: a,
+            eligibleGuildsIncludingConverted: n
+          })
+        })
+      ]
+    }),
+    (0, i.jsx)(m.Z, {
+      title: g.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE
+    })
+  ]
+})
+  });
+}
+
+function f(e) {
+  let {
+onScroll: t
+  } = e, {
+ref: n,
+width: c
+  } = (0, o.Z)(), d = (0, h.GN)(e => e.mode, r.Z), [u, E] = s.useState(!0), m = (0, l.useSpring)({
 from: {
   opacity: 0
 },
@@ -36,33 +78,47 @@ config: {
   friction: 60
 },
 delay: 200,
-onRest: () => p(!1)
+onRest: () => E(!1)
   });
   return (0, i.jsxs)('section', {
-ref: E,
-className: h.guilds,
+ref: n,
+className: p.guilds,
 children: [
-  n ? (0, i.jsx)('div', {
-    className: h.loading,
-    children: (0, i.jsx)(l.Spinner, {})
-  }) : (0, i.jsx)(a.animated.div, {
-    className: h.list,
+  (0, i.jsx)(a.animated.div, {
+    className: p.list,
     style: {
-      opacity: T.opacity
+      opacity: m.opacity
     },
-    children: (0, i.jsx)(_.ZP, {
-      width: null != I ? I : 0,
-      isAnimating: g,
-      variant: _.Bj.GLOBAL_DISCOVERY,
+    children: (0, i.jsx)(I.ZP, {
+      width: null != c ? c : 0,
+      isAnimating: u,
+      variant: I.Bj.GLOBAL_DISCOVERY,
       onScroll: t
     })
   }),
   (0, i.jsx)('div', {
-    className: h.selectors,
-    children: (0, i.jsx)(d.Z, {
-      mode: m
+    className: p.selectors,
+    children: (0, i.jsx)(_.Z, {
+      mode: d
     })
   })
 ]
+  });
+}
+
+function S(e) {
+  let {
+onScroll: t
+  } = e, {
+loading: n
+  } = (0, u.LE)();
+  return n ? (0, i.jsx)('section', {
+className: p.guilds,
+children: (0, i.jsx)('div', {
+  className: p.loading,
+  children: (0, i.jsx)(l.Spinner, {})
+})
+  }) : (0, i.jsx)(T, {
+onScroll: t
   });
 }

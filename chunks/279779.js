@@ -198,8 +198,24 @@ super(...e), I(this, '_worker', void 0), I(this, 'actions', {
     guilds: t
   } = e;
   setTimeout(() => {
-    let e = s().flatMap(t, e => A(e.members, e.id));
-    this.updateUsers(e, 'connection_open_supplemental');
+    let e = s().flatMap(t, e => A(e.members, e.id)),
+      n = s().flatMap(t, e => {
+        var t;
+        let n = [];
+        return null === (t = e.activity_instances) || void 0 === t || t.forEach(t => {
+          t.participants.forEach(t => {
+            let r = t.member;
+            if (null != r) {
+              let t = T(r.user);
+              null != t && (g(t, e.id, r.nick), n.push(t));
+            }
+          });
+        }), n;
+      });
+    this.updateUsers([
+      ...e,
+      ...n
+    ], 'connection_open_supplemental');
   }, 3000);
 }), I(this, '_handleOverlayInitialize', e => {
   let {

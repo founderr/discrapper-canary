@@ -72,50 +72,51 @@ children: (e, t) => {
 }
 t.Z = s.forwardRef(function(e, t) {
   let {
-selectedTab: n,
-tabs: a,
-onTabSelect: _,
-onAvailableWidthChange: h
-  } = e, m = (0, d.ZP)(), g = (0, l.wj)(m), [p, T] = s.useState(0), {
-lastVisibleIndex: f,
-onItemLayout: S,
-overflowItemsRef: C,
-itemWidthsRef: N
+className: n,
+selectedTab: a,
+tabs: _,
+onTabSelect: h,
+onAvailableWidthChange: m
+  } = e, g = (0, d.ZP)(), p = (0, l.wj)(g), [T, f] = s.useState(0), {
+lastVisibleIndex: S,
+onItemLayout: C,
+overflowItemsRef: N,
+itemWidthsRef: A
   } = (0, u.zP)({
-items: a,
+items: _,
 itemGapPx: 20,
 maxLines: 1,
-containerWidth: p
-  }), A = s.useMemo(() => a.slice(0, f + 1), [
-f,
-a
-  ]), v = s.useMemo(() => a.slice(f + 1), [
-f,
-a
-  ]), Z = (0, c.y)(e => {
+containerWidth: T
+  }), v = s.useMemo(() => _.slice(0, S + 1), [
+S,
+_
+  ]), Z = s.useMemo(() => _.slice(S + 1), [
+S,
+_
+  ]), L = (0, c.y)(e => {
 let t = null == e ? void 0 : e.getBoundingClientRect();
 if (null == t)
   return;
-T(t.width);
-let n = N.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
+f(t.width);
+let n = A.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
   i = t.width - n;
-null == h || h(i);
+null == m || m(i);
   });
   return s.useImperativeHandle(t, () => ({
 getBoundingClientRect: () => {
   var e;
-  return null === (e = Z.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+  return null === (e = L.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
 }
   })), (0, i.jsxs)('div', {
-className: E.container,
-ref: Z,
+className: r()(E.container, n),
+ref: L,
 children: [
   (0, i.jsxs)('div', {
     className: E.measurements,
     children: [
-      a.map((e, t) => (0, i.jsx)(u.AJ, {
+      _.map((e, t) => (0, i.jsx)(u.AJ, {
         index: t,
-        onItemLayout: S,
+        onItemLayout: C,
         children: (0, i.jsx)(o.TabBar.Item, {
           id: e.id,
           'aria-label': e.label,
@@ -127,23 +128,23 @@ children: [
         })
       }, e.id)),
       (0, i.jsx)('div', {
-        ref: C,
+        ref: N,
         children: (0, i.jsx)(I, {
-          tabs: v,
-          onTabSelect: _,
-          selectedTab: n
+          tabs: Z,
+          onTabSelect: h,
+          selectedTab: a
         })
       })
     ]
   }),
   (0, i.jsxs)(o.TabBar, {
     type: 'top',
-    selectedItem: n,
-    onItemSelect: _,
+    selectedItem: a,
+    onItemSelect: h,
     className: E.tabs,
     children: [
-      A.map(e => {
-        let t = n === e.id;
+      v.map(e => {
+        let t = a === e.id;
         return (0, i.jsx)(o.TabBar.Item, {
           id: e.id,
           color: 'text-muted',
@@ -153,15 +154,15 @@ children: [
           }),
           children: (0, i.jsx)(o.Text, {
             variant: 'text-md/medium',
-            color: t ? 'header-primary' : g ? 'text-muted' : 'header-primary',
+            color: t ? 'header-primary' : p ? 'text-muted' : 'header-primary',
             children: e.label
           })
         }, e.id);
       }),
-      0 !== v.length ? (0, i.jsx)(I, {
-        tabs: v,
-        onTabSelect: _,
-        selectedTab: n
+      0 !== Z.length ? (0, i.jsx)(I, {
+        tabs: Z,
+        onTabSelect: h,
+        selectedTab: a
       }) : null
     ]
   })

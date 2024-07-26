@@ -1,6 +1,7 @@
 e.exports = Object.freeze({
   DISCORD_NAME: 'Discord',
   DEFAULT_CONFIRMATION_MODAL_HEADER: 'Are you sure?',
+  BACKGROUND: 'Background',
   DISAPPROVAL: 'ಠ_ಠ',
   ENGLISH_LANGUAGE: 'English',
   GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE: 'Select a server for your stream',
@@ -299,6 +300,8 @@ e.exports = Object.freeze({
   CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE: 'Recruit more Valorant friends',
   CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE: 'Recruit more Genshin friends',
   CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE: 'Become one of the first Guilds and recruit players that match your server\'s playstyle and vibe.',
+  RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE: 'Your Guilds Invite is ready!',
+  RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE: 'Recruit more Gaming friends',
   CLAN_GUILD_LIST_USER_UPSELL_VALORANT_TITLE: 'Join an exclusive gaming Guild',
   CLAN_GUILD_LIST_USER_UPSELL_VALORANT_MESSAGE: 'Check out small Guilds looking to recruit Valorant players and make new friends.',
   CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_TITLE: 'Join an exclusive gaming Guild',

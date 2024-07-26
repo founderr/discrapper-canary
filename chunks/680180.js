@@ -1,52 +1,50 @@
 n.d(t, {
   Z: function() {
-return l;
+return d;
   }
-}), n(47120);
+});
 var i = n(735250),
   s = n(470079),
-  a = n(481060),
-  r = n(986348);
+  a = n(120356),
+  r = n.n(a),
+  l = n(481060),
+  o = n(49898),
+  c = n(986348);
 
-function l(e) {
+function d(e) {
   let {
-query: t,
-placeholder: n,
-collapsed: l,
-onTextChange: o,
-onClear: c,
-onSubmit: d
-  } = e, u = s.useRef(null), [_, h] = s.useState(!1);
-  s.useEffect(() => {
-!l && h(!1);
-  }, [l]);
-  let E = s.useCallback(() => {
-  h(!1), c();
-}, [c]),
-I = s.useCallback(() => {
-  h(!0), setTimeout(() => {
-    var e;
-    return null === (e = u.current) || void 0 === e ? void 0 : e.focus();
-  });
-}, []),
-m = s.useCallback(e => {
-  'Enter' === e.key && d();
-}, [d]);
-  return l && !_ ? (0, i.jsx)(a.Clickable, {
-className: r.searchIcon,
-onClick: I,
-children: (0, i.jsx)(a.MagnifyingGlassIcon, {
+state: t,
+query: n,
+placeholder: a,
+onTextChange: d,
+onCollapsedClick: u,
+onClear: _,
+onSubmit: h
+  } = e, E = s.useRef(null), I = s.useCallback(e => {
+'Enter' === e.key && h();
+  }, [h]), m = s.useCallback(() => {
+u(), setTimeout(() => {
+  var e;
+  return null === (e = E.current) || void 0 === e ? void 0 : e.focus();
+});
+  }, [u]);
+  return t === o.WB.COLLAPSED ? (0, i.jsx)(l.Clickable, {
+className: c.searchIcon,
+onClick: m,
+children: (0, i.jsx)(l.MagnifyingGlassIcon, {
   size: 'md',
-  color: a.tokens.colors.INTERACTIVE_NORMAL
+  color: l.tokens.colors.INTERACTIVE_NORMAL
 })
-  }) : (0, i.jsx)(a.SearchBar, {
-ref: u,
-className: r.searchBar,
-size: a.SearchBar.Sizes.MEDIUM,
-query: t,
-placeholder: n,
-onChange: o,
-onClear: E,
-onKeyDown: m
+  }) : (0, i.jsx)(l.SearchBar, {
+ref: E,
+className: r()(c.searchBar, {
+  [c.searchFloating]: t === o.WB.FLOATING
+}),
+size: l.SearchBar.Sizes.MEDIUM,
+query: n,
+placeholder: a,
+onChange: d,
+onClear: _,
+onKeyDown: I
   });
 }

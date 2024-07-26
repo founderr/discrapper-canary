@@ -36,39 +36,44 @@ function C() {
 } = (0, d.c)(),
 v = (0, l.lg)(n),
 {
-  isSearchVisible: Z,
-  searchQuery: L,
-  onSearchTextChange: O,
-  onClearSearch: R,
-  onSearchSubmit: x
+  searchBarState: Z,
+  onTabsAvailableWidthChange: L,
+  resetSearchBarState: O,
+  onCollapsedSearchBarClick: R,
+  tabsClassName: x
+} = (0, c.U)(),
+{
+  searchQuery: b,
+  onSearchTextChange: P,
+  onClearSearch: M,
+  onSearchSubmit: D,
+  isSearchVisible: y
 } = (0, g.H)({
   loadId: e.current,
+  onClear: O,
   categoryId: v
 }),
-b = s.useMemo(() => Z ? t.filter(e => {
+j = s.useMemo(() => y ? t.filter(e => {
   let {
     id: t
   } = e;
   return !T.MU.has(t);
 }) : t, [
   t,
-  Z
+  y
 ]),
-P = s.useRef(new o.Z(v)),
+U = s.useRef(new o.Z(v)),
 {
-  onGuildCardSeen: M,
-  onGuildCardClick: D
+  onGuildCardSeen: G,
+  onGuildCardClick: k
 } = (0, m.H)({
-  guildDiscoveryCardSeenManager: P.current,
+  guildDiscoveryCardSeenManager: U.current,
   loadId: e.current
 });
   s.useEffect(() => {
-P.current.flushSeenGuilds(e.current);
+U.current.flushSeenGuilds(e.current);
   }, [v]);
-  let {
-onTabsAvailableWidthChange: y,
-collapsed: j
-  } = (0, c.U)(), U = s.useMemo(() => {
+  let w = s.useMemo(() => {
 switch (n) {
   case T.vf.HUBS:
   case T.vf.GUILDS:
@@ -76,56 +81,59 @@ switch (n) {
   default:
     let e = (0, l.vb)(n);
     return (0, i.jsx)(_.Z, {
-      query: L,
+      query: b,
       placeholder: f.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({
         title: e
       }),
-      onTextChange: O,
-      onClear: R,
-      onSubmit: x,
-      collapsed: j
+      onTextChange: P,
+      onClear: M,
+      onSubmit: D,
+      onCollapsedClick: R,
+      state: Z
     });
 }
   }, [
-j,
+M,
 R,
-x,
-O,
-L,
+D,
+P,
+Z,
+b,
 n
   ]);
   return (0, i.jsxs)('div', {
 className: S.container,
 children: [
   (0, i.jsxs)(u.ZP, {
-    className: Z ? S.search : void 0,
+    className: y ? S.search : void 0,
     children: [
-      !Z && (0, i.jsx)(u.z6, {
+      !y && (0, i.jsx)(u.z6, {
         scrollPosition: A
       }),
       (0, i.jsx)(u.aV, {
-        icon: Z ? a.ArrowLargeLeftIcon : a.ServerIcon,
-        onClick: Z ? R : void 0
+        icon: y ? a.ArrowLargeLeftIcon : a.ServerIcon,
+        onClick: y ? M : void 0
       }),
       (0, i.jsx)(h.Z, {
-        tabs: b,
+        className: x,
+        tabs: j,
         selectedTab: n,
         onTabSelect: C,
-        onAvailableWidthChange: y
+        onAvailableWidthChange: L
       }),
-      U
+      w
     ]
   }),
-  Z ? (0, i.jsx)(I.Z, {
+  y ? (0, i.jsx)(I.Z, {
     loadId: e.current,
-    onGuildCardClick: D,
-    onGuildCardSeen: M
+    onGuildCardClick: k,
+    onGuildCardSeen: G
   }) : (0, i.jsx)(E.Z, {
     loadId: e.current,
     selectedTab: n,
     onScroll: N,
-    onGuildCardClick: D,
-    onGuildCardSeen: M
+    onGuildCardClick: k,
+    onGuildCardSeen: G
   })
 ]
   });

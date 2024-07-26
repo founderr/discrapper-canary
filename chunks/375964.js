@@ -567,6 +567,7 @@ e.exports = Object.freeze({
   APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL: '{buttonText} {applicationName}',
   APP_IMAGE_REC_USE_APP_TOOLTIP: 'Use an App',
   APP_IMAGE_REC_MENU_ARIA_LABEL: 'Image Command Actions',
+  APP_IMAGE_REC_MENU_HEADER: 'Edit Image with Apps',
   READY: 'Ready',
   CONNECTING: 'Connecting\u2026',
   CONNECTING_PROBLEMS_CTA: 'Connection problems? Let us know!',

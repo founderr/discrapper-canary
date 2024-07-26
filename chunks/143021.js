@@ -107,13 +107,14 @@ r
 function g(e) {
   let {
 loadId: t,
-categoryId: n
-  } = e, a = (0, u.B)(e => {
+categoryId: n,
+onClear: a
+  } = e, l = (0, u.B)(e => {
 let {
   isSearchVisible: t
 } = e;
 return t;
-  }, s.Z), l = (0, u.B)(e => {
+  }, s.Z), o = (0, u.B)(e => {
 let {
   searchQuery: t
 } = e;
@@ -122,30 +123,40 @@ return t;
   i.useEffect(() => {
 r.Ue();
   }, []);
-  let o = i.useCallback(e => {
+  let c = i.useCallback(e => {
   u.B.setState({
     searchQuery: e
   });
 }, []),
-c = i.useCallback(() => {
-  u.B.setState({
+_ = i.useCallback(() => {
+  a(), u.B.setState({
     searchResultsQuery: '',
     searchQuery: '',
     isSearchVisible: !1
   }), d.IZ(t);
-}, [t]);
-  return {
-searchQuery: l,
-onSearchTextChange: o,
-onClearSearch: c,
-onSearchSubmit: i.useCallback(() => I({
+}, [
+  t,
+  a
+]),
+h = i.useCallback(() => I({
   loadId: t,
   categoryId: n,
   offset: 0
 }), [
   n,
   t
-]),
-isSearchVisible: a
-  };
+]);
+  return i.useMemo(() => ({
+searchQuery: o,
+onSearchTextChange: c,
+onClearSearch: _,
+onSearchSubmit: h,
+isSearchVisible: l
+  }), [
+l,
+_,
+h,
+c,
+o
+  ]);
 }

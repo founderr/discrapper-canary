@@ -107,7 +107,9 @@ P = (null !== (r = O.get(M)) && void 0 !== r ? r : []).filter(e => !(e.applicati
 }
 
 function F(e) {
-  e.embedded_activities.forEach(t => {
+  let t = e.embedded_activities,
+n = e.activity_instances;
+  null == t || t.forEach(t => {
 let {
   channel_id: n,
   embedded_activity: r,
@@ -123,6 +125,26 @@ B({
     userId: e.user_id
   })),
   analyticsActivitySessionId: r.activity_id
+});
+  }), null == n || n.forEach(t => {
+let {
+  location: n,
+  application_id: r,
+  launch_id: i,
+  composite_instance_id: a,
+  participants: s
+} = t;
+B({
+  guildId: e.id,
+  channelId: n.channel_id,
+  location: n,
+  applicationId: r,
+  launchId: i,
+  compositeInstanceId: a,
+  participants: s.map(e => ({
+    userId: e.user_id,
+    sessionId: e.session_id
+  }))
 });
   });
 }

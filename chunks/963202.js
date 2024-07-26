@@ -136,7 +136,7 @@ return null != e && e.hasFeature(l.oNc.RAPIDASH_TEST) && (t || !e.hasFeature(l.o
   }(e, o)) : u, E = c.length > 0 && i.enableClanCreation, h = d.length > 0 && n.enableClanCreation, p = _.length > 0 && a.enableClanCreation, m = [];
   return E && c.forEach(e => m.push(e)), h && d.forEach(e => m.push(e)), p && _.forEach(e => m.push(e)), {
 guilds: m,
-enableClanCreation: E || h,
+enableClanCreation: E || h || p,
 defaultGameId: f({
   genshinConfig: E ? i : void 0,
   valorantConfig: h ? n : void 0

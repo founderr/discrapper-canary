@@ -368,7 +368,10 @@ location: r
   } = D(), i = null === (t = (0, S.PJ)(n, _.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
   if (null == i)
 return null;
-  let s = 1 === r ? O.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({
+  let s = (0, m.Hi)(r, [
+1,
+4
+  ]) ? O.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({
 count: i
   }) : O.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRACKS_THIS_WEEK.format({
 count: i

@@ -78,7 +78,11 @@ children: [
           setError: B,
           setEmailToken: U,
           isSlideReady: G === S.Ax.CONFIRM_CODE,
-          onNext: () => j(y ? S.Ax.CHANGE_EMAIL_REASONS : S.Ax.EMAIL_AND_PASSWORD),
+          onNext: () => {
+            E.Z.trackExposure({
+              location: 'change_email_confirm_code_slide'
+            }), j(y ? S.Ax.CHANGE_EMAIL_REASONS : S.Ax.EMAIL_AND_PASSWORD);
+          },
           onClose: O
         })
       }),

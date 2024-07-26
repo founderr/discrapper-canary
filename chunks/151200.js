@@ -9,7 +9,7 @@ var r = t(120356),
   i = t.n(r),
   a = t(481060),
   o = t(256139),
-  s = t(61165),
+  s = t(328731),
   c = t(435439),
   u = t(206295),
   d = t(297781),
@@ -27,34 +27,34 @@ subtitle: v,
 thumbnailUrl: C,
 onClickTitle: h,
 onClickSubtitle: x,
-onClickThumbnail: E,
-providerIconProps: I,
-style: N = {}
+onClickThumbnail: I,
+providerIconProps: E,
+style: T = {}
   } = e, {
-primaryColor: T,
+primaryColor: N,
 secondaryColor: g
   } = (0, u.Z)(C);
-  return null != C && (N.background = 'linear-gradient(45deg, '.concat(T, ', ').concat(g, ')')), (0, l.jsxs)('div', {
+  return null != C && (T.background = 'linear-gradient(45deg, '.concat(N, ', ').concat(g, ')')), (0, l.jsxs)('div', {
 'data-disable-adaptive-theme': !0,
 className: i()(p.container, (0, f.Q)(_.BR.DARK)),
-style: N,
+style: T,
 children: [
   (0, l.jsx)(a.Clickable, {
-    onClick: E,
-    style: {
-      height: 64
-    },
-    className: i()(null != E && p.clickable),
+    onClick: I,
+    className: i()(p.thumbnailContainer, null != I && p.clickable),
     children: (0, l.jsx)(m.f, {
       src: C,
+      constrain: 'width',
       size: 64
     })
   }),
   (0, l.jsxs)('div', {
+    className: p.infoContainer,
     children: [
       (0, l.jsx)(s.Z, {
         channel: t,
-        entry: n
+        entry: n,
+        className: p.users
       }),
       (0, l.jsx)(a.Spacer, {
         size: 2
@@ -63,34 +63,39 @@ children: [
         onClick: h,
         children: (0, l.jsx)(a.Heading, {
           variant: 'heading-md/medium',
-          lineClamp: 3,
-          className: p.textPrimary,
+          lineClamp: 1,
+          className: i()(p.textPrimary, p.truncatedText),
           children: r
         })
       }),
-      (0, l.jsx)(a.Spacer, {
-        size: 2
-      }),
-      (0, l.jsx)(o.Z, {
-        onClick: x,
-        children: (0, l.jsx)(a.Text, {
-          variant: 'text-sm/normal',
-          className: p.textSecondary,
-          children: v
-        })
-      }),
+      null != v ? (0, l.jsxs)(l.Fragment, {
+        children: [
+          (0, l.jsx)(a.Spacer, {
+            size: 2
+          }),
+          (0, l.jsx)(o.Z, {
+            onClick: x,
+            children: (0, l.jsx)(a.Text, {
+              variant: 'text-sm/normal',
+              className: i()(p.textSecondary, p.truncatedText),
+              lineClamp: 1,
+              children: v
+            })
+          })
+        ]
+      }) : null,
       (0, l.jsx)(d.PZ, {
         className: p.badges,
         entry: n,
         location: d.Gt.EMBED
-      }),
-      (0, l.jsx)('div', {
-        className: p.headerIcons,
-        children: null != I ? (0, l.jsx)(c.Z, {
-          ...I
-        }) : null
       })
     ]
+  }),
+  (0, l.jsx)('div', {
+    className: p.headerIcons,
+    children: null != E ? (0, l.jsx)(c.Z, {
+      ...E
+    }) : null
   })
 ]
   });
