@@ -90,7 +90,7 @@ onTagClick: D
 guilds: j,
 loading: U,
 total: G
-  } = n, [w, k] = s.useState(!1), {
+  } = n, [k, w] = s.useState(!1), {
 tag: B
   } = C(), [H, V] = s.useState(B), F = (0, o.e7)([_.ZP], () => _.ZP.hasSearchError()), Y = (e, t, n) => {
 d.bR(a, {
@@ -101,7 +101,7 @@ d.bR(a, {
   filters: {
     approximate_member_count: E.sq
   }
-}), k(!1);
+}), w(!1);
   }, W = () => {
 null == Z || Z.scrollTo({
   to: 0
@@ -112,7 +112,7 @@ let {
   offset: e,
   tag: t
 } = C(), n = null != e ? Math.floor(parseInt(e, 10) / S) + 1 : 1;
-V(!!t), 1 === n && k(!0);
+V(!!t), 1 === n && w(!0);
   }, [a]);
   let z = R === p.Hk ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
 count: null != G ? G.toLocaleString() : '0',
@@ -168,7 +168,7 @@ children: [
     children: (0, i.jsx)(I.Z, {
       pageSize: S,
       totalCount: G,
-      resetCurrentPage: w,
+      resetCurrentPage: k,
       onPageChange: e => {
         Y((e - 1) * S, S), W();
       },

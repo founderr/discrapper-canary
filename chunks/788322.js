@@ -45,7 +45,7 @@ description: M,
 presenceCount: D,
 memberCount: y,
 keywords: j
-  } = a, [U, G] = s.useState(!1), [w, k] = s.useState(!1), {
+  } = a, [U, G] = s.useState(!1), [k, w] = s.useState(!1), {
 analyticsLocations: B
   } = (0, c.ZP)(), H = I.ZP.getGuildDiscoverySplashURL({
 id: R,
@@ -80,11 +80,11 @@ if (!t.includes('Menu')) {
     });
     return;
   }
-  k(!0);
+  w(!0);
   try {
     null != L && await L(a.id);
   } finally {
-    k(!1);
+    w(!1);
   }
 }
   };
@@ -103,14 +103,14 @@ children: [
   (0, i.jsxs)('div', {
     className: N.card,
     children: [
-      w ? (0, i.jsx)(l.Spinner, {
+      k ? (0, i.jsx)(l.Spinner, {
         type: l.Spinner.Type.PULSING_ELLIPSIS,
         className: N.spinner
       }) : null,
       (0, i.jsxs)(l.Clickable, {
         className: r()(N.container, {
           [N.hover]: U,
-          [N.submitting]: w
+          [N.submitting]: k
         }),
         onClick: Y,
         onContextMenu: e => {

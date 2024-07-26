@@ -44,12 +44,12 @@ defaultValues: o
   } = e, {
 type: h,
 placeholder: x,
-maxValues: E,
-disabled: I
-  } = n, [N, T] = a.useState(!1), [g, S] = a.useState(!1), [b, O] = a.useState(new Map(null == o ? void 0 : o.map(e => [
+maxValues: I,
+disabled: E
+  } = n, [T, N] = a.useState(!1), [g, S] = a.useState(!1), [b, O] = a.useState(new Map(null == o ? void 0 : o.map(e => [
 e.value,
 e
-  ]))), [M, j] = a.useState(new Set(b.keys())), [y, Z] = a.useState(() => (null != o ? o : []).map(e => e.value)), [L, R] = a.useState(0);
+  ]))), [j, M] = a.useState(new Set(b.keys())), [y, Z] = a.useState(() => (null != o ? o : []).map(e => e.value)), [L, R] = a.useState(0);
   a.useEffect(() => {
 let e = (null != o ? o : []).map(e => e.value);
 if (e.every(e => y.includes(e)) && y.every(n => e.includes(n)))
@@ -59,7 +59,7 @@ let n = new Map(null == o ? void 0 : o.map(e => [
   e.value,
   e
 ]));
-O(n), j(new Set(n.keys())), R(e => e + 1);
+O(n), M(new Set(n.keys())), R(e => e + 1);
   }, [
 o,
 y
@@ -80,39 +80,39 @@ if ((null == A ? void 0 : A.type) === u.re.USER_SELECT || (null == A ? void 0 : 
     e.value,
     e
   ]));
-  O(e), j(new Set(e.keys()));
+  O(e), M(new Set(e.keys()));
 }
   }, [A]);
   let G = a.useCallback(() => {
 B({
   type: h,
   selectedOptions: Array.from(b.values())
-}) && j(new Set(b.keys()));
+}) && M(new Set(b.keys()));
   }, [
 B,
 h,
 b
   ]);
   a.useEffect(() => {
-if (!(N || g || b.size === M.size && Array.from(b.keys()).every(e => M.has(e))))
+if (!(T || g || b.size === j.size && Array.from(b.keys()).every(e => j.has(e))))
   G();
   }, [
-N,
+T,
 g,
-M,
+j,
 b,
 G
   ]);
-  let D = 0 === b.size || N,
+  let D = 0 === b.size || T,
 H = {
-  isDisabled: I || k,
+  isDisabled: E || k,
   wrapperClassName: p.select,
   options: e => new Promise(n => {
     n(t(e));
   }),
   placeholder: D ? null != x ? x : _.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER : void 0,
-  onClose: () => T(!1),
-  onOpen: () => T(!0),
+  onClose: () => N(!1),
+  onOpen: () => N(!0),
   onBlur: () => S(!1),
   maxVisibleItems: 5,
   optionClassName: p.__invalid_selectOption,
@@ -132,11 +132,11 @@ children: [
   (0, i.jsxs)('div', {
     className: p.container,
     children: [
-      E > 1 ? (0, i.jsx)(c.SearchableSelect, {
+      I > 1 ? (0, i.jsx)(c.SearchableSelect, {
         className: p.badges,
         value: Array.from(b.values()),
         onChange: e => {
-          !N && S(!0), O(new Map(e.map(e => [
+          !T && S(!0), O(new Map(e.map(e => [
             e.value,
             e
           ])));

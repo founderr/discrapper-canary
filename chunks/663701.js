@@ -39,8 +39,8 @@ var i = n(735250),
   j = n(699516),
   U = n(923834),
   G = n(55563),
-  w = n(774343),
-  k = n(517802),
+  k = n(774343),
+  w = n(517802),
   B = n(436088),
   H = n(814225),
   V = n(515753),
@@ -125,7 +125,7 @@ let {
 return (0, i.jsx)(V.Qj, {
   selected: t,
   route: n,
-  icon: (0, h.makeIconCompat)(k.Z),
+  icon: (0, h.makeIconCompat)(w.Z),
   iconClassName: r()(K.activitiesBirthdayIcon, {
     [K.activitiesBirthdayIconLight]: 'light' === c
   }),
@@ -339,7 +339,7 @@ children: [
 };
 
 function ea() {
-  let e = (0, d.e7)([w.Z], () => w.Z.getHomeLink()),
+  let e = (0, d.e7)([k.Z], () => k.Z.getHomeLink()),
 t = (0, d.e7)([G.Z], () => {
   if (e === W.Z5c.APPLICATION_STORE)
     return !0;

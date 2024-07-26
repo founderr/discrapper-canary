@@ -39,8 +39,8 @@ var i = n(735250),
   j = n(969205),
   U = n(171368),
   G = n(580512),
-  w = n(67152),
-  k = n(695346),
+  k = n(67152),
+  w = n(695346),
   B = n(158776),
   H = n(246946),
   V = n(70956),
@@ -177,12 +177,12 @@ userId: t.id
 let n = T.Y.useExperiment({
     location: 'account popout'
   }).expiringStatus,
-  s = k.Cr.useSetting(),
+  s = w.Cr.useSetting(),
   a = (0, f.p)(),
   r = S.e.useExperiment({
     location: 'account popout'
   }).allowQuietMode || a,
-  o = k.fv.useSetting(),
+  o = w.fv.useSetting(),
   c = e === q.Skl.DND,
   u = t => {
     let n = null != s && '0' !== s ? X.Z.Messages.STATUS_UNTIL.format({
@@ -388,7 +388,7 @@ children: (0, i.jsx)(A.Mt, {
                 ]
               })
             }),
-            (0, i.jsx)(w.Z, {
+            (0, i.jsx)(k.Z, {
               user: t,
               bio: null == W ? void 0 : W.bio,
               hidePersonalInformation: eT,

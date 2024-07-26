@@ -42,8 +42,8 @@ let Z = [],
   j = {},
   U = new Set(),
   G = 0,
-  w = !1,
   k = !1,
+  w = !1,
   B = !1,
   H = null,
   V = null,
@@ -214,7 +214,7 @@ return null !== (t = D[e]) && void 0 !== t ? t : 0;
 return Object.keys(x).length;
   }
   hasNewContent() {
-return k;
+return w;
   }
   getSelectedSummary(e) {
 return null == H || H.channelId !== e ? null : H;
@@ -286,7 +286,7 @@ let c = {
     has_mention: o
   }
 };
-o && (null == j[a] && (j[a] = 0), j[a]++, U.add(s)), null == (O = 0 === O.length ? [...Z] : [...O]).find(e => e.id === i.id) && (O.unshift(c), x[i.id] = c), X() && G > 0 && (k = !0), b[i.id] = c, P[i.id] = {
+o && (null == j[a] && (j[a] = 0), j[a]++, U.add(s)), null == (O = 0 === O.length ? [...Z] : [...O]).find(e => e.id === i.id) && (O.unshift(c), x[i.id] = c), X() && G > 0 && (w = !0), b[i.id] = c, P[i.id] = {
   ...c,
   message: l
 };
@@ -313,8 +313,8 @@ O = t.filter(e => f.zd.has(e.type)), ! function() {
 };
 let s = X();
 if (0 === G)
-  s && !B && (k = !0, w = !0), q();
-else if (k = s, s) {
+  s && !B && (w = !0, k = !0), q();
+else if (w = s, s) {
   let [e, t] = Q(O);
   (0, C.em)([
     ...e,
@@ -414,10 +414,10 @@ null != i && (D[n] = i, J(n, i)), null == t || t.forEach(e => {
   RELOAD_GRAVITY: function() {
 if (0 === O.length)
   return !1;
-q(), k = !1;
+q(), w = !1;
   },
   GRAVITY_TAB_OPENED: function() {
-B = !0, w && (w = !1, k = !1), F < 5 && F++;
+B = !0, k && (k = !1, w = !1), F < 5 && F++;
   },
   GRAVITY_FEEDBACK_GIVEN: function() {
 F = 6;

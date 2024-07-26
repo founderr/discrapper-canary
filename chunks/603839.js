@@ -47,12 +47,12 @@ return {
   errors: null === (n = m.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
   submitting: null === (i = m.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
 };
-  }), R = s.useMemo(() => (0, C.G)(L), [L]), [x, b] = s.useState(!1), [P, M] = s.useState(window.innerWidth), [D, y] = s.useState(1), [j, U] = s.useState(!0), G = (0, g.f)(), w = (0, d.useSpring)({
+  }), R = s.useMemo(() => (0, C.G)(L), [L]), [x, b] = s.useState(!1), [P, M] = s.useState(window.innerWidth), [D, y] = s.useState(1), [j, U] = s.useState(!0), G = (0, g.f)(), k = (0, d.useSpring)({
 opacity: D,
 config: v,
 onStart: () => U(!0),
 onRest: () => U(1 === D)
-  }), k = (0, d.useSpring)({
+  }), w = (0, d.useSpring)({
 transform: 'translateX('.concat(1 === D ? 0 : -1 * (P - 380) / 2 + 190, 'px)'),
 config: v
   }, 'respect-motion-settings'), B = (0, d.useTransition)(0 === D, {
@@ -198,7 +198,7 @@ children: (0, i.jsxs)(d.FocusRingScope, {
           className: A.panel,
           children: [
             (0, i.jsx)(o.animated.div, {
-              style: w,
+              style: k,
               className: r()(A.stepsContainer, {
                 [A.hidden]: !j
               }),
@@ -214,7 +214,7 @@ children: (0, i.jsxs)(d.FocusRingScope, {
                 steps: R,
                 progress: Z,
                 updateCurrentStep: V,
-                animationStyle: w,
+                animationStyle: k,
                 animationClassName: r()({
                   [A.hidden]: !j
                 })
@@ -223,14 +223,14 @@ children: (0, i.jsxs)(d.FocusRingScope, {
           ]
         }),
         (0, i.jsx)(o.animated.div, {
-          style: w,
+          style: k,
           className: r()(A.divider, {
             [A.hidden]: !j,
             [A.dividerResponsive]: j
           })
         }),
         (0, i.jsx)(o.animated.div, {
-          style: k,
+          style: w,
           className: r()(A.sidebar, {
             [A.sidebarResponsive]: j
           }),

@@ -42,11 +42,11 @@ let U = e => {
   selected: s,
   route: U,
   locationState: G,
-  ...w
+  ...k
 } = e,
-k = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
+w = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
 B = (0, l.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
-H = (0, m.Qo)(k, B),
+H = (0, m.Qo)(w, B),
 V = (0, r.JA)('nitro'),
 F = (0, S.N)(),
 Y = (0, f.Ng)(),
@@ -56,7 +56,7 @@ K = (0, O.ZP)(),
 q = (0, N.$_)(),
 Q = (0, x.K)(j),
 X = (0, l.e7)([g.Z], () => g.Z.getCreatedAtOverride()),
-J = null != X ? X : null == k ? void 0 : k.createdAt,
+J = null != X ? X : null == w ? void 0 : w.createdAt,
 $ = s || null != F || null != Y || z || K || null != q || H,
 {
   enabled: ee
@@ -70,7 +70,7 @@ en = (0, p.N9)({
   location: 'NitroTabButton',
   showTabForOtherReasons: $
 });
-  if (!($ = $ || null != k && null != J && Date.now() - J.getTime() > en))
+  if (!($ = $ || null != w && null != J && Date.now() - J.getTime() > en))
 return null;
   z ? (n = (0, a.jsx)(C.Z, {}), i = 0) : null != q ? (n = (0, a.jsx)(R.Z, {
 copy: q
@@ -101,7 +101,7 @@ onClick: () => {
     has_premium: H
   });
 },
-...w,
+...k,
 ...V,
 className: t,
 children: n

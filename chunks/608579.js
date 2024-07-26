@@ -43,10 +43,10 @@ analyticsLocations: M
   } = (0, d.ZP)([
 ...y,
 o.Z.COLLECTIBLES_PAYMENT_MODAL
-  ]), R = s.useRef(new r.qA()), [L, k] = s.useState(null), [b, D] = s.useState(!1), w = s.useMemo(() => (0, T.UY)(_), [_]), B = s.useCallback(() => {
-D(!0), null == t || t();
+  ]), R = s.useRef(new r.qA()), [L, k] = s.useState(null), [D, b] = s.useState(!1), w = s.useMemo(() => (0, T.UY)(_), [_]), B = s.useCallback(() => {
+b(!0), null == t || t();
   }, [t]), F = s.useCallback(e => {
-D(!1), n(e);
+b(!1), n(e);
   }, [n]), G = s.useMemo(() => [
 h.WA,
 p.Dd,
@@ -82,7 +82,7 @@ children: [
   null != w && (0, a.jsx)('img', {
     src: w.imageSrc,
     className: l()(N.customConfetti, {
-      [N.hidden]: !b
+      [N.hidden]: !D
     }),
     style: w.style,
     alt: '',

@@ -39,8 +39,8 @@ var i = n(735250),
   j = n(594174),
   U = n(774343),
   G = n(974042),
-  w = n(808506),
-  k = n(626135),
+  k = n(808506),
+  w = n(626135),
   B = n(630388),
   H = n(823379),
   V = n(998502),
@@ -90,7 +90,7 @@ if (e.voiceChannelId !== s && null != e.voiceChannelId) {
     n = null != t ? t.name : '',
     i = N.Z.getStageInstanceByChannel(e.voiceChannelId),
     s = f.ZP.getActiveEventByChannel(e.voiceChannelId);
-  k.default.track(F.rMx.LEAVE_VOICE_CHANNEL, {
+  w.default.track(F.rMx.LEAVE_VOICE_CHANNEL, {
     channel_id: e.voiceChannelId,
     channel_type: e.voiceChannelType,
     channel_bitrate: e.voiceChannelBitrate,
@@ -117,7 +117,7 @@ if (e.voiceChannelId !== s && null != s) {
     ...(0, c.$H)(s)
   }), (0, u.a)(F.rMx.CHANNEL_OPENED_CLICKSTREAM, {
     channelId: s
-  }), k.default.track(F.rMx.JOIN_VOICE_CHANNEL, {
+  }), w.default.track(F.rMx.JOIN_VOICE_CHANNEL, {
     channel_id: s,
     channel_type: o,
     channel_bitrate: p,
@@ -149,7 +149,7 @@ if (e.runningGame !== L && null != L && !L.isLauncher) {
           exe: _,
           distributor: h
         } = (0, m.G8)(L);
-      k.default.track(F.rMx.LAUNCH_GAME, {
+      w.default.track(F.rMx.LAUNCH_GAME, {
         game: i,
         game_id: r,
         verified: null != e && (0, m.vp)(_, null == e ? void 0 : e.executables),
@@ -158,7 +158,7 @@ if (e.runningGame !== L && null != L && !L.isLauncher) {
         game_platform: F.M7m.DESKTOP,
         detection_method: d,
         distributor: h,
-        is_overlay_enabled: w.Z.enabled,
+        is_overlay_enabled: k.Z.enabled,
         is_overlay_game_enabled: u.enabled,
         is_overlay_game_source: u.source,
         fullscreen_type: l.Jx[n],
@@ -185,7 +185,7 @@ if ((e.videoEnabled !== T || e.isScreenSharing !== C) && null != s) {
       T ? 'camera' : null
     ].filter(H.lm),
     n = null;
-  C ? (e = 'screen', n = (0, h.t)()) : T && (e = 'camera'), k.default.track(F.rMx.VIDEO_INPUT_TOGGLED, {
+  C ? (e = 'screen', n = (0, h.t)()) : T && (e = 'camera'), w.default.track(F.rMx.VIDEO_INPUT_TOGGLED, {
     video_input_type: e,
     video_toggle_source: __OVERLAY__ ? 'overlay' : 'app',
     enabled_inputs: t,
@@ -212,7 +212,7 @@ if (U && null != j && (j !== e.selectedGuildId || !e.connected || K && !e.isMemb
 } else
   U && null == j && G === F.Z5c.FRIENDS && (!e.connected || W !== e.friendsTabSection || G !== e.homeLink) ? (0, _.Z)({
     tab_opened: W
-  }) : U && null == j && G === F.Z5c.MESSAGE_REQUESTS && (!e.connected || G !== e.homeLink) && !this.isMessageRequestsInitialized && (this.isMessageRequestsInitialized = !0, k.default.track(F.rMx.MESSAGE_REQUESTS_INITIALIZED, {
+  }) : U && null == j && G === F.Z5c.MESSAGE_REQUESTS && (!e.connected || G !== e.homeLink) && !this.isMessageRequestsInitialized && (this.isMessageRequestsInitialized = !0, w.default.track(F.rMx.MESSAGE_REQUESTS_INITIALIZED, {
     num_message_requests: J
   }));
 if (U && null != P && (!e.connected || P !== e.selectedChannelId || j !== e.selectedGuildId)) {
@@ -225,7 +225,7 @@ if (U && null != P && (!e.connected || P !== e.selectedChannelId || j !== e.sele
         var t;
         return (0, B.yE)(e.flags, F.iLy.IS_CROSSPOST) && (null === (t = e.messageReference) || void 0 === t ? void 0 : t.guild_id) === '667560445975986187';
       });
-    k.default.track(F.rMx.ACK_COMMUNITY_MESSAGES, {
+    w.default.track(F.rMx.ACK_COMMUNITY_MESSAGES, {
       last_message_id: null == a ? void 0 : a.id,
       last_message_reference_message_id: null == a ? void 0 : null === (i = a.messageReference) || void 0 === i ? void 0 : i.message_id,
       messages_loaded: e.hasFetched,

@@ -35,8 +35,8 @@ var i = n(735250),
   j = n(626135),
   U = n(792125),
   G = n(879041),
-  w = n(647090),
-  k = n(385956),
+  k = n(647090),
+  w = n(385956),
   B = n(610697),
   H = n(26373),
   V = n(486622),
@@ -282,8 +282,8 @@ E = (0, c.e7)([P.ZP], () => {
 }),
 I = null == E ? void 0 : E.channelId,
 m = null != E,
-g = (0, k.T)(I),
-p = (0, w.J)(I);
+g = (0, w.T)(I),
+p = (0, k.J)(I);
   s.useEffect(() => {
 null != I && !g && p && m && ((0, Z.Kh)(I), L.Z.closeChannelSidebar(P.uZ));
   }, [

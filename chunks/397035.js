@@ -38,7 +38,7 @@ h = l.useMemo(() => {
 }, [t.extra.url]);
   return null != h && (n = () => (0, a.q)({
 href: o.Z.format(h),
-trusted: !1
+trusted: !0
   })), {
 thumbnailUrl: null != _ ? _ : f,
 title: t.extra.media_title,

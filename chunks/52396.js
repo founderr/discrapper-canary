@@ -45,12 +45,12 @@ case o.s.PLAYED_GAME:
     ...t
   });
 case o.s.WATCHED_MEDIA:
-  return (0, l.jsx)(E, {
+  return (0, l.jsx)(I, {
     entry: n,
     ...t
   });
 case o.s.LISTENED_SESSION:
-  return (0, l.jsx)(I, {
+  return (0, l.jsx)(E, {
     entry: n,
     ...t
   });
@@ -126,7 +126,7 @@ children: t
   });
 }
 
-function E(e) {
+function I(e) {
   let {
 entry: n,
 children: t,
@@ -144,7 +144,7 @@ children: t
   });
 }
 
-function I(e) {
+function E(e) {
   let {
 entry: n,
 children: t,

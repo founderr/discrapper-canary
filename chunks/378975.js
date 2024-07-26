@@ -116,32 +116,32 @@ placeholder: a,
 maxValues: s,
 minValues: h,
 disabled: x
-  } = e, E = r.useMemo(() => t.filter(e => e.default).map(e => e.value), [t]), {
-state: I,
-executeStateUpdate: N,
-visualState: T,
+  } = e, I = r.useMemo(() => t.filter(e => e.default).map(e => e.value), [t]), {
+state: E,
+executeStateUpdate: T,
+visualState: N,
 isDisabled: g,
 error: S
   } = (0, d.Ee)(e, {
 type: n,
-values: E
-  }), b = s > 1, O = T === m.gH.LOADING, [M, j] = r.useState(!1), [y, Z] = r.useState(() => new Set(t.filter(e => e.default).map(e => e.value))), [L, R] = r.useState(y), A = r.useMemo(() => t.some(e => null != e.emoji), [t]);
+values: I
+  }), b = s > 1, O = N === m.gH.LOADING, [j, M] = r.useState(!1), [y, Z] = r.useState(() => new Set(t.filter(e => e.default).map(e => e.value))), [L, R] = r.useState(y), A = r.useMemo(() => t.some(e => null != e.emoji), [t]);
   r.useEffect(() => {
-if ((null == I ? void 0 : I.type) === c.re.STRING_SELECT) {
-  let e = new Set(I.values);
+if ((null == E ? void 0 : E.type) === c.re.STRING_SELECT) {
+  let e = new Set(E.values);
   Z(e), R(e);
 } else {
-  let e = new Set(E);
+  let e = new Set(I);
   Z(e), R(e);
 }
   }, [
 i,
-E,
-I
+I,
+E
   ]);
   let B = r.useCallback(() => {
 if (L !== y)
-  N({
+  T({
     type: c.re.STRING_SELECT,
     values: Array.from(y)
   }) && R(y);
@@ -149,13 +149,13 @@ if (L !== y)
 y,
 L,
 R,
-N
+T
   ]);
   r.useEffect(() => {
-if (!(M || y.size === L.size && Array.from(L).every(e => y.has(e))))
+if (!(j || y.size === L.size && Array.from(L).every(e => y.has(e))))
   B();
   }, [
-M,
+j,
 y,
 L,
 B
@@ -180,8 +180,8 @@ children: [
           disabled: b && !y.has(e.value) && y.size === s
         })),
         placeholder: null != a ? a : f.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
-        onClose: () => j(!1),
-        onOpen: () => j(!0),
+        onClose: () => M(!1),
+        onOpen: () => M(!0),
         maxVisibleItems: 5,
         closeOnSelect: !b,
         optionClassName: _.selectOption,

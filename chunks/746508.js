@@ -35,8 +35,8 @@ var i = n(735250),
   j = n(446226),
   U = n(935261),
   G = n(74299),
-  w = n(803647),
-  k = n(142497),
+  k = n(803647),
+  w = n(142497),
   B = n(810788),
   H = n(160404),
   V = n(703656),
@@ -178,7 +178,7 @@ onClick: () => (0, Q.v)(!e)
   });
 }
 
-function ew(e) {
+function ek(e) {
   let {
 channel: t,
 enableActivities: n,
@@ -296,7 +296,7 @@ children: e => {
   });
 }
 
-function ek(e) {
+function ew(e) {
   let {
 channel: t,
 enableActivities: n
@@ -379,7 +379,7 @@ p = s.useCallback(() => {
 ]),
 T = u.find(e => e.ownerId === (null == c ? void 0 : c.id)),
 f = (0, es.E)(n, c, u);
-  t = null == T ? a ? p : er.Z : () => (0, w.Z)(T);
+  t = null == T ? a ? p : er.Z : () => (0, k.Z)(T);
   let S = null != T || f.length > 0,
 C = h ? eP.Z.Messages.SHARE_YOUR_SCREEN : eP.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
 A = m || l || g,
@@ -572,7 +572,7 @@ let d = (e.isGuildVoice() || o) && s,
 return (0, i.jsxs)('div', {
   className: eM.actionButtons,
   children: [
-    (0, i.jsx)(ew, {
+    (0, i.jsx)(ek, {
       channel: e,
       enableActivities: d,
       disabled: !_ && u
@@ -585,7 +585,7 @@ return (0, i.jsxs)('div', {
     }),
     (0, i.jsxs)(i.Fragment, {
       children: [
-        d ? (0, i.jsx)(ek, {
+        d ? (0, i.jsx)(ew, {
           channel: e,
           enableActivities: s
         }) : null,
@@ -683,7 +683,7 @@ super(...e), ey(this, 'canScreenshare', () => {
     });
   });
 }), ey(this, 'handleCloseVoicePanelIntroduction', () => {
-  k.Kw(eb.v.VOICE_PANEL_INTRODUCTION);
+  w.Kw(eb.v.VOICE_PANEL_INTRODUCTION);
 }), ey(this, 'renderVoicePanelIntroduction', () => (0, i.jsxs)('div', {
   className: r()(eM.voicePanelIntroductionWrapper, 'theme-light'),
   children: [
@@ -816,7 +816,7 @@ O
   ]);
   let {
 analyticsLocations: R
-  } = (0, b.ZP)(x.Z.RTC_PANEL), M = (0, A.Z)(null != c ? c : ex.lds, null == o ? void 0 : o.id), D = (0, L.Z)(null == o ? void 0 : o.id), w = (0, P.ZP)();
+  } = (0, b.ZP)(x.Z.RTC_PANEL), M = (0, A.Z)(null != c ? c : ex.lds, null == o ? void 0 : o.id), D = (0, L.Z)(null == o ? void 0 : o.id), k = (0, P.ZP)();
   return (0, i.jsx)(b.Gt, {
 value: R,
 children: (0, i.jsxs)('div', {
@@ -841,7 +841,7 @@ children: (0, i.jsxs)('div', {
       showVoiceStates: f,
       shouldShowVoicePanelIntroduction: h,
       isPrivateChannelWithEnabledActivities: D,
-      isBroadcasting: w
+      isBroadcasting: k
     }),
     !Z && p && null != c ? (0, i.jsxs)('div', {
       className: eM.viewAsRolesWarning,

@@ -39,8 +39,8 @@ var i = n(735250),
   j = n(416568),
   U = n(613609),
   G = n(160404),
-  w = n(225675),
-  k = n(745052),
+  k = n(225675),
+  w = n(745052),
   B = n(285865),
   H = n(659971),
   V = n(179742),
@@ -140,7 +140,7 @@ let {
   if (null == s)
     return;
   let e = G.Z.getData(s);
-  if ((null == e ? void 0 : e.type) === w.z.SERVER_SHOP)
+  if ((null == e ? void 0 : e.type) === k.z.SERVER_SHOP)
     switch (e.initialTab) {
       case 'role_subscriptions':
         return A.y.GUILD_ROLE_SUBSCRIPTIONS;
@@ -267,7 +267,7 @@ return function(t) {
   }),
   eb = () => (0, i.jsx)(m.Z, {}),
   eP = () => (0, i.jsx)(F.Z, {}),
-  eM = () => (0, i.jsx)(k.Z, {}),
+  eM = () => (0, i.jsx)(w.Z, {}),
   eD = () => (0, i.jsx)(V.Z, {}),
   ey = e => {
 let {
