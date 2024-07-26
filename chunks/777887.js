@@ -118,10 +118,7 @@ children: [
     children: (0, r.jsx)(S.Z, {
       user: t,
       currentUser: n,
-      guild: y,
-      onOpenProfile: () => null == L ? void 0 : L({
-        subsection: N.Tb.ROLES
-      })
+      guild: y
     })
   })
 ]
