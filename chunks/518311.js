@@ -548,21 +548,25 @@ this.props.onClose(), x.Z.sendRequest({
   _getUserAffinities(e) {
 return {
   affinities: e.map(e => {
-    var t, n;
-    let i = L.Z.getCurrentConfig({
+    var t, n, i;
+    let a = L.Z.getCurrentConfig({
       location: 'desktop_dm_list'
     }, {
       autoTrackExposure: !1
     });
-    if (i.useV1) {
+    if (a.useV1) {
       let n = P.Z.getUserAffinity(e);
       return null !== (t = null == n ? void 0 : n.affinity) && void 0 !== t ? t : -1;
     }
-    if (!i.useV2)
-      return -1;
-    {
+    if (a.useV2Dm) {
       let t = O.Z.getUserAffinity(e);
       return null !== (n = null == t ? void 0 : t.dmProbability) && void 0 !== n ? n : -1;
+    }
+    if (!a.useV2Communication)
+      return -1;
+    else {
+      let t = O.Z.getUserAffinity(e);
+      return null !== (i = null == t ? void 0 : t.communicationProbability) && void 0 !== i ? i : -1;
     }
   })
 };
@@ -811,17 +815,19 @@ _
   ]);
   let {
 useV1: f,
-useV2: E
+useV2Dm: E,
+useV2Communication: C
   } = L.Z.useExperiment({
 location: 'desktop_dm_list'
   }, {
 autoTrackExposure: !1
   });
   return (s.useEffect(() => {
-f && (0, j.W)(), E && (0, j._)();
+f && (0, j.W)(), E && (0, j._)(), C && (0, j._)();
   }, [
 f,
-E
+E,
+C
   ]), p) ? null : (0, a.jsx)(m.Popout, {
 renderPopout: e => (0, a.jsx)(ep, {
   ...e,
