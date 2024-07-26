@@ -1,6 +1,6 @@
 n.d(t, {
   IE: function() {
-return C;
+return g;
   },
   K9: function() {
 return I;
@@ -132,7 +132,7 @@ message: ''
   })).otherwise(() => void 0);
 }
 
-function C(e) {
+function g(e) {
   return new Date(2024, 2, 4).toLocaleDateString(e, {
 month: 'long',
 day: 'numeric',
