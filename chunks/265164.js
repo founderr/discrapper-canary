@@ -231,6 +231,9 @@ return 5 === F;
   hasOpened() {
 return B;
   }
+  hasEverOpened() {
+return F > 0;
+  }
   getState() {
 return {
   dehydratedItems: Z,
@@ -475,6 +478,6 @@ if (!B) {
   let [e, t] = Q(Z = K(Z));
   Y = e, W = t;
 }
-O = K(O = 0 === O.length ? [...Z] : O), X() && G > 0 && (k = !0);
+O = K(O = 0 === O.length ? [...Z] : O);
   }
 });
