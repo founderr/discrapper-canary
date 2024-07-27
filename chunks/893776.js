@@ -37,9 +37,19 @@ throw N.error('Error while dispatching LOGOUT', e), null === (t = window.Discord
 
 function R() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z5c.DEFAULT_LOGGED_OUT;
-  O();
+  if (O(), null == e)
+return;
   let t = (0, f.PP)();
-  null != e && (null != t ? (g.Z.popAll(), t.navigate('auth')) : (0, h.uL)(e));
+  if (null == t) {
+(0, h.uL)(e);
+return;
+  }
+  g.Z.popAll(), t.reset({
+index: 0,
+routes: [{
+  name: 'auth'
+}]
+  });
 }
 (a = i || (i = {})).MFA = 'MFA', a.SUCCESS = 'SUCCESS', t.Z = {
   startSession(e) {
