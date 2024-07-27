@@ -118,7 +118,7 @@ e.willReconnect && (null != e.streamKey ? R.Wb.streamPing(e.streamKey) : R.Wb.vo
 return R.GC.update({
   guildId: e.guildId,
   channelId: e.channelId
-}), (0, v.isIOS)() && null == e.channelId && x === D.$7l.BACKGROUND && R.Wb.close(!0), !1;
+}), (0, v.isIOS)() && x === D.$7l.BACKGROUND && (null == e.channelId ? R.Wb.close(!0) : R.Wb.isClosed() && (C.Y(!1), R.Wb.connect())), !1;
   },
   VOICE_STATE_UPDATES: function(e) {
 let {
@@ -168,7 +168,7 @@ t === R.GC.channelId && R.GC.setState({
 });
   },
   APP_STATE_UPDATE: function(e) {
-return (0, v.isIOS)() ? (h.default.isAuthenticated() && (x === D.$7l.INACTIVE && e.state === D.$7l.BACKGROUND && null == R.GC.channelId ? R.Wb.close(!0) : x === D.$7l.BACKGROUND && e.state === D.$7l.ACTIVE && (C.Y(!1), R.Wb.connect())), x = e.state) : e.state === D.$7l.ACTIVE && (C.Y(!1), h.default.isAuthenticated() && R.Wb.resetBackoff('App state is active')), !1;
+return (0, v.isIOS)() ? (h.default.isAuthenticated() && (x === D.$7l.INACTIVE && e.state === D.$7l.BACKGROUND && null == R.GC.channelId ? R.Wb.close(!0) : x === D.$7l.BACKGROUND && e.state === D.$7l.ACTIVE && R.Wb.isClosed() && (C.Y(!1), R.Wb.connect())), x = e.state) : e.state === D.$7l.ACTIVE && (C.Y(!1), h.default.isAuthenticated() && R.Wb.resetBackoff('App state is active')), !1;
   },
   GUILD_MEMBERS_REQUEST: function(e) {
 return R.Wb.isSessionEstablished() && ('userIds' in e ? l()(e.userIds).chunk(100).forEach(t => {
