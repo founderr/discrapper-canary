@@ -54,7 +54,7 @@ children: [
     className: r()(d.imageBackground, h),
     style: p,
     children: (0, i.jsx)('div', {
-      className: d.imageBackgroundOverlay
+      className: d.gradientOverlay
     })
   })
 ]
