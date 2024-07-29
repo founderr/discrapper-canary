@@ -24,18 +24,18 @@ onClose: s
 selectedPlan: n
   } = (0, u.usePaymentContext)(), {
 selectedGiftStyle: x,
-giftRecipient: h
+giftRecipient: L
   } = (0, d.wD)(), {
-analyticsLocations: L
-  } = (0, r.ZP)(), f = !__BILLING_STANDALONE__ && (0, C.MY)(h, !1) === C.xr.CUSTOM_STYLE, {
-enabled: E
+analyticsLocations: h
+  } = (0, r.ZP)(), f = !__BILLING_STANDALONE__ && (0, C.MY)(L, !1) === C.xr.CUSTOM_STYLE, {
+enabled: I
   } = l.m.useExperiment({
 location: 'GiftPurchaseConfirmationFooter'
   }, {
 autoTrackExposure: f,
 disable: !f
   });
-  return E ? (0, t.jsx)(c.O3, {
+  return I ? (0, t.jsx)(c.O3, {
 children: (0, t.jsx)(i.ModalFooter, {
   align: o.Z.Align.CENTER,
   children: (0, t.jsx)(a.Z, {
@@ -45,7 +45,7 @@ children: (0, t.jsx)(i.ModalFooter, {
     buttonText: p.Z.Messages.PREMIUM_GIFTING_REPEAT_GIFT,
     giftStyle: x,
     analyticsLocation: _.Sbl.REPEAT_GIFT_PURCHASE_BUTTON,
-    analyticsLocationsOverride: L.slice(0, -1),
+    analyticsLocationsOverride: h.slice(0, -1),
     onClick: () => {
       s();
     }

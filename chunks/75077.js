@@ -1,6 +1,6 @@
 n.d(t, {
   BS: function() {
-return m;
+return A;
   },
   Op: function() {
 return M;
@@ -18,7 +18,7 @@ return x;
 return h;
   },
   t2: function() {
-return A;
+return m;
   },
   vZ: function() {
 return p;
@@ -63,7 +63,7 @@ switch (e) {
     return;
 }
   },
-  m = e => {
+  A = e => {
 switch (e) {
   case R.EB.PENDING:
     return C.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;
@@ -76,7 +76,7 @@ switch (e) {
 }
   };
 
-function A(e, t) {
+function m(e, t) {
   switch (e) {
 case R.EB.PENDING:
   return null != t ? C.Z.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({

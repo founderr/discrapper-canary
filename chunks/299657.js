@@ -16,8 +16,8 @@ var s = n(735250),
   C = n(15640),
   g = n(89057),
   p = n(433811),
-  m = n(246946),
-  A = n(594174),
+  A = n(246946),
+  m = n(594174),
   N = n(78839),
   f = n(626135),
   S = n(111361),
@@ -44,7 +44,7 @@ p.X.trigger();
   analyticsLocations: B
 } = (0, I.ZP)(T.Z.PREMIUM_MARKETING),
 j = (0, l.e7)([N.ZP], () => N.ZP.hasFetchedSubscriptions()),
-U = (0, l.e7)([A.default], () => A.default.getCurrentUser()),
+U = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
 G = (0, O.N)(),
 y = (0, b.Ng)(),
 k = (0, C.V)(),
@@ -80,7 +80,7 @@ y
   }, [
 r,
 H
-  ]), (0, l.e7)([m.Z], () => m.Z.enabled)) ? (0, s.jsx)(E.Z, {}) : n ? (0, s.jsx)(g.c8, {}) : t === L.EZ.ApplicationStoreHome && V ? (0, s.jsx)(I.Gt, {
+  ]), (0, l.e7)([A.Z], () => A.Z.enabled)) ? (0, s.jsx)(E.Z, {}) : n ? (0, s.jsx)(g.c8, {}) : t === L.EZ.ApplicationStoreHome && V ? (0, s.jsx)(I.Gt, {
 value: B,
 children: (0, s.jsx)(v.Z, {})
   }) : j && k && !H ? (0, s.jsx)(I.Gt, {

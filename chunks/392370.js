@@ -242,7 +242,7 @@ C,
 a,
 n,
 t
-  ]), R = i.useMemo(() => {
+  ]), b = i.useMemo(() => {
 if (0 === T.length)
   return [];
 let e = new Map(L.map(e => [
@@ -265,7 +265,7 @@ return l().compact(T.map(n => {
 L,
 T,
 h
-  ]), b = i.useMemo(() => {
+  ]), R = i.useMemo(() => {
 var e;
 if (!s && !f)
   return [];
@@ -357,11 +357,11 @@ n,
 t,
 L,
 S
-  ]), M = R.length > 0, y = b.length > 0;
+  ]), M = b.length > 0, y = R.length > 0;
   return {
-commandResults: R,
+commandResults: b,
 hasCommandResults: M,
-applicationResults: b,
+applicationResults: R,
 hasApplicationResults: y,
 isEmptyState: !M && !y,
 loading: P && o

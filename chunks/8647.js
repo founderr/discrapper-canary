@@ -16,34 +16,34 @@ var a = n(120356),
   C = n(474936),
   g = n(981631),
   p = n(689938),
-  m = n(482101);
+  A = n(482101);
 t.Z = function(e) {
   let {
 isFullScreen: t,
 buttonClassName: a
   } = e, {
-promotion: A
+promotion: m
   } = (0, R.mq)(), N = (0, i.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription());
   if (!(0, T.Vi)())
 return null;
-  let f = new Date(A.endDate);
+  let f = new Date(m.endDate);
   return (0, s.jsx)(c.O, {
 newLocations: [o.Z.PREMIUM_MARKETING_PAGE_BANNER],
 children: (0, s.jsxs)('div', {
-  className: r()(m.banner, {
-    [m.bannerFullScreen]: t
+  className: r()(A.banner, {
+    [A.bannerFullScreen]: t
   }),
   children: [
     (0, s.jsx)('div', {
-      className: m.bannerLeftImageContainer,
+      className: A.bannerLeftImageContainer,
       children: (0, s.jsx)('img', {
         alt: '',
         src: t ? n(277698) : n(144823),
-        className: m.image
+        className: A.image
       })
     }),
     (0, s.jsxs)('div', {
-      className: m.bannerContent,
+      className: A.bannerContent,
       children: [
         (0, s.jsxs)('div', {
           children: [
@@ -53,7 +53,7 @@ children: (0, s.jsxs)('div', {
               children: null == N || null == (0, u.he)(N) ? p.Z.Messages.BOGO_MARKETING_PAGE_BANNER_HEADER_2024 : p.Z.Messages.BOGO_MARKETING_PAGE_BANNER_NON_NITRO_HEADER_2024
             }),
             (0, s.jsx)(l.Text, {
-              className: m.countdown,
+              className: A.countdown,
               variant: 'text-sm/bold',
               children: (0, s.jsx)(E.Z, {
                 endDate: f
@@ -70,20 +70,20 @@ children: (0, s.jsxs)('div', {
         }),
         (0, s.jsx)(I.Z, {
           buttonText: p.Z.Messages.BOGO_CLAIM_OFFER,
-          buttonTextClassName: m.subscribeButtonText,
+          buttonTextClassName: A.subscribeButtonText,
           subscriptionTier: C.Si.TIER_2,
           showIcon: !1,
-          className: null != a ? a : m.subscribeButton,
+          className: null != a ? a : A.subscribeButton,
           forceInverted: !0
         })
       ]
     }),
     (0, s.jsx)('div', {
-      className: m.bannerRightImageContainer,
+      className: A.bannerRightImageContainer,
       children: (0, s.jsx)('img', {
         alt: '',
         src: t ? n(10501) : n(485978),
-        className: m.image
+        className: A.image
       })
     })
   ]

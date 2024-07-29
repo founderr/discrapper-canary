@@ -19,8 +19,8 @@ var i = n(399606),
   C = n(78839),
   g = n(424218),
   p = n(63063),
-  m = n(380684),
-  A = n(74538),
+  A = n(380684),
+  m = n(74538),
   N = n(494127),
   f = n(314684),
   S = n(687362),
@@ -64,9 +64,9 @@ var i = n(399606),
 t.Z = () => {
   let {
 analyticsLocations: e
-  } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD), t = (0, c.ZP)(), n = (0, g.BU)(((0, m.Xv)() ? b.wb : b.Uq) / 1024, {
+  } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD), t = (0, c.ZP)(), n = (0, g.BU)(((0, A.Xv)() ? b.wb : b.Uq) / 1024, {
 useKibibytes: !0
-  }), s = (0, i.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), a = null != s ? A.ZP.getPremiumPlanItem(s) : null, el = null != a ? A.ZP.getSkuIdForPlan(a.planId) : null, eo = el === b.Si.TIER_2, ec = el === b.Si.TIER_0, {
+  }), s = (0, i.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), a = null != s ? m.ZP.getPremiumPlanItem(s) : null, el = null != a ? m.ZP.getSkuIdForPlan(a.planId) : null, eo = el === b.Si.TIER_2, ec = el === b.Si.TIER_0, {
 flipped: ed
   } = (0, N.JP)(), {
 flipped: e_
@@ -82,11 +82,11 @@ o.Z.open(O.oAB.VOICE, P.GA, {
 });
   }, ep = () => {
 (0, T.uL)(O.Z5c.COLLECTIBLES_SHOP);
-  }, em = () => {
+  }, eA = () => {
 o.Z.open(O.oAB.APPEARANCE, null, {
   scrollPosition: P.h1.CUSTOM_APP_ICONS
 });
-  }, eA = {
+  }, em = {
 avatarDecorations: eo ? {
   name: 'avatarDecorations',
   title: L.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
@@ -356,7 +356,7 @@ customAppIcons: {
   perkImage: w,
   description: L.Z.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
   descriptionCta: L.Z.Messages.TAKE_ME_THERE,
-  onCtaClick: em
+  onCtaClick: eA
 },
 moreEmojiPower: {
   name: 'moreEmojiPower',
@@ -404,7 +404,7 @@ newAppStylesUpdateJune2024: {
   description: L.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NEW_APP_STYLES_DESCRIPTION,
   descriptionCta: eo || ec ? L.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NITRO_NEW_APP_STYLES : L.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NON_NITRO_NEW_APP_STYLES,
   isPremiumGetCta: !(eo || ec),
-  onCtaClick: eo || ec ? em : void 0,
+  onCtaClick: eo || ec ? eA : void 0,
   perkImage: z
 },
 referralProgram: {
@@ -441,7 +441,7 @@ let {
   percentage: eT,
   initialPercentage: eE
 });
-eA.freeBoost = {
+em.freeBoost = {
   name: 'freeBoost',
   title: t,
   subtitle: n,
@@ -458,5 +458,5 @@ eA.freeBoost = {
   dismissibleContentType: l
 };
   }
-  return eA;
+  return em;
 };

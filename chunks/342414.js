@@ -60,7 +60,7 @@ return (0, s.jsx)(s.Fragment, {
   })
 });
   },
-  m = e => {
+  A = e => {
 let {
   inTrial: t,
   location: n
@@ -118,7 +118,7 @@ className: t,
 location: n
   } = e, {
 analyticsLocations: a
-  } = (0, o.ZP)(l.Z.PREMIUM_MARKETING_HERO_CTA), r = (0, c._O)(), i = (0, T.b)(n) ? (0, s.jsx)(m, {
+  } = (0, o.ZP)(l.Z.PREMIUM_MARKETING_HERO_CTA), r = (0, c._O)(), i = (0, T.b)(n) ? (0, s.jsx)(A, {
 inTrial: r,
 location: n
   }) : (0, s.jsx)(p, {

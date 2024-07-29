@@ -22,9 +22,9 @@ s.Z = () => {
   animateOnHover: !0
 }),
 x = (0, l.Fg)(),
-h = (0, i.ap)(x),
-L = o.ZP.getName(e),
-f = h ? d.Z : u.Z;
+L = (0, i.ap)(x),
+h = o.ZP.getName(e),
+f = L ? d.Z : u.Z;
   return null == e ? null : (0, t.jsxs)('div', {
 className: p.attributionBannerContainer,
 children: [
@@ -41,7 +41,7 @@ children: [
     variant: 'text-xs/bold',
     className: p.bannerHeader,
     children: _.Z.Messages.REFERRAL_PRORAM_PAYMENT_MODAL_BANNER.format({
-      userName: L
+      userName: h
     })
   }),
   (0, t.jsx)(f, {

@@ -1,6 +1,6 @@
 n.d(s, {
   q: function() {
-return I;
+return E;
   }
 });
 var t = n(735250);
@@ -17,12 +17,12 @@ var i = n(120356),
   _ = n(598),
   p = n(409813),
   x = n(614223),
-  h = n(48175),
-  L = n(474936),
+  L = n(48175),
+  h = n(474936),
   f = n(689938),
-  E = n(745102);
+  I = n(745102);
 
-function I(e) {
+function E(e) {
   let {
 handleStepChange: s,
 handleClose: n,
@@ -34,8 +34,8 @@ startedPaymentFlowWithPaymentSourcesRef: C,
 setSelectedPlanId: d,
 priceOptions: f
   } = (0, _.usePaymentContext)(), {
-isGift: E
-  } = (0, c.wD)(), I = (0, o.N)(i), T = (0, a.Nx)();
+isGift: I
+  } = (0, c.wD)(), E = (0, o.N)(i), N = (0, a.Nx)();
   return (0, t.jsx)(M, {
 selectSku: e => function(e) {
   let {
@@ -51,8 +51,8 @@ selectSku: e => function(e) {
   t(n);
   let C = p.h8.PLAN_SELECT,
     d = (0, u.k5)(s);
-  (d === L.Si.TIER_1 || d === L.Si.TIER_2) && n === L.Si.TIER_0 && !r && (C = p.h8.WHAT_YOU_LOSE);
-  let c = (0, h.T)({
+  (d === h.Si.TIER_1 || d === h.Si.TIER_2) && n === h.Si.TIER_0 && !r && (C = p.h8.WHAT_YOU_LOSE);
+  let c = (0, L.T)({
       userTrialOffer: l,
       isGift: r,
       skuId: n
@@ -73,14 +73,14 @@ selectSku: e => function(e) {
   newSkuId: e,
   setSelectedSkuId: r,
   handleStepChange: s,
-  isGift: E,
-  userTrialOffer: I,
+  isGift: I,
+  userTrialOffer: E,
   startedPaymentFlowWithPaymentSources: C.current,
   setSelectedPlanId: d
 }),
 onClose: n,
-isGift: E,
-inOfferExperience: T,
+isGift: I,
+inOfferExperience: N,
 priceOptions: f
   });
 }
@@ -96,7 +96,7 @@ priceOptions: o
   return (0, t.jsxs)(t.Fragment, {
 children: [
   (0, t.jsxs)(l.ModalHeader, {
-    className: E.skuSelectModalHeader,
+    className: I.skuSelectModalHeader,
     separator: !1,
     children: [
       (0, t.jsx)(l.FormTitle, {
@@ -109,13 +109,13 @@ children: [
     ]
   }),
   (0, t.jsxs)(l.ModalContent, {
-    className: r()(E.skuSelectModalContent, {
-      [E.modalPadding]: a
+    className: r()(I.skuSelectModalContent, {
+      [I.modalPadding]: a
     }),
     children: [
       (0, t.jsx)(C.Z, {
         fromBoostCancelModal: !1,
-        className: E.legacyPricingNotice
+        className: I.legacyPricingNotice
       }),
       (0, t.jsx)(d.Z, {
         onSelectSku: e => s((0, u.Wz)(e)),

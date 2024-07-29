@@ -16,16 +16,16 @@ subscriptionTier: s,
 initialPlanId: n,
 giftStyle: p,
 onClick: x,
-buttonText: h,
-analyticsLocation: L,
+buttonText: L,
+analyticsLocation: h,
 analyticsLocationsOverride: f,
-repeatPurchase: E,
-...I
-  } = e, M = (0, i.e7)([C.default], () => C.default.getCurrentUser()), T = (0, i.e7)([d.Z], () => d.Z.isFocused()), {
-analyticsLocations: N
+repeatPurchase: I,
+...E
+  } = e, M = (0, i.e7)([C.default], () => C.default.getCurrentUser()), N = (0, i.e7)([d.Z], () => d.Z.isFocused()), {
+analyticsLocations: j
   } = (0, l.ZP)();
   return (0, t.jsx)(r.ShinyButton, {
-pauseAnimation: !T,
+pauseAnimation: !N,
 className: _.tier2Gradient,
 color: r.Button.Colors.CUSTOM,
 onClick: e => {
@@ -38,21 +38,21 @@ onClick: e => {
     initialPlanId: n,
     isGift: !0,
     giftStyle: p,
-    analyticsLocation: L,
-    analyticsLocations: null != f ? f : N,
+    analyticsLocation: h,
+    analyticsLocations: null != f ? f : j,
     analyticsObject: {
       object: u.qAy.BUTTON_CTA,
       objectType: u.Qqv.GIFT
     },
-    repeatPurchase: E
+    repeatPurchase: I
   });
 },
-...I,
+...E,
 children: (0, t.jsx)(r.Text, {
   variant: 'text-sm/medium',
   color: 'none',
   className: _.buttonText,
-  children: null != h ? h : c.Z.Messages.PREMIUM_GIFTING_BUTTON
+  children: null != L ? L : c.Z.Messages.PREMIUM_GIFTING_BUTTON
 })
   });
 };

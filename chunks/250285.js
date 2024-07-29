@@ -31,7 +31,7 @@ t,
 C
   ]), p = () => {
 R(!0);
-  }, m = () => {
+  }, A = () => {
 R(!1);
   };
   return (0, s.jsx)(c.mh, {
@@ -50,7 +50,7 @@ children: e => (0, s.jsx)(l.tE, {
       [E.active]: I
     }),
     onMouseEnter: p,
-    onMouseLeave: m,
+    onMouseLeave: A,
     onClick: g,
     ...e,
     children: n(I)

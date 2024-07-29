@@ -17,8 +17,8 @@ var o = n(149765),
   C = n(266750),
   g = n(768910),
   p = n(632093),
-  m = n(347994),
-  A = n(591526),
+  A = n(347994),
+  m = n(591526),
   N = n(261875),
   f = n(710845),
   S = n(38618),
@@ -83,8 +83,8 @@ u = performance.now(),
 E = h.Z.loadCachedMessages.measureAsyncWithoutNesting(() => F(e, o, d)),
 T = h.Z.fetchGuildCache.measureAsync(() => K(e, n)),
 I = h.Z.fetchGuildCache.measureAsync(() => Y(e, n)),
-R = null != e ? l.Z.timeAsync('\uD83D\uDCBE', 'cache: private_channels', () => A.Z.getAsync(e, null)) : Promise.resolve([]),
-C = null == e ? Promise.resolve({}) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_settings', () => m.Z.getAll(e)),
+R = null != e ? l.Z.timeAsync('\uD83D\uDCBE', 'cache: private_channels', () => m.Z.getAsync(e, null)) : Promise.resolve([]),
+C = null == e ? Promise.resolve({}) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_settings', () => A.Z.getAll(e)),
 N = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => g.Z.getAll(e)),
 f = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_guild_settings', () => p.Z.getAll(e)),
 [
@@ -174,7 +174,7 @@ return D.verbose('skipped loading initial guild (guild: '.concat(n, ', database:
 });
   let s = n;
   return {
-channels: await (0, u.dI)(() => A.Z.getAsync(e, s)),
+channels: await (0, u.dI)(() => m.Z.getAsync(e, s)),
 guildId: n
   };
 }
@@ -190,7 +190,7 @@ async function z(e, t, n, s) {
 }))
   ])), c = await h.Z.fetchStaleChannels.measureAsync(() => null != e && null != i && i.stale.length > 0 ? (0, u.dI)(() => {
 var t, n;
-return t = e, n = i.stale, D.verbose('loading stale guild channels (count: '.concat(n.length, ', ids: ').concat(n.join(', '), ')')), Promise.all(n.map(e => A.Z.getAsync(t, e).then(t => [
+return t = e, n = i.stale, D.verbose('loading stale guild channels (count: '.concat(n.length, ', ids: ').concat(n.join(', '), ')')), Promise.all(n.map(e => m.Z.getAsync(t, e).then(t => [
   e,
   t
 ])));

@@ -20,8 +20,8 @@ var s = n(735250),
   C = n(497505),
   g = n(918701),
   p = n(977156),
-  m = n(5881),
-  A = n(602667),
+  A = n(5881),
+  m = n(602667),
   N = n(78826),
   f = n(693900),
   S = n(617889),
@@ -33,7 +33,7 @@ function b(e) {
   var t, n, i;
   let {
 quest: R
-  } = e, b = (0, m.T)({
+  } = e, b = (0, A.T)({
 quest: R,
 location: h.dr.QUESTS_BAR
   }), O = (0, p.Zy)({
@@ -195,7 +195,7 @@ y && (0, T.dA)({
 y,
 O,
 R.id
-  ]), O && (H || !X || k) && !y) ? (0, s.jsx)(A.A, {
+  ]), O && (H || !X || k) && !y) ? (0, s.jsx)(m.A, {
 questOrQuests: R,
 questContent: F.trackingCtx.content,
 overrideVisibility: !v && H,

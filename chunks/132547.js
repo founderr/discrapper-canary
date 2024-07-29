@@ -16,8 +16,8 @@ var s = n(735250),
   C = n(487980),
   g = n(391110),
   p = n(71363),
-  m = n(781800),
-  A = n(981631),
+  A = n(781800),
+  m = n(981631),
   N = n(391552),
   f = n(865215);
 t.Z = () => {
@@ -58,7 +58,7 @@ children: [
             className: N.perksDiscoverability,
             noBackground: !0,
             leftAlignHeaders: !0,
-            showAllPerksButton: (0, s.jsx)(m.Z, {
+            showAllPerksButton: (0, s.jsx)(A.Z, {
               setIsAllPerksVisible: n,
               previousComponent: g.MQ.HOME
             })
@@ -67,8 +67,8 @@ children: [
             className: N.giftNitro,
             location: c.Z.PREMIUM_MARKETING_GIFT_SECTION,
             analyticsLocation: {
-              page: A.ZY5.NITRO_HOME,
-              section: A.jXE.GIFT_BANNER
+              page: m.ZY5.NITRO_HOME,
+              section: m.jXE.GIFT_BANNER
             }
           }),
           (0, s.jsx)('div', {
@@ -76,7 +76,7 @@ children: [
           }),
           (0, s.jsx)(l.$, {
             onChange: e => {
-              e && !S && (u.default.track(A.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+              e && !S && (u.default.track(m.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                 location_stack: r
               }), h(!0));
             },

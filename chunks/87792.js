@@ -16,8 +16,8 @@ var s = n(735250),
   C = n(780985),
   g = n(880257),
   p = n(631885),
-  m = n(240351),
-  A = n(792258),
+  A = n(240351),
+  m = n(792258),
   N = n(657825),
   f = n(198952),
   S = n(329242),
@@ -61,10 +61,10 @@ loadMore: _,
 isMoreLoading: T
   } = (0, I.G)({
 onError: n
-  }), C = M.tx.get(t), [p, m] = a.useState(M.iB), f = (0, E.Xi)({
+  }), C = M.tx.get(t), [p, A] = a.useState(M.iB), f = (0, E.Xi)({
 location: 'family_center_activity_section_web'
   }), S = a.useCallback(() => {
-m(e => e + M.iB), _(t);
+A(e => e + M.iB), _(t);
   }, [
 t,
 _
@@ -79,7 +79,7 @@ x = a.useCallback(e => {
     userId: n.entity_id,
     timestamp: d.default.extractTimestamp(n.event_id),
     timestampFormatter: C.timestampFormatter
-  }, n.event_id) : (0, u.f0)(n) ? (0, s.jsx)(A.Z, {
+  }, n.event_id) : (0, u.f0)(n) ? (0, s.jsx)(m.Z, {
     guildId: n.entity_id
   }, n.event_id) : void 0;
 }, [
@@ -265,7 +265,7 @@ children: [
             className: O.activityCounterRow,
             children: n.map(e => {
               let [t, n] = e;
-              return (0, s.jsx)(m.Z, {
+              return (0, s.jsx)(A.Z, {
                 displayType: t,
                 header: n.tooltipHeader()
               }, 'counter-'.concat(t));
