@@ -13,23 +13,28 @@ var i = t(735250),
   d = t(981631),
   c = t(689938);
 
-function E(e, n, t) {
-  let E = r.useContext(u.AnalyticsContext),
-{
-  analyticsLocations: _
-} = (0, o.ZP)(),
-I = (0, s.Aq)();
+function E(e) {
+  let {
+userId: n,
+guildId: t,
+channelId: E,
+section: _,
+label: I
+  } = e, T = r.useContext(u.AnalyticsContext), {
+analyticsLocations: N
+  } = (0, o.ZP)(), S = (0, s.Aq)();
   return (0, i.jsx)(a.MenuItem, {
 id: 'user-profile',
-label: c.Z.Messages.PROFILE,
+label: null != I ? I : c.Z.Messages.PROFILE,
 action: () => {
   (0, l.openUserProfileModal)({
-    userId: e,
-    guildId: n,
-    channelId: t,
-    sourceAnalyticsLocations: _,
-    analyticsLocation: E.location
-  }), I.dispatch(d.CkL.POPOUT_CLOSE);
+    userId: n,
+    guildId: t,
+    channelId: E,
+    section: _,
+    sourceAnalyticsLocations: N,
+    analyticsLocation: T.location
+  }), S.dispatch(d.CkL.POPOUT_CLOSE);
 }
   });
 }

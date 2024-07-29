@@ -23,8 +23,8 @@ var r = t(481060),
   M = t(915193),
   Z = t(332576),
   m = t(710631),
-  R = t(297047),
-  g = t(88966),
+  g = t(297047),
+  R = t(88966),
   C = t(397616),
   v = t(558924),
   G = t(991307),
@@ -45,7 +45,10 @@ showChannelCallItems: x = !1,
 showModalItems: H = !0,
 onSelect: L,
 onHeightUpdate: j
-  } = e, w = (0, y.Z)(t.id, null), F = (0, R.Z)(t, null, o), k = (0, v.Z)(t.id, s.id), B = (0, g.Z)(t.id, o), V = (0, h.Z)({
+  } = e, w = (0, y.Z)({
+userId: t.id,
+guildId: null
+  }), F = (0, g.Z)(t, null, o), k = (0, v.Z)(t.id, s.id), B = (0, R.Z)(t.id, o), V = (0, h.Z)({
 user: t,
 context: o
   }), W = (0, f.Z)({

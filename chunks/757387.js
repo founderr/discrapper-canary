@@ -55,7 +55,11 @@ viewingChannelId: W
 page: x.ZY5.GUILD_CHANNEL,
 section: x.jXE.CHAT_USERNAME,
 object: x.qAy.CONTEXT_MENU_ITEM
-  }, q = (0, P.Z)(n.id, t, o.id), z = (0, y.Z)(n, t, w), Q = (0, D.Z)(n.id, w), X = (0, H.Z)(n.id), $ = (0, g.Z)({
+  }, q = (0, P.Z)({
+userId: n.id,
+guildId: t,
+channelId: o.id
+  }), z = (0, y.Z)(n, t, w), Q = (0, D.Z)(n.id, w), X = (0, H.Z)(n.id), $ = (0, g.Z)({
 user: n,
 context: w
   }), J = (0, h.Z)({

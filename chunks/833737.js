@@ -53,7 +53,10 @@ P(f.jQ.COPY_ID);
   }, [P]), k = (0, i.e7)([A.ZP], () => A.ZP.isMember(l, t.id), [
 l,
 t.id
-  ]), F = (0, D.Z)(t.id, l), Y = (0, L.Z)(t.id, C), B = (0, M.Z)({
+  ]), F = (0, D.Z)({
+userId: t.id,
+guildId: l
+  }), Y = (0, L.Z)(t.id, C), B = (0, M.Z)({
 guildId: l,
 userId: t.id,
 analyticsLocation: null != m ? m : v.location,

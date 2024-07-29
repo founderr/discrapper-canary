@@ -20,8 +20,8 @@ var a = t(481060),
   Z = t(212205),
   C = t(62420),
   x = t(455395),
-  h = t(581052),
-  g = t(875252),
+  g = t(581052),
+  h = t(875252),
   O = t(122074),
   S = t(819403),
   m = t(777658),
@@ -53,7 +53,10 @@ targetIsUser: B = !1,
 context: K,
 onSelect: W,
 onHeightUpdate: H
-  } = e, X = (0, L.Z)(n.id, null), q = (0, j.Z)({
+  } = e, X = (0, L.Z)({
+userId: n.id,
+guildId: null
+  }), q = (0, j.Z)({
 user: n,
 context: K
   }), Q = (0, p.Z)({
@@ -81,7 +84,7 @@ commandTargetId: n.id,
 channel: t,
 guildId: void 0,
 onHeightUpdate: H
-  }), eZ = (0, A.l)(t), eC = (0, A.P)(t), ex = (0, Z.Z)(t), eh = (0, C.Z)(t), eg = (0, h.V)(t), eO = (0, x.i)(t), eS = (0, g.H)(t), em = t.isManaged(), eR = n.isNonUserBot();
+  }), eZ = (0, A.l)(t), eC = (0, A.P)(t), ex = (0, Z.Z)(t), eg = (0, C.Z)(t), eh = (0, g.V)(t), eO = (0, x.i)(t), eS = (0, h.H)(t), em = t.isManaged(), eR = n.isNonUserBot();
   return (0, i.jsxs)(a.Menu, {
 navId: 'user-context',
 onClose: l.Zy,
@@ -92,7 +95,7 @@ children: [
     children: !(eR && !(0, f.Z)(t.id)) && eI
   }),
   (0, i.jsx)(a.MenuGroup, {
-    children: eg
+    children: eh
   }),
   (0, i.jsx)(a.MenuGroup, {
     children: eS
@@ -104,7 +107,7 @@ children: [
     children: [
       eZ,
       ex,
-      eh
+      eg
     ]
   }),
   (0, i.jsx)(a.MenuGroup, {

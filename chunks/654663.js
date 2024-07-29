@@ -35,7 +35,10 @@ channel: a,
 context: s,
 onSelect: o,
 onHeightUpdate: b
-  } = e, p = (0, T.Z)(n.id, l), U = (0, N.Z)(n, l, s), P = (0, A.Z)(n.id, s), j = (0, x.Z)(n.id), D = (0, R.Z)({
+  } = e, p = (0, T.Z)({
+userId: n.id,
+guildId: l
+  }), U = (0, N.Z)(n, l, s), P = (0, A.Z)(n.id, s), j = (0, x.Z)(n.id), D = (0, R.Z)({
 user: n,
 context: s
   }), L = (0, f.Z)({

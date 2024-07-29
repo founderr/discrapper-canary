@@ -40,7 +40,10 @@ onSelect: L
 page: D.ZY5.GUILD_CHANNEL,
 section: D.jXE.CHAT_USERNAME,
 object: D.qAy.CONTEXT_MENU_ITEM
-  }, S = (0, p.Z)(n.id, i), R = (0, g.Z)(n, i, U), j = (0, v.Z)(n.id, U), P = (0, C.Z)(n.id), k = (0, I.Z)({
+  }, S = (0, p.Z)({
+userId: n.id,
+guildId: i
+  }), R = (0, g.Z)(n, i, U), j = (0, v.Z)(n.id, U), P = (0, C.Z)(n.id), k = (0, I.Z)({
 user: n,
 context: U
   }), G = (0, f.Z)({

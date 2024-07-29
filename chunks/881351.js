@@ -28,7 +28,9 @@ user: n,
 showMediaItems: t = !1,
 mediaEngineContext: a,
 onSelect: o
-  } = e, d = (0, I.Z)(n.id), S = (0, g.Z)(n.id), O = (0, f.Z)({
+  } = e, d = (0, I.Z)({
+userId: n.id
+  }), S = (0, g.Z)(n.id), O = (0, f.Z)({
 user: n
   }), v = (0, M.Z)({
 user: n

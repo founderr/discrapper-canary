@@ -18,7 +18,9 @@ user: n,
 guildId: l,
 analyticsContext: s,
 onSelect: u
-  } = e, R = (0, c.Z)(n.id), x = (0, Z.Z)(n.id, l), _ = (0, a.Z)({
+  } = e, R = (0, c.Z)({
+userId: n.id
+  }), x = (0, Z.Z)(n.id, l), _ = (0, a.Z)({
 id: n.id,
 label: M.Z.Messages.COPY_ID_USER
   }), h = (0, d.Z)(n.id), p = n.isNonUserBot();

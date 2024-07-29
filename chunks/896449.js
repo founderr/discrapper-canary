@@ -23,7 +23,11 @@ guildId: m,
 channel: _,
 entry: f,
 onSelect: E
-  } = e, C = (0, u.Z)(n.id, m, _.id), g = (0, r.Z)({
+  } = e, C = (0, u.Z)({
+userId: n.id,
+guildId: m,
+channelId: _.id
+  }), g = (0, r.Z)({
 id: n.id,
 label: h.Z.Messages.COPY_ID_USER
   }), I = (0, d.dX)(f), x = (0, c.Z)({
