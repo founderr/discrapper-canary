@@ -242,7 +242,7 @@ C,
 a,
 n,
 t
-  ]), b = i.useMemo(() => {
+  ]), R = i.useMemo(() => {
 if (0 === T.length)
   return [];
 let e = new Map(L.map(e => [
@@ -265,7 +265,7 @@ return l().compact(T.map(n => {
 L,
 T,
 h
-  ]), R = i.useMemo(() => {
+  ]), b = i.useMemo(() => {
 var e;
 if (!s && !f)
   return [];
@@ -300,8 +300,11 @@ if (s && f) {
 return (0, A.N)(i, {
   limit: r,
   filterPredicates: [function(e) {
-    let n = (0, p.k)(e, c.yU.CHAT);
-    return t => {
+    let n = [
+      (0, p.k)(e, c.yU.CHAT),
+      (0, p.k)(e, c.yU.PRIMARY_ENTRY_POINT)
+    ];
+    return t => n.some(n => {
       let {
         context: i,
         userId: a,
@@ -320,7 +323,7 @@ return (0, A.N)(i, {
         isGuildInstalled: c,
         isUserInstalled: u
       }) === _.mF.ALLOWED);
-    };
+    });
   }(n)],
   bucketPredicates: [
     function(e) {
@@ -357,11 +360,11 @@ n,
 t,
 L,
 S
-  ]), M = b.length > 0, y = R.length > 0;
+  ]), M = R.length > 0, y = b.length > 0;
   return {
-commandResults: b,
+commandResults: R,
 hasCommandResults: M,
-applicationResults: R,
+applicationResults: b,
 hasApplicationResults: y,
 isEmptyState: !M && !y,
 loading: P && o
