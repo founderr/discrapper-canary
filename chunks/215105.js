@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return g;
+return A;
   }
 }), n(47120);
 var r = n(735250),
@@ -11,18 +11,20 @@ var r = n(735250),
   l = n(752305),
   u = n(893718),
   c = n(131704),
-  d = n(823379),
-  _ = n(5192),
-  E = n(785717),
-  f = n(485216),
-  h = n(228168),
-  p = n(689938),
-  m = n(628372);
-let I = (0, c.kt)({
+  d = n(699516),
+  _ = n(823379),
+  E = n(5192),
+  f = n(51144),
+  h = n(785717),
+  p = n(485216),
+  m = n(228168),
+  I = n(689938),
+  T = n(628372);
+let g = (0, c.kt)({
 id: '1',
 type: a.d.DM
   }),
-  T = e => {
+  S = e => {
 let {
   input: t,
   username: n,
@@ -30,104 +32,105 @@ let {
   sourceDetails: i
 } = e;
 switch (r) {
-  case h.N9.ACTIVITY:
-    let a = p.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({
+  case m.N9.ACTIVITY:
+    let a = I.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({
       username: n
     });
     return '> -# *'.concat(a, '*\n').concat(t);
-  case h.N9.AVATAR:
-    let s = p.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({
+  case m.N9.AVATAR:
+    let s = I.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({
       username: n
     });
     return '> -# *'.concat(s, '*\n').concat(t);
-  case h.N9.STATUS:
-    let o = p.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({
+  case m.N9.STATUS:
+    let o = I.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({
       username: n
     });
     return null != i ? '> -# *'.concat(o, '*').concat('\n > '.concat(i), '\n').concat(t) : '> -# *'.concat(o, '*\n').concat(t);
   default:
-    (0, d.vE)(r);
+    (0, _.vE)(r);
 }
   };
 
-function g(e) {
+function A(e) {
   let {
 user: t,
 guildId: n,
 channelId: a,
 sourceType: c,
-sourceDetails: d,
-onReply: h,
-setPopoutRef: g,
-modalKey: S,
-onClose: A
+sourceDetails: _,
+onReply: m,
+setPopoutRef: A,
+modalKey: N,
+onClose: v
   } = e, {
-trackUserProfileAction: N
-  } = (0, E.KZ)(), [v, O] = i.useState(''), [R, C] = i.useState((0, l.JM)(v)), y = i.useRef(!1), D = i.useRef(null), L = _.ZP.getName(n, a, t);
+trackUserProfileAction: O
+  } = (0, h.KZ)(), [R, C] = i.useState(''), [y, D] = i.useState((0, l.JM)(R)), L = i.useRef(!1), b = i.useRef(null);
   i.useEffect(() => {
-null == g || g(null == D ? void 0 : D.current);
+null == A || A(null == b ? void 0 : b.current);
   }, [
-D,
-g
+b,
+A
   ]);
-  let b = async e => {
+  let M = async e => {
+var n;
 if (null == e)
   return;
-N({
+O({
   action: 'PRESS_REPLY'
 });
-let n = T({
+let r = S({
   input: e,
-  username: L,
+  username: null !== (n = d.Z.getNickname(t.id)) && void 0 !== n ? n : f.ZP.getName(t),
   sourceType: c,
-  sourceDetails: d
+  sourceDetails: _
 });
-await (0, f.Z)({
+await (0, p.Z)({
   userId: t.id,
-  content: n,
+  content: r,
   location: 'UserProfileReplyPopout'
 });
   };
   return (0, r.jsx)(s.V, {
-ref: D,
+ref: b,
 children: (0, r.jsx)('div', {
-  className: m.container,
+  className: T.container,
   children: (0, r.jsx)(u.Z, {
-    parentModalKey: S,
+    parentModalKey: N,
     emojiPickerCloseOnModalOuterClick: !0,
-    innerClassName: m.inner,
-    editorClassName: m.editor,
+    innerClassName: T.inner,
+    editorClassName: T.editor,
     type: o.I.USER_PROFILE,
-    placeholder: p.Z.Messages.QUICK_DM_USER.format({
-      name: _.ZP.getName(n, a, t)
+    placeholder: I.Z.Messages.QUICK_DM_USER.format({
+      name: E.ZP.getName(n, a, t)
     }),
-    channel: I,
-    textValue: v,
-    richValue: R,
+    channel: g,
+    textValue: R,
+    richValue: y,
     onChange: (e, t, n) => {
-      if (t !== v)
-        O(t), C(n);
+      if (t !== R)
+        C(t), D(n);
     },
-    focused: y.current,
+    focused: L.current,
     onFocus: () => {
-      y.current = !0;
+      L.current = !0;
     },
     onBlur: e => {
       var t;
-      if (null === (t = D.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
-        y.current = !1;
+      if (null === (t = b.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
+        L.current = !1;
         return;
       }
-      null !== D.current && (y.current = !1, null == h || h(!1));
+      null !== b.current && (L.current = !1, null == m || m(!1));
     },
     onSubmit: async e => {
       let {
         value: t
       } = e;
       try {
-        return N({
+        return O({
           action: 'SEND_STATUS_REPLY'
-        }), await b(t.trim()), null == h || h(!1), null == A || A(), {
+        }), await M(t.trim()), null == m || m(!1), null == v || v(), {
           shouldClear: !0,
           shouldRefocus: !1
         };
