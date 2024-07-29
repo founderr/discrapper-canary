@@ -25680,13 +25680,17 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 }
 
 .result_bad108:hover,
-.result_bad108.focused_bad108 {
+.result_bad108[data-focused=true] {
     box-shadow: var(--shadow-border), var(--shadow-low)
 }
 
 .result_bad108:hover:after,
-.result_bad108.focused_bad108:after {
+.result_bad108[data-focused=true]:after {
     background: linear-gradient(to bottom, var(--bg-mod-strong), var(--bg-mod-subtle))
+}
+
+.result_bad108[data-focused=true] {
+    box-shadow: 0 0 0 2px var(--focus-primary)
 }
 
 .gif_bad108 {
@@ -25840,7 +25844,7 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     animation-fill-mode: forwards
 }
 
-.enable-forced-colors .result_bad108.focused_bad108 {
+.enable-forced-colors .result_bad108[data-focused=true] {
     border: 1px solid Canvas;
     outline: 2px solid Highlight
 }
@@ -25924,7 +25928,9 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 }
 
 .categoryFade_af1167:hover,
-.categoryFadeBlurple_af1167:hover {
+[data-focused=true] .categoryFade_af1167,
+.categoryFadeBlurple_af1167:hover,
+[data-focused=true] .categoryFadeBlurple_af1167 {
     backdrop-filter: brightness(60%)blur(4px);
     border: 1px solid var(--border-strong)
 }
