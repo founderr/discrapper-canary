@@ -5,7 +5,7 @@ return i;
 });
 var s = n(735250),
   a = n(470079),
-  r = n(618158);
+  o = n(618158);
 
 function i(e) {
   let {
@@ -13,7 +13,7 @@ children: t
   } = e, {
 preventIdle: n,
 allowIdle: i
-  } = (0, r.Y)('popup');
+  } = (0, o.Y)('popup');
   return a.useEffect(() => (n(), () => i()), [
 i,
 n
