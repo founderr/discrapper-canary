@@ -33524,7 +33524,8 @@ h3.improved_f017d0:after {
     flex-direction: column;
     gap: 8px;
     padding: 12px;
-    overflow: visible
+    overflow: visible;
+    position: relative
 }
 
 .header_ae1fa2 {
@@ -33713,6 +33714,13 @@ h3.improved_f017d0:after {
     height: 1px;
     width: 100%;
     background-color: var(--profile-body-divider-color)
+}
+
+.contextMenu_ae1fa2 {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer
 }
 
 .timestamp_c5d1c1 {
