@@ -134,6 +134,20 @@ if (e === l.eq.GIFS || e === l.eq.CHOICES) {
       typeInfo: g,
       query: _
     };
+} else if (e === l.eq.STICKERS) {
+  if (d({
+      type: e,
+      channel: t,
+      guild: n,
+      query: _,
+      isAtStart: !1,
+      options: r
+    }))
+    return {
+      type: e,
+      typeInfo: g,
+      query: _
+    };
 } else if (e === l.eq.COMMANDS && r.commands !== l.L8.OLD_BUILT_INS) {
   if (d({
       type: e,

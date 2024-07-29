@@ -116,6 +116,34 @@ execute: (e, t) => {
     })
   }));
 }
+  },
+  {
+id: '-17',
+name: 'sticker',
+displayName: 'sticker',
+type: u.yU.CHAT,
+inputType: E.iw.BUILT_IN_INTEGRATION,
+applicationId: f.bi.BUILT_IN,
+get description() {
+  return p.Z.Messages.COMMAND_STICKER_DESCRIPTION;
+},
+get displayDescription() {
+  return p.Z.Messages.COMMAND_STICKER_DESCRIPTION;
+},
+options: [{
+  name: 'query',
+  displayName: 'query',
+  type: u.jw.STRING,
+  get description() {
+    return p.Z.Messages.COMMAND_STICKER_QUERY_DESCRIPTION;
+  },
+  get displayDescription() {
+    return p.Z.Messages.COMMAND_STICKER_QUERY_DESCRIPTION;
+  },
+  required: !0
+}],
+integrationType: h.q9n.STICKER,
+integrationTitle: 'sticker'
   }
 ];
 t.Z = I;

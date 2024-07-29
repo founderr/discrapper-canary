@@ -140,6 +140,7 @@ case c.V0.STICKER_PICKER:
 case c.V0.AUTOCOMPLETE:
 case c.V0.EXPRESSION_SUGGESTIONS:
   return (0, r.wN)(t).length > 1;
+case c.V0.BUILT_IN_INTEGRATION:
 default:
   return !1;
   }

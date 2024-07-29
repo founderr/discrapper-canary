@@ -42,7 +42,7 @@ is_custom: null !== (c = null == r ? void 0 : r.isCustom) && void 0 !== c && c,
 is_animated: null !== (d = null == r ? void 0 : r.isAnimated) && void 0 !== d && d
   });
 }
-(r = i || (i = {})).AUTOCOMPLETE = 'autocomplete', r.AUTOSUGGEST = 'autosuggest', r.STICKER_PICKER = 'picker';
+(r = i || (i = {})).AUTOCOMPLETE = 'autocomplete', r.AUTOSUGGEST = 'autosuggest', r.STICKER_PICKER = 'picker', r.BUILT_IN_INTEGRATION = 'built_in_integration';
 
 function d(e) {
   let {
@@ -61,6 +61,8 @@ source: function(e) {
       return 'autosuggest';
     case s.V0.STICKER_PICKER:
       return 'picker';
+    case s.V0.BUILT_IN_INTEGRATION:
+      return 'built_in_integration';
     default:
       return null;
   }
