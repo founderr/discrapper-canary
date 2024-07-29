@@ -18345,37 +18345,10 @@ div.cardContainer_c22357 {
     height: 40px
 }
 
-.modifiedTier0Title_c87d73 {
-    width: 132px;
-    height: 16px
-}
-
-.modifiedSubHeaderStoreHome_c87d73 {
-    max-width: 352px;
-    width: 100%;
-    font-size: 34px;
-    margin-bottom: 6px
-}
-
-.modifiedSubHeaderSettings_c87d73 {
-    font-size: 26px;
-    margin-bottom: 6px
-}
-
-.tierCardHeaderDisplay_c87d73 {
-    display: flex;
-    flex-direction: column
-}
-
 .tier2Title_c87d73 {
     width: 96px;
     height: 24px;
     display: block
-}
-
-.modifiedTier2Title_c87d73 {
-    width: 64px;
-    height: 16px
 }
 
 .title_c87d73 {
@@ -18444,18 +18417,6 @@ div.cardContainer_c22357 {
     margin-top: 8px;
     margin-bottom: 8px;
     max-width: 60%
-}
-
-.modifiedPrice_c87d73 {
-    margin: 20px 0 10px
-}
-
-.modifiedPrices_c87d73:first-of-type {
-    margin: 16px 0 8px
-}
-
-.modifiedPrices_c87d73:last-of-type {
-    margin: 8px 0 16px
 }
 
 .price_c87d73 {
