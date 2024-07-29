@@ -2,7 +2,7 @@ n.d(t, {
   Z: function() {
 return b;
   }
-});
+}), n(47120);
 var i = n(735250),
   a = n(470079),
   s = n(597312),
@@ -37,7 +37,7 @@ currentUser: n,
 channel: b
   } = e, R = __OVERLAY__, {
 analyticsLocations: j
-  } = (0, c.ZP)(o.Z.PROFILE_PANEL), L = (0, h.ZP)(t.id), P = (0, r.ZP)(), O = a.useRef(null), y = (0, l.Z)(O), D = e => {
+  } = (0, c.ZP)(o.Z.PROFILE_PANEL), L = (0, h.ZP)(t.id), P = (0, r.ZP)(), O = a.useRef(null), y = (0, l.Z)(O), [D, k] = a.useState(!1), U = e => {
 (0, T.openUserProfileModal)({
   sourceAnalyticsLocations: j,
   userId: t.id,
@@ -90,13 +90,17 @@ children: (0, i.jsx)(d.Mt, {
                 displayProfile: L,
                 channelId: b.id,
                 profileType: A.y0.PANEL,
-                onOpenProfile: R ? void 0 : D
+                onOpenProfile: R ? void 0 : U
               }),
               (0, i.jsx)(_.Z, {
                 location: 'SimplifiedProfilePanel',
                 user: t,
                 channelId: b.id,
-                profileType: A.y0.PANEL
+                profileType: A.y0.PANEL,
+                isReplying: D,
+                onReply: e => {
+                  k(e);
+                }
               }),
               (0, i.jsx)(E.Z, {
                 user: t
@@ -109,7 +113,7 @@ children: (0, i.jsx)(d.Mt, {
             displayProfile: L,
             channel: b,
             isHovering: y,
-            onOpenProfile: R ? void 0 : D
+            onOpenProfile: R ? void 0 : U
           }),
           (0, i.jsx)(S.Z, {
             user: t,
