@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return O;
+return v;
   }
 }), n(47120);
 var r = n(735250),
@@ -22,14 +22,13 @@ var r = n(735250),
   T = n(934861),
   g = n(981631),
   S = n(689938),
-  A = n(663054),
-  N = n(589273);
-let v = (0, _.kt)({
+  A = n(589273);
+let N = (0, _.kt)({
   id: '1',
   type: g.d4z.DM
 });
 
-function O(e) {
+function v(e) {
   let {
 user: t,
 guildId: n,
@@ -38,82 +37,83 @@ onClose: _
   } = e, {
 newestAnalyticsLocation: g
   } = (0, l.ZP)(), {
-trackUserProfileAction: O
+trackUserProfileAction: v
   } = (0, f.KZ)(), {
-messageCtaEnabled: R,
-activeInviteToCallCtaEnabled: C,
-persistentCallCtaEnabled: y
+messageCtaEnabled: O,
+activeInviteToCallCtaEnabled: R,
+persistentCallCtaEnabled: C
   } = (0, h.l)({
 location: 'BiteSizeProfileDirectMessageSection'
-  }), [D, L] = i.useState(''), [b, M] = i.useState((0, c.JM)(D)), P = i.useRef(!1);
-  if (R) {
+  }), [y, D] = i.useState(''), [L, b] = i.useState((0, c.JM)(y)), M = i.useRef(!1);
+  if (O) {
 let e = (0, r.jsx)(I.Z, {
   user: t,
-  className: N.biteSizeButton
+  className: A.biteSizeButton
 });
-return C && null != e ? (0, r.jsxs)('div', {
-  className: N.ctaRow,
+return R && null != e ? (0, r.jsxs)('div', {
+  className: A.ctaRow,
   children: [
     (0, r.jsx)(T.c, {
       userId: t.id,
       fullWidth: !0,
-      color: N.engagementExpButton,
-      className: N.biteSizeButton,
+      color: A.engagementExpButton,
+      themeColor: 'none',
+      className: A.biteSizeButton,
       onClose: _
     }),
     e
   ]
-}) : y ? (0, r.jsxs)('div', {
-  className: N.ctaRow,
+}) : C ? (0, r.jsxs)('div', {
+  className: A.ctaRow,
   children: [
     (0, r.jsx)(T.c, {
       userId: t.id,
       fullWidth: !0,
-      color: s()(o.Button.Colors.BRAND, A.color),
-      className: N.biteSizeButton,
+      color: o.Button.Colors.BRAND,
+      className: A.biteSizeButton,
       onClose: _
     }),
     (0, r.jsx)(m.Z, {
       user: t,
       onClose: _,
-      className: s()(N.engagementExpButton, N.biteSizeIconButton)
+      className: s()(A.engagementExpButton, A.biteSizeIconButton)
     })
   ]
 }) : (0, r.jsx)(T.c, {
   userId: t.id,
   fullWidth: !0,
-  className: N.biteSizeButton,
-  color: s()(o.Button.Colors.BRAND, A.color),
+  className: A.biteSizeButton,
+  color: o.Button.Colors.BRAND,
   onClose: _
 });
   }
   return (0, r.jsx)(d.Z, {
-innerClassName: N.inner,
-editorClassName: N.editor,
+innerClassName: A.inner,
+editorClassName: A.editor,
 type: u.I.USER_PROFILE,
 placeholder: S.Z.Messages.QUICK_DM_USER.format({
   name: E.ZP.getName(n, a, t)
 }),
-channel: v,
-textValue: D,
-richValue: b,
+channel: N,
+textValue: y,
+richValue: L,
 onChange: (e, t, n) => {
-  if (t !== D)
-    L(t), M(n);
+  if (t !== y)
+    D(t), b(n);
 },
-focused: P.current,
+focused: M.current,
 onFocus: () => {
-  P.current = !0;
+  M.current = !0;
 },
 onBlur: () => {
-  P.current = !1;
+  M.current = !1;
 },
 onSubmit: async e => {
   let {
     value: n
   } = e;
   try {
-    return O({
+    return v({
       action: 'SEND_DIRECT_MESSAGE'
     }), await (0, p.Z)({
       userId: t.id,

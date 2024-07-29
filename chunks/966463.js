@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return f;
+return p;
   }
 }), n(47120);
 var r = n(735250);
@@ -12,18 +12,22 @@ var i = n(442837),
   l = n(382182),
   u = n(199902),
   c = n(592125),
-  d = n(475413),
-  _ = n(981631),
-  E = n(689938);
+  d = n(652853),
+  _ = n(475413),
+  E = n(228168),
+  f = n(981631),
+  h = n(689938);
 
-function f(e) {
+function p(e) {
   let {
 stream: t,
 onClick: n,
-onClose: f
-  } = e, h = (0, i.e7)([c.Z], () => c.Z.getChannel(null == t ? void 0 : t.channelId)), [p, m] = (0, l.wq)(h), {
-activeStream: I,
-isWatchingOtherStream: T
+onClose: p
+  } = e, {
+profileType: m
+  } = (0, d.z)(), I = (0, i.e7)([c.Z], () => c.Z.getChannel(null == t ? void 0 : t.channelId)), [T, g] = (0, l.wq)(I), {
+activeStream: S,
+isWatchingOtherStream: A
   } = (0, i.cj)([u.Z], () => ({
 activeStream: u.Z.getActiveStreamForApplicationStream(t),
 isWatchingOtherStream: null != t && u.Z.getAllActiveStreamsForChannel(t.channelId).some(e => {
@@ -35,27 +39,27 @@ isWatchingOtherStream: null != t && u.Z.getAllActiveStreamsForChannel(t.channelI
   }));
   if (null == t)
 return null;
-  let g = null != I && I.state !== _.jm8.ENDED && I.ownerId === t.ownerId;
+  let N = null != S && S.state !== f.jm8.ENDED && S.ownerId === t.ownerId;
   return (0, r.jsxs)(r.Fragment, {
 children: [
-  T && !g && (0, r.jsx)(d.ef, {
-    tooltipText: E.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
+  A && !N && (0, r.jsx)(_.ef, {
+    tooltipText: h.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
     icon: a.EyePlusIcon,
-    color: a.Button.Colors.GREEN,
+    themeColor: m === E.y0.FULL_SIZE ? 'secondary' : 'primary',
     onClick: e => {
-      null == n || n(e), s.default.selectVoiceChannel(t.channelId), !g && (0, o.iV)(t, {
+      null == n || n(e), s.default.selectVoiceChannel(t.channelId), !N && (0, o.iV)(t, {
         forceMultiple: !0
-      }), null == f || f();
+      }), null == p || p();
     }
   }),
-  (0, r.jsx)(d.tG, {
+  (0, r.jsx)(_.tG, {
     icon: a.ScreenIcon,
-    text: g ? E.Z.Messages.WATCH_STREAM_WATCHING : (0, l.P9)(m),
-    disabled: g || !p,
-    color: a.Button.Colors.GREEN,
+    text: N ? h.Z.Messages.WATCH_STREAM_WATCHING : (0, l.P9)(g),
+    disabled: N || !T,
+    themeColor: m === E.y0.FULL_SIZE ? 'secondary' : 'primary',
     fullWidth: !0,
     onClick: e => {
-      null == n || n(e), s.default.selectVoiceChannel(t.channelId), !g && (0, o.iV)(t), null == f || f();
+      null == n || n(e), s.default.selectVoiceChannel(t.channelId), !N && (0, o.iV)(t), null == p || p();
     }
   })
 ]

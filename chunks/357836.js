@@ -27,6 +27,7 @@ action: 'PRESS_APP_STOREFRONT',
 icon: a.ShopIcon,
 text: c.Z.Messages.STOREFRONT,
 color: a.ButtonColors.BRAND,
+themeColor: 'none',
 onClick: i,
 ...s
   });

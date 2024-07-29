@@ -52,6 +52,7 @@ children: e => (0, r.jsx)(o.TooltipContainer, {
   children: (0, r.jsxs)(_.kF, {
     className: h.button,
     color: a.zx.Colors.CUSTOM,
+    themeColor: 'none',
     size: a.zx.Sizes.NONE,
     grow: !1,
     'aria-label': f.Z.Messages.USER_PROFILE_ADD_ROLE,

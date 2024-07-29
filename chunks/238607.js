@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return F;
+return H;
   }
 }), n(47120);
 var r = n(735250),
@@ -36,43 +36,47 @@ var r = n(735250),
   P = n(417363),
   U = n(358085),
   w = n(804739),
-  x = n(475413),
-  G = n(981631),
-  k = n(701488),
-  B = n(689938);
+  x = n(652853),
+  G = n(475413),
+  k = n(228168),
+  B = n(981631),
+  F = n(701488),
+  V = n(689938);
 
-function F(e) {
+function H(e) {
   let {
 user: t,
 currentUser: n,
-activity: F,
-onClick: V,
-onClose: H
+activity: H,
+onClick: Z,
+onClose: Y
   } = e, {
-analyticsLocations: Z,
-newestAnalyticsLocation: Y
-  } = (0, g.ZP)(), [j] = (0, S.Z)([null == F ? void 0 : F.application_id]), W = (0, I.Z)(), K = (0, p.Z)(F), z = null == F ? void 0 : F.application_id, q = null == F ? void 0 : F.session_id, Q = (0, f.Z)({
-activity: F,
+analyticsLocations: j,
+newestAnalyticsLocation: W
+  } = (0, g.ZP)(), {
+profileType: K
+  } = (0, x.z)(), [z] = (0, S.Z)([null == H ? void 0 : H.application_id]), q = (0, I.Z)(), Q = (0, p.Z)(H), X = null == H ? void 0 : H.application_id, $ = null == H ? void 0 : H.session_id, J = (0, f.Z)({
+activity: H,
 userId: t.id,
 channelId: void 0
-  }), X = (0, a.e7)([
+  }), ee = (0, a.e7)([
 C.Z,
 A.Z,
 P.Z,
 v.Z
-  ], () => null != z && (0, w.t)({
-applicationId: z,
+  ], () => null != X && (0, w.t)({
+applicationId: X,
 LibraryApplicationStore: C.Z,
 LaunchableGameStore: A.Z,
 DispatchApplicationStore: P.Z,
 ConnectedAppsStore: v.Z
-  })) || K, $ = (0, a.e7)([d.ZP], () => [...d.ZP.getSelfEmbeddedActivities().values()].some(e => {
+  })) || Q, et = (0, a.e7)([d.ZP], () => [...d.ZP.getSelfEmbeddedActivities().values()].some(e => {
 let {
   applicationId: t,
   channelId: n
 } = e;
-return t === z && n === Q;
-  })), J = (0, a.e7)([M.Z], () => null != z && M.Z.getState(z, G.mFx.JOIN) === G.OcF.LOADING), ee = (0, a.e7)([
+return t === X && n === J;
+  })), en = (0, a.e7)([M.Z], () => null != X && M.Z.getState(X, B.mFx.JOIN) === B.OcF.LOADING), er = (0, a.e7)([
 N.Z,
 R.Z,
 O.Z,
@@ -82,11 +86,11 @@ b.Z,
 y.Z
   ], () => (0, E.Z)({
 user: t,
-activity: F,
-application: j,
-channelId: Q,
+activity: H,
+application: z,
+channelId: J,
 currentUser: n,
-isEmbedded: K,
+isEmbedded: Q,
 ChannelStore: N.Z,
 GuildStore: R.Z,
 GuildMemberCountStore: O.Z,
@@ -94,91 +98,92 @@ RelationshipStore: D.Z,
 SelectedChannelStore: L.Z,
 VoiceStateStore: b.Z,
 PermissionStore: y.Z
-  })), [et, en] = i.useState(!1);
-  if (null == z || !(0, h.Z)(F, G.xjy.JOIN) && !K)
+  })), [ei, ea] = i.useState(!1);
+  if (null == X || !(0, h.Z)(H, B.xjy.JOIN) && !Q)
 return null;
-  let er = async e => {
-if (null == V || V(e), K && ee && null != Q && null != z && await (0, _.Z)({
-    applicationId: z,
-    activityChannelId: Q,
-    currentEmbeddedApplication: W,
+  let es = async e => {
+if (null == Z || Z(e), Q && er && null != J && null != X && await (0, _.Z)({
+    applicationId: X,
+    activityChannelId: J,
+    currentEmbeddedApplication: q,
     embeddedActivitiesManager: T.Z,
     locationObject: {
-      page: G.ZY5.USER_PROFILE
+      page: B.ZY5.USER_PROFILE
     },
-    analyticsLocations: Z
+    analyticsLocations: j
   })) {
-  null == H || H();
+  null == Y || Y();
   return;
 }
-if (ee && null != z && null != q) {
+if (er && null != X && null != $) {
   var n;
   await l.Z.join({
     userId: t.id,
-    sessionId: q,
-    applicationId: z,
+    sessionId: $,
+    applicationId: X,
     channelId: L.Z.getVoiceChannelId(),
     messageId: null,
-    intent: k.Ws.PLAY,
-    embedded: K
+    intent: F.Ws.PLAY,
+    embedded: Q
   }), (0, m.Z)({
-    type: G.q5t.JOIN,
+    type: B.q5t.JOIN,
     userId: t.id,
-    partyId: null == F ? void 0 : null === (n = F.party) || void 0 === n ? void 0 : n.id,
-    applicationId: z,
-    analyticsLocations: Z
+    partyId: null == H ? void 0 : null === (n = H.party) || void 0 === n ? void 0 : n.id,
+    applicationId: X,
+    analyticsLocations: j
   });
 }
-if (en(!0), null != Q && null != z)
+if (ea(!0), null != J && null != X)
   return c.pu({
-    channelId: Q,
-    applicationId: z,
+    channelId: J,
+    applicationId: X,
     userId: t.id,
-    location: Y
+    location: W
   });
-if (null != F) {
+if (null != H) {
   let e = await o.Z.sendActivityInviteUser({
-    type: G.mFx.JOIN_REQUEST,
+    type: B.mFx.JOIN_REQUEST,
     userId: t.id,
-    activity: F,
-    location: G.Sbl.PROFILE_POPOUT
+    activity: H,
+    location: B.Sbl.PROFILE_POPOUT
   });
   null != e && u.default.selectPrivateChannel(e.id);
 }
-  }, ei = () => {
-let e = !ee || et || $ || U.isPlatformEmbedded && !X;
-return K ? (0, r.jsx)(x.tG, {
+  }, eo = () => {
+let e = !er || ei || et || U.isPlatformEmbedded && !ee;
+return Q ? (0, r.jsx)(G.tG, {
   icon: s.ActivitiesIcon,
-  text: B.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY,
+  text: V.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY,
   disabled: e,
-  submitting: J,
-  color: s.Button.Colors.GREEN,
+  submitting: en,
+  themeColor: K === k.y0.FULL_SIZE ? 'secondary' : 'primary',
   fullWidth: !0,
-  onClick: er
-}) : ee ? (0, r.jsx)(x.tG, {
+  onClick: es
+}) : er ? (0, r.jsx)(G.tG, {
   icon: s.GameControllerIcon,
-  text: B.Z.Messages.JOIN,
+  text: V.Z.Messages.JOIN,
   disabled: e,
-  color: s.Button.Colors.GREEN,
-  submitting: J,
+  submitting: en,
+  themeColor: K === k.y0.FULL_SIZE ? 'secondary' : 'primary',
   fullWidth: !0,
-  onClick: er
-}) : (0, r.jsx)(x.tG, {
+  onClick: es
+}) : (0, r.jsx)(G.tG, {
   icon: s.GameControllerIcon,
-  text: B.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
+  text: V.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
   disabled: e,
-  submitting: J,
+  submitting: en,
+  themeColor: K === k.y0.FULL_SIZE ? 'secondary' : 'primary',
   fullWidth: !0,
-  onClick: er
+  onClick: es
 });
   };
   return t.id === n.id ? (0, r.jsx)(s.TooltipContainer, {
-text: B.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF,
-children: ei()
-  }) : U.isPlatformEmbedded && !X && null != F ? (0, r.jsx)(s.TooltipContainer, {
-text: B.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({
-  name: F.name
+text: V.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF,
+children: eo()
+  }) : U.isPlatformEmbedded && !ee && null != H ? (0, r.jsx)(s.TooltipContainer, {
+text: V.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({
+  name: H.name
 }),
-children: ei()
-  }) : ei();
+children: eo()
+  }) : eo();
 }

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return _;
+return f;
   }
 });
 var r = n(735250);
@@ -9,32 +9,37 @@ var i = n(481060),
   a = n(620662),
   s = n(503438),
   o = n(829820),
-  l = n(475413),
-  u = n(981631),
-  c = n(689938),
-  d = n(847864);
+  l = n(652853),
+  u = n(475413),
+  c = n(228168),
+  d = n(981631),
+  _ = n(689938),
+  E = n(847864);
 
-function _(e) {
+function f(e) {
   let {
 user: t,
 activity: n,
-onClick: _
-  } = e, E = (0, o.Fe)(n, t);
-  if (!(0, s.Z)(n) || !(0, a.Z)(n, u.xjy.SYNC))
+onClick: f
+  } = e, {
+profileType: h
+  } = (0, l.z)(), p = (0, o.Fe)(n, t);
+  if (!(0, s.Z)(n) || !(0, a.Z)(n, d.xjy.SYNC))
 return null;
-  let f = (0, r.jsx)(l.tG, {
+  let m = (0, r.jsx)(u.tG, {
 icon: i.UserPlayIcon,
-text: c.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_LISTEN_ALONG,
-disabled: E.disabled,
-submitting: E.loading,
+text: _.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_LISTEN_ALONG,
+disabled: p.disabled,
+submitting: p.loading,
+themeColor: h === c.y0.FULL_SIZE ? 'secondary' : 'primary',
 fullWidth: !0,
 onClick: e => {
-  null == _ || _(e), E.onClick();
+  null == f || f(e), p.onClick();
 }
   });
-  return null == E.tooltip ? f : (0, r.jsx)(i.TooltipContainer, {
-text: E.tooltip,
-className: d.tooltipContainer,
-children: f
+  return null == p.tooltip ? m : (0, r.jsx)(i.TooltipContainer, {
+text: p.tooltip,
+className: E.tooltipContainer,
+children: m
   });
 }
