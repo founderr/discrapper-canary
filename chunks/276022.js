@@ -59,14 +59,14 @@ l.Z.open(_.oAB.AUTHORIZED_APPS);
   }, []), m = N === _.IlC.POPOUT;
   if (!(null == n ? void 0 : n.bot) || !p || m || !h && !O)
 return null;
-  let R = [];
-  return h && R.push((0, i.jsx)(s.MenuItem, {
+  let g = [];
+  return h && g.push((0, i.jsx)(s.MenuItem, {
 id: 'manage-integration',
 label: I.Z.Messages.MANAGE_INTEGRATION,
 action: M
-  }, 'manage-integration')), O && R.push((0, i.jsx)(s.MenuItem, {
+  }, 'manage-integration')), O && g.push((0, i.jsx)(s.MenuItem, {
 id: 'manage-authorized-app',
 label: I.Z.Messages.MANAGE_AUTHORIZED_APP,
 action: Z
-  }, 'manage-authorized-app')), R;
+  }, 'manage-authorized-app')), g;
 }

@@ -32,8 +32,8 @@ m = (0, E.Z)({
   context: h
 }),
 {
-  commands: R,
-  sectionDescriptors: g,
+  commands: g,
+  sectionDescriptors: R,
   loading: C
 } = u.wi(f, {
   commandType: t
@@ -44,12 +44,12 @@ m = (0, E.Z)({
   sections: v
 } = r.useMemo(() => {
   let e = {};
-  return g.forEach(n => {
+  return R.forEach(n => {
     e[n.id] = n;
   }), {
     sections: e
   };
-}, [g]),
+}, [R]),
 G = r.useRef(C.current);
   r.useEffect(() => {
 C.current !== G.current && (G.current = C.current, null == O || O());
@@ -94,11 +94,11 @@ v
 id: 'menu-commands-placeholder',
 render: () => (0, i.jsx)(_.Z, {}),
 disabled: !0
-  }, 'menu-commands-placeholder') : (n = 0 === R.length ? (0, i.jsx)(l.MenuItem, {
+  }, 'menu-commands-placeholder') : (n = 0 === g.length ? (0, i.jsx)(l.MenuItem, {
 id: 'menu-commands-empty',
 label: S.Z.Messages.APPLICATION_COMMAND_NO_COMMANDS,
 disabled: !0
-  }, 'menu-commands-empty') : R.map(y), null != m && (n = (0, i.jsxs)(i.Fragment, {
+  }, 'menu-commands-empty') : g.map(y), null != m && (n = (0, i.jsxs)(i.Fragment, {
 children: [
   n,
   (0, i.jsx)(l.MenuSeparator, {}, 'separator'),
