@@ -33558,10 +33558,6 @@ h3.improved_f017d0:after {
     max-width: 224px
 }
 
-.tooltipContainer_b7e5b1 {
-    width: 100%
-}
-
 .timestamp_c5d1c1 {
     font-family: var(--font-code)
 }
@@ -33676,6 +33672,15 @@ h3.improved_f017d0:after {
     align-items: center;
     flex-wrap: wrap;
     gap: 8px
+}
+
+.actions_ae1fa2.fullSize_ae1fa2 {
+    flex-wrap: nowrap;
+    margin-left: 20px
+}
+
+.actions_ae1fa2 .tooltipContainer_ae1fa2 {
+    flex: 1
 }
 
 .actions_ae1fa2>button {
