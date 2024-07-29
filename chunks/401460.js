@@ -37,25 +37,21 @@ onSelect: a,
 isSelected: o = !1,
 tabIndex: l,
 children: _,
-isNew: h = !1,
-locked: m = !1
-  } = e, [T, g] = i.useState(E.QA[t].name), S = t === d.Ru.PIRATE, A = (0, u.useRadioItem)({
-label: T,
+locked: h = !1
+  } = e, [m, T] = i.useState(E.QA[t].name), g = t === d.Ru.PIRATE, S = (0, u.useRadioItem)({
+label: m,
 isSelected: o
   });
   return (0, r.jsx)(u.Tooltip, {
-text: T,
-onTooltipShow: () => S && g(I()),
+text: m,
+onTooltipShow: () => g && T(I()),
 children: e => (0, r.jsxs)('div', {
   className: p.appIconSelectionContainer,
   children: [
-    !o && h && (0, r.jsx)('div', {
-      className: p.newBadgeCircle
-    }),
     (0, r.jsx)(u.Clickable, {
       ...e,
-      ...A,
-      tabIndex: null != l ? l : A.tabIndex,
+      ...S,
+      tabIndex: null != l ? l : S.tabIndex,
       className: s()(p.appIconSelection, {
         [p.selected]: o
       }, n),
@@ -63,7 +59,7 @@ children: e => (0, r.jsxs)('div', {
       children: _
     }),
     o && (0, r.jsx)(c.oK, {}),
-    m && (0, r.jsx)('div', {
+    h && (0, r.jsx)('div', {
       className: p.lockedBadgeContainer,
       children: (0, r.jsx)(u.LockIcon, {
         className: p.lockedBadge,
@@ -82,8 +78,7 @@ isSelected: n,
 disabled: i,
 tabIndex: a,
 onSelect: s,
-isNew: o,
-locked: l
+locked: o
   } = e;
   return (0, r.jsx)(T, {
 onSelect: i ? void 0 : s,
@@ -91,8 +86,7 @@ isSelected: n,
 id: t.id,
 className: i ? p.disabled : void 0,
 tabIndex: a,
-isNew: o,
-locked: l,
+locked: o,
 children: (0, r.jsx)(_.Z, {
   id: t.id,
   width: E.M9
