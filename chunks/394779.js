@@ -4,9 +4,9 @@ return T;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(481060),
   o = n(346610),
   c = n(868643),
@@ -23,12 +23,12 @@ function m(e) {
   let {
 className: t,
 channelId: n,
-messageId: s,
+messageId: a,
 target: o
-  } = e, c = a.useCallback(() => {
+  } = e, c = s.useCallback(() => {
 if ('embed' === o.type) {
   (0, u.l8)({
-    messageId: s,
+    messageId: a,
     channelId: n,
     source: 'media-viewer',
     forwardOptions: {
@@ -39,7 +39,7 @@ if ('embed' === o.type) {
   return;
 }
 (0, u.l8)({
-  messageId: s,
+  messageId: a,
   channelId: n,
   source: 'media-viewer',
   forwardOptions: {
@@ -49,7 +49,7 @@ if ('embed' === o.type) {
 });
   }, [
 n,
-s,
+a,
 o
   ]);
   return (0, i.jsx)(l.Clickable, {
@@ -74,10 +74,10 @@ autoTrackExposure: !1
   });
   return n && (0, c.h)(e) ? n => {
 let {
-  className: a
+  className: s
 } = n;
 return (0, i.jsx)(m, {
-  className: a,
+  className: s,
   channelId: e.channel_id,
   messageId: e.id,
   target: t

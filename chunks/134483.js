@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(442837),
   o = n(780384),
   c = n(481060),
@@ -15,15 +15,15 @@ var i = n(735250),
   T = n(158776),
   h = n(594174),
   N = n(617136),
-  f = n(272008),
-  C = n(113434),
+  C = n(272008),
+  f = n(113434),
   p = n(569984),
   g = n(497505),
   S = n(918701),
   A = n(5881),
   R = n(566078),
-  x = n(602667),
-  O = n(340100),
+  O = n(602667),
+  x = n(340100),
   M = n(611855),
   v = n(644646),
   L = n(670638),
@@ -35,12 +35,12 @@ var i = n(735250),
   U = n(689938),
   y = n(630706);
 t.Z = function(e) {
-  var t, n, s;
+  var t, n, a;
   let {
 channelId: B,
 previewQuest: k,
 isParticipatingOverride: F
-  } = e, [G, w] = a.useState(!1), V = a.useCallback(() => w(!0), []), H = a.useCallback(() => w(!1), []), Y = a.useContext(m.h9), W = (0, l.e7)([h.default], () => h.default.getCurrentUser()), K = (0, l.e7)([I.Z], () => I.Z.getState().theme), z = (0, o.wj)(K) ? b.BRd.DARK : b.BRd.LIGHT, {
+  } = e, [G, w] = s.useState(!1), V = s.useCallback(() => w(!0), []), H = s.useCallback(() => w(!1), []), Y = s.useContext(m.h9), W = (0, l.e7)([h.default], () => h.default.getCurrentUser()), K = (0, l.e7)([I.Z], () => I.Z.getState().theme), z = (0, o.wj)(K) ? b.BRd.DARK : b.BRd.LIGHT, {
 isCurrentUserStreamingQuestApplication: Q,
 quest: q
   } = (0, l.cj)([
@@ -49,21 +49,21 @@ d.Z,
 p.Z
   ], () => {
 var e, t, n, i;
-let a = d.Z.getParticipants(B),
-  s = null != k ? k : function(e, t, n) {
+let s = d.Z.getParticipants(B),
+  a = null != k ? k : function(e, t, n) {
     for (let r of e) {
-      var i, a, s;
+      var i, s, a;
       if (r.type === j.fO.STREAM) {
-        let e = null !== (a = (0, E.Um)(r.stream, n)) && void 0 !== a ? a : null,
-          s = (0, S.ZZ)(t, e);
-        if (null != s && (null === (i = s.userStatus) || void 0 === i ? void 0 : i.claimedAt) == null)
-          return s;
+        let e = null !== (s = (0, E.Um)(r.stream, n)) && void 0 !== s ? s : null,
+          a = (0, S.ZZ)(t, e);
+        if (null != a && (null === (i = a.userStatus) || void 0 === i ? void 0 : i.claimedAt) == null)
+          return a;
       }
       for (let i of e) {
         if (!(0, j.I)(i))
           for (let e of n.getActivities(i.user.id)) {
             let n = (0, S.ZZ)(t, e);
-            if (null != n && (null === (s = n.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null && ((0, S.Nj)({
+            if (null != n && (null === (a = n.userStatus) || void 0 === a ? void 0 : a.claimedAt) == null && ((0, S.Nj)({
                 quest: n
               }) || (0, S.$J)(n)))
               return n;
@@ -71,15 +71,15 @@ let a = d.Z.getParticipants(B),
       }
     }
     return null;
-  }(a, p.Z.quests, T.Z);
+  }(s, p.Z.quests, T.Z);
 return {
-  isCurrentUserStreamingQuestApplication: null != s && null != W && (e = a, t = s, n = W, i = T.Z, e.some(e => {
+  isCurrentUserStreamingQuestApplication: null != a && null != W && (e = s, t = a, n = W, i = T.Z, e.some(e => {
     if (e.type !== j.fO.STREAM || e.user.id !== n.id)
       return !1;
-    let a = (0, E.Um)(e.stream, i);
-    return null != a && (0, S._D)(a, t);
+    let s = (0, E.Um)(e.stream, i);
+    return null != s && (0, S._D)(s, t);
   })),
-  quest: s
+  quest: a
 };
   }, [
 B,
@@ -103,18 +103,18 @@ W
   ]), ee = !0 === F || Q || $, et = (0, l.e7)([p.Z], () => null != q && p.Z.isEnrolling(q.id), [q]), en = (0, l.e7)([d.Z], () => ((null == W ? void 0 : W.id) == null ? null : d.Z.getParticipant(B, W.id)) != null, [
 B,
 W
-  ]), ei = (0, C.B6)(null == q ? void 0 : q.config.expiresAt), ea = (0, C.B6)(null == X ? void 0 : X.rewardsExpireAt), es = a.useCallback(() => {
-null != q && (0, f.AH)(q.id, {
+  ]), ei = (0, f.B6)(null == q ? void 0 : q.config.expiresAt), es = (0, f.B6)(null == X ? void 0 : X.rewardsExpireAt), ea = s.useCallback(() => {
+null != q && (0, C.AH)(q.id, {
   questContent: g.jn.QUEST_LIVE_STREAM,
   questContentCTA: N.jZ.ACCEPT_QUEST
 });
-  }, [q]), er = a.useCallback(() => {
+  }, [q]), er = s.useCallback(() => {
 null != q && ((0, N._3)({
   questId: q.id,
   questContent: g.jn.QUEST_LIVE_STREAM,
   questContentCTA: N.jZ.TRACK_PROGRESS
 }), u.Z.open(b.oAB.INVENTORY));
-  }, [q]), el = a.useCallback(() => {
+  }, [q]), el = s.useCallback(() => {
 null != q && ((0, N._3)({
   questId: q.id,
   questContent: g.jn.QUEST_LIVE_STREAM,
@@ -123,10 +123,10 @@ null != q && ((0, N._3)({
   }, [q]), eo = (0, Z.hf)({
 quest: q,
 location: g.jn.QUEST_LIVE_STREAM
-  }), ec = a.useMemo(() => (0, A.T)({
+  }), ec = s.useMemo(() => (0, A.T)({
 quest: q,
 location: D.dr.QUEST_CHANNEL_CALL_HEADER
-  }), [q]), eu = (0, C.tP)(q);
+  }), [q]), eu = (0, f.tP)(q);
   if (null == q || !(0, S.dl)(q))
 return null;
   let ed = (null === (t = q.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
@@ -140,7 +140,7 @@ isQuestExpired: eu,
 isQuestBarShowing: em,
 isCurrentUserCallParticipant: en
   });
-  let eT = null != k && (null === (s = q.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null;
+  let eT = null != k && (null === (a = q.userStatus) || void 0 === a ? void 0 : a.claimedAt) == null;
   if (!eT && (eE || eu || em) || !eT && !en)
 return null;
   let eh = (0, S.il)(q),
@@ -150,7 +150,7 @@ eN = (0, i.jsx)(v.Z, {
   quest: q,
   questContent: g.jn.QUEST_LIVE_STREAM
 });
-  return (0, i.jsx)(x.A, {
+  return (0, i.jsx)(O.A, {
 questOrQuests: q,
 overrideVisibility: !Y,
 questContent: g.jn.QUEST_LIVE_STREAM,
@@ -224,7 +224,7 @@ children: () => {
                     color: 'header-secondary',
                     variant: 'text-xs/medium',
                     children: e_ ? U.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
-                      expirationDate: ea
+                      expirationDate: es
                     }) : U.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
                       expirationDate: ei
                     })
@@ -257,14 +257,14 @@ children: () => {
                     className: y.cta,
                     color: c.Button.Colors.BRAND,
                     fullWidth: !0,
-                    onClick: es,
+                    onClick: ea,
                     size: c.Button.Sizes.SMALL,
                     submitting: et,
                     children: U.Z.Messages.QUESTS_ACCEPT_QUEST
                   })
                 ]
               }),
-              ed && !e_ && ee && (0, i.jsx)(O.Z, {
+              ed && !e_ && ee && (0, i.jsx)(x.Z, {
                 color: c.tokens.colors.BG_BRAND,
                 quest: q
               }),

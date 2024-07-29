@@ -5,8 +5,8 @@ return _;
 });
 var i = n(735250);
 n(470079);
-var a = n(512722),
-  s = n.n(a),
+var s = n(512722),
+  a = n.n(s),
   r = n(83474),
   l = n(245315),
   o = n(556041),
@@ -21,19 +21,19 @@ return (0, i.jsx)(o.Z, {});
 let {
   guild_id: e,
   channel_id: n,
-  message_id: a
+  message_id: s
 } = t.messageReference;
 if (null != e)
   return (0, i.jsx)(r.ZP, {
     guildId: e,
     channelId: n,
-    messageId: a
+    messageId: s
   });
   }
   if (null != t.interaction && 'SENDING' === t.state)
 return (0, i.jsx)(i.Fragment, {});
   let n = u.Z.getChannel(t.channel_id);
-  return s()(null != n, 'renderUserGuildPopout: channel should never be null'), (0, i.jsx)(c.Z, {
+  return a()(null != n, 'renderUserGuildPopout: channel should never be null'), (0, i.jsx)(c.Z, {
 ...e,
 location: 'renderUserGuildPopout',
 channelId: t.channel_id,

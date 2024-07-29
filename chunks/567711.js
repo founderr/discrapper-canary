@@ -12,12 +12,12 @@ var u = t(442837),
   l = t(36459),
   c = t(592125),
   d = t(375954),
-  s = t(496675),
-  _ = t(981631),
+  _ = t(496675),
+  s = t(981631),
   E = t(689938);
 
 function M(n, e) {
-  let t = (0, u.e7)([s.Z], () => null != n && s.Z.canWithPartialContext(_.Plq.MANAGE_MESSAGES, {
+  let t = (0, u.e7)([_.Z], () => null != n && _.Z.canWithPartialContext(s.Plq.MANAGE_MESSAGES, {
   channelId: n
 }), [n]),
 M = (0, u.e7)([c.Z], () => c.Z.getChannel(n), [n]),

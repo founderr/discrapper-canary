@@ -1,13 +1,13 @@
 n.d(t, {
   t: function() {
-return s;
+return a;
   }
 });
 var i = n(470079),
-  a = n(365943);
+  s = n(365943);
 
-function s() {
+function a() {
   i.useEffect(() => {
-(0, a.z)();
+(0, s.z)();
   }, []);
 }

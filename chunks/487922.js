@@ -1,20 +1,20 @@
-n.d(i, {
+i.d(n, {
   Z: function() {
 return r;
   }
-}), n(789020);
-var s = n(735250);
-n(470079);
-var l = n(442837),
-  t = n(954295),
-  o = n(621853),
-  a = n(735393);
+}), i(789020);
+var s = i(735250);
+i(470079);
+var l = i(442837),
+  t = i(954295),
+  o = i(621853),
+  a = i(735393);
 
 function r(e) {
-  var i;
+  var n;
   let {
-user: n
-  } = e, r = null === (i = (0, l.e7)([o.Z], () => o.Z.getUserProfile(n.id))) || void 0 === i ? void 0 : i.application;
+user: i
+  } = e, r = null === (n = (0, l.e7)([o.Z], () => o.Z.getUserProfile(i.id))) || void 0 === n ? void 0 : n.application;
   return (0, s.jsx)(t.Z, {
 flags: null == r ? void 0 : r.flags,
 listScrollerStyle: a.listScroller

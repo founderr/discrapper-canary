@@ -11,8 +11,8 @@ return I;
 }), n(47120);
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(765400),
+var s = n(481060),
+  a = n(765400),
   r = n(937615),
   l = n(817460),
   o = n(290348),
@@ -23,7 +23,7 @@ let _ = e => {
   let {
 listingName: t
   } = e;
-  return (0, i.jsx)(a.Heading, {
+  return (0, i.jsx)(s.Heading, {
 variant: 'text-md/normal',
 color: 'interactive-active',
 className: d.tierName,
@@ -56,15 +56,15 @@ children: [
   }),
   !n && (0, i.jsx)('div', {
     className: d.draftBadgeContainer,
-    children: (0, i.jsx)(s.v, {})
+    children: (0, i.jsx)(a.v, {})
   }),
-  (0, i.jsx)(a.Text, {
+  (0, i.jsx)(s.Text, {
     variant: 'heading-xl/semibold',
     className: d.tierPrice,
     tag: 'div',
     children: (0, r.T4)(h.price, h.currency)
   }),
-  (0, i.jsx)(a.Text, {
+  (0, i.jsx)(s.Text, {
     variant: 'text-xs/normal',
     color: 'interactive-normal',
     className: d.tierPeriod,

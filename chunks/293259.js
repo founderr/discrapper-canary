@@ -1,66 +1,66 @@
-n.d(i, {
+i.d(n, {
   Z: function() {
 return A;
   }
 });
-var s = n(735250),
-  l = n(470079),
-  t = n(442837),
-  o = n(692547),
-  a = n(481060),
-  r = n(239091),
-  d = n(233440),
-  c = n(314897),
-  u = n(158776),
-  I = n(699516),
-  _ = n(998502),
-  f = n(785717),
-  m = n(621853),
-  E = n(204197),
-  x = n(735336),
-  v = n(520978),
-  h = n(184325),
-  S = n(652853),
-  Z = n(225714),
-  p = n(228168),
-  g = n(231338),
-  j = n(689938),
-  T = n(520067);
+var s = i(735250),
+  l = i(470079),
+  t = i(442837),
+  o = i(692547),
+  a = i(481060),
+  r = i(239091),
+  d = i(233440),
+  c = i(314897),
+  u = i(158776),
+  I = i(699516),
+  _ = i(998502),
+  f = i(785717),
+  m = i(621853),
+  E = i(204197),
+  x = i(735336),
+  v = i(520978),
+  h = i(184325),
+  Z = i(652853),
+  S = i(225714),
+  p = i(228168),
+  g = i(231338),
+  j = i(689938),
+  T = i(520067);
 let N = a.AvatarSizes.SIZE_120,
   C = _.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function A(e) {
   let {
-displayProfile: i,
+displayProfile: n,
 user: _,
 guildId: A,
-channelId: R,
-friendToken: L,
-className: y,
-isStreaming: O,
+channelId: y,
+friendToken: R,
+className: O,
+isStreaming: L,
 hasProfileEffect: U,
-onClose: P
-  } = e, M = (0, t.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), b = (0, t.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, t.e7)([u.Z], () => u.Z.getStatus(_.id)), F = (0, t.e7)([m.Z], () => m.Z.getUserProfile(_.id)), B = (0, t.e7)([c.default], () => c.default.getId() === _.id), {
+onClose: M
+  } = e, b = (0, t.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), P = (0, t.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, t.e7)([u.Z], () => u.Z.getStatus(_.id)), F = (0, t.e7)([m.Z], () => m.Z.getUserProfile(_.id)), B = (0, t.e7)([c.default], () => c.default.getId() === _.id), {
 theme: G
-  } = (0, S.z)(), {
+  } = (0, Z.z)(), {
 trackUserProfileAction: w
   } = (0, f.KZ)(), {
 avatarSrc: k,
-eventHandlers: Y,
-avatarDecorationSrc: V
+eventHandlers: V,
+avatarDecorationSrc: Y
   } = (0, E.Z)({
 user: _,
 size: N
-  }), H = l.useMemo(() => (0, d.W)(_, R), [
+  }), H = l.useMemo(() => (0, d.W)(_, y), [
 _,
-R
+y
   ]);
   return (0, s.jsxs)('header', {
-className: y,
+className: O,
 children: [
   (0, s.jsx)(x.Z, {
-    displayProfile: i,
-    onClose: P,
+    displayProfile: n,
+    onClose: M,
     user: _,
     profileType: p.y0.MODAL,
     hasProfileEffect: U
@@ -69,15 +69,15 @@ children: [
     className: T.header,
     children: [
       (0, s.jsx)('div', {
-        ...Y,
+        ...V,
         children: (0, s.jsx)(C, {
           src: k,
-          avatarDecoration: V,
+          avatarDecoration: Y,
           size: N,
           className: T.avatar,
-          status: H ? g.Sk.UNKNOWN : O ? g.Sk.STREAMING : D,
+          status: H ? g.Sk.UNKNOWN : L ? g.Sk.STREAMING : D,
           statusBackdropColor: (0, a.getStatusBackdropColor)(G),
-          isMobile: b,
+          isMobile: P,
           statusTooltip: !0,
           'aria-label': _.username
         })
@@ -103,7 +103,7 @@ children: [
             size: h.V.SIZE_24,
             shrinkAtCount: 8,
             shrinkToSize: h.V.SIZE_18,
-            onBadgeClick: P
+            onBadgeClick: M
           }),
           (0, s.jsxs)('div', {
             className: T.relationshipButtons,
@@ -112,12 +112,12 @@ children: [
                 className: T.applicationInstallButton,
                 application: F.application
               }),
-              (0, s.jsx)(Z.Z, {
+              (0, s.jsx)(S.Z, {
                 user: _,
                 isCurrentUser: B,
-                relationshipType: M,
-                friendToken: L,
-                onClose: P
+                relationshipType: b,
+                friendToken: R,
+                onClose: M
               }),
               B || _.isNonUserBot() ? null : (0, s.jsx)(a.Clickable, {
                 focusProps: {
@@ -131,15 +131,15 @@ children: [
                   }), (0, r.jW)(e, async () => {
                     let {
                       default: e
-                    } = await n.e('29136').then(n.bind(n, 193646));
-                    return i => (0, s.jsx)(e, {
-                      ...i,
+                    } = await i.e('29136').then(i.bind(i, 193646));
+                    return n => (0, s.jsx)(e, {
+                      ...n,
                       user: _,
                       isCurrentUser: B,
                       guildId: A,
-                      relationshipType: M,
+                      relationshipType: b,
                       trackUserProfileAction: w,
-                      onClose: P
+                      onClose: M
                     });
                   });
                 },

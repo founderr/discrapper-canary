@@ -38,7 +38,7 @@ newestAnalyticsLocation: N
   } = (0, u.ZP)(), {
 trackUserProfileAction: C,
 ...A
-  } = (0, f.KZ)(), R = {
+  } = (0, f.KZ)(), y = {
 location: {
   page: E.ZY5.USER_PROFILE,
   section: E.jXE.PROFILE_MODAL
@@ -56,7 +56,7 @@ children: [
     showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
     activity: g,
     actionColor: x.actionColor,
-    analyticsParams: R,
+    analyticsParams: y,
     showActions: t,
     onClose: h,
     onAction: () => {
@@ -82,7 +82,7 @@ children: [
     className: o()(x.userProfileActivity, i === c.Y.SIMPLIFIED_PROFILE && x.simplifiedProfileActivity),
     showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
     actionColor: x.actionColor,
-    analyticsParams: R,
+    analyticsParams: y,
     showActions: t,
     onClose: h,
     onAction: () => {

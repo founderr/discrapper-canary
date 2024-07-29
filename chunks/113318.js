@@ -4,8 +4,8 @@ return d;
   }
 });
 var i = n(442837),
-  a = n(201895),
-  s = n(557135),
+  s = n(201895),
+  a = n(557135),
   r = n(703656),
   l = n(592125),
   o = n(979651),
@@ -20,12 +20,12 @@ function d(e, t) {
   if (null == n || d)
 return null;
   let _ = n.isGuildVocal(),
-E = (0, a.ZP)({
+E = (0, s.ZP)({
   channel: n
 });
   return {
 navigateToChannel: () => {
-  _ ? s.Z.handleVoiceConnect({
+  _ ? a.Z.handleVoiceConnect({
     channel: n,
     connected: o.Z.isInChannel(n.id),
     needSubscriptionToAccess: !1,

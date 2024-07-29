@@ -4,9 +4,9 @@ return R;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(990547),
   o = n(831209),
   c = n(442837),
@@ -19,8 +19,8 @@ var i = n(735250),
   T = n(661824),
   h = n(430824),
   N = n(626135),
-  f = n(76535),
-  C = n(866104),
+  C = n(76535),
+  f = n(866104),
   p = n(886176),
   g = n(981631),
   S = n(689938),
@@ -30,14 +30,14 @@ function R(e) {
   var t;
   let {
 guildId: n
-  } = e, s = (0, c.e7)([h.Z], () => h.Z.getGuild(n)), {
+  } = e, a = (0, c.e7)([h.Z], () => h.Z.getGuild(n)), {
 loading: R,
-subscriptionsSettings: x
-  } = (0, f.H)(n), {
-listingsLoaded: O
+subscriptionsSettings: O
+  } = (0, C.H)(n), {
+listingsLoaded: x
   } = (0, I.eD)(n), M = (0, I.ue)(n, {
 publishedOnly: !0
-  }), v = a.useCallback(async () => {
+  }), v = s.useCallback(async () => {
 N.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, {
   ...(0, d.hH)(n)
 }), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
@@ -46,17 +46,17 @@ N.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, {
 type: l.ImpressionTypes.VIEW,
 name: l.ImpressionNames.GUILD_SHOP_EMBED
   }, {
-disableTrack: null == s
+disableTrack: null == a
   });
   let L = M.length > 0 ? new Date(Math.min(...M.map(e => Date.parse(e.published_at)))) : void 0;
-  return R || !O ? (0, i.jsx)('div', {
+  return R || !x ? (0, i.jsx)('div', {
 className: r()(A.guildShopEmbed, A.spinnerContainer),
 children: (0, i.jsx)(u.Spinner, {})
-  }) : null == s || null == x ? null : (0, i.jsxs)('div', {
+  }) : null == a || null == O ? null : (0, i.jsxs)('div', {
 className: A.guildShopEmbed,
 children: [
-  (0, i.jsx)(C.Z, {
-    coverImageAsset: null !== (t = x.cover_image_asset) && void 0 !== t ? t : null
+  (0, i.jsx)(f.Z, {
+    coverImageAsset: null !== (t = O.cover_image_asset) && void 0 !== t ? t : null
   }),
   (0, i.jsx)(u.Spacer, {
     size: 16
@@ -84,7 +84,7 @@ children: [
     variant: 'heading-md/semibold',
     color: 'text-normal',
     children: S.Z.Messages.GUILD_STORE_HERO_TITLE.format({
-      guildName: s.name
+      guildName: a.name
     })
   }),
   (0, i.jsx)(u.Spacer, {
@@ -94,7 +94,7 @@ children: [
     variant: 'text-sm/normal',
     color: 'text-muted',
     lineClamp: 2,
-    children: x.description
+    children: O.description
   }),
   (0, i.jsx)(u.Spacer, {
     size: 16
@@ -107,7 +107,7 @@ children: [
     className: A.guildShopEmbedFooter,
     children: [
       (0, i.jsx)(E.Z, {
-        guild: s
+        guild: a
       }),
       (0, i.jsxs)('ul', {
         className: A.guildShopSummary,

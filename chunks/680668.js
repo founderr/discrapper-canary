@@ -5,8 +5,8 @@ return h;
 }), n(789020);
 var i = n(735250);
 n(470079);
-var a = n(533800),
-  s = n(481060),
+var s = n(533800),
+  a = n(481060),
   r = n(358555),
   l = n(955415),
   o = n(131704),
@@ -21,15 +21,15 @@ var a = n(533800),
 
 function h(e) {
   var t, h;
-  let N, f, C, {
+  let N, C, f, {
   onTransitionToInviteChannel: p,
   onAcceptInstantInvite: g,
   guild: S,
   invite: A,
   author: R,
-  currentUserId: x
+  currentUserId: O
 } = e,
-O = x === R.id,
+x = O === R.id,
 {
   channel: M,
   approximate_member_count: v,
@@ -41,7 +41,7 @@ D = null != S,
 b = null != P,
 j = null != P && P.isGuildVocal(),
 U = null != P && P.isGuildStageVoice(),
-y = (0, c.yE)(null !== (t = A.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE),
+y = (0, c.yE)(null !== (t = A.flags) && void 0 !== t ? t : 0, s.$.IS_GUEST_INVITE),
 B = null !== (h = null == S ? void 0 : S.hasFeature(I.oNc.HUB)) && void 0 !== h && h;
   if (null == S) {
 if (null == A.guild)
@@ -53,13 +53,13 @@ S.premiumTier = e;
   let k = D ? p : g,
 F = (0, _.e)({
   isVoiceChannel: j,
-  isOwnInvite: O,
+  isOwnInvite: x,
   isGuest: y,
   isHubGuild: B,
   isStage: U,
   isStream: !1
 });
-  return f = (0, i.jsxs)('span', {
+  return C = (0, i.jsxs)('span', {
 className: T.infoTitle,
 children: [
   (0, i.jsx)(l.Z.GuildName, {
@@ -74,15 +74,15 @@ children: [
     })
   })
 ]
-  }), y && (C = (0, i.jsx)(s.TooltipContainer, {
+  }), y && (f = (0, i.jsx)(a.TooltipContainer, {
 className: T.tooltipContainer,
 text: m.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
-children: (0, i.jsx)(s.CircleInformationIcon, {
+children: (0, i.jsx)(a.CircleInformationIcon, {
   size: 'md',
   color: 'currentColor',
   className: T.infoIcon
 })
-  })), j ? (f = (0, i.jsx)(l.Z.Channel, {
+  })), j ? (C = (0, i.jsx)(l.Z.Channel, {
 channel: P
   }), N = (0, i.jsxs)('span', {
 className: T.infoTitle,
@@ -111,7 +111,7 @@ children: [
   }),
   (0, i.jsx)(l.Z.Header, {
     text: F,
-    extra: C
+    extra: f
   }),
   (0, i.jsxs)(l.Z.Body, {
     children: [
@@ -122,7 +122,7 @@ children: [
             guild: S
           }),
           (0, i.jsx)(l.Z.Info, {
-            title: f,
+            title: C,
             onClick: D ? k : null,
             children: N
           })
@@ -141,11 +141,11 @@ children: [
       (0, i.jsx)('div', {
         className: T.separator
       }),
-      (0, i.jsx)(s.Text, {
+      (0, i.jsx)(a.Text, {
         variant: 'text-sm/normal',
         color: 'header-secondary',
         children: m.Z.Messages.HUB_INVITE_ANOTHER_SCHOOL_LINK.format({
-          onClick: () => (0, s.openModalLazy)(async () => {
+          onClick: () => (0, a.openModalLazy)(async () => {
             let {
               default: e
             } = await Promise.all([

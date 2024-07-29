@@ -3,7 +3,7 @@ n.d(t, {
 return m;
   }
 }), n(411104);
-var i, a, s, r, l = n(735250),
+var i, s, a, r, l = n(735250),
   o = n(470079),
   c = n(120356),
   u = n.n(c),
@@ -29,8 +29,8 @@ let {
   query: t,
   navId: n,
   focusedIndex: i,
-  onSelectQuery: a,
-  onSelectSearchEverywhere: s,
+  onSelectQuery: s,
+  onSelectSearchEverywhere: a,
   onHighlightQuery: r,
   hideQuery: o,
   searchFavorites: c
@@ -46,7 +46,7 @@ return (0, l.jsxs)(l.Fragment, {
       }),
       ...m(n, -1, I),
       onMouseEnter: r,
-      onClick: a,
+      onClick: s,
       children: [
         (0, l.jsx)('div', {
           className: E.queryText,
@@ -71,7 +71,7 @@ return (0, l.jsxs)(l.Fragment, {
       }),
       ...m(n, -1, I),
       onMouseEnter: r,
-      onClick: s,
+      onClick: a,
       children: [
         (0, l.jsx)('div', {
           className: E.queryText,
@@ -96,19 +96,19 @@ let {
   numResults: t,
   renderNoResults: n,
   renderInitialState: i,
-  renderResult: a,
-  renderCustomResults: s
+  renderResult: s,
+  renderCustomResults: a
 } = this.props;
 if (e)
   return i();
 if (0 === t)
   return n();
-if (null != a)
+if (null != s)
   return Array.from({
     length: t
-  }).map((e, t) => a(t));
-if (null != s)
-  return s();
+  }).map((e, t) => s(t));
+if (null != a)
+  return a();
 throw Error('SearchResultsPopout.renderResults: Flow should never allow this...');
   }
   render() {
@@ -117,7 +117,7 @@ let {
   focusedIndex: t,
   navId: n,
   width: i
-} = this.props, a = '' === e.trim();
+} = this.props, s = '' === e.trim();
 return (0, l.jsxs)('div', {
   className: E.container,
   style: {
@@ -129,8 +129,8 @@ return (0, l.jsxs)('div', {
   tabIndex: -1,
   'aria-activedescendant': ''.concat(n, '-').concat(t),
   children: [
-    this.renderQuery(a),
-    this.renderResults(a)
+    this.renderQuery(s),
+    this.renderResults(s)
   ]
 });
   }
@@ -139,9 +139,9 @@ r = {
   renderInitialState: () => null,
   hideQuery: !1,
   width: 320
-}, (s = 'defaultProps') in(a = T) ? Object.defineProperty(a, s, {
+}, (a = 'defaultProps') in(s = T) ? Object.defineProperty(s, a, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = r, t.Z = T;
+}) : s[a] = r, t.Z = T;

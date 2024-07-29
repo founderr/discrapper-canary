@@ -1,11 +1,11 @@
 n.d(t, {
   f: function() {
-return C;
+return f;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(442837),
+  s = n(470079),
+  a = n(442837),
   r = n(481060),
   l = n(541716),
   o = n(419922),
@@ -19,11 +19,11 @@ var i = n(735250),
   T = n(981631),
   h = n(689938),
   N = n(356039);
-let f = e => {
+let C = e => {
 let {
   channel: t,
   message: n
-} = e, [s, c] = a.useState(!1), u = (0, m.y6)(n.id), d = a.useCallback(() => {
+} = e, [a, c] = s.useState(!1), u = (0, m.y6)(n.id), d = s.useCallback(() => {
   (0, I.v)({
     type: l.I.FORM,
     content: '',
@@ -52,7 +52,7 @@ return (0, i.jsx)('div', {
     children: [
       (0, i.jsx)(o.ZP, {
         className: N.welcomeCTASticker,
-        isInteracting: s,
+        isInteracting: a,
         sticker: u,
         size: 28
       }),
@@ -61,11 +61,11 @@ return (0, i.jsx)('div', {
   })
 });
   },
-  C = e => {
+  f = e => {
 let {
   message: t,
   channel: n
-} = e, a = n.getGuildId(), r = (0, s.e7)([
+} = e, s = n.getGuildId(), r = (0, a.e7)([
   E.default,
   _.Z,
   d.Z,
@@ -73,15 +73,15 @@ let {
 ], () => {
   var e;
   let i = E.default.getCurrentUser(),
-    s = (0, c.xl)(n),
+    a = (0, c.xl)(n),
     r = _.Z.can(T.Plq.SEND_MESSAGES, n),
-    l = null != a && null != i && (null === (e = u.ZP.getMember(a, i.id)) || void 0 === e ? void 0 : e.isPending),
+    l = null != s && null != i && (null === (e = u.ZP.getMember(s, i.id)) || void 0 === e ? void 0 : e.isPending),
     o = t.author.bot,
-    I = d.Z.getGuild(a),
+    I = d.Z.getGuild(s),
     m = null != I && (I.systemChannelFlags & T.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-  return r && !s && !l && !o && m;
+  return r && !a && !l && !o && m;
 });
-return null != a && r ? (0, i.jsx)(f, {
+return null != s && r ? (0, i.jsx)(C, {
   message: t,
   channel: n
 }) : null;

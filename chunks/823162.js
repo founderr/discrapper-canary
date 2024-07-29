@@ -19,8 +19,8 @@ return _;
   }
 });
 var i = n(544891),
-  a = n(570140),
-  s = n(893776),
+  s = n(570140),
+  a = n(893776),
   r = n(290323),
   l = n(981631);
 async function o(e) {
@@ -29,7 +29,7 @@ url: l.ANM.CHANNEL_RECIPIENT_CONSENT(e),
 body: {
   consent_status: r.h.ACCEPTED
 }
-  }), a.Z.dispatch({
+  }), s.Z.dispatch({
 type: 'MESSAGE_REQUEST_ACCEPT_OPTIMISTIC',
 channelId: e
   });
@@ -69,5 +69,5 @@ body: {
 }
 
 function E() {
-  s.Z.getLocationMetadata();
+  a.Z.getLocationMetadata();
 }

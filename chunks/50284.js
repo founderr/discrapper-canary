@@ -4,8 +4,8 @@ return _;
   }
 });
 var i = n(544891),
-  a = n(569471),
-  s = n(346479),
+  s = n(569471),
+  a = n(346479),
   r = n(592125),
   l = n(375954),
   o = n(306680),
@@ -24,7 +24,7 @@ m = 0;
 u.default.compare(e.id, I) > 0 && (0, o.Ex)(e, n) && m++;
   });
   let T = r.Z.getChannel(e);
-  null != T && T.isThread() && (T.isArchivedThread() && await s.Z.unarchiveThread(T, !1), !a.Z.hasJoined(e) && await s.Z.joinThread(T, 'Mark Unread')), i.tn.post({
+  null != T && T.isThread() && (T.isArchivedThread() && await a.Z.unarchiveThread(T, !1), !s.Z.hasJoined(e) && await a.Z.joinThread(T, 'Mark Unread')), i.tn.post({
 url: d.ANM.MESSAGE_ACK(e, I),
 body: {
   manual: !0,

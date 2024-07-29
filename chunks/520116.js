@@ -4,9 +4,9 @@ return M;
   }
 }), n(653041);
 var i = n(735250),
-  a = n(470079),
-  s = n(913527),
-  r = n.n(s),
+  s = n(470079),
+  a = n(913527),
+  r = n.n(a),
   l = n(91192),
   o = n(442837),
   c = n(481060),
@@ -19,35 +19,35 @@ var i = n(735250),
   T = n(695346),
   h = n(314897),
   N = n(496675),
-  f = n(594174),
-  C = n(55935),
+  C = n(594174),
+  f = n(55935),
   p = n(655354),
   g = n(809780),
   S = n(981631),
   A = n(689938),
   R = n(104219);
-let x = {
+let O = {
   left: 4,
   right: -12
 };
 
-function O(e) {
+function x(e) {
   var t;
   let {
 channel: n,
-message: s,
+message: a,
 compact: r,
 isGroupStart: o,
 treatSpam: u,
 gotoChannel: d
-  } = e, _ = (0, l.JA)(null !== (t = s.id) && void 0 !== t ? t : ''), E = a.useCallback(e => {
+  } = e, _ = (0, l.JA)(null !== (t = a.id) && void 0 !== t ? t : ''), E = s.useCallback(e => {
 if ('ArrowLeft' === e.key) {
   var t;
   null === (t = document.querySelector('[data-recents-channel="'.concat(n.id, '"]'))) || void 0 === t || t.focus();
 }
   }, [n.id]);
   return (0, i.jsx)(c.FocusRing, {
-offset: x,
+offset: O,
 children: (0, i.jsxs)('div', {
   className: R.messageContainer,
   onKeyDown: E,
@@ -55,11 +55,11 @@ children: (0, i.jsxs)('div', {
   children: [
     (0, i.jsx)(p.Z, {
       className: R.jumpButton,
-      onJump: e => d(e, s.id)
+      onJump: e => d(e, a.id)
     }),
     (0, i.jsx)(m.Z, {
-      id: s.id,
-      message: s,
+      id: a.id,
+      message: a,
       channel: n,
       className: R.message,
       compact: r,
@@ -69,15 +69,15 @@ children: (0, i.jsxs)('div', {
       treatSpam: u
     })
   ]
-}, s.id)
+}, a.id)
   });
 }
 
 function M(e) {
   var t, n;
   let {
-channel: a,
-channelRecord: s,
+channel: s,
+channelRecord: a,
 gotoChannel: l
   } = e, {
 enabled: m
@@ -85,31 +85,31 @@ enabled: m
 location: '20e3b0_1'
   }, {
 autoTrackExposure: !1
-  }), p = T.jU.useSetting(), x = (0, o.e7)([N.Z], () => N.Z.can(S.Plq.CREATE_INSTANT_INVITE, s)), M = (0, E.P1)(s), v = !1, L = 0 === a.messages.length || r()(a.messages[0].timestamp).isSame(r()(), 'day'), Z = null !== (n = null === (t = f.default.getUser(h.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n, P = [];
-  if (!a.collapsed) {
+  }), p = T.jU.useSetting(), O = (0, o.e7)([N.Z], () => N.Z.can(S.Plq.CREATE_INSTANT_INVITE, a)), M = (0, E.P1)(a), v = !1, L = 0 === s.messages.length || r()(s.messages[0].timestamp).isSame(r()(), 'day'), Z = null !== (n = null === (t = C.default.getUser(h.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n, P = [];
+  if (!s.collapsed) {
 let e = null,
   t = null,
-  n = a.messages.slice(0, g.hC);
+  n = s.messages.slice(0, g.hC);
 n.forEach(n => {
-  if (!(0, d.Z)(n, x)) {
+  if (!(0, d.Z)(n, O)) {
     if (!L && (null == e || !e.isSame(n.timestamp, 'day'))) {
-      let t = (0, C.vc)(n.timestamp, 'LL');
+      let t = (0, f.vc)(n.timestamp, 'LL');
       P.push((0, i.jsx)(I.Z, {
         className: R.divider,
         children: t
       }, t)), e = r()(n.timestamp);
     }
-    let a = null == t || (0, _.Z)(s, t, n);
-    t = n, v = v || (0, E.DQ)(n), P.push((0, i.jsx)(O, {
-      channel: s,
+    let s = null == t || (0, _.Z)(a, t, n);
+    t = n, v = v || (0, E.DQ)(n), P.push((0, i.jsx)(x, {
+      channel: a,
       message: n,
       compact: p,
-      isGroupStart: a,
+      isGroupStart: s,
       treatSpam: !Z && m && (0, E.DQ)(n) && M,
       gotoChannel: l
     }, n.id));
   }
-}), a.messages.length >= g.hC && P.push((0, i.jsxs)(c.Button, {
+}), s.messages.length >= g.hC && P.push((0, i.jsxs)(c.Button, {
   color: c.Button.Colors.LINK,
   look: c.Button.Looks.LINK,
   onClick: e => l(e, n[n.length - 1].id),

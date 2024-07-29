@@ -1,6 +1,6 @@
 n(47120);
-var i, a = n(735250),
-  s = n(470079),
+var i, s = n(735250),
+  a = n(470079),
   r = n(846519);
 
 function l(e, t, n) {
@@ -11,7 +11,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class o extends(i = s.Component) {
+class o extends(i = a.Component) {
   static getDerivedStateFromProps(e) {
 return e.disable ? {
   hovered: !1
@@ -28,11 +28,11 @@ let {
 this.stopTimer();
   }
   componentDidUpdate(e, t) {
-let n, i, a, s, {
+let n, i, s, a, {
   props: r
 } = this;
 let l = (n = r, i = this.state, !n.disable && !(i.hovered && n.pauseOnHover));
-let o = (a = e, s = t, !a.disable && !(s.hovered && a.pauseOnHover));
+let o = (s = e, a = t, !s.disable && !(a.hovered && s.pauseOnHover));
 l && !o || e.interval !== r.interval ? this.startTimer() : !l && o && this.stopTimer();
   }
   startTimer() {
@@ -60,7 +60,7 @@ let {
   onMouseLeave: this.handleResume,
   onBlur: this.handleResume
 };
-return (0, a.jsx)('div', {
+return (0, s.jsx)('div', {
   ...i,
   className: t,
   children: e

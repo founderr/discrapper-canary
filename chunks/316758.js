@@ -16,27 +16,27 @@ return d;
   }
 });
 var i = n(166459),
-  a = n(966390),
-  s = n(476326),
+  s = n(966390),
+  a = n(476326),
   r = n(703558),
   l = n(398805);
 async function o(e, t, n) {
   let i = (0, l.Yk)(t, n),
-a = await fetch(n);
-  return c(e, t, new File([await a.blob()], i, {
+s = await fetch(n);
+  return c(e, t, new File([await s.blob()], i, {
 type: 'image/gif'
   })), n;
 }
 
 function c(e, t, n) {
-  let a = {
+  let s = {
 id: t,
 channelId: e,
 file: n,
-platform: s.ow.WEB
+platform: a.ow.WEB
   };
   i.Z.addFile({
-file: a,
+file: s,
 channelId: e,
 draftType: r.d.Poll
   });
@@ -52,10 +52,10 @@ async function _(e) {
 channel: t,
 items: n,
 poll: i,
-nonce: s,
+nonce: a,
 maxSizeCallback: l
   } = e;
-  return a.Z.uploadFiles({
+  return s.Z.uploadFiles({
 channelId: t.id,
 uploads: n,
 draftType: r.d.Poll,
@@ -66,7 +66,7 @@ parsedMessage: {
   validNonShortcutEmojis: []
 },
 options: {
-  nonce: s,
+  nonce: a,
   poll: i
 },
 raiseEndpointErrors: !0

@@ -5,8 +5,8 @@ return d;
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(739566),
   l = n(492593),
   o = n(930282),
@@ -17,7 +17,7 @@ function d(e) {
   let {
 message: t,
 channel: n,
-content: a,
+content: s,
 className: d,
 compact: _,
 popoutProps: E,
@@ -26,22 +26,22 @@ withFooter: m = !1,
 ...T
   } = e, h = (0, r.ZP)(t);
   return (0, i.jsx)('div', {
-className: s()({
+className: a()({
   [u.withFooter]: m
 }, u.embedCard, {
   [u.compact]: _
 }, d),
 children: (0, i.jsx)(l.Z, {
   ...T,
-  className: s()(u.messageContainer, {
+  className: a()(u.messageContainer, {
     [u.compact]: _
   }),
   childrenMessageContent: (0, i.jsx)(o.ZP, {
-    className: s()(u.__invalid_messageContent, {
+    className: a()(u.__invalid_messageContent, {
       [u.compact]: _
     }),
     message: t,
-    content: a
+    content: s
   }),
   childrenHeader: (0, i.jsx)(c.ZP, {
     message: t,
@@ -50,7 +50,7 @@ children: (0, i.jsx)(l.Z, {
     guildId: null == n ? void 0 : n.guild_id,
     compact: _,
     hideTimestamp: I,
-    className: s()(u.header, {
+    className: a()(u.header, {
       [u.compact]: _
     }),
     ...null != E ? E : {}

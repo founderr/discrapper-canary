@@ -1,33 +1,33 @@
-n.d(i, {
+i.d(n, {
   Z: function() {
 return p;
   }
 });
-var s = n(735250);
-n(470079);
-var l = n(442837),
-  t = n(481060),
-  o = n(666520),
-  a = n(706454),
-  r = n(430824),
-  d = n(914010),
-  c = n(785717),
-  u = n(532776),
-  I = n(648067),
-  _ = n(588822),
-  f = n(900927),
-  m = n(678738),
-  E = n(652853),
-  x = n(335191),
-  v = n(351707),
-  h = n(228168),
-  S = n(689938),
-  Z = n(247321);
+var s = i(735250);
+i(470079);
+var l = i(442837),
+  t = i(481060),
+  o = i(666520),
+  a = i(706454),
+  r = i(430824),
+  d = i(914010),
+  c = i(785717),
+  u = i(532776),
+  I = i(648067),
+  _ = i(588822),
+  f = i(900927),
+  m = i(678738),
+  E = i(652853),
+  x = i(335191),
+  v = i(351707),
+  h = i(228168),
+  Z = i(689938),
+  S = i(247321);
 
 function p(e) {
   let {
-user: i,
-currentUser: n,
+user: n,
+currentUser: i,
 displayProfile: p,
 subsection: g,
 onClose: j
@@ -35,59 +35,59 @@ onClose: j
 theme: T
   } = (0, E.z)(), {
 trackUserProfileAction: N
-  } = (0, c.KZ)(), C = null == p ? void 0 : p.guildId, A = (0, l.e7)([r.Z], () => null != C ? r.Z.getGuild(C) : null), R = (0, l.e7)([d.Z], () => d.Z.getGuildId()), L = (0, l.e7)([a.default], () => a.default.locale), y = (0, I.Z)(i.id), O = (0, u.Z)(i.id);
+  } = (0, c.KZ)(), C = null == p ? void 0 : p.guildId, A = (0, l.e7)([r.Z], () => null != C ? r.Z.getGuild(C) : null), y = (0, l.e7)([d.Z], () => d.Z.getGuildId()), R = (0, l.e7)([a.default], () => a.default.locale), O = (0, I.Z)(n.id), L = (0, u.Z)(n.id);
   return (0, s.jsxs)(t.ScrollerThin, {
 fade: !0,
-className: Z.scroller,
+className: S.scroller,
 children: [
   (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' && (0, s.jsx)(_.Z, {
     userBio: p.bio,
     setLineClamp: !1
   }),
   null != A && (0, s.jsx)(v.Z, {
-    user: i,
-    currentUser: n,
+    user: n,
+    currentUser: i,
     guild: A,
     scrollIntoView: g === h.Tb.ROLES
   }),
   (0, s.jsx)(m.Z, {
-    heading: S.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+    heading: Z.Z.Messages.USER_PROFILE_MEMBER_SINCE,
     children: (0, s.jsx)(f.Z, {
-      userId: i.id,
+      userId: n.id,
       guildId: null == p ? void 0 : p.guildId,
       tooltipDelay: h.vB
     })
   }),
-  y.length > 0 && (0, s.jsx)(m.Z, {
-    heading: S.Z.Messages.CONNECTIONS,
+  O.length > 0 && (0, s.jsx)(m.Z, {
+    heading: Z.Z.Messages.CONNECTIONS,
     children: (0, s.jsx)(x.OA, {
-      connectedAccounts: y,
-      className: Z.connections,
-      userId: i.id,
+      connectedAccounts: O,
+      className: S.connections,
+      userId: n.id,
       theme: T,
-      locale: L
+      locale: R
     })
   }),
-  O.length > 0 && (0, s.jsx)(m.Z, {
-    heading: S.Z.Messages.APPS,
-    children: O.map(e => (0, s.jsx)(x.tH, {
-      className: Z.appsConnections,
+  L.length > 0 && (0, s.jsx)(m.Z, {
+    heading: Z.Z.Messages.APPS,
+    children: L.map(e => (0, s.jsx)(x.tH, {
+      className: S.appsConnections,
       applicationRoleConnection: e,
-      locale: L,
+      locale: R,
       onApplicationClicked: () => {
         N({
           action: 'PRESS_APP_CONNECTION'
         }), j();
       },
-      selectedGuildId: null != R ? R : void 0
+      selectedGuildId: null != y ? y : void 0
     }, e.application.id))
   }),
   (0, s.jsx)(m.Z, {
-    heading: S.Z.Messages.NOTE,
+    heading: Z.Z.Messages.NOTE,
     scrollIntoView: g === h.Tb.NOTE,
     children: (0, s.jsx)(o.Z, {
-      userId: i.id,
-      className: Z.note,
+      userId: n.id,
+      className: S.note,
       autoFocus: g === h.Tb.NOTE,
       onUpdate: () => N({
         action: 'SET_NOTE'

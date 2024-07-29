@@ -4,9 +4,9 @@ return p;
   }
 }), n(627341);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(278074),
   o = n(263568),
   c = n(481060),
@@ -33,8 +33,8 @@ function h(e) {
   let {
 children: t,
 onClick: n,
-variant: a = 'text-sm/medium',
-color: s = 'interactive-active',
+variant: s = 'text-sm/medium',
+color: a = 'interactive-active',
 className: l,
 buttonRef: o
   } = e;
@@ -45,8 +45,8 @@ look: c.Button.Looks.BLANK,
 size: c.Button.Sizes.NONE,
 buttonRef: o,
 children: (0, i.jsx)(c.Text, {
-  variant: a,
-  color: s,
+  variant: s,
+  color: a,
   scaleFontToUserSetting: !0,
   children: t
 })
@@ -57,15 +57,15 @@ function N(e) {
   let {
 buttonLabel: t,
 secondaryLabel: n,
-handleClick: a,
-isInteractive: s,
+handleClick: s,
+isInteractive: a,
 className: l
   } = e;
   return (0, i.jsxs)('div', {
 className: r()(m.detailsText, l),
 children: [
-  s ? (0, i.jsx)(h, {
-    onClick: a,
+  a ? (0, i.jsx)(h, {
+    onClick: s,
     variant: 'text-sm/normal',
     color: 'none',
     className: r()(m.detailsTextButton, m.interactive),
@@ -86,27 +86,27 @@ children: [
   });
 }
 
-function f(e) {
+function C(e) {
   let {
 action: t,
 channelId: n,
-messageId: s,
+messageId: a,
 isInteractive: l,
 className: o
   } = e, {
 actionButtonRef: d,
 manageFocusOnAction: _
-  } = (0, E.dv)(), I = a.useCallback(async () => {
+  } = (0, E.dv)(), I = s.useCallback(async () => {
 if ((null == t ? void 0 : t.type) != null)
   await u.Z.handlePollActionTapped({
     channelId: n,
-    messageId: s,
+    messageId: a,
     type: t.type
   }), _(t.type);
   }, [
 null == t ? void 0 : t.type,
 n,
-s,
+a,
 _
   ]);
   return null == t ? null : 'button' === t.presentation || 'secondaryButton' === t.presentation ? (0, i.jsx)(c.Button, {
@@ -136,12 +136,12 @@ className: o
   });
 }
 
-function C(e) {
+function f(e) {
   let {
 message: t,
 poll: n,
-className: a
-  } = e, s = (0, _.$B)(n.containerStyle), u = function(e, t) {
+className: s
+  } = e, a = (0, _.$B)(n.containerStyle), u = function(e, t) {
 let n = {
   answers: t.answers,
   answersInteraction: t.answersInteraction,
@@ -159,7 +159,7 @@ return (0, l.EQ)(t.layoutType).with(o.C.DEFAULT, () => (0, i.jsx)(I.K, {
 })).otherwise(() => null);
   }(0, n);
   return null == u ? null : (0, i.jsx)('div', {
-className: r()(m.container, s, a),
+className: r()(m.container, a, s),
 children: (0, i.jsxs)(c.HeadingLevel, {
   children: [
     (0, i.jsxs)('div', {
@@ -181,20 +181,20 @@ children: (0, i.jsxs)(c.HeadingLevel, {
     (0, i.jsxs)('div', {
       className: m.bottomBar,
       children: [
-        (0, i.jsx)(f, {
+        (0, i.jsx)(C, {
           channelId: t.getChannelId(),
           messageId: t.id,
           action: n.secondaryAction,
           className: m.secondaryAction,
           isInteractive: n.isInteractive
         }),
-        (0, i.jsx)(f, {
+        (0, i.jsx)(C, {
           channelId: t.getChannelId(),
           messageId: t.id,
           action: n.tertiaryAction,
           className: m.tertiaryAction
         }),
-        (0, i.jsx)(f, {
+        (0, i.jsx)(C, {
           channelId: t.getChannelId(),
           messageId: t.id,
           action: n.primaryAction
@@ -210,16 +210,16 @@ function p(e) {
   let {
 message: t,
 poll: n,
-className: a
+className: s
   } = e;
   return (0, i.jsx)(_.XL, {
 message: t,
 poll: n,
 children: (0, i.jsx)(E.Pk, {
-  children: (0, i.jsx)(C, {
+  children: (0, i.jsx)(f, {
     message: t,
     poll: n,
-    className: a
+    className: s
   })
 })
   });

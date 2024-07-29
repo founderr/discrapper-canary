@@ -5,8 +5,8 @@ return o;
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(665149),
+var s = n(481060),
+  a = n(665149),
   r = n(132743),
   l = n(689938);
 
@@ -22,11 +22,11 @@ onClose: n,
 popoutPosition: 'bottom',
 popoutAlign: 'right',
 children: (e, t, n) => (0, i.jsx)('div', {
-  children: (0, i.jsx)(s.JO, {
+  children: (0, i.jsx)(a.JO, {
     ...n,
     className: o,
     onClick: e,
-    icon: a.TagIcon,
+    icon: s.TagIcon,
     'aria-label': l.Z.Messages.FOR_LATER,
     tooltip: t ? null : l.Z.Messages.FOR_LATER,
     selected: t

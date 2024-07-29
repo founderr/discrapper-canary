@@ -3,12 +3,12 @@ n.d(t, {
 return N;
   },
   Z: function() {
-return f;
+return C;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(338545),
+  s = n(470079),
+  a = n(338545),
   r = n(442837),
   l = n(686777),
   o = n(113434),
@@ -26,39 +26,39 @@ function N(e) {
   let {
 questId: t,
 ...n
-  } = e, a = (0, r.e7)([c.Z], () => c.Z.getQuest(t));
-  if (null == a)
+  } = e, s = (0, r.e7)([c.Z], () => c.Z.getQuest(t));
+  if (null == s)
 return null;
   {
 let e = {
-  quest: a,
+  quest: s,
   ...n
 };
-return (0, i.jsx)(f, {
+return (0, i.jsx)(C, {
   ...e
 });
   }
 }
 
-function f(e) {
+function C(e) {
   let {
 quest: t,
 location: n,
 initiallyExpanded: r,
 contentPosition: c
-  } = e, [N, f] = a.useState(!1), C = a.useCallback(() => f(!0), []), p = a.useCallback(() => f(!1), []), g = (0, o.tP)(t), {
+  } = e, [N, C] = s.useState(!1), f = s.useCallback(() => C(!0), []), p = s.useCallback(() => C(!1), []), g = (0, o.tP)(t), {
 containerRef: S,
 size: A,
 height: R
-  } = (0, m.h)(), x = (0, l.q)({
+  } = (0, m.h)(), O = (0, l.q)({
 location: T.dr.QUESTS_CARD
   }), {
-expansionSpring: O,
+expansionSpring: x,
 isAnimating: M,
 isExpanded: v,
 toggleExpanded: L
   } = (0, m.O)({
-initiallyExpanded: !x || r || (0, _.iM)({
+initiallyExpanded: !O || r || (0, _.iM)({
   location: n,
   quest: t
 })
@@ -69,9 +69,9 @@ questContent: n,
 questContentPosition: c,
 trackGuildAndChannelMetadata: n === u.jn.QUESTS_EMBED,
 children: e => (0, i.jsx)(i.Fragment, {
-  children: (0, i.jsx)(s.animated.div, {
+  children: (0, i.jsx)(a.animated.div, {
     style: {
-      maxHeight: n === u.jn.QUESTS_EMBED ? void 0 : O.to({
+      maxHeight: n === u.jn.QUESTS_EMBED ? void 0 : x.to({
         range: [
           0,
           1
@@ -83,8 +83,8 @@ children: e => (0, i.jsx)(i.Fragment, {
       })
     },
     className: h.questsCard,
-    onFocus: C,
-    onMouseEnter: C,
+    onFocus: f,
+    onMouseEnter: f,
     onBlur: p,
     onMouseLeave: p,
     children: (0, i.jsxs)('div', {
@@ -98,10 +98,10 @@ children: e => (0, i.jsx)(i.Fragment, {
           location: n,
           quest: t,
           size: A,
-          expansionSpring: O,
+          expansionSpring: x,
           isAnimating: M,
           isExpanded: v,
-          isInConcurrentQuestExperiment: x,
+          isInConcurrentQuestExperiment: O,
           contentPosition: c,
           toggleExpanded: L
         }),

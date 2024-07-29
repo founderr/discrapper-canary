@@ -4,9 +4,9 @@ return d;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(481060),
   o = n(741914),
   c = n(529367),
@@ -16,10 +16,10 @@ function d(e) {
   let {
 color: t,
 className: n,
-variant: s,
+variant: a,
 text: d,
 lineClamp: _
-  } = e, E = (0, l.usePrivateHeadingLevel)(), I = a.useMemo(() => null == d ? null : (0, o.Z)(d, !0, {
+  } = e, E = (0, l.usePrivateHeadingLevel)(), I = s.useMemo(() => null == d ? null : (0, o.Z)(d, !0, {
 allowHeading: null == _,
 allowList: null == _,
 initialHeaderLevel: E
@@ -34,7 +34,7 @@ className: r()(n, u.markup, {
   [c.lineClamp1]: 1 === _
 }),
 color: t,
-variant: s,
+variant: a,
 lineClamp: _,
 children: I
   });

@@ -25,14 +25,14 @@ var r = t(481060),
   m = t(710631),
   g = t(297047),
   R = t(88966),
-  C = t(397616),
-  v = t(558924),
+  v = t(397616),
+  C = t(558924),
   G = t(991307),
   y = t(725119),
-  P = t(700994),
-  D = t(332031),
-  U = t(981631),
-  b = t(689938);
+  D = t(700994),
+  P = t(332031),
+  b = t(981631),
+  U = t(689938);
 n.default = (0, o.Z)((0, s.Z)(function(e) {
   var n;
   let {
@@ -40,15 +40,15 @@ user: t,
 channel: s,
 context: o,
 showChatItems: d = !0,
-showMediaItems: U = !1,
+showMediaItems: b = !1,
 showChannelCallItems: x = !1,
 showModalItems: H = !0,
-onSelect: L,
-onHeightUpdate: j
+onSelect: j,
+onHeightUpdate: L
   } = e, w = (0, y.Z)({
 userId: t.id,
 guildId: null
-  }), F = (0, g.Z)(t, null, o), k = (0, v.Z)(t.id, s.id), B = (0, R.Z)(t.id, o), V = (0, h.Z)({
+  }), F = (0, g.Z)(t, null, o), B = (0, C.Z)(t.id, s.id), k = (0, R.Z)(t.id, o), V = (0, h.Z)({
 user: t,
 context: o
   }), W = (0, f.Z)({
@@ -56,7 +56,7 @@ user: t,
 context: o
   }), K = (0, p.Z)({
 user: t
-  }), Y = (0, P.Z)(t.id), q = (0, C.Z)(t.id, s.id), z = (0, G.Z)(t.id), Q = (0, I.P)({
+  }), Y = (0, D.Z)(t.id), z = (0, v.Z)(t.id, s.id), q = (0, G.Z)(t.id), Q = (0, I.P)({
 userId: t.id,
 channelId: s.id,
 location: 'GroupDMUserContextMenu'
@@ -66,19 +66,19 @@ user: t
 user: t
   }), et = (0, T.Z)({
 id: t.id,
-label: b.Z.Messages.COPY_ID_USER
-  }), ei = (0, D.Z)(t.id), er = (0, E.Z)(t.id), ea = (0, c.Z)(s.id), es = (0, N.Z)(t), eo = (0, _.Z)(t.id), el = (0, A.Z)({
+label: U.Z.Messages.COPY_ID_USER
+  }), ei = (0, P.Z)(t.id), er = (0, E.Z)(t.id), ea = (0, c.Z)(s.id), es = (0, N.Z)(t), eo = (0, _.Z)(t.id), el = (0, A.Z)({
 commandType: l.yU.USER,
 commandTargetId: t.id,
 channel: s,
 guildId: void 0,
-onHeightUpdate: j
+onHeightUpdate: L
   }), eu = (0, M.Z)(t, s), ed = t.isNonUserBot(), ec = s.isManaged(), eE = null === (n = s.recipients) || void 0 === n ? void 0 : n.includes(t.id);
   return (0, i.jsxs)(r.Menu, {
 navId: 'user-context',
 onClose: a.Zy,
-'aria-label': b.Z.Messages.USER_ACTIONS_MENU_LABEL,
-onSelect: L,
+'aria-label': U.Z.Messages.USER_ACTIONS_MENU_LABEL,
+onSelect: j,
 children: [
   !ed && (0, i.jsxs)(i.Fragment, {
     children: [
@@ -89,20 +89,20 @@ children: [
         children: [
           H && w,
           d && F,
-          B,
+          k,
           V,
-          !ec && k,
+          !ec && B,
           H && W,
           H && K,
           ei
         ]
       }),
-      U && (0, i.jsx)(r.MenuGroup, {
+      b && (0, i.jsx)(r.MenuGroup, {
         children: Y
       }),
       eE && (0, i.jsxs)(r.MenuGroup, {
         children: [
-          !ec && q,
+          !ec && z,
           eu
         ]
       }),
@@ -111,14 +111,14 @@ children: [
       }),
       (0, i.jsxs)(r.MenuGroup, {
         children: [
-          U && z,
-          U && Q,
-          U && $,
+          b && q,
+          b && Q,
+          b && $,
           el,
           H && X,
           ee,
           H && en,
-          U && eo
+          b && eo
         ]
       }),
       x && (0, i.jsxs)(r.MenuGroup, {
@@ -135,7 +135,7 @@ children: [
 ]
   });
 }, {
-  object: U.qAy.CONTEXT_MENU
+  object: b.qAy.CONTEXT_MENU
 }), [
   d.Z.CONTEXT_MENU,
   d.Z.GROUP_DM_USER_MENU

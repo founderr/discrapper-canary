@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(442837),
   l = n(481060),
   o = n(607070),
@@ -28,13 +28,13 @@ if (0 === e.length)
       gameTitle: t
     })
   });
-let a = [
+let s = [
   (0, c.isWeb)() ? I.Z.Messages.QUEST_PROGRESS_NO_GAME_WEB : I.Z.Messages.QUEST_PROGRESS_NO_GAME,
   ...e,
   n
 ];
 return (0, i.jsx)(i.Fragment, {
-  children: a.map((e, t) => (0, i.jsxs)(l.Text, {
+  children: s.map((e, t) => (0, i.jsxs)(l.Text, {
     tag: 'span',
     variant: 'text-sm/medium',
     color: 'text-muted',
@@ -48,14 +48,14 @@ return (0, i.jsx)(i.Fragment, {
 t.Z = function(e) {
   let t = _.r.build(e.quest.config).application.name,
 n = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
-a = (0, E.k3)(e.quest.id, e.location),
+s = (0, E.k3)(e.quest.id, e.location),
 c = (0, E.g2)({
   useReducedMotion: n,
   className: m.refreshIcon
 }),
 {
-  errorHints: f,
-  startingConsoleQuest: C,
+  errorHints: C,
+  startingConsoleQuest: f,
   startConsoleQuest: p
 } = (0, d.GI)({
   questId: e.quest.id,
@@ -69,8 +69,8 @@ c = (0, E.g2)({
   afterRequest: c.stopAnimation
 });
   return (0, i.jsxs)('div', {
-className: s()(m.container, {
-  [m.inFlight]: C
+className: a()(m.container, {
+  [m.inFlight]: f
 }),
 children: [
   (0, i.jsxs)('div', {
@@ -80,7 +80,7 @@ children: [
         className: m.header,
         children: [
           (0, i.jsx)(l.CircleExclamationPointIcon, {
-            className: s()(m.headerIcon, T(f)),
+            className: a()(m.headerIcon, T(C)),
             size: 'custom',
             color: 'currentColor',
             width: 16,
@@ -88,11 +88,11 @@ children: [
           }),
           (0, i.jsx)(l.Text, {
             variant: 'text-sm/semibold',
-            children: h(f, t)
+            children: h(C, t)
           })
         ]
       }),
-      N(f, t, a)
+      N(C, t, s)
     ]
   }),
   (0, i.jsx)('div', {
@@ -100,7 +100,7 @@ children: [
     children: (0, i.jsx)(l.Button, {
       color: l.ButtonColors.PRIMARY,
       onClick: p,
-      disabled: C,
+      disabled: f,
       children: (0, i.jsxs)('div', {
         className: m.ctaInner,
         children: [

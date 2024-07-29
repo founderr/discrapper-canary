@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var a = n(913527),
-  s = n.n(a),
+var s = n(913527),
+  a = n.n(s),
   r = n(481060),
   l = n(730417),
   o = n(921944),
@@ -10,7 +10,7 @@ var a = n(913527),
 let d = (e, t) => ({
   bodyText: c.Z.Messages.DROPS_BANNER_NOTICE.format({
 gameName: e.title,
-endDate: s()(e.endDate, 'YYYY-MM-DD HH:mm').format('MMM Do'),
+endDate: a()(e.endDate, 'YYYY-MM-DD HH:mm').format('MMM Do'),
 streamLengthRequirement: t
   }),
   articleUrl: e.articleUrl
@@ -19,14 +19,14 @@ t.Z = e => {
   let {
 noticeType: t,
 markAsDismissed: n,
-partnerGame: a
-  } = e, s = (0, l.au)(a);
-  if (null == s)
+partnerGame: s
+  } = e, a = (0, l.au)(s);
+  if (null == a)
 return null;
   let {
 bodyText: _,
 articleUrl: E
-  } = d(s.drop, s.config.streamLengthRequirement);
+  } = d(a.drop, a.config.streamLengthRequirement);
   return (0, i.jsxs)(r.Notice, {
 className: u.colorGuildBlue,
 children: [

@@ -1,8 +1,8 @@
 n(411104);
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(774078),
+var s = n(481060),
+  a = n(774078),
   r = n(100527),
   l = n(906732),
   o = n(963249),
@@ -27,23 +27,23 @@ switch (e) {
   default:
     throw Error('Unsupported subscription tier: '.concat(e));
 }
-  }(I)), T = (0, c.N)(), h = (0, s.Z)(null != T && null != T.expires_at ? Date.parse(T.expires_at) : 0);
-  return null == T || (null === (t = T.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== I || null == T.expires_at || Object.values(h).every(e => 0 === e) ? null : (0, i.jsxs)(a.Notice, {
+  }(I)), T = (0, c.N)(), h = (0, a.Z)(null != T && null != T.expires_at ? Date.parse(T.expires_at) : 0);
+  return null == T || (null === (t = T.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== I || null == T.expires_at || Object.values(h).every(e => 0 === e) ? null : (0, i.jsxs)(s.Notice, {
 color: function(e) {
   switch (e) {
     case u.Si.TIER_0:
-      return a.NoticeColors.PREMIUM_TIER_0;
+      return s.NoticeColors.PREMIUM_TIER_0;
     case u.Si.TIER_2:
-      return a.NoticeColors.PREMIUM_TIER_2;
+      return s.NoticeColors.PREMIUM_TIER_2;
     default:
       throw Error('Unsupported subscription tier: '.concat(e));
   }
 }(I),
 children: [
-  (0, i.jsx)(a.NoticeCloseButton, {
+  (0, i.jsx)(s.NoticeCloseButton, {
     onClick: n
   }),
-  (0, i.jsx)(a.NitroWheelIcon, {
+  (0, i.jsx)(s.NitroWheelIcon, {
     size: 'md',
     color: 'currentColor',
     className: E.premiumIcon
@@ -70,7 +70,7 @@ children: [
         throw Error('Unsupported subscription tier: '.concat(e));
     }
   }(I, h),
-  (0, i.jsx)(a.NoticeButton, {
+  (0, i.jsx)(s.NoticeButton, {
     onClick: () => {
       (0, o.Z)({
         trialId: T.trial_id,

@@ -5,8 +5,8 @@ return _;
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(594174),
+var s = n(481060),
+  a = n(594174),
   r = n(78839),
   l = n(585483),
   o = n(74538),
@@ -20,8 +20,8 @@ processedCode: t,
 channelContext: _,
 customGiftMessage: E,
 giftInfo: I
-  } = e, m = !1, T = null, h = s.default.getCurrentUser(), N = (0, o.yd)(null == h ? void 0 : h.premiumType, u.p9.TIER_0);
-  (0, a.openModalLazy)(async () => {
+  } = e, m = !1, T = null, h = a.default.getCurrentUser(), N = (0, o.yd)(null == h ? void 0 : h.premiumType, u.p9.TIER_0);
+  (0, s.openModalLazy)(async () => {
 let {
   default: e
 } = await Promise.all([
@@ -29,13 +29,13 @@ let {
   n.e('87450')
 ]).then(n.bind(n, 409858));
 return n => {
-  var a, s;
+  var s, a;
   return (0, i.jsx)(e, {
     code: t,
     channelContext: _,
     customGiftMessage: E,
-    emojiName: null == I ? void 0 : null === (a = I.emoji) || void 0 === a ? void 0 : a.name,
-    soundId: null == I ? void 0 : null === (s = I.sound) || void 0 === s ? void 0 : s.id,
+    emojiName: null == I ? void 0 : null === (s = I.emoji) || void 0 === s ? void 0 : s.name,
+    soundId: null == I ? void 0 : null === (a = I.sound) || void 0 === a ? void 0 : a.id,
     onComplete: (e, t) => {
       T = e, t && (m = t, e.isSubscription && null == r.ZP.getPremiumSubscription(!1) && (0, c.H)(!0));
     },
