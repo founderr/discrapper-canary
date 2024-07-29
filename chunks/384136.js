@@ -18,14 +18,18 @@ class s extends r.EventEmitter {
   static async get(e, t) {
 var n;
 let r = {
-  ...e,
-  frameRate: 30
+  audio: t && {
+    echoCancellation: !1,
+    noiseSuppression: !1,
+    autoGainControl: !1
+  },
+  video: {
+    ...e,
+    frameRate: 30
+  }
 };
 if ((null === (n = navigator.mediaDevices) || void 0 === n ? void 0 : n.getDisplayMedia) != null)
-  return new s(await navigator.mediaDevices.getDisplayMedia({
-    audio: t,
-    video: r
-  }));
+  return new s(await navigator.mediaDevices.getDisplayMedia(r));
 throw Error('UNKNOWN');
   }
   destroy() {
