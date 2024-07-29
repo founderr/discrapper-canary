@@ -58,6 +58,7 @@ id: e.id,
 members: e.members,
 presences: e.presences,
 embedded_activities: e.embedded_activities,
+activity_instances: e.activity_instances,
 voice_states: e.voice_states,
 unavailable: !1
   }));
@@ -249,6 +250,7 @@ return {
   channels: e.channels.map(t => (t.guild_id = e.id, (0, p.q_)(t, e.id))),
   presences: e.presences,
   embedded_activities: e.embedded_activities,
+  activity_instances: e.activity_instances,
   voice_states: e.voice_states,
   version: e.version,
   hasThreadsSubscription: e.has_threads_subscription
@@ -264,6 +266,7 @@ channelUpdates: {
 },
 channelTimestampUpdates: e.channel_updates,
 embedded_activities: e.embedded_activities,
+activity_instances: e.activity_instances,
 emojis: null == t.emojis ? null : U(t.emojis, e.partial_updates.emojis, e.partial_updates.deleted_emoji_ids),
 emojiUpdates: {
   writes: null !== (l = e.partial_updates.emojis) && void 0 !== l ? l : [],
