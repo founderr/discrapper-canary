@@ -5,218 +5,142 @@ return u;
 });
 var s = n(113434),
   a = n(918701),
-  r = n(566078),
+  o = n(566078),
   i = n(46140),
-  o = n(689938);
+  r = n(689938);
 
 function u(e) {
   let {
 quest: t,
 taskDetails: n,
 location: u,
-questContent: _,
-useV2Variants: l = !1,
-thirdPartyTaskDetails: T,
-expiryDate: E
-  } = e, I = t.config.messages.gameTitle, c = r.r.build(t.config).defaultReward.messages.nameWithArticle, {
-targetMinutes: R
-  } = n, d = (0, a.zK)(t, i.S7.IN_HOUSE_CONSOLE_QUEST), m = (0, a.Kr)(t.config), S = (0, a.$J)(t) && (0, a.$H)(t), g = (0, s.uA)({
+questContent: l,
+useV2Variants: c = !1,
+thirdPartyTaskDetails: d
+  } = e, _ = t.config.messages.gameTitle, T = o.r.build(t.config).defaultReward.messages.nameWithArticle, {
+targetMinutes: E
+  } = n, m = (0, a.zK)(t, i.S7.IN_HOUSE_CONSOLE_QUEST), I = (0, a.Kr)(t.config), R = (0, a.$J)(t) && (0, a.$H)(t), g = (0, s.uA)({
 quest: t,
 location: u,
-questContent: _
+questContent: l
   });
-  if (d && null != m)
-return function(e, t, n) {
-  var s;
-  let i = r.r.build(e.config).defaultReward.messages.nameWithArticle,
-    u = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null,
-    _ = (0, a.Kr)(e.config),
+  if (m && null != I)
+return function(e, t) {
+  var n;
+  let s = o.r.build(e.config).defaultReward.messages.nameWithArticle,
+    i = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
+    u = (0, a.Kr)(e.config),
     {
       targetMinutes: l
     } = t;
-  return u ? null != n ? o.Z.Messages.QUEST_REWARD_WITH_EXPIRATION_WITH_EXPIRY_DATE.format({
-    reward: i,
-    duration: _,
-    expiryDate: n
-  }) : o.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
-    reward: i,
-    duration: _
-  }) : null != n ? o.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_ANY_GAME_ON_CONNECTED_CONSOLE_WITH_EXPIRY_DATE.format({
+  return i ? r.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
+    reward: s,
+    duration: u
+  }) : r.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_ANY_GAME_ON_CONNECTED_CONSOLE.format({
     targetMinutes: l,
-    rewardNameWithArticle: i,
-    duration: _,
-    expiryDate: n
-  }) : o.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_ANY_GAME_ON_CONNECTED_CONSOLE.format({
-    targetMinutes: l,
-    rewardNameWithArticle: i,
-    duration: _
+    rewardNameWithArticle: s,
+    duration: u
   });
-}(t, n, E);
-  if (S)
+}(t, n);
+  if (R)
 return function(e) {
   var t;
   let {
     quest: n,
     taskDetails: s,
-    connectedConsoleLinkOnClick: i,
-    expiryDate: u
-  } = e, _ = r.r.build(n.config).defaultReward.messages.nameWithArticle, l = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = (0, a.Kr)(n.config), {
-    targetMinutes: E
-  } = s, I = n.config.messages.gameTitle;
-  if (null != T)
-    return l ? null != u ? o.Z.Messages.QUEST_REWARD_MULTIPLATFORM_WITH_EXPIRING_COLLECTIBLE_REWARD_WITH_EXPIRY_DATE.format({
-      gameTitle: I,
-      reward: _,
-      streamingDurationRequirement: E,
+    connectedConsoleLinkOnClick: i
+  } = e, u = o.r.build(n.config).defaultReward.messages.nameWithArticle, l = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, c = (0, a.Kr)(n.config), {
+    targetMinutes: d
+  } = s, _ = n.config.messages.gameTitle;
+  if (null != c)
+    return l ? r.Z.Messages.QUEST_REWARD_MULTIPLATFORM_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
+      gameTitle: _,
+      reward: u,
+      streamingDurationRequirement: d,
       onClick: i,
-      duration: T,
-      expiryDate: u
-    }) : o.Z.Messages.QUEST_REWARD_MULTIPLATFORM_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-      gameTitle: I,
-      reward: _,
-      streamingDurationRequirement: E,
-      onClick: i,
-      duration: T
-    }) : null != u ? o.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD_WITH_EXPIRY_DATE.format({
-      gameTitle: I,
-      targetMinutes: E,
-      rewardNameWithArticle: _,
-      duration: T,
-      expiryDate: u
-    }) : o.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-      gameTitle: I,
-      targetMinutes: E,
-      rewardNameWithArticle: _,
-      duration: T
+      duration: c
+    }) : r.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
+      gameTitle: _,
+      targetMinutes: d,
+      rewardNameWithArticle: u,
+      duration: c
     });
-  return null != u ? o.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRY_DATE.format({
-    gameTitle: I,
-    targetMinutes: E,
-    rewardNameWithArticle: _,
-    expiryDate: u
-  }) : o.Z.Messages.QUEST_REWARD_MULTIPLATFORM.format({
-    gameTitle: I,
-    streamingDurationRequirement: E,
-    reward: _,
+  return r.Z.Messages.QUEST_REWARD_MULTIPLATFORM.format({
+    gameTitle: _,
+    streamingDurationRequirement: d,
+    reward: u,
     onClick: i
   });
 }({
   quest: t,
   taskDetails: n,
-  connectedConsoleLinkOnClick: g,
-  expiryDate: E
+  connectedConsoleLinkOnClick: g
 });
   if ((0, a.$J)(t))
-return function(e, t, n) {
-  let s = r.r.build(e.config).defaultReward.messages.nameWithArticle,
-    i = (0, a.Kr)(e.config),
+return function(e, t) {
+  let n = o.r.build(e.config).defaultReward.messages.nameWithArticle,
+    s = (0, a.Kr)(e.config),
     {
-      targetMinutes: u
+      targetMinutes: i
     } = t,
-    _ = e.config.messages.gameTitle;
-  return null != i ? null != n ? o.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD_WITH_EXPIRY_DATE.format({
-    gameTitle: _,
-    targetMinutes: u,
-    rewardNameWithArticle: s,
-    duration: i,
-    expiryDate: n
-  }) : o.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-    gameTitle: _,
-    targetMinutes: u,
-    rewardNameWithArticle: s,
-    duration: i
-  }) : null != n ? o.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRY_DATE.format({
-    gameTitle: _,
-    targetMinutes: u,
-    rewardNameWithArticle: s,
-    expiryDate: n
-  }) : o.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME.format({
-    gameTitle: _,
-    targetMinutes: u,
-    rewardNameWithArticle: s
+    u = e.config.messages.gameTitle;
+  return null != s ? r.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
+    gameTitle: u,
+    targetMinutes: i,
+    rewardNameWithArticle: n,
+    duration: s
+  }) : r.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME.format({
+    gameTitle: u,
+    targetMinutes: i,
+    rewardNameWithArticle: n
   });
-}(t, n, E);
+}(t, n);
   else if ((0, a.$H)(t))
-return function(e, t, n) {
-  let s = r.r.build(e.config).defaultReward.messages.nameWithArticle,
-    i = (0, a.Kr)(e.config),
+return function(e, t) {
+  let n = o.r.build(e.config).defaultReward.messages.nameWithArticle,
+    s = (0, a.Kr)(e.config),
     {
-      targetMinutes: u
+      targetMinutes: i
     } = t,
-    _ = e.config.messages.gameTitle;
-  return null != i ? null != n ? o.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD_WITH_EXPIRY_DATE.format({
-    gameTitle: _,
-    streamingDurationRequirement: u,
-    rewardNameWithArticle: s,
-    duration: i,
-    expiryDate: n
-  }) : o.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-    gameTitle: _,
-    streamingDurationRequirement: u,
-    rewardNameWithArticle: s,
-    duration: i
-  }) : null != n ? o.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRY_DATE.format({
-    gameTitle: _,
-    questReward: s,
-    streamingDurationRequirement: u,
-    expiryDate: n
-  }) : o.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD.format({
-    gameTitle: _,
-    questReward: s,
-    streamingDurationRequirement: u
+    u = e.config.messages.gameTitle;
+  return null != s ? r.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
+    gameTitle: u,
+    streamingDurationRequirement: i,
+    rewardNameWithArticle: n,
+    duration: s
+  }) : r.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD.format({
+    gameTitle: u,
+    questReward: n,
+    streamingDurationRequirement: i
   });
-}(t, n, E);
+}(t, n);
   else if ((0, a.oo)({
   quest: t
 }))
-return function(e, t, n, s) {
+return function(e, t, n) {
   let {
-    targetMinutes: a
-  } = n, r = t.config.messages.gameTitle;
-  return e ? null != s ? o.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2_WITH_EXPIRY_DATE.format({
-    gameTitle: r,
-    streamingDurationRequirement: a,
-    expiryDate: s
-  }) : o.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2.format({
-    gameTitle: r,
-    streamingDurationRequirement: a
-  }) : null != s ? o.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_WITH_EXPIRY_DATE.format({
-    gameTitle: r,
-    streamingDurationRequirement: a,
-    expiryDate: s
-  }) : o.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED.format({
-    gameTitle: r,
-    streamingDurationRequirement: a
+    targetMinutes: s
+  } = n, a = t.config.messages.gameTitle;
+  return e ? r.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2.format({
+    gameTitle: a,
+    streamingDurationRequirement: s
+  }) : r.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED.format({
+    gameTitle: a,
+    streamingDurationRequirement: s
   });
-}(l, t, n, E);
-  return null != T ? T.description : null != m ? null != E ? o.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD_WITH_EXPIRY_DATE.format({
-gameTitle: I,
-streamingDurationRequirement: R,
-questReward: c,
-duration: m,
-expiryDate: E
-  }) : o.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
-gameTitle: I,
-streamingDurationRequirement: R,
-questReward: c,
-duration: m
-  }) : l ? null != E ? o.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2_WITH_EXPIRY_DATE.format({
-gameTitle: I,
-questReward: c,
-streamingDurationRequirement: R,
-expiryDate: E
-  }) : o.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2.format({
-gameTitle: I,
-questReward: c,
-streamingDurationRequirement: R
-  }) : null != E ? o.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRY_DATE.format({
-gameTitle: I,
-questReward: c,
-streamingDurationRequirement: R,
-expiryDate: E
-  }) : o.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
-gameTitle: I,
-questReward: c,
-streamingDurationRequirement: R
+}(c, t, n);
+  return null != d ? d.description : null != I ? r.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
+gameTitle: _,
+streamingDurationRequirement: E,
+questReward: T,
+duration: I
+  }) : c ? r.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2.format({
+gameTitle: _,
+questReward: T,
+streamingDurationRequirement: E
+  }) : r.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
+gameTitle: _,
+questReward: T,
+streamingDurationRequirement: E
   });
 }
