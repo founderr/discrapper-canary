@@ -28,30 +28,29 @@ let {
 } = n(81063);
 
 function v(e) {
-  var t, n, a, v;
+  var t, n;
   let {
-user: O,
-currentUser: R,
-activity: C,
-guild: y,
-channel: D,
-onAction: L,
-onClose: b
+user: a,
+currentUser: v,
+activity: O,
+guild: R,
+channel: C,
+onAction: y,
+onClose: D
   } = e, {
-profileType: M
-  } = (0, _.z)(), P = {
-[A.fullSize]: M === T.y0.FULL_SIZE
+profileType: L
+  } = (0, _.z)(), b = {
+[A.fullSize]: L === T.y0.FULL_SIZE
   };
-  if (!(0, u.Z)(C))
+  if (!(0, u.Z)(O))
 return null;
-  let U = l.Z.get(g.ABu.SPOTIFY),
-w = M === T.y0.FULL_SIZE ? 64 : 48,
-x = () => O.id === R.id ? null : (0, r.jsx)('div', {
-  className: s()(A.actions, P),
+  let M = l.Z.get(g.ABu.SPOTIFY),
+P = () => a.id === v.id ? null : (0, r.jsx)('div', {
+  className: s()(A.actions, b),
   children: (0, r.jsx)(I.Z, {
-    user: O,
-    activity: C,
-    onClick: L
+    user: a,
+    activity: O,
+    onClick: y
   })
 });
   return (0, r.jsxs)(d.Z.Overlay, {
@@ -66,8 +65,8 @@ children: [
       (0, r.jsx)('div', {
         className: A.platformIcon,
         style: {
-          maskImage: 'url('.concat(U.icon.whiteSVG, ')'),
-          WebkitMaskImage: 'url('.concat(U.icon.whiteSVG, ')')
+          maskImage: 'url('.concat(M.icon.whiteSVG, ')'),
+          WebkitMaskImage: 'url('.concat(M.icon.whiteSVG, ')')
         }
       })
     ]
@@ -76,14 +75,16 @@ children: [
     className: A.body,
     children: [
       (0, r.jsxs)('div', {
-        className: s()(A.content, P),
+        className: s()(A.content, b),
         children: [
           (0, r.jsx)(f.Z, {
-            text: null === (t = C.assets) || void 0 === t ? void 0 : t.large_text,
-            alt: null !== (v = null === (n = C.assets) || void 0 === n ? void 0 : n.large_text) && void 0 !== v ? v : '',
-            src: N(C.application_id, null === (a = C.assets) || void 0 === a ? void 0 : a.large_image, w),
-            className: s()(A.largeImage, A.imageSize, P),
-            onClick: () => (0, c.Z5)(C, O.id)
+            src: e => {
+              var t;
+              return N(O.application_id, null === (t = O.assets) || void 0 === t ? void 0 : t.large_image, e);
+            },
+            alt: null === (t = O.assets) || void 0 === t ? void 0 : t.large_text,
+            tooltipText: null === (n = O.assets) || void 0 === n ? void 0 : n.large_text,
+            onClick: () => (0, c.Z5)(O, a.id)
           }),
           (0, r.jsxs)('div', {
             className: A.details,
@@ -92,13 +93,13 @@ children: [
                 children: [
                   (0, r.jsx)(h.Z, {
                     variant: 'heading-sm/semibold',
-                    text: C.details,
-                    onClick: () => (0, c.aG)(C)
+                    text: O.details,
+                    onClick: () => (0, c.aG)(O)
                   }),
                   (() => {
                     var e, t;
-                    let n = null !== (t = null === (e = C.state) || void 0 === e ? void 0 : e.split(';')) && void 0 !== t ? t : [];
-                    return 0 === n.length ? null : null == C.sync_id ? (0, r.jsx)(h.Z, {
+                    let n = null !== (t = null === (e = O.state) || void 0 === e ? void 0 : e.split(';')) && void 0 !== t ? t : [];
+                    return 0 === n.length ? null : null == O.sync_id ? (0, r.jsx)(h.Z, {
                       variant: 'text-xs/normal',
                       text: n.join(', ')
                     }) : (0, r.jsx)(h.Z, {
@@ -107,7 +108,7 @@ children: [
                         children: [
                           (0, r.jsx)(o.Clickable, {
                             className: s()(A.clickable, A.text, A.inline),
-                            onClick: () => (0, c.d$)(C, O.id, t),
+                            onClick: () => (0, c.d$)(O, a.id, t),
                             children: e
                           }),
                           t < n.length - 1 ? ', ' : ''
@@ -118,14 +119,14 @@ children: [
                 ]
               }),
               (0, r.jsx)(E.Z, {
-                user: O,
-                activity: C,
+                user: a,
+                activity: O,
                 className: A.badges
               }),
               (() => {
                 let {
                   timestamps: e
-                } = C;
+                } = O;
                 if (null == e)
                   return null;
                 let {
@@ -139,22 +140,22 @@ children: [
               })()
             ]
           }),
-          M === T.y0.FULL_SIZE && x()
+          L === T.y0.FULL_SIZE && P()
         ]
       }),
-      null == y || null == D ? null : (0, r.jsxs)(r.Fragment, {
+      null == R || null == C ? null : (0, r.jsxs)(r.Fragment, {
         children: [
           (0, r.jsx)('div', {
             className: A.voiceChannelDivider
           }),
           (0, r.jsx)(p.Z, {
-            guild: y,
-            channel: D,
-            onClose: b
+            guild: R,
+            channel: C,
+            onClose: D
           })
         ]
       }),
-      M !== T.y0.FULL_SIZE && x()
+      L !== T.y0.FULL_SIZE && P()
     ]
   })
 ]

@@ -1,45 +1,43 @@
-s.d(a, {
+n.d(t, {
   f: function() {
-return E;
+return c;
   }
-}), s(47120);
-var n = s(735250),
-  t = s(470079),
-  l = s(120356),
-  r = s.n(l),
-  i = s(481060),
-  o = s(410030),
-  c = s(906044);
+}), n(47120);
+var r = n(735250),
+  i = n(470079),
+  a = n(120356),
+  s = n.n(a),
+  o = n(481060),
+  l = n(410030),
+  u = n(906044);
 
-function E(e) {
+function c(e) {
   let {
-src: a,
-size: s,
-constrain: l = 'height',
-className: E,
-alt: _ = 'icon',
-fallbackSrc: d
-  } = e, u = (0, o.ZP)(), [I, A] = t.useState(!1), [N, O] = t.useState(!1), R = null == d || N;
-  if (null == a || I && R)
-return (0, n.jsx)(i.UnknownGameIcon, {
-  size: 'custom',
-  width: s,
-  height: s,
-  color: 'dark' === u ? 'white' : 'black',
-  className: r()(c.contentImage, E)
-});
-  let m = 'height' === l ? {
-maxWidth: ''.concat(s, 'px'),
-height: ''.concat(s, 'px')
+src: t,
+size: n,
+constrain: a = 'height',
+className: c,
+alt: d = 'icon',
+fallbackSrc: _
+  } = e, E = (0, l.ZP)(), [f, h] = i.useState(!1), [p, m] = i.useState(!1), I = null == _ || p, T = 'height' === a ? {
+maxWidth: ''.concat(n, 'px'),
+height: ''.concat(n, 'px')
   } : {
-maxWidth: ''.concat(s, 'px'),
-minHeight: ''.concat(s, 'px')
+maxWidth: ''.concat(n, 'px'),
+minHeight: ''.concat(n, 'px')
   };
-  return (0, n.jsx)('img', {
-style: m,
-className: r()(c.contentImage, E),
-src: I && null != d ? d : a,
-alt: _,
-onError: e => I ? O(!0) : A(!0)
+  return null == t || f && I ? (0, r.jsx)(o.UnknownGameIcon, {
+size: 'custom',
+width: n,
+height: n,
+color: 'dark' === E ? 'white' : 'black',
+style: T,
+className: s()(u.contentImage, c)
+  }) : (0, r.jsx)('img', {
+style: T,
+className: s()(u.contentImage, c),
+src: f && null != _ ? _ : t,
+alt: d,
+onError: e => f ? m(!0) : h(!0)
   });
 }

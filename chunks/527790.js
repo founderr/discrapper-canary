@@ -16,12 +16,12 @@ var l = i(120356),
   I = i(555672),
   _ = i(335326),
   f = i(297781),
-  m = i(43205),
-  E = i(797342),
-  x = i(810568),
-  v = i(168524),
-  h = i(502762),
-  Z = i(373826),
+  m = i(797342),
+  E = i(810568),
+  x = i(168524),
+  v = i(502762),
+  Z = i(60241),
+  h = i(373826),
   S = i(228168),
   p = i(692184);
 let {
@@ -36,10 +36,10 @@ onClose: l
   } = e, {
 iconUrl: r,
 appName: c
-  } = (0, E.n)(i), u = (0, v.Z)({
+  } = (0, m.n)(i), u = (0, x.Z)({
 location: 'UserProfileRecentActivityCard',
 applicationId: i.extra.application_id,
-source: x.m1.UserProfile,
+source: E.m1.UserProfile,
 sourceUserId: n.id,
 trackEntryPointImpression: !0
   }), _ = () => i.content_type === o.s.TOP_GAME ? I.Hs.map((e, n) => (0, s.jsx)(e, {
@@ -47,22 +47,23 @@ entry: i
   }, 'entry-'.concat(n))) : d.W.map((e, n) => (0, s.jsx)(e, {
 entry: i
   }, 'entry-'.concat(n)));
-  return null == u ? (0, s.jsx)(h.Z.Overlay, {
+  return null == u ? (0, s.jsx)(v.Z.Overlay, {
 className: p.card,
 children: (0, s.jsx)('div', {
   className: p.body,
   children: (0, s.jsxs)('div', {
-    className: t()(p.content, S.y0.FULL_SIZE),
+    className: t()(p.content, {
+      [p.fullSize]: S.y0.FULL_SIZE
+    }),
     children: [
-      (0, s.jsx)(m.f, {
-        src: r,
-        size: 64
+      (0, s.jsx)(Z.Z, {
+        src: r
       }),
       (0, s.jsxs)('div', {
         className: p.details,
         children: [
           (0, s.jsx)('div', {
-            children: (0, s.jsx)(Z.Z, {
+            children: (0, s.jsx)(h.Z, {
               variant: 'heading-sm/semibold',
               text: c
             })
@@ -77,16 +78,17 @@ children: (0, s.jsx)('div', {
     ]
   })
 })
-  }) : (0, s.jsx)(h.Z.Overlay, {
+  }) : (0, s.jsx)(v.Z.Overlay, {
 className: p.card,
 children: (0, s.jsx)('div', {
   className: p.body,
   children: (0, s.jsxs)('div', {
-    className: t()(p.content, S.y0.FULL_SIZE),
+    className: t()(p.content, {
+      [p.fullSize]: S.y0.FULL_SIZE
+    }),
     children: [
-      (0, s.jsx)(m.f, {
-        src: r,
-        size: 64
+      (0, s.jsx)(Z.Z, {
+        src: r
       }),
       (0, s.jsxs)('div', {
         className: p.details,
@@ -96,7 +98,7 @@ children: (0, s.jsx)('div', {
             onClick: () => {
               u(), null == l || l();
             },
-            children: (0, s.jsx)(Z.Z, {
+            children: (0, s.jsx)(h.Z, {
               variant: 'heading-sm/semibold',
               text: c
             })
@@ -118,27 +120,28 @@ function T(e) {
   let {
 entry: n
   } = e;
-  return (0, s.jsx)(h.Z.Overlay, {
+  return (0, s.jsx)(v.Z.Overlay, {
 className: p.card,
 children: (0, s.jsx)('div', {
   className: p.body,
   children: (0, s.jsxs)('div', {
-    className: t()(p.content, S.y0.FULL_SIZE),
+    className: t()(p.content, {
+      [p.fullSize]: S.y0.FULL_SIZE
+    }),
     children: [
-      (0, s.jsx)(m.f, {
-        src: g(n.extra.application_id, n.extra.media_assets_large_image, 86),
-        size: 86
+      (0, s.jsx)(Z.Z, {
+        src: e => g(n.extra.application_id, n.extra.media_assets_large_image, e)
       }),
       (0, s.jsxs)('div', {
         className: p.details,
         children: [
           (0, s.jsxs)('div', {
             children: [
-              (0, s.jsx)(Z.Z, {
+              (0, s.jsx)(h.Z, {
                 variant: 'heading-sm/semibold',
                 text: n.extra.media_title
               }),
-              (0, s.jsx)(Z.Z, {
+              (0, s.jsx)(h.Z, {
                 variant: 'text-xs/normal',
                 text: n.extra.media_subtitle
               })
@@ -164,22 +167,23 @@ function N(e) {
   let {
 entry: o
   } = e, a = null === (n = o.extra.entries[0]) || void 0 === n ? void 0 : n.media;
-  return null == a ? null : (0, s.jsx)(h.Z.Overlay, {
+  return null == a ? null : (0, s.jsx)(v.Z.Overlay, {
 className: p.card,
 children: (0, s.jsx)('div', {
   className: p.body,
   children: (0, s.jsxs)('div', {
-    className: t()(p.content, S.y0.FULL_SIZE),
+    className: t()(p.content, {
+      [p.fullSize]: S.y0.FULL_SIZE
+    }),
     children: [
-      (0, s.jsx)(m.f, {
-        src: a.image_url,
-        size: 64
+      (0, s.jsx)(Z.Z, {
+        src: a.image_url
       }),
       (0, s.jsxs)('div', {
         className: p.details,
         children: [
           (0, s.jsx)('div', {
-            children: (0, s.jsx)(Z.Z, {
+            children: (0, s.jsx)(h.Z, {
               variant: 'heading-sm/semibold',
               text: null !== (l = null === (i = a.artists[0]) || void 0 === i ? void 0 : i.name) && void 0 !== l ? l : a.title
             })
@@ -203,27 +207,28 @@ function C(e) {
   let {
 entry: n
   } = e;
-  return (0, s.jsx)(h.Z.Overlay, {
+  return (0, s.jsx)(v.Z.Overlay, {
 className: p.card,
 children: (0, s.jsx)('div', {
   className: p.body,
   children: (0, s.jsxs)('div', {
-    className: t()(p.content, S.y0.FULL_SIZE),
+    className: t()(p.content, {
+      [p.fullSize]: S.y0.FULL_SIZE
+    }),
     children: [
-      (0, s.jsx)(m.f, {
-        src: n.extra.media.image_url,
-        size: 64
+      (0, s.jsx)(Z.Z, {
+        src: n.extra.media.image_url
       }),
       (0, s.jsxs)('div', {
         className: p.details,
         children: [
           (0, s.jsxs)('div', {
             children: [
-              (0, s.jsx)(Z.Z, {
+              (0, s.jsx)(h.Z, {
                 variant: 'heading-sm/semibold',
                 text: n.extra.media.title
               }),
-              (0, s.jsx)(Z.Z, {
+              (0, s.jsx)(h.Z, {
                 variant: 'text-xs/normal',
                 text: n.extra.artist.name
               })

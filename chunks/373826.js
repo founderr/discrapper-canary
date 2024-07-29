@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return c;
+return d;
   }
 });
 var r = n(735250);
@@ -8,31 +8,36 @@ n(470079);
 var i = n(120356),
   a = n.n(i),
   s = n(481060),
-  o = n(652853),
-  l = n(228168),
-  u = n(692184);
+  o = n(514342),
+  l = n(652853),
+  u = n(228168),
+  c = n(692184);
 
-function c(e) {
+function d(e) {
   let {
 text: t,
 onClick: n,
 ...i
   } = e, {
-profileType: c
-  } = (0, o.z)(), d = c !== l.y0.FULL_SIZE ? 1 : void 0;
+profileType: d
+  } = (0, l.z)(), _ = d !== u.y0.FULL_SIZE ? 1 : void 0;
   return null == t || '' === t ? null : null != n ? (0, r.jsx)(s.Clickable, {
 onClick: n,
-className: a()(u.clickable, u.text),
+className: a()(c.clickable, c.text),
 children: (0, r.jsx)(s.Text, {
   color: 'text-normal',
-  lineClamp: d,
+  lineClamp: _,
   ...i,
-  children: t
+  children: (0, r.jsx)(o.Z, {
+    children: t
+  })
 })
   }) : (0, r.jsx)(s.Text, {
 color: 'text-normal',
-lineClamp: d,
+lineClamp: _,
 ...i,
-children: t
+children: (0, r.jsx)(o.Z, {
+  children: t
+})
   });
 }
