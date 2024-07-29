@@ -506,7 +506,8 @@ children: (0, r.jsxs)(I.Gt, {
                 [ea.innerDisabled]: tx,
                 [ea.sansAttachButton]: eD !== W.I.EDIT && (null != tG || tx && null == tG || te),
                 [ea.sansAttachButtonCreateThread]: eD === W.I.THREAD_CREATION,
-                [ea.sansAttachButtonCreatePost]: eD === W.I.CREATE_FORUM_POST
+                [ea.sansAttachButtonCreatePost]: eD === W.I.CREATE_FORUM_POST,
+                [ea.sansAttachButtonUserProfileReply]: eD === W.I.USER_PROFILE_REPLY
               }),
               children: [
                 tG,

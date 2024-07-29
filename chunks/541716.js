@@ -1,6 +1,6 @@
 n.d(t, {
   I: function() {
-return S;
+return A;
   },
   O: function() {
 return i;
@@ -323,6 +323,30 @@ submit: {
 toolbarType: 2
   },
   m = {
+analyticsName: 'user_profile_reply',
+drafts: {
+  type: s.d.ChannelMessage
+},
+emojis: {
+  button: !0
+},
+permissions: {
+  requireSendMessages: !1
+},
+users: {
+  allowMentioning: !0
+},
+autocomplete: {
+  alwaysUseLayer: !0,
+  small: !0
+},
+submit: {
+  useDisabledStylesOnSubmit: !0,
+  clearOnSubmit: !0
+},
+toolbarType: 2
+  },
+  I = {
 analyticsName: 'profile_bio_input',
 drafts: {
   type: s.d.ChannelMessage
@@ -340,7 +364,7 @@ submit: {
 disableAutoFocus: !0,
 showCharacterCount: !0
   },
-  I = {
+  T = {
 analyticsName: 'custom_gift_type',
 drafts: {
   type: s.d.ChannelMessage
@@ -356,7 +380,7 @@ submit: {
 disableAutoFocus: !0,
 showCharacterCount: !0
   },
-  T = {
+  g = {
 analyticsName: 'rules_input',
 drafts: {
   type: s.d.ChannelMessage
@@ -370,7 +394,7 @@ autocomplete: {
 },
 showCharacterCount: !0
   },
-  g = {
+  S = {
 analyticsName: 'forum_channel_guidelines',
 drafts: {
   type: s.d.ChannelMessage
@@ -389,7 +413,7 @@ autocomplete: {
 showCharacterCount: !0,
 toolbarType: 1
   },
-  S = {
+  A = {
 NORMAL: o,
 OVERLAY: l,
 SIDEBAR: u,
@@ -398,12 +422,13 @@ FORM: d,
 VOICE_CHANNEL_STATUS: _,
 THREAD_CREATION: E,
 USER_PROFILE: p,
-PROFILE_BIO_INPUT: m,
-CUSTOM_GIFT: I,
-RULES_INPUT: T,
+USER_PROFILE_REPLY: m,
+PROFILE_BIO_INPUT: I,
+CUSTOM_GIFT: T,
+RULES_INPUT: g,
 CREATE_FORUM_POST: f,
 CREATE_POLL: h,
-FORUM_CHANNEL_GUIDELINES: g,
+FORUM_CHANNEL_GUIDELINES: S,
 ATOMIC_REACTOR_REPLY_INPUT: {
   analyticsName: 'atomic_reator_reply_input',
   drafts: {

@@ -105,7 +105,7 @@ children: (0, r.jsx)('div', {
     emojiPickerCloseOnModalOuterClick: !0,
     innerClassName: S.inner,
     editorClassName: S.editor,
-    type: u.I.USER_PROFILE,
+    type: u.I.USER_PROFILE_REPLY,
     placeholder: g.Z.Messages.QUICK_DM_USER.format({
       name: h.ZP.getName(n, a, t)
     }),
