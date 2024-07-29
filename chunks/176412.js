@@ -1,71 +1,111 @@
 t.d(n, {
   Bm: function() {
-return N;
+return T;
   },
   L_: function() {
-return v;
+return b;
   },
   P7: function() {
-return E;
+return S;
+  },
+  ae: function() {
+return L;
   }
 });
 var i = t(470079),
   a = t(392711),
-  l = t(373793),
-  r = t(481060),
-  o = t(2052),
-  s = t(542094),
-  c = t(513202),
-  u = t(367907),
-  d = t(812206),
-  m = t(69580),
-  p = t(499254),
-  _ = t(541099),
-  f = t(827498),
-  C = t(981631),
-  h = t(689079),
-  A = t(689938);
+  l = t.n(a),
+  r = t(373793),
+  o = t(25209),
+  s = t(481060),
+  c = t(2052),
+  u = t(542094),
+  d = t(513202),
+  m = t(367907),
+  p = t(812206),
+  _ = t(691424),
+  f = t(428595),
+  C = t(364458),
+  h = t(69580),
+  A = t(499254),
+  E = t(541099),
+  N = t(827498),
+  v = t(981631),
+  x = t(689079),
+  I = t(689938);
+let g = {
+...f.Z.RULES.commandMention,
+parse: (e, n, t) => ({
+  content: f.Z.RULES.commandMention.parse(e, n, t).content
+})
+  },
+  P = l().pick((0, C.Z)([
+f.Z.RULES,
+{
+  commandMention: g
+},
+(0, _.Z)({
+  enableBuildOverrides: !1,
+  enableEmojiClick: !1
+})
+  ]), [
+'commandMention',
+'customEmoji',
+'em',
+'emoji',
+'emoticon',
+'highlight',
+'inlineCode',
+'looseEm',
+'s',
+'strong',
+'text',
+'timestamp',
+'u',
+'spoiler'
+  ]),
+  L = o.w4(P);
 
-function E(e, n, t, i) {
+function S(e, n, t, i) {
   var a;
-  let l = (0, o.O)(),
-d = (0, s.Qv)({
+  let l = (0, c.O)(),
+r = (0, u.Qv)({
   applicationId: n.id,
   channelId: e.id
 }),
-m = (0, s.w1)({
+o = (0, u.w1)({
   applicationId: n.id,
-  embeddedActivitiesManager: c.Z,
+  embeddedActivitiesManager: d.Z,
   channelId: e.id,
   guildId: null !== (a = e.getGuildId()) && void 0 !== a ? a : void 0,
   locationObject: l.location,
   onActivityItemSelectedProp: e => {
     let {
       applicationId: n
-    } = e, a = _.Z.entrypoint();
-    p.y(f.ti.ACTIVITY), (0, u.yw)(C.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+    } = e, a = E.Z.entrypoint();
+    A.y(N.ti.ACTIVITY), (0, m.yw)(v.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
       location: t,
       application_id: n,
       section_name: i,
-      action: d,
+      action: r,
       source: a
     });
   }
 }),
-h = r.ButtonColors.BRAND,
-E = A.Z.Messages.LAUNCH;
-  return d === s.JS.JOIN ? (h = r.ButtonColors.GREEN, E = A.Z.Messages.JOIN_ACTIVITY) : d === s.JS.LEAVE && (h = r.ButtonColors.RED, E = A.Z.Messages.LEAVE), {
-onActivityItemSelected: m,
-activityAction: d,
-buttonColor: h,
-buttonText: E
+p = s.ButtonColors.BRAND,
+_ = I.Z.Messages.LAUNCH;
+  return r === u.JS.JOIN ? (p = s.ButtonColors.GREEN, _ = I.Z.Messages.JOIN_ACTIVITY) : r === u.JS.LEAVE && (p = s.ButtonColors.RED, _ = I.Z.Messages.LEAVE), {
+onActivityItemSelected: o,
+activityAction: r,
+buttonColor: p,
+buttonText: _
   };
 }
 
-function N(e, n) {
-  let t = _.Z.entrypoint(),
+function T(e, n) {
+  let t = E.Z.entrypoint(),
 l = i.useMemo(() => (0, a.debounce)((e, n) => {
-  (0, u.yw)(C.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+  (0, m.yw)(v.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
     type: e,
     source: n
   });
@@ -83,41 +123,41 @@ l
   ]);
 }
 
-function v(e) {
-  var n, t, i, a, r;
+function b(e) {
+  var n, t, i, a, l;
   let {
 applicationId: o,
 userIndexState: s,
 guildIndexState: c,
-sectionName: p,
-location: f
+sectionName: u,
+location: d
   } = e;
-  if (o === h.bi.BUILT_IN || (null === (n = s.result) || void 0 === n ? void 0 : n.sections[o]) != null || (null === (t = c.result) || void 0 === t ? void 0 : t.sections[o]) != null)
+  if (o === x.bi.BUILT_IN || (null === (n = s.result) || void 0 === n ? void 0 : n.sections[o]) != null || (null === (t = c.result) || void 0 === t ? void 0 : t.sections[o]) != null)
 return Promise.resolve(!0);
-  let A = _.Z.lastShownEntrypoint();
-  (0, u.yw)(C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
-location: f,
+  let _ = E.Z.lastShownEntrypoint();
+  (0, m.yw)(v.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
+location: d,
 application_id: o,
-section_name: p,
-source: A
+section_name: u,
+source: _
   });
-  let E = d.Z.getApplication(o),
-N = l.Y.USER_INSTALL,
-v = null == E ? void 0 : null === (r = E.integrationTypesConfig) || void 0 === r ? void 0 : null === (a = r[N]) || void 0 === a ? void 0 : null === (i = a.oauth2InstallParams) || void 0 === i ? void 0 : i.scopes;
+  let f = p.Z.getApplication(o),
+C = r.Y.USER_INSTALL,
+A = null == f ? void 0 : null === (l = f.integrationTypesConfig) || void 0 === l ? void 0 : null === (a = l[C]) || void 0 === a ? void 0 : null === (i = a.oauth2InstallParams) || void 0 === i ? void 0 : i.scopes;
   return new Promise(e => {
-(0, m.openOAuth2Modal)({
+(0, h.openOAuth2Modal)({
   clientId: o,
-  integrationType: N,
-  scopes: v,
+  integrationType: C,
+  scopes: A,
   callback: n => {
     let {
       location: t
     } = n;
-    null != t && ((0, u.yw)(C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
-      location: f,
+    null != t && ((0, m.yw)(v.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
+      location: d,
       application_id: o,
-      section_name: p,
-      source: A
+      section_name: u,
+      source: _
     }), e(!0));
   }
 }, () => {

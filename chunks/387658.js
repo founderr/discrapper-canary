@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return B;
+return D;
   }
 }), t(47120);
 var i = t(735250),
@@ -29,8 +29,8 @@ var i = t(735250),
   L = t(176412),
   S = t(870205),
   T = t(981631),
-  R = t(689079),
-  b = t(689938),
+  b = t(689079),
+  R = t(689938),
   M = t(627542),
   y = t(763963);
 let j = 'placeholder',
@@ -65,7 +65,7 @@ l.id,
 r,
 s,
 c
-  ]), m = (null !== (t = null === (n = r.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0, _ = a.useMemo(() => (0, i.jsxs)('div', {
+  ]), m = (null !== (t = null === (n = r.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0, _ = a.useMemo(() => (0, L.ae)(r.displayDescription, void 0), [r.displayDescription]), f = a.useMemo(() => (0, i.jsxs)('div', {
 className: y.commandTextContainer,
 children: [
   (0, i.jsx)(u.Text, {
@@ -77,18 +77,21 @@ children: [
     variant: 'text-xs/medium',
     color: 'text-muted',
     lineClamp: 1,
-    children: r.displayDescription
+    children: _
   })
 ]
   }), [
-r.displayDescription,
-r.displayName
+r.displayName,
+_
   ]);
   return (0, i.jsxs)(u.Clickable, {
 className: y.command,
 onClick: d,
 children: [
-  _,
+  (0, i.jsx)(u.FocusBlock, {
+    className: y.commandFocusBlock,
+    children: f
+  }),
   m ? (0, i.jsx)(o.F, {}) : (0, i.jsx)(U, {
     channel: l,
     command: r,
@@ -189,14 +192,14 @@ size: u.ButtonSizes.ICON,
 color: u.Button.Colors.PRIMARY,
 className: y.commandSentCTAButton,
 innerClassName: y.commandSentCTAButtonInner,
-'aria-label': b.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({
+'aria-label': R.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({
   commandName: t.name
 }),
 children: [
   (0, i.jsx)(u.Text, {
     variant: 'text-sm/medium',
     color: 'currentColor',
-    children: b.Z.Messages.SEND
+    children: R.Z.Messages.SEND
   }),
   (0, i.jsx)(s.U, {
     size: 'xs',
@@ -206,7 +209,7 @@ children: [
   });
 }
 
-function D(e) {
+function B(e) {
   let {
 channel: n,
 commands: t,
@@ -241,7 +244,7 @@ children: [
   });
 }
 
-function B(e) {
+function D(e) {
   var n;
   let {
 channel: t,
@@ -257,7 +260,7 @@ loading: m
 commandType: d.yU.CHAT
   }, {
 placeholderCount: 0,
-limit: R.tn,
+limit: b.tn,
 includeFrecency: !0,
 allowApplicationState: o,
 installOnDemand: o,
@@ -285,18 +288,18 @@ limit: 5
   return (0, i.jsxs)('ul', {
 className: y.contentContainer,
 children: [
-  (0, i.jsx)(D, {
+  (0, i.jsx)(B, {
     channel: t,
     section: p,
     commands: E,
-    headerName: b.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
+    headerName: R.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
     sectionName: r
   }),
-  (0, i.jsx)(D, {
+  (0, i.jsx)(B, {
     channel: t,
     section: p,
     commands: m.current ? O : h,
-    headerName: b.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
+    headerName: R.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
     sectionName: r,
     children: A && (0, i.jsx)(S.Z, {
       sortOrder: _,
