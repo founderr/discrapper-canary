@@ -1,66 +1,87 @@
 n.d(t, {
   Z: function() {
-return h;
+return m;
   }
 });
 var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  s = n(717881),
-  o = n(906732),
-  l = n(785717),
-  u = n(221292),
-  c = n(910128),
-  d = n(929498),
-  _ = n(989964),
-  E = n(981631),
-  f = n(755380);
+  s = n(442837),
+  o = n(717881),
+  l = n(906732),
+  u = n(199902),
+  c = n(158776),
+  d = n(594174),
+  _ = n(785717),
+  E = n(221292),
+  f = n(910128),
+  h = n(981631),
+  p = n(755380);
 
-function h(e) {
+function m(e) {
   let {
 user: t,
 guild: n,
 channelId: i,
-onClose: h
+onClose: m
   } = e, {
-analyticsLocations: p,
-newestAnalyticsLocation: m
-  } = (0, o.ZP)(), {
-trackUserProfileAction: I,
-...T
-  } = (0, l.KZ)(), {
-messageCtaEnabled: g
-  } = (0, c.l)({
+analyticsLocations: I,
+newestAnalyticsLocation: T
+  } = (0, l.ZP)(), {
+trackUserProfileAction: g,
+...S
+  } = (0, _.KZ)(), A = (0, s.e7)([d.default], () => d.default.getCurrentUser()), {
+messageCtaEnabled: N
+  } = (0, f.l)({
 location: 'BiteSizeProfileActivitySection'
   }), {
-featured: S,
-isApplicationStreaming: A
-  } = (0, d.Z)(t.id);
-  return null != S || A ? (0, r.jsx)(_.Z, {
-location: 'BiteSizeProfileActivitySection',
-type: s.P.BITE_SIZE_POPOUT,
-activity: S,
-className: f.activity,
-source: m,
+isApplicationStreaming: v,
+activity: O
+  } = (0, s.cj)([
+u.Z,
+c.Z
+  ], () => {
+let e = null != u.Z.getAnyStreamForUser(t.id);
+return {
+  isApplicationStreaming: e,
+  activity: e ? c.Z.findActivity(t.id, e => {
+    let {
+      type: t
+    } = e;
+    return t === h.IIU.PLAYING;
+  }) : c.Z.findActivity(t.id, e => {
+    let {
+      type: t
+    } = e;
+    return t !== h.IIU.CUSTOM_STATUS;
+  })
+};
+  });
+  return (0, r.jsx)(o.Z, {
+type: o.P.BITE_SIZE_POPOUT,
+activity: O,
+className: p.activity,
+source: T,
 user: t,
 guildId: null == n ? void 0 : n.id,
 channelId: i,
-onClose: h,
+onClose: m,
 onAction: () => {
-  I({
+  g({
     action: 'JOIN_ACTIVITY'
-  }), (0, u.Ac)({
-    activityType: A ? E.IIU.STREAMING : null == S ? void 0 : S.type,
-    activityName: null == S ? void 0 : S.name,
-    activityPlatform: null == S ? void 0 : S.platform,
-    activitySessionId: null == S ? void 0 : S.session_id,
-    applicationId: null == S ? void 0 : S.application_id,
-    analyticsLocations: p,
-    ...T
-  }), null == h || h();
+  }), (0, E.Ac)({
+    activityType: v ? h.IIU.STREAMING : null == O ? void 0 : O.type,
+    activityName: null == O ? void 0 : O.name,
+    activityPlatform: null == O ? void 0 : O.platform,
+    activitySessionId: null == O ? void 0 : O.session_id,
+    applicationId: null == O ? void 0 : O.application_id,
+    analyticsLocations: I,
+    ...S
+  }), null == m || m();
 },
-actionColor: a()(f.buttonColor, g ? f.engagementExpButtonColor : void 0),
+showActions: t.id !== (null == A ? void 0 : A.id),
+actionColor: a()(p.buttonColor, N ? p.engagementExpButtonColor : void 0),
 showChannelDetails: !0
-  }) : null;
+  });
 }

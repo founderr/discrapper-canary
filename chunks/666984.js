@@ -47,6 +47,7 @@ children: [
       disabled: I.disabled,
       submitting: I.loading,
       themeColor: m === d.y0.FULL_SIZE ? 'secondary' : 'primary',
+      className: f.primaryButton,
       fullWidth: !0,
       onClick: e => {
         null == p || p(e), I.onClick();
@@ -54,7 +55,7 @@ children: [
     });
     return null == T.tooltip ? t : (0, r.jsx)(i.TooltipContainer, {
       text: T.tooltip,
-      className: f.tooltipContainer,
+      className: f.primaryButton,
       children: t
     });
   })()

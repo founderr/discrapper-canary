@@ -1,94 +1,85 @@
 n.d(t, {
   Z: function() {
-return v;
+return T;
   }
 });
 var r = n(735250),
   i = n(470079),
-  a = n(512722),
-  s = n.n(a),
-  o = n(442837),
-  l = n(620662),
-  u = n(503438),
-  c = n(812206),
-  d = n(835473),
-  _ = n(574176),
-  E = n(952164),
-  f = n(199902),
-  h = n(592125),
-  p = n(430824),
-  m = n(496675),
-  I = n(594174),
-  T = n(979651),
-  g = n(626135),
-  S = n(409057),
-  A = n(128277),
-  N = n(981631);
+  a = n(442837),
+  s = n(841784),
+  o = n(503438),
+  l = n(812206),
+  u = n(835473),
+  c = n(574176),
+  d = n(592125),
+  _ = n(430824),
+  E = n(496675),
+  f = n(979651),
+  h = n(626135),
+  p = n(409057),
+  m = n(128277),
+  I = n(981631);
 
-function v(e) {
+function T(e) {
   let {
-activity: t,
-user: n,
-useStoreStream: a = !0,
-...v
-  } = e, O = (0, o.e7)([I.default], () => I.default.getCurrentUser());
-  s()(null != O, 'BiteSizeActivitySection current user null');
-  let R = (0, o.e7)([
-  T.Z,
-  h.Z
-], () => {
-  var e;
-  return h.Z.getChannel(null === (e = T.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
-}),
-{
-  enableHangStatus: C
-} = _.n.useExperiment({
-  guildId: null == R ? void 0 : R.guild_id,
-  location: 'UserProfileActivityCardWrapper'
-}, {
-  autoTrackExposure: !1
-}),
-y = (0, o.e7)([f.Z], () => a ? f.Z.getAnyStreamForUser(n.id) : null),
-D = C && m.Z.can(N.Plq.CONNECT, R),
-L = (null == t ? void 0 : t.type) === N.IIU.HANG_STATUS && D ? R : null,
-b = (0, o.e7)([
-  p.Z,
-  T.Z,
-  h.Z
-], () => {
-  var e, r;
-  return (0, l.Z)(t, N.xjy.EMBEDDED) ? p.Z.getGuild(null === (e = h.Z.getChannel(null === (r = T.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != L ? p.Z.getGuild(L.getGuildId()) : null;
-}),
-M = (0, o.e7)([p.Z], () => null != y ? p.Z.getGuild(y.guildId) : null);
-  (0, d.q)(null == t ? void 0 : t.application_id);
-  let P = (0, o.e7)([c.Z], () => (null == t ? void 0 : t.application_id) != null ? c.Z.getApplication(t.application_id) : (null == t ? void 0 : t.name) != null ? c.Z.getApplicationByName(t.name) : null);
+user: t,
+currentUser: n,
+activity: T,
+onAction: g,
+onClose: S
+  } = e, A = (0, a.e7)([
+f.Z,
+d.Z
+  ], () => {
+var e;
+return d.Z.getChannel(null === (e = f.Z.getVoiceStateForUser(t.id)) || void 0 === e ? void 0 : e.channelId);
+  }), {
+enableHangStatus: N
+  } = c.n.useExperiment({
+guildId: null == A ? void 0 : A.guild_id,
+location: 'UserProfileActivityCardWrapper'
+  }, {
+autoTrackExposure: !1
+  }), v = N && E.Z.can(I.Plq.CONNECT, A), O = (null == T ? void 0 : T.type) === I.IIU.HANG_STATUS && v ? A : null, R = (0, a.e7)([
+_.Z,
+f.Z,
+d.Z
+  ], () => {
+if ((0, s.Z)(T)) {
+  var e, n;
+  let r = null === (e = f.Z.getVoiceStateForSession(t.id, null == T ? void 0 : T.session_id)) || void 0 === e ? void 0 : e.channelId;
+  return _.Z.getGuild(null === (n = d.Z.getChannel(r)) || void 0 === n ? void 0 : n.getGuildId());
+}
+return null != O ? _.Z.getGuild(O.getGuildId()) : null;
+  });
+  (0, u.q)(null == T ? void 0 : T.application_id);
+  let C = (0, a.e7)([l.Z], () => (null == T ? void 0 : T.application_id) != null ? l.Z.getApplication(T.application_id) : (null == T ? void 0 : T.name) != null ? l.Z.getApplicationByName(T.name) : null);
   return (i.useEffect(() => {
-(null == t ? void 0 : t.type) === N.IIU.HANG_STATUS && D && g.default.track(N.rMx.VIEW_HANG_STATUS, {
+(null == T ? void 0 : T.type) === I.IIU.HANG_STATUS && v && h.default.track(I.rMx.VIEW_HANG_STATUS, {
   source: 'UserProfilePopout',
-  guild_id: null == L ? void 0 : L.guild_id,
-  channel_id: null == L ? void 0 : L.id
+  guild_id: null == O ? void 0 : O.guild_id,
+  channel_id: null == O ? void 0 : O.id
 });
   }, [
-null == t ? void 0 : t.type,
-D,
-L
-  ]), (null == t ? void 0 : t.type) !== N.IIU.HANG_STATUS || D) ? (0, u.Z)(t) ? (0, r.jsx)(A.Z, {
-...v,
-activity: t,
-user: n,
-currentUser: O,
-activityGuild: b,
-channel: R,
-onOpenSpotifyTrack: E.aG,
-onOpenSpotifyArtist: E.d$,
-onOpenSpotifyAlbum: E.Z5
-  }) : (0, r.jsx)(S.Z, {
-...v,
-activity: t,
-user: n,
-currentUser: O,
-application: P,
-activityGuild: null != b ? b : M,
-channel: R
+null == T ? void 0 : T.type,
+v,
+O
+  ]), (null == T ? void 0 : T.type) !== I.IIU.HANG_STATUS || v) ? (0, o.Z)(T) ? (0, r.jsx)(m.Z, {
+user: t,
+currentUser: n,
+activity: T,
+guild: R,
+channel: A,
+onAction: g,
+onClose: S
+  }) : (0, r.jsx)(p.Z, {
+user: t,
+currentUser: n,
+activity: T,
+application: C,
+guild: R,
+channel: A,
+onAction: g,
+onClose: S
   }) : null;
 }

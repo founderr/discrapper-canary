@@ -1,69 +1,62 @@
 n.d(t, {
   Z: function() {
-return S;
+return I;
   }
 });
 var r = n(735250);
 n(470079);
-var i = n(442837),
-  a = n(620662),
-  s = n(841784),
-  o = n(834353),
-  l = n(802856),
-  u = n(420660),
-  c = n(199902),
-  d = n(374129),
-  _ = n(639351),
-  E = n(966463),
-  f = n(103479),
-  h = n(191764),
-  p = n(238607),
-  m = n(414402),
-  I = n(934393),
-  T = n(715547),
-  g = n(981631);
+var i = n(620662),
+  a = n(841784),
+  s = n(834353),
+  o = n(802856),
+  l = n(420660),
+  u = n(374129),
+  c = n(639351),
+  d = n(103479),
+  _ = n(191764),
+  E = n(238607),
+  f = n(414402),
+  h = n(934393),
+  p = n(715547),
+  m = n(981631);
 
-function S(e) {
+function I(e) {
   let {
 user: t,
 currentUser: n,
-activity: S,
-onAction: A,
-onClose: N
-  } = e, v = (0, i.e7)([c.Z], () => c.Z.getAnyStreamForUser(t.id));
-  return (0, l.Z)(S) ? (0, r.jsx)(I.Z, {
-platformType: g.ABu.XBOX,
-icon: () => (0, r.jsx)(_.Z, {}),
-onClick: A
-  }) : (0, o.Z)(S) ? (0, r.jsx)(I.Z, {
-platformType: g.ABu.PLAYSTATION,
-icon: () => (0, r.jsx)(d.Z, {}),
-onClick: A
-  }) : (0, u.Z)(S) ? (0, r.jsx)(T.Z, {
-activity: S,
-onClick: A
-  }) : null != v ? (0, r.jsx)(E.Z, {
-stream: v,
-onClick: A,
-onClose: N
-  }) : (0, a.Z)(S, g.xjy.JOIN) || (0, s.Z)(S) ? (0, r.jsx)(p.Z, {
+activity: I,
+onAction: T,
+onClose: g
+  } = e;
+  return (0, o.Z)(I) ? (0, r.jsx)(h.Z, {
+platformType: m.ABu.XBOX,
+icon: () => (0, r.jsx)(c.Z, {}),
+onClick: T
+  }) : (0, s.Z)(I) ? (0, r.jsx)(h.Z, {
+platformType: m.ABu.PLAYSTATION,
+icon: () => (0, r.jsx)(u.Z, {}),
+onClick: T
+  }) : (0, l.Z)(I) ? (0, r.jsx)(p.Z, {
+activity: I,
+onClick: T
+  }) : (0, i.Z)(I, m.xjy.JOIN) || (0, a.Z)(I) ? (0, r.jsx)(E.Z, {
 user: t,
 currentUser: n,
-activity: S,
-onClick: A,
-onClose: N
-  }) : (null == S ? void 0 : S.type) === g.IIU.HANG_STATUS ? (0, r.jsx)(h.Z, {
+activity: I,
+onClick: T,
+onClose: g
+  }) : (null == I ? void 0 : I.type) === m.IIU.HANG_STATUS ? (0, r.jsx)(_.Z, {
 user: t,
-activity: S,
-onClick: A,
-onClose: N
-  }) : (null == S ? void 0 : S.buttons) != null && (null == S ? void 0 : S.buttons.length) >= 1 ? (0, r.jsx)(f.Z, {
+activity: I,
+onClick: T,
+onClose: g
+  }) : (null == I ? void 0 : I.buttons) != null && (null == I ? void 0 : I.buttons.length) >= 1 ? (0, r.jsx)(d.Z, {
 user: t,
-activity: S,
-onClick: A
-  }) : (0, a.Z)(S, g.xjy.INSTANCE) ? (0, r.jsx)(m.Z, {
+activity: I,
+onClick: T
+  }) : (0, i.Z)(I, m.xjy.INSTANCE) ? (0, r.jsx)(f.Z, {
 user: t,
-activity: S,
-onClick: A
+activity: I,
+onClick: T
   }) : null;
 }

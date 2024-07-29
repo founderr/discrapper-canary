@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return Z;
+return M;
   }
 });
 var i = n(735250);
@@ -11,99 +11,109 @@ var a = n(442837),
   r = n(5192),
   o = n(621853),
   c = n(910128),
-  u = n(741308),
-  d = n(588822),
-  h = n(940730),
-  p = n(681837),
-  m = n(91433),
-  _ = n(900927),
-  f = n(678738),
-  E = n(502762),
-  C = n(530),
-  g = n(7242),
-  I = n(827313),
-  x = n(580512),
-  T = n(228168),
-  N = n(981631),
-  v = n(689938),
-  S = n(790884);
+  u = n(27144),
+  d = n(741308),
+  h = n(588822),
+  p = n(940730),
+  m = n(483424),
+  _ = n(681837),
+  f = n(91433),
+  E = n(900927),
+  C = n(678738),
+  g = n(502762),
+  I = n(530),
+  x = n(7242),
+  T = n(827313),
+  N = n(580512),
+  v = n(228168),
+  S = n(981631),
+  Z = n(689938),
+  A = n(790884);
 
-function Z(e) {
+function M(e) {
   let {
 user: t,
-displayProfile: n,
-channel: Z,
-isHovering: A,
-onOpenProfile: M
+currentUser: n,
+displayProfile: M,
+channel: b,
+isHovering: R,
+onOpenProfile: j
   } = e, {
-activeInviteToCallCtaEnabled: b
+pastActivityEnabled: L
+  } = (0, u.z)({
+location: 'SimplifiedProfilePanelBody'
+  }), {
+activeInviteToCallCtaEnabled: P
   } = (0, c.l)({
 location: 'SimplifiedProfilePanelBody'
-  }), R = (0, a.e7)([s.Z], () => s.Z.getRelationshipType(t.id)), j = (0, a.e7)([l.Z], () => l.Z.hidePersonalInformation), L = (0, a.e7)([o.Z], () => {
+  }), O = (0, a.e7)([s.Z], () => s.Z.getRelationshipType(t.id)), y = (0, a.e7)([l.Z], () => l.Z.hidePersonalInformation), D = (0, a.e7)([o.Z], () => {
 var e;
 return null === (e = o.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
   });
   return (0, i.jsxs)('div', {
-className: S.body,
+className: A.body,
 children: [
-  (0, i.jsx)(C.Z, {
+  (0, i.jsx)(I.Z, {
     user: t,
-    profileType: T.y0.PANEL,
-    nickname: r.ZP.getName(null, Z.id, t),
-    pronouns: null == n ? void 0 : n.pronouns,
-    onOpenProfile: M,
-    tags: (0, i.jsx)(u.Z, {
-      displayProfile: n,
-      profileType: T.y0.PANEL
+    profileType: v.y0.PANEL,
+    nickname: r.ZP.getName(null, b.id, t),
+    pronouns: null == M ? void 0 : M.pronouns,
+    onOpenProfile: j,
+    tags: (0, i.jsx)(d.Z, {
+      displayProfile: M,
+      profileType: v.y0.PANEL
     }),
     nicknameIcons: (0, i.jsxs)(i.Fragment, {
       children: [
-        (0, i.jsx)(p.Z, {
+        (0, i.jsx)(_.Z, {
           userId: t.id
         }),
-        !j && (0, i.jsx)(I.Z, {
+        !y && (0, i.jsx)(T.Z, {
           userId: t.id,
-          isHovering: A,
-          onOpenProfile: M
+          isHovering: R,
+          onOpenProfile: j
         })
       ]
     })
   }),
-  R === N.OGo.PENDING_INCOMING && (0, i.jsx)(E.Z.Overlay, {
-    children: (0, i.jsx)(m.Z, {
+  O === S.OGo.PENDING_INCOMING && (0, i.jsx)(g.Z.Overlay, {
+    children: (0, i.jsx)(f.Z, {
       user: t,
-      channelId: Z.id
+      channelId: b.id
     })
   }),
-  b && (0, i.jsx)(g.Z, {
+  P && (0, i.jsx)(x.Z, {
     user: t
   }),
-  (0, i.jsx)(x.Z, {
+  L ? (0, i.jsx)(m.Z, {
     user: t,
-    channelId: Z.id
+    currentUser: n
+  }) : (0, i.jsx)(N.Z, {
+    user: t,
+    channelId: b.id
   }),
-  (0, i.jsxs)(E.Z.Overlay, {
-    className: S.overlay,
+  (0, i.jsxs)(g.Z.Overlay, {
+    className: A.overlay,
     children: [
-      !j && (null == n ? void 0 : n.bio) != null && (null == n ? void 0 : n.bio) !== '' && (0, i.jsx)(f.Z, {
-        heading: v.Z.Messages.USER_POPOUT_ABOUT_ME,
+      !y && (null == M ? void 0 : M.bio) != null && (null == M ? void 0 : M.bio) !== '' && (0, i.jsx)(C.Z, {
+        heading: Z.Z.Messages.USER_POPOUT_ABOUT_ME,
         headingColor: 'header-primary',
-        children: (0, i.jsx)(d.Z, {
-          userBio: n.bio,
+        children: (0, i.jsx)(h.Z, {
+          userBio: M.bio,
           animateOnHover: !0,
-          isHovering: A,
+          isHovering: R,
           userId: t.id
         })
       }),
-      (null == L ? void 0 : L.popularApplicationCommandIds) != null && (0, i.jsx)(h.Z, {
-        applicationId: L.id,
-        commandIds: L.popularApplicationCommandIds,
-        channel: Z
+      (null == D ? void 0 : D.popularApplicationCommandIds) != null && (0, i.jsx)(p.Z, {
+        applicationId: D.id,
+        commandIds: D.popularApplicationCommandIds,
+        channel: b
       }),
-      (0, i.jsx)(f.Z, {
-        heading: t.bot ? v.Z.Messages.BOT_PROFILE_CREATED_ON : v.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+      (0, i.jsx)(C.Z, {
+        heading: t.bot ? Z.Z.Messages.BOT_PROFILE_CREATED_ON : Z.Z.Messages.USER_PROFILE_MEMBER_SINCE,
         headingColor: 'header-primary',
-        children: (0, i.jsx)(_.Z, {
+        children: (0, i.jsx)(E.Z, {
           userId: t.id
         })
       })

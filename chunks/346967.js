@@ -29,7 +29,9 @@ location: t
   }), E = (0, h.Z)();
   (0, o.t)();
   let [C] = n.recipients, g = (0, r.e7)([c.default], () => c.default.getUser(C));
-  return (l()(null != g, 'ProfilePanelExperimentWrapper: user cannot be undefined'), a.useEffect(() => {
+  l()(null != g, 'ProfilePanelExperimentWrapper: user cannot be undefined');
+  let I = (0, r.e7)([c.default], () => c.default.getCurrentUser());
+  return (l()(null != I, 'ProfilePanelExperimentWrapper: currentUser cannot be undefined'), a.useEffect(() => {
 (0, d.W)(g, {
   withMutualFriends: !g.bot,
   withMutualGuilds: !0,
@@ -44,6 +46,7 @@ channel: n,
 ...s
   }) : f || !g.bot ? (0, i.jsx)(_.Z, {
 user: g,
+currentUser: I,
 channel: n,
 ...s
   }) : (0, i.jsx)(m.Z, {

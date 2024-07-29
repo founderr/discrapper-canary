@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return N;
+return v;
   }
 });
 var r = n(735250),
@@ -10,106 +10,104 @@ var r = n(735250),
   o = n(481060),
   l = n(726542),
   u = n(503438),
-  c = n(502762),
-  d = n(652853),
-  _ = n(448980),
-  E = n(60241),
-  f = n(373826),
-  h = n(315324),
-  p = n(262210),
-  m = n(666984),
-  I = n(228168),
-  T = n(981631),
-  g = n(689938),
-  S = n(692184);
+  c = n(952164),
+  d = n(502762),
+  _ = n(652853),
+  E = n(448980),
+  f = n(60241),
+  h = n(373826),
+  p = n(315324),
+  m = n(262210),
+  I = n(666984),
+  T = n(228168),
+  g = n(981631),
+  S = n(689938),
+  A = n(692184);
 let {
-  getAssetImage: A
+  getAssetImage: N
 } = n(81063);
 
-function N(e) {
-  var t, n, a, N;
+function v(e) {
+  var t, n, a, v;
   let {
-user: v,
-currentUser: O,
-activity: R,
-activityGuild: C,
-channel: y,
-onAction: D,
-onClose: L,
-onOpenSpotifyTrack: b,
-onOpenSpotifyArtist: M,
-onOpenSpotifyAlbum: P
+user: O,
+currentUser: R,
+activity: C,
+guild: y,
+channel: D,
+onAction: L,
+onClose: b
   } = e, {
-profileType: U
-  } = (0, d.z)(), w = {
-[S.fullSize]: U === I.y0.FULL_SIZE
+profileType: M
+  } = (0, _.z)(), P = {
+[A.fullSize]: M === T.y0.FULL_SIZE
   };
-  if (null == R || !(0, u.Z)(R))
+  if (!(0, u.Z)(C))
 return null;
-  let x = l.Z.get(T.ABu.SPOTIFY),
-G = U === I.y0.FULL_SIZE ? 64 : 48,
-k = () => v.id === O.id ? null : (0, r.jsx)('div', {
-  className: s()(S.actions, w),
-  children: (0, r.jsx)(m.Z, {
-    user: v,
-    activity: R,
-    onClick: D
+  let U = l.Z.get(g.ABu.SPOTIFY),
+w = M === T.y0.FULL_SIZE ? 64 : 48,
+x = () => O.id === R.id ? null : (0, r.jsx)('div', {
+  className: s()(A.actions, P),
+  children: (0, r.jsx)(I.Z, {
+    user: O,
+    activity: C,
+    onClick: L
   })
 });
-  return (0, r.jsxs)(c.Z.Overlay, {
-className: S.card,
+  return (0, r.jsxs)(d.Z.Overlay, {
+className: A.card,
 children: [
   (0, r.jsxs)(o.Heading, {
     variant: 'text-xs/medium',
     color: 'header-primary',
-    className: S.header,
+    className: A.header,
     children: [
-      g.Z.Messages.USER_ACTIVITY_LISTENING_TO,
+      S.Z.Messages.USER_ACTIVITY_LISTENING_TO,
       (0, r.jsx)('div', {
-        className: S.platformIcon,
+        className: A.platformIcon,
         style: {
-          maskImage: 'url('.concat(x.icon.whiteSVG, ')'),
-          WebkitMaskImage: 'url('.concat(x.icon.whiteSVG, ')')
+          maskImage: 'url('.concat(U.icon.whiteSVG, ')'),
+          WebkitMaskImage: 'url('.concat(U.icon.whiteSVG, ')')
         }
       })
     ]
   }),
   (0, r.jsxs)('div', {
-    className: S.body,
+    className: A.body,
     children: [
       (0, r.jsxs)('div', {
-        className: s()(S.content, w),
+        className: s()(A.content, P),
         children: [
-          (0, r.jsx)(E.Z, {
-            text: null === (t = R.assets) || void 0 === t ? void 0 : t.large_text,
-            alt: null !== (N = null === (n = R.assets) || void 0 === n ? void 0 : n.large_text) && void 0 !== N ? N : '',
-            src: A(R.application_id, null === (a = R.assets) || void 0 === a ? void 0 : a.large_image, G),
-            className: s()(S.largeImage, S.imageSize, w),
-            onClick: () => P(R, v.id)
+          (0, r.jsx)(f.Z, {
+            text: null === (t = C.assets) || void 0 === t ? void 0 : t.large_text,
+            alt: null !== (v = null === (n = C.assets) || void 0 === n ? void 0 : n.large_text) && void 0 !== v ? v : '',
+            src: N(C.application_id, null === (a = C.assets) || void 0 === a ? void 0 : a.large_image, w),
+            className: s()(A.largeImage, A.imageSize, P),
+            onClick: () => (0, c.Z5)(C, O.id)
           }),
           (0, r.jsxs)('div', {
-            className: S.details,
+            className: A.details,
             children: [
               (0, r.jsxs)('div', {
                 children: [
-                  (0, r.jsx)(f.Z, {
+                  (0, r.jsx)(h.Z, {
                     variant: 'heading-sm/semibold',
-                    text: R.details,
-                    onClick: () => b(R)
+                    text: C.details,
+                    onClick: () => (0, c.aG)(C)
                   }),
                   (() => {
                     var e, t;
-                    let n = null !== (t = null === (e = R.state) || void 0 === e ? void 0 : e.split(';')) && void 0 !== t ? t : [];
-                    return 0 === n.length ? null : null == R.sync_id ? (0, r.jsx)(f.Z, {
+                    let n = null !== (t = null === (e = C.state) || void 0 === e ? void 0 : e.split(';')) && void 0 !== t ? t : [];
+                    return 0 === n.length ? null : null == C.sync_id ? (0, r.jsx)(h.Z, {
                       variant: 'text-xs/normal',
                       text: n.join(', ')
-                    }) : (0, r.jsx)(f.Z, {
+                    }) : (0, r.jsx)(h.Z, {
                       variant: 'text-xs/normal',
                       text: n.map((e, t) => (0, r.jsxs)(i.Fragment, {
                         children: [
                           (0, r.jsx)(o.Clickable, {
-                            className: s()(S.clickable, S.text, S.inline),
-                            onClick: () => M(R, v.id, t),
+                            className: s()(A.clickable, A.text, A.inline),
+                            onClick: () => (0, c.d$)(C, O.id, t),
                             children: e
                           }),
                           t < n.length - 1 ? ', ' : ''
@@ -119,44 +117,44 @@ children: [
                   })()
                 ]
               }),
-              (0, r.jsx)(_.Z, {
-                user: v,
-                activity: R,
-                className: S.badges
+              (0, r.jsx)(E.Z, {
+                user: O,
+                activity: C,
+                className: A.badges
               }),
               (() => {
                 let {
                   timestamps: e
-                } = R;
+                } = C;
                 if (null == e)
                   return null;
                 let {
                   start: t,
                   end: n
                 } = e;
-                return null == t || null == n ? null : (0, r.jsx)(p.Z, {
+                return null == t || null == n ? null : (0, r.jsx)(m.Z, {
                   start: t,
                   end: n
                 });
               })()
             ]
           }),
-          U === I.y0.FULL_SIZE && k()
+          M === T.y0.FULL_SIZE && x()
         ]
       }),
-      null == C || null == y ? null : (0, r.jsxs)(r.Fragment, {
+      null == y || null == D ? null : (0, r.jsxs)(r.Fragment, {
         children: [
           (0, r.jsx)('div', {
-            className: S.voiceChannelDivider
+            className: A.voiceChannelDivider
           }),
-          (0, r.jsx)(h.Z, {
-            guild: C,
-            channel: y,
-            onClose: L
+          (0, r.jsx)(p.Z, {
+            guild: y,
+            channel: D,
+            onClose: b
           })
         ]
       }),
-      U !== I.y0.FULL_SIZE && k()
+      M !== T.y0.FULL_SIZE && x()
     ]
   })
 ]
