@@ -1,4 +1,7 @@
 n.d(t, {
+  CV: function() {
+return c;
+  },
   JX: function() {
 return u;
   },
@@ -6,7 +9,7 @@ return u;
 return l;
   },
   yK: function() {
-return c;
+return d;
   }
 });
 var r = n(544891),
@@ -50,8 +53,18 @@ return i.Z.dispatch({
   } catch (e) {
 throw new a.Hx(e);
   }
+}, c = async (e, t) => {
+  try {
+await new Promise(e => setTimeout(e, 1000)), i.Z.dispatch({
+  type: 'CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY',
+  userId: t,
+  entry: e
+});
+  } catch (e) {
+throw new a.Hx(e);
+  }
 };
-async function c(e, t) {
+async function d(e, t) {
   try {
 await r.tn.post({
   url: o.ANM.MY_SPOTIFY_CONTENT_INVENTORY,

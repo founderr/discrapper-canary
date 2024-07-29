@@ -48,7 +48,7 @@ function v(e, t) {
 }
 
 function O(e, t) {
-  return t.application_id === m.sp && e.extra.application_id === m.sp && e.extra.media_title === t.details && e.extra.media_subtitle === t.state;
+  return t.application_id === m.sp && e.extra.application_id === m.sp && e.extra.media_title === t.details;
 }
 
 function R(e) {
@@ -128,5 +128,17 @@ let {
   userId: n
 } = e;
 S.set(n, t);
+  },
+  CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY: function(e) {
+let {
+  entry: t,
+  userId: n
+} = e, r = S.get(n);
+if (null == r)
+  return !1;
+let i = r.entries.filter(e => e.id !== t.id);
+S.set(n, {
+  entries: i
+});
   }
 });
