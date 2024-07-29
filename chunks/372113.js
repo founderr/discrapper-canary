@@ -185,7 +185,7 @@ children: [
                 day: 'numeric'
               }), p = (0, h.oo)({
                 quest: l
-              }), g = N.r.build(l.config).defaultReward.messages.nameWithArticle, A = (0, h.Kr)(l.config);
+              }), g = N.r.build(l.config).defaultReward.messages.nameWithArticle, A = (0, h.Kr)(l.config), M = (0, h.b7)(l);
               if (E && T && f)
                 return O.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({
                   date: C
@@ -211,20 +211,20 @@ children: [
                   reward: g,
                   date: C
                 });
-              let M = p ? (0, h.o9)({
+              let v = p ? (0, h.o9)({
                 quest: l,
                 idx: 0
               }) : null;
               return u ? O.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({
-                reward: null !== (r = null == M ? void 0 : M.messages.nameWithArticle) && void 0 !== r ? r : g
-              }) : null != M && null != M.approximateCount ? O.Z.Messages.QUEST_REWARD_TIERED.format({
-                maxReward: M.messages.nameWithArticle,
-                maxRewardCount: (0, _.Bs)(M.approximateCount, c),
+                reward: null !== (r = null == v ? void 0 : v.messages.nameWithArticle) && void 0 !== r ? r : g
+              }) : null != v && null != v.approximateCount ? O.Z.Messages.QUEST_REWARD_TIERED.format({
+                maxReward: v.messages.nameWithArticle,
+                maxRewardCount: (0, _.Bs)(v.approximateCount, c),
                 helpCenterLink: d.Z.getArticleURL(x.BhN.QUESTS_LEARN_MORE)
               }) : null != A ? O.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
                 reward: g,
                 duration: A
-              }) : O.Z.Messages.QUEST_REWARD.format({
+              }) : null != M ? M.description : O.Z.Messages.QUEST_REWARD.format({
                 reward: g
               });
             }({
