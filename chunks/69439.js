@@ -20,65 +20,67 @@ function h(e) {
   let {
 quest: I,
 location: m,
-questContentPosition: g
-  } = e, p = (0, r.B6)(I.config.expiresAt, {
+contentPosition: g,
+rowIndex: p
+  } = e, T = (0, r.B6)(I.config.expiresAt, {
 month: 'numeric',
 day: '2-digit'
   }), {
-isClaiming: T,
-isEnrolling: f
+isClaiming: f,
+isEnrolling: S
   } = (0, s.cj)([l.Z], () => ({
 isClaiming: l.Z.isClaimingReward(I.id) || l.Z.isFetchingRewardCode(I.id),
 isEnrolling: l.Z.isEnrolling(I.id)
-  })), S = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, C = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, N = C && (null === (h = I.userStatus) || void 0 === h ? void 0 : h.claimedAt) == null, A = (0, o.iQ)(I), v = !(0, o.zi)(I), Z = (0, r._Q)(I), L = (0, o.zK)(I, d.S7.IN_HOUSE_CONSOLE_QUEST), O = (0, o.Xv)(I.config), {
-text: R,
-onClick: x
+  })), C = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, N = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, A = N && (null === (h = I.userStatus) || void 0 === h ? void 0 : h.claimedAt) == null, v = (0, o.iQ)(I), Z = !(0, o.zi)(I), L = (0, r._Q)(I), O = (0, o.zK)(I, d.S7.IN_HOUSE_CONSOLE_QUEST), R = (0, o.Xv)(I.config), {
+text: x,
+onClick: b
   } = (0, c.Ks)({
-progressState: Z,
+progressState: L,
 quest: I,
-isInHouseQuest: L,
+isInHouseQuest: O,
 location: m,
-isCollectibleQuest: O,
+isCollectibleQuest: R,
 questContentPosition: g,
+questContentRowIndex: p,
 inGiftInventory: !0
-  }), b = (null === (E = I.userStatus) || void 0 === E ? void 0 : E.claimedAt) != null, P = null;
-  return (A && N ? P = (0, i.jsx)(a.Button, {
+  }), P = (null === (E = I.userStatus) || void 0 === E ? void 0 : E.claimedAt) != null, M = null;
+  return (v && A ? M = (0, i.jsx)(a.Button, {
 color: a.ButtonColors.BRAND,
-submitting: T,
-onClick: null != x ? x : void 0,
+submitting: f,
+onClick: null != b ? b : void 0,
 className: _.button,
-children: R
-  }) : !v && C ? P = (0, i.jsx)(a.Button, {
+children: x
+  }) : !Z && N ? M = (0, i.jsx)(a.Button, {
 color: a.ButtonColors.PRIMARY,
 className: _.button,
-onClick: null != x ? x : void 0,
-children: R
-  }) : v ? v && N ? P = (0, i.jsx)(a.Button, {
+onClick: null != b ? b : void 0,
+children: x
+  }) : Z ? Z && A ? M = (0, i.jsx)(a.Button, {
 color: a.ButtonColors.BRAND,
-submitting: T,
-onClick: null != x ? x : void 0,
+submitting: f,
+onClick: null != b ? b : void 0,
 className: _.button,
-children: R
-  }) : v && S && !b ? P = (0, i.jsx)(a.Button, {
+children: x
+  }) : Z && C && !P ? M = (0, i.jsx)(a.Button, {
 color: a.ButtonColors.PRIMARY,
 disabled: !0,
 className: _.button,
 children: u.Z.Messages.QUEST_ACCEPTED
-  }) : v && !S && (P = (0, i.jsx)(a.Button, {
-submitting: f,
+  }) : Z && !C && (M = (0, i.jsx)(a.Button, {
+submitting: S,
 color: a.ButtonColors.BRAND,
-onClick: null != x ? x : void 0,
+onClick: null != b ? b : void 0,
 className: _.button,
-children: R
-  })) : P = (0, i.jsx)(a.Button, {
+children: x
+  })) : M = (0, i.jsx)(a.Button, {
 color: a.ButtonColors.PRIMARY,
 disabled: !0,
 className: _.button,
 children: u.Z.Messages.QUESTS_ENDED_ON_DATE.format({
-  expiryDate: p
+  expiryDate: T
 })
-  }), null == P) ? null : (0, i.jsx)('div', {
+  }), null == M) ? null : (0, i.jsx)('div', {
 className: _.container,
-children: P
+children: M
   });
 }

@@ -28,57 +28,59 @@ function C(e) {
   let {
 quest: N,
 questContent: A,
-isHovering: v
-  } = e, Z = E.r.build(N.config).defaultReward.messages.name, L = (0, u.Rf)(N), O = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, [R, x] = s.useState(!1), b = s.useRef(null);
-  (0, c.P)(b, e => {
+isHovering: v,
+contentPosition: Z,
+rowIndex: L
+  } = e, O = E.r.build(N.config).defaultReward.messages.name, R = (0, u.Rf)(N), x = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, [b, P] = s.useState(!1), M = s.useRef(null);
+  (0, c.P)(M, e => {
 let {
   height: t
 } = e;
-null != t && t > 20 && x(!0);
-  }, [x]);
-  let P = s.useRef(null),
-[M, D] = s.useState(!1);
-  (0, c.P)(P, e => {
+null != t && t > 20 && P(!0);
+  }, [P]);
+  let D = s.useRef(null),
+[y, j] = s.useState(!1);
+  (0, c.P)(D, e => {
 let {
   height: t,
   scrollHeight: n
 } = e;
-null != t && null != n && t < n && D(!0);
-  }, [D]);
-  let y = (0, h.D)({
+null != t && null != n && t < n && j(!0);
+  }, [j]);
+  let U = (0, h.D)({
   quest: N,
-  taskDetails: L,
+  taskDetails: R,
   location: p.dr.QUEST_HOME_DESKTOP,
   questContent: _.jn.QUEST_HOME_DESKTOP,
   useV2Variants: !0
 }),
-j = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-U = (null === (a = N.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null,
-G = (0, u.B6)(null === (C = N.userStatus) || void 0 === C ? void 0 : C.claimedAt),
-k = s.useCallback(() => (0, i.jsx)(o.Text, {
+G = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+w = (null === (a = N.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null,
+k = (0, u.B6)(null === (C = N.userStatus) || void 0 === C ? void 0 : C.claimedAt),
+B = s.useCallback(() => (0, i.jsx)(o.Text, {
   variant: 'text-md/semibold',
   color: 'text-brand',
   tag: 'span',
   className: f.header,
-  children: Z
-}), [Z]),
-w = s.useMemo(() => U ? k() : T.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
-  rewardHook: k
+  children: O
+}), [O]),
+H = s.useMemo(() => w ? B() : T.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
+  rewardHook: B
 }), [
-  U,
-  k
+  w,
+  B
 ]),
-B = s.useMemo(() => {
-  let e = !v && R,
-    t = !v && !R,
+V = s.useMemo(() => {
+  let e = !v && b,
+    t = !v && !b,
     n = null;
-  if (U ? n = T.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
-      claimDate: G
-    }) : null != y && (n = y), null != n)
+  if (w ? n = T.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
+      claimDate: k
+    }) : null != U && (n = U), null != n)
     return (0, i.jsx)(o.Text, {
       variant: 'text-sm/medium',
       color: 'text-muted',
-      ref: P,
+      ref: D,
       className: r()(f.description, {
         [f.truncateTextTwoLines]: e,
         [f.truncateTextThreeLines]: t
@@ -86,39 +88,39 @@ B = s.useMemo(() => {
       children: n
     });
 }, [
+  w,
   U,
-  y,
-  G,
+  k,
   v,
-  R
+  b
 ]),
-H = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
+F = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
   return (0, i.jsxs)('div', {
 className: r()(f.container, {
-  [f.hoveredHeight]: M && v,
-  [f.height]: !v || !M
+  [f.hoveredHeight]: y && v,
+  [f.height]: !v || !y
 }),
 children: [
   (0, i.jsxs)('div', {
     className: r()(f.rewardDescriptionContainer),
     children: [
-      !U && j && (0, i.jsx)('div', {
+      !w && G && (0, i.jsx)('div', {
         className: f.completionAnimation
       }),
-      O && !U ? (0, i.jsxs)('div', {
+      x && !w ? (0, i.jsxs)('div', {
         className: f.progressWrapper,
         children: [
-          j && (0, i.jsx)(o.LottieAnimation, {
+          G && (0, i.jsx)(o.LottieAnimation, {
             importData: S,
             className: f.confetti,
             loop: !1,
             autoplay: !1,
-            shouldAnimate: !H
+            shouldAnimate: !F
           }),
           (0, i.jsx)(I.Z, {
             quest: N,
             size: 76,
-            percentComplete: L.percentComplete,
+            percentComplete: R.percentComplete,
             children: (0, i.jsx)('div', {
               className: f.circularRewardTileWrapper,
               children: (0, i.jsx)(m.Z, {
@@ -139,25 +141,27 @@ children: [
         className: f.textContainer,
         children: [
           (0, i.jsx)('div', {
-            ref: b,
+            ref: M,
             children: (0, i.jsx)('span', {
               className: f.headerSpan,
               children: (0, i.jsx)(o.Text, {
                 variant: 'text-md/semibold',
                 color: 'header-primary',
                 className: f.header,
-                children: w
+                children: H
               })
             })
           }),
-          B
+          V
         ]
       })
     ]
   }),
   (0, i.jsx)(g.Z, {
     quest: N,
-    location: A
+    location: A,
+    contentPosition: Z,
+    rowIndex: L
   })
 ]
   });

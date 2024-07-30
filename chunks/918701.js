@@ -734,6 +734,7 @@ showInline: r
 questId: n.id,
 questContent: t.content,
 questContentPosition: t.position,
+questContentRowIndex: t.rowIndex,
 questContentCTA: t.ctaContent
   }), !r && eB(), d.Z.dispatch({
 type: 'CONNECTIONS_GRID_MODAL_SHOW',

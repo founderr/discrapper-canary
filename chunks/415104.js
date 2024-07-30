@@ -1,41 +1,57 @@
 n.d(t, {
   Z: function() {
-return d;
+return _;
   }
 }), n(47120);
 var i = n(735250),
   s = n(470079),
   a = n(120356),
   r = n.n(a),
-  l = n(439826),
-  o = n(43779),
-  c = n(444627);
+  l = n(497505),
+  o = n(602667),
+  c = n(439826),
+  d = n(43779),
+  u = n(444627);
 
-function d(e) {
+function _(e) {
   let {
 quest: t,
 className: n,
-questContent: a
-  } = e, [d, u] = s.useState(!1), _ = s.useCallback(() => {
-u(!0);
-  }, [u]), h = s.useCallback(() => {
-u(!1);
-  }, [u]);
-  return (0, i.jsxs)('div', {
-id: 'quest-tile-'.concat(t.id),
-className: r()(c.container, n),
-onMouseEnter: _,
-onMouseLeave: h,
-children: [
-  (0, i.jsx)(l.Z, {
-    quest: t,
-    isHovering: d
-  }),
-  (0, i.jsx)(o.Z, {
-    quest: t,
-    questContent: a,
-    isHovering: d
-  })
-]
+questContent: a,
+contentPosition: _,
+rowIndex: h
+  } = e, [E, I] = s.useState(!1), m = s.useCallback(() => {
+I(!0);
+  }, [I]), g = s.useCallback(() => {
+I(!1);
+  }, [I]);
+  return (0, i.jsx)(o.A, {
+questOrQuests: t,
+questContent: a,
+questContentPosition: _,
+questContentRowIndex: h,
+trackGuildAndChannelMetadata: a === l.jn.QUESTS_EMBED,
+children: e => (0, i.jsxs)('div', {
+  id: 'quest-tile-'.concat(t.id),
+  ref: t => {
+    e.current = t;
+  },
+  className: r()(u.container, n),
+  onMouseEnter: m,
+  onMouseLeave: g,
+  children: [
+    (0, i.jsx)(c.Z, {
+      quest: t,
+      isHovering: E
+    }),
+    (0, i.jsx)(d.Z, {
+      quest: t,
+      questContent: a,
+      isHovering: E,
+      contentPosition: _,
+      rowIndex: h
+    })
+  ]
+})
   });
 }

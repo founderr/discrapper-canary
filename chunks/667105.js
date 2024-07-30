@@ -37,8 +37,9 @@ function g(e) {
   let {
 quest: t,
 location: n,
-questContentPosition: r
-  } = e, a = (0, s.e7)([u.default], () => {
+questContentPosition: r,
+questContentRowIndex: a
+  } = e, o = (0, s.e7)([u.default], () => {
 var e;
 return null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.verified;
   });
@@ -47,8 +48,9 @@ null != t && ((0, c._3)({
   questId: t.id,
   questContent: n,
   questContentCTA: c.jZ.CLAIM_REWARD,
-  questContentPosition: r
-}), a ? (0, E.Xv)(t.config) ? (0, h.openCollectibleRewardModal)(t, n) : (0, E.vQ)(t.config) ? (0, m.C)(t, n) : (0, m.hp)({
+  questContentPosition: r,
+  questContentRowIndex: a
+}), o ? (0, E.Xv)(t.config) ? (0, h.openCollectibleRewardModal)(t, n) : (0, E.vQ)(t.config) ? (0, m.C)(t, n) : (0, m.hp)({
   questId: t.id,
   location: n,
   questContentPosition: r
@@ -57,6 +59,7 @@ null != t && ((0, c._3)({
 t,
 n,
 r,
+o,
 a
   ]);
 }
@@ -132,13 +135,15 @@ progressState: n,
 isCollectibleQuest: r,
 location: a,
 questContentPosition: s,
-isInHouseQuest: o,
-inGiftInventory: l
-  } = e, u = g({
+questContentRowIndex: o,
+isInHouseQuest: l,
+inGiftInventory: u
+  } = e, h = g({
 quest: t,
 location: a,
-questContentPosition: s
-  }), h = (0, _._s)({
+questContentPosition: s,
+questContentRowIndex: o
+  }), p = (0, _._s)({
 quest: t
   });
   return i.useMemo(() => {
@@ -150,12 +155,13 @@ switch (n) {
         onClick: () => (0, d.AH)(t.id, {
           questContent: a,
           questContentCTA: c.jZ.ACCEPT_QUEST,
-          questContentPosition: s
+          questContentPosition: s,
+          questContentRowIndex: o
         })
     };
   case _.OH.ACCEPTED:
   case _.OH.IN_PROGRESS:
-    if (h && l)
+    if (p && u)
       return {
         text: T.Z.Messages.QUESTS_CONNECT_CONSOLE,
         tooltipText: null,
@@ -166,7 +172,9 @@ switch (n) {
           })
         }, {
           content: a,
-          ctaContent: c.jZ.CONNECT_CONSOLE
+          ctaContent: c.jZ.CONNECT_CONSOLE,
+          position: s,
+          rowIndex: o
         })
       };
     return {
@@ -177,15 +185,15 @@ switch (n) {
   case _.OH.COMPLETED:
     return {
       text: T.Z.Messages.QUESTS_CLAIM_REWARD,
-        tooltipText: o ? T.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : null,
-        onClick: u
+        tooltipText: l ? T.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : null,
+        onClick: h
     };
   case _.OH.CLAIMED:
     let e = {
       tooltipText: null,
-      onClick: u
+      onClick: h
     };
-    if (o)
+    if (l)
       return {
         ...e,
         text: T.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
@@ -208,12 +216,13 @@ switch (n) {
   }, [
 t,
 r,
-o,
+l,
 a,
-u,
+h,
 n,
 s,
-h,
-l
+o,
+p,
+u
   ]);
 }

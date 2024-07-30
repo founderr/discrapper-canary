@@ -163,7 +163,8 @@ async function T(e, t) {
   questId: e,
   questContent: t.questContent,
   questContentCTA: t.questContentCTA,
-  questContentPosition: t.questContentPosition
+  questContentPosition: t.questContentPosition,
+  questContentRowIndex: t.questContentRowIndex
 }), !c.Z.isEnrolling(e)) {
 a.Z.dispatch({
   type: 'QUESTS_ENROLL_BEGIN',
