@@ -12,11 +12,17 @@ function d(e) {
   return (null == e ? void 0 : e.type) === 3;
 }
 n.d(t, {
+  $i: function() {
+return E;
+  },
   I: function() {
 return d;
   },
   Io: function() {
 return c;
+  },
+  Rv: function() {
+return f;
   },
   _5: function() {
 return u;
@@ -25,17 +31,19 @@ return u;
 return i;
   },
   e5: function() {
-return E;
-  },
-  f3: function() {
-return _;
+return h;
   },
   fO: function() {
 return r;
+  },
+  l8: function() {
+return _;
   },
   wR: function() {
 return a;
   }
 }), (s = r || (r = {}))[s.STREAM = 0] = 'STREAM', s[s.HIDDEN_STREAM = 1] = 'HIDDEN_STREAM', s[s.USER = 2] = 'USER', s[s.ACTIVITY = 3] = 'ACTIVITY', (o = i || (i = {})).NONE = 'NONE', o.AUTO = 'AUTO', (l = a || (a = {}))[l.DESKTOP = 0] = 'DESKTOP', l[l.MOBILE = 1] = 'MOBILE', l[l.XBOX = 2] = 'XBOX', l[l.PLAYSTATION = 3] = 'PLAYSTATION';
 let _ = 320,
-  E = 8;
+  E = 800,
+  f = 200,
+  h = 8;

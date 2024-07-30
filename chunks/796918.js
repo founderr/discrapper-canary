@@ -22,7 +22,10 @@ progress: i,
 error: g
   } = e, {
 interests: p
-  } = i, [T, E] = r.useState(''), [I, b] = r.useState(0), N = (0, c.e7)([d.default], () => d.default.getId()), v = r.useMemo(() => (0, o.chunk)((0, u.XV)(C.i6, N), 9), [N]), y = v[I], S = r.useMemo(() => Array.from(p), [p]), A = r.useMemo(() => S.filter(e => !C.WZ.has(e) && !C.gh.has(e)), [S]), M = e => {
+  } = i, [T, E] = r.useState(''), [I, b] = r.useState(0), N = (0, c.e7)([d.default], () => d.default.getId()), v = r.useMemo(() => (0, o.chunk)((0, u.XV)(C.i6, N), 9), [N]), y = [
+...v[I],
+...v[(I + 1) % v.length]
+  ], S = r.useMemo(() => Array.from(p), [p]), A = r.useMemo(() => S.filter(e => !C.WZ.has(e) && !C.gh.has(e)), [S]), M = e => {
 let n = new Set(p);
 n.delete(e), t({
   interests: n

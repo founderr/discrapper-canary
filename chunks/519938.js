@@ -9,13 +9,16 @@ return l;
 return s;
   },
   Cz: function() {
-return u;
+return c;
   },
   bA: function() {
 return i;
   },
+  d7: function() {
+return u;
+  },
   k3: function() {
-return c;
+return d;
   },
   xv: function() {
 return a;
@@ -62,7 +65,14 @@ position: t
   });
 }
 
-function u(e, t) {
+function u(e) {
+  r.Z.dispatch({
+type: 'PICTURE_IN_PICTURE_RESIZE',
+width: e
+  });
+}
+
+function c(e, t) {
   r.Z.dispatch({
 type: 'PICTURE_IN_PICTURE_UPDATE_RECT',
 id: e,
@@ -70,7 +80,7 @@ rect: t
   });
 }
 
-function c(e) {
+function d(e) {
   r.Z.dispatch({
 type: 'PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW',
 id: e

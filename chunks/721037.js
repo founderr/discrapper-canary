@@ -20,45 +20,53 @@ var r = n(735250),
   S = n(981631),
   A = n(918559),
   N = n(354459);
-let v = {
+
+function v(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+value: n,
+enumerable: !0,
+configurable: !0,
+writable: !0
+  }) : e[t] = n, e;
+}
+let O = {
   [S.NYg.VIDEO]: h.Z,
   [S.NYg.EMBED_IFRAME]: c.Z
 };
-class O extends i.PureComponent {
+class R extends i.PureComponent {
   render() {
 let {
   selectedPIPWindow: e,
   pipWindows: t,
-  maxX: n,
-  maxY: i,
-  theme: a,
-  dockedRect: s,
-  appContext: o,
-  roundCorners: l
+  pipWidth: n,
+  maxX: i,
+  maxY: a,
+  theme: s,
+  dockedRect: o,
+  appContext: l,
+  roundCorners: u
 } = this.props;
 return (0, r.jsx)(_.Z, {
-  pictureInPictureComponents: v,
+  pictureInPictureComponents: O,
   selectedPIPWindow: e,
   pipWindows: t,
-  maxX: n,
-  maxY: i,
-  dockedRect: s,
-  theme: a,
+  pipWidth: n,
+  maxX: i,
+  maxY: a,
+  dockedRect: o,
+  theme: s,
   onWindowMove: this.handleWindowMove,
-  appContext: o,
-  roundCorners: l
+  onWindowResize: this.handleWindowResize,
+  appContext: l,
+  roundCorners: u
 });
   }
   constructor(...e) {
-var t, n, r;
-super(...e), t = this, n = 'handleWindowMove', r = (e, t) => {
+super(...e), v(this, 'handleWindowMove', (e, t) => {
   s.Ao(e, t);
-}, n in t ? Object.defineProperty(t, n, {
-  value: r,
-  enumerable: !0,
-  configurable: !0,
-  writable: !0
-}) : t[n] = r;
+}), v(this, 'handleWindowResize', (e, t) => {
+  s.d7(t);
+});
   }
 }
 t.Z = a.ZP.connectStores([
@@ -92,20 +100,22 @@ D = null == e ? D : {
 };
   }!_ && C ? a = S.IlC.APP : c && (a = S.IlC.POPOUT), s = _ && O ? null : O || !h || c ? null != v && R === A.Ez.PANEL && O ? null !== (n = m.Z.pipActivityWindow) && void 0 !== n ? n : m.Z.pipVideoWindow : null !== (r = m.Z.pipVideoWindow) && void 0 !== r ? r : m.Z.pipActivityWindow : null;
   let L = Array.from(m.Z.pipWindows.values()),
-b = L.find(e => e.component === S.NYg.VIDEO),
-M = [
-  b,
+b = m.Z.pipWidth,
+M = L.find(e => e.component === S.NYg.VIDEO),
+P = [
+  M,
   L.find(e => e.component === S.NYg.EMBED_IFRAME)
 ].filter(g.lm),
-P = (C || y) && null != v && (0, l.q)(v.applicationId);
+U = (C || y) && null != v && (0, l.q)(v.applicationId);
   return {
 selectedPIPWindow: s,
-pipWindows: M,
+pipWindows: P,
+pipWidth: b,
 maxX: D.width,
 maxY: D.height,
 theme: f.Z.theme,
 dockedRect: m.Z.getDockedRect(null !== (i = null == s ? void 0 : s.id) && void 0 !== i ? i : ''),
 appContext: a,
-roundCorners: !P
+roundCorners: !U
   };
-})(O);
+})(R);

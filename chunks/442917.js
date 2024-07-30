@@ -136,24 +136,25 @@ j.default.track(en.rMx.VIDEO_LAYOUT_TOGGLED, {
   renderStreamState() {
 let e = this.activeStreamForSelectedParticipant,
   {
-    participantOnScreen: t
+    participantOnScreen: t,
+    width: n
   } = this.props;
 if ((null == e ? void 0 : e.state) === en.jm8.ENDED)
   return (0, r.jsx)(Q.Z, {
     stream: e,
-    width: er.f3
+    width: n
   });
 if ((null == e ? void 0 : e.state) === en.jm8.FAILED)
   return (0, r.jsx)(X.Z, {
     stream: e,
-    width: er.f3
+    width: n
   });
 if (this.isEmptyBroadcast())
   return (0, r.jsx)(z.Z, {});
 else if ((null == t ? void 0 : t.type) === er.fO.HIDDEN_STREAM)
   return (0, r.jsx)($.Z, {
     participant: t,
-    width: er.f3
+    width: n
   });
 return null;
   }
@@ -180,13 +181,14 @@ let {
   channel: e,
   streamId: t,
   participantOnScreen: n,
-  isVideoEnabled: i
-} = this.props, a = (0, A.F6)(e, F.default, B.Z), o = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === G.default.getId() && i, u = this.renderStreamState(), c = null;
-return (null == n ? void 0 : n.type) !== er.fO.ACTIVITY && (null != u ? c = u : ((null == n ? void 0 : n.type) === er.fO.USER || (null == n ? void 0 : n.type) === er.fO.STREAM) && (c = (0, r.jsx)(q.Z, {
+  isVideoEnabled: i,
+  width: a
+} = this.props, o = (0, A.F6)(e, F.default, B.Z), l = this.isEmptyBroadcast(), u = (null == n ? void 0 : n.id) === G.default.getId() && i, c = this.renderStreamState(), d = null;
+return (null == n ? void 0 : n.type) !== er.fO.ACTIVITY && (null != c ? d = c : ((null == n ? void 0 : n.type) === er.fO.USER || (null == n ? void 0 : n.type) === er.fO.STREAM) && (d = (0, r.jsx)(q.Z, {
   paused: this.streamerPaused,
   streamId: t,
   component: k.Z.getVideoComponent(),
-  mirror: l,
+  mirror: u,
   children: (0, r.jsx)(Y.Z, {
     size: _.AvatarSizes.SIZE_80,
     src: null == n ? void 0 : n.user.getAvatarURL(e.guild_id, 80),
@@ -197,19 +199,19 @@ return (null == n ? void 0 : n.type) !== er.fO.ACTIVITY && (null != u ? c = u : 
   children: e => {
     var t;
     return (0, r.jsx)(b.Z, {
-      title: a,
+      title: o,
       backgroundKey: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : '',
-      screenMessage: null == u ? this.getScreenMessage() : null,
+      screenMessage: null == c ? this.getScreenMessage() : null,
       onJumpToChannel: this.handleJumpToChannel,
       renderBottomLeftControls: this.renderBottomLeftControls,
       renderBottomRightControls: this.renderBottomRightControls,
       preventIdleComponent: L.Z,
-      width: er.f3,
-      hideControls: o,
-      className: s()(o ? ei.emptyBroadcast : void 0, ea.elevationHigh),
-      innerClassName: o ? ei.innerEmptyBroadcast : void 0,
+      width: a,
+      hideControls: l,
+      className: s()(l ? ei.emptyBroadcast : void 0, ea.elevationHigh),
+      innerClassName: l ? ei.innerEmptyBroadcast : void 0,
       ...e,
-      children: c
+      children: d
     });
   }
 });
