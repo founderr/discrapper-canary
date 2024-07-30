@@ -79,7 +79,7 @@ var e;
 null === (e = this._resizeObserver) || void 0 === e || e.disconnect();
   }
   getPosition(e) {
-let t = (0, u.findDOMNode)(this._innerDiv);
+let t = (0, u.findDOMNode)(this._innerDivRef.current);
 if (null != t) {
   let e = t.getBoundingClientRect();
   this._boundWidth = e.width, this._boundHeight = e.height;
@@ -223,9 +223,7 @@ return null != n ? _ = {
     u ? (0, i.jsx)(N, {
       onResize: this.handleResize,
       onResizeEnd: this.handleResizeEnd,
-      resizableNode: {
-        current: this._innerDiv
-      },
+      resizableNode: this._innerDivRef,
       position: l
     }) : null
   ]
@@ -234,7 +232,7 @@ return null != n ? _ = {
   constructor(...e) {
 super(...e), p(this, 'state', {
   isResizing: !1
-}), p(this, '_draggable', void 0), p(this, '_innerDiv', null), p(this, '_resizeObserver', void 0), p(this, '_width', null), p(this, '_boundWidth', 0), p(this, '_boundHeight', 0), p(this, '_velocityX', 0), p(this, '_velocityY', 0), p(this, '_lastMoveTime', void 0), p(this, '_lastMoveX', 0), p(this, '_lastMoveY', 0), p(this, 'ensureIsInPosition', () => {
+}), p(this, '_draggable', void 0), p(this, '_innerDivRef', a.createRef()), p(this, '_resizeObserver', void 0), p(this, '_width', null), p(this, '_boundWidth', 0), p(this, '_boundHeight', 0), p(this, '_velocityX', 0), p(this, '_velocityY', 0), p(this, '_lastMoveTime', void 0), p(this, '_lastMoveX', 0), p(this, '_lastMoveY', 0), p(this, 'ensureIsInPosition', () => {
   this.setPosition(this.props.position);
 }), p(this, 'ensureWidth', () => {
   let {
@@ -250,7 +248,7 @@ super(...e), p(this, 'state', {
   let s = A(i - (n + r));
   this.getWidth() > s && (this._width = s, null == t || t(e, s));
 }), p(this, 'handleSetInnerDivRef', e => {
-  this._innerDiv = e;
+  this._innerDivRef.current = e;
   let t = null == e ? void 0 : e.ownerDocument.defaultView;
   if (null != e && null != t) {
     var n;
