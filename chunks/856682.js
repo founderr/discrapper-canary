@@ -108,6 +108,7 @@ paperColor: t,
 paperColorAlt: n
   } = e;
   return (0, i.jsxs)('svg', {
+className: h.bottom,
 width: '365',
 height: '101',
 viewBox: '0 0 365 101',
@@ -171,12 +172,12 @@ function E(e) {
 children: t,
 fullHeight: n = !1
   } = e, [s, E] = a.useState(!1), {
-height: C,
-ref: g
+height: g,
+ref: C
   } = (0, c.Z)(), {
 height: I,
 ref: x
-  } = (0, c.Z)(), T = n ? I : 59 + (null != C ? C : 100) + 101, N = (0, o.useSpring)({
+  } = (0, c.Z)(), T = n ? I : 59 + (null != g ? g : 100) + 101, N = (0, o.useSpring)({
 from: {
   height: 0
 },
@@ -213,7 +214,7 @@ children: (0, i.jsxs)(r.animated.div, {
     }),
     (0, i.jsx)('div', {
       className: l()(h.content, n && h.fullHeight),
-      ref: g,
+      ref: C,
       children: (0, i.jsx)('div', {
         className: l()(h.innerContent, n && h.fullHeight),
         style: {

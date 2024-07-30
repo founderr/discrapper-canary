@@ -33505,7 +33505,7 @@ h3.improved_f017d0:after {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 12px;
+    padding: 8px;
     overflow: visible;
     position: relative
 }
@@ -33717,7 +33717,7 @@ h3.improved_f017d0:after {
     white-space: nowrap
 }
 
-.badgesContainer_d60c6d {
+:where(.badgesContainer_d60c6d) {
     display: flex;
     gap: 8px;
     align-items: center
