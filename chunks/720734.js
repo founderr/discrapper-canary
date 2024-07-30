@@ -285,6 +285,7 @@ return null == e ? null : (0, i.jsxs)('div', {
     this.renderNameZone(),
     (0, i.jsxs)(em.Z, {
       grow: 0,
+      className: eb.buttons,
       children: [
         (0, i.jsx)(eG, {
           selfMute: n,
