@@ -1,9 +1,9 @@
-n.d(t, {
+l.d(t, {
   $: function() {
-return A;
+return v;
   }
 });
-let r = {
+let i = {
 ational: 'ate',
 tional: 'tion',
 enci: 'ence',
@@ -26,7 +26,7 @@ iviti: 'ive',
 biliti: 'ble',
 logi: 'log'
   },
-  i = {
+  n = {
 icate: 'ic',
 ative: '',
 alize: 'al',
@@ -35,32 +35,32 @@ ical: 'ic',
 ful: '',
 ness: ''
   },
-  o = '[aeiouy]',
+  s = '[aeiouy]',
   a = '([^aeiou][^aeiouy]*)',
-  s = '(' + o + '[aeiou]*)',
-  c = RegExp('^' + a + '?' + s + a),
-  u = RegExp('^' + a + '?' + s + a + s + '?$'),
-  l = RegExp('^' + a + '?(' + s + a + '){2,}'),
-  f = RegExp('^' + a + '?' + o),
-  d = RegExp('^' + a + o + '[^aeiouwxy]$'),
-  h = /ll$/,
-  v = /^(.+?)e$/,
-  p = /^(.+?)y$/,
-  m = /^(.+?(s|t))(ion)$/,
-  g = /^(.+?)(ed|ing)$/,
-  _ = /(at|bl|iz)$/,
-  S = /^(.+?)eed$/,
-  w = /^.+?[^s]s$/,
-  E = /^.+?(ss|i)es$/,
-  y = /([^aeiouylsz])\1$/,
+  o = '(' + s + '[aeiou]*)',
+  r = RegExp('^' + a + '?' + o + a),
+  d = RegExp('^' + a + '?' + o + a + o + '?$'),
+  u = RegExp('^' + a + '?(' + o + a + '){2,}'),
+  c = RegExp('^' + a + '?' + s),
+  _ = RegExp('^' + a + s + '[^aeiouwxy]$'),
+  m = /ll$/,
+  f = /^(.+?)e$/,
+  h = /^(.+?)y$/,
+  g = /^(.+?(s|t))(ion)$/,
+  E = /^(.+?)(ed|ing)$/,
+  A = /(at|bl|iz)$/,
+  p = /^(.+?)eed$/,
+  M = /^.+?[^s]s$/,
+  x = /^.+?(ss|i)es$/,
+  I = /([^aeiouylsz])\1$/,
   T = /^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/,
-  I = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
-  b = /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/;
+  O = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
+  R = /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/;
 
-function A(e) {
-  let t, n = String(e).toLowerCase();
-  if (n.length < 3)
-return n;
-  let o = !1;
-  return 121 === n.codePointAt(0) && (o = !0, n = 'Y' + n.slice(1)), E.test(n) ? n = n.slice(0, -2) : w.test(n) && (n = n.slice(0, -1)), (t = S.exec(n)) ? c.test(t[1]) && (n = n.slice(0, -1)) : (t = g.exec(n)) && f.test(t[1]) && (n = t[1], _.test(n) ? n += 'e' : y.test(n) ? n = n.slice(0, -1) : d.test(n) && (n += 'e')), (t = p.exec(n)) && f.test(t[1]) && (n = t[1] + 'i'), (t = T.exec(n)) && c.test(t[1]) && (n = t[1] + r[t[2]]), (t = I.exec(n)) && c.test(t[1]) && (n = t[1] + i[t[2]]), (t = b.exec(n)) ? l.test(t[1]) && (n = t[1]) : (t = m.exec(n)) && l.test(t[1]) && (n = t[1]), (t = v.exec(n)) && (l.test(t[1]) || u.test(t[1]) && !d.test(t[1])) && (n = t[1]), h.test(n) && l.test(n) && (n = n.slice(0, -1)), o && (n = 'y' + n.slice(1)), n;
+function v(e) {
+  let t, l = String(e).toLowerCase();
+  if (l.length < 3)
+return l;
+  let s = !1;
+  return 121 === l.codePointAt(0) && (s = !0, l = 'Y' + l.slice(1)), x.test(l) ? l = l.slice(0, -2) : M.test(l) && (l = l.slice(0, -1)), (t = p.exec(l)) ? r.test(t[1]) && (l = l.slice(0, -1)) : (t = E.exec(l)) && c.test(t[1]) && (l = t[1], A.test(l) ? l += 'e' : I.test(l) ? l = l.slice(0, -1) : _.test(l) && (l += 'e')), (t = h.exec(l)) && c.test(t[1]) && (l = t[1] + 'i'), (t = T.exec(l)) && r.test(t[1]) && (l = t[1] + i[t[2]]), (t = O.exec(l)) && r.test(t[1]) && (l = t[1] + n[t[2]]), (t = R.exec(l)) ? u.test(t[1]) && (l = t[1]) : (t = g.exec(l)) && u.test(t[1]) && (l = t[1]), (t = f.exec(l)) && (u.test(t[1]) || d.test(t[1]) && !_.test(t[1])) && (l = t[1]), m.test(l) && u.test(l) && (l = l.slice(0, -1)), s && (l = 'y' + l.slice(1)), l;
 }

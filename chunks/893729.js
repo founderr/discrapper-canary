@@ -42,7 +42,7 @@ id: '0'
   }), [
 m,
 C
-  ]), L = {
+  ]), v = {
 nick: A,
 colorString: null !== (n = o.colorString) && void 0 !== n ? n : void 0
   };
@@ -50,7 +50,7 @@ colorString: null !== (n = o.colorString) && void 0 !== n ? n : void 0
 className: l()((0, E.Q)(S), p.container, T),
 children: (0, r.jsx)(d.Z, {
   hideTimestamp: !0,
-  author: L,
+  author: v,
   roleIcon: N,
   message: h,
   isGroupStart: !0,

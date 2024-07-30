@@ -20,8 +20,8 @@ var s = n(735250),
   m = n(32173),
   N = n(391110),
   f = n(484239),
-  S = n(658370),
-  h = n(735825),
+  h = n(658370),
+  S = n(735825),
   M = n(981631),
   x = n(921944),
   b = n(689938),
@@ -39,10 +39,10 @@ let {
   dismissibleContentType: r,
   forceShadow: p,
   cardType: f,
-  confettiCanvas: S
-} = e, Z = null == e ? void 0 : e.onCtaClick, D = (0, c.e7)([u.Z], () => u.Z.useReducedMotion), [B, j] = a.useState(!1), [U, G] = a.useState(!1), y = (0, C.yQ)(), k = (0, C.IB)(), [H, w] = a.useState(!1), [F, V] = a.useState(t === m.u.FREE_BOOST && k && (null == y ? void 0 : y.nitroTenureStatus) === h.EB.REDEEMABLE);
+  confettiCanvas: h
+} = e, Z = null == e ? void 0 : e.onCtaClick, D = (0, c.e7)([u.Z], () => u.Z.useReducedMotion), [B, j] = a.useState(!1), [U, G] = a.useState(!1), y = (0, C.yQ)(), k = (0, C.IB)(), [H, w] = a.useState(!1), [F, V] = a.useState(t === m.u.FREE_BOOST && k && (null == y ? void 0 : y.nitroTenureStatus) === S.EB.REDEEMABLE);
 a.useEffect(() => {
-  t === m.u.FREE_BOOST && k && (null == y ? void 0 : y.nitroTenureStatus) === h.EB.REDEEMABLE && V(!0);
+  t === m.u.FREE_BOOST && k && (null == y ? void 0 : y.nitroTenureStatus) === S.EB.REDEEMABLE && V(!0);
 }, [
   k,
   t,
@@ -106,7 +106,7 @@ return (a.useEffect(() => {
   properties: {
     user_tenure_reward_id: null == y ? void 0 : y.tenureRewardStatusId,
     tenure_reward_id: null == y ? void 0 : y.tenureRewardSkuId,
-    reward_type: h.nW.SERVER_BOOST,
+    reward_type: S.nW.SERVER_BOOST,
     redeemable_at: null == y ? void 0 : y.redeemableAt,
     reward_status: null == y ? void 0 : y.nitroTenureStatus
   }
@@ -172,7 +172,7 @@ return (a.useEffect(() => {
         offsetXPercentageMin: -70,
         offsetYPercentageMax: 40,
         offsetYPercentageMin: 20,
-        customConfettiCanvas: S,
+        customConfettiCanvas: h,
         dragCoefficientValue: 0.00001,
         onAnimationEnd: W
       })
@@ -248,7 +248,7 @@ perkComponent: R,
 cardVariant: g,
 cardType: A,
 onClick: m,
-backgroundImage: h,
+backgroundImage: S,
 pillText: M,
 perkImage: x
   } = e, b = A === N.R0.CARD_CAROUSEL_FIRST_ROW || A === N.R0.CARD_CAROUSEL_SECOND_ROW || A === N.R0.CARD_CAROUSEL_THIRD_ROW, P = 0 !== c.length || 0 !== d.length || 0 !== o.length && g === N.zW.REWARD, v = (0, C.IB)(), [L, Z] = a.useState(v);
@@ -263,7 +263,7 @@ className: i()(O.card, I, !0 === L ? null === (n = D.cardContainer) || void 0 ==
 }),
 onMouseEnter: T,
 style: {
-  backgroundImage: null != h ? 'url('.concat(h, ')') : void 0
+  backgroundImage: null != S ? 'url('.concat(S, ')') : void 0
 },
 onClick: m,
 children: [
@@ -287,7 +287,7 @@ children: [
     subtitleClassName: O.cardSubtitle,
     cardVariant: g
   }),
-  P && (0, s.jsx)(S.Z, {
+  P && (0, s.jsx)(h.Z, {
     title: r,
     titleClassName: l,
     subtitle: o,

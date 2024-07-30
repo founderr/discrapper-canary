@@ -4,8 +4,8 @@ var T = s(735250),
   n = s(481060),
   a = s(230711),
   l = s(63063),
-  i = s(378298),
-  _ = s(584656),
+  _ = s(378298),
+  i = s(584656),
   r = s(993750),
   S = s(981631),
   E = s(526761),
@@ -15,23 +15,23 @@ t.Z = function(e) {
   let {
 onClose: t,
 channelId: s
-  } = e, [u, d] = o.useState(!1), A = o.useCallback(() => {
+  } = e, [d, A] = o.useState(!1), u = o.useCallback(() => {
 a.Z.open(S.oAB.PRIVACY_AND_SAFETY, null, {
   scrollPosition: E.to.DM_SAFETY_ALERTS
 }), t();
   }, [t]), I = o.useCallback(() => {
-!u && (d(!0), (0, i.Uj)(s).then(() => {
-  t(), (0, _.t)({
+!d && (A(!0), (0, _.Uj)(s).then(() => {
+  t(), (0, i.t)({
     text: c.Z.Messages.SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS,
     id: 'safety-tools-report-false-positive'
   });
 }).catch(() => {
-  d(!1), (0, n.showToast)((0, n.createToast)(c.Z.Messages.ERROR_GENERIC_TITLE, n.ToastType.FAILURE));
+  A(!1), (0, n.showToast)((0, n.createToast)(c.Z.Messages.ERROR_GENERIC_TITLE, n.ToastType.FAILURE));
 }));
   }, [
 s,
 t,
-u
+d
   ]);
   return (0, T.jsxs)(r.Z, {
 style: O.wrapperStyle,
@@ -44,7 +44,7 @@ children: [
   }),
   (0, T.jsx)(n.Button, {
     className: O.settingsButton,
-    onClick: A,
+    onClick: u,
     fullWidth: !0,
     children: c.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS
   }),
@@ -59,7 +59,7 @@ children: [
           size: n.Button.Sizes.NONE,
           color: n.Button.Colors.LINK,
           look: n.Button.Looks.LINK,
-          disabled: u,
+          disabled: d,
           onClick: I,
           children: e
         }, t)

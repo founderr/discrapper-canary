@@ -7,13 +7,13 @@ var s, o, r = n(735250),
   a = n(470079),
   i = n(481060),
   c = n(442837),
-  u = n(194359),
-  E = n(782568),
-  N = n(726521),
-  l = n(485664),
-  T = n(699516),
-  I = n(863653),
-  _ = n(473092),
+  E = n(194359),
+  N = n(782568),
+  u = n(726521),
+  T = n(485664),
+  I = n(699516),
+  _ = n(863653),
+  l = n(473092),
   A = n(941362),
   d = n(850165),
   R = n(134612),
@@ -29,30 +29,30 @@ channelId: n,
 hasReported: s,
 onReport: o,
 trackAnalyticsEvent: h
-  } = e, f = (0, c.e7)([T.Z], () => T.Z.isBlocked(t)), [M, g] = a.useState(f), p = (0, l.o)(), b = (0, I.zF)('ic-take-action-web'), [m, x] = a.useState(!1), L = (0, A.q)(n), Z = a.useMemo(() => p ? 0 : b ? 2 : 1, [
-p,
-b
+  } = e, f = (0, c.e7)([I.Z], () => I.Z.isBlocked(t)), [M, p] = a.useState(f), g = (0, T.o)(), m = (0, _.zF)('ic-take-action-web'), [b, L] = a.useState(!1), x = (0, A.q)(n), Z = a.useMemo(() => g ? 0 : m ? 2 : 1, [
+g,
+m
   ]), v = () => {
-g(!0), u.Z.addRelationship({
+p(!0), E.Z.addRelationship({
   userId: t,
   context: {
     location: R.DL
   },
   type: O.OGo.BLOCKED
-}), h(_.NM.USER_TAKEOVER_MODAL_BLOCK);
-  }, B = () => {
-g(!1), u.Z.unblockUser(t, {
+}), h(l.NM.USER_TAKEOVER_MODAL_BLOCK);
+  }, D = () => {
+p(!1), E.Z.unblockUser(t, {
   location: R.DL
-}), h(_.NM.USER_TAKEOVER_MODAL_UNBLOCK);
-  }, D = async () => {
-if (null != L)
-  x(!0), await (0, N.J7)(L, () => {
+}), h(l.NM.USER_TAKEOVER_MODAL_UNBLOCK);
+  }, B = async () => {
+if (null != x)
+  L(!0), await (0, u.J7)(x, () => {
     (0, i.showToast)((0, i.createToast)(C.Z.Messages.INAPPROPRIATE_CONVERSATION_REPORT_TOAST, i.ToastType.SUCCESS)), o();
   }, () => {
     (0, i.showToast)((0, i.createToast)(C.Z.Messages.INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST, i.ToastType.FAILURE));
-  }), x(!1), h(_.NM.USER_TAKEOVER_MODAL_REPORT);
+  }), L(!1), h(l.NM.USER_TAKEOVER_MODAL_REPORT);
   }, j = e => {
-0 === e ? ((0, E.Z)(R.EI), h(_.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === e ? ((0, E.Z)(R.$l), h(_.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, E.Z)(R.n4), h(_.NM.USER_TAKEOVER_MODAL_NO_FILTR));
+0 === e ? ((0, N.Z)(R.EI), h(l.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === e ? ((0, N.Z)(R.$l), h(l.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, N.Z)(R.n4), h(l.NM.USER_TAKEOVER_MODAL_NO_FILTR));
   }, V = a.useMemo(() => {
 switch (Z) {
   case 0:
@@ -77,7 +77,7 @@ children: (0, r.jsxs)('div', {
       className: S.button,
       innerClassName: S.buttonInner,
       onClick: () => {
-        M ? B() : v();
+        M ? D() : v();
       },
       children: [
         (0, r.jsx)(i.CircleXIcon, {
@@ -95,8 +95,8 @@ children: (0, r.jsxs)('div', {
       size: i.Button.Sizes.LARGE,
       className: S.button,
       innerClassName: S.buttonInner,
-      onClick: D,
-      submitting: m,
+      onClick: B,
+      submitting: b,
       disabled: s,
       children: [
         (0, r.jsx)(i.FlagIcon, {

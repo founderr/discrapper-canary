@@ -54,7 +54,7 @@ return () => clearTimeout(e);
 m = (0, r.ap)(A),
 N = _(I),
 f = d(I, m),
-S = u(m, I);
+h = u(m, I);
   return (0, s.jsxs)('div', {
 className: o.circleContainer,
 children: [
@@ -73,7 +73,7 @@ children: [
         strokeOpacity: f
       }),
       (0, s.jsx)('circle', {
-        stroke: S,
+        stroke: h,
         strokeWidth: T,
         strokeLinecap: 'round',
         strokeDasharray: ''.concat(C, ' ').concat(C),

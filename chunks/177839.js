@@ -100,7 +100,7 @@ isSubscriberNitroHome: n = !1
 styles: p
   }), E = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), {
 analyticsLocations: g
-  } = (0, _.ZP)(), f = (0, T._f)(), S = [
+  } = (0, _.ZP)(), f = (0, T._f)(), h = [
 u.emoji,
 u.streaming,
 u.upload,
@@ -127,7 +127,7 @@ children: [
     className: i()(p.perkCardContainer, {
       [p.perkCardContainerExpanded]: r
     }),
-    children: S.map(e => null != e && (0, s.jsx)(N, {
+    children: h.map(e => null != e && (0, s.jsx)(N, {
       ...e
     }, e.title))
   }),

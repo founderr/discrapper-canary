@@ -18,7 +18,7 @@ return M;
 return G;
   },
   Zn: function() {
-return v;
+return R;
   },
   c2: function() {
 return U;
@@ -42,13 +42,13 @@ return b;
 return o.a;
   },
   x0: function() {
-return L;
+return v;
   },
   xb: function() {
 return F;
   },
   yd: function() {
-return R;
+return L;
   }
 }), t(47120), t(653041);
 var r = t(371917),
@@ -89,7 +89,7 @@ currentContent: o
   });
 }
 
-function L(e, n, t, i) {
+function v(e, n, t, i) {
   let o, l;
   let a = n.getCurrentContent(),
 s = a.getFirstBlock(),
@@ -105,7 +105,7 @@ _ = u()(a, o);
   return o.isCollapsed() ? (a = r.Modifier.insertText(a, o, e, d, _), l = 'insert-characters') : (a = r.Modifier.replaceText(a, o, e, d, _), l = 'replace-characters'), r.EditorState.push(n, a, l);
 }
 
-function R(e, n) {
+function L(e, n) {
   switch (e) {
 case 'delete':
   return m()(n);
@@ -122,7 +122,7 @@ default:
   }
 }
 
-function v(e, n) {
+function R(e, n) {
   switch (e) {
 case 'transpose-characters':
   return N()(n);
@@ -192,7 +192,7 @@ t = e.getSelection();
 
 function U(e, n) {
   let t = M(n);
-  return L(e, n, 0, t.length);
+  return v(e, n, 0, t.length);
 }
 
 function Z(e, n) {
@@ -224,7 +224,7 @@ function w(e) {
 t = M(e);
   if (t.length > n) {
 let i = e.getSelection();
-e = L('', e, n, t.length), i.getAnchorOffset() > n && (i = i.set('anchorOffset', n)), i.getFocusOffset() > n && (i = i.set('focusOffset', n)), e = r.EditorState.forceSelection(e, i);
+e = v('', e, n, t.length), i.getAnchorOffset() > n && (i = i.set('anchorOffset', n)), i.getFocusOffset() > n && (i = i.set('focusOffset', n)), e = r.EditorState.forceSelection(e, i);
   }
   return e;
 }

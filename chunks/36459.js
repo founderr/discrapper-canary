@@ -9,7 +9,7 @@ return C;
 return T;
   },
   T9: function() {
-return L;
+return v;
   },
   UE: function() {
 return h;
@@ -145,7 +145,7 @@ function h(e, n, t) {
 });
 }
 
-function L(e) {
+function v(e) {
   i.Z.dispatch({
 type: 'AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS',
 guildId: e

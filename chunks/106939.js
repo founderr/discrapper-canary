@@ -27,8 +27,8 @@ var s = n(735250),
   m = n(210887),
   N = n(695346),
   f = n(594174),
-  S = n(153124),
-  h = n(626135),
+  h = n(153124),
+  S = n(626135),
   M = n(792125),
   x = n(280570),
   b = n(914788),
@@ -99,7 +99,7 @@ function W(e) {
 theme: t,
 section: n,
 handleItemSelect: a
-  } = e, r = (0, S.Dt)(), o = (0, L.gU)();
+  } = e, r = (0, h.Dt)(), o = (0, L.gU)();
   return (0, s.jsxs)(g.Z, {
 className: i()((0, M.Q)(t), H.sidebarTabBar),
 scrollable: l.tq,
@@ -156,7 +156,7 @@ l = (0, P.M)(),
   selectedTab: u,
   handleTabChange: T
 } = (0, O.Z)(),
-I = (0, S.Dt)(),
+I = (0, h.Dt)(),
 g = f.default.getCurrentUser(),
 m = null != e,
 N = r && null != g && !m;
@@ -166,7 +166,7 @@ N = r && null != g && !m;
   forceTrack: !0
 });
   }, []), a.useEffect(() => {
-r && m && (h.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
+r && m && (S.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
   is_considered_adult: e,
   num_of_accepted_links: t,
   selected_teen_id: l,
@@ -209,14 +209,14 @@ analyticsLocations: e
   } = (0, I.ZP)(T.Z.FAMILY_CENTER), t = (0, v.Z)(), n = (0, L.M8)(), r = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), l = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), g = (0, P.M)(), M = (0, c.e7)([m.Z], () => m.Z.theme), {
 selectedTab: Z,
 handleTabChange: D
-  } = (0, O.Z)(), B = (0, S.Dt)(), w = f.default.getCurrentUser(), V = null != t, K = l && null != w && !V;
+  } = (0, O.Z)(), B = (0, h.Dt)(), w = f.default.getCurrentUser(), V = null != t, K = l && null != w && !V;
   if (a.useEffect(() => {
   u.Y(U.Z5c.FAMILY_CENTER), (0, A.e)('family-center'), !b.Z.isLoading() && b.Z.canRefetch() && x.ZP.initialPageLoad(), !r && (0, C.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
     dismissAction: y.L.AUTO,
     forceTrack: !0
   });
 }, []), a.useEffect(() => {
-  l && V && (h.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
+  l && V && (S.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
     is_considered_adult: t,
     num_of_accepted_links: n,
     selected_teen_id: g,

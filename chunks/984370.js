@@ -12,9 +12,9 @@ var s = n(120356),
   o = n(100527),
   c = n(906732),
   u = n(320007),
-  d = n(429349),
-  _ = n(141321),
-  E = n(121254),
+  d = n(141321),
+  _ = n(121254),
+  E = n(954551),
   I = n(208450),
   m = n(594174),
   T = n(358085),
@@ -52,7 +52,7 @@ hideSearch: M,
 showDivider: v
   } = e, L = (0, l.e7)([m.default], () => m.default.getCurrentUser()), Z = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1, {
 enabled: P
-  } = E.Z.useExperiment({
+  } = _.Z.useExperiment({
 location: 'HeaderBar'
   }, {
 autoTrackExposure: !1
@@ -75,8 +75,8 @@ toolbar: function() {
       (0, i.jsx)(u.Z, {
         canShowReminder: !0
       }),
-      (0, i.jsx)(_.Z, {}),
-      P ? (0, i.jsx)(d.Z, {}) : null,
+      (0, i.jsx)(d.Z, {}),
+      P ? (0, i.jsx)(E.Z, {}) : null,
       Z ? (0, i.jsx)(f.Z, {}) : (0, i.jsx)(C.Z, {})
     ]
   });

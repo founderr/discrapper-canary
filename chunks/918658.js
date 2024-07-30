@@ -29,9 +29,9 @@ var i = t(120356),
   A = t(889695),
   N = t(981631),
   h = t(176505),
-  L = t(302463),
-  R = t(293810),
-  v = t(689938),
+  v = t(302463),
+  L = t(293810),
+  R = t(689938),
   M = t(591756);
 
 function O(e) {
@@ -57,7 +57,7 @@ onClick: n
   } = e;
   return (0, r.jsx)(O, {
 onClick: n,
-children: v.Z.Messages.DISABLE
+children: R.Z.Messages.DISABLE
   });
 }
 
@@ -80,16 +80,16 @@ return null;
   let D = function(e) {
   switch (e) {
     case N.pNK.INTEGRATIONS:
-      return v.Z.Messages.VIEWING_AS_ROLES_BACK_INTEGRATIONS;
+      return R.Z.Messages.VIEWING_AS_ROLES_BACK_INTEGRATIONS;
     case N.pNK.ROLE_SUBSCRIPTIONS:
-      return v.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_BACK;
+      return R.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_BACK;
     case N.pNK.ONBOARDING:
-      return v.Z.Messages.VIEWING_AS_ONBOARDING_MEMBER_BACK;
+      return R.Z.Messages.VIEWING_AS_ONBOARDING_MEMBER_BACK;
     default:
-      return v.Z.Messages.VIEWING_AS_ROLES_BACK;
+      return R.Z.Messages.VIEWING_AS_ROLES_BACK;
   }
 }(i),
-U = i === N.pNK.ROLE_SUBSCRIPTIONS ? v.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : v.Z.Messages.VIEWING_AS_ROLES_SELECT,
+U = i === N.pNK.ROLE_SUBSCRIPTIONS ? R.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : R.Z.Messages.VIEWING_AS_ROLES_SELECT,
 Z = n === h.oC.GUILD_ONBOARDING,
 P = n => {
   let {
@@ -120,16 +120,16 @@ children: [
     className: M.noticeContents,
     children: (0, r.jsx)('div', {
       className: M.noticeText,
-      children: v.Z.Messages.VIEW_AS_MEMBER_DESCRIPTION
+      children: R.Z.Messages.VIEW_AS_MEMBER_DESCRIPTION
     })
   }) : (0, r.jsxs)('div', {
     className: M.noticeContents,
     children: [
       (0, r.jsx)('div', {
         className: M.noticeText,
-        children: o ? v.Z.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({
+        children: o ? R.Z.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({
           numRoles: Object.keys(t).length
-        }) : v.Z.Messages.VIEWING_AS_ROLES.format({
+        }) : R.Z.Messages.VIEWING_AS_ROLES.format({
           numRoles: Object.keys(t).length
         })
       }),
@@ -158,7 +158,7 @@ children: [
       }),
       o && (0, r.jsx)(a.TooltipContainer, {
         className: M.previewWarning,
-        text: v.Z.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
+        text: R.Z.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
         children: (0, r.jsx)(a.CircleExclamationPointIcon, {
           size: 'xs',
           color: u.Z.unsafe_rawColors.YELLOW_300.css
@@ -166,9 +166,9 @@ children: [
       }),
       C && (0, r.jsx)(a.TooltipContainer, {
         className: M.previewWarning,
-        text: v.Z.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
-          maxTiers: R.fF,
-          maxProducts: L.dD
+        text: R.Z.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
+          maxTiers: L.fF,
+          maxProducts: v.dD
         }),
         children: (0, r.jsx)(a.CircleExclamationPointIcon, {
           size: 'xs',

@@ -79,10 +79,10 @@ var r = t(470079),
   A = t(403474),
   N = t(944537),
   h = t(293810),
-  L = t(981631),
-  R = t(474936);
+  v = t(981631),
+  L = t(474936);
 
-function v(e, n, t) {
+function R(e, n, t) {
   let i = (0, N.n)(e => e.setListing),
 o = r.useCallback(r => {
   i(e, e => {
@@ -118,7 +118,7 @@ function O(e) {
 var n;
 return null !== (n = null == e ? void 0 : e.name) && void 0 !== n ? n : '';
   });
-  return v(e, 'name', n);
+  return R(e, 'name', n);
 }
 
 function b(e) {
@@ -126,7 +126,7 @@ function b(e) {
 var n;
 return null == e ? void 0 : null === (n = e.subscription_plans[0]) || void 0 === n ? void 0 : n.price;
   });
-  return v(e, 'priceTier', n);
+  return R(e, 'priceTier', n);
 }
 
 function D(e) {
@@ -134,7 +134,7 @@ function D(e) {
 var n;
 return null !== (n = null == e ? void 0 : e.description) && void 0 !== n ? n : '';
   });
-  return v(e, 'description', n);
+  return R(e, 'description', n);
 }
 
 function U(e, n) {
@@ -142,12 +142,12 @@ function U(e, n) {
 if ((null == e ? void 0 : e.image_asset) != null)
   return (0, f._W)(e.application_id, e.image_asset, n);
   });
-  return v(e, 'image', t);
+  return R(e, 'image', t);
 }
 
 function Z(e, n) {
   let t = (0, T.Z)(n, e);
-  return v(e, 'roleIcon', r.useMemo(() => {
+  return R(e, 'roleIcon', r.useMemo(() => {
 var e, n;
 return {
   icon: null !== (e = null == t ? void 0 : t.icon) && void 0 !== e ? e : void 0,
@@ -184,27 +184,27 @@ i
 
 function y(e, n) {
   let t = (0, T.Z)(n, e);
-  return v(e, 'roleColor', r.useMemo(() => {
+  return R(e, 'roleColor', r.useMemo(() => {
 var e;
-return null !== (e = null == t ? void 0 : t.color) && void 0 !== e ? e : L.p6O;
+return null !== (e = null == t ? void 0 : t.color) && void 0 !== e ? e : v.p6O;
   }, [t]));
 }
 
 function x(e, n) {
   let t = (0, T.Z)(n, e);
-  return v(e, 'channelAccessFormat', r.useMemo(() => null == t ? N.I.SOME_CHANNELS_ACCESS : (0, S.MT)(t) ? N.I.ALL_CHANNELS_ACCESS : N.I.SOME_CHANNELS_ACCESS, [t]));
+  return R(e, 'channelAccessFormat', r.useMemo(() => null == t ? N.I.SOME_CHANNELS_ACCESS : (0, S.MT)(t) ? N.I.ALL_CHANNELS_ACCESS : N.I.SOME_CHANNELS_ACCESS, [t]));
 }
 let G = [];
 
 function w(e) {
   let n = M(e, e => null == e ? G : e.role_benefits.benefits.filter(E.rC));
-  return v(e, 'channelBenefits', n);
+  return R(e, 'channelBenefits', n);
 }
 let j = [];
 
 function F(e) {
   let n = M(e, e => null == e ? j : e.role_benefits.benefits.filter(E.lL));
-  return v(e, 'intangibleBenefits', n);
+  return R(e, 'intangibleBenefits', n);
 }
 let B = new Set();
 
@@ -220,7 +220,7 @@ return n;
 function H(e, n) {
   let t = (0, T.Z)(n, e),
 i = (0, s.Wu)([_.Z], () => _.Z.getGuildEmoji(n), [n]);
-  return v(e, 'tierEmojiIds', r.useMemo(() => null == t ? B : k(i, t.id), [
+  return R(e, 'tierEmojiIds', r.useMemo(() => null == t ? B : k(i, t.id), [
 i,
 t
   ]));
@@ -232,13 +232,13 @@ function W(e) {
 {
   selectedOption: r
 } = (0, m.Z)(null !== (n = null == t ? void 0 : t.active_trial) && void 0 !== n ? n : null);
-  return v(e, 'trialInterval', null != r ? r : null);
+  return R(e, 'trialInterval', null != r ? r : null);
 }
 
 function V(e) {
   var n;
   let t = (0, g.oC)(e);
-  return v(e, 'trialLimit', null !== (n = null == t ? void 0 : t.max_num_active_trial_users) && void 0 !== n ? n : null);
+  return R(e, 'trialLimit', null !== (n = null == t ? void 0 : t.max_num_active_trial_users) && void 0 !== n ? n : null);
 }
 
 function Y(e) {
@@ -256,13 +256,13 @@ return !1;
 
 function z(e) {
   let n = M(e, e => null == e ? void 0 : e.subscription_plans[0]),
-[t] = v(e, 'priceTier', void 0);
+[t] = R(e, 'priceTier', void 0);
   return [r.useMemo(() => {
 var e, r, i, o, l;
 return {
   price: null !== (e = null != t ? t : null == n ? void 0 : n.price) && void 0 !== e ? e : 0,
-  currency: null !== (r = null == n ? void 0 : n.currency) && void 0 !== r ? r : L.pKx.USD,
-  interval: null !== (i = null == n ? void 0 : n.interval) && void 0 !== i ? i : R.rV.MONTH,
+  currency: null !== (r = null == n ? void 0 : n.currency) && void 0 !== r ? r : v.pKx.USD,
+  interval: null !== (i = null == n ? void 0 : n.interval) && void 0 !== i ? i : L.rV.MONTH,
   interval_count: null !== (o = null == n ? void 0 : n.interval_count) && void 0 !== o ? o : 1,
   id: null !== (l = null == n ? void 0 : n.id) && void 0 !== l ? l : ''
 };

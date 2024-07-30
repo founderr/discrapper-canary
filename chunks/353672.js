@@ -1,6 +1,6 @@
 s.d(t, {
   Z: function() {
-return i;
+return _;
   }
 });
 var T = s(735250);
@@ -10,7 +10,7 @@ var o = s(120356),
   a = s(481060),
   l = s(250617);
 
-function i(e) {
+function _(e) {
   let {
 tips: t,
 className: s,

@@ -1,27 +1,27 @@
-var n = r(553616),
-  a = r(64774),
-  o = {},
-  s = Object.keys(n);
-s.forEach(function(e) {
-  o[e] = {}, Object.defineProperty(o[e], 'channels', {
-value: n[e].channels
-  }), Object.defineProperty(o[e], 'labels', {
-value: n[e].labels
+var a = r(553616),
+  n = r(64774),
+  s = {},
+  o = Object.keys(a);
+o.forEach(function(e) {
+  s[e] = {}, Object.defineProperty(s[e], 'channels', {
+value: a[e].channels
+  }), Object.defineProperty(s[e], 'labels', {
+value: a[e].labels
   });
-  var t = a(e);
+  var t = n(e);
   Object.keys(t).forEach(function(r) {
-var n, a, s, i, c = t[r];
-o[e][r] = (n = c, a = function(e) {
+var a, n, o, i, c = t[r];
+s[e][r] = (a = c, n = function(e) {
   if (null == e)
     return e;
   arguments.length > 1 && (e = Array.prototype.slice.call(arguments));
-  var t = n(e);
+  var t = a(e);
   if ('object' == typeof t)
-    for (var r = t.length, a = 0; a < r; a++)
-      t[a] = Math.round(t[a]);
+    for (var r = t.length, n = 0; n < r; n++)
+      t[n] = Math.round(t[n]);
   return t;
-}, 'conversion' in n && (a.conversion = n.conversion), a), o[e][r].raw = (s = c, i = function(e) {
-  return null == e ? e : (arguments.length > 1 && (e = Array.prototype.slice.call(arguments)), s(e));
-}, 'conversion' in s && (i.conversion = s.conversion), i);
+}, 'conversion' in a && (n.conversion = a.conversion), n), s[e][r].raw = (o = c, i = function(e) {
+  return null == e ? e : (arguments.length > 1 && (e = Array.prototype.slice.call(arguments)), o(e));
+}, 'conversion' in o && (i.conversion = o.conversion), i);
   });
-}), e.exports = o;
+}), e.exports = s;

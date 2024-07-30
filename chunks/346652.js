@@ -3,10 +3,10 @@ r.d(t, {
 return E;
   }
 });
-var n = r(599295),
-  a = r(383237),
-  o = r(521464),
-  s = r(157680),
+var a = r(599295),
+  n = r(383237),
+  s = r(521464),
+  o = r(157680),
   i = r(337309),
   c = r(774375),
   u = r(748024),
@@ -16,9 +16,9 @@ var n = r(599295),
   h = r(639519),
   d = r.n(h),
   p = r(852153),
-  v = r(140201),
+  g = r(140201),
   y = r(667929),
-  g = [
+  v = [
 'data',
 'keyPath',
 'postprocessValue',
@@ -30,15 +30,15 @@ var n = r(599295),
 function m(e, t) {
   var r = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
-var n = Object.getOwnPropertySymbols(e);
-t && (n = n.filter(function(t) {
+var a = Object.getOwnPropertySymbols(e);
+t && (a = a.filter(function(t) {
   return Object.getOwnPropertyDescriptor(e, t).enumerable;
-})), r.push.apply(r, n);
+})), r.push.apply(r, a);
   }
   return r;
 }
 
-function w(e) {
+function O(e) {
   for (var t = 1; t < arguments.length; t++) {
 var r = null != arguments[t] ? arguments[t] : {};
 t % 2 ? m(Object(r), !0).forEach(function(t) {
@@ -49,12 +49,12 @@ t % 2 ? m(Object(r), !0).forEach(function(t) {
   }
   return e;
 }
-var O = function(e) {
+var k = function(e) {
   return e;
 };
 
-function k(e) {
-  var t, r, n, a, o = (t = e.theme, r = e, (a = Object.keys(n = {
+function w(e) {
+  var t, r, a, n, s = (t = e.theme, r = e, (n = Object.keys(a = {
 getArrowStyle: 'arrow',
 getListStyle: 'nestedNodeChildren',
 getItemStringStyle: 'nestedNodeItemString',
@@ -64,17 +64,17 @@ getValueStyle: 'valueText'
 return r[e];
   })).length > 0 && (t = 'string' == typeof t ? {
 extend: t
-  } : w({}, t), a.forEach(function(e) {
-console.error('Styling method "'.concat(e, '" is deprecated, use "theme" property instead')), t[n[e]] = function(t) {
-  for (var n = t.style, a = arguments.length, o = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++)
-    o[s - 1] = arguments[s];
+  } : O({}, t), n.forEach(function(e) {
+console.error('Styling method "'.concat(e, '" is deprecated, use "theme" property instead')), t[a[e]] = function(t) {
+  for (var a = t.style, n = arguments.length, s = Array(n > 1 ? n - 1 : 0), o = 1; o < n; o++)
+    s[o - 1] = arguments[o];
   return {
-    style: w(w({}, n), r[e].apply(r, o))
+    style: O(O({}, a), r[e].apply(r, s))
   };
 };
   })), t);
-  return e.invertTheme && (o = (0, y.y7)(o)), {
-styling: (0, v.Z)(o)
+  return e.invertTheme && (s = (0, y.y7)(s)), {
+styling: (0, g.Z)(s)
   };
 }
 var E = function(e) {
@@ -90,15 +90,15 @@ try {
   return !1;
 }
   }(), function() {
-var e, n = (0, u.Z)(t);
-return e = r ? Reflect.construct(n, arguments, (0, u.Z)(this).constructor) : n.apply(this, arguments), (0, c.Z)(this, e);
+var e, a = (0, u.Z)(t);
+return e = r ? Reflect.construct(a, arguments, (0, u.Z)(this).constructor) : a.apply(this, arguments), (0, c.Z)(this, e);
   });
 
   function b(e) {
 var t;
-return (0, o.Z)(this, b), (t = l.call(this, e)).state = k(e), t;
+return (0, s.Z)(this, b), (t = l.call(this, e)).state = w(e), t;
   }
-  return (0, s.Z)(b, [{
+  return (0, o.Z)(b, [{
   key: 'UNSAFE_componentWillReceiveProps',
   value: function(e) {
     var t = this;
@@ -107,7 +107,7 @@ return (0, o.Z)(this, b), (t = l.call(this, e)).state = k(e), t;
       'invertTheme'
     ].find(function(r) {
       return e[r] !== t.props[r];
-    }) && this.setState(k(e));
+    }) && this.setState(w(e));
   }
 },
 {
@@ -125,17 +125,17 @@ return (0, o.Z)(this, b), (t = l.call(this, e)).state = k(e), t;
     var e = this.props,
       t = e.data,
       r = e.keyPath,
-      o = e.postprocessValue,
-      s = e.hideRoot,
-      i = (e.theme, e.invertTheme, (0, a.Z)(e, g)),
+      s = e.postprocessValue,
+      o = e.hideRoot,
+      i = (e.theme, e.invertTheme, (0, n.Z)(e, v)),
       c = this.state.styling;
-    return f.createElement('ul', c('tree'), f.createElement(p.Z, (0, n.Z)({}, w({
-      postprocessValue: o,
-      hideRoot: s,
+    return f.createElement('ul', c('tree'), f.createElement(p.Z, (0, a.Z)({}, O({
+      postprocessValue: s,
+      hideRoot: o,
       styling: c
     }, i), {
-      keyPath: s ? [] : r,
-      value: o(t)
+      keyPath: o ? [] : r,
+      value: s(t)
     })));
   }
 }
@@ -164,15 +164,15 @@ return 0 === r;
   },
   hideRoot: !1,
   keyPath: ['root'],
-  getItemString: function(e, t, r, n) {
-return f.createElement('span', null, r, ' ', n);
+  getItemString: function(e, t, r, a) {
+return f.createElement('span', null, r, ' ', a);
   },
   labelRenderer: function(e) {
 var t = (0, b.Z)(e, 1)[0];
 return f.createElement('span', null, t, ':');
   },
-  valueRenderer: O,
-  postprocessValue: O,
+  valueRenderer: k,
+  postprocessValue: k,
   isCustomNode: function() {
 return !1;
   },

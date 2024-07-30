@@ -39,11 +39,11 @@ function h(e) {
 guildId: n
   } = e, t = (0, c.e7)([E.default], () => E.default.getCurrentUser()), o = (0, c.e7)([f.Z], () => f.Z.getGuild(n)), u = (0, c.e7)([f.Z], () => f.Z.getRoles(n)), {
 impersonateType: h,
-viewingRoles: L
+viewingRoles: v
   } = (0, c.cj)([S.Z], () => ({
 impersonateType: S.Z.getImpersonateType(n),
 viewingRoles: S.Z.getViewingRoles(n)
-  })), R = h === C.z.SERVER_SHOP, v = (0, c.e7)([_.ZP], () => null != t ? _.ZP.getTrueMember(n, t.id) : null), [M, O] = (0, d.useMultiSelect)(null == L ? [] : g.default.keys(L)), b = i.useRef(o);
+  })), L = h === C.z.SERVER_SHOP, R = (0, c.e7)([_.ZP], () => null != t ? _.ZP.getTrueMember(n, t.id) : null), [M, O] = (0, d.useMultiSelect)(null == v ? [] : g.default.keys(v)), b = i.useRef(o);
   i.useEffect(() => {
 let e = {},
   n = b.current;
@@ -62,21 +62,21 @@ M,
 h,
 u
   ]);
-  let D = null != o && null != t && null != v ? a()(u).filter(e => -1 !== v.roles.indexOf(e.id)).sortBy(e => -e.position).first() : void 0,
+  let D = null != o && null != t && null != R ? a()(u).filter(e => -1 !== R.roles.indexOf(e.id)).sortBy(e => -e.position).first() : void 0,
 U = i.useMemo(() => null != o && null != t ? Object.values(u).filter(e => e.id !== o.id).filter(e => {
   var n;
-  return !R || (null === (n = e.tags) || void 0 === n ? void 0 : n.subscription_listing_id) != null;
+  return !L || (null === (n = e.tags) || void 0 === n ? void 0 : n.subscription_listing_id) != null;
 }).filter(e => (null == D ? void 0 : D.id) === e.id || I.r6(o, t.id, D, e)) : [], [
   o,
   t,
-  R,
+  L,
   D,
   u
 ]);
-  if (null == t || null == o || null == v)
+  if (null == t || null == o || null == R)
 return null;
   let Z = {};
-  return (v.roles.forEach(e => {
+  return (R.roles.forEach(e => {
 let n = u[e];
 null != n && (Z[n.id] = n);
   }), s.e$(I.I0({

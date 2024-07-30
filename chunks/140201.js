@@ -1,14 +1,14 @@
-var n = r(692378),
-  a = r(667929),
-  o = r(172650);
+var a = r(692378),
+  n = r(667929),
+  s = r(172650);
 
-function s(e, t) {
+function o(e, t) {
   var r = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
-var n = Object.getOwnPropertySymbols(e);
-t && (n = n.filter(function(t) {
+var a = Object.getOwnPropertySymbols(e);
+t && (a = a.filter(function(t) {
   return Object.getOwnPropertyDescriptor(e, t).enumerable;
-})), r.push.apply(r, n);
+})), r.push.apply(r, a);
   }
   return r;
 }
@@ -16,15 +16,15 @@ t && (n = n.filter(function(t) {
 function i(e) {
   for (var t = 1; t < arguments.length; t++) {
 var r = null != arguments[t] ? arguments[t] : {};
-t % 2 ? s(Object(r), !0).forEach(function(t) {
-  (0, n.Z)(e, t, r[t]);
-}) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : s(Object(r)).forEach(function(t) {
+t % 2 ? o(Object(r), !0).forEach(function(t) {
+  (0, a.Z)(e, t, r[t]);
+}) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : o(Object(r)).forEach(function(t) {
   Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
 });
   }
   return e;
 }
-var c = (0, a.t7)(function(e) {
+var c = (0, n.t7)(function(e) {
   var t, r = {
 BACKGROUND_COLOR: (t = e).base00,
 TEXT_COLOR: t.base07,
@@ -77,18 +77,18 @@ valueLabel: {
   margin: '0 0.5em 0 0'
 },
 valueText: function(e, t) {
-  var n;
+  var a;
   return {
     style: i(i({}, e.style), {}, {
       color: {
-        String: (n = r).STRING_COLOR,
-        Date: n.DATE_COLOR,
-        Number: n.NUMBER_COLOR,
-        Boolean: n.BOOLEAN_COLOR,
-        Null: n.NULL_COLOR,
-        Undefined: n.UNDEFINED_COLOR,
-        Function: n.FUNCTION_COLOR,
-        Symbol: n.SYMBOL_COLOR
+        String: (a = r).STRING_COLOR,
+        Date: a.DATE_COLOR,
+        Number: a.NUMBER_COLOR,
+        Boolean: a.BOOLEAN_COLOR,
+        Null: a.NULL_COLOR,
+        Undefined: a.UNDEFINED_COLOR,
+        Function: a.FUNCTION_COLOR,
+        Symbol: a.SYMBOL_COLOR
       } [t]
     })
   };
@@ -139,13 +139,13 @@ arrowSignInner: {
   top: 0,
   left: '-0.4em'
 },
-nestedNode: function(e, t, r, n, a) {
+nestedNode: function(e, t, r, a, n) {
   return {
     style: i(i({}, e.style), {}, {
       position: 'relative',
       paddingTop: '0.25em',
       marginLeft: t.length > 1 ? '0.875em' : 0,
-      paddingLeft: a ? 0 : '1.125em'
+      paddingLeft: n ? 0 : '1.125em'
     })
   };
 },
@@ -153,23 +153,23 @@ rootNode: {
   padding: 0,
   margin: 0
 },
-nestedNodeLabel: function(e, t, r, n, a) {
+nestedNodeLabel: function(e, t, r, a, n) {
   return {
     style: i(i({}, e.style), {}, {
       margin: 0,
       padding: 0,
-      WebkitUserSelect: a ? 'inherit' : 'text',
-      MozUserSelect: a ? 'inherit' : 'text',
-      cursor: a ? 'pointer' : 'default'
+      WebkitUserSelect: n ? 'inherit' : 'text',
+      MozUserSelect: n ? 'inherit' : 'text',
+      cursor: n ? 'pointer' : 'default'
     })
   };
 },
-nestedNodeItemString: function(e, t, n, a) {
+nestedNodeItemString: function(e, t, a, n) {
   return {
     style: i(i({}, e.style), {}, {
       paddingLeft: '0.5em',
       cursor: 'default',
-      color: a ? r.ITEM_STRING_EXPANDED_COLOR : r.ITEM_STRING_COLOR
+      color: n ? r.ITEM_STRING_EXPANDED_COLOR : r.ITEM_STRING_COLOR
     })
   };
 },
@@ -194,6 +194,6 @@ rootNodeChildren: {
 }
   };
 }, {
-  defaultBase16: o.Z
+  defaultBase16: s.Z
 });
 t.Z = c;

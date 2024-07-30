@@ -1,9 +1,9 @@
-s.d(t, {
+_.d(E, {
   zF: function() {
-return o;
+return T;
   }
 });
-let T = (0, s(818083).B)({
+let t = (0, _(818083).B)({
   kind: 'user',
   id: '2024-05_throughline_care',
   label: 'Throughline Care Experiment',
@@ -19,8 +19,8 @@ config: {
   }]
 });
 
-function o(e) {
-  return T.useExperiment({
+function T(e) {
+  return t.useExperiment({
 location: e
   }, {
 autoTrackExposure: !0

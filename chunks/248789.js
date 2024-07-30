@@ -56,7 +56,7 @@ T = a.useCallback(() => {
     let {
       default: e
     } = await Promise.all([
-      n.e('49508'),
+      n.e('37229'),
       n.e('89650')
     ]).then(n.bind(n, 611446));
     return n => {

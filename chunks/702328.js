@@ -20,8 +20,8 @@ var s = n(735250),
   m = n(8647),
   N = n(568126),
   f = n(605289),
-  S = n(248042),
-  h = n(823188),
+  h = n(248042),
+  S = n(823188),
   M = n(135785),
   x = n(498765),
   b = n(635921),
@@ -114,7 +114,7 @@ er = (0, p.Ng)(),
 ei = (0, A.N)(),
 el = null == ei ? void 0 : null === (t = ei.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
 eo = (0, C.Nx)(),
-ec = (0, S.Vi)(),
+ec = (0, h.Vi)(),
 {
   analyticsLocations: ed
 } = (0, u.ZP)(_.Z.PREMIUM_MARKETING),
@@ -137,7 +137,7 @@ q(!0);
     onChange: e => U(e),
     threshold: 0.1,
     active: !0,
-    children: (0, s.jsx)(h.ZP, {
+    children: (0, s.jsx)(S.ZP, {
       showWumpus: !0,
       tier0CTAButton: el === G.Si.TIER_2 || ec || null != er ? (0, s.jsx)(D.Z, {
         forceInverted: !0,

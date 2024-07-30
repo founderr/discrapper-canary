@@ -15,7 +15,7 @@ return g;
 return x;
   },
   sP: function() {
-return h;
+return S;
   },
   t2: function() {
 return m;
@@ -92,7 +92,7 @@ default:
 }
 let N = (e, t, n) => (0, r.wj)(e) ? t : n,
   f = 'getWhatsNewRow',
-  S = e => {
+  h = e => {
 let {
   cards: t,
   perksCards: n,
@@ -147,7 +147,7 @@ return null != n.freeBoost && !0 === a && o({
   card: n.unlimitedSuperReactions
 }), t;
   },
-  h = e => {
+  S = e => {
 let {
   perksCards: t,
   variant: n,
@@ -186,7 +186,7 @@ switch (n) {
     ]);
     break;
   case T.R0.WHATS_NEW:
-    c = S({
+    c = h({
       cards: c,
       perksCards: t,
       isFullScreen: r,

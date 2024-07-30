@@ -1,15 +1,15 @@
-n.d(t, {
+t.d(A, {
   v: function() {
-return l;
+return o;
   }
 });
-var i = n(735250);
-n(470079);
-var s = n(481060),
-  a = n(689938),
-  r = n(553733);
-let l = () => (0, i.jsx)(s.TextBadge, {
-  color: s.tokens.unsafe_rawColors.YELLOW_300.css,
-  text: a.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_MANAGEMENT_DRAFT_LABEL,
-  className: r.draftBadge
+var a = t(735250);
+t(470079);
+var n = t(481060),
+  r = t(689938),
+  s = t(553733);
+let o = () => (0, a.jsx)(n.TextBadge, {
+  color: n.tokens.unsafe_rawColors.YELLOW_300.css,
+  text: r.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_MANAGEMENT_DRAFT_LABEL,
+  className: s.draftBadge
 });

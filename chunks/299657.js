@@ -20,8 +20,8 @@ var s = n(735250),
   m = n(594174),
   N = n(78839),
   f = n(626135),
-  S = n(111361),
-  h = n(357355),
+  h = n(111361),
+  S = n(357355),
   M = n(937579),
   x = n(91802),
   b = n(104494),
@@ -50,10 +50,10 @@ y = (0, b.Ng)(),
 k = (0, C.V)(),
 [H, w] = a.useState(!0),
 F = a.useRef(0),
-V = (0, S.M5)(U, L.p9.TIER_2),
+V = (0, h.M5)(U, L.p9.TIER_2),
 W = (0, x.n)(),
 K = null == W ? void 0 : W.countryCode,
-Y = (0, l.e7)([h.Z], () => h.Z.hasFetched);
+Y = (0, l.e7)([S.Z], () => S.Z.hasFetched);
   return (a.useEffect(() => {
 !Y && d.MH();
   }, [Y]), a.useEffect(() => {

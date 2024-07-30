@@ -24,7 +24,7 @@ warningType: c
   let {
     default: e
   } = await Promise.all([
-    n.e('49508'),
+    n.e('37229'),
     n.e('59650')
   ]).then(n.bind(n, 955708));
   return n => (0, r.jsx)(e, {

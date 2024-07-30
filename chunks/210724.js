@@ -24,8 +24,8 @@ var s = n(735250),
   m = n(602667),
   N = n(78826),
   f = n(693900),
-  S = n(617889),
-  h = n(46140),
+  h = n(617889),
+  S = n(46140),
   M = n(981631),
   x = n(487383);
 
@@ -35,18 +35,18 @@ function b(e) {
 quest: R
   } = e, b = (0, A.T)({
 quest: R,
-location: h.dr.QUESTS_BAR
+location: S.dr.QUESTS_BAR
   }), O = (0, p.Zy)({
-location: h.dr.QUESTS_BAR
+location: S.dr.QUESTS_BAR
   }), P = (0, c.e7)([u.Z], () => u.Z.useReducedMotion), v = (0, c.e7)([E.Z], () => E.Z.hasLayers()), L = (null === (t = R.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, Z = (0, _.Z)(L), D = (null === (n = R.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, B = (0, _.Z)(D), j = (null === (i = R.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, U = null != R.userStatus && (0, g.zE)(R.userStatus, C.jn.QUEST_BAR), G = (0, I.tP)(R), {
 hasError: y,
 isLoading: k
-  } = (0, N.d7)(), H = O && !U && !j && !G && !k, w = a.useRef(H), F = (0, S.B)(R, H && !y), V = a.useRef(-1), W = a.useRef(!1), [K, Y] = a.useState(!1), [z, Q] = a.useState(!1), [q, J] = a.useState(!0), [X, $] = a.useState(!0), [ee, et] = a.useState(F.preEnrollmentExpandedHeight), en = a.useRef(null), es = a.useCallback(e => {
+  } = (0, N.d7)(), H = O && !U && !j && !G && !k, w = a.useRef(H), F = (0, h.B)(R, H && !y), V = a.useRef(-1), W = a.useRef(!1), [K, Y] = a.useState(!1), [z, Q] = a.useState(!1), [q, J] = a.useState(!0), [X, $] = a.useState(!0), [ee, et] = a.useState(F.preEnrollmentExpandedHeight), en = a.useRef(null), es = a.useCallback(e => {
 J(!1), Q(e);
   }, []), ea = a.useCallback(() => {
 var e, t;
 et((null !== (t = null === (e = en.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 2 * F.paddingVertical);
-  }, [F.paddingVertical]), er = (0, S.L)(F.trackingCtx.content), ei = a.useCallback(() => {
+  }, [F.paddingVertical]), er = (0, h.L)(F.trackingCtx.content), ei = a.useCallback(() => {
 er.current.expandedAt = performance.now(), (0, r.Z)(() => {
   er.current.paintedAfterExpandAt = performance.now();
 }), ea(), es(!0);
@@ -121,7 +121,7 @@ es
   ]), a.useLayoutEffect(() => {
 H !== w.current && $(!1), w.current = H;
   }, [H]);
-  let eI = L ? h.XZ : h.R4,
+  let eI = L ? S.XZ : S.R4,
 [{
   expansionSpring: eR
 }, eC] = (0, d.useSpring)(() => ({
@@ -265,7 +265,7 @@ var e;
 return null !== (e = null != t ? t : R.Z.questDeliveryOverride) && void 0 !== e ? e : (0, g._)(R.Z.quests, C.jn.QUEST_BAR);
   });
   return null == n ? null : (0, s.jsx)(N.p, {
-source: h.dr.QUESTS_BAR,
+source: S.dr.QUESTS_BAR,
 questId: n.id,
 children: (0, s.jsx)(b, {
   quest: n

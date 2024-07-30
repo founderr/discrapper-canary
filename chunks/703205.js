@@ -3,10 +3,10 @@ r.d(t, {
 return p;
   }
 });
-var n = r(599295),
-  a = r(521464),
-  o = r(157680),
-  s = r(15393),
+var a = r(599295),
+  n = r(521464),
+  s = r(157680),
+  o = r(15393),
   i = r(337309),
   c = r(774375),
   u = r(748024),
@@ -28,13 +28,13 @@ var t, r, f = (t = h, r = function() {
     return !1;
   }
 }(), function() {
-  var e, n = (0, u.Z)(t);
-  return e = r ? Reflect.construct(n, arguments, (0, u.Z)(this).constructor) : n.apply(this, arguments), (0, c.Z)(this, e);
+  var e, a = (0, u.Z)(t);
+  return e = r ? Reflect.construct(a, arguments, (0, u.Z)(this).constructor) : a.apply(this, arguments), (0, c.Z)(this, e);
 });
 
 function h(e) {
   var t;
-  return (0, a.Z)(this, h), t = f.call(this, e), (0, l.Z)((0, s.Z)(t), 'handleClick', function() {
+  return (0, n.Z)(this, h), t = f.call(this, e), (0, l.Z)((0, o.Z)(t), 'handleClick', function() {
     t.setState({
       expanded: !t.state.expanded
     });
@@ -42,24 +42,24 @@ function h(e) {
     expanded: !1
   }, t;
 }
-return (0, o.Z)(h, [{
+return (0, s.Z)(h, [{
   key: 'render',
   value: function() {
     var e = this.props,
       t = e.styling,
       r = e.from,
-      a = e.to,
-      o = e.renderChildNodes,
-      s = e.nodeType;
-    return this.state.expanded ? b.createElement('div', t('itemRange', this.state.expanded), o(this.props, r, a)) : b.createElement('div', (0, n.Z)({}, t('itemRange', this.state.expanded), {
+      n = e.to,
+      s = e.renderChildNodes,
+      o = e.nodeType;
+    return this.state.expanded ? b.createElement('div', t('itemRange', this.state.expanded), s(this.props, r, n)) : b.createElement('div', (0, a.Z)({}, t('itemRange', this.state.expanded), {
       onClick: this.handleClick
     }), b.createElement(d.Z, {
-      nodeType: s,
+      nodeType: o,
       styling: t,
       expanded: !1,
       onClick: this.handleClick,
       arrowStyle: 'double'
-    }), ''.concat(r, ' ... ').concat(a));
+    }), ''.concat(r, ' ... ').concat(n));
   }
 }]), h;
   }(b.Component);
