@@ -3,13 +3,13 @@ t.d(n, {
 return b;
   },
   j0: function() {
-return _;
+return g;
   },
   j9: function() {
 return C;
   },
   nP: function() {
-return g;
+return _;
   }
 }), t(47120);
 var i = t(735250);
@@ -28,7 +28,7 @@ var o = t(374470),
   m = t(981631),
   I = t(595871);
 
-function g(e, n) {
+function _(e, n) {
   let {
 width: t,
 height: o
@@ -50,7 +50,7 @@ src: l
   };
 }
 
-function _(e, n) {
+function g(e, n) {
   let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
 o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
 l = function(e, n) {
@@ -130,7 +130,7 @@ return null == I ? null : (I.searchParams.append('format', 'jpeg'), {
 function C(e, n) {
   let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
 i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-  return _((0, s.VY)(e), n, t, i);
+  return g((0, s.VY)(e), n, t, i);
 }
 
 function b(e, n) {

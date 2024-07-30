@@ -25,8 +25,8 @@ giftRecipient: t,
 selectedGiftStyle: E,
 setSelectedGiftStyle: x,
 emojiConfetti: N,
-soundEffect: T,
-setEmojiConfetti: S,
+soundEffect: S,
+setEmojiConfetti: T,
 setSoundEffect: h
   } = (0, s.wD)(), [b, g] = a.useState(!1), P = a.useRef(null), v = (0, r.useRadioGroup)({
 orientation: 'horizontal'
@@ -57,7 +57,7 @@ children: [
           (0, i.jsx)('div', {
             className: f.sound,
             children: (0, i.jsx)(l.Z, {
-              sound: T,
+              sound: S,
               onSelect: e => {
                 null != h && h(null == e ? void 0 : e);
               }
@@ -66,7 +66,7 @@ children: [
           (0, i.jsx)('div', {
             className: f.emoji,
             children: (0, i.jsx)(_.Z, {
-              setEmojiConfetti: S,
+              setEmojiConfetti: T,
               emojiConfetti: null == N ? void 0 : N
             })
           })

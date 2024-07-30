@@ -1,6 +1,6 @@
 i.d(n, {
   Z: function() {
-return h;
+return Z;
   }
 });
 var s = i(735250),
@@ -20,15 +20,15 @@ var s = i(735250),
   x = i(501649),
   v = i(735393);
 
-function h(e) {
+function Z(e) {
   let {
 user: n,
 type: i,
 showActions: t,
-onClose: h
-  } = e, Z = (0, a.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(n.id)), S = (0, a.e7)([_.Z], () => _.Z.getActivities(n.id)), p = l.useMemo(() => S.filter(e => e.type !== E.IIU.CUSTOM_STATUS), [S]), g = l.useMemo(() => Z ? p.find(e => e.type === E.IIU.PLAYING) : null, [
+onClose: Z
+  } = e, h = (0, a.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(n.id)), S = (0, a.e7)([_.Z], () => _.Z.getActivities(n.id)), p = l.useMemo(() => S.filter(e => e.type !== E.IIU.CUSTOM_STATUS), [S]), g = l.useMemo(() => h ? p.find(e => e.type === E.IIU.PLAYING) : null, [
 p,
-Z
+h
   ]), j = l.useMemo(() => p.filter(e => e !== g), [
 g,
 p
@@ -48,7 +48,7 @@ location: {
 className: v.listScroller,
 fade: !0,
 children: [
-  Z ? (0, s.jsx)(d.Z, {
+  h ? (0, s.jsx)(d.Z, {
     type: i,
     user: n,
     source: N,
@@ -58,7 +58,7 @@ children: [
     actionColor: x.actionColor,
     analyticsParams: y,
     showActions: t,
-    onClose: h,
+    onClose: Z,
     onAction: () => {
       C({
         action: 'JOIN_ACTIVITY'
@@ -84,7 +84,7 @@ children: [
     actionColor: x.actionColor,
     analyticsParams: y,
     showActions: t,
-    onClose: h,
+    onClose: Z,
     onAction: () => {
       C({
         action: 'JOIN_ACTIVITY'

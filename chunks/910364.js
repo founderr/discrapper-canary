@@ -19,8 +19,8 @@ var s = i(735250),
   E = i(314897),
   x = i(158776),
   v = i(594174),
-  h = i(785717),
-  Z = i(621853),
+  Z = i(785717),
+  h = i(621853),
   S = i(318661),
   p = i(726059),
   g = i(162267),
@@ -41,9 +41,9 @@ isCurrentUser: a,
 section: r,
 setSection: d,
 hasActivity: c
-  } = e, u = (0, t.e7)([Z.Z], () => {
+  } = e, u = (0, t.e7)([h.Z], () => {
 var e, n;
-return (null === (n = Z.Z.getUserProfile(l.id)) || void 0 === n ? void 0 : null === (e = n.application) || void 0 === e ? void 0 : e.id) != null;
+return (null === (n = h.Z.getUserProfile(l.id)) || void 0 === n ? void 0 : null === (e = n.application) || void 0 === e ? void 0 : e.id) != null;
   }), I = null === (n = (0, p.Z)(l.id, !l.bot && !a).mutualFriends) || void 0 === n ? void 0 : n.length, f = null === (i = (0, g.Z)(l.id, !l.bot && !a).mutualGuilds) || void 0 === i ? void 0 : i.length;
   return (0, s.jsx)('div', {
 className: O.tabBarContainer,
@@ -90,7 +90,7 @@ children: (0, s.jsxs)(o.TabBar, {
 function U(e) {
   var n, i;
   let {
-user: Z,
+user: h,
 guildId: p,
 channelId: g,
 messageId: U,
@@ -101,12 +101,12 @@ initialSubsection: D,
 transitionState: F,
 sourceAnalyticsLocations: B = [],
 onClose: G
-  } = e, w = null !== (n = (0, t.e7)([v.default], () => v.default.getUser(Z.id))) && void 0 !== n ? n : Z, k = (0, S.ZP)(null !== (i = w.id) && void 0 !== i ? i : ''), {
+  } = e, w = null !== (n = (0, t.e7)([v.default], () => v.default.getUser(h.id))) && void 0 !== n ? n : h, k = (0, S.ZP)(null !== (i = w.id) && void 0 !== i ? i : ''), {
 analyticsLocations: V
   } = (0, I.ZP)([
 ...B,
 u.Z.PROFILE_MODAL
-  ]), Y = (0, h.Q1)({
+  ]), Y = (0, Z.Q1)({
 layout: 'MODAL',
 userId: w.id,
 showGuildProfile: !1,
@@ -140,7 +140,7 @@ en = (0, r.Z)(ee);
 es = null == k ? void 0 : k.profileEffectId;
   return (0, s.jsx)(I.Gt, {
 value: V,
-children: (0, s.jsx)(h.Mt, {
+children: (0, s.jsx)(Z.Mt, {
   layout: 'MODAL',
   userId: w.id,
   guildId: p,

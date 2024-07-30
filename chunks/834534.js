@@ -20,8 +20,8 @@ var l = i(442837),
   E = i(652853),
   x = i(335191),
   v = i(351707),
-  h = i(228168),
-  Z = i(689938),
+  Z = i(228168),
+  h = i(689938),
   S = i(247321);
 
 function p(e) {
@@ -48,18 +48,18 @@ children: [
     user: n,
     currentUser: i,
     guild: A,
-    scrollIntoView: g === h.Tb.ROLES
+    scrollIntoView: g === Z.Tb.ROLES
   }),
   (0, s.jsx)(m.Z, {
-    heading: Z.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+    heading: h.Z.Messages.USER_PROFILE_MEMBER_SINCE,
     children: (0, s.jsx)(f.Z, {
       userId: n.id,
       guildId: null == p ? void 0 : p.guildId,
-      tooltipDelay: h.vB
+      tooltipDelay: Z.vB
     })
   }),
   O.length > 0 && (0, s.jsx)(m.Z, {
-    heading: Z.Z.Messages.CONNECTIONS,
+    heading: h.Z.Messages.CONNECTIONS,
     children: (0, s.jsx)(x.OA, {
       connectedAccounts: O,
       className: S.connections,
@@ -69,7 +69,7 @@ children: [
     })
   }),
   L.length > 0 && (0, s.jsx)(m.Z, {
-    heading: Z.Z.Messages.APPS,
+    heading: h.Z.Messages.APPS,
     children: L.map(e => (0, s.jsx)(x.tH, {
       className: S.appsConnections,
       applicationRoleConnection: e,
@@ -83,12 +83,12 @@ children: [
     }, e.application.id))
   }),
   (0, s.jsx)(m.Z, {
-    heading: Z.Z.Messages.NOTE,
-    scrollIntoView: g === h.Tb.NOTE,
+    heading: h.Z.Messages.NOTE,
+    scrollIntoView: g === Z.Tb.NOTE,
     children: (0, s.jsx)(o.Z, {
       userId: n.id,
       className: S.note,
-      autoFocus: g === h.Tb.NOTE,
+      autoFocus: g === Z.Tb.NOTE,
       onUpdate: () => N({
         action: 'SET_NOTE'
       })

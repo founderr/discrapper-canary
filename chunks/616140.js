@@ -19,8 +19,8 @@ var s = i(735250),
   E = i(970041),
   x = i(715388),
   v = i(879828),
-  h = i(834534),
-  Z = i(228168),
+  Z = i(834534),
+  h = i(228168),
   S = i(47460);
 
 function p(e) {
@@ -36,30 +36,30 @@ pastActivityEnabled: d
   } = (0, u.z)({
 location: 'SimplifiedUserProfileModalTabs'
   });
-  return n === Z.oh.ACTIVITY && d ? (0, s.jsx)(v.Z, {
+  return n === h.oh.ACTIVITY && d ? (0, s.jsx)(v.Z, {
 user: l,
 currentUser: t,
 onClose: a
-  }) : n === Z.oh.ACTIVITY ? (0, s.jsx)(I.Z, {
+  }) : n === h.oh.ACTIVITY ? (0, s.jsx)(I.Z, {
 showActions: (null == t ? void 0 : t.id) !== l.id,
 user: l,
 type: r.Y.SIMPLIFIED_PROFILE,
 onClose: a
-  }) : n === Z.oh.MUTUAL_FRIENDS ? (0, s.jsx)(_.Z, {
+  }) : n === h.oh.MUTUAL_FRIENDS ? (0, s.jsx)(_.Z, {
 user: l,
 onClose: a
-  }) : n === Z.oh.MUTUAL_GUILDS ? (0, s.jsx)(f.Z, {
+  }) : n === h.oh.MUTUAL_GUILDS ? (0, s.jsx)(f.Z, {
 user: l,
 onClose: a
-  }) : n === Z.oh.BOT_DATA_ACCESS ? (0, s.jsx)(E.Z, {
+  }) : n === h.oh.BOT_DATA_ACCESS ? (0, s.jsx)(E.Z, {
 user: l
-  }) : n === Z.oh.BOT_INFO ? (0, s.jsx)(x.Z, {
+  }) : n === h.oh.BOT_INFO ? (0, s.jsx)(x.Z, {
 user: l,
 currentUser: t,
 displayProfile: o,
 subsection: i,
 onClose: a
-  }) : (0, s.jsx)(h.Z, {
+  }) : (0, s.jsx)(Z.Z, {
 user: l,
 currentUser: t,
 displayProfile: o,
@@ -75,11 +75,11 @@ user: u,
 currentUser: I,
 displayProfile: _,
 items: f,
-initialSection: E = Z.oh.USER_INFO,
+initialSection: E = h.oh.USER_INFO,
 initialSubsection: x,
 onClose: v
   } = e, {
-trackUserProfileAction: h
+trackUserProfileAction: Z
   } = (0, c.KZ)(), g = (0, t.e7)([d.Z], () => d.Z.hidePersonalInformation), [{
 section: j,
 subsection: T
@@ -92,7 +92,7 @@ section: null !== (r = null === (n = f.find(e => {
 })) || void 0 === n ? void 0 : n.section) && void 0 !== r ? r : null === (i = f[0]) || void 0 === i ? void 0 : i.section,
 subsection: x
   }), C = l.useCallback(e => {
-h({
+Z({
   action: 'PRESS_SECTION',
   section: e
 }), N({
@@ -100,7 +100,7 @@ h({
   subsection: void 0
 });
   }, [
-h,
+Z,
 N
   ]);
   return g ? (0, s.jsx)('div', {

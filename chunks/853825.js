@@ -19,8 +19,8 @@ var s = i(735250),
   E = i(899007),
   x = i(900927),
   v = i(678738),
-  h = i(502762),
-  Z = i(530),
+  Z = i(502762),
+  h = i(530),
   S = i(679332),
   p = i(544989),
   g = i(228168),
@@ -62,7 +62,7 @@ children: (0, s.jsx)(u.Mt, {
     hideShadow: !0,
     'aria-label': T.Z.Messages.USER_PROFILE_MODAL,
     children: [
-      (0, s.jsxs)(h.Z, {
+      (0, s.jsxs)(Z.Z, {
         user: n,
         displayProfile: D,
         profileType: g.y0.FULL_SIZE,
@@ -97,7 +97,7 @@ children: (0, s.jsx)(u.Mt, {
           (0, s.jsxs)('div', {
             className: N.body,
             children: [
-              (0, s.jsx)(Z.Z, {
+              (0, s.jsx)(h.Z, {
                 user: n,
                 profileType: g.y0.FULL_SIZE,
                 nickname: c.ZP.getName(P, y, n),
@@ -109,7 +109,7 @@ children: (0, s.jsx)(u.Mt, {
                   onClose: U
                 })
               }),
-              (0, s.jsx)(h.Z.Overlay, {
+              (0, s.jsx)(Z.Z.Overlay, {
                 className: N.overlay,
                 children: (0, s.jsxs)('div', {
                   className: A.container,

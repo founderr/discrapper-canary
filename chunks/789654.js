@@ -1,6 +1,6 @@
 t.d(r, {
   Z: function() {
-return Z;
+return I;
   }
 }), t(47120), t(724458), t(757143), t(390547), t(653041);
 var a = t(735250),
@@ -119,7 +119,7 @@ r[t] = {
   }), r;
 }
 
-function I(e, r) {
+function Z(e, r) {
   let [t, a] = n.useState(() => {
 let t = h.K.get(e);
 return null != t ? t : r;
@@ -135,13 +135,13 @@ a
   ];
 }
 
-function Z() {
+function I() {
   let e = (0, y.Fg)(),
 [{
   rawPalette: r,
   semanticTokens: t
 }, i, l, s, h, m] = function(e, r) {
-  let [t, a] = I(''.concat(e, '-states'), [r]), [i, o] = I(''.concat(e, '-index'), 0), l = t[i], c = n.useCallback(e => {
+  let [t, a] = Z(''.concat(e, '-states'), [r]), [i, o] = Z(''.concat(e, '-index'), 0), l = t[i], c = n.useCallback(e => {
     a([
       e,
       ...t
@@ -184,7 +184,7 @@ E = n.useMemo(() => Object.keys(r).reduce((e, r) => [
     label: r
   }
 ], []), [r]),
-Z = n.useCallback((e, a, n, o) => {
+I = n.useCallback((e, a, n, o) => {
   let l = d().cloneDeep(t);
   l[e][a] = {
     color: n,
@@ -457,7 +457,7 @@ children: [
               value: l.color,
               options: E,
               onChange: t => {
-                Z(r, e, t, l.opacity);
+                I(r, e, t, l.opacity);
               },
               renderOptionPrefix: r => null == r ? null : (0, a.jsx)('div', {
                 style: {
@@ -477,7 +477,7 @@ children: [
               },
               value: null === (i = l.opacity) || void 0 === i ? void 0 : i.toString(),
               onChange: t => {
-                '' !== t && Z(r, e, l.color, parseFloat(t));
+                '' !== t && I(r, e, l.color, parseFloat(t));
               }
             }),
             (0, a.jsx)(f.Clickable, {
@@ -487,7 +487,7 @@ children: [
               },
               onClick: () => {
                 var t;
-                c && Z(r, e, o.color, null !== (t = o.opacity) && void 0 !== t ? t : 1);
+                c && I(r, e, o.color, null !== (t = o.opacity) && void 0 !== t ? t : 1);
               },
               children: (0, a.jsx)(f.CloseSmallIcon, {
                 size: 'xs',

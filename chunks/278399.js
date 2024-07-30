@@ -1,55 +1,55 @@
-n.d(t, {
+t.d(n, {
   Ho: function() {
 return x;
   },
   y9: function() {
-return h;
+return f;
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(317261),
-  a = n(823379),
-  r = n(162461),
-  c = n(561308),
-  o = n(297781),
-  d = n(443487),
-  u = n(43205),
-  m = n(827418);
+var l = t(735250),
+  i = t(470079),
+  s = t(317261),
+  a = t(823379),
+  r = t(162461),
+  c = t(561308),
+  o = t(297781),
+  d = t(443487),
+  u = t(43205),
+  m = t(827418);
 let x = [o.An],
-  h = [s._.WEEK];
-t.ZP = i.memo(e => {
+  f = [s._.WEEK];
+n.ZP = i.memo(e => {
   let {
-entry: t,
-channel: n,
+entry: n,
+channel: t,
 selected: i
   } = e;
   if (!(0, r.Rg)('MemberListTopArtistContent'))
 return null;
-  let s = (0, c.Nq)(t);
-  return null != s && (0, a.Hi)(s, h) ? (0, l.jsxs)(d.Zb, {
+  let s = (0, c.Nq)(n);
+  return null != s && (0, a.Hi)(s, f) ? (0, l.jsxs)(d.Zb, {
 selected: i,
 children: [
   (0, l.jsxs)(d.e$, {
     children: [
       (0, l.jsx)(d.F9, {
-        entry: t,
-        channelId: n.id,
-        guildId: n.guild_id
+        entry: n,
+        channelId: t.id,
+        guildId: t.guild_id
       }),
       (0, l.jsx)(d.ll, {
-        children: t.extra.artist.name
+        children: n.extra.artist.name
       }),
       (0, l.jsx)(o.Gk, {
         location: o.Gt.CARD,
-        children: x.map((e, n) => (0, l.jsx)(e, {
-          entry: t
-        }, n))
+        children: x.map((e, t) => (0, l.jsx)(e, {
+          entry: n
+        }, t))
       })
     ]
   }),
   (0, l.jsx)(u.f, {
-    src: t.extra.media.image_url,
+    src: n.extra.media.image_url,
     size: 48,
     className: m.thumbnail
   })

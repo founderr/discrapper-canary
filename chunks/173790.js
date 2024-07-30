@@ -34,8 +34,8 @@ installOnDemand: I
   } = e, P = (0, l.e7)([m.Z], () => m.Z.entrypoint()), L = null !== (n = (0, d.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, S = (0, _.ye)({
 application: L
   }) ? g : A.Z, T = a.useRef(null), {
-iconURL: b,
-name: R
+iconURL: R,
+name: b
   } = a.useMemo(() => (0, _.sl)(L, {
 fakeAppIconURL: x,
 size: 84
@@ -52,16 +52,16 @@ fade: !0,
 ref: T,
 role: 'region',
 'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({
-  applicationName: R
+  applicationName: b
 }),
 children: [
   (0, i.jsx)(h.Z, {
-    name: R,
-    iconURL: b,
+    name: b,
+    iconURL: R,
     scrollerRef: T
   }),
-  null != b && (0, i.jsx)(f.Z, {
-    src: b,
+  null != R && (0, i.jsx)(f.Z, {
+    src: R,
     className: v.appIcon
   }),
   (0, i.jsx)(r.Z, {

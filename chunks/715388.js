@@ -1,6 +1,6 @@
 i.d(n, {
   Z: function() {
-return Z;
+return h;
   }
 });
 var s = i(735250);
@@ -20,13 +20,13 @@ var l = i(442837),
   E = i(351707),
   x = i(228168),
   v = i(689938),
-  h = i(247321);
+  Z = i(247321);
 
-function Z(e) {
+function h(e) {
   var n;
   let {
 user: i,
-currentUser: Z,
+currentUser: h,
 displayProfile: S,
 subsection: p,
 onClose: g
@@ -41,7 +41,7 @@ d.Z
   ], () => a.Z.getChannel(d.Z.getChannelId()));
   return (0, s.jsxs)(t.ScrollerThin, {
 fade: !0,
-className: h.scroller,
+className: Z.scroller,
 children: [
   (null == S ? void 0 : S.bio) != null && (null == S ? void 0 : S.bio) !== '' && (0, s.jsx)(I.Z, {
     userBio: S.bio,
@@ -56,7 +56,7 @@ children: [
   }),
   null != T && (0, s.jsx)(E.Z, {
     user: i,
-    currentUser: Z,
+    currentUser: h,
     guild: T,
     scrollIntoView: p === x.Tb.ROLES
   }),
@@ -73,7 +73,7 @@ children: [
     scrollIntoView: p === x.Tb.NOTE,
     children: (0, s.jsx)(o.Z, {
       userId: i.id,
-      className: h.note,
+      className: Z.note,
       autoFocus: p === x.Tb.NOTE,
       onUpdate: () => j({
         action: 'SET_NOTE'

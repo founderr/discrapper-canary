@@ -19,8 +19,8 @@ var s = i(735250),
   E = i(256226),
   x = i(678738),
   v = i(314172),
-  h = i(981631),
-  Z = i(689938),
+  Z = i(981631),
+  h = i(689938),
   S = i(700763);
 
 function p(e) {
@@ -37,10 +37,10 @@ onRemoveRole: m
   } = e, x = I && null != d, p = l.useMemo(() => 'roles-'.concat((0, t.Z)()), []), g = (0, o.ZP)({
 id: p,
 isEnabled: !0,
-scrollToStart: h.Cyb,
-scrollToEnd: h.Cyb,
+scrollToStart: Z.Cyb,
+scrollToEnd: Z.Cyb,
 wrap: !0
-  }), j = c.length, T = 0 === j ? Z.Z.Messages.ROLE_LIST_EMPTY : Z.Z.Messages.ROLES_LIST.format({
+  }), j = c.length, T = 0 === j ? h.Z.Messages.ROLE_LIST_EMPTY : h.Z.Messages.ROLES_LIST.format({
 numRoles: j
   }), N = c.map(e => {
 var l;
@@ -98,7 +98,7 @@ return l && !t ? 1 : !l && t ? -1 : 0;
 v,
 S
   ]), j = f.e9(t, i.id), [T] = (0, r.Wu)([_.Z], () => [
-_.Z.can(h.Plq.MANAGE_ROLES, t),
+_.Z.can(Z.Plq.MANAGE_ROLES, t),
 null != t ? _.Z.getGuildVersion(t.id) : null
   ]), N = l.useCallback(e => {
 var i, s;
@@ -125,7 +125,7 @@ n.id,
 a
   ]), A = T && null != E;
   return 0 !== g.length || A ? (0, s.jsx)(x.Z, {
-heading: Z.Z.Messages.ROLES,
+heading: h.Z.Messages.ROLES,
 scrollIntoView: o,
 children: (0, s.jsx)(p, {
   user: n,

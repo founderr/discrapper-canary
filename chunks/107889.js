@@ -19,8 +19,8 @@ var s = i(735250),
   E = i(910128),
   x = i(27144),
   v = i(318661),
-  h = i(78675),
-  Z = i(113557),
+  Z = i(78675),
+  h = i(113557),
   S = i(169979),
   p = i(502762),
   g = i(544989),
@@ -173,7 +173,7 @@ children: (0, s.jsx)(f.Mt, {
           }),
           (0, s.jsxs)('header', {
             children: [
-              (0, s.jsx)(h.Z, {
+              (0, s.jsx)(Z.Z, {
                 user: n,
                 displayProfile: ee,
                 profileType: R.y0.FULL_SIZE,
@@ -182,7 +182,7 @@ children: (0, s.jsx)(f.Mt, {
               (0, s.jsxs)('div', {
                 className: U.headerInner,
                 children: [
-                  (0, s.jsx)(Z.Z, {
+                  (0, s.jsx)(h.Z, {
                     location: 'SimplifiedUserProfileModal',
                     user: n,
                     displayProfile: ee,

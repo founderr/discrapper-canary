@@ -20,8 +20,8 @@ var l = i(481060),
   E = i(530),
   x = i(645410),
   v = i(437758),
-  h = i(357836),
-  Z = i(544989),
+  Z = i(357836),
+  h = i(544989),
   S = i(934861),
   p = i(616140),
   g = i(29530),
@@ -70,7 +70,7 @@ children: (0, s.jsx)(r.Mt, {
       displayProfile: B,
       profileType: j.y0.FULL_SIZE,
       children: [
-        (0, s.jsx)(Z.Z, {
+        (0, s.jsx)(h.Z, {
           profileType: j.y0.FULL_SIZE,
           children: (0, s.jsx)(v.Z, {
             user: n,
@@ -108,7 +108,7 @@ children: (0, s.jsx)(r.Mt, {
                       onClose: P,
                       tooltipContainerClassName: C.messageIconButton
                     }),
-                    (0, s.jsx)(h.Z, {
+                    (0, s.jsx)(Z.Z, {
                       user: n,
                       guildId: F
                     }),

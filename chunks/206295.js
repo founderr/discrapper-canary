@@ -56,9 +56,9 @@ for (let e = 1; e < 8 && !((0, c.Bd)(R) >= 0.725); e++) {
   ;
   R = l()(R).darken(0.5).num();
 }
-let m = (0, c.Rf)(O);
+let T = (0, c.Rf)(O);
 return {
-  primaryColor: m,
+  primaryColor: T,
   secondaryColor: (0, c.Rf)(R)
 };
   };

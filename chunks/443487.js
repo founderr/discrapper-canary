@@ -1,6 +1,6 @@
 s.d(a, {
   F9: function() {
-return m;
+return T;
   },
   Zb: function() {
 return N;
@@ -9,7 +9,7 @@ return N;
 return O;
   },
   ll: function() {
-return T;
+return m;
   }
 });
 var n = s(735250);
@@ -94,7 +94,7 @@ children: a.map((e, t) => {
   });
 }
 
-function m(e) {
+function T(e) {
   let {
 guildId: a,
 channelId: s,
@@ -103,16 +103,16 @@ maxAvatars: l = 3
   } = e, _ = t.author_id, I = (0, r.e7)([E.default], () => E.default.getUser(_)), {
 displayParticipants: N,
 numOtherParticipants: O
-  } = (0, u.Z)(t, l), m = (0, r.e7)([o.ZP], () => o.ZP.getMember(a, _)), T = (0, r.e7)([c.Z], () => {
+  } = (0, u.Z)(t, l), T = (0, r.e7)([o.ZP], () => o.ZP.getMember(a, _)), m = (0, r.e7)([c.Z], () => {
 var e;
-return (null == m ? void 0 : m.colorRoleId) != null ? null === (e = c.Z.getRole(a, m.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
+return (null == T ? void 0 : T.colorRoleId) != null ? null === (e = c.Z.getRole(a, T.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
   }, [
 a,
-m
+T
   ]);
   if (null == I)
 return null;
-  let g = null == m ? void 0 : m.colorString,
+  let g = null == T ? void 0 : T.colorString,
 P = d.ZP.getName(a, s, I);
   return (0, n.jsxs)('div', {
 className: A.userSection,
@@ -123,7 +123,7 @@ children: [
   }),
   (0, n.jsx)(i.NameWithRole, {
     color: null != g ? g : void 0,
-    roleName: T,
+    roleName: m,
     name: P,
     className: A.userName
   }),
@@ -143,7 +143,7 @@ children: [
   });
 }
 
-function T(e) {
+function m(e) {
   let {
 children: a
   } = e;

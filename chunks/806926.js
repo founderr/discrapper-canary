@@ -25,8 +25,8 @@ function x(e) {
 user: i,
 currentUser: x,
 channelId: v,
-displayProfile: h,
-initialSection: Z,
+displayProfile: Z,
+initialSection: h,
 initialSubsection: S,
 friendToken: p,
 onClose: g
@@ -40,14 +40,14 @@ children: [
   (0, s.jsx)(u.Z, {
     user: i,
     profileType: f.y0.FULL_SIZE,
-    nickname: o.ZP.getName(null == h ? void 0 : h.guildId, v, i),
-    pronouns: null == h ? void 0 : h.pronouns,
+    nickname: o.ZP.getName(null == Z ? void 0 : Z.guildId, v, i),
+    pronouns: null == Z ? void 0 : Z.pronouns,
     nicknameVariant: 'heading-xl/bold',
     nicknameIcons: (0, s.jsx)(r.Z, {
       userId: i.id
     }),
     tags: (0, s.jsx)(a.Z, {
-      displayProfile: h,
+      displayProfile: Z,
       profileType: f.y0.FULL_SIZE,
       onClose: g
     })
@@ -56,7 +56,7 @@ children: [
     className: E.friendRequestBannerOverlay,
     children: (0, s.jsx)(d.Z, {
       user: i,
-      guildId: null !== (n = null == h ? void 0 : h.guildId) && void 0 !== n ? n : void 0,
+      guildId: null !== (n = null == Z ? void 0 : Z.guildId) && void 0 !== n ? n : void 0,
       channelId: v,
       friendToken: p,
       className: E.friendRequestBanner
@@ -67,9 +67,9 @@ children: [
     children: (0, s.jsx)(I.Z, {
       user: i,
       currentUser: x,
-      displayProfile: h,
+      displayProfile: Z,
       items: T,
-      initialSection: Z,
+      initialSection: h,
       initialSubsection: S,
       onClose: g
     })

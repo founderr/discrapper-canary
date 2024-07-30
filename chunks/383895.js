@@ -15,8 +15,8 @@ var n = s(735250),
   N = s(919394),
   O = s(91140),
   R = s(297781),
-  m = s(359110),
-  T = s(592125),
+  T = s(359110),
+  m = s(592125),
   g = s(944486),
   P = s(594174),
   L = s(5192),
@@ -33,7 +33,7 @@ nickName: l
   return t.useEffect(() => {
 (async () => {
   let e = await _.Z.getOrEnsurePrivateChannel(a.author_id),
-    n = T.Z.getChannel(e);
+    n = m.Z.getChannel(e);
   o()(null != n, 'DM channel cannot be null');
   let t = await (0, N.QC)(a, n, A.kH.Base64),
     l = await (0, N.QC)(a, n, A.kH.CloudUpload);
@@ -67,8 +67,8 @@ style: l = {},
 onClose: i
   } = e, A = (0, c.e7)([
 g.Z,
-T.Z
-  ], () => T.Z.getChannel(g.Z.getChannelId())), N = (0, c.e7)([P.default], () => P.default.getUser(a.author_id)), {
+m.Z
+  ], () => m.Z.getChannel(g.Z.getChannelId())), N = (0, c.e7)([P.default], () => P.default.getUser(a.author_id)), {
 nick: v,
 avatar: C
   } = t.useMemo(() => {
@@ -80,7 +80,7 @@ return {
   }, [
 N,
 A
-  ]), [x, p] = t.useState();
+  ]), [p, x] = t.useState();
   return null == N ? null : (0, n.jsxs)('div', {
 className: f.profileEntryCard,
 style: l,
@@ -147,19 +147,19 @@ children: [
             viewId: s
           });
           let e = await _.Z.getOrEnsurePrivateChannel(a.author_id),
-            n = T.Z.getChannel(e);
-          o()(null != n, 'GameProfile ReactReply - DM channel cannot be null'), o()(null != x, 'GameProfile ReactReply - Reaction Image cannot be null'), (0, I.B)({
-            file: x,
+            n = m.Z.getChannel(e);
+          o()(null != n, 'GameProfile ReactReply - DM channel cannot be null'), o()(null != p, 'GameProfile ReactReply - Reaction Image cannot be null'), (0, I.B)({
+            file: p,
             channel: n,
             altText: '',
             reply: null != t ? t : ''
-          }), i(), (0, m.Kh)(n.id);
+          }), i(), (0, T.Kh)(n.id);
         }
       },
       popoutProps: {
         popoutBody: (0, n.jsx)(h, {
           entry: a,
-          setGeneratedImage: p,
+          setGeneratedImage: x,
           nickName: v
         }),
         replyHeaderText: '',

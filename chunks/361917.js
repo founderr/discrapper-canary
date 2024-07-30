@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return G;
+return Y;
   }
 }), t(47120), t(653041), t(724458);
 var i = t(735250),
@@ -29,8 +29,8 @@ var i = t(735250),
   L = t(541099),
   S = t(827498),
   T = t(87005),
-  b = t(783097),
-  R = t(695676),
+  R = t(783097),
+  b = t(695676),
   M = t(98880),
   y = t(804307),
   j = t(888617),
@@ -39,8 +39,8 @@ var i = t(735250),
   H = t(105862),
   U = t(28147),
   B = t(981631),
-  D = t(689079),
-  k = t(689938),
+  k = t(689079),
+  D = t(689938),
   w = t(678313);
 let V = [],
   W = Array(8).fill(0).map((e, n) => n),
@@ -58,7 +58,7 @@ let V = [],
 }
   ];
 
-function G(e) {
+function Y(e) {
   let {
 channel: n,
 entrypoint: t,
@@ -66,7 +66,7 @@ searchQuery: l,
 setSearchQuery: r,
 setScroller: o,
 isScrollCloseToBottom: s
-  } = e, d = (0, c.e7)([m.Z], () => m.Z.getIsEnabled(), []), _ = t === S._b.TEXT, f = t === S._b.TEXT && !n.isPrivate(), C = t === S._b.TEXT, h = t === S._b.VOICE, A = t === S._b.TEXT, [E, N] = $(_), [v, x] = $(f), [I, g] = $(C), [P, L] = $(h), T = E && v && I && P, b = (C || f) && !T, R = h && d;
+  } = e, d = (0, c.e7)([m.Z], () => m.Z.getIsEnabled(), []), _ = t === S._b.TEXT, f = t === S._b.TEXT && !n.isPrivate(), C = t === S._b.TEXT, h = t === S._b.VOICE, A = t === S._b.TEXT, [E, N] = $(_), [v, x] = $(f), [I, g] = $(C), [P, L] = $(h), T = E && v && I && P, R = (C || f) && !T, b = h && d;
   a.useEffect(() => {
 (0, p.w1)({
   guildId: n.getGuildId(),
@@ -77,11 +77,11 @@ isScrollCloseToBottom: s
   return (0, i.jsxs)('div', {
 className: w.container,
 children: [
-  R ? (0, i.jsx)(Y, {}) : null,
+  b ? (0, i.jsx)(G, {}) : null,
   (0, i.jsx)(z, {
     searchQuery: l,
     setSearchQuery: r,
-    placeholder: A ? k.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : k.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
+    placeholder: A ? D.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : D.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
   }),
   (0, i.jsx)(u.Scroller, {
     ref: o,
@@ -114,9 +114,9 @@ children: [
         }),
         T && (0, i.jsx)(O.A, {
           type: S.LG.HOME_EMPTY,
-          textContent: t === S._b.TEXT ? k.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : k.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
+          textContent: t === S._b.TEXT ? D.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : D.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
         }),
-        b && (0, i.jsx)(H.Z, {})
+        R && (0, i.jsx)(H.Z, {})
       ]
     })
   })
@@ -124,14 +124,14 @@ children: [
   });
 }
 
-function Y() {
+function G() {
   return (0, i.jsxs)('div', {
 className: w.developerShelfControlsContainer,
 children: [
   (0, i.jsx)(u.Text, {
     className: w.developerShelfControlsLabel,
     variant: 'text-sm/normal',
-    children: k.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_SHELF_SUBTITLE
+    children: D.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_SHELF_SUBTITLE
   }),
   (0, i.jsx)(C.W, {
     hideSearch: !0
@@ -216,7 +216,7 @@ for (let n of r)
     isPartner: !1
   });
 return e;
-  }, [r]), c = k.Z.Messages.APP_LAUNCHER_HOME_RECENT_APPS_HEADER, {
+  }, [r]), c = D.Z.Messages.APP_LAUNCHER_HOME_RECENT_APPS_HEADER, {
 items: u,
 handleViewMore: d
   } = ee(c, t === S._b.VOICE ? M.U4.LARGE_BANNER : M.U4.NO_BANNER, s, 8, S.L3.RECENT_APPS);
@@ -306,7 +306,7 @@ children: [
   (0, i.jsx)('div', {
     ref: e => o.current = e,
     children: (0, i.jsx)(Z.Z, {
-      title: k.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE
+      title: D.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE
     })
   }),
   (0, i.jsx)('div', {
@@ -342,7 +342,7 @@ loading: c
 commandType: d.yU.CHAT
   }, {
 placeholderCount: 0,
-limit: D.tn,
+limit: k.tn,
 includeFrecency: !0
   }), u = a.useMemo(() => s.reduce((e, n) => {
 let {
@@ -371,7 +371,7 @@ application: e
   })), [p]), {
 items: C,
 handleViewMore: h
-  } = ee(k.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, M.U4.NO_BANNER, f, 8, _), {
+  } = ee(D.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, M.U4.NO_BANNER, f, 8, _), {
 trackSectionImpressionRef: A
   } = (0, j.Z)({
 sectionName: _,
@@ -388,7 +388,7 @@ children: [
   (0, i.jsx)('div', {
     ref: e => A.current = e,
     children: (0, i.jsx)(Z.Z, {
-      title: k.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER,
+      title: D.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER,
       buttonType: Z.Z.buttonTypes.VIEW_MORE,
       onClickViewButton: h
     })
@@ -445,9 +445,9 @@ let {
   commandType: d.yU.CHAT
 }, {
   placeholderCount: 0,
-  limit: D.tn,
+  limit: k.tn,
   includeFrecency: !0
-}), r = a.useCallback(e => !(0, b.ye)({
+}), r = a.useCallback(e => !(0, R.ye)({
   application: e
 }) && !(null != l.find(n => n.id === e.id)), [l]), {
   fetchState: o,
@@ -641,7 +641,7 @@ a.useCallback(function() {
 function ee(e, n, t, i, l) {
   let {
 pushHistory: r
-  } = (0, R.hH)();
+  } = (0, b.hH)();
   return a.useMemo(() => t.length <= i ? {
 items: t,
 handleViewMore: void 0
@@ -653,7 +653,7 @@ handleViewMore: () => {
     source: L.Z.entrypoint(),
     num: t.length
   }), r({
-    type: R.gc.LIST,
+    type: b.gc.LIST,
     title: e,
     look: n,
     items: t,

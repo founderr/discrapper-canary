@@ -19,8 +19,8 @@ var s = i(735250),
   E = i(900927),
   x = i(652853),
   v = i(335191),
-  h = i(988246),
-  Z = i(689938),
+  Z = i(988246),
+  h = i(689938),
   S = i(678108);
 
 function p(e) {
@@ -40,7 +40,7 @@ if (j) {
   var e;
   null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView();
 }
-  }, [j]), N) ? (0, s.jsx)(h.Z, {}) : (0, s.jsxs)(o.ScrollerThin, {
+  }, [j]), N) ? (0, s.jsx)(Z.Z, {}) : (0, s.jsxs)(o.ScrollerThin, {
 fade: !0,
 className: S.infoScroller,
 children: [
@@ -52,7 +52,7 @@ children: [
           (0, s.jsx)(o.Heading, {
             variant: 'eyebrow',
             className: S.userInfoSectionHeader,
-            children: Z.Z.Messages.USER_PROFILE_ABOUT_ME
+            children: h.Z.Messages.USER_PROFILE_ABOUT_ME
           }),
           (0, s.jsx)(m.Z, {
             className: S.userInfoText,
@@ -66,7 +66,7 @@ children: [
           (0, s.jsx)(o.Heading, {
             variant: 'eyebrow',
             className: S.userInfoSectionHeader,
-            children: Z.Z.Messages.USER_PROFILE_MEMBER_SINCE
+            children: h.Z.Messages.USER_PROFILE_MEMBER_SINCE
           }),
           (0, s.jsx)(E.Z, {
             userId: i.id,
@@ -88,7 +88,7 @@ children: [
           (0, s.jsx)(o.Heading, {
             variant: 'eyebrow',
             className: S.userInfoSectionHeader,
-            children: Z.Z.Messages.NOTE
+            children: h.Z.Messages.NOTE
           }),
           (0, s.jsx)(a.Z, {
             userId: i.id,

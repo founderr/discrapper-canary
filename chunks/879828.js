@@ -27,8 +27,8 @@ onClose: x
   } = e, {
 analyticsLocations: v
   } = (0, t.ZP)(), {
-trackUserProfileAction: h,
-...Z
+trackUserProfileAction: Z,
+...h
   } = (0, o.KZ)(), {
 live: S,
 recent: p,
@@ -46,12 +46,12 @@ children: [
         stream: g,
         onClose: x,
         onAction: () => {
-          h({
+          Z({
             action: 'JOIN_ACTIVITY'
           }), (0, a.Ac)({
             activityType: f.IIU.STREAMING,
             analyticsLocations: v,
-            ...Z
+            ...h
           });
         }
       }),
@@ -61,7 +61,7 @@ children: [
         activity: e,
         onClose: x,
         onAction: () => {
-          h({
+          Z({
             action: 'JOIN_ACTIVITY'
           }), (0, a.Ac)({
             activityType: null == e ? void 0 : e.type,
@@ -70,7 +70,7 @@ children: [
             activitySessionId: null == e ? void 0 : e.session_id,
             applicationId: null == e ? void 0 : e.application_id,
             analyticsLocations: v,
-            ...Z
+            ...h
           });
         }
       }, 'live-'.concat(l)))

@@ -26,11 +26,11 @@ persistentCallCtaEnabled: E = !1,
 activeInviteToCallCtaEnabled: x = !1,
 onClose: v
   } = e, {
-newestAnalyticsLocation: h
+newestAnalyticsLocation: Z
   } = (0, o.ZP)();
   if (n || f === u.OGo.BLOCKED)
 return null;
-  let Z = E ? (0, s.jsx)(r.Z, {
+  let h = E ? (0, s.jsx)(r.Z, {
   user: i,
   onClose: v
 }) : null,
@@ -53,7 +53,7 @@ return (0, s.jsxs)('div', {
 return (0, s.jsxs)('div', {
   className: _.multipleButtons,
   children: [
-    Z,
+    h,
     (0, s.jsx)(c.c, {
       userId: i.id,
       onClose: v
@@ -83,7 +83,7 @@ return x && null != S ? (0, s.jsxs)('div', {
       tooltipText: I.Z.Messages.FRIENDS_SECTION_PENDING,
       disabled: !0
     }),
-    Z,
+    h,
     (0, s.jsx)(c.c, {
       userId: i.id,
       onClose: v
@@ -101,7 +101,7 @@ children: [
       t.Z.addRelationship({
         userId: i.id,
         context: {
-          location: h
+          location: Z
         },
         friendToken: m
       });
@@ -116,7 +116,7 @@ children: [
   }) : (0, s.jsxs)('div', {
 className: _.multipleButtons,
 children: [
-  Z,
+  h,
   (0, s.jsx)(c.v, {
     userId: i.id,
     onClose: v
@@ -130,7 +130,7 @@ children: [
       t.Z.addRelationship({
         userId: i.id,
         context: {
-          location: h
+          location: Z
         },
         friendToken: m
       });

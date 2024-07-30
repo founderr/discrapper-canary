@@ -19,8 +19,8 @@ var s = i(735250),
   E = i(204197),
   x = i(735336),
   v = i(520978),
-  h = i(184325),
-  Z = i(652853),
+  Z = i(184325),
+  h = i(652853),
   S = i(225714),
   p = i(228168),
   g = i(231338),
@@ -42,7 +42,7 @@ hasProfileEffect: U,
 onClose: M
   } = e, b = (0, t.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), P = (0, t.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, t.e7)([u.Z], () => u.Z.getStatus(_.id)), F = (0, t.e7)([m.Z], () => m.Z.getUserProfile(_.id)), B = (0, t.e7)([c.default], () => c.default.getId() === _.id), {
 theme: G
-  } = (0, Z.z)(), {
+  } = (0, h.z)(), {
 trackUserProfileAction: w
   } = (0, f.KZ)(), {
 avatarSrc: k,
@@ -96,13 +96,13 @@ children: [
               className: T.warningCircleIcon,
               color: o.Z.unsafe_rawColors.YELLOW_300.css
             })
-          }) : (0, s.jsx)(h.Z, {
+          }) : (0, s.jsx)(Z.Z, {
             user: _,
             className: T.badgeList,
             guildId: A,
-            size: h.V.SIZE_24,
+            size: Z.V.SIZE_24,
             shrinkAtCount: 8,
-            shrinkToSize: h.V.SIZE_18,
+            shrinkToSize: Z.V.SIZE_18,
             onBadgeClick: M
           }),
           (0, s.jsxs)('div', {

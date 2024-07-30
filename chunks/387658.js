@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return D;
+return k;
   }
 }), t(47120);
 var i = t(735250),
@@ -29,8 +29,8 @@ var i = t(735250),
   L = t(176412),
   S = t(870205),
   T = t(981631),
-  b = t(689079),
-  R = t(689938),
+  R = t(689079),
+  b = t(689938),
   M = t(627542),
   y = t(763963);
 let j = 'placeholder',
@@ -192,14 +192,14 @@ size: u.ButtonSizes.ICON,
 color: u.Button.Colors.PRIMARY,
 className: y.commandSentCTAButton,
 innerClassName: y.commandSentCTAButtonInner,
-'aria-label': R.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({
+'aria-label': b.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({
   commandName: t.name
 }),
 children: [
   (0, i.jsx)(u.Text, {
     variant: 'text-sm/medium',
     color: 'currentColor',
-    children: R.Z.Messages.SEND
+    children: b.Z.Messages.SEND
   }),
   (0, i.jsx)(s.U, {
     size: 'xs',
@@ -244,7 +244,7 @@ children: [
   });
 }
 
-function D(e) {
+function k(e) {
   var n;
   let {
 channel: t,
@@ -260,7 +260,7 @@ loading: m
 commandType: d.yU.CHAT
   }, {
 placeholderCount: 0,
-limit: b.tn,
+limit: R.tn,
 includeFrecency: !0,
 allowApplicationState: o,
 installOnDemand: o,
@@ -292,14 +292,14 @@ children: [
     channel: t,
     section: p,
     commands: E,
-    headerName: R.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
+    headerName: b.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
     sectionName: r
   }),
   (0, i.jsx)(B, {
     channel: t,
     section: p,
     commands: m.current ? O : h,
-    headerName: R.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
+    headerName: b.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
     sectionName: r,
     children: A && (0, i.jsx)(S.Z, {
       sortOrder: _,

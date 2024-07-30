@@ -27,8 +27,8 @@ transitionState: f
 components: h,
 applicationIconURL: m,
 applicationName: I,
-submissionState: g,
-error: _,
+submissionState: _,
+error: g,
 validators: C,
 onSubmit: b
   } = (0, u.X9)(e, t);
@@ -61,10 +61,10 @@ children: (0, i.jsxs)(o.ModalRoot, {
     }),
     (0, i.jsxs)(o.ModalContent, {
       children: [
-        null != _ && '' !== _ ? (0, i.jsx)(l.Z, {
+        null != g && '' !== g ? (0, i.jsx)(l.Z, {
           messageType: l.Q.ERROR,
           className: p.submissionWarning,
-          children: _
+          children: g
         }) : null,
         (0, i.jsx)(l.Z, {
           messageType: l.Q.WARNING,
@@ -88,7 +88,7 @@ children: (0, i.jsxs)(o.ModalRoot, {
           type: 'submit',
           color: o.Button.Colors.BRAND,
           size: o.Button.Sizes.MEDIUM,
-          submitting: g === s.i.IN_FLIGHT,
+          submitting: _ === s.i.IN_FLIGHT,
           children: c.Z.Messages.SUBMIT
         }),
         (0, i.jsx)(o.Button, {
