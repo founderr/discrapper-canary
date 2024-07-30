@@ -36,7 +36,7 @@ text: (0, i.jsxs)(i.Fragment, {
       children: I ? E.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY : E.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY
     }),
     s.map(e => (0, i.jsx)('div', {
-      className: l()(g.roleTooltipItem),
+      className: g.roleTooltipItem,
       children: (0, i.jsx)(c.Z, {
         role: x[e],
         guildId: h.id
@@ -141,7 +141,6 @@ title: (0, i.jsxs)('div', {
     })
   ]
 }),
-titleClassName: g.__invalid_infoTitle,
 children: (0, i.jsx)(p.WM, {
   children: (0, i.jsx)(p._2, {
     description: (0, i.jsx)('div', {

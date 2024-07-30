@@ -31,19 +31,19 @@ onClick: c,
 className: s()(r.modInfoItem, null != c && r.modInfoAction, u),
 children: [
   null != a && (0, i.jsx)('div', {
-    className: s()(r.modInfoItemIcon),
+    className: r.modInfoItemIcon,
     children: a
   }),
   null != n && (0, i.jsx)('div', {
-    className: s()(r.modInfoItemName),
+    className: r.modInfoItemName,
     children: n
   }),
   (0, i.jsx)('div', {
-    className: s()(r.modInfoItemDescription),
+    className: r.modInfoItemDescription,
     children: t
   }),
   null != c && (0, i.jsx)('div', {
-    className: s()(r.modInfoItemActionIcon),
+    className: r.modInfoItemActionIcon,
     children: (0, i.jsx)(l.ChevronLargeRightIcon, {
       size: 'custom',
       width: o,
@@ -51,7 +51,7 @@ children: [
     })
   }),
   null == c && null != d && (0, i.jsx)('div', {
-    className: s()(r.modInfoItemActionIcon),
+    className: r.modInfoItemActionIcon,
     children: d
   })
 ]
@@ -63,7 +63,7 @@ function u(e) {
 children: t
   } = e;
   return (0, i.jsx)('div', {
-className: s()(r.modInfoItemContainer),
+className: r.modInfoItemContainer,
 children: t
   });
 }

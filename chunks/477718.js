@@ -46,14 +46,14 @@ children: e => {
   var a;
   let {
     onMouseEnter: s,
-    onMouseLeave: r
+    onMouseLeave: l
   } = e;
   return (0, i.jsx)(u.Clickable, {
     tag: 'span',
     className: v.username,
     onClick: A(Z),
     onMouseEnter: s,
-    onMouseLeave: r,
+    onMouseLeave: l,
     children: (0, i.jsxs)(u.Text, {
       variant: 'text-sm/medium',
       tag: 'span',
@@ -61,8 +61,7 @@ children: e => {
         '@',
         (0, i.jsx)(u.NameWithRole, {
           name: x.ZP.getName(n.guildId, null, t.user),
-          color: null !== (a = null == Z ? void 0 : Z.colorString) && void 0 !== a ? a : void 0,
-          className: l()(v.__invalid_memberNameText)
+          color: null !== (a = null == Z ? void 0 : Z.colorString) && void 0 !== a ? a : void 0
         })
       ]
     })
@@ -174,18 +173,15 @@ return null == e || null == n ? [] : I._$(e, n);
   }, [
 t.guildId,
 t.userId
-  ]), null == n || 0 === s.length) ? null : (0, i.jsx)('div', {
-className: l()(Z.__invalid_safetySignalsMainContainer),
-children: (0, i.jsx)(u.FormItem, {
-  title: N.Z.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
-  titleClassName: Z.infoTitle,
-  children: s.length > 0 ? (0, i.jsx)(T.WM, {
-    children: s.map(e => (0, i.jsx)(A, {
-      log: e,
-      member: t,
-      guild: n
-    }, e.id))
-  }) : null
-})
+  ]), null == n || 0 === s.length) ? null : (0, i.jsx)(u.FormItem, {
+title: N.Z.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
+titleClassName: Z.infoTitle,
+children: s.length > 0 ? (0, i.jsx)(T.WM, {
+  children: s.map(e => (0, i.jsx)(A, {
+    log: e,
+    member: t,
+    guild: n
+  }, e.id))
+}) : null
   });
 }

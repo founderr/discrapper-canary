@@ -133,10 +133,10 @@ children: [
 function P(e) {
   let {
 member: t
-  } = e, l = (0, c.e7)([g.Z], () => g.Z.getRoles(t.guildId)), o = a.useMemo(() => null == t.highestRoleId ? t.roles : t.roles.filter(e => null != e && e !== t.highestRoleId).sort((e, t) => {
-var n, a, o, s;
-return null !== (s = null !== (o = null === (n = l[t]) || void 0 === n ? void 0 : n.position) && void 0 !== o ? o : 0 - (null === (a = l[e]) || void 0 === a ? void 0 : a.position)) && void 0 !== s ? s : 0;
-  }), [
+  } = e, l = (0, c.e7)([g.Z], () => g.Z.getRoles(t.guildId)), o = a.useMemo(() => null == t.highestRoleId ? t.roles : Object.values(l).filter(e => e.id !== t.highestRoleId && t.roles.includes(e.id)).sort((e, t) => {
+var l, n;
+return null !== (n = null !== (l = null == e ? void 0 : e.position) && void 0 !== l ? l : 0 - (null == t ? void 0 : t.position)) && void 0 !== n ? n : 0;
+  }).map(e => e.id), [
 t.roles,
 t.highestRoleId,
 l

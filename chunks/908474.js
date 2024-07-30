@@ -41,8 +41,7 @@ children: (0, i.jsxs)(d.WM, {
         size: 'custom',
         color: 'currentColor',
         width: d.Mn,
-        height: d.Mn,
-        className: p.__invalid_unusualDMLabelIcon
+        height: d.Mn
       }),
       name: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
@@ -60,8 +59,7 @@ children: (0, i.jsxs)(d.WM, {
         size: 'custom',
         color: 'currentColor',
         width: d.Mn,
-        height: d.Mn,
-        className: p.__invalid_unusualDMLabelIcon
+        height: d.Mn
       }),
       name: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
