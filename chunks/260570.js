@@ -211,8 +211,8 @@ eR = s()(C.statusBubble, ev, {
   [C.statusBubbleCopyStatusCursor]: en
 }),
 eC = () => {
-  if (Q && (null == W ? void 0 : W.id) == null) {
-    let e = p.ZP.translateSurrogatesToInlineEmoji(W.name);
+  if (Q) {
+    let e = null != W.id ? '`' + ':'.concat(W.name, ':') + '`' : p.ZP.translateSurrogatesToInlineEmoji(W.name);
     return X ? ''.concat(e) : ''.concat(e, ' ').concat(K);
   }
   if (!X)
