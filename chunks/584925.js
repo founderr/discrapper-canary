@@ -1,8 +1,11 @@
 n(47120);
-var i, s = n(442837),
-  a = n(570140);
+var i, a = n(442837),
+  s = n(570140),
+  r = n(70956),
+  l = n(761080),
+  o = n(207205);
 
-function r(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -10,43 +13,46 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let l = 5 * n(70956).Z.Millis.DAY,
-  o = {
+let d = 5 * r.Z.Millis.DAY,
+  u = {
 readIdToTimestampMap: {}
   };
-class c extends(i = s.ZP.DeviceSettingsStore) {
+class _ extends(i = a.ZP.DeviceSettingsStore) {
   initialize(e) {
-o = null != e && null != e.readIdToTimestampMap ? {
+u = null != e && null != e.readIdToTimestampMap ? {
   readIdToTimestampMap: e.readIdToTimestampMap
 } : {
   readIdToTimestampMap: {}
 };
-let t = Date.now() - l;
-for (let e of Object.keys(o.readIdToTimestampMap).filter(e => o.readIdToTimestampMap[e] < t))
-  delete o.readIdToTimestampMap[e];
+let t = Date.now() - d;
+for (let e of Object.keys(u.readIdToTimestampMap).filter(e => u.readIdToTimestampMap[e] < t))
+  delete u.readIdToTimestampMap[e];
   }
   getReadTimestamp(e) {
-return o.readIdToTimestampMap[e];
-  }
-  compare(e, t) {
-let n = o.readIdToTimestampMap[e],
-  i = o.readIdToTimestampMap[t];
-return null == n && null == i ? 0 : null == n ? 1 : null == i ? -1 : n - i;
+return u.readIdToTimestampMap[e];
   }
   getState() {
-return o;
+return u;
   }
   getUserAgnosticState() {
-return o;
+return u;
   }
 }
-r(c, 'displayName', 'GravityUnreadStateStore'), r(c, 'persistKey', 'GravityUnreadStateStore'), t.Z = new c(a.Z, {
+c(_, 'displayName', 'GravityUnreadStateStore'), c(_, 'persistKey', 'GravityUnreadStateStore'), t.Z = new _(s.Z, {
   GRAVITY_ACK_ITEMS: function(e) {
+let {
+  items: t,
+  override: n
+} = e;
+t.forEach(e => {
+  null != e && (null == u.readIdToTimestampMap[e.id] || n) && (u.readIdToTimestampMap[e.id] = e.timestamp);
+});
+  },
+  LOAD_GRAVITY_DEHYDRATED: function(e) {
 let {
   items: t
 } = e;
-t.forEach(e => {
-  null != e && null == o.readIdToTimestampMap[e.id] && (o.readIdToTimestampMap[e.id] = e.timestamp);
-});
+for (let e of t)
+  e.type === l.Rr.MESSAGE ? null == u.readIdToTimestampMap[e.id] && !(0, o.$U)(e.data.channel_id, e.data.message_id) && (u.readIdToTimestampMap[e.id] = 0) : e.type === l.Rr.SUMMARY && null == u.readIdToTimestampMap[e.id] && !(0, o.$U)(e.data.channel_id, e.data.summary_id) && (u.readIdToTimestampMap[e.id] = 0);
   }
 });
