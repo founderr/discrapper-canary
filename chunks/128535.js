@@ -30,7 +30,7 @@ if (0 === e.length)
   });
 let s = [
   (0, c.isWeb)() ? I.Z.Messages.QUEST_PROGRESS_NO_GAME_WEB : I.Z.Messages.QUEST_PROGRESS_NO_GAME,
-  ...e,
+  ...e.map(e => e.message),
   n
 ];
 return (0, i.jsx)(i.Fragment, {

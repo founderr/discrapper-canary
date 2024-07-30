@@ -82,7 +82,7 @@ let e = c.length > 0,
       className: h.microphoneUnitBodyText,
       color: 'text-muted',
       variant: 'text-xxs/normal',
-      children: e
+      children: e.message
     }, t))
   });
 if ((0, m.zK)(t, C.S7.IN_HOUSE_CONSOLE_QUEST))
