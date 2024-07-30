@@ -1,40 +1,40 @@
-i.d(n, {
+n.d(i, {
   Z: function() {
 return U;
   }
-}), i(47120);
-var s = i(735250),
-  l = i(470079),
-  t = i(442837),
-  o = i(481060),
-  a = i(410575),
-  r = i(727637),
-  d = i(58540),
-  c = i(420660),
-  u = i(100527),
-  I = i(906732),
-  _ = i(580552),
-  f = i(680295),
-  m = i(199902),
-  E = i(314897),
-  x = i(158776),
-  v = i(594174),
-  Z = i(785717),
-  h = i(621853),
-  S = i(318661),
-  p = i(726059),
-  g = i(162267),
-  j = i(502762),
-  N = i(62154),
-  T = i(293259),
-  C = i(725954),
-  A = i(228168),
-  y = i(981631),
-  R = i(689938),
-  O = i(376234);
+}), n(47120);
+var s = n(735250),
+  l = n(470079),
+  t = n(442837),
+  o = n(481060),
+  a = n(410575),
+  r = n(727637),
+  d = n(58540),
+  c = n(420660),
+  u = n(100527),
+  I = n(906732),
+  _ = n(580552),
+  f = n(680295),
+  m = n(199902),
+  E = n(314897),
+  x = n(158776),
+  v = n(594174),
+  Z = n(785717),
+  h = n(621853),
+  S = n(318661),
+  p = n(726059),
+  g = n(162267),
+  j = n(502762),
+  T = n(62154),
+  N = n(293259),
+  C = n(725954),
+  A = n(228168),
+  y = n(981631),
+  R = n(689938),
+  O = n(376234);
 
 function L(e) {
-  var n, i;
+  var i, n;
   let {
 user: l,
 isCurrentUser: a,
@@ -42,9 +42,9 @@ section: r,
 setSection: d,
 hasActivity: c
   } = e, u = (0, t.e7)([h.Z], () => {
-var e, n;
-return (null === (n = h.Z.getUserProfile(l.id)) || void 0 === n ? void 0 : null === (e = n.application) || void 0 === e ? void 0 : e.id) != null;
-  }), I = null === (n = (0, p.Z)(l.id, !l.bot && !a).mutualFriends) || void 0 === n ? void 0 : n.length, f = null === (i = (0, g.Z)(l.id, !l.bot && !a).mutualGuilds) || void 0 === i ? void 0 : i.length;
+var e, i;
+return (null === (i = h.Z.getUserProfile(l.id)) || void 0 === i ? void 0 : null === (e = i.application) || void 0 === e ? void 0 : e.id) != null;
+  }), I = null === (i = (0, p.Z)(l.id, !l.bot && !a).mutualFriends) || void 0 === i ? void 0 : i.length, f = null === (n = (0, g.Z)(l.id, !l.bot && !a).mutualGuilds) || void 0 === n ? void 0 : n.length;
   return (0, s.jsx)('div', {
 className: O.tabBarContainer,
 children: (0, s.jsxs)(o.TabBar, {
@@ -88,7 +88,7 @@ children: (0, s.jsxs)(o.TabBar, {
 }
 
 function U(e) {
-  var n, i;
+  var i, n;
   let {
 user: h,
 guildId: p,
@@ -101,7 +101,7 @@ initialSubsection: D,
 transitionState: F,
 sourceAnalyticsLocations: B = [],
 onClose: G
-  } = e, w = null !== (n = (0, t.e7)([v.default], () => v.default.getUser(h.id))) && void 0 !== n ? n : h, k = (0, S.ZP)(null !== (i = w.id) && void 0 !== i ? i : ''), {
+  } = e, w = null !== (i = (0, t.e7)([v.default], () => v.default.getUser(h.id))) && void 0 !== i ? i : h, k = (0, S.ZP)(null !== (n = w.id) && void 0 !== n ? n : ''), {
 analyticsLocations: V
   } = (0, I.ZP)([
 ...B,
@@ -126,9 +126,9 @@ Q = (0, t.e7)([E.default], () => E.default.getId() === w.id),
 X = null != W || H,
 $ = !Q || X,
 ee = l.createRef(),
-en = (0, r.Z)(ee);
+ei = (0, r.Z)(ee);
   !X && J === A.oh.ACTIVITY && q(A.oh.USER_INFO);
-  let ei = l.useCallback(e => {
+  let en = l.useCallback(e => {
   Y({
     action: 'PRESS_SECTION',
     analyticsLocations: V
@@ -162,7 +162,7 @@ children: (0, s.jsx)(Z.Mt, {
           profileType: A.y0.MODAL,
           ref: ee,
           children: [
-            (0, s.jsx)(T.Z, {
+            (0, s.jsx)(N.Z, {
               className: O.topSection,
               displayProfile: k,
               user: w,
@@ -185,13 +185,13 @@ children: (0, s.jsx)(Z.Mt, {
                   $ ? (0, s.jsx)(L, {
                     user: w,
                     section: J === A.oh.USER_INFO_CONNECTIONS ? A.oh.USER_INFO : J,
-                    setSection: ei,
+                    setSection: en,
                     hasActivity: X,
                     isCurrentUser: Q
                   }) : (0, s.jsx)('div', {
                     className: O.divider
                   }),
-                  (0, s.jsx)(N.Z, {
+                  (0, s.jsx)(T.Z, {
                     displayProfile: k,
                     user: w,
                     autoFocusNote: D === A.Tb.NOTE && !z,
@@ -206,7 +206,7 @@ children: (0, s.jsx)(Z.Mt, {
         null != es && (0, s.jsx)(f.Z, {
           profileEffectId: es,
           bannerAdjustment: 0,
-          isHovering: en
+          isHovering: ei
         })
       ]
     })
