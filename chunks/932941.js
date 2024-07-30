@@ -910,4 +910,7 @@ let r = [
 'wigger',
 'zipperhead'
   ],
-  s = ['hunter2'];
+  s = [
+'hunter2',
+'frik'
+  ];
