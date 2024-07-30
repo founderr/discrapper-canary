@@ -1,6 +1,8 @@
 e.exports = {
   clickableCard: 'clickableCard_e0fe28',
   card: 'card_e0fe28',
+  favoriteButton: 'favoriteButton_e0fe28',
+  shownFavoriteButton: 'shownFavoriteButton_e0fe28',
   cardStaticHeight: 'cardStaticHeight_e0fe28',
   clanIconMask: 'clanIconMask_e0fe28',
   clanIconInner: 'clanIconInner_e0fe28',

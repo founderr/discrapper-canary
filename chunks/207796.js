@@ -1,94 +1,114 @@
-t.d(r, {
+n.d(t, {
   GN: function() {
-return h;
+return _;
   },
   PJ: function() {
-return g;
+return h;
   },
   fH: function() {
-return m;
+return E;
   },
   hz: function() {
-return l;
+return i;
   },
   o2: function() {
-return c;
+return a;
+  },
+  qQ: function() {
+return f;
   },
   t1: function() {
 return p;
   },
   v0: function() {
-return o;
+return r;
   }
-});
-var a, n, i, o, l, c, s = t(652874),
-  d = t(868888),
-  u = t(433517);
-(a = o || (o = {})).ADMIN_UPSELL = 'admin_upsell', a.GET_STARTED = 'get_started', a.DISCOVERY = 'discovery', a.PLAYSTYLE = 'playstyle', a.TRAITS = 'traits', a.GAMES = 'games', (n = l || (l = {})).VALORANT = 'valorant', n.GENSHIN = 'genshin', (i = c || (c = {})).USER_UPSELL = 'user_upsell', i.USER_ONBOARDING = 'user_onboarding';
-let h = (0, s.Z)((0, d.tJ)(e => ({
+}), n(47120);
+var r, i, a, s, o, l, u = n(652874),
+  c = n(868888),
+  d = n(433517);
+(s = r || (r = {})).ADMIN_UPSELL = 'admin_upsell', s.GET_STARTED = 'get_started', s.DISCOVERY = 'discovery', s.PLAYSTYLE = 'playstyle', s.TRAITS = 'traits', s.GAMES = 'games', s.SAVED_GUILDS = 'saved_guilds', (o = i || (i = {})).VALORANT = 'valorant', o.GENSHIN = 'genshin', (l = a || (a = {})).USER_UPSELL = 'user_upsell', l.USER_ONBOARDING = 'user_onboarding';
+let _ = (0, u.Z)((0, c.tJ)(e => ({
   mode: 'admin_upsell',
   previousMode: 'admin_upsell',
   game: 'valorant',
   started: !1,
   userUpsellScreen: 'user_upsell',
+  savedGuildIds: [],
   selectedGames: [],
   selectedPlaystyle: null,
   selectedTraits: [],
-  setGame: r => e({
-game: r
+  setSavedGuildIds: t => e({
+savedGuildIds: t
   }),
-  setSelectedGames: r => e({
-selectedGames: r
+  setGame: t => e({
+game: t
   }),
-  setSelectedPlaystyle: r => e({
-selectedPlaystyle: r,
+  setSelectedGames: t => e({
+selectedGames: t
+  }),
+  setSelectedPlaystyle: t => e({
+selectedPlaystyle: t,
 started: !0
   }),
-  setSelectedTraits: r => e({
-selectedTraits: r,
+  setSelectedTraits: t => e({
+selectedTraits: t,
 started: !0
   }),
-  setUserUpsellScreen: r => e({
-userUpsellScreen: r
+  setUserUpsellScreen: t => e({
+userUpsellScreen: t
   })
 }), {
   name: 'clan-discovery',
   getStorage: () => ({
 getItem: e => {
-  var r;
-  return null !== (r = u.K.get(e)) && void 0 !== r ? r : null;
+  var t;
+  return null !== (t = d.K.get(e)) && void 0 !== t ? t : null;
 },
-setItem: (e, r) => u.K.set(e, r),
-removeItem: e => u.K.remove(e)
+setItem: (e, t) => d.K.set(e, t),
+removeItem: e => d.K.remove(e)
   }),
   partialize: e => ({
 mode: e.mode,
 game: e.game,
 started: e.started,
+savedGuildIds: e.savedGuildIds,
 selectedGames: e.selectedGames,
 selectedPlaystyle: e.selectedPlaystyle,
 selectedTraits: e.selectedTraits
   })
 }));
 
-function m(e) {
-  let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-t = h.getState().mode,
-a = h.getState().started;
-  h.setState({
+function E(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+n = _.getState().mode,
+r = _.getState().started;
+  _.setState({
 mode: e,
-previousMode: t,
-started: r || a
+previousMode: n,
+started: t || r
   });
 }
 
-function g() {
-  h.setState({
+function f(e, t) {
+  let n = _.getState().savedGuildIds,
+r = t ? [
+  ...n,
+  e
+] : n.filter(t => t !== e);
+  _.setState({
+savedGuildIds: r
+  });
+}
+
+function h() {
+  _.setState({
 started: !1,
 mode: 'admin_upsell',
 previousMode: 'admin_upsell',
 game: 'valorant',
 userUpsellScreen: 'user_upsell',
+savedGuildIds: [],
 selectedGames: [],
 selectedPlaystyle: null,
 selectedTraits: []
@@ -96,12 +116,12 @@ selectedTraits: []
 }
 
 function p(e) {
-  var r;
-  let t = e.selectedGames,
-a = null !== (r = e.selectedPlaystyle) && void 0 !== r ? r : void 0;
+  var t;
+  let n = e.selectedGames,
+r = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;
   return {
-games: t,
-playstyle: a,
+games: n,
+playstyle: r,
 traits: e.selectedTraits
   };
 }

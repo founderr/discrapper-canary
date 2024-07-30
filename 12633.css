@@ -17040,6 +17040,29 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     flex-direction: column
 }
 
+.favoriteButton_e0fe28 {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    height: 18px;
+    width: 18px;
+    padding: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--bg-surface-overlay);
+    opacity: 0;
+    transition: opacity.2s ease-in-out, background-color 64ms ease-in-out
+}
+
+.shownFavoriteButton_e0fe28 {
+    opacity: 1
+}
+
+.favoriteButton_e0fe28:hover,
+.favoriteButton_e0fe28:active {
+    background-color: var(--bg-surface-raised)
+}
+
 .cardStaticHeight_e0fe28 {
     height: 400px
 }
