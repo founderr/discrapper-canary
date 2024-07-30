@@ -5,6 +5,8 @@ e.exports = {
   gapSm: 'gapSm_e881fc',
   gapMd: 'gapMd_e881fc',
   clickable: 'clickable_e881fc',
+  linkIcon: 'linkIcon_e881fc',
+  linkAnchor: 'linkAnchor_e881fc',
   content: 'content_e881fc',
   section: 'section_e881fc',
   padded: 'padded_e881fc',
