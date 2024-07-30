@@ -1,73 +1,78 @@
 n.d(t, {
   Z: function() {
-return d;
+return p;
   }
 });
 var i = n(735250);
 n(470079);
-var a = n(873546),
-  s = n(481060),
-  l = n(130402),
-  r = n(404975),
-  o = n(185923),
-  c = n(689938),
-  u = n(480283);
+var a = n(120356),
+  s = n.n(a),
+  l = n(873546),
+  r = n(481060),
+  o = n(130402),
+  c = n(404975),
+  u = n(185923),
+  d = n(689938),
+  h = n(480283);
 
-function d(e) {
+function p(e) {
   let {
 channel: t,
 message: n,
-togglePopout: d,
-renderEmojiPicker: h,
-shouldShow: p
+togglePopout: a,
+renderEmojiPicker: p,
+shouldShow: m,
+buttonClassName: _,
+iconClassName: f
   } = e;
-  return (0, i.jsx)(s.Popout, {
-animation: s.Popout.Animation.FADE,
+  return (0, i.jsx)(r.Popout, {
+animation: r.Popout.Animation.FADE,
 renderPopout: e => {
   let {
     closePopout: i
   } = e;
-  return h(t, n, i, !1);
+  return p(t, n, i, !1);
 },
-shouldShow: p,
-onRequestClose: d,
-position: a.tq ? 'top' : 'left',
-align: a.tq ? 'center' : 'top',
+shouldShow: m,
+onRequestClose: a,
+position: l.tq ? 'top' : 'left',
+align: l.tq ? 'center' : 'top',
 children: (e, t) => {
   let {
     onClick: n,
-    ...a
+    ...l
   } = e, {
-    isShown: h
+    isShown: p
   } = t;
-  return (0, i.jsx)(s.Tooltip, {
+  return (0, i.jsx)(r.Tooltip, {
     disableTooltipPointerEvents: !1,
-    text: c.Z.Messages.ADD_REACTION,
-    color: s.TooltipColors.PRIMARY,
-    'aria-label': c.Z.Messages.ADD_REACTION,
+    text: d.Z.Messages.ADD_REACTION,
+    color: r.TooltipColors.PRIMARY,
+    'aria-label': d.Z.Messages.ADD_REACTION,
     hideOnClick: !0,
-    tooltipClassName: u.tooltip,
+    tooltipClassName: h.tooltip,
     children: e => {
       let {
         onMouseEnter: t,
         onMouseLeave: n,
-        onClick: p
+        onClick: m
       } = e;
-      return (0, i.jsx)(r.zx, {
+      return (0, i.jsx)(c.zx, {
+        className: _,
         onMouseEnter: () => {
-          null == t || t(), (0, l.x)(o.qR.MessageContextMenuMouseEntered);
+          null == t || t(), (0, o.x)(u.qR.MessageContextMenuMouseEntered);
         },
         onMouseLeave: n,
         onClick: () => {
-          d(), null == p || p();
+          a(), null == m || m();
         },
-        'aria-label': c.Z.Messages.ADD_REACTION,
-        selected: h,
-        ...a,
-        children: (0, i.jsx)(s.ReactionIcon, {
+        'aria-label': d.Z.Messages.ADD_REACTION,
+        selected: p,
+        ...l,
+        children: (0, i.jsx)(r.ReactionIcon, {
           size: 'sm',
           color: 'currentColor',
-          className: u.icon
+          className: s()(h.icon, f)
         })
       });
     }
