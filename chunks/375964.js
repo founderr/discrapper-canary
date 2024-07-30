@@ -8302,6 +8302,7 @@ e.exports = Object.freeze({
   VERIFICATION_FOOTER_SUPPORT: '[Support]({supportURL})',
   VERIFICATION_FOOTER_LOGOUT: '[Log Out](logoutOnClick)',
   VERIFY_BY_PHONE_FORMATTED: 'Verify by\n**Phone**',
+  VERIFICATION_HEADER_MORE_OPTIONS_BUTTON_LABEL: 'More options',
   START_VERIFICATION_BUTTON: 'Start Verification',
   START_PHONE_VERIFICATION_BUTTON: 'Verify by Phone',
   START_PHONE_REVERIFICATION_BUTTON: 'Re-verify by Phone',
