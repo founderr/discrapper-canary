@@ -48,7 +48,7 @@ children: [
   (0, i.jsx)('div', {
     className: T.heroAssetWrapper,
     children: L ? (0, i.jsx)(I.Fl, {
-      id: 'QuestBarV2ContentExpanded_heroAnimated',
+      id: 'QuestTileBanner_heroAnimated',
       children: e => (null != e.current && (M.current = e.current), (0, i.jsx)(u.Z, {
         ref: e,
         autoPlay: !O && a,
@@ -65,7 +65,7 @@ children: [
       id: 'QuestTileBanner',
       children: e => (0, i.jsx)('img', {
         ref: e,
-        alt: '',
+        alt: ''.concat(n.config.messages.questName),
         className: T.heroAsset,
         src: N
       })
