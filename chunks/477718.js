@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(472596),
   f = n(987707),
   E = n(501801),
-  C = n(271383),
-  g = n(430824),
+  g = n(271383),
+  C = n(430824),
   I = n(274730),
   x = n(5192),
   T = n(776767),
@@ -35,7 +35,7 @@ member: n,
 guild: s
   } = e, {
 analyticsLocations: r
-  } = (0, h.ZP)(), d = p.nm(t), f = p.QM(t), g = p.of(t), I = p.J5(t), T = (0, m.LJ)(t.id), Z = (0, c.e7)([C.ZP], () => null != t.userId ? C.ZP.getMember(n.guildId, t.userId) : null, [
+  } = (0, h.ZP)(), d = p.nm(t), f = p.QM(t), C = p.of(t), I = p.J5(t), T = (0, m.LJ)(t.id), Z = (0, c.e7)([g.ZP], () => null != t.userId ? g.ZP.getMember(n.guildId, t.userId) : null, [
 n.guildId,
 t.userId
   ]), A = a.useCallback(e => t => {
@@ -109,7 +109,7 @@ children: [
       })
     ]
   }),
-  null != g && (0, i.jsx)('div', {
+  null != C && (0, i.jsx)('div', {
     className: v.auditLogSecondaryContainer,
     children: (0, i.jsxs)('div', {
       className: v.auditLogReason,
@@ -119,12 +119,12 @@ children: [
           variant: 'text-sm/normal',
           color: 'text-muted',
           tag: 'span',
-          children: g
+          children: C
         })
       ]
     })
   }),
-  null == g && null != I && (0, i.jsx)('div', {
+  null == C && null != I && (0, i.jsx)('div', {
     className: v.auditLogSecondaryContainer,
     children: (0, i.jsxs)('div', {
       className: v.auditLogSecondary,
@@ -139,7 +139,7 @@ children: [
       ]
     })
   }),
-  null == g && null == I && (0, i.jsx)('div', {
+  null == C && null == I && (0, i.jsx)('div', {
     className: v.auditLogSecondaryContainer,
     children: (0, i.jsx)('div', {
       className: v.auditLogSecondary,
@@ -163,7 +163,7 @@ children: [
 function M(e) {
   let {
 member: t
-  } = e, n = (0, c.e7)([g.Z], () => g.Z.getGuild(t.guildId), [t.guildId]), s = (0, c.e7)([f.Z], () => {
+  } = e, n = (0, c.e7)([C.Z], () => C.Z.getGuild(t.guildId), [t.guildId]), s = (0, c.e7)([f.Z], () => {
 let e = f.Z.logs;
 return null == e || null == n ? [] : I._$(e, n);
   }, [n]);

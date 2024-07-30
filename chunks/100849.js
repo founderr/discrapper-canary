@@ -33,8 +33,8 @@ h
 g,
 p
   ]), {
-analyticsLocations: T,
-newestAnalyticsLocation: N
+analyticsLocations: N,
+newestAnalyticsLocation: T
   } = (0, u.ZP)(), {
 trackUserProfileAction: C,
 ...A
@@ -51,7 +51,7 @@ children: [
   h ? (0, s.jsx)(d.Z, {
     type: i,
     user: n,
-    source: N,
+    source: T,
     className: x.userProfileActivity,
     showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
     activity: g,
@@ -68,7 +68,7 @@ children: [
         activityPlatform: null == g ? void 0 : g.platform,
         activitySessionId: null == g ? void 0 : g.session_id,
         applicationId: null == g ? void 0 : g.application_id,
-        analyticsLocations: T,
+        analyticsLocations: N,
         ...A
       });
     }
@@ -78,7 +78,7 @@ children: [
     activity: e,
     user: n,
     useStoreStream: !1,
-    source: N,
+    source: T,
     className: o()(x.userProfileActivity, i === c.Y.SIMPLIFIED_PROFILE && x.simplifiedProfileActivity),
     showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
     actionColor: x.actionColor,
@@ -94,7 +94,7 @@ children: [
         activityPlatform: e.platform,
         activitySessionId: e.session_id,
         applicationId: e.application_id,
-        analyticsLocations: T,
+        analyticsLocations: N,
         ...A
       });
     }

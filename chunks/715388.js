@@ -32,7 +32,7 @@ subsection: p,
 onClose: g
   } = e, {
 trackUserProfileAction: j
-  } = (0, c.KZ)(), T = (0, l.e7)([r.Z], () => (null == S ? void 0 : S.guildId) != null ? r.Z.getGuild(S.guildId) : null), N = (0, l.e7)([u.Z], () => {
+  } = (0, c.KZ)(), N = (0, l.e7)([r.Z], () => (null == S ? void 0 : S.guildId) != null ? r.Z.getGuild(S.guildId) : null), T = (0, l.e7)([u.Z], () => {
 var e;
 return null === (e = u.Z.getUserProfile(i.id)) || void 0 === e ? void 0 : e.application;
   }), C = (0, l.e7)([
@@ -47,17 +47,17 @@ children: [
     userBio: S.bio,
     setLineClamp: !1
   }),
-  (null == N ? void 0 : N.popularApplicationCommandIds) != null && null != C && (0, s.jsx)(_.Z, {
-    applicationId: N.id,
-    commandIds: N.popularApplicationCommandIds,
+  (null == T ? void 0 : T.popularApplicationCommandIds) != null && null != C && (0, s.jsx)(_.Z, {
+    applicationId: T.id,
+    commandIds: T.popularApplicationCommandIds,
     channel: C,
     guildId: null !== (n = null == S ? void 0 : S.guildId) && void 0 !== n ? n : void 0,
     onClick: g
   }),
-  null != T && (0, s.jsx)(E.Z, {
+  null != N && (0, s.jsx)(E.Z, {
     user: i,
     currentUser: h,
-    guild: T,
+    guild: N,
     scrollIntoView: p === x.Tb.ROLES
   }),
   (0, s.jsx)(m.Z, {

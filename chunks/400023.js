@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(160404),
   f = n(765104),
   E = n(695346),
-  C = n(314897),
-  g = n(323873),
+  g = n(314897),
+  C = n(323873),
   I = n(607744),
   x = n(375954),
   T = n(496675),
@@ -42,8 +42,8 @@ scrollerClassName: p,
 channel: m,
 messages: f,
 unreadCount: E,
-showNewMessagesBar: C,
-messageDisplayCompact: g,
+showNewMessagesBar: g,
+messageDisplayCompact: C,
 channelStream: I,
 uploads: x,
 hasUnreads: N,
@@ -53,7 +53,7 @@ keyboardModeEnabled: Z,
 filterAfterTimestamp: M,
 showingQuarantineBanner: b,
 hideSummaries: k = !1
-  } = e, [U, w] = a.useState(!1), B = a.useMemo(() => g ? (0, R.aJ)({
+  } = e, [U, w] = a.useState(!1), B = a.useMemo(() => C ? (0, R.aJ)({
 compact: !0,
 messageGroups: 30,
 groupRange: 4,
@@ -68,13 +68,13 @@ attachments: 8,
 fontSize: S,
 groupSpacing: d
   }), [
-g,
+C,
 S,
 d
   ]), H = (0, L.ZP)({
 messages: f,
 channel: m,
-compact: g,
+compact: C,
 hasUnreads: N,
 focusId: v,
 placeholderHeight: B.totalHeight,
@@ -98,8 +98,8 @@ hasMoreAfter: f.hasMoreAfter
   channel: m,
   messages: f,
   unreadCount: E,
-  showNewMessagesBar: C,
-  messageDisplayCompact: g,
+  showNewMessagesBar: g,
+  messageDisplayCompact: C,
   channelStream: I,
   uploads: x,
   loadMore: H.loadMore,
@@ -290,7 +290,7 @@ let i = (0, o.e7)([x.Z], () => x.Z.getMessages(e.id), [e.id]),
   }, {
     autoTrackExposure: !1
   }),
-  r = null !== (n = null === (t = S.default.getUser(C.default.getId())) || void 0 === t ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && void 0 !== n && n,
+  r = null !== (n = null === (t = S.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && void 0 !== n && n,
   c = (0, d.ts)(e),
   u = (0, p.Z)('use_topic_dividers_in_chat'),
   h = (0, o.Wu)([f.Z], () => {
@@ -324,9 +324,9 @@ return {
   messages: i,
   channelStream: E,
   oldestUnreadMessageId: s,
-  editingMessageId: (0, o.e7)([g.Z], () => {
+  editingMessageId: (0, o.e7)([C.Z], () => {
     var t;
-    return null === (t = g.Z.getEditingMessage(e.id)) || void 0 === t ? void 0 : t.id;
+    return null === (t = C.Z.getEditingMessage(e.id)) || void 0 === t ? void 0 : t.id;
   })
 };
   }(t);

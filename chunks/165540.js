@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(827498),
   f = n(663924),
   E = n(998698),
-  C = n(605236),
-  g = n(665906),
+  g = n(605236),
+  C = n(665906),
   I = n(271383),
   x = n(496675),
   T = n(594174),
@@ -29,7 +29,7 @@ let b = a.forwardRef(function(e, t) {
   let {
 type: n
   } = e, [s, r] = a.useState(!1), p = (0, o.e7)([m.Z], () => m.Z.shouldShowPopup()), f = a.useCallback(() => {
-(0, d.yw)(v.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.y(_.ti.DISMISSED) : ((0, C.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
+(0, d.yw)(v.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.y(_.ti.DISMISSED) : ((0, g.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
   dismissAction: Z.L.TAKE_ACTION
 }), h._(_._b.TEXT, n));
   }, [
@@ -37,7 +37,7 @@ p,
 n
   ]), E = () => {
 r(!0);
-  }, g = () => {
+  }, C = () => {
 r(!1);
   };
   return (0, i.jsx)('div', {
@@ -51,9 +51,9 @@ children: (0, i.jsx)(u.Button, {
   onClick: f,
   onMouseEnter: E,
   onMouseOver: E,
-  onMouseLeave: g,
+  onMouseLeave: C,
   onFocus: E,
-  onBlur: g,
+  onBlur: C,
   'aria-label': A.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
   focusProps: {
     offset: {
@@ -92,7 +92,7 @@ let n = e.getGuildId(),
       l = x.Z.computePermissions(e),
       o = r.e$(l, v.Plq.CREATE_PUBLIC_THREADS) || r.e$(l, v.Plq.CREATE_PRIVATE_THREADS),
       c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(l, v.Plq.SEND_MESSAGES)),
-      u = (0, g.xl)(e);
+      u = (0, C.xl)(e);
     return {
       messagesDisabled: i || !s && !c || u
     };

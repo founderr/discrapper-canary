@@ -23,8 +23,8 @@ m = (0, a.e7)([c.default], () => c.default.getUser(t)),
 _ = (0, a.e7)([r.Z], () => r.Z.getStatus(t)),
 f = (0, a.e7)([r.Z], () => r.Z.isMobileOnline(t)),
 E = (0, a.e7)([o.Z], () => o.Z.getNickname(t)),
-C = u.ZP.useUserTag(m),
-g = (0, l.m$)({
+g = u.ZP.useUserTag(m),
+C = (0, l.m$)({
   channelId: e.channel.id,
   location: 'HeaderBarDirectMessageV2'
 });
@@ -51,11 +51,11 @@ children: [
     children: (0, i.jsxs)(i.Fragment, {
       children: [
         (0, i.jsx)(s.TooltipContainer, {
-          text: C,
+          text: g,
           position: 'bottom',
           children: null != E ? E : u.ZP.getName(m)
         }),
-        g && (0, i.jsx)(s.ShieldLockIcon, {
+        C && (0, i.jsx)(s.ShieldLockIcon, {
           size: 'xxs',
           'aria-label': h.Z.Messages.E2EE_CALL_VERIFIED_A11Y,
           color: s.tokens.colors.INTERACTIVE_NORMAL,

@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(517525),
   f = n(665149),
   E = n(6242),
-  C = n(757692),
-  g = n(141321),
+  g = n(757692),
+  C = n(141321),
   I = n(44136),
   x = n(651183),
   T = n(618158),
@@ -89,7 +89,7 @@ userParticipantCount: H
 selectedParticipant: y.Z.getSelectedParticipant(I),
 voiceParticipantsHidden: y.Z.getVoiceParticipantsHidden(I),
 userParticipantCount: y.Z.getUserParticipantCount(I)
-  }), [I]), F = (0, u.e7)([j.default], () => j.default.getCurrentUser()), W = (0, D.Z)(n), z = (0, O.So)(c.q.STREAM_HIGH_QUALITY), Y = (0, C.o)(L, F), K = (0, E.lL)('CallHeader', !0, F, Y), {
+  }), [I]), F = (0, u.e7)([j.default], () => j.default.getCurrentUser()), W = (0, D.Z)(n), z = (0, O.So)(c.q.STREAM_HIGH_QUALITY), Y = (0, g.o)(L, F), K = (0, E.lL)('CallHeader', !0, F, Y), {
 preventIdle: q,
 allowIdle: X
   } = (0, T.Y)('popup'), Q = [];
@@ -148,7 +148,7 @@ channelId: I,
 isHorizontal: !0
   }, 'select-participant')), !t && Q.push((0, i.jsx)(h.Z, {
 className: G.button
-  }, 'clips')), Q.push((0, i.jsx)(g.Z, {
+  }, 'clips')), Q.push((0, i.jsx)(C.Z, {
 onOpen: q,
 onClose: X,
 className: G.button

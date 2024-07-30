@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(103575),
   f = n(158776),
   E = n(699516),
-  C = n(111583),
-  g = n(594174),
+  g = n(111583),
+  C = n(594174),
   I = n(360048),
   x = n(151827),
   T = n(626135),
@@ -42,7 +42,7 @@ user: t,
 channel: a,
 status: u,
 activities: d
-  } = e, h = (0, l.e7)([C.Z], () => null != C.Z.getTypingUsers(a.id)[t.id]), p = (0, l.e7)([g.default], () => g.default.getCurrentUser()), I = (0, l.e7)([f.Z], () => f.Z.isMobileOnline(t.id)), x = (0, l.e7)([E.Z], () => E.Z.getNickname(t.id)), T = e => {
+  } = e, h = (0, l.e7)([g.Z], () => null != g.Z.getTypingUsers(a.id)[t.id]), p = (0, l.e7)([C.default], () => C.default.getCurrentUser()), I = (0, l.e7)([f.Z], () => f.Z.isMobileOnline(t.id)), x = (0, l.e7)([E.Z], () => E.Z.getNickname(t.id)), T = e => {
 (0, o.jW)(e, async () => {
   let {
     default: e
@@ -182,21 +182,21 @@ function U(e) {
   var t;
   let {
 channel: s
-  } = e, o = g.default.getCurrentUser(), c = null == o ? void 0 : o.isStaff(), {
+  } = e, o = C.default.getCurrentUser(), c = null == o ? void 0 : o.isStaff(), {
 analyticsLocations: _
   } = (0, d.ZP)(u.Z.MEMBER_LIST);
   let {
-listItems: C
+listItems: g
   } = (t = s, (0, l.e7)([
 E.Z,
-g.default,
+C.default,
 f.Z
   ], () => {
-let e = (0, S.T)(t.recipients, g.default),
+let e = (0, S.T)(t.recipients, C.default),
   n = {};
 for (let t of e) {
   var i, a, s;
-  E.Z.isFriend(t.id) || t.id === (null === (i = g.default.getCurrentUser()) || void 0 === i ? void 0 : i.id) ? n[t.id] = {
+  E.Z.isFriend(t.id) || t.id === (null === (i = C.default.getCurrentUser()) || void 0 === i ? void 0 : i.id) ? n[t.id] = {
     status: null !== (a = f.Z.getStatus(t.id)) && void 0 !== a ? a : b.Skl.OFFLINE,
     activities: null !== (s = f.Z.getActivities(t.id)) && void 0 !== s ? s : P
   } : n[t.id] = {
@@ -227,14 +227,14 @@ channelId: s.id
   });
   a.useEffect(() => {
 if (c)
-  for (let e of C)
+  for (let e of g)
     (0, m.W)(e.user, {
       dispatchWait: !0,
       channelId: s.id
     });
   }, [
 c,
-C,
+g,
 s.id
   ]), a.useEffect(() => {
 T.default.track(b.rMx.MEMBER_LIST_VIEWED, {
@@ -247,7 +247,7 @@ s.guild_id,
 s.id,
 s.type
   ]);
-  let O = c && C.every(e => e.user.isStaff());
+  let O = c && g.every(e => e.user.isStaff());
   return (0, i.jsx)(d.Gt, {
 value: _,
 children: (0, i.jsx)('div', {
@@ -259,14 +259,14 @@ children: (0, i.jsx)('div', {
       (0, i.jsxs)(x.Z, {
         className: L.membersGroup,
         children: [
-          ''.concat(R.Z.Messages.MEMBERS, '\u2014').concat(C.length, ' '),
+          ''.concat(R.Z.Messages.MEMBERS, '\u2014').concat(g.length, ' '),
           O ? (0, i.jsx)(h.Z, {
             className: L.__invalid_decorator,
             type: h.Z.Types.STAFF_ONLY_DM
           }) : null
         ]
       }),
-      C.map(e => (0, i.jsx)(y, {
+      g.map(e => (0, i.jsx)(y, {
         user: e.user,
         status: e.status,
         activities: e.activities,

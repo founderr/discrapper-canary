@@ -13,8 +13,8 @@ var i, a = n(735250),
   _ = n(607070),
   f = n(899663),
   E = n(317381),
-  C = n(496616),
-  g = n(100527),
+  g = n(496616),
+  C = n(100527),
   I = n(906732),
   x = n(168551),
   T = n(597952),
@@ -134,8 +134,8 @@ let {
   reducedMotionEnabled: d,
   fontScaleClass: _,
   saturation: E,
-  withTitleBar: C,
-  guestWindow: g,
+  withTitleBar: g,
+  guestWindow: C,
   clientThemesClassName: I,
   contentClassName: x
 } = this.props, S = (0, O.getPlatform)(), Z = r()(_, {
@@ -163,13 +163,13 @@ return (0, a.jsx)(u.VK, {
                   (0, a.jsx)(P.Co, {}),
                   (0, a.jsx)(m.Wu, {
                     appContext: w.IlC.POPOUT,
-                    renderWindow: g,
+                    renderWindow: C,
                     children: (0, a.jsxs)(L.yP, {
                       children: [
                         (0, a.jsxs)('div', {
                           className: H.popout,
                           children: [
-                            C && null != S ? (0, a.jsx)(v.Z, {
+                            g && null != S ? (0, a.jsx)(v.Z, {
                               focused: n,
                               type: S,
                               windowKey: l,
@@ -201,7 +201,7 @@ return (0, a.jsx)(u.VK, {
 super(...e), G(this, 'rootRef', s.createRef()), G(this, '_cleanupWindowActionCreators', void 0), G(this, 'warnPopoutClose', e => {
   if (this.props.connectedToEmbeddedActivity && !R.ZP.disableEmbeddedActivityPopOutAlert) {
     if (e.returnValue = B.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, !!O.isPlatformEmbedded)
-      (0, C.Z)(() => {
+      (0, g.Z)(() => {
         U.Z.unmountWindow(this.props.windowKey), O.isPlatformEmbedded && D.ZP.close(this.props.windowKey);
       });
   }
@@ -242,7 +242,7 @@ o = (0, d.e7)([_.Z], () => _.Z.useForcedColors ? 'yes' : 'no'),
   keyboardModeEnabled: p,
   reducedMotionEnabled: m,
   fontScaleClass: f,
-  saturation: C,
+  saturation: g,
   systemForcedColors: T,
   useForcedColors: N
 } = (0, d.cj)([_.Z], () => ({
@@ -259,7 +259,7 @@ v = (0, d.e7)([E.ZP], () => null != e.channelId && null !== E.ZP.getSelfEmbedded
   let A = (0, Z.Z)(n, i),
 {
   analyticsLocations: R
-} = (0, I.ZP)(g.Z.POPOUT_WINDOW),
+} = (0, I.ZP)(C.Z.POPOUT_WINDOW),
 {
   clientThemesClassName: L,
   clientThemesCSS: P
@@ -284,7 +284,7 @@ children: (0, a.jsx)(I.Gt, {
     reducedMotionEnabled: m,
     connectedToEmbeddedActivity: v,
     fontScaleClass: f,
-    saturation: C,
+    saturation: g,
     clientThemesClassName: L,
     clientThemesCSS: P
   })

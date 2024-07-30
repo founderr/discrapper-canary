@@ -18,13 +18,13 @@ buttonRef: t,
 dismissed: n,
 onDismiss: d,
 renderComponent: h
-  } = e, p = a.useContext(c.h9), [m, _] = a.useState(''), [f, E] = a.useState(!1), C = (0, s.e7)([o.ZP], () => o.ZP.callHeaderHeight), g = a.createRef(), I = a.useRef(0);
+  } = e, p = a.useContext(c.h9), [m, _] = a.useState(''), [f, E] = a.useState(!1), g = (0, s.e7)([o.ZP], () => o.ZP.callHeaderHeight), C = a.createRef(), I = a.useRef(0);
   a.useEffect(() => {
 var e, t;
-_(String(I.current)), E(void 0 !== C && C < (null !== (t = null === (e = g.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), I.current += 1;
+_(String(I.current)), E(void 0 !== g && g < (null !== (t = null === (e = C.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), I.current += 1;
   }, [
-C,
-g
+g,
+C
   ]);
   let {
 preventIdle: x,
@@ -39,7 +39,7 @@ children: (0, i.jsx)(l.ReferencePositionLayer, {
   nudgeAlignIntoViewport: !1,
   positionKey: m,
   children: () => (0, i.jsx)('div', {
-    ref: g,
+    ref: C,
     onMouseOver: x,
     onFocus: x,
     onBlur: T,

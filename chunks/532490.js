@@ -16,8 +16,8 @@ var i, a, s = n(735250),
   _ = n(594174),
   f = n(5192),
   E = n(603368),
-  C = n(856682),
-  g = n(284019),
+  g = n(856682),
+  C = n(284019),
   I = n(689938),
   x = n(333626);
 (a = i || (i = {})).LEFT = 'left', a.RIGHT = 'right';
@@ -104,7 +104,7 @@ J = (0, d.useTransition)(a, {
   return (0, s.jsx)('div', {
 className: o()(x.container, Z),
 ref: U,
-children: (0, s.jsx)(C.Z, {
+children: (0, s.jsx)(g.Z, {
   fullHeight: A,
   children: (0, s.jsxs)('div', {
     className: o()(x.overviewSidebarWrapper, A && x.fullHeight),
@@ -140,7 +140,7 @@ children: (0, s.jsx)(C.Z, {
                   children: [
                     (0, s.jsx)('div', {
                       className: x.signContainerButton,
-                      children: (0, s.jsxs)(g.Z, {
+                      children: (0, s.jsxs)(C.Z, {
                         themeColor: K,
                         className: x.signButton,
                         size: d.Button.Sizes.SMALL,

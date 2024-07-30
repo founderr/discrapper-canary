@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(601964),
   f = n(430824),
   E = n(806519),
-  C = n(404975),
-  g = n(768581),
+  g = n(404975),
+  C = n(768581),
   I = n(683818),
   x = n(16853),
   T = n(981631),
@@ -58,7 +58,7 @@ canEdit: c
 className: l()(v.actionButtonsContainer, {
   [v.forceButtonsShow]: s
 }),
-children: (0, i.jsxs)(C.ZP, {
+children: (0, i.jsxs)(g.ZP, {
   children: [
     c ? (0, i.jsx)(o.Tooltip, {
       text: N.Z.Messages.HUB_ENTRY_UPDATE,
@@ -68,7 +68,7 @@ children: (0, i.jsxs)(C.ZP, {
           onClick: a,
           ...s
         } = e;
-        return (0, i.jsx)(C.zx, {
+        return (0, i.jsx)(g.zx, {
           ...s,
           onClick: () => {
             null == a || a(), (0, o.openModalLazy)(async () => {
@@ -108,7 +108,7 @@ children: (0, i.jsxs)(C.ZP, {
               onClick: a,
               ...s
             } = e;
-            return (0, i.jsx)(C.zx, {
+            return (0, i.jsx)(g.zx, {
               ...n,
               ...s,
               onClick: e => {
@@ -133,20 +133,20 @@ t.Z = e => {
   var t;
   let {
 entry: s
-  } = e, [l, C] = a.useState(!1), I = null != (0, r.e7)([f.Z], () => f.Z.getGuild(s.guildId)), x = async () => {
-C(!0);
+  } = e, [l, g] = a.useState(!1), I = null != (0, r.e7)([f.Z], () => f.Z.getGuild(s.guildId)), x = async () => {
+g(!0);
 try {
   I ? (0, m.X)(s.guildId) : await u.Z.joinGuild(s.guildId, {
     source: T.vtS.DIRECTORY_ENTRY
   });
 } finally {
-  C(!1);
+  g(!1);
 }
-  }, S = g.ZP.getGuildSplashURL({
+  }, S = C.ZP.getGuildSplashURL({
 id: s.guildId,
 splash: s.splash,
 size: 300 * (0, p.x_)()
-  }), Z = null !== (t = g.ZP.getGuildIconURL({
+  }), Z = null !== (t = C.ZP.getGuildIconURL({
 id: s.guildId,
 icon: s.icon,
 size: 40

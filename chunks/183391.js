@@ -1,8 +1,8 @@
 s(47120);
 var n = s(735250),
-  l = s(470079),
-  t = s(120356),
-  r = s.n(t),
+  t = s(470079),
+  l = s(120356),
+  r = s.n(l),
   i = s(643872),
   o = s(481060),
   c = s(570140),
@@ -23,17 +23,17 @@ let {
   invite: a,
   trackClick: s
 } = e, {
-  approximate_member_count: l,
-  guild: t
+  approximate_member_count: t,
+  guild: l
 } = a;
-if (null == t)
+if (null == l)
   return null;
-let i = _.Z.isMember(t.id);
-if (!(null == t ? void 0 : t.features.includes('VERIFIED')) && !(null == t ? void 0 : t.features.includes('PARTNER')))
+let i = _.Z.isMember(l.id);
+if (!(null == l ? void 0 : l.features.includes('VERIFIED')) && !(null == l ? void 0 : l.features.includes('PARTNER')))
   return null;
 let E = d.ZP.getGuildIconURL({
-  id: t.id,
-  icon: t.icon,
+  id: l.id,
+  icon: l.icon,
   size: 32
 });
 return (0, n.jsxs)('div', {
@@ -50,7 +50,7 @@ return (0, n.jsxs)('div', {
           className: N.icon,
           src: E,
           alt: A.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({
-            guildName: t.name
+            guildName: l.name
           })
         }),
         (0, n.jsxs)('div', {
@@ -58,12 +58,12 @@ return (0, n.jsxs)('div', {
           children: [
             (0, n.jsx)(o.Text, {
               variant: 'text-sm/normal',
-              children: t.name
+              children: l.name
             }),
-            null != l && (0, n.jsx)(o.Text, {
+            null != t && (0, n.jsx)(o.Text, {
               variant: 'text-xxs/normal',
               children: A.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-                count: l
+                count: t
               })
             })
           ]
@@ -89,13 +89,13 @@ a.Z = e => {
   let {
 websites: a,
 trackClick: s
-  } = e, t = null == a ? void 0 : a.find(e => {
+  } = e, l = null == a ? void 0 : a.find(e => {
 let {
   category: a
 } = e;
 return a === i.p.DISCORD;
-  }), [c, _] = l.useState();
-  if (l.useEffect(() => {
+  }), [c, _] = t.useState();
+  if (t.useEffect(() => {
   let e = async e => {
     let a = e.split('/').pop();
     if (null != a) {
@@ -103,8 +103,8 @@ return a === i.p.DISCORD;
       !0 !== e.banned && _(e.invite);
     }
   };
-  null != t && e(t.url);
-}, [t]), null == a || 0 === a.length)
+  null != l && e(l.url);
+}, [l]), null == a || 0 === a.length)
 return null;
   let d = a.filter(e => {
 let {
@@ -129,24 +129,24 @@ children: [
       (0, n.jsx)('div', {
         className: N.row,
         children: d.map(e => {
-          let a, l, {
-              category: t,
+          let a, t, {
+              category: l,
               url: r
             } = e,
             c = null;
-          switch (t) {
+          switch (l) {
             case i.p.OFFICIAL:
               c = (0, n.jsx)(o.GlobeEarthIcon, {
                 colorClass: N.linkIcon
-              }), l = u.as.WebsiteLink, a = A.Z.Messages.GAME_PROFILE_LINK_OFFICIAL;
+              }), t = u.as.WebsiteLink, a = A.Z.Messages.GAME_PROFILE_LINK_OFFICIAL;
               break;
             case i.p.TWITTER:
               c = (0, n.jsx)(o.XNeutralIcon, {
                 colorClass: N.linkIcon
-              }), l = u.as.XLink, a = A.Z.Messages.GAME_PROFILE_LINK_TWITTER;
+              }), t = u.as.XLink, a = A.Z.Messages.GAME_PROFILE_LINK_TWITTER;
               break;
             case i.p.YOUTUBE:
-              l = u.as.YouTubeLink, c = (0, n.jsx)(o.YouTubeIcon, {
+              t = u.as.YouTubeLink, c = (0, n.jsx)(o.YouTubeIcon, {
                 colorClass: N.linkIcon
               }), a = A.Z.Messages.GAME_PROFILE_LINK_YOUTUBE;
           }
@@ -155,7 +155,7 @@ children: [
             title: a,
             href: r,
             onClick: () => {
-              s(l);
+              s(t);
             },
             target: '_blank',
             children: c

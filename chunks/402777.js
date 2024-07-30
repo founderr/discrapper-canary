@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(169979),
   f = n(502762),
   E = n(256059),
-  C = n(437758),
-  g = n(544989),
+  g = n(437758),
+  C = n(544989),
   I = n(481932),
   x = n(272510),
   T = n(171368),
@@ -61,14 +61,14 @@ children: (0, i.jsx)(d.Mt, {
     children: [
       (0, i.jsxs)(s.u2, {
         children: [
-          (0, i.jsxs)(g.Z, {
+          (0, i.jsxs)(C.Z, {
             profileType: A.y0.PANEL,
             children: [
               (0, i.jsx)(I.Z, {
                 user: t,
                 profileType: A.y0.PANEL
               }),
-              t.bot ? (0, i.jsx)(C.Z, {
+              t.bot ? (0, i.jsx)(g.Z, {
                 user: t
               }) : (0, i.jsx)(x.Z, {
                 user: t

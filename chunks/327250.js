@@ -19,8 +19,8 @@ var a = n(120356),
   _ = n(271383),
   f = n(430824),
   E = n(496675),
-  C = n(158776),
-  g = n(885110),
+  g = n(158776),
+  C = n(885110),
   I = n(594174),
   x = n(572004),
   T = n(5192),
@@ -37,10 +37,10 @@ backgroundColor: n,
 guildId: a,
 onClose: s
   } = e, o = t.id, c = (0, l.e7)([
-g.Z,
 C.Z,
+g.Z,
 m.default
-  ], () => o === m.default.getId() ? g.Z.getStatus() : C.Z.getStatus(o, a), [
+  ], () => o === m.default.getId() ? C.Z.getStatus() : g.Z.getStatus(o, a), [
 o,
 a
   ]);
@@ -130,8 +130,8 @@ user: a,
 member: s,
 guildId: m
   } = e, _ = (0, l.e7)([f.Z], () => f.Z.getGuild(m)), {
-canKickUser: C,
-canBanUser: g,
+canKickUser: g,
+canBanUser: C,
 canModerateMembers: T
   } = (0, l.cj)([
 E.Z,
@@ -182,7 +182,7 @@ children: [
     ]
   }),
   (0, i.jsxs)(b, {
-    disabled: !C,
+    disabled: !g,
     'aria-label': Z.Z.Messages.KICK,
     style: {
       backgroundColor: t
@@ -215,7 +215,7 @@ children: [
     ]
   }),
   (0, i.jsxs)(b, {
-    disabled: !g,
+    disabled: !C,
     'aria-label': Z.Z.Messages.BAN,
     style: {
       backgroundColor: t

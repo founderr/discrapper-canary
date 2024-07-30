@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(243778),
   f = n(590293),
   E = n(970731),
-  C = n(560688),
-  g = n(173507),
+  g = n(560688),
+  C = n(173507),
   I = n(523746),
   x = n(819640),
   T = n(131951),
@@ -93,7 +93,7 @@ let p = c.isManaged(),
   m = '',
   f = !1;
 s ? (m = p ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, f = !0) : o ? (m = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : m = a ? p ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL : p ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL;
-let C = (0, i.jsx)(b.ZP.Icon, {
+let g = (0, i.jsx)(b.ZP.Icon, {
   icon: r.PhoneCallIcon,
   onClick: this.handleVoiceClick,
   disabled: f,
@@ -156,9 +156,9 @@ return (0, i.jsx)(_.Z, {
             className: O.tooltip
           });
         },
-        children: () => C
+        children: () => g
       });
-    return C;
+    return g;
   }
 });
   }
@@ -177,7 +177,7 @@ super(...e), y(this, 'handleStartCall', (e, t) => {
     notFriend: i,
     appContext: a
   } = this.props, s = i ? n.getRecipientId() : null, l = () => o.Z.call(n.id, t, !i && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), s);
-  t ? (0, g.Z)(l, a) : l();
+  t ? (0, C.Z)(l, a) : l();
 }), y(this, 'handleJoinCall', e => {
   c.default.selectVoiceChannel(this.props.channel.id, e);
 }), y(this, 'handleVoiceClick', e => {
@@ -199,9 +199,9 @@ super(...e), y(this, 'handleStartCall', (e, t) => {
   let {
     appContext: e
   } = this.props;
-  (0, g.Z)(() => this.handleJoinCall(!0), e);
+  (0, C.Z)(() => this.handleJoinCall(!0), e);
 }), y(this, 'handleBrowserNotSupported', () => {
-  (0, C.Z)();
+  (0, g.Z)();
 });
   }
 }
@@ -216,8 +216,8 @@ callUnavailable: _
 callActive: I.Z.isCallActive(t.id),
 callUnavailable: I.Z.isCallUnavailable(t.id)
   })), E = t.getRecipientId(), {
-notFriend: C,
-isBlocked: g
+notFriend: g,
+isBlocked: C
   } = (0, s.cj)([N.Z], () => ({
 notFriend: t.type === R.d4z.DM && null != E && !N.Z.isFriend(E),
 isBlocked: t.type === R.d4z.DM && null != E && N.Z.isBlocked(E)
@@ -235,8 +235,8 @@ mode: r,
 inCall: o,
 callActive: m,
 callUnavailable: _,
-notFriend: C,
-isBlocked: g,
+notFriend: g,
+isBlocked: C,
 appContext: Z,
 canShowTooltip: j,
 canShowActivityGdmTooltip: M,

@@ -26,8 +26,8 @@ var l = i(481060),
   p = i(616140),
   g = i(29530),
   j = i(228168),
-  T = i(981631),
-  N = i(689938),
+  N = i(981631),
+  T = i(689938),
   C = i(984904),
   A = i(505451);
 
@@ -44,7 +44,7 @@ initialSubsection: M,
 transitionState: b,
 onClose: P,
 sourceAnalyticsLocations: D = []
-  } = e, F = y === T.ME ? void 0 : y, B = (0, d.ZP)(n.id, F), {
+  } = e, F = y === N.ME ? void 0 : y, B = (0, d.ZP)(n.id, F), {
 analyticsLocations: G
   } = (0, o.ZP)([
 ...D,
@@ -64,7 +64,7 @@ children: (0, s.jsx)(r.Mt, {
     transitionState: b,
     className: A.root,
     hideShadow: !0,
-    'aria-label': N.Z.Messages.USER_PROFILE_MODAL,
+    'aria-label': T.Z.Messages.USER_PROFILE_MODAL,
     children: (0, s.jsxs)(m.Z, {
       user: n,
       displayProfile: B,

@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(106301),
   f = n(512384),
   E = n(470956),
-  C = n(199902),
-  g = n(314897),
+  g = n(199902),
+  C = n(314897),
   I = n(271383),
   x = n(131951),
   T = n(496675),
@@ -40,7 +40,7 @@ user: s,
 channel: l,
 sessionId: o,
 nick: T
-  } = e, M = s.id, O = (0, r.e7)([g.default], () => g.default.getId() === M, [M]), [y, D, k] = (0, r.Wu)([x.Z], () => O ? [
+  } = e, M = s.id, O = (0, r.e7)([C.default], () => C.default.getId() === M, [M]), [y, D, k] = (0, r.Wu)([x.Z], () => O ? [
 !x.Z.isSupported() || x.Z.isSelfMute() || x.Z.isSelfMutedTemporarily(),
 x.Z.isSelfDeaf(),
 !1
@@ -69,9 +69,9 @@ v.Z
   null != W && R.ZP.trackExposure({
 location: 'voice_users'
   });
-  let [z, Y] = (0, r.Wu)([C.Z], () => [
-C.Z.getStreamForUser(M, l.getGuildId()),
-C.Z.getActiveStreamForUser(M, l.getGuildId())
+  let [z, Y] = (0, r.Wu)([g.Z], () => [
+g.Z.getStreamForUser(M, l.getGuildId()),
+g.Z.getActiveStreamForUser(M, l.getGuildId())
   ], [
 l,
 M
@@ -104,9 +104,9 @@ children: (0, i.jsx)(j.ZP, {
   isStreaming: null != z && z.channelId === l.id,
   isWatching: null != Y && Y.state !== L.jm8.ENDED,
   isGuest: B,
-  showHangStatus: J && Q && (g.default.getId() === s.id || null != ee),
+  showHangStatus: J && Q && (C.default.getId() === s.id || null != ee),
   hangStatusActivity: O ? $ : ee,
-  isSelf: g.default.getId() === s.id,
+  isSelf: C.default.getId() === s.id,
   application: Q || V ? W : void 0
 })
   });
@@ -125,7 +125,7 @@ tabIndex: p,
 location: m,
 numAudience: _,
 withGuildIcon: f = !1,
-className: C,
+className: g,
 children: I
   } = e, [x, v] = a.useState(null), [S, Z] = a.useState(!1), A = a.useRef(null), b = (0, E.Es)(s.id, null != c ? c : D), R = a.useRef(new o.sW(50, () => {
 v(A.current), A.current = null;
@@ -165,7 +165,7 @@ let e = (u && b.length > d + 1 ? b.slice(0, d) : b).map(e => {
   return (0, i.jsx)(y, {
     user: a,
     nick: l,
-    isSelfOnOtherClient: g.default.getId() === a.id && r.sessionId !== g.default.getSessionId(),
+    isSelfOnOtherClient: C.default.getId() === a.id && r.sessionId !== C.default.getSessionId(),
     mute: r.isVoiceMuted(),
     deaf: r.isVoiceDeafened(),
     video: r.selfVideo,
@@ -191,7 +191,7 @@ return null != _ && _ > 0 ? e.push((0, i.jsx)(j.ul, {
 })), e;
   })();
   return null == B && null == I ? null : (0, i.jsxs)(M.e, {
-className: l()(C, O.list, {
+className: l()(g, O.list, {
   [O.collapsed]: u,
   [O.withGuildIcon]: f
 }),

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return C;
+return g;
   }
 });
 var i = n(735250);
@@ -20,12 +20,12 @@ var a = n(442837),
   f = n(689938),
   E = n(593269);
 
-function C(e) {
+function g(e) {
   let {
 channelId: t,
 showProfile: n = !1,
-showTrailingDivider: C = !1
-  } = e, g = d.default.cast(t), {
+showTrailingDivider: g = !1
+  } = e, C = d.default.cast(t), {
 joinRequest: I,
 isModmin: x,
 guildId: T,
@@ -35,7 +35,7 @@ h.Z,
 c.Z,
 u.Z
   ], () => {
-let e = h.Z.getRequest(g),
+let e = h.Z.getRequest(C),
   t = c.Z.getGuild(null == e ? void 0 : e.guildId);
 return {
   joinRequest: e,
@@ -86,7 +86,7 @@ children: [
     size: s.ButtonSizes.SMALL,
     children: f.Z.Messages.VIEW_PROFILE
   }),
-  C && (0, i.jsx)(l.ZP.Divider, {})
+  g && (0, i.jsx)(l.ZP.Divider, {})
 ]
   }) : null;
 }

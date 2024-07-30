@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return C;
+return g;
   }
 });
 var i = n(735250);
@@ -20,10 +20,10 @@ var a = n(120356),
   f = n(689938),
   E = n(749348);
 
-function C(e) {
+function g(e) {
   let {
 member: t
-  } = e, n = (0, l.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]), a = (0, c.mh)(t.userId, t.guildId), C = (0, c.mV)(t.userId, t.guildId), g = (0, c.LD)(t.userId), I = (0, c.wi)(t.userId, t.guildId);
+  } = e, n = (0, l.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]), a = (0, c.mh)(t.userId, t.guildId), g = (0, c.mV)(t.userId, t.guildId), C = (0, c.LD)(t.userId), I = (0, c.wi)(t.userId, t.guildId);
   return null == n ? null : (0, i.jsx)('div', {
 className: s()(E.__invalid_safetySignalsMainContainer),
 children: (0, i.jsx)(r.FormItem, {
@@ -55,7 +55,7 @@ children: (0, i.jsx)(r.FormItem, {
           color: r.tokens.colors.INFO_DANGER_FOREGROUND
         })
       }),
-      C !== c.qc.NO_GATE && (0, i.jsx)(m._2, {
+      g !== c.qc.NO_GATE && (0, i.jsx)(m._2, {
         icon: (0, i.jsx)(r.BookCheckIcon, {
           size: 'custom',
           width: m.Mn,
@@ -67,7 +67,7 @@ children: (0, i.jsx)(r.FormItem, {
           color: 'text-normal',
           children: f.Z.Messages.GUILD_MEMBER_MOD_VIEW_AGREE_TO_RULES
         }),
-        description: C === c.qc.AGREED ? (0, i.jsx)(r.CheckmarkBoldIcon, {
+        description: g === c.qc.AGREED ? (0, i.jsx)(r.CheckmarkBoldIcon, {
           size: 'custom',
           width: m.Mn,
           height: m.Mn,
@@ -94,7 +94,7 @@ children: (0, i.jsx)(r.FormItem, {
         description: (0, i.jsx)(r.Text, {
           variant: 'text-sm/medium',
           color: 'text-normal',
-          children: g
+          children: C
         })
       }),
       (0, i.jsx)(m._2, {

@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(424602),
   f = n(924557),
   E = n(435064),
-  C = n(712114),
-  g = n(605236),
+  g = n(712114),
+  C = n(605236),
   I = n(536442),
   x = n(79390),
   T = n(665906),
@@ -113,16 +113,16 @@ return j.S.subscribe(k.CkL.UPLOAD_FILE, e), () => {
 };
   });
   let eE = (0, T.NE)(F),
-eC = (0, T.Xu)(F),
-eg = !N.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserver,
+eg = (0, T.Xu)(F),
+eC = !N.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserver,
 eI = (0, x.UI)(null != F ? F : void 0),
 ex = (0, c.useRedesignIconContext)().enabled,
 eT = (0, p.qB)(F.id, 'ChannelAttachButton'),
 eN = null !== (s = null == ee ? void 0 : ee.length) && void 0 !== s ? s : 0,
 ev = (0, D.Z)({
   canAttachFiles: eh,
-  canStartThreads: eE || eC,
-  useSlate: eg,
+  canStartThreads: eE || eg,
+  useSlate: eC,
   hasClips: eu,
   canUseApplicationCommands: !K && !ei,
   channel: F,
@@ -164,19 +164,19 @@ align: 'recentClips' === eo ? 'center' : 'left',
 position: 'top',
 positionKey: null != eo ? eo : 'null',
 onRequestOpen: () => {
-  e_ && (0, g.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
+  e_ && (0, C.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
     dismissAction: w.L.TAKE_ACTION
   }), ec('attachMenu');
 },
 onRequestClose: () => {
-  !(0, c.hasAnyModalOpen)() && (e_ && (0, g.EW)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
+  !(0, c.hasAnyModalOpen)() && (e_ && (0, C.EW)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
     dismissAction: w.L.TAKE_ACTION
   }), ec(null));
 },
 renderPopout: e => {
   switch (eo) {
     case 'recentClips':
-      return (0, i.jsx)(C.Z, {
+      return (0, i.jsx)(g.Z, {
         ...e,
         onOpenClips: ef,
         lastClipsSession: $

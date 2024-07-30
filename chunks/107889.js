@@ -25,8 +25,8 @@ var s = i(735250),
   p = i(502762),
   g = i(544989),
   j = i(481932),
-  T = i(195387),
-  N = i(272510),
+  N = i(195387),
+  T = i(272510),
   C = i(171368),
   A = i(900687),
   y = i(806926),
@@ -153,7 +153,7 @@ children: (0, s.jsx)(f.Mt, {
           (0, s.jsxs)(g.Z, {
             profileType: R.y0.FULL_SIZE,
             children: [
-              (0, s.jsx)(T.Z, {
+              (0, s.jsx)(N.Z, {
                 user: n,
                 guildId: H,
                 channelId: b,
@@ -164,7 +164,7 @@ children: (0, s.jsx)(f.Mt, {
                 user: n,
                 friendToken: F
               }),
-              (0, s.jsx)(N.Z, {
+              (0, s.jsx)(T.Z, {
                 user: n,
                 guildId: H,
                 viewProfileItem: et()

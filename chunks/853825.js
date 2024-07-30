@@ -25,8 +25,8 @@ var s = i(735250),
   p = i(544989),
   g = i(228168),
   j = i(981631),
-  T = i(689938),
-  N = i(505451),
+  N = i(689938),
+  T = i(505451),
   C = i(247321),
   A = i(47460);
 
@@ -58,9 +58,9 @@ children: (0, s.jsx)(u.Mt, {
   showGuildProfile: !0,
   children: (0, s.jsxs)(t.ModalRoot, {
     transitionState: L,
-    className: N.root,
+    className: T.root,
     hideShadow: !0,
-    'aria-label': T.Z.Messages.USER_PROFILE_MODAL,
+    'aria-label': N.Z.Messages.USER_PROFILE_MODAL,
     children: [
       (0, s.jsxs)(Z.Z, {
         user: n,
@@ -83,7 +83,7 @@ children: (0, s.jsx)(u.Mt, {
                 hasProfileEffect: (null == D ? void 0 : D.profileEffectId) != null
               }),
               (0, s.jsx)('div', {
-                className: N.headerInner,
+                className: T.headerInner,
                 children: (0, s.jsx)(E.Z, {
                   user: n,
                   displayProfile: D,
@@ -95,7 +95,7 @@ children: (0, s.jsx)(u.Mt, {
             ]
           }),
           (0, s.jsxs)('div', {
-            className: N.body,
+            className: T.body,
             children: [
               (0, s.jsx)(h.Z, {
                 user: n,
@@ -110,7 +110,7 @@ children: (0, s.jsx)(u.Mt, {
                 })
               }),
               (0, s.jsx)(Z.Z.Overlay, {
-                className: N.overlay,
+                className: T.overlay,
                 children: (0, s.jsxs)('div', {
                   className: A.container,
                   children: [
@@ -122,10 +122,10 @@ children: (0, s.jsx)(u.Mt, {
                       children: (0, s.jsx)(t.TabBar.Item, {
                         className: A.tabBarItem,
                         id: g.oh.BOT_INFO,
-                        'aria-label': T.Z.Messages.USER_PROFILE_ABOUT_ME,
+                        'aria-label': N.Z.Messages.USER_PROFILE_ABOUT_ME,
                         children: (0, s.jsx)(t.Text, {
                           variant: 'text-sm/normal',
-                          children: T.Z.Messages.USER_PROFILE_ABOUT_ME
+                          children: N.Z.Messages.USER_PROFILE_ABOUT_ME
                         })
                       }, g.oh.BOT_INFO)
                     }),
@@ -139,7 +139,7 @@ children: (0, s.jsx)(u.Mt, {
                           setLineClamp: !1
                         }),
                         (0, s.jsx)(v.Z, {
-                          heading: T.Z.Messages.BOT_PROFILE_CREATED_ON,
+                          heading: N.Z.Messages.BOT_PROFILE_CREATED_ON,
                           children: (0, s.jsx)(x.Z, {
                             userId: n.id,
                             guildId: P,

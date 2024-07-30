@@ -43,8 +43,8 @@ function f(e) {
   let {
 emojiHose: f,
 context: E,
-canvasWidth: C,
-canvasHeight: g,
+canvasWidth: g,
+canvasHeight: C,
 fallbackColor: I,
 outlineColorDark: x,
 outlineColorLight: T,
@@ -53,8 +53,8 @@ deadDrawables: v
   } = e;
   E.save();
   let S = o.Z.getEmojiImage(null !== (n = null !== (t = f.emojiId) && void 0 !== t ? t : f.emojiName) && void 0 !== n ? n : ''),
-Z = (0, u.np)(f.x, C),
-A = (0, u.np)(f.y, g),
+Z = (0, u.np)(f.x, g),
+A = (0, u.np)(f.y, C),
 {
   outlineColor: M
 } = (0, u.bg)(f.userId, x, T, I);

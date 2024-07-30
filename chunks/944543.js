@@ -56,7 +56,7 @@ return (0, i.jsxs)(d.Z, {
 });
   }
 }
-class C extends a.PureComponent {
+class g extends a.PureComponent {
   componentDidMount() {
 null == this.props.regions && c.Z.fetchRegions(null);
   }
@@ -123,4 +123,4 @@ super(...e), m(this, 'renderOption', (e, t) => (0, i.jsx)(E, {
 }
 t.Z = r.ZP.connectStores([u.Z], () => ({
   regions: u.Z.getRegions(null)
-}))(C);
+}))(g);

@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(484459),
   f = n(318661),
   E = n(502762),
-  C = n(271383),
-  g = n(594174),
+  g = n(271383),
+  C = n(594174),
   I = n(189357),
   x = n(718617),
   T = n(327250),
@@ -34,7 +34,7 @@ onClose: s,
 className: S,
 infoPanelClassName: Z,
 style: A
-  } = e, M = (0, I.ms)(n), b = (0, r.e7)([g.default], () => g.default.getUser(t), [t]), R = (0, r.e7)([C.ZP], () => C.ZP.getMember(n, t), [
+  } = e, M = (0, I.ms)(n), b = (0, r.e7)([C.default], () => C.default.getUser(t), [t]), R = (0, r.e7)([g.ZP], () => g.ZP.getMember(n, t), [
 n,
 t
   ]), [j, L] = a.useState(null == b || null == R), P = (0, u.Z)(R), O = a.useRef(null), {

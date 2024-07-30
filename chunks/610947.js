@@ -19,8 +19,8 @@ var i = n(470079),
 let f = 1000 / 60;
 
 function E(e, t, n, E) {
-  let C = (0, l.useToken)(s.Z.unsafe_rawColors.BRAND_500).hex(),
-g = (0, l.useToken)(s.Z.unsafe_rawColors.BLACK_500).hex(),
+  let g = (0, l.useToken)(s.Z.unsafe_rawColors.BRAND_500).hex(),
+C = (0, l.useToken)(s.Z.unsafe_rawColors.BLACK_500).hex(),
 I = (0, l.useToken)(s.Z.unsafe_rawColors.WHITE_500).hex(),
 x = i.useRef({}),
 T = i.useRef(new a.Xp()),
@@ -48,10 +48,10 @@ N = i.useCallback(t => {
     let {
       width: f,
       height: E
-    } = h.getBoundingClientRect(), C = [];
+    } = h.getBoundingClientRect(), g = [];
     n.forEach(e => {
       if (!(null != o.Z.getVoiceStateForChannel(l, e.userId))) {
-        C.push(e);
+        g.push(e);
         return;
       }! function(e) {
         let {
@@ -101,25 +101,25 @@ N = i.useCallback(t => {
         outlineColorDark: r,
         outlineColorLight: u,
         linesDrawnAt: a,
-        deadDrawables: C,
+        deadDrawables: g,
         streamerId: s
       });
-    }), C.length > 0 && (0, c.fW)(C, s);
+    }), g.length > 0 && (0, c.fW)(g, s);
   }({
     canvasRef: e,
     drawables: n,
-    fallbackColor: C,
+    fallbackColor: g,
     linesDrawnAt: x,
     streamerId: t,
-    outlineColorDark: g,
+    outlineColorDark: C,
     outlineColorLight: I,
     channelId: E
   });
 }, [
   e,
   E,
-  C,
   g,
+  C,
   I
 ]);
   i.useEffect(() => {

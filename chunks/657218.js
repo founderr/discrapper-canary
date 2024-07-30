@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(906732),
   f = n(541716),
   E = n(752305),
-  C = n(893718),
-  g = n(303628),
+  g = n(893718),
+  C = n(303628),
   I = n(967128),
   x = n(665149),
   T = n(294218),
@@ -126,8 +126,8 @@ return {
   updateThreadSettings: s
 };
   }(t, n), {
-textAreaState: C,
-setTextAreaState: g
+textAreaState: g,
+setTextAreaState: C
   } = function(e, t) {
 let [n, i] = a.useState((0, E.H2)());
 return a.useEffect(() => {
@@ -222,7 +222,7 @@ parentChannel: t,
 parentMessageId: n,
 threadSettings: m,
 privateThreadMode: x,
-textAreaState: C,
+textAreaState: g,
 location: s
   }), M = (0, D.oD)(m, x) ? o.ThreadLockIcon : o.ThreadIcon;
   return (0, i.jsx)('div', {
@@ -279,8 +279,8 @@ children: (0, i.jsx)('div', {
         children: [
           (0, i.jsx)(q, {
             parentChannel: t,
-            textAreaState: C,
-            setTextAreaState: g,
+            textAreaState: g,
+            setTextAreaState: C,
             submit: Z,
             error: S
           }),
@@ -410,7 +410,7 @@ T = (0, y.Op)(h, {
 });
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsx)(g.Z, {
+  (0, i.jsx)(C.Z, {
     channelId: t.id,
     type: F,
     canAttachFiles: x
@@ -421,7 +421,7 @@ children: [
       error: T
     })
   }),
-  (0, i.jsx)(C.Z, {
+  (0, i.jsx)(g.Z, {
     type: F,
     channel: t,
     placeholder: H.Z.Messages.FORM_THREAD_STARTER_MESSAGE_PLACEHOLDER,

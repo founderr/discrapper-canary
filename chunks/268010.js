@@ -14,9 +14,9 @@ var i = n(735250),
   _ = n(297781),
   f = n(591853),
   E = n(410441),
-  C = n(689938);
-let g = (e, t, n) => {
-let i = C.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
+  g = n(689938);
+let C = (e, t, n) => {
+let i = g.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
   a = c.ZP.getName(t.guild_id, t.id, n),
   s = e.extra.media_title;
 return i.plainFormat({
@@ -25,7 +25,7 @@ return i.plainFormat({
   episodeDescription: e.extra.media_subtitle
 }).replaceAll('*', '');
   },
-  I = (e, t) => C.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+  I = (e, t) => g.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
 username: t.username,
 activity: e.extra.media_title
   });
@@ -48,7 +48,7 @@ if (null != T && null != N)
     entry: n,
     mediaImageSrc: N,
     avatarSrc: T.getAvatarURL(t.guild_id, 128),
-    description: g(n, t, T),
+    description: C(n, t, T),
     timestamp: (0, d.yh)(n, A),
     episodeDescription: v,
     colors: [
@@ -82,12 +82,12 @@ children: [
     thumbnailSrc: N,
     channel: t,
     entry: n,
-    userDescription: (0, d.kr)(n) ? C.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING : C.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,
+    userDescription: (0, d.kr)(n) ? g.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING : g.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,
     title: n.extra.media_title,
     subtitle: n.extra.media_subtitle,
     headerIcons: (0, i.jsx)(E.Z, {
       Icon: l.CrunchyrollNeutralIcon,
-      'aria-label': C.Z.Messages.CRUNCHYROLL
+      'aria-label': g.Z.Messages.CRUNCHYROLL
     }),
     badges: (0, i.jsx)(_.Gk, {
       location: _.Gt.POPOUT,

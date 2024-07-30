@@ -21,8 +21,8 @@ var i = n(735250),
   _ = n(633302),
   f = n(806966),
   E = n(153124),
-  C = n(176354),
-  g = n(823379),
+  g = n(176354),
+  C = n(823379),
   I = n(354459),
   x = n(185923),
   T = n(420212),
@@ -35,7 +35,7 @@ _.ZP.getByName('laughing'),
 _.ZP.getByName('watermelon'),
 _.ZP.getByName('fork_and_knife'),
 _.ZP.getByName('yum')
-  ].filter(g.lm);
+  ].filter(C.lm);
 
 function Z(e) {
   let {
@@ -127,17 +127,17 @@ onSelectEmoji: u,
 onSelectDisabledEmoji: d,
 onExpandedToggle: p,
 emojiSearchProps: _,
-recentlyUsedEmojis: g,
+recentlyUsedEmojis: C,
 analyticsOverride: M
   } = e, b = (0, E.Dt)(), [R, j] = a.useState(!1), L = (0, h.wC)(t.guild_id), P = (0, r.uniqBy)([
 ...L,
 ...S
-  ], 'name').filter(e => !C.ZP.isEmojiFilteredOrLocked({
+  ], 'name').filter(e => !g.ZP.isEmojiFilteredOrLocked({
 emoji: e,
 channel: t,
 intention: v
   })).slice(0, I.e5);
-  null != g && g.length > 0 && P.splice(P.length - 1, 1, g[0]);
+  null != C && C.length > 0 && P.splice(P.length - 1, 1, C[0]);
   let O = e => {
   j(e), null == p || p(e);
 },
@@ -196,7 +196,7 @@ children: [
         children: (0, i.jsx)('div', {
           className: l()(N.slots, N.slotsWide),
           children: P.map(e => {
-            let n = C.ZP.isEmojiDisabled({
+            let n = g.ZP.isEmojiDisabled({
               emoji: e,
               channel: t,
               intention: x.Hz.CHAT

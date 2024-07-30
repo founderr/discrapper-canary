@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(966390),
   f = n(738619),
   E = n(410575),
-  C = n(744061),
-  g = n(857595),
+  g = n(744061),
+  C = n(857595),
   I = n(607070),
   x = n(367907),
   T = n(176412),
@@ -68,8 +68,8 @@ var i = n(735250),
   e_ = n(482207),
   ef = n(626135),
   eE = n(459273),
-  eC = n(585483),
-  eg = n(709054),
+  eg = n(585483),
+  eC = n(709054),
   eI = n(838440),
   ex = n(228488),
   eT = n(127654),
@@ -220,7 +220,7 @@ return (0, i.jsx)(u.Popout, {
     let {
       closePopout: t
     } = e;
-    return l()(null != _, 'ChannelTextAreaForm > Popout > renderPopout: contentWarningProps cannot be null'), (0, i.jsx)(C.Z, {
+    return l()(null != _, 'ChannelTextAreaForm > Popout > renderPopout: contentWarningProps cannot be null'), (0, i.jsx)(g.Z, {
       onClose: t,
       ..._
     });
@@ -267,21 +267,21 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
       if (a || s)
         return;
       if (e.preventDefault(), t)
-        ep.Z.getUploadCount(i.id, er.d.ChannelMessage) > 0 ? eC.S.dispatchToLastSubscribed(eR.CkL.FOCUS_ATTACHMENT_AREA) : eC.S.dispatchToLastSubscribed(eR.CkL.FOCUS_MESSAGES, {
+        ep.Z.getUploadCount(i.id, er.d.ChannelMessage) > 0 ? eg.S.dispatchToLastSubscribed(eR.CkL.FOCUS_ATTACHMENT_AREA) : eg.S.dispatchToLastSubscribed(eR.CkL.FOCUS_MESSAGES, {
           atEnd: !0
         });
       else {
         let {
           channel: e
         } = this.props, t = eu.Z.getLastCommandMessage(e.id), n = eu.Z.getLastEditableMessage(e.id);
-        null != t && null != n ? eg.default.compare(n.id, t.id) > 0 ? this.handleEditLastMessage(n) : this.handleRecallLastCommand(t) : null != t ? this.handleRecallLastCommand(t) : null != n && this.handleEditLastMessage(n);
+        null != t && null != n ? eC.default.compare(n.id, t.id) > 0 ? this.handleEditLastMessage(n) : this.handleRecallLastCommand(t) : null != t ? this.handleRecallLastCommand(t) : null != n && this.handleEditLastMessage(n);
       }
       return;
     case eR.yXg.ESCAPE:
       if (a || e.target !== e.currentTarget)
         return;
       if (e.preventDefault(), t) {
-        (0, g.rf)();
+        (0, C.rf)();
         return;
       }
       if (ep.Z.getUploadCount(i.id, er.d.ChannelMessage) > 0) {
@@ -314,7 +314,7 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
   d.Z.changeDraft(a, t, er.d.ChannelMessage);
   let s = '' !== t && n !== this.state.richValue,
     l = s && !ey.test(t) && !t.startsWith('/') && (!this.isFirstChange || t !== this.state.textValue);
-  this.isFirstChange = !1, l && this.state.textValue.length < t.length && this.handleIncrementCombo(), l ? p.Z.startTyping(a) : '' === t && p.Z.stopTyping(a), s && i && (0, g.rf)(), this.setState({
+  this.isFirstChange = !1, l && this.state.textValue.length < t.length && this.handleIncrementCombo(), l ? p.Z.startTyping(a) : '' === t && p.Z.stopTyping(a), s && i && (0, C.rf)(), this.setState({
     textValue: t,
     richValue: n
   });
@@ -340,7 +340,7 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
   } = this.props, d = !1;
   if (null != a) {
     if (a.inputType === M.iw.BUILT_IN_INTEGRATION)
-      return eC.S.dispatch(eR.CkL.SHAKE_APP, {
+      return eg.S.dispatch(eR.CkL.SHAKE_APP, {
         duration: 200,
         intensity: 2
       }), Promise.resolve({
@@ -396,10 +396,10 @@ super(...e), t = this, eP(this, 'isFirstChange', !0), eP(this, 'editorRef', null
       failureReason: s
     } = e;
     if (!a)
-      return s === eR.zYc.SLOWMODE_COOLDOWN ? (eC.S.dispatch(eR.CkL.SHAKE_APP, {
+      return s === eR.zYc.SLOWMODE_COOLDOWN ? (eg.S.dispatch(eR.CkL.SHAKE_APP, {
         duration: 200,
         intensity: 2
-      }), eC.S.dispatch(eR.CkL.EMPHASIZE_SLOWMODE_COOLDOWN), {
+      }), eg.S.dispatch(eR.CkL.EMPHASIZE_SLOWMODE_COOLDOWN), {
         shouldClear: !1,
         shouldRefocus: !0
       }) : {
@@ -478,13 +478,13 @@ return n.id !== i ? {
 } : null;
   }
   componentDidMount() {
-eC.S.subscribe(eR.CkL.FOCUS_CHANNEL_TEXT_AREA, this.handleRequestFocus);
+eg.S.subscribe(eR.CkL.FOCUS_CHANNEL_TEXT_AREA, this.handleRequestFocus);
   }
   componentDidUpdate(e) {
 (this.props.isEditing !== e.isEditing || this.props.hasModalOpen !== e.hasModalOpen) && (this.props.isEditing || this.props.hasModalOpen ? this.handleInputBlur() : this.handleInputFocus());
   }
   componentWillUnmount() {
-eC.S.unsubscribe(eR.CkL.FOCUS_CHANNEL_TEXT_AREA, this.handleRequestFocus);
+eg.S.unsubscribe(eR.CkL.FOCUS_CHANNEL_TEXT_AREA, this.handleRequestFocus);
   }
   render() {
 var e;
@@ -501,8 +501,8 @@ let {
   showQuarantinedUserBanner: p,
   filterAfterTimestamp: m,
   communicationDisabledUntil: _,
-  shakeIntensity: C,
-  poggermodeEnabled: g,
+  shakeIntensity: g,
+  poggermodeEnabled: C,
   isSelectedResourceChannel: I,
   showAutomodUserProfileChatBlocker: x
 } = this.props, {
@@ -531,8 +531,8 @@ let S = (0, i.jsxs)('div', {
         chatInputType: c,
         placeholder: d,
         accessibilityLabel: h,
-        shakeIntensity: C,
-        poggermodeEnabled: g
+        shakeIntensity: g,
+        poggermodeEnabled: C
       })
     }),
     (0, i.jsx)(eS.Z, {
@@ -604,7 +604,7 @@ return (0, i.jsx)(E.Z, {
                   onSubmit: eO,
                   className: eL.form,
                   children: [
-                    g && (0, i.jsx)(J.Z, {
+                    C && (0, i.jsx)(J.Z, {
                       channelId: n.id
                     }),
                     n.isPrivate() ? (0, i.jsx)(eM.Z, {
@@ -616,7 +616,7 @@ return (0, i.jsx)(E.Z, {
                     }),
                     (0, i.jsx)(f.Z, {
                       channel: n,
-                      poggermodeEnabled: g
+                      poggermodeEnabled: C
                     }),
                     !v && (0, i.jsx)(k.Z, {})
                   ]
@@ -689,12 +689,12 @@ super(...e), eP(this, 'inputFormRef', a.createRef()), eP(this, 'state', {
   if (!!t)
     switch (e.which) {
       case eR.yXg.ARROW_LEFT:
-        n === j.I.SIDEBAR && eC.S.dispatch(eR.CkL.FOCUS_CHANNEL_TEXT_AREA, {
+        n === j.I.SIDEBAR && eg.S.dispatch(eR.CkL.FOCUS_CHANNEL_TEXT_AREA, {
           channelId: eh.Z.getChannelId()
         });
         return;
       case eR.yXg.ARROW_RIGHT:
-        n === j.I.NORMAL && eC.S.dispatch(eR.CkL.FOCUS_CHANNEL_TEXT_AREA, {
+        n === j.I.NORMAL && eg.S.dispatch(eR.CkL.FOCUS_CHANNEL_TEXT_AREA, {
           channelId: el.ZP.getCurrentSidebarChannelId(i.id)
         });
     }

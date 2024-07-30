@@ -21,18 +21,18 @@ function _(e) {
   var t, n;
   let {
 channel: _
-  } = e, f = (0, u.r_)(_), E = (0, a.e7)([l.Z], () => l.Z.hasHidden(_.id)), C = (0, d.c)(_.id), {
-sortOrder: g,
+  } = e, f = (0, u.r_)(_), E = (0, a.e7)([l.Z], () => l.Z.hasHidden(_.id)), g = (0, d.c)(_.id), {
+sortOrder: C,
 tagFilter: I
   } = (0, c.H)(_.id), x = (0, a.e7)([
 o.Z,
 h.Z
-  ], () => !!(o.Z.getThreadIds(_.id, g, I).length > 0) || !!(h.Z.getThreads(_.id, g, I).length > 0) || !1, [
+  ], () => !!(o.Z.getThreadIds(_.id, C, I).length > 0) || !!(h.Z.getThreads(_.id, C, I).length > 0) || !1, [
 _.id,
-g,
+C,
 I
   ]), T = _.isMediaChannel();
-  if (!f || C || T && x)
+  if (!f || g || T && x)
 return null;
   let N = (t = E, n = T, t ? n ? m.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : m.Z.Messages.FORUM_CHANNEL_ONBOARDING_SHOW : n ? m.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : m.Z.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
   return (0, i.jsx)(p.JO, {

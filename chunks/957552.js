@@ -1,38 +1,38 @@
 t.d(n, {
   Z: function() {
-return c;
+return d;
   }
 });
 var i = t(735250),
   o = t(470079),
-  a = t(120356),
-  l = t.n(a),
+  l = t(120356),
+  a = t.n(l),
   s = t(768581),
   r = t(689938),
   u = t(62676);
 
-function c(e) {
+function d(e) {
   let {
 application: n,
 className: t,
-size: a,
-botIconFirst: c,
-fallbackAvatar: d
+size: l,
+botIconFirst: d,
+fallbackAvatar: c
   } = e, m = o.useMemo(() => s.ZP.getApplicationIconURL({
 id: n.id,
 icon: n.icon,
 bot: n.bot,
-size: a,
-botIconFirst: c,
-fallbackAvatar: d
+size: l,
+botIconFirst: d,
+fallbackAvatar: c
   }), [
 n,
-a,
-c,
-d
+l,
+d,
+c
   ]);
   return null == m ? null : (0, i.jsx)('img', {
-className: l()(u.icon, t),
+className: a()(u.icon, t),
 alt: r.Z.Messages.IMAGE,
 src: m,
 'aria-hidden': !0

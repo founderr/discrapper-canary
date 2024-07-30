@@ -17,8 +17,8 @@ var i, a = n(735250),
   _ = n(570140),
   f = n(26151),
   E = n(493683),
-  C = n(758059),
-  g = n(447543),
+  g = n(758059),
+  C = n(447543),
   I = n(708690),
   x = n(194359),
   T = n(425493),
@@ -209,7 +209,7 @@ let {
 }, {
   autoTrackExposure: !1
 });
-g.Z.createInvite(e.id, {
+C.Z.createInvite(e.id, {
   max_age: t
 }, et.t4x.GROUP_DM);
   }
@@ -678,7 +678,7 @@ super(...e), el(this, 'state', {
   } = this.props;
   t.has(e) ? I.Z.removeUser(e) : (I.Z.addUser(e), n.length > 0 && I.Z.clear(null == i ? void 0 : i.id)), this.forceFocus();
 }), el(this, 'handleAddFriendNavigation', () => {
-  (0, R.uL)(et.Z5c.FRIENDS), C.Z.setSection(et.pJs.ADD_FRIEND), this.props.onClose();
+  (0, R.uL)(et.Z5c.FRIENDS), g.Z.setSection(et.pJs.ADD_FRIEND), this.props.onClose();
 }), el(this, 'handleScroll', () => {
   let e = this.scrollerRef.current;
   null != e && this.setState({
@@ -816,18 +816,18 @@ _
   let {
 useV1: f,
 useV2Dm: E,
-useV2Communication: C
+useV2Communication: g
   } = L.Z.useExperiment({
 location: 'desktop_dm_list'
   }, {
 autoTrackExposure: !1
   });
   return (s.useEffect(() => {
-f && (0, j.W)(), E && (0, j._)(), C && (0, j._)();
+f && (0, j.W)(), E && (0, j._)(), g && (0, j._)();
   }, [
 f,
 E,
-C
+g
   ]), p) ? null : (0, a.jsx)(m.Popout, {
 renderPopout: e => (0, a.jsx)(ep, {
   ...e,

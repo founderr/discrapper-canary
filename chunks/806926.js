@@ -30,7 +30,7 @@ initialSection: h,
 initialSubsection: S,
 friendToken: p,
 onClose: g
-  } = e, j = (0, l.e7)([t.Z], () => t.Z.getRelationshipType(i.id)), T = (0, _.Z)({
+  } = e, j = (0, l.e7)([t.Z], () => t.Z.getRelationshipType(i.id)), N = (0, _.Z)({
 user: i,
 currentUser: x
   });
@@ -68,7 +68,7 @@ children: [
       user: i,
       currentUser: x,
       displayProfile: Z,
-      items: T,
+      items: N,
       initialSection: h,
       initialSubsection: S,
       onClose: g

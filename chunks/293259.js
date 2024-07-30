@@ -25,8 +25,8 @@ var s = i(735250),
   p = i(228168),
   g = i(231338),
   j = i(689938),
-  T = i(520067);
-let N = a.AvatarSizes.SIZE_120,
+  N = i(520067);
+let T = a.AvatarSizes.SIZE_120,
   C = _.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function A(e) {
@@ -50,7 +50,7 @@ eventHandlers: V,
 avatarDecorationSrc: Y
   } = (0, E.Z)({
 user: _,
-size: N
+size: T
   }), H = l.useMemo(() => (0, d.W)(_, y), [
 _,
 y
@@ -66,15 +66,15 @@ children: [
     hasProfileEffect: U
   }),
   (0, s.jsxs)('div', {
-    className: T.header,
+    className: N.header,
     children: [
       (0, s.jsx)('div', {
         ...V,
         children: (0, s.jsx)(C, {
           src: k,
           avatarDecoration: Y,
-          size: N,
-          className: T.avatar,
+          size: T,
+          className: N.avatar,
           status: H ? g.Sk.UNKNOWN : L ? g.Sk.STREAMING : D,
           statusBackdropColor: (0, a.getStatusBackdropColor)(G),
           isMobile: P,
@@ -83,7 +83,7 @@ children: [
         })
       }),
       (0, s.jsxs)('div', {
-        className: T.headerTop,
+        className: N.headerTop,
         children: [
           (null == F ? void 0 : F.profileFetchFailed) && !_.isClyde() ? (0, s.jsx)(a.Tooltip, {
             text: j.Z.Messages.USER_PROFILE_LOAD_ERROR,
@@ -93,12 +93,12 @@ children: [
               width: 20,
               height: 20,
               ...e,
-              className: T.warningCircleIcon,
+              className: N.warningCircleIcon,
               color: o.Z.unsafe_rawColors.YELLOW_300.css
             })
           }) : (0, s.jsx)(Z.Z, {
             user: _,
-            className: T.badgeList,
+            className: N.badgeList,
             guildId: A,
             size: Z.V.SIZE_24,
             shrinkAtCount: 8,
@@ -106,10 +106,10 @@ children: [
             onBadgeClick: M
           }),
           (0, s.jsxs)('div', {
-            className: T.relationshipButtons,
+            className: N.relationshipButtons,
             children: [
               (null == F ? void 0 : F.application) != null && (0, s.jsx)(v.Z, {
-                className: T.applicationInstallButton,
+                className: N.applicationInstallButton,
                 application: F.application
               }),
               (0, s.jsx)(S.Z, {
@@ -146,7 +146,7 @@ children: [
                 children: (0, s.jsx)(a.MoreVerticalIcon, {
                   size: 'md',
                   color: 'currentColor',
-                  className: T.additionalActionsIcon
+                  className: N.additionalActionsIcon
                 })
               })
             ]

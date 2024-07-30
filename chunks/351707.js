@@ -40,9 +40,9 @@ isEnabled: !0,
 scrollToStart: Z.Cyb,
 scrollToEnd: Z.Cyb,
 wrap: !0
-  }), j = c.length, T = 0 === j ? h.Z.Messages.ROLE_LIST_EMPTY : h.Z.Messages.ROLES_LIST.format({
+  }), j = c.length, N = 0 === j ? h.Z.Messages.ROLE_LIST_EMPTY : h.Z.Messages.ROLES_LIST.format({
 numRoles: j
-  }), N = c.map(e => {
+  }), T = c.map(e => {
 var l;
 return (0, s.jsx)(E.Z, {
   role: e,
@@ -62,11 +62,11 @@ children: (0, s.jsx)(a.SJ, {
     } = e;
     return (0, s.jsxs)('div', {
       className: S.root,
-      'aria-label': T,
+      'aria-label': N,
       ref: n,
       ...i,
       children: [
-        N,
+        T,
         x && (0, s.jsx)(v.Z, {
           guild: r,
           guildMember: d,
@@ -97,10 +97,10 @@ return l && !t ? 1 : !l && t ? -1 : 0;
   }), [
 v,
 S
-  ]), j = f.e9(t, i.id), [T] = (0, r.Wu)([_.Z], () => [
+  ]), j = f.e9(t, i.id), [N] = (0, r.Wu)([_.Z], () => [
 _.Z.can(Z.Plq.MANAGE_ROLES, t),
 null != t ? _.Z.getGuildVersion(t.id) : null
-  ]), N = l.useCallback(e => {
+  ]), T = l.useCallback(e => {
 var i, s;
 a({
   action: 'REMOVE_ROLE'
@@ -123,7 +123,7 @@ S,
 t.id,
 n.id,
 a
-  ]), A = T && null != E;
+  ]), A = N && null != E;
   return 0 !== g.length || A ? (0, s.jsx)(x.Z, {
 heading: h.Z.Messages.ROLES,
 scrollIntoView: o,
@@ -134,9 +134,9 @@ children: (0, s.jsx)(p, {
   guildMember: E,
   roles: g,
   highestRole: j,
-  canManageRoles: T,
+  canManageRoles: N,
   onAddRole: C,
-  onRemoveRole: N
+  onRemoveRole: T
 })
   }) : null;
 }

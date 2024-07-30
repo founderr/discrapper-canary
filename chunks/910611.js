@@ -24,8 +24,8 @@ var i = n(735250),
   _ = n(699516),
   f = n(914010),
   E = n(594174),
-  C = n(946734),
-  g = n(99843),
+  g = n(946734),
+  C = n(99843),
   I = n(372564),
   x = n(984370),
   T = n(217314),
@@ -43,7 +43,7 @@ inSidebar: c = !1,
 handleClick: p,
 handleContextMenu: m,
 handleParentClick: f,
-handleParentContextMenu: C,
+handleParentContextMenu: g,
 renderFollowButton: I
   } = e, Z = (0, d.KS)(t, r), {
 prefix: A,
@@ -127,7 +127,7 @@ case N.d4z.GROUP_DM:
           className: S.avatar
         })
       }),
-      (0, i.jsx)(g.Z, {
+      (0, i.jsx)(C.Z, {
         channel: t
       }, 'channel-'.concat(t.id))
     ]
@@ -183,7 +183,7 @@ case N.d4z.PRIVATE_THREAD:
         b(e, v.Z.Messages.TEXT_CHANNEL),
         (0, i.jsx)(x.Z.Title, {
           level: M,
-          onContextMenu: C,
+          onContextMenu: g,
           onClick: f,
           className: l()(S.parentChannelName, S.cursorPointer),
           children: (0, u.F6)(s, E.default, _.Z)
@@ -258,7 +258,7 @@ case N.d4z.DM:
       (0, i.jsx)(A, {
         channel: e
       }),
-      (0, i.jsx)(C.Z, {
+      (0, i.jsx)(g.Z, {
         channel: e
       }, e.id)
     ]

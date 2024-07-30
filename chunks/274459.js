@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return g;
+return C;
   }
 }), n(47120);
 var i = n(735250),
@@ -18,16 +18,16 @@ var i = n(735250),
 let _ = 6 * h.Z.Millis.SECOND,
   f = 2 * h.Z.Millis.SECOND,
   E = 2 * h.Z.Millis.SECOND,
-  C = e => 'scale('.concat(1 - -(e / 120), ') rotate(').concat(e, 'deg)');
+  g = e => 'scale('.concat(1 - -(e / 120), ') rotate(').concat(e, 'deg)');
 
-function g(e) {
+function C(e) {
   let {
 userId: t,
 voiceChannelEffect: n,
 onComplete: s
   } = e, {
 emoji: h,
-sentAt: g
+sentAt: C
   } = n, I = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), [x, T] = a.useState(!0), N = !I, v = (0, c.useTransition)(x, {
 from: {
   rotate: -120
@@ -48,13 +48,13 @@ onRest: (e, t) => {
   });
   return (a.useEffect(() => {
 let e;
-return Date.now() - g >= E ? (0, p.H)(t) : e = setTimeout(() => {
+return Date.now() - C >= E ? (0, p.H)(t) : e = setTimeout(() => {
   T(!1), N && (0, p.H)(t);
 }, N ? f : _), () => {
   null != e && clearTimeout(e);
 };
   }, [
-g,
+C,
 t,
 N
   ]), N) ? null : v((e, t) => {
@@ -65,7 +65,7 @@ let {
 return t && (0, i.jsx)(r.animated.div, {
   className: m.voiceChannelEffectEmojiContainer,
   style: {
-    transform: a.to(C)
+    transform: a.to(g)
   },
   children: (0, i.jsx)(u.Z, {
     className: l()(m.voiceChannelEffectEmoji),

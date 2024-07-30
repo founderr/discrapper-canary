@@ -19,8 +19,8 @@ var a = n(120356),
   _ = n(791176),
   f = n(908474),
   E = n(467014),
-  C = n(689938),
-  g = n(749348);
+  g = n(689938),
+  C = n(749348);
 
 function I(e) {
   let {
@@ -28,13 +28,13 @@ userId: t,
 guildId: n
   } = e, a = (0, d.f)(t, n, 0.8, r.tokens.colors.BACKGROUND_SECONDARY);
   return (0, i.jsxs)('div', {
-className: s()(g.header),
+className: s()(C.header),
 style: {
   backgroundColor: a
 },
 children: [
   (0, i.jsxs)('div', {
-    className: s()(g.headerTitle),
+    className: s()(C.headerTitle),
     children: [
       (0, i.jsx)(u.Z, {
         width: 16,
@@ -42,15 +42,15 @@ children: [
       }),
       (0, i.jsx)(r.Heading, {
         variant: 'heading-md/semibold',
-        children: C.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE
+        children: g.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE
       })
     ]
   }),
   (0, i.jsx)('div', {
     children: (0, i.jsx)(r.KeyCombo, {
       shortcut: 'esc',
-      keyClassName: g.keyComboInner,
-      className: g.keyComboContainer
+      keyClassName: C.keyComboInner,
+      className: C.keyComboContainer
     })
   })
 ]
@@ -63,13 +63,13 @@ userId: t,
 guildId: n,
 location: a,
 className: u,
-onNavigate: C
+onNavigate: g
   } = e, x = (0, l.e7)([c.default], () => c.default.getUser(t), [t]), T = (0, l.e7)([o.ZP], () => o.ZP.getMember(n, t), [
 n,
 t
   ]), N = (0, d.f)(t, n);
   return null == x || null == T ? null : (0, i.jsxs)(r.Scroller, {
-className: s()(g.container, u),
+className: s()(C.container, u),
 style: {
   backgroundColor: N
 },
@@ -79,7 +79,7 @@ children: [
     guildId: n
   }),
   (0, i.jsxs)('div', {
-    className: s()(g.innerContainer),
+    className: s()(C.innerContainer),
     children: [
       (0, i.jsx)(f.Z, {
         member: T
@@ -90,7 +90,7 @@ children: [
       }),
       (0, i.jsx)(_.Z, {
         member: T,
-        onNavigate: C
+        onNavigate: g
       }),
       (0, i.jsx)(p.Z, {
         member: T

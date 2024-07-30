@@ -23,7 +23,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 
-function C(e) {
+function g(e) {
   let {
 channel: t,
 onClose: n,
@@ -53,7 +53,7 @@ children: (0, i.jsx)(o.ModalContent, {
   });
 }
 
-function g(e) {
+function C(e) {
   return e.matches('a') || 'highlight' === e.className || e.className.includes('mention');
 }
 class I extends a.Component {
@@ -90,13 +90,13 @@ return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length ? null : (0,
 super(...e), E(this, '_mouseDown', !1), E(this, '_mouseUp', !1), E(this, 'handleOpenTopic', e => {
   let t = e.target;
   if ((0, r.k)(t)) {
-    if (g(t))
+    if (C(t))
       return;
     let e = t.parentNode;
-    if ((0, r.k)(e) && g(e))
+    if ((0, r.k)(e) && C(e))
       return;
   }
-  (0, o.openModal)(e => (0, i.jsx)(C, {
+  (0, o.openModal)(e => (0, i.jsx)(g, {
     ...e,
     ...this.props
   }));

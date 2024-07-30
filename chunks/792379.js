@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(78675),
   f = n(741308),
   E = n(588822),
-  C = n(899007),
-  g = n(900927),
+  g = n(899007),
+  C = n(900927),
   I = n(678738),
   x = n(502762),
   T = n(530),
@@ -78,7 +78,7 @@ children: (0, i.jsx)(p.Mt, {
                 profileType: M.y0.PANEL,
                 animateOnHover: !k
               }),
-              (0, i.jsx)(C.Z, {
+              (0, i.jsx)(g.Z, {
                 user: t,
                 displayProfile: O,
                 channelId: n.id,
@@ -120,7 +120,7 @@ children: (0, i.jsx)(p.Mt, {
                   (0, i.jsx)(I.Z, {
                     heading: b.Z.Messages.BOT_PROFILE_CREATED_ON,
                     headingColor: 'header-primary',
-                    children: (0, i.jsx)(g.Z, {
+                    children: (0, i.jsx)(C.Z, {
                       userId: t.id
                     })
                   })

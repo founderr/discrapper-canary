@@ -30,20 +30,20 @@ return [
     r.K.set(p, e), t(e);
   }, [])
 ];
-  }(), C = a.useRef(null), g = null == m.getGuildId() ? 70 : 50;
+  }(), g = a.useRef(null), C = null == m.getGuildId() ? 70 : 50;
   return a.useLayoutEffect(() => {
 var e;
-null === (e = C.current) || void 0 === e || e.ensureIsInPosition();
+null === (e = g.current) || void 0 === e || e.ensureIsInPosition();
   }, [_.length]), (0, i.jsx)('div', {
 className: d.container,
 children: (0, i.jsx)(o._, {
   position: f,
   id: 0,
-  ref: C,
+  ref: g,
   onMove: (e, t) => E(t),
   maxX: t,
   maxY: s,
-  edgeOffsetTop: g,
+  edgeOffsetTop: C,
   edgeOffsetBottom: 70,
   edgeOffsetLeft: 16,
   edgeOffsetRight: 16,

@@ -26,8 +26,8 @@ stream: u
   let {
 handleClick: f,
 handleMouseDown: E,
-handleMouseEnter: C,
-handleMouseMove: g,
+handleMouseEnter: g,
+handleMouseMove: C,
 handleMouseUp: I
   } = (0, d.Z)({
 user: _,
@@ -42,8 +42,8 @@ children: (0, i.jsx)('canvas', {
   ref: m,
   onClick: f,
   onMouseDown: E,
-  onMouseEnter: C,
-  onMouseMove: g,
+  onMouseEnter: g,
+  onMouseMove: C,
   onMouseUp: I,
   className: p.sharedCanvas
 })

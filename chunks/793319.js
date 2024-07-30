@@ -19,8 +19,8 @@ var i, a, s = n(735250),
   _ = n(846027),
   f = n(287734),
   E = n(872810),
-  C = n(410575),
-  g = n(40851),
+  g = n(410575),
+  C = n(40851),
   I = n(317381),
   x = n(596040),
   T = n(100527),
@@ -73,8 +73,8 @@ var i, a, s = n(735250),
   e_ = n(985370),
   ef = n(544384),
   eE = n(560688),
-  eC = n(127608),
-  eg = n(76021),
+  eg = n(127608),
+  eC = n(76021),
   eI = n(173507),
   ex = n(981631),
   eT = n(354459),
@@ -95,14 +95,14 @@ exitFullScreen: i,
 canGoLive: a,
 hasPermission: r,
 disabled: o
-  } = e, c = (0, g.bp)(), u = (0, p.Wu)([ei.Z], () => ei.Z.getAllActiveStreams()).find(e => e.ownerId === n.id), {
+  } = e, c = (0, C.bp)(), u = (0, p.Wu)([ei.Z], () => ei.Z.getAllActiveStreams()).find(e => e.ownerId === n.id), {
 available: d,
 activated: _,
 hqStreamingState: f
-  } = (0, F.k)(h.q.STREAM_HIGH_QUALITY), C = null != u && d && _, I = l.useRef(null), x = t.getGuildId(), T = l.useCallback(() => {
+  } = (0, F.k)(h.q.STREAM_HIGH_QUALITY), g = null != u && d && _, I = l.useRef(null), x = t.getGuildId(), T = l.useCallback(() => {
 if (null == i || i(), !a)
-  return (0, eC.Z)();
-(0, eg.Z)(x, t.id, ex.ZY5.GUILD_CHANNEL);
+  return (0, eg.Z)();
+(0, eC.Z)(x, t.id, ex.ZY5.GUILD_CHANNEL);
   }, [
 x,
 t.id,
@@ -125,7 +125,7 @@ if (a) {
   T();
   return;
 }
-(0, eC.Z)();
+(0, eg.Z)();
   }, L = () => {
 if (A) {
   (0, M.Z)(() => (0, B.Z)(u));
@@ -152,14 +152,14 @@ return (0, s.jsx)(et.O, {
   } : null,
   popoutOpen: t,
   shouldShowTooltip: !t,
-  premiumGlow: C && f.hqStreamingIsEnabled,
+  premiumGlow: g && f.hqStreamingIsEnabled,
   buttonRef: I,
   onClick: null != u ? L : j
 });
   };
   return A ? P() : (0, s.jsxs)(s.Fragment, {
 children: [
-  C && f.hqStreamingIsEnabled ? (0, s.jsx)(Y.$, {
+  g && f.hqStreamingIsEnabled ? (0, s.jsx)(Y.$, {
     buttonRef: I,
     dismissed: f.hqStreamingPopoutDismissed,
     onDismiss: () => {
@@ -229,7 +229,7 @@ onDisconnectCall: i,
 channel: a
   } = e, r = (0, p.e7)([b.Z], () => b.Z.getSelectedParticipant(a.id)), {
 reducedMotion: o
-  } = l.useContext(m.AccessibilityPreferencesContext), [c, u] = l.useState(!1), h = null == r ? void 0 : r.id, _ = (0, p.e7)([ei.Z], () => null != h ? ei.Z.getActiveStreamForStreamKey(h) : null, [h]), C = (null == r ? void 0 : r.type) === eT.fO.STREAM && null != _ && _.ownerId !== (null == n ? void 0 : n.id), g = (0, p.Wu)([ei.Z], () => ei.Z.getAllActiveStreamsForChannel(a.id).filter(e => {
+  } = l.useContext(m.AccessibilityPreferencesContext), [c, u] = l.useState(!1), h = null == r ? void 0 : r.id, _ = (0, p.e7)([ei.Z], () => null != h ? ei.Z.getActiveStreamForStreamKey(h) : null, [h]), g = (null == r ? void 0 : r.type) === eT.fO.STREAM && null != _ && _.ownerId !== (null == n ? void 0 : n.id), C = (0, p.Wu)([ei.Z], () => ei.Z.getAllActiveStreamsForChannel(a.id).filter(e => {
 let {
   ownerId: t
 } = e;
@@ -237,7 +237,7 @@ return t !== (null == n ? void 0 : n.id);
   })), I = (0, H.qY)(a.id), x = (0, Z.zW)(a.id), T = l.useCallback(() => {
 if ((null == r ? void 0 : r.type) === eT.fO.ACTIVITY && r.id === t)
   return 'ACTIVITY';
-if (C)
+if (g)
   return 'STREAM';
 if (null != I)
   return 'EVENT';
@@ -245,7 +245,7 @@ return 'CALL';
   }, [
 r,
 t,
-C,
+g,
 I
   ]), [N, v] = l.useState(T()), S = (0, m.useSpring)({
 opacity: c ? 0.2 : 1,
@@ -271,10 +271,10 @@ T
   if (null != _)
     (0, E.g)((0, k.V9)(_));
   else
-    for (let e of g)
+    for (let e of C)
       (0, E.g)((0, k.V9)(e));
 }, [
-  g,
+  C,
   _
 ]),
 R = (e, t) => {
@@ -292,7 +292,7 @@ R = (e, t) => {
         applicationId: r.id,
         color: 'red',
         channelId: a.id,
-        onPopoutClick: g.length > 0 ? t : null
+        onPopoutClick: C.length > 0 ? t : null
       });
     case 'STREAM':
       return (0, s.jsx)(et.O, {
@@ -301,7 +301,7 @@ R = (e, t) => {
         streamActive: !0,
         color: 'red',
         onClick: M,
-        onPopoutClick: g.length > 1 ? t : null,
+        onPopoutClick: C.length > 1 ? t : null,
         isSelfStream: !1
       });
     case 'CALL':
@@ -309,7 +309,7 @@ R = (e, t) => {
         ...l,
         color: 'red',
         onClick: () => null == i ? void 0 : i(),
-        onPopoutClick: g.length > 0 ? t : null,
+        onPopoutClick: C.length > 0 ? t : null,
         channel: a
       });
     case 'EVENT':
@@ -331,7 +331,7 @@ renderPopout: e => {
   }) : (0, s.jsx)(ef.Z, {
     channel: a,
     currentUser: n,
-    activeStreams: g,
+    activeStreams: C,
     handleGoLive: ex.VqG,
     hideSelfOptions: !0,
     onClose: t
@@ -360,7 +360,7 @@ channel: t,
 cameraUnavailable: n,
 hasCameraPermission: i,
 currentUser: a
-  } = e, r = (0, g.bp)(), {
+  } = e, r = (0, C.bp)(), {
 reachedLimit: c,
 limit: u
   } = (0, ed.Z)(t), d = l.useCallback(() => {
@@ -428,9 +428,9 @@ mute: f
 canGoLive: E
   } = (0, p.cj)([es.Z], () => ({
 canGoLive: (0, U.Z)(es.Z)
-  })), g = (0, y.Z)(), x = (0, p.e7)([O.Z], () => null != O.Z.getAwaitingRemoteSessionInfo()), v = null != g, S = (0, p.e7)([el.Z], () => {
+  })), C = (0, y.Z)(), x = (0, p.e7)([O.Z], () => null != O.Z.getAwaitingRemoteSessionInfo()), v = null != C, S = (0, p.e7)([el.Z], () => {
 var e;
-return (null !== (e = null == g ? void 0 : g.channelId) && void 0 !== e ? e : el.Z.getVoiceChannelId()) === t.id;
+return (null !== (e = null == C ? void 0 : C.channelId) && void 0 !== e ? e : el.Z.getVoiceChannelId()) === t.id;
   }), Z = (0, R.Z)(t, !0), A = (0, p.e7)([I.ZP], () => {
 let e = I.ZP.getSelfEmbeddedActivityForChannel(t.id);
 return null != e ? e.applicationId : null;
@@ -457,7 +457,7 @@ context: t
   }) && !t.isPrivate() && !Z;
   return (0, s.jsx)(N.Gt, {
 value: D,
-children: (0, s.jsxs)(C.Z, {
+children: (0, s.jsxs)(g.Z, {
   section: ex.jXE.VOICE_CONTROL_TRAY,
   children: [
     (0, s.jsx)('div', {

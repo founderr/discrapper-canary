@@ -32,9 +32,9 @@ displayProfile: p,
 subsection: g,
 onClose: j
   } = e, {
-theme: T
+theme: N
   } = (0, E.z)(), {
-trackUserProfileAction: N
+trackUserProfileAction: T
   } = (0, c.KZ)(), C = null == p ? void 0 : p.guildId, A = (0, l.e7)([r.Z], () => null != C ? r.Z.getGuild(C) : null), y = (0, l.e7)([d.Z], () => d.Z.getGuildId()), R = (0, l.e7)([a.default], () => a.default.locale), O = (0, I.Z)(n.id), L = (0, u.Z)(n.id);
   return (0, s.jsxs)(t.ScrollerThin, {
 fade: !0,
@@ -64,7 +64,7 @@ children: [
       connectedAccounts: O,
       className: S.connections,
       userId: n.id,
-      theme: T,
+      theme: N,
       locale: R
     })
   }),
@@ -75,7 +75,7 @@ children: [
       applicationRoleConnection: e,
       locale: R,
       onApplicationClicked: () => {
-        N({
+        T({
           action: 'PRESS_APP_CONNECTION'
         }), j();
       },
@@ -89,7 +89,7 @@ children: [
       userId: n.id,
       className: S.note,
       autoFocus: g === Z.Tb.NOTE,
-      onUpdate: () => N({
+      onUpdate: () => T({
         action: 'SET_NOTE'
       })
     })

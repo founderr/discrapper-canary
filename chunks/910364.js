@@ -25,8 +25,8 @@ var s = i(735250),
   p = i(726059),
   g = i(162267),
   j = i(502762),
-  T = i(62154),
-  N = i(293259),
+  N = i(62154),
+  T = i(293259),
   C = i(725954),
   A = i(228168),
   y = i(981631),
@@ -162,7 +162,7 @@ children: (0, s.jsx)(Z.Mt, {
           profileType: A.y0.MODAL,
           ref: ee,
           children: [
-            (0, s.jsx)(N.Z, {
+            (0, s.jsx)(T.Z, {
               className: O.topSection,
               displayProfile: k,
               user: w,
@@ -191,7 +191,7 @@ children: (0, s.jsx)(Z.Mt, {
                   }) : (0, s.jsx)('div', {
                     className: O.divider
                   }),
-                  (0, s.jsx)(T.Z, {
+                  (0, s.jsx)(N.Z, {
                     displayProfile: k,
                     user: w,
                     autoFocusNote: D === A.Tb.NOTE && !z,

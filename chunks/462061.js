@@ -21,8 +21,8 @@ var i = n(735250),
   _ = n(470956),
   f = n(314897),
   E = n(271383),
-  C = n(131951),
-  g = n(451478),
+  g = n(131951),
+  C = n(451478),
   I = n(783259),
   x = n(40300),
   T = n(5192),
@@ -66,11 +66,11 @@ onVideoResize: L,
 blocked: P,
 noVideoRender: O = !1,
 pulseSpeakingIndicator: y = !1
-  } = e, D = C.Z.getVideoComponent(), k = (0, r.e7)([f.default], () => f.default.getId()), {
+  } = e, D = g.Z.getVideoComponent(), k = (0, r.e7)([f.default], () => f.default.getId()), {
 user: U,
 streamId: w,
 speaking: B
-  } = t, H = U.id === k, G = (0, N.ZP)(t), V = (0, r.e7)([g.Z], () => g.Z.isFocused()), F = (0, r.e7)([p.Z], () => p.Z.getWindowFocused(v.KJ3.CHANNEL_CALL_POPOUT)), W = (0, r.e7)([C.Z], () => null != U.id && C.Z.isLocalVideoDisabled(U.id, (0, h.Z)(t.type)), [
+  } = t, H = U.id === k, G = (0, N.ZP)(t), V = (0, r.e7)([C.Z], () => C.Z.isFocused()), F = (0, r.e7)([p.Z], () => p.Z.getWindowFocused(v.KJ3.CHANNEL_CALL_POPOUT)), W = (0, r.e7)([g.Z], () => null != U.id && g.Z.isLocalVideoDisabled(U.id, (0, h.Z)(t.type)), [
 U.id,
 t.type
   ]), z = (0, r.e7)([E.ZP], () => E.ZP.isGuestOrLurker(n.guild_id, U.id)), Y = T.ZP.getName(n.getGuildId(), n.id, U) + (z ? ' '.concat(Z.Z.Messages.GUEST_NAME_SUFFIX) : ''), K = B && (F || V), q = o < 124 ? b : M, {
@@ -84,7 +84,7 @@ animateOnHover: !K
   }), J = (0, r.e7)([d.Z], () => d.Z.getSelectedParticipant(n.id));
   return (a.useEffect(() => {
 n.isGuildStageVoice() && !G && (null == J ? void 0 : J.id) === U.id && c.Z.selectParticipant(n.id, null);
-  }, [G]), s && !W && !O && G && !R && null != D && C.Z.supports(S.AN.VIDEO)) ? (0, i.jsx)(x.Z, {
+  }, [G]), s && !W && !O && G && !R && null != D && g.Z.supports(S.AN.VIDEO)) ? (0, i.jsx)(x.Z, {
 onResize: L,
 wrapperClassName: A.videoWrapper,
 className: A.content,

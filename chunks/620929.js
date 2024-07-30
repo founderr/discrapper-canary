@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(532490),
   f = n(979264),
   E = n(570938),
-  C = n(550271),
-  g = n(116175),
+  g = n(550271),
+  C = n(116175),
   I = n(308083),
   x = n(689938),
   T = n(322591);
@@ -45,7 +45,7 @@ clanTag: n,
 textVariant: 'heading-lg/semibold',
 textColor: 'text-normal',
 badgeSize: I.NC.SIZE_24,
-clanBadge: (0, i.jsx)(C.A, {
+clanBadge: (0, i.jsx)(g.A, {
   className: T.charterClanBadge,
   badge: a,
   width: I.NC.SIZE_24,
@@ -94,7 +94,7 @@ playstyle: r,
 interests: m,
 tag: f,
 badgeKind: E,
-badgePrimaryColor: C,
+badgePrimaryColor: g,
 badgeSecondaryColor: S
   } = (0, c.cj)([h.ZP], () => {
 var e;
@@ -107,8 +107,8 @@ children: [
     guildId: t,
     tag: f,
     badge: E,
-    primaryColor: null != C ? C : g.Nh,
-    secondaryColor: null != S ? S : g.vY
+    primaryColor: null != g ? g : C.Nh,
+    secondaryColor: null != S ? S : C.vY
   }),
   (0, i.jsx)(u.Heading, {
     variant: 'heading-xl/normal',

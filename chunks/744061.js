@@ -22,17 +22,17 @@ onClose: t,
 onConfirm: _,
 onCancel: f,
 channel: E,
-analyticsType: C,
-popoutText: g,
+analyticsType: g,
+popoutText: C,
 animation: I
   } = e;
   a.useEffect(() => {
 u.default.track(d.rMx.OPEN_POPOUT, {
-  type: C,
+  type: g,
   ...(0, o.v_)(E)
 });
   }, [
-C,
+g,
 E
   ]);
   let x = a.useCallback(() => {
@@ -93,7 +93,7 @@ children: (0, i.jsxs)('form', {
               id: 'content-warning-popout-label',
               className: m.markup,
               variant: 'text-sm/normal',
-              children: g.body
+              children: C.body
             }),
             (0, i.jsxs)('div', {
               className: p.buttonWrapper,
@@ -137,7 +137,7 @@ children: (0, i.jsxs)('form', {
         })
       ]
     }),
-    null != g.footer && '' !== g.footer ? (0, i.jsxs)('div', {
+    null != C.footer && '' !== C.footer ? (0, i.jsxs)('div', {
       className: p.footer,
       children: [
         (0, i.jsx)(r.CircleInformationIcon, {
@@ -147,7 +147,7 @@ children: (0, i.jsxs)('form', {
         }),
         (0, i.jsx)(r.Text, {
           variant: 'text-sm/normal',
-          children: g.footer
+          children: C.footer
         })
       ]
     }) : null

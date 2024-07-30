@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(144144),
   f = n(607070),
   E = n(100527),
-  C = n(906732),
-  g = n(623624),
+  g = n(906732),
+  C = n(623624),
   I = n(518738),
   x = n(965376),
   T = n(159299),
@@ -59,7 +59,7 @@ let {
 }, [
   t.guild_id,
   u
-]), E = (0, h.e7)([j.default], () => j.default.getUser(l)), C = (0, h.e7)([j.default], () => j.default.getCurrentUser()), I = (null == E ? void 0 : E.id) === (null == C ? void 0 : C.id), x = (0, h.e7)([
+]), E = (0, h.e7)([j.default], () => j.default.getUser(l)), g = (0, h.e7)([j.default], () => j.default.getCurrentUser()), I = (null == E ? void 0 : E.id) === (null == g ? void 0 : g.id), x = (0, h.e7)([
   M.Z,
   b.Z
 ], () => I ? b.Z.getStatus() : M.Z.getStatus(l, t.guild_id)), L = (0, h.e7)([M.Z], () => M.Z.isMobileOnline(l)), P = (0, h.e7)([
@@ -98,7 +98,7 @@ let {
   E,
   t
 ]), z = a.useCallback(e => {
-  e.stopPropagation(), (0, g.f)({
+  e.stopPropagation(), (0, C.f)({
     guildId: t.guild_id,
     location: {
       section: H.jXE.THREAD_MEMBER_LIST,
@@ -138,7 +138,7 @@ return (0, i.jsx)(p.Popout, {
       onContextMenu: V,
       shouldAnimateStatus: W,
       user: E,
-      currentUser: C,
+      currentUser: g,
       nick: null == u ? void 0 : u.nick,
       status: x,
       activities: P,
@@ -236,9 +236,9 @@ channel: t,
 guild: n
   } = e, s = 'members-'.concat(t.id), {
 analyticsLocations: r
-  } = (0, C.ZP)(E.Z.MEMBER_LIST), d = (0, x.D)(t.id, n), m = d.filter(e => e.userIds.length > 0).reverse()[0], {
+  } = (0, g.ZP)(E.Z.MEMBER_LIST), d = (0, x.D)(t.id, n), m = d.filter(e => e.userIds.length > 0).reverse()[0], {
 navigator: _,
-listRef: g
+listRef: C
   } = function(e, t) {
 let n = (0, h.e7)([f.Z], () => f.Z.keyboardModeEnabled),
   i = a.useRef(null),
@@ -308,7 +308,7 @@ return (0, i.jsx)(Q, {
 });
   let T = o().omit(_.containerProps, ['ref']),
 N = k.iJ(n);
-  return (0, i.jsx)(C.Gt, {
+  return (0, i.jsx)(g.Gt, {
 value: r,
 children: (0, i.jsx)(c.bG, {
   navigator: _,
@@ -316,7 +316,7 @@ children: (0, i.jsx)(c.bG, {
     children: e => (0, i.jsx)('div', {
       className: l()(F.membersWrap, F.hiddenMembers),
       children: (0, i.jsx)(p.List, {
-        ref: g,
+        ref: C,
         className: F.members,
         paddingTop: 0,
         sectionHeight: 40,

@@ -31,8 +31,8 @@ displayProfile: p,
 autoFocusNote: g = !1,
 scrollToConnections: j = !1
   } = e, {
-trackUserProfileAction: T
-  } = (0, _.KZ)(), N = (0, t.e7)([I.Z], () => I.Z.hidePersonalInformation), {
+trackUserProfileAction: N
+  } = (0, _.KZ)(), T = (0, t.e7)([I.Z], () => I.Z.hidePersonalInformation), {
 theme: C
   } = (0, x.z)(), A = (0, t.e7)([u.default], () => u.default.locale), y = (0, d.Z)('user_profile'), R = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, r.Z)(i.id), O = (0, f.Z)(i.id), L = l.useRef(null);
   return (l.useLayoutEffect(() => {
@@ -40,7 +40,7 @@ if (j) {
   var e;
   null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView();
 }
-  }, [j]), N) ? (0, s.jsx)(Z.Z, {}) : (0, s.jsxs)(o.ScrollerThin, {
+  }, [j]), T) ? (0, s.jsx)(Z.Z, {}) : (0, s.jsxs)(o.ScrollerThin, {
 fade: !0,
 className: S.infoScroller,
 children: [
@@ -94,7 +94,7 @@ children: [
             userId: i.id,
             autoFocus: g,
             className: S.note,
-            onUpdate: () => T({
+            onUpdate: () => N({
               action: 'SET_NOTE'
             })
           })

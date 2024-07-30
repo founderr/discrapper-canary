@@ -82,8 +82,8 @@ onClose: v
 trackUserProfileAction: Z
   } = (0, c.KZ)(), g = (0, t.e7)([d.Z], () => d.Z.hidePersonalInformation), [{
 section: j,
-subsection: T
-  }, N] = l.useState({
+subsection: N
+  }, T] = l.useState({
 section: null !== (r = null === (n = f.find(e => {
   let {
     section: n
@@ -95,13 +95,13 @@ subsection: x
 Z({
   action: 'PRESS_SECTION',
   section: e
-}), N({
+}), T({
   section: e,
   subsection: void 0
 });
   }, [
 Z,
-N
+T
   ]);
   return g ? (0, s.jsx)('div', {
 className: S.container,
@@ -133,7 +133,7 @@ children: [
   (0, s.jsx)(p, {
     items: f,
     section: j,
-    subsection: T,
+    subsection: N,
     user: u,
     currentUser: I,
     displayProfile: _,
