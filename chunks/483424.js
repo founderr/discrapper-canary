@@ -17,47 +17,50 @@ function d(e) {
   let {
 user: t,
 currentUser: n,
-onClose: d
+className: d,
+onClose: _
   } = e, {
-analyticsLocations: _
+analyticsLocations: E
   } = (0, i.ZP)(), {
-trackUserProfileAction: E,
-...f
+trackUserProfileAction: f,
+...h
   } = (0, a.KZ)(), {
-live: h,
-stream: p
-  } = (0, o.Z)(t.id), [m] = h;
-  return null == m && null == p ? null : null != p ? (0, r.jsx)(u.Z, {
+live: p,
+stream: m
+  } = (0, o.Z)(t.id), [I] = p;
+  return null == I && null == m ? null : null != m ? (0, r.jsx)(u.Z, {
 user: t,
 currentUser: n,
-stream: p,
-onClose: d,
+stream: m,
+className: d,
+onClose: _,
 onAction: () => {
-  E({
+  f({
     action: 'JOIN_ACTIVITY'
   }), (0, s.Ac)({
     activityType: c.IIU.STREAMING,
-    analyticsLocations: _,
-    ...f
-  }), null == d || d();
+    analyticsLocations: E,
+    ...h
+  }), null == _ || _();
 }
   }) : (0, r.jsx)(l.Z, {
 user: t,
 currentUser: n,
-activity: m,
-onClose: d,
+activity: I,
+className: d,
+onClose: _,
 onAction: () => {
-  E({
+  f({
     action: 'JOIN_ACTIVITY'
   }), (0, s.Ac)({
-    activityType: null == m ? void 0 : m.type,
-    activityName: null == m ? void 0 : m.name,
-    activityPlatform: null == m ? void 0 : m.platform,
-    activitySessionId: null == m ? void 0 : m.session_id,
-    applicationId: null == m ? void 0 : m.application_id,
-    analyticsLocations: _,
-    ...f
-  }), null == d || d();
+    activityType: null == I ? void 0 : I.type,
+    activityName: null == I ? void 0 : I.name,
+    activityPlatform: null == I ? void 0 : I.platform,
+    activitySessionId: null == I ? void 0 : I.session_id,
+    applicationId: null == I ? void 0 : I.application_id,
+    analyticsLocations: E,
+    ...h
+  }), null == _ || _();
 }
   });
 }

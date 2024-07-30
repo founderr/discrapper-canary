@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return v;
+return O;
   }
 });
 var r = n(735250),
@@ -14,101 +14,91 @@ var r = n(735250),
   d = n(502762),
   _ = n(652853),
   E = n(448980),
-  f = n(60241),
-  h = n(373826),
-  p = n(315324),
-  m = n(262210),
-  I = n(666984),
-  T = n(228168),
-  g = n(981631),
-  S = n(689938),
-  A = n(692184);
+  f = n(194811),
+  h = n(60241),
+  p = n(373826),
+  m = n(315324),
+  I = n(262210),
+  T = n(666984),
+  g = n(228168),
+  S = n(981631),
+  A = n(689938),
+  N = n(692184);
 let {
-  getAssetImage: N
+  getAssetImage: v
 } = n(81063);
 
-function v(e) {
+function O(e) {
   var t, n;
   let {
 user: a,
-currentUser: v,
-activity: O,
-guild: R,
-channel: C,
-onAction: y,
-onClose: D
+currentUser: O,
+activity: R,
+guild: C,
+channel: y,
+className: D,
+onAction: L,
+onClose: b
   } = e, {
-profileType: L
-  } = (0, _.z)(), b = {
-[A.fullSize]: L === T.y0.FULL_SIZE
+profileType: M
+  } = (0, _.z)(), P = {
+[N.fullSize]: M === g.y0.FULL_SIZE
   };
-  if (!(0, u.Z)(O))
+  if (!(0, u.Z)(R))
 return null;
-  let M = l.Z.get(g.ABu.SPOTIFY),
-P = () => a.id === v.id ? null : (0, r.jsx)('div', {
-  className: s()(A.actions, b),
-  children: (0, r.jsx)(I.Z, {
-    user: a,
-    activity: O,
-    onClick: y
-  })
-});
+  let U = () => a.id === O.id ? null : (0, r.jsx)('div', {
+className: s()(N.actions, P),
+children: (0, r.jsx)(T.Z, {
+  user: a,
+  activity: R,
+  onClick: L
+})
+  });
   return (0, r.jsxs)(d.Z.Overlay, {
-className: A.card,
+className: s()(N.card, D),
 children: [
-  (0, r.jsxs)(o.Heading, {
-    variant: 'text-xs/medium',
-    color: 'header-primary',
-    className: A.header,
-    children: [
-      S.Z.Messages.USER_ACTIVITY_LISTENING_TO,
-      (0, r.jsx)('div', {
-        className: A.platformIcon,
-        style: {
-          maskImage: 'url('.concat(M.icon.whiteSVG, ')'),
-          WebkitMaskImage: 'url('.concat(M.icon.whiteSVG, ')')
-        }
-      })
-    ]
+  (0, r.jsx)(f.Z, {
+    text: A.Z.Messages.USER_ACTIVITY_LISTENING_TO,
+    platform: l.Z.get(S.ABu.SPOTIFY)
   }),
   (0, r.jsxs)('div', {
-    className: A.body,
+    className: N.body,
     children: [
       (0, r.jsxs)('div', {
-        className: s()(A.content, b),
+        className: s()(N.content, P),
         children: [
-          (0, r.jsx)(f.Z, {
+          (0, r.jsx)(h.Z, {
             src: e => {
               var t;
-              return N(O.application_id, null === (t = O.assets) || void 0 === t ? void 0 : t.large_image, e);
+              return v(R.application_id, null === (t = R.assets) || void 0 === t ? void 0 : t.large_image, e);
             },
-            alt: null === (t = O.assets) || void 0 === t ? void 0 : t.large_text,
-            tooltipText: null === (n = O.assets) || void 0 === n ? void 0 : n.large_text,
-            onClick: () => (0, c.Z5)(O, a.id)
+            alt: null === (t = R.assets) || void 0 === t ? void 0 : t.large_text,
+            tooltipText: null === (n = R.assets) || void 0 === n ? void 0 : n.large_text,
+            onClick: () => (0, c.Z5)(R, a.id)
           }),
           (0, r.jsxs)('div', {
-            className: A.details,
+            className: N.details,
             children: [
               (0, r.jsxs)('div', {
                 children: [
-                  (0, r.jsx)(h.Z, {
+                  (0, r.jsx)(p.Z, {
                     variant: 'heading-sm/semibold',
-                    text: O.details,
-                    onClick: () => (0, c.aG)(O)
+                    text: R.details,
+                    onClick: () => (0, c.aG)(R)
                   }),
                   (() => {
                     var e, t;
-                    let n = null !== (t = null === (e = O.state) || void 0 === e ? void 0 : e.split(';')) && void 0 !== t ? t : [];
-                    return 0 === n.length ? null : null == O.sync_id ? (0, r.jsx)(h.Z, {
+                    let n = null !== (t = null === (e = R.state) || void 0 === e ? void 0 : e.split(';')) && void 0 !== t ? t : [];
+                    return 0 === n.length ? null : null == R.sync_id ? (0, r.jsx)(p.Z, {
                       variant: 'text-xs/normal',
                       text: n.join(', ')
-                    }) : (0, r.jsx)(h.Z, {
+                    }) : (0, r.jsx)(p.Z, {
                       variant: 'text-xs/normal',
                       text: n.map((e, t) => (0, r.jsxs)(i.Fragment, {
                         children: [
                           (0, r.jsx)(o.Clickable, {
-                            className: s()(A.clickable, A.text, A.inline),
-                            onClick: () => (0, c.d$)(O, a.id, t),
+                            className: s()(N.clickable, N.text, N.inline),
+                            onClick: () => (0, c.d$)(R, a.id, t),
                             children: e
                           }),
                           t < n.length - 1 ? ', ' : ''
@@ -120,42 +110,42 @@ children: [
               }),
               (0, r.jsx)(E.Z, {
                 user: a,
-                activity: O,
-                className: A.badges
+                activity: R,
+                className: N.badges
               }),
               (() => {
                 let {
                   timestamps: e
-                } = O;
+                } = R;
                 if (null == e)
                   return null;
                 let {
                   start: t,
                   end: n
                 } = e;
-                return null == t || null == n ? null : (0, r.jsx)(m.Z, {
+                return null == t || null == n ? null : (0, r.jsx)(I.Z, {
                   start: t,
                   end: n
                 });
               })()
             ]
           }),
-          L === T.y0.FULL_SIZE && P()
+          M === g.y0.FULL_SIZE && U()
         ]
       }),
-      null == R || null == C ? null : (0, r.jsxs)(r.Fragment, {
+      null == C || null == y ? null : (0, r.jsxs)(r.Fragment, {
         children: [
           (0, r.jsx)('div', {
-            className: A.voiceChannelDivider
+            className: N.voiceChannelDivider
           }),
-          (0, r.jsx)(p.Z, {
-            guild: R,
-            channel: C,
-            onClose: D
+          (0, r.jsx)(m.Z, {
+            guild: C,
+            channel: y,
+            onClose: b
           })
         ]
       }),
-      L !== T.y0.FULL_SIZE && P()
+      M !== g.y0.FULL_SIZE && U()
     ]
   })
 ]

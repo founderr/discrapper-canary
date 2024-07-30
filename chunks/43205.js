@@ -19,25 +19,30 @@ constrain: a = 'height',
 className: c,
 alt: d = 'icon',
 fallbackSrc: _
-  } = e, E = (0, l.ZP)(), [f, h] = i.useState(!1), [p, m] = i.useState(!1), I = null == _ || p, T = 'height' === a ? {
-maxWidth: ''.concat(n, 'px'),
-height: ''.concat(n, 'px')
+  } = e, E = (0, l.ZP)(), f = ''.concat(n, 'px'), [h, p] = i.useState(!1), [m, I] = i.useState(!1), T = null == _ || m;
+  if (null == t || h && T)
+return (0, r.jsx)(o.UnknownGameIcon, {
+  size: 'custom',
+  width: '100%',
+  height: '100%',
+  color: 'dark' === E ? 'white' : 'black',
+  style: {
+    maxWidth: f
+  },
+  className: s()(u.contentImage, c)
+});
+  let g = 'height' === a ? {
+maxWidth: f,
+height: f
   } : {
-maxWidth: ''.concat(n, 'px'),
-minHeight: ''.concat(n, 'px')
+maxWidth: f,
+minHeight: f
   };
-  return null == t || f && I ? (0, r.jsx)(o.UnknownGameIcon, {
-size: 'custom',
-width: n,
-height: n,
-color: 'dark' === E ? 'white' : 'black',
-style: T,
-className: s()(u.contentImage, c)
-  }) : (0, r.jsx)('img', {
-style: T,
+  return (0, r.jsx)('img', {
+style: g,
 className: s()(u.contentImage, c),
-src: f && null != _ ? _ : t,
+src: h && null != _ ? _ : t,
 alt: d,
-onError: e => f ? m(!0) : h(!0)
+onError: e => h ? I(!0) : p(!0)
   });
 }

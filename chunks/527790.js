@@ -32,23 +32,24 @@ function j(e) {
   let {
 user: n,
 entry: i,
-onClose: l
+className: l,
+onClose: r
   } = e, {
-iconUrl: r,
-appName: c
-  } = (0, m.n)(i), u = (0, x.Z)({
+iconUrl: c,
+appName: u
+  } = (0, m.n)(i), _ = (0, x.Z)({
 location: 'UserProfileRecentActivityCard',
 applicationId: i.extra.application_id,
 source: E.m1.UserProfile,
 sourceUserId: n.id,
 trackEntryPointImpression: !0
-  }), _ = () => i.content_type === o.s.TOP_GAME ? I.Hs.map((e, n) => (0, s.jsx)(e, {
+  }), g = () => i.content_type === o.s.TOP_GAME ? I.Hs.map((e, n) => (0, s.jsx)(e, {
 entry: i
   }, 'entry-'.concat(n))) : d.W.map((e, n) => (0, s.jsx)(e, {
 entry: i
   }, 'entry-'.concat(n)));
-  return null == u ? (0, s.jsx)(v.Z.Overlay, {
-className: p.card,
+  return null == _ ? (0, s.jsx)(v.Z.Overlay, {
+className: t()(p.card, l),
 children: (0, s.jsx)('div', {
   className: p.body,
   children: (0, s.jsxs)('div', {
@@ -57,7 +58,7 @@ children: (0, s.jsx)('div', {
     }),
     children: [
       (0, s.jsx)(Z.Z, {
-        src: r
+        src: c
       }),
       (0, s.jsxs)('div', {
         className: p.details,
@@ -65,13 +66,13 @@ children: (0, s.jsx)('div', {
           (0, s.jsx)('div', {
             children: (0, s.jsx)(h.Z, {
               variant: 'heading-sm/semibold',
-              text: c
+              text: u
             })
           }),
           (0, s.jsx)(f.Gk, {
             location: f.Gt.USER_PROFILE,
             className: p.badges,
-            children: _()
+            children: g()
           })
         ]
       })
@@ -79,7 +80,7 @@ children: (0, s.jsx)('div', {
   })
 })
   }) : (0, s.jsx)(v.Z.Overlay, {
-className: p.card,
+className: t()(p.card, l),
 children: (0, s.jsx)('div', {
   className: p.body,
   children: (0, s.jsxs)('div', {
@@ -88,7 +89,7 @@ children: (0, s.jsx)('div', {
     }),
     children: [
       (0, s.jsx)(Z.Z, {
-        src: r
+        src: c
       }),
       (0, s.jsxs)('div', {
         className: p.details,
@@ -96,17 +97,17 @@ children: (0, s.jsx)('div', {
           (0, s.jsx)(a.Clickable, {
             className: p.clickable,
             onClick: () => {
-              u(), null == l || l();
+              _(), null == r || r();
             },
             children: (0, s.jsx)(h.Z, {
               variant: 'heading-sm/semibold',
-              text: c
+              text: u
             })
           }),
           (0, s.jsx)(f.Gk, {
             location: f.Gt.USER_PROFILE,
             className: p.badges,
-            children: _()
+            children: g()
           })
         ]
       })
@@ -116,12 +117,13 @@ children: (0, s.jsx)('div', {
   });
 }
 
-function T(e) {
+function N(e) {
   let {
-entry: n
+entry: n,
+className: i
   } = e;
   return (0, s.jsx)(v.Z.Overlay, {
-className: p.card,
+className: t()(p.card, i),
 children: (0, s.jsx)('div', {
   className: p.body,
   children: (0, s.jsxs)('div', {
@@ -162,13 +164,14 @@ children: (0, s.jsx)('div', {
   });
 }
 
-function N(e) {
+function T(e) {
   var n, i, l;
   let {
-entry: o
-  } = e, a = null === (n = o.extra.entries[0]) || void 0 === n ? void 0 : n.media;
-  return null == a ? null : (0, s.jsx)(v.Z.Overlay, {
-className: p.card,
+entry: o,
+className: a
+  } = e, r = null === (n = o.extra.entries[0]) || void 0 === n ? void 0 : n.media;
+  return null == r ? null : (0, s.jsx)(v.Z.Overlay, {
+className: t()(p.card, a),
 children: (0, s.jsx)('div', {
   className: p.body,
   children: (0, s.jsxs)('div', {
@@ -177,7 +180,7 @@ children: (0, s.jsx)('div', {
     }),
     children: [
       (0, s.jsx)(Z.Z, {
-        src: a.image_url
+        src: r.image_url
       }),
       (0, s.jsxs)('div', {
         className: p.details,
@@ -185,7 +188,7 @@ children: (0, s.jsx)('div', {
           (0, s.jsx)('div', {
             children: (0, s.jsx)(h.Z, {
               variant: 'heading-sm/semibold',
-              text: null !== (l = null === (i = a.artists[0]) || void 0 === i ? void 0 : i.name) && void 0 !== l ? l : a.title
+              text: null !== (l = null === (i = r.artists[0]) || void 0 === i ? void 0 : i.name) && void 0 !== l ? l : r.title
             })
           }),
           (0, s.jsx)(f.Gk, {
@@ -205,10 +208,11 @@ children: (0, s.jsx)('div', {
 
 function C(e) {
   let {
-entry: n
+entry: n,
+className: i
   } = e;
   return (0, s.jsx)(v.Z.Overlay, {
-className: p.card,
+className: t()(p.card, i),
 children: (0, s.jsx)('div', {
   className: p.body,
   children: (0, s.jsxs)('div', {
@@ -253,17 +257,22 @@ function A(e) {
   let {
 user: n,
 entry: i,
-onClose: l
+className: l,
+onClose: t
   } = e;
   return (0, r.dX)(i) ? (0, s.jsx)(j, {
 user: n,
 entry: i,
-onClose: l
-  }) : (0, r.r5)(i) ? (0, s.jsx)(T, {
-entry: i
-  }) : (0, r.kx)(i) ? (0, s.jsx)(N, {
-entry: i
+className: l,
+onClose: t
+  }) : (0, r.r5)(i) ? (0, s.jsx)(N, {
+entry: i,
+className: l
+  }) : (0, r.kx)(i) ? (0, s.jsx)(T, {
+entry: i,
+className: l
   }) : i.content_type === o.s.TOP_ARTIST ? (0, s.jsx)(C, {
-entry: i
+entry: i,
+className: l
   }) : null;
 }
