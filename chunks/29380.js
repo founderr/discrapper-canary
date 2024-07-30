@@ -29,7 +29,13 @@ onActivityItemSelected: A,
 activityAction: E,
 buttonColor: N,
 buttonText: v
-  } = (0, d.P7)(n, t, c.Vh.APP_LAUNCHER_APPLICATION_VIEW, f), x = function(e) {
+  } = (0, d.P7)({
+channel: n,
+application: t,
+location: c.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+sectionName: f,
+commandName: C
+  }), x = function(e) {
 let {
   channel: n,
   activityAction: t
@@ -68,10 +74,10 @@ children: e => {
       A(), null == n || n();
     },
     'aria-label': p.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
-      buttonText: null != C ? C : v,
+      buttonText: v,
       applicationName: t.name
     }),
-    children: null != C ? C : v
+    children: v
   });
 }
   });

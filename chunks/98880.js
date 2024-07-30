@@ -391,7 +391,12 @@ onActivityItemSelected: s,
 activityAction: u,
 buttonColor: m,
 buttonText: p
-  } = (0, x.P7)(n, t, i, a);
+  } = (0, x.P7)({
+channel: n,
+application: t,
+location: i,
+sectionName: a
+  });
   if (u === d.JS.START)
 return r ? (0, l.jsx)(M, {
   ...o,

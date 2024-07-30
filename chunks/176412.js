@@ -66,39 +66,41 @@ f.Z.RULES,
   ]),
   L = o.w4(P);
 
-function S(e, n, t, i) {
-  var a;
-  let l = (0, c.O)(),
-r = (0, u.Qv)({
-  applicationId: n.id,
-  channelId: e.id
-}),
-o = (0, u.w1)({
-  applicationId: n.id,
-  embeddedActivitiesManager: d.Z,
-  channelId: e.id,
-  guildId: null !== (a = e.getGuildId()) && void 0 !== a ? a : void 0,
-  locationObject: l.location,
-  onActivityItemSelectedProp: e => {
-    let {
-      applicationId: n
-    } = e, a = E.Z.entrypoint();
-    A.y(N.ti.ACTIVITY), (0, m.yw)(v.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
-      location: t,
-      application_id: n,
-      section_name: i,
-      action: r,
-      source: a
-    });
-  }
-}),
-p = s.ButtonColors.BRAND,
-_ = I.Z.Messages.LAUNCH;
-  return r === u.JS.JOIN ? (p = s.ButtonColors.GREEN, _ = I.Z.Messages.JOIN_ACTIVITY) : r === u.JS.LEAVE && (p = s.ButtonColors.RED, _ = I.Z.Messages.LEAVE), {
-onActivityItemSelected: o,
-activityAction: r,
-buttonColor: p,
-buttonText: _
+function S(e) {
+  var n;
+  let {
+channel: t,
+application: i,
+location: a,
+sectionName: l,
+commandName: r
+  } = e, o = (0, c.O)(), p = (0, u.Qv)({
+applicationId: i.id,
+channelId: t.id
+  }), _ = (0, u.w1)({
+applicationId: i.id,
+embeddedActivitiesManager: d.Z,
+channelId: t.id,
+guildId: null !== (n = t.getGuildId()) && void 0 !== n ? n : void 0,
+locationObject: o.location,
+onActivityItemSelectedProp: e => {
+  let {
+    applicationId: n
+  } = e, t = E.Z.entrypoint();
+  A.y(N.ti.ACTIVITY), (0, m.yw)(v.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+    location: a,
+    application_id: n,
+    section_name: l,
+    action: p,
+    source: t
+  });
+}
+  }), f = s.ButtonColors.BRAND, C = null != r ? r : I.Z.Messages.LAUNCH;
+  return p === u.JS.JOIN ? (f = s.ButtonColors.GREEN, C = I.Z.Messages.JOIN_ACTIVITY) : p === u.JS.LEAVE && (f = s.ButtonColors.RED, C = I.Z.Messages.LEAVE), {
+onActivityItemSelected: _,
+activityAction: p,
+buttonColor: f,
+buttonText: C
   };
 }
 
