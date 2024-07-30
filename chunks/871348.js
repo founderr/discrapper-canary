@@ -111,14 +111,21 @@ function S(e) {
 onScroll: t
   } = e, {
 loading: n
-  } = (0, u.LE)();
+  } = (0, u.LE)(), {
+enableClanCreation: s
+  } = (0, c.C3)({
+location: 'GuildsTab',
+includeConverted: !0
+  });
   return n ? (0, i.jsx)('section', {
 className: p.guilds,
 children: (0, i.jsx)('div', {
   className: p.loading,
   children: (0, i.jsx)(l.Spinner, {})
 })
-  }) : (0, i.jsx)(T, {
+  }) : s ? (0, i.jsx)(T, {
+onScroll: t
+  }) : (0, i.jsx)(f, {
 onScroll: t
   });
 }
