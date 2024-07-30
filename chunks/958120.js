@@ -106,6 +106,7 @@ children: [
   B ? (0, r.jsx)(f.Z, {
     user: t,
     currentUser: n,
+    isHovering: L,
     onClose: P
   }) : (0, r.jsx)(S.Z, {
     user: t,
