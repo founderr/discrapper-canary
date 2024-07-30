@@ -39,8 +39,8 @@ var i = n(735250),
   j = n(730417),
   U = n(524347),
   G = n(853197),
-  k = n(810280),
-  w = n(60762),
+  w = n(810280),
+  k = n(60762),
   B = n(258609),
   H = n(278464),
   V = n(331541),
@@ -300,7 +300,7 @@ return null == e ? null : (0, i.jsxs)('div', {
           onClick: this.handleToggleSelfMute,
           onContextMenu: this.handleInputAudioContextMenu
         }),
-        (0, i.jsx)(ek, {
+        (0, i.jsx)(ew, {
           selfDeaf: t,
           serverDeaf: r,
           onClick: this.handleToggleSelfDeaf,
@@ -328,7 +328,7 @@ return null == e ? null : (0, i.jsxs)('div', {
                   position: 'top',
                   align: 'center',
                   shouldShow: !0,
-                  renderPopout: () => (0, i.jsx)(k.Z, {
+                  renderPopout: () => (0, i.jsx)(w.Z, {
                     markAsDismissed: n,
                     partnerGame: eR.X2.FORTNITE
                   }),
@@ -339,7 +339,7 @@ return null == e ? null : (0, i.jsxs)('div', {
                   position: 'top',
                   align: 'center',
                   shouldShow: !0,
-                  renderPopout: () => (0, i.jsx)(w.Z, {
+                  renderPopout: () => (0, i.jsx)(k.Z, {
                     markAsDismissed: n,
                     partnerGame: eR.X2.FORTNITE
                   }),
@@ -623,8 +623,8 @@ x = (0, l.e7)([eI.ZP], () => eI.ZP.getPremiumTypeSubscription()),
 b = (0, l.e7)([ed.Z], () => ed.Z.getEverSpeakingWhileMuted()),
 M = (0, l.e7)([ec.Z], () => ec.Z.hasLayers()),
 y = (0, h.useModalsStore)(h.hasAnyModalOpenSelector) || M || eA.s.isDisallowPopupsSet(),
-k = (0, F.b)(),
-w = (0, l.e7)([B.Z], () => null != B.Z.getAwaitingRemoteSessionInfo()),
+w = (0, F.b)(),
+k = (0, l.e7)([B.Z], () => null != B.Z.getAwaitingRemoteSessionInfo()),
 V = (0, l.e7)([U.Z], () => U.Z.isCurrentQuestCompleted),
 z = (0, l.e7)([U.Z], () => U.Z.currentDropQuestGameTitle),
 Q = (0, H.n)(),
@@ -706,8 +706,8 @@ status: u,
 streaming: d,
 suppress: Z,
 webBuildOverride: R,
-awaitingRemote: w,
-isEligibleForPomelo: k
+awaitingRemote: k,
+isEligibleForPomelo: w
   });
 }
 
@@ -789,7 +789,7 @@ disabled: r
   });
 }
 
-function ek(e) {
+function ew(e) {
   let {
 selfDeaf: t,
 serverDeaf: n,

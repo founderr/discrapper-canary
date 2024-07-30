@@ -39,8 +39,8 @@ var i = n(735250),
   j = n(502762),
   U = n(530),
   G = n(544989),
-  k = n(969205),
-  w = n(171368),
+  w = n(969205),
+  k = n(171368),
   B = n(580512),
   H = n(67152),
   V = n(695346),
@@ -286,7 +286,7 @@ e_,
 a
   ]);
   let eE = e => {
-  null == n || n(), (0, w.openUserProfileModal)({
+  null == n || n(), (0, k.openUserProfileModal)({
     sourceAnalyticsLocations: el,
     userId: t.id,
     ...e
@@ -342,7 +342,7 @@ children: (0, i.jsx)(A.Mt, {
       children: [
         !eg && (0, i.jsx)(G.Z, {
           profileType: $.y0.BITE_SIZE,
-          children: (0, i.jsx)(k.Z, {
+          children: (0, i.jsx)(w.Z, {
             userId: t.id,
             onClose: n
           })
