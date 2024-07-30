@@ -104,6 +104,7 @@ let k = {},
 'SEARCH_MODAL_OPEN',
 'IFE_EXPERIMENT_SEARCH_MODAL_OPEN',
 'SHOW_KEYBOARD_SHORTCUTS',
+'DM_SETTINGS_UPSELL_SHOW',
 'INTERACTION_MODAL_CREATE',
 'INTERACTION_IFRAME_MODAL_CREATE',
 'GUILD_SETTINGS_CLOSE',
@@ -682,7 +683,7 @@ let {
 } = e;
 K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
 let n = new URLSearchParams();
-n.append('build_id', '178f10cd4a6952b065e7c32f7ca005e83b08d8fa'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString());
+n.append('build_id', 'b846d088ed2041b3523574dc17d7e2d2397252f7'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString());
   },
   OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
 let {
