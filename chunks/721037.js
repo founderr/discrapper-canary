@@ -80,42 +80,42 @@ t.Z = a.ZP.connectStores([
   d.Z
 ], e => {
   var t, n, r, i;
-  let a;
-  let s, {
-  showInPopoutWindow: c = !1,
-  disallowTextActivity: _ = !1
+  let a, {
+  inPopoutWindow: s = !1
 } = e,
-h = E.Z.getWindowOpen(S.KJ3.CHANNEL_CALL_POPOUT),
-v = o.ZP.getCurrentEmbeddedActivity(),
-O = null != v && !(0, u.Z)(v.channelId, p.Z, I.Z),
-R = o.ZP.getActivityPanelMode(),
-C = null != v && O && R === A.Ez.PANEL,
-y = null != v && (null === (t = d.Z.getSelectedParticipant(v.channelId)) || void 0 === t ? void 0 : t.type) === N.fO.ACTIVITY,
-D = T.Z.windowSize();
-  if (h && (_ && C || !C)) {
+c = E.Z.getWindowOpen(S.KJ3.CHANNEL_CALL_POPOUT),
+_ = o.ZP.getCurrentEmbeddedActivity(),
+h = null != _ && !(0, u.Z)(_.channelId, p.Z, I.Z),
+v = o.ZP.getActivityPanelMode(),
+O = h && v === A.Ez.PANEL,
+R = null != _ && (null === (t = d.Z.getSelectedParticipant(_.channelId)) || void 0 === t ? void 0 : t.type) === N.fO.ACTIVITY,
+C = T.Z.windowSize();
+  if (s) {
 let e = E.Z.getWindow(S.KJ3.CHANNEL_CALL_POPOUT);
-D = null == e ? D : {
+C = null == e ? C : {
   width: e.innerWidth,
   height: e.innerHeight
 };
-  }!_ && C ? a = S.IlC.APP : c && (a = S.IlC.POPOUT), s = _ && O ? null : O || !h || c ? null != v && R === A.Ez.PANEL && O ? null !== (n = m.Z.pipActivityWindow) && void 0 !== n ? n : m.Z.pipVideoWindow : null !== (r = m.Z.pipVideoWindow) && void 0 !== r ? r : m.Z.pipActivityWindow : null;
-  let L = Array.from(m.Z.pipWindows.values()),
-b = m.Z.pipWidth,
-M = L.find(e => e.component === S.NYg.VIDEO),
-P = [
-  M,
-  L.find(e => e.component === S.NYg.EMBED_IFRAME)
+  }
+  let y = s ? S.IlC.POPOUT : S.IlC.APP;
+  a = s && h ? null : s || !c || h ? null != _ && O ? null !== (n = m.Z.pipActivityWindow) && void 0 !== n ? n : m.Z.pipVideoWindow : null !== (r = m.Z.pipVideoWindow) && void 0 !== r ? r : m.Z.pipActivityWindow : null;
+  let D = Array.from(m.Z.pipWindows.values()),
+L = m.Z.pipWidth,
+b = D.find(e => e.component === S.NYg.VIDEO),
+M = [
+  b,
+  D.find(e => e.component === S.NYg.EMBED_IFRAME)
 ].filter(g.lm),
-U = (C || y) && null != v && (0, l.q)(v.applicationId);
+P = (O || R) && null != _ && (0, l.q)(_.applicationId);
   return {
-selectedPIPWindow: s,
-pipWindows: P,
-pipWidth: b,
-maxX: D.width,
-maxY: D.height,
+selectedPIPWindow: a,
+pipWindows: M,
+pipWidth: L,
+maxX: C.width,
+maxY: C.height,
 theme: f.Z.theme,
-dockedRect: m.Z.getDockedRect(null !== (i = null == s ? void 0 : s.id) && void 0 !== i ? i : ''),
-appContext: a,
-roundCorners: !U
+dockedRect: m.Z.getDockedRect(null !== (i = null == a ? void 0 : a.id) && void 0 !== i ? i : ''),
+appContext: y,
+roundCorners: !P
   };
 })(R);
