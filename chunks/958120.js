@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return y;
+return D;
   }
 });
 var r = n(735250),
@@ -12,112 +12,117 @@ var r = n(735250),
   u = n(699516),
   c = n(246946),
   d = n(5192),
-  _ = n(27144),
-  E = n(741308),
-  f = n(483424),
-  h = n(681837),
-  p = n(91433),
-  m = n(502762),
-  I = n(530),
-  T = n(827313),
-  g = n(790711),
-  S = n(580512),
-  A = n(67152),
-  N = n(579285),
-  v = n(287612),
-  O = n(228168),
-  R = n(981631),
-  C = n(335182);
+  _ = n(304704),
+  E = n(27144),
+  f = n(741308),
+  h = n(483424),
+  p = n(681837),
+  m = n(91433),
+  I = n(502762),
+  T = n(530),
+  g = n(827313),
+  S = n(790711),
+  A = n(580512),
+  N = n(67152),
+  v = n(579285),
+  O = n(287612),
+  R = n(228168),
+  C = n(981631),
+  y = n(335182);
 
-function y(e) {
+function D(e) {
   let {
 user: t,
 currentUser: n,
-displayProfile: y,
-guild: D,
-isHovering: L,
-onOpenProfile: b,
-channelId: M,
-onClose: P
-  } = e, U = d.ZP.getName(null == D ? void 0 : D.id, M, t), w = (0, a.e7)([u.Z], () => u.Z.getRelationshipType(t.id)), x = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation), G = (0, o.Z)('username'), k = i.useMemo(() => ({
-source: R.jXE.PROFILE_POPOUT,
+displayProfile: D,
+guild: L,
+isHovering: b,
+onOpenProfile: M,
+channelId: P,
+onClose: U
+  } = e, w = d.ZP.getName(null == L ? void 0 : L.id, P, t), x = (0, a.e7)([u.Z], () => u.Z.getRelationshipType(t.id)), G = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation), k = (0, o.Z)('username'), B = i.useMemo(() => ({
+source: C.jXE.PROFILE_POPOUT,
 tagUserId: t.id
   }), [t.id]), {
-pastActivityEnabled: B
-  } = (0, _.z)({
+newActivityCardsEnabled: F
+  } = (0, _.Z)({
+location: 'BiteSizeProfileBody'
+  }), {
+pastActivityEnabled: V
+  } = (0, E.z)({
 location: 'BiteSizeProfileBody'
   });
   return (0, r.jsxs)(s.Scroller, {
 fade: !0,
-className: C.body,
+className: y.body,
 children: [
-  (0, r.jsx)(I.Z, {
+  (0, r.jsx)(T.Z, {
     user: t,
-    profileType: O.y0.BITE_SIZE,
-    onOpenProfile: b,
-    usernameIcon: t.hasAvatarForGuild(null == D ? void 0 : D.id) && (0, r.jsx)(g.Z, {
+    profileType: R.y0.BITE_SIZE,
+    onOpenProfile: M,
+    usernameIcon: t.hasAvatarForGuild(null == L ? void 0 : L.id) && (0, r.jsx)(S.Z, {
       user: t,
-      nickname: U
+      nickname: w
     }),
-    nickname: U,
-    pronouns: null == y ? void 0 : y.pronouns,
-    tags: (0, r.jsx)(E.Z, {
-      displayProfile: y,
-      profileType: O.y0.BITE_SIZE,
-      onClose: P
+    nickname: w,
+    pronouns: null == D ? void 0 : D.pronouns,
+    tags: (0, r.jsx)(f.Z, {
+      displayProfile: D,
+      profileType: R.y0.BITE_SIZE,
+      onClose: U
     }),
     nicknameIcons: (0, r.jsxs)(r.Fragment, {
       children: [
-        (0, r.jsx)(h.Z, {
+        (0, r.jsx)(p.Z, {
           userId: t.id
         }),
-        !x && (0, r.jsx)(T.Z, {
+        !G && (0, r.jsx)(g.Z, {
           userId: t.id,
-          isHovering: L,
-          onOpenProfile: b
+          isHovering: b,
+          onOpenProfile: M
         })
       ]
     })
   }),
-  w === R.OGo.PENDING_INCOMING && (0, r.jsx)(m.Z.Overlay, {
-    children: (0, r.jsx)(p.Z, {
+  x === C.OGo.PENDING_INCOMING && (0, r.jsx)(I.Z.Overlay, {
+    children: (0, r.jsx)(m.Z, {
       user: t,
-      guildId: null == D ? void 0 : D.id,
-      channelId: M
+      guildId: null == L ? void 0 : L.id,
+      channelId: P
     })
   }),
-  t.id !== n.id && (0, r.jsx)(v.Z, {
+  t.id !== n.id && (0, r.jsx)(O.Z, {
     user: t,
-    onOpenProfile: e => null == b ? void 0 : b({
+    onOpenProfile: e => null == M ? void 0 : M({
       section: e
     })
   }),
-  G && (0, r.jsx)(l.ZP, {
+  k && (0, r.jsx)(l.ZP, {
     userId: t.id,
     inline: !1,
-    profileViewedAnalytics: k
+    profileViewedAnalytics: B
   }),
-  (0, r.jsx)(A.Z, {
+  (0, r.jsx)(N.Z, {
     user: t,
-    bio: null == y ? void 0 : y.bio,
-    hidePersonalInformation: x,
-    onClose: P
+    bio: null == D ? void 0 : D.bio,
+    hidePersonalInformation: G,
+    onClose: U
   }),
-  B ? (0, r.jsx)(f.Z, {
+  F || V ? (0, r.jsx)(h.Z, {
     user: t,
     currentUser: n,
-    isHovering: L,
-    onClose: P
-  }) : (0, r.jsx)(S.Z, {
+    isHovering: b,
+    onClose: U
+  }) : (0, r.jsx)(A.Z, {
     user: t,
-    guild: D,
-    channelId: M,
-    onClose: P
+    guild: L,
+    channelId: P,
+    onClose: U
   }),
-  null != D && (0, r.jsx)(N.Z, {
+  null != L && (0, r.jsx)(v.Z, {
     user: t,
     currentUser: n,
-    guild: D
+    guild: L
   })
 ]
   });
