@@ -21,10 +21,11 @@ var n = s(735250),
   P = s(594174),
   L = s(5192),
   M = s(810568),
-  S = s(689938),
-  f = s(340672),
-  G = s(421377);
-let h = e => {
+  S = s(289538),
+  f = s(689938),
+  G = s(340672),
+  h = s(421377);
+let v = e => {
   let {
 entry: a,
 setGeneratedImage: s,
@@ -43,15 +44,15 @@ nickName: l
 a,
 s
   ]), (0, n.jsxs)('div', {
-className: f.reactReplyPreviewWrapper,
+className: G.reactReplyPreviewWrapper,
 children: [
   (0, n.jsx)('div', {
-    className: r()(f.placeholderImage, null != i && f.in)
+    className: r()(G.placeholderImage, null != i && G.in)
   }),
   null != i && (0, n.jsx)('img', {
-    className: f.reactReplyPreview,
+    className: G.reactReplyPreview,
     src: i,
-    alt: S.Z.Messages.GAME_PROFILE_GAME_REACT_REPLY_ALT.format({
+    alt: f.Z.Messages.GAME_PROFILE_GAME_REACT_REPLY_ALT.format({
       userName: l,
       gameName: a.extra.game_name
     })
@@ -68,47 +69,35 @@ onClose: i
   } = e, A = (0, c.e7)([
 g.Z,
 m.Z
-  ], () => m.Z.getChannel(g.Z.getChannelId())), N = (0, c.e7)([P.default], () => P.default.getUser(a.author_id)), {
-nick: v,
-avatar: C
-  } = t.useMemo(() => {
-let e = L.ZP.getName(null == A ? void 0 : A.guild_id, null == A ? void 0 : A.id, N);
-return {
-  nick: e,
-  avatar: null == N ? void 0 : N.getAvatarURL(null == A ? void 0 : A.guild_id, 48, !1)
-};
-  }, [
+  ], () => m.Z.getChannel(g.Z.getChannelId())), N = (0, c.e7)([P.default], () => P.default.getUser(a.author_id)), C = t.useMemo(() => L.ZP.getName(null == A ? void 0 : A.guild_id, null == A ? void 0 : A.id, N), [
 N,
 A
   ]), [p, x] = t.useState();
   return null == N ? null : (0, n.jsxs)('div', {
-className: f.profileEntryCard,
+className: G.profileEntryCard,
 style: l,
 children: [
   (0, n.jsxs)('div', {
-    className: r()(G.row, G.gapSm),
+    className: r()(h.row, h.gapSm),
     style: l,
     children: [
-      (0, n.jsx)('img', {
-        className: f.avatar,
-        src: C,
-        alt: S.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({
-          userName: v
-        })
+      (0, n.jsx)(S.D, {
+        user: N,
+        channel: A
       }),
       (0, n.jsx)('div', {
-        className: r()(f.playerInfo),
+        className: r()(G.playerInfo),
         children: (0, n.jsxs)('div', {
-          className: r()(G.column, G.gapNone),
+          className: r()(h.column, h.gapNone),
           children: [
             (0, n.jsxs)(E.Text, {
               variant: 'text-sm/bold',
               color: 'text-normal',
               lineClamp: 1,
               children: [
-                v.slice(0, 18),
+                C.slice(0, 18),
                 ' ',
-                v.length > 18 ? '...' : ''
+                C.length > 18 ? '...' : ''
               ]
             }),
             (0, n.jsx)(R.Gk, {
@@ -123,7 +112,7 @@ children: [
     ]
   }),
   (0, n.jsx)('div', {
-    className: f.reactions,
+    className: G.reactions,
     children: (0, n.jsx)(d.ZP, {
       showReply: !0,
       showReact: !1,
@@ -157,14 +146,14 @@ children: [
         }
       },
       popoutProps: {
-        popoutBody: (0, n.jsx)(h, {
+        popoutBody: (0, n.jsx)(v, {
           entry: a,
           setGeneratedImage: x,
-          nickName: v
+          nickName: C
         }),
         replyHeaderText: '',
-        replyPlaceholder: S.Z.Messages.QUICK_DM_USER.format({
-          name: v
+        replyPlaceholder: f.Z.Messages.QUICK_DM_USER.format({
+          name: C
         })
       }
     })
