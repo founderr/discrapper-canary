@@ -271,24 +271,27 @@ return a.useEffect(() => {
   };
 
 function P(e) {
+  var t, n;
   let {
-applicationId: t,
-groupListingId: n,
-guildId: r
-  } = e, i = (0, l.Z)(), {
-listingsLoaded: a
-  } = A(t, n), {
-entitlementsLoaded: s
+applicationId: r,
+groupListingId: i,
+guildId: a
+  } = e, s = (0, l.Z)(), {
+listingsLoaded: o
+  } = A(r, i), {
+entitlementsLoaded: u
   } = N({
-guildId: r
+guildId: a
   }), {
-entitlementsLoaded: o
+entitlementsLoaded: c
   } = v({
-applicationId: t,
-loggedIn: i
-  }), u = M(t), c = (null == u ? void 0 : u.isMonetized) === !0;
+applicationId: r,
+loggedIn: s
+  }), d = M(r), {
+subscriptionGroupListing: _
+  } = y(r, a), E = null !== (n = null == _ ? void 0 : null === (t = _.subscription_listings) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0, f = (null == d ? void 0 : d.isMonetized) === !0;
   return {
-applicationSubscriptionListingsShown: null != t && null != n && (null == r || s) && (!i || o) && a && c
+applicationSubscriptionListingsShown: null != r && null != i && (null == a || u) && (!s || c) && o && f && E > 0
   };
 }
 

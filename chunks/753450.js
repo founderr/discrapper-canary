@@ -697,7 +697,7 @@ children: [
                         variant: 'heading-xxl/semibold',
                         children: eM.name
                       }),
-                      e3 && (0, t.jsx)(g.Tooltip, {
+                      (no || e3) && (0, t.jsx)(g.Tooltip, {
                         tooltipClassName: ef.premiumIconTooltip,
                         text: eI.Z.Messages.APPLICATION_DIRECTORY_PROFILE_TOOLTIP_PREMIUM,
                         children: e => (0, t.jsx)('img', {
