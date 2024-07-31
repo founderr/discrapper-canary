@@ -93,15 +93,15 @@ S.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
   },
   location_stack: _
 });
-  }, G = (0, r.wj)(n) ? x : b, [w, k] = (0, u.U)(t, N.R.GUILD_HEADER_TOOLTIPS);
+  }, G = (0, r.wj)(n) ? x : b, [k, w] = (0, u.U)(t, N.R.GUILD_HEADER_TOOLTIPS);
   return (0, i.jsx)(i.Fragment, {
 children: (() => {
-  switch (w) {
+  switch (k) {
     case s.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_COACHMARK:
       return (0, i.jsx)(j, {
         renderPopout: (0, i.jsx)(p.Z, {
           guildId: a.id,
-          markAsDismissed: k
+          markAsDismissed: w
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -120,7 +120,7 @@ children: (() => {
           secondaryButtonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
           onSecondaryClick: () => M(),
           onClick: () => M(a),
-          markAsDismissed: k
+          markAsDismissed: w
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -139,7 +139,7 @@ children: (() => {
           secondaryButtonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
           onSecondaryClick: () => M(),
           onClick: () => M(a),
-          markAsDismissed: k
+          markAsDismissed: w
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -147,7 +147,7 @@ children: (() => {
       return (0, i.jsx)(j, {
         renderPopout: (0, i.jsx)(h.Z, {
           guildId: a.id,
-          markAsDismissed: k
+          markAsDismissed: w
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -156,7 +156,7 @@ children: (() => {
         renderPopout: (0, i.jsx)(d.Z, {
           onClick: () => D(a, !0),
           onSecondaryClick: () => D(a),
-          markAsDismissed: k
+          markAsDismissed: w
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -164,7 +164,7 @@ children: (() => {
       return (0, i.jsx)(j, {
         renderPopout: (0, i.jsx)(c.Z, {
           guild: a,
-          markAsDismissed: k
+          markAsDismissed: w
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -187,14 +187,14 @@ children: (() => {
           secondaryButtonCTA: Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
           onSecondaryClick: () => y(_),
           onClick: () => y(_, a),
-          markAsDismissed: k
+          markAsDismissed: w
         }),
         renderGuildHeaderDropdownButton: l
       });
     case s.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
       return (0, i.jsx)(j, {
         renderPopout: (0, i.jsx)(m.Z, {
-          markAsDismissed: k
+          markAsDismissed: w
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -205,8 +205,8 @@ children: (() => {
           header: Z.Z.Messages.ACTIVE_THREADS_UPSELL_HEADER,
           content: Z.Z.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
           buttonCTA: Z.Z.Messages.GOT_IT,
-          onClick: () => k(N.L.UNKNOWN),
-          markAsDismissed: k
+          onClick: () => w(N.L.UNKNOWN),
+          markAsDismissed: w
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -225,7 +225,7 @@ children: (() => {
           onClick: () => {
             I.Z.open(a.id, C.pNK.ROLES), I.Z.selectRole(a.getEveryoneRoleId(), Z.Z.Messages.USE_SOUNDBOARD);
           },
-          markAsDismissed: k
+          markAsDismissed: w
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -233,7 +233,7 @@ children: (() => {
       return (0, i.jsx)(j, {
         renderPopout: (0, i.jsx)(g.Z, {
           guildId: a.id,
-          markAsDismissed: k
+          markAsDismissed: w
         }),
         renderGuildHeaderDropdownButton: l
       });
@@ -241,7 +241,7 @@ children: (() => {
       return (0, i.jsx)(j, {
         renderPopout: (0, i.jsx)(E.Z, {
           guildId: a.id,
-          markAsDismissed: k
+          markAsDismissed: w
         }),
         renderGuildHeaderDropdownButton: l
       });

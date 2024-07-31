@@ -33,8 +33,8 @@ var i, a, s = n(735250),
   j = n(446753),
   U = n(395361),
   G = n(639351),
-  w = n(368666),
-  k = n(81063),
+  k = n(368666),
+  w = n(81063),
   B = n(823379),
   H = n(51144),
   V = n(599706),
@@ -567,8 +567,8 @@ children: [
           Q(I)
         ]
       }),
-      (0, s.jsx)(w.ZP, {
-        size: w.ZP.Sizes.SMALL
+      (0, s.jsx)(k.ZP, {
+        size: k.ZP.Sizes.SMALL
       })
     ]
   }),
@@ -584,7 +584,7 @@ participants: a
   } = e, l = (0, C.Z)(), [o, d] = r.useState(null), _ = t.application_id;
   r.useEffect(() => {
 if (null != _)
-  (0, k.fetchAssetIds)(_, ['embedded_background']).then(e => {
+  (0, w.fetchAssetIds)(_, ['embedded_background']).then(e => {
     let [t] = e;
     return d(t);
   });
@@ -605,7 +605,7 @@ return null;
   let T = null != t.created_at && t.created_at > 0 ? {
   start: t.created_at
 } : void 0,
-S = (0, k.getAssetImage)(p.id, o, 300);
+S = (0, w.getAssetImage)(p.id, o, 300);
   return (0, s.jsxs)(J, {
 children: [
   (0, s.jsxs)('div', {

@@ -55,8 +55,8 @@ null != t && null != n && t < n && j(!0);
   useV2Variants: !0
 }),
 G = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-w = (null === (s = N.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
-k = (0, u.B6)(null === (C = N.userStatus) || void 0 === C ? void 0 : C.claimedAt),
+k = (null === (s = N.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
+w = (0, u.B6)(null === (C = N.userStatus) || void 0 === C ? void 0 : C.claimedAt),
 B = a.useCallback(() => (0, i.jsx)(o.Text, {
   variant: 'text-md/semibold',
   color: 'text-brand',
@@ -64,18 +64,18 @@ B = a.useCallback(() => (0, i.jsx)(o.Text, {
   className: S.header,
   children: O
 }), [O]),
-H = a.useMemo(() => w ? B() : T.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
+H = a.useMemo(() => k ? B() : T.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
   rewardHook: B
 }), [
-  w,
+  k,
   B
 ]),
 V = a.useMemo(() => {
   let e = !v && b,
     t = !v && !b,
     n = null;
-  if (w ? n = T.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
-      claimDate: k
+  if (k ? n = T.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
+      claimDate: w
     }) : null != U && (n = U), null != n)
     return (0, i.jsx)(o.Text, {
       variant: 'text-sm/medium',
@@ -88,9 +88,9 @@ V = a.useMemo(() => {
       children: n
     });
 }, [
-  w,
-  U,
   k,
+  U,
+  w,
   v,
   b
 ]),
@@ -104,10 +104,10 @@ children: [
   (0, i.jsxs)('div', {
     className: r()(S.rewardDescriptionContainer),
     children: [
-      !w && G && (0, i.jsx)('div', {
+      !k && G && (0, i.jsx)('div', {
         className: S.completionAnimation
       }),
-      x && !w ? (0, i.jsxs)('div', {
+      x && !k ? (0, i.jsxs)('div', {
         className: S.progressWrapper,
         children: [
           G && (0, i.jsx)(o.LottieAnimation, {

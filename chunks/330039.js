@@ -1,33 +1,33 @@
 var s = n(735250),
-  a = n(470079),
-  o = n(481060),
-  i = n(377171),
-  r = n(689938),
+  r = n(470079),
+  a = n(481060),
+  o = n(377171),
+  i = n(689938),
   u = n(484779);
-t.Z = a.forwardRef(function(e, t) {
+t.Z = r.forwardRef(function(e, t) {
   let {
 isInventory: n,
-style: a
+style: r
   } = e;
   return (0, s.jsxs)('div', {
 ref: t,
 className: u.desktopTooltip,
 style: {
   marginTop: n ? 8 : 0,
-  ...a
+  ...r
 },
 children: [
-  (0, s.jsx)(o.CircleInformationIcon, {
+  (0, s.jsx)(a.CircleInformationIcon, {
     size: 'custom',
     className: u.infoIcon,
     height: n ? 16 : 12,
     width: n ? 16 : 12,
-    color: n ? i.Z.TEXT_MUTED : i.Z.WHITE
+    color: n ? o.Z.TEXT_MUTED : o.Z.WHITE
   }),
-  (0, s.jsx)(o.Text, {
+  (0, s.jsx)(a.Text, {
     color: n ? 'text-muted' : 'always-white',
     variant: n ? 'text-xs/normal' : 'text-xxs/normal',
-    children: r.Z.Messages.QUESTS_PROGRESS_WEB_TIP
+    children: i.Z.Messages.QUESTS_PROGRESS_WEB_TIP
   })
 ]
   });

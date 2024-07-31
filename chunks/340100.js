@@ -1,44 +1,44 @@
 var s = n(735250);
 n(470079);
-var a = n(120356),
-  o = n.n(a),
-  i = n(442837),
-  r = n(692547),
+var r = n(120356),
+  a = n.n(r),
+  o = n(442837),
+  i = n(692547),
   u = n(481060),
   l = n(706454),
   c = n(930153),
   d = n(113434),
-  _ = n(524824),
-  T = n(330039),
-  E = n(260370);
+  m = n(524824),
+  _ = n(330039),
+  T = n(260370);
 t.Z = function(e) {
   let {
 className: t,
-color: n = r.Z.colors.WHITE,
-quest: a,
-isInventory: m
-  } = e, I = (0, i.e7)([l.default], () => l.default.locale), {
-percentComplete: R
-  } = (0, d.Rf)(a), g = (0, d.Jf)(a), C = null != g ? g.completedRatio : R, f = null != g ? ''.concat(null == g ? void 0 : g.progress, '/').concat(null == g ? void 0 : g.target) : (0, c.T3)(I, C, {
+color: n = i.Z.colors.WHITE,
+quest: r,
+isInventory: E
+  } = e, I = (0, o.e7)([l.default], () => l.default.locale), {
+percentComplete: f
+  } = (0, d.Rf)(r), g = (0, d.Jf)(r), R = null != g ? g.completedRatio : f, C = null != g ? ''.concat(null == g ? void 0 : g.progress, '/').concat(null == g ? void 0 : g.target) : (0, c.T3)(I, R, {
 roundingMode: 'floor'
-  }), S = 100 * C, N = (0, _.r)(a);
-  return N && !m ? (0, s.jsx)(T.Z, {}) : (0, s.jsxs)('div', {
-className: o()(E.wrapper, t),
+  }), S = 100 * R, N = (0, m.r)(r);
+  return N && !E ? (0, s.jsx)(_.Z, {}) : (0, s.jsxs)('div', {
+className: a()(T.wrapper, t),
 style: {
   color: n.css
 },
 children: [
   (0, s.jsxs)('div', {
-    className: E.percentCompleteWrapper,
+    className: T.percentCompleteWrapper,
     children: [
       (0, s.jsx)(u.Text, {
         variant: 'text-xs/semibold',
-        className: E.percentCompleteLabel,
+        className: T.percentCompleteLabel,
         color: 'none',
-        children: f
+        children: C
       }),
       (0, s.jsx)('div', {
-        className: E.percentCompleteLabelOffset,
+        className: T.percentCompleteLabelOffset,
         style: {
           width: ''.concat(100 - S, '%')
         }
@@ -46,18 +46,18 @@ children: [
     ]
   }),
   (0, s.jsx)('div', {
-    className: E.progressBar,
+    className: T.progressBar,
     role: 'progressbar',
     'aria-valuenow': S,
     children: (0, s.jsx)('div', {
-      className: E.progressBarFill,
+      className: T.progressBarFill,
       style: {
         width: ''.concat(S, '%')
       }
     })
   }),
-  N && (0, s.jsx)(T.Z, {
-    isInventory: m
+  N && (0, s.jsx)(_.Z, {
+    isInventory: E
   })
 ]
   });

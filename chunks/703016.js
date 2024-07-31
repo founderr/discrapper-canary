@@ -94,11 +94,11 @@ onEnd: s
   j(t, n, i, a, s);
 }
 
-function w() {
+function k() {
   return null !== x && x.removeEventListener('end', A.NB), r.M9(), x = null, !0;
 }
 
-function k(e) {
+function w(e) {
   var t, n, i;
   let {
 message: a,
@@ -153,6 +153,6 @@ function V() {
 }
 t.Z = {
   init() {
-s.Z.subscribe('SPEAK_TEXT', G), s.Z.subscribe('SPEAK_MESSAGE', k), s.Z.subscribe('STOP_SPEAKING', w), s.Z.subscribe('MESSAGE_CREATE', B), s.Z.subscribe('MESSAGE_DELETE', H), s.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', V), s.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', y), s.Z.subscribe('I18N_LOAD_SUCCESS', y);
+s.Z.subscribe('SPEAK_TEXT', G), s.Z.subscribe('SPEAK_MESSAGE', w), s.Z.subscribe('STOP_SPEAKING', k), s.Z.subscribe('MESSAGE_CREATE', B), s.Z.subscribe('MESSAGE_DELETE', H), s.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', V), s.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', y), s.Z.subscribe('I18N_LOAD_SUCCESS', y);
   }
 };

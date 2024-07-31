@@ -1,25 +1,25 @@
-n.d(i, {
+i.d(n, {
   Z: function() {
 return f;
   }
 });
-var s = n(735250);
-n(470079);
-var l = n(481060),
-  t = n(194359),
-  o = n(906732),
-  a = n(475413),
-  r = n(261253),
-  d = n(7242),
-  c = n(934861),
-  u = n(981631),
-  I = n(689938),
-  _ = n(682731);
+var s = i(735250);
+i(470079);
+var l = i(481060),
+  t = i(194359),
+  o = i(906732),
+  a = i(475413),
+  r = i(261253),
+  d = i(7242),
+  c = i(934861),
+  u = i(981631),
+  I = i(689938),
+  _ = i(682731);
 
 function f(e) {
   let {
-isCurrentUser: i,
-user: n,
+isCurrentUser: n,
+user: i,
 relationshipType: f,
 friendToken: m,
 persistentCallCtaEnabled: E = !1,
@@ -28,14 +28,14 @@ onClose: v
   } = e, {
 newestAnalyticsLocation: Z
   } = (0, o.ZP)();
-  if (i || f === u.OGo.BLOCKED)
+  if (n || f === u.OGo.BLOCKED)
 return null;
   let h = E ? (0, s.jsx)(r.Z, {
-  user: n,
+  user: i,
   onClose: v
 }) : null,
 S = (0, s.jsx)(d.Z, {
-  user: n,
+  user: i,
   onClose: v
 });
   if (f === u.OGo.FRIEND && x && null != S)
@@ -43,19 +43,19 @@ return (0, s.jsxs)('div', {
   className: _.multipleButtons,
   children: [
     (0, s.jsx)(c.v, {
-      userId: n.id,
+      userId: i.id,
       onClose: v
     }),
     S
   ]
 });
-  if (f === u.OGo.FRIEND || n.bot)
+  if (f === u.OGo.FRIEND || i.bot)
 return (0, s.jsxs)('div', {
   className: _.multipleButtons,
   children: [
     h,
     (0, s.jsx)(c.c, {
-      userId: n.id,
+      userId: i.id,
       onClose: v
     })
   ]
@@ -70,7 +70,7 @@ return x && null != S ? (0, s.jsxs)('div', {
       disabled: !0
     }),
     (0, s.jsx)(c.v, {
-      userId: n.id,
+      userId: i.id,
       onClose: v
     }),
     S
@@ -85,7 +85,7 @@ return x && null != S ? (0, s.jsxs)('div', {
     }),
     h,
     (0, s.jsx)(c.c, {
-      userId: n.id,
+      userId: i.id,
       onClose: v
     })
   ]
@@ -99,7 +99,7 @@ children: [
     tooltipText: I.Z.Messages.USER_PROFILE_ADD_FRIEND,
     onClick: () => {
       t.Z.addRelationship({
-        userId: n.id,
+        userId: i.id,
         context: {
           location: Z
         },
@@ -108,7 +108,7 @@ children: [
     }
   }),
   (0, s.jsx)(c.v, {
-    userId: n.id,
+    userId: i.id,
     onClose: v
   }),
   S
@@ -118,7 +118,7 @@ className: _.multipleButtons,
 children: [
   h,
   (0, s.jsx)(c.v, {
-    userId: n.id,
+    userId: i.id,
     onClose: v
   }),
   (0, s.jsx)(a.tG, {
@@ -128,7 +128,7 @@ children: [
     color: l.Button.Colors.BRAND,
     onClick: () => {
       t.Z.addRelationship({
-        userId: n.id,
+        userId: i.id,
         context: {
           location: Z
         },

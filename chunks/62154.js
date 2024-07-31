@@ -1,22 +1,22 @@
-n.d(i, {
+i.d(n, {
   Z: function() {
 return u;
   }
 });
-var s = n(735250);
-n(470079);
-var l = n(387903),
-  t = n(100849),
-  o = n(487922),
-  a = n(620648),
-  r = n(944546),
-  d = n(470900),
-  c = n(228168);
+var s = i(735250);
+i(470079);
+var l = i(387903),
+  t = i(100849),
+  o = i(487922),
+  a = i(620648),
+  r = i(944546),
+  d = i(470900),
+  c = i(228168);
 
 function u(e) {
   let {
-displayProfile: i,
-user: n,
+displayProfile: n,
+user: i,
 selectedSection: u,
 autoFocusNote: I,
 onClose: _
@@ -24,31 +24,31 @@ onClose: _
   switch (u) {
 case c.oh.ACTIVITY:
   return (0, s.jsx)(t.Z, {
-    user: n,
+    user: i,
     type: l.Y.PROFILE_V2,
     onClose: _
   });
 case c.oh.MUTUAL_GUILDS:
   return (0, s.jsx)(d.Z, {
-    user: n,
+    user: i,
     onClose: _
   });
 case c.oh.MUTUAL_FRIENDS:
   return (0, s.jsx)(r.Z, {
-    user: n,
+    user: i,
     onClose: _
   });
 case c.oh.BOT_DATA_ACCESS:
   return (0, s.jsx)(o.Z, {
-    user: n
+    user: i
   });
 case c.oh.USER_INFO_CONNECTIONS:
 case c.oh.USER_INFO:
 default:
   return (0, s.jsx)(a.Z, {
-    displayProfile: i,
+    displayProfile: n,
     autoFocusNote: I,
-    user: n,
+    user: i,
     scrollToConnections: u === c.oh.USER_INFO_CONNECTIONS
   });
   }

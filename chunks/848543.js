@@ -42,7 +42,7 @@ isSoundboardButtonDisabled: b
 analyticsLocations: G
   } = (0, h.ZP)(_.Z.SOUNDBOARD_BUTTON);
 
-  function w(e) {
+  function k(e) {
 null != D && (0, u.jW)(e, async () => {
   let {
     default: e
@@ -54,7 +54,7 @@ null != D && (0, u.jW)(e, async () => {
 });
   }
   let {
-Component: k,
+Component: w,
 play: B,
 events: {
   onMouseEnter: H,
@@ -103,11 +103,11 @@ children: t => (0, i.jsx)('div', {
       var n, i;
       null === (n = L.onMouseLeave) || void 0 === n || n.call(L, t), null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e), V();
     },
-    onContextMenu: w,
+    onContextMenu: k,
     fullWidth: !0,
     size: d.Button.Sizes.SMALL,
     ...L,
-    children: (0, i.jsx)(k, {
+    children: (0, i.jsx)(w, {
       className: s,
       size: 'sm',
       color: P ? 'white' : d.tokens.colors.INTERACTIVE_ACTIVE

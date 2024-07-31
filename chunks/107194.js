@@ -1,17 +1,17 @@
-n.d(i, {
+i.d(n, {
   Z: function() {
 return d;
   }
-}), n(653041), n(627341);
-var s = n(278074),
-  l = n(726059),
-  t = n(162267),
-  o = n(929498),
-  a = n(228168),
-  r = n(689938);
+}), i(653041), i(627341);
+var s = i(278074),
+  l = i(726059),
+  t = i(162267),
+  o = i(929498),
+  a = i(228168),
+  r = i(689938);
 
 function d(e) {
-  var i, n;
+  var n, i;
   let {
 user: d,
 currentUser: c
@@ -19,7 +19,7 @@ currentUser: c
 live: u,
 recent: I,
 stream: _
-  } = (0, o.Z)(d.id), f = null === (i = (0, l.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualFriends) || void 0 === i ? void 0 : i.length, m = null === (n = (0, t.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualGuilds) || void 0 === n ? void 0 : n.length, E = [{
+  } = (0, o.Z)(d.id), f = null === (n = (0, l.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualFriends) || void 0 === n ? void 0 : n.length, m = null === (i = (0, t.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualGuilds) || void 0 === i ? void 0 : i.length, E = [{
 section: a.oh.USER_INFO,
 text: r.Z.Messages.USER_PROFILE_ABOUT_ME
   }];

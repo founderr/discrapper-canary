@@ -1,32 +1,32 @@
-n.d(i, {
+i.d(n, {
   Z: function() {
 return d;
   }
-}), n(789020), n(653041);
-var s = n(735250);
-n(470079);
-var l = n(481060),
-  t = n(860719),
-  o = n(689938),
-  a = n(744224);
+}), i(789020), i(653041);
+var s = i(735250);
+i(470079);
+var l = i(481060),
+  t = i(860719),
+  o = i(689938),
+  a = i(744224);
 
 function r(e) {
   let {
-content: i,
-heading: n
+content: n,
+heading: i
   } = e;
   return (0, s.jsxs)('div', {
 className: a.row,
 children: [
-  null != n ? (0, s.jsx)(l.Heading, {
+  null != i ? (0, s.jsx)(l.Heading, {
     className: a.heading,
     variant: 'text-sm/normal',
-    children: n
+    children: i
   }) : null,
   (0, s.jsx)(l.Text, {
     variant: 'text-sm/normal',
     color: 'header-secondary',
-    children: i
+    children: n
   })
 ]
   });
@@ -34,16 +34,16 @@ children: [
 
 function d(e) {
   let {
-flags: i,
-listScrollerStyle: n
+flags: n,
+listScrollerStyle: i
   } = e, {
 hasMessageContent: d,
 hasGuildPresences: c,
 hasGuildMembers: u
   } = (0, t.w)({
-flags: i
+flags: n
   });
-  if (null == i)
+  if (null == n)
 return null;
   let I = [];
   return d && I.push((0, s.jsx)(r, {
@@ -63,7 +63,7 @@ content: o.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({
   helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975'
 })
   })), (0, s.jsx)(l.ScrollerThin, {
-className: n,
+className: i,
 children: I
   });
 }

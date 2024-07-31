@@ -89,7 +89,7 @@ null != o && ((0, _._3)({
   }, [o]), U = (0, N.hf)({
 quest: o,
 location: m.jn.ACTIVITY_PANEL
-  }), G = (0, E.tP)(o), w = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, k = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, B = (null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null, H = (null == o ? void 0 : o.userStatus) == null || (0, g.zE)(o.userStatus, m.jn.ACTIVITY_PANEL), V = (0, E.Rf)(o), F = (0, p.D)({
+  }), G = (0, E.tP)(o), k = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, w = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, B = (null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null, H = (null == o ? void 0 : o.userStatus) == null || (0, g.zE)(o.userStatus, m.jn.ACTIVITY_PANEL), V = (0, E.Rf)(o), F = (0, p.D)({
 quest: o,
 taskDetails: V,
 location: v.dr.ACTIVITY_PANEL,
@@ -105,7 +105,7 @@ children: e => {
       e.current = t;
     },
     className: r()(O.wrapper, {
-      [O.wrapperQuestAccepted]: w
+      [O.wrapperQuestAccepted]: k
     }),
     onClick: M,
     onKeyPress: M,
@@ -117,7 +117,7 @@ children: e => {
       (0, i.jsxs)('div', {
         className: O.utils,
         children: [
-          w ? (0, i.jsx)(R, {
+          k ? (0, i.jsx)(R, {
             quest: o
           }) : (0, i.jsx)(f.Z, {
             textOpacity: 0.5
@@ -139,7 +139,7 @@ children: e => {
           })
         ]
       }),
-      !w && (0, i.jsxs)(i.Fragment, {
+      !k && (0, i.jsxs)(i.Fragment, {
         children: [
           (0, i.jsx)(R, {
             quest: o
@@ -152,7 +152,7 @@ children: e => {
           })
         ]
       }),
-      w && !k && (0, i.jsx)(A.Z, {
+      k && !w && (0, i.jsx)(A.Z, {
         autoplay: T,
         className: O.rewardTileWithInstructions,
         quest: o,
@@ -163,7 +163,7 @@ children: e => {
       (0, i.jsxs)('div', {
         className: O.ctas,
         children: [
-          !w && (0, i.jsxs)(i.Fragment, {
+          !k && (0, i.jsxs)(i.Fragment, {
             children: [
               (0, i.jsx)(c.Button, {
                 className: O.cta,
@@ -184,7 +184,7 @@ children: e => {
               })
             ]
           }),
-          w && !k && (0, i.jsx)(c.Button, {
+          k && !w && (0, i.jsx)(c.Button, {
             className: O.cta,
             color: c.Button.Colors.BRAND,
             fullWidth: !0,
@@ -192,7 +192,7 @@ children: e => {
             size: c.Button.Sizes.SMALL,
             children: L.Z.Messages.QUESTS_CHECK_PROGRESS
           }),
-          k && (0, i.jsx)(c.Button, {
+          w && (0, i.jsx)(c.Button, {
             className: O.cta,
             color: c.Button.Colors.BRAND,
             fullWidth: !0,

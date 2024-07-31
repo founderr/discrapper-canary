@@ -35,8 +35,8 @@ var i = n(735250),
   j = n(117496),
   U = n(296386),
   G = n(150192),
-  w = n(769727),
-  k = n(584885),
+  k = n(769727),
+  w = n(584885),
   B = n(59222),
   H = n(749436),
   V = n(26580),
@@ -145,7 +145,7 @@ r.guilds = r.guilds.filter(e => !s.includes(e.id));
 let {
   loadingGuildId: l
 } = this.state;
-return t ? (0, i.jsx)(k.Z, {
+return t ? (0, i.jsx)(w.Z, {
   loadId: this.loadId,
   title: W.Z.Messages.GUILD_DISCOVERY_HEADER_GAMES_YOU_PLAY,
   guildsData: r,
@@ -238,7 +238,7 @@ let {
 } = this.props, {
   loadingGuildId: n
 } = this.state;
-return (0, i.jsx)(k.Z, {
+return (0, i.jsx)(w.Z, {
   loadId: this.loadId,
   title: W.Z.Messages.GUILD_DISCOVERY_FEATURED_HEADER,
   guildsData: e.featured,
@@ -259,7 +259,7 @@ let {
 } = this.props, {
   loadingGuildId: a
 } = this.state;
-return (0, i.jsx)(k.Z, {
+return (0, i.jsx)(w.Z, {
   loadId: this.loadId,
   title: W.Z.Messages.GUILD_DISCOVERY_POPULAR_HEADER,
   guildsData: e[n],
@@ -532,7 +532,7 @@ includeConverted: !0
   }), a = n.length > 0, {
 clanDiscoveryEnabled: s
   } = (0, T.nk)('guild_discovery'), r = (0, _.e7)([b.ZP], () => b.ZP.getCurrentCategoryId()), l = (0, _.e7)([b.ZP], () => b.ZP.getIsReady()), o = (0, v.Z)(p.Z.QUEST_HOME_PAGE);
-  return (a || s) && (!l || r === F.Gj.Clans) ? (0, i.jsx)(w.Z, {}) : o && r === F.Gj.Quests ? (0, i.jsx)(A.Z, {}) : (0, i.jsx)($, {
+  return (a || s) && (!l || r === F.Gj.Clans) ? (0, i.jsx)(k.Z, {}) : o && r === F.Gj.Quests ? (0, i.jsx)(A.Z, {}) : (0, i.jsx)($, {
 searchRoute: t
   });
 };

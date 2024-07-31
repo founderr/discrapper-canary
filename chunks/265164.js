@@ -42,8 +42,8 @@ let Z = [],
   j = {},
   U = {},
   G = new Set(),
-  w = 0,
-  k = !1,
+  k = 0,
+  w = !1,
   B = !1,
   H = !1,
   V = null,
@@ -80,7 +80,7 @@ P[s.id] = s, (n + 1) * 5 < e.length ? e.splice((n + 1) * 5, 0, s) : e.push(s);
 }
 
 function Q(e) {
-  if (O.length > 0 && (Z = O, O = [], R = []), w++, null != e)
+  if (O.length > 0 && (Z = O, O = [], R = []), k++, null != e)
 W = e.newUnread, z = e.newRead;
   else {
 let [e, t] = X(Z);
@@ -173,7 +173,7 @@ if (this.waitFor(h.Z, _.Z, E.ZP, c.Z, m.ZP, u.default, f.Z, l.Z), null != e) {
 }
   }
   getVersion() {
-return w;
+return k;
   }
   getDehydratedItems() {
 return Z;
@@ -305,7 +305,7 @@ o && (null == U[s] && (U[s] = 0), U[s]++, G.add(a)), null == (O = 0 === O.length
 ], b[i.id] = c), (0, C.$U)(s, i.id) && (R = [
   c,
   ...R
-]), R.length >= S.Lb && w > 0 && (B = !0), P[i.id] = c, M[i.id] = {
+]), R.length >= S.Lb && k > 0 && (B = !0), P[i.id] = c, M[i.id] = {
   ...c,
   message: l
 };
@@ -331,7 +331,7 @@ O = t.filter(e => S.zd.has(e.type)), ! function() {
   feed_item_ids: O.map(e => e.id)
 };
 let [a, s] = X(O), r = (R = J(a)).length > S.Lb;
-0 === w ? (r && !H && (B = !0, k = !0), Q({
+0 === k ? (r && !H && (B = !0, w = !0), Q({
   newUnread: a,
   newRead: s
 })) : (B = r, r && (0, C.em)([
@@ -434,7 +434,7 @@ if (0 === O.length)
 Q(), B = !1;
   },
   GRAVITY_TAB_OPENED: function() {
-H = !0, k && (k = !1, B = !1), Y < 5 && Y++;
+H = !0, w && (w = !1, B = !1), Y < 5 && Y++;
   },
   GRAVITY_FEEDBACK_GIVEN: function() {
 Y = 6;

@@ -61,7 +61,7 @@ userId: r,
 applicationId: d,
 channelId: O,
 streamKey: R
-  } = n, [x, b] = a.useState(!1), P = (0, s.e7)([p.default], () => p.default.getUser(r)), [M] = (0, _.Z)([d]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, C.Z)(), j = (0, s.e7)([I.Z], () => I.Z.getPreviewURL(null, O, r)), U = (0, s.e7)([g.Z], () => g.Z.getVoiceChannelId()), G = (0, f.ZP)(), w = (0, S.Z)(O);
+  } = n, [x, b] = a.useState(!1), P = (0, s.e7)([p.default], () => p.default.getUser(r)), [M] = (0, _.Z)([d]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, C.Z)(), j = (0, s.e7)([I.Z], () => I.Z.getPreviewURL(null, O, r)), U = (0, s.e7)([g.Z], () => g.Z.getVoiceChannelId()), G = (0, f.ZP)(), k = (0, S.Z)(O);
   if (a.useEffect(() => {
   x && U === O && b(!1);
 }, [
@@ -71,7 +71,7 @@ streamKey: R
 ]), null == P || null == D)
 return null;
   let {
-buttonColor: k,
+buttonColor: w,
 buttonCTA: B,
 disabled: H
   } = function(e, t) {
@@ -83,7 +83,7 @@ return {
   buttonCTA: a ? v.Z.Messages.BROADCAST_FULL : i ? v.Z.Messages.VIEW_BROADCAST : v.Z.Messages.JOIN_BROADCAST,
   disabled: a
 };
-  }(r, w);
+  }(r, k);
   return (0, i.jsxs)('div', {
 className: Z.container,
 children: [
@@ -109,8 +109,8 @@ children: [
       (0, i.jsxs)('div', {
         className: Z.activity,
         children: [
-          w.length > 0 && (0, i.jsx)(L, {
-            users: w
+          k.length > 0 && (0, i.jsx)(L, {
+            users: k
           }),
           (0, i.jsxs)(l.Button, {
             onClick: () => {
@@ -125,7 +125,7 @@ children: [
                 broadcast_channel_id: O
               });
             },
-            color: k,
+            color: w,
             size: l.ButtonSizes.SMALL,
             className: Z.button,
             disabled: H,

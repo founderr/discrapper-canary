@@ -239,7 +239,7 @@ G = (0, d.useSpring)({
     duration: 0
   }
 }, 'animate-always'),
-w = (0, d.useSpring)({
+k = (0, d.useSpring)({
   from: P ? {
     transform: 'translate(0px, 0px) rotate(0deg) scale(1)'
   } : {
@@ -251,7 +251,7 @@ w = (0, d.useSpring)({
   config: x,
   delay: 400
 }, 'animate-always'),
-k = (0, d.useSpring)({
+w = (0, d.useSpring)({
   from: P ? {
     transform: 'translate(0px, 0px) rotate(0deg) scale(1)'
   } : {
@@ -339,7 +339,7 @@ children: [
       (0, i.jsx)(l.animated.div, {
         className: L.clanCardOuterContainer,
         style: {
-          ...w,
+          ...k,
           ...G
         },
         children: (0, i.jsx)(f.xV, {
@@ -350,7 +350,7 @@ children: [
       (0, i.jsx)(l.animated.div, {
         className: L.clanCardInnerContainer,
         style: {
-          ...k,
+          ...w,
           ...G
         },
         children: (0, i.jsx)(f.xV, {

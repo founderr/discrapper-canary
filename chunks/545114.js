@@ -65,7 +65,7 @@ j = a.useMemo(() => y ? t.filter(e => {
 U = a.useRef(new o.Z(v)),
 {
   onGuildCardSeen: G,
-  onGuildCardClick: w
+  onGuildCardClick: k
 } = (0, m.H)({
   guildDiscoveryCardSeenManager: U.current,
   loadId: e.current
@@ -73,7 +73,7 @@ U = a.useRef(new o.Z(v)),
   a.useEffect(() => {
 U.current.flushSeenGuilds(e.current);
   }, [v]);
-  let k = a.useMemo(() => {
+  let w = a.useMemo(() => {
 switch (n) {
   case T.vf.HUBS:
   case T.vf.GUILDS:
@@ -121,18 +121,18 @@ children: [
         onTabSelect: C,
         onAvailableWidthChange: L
       }),
-      k
+      w
     ]
   }),
   y ? (0, i.jsx)(I.Z, {
     loadId: e.current,
-    onGuildCardClick: w,
+    onGuildCardClick: k,
     onGuildCardSeen: G
   }) : (0, i.jsx)(E.Z, {
     loadId: e.current,
     selectedTab: n,
     onScroll: N,
-    onGuildCardClick: w,
+    onGuildCardClick: k,
     onGuildCardSeen: G
   })
 ]

@@ -95,7 +95,7 @@ body: y
   } = e, {
 onClose: j,
 transitionState: U
-  } = n, G = (0, I.Dt)(), w = P.length % 2 == 0, k = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), [B, H] = a.useState(Date.now()), [V, F] = a.useState(0), [Y, W] = a.useState(0), [z, K] = a.useState(!1), [q, Q] = a.useState(!0), X = a.useRef(B), J = a.useRef(V), $ = a.useRef(Y), ee = a.useRef(z), et = a.useRef(q), [en, ei] = a.useState(N), ea = a.useRef(!1);
+  } = n, G = (0, I.Dt)(), k = P.length % 2 == 0, w = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), [B, H] = a.useState(Date.now()), [V, F] = a.useState(0), [Y, W] = a.useState(0), [z, K] = a.useState(!1), [q, Q] = a.useState(!0), X = a.useRef(B), J = a.useRef(V), $ = a.useRef(Y), ee = a.useRef(z), et = a.useRef(q), [en, ei] = a.useState(N), ea = a.useRef(!1);
 
   function es() {
 let e = Date.now(),
@@ -201,7 +201,7 @@ children: [
       }),
       'video' === s.type ? (0, i.jsx)(m.Z, {
         className: r()(C.video, A),
-        autoPlay: !k,
+        autoPlay: !w,
         loop: !0,
         muted: !0,
         controls: !0,
@@ -271,11 +271,11 @@ children: [
       }),
       (0, i.jsx)('div', {
         className: r()(C.featureCardGroup, {
-          [C.wideStyle]: w
+          [C.wideStyle]: k
         }),
         children: P.map((e, t) => (0, i.jsx)(v, {
           ...e,
-          wideStyle: w
+          wideStyle: k
         }, ''.concat(e.header, '_').concat(t)))
       }),
       D()

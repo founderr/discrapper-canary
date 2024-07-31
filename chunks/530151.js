@@ -55,11 +55,11 @@ return (0, i.jsx)('div', {
   children: n
 });
   },
-  w = [
+  k = [
 d.Z.unsafe_rawColors.BLUE_345.css,
 d.Z.colors.INTERACTIVE_NORMAL.css
   ],
-  k = e => {
+  w = e => {
 let {
   tooltip: t,
   onClick: n,
@@ -303,7 +303,7 @@ return (0, i.jsxs)(O.Z, {
     (0, i.jsx)(_.StackedProgress, {
       percents: t,
       size: _.Progress.Sizes.SMALL,
-      foregroundColors: w,
+      foregroundColors: k,
       animate: this.isFocused
     }),
     (0, i.jsx)('div', {
@@ -488,12 +488,12 @@ super(...e), U(this, 'renderProgressPatchingBody', (e, t) => {
 });
   }
 }
-let q = () => (0, i.jsx)(k, {
+let q = () => (0, i.jsx)(w, {
 icon: _.PlayIcon,
 tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
 onClick: () => I.v4()
   }),
-  Q = () => (0, i.jsx)(k, {
+  Q = () => (0, i.jsx)(w, {
 icon: _.PauseIcon,
 tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
 onClick: () => I.wO()
@@ -502,7 +502,7 @@ onClick: () => I.wO()
 let {
   item: t
 } = e;
-return (0, i.jsx)(k, {
+return (0, i.jsx)(w, {
   icon: _.ArrowSmallUpIcon,
   tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
   onClick: () => I.A1(t.applicationId, t.branchId)
@@ -512,7 +512,7 @@ return (0, i.jsx)(k, {
 let {
   item: t
 } = e;
-return (0, i.jsx)(k, {
+return (0, i.jsx)(w, {
   icon: _.CloseSmallIcon,
   tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
   onClick: () => I.al(t.applicationId, t.branchId)
