@@ -29,25 +29,17 @@ treatments: [{
   }
 ]
   }),
-  o = e => {
-let {
-  location: t,
-  autoTrackExposure: n = !1
-} = e;
-return s.getCurrentConfig({
-  location: t
-}, {
-  autoTrackExposure: n
-}).enabled;
-  };
+  o = () => s.getCurrentConfig({
+location: 'quests_logging'
+  }, {
+autoTrackExposure: !1
+  }).enabled;
 
 function l(e) {
   let {
 quest: t,
 location: n
-  } = e, i = o({
-location: n
-  }), s = null == t ? void 0 : t.config.messages.questName, l = 'QuestLogger '.concat(n).concat(null != s ? ' ('.concat(s, ')') : ''), u = new r.Y(l);
+  } = e, i = o(), s = null == t ? void 0 : t.config.messages.questName, l = 'QuestLogger '.concat(n).concat(null != s ? ' ('.concat(s, ')') : ''), u = new r.Y(l);
   return {
 log: i ? u.log : a.dG,
 warn: i ? u.warn : a.dG,
