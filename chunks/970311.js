@@ -13,5 +13,7 @@ e.exports = {
   entrypointContainer: 'entrypointContainer_e80fe9',
   titleInnerContainer: 'titleInnerContainer_e80fe9',
   expandableDescriptionClickable: 'expandableDescriptionClickable_e80fe9',
-  overflowHidden: 'overflowHidden_e80fe9'
+  overflowHidden: 'overflowHidden_e80fe9',
+  developerShelfControlsContainer: 'developerShelfControlsContainer_e80fe9',
+  developerShelfControls: 'developerShelfControls_e80fe9'
 };

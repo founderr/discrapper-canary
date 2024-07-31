@@ -1,6 +1,9 @@
 n.d(t, {
-  Z: function() {
+  W: function() {
 return E;
+  },
+  Z: function() {
+return f;
   }
 });
 var r = n(735250);
@@ -14,13 +17,14 @@ var i = n(442837),
   c = n(938475),
   d = n(373826),
   _ = n(692184);
+let E = 3;
 
-function E(e) {
+function f(e) {
   let {
 guild: t,
 channel: n,
-onClose: E
-  } = e, f = (0, i.e7)([u.Z], () => u.Z.getGuildId()), h = (0, i.Wu)([c.ZP], () => c.ZP.getVoiceStatesForChannel(n).map(e => {
+onClose: f
+  } = e, h = (0, i.e7)([u.Z], () => u.Z.getGuildId()), p = (0, i.Wu)([c.ZP], () => c.ZP.getVoiceStatesForChannel(n).map(e => {
 let {
   user: t
 } = e;
@@ -52,8 +56,8 @@ children: [
             variant: 'text-xs/normal',
             color: 'interactive-normal',
             text: n.name,
-            onClick: t.id === f ? void 0 : () => {
-              (0, l.X)(t.id), null == E || E();
+            onClick: t.id === h ? void 0 : () => {
+              (0, l.X)(t.id), null == f || f();
             }
           })
         ]
@@ -61,9 +65,9 @@ children: [
     ]
   }),
   (0, r.jsx)(s.Z, {
-    users: h,
+    users: p,
     guildId: t.id,
-    maxUsers: 3,
+    maxUsers: E,
     size: a.AvatarSizes.SIZE_16,
     disableUsernameTooltip: !0,
     overflowCountVariant: 'text-xs/normal'

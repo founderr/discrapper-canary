@@ -25,11 +25,12 @@ guildId: h,
 onFocus: p,
 size: m = u.AvatarSizes.SIZE_24,
 overflowCountVariant: I = 'text-xs/medium',
-hideOverflowCount: T = !1,
-disableUsernameTooltip: g = !1
-  } = e, [S, A] = i.useState(!1);
+overflowCountColor: T = 'interactive-normal',
+hideOverflowCount: g = !1,
+disableUsernameTooltip: S = !1
+  } = e, [A, N] = i.useState(!1);
 
-  function N() {
+  function v() {
 return (0, r.jsx)(u.Dialog, {
   className: E.popoutWrapper,
   children: (0, r.jsx)(u.Scroller, {
@@ -51,7 +52,7 @@ return (0, r.jsx)(u.Dialog, {
           user: e
         });
       }, {
-        onClose: () => A(!1)
+        onClose: () => N(!1)
       })
     }, e.id))
   })
@@ -62,7 +63,7 @@ className: s()(t, E.avatars),
 children: function() {
   let e = l()(f).take(o).map(e => {
       let t = _.ZP.getName(e);
-      return g ? (0, r.jsx)('div', {
+      return S ? (0, r.jsx)('div', {
         className: s()(E.avatar, a),
         children: (0, r.jsx)(u.Avatar, {
           src: e.getAvatarURL(h, 24),
@@ -80,20 +81,20 @@ children: function() {
       }, e.id);
     }).value(),
     t = f.length - o;
-  return t > 0 && !T && (e[e.length - 1] = (0, r.jsx)(u.Popout, {
-    renderPopout: N,
-    shouldShow: S,
+  return t > 0 && !g && (e[e.length - 1] = (0, r.jsx)(u.Popout, {
+    renderPopout: v,
+    shouldShow: A,
     position: 'bottom',
-    onRequestClose: () => A(!1),
+    onRequestClose: () => N(!1),
     children: () => (0, r.jsx)(u.Button, {
       className: s()(E.avatar, E.overflow),
       onFocus: p,
-      onClick: () => A(!0),
+      onClick: () => N(!0),
       look: u.Button.Looks.BLANK,
       size: u.Button.Sizes.NONE,
       children: (0, r.jsxs)(u.Text, {
         variant: I,
-        color: 'interactive-normal',
+        color: T,
         children: [
           '+',
           t + 1
