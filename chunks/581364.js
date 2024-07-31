@@ -291,6 +291,7 @@ function y(e) {
   switch (e) {
 case f.bB.CHAT:
 case f.bB.APPLICATION_LAUNCHER:
+case f.bB.IMAGE_RECS_MENU:
   return E.d.SlashCommand;
   }
 }

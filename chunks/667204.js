@@ -221,11 +221,11 @@ return _.ZP.trackWithMetadata(G.rMx.APPLICATION_COMMAND_USED, {
   command_id: R.id,
   application_id: R.applicationId,
   command_type: R.type,
-  location: B === U.bB.APPLICATION_LAUNCHER ? U.Vh.APP_LAUNCHER : U.Vh.SLASH_UI
+  location: z(B)
 }), R.execute(Z, y);
   if (R.inputType === U.iw.BUILT_IN || R.inputType === U.iw.BUILT_IN_TEXT || R.inputType === U.iw.BUILT_IN_INTEGRATION)
 return;
-  let z = {
+  let q = {
 version: R.version,
 id: null !== (v = null === (t = R.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== v ? v : R.id,
 guild_id: R.guildId,
@@ -234,9 +234,9 @@ type: R.type,
 options: Z,
 application_command: R.rootCommand
   };
-  null != L && (z.target_id = L), null != y.autocomplete ? (0, D.GV)(R, y, z) : (o.Z.clearAll(y.channel.id, K), await W({
+  null != L && (q.target_id = L), null != y.autocomplete ? (0, D.GV)(R, y, q) : (o.Z.clearAll(y.channel.id, K), await W({
 applicationId: R.applicationId,
-data: z,
+data: q,
 context: y,
 attachments: j,
 maxSizeCallback: M,
@@ -244,7 +244,7 @@ onMessageSuccess: () => {
   Y(C);
 },
 commandDisplayName: R.displayName,
-analytics_location: B === U.bB.APPLICATION_LAUNCHER ? U.Vh.APP_LAUNCHER : U.Vh.SLASH_UI,
+analytics_location: z(B),
 sectionName: k
   }));
 }
@@ -350,7 +350,7 @@ m.kz(R.nonce, {
     interactionType: u.B8.APPLICATION_COMMAND,
     channelId: I
   }
-}), null != o ? q(o, R.nonce, g, c).then(e => {
+}), null != o ? Q(o, R.nonce, g, c).then(e => {
   if (!!e)
     K(R, d);
 }) : K(R, d);
@@ -365,7 +365,18 @@ var r;
 (0, I.Sg)(e.nonce, n, e.applicationId, e.channelId, null !== (r = e.guildId) && void 0 !== r ? r : null), n.ok && null != t && t();
   });
 }
-async function z(e, t) {
+
+function z(e) {
+  switch (e) {
+case U.bB.APPLICATION_LAUNCHER:
+  return U.Vh.APP_LAUNCHER;
+case U.bB.IMAGE_RECS_MENU:
+  return U.Vh.IMAGE_RECS_MENU;
+default:
+  return U.Vh.SLASH_UI;
+  }
+}
+async function q(e, t) {
   let n = 0,
 r = 0;
   for (let a of e) {
@@ -378,7 +389,7 @@ totalSize: n,
 largestUploadedFileSize: r
   };
 }
-async function q(e, t, n, r) {
+async function Q(e, t, n, r) {
   let i = (0, O.dg)(n),
 a = e => {
   null == r || r(i, e), m.yr(t, G.evJ.ENTITY_TOO_LARGE, B.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
@@ -388,7 +399,7 @@ a = e => {
 {
   totalSize: s,
   largestUploadedFileSize: o
-} = await z(e, !1),
+} = await q(e, !1),
 l = (0, C.Xv)() ? y.Ld : y.zz;
   if (o > Math.max(i, k.Y1) || s > l)
 return a(o), !1;
@@ -402,5 +413,5 @@ m.yr(t, void 0, B.Z.Messages.UPLOADING_FILES_FAILED.format({
   return {
 totalSize: s,
 largestUploadedFileSize: o
-  } = await z(e, !0), !e.some(e => e.error === G.evJ.ENTITY_TOO_LARGE) && !(s > l) || (a(o), !1);
+  } = await q(e, !0), !e.some(e => e.error === G.evJ.ENTITY_TOO_LARGE) && !(s > l) || (a(o), !1);
 }
