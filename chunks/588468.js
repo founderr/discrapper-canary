@@ -1,9 +1,9 @@
 n.d(t, {
   DJ: function() {
-return M;
+return P;
   },
   rp: function() {
-return P;
+return U;
   }
 }), n(411104), n(47120);
 var r, i = n(735250),
@@ -23,18 +23,19 @@ var r, i = n(735250),
   I = n(511618),
   T = n(926491),
   g = n(378233),
-  S = n(430824),
-  A = n(699516),
-  N = n(594174),
-  v = n(768581),
-  O = n(51144),
-  R = n(965386),
-  C = n(981631),
-  y = n(185923),
-  D = n(689938),
-  L = n(609013);
+  S = n(695346),
+  A = n(430824),
+  N = n(699516),
+  v = n(594174),
+  O = n(768581),
+  R = n(51144),
+  C = n(965386),
+  y = n(981631),
+  D = n(185923),
+  L = n(689938),
+  b = n(609013);
 
-function b(e, t, n) {
+function M(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -43,15 +44,15 @@ writable: !0
   }) : e[t] = n, e;
 }
 
-function M(e) {
+function P(e) {
   return null != e ? 'autocomplete-'.concat(e) : null;
 }
 
-function P(e) {
+function U(e) {
   return 'autocomplete-'.concat(e, '-title');
 }
-let U = a.createContext(null);
-class w extends a.PureComponent {
+let w = a.createContext(null);
+class x extends a.PureComponent {
   isSelectable() {
 return this.selectable;
   }
@@ -70,8 +71,8 @@ let {
 } = this, l = this.isSelectable();
 return (0, i.jsx)(d.Clickable, {
   ...e,
-  className: o()(L.clickable, r, n),
-  id: null !== (t = M(a)) && void 0 !== t ? t : void 0,
+  className: o()(b.clickable, r, n),
+  id: null !== (t = P(a)) && void 0 !== t ? t : void 0,
   onClick: l ? this.handleClick : void 0,
   onMouseMove: l ? () => {
     this.setState({
@@ -85,7 +86,7 @@ return (0, i.jsx)(d.Clickable, {
   'aria-disabled': !l,
   'aria-selected': l && s,
   children: (0, i.jsx)('div', {
-    className: L.base,
+    className: b.base,
     children: this.renderContent()
   })
 });
@@ -100,14 +101,14 @@ return this.isSelectable() ? (0, i.jsx)(c.mh, {
 }) : this.renderClickable();
   }
   constructor(e) {
-super(e), b(this, 'selectable', !0), b(this, 'layoutClass', L.autocompleteRowVertical), b(this, 'handleMouseEnter', () => {
+super(e), M(this, 'selectable', !0), M(this, 'layoutClass', b.autocompleteRowVertical), M(this, 'handleMouseEnter', () => {
   let {
     onHover: e,
     index: t,
     selected: n
   } = this.props;
   null == e || n || 'number' != typeof t || e(t);
-}), b(this, 'handleClick', e => {
+}), M(this, 'handleClick', e => {
   let {
     onClick: t,
     index: n
@@ -118,7 +119,7 @@ super(e), b(this, 'selectable', !0), b(this, 'layoutClass', L.autocompleteRowVer
 };
   }
 }
-class x extends(r = a.PureComponent) {
+class G extends(r = a.PureComponent) {
   render() {
 let {
   children: e,
@@ -127,14 +128,14 @@ let {
   id: r,
   ...s
 } = this.props;
-return a.Children.count(e) > 0 ? (0, i.jsx)(U.Provider, {
+return a.Children.count(e) > 0 ? (0, i.jsx)(w.Provider, {
   value: {
     id: null != r ? r : ''
   },
   children: (0, i.jsx)('div', {
-    className: o()(L.autocomplete, t),
+    className: o()(b.autocomplete, t),
     children: (0, i.jsx)('div', {
-      className: o()(L.autocompleteInner, n),
+      className: o()(b.autocompleteInner, n),
       ...s,
       children: e
     })
@@ -142,35 +143,35 @@ return a.Children.count(e) > 0 ? (0, i.jsx)(U.Provider, {
 }) : null;
   }
 }
-b(x, 'Generic', class e extends w {
+M(G, 'Generic', class e extends x {
   renderContent() {
 let {
   text: e,
   description: t
 } = this.props;
-return (0, i.jsxs)(R.RX, {
+return (0, i.jsxs)(C.RX, {
   children: [
-    (0, i.jsx)(R.z5, {
-      children: (0, i.jsx)(R.BR, {
+    (0, i.jsx)(C.z5, {
+      children: (0, i.jsx)(C.BR, {
         children: e
       })
     }),
-    null != t ? (0, i.jsx)(R.dY, {
+    null != t ? (0, i.jsx)(C.dY, {
       children: t
     }) : null
   ]
 });
   }
-}), b(x, 'Loading', function(e) {
+}), M(G, 'Loading', function(e) {
   let t = a.useMemo(() => u().random(60, 120), []);
   return (0, i.jsx)('div', {
-className: L.base,
+className: b.base,
 'aria-busy': !0,
-children: (0, i.jsx)(R.RX, {
-  children: (0, i.jsx)(R.z5, {
-    children: (0, i.jsx)(R.BR, {
+children: (0, i.jsx)(C.RX, {
+  children: (0, i.jsx)(C.z5, {
+    children: (0, i.jsx)(C.BR, {
       children: (0, i.jsx)('div', {
-        className: L.autocompletePlaceholder,
+        className: b.autocompletePlaceholder,
         style: {
           width: t
         }
@@ -179,17 +180,17 @@ children: (0, i.jsx)(R.RX, {
   })
 })
   });
-}), b(x, 'Title', function(e) {
+}), M(G, 'Title', function(e) {
   let {
 title: t,
 className: n,
 children: r
-  } = e, s = a.useContext(U);
+  } = e, s = a.useContext(w);
   return (0, i.jsx)('div', {
-className: L.base,
+className: b.base,
 children: (0, i.jsxs)(d.Heading, {
-  id: P(s.id),
-  className: o()(L.contentTitle, n),
+  id: U(s.id),
+  className: o()(b.contentTitle, n),
   variant: 'heading-deprecated-12/semibold',
   children: [
     t,
@@ -197,19 +198,19 @@ children: (0, i.jsxs)(d.Heading, {
   ]
 })
   });
-}), b(x, 'Divider', class e extends w {
+}), M(G, 'Divider', class e extends x {
   renderContent() {
 let {
   className: e
 } = this.props;
 return (0, i.jsx)('div', {
-  className: o()(e, L.divider)
+  className: o()(e, b.divider)
 });
   }
   constructor(...e) {
-super(...e), b(this, 'layoutClass', L.dividerContainer), b(this, 'selectable', !1);
+super(...e), M(this, 'layoutClass', b.dividerContainer), M(this, 'selectable', !1);
   }
-}), b(x, 'User', class e extends w {
+}), M(G, 'User', class e extends x {
   renderContent() {
 let {
   user: e,
@@ -218,9 +219,9 @@ let {
   hidePersonalInformation: r,
   guildId: a
 } = this.props;
-return (0, i.jsxs)(R.RX, {
+return (0, i.jsxs)(C.RX, {
   children: [
-    (0, i.jsx)(R.Tw, {
+    (0, i.jsx)(C.Tw, {
       children: (0, i.jsx)(d.Avatar, {
         size: d.AvatarSizes.SIZE_24,
         src: e.getAvatarURL(a, 24),
@@ -228,22 +229,22 @@ return (0, i.jsxs)(R.RX, {
         status: n
       })
     }),
-    (0, i.jsx)(R.z5, {
-      children: (0, i.jsx)(R.BR, {
-        children: null != t ? t : O.ZP.getName(e)
+    (0, i.jsx)(C.z5, {
+      children: (0, i.jsx)(C.BR, {
+        children: null != t ? t : R.ZP.getName(e)
       })
     }),
-    (0, i.jsxs)(R.dY, {
+    (0, i.jsxs)(C.dY, {
       children: [
         (0, i.jsx)('span', {
-          className: L.__invalid_descriptionUsername,
-          children: O.ZP.getUserTag(e, {
+          className: b.__invalid_descriptionUsername,
+          children: R.ZP.getUserTag(e, {
             mode: 'username',
             identifiable: r ? 'never' : 'always'
           })
         }),
         r || e.isPomelo() ? null : (0, i.jsxs)('span', {
-          className: L.descriptionDiscriminator,
+          className: b.descriptionDiscriminator,
           children: [
             '#',
             e.discriminator
@@ -254,7 +255,7 @@ return (0, i.jsxs)(R.RX, {
   ]
 });
   }
-}), b(x, 'Role', class e extends w {
+}), M(G, 'Role', class e extends x {
   renderContent() {
 let {
   role: e,
@@ -264,13 +265,13 @@ let {
 } = e, r = 'dot' === _.Z.roleStyle, a = 'username' === _.Z.roleStyle && null != n ? {
   color: n
 } : void 0;
-return (0, i.jsxs)(R.RX, {
+return (0, i.jsxs)(C.RX, {
   children: [
-    (0, i.jsx)(R.z5, {
-      children: (0, i.jsxs)(R.BR, {
+    (0, i.jsx)(C.z5, {
+      children: (0, i.jsxs)(C.BR, {
         children: [
           r && (0, i.jsx)(d.RoleDot, {
-            className: L.roleDot,
+            className: b.roleDot,
             color: n,
             tooltip: !1
           }),
@@ -284,63 +285,63 @@ return (0, i.jsxs)(R.RX, {
         ]
       })
     }),
-    t ? null : (0, i.jsx)(R.dY, {
-      children: D.Z.Messages.MENTION_USERS_WITH_ROLE
+    t ? null : (0, i.jsx)(C.dY, {
+      children: L.Z.Messages.MENTION_USERS_WITH_ROLE
     })
   ]
 });
   }
-}), b(x, 'Channel', class e extends w {
+}), M(G, 'Channel', class e extends x {
   renderContent() {
 let {
   channel: e,
   category: t
-} = this.props, n = e.type === C.d4z.GUILD_CATEGORY ? d.FolderIcon : (0, m.KS)(e);
-return (0, i.jsxs)(R.RX, {
+} = this.props, n = e.type === y.d4z.GUILD_CATEGORY ? d.FolderIcon : (0, m.KS)(e);
+return (0, i.jsxs)(C.RX, {
   children: [
-    null != n && (0, i.jsx)(R.Tw, {
+    null != n && (0, i.jsx)(C.Tw, {
       children: (0, i.jsx)(n, {
-        className: L.icon
+        className: b.icon
       })
     }),
-    (0, i.jsx)(R.z5, {
-      children: (0, i.jsx)(R.BR, {
-        children: (0, p.F6)(e, N.default, A.Z)
+    (0, i.jsx)(C.z5, {
+      children: (0, i.jsx)(C.BR, {
+        children: (0, p.F6)(e, v.default, N.Z)
       })
     }),
-    null != t ? (0, i.jsx)(R.dY, {
+    null != t ? (0, i.jsx)(C.dY, {
       children: t.name
     }) : null
   ]
 });
   }
-}), b(x, 'Command', class e extends w {
+}), M(G, 'Command', class e extends x {
   renderContent() {
 let {
   command: e
 } = this.props;
-return (0, i.jsxs)(R.RX, {
+return (0, i.jsxs)(C.RX, {
   children: [
-    (0, i.jsx)(R.Tw, {
+    (0, i.jsx)(C.Tw, {
       children: (0, i.jsx)(d.SlashIcon, {
         size: 'xs',
         color: 'currentColor',
-        className: L.icon,
-        colorClass: L.iconForeground
+        className: b.icon,
+        colorClass: b.iconForeground
       })
     }),
-    (0, i.jsx)(R.z5, {
-      children: (0, i.jsx)(R.BR, {
+    (0, i.jsx)(C.z5, {
+      children: (0, i.jsx)(C.BR, {
         children: e.name
       })
     }),
-    (0, i.jsx)(R.dY, {
+    (0, i.jsx)(C.dY, {
       children: e.description
     })
   ]
 });
   }
-}), b(x, 'NewCommand', class e extends w {
+}), M(G, 'NewCommand', class e extends x {
   isSelectable() {
 return this.props.command.inputType !== E.iw.PLACEHOLDER;
   }
@@ -363,33 +364,33 @@ return e.inputType === E.iw.PLACEHOLDER ? (0, i.jsx)(h.Z, {}) : (0, i.jsx)(f.Z, 
   isSelectable: o
 });
   }
-}), b(x, 'Emoji', class e extends w {
+}), M(G, 'Emoji', class e extends x {
   renderContent() {
 let {
   emoji: e,
   sentinel: t,
   guild: n
-} = this.props, r = null != e.id || '' !== e.url ? (0, i.jsx)('img', {
+} = this.props, r = S.Yk.getSetting(), a = null != e.id || '' !== e.url ? (0, i.jsx)('img', {
   alt: '',
-  className: L.emojiImage,
-  src: null != e.id ? v.ZP.getEmojiURL({
+  className: b.emojiImage,
+  src: null != e.id ? O.ZP.getEmojiURL({
     id: e.id,
-    animated: e.animated,
-    size: y.$U
+    animated: e.animated && r,
+    size: D.$U
   }) : e.url
 }) : (0, i.jsx)('span', {
-  className: L.emojiRaw,
+  className: b.emojiRaw,
   children: e.surrogates
-}), a = null != n ? (0, i.jsx)(R.dY, {
+}), s = null != n ? (0, i.jsx)(C.dY, {
   children: n.name
 }) : null;
-return (0, i.jsxs)(R.RX, {
+return (0, i.jsxs)(C.RX, {
   children: [
-    (0, i.jsx)(R.Tw, {
-      children: r
+    (0, i.jsx)(C.Tw, {
+      children: a
     }),
-    (0, i.jsx)(R.z5, {
-      children: (0, i.jsxs)(R.BR, {
+    (0, i.jsx)(C.z5, {
+      children: (0, i.jsxs)(C.BR, {
         children: [
           t,
           e.name,
@@ -397,14 +398,14 @@ return (0, i.jsxs)(R.RX, {
         ]
       })
     }),
-    a
+    s
   ]
 });
   }
   constructor(...e) {
-super(...e), b(this, 'layoutClass', o()(L.autocompleteRowVertical, L.autocompleteRowVerticalSmall));
+super(...e), M(this, 'layoutClass', o()(b.autocompleteRowVertical, b.autocompleteRowVerticalSmall));
   }
-}), b(x, 'GIFIntegration', class e extends w {
+}), M(G, 'GIFIntegration', class e extends x {
   renderContent() {
 let {
   width: e,
@@ -419,9 +420,9 @@ return (0, i.jsx)('img', {
 });
   }
   constructor(...e) {
-super(...e), b(this, 'layoutClass', L.autocompleteRowHorizontal);
+super(...e), M(this, 'layoutClass', b.autocompleteRowHorizontal);
   }
-}), b(x, 'Sticker', class e extends w {
+}), M(G, 'Sticker', class e extends x {
   renderContent() {
 var e, t;
 let n;
@@ -433,37 +434,37 @@ let {
 } = this.props, {
   hovered: l
 } = this.state;
-return (0, g.jl)(o) ? n = null === (e = T.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name : (0, g.J8)(o) && (n = null === (t = S.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name), (0, i.jsxs)(R.RX, {
+return (0, g.jl)(o) ? n = null === (e = T.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name : (0, g.J8)(o) && (n = null === (t = A.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name), (0, i.jsxs)(C.RX, {
   children: [
-    (0, i.jsx)(R.Tw, {
+    (0, i.jsx)(C.Tw, {
       children: a(o, l || !0 === s)
     }),
-    (0, i.jsxs)(R.z5, {
+    (0, i.jsxs)(C.z5, {
       children: [
-        (0, i.jsx)(R.BR, {
-          className: L.__invalid_stickerName,
+        (0, i.jsx)(C.BR, {
+          className: b.__invalid_stickerName,
           children: o.name
         }),
-        null != r && (0, i.jsx)(R.wL, {
-          children: D.Z.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({
+        null != r && (0, i.jsx)(C.wL, {
+          children: L.Z.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({
             queryMatch: r
           })
         })
       ]
     }),
-    null != n && (0, i.jsx)(R.dY, {
+    null != n && (0, i.jsx)(C.dY, {
       children: n
     })
   ]
 });
   }
   constructor(...e) {
-super(...e), b(this, 'layoutClass', o()(L.autocompleteRowVertical, L.autocompleteRowVerticalSmall));
+super(...e), M(this, 'layoutClass', o()(b.autocompleteRowVertical, b.autocompleteRowVerticalSmall));
   }
-}), b(x, 'EmojiUpsell', class e extends w {
+}), M(G, 'EmojiUpsell', class e extends x {
   renderContent() {
 return (0, i.jsx)(I.Z, {
   emojis: this.props.emojis
 });
   }
-}), t.ZP = x;
+}), t.ZP = G;
