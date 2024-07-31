@@ -26,10 +26,10 @@ if ('1228233381897179137' === e.id || '1228234629429985300' === e.id) {
 }
 return e;
   },
-  l = e => '.png' === e.slice(e.length - 4, e.length) ? e.slice(0, e.lastIndexOf('.png')) + '.webp' : e,
+  l = (e, t) => 'png' === t ? e : '.png' === e.slice(e.length - 4, e.length) ? e.slice(0, e.lastIndexOf('.png')) + '.' + t : e,
   u = e => {
-let t = (0, a.i)('Profile Effect Component');
-void 0 !== e && t && (e.effects = e.effects.map(e => (e.src = l(e.src), e)));
+let t = (0, a.w7)('Profile Effect Component');
+void 0 !== e && (e.effects = e.effects.map(e => (e.src = l(e.src, t), e)));
   },
   c = (e, t) => Math.floor(Math.random() * (t - e + 1) + e),
   d = /\[(.+)\]/,
