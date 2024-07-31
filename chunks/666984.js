@@ -39,26 +39,25 @@ children: [
       null == p || p(e), T.onClick();
     }
   }),
-  (() => {
-    var e;
-    let t = (0, r.jsx)(c.tG, {
-      icon: () => (0, r.jsx)(l.Z, {}),
-      text: null !== (e = I.label) && void 0 !== e ? e : E.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
-      disabled: I.disabled,
-      submitting: I.loading,
-      themeColor: m === d.y0.FULL_SIZE ? 'secondary' : 'primary',
-      className: f.primaryButton,
-      fullWidth: !0,
-      onClick: e => {
-        null == p || p(e), I.onClick();
-      }
-    });
-    return null == T.tooltip ? t : (0, r.jsx)(i.TooltipContainer, {
-      text: T.tooltip,
-      className: f.primaryButton,
-      children: t
-    });
-  })()
+  (0, r.jsx)(i.Tooltip, {
+    text: I.tooltip,
+    children: e => {
+      var t;
+      return (0, r.jsx)(c.tG, {
+        ...e,
+        icon: () => (0, r.jsx)(l.Z, {}),
+        text: null !== (t = I.label) && void 0 !== t ? t : E.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
+        disabled: I.disabled,
+        submitting: I.loading,
+        themeColor: m === d.y0.FULL_SIZE ? 'secondary' : 'primary',
+        wrapperClassName: f.primaryButton,
+        fullWidth: !0,
+        onClick: e => {
+          null == p || p(e), I.onClick();
+        }
+      });
+    }
+  })
 ]
   }) : null;
 }

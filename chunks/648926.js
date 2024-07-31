@@ -39,24 +39,21 @@ return (null == e ? void 0 : e.state) !== E.jm8.ENDED && (null == e ? void 0 : e
   });
   return (0, r.jsxs)(r.Fragment, {
 children: [
-  (() => {
-    let e = (0, r.jsx)(d.tG, {
+  (0, r.jsx)(a.Tooltip, {
+    text: null != p ? (0, l.P9)(p) : null,
+    children: e => (0, r.jsx)(d.tG, {
+      ...e,
       icon: a.ScreenIcon,
       text: f.Z.Messages.WATCH,
       disabled: !n,
       themeColor: T === _.y0.FULL_SIZE ? 'secondary' : 'primary',
-      className: h.primaryButton,
+      wrapperClassName: h.primaryButton,
       fullWidth: !0,
       onClick: e => {
         null == m || m(e), s.default.selectVoiceChannel(t.channelId), (0, o.iV)(t), null == I || I();
       }
-    });
-    return null == p ? e : (0, r.jsx)(a.TooltipContainer, {
-      text: (0, l.P9)(p),
-      className: h.primaryButton,
-      children: e
-    });
-  })(),
+    })
+  }),
   g && (0, r.jsx)(d.ef, {
     tooltipText: f.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
     icon: a.EyePlusIcon,

@@ -98,10 +98,10 @@ RelationshipStore: D.Z,
 SelectedChannelStore: L.Z,
 VoiceStateStore: b.Z,
 PermissionStore: y.Z
-  })), [ei, ea] = i.useState(!1);
+  })), [ei, ea] = i.useState(!1), es = !er || ei || et || U.isPlatformEmbedded && !ee;
   if (null == X || !(0, h.Z)(H, B.xjy.JOIN) && !Q)
 return null;
-  let es = async e => {
+  let eo = async e => {
 if (null == Z || Z(e), Q && er && null != J && null != X && await (0, _.Z)({
     applicationId: X,
     activityChannelId: J,
@@ -149,41 +149,32 @@ if (null != H) {
   });
   null != e && u.default.selectPrivateChannel(e.id);
 }
-  }, eo = () => {
-let e = !er || ei || et || U.isPlatformEmbedded && !ee;
-return Q ? (0, r.jsx)(G.tG, {
+  }, el = () => t.id === n.id ? V.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : U.isPlatformEmbedded && !ee && null != H ? V.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({
+name: H.name
+  }) : null;
+  return Q ? (0, r.jsx)(s.Tooltip, {
+text: el(),
+children: e => (0, r.jsx)(G.tG, {
+  ...e,
   icon: s.ActivitiesIcon,
   text: V.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY,
-  disabled: e,
+  disabled: es,
   submitting: en,
   themeColor: K === k.y0.FULL_SIZE ? 'secondary' : 'primary',
   fullWidth: !0,
-  onClick: es
-}) : er ? (0, r.jsx)(G.tG, {
+  onClick: eo
+})
+  }) : (0, r.jsx)(s.Tooltip, {
+text: el(),
+children: e => (0, r.jsx)(G.tG, {
+  ...e,
   icon: s.GameControllerIcon,
-  text: V.Z.Messages.JOIN,
-  disabled: e,
+  text: er ? V.Z.Messages.JOIN : V.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
+  disabled: es,
   submitting: en,
   themeColor: K === k.y0.FULL_SIZE ? 'secondary' : 'primary',
   fullWidth: !0,
-  onClick: es
-}) : (0, r.jsx)(G.tG, {
-  icon: s.GameControllerIcon,
-  text: V.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
-  disabled: e,
-  submitting: en,
-  themeColor: K === k.y0.FULL_SIZE ? 'secondary' : 'primary',
-  fullWidth: !0,
-  onClick: es
-});
-  };
-  return t.id === n.id ? (0, r.jsx)(s.TooltipContainer, {
-text: V.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF,
-children: eo()
-  }) : U.isPlatformEmbedded && !ee && null != H ? (0, r.jsx)(s.TooltipContainer, {
-text: V.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({
-  name: H.name
-}),
-children: eo()
-  }) : eo();
+  onClick: eo
+})
+  });
 }
