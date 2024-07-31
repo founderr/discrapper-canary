@@ -31,30 +31,30 @@ onSelectTab: R
   } = (0, N.z)(), {
 onScroll: x,
 scrollPosition: b
-  } = (0, h.c)(), P = (0, r.wj)((0, c.ZP)()), M = (0, a.e7)([_.Z], () => _.Z.hasLoadedExperiments), {
-quests: D,
-isFetchingCurrentQuests: y
-  } = (0, T.bA)(O), j = (0, C.Z)(), U = null;
+  } = (0, h.c)(), P = (0, c.ZP)(), M = (0, r.wj)(P), D = (0, a.e7)([_.Z], () => _.Z.hasLoadedExperiments), {
+quests: y,
+isFetchingCurrentQuests: j
+  } = (0, T.bA)(O), U = (0, C.Z)(), G = null;
   if (window.location.hash.length > 0) {
 let e = window.location.hash.slice(1);
-for (let t of D)
+for (let t of y)
   if (t.id === e) {
-    U = e;
+    G = e;
     break;
   }
   }
   s.useEffect(() => {
-M && !t && ((0, g.dL)(A.Z5c.FRIENDS), o.Z.open(A.oAB.INVENTORY));
+D && !t && ((0, g.dL)(A.Z5c.FRIENDS), o.Z.open(A.oAB.INVENTORY));
   }, [
-M,
+D,
 t
   ]), s.useEffect(() => {}, []);
-  let G = s.useCallback(() => {
+  let k = s.useCallback(() => {
 window.open(p.Z.getArticleURL(A.BhN.QUESTS_LEARN_MORE));
   }, []);
   return ((0, u.Tt)({
 location: v.Z.Messages.QUESTS
-  }), t && M) ? (0, i.jsxs)('div', {
+  }), t && D) ? (0, i.jsxs)('div', {
 className: Z.container,
 children: [
   (0, i.jsxs)(I.ZP, {
@@ -78,46 +78,44 @@ children: [
   (0, i.jsx)(E.Z, {
     title: v.Z.Messages.QUESTS_HOME_HERO_TITLE,
     description: v.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-    backgroundImageUrl: j,
+    backgroundImageUrl: U,
     onScroll: x,
     bannerContainerClassName: Z.bannerContainer,
     bannerImageClassName: Z.bannerImage,
     headerTextColor: 'header-primary',
-    descriptionTextColor: P ? 'text-muted' : 'currentColor',
+    descriptionTextColor: M ? 'text-muted' : 'currentColor',
     button: (0, i.jsxs)(l.Button, {
       size: 'medium',
-      color: P ? l.ButtonColors.TRANSPARENT : l.ButtonColors.WHITE,
+      color: M ? l.ButtonColors.TRANSPARENT : l.ButtonColors.WHITE,
       className: Z.button,
-      onClick: G,
+      onClick: k,
       innerClassName: Z.innerButton,
       children: [
         (0, i.jsx)(l.Text, {
           variant: 'text-md/semibold',
-          color: P ? 'always-white' : 'text-normal',
+          color: M ? 'always-white' : 'text-normal',
           className: Z.externalLinkText,
           children: v.Z.Messages.LEARN_MORE
         }),
         (0, i.jsx)(l.LinkExternalSmallIcon, {
           className: Z.icon,
-          color: P ? 'var(--white-500)' : 'var(--redesign-button-secondary-text'
+          color: M ? 'var(--white-500)' : 'var(--redesign-button-secondary-text'
         })
       ]
     }),
-    children: y && 0 === D.length ? (0, i.jsx)(l.Spinner, {
+    children: j && 0 === y.length ? (0, i.jsx)(l.Spinner, {
       className: Z.spinner
-    }) : 0 === D.length && O === T.e5.CLAIMED ? (0, i.jsxs)('div', {
-      className: Z.emptyState,
+    }) : 0 === y.length && O === T.e5.CLAIMED ? (0, i.jsxs)(l.EmptyState, {
+      theme: P,
       children: [
         (0, i.jsx)(l.EmptyStateImage, {
-          darkSrc: n(625065),
-          lightSrc: n(875184),
-          width: 272,
-          height: 222
+          lightSrc: n(979770),
+          darkSrc: n(138715),
+          width: 415,
+          height: 200
         }),
-        (0, i.jsx)(l.Text, {
-          variant: 'text-md/normal',
-          color: 'header-secondary',
-          children: v.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({
+        (0, i.jsx)(l.EmptyStateText, {
+          note: v.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({
             onClick: () => R(T.e5.UNCLAIMED)
           })
         })
@@ -125,8 +123,8 @@ children: [
     }) : (0, i.jsx)('div', {
       className: Z.gridContainer,
       children: (0, i.jsx)(f.Z, {
-        quests: D,
-        selectedQuestId: U
+        quests: y,
+        selectedQuestId: G
       })
     })
   })
