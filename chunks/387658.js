@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return k;
+return D;
   }
 }), t(47120);
 var i = t(735250),
@@ -17,26 +17,27 @@ var i = t(735250),
   _ = t(213459),
   f = t(10718),
   C = t(895924),
-  h = t(583027),
-  A = t(585483),
-  E = t(499254),
-  N = t(541099),
-  v = t(827498),
-  x = t(496158),
-  I = t(676161),
-  g = t(660090),
-  P = t(783097),
-  L = t(176412),
-  S = t(870205),
-  T = t(981631),
+  h = t(147391),
+  A = t(583027),
+  E = t(585483),
+  N = t(499254),
+  v = t(541099),
+  x = t(827498),
+  I = t(496158),
+  g = t(676161),
+  P = t(660090),
+  L = t(783097),
+  S = t(176412),
+  T = t(870205),
+  b = t(981631),
   R = t(689079),
-  b = t(689938),
-  M = t(627542),
-  y = t(763963);
-let j = 'placeholder',
-  O = [, , , , , ].fill(j);
+  M = t(689938),
+  y = t(627542),
+  j = t(763963);
+let O = 'placeholder',
+  Z = [, , , , , ].fill(O);
 
-function Z(e) {
+function H(e) {
   var n, t;
   let {
 channel: l,
@@ -44,8 +45,8 @@ command: r,
 section: s,
 sectionName: c
   } = e, d = a.useCallback(() => {
-let e = N.Z.entrypoint();
-E.y(v.ti.COMMAND), (0, h.Mo)({
+let e = v.Z.entrypoint();
+N.y(x.ti.COMMAND), (0, A.Mo)({
   command: r,
   location: C.Vh.APP_LAUNCHER_APPLICATION_VIEW,
   sectionName: c
@@ -57,7 +58,7 @@ E.y(v.ti.COMMAND), (0, h.Mo)({
   sectionName: c,
   source: e,
   commandOrigin: C.bB.APPLICATION_LAUNCHER
-}), A.S.dispatch(T.CkL.FOCUS_CHANNEL_TEXT_AREA, {
+}), E.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, {
   channelId: l.id
 });
   }, [
@@ -65,8 +66,8 @@ l.id,
 r,
 s,
 c
-  ]), m = (null !== (t = null === (n = r.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0, _ = a.useMemo(() => (0, L.ae)(r.displayDescription, void 0), [r.displayDescription]), f = a.useMemo(() => (0, i.jsxs)('div', {
-className: y.commandTextContainer,
+  ]), m = (null !== (t = null === (n = r.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0, _ = a.useMemo(() => (0, S.ae)(r.displayDescription, void 0), [r.displayDescription]), f = a.useMemo(() => (0, i.jsxs)('div', {
+className: j.commandTextContainer,
 children: [
   (0, i.jsx)(u.Text, {
     variant: 'text-sm/semibold',
@@ -85,14 +86,14 @@ r.displayName,
 _
   ]);
   return (0, i.jsxs)(u.Clickable, {
-className: y.command,
+className: j.command,
 onClick: d,
 children: [
   (0, i.jsx)(u.FocusBlock, {
-    className: y.commandFocusBlock,
+    className: j.commandFocusBlock,
     children: f
   }),
-  m ? (0, i.jsx)(o.F, {}) : (0, i.jsx)(U, {
+  m ? (0, i.jsx)(o.F, {}) : (0, i.jsx)(B, {
     channel: l,
     command: r,
     sectionName: c
@@ -101,7 +102,7 @@ children: [
   });
 }
 
-function H() {
+function U() {
   let e = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
 {
   styleLarge: n,
@@ -117,13 +118,13 @@ function H() {
   }
 }), []),
 l = a.useMemo(() => (0, i.jsxs)('div', {
-  className: y.commandTextContainerPlaceholder,
+  className: j.commandTextContainerPlaceholder,
   children: [
     (0, i.jsx)('div', {
-      className: M.textPlaceholder,
+      className: y.textPlaceholder,
       style: n,
       children: (0, i.jsx)(u.Text, {
-        className: M.hidden,
+        className: y.hidden,
         variant: 'text-sm/semibold',
         color: 'header-primary',
         lineClamp: 1,
@@ -131,10 +132,10 @@ l = a.useMemo(() => (0, i.jsxs)('div', {
       })
     }),
     (0, i.jsx)('div', {
-      className: M.textPlaceholder,
+      className: y.textPlaceholder,
       style: t,
       children: (0, i.jsx)(u.Text, {
-        className: M.hidden,
+        className: y.hidden,
         variant: 'text-xs/medium',
         color: 'text-muted',
         lineClamp: 1,
@@ -147,33 +148,35 @@ l = a.useMemo(() => (0, i.jsxs)('div', {
   t
 ]);
   return (0, i.jsx)('div', {
-className: r()(y.command, M.loadingAnimation, {
-  [M.noAnimation]: e
+className: r()(j.command, y.loadingAnimation, {
+  [y.noAnimation]: e
 }),
 children: l
   });
 }
 
-function U(e) {
+function B(e) {
   let {
 channel: n,
 command: t,
 sectionName: l
-  } = e, r = (0, _.PL)(!0, !0), o = (0, _.LD)(n.guild_id, !0), c = (0, x.D)(n), [d, m] = a.useState(!1), p = a.useCallback(async e => {
+  } = e, r = (0, _.PL)(!0, !0), o = (0, _.LD)(n.guild_id, !0), c = (0, I.D)(n), [d, m] = a.useState(!1), p = a.useCallback(async e => {
 e.stopPropagation();
+let n = v.Z.lastShownEntrypoint();
 try {
-  await (0, L.L_)({
+  await (0, h.L)({
     applicationId: t.applicationId,
     userIndexState: r,
     guildIndexState: o,
     sectionName: l,
-    location: C.Vh.APP_LAUNCHER_APPLICATION_VIEW
-  }) && (await (0, P.Y$)({
+    location: C.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+    source: n
+  }) && (await (0, L.Y$)({
     command: t,
     optionValues: {},
     context: c,
     sectionName: l
-  }), E.y(v.ti.COMMAND));
+  }), N.y(x.ti.COMMAND));
 } finally {
   m(!1);
 }
@@ -190,16 +193,16 @@ onClick: p,
 disabled: d,
 size: u.ButtonSizes.ICON,
 color: u.Button.Colors.PRIMARY,
-className: y.commandSentCTAButton,
-innerClassName: y.commandSentCTAButtonInner,
-'aria-label': b.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({
+className: j.commandSentCTAButton,
+innerClassName: j.commandSentCTAButtonInner,
+'aria-label': M.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({
   commandName: t.name
 }),
 children: [
   (0, i.jsx)(u.Text, {
     variant: 'text-sm/medium',
     color: 'currentColor',
-    children: b.Z.Messages.SEND
+    children: M.Z.Messages.SEND
   }),
   (0, i.jsx)(s.U, {
     size: 'xs',
@@ -209,7 +212,7 @@ children: [
   });
 }
 
-function B(e) {
+function k(e) {
   let {
 channel: n,
 commands: t,
@@ -221,7 +224,7 @@ children: o
   return 0 === t.length ? null : (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsxs)('div', {
-    className: y.commandListHeader,
+    className: j.commandListHeader,
     children: [
       (0, i.jsx)(u.Heading, {
         variant: 'heading-sm/semibold',
@@ -231,9 +234,9 @@ children: [
     ]
   }),
   (0, i.jsx)('ul', {
-    className: y.commandContainer,
+    className: j.commandContainer,
     'aria-label': l,
-    children: t.map((e, t) => e === j ? (0, i.jsx)(H, {}, e + t) : (0, i.jsx)(Z, {
+    children: t.map((e, t) => e === O ? (0, i.jsx)(U, {}, e + t) : (0, i.jsx)(H, {
       channel: n,
       command: e,
       section: a,
@@ -244,7 +247,7 @@ children: [
   });
 }
 
-function k(e) {
+function D(e) {
   var n;
   let {
 channel: t,
@@ -270,7 +273,7 @@ sortOrder: _,
 setSortOrder: C,
 commands: h,
 canSort: A
-  } = (0, g.Z)({
+  } = (0, P.Z)({
 sectionId: l.id,
 commandsByActiveSection: c
   });
@@ -280,28 +283,28 @@ s(l.id);
 l.id,
 s
   ]);
-  let E = (0, I.Z)({
+  let E = (0, g.Z)({
 channel: t,
 commands: h,
 limit: 5
   });
   return (0, i.jsxs)('ul', {
-className: y.contentContainer,
+className: j.contentContainer,
 children: [
-  (0, i.jsx)(B, {
+  (0, i.jsx)(k, {
     channel: t,
     section: p,
     commands: E,
-    headerName: b.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
+    headerName: M.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
     sectionName: r
   }),
-  (0, i.jsx)(B, {
+  (0, i.jsx)(k, {
     channel: t,
     section: p,
-    commands: m.current ? O : h,
-    headerName: b.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
+    commands: m.current ? Z : h,
+    headerName: M.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
     sectionName: r,
-    children: A && (0, i.jsx)(S.Z, {
+    children: A && (0, i.jsx)(T.Z, {
       sortOrder: _,
       onSortOptionClick: C
     })
