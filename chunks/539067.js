@@ -12,31 +12,29 @@ var r = n(470079),
 
 function u(e) {
   let {
-userId: t,
-isUserVerified: n
-  } = e, u = (0, i.e7)([a.Z], () => a.Z.getSecureFramesRosterMapEntry(t)), c = (0, i.e7)([s.Z], () => s.Z.getPersistentCodesEnabled()), [l, d] = r.useState(!0), [_, f] = r.useState(!1), I = r.useCallback(async (e, t) => {
-d(!0);
+userId: t
+  } = e, n = (0, i.e7)([a.Z], () => a.Z.getSecureFramesRosterMapEntry(t)), u = (0, i.e7)([s.Z], () => s.Z.getPersistentCodesEnabled()), [c, l] = r.useState(!0), [d, _] = r.useState(!1), f = r.useCallback(async (e, t) => {
+l(!0);
 try {
   let n = E.GB,
     r = await (0, o.uX)(n),
     i = await (0, o.J6)(e, t, n);
-  f(r && i);
+  _(r && i);
 } catch (e) {
-  f(!1);
+  _(!1);
 } finally {
-  d(!1);
+  l(!1);
 }
   }, []);
   return r.useEffect(() => {
-c && null != u ? I(t, u) : (f(!1), d(!1));
+u && null != n ? f(t, n) : (_(!1), l(!1));
   }, [
-c,
 u,
-I,
-t,
-n
+n,
+f,
+t
   ]), {
-loading: l,
-isPersistentCode: _
+loading: c,
+isPersistentCode: d
   };
 }

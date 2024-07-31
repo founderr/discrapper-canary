@@ -42,10 +42,10 @@ transitionState: t,
 userId: n,
 channelId: Z,
 onClose: p
-  } = e, U = (0, c.Dt)(), m = (0, a.e7)([u.default], () => u.default.getUser(n)), N = (0, a.e7)([E.Z], () => {
+  } = e, m = (0, c.Dt)(), U = (0, a.e7)([u.default], () => u.default.getUser(n)), N = (0, a.e7)([E.Z], () => {
 var e;
 return null === (e = E.Z.getChannel(Z)) || void 0 === e ? void 0 : e.getGuildId();
-  }), D = l.ZP.useName(N, null, m), {
+  }), D = l.ZP.useName(N, null, U), {
 fingerprint: F,
 userKey: L,
 loading: b
@@ -55,7 +55,7 @@ userId: n
 fingerprintBase64: F,
 chunkSize: y.iQ,
 desiredLength: y.KN
-  }), V = i.useCallback(() => {
+  }), v = i.useCallback(() => {
 (0, d.s$)({
   userId: n,
   channelId: Z
@@ -63,46 +63,45 @@ desiredLength: y.KN
   }, [
 Z,
 n
-  ]), v = (0, I.wV)({
+  ]), O = (0, I.wV)({
 userId: n,
 channelId: Z,
 location: 'WebSecureFramesUserVerificationModal'
   }), {
-isPersistentCode: O,
+isPersistentCode: V,
 loading: k
   } = (0, f.y)({
-userId: n,
-isUserVerified: v
+userId: n
   }), K = i.useCallback(() => {
-null != L && ((0, _.TQ)(n, L, O, Z, A.Sbl.E2EE_USER_VERIFY_MODAL), p());
+null != L && ((0, _.TQ)(n, L, V, Z, A.Sbl.E2EE_USER_VERIFY_MODAL), p());
   }, [
 L,
 n,
-O,
+V,
 Z,
 p
   ]), w = i.useCallback(() => {
-null != L && ((0, _.LO)(n, L, O), p());
+null != L && ((0, _.LO)(n, L, V), p());
   }, [
 L,
 n,
-O,
+V,
 p
-  ]), [P, B] = i.useMemo(() => v ? [
+  ]), [P, B] = i.useMemo(() => O ? [
 M.Z.Messages.E2EE_VERIFIED,
 o.Z.BG_BRAND
-  ] : O ? [
+  ] : V ? [
 M.Z.Messages.E2EE_PERSISTENT,
 o.Z.STATUS_DANGER
   ] : [
 M.Z.Messages.NEW,
 o.Z.STATUS_DANGER
   ], [
-O,
-v
-  ]), Y = i.useMemo(() => (O ? M.Z.Messages.E2EE_PERSISTENT_USER_VERIFICATION_FOOTER_TEXT : M.Z.Messages.E2EE_EPHEMERAL_USER_VERIFICATION_FOOTER_TEXT).format({
+V,
+O
+  ]), Y = i.useMemo(() => (V ? M.Z.Messages.E2EE_PERSISTENT_USER_VERIFICATION_FOOTER_TEXT : M.Z.Messages.E2EE_EPHEMERAL_USER_VERIFICATION_FOOTER_TEXT).format({
 helpArticle: y.l4
-  }), [O]);
+  }), [V]);
   return i.useEffect(() => {
 (0, d.Rq)({
   userId: n,
@@ -113,7 +112,7 @@ Z,
 n
   ]), (0, r.jsxs)(s.ModalRoot, {
 transitionState: t,
-'aria-labelledby': U,
+'aria-labelledby': m,
 children: [
   (0, r.jsx)('div', {
     className: g.shieldIconContainer,
@@ -159,7 +158,7 @@ children: [
                 className: g.copyIcon,
                 chunks: x,
                 color: s.tokens.colors.INTERACTIVE_NORMAL,
-                onCopy: V
+                onCopy: v
               }),
               k || b ? (0, r.jsx)(s.Spinner, {
                 className: g.spinner,
@@ -190,8 +189,8 @@ children: [
         size: s.ButtonSizes.MEDIUM,
         look: s.ButtonLooks.FILLED,
         disabled: null == F || k || b,
-        onClick: v ? w : K,
-        children: v ? M.Z.Messages.E2EE_CLEAR_VERIFICATION : M.Z.Messages.E2EE_MARK_AS_VERIFIED
+        onClick: O ? w : K,
+        children: O ? M.Z.Messages.E2EE_CLEAR_VERIFICATION : M.Z.Messages.E2EE_MARK_AS_VERIFIED
       }),
       (0, r.jsx)(s.Button, {
         fullWidth: !0,
