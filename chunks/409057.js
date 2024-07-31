@@ -186,58 +186,58 @@ children: [
             var e, t, n, i;
             if (B.type === U.IIU.HANG_STATUS)
               return (0, r.jsx)('div', {
-                className: a()(G.hangStatusIconBackground, Q),
+                className: G.hangStatusIconBackground,
                 children: (0, r.jsx)(g.Z, {
                   hangStatusActivity: B,
                   className: G.hangStatusIcon
                 })
               });
-            let s = null === (e = B.assets) || void 0 === e ? void 0 : e.large_image,
-              o = null === (t = B.assets) || void 0 === t ? void 0 : t.small_image,
-              l = null === (n = B.assets) || void 0 === n ? void 0 : n.large_text,
-              c = null === (i = B.assets) || void 0 === i ? void 0 : i.small_text;
-            if (null == s && (0, E.Z)(B)) {
+            let a = null === (e = B.assets) || void 0 === e ? void 0 : e.large_image,
+              s = null === (t = B.assets) || void 0 === t ? void 0 : t.small_image,
+              o = null === (n = B.assets) || void 0 === n ? void 0 : n.large_text,
+              l = null === (i = B.assets) || void 0 === i ? void 0 : i.small_text;
+            if (null == a && null == s && (0, E.Z)(B)) {
               let e = u.Z.get(U.ABu.XBOX).icon.customPNG;
               return (0, r.jsx)(D.Z, {
                 src: e,
                 alt: x.Z.Messages.XBOX
               });
             }
-            if (null == s && (0, _.Z)(B)) {
+            if (null == a && null == s && (0, _.Z)(B)) {
               let e = u.Z.get(U.ABu.PLAYSTATION).icon.customPNG;
               return (0, r.jsx)(D.Z, {
                 src: e,
                 alt: x.Z.Messages.PLAYSTATION
               });
             }
-            return null == s && null != F ? (0, r.jsx)(D.Z, {
+            return null == a && null != F ? (0, r.jsx)(D.Z, {
               src: e => F.getIconURL(e),
               alt: x.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({
                 applicationName: F.name
               })
-            }) : null == s && null != o ? (0, r.jsx)(D.Z, {
-              src: e => k(B.application_id, o, e),
-              alt: c,
-              tooltipText: c
-            }) : null != o && (0, d.Z)(B) ? (0, r.jsxs)('div', {
-              className: G.imagePosition,
-              children: [
-                (0, r.jsx)(D.Z, {
-                  src: e => k(B.application_id, s, e),
-                  alt: l,
-                  tooltipText: l
-                }),
-                (0, r.jsx)(D.Z, {
-                  src: e => k(B.application_id, o, e),
-                  size: 'small',
-                  alt: c,
-                  tooltipText: c
-                })
-              ]
-            }) : (0, r.jsx)(D.Z, {
+            }) : null == a && null != s ? (0, r.jsx)(D.Z, {
               src: e => k(B.application_id, s, e),
               alt: l,
               tooltipText: l
+            }) : null != s && (0, d.Z)(B) ? (0, r.jsxs)('div', {
+              className: G.imagePosition,
+              children: [
+                (0, r.jsx)(D.Z, {
+                  src: e => k(B.application_id, a, e),
+                  alt: o,
+                  tooltipText: o
+                }),
+                (0, r.jsx)(D.Z, {
+                  src: e => k(B.application_id, s, e),
+                  size: 'small',
+                  alt: l,
+                  tooltipText: l
+                })
+              ]
+            }) : (0, r.jsx)(D.Z, {
+              src: e => k(B.application_id, a, e),
+              alt: o,
+              tooltipText: o
             });
           })(),
           null == X ? (0, r.jsxs)('div', {
