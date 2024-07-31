@@ -161,19 +161,20 @@ n = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
 [a, s] = i.useState(!1),
 {
   preset: c
-} = (0, p.Z)(e.profileEffectId, () => s(!1));
-  return ((0, E.qB)(null == c ? void 0 : c.config), null != c && (t || e.shopPreview || c.config.animationType !== d.Q.INTERMITTENT)) ? !t && e.shopPreview || !t && c.config.animationType === d.Q.PERSISTENT || n || !1 === e.autoPlay && !1 === e.isHovering ? (0, r.jsx)(T, {
+} = (0, p.Z)(e.profileEffectId, () => s(!1)),
+_ = (0, E.Cc)(null == c ? void 0 : c.config);
+  return ((0, E.qB)(_), null != c && null != _ && (t || e.shopPreview || c.config.animationType !== d.Q.INTERMITTENT)) ? !t && e.shopPreview || !t && c.config.animationType === d.Q.PERSISTENT || n || !1 === e.autoPlay && !1 === e.isHovering ? (0, r.jsx)(T, {
 useThumbnail: e.useThumbnail,
-config: c.config,
+config: _,
 bannerAdjustment: e.bannerAdjustment,
 noBorderRadius: e.noBorderRadius,
 isHovering: e.isHovering,
 useOpacityOnHover: e.useOpacityOnHover
   }) : a ? (0, r.jsx)(I, {
-profileEffectConfig: c.config,
+profileEffectConfig: _,
 ...e
   }) : (0, r.jsx)(f.Z, {
-profileEffectConfig: c.config,
+profileEffectConfig: _,
 onReady: () => {
   s(!0);
 }
