@@ -625,21 +625,30 @@ members: t
   } = e, n = d.default.getId();
   return t.reduce((e, t) => t.member.user.id === n ? e : v(t.member.user) || e, !1);
 }
-class ev extends _.Z {
+
+function ev(e) {
+  let {
+messageItems: t
+  } = e;
+  t.forEach(e => {
+null != e.message && R(e.message, !0);
+  }, !1);
+}
+class eO extends _.Z {
   initialize() {
 this.waitFor(d.default);
   }
   takeSnapshot() {
 let e = this.getCurrentUser();
 return {
-  version: ev.LATEST_SNAPSHOT_VERSION,
+  version: eO.LATEST_SNAPSHOT_VERSION,
   data: {
     users: [e].filter(c.lm)
   }
 };
   }
   handleLoadCache(e) {
-let t = this.readSnapshot(ev.LATEST_SNAPSHOT_VERSION);
+let t = this.readSnapshot(eO.LATEST_SNAPSHOT_VERSION);
 if (null != t)
   for (let e of t.users)
     m[e.id] = new l.Z(e);
@@ -754,8 +763,9 @@ super({
   FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eS,
   FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eA,
   FAMILY_CENTER_REQUEST_LINK_SUCCESS: eg,
-  MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eN
+  MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eN,
+  LOAD_GRAVITY_HYDRATED: ev
 });
   }
 }
-p(ev, 'displayName', 'UserStore'), p(ev, 'LATEST_SNAPSHOT_VERSION', 1), t.default = new ev();
+p(eO, 'displayName', 'UserStore'), p(eO, 'LATEST_SNAPSHOT_VERSION', 1), t.default = new eO();
