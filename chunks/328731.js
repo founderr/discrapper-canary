@@ -32,18 +32,22 @@ v
   return (0, l.jsxs)('div', {
 className: i()(f.container, r),
 children: [
-  (0, l.jsx)(o.Z, {
-    maxUsers: 3,
-    users: _,
-    size: a.AvatarSizes.SIZE_20,
-    avatarClassName: f.stackedAvatar,
-    hideOverflowCount: !0,
-    disableUsernameTooltip: !0
-  }),
-  (0, l.jsx)(a.Spacer, {
-    size: 6,
-    horizontal: !0
-  }),
+  _.length > 0 ? (0, l.jsxs)(l.Fragment, {
+    children: [
+      (0, l.jsx)(o.Z, {
+        maxUsers: 3,
+        users: _,
+        size: a.AvatarSizes.SIZE_20,
+        avatarClassName: f.stackedAvatar,
+        hideOverflowCount: !0,
+        disableUsernameTooltip: !0
+      }),
+      (0, l.jsx)(a.Spacer, {
+        size: 6,
+        horizontal: !0
+      })
+    ]
+  }) : null,
   (0, l.jsx)(a.Heading, {
     variant: 'text-sm/semibold',
     className: i()(f.textSecondary, f.truncatedText),

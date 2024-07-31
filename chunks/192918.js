@@ -26,7 +26,7 @@ l = r.useMemo(() => n.slice(-t), [
 ]),
 u = l[l.length - 1],
 c = l[l.length - 2],
-d = n.length - 1;
+d = Math.max(n.length - 1, 0);
   return {
 orderedParticipants: n,
 displayParticipants: l,

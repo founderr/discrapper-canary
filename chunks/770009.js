@@ -16,30 +16,32 @@ var r = t(512722),
 
 function m(e) {
   let {
-contentInventoryEntry: n
-  } = e, t = (0, c.CJ)();
-  i()(null != t, 'Component context is not defined. Did you forget to wrap your component in a ComponentStateContextProvider?');
-  let {
-channelId: r
-  } = t, d = (0, a.e7)([s.Z], () => s.Z.getChannel(r));
-  i()(null != d, 'channel must be defined');
-  let {
-parsedEntry: m
+contentInventoryEntry: n,
+channel: t
+  } = e, {
+parsedEntry: r
   } = (0, o.B3)();
   return (0, l.jsx)(u.Z, {
-...m,
+...r,
 entry: n,
-channel: d
+channel: t
   });
 }
 
 function f(e) {
-  return (0, l.jsx)(o.r4, {
+  let n = (0, c.CJ)();
+  i()(null != n, 'Component context is not defined. Did you forget to wrap your component in a ComponentStateContextProvider?');
+  let {
+channelId: t
+  } = n, r = (0, a.e7)([s.Z], () => s.Z.getChannel(t));
+  return i()(null != r, 'channel must be defined'), (0, l.jsx)(o.r4, {
 location: d._.EMBED,
 entry: e.contentInventoryEntry,
+channel: r,
 errorFallback: null,
 children: (0, l.jsx)(m, {
-  ...e
+  ...e,
+  channel: r
 })
   });
 }

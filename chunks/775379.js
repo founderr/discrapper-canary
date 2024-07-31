@@ -11,7 +11,7 @@ return {
 };
   }
   componentDidCatch(e, n) {
-console.warn('ErrorBoundary caught an error', e, n);
+console.error('ErrorBoundary caught an error', e, n);
   }
   render() {
 return null != this.state.error ? this.props.fallback : this.props.children;

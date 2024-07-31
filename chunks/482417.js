@@ -11,27 +11,29 @@ var l = t(423875),
 
 function s(e) {
   let n, {
-  entry: t
+  entry: t,
+  baseEntryData: s
 } = e,
-s = t.extra.entries[0].media,
-c = s.artists[0],
+c = t.extra.entries[0].media,
+u = c.artists[0],
 {
-  title: u,
-  provider: d,
-  image_url: m
-} = s,
-f = c.name,
-_ = () => (0, r.o)(a.Hw.TRACK, s.external_id);
-  return d === l.p.SPOTIFY && (n = {
+  title: d,
+  provider: m,
+  image_url: f
+} = c,
+_ = u.name,
+p = () => (0, r.o)(a.Hw.TRACK, c.external_id);
+  return m === l.p.SPOTIFY && (n = {
 type: i.kG.SPOTIFY,
 'aria-label': o.Z.Messages.SPOTIFY
   }), {
-title: u,
-subtitle: f,
-thumbnailUrl: m,
-onClickTitle: _,
-onClickSubtitle: () => (0, r.o)(a.Hw.ARTIST, c.external_id),
-onClickThumbnail: _,
+...s,
+title: d,
+subtitle: _,
+thumbnailUrl: f,
+onClickTitle: p,
+onClickSubtitle: () => (0, r.o)(a.Hw.ARTIST, u.external_id),
+onClickThumbnail: p,
 userDescription: o.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
 providerIconProps: n
   };

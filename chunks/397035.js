@@ -15,37 +15,39 @@ var l = t(470079),
 
 function m(e) {
   let n, {
-  entry: t
+  entry: t,
+  baseEntryData: m
 } = e,
-m = (0, r.q)(t.extra.application_id),
-f = null == m ? void 0 : m.getIconURL(128),
-_ = (0, i.getAssetImage)(t.extra.application_id, t.extra.media_assets_large_image, [
+f = (0, r.q)(t.extra.application_id),
+_ = null == f ? void 0 : f.getIconURL(128),
+p = (0, i.getAssetImage)(t.extra.application_id, t.extra.media_assets_large_image, [
   u.Si.LARGE,
   u.Si.LARGE
 ]),
-p = t.extra.media_subtitle,
-v = (0, s.kr)(t) && !(0, s.n2)(t) ? d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING : d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,
-C = {
+v = t.extra.media_subtitle,
+C = (0, s.kr)(t) && !(0, s.n2)(t) ? d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING : d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,
+h = {
   type: c.kG.CRUNCHYROLL,
   'aria-label': d.Z.Messages.CRUNCHYROLL
 },
-h = l.useMemo(() => {
+x = l.useMemo(() => {
   if (null == t.extra.url)
     return;
   let e = o.Z.safeParseWithQuery(t.extra.url);
   if (null != e && null != e.protocol && null != e.hostname)
     return e;
 }, [t.extra.url]);
-  return null != h && (n = () => (0, a.q)({
-href: o.Z.format(h),
+  return null != x && (n = () => (0, a.q)({
+href: o.Z.format(x),
 trusted: !0
   })), {
-thumbnailUrl: null != _ ? _ : f,
+...m,
+thumbnailUrl: null != p ? p : _,
 title: t.extra.media_title,
 onClickTitle: n,
 onClickThumbnail: n,
-subtitle: p,
-userDescription: v,
-providerIconProps: C
+subtitle: v,
+userDescription: C,
+providerIconProps: h
   };
 }

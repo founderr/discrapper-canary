@@ -24,11 +24,12 @@ let f = {
 function p(e) {
   let n, t, {
   entry: r,
-  location: a
+  location: a,
+  baseEntryData: c
 } = e,
-c = (0, i.q)(r.extra.application_id),
-u = null == c ? void 0 : c.getIconURL(d.Si.LARGE),
-p = r.extra.game_name;
+u = (0, i.q)(r.extra.application_id),
+p = null == u ? void 0 : u.getIconURL(d.Si.LARGE),
+v = r.extra.game_name;
   if (null != r.extra.platform) {
 let e = f[r.extra.platform];
 null != e && (n = {
@@ -37,19 +38,20 @@ null != e && (n = {
 });
   }
   t = r.content_type === l.s.PLAYED_GAME ? (0, s.kr)(r) && !(0, s.n2)(r) ? m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED;
-  let v = _[a],
-C = (0, o.Z)({
-  location: v,
+  let C = _[a],
+h = (0, o.Z)({
+  location: C,
   applicationId: r.extra.application_id,
-  source: v,
+  source: C,
   trackEntryPointImpression: !0,
   sourceUserId: r.author_id
 });
   return {
-thumbnailUrl: u,
-title: p,
-onClickTitle: C,
-onClickThumbnail: C,
+...c,
+thumbnailUrl: p,
+title: v,
+onClickTitle: h,
+onClickThumbnail: h,
 userDescription: t,
 providerIconProps: n
   };
