@@ -11,11 +11,11 @@ var t = n(735250),
   i = n(809206),
   E = n(794358),
   _ = n(594174),
-  d = n(626135),
-  N = n(706734),
+  N = n(626135),
+  d = n(706734),
   c = n(264119),
-  u = n(75788),
-  A = n(22150),
+  A = n(75788),
+  u = n(22150),
   C = n(361833),
   M = n(134562),
   S = n(526761),
@@ -31,12 +31,12 @@ function O(e) {
 transitionState: n,
 onClose: O
   } = e, h = (0, l.e7)([_.default], () => _.default.getCurrentUser()), L = o.useRef(null !== (s = null == h ? void 0 : h.verified) && void 0 !== s && s);
-  o.useEffect(() => (d.default.track(m.rMx.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED), () => (0, i.Zy)()), []);
+  o.useEffect(() => (N.default.track(m.rMx.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED), () => (0, i.Zy)()), []);
   let f = null == h ? void 0 : h.verified,
 g = f ? S.Ax.CONFIRM_START : S.Ax.EMAIL_AND_PASSWORD,
-[p, j] = o.useState(g),
-[G, v] = o.useState(null),
-[D, U] = o.useState(null),
+[p, G] = o.useState(g),
+[j, v] = o.useState(null),
+[U, D] = o.useState(null),
 [H, B] = o.useState(null),
 [Z, k] = o.useState(''),
 [P, b] = o.useState(),
@@ -64,8 +64,8 @@ children: [
         id: S.Ax.CONFIRM_START,
         impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
         impressionProperties: K,
-        children: (0, t.jsx)(A.Z, {
-          onNext: () => j(S.Ax.CONFIRM_CODE),
+        children: (0, t.jsx)(u.Z, {
+          onNext: () => G(S.Ax.CONFIRM_CODE),
           onClose: O
         })
       }),
@@ -73,15 +73,15 @@ children: [
         id: S.Ax.CONFIRM_CODE,
         impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE,
         impressionProperties: K,
-        children: (0, t.jsx)(u.Z, {
+        children: (0, t.jsx)(A.Z, {
           error: H,
           setError: B,
-          setEmailToken: U,
-          isSlideReady: G === S.Ax.CONFIRM_CODE,
+          setEmailToken: D,
+          isSlideReady: j === S.Ax.CONFIRM_CODE,
           onNext: () => {
             E.Z.trackExposure({
               location: 'change_email_confirm_code_slide'
-            }), j(y ? S.Ax.CHANGE_EMAIL_REASONS : S.Ax.EMAIL_AND_PASSWORD);
+            }), G(y ? S.Ax.CHANGE_EMAIL_REASONS : S.Ax.EMAIL_AND_PASSWORD);
           },
           onClose: O
         })
@@ -90,10 +90,10 @@ children: [
         id: S.Ax.CHANGE_EMAIL_REASONS,
         impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_COLLECT_REASONS,
         impressionProperties: K,
-        children: (0, t.jsx)(N.Z, {
-          onNext: () => (d.default.track(m.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, {
+        children: (0, t.jsx)(d.Z, {
+          onNext: () => (N.default.track(m.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, {
             change_email_reason_enum: P
-          }), null != P && I.Mr.has(P) ? j(S.Ax.CHANGE_EMAIL_WARNING) : j(S.Ax.EMAIL_AND_PASSWORD)),
+          }), null != P && I.Mr.has(P) ? G(S.Ax.CHANGE_EMAIL_WARNING) : G(S.Ax.EMAIL_AND_PASSWORD)),
           onClose: O,
           reason: P,
           onReasonChange: b
@@ -104,7 +104,11 @@ children: [
         impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_WARNING,
         impressionProperties: K,
         children: (0, t.jsx)(M.Z, {
-          onNext: () => j(S.Ax.EMAIL_AND_PASSWORD),
+          onNext: () => {
+            N.default.track(m.rMx.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, {
+              change_email_reason_enum: P
+            }), G(S.Ax.EMAIL_AND_PASSWORD);
+          },
           onClose: O
         })
       }),
@@ -116,15 +120,16 @@ children: [
           email_verified: L.current
         },
         children: (0, t.jsx)(C.Z, {
-          emailToken: D,
-          isSlideReady: G === S.Ax.EMAIL_AND_PASSWORD,
+          emailToken: U,
+          isSlideReady: j === S.Ax.EMAIL_AND_PASSWORD,
           onBack: f ? () => {
-            y ? j(null != P && I.Mr.has(P) ? S.Ax.CHANGE_EMAIL_WARNING : S.Ax.CHANGE_EMAIL_REASONS) : j(S.Ax.CONFIRM_CODE);
+            y ? G(null != P && I.Mr.has(P) ? S.Ax.CHANGE_EMAIL_WARNING : S.Ax.CHANGE_EMAIL_REASONS) : G(S.Ax.CONFIRM_CODE);
           } : null,
           onNext: e => {
-            k(e), j(S.Ax.COMPLETE);
+            k(e), G(S.Ax.COMPLETE);
           },
-          onClose: O
+          onClose: O,
+          reason: P
         })
       }),
       (0, t.jsx)(r.Slide, {
