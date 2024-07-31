@@ -17,8 +17,8 @@ var i = n(209173),
   g = n(781627),
   m = n(981631),
   f = n(689938),
-  p = n(354182);
-let C = new Map([
+  C = n(354182);
+let p = new Map([
 [
   '890343617762304070',
   {
@@ -42,7 +42,7 @@ function I(e) {
 result: i
   } = e, l = i.data, r = (0, d.Z)({
 application: l
-  }), c = C.get(i.data.id);
+  }), c = p.get(i.data.id);
   if (null == c)
 return null;
   let u = r.length > 0 ? (0, a.jsx)(s.Z, {
@@ -110,11 +110,11 @@ results: t,
 guildId: n
   } = e;
   return (0, a.jsxs)('div', {
-className: p.container,
+className: C.container,
 children: [
   (0, a.jsx)(u.Z, {}),
   (0, a.jsx)('div', {
-    className: p.list,
+    className: C.list,
     children: t.map((e, t) => {
       let l = ''.concat(t).concat(e.type);
       if (e.type === i.s.APPLICATION)

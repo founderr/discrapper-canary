@@ -7,8 +7,8 @@ var i = t(735250),
   r = t(470079),
   a = t(442837),
   s = t(481060),
-  o = t(139387),
-  l = t(230711),
+  l = t(139387),
+  o = t(230711),
   u = t(213459),
   d = t(434404),
   c = t(430824),
@@ -48,14 +48,14 @@ return {
 f,
 A,
 null == n ? void 0 : n.id
-  ]), M = r.useCallback(() => {
+  ]), Z = r.useCallback(() => {
 if ((null == S ? void 0 : S.id) != null)
-  d.Z.open(S.id, _.pNK.INTEGRATIONS), o.Z.setSection(_.b4C.APPLICATION, null == n ? void 0 : n.id);
+  d.Z.open(S.id, _.pNK.INTEGRATIONS), l.Z.setSection(_.b4C.APPLICATION, null == n ? void 0 : n.id);
   }, [
 null == n ? void 0 : n.id,
 null == S ? void 0 : S.id
-  ]), Z = r.useCallback(() => {
-l.Z.open(_.oAB.AUTHORIZED_APPS);
+  ]), M = r.useCallback(() => {
+o.Z.open(_.oAB.AUTHORIZED_APPS);
   }, []), m = N === _.IlC.POPOUT;
   if (!(null == n ? void 0 : n.bot) || !p || m || !h && !O)
 return null;
@@ -63,10 +63,10 @@ return null;
   return h && g.push((0, i.jsx)(s.MenuItem, {
 id: 'manage-integration',
 label: I.Z.Messages.MANAGE_INTEGRATION,
-action: M
+action: Z
   }, 'manage-integration')), O && g.push((0, i.jsx)(s.MenuItem, {
 id: 'manage-authorized-app',
 label: I.Z.Messages.MANAGE_AUTHORIZED_APP,
-action: Z
+action: M
   }, 'manage-authorized-app')), g;
 }

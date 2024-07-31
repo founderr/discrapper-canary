@@ -16,8 +16,8 @@ var a = n(735250),
   g = n(399606),
   m = n(481060),
   f = n(209613),
-  p = n(626135),
-  C = n(674588),
+  C = n(626135),
+  p = n(674588),
   h = n(463571),
   x = n(894653),
   I = n(809547),
@@ -55,16 +55,16 @@ s = (0, o.TH)(),
 }, []),
 [f, h] = i.useState(null != d ? Number(d) : 1),
 [b, D] = i.useState(null != c ? c : ''),
-[L, k] = i.useState(null !== (e = Number(m)) && void 0 !== e ? e : R.MU),
-Y = i.useMemo(() => null == l ? void 0 : l.find(e => e.id === L), [
+[L, Y] = i.useState(null !== (e = Number(m)) && void 0 !== e ? e : R.MU),
+k = i.useMemo(() => null == l ? void 0 : l.find(e => e.id === L), [
   l,
   L
 ]),
 H = i.useCallback(e => {
-  k(e.id), h(1);
+  Y(e.id), h(1);
 }, []),
 U = i.useCallback(e => {
-  D(e), h(1), 0 === e.length && k(R.MU);
+  D(e), h(1), 0 === e.length && Y(R.MU);
 }, []),
 B = i.useCallback(e => {
   var t, n;
@@ -138,18 +138,18 @@ J = i.useMemo(() => null == z ? void 0 : z.filter(e => !(q === _.c.SEARCH_RESULT
 Q = i.useRef(null),
 X = (0, N.getCurrentView)(),
 $ = i.useCallback(e => {
-  p.default.track(y.rMx.APP_DIRECTORY_SEARCHED, {
+  C.default.track(y.rMx.APP_DIRECTORY_SEARCHED, {
     search_term: b,
     num_results: e,
     current_page: null == X ? void 0 : X.type,
     result_page: f,
-    category: null == Y ? void 0 : Y.name,
-    category_id: null == Y ? void 0 : Y.id,
+    category: null == k ? void 0 : k.name,
+    category_id: null == k ? void 0 : k.id,
     guild_id: n
   });
 }, [
-  null == Y ? void 0 : Y.id,
-  null == Y ? void 0 : Y.name,
+  null == k ? void 0 : k.id,
+  null == k ? void 0 : k.name,
   f,
   n,
   b,
@@ -164,10 +164,10 @@ ee = i.useCallback(e => {
     guildId: l,
     fetchCounts: r
   } = e;
-  r && C.yC({
+  r && p.yC({
     query: t,
     guildId: l
-  }), C.yC({
+  }), p.yC({
     query: t,
     guildId: l,
     options: {
@@ -189,7 +189,7 @@ ea = i.useCallback(e => {
     application: t,
     mutualGuilds: a
   } = e;
-  p.default.track(y.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
+  C.default.track(y.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
     current_page: N.ApplicationDirectoryViews.SEARCH,
     application_id: t.id,
     load_id: K,
@@ -215,7 +215,7 @@ ee({
 });
   }, [
 ee,
-Y,
+k,
 n,
 f
   ]), i.useEffect(() => {
@@ -233,9 +233,9 @@ et
   ]);
   let ei = i.useMemo(() => Object.keys(V).length > 0, [V]);
   return null != J && 0 === W || w === I.M.ERROR ? t = (0, a.jsx)(A.Z, {
-category: Y,
+category: k,
 onViewAll: () => {
-  h(1), k(R.MU);
+  h(1), Y(R.MU);
 }
   }) : null != J && J.length > 0 && q === _.c.SEARCH_RESULTS ? t = (0, a.jsx)(Z, {
 items: J,

@@ -8,8 +8,8 @@ t(470079);
 var r = t(442837),
   a = t(692547),
   s = t(481060),
-  o = t(493683),
-  l = t(129861),
+  l = t(493683),
+  o = t(129861),
   u = t(700582),
   d = t(594174),
   c = t(689938),
@@ -73,7 +73,7 @@ action: () => {
     header: c.Z.Messages.TRANSFER_GROUP_OWNERSHIP,
     confirmText: c.Z.Messages.CONFIRM,
     cancelText: c.Z.Messages.CANCEL,
-    onConfirm: () => o.Z.setDMOwner(n.id, e.id),
+    onConfirm: () => l.Z.setDMOwner(n.id, e.id),
     ...t,
     children: [
       (0, i.jsx)(_, {
@@ -101,7 +101,7 @@ action: () => {
       (0, i.jsx)(s.Text, {
         variant: 'text-md/normal',
         children: c.Z.Messages.CONFIRM_CHANGE_DM_OWNER.format({
-          usernameHook: (n, t) => (0, i.jsx)(l.Z, {
+          usernameHook: (n, t) => (0, i.jsx)(o.Z, {
             usernameIcon: (0, i.jsx)(s.Avatar, {
               className: E.avatarIcon,
               src: e.getAvatarURL(void 0, 16),

@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return l;
+return o;
   }
 });
 var i = t(735250);
@@ -8,19 +8,19 @@ t(470079);
 var r = t(153867),
   a = t(468026),
   s = t(394059),
-  o = t(689938);
+  l = t(689938);
 
-function l(e) {
+function o(e) {
   let {
 type: n,
 onConfirm: t,
-...l
-  } = e, u = n === s.K.STREAM ? o.Z.Messages.HIDE_SELF_STREAM_CONFIRMATION_HEADER : o.Z.Messages.HIDE_SELF_VIDEO_CONFIRMATION_HEADER, d = n === s.K.STREAM ? o.Z.Messages.HIDE_SELF_STREAM_CONFIRMATION_BODY : o.Z.Messages.HIDE_SELF_VIDEO_CONFIRMATION_BODY;
+...o
+  } = e, u = n === s.K.STREAM ? l.Z.Messages.HIDE_SELF_STREAM_CONFIRMATION_HEADER : l.Z.Messages.HIDE_SELF_VIDEO_CONFIRMATION_HEADER, d = n === s.K.STREAM ? l.Z.Messages.HIDE_SELF_STREAM_CONFIRMATION_BODY : l.Z.Messages.HIDE_SELF_VIDEO_CONFIRMATION_BODY;
   return (0, i.jsx)(a.default, {
-confirmText: o.Z.Messages.CONFIRM,
-secondaryConfirmText: o.Z.Messages.DONT_ASK_AGAIN,
+confirmText: l.Z.Messages.CONFIRM,
+secondaryConfirmText: l.Z.Messages.DONT_ASK_AGAIN,
 title: u,
-cancelText: o.Z.Messages.CANCEL,
+cancelText: l.Z.Messages.CANCEL,
 onConfirm: t,
 onConfirmSecondary: () => {
   r.ZP.updatedUnsyncedSettings({
@@ -28,6 +28,6 @@ onConfirmSecondary: () => {
   }), t();
 },
 body: d,
-...l
+...o
   });
 }

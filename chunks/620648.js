@@ -1,32 +1,32 @@
-i.d(n, {
+n.d(i, {
   Z: function() {
 return p;
   }
 });
-var s = i(735250),
-  l = i(470079),
-  t = i(442837),
-  o = i(481060),
-  a = i(666520),
-  r = i(580552),
-  d = i(169559),
-  c = i(369077),
-  u = i(706454),
-  I = i(246946),
-  _ = i(785717),
-  f = i(648067),
-  m = i(588822),
-  E = i(900927),
-  x = i(652853),
-  v = i(335191),
-  Z = i(988246),
-  h = i(689938),
-  S = i(678108);
+var s = n(735250),
+  l = n(470079),
+  t = n(442837),
+  o = n(481060),
+  a = n(666520),
+  r = n(580552),
+  d = n(169559),
+  c = n(369077),
+  u = n(706454),
+  I = n(246946),
+  _ = n(785717),
+  f = n(648067),
+  m = n(588822),
+  E = n(900927),
+  x = n(652853),
+  v = n(335191),
+  Z = n(988246),
+  h = n(689938),
+  S = n(678108);
 
 function p(e) {
-  var n;
+  var i;
   let {
-user: i,
+user: n,
 displayProfile: p,
 autoFocusNote: g = !1,
 scrollToConnections: j = !1
@@ -34,7 +34,7 @@ scrollToConnections: j = !1
 trackUserProfileAction: T
   } = (0, _.KZ)(), N = (0, t.e7)([I.Z], () => I.Z.hidePersonalInformation), {
 theme: C
-  } = (0, x.z)(), A = (0, t.e7)([u.default], () => u.default.locale), y = (0, d.Z)('user_profile'), R = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, r.Z)(i.id), O = (0, f.Z)(i.id), L = l.useRef(null);
+  } = (0, x.z)(), A = (0, t.e7)([u.default], () => u.default.locale), y = (0, d.Z)('user_profile'), R = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, r.Z)(n.id), O = (0, f.Z)(n.id), L = l.useRef(null);
   return (l.useLayoutEffect(() => {
 if (j) {
   var e;
@@ -56,8 +56,8 @@ children: [
           }),
           (0, s.jsx)(m.Z, {
             className: S.userInfoText,
-            userBio: null !== (n = null == p ? void 0 : p.bio) && void 0 !== n ? n : '',
-            userId: i.id
+            userBio: null !== (i = null == p ? void 0 : p.bio) && void 0 !== i ? i : '',
+            userId: n.id
           })
         ]
       }),
@@ -69,7 +69,7 @@ children: [
             children: h.Z.Messages.USER_PROFILE_MEMBER_SINCE
           }),
           (0, s.jsx)(E.Z, {
-            userId: i.id,
+            userId: n.id,
             textClassName: S.userInfoText
           })
         ]
@@ -79,11 +79,11 @@ children: [
         children: (0, s.jsx)('div', {
           className: S.userInfoText,
           children: (0, s.jsx)(c.Gd, {
-            userId: i.id
+            userId: n.id
           })
         })
       }),
-      !i.isNonUserBot() && (0, s.jsxs)(s.Fragment, {
+      !n.isNonUserBot() && (0, s.jsxs)(s.Fragment, {
         children: [
           (0, s.jsx)(o.Heading, {
             variant: 'eyebrow',
@@ -91,7 +91,7 @@ children: [
             children: h.Z.Messages.NOTE
           }),
           (0, s.jsx)(a.Z, {
-            userId: i.id,
+            userId: n.id,
             autoFocus: g,
             className: S.note,
             onUpdate: () => T({
@@ -108,7 +108,7 @@ children: [
     theme: C,
     locale: A,
     className: S.userInfoSection,
-    userId: i.id
+    userId: n.id
   })
 ]
   });

@@ -1,33 +1,33 @@
-i.d(n, {
+n.d(i, {
   Z: function() {
 return j;
   }
-}), i(47120);
-var s = i(735250),
-  l = i(470079),
-  t = i(442837),
-  o = i(706898),
-  a = i(481060),
-  r = i(387903),
-  d = i(246946),
-  c = i(785717),
-  u = i(304704),
-  I = i(27144),
-  _ = i(100849),
-  f = i(944546),
-  m = i(470900),
-  E = i(988246),
-  x = i(970041),
-  v = i(715388),
-  Z = i(879828),
-  h = i(834534),
-  S = i(228168),
-  p = i(47460);
+}), n(47120);
+var s = n(735250),
+  l = n(470079),
+  t = n(442837),
+  o = n(706898),
+  a = n(481060),
+  r = n(387903),
+  d = n(246946),
+  c = n(785717),
+  u = n(304704),
+  I = n(27144),
+  _ = n(100849),
+  f = n(944546),
+  m = n(470900),
+  E = n(988246),
+  x = n(970041),
+  v = n(715388),
+  Z = n(879828),
+  h = n(834534),
+  S = n(228168),
+  p = n(47460);
 
 function g(e) {
   let {
-section: n,
-subsection: i,
+section: i,
+subsection: n,
 user: l,
 currentUser: t,
 displayProfile: o,
@@ -41,40 +41,40 @@ pastActivityEnabled: c
   } = (0, I.z)({
 location: 'SimplifiedUserProfileModalTabs'
   });
-  return n === S.oh.ACTIVITY && (d || c) ? (0, s.jsx)(Z.Z, {
+  return i === S.oh.ACTIVITY && (d || c) ? (0, s.jsx)(Z.Z, {
 user: l,
 currentUser: t,
 onClose: a
-  }) : n === S.oh.ACTIVITY ? (0, s.jsx)(_.Z, {
+  }) : i === S.oh.ACTIVITY ? (0, s.jsx)(_.Z, {
 showActions: (null == t ? void 0 : t.id) !== l.id,
 user: l,
 type: r.Y.SIMPLIFIED_PROFILE,
 onClose: a
-  }) : n === S.oh.MUTUAL_FRIENDS ? (0, s.jsx)(f.Z, {
+  }) : i === S.oh.MUTUAL_FRIENDS ? (0, s.jsx)(f.Z, {
 user: l,
 onClose: a
-  }) : n === S.oh.MUTUAL_GUILDS ? (0, s.jsx)(m.Z, {
+  }) : i === S.oh.MUTUAL_GUILDS ? (0, s.jsx)(m.Z, {
 user: l,
 onClose: a
-  }) : n === S.oh.BOT_DATA_ACCESS ? (0, s.jsx)(x.Z, {
+  }) : i === S.oh.BOT_DATA_ACCESS ? (0, s.jsx)(x.Z, {
 user: l
-  }) : n === S.oh.BOT_INFO ? (0, s.jsx)(v.Z, {
+  }) : i === S.oh.BOT_INFO ? (0, s.jsx)(v.Z, {
 user: l,
 currentUser: t,
 displayProfile: o,
-subsection: i,
+subsection: n,
 onClose: a
   }) : (0, s.jsx)(h.Z, {
 user: l,
 currentUser: t,
 displayProfile: o,
-subsection: i,
+subsection: n,
 onClose: a
   });
 }
 
 function j(e) {
-  var n, i, r;
+  var i, n, r;
   let {
 user: u,
 currentUser: I,
@@ -89,12 +89,12 @@ trackUserProfileAction: Z
 section: j,
 subsection: T
   }, N] = l.useState({
-section: null !== (r = null === (n = f.find(e => {
+section: null !== (r = null === (i = f.find(e => {
   let {
-    section: n
+    section: i
   } = e;
-  return n === m;
-})) || void 0 === n ? void 0 : n.section) && void 0 !== r ? r : null === (i = f[0]) || void 0 === i ? void 0 : i.section,
+  return i === m;
+})) || void 0 === i ? void 0 : i.section) && void 0 !== r ? r : null === (n = f[0]) || void 0 === n ? void 0 : n.section,
 subsection: x
   }), C = l.useCallback(e => {
 Z({
@@ -121,18 +121,18 @@ children: [
     onItemSelect: C,
     children: f.map(e => {
       let {
-        section: n,
-        text: i
+        section: i,
+        text: n
       } = e;
       return (0, s.jsx)(o.n.Item, {
         className: p.tabBarItem,
-        id: n,
-        'aria-label': i,
+        id: i,
+        'aria-label': n,
         children: (0, s.jsx)(a.Text, {
           variant: 'text-sm/normal',
-          children: i
+          children: n
         })
-      }, n);
+      }, i);
     })
   }),
   (0, s.jsx)(g, {

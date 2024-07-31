@@ -1,37 +1,37 @@
-i.d(n, {
+n.d(i, {
   Z: function() {
 return A;
   }
 });
-var s = i(735250),
-  l = i(470079),
-  t = i(442837),
-  o = i(692547),
-  a = i(481060),
-  r = i(239091),
-  d = i(233440),
-  c = i(314897),
-  u = i(158776),
-  I = i(699516),
-  _ = i(998502),
-  f = i(785717),
-  m = i(621853),
-  E = i(204197),
-  x = i(735336),
-  v = i(520978),
-  Z = i(184325),
-  h = i(652853),
-  S = i(225714),
-  p = i(228168),
-  g = i(231338),
-  j = i(689938),
-  T = i(520067);
+var s = n(735250),
+  l = n(470079),
+  t = n(442837),
+  o = n(692547),
+  a = n(481060),
+  r = n(239091),
+  d = n(233440),
+  c = n(314897),
+  u = n(158776),
+  I = n(699516),
+  _ = n(998502),
+  f = n(785717),
+  m = n(621853),
+  E = n(204197),
+  x = n(735336),
+  v = n(520978),
+  Z = n(184325),
+  h = n(652853),
+  S = n(225714),
+  p = n(228168),
+  g = n(231338),
+  j = n(689938),
+  T = n(520067);
 let N = a.AvatarSizes.SIZE_120,
   C = _.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function A(e) {
   let {
-displayProfile: n,
+displayProfile: i,
 user: _,
 guildId: A,
 channelId: y,
@@ -59,7 +59,7 @@ y
 className: O,
 children: [
   (0, s.jsx)(x.Z, {
-    displayProfile: n,
+    displayProfile: i,
     onClose: M,
     user: _,
     profileType: p.y0.MODAL,
@@ -131,9 +131,9 @@ children: [
                   }), (0, r.jW)(e, async () => {
                     let {
                       default: e
-                    } = await i.e('29136').then(i.bind(i, 193646));
-                    return n => (0, s.jsx)(e, {
-                      ...n,
+                    } = await n.e('29136').then(n.bind(n, 193646));
+                    return i => (0, s.jsx)(e, {
+                      ...i,
                       user: _,
                       isCurrentUser: B,
                       guildId: A,
