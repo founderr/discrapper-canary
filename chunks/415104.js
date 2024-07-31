@@ -4,9 +4,9 @@ return _;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(497505),
   o = n(602667),
   c = n(439826),
@@ -17,20 +17,20 @@ function _(e) {
   let {
 quest: t,
 className: n,
-questContent: a,
+questContent: s,
 contentPosition: _,
 rowIndex: h
-  } = e, [E, I] = s.useState(!1), m = s.useCallback(() => {
+  } = e, [E, I] = a.useState(!1), m = a.useCallback(() => {
 I(!0);
-  }, [I]), g = s.useCallback(() => {
+  }, [I]), g = a.useCallback(() => {
 I(!1);
   }, [I]);
   return (0, i.jsx)(o.A, {
 questOrQuests: t,
-questContent: a,
+questContent: s,
 questContentPosition: _,
 questContentRowIndex: h,
-trackGuildAndChannelMetadata: a === l.jn.QUESTS_EMBED,
+trackGuildAndChannelMetadata: s === l.jn.QUESTS_EMBED,
 children: e => (0, i.jsxs)('div', {
   id: 'quest-tile-'.concat(t.id),
   ref: t => {
@@ -46,7 +46,7 @@ children: e => (0, i.jsxs)('div', {
     }),
     (0, i.jsx)(d.Z, {
       quest: t,
-      questContent: a,
+      questContent: s,
       isHovering: E,
       contentPosition: _,
       rowIndex: h

@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(948789),
-  a = n(442837),
+var a = n(948789),
+  s = n(442837),
   r = n(481060),
   l = n(212093),
   o = n(100527),
@@ -16,38 +16,38 @@ var s = n(948789),
   g = n(889010),
   p = n(488905),
   T = n(347137),
-  f = n(731455),
-  S = n(981631),
+  S = n(731455),
+  f = n(981631),
   C = n(689938),
   N = n(468918);
 let A = e => {
 switch (e) {
-  case f.Gj.Activity:
-    return f.fW.Activity;
-  case f.Gj.Music:
-    return f.fW.Music;
-  case f.Gj.Television:
-    return f.fW.Television;
-  case f.Gj.Science:
-    return f.fW.Science;
-  case f.Gj.Education:
-    return f.fW.Education;
+  case S.Gj.Activity:
+    return S.fW.Activity;
+  case S.Gj.Music:
+    return S.fW.Music;
+  case S.Gj.Television:
+    return S.fW.Television;
+  case S.Gj.Science:
+    return S.fW.Science;
+  case S.Gj.Education:
+    return S.fW.Education;
   default:
-    return f.fW.Discover;
+    return S.fW.Discover;
 }
   },
   v = () => {
 let {
   currentCategoryId: e,
   isViewingSearchResults: t
-} = (0, a.cj)([I.ZP], () => ({
+} = (0, s.cj)([I.ZP], () => ({
   currentCategoryId: I.ZP.getCurrentCategoryId(),
   isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0
-})), n = (0, E.Z)(o.Z.QUEST_HOME_PAGE), c = (0, a.e7)([m.Z], () => m.Z.getDiscoveryCategories(), [], m.j), T = null == c ? void 0 : c.map(e => ({
+})), n = (0, E.Z)(o.Z.QUEST_HOME_PAGE), c = (0, s.e7)([m.Z], () => m.Z.getDiscoveryCategories(), [], m.j), T = null == c ? void 0 : c.map(e => ({
   ...e,
   icon: A(e.categoryId)
 })), v = e => {
-  (0, l.uY)(e, !0), u.Z.closeSidebar(), t && (0, l.AQ)(), (0, _.OG)() && e !== f.Gj.Quests && (0, s.uL)(S.Z5c.GUILD_DISCOVERY), !(0, _.OG)() && e === f.Gj.Quests && (0, s.uL)(S.Z5c.QUEST_HOME);
+  (0, l.uY)(e, !0), u.Z.closeSidebar(), t && (0, l.AQ)(), (0, _.OG)() && e !== S.Gj.Quests && (0, a.uL)(f.Z5c.GUILD_DISCOVERY), !(0, _.OG)() && e === S.Gj.Quests && (0, a.uL)(f.Z5c.QUEST_HOME);
 };
 return (0, i.jsxs)(r.Scroller, {
   className: N.sidebarContainer,
@@ -67,8 +67,8 @@ return (0, i.jsxs)(r.Scroller, {
       shouldDisplaySelectedCategory: !t
     }),
     n && (0, i.jsx)(h.Z, {
-      onClick: () => v(f.Gj.Quests),
-      isSelected: e === f.Gj.Quests
+      onClick: () => v(S.Gj.Quests),
+      isSelected: e === S.Gj.Quests
     })
   ]
 });

@@ -4,9 +4,9 @@ return d;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(481060),
   o = n(49898),
   c = n(986348);
@@ -15,14 +15,14 @@ function d(e) {
   let {
 state: t,
 query: n,
-placeholder: a,
+placeholder: s,
 onTextChange: d,
 onCollapsedClick: u,
 onClear: _,
 onSubmit: h
-  } = e, E = s.useRef(null), I = s.useCallback(e => {
+  } = e, E = a.useRef(null), I = a.useCallback(e => {
 'Enter' === e.key && h();
-  }, [h]), m = s.useCallback(() => {
+  }, [h]), m = a.useCallback(() => {
 u(), setTimeout(() => {
   var e;
   return null === (e = E.current) || void 0 === e ? void 0 : e.focus();
@@ -42,7 +42,7 @@ className: r()(c.searchBar, {
 }),
 size: l.SearchBar.Sizes.MEDIUM,
 query: n,
-placeholder: a,
+placeholder: s,
 onChange: d,
 onClear: _,
 onKeyDown: I

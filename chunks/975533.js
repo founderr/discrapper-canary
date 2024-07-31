@@ -1,6 +1,6 @@
 var i = n(570140),
-  s = n(846027),
-  a = n(13245),
+  a = n(846027),
+  s = n(13245),
   r = n(287734),
   l = n(872810),
   o = n(223245),
@@ -15,8 +15,8 @@ var i = n(570140),
   g = n(199902),
   p = n(131951),
   T = n(246946),
-  f = n(808506),
-  S = n(237997),
+  S = n(808506),
+  f = n(237997),
   C = n(626135),
   N = n(554174),
   A = n(981631),
@@ -53,7 +53,7 @@ isPressed: !1
   [A.kg4.PUSH_TO_MUTE]: {
 onTrigger(e) {
   if (!(p.Z.getMode() !== A.pM4.VOICE_ACTIVITY || p.Z.isSelfDeaf()))
-    Z[A.kg4.PUSH_TO_MUTE].isPressed = e, s.Z.setTemporarySelfMute(e);
+    Z[A.kg4.PUSH_TO_MUTE].isPressed = e, a.Z.setTemporarySelfMute(e);
 },
 keyEvents: {
   keyup: !0,
@@ -62,7 +62,7 @@ keyEvents: {
 isPressed: !1
   },
   [A.kg4.TOGGLE_MUTE]: {
-onTrigger: () => s.Z.toggleSelfMute({
+onTrigger: () => a.Z.toggleSelfMute({
   usedKeybind: !0
 }),
 keyEvents: {
@@ -72,7 +72,7 @@ keyEvents: {
   },
   [A.kg4.TOGGLE_DEAFEN]: {
 onTrigger() {
-  s.Z.toggleSelfDeaf();
+  a.Z.toggleSelfDeaf();
 },
 keyEvents: {
   keyup: !0,
@@ -82,7 +82,7 @@ keyEvents: {
   [A.kg4.TOGGLE_VOICE_MODE]: {
 onTrigger() {
   let e = p.Z.getMode() === A.pM4.PUSH_TO_TALK ? A.pM4.VOICE_ACTIVITY : A.pM4.PUSH_TO_TALK;
-  s.Z.setMode(e);
+  a.Z.setMode(e);
 },
 keyEvents: {
   keyup: !0,
@@ -91,8 +91,8 @@ keyEvents: {
   },
   [A.kg4.TOGGLE_OVERLAY]: {
 onTrigger() {
-  let e = f.Z.enabled;
-  a.Z.setEnabled(!e, f.Z.legacyEnabled);
+  let e = S.Z.enabled;
+  s.Z.setEnabled(!e, S.Z.legacyEnabled);
 },
 keyEvents: {
   keyup: !0,
@@ -103,7 +103,7 @@ keyEvents: {
 onTrigger(e) {
   let t = (0, N.Z)();
   if (null != t)
-    e ? a.Z.setUILocked(!S.Z.isUILocked(t), t) : a.Z.setInputLocked(!f.Z.isInputLocked(t), t);
+    e ? s.Z.setUILocked(!f.Z.isUILocked(t), t) : s.Z.setInputLocked(!S.Z.isInputLocked(t), t);
 },
 keyEvents: {
   keyup: !0,
@@ -112,9 +112,9 @@ keyEvents: {
   },
   [A.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
 onTrigger() {
-  let e = f.Z.getFocusedPID(),
+  let e = S.Z.getFocusedPID(),
     t = null != e;
-  null != e && t && S.Z.isPinned(A.Odu.TEXT) && f.Z.isReady(e) && f.Z.isInputLocked(e) && a.Z.activateRegion(A.O0n.TEXT_WIDGET);
+  null != e && t && f.Z.isPinned(A.Odu.TEXT) && S.Z.isReady(e) && S.Z.isInputLocked(e) && s.Z.activateRegion(A.O0n.TEXT_WIDGET);
 },
 keyEvents: {
   keyup: !0,
@@ -165,7 +165,7 @@ onTrigger: () => {
   if (!(0, I.D)())
     return;
   let e = (0, N.Z)();
-  null != e && (S.Z.isUILocked(e) ? (0, m.IN)(!0, e) : (0, m.oZ)(e));
+  null != e && (f.Z.isUILocked(e) ? (0, m.IN)(!0, e) : (0, m.oZ)(e));
 },
 keyEvents: {
   keyup: !0,

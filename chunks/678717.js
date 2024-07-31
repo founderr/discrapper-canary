@@ -30,17 +30,17 @@ var x = t(392750),
   N = t(912072),
   S = t(246992),
   T = t(442954),
-  E = t(702904),
-  Z = t(178821),
+  Z = t(702904),
+  E = t(178821),
   I = t(248526),
   R = t(958328),
   O = t(514866),
   B = t(678639),
-  P = t(351930),
-  A = t(771751),
+  A = t(351930),
+  P = t(771751),
   M = t(596768),
-  L = t(621060),
-  D = t(689938),
+  D = t(621060),
+  L = t(689938),
   G = t(683597),
   U = t(979756);
 
@@ -101,7 +101,7 @@ function F() {
   }), e.push({
     id: 'performance',
     name: 'Performance',
-    render: () => (0, a.jsx)(Z.Z, {})
+    render: () => (0, a.jsx)(E.Z, {})
   })), e.push({
     id: 'colors',
     name: 'Colors',
@@ -141,15 +141,15 @@ function F() {
   }), window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') && (e.push({
     id: 'trials',
     name: 'Trials',
-    render: () => (0, a.jsx)(A.Z, {})
+    render: () => (0, a.jsx)(P.Z, {})
   }), e.push({
     id: 'payments',
     name: 'Payments',
-    render: () => (0, a.jsx)(E.Z, {})
+    render: () => (0, a.jsx)(Z.Z, {})
   }), e.push({
     id: 'subscriptions',
     name: 'Subscriptions',
-    render: () => (0, a.jsx)(P.Z, {})
+    render: () => (0, a.jsx)(A.Z, {})
   }), e.push({
     id: 'billing',
     name: 'Billing',
@@ -160,7 +160,7 @@ function F() {
   TabBar: t,
   renderSelectedTab: i,
   selectedTabId: o
-} = (0, L.Z)({
+} = (0, D.Z)({
   tabs: r,
   initialSelectedTabId: null !== (e = f.Z.lastOpenTabId) && void 0 !== e ? e : void 0,
   onChangeTab: e => {
@@ -181,7 +181,7 @@ children: [
     className: U.headerBar,
     toolbar: (0, a.jsx)(m.ZP.Icon, {
       icon: s.CloseSmallIcon,
-      tooltip: D.Z.Messages.CLOSE,
+      tooltip: L.Z.Messages.CLOSE,
       onClick: b.SO
     }),
     children: [

@@ -1,4 +1,4 @@
-var i, s, a = n(735250);
+var i, a, s = n(735250);
 n(470079);
 var r = n(756647),
   l = n(481060),
@@ -14,8 +14,8 @@ var r = n(756647),
   g = n(594174),
   p = n(626135),
   T = n(585483),
-  f = n(591759),
-  S = n(998502),
+  S = n(591759),
+  f = n(998502),
   C = n(996106),
   N = n(186901),
   A = n(981631);
@@ -30,7 +30,7 @@ p.default.track(A.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
   link_type: t
 });
 }
-(i = s || (s = {})).SETTINGS = 'settings', i.CHANGELOG = 'changelog', i.LIBRARY = 'library', i.STORE = 'store', i.INVITE = 'invite', i.CHANNEL = 'channel', i.GUILD_SETTINGS = 'guild_settings', i.QUEST_HOME = 'quest_home', t.Z = {
+(i = a || (a = {})).SETTINGS = 'settings', i.CHANGELOG = 'changelog', i.LIBRARY = 'library', i.STORE = 'store', i.INVITE = 'invite', i.CHANNEL = 'channel', i.GUILD_SETTINGS = 'guild_settings', i.QUEST_HOME = 'quest_home', t.Z = {
   [A.Etm.INVITE_BROWSER]: {
 scope: N.cE,
 async handler(e) {
@@ -73,14 +73,14 @@ async handler(e) {
     throw new C.Z({
       errorCode: A.lTL.INVALID_GUILD_TEMPLATE
     }, 'Invalid guild template id: '.concat(t));
-  return S.ZP.focus(), (0, l.openModalLazy)(async () => {
+  return f.ZP.focus(), (0, l.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([
       n.e('10778'),
       n.e('38266')
     ]).then(n.bind(n, 766775));
-    return t => (0, a.jsx)(e, {
+    return t => (0, s.jsx)(e, {
       ...t,
       guildTemplate: i
     });
@@ -102,9 +102,9 @@ handler(e) {
     o.Z.wait(() => {
       _.Z.resolveGiftCode(t, !0, !0).then(i => {
         let {
-          giftCode: s
+          giftCode: a
         } = i;
-        S.ZP.focus(), p.default.track(A.rMx.OPEN_MODAL, {
+        f.ZP.focus(), p.default.track(A.rMx.OPEN_MODAL, {
           type: 'gift_accept',
           location: A.SaU
         }), (0, l.openModalLazy)(async () => {
@@ -114,12 +114,12 @@ handler(e) {
             n.e('92446'),
             n.e('51966')
           ]).then(n.bind(n, 409858));
-          return n => (0, a.jsx)(e, {
+          return n => (0, s.jsx)(e, {
             code: t,
             ...n
           });
         }), e({
-          giftCode: s
+          giftCode: a
         });
       }).catch(() => i(new C.Z({
         errorCode: A.lTL.INVALID_GIFT_CODE
@@ -137,12 +137,12 @@ handler(e) {
       params: n
     }
   } = e;
-  switch (S.ZP.focus(), t) {
+  switch (f.ZP.focus(), t) {
     case N.jE.USER_SETTINGS:
       null != n && ((0, I.dL)(A.Z5c.SETTINGS(n.section, n.subsection)), v(n.fingerprint, 'settings'));
       break;
     case N.jE.CHANGELOG:
-      null != n && ((0, I.dL)(f.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)), v(n.fingerprint, 'changelog'));
+      null != n && ((0, I.dL)(S.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)), v(n.fingerprint, 'changelog'));
       break;
     case N.jE.LIBRARY:
       (0, I.dL)(A.Z5c.APPLICATION_LIBRARY), null != n && v(n.fingerprint, 'library');
@@ -182,7 +182,7 @@ handler(e) {
       fingerprint: n
     }
   } = e;
-  S.ZP.focus(null, !0), (0, d.lx)(t, n);
+  f.ZP.focus(null, !0), (0, d.lx)(t, n);
 }
   },
   [A.Etm.CONNECTIONS_CALLBACK]: {
@@ -193,14 +193,14 @@ handler: async e => {
       providerType: t,
       code: n,
       openid_params: i,
-      state: s
+      state: a
     }
   } = e;
   try {
     return await u.Z.callback(t, {
       code: n,
       openid_params: i,
-      state: s
+      state: a
     });
   } catch (e) {
     throw T.S.dispatch(A.CkL.CONNECTIONS_CALLBACK_ERROR), e;
@@ -233,11 +233,11 @@ handler(e) {
       state: t,
       path: n,
       query: i,
-      payment_source_type: s
+      payment_source_type: a
     }
   } = e;
   return (0, c.rt)({
-    paymentSourceType: s,
+    paymentSourceType: a,
     state: t,
     path: n,
     query: i

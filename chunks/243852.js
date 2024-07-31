@@ -1,5 +1,5 @@
 n(47120);
-var i, s, a, r, l, o = n(442837),
+var i, a, s, r, l, o = n(442837),
   c = n(433517),
   d = n(846519),
   u = n(570140),
@@ -11,8 +11,8 @@ var i, s, a, r, l, o = n(442837),
   g = n(780570),
   p = n(314897),
   T = n(77498),
-  f = n(283595),
-  S = n(19780),
+  S = n(283595),
+  f = n(19780),
   C = n(944486),
   N = n(981631);
 let A = 'ActivityTrackingStore',
@@ -34,19 +34,19 @@ function b(e) {
 n = Date.now(),
 i = null != e.updatedAt ? n - e.updatedAt : 0;
   i > v + Z && (i = 0);
-  let s = (0, g.OT)(e.applicationId, f.Z),
-a = C.Z.getVoiceChannelId(),
+  let a = (0, g.OT)(e.applicationId, S.Z),
+s = C.Z.getVoiceChannelId(),
 r = p.default.getSessionId(),
-l = S.Z.getMediaSessionId();
+l = f.Z.getMediaSessionId();
   _.Z.updateActivity({
 applicationId: e.applicationId,
 distributor: e.isDiscordApplication ? N.GQo.DISCORD : e.distributor,
-shareActivity: s,
+shareActivity: a,
 token: e.token,
 duration: Math.floor(i / 1000),
 closed: t,
 exePath: e.exePath,
-voiceChannelId: a,
+voiceChannelId: s,
 sessionId: r,
 mediaSessionId: l
   }), e.updatedAt = n;
@@ -61,7 +61,7 @@ n = new Set();
   for (let {
   name: e,
   distributor: i,
-  exePath: s
+  exePath: a
 }
 of t) {
 let t = T.Z.getGameByName(e);
@@ -70,7 +70,7 @@ if (null != t)
     applicationId: t.id,
     updatedAt: Date.now(),
     distributor: i,
-    exePath: (0, h.N6)(null != s ? s : '')
+    exePath: (0, h.N6)(null != a ? a : '')
   });
   }
   for (let t of Object.keys(L))
@@ -82,20 +82,20 @@ function M() {
 x(L[e]);
   R = !1;
 }
-class D extends(s = o.ZP.Store) {
+class D extends(a = o.ZP.Store) {
   initialize() {
-this.waitFor(E.ZP, I.Z, f.Z), this.syncWith([I.Z], P);
+this.waitFor(E.ZP, I.Z, S.Z), this.syncWith([I.Z], P);
   }
   getActivities() {
 return L;
   }
 }
-l = 'ActivityTrackingStore', (r = 'displayName') in(a = D) ? Object.defineProperty(a, r, {
+l = 'ActivityTrackingStore', (r = 'displayName') in(s = D) ? Object.defineProperty(s, r, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[r] = l, new D(u.Z, {
+}) : s[r] = l, new D(u.Z, {
   RUNNING_GAMES_CHANGE: () => P(),
   CONNECTION_OPEN: function() {
 if (R)

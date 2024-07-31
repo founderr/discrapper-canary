@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(813615),
+var a = n(481060),
+  s = n(813615),
   r = n(812206),
   l = n(69580),
   o = n(358085),
@@ -23,8 +23,8 @@ codeChallengeMethod: m,
 state: g,
 guildId: p,
 channelId: T,
-prompt: f,
-disableGuildSelect: S,
+prompt: S,
+disableGuildSelect: f,
 disclosures: C,
 integrationType: N
   } = e, A = 'OAuth2Authorize_'.concat(n, '_').concat(p, '_').concat(T), v = null != N ? null == o ? void 0 : o.get(N) : void 0, Z = null !== (t = null == v ? void 0 : v.application) && void 0 !== t ? t : r.Z.getApplication(n);
@@ -37,7 +37,7 @@ let r = n => {
     errorCode: _.lTL.OAUTH2_ERROR
   }, 'User cancelled authorization'));
 };
-(0, s.openModal)(e => (0, i.jsx)(l.OAuth2AuthorizeModal, {
+(0, a.openModal)(e => (0, i.jsx)(l.OAuth2AuthorizeModal, {
   ...e,
   authorizations: o,
   clientId: n,
@@ -52,21 +52,21 @@ let r = n => {
   permissions: u,
   guildId: p,
   channelId: T,
-  prompt: f,
-  disableGuildSelect: 'boolean' == typeof S ? S : 'true' === S,
+  prompt: S,
+  disableGuildSelect: 'boolean' == typeof f ? f : 'true' === f,
   integrationType: N
 }), {
   modalKey: A,
   onCloseRequest: () => {
-    (0, s.closeModal)(A), t(new d.Z({
+    (0, a.closeModal)(A), t(new d.Z({
       errorCode: _.lTL.OAUTH2_ERROR
     }, 'User cancelled authorization'));
   }
-}, null != Z && (0, a.Z)(Z, T) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT);
+}, null != Z && (0, s.Z)(Z, T) ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT);
   });
 }, function(e, t) {
   if (o.isPlatformEmbedded) {
-let n = (0, a.Z)(e, t) ? _.KJ3.CHANNEL_CALL_POPOUT : null;
+let n = (0, s.Z)(e, t) ? _.KJ3.CHANNEL_CALL_POPOUT : null;
 (0, o.isWindows)() ? c.ZP.minimize(n): c.ZP.restore(n), c.ZP.focus(n);
   }
 });

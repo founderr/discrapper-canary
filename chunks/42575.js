@@ -4,8 +4,8 @@ return g;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(481060),
+  a = n(470079),
+  s = n(481060),
   r = n(194359),
   l = n(906732),
   o = n(388380),
@@ -24,9 +24,9 @@ user: t,
 nickname: n,
 status: g,
 isFocused: p
-  } = e, T = s.useContext(d.AnalyticsContext), {
-analyticsLocations: f
-  } = (0, l.ZP)(), S = e => {
+  } = e, T = a.useContext(d.AnalyticsContext), {
+analyticsLocations: S
+  } = (0, l.ZP)(), f = e => {
 null == e || e.stopPropagation(), r.Z.addRelationship({
   userId: t.id,
   context: {
@@ -44,21 +44,21 @@ isFocused: p,
 user: t,
 onClick: () => (0, c.openUserProfileModal)({
   userId: t.id,
-  sourceAnalyticsLocations: f,
+  sourceAnalyticsLocations: S,
   analyticsLocation: T.location
 }),
 children: e => {
-  let s = (0, i.jsxs)(i.Fragment, {
+  let a = (0, i.jsxs)(i.Fragment, {
     children: [
       (0, i.jsx)(u.Z, {
-        icon: a.CheckmarkLargeIcon,
+        icon: s.CheckmarkLargeIcon,
         actionType: u.Z.ActionTypes.ACCEPT,
         tooltip: I.Z.Messages.FRIEND_REQUEST_ACCEPT,
-        onClick: S,
+        onClick: f,
         shouldHighlight: e
       }),
       (0, i.jsx)(u.Z, {
-        icon: a.CloseSmallIcon,
+        icon: s.CloseSmallIcon,
         actionType: u.Z.ActionTypes.DENY,
         tooltip: I.Z.Messages.FRIEND_REQUEST_IGNORE,
         onClick: C,
@@ -78,7 +78,7 @@ children: e => {
       }),
       (0, i.jsx)('div', {
         className: m.actions,
-        children: s
+        children: a
       })
     ]
   });

@@ -1,6 +1,6 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(948789),
+  a = n(470079),
+  s = n(948789),
   r = n(481060),
   l = n(442837),
   o = n(212093),
@@ -15,8 +15,8 @@ var i = n(735250),
   g = n(360048),
   p = n(296386),
   T = n(150192),
-  f = n(889010),
-  S = n(488905),
+  S = n(889010),
+  f = n(488905),
   C = n(731455),
   N = n(981631),
   A = n(689938),
@@ -48,13 +48,13 @@ isViewingSearchResults: m.ZP.getMostRecentQuery().length > 0
 ...e,
 icon: Z(e.categoryId)
   })), R = e => {
-(0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, h.OG)() && e !== C.Gj.Quests && (0, a.uL)(N.Z5c.GUILD_DISCOVERY), !(0, h.OG)() && e === C.Gj.Quests && (0, a.uL)(N.Z5c.QUEST_HOME);
+(0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, h.OG)() && e !== C.Gj.Quests && (0, s.uL)(N.Z5c.GUILD_DISCOVERY), !(0, h.OG)() && e === C.Gj.Quests && (0, s.uL)(N.Z5c.QUEST_HOME);
   };
-  return s.useEffect(() => {
+  return a.useEffect(() => {
 (0, p.le)(!1, !0);
   }, [e]), (0, i.jsxs)(r.Scroller, {
 children: [
-  (0, i.jsx)(S.V, {
+  (0, i.jsx)(f.V, {
     text: A.Z.Messages.DISCOVER
   }),
   (0, i.jsx)(g.Z, {
@@ -74,7 +74,7 @@ children: [
     selectedClassName: v.selectedCategoryItem,
     innerClassName: v.itemInner
   }, 'clan-discovery-home'),
-  (0, i.jsx)(f.Z, {
+  (0, i.jsx)(S.Z, {
     categories: O,
     handleCategorySelect: R,
     currentCategoryId: e,

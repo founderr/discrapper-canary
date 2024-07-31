@@ -4,8 +4,8 @@ return p;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(692547),
+  a = n(470079),
+  s = n(692547),
   r = n(481060),
   l = n(194359),
   o = n(906732),
@@ -25,8 +25,8 @@ user: t,
 type: n,
 status: p,
 isFocused: T
-  } = e, f = s.useContext(u.AnalyticsContext), {
-analyticsLocations: S
+  } = e, S = a.useContext(u.AnalyticsContext), {
+analyticsLocations: f
   } = (0, o.ZP)(), C = e => {
 e.stopPropagation(), l.Z.cancelFriendRequest(t.id, {
   location: 'Friends'
@@ -44,17 +44,17 @@ isFocused: T,
 user: t,
 onClick: () => (0, c.openUserProfileModal)({
   userId: t.id,
-  sourceAnalyticsLocations: S,
-  analyticsLocation: f.location
+  sourceAnalyticsLocations: f,
+  analyticsLocation: S.location
 }),
 children: e => {
-  var s;
+  var a;
   let l = n === I.OGo.PENDING_INCOMING ? (0, i.jsxs)(i.Fragment, {
     children: [
-      (null === (s = d.default.getCurrentUser()) || void 0 === s ? void 0 : s.isStaff()) && (null == t ? void 0 : t.isStaff()) && (0, i.jsx)('div', {
+      (null === (a = d.default.getCurrentUser()) || void 0 === a ? void 0 : a.isStaff()) && (null == t ? void 0 : t.isStaff()) && (0, i.jsx)('div', {
         className: g.staffIndicator,
         children: (0, i.jsx)(r.TextBadge, {
-          color: a.Z.unsafe_rawColors.BRAND_500.css,
+          color: s.Z.unsafe_rawColors.BRAND_500.css,
           text: m.Z.Messages.STAFF_BADGE_TOOLTIP
         })
       }),

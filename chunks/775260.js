@@ -4,8 +4,8 @@ return d;
   }
 }), n(733860);
 var i = n(470079),
-  s = n(143927),
-  a = n(963202),
+  a = n(143927),
+  s = n(963202),
   r = n(169559),
   l = n(836768),
   o = n(766219),
@@ -15,12 +15,12 @@ function d() {
   let e = (0, r.Z)('global_discovery'),
 {
   enableClanCreation: t
-} = (0, a.C3)({
+} = (0, s.C3)({
   location: 'global_discovery',
   includeConverted: !0,
   autoTrackExposure: !0
 }),
-n = (0, l.d)(e => e.selectedServerTab, s.Z),
+n = (0, l.d)(e => e.selectedServerTab, a.Z),
 d = i.useMemo(() => {
   let n = [
     c.vf.GAMING,

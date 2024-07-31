@@ -4,12 +4,12 @@ return _;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(266067),
+  a = n(470079),
+  s = n(266067),
   r = n(608787),
   l = n(765717),
   o = n(981631);
-let c = s.lazy(() => (0, r.wE)({
+let c = a.lazy(() => (0, r.wE)({
 createPromise: () => Promise.all([
   n.e('29549'),
   n.e('6380'),
@@ -25,7 +25,7 @@ createPromise: () => Promise.all([
 ]).then(n.bind(n, 753450)),
 webpackId: 753450
   })),
-  d = s.lazy(() => (0, r.wE)({
+  d = a.lazy(() => (0, r.wE)({
 createPromise: () => Promise.all([
   n.e('6380'),
   n.e('65840'),
@@ -35,7 +35,7 @@ createPromise: () => Promise.all([
 ]).then(n.bind(n, 74438)),
 webpackId: 74438
   })),
-  u = s.lazy(() => (0, r.wE)({
+  u = a.lazy(() => (0, r.wE)({
 createPromise: () => Promise.all([
   n.e('6380'),
   n.e('65840'),
@@ -47,7 +47,7 @@ webpackId: 675869
   }));
 
 function _() {
-  return (0, i.jsxs)(a.rs, {
+  return (0, i.jsxs)(s.rs, {
 children: [
   (0, i.jsx)(l.Z, {
     path: o.Z5c.APPLICATION_DIRECTORY,

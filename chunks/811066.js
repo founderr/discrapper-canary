@@ -1,5 +1,5 @@
 n(411104);
-var i, s, a, r, l, o, c, d, u, _ = n(735250),
+var i, a, s, r, l, o, c, d, u, _ = n(735250),
   h = n(470079);
 
 function E(e, t, n) {
@@ -52,8 +52,8 @@ function p(e) {
 function T(e) {
   return I('QuantitativeValue', e);
 }
-(c = s || (s = {})).DAMAGED = 'http://schema.org/DamagedCondition', c.NEW = 'http://schema.org/NewCondition', c.REFURBISHED = 'http://schema.org/RefurbishedCondition', c.USED = 'http://schema.org/UsedCondition', (d = a || (a = {})).DISCONTINUED = 'http://schema.org/Discontinued', d.IN_STOCK = 'http://schema.org/InStock', d.IN_STORE_ONLY = 'http://schema.org/InStoreOnly', d.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability', d.ONLINE_ONLY = 'http://schema.org/OnlineOnly', d.OUT_OF_STOCK = 'http://schema.org/OutOfStock', d.PREORDER = 'http://schema.org/PreOrder', d.PRESALE = 'http://schema.org/PreSale', d.SOLD_OUT = 'http://schema.org/SoldOut', p.ItemConditions = s, p.ItemAvailability = a, (u = r || (r = {})).YEARLY = 'ANN', u.MONTHLY = 'MON', T.UnitCodes = r;
-class f extends(l = h.Component) {
+(c = a || (a = {})).DAMAGED = 'http://schema.org/DamagedCondition', c.NEW = 'http://schema.org/NewCondition', c.REFURBISHED = 'http://schema.org/RefurbishedCondition', c.USED = 'http://schema.org/UsedCondition', (d = s || (s = {})).DISCONTINUED = 'http://schema.org/Discontinued', d.IN_STOCK = 'http://schema.org/InStock', d.IN_STORE_ONLY = 'http://schema.org/InStoreOnly', d.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability', d.ONLINE_ONLY = 'http://schema.org/OnlineOnly', d.OUT_OF_STOCK = 'http://schema.org/OutOfStock', d.PREORDER = 'http://schema.org/PreOrder', d.PRESALE = 'http://schema.org/PreSale', d.SOLD_OUT = 'http://schema.org/SoldOut', p.ItemConditions = a, p.ItemAvailability = s, (u = r || (r = {})).YEARLY = 'ANN', u.MONTHLY = 'MON', T.UnitCodes = r;
+class S extends(l = h.Component) {
   render() {
 let {
   debug: e,
@@ -68,18 +68,18 @@ return (0, _.jsx)('script', {
 });
   }
 }
-E(f, 'Thing', m), E(f, 'Brand', m), E(f, 'Person', function(e) {
+E(S, 'Thing', m), E(S, 'Brand', m), E(S, 'Person', function(e) {
   return I('Person', e);
-}), E(f, 'Organization', function(e) {
+}), E(S, 'Organization', function(e) {
   return I('Organization', e);
-}), E(f, 'ItemPage', function(e) {
+}), E(S, 'ItemPage', function(e) {
   return I('ItemPage', e);
-}), E(f, 'Product', g), E(f, 'Offer', p), E(f, 'Rating', function(e) {
+}), E(S, 'Product', g), E(S, 'Offer', p), E(S, 'Rating', function(e) {
   return I('Rating', e);
-}), E(f, 'AggregateRating', function(e) {
+}), E(S, 'AggregateRating', function(e) {
   return I('AggregateRating', e);
-}), E(f, 'AggregateOffer', function(e) {
+}), E(S, 'AggregateOffer', function(e) {
   return I('AggregateOffer', e);
-}), E(f, 'QuantitativeValue', T), E(f, 'UnitPriceSpecification', function(e) {
+}), E(S, 'QuantitativeValue', T), E(S, 'UnitPriceSpecification', function(e) {
   return I('UnitPriceSpecification', e);
-}), t.Z = f;
+}), t.Z = S;

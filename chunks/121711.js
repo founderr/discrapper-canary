@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(948789),
+  a = n(470079),
+  s = n(948789),
   r = n(442837),
   l = n(780384),
   o = n(481060),
@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(63063),
   p = n(113434),
   T = n(709158),
-  f = n(710914),
-  S = n(906739),
+  S = n(710914),
+  f = n(906739),
   C = n(452081),
   N = n(981631),
   A = n(689938),
@@ -33,7 +33,7 @@ scrollPosition: x
   } = (0, h.c)(), b = (0, l.wj)((0, c.ZP)()), P = (0, r.e7)([_.Z], () => _.Z.hasLoadedExperiments), {
 quests: M,
 isFetchingCurrentQuests: D
-  } = (0, p.bA)(L), y = (0, S.Z)(), j = null;
+  } = (0, p.bA)(L), y = (0, f.Z)(), j = null;
   if (window.location.hash.length > 0) {
 let e = window.location.hash.slice(1);
 for (let t of M)
@@ -42,13 +42,13 @@ for (let t of M)
     break;
   }
   }
-  s.useEffect(() => {
-P && !t && (0, a.uL)(N.Z5c.FRIENDS);
+  a.useEffect(() => {
+P && !t && (0, s.uL)(N.Z5c.FRIENDS);
   }, [
 P,
 t
-  ]), s.useEffect(() => {}, []);
-  let U = s.useCallback(() => {
+  ]), a.useEffect(() => {}, []);
+  let U = a.useCallback(() => {
 window.open(g.Z.getArticleURL(N.BhN.QUESTS_LEARN_MORE));
   }, []);
   return ((0, u.Tt)({
@@ -123,7 +123,7 @@ children: [
       ]
     }) : (0, i.jsx)('div', {
       className: v.gridContainer,
-      children: (0, i.jsx)(f.Z, {
+      children: (0, i.jsx)(S.Z, {
         quests: M,
         selectedQuestId: j
       })

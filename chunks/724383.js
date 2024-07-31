@@ -5,8 +5,8 @@ return _;
 });
 var i = n(735250);
 n(470079);
-var s = n(252618),
-  a = n(121711),
+var a = n(252618),
+  s = n(121711),
   r = n(823379),
   l = n(976076),
   o = n(545114),
@@ -21,7 +21,7 @@ t = function(e) {
     case c.F$.SERVERS:
       return (0, i.jsx)(o.Z, {});
     case c.F$.QUESTS:
-      return (0, i.jsx)(a.Z, {});
+      return (0, i.jsx)(s.Z, {});
     default:
       (0, r.vE)(e);
   }
@@ -29,7 +29,7 @@ t = function(e) {
   return (0, i.jsxs)('section', {
 className: u.container,
 children: [
-  (0, i.jsx)(s.yY, {
+  (0, i.jsx)(a.yY, {
     location: function(e) {
       switch (e) {
         case c.F$.SERVERS:

@@ -51,8 +51,8 @@ return V;
 return F;
   }
 }), n(47120), n(653041), n(411104), n(757143), n(392711);
-var i, s = n(729594),
-  a = n(243814),
+var i, a = n(729594),
+  s = n(243814),
   r = n(544891),
   l = n(63023),
   o = n(433517),
@@ -67,8 +67,8 @@ var i, s = n(729594),
   g = n(430824),
   p = n(131951),
   T = n(375954),
-  f = n(158776),
-  S = n(594174),
+  S = n(158776),
+  f = n(594174),
   C = n(979651),
   N = n(70956),
   A = n(5192),
@@ -77,7 +77,7 @@ var i, s = n(729594),
   L = n(863141),
   O = n(186901),
   R = n(981631);
-let x = null !== (i = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost',
+let x = null !== (i = a.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost',
   b = function() {
 let e = x.split(':')[0];
 if (!e.includes('.'))
@@ -116,8 +116,8 @@ T.Z.whenReady(e.id, () => t()), c.Z.fetchMessages({
 });
   })), Promise.all(n).then(() => {
 var n;
-let s = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(w) : [],
-  a = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map(t => k(i, e.id, t));
+let a = (!e.isNSFW() || (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(w) : [],
+  s = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map(t => k(i, e.id, t));
 return {
   id: e.id,
   name: e.name,
@@ -127,8 +127,8 @@ return {
   user_limit: e.userLimit,
   guild_id: i,
   position: e.position,
-  messages: s,
-  voice_states: a
+  messages: a,
+  voice_states: s
 };
   });
 }
@@ -164,12 +164,12 @@ type: e.type
 function k(e, t, n) {
   let {
 mute: i,
-deaf: s,
-selfMute: a,
+deaf: a,
+selfMute: s,
 selfDeaf: r,
 suppress: l,
 userId: o
-  } = n, c = S.default.getUser(o);
+  } = n, c = f.default.getUser(o);
   if (null == c)
 throw Error('Invalid user id: '.concat(o));
   return {
@@ -179,8 +179,8 @@ volume: p.Z.getLocalVolume(c.id),
 pan: p.Z.getLocalPan(c.id),
 voice_state: {
   mute: i,
-  deaf: s,
-  self_mute: a,
+  deaf: a,
+  self_mute: s,
   self_deaf: r,
   suppress: l
 },
@@ -189,13 +189,13 @@ user: (0, L.Z)(c)
 }
 
 function B(e, t, n) {
-  let i = S.default.getUser(t);
+  let i = f.default.getUser(t);
   return {
 type: e,
 user: null != i ? (0, L.Z)(i) : null,
 presence: {
-  status: f.Z.getStatus(t),
-  activity: null != n ? f.Z.getApplicationActivity(t, n) : f.Z.getPrimaryActivity(t)
+  status: S.Z.getStatus(t),
+  activity: null != n ? S.Z.getApplicationActivity(t, n) : S.Z.getPrimaryActivity(t)
 }
   };
 }
@@ -208,7 +208,7 @@ return !1;
   if (e === n)
 return !0;
   try {
-t = s.parse(e).hostname;
+t = a.parse(e).hostname;
   } catch (e) {
 return !1;
   }
@@ -217,7 +217,7 @@ return !1;
 
 function V(e, t, n) {
   let i = g.Z.getGuild(e.getGuildId());
-  return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(a.x.MESSAGES_READ) > -1;
+  return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(s.x.MESSAGES_READ) > -1;
 }
 
 function F(e) {
@@ -236,10 +236,10 @@ function Y(e) {
 {
   instance: n,
   secrets: i,
-  party: s
+  party: a
 } = e,
-a = 0;
-  return (n && (a |= R.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (a |= R.xjy.JOIN), t) ? (a |= R.xjy.EMBEDDED, a |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === R.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (h.cP.getSetting() && (a |= R.xjy.PARTY_PRIVACY_FRIENDS), h.Ou.getSetting() && (a |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), a);
+s = 0;
+  return (n && (s |= R.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (s |= R.xjy.JOIN), t) ? (s |= R.xjy.EMBEDDED, s |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == a ? void 0 : a.privacy) === R.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (h.cP.getSetting() && (s |= R.xjy.PARTY_PRIVACY_FRIENDS), h.Ou.getSetting() && (s |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), s);
 }
 
 function W(e, t, n) {
@@ -256,8 +256,8 @@ retries: 3
   }).then(i => {
 let {
   body: {
-    rpc_origins: s,
-    id: a,
+    rpc_origins: a,
+    id: s,
     name: r,
     icon: l,
     cover_image: o,
@@ -271,13 +271,13 @@ if ('string' == typeof n) {
       throw new Z.Z({
         closeCode: R.$VG.INVALID_ORIGIN
       }, 'Invalid Origin');
-  } else if (!U(n, s))
+  } else if (!U(n, a))
     throw new Z.Z({
       closeCode: R.$VG.INVALID_ORIGIN
     }, 'Invalid Origin');
 }
 e.application = {
-  id: a,
+  id: s,
   name: r,
   icon: l,
   coverImage: o,

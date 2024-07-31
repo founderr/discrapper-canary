@@ -1,11 +1,11 @@
 n.d(t, {
   Z: function() {
-return f;
+return S;
   }
 }), n(47120);
 var i = n(470079),
-  s = n(166516),
-  a = n.n(s),
+  a = n(166516),
+  s = n.n(a),
   r = n(525654),
   l = n.n(r),
   o = n(442837),
@@ -27,7 +27,7 @@ let p = new Set([
 if (h.isPlatformEmbedded)
   T = e => E.ZP.setBadge(e);
 else if (p.has(l().layout)) {
-  let e = new(a())({
+  let e = new(s())({
 animation: 'none'
   });
   T = t => {
@@ -37,7 +37,7 @@ try {
   };
 }
 
-function f() {
+function S() {
   let e = (0, o.e7)([_.Z], () => _.Z.hasIncomingCalls()),
 t = (0, o.e7)([
   c.default,
@@ -48,8 +48,8 @@ t = (0, o.e7)([
     t = u.Z.getPendingCount(),
     n = c.default.hasAnyUnread(),
     i = d.Z.getDisableUnreadBadge(),
-    s = e + t;
-  return 0 === s && n && !i && (s = -1), s;
+    a = e + t;
+  return 0 === a && n && !i && (a = -1), a;
 });
   i.useEffect(() => {
 if (!e)

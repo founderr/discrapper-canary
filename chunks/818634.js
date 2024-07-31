@@ -7,13 +7,13 @@ return l;
   }
 });
 var i = n(652874);
-let s = Object.freeze({
+let a = Object.freeze({
 isPopoutOpen: !1
   }),
-  a = (0, i.Z)(e => s),
+  s = (0, i.Z)(e => a),
   r = e => {
-a.setState(() => ({
+s.setState(() => ({
   isPopoutOpen: e
 }));
   },
-  l = a;
+  l = s;

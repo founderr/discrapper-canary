@@ -4,9 +4,9 @@ return M;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(392711),
-  r = n.n(a),
+  a = n(470079),
+  s = n(392711),
+  r = n.n(s),
   l = n(954955),
   o = n.n(l),
   c = n(442837),
@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(801077),
   p = n(626135),
   T = n(70956),
-  f = n(225559),
-  S = n(910436),
+  S = n(225559),
+  f = n(910436),
   C = n(203028),
   N = n(358924),
   A = n(292140),
@@ -35,21 +35,21 @@ let x = 15 * T.Z.Millis.MINUTE,
 let {
   party: t,
   onUserContextMenu: n,
-  onChannelContextMenu: a,
+  onChannelContextMenu: s,
   quest: r
 } = e, l = (0, i.jsx)(C.Z, {
   party: t,
   onUserContextMenu: n
-}), c = (0, i.jsx)(S.Z, {
+}), c = (0, i.jsx)(f.Z, {
   party: t,
-  onChannelContextMenu: a,
+  onChannelContextMenu: s,
   quest: r
 }), {
   partiedMembers: u,
   applicationStreams: _,
   currentActivities: h,
   voiceChannels: E
-} = t, I = u.length, m = _.length, g = h.length, T = E.length > 0, f = s.useCallback(() => {
+} = t, I = u.length, m = _.length, g = h.length, T = E.length > 0, S = a.useCallback(() => {
   let e = h.filter(e => {
     var t, n;
     return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.wW.GAME;
@@ -67,7 +67,7 @@ let {
   g,
   T,
   h
-]), v = o()(f, x);
+]), v = o()(S, x);
 return null != l || null != c ? (0, i.jsx)(d.Popout, {
   position: 'left',
   renderPopout: e => {
@@ -107,7 +107,7 @@ function M() {
 nowPlayingCards: e,
 loaded: t,
 needsRefresh: n,
-fetching: a,
+fetching: s,
 currentUser: r
   } = (0, c.cj)([
 g.Z,
@@ -120,22 +120,22 @@ needsRefresh: I.Z.needsRefresh(),
 fetching: I.Z.getFetching(),
 currentUser: m.default.getCurrentUser()
   })), l = (0, c.e7)([_.Z], () => _.Z.quests);
-  s.useEffect(() => (u.Z.wait(() => f.L()), () => u.Z.wait(() => f.v())), [null == r ? void 0 : r.id]), s.useEffect(() => {
-n && !a && P();
+  a.useEffect(() => (u.Z.wait(() => S.L()), () => u.Z.wait(() => S.v())), [null == r ? void 0 : r.id]), a.useEffect(() => {
+n && !s && P();
   }, [
 n,
-a
+s
   ]);
-  let o = s.useMemo(() => {
+  let o = a.useMemo(() => {
   let t = new Map(),
     n = new Set();
   for (let i of e)
     i.party.currentActivities.forEach(e => {
       let {
-        activity: s
+        activity: a
       } = e;
-      if (null != s) {
-        let e = (0, h.ZZ)(l, s);
+      if (null != a) {
+        let e = (0, h.ZZ)(l, a);
         null != e && !n.has(e.id) && (t.set(i.party.id, e), n.add(e.id));
       }
     });

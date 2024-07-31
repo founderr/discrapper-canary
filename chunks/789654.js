@@ -55,8 +55,8 @@ let w = {
 ...g.c
   },
   C = {
-...E(b.K),
-...E(m.J)
+...Z(b.K),
+...Z(m.J)
   },
   N = [
 '100',
@@ -101,7 +101,7 @@ function T(e) {
   return 'name' in e;
 }
 
-function E(e) {
+function Z(e) {
   let r = {};
   return Object.keys(e).forEach(t => {
 let a = e[t];
@@ -119,7 +119,7 @@ r[t] = {
   }), r;
 }
 
-function Z(e, r) {
+function E(e, r) {
   let [t, a] = n.useState(() => {
 let t = h.K.get(e);
 return null != t ? t : r;
@@ -141,7 +141,7 @@ function I() {
   rawPalette: r,
   semanticTokens: t
 }, i, l, s, h, m] = function(e, r) {
-  let [t, a] = Z(''.concat(e, '-states'), [r]), [i, o] = Z(''.concat(e, '-index'), 0), l = t[i], c = n.useCallback(e => {
+  let [t, a] = E(''.concat(e, '-states'), [r]), [i, o] = E(''.concat(e, '-index'), 0), l = t[i], c = n.useCallback(e => {
     a([
       e,
       ...t
@@ -177,7 +177,7 @@ function I() {
 [g, b] = n.useState(''),
 [v, w] = n.useState({}),
 [S, T] = n.useState({}),
-E = n.useMemo(() => Object.keys(r).reduce((e, r) => [
+Z = n.useMemo(() => Object.keys(r).reduce((e, r) => [
   ...e,
   {
     value: r,
@@ -274,7 +274,7 @@ O = n.useCallback(e => {
   }).join(',\n'));
 }, []),
 B = n.useCallback(e => c()(j(), Object.keys(e).map(r => '"'.concat(r, '": {hex: "').concat(e[r].hex, '"}'))), []),
-P = n.useCallback(e => {
+A = n.useCallback(e => {
   let r = {};
   Object.keys(e).forEach(t => {
     Object.keys(e[t]).map(a => {
@@ -336,7 +336,7 @@ children: [
             size: f.Button.Sizes.MIN,
             onClick: () => {
               navigator.clipboard.readText().then(e => {
-                P(JSON.parse(e));
+                A(JSON.parse(e));
               });
             },
             children: 'Import'
@@ -455,7 +455,7 @@ children: [
             }),
             (0, a.jsx)(f.SearchableSelect, {
               value: l.color,
-              options: E,
+              options: Z,
               onChange: t => {
                 I(r, e, t, l.opacity);
               },

@@ -1,7 +1,7 @@
 n(653041);
 var i = n(735250),
-  s = n(470079),
-  a = n(481060),
+  a = n(470079),
+  s = n(481060),
   r = n(570140),
   l = n(906732),
   o = n(451603),
@@ -53,16 +53,16 @@ subtitle: m,
 guildsData: g,
 analyticsContext: p,
 theme: T,
-onViewGuild: f,
-fetchGuilds: S,
+onViewGuild: S,
+fetchGuilds: f,
 onGuildCardSeen: C,
 currentCategoryId: N,
 loadId: A,
 onTagClick: v,
 showMoreCards: Z = !1
   } = e;
-  s.useEffect(() => {
-r.Z.wait(() => S());
+  a.useEffect(() => {
+r.Z.wait(() => f());
   }, [N]);
   let L = (0, u.Z)(Z ? I : E),
 {
@@ -90,7 +90,7 @@ if ((0, o.yU)())
   });
 else {
   let t = R.findIndex(t => t.id === e);
-  await f(e, t, p, A);
+  await S(e, t, p, A);
 }
   };
   if (x || null == R) {
@@ -109,14 +109,14 @@ t = R.slice(0, L).map(e => (0, i.jsx)(d.Z, {
 }, e.id));
   return (0, i.jsx)('section', {
 className: h.guildListSection,
-children: (0, i.jsxs)(a.HeadingLevel, {
-  component: (0, i.jsx)(a.Heading, {
+children: (0, i.jsxs)(s.HeadingLevel, {
+  component: (0, i.jsx)(s.Heading, {
     className: h.__invalid_title,
     variant: 'heading-lg/semibold',
     children: n
   }),
   children: [
-    null != m && (0, i.jsx)(a.Text, {
+    null != m && (0, i.jsx)(s.Text, {
       className: h.subtitle,
       variant: 'text-sm/normal',
       color: 'header-secondary',

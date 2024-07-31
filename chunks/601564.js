@@ -4,8 +4,8 @@ return O;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(593473),
+  a = n(470079),
+  s = n(593473),
   r = n(266067),
   l = n(442837),
   o = n(930118),
@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(628123),
   p = n(703656),
   T = n(108427),
-  f = n(911314),
-  S = n(429899),
+  S = n(911314),
+  f = n(429899),
   C = n(843445),
   N = n(981631),
   A = n(689938),
@@ -47,7 +47,7 @@ function O(e) {
   return e < C.x ? C.b.SMALL : C.b.LARGE;
 }
 l.ZP.initialize();
-class R extends s.PureComponent {
+class R extends a.PureComponent {
   componentDidMount() {
 (0, o.Y)(this.props.location), this.stopListeningToHistory = (0, p.s1)().listen(e => {
   e.pathname.startsWith(N.Z5c.APPLICATION_STORE) && (0, o.Y)(e);
@@ -92,20 +92,20 @@ super(...e), Z(this, 'stopListeningToHistory', void 0), Z(this, 'renderStoreList
       params: {
         skuId: t,
         applicationId: n,
-        slug: s
+        slug: a
       }
     },
     location: r
   } = e, {
     width: l
-  } = this.props, o = (0, a.parse)(r.search);
+  } = this.props, o = (0, s.parse)(r.search);
   return (0, i.jsx)(d.Z, {
     page: N.ZY5.STORE_LISTING,
     root: !0,
-    children: (0, i.jsx)(S.Z, {
+    children: (0, i.jsx)(f.Z, {
       skuId: t,
       applicationId: n,
-      slug: s,
+      slug: a,
       location: r,
       storeListingId: o.store_listing_id,
       pageSize: O(l)
@@ -119,7 +119,7 @@ super(...e), Z(this, 'stopListeningToHistory', void 0), Z(this, 'renderStoreList
       render: () => (0, i.jsx)(d.Z, {
         page: N.ZY5.STORE_DIRECTORY_HOME,
         root: !0,
-        children: (0, i.jsx)(f.Z, {})
+        children: (0, i.jsx)(S.Z, {})
       })
     }),
     (0, i.jsx)(r.AW, {

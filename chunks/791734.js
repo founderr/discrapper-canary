@@ -1,8 +1,8 @@
 n(47120), n(724458);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(780384),
   o = n(481060),
   c = n(393903),
@@ -16,24 +16,24 @@ function I(e) {
   let {
 onTabSelect: t,
 tabs: n,
-selectedTab: a
-  } = e, c = (0, d.ZP)(), u = (0, l.wj)(c), I = s.useMemo(() => null != n.find(e => {
+selectedTab: s
+  } = e, c = (0, d.ZP)(), u = (0, l.wj)(c), I = a.useMemo(() => null != n.find(e => {
 let {
   id: t
 } = e;
-return t === a;
+return t === s;
   }), [
-a,
+s,
 n
   ]), m = I ? 'header-primary' : u ? 'text-muted' : 'header-primary', g = I ? o.tokens.colors.HEADER_PRIMARY : u ? o.tokens.colors.TEXT_MUTED : o.tokens.colors.HEADER_PRIMARY;
   return (0, i.jsx)(o.Popout, {
 renderPopout: e => {
   let {
-    closePopout: s
+    closePopout: a
   } = e;
   return (0, i.jsx)(_.Z, {
-    selectedTab: a,
-    onClose: s,
+    selectedTab: s,
+    onClose: a,
     tabs: n,
     onTabSelect: t
   });
@@ -70,15 +70,15 @@ children: (e, t) => {
 }
   });
 }
-t.Z = s.forwardRef(function(e, t) {
+t.Z = a.forwardRef(function(e, t) {
   let {
 className: n,
-selectedTab: a,
+selectedTab: s,
 tabs: _,
 onTabSelect: h,
 onAvailableWidthChange: m
-  } = e, g = (0, d.ZP)(), p = (0, l.wj)(g), [T, f] = s.useState(0), {
-lastVisibleIndex: S,
+  } = e, g = (0, d.ZP)(), p = (0, l.wj)(g), [T, S] = a.useState(0), {
+lastVisibleIndex: f,
 onItemLayout: C,
 overflowItemsRef: N,
 itemWidthsRef: A
@@ -87,22 +87,22 @@ items: _,
 itemGapPx: 20,
 maxLines: 1,
 containerWidth: T
-  }), v = s.useMemo(() => _.slice(0, S + 1), [
-S,
+  }), v = a.useMemo(() => _.slice(0, f + 1), [
+f,
 _
-  ]), Z = s.useMemo(() => _.slice(S + 1), [
-S,
+  ]), Z = a.useMemo(() => _.slice(f + 1), [
+f,
 _
   ]), L = (0, c.y)(e => {
 let t = null == e ? void 0 : e.getBoundingClientRect();
 if (null == t)
   return;
-f(t.width);
+S(t.width);
 let n = A.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
   i = t.width - n;
 null == m || m(i);
   });
-  return s.useImperativeHandle(t, () => ({
+  return a.useImperativeHandle(t, () => ({
 getBoundingClientRect: () => {
   var e;
   return null === (e = L.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
@@ -132,19 +132,19 @@ children: [
         children: (0, i.jsx)(I, {
           tabs: Z,
           onTabSelect: h,
-          selectedTab: a
+          selectedTab: s
         })
       })
     ]
   }),
   (0, i.jsxs)(o.TabBar, {
     type: 'top',
-    selectedItem: a,
+    selectedItem: s,
     onItemSelect: h,
     className: E.tabs,
     children: [
       v.map(e => {
-        let t = a === e.id;
+        let t = s === e.id;
         return (0, i.jsx)(o.TabBar.Item, {
           id: e.id,
           color: 'text-muted',
@@ -162,7 +162,7 @@ children: [
       0 !== Z.length ? (0, i.jsx)(I, {
         tabs: Z,
         onTabSelect: h,
-        selectedTab: a
+        selectedTab: s
       }) : null
     ]
   })

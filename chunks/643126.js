@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(512722),
   o = n.n(l),
   c = n(481060),
@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(333454),
   p = n(864441),
   T = n(981631),
-  f = n(689938),
-  S = n(235940);
+  S = n(689938),
+  f = n(235940);
 
 function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ let N = {
   HOST: 5,
   LISTENER: 4
 };
-class A extends s.PureComponent {
+class A extends a.PureComponent {
   isHost() {
 let {
   currentUser: e,
@@ -43,12 +43,12 @@ return e.id === (null == t ? void 0 : t.id);
 return (0, i.jsxs)('div', {
   children: [
     (0, i.jsx)(p.Z, {
-      children: this.isHost() ? f.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
+      children: this.isHost() ? S.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
         count: this.props.party.length
-      }) : f.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
+      }) : S.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
     }),
     (0, i.jsx)(g.Z, {
-      children: f.Z.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
+      children: S.Z.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
     })
   ]
 });
@@ -58,14 +58,14 @@ let {
   onStopListening: e
 } = this.props;
 return this.isHost() ? null : (0, i.jsx)(m.Z, {
-  tooltipText: f.Z.Messages.SPOTIFY_LISTEN_ALONG_STOP,
+  tooltipText: S.Z.Messages.SPOTIFY_LISTEN_ALONG_STOP,
   onClick: e,
   icon: c.CloseSmallIcon
 });
   }
   renderHelpIcon() {
 return this.isHost() ? (0, i.jsx)(m.Z, {
-  tooltipText: f.Z.Messages.SPOTIFY_LISTEN_ALONG_INFO,
+  tooltipText: S.Z.Messages.SPOTIFY_LISTEN_ALONG_INFO,
   onClick: () => {
     window.open(I.Z.getArticleURL(T.BhN.SPOTIFY_CONNECTION), '_blank');
   },
@@ -74,12 +74,12 @@ return this.isHost() ? (0, i.jsx)(m.Z, {
   }
   render() {
 return (0, i.jsxs)('div', {
-  className: S.listeningAlong,
+  className: f.listeningAlong,
   children: [
     this.renderTitle(),
     (0, i.jsx)(h.Z, {
       justify: h.Z.Justify.END,
-      className: S.party,
+      className: f.party,
       children: (0, i.jsx)(E.Z, {
         users: this.props.party,
         max: this.isHost() ? N.HOST : N.LISTENER,
@@ -88,7 +88,7 @@ return (0, i.jsxs)('div', {
       })
     }),
     (0, i.jsxs)('div', {
-      className: S.icons,
+      className: f.icons,
       children: [
         this.renderHelpIcon(),
         this.renderStopListeningButton()
@@ -103,10 +103,10 @@ super(...e), C(this, 'renderPartyMember', (e, t) => {
   if (null == e)
     return null;
   let {
-    host: a,
+    host: s,
     onUserContextMenu: l
   } = this.props;
-  return n = (null == a ? void 0 : a.id) === e.id ? f.Z.Messages.SPOTIFY_LISTEN_ALONG_HOST : f.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, i.jsx)(c.Popout, {
+  return n = (null == s ? void 0 : s.id) === e.id ? S.Z.Messages.SPOTIFY_LISTEN_ALONG_HOST : S.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, i.jsx)(c.Popout, {
     preload: () => (0, u.W)(e.id, e.getAvatarURL(void 0, 80)),
     renderPopout: t => (o()(null != e, ''), (0, i.jsx)(_.Z, {
       ...t,
@@ -116,19 +116,19 @@ super(...e), C(this, 'renderPartyMember', (e, t) => {
     })),
     position: 'top',
     align: 'center',
-    children: a => (0, i.jsx)(c.Tooltip, {
+    children: s => (0, i.jsx)(c.Tooltip, {
       text: n,
       children: n => {
         let {
           onMouseEnter: i,
           onMouseLeave: o
         } = n;
-        return (0, s.createElement)(c.Avatar, {
-          ...a,
+        return (0, a.createElement)(c.Avatar, {
+          ...s,
           key: e.id,
           src: e.getAvatarURL(void 0, 24),
           size: c.AvatarSizes.SIZE_24,
-          className: r()(S.avatar, t),
+          className: r()(f.avatar, t),
           'aria-label': e.username,
           onMouseEnter: i,
           onMouseLeave: o,
@@ -139,15 +139,15 @@ super(...e), C(this, 'renderPartyMember', (e, t) => {
   }, e.id);
 }), C(this, 'renderPartyMemberOverflow', (e, t, n) => {
   let {
-    renderOverflowPopout: s
+    renderOverflowPopout: a
   } = this.props;
   return (0, i.jsx)(c.Popout, {
-    renderPopout: s,
+    renderPopout: a,
     children: n => (0, i.jsx)(c.Tooltip, {
-      text: f.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
-      children: s => (0, i.jsx)('div', {
-        className: r()(S.overflow, t),
-        ...s,
+      text: S.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
+      children: a => (0, i.jsx)('div', {
+        className: r()(f.overflow, t),
+        ...a,
         ...n,
         children: e
       })

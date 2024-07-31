@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-return f;
+return S;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(186325),
   o = n(780384),
   c = n(481060),
@@ -21,26 +21,26 @@ var i = n(735250),
   p = n(689938),
   T = n(985164);
 
-function f(e) {
+function S(e) {
   var t;
   let {
 quest: n,
-isHovering: a,
-onCtxMenuClose: f,
-onCtxMenuOpen: S,
+isHovering: s,
+onCtxMenuClose: S,
+onCtxMenuOpen: f,
 onCtxMenuSelect: C
-  } = e, N = (0, E.j8)(n), A = (0, d.ZP)(), v = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, Z = v === g.BRd.DARK, L = s.useMemo(() => (0, E.nP)(n.config.assets.hero), [n]), O = s.useContext(l.S).reducedMotion.enabled, R = (0, E.Mi)(n, h.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = s.useRef(a), M = s.useRef(null), D = (0, _.B6)(n.config.expiresAt, {
+  } = e, N = (0, E.j8)(n), A = (0, d.ZP)(), v = (0, o.wj)(A) ? g.BRd.DARK : g.BRd.LIGHT, Z = v === g.BRd.DARK, L = a.useMemo(() => (0, E.nP)(n.config.assets.hero), [n]), O = a.useContext(l.S).reducedMotion.enabled, R = (0, E.Mi)(n, h.jn.GIFT_INVENTORY_FOR_YOU), x = (0, _.tP)(n), b = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, P = a.useRef(s), M = a.useRef(null), D = (0, _.B6)(n.config.expiresAt, {
 month: 'numeric',
 day: '2-digit'
   });
-  return s.useEffect(() => {
+  return a.useEffect(() => {
 if (L && null != M.current)
-  return P.current !== a && (a ? M.current.play() : (M.current.pause(), M.current.currentTime = 0)), P.current = a, () => {
+  return P.current !== s && (s ? M.current.play() : (M.current.pause(), M.current.currentTime = 0)), P.current = s, () => {
     var e;
     null === (e = M.current) || void 0 === e || e.pause();
   };
   }, [
-a,
+s,
 L
   ]), (0, i.jsxs)('div', {
 className: T.container,
@@ -51,7 +51,7 @@ children: [
       id: 'QuestTileBanner_heroAnimated',
       children: e => (null != e.current && (M.current = e.current), (0, i.jsx)(u.Z, {
         ref: e,
-        autoPlay: !O && a,
+        autoPlay: !O && s,
         loop: !0,
         playsInline: !0,
         className: T.heroAsset,
@@ -95,8 +95,8 @@ children: [
               })
             }),
             (0, i.jsx)(m.r, {
-              onOpen: S,
-              onClose: f,
+              onOpen: f,
+              onClose: S,
               onSelect: C,
               questContent: h.jn.QUEST_HOME_DESKTOP,
               quest: n,

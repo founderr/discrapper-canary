@@ -4,9 +4,9 @@ return Z;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(392711),
   o = n(338545),
   c = n(442837),
@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(35313),
   p = n(284019),
   T = n(672775),
-  f = n(601463),
-  S = n(192565),
+  S = n(601463),
+  f = n(192565),
   C = n(641037),
   N = n(689938),
   A = n(433369);
@@ -36,18 +36,18 @@ function Z(e) {
   let {
 guildId: t,
 onClose: n
-  } = e, a = (0, m.Wg)(), {
+  } = e, s = (0, m.Wg)(), {
 progress: Z,
 errors: L,
 submitting: O
   } = (0, c.cj)([m.ZP], () => {
-var e, n, i, s;
+var e, n, i, a;
 return {
-  progress: null !== (s = null === (e = m.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== s ? s : a,
+  progress: null !== (a = null === (e = m.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== a ? a : s,
   errors: null === (n = m.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
   submitting: null === (i = m.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
 };
-  }), R = s.useMemo(() => (0, C.G)(L), [L]), [x, b] = s.useState(!1), [P, M] = s.useState(window.innerWidth), [D, y] = s.useState(1), [j, U] = s.useState(!0), G = (0, g.f)(), w = (0, d.useSpring)({
+  }), R = a.useMemo(() => (0, C.G)(L), [L]), [x, b] = a.useState(!1), [P, M] = a.useState(window.innerWidth), [D, y] = a.useState(1), [j, U] = a.useState(!0), G = (0, g.f)(), w = (0, d.useSpring)({
 opacity: D,
 config: v,
 onStart: () => U(!0),
@@ -75,7 +75,7 @@ leave: {
   opacity: 0
 },
 config: v
-  }), V = s.useCallback(e => {
+  }), V = a.useCallback(e => {
 if (e === R.length)
   y(0), (0, E.Lp)(t, 'signature');
 else if (0 === D)
@@ -93,21 +93,21 @@ t,
 Z.furthestStep,
 R.length
   ]);
-  s.useEffect(() => {
+  a.useEffect(() => {
 (0, E.Lp)(t, (0, E.Qh)(Z.currentStep));
   }, [
 t,
 Z.currentStep
-  ]), s.useEffect(() => {
+  ]), a.useEffect(() => {
 let e = (0, _.pP)((0, l.debounce)(() => M(window.innerWidth), 250));
 return (0, _.YP)(e, document.body), () => (0, _.UC)(e, document.body);
   }, [
 D,
 j
   ]);
-  let F = s.useMemo(() => null != L && Object.values(L).some(e => null != e), [L]),
-Y = s.useMemo(() => null != L && Object.values(L).length > 0 ? (0, C.G)(L).find(e => e.hasError) : null, [L]),
-W = s.useCallback(() => {
+  let F = a.useMemo(() => null != L && Object.values(L).some(e => null != e), [L]),
+Y = a.useMemo(() => null != L && Object.values(L).length > 0 ? (0, C.G)(L).find(e => e.hasError) : null, [L]),
+W = a.useCallback(() => {
   y(1), h._9(t, {
     currentStep: null == Y ? void 0 : Y.index
   });
@@ -124,14 +124,14 @@ W = s.useCallback(() => {
 {
   enableApplication: K
 } = (0, I.Fg)('ClanDiscoveryAdminContainer'),
-q = s.useCallback(() => {
+q = a.useCallback(() => {
   0 === z.filter(e => e.id !== t).length && K ? (0, u.fH)(u.v0.GET_STARTED) : (0, u.fH)(u.v0.ADMIN_UPSELL);
 }, [
   z,
   t,
   K
 ]),
-Q = s.useCallback(() => {
+Q = a.useCallback(() => {
   (0, C.V)({
     guildId: t,
     onSuccess: () => {
@@ -145,7 +145,7 @@ Q = s.useCallback(() => {
   q,
   n
 ]),
-X = s.useRef(null),
+X = a.useRef(null),
 J = null != Y ? (0, i.jsxs)('div', {
   className: A.tooltipContents,
   children: [
@@ -202,7 +202,7 @@ children: (0, i.jsxs)(d.FocusRingScope, {
               className: r()(A.stepsContainer, {
                 [A.hidden]: !j
               }),
-              children: (0, i.jsx)(S.Z, {
+              children: (0, i.jsx)(f.Z, {
                 guildId: t
               })
             }),
@@ -234,7 +234,7 @@ children: (0, i.jsxs)(d.FocusRingScope, {
           className: r()(A.sidebar, {
             [A.sidebarResponsive]: j
           }),
-          children: (0, i.jsx)(f.Z, {
+          children: (0, i.jsx)(S.Z, {
             guildId: t,
             signed: x,
             setSigned: j ? void 0 : b,

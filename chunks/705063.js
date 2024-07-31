@@ -4,8 +4,8 @@ return g;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(749210),
   o = n(225784),
@@ -22,8 +22,8 @@ function g(e) {
   let {
 loadId: t,
 onScroll: n
-  } = e, g = (0, d.Z)(), p = (0, a.e7)([u.Z], () => u.Z.theme);
-  return s.useEffect(() => {
+  } = e, g = (0, d.Z)(), p = (0, s.e7)([u.Z], () => u.Z.theme);
+  return a.useEffect(() => {
 _.Zt({
   loadId: t,
   gamesYouPlayGuilds: [],

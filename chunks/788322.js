@@ -4,9 +4,9 @@ return Z;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(481060),
   o = n(239091),
   c = n(906732),
@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(556017),
   p = n(879484),
   T = n(26580),
-  f = n(206887),
-  S = n(981631),
+  S = n(206887),
+  f = n(981631),
   C = n(689938),
   N = n(465423),
   A = n(129512),
@@ -32,7 +32,7 @@ let Z = () => (0, i.jsx)('div', {
 t.Z = e => {
   var t;
   let {
-guild: a,
+guild: s,
 theme: Z,
 onView: L,
 onTagClick: O
@@ -45,7 +45,7 @@ description: M,
 presenceCount: D,
 memberCount: y,
 keywords: j
-  } = a, [U, G] = s.useState(!1), [w, k] = s.useState(!1), {
+  } = s, [U, G] = a.useState(!1), [w, k] = a.useState(!1), {
 analyticsLocations: B
   } = (0, c.ZP)(), H = I.ZP.getGuildDiscoverySplashURL({
 id: R,
@@ -53,9 +53,9 @@ splash: x,
 size: 240 * (0, u.x_)()
   }), V = null != H ? H : function(e) {
 switch (e) {
-  case S.BRd.DARK:
+  case f.BRd.DARK:
     return A;
-  case S.BRd.LIGHT:
+  case f.BRd.LIGHT:
     return v;
 }
   }(Z), F = null !== (t = I.ZP.getGuildIconURL({
@@ -70,11 +70,11 @@ if (!t.includes('Menu')) {
   if ((0, _.yU)()) {
     (0, h.Z)({
       analyticsSource: {
-        page: S.ZY5.GUILD_DISCOVERY
+        page: f.ZY5.GUILD_DISCOVERY
       },
       analyticsLocation: {
-        page: S.ZY5.GUILD_DISCOVERY,
-        section: S.jXE.GUILD_CAP_UPSELL_MODAL
+        page: f.ZY5.GUILD_DISCOVERY,
+        section: f.jXE.GUILD_CAP_UPSELL_MODAL
       },
       analyticsLocations: B
     });
@@ -82,13 +82,13 @@ if (!t.includes('Menu')) {
   }
   k(!0);
   try {
-    null != L && await L(a.id);
+    null != L && await L(s.id);
   } finally {
     k(!1);
   }
 }
   };
-  s.useEffect(() => p.w.trackExposure({
+  a.useEffect(() => p.w.trackExposure({
 location: '4302e4_1'
   }));
   let {
@@ -120,7 +120,7 @@ children: [
             } = await Promise.resolve().then(n.bind(n, 455839));
             return t => (0, i.jsx)(e, {
               ...t,
-              guild: a
+              guild: s
             });
           });
         },
@@ -161,7 +161,7 @@ children: [
                     children: [
                       (0, i.jsx)('div', {
                         children: (0, i.jsx)(d.Z, {
-                          guild: a,
+                          guild: s,
                           className: N.guildBadge,
                           size: 16
                         })
@@ -181,9 +181,9 @@ children: [
                 children: M
               }),
               W && null != j && null != O && (0, i.jsx)(T.F, {
-                guildId: a.id,
+                guildId: s.id,
                 discoveryTagStyle: T.B.ALT,
-                onTagClick: e => O(e, a.id),
+                onTagClick: e => O(e, s.id),
                 tags: j,
                 section: m.P1.SEARCH
               }),
@@ -223,8 +223,8 @@ children: [
           }),
           z ? (0, i.jsx)('div', {
             className: N.actionButtons,
-            children: (0, i.jsx)(f.Z, {
-              guild: a
+            children: (0, i.jsx)(S.Z, {
+              guild: s
             })
           }) : null
         ]

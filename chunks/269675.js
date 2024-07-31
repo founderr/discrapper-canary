@@ -4,8 +4,8 @@ return R;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(873546),
+  a = n(470079),
+  s = n(873546),
   r = n(442837),
   l = n(481060),
   o = n(355467),
@@ -20,8 +20,8 @@ var i = n(735250),
   g = n(351402),
   p = n(730647),
   T = n(772021),
-  f = n(396828),
-  S = n(293423),
+  S = n(396828),
+  f = n(293423),
   C = n(20967),
   N = n(504762),
   A = n(807152),
@@ -39,16 +39,16 @@ restrictionsLoading: D
   (0, d.Tt)({
 subsection: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
 location: null == n ? void 0 : n.name
-  }), (0, c.Z)(a.tq ? 'role-subscriptions-overview' : void 0);
+  }), (0, c.Z)(s.tq ? 'role-subscriptions-overview' : void 0);
   let j = O && (null == n || !(R || x) || M && !D);
-  if (s.useEffect(() => {
+  if (a.useEffect(() => {
   o.jg();
-}, []), s.useEffect(() => {
-  j && !a.tq && (0, u.M)(t, v.oC.ROLE_SUBSCRIPTIONS);
+}, []), a.useEffect(() => {
+  j && !s.tq && (0, u.M)(t, v.oC.ROLE_SUBSCRIPTIONS);
 }, [
   t,
   j
-]), a.tq && j) {
+]), s.tq && j) {
 let e = null == n ? C.J.NOT_GUILD_MEMBER : C.J.GUILD_NOT_ELIGIBLE;
 return (0, i.jsx)(C.z, {
   errorType: e
@@ -58,11 +58,11 @@ return (0, i.jsx)(C.z, {
 className: L.container,
 children: [
   (0, i.jsxs)(I.Z, {
-    toolbar: (0, i.jsx)(s.Fragment, {}),
+    toolbar: (0, i.jsx)(a.Fragment, {}),
     className: L.headerBar,
     children: [
       (0, i.jsx)(I.Z.Icon, {
-        icon: (0, l.makeIconCompat)(f.Z),
+        icon: (0, l.makeIconCompat)(S.Z),
         'aria-hidden': !0
       }),
       (0, i.jsx)(I.Z.Title, {
@@ -79,7 +79,7 @@ children: [
       className: L.scroller,
       children: (0, i.jsx)('div', {
         className: L.scrollerContent,
-        children: y ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(S.Z, {
+        children: y ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(f.Z, {
           guild: n
         })
       })

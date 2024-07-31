@@ -1,6 +1,6 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(338545),
+  a = n(470079),
+  s = n(338545),
   r = n(481060),
   l = n(207796),
   o = n(420212),
@@ -16,10 +16,10 @@ t.Z = function(e) {
   let {
 children: t,
 onClose: n
-  } = e, _ = s.useCallback(() => {
+  } = e, _ = a.useCallback(() => {
 (0, l.fH)(l.v0.DISCOVERY), null == n || n();
   }, [n]);
-  s.useEffect(() => {
+  a.useEffect(() => {
 let e = e => {
   e.key === o.vn.ESCAPE && _();
 };
@@ -47,7 +47,7 @@ children: [
       children: c.Z.Messages.SAVE
     })
   }),
-  (0, i.jsx)(a.animated.div, {
+  (0, i.jsx)(s.animated.div, {
     style: {
       opacity: h.opacity,
       transform: h.opacity.to([

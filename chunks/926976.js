@@ -1,6 +1,6 @@
 t.d(r, {
   Z: function() {
-return E;
+return Z;
   }
 }), t(47120);
 var a = t(735250),
@@ -175,7 +175,7 @@ networkActions: {
 }
   };
 
-function E() {
+function Z() {
   let e = n.useRef(null),
 r = (0, s.e7)([p.Z], () => p.Z.loggedEvents),
 [t, i] = n.useState(Object.keys(T)),

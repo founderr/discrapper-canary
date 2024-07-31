@@ -5,8 +5,8 @@ return d;
 }), n(47120);
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(565138),
+var a = n(481060),
+  s = n(565138),
   r = n(695346),
   l = n(506071),
   o = n(353254),
@@ -34,17 +34,17 @@ children: [
   }),
   (0, i.jsx)('div', {
     className: c.guildIconContainer,
-    children: (0, i.jsx)(a.Z, {
+    children: (0, i.jsx)(s.Z, {
       guild: d,
-      size: a.Z.Sizes.XLARGE
+      size: s.Z.Sizes.XLARGE
     })
   }),
-  (0, i.jsx)(s.Heading, {
+  (0, i.jsx)(a.Heading, {
     variant: 'heading-xl/semibold',
     className: c.ctaTitle,
     children: n
   }),
-  (0, i.jsx)(s.Text, {
+  (0, i.jsx)(a.Text, {
     className: c.ctaSubtitle,
     variant: 'text-md/normal',
     color: 'header-secondary',

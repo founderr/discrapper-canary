@@ -1,8 +1,8 @@
 n(653041);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(392711),
   o = n.n(l),
   c = n(442837),
@@ -16,8 +16,8 @@ var i = n(735250),
   g = n(706454),
   p = n(215427),
   T = n(820254),
-  f = n(838949),
-  S = n(358085),
+  S = n(838949),
+  f = n(358085),
   C = n(557177),
   N = n(998502),
   A = n(981631),
@@ -32,7 +32,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class O extends s.PureComponent {
+class O extends a.PureComponent {
   createSound() {
 let {
   soundpack: e
@@ -46,19 +46,19 @@ this.setProblemsTimeout();
 let {
   ready: n,
   hide: i,
-  problems: s
+  problems: a
 } = this.state, {
-  connected: a,
+  connected: s,
   soundpack: r
-} = this.props, l = a && n && !i && !s;
-e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== a || l ? (a && null != this.videoRef && d.K.get(A.wli) && this._connectedSound.play(), this.setState({
+} = this.props, l = s && n && !i && !a;
+e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== s || l ? (s && null != this.videoRef && d.K.get(A.wli) && this._connectedSound.play(), this.setState({
   problems: !1,
-  hide: a
+  hide: s
 })) : t.hide !== i ? (i ? this.clearProblemsTimeout() : this.setProblemsTimeout(), this.setState({
   shouldRender: !0
 }), setTimeout(() => this.setState({
   shouldRender: !i
-}), 200)) : t.problems !== s && s && _.Z.checkIncidents();
+}), 200)) : t.problems !== a && a && _.Z.checkIncidents();
   }
   componentWillUnmount() {
 this.clearProblemsTimeout();
@@ -73,9 +73,9 @@ let {
 if (!this.state.shouldRender)
   return null;
 {
-  let s = this._loadingText,
-    a = null;
-  return null != this._eventLoadingText && (s = this._eventLoadingText), null != t && (s = t.name, a = t.incident_updates[0].body), (0, i.jsxs)('div', {
+  let a = this._loadingText,
+    s = null;
+  return null != this._eventLoadingText && (a = this._eventLoadingText), null != t && (a = t.name, s = t.incident_updates[0].body), (0, i.jsxs)('div', {
     className: Z.container,
     'data-fade': n,
     style: {
@@ -86,7 +86,7 @@ if (!this.state.shouldRender)
       (0, i.jsxs)('div', {
         className: Z.content,
         children: [
-          (0, i.jsx)(f.Z, {
+          (0, i.jsx)(S.Z, {
             autoPlay: !0,
             loop: !e,
             setRef: this.setVideoRef,
@@ -102,11 +102,11 @@ if (!this.state.shouldRender)
               }),
               (0, i.jsx)('div', {
                 className: null != t ? Z.title : Z.tip,
-                children: s
+                children: a
               }),
               (0, i.jsx)('div', {
                 className: Z.body,
-                children: a
+                children: s
               })
             ]
           })
@@ -286,7 +286,7 @@ super(e), L(this, 'videoRef', null), L(this, '_noProblemsTimeout', null), L(this
 }()), L(this, 'handleReady', () => {
   this.setState({
     ready: !0
-  }), (0, S.isDesktop)() && (N.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), N.ZP.send('UPDATE_OPEN_ON_STARTUP'));
+  }), (0, f.isDesktop)() && (N.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), N.ZP.send('UPDATE_OPEN_ON_STARTUP'));
 }), L(this, 'setVideoRef', e => {
   this.videoRef = e;
 }), L(this, 'setProblemsTimeout', () => {
@@ -322,14 +322,14 @@ t.Z = c.ZP.connectStores([
   let {
 isTryingToConnect: t,
 connected: n,
-incident: s,
-soundpack: a,
+incident: a,
+soundpack: s,
 reducedMotion: r
   } = e;
   return t ? (0, i.jsx)(O, {
 reducedMotion: r,
-soundpack: a,
+soundpack: s,
 connected: n,
-incident: s
+incident: a
   }) : null;
 });
