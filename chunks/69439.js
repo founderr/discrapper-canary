@@ -31,7 +31,7 @@ useReducedMotion: C
 quest: g
   }), v = (0, o.z)(g), Z = (0, o.B6)(g.config.expiresAt, {
 month: 'numeric',
-day: '2-digit'
+day: 'numeric'
   }), {
 isClaiming: L,
 isEnrolling: O

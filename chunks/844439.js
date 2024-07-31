@@ -3,14 +3,14 @@ t.d(n, {
 return s;
   }
 });
-var i, l, o, a, s, r, d = t(442837),
-  u = t(570140);
+var i, o, l, a, s, r, u = t(442837),
+  d = t(570140);
 (i = s || (s = {}))[i.FETCHING = 0] = 'FETCHING', i[i.FETCHED = 1] = 'FETCHED', i[i.ERROR = 2] = 'ERROR';
 let c = {},
   m = {},
   h = {};
 
-function I(e) {
+function E(e) {
   let {
 location: n,
 channelId: t,
@@ -18,15 +18,15 @@ withCommands: i
   } = e;
   return 'location:'.concat(n, ' channelId:').concat('0', ' withCommands:').concat(i);
 }
-let E = Object.freeze([]);
-class p extends(r = d.ZP.Store) {
+let I = Object.freeze([]);
+class p extends(r = u.ZP.Store) {
   getLastFetchTimeMs(e) {
 let {
   location: n,
   channelId: t,
   withCommands: i
 } = e;
-return h[I({
+return h[E({
   location: n,
   channelId: t,
   withCommands: i
@@ -38,7 +38,7 @@ let {
   channelId: t,
   withCommands: i
 } = e;
-return m[I({
+return m[E({
   location: n,
   channelId: t,
   withCommands: i
@@ -49,21 +49,21 @@ var n;
 let {
   location: t,
   channelId: i,
-  withCommands: l
+  withCommands: o
 } = e;
-return null !== (n = c[I({
+return null !== (n = c[E({
   location: t,
   channelId: i,
-  withCommands: l
-})]) && void 0 !== n ? n : E;
+  withCommands: o
+})]) && void 0 !== n ? n : I;
   }
 }
-a = void 0, (o = 'displayName') in(l = p) ? Object.defineProperty(l, o, {
+a = void 0, (l = 'displayName') in(o = p) ? Object.defineProperty(o, l, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[o] = a, n.ZP = new p(u.Z, {
+}) : o[l] = a, n.ZP = new p(d.Z, {
   APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function(e) {
 let {
   location: n,
@@ -72,7 +72,7 @@ let {
 } = e;
 m = {
   ...m,
-  [I({
+  [E({
     location: n,
     channelId: t,
     withCommands: i
@@ -84,23 +84,23 @@ let {
   recommendations: n,
   location: t,
   channelId: i,
-  withCommands: l
-} = e, o = I({
+  withCommands: o
+} = e, l = E({
   location: t,
   channelId: i,
-  withCommands: l
+  withCommands: o
 });
 c = {
   ...c,
-  [o]: n
+  [l]: n
 }, m = {
   ...m,
-  [o]: 1
+  [l]: 1
 };
 let a = Date.now();
 h = {
   ...h,
-  [o]: a
+  [l]: a
 };
   },
   APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_FAILURE: function(e) {
@@ -111,7 +111,7 @@ let {
 } = e;
 m = {
   ...m,
-  [I({
+  [E({
     location: n,
     channelId: t,
     withCommands: i

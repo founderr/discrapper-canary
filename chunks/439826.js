@@ -34,7 +34,7 @@ onCtxMenuOpen: v,
 onCtxMenuSelect: Z
   } = e, L = (0, m.j8)(a), O = (0, _.ZP)(), R = (0, c.wj)(O) ? T.BRd.DARK : T.BRd.LIGHT, x = R === T.BRd.DARK, b = s.useMemo(() => (0, m.nP)(a.config.assets.hero), [a]), P = s.useContext(o.S).reducedMotion.enabled, M = (0, m.Mi)(a, I.jn.GIFT_INVENTORY_FOR_YOU), D = (0, E.tP)(a), y = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, j = (null === (n = a.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, U = s.useRef(C), G = s.useRef(null), k = (0, E.B6)(a.config.expiresAt, {
 month: 'numeric',
-day: '2-digit'
+day: 'numeric'
   }), w = (0, E.z)(a), {
 ref: B,
 height: H = 0
