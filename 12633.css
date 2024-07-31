@@ -10753,7 +10753,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-sm\/normal_df8943 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 400
 }
@@ -10764,7 +10764,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-sm\/medium_df8943 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 500
 }
@@ -10775,7 +10775,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-sm\/semibold_df8943 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 600
 }
@@ -10786,7 +10786,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-sm\/bold_df8943 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 700
 }
@@ -10797,7 +10797,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-sm\/extrabold_df8943 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 800
 }
@@ -10808,7 +10808,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-md\/normal_df8943 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 400
 }
@@ -10819,7 +10819,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-md\/medium_df8943 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 500
 }
@@ -10830,7 +10830,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-md\/semibold_df8943 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 600
 }
@@ -10841,7 +10841,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-md\/bold_df8943 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 700
 }
@@ -10852,7 +10852,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-md\/extrabold_df8943 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 800
 }
@@ -10863,7 +10863,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-lg\/normal_df8943 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 400
 }
@@ -10874,7 +10874,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-lg\/medium_df8943 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 500
 }
@@ -10885,7 +10885,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-lg\/semibold_df8943 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 600
 }
@@ -10896,7 +10896,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-lg\/bold_df8943 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 700
 }
@@ -10907,7 +10907,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-lg\/extrabold_df8943 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 800
 }
@@ -10918,7 +10918,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-xl\/normal_df8943 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-weight: 400
 }
@@ -10929,7 +10929,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-xl\/medium_df8943 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-weight: 500
 }
@@ -10940,7 +10940,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-xl\/semibold_df8943 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-weight: 600
 }
@@ -10951,7 +10951,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-xl\/bold_df8943 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-weight: 700
 }
@@ -10962,7 +10962,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-xl\/extrabold_df8943 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-weight: 800
 }
@@ -10973,7 +10973,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-xxl\/normal_df8943 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
     font-weight: 400
 }
@@ -10984,7 +10984,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-xxl\/medium_df8943 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
     font-weight: 500
 }
@@ -10995,7 +10995,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-xxl\/semibold_df8943 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
     font-weight: 600
 }
@@ -11006,7 +11006,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-xxl\/bold_df8943 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
     font-weight: 700
 }
@@ -11017,7 +11017,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-xxl\/extrabold_df8943 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
     font-weight: 800
 }
@@ -11028,7 +11028,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .eyebrow_df8943 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 700;
     text-transform: uppercase;
@@ -11041,7 +11041,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-deprecated-12\/normal_df8943 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 400
 }
@@ -11052,7 +11052,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-deprecated-12\/medium_df8943 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 500
 }
@@ -11063,7 +11063,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-deprecated-12\/semibold_df8943 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 600
 }
@@ -11074,7 +11074,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-deprecated-12\/bold_df8943 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -11085,7 +11085,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .heading-deprecated-12\/extrabold_df8943 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 800
 }
@@ -11096,7 +11096,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .redesign\/heading-18\/bold_df8943 {
     font-family: var(--font-display);
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -11107,7 +11107,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-xxs\/normal_df8943 {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     line-height: 1.2;
     font-weight: 400
 }
@@ -11118,7 +11118,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-xxs\/medium_df8943 {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     line-height: 1.2;
     font-weight: 500
 }
@@ -11129,7 +11129,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-xxs\/semibold_df8943 {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     line-height: 1.2;
     font-weight: 600
 }
@@ -11140,7 +11140,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-xxs\/bold_df8943 {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     line-height: 1.2;
     font-weight: 700
 }
@@ -11151,7 +11151,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-xs\/normal_df8943 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 400
 }
@@ -11162,7 +11162,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-xs\/medium_df8943 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 500
 }
@@ -11173,7 +11173,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-xs\/semibold_df8943 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 600
 }
@@ -11184,7 +11184,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-xs\/bold_df8943 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -11195,7 +11195,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-sm\/normal_df8943 {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 400
 }
@@ -11206,7 +11206,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-sm\/medium_df8943 {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 500
 }
@@ -11217,7 +11217,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-sm\/semibold_df8943 {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 600
 }
@@ -11228,7 +11228,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-sm\/bold_df8943 {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 700
 }
@@ -11239,7 +11239,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-md\/normal_df8943 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 400
 }
@@ -11250,7 +11250,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-md\/medium_df8943 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 500
 }
@@ -11261,7 +11261,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-md\/semibold_df8943 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 600
 }
@@ -11272,7 +11272,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-md\/bold_df8943 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 700
 }
@@ -11283,7 +11283,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-lg\/normal_df8943 {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 400
 }
@@ -11294,7 +11294,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-lg\/medium_df8943 {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 500
 }
@@ -11305,7 +11305,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-lg\/semibold_df8943 {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 600
 }
@@ -11316,7 +11316,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .text-lg\/bold_df8943 {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 700
 }
@@ -11327,7 +11327,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .redesign\/message-preview\/normal_df8943 {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     line-height: 1.3333333333333333;
     font-weight: 400
 }
@@ -11338,7 +11338,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .redesign\/message-preview\/medium_df8943 {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     line-height: 1.3333333333333333;
     font-weight: 500
 }
@@ -11349,7 +11349,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .redesign\/message-preview\/semibold_df8943 {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     line-height: 1.3333333333333333;
     font-weight: 600
 }
@@ -11360,7 +11360,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .redesign\/message-preview\/bold_df8943 {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -11371,7 +11371,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .redesign\/channel-title\/normal_df8943 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.375;
     font-weight: 400
 }
@@ -11382,7 +11382,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .redesign\/channel-title\/medium_df8943 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.375;
     font-weight: 500
 }
@@ -11393,7 +11393,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .redesign\/channel-title\/semibold_df8943 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.375;
     font-weight: 600
 }
@@ -11404,7 +11404,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .redesign\/channel-title\/bold_df8943 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.375;
     font-weight: 700
 }
@@ -11415,7 +11415,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .display-sm_df8943 {
     font-family: var(--font-headline);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1;
     font-weight: 800
 }
@@ -11426,7 +11426,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .display-md_df8943 {
     font-family: var(--font-headline);
-    font-size: 34px;
+    font-size: 2.125rem;
     line-height: 1.0588235294117647;
     font-weight: 800
 }
@@ -11437,7 +11437,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .display-lg_df8943 {
     font-family: var(--font-headline);
-    font-size: 44px;
+    font-size: 2.75rem;
     line-height: .9545454545454546;
     font-weight: 800
 }
@@ -11448,7 +11448,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .code_df8943 {
     font-family: var(--font-code);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -33815,6 +33815,147 @@ h3.improved_f017d0:after {
     border-radius: inherit;
     min-width: 4px;
     background-color: var(--interactive-active)
+}
+
+.container_c64476 {
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    margin-left: 8px;
+    margin-top: 8px;
+    max-width: 224px;
+    height: 64px;
+    padding: 8px;
+    background: var(--bg-overlay-3, var(--background-primary));
+    border-radius: var(--radius-md);
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer
+}
+
+.container_c64476:hover {
+    background: var(--bg-overlay-5, var(--background-modifier-hover))
+}
+
+.container_c64476:hover .contentDescription_c64476 {
+    color: var(--interactive-hover)
+}
+
+.container_c64476:hover .reply_c64476 {
+    opacity: 1
+}
+
+.container_c64476:hover .additionalParticipantBadge_c64476 {
+    background: var(--bg-overlay-4, var(--background-accent))
+}
+
+.visual-refresh .container_c64476 {
+    background: var(--bg-overlay-3, var(--card-secondary-bg))
+}
+
+.openOnHover_c64476 {
+    cursor: auto
+}
+
+.reply_c64476 {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    margin: auto;
+    opacity: 0;
+    height: 24px;
+    width: 24px;
+    background: var(--background-primary);
+    border: 1px solid var(--background-secondary);
+    border-radius: var(--radius-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.reply_c64476:hover .icon_c64476 {
+    color: var(--interactive-hover)
+}
+
+.icon_c64476 {
+    height: 16px;
+    display: block;
+    color: var(--interactive-normal);
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.selected_c64476 {
+    background-color: var(--background-modifier-selected)
+}
+
+.selected_c64476:hover {
+    background-color: var(--background-modifier-selected)
+}
+
+.selected_c64476 .contentDescription_c64476 {
+    color: var(--header-primary)
+}
+
+.infoSection_c64476 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    margin-bottom: -2px
+}
+
+.userSection_c64476 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px
+}
+
+.userName_c64476 {
+    color: var(--channels-default);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 85%;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    line-height: 1.2857142857142858;
+    font-weight: 500
+}
+
+.userName_c64476.fontScaling_c64476 {
+    font-size: .875rem
+}
+
+.contentDescription_c64476 {
+    color: var(--header-primary)
+}
+
+.facePile_c64476 {
+    display: flex;
+    margin-right: 6px
+}
+
+.facePileItem_c64476:not(:first-child) {
+    margin-left: -3px
+}
+
+.additionalParticipantBadge_c64476 {
+    padding: 2.25px 4.4px 2.5px 4.2px;
+    background: var(--background-modifier-accent);
+    border-radius: 8px;
+    margin-left: 4px
+}
+
+.additionalParticipantBadgeText_c64476 {
+    line-height: 10px
+}
+
+img.thumbnail_c64476 {
+    width: 48px;
+    -o-object-fit: cover;
+    object-fit: cover
 }
 
 .heading-sm\/normal_e17fae {

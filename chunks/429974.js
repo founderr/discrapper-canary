@@ -48,10 +48,7 @@ G = L === f.Skl.ONLINE ? x : L;
   m = await (0, i.openModalLazy)(async () => {
 let {
   default: e
-} = await Promise.all([
-  n.e('72880'),
-  n.e('73806')
-]).then(n.bind(n, 304113));
+} = await n.e('824').then(n.bind(n, 304113));
 return t => (0, r.jsx)(e, {
   location: 'handleOpenUserProfileModal',
   user: C,

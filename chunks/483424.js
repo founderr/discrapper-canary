@@ -1,68 +1,82 @@
 n.d(t, {
   Z: function() {
-return d;
+return p;
   }
 }), n(47120);
-var r = n(735250);
-n(470079);
-var i = n(906732),
-  a = n(785717),
-  s = n(221292),
-  o = n(929498),
-  l = n(151545),
-  u = n(304042),
-  c = n(981631);
+var r = n(735250),
+  i = n(470079),
+  a = n(906732),
+  s = n(70956),
+  o = n(709054),
+  l = n(785717),
+  u = n(221292),
+  c = n(27144),
+  d = n(929498),
+  _ = n(151545),
+  E = n(527790),
+  f = n(304042),
+  h = n(981631);
 
-function d(e) {
+function p(e) {
   let {
 user: t,
 currentUser: n,
-isHovering: d,
-className: _,
-onClose: E
+isHovering: p,
+className: m,
+onClose: I
   } = e, {
-analyticsLocations: f
-  } = (0, i.ZP)(), {
-trackUserProfileAction: h,
-...p
-  } = (0, a.KZ)(), {
-live: m,
-stream: I
-  } = (0, o.Z)(t.id), [T] = m;
-  return null == T && null == I ? null : null != I ? (0, r.jsx)(u.Z, {
+analyticsLocations: T
+  } = (0, a.ZP)(), {
+trackUserProfileAction: g,
+...S
+  } = (0, l.KZ)(), {
+live: A,
+recent: N,
+stream: v
+  } = (0, d.Z)(t.id), [O] = A, {
+mostRecentActivityEnabled: R
+  } = (0, c.z)({
+location: 'UserProfileFeaturedActivity'
+  }), C = i.useMemo(() => N.find(e => o.default.age(e.id) / s.Z.Millis.HOUR < 24), [N]);
+  return null != v ? (0, r.jsx)(f.Z, {
 user: t,
 currentUser: n,
-stream: I,
-isHovering: d,
-className: _,
-onClose: E,
+stream: v,
+isHovering: p,
+className: m,
+onClose: I,
 onAction: () => {
-  h({
+  g({
     action: 'JOIN_ACTIVITY'
-  }), (0, s.Ac)({
-    activityType: c.IIU.STREAMING,
-    analyticsLocations: f,
-    ...p
-  }), null == E || E();
+  }), (0, u.Ac)({
+    activityType: h.IIU.STREAMING,
+    analyticsLocations: T,
+    ...S
+  }), null == I || I();
 }
-  }) : (0, r.jsx)(l.Z, {
+  }) : null != O ? (0, r.jsx)(_.Z, {
 user: t,
 currentUser: n,
-activity: T,
-className: _,
-onClose: E,
+activity: O,
+className: m,
+onClose: I,
 onAction: () => {
-  h({
+  g({
     action: 'JOIN_ACTIVITY'
-  }), (0, s.Ac)({
-    activityType: null == T ? void 0 : T.type,
-    activityName: null == T ? void 0 : T.name,
-    activityPlatform: null == T ? void 0 : T.platform,
-    activitySessionId: null == T ? void 0 : T.session_id,
-    applicationId: null == T ? void 0 : T.application_id,
-    analyticsLocations: f,
-    ...p
-  }), null == E || E();
+  }), (0, u.Ac)({
+    activityType: O.type,
+    activityName: O.name,
+    activityPlatform: O.platform,
+    activitySessionId: O.session_id,
+    applicationId: O.application_id,
+    analyticsLocations: T,
+    ...S
+  }), null == I || I();
 }
-  });
+  }) : R && null != C ? (0, r.jsx)(E.Z, {
+user: t,
+entry: C,
+className: m,
+onClose: I
+  }) : null;
 }
