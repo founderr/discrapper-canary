@@ -44,7 +44,7 @@ children: [
       disabled: !d,
       value: null != n ? n : void 0,
       onChange: a.jS,
-      placeholder: 'http://localhost:3000'
+      placeholder: 'https://localhost:3000'
     })
   }),
   !0 === t ? null : (0, i.jsx)('div', {
