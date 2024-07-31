@@ -3,7 +3,7 @@ n.d(t, {
 return l;
   }
 });
-var i, a, s, r, l, o, c = n(735250),
+var i, s, a, r, l, o, c = n(735250),
   d = n(470079),
   u = n(442837),
   _ = n(570140),
@@ -44,11 +44,11 @@ return null == t ? null : (0, c.jsx)('div', {
 }
 r = {
   messageStyle: 'LONG'
-}, (s = 'defaultProps') in(a = m) ? Object.defineProperty(a, s, {
+}, (a = 'defaultProps') in(s = m) ? Object.defineProperty(s, a, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = r, t.Z = u.ZP.connectStores([E.Z], () => ({
+}) : s[a] = r, t.Z = u.ZP.connectStores([E.Z], () => ({
   purchaseError: E.Z.error
 }))(m);

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(442837),
   o = n(663002),
   c = n(481060),
@@ -30,7 +30,7 @@ function R(e) {
   var t;
   let {
 quest: n
-  } = e, a = (0, h.B6)(n.config.expiresAt), s = (0, h.B6)(p.r.build(n.config).rewardsExpireAt), r = (0, l.e7)([d.Z], () => d.Z.getState().theme), u = (0, o.w)(r) ? Z.BRd.DARK : Z.BRd.LIGHT, _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
+  } = e, s = (0, h.B6)(n.config.expiresAt), a = (0, h.B6)(p.r.build(n.config).rewardsExpireAt), r = (0, l.e7)([d.Z], () => d.Z.getState().theme), u = (0, o.w)(r) ? Z.BRd.DARK : Z.BRd.LIGHT, _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, i.jsxs)('div', {
 className: O.heading,
 children: [
@@ -53,9 +53,9 @@ children: [
         variant: 'text-xs/normal',
         color: 'header-secondary',
         children: _ ? L.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
-          expirationDate: s
-        }) : L.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
           expirationDate: a
+        }) : L.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
+          expirationDate: s
         })
       })
     ]
@@ -64,23 +64,23 @@ children: [
   });
 }
 t.Z = function(e) {
-  var t, n, s;
+  var t, n, a;
   let {
 quest: o
-  } = e, d = (0, l.e7)([E.Z], () => E.Z.isEnrolling(o.id), [o]), [p, Z] = a.useState(!1), x = a.useCallback(() => Z(!0), []), b = a.useCallback(() => Z(!1), []), P = a.useCallback(e => {
+  } = e, d = (0, l.e7)([E.Z], () => E.Z.isEnrolling(o.id), [o]), [p, Z] = s.useState(!1), x = s.useCallback(() => Z(!0), []), b = s.useCallback(() => Z(!1), []), P = s.useCallback(e => {
 e.stopPropagation();
-  }, []), M = a.useCallback(() => {
+  }, []), M = s.useCallback(() => {
 (0, _.AH)(o.id, {
   questContent: I.jn.ACTIVITY_PANEL,
   questContentCTA: u.jZ.ACCEPT_QUEST
 });
-  }, [o]), D = a.useCallback(() => {
+  }, [o]), D = s.useCallback(() => {
 null != o && ((0, u._3)({
   questId: o.id,
   questContent: I.jn.ACTIVITY_PANEL,
   questContentCTA: u.jZ.TRACK_PROGRESS
 }), (0, A.navigateToQuestHome)(v.dr.ACTIVITY_PANEL, o.id));
-  }, [o]), y = a.useCallback(() => {
+  }, [o]), y = s.useCallback(() => {
 (0, u._3)({
   questId: o.id,
   questContent: I.jn.ACTIVITY_PANEL,
@@ -89,7 +89,7 @@ null != o && ((0, u._3)({
   }, [o]), j = (0, C.hf)({
 quest: o,
 location: I.jn.ACTIVITY_PANEL
-  }), U = (0, h.tP)(o), G = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, k = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, w = (null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null, B = (null == o ? void 0 : o.userStatus) == null || (0, m.zE)(o.userStatus, I.jn.ACTIVITY_PANEL), H = (0, h.Rf)(o), V = (0, g.D)({
+  }), U = (0, h.tP)(o), G = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, k = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, w = (null === (a = o.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, B = (null == o ? void 0 : o.userStatus) == null || (0, m.zE)(o.userStatus, I.jn.ACTIVITY_PANEL), H = (0, h.Rf)(o), V = (0, g.D)({
 quest: o,
 taskDetails: H,
 location: v.dr.ACTIVITY_PANEL,

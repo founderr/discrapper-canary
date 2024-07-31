@@ -7,9 +7,9 @@ return v;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(338545),
   o = n(143927),
   c = n(597312),
@@ -40,12 +40,12 @@ function v() {
   let e = (0, m.GN)(e => e.game, o.Z),
 t = (0, m.GN)(e => e.mode, o.Z),
 n = (0, m.GN)(e => e.userUpsellScreen, o.Z),
-s = (0, m.GN)(e => e.setUserUpsellScreen, o.Z),
+a = (0, m.GN)(e => e.setUserUpsellScreen, o.Z),
 {
   ref: c,
   width: h
 } = (0, u.Z)(),
-[E, g] = a.useState(0),
+[E, g] = s.useState(0),
 S = (0, d.useSpring)({
   from: {
     scrollHeight: 0
@@ -55,14 +55,14 @@ S = (0, d.useSpring)({
   }
 }),
 C = (0, _.ZP)(),
-v = a.useMemo(() => A(e, C), [
+v = s.useMemo(() => A(e, C), [
   e,
   C
 ]),
-Z = a.useCallback(e => {
+Z = s.useCallback(e => {
   g(e.currentTarget.scrollTop);
 }, [g]),
-L = a.useMemo(() => {
+L = s.useMemo(() => {
   switch (e) {
     case m.hz.GENSHIN:
       return C === f.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
@@ -134,7 +134,7 @@ case m.o2.USER_ONBOARDING:
         (0, i.jsx)('div', {
           className: N.backgroundImageContent,
           children: (0, i.jsx)(p.Z, {
-            setScreen: s
+            setScreen: a
           })
         })
       ]
@@ -151,11 +151,11 @@ function Z() {
   location: 'ClanDiscoveryAdminContainer',
   includeConverted: !0
 }),
-n = a.useMemo(() => t.filter(e => !(0, E.EJ)(e)), [t]),
-s = (0, _.ZP)(),
-l = a.useMemo(() => A(e, s), [
+n = s.useMemo(() => t.filter(e => !(0, E.EJ)(e)), [t]),
+a = (0, _.ZP)(),
+l = s.useMemo(() => A(e, a), [
   e,
-  s
+  a
 ]);
   return 0 === t.length ? null : (0, i.jsx)('div', {
 className: N.container,

@@ -4,9 +4,9 @@ return u;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(780384),
   o = n(481060),
   c = n(410030),
@@ -16,16 +16,16 @@ function u(e) {
   let {
 title: t,
 description: n,
-button: s,
+button: a,
 backgroundImageUrl: u,
 className: _,
 bannerImageClassName: h,
 headerTextColor: E,
 descriptionTextColor: I
-  } = e, m = (0, l.wj)((0, c.ZP)()), g = a.useMemo(() => null != u ? u : m ? 'https://cdn.discordapp.com/assets/discovery/generic-hero-background.png' : 'https://cdn.discordapp.com/assets/discovery/generic-banner-background-light-mode.png', [
+  } = e, m = (0, l.wj)((0, c.ZP)()), g = s.useMemo(() => null != u ? u : m ? 'https://cdn.discordapp.com/assets/discovery/generic-hero-background.png' : 'https://cdn.discordapp.com/assets/discovery/generic-banner-background-light-mode.png', [
 m,
 u
-  ]), p = a.useMemo(() => ({
+  ]), p = s.useMemo(() => ({
 backgroundImage: 'url('.concat(g, ')')
   }), [g]), T = null != E ? E : m ? 'always-white' : 'header-primary', S = null != I ? I : m ? 'text-muted' : 'header-primary';
   return (0, i.jsxs)('div', {
@@ -46,7 +46,7 @@ children: [
           color: S,
           children: n
         }),
-        s
+        a
       ]
     })
   }),

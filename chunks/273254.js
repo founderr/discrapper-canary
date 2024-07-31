@@ -4,8 +4,8 @@ return c;
   }
 }), n(47120);
 var i = n(470079),
-  a = n(468194),
-  s = n(645896),
+  s = n(468194),
+  a = n(645896),
   r = n(559469),
   l = n(308083),
   o = n(689938);
@@ -13,7 +13,7 @@ var i = n(470079),
 function c(e) {
   let {
 guild: t
-  } = e, n = (0, r.n)(), c = (0, s.Cc)(null == t ? void 0 : t.id), [d, u] = (0, s.L_)(null == t ? void 0 : t.id);
+  } = e, n = (0, r.n)(), c = (0, a.Cc)(null == t ? void 0 : t.id), [d, u] = (0, a.L_)(null == t ? void 0 : t.id);
   return i.useEffect(() => {
 !d && null != t && u();
   }, [
@@ -32,7 +32,7 @@ return null != c ? c : null == t ? null : {
   games: [],
   playstyle: l.zv.CASUAL,
   traits: [],
-  tag: (0, a.Zg)(t.name),
+  tag: (0, s.Zg)(t.name),
   wildcardDescriptors: l.LK
 };
   }, [

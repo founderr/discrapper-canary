@@ -1,10 +1,10 @@
-let i, a, s;
+let i, s, a;
 n(47120);
 var r, l, o, c, d = n(442837),
   u = n(570140);
 
 function _() {
-  a = {}, i = {}, s = new Set();
+  s = {}, i = {}, a = new Set();
 }
 _();
 class h extends(r = d.ZP.Store) {
@@ -12,8 +12,8 @@ class h extends(r = d.ZP.Store) {
 return i[e];
   }
   shouldFetchStatisticsForApplication(e) {
-let t = a[e];
-return !s.has(e) && (null == t || Date.now() - t > 3600000);
+let t = s[e];
+return !a.has(e) && (null == t || Date.now() - t > 3600000);
   }
 }
 c = 'ApplicationStatisticsStore', (o = 'displayName') in(l = h) ? Object.defineProperty(l, o, {
@@ -26,20 +26,20 @@ c = 'ApplicationStatisticsStore', (o = 'displayName') in(l = h) ? Object.defineP
 let {
   applicationId: t
 } = e;
-s.add(t);
+a.add(t);
   },
   APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL: function(e) {
 let {
   applicationId: t
 } = e;
-s.delete(t);
+a.delete(t);
   },
   APPLICATION_ACTIVITY_STATISTICS_FETCH_SUCCESS: function(e) {
 let {
   statistics: t,
   applicationId: n
 } = e;
-a[n] = Date.now(), s.delete(n), i[n] = t;
+s[n] = Date.now(), a.delete(n), i[n] = t;
   },
   LOGOUT: _
 });

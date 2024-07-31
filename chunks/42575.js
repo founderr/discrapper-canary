@@ -4,8 +4,8 @@ return g;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(481060),
+  s = n(470079),
+  a = n(481060),
   r = n(194359),
   l = n(906732),
   o = n(388380),
@@ -24,7 +24,7 @@ user: t,
 nickname: n,
 status: g,
 isFocused: p
-  } = e, T = a.useContext(d.AnalyticsContext), {
+  } = e, T = s.useContext(d.AnalyticsContext), {
 analyticsLocations: S
   } = (0, l.ZP)(), f = e => {
 null == e || e.stopPropagation(), r.Z.addRelationship({
@@ -48,17 +48,17 @@ onClick: () => (0, c.openUserProfileModal)({
   analyticsLocation: T.location
 }),
 children: e => {
-  let a = (0, i.jsxs)(i.Fragment, {
+  let s = (0, i.jsxs)(i.Fragment, {
     children: [
       (0, i.jsx)(u.Z, {
-        icon: s.CheckmarkLargeIcon,
+        icon: a.CheckmarkLargeIcon,
         actionType: u.Z.ActionTypes.ACCEPT,
         tooltip: I.Z.Messages.FRIEND_REQUEST_ACCEPT,
         onClick: f,
         shouldHighlight: e
       }),
       (0, i.jsx)(u.Z, {
-        icon: s.CloseSmallIcon,
+        icon: a.CloseSmallIcon,
         actionType: u.Z.ActionTypes.DENY,
         tooltip: I.Z.Messages.FRIEND_REQUEST_IGNORE,
         onClick: C,
@@ -78,7 +78,7 @@ children: e => {
       }),
       (0, i.jsx)('div', {
         className: m.actions,
-        children: a
+        children: s
       })
     ]
   });

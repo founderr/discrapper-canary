@@ -4,8 +4,8 @@ return u;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(338545),
+  s = n(470079),
+  a = n(338545),
   r = n(481060),
   l = n(981562);
 let o = {
@@ -22,14 +22,14 @@ clamp: !0
   };
 
 function d(e) {
-  var t, n, a;
+  var t, n, s;
   let {
 state: d,
 direction: u,
 cleanUp: _,
 children: h
   } = e;
-  let E = (0, r.useSpring)((t = d, n = u, a = _, t === r.TransitionStates.MOUNTED ? {
+  let E = (0, r.useSpring)((t = d, n = u, s = _, t === r.TransitionStates.MOUNTED ? {
 from: {
   opacity: 0,
   transform: 'translateY(40px) translateX(0px)'
@@ -62,10 +62,10 @@ to: {
 },
 config: c,
 onRest: () => {
-  a();
+  s();
 }
   }));
-  return (0, i.jsx)(s.animated.div, {
+  return (0, i.jsx)(a.animated.div, {
 style: E,
 className: l.step,
 children: (0, i.jsx)(r.ScrollerThin, {
@@ -79,16 +79,16 @@ function u(e) {
   let {
 currentStep: t,
 renderItem: n,
-items: s,
+items: a,
 getItemKey: o
-  } = e, c = a.useRef(t - 1);
-  a.useEffect(() => {
+  } = e, c = s.useRef(t - 1);
+  s.useEffect(() => {
 c.current = t;
   }, [t]);
-  let u = a.useMemo(() => null == c.current || t === c.current ? 0 : c.current < t ? 1 : -1, [t]),
-_ = a.useCallback((e, t, a, s) => (0, i.jsx)(d, {
-  state: a,
-  cleanUp: s,
+  let u = s.useMemo(() => null == c.current || t === c.current ? 0 : c.current < t ? 1 : -1, [t]),
+_ = s.useCallback((e, t, s, a) => (0, i.jsx)(d, {
+  state: s,
+  cleanUp: a,
   direction: u,
   children: n(t)
 }, e), [
@@ -98,7 +98,7 @@ _ = a.useCallback((e, t, a, s) => (0, i.jsx)(d, {
   return (0, i.jsx)('div', {
 className: l.stepsTransitionGroup,
 children: (0, i.jsx)(r.TransitionGroup, {
-  items: s,
+  items: a,
   renderItem: _,
   getItemKey: o
 })

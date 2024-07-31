@@ -7,21 +7,21 @@ return d;
   }
 });
 var i = n(442837),
-  a = n(507885),
-  s = n(379146),
+  s = n(507885),
+  a = n(379146),
   r = n(273003),
   l = n(754332),
   o = n(140863),
   c = n(701488);
 
 function d() {
-  return (0, i.e7)([a.Z], () => u(a.Z));
+  return (0, i.e7)([s.Z], () => u(s.Z));
 }
 
 function u(e) {
   let t = 0,
 n = e.getAcknowledged();
-  return s.q.getCurrentConfig({
+  return a.q.getCurrentConfig({
 location: '1d9280_2'
   }).enabled && !n.has(c.ES.GDM_ACTIVITIES) && t++, o.u.getCurrentConfig({
 location: '1d9280_3'

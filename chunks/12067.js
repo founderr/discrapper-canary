@@ -26,18 +26,18 @@ shouldHideMediaOptions: v,
 shouldRedactExplicitContent: C,
 gifAutoPlay: h,
 getGifFavButton: x,
-getOnMediaItemContextMenu: I
+getOnMediaItemContextMenu: E
   } = (0, o.c)();
   if (null == n || null == t)
 return null;
-  let E = e.items.map(e => (0, m.j0)(e.media, p.VqG, v, C)).filter(f.lm),
+  let I = e.items.map(e => (0, m.j0)(e.media, p.VqG, v, C)).filter(f.lm),
 T = {
   source: 'Media Mosaic',
   guild_id: t.guild_id,
   channel_id: t.id,
   channel_type: t.type
 },
-N = E.length > 1 ? (0, m.Cx)(E, T) : {};
+N = I.length > 1 ? (0, m.Cx)(I, T) : {};
 
   function g(e, n) {
 let t = e.originalItem;
@@ -45,7 +45,7 @@ return (0, i.lK)(t.media, n, t.spoiler);
   }
   let S = e.items.map(e => {
 let t = e.media,
-  l = null == I ? void 0 : I(t),
+  l = null == E ? void 0 : E(t),
   r = {
     message: n,
     item: {

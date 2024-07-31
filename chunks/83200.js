@@ -1,6 +1,6 @@
 n.d(t, {
   O: function() {
-return a;
+return s;
   }
 });
 let i = (0, n(818083).B)({
@@ -19,7 +19,7 @@ config: {
   }]
 });
 
-function a() {
+function s() {
   return i.useExperiment({
 location: 'acbeda_1'
   }, {

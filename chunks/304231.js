@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(338545),
+  s = n(470079),
+  a = n(338545),
   r = n(143927),
   l = n(442837),
   o = n(481060),
@@ -22,8 +22,8 @@ let p = {
 
 function T() {
   let e = (0, I.GN)(e => e.selectedGames, r.Z),
-t = a.useMemo(() => new Set(e), [e]),
-n = a.useCallback(e => I.GN.getState().setSelectedGames(Array.from(e)), []);
+t = s.useMemo(() => new Set(e), [e]),
+n = s.useCallback(e => I.GN.getState().setSelectedGames(Array.from(e)), []);
   return (0, i.jsx)(d.Z, {
 title: m.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
 description: m.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
@@ -34,7 +34,7 @@ gameApplicationIds: t
 
 function S() {
   let e = (0, I.GN)(e => e.selectedPlaystyle, r.Z),
-t = a.useCallback(e => I.GN.getState().setSelectedPlaystyle(e), []);
+t = s.useCallback(e => I.GN.getState().setSelectedPlaystyle(e), []);
   return (0, i.jsx)(u.Z, {
 title: m.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
 description: m.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
@@ -45,8 +45,8 @@ playstyle: e
 
 function f() {
   let e = (0, I.GN)(e => e.selectedTraits, r.Z),
-t = a.useMemo(() => new Set(e), [e]),
-n = a.useCallback(e => I.GN.getState().setSelectedTraits([...e]), []);
+t = s.useMemo(() => new Set(e), [e]),
+n = s.useCallback(e => I.GN.getState().setSelectedTraits([...e]), []);
   return (0, i.jsx)(E.Z, {
 title: m.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
 description: m.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
@@ -59,27 +59,27 @@ hidePreview: !0
 function C(e) {
   return e.toString();
 }
-t.Z = a.memo(function(e) {
+t.Z = s.memo(function(e) {
   let {
 setScreen: t
-  } = e, n = a.useRef(null), d = a.useRef(null), u = a.useRef(null), E = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), [N, A] = a.useState(0), [v, Z] = a.useState(0), L = (0, I.GN)(e => e.selectedPlaystyle, r.Z), O = (0, I.GN)(e => e.previousMode, r.Z), R = a.useCallback(e => {
+  } = e, n = s.useRef(null), d = s.useRef(null), u = s.useRef(null), E = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), [N, A] = s.useState(0), [v, Z] = s.useState(0), L = (0, I.GN)(e => e.selectedPlaystyle, r.Z), O = (0, I.GN)(e => e.previousMode, r.Z), R = s.useCallback(e => {
 A(e), v < e && Z(e);
-  }, [v]), x = a.useCallback(() => {
+  }, [v]), x = s.useCallback(() => {
 0 === N ? (t(I.o2.USER_UPSELL), (0, I.fH)(O)) : R(N - 1);
   }, [
 N,
 O,
 t,
 R
-  ]), b = a.useCallback(() => {
+  ]), b = s.useCallback(() => {
 2 === N ? (0, I.fH)(I.v0.DISCOVERY) : R(N + 1);
   }, [
 N,
 R
-  ]), P = a.useMemo(() => 1 === N && null == L, [
+  ]), P = s.useMemo(() => 1 === N && null == L, [
 L,
 N
-  ]), M = a.useMemo(() => [{
+  ]), M = s.useMemo(() => [{
   index: 0,
   name: m.Z.Messages.CLAN_SETUP_GAMES_STEP
 },
@@ -123,7 +123,7 @@ to: {
 },
 config: p
   }, 'animate-always');
-  (0, s.useChain)([
+  (0, a.useChain)([
 n,
 d,
 u
@@ -132,8 +132,8 @@ u
 0.2,
 0.5
   ]);
-  let U = a.useMemo(() => [N], [N]),
-G = a.useCallback(e => {
+  let U = s.useMemo(() => [N], [N]),
+G = s.useCallback(e => {
   switch (e) {
     case 0:
       return (0, i.jsx)(T, {});
@@ -143,11 +143,11 @@ G = a.useCallback(e => {
       return (0, i.jsx)(f, {});
   }
 }, []);
-  return (0, i.jsxs)(s.animated.div, {
+  return (0, i.jsxs)(a.animated.div, {
 className: g.container,
 style: D,
 children: [
-  (0, i.jsx)(s.animated.div, {
+  (0, i.jsx)(a.animated.div, {
     className: g.sequencer,
     style: y,
     children: (0, i.jsx)(h.Z, {
@@ -157,7 +157,7 @@ children: [
       getItemKey: C
     })
   }),
-  (0, i.jsxs)(s.animated.div, {
+  (0, i.jsxs)(a.animated.div, {
     className: g.footer,
     style: j,
     children: [

@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(442837),
+  s = n(470079),
+  a = n(442837),
   r = n(780384),
   l = n(481060),
   o = n(230711),
@@ -31,7 +31,7 @@ onSelectTab: R
   } = (0, N.z)(), {
 onScroll: x,
 scrollPosition: b
-  } = (0, h.c)(), P = (0, r.wj)((0, c.ZP)()), M = (0, s.e7)([_.Z], () => _.Z.hasLoadedExperiments), {
+  } = (0, h.c)(), P = (0, r.wj)((0, c.ZP)()), M = (0, a.e7)([_.Z], () => _.Z.hasLoadedExperiments), {
 quests: D,
 isFetchingCurrentQuests: y
   } = (0, T.bA)(O), j = (0, C.Z)(), U = null;
@@ -43,13 +43,13 @@ for (let t of D)
     break;
   }
   }
-  a.useEffect(() => {
+  s.useEffect(() => {
 M && !t && ((0, g.dL)(A.Z5c.FRIENDS), o.Z.open(A.oAB.INVENTORY));
   }, [
 M,
 t
-  ]), a.useEffect(() => {}, []);
-  let G = a.useCallback(() => {
+  ]), s.useEffect(() => {}, []);
+  let G = s.useCallback(() => {
 window.open(p.Z.getArticleURL(A.BhN.QUESTS_LEARN_MORE));
   }, []);
   return ((0, u.Tt)({

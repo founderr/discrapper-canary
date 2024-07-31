@@ -3,8 +3,8 @@ n.d(t, {
 return A;
   }
 });
-var i, a = n(392711),
-  s = n.n(a),
+var i, s = n(392711),
+  a = n.n(s),
   r = n(442837),
   l = n(570140),
   o = n(846027),
@@ -95,28 +95,28 @@ f.justChanged = !1, t.forEach(e => {
     n !== f.id && (f.justChanged = !0), f.id = n;
   }
 });
-let a = {};
+let s = {};
 if (C.justChanged = !1, n.forEach(e => {
-    if (a[A(e)] = e.id, e.id === h.w5) {
+    if (s[A(e)] = e.id, e.id === h.w5) {
       var t;
       let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
       n !== C.id && (C.justChanged = !0), C.id = n;
     }
   }), !g) {
-  p = i, T = a, g = !0;
+  p = i, T = s, g = !0;
   return;
 }
 let r = Object.keys(p),
   l = Object.keys(i),
   o = Object.keys(T),
-  c = Object.keys(a),
-  d = s().difference(r, l),
-  u = s().difference(o, c);
-return d.length > 0 || u.length > 0 ? S = {} : (s().difference(l, r).forEach(e => {
+  c = Object.keys(s),
+  d = a().difference(r, l),
+  u = a().difference(o, c);
+return d.length > 0 || u.length > 0 ? S = {} : (a().difference(l, r).forEach(e => {
   S[e] = v(S[e], e, _.QyF.INPUT);
-}), s().difference(c, o).forEach(e => {
+}), a().difference(c, o).forEach(e => {
   S[e] = v(S[e], e, _.QyF.OUTPUT);
-})), !(s().isEqual(r, l) && s().isEqual(o, c)) && (p = i, T = a, !0);
+})), !(a().isEqual(r, l) && a().isEqual(o, c)) && (p = i, T = s, !0);
   },
   CONNECTED_DEVICE_SET: function(e) {
 let {

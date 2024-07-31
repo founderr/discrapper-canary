@@ -5,12 +5,12 @@ return l;
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(570140),
+var s = n(481060),
+  a = n(570140),
   r = n(71509);
 
 function l() {
-  (0, a.openModalLazy)(async () => {
+  (0, s.openModalLazy)(async () => {
 let {
   default: e
 } = await Promise.all([
@@ -23,9 +23,9 @@ return t => (0, i.jsx)(e, {
 });
   }, {
 onCloseCallback: () => {
-  s.Z.dispatch({
+  a.Z.dispatch({
     type: 'CLEAR_AUTHENTICATION_ERRORS'
-  }), s.Z.dispatch({
+  }), a.Z.dispatch({
     type: 'LOGIN_RESET',
     isMultiAccount: !0
   });

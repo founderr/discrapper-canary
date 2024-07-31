@@ -1,18 +1,18 @@
 n.d(t, {
   Z: function() {
-return s;
+return a;
   }
 });
 var i = n(981631);
-let a = '<removed>';
+let s = '<removed>';
 
-function s(e) {
+function a(e) {
   var t, n;
-  let s = {
+  let a = {
 ...e
   };
-  if ('object' == typeof(t = s).args && 'string' == typeof t.cmd)
-s = function(e) {
+  if ('object' == typeof(t = a).args && 'string' == typeof t.cmd)
+a = function(e) {
   switch (e.cmd) {
     case i.Etm.AUTHENTICATE:
     case i.Etm.GET_PROVIDER_ACCESS_TOKEN:
@@ -20,7 +20,7 @@ s = function(e) {
         ...e,
         args: {
           ...e.args,
-          access_token: a
+          access_token: s
         }
       };
     default:
@@ -28,9 +28,9 @@ s = function(e) {
         ...e
       };
   }
-}(s);
-  if ('object' == typeof(n = s).data && 'string' == typeof n.cmd)
-s = function(e) {
+}(a);
+  if ('object' == typeof(n = a).data && 'string' == typeof n.cmd)
+a = function(e) {
   switch (e.cmd) {
     case i.Etm.AUTHENTICATE:
     case i.Etm.GET_PROVIDER_ACCESS_TOKEN:
@@ -38,7 +38,7 @@ s = function(e) {
         ...e,
         data: {
           ...e.data,
-          access_token: a
+          access_token: s
         }
       };
     default:
@@ -46,6 +46,6 @@ s = function(e) {
         ...e
       };
   }
-}(s);
-  return s;
+}(a);
+  return a;
 }

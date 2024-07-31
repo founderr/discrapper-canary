@@ -1,4 +1,4 @@
-let i, a, s;
+let i, s, a;
 n(653041), n(47120);
 var r, l, o, c, d = n(392711),
   u = n.n(d),
@@ -19,7 +19,7 @@ let S = [],
   Z = null;
 
 function L() {
-  if (i = null != (a = I.Z.getChannel()) ? m.Z.getGuild(a.guild_id) : null, S = null != a && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, a) ? p.Z.getWebhooksForChannel(i.id, a.id) : [], null != f) {
+  if (i = null != (s = I.Z.getChannel()) ? m.Z.getGuild(s.guild_id) : null, S = null != s && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, s) ? p.Z.getWebhooksForChannel(i.id, s.id) : [], null != f) {
 let e = R(f.id);
 null != e && (f = e);
   }
@@ -64,7 +64,7 @@ return {
   submitting: N === T.QZA.SUBMITTING,
   webhooks: S,
   editedWebhook: f,
-  section: s,
+  section: a,
   sectionId: Z,
   hasChanges: this.hasChanges(),
   isFetching: C,
@@ -87,7 +87,7 @@ let {
 } = e;
 if (t !== T.CoT.INTEGRATIONS)
   return !1;
-if (s = T.b4C.OVERVIEW, null == i) {
+if (a = T.b4C.OVERVIEW, null == i) {
   let e = I.Z.getChannel(),
     t = null == e ? void 0 : e.getGuildId();
   null != e && null != t && (E.Z.fetchForChannel(t, e.id), C = !0), L();
@@ -98,7 +98,7 @@ let {
   section: t,
   sectionId: n
 } = e;
-s = t, Z = n;
+a = t, Z = n;
   },
   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function(e) {
 let {
@@ -122,22 +122,22 @@ f = {
 }, null != t.name && f.name !== t.name && (f.name = t.name, v = !0), void 0 !== t.avatar && f.avatar !== t.avatar && (f.avatar = t.avatar, v = !0), null != t.channelId && f.channel_id !== t.channelId && (f.channel_id = t.channelId, v = !0), v && O();
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-a = null, i = null, S = [], f = null, N = T.QZA.CLOSED;
+s = null, i = null, S = [], f = null, N = T.QZA.CLOSED;
   },
   WEBHOOKS_UPDATE: function(e) {
 let {
   guildId: t,
   channelId: n,
-  webhooks: s
+  webhooks: a
 } = e;
-if (null == i || t !== i.id || null == a || n !== a.id || null == s || N === T.QZA.SUBMITTING)
+if (null == i || t !== i.id || null == s || n !== s.id || null == a || N === T.QZA.SUBMITTING)
   return !1;
 C = !1;
 for (let e = S.length - 1; e >= 0; e--) {
   let t = S[e];
   if (null != n && (null == t ? void 0 : t.channel_id) !== n)
     continue;
-  let i = s.find(e => {
+  let i = a.find(e => {
     let {
       id: n
     } = e;
@@ -153,7 +153,7 @@ for (let e = S.length - 1; e >= 0; e--) {
   } else
     (null == f ? void 0 : f.id) === t.id && (f = null), S.splice(e, 1);
 }
-for (let e of s)
+for (let e of a)
   null == S.find(t => {
     let {
       id: n

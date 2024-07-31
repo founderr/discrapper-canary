@@ -20,8 +20,8 @@ var l = t(735250),
   C = t(280501),
   h = t(811654),
   x = t(344991),
-  I = t(981631),
-  E = t(56816);
+  E = t(981631),
+  I = t(56816);
 
 function T(e) {
   var n;
@@ -60,7 +60,7 @@ renderIcon: (e, n) => {
       ...o
     }) : (0, l.jsx)(a.ShieldUserIcon, {
       size: 'custom',
-      color: null !== (r = t.colorString) && void 0 !== r ? r : (0, i.Rf)(I.p6O),
+      color: null !== (r = t.colorString) && void 0 !== r ? r : (0, i.Rf)(E.p6O),
       height: n,
       width: n
     });
@@ -71,10 +71,10 @@ renderOptionLabel: e => {
   if (e.type === C.tM.USER) {
     let t = _.default.getUser(e.value);
     null != t && (n = (0, l.jsx)(o.Z, {
-      className: E.tag,
-      usernameClass: E.username,
-      discriminatorClass: E.discriminator,
-      botClass: E.bot,
+      className: I.tag,
+      usernameClass: I.username,
+      discriminatorClass: I.discriminator,
+      botClass: I.bot,
       user: t,
       forceUsername: !0
     }));
@@ -82,25 +82,25 @@ renderOptionLabel: e => {
     let t = null != g ? m.Z.getRole(g.id, e.value) : void 0,
       r = null == t ? null : null == S ? void 0 : S[t.id];
     null != r && (n = (0, l.jsxs)('div', {
-      className: E.roleCountContainer,
+      className: I.roleCountContainer,
       children: [
         (0, l.jsx)(a.UserIcon, {
           size: 'sm',
           color: 'currentColor',
-          className: E.roleCountIcon
+          className: I.roleCountIcon
         }),
         (0, l.jsx)('span', {
-          className: E.roleCountText,
+          className: I.roleCountText,
           children: r
         })
       ]
     }));
   }
   return (0, l.jsxs)('span', {
-    className: E.label,
+    className: I.label,
     children: [
       (0, l.jsx)('span', {
-        className: E.labelText,
+        className: I.labelText,
         children: e.label
       }),
       n

@@ -27,8 +27,8 @@ subtitle: v,
 thumbnailUrl: C,
 onClickTitle: h,
 onClickSubtitle: x,
-onClickThumbnail: I,
-providerIconProps: E,
+onClickThumbnail: E,
+providerIconProps: I,
 style: T = {}
   } = e, {
 primaryColor: N,
@@ -40,8 +40,8 @@ className: i()(p.container, (0, f.Q)(_.BR.DARK)),
 style: T,
 children: [
   (0, l.jsx)(a.Clickable, {
-    onClick: I,
-    className: i()(p.thumbnailContainer, null != I && p.clickable),
+    onClick: E,
+    className: i()(p.thumbnailContainer, null != E && p.clickable),
     children: (0, l.jsx)(m.f, {
       src: C,
       constrain: 'width',
@@ -93,8 +93,8 @@ children: [
   }),
   (0, l.jsx)('div', {
     className: p.headerIcons,
-    children: null != E ? (0, l.jsx)(c.Z, {
-      ...E
+    children: null != I ? (0, l.jsx)(c.Z, {
+      ...I
     }) : null
   })
 ]

@@ -1,6 +1,6 @@
 n.d(t, {
   Bj: function() {
-return a;
+return s;
   },
   ZP: function() {
 return L;
@@ -9,7 +9,7 @@ return L;
 return Z;
   }
 }), n(47120);
-var i, a, s, r, l = n(735250),
+var i, s, a, r, l = n(735250),
   o = n(470079),
   c = n(143927),
   d = n(481060),
@@ -39,9 +39,9 @@ function L(e) {
 width: t,
 isAnimating: n,
 variant: i = 'default',
-onScroll: a
+onScroll: s
   } = e, {
-loaded: s,
+loaded: a,
 clans: r,
 searchResult: Z,
 searchCriteria: L
@@ -154,17 +154,17 @@ n
 ]),
 M = o.useMemo(() => new Set(L.games), [L.games]),
 D = o.useCallback((e, t, n, i) => {
-  var a;
+  var s;
   let {
-    items: s,
+    items: a,
     section: r
   } = P[e];
   if ('upsell' === r || 'hero' === r)
     return null;
-  let o = s[t];
+  let o = a[t];
   return (0, l.jsx)(I.ZP, {
     clan: o,
-    affinity: null !== (a = o.affininty) && void 0 !== a ? a : (0, E.y)(o, L),
+    affinity: null !== (s = o.affininty) && void 0 !== s ? s : (0, E.y)(o, L),
     traitsToHighlight: O,
     className: A.card,
     style: n,
@@ -181,10 +181,10 @@ D = o.useCallback((e, t, n, i) => {
 y = o.useCallback((e, t) => {
   let {
     header: n,
-    subtitle: a,
-    section: s
+    subtitle: s,
+    section: a
   } = P[e];
-  switch (s) {
+  switch (a) {
     case 'upsell':
       return (0, l.jsx)(T.Z, {});
     case 'hero':
@@ -205,7 +205,7 @@ y = o.useCallback((e, t) => {
               position: 'absolute'
             },
             title: n,
-            subtitle: a
+            subtitle: s
           }),
           'global_discovery' === i ? (0, l.jsx)('div', {
             className: A.topPicksToolbar,
@@ -218,7 +218,7 @@ y = o.useCallback((e, t) => {
         return null;
       return (0, l.jsx)(S.Z, {
         title: n,
-        subtitle: a,
+        subtitle: s,
         style: {
           ...t,
           marginTop: 8,
@@ -230,7 +230,7 @@ y = o.useCallback((e, t) => {
   P,
   i
 ]);
-  return 0 === r.length && s && 'saved_guilds' === i ? (0, l.jsxs)('div', {
+  return 0 === r.length && a && 'saved_guilds' === i ? (0, l.jsxs)('div', {
 className: A.emptySavedGuilds,
 children: [
   (0, l.jsx)(d.Heading, {
@@ -244,7 +244,7 @@ children: [
     children: N.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION
   })
 ]
-  }) : 0 !== r.length && s ? (0, l.jsx)(l.Fragment, {
+  }) : 0 !== r.length && a ? (0, l.jsx)(l.Fragment, {
 children: (0, l.jsx)('div', {
   className: A.masonryListContainer,
   children: (0, l.jsx)(d.MasonryList, {
@@ -271,9 +271,9 @@ children: (0, l.jsx)('div', {
     },
     chunkSize: 24,
     maxContentWidth: 2000,
-    onScroll: a
+    onScroll: s
   })
 })
   }) : null;
 }
-(s = i || (i = {})).UPSELL = 'upsell', s.TOP_PICKS = 'top_picks', s.OTHER_GUILDS = 'other_guilds', s.HERO = 'hero', (r = a || (a = {})).DEFAULT = 'default', r.UPSELL = 'upsell', r.GLOBAL_DISCOVERY = 'global_discovery', r.SAVED_GUILDS = 'saved_guilds';
+(a = i || (i = {})).UPSELL = 'upsell', a.TOP_PICKS = 'top_picks', a.OTHER_GUILDS = 'other_guilds', a.HERO = 'hero', (r = s || (s = {})).DEFAULT = 'default', r.UPSELL = 'upsell', r.GLOBAL_DISCOVERY = 'global_discovery', r.SAVED_GUILDS = 'saved_guilds';

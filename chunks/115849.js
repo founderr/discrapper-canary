@@ -4,9 +4,9 @@ return N;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(512722),
   o = n.n(l),
   c = n(481060),
@@ -53,16 +53,16 @@ case 'ERROR':
 }
 
 function N() {
-  let e = a.createRef(),
-t = a.createRef(),
-[n, s] = a.useReducer(C, p),
+  let e = s.createRef(),
+t = s.createRef(),
+[n, a] = s.useReducer(C, p),
 {
   canSend: l,
   hint: u,
   success: N,
   error: A
 } = n;
-  return a.useEffect(() => {
+  return s.useEffect(() => {
 null != N && (o()(null != e.current, 'Input is submitting when not mounted'), e.current.value = '', e.current.focus());
   }, [
 N,
@@ -74,7 +74,7 @@ onSubmit: t => {
   !n.includes('#') && n.startsWith('@') && (n = n.substring(1));
   let i = (0, _.Zy)(n);
   if (null != i) {
-    s({
+    a({
       type: 'ERROR',
       text: i
     });
@@ -85,14 +85,14 @@ onSubmit: t => {
     context: {
       location: 'Add Friend'
     }
-  }).then(() => s({
+  }).then(() => a({
     type: 'SUCCESS',
     text: I.Z.Messages.ADD_FRIEND_SUCCESS.format({
       discordTag: n
     })
   }), e => {
     var t;
-    return s({
+    return a({
       type: 'ERROR',
       text: (0, _.NF)(null === (t = e.body) || void 0 === t ? void 0 : t.code, n)
     });
@@ -127,23 +127,23 @@ children: [
               if (n.includes('#')) {
                 o()(null != e.current, 'Input is handling keypress when not mounted');
                 let i = n.indexOf('#'),
-                  a = e.current.selectionStart,
-                  s = t.key === E.mR.Backspace || t.key === E.mR.ArrowRight || t.key === E.mR.ArrowLeft,
+                  s = e.current.selectionStart,
+                  a = t.key === E.mR.Backspace || t.key === E.mR.ArrowRight || t.key === E.mR.ArrowLeft,
                   r = t.which >= 48 && t.which <= 57;
-                null != a && a > i && /^(.+?#\d{4})$/.test(n) && !s ? t.preventDefault() : null != a && a > i && !r && !s && t.preventDefault();
+                null != s && s > i && /^(.+?#\d{4})$/.test(n) && !a ? t.preventDefault() : null != s && s > i && !r && !a && t.preventDefault();
               }
             }
           },
           onChange: e => {
             if (e.length <= 0) {
-              s({
+              a({
                 type: 'RESET'
               });
               return;
             }
             let t = '',
               [, n] = e.split('#');
-            null != n && (t = e + h.LYt.slice(null != n ? n.length + 1 : 0)), s({
+            null != n && (t = e + h.LYt.slice(null != n ? n.length + 1 : 0)), a({
               type: 'HINT',
               text: t
             });

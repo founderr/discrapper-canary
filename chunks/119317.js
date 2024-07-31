@@ -1,9 +1,9 @@
 var i = n(735250),
-  a = n(470079),
-  s = n(664751),
+  s = n(470079),
+  a = n(664751),
   r = n(481060),
   l = n(703656);
-class o extends a.PureComponent {
+class o extends s.PureComponent {
   componentDidUpdate(e) {
 let {
   resetCurrentPage: t
@@ -17,15 +17,15 @@ let {
   totalCount: e,
   pageSize: t,
   maxVisiblePages: n,
-  children: a
+  children: s
 } = this.props, {
-  currentPage: s
+  currentPage: a
 } = this.state;
-return a({
+return s({
   controller: (0, i.jsx)(r.Paginator, {
     totalCount: e,
     pageSize: t,
-    currentPage: s,
+    currentPage: a,
     maxVisiblePages: n,
     onPageChange: this.handlePageChange
   })
@@ -46,10 +46,10 @@ super(e), t = this, n = 'handlePageChange', i = e => {
   configurable: !0,
   writable: !0
 }) : t[n] = i;
-let a = (0, l.s1)().location.search,
+let s = (0, l.s1)().location.search,
   {
     offset: r
-  } = null != a && a.length > 0 && a.startsWith('?') ? s.parse(a) : {},
+  } = null != s && s.length > 0 && s.startsWith('?') ? a.parse(s) : {},
   o = null != r ? Math.floor(parseInt(r, 10) / e.pageSize) + 1 : 1;
 this.state = {
   currentPage: o

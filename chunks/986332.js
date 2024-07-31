@@ -1,6 +1,6 @@
 n.d(t, {
   o: function() {
-return a;
+return s;
   }
 });
 let i = (0, n(818083).B)({
@@ -38,7 +38,7 @@ showRedesignedLiveChannelNotice: !1
   ]
 });
 
-function a() {
+function s() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
 {
   showRedesignedChannelNotice: t,

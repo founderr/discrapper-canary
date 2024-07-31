@@ -48,18 +48,18 @@ style: r,
 disabled: m,
 emoji: v,
 url: x,
-skuId: I
+skuId: E
   } = e, {
-executeStateUpdate: E,
+executeStateUpdate: I,
 visualState: T,
 isDisabled: N
-  } = (0, _.Ee)(e), g = (0, d.I)(I), S = null != I && r === u.ZJ.PREMIUM, b = S && (null == g ? void 0 : g.disabled), O = S ? null == g ? void 0 : g.label : t, j = null != v, M = null != O && O.length > 0, y = r === u.ZJ.LINK && null != x && x.length > 0, Z = T === p.gH.LOADING || S && null == g;
-  return n = y ? () => {
+  } = (0, _.Ee)(e), g = (0, d.I)(E), S = null != E && r === u.ZJ.PREMIUM, b = S && (null == g ? void 0 : g.disabled), O = S ? null == g ? void 0 : g.label : t, j = null != v, M = null != O && O.length > 0, Z = r === u.ZJ.LINK && null != x && x.length > 0, y = T === p.gH.LOADING || S && null == g;
+  return n = Z ? () => {
 (0, f.q)({
   href: null != x ? x : '',
   shouldConfirm: !0
 });
-  } : S ? null != g && !1 === g.disabled ? g.onClick : a.noop : () => E(), (0, l.jsxs)(o.Button, {
+  } : S ? null != g && !1 === g.disabled ? g.onClick : a.noop : () => I(), (0, l.jsxs)(o.Button, {
 color: function(e) {
   switch (e) {
     case u.ZJ.PRIMARY:
@@ -77,19 +77,19 @@ size: o.Button.Sizes.SMALL,
 disabled: m || T === p.gH.DISABLED || N || b,
 onClick: n,
 onContextMenu: e => {
-  y && (0, s.vq)(e, e => (0, l.jsx)(h, {
+  Z && (0, s.vq)(e, e => (0, l.jsx)(h, {
     ...e,
     url: x
   }));
 },
-role: y ? 'link' : 'button',
+role: Z ? 'link' : 'button',
 children: [
   (0, l.jsxs)('div', {
     className: i()(C.content, {
-      [C.hidden]: Z,
+      [C.hidden]: y,
       [C.premium]: S
     }),
-    'aria-hidden': Z,
+    'aria-hidden': y,
     children: [
       S ? (0, l.jsx)('div', {
         className: C.shopIcon,
@@ -111,14 +111,14 @@ children: [
         className: C.label,
         children: O
       }) : null,
-      y ? (0, l.jsx)(o.WindowLaunchIcon, {
+      Z ? (0, l.jsx)(o.WindowLaunchIcon, {
         size: 'xs',
         color: 'currentColor',
         className: C.launchIcon
       }) : null
     ]
   }),
-  Z ? (0, l.jsx)('div', {
+  y ? (0, l.jsx)('div', {
     className: C.loading,
     children: (0, l.jsx)(o.Dots, {
       dotRadius: 3.5,

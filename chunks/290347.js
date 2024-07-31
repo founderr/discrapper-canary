@@ -4,9 +4,9 @@ return Z;
   }
 }), n(47120), n(411104), n(315314), n(610138), n(216116), n(78328), n(815648);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(330711),
   o = n(442837),
   c = n(481060),
@@ -38,8 +38,8 @@ return (0, i.jsx)(c.TextBadge, {
 let {
   header: t,
   subHeader: n,
-  imageSrc: a,
-  tagText: s,
+  imageSrc: s,
+  tagText: a,
   wideStyle: l
 } = e;
 return (0, i.jsxs)('div', {
@@ -47,8 +47,8 @@ return (0, i.jsxs)('div', {
     [C.wideStyle]: l
   }),
   children: [
-    null != s ? (0, i.jsx)(A, {
-      tagText: s,
+    null != a ? (0, i.jsx)(A, {
+      tagText: a,
       className: C.featureCardTag
     }) : null,
     (0, i.jsx)('img', {
@@ -56,7 +56,7 @@ return (0, i.jsxs)('div', {
       className: r()(C.featureCardImg, {
         [C.wideStyle]: l
       }),
-      src: a
+      src: s
     }),
     (0, i.jsxs)('div', {
       className: C.featureCardTextGroup,
@@ -80,7 +80,7 @@ function Z(e) {
   let {
 className: t,
 renderModalProps: n,
-heroArt: s,
+heroArt: a,
 heroArtClassName: A,
 modalDismissibleContent: Z,
 modalTopExtra: L,
@@ -95,9 +95,9 @@ body: y
   } = e, {
 onClose: j,
 transitionState: U
-  } = n, G = (0, I.Dt)(), k = P.length % 2 == 0, w = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), [B, H] = a.useState(Date.now()), [V, F] = a.useState(0), [Y, W] = a.useState(0), [z, K] = a.useState(!1), [q, Q] = a.useState(!0), X = a.useRef(B), J = a.useRef(V), $ = a.useRef(Y), ee = a.useRef(z), et = a.useRef(q), [en, ei] = a.useState(N), ea = a.useRef(!1);
+  } = n, G = (0, I.Dt)(), k = P.length % 2 == 0, w = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), [B, H] = s.useState(Date.now()), [V, F] = s.useState(0), [Y, W] = s.useState(0), [z, K] = s.useState(!1), [q, Q] = s.useState(!0), X = s.useRef(B), J = s.useRef(V), $ = s.useRef(Y), ee = s.useRef(z), et = s.useRef(q), [en, ei] = s.useState(N), es = s.useRef(!1);
 
-  function es() {
+  function ea() {
 let e = Date.now(),
   t = e - X.current,
   n = J.current,
@@ -107,13 +107,13 @@ return ee.current && (F(n += t), !et.current && W(i += t)), H(e), [
   i
 ];
   }
-  return a.useEffect(() => {
+  return s.useEffect(() => {
 let e = async () => {
   try {
     var e;
-    if ('video' !== s.type || null == s.subtitles)
+    if ('video' !== a.type || null == a.subtitles)
       return;
-    let t = null === (e = s.subtitles) || void 0 === e ? void 0 : e.map(async e => {
+    let t = null === (e = a.subtitles) || void 0 === e ? void 0 : e.map(async e => {
       let t = await fetch(e.src);
       if (!t.ok)
         throw Error('Failed to fetch the subtitle file '.concat(e.src));
@@ -121,10 +121,10 @@ let e = async () => {
         i = new Blob([n], {
           type: 'text/vtt'
         }),
-        a = URL.createObjectURL(i);
+        s = URL.createObjectURL(i);
       return {
         ...e,
-        src: a
+        src: s
       };
     });
     ei(await Promise.all(t));
@@ -132,15 +132,15 @@ let e = async () => {
     p.Z.captureException(e), ei(N);
   }
 };
-!0 !== ea.current && e(), ea.current = !0;
+!0 !== es.current && e(), es.current = !0;
   }, [
-s,
+a,
 en
-  ]), a.useEffect(() => () => {
+  ]), s.useEffect(() => () => {
 null != en && en.forEach(e => {
   URL.revokeObjectURL(e.src);
 });
-  }, [en]), a.useEffect(() => {
+  }, [en]), s.useEffect(() => {
 X.current = B, J.current = V, $.current = Y, ee.current = z, et.current = q;
   }, [
 B,
@@ -148,9 +148,9 @@ V,
 Y,
 z,
 q
-  ]), a.useEffect(() => () => {
-if ('video' === s.type || 'embed' === s.type) {
-  let [e, t] = es();
+  ]), s.useEffect(() => () => {
+if ('video' === a.type || 'embed' === a.type) {
+  let [e, t] = ea();
   g.default.track(S.rMx.CHANGE_LOG_VIDEO_PLAYED, {
     change_log_id: M,
     seconds_played: Math.round(e / 1000)
@@ -161,8 +161,8 @@ if ('video' === s.type || 'embed' === s.type) {
 }
   }, [
 M,
-s.type
-  ]), a.useEffect(() => {
+a.type
+  ]), s.useEffect(() => {
 null != Z && (0, h.kk)(Z);
 let e = Date.now();
 return g.default.track(S.rMx.CHANGE_LOG_OPENED, {
@@ -199,28 +199,28 @@ children: [
         className: r()(C.headerText, R),
         children: O
       }),
-      'video' === s.type ? (0, i.jsx)(m.Z, {
+      'video' === a.type ? (0, i.jsx)(m.Z, {
         className: r()(C.video, A),
         autoPlay: !w,
         loop: !0,
         muted: !0,
         controls: !0,
         controlsList: 'nofullscreen nodownload noremoteplayback noplaybackrate',
-        src: s.src,
-        poster: s.poster,
+        src: a.src,
+        poster: a.poster,
         onPlay: e => {
           g.default.track(S.rMx.CHANGE_LOG_VIDEO_INTERACTED, {
             change_log_id: M
           }), H(Date.now()), K(!0), Q(e.currentTarget.muted);
         },
         onEnded: e => {
-          es(), Q(e.currentTarget.muted), K(!1);
+          ea(), Q(e.currentTarget.muted), K(!1);
         },
         onVolumeChange: e => {
-          es(), Q(e.currentTarget.muted);
+          ea(), Q(e.currentTarget.muted);
         },
         onPause: e => {
-          es(), Q(e.currentTarget.muted), K(!1);
+          ea(), Q(e.currentTarget.muted), K(!1);
         },
         disablePictureInPicture: !0,
         children: null == en ? void 0 : en.map(e => {
@@ -233,15 +233,15 @@ children: [
             default: e.isDefault
           }, e.locale);
         })
-      }) : 'embed' === s.type ? (0, i.jsx)(u.BC, {
+      }) : 'embed' === a.type ? (0, i.jsx)(u.BC, {
         className: r()(C.video, A),
         allowFullScreen: !1,
-        href: s.href,
-        thumbnail: s.thumbnail,
-        video: s.embed,
+        href: a.href,
+        thumbnail: a.thumbnail,
+        video: a.embed,
         provider: _.pn.YOUTUBE,
-        maxWidth: s.embed.width,
-        maxHeight: s.embed.height,
+        maxWidth: a.embed.width,
+        maxHeight: a.embed.height,
         renderVideoComponent: E.lV,
         renderImageComponent: E.Yi,
         renderLinkComponent: E.iT,
@@ -251,10 +251,10 @@ children: [
             change_log_id: M
           });
         }
-      }) : 'image' === s.type ? (0, i.jsx)('img', {
+      }) : 'image' === a.type ? (0, i.jsx)('img', {
         alt: '',
         className: r()(C.video, A),
-        src: s.src
+        src: a.src
       }) : null,
       (0, i.jsxs)(c.Heading, {
         variant: 'heading-lg/semibold',

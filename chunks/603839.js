@@ -4,9 +4,9 @@ return Z;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(392711),
   o = n(338545),
   c = n(442837),
@@ -36,18 +36,18 @@ function Z(e) {
   let {
 guildId: t,
 onClose: n
-  } = e, s = (0, m.Wg)(), {
+  } = e, a = (0, m.Wg)(), {
 progress: Z,
 errors: L,
 submitting: O
   } = (0, c.cj)([m.ZP], () => {
-var e, n, i, a;
+var e, n, i, s;
 return {
-  progress: null !== (a = null === (e = m.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== a ? a : s,
+  progress: null !== (s = null === (e = m.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== s ? s : a,
   errors: null === (n = m.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
   submitting: null === (i = m.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
 };
-  }), R = a.useMemo(() => (0, C.G)(L), [L]), [x, b] = a.useState(!1), [P, M] = a.useState(window.innerWidth), [D, y] = a.useState(1), [j, U] = a.useState(!0), G = (0, g.f)(), k = (0, d.useSpring)({
+  }), R = s.useMemo(() => (0, C.G)(L), [L]), [x, b] = s.useState(!1), [P, M] = s.useState(window.innerWidth), [D, y] = s.useState(1), [j, U] = s.useState(!0), G = (0, g.f)(), k = (0, d.useSpring)({
 opacity: D,
 config: v,
 onStart: () => U(!0),
@@ -75,7 +75,7 @@ leave: {
   opacity: 0
 },
 config: v
-  }), V = a.useCallback(e => {
+  }), V = s.useCallback(e => {
 if (e === R.length)
   y(0), (0, E.Lp)(t, 'signature');
 else if (0 === D)
@@ -93,21 +93,21 @@ t,
 Z.furthestStep,
 R.length
   ]);
-  a.useEffect(() => {
+  s.useEffect(() => {
 (0, E.Lp)(t, (0, E.Qh)(Z.currentStep));
   }, [
 t,
 Z.currentStep
-  ]), a.useEffect(() => {
+  ]), s.useEffect(() => {
 let e = (0, _.pP)((0, l.debounce)(() => M(window.innerWidth), 250));
 return (0, _.YP)(e, document.body), () => (0, _.UC)(e, document.body);
   }, [
 D,
 j
   ]);
-  let F = a.useMemo(() => null != L && Object.values(L).some(e => null != e), [L]),
-Y = a.useMemo(() => null != L && Object.values(L).length > 0 ? (0, C.G)(L).find(e => e.hasError) : null, [L]),
-W = a.useCallback(() => {
+  let F = s.useMemo(() => null != L && Object.values(L).some(e => null != e), [L]),
+Y = s.useMemo(() => null != L && Object.values(L).length > 0 ? (0, C.G)(L).find(e => e.hasError) : null, [L]),
+W = s.useCallback(() => {
   y(1), h._9(t, {
     currentStep: null == Y ? void 0 : Y.index
   });
@@ -124,14 +124,14 @@ W = a.useCallback(() => {
 {
   enableApplication: K
 } = (0, I.Fg)('ClanDiscoveryAdminContainer'),
-q = a.useCallback(() => {
+q = s.useCallback(() => {
   0 === z.filter(e => e.id !== t).length && K ? (0, u.fH)(u.v0.GET_STARTED) : (0, u.fH)(u.v0.ADMIN_UPSELL);
 }, [
   z,
   t,
   K
 ]),
-Q = a.useCallback(() => {
+Q = s.useCallback(() => {
   (0, C.V)({
     guildId: t,
     onSuccess: () => {
@@ -145,7 +145,7 @@ Q = a.useCallback(() => {
   q,
   n
 ]),
-X = a.useRef(null),
+X = s.useRef(null),
 J = null != Y ? (0, i.jsxs)('div', {
   className: A.tooltipContents,
   children: [

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(481060),
   o = n(404975),
   c = n(455839),
@@ -11,7 +11,7 @@ var i = n(735250),
 t.Z = function(e) {
   let {
 guild: t
-  } = e, [n, s] = a.useState(!1), _ = a.useCallback(() => s(!0), [s]), h = a.useCallback(() => s(!0), [s]);
+  } = e, [n, a] = s.useState(!1), _ = s.useCallback(() => a(!0), [a]), h = s.useCallback(() => a(!0), [a]);
   return (0, i.jsx)('div', {
 className: r()(u.actionButtonsContainer, {
   [u.forceButtonsShow]: n
@@ -31,14 +31,14 @@ children: (0, i.jsx)(o.ZP, {
         hideOnClick: !0,
         children: e => {
           let {
-            onClick: a,
-            ...s
+            onClick: s,
+            ...a
           } = e;
           return (0, i.jsx)(o.zx, {
             ...n,
-            ...s,
+            ...a,
             onClick: e => {
-              e.stopPropagation(), null == a || a(), t(e);
+              e.stopPropagation(), null == s || s(), t(e);
             },
             'aria-label': d.Z.Messages.MORE,
             children: (0, i.jsx)(l.MoreHorizontalIcon, {

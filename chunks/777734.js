@@ -1,11 +1,11 @@
 var i = n(735250),
-  a = n(470079),
-  s = n(481060),
+  s = n(470079),
+  a = n(481060),
   r = n(477975);
-let l = a.forwardRef(function(e, t) {
+let l = s.forwardRef(function(e, t) {
   let {
 title: n,
-subtitle: a,
+subtitle: s,
 icon: l,
 style: o
   } = e;
@@ -19,22 +19,22 @@ children: [
         className: r.sectionHeaderTitle,
         children: [
           l,
-          (0, i.jsx)(s.Heading, {
+          (0, i.jsx)(a.Heading, {
             variant: 'heading-lg/medium',
             color: 'header-primary',
             children: n
           })
         ]
       }),
-      null != a && (0, i.jsxs)(i.Fragment, {
+      null != s && (0, i.jsxs)(i.Fragment, {
         children: [
           (0, i.jsx)('div', {
             className: r.sectionHeaderSpacer
           }),
-          (0, i.jsx)(s.Text, {
+          (0, i.jsx)(a.Text, {
             variant: 'text-sm/normal',
             color: 'text-muted',
-            children: a
+            children: s
           })
         ]
       })
@@ -46,4 +46,4 @@ children: [
 ]
   });
 });
-t.Z = a.memo(l);
+t.Z = s.memo(l);

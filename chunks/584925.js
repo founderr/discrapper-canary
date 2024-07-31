@@ -1,6 +1,6 @@
 n(47120);
-var i, a = n(442837),
-  s = n(570140),
+var i, s = n(442837),
+  a = n(570140),
   r = n(70956),
   l = n(761080),
   o = n(207205);
@@ -17,7 +17,7 @@ let d = 5 * r.Z.Millis.DAY,
   u = {
 readIdToTimestampMap: {}
   };
-class _ extends(i = a.ZP.DeviceSettingsStore) {
+class _ extends(i = s.ZP.DeviceSettingsStore) {
   initialize(e) {
 u = null != e && null != e.readIdToTimestampMap ? {
   readIdToTimestampMap: e.readIdToTimestampMap
@@ -38,7 +38,7 @@ return u;
 return u;
   }
 }
-c(_, 'displayName', 'GravityUnreadStateStore'), c(_, 'persistKey', 'GravityUnreadStateStore'), t.Z = new _(s.Z, {
+c(_, 'displayName', 'GravityUnreadStateStore'), c(_, 'persistKey', 'GravityUnreadStateStore'), t.Z = new _(a.Z, {
   GRAVITY_ACK_ITEMS: function(e) {
 let {
   items: t,

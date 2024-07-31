@@ -1,5 +1,5 @@
-var i, a = n(442837),
-  s = n(570140);
+var i, s = n(442837),
+  a = n(570140);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -10,7 +10,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let l = {};
-class o extends(i = a.ZP.DeviceSettingsStore) {
+class o extends(i = s.ZP.DeviceSettingsStore) {
   initialize(e) {
 l = null != e ? e : {};
   }
@@ -27,7 +27,7 @@ return l;
 return l;
   }
 }
-r(o, 'displayName', 'GravityFiltersStore'), r(o, 'persistKey', 'GravityFiltersStore'), t.Z = new o(s.Z, {
+r(o, 'displayName', 'GravityFiltersStore'), r(o, 'persistKey', 'GravityFiltersStore'), t.Z = new o(a.Z, {
   SET_GRAVITY_FILTERS: function(e) {
 l = e.filters;
   }

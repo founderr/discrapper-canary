@@ -4,8 +4,8 @@ return l;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(709014);
+  s = n(470079),
+  a = n(709014);
 let r = {
 all: {
   name: 'all',
@@ -14,14 +14,14 @@ all: {
 }
   },
   l = () => {
-let e = a.useRef(null),
-  t = a.useCallback(() => {
+let e = s.useRef(null),
+  t = s.useCallback(() => {
     null != e.current && e.current.play('all');
   }, []),
-  l = a.useCallback(() => {
+  l = s.useCallback(() => {
     null != e.current && e.current.play('all');
   }, []),
-  o = a.useCallback(() => {
+  o = s.useCallback(() => {
     null != e.current && e.current.stopIfPlaying('all');
   }, []);
 return {
@@ -31,7 +31,7 @@ return {
     onMouseLeave: o
   },
   play: t,
-  Component: a.useCallback(t => (0, i.jsx)(s.L, {
+  Component: s.useCallback(t => (0, i.jsx)(a.L, {
     ...t,
     src: () => n.e('66944').then(n.t.bind(n, 166174, 19)),
     ref: e,

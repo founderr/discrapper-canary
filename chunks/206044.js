@@ -179,7 +179,7 @@ children: [
                   0
                 ]
               }),
-              visibility: b || !j ? 'visible' : 'hidden'
+              visibility: b || !j ? 'inherit' : 'hidden'
             },
             'aria-hidden': !b && j,
             children: (0, i.jsxs)(d.ClickableContainer, {
@@ -241,7 +241,7 @@ children: [
                   1
                 ]
               }),
-              visibility: b || j ? 'visible' : 'hidden'
+              visibility: b || j ? 'inherit' : 'hidden'
             },
             'aria-hidden': !b && !j,
             children: [
@@ -326,7 +326,7 @@ children: [
             children: e => (0, i.jsx)(l.animated.div, {
               style: {
                 opacity: D,
-                visibility: b || j ? 'visible' : 'hidden'
+                visibility: b || j ? 'inherit' : 'hidden'
               },
               'aria-hidden': !b && !j,
               children: (0, i.jsx)(d.Clickable, {

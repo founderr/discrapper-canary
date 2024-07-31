@@ -4,14 +4,14 @@ return c;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(493683),
+  s = n(470079),
+  a = n(493683),
   r = n(239091),
   l = n(730749),
   o = n(430824);
 
 function c(e) {
-  return (0, l.Z)(class extends a.Component {
+  return (0, l.Z)(class extends s.Component {
 render() {
   return (0, i.jsx)(e, {
     ...this.props,
@@ -22,9 +22,9 @@ render() {
   });
 }
 handleMessageUser(e, t) {
-  return s.Z.openPrivateChannel(t.id);
+  return a.Z.openPrivateChannel(t.id);
 }
-handleUserContextMenu(e, t, a) {
+handleUserContextMenu(e, t, s) {
   (0, r.jW)(e, async () => {
     let {
       default: e
@@ -38,7 +38,7 @@ handleUserContextMenu(e, t, a) {
       user: t
     });
   }, {
-    onClose: a
+    onClose: s
   });
 }
 handleGuildContextMenu(e, t) {
@@ -65,8 +65,8 @@ handleGuildContextMenu(e, t) {
   });
 }
 handleChannelContextMenu(e, t) {
-  let a = o.Z.getGuild(t.getGuildId());
-  if (null == a)
+  let s = o.Z.getGuild(t.getGuildId());
+  if (null == s)
     return null;
   (0, r.jW)(e, async () => {
     let {
@@ -75,7 +75,7 @@ handleChannelContextMenu(e, t) {
     return n => (0, i.jsx)(e, {
       ...n,
       channel: t,
-      guild: a
+      guild: s
     });
   });
 }

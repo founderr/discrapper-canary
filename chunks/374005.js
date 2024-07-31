@@ -4,8 +4,8 @@ return p;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(393238),
+  s = n(470079),
+  a = n(393238),
   r = n(540059),
   l = n(720734),
   o = n(840780),
@@ -33,8 +33,8 @@ guildId: t
 
 function p() {
   let e = (0, r.Q)('AppPanels'),
-t = a.useRef(null);
-  return (0, s.P)(t, t => {
+t = s.useRef(null);
+  return (0, a.P)(t, t => {
 let {
   height: n
 } = t;

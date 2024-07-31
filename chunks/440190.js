@@ -1,5 +1,5 @@
 let i;
-var a, s, r, l, o = n(442837),
+var s, a, r, l, o = n(442837),
   c = n(570140),
   d = n(900849);
 let u = null,
@@ -19,12 +19,12 @@ return _;
 return h;
   }
 }
-r = 'GuildRecommendationsStore', (s = 'displayName') in(a = E) ? Object.defineProperty(a, s, {
+r = 'GuildRecommendationsStore', (a = 'displayName') in(s = E) ? Object.defineProperty(s, a, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = r, t.Z = new E(c.Z, {
+}) : s[a] = r, t.Z = new E(c.Z, {
   GUILD_RECOMMENDATION_FETCH: function() {
 _ = !0;
   },

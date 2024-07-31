@@ -11,8 +11,8 @@ return c;
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(338545),
   l = n(481060),
   o = n(453378);
@@ -41,7 +41,7 @@ onClick: t,
 icon: n
   } = e;
   return null != t ? (0, i.jsx)(l.Clickable, {
-className: s()(o.clickable, o.icon),
+className: a()(o.clickable, o.icon),
 onClick: t,
 children: (0, i.jsx)(n, {
   color: l.tokens.colors.HEADER_PRIMARY,
@@ -60,7 +60,7 @@ className: t,
 children: n
   } = e;
   return (0, i.jsx)('div', {
-className: s()(o.headerBar, t),
+className: a()(o.headerBar, t),
 children: n
   });
 }

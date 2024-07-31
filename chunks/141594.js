@@ -1,7 +1,7 @@
 n(47120);
 var i = n(470079),
-  a = n(115434),
-  s = n(442837),
+  s = n(115434),
+  a = n(442837),
   r = n(704215),
   l = n(243778),
   o = n(594174),
@@ -14,9 +14,9 @@ var i = n(470079),
   I = n(921944);
 let m = 'useCollectiblesShopTabNewBadge';
 t.Z = () => {
-  let e = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
+  let e = (0, a.e7)([o.default], () => o.default.getCurrentUser()),
 t = (0, h.I)(m),
-n = (0, s.e7)([d.Z], () => d.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
+n = (0, a.e7)([d.Z], () => d.Z.getMarketingBySurface(s.K.DESKTOP_SHOP_BUTTON)),
 g = (0, u.J)(m),
 p = i.useMemo(() => {
   if ((0, c.Fc)(e)) {

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(570140),
+var s = n(481060),
+  a = n(570140),
   r = n(317770),
   l = n(314897),
   o = n(592125),
@@ -12,23 +12,23 @@ var a = n(481060),
 let _ = 'STAGE_INVITED_TO_SPEAK_MODAL';
 class h extends r.Z {
   _initialize() {
-s.Z.subscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
+a.Z.subscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
   }
   _terminate() {
-s.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
+a.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
   }
   constructor(...e) {
-var t, s, r;
-super(...e), t = this, s = 'handleVoiceStateUpdates', r = e => {
+var t, a, r;
+super(...e), t = this, a = 'handleVoiceStateUpdates', r = e => {
   var t;
   let {
-    voiceStates: s
-  } = e, r = l.default.getId(), h = null === (t = c.Z.getSession()) || void 0 === t ? void 0 : t.sessionId, E = s.find(e => e.userId === r && e.sessionId === h);
+    voiceStates: a
+  } = e, r = l.default.getId(), h = null === (t = c.Z.getSession()) || void 0 === t ? void 0 : t.sessionId, E = a.find(e => e.userId === r && e.sessionId === h);
   if (null == E)
     return;
   let I = E.channelId;
   if (null == I) {
-    (0, a.hasModalOpen)(_) && (0, a.closeModal)(_);
+    (0, s.hasModalOpen)(_) && (0, s.closeModal)(_);
     return;
   }
   let m = o.Z.getChannel(I);
@@ -36,9 +36,9 @@ super(...e), t = this, s = 'handleVoiceStateUpdates', r = e => {
     return;
   let g = (0, d.gf)(E) === d.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
   if (null != m && g) {
-    if ((0, a.hasModalOpen)(_))
+    if ((0, s.hasModalOpen)(_))
       return;
-    (0, a.openModalLazy)(async () => {
+    (0, s.openModalLazy)(async () => {
       let {
         default: e
       } = await n.e('13878').then(n.bind(n, 113140));
@@ -51,12 +51,12 @@ super(...e), t = this, s = 'handleVoiceStateUpdates', r = e => {
       onCloseRequest: u.VqG
     });
   }
-}, s in t ? Object.defineProperty(t, s, {
+}, a in t ? Object.defineProperty(t, a, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : t[s] = r;
+}) : t[a] = r;
   }
 }
 t.Z = new h();

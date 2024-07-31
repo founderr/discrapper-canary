@@ -1,6 +1,6 @@
 a.d(s, {
   Z: function() {
-return u;
+return A;
   }
 }), a(47120);
 var n = a(470079),
@@ -13,12 +13,12 @@ var n = a(470079),
   c = a(709054),
   _ = a(206583);
 let I = new Set([t.s.PLAYED_GAME]),
-  A = e => I.has(e.content_type);
+  u = e => I.has(e.content_type);
 
-function u() {
+function A() {
   let e = (0, o.Z)(_.YN.GAME_PROFILE_FEED),
 s = (0, o.Z)(_.YN.GLOBAL_FEED),
-a = n.useMemo(() => r()(s).unionBy(e, e => e.id).filter(A).orderBy(e => c.default.extractTimestamp(e.id), 'desc').uniqWith((e, s) => e.author_id === s.author_id && e.extra.application_id === s.extra.application_id).value(), [
+a = n.useMemo(() => r()(s).unionBy(e, e => e.id).filter(u).orderBy(e => c.default.extractTimestamp(e.id), 'desc').uniqWith((e, s) => e.author_id === s.author_id && e.extra.application_id === s.extra.application_id).value(), [
   e,
   s
 ]);

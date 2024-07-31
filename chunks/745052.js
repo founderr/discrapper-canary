@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(91192),
   o = n(286379),
   c = n(442837),
@@ -55,24 +55,24 @@ var i = n(735250),
   en = n(757833),
   ei = n(489919);
 
-function ea() {
-  let e = a.useRef(null),
+function es() {
+  let e = s.useRef(null),
 t = (0, Y.q)(),
 n = (0, W.Z)(),
-s = (0, H.K)(),
+a = (0, H.K)(),
 c = (0, m.N)(),
 d = n.length > 0 ? null == n ? void 0 : n[0].channel.id : null,
 _ = (0, G.e)({
   location: 'message-request-page-web'
 });
-  a.useEffect(() => {
+  s.useEffect(() => {
 if (!!_ && null != d)
   (0, h.ES)(d);
   }, [
 d,
 _
   ]);
-  let E = a.useCallback(() => {
+  let E = s.useCallback(() => {
   (0, u.showToast)((0, u.createToast)(et.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE));
 }, []),
 {
@@ -84,17 +84,17 @@ g = (0, p.Z)('message-requests-list'),
 {
   channelId: T
 } = (0, F._)(),
-S = a.useCallback(() => {
+S = s.useCallback(() => {
   I(n.map(e => e.channel.id));
 }, [
   n,
   I
 ]),
-f = a.useCallback(e => {
-  var t, a;
+f = s.useCallback(e => {
+  var t, s;
   let {
     row: l
-  } = e, o = n[l], c = null === (a = n[l + 1]) || void 0 === a ? void 0 : null === (t = a.channel) || void 0 === t ? void 0 : t.id, d = o.channel.id;
+  } = e, o = n[l], c = null === (s = n[l + 1]) || void 0 === s ? void 0 : null === (t = s.channel) || void 0 === t ? void 0 : t.id, d = o.channel.id;
   return (0, i.jsx)(q.Z, {
     index: l,
     className: r()({
@@ -103,14 +103,14 @@ f = a.useCallback(e => {
     }),
     channel: o.channel,
     user: o.user,
-    hasSingleMessageRequest: s
+    hasSingleMessageRequest: a
   }, d);
 }, [
-  s,
+  a,
   n,
   T
 ]),
-C = a.useCallback(() => (0, i.jsxs)(y.Z, {
+C = s.useCallback(() => (0, i.jsxs)(y.Z, {
   className: en.sectionTitle,
   children: [
     t > 0 ? et.Z.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({
@@ -151,17 +151,17 @@ navigator: g,
 children: (0, i.jsx)(l.SJ, {
   children: t => {
     let {
-      ref: a,
-      role: s,
+      ref: s,
+      role: a,
       ...r
     } = t;
     return (0, i.jsx)(u.List, {
       className: en.list,
-      innerRole: s,
+      innerRole: a,
       innerAriaLabel: et.Z.Messages.MESSAGE_REQUESTS,
       ref: t => {
         var n;
-        e.current = t, a.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null;
+        e.current = t, s.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null;
       },
       paddingTop: 24,
       paddingBottom: 24,
@@ -179,12 +179,12 @@ children: (0, i.jsx)(l.SJ, {
   });
 }
 
-function es(e) {
+function ea(e) {
   let {
 pageWidth: t,
 onSidebarResize: n
-  } = e, a = (0, c.e7)([P.ZP], () => P.ZP.getSidebarState(P.uZ)), s = (0, c.e7)([M.Z], () => M.Z.getChannel(null == a ? void 0 : a.channelId));
-  if (null == a || a.type !== O.tI.VIEW_MESSAGE_REQUEST || null == s || !s.isPrivate())
+  } = e, s = (0, c.e7)([P.ZP], () => P.ZP.getSidebarState(P.uZ)), a = (0, c.e7)([M.Z], () => M.Z.getChannel(null == s ? void 0 : s.channelId));
+  if (null == s || s.type !== O.tI.VIEW_MESSAGE_REQUEST || null == a || !a.isPrivate())
 return null;
   let r = t - J.R7I;
   return (0, i.jsx)(T.Z, {
@@ -192,7 +192,7 @@ sidebarType: T.y.MessageRequestSidebar,
 maxWidth: r,
 onWidthChange: n,
 children: (0, i.jsx)(S.Z, {
-  channel: s,
+  channel: a,
   baseChannelId: P.uZ
 })
   });
@@ -215,16 +215,16 @@ return (0, i.jsx)(x.ZP, {
   el = e => {
 let t = (0, B.Z)(),
   n = () => D.Z.hasLayers() || (0, u.hasAnyModalOpen)(),
-  s = (0, c.e7)([g.Z], () => g.Z.useReducedMotion);
-return a.useEffect(() => {
+  a = (0, c.e7)([g.Z], () => g.Z.useReducedMotion);
+return s.useEffect(() => {
   (0, C.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
 }, []), (0, i.jsx)(N.Z, {
   contentTypes: [d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
-  children: a => {
+  children: s => {
     let {
       visibleContent: r,
       markAsDismissed: l
-    } = a;
+    } = s;
     if (r === d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
       return (0, i.jsx)(u.Popout, {
         renderPopout: () => t ? (0, i.jsx)(er, {
@@ -246,7 +246,7 @@ return a.useEffect(() => {
         }),
         position: 'bottom',
         align: 'center',
-        animation: s ? u.Popout.Animation.NONE : u.Popout.Animation.TRANSLATE,
+        animation: a ? u.Popout.Animation.NONE : u.Popout.Animation.TRANSLATE,
         shouldShow: !n(),
         spacing: 16,
         children: () => e.children
@@ -260,22 +260,22 @@ function eo(e) {
   let {
 section: t
   } = e;
-  return t === X.pS.SPAM ? (0, i.jsx)(Q.Z, {}) : (0, i.jsx)(ea, {});
+  return t === X.pS.SPAM ? (0, i.jsx)(Q.Z, {}) : (0, i.jsx)(es, {});
 }
 let ec = (0, I.Z)(function(e) {
   let {
 width: t
   } = e, n = (0, Y.q)();
-  a.useEffect(() => {
+  s.useEffect(() => {
 _.Y(J.Z5c.MESSAGE_REQUESTS), (0, R.e)('message-requests'), j.default.track(J.rMx.MESSAGE_REQUESTS_VIEWED, {
   num_message_requests: n
 }), v.Z.increment({
   name: o.V.MESSAGE_REQUEST_VIEW
 });
   }, []);
-  let s = (0, c.e7)([b.Z], () => b.Z.theme),
+  let a = (0, c.e7)([b.Z], () => b.Z.theme),
 l = (0, z.w)(),
-[d, h] = a.useState(!1),
+[d, h] = s.useState(!1),
 E = (0, c.e7)([P.ZP], () => {
   let e = P.ZP.getSidebarState(P.uZ);
   return null != e && e.type === O.tI.VIEW_MESSAGE_REQUEST ? e : null;
@@ -284,7 +284,7 @@ I = null == E ? void 0 : E.channelId,
 m = null != E,
 g = (0, w.T)(I),
 p = (0, k.J)(I);
-  a.useEffect(() => {
+  s.useEffect(() => {
 null != I && !g && p && m && ((0, Z.Kh)(I), L.Z.closeChannelSidebar(P.uZ));
   }, [
 I,
@@ -292,7 +292,7 @@ p,
 m,
 g
   ]);
-  let [T, S] = a.useState(X.pS.REQUESTS);
+  let [T, S] = s.useState(X.pS.REQUESTS);
   return (0, f.Tt)({
 location: et.Z.Messages.MESSAGE_REQUESTS
   }), (0, i.jsxs)(i.Fragment, {
@@ -304,7 +304,7 @@ children: [
     }),
     children: [
       (0, i.jsxs)(A.Z, {
-        className: (0, U.Q)(s),
+        className: (0, U.Q)(a),
         toolbar: !0,
         children: [
           (0, i.jsx)(A.Z.Icon, {
@@ -350,7 +350,7 @@ children: [
       })
     ]
   }),
-  m && (0, i.jsx)(es, {
+  m && (0, i.jsx)(ea, {
     pageWidth: t,
     onSidebarResize: (e, t) => {
       h(t);

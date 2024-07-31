@@ -4,8 +4,8 @@ return Z;
   }
 }), n(411104);
 var i = n(433517),
-  a = n(570140),
-  s = n(188471),
+  s = n(570140),
+  a = n(188471),
   r = n(581567),
   l = n(594190),
   o = n(19780),
@@ -66,19 +66,19 @@ data: {
   initialized: t.initialized
 }
   });
-  let a = {
+  let s = {
   client_heartbeat_initialization_timestamp: t.initialized,
   client_heartbeat_version: 17
 },
 o = u.Z.getMemoryUsageElectronRenderer();
-  null != o && (a.client_heartbeat_renderer_memory = o);
+  null != o && (s.client_heartbeat_renderer_memory = o);
   let d = u.Z.getMemoryUsageElectronRendererUsedHeapSize();
-  null != d && (a.client_heartbeat_renderer_memory_used_heap = d);
+  null != d && (s.client_heartbeat_renderer_memory_used_heap = d);
   {
 let e = l.ZP.getCurrentGameForAnalytics();
-null != e && (a.client_heartbeat_current_game_id = e.id, a.client_heartbeat_current_game_name = e.name, a.client_heartbeat_current_game_executable = (0, r.N6)(e.exePath), a.client_heartbeat_current_game_distributor = e.distributor);
+null != e && (s.client_heartbeat_current_game_id = e.id, s.client_heartbeat_current_game_name = e.name, s.client_heartbeat_current_game_executable = (0, r.N6)(e.exePath), s.client_heartbeat_current_game_distributor = e.distributor);
   }
-  c.default.track(E.rMx.CLIENT_HEARTBEAT, a), i.K.set(I, Date.now().toString()), (0, s.Z)();
+  c.default.track(E.rMx.CLIENT_HEARTBEAT, s), i.K.set(I, Date.now().toString()), (0, a.Z)();
 }
 let N = null,
   A = !0;
@@ -95,14 +95,14 @@ try {
   if (!!T)
     T = !1, _.Z.addBreadcrumb({
       message: 'Stopping Analytics Heartbeat'
-    }), (0, h.fr)(!1), f(), (0, s.Z)();
+    }), (0, h.fr)(!1), f(), (0, a.Z)();
 }();
 }
 
 function Z() {
   _.Z.addBreadcrumb({
 message: 'Initializing SessionHeartbeatScheduler'
-  }), o.Z.addChangeListener(O), a.Z.subscribe('WINDOW_FOCUS', R), a.Z.subscribe('APP_STATE_UPDATE', x), a.Z.subscribe('LOGIN_SUCCESS', L), v();
+  }), o.Z.addChangeListener(O), s.Z.subscribe('WINDOW_FOCUS', R), s.Z.subscribe('APP_STATE_UPDATE', x), s.Z.subscribe('LOGIN_SUCCESS', L), v();
 }
 
 function L() {

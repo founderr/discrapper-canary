@@ -4,8 +4,8 @@ return C;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(481060),
+  s = n(470079),
+  a = n(481060),
   r = n(117496),
   l = n(766219),
   o = n(801543),
@@ -24,7 +24,7 @@ var i = n(735250),
   f = n(679199);
 
 function C() {
-  let e = a.useRef((0, r.P)()),
+  let e = s.useRef((0, r.P)()),
 {
   tabs: t,
   selectedTab: n,
@@ -53,7 +53,7 @@ v = (0, l.lg)(n),
   onClear: O,
   categoryId: v
 }),
-j = a.useMemo(() => y ? t.filter(e => {
+j = s.useMemo(() => y ? t.filter(e => {
   let {
     id: t
   } = e;
@@ -62,7 +62,7 @@ j = a.useMemo(() => y ? t.filter(e => {
   t,
   y
 ]),
-U = a.useRef(new o.Z(v)),
+U = s.useRef(new o.Z(v)),
 {
   onGuildCardSeen: G,
   onGuildCardClick: k
@@ -70,10 +70,10 @@ U = a.useRef(new o.Z(v)),
   guildDiscoveryCardSeenManager: U.current,
   loadId: e.current
 });
-  a.useEffect(() => {
+  s.useEffect(() => {
 U.current.flushSeenGuilds(e.current);
   }, [v]);
-  let w = a.useMemo(() => {
+  let w = s.useMemo(() => {
 switch (n) {
   case T.vf.HUBS:
   case T.vf.GUILDS:
@@ -111,7 +111,7 @@ children: [
         scrollPosition: A
       }),
       (0, i.jsx)(u.aV, {
-        icon: y ? s.ArrowLargeLeftIcon : s.ServerIcon,
+        icon: y ? a.ArrowLargeLeftIcon : a.ServerIcon,
         onClick: y ? M : void 0
       }),
       (0, i.jsx)(h.Z, {

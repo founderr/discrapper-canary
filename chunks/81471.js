@@ -1,7 +1,7 @@
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(442837),
   o = n(481060),
   c = n(905405),
@@ -18,16 +18,16 @@ var i = n(735250),
   S = n(689938),
   f = n(958633),
   C = n(153521);
-let N = a.memo(function(e) {
+let N = s.memo(function(e) {
   let {
 channel: t
   } = e, {
 loaded: n,
-error: s,
+error: a,
 message: N
   } = (0, g.a)(t), A = (0, c.p)(), v = (0, l.e7)([I.Z], () => null != N && I.Z.isBlockedForMessage(N), [N]), Z = (0, l.e7)([E.Z], () => E.Z.can(p.Plq.MANAGE_MESSAGES, t)), L = h.cC.useSetting(), {
 content: O
-  } = a.useMemo(() => (null == N ? void 0 : N.content) != null && '' !== N.content ? (0, u.ZP)(N, {
+  } = s.useMemo(() => (null == N ? void 0 : N.content) != null && '' !== N.content ? (0, u.ZP)(N, {
 formatInline: !0,
 noStyleAndInteraction: !0,
 shouldFilterKeywords: A
@@ -37,7 +37,7 @@ content: null
 N,
 A
   ]), R = null;
-  if (s)
+  if (a)
 R = (0, i.jsx)(o.Text, {
   className: f.messageReplacement,
   variant: 'text-sm/normal',

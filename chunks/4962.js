@@ -1,5 +1,5 @@
 n(411104);
-var i, a, s = n(735250);
+var i, s, a = n(735250);
 n(470079);
 var r = n(120356),
   l = n.n(r),
@@ -9,7 +9,7 @@ var r = n(120356),
   u = n(451478),
   _ = n(689938),
   h = n(390826);
-(a = i || (i = {}))[a.STAFF_NOTES = 1] = 'STAFF_NOTES';
+(s = i || (i = {}))[s.STAFF_NOTES = 1] = 'STAFF_NOTES';
 let E = o.ZP.connectStores([u.Z], () => ({
 animate: u.Z.isFocused()
   }))(e => {
@@ -18,22 +18,22 @@ let {
   className: n,
   animate: i
 } = e;
-return (0, s.jsxs)('div', {
+return (0, a.jsxs)('div', {
   className: l()(h.staffReviewHeader, n),
   children: [
-    (0, s.jsx)(d.Z, {
+    (0, a.jsx)(d.Z, {
       size: c.AvatarSizes.SIZE_32,
       user: t,
       animate: i
     }),
-    (0, s.jsxs)('div', {
+    (0, a.jsxs)('div', {
       className: h.headerText,
       children: [
-        (0, s.jsx)('div', {
+        (0, a.jsx)('div', {
           className: h.label,
           children: _.Z.Messages.APPLICATION_STORE_STAFF_PICK
         }),
-        (0, s.jsx)('div', {
+        (0, a.jsx)('div', {
           className: h.username,
           children: t.username
         })
@@ -54,14 +54,14 @@ if (1 === t.type) {
     user: e,
     content: i
   } = t.staffNotes;
-  return null == e ? null : (0, s.jsxs)('div', {
+  return null == e ? null : (0, a.jsxs)('div', {
     className: n,
     children: [
-      (0, s.jsx)(E, {
+      (0, a.jsx)(E, {
         user: e,
         className: h.header
       }),
-      (0, s.jsx)('div', {
+      (0, a.jsx)('div', {
         className: h.notes,
         children: i
       })

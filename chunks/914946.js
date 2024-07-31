@@ -51,8 +51,8 @@ return V;
 return F;
   }
 }), n(47120), n(653041), n(411104), n(757143), n(392711);
-var i, a = n(729594),
-  s = n(243814),
+var i, s = n(729594),
+  a = n(243814),
   r = n(544891),
   l = n(63023),
   o = n(433517),
@@ -77,7 +77,7 @@ var i, a = n(729594),
   L = n(863141),
   O = n(186901),
   R = n(981631);
-let x = null !== (i = a.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost',
+let x = null !== (i = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost',
   b = function() {
 let e = x.split(':')[0];
 if (!e.includes('.'))
@@ -116,8 +116,8 @@ T.Z.whenReady(e.id, () => t()), c.Z.fetchMessages({
 });
   })), Promise.all(n).then(() => {
 var n;
-let a = (!e.isNSFW() || (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(k) : [],
-  s = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map(t => w(i, e.id, t));
+let s = (!e.isNSFW() || (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(k) : [],
+  a = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map(t => w(i, e.id, t));
 return {
   id: e.id,
   name: e.name,
@@ -127,8 +127,8 @@ return {
   user_limit: e.userLimit,
   guild_id: i,
   position: e.position,
-  messages: a,
-  voice_states: s
+  messages: s,
+  voice_states: a
 };
   });
 }
@@ -164,8 +164,8 @@ type: e.type
 function w(e, t, n) {
   let {
 mute: i,
-deaf: a,
-selfMute: s,
+deaf: s,
+selfMute: a,
 selfDeaf: r,
 suppress: l,
 userId: o
@@ -179,8 +179,8 @@ volume: p.Z.getLocalVolume(c.id),
 pan: p.Z.getLocalPan(c.id),
 voice_state: {
   mute: i,
-  deaf: a,
-  self_mute: s,
+  deaf: s,
+  self_mute: a,
   self_deaf: r,
   suppress: l
 },
@@ -208,7 +208,7 @@ return !1;
   if (e === n)
 return !0;
   try {
-t = a.parse(e).hostname;
+t = s.parse(e).hostname;
   } catch (e) {
 return !1;
   }
@@ -217,7 +217,7 @@ return !1;
 
 function V(e, t, n) {
   let i = g.Z.getGuild(e.getGuildId());
-  return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(s.x.MESSAGES_READ) > -1;
+  return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(a.x.MESSAGES_READ) > -1;
 }
 
 function F(e) {
@@ -236,10 +236,10 @@ function Y(e) {
 {
   instance: n,
   secrets: i,
-  party: a
+  party: s
 } = e,
-s = 0;
-  return (n && (s |= R.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (s |= R.xjy.JOIN), t) ? (s |= R.xjy.EMBEDDED, s |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == a ? void 0 : a.privacy) === R.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (h.cP.getSetting() && (s |= R.xjy.PARTY_PRIVACY_FRIENDS), h.Ou.getSetting() && (s |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), s);
+a = 0;
+  return (n && (a |= R.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (a |= R.xjy.JOIN), t) ? (a |= R.xjy.EMBEDDED, a |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === R.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (h.cP.getSetting() && (a |= R.xjy.PARTY_PRIVACY_FRIENDS), h.Ou.getSetting() && (a |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), a);
 }
 
 function W(e, t, n) {
@@ -256,8 +256,8 @@ retries: 3
   }).then(i => {
 let {
   body: {
-    rpc_origins: a,
-    id: s,
+    rpc_origins: s,
+    id: a,
     name: r,
     icon: l,
     cover_image: o,
@@ -271,13 +271,13 @@ if ('string' == typeof n) {
       throw new Z.Z({
         closeCode: R.$VG.INVALID_ORIGIN
       }, 'Invalid Origin');
-  } else if (!U(n, a))
+  } else if (!U(n, s))
     throw new Z.Z({
       closeCode: R.$VG.INVALID_ORIGIN
     }, 'Invalid Origin');
 }
 e.application = {
-  id: s,
+  id: a,
   name: r,
   icon: l,
   coverImage: o,

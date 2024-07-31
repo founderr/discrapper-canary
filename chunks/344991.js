@@ -44,25 +44,25 @@ defaultValues: o
   } = e, {
 type: h,
 placeholder: x,
-maxValues: I,
-disabled: E
+maxValues: E,
+disabled: I
   } = n, [T, N] = a.useState(!1), [g, S] = a.useState(!1), [b, O] = a.useState(new Map(null == o ? void 0 : o.map(e => [
 e.value,
 e
-  ]))), [j, M] = a.useState(new Set(b.keys())), [y, Z] = a.useState(() => (null != o ? o : []).map(e => e.value)), [L, R] = a.useState(0);
+  ]))), [j, M] = a.useState(new Set(b.keys())), [Z, y] = a.useState(() => (null != o ? o : []).map(e => e.value)), [R, L] = a.useState(0);
   a.useEffect(() => {
 let e = (null != o ? o : []).map(e => e.value);
-if (e.every(e => y.includes(e)) && y.every(n => e.includes(n)))
+if (e.every(e => Z.includes(e)) && Z.every(n => e.includes(n)))
   return;
-Z(e);
+y(e);
 let n = new Map(null == o ? void 0 : o.map(e => [
   e.value,
   e
 ]));
-O(n), M(new Set(n.keys())), R(e => e + 1);
+O(n), M(new Set(n.keys())), L(e => e + 1);
   }, [
 o,
-y
+Z
   ]);
   let {
 state: A,
@@ -105,7 +105,7 @@ G
   ]);
   let D = 0 === b.size || T,
 H = {
-  isDisabled: E || k,
+  isDisabled: I || k,
   wrapperClassName: p.select,
   options: e => new Promise(n => {
     n(t(e));
@@ -132,7 +132,7 @@ children: [
   (0, i.jsxs)('div', {
     className: p.container,
     children: [
-      I > 1 ? (0, i.jsx)(c.SearchableSelect, {
+      E > 1 ? (0, i.jsx)(c.SearchableSelect, {
         className: p.badges,
         value: Array.from(b.values()),
         onChange: e => {
@@ -150,7 +150,7 @@ children: [
         closeOnSelect: !1,
         centerCaret: !0,
         ...H
-      }, L) : (0, i.jsx)(c.SearchableSelect, {
+      }, R) : (0, i.jsx)(c.SearchableSelect, {
         className: (p.badges, p.singleSelect),
         value: [...b.values()][0],
         onChange: e => O(null != e ? new Map([
@@ -162,7 +162,7 @@ children: [
         clearable: !0,
         centerCaret: !0,
         ...H
-      }, L),
+      }, R),
       w ? (0, i.jsx)('div', {
         className: p.loading,
         children: (0, i.jsx)(c.Dots, {

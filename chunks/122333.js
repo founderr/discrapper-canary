@@ -1,8 +1,8 @@
 let i;
 n(47120);
-var a = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var a = n(481060),
   r = n(570140),
   l = n(317770),
   o = n(622822),
@@ -27,7 +27,7 @@ var s = n(481060),
   L = n(630724);
 
 function O() {
-  null != i && (0, s.closeModal)(i);
+  null != i && (0, a.closeModal)(i);
 }
 class R extends l.Z {
   _initialize() {
@@ -91,7 +91,7 @@ e = [{
             T.vE(e);
         }
       };
-      i = await (0, s.openModalLazy)(async () => {
+      i = await (0, a.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([
@@ -99,7 +99,7 @@ e = [{
           n.e('42483'),
           n.e('46051')
         ]).then(n.bind(n, 599219));
-        return n => (0, a.jsx)(e, {
+        return n => (0, s.jsx)(e, {
           ...n,
           onSlideChange: t
         });
@@ -134,11 +134,11 @@ e = [{
   },
   {
     key: 'Guild Welcome Modal',
-    open: e => (0, s.openModalLazy)(async () => {
+    open: e => (0, a.openModalLazy)(async () => {
       let {
         default: e
       } = await n.e('77578').then(n.bind(n, 184782));
-      return t => (0, a.jsx)(e, {
+      return t => (0, s.jsx)(e, {
         ...t,
         guildId: O
       });

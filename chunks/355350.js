@@ -1,11 +1,11 @@
 n.d(t, {
   w: function() {
-return s;
+return a;
   }
 });
 var i = n(442837),
-  a = n(333984);
+  s = n(333984);
 
-function s() {
-  return (0, i.e7)([a.Z], () => a.Z.getSpamChannelsCount());
+function a() {
+  return (0, i.e7)([s.Z], () => s.Z.getSpamChannelsCount());
 }

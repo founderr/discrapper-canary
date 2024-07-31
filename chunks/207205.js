@@ -24,7 +24,7 @@ return p;
 return m;
   }
 }), n(47120), n(724458), n(653041), n(873546);
-var i, a, s = n(661869),
+var i, s, a = n(661869),
   r = n(876215);
 n(442837), n(638395);
 var l = n(786761);
@@ -42,39 +42,39 @@ function E(e) {
 }
 async function I(e, t, n) {
 let i = u.Z.getHydratedItems(),
-  a = e.slice(t, n);
-if (0 === a.length)
+  s = e.slice(t, n);
+if (0 === s.length)
   return;
-let s = a.filter(e => null == i[e.id]),
-  r = s.filter(e => e.type === _.Rr.MESSAGE).map(e => ({
+let a = s.filter(e => null == i[e.id]),
+  r = a.filter(e => e.type === _.Rr.MESSAGE).map(e => ({
     channel_id: e.data.channel_id,
     message_id: e.data.message_id
   })),
-  l = s.filter(e => e.type === _.Rr.SUMMARY).map(e => ({
+  l = a.filter(e => e.type === _.Rr.SUMMARY).map(e => ({
     guild_id: e.data.guild_id,
     channel_id: e.data.channel_id,
     summary_id: e.data.summary_id
   })),
-  o = s.filter(e => e.type === _.Rr.ACTIVITY).map(e => ({
+  o = a.filter(e => e.type === _.Rr.ACTIVITY).map(e => ({
     user_id: e.data.user_id,
     content_id: e.data.content_id
   }));
 await d.Z.fetchHydrated(r, l, o, t, n);
   }
-  (a = i || (i = {}))[a.DEFAULT = 0] = 'DEFAULT', a[a.MORE_FROM_GUILD = 1] = 'MORE_FROM_GUILD', a[a.LESS_FROM_GUILD = 2] = 'LESS_FROM_GUILD', a[a.MUTED_GUILD = 3] = 'MUTED_GUILD';
+  (s = i || (i = {}))[s.DEFAULT = 0] = 'DEFAULT', s[s.MORE_FROM_GUILD = 1] = 'MORE_FROM_GUILD', s[s.LESS_FROM_GUILD = 2] = 'LESS_FROM_GUILD', s[s.MUTED_GUILD = 3] = 'MUTED_GUILD';
 
 function m(e, t) {
   let n = [],
 i = [],
-a = 0;
+s = 0;
   for (let t of e.messages)
 if (null != t.reactions) {
   if (n.length < 5)
     for (let e of t.reactions) {
-      var s, r;
-      (null == e.count_details || (null !== (s = e.count_details.burst) && void 0 !== s ? s : 0) > 0 || (null !== (r = e.count_details.normal) && void 0 !== r ? r : 0) > 0) && n.push(e);
+      var a, r;
+      (null == e.count_details || (null !== (a = e.count_details.burst) && void 0 !== a ? a : 0) > 0 || (null !== (r = e.count_details.normal) && void 0 !== r ? r : 0) > 0) && n.push(e);
     }
-  a += function(e) {
+  s += function(e) {
     let t = 0;
     if (null != e.reactions) {
       let n = (null != e.reactions ? e.reactions : []).map(e => {
@@ -104,7 +104,7 @@ messages: i,
 reactions: n,
 messageIds: e.messages.map(e => e.id),
 guildId: t,
-reactionCount: a,
+reactionCount: s,
 numTotalMessages: e.messages.length,
 source: e.source
   };
@@ -127,7 +127,7 @@ type: _.Rr.CUSTOM_STATUS,
 activity: {
   id: e.id,
   author_id: e.data.user_id,
-  author_type: s.i.USER,
+  author_type: a.i.USER,
   traits: [],
   participants: [],
   content_type: r.s.CUSTOM_STATUS,
@@ -146,6 +146,6 @@ score_components: e.score_components
 function S(e, t, n) {
   let i = h.Z.getReadTimestamp(e);
   null == i && (i = null == n ? void 0 : n[e]);
-  let a = h.Z.getReadTimestamp(t);
-  return (null == a && (a = null == n ? void 0 : n[t]), null == i && null == a) ? 0 : null == i ? -1 : null == a ? 1 : a - i;
+  let s = h.Z.getReadTimestamp(t);
+  return (null == s && (s = null == n ? void 0 : n[t]), null == i && null == s) ? 0 : null == i ? -1 : null == s ? 1 : s - i;
 }

@@ -134,7 +134,7 @@ children: [
       [M.outerContainerNoProgress]: !w
     }),
     style: {
-      visibility: G ? 'visible' : 'hidden'
+      visibility: G ? 'inherit' : 'hidden'
     },
     'aria-hidden': !G,
     children: [

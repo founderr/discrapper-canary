@@ -9,8 +9,8 @@ var n = a(735250),
   c = a(652898),
   _ = a(93093),
   I = a(768581),
-  A = a(810568),
-  u = a(981631),
+  u = a(810568),
+  A = a(981631),
   d = a(689938),
   O = a(421377);
 let N = [
@@ -73,11 +73,11 @@ return (0, n.jsxs)('div', {
     (0, n.jsx)(E.Button, {
       color: E.ButtonColors.PRIMARY,
       onClick: () => {
-        a(A.as.JoinOfficialServer), o.Z.dispatch({
+        a(u.as.JoinOfficialServer), o.Z.dispatch({
           type: 'INVITE_MODAL_OPEN',
           invite: s,
           code: s.code,
-          context: u.IlC.APP
+          context: A.IlC.APP
         });
       },
       children: i ? d.Z.Messages.JOINED_GUILD : d.Z.Messages.JOIN_GUILD
@@ -138,15 +138,15 @@ children: [
             case i.p.OFFICIAL:
               o = (0, n.jsx)(E.GlobeEarthIcon, {
                 colorClass: O.linkIcon
-              }), l = A.as.WebsiteLink, s = d.Z.Messages.GAME_PROFILE_LINK_OFFICIAL;
+              }), l = u.as.WebsiteLink, s = d.Z.Messages.GAME_PROFILE_LINK_OFFICIAL;
               break;
             case i.p.TWITTER:
               o = (0, n.jsx)(E.XNeutralIcon, {
                 colorClass: O.linkIcon
-              }), l = A.as.XLink, s = d.Z.Messages.GAME_PROFILE_LINK_TWITTER;
+              }), l = u.as.XLink, s = d.Z.Messages.GAME_PROFILE_LINK_TWITTER;
               break;
             case i.p.YOUTUBE:
-              l = A.as.YouTubeLink, o = (0, n.jsx)(E.YouTubeIcon, {
+              l = u.as.YouTubeLink, o = (0, n.jsx)(E.YouTubeIcon, {
                 colorClass: O.linkIcon
               }), s = d.Z.Messages.GAME_PROFILE_LINK_YOUTUBE;
           }

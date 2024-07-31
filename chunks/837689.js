@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250);
 n(470079);
-var a = n(873546),
-  s = n(481060),
+var s = n(873546),
+  a = n(481060),
   r = n(570140),
   l = n(317770),
   o = n(594174),
@@ -35,18 +35,18 @@ r.Z.unsubscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), 
   }
   constructor(...e) {
 super(...e), T(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
-  let a = (0, g.extractAnnouncementModalContent)({
+  let s = (0, g.extractAnnouncementModalContent)({
     content: e,
     isPreview: t
   });
-  if (null != a)
-    return !!(!1 !== t || (null == a ? void 0 : a.contentIdentifier) !== 'summer_bogo_content' || await (0, m.k)()) && ((0, s.closeModal)(S), (0, s.openModalLazy)(async () => {
+  if (null != s)
+    return !!(!1 !== t || (null == s ? void 0 : s.contentIdentifier) !== 'summer_bogo_content' || await (0, m.k)()) && ((0, a.closeModal)(S), (0, a.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.resolve().then(n.bind(n, 318199));
       return t => (0, i.jsx)(e, {
         renderModalProps: t,
-        properties: a
+        properties: s
       });
     }, {
       modalKey: S
@@ -86,9 +86,9 @@ super(...e), T(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
   } : {};
 }), T(this, 'mayShowAnnouncementModal', async () => {
   if (await (0, m.l2)(), !u.s.isDisallowPopupsSet()) {
-    if (!(0, s.hasAnyModalOpen)() && _.Z.getCurrentConfig({
+    if (!(0, a.hasAnyModalOpen)() && _.Z.getCurrentConfig({
         location: 'OfferAnnouncementManager'
-      }).enabled && !a.tq) {
+      }).enabled && !s.tq) {
       for (let e of await (0, E.H)(this.getOfferFromStore()))
         if (await this.maybeOpenServerDriveAnnouncementModal(e, !1))
           break;

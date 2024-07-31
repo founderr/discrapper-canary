@@ -3,8 +3,8 @@ n.d(t, {
 return y;
   }
 }), n(653041);
-var i, a = n(735250),
-  s = n(470079),
+var i, s = n(735250),
+  a = n(470079),
   r = n(120356),
   l = n.n(r),
   o = n(748780),
@@ -101,10 +101,10 @@ webpackId: 994763,
 name: 'GuildSettings'
   }),
   O = {
-[f.S9g.USER_SETTINGS]: () => (0, a.jsx)(A, {}),
-[f.S9g.CHANNEL_SETTINGS]: () => (0, a.jsx)(v, {}),
-[f.S9g.GUILD_SETTINGS]: () => (0, a.jsx)(L, {}),
-[f.S9g.COLLECTIBLES_SHOP]: () => (0, a.jsx)(Z, {})
+[f.S9g.USER_SETTINGS]: () => (0, s.jsx)(A, {}),
+[f.S9g.CHANNEL_SETTINGS]: () => (0, s.jsx)(v, {}),
+[f.S9g.GUILD_SETTINGS]: () => (0, s.jsx)(L, {}),
+[f.S9g.COLLECTIBLES_SHOP]: () => (0, s.jsx)(Z, {})
   },
   R = 'SHOWN',
   x = 'HIDDEN',
@@ -114,9 +114,9 @@ tension: 100
   };
 
 function P() {
-  return s.useEffect(() => (E.Z.enable(), E.Z.enableTemp(h.u), () => E.Z.disableTemp()), []), null;
+  return a.useEffect(() => (E.Z.enable(), E.Z.enableTemp(h.u), () => E.Z.disableTemp()), []), null;
 }
-class M extends(i = s.PureComponent) {
+class M extends(i = a.PureComponent) {
   static getDerivedStateFromProps(e, t) {
 return e.mode !== t.mode ? {
   animating: !0,
@@ -210,8 +210,8 @@ let {
   mode: t,
   children: n,
   baseLayer: i,
-  ...s
-} = this.props, r = e || t === x ? this.getAnimatedStyle() : null, c = (0, a.jsx)(o.Z.div, {
+  ...a
+} = this.props, r = e || t === x ? this.getAnimatedStyle() : null, c = (0, s.jsx)(o.Z.div, {
   ref: e => this.containerRef.current = null != e ? e.refs.node : void 0,
   'aria-hidden': t === x,
   className: l()(C.layer, {
@@ -220,10 +220,10 @@ let {
     'stop-animations': t === x
   }),
   style: r,
-  ...s,
+  ...a,
   children: n
 });
-return i ? c : (0, a.jsx)(u.FocusLock, {
+return i ? c : (0, s.jsx)(u.FocusLock, {
   containerRef: this.containerRef,
   children: c
 });
@@ -247,7 +247,7 @@ return {
 };
   }
   constructor(e) {
-super(e), N(this, 'containerRef', s.createRef());
+super(e), N(this, 'containerRef', a.createRef());
 let t = 1,
   n = 1;
 e.mode === x && (t = 0.93, n = 0), this.state = {
@@ -261,7 +261,7 @@ e.mode === x && (t = 0.93, n = 0), this.state = {
 N(M, 'defaultProps', {
   baseLayer: !1
 }), N(M, 'contextType', u.AccessibilityPreferencesContext);
-class D extends s.PureComponent {
+class D extends a.PureComponent {
   componentDidMount() {
 T.S.subscribe(f.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
   }
@@ -275,33 +275,33 @@ let {
   hasFullScreenLayer: n
 } = this.props, {
   length: i
-} = t, s = [];
-return s.push((0, a.jsx)(M, {
+} = t, a = [];
+return a.push((0, s.jsx)(M, {
   mode: 0 !== i || n ? x : R,
   baseLayer: !0,
   children: e
-}, 'layer-base')), t.forEach((e, t) => s.push(this.renderComponent(e, t, i))), s;
+}, 'layer-base')), t.forEach((e, t) => a.push(this.renderComponent(e, t, i))), a;
   }
   renderComponent(e, t, n) {
 let i;
-return i = 'string' == typeof e ? O[e]() : (0, a.jsx)(e, {}), (0, a.jsxs)(M, {
+return i = 'string' == typeof e ? O[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(M, {
   mode: t === n - 1 ? R : x,
   children: [
-    (0, a.jsx)(P, {}),
+    (0, s.jsx)(P, {}),
     i
   ]
 }, 'layer-'.concat(t));
   }
   renderArtisanalHack() {
-return (0, a.jsx)('div', {
+return (0, s.jsx)('div', {
   className: l()(C.bg, (0, S.Q)(this.props.sidebarTheme))
 });
   }
   render() {
-return (0, a.jsxs)(a.Fragment, {
+return (0, s.jsxs)(s.Fragment, {
   children: [
     this.renderArtisanalHack(),
-    (0, a.jsx)(d.W, {
+    (0, s.jsx)(d.W, {
       component: 'div',
       className: l()(C.layers, this.props.className),
       children: this.renderLayers()
@@ -315,7 +315,7 @@ function y(e) {
   let t = (0, c.e7)([m.Z], () => m.Z.darkSidebar) ? f.BRd.DARK : void 0,
 n = (0, c.e7)([g.Z], () => g.Z.getLayers()),
 i = (0, p.QP)(e => e.fullScreenLayers.length > 0);
-  return (0, a.jsx)(D, {
+  return (0, s.jsx)(D, {
 ...e,
 sidebarTheme: t,
 layers: n,

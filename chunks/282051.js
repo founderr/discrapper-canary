@@ -4,8 +4,8 @@ return d;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(481060),
+  s = n(470079),
+  a = n(481060),
   r = n(946314),
   l = n(921944),
   o = n(689938),
@@ -18,16 +18,16 @@ onSecondaryClick: n,
 onComponentMount: d,
 markAsDismissed: u
   } = e;
-  a.useEffect(() => {
+  s.useEffect(() => {
 null == d || d();
   }, [d]);
-  let _ = a.useCallback(e => {
+  let _ = s.useCallback(e => {
   t(e), null == u || u(l.L.PRIMARY);
 }, [
   t,
   u
 ]),
-h = a.useCallback(() => {
+h = s.useCallback(() => {
   null == n || n(), null == u || u(l.L.SECONDARY);
 }, [
   n,
@@ -36,12 +36,12 @@ h = a.useCallback(() => {
   return (0, i.jsxs)('div', {
 className: c.tooltipWrapper,
 children: [
-  (0, i.jsx)(s.Heading, {
+  (0, i.jsx)(a.Heading, {
     className: c.tooltipHeader,
     variant: 'heading-md/semibold',
     children: o.Z.Messages.SERVER_DISCOVERY_TOOLTIP_TITLE
   }),
-  (0, i.jsx)(s.Text, {
+  (0, i.jsx)(a.Text, {
     className: c.tooltipText,
     variant: 'text-sm/normal',
     children: o.Z.Messages.SERVER_DISCOVERY_TOOLTIP_DESCRIPTION.format({
@@ -51,17 +51,17 @@ children: [
   (0, i.jsxs)('div', {
     className: c.buttonsContainer,
     children: [
-      (0, i.jsx)(s.Button, {
+      (0, i.jsx)(a.Button, {
         fullWidth: !0,
-        size: s.Button.Sizes.SMALL,
-        color: s.Button.Colors.BRAND,
+        size: a.Button.Sizes.SMALL,
+        color: a.Button.Colors.BRAND,
         onClick: _,
         children: o.Z.Messages.LEARN_MORE
       }),
-      (0, i.jsx)(s.Button, {
+      (0, i.jsx)(a.Button, {
         fullWidth: !0,
-        size: s.Button.Sizes.SMALL,
-        look: s.Button.Looks.BLANK,
+        size: a.Button.Sizes.SMALL,
+        look: a.Button.Looks.BLANK,
         onClick: h,
         children: o.Z.Messages.NO_THANKS
       })

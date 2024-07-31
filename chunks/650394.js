@@ -1,6 +1,6 @@
 n(653041), n(47120);
-var i, a = n(735250),
-  s = n(470079),
+var i, s = n(735250),
+  a = n(470079),
   r = n(338545),
   l = n(481060),
   o = n(788322),
@@ -14,13 +14,13 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class u extends(i = s.PureComponent) {
+class u extends(i = a.PureComponent) {
   renderPlaceholders() {
 let {
   loadingPlaceholderCount: e
 } = this.props, t = [];
 for (let n = 0; n < e; n++)
-  t.push((0, a.jsx)(o.Y, {}, n));
+  t.push((0, s.jsx)(o.Y, {}, n));
 return t;
   }
   render() {
@@ -28,7 +28,7 @@ let {
   guilds: e,
   loading: t
 } = this.props;
-return (0, a.jsx)(l.Spring, {
+return (0, s.jsx)(l.Spring, {
   from: {
     opacity: t ? 0 : 1
   },
@@ -37,7 +37,7 @@ return (0, a.jsx)(l.Spring, {
   },
   delay: 100,
   shouldAnimate: 'animate-always',
-  children: n => (0, a.jsx)(r.animated.div, {
+  children: n => (0, s.jsx)(r.animated.div, {
     className: c.guildList,
     style: n,
     children: t || null == e ? this.renderPlaceholders() : e.map(this.renderGuild)
@@ -50,14 +50,14 @@ super(...e), d(this, 'handleViewGuild', async e => {
     guilds: t,
     analyticsContext: n,
     onViewGuild: i
-  } = this.props, a = t.findIndex(t => t.id === e);
-  await i(e, a, n);
+  } = this.props, s = t.findIndex(t => t.id === e);
+  await i(e, s, n);
 }), d(this, 'renderGuild', (e, t) => {
   let {
     theme: n,
     onTagClick: i
   } = this.props;
-  return (0, a.jsx)(o.Z, {
+  return (0, s.jsx)(o.Z, {
     guild: e,
     theme: n,
     onView: this.handleViewGuild,

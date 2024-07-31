@@ -1,53 +1,53 @@
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(360048),
+var s = n(481060),
+  a = n(360048),
   r = n(823379),
   l = n(731455),
   o = n(283831);
 let c = e => {
 switch (e) {
   case l.fW.Activity:
-    return (0, i.jsx)(a.GameControllerIcon, {
+    return (0, i.jsx)(s.GameControllerIcon, {
       size: 'md',
       color: 'currentColor'
     });
   case l.fW.Discover:
-    return (0, i.jsx)(a.CompassIcon, {
+    return (0, i.jsx)(s.CompassIcon, {
       size: 'md',
       color: 'currentColor'
     });
   case l.fW.Education:
-    return (0, i.jsx)(a.EducationIcon, {
+    return (0, i.jsx)(s.EducationIcon, {
       size: 'md',
       color: 'currentColor'
     });
   case l.fW.Music:
-    return (0, i.jsx)(a.MusicIcon, {
+    return (0, i.jsx)(s.MusicIcon, {
       size: 'md',
       color: 'currentColor'
     });
   case l.fW.Science:
-    return (0, i.jsx)(a.ScienceIcon, {
+    return (0, i.jsx)(s.ScienceIcon, {
       size: 'md',
       color: 'currentColor'
     });
   case l.fW.Stage:
-    return (0, i.jsx)(a.StageIcon, {
+    return (0, i.jsx)(s.StageIcon, {
       size: 'custom',
       color: 'currentColor',
       height: 22,
       width: 22
     });
   case l.fW.Television:
-    return (0, i.jsx)(a.TvIcon, {
+    return (0, i.jsx)(s.TvIcon, {
       size: 'md',
       color: 'currentColor'
     });
   case l.fW.Server:
-    return (0, i.jsx)(a.ServerIcon, {});
+    return (0, i.jsx)(s.ServerIcon, {});
   case l.fW.Quest:
-    return (0, i.jsx)(a.QuestsIcon, {});
+    return (0, i.jsx)(s.QuestsIcon, {});
   default:
     (0, r.vE)(e);
 }
@@ -56,11 +56,11 @@ switch (e) {
 let {
   categories: t,
   currentCategoryId: n,
-  handleCategorySelect: a,
+  handleCategorySelect: s,
   shouldDisplaySelectedCategory: r = !0
 } = e;
 return (0, i.jsx)(i.Fragment, {
-  children: t.map(e => (0, i.jsx)(s.Z, {
+  children: t.map(e => (0, i.jsx)(a.Z, {
     avatar: c(e.icon),
     name: e.name,
     focusProps: {
@@ -70,7 +70,7 @@ return (0, i.jsx)(i.Fragment, {
         bottom: 1
       }
     },
-    onClick: () => a(e.categoryId),
+    onClick: () => s(e.categoryId),
     wrapContent: !0,
     selected: r && e.categoryId === n,
     className: o.categoryItem,

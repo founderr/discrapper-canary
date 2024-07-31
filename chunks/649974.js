@@ -1,4 +1,4 @@
-var i, a, s, r, l = n(442837),
+var i, s, a, r, l = n(442837),
   o = n(570140),
   c = n(656063),
   d = n(814443),
@@ -38,10 +38,10 @@ return !1;
   let i = n.filter(e => e.type !== h.IIU.CUSTOM_STATUS);
   if (0 === i.length)
 return p(t.id);
-  let a = !1;
+  let s = !1;
   return i.forEach(e => {
 (function(e, t) {
-  var n, i, a, s;
+  var n, i, s, a;
   let r = (0, c.Z)(e);
   if (null == r)
     return p(t.id);
@@ -53,21 +53,21 @@ return p(t.id);
       activity: e,
       startedPlaying: o
     };
-  return a = r, s = d, I = {
+  return s = r, a = d, I = {
     ...I,
-    [a]: {
-      ...I[a],
-      [s.userId]: s
+    [s]: {
+      ...I[s],
+      [a.userId]: a
     }
   }, m = {
     ...m,
-    [s.userId]: {
-      gameId: a,
-      startedPlaying: s.startedPlaying
+    [a.userId]: {
+      gameId: s,
+      startedPlaying: a.startedPlaying
     }
   }, !0;
-}(e, t) && (a = !0));
-  }), a;
+}(e, t) && (s = !0));
+  }), s;
 }
 
 function S() {
@@ -104,12 +104,12 @@ return I[e];
 return m[e];
   }
 }
-s = 'NowPlayingStore', (a = 'displayName') in(i = f) ? Object.defineProperty(i, a, {
-  value: s,
+a = 'NowPlayingStore', (s = 'displayName') in(i = f) ? Object.defineProperty(i, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new f(o.Z, {
+}) : i[s] = a, t.Z = new f(o.Z, {
   CONNECTION_OPEN: function() {
 I = {}, m = {};
   },

@@ -1,9 +1,9 @@
 n.d(t, {
   GO: function() {
-return a;
+return s;
   },
   K7: function() {
-return s;
+return a;
   },
   xm: function() {
 return r;
@@ -11,14 +11,14 @@ return r;
 });
 var i = n(570140);
 
-function a(e) {
+function s(e) {
   i.Z.dispatch({
 type: 'BOOSTED_GUILD_GRACE_PERIOD_NOTICE_DISMISS',
 guildId: e
   });
 }
 
-function s(e) {
+function a(e) {
   i.Z.dispatch({
 type: 'PUBLIC_UPSELL_NOTICE_DISMISS',
 guildId: e
