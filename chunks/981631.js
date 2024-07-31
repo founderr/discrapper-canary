@@ -1123,6 +1123,7 @@ COLLECTIBLES_CLAIM: '/users/@me/claim-premium-collectibles-product',
 COLLECTIBLES_PURCHASES: '/users/@me/collectibles-purchases',
 COLLECTIBLES_PRODUCTS: t => '/collectibles-products/'.concat(t),
 COLLECTIBLES_VALID_GIFT_RECIPIENT: '/users/@me/valid-collectibles-gift-recipient',
+COLLECTIBLES_MARKETING: '/users/@me/collectibles-marketing',
 GUILD_MEMBER_BANNER: function(t, e, r) {
   let n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'png';
   return '/guilds/'.concat(t, '/users/').concat(e, '/banners/').concat(r, '.').concat(n);
