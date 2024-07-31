@@ -17410,6 +17410,7 @@ e.exports = Object.freeze({
   QUESTS_REWARD_CODE_PLATFORM_SWITCH: 'Switch',
   QUESTS_REWARD_CODE_PLATFORM_XBOX: 'Xbox',
   QUESTS_REWARD_TILE_EXPIRED_QUEST: 'This reward is no longer available.',
+  QUESTS_REWARD_MODAL_FOOTER_IN_GAME_BODY: '{rewardName} is all yours. Check it out in-game!',
   QUESTS_SPONSORED: 'Sponsored',
   QUESTS_PROMOTED: 'Promoted',
   QUESTS_LEARN_MORE_V2: 'Learn More',

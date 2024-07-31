@@ -649,6 +649,5 @@ e.exports = Object.freeze({
   ICYMI_ACTIVITY_PLAYED: 'Recently played:',
   ICYMI_ACTIVITY_PLAYING: 'Currently playing:',
   ICYMI_ACTIVITY_UPDATED_STATUS: 'Updated their status:',
-  ATTACHMENT_INLINE_PLACEHOLDER: '[attachment]',
-  QUESTS_REWARD_MODAL_FOOTER_IN_GAME_BODY: '{rewardName} is all yours! Open up the game to check it out.'
+  ATTACHMENT_INLINE_PLACEHOLDER: '[attachment]'
 });
