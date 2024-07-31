@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(621600),
   d = n(665149),
   h = n(110255),
-  p = n(981631),
-  m = n(689938),
+  m = n(981631),
+  p = n(689938),
   _ = n(896117);
 
 function f(e) {
@@ -26,8 +26,8 @@ o.ZP.resolvedMessageNotifications(t)
   ], [t]), [g, C] = a.useState(!1);
   a.useEffect(() => {
 let e = () => C(!0);
-return c.S.subscribe(p.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
-  c.S.unsubscribe(p.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
+return c.S.subscribe(m.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
+  c.S.unsubscribe(m.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
 };
   }, []);
   let I = e => {
@@ -35,7 +35,7 @@ return c.S.subscribe(p.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
     muted: !f
   }, u.UE.muted(!f)) : C(e => !e);
 },
-x = m.Z.Messages.NOTIFICATION_SETTINGS;
+x = p.Z.Messages.NOTIFICATION_SETTINGS;
   return (0, i.jsx)(l.Popout, {
 shouldShow: g,
 animation: l.Popout.Animation.NONE,
@@ -47,7 +47,7 @@ renderPopout: e => (0, i.jsx)(h.Z, {
   ...e,
   channel: t,
   navId: 'channel-context',
-  label: m.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL
+  label: p.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL
 }),
 children: (e, t) => {
   let {
@@ -57,7 +57,7 @@ children: (e, t) => {
     ...e,
     onClick: I,
     tooltip: a ? null : x,
-    icon: f || E !== p.bL.ALL_MESSAGES ? l.BellSlashIcon : l.BellIcon,
+    icon: f || E !== m.bL.ALL_MESSAGES ? l.BellSlashIcon : l.BellIcon,
     foreground: f && !n ? _.strikethrough : null,
     'aria-label': x,
     selected: a

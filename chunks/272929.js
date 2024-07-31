@@ -41,8 +41,8 @@ remainingCooldownSeconds: n,
 onClick: u,
 onKeyDown: d,
 onMouseEnter: h,
-onMouseLeave: p,
-isActive: m = !1,
+onMouseLeave: m,
+isActive: p = !1,
 isCenterButton: _ = !1,
 ...f
   } = e, E = n > 0, g = (0, s.useSpring)({
@@ -68,8 +68,8 @@ children: [
     onClick: u,
     onKeyDown: d,
     onMouseEnter: h,
-    onMouseLeave: p,
-    isActive: m,
+    onMouseLeave: m,
+    isActive: p,
     grow: !1
   })
 ]

@@ -14,8 +14,8 @@ var a = n(481060),
   u = n(488021),
   d = n(822556),
   h = n(981631),
-  p = n(689938),
-  m = n(679801);
+  m = n(689938),
+  p = n(679801);
 
 function _(e) {
   let {
@@ -31,21 +31,21 @@ onSelect: C
 object: h.qAy.CONTEXT_MENU,
 children: (0, i.jsxs)(a.Menu, {
   onSelect: C,
-  className: m.menu,
+  className: p.menu,
   onClose: t,
   navId: 'audio-device-context',
-  'aria-label': p.Z.Messages.AUDIO_DEVICE_ACTIONS,
+  'aria-label': m.Z.Messages.AUDIO_DEVICE_ACTIONS,
   children: [
     _ ? (0, i.jsx)(a.MenuGroup, {
-      label: p.Z.Messages.INPUT_DEVICE,
+      label: m.Z.Messages.INPUT_DEVICE,
       children: x
     }) : null,
     n ? (0, i.jsx)(a.MenuGroup, {
-      label: p.Z.Messages.OUTPUT_DEVICE,
+      label: m.Z.Messages.OUTPUT_DEVICE,
       children: T
     }) : null,
     f ? (0, i.jsx)(a.MenuGroup, {
-      label: p.Z.Messages.FORM_LABEL_INPUT_MODE,
+      label: m.Z.Messages.FORM_LABEL_INPUT_MODE,
       children: N
     }) : null,
     (0, i.jsxs)(a.MenuGroup, {

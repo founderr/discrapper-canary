@@ -19,8 +19,8 @@ buttonSize: n = a.ButtonSizes.TINY,
 className: u,
 onReportClick: d,
 onReportSubmit: h,
-onMouseEnter: p,
-onMouseLeave: m
+onMouseEnter: m,
+onMouseLeave: p
   } = e, {
 error: _,
 loaded: f
@@ -38,8 +38,8 @@ disabled: null == g,
 onClick: e => {
   e.stopPropagation(), null == d || d(), null != g && (0, l.WL)(g, C);
 },
-onMouseEnter: p,
-onMouseLeave: m,
+onMouseEnter: m,
+onMouseLeave: p,
 children: c.Z.Messages.REPORT
   });
 }

@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(680295),
   d = n(785717),
   h = n(318661),
-  p = n(78675),
-  m = n(113557),
+  m = n(78675),
+  p = n(113557),
   _ = n(169979),
   f = n(502762),
   E = n(256059),
@@ -78,13 +78,13 @@ children: (0, i.jsx)(d.Mt, {
           (0, i.jsxs)('header', {
             className: M.header,
             children: [
-              (0, i.jsx)(p.Z, {
+              (0, i.jsx)(m.Z, {
                 user: t,
                 displayProfile: L,
                 profileType: A.y0.PANEL,
                 animateOnHover: !y
               }),
-              (0, i.jsx)(m.Z, {
+              (0, i.jsx)(p.Z, {
                 location: 'SimplifiedProfilePanel',
                 user: t,
                 displayProfile: L,

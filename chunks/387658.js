@@ -25,9 +25,9 @@ var i = t(735250),
   x = t(827498),
   I = t(496158),
   g = t(676161),
-  P = t(660090),
-  L = t(783097),
-  S = t(176412),
+  S = t(660090),
+  P = t(783097),
+  L = t(176412),
   T = t(870205),
   b = t(981631),
   R = t(689079),
@@ -66,7 +66,7 @@ l.id,
 r,
 s,
 c
-  ]), m = (null !== (t = null === (n = r.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0, _ = a.useMemo(() => (0, S.ae)(r.displayDescription, void 0), [r.displayDescription]), f = a.useMemo(() => (0, i.jsxs)('div', {
+  ]), m = (null !== (t = null === (n = r.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0, _ = a.useMemo(() => (0, L.ae)(r.displayDescription, void 0), [r.displayDescription]), f = a.useMemo(() => (0, i.jsxs)('div', {
 className: j.commandTextContainer,
 children: [
   (0, i.jsx)(u.Text, {
@@ -171,7 +171,7 @@ try {
     sectionName: l,
     location: C.Vh.APP_LAUNCHER_APPLICATION_VIEW,
     source: n
-  }) && (await (0, L.Y$)({
+  }) && (await (0, P.Y$)({
     command: t,
     optionValues: {},
     context: c,
@@ -273,7 +273,7 @@ sortOrder: _,
 setSortOrder: C,
 commands: h,
 canSort: A
-  } = (0, P.Z)({
+  } = (0, S.Z)({
 sectionId: l.id,
 commandsByActiveSection: c
   });

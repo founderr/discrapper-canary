@@ -1,6 +1,6 @@
 n.d(t, {
   $: function() {
-return p;
+return m;
   }
 });
 var i = n(735250);
@@ -74,7 +74,7 @@ children: [
   });
 }
 
-function p(e) {
+function m(e) {
   return (0, i.jsx)(o.h, {
 ...e,
 renderComponent: e => (0, i.jsx)(h, {

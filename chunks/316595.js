@@ -18,8 +18,8 @@ function h(e) {
 children: t,
 enabled: n,
 animationContainerClassName: h,
-glowClassName: p,
-trinketsClassName: m
+glowClassName: m,
+trinketsClassName: p
   } = e, _ = (0, s.e7)([u.Z], () => u.Z.hasCurrentUserSentMessageSinceAppStart()), f = a.useMemo(() => {
 let e = [];
 return _ && n && e.push(l.z.ACTIVITIES_CHAT_BUTTON_NUX_V2), e;
@@ -40,8 +40,8 @@ children: e => {
   if (n === l.z.ACTIVITIES_CHAT_BUTTON_NUX_V2)
     return (0, i.jsx)(r.b, {
       animationContainerClassName: h,
-      glowClassName: p,
-      trinketsClassName: m,
+      glowClassName: m,
+      trinketsClassName: p,
       onMount: E,
       children: t
     });

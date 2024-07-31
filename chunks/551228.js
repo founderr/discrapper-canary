@@ -1,77 +1,77 @@
-t.d(n, {
+n.d(t, {
   pi: function() {
-return h;
+return p;
   },
   te: function() {
-return v;
+return h;
   }
-}), t(47120);
-var l = t(735250),
-  i = t(470079),
-  s = t(512722),
-  a = t.n(s),
-  r = t(442837),
-  c = t(276852),
-  o = t(594174),
-  d = t(719247),
-  u = t(297781),
-  m = t(443487),
-  x = t(43205),
-  f = t(827418);
-let v = [u.XF];
+}), n(47120);
+var r = n(735250),
+  i = n(470079),
+  a = n(512722),
+  s = n.n(a),
+  o = n(442837),
+  l = n(276852),
+  u = n(594174),
+  c = n(719247),
+  d = n(297781),
+  _ = n(443487),
+  E = n(43205),
+  f = n(827418);
+let h = [d.XF];
 
-function h(e) {
-  var n, t, l, i, s, a, u;
-  let m = (0, r.e7)([d.ZP], () => d.ZP.getMatchingActivity(e)),
-x = (0, r.e7)([o.default], () => o.default.getUser(e.author_id));
-  if (null == m || null == x)
+function p(e) {
+  var t, n, r, i, a, s, d;
+  let _ = (0, o.e7)([c.ZP], () => c.ZP.getMatchingActivity(e)),
+E = (0, o.e7)([u.default], () => u.default.getUser(e.author_id));
+  if (null == _ || null == E)
 return {};
   let f = e.extra.entries[0],
-v = null !== (i = null !== (l = (0, c.Z)(m)) && void 0 !== l ? l : null === (n = m.assets) || void 0 === n ? void 0 : n.small_image) && void 0 !== i ? i : f.media.image_url,
-h = null !== (a = null !== (s = m.state) && void 0 !== s ? s : null === (t = f.media.artists[0]) || void 0 === t ? void 0 : t.name) && void 0 !== a ? a : f.media.title,
-g = null !== (u = m.details) && void 0 !== u ? u : f.media.title;
+h = null !== (i = null !== (r = (0, l.Z)(_)) && void 0 !== r ? r : null === (t = _.assets) || void 0 === t ? void 0 : t.small_image) && void 0 !== i ? i : f.media.image_url,
+p = null !== (s = null !== (a = _.state) && void 0 !== a ? a : null === (n = f.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== s ? s : f.media.title,
+m = null !== (d = _.details) && void 0 !== d ? d : f.media.title;
   return {
-activity: m,
-artist: h,
+activity: _,
+artist: p,
 currentEntry: f,
-imageUrl: v,
-title: g,
-user: x
+imageUrl: h,
+title: m,
+user: E
   };
 }
-n.ZP = i.memo(function(e) {
+t.ZP = i.memo(function(e) {
   let {
-entry: n,
-channel: t,
+entry: t,
+channel: n,
 selected: i
   } = e, {
-activity: s,
-artist: r,
-imageUrl: c
-  } = h(n);
-  return a()(null != s, 'There must be a matching live Activity for LISTENED_SESSION'), (0, l.jsxs)(m.Zb, {
+activity: a,
+artist: o,
+imageUrl: l
+  } = p(t);
+  return s()(null != a, 'There must be a matching live Activity for LISTENED_SESSION'), (0, r.jsxs)(_.Zb, {
 selected: i,
 children: [
-  (0, l.jsxs)(m.e$, {
+  (0, r.jsxs)(_.e$, {
     children: [
-      (0, l.jsx)(m.F9, {
-        entry: n,
-        channelId: t.id,
-        guildId: t.guild_id
+      (0, r.jsx)(_.F9, {
+        entry: t,
+        channelId: n.id,
+        guildId: n.guild_id
       }),
-      (0, l.jsx)(m.ll, {
-        children: r
+      (0, r.jsx)(_.ll, {
+        children: o
       }),
-      (0, l.jsx)(u.Gk, {
-        location: u.Gt.CARD,
-        children: v.map((e, t) => (0, l.jsx)(e, {
-          entry: n
-        }, t))
+      (0, r.jsx)(d.Gk, {
+        location: d.Gt.CARD,
+        children: h.map((e, n) => (0, r.jsx)(e, {
+          entry: t
+        }, n))
       })
     ]
   }),
-  (0, l.jsx)(x.f, {
-    src: c,
+  (0, r.jsx)(E.f, {
+    src: l,
     size: 48,
     className: f.thumbnail
   })

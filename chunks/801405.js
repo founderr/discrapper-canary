@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(788983),
   d = n(268353),
   h = n(944486),
-  p = n(626135),
-  m = n(585483),
+  m = n(626135),
+  p = n(585483),
   _ = n(358085),
   f = n(228488),
   E = n(981631),
@@ -69,7 +69,7 @@ T.current = v;
 b = l && !x,
 R = v === E.WtW.VIDEO && S && !b,
 j = a.useCallback((e, i) => {
-  i !== e && (r.Z.updateLayout(t.id, i, n), i === E.AEg.FULL_SCREEN && t.isPrivate() && m.S.dispatch(E.CkL.TEXTAREA_BLUR));
+  i !== e && (r.Z.updateLayout(t.id, i, n), i === E.AEg.FULL_SCREEN && t.isPrivate() && p.S.dispatch(E.CkL.TEXTAREA_BLUR));
 }, [
   n,
   t
@@ -103,7 +103,7 @@ A,
 N,
 P,
 M
-  ]), a.useEffect(() => (p.default.track(E.rMx.VIDEO_LAYOUT_TOGGLED, {
+  ]), a.useEffect(() => (m.default.track(E.rMx.VIDEO_LAYOUT_TOGGLED, {
 video_layout: x ? 'popout' : N,
 ...(0, o.AB)(t.id)
   }), () => {

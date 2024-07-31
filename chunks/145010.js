@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return p;
   }
 });
 var i = n(735250);
@@ -14,17 +14,17 @@ var a = n(399606),
   u = n(871499),
   d = n(12168),
   h = n(304388),
-  p = n(689938);
+  m = n(689938);
 
-function m(e) {
+function p(e) {
   let {
 channel: t
-  } = e, n = (0, a.e7)([r.Z], () => r.Z.getDrawMode()), m = (null == n ? void 0 : n.type) === o.W.EMOJI_HOSE, _ = (e, t) => {
+  } = e, n = (0, a.e7)([r.Z], () => r.Z.getDrawMode()), p = (null == n ? void 0 : n.type) === o.W.EMOJI_HOSE, _ = (e, t) => {
 null != e ? (0, l.Bo)({
   type: o.W.EMOJI_HOSE,
   emojiName: e.name,
   emojiId: e.id
-}) : m && (0, l.Bo)(null), null == t || t();
+}) : p && (0, l.Bo)(null), null == t || t();
   };
   return (0, i.jsx)(h.Z, {
 renderPopout: e => {
@@ -34,7 +34,7 @@ renderPopout: e => {
   } = e;
   return (0, i.jsx)(c.Z, {
     children: (0, i.jsx)(d.Z, {
-      title: p.Z.Messages.SHARED_CANVAS_DRAW_MODE_EMOJI_HOSE,
+      title: m.Z.Messages.SHARED_CANVAS_DRAW_MODE_EMOJI_HOSE,
       channel: t,
       closePopout: n,
       onFocus: a,
@@ -45,7 +45,7 @@ renderPopout: e => {
 children: e => (0, i.jsx)(u.Z, {
   ...e,
   iconComponent: s.PaintbrushThinIcon,
-  isActive: m || e.isActive,
+  isActive: p || e.isActive,
   onClick: t => {
     _(null), e.onClick(t);
   }

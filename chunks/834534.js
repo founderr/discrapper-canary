@@ -1,95 +1,95 @@
-n.d(i, {
+i.d(s, {
   Z: function() {
 return p;
   }
 });
-var s = n(735250);
-n(470079);
-var l = n(442837),
-  t = n(481060),
-  o = n(666520),
-  a = n(706454),
-  r = n(430824),
-  d = n(914010),
-  c = n(785717),
-  u = n(532776),
-  I = n(648067),
-  _ = n(588822),
-  f = n(900927),
-  m = n(678738),
-  E = n(652853),
-  x = n(335191),
-  v = n(351707),
-  Z = n(228168),
-  h = n(689938),
-  S = n(247321);
+var n = i(735250);
+i(470079);
+var l = i(442837),
+  t = i(481060),
+  o = i(666520),
+  a = i(706454),
+  r = i(430824),
+  d = i(914010),
+  c = i(785717),
+  u = i(532776),
+  I = i(648067),
+  f = i(588822),
+  _ = i(900927),
+  m = i(678738),
+  E = i(652853),
+  v = i(335191),
+  x = i(351707),
+  S = i(228168),
+  Z = i(689938),
+  h = i(247321);
 
 function p(e) {
   let {
-user: i,
-currentUser: n,
+user: s,
+currentUser: i,
 displayProfile: p,
 subsection: g,
-onClose: j
+onClose: T
   } = e, {
-theme: T
+theme: N
   } = (0, E.z)(), {
-trackUserProfileAction: N
-  } = (0, c.KZ)(), C = null == p ? void 0 : p.guildId, A = (0, l.e7)([r.Z], () => null != C ? r.Z.getGuild(C) : null), y = (0, l.e7)([d.Z], () => d.Z.getGuildId()), R = (0, l.e7)([a.default], () => a.default.locale), O = (0, I.Z)(i.id), L = (0, u.Z)(i.id);
-  return (0, s.jsxs)(t.ScrollerThin, {
+trackUserProfileAction: j
+  } = (0, c.KZ)(), C = null == p ? void 0 : p.guildId, A = (0, l.e7)([r.Z], () => null != C ? r.Z.getGuild(C) : null), M = (0, l.e7)([d.Z], () => d.Z.getGuildId()), R = (0, l.e7)([a.default], () => a.default.locale), U = (0, I.Z)(s.id), L = (0, u.Z)(s.id);
+  return (0, n.jsxs)(t.ScrollerThin, {
 fade: !0,
-className: S.scroller,
+className: h.scroller,
 children: [
-  (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' && (0, s.jsx)(_.Z, {
+  (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' && (0, n.jsx)(f.Z, {
     userBio: p.bio,
     setLineClamp: !1
   }),
-  null != A && (0, s.jsx)(v.Z, {
-    user: i,
-    currentUser: n,
+  null != A && (0, n.jsx)(x.Z, {
+    user: s,
+    currentUser: i,
     guild: A,
-    scrollIntoView: g === Z.Tb.ROLES
+    scrollIntoView: g === S.Tb.ROLES
   }),
-  (0, s.jsx)(m.Z, {
-    heading: h.Z.Messages.USER_PROFILE_MEMBER_SINCE,
-    children: (0, s.jsx)(f.Z, {
-      userId: i.id,
+  (0, n.jsx)(m.Z, {
+    heading: Z.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+    children: (0, n.jsx)(_.Z, {
+      userId: s.id,
       guildId: null == p ? void 0 : p.guildId,
-      tooltipDelay: Z.vB
+      tooltipDelay: S.vB
     })
   }),
-  O.length > 0 && (0, s.jsx)(m.Z, {
-    heading: h.Z.Messages.CONNECTIONS,
-    children: (0, s.jsx)(x.OA, {
-      connectedAccounts: O,
-      className: S.connections,
-      userId: i.id,
-      theme: T,
+  U.length > 0 && (0, n.jsx)(m.Z, {
+    heading: Z.Z.Messages.CONNECTIONS,
+    children: (0, n.jsx)(v.OA, {
+      connectedAccounts: U,
+      className: h.connections,
+      userId: s.id,
+      theme: N,
       locale: R
     })
   }),
-  L.length > 0 && (0, s.jsx)(m.Z, {
-    heading: h.Z.Messages.APPS,
-    children: L.map(e => (0, s.jsx)(x.tH, {
-      className: S.appsConnections,
+  L.length > 0 && (0, n.jsx)(m.Z, {
+    heading: Z.Z.Messages.APPS,
+    children: L.map(e => (0, n.jsx)(v.tH, {
+      className: h.appsConnections,
       applicationRoleConnection: e,
       locale: R,
       onApplicationClicked: () => {
-        N({
+        j({
           action: 'PRESS_APP_CONNECTION'
-        }), j();
+        }), T();
       },
-      selectedGuildId: null != y ? y : void 0
+      selectedGuildId: null != M ? M : void 0
     }, e.application.id))
   }),
-  (0, s.jsx)(m.Z, {
-    heading: h.Z.Messages.NOTE,
-    scrollIntoView: g === Z.Tb.NOTE,
-    children: (0, s.jsx)(o.Z, {
-      userId: i.id,
-      className: S.note,
-      autoFocus: g === Z.Tb.NOTE,
-      onUpdate: () => N({
+  (0, n.jsx)(m.Z, {
+    heading: Z.Z.Messages.NOTE,
+    scrollIntoView: g === S.Tb.NOTE,
+    children: (0, n.jsx)(o.Z, {
+      userId: s.id,
+      className: h.note,
+      autoFocus: g === S.Tb.NOTE,
+      onUpdate: () => j({
         action: 'SET_NOTE'
       })
     })

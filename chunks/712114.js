@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return p;
+return m;
   }
 });
 var i = n(735250),
@@ -14,11 +14,11 @@ var i = n(735250),
   d = n(689938),
   h = n(86960);
 
-function p(e) {
+function m(e) {
   let {
 onOpenClips: t,
 lastClipsSession: n,
-closePopout: p
+closePopout: m
   } = e;
   return (a.useEffect(() => () => {
 (0, c.eL)();
@@ -58,7 +58,7 @@ children: [
         color: l.Button.Colors.PRIMARY,
         look: l.Button.Looks.LINK,
         onClick: function() {
-          (0, o.Kw)(o.v6.CLIPS_CHANNEL_ATTACH_REMINDER), p();
+          (0, o.Kw)(o.v6.CLIPS_CHANNEL_ATTACH_REMINDER), m();
         },
         children: d.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_SECONDARY_CTA
       }),

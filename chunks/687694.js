@@ -1,9 +1,9 @@
-s.d(a, {
+n.d(t, {
   C: function() {
-return t;
+return i;
   }
 });
-let n = (0, s(818083).B)({
+let r = (0, n(818083).B)({
 id: '2024-04_memberlist_hover_interactions',
 kind: 'user',
 label: 'Memberlist Hover Interactions',
@@ -37,20 +37,20 @@ treatments: [{
   }
 ]
   }),
-  t = e => {
+  i = e => {
 let {
-  location: a,
-  autoTrackExposure: s = !0
+  location: t,
+  autoTrackExposure: n = !0
 } = e, {
-  showReplyIcon: t,
-  openOnHover: l
-} = n.useExperiment({
-  location: a
+  showReplyIcon: i,
+  openOnHover: a
+} = r.useExperiment({
+  location: t
 }, {
-  autoTrackExposure: s
+  autoTrackExposure: n
 });
 return {
-  showReplyIcon: t,
-  openOnHover: l
+  showReplyIcon: i,
+  openOnHover: a
 };
   };

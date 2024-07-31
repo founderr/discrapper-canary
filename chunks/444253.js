@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return p;
   }
 });
 var i = n(735250);
@@ -14,27 +14,27 @@ var a = n(442837),
   u = n(418469),
   d = n(673539),
   h = n(354459),
-  p = n(689938);
+  m = n(689938);
 
-function m(e) {
+function p(e) {
   let {
 channelId: t,
 onClose: n,
-appContext: m,
+appContext: p,
 exitFullScreen: _,
 onSelect: f
   } = e, E = (0, a.e7)([l.Z], () => l.Z.getSelectedParticipant(t)), g = (null == E ? void 0 : E.type) === h.fO.STREAM ? E.stream : null, C = (0, r.Z)(t), I = (0, c.Z)(), x = (0, o.Z)(t), T = (0, d.Z)(t);
   return (0, i.jsxs)(s.Menu, {
 navId: 'channel-call-overflow-popout',
 onClose: n,
-'aria-label': p.Z.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
+'aria-label': m.Z.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
 onSelect: f,
 children: [
   C,
   I,
   x,
   T,
-  (0, u.Z)(g, m, _)
+  (0, u.Z)(g, p, _)
 ]
   });
 }

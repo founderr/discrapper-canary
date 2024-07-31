@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(422559),
   d = n(430824),
   h = n(233608),
-  p = n(776767),
-  m = n(351127),
+  m = n(776767),
+  p = n(351127),
   _ = n(50493),
   f = n(981631),
   E = n(689938),
@@ -22,8 +22,8 @@ function C(e) {
 permission: a,
 roleIds: s,
 guild: h,
-specMap: p
-  } = e, _ = f.Plq[a], C = null !== (n = null === (t = p[_.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, u.wt)(_), I = m._o.has(_), x = (0, r.e7)([d.Z], () => d.Z.getRoles(h.id));
+specMap: m
+  } = e, _ = f.Plq[a], C = null !== (n = null === (t = m[_.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, u.wt)(_), I = p._o.has(_), x = (0, r.e7)([d.Z], () => d.Z.getRoles(h.id));
   return (0, i.jsx)(o.Tooltip, {
 'aria-label': E.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
 tooltipClassName: g.roleTooltipContainer,
@@ -76,7 +76,7 @@ t.Z = a.memo(function(e) {
   let {
 member: t,
 onNavigate: n
-  } = e, s = (0, r.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]), c = (0, m.B2)(t.userId, t.guildId, m.Qn), u = (0, m.B2)(t.userId, t.guildId, m.pd), I = Object.keys(c).length, x = Object.keys(u).length, T = a.useMemo(() => null != s ? h.Z.getGuildPermissionSpecMap(s) : null, [s]), N = a.useMemo(() => null != s ? h.Z.generateGuildPermissionSpec(s) : null, [s]), v = a.useMemo(() => {
+  } = e, s = (0, r.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]), c = (0, p.B2)(t.userId, t.guildId, p.Qn), u = (0, p.B2)(t.userId, t.guildId, p.pd), I = Object.keys(c).length, x = Object.keys(u).length, T = a.useMemo(() => null != s ? h.Z.getGuildPermissionSpecMap(s) : null, [s]), N = a.useMemo(() => null != s ? h.Z.generateGuildPermissionSpec(s) : null, [s]), v = a.useMemo(() => {
 if (null == s || null == T)
   return null;
 if (0 === I)
@@ -92,7 +92,7 @@ let e = [];
 return null == N || N.forEach(t => {
   t.permissions.forEach(t => {
     let n = t.flag,
-      a = m.pd.find(e => f.Plq[e] === n);
+      a = p.pd.find(e => f.Plq[e] === n);
     if (null == a)
       return;
     let l = c[a];
@@ -141,8 +141,8 @@ title: (0, i.jsxs)('div', {
     })
   ]
 }),
-children: (0, i.jsx)(p.WM, {
-  children: (0, i.jsx)(p._2, {
+children: (0, i.jsx)(m.WM, {
+  children: (0, i.jsx)(m._2, {
     description: (0, i.jsx)('div', {
       className: g.permissionsContainer,
       children: v

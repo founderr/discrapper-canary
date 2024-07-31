@@ -1,9 +1,9 @@
 t.d(n, {
   Q2: function() {
-return L;
+return P;
   },
   pe: function() {
-return P;
+return S;
   }
 }), t(47120), t(653041), t(536091);
 var i = t(470079),
@@ -41,7 +41,7 @@ function g(e, n) {
   return (0, m.un)(e.displayName, n.displayName);
 }
 
-function P(e) {
+function S(e) {
   let {
 channel: n,
 query: t,
@@ -55,7 +55,7 @@ searchesActivities: f = !0
   let {
 commands: C,
 commandSectionMap: h,
-loading: P
+loading: S
   } = function(e) {
 var n, t;
 let {
@@ -98,7 +98,7 @@ return i.useMemo(() => {
 channel: n,
 includeBuiltIn: !0
   }), {
-apps: L
+apps: P
   } = function(e) {
 let {
   channel: n,
@@ -124,7 +124,7 @@ return i && s.push(E.Wx), {
 channel: n,
 onlyWithCommands: !0,
 includeBuiltIn: !0
-  }), S = (0, u.Z)({
+  }), L = (0, u.Z)({
 guildId: n.getGuildId()
   }), T = i.useMemo(() => {
 var e;
@@ -242,10 +242,10 @@ C,
 a,
 n,
 t
-  ]), R = i.useMemo(() => {
+  ]), b = i.useMemo(() => {
 if (0 === T.length)
   return [];
-let e = new Map(L.map(e => [
+let e = new Map(P.map(e => [
   e.id,
   e
 ]));
@@ -262,22 +262,22 @@ return l().compact(T.map(n => {
   };
 }));
   }, [
-L,
+P,
 T,
 h
-  ]), b = i.useMemo(() => {
+  ]), R = i.useMemo(() => {
 var e;
 if (!s && !f)
   return [];
 let i = [];
 if (s && f) {
-  let e = new Set(L.map(e => {
+  let e = new Set(P.map(e => {
     let {
       id: n
     } = e;
     return n;
   }));
-  i.push(...L), i.push(...S.filter(n => {
+  i.push(...P), i.push(...L.filter(n => {
     let {
       application: {
         id: t
@@ -291,7 +291,7 @@ if (s && f) {
     return n;
   }));
 } else
-  i = s ? L : S.map(e => {
+  i = s ? P : L.map(e => {
     let {
       application: n
     } = e;
@@ -358,20 +358,20 @@ f,
 r,
 n,
 t,
-L,
-S
-  ]), M = R.length > 0, y = b.length > 0;
+P,
+L
+  ]), M = b.length > 0, y = R.length > 0;
   return {
-commandResults: R,
+commandResults: b,
 hasCommandResults: M,
-applicationResults: b,
+applicationResults: R,
 hasApplicationResults: y,
 isEmptyState: !M && !y,
-loading: P && o
+loading: S && o
   };
 }
 
-function L(e) {
+function P(e) {
   let {
 channel: n,
 query: t,

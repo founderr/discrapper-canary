@@ -8,8 +8,8 @@ var i = n(735250),
   u = n(585483),
   d = n(5967),
   h = n(499254),
-  p = n(827498),
-  m = n(421591),
+  m = n(827498),
+  p = n(421591),
   _ = n(314734),
   f = n(981631),
   E = n(689938),
@@ -19,7 +19,7 @@ let C = {
 };
 
 function I() {
-  h.y(p.ti.DISMISSED);
+  h.y(m.ti.DISMISSED);
 }
 
 function x(e) {
@@ -68,10 +68,10 @@ g
   }, [
 x,
 C
-  ]), (0, i.jsx)(m.Z, {
+  ]), (0, i.jsx)(p.Z, {
 ref: h,
 channel: t,
-entrypoint: p._b.TEXT
+entrypoint: m._b.TEXT
   });
 }
 t.Z = a.memo(function(e) {

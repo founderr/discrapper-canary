@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(654030),
   d = n(744061),
   h = n(367907),
-  p = n(728345),
-  m = n(812206),
+  m = n(728345),
+  p = n(812206),
   _ = n(541716),
   f = n(752305),
   E = n(893718),
@@ -50,7 +50,7 @@ let {
   activity: e,
   application: t
 } = this.props;
-null != e.application_id && null == t && p.Z.fetchApplication(e.application_id);
+null != e.application_id && null == t && m.Z.fetchApplication(e.application_id);
   }
   renderTitle() {
 let {
@@ -76,12 +76,12 @@ let {
   analyticsLocations: r,
   channel: c,
   activityActionType: h,
-  cooldown: p,
-  application: m,
+  cooldown: m,
+  application: p,
   transitionState: f,
   onClose: g
-} = this.props, C = p > 0, I = C ? N.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
-  seconds: Math.round((p + 1000) / 1000)
+} = this.props, C = m > 0, I = C ? N.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
+  seconds: Math.round((m + 1000) / 1000)
 }) : null;
 return (0, i.jsxs)(o.ModalRoot, {
   size: o.ModalSize.SMALL,
@@ -105,7 +105,7 @@ return (0, i.jsxs)(o.ModalRoot, {
           activityActionType: h,
           activity: s,
           className: v.preview,
-          application: m,
+          application: p,
           partyId: null != s.party ? s.party.id : null,
           isPreview: !0,
           analyticsLocations: r
@@ -261,7 +261,7 @@ super(...e), S(this, 'state', {
 }
 t.default = r.ZP.connectStores([
   I.Z,
-  m.Z
+  p.Z
 ], e => {
   let {
 channel: t,
@@ -269,6 +269,6 @@ activity: n
   } = e;
   return {
 cooldown: I.Z.getSlowmodeCooldownGuess(t.id),
-application: null != n.application_id ? m.Z.getApplication(n.application_id) : C.r9
+application: null != n.application_id ? p.Z.getApplication(n.application_id) : C.r9
   };
 })(A);

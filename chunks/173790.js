@@ -31,19 +31,19 @@ channel: t,
 application: s,
 sectionName: c,
 installOnDemand: I
-  } = e, P = (0, l.e7)([m.Z], () => m.Z.entrypoint()), L = null !== (n = (0, d.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, S = (0, _.ye)({
-application: L
+  } = e, S = (0, l.e7)([m.Z], () => m.Z.entrypoint()), P = null !== (n = (0, d.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, L = (0, _.ye)({
+application: P
   }) ? g : A.Z, T = a.useRef(null), {
-iconURL: R,
-name: b
-  } = a.useMemo(() => (0, _.sl)(L, {
+iconURL: b,
+name: R
+  } = a.useMemo(() => (0, _.sl)(P, {
 fakeAppIconURL: x,
 size: 84
-  }), [L]);
+  }), [P]);
   return a.useEffect(() => {
-I ? u.ZP.queryInstallOnDemandApp(L.id, t.id) : u.ZP.maybeQueryForInstallLessApps(L.id, t.id);
+I ? u.ZP.queryInstallOnDemandApp(P.id, t.id) : u.ZP.maybeQueryForInstallLessApps(P.id, t.id);
   }, [
-L.id,
+P.id,
 t.id,
 I
   ]), (0, i.jsxs)(o.ScrollerNone, {
@@ -52,29 +52,29 @@ fade: !0,
 ref: T,
 role: 'region',
 'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({
-  applicationName: b
+  applicationName: R
 }),
 children: [
   (0, i.jsx)(h.Z, {
-    name: b,
-    iconURL: R,
+    name: R,
+    iconURL: b,
     scrollerRef: T
   }),
-  null != R && (0, i.jsx)(f.Z, {
-    src: R,
+  null != b && (0, i.jsx)(f.Z, {
+    src: b,
     className: v.appIcon
   }),
   (0, i.jsx)(r.Z, {
     size: 54
   }),
-  (0, i.jsx)(S, {
+  (0, i.jsx)(L, {
     channel: t,
-    application: L,
+    application: P,
     sectionName: c
   }),
-  P === p._b.TEXT ? (0, i.jsx)(C.Z, {
+  S === p._b.TEXT ? (0, i.jsx)(C.Z, {
     channel: t,
-    application: L,
+    application: P,
     sectionName: c,
     installOnDemand: I
   }) : null

@@ -25,12 +25,12 @@ var i = t(735250),
   x = t(10718),
   I = t(895924),
   g = t(148958),
-  P = t(424602),
-  L = t(541099),
-  S = t(827498),
+  S = t(424602),
+  P = t(541099),
+  L = t(827498),
   T = t(87005),
-  R = t(783097),
-  b = t(695676),
+  b = t(783097),
+  R = t(695676),
   M = t(98880),
   y = t(804307),
   j = t(888617),
@@ -66,7 +66,7 @@ searchQuery: l,
 setSearchQuery: r,
 setScroller: o,
 isScrollCloseToBottom: s
-  } = e, d = (0, c.e7)([m.Z], () => m.Z.getIsEnabled(), []), _ = t === S._b.TEXT, f = t === S._b.TEXT && !n.isPrivate(), C = t === S._b.TEXT, h = t === S._b.VOICE, A = t === S._b.TEXT, [E, N] = $(_), [v, x] = $(f), [I, g] = $(C), [P, L] = $(h), T = E && v && I && P, R = (C || f) && !T, b = h && d;
+  } = e, d = (0, c.e7)([m.Z], () => m.Z.getIsEnabled(), []), _ = t === L._b.TEXT, f = t === L._b.TEXT && !n.isPrivate(), C = t === L._b.TEXT, h = t === L._b.VOICE, A = t === L._b.TEXT, [E, N] = $(_), [v, x] = $(f), [I, g] = $(C), [S, P] = $(h), T = E && v && I && S, b = (C || f) && !T, R = h && d;
   a.useEffect(() => {
 (0, p.w1)({
   guildId: n.getGuildId(),
@@ -77,7 +77,7 @@ isScrollCloseToBottom: s
   return (0, i.jsxs)('div', {
 className: w.container,
 children: [
-  b ? (0, i.jsx)(G, {}) : null,
+  R ? (0, i.jsx)(G, {}) : null,
   (0, i.jsx)(z, {
     searchQuery: l,
     setSearchQuery: r,
@@ -91,7 +91,7 @@ children: [
       channel: n,
       query: l,
       entrypoint: t,
-      enableGlobalSearch: t === S._b.TEXT,
+      enableGlobalSearch: t === L._b.TEXT,
       isScrollCloseToBottom: s
     }) : (0, i.jsxs)('div', {
       children: [
@@ -110,13 +110,13 @@ children: [
         }),
         h && (0, i.jsx)(q, {
           channel: n,
-          onEmptyState: L
+          onEmptyState: P
         }),
         T && (0, i.jsx)(O.A, {
-          type: S.LG.HOME_EMPTY,
-          textContent: t === S._b.TEXT ? D.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : D.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
+          type: L.LG.HOME_EMPTY,
+          textContent: t === L._b.TEXT ? D.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : D.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
         }),
-        R && (0, i.jsx)(H.Z, {})
+        b && (0, i.jsx)(H.Z, {})
       ]
     })
   })
@@ -148,7 +148,7 @@ placeholder: l
   } = e, o = a.useRef(null), [s, c] = a.useState(!1), d = a.useMemo(() => r().debounce(e => {
 (0, h.yw)(B.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
   query: e,
-  source: L.Z.entrypoint(),
+  source: P.Z.entrypoint(),
   location: I.Vh.APP_LAUNCHER_HOME
 });
   }, 400, {
@@ -156,7 +156,7 @@ leading: !1,
 trailing: !0
   }), []), m = a.useCallback(() => t(''), [t]), p = a.useCallback(() => {
 c(!0), (0, h.yw)(B.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
-  source: L.Z.entrypoint(),
+  source: P.Z.entrypoint(),
   location: I.Vh.APP_LAUNCHER_HOME
 });
   }, []), _ = a.useCallback(() => {
@@ -219,13 +219,13 @@ return e;
   }, [r]), c = D.Z.Messages.APP_LAUNCHER_HOME_RECENT_APPS_HEADER, {
 items: u,
 handleViewMore: d
-  } = ee(c, t === S._b.VOICE ? M.U4.LARGE_BANNER : M.U4.NO_BANNER, s, 8, S.L3.RECENT_APPS);
+  } = ee(c, t === L._b.VOICE ? M.U4.LARGE_BANNER : M.U4.NO_BANNER, s, 8, L.L3.RECENT_APPS);
   a.useEffect(() => {
 if (!0 !== o.current)
   0 !== u.length && (0, h.yw)(B.rMx.APP_LAUNCHER_FRECENTS_SEEN, {
     num: u.length,
-    section_name: S.L3.RECENT_APPS,
-    location: S.G0.HOME,
+    section_name: L.L3.RECENT_APPS,
+    location: L.G0.HOME,
     source: t
   });
   }, [
@@ -260,8 +260,8 @@ children: [
           application: t,
           look: M.U4.ICON,
           isPartner: a,
-          location: S.G0.HOME,
-          sectionName: S.L3.RECENT_APPS,
+          location: L.G0.HOME,
+          sectionName: L.L3.RECENT_APPS,
           resultsPosition: n
         }, t.id);
       })
@@ -284,13 +284,13 @@ r = M.U4.LARGE_BANNER,
 {
   trackSectionImpressionRef: o
 } = (0, j.Z)({
-  sectionName: S.L3.ACTIVITIES,
+  sectionName: L.L3.ACTIVITIES,
   numItems: l.length,
   numVisibleItems: l.length
 }),
 {
   clickOnHomeActivityOpensAppDetail: s
-} = P.m1.getCurrentConfig({
+} = S.m1.getCurrentConfig({
   location: 'ActivitiesShelfSection'
 }, {
   autoTrackExposure: !1
@@ -320,7 +320,7 @@ children: [
         application: a,
         look: r,
         location: I.Vh.APP_LAUNCHER_HOME,
-        sectionName: S.L3.ACTIVITIES,
+        sectionName: L.L3.ACTIVITIES,
         resultsPosition: t,
         isOneClickCTA: !s
       }, a.id);
@@ -361,7 +361,7 @@ return Object.values(null !== (n = null === (e = o.result) || void 0 === e ? voi
   }, [
 null === (n = o.result) || void 0 === n ? void 0 : n.sections,
 u
-  ]), p = (0, g.h)(m), _ = S.L3.APPS_IN_THIS_SERVER, f = a.useMemo(() => r().compact(p.map(e => {
+  ]), p = (0, g.h)(m), _ = L.L3.APPS_IN_THIS_SERVER, f = a.useMemo(() => r().compact(p.map(e => {
 let {
   application: n
 } = e;
@@ -377,13 +377,13 @@ trackSectionImpressionRef: A
 sectionName: _,
 numItems: f.length,
 numVisibleItems: C.length
-  }), E = o.fetchState.fetching || c.current, P = !E && 0 === C.length;
+  }), E = o.fetchState.fetching || c.current, S = !E && 0 === C.length;
   return (a.useEffect(() => {
-l(P);
+l(S);
   }, [
-P,
+S,
 l
-  ]), P) ? null : (0, i.jsxs)('div', {
+  ]), S) ? null : (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)('div', {
     ref: e => A.current = e,
@@ -447,7 +447,7 @@ let {
   placeholderCount: 0,
   limit: k.tn,
   includeFrecency: !0
-}), r = a.useCallback(e => !(0, R.ye)({
+}), r = a.useCallback(e => !(0, b.ye)({
   application: e
 }) && !(null != l.find(n => n.id === e.id)), [l]), {
   fetchState: o,
@@ -641,7 +641,7 @@ a.useCallback(function() {
 function ee(e, n, t, i, l) {
   let {
 pushHistory: r
-  } = (0, b.hH)();
+  } = (0, R.hH)();
   return a.useMemo(() => t.length <= i ? {
 items: t,
 handleViewMore: void 0
@@ -650,10 +650,10 @@ items: t.slice(0, i),
 handleViewMore: () => {
   (0, h.yw)(B.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
     section_name: l,
-    source: L.Z.entrypoint(),
+    source: P.Z.entrypoint(),
     num: t.length
   }), r({
-    type: b.gc.LIST,
+    type: R.gc.LIST,
     title: e,
     look: n,
     items: t,

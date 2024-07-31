@@ -15,14 +15,14 @@ function u(e) {
   let t, n, u, {
   channel: d,
   messages: h,
-  oldestUnreadMessageId: p,
-  treatSpam: m,
+  oldestUnreadMessageId: m,
+  treatSpam: p,
   summaries: _,
   selectedSummary: f
 } = e,
 E = [],
 g = !1,
-C = null != p ? l.default.extractTimestamp(p) : null,
+C = null != m ? l.default.extractTimestamp(m) : null,
 I = null;
   return h.forEach(e => {
 var a, x, T, N, v, S, Z, A;
@@ -63,7 +63,7 @@ let L = function(e, t, n) {
   else if ((0, o.P1)(e) && n)
     return c.ys_.MESSAGE_GROUP_SPAMMER;
   return null;
-}(d, e, j && m);
+}(d, e, j && p);
 if (null !== L) {
   ;
   let t, n;
@@ -76,7 +76,7 @@ if (null !== L) {
     n
   ]);
 }
-if (p === e.id && null != C) {
+if (m === e.id && null != C) {
   if (null != b && b.type === c.ys_.DIVIDER)
     b.unreadId = e.id, C = null;
   else if (null !== R) {

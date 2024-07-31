@@ -1,94 +1,94 @@
-s.d(a, {
+n.d(t, {
   F9: function() {
 return T;
   },
   Zb: function() {
-return N;
+return p;
   },
   e$: function() {
-return O;
+return m;
   },
   ll: function() {
-return m;
+return g;
   }
 });
-var n = s(735250);
-s(470079);
-var t = s(120356),
-  l = s.n(t),
-  r = s(442837),
-  i = s(481060),
-  o = s(271383),
-  c = s(430824),
-  E = s(594174),
-  _ = s(806519),
-  d = s(5192),
-  u = s(192918),
-  I = s(687694),
-  A = s(827418);
+var r = n(735250);
+n(470079);
+var i = n(120356),
+  a = n.n(i),
+  s = n(442837),
+  o = n(481060),
+  l = n(271383),
+  u = n(430824),
+  c = n(594174),
+  d = n(806519),
+  _ = n(5192),
+  E = n(192918),
+  f = n(687694),
+  h = n(827418);
 
-function N(e) {
+function p(e) {
   let {
-children: a,
-selected: s
+children: t,
+selected: n
   } = e, {
-showReplyIcon: t,
-openOnHover: r
-  } = (0, I.C)({
+showReplyIcon: i,
+openOnHover: s
+  } = (0, f.C)({
 location: 'ContentCard'
   });
-  return (0, n.jsxs)('div', {
-className: l()(A.container, {
-  [A.selected]: s
+  return (0, r.jsxs)('div', {
+className: a()(h.container, {
+  [h.selected]: n
 }, {
-  [A.openOnHover]: r
+  [h.openOnHover]: s
 }),
 children: [
-  a,
-  t && (0, n.jsx)('div', {
-    className: A.reply,
-    children: (0, n.jsx)(i.ArrowAngleLeftUpIcon, {
+  t,
+  i && (0, r.jsx)('div', {
+    className: h.reply,
+    children: (0, r.jsx)(o.ArrowAngleLeftUpIcon, {
       size: 'md',
       color: 'currentColor',
-      className: A.icon
+      className: h.icon
     })
   })
 ]
   });
 }
 
-function O(e) {
+function m(e) {
   let {
-children: a
+children: t
   } = e;
-  return (0, n.jsx)('div', {
-className: A.infoSection,
-children: a
+  return (0, r.jsx)('div', {
+className: h.infoSection,
+children: t
   });
 }
 
-function R(e) {
+function I(e) {
   let {
-users: a,
-guildId: s
+users: t,
+guildId: n
   } = e;
-  return (0, n.jsx)('div', {
-className: A.facePile,
-children: a.map((e, t) => {
-  let l = (0, n.jsx)(i.Avatar, {
-    src: e.getAvatarURL(s, 80),
-    size: i.AvatarSizes.SIZE_16,
+  return (0, r.jsx)('div', {
+className: h.facePile,
+children: t.map((e, i) => {
+  let a = (0, r.jsx)(o.Avatar, {
+    src: e.getAvatarURL(n, 80),
+    size: o.AvatarSizes.SIZE_16,
     'aria-label': 'avatar'
   });
-  return t === a.length - 1 ? (0, n.jsx)('div', {
-    className: A.facePileItem,
-    children: l
-  }, e.id) : (0, n.jsx)(_.ZP, {
+  return i === t.length - 1 ? (0, r.jsx)('div', {
+    className: h.facePileItem,
+    children: a
+  }, e.id) : (0, r.jsx)(d.ZP, {
     width: 16,
     height: 16,
-    className: A.facePileItem,
-    mask: _.ZP.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
-    children: l
+    className: h.facePileItem,
+    mask: d.ZP.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
+    children: a
   }, e.id);
 })
   });
@@ -96,46 +96,46 @@ children: a.map((e, t) => {
 
 function T(e) {
   let {
-guildId: a,
-channelId: s,
-entry: t,
-maxAvatars: l = 3
-  } = e, _ = t.author_id, I = (0, r.e7)([E.default], () => E.default.getUser(_)), {
-displayParticipants: N,
-numOtherParticipants: O
-  } = (0, u.Z)(t, l), T = (0, r.e7)([o.ZP], () => o.ZP.getMember(a, _)), m = (0, r.e7)([c.Z], () => {
+guildId: t,
+channelId: n,
+entry: i,
+maxAvatars: a = 3
+  } = e, d = i.author_id, f = (0, s.e7)([c.default], () => c.default.getUser(d)), {
+displayParticipants: p,
+numOtherParticipants: m
+  } = (0, E.Z)(i, a), T = (0, s.e7)([l.ZP], () => l.ZP.getMember(t, d)), g = (0, s.e7)([u.Z], () => {
 var e;
-return (null == T ? void 0 : T.colorRoleId) != null ? null === (e = c.Z.getRole(a, T.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
+return (null == T ? void 0 : T.colorRoleId) != null ? null === (e = u.Z.getRole(t, T.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
   }, [
-a,
+t,
 T
   ]);
-  if (null == I)
+  if (null == f)
 return null;
-  let g = null == T ? void 0 : T.colorString,
-P = d.ZP.getName(a, s, I);
-  return (0, n.jsxs)('div', {
-className: A.userSection,
+  let S = null == T ? void 0 : T.colorString,
+A = _.ZP.getName(t, n, f);
+  return (0, r.jsxs)('div', {
+className: h.userSection,
 children: [
-  (0, n.jsx)(R, {
-    users: N,
-    guildId: a
+  (0, r.jsx)(I, {
+    users: p,
+    guildId: t
   }),
-  (0, n.jsx)(i.NameWithRole, {
-    color: null != g ? g : void 0,
-    roleName: m,
-    name: P,
-    className: A.userName
+  (0, r.jsx)(o.NameWithRole, {
+    color: null != S ? S : void 0,
+    roleName: g,
+    name: A,
+    className: h.userName
   }),
-  O > 0 ? (0, n.jsx)('div', {
-    className: A.additionalParticipantBadge,
-    children: (0, n.jsxs)(i.Text, {
+  m > 0 ? (0, r.jsx)('div', {
+    className: h.additionalParticipantBadge,
+    children: (0, r.jsxs)(o.Text, {
       variant: 'text-xxs/medium',
       color: 'text-normal',
-      className: A.additionalParticipantBadgeText,
+      className: h.additionalParticipantBadgeText,
       children: [
         '+',
-        O
+        m
       ]
     })
   }) : null
@@ -143,14 +143,14 @@ children: [
   });
 }
 
-function m(e) {
+function g(e) {
   let {
-children: a
+children: t
   } = e;
-  return (0, n.jsx)(i.Heading, {
+  return (0, r.jsx)(o.Heading, {
 variant: 'heading-sm/medium',
-className: A.contentDescription,
+className: h.contentDescription,
 lineClamp: 1,
-children: a
+children: t
   });
 }

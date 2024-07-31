@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(904245),
   d = n(902840),
   h = n(607070),
-  p = n(580747),
-  m = n(135938),
+  m = n(580747),
+  p = n(135938),
   _ = n(160404),
   f = n(765104),
   E = n(695346),
@@ -38,8 +38,8 @@ let k = a.memo(function(e) {
   let {
 className: s,
 messageGroupSpacing: d,
-scrollerClassName: p,
-channel: m,
+scrollerClassName: m,
+channel: p,
 messages: f,
 unreadCount: E,
 showNewMessagesBar: g,
@@ -73,7 +73,7 @@ S,
 d
   ]), H = (0, L.ZP)({
 messages: f,
-channel: m,
+channel: p,
 compact: C,
 hasUnreads: N,
 focusId: v,
@@ -87,7 +87,7 @@ isEditing: null != v,
 keyboardModeEnabled: Z,
 hasMoreAfter: f.hasMoreAfter
   });
-  let V = (n = m, (0, o.e7)([_.Z], () => T.Z.can(O.Plq.READ_MESSAGE_HISTORY, n) ? null : _.Z.getViewingRolesTimestamp(n.getGuildId()))),
+  let V = (n = p, (0, o.e7)([_.Z], () => T.Z.can(O.Plq.READ_MESSAGE_HISTORY, n) ? null : _.Z.getViewingRolesTimestamp(n.getGuildId()))),
 {
   channelStreamMarkup: F,
   newMessagesBar: W,
@@ -95,7 +95,7 @@ hasMoreAfter: f.hasMoreAfter
   forumPostActionBar: Y,
   safetyWarningBanner: K
 } = (0, P.Z)({
-  channel: m,
+  channel: p,
   messages: f,
   unreadCount: E,
   showNewMessagesBar: g,
@@ -116,7 +116,7 @@ hasMoreAfter: f.hasMoreAfter
         animate: !h.Z.useReducedMotion
       });
     } else
-      u.Z.jumpToPresent(m.id, O.AQB);
+      u.Z.jumpToPresent(p.id, O.AQB);
   }
 });
   ! function(e) {
@@ -167,7 +167,7 @@ children: [
       (0, i.jsxs)(c.PinToBottomScrollerAuto, {
         ref: J,
         customTheme: !0,
-        className: l()(p, D.scroller),
+        className: l()(m, D.scroller),
         contentClassName: D.scrollerContent,
         onResize: H.handleResize,
         onScroll: H.handleScroll,
@@ -181,7 +181,7 @@ children: [
           (0, i.jsxs)('ol', {
             className: D.scrollerInner,
             'aria-label': y.Z.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({
-              channelName: m.name
+              channelName: p.name
             }),
             ...Q,
             children: [
@@ -196,7 +196,7 @@ children: [
                 className: l()({
                   [D.scrollerSpacer]: !b,
                   [D.empty]: 0 === f.length && !f.loadingMore,
-                  [D.emptyForum]: 1 === f.length && !f.loadingMore && m.isForumPost() && (null === (t = f.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(m))
+                  [D.emptyForum]: 1 === f.length && !f.loadingMore && p.isForumPost() && (null === (t = f.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(p))
                 })
               })
             ]
@@ -285,14 +285,14 @@ let i = (0, o.e7)([x.Z], () => x.Z.getMessages(e.id), [e.id]),
   }, [e.id]),
   {
     enabled: l
-  } = m.Z.useExperiment({
+  } = p.Z.useExperiment({
     location: '41de6d_1'
   }, {
     autoTrackExposure: !1
   }),
   r = null !== (n = null === (t = S.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && void 0 !== n && n,
   c = (0, d.ts)(e),
-  u = (0, p.Z)('use_topic_dividers_in_chat'),
+  u = (0, m.Z)('use_topic_dividers_in_chat'),
   h = (0, o.Wu)([f.Z], () => {
     var t;
     return c && u && null !== (t = f.Z.summaries(e.id)) && void 0 !== t ? t : [];

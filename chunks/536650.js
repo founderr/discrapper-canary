@@ -45,7 +45,7 @@ return null !== (n = null === (e = (0, d.k8)({
   }, [
 v,
 C
-  ]), I = f(h), g = f(A), P = a.useCallback(() => {
+  ]), I = f(h), g = f(A), S = a.useCallback(() => {
 var e, n, t, i, a, r, o, s, c;
 let u = _.current,
   d = h.current,
@@ -71,21 +71,21 @@ _,
 null == I ? void 0 : I.height
   ]);
   return a.useEffect(() => {
-P();
+S();
   }, [
-P,
+S,
 C
   ]), a.useEffect(() => {
 let e = _.current,
   n = () => {
-    P();
+    S();
   };
 return null == e || e.addEventListener('scroll', n), () => {
   null == e || e.removeEventListener('scroll', n);
 };
   }, [
 _,
-P
+S
   ]), (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsxs)('div', {

@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(100527),
   d = n(906732),
   h = n(385499),
-  p = n(556084),
-  m = n(484459),
+  m = n(556084),
+  p = n(484459),
   _ = n(103575),
   f = n(158776),
   E = n(699516),
@@ -42,7 +42,7 @@ user: t,
 channel: a,
 status: u,
 activities: d
-  } = e, h = (0, l.e7)([g.Z], () => null != g.Z.getTypingUsers(a.id)[t.id]), p = (0, l.e7)([C.default], () => C.default.getCurrentUser()), I = (0, l.e7)([f.Z], () => f.Z.isMobileOnline(t.id)), x = (0, l.e7)([E.Z], () => E.Z.getNickname(t.id)), T = e => {
+  } = e, h = (0, l.e7)([g.Z], () => null != g.Z.getTypingUsers(a.id)[t.id]), m = (0, l.e7)([C.default], () => C.default.getCurrentUser()), I = (0, l.e7)([f.Z], () => f.Z.isMobileOnline(t.id)), x = (0, l.e7)([E.Z], () => E.Z.getNickname(t.id)), T = e => {
 (0, o.jW)(e, async () => {
   let {
     default: e
@@ -59,7 +59,7 @@ activities: d
 });
   };
   return (0, i.jsx)(r.Popout, {
-preload: () => (0, m.W)(t, {
+preload: () => (0, p.W)(t, {
   channelId: a.id
 }),
 renderPopout: e => (0, i.jsx)(_.Z, {
@@ -82,7 +82,7 @@ onShiftClick: () => {
 },
 children: e => (0, i.jsx)(M.Z, {
   user: t,
-  currentUser: p,
+  currentUser: m,
   isOwner: t.id === a.ownerId,
   ownerTooltipText: R.Z.Messages.GROUP_OWNER,
   shouldAnimateStatus: O,
@@ -117,14 +117,14 @@ channel: c
   }, [
 l,
 c
-  ]), d = l.application.bot, p = N.ZP.getApplicationIconURL({
+  ]), d = l.application.bot, m = N.ZP.getApplicationIconURL({
 id: l.application.id,
 icon: l.application.icon,
 bot: null === (t = l.application) || void 0 === t ? void 0 : t.bot,
 botIconFirst: !0
   });
   return null != d ? (0, i.jsx)(r.Popout, {
-preload: () => (0, m.W)(d.id, p, {
+preload: () => (0, p.W)(d.id, m, {
   channelId: c.id
 }),
 renderPopout: e => (0, i.jsx)(_.Z, {
@@ -144,7 +144,7 @@ children: e => (0, i.jsx)(I.Z, {
   }),
   avatar: (0, i.jsx)(r.Avatar, {
     size: r.AvatarSizes.SIZE_32,
-    src: p,
+    src: m,
     'aria-label': l.application.name,
     statusTooltip: !0
   }),
@@ -222,13 +222,13 @@ applicationsShelf: v,
 fetched: Z,
 appsInGDMEnabled: A,
 availableApplications: M
-  } = (0, p.j)({
+  } = (0, m.j)({
 channelId: s.id
   });
   a.useEffect(() => {
 if (c)
   for (let e of g)
-    (0, m.W)(e.user, {
+    (0, p.W)(e.user, {
       dispatchWait: !0,
       channelId: s.id
     });

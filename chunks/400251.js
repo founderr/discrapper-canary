@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(749210),
   d = n(565138),
   h = n(372769),
-  p = n(134432),
-  m = n(769654),
+  m = n(134432),
+  p = n(769654),
   _ = n(601964),
   f = n(430824),
   E = n(806519),
@@ -136,7 +136,7 @@ entry: s
   } = e, [l, g] = a.useState(!1), I = null != (0, r.e7)([f.Z], () => f.Z.getGuild(s.guildId)), x = async () => {
 g(!0);
 try {
-  I ? (0, m.X)(s.guildId) : await u.Z.joinGuild(s.guildId, {
+  I ? (0, p.X)(s.guildId) : await u.Z.joinGuild(s.guildId, {
     source: T.vtS.DIRECTORY_ENTRY
   });
 } finally {
@@ -145,7 +145,7 @@ try {
   }, S = C.ZP.getGuildSplashURL({
 id: s.guildId,
 splash: s.splash,
-size: 300 * (0, p.x_)()
+size: 300 * (0, m.x_)()
   }), Z = null !== (t = C.ZP.getGuildIconURL({
 id: s.guildId,
 icon: s.icon,

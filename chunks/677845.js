@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(374065),
   d = n(213609),
   h = n(358221),
-  p = n(381586),
-  m = n(159300),
+  m = n(381586),
+  p = n(159300),
   _ = n(470956),
   f = n(430824),
   E = n(496675),
@@ -52,14 +52,14 @@ null != O && A.id !== O && x.d.setState({
 A.id,
 O
   ]);
-  let U = (0, l.e7)([E.Z], () => A.isPrivate() || (0, m.b)(E.Z, P, A), [
+  let U = (0, l.e7)([E.Z], () => A.isPrivate() || (0, p.b)(E.Z, P, A), [
   P,
   A
 ]),
 w = (null == P ? void 0 : P.afkChannelId) === A.id,
 B = A.userLimit <= 0 || A.userLimit > 1,
 H = (0, l.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(A.id).length <= 0),
-G = (0, p.N)(r.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
+G = (0, m.N)(r.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
 V = (0, u.KF)(A.id) !== u.jy.CAN_LAUNCH,
 F = null != O && O === A.id,
 W = D.map(e => t => (0, i.jsx)(I.ZP, {

@@ -1,74 +1,74 @@
-n.d(i, {
+i.d(s, {
   Z: function() {
 return m;
   }
 });
-var s = n(735250);
-n(470079);
-var l = n(120356),
-  t = n.n(l),
-  o = n(442837),
-  a = n(481060),
-  r = n(129861),
-  d = n(427217),
-  c = n(158776),
-  u = n(51144),
-  I = n(981631),
-  _ = n(689938),
-  f = n(988546);
+var n = i(735250);
+i(470079);
+var l = i(120356),
+  t = i.n(l),
+  o = i(442837),
+  a = i(481060),
+  r = i(129861),
+  d = i(427217),
+  c = i(158776),
+  u = i(51144),
+  I = i(981631),
+  f = i(689938),
+  _ = i(988546);
 
 function m(e) {
   let {
-user: i,
-displayProfile: n
-  } = e, l = (0, o.e7)([c.Z], () => c.Z.findActivity(i.id, e => e.type === I.IIU.CUSTOM_STATUS)), m = u.ZP.getName(i);
-  return (0, s.jsxs)('div', {
-className: f.container,
+user: s,
+displayProfile: i
+  } = e, l = (0, o.e7)([c.Z], () => c.Z.findActivity(s.id, e => e.type === I.IIU.CUSTOM_STATUS)), m = u.ZP.getName(s);
+  return (0, n.jsxs)('div', {
+className: _.container,
 children: [
-  null == m && (0, s.jsx)(r.Z, {
-    user: i,
-    className: f.nameTag,
-    usernameClass: f.username,
-    discriminatorClass: f.discriminator
+  null == m && (0, n.jsx)(r.Z, {
+    user: s,
+    className: _.nameTag,
+    usernameClass: _.username,
+    discriminatorClass: _.discriminator
   }),
-  null != m && (0, s.jsxs)('div', {
+  null != m && (0, n.jsxs)('div', {
     children: [
-      (0, s.jsx)(a.Text, {
+      (0, n.jsx)(a.Text, {
         variant: 'text-lg/semibold',
         style: {
           marginRight: '12px'
         },
         children: m
       }),
-      (0, s.jsx)(r.Z, {
-        user: i,
+      (0, n.jsx)(r.Z, {
+        user: s,
         forceUsername: !0,
-        usernameClass: f.discriminator,
-        discriminatorClass: f.discriminator,
-        className: t()(f.nameTag, f.nameTagSmall)
+        usernameClass: _.discriminator,
+        discriminatorClass: _.discriminator,
+        className: t()(_.nameTag, _.nameTagSmall)
       })
     ]
   }),
-  (null == n ? void 0 : n.pronouns) != null && (null == n ? void 0 : n.pronouns) !== '' && (0, s.jsx)(a.Tooltip, {
-    text: _.Z.Messages.USER_PROFILE_PRONOUNS,
-    children: e => (0, s.jsx)(a.Text, {
+  (null == i ? void 0 : i.pronouns) != null && (null == i ? void 0 : i.pronouns) !== '' && (0, n.jsx)(a.Tooltip, {
+    text: f.Z.Messages.USER_PROFILE_PRONOUNS,
+    children: e => (0, n.jsx)(a.Text, {
       ...e,
       variant: 'text-sm/normal',
-      className: t()(f.pronouns, f.nameTagSmall),
-      children: n.pronouns
+      className: t()(_.pronouns, _.nameTagSmall),
+      children: i.pronouns
     })
   }),
-  null != l ? (0, s.jsx)('div', {
-    className: f.__invalid_customStatusActivity,
-    children: (0, s.jsx)(a.Text, {
+  null != l ? (0, n.jsx)('div', {
+    className: _.__invalid_customStatusActivity,
+    children: (0, n.jsx)(a.Text, {
       variant: 'text-sm/normal',
       color: 'header-secondary',
-      className: f.customStatusText,
-      children: (0, s.jsx)(d.Z, {
+      className: _.customStatusText,
+      children: (0, n.jsx)(d.Z, {
         activity: l,
-        className: f.customStatus,
-        emojiClassName: f.customStatusEmoji,
-        soloEmojiClassName: f.customStatusSoloEmoji
+        className: _.customStatus,
+        emojiClassName: _.customStatusEmoji,
+        soloEmojiClassName: _.customStatusSoloEmoji
       })
     })
   }) : null

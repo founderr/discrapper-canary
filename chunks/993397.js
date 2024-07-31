@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(534469),
   d = n(511010),
   h = n(981631),
-  p = n(689938),
-  m = n(985359),
+  m = n(689938),
+  p = n(985359),
   _ = n(848509);
 
 function f(e) {
@@ -26,14 +26,14 @@ compact: s,
 role: 'group',
 childrenMessageContent: (0, i.jsx)(o.Z, {
   compact: s,
-  className: m.blockedSystemMessage,
+  className: p.blockedSystemMessage,
   iconNode: (0, i.jsx)(r.CloseSmallIcon, {
     size: 'md',
     color: 'currentColor',
-    className: m.blockedIcon
+    className: p.blockedIcon
   }),
   children: (0, i.jsxs)('div', {
-    className: m.blockedMessageText,
+    className: p.blockedMessageText,
     children: [
       l.format({
         count: a
@@ -43,10 +43,10 @@ childrenMessageContent: (0, i.jsx)(o.Z, {
       (0, i.jsx)(r.Clickable, {
         tag: 'span',
         onClick: n,
-        className: m.blockedAction,
-        children: t ? p.Z.Messages.BLOCKED_MESSAGES_HIDE.format({
+        className: p.blockedAction,
+        children: t ? m.Z.Messages.BLOCKED_MESSAGES_HIDE.format({
           count: a
-        }) : p.Z.Messages.BLOCKED_MESSAGES_SHOW.format({
+        }) : m.Z.Messages.BLOCKED_MESSAGES_SHOW.format({
           count: a
         })
       })
@@ -64,12 +64,12 @@ compact: r = !1,
 unreadId: o,
 collapsedReason: c
   } = e, {
-hasJumpTarget: p = !1
-  } = n, [E, g] = a.useState(p), C = a.useCallback(() => g(e => !e), []), I = n.hasUnread ? n.content.length - 1 : n.content.length;
+hasJumpTarget: m = !1
+  } = n, [E, g] = a.useState(m), C = a.useCallback(() => g(e => !e), []), I = n.hasUnread ? n.content.length - 1 : n.content.length;
   return (0, i.jsxs)('div', {
 className: l()({
   [_.groupStart]: !0,
-  [m.expanded]: E
+  [p.expanded]: E
 }),
 children: [
   n.hasUnread && (!E || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ys_.DIVIDER) ? (0, i.jsx)(d.Z, {
@@ -96,7 +96,7 @@ children: [
     if (e.type === h.ys_.MESSAGE || e.type === h.ys_.THREAD_STARTER_MESSAGE) {
       let t = e.type === h.ys_.THREAD_STARTER_MESSAGE ? u.Ru : u.ZP;
       return (0, i.jsx)(t, {
-        className: m.__invalid_blocked,
+        className: p.__invalid_blocked,
         compact: r,
         channel: s,
         message: e.content,

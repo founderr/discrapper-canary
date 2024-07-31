@@ -18,7 +18,7 @@ buttonRef: t,
 dismissed: n,
 onDismiss: d,
 renderComponent: h
-  } = e, p = a.useContext(c.h9), [m, _] = a.useState(''), [f, E] = a.useState(!1), g = (0, s.e7)([o.ZP], () => o.ZP.callHeaderHeight), C = a.createRef(), I = a.useRef(0);
+  } = e, m = a.useContext(c.h9), [p, _] = a.useState(''), [f, E] = a.useState(!1), g = (0, s.e7)([o.ZP], () => o.ZP.callHeaderHeight), C = a.createRef(), I = a.useRef(0);
   a.useEffect(() => {
 var e, t;
 _(String(I.current)), E(void 0 !== g && g < (null !== (t = null === (e = C.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), I.current += 1;
@@ -37,7 +37,7 @@ children: (0, i.jsx)(l.ReferencePositionLayer, {
   align: 'center',
   spacing: 0,
   nudgeAlignIntoViewport: !1,
-  positionKey: m,
+  positionKey: p,
   children: () => (0, i.jsx)('div', {
     ref: C,
     onMouseOver: x,
@@ -45,7 +45,7 @@ children: (0, i.jsx)(l.ReferencePositionLayer, {
     onBlur: T,
     onMouseLeave: T,
     children: h({
-      hidden: f || p || n,
+      hidden: f || m || n,
       onDismiss: d
     })
   })

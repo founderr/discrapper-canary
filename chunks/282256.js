@@ -14,7 +14,7 @@ children: t,
 isOverlay: n,
 contextGuildId: s,
 ...h
-  } = e, p = a.useRef(null), [m, _] = a.useState({
+  } = e, m = a.useRef(null), [p, _] = a.useState({
 maskImage: 'none'
   }), f = a.useCallback(() => {
 var e, t;
@@ -25,7 +25,7 @@ if (n) {
   return;
 }
 let i = null === (e = E.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
-  a = null === (t = p.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
+  a = null === (t = m.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
 if (null == i || null == a) {
   _({
     maskImage: 'none'
@@ -62,8 +62,8 @@ children: [
     ref: C,
     children: (0, i.jsx)('span', {
       className: l()(d.chipletContainer, !g && n && d.noPadding),
-      ref: p,
-      style: m,
+      ref: m,
+      style: p,
       children: (0, i.jsx)(u.ZP, {
         ...h,
         contextGuildId: s,

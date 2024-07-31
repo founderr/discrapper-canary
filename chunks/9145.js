@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(153867),
   d = n(110924),
   h = n(607070),
-  p = n(900211),
-  m = n(740492),
+  m = n(900211),
+  p = n(740492),
   _ = n(871499),
   f = n(402113),
   E = n(592125),
@@ -51,7 +51,7 @@ connectedChannelId: w,
 renderExternalHeader: B
   } = e, H = (0, M.Z)(), G = (0, r.Wu)([S.ZP], () => null != w ? S.ZP.getEmbeddedActivitiesForChannel(w) : [], [w]), V = (0, r.e7)([E.Z], () => E.Z.getChannel(w)), F = (0, Z.gb)(G), W = (0, Z.uF)(F), z = a.useCallback(() => {
 (0, v.tg)(P.Ez.PIP);
-  }, []), Y = a.useRef(null), K = (0, r.e7)([S.ZP], () => S.ZP.getFocusedLayout()), q = K !== P.MI.NO_CHAT, [X, Q] = a.useState(null !== (t = m.ZP.activityPanelHeight) && void 0 !== t ? t : s), J = a.useCallback(e => {
+  }, []), Y = a.useRef(null), K = (0, r.e7)([S.ZP], () => S.ZP.getFocusedLayout()), q = K !== P.MI.NO_CHAT, [X, Q] = a.useState(null !== (t = p.ZP.activityPanelHeight) && void 0 !== t ? t : s), J = a.useCallback(e => {
 u.ZP.updatedUnsyncedSettings({
   activityPanelHeight: e
 });
@@ -222,7 +222,7 @@ children: [
       }) : null
     ]
   }),
-  q ? (0, i.jsx)(p.Z, {
+  q ? (0, i.jsx)(m.Z, {
     minHeight: 480,
     maxHeight: s,
     resizableNode: Y,

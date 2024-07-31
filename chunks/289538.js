@@ -1,45 +1,45 @@
-s.d(a, {
+a.d(s, {
   D: function() {
 return _;
   }
 });
-var n = s(735250),
-  t = s(470079),
-  l = s(481060),
-  r = s(484459),
-  i = s(103575),
-  o = s(5192),
-  c = s(689938),
-  E = s(342948);
+var n = a(735250),
+  l = a(470079),
+  r = a(481060),
+  t = a(484459),
+  i = a(103575),
+  E = a(5192),
+  o = a(689938),
+  c = a(342948);
 
 function _(e) {
   let {
-user: a,
-channel: s
+user: s,
+channel: a
   } = e, {
 nick: _,
-avatar: d
-  } = t.useMemo(() => {
-let e = null == a ? void 0 : a.getAvatarURL(null == s ? void 0 : s.guild_id, 48, !1);
+avatar: I
+  } = l.useMemo(() => {
+let e = null == s ? void 0 : s.getAvatarURL(null == a ? void 0 : a.guild_id, 48, !1);
 return {
-  nick: o.ZP.getName(null == s ? void 0 : s.guild_id, null == s ? void 0 : s.id, a),
+  nick: E.ZP.getName(null == a ? void 0 : a.guild_id, null == a ? void 0 : a.id, s),
   avatar: e
 };
   }, [
-a,
-s
+s,
+a
   ]);
-  return (0, n.jsx)(l.Popout, {
-preload: () => (0, r.W)(a.id, d),
+  return (0, n.jsx)(r.Popout, {
+preload: () => (0, t.W)(s.id, I),
 renderPopout: e => (0, n.jsx)(i.Z, {
   ...e,
   location: 'GameProfileEntry',
-  userId: a.id
+  userId: s.id
 }),
 children: e => (0, n.jsx)('img', {
-  className: E.avatar,
-  src: d,
-  alt: c.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({
+  className: c.avatar,
+  src: I,
+  alt: o.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({
     userName: _
   }),
   ...e

@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(442837),
   d = n(481060),
   h = n(320007),
-  p = n(236091),
-  m = n(569545),
+  m = n(236091),
+  p = n(569545),
   _ = n(517525),
   f = n(665149),
   E = n(6242),
@@ -94,7 +94,7 @@ preventIdle: q,
 allowIdle: X
   } = (0, T.Y)('popup'), Q = [];
   if (W) {
-let e = (null == L ? void 0 : L.type) === w.fO.STREAM ? (0, m.my)(L.id) : void 0,
+let e = (null == L ? void 0 : L.type) === w.fO.STREAM ? (0, p.my)(L.id) : void 0,
   t = (null == L ? void 0 : L.type) === w.fO.ACTIVITY ? L.id : void 0;
 Q.push((0, i.jsx)(A.Z, {
   className: G.button,
@@ -108,7 +108,7 @@ Q.push((0, i.jsx)(A.Z, {
   return R && Q.push((0, i.jsx)(V, {
 channelId: I,
 guildId: n.guild_id
-  }, 'current-speaker')), Q.push((0, i.jsx)(p.Z, {
+  }, 'current-speaker')), Q.push((0, i.jsx)(m.Z, {
 className: G.button,
 channelId: I
   }, 'clips-enabled-indicator')), (null == L ? void 0 : L.type) === w.fO.STREAM && (Q.push((0, i.jsx)(x.Z, {

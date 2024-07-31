@@ -1,6 +1,6 @@
 n.d(t, {
   II: function() {
-return p;
+return m;
   },
   Ow: function() {
 return C;
@@ -23,10 +23,10 @@ var i, a, s = n(470079),
   u = n(840877),
   d = n(952537),
   h = n(981631);
-let p = -1;
+let m = -1;
 (a = i || (i = {})).MESSAGES = 'messages', a.LINKS = 'links', a.MEDIA = 'media', a.ALL_COUNTS = 'all_counts';
 
-function m(e, t, n) {
+function p(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
 a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
 s = JSON.stringify(i);
@@ -36,7 +36,7 @@ let _ = {
 searchFetcher: null,
 searchTabFetcher: null,
 result: null,
-messageCount: p,
+messageCount: m,
 lastMessage: null
   },
   f = (0, l.Z)(() => new Map()),
@@ -100,7 +100,7 @@ function I(e, t, n) {
 let {
   addtionalQuery: a,
   shouldDispatch: l = !1
-} = i, r = s.useMemo(() => m(e, t, n, a), [
+} = i, r = s.useMemo(() => p(e, t, n, a), [
   e,
   t,
   n,
@@ -112,7 +112,7 @@ return s.useEffect(() => {
       s = new u.ZP(t, h.aib.GUILD, i);
     E(r, {
       searchFetcher: s,
-      messageCount: p,
+      messageCount: m,
       lastMessage: null
     }), setTimeout(() => {
       s.fetch(e => {
@@ -161,7 +161,7 @@ return s.useEffect(() => {
 }
 
 function x(e, t, n, i) {
-  let a = s.useMemo(() => m(e, t, n, i, !0), [
+  let a = s.useMemo(() => p(e, t, n, i, !0), [
   e,
   t,
   n,
@@ -185,7 +185,7 @@ state: o
 key: c,
 state: d
   } = x(e, t, 'links', n), {
-key: m,
+key: p,
 state: _
   } = x(e, t, 'media', n), f = s.useMemo(() => C(e, 'all_counts', n), [
 e,
@@ -204,10 +204,10 @@ f
 let t = e.messages,
   n = e.links,
   i = e.media;
-E(r, t), E(c, n), E(m, i);
+E(r, t), E(c, n), E(p, i);
   }, [
 c,
-m,
+p,
 r
   ]), T = s.useCallback(e => {
 I({
@@ -220,7 +220,7 @@ I({
 let e = new u.tJ(t, h.aib.GUILD, f, g);
 T({
   searchTabFetcher: e,
-  messageCount: p,
+  messageCount: m,
   lastMessage: null
 });
 let n = setTimeout(async () => {
@@ -271,8 +271,8 @@ I
   ]);
   let [N, v] = s.useState({});
   return {
-messagesCount: null !== (i = null == o ? void 0 : o.messageCount) && void 0 !== i ? i : p,
-linksCount: null !== (a = null == d ? void 0 : d.messageCount) && void 0 !== a ? a : p,
-mediaCount: null !== (l = null == _ ? void 0 : _.messageCount) && void 0 !== l ? l : p
+messagesCount: null !== (i = null == o ? void 0 : o.messageCount) && void 0 !== i ? i : m,
+linksCount: null !== (a = null == d ? void 0 : d.messageCount) && void 0 !== a ? a : m,
+mediaCount: null !== (l = null == _ ? void 0 : _.messageCount) && void 0 !== l ? l : m
   };
 }

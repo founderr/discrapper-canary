@@ -16,8 +16,8 @@ var i = n(735250),
   u = n(763520),
   d = n(358221),
   h = n(414910),
-  p = n(928518),
-  m = n(204197),
+  m = n(928518),
+  p = n(204197),
   _ = n(470956),
   f = n(314897),
   E = n(271383),
@@ -70,13 +70,13 @@ pulseSpeakingIndicator: y = !1
 user: U,
 streamId: w,
 speaking: B
-  } = t, H = U.id === k, G = (0, N.ZP)(t), V = (0, r.e7)([C.Z], () => C.Z.isFocused()), F = (0, r.e7)([p.Z], () => p.Z.getWindowFocused(v.KJ3.CHANNEL_CALL_POPOUT)), W = (0, r.e7)([g.Z], () => null != U.id && g.Z.isLocalVideoDisabled(U.id, (0, h.Z)(t.type)), [
+  } = t, H = U.id === k, G = (0, N.ZP)(t), V = (0, r.e7)([C.Z], () => C.Z.isFocused()), F = (0, r.e7)([m.Z], () => m.Z.getWindowFocused(v.KJ3.CHANNEL_CALL_POPOUT)), W = (0, r.e7)([g.Z], () => null != U.id && g.Z.isLocalVideoDisabled(U.id, (0, h.Z)(t.type)), [
 U.id,
 t.type
   ]), z = (0, r.e7)([E.ZP], () => E.ZP.isGuestOrLurker(n.guild_id, U.id)), Y = T.ZP.getName(n.getGuildId(), n.id, U) + (z ? ' '.concat(Z.Z.Messages.GUEST_NAME_SUFFIX) : ''), K = B && (F || V), q = o < 124 ? b : M, {
 avatarSrc: X,
 avatarDecorationSrc: Q
-  } = (0, m.Z)({
+  } = (0, p.Z)({
 user: U,
 guildId: n.guild_id,
 size: q,

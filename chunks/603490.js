@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return p;
+return m;
   }
 });
 var i = n(735250);
@@ -15,13 +15,13 @@ var a = n(120356),
   d = n(689938),
   h = n(480283);
 
-function p(e) {
+function m(e) {
   let {
 channel: t,
 message: n,
 togglePopout: a,
-renderEmojiPicker: p,
-shouldShow: m,
+renderEmojiPicker: m,
+shouldShow: p,
 buttonClassName: _,
 iconClassName: f
   } = e;
@@ -31,9 +31,9 @@ renderPopout: e => {
   let {
     closePopout: i
   } = e;
-  return p(t, n, i, !1);
+  return m(t, n, i, !1);
 },
-shouldShow: m,
+shouldShow: p,
 onRequestClose: a,
 position: l.tq ? 'top' : 'left',
 align: l.tq ? 'center' : 'top',
@@ -42,7 +42,7 @@ children: (e, t) => {
     onClick: n,
     ...l
   } = e, {
-    isShown: p
+    isShown: m
   } = t;
   return (0, i.jsx)(r.Tooltip, {
     disableTooltipPointerEvents: !1,
@@ -55,7 +55,7 @@ children: (e, t) => {
       let {
         onMouseEnter: t,
         onMouseLeave: n,
-        onClick: m
+        onClick: p
       } = e;
       return (0, i.jsx)(c.zx, {
         className: _,
@@ -64,10 +64,10 @@ children: (e, t) => {
         },
         onMouseLeave: n,
         onClick: () => {
-          a(), null == m || m();
+          a(), null == p || p();
         },
         'aria-label': d.Z.Messages.ADD_REACTION,
-        selected: p,
+        selected: m,
         ...l,
         children: (0, i.jsx)(r.ReactionIcon, {
           size: 'sm',

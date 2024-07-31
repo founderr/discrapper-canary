@@ -16,8 +16,8 @@ var i = n(735250),
   u = n(442837),
   d = n(481060),
   h = n(607070),
-  p = n(223606),
-  m = n(518738),
+  m = n(223606),
+  p = n(518738),
   _ = n(628238),
   f = n(807092),
   E = n(869765),
@@ -71,15 +71,15 @@ className: d
   o()(a.type === z.uaV.THREAD_STARTER_MESSAGE, 'Message must be a thread starter message');
   let {
 ...h
-  } = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''), p = (0, u.e7)([E.Z], () => E.Z.getMessageByReference(s)), {
-popouts: m,
+  } = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''), m = (0, u.e7)([E.Z], () => E.Z.getMessageByReference(s)), {
+popouts: p,
 setPopout: _
   } = (0, O.Z)(a.id, W.d$), f = (0, A.ZP)(a), g = (0, j.iG)(a), C = (0, j.Gx)(a);
-  return a.type === z.uaV.THREAD_STARTER_MESSAGE && null != p && p.state === E.Y.LOADED ? (0, i.jsx)(Q, {
+  return a.type === z.uaV.THREAD_STARTER_MESSAGE && null != m && m.state === E.Y.LOADED ? (0, i.jsx)(Q, {
 ...e,
 viewingChannelId: a.channel_id,
-message: p.message,
-groupId: p.message.id
+message: m.message,
+groupId: m.message.id
   }) : (0, i.jsx)(b.Z, {
 ...h,
 id: n,
@@ -93,7 +93,7 @@ className: l()(d, {
 childrenHeader: (0, B.Z)({
   messageProps: e,
   setPopout: _,
-  messagePopouts: m,
+  messagePopouts: p,
   replyReference: s,
   author: f
 }),
@@ -112,7 +112,7 @@ id: s,
 message: r,
 message: {
   id: o,
-  channel_id: p
+  channel_id: m
 },
 channel: {
   guild_id: f
@@ -148,11 +148,11 @@ allowHeading: ee,
 allowLinks: !0,
 previewLinkTarget: !0,
 viewingChannelId: v
-  }), ec = (0, P.Z)(o, p, ea), eu = (0, A.ZP)(r), ed = (0, j.iG)(r, T), eh = (0, j.Gx)(r), ep = (0, H.Z)(e, er, !1), em = a.useCallback(() => (0, g.XU)(f, p, o), [
+  }), ec = (0, P.Z)(o, m, ea), eu = (0, A.ZP)(r), ed = (0, j.iG)(r, T), eh = (0, j.Gx)(r), em = (0, H.Z)(e, er, !1), ep = a.useCallback(() => (0, g.XU)(f, m, o), [
 f,
-p,
+m,
 o
-  ]), e_ = (0, m.p9)({
+  ]), e_ = (0, p.p9)({
 guildId: f,
 roleId: eu.iconRoleId
   });
@@ -161,7 +161,7 @@ className: K.quotedChatMessage,
 children: [
   (0, i.jsx)(d.Clickable, {
     className: K.jump,
-    onClick: em,
+    onClick: ep,
     'aria-label': Y.Z.Messages.JUMP,
     children: Y.Z.Messages.JUMP
   }),
@@ -201,7 +201,7 @@ children: [
       renderSuppressEmbeds: !1
     }),
     childrenSystemMessage: (0, F.Z)(e),
-    childrenMessageContent: ep,
+    childrenMessageContent: em,
     onMouseMove: et,
     onMouseLeave: en,
     'aria-labelledby': ed,
@@ -247,8 +247,8 @@ er = (0, u.e7)([E.Z], () => E.Z.getMessageByReference(en)),
 ed = (0, L.qo)(g, q, eu),
 eh = (0, L.Go)(g, q),
 {
-  handleMouseEnter: ep,
-  handleMouseLeave: em,
+  handleMouseEnter: em,
+  handleMouseLeave: ep,
   hasHovered: e_,
   isHovered: ef
 } = (0, L.tn)(ee, g.author.id, ec),
@@ -289,13 +289,13 @@ eO = function(e) {
   let t = a.useRef(e);
   return a.useEffect(() => void(t.current = null != e ? e : t.current)), null != e ? e : t.current;
 }($),
-ey = (0, m.p9)({
+ey = (0, p.p9)({
   guildId: q.guild_id,
   roleId: eL.iconRoleId
 }),
 eD = (0, j.iG)(g, ee),
 ek = (0, j.Gx)(g),
-eU = (0, u.e7)([p.Z], () => p.Z.getMessage(S), [S]),
+eU = (0, u.e7)([m.Z], () => m.Z.getMessage(S), [S]),
 ew = (0, D.Z)({
   message: g,
   channel: q
@@ -373,8 +373,8 @@ eV = (0, i.jsx)(d.FocusRing, {
       }) : void 0,
       childrenSystemMessage: (0, F.Z)(e),
       childrenMessageContent: s,
-      onMouseMove: ep,
-      onMouseLeave: em,
+      onMouseMove: em,
+      onMouseLeave: ep,
       hasThread: !et && g.hasFlag(z.iLy.HAS_THREAD) && null != eS,
       isSystemMessage: (0, Z.Z)(g),
       hasReply: g.type === z.uaV.REPLY,

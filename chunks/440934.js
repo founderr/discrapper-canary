@@ -3,7 +3,7 @@ t.r(n), t.d(n, {
 return f;
   },
   openInteractionModal: function() {
-return h;
+return m;
   }
 });
 var i = t(735250);
@@ -24,12 +24,12 @@ title: n,
 onClose: t,
 transitionState: f
   } = e, {
-components: h,
-applicationIconURL: m,
+components: m,
+applicationIconURL: h,
 applicationName: I,
 submissionState: _,
-error: g,
-validators: C,
+error: C,
+validators: g,
 onSubmit: b
   } = (0, u.X9)(e, t);
   return (0, i.jsx)('form', {
@@ -43,7 +43,7 @@ children: (0, i.jsxs)(o.ModalRoot, {
       separator: !1,
       children: [
         (0, i.jsx)(o.Avatar, {
-          src: m,
+          src: h,
           size: o.AvatarSizes.SIZE_24,
           'aria-label': I,
           className: p.applicationIcon
@@ -61,10 +61,10 @@ children: (0, i.jsxs)(o.ModalRoot, {
     }),
     (0, i.jsxs)(o.ModalContent, {
       children: [
-        null != g && '' !== g ? (0, i.jsx)(l.Z, {
+        null != C && '' !== C ? (0, i.jsx)(l.Z, {
           messageType: l.Q.ERROR,
           className: p.submissionWarning,
-          children: g
+          children: C
         }) : null,
         (0, i.jsx)(l.Z, {
           messageType: l.Q.WARNING,
@@ -76,8 +76,8 @@ children: (0, i.jsxs)(o.ModalRoot, {
         (0, i.jsx)(o.FormSection, {
           children: (0, i.jsx)(r.Il, {
             modal: e,
-            validators: C,
-            children: (0, d.xX)(h)
+            validators: g,
+            children: (0, d.xX)(m)
           })
         })
       ]
@@ -104,7 +104,7 @@ children: (0, i.jsxs)(o.ModalRoot, {
   });
 }
 
-function h(e) {
+function m(e) {
   (0, o.openModal)(n => (0, i.jsx)(f, {
 ...n,
 ...e

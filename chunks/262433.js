@@ -1,6 +1,6 @@
 n.d(t, {
   U: function() {
-return m;
+return p;
   },
   Z: function() {
 return f;
@@ -16,7 +16,7 @@ var i = n(392711),
   u = n(88315),
   d = n(199766),
   h = n(813900);
-let p = {
+let m = {
 X_OFFSET: 2 * h.qh,
 Y_OFFSET: 25,
 X_SPEED: 0.5,
@@ -28,14 +28,14 @@ OPACITY_SPEED_MAX: 0.05,
 SIZE_MIN: h.qh / 2,
 SIZE_MAX: h.qh
   },
-  m = (0, l.Z)(() => ({
+  p = (0, l.Z)(() => ({
 particles: {},
 lastSpawned: {}
   }));
 
 function _(e, t) {
   var n;
-  a()(null !== (n = m.getState().particles[e.id]) && void 0 !== n ? n : {}).forEach(t);
+  a()(null !== (n = p.getState().particles[e.id]) && void 0 !== n ? n : {}).forEach(t);
 }
 
 function f(e) {
@@ -60,13 +60,13 @@ A = (0, u.np)(f.y, C),
 } = (0, u.bg)(f.userId, x, T, I);
   if (_(f, e => {
   var t, n;
-  return t = f, n = e, void(n.x += n.xSpeed * window.devicePixelRatio, n.y += n.ySpeed * window.devicePixelRatio, n.opacity -= n.opacitySpeed, n.opacity <= 0 && m.setState(e => (delete e.particles[t.id][n.id], 0 === Object.keys(e.particles[t.id]).length && delete e.particles[t.id], e)));
+  return t = f, n = e, void(n.x += n.xSpeed * window.devicePixelRatio, n.y += n.ySpeed * window.devicePixelRatio, n.opacity -= n.opacitySpeed, n.opacity <= 0 && p.setState(e => (delete e.particles[t.id][n.id], 0 === Object.keys(e.particles[t.id]).length && delete e.particles[t.id], e)));
 }), ! function(e, t, n) {
   var i;
-  let l = null !== (i = m.getState().lastSpawned[e.id]) && void 0 !== i ? i : 0,
+  let l = null !== (i = p.getState().lastSpawned[e.id]) && void 0 !== i ? i : 0,
     r = Date.now();
   if (!(l + 100 > r) && e.state !== c.f.STOP && !!(0.8 >= Math.random() || l + 300 < r))
-    m.setState(i => {
+    p.setState(i => {
       var l, r, o;
       let c = null !== (l = i.particles[e.id]) && void 0 !== l ? l : {},
         u = a().random(1, 2);
@@ -74,13 +74,13 @@ A = (0, u.np)(f.y, C),
         ;
         let e = (r = t, o = n, {
           id: (0, s.Z)(),
-          x: r + a().random(-p.X_OFFSET, p.X_OFFSET),
-          y: o + a().random(-p.Y_OFFSET, p.Y_OFFSET),
-          xSpeed: a().random(-p.X_SPEED, p.X_SPEED),
-          ySpeed: a().random(p.Y_SPEED_MIN, p.Y_SPEED_MAX),
-          opacity: p.OPACITY,
-          opacitySpeed: a().random(p.OPACITY_SPEED_MIN, p.OPACITY_SPEED_MAX),
-          size: a().random(p.SIZE_MIN, p.SIZE_MAX)
+          x: r + a().random(-m.X_OFFSET, m.X_OFFSET),
+          y: o + a().random(-m.Y_OFFSET, m.Y_OFFSET),
+          xSpeed: a().random(-m.X_SPEED, m.X_SPEED),
+          ySpeed: a().random(m.Y_SPEED_MIN, m.Y_SPEED_MAX),
+          opacity: m.OPACITY,
+          opacitySpeed: a().random(m.OPACITY_SPEED_MIN, m.OPACITY_SPEED_MAX),
+          size: a().random(m.SIZE_MIN, m.SIZE_MAX)
         });
         c[e.id] = e;
       }
@@ -93,7 +93,7 @@ A = (0, u.np)(f.y, C),
     a = n.x - i / 2 * window.devicePixelRatio,
     s = n.y - 1.2 * i * window.devicePixelRatio;
   e.globalAlpha = n.opacity, e.drawImage(t, i / 2 + a, i / 2 + s, i, i);
-}(E, S, e)), f.lastUpdatedAt + h.FO < Date.now() && (0, r.ZZ)(N, f), f.state === c.f.STOP && (i = f, !(Object.keys(null !== (l = m.getState().particles[i.id]) && void 0 !== l ? l : {}).length > 0)))
+}(E, S, e)), f.lastUpdatedAt + h.FO < Date.now() && (0, r.ZZ)(N, f), f.state === c.f.STOP && (i = f, !(Object.keys(null !== (l = p.getState().particles[i.id]) && void 0 !== l ? l : {}).length > 0)))
 v.push(f);
   E.restore();
 }

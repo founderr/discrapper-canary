@@ -8,8 +8,8 @@ var i, a = n(735250),
   u = n(613828),
   d = n(442837),
   h = n(481060),
-  p = n(490173),
-  m = n(40851),
+  m = n(490173),
+  p = n(40851),
   _ = n(607070),
   f = n(899663),
   E = n(317381),
@@ -161,7 +161,7 @@ return (0, a.jsx)(u.VK, {
               children: (0, a.jsxs)(N.Z, {
                 children: [
                   (0, a.jsx)(P.Co, {}),
-                  (0, a.jsx)(m.Wu, {
+                  (0, a.jsx)(p.Wu, {
                     appContext: w.IlC.POPOUT,
                     renderWindow: C,
                     children: (0, a.jsxs)(L.yP, {
@@ -182,7 +182,7 @@ return (0, a.jsx)(u.VK, {
                           ]
                         }),
                         (0, a.jsx)(h.Modals, {}),
-                        (0, a.jsx)(p.Z, {}),
+                        (0, a.jsx)(m.Z, {}),
                         (0, a.jsx)(L.Un, {})
                       ]
                     })
@@ -239,8 +239,8 @@ focused: U.Z.getWindowFocused(e.windowKey)
 o = (0, d.e7)([_.Z], () => _.Z.useForcedColors ? 'yes' : 'no'),
 {
   fontScale: u,
-  keyboardModeEnabled: p,
-  reducedMotionEnabled: m,
+  keyboardModeEnabled: m,
+  reducedMotionEnabled: p,
   fontScaleClass: f,
   saturation: g,
   systemForcedColors: T,
@@ -279,9 +279,9 @@ children: (0, a.jsx)(I.Gt, {
     useForcedColors: N,
     systemForcedColors: T,
     fontScale: u,
-    keyboardModeEnabled: p,
+    keyboardModeEnabled: m,
     mouseModeEnabled: A,
-    reducedMotionEnabled: m,
+    reducedMotionEnabled: p,
     connectedToEmbeddedActivity: v,
     fontScaleClass: f,
     saturation: g,

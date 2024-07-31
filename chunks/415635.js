@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(37091),
   d = n(721264),
   h = n(963838),
-  p = n(39127),
-  m = n(981631),
+  m = n(39127),
+  p = n(981631),
   _ = n(534635);
 
 function f(e) {
@@ -32,18 +32,18 @@ function e(e) {
     userId: l,
     emoji: r,
     animationType: o,
-    animationId: p
+    animationId: m
   } = e;
   if (null != f && f !== l || u.Z.getEnabled() && (0, d.Z)(null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : ''))
     return;
-  let _ = null != r && null != o && null != p;
+  let _ = null != r && null != o && null != m;
   if (a === t && !g && x && _) {
     let e = (0, h._r)(r),
       i = null != r.id && !r.animated,
       a = {
         id: (0, s.Z)(),
         animationType: o,
-        animationId: p,
+        animationId: m,
         shouldResize: i,
         url: e,
         userId: l
@@ -51,7 +51,7 @@ function e(e) {
     I(e => [
       ...e,
       a
-    ]), c.ZP.trackWithMetadata(m.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
+    ]), c.ZP.trackWithMetadata(p.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
       channel_id: t,
       guild_id: n
     });
@@ -81,7 +81,7 @@ style: {
 },
 children: (0, i.jsx)('div', {
   className: _.effects,
-  children: C.map(e => (0, i.jsx)(p.Z, {
+  children: C.map(e => (0, i.jsx)(m.Z, {
     containerDimensions: E,
     effect: e,
     onComplete: T

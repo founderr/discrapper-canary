@@ -74,8 +74,8 @@ onForceIdle: a,
 idle: l,
 children: o,
 renderChatButton: h,
-renderChatToasts: p,
-renderVoiceChannelEffects: m,
+renderChatToasts: m,
+renderVoiceChannelEffects: p,
 style: _,
 ...f
   } = e;
@@ -101,8 +101,8 @@ children: [
     className: u.chatButton,
     showingClassName: u.chatButtonShowing
   }),
-  null == p ? void 0 : p(),
-  null == m ? void 0 : m()
+  null == m ? void 0 : m(),
+  null == p ? void 0 : p()
 ]
   });
 }

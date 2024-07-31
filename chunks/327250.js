@@ -14,8 +14,8 @@ var a = n(120356),
   u = n(69882),
   d = n(251794),
   h = n(386696),
-  p = n(910693),
-  m = n(314897),
+  m = n(910693),
+  p = n(314897),
   _ = n(271383),
   f = n(430824),
   E = n(496675),
@@ -37,8 +37,8 @@ onClose: a
   } = e, s = t.id, o = (0, l.e7)([
 C.Z,
 g.Z,
-m.default
-  ], () => s === m.default.getId() ? C.Z.getStatus() : g.Z.getStatus(s, n), [
+p.default
+  ], () => s === p.default.getId() ? C.Z.getStatus() : g.Z.getStatus(s, n), [
 s,
 n
   ]);
@@ -139,11 +139,11 @@ _
   ]), N = (0, u.b)(a), {
 analyticsLocations: A,
 newestAnalyticsLocation: b
-  } = (0, c.ZP)(), R = (0, p.sE)(s, {
+  } = (0, c.ZP)(), R = (0, m.sE)(s, {
 targetUserId: t.id,
 location: b,
 locations: A
-  }), j = (0, l.e7)([m.default], () => m.default.getId() === (null == t ? void 0 : t.id));
+  }), j = (0, l.e7)([p.default], () => p.default.getId() === (null == t ? void 0 : t.id));
   return (0, i.jsxs)('div', {
 className: Z.bottomRow,
 children: [
@@ -250,7 +250,7 @@ children: [
   (0, i.jsxs)(M, {
     'aria-label': S.Z.Messages.COPY_ID,
     onClick: () => {
-      R(p.jQ.COPY_ID), (0, x.JG)(t.id);
+      R(m.jQ.COPY_ID), (0, x.JG)(t.id);
     },
     disabled: !x.wS,
     children: [

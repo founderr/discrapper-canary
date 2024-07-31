@@ -1,64 +1,64 @@
-n.d(i, {
+i.d(s, {
   Z: function() {
-return Z;
+return S;
   }
 });
-var s = n(735250),
-  l = n(470079),
-  t = n(120356),
-  o = n.n(t),
-  a = n(442837),
-  r = n(481060),
-  d = n(717881),
-  c = n(387903),
-  u = n(906732),
-  I = n(199902),
-  _ = n(158776),
-  f = n(785717),
-  m = n(221292),
-  E = n(981631),
-  x = n(501649),
-  v = n(735393);
+var n = i(735250),
+  l = i(470079),
+  t = i(120356),
+  o = i.n(t),
+  a = i(442837),
+  r = i(481060),
+  d = i(717881),
+  c = i(387903),
+  u = i(906732),
+  I = i(199902),
+  f = i(158776),
+  _ = i(785717),
+  m = i(221292),
+  E = i(981631),
+  v = i(501649),
+  x = i(735393);
 
-function Z(e) {
+function S(e) {
   let {
-user: i,
-type: n,
+user: s,
+type: i,
 showActions: t,
-onClose: Z
-  } = e, h = (0, a.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(i.id)), S = (0, a.e7)([_.Z], () => _.Z.getActivities(i.id)), p = l.useMemo(() => S.filter(e => e.type !== E.IIU.CUSTOM_STATUS), [S]), g = l.useMemo(() => h ? p.find(e => e.type === E.IIU.PLAYING) : null, [
+onClose: S
+  } = e, Z = (0, a.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(s.id)), h = (0, a.e7)([f.Z], () => f.Z.getActivities(s.id)), p = l.useMemo(() => h.filter(e => e.type !== E.IIU.CUSTOM_STATUS), [h]), g = l.useMemo(() => Z ? p.find(e => e.type === E.IIU.PLAYING) : null, [
 p,
-h
-  ]), j = l.useMemo(() => p.filter(e => e !== g), [
+Z
+  ]), T = l.useMemo(() => p.filter(e => e !== g), [
 g,
 p
   ]), {
-analyticsLocations: T,
-newestAnalyticsLocation: N
+analyticsLocations: N,
+newestAnalyticsLocation: j
   } = (0, u.ZP)(), {
 trackUserProfileAction: C,
 ...A
-  } = (0, f.KZ)(), y = {
+  } = (0, _.KZ)(), M = {
 location: {
   page: E.ZY5.USER_PROFILE,
   section: E.jXE.PROFILE_MODAL
 }
   };
-  return (0, s.jsxs)(r.ScrollerThin, {
-className: v.listScroller,
+  return (0, n.jsxs)(r.ScrollerThin, {
+className: x.listScroller,
 fade: !0,
 children: [
-  h ? (0, s.jsx)(d.Z, {
-    type: n,
-    user: i,
-    source: N,
-    className: x.userProfileActivity,
-    showChannelDetails: n === c.Y.SIMPLIFIED_PROFILE,
+  Z ? (0, n.jsx)(d.Z, {
+    type: i,
+    user: s,
+    source: j,
+    className: v.userProfileActivity,
+    showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
     activity: g,
-    actionColor: x.actionColor,
-    analyticsParams: y,
+    actionColor: v.actionColor,
+    analyticsParams: M,
     showActions: t,
-    onClose: Z,
+    onClose: S,
     onAction: () => {
       C({
         action: 'JOIN_ACTIVITY'
@@ -68,23 +68,23 @@ children: [
         activityPlatform: null == g ? void 0 : g.platform,
         activitySessionId: null == g ? void 0 : g.session_id,
         applicationId: null == g ? void 0 : g.application_id,
-        analyticsLocations: T,
+        analyticsLocations: N,
         ...A
       });
     }
   }) : null,
-  j.map(e => (0, s.jsx)(d.Z, {
-    type: n,
+  T.map(e => (0, n.jsx)(d.Z, {
+    type: i,
     activity: e,
-    user: i,
+    user: s,
     useStoreStream: !1,
-    source: N,
-    className: o()(x.userProfileActivity, n === c.Y.SIMPLIFIED_PROFILE && x.simplifiedProfileActivity),
-    showChannelDetails: n === c.Y.SIMPLIFIED_PROFILE,
-    actionColor: x.actionColor,
-    analyticsParams: y,
+    source: j,
+    className: o()(v.userProfileActivity, i === c.Y.SIMPLIFIED_PROFILE && v.simplifiedProfileActivity),
+    showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
+    actionColor: v.actionColor,
+    analyticsParams: M,
     showActions: t,
-    onClose: Z,
+    onClose: S,
     onAction: () => {
       C({
         action: 'JOIN_ACTIVITY'
@@ -94,7 +94,7 @@ children: [
         activityPlatform: e.platform,
         activitySessionId: e.session_id,
         applicationId: e.application_id,
-        analyticsLocations: T,
+        analyticsLocations: N,
         ...A
       });
     }

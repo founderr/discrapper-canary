@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(704215),
   d = n(481060),
   h = n(596454),
-  p = n(607070),
-  m = n(110630),
+  m = n(607070),
+  p = n(110630),
   _ = n(377171),
   f = n(706140),
   E = n(543241),
@@ -106,7 +106,7 @@ children: c.map(e => {
     }) : et.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_ADD_ALLY.format({
       emojiName: e.name
     }),
-    p = () => null != r ? function(e, t, n) {
+    m = () => null != r ? function(e, t, n) {
       let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         a = w.default.getCurrentUser();
       null != e && (0, v.WO)(t.id, n.id, (0, S.g1)(e), null == a ? void 0 : a.id, void 0, {
@@ -140,7 +140,7 @@ children: c.map(e => {
         } = t;
         return (0, i.jsx)(H.zx, {
           className: l()(a, ei.reactionSuggestion),
-          onClick: p,
+          onClick: m,
           'aria-label': c,
           children: (0, i.jsx)(h.Z, {
             className: en.icon,
@@ -171,8 +171,8 @@ channel: o,
 message: c,
 onClick: u,
 onTooltipShow: h,
-onTooltipHide: p,
-key: m,
+onTooltipHide: m,
+key: p,
 disabled: f,
 dangerous: E,
 separator: g,
@@ -186,7 +186,7 @@ text: null != a ? a : t,
 color: null != s ? s : d.TooltipColors.PRIMARY,
 'aria-label': t,
 onTooltipShow: h,
-onTooltipHide: p,
+onTooltipHide: m,
 hideOnClick: !0,
 tooltipClassName: en.tooltip,
 children: e => {
@@ -226,7 +226,7 @@ children: e => {
     ]
   });
 }
-  }, m);
+  }, p);
 }
 
 function eo(e) {
@@ -292,7 +292,7 @@ let G = (0, F.a4)(n),
     isGuest: w,
     isActiveChannelOrUnarchivableThread: h
   }),
-  Q = t.type === $.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature($.oNc.NEWS) && (B || x) && (0, m.Z)(n),
+  Q = t.type === $.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature($.oNc.NEWS) && (B || x) && (0, p.Z)(n),
   ee = t.getGuildId(),
   et = null != ee && (n.type === $.uaV.USER_JOIN || n.type === $.uaV.GUILD_INVITE_REMINDER) && U.Z.canWithPartialContext($.Plq.MANAGE_GUILD, {
     guildId: ee
@@ -324,7 +324,7 @@ let G = (0, F.a4)(n),
     M.Z.isMessageBookmarked(n.id)
   ]),
   eo = (0, J.Z)(),
-  ec = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled);
+  ec = (0, c.e7)([m.Z], () => m.Z.keyboardModeEnabled);
 return {
   channel: t,
   message: n,
@@ -353,7 +353,7 @@ return {
   isFocused: r,
   isGuildInviteReminder: n.type === $.uaV.GUILD_INVITE_REMINDER
 };
-  }(e), ep = a.useCallback(() => {
+  }(e), em = a.useCallback(() => {
 !O && G.default.track($.rMx.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
   message_id: n.id,
   channel: n.channel_id
@@ -364,7 +364,7 @@ return {
 O,
 eo,
 n
-  ]), em = a.useCallback(() => {
+  ]), ep = a.useCallback(() => {
 eo({
   emojiPicker: !w
 });
@@ -463,7 +463,7 @@ children: [
         ...eZ
       }) : null,
       (0, i.jsx)(X.Z, {
-        togglePopout: em,
+        togglePopout: ep,
         renderEmojiPicker: ed,
         shouldShow: w,
         isFocused: eh,
@@ -542,7 +542,7 @@ children: [
       });
     },
     shouldShow: O,
-    onRequestClose: ep,
+    onRequestClose: em,
     position: 'left',
     align: 'top',
     animation: d.Popout.Animation.NONE,
@@ -558,7 +558,7 @@ children: [
         label: et.Z.Messages.MORE,
         icon: d.MoreHorizontalIcon,
         selected: a,
-        onClick: ep,
+        onClick: em,
         ...eZ,
         ...i
       });

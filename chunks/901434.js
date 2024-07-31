@@ -8,15 +8,15 @@ var i = n(735250),
   u = n(281956),
   d = n(27457),
   h = n(823379),
-  p = n(5192),
-  m = n(501655),
+  m = n(5192),
+  p = n(501655),
   _ = n(689938),
   f = n(272956);
-let E = (e, t) => p.ZP.getName(e.getGuildId(), e.id, t.user);
+let E = (e, t) => m.ZP.getName(e.getGuildId(), e.id, t.user);
 t.Z = function(e) {
   var t, n;
   let {
-participants: p,
+participants: m,
 channel: g,
 hasConnectPermission: C
   } = e, I = (0, u.J)(g.guild_id), x = a.useCallback(() => {
@@ -25,7 +25,7 @@ I ? (0, c.hk)(g.guild_id, () => r.default.selectVoiceChannel(g.id)) : r.default.
 g.id,
 g.guild_id,
 I
-  ]), T = p.filter(e => e.type === m.Ui.VOICE), N = 4 === T.length ? 2 : 3, v = (0, s.Wu)([o.Z], () => T.map(e => o.Z.getParticipant(g.id, e.id)).filter(h.lm), [
+  ]), T = m.filter(e => e.type === p.Ui.VOICE), N = 4 === T.length ? 2 : 3, v = (0, s.Wu)([o.Z], () => T.map(e => o.Z.getParticipant(g.id, e.id)).filter(h.lm), [
 g.id,
 T
   ]);

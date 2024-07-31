@@ -16,8 +16,8 @@ var i = n(735250),
   u = n(596454),
   d = n(727637),
   h = n(543241),
-  p = n(318766),
-  m = n(907040),
+  m = n(318766),
+  p = n(907040),
   _ = n(633302),
   f = n(806966),
   E = n(153124),
@@ -43,7 +43,7 @@ emoji: t,
 isDisabled: n = !1,
 onClick: s,
 className: r
-  } = e, h = a.useRef(null), m = (0, d.Z)(h);
+  } = e, h = a.useRef(null), p = (0, d.Z)(h);
   return (0, i.jsx)('span', {
 ref: h,
 children: (0, i.jsx)(c.Button, {
@@ -54,12 +54,12 @@ children: (0, i.jsx)(c.Button, {
     enabled: !n
   },
   children: (0, i.jsx)(c.Spring, {
-    config: p.u,
+    config: m.u,
     from: {
       value: 0
     },
     to: {
-      value: m ? 1 : 0
+      value: p ? 1 : 0
     },
     children: e => {
       let {
@@ -125,7 +125,7 @@ closePopout: s,
 onFocus: o,
 onSelectEmoji: u,
 onSelectDisabledEmoji: d,
-onExpandedToggle: p,
+onExpandedToggle: m,
 emojiSearchProps: _,
 recentlyUsedEmojis: C,
 analyticsOverride: M
@@ -139,7 +139,7 @@ intention: v
   })).slice(0, I.e5);
   null != C && C.length > 0 && P.splice(P.length - 1, 1, C[0]);
   let O = e => {
-  j(e), null == p || p(e);
+  j(e), null == m || m(e);
 },
 y = (e, t) => {
   if (null == e && t) {
@@ -164,7 +164,7 @@ children: [
   (0, i.jsxs)('div', {
     className: N.container,
     children: [
-      (0, i.jsx)(m.Z, {
+      (0, i.jsx)(p.Z, {
         analyticsOverride: M,
         channel: t,
         className: l()(N.animatedPicker, {

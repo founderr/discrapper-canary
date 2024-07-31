@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(866442),
   d = n(442837),
   h = n(481060),
-  p = n(787014),
-  m = n(911969),
+  m = n(787014),
+  p = n(911969),
   _ = n(933557),
   f = n(605436),
   E = n(185413),
@@ -63,7 +63,7 @@ D
   ]), U = (0, d.Wu)([T.default], () => {
 let e = {};
 for (let n of (null != y && (e[y.id] = y), Object.values(t.permissionOverwrites))) {
-  if (n.type !== m.BN.MEMBER || null != e[n.id])
+  if (n.type !== p.BN.MEMBER || null != e[n.id])
     continue;
   let t = T.default.getUser(n.id);
   null != t && (e[t.id] = t);
@@ -85,7 +85,7 @@ y
   ]), w = x.Z.can(R.Plq.MANAGE_CHANNELS, t) || x.Z.can(R.Plq.MANAGE_ROLES, t);
 
   function B() {
-p.ZP.open(t.id);
+m.ZP.open(t.id);
   }
   let H = a.useCallback(() => s(!1), []);
   return (0, i.jsxs)(M.ZP, {

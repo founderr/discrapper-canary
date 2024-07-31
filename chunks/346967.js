@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(380738),
   d = n(484459),
   h = n(87728),
-  p = n(792379),
-  m = n(123579),
+  m = n(792379),
+  p = n(123579),
   _ = n(402777);
 
 function f(e) {
@@ -40,7 +40,7 @@ location: t
   }, [
 C,
 n.id
-  ]), E) ? null : f && C.isNonUserBot() ? (0, i.jsx)(p.Z, {
+  ]), E) ? null : f && C.isNonUserBot() ? (0, i.jsx)(m.Z, {
 user: C,
 channel: n,
 ...s
@@ -49,7 +49,7 @@ user: C,
 currentUser: I,
 channel: n,
 ...s
-  }) : (0, i.jsx)(m.Z, {
+  }) : (0, i.jsx)(p.Z, {
 user: C,
 channel: n,
 ...s
