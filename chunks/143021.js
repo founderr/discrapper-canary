@@ -27,33 +27,32 @@ return null !== (e = t.find(e => e.code === n)) && void 0 !== e ? e : t[0];
 function I(e) {
   let {
 loadId: t,
-categoryId: n,
-offset: i
+categoryId: n
   } = e;
   u.B.setState({
 isSearchVisible: !0,
 searchCategoryId: n
   });
   let {
-searchResultsQuery: a,
-searchQuery: s,
-searchCategoryId: o
+searchResultsQuery: i,
+searchQuery: a,
+searchCategoryId: s
   } = u.B.getState(), {
-guilds: c,
-total: _,
-loading: h,
-initialized: I
-  } = l.Z.getResults(a, o);
-  if (h || I && c.length >= _)
+guilds: o,
+total: c,
+loading: _,
+initialized: h
+  } = l.Z.getResults(i, s);
+  if (_ || h && o.length >= c)
 return;
   u.B.setState({
-searchResultsQuery: s
+searchResultsQuery: a
   });
-  let m = E();
-  d.tI(t, o), r.bR(s, {
+  let I = E();
+  d.tI(t, s), r.bR(a, {
 categoryId: n,
-preferredLocale: m.code,
-offset: i,
+preferredLocale: I.code,
+offset: o.length,
 length: 12,
 filters: {
   approximate_member_count: d.sq
@@ -82,10 +81,8 @@ guilds: h,
 loading: !0
   } : l.Z.getResults(n, r)), d = i.useCallback(() => I({
 loadId: t,
-categoryId: r,
-offset: o.length
+categoryId: r
   }), [
-o.length,
 t,
 r
   ]);
@@ -140,8 +137,7 @@ _ = i.useCallback(() => {
 ]),
 h = i.useCallback(() => I({
   loadId: t,
-  categoryId: n,
-  offset: 0
+  categoryId: n
 }), [
   n,
   t
