@@ -460,14 +460,15 @@ let {
 } = e, [a, s] = u.useState([]), [o, l] = u.useState(!1);
 return {
   startConsoleQuest: u.useCallback(async () => {
-    if (!o) {
-      null == r || r(), l(!0);
-      try {
-        let e = await (0, I.CS)(t, n);
-        s(e.errorHints);
-      } finally {
-        l(!1), null == i || i();
-      }
+    if (o)
+      return;
+    null == r || r(), l(!0);
+    let e = null;
+    try {
+      e = await (0, I.CS)(t, n), s(e.errorHints);
+    } finally {
+      var a;
+      l(!1), null == i || i(null !== (a = null == e ? void 0 : e.errorHints) && void 0 !== a ? a : []);
     }
   }, [
     o,

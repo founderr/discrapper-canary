@@ -1,86 +1,127 @@
 n.d(t, {
   Z: function() {
-return h;
+return I;
   }
 });
 var i = n(735250);
 n(470079);
-var a = n(442837),
-  s = n(481060),
-  r = n(113434),
-  l = n(569984),
-  o = n(918701),
-  c = n(667105),
-  d = n(46140),
-  u = n(689938),
-  _ = n(207637);
+var s = n(442837),
+  a = n(481060),
+  r = n(607070),
+  l = n(617136),
+  o = n(113434),
+  c = n(569984),
+  d = n(918701),
+  u = n(667105),
+  _ = n(46140),
+  h = n(689938),
+  E = n(207637);
 
-function h(e) {
-  var t, n, h, E;
+function I(e) {
+  var t, n, I, m;
   let {
-quest: I,
-location: m,
-contentPosition: g,
-rowIndex: p
-  } = e, T = (0, r.B6)(I.config.expiresAt, {
+quest: g,
+location: p,
+onReceiveErrorHints: T,
+contentPosition: S,
+rowIndex: f
+  } = e, C = (0, s.e7)([r.Z], () => r.Z.useReducedMotion), N = (0, u.g2)({
+useReducedMotion: C
+  }), A = (0, o._s)({
+quest: g
+  }), v = (0, o.z)(g), Z = (0, o.B6)(g.config.expiresAt, {
 month: 'numeric',
 day: '2-digit'
   }), {
-isClaiming: S,
-isEnrolling: f
-  } = (0, a.cj)([l.Z], () => ({
-isClaiming: l.Z.isClaimingReward(I.id) || l.Z.isFetchingRewardCode(I.id),
-isEnrolling: l.Z.isEnrolling(I.id)
-  })), C = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, N = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, A = N && (null === (h = I.userStatus) || void 0 === h ? void 0 : h.claimedAt) == null, v = (0, o.iQ)(I), Z = !(0, o.zi)(I), L = (0, r._Q)(I), O = (0, o.zK)(I, d.S7.IN_HOUSE_CONSOLE_QUEST), R = (0, o.Xv)(I.config), {
-text: x,
-onClick: b
-  } = (0, c.Ks)({
-progressState: L,
-quest: I,
-isInHouseQuest: O,
-location: m,
-isCollectibleQuest: R,
-questContentPosition: g,
-questContentRowIndex: p,
+isClaiming: L,
+isEnrolling: O
+  } = (0, s.cj)([c.Z], () => ({
+isClaiming: c.Z.isClaimingReward(g.id) || c.Z.isFetchingRewardCode(g.id),
+isEnrolling: c.Z.isEnrolling(g.id)
+  })), R = (null === (t = g.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, x = (null === (n = g.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, b = x && (null === (I = g.userStatus) || void 0 === I ? void 0 : I.claimedAt) == null, P = (0, d.iQ)(g), M = !(0, d.zi)(g), D = (0, o._Q)(g), y = (0, d.zK)(g, _.S7.IN_HOUSE_CONSOLE_QUEST), j = (0, d.zK)(g, _.S7.MOBILE_CONSOLE_QUEST), U = (0, d.Xv)(g.config), {
+text: G,
+onClick: k
+  } = (0, u.Ks)({
+progressState: D,
+quest: g,
+isInHouseQuest: y,
+location: p,
+isCollectibleQuest: U,
+questContentPosition: S,
+questContentRowIndex: f,
 inGiftInventory: !0
-  }), P = (null === (E = I.userStatus) || void 0 === E ? void 0 : E.claimedAt) != null, M = null;
-  return (v && A ? M = (0, i.jsx)(s.Button, {
-color: s.ButtonColors.BRAND,
-submitting: S,
-onClick: null != b ? b : void 0,
-className: _.button,
-children: x
-  }) : !Z && N ? M = (0, i.jsx)(s.Button, {
-color: s.ButtonColors.PRIMARY,
-className: _.button,
-onClick: null != b ? b : void 0,
-children: x
-  }) : Z ? Z && A ? M = (0, i.jsx)(s.Button, {
-color: s.ButtonColors.BRAND,
-submitting: S,
-onClick: null != b ? b : void 0,
-className: _.button,
-children: x
-  }) : Z && C && !P ? M = (0, i.jsx)(s.Button, {
-color: s.ButtonColors.PRIMARY,
-disabled: !0,
-className: _.button,
-children: u.Z.Messages.QUEST_ACCEPTED
-  }) : Z && !C && (M = (0, i.jsx)(s.Button, {
-submitting: f,
-color: s.ButtonColors.BRAND,
-onClick: null != b ? b : void 0,
-className: _.button,
-children: x
-  })) : M = (0, i.jsx)(s.Button, {
-color: s.ButtonColors.PRIMARY,
-disabled: !0,
-className: _.button,
-children: u.Z.Messages.QUESTS_ENDED_ON_DATE.format({
-  expiryDate: T
+  }), {
+startingConsoleQuest: w,
+startConsoleQuest: B
+  } = (0, o.GI)({
+questId: g.id,
+beforeRequest: () => {
+  N.startAnimation(), (0, l._3)({
+    questId: g.id,
+    questContent: p,
+    questContentCTA: l.jZ.DEFIBRILLATOR,
+    questContentPosition: S,
+    questContentRowIndex: f
+  });
+},
+afterRequest: e => {
+  N.stopAnimation(), T(e);
+}
+  }), H = (null === (m = g.userStatus) || void 0 === m ? void 0 : m.claimedAt) != null, V = null;
+  return (P && b ? V = (0, i.jsx)(a.Button, {
+color: a.ButtonColors.BRAND,
+submitting: L,
+onClick: null != k ? k : void 0,
+className: E.button,
+children: G
+  }) : !M && x ? V = (0, i.jsx)(a.Button, {
+color: a.ButtonColors.PRIMARY,
+className: E.button,
+onClick: null != k ? k : void 0,
+children: G
+  }) : M ? M && b ? V = (0, i.jsx)(a.Button, {
+color: a.ButtonColors.BRAND,
+submitting: L,
+onClick: null != k ? k : void 0,
+className: E.button,
+children: G
+  }) : M && R && !H ? V = j && !v ? A ? (0, i.jsx)(a.Button, {
+color: a.ButtonColors.PRIMARY,
+className: E.button,
+onClick: null != k ? k : void 0,
+children: G
+  }) : (0, i.jsx)(a.Button, {
+color: a.ButtonColors.PRIMARY,
+onClick: B,
+disabled: w,
+className: E.button,
+children: (0, i.jsxs)('div', {
+  className: E.ctaInner,
+  children: [
+    N.render(),
+    h.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA
+  ]
 })
-  }), null == M) ? null : (0, i.jsx)('div', {
-className: _.container,
-children: M
+  }) : (0, i.jsx)(a.Button, {
+color: a.ButtonColors.PRIMARY,
+disabled: !0,
+className: E.button,
+children: h.Z.Messages.QUEST_ACCEPTED
+  }) : M && !R && (V = (0, i.jsx)(a.Button, {
+submitting: O,
+color: a.ButtonColors.BRAND,
+onClick: null != k ? k : void 0,
+className: E.button,
+children: G
+  })) : V = (0, i.jsx)(a.Button, {
+color: a.ButtonColors.PRIMARY,
+disabled: !0,
+className: E.button,
+children: h.Z.Messages.QUESTS_ENDED_ON_DATE.format({
+  expiryDate: Z
+})
+  }), null == V) ? null : (0, i.jsx)('div', {
+className: E.container,
+children: V
   });
 }
