@@ -1,28 +1,28 @@
-n.d(i, {
+i.d(n, {
   Z: function() {
 return x;
   }
 });
-var s = n(735250);
-n(470079);
-var l = n(481060),
-  t = n(906732),
-  o = n(785717),
-  a = n(221292),
-  r = n(929498),
-  d = n(678738),
-  c = n(151545),
-  u = n(364027),
-  I = n(527790),
-  _ = n(304042),
-  f = n(981631),
-  m = n(689938),
-  E = n(122606);
+var s = i(735250);
+i(470079);
+var l = i(481060),
+  t = i(906732),
+  o = i(785717),
+  a = i(221292),
+  r = i(929498),
+  d = i(678738),
+  c = i(151545),
+  u = i(364027),
+  I = i(527790),
+  _ = i(304042),
+  f = i(981631),
+  m = i(689938),
+  E = i(122606);
 
 function x(e) {
   let {
-user: i,
-currentUser: n,
+user: n,
+currentUser: i,
 onClose: x
   } = e, {
 analyticsLocations: v
@@ -33,7 +33,7 @@ trackUserProfileAction: Z,
 live: S,
 recent: p,
 stream: g
-  } = (0, r.Z)(i.id);
+  } = (0, r.Z)(n.id);
   return (0, s.jsxs)(l.ScrollerThin, {
 className: E.scroller,
 fade: !0,
@@ -41,8 +41,8 @@ children: [
   (0, s.jsxs)(d.Z, {
     children: [
       null != g && (0, s.jsx)(_.Z, {
-        user: i,
-        currentUser: n,
+        user: n,
+        currentUser: i,
         stream: g,
         onClose: x,
         onAction: () => {
@@ -56,8 +56,8 @@ children: [
         }
       }),
       S.map((e, l) => (0, s.jsx)(c.Z, {
-        user: i,
-        currentUser: n,
+        user: n,
+        currentUser: i,
         activity: e,
         onClose: x,
         onAction: () => {
@@ -78,17 +78,16 @@ children: [
   }),
   (0, s.jsx)(d.Z, {
     heading: m.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
-    className: E.recentActivity,
     children: p.map(e => (0, s.jsxs)('div', {
       className: E.recentActivityEntryContainer,
       children: [
         (0, s.jsx)(I.Z, {
-          user: i,
+          user: n,
           entry: e,
           onClose: x
         }),
         (0, s.jsx)(u.Z, {
-          user: i,
+          user: n,
           entry: e,
           className: E.recentActivityContextMenu,
           display: u.a.RECENT
