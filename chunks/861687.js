@@ -54,7 +54,7 @@ var b = n(214890),
   X = n(53114),
   $ = n(174532),
   J = n(895066),
-  ee = n(562319),
+  ee = n(798681),
   et = n(981631),
   en = n(65154);
 
@@ -1018,10 +1018,7 @@ if (i === en.Yn.DEFAULT) {
     null === (r = this._connection) || void 0 === r || r.createUser(e, t, n);
   });
 } else
-  i === en.Yn.STREAM && (this._goLiveQualityManager = new A.Z(!0), ee.Z.subscribe(e => {
-    var t;
-    null === (t = this._goLiveQualityManager) || void 0 === t || t.onIncomingVideoEnabled(e);
-  }), this._goLiveQualityManager.on(A.y.RequestedSSRCsUpdate, (e, t, n) => {
+  i === en.Yn.STREAM && (this._goLiveQualityManager = new A.Z(!0), this._goLiveQualityManager.on(A.y.RequestedSSRCsUpdate, (e, t, n) => {
     var r;
     null === (r = this._connection) || void 0 === r || r.createUser(e, t, n);
   }), this._goLiveQualityManager.on(A.y.RequestedStreamsUpdate, e => {
@@ -1030,7 +1027,13 @@ if (i === en.Yn.DEFAULT) {
       this.logger.info('Go Live Media sink wants: '.concat(JSON.stringify(e))), this._socket.mediaSinkWants(e), null === (t = this._connection) || void 0 === t || t.setLocalVideoSinkWants(e);
     }
   }));
-this._remoteVideoSinkWants = z.Yy, G.ZP.shouldRecordNextConnection() ? (this._recordingEnabled = !0, m.TC(!1)) : this._recordingEnabled = !1, this._soundshareStats = new q.Z(), V.Z.addOnlineCallback(this._handleNetworkOnline), V.Z.addOfflineCallback(this._handleNetworkOffline), (0, H.isDesktop)() && (this.powerMonitorListener = Z.Z.remotePowerMonitor.on('resume', this._handlePowerResume)), this._supportedBandwidthEstimationExperiments = [], this._bandwidthEstimationExperiment = null, w.Z.getMediaEngine().getSupportedBandwidthEstimationExperiments(e => {
+this._remoteVideoSinkWants = z.Yy, ee.w.on(ee.e.IncomingVideoEnabledChanged, e => {
+  var t, n;
+  null === (t = this._goLiveQualityManager) || void 0 === t || t.onIncomingVideoEnabled(e), null === (n = this._videoQuality) || void 0 === n || n.setOcclusionIncomingVideoEnabled(e);
+}), ee.w.on(ee.e.WindowVisibilityChanged, e => {
+  var t;
+  null === (t = this._videoQuality) || void 0 === t || t.setWindowOcclusionState(!e);
+}), G.ZP.shouldRecordNextConnection() ? (this._recordingEnabled = !0, m.TC(!1)) : this._recordingEnabled = !1, this._soundshareStats = new q.Z(), V.Z.addOnlineCallback(this._handleNetworkOnline), V.Z.addOfflineCallback(this._handleNetworkOffline), (0, H.isDesktop)() && (this.powerMonitorListener = Z.Z.remotePowerMonitor.on('resume', this._handlePowerResume)), this._supportedBandwidthEstimationExperiments = [], this._bandwidthEstimationExperiment = null, w.Z.getMediaEngine().getSupportedBandwidthEstimationExperiments(e => {
   this._supportedBandwidthEstimationExperiments = e;
 }), this._mlsFailures = {};
   }

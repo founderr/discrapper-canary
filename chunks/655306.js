@@ -17,7 +17,7 @@ var r, i, a = n(47770),
   c = n(526167),
   d = n(70956),
   _ = n(709054),
-  E = n(562319),
+  E = n(798681),
   f = n(981631),
   h = n(65154);
 
@@ -47,7 +47,7 @@ return this.offscreenDisabledUsers[e];
   shouldReceiveFromUser(e) {
 var t, n;
 let r = !((null === (t = this.connection) || void 0 === t ? void 0 : t.getLocalVideoDisabled(e)) || this.userVideoDisabled(e) && (null === (n = this.videoHealthManager) || void 0 === n ? void 0 : n.getCurrentVideoToggleState(e)) !== f.ZUi.AUTO_PROBING);
-return E.Z.isIncomingVideoEnabled() && r;
+return E.w.isIncomingVideoEnabled() && r;
   }
   getAudioSSRCs() {
 return this.audioSsrcs;
@@ -217,7 +217,7 @@ super(), i = this, p(this, 'userId', void 0), p(this, 'isStageChannel', void 0),
     (null === (r = i.connection) || void 0 === r ? void 0 : r.getLocalMute(e)) && (n[t] = 0);
   }
   return g ? i.latestWants : (null != i.connection && !(0, l.Z)(i.latestWants, n) && (i.latestWants = n, i.emit('update', n)), n);
-}, this.delayedCall = new u.sW(100, this.update), this.offscreenTimeout = new u.V7(), E.Z.subscribe(() => {
+}, this.delayedCall = new u.sW(100, this.update), this.offscreenTimeout = new u.V7(), E.w.on(E.e.IncomingVideoEnabledChanged, () => {
   this.update();
 });
   }

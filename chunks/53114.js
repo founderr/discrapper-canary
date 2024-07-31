@@ -70,6 +70,12 @@ this.getOrCreateInboundStats(e).setVideoStopped(0 === t, _.Mq.SenderStopped);
 let n = this.getOrCreateInboundStats(e);
 n.setVideoStopped(t, _.Mq.ClientSideDisableVideo), !t && n.statsWindow.length > 0 && 0 === n.statsWindow[0].packets && (n.startTime = this.timestampProducer.now());
   }
+  setOcclusionIncomingVideoEnabled(e) {
+this.videoStoppedForOcclusion.value = !e;
+  }
+  setWindowOcclusionState(e) {
+e !== this.windowOccluded.value && this.numWindowOcclusionChanges++, this.windowOccluded.value = e;
+  }
   pause() {
 !this.paused.value && this.pausedCount++, a().forEach(this.outboundStats, e => {
   e.statsWindow = [];
@@ -316,6 +322,9 @@ let t = Number(this.streamStart),
     duration_hq_simulcast_stream_watched: f(this.hqSimulcastStreamWatched.totalDurationSeconds()),
     duration_lq_simulcast_stream_watched: f(this.lqSimulcastStreamWatched.totalDurationSeconds()),
     num_quality_changes: this.simulcastQualityChanges,
+    duration_window_occluded: f(this.windowOccluded.totalDurationSeconds()),
+    duration_incoming_video_stopped_for_occlusion: f(this.videoStoppedForOcclusion.totalDurationSeconds()),
+    num_window_occlusion_changes: this.numWindowOcclusionChanges,
     fps_percentile1: a.percentiles[1],
     fps_percentile5: a.percentiles[5],
     fps_percentile10: a.percentiles[10],
@@ -459,7 +468,7 @@ let t = null == e ? void 0 : e.rtp.outbound.find(e => 'video' === e.type);
 this.videoEffectDuration.value = (null == t ? void 0 : t.type) === 'video' && null != t.filter;
   }
   constructor(e, t = l.Z_) {
-super(), E(this, 'connection', void 0), E(this, 'timestampProducer', void 0), E(this, 'networkQuality', void 0), E(this, 'paused', void 0), E(this, 'pausedCount', void 0), E(this, 'zeroReceivers', void 0), E(this, 'videoStopped', void 0), E(this, 'videoEffectDuration', void 0), E(this, 'hqSimulcastStreamEncoded', void 0), E(this, 'lqSimulcastStreamEncoded', void 0), E(this, 'bothSimulcastStreamsEncoded', void 0), E(this, 'hqSimulcastStreamWatched', void 0), E(this, 'lqSimulcastStreamWatched', void 0), E(this, 'simulcastQualityChanges', void 0), E(this, 'watchingSimulcastHighQuality', void 0), E(this, 'outboundStats', void 0), E(this, 'inboundStats', void 0), E(this, 'streamStart', void 0), E(this, 'streamEnd', void 0), E(this, 'symmetricCodecUpdates', void 0), E(this, 'asymmetricCodecUpdates', void 0), E(this, 'statCollectionPausedUsers', void 0), E(this, 'sampleStats', void 0), this.connection = e, this.timestampProducer = t, this.networkQuality = new d.Z(), this.pausedCount = 0, this.simulcastQualityChanges = 0, this.watchingSimulcastHighQuality = !0, this.outboundStats = {}, this.inboundStats = {}, this.symmetricCodecUpdates = 0, this.asymmetricCodecUpdates = 0, this.statCollectionPausedUsers = new Set(), this.sampleStats = e => {
+super(), E(this, 'connection', void 0), E(this, 'timestampProducer', void 0), E(this, 'networkQuality', void 0), E(this, 'paused', void 0), E(this, 'pausedCount', void 0), E(this, 'zeroReceivers', void 0), E(this, 'videoStopped', void 0), E(this, 'videoEffectDuration', void 0), E(this, 'hqSimulcastStreamEncoded', void 0), E(this, 'lqSimulcastStreamEncoded', void 0), E(this, 'bothSimulcastStreamsEncoded', void 0), E(this, 'hqSimulcastStreamWatched', void 0), E(this, 'lqSimulcastStreamWatched', void 0), E(this, 'simulcastQualityChanges', void 0), E(this, 'watchingSimulcastHighQuality', void 0), E(this, 'windowOccluded', void 0), E(this, 'videoStoppedForOcclusion', void 0), E(this, 'numWindowOcclusionChanges', void 0), E(this, 'outboundStats', void 0), E(this, 'inboundStats', void 0), E(this, 'streamStart', void 0), E(this, 'streamEnd', void 0), E(this, 'symmetricCodecUpdates', void 0), E(this, 'asymmetricCodecUpdates', void 0), E(this, 'statCollectionPausedUsers', void 0), E(this, 'sampleStats', void 0), this.connection = e, this.timestampProducer = t, this.networkQuality = new d.Z(), this.pausedCount = 0, this.simulcastQualityChanges = 0, this.watchingSimulcastHighQuality = !0, this.numWindowOcclusionChanges = 0, this.outboundStats = {}, this.inboundStats = {}, this.symmetricCodecUpdates = 0, this.asymmetricCodecUpdates = 0, this.statCollectionPausedUsers = new Set(), this.sampleStats = e => {
   if (null == e)
     return;
   let t = this.timestampProducer.now();
@@ -467,6 +476,6 @@ super(), E(this, 'connection', void 0), E(this, 'timestampProducer', void 0), E(
     return;
   let n = this.connection.getStreamParameters();
   this.receivedStats(t, e, n);
-}, this.paused = new h(!1, t), this.zeroReceivers = new h(!1, t), this.videoStopped = new h(!1, t), this.videoEffectDuration = new h(!1, t), this.hqSimulcastStreamEncoded = new h(!1, t), this.lqSimulcastStreamEncoded = new h(!1, t), this.bothSimulcastStreamsEncoded = new h(!1, t), this.hqSimulcastStreamWatched = new h(!1, t), this.lqSimulcastStreamWatched = new h(!1, t);
+}, this.paused = new h(!1, t), this.zeroReceivers = new h(!1, t), this.videoStopped = new h(!1, t), this.videoEffectDuration = new h(!1, t), this.hqSimulcastStreamEncoded = new h(!1, t), this.lqSimulcastStreamEncoded = new h(!1, t), this.bothSimulcastStreamsEncoded = new h(!1, t), this.hqSimulcastStreamWatched = new h(!1, t), this.lqSimulcastStreamWatched = new h(!1, t), this.windowOccluded = new h(!1, t), this.videoStoppedForOcclusion = new h(!1, t);
   }
 }
