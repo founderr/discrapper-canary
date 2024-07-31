@@ -27,8 +27,8 @@ var s = n(735250),
   b = n(635921),
   O = n(177839),
   P = n(794484),
-  v = n(392521),
-  L = n(349803),
+  L = n(392521),
+  v = n(349803),
   Z = n(179984),
   D = n(409100),
   B = n(391110),
@@ -78,13 +78,13 @@ return t ? (0, s.jsxs)('div', {
         previousComponent: B.MQ.MARKETING
       }) : void 0
     }),
-    n ? (0, s.jsx)(v.ZP, {
+    n ? (0, s.jsx)(L.ZP, {
       className: k.pdSparklesTop,
-      variant: v.u0.TOP
+      variant: L.u0.TOP
     }) : null,
-    n ? (0, s.jsx)(v.ZP, {
+    n ? (0, s.jsx)(L.ZP, {
       className: k.pdSparklesBottom,
-      variant: v.u0.BOTTOM
+      variant: L.u0.BOTTOM
     }) : null
   ]
 }) : null;
@@ -100,7 +100,7 @@ E.X.trigger();
   }, []);
   let x = a.useRef(null),
 [O, P] = a.useState(!1),
-[v, U] = a.useState(!1),
+[L, U] = a.useState(!1),
 [Y, z] = a.useState(!1),
 [Q, q] = a.useState(!1),
 J = (0, l.e7)([T.ZP], () => T.ZP.getPremiumTypeSubscription()),
@@ -261,8 +261,8 @@ eE = (0, s.jsxs)('div', {
     (0, s.jsx)('div', {
       className: n ? k.footerSpacingFullscreen : k.footerSpacing
     }),
-    (0, s.jsx)(L.Z, {
-      isVisible: !O && !v && Q,
+    (0, s.jsx)(v.Z, {
+      isVisible: !O && !L && Q,
       isFullscreen: n,
       subscriptionTier: ee
     }),

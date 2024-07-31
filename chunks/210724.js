@@ -38,7 +38,7 @@ quest: R,
 location: S.dr.QUESTS_BAR
   }), O = (0, p.Zy)({
 location: S.dr.QUESTS_BAR
-  }), P = (0, c.e7)([u.Z], () => u.Z.useReducedMotion), v = (0, c.e7)([E.Z], () => E.Z.hasLayers()), L = (null === (t = R.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, Z = (0, _.Z)(L), D = (null === (n = R.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, B = (0, _.Z)(D), j = (null === (i = R.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, U = null != R.userStatus && (0, g.zE)(R.userStatus, C.jn.QUEST_BAR), G = (0, I.tP)(R), {
+  }), P = (0, c.e7)([u.Z], () => u.Z.useReducedMotion), L = (0, c.e7)([E.Z], () => E.Z.hasLayers()), v = (null === (t = R.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, Z = (0, _.Z)(v), D = (null === (n = R.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, B = (0, _.Z)(D), j = (null === (i = R.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, U = null != R.userStatus && (0, g.zE)(R.userStatus, C.jn.QUEST_BAR), G = (0, I.tP)(R), {
 hasError: y,
 isLoading: k
   } = (0, N.d7)(), H = O && !U && !j && !G && !k, w = a.useRef(H), F = (0, h.B)(R, H && !y), V = a.useRef(-1), W = a.useRef(!1), [K, Y] = a.useState(!1), [z, Q] = a.useState(!1), [q, J] = a.useState(!0), [X, $] = a.useState(!0), [ee, et] = a.useState(F.preEnrollmentExpandedHeight), en = a.useRef(null), es = a.useCallback(e => {
@@ -106,22 +106,22 @@ ei,
 D,
 F.shouldExpandOnQuestComplete
   ]), a.useLayoutEffect(() => {
-L && !Z && W.current && ei();
+v && !Z && W.current && ei();
   }, [
 ei,
-L,
+v,
 Z
   ]), a.useLayoutEffect(() => {
-!D && L && !Z && !W.current && es(!1);
+!D && v && !Z && !W.current && es(!1);
   }, [
-L,
+v,
 D,
 Z,
 es
   ]), a.useLayoutEffect(() => {
 H !== w.current && $(!1), w.current = H;
   }, [H]);
-  let eI = L ? S.XZ : S.R4,
+  let eI = v ? S.XZ : S.R4,
 [{
   expansionSpring: eR
 }, eC] = (0, d.useSpring)(() => ({
@@ -198,7 +198,7 @@ R.id
   ]), O && (H || !X || k) && !y) ? (0, s.jsx)(m.A, {
 questOrQuests: R,
 questContent: F.trackingCtx.content,
-overrideVisibility: !v && H,
+overrideVisibility: !L && H,
 children: () => {
   let e = F.component;
   return (0, s.jsx)('div', {
@@ -229,11 +229,11 @@ children: () => {
       children: (0, s.jsx)(o.animated.div, {
         className: l()(x.contentWrapper, {
           [x.contentWrapperExpanded]: z,
-          [x.contentWrapperAccepted]: L
+          [x.contentWrapperAccepted]: v
         }),
         style: {
           backgroundColor: F.preEnrollmentBackgroundColor,
-          backgroundImage: L ? F.postEnrollmentBackgroundImage : void 0
+          backgroundImage: v ? F.postEnrollmentBackgroundImage : void 0
         },
         children: (0, s.jsx)(f.t, {
           springConfig: eI,

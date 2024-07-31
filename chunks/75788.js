@@ -1,6 +1,6 @@
 n.d(s, {
   Z: function() {
-return N;
+return d;
   }
 }), n(47120);
 var t = n(735250),
@@ -11,16 +11,16 @@ var t = n(735250),
   i = n(393869),
   E = n(25990),
   _ = n(689938),
-  d = n(660817);
+  N = n(660817);
 
-function N(e) {
+function d(e) {
   var s;
   let {
 isSlideReady: n,
-error: N,
+error: d,
 setEmailToken: c,
-setError: u,
-onNext: A,
+setError: A,
+onNext: u,
 onClose: C
   } = e, [M, S] = o.useState(!1), [m, I] = o.useState(''), [x, T] = o.useState(!1), R = (0, a.e7)([E.Z], () => E.Z.getErrors()), O = o.useRef(null);
   o.useEffect(() => {
@@ -30,14 +30,14 @@ if (n) {
 }
   }, [n]);
   let h = async e => {
-e.preventDefault(), u(null), S(!0);
+e.preventDefault(), A(null), S(!0);
 try {
   let {
     token: e
   } = await (0, i.w)(m);
-  c(e), A();
+  c(e), u();
 } catch (e) {
-  u(new r.Z(e).getAnyErrorMessage());
+  A(new r.Z(e).getAnyErrorMessage());
 } finally {
   S(!1);
 }
@@ -59,31 +59,31 @@ onSubmit: h,
 children: [
   (0, t.jsxs)(l.ModalHeader, {
     separator: !1,
-    className: d.header,
+    className: N.header,
     children: [
       (0, t.jsx)(l.Heading, {
-        className: d.title,
+        className: N.title,
         variant: 'heading-xl/extrabold',
         children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_TITLE_DESKTOP
       }),
       (0, t.jsx)(l.Text, {
         color: 'header-secondary',
         variant: 'text-md/normal',
-        className: d.subtitle,
+        className: N.subtitle,
         children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_SUBTITLE
       }),
       (0, t.jsx)(l.ModalCloseButton, {
         onClick: C,
-        className: d.modalCloseButton
+        className: N.modalCloseButton
       })
     ]
   }),
   (0, t.jsxs)(l.ModalContent, {
-    className: d.content,
+    className: N.content,
     children: [
       (0, t.jsx)(l.FormItem, {
         title: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_PROMPT,
-        error: null != N ? N : null == R ? void 0 : null === (s = R.email_token) || void 0 === s ? void 0 : s[0],
+        error: null != d ? d : null == R ? void 0 : null === (s = R.email_token) || void 0 === s ? void 0 : s[0],
         children: (0, t.jsx)(l.TextInput, {
           value: m,
           onChange: I,
@@ -91,7 +91,7 @@ children: [
         })
       }),
       (0, t.jsx)(l.Text, {
-        className: d.help,
+        className: N.help,
         variant: 'text-sm/normal',
         children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_RESEND.format({
           onResend: L

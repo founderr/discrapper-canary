@@ -26,15 +26,15 @@ isExpanded: S
   } = e, {
 completionSpring: T,
 startCompletionAnimation: v
-  } = (0, x.GX)(), N = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, A = o.useRef(!1), j = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), B = o.useRef(null), b = (0, d.e7)([m.Z], () => m.Z.hasLayers()), R = (0, u.Z)(b), [y, I] = o.useState(null), [q, O] = o.useState(null), M = o.useRef(new l.qA({
+  } = (0, x.GX)(), A = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, N = o.useRef(!1), j = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), B = o.useRef(null), b = (0, d.e7)([m.Z], () => m.Z.hasLayers()), R = (0, u.Z)(b), [y, I] = o.useState(null), [U, q] = o.useState(null), M = o.useRef(new l.qA({
 gravity: 0,
 wind: 0
-  })), U = (0, l.uR)(y, q), k = o.useCallback(() => {
+  })), O = (0, l.uR)(y, U), k = o.useCallback(() => {
 if (j)
   return;
 let e = E.current,
   t = B.current;
-if (null != t && null != e && U.isReady) {
+if (null != t && null != e && O.isReady) {
   var n, s, o, r;
   let {
     x: a,
@@ -43,7 +43,7 @@ if (null != t && null != e && U.isReady) {
     x: i,
     y: c
   } = t.getBoundingClientRect();
-  U.createMultipleConfetti((n = a - i, s = l - c, o = e.clientHeight, r = e.clientWidth, {
+  O.createMultipleConfetti((n = a - i, s = l - c, o = e.clientHeight, r = e.clientWidth, {
     ...f.We,
     position: {
       type: 'static-random',
@@ -86,36 +86,36 @@ if (null != t && null != e && U.isReady) {
   }, [
 E,
 B,
-U,
+O,
 j
   ]), P = (0, u.Z)(S);
   return (o.useEffect(() => {
-N && S && !P && (v(), k());
+A && S && !P && (v(), k());
   }, [
 S,
-N,
+A,
 v,
 k,
 P
   ]), o.useEffect(() => {
-N && !b && R && setTimeout(() => {
+A && !b && R && setTimeout(() => {
   v(), k();
 }, 200);
   }, [
-N,
+A,
 R,
 b,
 v,
 k
   ]), o.useEffect(() => {
-if (!!U.isReady)
-  !A.current && N && (v(), k()), A.current = N;
+if (!!O.isReady)
+  !N.current && A && (v(), k()), N.current = A;
   }, [
-N,
 A,
+N,
 k,
 v,
-U
+O
   ]), j) ? null : (0, s.jsxs)('div', {
 className: g.wrapper,
 'aria-hidden': 'true',
@@ -154,7 +154,7 @@ children: [
         environment: M.current
       }),
       (0, s.jsx)(l.Ji, {
-        ref: O,
+        ref: q,
         sprites: [C],
         colors: _,
         spriteWidth: f.Ko,

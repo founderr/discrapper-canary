@@ -1,14 +1,14 @@
 n.d(t, {
   Z: function() {
-return a;
+return s;
   }
 });
-var s = n(282421);
+var i = n(282421);
 
-function a(e) {
+function s(e) {
   let {
 enabled: t
-  } = s.B.useExperiment({
+  } = i.B.useExperiment({
 location: e
   }, {
 autoTrackExposure: !1

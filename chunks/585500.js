@@ -45,9 +45,9 @@ let t = function(e) {
     connectedConsoleLinkOnClick: a,
     thirdPartyTaskDetails: l,
     withoutMarkdown: c
-  } = e, d = t.config.messages.gameTitle, m = o.r.build(t.config).defaultReward.messages.nameWithArticle, {
-    targetMinutes: _
-  } = n, T = (0, r.zK)(t, i.S7.IN_HOUSE_CONSOLE_QUEST), E = (0, r.Kr)(t.config), I = (0, r.$J)(t) && (0, r.$H)(t);
+  } = e, d = t.config.messages.gameTitle, _ = o.r.build(t.config).defaultReward.messages.nameWithArticle, {
+    targetMinutes: m
+  } = n, T = (0, r.zK)(t, i.S7.IN_HOUSE_CONSOLE_QUEST), E = (0, r.Kr)(t.config), g = (0, r.$J)(t) && (0, r.$H)(t);
   if (T && null != E)
     return function(e) {
       var t;
@@ -71,7 +71,7 @@ let t = function(e) {
       taskDetails: n,
       withoutMarkdown: c
     });
-  if (I)
+  if (g)
     return function(e) {
       var t;
       let {
@@ -80,24 +80,24 @@ let t = function(e) {
         connectedConsoleLinkOnClick: a,
         withoutMarkdown: i
       } = e, l = o.r.build(n.config).defaultReward.messages.nameWithArticle, c = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, d = (0, r.Kr)(n.config), {
-        targetMinutes: m
-      } = s, _ = n.config.messages.gameTitle;
+        targetMinutes: _
+      } = s, m = n.config.messages.gameTitle;
       if (null != d)
         return c ? u.Z.Messages.QUEST_REWARD_MULTIPLATFORM_WITH_EXPIRING_COLLECTIBLE_REWARD[i ? 'astFormat' : 'format']({
-          gameTitle: _,
+          gameTitle: m,
           reward: l,
-          streamingDurationRequirement: m,
+          streamingDurationRequirement: _,
           onClick: a,
           duration: d
         }) : u.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD[i ? 'astFormat' : 'format']({
-          gameTitle: _,
-          targetMinutes: m,
+          gameTitle: m,
+          targetMinutes: _,
           rewardNameWithArticle: l,
           duration: d
         });
       return u.Z.Messages.QUEST_REWARD_MULTIPLATFORM[i ? 'astFormat' : 'format']({
-        gameTitle: _,
-        streamingDurationRequirement: m,
+        gameTitle: m,
+        streamingDurationRequirement: _,
         reward: l,
         onClick: a
       });
@@ -182,17 +182,17 @@ let t = function(e) {
     });
   return null != l ? l.description : null != E ? u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD[c ? 'astFormat' : 'format']({
     gameTitle: d,
-    streamingDurationRequirement: _,
-    questReward: m,
+    streamingDurationRequirement: m,
+    questReward: _,
     duration: E
   }) : s ? u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2[c ? 'astFormat' : 'format']({
     gameTitle: d,
-    questReward: m,
-    streamingDurationRequirement: _
+    questReward: _,
+    streamingDurationRequirement: m
   }) : u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD[c ? 'astFormat' : 'format']({
     gameTitle: d,
-    questReward: m,
-    streamingDurationRequirement: _
+    questReward: _,
+    streamingDurationRequirement: m
   });
 }(e);
 return e.withoutMarkdown ? c(t) : t;

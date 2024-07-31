@@ -37,9 +37,9 @@ P = (0, I.HI)({
   location: p.MQ.SEE_ALL
 }),
 {
-  analyticsLocations: v
+  analyticsLocations: L
 } = (0, u.ZP)(_.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-[L, Z] = a.useState(!1),
+[v, Z] = a.useState(!1),
 D = (0, E.ZP)('perks-discoverability'),
 B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
 j = (0, A.mN)();
@@ -52,7 +52,7 @@ ref: b,
 children: (0, s.jsx)('div', {
   className: f.container,
   children: (0, s.jsxs)(u.Gt, {
-    value: v,
+    value: L,
     children: [
       (0, s.jsx)(R.Z, {
         className: f.heroHeading,
@@ -128,8 +128,8 @@ children: (0, s.jsx)('div', {
       }),
       (0, s.jsx)(o.$, {
         onChange: e => {
-          e && !L && (T.default.track(m.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-            location_stack: v
+          e && !v && (T.default.track(m.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+            location_stack: L
           }), Z(!0));
         },
         children: (0, s.jsx)('div', {

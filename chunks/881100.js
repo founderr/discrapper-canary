@@ -31,8 +31,8 @@ var s = n(399606),
   b = n(13327),
   O = n(59137),
   P = n(405991),
-  v = n(24615),
-  L = n(193943),
+  L = n(24615),
+  v = n(193943),
   Z = n(334347),
   D = n(943734),
   B = n(603076),
@@ -67,13 +67,13 @@ return {
     title: T.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION,
     className: t.clientThemesCard,
-    imageSource: v,
+    imageSource: L,
     imageClassName: t.clientThemesImage
   },
   customAppIcons: {
     title: T.Z.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
-    imageSource: L,
+    imageSource: v,
     imageClassName: t.customAppIconImage
   },
   emoji: {

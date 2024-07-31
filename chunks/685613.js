@@ -11,7 +11,7 @@ var o = n(120356),
   l = n(918701),
   c = n(78826),
   d = n(981631),
-  m = n(272467);
+  _ = n(272467);
 (s = r || (r = {}))[s.SMALL = 24] = 'SMALL', s[s.MEDIUM = 32] = 'MEDIUM';
 t.Z = function(e) {
   let {
@@ -20,17 +20,17 @@ gameTileSize: n = 24,
 quest: s,
 theme: r = d.BRd.DARK,
 withGameTile: o = !0
-  } = e, _ = (0, u.wj)(r) ? d.BRd.DARK : d.BRd.LIGHT;
+  } = e, m = (0, u.wj)(r) ? d.BRd.DARK : d.BRd.LIGHT;
   return (0, a.jsxs)('div', {
-className: i()(m.partnerBranding, t),
+className: i()(_.partnerBranding, t),
 children: [
   o && (0, a.jsx)(c.Fl, {
     id: 'QuestPartnerBranding_gameTile',
     children: e => (0, a.jsx)('img', {
       ref: e,
-      className: m.partnerBrandingGameTile,
+      className: _.partnerBrandingGameTile,
       alt: '',
-      src: (0, l.uo)(s, _),
+      src: (0, l.uo)(s, m),
       style: {
         borderRadius: function(e) {
           switch (e) {
@@ -49,9 +49,9 @@ children: [
     id: 'QuestPartnerBranding_gameLogotype',
     children: e => (0, a.jsx)('img', {
       ref: e,
-      className: m.partnerBrandingLogotype,
+      className: _.partnerBrandingLogotype,
       alt: s.config.messages.gameTitle,
-      src: (0, l.Gs)(s, _)
+      src: (0, l.Gs)(s, m)
     })
   })
 ]

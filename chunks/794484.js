@@ -84,11 +84,11 @@ M,
 O,
 P
   ]);
-  let v = (0, I.Op)(O),
-L = (0, E.Z)(),
+  let L = (0, I.Op)(O),
+v = (0, E.Z)(),
 Z = (0, I.mN)(),
 D = (0, I.sP)({
-  perksCards: L,
+  perksCards: v,
   variant: r,
   shopMarketingVariation: x,
   isFullScreen: f,
@@ -101,7 +101,7 @@ B = D.some(e => null != e.pillText),
 G = a.useRef(new l.qA());
   return (0, s.jsxs)(s.Fragment, {
 children: [
-  (null == L ? void 0 : null === (t = L.freeBoost) || void 0 === t ? void 0 : t.name) === E.u.FREE_BOOST && (0, s.jsx)(l.O_, {
+  (null == v ? void 0 : null === (t = v.freeBoost) || void 0 === t ? void 0 : t.name) === E.u.FREE_BOOST && (0, s.jsx)(l.O_, {
     ref: U,
     className: C.confettiCanvas,
     environment: G.current
@@ -116,7 +116,7 @@ children: [
       (0, s.jsx)(g, {
         showAllPerksButton: m,
         leftAlignHeaders: A,
-        title: v.title,
+        title: L.title,
         headerClassname: N
       }),
       (0, s.jsx)(o.Text, {
@@ -130,7 +130,7 @@ children: [
           [C.leftAlignSubtitle]: A,
           [C.centerAlignSubtitle]: !A
         }),
-        children: v.subtitle
+        children: L.subtitle
       }),
       !A && null != m && (0, s.jsx)('div', {
         className: i()(C.showAllPerksButtonCenter),

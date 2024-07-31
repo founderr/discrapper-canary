@@ -1,6 +1,6 @@
 n.d(s, {
   Z: function() {
-return N;
+return d;
   }
 });
 var t = n(735250);
@@ -12,15 +12,15 @@ var o = n(481060),
   i = n(259076),
   E = n(689938),
   _ = n(103877),
-  d = n(660817);
+  N = n(660817);
 
-function N(e) {
+function d(e) {
   let {
 onNext: s,
 onClose: n,
-reason: N,
+reason: d,
 onReasonChange: c
-  } = e, u = i.zf.map(e => ({
+  } = e, A = i.zf.map(e => ({
 value: e,
 name: (0, a.S)(e)
   }));
@@ -29,7 +29,7 @@ onSubmit: s,
 children: [
   (0, t.jsxs)(o.ModalHeader, {
     separator: !1,
-    className: d.header,
+    className: N.header,
     children: [
       (0, t.jsx)(o.Heading, {
         variant: 'heading-xl/extrabold',
@@ -37,7 +37,7 @@ children: [
       }),
       (0, t.jsx)(o.ModalCloseButton, {
         onClick: n,
-        className: d.modalCloseButton
+        className: N.modalCloseButton
       })
     ]
   }),
@@ -47,8 +47,8 @@ children: [
       radioPosition: 'right',
       radioItemClassName: _.radioItem,
       size: o.RadioGroup.Sizes.NOT_SET,
-      value: N,
-      options: u,
+      value: d,
+      options: A,
       onChange: e => {
         let {
           value: s
@@ -60,11 +60,11 @@ children: [
     })
   }),
   (0, t.jsxs)(o.ModalFooter, {
-    className: d.modalFooter,
+    className: N.modalFooter,
     children: [
       (0, t.jsx)(o.Button, {
         color: o.Button.Colors.BRAND,
-        disabled: null == N,
+        disabled: null == d,
         size: o.Button.Sizes.MEDIUM,
         onClick: s,
         children: E.Z.Messages.CONTINUE

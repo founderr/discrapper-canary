@@ -128,9 +128,9 @@ r.forEach(e => {
 });
   }, [r]);
   let P = r.length,
-v = 3 === P,
-L = R.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM),
-Z = v ? N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : N.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
+L = 3 === P,
+v = R.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM),
+Z = L ? N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : N.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
 {
   analyticsLocations: D
 } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
@@ -170,7 +170,7 @@ children: [
       }),
       (0, s.jsx)(o.Text, {
         variant: t ? 'text-sm/normal' : 'text-lg/medium',
-        children: b(v, P > 0, r.length, L)
+        children: b(L, P > 0, r.length, v)
       }),
       (0, s.jsxs)('div', {
         className: i()(f.expandedProgressBarButtonContainer, {
@@ -213,7 +213,7 @@ children: [
                   alt: '',
                   className: f.expandedProgressBarSelectFriendsIcon
                 }),
-                v ? N.Z.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : N.Z.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
+                L ? N.Z.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : N.Z.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
               ]
             })
           })

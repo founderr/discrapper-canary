@@ -27,13 +27,13 @@ var s = n(735250),
   b = n(104494),
   O = n(639119),
   P = n(2359),
-  v = n(132547),
-  L = n(474936),
+  L = n(132547),
+  v = n(474936),
   Z = n(981631),
   D = n(370070);
 t.Z = function(e) {
   let {
-entrypoint: t = L.EZ.UserSettings
+entrypoint: t = v.EZ.UserSettings
   } = e;
   a.useEffect(() => {
 p.X.trigger();
@@ -50,7 +50,7 @@ y = (0, b.Ng)(),
 k = (0, C.V)(),
 [H, w] = a.useState(!0),
 F = a.useRef(0),
-V = (0, h.M5)(U, L.p9.TIER_2),
+V = (0, h.M5)(U, v.p9.TIER_2),
 W = (0, x.n)(),
 K = null == W ? void 0 : W.countryCode,
 Y = (0, l.e7)([S.Z], () => S.Z.hasFetched);
@@ -80,9 +80,9 @@ y
   }, [
 r,
 H
-  ]), (0, l.e7)([A.Z], () => A.Z.enabled)) ? (0, s.jsx)(E.Z, {}) : n ? (0, s.jsx)(g.c8, {}) : t === L.EZ.ApplicationStoreHome && V ? (0, s.jsx)(I.Gt, {
+  ]), (0, l.e7)([A.Z], () => A.Z.enabled)) ? (0, s.jsx)(E.Z, {}) : n ? (0, s.jsx)(g.c8, {}) : t === v.EZ.ApplicationStoreHome && V ? (0, s.jsx)(I.Gt, {
 value: B,
-children: (0, s.jsx)(v.Z, {})
+children: (0, s.jsx)(L.Z, {})
   }) : j && k && !H ? (0, s.jsx)(I.Gt, {
 value: B,
 children: (0, s.jsx)(P.Z, {
