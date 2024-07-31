@@ -192,7 +192,8 @@ children: [
                   children: (0, i.jsx)(A.Z, {
                     quest: u,
                     questContent: m,
-                    className: v.headerCollapsedRewardTile
+                    className: v.headerCollapsedRewardTile,
+                    location: x.dr.QUESTS_CARD
                   })
                 }),
                 (0, i.jsxs)('div', {

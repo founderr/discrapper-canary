@@ -126,7 +126,8 @@ children: [
               children: (0, i.jsx)(m.Z, {
                 quest: N,
                 questContent: A,
-                className: S.circularQuestRewardTileAsset
+                className: S.circularQuestRewardTileAsset,
+                location: p.dr.QUEST_HOME_DESKTOP
               })
             })
           })
@@ -135,7 +136,8 @@ children: [
         quest: N,
         autoplay: v,
         questContent: A,
-        className: S.questRewardTileAsset
+        className: S.questRewardTileAsset,
+        location: p.dr.QUEST_HOME_DESKTOP
       }),
       (0, i.jsxs)('div', {
         className: S.textContainer,

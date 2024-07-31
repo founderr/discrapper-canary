@@ -1,38 +1,45 @@
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   default: function() {
-return h;
+return g;
   }
 });
-var a = t(735250),
-  s = t(470079),
-  i = t(873546),
-  r = t(442837),
-  l = t(481060),
-  o = t(830064),
-  c = t(388905),
-  u = t(625128),
-  d = t(362762),
-  p = t(703656),
-  m = t(981631),
-  x = t(186901),
-  b = t(689938),
-  _ = t(521934),
-  N = t(821744);
+var a = n(735250),
+  s = n(470079),
+  i = n(873546),
+  r = n(442837),
+  l = n(481060),
+  o = n(830064),
+  c = n(388905),
+  u = n(625128),
+  d = n(362762),
+  p = n(703656),
+  m = n(981631),
+  x = n(186901),
+  b = n(689938),
+  _ = n(521934),
+  N = n(821744);
 r.ZP.initialize();
-let E = i.tq || i.Em,
-  g = 'inventory';
+let E = i.tq || i.Em;
 
-function h() {
-  let e = (0, r.e7)([d.Z], () => d.Z.getState('quests'));
+function g(e) {
+  let {
+match: t
+  } = e, n = (0, r.e7)([d.Z], () => d.Z.getState('quests'));
   if (s.useEffect(() => {
   if (!E)
-    null == e ? u.Z.openNativeAppModal('quests', m.Etm.DEEP_LINK, {
-      type: x.jE.USER_SETTINGS,
+    null == n ? u.Z.openNativeAppModal('quests', m.Etm.DEEP_LINK, {
+      type: x.jE.QUEST_HOME,
       params: {
-        section: g
+        questId: t.params.questId
       }
-    }) : e === m.kEZ.OPEN_FAIL && (0, p.dL)(m.Z5c.SETTINGS(g));
-}, [e]), E)
+    }) : n === m.kEZ.OPEN_FAIL && (0, p.dL)({
+      pathname: m.Z5c.QUEST_HOME,
+      hash: t.params.questId
+    });
+}, [
+  n,
+  t.params.questId
+]), E)
 return (0, a.jsxs)('div', {
   className: _.mobileWebContainer,
   children: [
@@ -53,7 +60,7 @@ return (0, a.jsxs)('div', {
     })
   ]
 });
-  let n = null == e || e === m.kEZ.OPENING || e === m.kEZ.OPEN_FAIL;
+  let i = null == n || n === m.kEZ.OPENING || n === m.kEZ.OPEN_FAIL;
   return (0, a.jsxs)(a.Fragment, {
 children: [
   (0, a.jsx)(o.Z, {
@@ -63,7 +70,7 @@ children: [
   (0, a.jsx)('div', {
     className: _.container,
     children: (0, a.jsx)(c.ZP, {
-      children: n ? (0, a.jsxs)(a.Fragment, {
+      children: i ? (0, a.jsxs)(a.Fragment, {
         children: [
           (0, a.jsx)(c.Dx, {
             children: b.Z.Messages.APP_OPENING

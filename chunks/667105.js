@@ -50,7 +50,7 @@ null != t && ((0, c._3)({
   questContentCTA: c.jZ.CLAIM_REWARD,
   questContentPosition: r,
   questContentRowIndex: a
-}), o ? (0, E.Xv)(t.config) ? (0, h.openCollectibleRewardModal)(t, n) : (0, E.vQ)(t.config) ? (0, m.C)(t, n) : (0, m.hp)({
+}), o ? (0, E.Xv)(t.config) ? (0, h.openCollectibleRewardModal)(t, n) : (0, E.vQ)(t.config) ? (0, m.openQuestInGameRewardModal)(t, n) : (0, m.openQuestsRewardCodeModal)({
   questId: t.id,
   location: n,
   questContentPosition: r

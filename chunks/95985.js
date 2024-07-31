@@ -6,61 +6,63 @@ var o = n(481060),
   l = n(613087),
   i = n(472144),
   c = n(569379),
-  d = n(985444);
+  d = n(46140),
+  u = n(985444);
 t.Z = e => {
   let {
 quest: t,
 progressBarRef: n,
-isExpanded: u,
-taskDetails: p
+isExpanded: p,
+taskDetails: m
   } = e, {
-percentComplete: m
-  } = p, x = (0, c.eQ)(t), f = (0, c.vf)(t, u), g = u ? 'expanded' : 'collapsed';
+percentComplete: x
+  } = m, f = (0, c.eQ)(t), g = (0, c.vf)(t, p), C = p ? 'expanded' : 'collapsed';
   return (0, s.jsxs)('div', {
-className: d.questProgressWrapper,
+className: u.questProgressWrapper,
 children: [
   (0, s.jsx)(l.l7, {
-    inState: g,
+    inState: C,
     id: 'progress-bar',
     ref: n,
     children: e => (0, s.jsx)(i.Z, {
       ref: e,
       quest: t,
-      percentComplete: m,
+      percentComplete: x,
       size: 42,
       strokeWidth: 3,
       children: (0, s.jsx)(a.Z, {
-        className: d.questProgressRewardTile,
+        className: u.questProgressRewardTile,
         quest: t,
         questContent: r.jn.QUEST_BAR_V2,
-        autoplay: !1
+        autoplay: !1,
+        location: d.dr.QUESTS_BAR
       })
     })
   }),
   (0, s.jsxs)('div', {
-    className: d.questProgressCopy,
+    className: u.questProgressCopy,
     children: [
       (0, s.jsx)(l.l7, {
-        inState: g,
+        inState: C,
         id: 'progress-title',
         children: e => (0, s.jsx)(o.Text, {
           ref: e,
-          className: d.questProgressHint,
+          className: u.questProgressHint,
           color: 'header-primary',
           variant: 'text-sm/semibold',
-          children: x
+          children: f
         })
       }),
       (0, s.jsx)(l.l7, {
-        inState: g,
+        inState: C,
         id: 'progress-subtitle',
         isTextTransition: !0,
         children: e => (0, s.jsx)(o.Text, {
           ref: e,
-          className: d.questProgressHint,
+          className: u.questProgressHint,
           color: 'text-muted',
           variant: 'text-xs/normal',
-          children: f
+          children: g
         })
       })
     ]

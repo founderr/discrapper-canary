@@ -24,8 +24,8 @@ var r = n(735250),
   h = n(272008),
   f = n(569984),
   A = n(497505),
-  b = n(918701),
-  D = n(566078),
+  D = n(918701),
+  b = n(566078),
   I = n(617889),
   x = n(644646),
   v = n(78826),
@@ -52,10 +52,10 @@ let {
   quest: a,
   rewardCode: o,
   hasTieredRewardCodes: l
-} = e, i = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || null != o, d = l ? '' : y.Z.Messages.QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER, c = l ? (0, b.o9)({
+} = e, i = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || null != o, d = l ? '' : y.Z.Messages.QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER, c = l ? (0, D.o9)({
   quest: a,
   idx: null !== (r = null == o ? void 0 : o.tier) && void 0 !== r ? r : null === (n = a.userStatus) || void 0 === n ? void 0 : n.claimedTier
-}) : null, u = D.r.build(a.config), p = null != c && null !== (s = c.messages.name) && void 0 !== s ? s : u.defaultReward.messages.name, m = l ? y.Z.Messages.QUESTS_CLAIM_REWARD : u.defaultReward.messages.name;
+}) : null, u = b.r.build(a.config), p = null != c && null !== (s = c.messages.name) && void 0 !== s ? s : u.defaultReward.messages.name, m = l ? y.Z.Messages.QUESTS_CLAIM_REWARD : u.defaultReward.messages.name;
 return {
   subHeader: i ? y.Z.Messages.QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER : d,
   header: i ? p : m
@@ -90,7 +90,8 @@ children: [
           [j.rewardTileAssetLoading]: R || S
         }),
         quest: n,
-        questContent: p.trackingCtx.content
+        questContent: p.trackingCtx.content,
+        location: O.dr.REWARD_CODE_MODAL
       })
     ]
   }),
@@ -139,7 +140,7 @@ questContentPosition: c
   } = e, m = s.useMemo(() => {
 var e;
 return (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null;
-  }, []), g = D.r.build(o.config).rewardPlatforms, I = g.length > 1, [x, M] = s.useState(I ? null : g[0]), L = s.useRef(new l.qA()), B = s.useRef(null), [Z, W] = s.useState(null), U = (0, i.e7)([_.Z], () => _.Z.useReducedMotion), k = (0, i.e7)([S.Z], () => S.Z.hidePersonalInformation), {
+  }, []), g = b.r.build(o.config).rewardPlatforms, I = g.length > 1, [x, M] = s.useState(I ? null : g[0]), L = s.useRef(new l.qA()), B = s.useRef(null), [Z, W] = s.useState(null), U = (0, i.e7)([_.Z], () => _.Z.useReducedMotion), k = (0, i.e7)([S.Z], () => S.Z.hidePersonalInformation), {
 rewardCode: P,
 isFetchingRewardCode: Q,
 isClaimingReward: F
@@ -147,7 +148,7 @@ isClaimingReward: F
 rewardCode: f.Z.getRewardCode(o.id),
 isFetchingRewardCode: f.Z.isFetchingRewardCode(o.id),
 isClaimingReward: f.Z.isClaimingReward(o.id)
-  })), q = (0, b.oo)({
+  })), q = (0, D.oo)({
 quest: o
   }), [H, G] = s.useState(!1), z = I && (null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null && null == P, $ = s.useCallback((e, t, n) => {
 G(!1), (0, h.QB)(e, t, n).catch(() => G(!0));
@@ -186,7 +187,7 @@ J = function(e) {
     needsToConfirmPlatform: i,
     rewardCode: d,
     hasTieredRewardCodes: c
-  } = e, p = D.r.build(o.config);
+  } = e, p = b.r.build(o.config);
   if (i)
     return (0, r.jsx)(u.Text, {
       variant: 'text-sm/normal',
@@ -197,7 +198,7 @@ J = function(e) {
       })
     });
   let m = null != l ? l : null == d ? void 0 : d.platform,
-    _ = c ? (0, b.o9)({
+    _ = c ? (0, D.o9)({
       quest: o,
       idx: null !== (s = null == d ? void 0 : d.tier) && void 0 !== s ? s : null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedTier
     }) : null,
@@ -219,7 +220,7 @@ J = function(e) {
   hasTieredRewardCodes: q
 }),
 K = s.useMemo(() => g.map(e => ({
-  label: (0, b.t2)(e),
+  label: (0, D.t2)(e),
   value: e
 })), [g]),
 ee = null;
@@ -233,7 +234,7 @@ children: [
       G(!1), M(e);
     },
     isSelected: e => e === x,
-    serialize: e => (0, b.t2)(e),
+    serialize: e => (0, D.t2)(e),
     className: H ? j.errorInput : '',
     isDisabled: F,
     renderOptionLabel: e => {

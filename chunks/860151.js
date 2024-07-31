@@ -30,7 +30,8 @@ children: [
     autoplay: n,
     className: c.rewardTile,
     quest: s,
-    questContent: u
+    questContent: u,
+    location: _
   }),
   (0, i.jsx)(r.Text, {
     className: c.instructions,

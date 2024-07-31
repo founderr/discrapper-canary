@@ -19,22 +19,22 @@ var s = n(735250),
   S = n(78826),
   T = n(670638),
   v = n(330039),
-  N = n(693900),
-  A = n(524824),
+  A = n(693900),
+  N = n(524824),
   j = n(164495),
   B = n(759853),
   b = n(205511),
   R = n(95985),
   y = n(658590),
   I = n(46140),
-  q = n(743294),
-  O = n(689938),
+  U = n(743294),
+  q = n(689938),
   M = n(689065);
-let U = o.forwardRef(function(e, t) {
+let O = o.forwardRef(function(e, t) {
   var n;
   let {
 children: r,
-className: U,
+className: O,
 collapsedHeight: k,
 isExpanded: P,
 isExpansionAnimationComplete: Z,
@@ -72,7 +72,7 @@ useV2Variants: J === _.P.V2 || (0, y.a)(H)
   });
   return (0, s.jsxs)(l.animated.div, {
 'aria-hidden': !ee,
-className: a()(U, M.contentExpanded, {
+className: a()(O, M.contentExpanded, {
   [M.contentInteractable]: ee,
   [M.contentExpandedAccepted]: $
 }),
@@ -104,7 +104,7 @@ children: [
   $ && (0, s.jsx)(l.animated.div, {
     className: a()(M.postEnrollmentBackground, M.postEnrollmentBackgroundCollapsed),
     style: {
-      backgroundImage: 'linear-gradient(90deg, '.concat(q.aY, ', ').concat(q.v6, ')'),
+      backgroundImage: 'linear-gradient(90deg, '.concat(U.aY, ', ').concat(U.v6, ')'),
       opacity: Q.to({
         range: [
           0,
@@ -132,7 +132,7 @@ children: [
             (0, s.jsx)(d.Text, {
               variant: 'text-xxs/medium',
               className: a()(M.flex, M.headerText),
-              children: O.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
+              children: q.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
                 expirationDate: Y
               })
             }),
@@ -147,7 +147,7 @@ children: [
               children: e => (0, s.jsx)(d.Clickable, {
                 ...e,
                 className: M.submenuWrapper,
-                'aria-label': O.Z.Messages.ACTIONS,
+                'aria-label': q.Z.Messages.ACTIONS,
                 children: (0, s.jsx)(d.MoreHorizontalIcon, {
                   size: 'md',
                   color: 'currentColor',
@@ -173,18 +173,18 @@ children: [
           isExpanded: !0,
           taskDetails: z
         }),
-        (0, A.r)(H) && (0, s.jsx)(v.Z, {
+        (0, N.r)(H) && (0, s.jsx)(v.Z, {
           style: {
             marginTop: 8
           }
         }),
-        (0, s.jsx)(N.n, {
+        (0, s.jsx)(A.n, {
           children: et && !er && (0, s.jsx)(b.Z, {
             quest: H,
             taskDetails: z
           })
         }),
-        (0, s.jsx)(N.n, {
+        (0, s.jsx)(A.n, {
           children: (0, s.jsx)(j.y, {
             quest: H,
             useReducedMotion: V,
@@ -205,12 +205,13 @@ children: [
                 className: M.rewardTile,
                 learnMoreStyle: 'text',
                 quest: H,
-                questContent: g.jn.QUEST_BAR_V2
+                questContent: g.jn.QUEST_BAR_V2,
+                location: I.dr.QUESTS_BAR
               }),
               (0, s.jsx)(d.Heading, {
                 className: M.title,
                 variant: 'heading-md/medium',
-                children: O.Z.Messages.QUESTS_TITLE.format({
+                children: q.Z.Messages.QUESTS_TITLE.format({
                   questName: H.config.messages.questName
                 })
               }),
@@ -228,7 +229,7 @@ children: [
             onClick: ee ? X : void 0,
             size: d.Button.Sizes.SMALL,
             submitting: F,
-            children: O.Z.Messages.QUESTS_ACCEPT_QUEST
+            children: q.Z.Messages.QUESTS_ACCEPT_QUEST
           })
         ]
       })
@@ -237,7 +238,7 @@ children: [
   $ ? (0, s.jsx)('div', {
     className: a()(M.postEnrollmentBackground, M.postEnrollmentBackgroundExpanded),
     style: {
-      backgroundImage: 'linear-gradient(90deg, '.concat(q.aY, ', ').concat(q.v6, ')')
+      backgroundImage: 'linear-gradient(90deg, '.concat(U.aY, ', ').concat(U.v6, ')')
     }
   }) : (0, s.jsxs)(l.animated.div, {
     className: M.heroAssetWrapper,
@@ -327,4 +328,4 @@ children: [
 ]
   });
 });
-t.Z = U;
+t.Z = O;
