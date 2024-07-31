@@ -20,12 +20,12 @@ var r = n(735250),
   R = n(65692),
   h = n(785792),
   C = n(190054),
-  y = n(760373),
-  A = n(981631),
-  M = n(689938),
-  g = n(846045);
+  A = n(760373),
+  T = n(981631),
+  g = n(689938),
+  M = n(846045);
 
-function T(e) {
+function y(e) {
   let {
 badgeText: t,
 badgeColor: n
@@ -42,10 +42,10 @@ transitionState: t,
 userId: n,
 channelId: Z,
 onClose: p
-  } = e, m = (0, c.Dt)(), U = (0, a.e7)([u.default], () => u.default.getUser(n)), N = (0, a.e7)([E.Z], () => {
+  } = e, N = (0, c.Dt)(), m = (0, a.e7)([u.default], () => u.default.getUser(n)), U = (0, a.e7)([E.Z], () => {
 var e;
 return null === (e = E.Z.getChannel(Z)) || void 0 === e ? void 0 : e.getGuildId();
-  }), D = l.ZP.useName(N, null, U), {
+  }), D = l.ZP.useName(U, null, m), {
 fingerprint: F,
 userKey: L,
 loading: b
@@ -53,9 +53,9 @@ loading: b
 userId: n
   }), x = (0, S.W)({
 fingerprintBase64: F,
-chunkSize: y.iQ,
-desiredLength: y.KN
-  }), v = i.useCallback(() => {
+chunkSize: A.iQ,
+desiredLength: A.KN
+  }), V = i.useCallback(() => {
 (0, d.s$)({
   userId: n,
   channelId: Z
@@ -63,45 +63,53 @@ desiredLength: y.KN
   }, [
 Z,
 n
-  ]), O = (0, I.wV)({
+  ]), v = (0, I.wV)({
 userId: n,
 channelId: Z,
 location: 'WebSecureFramesUserVerificationModal'
   }), {
-isPersistentCode: V,
-loading: k
+isPersistentCode: O,
+isCurrentUserPersistent: k,
+isOtherUserPersistent: K,
+loading: w
   } = (0, f.y)({
 userId: n
-  }), K = i.useCallback(() => {
-null != L && ((0, _.TQ)(n, L, V, Z, A.Sbl.E2EE_USER_VERIFY_MODAL), p());
+  }), P = i.useCallback(() => {
+null != L && ((0, _.TQ)(n, L, O, Z, T.Sbl.E2EE_USER_VERIFY_MODAL), p());
   }, [
 L,
 n,
-V,
+O,
 Z,
 p
-  ]), w = i.useCallback(() => {
-null != L && ((0, _.LO)(n, L, V), p());
+  ]), B = i.useCallback(() => {
+null != L && ((0, _.LO)(n, L, O), p());
   }, [
 L,
 n,
-V,
+O,
 p
-  ]), [P, B] = i.useMemo(() => O ? [
-M.Z.Messages.E2EE_VERIFIED,
+  ]), [Y, j] = i.useMemo(() => v ? [
+g.Z.Messages.E2EE_VERIFIED,
 o.Z.BG_BRAND
-  ] : V ? [
-M.Z.Messages.E2EE_PERSISTENT,
+  ] : O ? [
+g.Z.Messages.E2EE_PERSISTENT,
 o.Z.STATUS_DANGER
   ] : [
-M.Z.Messages.NEW,
+g.Z.Messages.NEW,
 o.Z.STATUS_DANGER
   ], [
-V,
-O
-  ]), Y = i.useMemo(() => (V ? M.Z.Messages.E2EE_PERSISTENT_USER_VERIFICATION_FOOTER_TEXT : M.Z.Messages.E2EE_EPHEMERAL_USER_VERIFICATION_FOOTER_TEXT).format({
-helpArticle: y.l4
-  }), [V]);
+O,
+v
+  ]), G = i.useMemo(() => (0, _.kK)({
+isCurrentUserPersistent: k,
+isOtherUserPersistent: K,
+otherUserNickname: D
+  }), [
+k,
+K,
+D
+  ]);
   return i.useEffect(() => {
 (0, d.Rq)({
   userId: n,
@@ -112,12 +120,12 @@ Z,
 n
   ]), (0, r.jsxs)(s.ModalRoot, {
 transitionState: t,
-'aria-labelledby': m,
+'aria-labelledby': N,
 children: [
   (0, r.jsx)('div', {
-    className: g.shieldIconContainer,
+    className: M.shieldIconContainer,
     children: (0, r.jsx)('div', {
-      className: g.shieldIcon,
+      className: M.shieldIcon,
       children: (0, r.jsx)(s.ShieldLockIcon, {
         size: 'custom',
         width: 55,
@@ -127,70 +135,70 @@ children: [
     })
   }),
   (0, r.jsxs)(s.ModalContent, {
-    className: g.content,
+    className: M.content,
     children: [
       (0, r.jsx)(s.Heading, {
-        className: g.title,
+        className: M.title,
         variant: 'heading-lg/bold',
         color: 'header-primary',
-        children: M.Z.Messages.E2EE_VERIFICATION_CODE
+        children: g.Z.Messages.E2EE_VERIFICATION_CODE
       }),
       (0, r.jsx)(s.Text, {
-        className: g.subtitle,
+        className: M.subtitle,
         variant: 'text-md/normal',
         color: 'header-secondary',
-        children: M.Z.Messages.E2EE_USER_VERIFICATION_SUBTITLE.format({
+        children: g.Z.Messages.E2EE_USER_VERIFICATION_SUBTITLE.format({
           username: D
         })
       }),
       (0, r.jsxs)('div', {
-        className: g.verification,
+        className: M.verification,
         children: [
           (0, r.jsxs)('div', {
-            className: g.header,
+            className: M.header,
             children: [
               (0, r.jsx)(s.Heading, {
                 variant: 'text-sm/bold',
                 color: 'header-primary',
-                children: M.Z.Messages.E2EE_VOICE_PRIVACY_CODE
+                children: g.Z.Messages.E2EE_VOICE_PRIVACY_CODE
               }),
               null != x && (0, r.jsx)(C.H, {
-                className: g.copyIcon,
+                className: M.copyIcon,
                 chunks: x,
                 color: s.tokens.colors.INTERACTIVE_NORMAL,
-                onCopy: v
+                onCopy: V
               }),
-              k || b ? (0, r.jsx)(s.Spinner, {
-                className: g.spinner,
+              w || b ? (0, r.jsx)(s.Spinner, {
+                className: M.spinner,
                 type: s.SpinnerTypes.SPINNING_CIRCLE
-              }) : (0, r.jsx)(T, {
-                badgeText: P,
-                badgeColor: B
+              }) : (0, r.jsx)(y, {
+                badgeText: Y,
+                badgeColor: j
               })
             ]
           }),
           (0, r.jsx)(h.b, {
-            className: g.code,
+            className: M.code,
             chunks: x,
-            columns: y.ak
+            columns: A.ak
           })
         ]
       }),
       (0, r.jsx)(s.Text, {
-        className: g.details,
+        className: M.details,
         variant: 'text-sm/normal',
         color: 'text-muted',
-        children: Y
+        children: G
       }),
       (0, r.jsx)(s.Button, {
         fullWidth: !0,
-        className: g.verifiedButton,
+        className: M.verifiedButton,
         color: s.ButtonColors.BRAND,
         size: s.ButtonSizes.MEDIUM,
         look: s.ButtonLooks.FILLED,
-        disabled: null == F || k || b,
-        onClick: O ? w : K,
-        children: O ? M.Z.Messages.E2EE_CLEAR_VERIFICATION : M.Z.Messages.E2EE_MARK_AS_VERIFIED
+        disabled: null == F || w || b,
+        onClick: v ? B : P,
+        children: v ? g.Z.Messages.E2EE_CLEAR_VERIFICATION : g.Z.Messages.E2EE_MARK_AS_VERIFIED
       }),
       (0, r.jsx)(s.Button, {
         fullWidth: !0,
@@ -198,7 +206,7 @@ children: [
         size: s.ButtonSizes.MEDIUM,
         look: s.ButtonLooks.FILLED,
         onClick: p,
-        children: M.Z.Messages.CANCEL
+        children: g.Z.Messages.CANCEL
       })
     ]
   })
