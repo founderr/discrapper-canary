@@ -14,8 +14,8 @@ var i, a, s = n(735250),
   u = n.n(c),
   d = n(338545),
   h = n(848246),
-  m = n(442837),
-  p = n(481060),
+  p = n(442837),
+  m = n(481060),
   _ = n(846027),
   f = n(287734),
   E = n(872810),
@@ -68,8 +68,8 @@ var i, a, s = n(735250),
   eu = n(738436),
   ed = n(829750),
   eh = n(189771),
-  em = n(294629),
-  ep = n(304745),
+  ep = n(294629),
+  em = n(304745),
   e_ = n(985370),
   ef = n(544384),
   eE = n(560688),
@@ -95,7 +95,7 @@ exitFullScreen: i,
 canGoLive: a,
 hasPermission: r,
 disabled: o
-  } = e, c = (0, C.bp)(), u = (0, m.Wu)([ei.Z], () => ei.Z.getAllActiveStreams()).find(e => e.ownerId === n.id), {
+  } = e, c = (0, C.bp)(), u = (0, p.Wu)([ei.Z], () => ei.Z.getAllActiveStreams()).find(e => e.ownerId === n.id), {
 available: d,
 activated: _,
 hqStreamingState: f
@@ -108,7 +108,7 @@ x,
 t.id,
 a,
 i
-  ]), N = (0, m.e7)([
+  ]), N = (0, p.e7)([
 D.ZP,
 eo.Z
   ], () => (0, w.Z)(D.ZP, eo.Z)), A = (0, Z.ZP)(), b = (0, S.Z)() && null != N, R = () => {
@@ -165,7 +165,7 @@ children: [
     onDismiss: () => {
       (0, W.pM)(!0);
     }
-  }) : (0, s.jsx)(z.be, {
+  }) : (0, s.jsx)(z.b, {
     channel: t,
     buttonRef: I,
     dismissed: f.hqStreamingOptInPopoutDismissed,
@@ -174,7 +174,7 @@ children: [
     }
   }),
   (0, s.jsx)(K.Z, {
-    children: (0, s.jsx)(p.Popout, {
+    children: (0, s.jsx)(m.Popout, {
       renderPopout: e => {
         let {
           closePopout: i
@@ -192,7 +192,7 @@ children: [
       },
       position: 'top',
       align: 'center',
-      animation: p.Popout.Animation.FADE,
+      animation: m.Popout.Animation.FADE,
       children: (e, t) => {
         let {
           ...n
@@ -215,7 +215,7 @@ channel: t
   } = e, n = t.getGuildId();
   return (0, x.Z)(n, t.id) ? (0, s.jsx)('div', {
 className: eN.buttonContainer,
-children: (0, s.jsx)(ep.M, {
+children: (0, s.jsx)(em.M, {
   channel: t
 })
   }) : null;
@@ -227,9 +227,9 @@ connectedActivityApplicationId: t,
 currentUser: n,
 onDisconnectCall: i,
 channel: a
-  } = e, r = (0, m.e7)([b.Z], () => b.Z.getSelectedParticipant(a.id)), {
+  } = e, r = (0, p.e7)([b.Z], () => b.Z.getSelectedParticipant(a.id)), {
 reducedMotion: o
-  } = l.useContext(p.AccessibilityPreferencesContext), [c, u] = l.useState(!1), h = null == r ? void 0 : r.id, _ = (0, m.e7)([ei.Z], () => null != h ? ei.Z.getActiveStreamForStreamKey(h) : null, [h]), g = (null == r ? void 0 : r.type) === eT.fO.STREAM && null != _ && _.ownerId !== (null == n ? void 0 : n.id), C = (0, m.Wu)([ei.Z], () => ei.Z.getAllActiveStreamsForChannel(a.id).filter(e => {
+  } = l.useContext(m.AccessibilityPreferencesContext), [c, u] = l.useState(!1), h = null == r ? void 0 : r.id, _ = (0, p.e7)([ei.Z], () => null != h ? ei.Z.getActiveStreamForStreamKey(h) : null, [h]), g = (null == r ? void 0 : r.type) === eT.fO.STREAM && null != _ && _.ownerId !== (null == n ? void 0 : n.id), C = (0, p.Wu)([ei.Z], () => ei.Z.getAllActiveStreamsForChannel(a.id).filter(e => {
 let {
   ownerId: t
 } = e;
@@ -247,7 +247,7 @@ r,
 t,
 g,
 I
-  ]), [N, v] = l.useState(T()), S = (0, p.useSpring)({
+  ]), [N, v] = l.useState(T()), S = (0, m.useSpring)({
 opacity: c ? 0.2 : 1,
 transform: c && !o.enabled ? 'scale(0.7)' : 'scale(1)',
 config: {
@@ -321,7 +321,7 @@ R = (e, t) => {
       });
   }
 };
-  return (0, s.jsx)(p.Popout, {
+  return (0, s.jsx)(m.Popout, {
 renderPopout: e => {
   let {
     closePopout: t
@@ -339,7 +339,7 @@ renderPopout: e => {
 },
 position: 'top',
 align: 'center',
-animation: p.Popout.Animation.FADE,
+animation: m.Popout.Animation.FADE,
 children: (e, t) => {
   let {
     onClick: n
@@ -373,7 +373,7 @@ n ? (0, eE.Z)() : d();
   }, [
 n,
 d
-  ]), p = (0, m.e7)([ea.Z], () => {
+  ]), m = (0, p.e7)([ea.Z], () => {
 let e = ea.Z.getCall(t.id);
 return (null == e ? void 0 : e.ringing.includes(a.id)) === !0;
   });
@@ -400,7 +400,7 @@ children: [
     channel: t,
     className: o()(eN.controlButton, eN.__invalid_lastButton)
   }),
-  p ? (0, s.jsx)(X.Z, {
+  m ? (0, s.jsx)(X.Z, {
     color: 'red',
     channel: t,
     className: eN.controlButton
@@ -414,7 +414,7 @@ channel: t,
 className: n,
 onDisconnectCall: i,
 exitFullScreen: a
-  } = e, l = (0, m.e7)([er.default], () => {
+  } = e, l = (0, p.e7)([er.default], () => {
 let e = er.default.getCurrentUser();
 return u()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
   }), {
@@ -424,14 +424,14 @@ enabled: c
 suppress: h,
 selfMute: _,
 mute: f
-  } = (0, em.Z)(t), {
+  } = (0, ep.Z)(t), {
 canGoLive: E
-  } = (0, m.cj)([es.Z], () => ({
+  } = (0, p.cj)([es.Z], () => ({
 canGoLive: (0, U.Z)(es.Z)
-  })), C = (0, y.Z)(), x = (0, m.e7)([O.Z], () => null != O.Z.getAwaitingRemoteSessionInfo()), v = null != C, S = (0, m.e7)([el.Z], () => {
+  })), C = (0, y.Z)(), x = (0, p.e7)([O.Z], () => null != O.Z.getAwaitingRemoteSessionInfo()), v = null != C, S = (0, p.e7)([el.Z], () => {
 var e;
 return (null !== (e = null == C ? void 0 : C.channelId) && void 0 !== e ? e : el.Z.getVoiceChannelId()) === t.id;
-  }), Z = (0, R.Z)(t, !0), A = (0, m.e7)([I.ZP], () => {
+  }), Z = (0, R.Z)(t, !0), A = (0, p.e7)([I.ZP], () => {
 let e = I.ZP.getSelfEmbeddedActivityForChannel(t.id);
 return null != e ? e.applicationId : null;
   }), {
@@ -469,7 +469,7 @@ children: (0, s.jsxs)(g.Z, {
     (0, s.jsxs)('div', {
       className: o()(eN.wrapper, n),
       children: [
-        !v && (0, s.jsx)(p.Popout, {
+        !v && (0, s.jsx)(m.Popout, {
           renderPopout: e => {
             let {
               closePopout: t
@@ -482,7 +482,7 @@ children: (0, s.jsxs)(g.Z, {
           },
           position: 'top',
           align: 'center',
-          animation: p.Popout.Animation.FADE,
+          animation: m.Popout.Animation.FADE,
           children: (e, t) => {
             let {
               onClick: n
@@ -514,7 +514,7 @@ children: (0, s.jsxs)(g.Z, {
           canGoLive: E,
           hasPermission: d
         }),
-        (0, s.jsx)(p.Popout, {
+        (0, s.jsx)(m.Popout, {
           renderPopout: e => {
             let {
               closePopout: t
@@ -530,7 +530,7 @@ children: (0, s.jsxs)(g.Z, {
           },
           align: 'center',
           position: 'top',
-          animation: p.Popout.Animation.FADE,
+          animation: m.Popout.Animation.FADE,
           children: (e, t) => {
             let {
               onClick: n
