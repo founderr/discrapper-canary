@@ -22,7 +22,7 @@ let h = [d.XF];
 
 function p(e) {
   var t, n, r, i, a, s, d;
-  let _ = (0, o.e7)([c.ZP], () => c.ZP.getMatchingActivity(e)),
+  let _ = (0, o.e7)([c.Z], () => c.Z.getMatchingActivity(e)),
 E = (0, o.e7)([u.default], () => u.default.getUser(e.author_id));
   if (null == _ || null == E)
 return {};

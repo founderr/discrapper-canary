@@ -1,31 +1,41 @@
 n.d(t, {
   Z: function() {
-return f;
+return E;
   }
 }), n(627341);
 var r = n(735250);
 n(470079);
 var i = n(278074),
   a = n(876215),
-  s = n(442837),
-  o = n(719247),
-  l = n(297781),
-  u = n(16779),
-  c = n(981631);
+  s = n(180335),
+  o = n(297781),
+  l = n(16779),
+  u = n(981631);
+
+function c(e) {
+  let {
+entry: t
+  } = e;
+  return (0, r.jsx)(r.Fragment, {
+children: [
+  o.U9,
+  o.gj,
+  o.f,
+  o.n8,
+  o.v1,
+  o.pQ
+].map((e, n) => (0, r.jsx)(e, {
+  entry: t
+}, 'entry-'.concat(n)))
+  });
+}
 
 function d(e) {
   let {
 entry: t
   } = e;
   return (0, r.jsx)(r.Fragment, {
-children: [
-  l.U9,
-  l.gj,
-  l.f,
-  l.n8,
-  l.v1,
-  l.pQ
-].map((e, n) => (0, r.jsx)(e, {
+children: [o.E6].map((e, n) => (0, r.jsx)(e, {
   entry: t
 }, 'entry-'.concat(n)))
   });
@@ -36,7 +46,7 @@ function _(e) {
 entry: t
   } = e;
   return (0, r.jsx)(r.Fragment, {
-children: [l.E6].map((e, n) => (0, r.jsx)(e, {
+children: [o.An].map((e, n) => (0, r.jsx)(e, {
   entry: t
 }, 'entry-'.concat(n)))
   });
@@ -44,49 +54,41 @@ children: [l.E6].map((e, n) => (0, r.jsx)(e, {
 
 function E(e) {
   let {
-entry: t
-  } = e;
-  return (0, r.jsx)(r.Fragment, {
-children: [l.An].map((e, n) => (0, r.jsx)(e, {
-  entry: t
-}, 'entry-'.concat(n)))
-  });
-}
-
-function f(e) {
-  let {
 user: t,
 activity: n,
-className: f
-  } = e, h = (0, s.e7)([o.ZP], () => o.ZP.getMatchingOutboxEntry(n, t.id)), p = (0, i.EQ)(n).with({
-type: c.IIU.PLAYING
+className: E
+  } = e, f = (0, s.Bq)({
+activity: n,
+user: t
+  }), h = (0, i.EQ)(n).with({
+type: u.IIU.PLAYING
   }, () => [
-u.ho,
-u.Xh
+l.ho,
+l.Xh
   ]).with({
-type: c.IIU.WATCHING
+type: u.IIU.WATCHING
   }, () => [
-u.ho,
-u.Rg
+l.ho,
+l.Rg
   ]).otherwise(() => []);
-  return 0 === p.length ? null : (0, r.jsxs)(l.Gk, {
-location: l.Gt.USER_PROFILE,
-className: f,
+  return 0 === h.length ? null : (0, r.jsxs)(o.Gk, {
+location: o.Gt.USER_PROFILE,
+className: E,
 children: [
-  p.map((e, t) => (0, r.jsx)(e, {
+  h.map((e, t) => (0, r.jsx)(e, {
     activity: n
   }, 'activity-'.concat(t))),
-  (0, i.EQ)(h).with({
+  (0, i.EQ)(f).with({
     content_type: a.s.PLAYED_GAME
-  }, e => (0, r.jsx)(d, {
+  }, e => (0, r.jsx)(c, {
     entry: e
   })).with({
     content_type: a.s.TOP_GAME
-  }, e => (0, r.jsx)(_, {
+  }, e => (0, r.jsx)(d, {
     entry: e
   })).with({
     content_type: a.s.TOP_ARTIST
-  }, e => (0, r.jsx)(E, {
+  }, e => (0, r.jsx)(_, {
     entry: e
   })).otherwise(() => null)
 ]

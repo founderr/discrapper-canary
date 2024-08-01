@@ -1,5 +1,8 @@
 n.d(t, {
   Z: function() {
+return f;
+  },
+  s: function() {
 return E;
   }
 });
@@ -14,43 +17,50 @@ var i = n(763472),
   c = n(228168),
   d = n(689938),
   _ = n(692184);
+async function E(e) {
+  let {
+activity: t,
+user: n,
+index: r
+  } = e;
+  try {
+let e = await (0, i.sd)(t, n.id);
+if (e.button_urls.length <= r)
+  return;
+let a = e.button_urls[r];
+if ('string' != typeof a)
+  return;
+let l = o.Z.safeParseWithQuery(a);
+if (null == l || null == l.protocol || null == l.hostname)
+  return;
+(0, s.q)({
+  href: o.Z.format(l),
+  trusted: !1
+});
+  } catch (e) {}
+}
 
-function E(e) {
+function f(e) {
   let {
 user: t,
 activity: n,
-onClick: E
+onClick: i
   } = e, {
-profileType: f
+profileType: s
   } = (0, l.z)();
-  if ((null == n ? void 0 : n.buttons) == null || n.buttons.length < 1)
-return null;
-  let h = async e => {
-try {
-  let r = await (0, i.sd)(n, t.id);
-  if (r.button_urls.length <= e)
-    return;
-  let a = r.button_urls[e];
-  if ('string' != typeof a)
-    return;
-  let l = o.Z.safeParseWithQuery(a);
-  if (null == l || null == l.protocol || null == l.hostname)
-    return;
-  (0, s.q)({
-    href: o.Z.format(l),
-    trusted: !1
-  });
-} catch (e) {}
-  };
-  return (0, r.jsx)(r.Fragment, {
-children: n.buttons.map((e, t) => (0, r.jsx)(u.tG, {
+  return (null == n ? void 0 : n.buttons) == null || n.buttons.length < 1 ? null : (0, r.jsx)(r.Fragment, {
+children: n.buttons.map((e, o) => (0, r.jsx)(u.tG, {
   text: (0, a.Z)(n) ? d.Z.Messages.WATCH : e,
   className: _.customButton,
   fullWidth: !0,
-  themeColor: f === c.y0.FULL_SIZE ? 'secondary' : 'primary',
+  themeColor: s === c.y0.FULL_SIZE ? 'secondary' : 'primary',
   onClick: e => {
-    null == E || E(e), h(t);
+    null == i || i(e), E({
+      user: t,
+      activity: n,
+      index: o
+    });
   }
-}, t))
+}, o))
   });
 }

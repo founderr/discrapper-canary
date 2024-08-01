@@ -17704,6 +17704,7 @@ e.exports = Object.freeze({
   GAME_PROFILE_LINK_TWITTER: 'X (Twitter)',
   GAME_PROFILE_LINK_YOUTUBE: 'YouTube',
   GAME_PROFILE_LINK_OFFICIAL: 'Official web page',
+  VIEW_GAME_PROFILE: 'View Game Profile',
   LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER: 'Non-refundable. By clicking pay, you agree to our [Paid Services Terms]({paidURL})',
   LIGHTNING_CHECKOUT_GENERIC_ERROR_TITLE: 'There was a problem with your payment',
   LIGHTNING_CHECKOUT_GENERIC_ERROR_DESCRIPTION: 'Recheck your payment information, then try again.',

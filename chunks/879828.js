@@ -12,9 +12,9 @@ var l = i(481060),
   r = i(929498),
   d = i(678738),
   c = i(151545),
-  u = i(364027),
-  I = i(527790),
-  f = i(304042),
+  u = i(527790),
+  I = i(304042),
+  f = i(290274),
   _ = i(981631),
   m = i(689938),
   E = i(122606);
@@ -40,7 +40,7 @@ fade: !0,
 children: [
   (0, n.jsxs)(d.Z, {
     children: [
-      null != g && (0, n.jsx)(f.Z, {
+      null != g && (0, n.jsx)(I.Z, {
         user: s,
         currentUser: i,
         stream: g,
@@ -81,16 +81,16 @@ children: [
     children: p.map(e => (0, n.jsxs)('div', {
       className: E.recentActivityEntryContainer,
       children: [
-        (0, n.jsx)(I.Z, {
+        (0, n.jsx)(u.Z, {
           user: s,
           entry: e,
           onClose: v
         }),
-        (0, n.jsx)(u.Z, {
+        (0, n.jsx)(f.Z, {
           user: s,
           entry: e,
           className: E.recentActivityContextMenu,
-          display: u.a.RECENT
+          display: 'recent'
         })
       ]
     }, e.id))
