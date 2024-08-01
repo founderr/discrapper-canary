@@ -8,8 +8,8 @@ return I;
 });
 var i = n(735250);
 n(470079);
-var s = n(913527),
-  a = n.n(s),
+var a = n(913527),
+  s = n.n(a),
   r = n(442837),
   l = n(481060),
   o = n(768943),
@@ -26,10 +26,10 @@ showReminders: t
 location: 'use_message_reminders_item'
   }, {
 autoTrackExposure: !1
-  }), n = (0, r.e7)([o.Z], () => o.Z.isMessageReminder(e.id)), s = m(e, t => (0, c.HG)({
+  }), n = (0, r.e7)([o.Z], () => o.Z.isMessageReminder(e.id)), a = m(e, t => (0, c.HG)({
 channelId: e.channel_id,
 messageId: e.id,
-dueAt: a()().add(t, 'millisecond').toDate()
+dueAt: s()().add(t, 'millisecond').toDate()
   }));
   return t ? (0, i.jsx)(l.MenuItem, {
 id: 'mark-todo',
@@ -42,7 +42,7 @@ action: () => n ? (0, c.bn)({
   channelId: e.channel_id,
   messageId: e.id
 }),
-children: n ? null : s
+children: n ? null : a
   }) : null;
 }
 
@@ -50,11 +50,11 @@ function m(e, t) {
   return d.B.map(e => {
 let {
   duration: n,
-  getLabel: s
+  getLabel: a
 } = e;
 return (0, i.jsx)(l.MenuItem, {
   id: 'mark-todo-'.concat(n),
-  label: s(),
+  label: a(),
   action: () => t(n)
 }, n);
   });

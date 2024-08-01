@@ -4,8 +4,8 @@ return T;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(399606),
+  a = n(470079),
+  s = n(399606),
   r = n(704215),
   l = n(481060),
   o = n(605236),
@@ -20,8 +20,8 @@ var i = n(735250),
 function T(e) {
   let {
 dismissCurrentNotice: t
-  } = e, n = (0, a.e7)([d.Z], () => d.Z.getGuildId(), []), T = (0, a.e7)([u.Z], () => u.Z.getGuild(n), [n]);
-  return (s.useEffect(() => {
+  } = e, n = (0, s.e7)([d.Z], () => d.Z.getGuildId(), []), T = (0, s.e7)([u.Z], () => u.Z.getGuild(n), [n]);
+  return (a.useEffect(() => {
 (0, o.kk)(r.z.GUILD_ONBOARDING_UPSELL_NAGBAR);
   }, []), null == T) ? null : (0, i.jsxs)(l.Notice, {
 color: l.NoticeColors.DEFAULT,

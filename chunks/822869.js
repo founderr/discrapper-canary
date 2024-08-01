@@ -19,12 +19,12 @@ return u;
   }
 });
 var i = n(470079),
-  s = n(392711),
-  a = n(626135),
+  a = n(392711),
+  s = n(626135),
   r = n(981631);
 
 function l(e, t, n) {
-  a.default.track(r.rMx.FORWARD_MESSAGE_STARTED, {
+  s.default.track(r.rMx.FORWARD_MESSAGE_STARTED, {
 channel_id: e,
 message_id: t,
 source: n
@@ -36,13 +36,13 @@ function o(e) {
 channelId: t,
 messageId: n,
 numDestinationChanges: i,
-numQueryChanges: s
+numQueryChanges: a
   } = e;
-  a.default.track(r.rMx.FORWARD_MESSAGE_CANCELLED, {
+  s.default.track(r.rMx.FORWARD_MESSAGE_CANCELLED, {
 channel_id: t,
 message_id: n,
 num_destination_changes: i,
-num_query_changes: s
+num_query_changes: a
   });
 }
 
@@ -51,30 +51,30 @@ function c(e) {
 channelId: t,
 messageId: n,
 hasError: i,
-numDestinations: s,
+numDestinations: a,
 numDestinationChanges: l,
 numQueryChanges: o
   } = e;
-  a.default.track(r.rMx.FORWARD_MESSAGE_SENT, {
+  s.default.track(r.rMx.FORWARD_MESSAGE_SENT, {
 channel_id: t,
 message_id: n,
 has_error: i,
-num_destinations: s,
+num_destinations: a,
 num_destination_changes: l,
 num_query_changes: o
   });
 }
 
 function u(e, t) {
-  a.default.track(r.rMx.FORWARD_COPY_LINK, {
+  s.default.track(r.rMx.FORWARD_COPY_LINK, {
 channel_id: e,
 message_id: t
   });
 }
 
 function d() {
-  return i.useMemo(() => (0, s.once)((e, t, n) => {
-a.default.track(r.rMx.FORWARD_ADD_RECIPIENT, {
+  return i.useMemo(() => (0, a.once)((e, t, n) => {
+s.default.track(r.rMx.FORWARD_ADD_RECIPIENT, {
   channel_id: e,
   message_id: t,
   has_query: n
@@ -83,8 +83,8 @@ a.default.track(r.rMx.FORWARD_ADD_RECIPIENT, {
 }
 
 function _() {
-  return i.useMemo(() => (0, s.once)((e, t) => {
-a.default.track(r.rMx.FORWARD_EDIT_SEARCH, {
+  return i.useMemo(() => (0, a.once)((e, t) => {
+s.default.track(r.rMx.FORWARD_EDIT_SEARCH, {
   channel_id: e,
   message_id: t
 });

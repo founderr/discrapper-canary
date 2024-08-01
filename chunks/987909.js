@@ -4,8 +4,8 @@ return p;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(904245),
   o = n(541716),
@@ -25,36 +25,36 @@ function f(e) {
 assets: t,
 currentUser: n,
 message: i
-  } = e, s = (m.default.extractTimestamp(n.id) + m.default.extractTimestamp(i.id)) % t.length;
-  return t[s];
+  } = e, a = (m.default.extractTimestamp(n.id) + m.default.extractTimestamp(i.id)) % t.length;
+  return t[a];
 }
 
 function C(e) {
   let {
 currentUser: t,
 channel: n,
-message: a,
+message: s,
 buttonLabels: u,
 stickers: d,
 event: _,
 eventProperties: E
-  } = e, [m, h] = s.useState(!1), C = s.useMemo(() => f({
+  } = e, [m, h] = a.useState(!1), C = a.useMemo(() => f({
 assets: d,
 currentUser: t,
-message: a
+message: s
   }), [
 d,
 t,
-a
-  ]), p = s.useMemo(() => f({
+s
+  ]), p = a.useMemo(() => f({
 assets: u,
 currentUser: t,
-message: a
+message: s
   }), [
 u,
 t,
-a
-  ]), g = s.useCallback(async () => {
+s
+  ]), g = a.useCallback(async () => {
 let {
   valid: e
 } = await (0, T.v)({
@@ -76,7 +76,7 @@ e && (! function(e) {
   }));
 }({
   channel: n,
-  message: a,
+  message: s,
   sticker: C
 }), ! function(e) {
   let {
@@ -95,7 +95,7 @@ e && (! function(e) {
 }));
   }, [
 n,
-a,
+s,
 C,
 _,
 E
@@ -123,7 +123,7 @@ function p(e) {
   let {
 channel: t,
 message: n,
-buttonLabels: s,
+buttonLabels: a,
 stickers: r,
 event: l,
 eventProperties: o
@@ -133,19 +133,19 @@ let {
   message: n,
   currentUser: i
 } = e;
-return (0, a.e7)([
+return (0, s.e7)([
   _.Z,
   d.ZP
 ], () => {
   var e;
-  let s = t.guild_id;
-  if (null == i || null == s)
+  let a = t.guild_id;
+  if (null == i || null == a)
     return !1;
-  let a = (0, u.xl)(t),
+  let s = (0, u.xl)(t),
     r = _.Z.can(h.Plq.SEND_MESSAGES, t),
-    l = null === (e = d.ZP.getMember(s, i.id)) || void 0 === e ? void 0 : e.isPending,
+    l = null === (e = d.ZP.getMember(a, i.id)) || void 0 === e ? void 0 : e.isPending,
     o = n.author.bot;
-  return r && !a && !l && !o;
+  return r && !s && !l && !o;
 });
   }({
 channel: t,
@@ -158,7 +158,7 @@ children: (0, i.jsx)(C, {
   currentUser: c,
   channel: t,
   message: n,
-  buttonLabels: s,
+  buttonLabels: a,
   stickers: r,
   event: l,
   eventProperties: o

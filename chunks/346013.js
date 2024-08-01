@@ -4,9 +4,9 @@ return y;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(512722),
   o = n.n(l),
   c = n(772848),
@@ -39,45 +39,45 @@ var i = n(735250),
   U = n(527455);
 
 function y(e) {
-  var t, n, a;
+  var t, n, s;
   let {
 embedUrl: l,
 message: y,
 channel: B
   } = e, k = (0, L.J)(l, y), {
 setPopout: G
-  } = (0, p.Z)(y.id, D.d$), F = (0, C.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = s.useState(!1), [W, K] = s.useState((null == k ? void 0 : k.coverImage) == null), z = (0, d.e7)([E.Z], () => E.Z.useReducedMotion), q = (0, d.e7)([
+  } = (0, p.Z)(y.id, D.d$), F = (0, C.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = a.useState(!1), [W, K] = a.useState((null == k ? void 0 : k.coverImage) == null), z = (0, d.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, d.e7)([
 M.ZP,
 R.default
   ], () => {
 var e;
 return M.ZP.isMember(null == k ? void 0 : k.guildId, null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
-  }, [k]), Q = (0, d.e7)([M.ZP], () => (null == k ? void 0 : k.authorId) != null ? M.ZP.getMember(k.guildId, k.authorId) : null), [X, J] = s.useMemo(() => {
+  }, [k]), q = (0, d.e7)([M.ZP], () => (null == k ? void 0 : k.authorId) != null ? M.ZP.getMember(k.guildId, k.authorId) : null), [X, J] = a.useMemo(() => {
 var e;
 return [
-  null !== (e = null == Q ? void 0 : Q.colorString) && void 0 !== e ? e : 'inherit',
-  null == Q ? void 0 : Q.colorRoleId
+  null !== (e = null == q ? void 0 : q.colorString) && void 0 !== e ? e : 'inherit',
+  null == q ? void 0 : q.colorRoleId
 ];
-  }, [Q]), {
+  }, [q]), {
 reducedMotion: $
-  } = s.useContext(_.AccessibilityPreferencesContext), [ee, et] = s.useState(!1), en = s.useCallback(() => {
+  } = a.useContext(_.AccessibilityPreferencesContext), [ee, et] = a.useState(!1), en = a.useCallback(() => {
 Y(!0);
-  }, [Y]), ei = s.useCallback(() => {
+  }, [Y]), ei = a.useCallback(() => {
 Y(!1);
-  }, [Y]), es = s.useCallback(async () => {
+  }, [Y]), ea = a.useCallback(async () => {
 null != k && ((0, m.yw)(P.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
   media_post_id: k.threadId,
   channel_id: B.id,
   can_access: k.canAccess,
-  is_member: q
-}), k.canAccess ? (0, N.Z)(P.Z5c.CHANNEL(k.guildId, k.threadId, k.messageId)) : q ? (0, N.Z)(P.Z5c.CHANNEL(k.guildId, k.parentChannelId)) : await x.Ub(k.guildId, {}, {
+  is_member: Q
+}), k.canAccess ? (0, N.Z)(P.Z5c.CHANNEL(k.guildId, k.threadId, k.messageId)) : Q ? (0, N.Z)(P.Z5c.CHANNEL(k.guildId, k.parentChannelId)) : await x.Ub(k.guildId, {}, {
   channelId: k.parentChannelId
 }));
   }, [
 k,
 B,
-q
-  ]), ea = s.useCallback(() => (o()((null == k ? void 0 : k.authorId) != null, 'Author Id cannot be null when loading user profile'), (0, g.W)(k.authorId, k.avatarUrl, {
+Q
+  ]), es = a.useCallback(() => (o()((null == k ? void 0 : k.authorId) != null, 'Author Id cannot be null when loading user profile'), (0, g.W)(k.authorId, k.avatarUrl, {
 guildId: k.guildId,
 channelId: B.id
   })), [
@@ -97,7 +97,7 @@ return null;
   newAnalyticsLocations: t
 })),
 el = (0, O.NZ)({
-  avatarDecoration: (null == Q ? void 0 : Q.avatarDecoration) != null ? null == Q ? void 0 : Q.avatarDecoration : null === (t = k.user) || void 0 === t ? void 0 : t.avatarDecoration,
+  avatarDecoration: (null == q ? void 0 : q.avatarDecoration) != null ? null == q ? void 0 : q.avatarDecoration : null === (t = k.user) || void 0 === t ? void 0 : t.avatarDecoration,
   size: (0, T.y9)(_.AvatarSizes.SIZE_40),
   canAnimate: ee
 }),
@@ -137,7 +137,7 @@ children: [
         onError: () => K(!0)
       })),
       null != k.coverImageOverlayText && (0, i.jsx)(_.Clickable, {
-        onClick: es,
+        onClick: ea,
         children: (0, i.jsx)('div', {
           className: j.thumbnailOverlay,
           children: (0, i.jsxs)('div', {
@@ -184,7 +184,7 @@ children: [
             renderPopout: e => er(e, [I.Z.AVATAR]),
             position: 'right',
             spacing: 12,
-            preload: null == k.authorId ? void 0 : ea,
+            preload: null == k.authorId ? void 0 : es,
             children: e => (0, i.jsx)('div', {
               onMouseEnter: ec,
               onMouseLeave: ec,
@@ -209,12 +209,12 @@ children: [
                     className: j.mediaChannelIcon
                   }),
                   (0, i.jsx)(_.Clickable, {
-                    onClick: es,
+                    onClick: ea,
                     className: j.channelName,
                     children: (0, i.jsx)(_.Heading, {
                       variant: 'heading-md/semibold',
                       color: 'header-primary',
-                      children: null !== (a = k.channelName) && void 0 !== a ? a : k.guildName
+                      children: null !== (s = k.channelName) && void 0 !== s ? s : k.guildName
                     })
                   })
                 ]
@@ -228,7 +228,7 @@ children: [
                   authorNameHook: () => (0, i.jsx)(_.Popout, {
                     renderPopout: e => er(e, [I.Z.USERNAME]),
                     position: 'right',
-                    preload: null == k.authorId ? void 0 : ea,
+                    preload: null == k.authorId ? void 0 : es,
                     children: e => (0, i.jsx)(_.NameWithRoleAnchor, {
                       ...e,
                       name: k.authorName,
@@ -242,7 +242,7 @@ children: [
           }),
           k.canAccess ? (0, i.jsx)(_.Button, {
             color: _.ButtonColors.BRAND,
-            onClick: es,
+            onClick: ea,
             children: (0, i.jsx)(_.Text, {
               variant: 'text-sm/medium',
               color: 'always-white',
@@ -250,7 +250,7 @@ children: [
             })
           }) : (0, i.jsx)(_.ShinyButton, {
             pauseAnimation: z,
-            onClick: es,
+            onClick: ea,
             className: r()(j.__invalid_ctaButtonContent, j.subscribeButton),
             color: _.Button.Colors.CUSTOM,
             children: (0, i.jsx)(_.Text, {

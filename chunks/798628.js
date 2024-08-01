@@ -10,19 +10,19 @@ return c;
   }
 });
 var i = n(652874),
-  s = n(902704);
-let a = {},
+  a = n(902704);
+let s = {},
   r = (0, i.Z)(e => ({
 polls: {},
 updatePollState(t, n, i) {
   e(e => {
-    var s;
+    var a;
     return {
       polls: {
         ...e.polls,
         [t]: {
           ...e.polls[t],
-          [n]: i(null === (s = e.polls[t]) || void 0 === s ? void 0 : s[n])
+          [n]: i(null === (a = e.polls[t]) || void 0 === a ? void 0 : a[n])
         }
       }
     };
@@ -33,8 +33,8 @@ updatePollState(t, n, i) {
 function l(e) {
   return r(t => {
 var n;
-return null !== (n = t.polls[e]) && void 0 !== n ? n : a;
-  }, s.Z);
+return null !== (n = t.polls[e]) && void 0 !== n ? n : s;
+  }, a.Z);
 }
 
 function o(e, t, n) {

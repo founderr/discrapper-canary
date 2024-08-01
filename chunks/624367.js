@@ -5,8 +5,8 @@ return D;
 }), n(47120), n(789020);
 var i = n(735250);
 n(470079);
-var s = n(613828),
-  a = n(442837),
+var a = n(613828),
+  s = n(442837),
   r = n(477690),
   l = n(481060),
   o = n(668781),
@@ -42,18 +42,18 @@ applicationId: D,
 message: b
   } = e, {
 analyticsLocations: j
-  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), U = (0, c.O)(), y = b.channel_id, B = (0, a.e7)([m.Z], () => m.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, a.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivityForChannel(y)), w = (null == F ? void 0 : F.applicationId) === D, [V, H] = (0, _.Z)([
+  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), U = (0, c.O)(), y = b.channel_id, B = (0, s.e7)([m.Z], () => m.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, s.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivityForChannel(y)), w = (null == F ? void 0 : F.applicationId) === D, [V, H] = (0, _.Z)([
 D,
 null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : ''
-  ]), Y = (0, S.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0), [W] = (0, a.Wu)([C.ZP], () => G ? C.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === D) : [], [
+  ]), Y = (0, S.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0), [W] = (0, s.Wu)([C.ZP], () => G ? C.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === D) : [], [
 D,
 y,
 G
-  ]), K = Array.from(null !== (f = null == W ? void 0 : W.userIds) && void 0 !== f ? f : []), z = (0, a.Wu)([T.default], () => K.map(e => T.default.getUser(e)).filter(N.lm), [K]), q = (0, A.Z)({
+  ]), K = Array.from(null !== (f = null == W ? void 0 : W.userIds) && void 0 !== f ? f : []), z = (0, s.Wu)([T.default], () => K.map(e => T.default.getUser(e)).filter(N.lm), [K]), Q = (0, A.Z)({
 applicationId: D,
 size: P,
 names: ['embedded_cover']
-  }), Q = E.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), X = z.length > 0 ? Z.Z.Messages.JOIN : Z.Z.Messages.START, J = async () => {
+  }), q = E.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), X = z.length > 0 ? Z.Z.Messages.JOIN : Z.Z.Messages.START, J = async () => {
 if (G) {
   if (null != W && z.length > 0)
     await (0, p.Z)({
@@ -86,7 +86,7 @@ if (G) {
   (0, O.Z)({
     guildId: k,
     locationObject: U.location,
-    openInPopout: Q,
+    openInPopout: q,
     initialSelectedApplicationId: D,
     initialSlide: x.ag.SELECT_CHANNEL,
     analyticsLocations: j
@@ -102,7 +102,7 @@ children: (0, i.jsxs)('div', {
       children: (0, i.jsx)('img', {
         className: L.img,
         alt: V.name,
-        src: q.url
+        src: Q.url
       })
     }),
     (0, i.jsxs)('div', {
@@ -121,7 +121,7 @@ children: (0, i.jsxs)('div', {
         (0, i.jsx)(l.Heading, {
           className: L.learnMore,
           variant: 'heading-sm/medium',
-          children: (0, i.jsx)(s.rU, {
+          children: (0, i.jsx)(a.rU, {
             to: v.Z5c.ACTIVITY_DETAILS(D),
             children: Z.Z.Messages.LEARN_MORE
           })

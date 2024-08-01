@@ -4,9 +4,9 @@ return x;
   }
 }), n(653041);
 var i = n(735250),
-  s = n(470079),
-  a = n(913527),
-  r = n.n(a),
+  a = n(470079),
+  s = n(913527),
+  r = n.n(s),
   l = n(91192),
   o = n(442837),
   c = n(481060),
@@ -35,12 +35,12 @@ function O(e) {
   var t;
   let {
 channel: n,
-message: a,
+message: s,
 compact: r,
 isGroupStart: o,
 treatSpam: u,
 gotoChannel: d
-  } = e, _ = (0, l.JA)(null !== (t = a.id) && void 0 !== t ? t : ''), E = s.useCallback(e => {
+  } = e, _ = (0, l.JA)(null !== (t = s.id) && void 0 !== t ? t : ''), E = a.useCallback(e => {
 if ('ArrowLeft' === e.key) {
   var t;
   null === (t = document.querySelector('[data-recents-channel="'.concat(n.id, '"]'))) || void 0 === t || t.focus();
@@ -55,11 +55,11 @@ children: (0, i.jsxs)('div', {
   children: [
     (0, i.jsx)(p.Z, {
       className: M.jumpButton,
-      onJump: e => d(e, a.id)
+      onJump: e => d(e, s.id)
     }),
     (0, i.jsx)(m.Z, {
-      id: a.id,
-      message: a,
+      id: s.id,
+      message: s,
       channel: n,
       className: M.message,
       compact: r,
@@ -69,15 +69,15 @@ children: (0, i.jsxs)('div', {
       treatSpam: u
     })
   ]
-}, a.id)
+}, s.id)
   });
 }
 
 function x(e) {
   var t, n;
   let {
-channel: s,
-channelRecord: a,
+channel: a,
+channelRecord: s,
 gotoChannel: l
   } = e, {
 enabled: m
@@ -85,11 +85,11 @@ enabled: m
 location: '20e3b0_1'
   }, {
 autoTrackExposure: !1
-  }), p = T.jU.useSetting(), R = (0, o.e7)([N.Z], () => N.Z.can(S.Plq.CREATE_INSTANT_INVITE, a)), x = (0, E.P1)(a), v = !1, Z = 0 === s.messages.length || r()(s.messages[0].timestamp).isSame(r()(), 'day'), L = null !== (n = null === (t = f.default.getUser(h.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n, P = [];
-  if (!s.collapsed) {
+  }), p = T.jU.useSetting(), R = (0, o.e7)([N.Z], () => N.Z.can(S.Plq.CREATE_INSTANT_INVITE, s)), x = (0, E.P1)(s), v = !1, Z = 0 === a.messages.length || r()(a.messages[0].timestamp).isSame(r()(), 'day'), L = null !== (n = null === (t = f.default.getUser(h.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n, P = [];
+  if (!a.collapsed) {
 let e = null,
   t = null,
-  n = s.messages.slice(0, g.hC);
+  n = a.messages.slice(0, g.hC);
 n.forEach(n => {
   if (!(0, d.Z)(n, R)) {
     if (!Z && (null == e || !e.isSame(n.timestamp, 'day'))) {
@@ -99,17 +99,17 @@ n.forEach(n => {
         children: t
       }, t)), e = r()(n.timestamp);
     }
-    let s = null == t || (0, _.Z)(a, t, n);
+    let a = null == t || (0, _.Z)(s, t, n);
     t = n, v = v || (0, E.DQ)(n), P.push((0, i.jsx)(O, {
-      channel: a,
+      channel: s,
       message: n,
       compact: p,
-      isGroupStart: s,
+      isGroupStart: a,
       treatSpam: !L && m && (0, E.DQ)(n) && x,
       gotoChannel: l
     }, n.id));
   }
-}), s.messages.length >= g.hC && P.push((0, i.jsxs)(c.Button, {
+}), a.messages.length >= g.hC && P.push((0, i.jsxs)(c.Button, {
   color: c.Button.Colors.LINK,
   look: c.Button.Looks.LINK,
   onClick: e => l(e, n[n.length - 1].id),

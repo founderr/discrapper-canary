@@ -1,4 +1,4 @@
-var i, s, a, r, l = n(442837),
+var i, a, s, r, l = n(442837),
   o = n(570140),
   c = n(592125),
   u = n(757266),
@@ -12,12 +12,12 @@ this.waitFor(c.Z, u.Z, d.Z);
 return _;
   }
 }
-a = 'AuthorizedAppsStore', (s = 'displayName') in(i = E) ? Object.defineProperty(i, s, {
-  value: a,
+s = 'AuthorizedAppsStore', (a = 'displayName') in(i = E) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = a, t.Z = new E(o.Z, {
+}) : i[a] = s, t.Z = new E(o.Z, {
   USER_AUTHORIZED_APPS_UPDATE: function(e) {
 _ = e.apps;
   }

@@ -4,8 +4,8 @@ return M;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(349445),
+  a = n(470079),
+  s = n(349445),
   r = n(442837),
   l = n(524437),
   o = n(481060),
@@ -36,14 +36,14 @@ popoutPosition: O,
 popoutAlign: x
   } = e, {
 analyticsLocations: v
-  } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER), [Z, L] = s.useState(!1), [P, D] = function() {
+  } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER), [Z, L] = a.useState(!1), [P, D] = function() {
 let e = (0, r.e7)([m.Z], () => {
   var e, t;
   return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : l.X.UNREADS;
 });
 return [
   e,
-  s.useCallback(e => {
+  a.useCallback(e => {
     I.hW.updateAsync('inbox', t => {
       if (t.currentTab === e)
         return !1;
@@ -59,7 +59,7 @@ let t = (0, r.e7)([m.Z], () => {
     var e, t;
     return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t;
   }),
-  n = s.useCallback(() => {
+  n = a.useCallback(() => {
     I.hW.updateAsync('inbox', e => {
       e.viewedTutorial = !0;
     }, I.fy.INFREQUENT_USER_ACTION);
@@ -68,24 +68,24 @@ return {
   showTutorial: !t && e === l.X.UNREADS,
   setSeenTutorial: n
 };
-  }(P), U = s.useCallback(() => {
+  }(P), U = a.useCallback(() => {
 L(!1), Z && (null == n || n());
   }, [
 n,
 Z
-  ]), y = s.useCallback(() => {
+  ]), y = a.useCallback(() => {
 L(!Z), Z ? null == n || n() : null == t || t();
   }, [
 n,
 t,
 Z
-  ]), B = s.useCallback(() => {
+  ]), B = a.useCallback(() => {
 y(), D(l.X.UNREADS);
   }, [
 D,
 y
   ]);
-  s.useEffect(() => (T.S.subscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B), () => void T.S.unsubscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B)), [B]);
+  a.useEffect(() => (T.S.subscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B), () => void T.S.unsubscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B)), [B]);
   let {
 showReminders: k
   } = E.Z.useExperiment({
@@ -103,10 +103,10 @@ enabled: F
   } = d.Z.useExperiment({
 location: 'RecentsPopout'
   });
-  s.useEffect(() => {
+  a.useEffect(() => {
 (!k && P === l.X.TODOS || !G && P === l.X.BOOKMARKS) && D(l.X.MENTIONS);
   });
-  let w = s.useCallback(e => {
+  let w = a.useCallback(e => {
 !e.shiftKey && U();
   }, [U]);
   return (0, i.jsx)(u.Gt, {
@@ -142,7 +142,7 @@ children: (0, i.jsx)(o.Popout, {
         setTab: D,
         onJump: w,
         closePopout: U
-      }) : (0, i.jsx)(a.SV, {
+      }) : (0, i.jsx)(s.SV, {
         fallback: (0, i.jsx)(p.h, {
           setTab: D,
           closePopout: U,

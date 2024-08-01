@@ -5,8 +5,8 @@ return d;
 });
 var i = n(735250);
 n(470079);
-var s = n(442837),
-  a = n(481060),
+var a = n(442837),
+  s = n(481060),
   r = n(592125),
   l = n(702346),
   o = n(739566),
@@ -22,7 +22,7 @@ usernameHook: _,
 onClickThread: E,
 onClickViewThreads: I,
 onContextMenuThread: m
-  } = e, T = (0, o.ZP)(n), h = _(T), N = (0, s.e7)([r.Z], () => {
+  } = e, T = (0, o.ZP)(n), h = _(T), N = (0, a.e7)([r.Z], () => {
 var e;
 return r.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
   }), f = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
@@ -36,7 +36,7 @@ threadOnClick: {
 viewThreadsOnClick: I
   });
   return (0, i.jsx)(l.Z, {
-iconNode: (0, i.jsx)(a.ThreadIcon, {
+iconNode: (0, i.jsx)(s.ThreadIcon, {
   size: 'md',
   color: 'currentColor',
   className: u.icon

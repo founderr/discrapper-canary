@@ -1,13 +1,13 @@
 t.d(n, {
   Z: function() {
-return S;
+return P;
   }
 }), t(47120);
 var i = t(735250),
   a = t(470079),
   l = t(120356),
-  r = t.n(l),
-  o = t(581051),
+  o = t.n(l),
+  r = t(581051),
   s = t(353381),
   c = t(442837),
   u = t(993365),
@@ -15,8 +15,8 @@ var i = t(735250),
   m = t(115130),
   p = t(147865),
   _ = t(427996),
-  f = t(240991),
-  C = t(810090),
+  C = t(240991),
+  f = t(810090),
   h = t(88410),
   A = t(783097),
   E = t(695676),
@@ -26,22 +26,22 @@ var i = t(735250),
   I = t(970311),
   g = t(153521);
 
-function S(e) {
+function P(e) {
   let {
 channel: n,
 application: t,
 videoUrl: l,
-imageCoverUrl: o,
+imageCoverUrl: r,
 sectionName: s
   } = e, u = a.useMemo(() => {
 var e;
 return null !== (e = (0, A.jD)(t)) && void 0 !== e ? e : '';
-  }, [t]), d = (0, c.e7)([m.Z], () => m.Z.getIsEnabled()), p = null != l || null != o, {
-isSlideReady: f
+  }, [t]), d = (0, c.e7)([m.Z], () => m.Z.getIsEnabled()), p = null != l || null != r, {
+isSlideReady: C
   } = (0, E.hH)(), [h, N] = a.useState(!1);
   return a.useEffect(() => {
-f && N(!0);
-  }, [f]), (0, i.jsx)('div', {
+C && N(!0);
+  }, [C]), (0, i.jsx)('div', {
 className: I.container,
 children: (0, i.jsxs)('div', {
   className: I.profileAndVideoContainer,
@@ -49,17 +49,17 @@ children: (0, i.jsxs)('div', {
     p ? (0, i.jsxs)('div', {
       className: I.videoContainer,
       children: [
-        h ? (0, i.jsx)(C.Z, {
-          className: r()(I.videoCover, I.video),
+        h ? (0, i.jsx)(f.Z, {
+          className: o()(I.videoCover, I.video),
           loop: !0,
           muted: !0,
           autoPlay: !0,
           src: l,
-          poster: o
+          poster: r
         }) : null,
         (0, i.jsx)('img', {
           className: I.videoCover,
-          src: o,
+          src: r,
           'aria-label': x.Z.Messages.IMAGE
         })
       ]
@@ -67,13 +67,13 @@ children: (0, i.jsxs)('div', {
     (0, i.jsxs)('div', {
       className: p ? I.overviewContainerWithVideo : I.overviewContainerNoVideo,
       children: [
-        (0, i.jsx)(P, {
+        (0, i.jsx)(S, {
           application: t
         }),
         (0, i.jsx)(L, {
           application: t
         }),
-        u.length > 0 ? (0, i.jsx)(R, {
+        u.length > 0 ? (0, i.jsx)(b, {
           description: u
         }) : null,
         d ? (0, i.jsx)('div', {
@@ -83,7 +83,7 @@ children: (0, i.jsxs)('div', {
             className: I.developerShelfControls
           })
         }) : null,
-        (0, i.jsx)(b, {
+        (0, i.jsx)(T, {
           channel: n,
           application: t,
           sectionName: s
@@ -95,7 +95,7 @@ children: (0, i.jsxs)('div', {
   });
 }
 
-function P(e) {
+function S(e) {
   var n;
   let {
 application: t
@@ -124,7 +124,7 @@ application: n
   }) ? (0, i.jsxs)('div', {
 className: I.tagsContainer,
 children: [
-  (0, i.jsx)(T, {
+  (0, i.jsx)(R, {
     application: n
   }),
   t.map((e, n) => (0, i.jsx)('div', {
@@ -139,7 +139,7 @@ children: [
   }) : null;
 }
 
-function T(e) {
+function R(e) {
   var n;
   let {
 application: t
@@ -165,7 +165,7 @@ children: [
   });
 }
 
-function b(e) {
+function T(e) {
   let {
 channel: n,
 application: t,
@@ -188,12 +188,12 @@ children: null != t ? (0, i.jsx)(v.Z, {
   }) : null;
 }
 
-function R(e) {
+function b(e) {
   let {
 description: n
   } = e, [t, l] = a.useState(!0);
   a.useLayoutEffect(() => l(!1), []);
-  let r = a.useMemo(() => (0, f.YP)(n), [n]),
+  let o = a.useMemo(() => (0, C.YP)(n), [n]),
 {
   ref: c,
   lineHeight: m,
@@ -231,7 +231,7 @@ _ = a.useMemo(() => {
   m
 ]),
 {
-  ref: C,
+  ref: f,
   isTransitioning: h,
   onTransitionEnd: A
 } = (0, N.Z)({
@@ -243,7 +243,7 @@ E = t || h;
 className: I.descriptionContainer,
 children: [
   (0, i.jsx)('div', {
-    ref: C,
+    ref: f,
     className: I.overflowHidden,
     onTransitionEnd: A,
     children: (0, i.jsx)(u.x, {
@@ -254,7 +254,7 @@ children: [
       style: {
         maxHeight: E ? void 0 : _.minHeightOverride
       },
-      children: r
+      children: o
     })
   }),
   null != p && p > 1 ? (0, i.jsxs)(d.Clickable, {
@@ -269,7 +269,7 @@ children: [
       E ? (0, i.jsx)(s.u, {
         size: 'sm',
         color: d.tokens.colors.TEXT_BRAND
-      }) : (0, i.jsx)(o.C, {
+      }) : (0, i.jsx)(r.C, {
         size: 'sm',
         color: d.tokens.colors.TEXT_BRAND
       })

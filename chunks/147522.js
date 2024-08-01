@@ -5,8 +5,8 @@ return d;
 }), n(390547), n(653041);
 var i = n(735250);
 n(470079);
-var s = n(392711),
-  a = n.n(s),
+var a = n(392711),
+  s = n.n(a),
   r = n(661824),
   l = n(289481),
   o = n(809780),
@@ -15,32 +15,32 @@ var s = n(392711),
 
 function d(e, t, n) {
   let {
-markChannelRead: s,
+markChannelRead: a,
 markGuildRead: d,
 deleteChannel: _,
 toggle: E,
 getNumUnreadChannels: I
   } = t, m = null;
-  return a().flatMap(e, e => {
+  return s().flatMap(e, e => {
 let t = e.sortOrder !== m;
 m = e.sortOrder;
-let a = [];
-return t && (e.hasLoadedAnything && e.sortOrder === o.As.ReallyOldChannel ? a.push((0, i.jsx)(r.Z, {
+let s = [];
+return t && (e.hasLoadedAnything && e.sortOrder === o.As.ReallyOldChannel ? s.push((0, i.jsx)(r.Z, {
   className: u.divider,
   contentClassName: u.dividerContent,
   children: c.Z.Messages.UNREADS_OLD_CHANNELS_DIVIDER
-}, 'old-divider')) : e.hasLoadedAnything && e.sortOrder === o.As.NoNotifications && a.push((0, i.jsx)(r.Z, {
+}, 'old-divider')) : e.hasLoadedAnything && e.sortOrder === o.As.NoNotifications && s.push((0, i.jsx)(r.Z, {
   className: u.divider,
   contentClassName: u.dividerContent,
   children: c.Z.Messages.UNREADS_NO_NOTIFICATIONS_DIVIDER
-}, 'disabled-divider'))), a.push((0, i.jsx)(l.Z, {
+}, 'disabled-divider'))), s.push((0, i.jsx)(l.Z, {
   channel: e,
-  markChannelRead: s,
+  markChannelRead: a,
   markGuildRead: d,
   toggle: E,
   deleteChannel: _,
   onJump: n,
   getNumUnreadChannels: I
-}, e.channelId)), a;
+}, e.channelId)), s;
   });
 }

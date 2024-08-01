@@ -5,8 +5,8 @@ return u;
 });
 var i = n(735250);
 n(470079);
-var s = n(442837),
-  a = n(481060),
+var a = n(442837),
+  s = n(481060),
   r = n(768943),
   l = n(43690),
   o = n(121254),
@@ -19,11 +19,11 @@ enabled: t
 location: 'use_message_bookmarks_item'
   }, {
 autoTrackExposure: !1
-  }), n = (0, s.e7)([r.Z], () => r.Z.isMessageBookmarked(e.id));
-  return t ? (0, i.jsx)(a.MenuItem, {
+  }), n = (0, a.e7)([r.Z], () => r.Z.isMessageBookmarked(e.id));
+  return t ? (0, i.jsx)(s.MenuItem, {
 id: 'mark-bookmark',
 label: n ? c.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK : c.Z.Messages.MESSAGE_BOOKMARKS_BOOKMARK,
-icon: a.InboxIcon,
+icon: s.InboxIcon,
 action: () => n ? (0, l.h)({
   channelId: e.channel_id,
   messageId: e.id

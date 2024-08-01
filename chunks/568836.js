@@ -11,14 +11,14 @@ return o;
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(345898),
   l = n(322356);
 let o = 660,
   c = e => (0, i.jsx)(r.Z, {
 ...e,
-className: a()(e.className, {
+className: s()(e.className, {
   [l.embedVertical]: !e.isHorizontal,
   [l.embedHorizontal]: e.isHorizontal
 })
@@ -30,9 +30,9 @@ let {
 return (0, i.jsx)(c, {
   ...e,
   media: () => (0, i.jsx)('div', {
-    className: a()(l.loadingDescription),
+    className: s()(l.loadingDescription),
     children: (0, i.jsx)('div', {
-      className: a()(l.loadingBackgroundWrapper, {
+      className: s()(l.loadingBackgroundWrapper, {
         [l.loadingBackgroundWrapperHorizontal]: t
       }),
       children: (0, i.jsx)('div', {
@@ -41,7 +41,7 @@ return (0, i.jsx)(c, {
     })
   }),
   title: () => (0, i.jsx)('div', {
-    className: a()(l.loadingImage, {
+    className: s()(l.loadingImage, {
       [l.loadingImageHorizontal]: t
     })
   })

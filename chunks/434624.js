@@ -4,9 +4,9 @@ return h;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(866442),
   o = n(596454),
   c = n(434650),
@@ -16,10 +16,10 @@ var i = n(735250),
   E = n(287151),
   I = n(716862),
   m = n(372178);
-let T = s.memo(function(e) {
+let T = a.memo(function(e) {
 let t, n, {
-    useChatFontScaling: s,
-    hideEmoji: a,
+    useChatFontScaling: a,
+    hideEmoji: s,
     emoji: c,
     className: T,
     count: h,
@@ -36,7 +36,7 @@ let t, n, {
   O = R === _.O.BURST,
   x = (0, E.y4)(N, f, R),
   v = (0, d.v)(O && null != p ? p : []),
-  Z = s ? m : I,
+  Z = a ? m : I,
   L = O ? C : h,
   P = (0, u.y)(L, E.aO),
   D = {};
@@ -45,9 +45,9 @@ if (O && null != v) {
   let {
     accentColor: e,
     backgroundColor: i,
-    opacity: s
-  } = v, a = null !== (b = (0, l.wK)(null != i ? i : '', s)) && void 0 !== b ? b : '';
-  x && (D.borderColor = i), D.background = a, t = e, n = e;
+    opacity: a
+  } = v, s = null !== (b = (0, l.wK)(null != i ? i : '', a)) && void 0 !== b ? b : '';
+  x && (D.borderColor = i), D.background = s, t = e, n = e;
 }
 let j = {
   minWidth: P,
@@ -63,7 +63,7 @@ return (0, i.jsxs)('div', {
   children: [
     (0, i.jsx)(o.Z, {
       className: r()({
-        [Z.hideEmoji]: a
+        [Z.hideEmoji]: s
       }),
       emojiId: c.id,
       emojiName: c.name,
@@ -78,12 +78,12 @@ return (0, i.jsxs)('div', {
   ]
 });
   }),
-  h = s.memo(function(e) {
+  h = a.memo(function(e) {
 let {
   showImmediate: t,
   reactions: n,
-  ...a
-} = e, [r, l] = s.useState(!1), [o, u] = s.useTransition(), d = s.useCallback(e => {
+  ...s
+} = e, [r, l] = a.useState(!1), [o, u] = a.useTransition(), d = a.useCallback(e => {
   e && !r && !o && u(() => {
     l(!0);
   });
@@ -99,7 +99,7 @@ return (0, i.jsxs)(i.Fragment, {
     n.map(e => {
       var t, n;
       return (0, i.jsx)(m, {
-        ...a,
+        ...s,
         ...e
       }, (t = e, ''.concat(t.type === _.O.BURST ? 'burst:' : '').concat(null !== (n = t.emoji.id) && void 0 !== n ? n : 0, ':').concat(t.emoji.name)));
     })

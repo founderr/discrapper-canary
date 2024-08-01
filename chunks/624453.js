@@ -1,5 +1,5 @@
 n(733860);
-var i, s, a, r, l = n(392711),
+var i, a, s, r, l = n(392711),
   o = n.n(l),
   c = n(442837),
   u = n(570140),
@@ -18,12 +18,12 @@ function p(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
 n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
 i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-s = I.Z.getChannel(e),
-a = null != s ? s.getGuildId() : null;
+a = I.Z.getChannel(e),
+s = null != a ? a.getGuildId() : null;
   return {
 id: e,
 messages: t.map(e => (0, _.e5)(e)),
-guildId: a,
+guildId: s,
 loaded: n,
 loading: i
   };
@@ -53,12 +53,12 @@ return null !== (t = C[e]) && void 0 !== t ? t : void 0;
 return null != C[e] && C[e].loaded;
   }
 }
-r = 'ChannelPinsStore', (a = 'displayName') in(s = A) ? Object.defineProperty(s, a, {
+r = 'ChannelPinsStore', (s = 'displayName') in(a = A) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = r, t.Z = new A(u.Z, {
+}) : a[s] = r, t.Z = new A(u.Z, {
   CONNECTION_OPEN: function() {
 C = {};
   },
@@ -78,13 +78,13 @@ if (null == i && !e.message.pinned)
   return !1;
 if (null == e.message.author) {
   if (null != i) {
-    let s = o().findIndex(i.messages, e => e.id === t);
-    if (s >= 0) {
-      let t = i.messages[s],
-        a = (0, _.wi)(t, e.message);
-      if (a !== t) {
+    let a = o().findIndex(i.messages, e => e.id === t);
+    if (a >= 0) {
+      let t = i.messages[a],
+        s = (0, _.wi)(t, e.message);
+      if (s !== t) {
         let e = i.messages.slice();
-        e[s] = a, C[n].messages = e;
+        e[a] = s, C[n].messages = e;
       }
     }
   }
@@ -96,8 +96,8 @@ if (e.message.pinned) {
     return;
   }
   i.messages = i.messages.slice();
-  let s = o().findIndex(i.messages, e => e.id === t); -
-  1 === s ? i.messages.unshift((0, _.e5)(e.message)) : i.messages[s] = (0, _.wi)(i.messages[s], e.message), C[n] = i;
+  let a = o().findIndex(i.messages, e => e.id === t); -
+  1 === a ? i.messages.unshift((0, _.e5)(e.message)) : i.messages[a] = (0, _.wi)(i.messages[a], e.message), C[n] = i;
 } else {
   if (null == i)
     return;
@@ -154,8 +154,8 @@ let {
 } = e, i = C[n];
 if (null == i)
   return;
-let s = o().findIndex(i.messages, e => e.id === t);
-if (-1 !== s)
-  i.messages = i.messages.slice(), i.messages[s] = (0, d.Cm)(i.messages[s]), C[n] = i;
+let a = o().findIndex(i.messages, e => e.id === t);
+if (-1 !== a)
+  i.messages = i.messages.slice(), i.messages[a] = (0, d.Cm)(i.messages[a]), C[n] = i;
   }
 });

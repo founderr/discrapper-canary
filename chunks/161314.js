@@ -4,9 +4,9 @@ return M;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(990547),
   o = n(831209),
   c = n(442837),
@@ -30,14 +30,14 @@ function M(e) {
   var t;
   let {
 guildId: n
-  } = e, a = (0, c.e7)([h.Z], () => h.Z.getGuild(n)), {
+  } = e, s = (0, c.e7)([h.Z], () => h.Z.getGuild(n)), {
 loading: M,
 subscriptionsSettings: R
   } = (0, f.H)(n), {
 listingsLoaded: O
   } = (0, I.eD)(n), x = (0, I.ue)(n, {
 publishedOnly: !0
-  }), v = s.useCallback(async () => {
+  }), v = a.useCallback(async () => {
 N.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, {
   ...(0, d.hH)(n)
 }), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
@@ -46,13 +46,13 @@ N.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, {
 type: l.ImpressionTypes.VIEW,
 name: l.ImpressionNames.GUILD_SHOP_EMBED
   }, {
-disableTrack: null == a
+disableTrack: null == s
   });
   let Z = x.length > 0 ? new Date(Math.min(...x.map(e => Date.parse(e.published_at)))) : void 0;
   return M || !O ? (0, i.jsx)('div', {
 className: r()(A.guildShopEmbed, A.spinnerContainer),
 children: (0, i.jsx)(u.Spinner, {})
-  }) : null == a || null == R ? null : (0, i.jsxs)('div', {
+  }) : null == s || null == R ? null : (0, i.jsxs)('div', {
 className: A.guildShopEmbed,
 children: [
   (0, i.jsx)(C.Z, {
@@ -84,7 +84,7 @@ children: [
     variant: 'heading-md/semibold',
     color: 'text-normal',
     children: S.Z.Messages.GUILD_STORE_HERO_TITLE.format({
-      guildName: a.name
+      guildName: s.name
     })
   }),
   (0, i.jsx)(u.Spacer, {
@@ -107,7 +107,7 @@ children: [
     className: A.guildShopEmbedFooter,
     children: [
       (0, i.jsx)(E.Z, {
-        guild: a
+        guild: s
       }),
       (0, i.jsxs)('ul', {
         className: A.guildShopSummary,

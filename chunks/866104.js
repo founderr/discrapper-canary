@@ -7,9 +7,9 @@ return O;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(512722),
-  r = n.n(a),
+  a = n(470079),
+  s = n(512722),
+  r = n.n(s),
   l = n(442837),
   o = n(481060),
   c = n(131388),
@@ -59,7 +59,7 @@ function O(e) {
   let {
 coverImageAsset: t,
 isPreview: n = !1
-  } = e, s = E.QK.useSetting(), a = (0, f.n)() && s, [r, l] = (0, _.Z)(t, a), o = a ? (0, i.jsx)(h.Z, {
+  } = e, a = E.QK.useSetting(), s = (0, f.n)() && a, [r, l] = (0, _.Z)(t, s), o = s ? (0, i.jsx)(h.Z, {
 autoPlay: !0,
 loop: !0,
 className: M.coverImage,
@@ -83,7 +83,7 @@ children: null == l || n ? o : (0, i.jsx)('img', {
 }
 
 function x(e) {
-  var t, n, a;
+  var t, n, s;
   let {
 guild: _,
 subscriptionsSettings: E
@@ -91,22 +91,22 @@ subscriptionsSettings: E
   let {
 nickname: h,
 nickcolor: f
-  } = (a = T, (0, l.cj)([
+  } = (s = T, (0, l.cj)([
 I.ZP,
 m.default
   ], () => {
 var e, t;
 let n = m.default.getCurrentUser();
 r()(null != n, 'user cannot be null');
-let i = I.ZP.getMember(a, n.id);
+let i = I.ZP.getMember(s, n.id);
 return {
   nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : N.ZP.getName(n),
   nickcolor: null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : void 0
 };
-  }, [a])), {
+  }, [s])), {
 isTruncated: x,
 ExpandableTextContainer: v
-  } = (0, C.s)(), Z = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [L, P] = s.useState(1), D = (0, c.Z)('(max-width: 1439px)'), {
+  } = (0, C.s)(), Z = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [L, P] = a.useState(1), D = (0, c.Z)('(max-width: 1439px)'), {
 selectedTab: b,
 isPhantomPreview: j
   } = (0, p.m)(), U = b === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = Z ? (0, i.jsxs)(i.Fragment, {

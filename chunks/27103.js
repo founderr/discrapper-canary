@@ -5,8 +5,8 @@ return m;
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(481060),
   l = n(385499),
   o = n(702346),
@@ -21,8 +21,8 @@ function m(e) {
   let {
 message: t,
 compact: n,
-usernameHook: s
-  } = e, m = (0, c.ZP)(t), T = s(m), {
+usernameHook: a
+  } = e, m = (0, c.ZP)(t), T = a(m), {
 avatarSrc: h,
 eventHandlers: {
   onMouseEnter: N,
@@ -33,7 +33,7 @@ eventHandlers: {
 onMouseEnter: N,
 onMouseLeave: f,
 children: (0, i.jsx)(o.Z, {
-  className: a()(I.mainContainer, {
+  className: s()(I.mainContainer, {
     [I.compact]: n
   }),
   iconNode: n ? null : (0, i.jsx)(d.S, {
@@ -42,14 +42,14 @@ children: (0, i.jsx)(o.Z, {
   iconContainerClassName: I.iconContainer,
   compact: n,
   children: (0, i.jsxs)('div', {
-    className: a()(I.content, {
+    className: s()(I.content, {
       [I.compact]: n
     }),
     children: [
       (0, i.jsx)(u.nD, {
         message: t,
         messageClassname: I.spanCorrection,
-        className: a()(I.usernameContainer, I.spanCorrection, {
+        className: s()(I.usernameContainer, I.spanCorrection, {
           [I.compact]: n
         }),
         username: (0, i.jsxs)('div', {
@@ -72,7 +72,7 @@ children: (0, i.jsx)(o.Z, {
         showTimestamp: !0
       }),
       (0, i.jsx)('div', {
-        className: a()(I.__invalid_messageContent, {
+        className: s()(I.__invalid_messageContent, {
           [I.compact]: n
         }),
         children: E.Z.Messages.GUILD_REPORT_FALSE_ALARM_SYSTEM_MESSAGE_SHORT.format({

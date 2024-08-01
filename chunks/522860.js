@@ -5,8 +5,8 @@ return c;
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(702346),
+var a = n(481060),
+  s = n(702346),
   r = n(368666),
   l = n(739566),
   o = n(689938);
@@ -31,8 +31,8 @@ username: I.nick,
 duration: m.humanize(),
 channelName: c.name,
 usernameHook: T
-  })), (0, i.jsx)(a.Z, {
-iconNode: null != m ? (0, i.jsx)(s.ScreenXIcon, {
+  })), (0, i.jsx)(s.Z, {
+iconNode: null != m ? (0, i.jsx)(a.ScreenXIcon, {
   size: 'custom',
   color: 'currentColor',
   width: 20,

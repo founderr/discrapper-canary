@@ -7,9 +7,9 @@ return x;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(525654),
   o = n.n(l),
   c = n(91192),
@@ -34,11 +34,11 @@ function R(e) {
   let {
 setTab: t,
 onJump: n,
-showTutorial: a,
+showTutorial: s,
 setSeenTutorial: l,
 closePopout: R,
 badgeState: x
-  } = e, v = s.useRef(null), [Z, L] = (0, g.ZP)(v), {
+  } = e, v = a.useRef(null), [Z, L] = (0, g.ZP)(v), {
 loadState: P,
 channels: D
   } = Z, {
@@ -46,33 +46,33 @@ maybeLoadMore: b,
 markAllRead: j
   } = L;
   (function(e, t, n) {
-s.useLayoutEffect(() => {
+a.useLayoutEffect(() => {
   var i;
   let {
-    scrollToChannelIndex: s
+    scrollToChannelIndex: a
   } = t;
   n.clearScrollToChannelIndex();
   let {
-    current: a
+    current: s
   } = e;
-  if (null == a || null == s)
+  if (null == s || null == a)
     return;
-  let r = null === (i = a.getScrollerNode()) || void 0 === i ? void 0 : i.children;
+  let r = null === (i = s.getScrollerNode()) || void 0 === i ? void 0 : i.children;
   if (null == r)
     return;
-  let l = r[s];
+  let l = r[a];
   if (null == l)
     return;
   let {
     scrollTop: o,
     scrollHeight: c
-  } = a.getScrollerState();
-  (l.offsetTop < o || l.offsetTop > o + c) && a.scrollTo({
+  } = s.getScrollerState();
+  (l.offsetTop < o || l.offsetTop > o + c) && s.scrollTo({
     to: l.offsetTop
   });
 });
   }(v, Z, L), function(e, t) {
-s.useEffect(() => {
+a.useEffect(() => {
   let n = () => {
     let n = e.channels.find(e => !e.collapsed);
     null != n && t.markChannelRead(n);
@@ -84,11 +84,11 @@ s.useEffect(() => {
   t,
   e.channels
 ]);
-  }(Z, L), s.useEffect(() => {
+  }(Z, L), a.useEffect(() => {
 T.default.track(S.rMx.OPEN_POPOUT, {
   type: 'Inbox'
 });
-  }, []), s.useEffect(() => (E.Z.subscribe('CONNECTION_OPEN', R), () => {
+  }, []), a.useEffect(() => (E.Z.subscribe('CONNECTION_OPEN', R), () => {
 E.Z.unsubscribe('CONNECTION_OPEN', R);
   }), [R]));
   let U = (0, u.e7)([I.Z], () => I.Z.messageGroupSpacing),
@@ -132,18 +132,18 @@ children: [
       children: e => {
         let {
           ref: t,
-          ...s
+          ...a
         } = e;
         return (0, i.jsxs)(_.AdvancedScrollerThin, {
           ref: e => {
             var n;
             v.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null;
           },
-          ...s,
+          ...a,
           onScroll: P === g.jd.Done ? void 0 : b,
           className: M.scroller,
           children: [
-            a ? (0, i.jsx)(O, {
+            s ? (0, i.jsx)(O, {
               setSeenTutorial: l
             }) : null,
             (0, p.Z)(D, L, n),
@@ -201,7 +201,7 @@ function x(e) {
   let {
 setTab: t,
 badgeState: n,
-closePopout: s
+closePopout: a
   } = e;
   return (0, i.jsxs)('div', {
 className: M.container,
@@ -210,7 +210,7 @@ children: [
     tab: d.X.UNREADS,
     setTab: t,
     badgeState: n,
-    closePopout: s
+    closePopout: a
   }),
   (0, i.jsx)(f.Z, {
     Icon: _.InboxIcon,

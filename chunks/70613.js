@@ -4,8 +4,8 @@ return u;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(887024);
+  a = n(470079),
+  s = n(887024);
 let r = [n(992134)],
   l = ['#FFFFFF'],
   o = 1000 / 60,
@@ -67,9 +67,9 @@ function u(e) {
 className: t,
 firing: n = !0,
 wind: u = 2
-  } = e, [d, _] = s.useState(null), [E, I] = s.useState(null), m = (0, a.uR)(E, d), T = s.useMemo(() => new a.qA({
+  } = e, [d, _] = a.useState(null), [E, I] = a.useState(null), m = (0, s.uR)(E, d), T = a.useMemo(() => new s.qA({
 wind: u
-  }), [u]), h = s.useCallback(() => {
+  }), [u]), h = a.useCallback(() => {
 let e = null == E ? void 0 : E.getCanvas();
 if (null == e)
   return;
@@ -92,7 +92,7 @@ m.createConfetti({
 m,
 E
   ]);
-  return s.useEffect(() => {
+  return a.useEffect(() => {
 let e = n ? setInterval(h, o) : null;
 return () => clearInterval(e);
   }, [
@@ -100,12 +100,12 @@ n,
 h
   ]), (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsx)(a.O_, {
+  (0, i.jsx)(s.O_, {
     ref: I,
     className: t,
     environment: T
   }),
-  (0, i.jsx)(a.Ji, {
+  (0, i.jsx)(s.Ji, {
     ref: _,
     colors: l,
     sprites: r,

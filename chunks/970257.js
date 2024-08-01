@@ -7,8 +7,8 @@ return c;
   }
 });
 var i = n(592125),
-  s = n(650774),
-  a = n(496675),
+  a = n(650774),
+  s = n(496675),
   r = n(594174),
   l = n(981631);
 
@@ -29,10 +29,10 @@ if (null == t)
   return !1;
 if (t.type === l.d4z.DM || t.type === l.d4z.GROUP_DM)
   return !0;
-if (a.Z.canWithPartialContext(l.Plq.MANAGE_MESSAGES, {
+if (s.Z.canWithPartialContext(l.Plq.MANAGE_MESSAGES, {
     channelId: e
   })) {
-  let e = s.Z.getMemberCount(t.getGuildId());
+  let e = a.Z.getMemberCount(t.getGuildId());
   return null != e && e >= 50;
 }
 return !1;

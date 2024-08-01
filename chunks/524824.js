@@ -1,13 +1,13 @@
 n.d(t, {
   r: function() {
-return a;
+return i;
   }
 });
-var i = n(358085),
-  s = n(918701);
+var s = n(358085),
+  o = n(918701);
 
-function a(e) {
+function i(e) {
   var t;
   let n = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
-  return (0, i.isWeb)() && !n && !(0, s.$J)(e);
+  return (0, s.isWeb)() && !n && !(0, o.$J)(e);
 }

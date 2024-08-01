@@ -7,8 +7,8 @@ return o;
   }
 });
 var i = n(594174),
-  s = n(63063),
-  a = n(74538),
+  a = n(63063),
+  s = n(74538),
   r = n(981631),
   l = n(689938);
 
@@ -16,7 +16,7 @@ function o(e) {
   switch (e) {
 case r.evJ.TOO_MANY_USER_GUILDS:
   let t = i.default.getCurrentUser(),
-    n = a.ZP.canUseIncreasedGuildCap(t) || (null == t ? void 0 : t.isStaff()) ? r.tHP : r.DZw;
+    n = s.ZP.canUseIncreasedGuildCap(t) || (null == t ? void 0 : t.isStaff()) ? r.tHP : r.DZw;
   return {
     title: l.Z.Messages.TOO_MANY_USER_GUILDS_TITLE_2.format({
         quantity: n
@@ -50,7 +50,7 @@ case r.evJ.INVALID_CANNOT_FRIEND_SELF:
   return l.Z.Messages.INVALID_CANNOT_FRIEND_SELF;
 case r.evJ.INVITES_DISABLED:
   return l.Z.Messages.INVITES_DISABLED_MODAL_DESCRIPTION.format({
-    articleLink: s.Z.getArticleURL(r.BhN.INVITE_DISABLED)
+    articleLink: a.Z.getArticleURL(r.BhN.INVITE_DISABLED)
   });
 default:
   return l.Z.Messages.INVITE_MODAL_ERROR_DEFAULT;

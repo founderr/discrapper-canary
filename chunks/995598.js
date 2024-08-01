@@ -1,6 +1,6 @@
 n.d(t, {
   Y: function() {
-return s;
+return a;
   }
 });
 let i = (0, n(818083).B)({
@@ -26,7 +26,7 @@ treatments: [{
   }
 ]
   }),
-  s = () => {
+  a = () => {
 let {
   enabled: e
 } = i.getCurrentConfig({

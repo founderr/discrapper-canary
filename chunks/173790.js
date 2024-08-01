@@ -6,8 +6,8 @@ return I;
 var i = t(735250),
   a = t(470079),
   l = t(442837),
-  r = t(218061),
-  o = t(481060),
+  o = t(218061),
+  r = t(481060),
   s = t(361213),
   c = t(778569),
   u = t(213459),
@@ -15,8 +15,8 @@ var i = t(735250),
   m = t(541099),
   p = t(827498),
   _ = t(783097),
-  f = t(753972),
-  C = t(387658),
+  C = t(753972),
+  f = t(387658),
   h = t(536650),
   A = t(675993),
   E = t(689079),
@@ -31,50 +31,50 @@ channel: t,
 application: s,
 sectionName: c,
 installOnDemand: I
-  } = e, S = (0, l.e7)([m.Z], () => m.Z.entrypoint()), P = null !== (n = (0, d.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, L = (0, _.ye)({
-application: P
-  }) ? g : A.Z, T = a.useRef(null), {
-iconURL: b,
-name: R
-  } = a.useMemo(() => (0, _.sl)(P, {
+  } = e, P = (0, l.e7)([m.Z], () => m.Z.entrypoint()), S = null !== (n = (0, d.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, L = (0, _.ye)({
+application: S
+  }) ? g : A.Z, R = a.useRef(null), {
+iconURL: T,
+name: b
+  } = a.useMemo(() => (0, _.sl)(S, {
 fakeAppIconURL: x,
 size: 84
-  }), [P]);
+  }), [S]);
   return a.useEffect(() => {
-I ? u.ZP.queryInstallOnDemandApp(P.id, t.id) : u.ZP.maybeQueryForInstallLessApps(P.id, t.id);
+I ? u.ZP.queryInstallOnDemandApp(S.id, t.id) : u.ZP.maybeQueryForInstallLessApps(S.id, t.id);
   }, [
-P.id,
+S.id,
 t.id,
 I
-  ]), (0, i.jsxs)(o.ScrollerNone, {
+  ]), (0, i.jsxs)(r.ScrollerNone, {
 className: v.container,
 fade: !0,
-ref: T,
+ref: R,
 role: 'region',
 'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({
-  applicationName: R
+  applicationName: b
 }),
 children: [
   (0, i.jsx)(h.Z, {
-    name: R,
-    iconURL: b,
-    scrollerRef: T
+    name: b,
+    iconURL: T,
+    scrollerRef: R
   }),
-  null != b && (0, i.jsx)(f.Z, {
-    src: b,
+  null != T && (0, i.jsx)(C.Z, {
+    src: T,
     className: v.appIcon
   }),
-  (0, i.jsx)(r.Z, {
+  (0, i.jsx)(o.Z, {
     size: 54
   }),
   (0, i.jsx)(L, {
     channel: t,
-    application: P,
+    application: S,
     sectionName: c
   }),
-  S === p._b.TEXT ? (0, i.jsx)(C.Z, {
+  P === p._b.TEXT ? (0, i.jsx)(f.Z, {
     channel: t,
-    application: P,
+    application: S,
     sectionName: c,
     installOnDemand: I
   }) : null
@@ -91,12 +91,12 @@ sectionName: a
 applicationId: t.id,
 size: 2048,
 names: ['embedded_cover']
-  }), r = (0, _.yJ)(t), o = null != r && null != r.activity_preview_video_asset_id ? (0, s.Z)(t.id, r.activity_preview_video_asset_id) : null;
+  }), o = (0, _.yJ)(t), r = null != o && null != o.activity_preview_video_asset_id ? (0, s.Z)(t.id, o.activity_preview_video_asset_id) : null;
   return (0, i.jsx)(A.Z, {
 channel: n,
 application: t,
 imageCoverUrl: l.url,
-videoUrl: o,
+videoUrl: r,
 sectionName: a
   });
 }

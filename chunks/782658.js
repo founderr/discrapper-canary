@@ -4,8 +4,8 @@ return O;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(447543),
   l = n(410575),
   o = n(906732),
@@ -36,11 +36,11 @@ getAcceptInviteContext: O
   } = e, {
 invite: x,
 inviteError: v
-  } = (0, a.cj)([T.Z], () => ({
+  } = (0, s.cj)([T.Z], () => ({
 invite: T.Z.getInvite(t),
 inviteError: T.Z.getInviteError(t)
   }), [t]);
-  s.useEffect(() => {
+  a.useEffect(() => {
 null == x && r.Z.resolveInvite(t);
   }, [t]);
   let Z = null != x ? x : {
@@ -50,9 +50,9 @@ null == x && r.Z.resolveInvite(t);
 {
   analyticsLocations: L
 } = (0, o.ZP)(),
-P = (0, a.e7)([m.Z], () => (null == x ? void 0 : x.guild) != null ? m.Z.getGuild(x.guild.id) : null, [x]),
-D = (0, a.e7)([I.default], () => I.default.getId()),
-b = (0, a.e7)([c.ZP], () => {
+P = (0, s.e7)([m.Z], () => (null == x ? void 0 : x.guild) != null ? m.Z.getGuild(x.guild.id) : null, [x]),
+D = (0, s.e7)([I.default], () => I.default.getId()),
+b = (0, s.e7)([c.ZP], () => {
   var e;
   return c.ZP.getGuildScheduledEvent(null === (e = Z.guild_scheduled_event) || void 0 === e ? void 0 : e.id);
 }, [Z]),

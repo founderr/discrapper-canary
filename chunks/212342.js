@@ -1,5 +1,5 @@
 n(47120), n(789020);
-var i, s, a, r, l = n(442837),
+var i, a, s, r, l = n(442837),
   o = n(433517),
   c = n(570140),
   u = n(314897),
@@ -20,24 +20,24 @@ this.waitFor(u.default), N = new Set(o.K.get(h));
 return f.has(e);
   }
 }
-r = 'ChannelFollowingPublishBumpStore', (a = 'displayName') in(s = C) ? Object.defineProperty(s, a, {
+r = 'ChannelFollowingPublishBumpStore', (s = 'displayName') in(a = C) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = r, t.Z = new C(c.Z, {
+}) : a[s] = r, t.Z = new C(c.Z, {
   MESSAGE_CREATE: function(e) {
 var t;
 let {
   channelId: n,
   message: i,
-  optimistic: s
+  optimistic: a
 } = e;
-if (s || N.has(n))
+if (a || N.has(n))
   return !1;
-let a = d.Z.getChannel(n),
+let s = d.Z.getChannel(n),
   r = E.default.getCurrentUser();
-if (!(null != a && a.type === T.d4z.GUILD_ANNOUNCEMENT && (0, m.Z)(i) && (null != r && (null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.id ? _.Z.can(T.Plq.SEND_MESSAGES, a) : _.Z.can(T.Plq.MANAGE_MESSAGES, a)) && !I.yE(Number(i.flags), T.iLy.CROSSPOSTED)))
+if (!(null != s && s.type === T.d4z.GUILD_ANNOUNCEMENT && (0, m.Z)(i) && (null != r && (null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.id ? _.Z.can(T.Plq.SEND_MESSAGES, s) : _.Z.can(T.Plq.MANAGE_MESSAGES, s)) && !I.yE(Number(i.flags), T.iLy.CROSSPOSTED)))
   return !1;
 f.add(i.id);
   },

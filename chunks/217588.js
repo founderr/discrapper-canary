@@ -1,8 +1,8 @@
 n(724458), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(442837),
   o = n(481060),
   c = n(749210),
@@ -39,7 +39,7 @@ let {
   sticker: t,
   stickerPack: n
 } = e;
-return s.useMemo(() => null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => 3 !== e.length && n.id !== t.id ? e.concat(n) : e, []), [
+return a.useMemo(() => null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => 3 !== e.length && n.id !== t.id ? e.concat(n) : e, []), [
   t,
   n
 ]);
@@ -89,7 +89,7 @@ let y = e => {
 let {
   closePopout: t,
   sticker: n,
-  channel: a,
+  channel: s,
   refreshPositionKey: r
 } = e, [c, d, _] = (0, l.Wu)([A.Z], () => [
   A.Z.getStickerPack(n.pack_id),
@@ -100,15 +100,15 @@ let {
   stickerPack: c
 });
 (0, S.Pq)(n.pack_id);
-let m = (0, S.Sd)(a);
-return (s.useEffect(() => {
+let m = (0, S.Sd)(s);
+return (a.useEffect(() => {
   r();
-}, [d]), s.useEffect(() => {
+}, [d]), a.useEffect(() => {
   p.default.track(x.rMx.OPEN_POPOUT, {
     type: x.jXE.STICKER_POPOUT,
-    guild_id: a.getGuildId(),
+    guild_id: s.getGuildId(),
     sticker_pack_id: n.pack_id,
-    ...(0, u.v_)(a)
+    ...(0, u.v_)(s)
   });
 }, [n.pack_id]), d || null == c) ? (0, i.jsx)(I.SE, {
   className: L.popoutLoader
@@ -151,29 +151,29 @@ return (s.useEffect(() => {
   B = e => {
 let t, {
     sticker: n,
-    channel: a,
+    channel: s,
     closePopout: m,
     refreshPositionKey: C
   } = e,
-  [S, A] = s.useState(null),
-  [M, O] = s.useState(!1),
+  [S, A] = a.useState(null),
+  [M, O] = a.useState(!1),
   D = N.default.getCurrentUser(),
   b = g.ZP.canUseCustomStickersEverywhere(D),
   y = (0, l.e7)([h.Z], () => h.Z.getGuild(n.guild_id)),
   B = null != y,
-  [k, G] = s.useState(!1),
-  [F, w] = s.useState(null),
-  V = s.useMemo(() => ({
-    page: null != a.guild_id ? x.ZY5.GUILD_CHANNEL : x.ZY5.DM_CHANNEL,
+  [k, G] = a.useState(!1),
+  [F, w] = a.useState(null),
+  V = a.useMemo(() => ({
+    page: null != s.guild_id ? x.ZY5.GUILD_CHANNEL : x.ZY5.DM_CHANNEL,
     section: x.jXE.STICKER_POPOUT
-  }), [a.guild_id]),
+  }), [s.guild_id]),
   {
     current: H
-  } = s.useRef({
-    guild_id: a.getGuildId(),
-    ...(0, u.v_)(a)
+  } = a.useRef({
+    guild_id: s.getGuildId(),
+    ...(0, u.v_)(s)
   });
-s.useEffect(() => {
+a.useEffect(() => {
   (async () => {
     (null == y || y.hasFeature(x.oNc.DISCOVERABLE)) && A(await (0, _.Z)(n.id)), O(!0);
   })();
@@ -181,22 +181,22 @@ s.useEffect(() => {
   n.id,
   B
 ]);
-let Y = n.guild_id === a.getGuildId(),
+let Y = n.guild_id === s.getGuildId(),
   W = null != S,
   K = !1,
   z = 'Custom Sticker Popout';
 b ? t = B ? Y ? Z.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : Z.Z.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : W ? Z.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : Z.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : B ? (Y ? t = Z.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = Z.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, K = !0, z = 'Custom Sticker Popout (Upsell)') : W ? (t = Z.Z.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, K = !0, z = 'Custom Sticker Popout (Upsell)') : (t = Z.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
   openPremiumSettings: () => {
-    j(a), m();
+    j(s), m();
   }
 }), z = 'Custom Sticker Popout (Soft Upsell)');
-let q = !K && !B && W && b;
-return (s.useEffect(() => {
+let Q = !K && !B && W && b;
+return (a.useEffect(() => {
   C();
 }, [
   M,
   S
-]), s.useEffect(() => {
+]), a.useEffect(() => {
   p.default.track(x.rMx.OPEN_POPOUT, {
     type: z,
     ...H
@@ -231,7 +231,7 @@ return (s.useEffect(() => {
             postSuccessGuild: B || null == S ? void 0 : S,
             premiumModalAnalyticsLocation: V
           }),
-          q && (0, i.jsx)(o.Button, {
+          Q && (0, i.jsx)(o.Button, {
             size: o.Button.Sizes.SMALL,
             className: P.ctaButton,
             fullWidth: !0,
@@ -246,7 +246,7 @@ return (s.useEffect(() => {
       if (!W && !B)
         return;
       let t = (null !== (e = null == S ? void 0 : S.stickers) && void 0 !== e ? e : []).slice(0, 13).filter(e => e.id !== n.id).slice(0, 12),
-        s = null != S ? d.JO.createFromDiscoverableGuild(S) : d.JO.createFromGuildRecord(y);
+        a = null != S ? d.JO.createFromDiscoverableGuild(S) : d.JO.createFromGuildRecord(y);
       return (0, i.jsxs)('div', {
         className: P.guildSection,
         children: [
@@ -255,9 +255,9 @@ return (s.useEffect(() => {
             children: B ? Z.Z.Messages.STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : Z.Z.Messages.STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
           }),
           (0, i.jsx)(E.Oe, {
-            expressionSourceGuild: s,
+            expressionSourceGuild: a,
             hasJoinedExpressionSourceGuild: B,
-            isDisplayingJoinGuildButtonInPopout: q
+            isDisplayingJoinGuildButtonInPopout: Q
           }),
           !B && (0, i.jsxs)(i.Fragment, {
             children: [
@@ -295,8 +295,8 @@ return (s.useEffect(() => {
                   children: t => {
                     let {
                       onMouseEnter: n,
-                      onMouseLeave: s,
-                      ...a
+                      onMouseLeave: a,
+                      ...s
                     } = t;
                     return (0, i.jsx)('div', {
                       className: r()(P.otherEmoji, {
@@ -306,9 +306,9 @@ return (s.useEffect(() => {
                         null == n || n(), w(e.id);
                       },
                       onMouseLeave: () => {
-                        null == s || s(), w(null);
+                        null == a || a(), w(null);
                       },
-                      ...a,
+                      ...s,
                       children: (0, i.jsx)(R.ZP, {
                         size: 32,
                         enlargeOnInteraction: !0,
@@ -336,12 +336,12 @@ function k(e) {
   let {
 channel: t,
 closePopout: n,
-sticker: s
+sticker: a
   } = e;
   return (0, i.jsx)(I.W_, {
 className: L.popoutContent,
 children: (0, i.jsx)(U, {
-  sticker: s,
+  sticker: a,
   description: Z.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
     openPremiumSettings: () => {
       n(), j(t);
@@ -354,30 +354,30 @@ t.Z = e => {
   let {
 renderableSticker: t,
 channel: n,
-closePopout: s,
-refreshPositionKey: a
+closePopout: a,
+refreshPositionKey: s
   } = e, [r, l] = (0, S.XW)(t, !0);
   if (null != r && (0, M.jl)(r))
 return (0, i.jsx)(y, {
   sticker: r,
-  closePopout: s,
+  closePopout: a,
   channel: n,
-  refreshPositionKey: a
+  refreshPositionKey: s
 });
   if (null != r && (0, M.J8)(r))
 return (0, i.jsx)(B, {
   sticker: r,
   channel: n,
-  closePopout: s,
-  refreshPositionKey: a
+  closePopout: a,
+  refreshPositionKey: s
 });
   if (!l)
 return (0, i.jsx)(I.SE, {});
   else if (l && null == r)
 return (0, i.jsx)(k, {
   channel: n,
-  closePopout: s,
+  closePopout: a,
   sticker: t
 });
-  return s(), null;
+  return a(), null;
 };

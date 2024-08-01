@@ -1,5 +1,5 @@
 n(47120);
-var i, s, a, r, l = n(392711),
+var i, a, s, r, l = n(392711),
   o = n.n(l),
   c = n(442837),
   u = n(570140),
@@ -21,28 +21,28 @@ function N(e, t) {
 return;
   let i = m[e];
   delete i[t], o().isEmpty(i) && delete m[e];
-  let s = T[n];
-  null != s && (s.delete(e), 0 === s.size && delete T[n]);
+  let a = T[n];
+  null != a && (a.delete(e), 0 === a.size && delete T[n]);
 }
 
 function f(e, t, n, i) {
-  let s = n.find(e => null != e.party && e.party.id),
-a = null != s && null != s.party ? s.party.id : null,
+  let a = n.find(e => null != e.party && e.party.id),
+s = null != a && null != a.party ? a.party.id : null,
 r = h(t, e);
-  if (null == a || i === I.Skl.OFFLINE)
+  if (null == s || i === I.Skl.OFFLINE)
 return null != r && (N(t, e), void 0);
   if (null != r) {
-if (r === a)
+if (r === s)
   return !1;
 N(t, e);
   }! function(e, t, n) {
 var i;
-let s = m[e];
-if (null == s && (s = m[e] = {}), s[t] = n, _.Z.isBlocked(e))
+let a = m[e];
+if (null == a && (a = m[e] = {}), a[t] = n, _.Z.isBlocked(e))
   return;
-let a = null !== (i = T[n]) && void 0 !== i ? i : new Set();
-T[n] = a, a.add(e);
-  }(t, e, a);
+let s = null !== (i = T[n]) && void 0 !== i ? i : new Set();
+T[n] = s, s.add(e);
+  }(t, e, s);
 }
 
 function C(e) {
@@ -52,10 +52,10 @@ guild: t
   for (let {
   user: e,
   status: i,
-  activities: s
+  activities: a
 }
 of t.presences)
-!1 !== f(t.id, e.id, s, i) && (n = !0);
+!1 !== f(t.id, e.id, a, i) && (n = !0);
   return n;
 }
 
@@ -85,12 +85,12 @@ return m;
 return T;
   }
 }
-r = 'GamePartyStore', (a = 'displayName') in(s = S) ? Object.defineProperty(s, a, {
+r = 'GamePartyStore', (s = 'displayName') in(a = S) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = r, t.Z = new S(u.Z, {
+}) : a[s] = r, t.Z = new S(u.Z, {
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
 let {
   guilds: t,
@@ -99,10 +99,10 @@ let {
 for (let {
     user: e,
     status: t,
-    activities: s
+    activities: a
   }
   of n)
-  null != e && !1 !== f(I.ME, e.id, s, t) && (i = !0);
+  null != e && !1 !== f(I.ME, e.id, a, t) && (i = !0);
 for (let e of t)
   !1 !== C({
     guild: e
@@ -140,9 +140,9 @@ return t.map(e => {
     guildId: t,
     user: n,
     status: i,
-    activities: s
+    activities: a
   } = e;
-  return f(null != t ? t : I.ME, n.id, s, i);
+  return f(null != t ? t : I.ME, n.id, a, i);
 }).some(e => e);
   },
   THREAD_MEMBER_LIST_UPDATE: function(e) {

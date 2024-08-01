@@ -1,28 +1,28 @@
 n.d(t, {
   B: function() {
-return a;
+return s;
   }
 });
 var i = n(70956),
-  s = n(689938);
-let a = [{
+  a = n(689938);
+let s = [{
 duration: i.Z.Millis.HOUR,
-getLabel: () => s.Z.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
+getLabel: () => a.Z.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
   },
   {
 duration: 2 * i.Z.Millis.HOUR,
-getLabel: () => s.Z.Messages.MESSAGE_REMINDERS_IN_TWO_HOURS
+getLabel: () => a.Z.Messages.MESSAGE_REMINDERS_IN_TWO_HOURS
   },
   {
 duration: 4 * i.Z.Millis.HOUR,
-getLabel: () => s.Z.Messages.MESSAGE_REMINDERS_IN_FOUR_HOURS
+getLabel: () => a.Z.Messages.MESSAGE_REMINDERS_IN_FOUR_HOURS
   },
   {
 duration: i.Z.Millis.DAY,
-getLabel: () => s.Z.Messages.MESSAGE_REMINDERS_IN_ONE_DAY
+getLabel: () => a.Z.Messages.MESSAGE_REMINDERS_IN_ONE_DAY
   },
   {
 duration: i.Z.Millis.WEEK,
-getLabel: () => s.Z.Messages.MESSAGE_REMINDERS_IN_ONE_WEEK
+getLabel: () => a.Z.Messages.MESSAGE_REMINDERS_IN_ONE_WEEK
   }
 ];

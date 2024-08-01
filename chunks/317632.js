@@ -1,5 +1,5 @@
 n(47120);
-var i, s, a, r, l = n(442837),
+var i, a, s, r, l = n(442837),
   o = n(570140),
   c = n(823379),
   u = n(981631);
@@ -50,12 +50,12 @@ return E;
 return I;
   }
 }
-r = 'GameInviteStore', (a = 'displayName') in(s = T) ? Object.defineProperty(s, a, {
+r = 'GameInviteStore', (s = 'displayName') in(a = T) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = r, t.Z = new T(o.Z, {
+}) : a[s] = r, t.Z = new T(o.Z, {
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
 let {
   gameInvites: t

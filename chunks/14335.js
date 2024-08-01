@@ -4,8 +4,8 @@ return p;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(793030),
+  a = n(470079),
+  s = n(793030),
   r = n(442837),
   l = n(481060),
   o = n(230711),
@@ -39,7 +39,7 @@ function p() {
 {
   analyticsLocations: g
 } = (0, u.ZP)(),
-S = s.useCallback(() => {
+S = a.useCallback(() => {
   (0, d.Z)({
     subscriptionTier: I.ZP.getSkuIdForPremiumType(h.p9.TIER_2),
     analyticsLocations: g,
@@ -53,10 +53,10 @@ S = s.useCallback(() => {
   g,
   p
 ]),
-A = s.useCallback(() => {
+A = a.useCallback(() => {
   o.Z.open(N.oAB.INVENTORY), T.ZP.dismissOutboundPromotionNotice();
 }, []),
-M = s.useCallback(() => {
+M = a.useCallback(() => {
   E.default.track(N.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? S() : A();
 }, [
   n,
@@ -77,7 +77,7 @@ children: [
     color: 'currentColor',
     className: C.premiumIcon
   }),
-  t ? n ? (0, i.jsxs)(a.x, {
+  t ? n ? (0, i.jsxs)(s.x, {
     variant: 'text-sm/normal',
     className: C.text,
     children: [

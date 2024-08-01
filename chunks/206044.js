@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(338545),
   o = n(722770),
   c = n(442837),
@@ -32,10 +32,10 @@ let Z = (0, l.animated)(d.ChevronSmallDownIcon),
 let {
   quest: t,
   location: n,
-  questContentPosition: a,
+  questContentPosition: s,
   ...r
-} = e, [l, o] = s.useState(!1), c = s.useRef(new u.V7());
-s.useEffect(() => {
+} = e, [l, o] = a.useState(!1), c = a.useRef(new u.V7());
+a.useEffect(() => {
   let e = c.current;
   return function() {
     e.stop();
@@ -46,7 +46,7 @@ let _ = () => {
     questId: t.id,
     questContent: n,
     questContentCTA: h.jZ.COPY_QUEST_URL,
-    questContentPosition: a
+    questContentPosition: s
   }), (0, T.JG)((0, C.Rs)(t.id)), o(!0), c.current.start(1000, () => o(!1));
 };
 return (0, i.jsx)(d.Tooltip, {
@@ -68,7 +68,7 @@ t.Z = e => {
   var t;
   let {
 isFocused: n,
-isQuestExpired: a,
+isQuestExpired: s,
 quest: u,
 location: m,
 size: T,
@@ -85,7 +85,7 @@ height: G
 ref: F,
 width: w,
 scrollWidth: V
-  } = (0, _.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = s.useMemo(() => (0, C.nP)(u.config.assets.hero), [u]), K = s.useRef(null), z = (0, R.uq)(m), q = m === f.jn.QUESTS_EMBED, Q = (0, N.t5)(u, O.dr.QUESTS_CARD, m), X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(u.config.expiresAt, {
+  } = (0, _.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = a.useMemo(() => (0, C.nP)(u.config.assets.hero), [u]), K = a.useRef(null), z = (0, R.uq)(m), Q = m === f.jn.QUESTS_EMBED, q = (0, N.t5)(u, O.dr.QUESTS_CARD, m), X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(u.config.expiresAt, {
 year: 'numeric',
 month: 'long',
 day: 'numeric'
@@ -101,7 +101,7 @@ e.stopPropagation(), e.currentTarget.blur(), B(), (0, h._3)({
   questContentPosition: y
 });
   };
-  s.useEffect(() => {
+  a.useEffect(() => {
 W && null != K.current && (n ? K.current.play() : !n && (K.current.pause(), K.current.currentTime = 0));
   }, [
 n,
@@ -111,7 +111,7 @@ W
   return (0, i.jsxs)('div', {
 className: r()(v.outerContainer, {
   [v.outerContainerGiftInventory]: z,
-  [v.outerContainerEmbed]: q,
+  [v.outerContainerEmbed]: Q,
   [v.outerContainerXs]: 'xs' === T
 }),
 'aria-label': x.Z.Messages.EXPAND,
@@ -151,7 +151,7 @@ children: [
     children: [
       (0, i.jsxs)(l.animated.div, {
         className: r()(v.headerContent, {
-          [v.headerContentEmbed]: q
+          [v.headerContentEmbed]: Q
         }),
         style: {
           y: z ? D.to({
@@ -215,7 +215,7 @@ children: [
                     }),
                     (0, i.jsx)(d.Text, {
                       variant: 'text-xs/medium',
-                      children: Q
+                      children: q
                     })
                   ]
                 })
@@ -228,7 +228,7 @@ children: [
             },
             className: r()(v.headerExpandedContent, {
               [v.outerContainerGiftInventory]: z,
-              [v.outerContainerEmbed]: q
+              [v.outerContainerEmbed]: Q
             }),
             style: {
               opacity: D.to({
@@ -257,7 +257,7 @@ children: [
                         quest: u,
                         theme: H
                       }),
-                      q ? null : (0, i.jsx)(S.Z, {
+                      Q ? null : (0, i.jsx)(S.Z, {
                         color: 'always-white'
                       })
                     ]
@@ -282,7 +282,7 @@ children: [
                         variant: 'text-xs/normal',
                         children: X ? x.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
                           expirationDate: $
-                        }) : a ? x.Z.Messages.QUESTS_EXPIRED_ON.format({
+                        }) : s ? x.Z.Messages.QUESTS_EXPIRED_ON.format({
                           expirationDate: J
                         }) : x.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
                           expirationDate: J
@@ -292,7 +292,7 @@ children: [
                   })
                 ]
               }),
-              !a && z && (0, i.jsx)(P, {
+              !s && z && (0, i.jsx)(P, {
                 quest: u,
                 location: m,
                 questContentPosition: y
@@ -322,7 +322,7 @@ children: [
             questContentPosition: y,
             shouldShowDisclosure: !0,
             hideLearnMore: z,
-            showShareLink: !a && q,
+            showShareLink: !s && Q,
             children: e => (0, i.jsx)(l.animated.div, {
               style: {
                 opacity: D,

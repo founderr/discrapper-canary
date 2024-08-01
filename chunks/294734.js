@@ -4,8 +4,8 @@ return Z;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(793030),
+  a = n(470079),
+  s = n(793030),
   r = n(442837),
   l = n(902704),
   o = n(692547),
@@ -37,7 +37,7 @@ children: [
     className: R.headerIcon,
     color: o.Z.colors.TEXT_LOW_CONTRAST
   }),
-  (0, i.jsx)(a.x, {
+  (0, i.jsx)(s.x, {
     className: R.headerText,
     variant: 'text-sm/semibold',
     color: 'text-low-contrast',
@@ -52,7 +52,7 @@ function x(e) {
 message: t,
 snapshot: n,
 index: d
-  } = e, _ = s.useMemo(() => new g.r(t, n, d), [
+  } = e, _ = a.useMemo(() => new g.r(t, n, d), [
 t,
 n,
 d
@@ -63,7 +63,7 @@ C.Z,
 f.Z,
 N.Z,
 u.Z
-  ], () => _.getForwardInfo(T.Z, p.default, C.Z, f.Z, N.Z, u.Z).footerInfo, [_], l.Z), I = s.useCallback(() => {
+  ], () => _.getForwardInfo(T.Z, p.default, C.Z, f.Z, N.Z, u.Z).footerInfo, [_], l.Z), I = a.useCallback(() => {
 (0, S.Z)(t);
   }, [t]);
   return null == E ? null : (0, i.jsxs)(c.Clickable, {
@@ -75,7 +75,7 @@ children: [
     src: E.originIconUrl,
     alt: ''
   }) : null,
-  (0, i.jsx)(a.x, {
+  (0, i.jsx)(s.x, {
     className: R.footerText,
     variant: 'text-sm/medium',
     color: 'none',
@@ -93,11 +93,11 @@ function v(e) {
   var t;
   let {
 message: n,
-snapshot: a,
+snapshot: s,
 index: l
-  } = e, o = s.useMemo(() => (0, A.Z)(n, a), [
+  } = e, o = a.useMemo(() => (0, A.Z)(n, s), [
 n,
-a
+s
   ]), c = m.RS.useSetting(), u = m.NA.useSetting(), N = (0, r.e7)([h.Z], () => h.Z.isDeveloper), f = (0, d.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
 content: C,
 hasSpoilerEmbeds: p
@@ -138,7 +138,7 @@ children: [
       }),
       (0, i.jsx)(x, {
         message: n,
-        snapshot: a,
+        snapshot: s,
         index: l
       })
     ]

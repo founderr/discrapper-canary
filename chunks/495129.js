@@ -5,8 +5,8 @@ return S;
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(442837),
   l = n(481060),
   o = n(904245),
@@ -26,11 +26,11 @@ var s = n(120356),
   g = n(373841);
 
 function S(e) {
-  var t, n, s, S, A, M, R, O, x, v;
+  var t, n, a, S, A, M, R, O, x, v;
   let {
 message: Z,
 channel: L
-  } = e, P = null === (s = Z.embeds[0]) || void 0 === s ? void 0 : null === (n = s.fields) || void 0 === n ? void 0 : null === (t = n.find(e => {
+  } = e, P = null === (a = Z.embeds[0]) || void 0 === a ? void 0 : null === (n = a.fields) || void 0 === n ? void 0 : null === (t = n.find(e => {
 let {
   rawName: t
 } = e;
@@ -49,8 +49,8 @@ return 'voice_user_ids' === t;
 username: F
   }) : p.Z.Messages.WAVED_AT_YOU.format({
 username: G.nick
-  }), z = null != b && null != j, q = null;
-  q = z ? y || V ? p.Z.Messages.YOU_ARE_IN_CHANNEL.format({
+  }), z = null != b && null != j, Q = null;
+  Q = z ? y || V ? p.Z.Messages.YOU_ARE_IN_CHANNEL.format({
 channelHook: (e, t) => (0, i.jsx)(_.Z, {
   channel: null != j ? j : void 0
 }, t)
@@ -58,8 +58,8 @@ channelHook: (e, t) => (0, i.jsx)(_.Z, {
 channelHook: (e, t) => (0, i.jsx)(_.Z, {
   channel: null != j ? j : void 0
 }, t)
-  }) : p.Z.Messages.CANNOT_ACCESS_HANGOUT, 0 === w.length && (q = y ? p.Z.Messages.HANGOUT_OVER_SENDER : p.Z.Messages.HANGOUT_OVER_RECEIVER);
-  let Q = y ? p.Z.Messages.WAVE_AGAIN : p.Z.Messages.WAVE_BACK;
+  }) : p.Z.Messages.CANNOT_ACCESS_HANGOUT, 0 === w.length && (Q = y ? p.Z.Messages.HANGOUT_OVER_SENDER : p.Z.Messages.HANGOUT_OVER_RECEIVER);
+  let q = y ? p.Z.Messages.WAVE_AGAIN : p.Z.Messages.WAVE_BACK;
   return (0, i.jsxs)('div', {
 children: [
   (0, i.jsxs)('div', {
@@ -73,7 +73,7 @@ children: [
       (0, i.jsx)(l.Text, {
         variant: 'text-sm/normal',
         color: 'header-secondary',
-        children: q
+        children: Q
       }),
       w.length > 0 ? (0, i.jsx)('div', {
         className: g.participants,
@@ -88,7 +88,7 @@ children: [
           maxAvatarsShown: 5
         })
       }) : (0, i.jsx)('div', {
-        className: a()(g.participants, g.disabled),
+        className: s()(g.participants, g.disabled),
         children: (0, i.jsx)(E.Z, {
           guildId: P,
           partySize: {
@@ -127,7 +127,7 @@ children: [
           o.Z.sendMessage(L.id, u.ZP.parse(L, '\uD83D\uDC4B'));
         },
         className: g.button,
-        children: Q
+        children: q
       })
     ]
   })

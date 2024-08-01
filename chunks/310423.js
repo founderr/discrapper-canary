@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(442837),
   o = n(481060),
   c = n(911969),
@@ -37,8 +37,8 @@ children: (0, i.jsx)(o.Text, {
 })
   });
 }
-t.Z = s.memo(function(e) {
-  var t, n, a, r, R, O;
+t.Z = a.memo(function(e) {
+  var t, n, s, r, R, O;
   let x, {
   channel: v,
   messageId: Z,
@@ -52,7 +52,7 @@ t.Z = s.memo(function(e) {
   copyRef: b
 } = (0, d.Z)(v, null == L ? void 0 : null === (t = L.application_command) || void 0 === t ? void 0 : t.id),
 j = (0, l.e7)([T.Z], () => T.Z.getGuild(v.guild_id), [v.guild_id]);
-  if (s.useEffect(() => {
+  if (a.useEffect(() => {
   (null == L || L.type === c.yU.CHAT && void 0 === L.application_command) && _.OG(v.id, Z);
 }, [
   v.id,
@@ -71,7 +71,7 @@ let e = [],
   ]));
 for (let n of null !== (R = L.options) && void 0 !== R ? R : [])
   e = e.concat(function e(t) {
-    var n, a, r, l, u, d, _;
+    var n, s, r, l, u, d, _;
     let g, {
         option: R,
         channel: O,
@@ -83,12 +83,12 @@ for (let n of null !== (R = L.options) && void 0 !== R ? R : [])
       } = t,
       D = null != Z ? Z + ' ' + R.name : R.name;
     if (R.type === c.jw.SUB_COMMAND || R.type === c.jw.SUB_COMMAND_GROUP) {
-      let t = [(0, i.jsxs)(s.Fragment, {
+      let t = [(0, i.jsxs)(a.Fragment, {
           children: [
             ' ',
             (0, i.jsx)(o.Text, {
               ...S,
-              children: null !== (a = null == L ? void 0 : L.name_localized) && void 0 !== a ? a : R.name
+              children: null !== (s = null == L ? void 0 : L.name_localized) && void 0 !== s ? s : R.name
             })
           ]
         }, D)],
@@ -200,7 +200,7 @@ for (let n of null !== (R = L.options) && void 0 !== R ? R : [])
           null != e && (b = null !== (d = e.name_localized) && void 0 !== d ? d : e.name);
         }
       }
-    return null == g && (g = M(null == b ? void 0 : b.toString())), [(0, i.jsxs)(s.Fragment, {
+    return null == g && (g = M(null == b ? void 0 : b.toString())), [(0, i.jsxs)(a.Fragment, {
       children: [
         (0, i.jsxs)(o.Text, {
           ...S,
@@ -228,7 +228,7 @@ x = (0, i.jsxs)(i.Fragment, {
       ...S,
       children: [
         '/',
-        null !== (O = null === (a = L.application_command) || void 0 === a ? void 0 : a.name_localized) && void 0 !== O ? O : L.name
+        null !== (O = null === (s = L.application_command) || void 0 === s ? void 0 : s.name_localized) && void 0 !== O ? O : L.name
       ]
     }),
     e
@@ -239,8 +239,8 @@ x = (0, i.jsxs)(i.Fragment, {
 className: g.container,
 onCopy: e => {
   var t, n, i;
-  let s = null !== (i = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== i ? i : '';
-  s.startsWith('/') && s.endsWith('\n') && D(e, L);
+  let a = null !== (i = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== i ? i : '';
+  a.startsWith('/') && a.endsWith('\n') && D(e, L);
 },
 children: [
   (0, i.jsx)('div', {

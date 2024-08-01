@@ -7,9 +7,9 @@ return eN;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(913527),
-  r = n.n(a),
+  a = n(470079),
+  s = n(913527),
+  r = n.n(s),
   l = n(613828),
   o = n(442837),
   c = n(481060),
@@ -52,8 +52,8 @@ var i = n(735250),
   W = n(272008),
   K = n(523255),
   z = n(852923),
-  q = n(592125),
-  Q = n(430824),
+  Q = n(592125),
+  q = n(430824),
   X = n(131951),
   J = n(19780),
   $ = n(914010),
@@ -61,8 +61,8 @@ var i = n(735250),
   et = n(55563),
   en = n(695103),
   ei = n(933429),
-  es = n(285952),
-  ea = n(626135),
+  ea = n(285952),
+  es = n(626135),
   er = n(63063),
   el = n(72924),
   eo = n(69499),
@@ -111,28 +111,28 @@ function eN(e) {
 untilAtLeast: r()(e)
   } : void 0);
 }
-let ef = 12633 == n.j ? s.memo(function() {
-  var e, t, a;
+let ef = 12633 == n.j ? a.memo(function() {
+  var e, t, s;
   let I = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()),
 A = (0, o.e7)([$.Z], () => $.Z.getGuildId()),
 ec = (0, o.e7)([ei.Z], () => ei.Z.getNotice()),
-ef = (0, o.e7)([Q.Z], () => Q.Z.getGuild(A)),
+ef = (0, o.e7)([q.Z], () => q.Z.getGuild(A)),
 {
   analyticsLocations: eC
 } = (0, M.ZP)(),
 ep = null == ec ? void 0 : ec.type,
 eg = (0, U.J)(A);
-  s.useEffect(() => {
+  a.useEffect(() => {
 null != ep && ! function(e, t) {
   let n = {
     notice_type: e
   };
-  null != t && (n.guild_id = t), ea.default.track(eu.rMx.APP_NOTICE_VIEWED, n);
+  null != t && (n.guild_id = t), es.default.track(eu.rMx.APP_NOTICE_VIEWED, n);
 }(ep, A);
   }, [
 ep,
 A
-  ]), s.useEffect(() => {
+  ]), a.useEffect(() => {
 if (null != ec && ec.type === eu.kVF.SURVEY && null != ec.metadata) {
   let {
     metadata: e
@@ -265,7 +265,7 @@ case eu.kVF.VOICE_DISABLED:
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         onClick: () => {
           let e = J.Z.getRemoteDisconnectVoiceChannelId();
-          null != e && null != q.Z.getChannel(e) && T.default.selectVoiceChannel(e);
+          null != e && null != Q.Z.getChannel(e) && T.default.selectVoiceChannel(e);
         },
         noticeType: eu.kVF.VOICE_DISABLED,
         children: eI.Z.Messages.RECONNECT
@@ -286,7 +286,7 @@ case eu.kVF.VOICE_CONNECTED_LAST_SESSION:
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         onClick: () => {
           let e = J.Z.getLastSessionVoiceChannelId();
-          null != e && null != q.Z.getChannel(e) && T.default.selectVoiceChannel(e);
+          null != e && null != Q.Z.getChannel(e) && T.default.selectVoiceChannel(e);
         },
         noticeType: eu.kVF.VOICE_CONNECTED_LAST_SESSION,
         children: eI.Z.Messages.RECONNECT
@@ -486,8 +486,8 @@ case eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL: {
   let {
     skuId: e,
     applicationId: t
-  } = ec.metadata, n = et.Z.get(e), s = R.Z.getApplication(t);
-  if (null == n || null == s)
+  } = ec.metadata, n = et.Z.get(e), a = R.Z.getApplication(t);
+  if (null == n || null == a)
     return null;
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.PREMIUM_TIER_1,
@@ -502,7 +502,7 @@ case eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL: {
         className: em.premiumIcon
       }),
       eI.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_NO_PREMIUM_PERK_MESSAGE.format({
-        applicationName: s.name,
+        applicationName: a.name,
         skuName: n.name
       }),
       (0, i.jsx)(c.NoticeButton, {
@@ -527,8 +527,8 @@ case eu.kVF.SURVEY: {
   let {
     key: t,
     prompt: n,
-    cta: s,
-    url: a
+    cta: a,
+    url: s
   } = e;
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.CUSTOM,
@@ -543,9 +543,9 @@ case eu.kVF.SURVEY: {
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: eu.kVF.SURVEY,
         onClick: () => {
-          window.open(a, '_blank'), (0, C.hZ)(t, !1);
+          window.open(s, '_blank'), (0, C.hZ)(t, !1);
         },
-        children: s
+        children: a
       })
     ]
   });
@@ -656,8 +656,8 @@ case eu.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS:
         onClick: () => eN(),
         noticeType: eu.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS
       }),
-      (0, i.jsxs)(es.Z, {
-        justify: es.Z.Justify.CENTER,
+      (0, i.jsxs)(ea.Z, {
+        justify: ea.Z.Justify.CENTER,
         children: [
           null != eG ? eI.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
             name: ''.concat(eG),
@@ -681,9 +681,9 @@ case eu.kVF.APPLICATION_TEST_MODE:
   if (null != en.Z.testModeEmbeddedApplicationId)
     return (0, i.jsx)(c.Notice, {
       color: c.NoticeColors.WARNING,
-      children: (0, i.jsxs)(es.Z, {
-        justify: es.Z.Justify.CENTER,
-        align: es.Z.Align.CENTER,
+      children: (0, i.jsxs)(ea.Z, {
+        justify: ea.Z.Justify.CENTER,
+        align: ea.Z.Align.CENTER,
         children: [
           (0, i.jsx)('div', {
             children: eI.Z.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({
@@ -699,9 +699,9 @@ case eu.kVF.APPLICATION_TEST_MODE:
     });
   return (0, i.jsx)(c.Notice, {
     color: c.NoticeColors.WARNING,
-    children: (0, i.jsxs)(es.Z, {
-      justify: es.Z.Justify.CENTER,
-      align: es.Z.Align.CENTER,
+    children: (0, i.jsxs)(ea.Z, {
+      justify: ea.Z.Justify.CENTER,
+      align: ea.Z.Align.CENTER,
       children: [
         (0, i.jsx)('div', {
           children: eI.Z.Messages.NOTICE_APPLICATION_TEST_MODE.format({
@@ -885,7 +885,7 @@ case eu.kVF.PREMIUM_MISSING_PAYMENT:
   });
 case eu.kVF.BACK_TO_PREVIOUS_SCREEN:
   return (0, i.jsx)(B.h, {
-    buttonText: null !== (a = ec.buttonText) && void 0 !== a ? a : eI.Z.Messages.GO_BACK,
+    buttonText: null !== (s = ec.buttonText) && void 0 !== s ? s : eI.Z.Messages.GO_BACK,
     onGoBack: ec.callback,
     onDismiss: () => eN(),
     showCloseButton: !0

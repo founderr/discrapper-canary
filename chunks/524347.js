@@ -1,4 +1,4 @@
-var i, s, a, r, l = n(913527),
+var i, a, s, r, l = n(913527),
   o = n.n(l),
   c = n(442837),
   u = n(846519),
@@ -27,10 +27,10 @@ let {
   dropsQuestId: t,
   streamKey: n,
   game: i,
-  completed: s,
-  gameTitle: a
+  completed: a,
+  gameTitle: s
 } = M;
-if (!(null == t || null == a || s || null == i || null == n || A.isStarted()))
+if (!(null == t || null == s || a || null == i || null == n || A.isStarted()))
   e ? (0, T.m0)(t, n, i.pid) : A.start(1 * m.Z.Millis.MINUTE, () => {
     (0, T.m0)(t, n, i.pid);
   });
@@ -92,12 +92,12 @@ let t = e.steps.find(e => 'stream_length' === e.name);
 return null == t ? 0 : t.percent;
   }
 }
-a = 'DropsStore', (s = 'displayName') in(i = v) ? Object.defineProperty(i, s, {
-  value: a,
+s = 'DropsStore', (a = 'displayName') in(i = v) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = a, t.Z = new v(d.Z, {
+}) : i[a] = s, t.Z = new v(d.Z, {
   DROPS_ELIGIBILITY_FETCH_SUCCESS: e => {
 p[e.dropsQuestId] = e.isEligible;
   },
@@ -156,17 +156,17 @@ var t;
 let {
   streamType: n,
   guildId: i,
-  channelId: s,
-  pid: a
+  channelId: a,
+  pid: s
 } = e, r = (0, E.V9)({
   streamType: n,
   guildId: i,
-  channelId: s,
+  channelId: a,
   ownerId: I.default.getId()
 });
-if (null == a)
+if (null == s)
   return;
-let l = _.ZP.getGameForPID(a);
+let l = _.ZP.getGameForPID(s);
 if (null == l)
   return;
 let o = Object.values(N.Zv).find(e => e.gameSearchTerm.find(e => {

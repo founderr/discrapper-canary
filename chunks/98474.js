@@ -25,9 +25,9 @@ messageId: t,
 emoji: n,
 startPosition: _,
 targetPosition: v
-  } = e, [b, E] = s.useState(0), [I, x] = s.useState(0), [C, R] = s.useState(null), {
-confettiCanvas: S
-  } = s.useContext(u.h), N = (0, o.uR)(S, C), O = s.useMemo(() => [{
+  } = e, [b, E] = s.useState(0), [I, x] = s.useState(0), [C, S] = s.useState(null), {
+confettiCanvas: R
+  } = s.useContext(u.h), N = (0, o.uR)(R, C), O = s.useMemo(() => [{
 src: null == n.id ? p.ZP.getURL(n.name) : m.ZP.getEmojiURL({
   id: n.id,
   animated: !1,
@@ -97,7 +97,7 @@ I
   ]), (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(o.Ji, {
-    ref: R,
+    ref: S,
     sprites: O,
     colors: T,
     spriteWidth: g.Ko,

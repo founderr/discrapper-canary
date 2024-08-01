@@ -5,8 +5,8 @@ return E;
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(873546),
   l = n(481060),
   o = n(130402),
@@ -19,7 +19,7 @@ function E(e) {
   let {
 channel: t,
 message: n,
-togglePopout: s,
+togglePopout: a,
 renderEmojiPicker: E,
 shouldShow: I,
 buttonClassName: m,
@@ -34,7 +34,7 @@ renderPopout: e => {
   return E(t, n, i, !1);
 },
 shouldShow: I,
-onRequestClose: s,
+onRequestClose: a,
 position: r.tq ? 'top' : 'left',
 align: r.tq ? 'center' : 'top',
 children: (e, t) => {
@@ -64,7 +64,7 @@ children: (e, t) => {
         },
         onMouseLeave: n,
         onClick: () => {
-          s(), null == I || I();
+          a(), null == I || I();
         },
         'aria-label': d.Z.Messages.ADD_REACTION,
         selected: E,
@@ -72,7 +72,7 @@ children: (e, t) => {
         children: (0, i.jsx)(l.ReactionIcon, {
           size: 'sm',
           color: 'currentColor',
-          className: a()(_.icon, T)
+          className: s()(_.icon, T)
         })
       });
     }

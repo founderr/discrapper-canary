@@ -5,17 +5,17 @@ return c;
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(203143),
+var a = n(481060),
+  s = n(203143),
   r = n(615669),
   l = n(689938);
 let o = {
-  [r.z.END_EARLY]: e => (0, i.jsx)(s.MenuItem, {
+  [r.z.END_EARLY]: e => (0, i.jsx)(a.MenuItem, {
 id: 'end-poll-early',
 label: l.Z.Messages.POLL_END_EARLY,
-icon: s.ClockXIcon,
+icon: a.ClockXIcon,
 action: () => {
-  a.Z.endPollEarly({
+  s.Z.endPollEarly({
     channelId: e.channel_id,
     messageId: e.id
   });

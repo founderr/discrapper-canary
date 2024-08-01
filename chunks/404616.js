@@ -43,8 +43,8 @@ var i = n(735250),
   I = n(566006),
   x = n(255269),
   C = n(937889),
-  R = n(443877),
-  S = n(524444),
+  S = n(443877),
+  R = n(524444),
   N = n(287151),
   O = n(267128),
   Z = n(695346),
@@ -138,8 +138,8 @@ t
   ]);
   let C = s.useRef(null),
 {
-  handleLeftClick: R,
-  handleRightClick: S
+  handleLeftClick: S,
+  handleRightClick: R
 } = (0, Y.Z)({
   facepileRef: C,
   goToThread: n,
@@ -158,18 +158,18 @@ t
   return (0, i.jsxs)('div', {
 ref: E,
 'data-item-id': t,
-onClick: R,
-onContextMenu: S,
+onClick: S,
+onContextMenu: R,
 className: a()($.container, c, {
   [$.isOpen]: g
 }),
 children: [
   (0, i.jsx)(p.Clickable, {
-    onClick: R,
+    onClick: S,
     focusProps: {
       ringTarget: E
     },
-    onContextMenu: S,
+    onContextMenu: R,
     'aria-label': X.Z.Messages.FORUM_POST_ARIA_LABEL.format({
       title: m.name,
       count: T
@@ -459,7 +459,7 @@ channel: n
 disableReactionCreates: a,
 isLurking: l,
 isPendingMember: r
-  } = (0, R.Z)(n);
+  } = (0, S.Z)(n);
   return null == o || a ? null : (0, i.jsx)(N.le, {
 className: $.updateReactionButton,
 message: t,
@@ -487,7 +487,7 @@ channel: s
 disableReactionUpdates: a,
 isLurking: l,
 isPendingMember: r
-  } = (0, R.Z)(s);
+  } = (0, S.Z)(s);
   return null == o ? null : (0, i.jsx)(N.le, {
 className: $.updateReactionButton,
 message: n,
@@ -581,7 +581,7 @@ children: (0, i.jsxs)('div', {
         [$.obscured]: u,
         [$.thumbnailOverride]: !0
       })
-    }) : (0, S.Yi)({
+    }) : (0, R.Yi)({
       src: g,
       maxHeight: t,
       maxWidth: n,

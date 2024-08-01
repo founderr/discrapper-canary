@@ -5,8 +5,8 @@ return c;
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(702346),
+var a = n(481060),
+  s = n(702346),
   r = n(739566),
   l = n(689938),
   o = n(118496);
@@ -20,9 +20,9 @@ usernameHook: c
 username: u.nick,
 usernameHook: d
   });
-  return (0, i.jsx)(a.Z, {
+  return (0, i.jsx)(s.Z, {
 className: o.stageSystemMessage,
-iconNode: (0, i.jsx)(s.MicrophoneArrowRightIcon, {
+iconNode: (0, i.jsx)(a.MicrophoneArrowRightIcon, {
   size: 'md',
   color: 'currentColor'
 }),

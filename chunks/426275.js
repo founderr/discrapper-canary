@@ -4,8 +4,8 @@ return d;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(692547),
+  a = n(470079),
+  s = n(692547),
   r = n(481060),
   l = n(375954),
   o = n(876338),
@@ -19,7 +19,7 @@ channelId: n,
 messageId: d,
 targetKind: _,
 embedIndex: E
-  } = e, I = s.useCallback(() => {
+  } = e, I = a.useCallback(() => {
 let e = l.Z.getMessage(n, d);
 if (null == e)
   return;
@@ -45,7 +45,7 @@ tooltip: u.Z.Messages.MESSAGE_ACTION_FORWARD,
 color: r.CircleIconButtonColors.SECONDARY,
 icon: (0, i.jsx)(r.ChatArrowRightIcon, {
   size: 'xs',
-  color: a.Z.colors.INTERACTIVE_NORMAL
+  color: s.Z.colors.INTERACTIVE_NORMAL
 }),
 onClick: I
   });

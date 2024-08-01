@@ -4,8 +4,8 @@ return E;
   }
 }), n(47120);
 var i = n(470079),
-  s = n(442837),
-  a = n(45114),
+  a = n(442837),
+  s = n(45114),
   r = n(733427),
   l = n(455199),
   o = n(833592),
@@ -19,14 +19,14 @@ let {
   isDesktop: _,
   withMentions: E = !1,
   initialPageSize: I
-} = e, m = (0, s.e7)([u.Z], () => u.Z.shouldReload()), T = i.useRef(!1), [h, N] = i.useState(!1), {
+} = e, m = (0, a.e7)([u.Z], () => u.Z.shouldReload()), T = i.useRef(!1), [h, N] = i.useState(!1), {
   initialized: f,
   loading: C,
   items: p,
   hasMore: g,
   cursor: S,
   errored: A
-} = (0, s.cj)([c.Z], () => ({
+} = (0, a.cj)([c.Z], () => ({
   initialized: c.Z.initialized,
   loading: c.Z.loading,
   items: c.Z.items,
@@ -36,12 +36,12 @@ let {
 })), {
   roleFilter: M,
   everyoneFilter: R
-} = (0, s.cj)([l.Z], () => ({
+} = (0, a.cj)([l.Z], () => ({
   everyoneFilter: l.Z.everyoneFilter,
   roleFilter: l.Z.roleFilter
 }));
 i.useEffect(() => ((0, o.Vk)(!0), () => (0, o.Vk)(!1)), []), i.useEffect(() => {
-  f && t && (0, a.FT)(d.W.NOTIFICATION_CENTER);
+  f && t && (0, s.FT)(d.W.NOTIFICATION_CENTER);
 }, [
   t,
   f
@@ -110,7 +110,7 @@ let {
   loading: t,
   items: n,
   hasMore: i,
-  loadMore: s
+  loadMore: a
 } = _({
   isFocused: !0,
   isDesktop: !0
@@ -120,6 +120,6 @@ return {
   loading: t,
   items: n.filter(e => 'notification-center-item' === e.kind),
   hasMore: i,
-  loadMore: s
+  loadMore: a
 };
   };

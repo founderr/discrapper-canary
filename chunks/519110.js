@@ -4,8 +4,8 @@ return p;
   }
 }), n(757143);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(80932),
   o = n(2052),
@@ -33,13 +33,13 @@ name: p,
 isInExpressionPicker: g = !1
   } = e, {
 location: S
-  } = (0, o.O)(), A = s.useMemo(() => ({
+  } = (0, o.O)(), A = a.useMemo(() => ({
 ...S,
 section: g ? N.jXE.EXPRESSION_PICKER : N.jXE.CONTEXT_MENU
   }), [
 S,
 g
-  ]), M = (0, m.Go)(), R = (0, a.e7)([T.Z], () => t === _.S.STICKER && null != n ? T.Z.getStickerById(n) : null), O = null != R && M.includes(R.id), x = (0, a.e7)([u.Z], () => {
+  ]), M = (0, m.Go)(), R = (0, s.e7)([T.Z], () => t === _.S.STICKER && null != n ? T.Z.getStickerById(n) : null), O = null != R && M.includes(R.id), x = (0, s.e7)([u.Z], () => {
 if (t === _.S.EMOJI) {
   if (null != n)
     return u.Z.getDisambiguatedEmojiContext().getById(n);

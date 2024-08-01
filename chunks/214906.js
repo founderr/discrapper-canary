@@ -5,8 +5,8 @@ return E;
 }), n(47120);
 var i = n(735250);
 n(470079);
-var s = n(913527),
-  a = n.n(s),
+var a = n(913527),
+  s = n.n(a),
   r = n(442837),
   l = n(481060),
   o = n(777861),
@@ -16,7 +16,7 @@ var s = n(913527),
   _ = n(689938);
 
 function E(e) {
-  let [t, n, s] = (0, r.Wu)([c.Z], () => [
+  let [t, n, a] = (0, r.Wu)([c.Z], () => [
 c.Z.isMuted(e.id),
 c.Z.getMuteConfig(e.id),
 c.Z.hasJoined(e.id)
@@ -27,7 +27,7 @@ u.Z.setNotificationSettings(e, {
   muted: t
 });
   }
-  return s ? t ? (0, i.jsx)(l.MenuItem, {
+  return a ? t ? (0, i.jsx)(l.MenuItem, {
 id: 'unmute-channel',
 label: e.isForumPost() ? _.Z.Messages.UNMUTE_FORUM_POST : _.Z.Messages.UNMUTE_THREAD,
 subtext: E,
@@ -39,13 +39,13 @@ action: () => I(!0),
 children: (0, d.k)().map(t => {
   let {
     value: n,
-    label: s
+    label: a
   } = t;
   return (0, i.jsx)(l.MenuItem, {
     id: ''.concat(n),
-    label: s,
+    label: a,
     action: () => function(t) {
-      let n = t > 0 ? a()().add(t, 'second').toISOString() : null;
+      let n = t > 0 ? s()().add(t, 'second').toISOString() : null;
       u.Z.setNotificationSettings(e, {
         muted: !0,
         mute_config: {

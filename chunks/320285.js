@@ -1,6 +1,6 @@
-var i, s;
+var i, a;
 n.d(t, {
   p: function() {
 return i;
   }
-}), (s = i || (i = {})).RAID = 'raid', s.MENTION_RAID = 'mention_raid', s.ACTIVITY_ALERTS_ENABLED = 'activity_alerts_enabled', s.INTERACTION_BLOCKED = 'interaction_blocked';
+}), (a = i || (i = {})).RAID = 'raid', a.MENTION_RAID = 'mention_raid', a.ACTIVITY_ALERTS_ENABLED = 'activity_alerts_enabled', a.INTERACTION_BLOCKED = 'interaction_blocked';

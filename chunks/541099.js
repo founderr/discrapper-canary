@@ -1,4 +1,4 @@
-var i, a, l, r, o = t(442837),
+var i, a, l, o, r = t(442837),
   s = t(570140),
   c = t(827498);
 let u = {
@@ -15,7 +15,7 @@ closeReason: n = c.ti.DISMISSED
   } = e;
   return u.show = !1, u.entrypoint = c._b.NONE, u.closeReason = n, !0;
 }
-class m extends(r = o.ZP.Store) {
+class m extends(o = r.ZP.Store) {
   initialize() {}
   shouldShowPopup() {
 return u.show && u.entrypoint === c._b.TEXT;

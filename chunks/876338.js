@@ -1,20 +1,20 @@
 n.d(t, {
   j: function() {
-return a;
+return s;
   }
 });
 var i = n(406432),
-  s = n(981631);
+  a = n(981631);
 
-function a(e, t) {
+function s(e, t) {
   let {
 targetKind: n,
-embedIndex: a
+embedIndex: s
   } = t;
   if ('media' === n) {
 var r, l;
 let t = e;
-return (null === (r = e.messageReference) || void 0 === r ? void 0 : r.type) === s.Uvt.FORWARD && (t = null === (l = e.messageSnapshots[0]) || void 0 === l ? void 0 : l.message), {
+return (null === (r = e.messageReference) || void 0 === r ? void 0 : r.type) === a.Uvt.FORWARD && (t = null === (l = e.messageSnapshots[0]) || void 0 === l ? void 0 : l.message), {
   onlyAttachmentIds: null == t ? void 0 : t.attachments.filter(e => {
     let {
       filename: t
@@ -23,8 +23,8 @@ return (null === (r = e.messageReference) || void 0 === r ? void 0 : r.type) ===
   }).map(e => e.id)
 };
   }
-  if ('embed' === n && null != a)
+  if ('embed' === n && null != s)
 return {
-  onlyEmbedIndices: [a]
+  onlyEmbedIndices: [s]
 };
 }

@@ -4,8 +4,8 @@ return N;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(665149),
   o = n(618158),
@@ -35,13 +35,13 @@ hasNewClips: g,
 lastClipsSession: S,
 remindersEnabled: A,
 hasAnyClipAnimations: M
-  } = (0, a.cj)([_.Z], () => ({
+  } = (0, s.cj)([_.Z], () => ({
 hasClips: _.Z.hasClips(),
 hasNewClips: _.Z.getNewClipIds().length > 0,
 lastClipsSession: _.Z.getLastClipsSession(),
 remindersEnabled: _.Z.getSettings().remindersEnabled,
 hasAnyClipAnimations: _.Z.hasAnyClipAnimations()
-  })), R = null != S && S.newClipIds.length > 0, O = (0, I.n)(e => e.clipsButtonRef), x = (0, I.n)(e => e.setClipsButtonRef), v = (0, a.e7)([c.Z], () => c.Z.hasLayers()), {
+  })), R = null != S && S.newClipIds.length > 0, O = (0, I.n)(e => e.clipsButtonRef), x = (0, I.n)(e => e.setClipsButtonRef), v = (0, s.e7)([c.Z], () => c.Z.hasLayers()), {
 preventIdle: Z,
 allowIdle: L
   } = (0, o.Y)('animation');
@@ -61,7 +61,7 @@ allowIdle: L
   modalKey: T.Qr
 });
   }
-  return (s.useEffect(() => (M ? Z() : L(), () => L()), [
+  return (a.useEffect(() => (M ? Z() : L(), () => L()), [
 M,
 Z,
 L

@@ -8,8 +8,8 @@ return F;
 });
 var i = n(735250);
 n(470079);
-var s = n(374470),
-  a = n(481060),
+var a = n(374470),
+  s = n(481060),
   r = n(239091),
   l = n(911969),
   o = n(299206),
@@ -47,7 +47,7 @@ var s = n(374470),
 
 function G(e) {
   var t, n;
-  let i, a, l, o, {
+  let i, s, l, o, {
   channel: c,
   message: u,
   target: d,
@@ -61,11 +61,11 @@ h = d.getAttribute('data-type'),
 N = d.getAttribute('data-id'),
 f = d.getAttribute('data-name');
   if (null != _)
-a = i = l = _.url;
+s = i = l = _.url;
   else
 for (;
-  (0, s.k)(T);)
-  (0, s.k)(T, HTMLImageElement) && null != T.src && (a = T.src), (0, s.k)(T, HTMLAnchorElement) && null != T.href && (i = T.href, o = T.textContent, null == a && 'img' === T.getAttribute('data-role') && (a = i, T.hasAttribute('data-safe-src') && '' !== T.getAttribute('data-safe-src') && (l = T.getAttribute('data-safe-src')))), T = T.parentNode;
+  (0, a.k)(T);)
+  (0, a.k)(T, HTMLImageElement) && null != T.src && (s = T.src), (0, a.k)(T, HTMLAnchorElement) && null != T.href && (i = T.href, o = T.textContent, null == s && 'img' === T.getAttribute('data-role') && (s = i, T.hasAttribute('data-safe-src') && '' !== T.getAttribute('data-safe-src') && (l = T.getAttribute('data-safe-src')))), T = T.parentNode;
   return F({
 message: u,
 channel: c,
@@ -75,7 +75,7 @@ favoriteableType: h,
 favoriteableId: N,
 favoriteableName: f,
 itemHref: i,
-itemSrc: a,
+itemSrc: s,
 itemSafeSrc: l,
 itemTextContent: o,
 canReport: !0,
@@ -92,7 +92,7 @@ function F(e) {
   let {
 message: t,
 channel: n,
-mediaItem: s,
+mediaItem: a,
 textSelection: r,
 favoriteableType: G,
 favoriteableId: F,
@@ -103,12 +103,12 @@ itemSafeSrc: Y,
 itemTextContent: W,
 canReport: K,
 onHeightUpdate: z,
-onSelect: q,
-onClose: Q,
+onSelect: Q,
+onClose: q,
 navId: X,
 ariaLabel: J,
 shouldHideMediaOptions: $ = !1
-  } = e, ee = (0, c.Z)(r), et = (0, _.Z)(r), en = (0, O.Z)(t, n), ei = (0, T.Z)(t, n), es = (0, g.Z)(t, n), ea = (0, R.Z)(t, n), er = (0, S.Z)({
+  } = e, ee = (0, c.Z)(r), et = (0, _.Z)(r), en = (0, O.Z)(t, n), ei = (0, T.Z)(t, n), ea = (0, g.Z)(t, n), es = (0, R.Z)(t, n), er = (0, S.Z)({
 type: G,
 id: F,
 name: w
@@ -116,7 +116,7 @@ name: w
 shouldHideMediaOptions: $
   }), eN = (0, u.Z)(Y, t, {
 shouldHideMediaOptions: $
-  }), ef = (0, B.Z)(t, s), eC = (0, o.Z)({
+  }), ef = (0, B.Z)(t, a), eC = (0, o.Z)({
 id: t.id,
 label: k.Z.Messages.COPY_ID_MESSAGE,
 shiftId: ''.concat(t.channel_id, '-').concat(t.id)
@@ -127,25 +127,25 @@ channel: n,
 guildId: void 0,
 onHeightUpdate: z
   }), ev = (0, y.Z)(t), eZ = (0, E.Z)(t);
-  return (0, i.jsxs)(a.Menu, {
+  return (0, i.jsxs)(s.Menu, {
 navId: X,
-onClose: Q,
+onClose: q,
 'aria-label': J,
-onSelect: q,
+onSelect: Q,
 children: [
-  (0, i.jsx)(a.MenuGroup, {
+  (0, i.jsx)(s.MenuGroup, {
     children: ee
   }),
-  (0, i.jsx)(a.MenuGroup, {
+  (0, i.jsx)(s.MenuGroup, {
     children: et
   }),
-  (0, i.jsxs)(a.MenuGroup, {
+  (0, i.jsxs)(s.MenuGroup, {
     children: [
       '' === r ? en : null,
       ei,
       ec,
-      es,
       ea,
+      es,
       er,
       ep,
       eg,
@@ -167,19 +167,19 @@ children: [
       K && em
     ]
   }),
-  null != eA && (0, i.jsx)(a.MenuGroup, {
+  null != eA && (0, i.jsx)(s.MenuGroup, {
     children: eA
   }),
-  (0, i.jsxs)(a.MenuGroup, {
+  (0, i.jsxs)(s.MenuGroup, {
     children: [
       eN,
       ef
     ]
   }),
-  (0, i.jsx)(a.MenuGroup, {
+  (0, i.jsx)(s.MenuGroup, {
     children: eh
   }),
-  (0, i.jsx)(a.MenuGroup, {
+  (0, i.jsx)(s.MenuGroup, {
     children: eC
   })
 ]

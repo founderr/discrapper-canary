@@ -1,36 +1,36 @@
 n.d(t, {
   f: function() {
-return s;
+return o;
   }
 });
-var i, s, a = n(735250);
+var s, o, i = n(735250);
 n(470079);
-var r = n(120356),
-  l = n.n(r),
-  o = n(780384),
-  c = n(918701),
-  u = n(78826),
+var a = n(120356),
+  r = n.n(a),
+  l = n(780384),
+  u = n(918701),
+  c = n(78826),
   d = n(981631),
-  _ = n(272467);
-(i = s || (s = {}))[i.SMALL = 24] = 'SMALL', i[i.MEDIUM = 32] = 'MEDIUM';
+  C = n(272467);
+(s = o || (o = {}))[s.SMALL = 24] = 'SMALL', s[s.MEDIUM = 32] = 'MEDIUM';
 t.Z = function(e) {
   let {
 className: t,
 gameTileSize: n = 24,
-quest: i,
-theme: s = d.BRd.DARK,
-withGameTile: r = !0
-  } = e, E = (0, o.wj)(s) ? d.BRd.DARK : d.BRd.LIGHT;
-  return (0, a.jsxs)('div', {
-className: l()(_.partnerBranding, t),
+quest: s,
+theme: o = d.BRd.DARK,
+withGameTile: a = !0
+  } = e, E = (0, l.wj)(o) ? d.BRd.DARK : d.BRd.LIGHT;
+  return (0, i.jsxs)('div', {
+className: r()(C.partnerBranding, t),
 children: [
-  r && (0, a.jsx)(u.Fl, {
+  a && (0, i.jsx)(c.Fl, {
     id: 'QuestPartnerBranding_gameTile',
-    children: e => (0, a.jsx)('img', {
+    children: e => (0, i.jsx)('img', {
       ref: e,
-      className: _.partnerBrandingGameTile,
+      className: C.partnerBrandingGameTile,
       alt: '',
-      src: (0, c.uo)(i, E),
+      src: (0, u.uo)(s, E),
       style: {
         borderRadius: function(e) {
           switch (e) {
@@ -45,13 +45,13 @@ children: [
       }
     })
   }),
-  (0, a.jsx)(u.Fl, {
+  (0, i.jsx)(c.Fl, {
     id: 'QuestPartnerBranding_gameLogotype',
-    children: e => (0, a.jsx)('img', {
+    children: e => (0, i.jsx)('img', {
       ref: e,
-      className: _.partnerBrandingLogotype,
-      alt: i.config.messages.gameTitle,
-      src: (0, c.Gs)(i, E)
+      className: C.partnerBrandingLogotype,
+      alt: s.config.messages.gameTitle,
+      src: (0, u.Gs)(s, E)
     })
   })
 ]

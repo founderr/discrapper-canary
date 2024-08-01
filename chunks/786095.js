@@ -4,8 +4,8 @@ return C;
   }
 }), n(47120), n(724458);
 var i = n(735250),
-  s = n(470079),
-  a = n(481060),
+  a = n(470079),
+  s = n(481060),
   r = n(239091),
   l = n(236413),
   o = n(727072),
@@ -30,14 +30,14 @@ saveRule: p,
 errorMessage: g
   } = (0, d.w)(), {
 createNewEditingRule: S
-  } = (0, d.V)(), [A, M] = s.useState(!1), [R, O] = (0, o.I2)(t), {
+  } = (0, d.V)(), [A, M] = a.useState(!1), [R, O] = (0, o.I2)(t), {
 rulesByTriggerType: x,
 updateRule: v
-  } = (0, o.pH)(t), Z = s.useMemo(() => {
+  } = (0, o.pH)(t), Z = a.useMemo(() => {
 var e;
 return null !== (e = x[f]) && void 0 !== e ? e : [];
   }, [x]), L = 0 === Z.length, P = n > Z.length && !L;
-  if (!s.useMemo(() => (0, u.ze)(t), [t]) || null == e || 0 === e.length || null == t)
+  if (!a.useMemo(() => (0, u.ze)(t), [t]) || null == e || 0 === e.length || null == t)
 return null;
   let D = e.split(' '),
 b = D.length;
@@ -62,7 +62,7 @@ U = async t => {
   var n, i;
   if ((0, r.Zy)(), !await (0, E.XN)(t.name, e))
     return;
-  let s = {
+  let a = {
     ...t,
     triggerMetadata: {
       ...t.triggerMetadata,
@@ -72,16 +72,16 @@ U = async t => {
       ]
     }
   };
-  await p(s, Z), v(s), null != g ? (0, a.showToast)((0, a.createToast)(h.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_ERROR, a.ToastType.FAILURE)) : (0, a.showToast)((0, a.createToast)(h.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_SUCCESS, a.ToastType.SUCCESS));
+  await p(a, Z), v(a), null != g ? (0, s.showToast)((0, s.createToast)(h.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_ERROR, s.ToastType.FAILURE)) : (0, s.showToast)((0, s.createToast)(h.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_SUCCESS, s.ToastType.SUCCESS));
 }, y = (0, i.jsx)(i.Fragment, {
-  children: (0, i.jsx)(a.MenuItem, {
+  children: (0, i.jsx)(s.MenuItem, {
     id: 'automod-rules-loading',
     label: h.Z.Messages.LOADING
   })
 });
   return !R && (y = (0, i.jsxs)(i.Fragment, {
 children: [
-  L && (0, i.jsx)(a.MenuItem, {
+  L && (0, i.jsx)(s.MenuItem, {
     id: 'add-first-rule',
     label: h.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE,
     action: j,
@@ -97,13 +97,13 @@ children: [
       });
       if (null == i)
         return t;
-      let s = (0, _.c)(n, i);
-      return t += ', '.concat(null == s ? void 0 : s.headerText);
+      let a = (0, _.c)(n, i);
+      return t += ', '.concat(null == a ? void 0 : a.headerText);
     }, '');
-    return (0, i.jsx)(a.MenuRadioItem, {
+    return (0, i.jsx)(s.MenuRadioItem, {
       id: e.id,
       label: e.name,
-      subtext: (0, i.jsx)(a.Text, {
+      subtext: (0, i.jsx)(s.Text, {
         color: 'text-muted',
         className: N.actionTextHeader,
         variant: 'text-xs/normal',
@@ -117,8 +117,8 @@ children: [
   }),
   P && (0, i.jsxs)(i.Fragment, {
     children: [
-      (0, i.jsx)(a.MenuSeparator, {}),
-      (0, i.jsx)(a.MenuItem, {
+      (0, i.jsx)(s.MenuSeparator, {}),
+      (0, i.jsx)(s.MenuItem, {
         id: 'add-another-rule',
         label: h.Z.Messages.GUILD_AUTOMOD_ADD_NEW_RULE,
         action: j,
@@ -127,7 +127,7 @@ children: [
     ]
   })
 ]
-  })), (0, i.jsx)(a.MenuItem, {
+  })), (0, i.jsx)(s.MenuItem, {
 id: 'guild-automod-add-selection',
 label: h.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION.format({
   keywordCount: b

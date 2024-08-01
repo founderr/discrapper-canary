@@ -5,8 +5,8 @@ return f;
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(399606),
   l = n(524437),
   o = n(481060),
@@ -25,7 +25,7 @@ function f(e) {
   let {
 tab: t,
 setTab: n,
-children: s,
+children: a,
 badgeState: f,
 closePopout: C
   } = e, {
@@ -46,10 +46,10 @@ enabled: S
 location: 'RecentsHeader'
   }), A = (0, r.e7)([d.Z], () => d.Z.getUnseenInviteCount()), M = (0, r.e7)([E.Z], () => E.Z.getMessageReminders()).length;
   return (0, i.jsxs)(c.h4, {
-className: a()(N.header, N.expanded),
+className: s()(N.header, N.expanded),
 children: [
   (0, i.jsxs)('div', {
-    className: a()(N.expandedInboxHeader),
+    className: s()(N.expandedInboxHeader),
     children: [
       (0, i.jsx)(o.InboxIcon, {
         size: 'md',
@@ -67,7 +67,7 @@ children: [
     ]
   }),
   (0, i.jsxs)('div', {
-    className: a()(N.expandedTabSection),
+    className: s()(N.expandedTabSection),
     children: [
       (0, i.jsxs)(o.TabBar, {
         selectedItem: t,
@@ -77,20 +77,20 @@ children: [
           (0, i.jsxs)(o.TabBar.Item, {
             id: l.X.FOR_YOU,
             'aria-label': h.Z.Messages.FOR_YOU,
-            className: a()(N.tab, N.expanded, {
+            className: s()(N.tab, N.expanded, {
               [N.active]: t === l.X.FOR_YOU
             }),
             children: [
               h.Z.Messages.FOR_YOU,
               (null == f ? void 0 : f.badgeForYou) ? (0, i.jsx)(o.CircleBadge, {
                 color: u.Z.STATUS_DANGER,
-                className: a()(N.iconBadge)
+                className: s()(N.iconBadge)
               }) : null
             ]
           }),
           (0, i.jsx)(o.TabBar.Item, {
             id: l.X.UNREADS,
-            className: a()(N.tab, N.expanded, {
+            className: s()(N.tab, N.expanded, {
               [N.active]: t === l.X.UNREADS
             }),
             children: h.Z.Messages.UNREADS_TAB_LABEL
@@ -98,7 +98,7 @@ children: [
           (0, i.jsx)(o.TabBar.Item, {
             'aria-label': h.Z.Messages.MENTIONS,
             id: l.X.MENTIONS,
-            className: a()(N.tab, N.expanded, {
+            className: s()(N.tab, N.expanded, {
               [N.active]: t === l.X.MENTIONS
             }),
             children: h.Z.Messages.MENTIONS
@@ -106,21 +106,21 @@ children: [
           S ? (0, i.jsxs)(o.TabBar.Item, {
             'aria-label': 'game_invites',
             id: l.X.GAME_INVITES,
-            className: a()(N.tab, N.expanded, {
+            className: s()(N.tab, N.expanded, {
               [N.active]: t === l.X.GAME_INVITES
             }),
             children: [
               h.Z.Messages.GAME_INVITES,
               A > 0 ? (0, i.jsx)(o.CircleBadge, {
                 color: u.Z.STATUS_DANGER,
-                className: a()(N.iconBadge)
+                className: s()(N.iconBadge)
               }) : null
             ]
           }) : null,
           g ? (0, i.jsx)(o.TabBar.Item, {
             'aria-label': 'bookmarks',
             id: l.X.BOOKMARKS,
-            className: a()(N.tab, N.expanded, {
+            className: s()(N.tab, N.expanded, {
               [N.active]: t === l.X.BOOKMARKS
             }),
             children: h.Z.Messages.MESSAGE_BOOKMARKS_HEADER
@@ -128,14 +128,14 @@ children: [
           p ? (0, i.jsxs)(o.TabBar.Item, {
             'aria-label': 'todos',
             id: l.X.TODOS,
-            className: a()(N.tab, N.expanded, {
+            className: s()(N.tab, N.expanded, {
               [N.active]: t === l.X.TODOS
             }),
             children: [
               h.Z.Messages.MESSAGE_REMINDERS_HEADER,
               M > 0 ? (0, i.jsx)(o.CircleBadge, {
                 color: u.Z.STATUS_DANGER,
-                className: a()(N.iconBadge)
+                className: s()(N.iconBadge)
               }) : null
             ]
           }) : null
@@ -143,7 +143,7 @@ children: [
       }),
       (0, i.jsx)('div', {
         className: N.controls,
-        children: s
+        children: a
       })
     ]
   })

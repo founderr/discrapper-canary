@@ -1,14 +1,14 @@
 t.d(n, {
   Z: function() {
-return f;
+return C;
   }
 });
 var i = t(735250);
 t(470079);
 var a = t(442837),
   l = t(481060),
-  r = t(595519),
-  o = t(374065),
+  o = t(595519),
+  r = t(374065),
   s = t(542094),
   c = t(895924),
   u = t(496675),
@@ -17,12 +17,12 @@ var a = t(442837),
   p = t(689938),
   _ = t(119178);
 
-function f(e) {
+function C(e) {
   let {
 channel: n,
 application: t,
-sectionName: f,
-commandName: C,
+sectionName: C,
+commandName: f,
 buttonSize: h = l.ButtonSizes.MEDIUM
   } = e, {
 onActivityItemSelected: A,
@@ -33,22 +33,22 @@ buttonText: v
 channel: n,
 application: t,
 location: c.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-sectionName: f,
-commandName: C
+sectionName: C,
+commandName: f
   }), x = function(e) {
 let {
   channel: n,
   activityAction: t
-} = e, i = (0, a.e7)([u.Z], () => u.Z.can(m.Pl.USE_EMBEDDED_ACTIVITIES, n)), l = (0, o.KF)(n.id), c = !1;
+} = e, i = (0, a.e7)([u.Z], () => u.Z.can(m.Pl.USE_EMBEDDED_ACTIVITIES, n)), l = (0, r.KF)(n.id), c = !1;
 switch (t) {
   case s.JS.LEAVE:
     c = !1;
     break;
   case s.JS.START:
-    n.isGuildVoice() ? l !== o.jy.CAN_LAUNCH && (c = !0) : !(0, r.WS)(n, !0) && (c = !0);
+    n.isGuildVoice() ? l !== r.jy.CAN_LAUNCH && (c = !0) : !(0, o.WS)(n, !0) && (c = !0);
     break;
   case s.JS.JOIN:
-    n.isGuildVoice() ? c = !i : !(0, r.WS)(n, !1) && (c = !0);
+    n.isGuildVoice() ? c = !i : !(0, o.WS)(n, !1) && (c = !0);
 }
 return c;
   }({

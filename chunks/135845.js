@@ -5,8 +5,8 @@ return h;
 });
 var i = n(735250);
 n(470079);
-var s = n(512722),
-  a = n.n(s),
+var a = n(512722),
+  s = n.n(a),
   r = n(442837),
   l = n(955415),
   o = n(131704),
@@ -20,7 +20,7 @@ var s = n(512722),
   T = n(182578);
 
 function h(e) {
-  let t, n, s, {
+  let t, n, a, {
   invite: h,
   currentUserId: N,
   guild: f,
@@ -39,12 +39,12 @@ M = (0, r.e7)([u.Z], () => null != h && null != h.target_user ? u.Z.getStreamFor
 ]),
 R = null != h && h.target_type === I.Iq.STREAM && null != h.target_user && null != A,
 O = null != h && null != M && null != h.channel && null != h.guild && M.channelId === h.channel.id && M.guildId === h.guild.id;
-  a()(null != h, 'Invite cannot be null');
+  s()(null != h, 'Invite cannot be null');
   let {
 target_type: x,
 target_user: v
   } = h;
-  a()(x === I.Iq.STREAM && null != v, 'invalid streaming invite');
+  s()(x === I.Iq.STREAM && null != v, 'invalid streaming invite');
   let Z = N === v.id,
 L = h.state === E.r2o.ACCEPTING,
 P = null != f;
@@ -55,9 +55,9 @@ f = new c.ZP(h.guild);
   }
   let D = null != h.channel ? (0, o.jD)(h.channel) : null,
 b = R ? C : p;
-  P && !O ? s = Z ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({
+  P && !O ? a = Z ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({
 name: v.username
-  }) : (t = m.Z.Messages.WATCH, n = l.Z.Button.Colors.GREEN, R && (t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING, n = l.Z.Button.Colors.PRIMARY), s = Z ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({
+  }) : (t = m.Z.Messages.WATCH, n = l.Z.Button.Colors.GREEN, R && (t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING, n = l.Z.Button.Colors.PRIMARY), a = Z ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({
 name: v.username
   }));
   let j = S === f.id && null != D ? (0, i.jsx)(l.Z.Channel, {
@@ -80,7 +80,7 @@ children: [
             onClick: P && O ? b : void 0
           }),
           (0, i.jsx)(l.Z.Info, {
-            title: s,
+            title: a,
             onClick: P && O ? b : void 0,
             children: j
           })

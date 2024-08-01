@@ -4,8 +4,8 @@ return T;
   }
 });
 var i = n(933557),
-  s = n(356264),
-  a = n(592125),
+  a = n(356264),
+  s = n(592125),
   r = n(430824),
   l = n(496675),
   o = n(699516),
@@ -44,12 +44,12 @@ accessibilityLabel: E.Z.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format(
 class T {
   getForwardInfo() {
 var e, t, n, u, I;
-let T = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a.Z,
+let T = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.Z,
   h = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
   N = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
   f = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.Z,
   C = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Z,
-  p = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : s.Z,
+  p = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.Z,
   {
     snapshotIndex: g,
     parentMessage: S,

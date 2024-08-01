@@ -4,8 +4,8 @@ return I;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(239091),
   o = n(585237),
@@ -28,14 +28,14 @@ let I = {
   Colors: o.Z.Colors,
   Looks: o.Z.Looks
 };
-class m extends s.PureComponent {
+class m extends a.PureComponent {
   render() {
 let {
   skus: e,
   children: t,
   applicationId: n,
-  primarySKU: s,
-  onSKUSelect: a,
+  primarySKU: a,
+  onSKUSelect: s,
   ...r
 } = this.props;
 return (0, i.jsx)(o.Z, {
@@ -77,7 +77,7 @@ super(...e), E(this, 'renderContextMenu', () => {
 });
   }
 }
-t.Z = a.ZP.connectStores([
+t.Z = s.ZP.connectStores([
   u.Z,
   c.Z
 ], e => {

@@ -5,8 +5,8 @@ return E;
 });
 var i = n(735250);
 n(470079);
-var s = n(442837),
-  a = n(481060),
+var a = n(442837),
+  s = n(481060),
   r = n(668781),
   l = n(79390),
   o = n(222677),
@@ -17,11 +17,11 @@ var s = n(442837),
 
 function E(e, t) {
   let n = (0, c.$R)(t),
-E = (0, s.e7)([u.Z], () => u.Z.can(d.Plq.MANAGE_MESSAGES, t) && n, [
+E = (0, a.e7)([u.Z], () => u.Z.can(d.Plq.MANAGE_MESSAGES, t) && n, [
   t,
   n
 ]);
-  return !E || null == e.reactions || 0 === e.reactions.length || e.isPoll() && !(0, l.eQ)(e) ? null : (0, i.jsx)(a.MenuItem, {
+  return !E || null == e.reactions || 0 === e.reactions.length || e.isPoll() && !(0, l.eQ)(e) ? null : (0, i.jsx)(s.MenuItem, {
 id: 'remove-reactions',
 label: _.Z.Messages.REMOVE_ALL_REACTIONS,
 action: function(n) {

@@ -1,6 +1,6 @@
 var i = n(544891),
-  s = n(570140),
-  a = n(346479),
+  a = n(570140),
+  s = n(346479),
   r = n(624453),
   l = n(668781),
   o = n(981631),
@@ -9,9 +9,9 @@ let u = {
   async pinMessage(e, t) {
 let {
   id: n,
-  name: s
+  name: a
 } = e;
-await a.Z.unarchiveThreadIfNecessary(e.id), i.tn.put({
+await s.Z.unarchiveThreadIfNecessary(e.id), i.tn.put({
   url: o.ANM.PIN(n, t),
   oldFormErrors: !0
 }).catch(() => {
@@ -20,7 +20,7 @@ await a.Z.unarchiveThreadIfNecessary(e.id), i.tn.put({
     maxPins: o.tG9
   }) : c.Z.Messages.PIN_MESSAGE_TOO_MANY_BODY.format({
     maxPins: o.tG9,
-    channelName: s
+    channelName: a
   }), l.Z.show({
     title: c.Z.Messages.PIN_MESSAGE_TOO_MANY_TITLE,
     body: t,
@@ -29,7 +29,7 @@ await a.Z.unarchiveThreadIfNecessary(e.id), i.tn.put({
 });
   },
   async unpinMessage(e, t) {
-await a.Z.unarchiveThreadIfNecessary(e.id), i.tn.del({
+await s.Z.unarchiveThreadIfNecessary(e.id), i.tn.del({
   url: o.ANM.PIN(e.id, t),
   oldFormErrors: !0
 }).catch(() => l.Z.show({
@@ -41,7 +41,7 @@ await a.Z.unarchiveThreadIfNecessary(e.id), i.tn.del({
 }));
   },
   ackPins(e) {
-s.Z.dispatch({
+a.Z.dispatch({
   type: 'CHANNEL_PINS_ACK',
   channelId: e
 });
@@ -50,7 +50,7 @@ s.Z.dispatch({
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
   n = r.Z.getPinnedMessages(e);
 if (!!t || null == n || !n.loaded && !n.loading)
-  s.Z.dispatch({
+  a.Z.dispatch({
     type: 'LOAD_PINNED_MESSAGES',
     channelId: e
   }), i.tn.get({
@@ -58,13 +58,13 @@ if (!!t || null == n || !n.loaded && !n.loading)
     retries: 2,
     oldFormErrors: !0
   }).then(t => {
-    s.Z.dispatch({
+    a.Z.dispatch({
       type: 'LOAD_PINNED_MESSAGES_SUCCESS',
       messages: t.body,
       channelId: e
     });
   }, () => {
-    s.Z.dispatch({
+    a.Z.dispatch({
       type: 'LOAD_PINNED_MESSAGES_FAILURE',
       channelId: e
     });

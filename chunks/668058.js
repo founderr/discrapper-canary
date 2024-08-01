@@ -1,25 +1,25 @@
 n.d(t, {
   $: function() {
-return a;
+return s;
   }
 }), n(47120);
 var i = n(470079),
-  s = n(881052);
+  a = n(881052);
 
-function a(e) {
+function s(e) {
   let {
 onError: t,
 onSuccess: n,
-report: a
+report: s
   } = e, [r, l] = i.useState(!1);
   return {
 reportFalsePositive: i.useCallback(async () => {
   if (!r) {
     l(!0);
     try {
-      await a(), null == n || n();
+      await s(), null == n || n();
     } catch (n) {
-      let e = new s.Hx(n);
+      let e = new a.Hx(n);
       null == t || t(e);
     } finally {
       l(!1);
@@ -29,7 +29,7 @@ reportFalsePositive: i.useCallback(async () => {
   r,
   t,
   n,
-  a
+  s
 ]),
 isReportFalsePositiveLoading: r
   };

@@ -1,6 +1,6 @@
 n.d(t, {
   q: function() {
-return s;
+return a;
   }
 });
 let i = (0, n(818083).B)({
@@ -26,7 +26,7 @@ treatments: [{
   }
 ]
   }),
-  s = e => {
+  a = e => {
 let {
   location: t,
   autoTrackExposure: n = !1

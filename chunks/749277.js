@@ -5,8 +5,8 @@ return b;
 });
 var i = n(735250);
 n(470079);
-var s = n(442837),
-  a = n(704215),
+var a = n(442837),
+  s = n(704215),
   r = n(481060),
   l = n(232567),
   o = n(230711),
@@ -39,23 +39,23 @@ let b = e => {
   let {
 dismissibleContent: t,
 noticeType: b
-  } = e, j = (0, s.e7)([A.Z], () => A.Z.getNotice()), U = (0, s.e7)([S.default], () => S.default.locale);
+  } = e, j = (0, a.e7)([A.Z], () => A.Z.getNotice()), U = (0, a.e7)([S.default], () => S.default.locale);
   return (0, i.jsx)(O.Z, {
 contentTypes: [t],
 groupName: x.R.NOTICE_BAR,
 bypassAutoDismiss: !0,
 children: e => {
-  var t, s;
+  var t, a;
   let {
     visibleContent: S,
     markAsDismissed: A
   } = e;
   switch (S) {
-    case a.z.GUILD_ONBOARDING_UPSELL_NAGBAR:
+    case s.z.GUILD_ONBOARDING_UPSELL_NAGBAR:
       return (0, i.jsx)(m.Z, {
         dismissCurrentNotice: () => A(x.L.UNKNOWN)
       });
-    case a.z.NAGBAR_NOTICE_DOWNLOAD:
+    case s.z.NAGBAR_NOTICE_DOWNLOAD:
       return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.DEFAULT,
         children: [
@@ -90,7 +90,7 @@ children: e => {
           })
         ]
       });
-    case a.z.NAGBAR_NOTICE_CONNECT_SPOTIFY:
+    case s.z.NAGBAR_NOTICE_CONNECT_SPOTIFY:
       return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.SPOTIFY,
         children: [
@@ -112,7 +112,7 @@ children: e => {
           })
         ]
       });
-    case a.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION:
+    case s.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION:
       return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.PLAYSTATION,
         children: [
@@ -134,7 +134,7 @@ children: e => {
           })
         ]
       });
-    case a.z.NAGBAR_NOTICE_MFA_SMS_BACKUP:
+    case s.z.NAGBAR_NOTICE_MFA_SMS_BACKUP:
       return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.DEFAULT,
         children: [
@@ -150,7 +150,7 @@ children: e => {
           })
         ]
       });
-    case a.z.NAGBAR_NOTICE_PREMIUM_PROMO:
+    case s.z.NAGBAR_NOTICE_PREMIUM_PROMO:
       return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.PREMIUM_TIER_2,
         children: [
@@ -180,17 +180,17 @@ children: e => {
           })
         ]
       });
-    case a.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
+    case s.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
       return (0, i.jsx)(p.Z, {
         dismissCurrentNotice: () => A(x.L.UNKNOWN),
         subscriptionTier: L.Si.TIER_2
       });
-    case a.z.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
+    case s.z.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
       return (0, i.jsx)(p.Z, {
         dismissCurrentNotice: () => A(x.L.UNKNOWN),
         subscriptionTier: L.Si.TIER_0
       });
-    case a.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
+    case s.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
       return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.PREMIUM_TIER_2,
         children: [
@@ -208,27 +208,27 @@ children: e => {
           })
         ]
       });
-    case a.z.NAGBAR_NOTICE_LOCALIZED_PRICING:
+    case s.z.NAGBAR_NOTICE_LOCALIZED_PRICING:
       return (0, i.jsx)(C.Z, {
         notice: j,
         noticeType: b,
         dismissCurrentNotice: () => A(x.L.UNKNOWN)
       });
-    case a.z.QUEST_1_GO_LIVE_BANNER:
+    case s.z.QUEST_1_GO_LIVE_BANNER:
       let O = null == j ? void 0 : null === (t = j.metadata) || void 0 === t ? void 0 : t.partnerGame;
       return (0, i.jsx)(I.Z, {
         noticeType: b,
         markAsDismissed: () => A(x.L.UNKNOWN),
         partnerGame: O
       });
-    case a.z.QUEST_1_ENDED_INCOMPLETE:
-      let y = null == j ? void 0 : null === (s = j.metadata) || void 0 === s ? void 0 : s.partnerGame;
+    case s.z.QUEST_1_ENDED_INCOMPLETE:
+      let y = null == j ? void 0 : null === (a = j.metadata) || void 0 === a ? void 0 : a.partnerGame;
       return (0, i.jsx)(E.Z, {
         noticeType: b,
         markAsDismissed: () => A(x.L.UNKNOWN),
         partnerGame: y
       });
-    case a.z.NAGBAR_BOUNCED_EMAIL_NOTICE:
+    case s.z.NAGBAR_BOUNCED_EMAIL_NOTICE:
       return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.DANGER,
         children: [
@@ -246,7 +246,7 @@ children: e => {
           })
         ]
       });
-    case a.z.NAGBAR_ACTIVATE_SERVER_SUBSCRIPTION:
+    case s.z.NAGBAR_ACTIVATE_SERVER_SUBSCRIPTION:
       let B = _.Z.getEligibleGuildsForNagActivate();
       return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.DEFAULT,
@@ -265,7 +265,7 @@ children: e => {
           })
         ]
       });
-    case a.z.NAGBAR_NOTICE_POMELO:
+    case s.z.NAGBAR_NOTICE_POMELO:
       return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.WARNING,
         children: [
@@ -281,7 +281,7 @@ children: e => {
           })
         ]
       });
-    case a.z.UU_MIGRATION_NOTICE:
+    case s.z.UU_MIGRATION_NOTICE:
       return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.WARNING,
         children: [
@@ -299,7 +299,7 @@ children: e => {
           })
         ]
       });
-    case a.z.CHECKOUT_RECOVERY_NAGBAR:
+    case s.z.CHECKOUT_RECOVERY_NAGBAR:
       return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.PREMIUM_TIER_2,
         children: [
@@ -322,7 +322,7 @@ children: e => {
           })
         ]
       });
-    case a.z.CASH_APP_PAY_AWARENESS_NAGBAR:
+    case s.z.CASH_APP_PAY_AWARENESS_NAGBAR:
       return (0, i.jsx)(f.Z, {
         onClose: () => A(x.L.TAKE_ACTION)
       });

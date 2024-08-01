@@ -7,8 +7,8 @@ return E;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(607070),
   o = n(426563),
@@ -19,9 +19,9 @@ let _ = c.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
 function E() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-[t, n] = s.useState(!1),
-i = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
-r = s.useMemo(() => {
+[t, n] = a.useState(!1),
+i = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
+r = a.useMemo(() => {
   let n = t || !i && !e;
   return (0, o.j)(n);
 }, [
@@ -29,12 +29,12 @@ r = s.useMemo(() => {
   i,
   e
 ]),
-c = s.useCallback(() => n(!0), []);
+c = a.useCallback(() => n(!0), []);
   return {
 avatarSrc: r,
 eventHandlers: {
   onMouseEnter: c,
-  onMouseLeave: s.useCallback(() => n(!1), [])
+  onMouseLeave: a.useCallback(() => n(!1), [])
 }
   };
 }

@@ -9,7 +9,7 @@ return u;
 return o;
   },
   EI: function() {
-return a;
+return s;
   },
   Nn: function() {
 return d;
@@ -21,12 +21,12 @@ return c;
 return r;
   },
   zr: function() {
-return s;
+return a;
   }
 });
 var i = n(689938);
-let s = 'SAFETY_WARNING_BANNER_WEB',
-  a = 'https://www.crisistextline.org/',
+let a = 'SAFETY_WARNING_BANNER_WEB',
+  s = 'https://www.crisistextline.org/',
   r = 'https://nofiltr.org/resources-hub/',
   l = 'https://discord.findahelpline.com/',
   o = 'InappropriateConversationModal-web',

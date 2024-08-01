@@ -4,9 +4,9 @@ return x;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(512722),
-  r = n.n(a),
+  a = n(470079),
+  s = n(512722),
+  r = n.n(s),
   l = n(91192),
   o = n(873011),
   c = n(442837),
@@ -45,19 +45,19 @@ closePopout: t
   } = e, n = (0, c.e7)([f.Z], () => {
 var e, t;
 return null !== (t = null === (e = f.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : u.Pr.ALL;
-  }), s = (0, c.Wu)([
+  }), a = (0, c.Wu)([
 g.Z,
 f.Z
   ], () => {
 var e, t;
 let n = g.Z.getMessageReminders(),
   i = g.Z.getMessageBookmarks(),
-  s = null !== (t = null === (e = f.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : u.Pr.ALL;
-return s === u.Pr.ALL ? [
+  a = null !== (t = null === (e = f.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : u.Pr.ALL;
+return a === u.Pr.ALL ? [
   ...n,
   ...i
-] : s === u.Pr.BOOKMARKS ? i : n;
-  }), a = (0, c.e7)([g.Z], () => g.Z.getOverdueMessageReminderCount());
+] : a === u.Pr.BOOKMARKS ? i : n;
+  }), s = (0, c.e7)([g.Z], () => g.Z.getOverdueMessageReminderCount());
   return (0, i.jsx)(d.Dialog, {
 'aria-label': S.Z.Messages.FOR_LATER,
 children: (0, i.jsxs)('div', {
@@ -101,7 +101,7 @@ children: (0, i.jsxs)('div', {
                 id: u.Pr.REMINDERS,
                 className: A.tabBarItem,
                 children: S.Z.Messages.FOR_LATER_TAB_REMINDERS.format({
-                  count: a
+                  count: s
                 })
               })
             ]
@@ -110,7 +110,7 @@ children: (0, i.jsxs)('div', {
       ]
     }),
     (0, i.jsx)(v, {
-      savedMessages: s,
+      savedMessages: a,
       closePopout: t
     })
   ]
@@ -122,15 +122,15 @@ function x(e) {
   let {
 onOpen: t,
 onClose: n,
-children: a,
+children: s,
 popoutPosition: r,
 popoutAlign: l
-  } = e, [o, c] = s.useState(!1), u = s.useCallback(() => {
+  } = e, [o, c] = a.useState(!1), u = a.useCallback(() => {
 c(!1), o && (null == n || n());
   }, [
 n,
 o
-  ]), _ = s.useCallback(() => {
+  ]), _ = a.useCallback(() => {
 c(!o), o ? null == n || n() : null == t || t();
   }, [
 n,
@@ -154,7 +154,7 @@ children: (e, t) => {
   let {
     isShown: n
   } = t;
-  return a(_, n, e);
+  return s(_, n, e);
 }
   });
 }
@@ -163,19 +163,19 @@ function v(e) {
   let {
 savedMessages: t,
 closePopout: n
-  } = e, a = s.useRef(null), r = (0, E.Z)('for-later', a);
+  } = e, s = a.useRef(null), r = (0, E.Z)('for-later', s);
   return 0 === t.length ? (0, i.jsx)(P, {}) : (0, i.jsx)(l.bG, {
 navigator: r,
 children: (0, i.jsx)(l.SJ, {
   children: e => {
     let {
-      ref: s,
+      ref: a,
       ...r
     } = e;
     return (0, i.jsx)(d.AdvancedScrollerThin, {
       ref: e => {
         var t;
-        a.current = e, s.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null;
+        s.current = e, a.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null;
       },
       className: A.messagesScroller,
       ...r,
@@ -193,8 +193,8 @@ function Z(e) {
   let {
 savedMessage: t,
 closePopout: n
-  } = e, a = (0, c.e7)([C.Z], () => C.Z.getChannel(t.saveData.channelId));
-  return (s.useCallback(e => {
+  } = e, s = (0, c.e7)([C.Z], () => C.Z.getChannel(t.saveData.channelId));
+  return (a.useCallback(e => {
 !e.shiftKey && n(), _.Z.jumpToMessage({
   channelId: t.saveData.channelId,
   messageId: t.saveData.messageId,
@@ -203,14 +203,14 @@ closePopout: n
   }, [
 n,
 t
-  ]), null == a || null == t.message) ? (0, i.jsx)('div', {
+  ]), null == s || null == t.message) ? (0, i.jsx)('div', {
 children: 'The message isn\'t accessible. We will deal with this later.'
   }) : (0, i.jsxs)('div', {
 className: A.messageContainer,
 children: [
   (0, i.jsx)(I.Z, {
     message: t.message,
-    channel: a,
+    channel: s,
     className: A.message,
     compact: h.jU.getSetting(),
     animateAvatar: !1,
@@ -221,7 +221,7 @@ children: [
     className: A.actionButtons,
     children: (0, i.jsx)(L, {
       savedMessage: t,
-      channel: a
+      channel: s
     })
   })
 ]

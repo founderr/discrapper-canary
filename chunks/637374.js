@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(913527),
   o = n.n(l),
   c = n(442837),
@@ -66,7 +66,7 @@ children: [
 ]
   });
 }
-class w extends s.PureComponent {
+class w extends a.PureComponent {
   get isHorizontal() {
 let {
   width: e
@@ -101,7 +101,7 @@ super(...e), G(this, 'renderMedia', () => (0, i.jsx)('div', {
 })), G(this, 'renderTagline', () => this.props.isSelfGift ? B.Z.Messages.GIFT_EMBED_INVALID_TAGLINE_SELF : B.Z.Messages.GIFT_EMBED_INVALID_TAGLINE_OTHER);
   }
 }
-class V extends s.Component {
+class V extends a.Component {
   get analyticsLocation() {
 let {
   analyticsContext: {
@@ -158,13 +158,13 @@ return (e.isSubscription ? B.Z.Messages.GIFT_EMBED_SUBSCRIPTIONS_LEFT : B.Z.Mess
 let {
   libraryApplication: t,
   currentUser: n,
-  isSelfGift: s
-} = this.props, a = {
+  isSelfGift: a
+} = this.props, s = {
   onClick: this.handleAccept,
   color: u.Button.Colors.BRAND
-}, r = !e.isSubscription && null != t || !e.isSelfRedeemable && s || e.isExistingPremiumSubscriptionDisallowed && (0, P.I5)(n);
-return (e.redeemed || r || e.isClaimed || !n.verified) && (a.color = u.Button.Colors.BRAND, a.disabled = !0), (0, i.jsx)(u.Button, {
-  ...a,
+}, r = !e.isSubscription && null != t || !e.isSelfRedeemable && a || e.isExistingPremiumSubscriptionDisallowed && (0, P.I5)(n);
+return (e.redeemed || r || e.isClaimed || !n.verified) && (s.color = u.Button.Colors.BRAND, s.disabled = !0), (0, i.jsx)(u.Button, {
+  ...s,
   className: (0, T.mO)(e) ? k.collectiblesAcceptButton : null,
   size: u.Button.Sizes.SMALL,
   children: e.redeemed ? B.Z.Messages.GIFT_EMBED_BUTTON_CLAIMED : null != e.giftStyle ? B.Z.Messages.SEASONAL_GIFTING_OPEN_GIFT : B.Z.Messages.GIFT_EMBED_BUTTON_ACCEPT
@@ -191,8 +191,8 @@ let {
   libraryApplication: t,
   isSelfGift: n,
   sku: i,
-  gifter: s,
-  subscriptionPlan: a,
+  gifter: a,
+  subscriptionPlan: s,
   currentUser: r
 } = this.props;
 if (null == i)
@@ -225,12 +225,12 @@ if (n)
 if (e.isExistingPremiumSubscriptionDisallowed)
   return B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_ALREADY_ACTIVE;
 if (e.hasMultipleCopies)
-  return null != s ? e.isSubscription ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_GIVEAWAY.format({
-    username: b.ZP.getUserTag(s),
+  return null != a ? e.isSubscription ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_GIVEAWAY.format({
+    username: b.ZP.getUserTag(a),
     maxUses: e.maxUses,
     skuName: l
   }) : B.Z.Messages.GIFT_EMBED_BODY_GIVEAWAY.format({
-    username: b.ZP.getUserTag(s),
+    username: b.ZP.getUserTag(a),
     totalCopies: e.maxUses,
     skuName: l
   }) : e.isSubscription ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_GIVEAWAY.format({
@@ -241,16 +241,16 @@ if (e.hasMultipleCopies)
     skuName: l
   });
 if (e.isSubscription)
-  return null == a ? B.Z.Messages.LOADING : null != s ? (a.interval === y.rV.MONTH ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_MONTHS : B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_YEARS).format({
-    username: b.ZP.getUserTag(s),
+  return null == s ? B.Z.Messages.LOADING : null != a ? (s.interval === y.rV.MONTH ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_MONTHS : B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_YEARS).format({
+    username: b.ZP.getUserTag(a),
     skuName: l,
-    intervalCount: a.intervalCount
-  }) : (a.interval === y.rV.MONTH ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_MONTHS : B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_YEARS).format({
+    intervalCount: s.intervalCount
+  }) : (s.interval === y.rV.MONTH ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_MONTHS : B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_YEARS).format({
     skuName: l,
-    intervalCount: a.intervalCount
+    intervalCount: s.intervalCount
   });
-return null != s ? B.Z.Messages.GIFT_EMBED_BODY_DEFAULT.format({
-  username: b.ZP.getUserTag(s)
+return null != a ? B.Z.Messages.GIFT_EMBED_BODY_DEFAULT.format({
+  username: b.ZP.getUserTag(a)
 }) : B.Z.Messages.GIFT_EMBED_BODY_NO_USER_DEFAULT;
   }
   renderPromotionActions() {
@@ -281,7 +281,7 @@ let {
   giftCode: e,
   resolved: t,
   width: n,
-  isSelfGift: s
+  isSelfGift: a
 } = this.props;
 if (null != e && null != e.promotion)
   return (0, i.jsx)(j.$, {
@@ -295,7 +295,7 @@ if (null != e && null != e.promotion)
   });
 if (null == e || e.revoked)
   return t ? (0, i.jsx)(w, {
-    isSelfGift: s,
+    isSelfGift: a,
     width: n
   }) : (0, i.jsx)(_.OR, {
     isHorizontal: n >= _.aL
@@ -322,8 +322,8 @@ super(...e), G(this, 'handleViewLibrary', e => {
     channelId: t,
     code: n,
     content: i,
-    type: s,
-    giftInfo: a
+    type: a,
+    giftInfo: s
   } = this.props;
   e.preventDefault(), e.stopPropagation(), Z.default.track(U.rMx.OPEN_MODAL, {
     type: 'gift_accept',
@@ -332,12 +332,12 @@ super(...e), G(this, 'handleViewLibrary', e => {
       object: U.qAy.BUTTON_CTA
     }
   });
-  let r = s !== U.uaV.CUSTOM_GIFT ? void 0 : i;
+  let r = a !== U.uaV.CUSTOM_GIFT ? void 0 : i;
   (0, N.V)({
     processedCode: n,
     channelContext: t,
     customGiftMessage: r,
-    giftInfo: a
+    giftInfo: s
   });
 }), G(this, 'handleEmbedClick', e => {
   let {
@@ -357,25 +357,25 @@ super(...e), G(this, 'handleViewLibrary', e => {
   } = this.props;
   if (null == e || null == e.giftStyle)
     return null;
-  let s = y.jy.includes(e.giftStyle),
-    a = r()(k.customGiftEmbedWrapper, {
-      [k.legacySeasonalGiftEmbedWrapper]: s,
+  let a = y.jy.includes(e.giftStyle),
+    s = r()(k.customGiftEmbedWrapper, {
+      [k.legacySeasonalGiftEmbedWrapper]: a,
       [k.giftEmbedWrapperHorizontal]: n >= _.aL
     }),
     l = r()({
-      [k.legacySeasonalGiftEmbedBox]: s,
-      [k.legacySeasonalGiftEmbedBoxHorizontal]: s && n >= _.aL,
-      [k.customGiftEmbedBox]: !s,
-      [k.customGiftEmbedBoxHorizontal]: !s && n >= _.aL
+      [k.legacySeasonalGiftEmbedBox]: a,
+      [k.legacySeasonalGiftEmbedBoxHorizontal]: a && n >= _.aL,
+      [k.customGiftEmbedBox]: !a,
+      [k.customGiftEmbedBoxHorizontal]: !a && n >= _.aL
     });
   return (0, i.jsxs)('div', {
-    className: a,
+    className: s,
     children: [
       !t && y.eZ.includes(e.giftStyle) && (0, i.jsx)(v.Z, {
         className: k.snow,
         wind: 5
       }),
-      s && (0, i.jsx)(x.Z, {
+      a && (0, i.jsx)(x.Z, {
         className: k.headerIcon
       }),
       null != e.giftStyle && (0, i.jsx)(f.Z, {
@@ -402,16 +402,16 @@ t.Z = c.ZP.connectStores([
 code: t,
 author: n,
 currentUser: i
-  } = e, s = g.Z.get(t), a = null != s ? R.Z.get(s.skuId) : null, r = null != s && null != s.userId ? A.default.getUser(s.userId) : null, l = m.Z.useReducedMotion;
+  } = e, a = g.Z.get(t), s = null != a ? R.Z.get(a.skuId) : null, r = null != a && null != a.userId ? A.default.getUser(a.userId) : null, l = m.Z.useReducedMotion;
   return {
-sku: a,
-giftCode: s,
+sku: s,
+giftCode: a,
 gifter: r,
 currentUser: i,
-subscriptionPlan: null != s && null != s.subscriptionPlanId ? (0, D.oE)(s.subscriptionPlanId) : null,
-isSelfGift: null != s ? p.default.getId() === s.userId : p.default.getId() === n.id,
+subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, D.oE)(a.subscriptionPlanId) : null,
+isSelfGift: null != a ? p.default.getId() === a.userId : p.default.getId() === n.id,
 resolved: g.Z.getIsResolved(t),
-libraryApplication: null != a && (null == s ? void 0 : s.entitlementBranches) != null ? L.z2(s.entitlementBranches, a, S.Z) : null,
+libraryApplication: null != s && (null == a ? void 0 : a.entitlementBranches) != null ? L.z2(a.entitlementBranches, s, S.Z) : null,
 useReducedMotion: l
   };
 })(H);

@@ -4,9 +4,9 @@ return k;
   }
 }), n(653041), n(47120), n(390547);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(512722),
   o = n.n(l),
   c = n(442837),
@@ -42,8 +42,8 @@ function y(e) {
   let {
 members: t,
 membersOnline: n,
-isLarge: s,
-isStacked: a
+isLarge: a,
+isStacked: s
   } = e, l = [];
   return null != n && n > 0 && l.push((0, i.jsxs)('div', {
 className: D.statusWrapper,
@@ -75,8 +75,8 @@ children: [
 ]
   }, 'memberCount')), (0, i.jsx)('div', {
 className: r()(D.statusCounts, {
-  [D.large]: s,
-  [D.stacked]: a
+  [D.large]: a,
+  [D.stacked]: s
 }),
 children: l
   });
@@ -86,15 +86,15 @@ function B(e) {
   let {
 channel: t,
 guild: n,
-isStacked: s,
-hasEnded: a
+isStacked: a,
+hasEnded: s
   } = e;
   if (null != t && null != n) {
 let e = (0, C.KS)(t, n);
 return (0, i.jsxs)('div', {
   className: r()(D.channel, {
-    [D.stacked]: s,
-    [D.ended]: a
+    [D.stacked]: a,
+    [D.ended]: s
   }),
   children: [
     null != e ? (0, i.jsx)(e, {
@@ -116,8 +116,8 @@ return (0, i.jsxs)('div', {
   }
   return null != n ? (0, i.jsx)('div', {
 className: r()(D.channel, {
-  [D.stacked]: s,
-  [D.ended]: a
+  [D.stacked]: a,
+  [D.ended]: s
 }),
 children: (0, i.jsx)(O.Z, {
   children: (0, i.jsx)(d.Text, {
@@ -132,7 +132,7 @@ children: (0, i.jsx)(O.Z, {
 
 function k(e) {
   var t, n;
-  let a, l, {
+  let s, l, {
   invite: u,
   getAcceptInviteContext: C
 } = e,
@@ -143,10 +143,10 @@ function k(e) {
   target_application: G
 } = u;
   o()(k === L.Iq.EMBEDDED_APPLICATION && null != G, 'invalid application invite');
-  let F = s.useRef(null),
-[w, V] = s.useState(!1),
-[H, Y] = s.useState(!1);
-  s.useEffect(() => {
+  let F = a.useRef(null),
+[w, V] = a.useState(!1),
+[H, Y] = a.useState(!1);
+  a.useEffect(() => {
 let e = new ResizeObserver(() => function() {
     var e;
     let t = null === (e = F.current) || void 0 === e ? void 0 : e.offsetWidth;
@@ -167,7 +167,7 @@ z = (0, c.e7)([E.ZP], () => {
   var e;
   return (null == u ? void 0 : u.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(u.channel.id)) || void 0 === e ? void 0 : e.applicationId) === G.id;
 }),
-q = (0, c.e7)([E.ZP], () => {
+Q = (0, c.e7)([E.ZP], () => {
   var e;
   return ((null === (e = u.channel) || void 0 === e ? void 0 : e.id) != null ? E.ZP.getEmbeddedActivitiesForChannel(u.channel.id) : []).some(e => {
     let {
@@ -176,8 +176,8 @@ q = (0, c.e7)([E.ZP], () => {
     return G.id === t;
   });
 }),
-Q = S.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
-X = (0, c.e7)([M.Z], () => null != Q && M.Z.can(Z.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
+q = S.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
+X = (0, c.e7)([M.Z], () => null != q && M.Z.can(Z.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]),
 {
   analyticsLocations: J
 } = (0, N.ZP)(h.Z.INVITE_EMBED),
@@ -186,8 +186,8 @@ $ = (0, I.Z)({
   size: b,
   names: ['embedded_cover']
 }),
-ee = (0, c.Wu)([E.ZP], () => null != Q ? E.ZP.getEmbeddedActivitiesForChannel(Q.id).filter(e => e.applicationId === G.id).flatMap(e => Array.from(e.userIds)) : [], [
-  Q,
+ee = (0, c.Wu)([E.ZP], () => null != q ? E.ZP.getEmbeddedActivitiesForChannel(q.id).filter(e => e.applicationId === G.id).flatMap(e => Array.from(e.userIds)) : [], [
+  q,
   G.id
 ]),
 et = (0, c.Wu)([R.default], () => ee.map(e => R.default.getUser(e)), [ee]),
@@ -198,15 +198,15 @@ if (null == u.guild)
   return (0, i.jsx)(v.Z, {});
 W = new g.ZP(u.guild);
   }
-  let es = ei && !X || ei && z,
-ea = () => {
+  let ea = ei && !X || ei && z,
+es = () => {
   _.Z.acceptInviteAndTransitionToInviteChannel({
     inviteKey: u.code,
     context: C('Invite Button Embed'),
     analyticsLocations: J
   });
 };
-  return (ei && z && (a = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (a = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), l = z ? P.Z.Messages.INVITE_EMBED_JOINED : q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START, null == u.code || '' === u.code) ? null : (0, i.jsxs)('div', {
+  return (ei && z && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), l = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START, null == u.code || '' === u.code) ? null : (0, i.jsxs)('div', {
 className: D.container,
 ref: F,
 children: [
@@ -246,20 +246,20 @@ children: [
             children: null == K ? void 0 : K.name
           }),
           (0, i.jsx)(B, {
-            channel: Q,
+            channel: q,
             guild: W,
             isStacked: H,
-            hasEnded: !q
+            hasEnded: !Q
           })
         ]
       }),
       (0, i.jsxs)('div', {
         className: r()(D.currentState, {
           [D.large]: w,
-          [D.split]: !q && H
+          [D.split]: !Q && H
         }),
         children: [
-          !q && ei ? (0, i.jsxs)('div', {
+          !Q && ei ? (0, i.jsxs)('div', {
             className: r()(D.endedNote, {
               [D.large]: w
             }),
@@ -283,7 +283,7 @@ children: [
           (0, i.jsxs)('div', {
             className: D.cta,
             children: [
-              null != W && q ? (0, i.jsx)('div', {
+              null != W && Q ? (0, i.jsx)('div', {
                 className: D.avatars,
                 children: (0, i.jsx)(T.Z, {
                   guildId: W.id,
@@ -292,7 +292,7 @@ children: [
                 })
               }) : null,
               (0, i.jsx)(d.Tooltip, {
-                text: a,
+                text: s,
                 children: e => {
                   let {
                     onClick: t,
@@ -301,12 +301,12 @@ children: [
                   return (0, i.jsx)(d.Button, {
                     className: D.actionButton,
                     onClick: () => {
-                      ea(), null == t || t();
+                      es(), null == t || t();
                     },
                     wrapperClassName: D.tooltipButtonWrapper,
                     ...n,
                     submitting: en,
-                    disabled: es,
+                    disabled: ea,
                     color: d.ButtonColors.GREEN,
                     children: l
                   });

@@ -4,8 +4,8 @@ return l;
   }
 }), n(47120);
 var i = n(470079),
-  s = n(585483),
-  a = n(981631);
+  a = n(585483),
+  s = n(981631);
 
 function r(e) {
   return Object.keys(e).some(t => e[t]);
@@ -33,7 +33,7 @@ let t = e => {
     emojiBurstPicker: n
   });
 };
-return s.S.subscribeKeyed(a.LPv.TOGGLE_REACTION_POPOUT, e, t), () => void s.S.unsubscribeKeyed(a.LPv.TOGGLE_REACTION_POPOUT, e, t);
+return a.S.subscribeKeyed(s.LPv.TOGGLE_REACTION_POPOUT, e, t), () => void a.S.unsubscribeKeyed(s.LPv.TOGGLE_REACTION_POPOUT, e, t);
   }, [
 e,
 _

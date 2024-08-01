@@ -5,8 +5,8 @@ return l;
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(987209),
+var a = n(481060),
+  s = n(987209),
   r = n(981631);
 
 function l(e) {
@@ -26,11 +26,11 @@ planGroup: h,
 reviewWarningMessage: N,
 skuId: f
   } = e;
-  (0, s.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
 let {
   PaymentContextProvider: e
 } = await Promise.resolve().then(n.bind(n, 598)), {
-  PaymentModal: s
+  PaymentModal: a
 } = await Promise.all([
   n.e('15972'),
   n.e('47006'),
@@ -60,8 +60,8 @@ return n => {
     activeSubscription: l,
     stepConfigs: r,
     skuIDs: [f],
-    children: (0, i.jsx)(a.KB, {
-      children: (0, i.jsx)(s, {
+    children: (0, i.jsx)(s.KB, {
+      children: (0, i.jsx)(a, {
         ...p,
         initialPlanId: t,
         onClose: e => {

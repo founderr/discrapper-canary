@@ -22,8 +22,8 @@ return g;
   }
 }), n(789020);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(993365),
   l = n(981729),
   o = n(481060),
@@ -61,7 +61,7 @@ renderForwardComponent: (0, u.s)(e.message, {
 
 function g(e) {
   let t = e.item.originalItem,
-n = s.useCallback(() => {
+n = a.useCallback(() => {
   var e;
   return (0, I.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, N.J0y.IS_CLIP) ? (0, i.jsxs)(l.DY, {
     text: f.Z.Messages.CLIPS_BETA_TAG_HOVER,
@@ -79,11 +79,11 @@ n = s.useCallback(() => {
     ]
   }) : null;
 }, [t]),
-a = m.Z.toURLSafe(t.proxy_url);
-  return null == a ? null : (a.searchParams.append('format', 'jpeg'), (0, h.lV)({
+s = m.Z.toURLSafe(t.proxy_url);
+  return null == s ? null : (s.searchParams.append('format', 'jpeg'), (0, h.lV)({
 ...e,
 alt: t.description,
-poster: a.toString(),
+poster: s.toString(),
 fileSize: t.size,
 fileName: (0, T.Z)(t),
 src: t.url,
@@ -111,19 +111,19 @@ function A(e) {
   let {
 message: t,
 item: n
-  } = e, i = n.originalItem, a = s.useCallback((e, n, s) => {
-var a;
-(0, d.tb)(t.id, null !== (a = i.duration_secs) && void 0 !== a ? a : null, n, t.author.id);
-  }, [
-t,
-i.duration_secs
-  ]), r = s.useCallback((e, n) => {
+  } = e, i = n.originalItem, s = a.useCallback((e, n, a) => {
 var s;
-(0, d.EW)(t.id, null !== (s = i.duration_secs) && void 0 !== s ? s : null, e, t.author.id, n);
+(0, d.tb)(t.id, null !== (s = i.duration_secs) && void 0 !== s ? s : null, n, t.author.id);
   }, [
 t,
 i.duration_secs
-  ]), l = s.useCallback(e => {
+  ]), r = a.useCallback((e, n) => {
+var a;
+(0, d.EW)(t.id, null !== (a = i.duration_secs) && void 0 !== a ? a : null, e, t.author.id, n);
+  }, [
+t,
+i.duration_secs
+  ]), l = a.useCallback(e => {
 var n;
 (0, d.Np)(t.id, null !== (n = null == e ? void 0 : e.message) && void 0 !== n ? n : null);
   }, [t]);
@@ -134,7 +134,7 @@ fileName: (0, T.Z)(i),
 src: i.url,
 durationSecs: i.duration_secs,
 waveform: i.waveform,
-onPlay: a,
+onPlay: s,
 onPause: r,
 onError: l
   });
@@ -174,8 +174,8 @@ function x(e) {
   var t;
   let {
 attachment: n,
-message: s
-  } = e, r = s.channel_id, l = (0, a.e7)([_.Z], () => {
+message: a
+  } = e, r = a.channel_id, l = (0, s.e7)([_.Z], () => {
 var e;
 return null === (e = _.Z.getBasicChannel(r)) || void 0 === e ? void 0 : e.guild_id;
   }), {

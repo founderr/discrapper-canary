@@ -1,19 +1,19 @@
 n.d(t, {
   Z: function() {
-return a;
+return s;
   }
 });
 var i = n(470079),
-  s = n(10718);
+  a = n(10718);
 
-function a(e, t) {
+function s(e, t) {
   let n = i.useRef(null),
-a = i.useCallback((e, t) => {
-  var i, s, a;
-  e.preventDefault(), e.clipboardData.setData('application/x-discord-interaction-data', JSON.stringify(t)), e.clipboardData.setData('text/plain', null !== (a = null === (s = n.current) || void 0 === s ? void 0 : null === (i = s.textContent) || void 0 === i ? void 0 : i.trim()) && void 0 !== a ? a : '');
+s = i.useCallback((e, t) => {
+  var i, a, s;
+  e.preventDefault(), e.clipboardData.setData('application/x-discord-interaction-data', JSON.stringify(t)), e.clipboardData.setData('text/plain', null !== (s = null === (a = n.current) || void 0 === a ? void 0 : null === (i = a.textContent) || void 0 === i ? void 0 : i.trim()) && void 0 !== s ? s : '');
 }, []);
-  return s.YZ(e, t), {
-onCopy: a,
+  return a.YZ(e, t), {
+onCopy: s,
 copyRef: n
   };
 }
