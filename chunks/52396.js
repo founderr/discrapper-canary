@@ -1,8 +1,8 @@
 t.d(n, {
-  B3: function() {
+  B: function() {
 return p;
   },
-  r4: function() {
+  r: function() {
 return C;
   }
 }), t(411104);

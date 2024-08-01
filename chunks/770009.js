@@ -20,7 +20,7 @@ contentInventoryEntry: n,
 channel: t
   } = e, {
 parsedEntry: r
-  } = (0, o.B3)();
+  } = (0, o.B)();
   return (0, l.jsx)(u.Z, {
 ...r,
 entry: n,
@@ -34,7 +34,7 @@ function f(e) {
   let {
 channelId: t
   } = n, r = (0, a.e7)([s.Z], () => s.Z.getChannel(t));
-  return i()(null != r, 'channel must be defined'), (0, l.jsx)(o.r4, {
+  return i()(null != r, 'channel must be defined'), (0, l.jsx)(o.r, {
 location: d._.EMBED,
 entry: e.contentInventoryEntry,
 channel: r,
