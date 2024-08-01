@@ -85,7 +85,8 @@ b = async e => {
   await (0, m.Z)({
     userId: t.id,
     content: r,
-    location: 'UserProfileReactReplyBar'
+    location: 'UserProfileReactReplyBar',
+    openChannel: !1
   });
 };
   return (0, r.jsxs)(_.ZP, {
