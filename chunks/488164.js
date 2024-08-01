@@ -63,6 +63,7 @@ super(...e), u(this, 'renderItems', e => {
     value: new Set([s.value]),
     onChange: a,
     onClose: t,
+    showScrollbar: !0,
     children: e => this.renderItems(e)
   });
 });
