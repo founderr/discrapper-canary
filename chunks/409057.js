@@ -247,6 +247,7 @@ children: [
     className: k.voiceChannelDivider
   }),
   (0, r.jsx)(b.Z, {
+    user: n,
     guild: H,
     channel: Z,
     onClose: W

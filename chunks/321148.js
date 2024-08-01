@@ -28,8 +28,9 @@ let {
   user: t,
   analyticsContext: n,
   disablePopout: r,
-  guildId: a
-} = this.props, s = {
+  guildId: a,
+  channelId: s
+} = this.props, o = {
   location: {
     ...n.location,
     object: f.qAy.LIST_ITEM
@@ -37,14 +38,16 @@ let {
 };
 return (0, i.jsx)(l.Popout, {
   preload: () => (0, d.W)(t.id, t.getAvatarURL(a, 80), {
-    guildId: a
+    guildId: a,
+    channelId: s
   }),
   renderPopout: e => (0, i.jsx)(_.Z, {
     ...e,
     location: 'UserListItem',
-    guildId: a,
     userId: t.id,
-    analyticsParams: s
+    guildId: a,
+    channelId: s,
+    analyticsParams: o
   }),
   position: 'left',
   onRequestClose: this.handleUserPopoutClose,

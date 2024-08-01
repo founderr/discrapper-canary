@@ -92,6 +92,7 @@ B = () => null == D || null == L ? null : (0, r.jsxs)(r.Fragment, {
       className: C.voiceChannelDivider
     }),
     (0, r.jsx)(T.Z, {
+      user: t,
       guild: D,
       channel: L,
       onClose: P

@@ -156,9 +156,11 @@ er = () => H !== b.y0.FULL_SIZE ? null : (0, r.jsxs)('div', {
     (0, r.jsx)(E.Z, {
       users: z,
       guildId: W.id,
+      channelId: K.id,
       maxUsers: C.W,
       size: o.AvatarSizes.SIZE_16,
       disableUsernameTooltip: !0,
+      disableUserPopout: e => e === t.id,
       overflowCountVariant: 'text-xxs/semibold',
       overflowCountColor: 'text-muted'
     })
@@ -170,6 +172,7 @@ ei = () => H === b.y0.FULL_SIZE ? null : (0, r.jsxs)(r.Fragment, {
       className: U.voiceChannelDivider
     }),
     (0, r.jsx)(C.Z, {
+      user: t,
       guild: W,
       channel: K,
       onClose: F

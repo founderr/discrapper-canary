@@ -1,9 +1,9 @@
 n.d(t, {
   W: function() {
-return E;
+return h;
   },
   Z: function() {
-return f;
+return p;
   }
 });
 var r = n(735250);
@@ -15,49 +15,54 @@ var i = n(442837),
   l = n(769654),
   u = n(914010),
   c = n(938475),
-  d = n(373826),
-  _ = n(692184);
-let E = 3;
+  d = n(652853),
+  _ = n(373826),
+  E = n(228168),
+  f = n(692184);
+let h = 3;
 
-function f(e) {
+function p(e) {
   let {
-guild: t,
-channel: n,
-onClose: f
-  } = e, h = (0, i.e7)([u.Z], () => u.Z.getGuildId()), p = (0, i.Wu)([c.ZP], () => c.ZP.getVoiceStatesForChannel(n).map(e => {
+user: t,
+guild: n,
+channel: p,
+onClose: m
+  } = e, {
+profileType: I
+  } = (0, d.z)(), T = (0, i.e7)([u.Z], () => u.Z.getGuildId()), g = (0, i.Wu)([c.ZP], () => c.ZP.getVoiceStatesForChannel(p).map(e => {
 let {
   user: t
 } = e;
 return t;
   }));
   return (0, r.jsxs)('div', {
-className: _.voiceChannel,
+className: f.voiceChannel,
 children: [
   (0, r.jsxs)('div', {
-    className: _.voiceChannelDetails,
+    className: f.voiceChannelDetails,
     children: [
       (0, r.jsx)(o.Z, {
-        guild: t,
+        guild: n,
         size: o.Z.Sizes.SMOL,
-        className: _.guildIcon
+        className: f.guildIcon
       }),
       (0, r.jsx)(a.ChevronSmallRightIcon, {
         size: 'xxs',
         color: a.tokens.colors.INTERACTIVE_NORMAL
       }),
       (0, r.jsxs)('div', {
-        className: _.voiceChannelInfo,
+        className: f.voiceChannelInfo,
         children: [
           (0, r.jsx)(a.VoiceNormalIcon, {
             size: 'xs',
             color: a.tokens.colors.INTERACTIVE_NORMAL
           }),
-          (0, r.jsx)(d.Z, {
+          (0, r.jsx)(_.Z, {
             variant: 'text-xs/normal',
             color: 'interactive-normal',
-            text: n.name,
-            onClick: t.id === h ? void 0 : () => {
-              (0, l.X)(t.id), null == f || f();
+            text: p.name,
+            onClick: n.id === T ? void 0 : () => {
+              (0, l.X)(n.id), null == m || m();
             }
           })
         ]
@@ -65,11 +70,13 @@ children: [
     ]
   }),
   (0, r.jsx)(s.Z, {
-    users: p,
-    guildId: t.id,
-    maxUsers: E,
+    users: g,
+    guildId: n.id,
+    channelId: p.id,
+    maxUsers: h,
     size: a.AvatarSizes.SIZE_16,
     disableUsernameTooltip: !0,
+    disableUserPopout: I !== E.y0.FULL_SIZE || (e => e === t.id),
     overflowCountVariant: 'text-xs/normal'
   })
 ]

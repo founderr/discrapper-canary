@@ -25,64 +25,68 @@ var i = t(481060),
 n.default = (0, o.Z)((0, a.Z)(function(e) {
   let {
 user: n,
-showMediaItems: t = !1,
-mediaEngineContext: a,
-onSelect: o
-  } = e, d = (0, I.Z)({
-userId: n.id
-  }), S = (0, g.Z)(n.id), O = (0, f.Z)({
+guildId: t,
+channelId: a,
+showMediaItems: o = !1,
+mediaEngineContext: d,
+onSelect: S
+  } = e, O = (0, I.Z)({
+userId: n.id,
+guildId: t,
+channelId: a
+  }), v = (0, g.Z)(n.id), x = (0, f.Z)({
 user: n
-  }), v = (0, M.Z)({
+  }), U = (0, M.Z)({
 user: n
-  }), x = (0, E.Z)({
+  }), D = (0, E.Z)({
 user: n
-  }), U = (0, T.Z)(n.id), D = (0, m.Z)(n.id), b = (0, A.Z)(n.id, a), L = (0, N.Z)({
+  }), b = (0, T.Z)(n.id), L = (0, m.Z)(n.id), h = (0, A.Z)(n.id, d), R = (0, N.Z)({
 user: n
-  }), h = (0, u.Z)(null, n), R = (0, Z.Z)(n), j = (0, _.Z)({
+  }), j = (0, u.Z)(null, n), p = (0, Z.Z)(n), V = (0, _.Z)({
 user: n
-  }), p = (0, r.Z)({
+  }), k = (0, r.Z)({
 id: n.id,
 label: C.Z.Messages.COPY_ID_USER
-  }), V = (0, c.Z)(n), k = n.isNonUserBot();
+  }), F = (0, c.Z)(n), P = n.isNonUserBot();
   return (0, s.jsxs)(i.Menu, {
 navId: 'user-context',
 onClose: l.Zy,
 'aria-label': C.Z.Messages.USER_ACTIONS_MENU_LABEL,
-onSelect: o,
+onSelect: S,
 children: [
-  !k && (0, s.jsxs)(s.Fragment, {
+  !P && (0, s.jsxs)(s.Fragment, {
     children: [
       (0, s.jsx)(i.MenuGroup, {
-        children: V
+        children: F
       }),
       (0, s.jsxs)(i.MenuGroup, {
         children: [
-          d,
-          S,
           O,
           v,
           x,
-          U
+          U,
+          D,
+          b
         ]
       }),
-      t && (0, s.jsx)(i.MenuGroup, {
-        children: D
+      o && (0, s.jsx)(i.MenuGroup, {
+        children: L
       }),
       (0, s.jsx)(i.MenuGroup, {
-        children: h
+        children: j
       }),
       (0, s.jsxs)(i.MenuGroup, {
         children: [
-          t && b,
-          L,
+          o && h,
           R,
-          j
+          p,
+          V
         ]
       })
     ]
   }),
   (0, s.jsx)(i.MenuGroup, {
-    children: p
+    children: k
   })
 ]
   });
