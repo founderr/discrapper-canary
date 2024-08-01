@@ -333,14 +333,19 @@ O = t.filter(e => S.zd.has(e.type)), ! function() {
   load_time_millis: Date.now() - i,
   feed_item_ids: O.map(e => e.id)
 };
-let [s, a] = X(O), r = (R = J(s)).length > S.Lb;
-0 === k ? (r && !H && (B = !0, w = !0), Q({
-  newUnread: s,
-  newRead: a
-})) : (B = r, r && (0, C.em)([
-  ...s,
-  ...a
-], 0, S.xy));
+let [s, a] = X(O);
+if (R = J(s), 0 === k)
+  s.length > 0 && !H && (B = !0, w = !0), Q({
+    newUnread: s,
+    newRead: a
+  });
+else {
+  let e = R.length > S.Lb;
+  B = e, e && (0, C.em)([
+    ...s,
+    ...a
+  ], 0, S.xy);
+}
   },
   LOAD_GRAVITY_HYDRATED: function(e) {
 let {
