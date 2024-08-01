@@ -23,8 +23,8 @@ var s = n(735250),
   g = n(617136),
   h = n(272008),
   R = n(569984),
-  I = n(497505),
-  f = n(918701),
+  f = n(497505),
+  I = n(918701),
   b = n(566078),
   v = n(617889),
   j = n(644646),
@@ -52,7 +52,7 @@ let {
   quest: a,
   rewardCode: r,
   hasTieredRewardCodes: l
-} = e, i = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || null != r, d = l ? '' : D.Z.Messages.QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER, u = l ? (0, f.o9)({
+} = e, i = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || null != r, d = l ? '' : D.Z.Messages.QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER, u = l ? (0, I.o9)({
   quest: a,
   idx: null !== (s = null == r ? void 0 : r.tier) && void 0 !== s ? s : null === (n = a.userStatus) || void 0 === n ? void 0 : n.claimedTier
 }) : null, c = b.r.build(a.config), p = null != u && null !== (o = u.messages.name) && void 0 !== o ? o : c.defaultReward.messages.name, m = l ? D.Z.Messages.QUESTS_CLAIM_REWARD : c.defaultReward.messages.name;
@@ -148,7 +148,7 @@ isClaimingReward: k
 rewardCode: R.Z.getRewardCode(r.id),
 isFetchingRewardCode: R.Z.isFetchingRewardCode(r.id),
 isClaimingReward: R.Z.isClaimingReward(r.id)
-  })), F = (0, f.oo)({
+  })), F = (0, I.oo)({
 quest: r
   }), [G, H] = o.useState(!1), X = v && (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null && null == W, z = o.useCallback((e, t, n) => {
 H(!1), (0, h.QB)(e, t, n).catch(() => H(!0));
@@ -198,7 +198,7 @@ J = function(e) {
       })
     });
   let m = null != l ? l : null == d ? void 0 : d.platform,
-    C = u ? (0, f.o9)({
+    C = u ? (0, I.o9)({
       quest: r,
       idx: null !== (o = null == d ? void 0 : d.tier) && void 0 !== o ? o : null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedTier
     }) : null,
@@ -220,7 +220,7 @@ J = function(e) {
   hasTieredRewardCodes: F
 }),
 V = o.useMemo(() => x.map(e => ({
-  label: (0, f.t2)(e),
+  label: (0, I.t2)(e),
   value: e
 })), [x]),
 ee = null;
@@ -234,29 +234,29 @@ children: [
       H(!1), y(e);
     },
     isSelected: e => e === j,
-    serialize: e => (0, f.t2)(e),
+    serialize: e => (0, I.t2)(e),
     className: G ? O.errorInput : '',
     isDisabled: k,
     renderOptionLabel: e => {
       let t = function(e) {
         switch (e) {
-          case I.y$.CROSS_PLATFORM:
+          case f.y$.CROSS_PLATFORM:
             return (0, s.jsx)(c.ScienceIcon, {
               className: O.platformSelectionOptionIcon
             });
-          case I.y$.PC:
+          case f.y$.PC:
             return (0, s.jsx)(c.ScreenIcon, {
               className: O.platformSelectionOptionIcon
             });
-          case I.y$.PLAYSTATION:
+          case f.y$.PLAYSTATION:
             return (0, s.jsx)(c.PlaystationIcon, {
               className: O.platformSelectionOptionIcon
             });
-          case I.y$.SWITCH:
+          case f.y$.SWITCH:
             return (0, s.jsx)(c.NintendoSwitchNeutralIcon, {
               className: O.platformSelectionOptionIcon
             });
-          case I.y$.XBOX:
+          case f.y$.XBOX:
             return (0, s.jsx)(c.XboxIcon, {
               className: O.platformSelectionOptionIcon
             });

@@ -74,7 +74,7 @@ submitting: L,
 onClick: null != k ? k : void 0,
 className: E.button,
 children: G
-  }) : !M && x ? V = (0, i.jsx)(a.Button, {
+  }) : x ? V = (0, i.jsx)(a.Button, {
 color: a.ButtonColors.PRIMARY,
 className: E.button,
 onClick: null != k ? k : void 0,

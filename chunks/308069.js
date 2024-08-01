@@ -23,12 +23,12 @@ onCtxMenuClose: E,
 useReducedMotion: S,
 isExpanded: T,
 isExpansionAnimationComplete: v
-  } = e, N = o.useCallback(() => {
+  } = e, j = o.useCallback(() => {
 (0, x.openDisclosureModal)(t, {
   content: d.jn.QUEST_BAR_V2,
   ctaContent: c.jZ.OPEN_DISCLOSURE
 });
-  }, [t]), j = o.useCallback(() => {
+  }, [t]), N = o.useCallback(() => {
 (0, u.FE)(t, {
   content: d.jn.QUEST_BAR_V2,
   ctaContent: c.jZ.OPEN_GAME_LINK
@@ -190,7 +190,7 @@ children: [
       })
     },
     children: (0, s.jsx)(i.Clickable, {
-      onClick: j,
+      onClick: N,
       className: a()({
         [C.logo]: A
       }),
@@ -248,7 +248,7 @@ children: [
     children: [
       (0, s.jsxs)(i.Clickable, {
         className: C.promotedBadge,
-        onClick: N,
+        onClick: j,
         children: [
           (0, s.jsx)(i.Text, {
             color: 'always-white',

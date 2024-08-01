@@ -20,7 +20,7 @@ onCtxMenuSelection: C,
 quest: _,
 useReducedMotion: h,
 collapsedHeight: E
-  } = e, S = o.useRef(null), T = o.useRef(null), v = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, N = (0, r.Rf)(_);
+  } = e, S = o.useRef(null), T = o.useRef(null), v = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, j = (0, r.Rf)(_);
   return (0, s.jsxs)(l.p, {
 expandedContentRef: n,
 collapsedContentRef: S,
@@ -34,7 +34,7 @@ children: [
     isExpansionAnimationComplete: x,
     quest: _,
     useReducedMotion: h,
-    taskDetails: N
+    taskDetails: j
   }),
   (0, s.jsx)(c.Z, {
     expansionSpring: p,
@@ -49,7 +49,7 @@ children: [
     quest: _,
     useReducedMotion: h,
     ref: n,
-    taskDetails: N,
+    taskDetails: j,
     children: (0, s.jsxs)(s.Fragment, {
       children: [
         (0, s.jsx)(d.Z, {
