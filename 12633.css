@@ -34904,6 +34904,10 @@ img.thumbnail_c64476 {
     height: 100%;
     border-radius: var(--radius-xs);
     background-color: var(--black-500);
+    opacity: 0
+}
+
+.overlay_a08002:hover:after {
     opacity: .4
 }
 
@@ -34911,22 +34915,17 @@ img.thumbnail_c64476 {
     transition: opacity var(--custom-button-transition-duration)ease
 }
 
-.overlay_a08002:hover:after {
-    opacity: 0
-}
-
-.overlay_a08002:hover .clyde_a08002 {
-    display: none
+.full-motion .overlay_a08002:hover .clyde_a08002 {
+    display: inline;
+    display: initial
 }
 
 .clyde_a08002 {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0
-}
-
-.full-motion .clyde_a08002 {
+    opacity: 0;
     animation: fadeIn_a08002 7.6s linear 19s forwards, x_a08002 3.8s linear 19s infinite alternate, y_a08002 2.3s linear 19s infinite alternate, colorX_a08002 19s step-start 19s infinite, colorY_a08002 11.5s step-start 19s infinite;
     color: hsl(calc(14.4*(5*var(--custom-color-y) + var(--custom-color-x)))100%50%)
 }
