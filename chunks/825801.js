@@ -134,7 +134,7 @@ children: [
     delay: L,
     'aria-label': !1,
     children: (0, r.jsx)(_.zx, {
-      onClick: () => null == v ? void 0 : v(!0),
+      onClick: () => null == v ? void 0 : v(i, E),
       className: a()(S.button, S.right),
       'aria-label': g.Z.Messages.USER_PROFILE_REPLY,
       children: (0, r.jsx)(o.ArrowAngleLeftUpIcon, {

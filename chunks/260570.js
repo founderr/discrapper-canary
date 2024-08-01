@@ -42,7 +42,7 @@ profileType: I,
 hasEntered: O = !0,
 animate: b = !0,
 editEnabled: M,
-isReplying: P = !1,
+showReplyPopout: P = !1,
 onReply: U,
 onClose: w
   } = e, {
@@ -218,21 +218,7 @@ eC = () => {
   if (!X)
     return ''.concat(K);
 },
-ey = () => (0, r.jsx)('div', {
-  className: s()(C.invisibleContainer, eA),
-  children: (0, r.jsx)('div', {
-    className: eO,
-    children: (0, r.jsxs)('span', {
-      className: eR,
-      children: [
-        er && eT(),
-        en && em(),
-        en && eI()
-      ]
-    })
-  })
-}),
-eD = () => (0, r.jsxs)(c.ClickableContainer, {
+ey = () => (0, r.jsxs)(c.ClickableContainer, {
   className: s()(C.visibleContainer, eA, eN),
   'aria-label': eg(),
   focusProps: {
@@ -279,37 +265,22 @@ eD = () => (0, r.jsxs)(c.ClickableContainer, {
     })
   ]
 });
-  return I !== v.y0.FULL_SIZE ? (0, r.jsx)(c.Popout, {
-renderPopout: e => {
-  let {
-    setPopoutRef: t
-  } = e;
-  return (0, r.jsx)(A.Z, {
-    user: a,
-    guildId: h,
-    channelId: m,
-    profileType: I,
-    sourceDetails: eC(),
-    sourceType: v.N9.STATUS,
-    setPopoutRef: t,
-    onReply: U,
-    onClose: w
-  });
-},
-animation: c.Popout.Animation.TRANSLATE,
-animationPosition: 'top',
-position: 'bottom',
-align: 'center',
-shouldShow: P,
-children: () => (0, r.jsxs)('div', {
-  children: [
-    ey(),
-    eD()
-  ]
-})
-  }) : (0, r.jsxs)('div', {
+  return (0, r.jsxs)('div', {
 children: [
-  ey(),
+  (0, r.jsx)('div', {
+    className: s()(C.invisibleContainer, eA),
+    children: (0, r.jsx)('div', {
+      className: eO,
+      children: (0, r.jsxs)('span', {
+        className: eR,
+        children: [
+          er && eT(),
+          en && em(),
+          en && eI()
+        ]
+      })
+    })
+  }),
   (0, r.jsx)(c.Popout, {
     renderPopout: e => {
       let {
@@ -324,17 +295,14 @@ children: [
         sourceType: v.N9.STATUS,
         setPopoutRef: t,
         modalKey: N.d,
-        onReply: U,
-        onClose: w
+        onReply: U
       });
     },
-    animation: c.Popout.Animation.TRANSLATE,
     animationPosition: 'top',
     position: 'bottom',
     align: 'center',
-    spacing: 8,
     shouldShow: P,
-    children: () => eD()
+    children: () => ey()
   })
 ]
   });

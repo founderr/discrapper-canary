@@ -64,22 +64,21 @@ sourceType: _,
 sourceDetails: f,
 onReply: v,
 setPopoutRef: O,
-modalKey: R,
-onClose: C
+modalKey: R
   } = e, {
-trackUserProfileAction: y
-  } = (0, m.KZ)(), [D, L] = i.useState(''), [b, M] = i.useState((0, c.JM)(D)), P = i.useRef(!1), U = i.useRef(null);
+trackUserProfileAction: C
+  } = (0, m.KZ)(), [y, D] = i.useState(''), [L, b] = i.useState((0, c.JM)(y)), M = i.useRef(!1), P = i.useRef(null);
   i.useEffect(() => {
-null == O || O(null == U ? void 0 : U.current);
+null == O || O(null == P ? void 0 : P.current);
   }, [
-U,
+P,
 O
   ]);
-  let w = async e => {
+  let U = async e => {
 var n;
 if (null == e)
   return;
-y({
+C({
   action: 'PRESS_REPLY'
 });
 let r = N({
@@ -95,7 +94,7 @@ await (0, I.Z)({
 });
   };
   return (0, r.jsx)(l.V, {
-ref: U,
+ref: P,
 children: (0, r.jsx)('div', {
   className: s()(S.container, {
     [S.panel]: o === T.y0.PANEL
@@ -110,32 +109,32 @@ children: (0, r.jsx)('div', {
       name: h.ZP.getName(n, a, t)
     }),
     channel: A,
-    textValue: D,
-    richValue: b,
+    textValue: y,
+    richValue: L,
     onChange: (e, t, n) => {
-      if (t !== D)
-        L(t), M(n);
+      if (t !== y)
+        D(t), b(n);
     },
-    focused: P.current,
+    focused: M.current,
     onFocus: () => {
-      P.current = !0;
+      M.current = !0;
     },
     onBlur: e => {
       var t;
-      if (null === (t = U.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
-        P.current = !1;
+      if (null === (t = P.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
+        M.current = !1;
         return;
       }
-      null !== U.current && (P.current = !1, null == v || v(!1));
+      null !== P.current && (M.current = !1, null == v || v(null));
     },
     onSubmit: async e => {
       let {
         value: t
       } = e;
       try {
-        return y({
+        return C({
           action: 'SEND_STATUS_REPLY'
-        }), await w(t.trim()), null == v || v(!1), null == C || C(), {
+        }), await U(t.trim()), null == v || v(null), {
           shouldClear: !0,
           shouldRefocus: !1
         };

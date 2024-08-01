@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return R;
+return C;
   }
 }), n(47120);
 var r = n(735250),
@@ -20,38 +20,41 @@ var r = n(735250),
   m = n(785717),
   I = n(204197),
   T = n(825801),
-  g = n(652853),
-  S = n(228168),
-  A = n(981631),
-  N = n(474936),
-  v = n(905936);
-let O = p.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+  g = n(215105),
+  S = n(652853),
+  A = n(228168),
+  N = n(981631),
+  v = n(474936),
+  O = n(905936);
+let R = p.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 
-function R(e) {
+function C(e) {
   let {
 user: t,
 displayProfile: n,
 guildId: a,
 channelId: p,
-profileType: R,
-animateOnHover: C,
-onOpenProfile: y
+profileType: C,
+animateOnHover: y,
+onOpenProfile: D,
+showReplyPopout: L = !1,
+onReply: b
   } = e, {
-theme: D
-  } = (0, g.z)(), {
-analyticsLocations: L
+theme: M
+  } = (0, S.z)(), {
+analyticsLocations: P
   } = (0, d.ZP)(c.Z.AVATAR), {
-trackUserProfileAction: b
-  } = (0, m.KZ)(), M = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, N.p9.TIER_2), P = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [
+trackUserProfileAction: U
+  } = (0, m.KZ)(), w = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2), x = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [
 t,
 p
-  ]), [U, w] = i.useState(!1), x = () => {
-w(!0);
-  }, G = () => {
-w(!1);
+  ]), [G, k] = i.useState(!1), B = () => {
+k(!0);
+  }, F = () => {
+k(!1);
   }, {
-status: k,
-isMobileOnline: B
+status: V,
+isMobileOnline: H
   } = (0, o.cj)([
 E.Z,
 f.Z
@@ -61,63 +64,84 @@ let e = null != E.Z.getAnyStreamForUser(t.id),
     let {
       type: n
     } = t;
-    return e ? n === A.IIU.PLAYING : n !== A.IIU.CUSTOM_STATUS;
+    return e ? n === N.IIU.PLAYING : n !== N.IIU.CUSTOM_STATUS;
   });
 return {
-  status: (0, u.Z)(n) ? A.Skl.STREAMING : f.Z.getStatus(t.id),
+  status: (0, u.Z)(n) ? N.Skl.STREAMING : f.Z.getStatus(t.id),
   isMobileOnline: f.Z.isMobileOnline(t.id)
 };
-  }), F = R === S.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, V = s()(v.avatar, {
-[v.biteSize]: R === S.y0.BITE_SIZE,
-[v.fullSize]: R === S.y0.FULL_SIZE,
-[v.panel]: R === S.y0.PANEL
+  }), Z = C === A.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, Y = s()(O.avatar, {
+[O.biteSize]: C === A.y0.BITE_SIZE,
+[O.fullSize]: C === A.y0.FULL_SIZE,
+[O.panel]: C === A.y0.PANEL
   }), {
-avatarDecorationSrc: H,
-avatarSrc: Z,
-eventHandlers: Y
+avatarDecorationSrc: j,
+avatarSrc: W,
+eventHandlers: K
   } = (0, I.Z)({
 user: t,
 guildId: a,
-size: F,
-animateOnHover: C
-  }), j = (0, r.jsx)(O, {
-src: Z,
-avatarDecoration: H,
-size: F,
+size: Z,
+animateOnHover: y
+  }), z = (0, r.jsx)(R, {
+src: W,
+avatarDecoration: j,
+size: Z,
 'aria-label': t.username,
-imageClassName: null != y ? v.overlay : void 0,
-status: P ? A.Skl.UNKNOWN : k,
-statusBackdropColor: M && !P ? (0, l.getStatusBackdropColor)(D) : void 0,
-isMobile: B,
+imageClassName: null != D ? O.overlay : void 0,
+status: x ? N.Skl.UNKNOWN : V,
+statusBackdropColor: w && !x ? (0, l.getStatusBackdropColor)(M) : void 0,
+isMobile: H,
 statusTooltip: !0,
-statusTooltipDelay: S.vB
-  }), W = null == y ? (0, r.jsx)('div', {
-...Y,
-children: j
+statusTooltipDelay: A.vB
+  }), q = () => null == D ? (0, r.jsx)('div', {
+...K,
+children: z
   }) : (0, r.jsx)(l.Clickable, {
-...Y,
+...K,
 onClick: () => {
-  b({
+  U({
     action: 'PRESS_VIEW_PROFILE',
-    analyticsLocations: L
-  }), null == y || y();
+    analyticsLocations: P
+  }), null == D || D();
 },
-className: v.clickable,
-children: j
+className: O.clickable,
+children: z
   });
   return (0, r.jsxs)('div', {
-className: V,
-onFocus: x,
-onBlur: G,
-onMouseOver: x,
-onMouseLeave: G,
+className: Y,
+onFocus: B,
+onBlur: F,
+onMouseOver: B,
+onMouseLeave: F,
 children: [
-  W,
+  (0, r.jsx)(l.Popout, {
+    renderPopout: e => {
+      let {
+        setPopoutRef: n
+      } = e;
+      return (0, r.jsx)(g.Z, {
+        user: t,
+        guildId: a,
+        channelId: p,
+        profileType: C,
+        sourceType: A.N9.AVATAR,
+        setPopoutRef: n,
+        onReply: b
+      });
+    },
+    animationPosition: 'top',
+    position: 'bottom',
+    align: 'center',
+    shouldShow: L,
+    children: () => q()
+  }),
   (0, r.jsx)(T.Z, {
     user: t,
-    sourceType: S.N9.AVATAR,
-    isVisible: U,
-    isExpandable: !1
+    sourceType: A.N9.AVATAR,
+    isVisible: G,
+    isExpandable: !1,
+    onReply: b
   })
 ]
   });

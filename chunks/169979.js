@@ -13,7 +13,7 @@ function o(e) {
   let {
 location: t,
 onReply: n,
-isReplying: o,
+showReplyPopout: o,
 ...l
   } = e, {
 statusReactReplyEnabled: u
@@ -21,7 +21,7 @@ statusReactReplyEnabled: u
 location: t
   });
   return u ? (0, r.jsx)(s.Z, {
-isReplying: o,
+showReplyPopout: o,
 onReply: n,
 ...l
   }) : (0, r.jsx)(a.Z, {

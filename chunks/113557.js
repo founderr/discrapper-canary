@@ -12,15 +12,19 @@ var i = n(718107),
 function o(e) {
   let {
 location: t,
-...n
+showReplyPopout: n,
+onReply: o,
+...l
   } = e, {
-avatarReactReplyEnabled: o
+avatarReactReplyEnabled: u
   } = (0, i.t)({
 location: t
   });
-  return o ? (0, r.jsx)(s.Z, {
-...n
+  return u ? (0, r.jsx)(s.Z, {
+showReplyPopout: n,
+onReply: o,
+...l
   }) : (0, r.jsx)(a.Z, {
-...n
+...l
   });
 }
