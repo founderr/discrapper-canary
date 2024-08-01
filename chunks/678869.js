@@ -57,14 +57,14 @@ if (null == n || null == i)
   return {};
 let a = Math.min(i, s),
   l = i - n,
-  r = Math.floor((a - n) / l * 100);
+  r = Math.floor(Math.max(a - n, 0) / l * 100);
 return {
   seekBarStyles: {
     width: ''.concat(r, '%')
   },
   durationTimestamp: (0, E.T_)({
-    start: i
-  }, n)
+    start: 0
+  }, l)
 };
   }, [
 t,

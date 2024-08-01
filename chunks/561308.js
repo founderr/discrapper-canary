@@ -78,7 +78,7 @@ let f = e => {
 let {
   start: t,
   now: n
-} = e, r = Math.abs((n - t) / c.Z.Millis.SECOND), i = Math.floor(r) % c.Z.Seconds.MINUTE, a = Math.floor(r / c.Z.Seconds.MINUTE) % c.Z.Seconds.MINUTE, s = Math.floor(r / c.Z.Seconds.HOUR);
+} = e, r = Math.max(n - t, 0) / c.Z.Millis.SECOND, i = Math.floor(r) % c.Z.Seconds.MINUTE, a = Math.floor(r / c.Z.Seconds.MINUTE) % c.Z.Seconds.MINUTE, s = Math.floor(r / c.Z.Seconds.HOUR);
 return {
   seconds: i,
   minutes: a,
