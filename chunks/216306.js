@@ -21,8 +21,8 @@ return f;
 var s = E(470079),
   T = E(658722),
   I = E.n(T),
-  A = E(913527),
-  n = E.n(A),
+  n = E(913527),
+  A = E.n(n),
   t = E(442837),
   a = E(704215),
   r = E(45114),
@@ -48,8 +48,8 @@ function g(e, _) {
 
 function d(e, _, E, T) {
   T = T.toLowerCase();
-  let A = (0, S.g)(e),
-n = s.useCallback((e, _) => !(A && e.channel.hasFlag(u.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== R.d4z.GUILD_DIRECTORY && (0 === _.length || I()(_, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(_)), [A]);
+  let n = (0, S.g)(e),
+A = s.useCallback((e, _) => !(n && e.channel.hasFlag(u.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== R.d4z.GUILD_DIRECTORY && (0 === _.length || I()(_, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(_)), [n]);
   return s.useMemo(() => {
 let e = {
   null: [],
@@ -59,12 +59,12 @@ return E[R.d4z.GUILD_CATEGORY].forEach(E => {
   let {
     channel: s
   } = E;
-  'null' === s.id && (e.null = _.null.filter(e => n(e, T))), e[s.id] = _[s.id].filter(e => n(e, T));
+  'null' === s.id && (e.null = _.null.filter(e => A(e, T))), e[s.id] = _[s.id].filter(e => A(e, T));
 }), e._categories = _._categories.filter(_ => 'null' === _.channel.id || 0 === T.length || e[_.channel.id].length > 0), (0, N.Z)(e._categories, e).forEach(g), e;
   }, [
 _,
 E,
-n,
+A,
 T
   ]);
 }
@@ -115,17 +115,17 @@ I = (0, t.cj)([G.Z], () => {
   }
   return _;
 }, [e]),
-A = _._categories.map(e => {
+n = _._categories.map(e => {
   let s = _[e.channel.id];
   return {
     rowCount: 'null' !== e.channel.id && 0 === I[e.channel.id] ? 1 : s.length,
     rowHeight: 0 === s.length ? 0 : E
   };
 });
-  return !T && null != s && A.unshift({
+  return !T && null != s && n.unshift({
 rowCount: 1,
 rowHeight: s
-  }), A;
+  }), n;
 }
 
 function H(e) {
@@ -135,13 +135,13 @@ T = s._categories.length,
 I = s._categories[s._categories.length - 1];
   if (null == I)
 return 0;
-  let A = s[null !== (E = null === (_ = I.channel) || void 0 === _ ? void 0 : _.id) && void 0 !== E ? E : 'null'];
-  return null == A ? 0 : 0 === A.length ? I.index + 2 - T : A[A.length - 1].index + 2 - T;
+  let n = s[null !== (E = null === (_ = I.channel) || void 0 === _ ? void 0 : _.id) && void 0 !== E ? E : 'null'];
+  return null == n ? 0 : 0 === n.length ? I.index + 2 - T : n[n.length - 1].index + 2 - T;
 }
 
 function h(e) {
   var _;
   return C.Z.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
-timeAgo: n()(i.default.extractTimestamp(null !== (_ = M.ZP.lastMessageId(e)) && void 0 !== _ ? _ : e)).fromNow()
+timeAgo: A()(i.default.extractTimestamp(null !== (_ = M.ZP.lastMessageId(e)) && void 0 !== _ ? _ : e)).fromNow()
   });
 }

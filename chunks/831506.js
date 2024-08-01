@@ -1,5 +1,5 @@
 n(47120);
-var i, a, s, r, l = n(392711),
+var i, s, a, r, l = n(392711),
   o = n.n(l),
   c = n(442837),
   u = n(570140),
@@ -21,55 +21,55 @@ function N(e, t) {
 return;
   let i = m[e];
   delete i[t], o().isEmpty(i) && delete m[e];
-  let a = T[n];
-  null != a && (a.delete(e), 0 === a.size && delete T[n]);
+  let s = T[n];
+  null != s && (s.delete(e), 0 === s.size && delete T[n]);
 }
 
-function f(e, t, n, i) {
-  let a = n.find(e => null != e.party && e.party.id),
-s = null != a && null != a.party ? a.party.id : null,
+function C(e, t, n, i) {
+  let s = n.find(e => null != e.party && e.party.id),
+a = null != s && null != s.party ? s.party.id : null,
 r = h(t, e);
-  if (null == s || i === I.Skl.OFFLINE)
+  if (null == a || i === I.Skl.OFFLINE)
 return null != r && (N(t, e), void 0);
   if (null != r) {
-if (r === s)
+if (r === a)
   return !1;
 N(t, e);
   }! function(e, t, n) {
 var i;
-let a = m[e];
-if (null == a && (a = m[e] = {}), a[t] = n, _.Z.isBlocked(e))
+let s = m[e];
+if (null == s && (s = m[e] = {}), s[t] = n, _.Z.isBlocked(e))
   return;
-let s = null !== (i = T[n]) && void 0 !== i ? i : new Set();
-T[n] = s, s.add(e);
-  }(t, e, s);
+let a = null !== (i = T[n]) && void 0 !== i ? i : new Set();
+T[n] = a, a.add(e);
+  }(t, e, a);
 }
 
-function C(e) {
+function f(e) {
   let {
 guild: t
   } = e, n = !1;
   for (let {
   user: e,
   status: i,
-  activities: a
+  activities: s
 }
 of t.presences)
-!1 !== f(t.id, e.id, a, i) && (n = !0);
+!1 !== C(t.id, e.id, s, i) && (n = !0);
   return n;
 }
 
 function p(e, t) {
   let n = !1;
   return t.forEach(t => {
-null != t && f(e, t.user.id, t.activities, t.status) && (n = !0);
+null != t && C(e, t.user.id, t.activities, t.status) && (n = !0);
   }), n;
 }
 
 function g() {
   let e = d.default.getId(),
 t = E.Z.getActivities();
-  return f(I.ME, e, t);
+  return C(I.ME, e, t);
 }
 class S extends(i = c.ZP.Store) {
   initialize() {
@@ -85,12 +85,12 @@ return m;
 return T;
   }
 }
-r = 'GamePartyStore', (s = 'displayName') in(a = S) ? Object.defineProperty(a, s, {
+r = 'GamePartyStore', (a = 'displayName') in(s = S) ? Object.defineProperty(s, a, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = r, t.Z = new S(u.Z, {
+}) : s[a] = r, t.Z = new S(u.Z, {
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
 let {
   guilds: t,
@@ -99,12 +99,12 @@ let {
 for (let {
     user: e,
     status: t,
-    activities: a
+    activities: s
   }
   of n)
-  null != e && !1 !== f(I.ME, e.id, a, t) && (i = !0);
+  null != e && !1 !== C(I.ME, e.id, s, t) && (i = !0);
 for (let e of t)
-  !1 !== C({
+  !1 !== f({
     guild: e
   }) && (i = !0);
 return i;
@@ -118,7 +118,7 @@ T = {}, m = {
   ...n
 }, Object.keys(t).forEach(e => T[e] = new Set(t[e]));
   },
-  GUILD_CREATE: C,
+  GUILD_CREATE: f,
   PRESENCES_REPLACE: function(e) {
 let {
   presences: t
@@ -128,7 +128,7 @@ for (let {
     activities: i
   }
   of t)
-  null != e && !1 !== f(I.ME, e.id, i) && (n = !0);
+  null != e && !1 !== C(I.ME, e.id, i) && (n = !0);
 return n;
   },
   PRESENCE_UPDATES: function(e) {
@@ -140,9 +140,9 @@ return t.map(e => {
     guildId: t,
     user: n,
     status: i,
-    activities: a
+    activities: s
   } = e;
-  return f(null != t ? t : I.ME, n.id, a, i);
+  return C(null != t ? t : I.ME, n.id, s, i);
 }).some(e => e);
   },
   THREAD_MEMBER_LIST_UPDATE: function(e) {

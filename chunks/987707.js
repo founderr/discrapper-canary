@@ -1,6 +1,6 @@
 E(653041), E(47120), E(733860);
-var s, T, I, A, n = E(392711),
-  t = E.n(n),
+var s, T, I, n, A = E(392711),
+  t = E.n(A),
   a = E(149765),
   r = E(442837),
   N = E(570140),
@@ -49,27 +49,27 @@ function V(e) {
 E = 0;
   return e.reverse().forEach(e => {
 var s, T, I;
-let A = [],
-  n = null,
+let n = [],
+  A = null,
   a = null,
   r = null;
-if (null != e.reason && A.push(new L.ms(U.zUn.REASON, null, e.reason)), null != e.changes)
+if (null != e.reason && n.push(new L.ms(U.zUn.REASON, null, e.reason)), null != e.changes)
   for (let _ of e.changes) {
     let e = new L.ms(_.key, _.old_value, _.new_value);
-    A.push(e), e.key === U.zUn.NAME ? n = e : e.key === U.zUn.TYPE ? r = e : e.key === U.zUn.TITLE && (a = e);
+    n.push(e), e.key === U.zUn.NAME ? A = e : e.key === U.zUn.TYPE ? r = e : e.key === U.zUn.TITLE && (a = e);
   }
 if (e.action_type === U.rsA.MEMBER_PRUNE) {
   let _ = null != e && null != e.options && null != e.options.delete_member_days ? e.options.delete_member_days : 1,
     E = new L.ms(U.zUn.PRUNE_DELETE_DAYS, null, _);
-  A.push(E);
+  n.push(E);
 }
-e.action_type === U.rsA.AUTO_MODERATION_BLOCK_MESSAGE && (null === (T = e.options) || void 0 === T ? void 0 : T.auto_moderation_rule_name) != null && A.push(new L.ms(U.zUn.AUTO_MODERATION_TRIGGERED_RULE_NAME, null, e.options.auto_moderation_rule_name)), e.action_type === U.rsA.VOICE_CHANNEL_STATUS_CREATE && (null === (s = e.options) || void 0 === s ? void 0 : s.status) != null && A.push(new L.ms(U.zUn.STATUS, null, e.options.status));
+e.action_type === U.rsA.AUTO_MODERATION_BLOCK_MESSAGE && (null === (T = e.options) || void 0 === T ? void 0 : T.auto_moderation_rule_name) != null && n.push(new L.ms(U.zUn.AUTO_MODERATION_TRIGGERED_RULE_NAME, null, e.options.auto_moderation_rule_name)), e.action_type === U.rsA.VOICE_CHANNEL_STATUS_CREATE && (null === (s = e.options) || void 0 === s ? void 0 : s.status) != null && n.push(new L.ms(U.zUn.STATUS, null, e.options.status));
 let N = new L.ZP({
     id: e.id,
     action: e.action_type,
     targetId: e.target_id,
     userId: e.user_id,
-    changes: A,
+    changes: n,
     options: e.options
   }),
   D = _[0];
@@ -87,8 +87,8 @@ if (function(e, _, E) {
   }), E++;
   return;
 }
-if (N.actionType === U.vB8.DELETE && (null != n || null != a)) {
-  let e = null !== (I = null == n ? void 0 : n.oldValue) && void 0 !== I ? I : null == a ? void 0 : a.oldValue;
+if (N.actionType === U.vB8.DELETE && (null != A || null != a)) {
+  let e = null !== (I = null == A ? void 0 : A.oldValue) && void 0 !== I ? I : null == a ? void 0 : a.oldValue;
   (N.targetType === U.KFR.CHANNEL || N.targetType === U.KFR.CHANNEL_OVERWRITE) && null !== r && (0, S.r8)(r.oldValue) && (e = '#'.concat(e)), null == F[N.targetType] ? F[N.targetType] = {
     [N.targetId]: e
   } : F[N.targetType][N.targetId] = e;
@@ -171,12 +171,12 @@ return F;
 return v;
   }
 }
-A = 'GuildSettingsAuditLogStore', (I = 'displayName') in(T = b) ? Object.defineProperty(T, I, {
-  value: A,
+n = 'GuildSettingsAuditLogStore', (I = 'displayName') in(T = b) ? Object.defineProperty(T, I, {
+  value: n,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : T[I] = A, _.Z = new b(N.Z, {
+}) : T[I] = n, _.Z = new b(N.Z, {
   AUDIT_LOG_FETCH_START: function() {
 Z = !0;
   },
@@ -200,10 +200,10 @@ let {
   webhooks: s,
   guildScheduledEvents: T,
   automodRules: I,
-  threads: A,
-  applicationCommands: n
+  threads: n,
+  applicationCommands: A
 } = e;
-if (P = !1, i = E, u = s, o = T, c = I, C = A, g = n, (0 === _.length || _.length < U.Rg9) && (f = !1), _.length > 0) {
+if (P = !1, i = E, u = s, o = T, c = I, C = n, g = A, (0 === _.length || _.length < U.Rg9) && (f = !1), _.length > 0) {
   let e = V(_);
   M = [
     ...M,

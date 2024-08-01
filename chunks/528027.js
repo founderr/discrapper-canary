@@ -20,11 +20,11 @@ guildId: t,
 emojiId: i,
 emojiName: d,
 className: _
-  } = e, E = (0, a.Z)(t, i);
-  return null != E || null != d ? (0, r.jsx)(l.Z, {
-emojiId: null == E ? void 0 : E.id,
-emojiName: null != d ? d : null == E ? void 0 : E.name,
-animated: null !== (n = null == E ? void 0 : E.animated) && void 0 !== n && n,
+  } = e, f = (0, a.Z)(t, i);
+  return null != f || null != d ? (0, r.jsx)(l.Z, {
+emojiId: null == f ? void 0 : f.id,
+emojiName: null != d ? d : null == f ? void 0 : f.name,
+animated: null !== (n = null == f ? void 0 : f.animated) && void 0 !== n && n,
 className: o()(c.emojiIcon, _)
   }) : (0, r.jsx)(s.Z, {
 className: o()(c.emojiIcon, _),

@@ -24,7 +24,7 @@ user: t,
 onAcceptSuccess: n,
 onRejectSuccess: a,
 onError: E
-  } = e, C = (0, p.Z)(), [g, I] = i.useState(!1), [x, T] = i.useState(!1), [v, N] = i.useState(!1), [S, Z] = i.useState(!1), [A, M] = i.useState(!1), b = g || x || v, R = i.useCallback(async e => {
+  } = e, g = (0, p.Z)(), [C, I] = i.useState(!1), [x, T] = i.useState(!1), [N, v] = i.useState(!1), [S, Z] = i.useState(!1), [A, M] = i.useState(!1), b = C || x || N, R = i.useCallback(async e => {
 if (!b) {
   I(!0);
   try {
@@ -79,14 +79,14 @@ E
 if (b)
   return;
 if (null != t && null == o.Z.getMutualGuilds(t.id)) {
-  N(!0);
+  v(!0);
   try {
     await (0, c.Z)(t.id, t.getAvatarURL(void 0, 80), {
       withMutualGuilds: !0,
       withMutualFriendsCount: !0
     });
   } catch (e) {} finally {
-    N(!1);
+    v(!1);
   }
 }
 let n = async () => {
@@ -139,13 +139,13 @@ null == a ? (0, m.V)({
 }) : i(a);
   }, [R]);
   return {
-acceptMessageRequest: C ? P : R,
+acceptMessageRequest: g ? P : R,
 rejectMessageRequest: j,
 rejectAll: L,
 markAsNotSpam: O,
-isAcceptLoading: g,
+isAcceptLoading: C,
 isRejectLoading: x,
-isUserProfileLoading: v,
+isUserProfileLoading: N,
 isOptimisticAccepted: S,
 isOptimisticRejected: A
   };

@@ -15,12 +15,12 @@ t.Z = function(e) {
 participants: p,
 channel: _,
 hasConnectPermission: f
-  } = e, E = p.filter(d.Io), C = (0, o.J)(_.guild_id), g = a.useCallback(() => {
-C ? (0, r.hk)(_.guild_id, () => l.default.selectVoiceChannel(_.id)) : l.default.selectVoiceChannel(_.id);
+  } = e, E = p.filter(d.Io), g = (0, o.J)(_.guild_id), C = a.useCallback(() => {
+g ? (0, r.hk)(_.guild_id, () => l.default.selectVoiceChannel(_.id)) : l.default.selectVoiceChannel(_.id);
   }, [
 _.id,
 _.guild_id,
-C
+g
   ]), I = 4 === E.length ? 2 : 3;
   return (0, i.jsxs)('div', {
 className: m.container,
@@ -67,7 +67,7 @@ children: [
     disabled: !f,
     className: m.joinButton,
     color: f ? s.Button.Colors.GREEN : s.Button.Colors.PRIMARY,
-    onClick: g,
+    onClick: C,
     size: s.Button.Sizes.MEDIUM,
     children: f ? h.Z.Messages.JOIN_VOICE : h.Z.Messages.CHANNEL_LOCKED_SHORT
   })

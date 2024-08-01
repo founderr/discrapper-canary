@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(908841),
   f = n(5192),
   E = n(561308),
-  C = n(256726),
-  g = n(206295),
+  g = n(256726),
+  C = n(206295),
   I = n(551228),
   x = n(591853),
   T = n(371991),
-  v = n(410441),
-  N = n(981631),
+  N = n(410441),
+  v = n(981631),
   S = n(616922),
   Z = n(689938),
   A = n(153602),
@@ -113,11 +113,11 @@ function j(e) {
 {
   primaryColor: G,
   secondaryColor: V
-} = (0, g.Z)(w),
+} = (0, C.Z)(w),
 F = (0, l.e7)([
   u.Z,
   m.default
-], () => (null == D ? void 0 : D.type) === N.IIU.LISTENING && null != H ? (0, d.Z)(u.Z, m.default, H, D) : void 0, [
+], () => (null == D ? void 0 : D.type) === v.IIU.LISTENING && null != H ? (0, d.Z)(u.Z, m.default, H, D) : void 0, [
   D,
   H
 ], r.Z),
@@ -129,7 +129,7 @@ W = a.useCallback(() => {
     n = (0, E.T_)(null != t ? {
       start: t
     } : P, Date.now());
-  return (0, C.CR)({
+  return (0, g.CR)({
     user: H,
     channel: L,
     mediaImageSrc: w,
@@ -142,7 +142,7 @@ W = a.useCallback(() => {
       G,
       V
     ],
-    badges: (0, C.jE)({
+    badges: (0, g.jE)({
       timestamp: n
     })
   });
@@ -189,7 +189,7 @@ thumbnailSrc: w,
 onClickThumbnail: j,
 channel: L,
 entry: P,
-headerIcons: k.media.provider === s.p.SPOTIFY ? (0, i.jsx)(v.Z, {
+headerIcons: k.media.provider === s.p.SPOTIFY ? (0, i.jsx)(N.Z, {
   onClick: T,
   'aria-label': Z.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
   Icon: _.Z

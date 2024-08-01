@@ -1,19 +1,19 @@
 n.d(t, {
   ZP: function() {
-return a;
+return s;
   },
   lY: function() {
-return s;
+return a;
   }
 });
 var i = n(689938);
 
-function a(e) {
+function s(e) {
   return e > 0 ? i.Z.Messages.EMBEDDED_ACTIVITIES_MAX_PARTICIPANTS.format({
 count: e
   }) : i.Z.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS;
 }
 
-function s(e) {
+function a(e) {
   return e > 0 ? '1-'.concat(e) : i.Z.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS_SHORT;
 }

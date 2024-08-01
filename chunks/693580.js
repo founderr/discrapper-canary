@@ -2,8 +2,8 @@ E(47120);
 var s = E(735250),
   T = E(470079),
   I = E(525654),
-  A = E.n(I),
-  n = E(748780),
+  n = E.n(I),
+  A = E(748780),
   t = E(690389);
 
 function a(e, _, E) {
@@ -43,7 +43,7 @@ let {
   x: e,
   y: _
 } = this.state;
-'Firefox' !== A().name && (n.Z.animate(e, {
+'Firefox' !== n().name && (A.Z.animate(e, {
   loop: !0,
   toValueMin: -74,
   toValueMax: 95,
@@ -51,7 +51,7 @@ let {
   friction: 5,
   tension: 1,
   shouldLoop: this.shouldLoop
-}), n.Z.animate(_, {
+}), A.Z.animate(_, {
   loop: !0,
   toValueMin: -59,
   toValueMax: 75,
@@ -94,7 +94,7 @@ return (0, s.jsxs)('div', {
                 (0, s.jsx)('mask', {
                   id: 'search-index-foreground-mask-b',
                   fill: '#fff',
-                  children: (0, s.jsx)(n.Z.use, {
+                  children: (0, s.jsx)(A.Z.use, {
                     style: r(this.state),
                     className: t.mask,
                     xlinkHref: '#search-index-foreground-mask-a'
@@ -420,7 +420,7 @@ return (0, s.jsxs)('div', {
                 })
               ]
             }),
-            (0, s.jsxs)(n.Z.g, {
+            (0, s.jsxs)(A.Z.g, {
               className: t.magnifyingGlass,
               style: r(this.state),
               children: [
@@ -478,8 +478,8 @@ return (0, s.jsxs)('div', {
   }
   constructor(...e) {
 super(...e), a(this, 'state', {
-  x: new n.Z.Value(0),
-  y: new n.Z.Value(0)
+  x: new A.Z.Value(0),
+  y: new A.Z.Value(0)
 }), a(this, '_isMounted', !1), a(this, 'shouldLoop', () => this._isMounted);
   }
 }

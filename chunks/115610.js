@@ -4,8 +4,8 @@ return h;
   }
 }), n(536091);
 var i = n(904245),
-  a = n(339085),
-  s = n(957730),
+  s = n(339085),
+  a = n(957730),
   r = n(285651),
   l = n(268350),
   o = n(926491),
@@ -26,15 +26,15 @@ async function h(e, t) {
   let N = t.getGuildId();
   if (null == N || null == u.Z.getGuild(N))
 return;
-  let f = d.default.getCurrentUser();
-  if (null == f)
+  let C = d.default.getCurrentUser();
+  if (null == C)
 return;
   await (0, l.$p)();
-  let C = Array.from(o.Z.getAllStickersIterator()),
-p = C.filter(e => e.type === c.n0.GUILD).filter(e => T(e.guild_id) && (0, r.kl)(e, f, t)).sort((e, t) => -E.default.compare(e.id, t.id));
+  let f = Array.from(o.Z.getAllStickersIterator()),
+p = f.filter(e => e.type === c.n0.GUILD).filter(e => T(e.guild_id) && (0, r.kl)(e, C, t)).sort((e, t) => -E.default.compare(e.id, t.id));
   if (p.length > 5) {
-let a = [p[Math.floor(Math.pow(Math.random(), 2) * p.length)].id];
-i.Z.sendStickers(t.id, a, '', {
+let s = [p[Math.floor(Math.pow(Math.random(), 2) * p.length)].id];
+i.Z.sendStickers(t.id, s, '', {
   messageReference: {
     guild_id: null !== (n = t.getGuildId()) && void 0 !== n ? n : void 0,
     channel_id: t.id,
@@ -43,7 +43,7 @@ i.Z.sendStickers(t.id, a, '', {
 });
 return;
   }
-  let g = u.Z.getGuildIds().filter(T).map(e => a.Z.getUsableGuildEmoji(e)).flat().filter(e => null == _.ZP.getEmojiUnavailableReason({
+  let g = u.Z.getGuildIds().filter(T).map(e => s.Z.getUsableGuildEmoji(e)).flat().filter(e => null == _.ZP.getEmojiUnavailableReason({
 emoji: e,
 channel: t,
 guildId: N,
@@ -51,7 +51,7 @@ intention: m.Hz.CHAT
   })).sort((e, t) => -E.default.compare(e.id, t.id));
   if (g.length > 10) {
 let n = g[Math.floor(Math.pow(Math.random(), 2) * g.length)];
-i.Z.sendMessage(t.id, s.ZP.parse(t, n.allNamesString), !1, {
+i.Z.sendMessage(t.id, a.ZP.parse(t, n.allNamesString), !1, {
   messageReference: {
     guild_id: null !== (I = t.getGuildId()) && void 0 !== I ? I : void 0,
     channel_id: t.id,
@@ -60,7 +60,7 @@ i.Z.sendMessage(t.id, s.ZP.parse(t, n.allNamesString), !1, {
 });
 return;
   }
-  let S = C.filter(e => e.type === c.n0.STANDARD),
+  let S = f.filter(e => e.type === c.n0.STANDARD),
 A = [S[Math.floor(Math.random() * S.length)].id];
   i.Z.sendStickers(t.id, A, '', {
 messageReference: {

@@ -5,8 +5,8 @@ return m;
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(481060),
   l = n(266843),
   o = n(341907),
@@ -38,7 +38,7 @@ size: t
   } = (0, l.h)();
   return (0, i.jsxs)('div', {
 ref: t => e.current = t,
-className: s()(_.container, {
+className: a()(_.container, {
   [_.wide]: 'lg' === t,
   [_.tall]: 'lg' !== t
 }),

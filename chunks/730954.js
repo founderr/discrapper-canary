@@ -1,33 +1,33 @@
-n.d(t, {
+t.d(n, {
   Z: function() {
-return s;
+return l;
   }
-}), n(789020);
-var i = n(904245),
-  a = n(667204);
+}), t(789020);
+var i = t(904245),
+  s = t(667204);
 
-function s(e, t, n) {
-  let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-  if (i.Z.deleteMessage(e.id, t.id, !0), t.isCommandType()) {
-null != t.interactionData && null != s.applicationId && (0, a.d)(t, e, s.applicationId);
+function l(e, n, t) {
+  let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+  if (i.Z.deleteMessage(e.id, n.id, !0), n.isCommandType()) {
+null != n.interactionData && null != l.applicationId && (0, s.d)(n, e, l.applicationId);
 return;
   }
   let {
-content: r,
-tts: l,
+content: a,
+tts: r,
 messageReference: o,
-flags: c,
-nonce: u
-  } = t;
+flags: u,
+nonce: d
+  } = n;
   i.Z.sendMessage(e.id, {
-content: r,
-tts: l,
+content: a,
+tts: r,
 invalidEmojis: [],
 validNonShortcutEmojis: []
   }, void 0, {
-nonce: u,
-flags: c,
+nonce: d,
+flags: u,
 messageReference: null != o ? o : void 0,
-...s
+...l
   });
 }

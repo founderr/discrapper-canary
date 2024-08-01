@@ -16,7 +16,7 @@ configurable: !0,
 writable: !0
   }) : e[n] = t, e;
 }
-class E extends(r = o.PureComponent) {
+class f extends(r = o.PureComponent) {
   renderUsers() {
 let {
   users: e,
@@ -64,21 +64,21 @@ super(...e), _(this, '_ref', void 0), _(this, 'defaultRenderUser', (e, n, t, r) 
     onClick: o,
     size: l,
     guildId: _
-  } = this.props, E = e instanceof s.Z ? e : null != e ? e.user : null;
-  return null == E ? (0, i.jsx)('div', {
+  } = this.props, f = e instanceof s.Z ? e : null != e ? e.user : null;
+  return null == f ? (0, i.jsx)('div', {
     className: u()(c.emptyUser, n)
   }, t) : (0, i.jsx)(a.Avatar, {
     tabIndex: 0,
-    src: E.getAvatarURL(_, (0, a.getAvatarSize)(l)),
+    src: f.getAvatarURL(_, (0, a.getAvatarSize)(l)),
     size: l,
-    'aria-label': E.username,
+    'aria-label': f.username,
     className: u()(n, d.cursorPointer, c.avatarSize),
-    onClick: e => null != o ? o(e, E, this._ref) : null
-  }, E.id);
+    onClick: e => null != o ? o(e, f, this._ref) : null
+  }, f.id);
 });
   }
 }
-_(E, 'defaultProps', {
+_(f, 'defaultProps', {
   max: 10,
   renderMoreUsers: function(e, n, t) {
 return (0, i.jsx)('div', {
@@ -87,4 +87,4 @@ return (0, i.jsx)('div', {
 }, t);
   },
   size: a.AvatarSizes.SIZE_24
-}), n.Z = E;
+}), n.Z = f;

@@ -22,12 +22,12 @@ function f(e) {
 channelId: t,
 warningId: f,
 senderId: E
-  } = e, C = a.useCallback(() => {
+  } = e, g = a.useCallback(() => {
 (0, u.T)(t, [f]);
   }, [
 t,
 f
-  ]), g = (0, l.e7)([c.Z], () => c.Z.isBlocked(E)), I = a.useMemo(() => ({
+  ]), C = (0, l.e7)([c.Z], () => c.Z.isBlocked(E)), I = a.useMemo(() => ({
 channelId: t,
 warningId: f,
 senderId: E,
@@ -82,16 +82,16 @@ T = a.useCallback(() => {
   f,
   x
 ]),
-v = a.useCallback(() => {
-  C(), x(h.NM.USER_BANNER_BLOCK_CONFIRM);
+N = a.useCallback(() => {
+  g(), x(h.NM.USER_BANNER_BLOCK_CONFIRM);
 }, [
-  C,
+  g,
   x
 ]),
-N = a.useCallback(() => {
-  C(), x(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
+v = a.useCallback(() => {
+  g(), x(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
 }, [
-  C,
+  g,
   x
 ]),
 S = a.useCallback(() => {
@@ -106,8 +106,8 @@ S = a.useCallback(() => {
       } = n;
       return (0, i.jsx)(e, {
         transitionState: a,
-        onBlock: v,
-        onBlockAndReport: N,
+        onBlock: N,
+        onBlockAndReport: v,
         onCancel: () => {
           null == s || s(), x(h.NM.USER_BANNER_BLOCK_CANCEL);
         },
@@ -118,8 +118,8 @@ S = a.useCallback(() => {
     };
   });
 }, [
-  v,
   N,
+  v,
   E,
   t,
   x
@@ -131,13 +131,13 @@ senderId: E,
 warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
 header: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_HEADER,
 description: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION,
-onDismiss: C,
+onDismiss: g,
 buttons: [{
     text: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_OPEN_SAFETY_TOOLS_BUTTON,
     color: r.Button.Colors.BRAND,
     onclick: T
   },
-  ...g ? [] : [{
+  ...C ? [] : [{
     text: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_BLOCK_BUTTON,
     color: r.Button.Colors.PRIMARY,
     onclick: S

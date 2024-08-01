@@ -14,13 +14,13 @@ var i = n(735250),
   _ = n(424602),
   f = n(924557),
   E = n(435064),
-  C = n(712114),
-  g = n(605236),
+  g = n(712114),
+  C = n(605236),
   I = n(536442),
   x = n(79390),
   T = n(665906),
-  v = n(706454),
-  N = n(695346),
+  N = n(706454),
+  v = n(695346),
   S = n(433355),
   Z = n(819640),
   A = n(375954),
@@ -78,7 +78,7 @@ eo = (0, r.e7)([E.Z], () => E.Z.hasClips()),
 ed = (0, f.Go)() && ($ || eo),
 eh = W.isPrivate(),
 em = (0, r.e7)([M.Z], () => eh || M.Z.can(U.Plq.ATTACH_FILES, W) && M.Z.can(U.Plq.SEND_MESSAGES, W)),
-ep = (0, r.e7)([v.default], () => v.default.locale),
+ep = (0, r.e7)([N.default], () => N.default.locale),
 e_ = [
   'en-US',
   'en-GB'
@@ -91,9 +91,9 @@ ef = (0, d.Z)(ee);
     showLargeMessageDialog: n
   }), L.S.dispatchToLastSubscribed(U.CkL.TEXTAREA_FOCUS);
 },
-eC = (0, r.e7)([A.Z], () => A.Z.hasCurrentUserSentMessageSinceAppStart());
+eg = (0, r.e7)([A.Z], () => A.Z.hasCurrentUserSentMessageSinceAppStart());
 
-  function eg() {
+  function eC() {
 (0, c.openModalLazy)(async () => {
   let {
     default: e
@@ -120,9 +120,9 @@ return L.S.subscribe(U.CkL.UPLOAD_FILE, e), () => {
   });
   let eI = (0, T.NE)(W),
 ex = (0, T.Xu)(W),
-eT = !N.dN.useSetting() && !(0, P.isAndroidWeb)() && null != window.ResizeObserver,
-ev = (0, x.UI)(null != W ? W : void 0),
-eN = (0, c.useRedesignIconContext)().enabled,
+eT = !v.dN.useSetting() && !(0, P.isAndroidWeb)() && null != window.ResizeObserver,
+eN = (0, x.UI)(null != W ? W : void 0),
+ev = (0, c.useRedesignIconContext)().enabled,
 eS = (0, m.qB)(W.id, 'ChannelAttachButton'),
 eZ = null !== (s = null == et ? void 0 : et.length) && void 0 !== s ? s : 0,
 eA = (0, k.Z)({
@@ -134,7 +134,7 @@ eA = (0, k.Z)({
   channel: W,
   activities: J,
   newClipsCount: eZ,
-  canPostPolls: ev,
+  canPostPolls: eN,
   canLaunchActivities: eS,
   appContext: X
 });
@@ -142,7 +142,7 @@ eA = (0, k.Z)({
 return null;
   let eM = J.some(e => (0, p.Z)(e, U.xjy.SYNC)),
 eb = J.some(e => (0, p.Z)(e, U.xjy.JOIN) && !(0, p.Z)(e, U.xjy.EMBEDDED)) || eM;
-  V = eN ? (0, i.jsx)(c.CirclePlusIcon, {
+  V = ev ? (0, i.jsx)(c.CirclePlusIcon, {
 className: G.__invalid_attachButtonIcon,
 colorClass: G.attachButtonPlus
   }) : eb ? (0, i.jsx)(j.Z, {
@@ -170,21 +170,21 @@ align: 'recentClips' === ec ? 'center' : 'left',
 position: 'top',
 positionKey: null != ec ? ec : 'null',
 onRequestOpen: () => {
-  eC && (0, g.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
+  eg && (0, C.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
     dismissAction: B.L.TAKE_ACTION
   }), eu('attachMenu');
 },
 onRequestClose: () => {
-  !(0, c.hasAnyModalOpen)() && (eC && (0, g.EW)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
+  !(0, c.hasAnyModalOpen)() && (eg && (0, C.EW)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
     dismissAction: B.L.TAKE_ACTION
   }), eu(null));
 },
 renderPopout: e => {
   switch (ec) {
     case 'recentClips':
-      return (0, i.jsx)(C.Z, {
+      return (0, i.jsx)(g.Z, {
         ...e,
-        onOpenClips: eg,
+        onOpenClips: eC,
         lastClipsSession: ee
       });
     case 'attachMenu':
@@ -200,7 +200,7 @@ renderPopout: e => {
         draftType: z,
         editorTextContent: Y,
         setValue: K,
-        openClips: eg
+        openClips: eC
       });
     default:
       throw Error('Invalid popout type provided');

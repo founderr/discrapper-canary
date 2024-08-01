@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return v;
+return N;
   }
 }), n(47120);
 var i = n(735250),
@@ -18,38 +18,38 @@ var i = n(735250),
   _ = n(594174),
   f = n(626135),
   E = n(51144),
-  C = n(901461),
-  g = n(981631),
+  g = n(901461),
+  C = n(981631),
   I = n(689938),
   x = n(383953);
 let T = '749054660769218631';
 
-function v(e) {
+function N(e) {
   var t;
   let {
 channel: n
-  } = e, [s, v] = a.useState('');
+  } = e, [s, N] = a.useState('');
   a.useEffect(() => {
 (0, u.FQ)('847199849233514549', !0);
   }, []);
-  let N = (0, r.e7)([
+  let v = (0, r.e7)([
   p.Z,
   m.default
-], () => !!l()(p.Z.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== m.default.getId() && e.state === g.yb.SENT && !(0, C.Z)(e))),
+], () => !!l()(p.Z.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== m.default.getId() && e.state === C.yb.SENT && !(0, g.Z)(e))),
 S = (0, r.e7)([_.default], () => _.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
 Z = null !== (t = E.ZP.useName(S)) && void 0 !== t ? t : I.Z.Messages.WAVE_DEFAULT_RECIPIENT,
 A = (0, r.e7)([d.Z], () => d.Z.getStickerById(T)),
 M = a.useCallback(async () => {
   if (null == s || '' === s)
     try {
-      await c.Z.sendGreetMessage(n.id, T), f.default.track(g.rMx.DM_EMPTY_ACTION, {
+      await c.Z.sendGreetMessage(n.id, T), f.default.track(C.rMx.DM_EMPTY_ACTION, {
         channel_id: n.id,
         channel_type: n.type,
         source: 'Wave',
         type: 'Send wave'
       });
     } catch (e) {
-      !e.ok && 429 === e.status && v(I.Z.Messages.RATE_LIMITED);
+      !e.ok && 429 === e.status && N(I.Z.Messages.RATE_LIMITED);
     }
 }, [
   n.id,
@@ -65,7 +65,7 @@ R = null != s && '' !== s ? (0, i.jsx)(o.Text, {
   variant: 'text-sm/normal',
   children: s
 }) : null;
-  return N ? (0, i.jsxs)('div', {
+  return v ? (0, i.jsxs)('div', {
 className: x.containerCompact,
 children: [
   (0, i.jsxs)(o.Clickable, {

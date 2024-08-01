@@ -21,21 +21,21 @@ onMouseLeave: h,
 ...m
   } = e, p = t || n || o, _ = c ? r.d : r.Z, f = (0, l.Z)(t, n, o, u), {
 Component: E,
-play: C,
-events: g
+play: g,
+events: C
   } = (0, s.O)(p ? 'unmute' : 'mute');
-  return a.useEffect(() => () => C(), [
-C,
+  return a.useEffect(() => () => g(), [
+g,
 p
   ]), (0, i.jsx)(_, {
 isActive: !p,
 iconComponent: E,
 label: f,
 onMouseEnter: e => {
-  null == d || d(e), g.onMouseEnter();
+  null == d || d(e), C.onMouseEnter();
 },
 onMouseLeave: e => {
-  null == h || h(e), g.onMouseLeave();
+  null == h || h(e), C.onMouseLeave();
 },
 ...m
   });

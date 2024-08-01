@@ -1,4 +1,4 @@
-var i, a, s, r, l = n(913527),
+var i, s, a, r, l = n(913527),
   o = n.n(l),
   c = n(442837),
   u = n(570140),
@@ -12,12 +12,12 @@ let e = _.default.getCurrentUser();
 return !(0, E.I5)(e) && I;
   }
 }
-s = 'SubscriptionRemindersStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
-  value: s,
+a = 'SubscriptionRemindersStore', (s = 'displayName') in(i = m) ? Object.defineProperty(i, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new m(u.Z, {
+}) : i[s] = a, t.Z = new m(u.Z, {
   BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function(e) {
 let {
   subscription: t

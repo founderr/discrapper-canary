@@ -5,8 +5,8 @@ return E;
 }), n(47120);
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(765400),
+var s = n(481060),
+  a = n(765400),
   r = n(937615),
   l = n(817460),
   o = n(290348),
@@ -36,8 +36,8 @@ children: [
       (0, i.jsxs)('div', {
         className: _.tierPriceContainer,
         children: [
-          !n && (0, i.jsx)(s.v, {}),
-          (0, i.jsxs)(a.Text, {
+          !n && (0, i.jsx)(a.v, {}),
+          (0, i.jsxs)(s.Text, {
             variant: 'text-xs/normal',
             className: _.tierPrice,
             children: [
@@ -55,13 +55,13 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(a.Clickable, {
+  (0, i.jsx)(s.Clickable, {
     onClick: I,
-    children: E ? (0, i.jsx)(a.ChevronSmallUpIcon, {
+    children: E ? (0, i.jsx)(s.ChevronSmallUpIcon, {
       size: 'md',
       color: 'currentColor',
       className: _.toggleButton
-    }) : (0, i.jsx)(a.ChevronSmallDownIcon, {
+    }) : (0, i.jsx)(s.ChevronSmallDownIcon, {
       size: 'md',
       color: 'currentColor',
       className: _.toggleButton

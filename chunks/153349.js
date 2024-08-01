@@ -16,13 +16,13 @@ var i, a, s = n(735250),
   _ = n(58540),
   f = n(665149),
   E = n(484459),
-  C = n(103575),
-  g = n(271383),
+  g = n(103575),
+  C = n(271383),
   I = n(496675),
   x = n(158776),
   T = n(471253),
-  v = n(431328),
-  N = n(145834),
+  N = n(431328),
+  v = n(145834),
   S = n(590415),
   Z = n(614173),
   A = n(618896),
@@ -71,11 +71,11 @@ let f = t.getGuildId();
 u()(null != f, 'Channel cannot be guildless');
 let {
   isMobile: I,
-  status: v
+  status: N
 } = (0, d.cj)([x.Z], () => ({
   isMobile: x.Z.isMobileOnline(i.user.id),
   status: x.Z.getStatus(i.user.id, f)
-})), Z = (0, d.e7)([g.ZP], () => g.ZP.getMember(f, i.user.id)), A = l.useMemo(() => ({
+})), Z = (0, d.e7)([C.ZP], () => C.ZP.getMember(f, i.user.id)), A = l.useMemo(() => ({
   [f]: [i.user.id]
 }), [
   f,
@@ -118,7 +118,7 @@ return (0, s.jsxs)('div', {
         guildId: t.guild_id,
         channelId: t.id
       }),
-      renderPopout: e => (0, s.jsx)(C.Z, {
+      renderPopout: e => (0, s.jsx)(g.Z, {
         ...e,
         location: 'RequestToSpeakSidebar',
         userId: i.user.id,
@@ -139,7 +139,7 @@ return (0, s.jsxs)('div', {
               className: R.participantAvatar,
               user: i.user,
               isMobile: I,
-              status: v
+              status: N
             }),
             (0, s.jsxs)('div', {
               className: R.participantTextContainer,
@@ -152,7 +152,7 @@ return (0, s.jsxs)('div', {
                 (0, s.jsx)(h.Text, {
                   variant: 'text-xs/normal',
                   color: 'header-secondary',
-                  children: (0, N.$)(i)
+                  children: (0, v.$)(i)
                 })
               ]
             })
@@ -229,7 +229,7 @@ function y(e) {
 channel: t,
 toggleRequestToSpeakSidebar: n,
 chatOpen: i
-  } = e, a = (0, v.Fd)(t.id), l = [
+  } = e, a = (0, N.Fd)(t.id), l = [
 (0, d.e7)([I.Z], () => I.Z.can(M.Pl.MANAGE_CHANNELS, t) || I.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0,
 Math.max(1, a.length)
   ];

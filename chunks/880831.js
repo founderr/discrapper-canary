@@ -21,25 +21,25 @@ var i = n(735250),
   _ = n(905405),
   f = n(937889),
   E = n(739566),
-  C = n(267128),
-  g = n(378233),
+  g = n(267128),
+  C = n(378233),
   I = n(419922),
   x = n(375954),
   T = n(699516),
-  v = n(768581),
-  N = n(70956),
+  N = n(768581),
+  v = n(70956),
   S = n(823379),
   Z = n(792125),
   A = n(981631),
   M = n(217702),
   b = n(858359);
-let R = 10 * N.Z.Millis.SECOND;
+let R = 10 * v.Z.Millis.SECOND;
 
 function j(e) {
   var t;
   let {
 message: n
-  } = e, s = (0, c.e7)([T.Z], () => T.Z.isBlockedForMessage(n)), r = (0, E.Uj)(n), o = a.useContext(p.Z), [d, x] = a.useState(!1), N = (0, _.p)(), S = a.useCallback(e => {
+  } = e, s = (0, c.e7)([T.Z], () => T.Z.isBlockedForMessage(n)), r = (0, E.Uj)(n), o = a.useContext(p.Z), [d, x] = a.useState(!1), v = (0, _.p)(), S = a.useCallback(e => {
 if ('A' !== e.target.nodeName)
   h.Z.updateChatOpen(n.channel_id, !0), m.Z.jumpToMessage({
     channelId: n.channel_id,
@@ -51,17 +51,17 @@ n.channel_id,
 n.id
   ]), Z = null != n.content && '' !== n.content ? (0, f.ZP)(n, {
 isInteracting: d,
-shouldFilterKeywords: N
+shouldFilterKeywords: v
   }).content : null, {
 contentPlaceholder: A,
 renderedContent: R,
 trailingIcon: j,
 leadingIcon: L
-  } = (0, C.f)(n, Z, s, b.messageContent, {
+  } = (0, g.f)(n, Z, s, b.messageContent, {
 trailingIconClass: b.messageContentTrailingIcon,
 leadingIconClass: b.messageContentLeadingIcon,
 iconSize: M.WW
-  }), P = (0, g.cv)(n), O = P.length > 0 ? P.map(e => (0, i.jsx)(I.ZP, {
+  }), P = (0, C.cv)(n), O = P.length > 0 ? P.map(e => (0, i.jsx)(I.ZP, {
 className: b.sticker,
 size: 128,
 sticker: e,
@@ -91,7 +91,7 @@ children: [
   }),
   (0, i.jsx)('img', {
     alt: '',
-    src: (null == r ? void 0 : r.guildMemberAvatar) != null && null != o ? (0, v.JM)({
+    src: (null == r ? void 0 : r.guildMemberAvatar) != null && null != o ? (0, N.JM)({
       guildId: o,
       userId: n.author.id,
       avatar: r.guildMemberAvatar
@@ -160,7 +160,7 @@ channelId: t,
 isFrozen: s,
 count: 3,
 lingerMs: R
-  }), _ = a.useRef({}), [f, E] = a.useState({}), C = a.useCallback((e, t) => {
+  }), _ = a.useRef({}), [f, E] = a.useState({}), g = a.useCallback((e, t) => {
 null == t ? delete _.current[e] : _.current[e] = t;
   }, []);
   a.useLayoutEffect(() => {
@@ -172,12 +172,12 @@ for (let i of p) {
   e[i.id] = t, t += a + 8;
 }!(0, r.isEqual)(e, f) && E(e);
   }, [p]);
-  let g = p.map(e => ({
+  let C = p.map(e => ({
   message: e,
   height: _.current[e.id],
   y: f[e.id]
 })),
-I = (0, u.useTransition)(g, {
+I = (0, u.useTransition)(C, {
   keys: e => e.message.id,
   from: () => ({
     opacity: 0
@@ -220,7 +220,7 @@ onMouseLeave: () => {
   h(!1);
 },
 children: I((e, t) => (0, i.jsx)(o.animated.div, {
-  ref: e => C(t.message.id, null != e ? e.offsetHeight : null),
+  ref: e => g(t.message.id, null != e ? e.offsetHeight : null),
   className: b.toastWrapper,
   style: e,
   children: (0, i.jsx)(j, {

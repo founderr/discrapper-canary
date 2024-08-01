@@ -14,20 +14,20 @@ var i = n(735250),
   _ = n(50493),
   f = n(981631),
   E = n(689938),
-  C = n(648668);
+  g = n(648668);
 
-function g(e) {
+function C(e) {
   var t, n;
   let {
 permission: a,
 roleIds: s,
 guild: h,
 specMap: m
-  } = e, _ = f.Plq[a], g = null !== (n = null === (t = m[_.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, u.wt)(_), I = p._o.has(_), x = (0, r.e7)([d.Z], () => d.Z.getRoles(h.id));
+  } = e, _ = f.Plq[a], C = null !== (n = null === (t = m[_.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, u.wt)(_), I = p._o.has(_), x = (0, r.e7)([d.Z], () => d.Z.getRoles(h.id));
   return (0, i.jsx)(o.Tooltip, {
 'aria-label': E.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
-tooltipClassName: C.roleTooltipContainer,
-tooltipContentClassName: C.roleTooltipContentContainer,
+tooltipClassName: g.roleTooltipContainer,
+tooltipContentClassName: g.roleTooltipContentContainer,
 allowOverflow: !0,
 text: (0, i.jsxs)(i.Fragment, {
   children: [
@@ -36,7 +36,7 @@ text: (0, i.jsxs)(i.Fragment, {
       children: I ? E.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY : E.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY
     }),
     s.map(e => (0, i.jsx)('div', {
-      className: C.roleTooltipItem,
+      className: g.roleTooltipItem,
       children: (0, i.jsx)(c.Z, {
         role: x[e],
         guildId: h.id
@@ -50,8 +50,8 @@ children: e => {
     onMouseLeave: n
   } = e;
   return (0, i.jsxs)(o.Clickable, {
-    className: l()(C.permissionChiplet, {
-      [C.elevatedPermission]: I
+    className: l()(g.permissionChiplet, {
+      [g.elevatedPermission]: I
     }),
     onMouseEnter: t,
     onMouseLeave: n,
@@ -65,7 +65,7 @@ children: e => {
       (0, i.jsx)(o.Text, {
         variant: 'text-xs/medium',
         color: 'interactive-normal',
-        children: g
+        children: C
       })
     ]
   });
@@ -76,12 +76,12 @@ t.Z = a.memo(function(e) {
   let {
 member: t,
 onNavigate: n
-  } = e, s = (0, r.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]), c = (0, p.B2)(t.userId, t.guildId, p.Qn), u = (0, p.B2)(t.userId, t.guildId, p.pd), I = Object.keys(c).length, x = Object.keys(u).length, T = a.useMemo(() => null != s ? h.Z.getGuildPermissionSpecMap(s) : null, [s]), v = a.useMemo(() => null != s ? h.Z.generateGuildPermissionSpec(s) : null, [s]), N = a.useMemo(() => {
+  } = e, s = (0, r.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]), c = (0, p.B2)(t.userId, t.guildId, p.Qn), u = (0, p.B2)(t.userId, t.guildId, p.pd), I = Object.keys(c).length, x = Object.keys(u).length, T = a.useMemo(() => null != s ? h.Z.getGuildPermissionSpecMap(s) : null, [s]), N = a.useMemo(() => null != s ? h.Z.generateGuildPermissionSpec(s) : null, [s]), v = a.useMemo(() => {
 if (null == s || null == T)
   return null;
 if (0 === I)
   return (0, i.jsx)('div', {
-    className: l()(C.permissionChiplet, C.noModPerms),
+    className: l()(g.permissionChiplet, g.noModPerms),
     children: (0, i.jsx)(o.Text, {
       variant: 'text-sm/normal',
       color: 'text-positive',
@@ -89,7 +89,7 @@ if (0 === I)
     })
   });
 let e = [];
-return null == v || v.forEach(t => {
+return null == N || N.forEach(t => {
   t.permissions.forEach(t => {
     let n = t.flag,
       a = p.pd.find(e => f.Plq[e] === n);
@@ -97,7 +97,7 @@ return null == v || v.forEach(t => {
       return;
     let l = c[a];
     if (null != l)
-      e.push((0, i.jsx)(g, {
+      e.push((0, i.jsx)(C, {
         permission: a,
         roleIds: l,
         guild: s,
@@ -109,12 +109,12 @@ return null == v || v.forEach(t => {
 s,
 I,
 c,
-v,
+N,
 T
   ]);
   return null == s ? null : (0, i.jsx)(o.FormItem, {
 title: (0, i.jsxs)('div', {
-  className: C.headerContainer,
+  className: g.headerContainer,
   children: [
     (0, i.jsx)(o.Text, {
       variant: 'eyebrow',
@@ -122,7 +122,7 @@ title: (0, i.jsxs)('div', {
       children: E.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE
     }),
     (0, i.jsxs)(o.Clickable, {
-      className: C.viewAllPermissions,
+      className: g.viewAllPermissions,
       onClick: () => n(_.k.PERMISSIONS),
       children: [
         (0, i.jsx)(o.Text, {
@@ -144,8 +144,8 @@ title: (0, i.jsxs)('div', {
 children: (0, i.jsx)(m.WM, {
   children: (0, i.jsx)(m._2, {
     description: (0, i.jsx)('div', {
-      className: C.permissionsContainer,
-      children: N
+      className: g.permissionsContainer,
+      children: v
     })
   })
 })

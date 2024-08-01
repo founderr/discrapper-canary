@@ -1,33 +1,33 @@
-n.d(t, {
+t.d(n, {
   Z: function() {
-return u;
+return d;
   }
 });
-var i = n(735250);
-n(470079);
-var a = n(442837),
-  s = n(481060),
-  r = n(768943),
-  l = n(43690),
-  o = n(121254),
-  c = n(689938);
+var i = t(735250);
+t(470079);
+var a = t(442837),
+  l = t(481060),
+  r = t(768943),
+  o = t(43690),
+  s = t(121254),
+  u = t(689938);
 
-function u(e) {
+function d(e) {
   let {
-enabled: t
-  } = o.Z.useExperiment({
+enabled: n
+  } = s.Z.useExperiment({
 location: 'use_message_bookmarks_item'
   }, {
 autoTrackExposure: !1
-  }), n = (0, a.e7)([r.Z], () => r.Z.isMessageBookmarked(e.id));
-  return t ? (0, i.jsx)(s.MenuItem, {
+  }), t = (0, a.e7)([r.Z], () => r.Z.isMessageBookmarked(e.id));
+  return n ? (0, i.jsx)(l.MenuItem, {
 id: 'mark-bookmark',
-label: n ? c.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK : c.Z.Messages.MESSAGE_BOOKMARKS_BOOKMARK,
-icon: s.InboxIcon,
-action: () => n ? (0, l.h)({
+label: t ? u.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK : u.Z.Messages.MESSAGE_BOOKMARKS_BOOKMARK,
+icon: l.InboxIcon,
+action: () => t ? (0, o.h)({
   channelId: e.channel_id,
   messageId: e.id
-}) : (0, l.D)({
+}) : (0, o.D)({
   channelId: e.channel_id,
   messageId: e.id
 })

@@ -13,13 +13,13 @@ var i = n(735250),
   _ = n(171368),
   f = n(433355),
   E = n(699516),
-  C = n(594174),
-  g = n(806519),
+  g = n(594174),
+  C = n(806519),
   I = n(768581),
   x = n(525541),
   T = n(981631),
-  v = n(377668),
-  N = n(228168),
+  N = n(377668),
+  v = n(228168),
   S = n(689938),
   Z = n(855299);
 let A = e => {
@@ -42,9 +42,9 @@ let {
       alt: '',
       className: Z.avatar
     }, t);
-  return l ? r : (0, i.jsx)(g.ZP, {
+  return l ? r : (0, i.jsx)(C.ZP, {
     className: Z.avatarMask,
-    mask: g.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
+    mask: C.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
     width: 24,
     height: 24,
     children: r
@@ -65,7 +65,7 @@ return null == s || 0 === s.length ? (0, i.jsx)(r.Text, {
         (0, _.openUserProfileModal)({
           userId: t,
           channelId: n,
-          section: N.oh.MUTUAL_GUILDS,
+          section: v.oh.MUTUAL_GUILDS,
           analyticsLocation: {
             section: T.jXE.DIRECT_MESSAGE
           }
@@ -88,7 +88,7 @@ let {
   relationshipType: n,
   userId: a,
   showingBanner: s
-} = e, l = null === (t = C.default.getUser(a)) || void 0 === t ? void 0 : t.bot, c = () => {
+} = e, l = null === (t = g.default.getUser(a)) || void 0 === t ? void 0 : t.bot, c = () => {
   o.Z.addRelationship({
     userId: a,
     context: {
@@ -215,18 +215,18 @@ let {
   isOptimisticAccepted: _,
   isOptimisticRejected: E
 } = (0, u.m)({
-  user: C.default.getUser(n),
+  user: g.default.getUser(n),
   onError: s,
   onAcceptSuccess: o,
   onRejectSuccess: l
-}), g = h || p || _ || E;
+}), C = h || p || _ || E;
 return (0, i.jsxs)(i.Fragment, {
   children: [
     (0, i.jsx)(r.Button, {
       className: Z.action,
       size: r.Button.Sizes.TINY,
       onClick: () => c(t),
-      disabled: g,
+      disabled: C,
       submitting: h,
       children: S.Z.Messages.MESSAGE_REQUEST_ACCEPT
     }),
@@ -235,7 +235,7 @@ return (0, i.jsxs)(i.Fragment, {
       size: r.Button.Sizes.TINY,
       onClick: () => d(t),
       color: r.Button.Colors.PRIMARY,
-      disabled: g,
+      disabled: C,
       submitting: p,
       children: S.Z.Messages.MESSAGE_REQUEST_IGNORE
     })
@@ -250,7 +250,7 @@ showingBanner: a
   } = e, {
 channelId: r
   } = (0, d._)(), o = (0, l.e7)([c.Z], () => null != r && c.Z.isSpam(r), [r]), u = (0, l.e7)([E.Z], () => E.Z.getRelationshipType(t), [t]), m = n.id === r;
-  return t === v.fL ? null : o || m ? (0, i.jsxs)('div', {
+  return t === N.fL ? null : o || m ? (0, i.jsxs)('div', {
 className: Z.mobileContainer,
 children: [
   (0, i.jsx)('div', {

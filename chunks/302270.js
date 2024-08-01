@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(236091),
   f = n(623624),
   E = n(665149),
-  C = n(984370),
-  g = n(141321),
+  g = n(984370),
+  C = n(141321),
   I = n(618158),
   x = n(390322),
   T = n(616286),
-  v = n(961048),
-  N = n(430824),
+  N = n(961048),
+  v = n(430824),
   S = n(496675),
   Z = n(626135),
   A = n(792125),
@@ -47,8 +47,8 @@ inPopout: t,
 channel: n,
 toggleRequestToSpeakSidebar: s,
 showRequestToSpeakSidebar: o
-  } = e, m = (0, d.bp)(), f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)), E = (0, R.B)(n.id), C = (0, M.Rk)(n.id, b.pV.REQUESTED_TO_SPEAK_ONLY), {
-preventIdle: N,
+  } = e, m = (0, d.bp)(), f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)), E = (0, R.B)(n.id), g = (0, M.Rk)(n.id, b.pV.REQUESTED_TO_SPEAK_ONLY), {
+preventIdle: v,
 allowIdle: S
   } = (0, I.Y)('popup');
   return (0, i.jsxs)(i.Fragment, {
@@ -72,7 +72,7 @@ children: [
       let {
         isShown: n
       } = t;
-      return (0, a.createElement)(v.Z, {
+      return (0, a.createElement)(N.Z, {
         ...e,
         key: 'more-options',
         isActive: n,
@@ -84,8 +84,8 @@ children: [
   !t && (0, i.jsx)(p.Z, {
     className: w.button
   }, 'clips'),
-  (0, i.jsx)(g.Z, {
-    onOpen: N,
+  (0, i.jsx)(C.Z, {
+    onOpen: v,
     onClose: S,
     className: w.button
   }, 'recents'),
@@ -96,7 +96,7 @@ children: [
         f && u.Z.updateChatOpen(n.id, !1), s();
       },
       showRequestToSpeakSidebar: o,
-      numRequestToSpeak: C
+      numRequestToSpeak: g
     })
   }) : null,
   !f && (0, i.jsx)('div', {
@@ -121,7 +121,7 @@ inPopout: s,
 channel: d,
 toggleRequestToSpeakSidebar: h,
 showRequestToSpeakSidebar: p
-  } = e, _ = (0, m.ZP)(d), g = (0, r.e7)([L.Z], () => L.Z.getStageInstanceByChannel(d.id)), I = (0, M.Io)(d.id), x = (0, M.Rk)(d.id, b.pV.AUDIENCE), T = (0, r.e7)([N.Z], () => N.Z.getGuild(d.guild_id), [d.guild_id]), v = null !== (t = null == T ? void 0 : T.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, R = (null == T ? void 0 : T.isCommunity()) ? v < D.TU7 : (null == T ? void 0 : T.premiumTier) !== D.Eu4.TIER_3 && v <= D.eez, P = (0, y.Z)(d), O = (0, r.e7)([S.Z], () => S.Z.can(j.yP, d)), H = () => {
+  } = e, _ = (0, m.ZP)(d), C = (0, r.e7)([L.Z], () => L.Z.getStageInstanceByChannel(d.id)), I = (0, M.Io)(d.id), x = (0, M.Rk)(d.id, b.pV.AUDIENCE), T = (0, r.e7)([v.Z], () => v.Z.getGuild(d.guild_id), [d.guild_id]), N = null !== (t = null == T ? void 0 : T.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, R = (null == T ? void 0 : T.isCommunity()) ? N < D.TU7 : (null == T ? void 0 : T.premiumTier) !== D.Eu4.TIER_3 && N <= D.eez, P = (0, y.Z)(d), O = (0, r.e7)([S.Z], () => S.Z.can(j.yP, d)), H = () => {
 u.Z.updateStageVideoLimitBoostUpsellDismissed(d.id, !0), Z.default.track(D.rMx.BOOSTING_UPSELL_CLICKED, {
   guild_id: d.guild_id,
   type: k.cd.VIDEO_STAGE_LIMIT,
@@ -144,7 +144,7 @@ toolbar: (0, i.jsx)(B, {
   showRequestToSpeakSidebar: p,
   channel: d
 }),
-onDoubleClick: C.O,
+onDoubleClick: g.O,
 transparent: !0,
 className: l()((0, A.Q)(D.BRd.DARK), w.participants),
 children: [
@@ -153,12 +153,12 @@ children: [
     disabled: !0,
     'aria-label': U.Z.Messages.STAGE_CHANNEL,
     className: w.icon,
-    color: null != g ? o.Z.unsafe_rawColors.GREEN_360.css : void 0
+    color: null != C ? o.Z.unsafe_rawColors.GREEN_360.css : void 0
   }),
   (0, i.jsx)(E.ZP.Title, {
     className: w.channelName,
     wrapperClassName: w.channelNameWrapper,
-    children: null !== (n = null == g ? void 0 : g.topic) && void 0 !== n ? n : _
+    children: null !== (n = null == C ? void 0 : C.topic) && void 0 !== n ? n : _
   }),
   (0, i.jsx)(E.ZP.Divider, {
     className: w.divider

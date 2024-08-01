@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return g;
+return C;
   }
 });
 var i = n(735250);
@@ -20,7 +20,7 @@ var a = n(120356),
   f = n(689938),
   E = n(534689);
 
-function C(e) {
+function g(e) {
   let {
 summary: t,
 channel: n
@@ -83,7 +83,7 @@ children: c((e, t) => t ? (0, i.jsx)('div', {
   });
 }
 
-function g(e) {
+function C(e) {
   var t, n;
   let a, {
   item: l,
@@ -106,7 +106,7 @@ children: [
 ]
   }) : (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsx)(C, {
+  (0, i.jsx)(g, {
     summary: m,
     channel: u
   }),

@@ -25,7 +25,7 @@ let {
   author: _,
   repliedMessage: f,
   roleIcon: E
-} = e, C = (0, u.wq)(t.author.id, n.id), g = (0, u.XO)(t, n, h, p), I = (0, u.R9)(m, p), x = a.useCallback(() => p({
+} = e, g = (0, u.wq)(t.author.id, n.id), C = (0, u.XO)(t, n, h, p), I = (0, u.R9)(m, p), x = a.useCallback(() => p({
   usernameProfile: !1,
   avatarProfile: !1,
   referencedUsernameProfile: !1
@@ -43,8 +43,8 @@ return (0, i.jsx)(r.ZP, {
   showAvatarPopout: m,
   showUsernamePopout: h,
   onClickAvatar: I,
-  onClickUsername: g,
-  onContextMenu: C,
+  onClickUsername: C,
+  onContextMenu: g,
   onPopoutRequestClose: x,
   roleIcon: E
 });
@@ -67,21 +67,21 @@ channel: _,
 groupId: f
   } = t, {
 usernameProfile: E,
-avatarProfile: C
+avatarProfile: g
   } = a;
   if ((0, s.Z)(d))
 return null;
-  let g = d.id === f;
-  return g || p || null != r ? (0, i.jsx)(h, {
+  let C = d.id === f;
+  return C || p || null != r ? (0, i.jsx)(h, {
 message: d,
 channel: _,
 compact: p,
 subscribeToGroupId: f,
-isGroupStart: g,
+isGroupStart: C,
 groupId: f,
 setPopout: n,
 usernameProfile: E,
-avatarProfile: C,
+avatarProfile: g,
 author: o,
 repliedMessage: c,
 roleIcon: u

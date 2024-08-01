@@ -5,8 +5,8 @@ return d;
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(481060),
   l = n(528027),
   o = n(686807),
@@ -17,19 +17,19 @@ function d(e) {
   let {
 benefit: t,
 guildId: n
-  } = e, a = (0, c.Z)(n, t.ref_id), d = (0, i.jsx)(l.Z, {
+  } = e, s = (0, c.Z)(n, t.ref_id), d = (0, i.jsx)(l.Z, {
 guildId: n,
 emojiId: t.emoji_id,
 emojiName: t.emoji_name
-  }), _ = null != a ? (0, i.jsx)(r.Clickable, {
+  }), _ = null != s ? (0, i.jsx)(r.Clickable, {
 className: u.__invalid_channelLink,
-onClick: a.navigateToChannel,
-'aria-label': a.ariaLabel,
+onClick: s.navigateToChannel,
+'aria-label': s.ariaLabel,
 role: 'link',
 children: (0, i.jsx)(r.Text, {
   variant: 'text-md/medium',
   color: 'header-primary',
-  className: s()(u.name, u.linkedName),
+  className: a()(u.name, u.linkedName),
   children: (0, o.Z)(t)
 })
   }) : (0, i.jsx)(r.Text, {

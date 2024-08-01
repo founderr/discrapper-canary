@@ -11,8 +11,8 @@ return o;
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(822869);
+var s = n(481060),
+  a = n(822869);
 let r = 'forward-modal';
 
 function l(e) {
@@ -24,7 +24,7 @@ initialSelectedDestinations: c = [],
 forwardOptions: u,
 onRequestSent: d
   } = e;
-  (0, s.Lb)(l, t, o), (0, a.openModalLazy)(async () => {
+  (0, a.Lb)(l, t, o), (0, s.openModalLazy)(async () => {
 let {
   ForwardModal: e
 } = await Promise.all([
@@ -45,24 +45,24 @@ modalKey: r
 }
 
 function o() {
-  (0, a.closeModal)(r);
+  (0, s.closeModal)(r);
 }
 
 function c(e) {
   let {
 messageId: t,
-channelId: s,
+channelId: a,
 failedDestinations: r,
 forwardOptions: l
   } = e;
-  (0, a.openModalLazy)(async () => {
+  (0, s.openModalLazy)(async () => {
 let {
   ForwardFailedAlertModal: e
 } = await n.e('86590').then(n.bind(n, 384331));
 return n => (0, i.jsx)(e, {
   ...n,
   messageId: t,
-  channelId: s,
+  channelId: a,
   failedDestinations: r,
   forwardOptions: l
 });

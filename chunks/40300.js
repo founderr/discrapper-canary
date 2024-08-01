@@ -24,17 +24,17 @@ mirror: p = !1,
 paused: _ = !1,
 streamPreviewURL: f,
 videoSpinnerContext: E,
-userId: C
-  } = e, [g, I] = l.useState(!0), [x] = l.useState(() => new u.o('VideoStream'));
+userId: g
+  } = e, [C, I] = l.useState(!0), [x] = l.useState(() => new u.o('VideoStream'));
   l.useEffect(() => {
-!_ && (g ? x.onSpinnerStarted() : null != t && x.trackSpinnerDuration(E, C, t));
+!_ && (C ? x.onSpinnerStarted() : null != t && x.trackSpinnerDuration(E, g, t));
   }, [
-g,
+C,
 _,
 t,
 x,
 E,
-C
+g
   ]);
   let T = l.useCallback(() => {
 I(!1);
@@ -53,9 +53,9 @@ children: [
   }),
   _ ? null : (0, s.jsx)('div', {
     className: o()(h.previewWrapper, {
-      [h.loading]: g
+      [h.loading]: C
     }),
-    children: g && (0, s.jsxs)(l.Fragment, {
+    children: C && (0, s.jsxs)(l.Fragment, {
       children: [
         null != f ? (0, s.jsx)('img', {
           src: f,

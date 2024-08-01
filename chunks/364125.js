@@ -20,7 +20,7 @@ streamerId: d,
 stream: h,
 focused: m,
 canvas: p
-  } = e, _ = i.useRef(!1), f = (0, a.e7)([s.Z], () => s.Z.getDrawMode()), E = (0, o.Z)((0, c.Z)(t.id, n, d), h), C = (0, o.Z)((0, u.Z)(t.id, n, d), h), g = i.useCallback((e, t, n) => {
+  } = e, _ = i.useRef(!1), f = (0, a.e7)([s.Z], () => s.Z.getDrawMode()), E = (0, o.Z)((0, c.Z)(t.id, n, d), h), g = (0, o.Z)((0, u.Z)(t.id, n, d), h), C = i.useCallback((e, t, n) => {
 if (null == p)
   return;
 let {
@@ -31,48 +31,48 @@ switch (t.type) {
   case l.W.LINE:
     return E[e](t, i, a);
   case l.W.EMOJI_HOSE:
-    return C[e](t, i, a);
+    return g[e](t, i, a);
 }
   }, [
 p,
 E,
-C
+g
   ]), I = i.useCallback(e => {
 if (!!m && null != f)
-  e.stopPropagation(), _.current = !0, g('handleMouseDown', f, e);
+  e.stopPropagation(), _.current = !0, C('handleMouseDown', f, e);
   }, [
-g,
+C,
 f,
 m
   ]), x = i.useCallback(e => {
 if (!!m && null != f)
-  e.stopPropagation(), _.current && g('handleMouseMove', f, e);
+  e.stopPropagation(), _.current && C('handleMouseMove', f, e);
   }, [
-g,
+C,
 f,
 m
   ]), T = i.useCallback(e => {
 if (!!m && null != f)
-  e.stopPropagation(), _.current = !1, g('handleMouseUp', f, e);
+  e.stopPropagation(), _.current = !1, C('handleMouseUp', f, e);
   }, [
-g,
+C,
 f,
 m
-  ]), v = i.useCallback(e => {
+  ]), N = i.useCallback(e => {
 if (!!_.current && null != f)
-  g('handleMouseEnter', f, e);
+  C('handleMouseEnter', f, e);
   }, [
-g,
+C,
 f
   ]);
   return i.useEffect(() => {
 let e = e => {
   if (null != f)
-    _.current = !1, g('handleMouseUp', f, e);
+    _.current = !1, C('handleMouseUp', f, e);
 };
 return window.addEventListener('mouseup', e), () => window.removeEventListener('mouseup', e);
   }, [
-g,
+C,
 f
   ]), {
 handleClick: i.useCallback(e => {
@@ -82,7 +82,7 @@ handleClick: i.useCallback(e => {
   m
 ]),
 handleMouseDown: I,
-handleMouseEnter: v,
+handleMouseEnter: N,
 handleMouseMove: x,
 handleMouseUp: T
   };

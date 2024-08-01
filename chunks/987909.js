@@ -4,8 +4,8 @@ return p;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(442837),
+  s = n(470079),
+  a = n(442837),
   r = n(481060),
   l = n(904245),
   o = n(541716),
@@ -20,41 +20,41 @@ var i = n(735250),
   h = n(981631),
   N = n(609727);
 
-function f(e) {
+function C(e) {
   let {
 assets: t,
 currentUser: n,
 message: i
-  } = e, a = (m.default.extractTimestamp(n.id) + m.default.extractTimestamp(i.id)) % t.length;
-  return t[a];
+  } = e, s = (m.default.extractTimestamp(n.id) + m.default.extractTimestamp(i.id)) % t.length;
+  return t[s];
 }
 
-function C(e) {
+function f(e) {
   let {
 currentUser: t,
 channel: n,
-message: s,
+message: a,
 buttonLabels: u,
 stickers: d,
 event: _,
 eventProperties: E
-  } = e, [m, h] = a.useState(!1), C = a.useMemo(() => f({
+  } = e, [m, h] = s.useState(!1), f = s.useMemo(() => C({
 assets: d,
 currentUser: t,
-message: s
+message: a
   }), [
 d,
 t,
-s
-  ]), p = a.useMemo(() => f({
+a
+  ]), p = s.useMemo(() => C({
 assets: u,
 currentUser: t,
-message: s
+message: a
   }), [
 u,
 t,
-s
-  ]), g = a.useCallback(async () => {
+a
+  ]), g = s.useCallback(async () => {
 let {
   valid: e
 } = await (0, T.v)({
@@ -76,8 +76,8 @@ e && (! function(e) {
   }));
 }({
   channel: n,
-  message: s,
-  sticker: C
+  message: a,
+  sticker: f
 }), ! function(e) {
   let {
     sticker: t,
@@ -89,14 +89,14 @@ e && (! function(e) {
     sticker_id: t.id
   });
 }({
-  sticker: C,
+  sticker: f,
   event: _,
   eventProperties: E
 }));
   }, [
 n,
-s,
-C,
+a,
+f,
 _,
 E
   ]);
@@ -111,7 +111,7 @@ children: [
   (0, i.jsx)(c.ZP, {
     className: N.CTAMessageSticker,
     isInteracting: m,
-    sticker: C,
+    sticker: f,
     size: 28
   }),
   p
@@ -123,7 +123,7 @@ function p(e) {
   let {
 channel: t,
 message: n,
-buttonLabels: a,
+buttonLabels: s,
 stickers: r,
 event: l,
 eventProperties: o
@@ -133,19 +133,19 @@ let {
   message: n,
   currentUser: i
 } = e;
-return (0, s.e7)([
+return (0, a.e7)([
   _.Z,
   d.ZP
 ], () => {
   var e;
-  let a = t.guild_id;
-  if (null == i || null == a)
+  let s = t.guild_id;
+  if (null == i || null == s)
     return !1;
-  let s = (0, u.xl)(t),
+  let a = (0, u.xl)(t),
     r = _.Z.can(h.Plq.SEND_MESSAGES, t),
-    l = null === (e = d.ZP.getMember(a, i.id)) || void 0 === e ? void 0 : e.isPending,
+    l = null === (e = d.ZP.getMember(s, i.id)) || void 0 === e ? void 0 : e.isPending,
     o = n.author.bot;
-  return r && !s && !l && !o;
+  return r && !a && !l && !o;
 });
   }({
 channel: t,
@@ -154,11 +154,11 @@ currentUser: c
   });
   return null != c && I ? (0, i.jsx)('div', {
 className: N.CTAMessage,
-children: (0, i.jsx)(C, {
+children: (0, i.jsx)(f, {
   currentUser: c,
   channel: t,
   message: n,
-  buttonLabels: a,
+  buttonLabels: s,
   stickers: r,
   event: l,
   eventProperties: o

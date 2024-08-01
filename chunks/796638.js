@@ -3,7 +3,7 @@ n.d(t, {
 return E;
   },
   ZP: function() {
-return C;
+return g;
   },
   cF: function() {
 return m;
@@ -68,16 +68,16 @@ return () => {
   1 !== u && (h = a[u], a.splice(u, 1));
   let m = null != h ? e - p - 8 : e,
     E = Math.max(0, Math.min(Math.floor((m - 8) / 132), 12, t.length)),
-    C = Math.min((m - 8) / E - 8, p),
-    g = Math.max(0, E - o.length),
+    g = Math.min((m - 8) / E - 8, p),
+    C = Math.max(0, E - o.length),
     I = o.slice(0, E),
-    x = a.slice(0, g),
-    T = Array(g);
-  if (g > 0) {
+    x = a.slice(0, C),
+    T = Array(C);
+  if (C > 0) {
     let e = [];
     for (let t of x) {
       let n = r.current[t.id];
-      null != n && n < g ? T[n] = t : e.push(t);
+      null != n && n < C ? T[n] = t : e.push(t);
     }
     for (let t = 0; t < T.length; t++) {
       if (null != T[t])
@@ -88,16 +88,16 @@ return () => {
       T[t] = n;
     }
   }
-  let v = T.filter(c.lm),
-    N = (0, s.keyBy)((0, s.range)(v.length), e => v[e].id);
-  r.current = N;
+  let N = T.filter(c.lm),
+    v = (0, s.keyBy)((0, s.range)(N.length), e => N[e].id);
+  r.current = v;
   let S = [
     ...I,
-    ...v
+    ...N
   ];
   return null != h && S.push(h), {
     visibleParticipants: S,
-    participantTileWidth: C
+    participantTileWidth: g
   };
 }, [
   e,
@@ -110,7 +110,7 @@ participantTileWidth: u
   };
 }
 
-function C(e) {
+function g(e) {
   let {
 participants: t,
 participantTileWidth: n,

@@ -1,13 +1,13 @@
 E.d(_, {
   Z: function() {
-return A;
+return n;
   }
 });
 var s = E(399606),
   T = E(339085),
   I = E(633302);
 
-function A(e, _) {
+function n(e, _) {
   let E = (0, s.e7)([T.Z], () => null != e ? T.Z.getCustomEmojiById(e) : null, [e]);
   return {
 customEmoji: E,

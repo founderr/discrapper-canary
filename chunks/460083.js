@@ -1,9 +1,9 @@
-t.d(n, {
+n.d(t, {
   d: function() {
-return l;
+return r;
   }
 });
-let l = (0, t(818083).B)({
+let r = (0, n(818083).B)({
   kind: 'guild',
   id: '2022-12_mention_raid_limit',
   label: 'Automod Mention Raid Limit',

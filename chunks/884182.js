@@ -35,11 +35,11 @@ return (0, i.jsx)(f, {
   itemsForLayout: n
 });
   if (3 === l)
-return (0, i.jsx)(g, {
+return (0, i.jsx)(x, {
   itemsForLayout: n
 });
   if (4 === l)
-return (0, i.jsx)(x, {
+return (0, i.jsx)(g, {
   itemsForLayout: n
 });
   let o = l % 3;
@@ -98,7 +98,7 @@ children: n.map(e => (0, i.jsx)('div', {
   });
 }
 
-function g(e) {
+function x(e) {
   let {
 itemsForLayout: n
   } = e;
@@ -130,7 +130,7 @@ children: [
   });
 }
 
-function x(e) {
+function g(e) {
   let {
 itemsForLayout: n
   } = e;

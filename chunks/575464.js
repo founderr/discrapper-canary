@@ -25,21 +25,21 @@ hideDiscriminator: a,
 comparator: _,
 selected: f,
 checked: E,
-onClick: C,
-onMouseEnter: g,
+onClick: g,
+onMouseEnter: C,
 'aria-setsize': I,
 'aria-posinset': x
-  } = e, T = (0, r.e7)([d.Z], () => d.Z.getStatus(t.id)), v = (0, l.JA)(String(t.id));
+  } = e, T = (0, r.e7)([d.Z], () => d.Z.getStatus(t.id)), N = (0, l.JA)(String(t.id));
   return (0, i.jsx)(o.Clickable, {
 id: 'user-row-'.concat(n),
 className: p.friendWrapper,
 onClick: () => {
-  null != C && C(t.id);
+  null != g && g(t.id);
 },
 onMouseEnter: () => {
-  null != g && g(n);
+  null != C && C(n);
 },
-...v,
+...N,
 role: 'option',
 'aria-selected': E,
 'aria-setsize': I,

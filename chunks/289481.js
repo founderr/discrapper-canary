@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(338545),
   o = n(442837),
   c = n(481060),
@@ -15,25 +15,25 @@ var i = n(735250),
   T = n(259580),
   h = n(617379),
   N = n(324081),
-  f = n(305248),
-  C = n(520116),
+  C = n(305248),
+  f = n(520116),
   p = n(981631),
   g = n(689938),
   S = n(540895);
-let A = a.memo(function(e) {
+let A = s.memo(function(e) {
   let {
 channel: t,
 deleteChannel: n
-  } = e, s = a.useRef(null), [
+  } = e, a = s.useRef(null), [
 [r, o], u
-  ] = a.useState([
+  ] = s.useState([
 0,
 0
   ]), d = t.deleted && r > 0;
-  if (t.deleted && 0 === r && null != s.current) {
-let e = s.current.offsetHeight,
-  t = s.current.offsetTop,
-  n = s.current.parentElement.scrollTop,
+  if (t.deleted && 0 === r && null != a.current) {
+let e = a.current.offsetHeight,
+  t = a.current.offsetTop,
+  n = a.current.parentElement.scrollTop,
   i = n > t ? e - (n - t) : e;
 u([
   e,
@@ -61,24 +61,24 @@ height: E.to(e => d ? function(e, t, n) {
 }(r, o, e) : 'auto')
   };
   return (0, i.jsx)(l.animated.div, {
-ref: s,
+ref: a,
 style: I,
-children: (0, i.jsx)(M, {
+children: (0, i.jsx)(R, {
   ...e
 })
   });
 });
 t.Z = A;
-let M = a.memo(function(e) {
+let R = s.memo(function(e) {
   let {
 channel: t,
 onJump: n,
-deleteChannel: s,
+deleteChannel: a,
 toggle: r
   } = e, l = (0, o.e7)([m.Z], () => m.Z.getChannel(t.channelId));
-  if (a.useEffect(() => {
+  if (s.useEffect(() => {
   null != l && t.isFullyLoaded && !t.hasError && !t.collapsed && 'messages' === t.type && 0 === t.messages.length && u.Z.wait(() => {
-    (0, d.In)(t.channelId, !0), s(t.channelId);
+    (0, d.In)(t.channelId, !0), a(t.channelId);
   });
 }), null == l || !t.hasLoadedAnything)
 return null;
@@ -87,8 +87,8 @@ return null;
   channel_id: t.channelId,
   guild_id: t.guildId
 });
-let a = null != i ? i : t.oldestUnreadMessageId;
-(0, I.uL)(p.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : a)), n(e);
+let s = null != i ? i : t.oldestUnreadMessageId;
+(0, I.uL)(p.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : s)), n(e);
   };
   return (0, i.jsx)('div', {
 className: S.channel,
@@ -103,33 +103,33 @@ children: (0, i.jsx)(c.HeadingLevel, {
       (0, i.jsx)(h.Z, {
         channel: l
       }),
-      (0, i.jsx)(R, {
+      (0, i.jsx)(O, {
         ...e
       }),
-      'nsfw' === t.type ? null : (0, i.jsx)(O, {
+      'nsfw' === t.type ? null : (0, i.jsx)(x, {
         ...e
       })
     ]
   }),
-  children: t.collapsed ? null : 'messages' === t.type ? (0, i.jsx)(C.Z, {
+  children: t.collapsed ? null : 'messages' === t.type ? (0, i.jsx)(f.Z, {
     channel: t,
     channelRecord: l,
     gotoChannel: E
-  }) : 'forum' === t.type ? (0, i.jsx)(f.Z, {
+  }) : 'forum' === t.type ? (0, i.jsx)(C.Z, {
     channel: t,
     channelRecord: l,
-    deleteChannel: s
+    deleteChannel: a
   }) : null
 })
   });
 });
 
-function R(e) {
+function O(e) {
   let {
 channel: t,
 markChannelRead: n,
-markGuildRead: a,
-getNumUnreadChannels: s
+markGuildRead: s,
+getNumUnreadChannels: a
   } = e, r = (0, E.Z)() && null != t.guildId;
   return (0, i.jsx)(c.CircleIconButton, {
 className: S.markReadButton,
@@ -143,28 +143,28 @@ icon: r ? (0, i.jsx)(c.DoubleCheckmarkLargeIcon, {
   color: 'currentColor'
 }),
 onClick: function() {
-  r && null != t.guildId ? a(t.guildId) : n(t), (0, _.yw)(p.rMx.INBOX_CHANNEL_ACKED, {
+  r && null != t.guildId ? s(t.guildId) : n(t), (0, _.yw)(p.rMx.INBOX_CHANNEL_ACKED, {
     channel_id: t.channelId,
     guild_id: t.guildId,
     marked_all_channels_as_read: !1,
-    num_unread_channels_remaining: s() - 1
+    num_unread_channels_remaining: a() - 1
   });
 }
   });
 }
 
-function O(e) {
+function x(e) {
   let {
 channel: t,
 toggle: n,
-getNumUnreadChannels: a
+getNumUnreadChannels: s
   } = e;
 
-  function s() {
+  function a() {
 n(t), (0, _.yw)(p.rMx.INBOX_CHANNEL_COLLAPSED, {
   channel_id: t.channelId,
   guild_id: t.guildId,
-  num_unread_channels_remaining: a(),
+  num_unread_channels_remaining: s(),
   is_now_collapsed: !t.collapsed
 });
   }
@@ -175,7 +175,7 @@ children: e => (0, i.jsx)(c.Clickable, {
   className: r()(S.collapseButton, {
     [S.collapsed]: t.collapsed
   }),
-  onClick: s,
+  onClick: a,
   children: (0, i.jsx)(T.Z, {
     width: 16,
     height: 16

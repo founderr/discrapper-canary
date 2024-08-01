@@ -1,8 +1,8 @@
 n(47120), n(653041);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(215569),
   o = n(481060),
   c = n(140710),
@@ -15,18 +15,18 @@ var i = n(735250),
   T = n(716862),
   h = n(372178);
 let N = (e, t) => null == e && null == t || e === t,
-  f = (e, t) => e.findIndex(e => N(e.emoji.id, null == t ? void 0 : t.id) && N(e.emoji.name, null == t ? void 0 : t.name)),
-  C = (e, t) => {
+  C = (e, t) => e.findIndex(e => N(e.emoji.id, null == t ? void 0 : t.id) && N(e.emoji.name, null == t ? void 0 : t.name)),
+  f = (e, t) => {
 if (null == t)
   return e;
-let n = f(e, t);
+let n = C(e, t);
 return n < 0 ? e : [
   e[n],
   ...e.slice(0, n),
   ...e.slice(n + 1)
 ];
   };
-class p extends a.PureComponent {
+class p extends s.PureComponent {
   static getDerivedStateFromProps(e, t) {
 let n = e.message.reactions.length;
 return 0 === t.reactionsCount && n > 0 ? {
@@ -41,23 +41,23 @@ let {
   message: e,
   disableReactionCreates: t,
   disableReactionUpdates: n,
-  isLurking: a,
-  isGuest: s,
+  isLurking: s,
+  isGuest: a,
   isPendingMember: N,
-  isForumToolbar: f,
-  channel: C,
+  isForumToolbar: C,
+  channel: f,
   className: p,
   forceAddReactions: g,
   reactionClassName: S,
   useChatFontScaling: A,
-  forceHideReactionCreates: M,
-  remainingReactions: R,
-  combinedReactions: O,
-  visibleReactionsCount: x
+  forceHideReactionCreates: R,
+  remainingReactions: O,
+  combinedReactions: x,
+  visibleReactionsCount: M
 } = this.props, {
   disableTransitionAppear: v
-} = this.state, Z = A ? h : T, L = x > 0;
-if (!L && !g)
+} = this.state, L = A ? h : T, Z = M > 0;
+if (!Z && !g)
   return null;
 let {
   enabled: P
@@ -65,10 +65,10 @@ let {
   location: 'message_reactions'
 }, {
   autoTrackExposure: !0
-}), D = P && L;
+}), D = P && Z;
 return (0, i.jsxs)(l.W, {
   component: 'div',
-  className: r()(Z.reactions, p),
+  className: r()(L.reactions, p),
   transitionAppear: !v,
   role: 'group',
   transitionLeave: !1,
@@ -81,40 +81,40 @@ return (0, i.jsxs)(l.W, {
   }),
   children: [
     (0, i.jsx)(E.l, {
-      reactions: O,
+      reactions: x,
       message: e,
       readOnly: n,
-      isLurking: a,
-      isGuest: s,
+      isLurking: s,
+      isGuest: a,
       isPendingMember: N,
-      isForumToolbar: f,
+      isForumToolbar: C,
       useChatFontScaling: A,
       className: S
     }),
-    R > 0 && (0, i.jsx)(o.Clickable, {
+    O > 0 && (0, i.jsx)(o.Clickable, {
       onClick: t => {
-        t.stopPropagation(), (0, I.op)(C, e);
+        t.stopPropagation(), (0, I.op)(f, e);
       },
-      className: r()(Z.reaction, S, Z.remainingReactions),
+      className: r()(L.reaction, S, L.remainingReactions),
       'aria-label': m.Z.Messages.ADD_REACTION,
       children: (0, i.jsxs)(o.Text, {
-        className: Z.reactionInner,
+        className: L.reactionInner,
         variant: 'text-sm/normal',
         children: [
           '+',
-          R
+          O
         ]
       })
     }),
-    !t && !M && (0, i.jsx)(d.X, {
+    !t && !R && (0, i.jsx)(d.X, {
       type: u.O.NORMAL,
       message: e,
-      channel: C,
+      channel: f,
       useChatFontScaling: A,
       isHovered: this.state.isHovered,
       className: r()({
-        [Z.forceShow]: g && !L || D,
-        [Z.forceShowLook]: g || D
+        [L.forceShow]: g && !Z || D,
+        [L.forceShowLook]: g || D
       })
     })
   ]
@@ -138,18 +138,18 @@ t.Z = e => {
   let {
 message: t,
 maxReactions: n,
-hoistReaction: s
+hoistReaction: a
   } = e, {
 combinedReactions: r,
 remainingReactions: l,
 visibleReactionsCount: o
-  } = a.useMemo(() => {
+  } = s.useMemo(() => {
 let e = [],
-  i = C(t.reactions, s),
-  a = null != n && n < i.length ? i.slice(0, n) : i,
-  r = i.length - a.length,
+  i = f(t.reactions, a),
+  s = null != n && n < i.length ? i.slice(0, n) : i,
+  r = i.length - s.length,
   l = i.length;
-return a.forEach(t => {
+return s.forEach(t => {
   t.burst_count > 0 && e.push({
     ...t,
     type: u.O.BURST
@@ -163,7 +163,7 @@ return a.forEach(t => {
   remainingReactions: r
 };
   }, [
-s,
+a,
 n,
 t.reactions
   ]);

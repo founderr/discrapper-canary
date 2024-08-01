@@ -5,8 +5,8 @@ return l;
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(987209),
+var s = n(481060),
+  a = n(987209),
   r = n(981631);
 
 function l(e) {
@@ -24,13 +24,13 @@ renderHeader: m,
 renderPurchaseConfirmation: T,
 planGroup: h,
 reviewWarningMessage: N,
-skuId: f
+skuId: C
   } = e;
-  (0, a.openModalLazy)(async () => {
+  (0, s.openModalLazy)(async () => {
 let {
   PaymentContextProvider: e
 } = await Promise.resolve().then(n.bind(n, 598)), {
-  PaymentModal: a
+  PaymentModal: s
 } = await Promise.all([
   n.e('15972'),
   n.e('47006'),
@@ -53,25 +53,25 @@ let {
 ]).then(n.bind(n, 7305));
 return n => {
   let {
-    onClose: C,
+    onClose: f,
     ...p
   } = n;
   return (0, i.jsx)(e, {
     activeSubscription: l,
     stepConfigs: r,
-    skuIDs: [f],
-    children: (0, i.jsx)(s.KB, {
-      children: (0, i.jsx)(a, {
+    skuIDs: [C],
+    children: (0, i.jsx)(a.KB, {
+      children: (0, i.jsx)(s, {
         ...p,
         initialPlanId: t,
         onClose: e => {
-          C(), null == u || u(e);
+          f(), null == u || u(e);
         },
         analyticsLocations: E,
         analyticsObject: d,
         analyticsLocation: _,
         analyticsSubscriptionType: I,
-        skuId: f,
+        skuId: C,
         renderHeader: m,
         renderPurchaseConfirmation: T,
         planGroup: h,

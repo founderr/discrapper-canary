@@ -13,8 +13,8 @@ var i = n(735250),
   _ = n(585483),
   f = n(909820),
   E = n(981631),
-  C = n(921944),
-  g = n(689938),
+  g = n(921944),
+  C = n(689938),
   I = n(822006);
 t.Z = function(e) {
   let {
@@ -24,15 +24,15 @@ maxWidth: x
   } = e;
   a.useEffect(() => {
 (0, h.EW)(s.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, {
-  dismissAction: C.L.AUTO
+  dismissAction: g.L.AUTO
 });
   }, []);
   let T = a.useCallback(() => {
   r.Z.updateChatOpen(t.id, !1), _.S.safeDispatch(E.CkL.FOCUS_CHAT_BUTTON);
 }, [t.id]),
-v = (0, i.jsx)(m.ZP.Icon, {
+N = (0, i.jsx)(m.ZP.Icon, {
   icon: l.CloseSmallIcon,
-  tooltip: g.Z.Messages.CLOSE,
+  tooltip: C.Z.Messages.CLOSE,
   onClick: T
 });
   return (0, i.jsxs)(u.Z, {
@@ -45,13 +45,13 @@ children: [
     draftType: p.d.ChannelMessage
   }),
   (0, i.jsxs)(m.ZP, {
-    toolbar: v,
-    'aria-label': g.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
+    toolbar: N,
+    'aria-label': C.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
     children: [
       (0, i.jsx)(m.ZP.Icon, {
         icon: l.ChatIcon,
         disabled: !0,
-        'aria-label': g.Z.Messages.VOICE_CHAT_TEXT_CHANNEL
+        'aria-label': C.Z.Messages.VOICE_CHAT_TEXT_CHANNEL
       }),
       (0, i.jsx)(m.ZP.Title, {
         children: t.name

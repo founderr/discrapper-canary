@@ -1,4 +1,4 @@
-n.d(t, {
+t.d(n, {
   W: function() {
 return m;
   },
@@ -6,56 +6,56 @@ return m;
 return I;
   }
 });
-var i = n(735250);
-n(470079);
-var a = n(913527),
-  s = n.n(a),
-  r = n(442837),
-  l = n(481060),
-  o = n(768943),
-  c = n(962796),
-  u = n(742989),
-  d = n(550727),
-  _ = n(448239),
-  E = n(689938);
+var i = t(735250);
+t(470079);
+var a = t(913527),
+  l = t.n(a),
+  r = t(442837),
+  o = t(481060),
+  s = t(768943),
+  u = t(962796),
+  d = t(742989),
+  c = t(550727),
+  E = t(448239),
+  M = t(689938);
 
 function I(e) {
   let {
-showReminders: t
-  } = u.Z.useExperiment({
+showReminders: n
+  } = d.Z.useExperiment({
 location: 'use_message_reminders_item'
   }, {
 autoTrackExposure: !1
-  }), n = (0, r.e7)([o.Z], () => o.Z.isMessageReminder(e.id)), a = m(e, t => (0, c.HG)({
+  }), t = (0, r.e7)([s.Z], () => s.Z.isMessageReminder(e.id)), a = m(e, n => (0, u.HG)({
 channelId: e.channel_id,
 messageId: e.id,
-dueAt: s()().add(t, 'millisecond').toDate()
+dueAt: l()().add(n, 'millisecond').toDate()
   }));
-  return t ? (0, i.jsx)(l.MenuItem, {
+  return n ? (0, i.jsx)(o.MenuItem, {
 id: 'mark-todo',
-label: n ? E.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : E.Z.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
-icon: n ? (0, l.makeIconCompat)(_.Z) : void 0,
-action: () => n ? (0, c.bn)({
+label: t ? M.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : M.Z.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
+icon: t ? (0, o.makeIconCompat)(E.Z) : void 0,
+action: () => t ? (0, u.bn)({
   channelId: e.channel_id,
   messageId: e.id
-}) : (0, c.HG)({
+}) : (0, u.HG)({
   channelId: e.channel_id,
   messageId: e.id
 }),
-children: n ? null : a
+children: t ? null : a
   }) : null;
 }
 
-function m(e, t) {
-  return d.B.map(e => {
+function m(e, n) {
+  return c.B.map(e => {
 let {
-  duration: n,
+  duration: t,
   getLabel: a
 } = e;
-return (0, i.jsx)(l.MenuItem, {
-  id: 'mark-todo-'.concat(n),
+return (0, i.jsx)(o.MenuItem, {
+  id: 'mark-todo-'.concat(t),
   label: a(),
-  action: () => t(n)
-}, n);
+  action: () => n(t)
+}, t);
   });
 }

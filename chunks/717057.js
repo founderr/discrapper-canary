@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(153124),
   f = n(709054),
   E = n(931240),
-  C = n(645896),
-  g = n(603368),
+  g = n(645896),
+  C = n(603368),
   I = n(532490),
   x = n(380365),
   T = n(979264),
-  v = n(620929),
-  N = n(284019),
+  N = n(620929),
+  v = n(284019),
   S = n(308083),
   Z = n(981631),
   A = n(689938),
@@ -80,7 +80,7 @@ children: (0, i.jsxs)('div', {
         })
       ]
     }),
-    (0, i.jsx)(v.p, {
+    (0, i.jsx)(N.p, {
       applicationIds: d,
       playstyle: s.playstyle,
       className: l()(M.charterBodyText, M.gameSection)
@@ -103,7 +103,7 @@ guildId: n,
 onClose: s,
 onAccept: r,
 ...o
-  } = e, f = (0, _.Dt)(), I = (0, C.Cc)(n), T = (0, C.E8)(n), [v, S] = a.useState(!0), [R, j] = a.useState(!1), L = a.useCallback(() => {
+  } = e, f = (0, _.Dt)(), I = (0, g.Cc)(n), T = (0, g.E8)(n), [N, S] = a.useState(!0), [R, j] = a.useState(!1), L = a.useCallback(() => {
 r(), s();
   }, [
 r,
@@ -117,11 +117,11 @@ L,
 T
   ]);
   let P = a.useCallback(() => {
-  v && (0, E.nE)(n, v, Z.Sbl.CREATE_JOIN_GUILD_MODAL), L();
+  N && (0, E.nE)(n, N, Z.Sbl.CREATE_JOIN_GUILD_MODAL), L();
 }, [
   n,
   L,
-  v
+  N
 ]),
 O = a.useCallback(() => {
   j(!0);
@@ -130,7 +130,7 @@ y = (0, c.e7)([m.Z], () => m.Z.getGuild(n)),
 D = (0, c.e7)([p.default], () => p.default.getCurrentUser()),
 k = (0, c.e7)([h.ZP], () => null != D ? h.ZP.getMember(n, D.id) : null),
 U = (0, d.ZP)(),
-w = (0, g.nP)(null == I ? void 0 : null === (t = I.branding) || void 0 === t ? void 0 : t.primaryColor, [
+w = (0, C.nP)(null == I ? void 0 : null === (t = I.branding) || void 0 === t ? void 0 : t.primaryColor, [
   u.tokens.colors.BG_BRAND,
   0.7
 ]),
@@ -138,7 +138,7 @@ B = u.tokens.colors.BG_SURFACE_OVERLAY.resolve({
   theme: U,
   saturation: 1
 }).hex(),
-H = (0, g.nj)(w, B, 'top center');
+H = (0, C.nj)(w, B, 'top center');
   return null == y || null == D || null == k || null == I ? null : (0, i.jsx)(u.ModalRoot, {
 ...o,
 transitionState: o.transitionState,
@@ -173,7 +173,7 @@ children: (0, i.jsxs)(u.ModalContent, {
         }),
         (0, i.jsx)(x.Z, {
           guildId: n,
-          isTagAdopted: v,
+          isTagAdopted: N,
           onChangeUseTag: S
         })
       ]
@@ -186,7 +186,7 @@ children: (0, i.jsxs)(u.ModalContent, {
         onSignCharter: O
       })
     }),
-    (0, i.jsx)(N.Z, {
+    (0, i.jsx)(v.Z, {
       onClick: P,
       color: u.Button.Colors.BRAND,
       themeColor: w,
@@ -204,7 +204,7 @@ children: (0, i.jsxs)(u.ModalContent, {
             size: 'custom',
             width: 20,
             height: 20,
-            color: null == w ? void 0 : (0, g.$0)(w).hex()
+            color: null == w ? void 0 : (0, C.$0)(w).hex()
           })
         ]
       })

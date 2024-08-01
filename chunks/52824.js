@@ -1,13 +1,13 @@
-t.d(n, {
+n.d(t, {
   q: function() {
-return i;
+return l;
   }
 });
 
-function i(e) {
+function l(e) {
   let {
-proxyURL: n,
-url: t
+proxyURL: t,
+url: n
   } = e;
-  return null != n && '' !== n ? n : t;
+  return null != t && '' !== t ? t : n;
 }

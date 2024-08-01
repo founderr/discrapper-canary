@@ -5,8 +5,8 @@ return l;
 });
 var i = n(735250);
 n(470079);
-var a = n(442837),
-  s = n(607070),
+var s = n(442837),
+  a = n(607070),
   r = n(979993);
 
 function l(e) {
@@ -14,7 +14,7 @@ function l(e) {
 guildId: t,
 user: n,
 className: l
-  } = e, o = (0, a.e7)([s.Z], () => !s.Z.useReducedMotion), c = n.getAvatarURL(t, 56, o), u = (0, i.jsx)('foreignObject', {
+  } = e, o = (0, s.e7)([a.Z], () => !a.Z.useReducedMotion), c = n.getAvatarURL(t, 56, o), u = (0, i.jsx)('foreignObject', {
 x: '30',
 y: '68',
 width: '56',

@@ -1,38 +1,38 @@
-n.d(t, {
+t.d(n, {
   a4: function() {
 return o;
   },
   vc: function() {
-return c;
+return u;
   }
 });
-var i = n(592125),
-  a = n(650774),
-  s = n(496675),
-  r = n(594174),
-  l = n(981631);
+var i = t(592125),
+  s = t(650774),
+  l = t(496675),
+  a = t(594174),
+  r = t(981631);
 
 function o(e) {
   return null != e && function(e) {
 if (null == e)
   return !1;
-let t = e.id,
-  n = r.default.getCurrentUser();
-return null != n && n.id !== t && !0 !== e.system && !0;
+let n = e.id,
+  t = a.default.getCurrentUser();
+return null != t && t.id !== n && !0 !== e.system && !0;
   }(e.author);
 }
 
-function c(e) {
+function u(e) {
   return null != e && o(e) && function(e) {
-let t = i.Z.getChannel(e);
-if (null == t)
+let n = i.Z.getChannel(e);
+if (null == n)
   return !1;
-if (t.type === l.d4z.DM || t.type === l.d4z.GROUP_DM)
+if (n.type === r.d4z.DM || n.type === r.d4z.GROUP_DM)
   return !0;
-if (s.Z.canWithPartialContext(l.Plq.MANAGE_MESSAGES, {
+if (l.Z.canWithPartialContext(r.Plq.MANAGE_MESSAGES, {
     channelId: e
   })) {
-  let e = a.Z.getMemberCount(t.getGuildId());
+  let e = s.Z.getMemberCount(n.getGuildId());
   return null != e && e >= 50;
 }
 return !1;

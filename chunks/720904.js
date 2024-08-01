@@ -1,27 +1,27 @@
-n.d(t, {
+t.d(n, {
   Z: function() {
-return g;
+return A;
   }
 });
-var i = n(735250);
-n(470079);
-var a = n(120356),
-  s = n.n(a),
-  r = n(442837),
-  l = n(481060),
-  o = n(543241),
-  c = n(222677),
-  u = n(995774),
-  d = n(665906),
-  _ = n(695346),
-  E = n(496675),
-  I = n(768581),
-  m = n(176354),
-  T = n(981631),
-  h = n(185923),
-  N = n(689938),
-  f = n(27887);
-let C = [
+var i = t(735250);
+t(470079);
+var a = t(120356),
+  l = t.n(a),
+  r = t(442837),
+  o = t(481060),
+  s = t(543241),
+  u = t(222677),
+  d = t(995774),
+  c = t(665906),
+  E = t(695346),
+  M = t(496675),
+  I = t(768581),
+  m = t(176354),
+  _ = t(981631),
+  g = t(185923),
+  f = t(689938),
+  Z = t(27887);
+let S = [
   'slight_smile',
   'frowning',
   'smile',
@@ -29,84 +29,84 @@ let C = [
   'wink'
 ];
 
-function p(e) {
-  var t;
+function v(e) {
+  var n;
   let {
-emoji: n,
+emoji: t,
 isFocused: a
   } = e, {
 animated: r,
-src: o,
-surrogates: c
-  } = n;
-  return null == o && null != n.id ? o = I.ZP.getEmojiURL({
-id: n.id,
+src: s,
+surrogates: u
+  } = t;
+  return null == s && null != t.id ? s = I.ZP.getEmojiURL({
+id: t.id,
 animated: !!r,
 size: 20
-  }) : null == o && (o = m.ZP.getURL(c)), (0, i.jsx)(l.Tooltip, {
-text: n.allNamesString,
+  }) : null == s && (s = m.ZP.getURL(u)), (0, i.jsx)(o.Tooltip, {
+text: t.allNamesString,
 hideOnClick: !0,
 spacing: 16,
 forceOpen: a,
 children: e => (0, i.jsx)('div', {
-  'aria-label': N.Z.Messages.ADD_REACTION_NAMED.format({
-    emojiName: n.name
+  'aria-label': f.Z.Messages.ADD_REACTION_NAMED.format({
+    emojiName: t.name
   }),
-  className: s()(f.button, {
-    [f.focused]: a
+  className: l()(Z.button, {
+    [Z.focused]: a
   }),
   ...e,
-  children: null == o || '' === o.trim() ? (0, i.jsx)('span', {
-    className: s()('emoji', 'emoji-text', f.icon),
+  children: null == s || '' === s.trim() ? (0, i.jsx)('span', {
+    className: l()('emoji', 'emoji-text', Z.icon),
     ...e,
-    children: c
+    children: u
   }) : (0, i.jsx)('img', {
-    className: f.icon,
-    src: o,
+    className: Z.icon,
+    src: s,
     alt: ''
   })
 })
-  }, null !== (t = n.id) && void 0 !== t ? t : n.name);
+  }, null !== (n = t.id) && void 0 !== n ? n : t.name);
 }
 
-function g(e, t) {
-  let n = (0, o.MZ)(t.guild_id).filter(e => {
-var n;
-return !(e.useSpriteSheet && C.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : '') >= 0) && !m.ZP.isEmojiPremiumLocked({
+function A(e, n) {
+  let t = (0, s.MZ)(n.guild_id).filter(e => {
+var t;
+return !(e.useSpriteSheet && S.indexOf(null !== (t = e.uniqueName) && void 0 !== t ? t : '') >= 0) && !m.ZP.isEmojiPremiumLocked({
   emoji: e,
-  channel: t,
-  intention: h.Hz.REACTION
+  channel: n,
+  intention: g.Hz.REACTION
 });
   });
-  n.length > 4 && (n.length = 4);
-  let a = _.nc.useSetting(),
-s = (0, d.$R)(t),
-I = (0, r.e7)([E.Z], () => a && s && (t.isPrivate() || E.Z.can(T.Plq.ADD_REACTIONS, t)), [
-  t,
-  s,
+  t.length > 4 && (t.length = 4);
+  let a = E.nc.useSetting(),
+l = (0, c.$R)(n),
+I = (0, r.e7)([M.Z], () => a && l && (n.isPrivate() || M.Z.can(_.Plq.ADD_REACTIONS, n)), [
+  n,
+  l,
   a
 ]),
-N = n => {
-  (0, c.rU)(t.id, e.id, (0, u.g1)(n), c.TW.MESSAGE_CONTEXT_MENU);
+f = t => {
+  (0, u.rU)(n.id, e.id, (0, d.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
 };
-  return I && n.length > 0 ? (0, i.jsx)(l.MenuGroup, {
-className: f.wrapper,
-children: n.map((e, t) => {
-  var n;
-  return (0, i.jsx)(l.MenuItem, {
-    id: 'quickreact-'.concat(null !== (n = e.id) && void 0 !== n ? n : t),
-    render: t => {
+  return I && t.length > 0 ? (0, i.jsx)(o.MenuGroup, {
+className: Z.wrapper,
+children: t.map((e, n) => {
+  var t;
+  return (0, i.jsx)(o.MenuItem, {
+    id: 'quickreact-'.concat(null !== (t = e.id) && void 0 !== t ? t : n),
+    render: n => {
       let {
-        isFocused: n
-      } = t;
-      return (0, i.jsx)(p, {
+        isFocused: t
+      } = n;
+      return (0, i.jsx)(v, {
         emoji: e,
-        isFocused: n
+        isFocused: t
       });
     },
-    action: () => N(e),
+    action: () => f(e),
     dontCloseOnActionIfHoldingShiftKey: !0
-  }, t);
+  }, n);
 })
   }) : null;
 }

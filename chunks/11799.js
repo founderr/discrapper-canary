@@ -4,8 +4,8 @@ return E;
   }
 }), n(47120);
 var i = n(470079),
-  a = n(442837),
-  s = n(45114),
+  s = n(442837),
+  a = n(45114),
   r = n(733427),
   l = n(455199),
   o = n(833592),
@@ -19,14 +19,14 @@ let {
   isDesktop: _,
   withMentions: E = !1,
   initialPageSize: I
-} = e, m = (0, a.e7)([u.Z], () => u.Z.shouldReload()), T = i.useRef(!1), [h, N] = i.useState(!1), {
-  initialized: f,
-  loading: C,
+} = e, m = (0, s.e7)([u.Z], () => u.Z.shouldReload()), T = i.useRef(!1), [h, N] = i.useState(!1), {
+  initialized: C,
+  loading: f,
   items: p,
   hasMore: g,
   cursor: S,
   errored: A
-} = (0, a.cj)([c.Z], () => ({
+} = (0, s.cj)([c.Z], () => ({
   initialized: c.Z.initialized,
   loading: c.Z.loading,
   items: c.Z.items,
@@ -34,69 +34,69 @@ let {
   cursor: c.Z.cursor,
   errored: c.Z.errored
 })), {
-  roleFilter: M,
-  everyoneFilter: R
-} = (0, a.cj)([l.Z], () => ({
+  roleFilter: R,
+  everyoneFilter: O
+} = (0, s.cj)([l.Z], () => ({
   everyoneFilter: l.Z.everyoneFilter,
   roleFilter: l.Z.roleFilter
 }));
 i.useEffect(() => ((0, o.Vk)(!0), () => (0, o.Vk)(!1)), []), i.useEffect(() => {
-  f && t && (0, s.FT)(d.W.NOTIFICATION_CENTER);
+  C && t && (0, a.FT)(d.W.NOTIFICATION_CENTER);
 }, [
   t,
-  f
+  C
 ]);
-let O = (0, r.Z)();
+let x = (0, r.Z)();
 i.useEffect(() => () => {
-  _ ? !O() && (A || p.length > 100) && (0, o.jF)() : n && p.length > 100 && (0, o.jF)();
+  _ ? !x() && (A || p.length > 100) && (0, o.jF)() : n && p.length > 100 && (0, o.jF)();
 }, [
   n,
   p,
   _,
-  O,
+  x,
   A
 ]), i.useEffect(() => {
   let e = m && t;
-  (!f || e) && (0, o.jk)({
+  (!C || e) && (0, o.jk)({
     limit: null != I ? I : E ? 8 : 20,
     with_mentions: E,
-    roles_filter: M,
-    everyone_filter: R
+    roles_filter: R,
+    everyone_filter: O
   });
 }, [
-  f,
+  C,
   m,
   t,
   E,
-  M,
   R,
+  O,
   I
 ]);
-let x = i.useCallback(async e => {
-  !T.current && f && g && null != S && (e || !A) && (T.current = !0, N(!0), await (0, o.jk)({
+let M = i.useCallback(async e => {
+  !T.current && C && g && null != S && (e || !A) && (T.current = !0, N(!0), await (0, o.jk)({
     after: S,
     with_mentions: E,
-    roles_filter: M,
-    everyone_filter: R,
+    roles_filter: R,
+    everyone_filter: O,
     limit: E ? 8 : 20
   }, () => {
     T.current = !1;
   }), N(!1));
 }, [
-  f,
+  C,
   g,
   S,
   A,
   E,
-  M,
-  R
+  R,
+  O
 ]);
 return {
-  initialized: f,
-  loading: C,
+  initialized: C,
+  loading: f,
   items: p,
   hasMore: g,
-  loadMore: x,
+  loadMore: M,
   loadingMore: h,
   setReadNotifItemToAcked: e => {
     !e.acked && (e.acked = !0);
@@ -110,7 +110,7 @@ let {
   loading: t,
   items: n,
   hasMore: i,
-  loadMore: a
+  loadMore: s
 } = _({
   isFocused: !0,
   isDesktop: !0
@@ -120,6 +120,6 @@ return {
   loading: t,
   items: n.filter(e => 'notification-center-item' === e.kind),
   hasMore: i,
-  loadMore: a
+  loadMore: s
 };
   };

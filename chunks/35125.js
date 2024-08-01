@@ -6,13 +6,13 @@ return c;
 return s;
   },
   _i: function() {
-return T;
+return g;
   },
   eI: function() {
-return f;
+return E;
   },
   vp: function() {
-return E;
+return f;
   },
   y8: function() {
 return I;
@@ -105,7 +105,7 @@ formatParams: {
   };
 }
 
-function E(e) {
+function f(e) {
   let n, {
   username: t,
   usernameOnClickHandler: r = u.dG4,
@@ -117,25 +117,25 @@ function E(e) {
   guild: s,
   totalMonthsSubscribed: c,
   showWithDuration: _,
-  isRenewal: E
+  isRenewal: f
 } = d(o, l),
-f = {
+E = {
   guildName: null == s ? void 0 : s.name,
   tierName: null == l ? void 0 : l.tier_name,
   username: t,
   usernameOnClick: r,
   roleSubscriptionOnClick: i
 };
-  return n = _ ? E ? a.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION_MOBILE.astFormat({
-...f,
+  return n = _ ? f ? a.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION_MOBILE.astFormat({
+...E,
 months: c
   }) : a.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_WITH_DURATION_MOBILE.astFormat({
-...f,
+...E,
 months: c
-  }) : E ? a.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_MOBILE.astFormat(f) : a.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_MOBILE.astFormat(f);
+  }) : f ? a.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_MOBILE.astFormat(E) : a.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_MOBILE.astFormat(E);
 }
 
-function f(e) {
+function E(e) {
   return (0, i.l)(e);
 }
 
@@ -150,7 +150,7 @@ role_subscription_listing_id: i
   });
 }
 
-function T(e, n) {
+function g(e, n) {
   var t;
   return {
 guild_id: e.guild_id,

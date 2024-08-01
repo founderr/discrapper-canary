@@ -14,7 +14,7 @@ var i = n(735250),
   _ = n(410441),
   f = n(797342),
   E = n(689938);
-let C = (e, t, n, i) => {
+let g = (e, t, n, i) => {
 let a = function(e) {
     if (e === s._.WEEK)
       return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
@@ -26,7 +26,7 @@ return a.plainFormat({
   userName: l
 }).replaceAll('*', '');
   },
-  g = (e, t) => E.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+  C = (e, t) => E.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
 username: t.username,
 activity: e.extra.game_name
   });
@@ -40,8 +40,8 @@ closePopout: r
 iconUrl: I,
 iconTitle: x,
 user: T,
-details: v,
-appName: N,
+details: N,
+appName: v,
 coverImageUrl: S
   } = (0, f.n)(n), {
 primaryColor: Z,
@@ -52,7 +52,7 @@ if (null != T && null != M && null != b && !!(0, h.qy)(b))
     entry: n,
     applicationImageSrc: I,
     avatarSrcs: [T.getAvatarURL(t.guild_id, 128)],
-    description: C(n, t, T, b),
+    description: g(n, t, T, b),
     timestamp: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
       hours: Math.round(M / l.Z.Seconds.HOUR)
     }),
@@ -87,8 +87,8 @@ children: [
     }),
     entry: n,
     userDescription: E.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
-    title: N,
-    subtitle: v,
+    title: v,
+    subtitle: N,
     badges: (0, i.jsx)(m.Gk, {
       location: m.Gt.POPOUT,
       children: h.Hs.map((e, t) => (0, i.jsx)(e, {
@@ -102,7 +102,7 @@ children: [
       user: T,
       channel: t,
       generateReactionImage: R,
-      reactionImageAltText: g(n, T),
+      reactionImageAltText: C(n, T),
       entry: n,
       requestId: s
     })

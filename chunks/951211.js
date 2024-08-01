@@ -26,8 +26,8 @@ channel: p,
 activities: _,
 newClipsCount: f,
 canPostPolls: E,
-canLaunchActivities: C,
-appContext: g
+canLaunchActivities: g,
+appContext: C
   } = e, I = [];
   return t && (I.push({
 type: 'UPLOAD_A_FILE',
@@ -37,7 +37,7 @@ display: h.Z.Messages.CHAT_ATTACH_UPLOAD_A_FILE
 type: 'UPLOAD_TEXT_AS_FILE',
 icon: s.FileUpIcon,
 display: h.Z.Messages.CHAT_ATTACH_UPLOAD_TEXT_AS_FILE
-  })), m && t && g !== d.IlC.POPOUT && I.push({
+  })), m && t && C !== d.IlC.POPOUT && I.push({
 type: 'CLIPS',
 icon: s.ClipsIcon,
 display: h.Z.Messages.CLIPS_SHARE_A_CLIP,
@@ -55,7 +55,7 @@ display: h.Z.Messages.CREATE_POLL
 type: 'SLASH_COMMAND',
 icon: s.AppsIcon,
 display: h.Z.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
-  }), C && I.push({
+  }), g && I.push({
 type: 'ACTIVITY',
 icon: s.ActivitiesIcon,
 display: h.Z.Messages.EMBEDDED_ACTIVITIES_START_ACTIVITY_LABEL

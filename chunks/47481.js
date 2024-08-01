@@ -21,11 +21,11 @@ function u(e) {
   selectedSummary: f
 } = e,
 E = [],
-C = !1,
-g = null != m ? l.default.extractTimestamp(m) : null,
+g = !1,
+C = null != m ? l.default.extractTimestamp(m) : null,
 I = null;
   return h.forEach(e => {
-var a, x, T, v, N, S, Z, A;
+var a, x, T, N, v, S, Z, A;
 if (null != _ && _.length > 0) {
   ;
   let t = l.default.extractTimestamp(e.id);
@@ -55,7 +55,7 @@ M !== t && null == I && (E.push({
 let b = E[E.length - 1],
   R = null,
   j = (0, o.DQ)(e);
-C = C || j;
+g = g || j;
 let L = function(e, t, n) {
   if (i.V.NON_COLLAPSIBLE.has(t.type));
   else if (t.blocked)
@@ -67,34 +67,34 @@ let L = function(e, t, n) {
 if (null !== L) {
   ;
   let t, n;
-  [R, b] = (x = E, T = e, v = L, n = N = b, null == N || N.type !== v ? (t = {
-    type: v,
+  [R, b] = (x = E, T = e, N = L, n = v = b, null == v || v.type !== N ? (t = {
+    type: N,
     content: [],
     key: T.id
-  }, x.push(t)) : n = (t = N).content[t.content.length - 1], [
+  }, x.push(t)) : n = (t = v).content[t.content.length - 1], [
     t,
     n
   ]);
 }
-if (m === e.id && null != g) {
+if (m === e.id && null != C) {
   if (null != b && b.type === c.ys_.DIVIDER)
-    b.unreadId = e.id, g = null;
+    b.unreadId = e.id, C = null;
   else if (null !== R) {
     ;
     S = R, Z = d, (A = e).isFirstMessageInForumPost(Z) || S.content.push({
       type: c.ys_.DIVIDER,
       unreadId: A.id
-    }), S.hasUnread = !0, g = null;
+    }), S.hasUnread = !0, C = null;
   } else
     !e.isFirstMessageInForumPost(d) && E.push({
       type: c.ys_.DIVIDER,
       unreadId: e.id
-    }), g = null;
+    }), C = null;
 } else
-  null != g && l.default.extractTimestamp(e.id) > g && (!e.isFirstMessageInForumPost(d) && E.push({
+  null != C && l.default.extractTimestamp(e.id) > C && (!e.isFirstMessageInForumPost(d) && E.push({
     type: c.ys_.DIVIDER,
     unreadId: e.id
-  }), g = null);
+  }), C = null);
 let P = (null == b ? void 0 : b.type) === c.ys_.MESSAGE ? u : b;
 (0, r.J)(d, P, e) && (n = e.id);
 let O = {
@@ -120,7 +120,7 @@ D && e.id === k && null != y && (O.flashKey = y), h.jumpTargetId === e.id && (O.
   contentKey: f.endId,
   isSummaryDivider: !0
 });
-  }), C && (0, o.P1)(d) && a.Z.trackExposure({
+  }), g && (0, o.P1)(d) && a.Z.trackExposure({
 location: '416cc9_1'
   }), E;
 }

@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(430824),
   f = n(594174),
   E = n(514342),
-  C = n(251625),
-  g = n(823379),
+  g = n(251625),
+  C = n(823379),
   I = n(665149),
   x = n(981631),
   T = n(228168),
-  v = n(689938),
-  N = n(641181);
+  N = n(689938),
+  v = n(641181);
 
 function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -55,7 +55,7 @@ return this.getNicknameGuildPairs().map((e, t) => {
     children: n
   });
   return s.length > 0 && (l = (0, i.jsx)(o.TooltipContainer, {
-    className: N.tooltip,
+    className: v.tooltip,
     text: s.join(', '),
     position: 'bottom',
     children: l
@@ -73,7 +73,7 @@ user: t,
 channelId: n,
 analyticsLocations: a
   }) {
-S(this, 'userId', void 0), S(this, 'user', void 0), S(this, 'channelId', void 0), S(this, 'analyticsLocations', void 0), S(this, 'generateNicknameGuildPairs', (0, C.oH)(e => {
+S(this, 'userId', void 0), S(this, 'user', void 0), S(this, 'channelId', void 0), S(this, 'analyticsLocations', void 0), S(this, 'generateNicknameGuildPairs', (0, g.oH)(e => {
   var t;
   return l()(p.ZP.getNicknameGuildsMapping(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : this.userId)).toPairs().map(e => {
     let [t, n] = e;
@@ -82,19 +82,19 @@ S(this, 'userId', void 0), S(this, 'user', void 0), S(this, 'channelId', void 0)
       n.map(e => {
         var t;
         return null === (t = _.Z.getGuild(e)) || void 0 === t ? void 0 : t.name;
-      }).filter(g.lm)
+      }).filter(C.lm)
     ];
   }).value();
 })), S(this, 'renderMoreAvatars', () => (0, i.jsx)(o.TooltipContainer, {
-  text: v.Z.Messages.AKA_MORE_AVATARS_OVERFLOW,
+  text: N.Z.Messages.AKA_MORE_AVATARS_OVERFLOW,
   position: 'bottom',
   children: (0, i.jsx)(o.Clickable, {
-    className: N.moreAvatars,
+    className: v.moreAvatars,
     onClick: this.handleClick,
     children: (0, i.jsx)(o.CirclePlusIcon, {
       size: 'xs',
       color: 'currentColor',
-      className: N.plusIcon
+      className: v.plusIcon
     })
   })
 }, 'more-avatars')), S(this, 'handleClick', () => {
@@ -139,15 +139,15 @@ analyticsLocations: m,
 channelId: t.id
   });
   return 0 === p.getNicknameGuildPairs().length && 0 === s.length ? (0, i.jsx)('div', {
-className: N.spacer
+className: v.spacer
   }) : (0, i.jsxs)(d.Gt, {
 value: m,
 children: [
   (0, i.jsx)(I.iz, {}),
   (0, i.jsx)(o.TextBadge, {
-    text: v.Z.Messages.AKA,
+    text: N.Z.Messages.AKA,
     disableColor: !0,
-    className: N.akaBadge
+    className: v.akaBadge
   }),
   s.length > 0 ? (0, i.jsx)(c.Z, {
     size: 16,
@@ -162,7 +162,7 @@ children: [
         position: 'bottom',
         children: (0, i.jsx)('img', {
           alt: '',
-          className: N.avatar,
+          className: v.avatar,
           onClick: p.handleClick,
           src: l.getAvatarURL(r, 16),
           'aria-hidden': !0
@@ -172,11 +172,11 @@ children: [
     renderMoreUsers: p.renderMoreAvatars,
     guildId: void 0,
     max: 3,
-    className: N.avatars
+    className: v.avatars
   }) : null,
   p.getNicknameGuildPairs().length > 0 ? (0, i.jsx)(E.Z, {
     position: 'bottom',
-    className: N.nicknames,
+    className: v.nicknames,
     children: p.renderNicknamePairs()
   }) : null
 ]

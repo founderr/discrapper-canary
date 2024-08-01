@@ -16,8 +16,8 @@ var i, a, s = n(735250),
   _ = n(513202),
   f = n(981631),
   E = n(689938),
-  C = n(478880);
-let g = ['embedded_cover'],
+  g = n(478880);
+let C = ['embedded_cover'],
   I = {
 tension: 800,
 friction: 24
@@ -33,8 +33,8 @@ aspectRatio: r = 0,
 animatedDivClass: x
   } = e, {
 onActivityItemSelected: T,
-imageBackground: v,
-activityAction: N,
+imageBackground: N,
+activityAction: v,
 labelType: S
   } = (0, h.ZP)({
 channel: n,
@@ -43,15 +43,15 @@ guildId: null !== (t = n.getGuildId()) && void 0 !== t ? t : void 0,
 locationObject: {},
 onActivityItemSelected: a,
 embeddedActivitiesManager: _.Z,
-assetNames: g
+assetNames: C
   }), [Z, A] = l.useState(!1), M = l.useCallback(() => {
 A(!0);
   }, [A]), b = l.useCallback(() => {
 A(!1);
   }, [A]), R = l.useMemo(() => (0, s.jsx)('div', {
-className: C.overlayBadge,
+className: g.overlayBadge,
 children: (0, s.jsx)('div', {
-  className: C.badgeContainer,
+  className: g.badgeContainer,
   children: (0, s.jsx)(p.Z, {
     name: i.application.name,
     labelType: S
@@ -61,12 +61,12 @@ children: (0, s.jsx)('div', {
 i.application.name,
 S
   ]), j = l.useMemo(() => {
-switch (N) {
+switch (v) {
   case h.JS.JOIN:
     return (0, s.jsx)('div', {
-      className: C.activityAction,
+      className: g.activityAction,
       children: (0, s.jsx)('div', {
-        className: C.activityActionButton,
+        className: g.activityActionButton,
         children: (0, s.jsx)(u.Text, {
           variant: 'text-sm/medium',
           color: 'always-white',
@@ -76,9 +76,9 @@ switch (N) {
     });
   case h.JS.LEAVE:
     return (0, s.jsx)('div', {
-      className: C.activityAction,
+      className: g.activityAction,
       children: (0, s.jsx)('div', {
-        className: o()(C.activityActionButton, C.activityActionButtonDanger),
+        className: o()(g.activityActionButton, g.activityActionButtonDanger),
         children: (0, s.jsx)(u.Text, {
           variant: 'text-sm/medium',
           color: 'always-white',
@@ -90,7 +90,7 @@ switch (N) {
   default:
     return (0, s.jsx)(s.Fragment, {});
 }
-  }, [N]);
+  }, [v]);
   return (0, s.jsx)(u.Button, {
 onClick: T,
 color: 'transparent',
@@ -100,7 +100,7 @@ onFocus: M,
 onBlur: b,
 onMouseEnter: M,
 onMouseLeave: b,
-innerClassName: C.activityItemButtonInnerClass,
+innerClassName: g.activityItemButtonInnerClass,
 children: (0, s.jsx)(u.Spring, {
   config: I,
   from: {
@@ -114,9 +114,9 @@ children: (0, s.jsx)(u.Spring, {
       value: t
     } = e;
     return (0, s.jsx)(c.animated.div, {
-      className: o()((0, d.Q)(f.BRd.DARK), C.activityItem, x, {
-        [C.activityItem_13_11]: 0 === r,
-        [C.activityItem_16_9]: 1 === r
+      className: o()((0, d.Q)(f.BRd.DARK), g.activityItem, x, {
+        [g.activityItem_13_11]: 0 === r,
+        [g.activityItem_16_9]: 1 === r
       }),
       style: {
         transform: t.to([
@@ -130,10 +130,10 @@ children: (0, s.jsx)(u.Spring, {
       children: (0, s.jsxs)(s.Fragment, {
         children: [
           (0, s.jsx)(m.Z, {
-            imageBackground: v,
+            imageBackground: N,
             applicationName: i.application.name,
-            imageClassName: C.activitySuggestionImage,
-            imageNotFoundClassName: C.brokenImageIconWrapper
+            imageClassName: g.activitySuggestionImage,
+            imageNotFoundClassName: g.brokenImageIconWrapper
           }),
           R,
           j

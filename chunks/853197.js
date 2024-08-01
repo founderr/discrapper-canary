@@ -9,16 +9,16 @@ return g;
 return S;
   },
   FL: function() {
-return C;
+return f;
   },
   R9: function() {
 return m;
   },
   Tn: function() {
-return f;
+return C;
   },
   Un: function() {
-return M;
+return R;
   },
   Xt: function() {
 return h;
@@ -40,8 +40,8 @@ return A;
   }
 });
 var i = n(913527),
-  a = n.n(i),
-  s = n(594190),
+  s = n.n(i),
+  a = n(594190),
   r = n(695346),
   l = n(77498),
   o = n(70956),
@@ -75,10 +75,10 @@ function m() {
 }
 
 function T(e, t, n) {
-  var i, a, s, r;
+  var i, s, a, r;
   if (null == g(e))
 return !1;
-  let l = (i = t, a = u.RN[e], null !== (s = i.find(e => I(e.name, a))) && void 0 !== s ? s : null);
+  let l = (i = t, s = u.RN[e], null !== (a = i.find(e => I(e.name, s))) && void 0 !== a ? a : null);
   if (null != l) {
 ;
 let e = null !== (r = null == l ? void 0 : l.lastLaunched) && void 0 !== r ? r : 0;
@@ -88,17 +88,17 @@ return n <= l.lastFocused || n * o.Z.Millis.SECOND <= e;
 }
 
 function h(e) {
-  return T(e, s.ZP.getGamesSeen(!1), m());
+  return T(e, a.ZP.getGamesSeen(!1), m());
 }
 
 function N(e, t) {
   let {
 endDate: n
-  } = e, i = a()(), s = a()(n, u.fS), r = a()(i.clone().add(e.dropsNoticeBannerDurationDays, 'days').format(u.fS)), l = s.isSameOrBefore(r), o = s.isBefore(i, 'minute');
+  } = e, i = s()(), a = s()(n, u.fS), r = s()(i.clone().add(e.dropsNoticeBannerDurationDays, 'days').format(u.fS)), l = a.isSameOrBefore(r), o = a.isBefore(i, 'minute');
   return l && (t && !o || !t && o);
 }
 
-function f(e) {
+function C(e) {
   var t;
   let n = g(e);
   if (null == n || !(null === (t = _(e)) || void 0 === t ? void 0 : t.getCurrentConfig({
@@ -108,11 +108,11 @@ function f(e) {
 }).dropsEnabled))
 return !1;
   let i = r.bh.getSetting(),
-a = N(n, !0);
-  return !i && a;
+s = N(n, !0);
+  return !i && s;
 }
 
-function C(e) {
+function f(e) {
   var t, n;
   let i = g(e);
   if (null == i || !(null === (n = _(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({
@@ -121,16 +121,16 @@ function C(e) {
   autoTrackExposure: !1
 })) || void 0 === t ? void 0 : t.dropsEnabled))
 return !1;
-  let a = r.bh.getSetting(),
-s = N(i, !1);
-  return p(i) && !a && s;
+  let s = r.bh.getSetting(),
+a = N(i, !1);
+  return p(i) && !s && a;
 }
 
 function p(e) {
   let {
 endDate: t
-  } = e, n = a()(t, 'YYYY-MM-DD HH:mm');
-  return a()() > n;
+  } = e, n = s()(t, 'YYYY-MM-DD HH:mm');
+  return s()() > n;
 }
 
 function g(e) {
@@ -145,7 +145,7 @@ function A(e) {
   return Object.keys(u.Zv).find(t => u.Zv[t].dropsQuestId === e);
 }
 
-function M(e) {
+function R(e) {
   switch (e) {
 case 'SWITCH':
   return d.Z.Messages.DROPS_PLATFORM_SWITCH;

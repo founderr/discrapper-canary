@@ -19,12 +19,12 @@ var i = n(470079),
 let f = 1000 / 60;
 
 function E(e, t, n, E) {
-  let C = (0, l.useToken)(s.Z.unsafe_rawColors.BRAND_500).hex(),
-g = (0, l.useToken)(s.Z.unsafe_rawColors.BLACK_500).hex(),
+  let g = (0, l.useToken)(s.Z.unsafe_rawColors.BRAND_500).hex(),
+C = (0, l.useToken)(s.Z.unsafe_rawColors.BLACK_500).hex(),
 I = (0, l.useToken)(s.Z.unsafe_rawColors.WHITE_500).hex(),
 x = i.useRef({}),
 T = i.useRef(new a.Xp()),
-v = i.useCallback(t => {
+N = i.useCallback(t => {
   let n = u.Z.getDrawables(t);
   (0, h.UN)(e), ! function(e) {
     let {
@@ -48,10 +48,10 @@ v = i.useCallback(t => {
     let {
       width: f,
       height: E
-    } = h.getBoundingClientRect(), C = [];
+    } = h.getBoundingClientRect(), g = [];
     n.forEach(e => {
       if (!(null != o.Z.getVoiceStateForChannel(l, e.userId))) {
-        C.push(e);
+        g.push(e);
         return;
       }! function(e) {
         let {
@@ -101,25 +101,25 @@ v = i.useCallback(t => {
         outlineColorDark: r,
         outlineColorLight: u,
         linesDrawnAt: a,
-        deadDrawables: C,
+        deadDrawables: g,
         streamerId: s
       });
-    }), C.length > 0 && (0, c.fW)(C, s);
+    }), g.length > 0 && (0, c.fW)(g, s);
   }({
     canvasRef: e,
     drawables: n,
-    fallbackColor: C,
+    fallbackColor: g,
     linesDrawnAt: x,
     streamerId: t,
-    outlineColorDark: g,
+    outlineColorDark: C,
     outlineColorLight: I,
     channelId: E
   });
 }, [
   e,
   E,
-  C,
   g,
+  C,
   I
 ]);
   i.useEffect(() => {
@@ -131,28 +131,28 @@ let t = new ResizeObserver(() => {
     width: i,
     height: a
   } = t.getBoundingClientRect();
-  t.width = i * window.devicePixelRatio, t.height = a * window.devicePixelRatio, v(n);
+  t.width = i * window.devicePixelRatio, t.height = a * window.devicePixelRatio, N(n);
 });
 return null != e.current && t.observe(e.current), () => t.disconnect();
   }, [
 e,
-v,
+N,
 n
   ]);
-  let N = i.useCallback(() => {
+  let v = i.useCallback(() => {
 let t = u.Z.getDrawables(n),
   i = m.U.getState().particles,
   a = t.length > 0 || Object.keys(i).length > 0;
-a && null == T.current._ref && (null == T.current._ref ? (v(n), T.current.start(f, () => v(n))) : !a && null != T.current._ref && (T.current.stop(), (0, h.UN)(e)));
+a && null == T.current._ref && (null == T.current._ref ? (N(n), T.current.start(f, () => N(n))) : !a && null != T.current._ref && (T.current.stop(), (0, h.UN)(e)));
   }, [
 e,
-v,
+N,
 n
   ]);
   i.useEffect(() => {
 let e = T.current;
-return u.Z.addChangeListener(N), N(), (0, r.vM)(t.getAvatarURL(null, _.Ks)), () => {
-  u.Z.removeChangeListener(N), e.stop();
+return u.Z.addChangeListener(v), v(), (0, r.vM)(t.getAvatarURL(null, _.Ks)), () => {
+  u.Z.removeChangeListener(v), e.stop();
 };
   });
 }

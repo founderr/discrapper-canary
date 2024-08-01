@@ -1,12 +1,12 @@
-n.d(t, {
+t.d(n, {
   Z: function() {
 return r;
   }
 });
-var i = n(665906),
-  a = n(901461),
-  s = n(981631);
+var i = t(665906),
+  a = t(901461),
+  l = t(981631);
 
-function r(e, t, n) {
-  return !t.isSystemDM() && !(0, a.Z)(e) && (n || t.isPrivate()) && (0, i.RG)(t) && t.type !== s.d4z.GUILD_VOICE && t.type !== s.d4z.GUILD_STAGE_VOICE;
+function r(e, n, t) {
+  return !n.isSystemDM() && !(0, a.Z)(e) && (t || n.isPrivate()) && (0, i.RG)(n) && n.type !== l.d4z.GUILD_VOICE && n.type !== l.d4z.GUILD_STAGE_VOICE;
 }

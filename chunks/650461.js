@@ -5,8 +5,8 @@ return M;
 }), E(47120);
 var s, T = E(470079),
   I = E(392711),
-  A = E.n(I),
-  n = E(442837),
+  n = E.n(I),
+  A = E(442837),
   t = E(570140),
   a = E(944163),
   r = E(709054),
@@ -50,7 +50,7 @@ requiredGameId: void 0
   });
 
 function O() {
-  let e = A().cloneDeep(G);
+  let e = n().cloneDeep(G);
   return e.badgeKind = (0, N.lP)(), e.banner = (0, L.i1)(), e;
 }
 
@@ -79,10 +79,10 @@ Object.keys(_).forEach(e => {
 }), l.set(e, E);
   }
 }
-class u extends(s = n.ZP.PersistedStore) {
+class u extends(s = A.ZP.PersistedStore) {
   initialize(e) {
 null != e && r.default.keys(e.progressByGuild).forEach(_ => {
-  var E, s, T, I, A;
+  var E, s, T, I, n;
   D.set(_, {
     gameApplicationIds: new Set((E = e.progressByGuild[_]).gameApplicationIds),
     playstyle: E.playstyle,
@@ -100,7 +100,7 @@ null != e && r.default.keys(e.progressByGuild).forEach(_ => {
     badgeKind: null !== (I = E.badgeKind) && void 0 !== I ? I : N.ZD.SWORD,
     badgePrimaryColor: E.badgePrimaryColor,
     badgeSecondaryColor: E.badgeSecondaryColor,
-    banner: null !== (A = E.banner) && void 0 !== A ? A : L.qC.NIGHT_SKY,
+    banner: null !== (n = E.banner) && void 0 !== n ? n : L.qC.NIGHT_SKY,
     brandPrimaryColor: E.brandPrimaryColor,
     brandSecondaryColor: E.brandSecondaryColor,
     currentStep: E.currentStep,

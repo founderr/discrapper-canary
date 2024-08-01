@@ -4,8 +4,8 @@ return u;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(442837),
+  s = n(470079),
+  a = n(442837),
   r = n(481060),
   l = n(468706),
   o = n(774863),
@@ -15,7 +15,7 @@ function u(e) {
   let {
 messageId: t,
 channelId: n
-  } = e, u = (0, s.e7)([o.Z], () => o.Z.canSubmitFpReport(t)), d = a.useCallback(() => {
+  } = e, u = (0, a.e7)([o.Z], () => o.Z.canSubmitFpReport(t)), d = s.useCallback(() => {
 (0, l.e)(n, t);
   }, [
 n,

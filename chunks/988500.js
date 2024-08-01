@@ -1,21 +1,21 @@
-n.d(t, {
+t.d(n, {
   Z: function() {
-return c;
+return u;
   }
 });
-var i = n(735250);
-n(470079);
-var a = n(481060),
-  s = n(203143),
-  r = n(615669),
-  l = n(689938);
-let o = {
+var i = t(735250);
+t(470079);
+var a = t(481060),
+  l = t(203143),
+  r = t(615669),
+  o = t(689938);
+let s = {
   [r.z.END_EARLY]: e => (0, i.jsx)(a.MenuItem, {
 id: 'end-poll-early',
-label: l.Z.Messages.POLL_END_EARLY,
+label: o.Z.Messages.POLL_END_EARLY,
 icon: a.ClockXIcon,
 action: () => {
-  s.Z.endPollEarly({
+  l.Z.endPollEarly({
     channelId: e.channel_id,
     messageId: e.id
   });
@@ -26,9 +26,9 @@ iconProps: {
   })
 };
 
-function c(e) {
-  let t = (0, r.Z)(e);
-  return 0 === t.length ? null : (0, i.jsx)(i.Fragment, {
-children: t.map(t => o[t](e))
+function u(e) {
+  let n = (0, r.Z)(e);
+  return 0 === n.length ? null : (0, i.jsx)(i.Fragment, {
+children: n.map(n => s[n](e))
   });
 }

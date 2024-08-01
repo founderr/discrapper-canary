@@ -1,31 +1,31 @@
-n.d(t, {
+t.d(n, {
   Z: function() {
-return c;
+return u;
   }
 });
-var i = n(735250);
-n(470079);
-var a = n(481060),
-  s = n(346610),
-  r = n(868643),
-  l = n(996861),
-  o = n(689938);
+var i = t(735250);
+t(470079);
+var a = t(481060),
+  l = t(346610),
+  r = t(868643),
+  o = t(996861),
+  s = t(689938);
 
-function c(e, t) {
-  let n = (0, r.a)(e),
+function u(e, n) {
+  let t = (0, r.a)(e),
 {
-  canForwardMessages: c
-} = s.w.useExperiment({
+  canForwardMessages: u
+} = l.w.useExperiment({
   location: 'MessageActionsMenu'
 }, {
   autoTrackExposure: !1
 });
-  return n && c ? (0, i.jsx)(a.MenuItem, {
+  return t && u ? (0, i.jsx)(a.MenuItem, {
 id: 'forward',
-label: o.Z.Messages.MESSAGE_ACTION_FORWARD,
+label: s.Z.Messages.MESSAGE_ACTION_FORWARD,
 icon: a.ChatArrowRightIcon,
 action: () => {
-  (0, l.ts)(t, e);
+  (0, o.ts)(n, e);
 }
   }) : null;
 }

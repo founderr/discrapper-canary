@@ -5,8 +5,8 @@ return E;
 });
 var i = n(735250);
 n(470079);
-var a = n(442837),
-  s = n(481060),
+var s = n(442837),
+  a = n(481060),
   r = n(235820),
   l = n(592125),
   o = n(944486),
@@ -19,14 +19,14 @@ function _(e) {
   let {
 closePopout: t,
 onSelect: n
-  } = e, _ = (0, a.e7)([
+  } = e, _ = (0, s.e7)([
 l.Z,
 o.Z
   ], () => l.Z.getChannel(o.Z.getChannelId())), {
 everyoneFilter: E,
 roleFilter: I,
 guildFilter: m
-  } = (0, a.cj)([c.Z], () => {
+  } = (0, s.cj)([c.Z], () => {
 let {
   everyoneFilter: e,
   roleFilter: t,
@@ -38,13 +38,13 @@ return {
   guildFilter: n
 };
   });
-  return (0, i.jsxs)(s.Menu, {
+  return (0, i.jsxs)(a.Menu, {
 navId: 'mentions-filter',
 'aria-label': d.Z.Messages.FILTER,
 onClose: t,
 onSelect: n,
 children: [
-  (0, i.jsx)(s.MenuCheckboxItem, {
+  (0, i.jsx)(a.MenuCheckboxItem, {
     id: 'Everyone',
     label: d.Z.Messages.RECENT_MENTIONS_FILTER_EVERYONE,
     action: function() {
@@ -54,7 +54,7 @@ children: [
     },
     checked: E
   }),
-  (0, i.jsx)(s.MenuCheckboxItem, {
+  (0, i.jsx)(a.MenuCheckboxItem, {
     id: 'Roles',
     label: d.Z.Messages.RECENT_MENTIONS_FILTER_ROLES,
     action: function() {
@@ -64,7 +64,7 @@ children: [
     },
     checked: I
   }),
-  null == _ || _.isPrivate() ? null : (0, i.jsx)(s.MenuCheckboxItem, {
+  null == _ || _.isPrivate() ? null : (0, i.jsx)(a.MenuCheckboxItem, {
     id: 'All Servers',
     label: d.Z.Messages.RECENT_MENTIONS_FILTER_ALL_SERVERS,
     action: function() {
@@ -79,9 +79,9 @@ children: [
 }
 
 function E() {
-  return (0, i.jsx)(s.Popout, {
+  return (0, i.jsx)(a.Popout, {
 align: 'right',
-animation: s.Popout.Animation.NONE,
+animation: a.Popout.Animation.NONE,
 position: 'bottom',
 renderPopout: e => {
   let {
@@ -95,10 +95,10 @@ children: e => {
   let {
     onClick: t
   } = e;
-  return (0, i.jsx)(s.CircleIconButton, {
+  return (0, i.jsx)(a.CircleIconButton, {
     tooltip: d.Z.Messages.FILTER,
-    color: s.CircleIconButtonColors.SECONDARY,
-    icon: (0, i.jsx)(s.FiltersHorizontalIcon, {
+    color: a.CircleIconButtonColors.SECONDARY,
+    icon: (0, i.jsx)(a.FiltersHorizontalIcon, {
       size: 'xs',
       color: 'currentColor'
     }),

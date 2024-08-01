@@ -26,8 +26,8 @@ buttonProps: {
   groupId: p,
   compact: _ = !1
 }
-  } = e, f = h.state === r.yb.SENDING, E = h.id === p, C = (0, a.yE)(h.flags, r.iLy.EPHEMERAL), g = h.state === r.yb.SEND_FAILED;
-  return f || C && !g ? null : (0, i.jsx)(l.Z, {
+  } = e, f = h.state === r.yb.SENDING, E = h.id === p, g = (0, a.yE)(h.flags, r.iLy.EPHEMERAL), C = h.state === r.yb.SEND_FAILED;
+  return f || g && !C ? null : (0, i.jsx)(l.Z, {
 className: o.buttons,
 innerClassName: o.buttonsInner,
 isHeader: !_ && E && !(0, s.Z)(h),

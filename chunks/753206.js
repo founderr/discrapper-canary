@@ -14,32 +14,32 @@ n.Z = i.memo(function(e) {
 message: t,
 channel: i,
 compact: o,
-className: E,
-isGroupStart: f,
+className: f,
+isGroupStart: E,
 hideSimpleEmbedContent: I = !0,
-disableInteraction: T
-  } = e, S = (0, u.A)((null !== (n = t.editedTimestamp) && void 0 !== n ? n : t.timestamp).valueOf()), {
-content: A
+disableInteraction: g
+  } = e, p = (0, u.A)((null !== (n = t.editedTimestamp) && void 0 !== n ? n : t.timestamp).valueOf()), {
+content: S
   } = (0, s.Z)(t, {
 hideSimpleEmbedContent: I,
-allowList: S,
-allowHeading: S,
+allowList: p,
+allowHeading: p,
 allowLinks: !0,
 previewLinkTarget: !0
   });
   return (0, r.jsx)(a.Z, {
 compact: o,
-className: l()(E, {
+className: l()(f, {
   [_.message]: !0,
   [_.cozyMessage]: !o,
-  [_.groupStart]: f
+  [_.groupStart]: E
 }),
 childrenHeader: (0, d.Z)({
   ...e,
   channel: i,
   guildId: void 0
 }),
-childrenMessageContent: (0, c.Z)(e, A),
-disableInteraction: T
+childrenMessageContent: (0, c.Z)(e, S),
+disableInteraction: g
   });
 });

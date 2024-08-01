@@ -23,8 +23,8 @@ var i = t(735250),
   N = t(592125),
   T = t(703558),
   f = t(430824),
-  g = t(626135),
-  x = t(823379),
+  x = t(626135),
+  g = t(823379),
   A = t(399654),
   O = t(844439),
   v = t(957552),
@@ -138,7 +138,7 @@ return void 0 === e ? [] : e.map(e => {
     }),
     application: n
   } : null;
-}).filter(x.lm);
+}).filter(g.lm);
   }, [w]);
   l.useEffect(() => {
 (y === O.M.ERROR || y === O.M.FETCHED && 0 === H.length) && t();
@@ -149,7 +149,7 @@ t
   ]), l.useEffect(() => {
 var e, n;
 if (!F && 0 !== H.length)
-  g.default.track(j.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
+  x.default.track(j.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
     guild_id: null !== (e = null == o ? void 0 : o.guild_id) && void 0 !== e ? e : '',
     channel_id: null !== (n = null == o ? void 0 : o.id) && void 0 !== n ? n : '',
     application_ids: [...H.map(e => Number(e.application.id))],

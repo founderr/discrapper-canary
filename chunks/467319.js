@@ -1,4 +1,4 @@
-t.d(n, {
+n.d(t, {
   H: function() {
 return a;
   },
@@ -6,27 +6,27 @@ return a;
 return i;
   }
 });
-var l = t(460083);
+var r = n(460083);
 
 function a(e) {
   let {
-enabled: n
-  } = l.d.getCurrentConfig({
+enabled: t
+  } = r.d.getCurrentConfig({
 guildId: e,
 location: '988d4e_3'
   });
-  return n;
+  return t;
 }
 
 function i(e) {
-  let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+  let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
 {
-  enabled: t
-} = l.d.useExperiment({
+  enabled: n
+} = r.d.useExperiment({
   guildId: e,
   location: '988d4e_4'
 }, {
-  autoTrackExposure: n
+  autoTrackExposure: t
 });
-  return t;
+  return n;
 }

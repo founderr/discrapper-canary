@@ -14,13 +14,13 @@ var i = n(735250),
   _ = n(314897),
   f = n(592125),
   E = n(496675),
-  C = n(158776),
-  g = n(246946),
+  g = n(158776),
+  C = n(246946),
   I = n(979651),
   x = n(5192),
   T = n(51144),
-  v = n(785717),
-  N = n(221292),
+  N = n(785717),
+  v = n(221292),
   S = n(310427),
   Z = n(318661),
   A = n(57048),
@@ -76,40 +76,40 @@ status: ec,
 hangStatusActivity: eu
   } = (0, r.cj)([
 p.Z,
-C.Z,
+g.Z,
 E.Z
   ], () => {
 let e = null != p.Z.getAnyStreamForUser(n.id);
 return {
-  activity: C.Z.findActivity(n.id, t => {
+  activity: g.Z.findActivity(n.id, t => {
     let {
       type: n
     } = t;
     return e ? n === K.IIU.PLAYING : n !== K.IIU.CUSTOM_STATUS && n !== K.IIU.HANG_STATUS;
   }),
-  customStatusActivity: C.Z.findActivity(n.id, e => {
+  customStatusActivity: g.Z.findActivity(n.id, e => {
     let {
       type: t
     } = e;
     return t === K.IIU.CUSTOM_STATUS;
   }),
   isApplicationStreaming: e,
-  isMobile: C.Z.isMobileOnline(n.id),
-  status: et ? null : C.Z.getStatus(n.id),
-  hangStatusActivity: ea && null != ei && E.Z.can(K.Plq.CONNECT, ei) ? C.Z.findActivity(n.id, e => {
+  isMobile: g.Z.isMobileOnline(n.id),
+  status: et ? null : g.Z.getStatus(n.id),
+  hangStatusActivity: ea && null != ei && E.Z.can(K.Plq.CONNECT, ei) ? g.Z.findActivity(n.id, e => {
     let {
       type: t
     } = e;
     return t === K.IIU.HANG_STATUS;
   }) : null
 };
-  }), ed = null != es || null != eu || er, eh = null !== (t = x.ZP.getNickname(null, s.id, n)) && void 0 !== t ? t : T.ZP.getName(n), em = (0, r.e7)([g.Z], () => g.Z.hidePersonalInformation), {
+  }), ed = null != es || null != eu || er, eh = null !== (t = x.ZP.getNickname(null, s.id, n)) && void 0 !== t ? t : T.ZP.getName(n), em = (0, r.e7)([C.Z], () => C.Z.hidePersonalInformation), {
 mutualFriends: ep,
 isFetching: e_
   } = (0, M.Z)(n.id, !n.bot), {
 mutualGuilds: ef,
 isFetching: eE
-  } = (0, b.Z)(n.id, !n.bot), eC = !n.bot && null != ep && ep.length > 0, eg = !n.bot && null != ef && ef.length > 0, eI = (0, F.J)({
+  } = (0, b.Z)(n.id, !n.bot), eg = !n.bot && null != ep && ep.length > 0, eC = !n.bot && null != ef && ef.length > 0, eI = (0, F.J)({
 popoutUser: n,
 source: D.m.PROFILE_PANEL
   }), ex = (0, c.ZP)();
@@ -144,7 +144,7 @@ ec
     onSelect: () => (0, m.X)(t.id)
   }, t.id);
 }),
-ev = null == ep ? void 0 : ep.map(e => {
+eN = null == ep ? void 0 : ep.map(e => {
   let {
     key: t,
     user: n,
@@ -165,7 +165,7 @@ ev = null == ep ? void 0 : ep.map(e => {
     }
   }, t);
 }),
-eN = a.useCallback(() => J(!0), []),
+ev = a.useCallback(() => J(!0), []),
 eS = a.useCallback(() => J(!1), []),
 eZ = (0, r.e7)([_.default], () => _.default.getId()),
 eA = n.id === eZ,
@@ -179,13 +179,13 @@ eM = n.bot || eA,
 });
   return (0, i.jsx)(d.Gt, {
 value: ee,
-children: (0, i.jsx)(v.Mt, {
+children: (0, i.jsx)(N.Mt, {
   layout: 'DM_PANEL',
   userId: n.id,
   channelId: s.id,
   children: (0, i.jsx)('aside', {
     className: X.profilePanel,
-    onMouseEnter: eN,
+    onMouseEnter: ev,
     onMouseLeave: eS,
     children: (0, i.jsxs)(R.Z, {
       user: n,
@@ -261,10 +261,10 @@ children: (0, i.jsx)(v.Mt, {
                 }
               })
             }) : null,
-            (eg || eC) && (0, i.jsxs)(R.Z.Overlay, {
+            (eC || eg) && (0, i.jsxs)(R.Z.Overlay, {
               className: X.profilePanelConnections,
               children: [
-                eg ? (0, i.jsx)(W.Z, {
+                eC ? (0, i.jsx)(W.Z, {
                   className: X.mutualGuildsList,
                   header: q.Z.Messages.MUTUAL_GUILDS_COUNT.format({
                     count: ef.length
@@ -273,7 +273,7 @@ children: (0, i.jsx)(v.Mt, {
                   loadingContentsCount: ef.length,
                   itemType: W.R.MutualGuildList,
                   onExpand: () => {
-                    (0, N.pQ)({
+                    (0, v.pQ)({
                       action: 'PRESS_SECTION',
                       section: 'MUTUAL_GUILDS',
                       layout: 'DM_PANEL',
@@ -284,9 +284,9 @@ children: (0, i.jsx)(v.Mt, {
                   },
                   children: eT
                 }) : null,
-                eC ? (0, i.jsx)(W.Z, {
+                eg ? (0, i.jsx)(W.Z, {
                   className: l()(X.mutualFriendsList, {
-                    [X.mutualFriendsDivider]: eg
+                    [X.mutualFriendsDivider]: eC
                   }),
                   header: q.Z.Messages.MUTUAL_FRIENDS_COUNT.format({
                     count: ep.length
@@ -295,7 +295,7 @@ children: (0, i.jsx)(v.Mt, {
                   loadingContentsCount: ep.length,
                   itemType: W.R.MutualFriendsList,
                   onExpand: () => {
-                    (0, N.pQ)({
+                    (0, v.pQ)({
                       action: 'PRESS_SECTION',
                       section: 'MUTUAL_FRIENDS',
                       layout: 'DM_PANEL',
@@ -304,7 +304,7 @@ children: (0, i.jsx)(v.Mt, {
                       analyticsLocations: ee
                     });
                   },
-                  children: ev
+                  children: eN
                 }) : null
               ]
             })

@@ -1,27 +1,27 @@
-n.d(t, {
+t.d(n, {
   Z: function() {
-return T;
+return I;
   }
 });
-var i = n(735250);
-n(470079);
-var r = n(442837),
-  a = n(692547),
-  s = n(481060),
-  o = n(493683),
-  d = n(129861),
-  I = n(700582),
-  c = n(594174),
-  l = n(689938),
-  E = n(813383);
+var i = t(735250);
+t(470079);
+var r = t(442837),
+  a = t(692547),
+  s = t(481060),
+  l = t(493683),
+  o = t(129861),
+  u = t(700582),
+  d = t(594174),
+  c = t(689938),
+  E = t(813383);
 
-function u(e) {
+function _(e) {
   let {
-color: t,
-className: n
+color: n,
+className: t
   } = e;
   return (0, i.jsx)('svg', {
-className: n,
+className: t,
 height: '16',
 width: '80',
 viewBox: '0 0 80 16',
@@ -35,7 +35,7 @@ children: (0, i.jsxs)('g', {
       d: 'm0 0h80v16h-80z'
     }),
     (0, i.jsxs)('g', {
-      stroke: t,
+      stroke: n,
       strokeLinecap: 'round',
       strokeLinejoin: 'round',
       strokeWidth: '2',
@@ -60,23 +60,23 @@ children: (0, i.jsxs)('g', {
   });
 }
 
-function T(e, t) {
-  let n = (0, r.e7)([c.default], () => c.default.getCurrentUser());
-  return null == n || t.ownerId !== n.id || e.id === n.id || (null == t ? void 0 : t.isBroadcastChannel()) ? null : (0, i.jsx)(s.MenuItem, {
+function I(e, n) {
+  let t = (0, r.e7)([d.default], () => d.default.getCurrentUser());
+  return null == t || n.ownerId !== t.id || e.id === t.id || (null == n ? void 0 : n.isBroadcastChannel()) ? null : (0, i.jsx)(s.MenuItem, {
 id: 'make-dm-owner',
 color: 'danger',
-label: l.Z.Messages.CHANGE_DM_OWNER,
+label: c.Z.Messages.CHANGE_DM_OWNER,
 action: () => {
   var r;
-  return r = n, void(0, s.openModal)(n => (0, i.jsxs)(s.ConfirmModal, {
+  return r = t, void(0, s.openModal)(t => (0, i.jsxs)(s.ConfirmModal, {
     bodyClassName: E.confirmModal,
-    header: l.Z.Messages.TRANSFER_GROUP_OWNERSHIP,
-    confirmText: l.Z.Messages.CONFIRM,
-    cancelText: l.Z.Messages.CANCEL,
-    onConfirm: () => o.Z.setDMOwner(t.id, e.id),
-    ...n,
+    header: c.Z.Messages.TRANSFER_GROUP_OWNERSHIP,
+    confirmText: c.Z.Messages.CONFIRM,
+    cancelText: c.Z.Messages.CANCEL,
+    onConfirm: () => l.Z.setDMOwner(n.id, e.id),
+    ...t,
     children: [
-      (0, i.jsx)(u, {
+      (0, i.jsx)(_, {
         color: a.Z.unsafe_rawColors.PRIMARY_300.css
       }),
       (0, i.jsxs)('div', {
@@ -84,14 +84,14 @@ action: () => {
         children: [
           (0, i.jsx)('div', {
             className: E.from,
-            children: (0, i.jsx)(I.Z, {
+            children: (0, i.jsx)(u.Z, {
               user: r,
               size: s.AvatarSizes.SIZE_80
             })
           }),
           (0, i.jsx)('div', {
             className: E.to,
-            children: (0, i.jsx)(I.Z, {
+            children: (0, i.jsx)(u.Z, {
               user: e,
               size: s.AvatarSizes.SIZE_80
             })
@@ -100,8 +100,8 @@ action: () => {
       }),
       (0, i.jsx)(s.Text, {
         variant: 'text-md/normal',
-        children: l.Z.Messages.CONFIRM_CHANGE_DM_OWNER.format({
-          usernameHook: (t, n) => (0, i.jsx)(d.Z, {
+        children: c.Z.Messages.CONFIRM_CHANGE_DM_OWNER.format({
+          usernameHook: (n, t) => (0, i.jsx)(o.Z, {
             usernameIcon: (0, i.jsx)(s.Avatar, {
               className: E.avatarIcon,
               src: e.getAvatarURL(void 0, 16),
@@ -112,7 +112,7 @@ action: () => {
             usernameClass: E.username,
             discriminatorClass: E.discriminator,
             user: e
-          }, n)
+          }, t)
         })
       })
     ]

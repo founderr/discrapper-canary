@@ -1,22 +1,22 @@
-var i, a, s, r, l = n(442837),
-  o = n(570140);
-let c = {};
-class u extends(r = l.ZP.Store) {
+var i, s, l, a, r = t(442837),
+  o = t(570140);
+let u = {};
+class d extends(a = r.ZP.Store) {
   getOptions(e) {
-return c[e];
+return u[e];
   }
 }
-s = 'SendMessageOptionsStore', (a = 'displayName') in(i = u) ? Object.defineProperty(i, a, {
-  value: s,
+l = 'SendMessageOptionsStore', (s = 'displayName') in(i = d) ? Object.defineProperty(i, s, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new u(o.Z, {
+}) : i[s] = l, n.Z = new d(o.Z, {
   MESSAGE_CREATE: function(e) {
 let {
-  message: t,
-  sendMessageOptions: n
+  message: n,
+  sendMessageOptions: t
 } = e;
-null != n && (c[t.id] = n), null != t.nonce && t.nonce in c && delete c[t.nonce];
+null != t && (u[n.id] = t), null != n.nonce && n.nonce in u && delete u[n.nonce];
   }
 });

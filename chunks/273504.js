@@ -3,13 +3,13 @@ t.d(n, {
 return c;
   },
   Ic: function() {
-return N;
+return C;
   },
   Lg: function() {
-return A;
+return S;
   },
   OU: function() {
-return T;
+return g;
   },
   RH: function() {
 return a;
@@ -21,19 +21,19 @@ return i;
 return d;
   },
   Vg: function() {
-return S;
+return p;
   },
   Vk: function() {
-return E;
+return f;
   },
   _6: function() {
-return g;
+return T;
   },
   aj: function() {
 return I;
   },
   dc: function() {
-return p;
+return m;
   },
   fX: function() {
 return u.f;
@@ -51,7 +51,7 @@ return s;
 return l.q;
   },
   uE: function() {
-return f;
+return E;
   }
 });
 var r, i, o = t(401653),
@@ -63,12 +63,12 @@ let a = 1000,
   c = 1000,
   d = 10,
   _ = 60,
-  E = 1,
   f = 1,
+  E = 1,
   I = 260,
-  T = 100,
-  S = 1,
-  A = 50,
-  N = 20,
-  g = 150,
-  p = 'automod-profile-quarantine-alert';
+  g = 100,
+  p = 1,
+  S = 50,
+  C = 20,
+  T = 150,
+  m = 'automod-profile-quarantine-alert';

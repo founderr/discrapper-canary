@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(695346),
   f = n(768119),
   E = n(944486),
-  C = n(693580),
-  g = n(585483),
+  g = n(693580),
+  C = n(585483),
   I = n(251285),
   x = n(406326),
   T = n(619753),
-  v = n(981631),
-  N = n(689938),
+  N = n(981631),
+  v = n(689938),
   S = n(582480);
 
 function Z(e, t, n) {
@@ -57,7 +57,7 @@ super(...e), t = this, Z(this, 'autoAnalytics', function() {
     s = 0;
   null != t.props.searchResults && o()(t.props.searchResults).flatten().filter(e => e.isSearchHit).forEach(e => {
     null != e.content && '' !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && s++), null != e.embeds && e.embeds.length > 0 && a++, null != e.attachments && e.attachments.length > 0 && i++;
-  }), m.ZP.trackWithMetadata(v.rMx.SEARCH_RESULT_VIEWED, {
+  }), m.ZP.trackWithMetadata(N.rMx.SEARCH_RESULT_VIEWED, {
     search_type: t.props.searchType,
     search_id: t.props.searchAnalyticsId,
     prev_search_id: e !== t.props.searchAnalyticsId ? e : null,
@@ -90,10 +90,10 @@ children: (0, i.jsx)('div', {
 };
 class b extends a.PureComponent {
   componentDidMount() {
-g.S.subscribe(v.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+C.S.subscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
   }
   componentWillUnmount() {
-g.S.unsubscribe(v.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+C.S.unsubscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
   }
   componentDidUpdate(e) {
 let {
@@ -111,7 +111,7 @@ JSON.stringify(n) !== JSON.stringify(this.state.searchQuery) && this.setState({
   searchMode: (null == n ? void 0 : n.sort_by) != null && null != n.sort_order ? h.Vj({
     sort_by: n.sort_by,
     sort_order: n.sort_order
-  }) : v.QIO.NEWEST
+  }) : N.QIO.NEWEST
 });
   }
   render() {
@@ -127,7 +127,7 @@ let {
 } = this.props.search;
 return (0, i.jsxs)('section', {
   className: S.searchResultsWrap,
-  'aria-label': N.Z.Messages.SEARCH_RESULTS_SECTION_LABEL,
+  'aria-label': v.Z.Messages.SEARCH_RESULTS_SECTION_LABEL,
   children: [
     this.renderHeader(),
     (0, i.jsx)(u.AdvancedScroller, {
@@ -140,7 +140,7 @@ return (0, i.jsxs)('section', {
       searchAnalyticsId: e,
       searchResults: n,
       searchOffset: a,
-      searchLimit: v.vpv,
+      searchLimit: N.vpv,
       searchHasError: s,
       searchTotalResults: l,
       searchIsIndexing: r
@@ -150,7 +150,7 @@ return (0, i.jsxs)('section', {
   }
   constructor(...e) {
 super(...e), Z(this, 'state', {
-  searchMode: v.QIO.NEWEST,
+  searchMode: N.QIO.NEWEST,
   searchQuery: null
 }), Z(this, 'scrollerRef', a.createRef()), Z(this, 'scrollTo', (e, t, n) => {
   let i = this.scrollerRef.current;
@@ -194,7 +194,7 @@ super(...e), Z(this, 'state', {
   } = this.props, {
     searchMode: i
   } = this.state;
-  e !== i && !n && (m.ZP.trackWithMetadata(v.rMx.SEARCH_RESULT_SORT_CHANGED, {
+  e !== i && !n && (m.ZP.trackWithMetadata(N.rMx.SEARCH_RESULT_SORT_CHANGED, {
     search_id: f.Z.getAnalyticsId(t),
     new_sort_type: e
   }), h.Nz(t, e), this.setState({
@@ -226,10 +226,10 @@ super(...e), Z(this, 'state', {
     documentsIndexed: s
   });
 }), Z(this, 'renderIndexing', () => {
-  let e = f.Z.getSearchType(this.props.searchId) === v.aib.GUILD ? N.Z.Messages.SEARCH_GUILD_STILL_INDEXING : N.Z.Messages.SEARCH_DM_STILL_INDEXING;
+  let e = f.Z.getSearchType(this.props.searchId) === N.aib.GUILD ? v.Z.Messages.SEARCH_GUILD_STILL_INDEXING : v.Z.Messages.SEARCH_DM_STILL_INDEXING;
   return (0, i.jsxs)(M, {
     children: [
-      (0, i.jsx)(C.Z, {}),
+      (0, i.jsx)(g.Z, {}),
       (0, i.jsx)('div', {
         className: (S.emptyResultsText, S.stillIndexing),
         children: e
@@ -239,7 +239,7 @@ super(...e), Z(this, 'state', {
 }), Z(this, 'renderNoResults', () => {
   let {
     showNoResultsAlt: e
-  } = this.props.search, t = e ? N.Z.Messages.SEARCH_NO_RESULTS_ALT : N.Z.Messages.SEARCH_NO_RESULTS;
+  } = this.props.search, t = e ? v.Z.Messages.SEARCH_NO_RESULTS_ALT : v.Z.Messages.SEARCH_NO_RESULTS;
   return (0, i.jsxs)(M, {
     children: [
       (0, i.jsx)('div', {
@@ -262,7 +262,7 @@ super(...e), Z(this, 'state', {
     }),
     (0, i.jsx)('div', {
       className: l()(S.emptyResultsText, S.errorMessage),
-      children: N.Z.Messages.SEARCH_ERROR
+      children: v.Z.Messages.SEARCH_ERROR
     })
   ]
 })), Z(this, 'renderContent', () => {

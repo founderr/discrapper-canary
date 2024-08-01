@@ -37,17 +37,17 @@ getNewFocusIndex: p,
 maintainFocusPosition: _ = !0,
 includeSetSizes: f = !0,
 focusOnMount: E = !0,
-enabled: C = !0,
-onDispatch: g
+enabled: g = !0,
+onDispatch: C
   } = e, I = i.useCallback((e, t) => {
 let n = (0, a.Z)(e, t);
-return null != g && g(e, n, t), n;
-  }, [g]), [x, T] = i.useReducer(I, {
+return null != C && C(e, n, t), n;
+  }, [C]), [x, T] = i.useReducer(I, {
 focusedIndex: d,
 itemCount: n
   }), {
-itemCount: v,
-focusedIndex: N
+itemCount: N,
+focusedIndex: v
   } = x, [S] = i.useState(() => (0, l.P2)(T, 16));
   return i.useEffect(() => {
   T({
@@ -66,18 +66,18 @@ function(e) {
     dispatch: _,
     maintainFocusPosition: f,
     includeSetSizes: E,
-    focusOnMount: C,
-    enabled: g,
+    focusOnMount: g,
+    enabled: C,
     makeId: I = l.qR,
     getIndexFromId: x
-  } = e, T = i.useRef(n), v = i.useRef(x);
-  v.current = x, T.current = n;
-  let N = i.useRef();
+  } = e, T = i.useRef(n), N = i.useRef(x);
+  N.current = x, T.current = n;
+  let v = i.useRef();
   i.useEffect(() => {
-    N.current = g;
-  }, [g]);
+    v.current = C;
+  }, [C]);
   let [S, Z] = i.useState(!1), [A] = i.useState(() => new l.$o(e => () => {
-    let t = null != v.current && 'string' == typeof e ? v.current(e) : e;
+    let t = null != N.current && 'string' == typeof e ? N.current(e) : e;
     'number' == typeof t && !(t < 0) && _({
       type: a.G.SET_FOCUSED_INDEX,
       index: t
@@ -85,11 +85,11 @@ function(e) {
   }));
   i.useEffect(() => () => A.clean(), [A]);
   let M = i.useCallback((e, t) => {
-      N.current && m(e, t);
+      v.current && m(e, t);
     }, [m]),
     [b, R] = i.useState(!0);
   i.useEffect(() => {
-    if (b && !C) {
+    if (b && !g) {
       R(!1);
       return;
     }
@@ -111,7 +111,7 @@ function(e) {
       M
     ]),
     L = i.useCallback(e => {
-      if (!N.current)
+      if (!v.current)
         return;
       if (r.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
         e.preventDefault(), e.stopPropagation(), j();
@@ -226,7 +226,7 @@ function(e) {
         'aria-posinset': E ? n + 1 : void 0,
         id: I(t, n),
         tabIndex: f && n === d ? 0 : -1,
-        onFocus: A.get(null != v.current ? I(t, n) : n)
+        onFocus: A.get(null != N.current ? I(t, n) : n)
       };
     }, [
       I,
@@ -247,8 +247,8 @@ function(e) {
   ]);
 }({
   navId: t,
-  itemCount: v,
-  focusedIndex: N,
+  itemCount: N,
+  focusedIndex: v,
   dispatch: S,
   onSelect: h,
   setFocus: m,
@@ -256,6 +256,6 @@ function(e) {
   maintainFocusPosition: _,
   includeSetSizes: f,
   focusOnMount: E,
-  enabled: C
+  enabled: g
 });
 }

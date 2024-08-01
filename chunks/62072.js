@@ -13,20 +13,20 @@ var i = n(470079),
   _ = n(323873),
   f = n(271383),
   E = n(607744),
-  C = n(375954),
-  g = n(496675),
+  g = n(375954),
+  C = n(496675),
   I = n(572004),
   x = n(585483),
   T = n(358085),
-  v = n(709054),
-  N = n(418476),
+  N = n(709054),
+  v = n(418476),
   S = n(901461),
   Z = n(432376),
   A = n(996861),
   M = n(981631);
 
 function b(e) {
-  return g.Z.can(M.Plq.MANAGE_MESSAGES, e);
+  return C.Z.can(M.Plq.MANAGE_MESSAGES, e);
 }
 t.Z = function(e, t, n) {
   let R = i.useRef(n);
@@ -39,7 +39,7 @@ let y = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
   k = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
   U = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
   w = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
-  B = C.Z.getMessage(t, e),
+  B = g.Z.getMessage(t, e),
   H = p.Z.getChannel(t);
 if (null == B || null == H)
   return;
@@ -54,7 +54,7 @@ switch (n.key.toLowerCase()) {
   case 'e':
     if (y) {
       ;
-      if (i = G, j = H, L = B, !j.isSystemDM() && (0, N.Z)(L, i))
+      if (i = G, j = H, L = B, !j.isSystemDM() && (0, v.Z)(L, i))
         n.preventDefault(), (0, A.Hd)(H, B);
     }
     break;
@@ -75,7 +75,7 @@ switch (n.key.toLowerCase()) {
           channel: e,
           canChat: t,
           renderReactions: n,
-          canAddNewReactions: t && g.Z.can(M.Plq.ADD_REACTIONS, e),
+          canAddNewReactions: t && C.Z.can(M.Plq.ADD_REACTIONS, e),
           isLurking: null != e.guild_id && o.Z.isLurking(e.guild_id),
           isGuest: null != e.guild_id && f.ZP.isCurrentUserGuest(e.guild_id),
           isActiveChannelOrUnarchivableThread: (0, u.RG)(e)
@@ -103,7 +103,7 @@ switch (n.key.toLowerCase()) {
     if (y && (0, u.ki)(H, B))
       n.preventDefault(), (0, d.R6)(H, B, 'Message Shortcut');
     else if (B.hasFlag(M.iLy.HAS_THREAD)) {
-      let e = p.Z.getChannel(v.default.castMessageIdAsChannelId(B.id));
+      let e = p.Z.getChannel(N.default.castMessageIdAsChannelId(B.id));
       null != e && (y || w) && (n.preventDefault(), (0, d.ok)(e, w));
     }
     break;

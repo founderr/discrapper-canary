@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return N;
+return v;
   }
 }), n(47120);
 var i = n(735250),
@@ -18,26 +18,26 @@ var i = n(735250),
   _ = n(433355),
   f = n(271383),
   E = n(594174),
-  C = n(189432),
-  g = n(356778),
+  g = n(189432),
+  C = n(356778),
   I = n(370595),
   x = n(50493),
   T = n(749348),
-  v = n(458563);
+  N = n(458563);
 
-function N(e) {
+function v(e) {
   var t, n;
   let {
 userId: s,
-guildId: N,
+guildId: v,
 location: S,
 className: Z,
 onNavigate: A
-  } = e, M = a.useRef(null), b = (0, o.e7)([_.ZP], () => _.ZP.getGuildSidebarState(N), [N]), R = a.useRef(0), [j, L] = a.useState(null !== (t = null == b ? void 0 : b.details.additionalSearchQuery) && void 0 !== t ? t : {}), P = (0, g.z0)(s, N, {
+  } = e, M = a.useRef(null), b = (0, o.e7)([_.ZP], () => _.ZP.getGuildSidebarState(v), [v]), R = a.useRef(0), [j, L] = a.useState(null !== (t = null == b ? void 0 : b.details.additionalSearchQuery) && void 0 !== t ? t : {}), P = (0, C.z0)(s, v, {
 addtionalQuery: j,
 shouldDispatch: !0
-  }), O = (0, o.e7)([E.default], () => E.default.getUser(s), [s]), y = (0, o.e7)([f.ZP], () => f.ZP.getMember(N, s), [
-N,
+  }), O = (0, o.e7)([E.default], () => E.default.getUser(s), [s]), y = (0, o.e7)([f.ZP], () => f.ZP.getMember(v, s), [
+v,
 s
   ]);
   a.useLayoutEffect(() => {
@@ -54,13 +54,13 @@ if (null != e) {
   if (null == b)
     return;
   let t = e.target.scrollTop;
-  R.current = t, (0, C.r)(N, s, b.baseChannelId, {
+  R.current = t, (0, g.r)(v, s, b.baseChannelId, {
     modViewPanel: x.k.MESSAGE_HISTORY,
     additionalSearchQuery: j,
     scrollOffset: R.current
   });
 }, [
-  N,
+  v,
   s,
   b,
   j
@@ -73,13 +73,13 @@ U = a.useCallback(e => {
     ...j,
     offset: 25 * e
   };
-  L(t), (0, C.r)(N, s, b.baseChannelId, {
+  L(t), (0, g.r)(v, s, b.baseChannelId, {
     modViewPanel: x.k.MESSAGE_HISTORY,
     additionalSearchQuery: t,
     scrollOffset: R.current
   });
 }, [
-  N,
+  v,
   s,
   b,
   j
@@ -134,12 +134,12 @@ H = a.useMemo(() => {
 className: l()(T.container, Z),
 children: [
   (0, i.jsx)(I.Z, {
-    guildId: N,
+    guildId: v,
     userId: s,
     onNavigate: A
   }),
   (0, i.jsx)(c.AdvancedScroller, {
-    className: v.innerContainer,
+    className: N.innerContainer,
     ref: M,
     onScroll: k,
     children: (0, i.jsx)(p.Z, {

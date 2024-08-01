@@ -23,11 +23,11 @@ guildId: p,
 channel: _,
 entry: f,
 onSelect: E
-  } = e, C = (0, u.Z)({
+  } = e, g = (0, u.Z)({
 userId: n.id,
 guildId: p,
 channelId: _.id
-  }), g = (0, r.Z)({
+  }), C = (0, r.Z)({
 id: n.id,
 label: h.Z.Messages.COPY_ID_USER
   }), I = (0, d.dX)(f), x = (0, c.Z)({
@@ -36,7 +36,7 @@ applicationId: I ? null === (t = f.extra) || void 0 === t ? void 0 : t.applicati
 source: o.m1.ActivityCardContextMenu,
 trackEntryPointImpression: !0,
 sourceUserId: f.author_id
-  }), [T, v] = a.useState(!1);
+  }), [T, N] = a.useState(!1);
   return (0, i.jsx)(s.Popout, {
 align: 'top',
 position: 'right',
@@ -51,7 +51,7 @@ renderPopout: () => (0, i.jsx)(s.Menu, {
     children: [
       (0, i.jsxs)(s.MenuGroup, {
         children: [
-          C,
+          g,
           null != x && (0, i.jsx)(s.MenuItem, {
             id: 'game-profile',
             label: h.Z.Messages.GAME_PROFILE,
@@ -60,7 +60,7 @@ renderPopout: () => (0, i.jsx)(s.Menu, {
         ]
       }),
       (0, i.jsx)(s.MenuGroup, {
-        children: g
+        children: C
       })
     ]
   })
@@ -68,7 +68,7 @@ renderPopout: () => (0, i.jsx)(s.Menu, {
 children: () => (0, i.jsx)(s.Clickable, {
   className: m.menuIcon,
   onClick: () => {
-    v(!0);
+    N(!0);
   },
   children: (0, i.jsx)(s.MoreHorizontalIcon, {
     color: 'currentColor',

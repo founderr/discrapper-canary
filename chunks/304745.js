@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(526846),
   f = n(938655),
   E = n(403404),
-  C = n(906732),
-  g = n(424602),
+  g = n(906732),
+  C = n(424602),
   I = n(243778),
   x = n(579185),
   T = n(301076),
-  v = n(981631),
-  N = n(921944),
+  N = n(981631),
+  v = n(921944),
   S = n(269794);
 
 function Z(e) {
@@ -39,10 +39,10 @@ onMouseLeave: L
 channelId: t.id
   }), y = !M, D = a.useCallback(e => {
 'focus' !== e.type && j();
-  }, [j]), k = (0, o.O)(), U = (0, c.bp)() === v.IlC.POPOUT, {
+  }, [j]), k = (0, o.O)(), U = (0, c.bp)() === N.IlC.POPOUT, {
 analyticsLocations: w
-  } = (0, C.ZP)(), B = w.length > 0 ? w[w.length - 1] : 'open-activity-shelf';
-  g.m1.useExperiment({
+  } = (0, g.ZP)(), B = w.length > 0 ? w[w.length - 1] : 'open-activity-shelf';
+  C.m1.useExperiment({
 location: B
   }, {
 autoTrackExposure: !0
@@ -92,7 +92,7 @@ children: e => {
         onMouseEnter: j,
         onMouseLeave: L,
         isHovered: b,
-        onClick: () => a(N.L.UNKNOWN)
+        onClick: () => a(v.L.UNKNOWN)
       }) : (0, i.jsx)(i.Fragment, {});
     },
     children: () => (0, i.jsxs)(i.Fragment, {
@@ -104,7 +104,7 @@ children: e => {
           isActivityActive: O || b,
           className: S.controlButton,
           onClick: () => {
-            H(), (n === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || n === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(N.L.UNKNOWN);
+            H(), (n === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || n === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(v.L.UNKNOWN);
           },
           onMouseEnter: D,
           onMouseLeave: L

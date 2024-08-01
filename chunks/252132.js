@@ -24,12 +24,12 @@ onClick: p,
 onContextMenu: _,
 onDoubleClick: f,
 onVideoResize: E,
-paused: C,
-pulseSpeakingIndicator: g,
+paused: g,
+pulseSpeakingIndicator: C,
 participant: I,
 width: x,
 ...T
-  } = e, v = s.Z.getVideoComponent();
+  } = e, N = s.Z.getVideoComponent();
   return (0, i.jsx)('div', {
 style: {
   width: x
@@ -54,9 +54,9 @@ children: (0, i.jsxs)('div', {
       onDoubleClick: f,
       onVideoResize: E,
       participant: I,
-      paused: C,
-      pulseSpeakingIndicator: g,
-      videoComponent: v,
+      paused: g,
+      pulseSpeakingIndicator: C,
+      videoComponent: N,
       width: x,
       ...T
     }),

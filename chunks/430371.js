@@ -18,14 +18,14 @@ var i = n(735250),
   _ = n(807705),
   f = n(27457),
   E = n(111248),
-  C = n(312703),
-  g = n(796638),
+  g = n(312703),
+  C = n(796638),
   I = n(981631),
   x = n(354459),
   T = n(524465),
-  v = n(456515);
-let N = 16 / 9,
-  S = 8 + g.cF;
+  N = n(456515);
+let v = 16 / 9,
+  S = 8 + C.cF;
 
 function Z(e) {
   var t;
@@ -65,7 +65,7 @@ ea = (0, _.Z)(ei, 100),
 es = (null !== (t = (0, c.Z)(P.id)) && void 0 !== t ? t : P.id) !== P.id,
 el = 0;
   (X || ee) && (el += 72), X && !ee && (ei ? el += 48 : el += 8), ee && (el += 0.5 * S + 8);
-  let er = a.useMemo(() => X && Q ? k / (U - 2 * el) : J && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : N, [
+  let er = a.useMemo(() => X && Q ? k / (U - 2 * el) : J && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : v, [
   J,
   F,
   X,
@@ -140,22 +140,22 @@ ef = (0, o.useTransition)(P, {
 eE = a.useCallback(e => {
   W(e), Y(!1);
 }, []),
-eC = ee || D ? [] : (0, C.n3)(M, P, V),
+eg = ee || D ? [] : (0, g.n3)(M, P, V),
 {
-  visibleParticipants: eg,
+  visibleParticipants: eC,
   participantTileWidth: eI
-} = (0, g.ZB)(k, b);
+} = (0, C.ZB)(k, b);
   return (0, i.jsxs)('div', {
-className: l()(v.root, T.flexCenter, y),
+className: l()(N.root, T.flexCenter, y),
 children: [
   (0, i.jsxs)('div', {
-    className: v.tileWrapper,
+    className: N.tileWrapper,
     style: {
       opacity: J && z ? 0 : 1
     },
     children: [
       (0, i.jsxs)(r.animated.div, {
-        className: v.videoFrame,
+        className: N.videoFrame,
         style: {
           top: em.value.to(e => -e * S / 2)
         },
@@ -164,7 +164,7 @@ children: [
             style: {
               width: ep.value
             },
-            className: v.videoWrapper,
+            className: N.videoWrapper,
             children: (0, i.jsx)('div', {
               className: l()(T.videoSizer),
               style: {
@@ -198,8 +198,8 @@ children: [
             })
           }),
           ei ? (0, i.jsx)(r.animated.div, {
-            className: l()(v.actionRow, {
-              [v.idle]: B
+            className: l()(N.actionRow, {
+              [N.idle]: B
             }),
             style: {
               bottom: e_.value
@@ -213,18 +213,18 @@ children: [
         ]
       }),
       (0, i.jsx)(r.animated.div, {
-        className: v.participantsWrapperAnimated,
+        className: N.participantsWrapperAnimated,
         style: {
           translateY: eh.value.to(e => e * S / 2),
           opacity: eh.value,
           visibility: eh.value.to(e => 0 === e ? 'hidden' : 'visible')
         },
-        children: (0, i.jsx)(g.ZP, {
+        children: (0, i.jsx)(C.ZP, {
           channel: L,
           onClick: s,
           onContextMenu: Z,
           onDoubleClick: A,
-          participants: eg,
+          participants: eC,
           participantTileWidth: eI,
           selectedParticipantId: P.id,
           inCall: j,
@@ -234,12 +234,12 @@ children: [
       })
     ]
   }),
-  eC.length > 0 ? (0, i.jsx)(E.Z, {
+  eg.length > 0 ? (0, i.jsx)(E.Z, {
     onContextMenuParticipant: Z,
     width: k,
     height: U,
     channel: L,
-    participants: eC
+    participants: eg
   }) : null
 ]
   });

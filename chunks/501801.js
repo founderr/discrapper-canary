@@ -12,9 +12,9 @@ return c;
 var s = E(735250),
   T = E(470079),
   I = E(120356),
-  A = E.n(I),
-  n = E(392711),
-  t = E.n(n),
+  n = E.n(I),
+  A = E(392711),
+  t = E.n(A),
   a = E(913527),
   r = E.n(a),
   N = E(481060),
@@ -47,8 +47,8 @@ changeItem: _,
 subChanges: E,
 changeNumber: T,
 log: I,
-oldValue: A,
-newValue: n,
+oldValue: n,
+newValue: A,
 change: t
   } = e, a = null;
   if ('string' == typeof _ && (a = _), null != _ && 'object' == typeof _) {
@@ -61,9 +61,9 @@ if (null != _ && null != _.format) {
   a = _.format({
     user: I.user,
     target: I.target,
-    oldValue: A,
-    newValue: n,
-    count: Array.isArray(n) ? n.length : null,
+    oldValue: n,
+    newValue: A,
+    count: Array.isArray(A) ? A.length : null,
     subtarget: null !== (D = null !== (r = I.options.subtarget) && void 0 !== r ? r : t.subtarget) && void 0 !== D ? D : null,
     newColorHook: (e, _) => (0, s.jsx)('div', {
       className: o.colorHook,
@@ -78,18 +78,18 @@ if (null != _ && null != _.format) {
       }
     }, _),
     oldTagHook: (e, _) => (0, s.jsx)(S.Z, {
-      tag: A,
-      size: S.Z.Sizes.SMALL
-    }, _),
-    newTagHook: (e, _) => (0, s.jsx)(S.Z, {
       tag: n,
       size: S.Z.Sizes.SMALL
     }, _),
+    newTagHook: (e, _) => (0, s.jsx)(S.Z, {
+      tag: A,
+      size: S.Z.Sizes.SMALL
+    }, _),
     oldEmojiHook: (e, _) => (0, s.jsx)(L.Z, {
-      emojiId: A
+      emojiId: n
     }, _),
     newEmojiHook: (e, _) => (0, s.jsx)(L.Z, {
-      emojiId: n
+      emojiId: A
     }, _)
   });
 } else
@@ -145,9 +145,9 @@ let {
   actionType: E,
   targetType: T,
   action: I,
-  themeOverride: n
-} = this.props, t = null != n ? o['themeOverride'.concat((0, i.De)(n))] : null;
-let a = A()(o.icon, C[E], (e = T, (_ = I) === R.rsA.MESSAGE_DELETE ? o.targetMessage : _ === R.rsA.AUTO_MODERATION_BLOCK_MESSAGE || _ === R.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || _ === R.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || _ === R.rsA.AUTO_MODERATION_QUARANTINE_USER ? o.autoModerationBlockMessage : {
+  themeOverride: A
+} = this.props, t = null != A ? o['themeOverride'.concat((0, i.De)(A))] : null;
+let a = n()(o.icon, C[E], (e = T, (_ = I) === R.rsA.MESSAGE_DELETE ? o.targetMessage : _ === R.rsA.AUTO_MODERATION_BLOCK_MESSAGE || _ === R.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || _ === R.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || _ === R.rsA.AUTO_MODERATION_QUARANTINE_USER ? o.autoModerationBlockMessage : {
   [R.KFR.ALL]: o.targetAll,
   [R.KFR.GUILD]: o.targetGuild,
   [R.KFR.CHANNEL]: o.targetChannel,
@@ -183,15 +183,15 @@ function Z(e) {
 log: _,
 guild: E,
 onContentClick: I,
-className: n
+className: A
   } = e, a = T.useCallback(e => {
 if (null == _.changes)
   return null;
 let T = 0,
   a = t().flatten(_.changes.map(I => {
     let {
-      oldValue: A,
-      newValue: n
+      oldValue: n,
+      newValue: A
     } = I, a = null;
     if (_.action === R.rsA.MEMBER_ROLE_UPDATE ? a = function(e) {
         let {
@@ -221,24 +221,24 @@ let T = 0,
           className: o.subListItem,
           children: G.em(e)
         }, e)))), T.length > 0) ? T : null;
-      }(I)), (_.action === R.rsA.CHANNEL_UPDATE || _.action === R.rsA.CHANNEL_CREATE) && I.key === R.zUn.TYPE && (null != A && (A = (0, O.a5)({
-        type: A
-      })), null != n && (n = (0, O.a5)({
+      }(I)), (_.action === R.rsA.CHANNEL_UPDATE || _.action === R.rsA.CHANNEL_CREATE) && I.key === R.zUn.TYPE && (null != n && (n = (0, O.a5)({
         type: n
+      })), null != A && (A = (0, O.a5)({
+        type: A
       }))), _.action === R.rsA.MEMBER_UPDATE && I.key === R.zUn.COMMUNICATION_DISABLED_UNTIL) {
-      if (null == (n = r()(n)) || !n.isValid())
+      if (null == (A = r()(A)) || !A.isValid())
         return null;
-      n = n.calendar();
+      A = A.calendar();
     }
     (_.action === R.rsA.ONBOARDING_PROMPT_UPDATE || _.action === R.rsA.ONBOARDING_PROMPT_CREATE) && I.key === R.zUn.OPTIONS && (a = function(e, _, E) {
       let {
         newValue: T,
         oldValue: I
-      } = e, A = e => {
+      } = e, n = e => {
         var _;
         let s = null != E ? null === (_ = l.Z.getRole(E.id, e)) || void 0 === _ ? void 0 : _.name : void 0;
         return null == s ? null : '@'.concat(s);
-      }, n = e => {
+      }, A = e => {
         var _;
         let E = null === (_ = D.Z.getChannel(e)) || void 0 === _ ? void 0 : _.name;
         return null == E ? null : '#'.concat(E);
@@ -246,7 +246,7 @@ let T = 0,
         let {
           title: T,
           id: I
-        } = E, a = e.role_ids.map(A).filter(M.lm), r = e.channel_ids.map(n).filter(M.lm), L = E.role_ids.map(A).filter(M.lm), S = E.channel_ids.map(n).filter(M.lm), D = t().difference(L, a), l = t().difference(a, L), U = t().difference(S, r), G = t().difference(r, S), O = [];
+        } = E, a = e.role_ids.map(n).filter(M.lm), r = e.channel_ids.map(A).filter(M.lm), L = E.role_ids.map(n).filter(M.lm), S = E.channel_ids.map(A).filter(M.lm), D = t().difference(L, a), l = t().difference(a, L), U = t().difference(S, r), G = t().difference(r, S), O = [];
         return (!t().isEqual(e.title, E.title) && O.push('title'), !t().isEqual(e.description, E.description) && O.push('description'), 0 === D.length && 0 === l.length && 0 === U.length && 0 === G.length && 0 === O.length) ? null : (0, s.jsxs)('li', {
           children: [
             (0, s.jsxs)('div', {
@@ -314,7 +314,7 @@ let T = 0,
               channel_ids: T,
               title: I,
               id: t
-            } = e, a = (null != E ? E : []).map(A).filter(M.lm), r = (null != T ? T : []).map(n).filter(M.lm);
+            } = e, a = (null != E ? E : []).map(n).filter(M.lm), r = (null != T ? T : []).map(A).filter(M.lm);
             return (0, s.jsxs)('li', {
               children: [
                 (0, s.jsxs)('div', {
@@ -380,13 +380,13 @@ let T = 0,
         newValue: T,
         key: I
       } = e, {
-        targetType: A,
-        action: n
+        targetType: n,
+        action: A
       } = _;
       switch (I) {
         case R.zUn.WELCOME_MESSAGE:
           return ((e, _) => {
-            var E, T, I, A, n;
+            var E, T, I, n, A;
             let t = U.default.getUser(null == _ ? void 0 : null === (E = _.author_ids) || void 0 === E ? void 0 : E[0]),
               a = U.default.getUser(null === (T = e.author_ids) || void 0 === T ? void 0 : T[0]),
               r = (null == t ? void 0 : t.id) !== (null == a ? void 0 : a.id) ? (0, s.jsx)('li', {
@@ -396,7 +396,7 @@ let T = 0,
                     variant: 'text-md/normal',
                     children: u.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_AUTHOR_CHANGE.format({
                       oldUser: null !== (I = null == t ? void 0 : t.username) && void 0 !== I ? I : u.Z.Messages.NONE,
-                      newUser: null !== (A = null == a ? void 0 : a.username) && void 0 !== A ? A : u.Z.Messages.NONE
+                      newUser: null !== (n = null == a ? void 0 : a.username) && void 0 !== n ? n : u.Z.Messages.NONE
                     })
                   })
                 })
@@ -407,7 +407,7 @@ let T = 0,
                   children: (0, s.jsx)(N.Text, {
                     variant: 'text-md/normal',
                     children: u.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_MESSAGE_CHANGE.format({
-                      oldMessage: null !== (n = null == _ ? void 0 : _.message) && void 0 !== n ? n : u.Z.Messages.NONE,
+                      oldMessage: null !== (A = null == _ ? void 0 : _.message) && void 0 !== A ? A : u.Z.Messages.NONE,
                       newMessage: e.message
                     })
                   })
@@ -436,8 +436,8 @@ let T = 0,
                     children: [
                       (0, s.jsx)(d, {
                         actionType: R.vB8.CREATE,
-                        targetType: A,
-                        action: n
+                        targetType: n,
+                        action: A
                       }),
                       (0, s.jsx)(N.Text, {
                         variant: 'text-md/normal',
@@ -454,8 +454,8 @@ let T = 0,
                     children: [
                       (0, s.jsx)(d, {
                         actionType: R.vB8.DELETE,
-                        targetType: A,
-                        action: n
+                        targetType: n,
+                        action: A
                       }),
                       (0, s.jsx)(N.Text, {
                         variant: 'text-md/normal',
@@ -485,8 +485,8 @@ let T = 0,
                     children: [
                       (0, s.jsx)(d, {
                         actionType: R.vB8.CREATE,
-                        targetType: A,
-                        action: n
+                        targetType: n,
+                        action: A
                       }),
                       (0, s.jsx)(N.Text, {
                         variant: 'text-md/normal',
@@ -503,8 +503,8 @@ let T = 0,
                     children: [
                       (0, s.jsx)(d, {
                         actionType: R.vB8.DELETE,
-                        targetType: A,
-                        action: n
+                        targetType: n,
+                        action: A
                       }),
                       (0, s.jsx)(N.Text, {
                         variant: 'text-md/normal',
@@ -528,29 +528,29 @@ let T = 0,
       subChanges: a,
       changeNumber: T,
       log: _,
-      oldValue: A,
-      newValue: n,
+      oldValue: n,
+      newValue: A,
       change: I
     }))) : (T++, g({
       changeItem: L,
       subChanges: a,
       changeNumber: T,
       log: _,
-      oldValue: A,
-      newValue: n,
+      oldValue: n,
+      newValue: A,
       change: I
     }));
   })).filter(M.lm);
 return (0, s.jsx)(N.Clickable, {
   onClick: I,
-  className: A()(o.changeDetails, n),
+  className: n()(o.changeDetails, A),
   children: a
 });
   }, [
 _,
 E,
 I,
-n
+A
   ]), L = T.useMemo(() => {
 switch (_.targetType) {
   case R.KFR.GUILD:

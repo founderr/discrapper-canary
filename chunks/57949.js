@@ -5,8 +5,8 @@ return u;
 });
 var i = n(735250);
 n(470079);
-var a = n(772848),
-  s = n(481060),
+var s = n(772848),
+  a = n(481060),
   r = n(976255),
   l = n(667),
   o = n(626135),
@@ -17,10 +17,10 @@ function u(e) {
 guildProductListing: t,
 guildId: u,
 sourceAnalyticsLocations: d
-  } = e, _ = !1, E = (0, a.Z)(), I = () => {
+  } = e, _ = !1, E = (0, s.Z)(), I = () => {
 _ = !0;
   };
-  (0, s.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
 let {
   default: e
 } = await Promise.all([

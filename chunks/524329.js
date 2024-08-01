@@ -3,7 +3,7 @@ E.d(_, {
 return N;
   },
   RM: function() {
-return n;
+return A;
   },
   VP: function() {
 return r;
@@ -15,13 +15,13 @@ return t;
 return a;
   },
   y0: function() {
-return A;
+return n;
   }
 });
 var s = E(544891),
   T = E(570140),
   I = E(981631);
-let A = function(e) {
+let n = function(e) {
 let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 T.Z.dispatch({
   type: 'WELCOME_SCREEN_VIEW',
@@ -29,7 +29,7 @@ T.Z.dispatch({
   isLurking: _
 });
   },
-  n = async e => {
+  A = async e => {
 T.Z.dispatch({
   type: 'WELCOME_SCREEN_FETCH_START'
 });

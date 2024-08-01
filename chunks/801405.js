@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(358085),
   f = n(228488),
   E = n(981631),
-  C = n(495585);
-let g = () => {
+  g = n(495585);
+let C = () => {
   l.Z.wait(() => u.xv(E.KJ3.CHANNEL_CALL_POPOUT));
 };
 
@@ -31,8 +31,8 @@ popoutOpen: l,
 popoutWindow: u,
 currentWindow: I
   } = e, x = n === E.IlC.POPOUT, T = a.useRef(null), {
-currentLayout: v,
-mode: N
+currentLayout: N,
+mode: v
   } = (0, s.cj)([c.Z], () => {
 let e = c.Z.getMode(t.id),
   i = n === E.IlC.POPOUT;
@@ -47,9 +47,9 @@ t,
 n
   ]), S = (0, s.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
   a.useEffect(() => {
-T.current = N;
+T.current = v;
   });
-  let Z = a.useRef(v),
+  let Z = a.useRef(N),
 {
   currentDocument: A,
   rootNode: M
@@ -67,7 +67,7 @@ T.current = N;
   I
 ]),
 b = l && !x,
-R = N === E.WtW.VIDEO && S && !b,
+R = v === E.WtW.VIDEO && S && !b,
 j = a.useCallback((e, i) => {
   i !== e && (r.Z.updateLayout(t.id, i, n), i === E.AEg.FULL_SCREEN && t.isPrivate() && p.S.dispatch(E.CkL.TEXTAREA_BLUR));
 }, [
@@ -93,33 +93,33 @@ P = a.useCallback(e => () => {
 ]);
   return (a.useEffect(() => {
 let e = () => {
-  null != M && !(0, f.rB)(M, A) && v === E.AEg.FULL_SCREEN && P(v)();
+  null != M && !(0, f.rB)(M, A) && N === E.AEg.FULL_SCREEN && P(N)();
 };
 return A.addEventListener(f.NO, e), () => {
   A.removeEventListener(f.NO, e);
 };
   }, [
 A,
-v,
+N,
 P,
 M
   ]), a.useEffect(() => (m.default.track(E.rMx.VIDEO_LAYOUT_TOGGLED, {
-video_layout: x ? 'popout' : v,
+video_layout: x ? 'popout' : N,
 ...(0, o.AB)(t.id)
   }), () => {
-!(x && (0, _.isMac)()) && L(v);
+!(x && (0, _.isMac)()) && L(N);
   }), [
-v,
+N,
 x
   ]), a.useEffect(() => {
-null != M && T.current === E.WtW.VIDEO && N === E.WtW.VOICE && (0, f.Pr)(M, A);
+null != M && T.current === E.WtW.VIDEO && v === E.WtW.VOICE && (0, f.Pr)(M, A);
   }, [
 A,
-N,
+v,
 T,
 M
   ]), a.useEffect(() => {
-!S && x && g();
+!S && x && C();
   }, [
 S,
 x
@@ -127,7 +127,7 @@ x
 themeable: !1,
 node: M,
 guestWindow: u,
-className: C.rightTrayIcon,
-onClick: P(v)
+className: g.rightTrayIcon,
+onClick: P(N)
   }) : null;
 }

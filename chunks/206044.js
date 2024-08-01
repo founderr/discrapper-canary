@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(338545),
   o = n(722770),
   c = n(442837),
@@ -15,27 +15,27 @@ var i = n(735250),
   T = n(572004),
   h = n(617136),
   N = n(113434),
-  f = n(497505),
-  C = n(918701),
+  C = n(497505),
+  f = n(918701),
   p = n(566078),
   g = n(685613),
   S = n(611855),
   A = n(644646),
-  M = n(670638),
-  R = n(87894),
-  O = n(46140),
-  x = n(689938),
+  R = n(670638),
+  O = n(87894),
+  x = n(46140),
+  M = n(689938),
   v = n(793443);
-let Z = (0, l.animated)(d.ChevronSmallDownIcon),
-  L = (0, l.animated)(m.Z),
+let L = (0, l.animated)(d.ChevronSmallDownIcon),
+  Z = (0, l.animated)(m.Z),
   P = e => {
 let {
   quest: t,
   location: n,
-  questContentPosition: s,
+  questContentPosition: a,
   ...r
-} = e, [l, o] = a.useState(!1), c = a.useRef(new u.V7());
-a.useEffect(() => {
+} = e, [l, o] = s.useState(!1), c = s.useRef(new u.V7());
+s.useEffect(() => {
   let e = c.current;
   return function() {
     e.stop();
@@ -46,21 +46,21 @@ let _ = () => {
     questId: t.id,
     questContent: n,
     questContentCTA: h.jZ.COPY_QUEST_URL,
-    questContentPosition: s
-  }), (0, T.JG)((0, C.Rs)(t.id)), o(!0), c.current.start(1000, () => o(!1));
+    questContentPosition: a
+  }), (0, T.JG)((0, f.Rs)(t.id)), o(!0), c.current.start(1000, () => o(!1));
 };
 return (0, i.jsx)(d.Tooltip, {
   forceOpen: l,
   shouldShow: l,
   color: d.Tooltip.Colors.GREEN,
-  text: x.Z.Messages.COPY_SUCCESS_1,
+  text: M.Z.Messages.COPY_SUCCESS_1,
   children: () => (0, i.jsx)(d.Button, {
     ...r,
     className: v.shareButton,
     color: d.Button.Colors.PRIMARY,
     size: d.Button.Sizes.SMALL,
     onClick: _,
-    children: x.Z.Messages.QUESTS_SHARE_QUEST
+    children: M.Z.Messages.QUESTS_SHARE_QUEST
   })
 });
   };
@@ -68,7 +68,7 @@ t.Z = e => {
   var t;
   let {
 isFocused: n,
-isQuestExpired: s,
+isQuestExpired: a,
 quest: u,
 location: m,
 size: T,
@@ -80,12 +80,12 @@ contentPosition: y,
 toggleExpanded: B
   } = e, {
 ref: k,
-height: G
+height: F
   } = (0, _.Z)(), {
-ref: F,
+ref: G,
 width: w,
 scrollWidth: V
-  } = (0, _.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = a.useMemo(() => (0, C.nP)(u.config.assets.hero), [u]), K = a.useRef(null), z = (0, R.uq)(m), Q = m === f.jn.QUESTS_EMBED, q = (0, N.t5)(u, O.dr.QUESTS_CARD, m), X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(u.config.expiresAt, {
+  } = (0, _.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = s.useMemo(() => (0, f.nP)(u.config.assets.hero), [u]), K = s.useRef(null), z = (0, O.uq)(m), Q = m === C.jn.QUESTS_EMBED, q = (0, N.t5)(u, x.dr.QUESTS_CARD, m), X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(u.config.expiresAt, {
 year: 'numeric',
 month: 'long',
 day: 'numeric'
@@ -101,25 +101,25 @@ e.stopPropagation(), e.currentTarget.blur(), B(), (0, h._3)({
   questContentPosition: y
 });
   };
-  a.useEffect(() => {
+  s.useEffect(() => {
 W && null != K.current && (n ? K.current.play() : !n && (K.current.pause(), K.current.currentTime = 0));
   }, [
 n,
 W
   ]);
-  let et = (0, C.j8)(u);
+  let et = (0, f.j8)(u);
   return (0, i.jsxs)('div', {
 className: r()(v.outerContainer, {
   [v.outerContainerGiftInventory]: z,
   [v.outerContainerEmbed]: Q,
   [v.outerContainerXs]: 'xs' === T
 }),
-'aria-label': x.Z.Messages.EXPAND,
+'aria-label': M.Z.Messages.EXPAND,
 style: {
-  height: z ? G : void 0
+  height: z ? F : void 0
 },
 children: [
-  (0, i.jsx)(L, {
+  (0, i.jsx)(Z, {
     style: {
       opacity: D.to({
         range: [
@@ -142,7 +142,7 @@ children: [
     ref: K,
     children: !Y && W && (0, i.jsx)('source', {
       src: et,
-      type: (0, C.mN)(et)
+      type: (0, f.mN)(et)
     })
   }),
   (0, i.jsxs)('div', {
@@ -160,7 +160,7 @@ children: [
               1
             ],
             output: [
-              R.DJ,
+              O.DJ,
               0
             ]
           }) : void 0
@@ -183,7 +183,7 @@ children: [
             },
             'aria-hidden': !b && j,
             children: (0, i.jsxs)(d.ClickableContainer, {
-              'aria-label': x.Z.Messages.EXPAND,
+              'aria-label': M.Z.Messages.EXPAND,
               onClick: ee,
               className: v.headerCollapsedClickableContainer,
               children: [
@@ -193,7 +193,7 @@ children: [
                     quest: u,
                     questContent: m,
                     className: v.headerCollapsedRewardTile,
-                    location: O.dr.QUESTS_CARD
+                    location: x.dr.QUESTS_CARD
                   })
                 }),
                 (0, i.jsxs)('div', {
@@ -269,22 +269,22 @@ children: [
                         text: u.config.messages.questName,
                         shouldShow: null != w && null != V && w < V,
                         children: e => (0, i.jsx)(d.Heading, {
-                          ref: F,
+                          ref: G,
                           variant: 'lg' === T ? 'heading-xxl/bold' : 'sm' === T ? 'heading-xl/bold' : 'heading-lg/bold',
                           className: v.heading,
                           ...e,
-                          children: x.Z.Messages.QUEST.format({
+                          children: M.Z.Messages.QUEST.format({
                             questName: u.config.messages.questName
                           })
                         })
                       }),
                       (0, i.jsx)(d.Text, {
                         variant: 'text-xs/normal',
-                        children: X ? x.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
+                        children: X ? M.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
                           expirationDate: $
-                        }) : s ? x.Z.Messages.QUESTS_EXPIRED_ON.format({
+                        }) : a ? M.Z.Messages.QUESTS_EXPIRED_ON.format({
                           expirationDate: J
-                        }) : x.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
+                        }) : M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
                           expirationDate: J
                         })
                       })
@@ -292,7 +292,7 @@ children: [
                   })
                 ]
               }),
-              !s && z && (0, i.jsx)(P, {
+              !a && z && (0, i.jsx)(P, {
                 quest: u,
                 location: m,
                 questContentPosition: y
@@ -310,19 +310,19 @@ children: [
               1
             ],
             output: [
-              R.DJ / 2 - R.Z$ / 2,
-              R.jc
+              O.DJ / 2 - O.Z$ / 2,
+              O.jc
             ]
-          }) : R.jc
+          }) : O.jc
         },
         children: [
-          (0, i.jsx)(M.r, {
+          (0, i.jsx)(R.r, {
             questContent: m,
             quest: u,
             questContentPosition: y,
             shouldShowDisclosure: !0,
             hideLearnMore: z,
-            showShareLink: !s && Q,
+            showShareLink: !a && Q,
             children: e => (0, i.jsx)(l.animated.div, {
               style: {
                 opacity: D,
@@ -332,7 +332,7 @@ children: [
               children: (0, i.jsx)(d.Clickable, {
                 ...e,
                 className: v.iconWrapper,
-                'aria-label': x.Z.Messages.ACTIONS,
+                'aria-label': M.Z.Messages.ACTIONS,
                 children: (0, i.jsx)(d.MoreHorizontalIcon, {
                   size: 'md',
                   color: o.Z.WHITE
@@ -340,11 +340,11 @@ children: [
               })
             })
           }),
-          U && !(0, R.W_)(m) && (0, i.jsx)(d.Clickable, {
+          U && !(0, O.W_)(m) && (0, i.jsx)(d.Clickable, {
             onClick: ee,
             className: v.iconWrapper,
-            'aria-label': j ? x.Z.Messages.COLLAPSE : x.Z.Messages.EXPAND,
-            children: (0, i.jsx)(Z, {
+            'aria-label': j ? M.Z.Messages.COLLAPSE : M.Z.Messages.EXPAND,
+            children: (0, i.jsx)(L, {
               style: {
                 rotate: D.to({
                   range: [

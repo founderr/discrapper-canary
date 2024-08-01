@@ -5,8 +5,8 @@ return E;
 });
 var i = n(735250);
 n(470079);
-var a = n(442837),
-  s = n(481060),
+var s = n(442837),
+  a = n(481060),
   r = n(955415),
   l = n(846587),
   o = n(409059),
@@ -19,7 +19,7 @@ function E(e) {
   var t;
   let {
 code: E
-  } = e, I = (0, a.e7)([o.Z], () => o.Z.getGuildTemplate(E));
+  } = e, I = (0, s.e7)([o.Z], () => o.Z.getGuildTemplate(E));
   if (null == I || I.state === c.Rj.RESOLVING)
 return (0, i.jsxs)(r.Z, {
   children: [
@@ -56,7 +56,7 @@ color: r.Z.Button.Colors.PRIMARY,
 children: u.Z.Messages.GUILD_TEMPLATE_EMBED_VIEW_IN_APP
   }) : (0, i.jsx)(r.Z.Button, {
 onClick: () => {
-  (0, s.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([

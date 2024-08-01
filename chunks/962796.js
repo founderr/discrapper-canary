@@ -13,26 +13,26 @@ return o;
   }
 }), n(47120);
 var i = n(873011),
-  a = n(570140),
-  s = n(192720),
+  s = n(570140),
+  a = n(192720),
   r = n(768943);
 
 function l(e) {
-  (0, s.gL)({
+  (0, a.gL)({
 type: i.J.REMINDER,
 ...e
   });
 }
 
 function o(e) {
-  (0, s.ep)({
+  (0, a.ep)({
 type: i.J.REMINDER,
 ...e
   });
 }
 
 function c(e, t) {
-  a.Z.dispatch({
+  s.Z.dispatch({
 type: 'MESSAGE_REMINDER_TOGGLE',
 messageId: e,
 complete: t

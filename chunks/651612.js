@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return g;
+return C;
   }
 }), n(653041);
 var i = n(735250),
@@ -18,19 +18,19 @@ var i = n(735250),
   _ = n(918559),
   f = n(981631),
   E = n(689938),
-  C = n(216304);
+  g = n(216304);
 
-function g(e) {
+function C(e) {
   let {
 channelId: t,
 className: n,
-...g
+...C
   } = e, I = a.useRef(null), x = (0, l.e7)([p.ZP], () => p.ZP.getFocusedLayout() === _.MI.RESIZABLE), T = a.useCallback(() => {
 let e = x ? _.MI.NO_CHAT : _.MI.RESIZABLE;
 (0, m.gC)(e);
   }, [x]), {
-unreadCount: v,
-mentionCount: N
+unreadCount: N,
+mentionCount: v
   } = function(e) {
 let t = (0, l.e7)([d.Z], () => !(0, s.isEmpty)(d.Z.getTypingUsers(e)), [e]),
   {
@@ -55,14 +55,14 @@ handler: S
   });
   let Z = x ? E.Z.Messages.HIDE_CHAT : E.Z.Messages.SHOW_CHAT,
 A = [Z];
-  N > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
-mentionCount: N
-  })), v > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
+  v > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+mentionCount: v
+  })), N > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
   let M = (0, l.e7)([p.ZP], () => p.ZP.getFocusedLayout()),
-b = N > 0 ? N : v,
+b = v > 0 ? v : N,
 R = b > 0;
   return (0, i.jsxs)('div', {
-className: C.wrapper,
+className: g.wrapper,
 children: [
   (0, i.jsx)(c.d, {
     buttonRef: I,
@@ -73,12 +73,12 @@ children: [
     iconComponent: M === _.MI.NO_CHAT ? r.ChevronLargeUpIcon : r.ChevronLargeDownIcon,
     themeable: !0,
     className: n,
-    ...g
+    ...C
   }),
   R ? (0, i.jsx)(o.Z, {
-    hasMentions: N > 0,
+    hasMentions: v > 0,
     truncatedCount: b > 99 ? '99+' : b,
-    className: C.badge
+    className: g.badge
   }) : null
 ]
   });

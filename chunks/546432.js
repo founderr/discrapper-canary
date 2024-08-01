@@ -35,8 +35,8 @@ var i = t(735250),
   N = t(956664),
   T = t(406432),
   f = t(169525),
-  g = t(65838),
-  x = t(217702),
+  x = t(65838),
+  g = t(217702),
   A = t(981631),
   O = t(689938),
   v = t(62233);
@@ -75,7 +75,7 @@ else {
   }
   if (null != n && j.test(t) && null != e.url)
 return 'AUDIO';
-  if (null != e.url && (0, g.O)(t))
+  if (null != e.url && (0, x.O)(t))
 return 'PLAINTEXT_PREVIEW';
   return 'OTHER';
 }
@@ -168,7 +168,7 @@ onPlay: p,
 renderImageComponent: _,
 renderVideoComponent: T,
 renderAudioComponent: f,
-renderPlaintextFilePreview: g,
+renderPlaintextFilePreview: x,
 renderGenericFileComponent: j,
 className: P,
 imgContainerClassName: S,
@@ -202,10 +202,10 @@ autoTrackExposure: !0
 let e = (0, N.Dc)({
   width: null != k ? k : 0,
   height: null != B ? B : 0,
-  maxWidth: x.mT,
-  maxHeight: x.Jj
+  maxWidth: g.mT,
+  maxHeight: g.Jj
 });
-!Z && (e * (null != k ? k : 0) < x.OF || e * (null != B ? B : 0) < x.OF) && (el = !0);
+!Z && (e * (null != k ? k : 0) < g.OF || e * (null != B ? B : 0) < g.OF) && (el = !0);
   }
   let eo = l.useCallback(() => {
   d(t);
@@ -227,7 +227,7 @@ ea = l.useCallback(e => {
   el
 ]),
 es = l.useCallback(() => {
-  if (L === x.hV.MOSAIC) {
+  if (L === g.hV.MOSAIC) {
     let e = !ee && [
       'VIDEO',
       'CLIP',
@@ -342,7 +342,7 @@ case 'AUDIO':
     onPlay: p
   });
 case 'PLAINTEXT_PREVIEW':
-  return (0, i.jsx)(g, {
+  return (0, i.jsx)(x, {
     item: t,
     message: n,
     className: P,
@@ -379,7 +379,7 @@ footer: E,
 width: C,
 height: M,
 type: _
-  } = o, T = r(o, (0, m.V)(s.channel_id, s.author.id)), [g, A] = l.useState(null != T), O = d === x.hV.MOSAIC, j = !O && (null != C && C < 200 || null != M && M < 50);
+  } = o, T = r(o, (0, m.V)(s.channel_id, s.author.id)), [x, A] = l.useState(null != T), O = d === g.hV.MOSAIC, j = !O && (null != C && C < 200 || null != M && M < 50);
   let S = 'IMAGE' === (n = _) || 'VIDEO' === n,
 y = P(_),
 R = h && null != T && (0, c.bR)(C, M),
@@ -399,14 +399,14 @@ H = function() {
     getObscureReason: r,
     hiddenSpoilers: e,
     className: a()(t, v.mosaicItemContent, {
-      [v.obscured]: g && !j,
-      [v.hiddenSpoiler]: g && T === f.wk.SPOILER,
-      [v.hiddenExplicit]: g && null != T && [
+      [v.obscured]: x && !j,
+      [v.hiddenSpoiler]: x && T === f.wk.SPOILER,
+      [v.hiddenExplicit]: x && null != T && [
         f.wk.EXPLICIT_CONTENT,
         f.wk.POTENTIAL_EXPLICIT_CONTENT
       ].includes(T),
-      [v.hiddenMosaicItem]: g && e,
-      [v.inline]: g && j
+      [v.hiddenMosaicItem]: x && e,
+      [v.inline]: x && j
     }),
     focusable: !e,
     mediaLayoutType: d,
@@ -432,7 +432,7 @@ children: (0, i.jsxs)('div', {
       inline: j,
       reason: T,
       isSingleMosaicItem: h,
-      obscured: g,
+      obscured: x,
       containerStyles: function(e, n, t) {
         if (!n)
           return;
@@ -449,7 +449,7 @@ children: (0, i.jsxs)('div', {
           i = n;
         }
         return {
-          ...t !== x.hV.MOSAIC && {
+          ...t !== g.hV.MOSAIC && {
             maxWidth: null != i ? i : '400px'
           },
           width: '100%',
@@ -458,7 +458,7 @@ children: (0, i.jsxs)('div', {
         };
       }(o, S, d),
       obscurityControlClassName: a()({
-        [v.obscureVideoSpacing]: 'VIDEO' === _ && h && !g && w
+        [v.obscureVideoSpacing]: 'VIDEO' === _ && h && !x && w
       }),
       onToggleObscurity: () => A(e => !e),
       children: e => H(e)

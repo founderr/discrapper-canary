@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return v;
+return N;
   }
 });
 var i = n(735250);
@@ -19,21 +19,21 @@ var a = n(512722),
   _ = n(213652),
   f = n(320427),
   E = n(145010),
-  C = n(933686),
-  g = n(997614),
+  g = n(933686),
+  C = n(997614),
   I = n(159909),
   x = n(981631),
   T = n(593483);
 
-function v(e) {
+function N(e) {
   let {
 channel: t,
 hasActiveStream: n,
 themeable: a = !1
-  } = e, v = (0, l.e7)([m.default], () => {
+  } = e, N = (0, l.e7)([m.default], () => {
 let e = m.default.getCurrentUser();
 return s()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
-  }), N = (0, o.Z)(), {
+  }), v = (0, o.Z)(), {
 isSharedCanvasEnabled: S
   } = u.Z.useExperiment({
 guildId: null == t ? void 0 : t.guild_id,
@@ -45,22 +45,22 @@ location: 'VoiceEffectsActionBar'
   }, {
 autoTrackExposure: !1
   }), A = (0, r.Z)(h.Z);
-  if (null == t || null != N)
+  if (null == t || null != v)
 return null;
   let M = (0, d.Z)(t),
 b = p.BT({
   permission: x.Plq.ADD_REACTIONS,
-  user: v,
+  user: N,
   context: t
 });
   return (0, i.jsxs)('div', {
 className: T.voiceEffectsActionBar,
 children: [
-  M && (0, i.jsx)(g.Z, {
+  M && (0, i.jsx)(C.Z, {
     channel: t,
     themeable: a
   }),
-  b && (0, i.jsx)(C.Z, {
+  b && (0, i.jsx)(g.Z, {
     channel: t
   }),
   Z && A && (0, i.jsx)(_.Z, {

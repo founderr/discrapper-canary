@@ -24,8 +24,8 @@ onReportClick: p,
 onReportSubmit: _,
 onMouseEnter: f,
 onMouseLeave: E
-  } = e, C = (0, r.Q)(t), g = (0, o.V)(n.id, t);
-  if (!C || null == g)
+  } = e, g = (0, r.Q)(t), C = (0, o.V)(n.id, t);
+  if (!g || null == C)
 return null;
   let I = () => {
 null == _ || _(), s.Z.closePrivateChannel(n.id, m);
@@ -34,9 +34,9 @@ null == _ || _(), s.Z.closePrivateChannel(n.id, m);
 className: d,
 size: u,
 color: a.Button.Colors.RED,
-disabled: null == g,
+disabled: null == C,
 onClick: () => {
-  null == p || p(), (0, l.WL)(g, I);
+  null == p || p(), (0, l.WL)(C, I);
 },
 onMouseEnter: f,
 onMouseLeave: E,

@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(206295),
   f = n(278399),
   E = n(297781),
-  C = n(591853),
-  g = n(410441),
+  g = n(591853),
+  C = n(410441),
   I = n(616922),
   x = n(689938);
 let T = (e, t, n, i) => {
@@ -30,7 +30,7 @@ return a.plainFormat({
   userName: l
 }).replaceAll('*', '');
   },
-  v = (e, t) => x.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_TOP_ARTIST.format({
+  N = (e, t) => x.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_TOP_ARTIST.format({
 username: t.username,
 artist: e.extra.artist.name
   });
@@ -41,7 +41,7 @@ entry: n,
 requestId: s,
 closePopout: h
   } = e, {
-parent_title: N,
+parent_title: v,
 provider: S,
 image_url: Z
   } = n.extra.media, A = n.extra.artist.name, M = (0, r.e7)([c.default], () => c.default.getUser(n.author_id)), {
@@ -80,9 +80,9 @@ let e = I.Hw.ALBUM,
   t = o.Z.isProtocolRegistered() ? I.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : I.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
 window.open(t);
   };
-  return (0, i.jsxs)(C.yR, {
+  return (0, i.jsxs)(g.yR, {
 children: [
-  (0, i.jsx)(C.wG, {
+  (0, i.jsx)(g.wG, {
     onClickTitle: P,
     onClickSubtitle: () => {
       let e = I.Hw.ARTIST,
@@ -93,12 +93,12 @@ children: [
     thumbnailSrc: Z,
     channel: t,
     entry: n,
-    headerIcons: S === l.p.SPOTIFY ? (0, i.jsx)(g.Z, {
+    headerIcons: S === l.p.SPOTIFY ? (0, i.jsx)(C.Z, {
       Icon: u.Z,
       'aria-label': x.Z.Messages.SPOTIFY
     }) : null,
     userDescription: x.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
-    title: N,
+    title: v,
     subtitle: A,
     badges: (0, i.jsx)(E.Gk, {
       location: E.Gt.POPOUT,
@@ -107,13 +107,13 @@ children: [
       }, t))
     })
   }),
-  (0, i.jsx)(C.St, {
-    children: (0, i.jsx)(C.WT, {
+  (0, i.jsx)(g.St, {
+    children: (0, i.jsx)(g.WT, {
       closePopout: h,
       user: M,
       channel: t,
       generateReactionImage: L,
-      reactionImageAltText: v(n, M),
+      reactionImageAltText: N(n, M),
       entry: n,
       requestId: s
     })

@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(113557),
   f = n(169979),
   E = n(215105),
-  C = n(502762),
-  g = n(256059),
+  g = n(502762),
+  C = n(256059),
   I = n(437758),
   x = n(544989),
   T = n(481932),
-  v = n(272510),
-  N = n(171368),
+  N = n(272510),
+  v = n(171368),
   S = n(926150),
   Z = n(308829),
   A = n(940885),
@@ -42,7 +42,7 @@ analyticsLocations: P
   } = (0, u.ZP)(c.Z.PROFILE_PANEL), O = (0, m.ZP)(t.id), y = (0, o.ZP)(), D = a.useRef(null), k = (0, r.Z)(D), [U, w] = a.useState(), [B, H] = a.useState(), G = (e, t) => {
 w(e), H(t);
   }, V = e => {
-(0, N.openUserProfileModal)({
+(0, v.openUserProfileModal)({
   sourceAnalyticsLocations: P,
   userId: t.id,
   channelId: j.id,
@@ -55,7 +55,7 @@ children: (0, i.jsx)(h.Mt, {
   layout: 'SIMPLIFIED_DM_PANEL',
   userId: t.id,
   channelId: j.id,
-  children: (0, i.jsxs)(C.Z, {
+  children: (0, i.jsxs)(g.Z, {
     ref: D,
     user: t,
     displayProfile: O,
@@ -74,7 +74,7 @@ children: (0, i.jsx)(h.Mt, {
               }),
               t.bot ? (0, i.jsx)(I.Z, {
                 user: t
-              }) : (0, i.jsx)(v.Z, {
+              }) : (0, i.jsx)(N.Z, {
                 user: t
               })
             ]
@@ -123,7 +123,7 @@ children: (0, i.jsx)(h.Mt, {
                   profileType: b.y0.PANEL,
                   onReply: G
                 }),
-                (0, i.jsx)(g.Z, {
+                (0, i.jsx)(C.Z, {
                   user: t
                 })
               ]

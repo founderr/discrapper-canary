@@ -1,12 +1,12 @@
 n.d(t, {
   O: function() {
-return M;
+return R;
   }
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(873546),
   l = n(442837),
   o = n(100527),
@@ -20,13 +20,13 @@ var a = n(120356),
   T = n(358085),
   h = n(998502),
   N = n(665149),
-  f = n(300986),
-  C = n(314451),
+  C = n(300986),
+  f = n(314451),
   p = n(35583),
   g = n(981631),
   S = n(176505),
   A = n(139715);
-async function M() {
+async function R() {
   if ((0, T.isMac)() && T.isPlatformEmbedded) {
 var e, t, n;
 let i = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e ? void 0 : e.call(t))) && void 0 !== n ? n : 'Maximize';
@@ -34,23 +34,23 @@ let i = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).
   }
 }
 
-function R(e) {
+function O(e) {
   let {
 children: t,
 className: n,
-channelId: a,
-guildId: s,
+channelId: s,
+guildId: a,
 innerClassname: o,
 transparent: c = !1,
 toolbar: T,
 mobileToolbar: h,
 'aria-label': g,
 'aria-labelledby': S,
-scrollable: R,
-role: O,
-hideSearch: x,
+scrollable: O,
+role: x,
+hideSearch: M,
 showDivider: v
-  } = e, Z = (0, l.e7)([m.default], () => m.default.getCurrentUser()), L = (null == Z ? void 0 : Z.isStaff()) || (null == Z ? void 0 : Z.isStaffPersonal()) || !1, {
+  } = e, L = (0, l.e7)([m.default], () => m.default.getCurrentUser()), Z = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1, {
 enabled: P
   } = _.Z.useExperiment({
 location: 'HeaderBar'
@@ -63,13 +63,13 @@ innerClassName: o,
 toolbar: function() {
   if (null == T)
     return null;
-  let e = null != a && !x;
+  let e = null != s && !M;
   return r.tq ? h : (0, i.jsxs)(i.Fragment, {
     children: [
       T,
       e ? (0, i.jsx)(I.Z, {
         className: A.search
-      }, null != s ? s : a) : null,
+      }, null != a ? a : s) : null,
       v && (0, i.jsx)(N.ZP.Divider, {}),
       (0, i.jsx)(p.Z, {}),
       (0, i.jsx)(u.Z, {
@@ -77,56 +77,56 @@ toolbar: function() {
       }),
       (0, i.jsx)(d.Z, {}),
       P ? (0, i.jsx)(E.Z, {}) : null,
-      L ? (0, i.jsx)(C.Z, {}) : (0, i.jsx)(f.Z, {})
+      Z ? (0, i.jsx)(f.Z, {}) : (0, i.jsx)(C.Z, {})
     ]
   });
 }(),
 transparent: c,
-onDoubleClick: M,
+onDoubleClick: R,
 'aria-label': g,
 'aria-labelledby': S,
-role: O,
-scrollable: R,
-children: t
-  });
-}
-
-function O(e) {
-  let {
-children: t,
-className: n,
-'aria-label': a,
-'aria-labelledby': s,
-role: r
-  } = e;
-  return (0, i.jsx)(N.ZP, {
-className: n,
-onDoubleClick: M,
-'aria-label': a,
-'aria-labelledby': s,
-role: r,
+role: x,
+scrollable: O,
 children: t
   });
 }
 
 function x(e) {
   let {
+children: t,
+className: n,
+'aria-label': s,
+'aria-labelledby': a,
+role: r
+  } = e;
+  return (0, i.jsx)(N.ZP, {
+className: n,
+onDoubleClick: R,
+'aria-label': s,
+'aria-labelledby': a,
+role: r,
+children: t
+  });
+}
+
+function M(e) {
+  let {
 isAuthenticated: t = !0,
 ...n
   } = e, {
-analyticsLocations: a
-  } = (0, c.ZP)(o.Z.HEADER_BAR), r = s()(n.className, {
+analyticsLocations: s
+  } = (0, c.ZP)(o.Z.HEADER_BAR), r = a()(n.className, {
 [A.forumOrHome]: null != n.channelType && g.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === S.oC.GUILD_HOME
   });
   return (0, i.jsx)(c.Gt, {
-value: a,
-children: t ? (0, i.jsx)(R, {
+value: s,
+children: t ? (0, i.jsx)(O, {
   ...n,
   className: r
-}) : (0, i.jsx)(O, {
+}) : (0, i.jsx)(x, {
   ...n,
   className: r
 })
   });
 }
-x.Title = N.ZP.Title, x.Icon = N.ZP.Icon, x.Divider = N.ZP.Divider, x.Caret = N.ZP.Caret, t.Z = x;
+M.Title = N.ZP.Title, M.Icon = N.ZP.Icon, M.Divider = N.ZP.Divider, M.Caret = N.ZP.Caret, t.Z = M;
