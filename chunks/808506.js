@@ -389,15 +389,11 @@ let eE = (() => {
 if (!G.iP || !(0, w.VS)())
   throw $.error('Attempted to load out of process overlay on an unsupported platform.'), Error('Out of Process Overlay is not supported on this platform.');
 try {
-  var e, t, n, r;
-  let i = await T.Z.fileManager.getModulePath(),
-    a = T.Z.fileManager.join(i, 'discord_overlay2'),
-    {
-      OutOfProcess: s
-    } = await eu();
-  return (null == s ? void 0 : s.initWithParams) != null ? null == s || null === (n = s.initWithParams) || void 0 === n || n.call(s, {
-    dataDirectory: a
-  }) : null == s || null === (r = s.init) || void 0 === r || r.call(s), s.setClickZoneCallback(ev), s.setHostWindowCallbacks(ec, ed, e_), s.setFocusCallback(ep), null === (e = s.setFocusLostCallback) || void 0 === e || e.call(s, em), null === (t = s.setSuccessfullyShownCallback) || void 0 === t || t.call(s, eI), s;
+  var e, t, n;
+  let {
+    OutOfProcess: r
+  } = await eu();
+  return null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setClickZoneCallback(ev), r.setHostWindowCallbacks(ec, ed, e_), r.setFocusCallback(ep), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, em), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, eI), r;
 } catch (e) {
   throw $.error('failed loading out of process overlay', e), e;
 }
@@ -683,7 +679,7 @@ let {
 } = e;
 K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
 let n = new URLSearchParams();
-n.append('build_id', 'b5dffee2182f221c2f3d243efc2ff4229bd2e57b'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString());
+n.append('build_id', 'e1ef0a6173716f4500ea86fbb438c6c954382651'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString());
   },
   OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
 let {
