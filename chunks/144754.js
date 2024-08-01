@@ -7,6 +7,5 @@ e.exports = {
   messagesScroller: 'messagesScroller_a6fde8',
   message: 'message_a6fde8',
   messageContainer: 'messageContainer_a6fde8',
-  actionButtons: 'actionButtons_a6fde8',
-  actionButton: 'actionButton_a6fde8'
+  hoverBar: 'hoverBar_a6fde8'
 };
