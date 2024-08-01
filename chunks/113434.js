@@ -1,122 +1,123 @@
 n.d(t, {
   B6: function() {
-return x;
+return G;
   },
   Bd: function() {
-return ee;
+return et;
   },
   DU: function() {
-return W;
+return K;
   },
   EH: function() {
-return U;
+return w;
   },
   Fr: function() {
-return j;
+return W;
   },
   GI: function() {
-return q;
+return Q;
   },
   I: function() {
-return J;
+return ee;
   },
   J2: function() {
-return b;
+return M;
   },
   Jf: function() {
-return F;
+return V;
   },
   KX: function() {
-return X;
+return $;
   },
   OH: function() {
 return a;
   },
   Rf: function() {
-return B;
+return F;
   },
   _Q: function() {
-return $;
+return J;
   },
   _s: function() {
-return Q;
+return X;
   },
   bA: function() {
-return P;
+return U;
   },
   e5: function() {
 return i;
   },
   iO: function() {
-return Z;
-  },
-  jU: function() {
 return Y;
   },
+  jU: function() {
+return j;
+  },
   kJ: function() {
-return K;
+return z;
   },
   pe: function() {
-return G;
-  },
-  t5: function() {
-return H;
-  },
-  tP: function() {
-return w;
-  },
-  uA: function() {
-return V;
-  },
-  z: function() {
 return k;
   },
+  t5: function() {
+return Z;
+  },
+  tP: function() {
+return x;
+  },
+  uA: function() {
+return H;
+  },
+  z: function() {
+return B;
+  },
   z6: function() {
-return z;
+return q;
   }
 }), n(47120), n(653041);
 var r, i, a, s, o, l, u = n(470079),
-  c = n(846519),
-  d = n(442837),
-  _ = n(583434),
-  E = n(706454),
-  f = n(553795),
-  h = n(70956),
-  p = n(63063),
-  m = n(930153),
-  I = n(617136),
-  T = n(272008),
-  g = n(569984),
-  S = n(497505),
-  A = n(918701),
-  N = n(796111),
-  v = n(977156),
-  O = n(31055),
-  R = n(585500),
-  C = n(566078),
-  y = n(46140),
-  D = n(981631),
-  L = n(689938);
+  c = n(959078),
+  d = n(846519),
+  _ = n(442837),
+  E = n(583434),
+  f = n(706454),
+  h = n(553795),
+  p = n(70956),
+  m = n(63063),
+  I = n(930153),
+  T = n(617136),
+  g = n(272008),
+  S = n(569984),
+  A = n(497505),
+  N = n(918701),
+  v = n(796111),
+  O = n(977156),
+  R = n(31055),
+  C = n(585500),
+  y = n(566078),
+  D = n(46140),
+  L = n(981631),
+  b = n(689938);
 
-function b() {
+function M() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
   fetchPolicy: 'cache-only'
 },
 [t, n] = u.useState(!1),
-r = (0, d.Wu)([g.Z], () => [...g.Z.quests.values()]),
+r = (0, _.Wu)([S.Z], () => [...S.Z.quests.values()]),
 {
   isFetchingCurrentQuests: i,
   lastFetchedCurrentQuests: a
-} = (0, d.cj)([g.Z], () => ({
-  isFetchingCurrentQuests: g.Z.isFetchingCurrentQuests,
-  lastFetchedCurrentQuests: g.Z.lastFetchedCurrentQuests
+} = (0, _.cj)([S.Z], () => ({
+  isFetchingCurrentQuests: S.Z.isFetchingCurrentQuests,
+  lastFetchedCurrentQuests: S.Z.lastFetchedCurrentQuests
 })),
-s = (0, v.cB)({
-  location: y.dr.USE_QUESTS
+s = (0, O.cB)({
+  location: D.dr.USE_QUESTS
 });
   return u.useEffect(() => {
 if ('cache-only' !== e.fetchPolicy)
-  ('cache-and-network' === e.fetchPolicy || 'cache-or-network' === e.fetchPolicy && 0 === a) && s && !t && !i && (n(!0), (0, T.xw)());
+  ('cache-and-network' === e.fetchPolicy || 'cache-or-network' === e.fetchPolicy && 0 === a) && s && !t && !i && (n(!0), (0, g.xw)());
   }, [
 e.fetchPolicy,
 s,
@@ -129,16 +130,16 @@ isFetchingCurrentQuests: i
   };
 }
 
-function M(e, t, n) {
+function P(e, t, n) {
   return e.localeCompare(t) * (0 === n ? -1 : 1);
 }
 (s = r || (r = {}))[s.DESC = 0] = 'DESC', s[s.ASC = 1] = 'ASC';
 
-function P(e) {
+function U(e) {
   let {
 quests: t,
 isFetchingCurrentQuests: n
-  } = b({
+  } = M({
 fetchPolicy: 'cache-and-network'
   }), r = new Map(t.map(e => [
 e.id,
@@ -156,15 +157,15 @@ return u.useMemo(() => {
     return n.current;
   let e = t.sort((e, t) => {
     var n, r, i, a, s, o;
-    let l = !(0, A.zi)(e),
-      u = !(0, A.zi)(t),
-      c = (0, A.Mi)(e, S.jn.QUEST_BAR) || (0, A.Mi)(e, S.jn.QUEST_BAR_V2),
-      d = (0, A.Mi)(t, S.jn.QUEST_BAR) || (0, A.Mi)(t, S.jn.QUEST_BAR_V2),
-      _ = (0, A.Mi)(e, S.jn.GIFT_INVENTORY_FOR_YOU),
-      E = (0, A.Mi)(t, S.jn.GIFT_INVENTORY_FOR_YOU),
+    let l = !(0, N.zi)(e),
+      u = !(0, N.zi)(t),
+      c = (0, N.Mi)(e, A.jn.QUEST_BAR) || (0, N.Mi)(e, A.jn.QUEST_BAR_V2),
+      d = (0, N.Mi)(t, A.jn.QUEST_BAR) || (0, N.Mi)(t, A.jn.QUEST_BAR_V2),
+      _ = (0, N.Mi)(e, A.jn.GIFT_INVENTORY_FOR_YOU),
+      E = (0, N.Mi)(t, A.jn.GIFT_INVENTORY_FOR_YOU),
       f = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
       h = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
-    return l !== u ? l ? -1 : 1 : c !== d && l && u ? c ? -1 : 1 : _ !== E ? _ ? -1 : 1 : f !== h ? f ? -1 : 1 : l && u ? M(null === (s = e.config) || void 0 === s ? void 0 : s.expiresAt, null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt, 1) : M(null === (i = e.config) || void 0 === i ? void 0 : i.expiresAt, null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt, 0);
+    return l !== u ? l ? -1 : 1 : c !== d && l && u ? c ? -1 : 1 : _ !== E ? _ ? -1 : 1 : f !== h ? f ? -1 : 1 : l && u ? P(null === (s = e.config) || void 0 === s ? void 0 : s.expiresAt, null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt, 1) : P(null === (i = e.config) || void 0 === i ? void 0 : i.expiresAt, null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt, 0);
   }).map(e => e.id);
   return n.current = e, e;
 }, [t]);
@@ -186,8 +187,8 @@ return u.useMemo(() => {
     let i = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt) == null;
     if (i !== ((null === (r = t.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null))
       return i ? -1 : 1;
-    let a = C.r.build(e.config).rewardsExpireAt;
-    return M(a, C.r.build(t.config).rewardsExpireAt, 0);
+    let a = y.r.build(e.config).rewardsExpireAt;
+    return P(a, y.r.build(t.config).rewardsExpireAt, 0);
   }).map(e => e.id);
   return n.current = e, e;
 }, [t]);
@@ -202,29 +203,29 @@ isFetchingCurrentQuests: n
   };
 }
 
-function U() {
+function w() {
   let {
 quests: e,
 isFetchingCurrentQuests: t
-  } = b({
+  } = M({
 fetchPolicy: 'cache-only'
   }), [n, r] = u.useState(() => new Map(e.map(e => [
 e.id,
-(0, A.zi)(e)
+(0, N.zi)(e)
   ])));
   return u.useEffect(() => {
 if (t)
   return;
 let n = [];
 for (let t of e)
-  if (null == t || (0, A.zi)(t))
-    null != t && (0, A.zi)(t) && r(e => e.has(t.id) ? e : new Map(e).set(t.id, !0));
+  if (null == t || (0, N.zi)(t))
+    null != t && (0, N.zi)(t) && r(e => e.has(t.id) ? e : new Map(e).set(t.id, !0));
   else {
-    let e = new c.V7(),
+    let e = new d.V7(),
       i = () => {
         let a = Date.parse(t.config.expiresAt) - Date.now();
         e.start(a, () => {
-          (0, A.zi)(t) ? r(e => new Map(e).set(t.id, !0)): i();
+          (0, N.zi)(t) ? r(e => new Map(e).set(t.id, !0)): i();
         }), n.push(e);
       };
     i();
@@ -239,8 +240,8 @@ t
   ]), n;
 }
 
-function w(e) {
-  let t = U();
+function x(e) {
+  let t = w();
   return u.useMemo(() => {
 var n;
 return null != e && null !== (n = t.get(e.id)) && void 0 !== n && n;
@@ -250,11 +251,11 @@ t
   ]);
 }
 
-function x(e) {
+function G(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
   dateStyle: 'short'
 },
-n = (0, d.e7)([E.default], () => E.default.locale);
+n = (0, _.e7)([f.default], () => f.default.locale);
   return u.useMemo(() => null == e ? '' : new Date(e).toLocaleDateString(n, t), [
 e,
 t,
@@ -262,19 +263,19 @@ n
   ]);
 }
 
-function G(e) {
-  return (0, d.e7)([g.Z], () => g.Z.isProgressingOnDesktop(e.id));
+function k(e) {
+  return (0, _.e7)([S.Z], () => S.Z.isProgressingOnDesktop(e.id));
 }
 
-function k(e) {
-  return G(e) || (0, A.Bz)(e);
+function B(e) {
+  return k(e) || (0, N.Bz)(e);
 }
 (o = i || (i = {})).UNCLAIMED = 'unclaimed', o.CLAIMED = 'claimed';
-let B = e => {
-  let t = u.useCallback(() => (0, A.il)(e), [e]),
+let F = e => {
+  let t = u.useCallback(() => (0, N.il)(e), [e]),
 [n, r] = u.useState(t()),
 i = u.useCallback(() => r(t()), [t]),
-a = k(e);
+a = B(e);
   return u.useEffect(() => {
 var t, n, r;
 if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null || (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null || (null === (r = e.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null || !a) {
@@ -283,7 +284,7 @@ if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == nul
 }
 let s = window.setInterval(() => {
   i();
-}, 1 * h.Z.Millis.SECOND);
+}, 1 * p.Z.Millis.SECOND);
 return () => {
   clearInterval(s), i();
 };
@@ -294,86 +295,86 @@ i
   ]), n;
 };
 
-function F(e) {
-  return u.useMemo(() => (0, A.b7)(e), [e]);
+function V(e) {
+  return u.useMemo(() => (0, N.b7)(e), [e]);
 }
-let V = e => {
+let H = e => {
   let {
 quest: t,
 location: n,
 questContent: r
-  } = e, i = Q({
+  } = e, i = X({
 quest: t
   });
   return () => {
-i ? (0, A.gI)({
+i ? (0, N.gI)({
   quest: t,
-  showInline: (0, N.i)({
+  showInline: (0, v.i)({
     location: n
   })
 }, {
   content: r,
-  ctaContent: I.jZ.CONNECT_CONSOLE_LINK
-}) : (0, A.V$)({
+  ctaContent: T.jZ.CONNECT_CONSOLE_LINK
+}) : (0, N.V$)({
   quest: t
 }, {
   content: r,
-  ctaContent: I.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
+  ctaContent: T.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
 });
   };
 };
 
-function H(e, t, n) {
+function Z(e, t, n) {
   let {
 targetMinutes: r
-  } = B(e), i = F(e), a = V({
+  } = F(e), i = V(e), a = H({
 quest: e,
 location: t,
 questContent: n
   });
-  if ((0, A.zK)(e, y.S7.IN_HOUSE_CONSOLE_QUEST))
-return L.Z.Messages.QUESTS_IN_HOUSE_TASK_WITH_LINK.format({
+  if ((0, N.zK)(e, D.S7.IN_HOUSE_CONSOLE_QUEST))
+return b.Z.Messages.QUESTS_IN_HOUSE_TASK_WITH_LINK.format({
   minutes: r,
   onClick: a
 });
-  if ((0, A.$J)(e))
-return L.Z.Messages.QUESTS_CONSOLE_QUEST_TASK_WITH_LINK.format({
+  if ((0, N.$J)(e))
+return b.Z.Messages.QUESTS_CONSOLE_QUEST_TASK_WITH_LINK.format({
   minutes: r,
   onClick: a,
-  gameTitle: C.r.build(e.config).application.name
+  gameTitle: y.r.build(e.config).application.name
 });
   if (null != i)
 return i.title;
-  let s = L.Z.Messages.QUESTS_STREAM_TASK;
-  return (0, A.Nj)({
+  let s = b.Z.Messages.QUESTS_STREAM_TASK;
+  return (0, N.Nj)({
 quest: e
-  }) && (s = L.Z.Messages.QUESTS_PLAY_TASK), s.format({
+  }) && (s = b.Z.Messages.QUESTS_PLAY_TASK), s.format({
 minutes: r,
 gameTitle: e.config.messages.gameTitle
   });
 }
 
-function Z() {
+function Y() {
   let {
 quests: e,
 isFetchingCurrentQuests: t
-  } = b({
+  } = M({
 fetchPolicy: 'cache-or-network'
-  }), n = U();
+  }), n = w();
   return u.useMemo(() => {
 let r = [];
 if (t || 0 === e.length)
   return r;
 for (let t of e) {
   var i;
-  if (!(0, A.vR)(t, S.jn.GIFT_INVENTORY_SETTINGS_BADGE) || null !== (i = n.get(t.id)) && void 0 !== i && i)
+  if (!(0, N.vR)(t, A.jn.GIFT_INVENTORY_SETTINGS_BADGE) || null !== (i = n.get(t.id)) && void 0 !== i && i)
     continue;
   if ((null == t ? void 0 : t.userStatus) == null) {
     r.push(t);
     continue;
   }
   let e = null != t.userStatus.claimedAt,
-    a = (0, A.zE)(t.userStatus, S.jn.GIFT_INVENTORY_SETTINGS_BADGE);
+    a = (0, N.zE)(t.userStatus, A.jn.GIFT_INVENTORY_SETTINGS_BADGE);
   if (!e && !a) {
     r.push(t);
     continue;
@@ -387,33 +388,33 @@ t
   ]);
 }
 
-function Y() {
-  let e = Z();
+function j() {
+  let e = Y();
   u.useEffect(() => {
 for (let t of e)
-  (0, T.gl)(t.id, S.jn.GIFT_INVENTORY_SETTINGS_BADGE);
+  (0, g.gl)(t.id, A.jn.GIFT_INVENTORY_SETTINGS_BADGE);
   }, [e]);
 }
 
-function j(e) {
-  let t = (0, O.z)({
-  location: y.dr.MEMBERS_LIST
+function W(e) {
+  let t = (0, R.z)({
+  location: D.dr.MEMBERS_LIST
 }),
-n = (0, d.e7)([g.Z], () => t ? g.Z.quests : null),
-r = u.useMemo(() => (0, A.Jg)(n, e), [
+n = (0, _.e7)([S.Z], () => t ? S.Z.quests : null),
+r = u.useMemo(() => (0, N.Jg)(n, e), [
   e,
   n
 ]);
-  return w(r) ? null : r;
+  return x(r) ? null : r;
 }
 
-function W(e) {
+function K(e) {
   var t;
-  let n = (0, A.Xv)(e),
+  let n = (0, N.Xv)(e),
 {
   product: r,
   isFetching: i
-} = (0, _.T)(C.r.build(e).defaultReward.skuId);
+} = (0, E.T)(y.r.build(e).defaultReward.skuId);
   return {
 hasQuestCollectibles: n,
 avatarDecoration: null == r ? void 0 : null === (t = r.items) || void 0 === t ? void 0 : t[0],
@@ -421,30 +422,30 @@ isFetching: i
   };
 }
 
-function K(e) {
+function z(e) {
   return {
-handleComplete: () => (0, T.Wf)(e),
-handleResetStatusClick: () => (0, T.eT)(e),
-handleResetDismissibilityClick: () => (0, T.T0)(e),
-handleOverrideDeliveryClick: () => (0, T.EW)(e)
+handleComplete: () => (0, g.Wf)(e),
+handleResetStatusClick: () => (0, g.eT)(e),
+handleResetDismissibilityClick: () => (0, g.T0)(e),
+handleOverrideDeliveryClick: () => (0, g.EW)(e)
   };
 }
 
-function z() {
+function q() {
   let {
 fetching: e,
 accounts: t
-  } = (0, d.cj)([f.Z], () => ({
-fetching: f.Z.isFetching(),
-accounts: f.Z.getAccounts()
+  } = (0, _.cj)([h.Z], () => ({
+fetching: h.Z.isFetching(),
+accounts: h.Z.getAccounts()
   })), {
 xboxAccounts: n,
 playstationAccounts: r,
 xboxAndPlaystationAccounts: i
   } = u.useMemo(() => {
 let e = t.filter(e => !1 === e.revoked),
-  n = e.filter(e => e.type === D.ABu.XBOX),
-  r = e.filter(e => e.type === D.ABu.PLAYSTATION),
+  n = e.filter(e => e.type === L.ABu.XBOX),
+  r = e.filter(e => e.type === L.ABu.PLAYSTATION),
   i = n.concat(r);
 return {
   xboxAccounts: n,
@@ -459,21 +460,23 @@ playstationAccounts: r,
 xboxAndPlaystationAccounts: i
   };
 }
-let q = e => {
+let Q = e => {
 let {
   questId: t,
   preview: n,
   beforeRequest: r,
   afterRequest: i
-} = e, [a, s] = u.useState([]), [o, l] = u.useState(!1);
-return {
+} = e, [a, s] = u.useState([]), [o, l] = u.useState(!1), d = (0, _.e7)([h.Z], () => h.Z.getAccounts());
+return u.useEffect(() => {
+  s(e => e.filter(e => e.type !== c.K.EXPIRED_CREDENTIAL));
+}, [d]), {
   startConsoleQuest: u.useCallback(async () => {
     if (o)
       return;
     null == r || r(), l(!0);
     let e = null;
     try {
-      e = await (0, T.CS)(t, n), s(e.errorHints);
+      e = await (0, g.CS)(t, n), s(e.errorHints);
     } finally {
       var a;
       l(!1), null == i || i(null !== (a = null == e ? void 0 : e.errorHints) && void 0 !== a ? a : []);
@@ -489,22 +492,22 @@ return {
   errorHints: a
 };
   },
-  Q = e => {
+  X = e => {
 let {
   quest: t
 } = e, {
   xboxAndPlaystationAccounts: n
-} = z(), r = k(t), i = 0 === n.length;
-return (0, A.$J)(t) && i && !r;
+} = q(), r = B(t), i = 0 === n.length;
+return (0, N.$J)(t) && i && !r;
   },
-  X = () => {
+  $ = () => {
 let {
   xboxAccounts: e,
   playstationAccounts: t
-} = z(), n = e.length > 0, r = t.length > 0, i = p.Z.getArticleURL(D.BhN.QUEST_HOW_TO_PLAYSTATION), a = p.Z.getArticleURL(D.BhN.QUEST_HOW_TO_XBOX), s = L.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_HELP_ARTICLE_MULTI.format({
+} = q(), n = e.length > 0, r = t.length > 0, i = m.Z.getArticleURL(L.BhN.QUEST_HOW_TO_PLAYSTATION), a = m.Z.getArticleURL(L.BhN.QUEST_HOW_TO_XBOX), s = b.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_HELP_ARTICLE_MULTI.format({
   psHelpdeskArticle: i,
   xboxHelpdeskArticle: a
-}), o = L.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_HELP_ARTICLE_SINGLE.format({
+}), o = b.Z.Messages.QUESTS_MICROPHONE_UNIT_FOOTER_HELP_ARTICLE_SINGLE.format({
   helpdeskArticle: r ? i : a
 });
 return {
@@ -514,12 +517,12 @@ return {
 };
   };
 
-function $(e) {
+function J(e) {
   var t, n, r;
   let i = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
 a = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
 s = (null === (r = e.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
-o = B(e).percentComplete > 0;
+o = F(e).percentComplete > 0;
   if (s)
 return 4;
   if (a)
@@ -532,15 +535,15 @@ return 1;
 return 0;
 }
 
-function J(e) {
-  let t = (0, d.e7)([E.default], () => E.default.locale),
+function ee(e) {
+  let t = (0, _.e7)([f.default], () => f.default.locale),
 {
   percentComplete: n
-} = B(e),
-r = F(e),
+} = F(e),
+r = V(e),
 i = null != r ? r.completedRatio : n,
 a = 100 * i,
-s = null != r ? ''.concat(null == r ? void 0 : r.progress, '/').concat(null == r ? void 0 : r.target) : (0, m.T3)(t, i, {
+s = null != r ? ''.concat(null == r ? void 0 : r.progress, '/').concat(null == r ? void 0 : r.target) : (0, I.T3)(t, i, {
   roundingMode: 'floor'
 });
   return {
@@ -550,21 +553,21 @@ completedRatioDisplay: s
   };
 }
 
-function ee(e) {
+function et(e) {
   var t, n;
-  let r = B(e),
-i = (0, A.b7)(e),
-a = (0, R.D)({
+  let r = F(e),
+i = (0, N.b7)(e),
+a = (0, C.D)({
   quest: e,
   taskDetails: r,
-  location: y.dr.QUEST_HOME_DESKTOP,
-  questContent: S.jn.QUEST_HOME_DESKTOP,
+  location: D.dr.QUEST_HOME_DESKTOP,
+  questContent: A.jn.QUEST_HOME_DESKTOP,
   useV2Variants: !0
 }),
 s = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-o = x(null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt);
+o = G(null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt);
   if (s)
-return L.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
+return b.Z.Messages.QUESTS_HOME_REWARD_CLAIMED_DESCRIPTION.format({
   claimDate: o
 });
   if (null != i)

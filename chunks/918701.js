@@ -12,6 +12,9 @@ return en;
   Bz: function() {
 return ek;
   },
+  C9: function() {
+return ej;
+  },
   CE: function() {
 return k;
   },
@@ -40,7 +43,7 @@ return ee;
 return eT;
   },
   OG: function() {
-return eH;
+return eZ;
   },
   Qe: function() {
 return b;
@@ -52,7 +55,7 @@ return $;
 return V;
   },
   V$: function() {
-return eV;
+return eH;
   },
   WP: function() {
 return H;
@@ -72,6 +75,9 @@ return J;
   _D: function() {
 return U;
   },
+  _j: function() {
+return eY;
+  },
   b7: function() {
 return eU;
   },
@@ -81,8 +87,11 @@ return eS;
   f2: function() {
 return eO;
   },
-  gI: function() {
+  fY: function() {
 return eF;
+  },
+  gI: function() {
+return eV;
   },
   gO: function() {
 return K;
@@ -728,6 +737,22 @@ function eB() {
 
 function eF(e, t) {
   let {
+platformType: n,
+quest: r,
+showInline: i
+  } = e;
+  (0, S._3)({
+questId: r.id,
+questContent: t.content,
+questContentCTA: t.ctaContent
+  }), !i && eB(), (0, f.Z)({
+platformType: n,
+location: t.ctaContent
+  });
+}
+
+function eV(e, t) {
+  let {
 quest: n,
 showInline: r
   } = e;
@@ -749,7 +774,7 @@ includedPlatformTypes: new Set([
   });
 }
 
-function eV(e, t) {
+function eH(e, t) {
   let {
 quest: n
   } = e;
@@ -761,6 +786,14 @@ questContentCTA: t.ctaContent
   }), eB();
 }
 
-function eH() {
+function eZ() {
   return window.location.pathname.startsWith(C.Z5c.QUEST_HOME);
+}
+
+function eY(e) {
+  return 'xbox' === e.connected_account_type ? C.ABu.XBOX : C.ABu.PLAYSTATION;
+}
+
+function ej(e) {
+  return eY(e) === C.ABu.XBOX ? D.Z.Messages.QUESTS_CONSOLE_EXPIRED_CREDENTIALS_XBOX : D.Z.Messages.QUESTS_CONSOLE_EXPIRED_CREDENTIALS_PSN;
 }
