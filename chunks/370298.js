@@ -22,9 +22,9 @@ var i = t(735250),
   _ = t(978983),
   N = t(592125),
   T = t(703558),
-  x = t(430824),
-  f = t(626135),
-  g = t(823379),
+  f = t(430824),
+  g = t(626135),
+  x = t(823379),
   A = t(399654),
   O = t(844439),
   v = t(957552),
@@ -93,7 +93,7 @@ onClose: t,
 channel: o,
 imageUrl: a,
 mimeType: N
-  } = e, v = (0, r.e7)([x.Z], () => x.Z.getGuild(o.guild_id)), {
+  } = e, v = (0, r.e7)([f.Z], () => f.Z.getGuild(o.guild_id)), {
 fetchState: y,
 recommendationsSections: w
   } = function(e) {
@@ -138,12 +138,18 @@ return void 0 === e ? [] : e.map(e => {
     }),
     application: n
   } : null;
-}).filter(g.lm);
+}).filter(x.lm);
   }, [w]);
   l.useEffect(() => {
+(y === O.M.ERROR || y === O.M.FETCHED && 0 === H.length) && t();
+  }, [
+y,
+H.length,
+t
+  ]), l.useEffect(() => {
 var e, n;
 if (!F && 0 !== H.length)
-  f.default.track(j.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
+  g.default.track(j.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
     guild_id: null !== (e = null == o ? void 0 : o.guild_id) && void 0 !== e ? e : '',
     channel_id: null !== (n = null == o ? void 0 : o.id) && void 0 !== n ? n : '',
     application_ids: [...H.map(e => Number(e.application.id))],
