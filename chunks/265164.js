@@ -223,6 +223,9 @@ return null !== (t = j[e]) && void 0 !== t ? t : {};
 var t;
 return null !== (t = y[e]) && void 0 !== t ? t : 0;
   }
+  getCustomGuildScores() {
+return y;
+  }
   getNumLocallyAddedItems() {
 return Object.keys(b).length;
   }
@@ -413,6 +416,11 @@ let {
 for (let e of t)
   for (let t of (y[e.guild_id] = e.guild_score, $(e.guild_id, e.guild_score), Object.keys(e.custom_channel_scores)))
     null == j[e.guild_id] && (j[e.guild_id] = {}), j[e.guild_id][t] = e.custom_channel_scores[t];
+y = {
+  ...y
+}, j = {
+  ...j
+};
   },
   GRAVITY_CUSTOM_SCORES_UPDATED: function(e) {
 let {
@@ -420,12 +428,16 @@ let {
   guildId: n,
   guildScore: i
 } = e;
-null != i && (y[n] = i, $(n, i)), null == t || t.forEach(e => {
+null != i && (y[n] = i, $(n, i), y = {
+  ...y
+}), null == t || t.forEach(e => {
   let {
     channelId: t,
     score: i
   } = e;
-  null == j[n] && (j[n] = {}), j[n][t] = i;
+  null == j[n] && (j[n] = {}), j[n][t] = i, j = {
+    ...j
+  };
 });
   },
   RELOAD_GRAVITY: function() {
