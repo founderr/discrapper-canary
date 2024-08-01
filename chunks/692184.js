@@ -1,6 +1,10 @@
 e.exports = {
   card: 'card_ae1fa2',
   header: 'header_ae1fa2',
+  headerText: 'headerText_ae1fa2',
+  headerTags: 'headerTags_ae1fa2',
+  absolute: 'absolute_ae1fa2',
+  panel: 'panel_ae1fa2',
   platformIcon: 'platformIcon_ae1fa2',
   body: 'body_ae1fa2',
   content: 'content_ae1fa2',
@@ -11,7 +15,6 @@ e.exports = {
   customButton: 'customButton_ae1fa2',
   badges: 'badges_ae1fa2',
   clickable: 'clickable_ae1fa2',
-  text: 'text_ae1fa2',
   inline: 'inline_ae1fa2',
   imagePosition: 'imagePosition_ae1fa2',
   smallImage: 'smallImage_ae1fa2',

@@ -1,42 +1,40 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var r = n(735250);
 n(470079);
-var i = n(120356),
-  a = n.n(i),
-  s = n(481060),
-  o = n(514342),
-  l = n(652853),
-  u = n(228168),
-  c = n(692184);
+var i = n(481060),
+  a = n(514342),
+  s = n(652853),
+  o = n(228168),
+  l = n(692184);
 
-function d(e) {
+function u(e) {
   let {
 text: t,
 onClick: n,
-...i
+...u
   } = e, {
-profileType: d
-  } = (0, l.z)(), _ = d !== u.y0.FULL_SIZE ? 1 : void 0;
-  return null == t || '' === t ? null : null != n ? (0, r.jsx)(s.Clickable, {
+profileType: c
+  } = (0, s.z)(), d = c !== o.y0.FULL_SIZE ? 1 : void 0;
+  return null == t || '' === t ? null : null != n ? (0, r.jsx)(i.Clickable, {
 onClick: n,
-className: a()(c.clickable, c.text),
-children: (0, r.jsx)(s.Text, {
+className: l.clickable,
+children: (0, r.jsx)(i.Text, {
   color: 'text-normal',
-  lineClamp: _,
-  ...i,
-  children: (0, r.jsx)(o.Z, {
+  lineClamp: d,
+  ...u,
+  children: (0, r.jsx)(a.Z, {
     children: t
   })
 })
-  }) : (0, r.jsx)(s.Text, {
+  }) : (0, r.jsx)(i.Text, {
 color: 'text-normal',
-lineClamp: _,
-...i,
-children: (0, r.jsx)(o.Z, {
+lineClamp: d,
+...u,
+children: (0, r.jsx)(a.Z, {
   children: t
 })
   });

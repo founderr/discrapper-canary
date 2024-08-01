@@ -1,98 +1,98 @@
 i.d(s, {
   Z: function() {
-return v;
+return Z;
   }
 });
-var n = i(735250);
-i(470079);
-var l = i(481060),
-  t = i(906732),
-  o = i(785717),
-  a = i(221292),
-  r = i(929498),
-  d = i(678738),
-  c = i(151545),
-  u = i(527790),
-  I = i(304042),
-  f = i(290274),
-  _ = i(981631),
-  m = i(689938),
-  E = i(122606);
+var n = i(735250),
+  l = i(470079),
+  t = i(704215),
+  o = i(481060),
+  a = i(906732),
+  r = i(605236),
+  d = i(785717),
+  c = i(221292),
+  u = i(929498),
+  I = i(678738),
+  _ = i(151545),
+  f = i(527790),
+  m = i(304042),
+  E = i(981631),
+  S = i(921944),
+  v = i(689938),
+  x = i(122606);
 
-function v(e) {
+function Z(e) {
   let {
 user: s,
 currentUser: i,
-onClose: v
+onClose: Z
   } = e, {
-analyticsLocations: x
-  } = (0, t.ZP)(), {
-trackUserProfileAction: S,
-...Z
-  } = (0, o.KZ)(), {
-live: h,
-recent: p,
-stream: g
-  } = (0, r.Z)(s.id);
-  return (0, n.jsxs)(l.ScrollerThin, {
-className: E.scroller,
+analyticsLocations: h
+  } = (0, a.ZP)(), {
+trackUserProfileAction: p,
+...T
+  } = (0, d.KZ)(), {
+live: g,
+recent: N,
+stream: j
+  } = (0, u.Z)(s.id), C = s.id === i.id, A = (0, r.wE)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
+  return l.useEffect(() => {
+if (!!C && !A)
+  (0, r.EW)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
+    dismissAction: S.L.AUTO_DISMISS,
+    forceTrack: !0
+  });
+  }, [
+C,
+A
+  ]), (0, n.jsxs)(o.ScrollerThin, {
+className: x.scroller,
 fade: !0,
 children: [
-  (0, n.jsxs)(d.Z, {
+  (0, n.jsxs)(I.Z, {
     children: [
-      null != g && (0, n.jsx)(I.Z, {
+      null != j && (0, n.jsx)(m.Z, {
         user: s,
         currentUser: i,
-        stream: g,
-        onClose: v,
+        stream: j,
+        onClose: Z,
         onAction: () => {
-          S({
+          p({
             action: 'JOIN_ACTIVITY'
-          }), (0, a.Ac)({
-            activityType: _.IIU.STREAMING,
-            analyticsLocations: x,
-            ...Z
+          }), (0, c.Ac)({
+            activityType: E.IIU.STREAMING,
+            analyticsLocations: h,
+            ...T
           });
         }
       }),
-      h.map((e, l) => (0, n.jsx)(c.Z, {
+      g.map((e, l) => (0, n.jsx)(_.Z, {
         user: s,
         currentUser: i,
         activity: e,
-        onClose: v,
+        onClose: Z,
         onAction: () => {
-          S({
+          p({
             action: 'JOIN_ACTIVITY'
-          }), (0, a.Ac)({
-            activityType: null == e ? void 0 : e.type,
-            activityName: null == e ? void 0 : e.name,
-            activityPlatform: null == e ? void 0 : e.platform,
-            activitySessionId: null == e ? void 0 : e.session_id,
-            applicationId: null == e ? void 0 : e.application_id,
-            analyticsLocations: x,
-            ...Z
+          }), (0, c.Ac)({
+            activityType: e.type,
+            activityName: e.name,
+            activityPlatform: e.platform,
+            activitySessionId: e.session_id,
+            applicationId: e.application_id,
+            analyticsLocations: h,
+            ...T
           });
         }
       }, 'live-'.concat(l)))
     ]
   }),
-  (0, n.jsx)(d.Z, {
-    heading: m.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
-    children: p.map(e => (0, n.jsxs)('div', {
-      className: E.recentActivityEntryContainer,
-      children: [
-        (0, n.jsx)(u.Z, {
-          user: s,
-          entry: e,
-          onClose: v
-        }),
-        (0, n.jsx)(f.Z, {
-          user: s,
-          entry: e,
-          className: E.recentActivityContextMenu,
-          display: 'recent'
-        })
-      ]
+  (0, n.jsx)(I.Z, {
+    heading: v.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
+    children: N.map(e => (0, n.jsx)(f.Z, {
+      user: s,
+      entry: e,
+      onClose: Z
     }, e.id))
   })
 ]

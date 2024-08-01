@@ -19,7 +19,8 @@ guildId: n,
 analyticsContext: u,
 onSelect: s
   } = e, R = (0, c.Z)({
-userId: l.id
+userId: l.id,
+guildId: n
   }), _ = (0, Z.Z)(l.id, n), h = (0, d.Z)({
 id: l.id,
 label: M.Z.Messages.COPY_ID_USER

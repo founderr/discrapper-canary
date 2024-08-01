@@ -55,7 +55,8 @@ l,
 t.id
   ]), F = (0, S.Z)({
 userId: t.id,
-guildId: l
+guildId: l,
+sourceAnalyticsLocations: b
   }), Y = (0, L.Z)(t.id, C), B = (0, M.Z)({
 guildId: l,
 userId: t.id,

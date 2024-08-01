@@ -1,5 +1,4 @@
 e.exports = {
-  heading: 'heading_a08002',
   preview: 'preview_a08002',
   fullSize: 'fullSize_a08002',
   image: 'image_a08002',
