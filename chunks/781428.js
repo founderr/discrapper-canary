@@ -6,8 +6,8 @@ return Y;
 var s, r = n(735250),
   i = n(470079),
   a = n(615231),
-  o = n(120356),
-  l = n.n(o),
+  l = n(120356),
+  o = n.n(l),
   c = n(593473),
   u = n(873546),
   d = n(442837),
@@ -268,7 +268,7 @@ return (0, r.jsx)(m.ZP, {
             children: V.Z.Messages._RETURN_TO_LOGIN
           }),
           (0, r.jsx)('div', {
-            className: l()(K.marginTop8, z.needAccount),
+            className: o()(K.marginTop8, z.needAccount),
             children: V.Z.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_CANCEL.format({
               onClick: this.handleCancelAccountDeletion
             })
@@ -353,7 +353,7 @@ let {
   invite: s,
   giftCode: i,
   loginStatus: a,
-  country: o,
+  country: l,
   showMobileWebHandoff: c,
   disableAutofocusOnDefaultForm: u
 } = this.props, d = !this.hasError('email') && this.hasError('password'), h = (null == s ? void 0 : s.stage_instance) != null;
@@ -410,8 +410,8 @@ return n = null == s || h ? null != i ? (0, r.jsx)(B.Z, {
             className: K.marginTop20,
             children: [
               (0, r.jsx)(R.Z, {
-                alpha2: o.alpha2,
-                countryCode: o.code.split(' ')[0],
+                alpha2: l.alpha2,
+                countryCode: l.code.split(' ')[0],
                 className: K.marginBottom20,
                 label: V.Z.Messages.FORM_LABEL_EMAIL_OR_PHONE_NUMBER,
                 error: null !== (t = this.renderError('login')) && void 0 !== t ? t : this.renderError('email'),
@@ -447,7 +447,7 @@ return n = null == s || h ? null != i ? (0, r.jsx)(B.Z, {
                 onClick: this.handleForgotPassword,
                 look: m.zx.Looks.LINK,
                 color: m.zx.Colors.LINK,
-                className: l()(K.marginBottom20, K.marginTop4),
+                className: o()(K.marginBottom20, K.marginTop4),
                 children: V.Z.Messages.FORGOT_PASSWORD
               }),
               (0, r.jsx)(m.zx, {
@@ -510,7 +510,7 @@ return (0, r.jsxs)('div', {
 return (0, r.jsx)(k.Z, {
   onSubmit: this.handleLogin,
   tag: 'form',
-  className: l()(this.props.authBoxClassName, z.horizontalAuthBox),
+  className: o()(this.props.authBoxClassName, z.horizontalAuthBox),
   children: () => [
     (0, r.jsx)(T.Z, {
       guildTemplate: e
@@ -530,7 +530,7 @@ return (0, r.jsx)(m.ZP, {
   },
   children: (0, r.jsx)(x.Cd, {
     mfaFinish: this.handleTokenSubmitMFA,
-    request: e,
+    mfaChallenge: e,
     onEarlyClose: () => {
       h.Z.dispatch({
         type: 'LOGIN_RESET'
@@ -599,9 +599,9 @@ let {
   handoffAvailable: i
 } = this.props, {
   checkingHandoff: a,
-  redirecting: o
+  redirecting: l
 } = this.state;
-if (o || a)
+if (l || a)
   return (0, r.jsx)(Y, {});
 if (i)
   return this.renderHandOffAvailable();
@@ -779,10 +779,10 @@ super(e), W(this, 'loginRef', void 0), W(this, 'passwordRef', void 0), W(this, '
     guildTemplate: r,
     location: i,
     transitionTo: a,
-    redirectTo: o
-  } = this.props, l = null != i ? (0, c.parse)(i.search) : {};
-  '' !== t && (l.email = t), null != n ? (l.mode = 'register', e = w.Z5c.INVITE(n.code)) : null != s ? (l.mode = 'register', e = w.Z5c.GIFT_CODE(s.code)) : null != r ? e = w.Z5c.GUILD_TEMPLATE(r.code) : null != o ? (e = w.Z5c.REGISTER, l.redirect_to = o) : e = w.Z5c.REGISTER, E.Z.loginReset(), a(e, {
-    search: (0, c.stringify)(l)
+    redirectTo: l
+  } = this.props, o = null != i ? (0, c.parse)(i.search) : {};
+  '' !== t && (o.email = t), null != n ? (o.mode = 'register', e = w.Z5c.INVITE(n.code)) : null != s ? (o.mode = 'register', e = w.Z5c.GIFT_CODE(s.code)) : null != r ? e = w.Z5c.GUILD_TEMPLATE(r.code) : null != l ? (e = w.Z5c.REGISTER, o.redirect_to = l) : e = w.Z5c.REGISTER, E.Z.loginReset(), a(e, {
+    search: (0, c.stringify)(o)
   }), y.S.dispatch(w.CkL.WAVE_EMPHASIZE);
 });
 let s = null != e.location ? (0, c.parse)(e.location.search) : {};
