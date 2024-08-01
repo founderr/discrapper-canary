@@ -1,19 +1,20 @@
 n.d(t, {
   Q: function() {
-return o;
+return l;
   },
   f: function() {
-return s;
+return o;
   }
 });
-var r = n(652874);
-let i = Object.freeze({
+var r = n(652874),
+  i = n(731965);
+let a = Object.freeze({
 showPremiumUpsell: !1
   }),
-  a = (0, r.Z)(e => i),
-  s = e => {
-a.setState({
+  s = (0, r.Z)(e => a),
+  o = e => {
+(0, i.j)(() => s.setState({
   showPremiumUpsell: e
-});
+}));
   },
-  o = a;
+  l = s;

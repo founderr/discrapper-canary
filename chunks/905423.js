@@ -1,10 +1,11 @@
 var l = t(266067),
   i = t(652874),
-  a = t(981631);
+  a = t(731965),
+  r = t(981631);
 
-function r(e) {
+function s(e) {
   let n = (0, l.LX)(null != e ? e : '', {
-path: a.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')
+path: r.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')
   });
   if (null != n) {
 let {
@@ -12,12 +13,12 @@ let {
   channelId: t
 } = n.params;
 return {
-  guildId: e === a.ME ? null : e,
+  guildId: e === r.ME ? null : e,
   channelId: null != t ? t : null
 };
   }
   let t = (0, l.LX)(null != e ? e : '', {
-path: a.Z5c.GUILD_BOOSTING_MARKETING(':guildId')
+path: r.Z5c.GUILD_BOOSTING_MARKETING(':guildId')
   });
   return null != t ? {
 guildId: t.params.guildId,
@@ -36,23 +37,23 @@ n.Z = (0, i.Z)(e => ({
 let {
   guildId: t,
   channelId: l
-} = r(n);
-e({
+} = s(n);
+(0, a.j)(() => e({
   path: n,
   guildId: t,
   channelId: l
-});
+}));
   },
   resetPath(n) {
 let {
   guildId: t,
   channelId: l
-} = r(n);
-e({
+} = s(n);
+(0, a.j)(() => e({
   path: null,
   guildId: t,
   channelId: l,
   basePath: n
-});
+}));
   }
 }));

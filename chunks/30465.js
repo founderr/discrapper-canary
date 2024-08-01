@@ -1,30 +1,33 @@
 n.d(t, {
   KR: function() {
-return o;
+return l;
   },
   p8: function() {
-return s;
+return o;
   },
   sJ: function() {
-return l;
+return u;
   }
 });
 var r = n(470079),
-  i = n(652874);
-let a = Object.freeze({
+  i = n(652874),
+  a = n(731965);
+let s = Object.freeze({
 id: null,
 activeDescendant: null
   }),
-  s = (0, i.Z)(() => a);
+  o = (0, i.Z)(() => s);
 
-function o(e, t, n) {
+function l(e, t, n) {
   (0, r.useEffect)(() => {
-t ? s.setState({
-  id: e,
-  activeDescendant: n
-}) : s.setState({
-  id: null,
-  activeDescendant: null
+(0, a.j)(() => {
+  t ? o.setState({
+    id: e,
+    activeDescendant: n
+  }) : o.setState({
+    id: null,
+    activeDescendant: null
+  });
 });
   }, [
 e,
@@ -33,6 +36,6 @@ n
   ]);
 }
 
-function l() {
-  s.setState(() => a);
+function u() {
+  (0, a.j)(() => o.setState(() => s));
 }

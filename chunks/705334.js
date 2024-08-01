@@ -1,6 +1,6 @@
 n.d(t, {
   _: function() {
-return I;
+return m;
   }
 });
 var i = n(735250),
@@ -8,65 +8,66 @@ var i = n(735250),
   a = n(120356),
   r = n.n(a),
   l = n(143927),
-  o = n(481060),
-  c = n(836768),
-  d = n(766219),
-  u = n(49898),
-  _ = n(689938),
-  h = n(876425);
+  o = n(731965),
+  c = n(481060),
+  d = n(836768),
+  u = n(766219),
+  _ = n(49898),
+  h = n(689938),
+  E = n(876425);
 
-function E(e) {
+function I(e) {
   let {
 tab: t
-  } = e, n = (0, c.d)(e => e.selectedPage === t, l.Z), a = s.useMemo(() => function(e) {
+  } = e, n = (0, d.d)(e => e.selectedPage === t, l.Z), a = s.useMemo(() => function(e) {
 switch (e) {
-  case u.F$.SERVERS:
-    return (0, i.jsx)(o.ServerIcon, {
+  case _.F$.SERVERS:
+    return (0, i.jsx)(c.ServerIcon, {
       color: 'currentColor'
     });
-  case u.F$.QUESTS:
-    return (0, i.jsx)(o.QuestsIcon, {
+  case _.F$.QUESTS:
+    return (0, i.jsx)(c.QuestsIcon, {
       color: 'currentColor'
     });
 }
-  }(t), [t]), _ = s.useMemo(() => (0, d.sm)(t), [t]), E = s.useCallback(() => {
-c.d.setState({
+  }(t), [t]), h = s.useMemo(() => (0, u.sm)(t), [t]), I = s.useCallback(() => {
+(0, o.j)(() => d.d.setState({
   selectedPage: t
-});
+}));
   }, [t]);
-  return (0, i.jsxs)(o.Clickable, {
-onClick: E,
-className: r()(h.navItem, {
-  [h.selectedNavItem]: n
+  return (0, i.jsxs)(c.Clickable, {
+onClick: I,
+className: r()(E.navItem, {
+  [E.selectedNavItem]: n
 }),
 children: [
   (0, i.jsx)('div', {
-    className: h.navItemIcon,
+    className: E.navItemIcon,
     children: a
   }),
-  (0, i.jsx)(o.Text, {
+  (0, i.jsx)(c.Text, {
     variant: 'text-md/normal',
     color: 'none',
-    children: _
+    children: h
   })
 ]
   });
 }
 
-function I() {
+function m() {
   return (0, i.jsxs)('div', {
-className: h.container,
+className: E.container,
 children: [
   (0, i.jsx)('div', {
-    className: h.header,
-    children: (0, i.jsx)(o.Heading, {
+    className: E.header,
+    children: (0, i.jsx)(c.Heading, {
       variant: 'text-lg/semibold',
-      children: _.Z.Messages.GLOBAL_DISCOVERY_TITLE
+      children: h.Z.Messages.GLOBAL_DISCOVERY_TITLE
     })
   }),
   (0, i.jsx)('nav', {
-    className: h.nav,
-    children: u.mc.map(e => (0, i.jsx)(E, {
+    className: E.nav,
+    children: _.mc.map(e => (0, i.jsx)(I, {
       tab: e
     }, e))
   })

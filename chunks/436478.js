@@ -1,24 +1,25 @@
 n.d(t, {
   k: function() {
-return o;
+return l;
   },
   m: function() {
 return i;
   }
 });
-var r, i, a = n(652874);
+var r, i, a = n(652874),
+  s = n(731965);
 (r = i || (i = {})).PROFILE_PANEL = 'profile panel', r.USER_POPOUT = 'user popout';
-let s = {
+let o = {
 upsellSource: null
   },
-  o = (0, a.Z)(e => ({
-...s,
-setUpsellSource: t => e({
+  l = (0, a.Z)(e => ({
+...o,
+setUpsellSource: t => (0, s.j)(() => e({
   upsellSource: t
-}),
+})),
 reset: () => {
-  e({
-    ...s
-  });
+  (0, s.j)(() => e({
+    ...o
+  }));
 }
   }));

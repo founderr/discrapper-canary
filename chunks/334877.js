@@ -1,13 +1,15 @@
 n.d(t, {
   l: function() {
-return i;
+return s;
   }
 });
-let i = (0, n(652874).Z)(e => ({
+var i = n(652874),
+  a = n(731965);
+let s = (0, i.Z)(e => ({
   canCloseModal: !0,
   onUpdateCanCloseModal(t) {
-e({
+(0, a.j)(() => e({
   canCloseModal: t
-});
+}));
   }
 }));

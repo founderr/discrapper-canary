@@ -1,60 +1,67 @@
 n.d(t, {
   Ez: function() {
-return _;
+return E;
   },
   Ps: function() {
-return o;
-  },
-  Xo: function() {
-return c;
-  },
-  dT: function() {
-return u;
-  },
-  dw: function() {
 return l;
   },
-  k$: function() {
+  Xo: function() {
 return d;
+  },
+  dT: function() {
+return c;
+  },
+  dw: function() {
+return u;
+  },
+  k$: function() {
+return _;
   }
 }), n(47120);
 var r = n(652874),
-  i = n(990547);
-let a = Object.freeze({
+  i = n(990547),
+  a = n(731965);
+let s = Object.freeze({
 debugTrackedData: null,
 impressions: []
   }),
-  s = (0, r.Z)(e => a),
-  o = e => {
-s.setState(t => ({
-  impressions: [
-    ...t.impressions,
-    e
-  ]
-}));
-  },
+  o = (0, r.Z)(e => s),
   l = e => {
-s.setState(t => ({
-  impressions: t.impressions.filter(t => t.sequenceId !== e.sequenceId)
-}));
+(0, a.j)(() => {
+  o.setState(t => ({
+    impressions: [
+      ...t.impressions,
+      e
+    ]
+  }));
+});
   },
-  u = (e, t) => {
-s.setState(() => ({
-  debugTrackedData: {
-    name: e,
-    ...t
-  }
-}));
+  u = e => {
+(0, a.j)(() => {
+  o.setState(t => ({
+    impressions: t.impressions.filter(t => t.sequenceId !== e.sequenceId)
+  }));
+});
   },
-  c = s;
+  c = (e, t) => {
+(0, a.j)(() => {
+  o.setState(() => ({
+    debugTrackedData: {
+      name: e,
+      ...t
+    }
+  }));
+});
+  },
+  d = o;
 
-function d() {
+function _() {
   let e = {};
-  return s.getState().impressions.forEach(t => {
+  return o.getState().impressions.forEach(t => {
 t.type === i.ImpressionTypes.PAGE ? e.page = t.name : e.section = t.name;
   }), e;
 }
 
-function _() {
-  return s.getState().impressions;
+function E() {
+  return o.getState().impressions;
 }
