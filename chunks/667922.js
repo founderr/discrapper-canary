@@ -4,8 +4,8 @@ return f;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(543241),
   o = n(222677),
@@ -23,7 +23,7 @@ var i = n(735250),
 function f(e, t) {
   let {
 reducedMotion: n
-  } = s.useContext(r.AccessibilityPreferencesContext), f = (0, u.$R)(t), C = (0, a.e7)([_.Z], () => (t.isPrivate() || _.Z.can(T.Plq.ADD_REACTIONS, t)) && f, [
+  } = a.useContext(r.AccessibilityPreferencesContext), f = (0, u.$R)(t), C = (0, s.e7)([_.Z], () => (t.isPrivate() || _.Z.can(T.Plq.ADD_REACTIONS, t)) && f, [
 t,
 f
   ]), p = (0, l.MZ)(t.getGuildId());
@@ -33,28 +33,28 @@ return null;
 emoji: e,
 channel: t,
 intention: h.Hz.REACTION
-  })).slice(0, 12).map((s, a) => {
+  })).slice(0, 12).map((a, s) => {
 var l, u;
 return (0, i.jsx)(r.MenuItem, {
   color: 'default',
-  id: null !== (u = null !== (l = s.id) && void 0 !== l ? l : s.optionallyDiverseSequence) && void 0 !== u ? u : s.name,
-  label: ':'.concat(s.name, ':'),
+  id: null !== (u = null !== (l = a.id) && void 0 !== l ? l : a.optionallyDiverseSequence) && void 0 !== u ? u : a.name,
+  label: ':'.concat(a.name, ':'),
   imageUrl: e => {
     var t;
     let {
       isFocused: i
     } = e;
-    return null != s.id ? E.ZP.getEmojiURL({
-      id: s.id,
-      animated: s.animated && (!n.enabled || i),
+    return null != a.id ? E.ZP.getEmojiURL({
+      id: a.id,
+      animated: a.animated && (!n.enabled || i),
       size: 18
-    }) : m.ZP.getURL(null !== (t = s.optionallyDiverseSequence) && void 0 !== t ? t : '');
+    }) : m.ZP.getURL(null !== (t = a.optionallyDiverseSequence) && void 0 !== t ? t : '');
   },
   action: () => {
-    (0, o.rU)(t.id, e.id, (0, c.g1)(s), void 0);
+    (0, o.rU)(t.id, e.id, (0, c.g1)(a), o.TW.MESSAGE_CONTEXT_MENU);
   },
   dontCloseOnActionIfHoldingShiftKey: !0
-}, a);
+}, s);
   });
   return (0, i.jsx)(r.MenuItem, {
 id: 'add-reaction',

@@ -33,8 +33,8 @@ var i, s = n(735250),
   I = n(56314),
   x = n(231053),
   C = n(944386),
-  R = n(305325),
-  S = n(33154),
+  S = n(305325),
+  R = n(33154),
   N = n(692147),
   O = n(197115),
   Z = n(659215),
@@ -131,8 +131,8 @@ let {
   hideEmoji: x,
   animationStartPosition: C
 } = this.props, {
-  shouldShowTooltip: R,
-  tooltipTextAria: S,
+  shouldShowTooltip: S,
+  tooltipTextAria: R,
   reactionRef: O,
   tooltipPositionKey: Z
 } = this.state, j = E ? ee : Q, A = {
@@ -155,8 +155,8 @@ let L = null == O ? void 0 : O.getBoundingClientRect(),
   U = null == C;
 return (0, s.jsx)(s.Fragment, {
   children: (0, s.jsx)(m.Popout, {
-    shouldShow: R,
-    'aria-label': null != S && S,
+    shouldShow: S,
+    'aria-label': null != R && R,
     renderPopout: this.renderTooltip,
     nudgeAlignIntoViewport: !0,
     position: 'top',
@@ -270,7 +270,7 @@ super(...e), en(this, 'isReactionEventActive', !1), en(this, 'isKeyboardNavigati
     return;
   }
   let h = t.getChannelId(),
-    m = r ? j.TW.FORUM_TOOLBAR : j.TW.MESSAGE;
+    m = r ? j.TW.FORUM_TOOLBAR : j.TW.MESSAGE_INLINE_BUTTON;
   if (s && !this.userCanBurstReact()) {
     (0, Z.openBurstReactionsUpsellModal)({
       analytics: {
@@ -282,8 +282,14 @@ super(...e), en(this, 'isReactionEventActive', !1), en(this, 'isKeyboardNavigati
     });
     return;
   }
-  o ? this.handleShowVerificationGate() : !i && (this.isMe() ? (0, j.WO)(h, t.id, n, void 0, m, {
-    burst: s
+  o ? this.handleShowVerificationGate() : !i && (this.isMe() ? (0, j.WO)({
+    channelId: h,
+    messageId: t.id,
+    emoji: n,
+    location: m,
+    options: {
+      burst: s
+    }
   }) : (0, j.rU)(h, t.id, n, m, {
     burst: s
   }));
@@ -341,9 +347,9 @@ super(...e), en(this, 'isReactionEventActive', !1), en(this, 'isKeyboardNavigati
     message: n,
     isLurking: i
   } = this.props, o = y.Z.getChannel(n.getChannelId()), a = P.Z.getGuild(null == o ? void 0 : o.getGuildId());
-  return i && null != a ? (0, s.jsx)(S.Z, {
+  return i && null != a ? (0, s.jsx)(R.Z, {
     ctaRef: this.ctaRef,
-    type: S.s.REACTIONS,
+    type: R.s.REACTIONS,
     guild: a,
     closePopout: t
   }) : (0, s.jsx)(s.Fragment, {});
@@ -498,7 +504,7 @@ super(...e), en(this, 'isReactionEventActive', !1), en(this, 'isKeyboardNavigati
     return null;
   let n = y.Z.getChannel(e.getChannelId()),
     i = P.Z.getGuild(null == n ? void 0 : n.getGuildId());
-  null != i && (0, R.hk)(i.id);
+  null != i && (0, S.hk)(i.id);
 }), en(this, 'handleSetReactionRef', e => {
   this.setState({
     reactionRef: e
@@ -612,7 +618,7 @@ let {
   return {
     joinedEmojiSourceGuild: (null == e ? void 0 : e.type) === E.B.GUILD ? P.Z.getGuild(null == e ? void 0 : e.guildId) : void 0
   };
-}), [u, h] = o.useState(void 0), [p, g] = o.useState(void 0), [f, T] = o.useState(null), [_, v] = o.useState(!1), [I, C] = o.useState(!1), [R, S] = o.useState(!1), N = null != c, O = null !== (t = null == u ? void 0 : u.isDiscoverable()) && void 0 !== t && t, Z = w.Z.getGuildId(), j = null != Z && (Z === (null == u ? void 0 : u.id) || Z === (null == c ? void 0 : c.id)), M = U.default.getCurrentUser(), A = (0, G.a)({
+}), [u, h] = o.useState(void 0), [p, g] = o.useState(void 0), [f, T] = o.useState(null), [_, v] = o.useState(!1), [I, C] = o.useState(!1), [S, R] = o.useState(!1), N = null != c, O = null !== (t = null == u ? void 0 : u.isDiscoverable()) && void 0 !== t && t, Z = w.Z.getGuildId(), j = null != Z && (Z === (null == u ? void 0 : u.id) || Z === (null == c ? void 0 : c.id)), M = U.default.getCurrentUser(), A = (0, G.a)({
   sourceType: f,
   expressionSourceApplication: null != p ? p : null,
   isPremium: F.ZP.isPremium(M),
@@ -625,7 +631,7 @@ let {
   shouldHideRoleSubscriptionCTA: !1
 });
 o.useEffect(() => {
-  if (!!_ && !R)
+  if (!!_ && !S)
     (async () => {
       i(), C(!0);
       let e = null != n ? await (0, x.Fi)(n) : null;
@@ -639,12 +645,12 @@ o.useEffect(() => {
         }
       else
         h(null);
-      C(!1), S(!0), i();
+      C(!1), R(!0), i();
     })();
 }, [
   n,
   _,
-  R,
+  S,
   i
 ]);
 if (N)

@@ -5,8 +5,8 @@ return g;
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(442837),
   l = n(481060),
   o = n(543241),
@@ -33,7 +33,7 @@ function p(e) {
   var t;
   let {
 emoji: n,
-isFocused: s
+isFocused: a
   } = e, {
 animated: r,
 src: o,
@@ -47,17 +47,17 @@ size: 20
 text: n.allNamesString,
 hideOnClick: !0,
 spacing: 16,
-forceOpen: s,
+forceOpen: a,
 children: e => (0, i.jsx)('div', {
   'aria-label': N.Z.Messages.ADD_REACTION_NAMED.format({
     emojiName: n.name
   }),
-  className: a()(f.button, {
-    [f.focused]: s
+  className: s()(f.button, {
+    [f.focused]: a
   }),
   ...e,
   children: null == o || '' === o.trim() ? (0, i.jsx)('span', {
-    className: a()('emoji', 'emoji-text', f.icon),
+    className: s()('emoji', 'emoji-text', f.icon),
     ...e,
     children: c
   }) : (0, i.jsx)('img', {
@@ -79,15 +79,15 @@ return !(e.useSpriteSheet && C.indexOf(null !== (n = e.uniqueName) && void 0 !==
 });
   });
   n.length > 4 && (n.length = 4);
-  let s = _.nc.useSetting(),
-a = (0, d.$R)(t),
-I = (0, r.e7)([E.Z], () => s && a && (t.isPrivate() || E.Z.can(T.Plq.ADD_REACTIONS, t)), [
+  let a = _.nc.useSetting(),
+s = (0, d.$R)(t),
+I = (0, r.e7)([E.Z], () => a && s && (t.isPrivate() || E.Z.can(T.Plq.ADD_REACTIONS, t)), [
   t,
-  a,
-  s
+  s,
+  a
 ]),
 N = n => {
-  (0, c.rU)(t.id, e.id, (0, u.g1)(n), void 0);
+  (0, c.rU)(t.id, e.id, (0, u.g1)(n), c.TW.MESSAGE_CONTEXT_MENU);
 };
   return I && n.length > 0 ? (0, i.jsx)(l.MenuGroup, {
 className: f.wrapper,
