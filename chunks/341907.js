@@ -31,9 +31,8 @@ questContentPosition: s
 let {
   default: e
 } = await Promise.all([
-  n.e('89043'),
   n.e('54535'),
-  n.e('87353')
+  n.e('12506')
 ]).then(n.bind(n, 985866));
 return n => (0, r.jsx)(e, {
   ...n,
