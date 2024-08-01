@@ -39,14 +39,18 @@ let m = {},
   T = '47835198259242069';
 
 function g(e, t, n) {
-  let r = e;
-  r = null == n ? e.removeGuildAvatarHash(t) : e.addGuildAvatarHash(t, n), m[e.id] = r;
-  let i = e !== r;
-  return i && I++, i;
+  let r = m[e];
+  if (null == r)
+return !1;
+  let i = r;
+  i = null == n ? r.removeGuildAvatarHash(t) : r.addGuildAvatarHash(t, n), m[r.id] = i;
+  let a = r !== i;
+  return a && I++, a;
 }
 
 function S(e, t) {
-  return !(0, f.Dd)(e.clan, t.clan) && (null == e.clan || null != t.clan) && (e.clan = (0, f.yi)(t.clan), m[e.id] = e, I++, !0);
+  let n = m[e];
+  return !(null == n || (0, f.Dd)(n.clan, t.clan)) && (null == n.clan || null != t.clan) && (n.clan = (0, f.yi)(t.clan), m[n.id] = n, I++, !0);
 }
 
 function A(e) {
@@ -145,8 +149,7 @@ guilds: r
 v(e);
   }), r.forEach(e => {
 e.members.forEach(t => {
-  let n = m[t.user.id];
-  null != n && (g(n, e.id, t.avatar), S(n, t.user));
+  g(t.user.id, e.id, t.avatar), S(t.user.id, t.user);
 });
   }), null != m[d.default.getId()] && (m[T] = new l.Z({
 id: T,
@@ -164,8 +167,7 @@ lazyPrivateChannels: n
   } = e;
   t.forEach(e => {
 e.members.forEach(t => {
-  let n = m[t.user.id];
-  null != n && (g(n, e.id, t.avatar), S(n, t.user));
+  g(t.user.id, e.id, t.avatar), S(t.user.id, t.user);
 });
   }), null == n || n.forEach(e => {
 var t;
@@ -278,9 +280,8 @@ let {
 if (null == t)
   return;
 v(t);
-let i = m[t.id],
-  a = null == r ? void 0 : r.avatar;
-null != i && null != a && g(i, n, a);
+let i = null == r ? void 0 : r.avatar;
+null != i && g(t.id, n, i);
   });
 }
 
@@ -382,15 +383,8 @@ function $(e) {
 }
 
 function J(e) {
-  let t = v(e.user),
-n = m[e.user.id];
-  if (null == n)
-return t;
-  let {
-avatar: r,
-guildId: i
-  } = e;
-  return g(n, i, r) || t;
+  let t = v(e.user);
+  return g(e.user.id, e.guildId, e.avatar) || t;
 }
 
 function ee(e) {
@@ -403,10 +397,7 @@ if ('INSERT' === e.op || 'UPDATE' === e.op) {
   let t = null === (n = e.item.member) || void 0 === n ? void 0 : n.user;
   if (null == t)
     continue;
-  let r = m[t.id];
-  if (null == r)
-    continue;
-  S(r, t);
+  S(t.id, t);
 }
   return !1;
 }
@@ -417,14 +408,8 @@ chunks: t
   } = e, n = !1;
   for (let e of t)
 n = e.members.reduce((t, n) => {
-  let r = v(n.user),
-    i = m[n.user.id];
-  if (null == i)
-    return r || t;
-  let {
-    avatar: a
-  } = n;
-  return g(i, e.guildId, a) || r || t;
+  let r = v(n.user);
+  return g(n.user.id, e.guildId, n.avatar) || r || t;
 }, !1) || n;
   return n;
 }
@@ -432,7 +417,7 @@ n = e.members.reduce((t, n) => {
 function en(e) {
   let t = !1;
   for (let n of e.members)
-v(n.user) && (t = !0), null != m[n.user.id] && g(m[n.user.id], e.guildId, n.avatar) && (t = !0);
+v(n.user) && (t = !0), g(n.user.id, e.guildId, n.avatar) && (t = !0);
   return t;
 }
 
@@ -483,9 +468,7 @@ n !== d.default.getId() && v({
   avatar: i,
   discriminator: a,
   bot: s
-});
-let l = m[n];
-null != l && g(l, t.id, o);
+}), g(n, t.id, o);
   });
 }
 
